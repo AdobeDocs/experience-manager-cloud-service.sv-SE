@@ -2,9 +2,9 @@
 title: Skapa modeller för innehållsfragment - Headless-konfiguration
 description: Definiera strukturen för det innehåll du skapar och använd AEM headless-funktioner med hjälp av Content Fragment-modeller.
 exl-id: 8e3e4d00-34d3-4d4f-bc3a-43b8a322b986
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
@@ -24,14 +24,14 @@ Modeller för innehållsfragment definierar strukturen för data och innehåll s
 En informationsarkitekt skulle utföra dessa uppgifter endast sporadiskt när nya modeller behövs. I den här guiden behöver vi bara skapa en modell.
 
 1. Logga in AEM as a Cloud Service och välj **verktyg**, **Allmänt**, **Modeller för innehållsfragment**.
-1. Tryck eller klicka på mappen som skapades när du skapade konfigurationen.
+1. Välj den mapp som skapades när du skapade konfigurationen.
 
    ![Mappen Modeller](../assets/models-folder.png)
-1. Tryck eller klicka **Skapa**.
+1. Välj **Skapa**.
 1. Ange en **Modelltitel**, **Taggar** och **Beskrivning**. Du kan också markera/avmarkera **Aktivera modell** för att kontrollera om modellen aktiveras omedelbart när den skapas.
 
    ![Skapa en modell](../assets/models-create.png)
-1. I bekräftelsefönstret: tryck eller klicka **Öppna** för att konfigurera modellen.
+1. I bekräftelsefönstret väljer du **Öppna** för att konfigurera modellen.
 
    ![Bekräftelsefönstret](../assets/models-confirmation.png)
 1. Använda **Modellredigerare för innehållsfragment**, bygg din Content Fragment Model genom att dra och släppa fält från **Datatyper** kolumn.
@@ -42,14 +42,14 @@ En informationsarkitekt skulle utföra dessa uppgifter endast sporadiskt när ny
 
    ![Konfigurera egenskaper](../assets/models-configure-properties.png)
 
-1. När du är klar med att skapa modellen trycker du eller klickar **Spara**.
+1. När du är klar med att skapa modellen väljer du **Spara**.
 
 1. Läget för den nyskapade modellen beror på om du har valt **Aktivera modell** när du skapar modellen:
    * vald - den nya modellen kommer redan att **Aktiverad**
    * inte valt - den nya modellen skapas i **Utkast** läge
 
 1. Om modellen inte redan är aktiverad måste den **Aktiverad** för att använda den.
-   1. Välj den modell du just skapade och tryck eller klicka sedan på **Aktivera**.
+   1. Välj den modell du just skapade och välj sedan **Aktivera**.
 
       ![Aktivera modellen](../assets/models-enable.png)
    1. Bekräfta aktivering av modellen genom att trycka eller klicka **Aktivera** i bekräftelsedialogrutan.

@@ -2,20 +2,20 @@
 title: Implementera en anpassad predikatutvärderare för Query Builder
 description: AEM i Query Builder är ett enkelt och anpassningsbart sätt att fråga innehållsdatabasen
 exl-id: 8c2f8c22-1851-4313-a1c9-10d6d9b65824
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
 
 # Implementera en anpassad predikatutvärderare för Query Builder {#implementing-a-custom-predicate-evaluator-for-the-query-builder}
 
-I det här dokumentet beskrivs hur du utökar [Query Builder](query-builder-api.md) genom att implementera en anpassad predikatutvärderare.
+I det här dokumentet beskrivs hur du utökar [Frågebyggaren](query-builder-api.md) genom att implementera en anpassad predikatutvärderare.
 
 ## Översikt {#overview}
 
-The [Query Builder](query-builder-api.md) erbjuder ett enkelt sätt att fråga innehållsdatabasen. AEM kommer med [en uppsättning prediktiva utvärderare](#query-builder-predicates.md) som hjälper dig att fråga efter data.
+The [Frågebyggaren](query-builder-api.md) erbjuder ett enkelt sätt att fråga innehållsdatabasen. AEM kommer med [en uppsättning prediktiva utvärderare](#query-builder-predicates.md) som hjälper dig att fråga efter data.
 
 Men du kanske vill förenkla dina frågor genom att implementera en anpassad predikatutvärderare som döljer komplexiteten och ger ett bättre semantiskt resultat.
 
@@ -30,7 +30,7 @@ Ett anpassat predikat kan även utföra andra saker som inte är direkt möjliga
 
 >[!TIP]
 >
->Du kan hitta exempel på frågor i [Query Builder](query-builder-api.md) -dokument.
+>Du kan hitta exempel på frågor i [Frågebyggaren](query-builder-api.md) -dokument.
 
 >[!TIP]
 >
@@ -58,7 +58,7 @@ Det mappar en sökbegränsning på högre nivå (till exempel `width>200`) till 
 I det här avsnittet beskrivs hur du skapar en anpassad predikatutvärderare som kan användas för data baserat på replikeringens metadata:
 
 * `cq:lastReplicated` som lagrar datumet för den senaste replikeringsåtgärden
-* `cq:lastReplicatedBy` som lagrar ID för den användare som utlöste den senaste replikeringsåtgärden
+* `cq:lastReplicatedBy` som lagrar ID:t för användaren som utlöste den senaste replikeringsåtgärden
 * `cq:lastReplicationAction` som lagrar den senaste replikeringsåtgärden (till exempel Aktivering, Inaktivering)
 
 #### Frågar efter replikeringsmetadata med standardpredikatutvärderare {#querying-replication-metadata-with-default-predicate-evaluators}
@@ -99,9 +99,9 @@ Genom att gruppera metadata för replikering med en anpassad predikatutvärderar
 
 >[!TIP]
 >
->Upprättandet av nya AEM, inklusive användning av maven, förklaras i detalj av [WKND-självstudiekursen.](develop-wknd-tutorial.md)
+>Upprättandet av nya AEM, bland annat att använda maven, förklaras i detalj av [WKND-självstudiekursen.](develop-wknd-tutorial.md)
 
-Först måste du uppdatera Maven-beroendena för ditt projekt. The `PredicateEvaluator` är en del av `cq-search` artefakt så den behöver läggas till i din Maven-pom-fil.
+Först måste du uppdatera Maven-beroendena för ditt projekt. The `PredicateEvaluator` ingår i `cq-search` artefakt så den måste läggas till i din Maven-pom-fil.
 
 >[!NOTE]
 >

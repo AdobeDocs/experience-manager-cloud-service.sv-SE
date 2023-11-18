@@ -2,9 +2,9 @@
 title: Sökning
 description: Hitta materialet snabbare med omfattande sökfunktioner
 exl-id: 8a799e9a-1461-4e79-ae90-1978af6cf0ed
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '492'
 ht-degree: 6%
 
 ---

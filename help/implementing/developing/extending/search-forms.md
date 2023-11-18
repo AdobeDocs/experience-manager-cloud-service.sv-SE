@@ -2,7 +2,7 @@
 title: Konfigurera sökformulär
 description: Konfigurera Sök i Forms för Adobe Experience Manager as a Cloud Service.
 exl-id: b06649c4-cc91-44e3-8699-00e90140b90d
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '2035'
 ht-degree: 2%
@@ -64,7 +64,7 @@ Standardkonfigurationerna (i alfabetisk ordning) är:
 
 >[!NOTE]
 >
->Mer information om resursrelaterade sökformulär finns i [Resurser - sökansikten](/help/assets/search-facets.md)
+>Mer information om resursrelaterade sökformulär finns i [Resurser - sökansikten](/help/assets/search-facets.md).
 
 
 ## Förutsägelser och deras inställningar {#predicates-and-their-settings}

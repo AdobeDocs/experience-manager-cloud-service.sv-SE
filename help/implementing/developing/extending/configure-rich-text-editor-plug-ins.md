@@ -4,9 +4,9 @@ description: Lär dig konfigurera [!DNL Adobe Experience Manager] Plugin-program
 contentOwner: AG
 mini-toc-levels: 1
 exl-id: 91619662-e865-47d1-8bec-0739f402353a
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '4277'
+source-wordcount: '4276'
 ht-degree: 0%
 
 ---
@@ -376,7 +376,7 @@ Styckeformat blir tillgängliga för markering av:
 
    * **Namn** `tag`
    * **Typ** `String`
-   * **Värde** Blocktaggen för formatet, t.ex. p, h1, h2 osv.
+   * **Värde** Blocktaggen för formatet, till exempel p, h1, h2 och så vidare.
 
      Du behöver inte ange vinkelavgränsare.
 
@@ -586,9 +586,9 @@ Följ de här stegen om du vill lägga till fler ordlistor, om det behövs.
 >
 Stavningskontrollen för textredigering är tillgänglig på begäran. Den körs inte automatiskt när du börjar skriva text.
 >
-Om du vill stavningskontrollera trycker/klickar du på stavningskontrollknappen i verktygsfältet. RTE kontrollerar stavningen av ord och markerar felstavade ord.
+Om du vill stavningskontrollera väljer du stavningskontrollknappen i verktygsfältet. RTE kontrollerar stavningen av ord och markerar felstavade ord.
 >
-Om du infogar någon ändring som stavningskontrollen föreslår markeras inte längre textens status och felstavade ord. Om du vill köra stavningskontrollen trycker/klickar du på stavningskontrollknappen igen.
+Om du infogar någon ändring som stavningskontrollen föreslår markeras inte längre textens status och felstavade ord. Om du vill stavningskontrollera väljer du stavningskontrollknappen igen.
 
 ## Konfigurera historikstorlek för ångra- och gör om-åtgärder {#undohistory}
 

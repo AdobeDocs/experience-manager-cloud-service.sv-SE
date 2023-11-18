@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: 464a97ce-da3e-47b5-9879-fafaf2f2378c
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 9%
+source-wordcount: '432'
+ht-degree: 2%
 
 ---
 
@@ -24,13 +24,13 @@ Så här redigerar du metadata:
 
 1. Gör något av följande:
 
-   * Välj resursen i resursgränssnittet och klicka/tryck på **[!UICONTROL View Properties]** -ikonen i verktygsfältet.
+   * Välj resursen i resursgränssnittet och välj **[!UICONTROL View Properties]** -ikonen i verktygsfältet.
    * Välj miniatyrbilden för resursen **[!UICONTROL View Properties]** snabbåtgärd.
-   * Klicka/tryck på resurssidan **[!UICONTROL View Properties]** i verktygsfältet.
+   * Välj på resurssidan **[!UICONTROL View Properties]** i verktygsfältet.
 
-   Resurssidan visar alla metadata för resursen. Dessa metadata extraherades automatiskt när de överfördes (överfördes) till Experience Manager Assets.
+   Resurssidan visar resursens metadata. Dessa metadata extraherades automatiskt när de överfördes (överfördes) till Experience Manager Assets.
 
-1. Redigera metadata på de olika flikarna efter behov och klicka/tryck sedan på **[!UICONTROL Save]** i verktygsfältet för att spara ändringarna. Klicka/tryck på **[!UICONTROL Close]** för att gå tillbaka till Assets-webbgränssnittet.
+1. Redigera metadata under de olika flikarna efter behov och markera **[!UICONTROL Save]** i verktygsfältet för att spara ändringarna. Välj **[!UICONTROL Close]** för att återgå till webbgränssnittet Resurser.
 
    >[!NOTE]
    >
@@ -49,10 +49,10 @@ Mer information om hur du redigerar metadataschemat finns i [Redigera metadata-s
 Du kan lägga till egna namnutrymmen i Experience Manager. Precis som det finns fördefinierade namnutrymmen som cq, jcr och sling kan du ha ett namnutrymme för databasens metadata och XML-bearbetning.
 
 1. Gå till administrationssidan för nodtypen *https://&lt;host>:&lt;port>/crx/explorer/nodetypes/index.jsp*.
-1. Klicka eller tryck **[!UICONTROL Namespaces]** överst på sidan. Namnutrymmesadministrationssidan visas i ett fönster.
+1. Välj **[!UICONTROL Namespaces]** överst på sidan. Namnutrymmesadministrationssidan visas i ett fönster.
 
-1. Om du vill lägga till ett namnutrymme klickar du på eller trycker **[!UICONTROL New]** längst ned.
-1. Ange ett anpassat namnutrymme i XML-namnutrymmeskonventionen (ange id:t i form av en URI och ett associerat prefix för id:t) och klicka eller tryck **[!UICONTROL Save]**.
+1. Om du vill lägga till ett namnutrymme väljer du **[!UICONTROL New]** längst ned.
+1. Ange ett anpassat namnutrymme i XML-namnutrymmeskonventionen (ange id:t i form av en URI och ett associerat prefix för id:t) och välj **[!UICONTROL Save]**.
 
 **Se även**
 

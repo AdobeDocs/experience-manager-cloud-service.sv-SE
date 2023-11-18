@@ -2,9 +2,9 @@
 title: Skapa program
 description: Lär dig hur du konfigurerar ett nytt program och en ny pipeline för att distribuera tillägget.
 exl-id: 06287618-0328-40b1-bba8-84002283f23f
-source-git-commit: d67c5c9baafb9b7478f1d1c2ad924f5a8250a1ee
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '710'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
@@ -46,30 +46,30 @@ När du har loggat in på Cloud Manager kan du skapa ett sandlådeprogram för t
 
    ![Översikt över Cloud Manager](assets/cloud-manager.png)
 
-1. Tryck eller klicka **Lägg till program** längst upp till höger i fönstret.
+1. Välj **Lägg till program** längst upp till höger i fönstret.
 
 1. I **Låt oss skapa ditt program** dialog:
 
    1. Ange en **Programnamn** för att beskriva ditt program.
-   1. Tryck eller klicka **Konfigurera en sandlåda** för **Programmål**
-   1. Tryck eller klicka **Fortsätt**.
+   1. Välj **Konfigurera en sandlåda** för **Programmål**
+   1. Välj **Fortsätt**.
 
    ![Dialogrutan Skapa program](assets/create-program.png)
 
 1. I **Konfigurera sandlådan** i dialogrutan **Lösningar och tillägg** tabell, expandera **Webbplatser** i listan genom att trycka eller klicka på den och sedan kontrollera **Referensdemonstrationer**.
 
-   * Om du även vill skapa demos för AEM Screens ska du kontrollera **Skärmar** i listan. Tryck eller klicka **Uppdatera**.
+   * Om du även vill skapa demos för AEM Screens ska du kontrollera **Skärmar** i listan. Välj **Uppdatera**.
 
    ![Välja tillägg för referensdemo i programinställningarna](assets/select-reference-demo-add-on.png)
 
 
-1. Tryck eller klicka **Skapa** och Cloud Manager börjar konfigurera ditt sandlådeprogram. Du kommer nu till programöversikten och ett kort banderollmeddelande anger att processen har startats. Ett kort har lagts till på översiktssidan för ditt nya program. Installationsprocessen tar några minuter.
+1. Välj **Skapa** och Cloud Manager börjar konfigurera ditt sandlådeprogram. Du kommer nu till programöversikten och ett kort banderollmeddelande anger att processen har startats. Ett kort har lagts till på översiktssidan för ditt nya program. Installationsprocessen tar några minuter.
 
-1. När konfigurationen är klar visar kortet för miljön på översiktssidan sin status som **Klar**. Tryck eller klicka på kortet så att du kan öppna miljön.
+1. När konfigurationen är klar visar kortet för miljön på översiktssidan sin status som **Klar**. Markera kortet så att du kan öppna miljön.
 
    ![Programmet har skapats](assets/ready.png)
 
-1. Miljön är klar och tillägget är nu aktiverat som ett alternativ, men innehållet i demon måste distribueras för att AEM ska vara tillgängligt. Det gör du genom att trycka eller klicka på ellipsknappen bredvid pipelinen Distribuera till utvecklare i **Pipelines** och välj **Kör**.
+1. Miljön är klar och tillägget är nu aktiverat som ett alternativ, men innehållet i demon måste distribueras för att AEM ska vara tillgängligt. Det gör du genom att markera ellipsknappen bredvid pipelinen Distribuera till utvecklare i **Pipelines** och välj **Kör**.
 
    ![Starta](assets/run.png)
 

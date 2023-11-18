@@ -2,9 +2,9 @@
 title: JSON-exporterare för innehållstjänster
 description: AEM Content Services är utformat för att generera beskrivning och leverans av innehåll i/från AEM utöver fokus på webbsidor. De levererar innehåll till kanaler som inte är traditionella AEM webbsidor, med standardiserade metoder som kan användas av alla kunder.
 exl-id: d3ddffb7-cef9-4c86-aa31-175f13f9b4a5
-source-git-commit: 7d09cafc4f8518fee185d3f9efc76c33ec20f9a3
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '404'
+source-wordcount: '398'
 ht-degree: 2%
 
 ---
@@ -67,8 +67,6 @@ Sidan kan innehålla antingen ett enda innehållsfragment eller flera komponente
 
 ### Ytterligare information {#further-information}
 
-Se även:
-
 * HTTP API för Assets
    * [HTTP API för Assets](/help/assets/developer-reference-material-apis.md)
 * Sling Models:
@@ -77,8 +75,6 @@ Se även:
    * [Aktivera JSON-export för en komponent](enabling-json-exporter.md)
 
 ## Relaterad dokumentation {#related-documentation}
-
-Mer information finns i:
 
 * [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)
 * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)

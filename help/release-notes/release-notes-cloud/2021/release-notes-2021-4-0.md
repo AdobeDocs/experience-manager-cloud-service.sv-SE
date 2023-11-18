@@ -2,9 +2,9 @@
 title: Versionsinformation för 2021.4.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2021.4.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 775332b5-24ce-430e-97a2-6eeb80877c64
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1533'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 * När du har valt att uppdatera metadata på egenskapssidan tar det lång tid för gränssnittet att svara när det finns många alternativ i schemat. (CQ-4318538)
 
-* När du uppdaterar och sparar metadatavärde i ett enkelradigt textfält tas värdena i listrutan bort, även om redigeringar är inaktiverade i listrutan. (CQ-4317077)
+* När du uppdaterar och sparar metadatavärde i ett enkelradigt textfält tas värdena i listrutan bort, även om redigeringar är inaktiverade på listrutemenyn. (CQ-4317077)
 
 * Du kan använda ellips som en anteckning för att granska resurser. När en liten ellips används överlappar ellipsen numret på anteckningen i utskriftsversionen. (CQ-4316792)
 
@@ -132,7 +132,7 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 * AEM för PWA Studio inkl. exempelintegrering
 
-* Ny kärnkomponent för CIF-navigering som utökar kärnkomponenten för WCM-navigering
+* Ny CIF navigeringskärnkomponent som utökar WCM-navigeringskärnkomponenten
 
 * Visuell indikator för mellanlagrade katalogdata i AEM
 

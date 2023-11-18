@@ -3,13 +3,13 @@ title: Innehållsfragment – ta bort överväganden
 description: Granska dessa viktiga aspekter innan du definierar dina regler för borttagning av innehållsfragment i AEM. Content Fragments är ett kraftfullt verktyg för att leverera headless-innehåll, och konsekvenserna av att ta bort dem måste noggrant övervägas.
 feature: Content Fragments
 role: User, Developer, Architect
-source-git-commit: 3d20f4bca566edcdb5f13eab581c33b7f3cf286d
+exl-id: d1726bff-3aa8-4758-bee7-0cacea1f660a
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '450'
 ht-degree: 0%
 
 ---
-
 
 # Ta bort överväganden för innehållsfragment {#delete-considerations-content-fragments}
 
@@ -23,14 +23,14 @@ När det gäller borttagningsbehörigheter måste innehållsfragment beaktas på
 
 1. **Innehållsfragmentet som en enskild enhet.**
 
-   * **Använd skiftläge**: En användare som behöver redigera/uppdatera ett innehållsfragment - **och ta bort ett helt fragment**.
+   * **Använd skiftläge**: En användare som måste redigera/uppdatera ett innehållsfragment - **och ta bort ett helt fragment**.
    * **Behörigheter**: Behörigheten Ta bort kan tilldelas via användar- och/eller grupphantering.
 
 2. **De flera underenheter som utgör ett innehållsfragment, till exempel variationer, undernoder.**
 
    Den grundläggande åtgärden i redigeraren för innehållsfragment kräver att sådana tillfälliga delelement kan tas bort. Till exempel när du ändrar variationer, även när du redigerar metadata eller hanterar associerat innehåll.
 
-   * **Använd skiftläge**: En användare som behöver redigera/uppdatera ett innehållsfragment - **utan tillstånd att ta bort ett helt fragment**.
+   * **Använd skiftläge**: En användare som måste redigera/uppdatera ett innehållsfragment - **utan tillstånd att ta bort ett helt fragment**.
    * **Behörigheter**: Se [Behörigheter krävs endast för redigeringsfunktionen](#permissions-required-for-editor-functionality-only).
 
 >[!NOTE]
@@ -76,4 +76,3 @@ Behörigheten som krävs för att en viss användare och/eller grupp ska kunna r
 * För alla noder nedan `jcr:content` av alla innehållsfragment:
 
    * `jcr:addChildNodes`, `jcr:modifyProperties`och `jcr:removeChildNodes`, `jcr:removeNode`
-

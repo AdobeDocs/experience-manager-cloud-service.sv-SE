@@ -2,9 +2,9 @@
 title: Verktyget Innehållskopia
 description: Med innehållskopieringsverktyget kan man kopiera muterbart innehåll on demand från produktionsmiljön i AEM as a Cloud Service till lägre miljöer i testsyfte.
 exl-id: 5883e4bc-9861-498e-bd35-32ff03d901cc
-source-git-commit: 361881807e8704dfcb27075365cb73a7f659c82d
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1292'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Om du vill använda verktyget för innehållskopiering krävs vissa behörighete
 | Skapa och ändra [innehållsuppsättningar](#create-content-set) | Krävs inte | Obligatoriskt |
 | Starta eller avbryta [innehållskopia](#copy-content) | Obligatoriskt | Obligatoriskt |
 
-Mer information om behörigheter och hur du ställer in dem finns i dokumentet [AEM as a Cloud Service team och produktprofiler.](/help/onboarding/aem-cs-team-product-profiles.md)
+Mer information om behörigheter och hur du ställer in dem finns i [AEM as a Cloud Service team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md).
 
 ## Skapa en innehållsuppsättning {#create-content-set}
 
@@ -57,7 +57,7 @@ Innan något innehåll kan kopieras måste en innehållsuppsättning definieras.
 
    ![Innehållsuppsättningar](assets/content-sets.png)
 
-1. På **Information** Ange ett namn och en beskrivning för innehållsuppsättningen och tryck eller klicka på **Fortsätt**.
+1. På **Information** Ange ett namn och en beskrivning för innehållsuppsättningen och välj **Fortsätt**.
 
    ![Information om innehållsuppsättning](assets/add-content-set-details.png)
 
@@ -74,8 +74,8 @@ Innan något innehåll kan kopieras måste en innehållsuppsättning definieras.
 
    1. Klicka på i listan med inkluderade sökvägar **Lägg till exkludera delsökvägar** bredvid den bana som du vill begränsa.
    1. Ange den delbana som ska uteslutas under den valda banan.
-   1. Tryck eller klicka **Uteslut bana**.
-   1. Tryck eller klicka **Lägg till exkludera delsökvägar** igen om du vill lägga till ytterligare sökvägar som ska uteslutas efter behov.
+   1. Välj **Uteslut bana**.
+   1. Välj **Lägg till exkludera delsökvägar** igen om du vill lägga till ytterligare sökvägar som ska uteslutas efter behov.
       * Undantagna sökvägar måste vara relativa till den inkluderade sökvägen.
       * Det finns ingen gräns för antalet uteslutna banor.
 
@@ -88,7 +88,7 @@ Innan något innehåll kan kopieras måste en innehållsuppsättning definieras.
 
    ![Redigera sökvägslista](assets/add-content-set-excluded-paths.png)
 
-1. Tryck eller klicka **Skapa** för att skapa innehållsuppsättningen.
+1. Välj **Skapa** för att skapa innehållsuppsättningen.
 
 Innehållsuppsättningen kan nu användas för att kopiera innehåll mellan miljöer.
 
@@ -136,7 +136,7 @@ När en innehållsuppsättning har skapats kan du använda den för att kopiera 
 
 1. Om det behövs kan du även välja att **Inkludera åtkomstkontrollistor** i kopieringsprocessen.
 
-1. Tryck eller klicka **Kopiera**.
+1. Välj **Kopiera**.
 
 Kopieringsprocessen startar. Kopieringsprocessens status visas i konsolen för den valda innehållsuppsättningen.
 
@@ -185,7 +185,7 @@ Om du vill göra det går du till **Kopiera innehållsaktivitet** väljer du **L
 
 ![Åtkomst till loggar för innehållskopiering](assets/copy-content-logs.png)
 
-Loggarna hämtas till din lokala dator. Om nedladdningen inte startar kontrollerar du inställningarna för blockering av popup-fönster.
+Loggarna hämtas till din lokala dator. Om hämtningen inte startar kontrollerar du inställningarna för popup-blockering.
 
 ## Begränsningar {#limitations}
 

@@ -3,9 +3,9 @@ title: AEM dokumentationsresor
 description: Dokumentation Journeys innehåller en berättande struktur i AEM dokumentation genom att sammanfoga komplexa och olika funktioner så att du kan lösa ett affärsmål på bästa sätt. Resorna är utformade med AEM nybörjare i åtanke och presenterar koncept och funktioner för att uppnå ett mål från A till Ö.
 exl-id: aab346b8-26dc-4d5b-88bb-720cf634e0a2
 hidefromtoc: true
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1347'
 ht-degree: 0%
 
 ---
@@ -76,13 +76,13 @@ Dokumentationsresor är avsedda som komplement till befintlig AEM teknisk dokume
 | Dokumentationstyp | Syfte | Målgrupp | Anta | Utelämnanden | Innehållstyp | Längd |
 |---|---|---|---|---|---|---|
 | Dokumentationsresa | En resa definierar hur AEM kan lösa ett allmänt affärsproblem med hjälp av en berättelse som vägleder läsarna genom komplexa, samhörande processer och funktioner. Det visar hur flera funktioner fungerar tillsammans för att lösa ett affärsbehov på ett bra sätt. | Reader nybörjare på AEM | Allmän CMS-kunskap | Detaljerade alternativ och konfigurationer | Text | Ca. 1 timme |
-| Tekniska dokument | Tekniska dokument fokuserar på enskilda funktioner, med detaljerad information om funktionens tekniska arbetssätt och alla alternativ som är tillgängliga för användaren. | Erfarna AEM | AEM upplevelse | Kontext och bakgrund | Text | Varierar |
-| Självstudiekurs | En självstudiekurs är en djupdykning i ett ämne som visar en utvecklare eller administratör hur du kan uppnå ett tekniskt mål (vanligtvis programmering eller systemkonfiguration) steg för steg, med specifika exempel och exempelkod, som vanligtvis utnyttjar en begränsad uppsättning funktioner. | AEM utvecklare eller administratörer | AEM upplevelse | Bakgrund och teori | Video | >1 timme |
+| Teknisk dokumentation | Tekniska dokument fokuserar på enskilda funktioner, med detaljerad information om funktionens tekniska arbetssätt och alla alternativ som är tillgängliga för användaren. | Erfarna AEM | AEM upplevelse | Kontext och bakgrund | Text | Varierar |
+| Självstudiekurs | En självstudiekurs är en djupdykning i ett ämne som visar en utvecklare eller administratör hur du kan uppnå ett tekniskt mål (vanligtvis programmering eller systemkonfiguration) steg för steg, med specifika exempel och exempelkod, vanligtvis med en begränsad uppsättning funktioner. | AEM utvecklare eller administratörer | AEM upplevelse | Bakgrund och teori | Video | >1 timme |
 | Starthandbok | En guide för att komma igång är en blixtsnabb genomgång av en viss ny AEM. Det är en snabb översikt av en enskild funktion, som leder användaren genom de viktiga (men inte alla) stegen för att konfigurera och använda ett enkelt användningssätt. | AEM | AEM upplevelse | Bakgrund, teori, detaljerade alternativ | Text | &lt;1 timme |
 
 ## Vilka resor finns det? {#journeys}
 
-Det finns redan ett antal dokumentationsresor tillgängliga för dig. Eftersom varje resa är utformad som en berättelse börjar du med introduktionen och läser hela vägen igenom så att du får en fullständig förståelse för ämnet i AEM.
+Du har redan tillgång till flera dokumentationsresor. Eftersom varje resa är utformad som en berättelse börjar du med introduktionen och läser hela vägen igenom så att du får en fullständig förståelse för ämnet i AEM.
 
 | Resa | Beskrivning |
 |---|---|
@@ -91,7 +91,7 @@ Det finns redan ett antal dokumentationsresor tillgängliga för dig. Eftersom v
 | [Headless Architect Journey](/help/journey-headless/architect/overview.md) | Börja här för att få en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager as a Cloud Service och hur du modellerar innehåll för ditt projekt. |
 | [Headless Translation Journey](/help/journey-headless/translation/overview.md) | Börja här för att se hur du konfigurerar och hanterar dina headless-översättningsprojekt i AEM. |
 | [AEM på introduktionsresan](/help/journey-onboarding/overview.md) | Börja här för att komma igång snabbt med din nya AEM as a Cloud Service miljö! |
-| [AEM för att skapa webbplatser snabbt](/help/journey-sites/quick-site/overview.md) | Börja här för en guidad resa med det lättanvända AEM snabbplatsverktyget som effektiviserar utvecklingen av din AEM webbplats och snabbt anpassar sajten utan någon AEM bakgrundsinformation. |
+| [AEM för att skapa webbplatser snabbt](/help/journey-sites/quick-site/overview.md) | Börja här för en guidad resa med det lättanvända AEM snabbplatsverktyget som effektiviserar utvecklingen av din AEM webbplats och snabbt anpassar sajten utan någon AEM backend-kunskap. |
 | AEM Commerce Journey | Kommer snart! |
 | [AEM as a Cloud Service migreringsresa](/help/journey-migration/getting-started.md) | Börja här om du vill ha en stegvis resa om hur du migrerar från en lokal installation eller en Adobe-hanterad AEM till den helt molnbaserade AEM-as a Cloud Service och får en introduktion till många fördelar. |
 

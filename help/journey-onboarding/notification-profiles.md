@@ -4,9 +4,9 @@ description: Lär dig hur du skapar användarprofiler i Admin Console för att h
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: 4edecfcd-6301-4a46-98c7-eb5665f48995
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '982'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Lär dig hur du skapar användarprofiler i Admin Console för att hantera mottag
 
 ## Översikt {#overview}
 
-Adobe måste då och då kontakta användare om sina AEM as a Cloud Service miljöer. Förutom meddelanden i produkten använder Adobe ibland även e-post för meddelanden. Det finns två typer av sådana e-postmeddelanden:
+Adobe kontaktar då och då användare om sina AEM as a Cloud Service miljöer. Förutom meddelanden i produkten använder Adobe ibland även e-post för meddelanden. Det finns två typer av sådana e-postmeddelanden:
 
 * **Incidentmeddelande** - Dessa meddelanden skickas under en incident eller när Adobe har identifierat ett potentiellt tillgänglighetsproblem i din AEM as a Cloud Service miljö.
 * **Proaktiv avisering** - Dessa meddelanden skickas när en medlem i Adobe supportteam vill ge vägledning om en eventuell optimering eller rekommendation som kan vara till nytta för er AEM as a Cloud Service miljö.
@@ -148,4 +148,4 @@ Den inbjudna användaren får nu meddelanden. Upprepa de här stegen för de anv
 
 Här följer ytterligare, valfria resurser om du vill gå längre än vad som ingår i introduktionsresan.
 
-* [Actions Center](/help/operations/actions-center.md) - Utnyttja åtgärdscentret för att enkelt vidta åtgärder vid incidenter och annan viktig information.
+* [Actions Center](/help/operations/actions-center.md) - Utnyttja åtgärdscentret för att enkelt hantera incidenter och annan viktig information.

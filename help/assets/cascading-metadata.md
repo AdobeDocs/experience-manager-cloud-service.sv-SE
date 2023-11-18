@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: 1d3ad496-a964-476e-b1da-4aa6d8ad53b7
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '934'
-ht-degree: 11%
+source-wordcount: '921'
+ht-degree: 5%
 
 ---
 
@@ -36,14 +36,14 @@ Tänk dig ett scenario där du vill visa överlappande metadata baserat på den 
 
 Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligatoriskt fält.
 
-1. Tryck/klicka på [!DNL Experience Manager] logotyp och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**.
-1. Markera ett schemaformulär på sidan **[!UICONTROL Schema Forms]** och redigera sedan schemat genom att trycka/klicka på **[!UICONTROL Edit]** i verktygsfältet.
+1. Välj [!DNL Experience Manager] logotyp och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**.
+1. I **[!UICONTROL Schema Forms]** sida väljer du ett schemaformulär och väljer sedan **[!UICONTROL Edit]** i verktygsfältet för att redigera schemat.
 
    ![select_form](assets/select_form.png)
 
 1. (Valfritt) Skapa ett fält som ska villkoraliseras i metadataramedigeraren. Ange ett namn och en egenskapssökväg i dialogrutan **[!UICONTROL Settings]** -fliken.
 
-   Skapa en flik genom att trycka/klicka `+` för att lägga till en flik och sedan lägga till ett metadatafält.
+   Om du vill skapa en flik väljer du `+` för att lägga till en flik och sedan lägga till ett metadatafält.
 
    ![add_tab](assets/add_tab.png)
 
@@ -53,7 +53,7 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
 
 1. Nyckelvärdepar är de alternativ som ges till en formuläranvändare. Du kan ange nyckelvärdepar antingen manuellt eller från en JSON-fil.
 
-   * Om du vill ange värden manuellt väljer du **[!UICONTROL Add Manually]** och trycka/klicka **[!UICONTROL Add Choice]** och ange alternativets text och värde. Ange till exempel resurstyperna Video, PDF, Word och Bild.
+   * Om du vill ange värden manuellt väljer du **[!UICONTROL Add Manually]** och markera **[!UICONTROL Add Choice]** och ange alternativets text och värde. Ange till exempel resurstyperna Video, PDF, Word och Bild.
 
    * Om du vill hämta värden från en JSON-fil dynamiskt väljer du **[!UICONTROL Add Through JSON Path]** och ange sökvägen till JSON-filen. [!DNL Experience Manager] hämtar nyckelvärdepar i realtid när formuläret presenteras för användaren.
 
@@ -80,7 +80,7 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
    ![select_beroentfield](assets/select_dependentfield.png)
 
 1. Under **[!UICONTROL Requirement]** väljer du alternativet **[!UICONTROL Required, based on new rule]**.
-1. Tryck/klicka på **[!UICONTROL Add Rule]** och välj fältet **[!UICONTROL Asset Type]** för att skapa ett beroende. Välj också det fältvärde som beroendet ska skapas utifrån. I det här fallet väljer du **[!UICONTROL Video]**. Tryck/klicka på **[!UICONTROL Done]** för att spara ändringarna.
+1. Välj **[!UICONTROL Add Rule]** och väljer **[!UICONTROL Asset Type]** för att skapa ett beroende. Välj också det fältvärde som beroendet ska skapas på. I det här fallet väljer du **[!UICONTROL Video]**. Välj **[!UICONTROL Done]** för att spara ändringarna.
 
    ![define_rule](assets/define_rule.png)
 
@@ -90,13 +90,13 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
 
 1. Under **[!UICONTROL Visibility]** väljer du alternativet **[!UICONTROL Visible, based on new rule]**.
 
-1. Tryck/klicka på **[!UICONTROL Add Rule]** och välj fältet **[!UICONTROL Asset Type]** för att skapa ett beroende. Välj också det fältvärde som beroendet ska skapas utifrån. I det här fallet väljer du **[!UICONTROL Video]**. Tryck/klicka på **[!UICONTROL Done]** för att spara ändringarna.
+1. Välj **[!UICONTROL Add Rule]** och väljer **[!UICONTROL Asset Type]** för att skapa ett beroende. Välj också det fältvärde som beroendet ska skapas utifrån. I det här fallet väljer du **[!UICONTROL Video]**. Välj **[!UICONTROL Done]** för att spara ändringarna.
 
    ![define_visibilityrule](assets/define_visibilityrule.png)
 
    >[!CAUTION]
    >
-   >Om du vill återställa värdena klickar eller trycker du på blanktecken eller någon annanstans i gränssnittet än i värdena. Om värdena återställs markerar du värdena igen.
+   >Om du vill återställa värdena väljer du var som helst i gränssnittet förutom värdena. Om värdena återställs markerar du värdena igen.
 
    >[!NOTE]
    >

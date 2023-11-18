@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Lär dig mer om innehållssökning och indexering på AEM as a Cloud Service.
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2432'
+source-wordcount: '2428'
 ht-degree: 0%
 
 ---
@@ -61,13 +61,13 @@ En indexdefinition kan delas in i någon av följande kategorier:
 
 >[!NOTE]
 >
->Nu kommer nya index på `dam:Asset` nodtype (speciellt fulltextindex) rekommenderas inte eftersom dessa kan skapa konflikter med OOTB-funktioner, vilket kan leda till funktions- och prestandaproblem. I allmänhet läggs ytterligare egenskaper till i den aktuella `damAssetLucene-*` indexversionen är det lämpligaste sättet att indexera frågor på `dam:Asset` nodetype (dessa ändringar sammanfogas automatiskt till en ny produktversion av indexet om det släpps senare). Kontakta Adobe support om du är osäker.
+>Nu kommer nya index på `dam:Asset` nodtype (speciellt fulltextindex) rekommenderas inte eftersom dessa kan skapa konflikter med OOTB-funktioner, vilket kan leda till funktions- och prestandaproblem. I allmänhet läggs ytterligare egenskaper till i den aktuella `damAssetLucene-*` indexversionen är det lämpligaste sättet att indexera frågor på `dam:Asset` nodetype (dessa ändringar sammanfogas automatiskt till en ny produktversion av indexet om det släpps senare). Om du är osäker kan du kontakta Adobe Support för råd.
 
 ## Förbereder den nya indexdefinitionen {#preparing-the-new-index-definition}
 
 >[!NOTE]
 >
->Om du till exempel anpassar ett index som inte finns i kartongen `damAssetLucene-8`, please copy the latest out-of-box index definition from a *Cloud Service* med hjälp av CRX DE Package Manager (`/crx/packmgr/`) . Byt namn på den till `damAssetLucene-8-custom-1` (eller senare) och lägg till anpassningar i XML-filen. Detta säkerställer att de nödvändiga konfigurationerna inte tas bort av misstag. Till exempel `tika` nod under `/oak:index/damAssetLucene-8/tika` krävs i det anpassade indexet som distribueras till en AEM Cloud Service-miljö, men inte på den lokala AEM SDK:n.
+>Om du till exempel anpassar ett index som inte finns i kartongen `damAssetLucene-8`, kopierar den senaste körklara indexdefinitionen från en *Cloud Service* med hjälp av CRX DE Package Manager (`/crx/packmgr/`) . Byt namn på den till `damAssetLucene-8-custom-1` (eller senare) och lägg till anpassningar i XML-filen. Detta säkerställer att de nödvändiga konfigurationerna inte tas bort av misstag. Till exempel `tika` nod under `/oak:index/damAssetLucene-8/tika` krävs i det anpassade indexet som distribueras till en AEM Cloud Service-miljö, men inte på den lokala AEM SDK:n.
 
 Om du vill anpassa ett OOTB-index förbereder du ett nytt paket som innehåller den faktiska indexdefinitionen som följer namnmönstret:
 
@@ -240,7 +240,7 @@ När du har lagt till den nya indexdefinitionen distribuerar du det nya programm
 
 >[!TIP]
 >
->Mer information om den paketstruktur som krävs för AEM as a Cloud Service finns i dokumentet [AEM projektstruktur](/help/implementing/developing/introduction/aem-project-content-package-structure.md).
+>Mer information om den paketstruktur som krävs för AEM as a Cloud Service finns i [AEM projektstruktur](/help/implementing/developing/introduction/aem-project-content-package-structure.md).
 
 ## Indexhantering med rullande distributioner {#index-management-using-rolling-deployments}
 

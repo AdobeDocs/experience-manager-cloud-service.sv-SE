@@ -2,7 +2,7 @@
 title: GoLive
 description: Lär dig hur du utför migreringen när koden och innehållet är molnklara
 exl-id: 10ec0b04-6836-4e26-9d4c-306cf743224e
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '1704'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 >title="Go-Live-förberedelser"
 >abstract="För att säkerställa en smidig och framgångsrik publicering på AEM as a Cloud Service bör du planera för frysningsperioder för kod och innehåll, testning av iterationer, innehållsuppdateringar, prestandatester, säkerhetstester med mera."
 
-Under den här delen av resan får du lära dig att planera och utföra migreringen när både koden och innehållet är klara att flyttas över till AEM as a Cloud Service. Dessutom får du lära dig vilka metoder och begränsningar som är bäst när du utför migreringen.
+Under den här delen av resan får du lära dig att planera och utföra migreringen när både koden och innehållet är klara att flyttas över till AEM as a Cloud Service. Du får också lära dig vilka metoder och begränsningar som är bäst när du utför migreringen.
 
 ## Story hittills {#story-so-far}
 
@@ -61,7 +61,7 @@ Som tidigare nämnts måste du schemalägga en frysperiod för kod och innehåll
 
 Som svar på den första frågan bör du fundera över hur lång tid det har tagit att genomföra testkörningar i icke-produktionsmiljöer. För att svara på den andra frågan behöver du ha ett nära samarbete mellan teamet som lägger till nya funktioner och teamet som omfaktoriserar koden. Målet är att se till att all kod som läggs till i den befintliga distributionen också läggs till, testas och distribueras till molntjänstgrenen. Vanligtvis innebär det att mängden fryst kod är lägre.
 
-Dessutom måste du planera för en frysning av innehållet när den slutliga innehållsuppdateringen är schemalagd.
+Dessutom måste ni planera för en frysning av innehållet när den slutliga innehållstillägget är schemalagd.
 
 ## Bästa praxis {#best-practices}
 

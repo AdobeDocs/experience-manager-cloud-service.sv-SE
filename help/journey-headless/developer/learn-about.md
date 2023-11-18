@@ -2,7 +2,7 @@
 title: Läs om CMS Headless Development
 description: I den här delen av AEM Headless Developer Journey kan du lära dig mer om headless-teknik och varför du skulle använda den.
 exl-id: 8c1fcaf7-1551-4133-b363-6f50af681661
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '1636'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Det här dokumentet hjälper dig att förstå hur headless-innehåll levereras o
 
 ![Klassisk CMS i full hög](assets/full-stack.png)
 
-I ett CMS-system i full hög finns alla funktioner för att hantera ditt innehåll i CMS-systemet. Systemets funktioner består av olika komponenter i CMS-stacken. Lösningen i full hög har många fördelar.
+I ett CMS-system i full hög finns funktionen för att hantera ditt innehåll i CMS-systemet. Systemets funktioner består av olika komponenter i CMS-stacken. Lösningen i full hög har många fördelar.
 
 * Du har ett system att underhålla.
 * Innehållet hanteras centralt.
@@ -62,7 +62,7 @@ När vi talar om ett headless CMS hanterar CMS-systemet innehållet och fortsät
 
 ![Headless CMS](assets/headless-cms.png)
 
-De konsumerande tjänsterna, oavsett om de är AR-upplevelser, en webshop, mobilupplevelser, progressiva webbappar (PWA) osv., tar in innehåll från det headless CMS-systemet och tillhandahåller sin egen rendering. De ser till att kunna erbjuda sina egna huvuden för ert innehåll.
+De konsumerande tjänsterna, oavsett om de är AR-upplevelser, en webshop, mobilupplevelser, progressiva webbappar (PWA) och så vidare, tar in innehåll från det headless CMS-systemet och tillhandahåller sin egen rendering. De ser till att kunna erbjuda sina egna huvuden för ert innehåll.
 
 Om du utelämnar huvudet förenklas CMS-systemet genom att komplexiteten försvinner. När du gör det flyttas även ansvaret för att återge innehållet till de tjänster som faktiskt behöver innehållet och som ofta är bättre lämpade för sådan återgivning.
 
@@ -96,7 +96,7 @@ Headless öppnar upp en värld av flexibilitet för att leverera digitala upplev
 
 Att ha många olika kanaler kan innebära att de har sina egna presentationssystem. Även om de alla använder samma innehåll via samma API:er kan upplevelsen vara annorlunda tack vare de olika presentationerna. Man måste bekymra sig om och se till att kundupplevelsen är enhetlig.
 
-Genom att implementera noggranna designsystem, dela mönsterbibliotek och dra nytta av återanvändbara designkomponenter och etablerade, öppna ramverk på klientsidan kan enhetliga upplevelser säkerställas, men detta måste planeras.
+Genom att implementera noggranna designsystem, dela mönsterbibliotek och använda återanvändbara designkomponenter och etablerade, öppna ramverk på klientsidan kan enhetliga upplevelser säkerställas, men detta måste planeras.
 
 ## Framtiden är Headless och framtiden är nu {#future}
 

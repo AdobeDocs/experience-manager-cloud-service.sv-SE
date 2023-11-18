@@ -2,9 +2,9 @@
 title: Vanliga frågor och svar om skärmar
 description: På den här sidan beskrivs vanliga frågor och svar om skärmar as a Cloud Service.
 exl-id: 93f2144c-0e64-4012-88c6-86972d8cad9f
-source-git-commit: 7260649eaab303ba5bab55ccbe02395dc8159949
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '454'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ scripts=[
 
 ## Vilka bildformat rekommenderas för smidig återgivning av bilder i en as a Cloud Service AEM Screens-kanal?{#screens-cloud-image-format}
 
-Vi rekommenderar att du använder bilder i formatet `.png` och `.jpeg` i en as a Cloud Service AEM Screens-kanal för bästa digitala signeringsupplevelse.
+Adobe rekommenderar att du använder bilder i formatet `.png` och `.jpeg` i en as a Cloud Service AEM Screens-kanal för bästa digitala signeringsupplevelse.
 Bilderna i formatet `*.tif` (Tagg Image File-format) stöds inte i AEM Screens as a Cloud Service. Om en kanal har det här bildformatet återges inte bilden på spelarsidan.
 
 ## Vad ska jag göra om en kanal i utvecklarläget (online) inte återges i AEM Screens Player?{#screens-cloud-online-channel-blank-iframe}
@@ -51,4 +51,4 @@ Header set Content-Security-Policy "frame-ancestors 'self' file: localhost:*;"
 
 ## Hur används registreringskodsgränsen?
 
-Det bästa sättet är att begränsa användningen av registreringskoden. Om en registreringskod har komprometterats men har en gräns på 100 registreringar kan angriparen bara registrera upp till det numret, men inte mer. Du kan alltid uppdatera användningsgränsen när registreringskoden har skapats och vissa av kundens spelare har redan registrerats. Om kunden observerar ovanlig registreringsaktivitet för en viss registreringskod kan de sänka gränsen i realtid medan de undersöker. De kan öka antalet tillbaka om det var ett falskt larm, utan att de redan registrerade spelarna påverkas.
+Det bästa sättet är att begränsa användningen av registreringskoden. Om en registreringskod har komprometterats men har en gräns på 100 registreringar kan angriparen bara registrera upp till det numret, men inte fler. Du kan alltid uppdatera användningsgränsen när registreringskoden har skapats och vissa av kundens spelare har redan registrerats. Om kunden observerar onormal registreringsaktivitet för en viss registreringskod kan de sänka gränsen i realtid medan de undersöker saken. De kan öka antalet tillbaka om det var ett falskt larm, utan att de redan registrerade spelarna påverkas.

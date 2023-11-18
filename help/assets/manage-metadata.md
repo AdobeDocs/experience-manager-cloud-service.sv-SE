@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Asset Management,Metadata
 role: User,Architect,Admin
 exl-id: 73a82bc2-1dda-4090-b7ee-29d1a632ba25
-source-git-commit: 80ac947976bab2b0bfedb4ff9d5dd4634de6b4fc
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1990'
+source-wordcount: '1987'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/metadata.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
-[!DNL Adobe Experience Manager Assets] sparar metadata för varje resurs. Det gör det enklare att kategorisera och ordna resurser och det hjälper personer som letar efter en viss resurs. Med möjlighet att extrahera metadata från filer som överförts till [!DNL Experience Manager Assets], integreras metadatahanteringen med det kreativa arbetsflödet. Med möjligheten att behålla och hantera metadata med dina resurser kan du automatiskt ordna och bearbeta resurser baserat på deras metadata.
+[!DNL Adobe Experience Manager Assets] sparar metadata för varje resurs. Det gör det enklare att kategorisera och ordna resurser och det hjälper personer som letar efter en viss resurs. Med möjlighet att extrahera metadata från filer som överförts till [!DNL Experience Manager Assets], kan metadatahantering integreras med det kreativa arbetsflödet. Med möjligheten att behålla och hantera metadata med dina resurser kan du automatiskt ordna och bearbeta resurser baserat på deras metadata.
 
 <!-- 
 * [Metadata Schemata Reference](meta-ref.md)
@@ -30,7 +30,7 @@ ht-degree: 3%
 
 Metadata är data om data. I det här avseendet avser data era digitala resurser, till exempel en bild. Metadata är avgörande för effektiv resurshantering.
 
-Metadata är en samling med alla data som är tillgängliga för en resurs, men som inte nödvändigtvis finns i bilden. Några exempel på metadata är:
+Metadata är en samling med alla data som är tillgängliga för en resurs, men som inte nödvändigtvis finns i den bilden. Några exempel på metadata är:
 
 * Namnet på resursen.
 * Tid och datum för senaste ändring.
@@ -56,7 +56,7 @@ Med hjälp av metadata ökar värdet på en digital resurs eftersom resursen bli
 * Enklare att hantera - du kan hitta resurser med samma uppsättning egenskaper enklare och använda ändringarna på dem.
 * Fullständigt - materialet innehåller mer information och sammanhang med fler metadata.
 
-Av dessa skäl [!DNL Assets] ger dig rätt sätt att skapa, hantera och utbyta metadata för digitala resurser.
+Av dessa skäl [!DNL Assets] ger dig rätt sätt att skapa, hantera och utbyta metadata för dina digitala resurser.
 
 ## Typer av metadata {#types-of-metadata}
 
@@ -67,7 +67,7 @@ Tekniska metadata är användbara för program som hanterar digitala resurser oc
 * Storlek på en fil.
 * Dimensioner (höjd och bredd) för en bild.
 * Bithastighet för en ljud- eller videofil.
-* Upplösning (detaljnivå) för en bild.
+* Bildens upplösning (detaljnivå).
 
 Beskrivande metadata är metadata som rör programdomänen, till exempel det företag som en resurs kommer från. Beskrivande metadata kan inte bestämmas automatiskt. Den skapas manuellt eller halvautomatiskt. En GPS-aktiverad kamera kan till exempel automatiskt spåra latitud och longitud och lägga till geotagga bilden.
 
@@ -135,7 +135,7 @@ Med Enterprise Manager Assets kan du redigera metadata för flera resurser samti
 
 1. Navigera till platsen för de resurser som du vill redigera.
 1. Markera de resurser som du vill redigera gemensamma egenskaper för.
-1. Tryck/klicka i verktygsfältet **[!UICONTROL Properties]** för att öppna [!UICONTROL Properties] sida för de valda resurserna.
+1. Välj **[!UICONTROL Properties]** för att öppna [!UICONTROL Properties] sida för de valda resurserna.
 
    >[!NOTE]
    >
@@ -146,12 +146,11 @@ Med Enterprise Manager Assets kan du redigera metadata för flera resurser samti
 
    >[!NOTE]
    >
-   >* I [!UICONTROL Properties] kan du ta bort resurser från resurslistan genom att avbryta urvalet. Resurslistan har alla resurser markerade som standard. Metadata för resurser som du tar bort från listan uppdateras inte.
+   >* I [!UICONTROL Properties] kan du ta bort resurser från resurslistan genom att avbryta markeringen. Resurslistan har alla resurser markerade som standard. Metadata för resurser som du tar bort från listan uppdateras inte.
    >* Överst i resurslistan markerar du kryssrutan nära **[!UICONTROL Title]** för att växla mellan att välja resurser och rensa listan.
 
-
-1. Om du vill välja ett annat metadatamatchschema för resurserna trycker du/klickar **[!UICONTROL Settings]** i verktygsfältet och välj önskat schema. Spara ändringarna.
-1. Om du vill lägga till nya metadata till befintliga metadata i fält som innehåller flera värden väljer du **[!UICONTROL Append mode]**. Om du inte markerar det här alternativet ersätter de nya metadata de data som finns i fälten. Tryck/klicka på **[!UICONTROL Submit]**.
+1. Om du vill välja ett annat metadataram för resurserna väljer du **[!UICONTROL Settings]** i verktygsfältet och välj önskat schema. Spara ändringarna.
+1. Om du vill lägga till nya metadata till befintliga metadata i fält som innehåller flera värden väljer du **[!UICONTROL Append mode]**. Om du inte markerar det här alternativet ersätter de nya metadata de data som finns i fälten. Välj **[!UICONTROL Submit]**.
 
    >[!CAUTION]
    >
@@ -159,7 +158,7 @@ Med Enterprise Manager Assets kan du redigera metadata för flera resurser samti
 
 ## Anpassade metadata med bearbetningsprofil {#metadata-compute-service}
 
-Resurser som [!DNL Cloud Service] kan generera anpassade metadata för en resurs med molnbaserade tjänster. Konfigurera en bearbetningsprofil för att generera anpassade metadata. Se [använda bearbetningsprofil](/help/assets/asset-microservices-configure-and-use.md#use-profiles).
+Resurser som [!DNL Cloud Service] kan generera anpassade metadata för en resurs med molnbaserade tjänster. Konfigurera en bearbetningsprofil för att generera anpassade metadata. Se [hur du använder bearbetningsprofil](/help/assets/asset-microservices-configure-and-use.md#use-profiles).
 
 ![Metadataåtergivning i bearbetningsprofil](assets/processing-profile-metadata.png)
 
@@ -182,7 +181,7 @@ To change the limit, access Web Console ( **[!UICONTROL Tools]** > **[!UICONTROL
 
 Metadata-scheman är fördefinierade uppsättningar metadataegenskapsdefinitioner som kan användas i olika program. Egenskaper är alltid kopplade till en resurs, vilket innebär att egenskaperna är&quot;about&quot; för resursen.
 
-Du kan också utforma egna metadatamatchningar om det inte finns några som passar dina behov. Duplicera inte befintlig information. Inom en organisation gör separerade scheman det enklare att dela metadata. [!DNL Experience Manager] innehåller en standardlista med de vanligaste metadataschemana. Listan hjälper dig att snabbt komma igång med metadatastrategin och snabbt välja de metadataegenskaper du behöver.
+Du kan också utforma egna metadatamatchningar om det inte finns några som passar dina behov. Duplicera inte befintlig information. Inom en organisation gör separering av scheman det enklare att dela metadata. [!DNL Experience Manager] innehåller en standardlista med de vanligaste metadataschemana. Listan hjälper dig att snabbt komma igång med metadatastrategin och snabbt välja de metadataegenskaper du behöver.
 
 De metadatamappningar som stöds listas nedan.
 
@@ -191,7 +190,7 @@ De metadatamappningar som stöds listas nedan.
 * DC - [!DNL Dublin Core] är en viktig och allmänt använd uppsättning metadata.
 * DICOM - Digital Imaging and Communications in Medicine.
 * `Iptc4xmpCore` och `iptc4xmpExt` - International Press Communications Standard innehåller många ämnesspecifika metadata.
-* RDF - Resource Description Framework - för generiska semantiska webbmetadata.
+* RDF - Resource Description Framework - for generic semantic web metadata.
 * XMP - [!DNL Extensible Metadata Platform].
 * `xmpBJ` - Grundläggande jobbiljetter.
 
@@ -266,4 +265,3 @@ Genom att skapa metadatadrivna arbetsflöden kan du automatisera vissa processer
 >
 >* [XMP-metadata](xmp-metadata.md)
 >* [Redigera eller lägga till metadata](meta-edit.md)
-

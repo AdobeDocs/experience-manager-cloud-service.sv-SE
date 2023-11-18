@@ -2,9 +2,9 @@
 title: Redigera sidegenskaper
 description: Lär dig hur du definierar de egenskaper som krävs för att hantera en sida i AEM.
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2280'
+source-wordcount: '2270'
 ht-degree: 2%
 
 ---
@@ -87,9 +87,9 @@ Egenskaperna fördelas på flera flikar.
   >* Använd inte regex-mönster.
   >* Ska inte anges till en befintlig sida.
 
-   * **Lägg till** - Tryck eller klicka för att visa ett fält för att definiera en fågel-URL för sidan.
-      * Tryck eller klicka igen för att lägga till flera.
-      * Tryck eller klicka på **Ta bort** -ikonen för att ta bort fågel-URL:en.
+   * **Lägg till** - Välj det här alternativet om du vill visa ett fält för att definiera sidans mål-URL.
+      * Välj igen om du vill lägga till flera.
+      * Välj **Ta bort** -ikonen för att ta bort fågel-URL:en.
    * **URL för omdirigering av vanity** - Anger om du vill att sidan ska använda fågel-URL:en.
 
 ### Avancerat {#advanced}
@@ -105,7 +105,7 @@ Egenskaperna fördelas på flera flikar.
       * Om du till exempel definierar ett alias för `private` för sidan `/content/wknd/us/en/magazine/members-only`kan den här sidan också öppnas via `/content/wknd/us/en/magazine/private`
       * När du skapar ett alias anges `sling:alias` på sidnoden, vilket bara påverkar resursen, inte databassökvägen.
       * Sidor som används av alias i redigeraren kan inte publiceras. [Publiceringsalternativ](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
-      * Mer information finns i [Lokaliserade sidnamn under SEO och URL Management Best Practices](/help/overview/seo-and-url-management.md#localized-page-names).
+      * Se [Lokaliserade sidnamn under SEO och URL Management Best Practices](/help/overview/seo-and-url-management.md#localized-page-names).
 
 * **Konfiguration**
 
@@ -147,7 +147,7 @@ Egenskaperna fördelas på flera flikar.
 
 * **Aktuell bild**
 
-  Markera och konfigurera den bild som ska visas. Detta används i komponenter som refererar till sidan, t.ex. teasers, page lists, etc.
+  Markera och konfigurera den bild som ska visas. Detta används i komponenter som refererar till sidan, t.ex. scenbilder, sidlistor och så vidare.
 
    * **Bild**
 
@@ -237,7 +237,7 @@ Genom en enkel konfiguration kan en innehållsförfattare nu aktivera progressiv
 
 >[!NOTE]
 >
->Mer information finns i [Aktivera progressiva webbprogramfunktioner](/help/sites-cloud/authoring/features/enable-pwa.md).
+>Se [Aktivera progressiva webbprogramfunktioner](/help/sites-cloud/authoring/features/enable-pwa.md).
 
 * **Konfigurera installerbar upplevelse**
 

@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: c86760ed-169d-40f7-91a4-8aee449b286c
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 6%
+source-wordcount: '1011'
+ht-degree: 4%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 6%
 
 Använd schemaredigeraren för mappmetadata i Forms för att skapa och redigera metadatascheman för mappar.
 
-1. Tryck/klicka på [!DNL Experience Manager] logotyp och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Folder Metadata Schemas]**.
-1. På Forms-sidan för mappmetadataschema trycker/klickar du **[!UICONTROL Create]**.
-1. Ange ett namn för formuläret och tryck/klicka **[!UICONTROL Create]**. Det nya schemaformuläret visas på Forms-sidan Schema.
+1. Välj [!DNL Experience Manager] logotyp och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Folder Metadata Schemas]**.
+1. På Forms-sidan för mappmetadataschema väljer du **[!UICONTROL Create]**.
+1. Ange ett namn för formuläret och välj **[!UICONTROL Create]**. Det nya schemaformuläret visas på Forms-sidan Schema.
 
 ## Redigera schemaformulär för mappmetadata {#edit-folder-metadata-schema-forms}
 
@@ -33,26 +33,26 @@ Du kan redigera ett nyligen tillagt eller befintligt metadatchemaformulär, som 
 
 Du kan mappa/konfigurera dessa formulärobjekt till ett fält i en metadatanod i CRX-databasen. Du kan lägga till nya flikar eller formulärobjekt i metadatchemaformuläret.
 
-1. På Forms-sidan Schema väljer du det formulär du skapade och trycker/klickar sedan på knappen **[!UICONTROL Edit]** -ikonen i verktygsfältet.
-1. Tryck/klicka på knappen **[!UICONTROL +]** om du vill lägga till en flik i formuläret. Byt namn på fliken genom att trycka/klicka på standardnamnet och ange det nya namnet under **[!UICONTROL Settings]**.
+1. På Forms-sidan Schema väljer du det formulär du skapade och väljer sedan **[!UICONTROL Edit]** -ikonen i verktygsfältet.
+1. På sidan Redigerare för schema för mappmetadata väljer du **[!UICONTROL +]** om du vill lägga till en flik i formuläret. Om du vill byta namn på fliken markerar du standardnamnet och anger det nya namnet under **[!UICONTROL Settings]**.
 
    ![custom_tab](assets/custom_tab.png)
 
-   Om du vill lägga till fler flikar trycker/klickar du på **[!UICONTROL +]** ikon. Tryck/klicka **[!UICONTROL X]** för att ta bort en flik.
+   Välj knappen **[!UICONTROL +]** -ikon. Välj **[!UICONTROL X]** för att ta bort en flik.
 
 1. Lägg till en eller flera komponenter från fliken Aktiv **[!UICONTROL Build Form]** -fliken.
 
    ![adding_components](assets/adding_components.png)
 
-   Om du skapar flera flikar trycker/klickar du på en viss flik för att lägga till komponenter.
+   Om du skapar flera flikar väljer du en viss flik för att lägga till komponenter.
 
-1. Om du vill konfigurera en komponent markerar du den och ändrar dess egenskaper i **[!UICONTROL Settings]** -fliken.
+1. Konfigurera en komponent genom att markera den och ändra dess egenskaper i **[!UICONTROL Settings]** -fliken.
 
    Ta bort en komponent från **[!UICONTROL Settings]** -fliken.
 
    ![configure_properties](assets/configure_properties.png)
 
-1. Tryck/klicka **[!UICONTROL Save]** i verktygsfältet för att spara ändringarna.
+1. Välj **[!UICONTROL Save]** i verktygsfältet för att spara ändringarna.
 
 ### Komponenter för att skapa formulär {#components-to-build-forms}
 
@@ -86,7 +86,7 @@ The **[!UICONTROL Build Form]** På fliken visas formulärobjekt som du använde
   </tr>
   <tr>
    <td><p>Listruta</p> </td>
-   <td><p> Lägg till en nedrullningsbar lista.</p> </td>
+   <td><p> Lägg till en listruta.</p> </td>
   </tr>
   <tr>
    <td><p>Standardtaggar</p> </td>
@@ -101,7 +101,7 @@ The **[!UICONTROL Build Form]** På fliken visas formulärobjekt som du använde
 
 ### Redigera formulärobjekt {#editing-form-items}
 
-Om du vill redigera egenskaperna för formulärobjekt trycker/klickar du på komponenten och redigerar alla eller en delmängd av följande egenskaper i dialogrutan **[!UICONTROL Settings]** -fliken. Vi rekommenderar att du bara mappar ett fält till en viss egenskap i metadataschemat. I annat fall hämtas det senast tillagda fältet som är mappat till egenskapen av systemet.
+Om du vill redigera egenskaperna för formulärobjekt markerar du komponenten och redigerar alla eller en delmängd av följande egenskaper i dialogrutan **[!UICONTROL Settings]** -fliken. Vi rekommenderar att du bara mappar ett fält till en viss egenskap i metadataschemat. I annat fall hämtas det senast tillagda fältet som är mappat till egenskapen av systemet.
 
 **[!UICONTROL Field Label]**: Namnet på metadataegenskapen som visas på egenskapssidan för mappen.
 
@@ -123,11 +123,11 @@ För att komponenten ska visas på rätt sätt i schemaformuläret för metadata
 
 **[!UICONTROL Description]**: Använd den här egenskapen om du vill lägga till en kort beskrivning för metadatakomponenten.
 
-**[!UICONTROL Class]**: Den objektklass som egenskapen är associerad med.
+**[!UICONTROL Class]**: Objektklass som egenskapen är associerad med.
 
 ## Ta bort schemaformulär för mappmetadata {#delete-folder-metadata-schema-forms}
 
-Du kan ta bort schemaformulär för mappmetadata från Forms-sidan för mappmetadataschema. Om du vill ta bort ett formulär markerar du det och trycker/klickar på ikonen Ta bort i verktygsfältet.
+Du kan ta bort schemaformulär för mappmetadata från Forms-sidan för mappmetadataschema. Om du vill ta bort ett formulär markerar du det och väljer ikonen Ta bort i verktygsfältet.
 
 ![delete_form](assets/delete_form.png)
 
@@ -139,16 +139,16 @@ Om du konfigurerar ett metadataschema för en mapp lagras sökvägen till schema
 
 ### Tilldela till ett schema från sidan Mappmetadatamatchema {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
-1. Tryck/klicka på [!DNL Experience Manager] logotyp och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]**> **[!UICONTROL Folder Metadata Schemas]**.
+1. Välj [!DNL Experience Manager] logotyp och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]**> **[!UICONTROL Folder Metadata Schemas]**.
 1. På Forms-sidan för mappmetadataschema väljer du det schemaformulär som du vill tillämpa på en mapp.
-1. Tryck/klicka i verktygsfältet **[!UICONTROL Apply to Folder(s)]**.
+1. Välj **[!UICONTROL Apply to Folder(s)]** i verktygsfältet.
 
-1. Välj den mapp som du vill använda schemat på och klicka/tryck sedan på **[!UICONTROL Apply]**. Om ett metadatamatchema redan används för mappen visas ett varningsmeddelande om att du håller på att skriva över det befintliga metadatamodemet. Tryck/klicka på **[!UICONTROL Overwrite]**.
+1. Välj den mapp som schemat ska tillämpas på och välj sedan **[!UICONTROL Apply]**. Om ett metadatamatchema redan används för mappen visas ett varningsmeddelande om att du håller på att skriva över det befintliga metadatamodemet. Välj **[!UICONTROL Overwrite]**.
 1. Öppna metadataegenskaperna för den mapp som du tillämpade metadataschemat på.
 
    ![folder_properties](assets/folder_properties.png)
 
-   Om du vill visa fälten för mappmetadata trycker/klickar du på fliken **[!UICONTROL Folder Metadata]**.
+   Om du vill visa metadatafälten för mappen väljer du **[!UICONTROL Folder Metadata]** -fliken.
 
    ![folder_metadata_properties](assets/folder_metadata_properties.png)
 
@@ -156,20 +156,20 @@ Om du konfigurerar ett metadataschema för en mapp lagras sökvägen till schema
 
 Du kan tilldela ett mappmetadatchema när du skapar en mapp. Om det finns minst ett mappmetadatchema i systemet visas en extra lista i **[!UICONTROL Create Folder]** -dialogrutan. Du kan välja önskat schema. Som standard är inget schema valt.
 
-1. Från [!DNL Experience Manager Assets] användargränssnitt, knacka/klicka **[!UICONTROL Create]** i verktygsfältet.
+1. Från [!DNL Experience Manager Assets] användargränssnitt, välja **[!UICONTROL Create]** i verktygsfältet.
 1. Ange en rubrik och ett namn för mappen.
-1. Välj önskat schema i listan Mappmetadatamatchema. Tryck/klicka sedan **[!UICONTROL Create]**.
+1. Välj önskat schema i listan Mappmetadatamatchema. Välj sedan **[!UICONTROL Create]**.
 
    ![select_schema](assets/select_schema.png)
 
 1. Öppna metadataegenskaperna för den mapp som du tillämpade metadataschemat på.
-1. Om du vill visa fälten för mappmetadata trycker/klickar du på fliken **[!UICONTROL Folder Metadata]**.
+1. Om du vill visa metadatafälten för mappen väljer du **[!UICONTROL Folder Metadata]** -fliken.
 
 ## Använd mappens metadatamatchema {#use-the-folder-metadata-schema}
 
 Öppna egenskaperna för en mapp som har konfigurerats med ett schema för mappmetadata. En flik för **[!UICONTROL Folder Metadata]** visas på sidan med mappegenskaper. Om du vill visa formuläret för schemat med mappmetadata väljer du den här fliken.
 
-Ange metadatavärden i de olika fälten och tryck/klicka **[!UICONTROL Save]** för att lagra värdena. De värden du anger lagras i mappnoden i CRX-databasen.
+Ange metadatavärden i de olika fälten och välj **[!UICONTROL Save]** för att lagra värdena. De värden du anger lagras i mappnoden i CRX-databasen.
 
 ![folder_metadata_properties-1](assets/folder_metadata_properties-1.png)
 

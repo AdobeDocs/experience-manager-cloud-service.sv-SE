@@ -2,9 +2,9 @@
 title: Konfigurationer och Configuration Browser
 description: Förstå Adobe Experience Manager (AEM)-konfigurationer och hur de hanterar arbetsyteinställningar i AEM.
 exl-id: 0ade04df-03a9-4976-a4b7-c01b4748474d
-source-git-commit: 78ead5f15c2613d9c3bed3025b43423a66805c59
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1487'
 ht-degree: 0%
 
 ---
@@ -68,8 +68,8 @@ Med Configuration Browser kan en administratör enkelt skapa, hantera och konfig
 
 Det är enkelt att skapa en konfiguration i AEM med hjälp av Configuration Browser.
 
-1. Logga in AEM as a Cloud Service och välj **verktyg** -> **Allmänt** -> **Konfigurationsläsaren**.
-1. Tryck eller klicka **Skapa**.
+1. Logga in AEM as a Cloud Service och välj **verktyg** > **Allmänt** > **Konfigurationsläsaren**.
+1. Välj **Skapa**.
 1. Ange en **Titel** och **Namn** för din konfiguration.
 
    ![Skapa en konfiguration](assets/configuration-create.png)
@@ -83,7 +83,7 @@ Det är enkelt att skapa en konfiguration i AEM med hjälp av Configuration Brow
    * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
    * [Redigerbara mallar](/help/sites-cloud/authoring/features/templates.md)
    * olika molnkonfigurationer
-1. Tryck eller klicka **Skapa**.
+1. Välj **Skapa**.
 
 >[!TIP]
 >
@@ -93,7 +93,7 @@ Det är enkelt att skapa en konfiguration i AEM med hjälp av Configuration Brow
 
 Om du tänker på konfigurationer som arbetsytor kan åtkomsträttigheter anges för dessa konfigurationer för att framtvinga vem som får och inte får tillgång till dessa arbetsytor.
 
-1. Logga in AEM as a Cloud Service och välj **verktyg** -> **Allmänt** -> **Konfigurationsläsaren**.
+1. Logga in AEM as a Cloud Service och välj **verktyg** > **Allmänt** > **Konfigurationsläsaren**.
 1. Markera konfigurationen som du vill redigera och välj sedan **Egenskaper** i verktygsfältet.
 1. Välj eventuella ytterligare funktioner som du vill lägga till i konfigurationen.
 
@@ -110,7 +110,7 @@ Om du tänker på konfigurationer som arbetsytor kan åtkomsträttigheter anges 
 1. Markera de åtkomstalternativ som en eller flera valda användare eller roller ska ha och klicka på **Lägg till**.
    ![Lägga till åtkomsträttigheter till en konfiguration](assets/configuration-edit.png)
 1. Upprepa stegen så att du kan välja användare eller roller och tilldela ytterligare åtkomsträttigheter efter behov.
-1. Tryck eller klicka **Spara och stäng** när du är klar.
+1. Välj **Spara och stäng** när du är klar.
 
 ## Konfigurationer som utvecklare {#configurations-developer}
 
@@ -196,9 +196,9 @@ AEM har en arv- och reservmekanism i följande prioritetsordning för att stödj
 
 ### Använda konfigurationer {#using-configurations}
 
-Konfigurationer i AEM baseras på Sling Context-Aware Configurations. Sling-paketen innehåller ett tjänst-API som kan användas för att få kontextmedvetna konfigurationer. Kontextmedvetna konfigurationer är konfigurationer som är relaterade till en innehållsresurs eller ett resursträd som de var [som beskrivs i föregående exempel.](#developer-example)
+Konfigurationer i AEM baseras på Sling Context-Aware Configurations. Sling-paketen innehåller ett tjänst-API som kan användas för att få kontextmedvetna konfigurationer. Kontextmedvetna konfigurationer är konfigurationer som är relaterade till en innehållsresurs eller ett resursträd som de var [som beskrivs i föregående exempel](#developer-example).
 
-Mer information om Context-Aware Configurations, exempel och hur du använder dem finns i [se Sling-dokumentationen.](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html)
+Mer information om kontextmedvetna konfigurationer, exempel och hur du använder dem finns i [Sling-dokumentation.](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html).
 
 ### ConfMgr-webbkonsol {#confmgr-web-console}
 

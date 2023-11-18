@@ -2,7 +2,7 @@
 title: En snabbguide till WCAG 2.1
 description: A Quick Guide to the Web Content Accessibility Guidelines (WCAG) version 2.1.
 exl-id: 56aa834b-cd07-41c5-88f2-915bc0596e48
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '1782'
 ht-degree: 90%
@@ -27,7 +27,7 @@ WCAG 2.1 består av en uppsättning teknikoberoende riktlinjer och framgångskri
 
 Om du till exempel beskriver en bild (eller annat innehåll som inte är text) genom att använda attributet `alt` i HTML blir det till stor fördel för personer som är blinda eller har nedsatt syn. Textbeskrivningen i attributet `alt` kan antingen konverteras till tal eller överföras till elektroniska, uppdateringsbara blindskriftsskärmar. 
 
-Dessutom kan WCAG 2.1 leda till fördelar för andra mottagare, inklusive personer som kan begränsas beroende på en viss *situation*. Det kan vara personer som på grund av omständigheter som surfteknik, nätverksanslutningshastighet eller surfmiljö kan uppleva hinder som liknar de personer med funktionshinder har.
+WCAG 2.1 kan också ge fördelar för andra mottagare, inklusive personer som kan komma i fråga *delvis inaktiverad*. Det kan vara personer som på grund av omständigheter som surfteknik, nätverksanslutningshastighet eller surfmiljö kan uppleva hinder som liknar de personer med funktionshinder har.
 
 Med Adobe Experience Manager kan författare och/eller webbplatsägare skapa webbinnehåll som uppfyller relevanta framgångskriterier för WCAG 2.1 nivå A och nivå AA.
 

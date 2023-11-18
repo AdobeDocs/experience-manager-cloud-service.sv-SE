@@ -2,9 +2,9 @@
 title: AEM Headless Content Author Trney
 description: Börja här för en guidad resa med de kraftfulla och flexibla headlessfunktionerna i AEM, deras funktioner och hur du skapar innehåll för ditt projekt.
 exl-id: fe124c6b-932a-44fc-a87b-12691aefea56
-source-git-commit: 94e5d0e84d5c55d0ff61a705e079b4dc8e32a777
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '876'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Den här guiden leder dig igenom de viktigaste avsnitten så att du när du är 
 
 ## AEM dokumentationsresor {#documentation-journeys}
 
-[En dokumentationsresa](/help/journey-documentation/documentation-journeys.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren att, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
+[En dokumentationsresa](/help/journey-documentation/documentation-journeys.md) binder samman många olika, komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny på att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
 
 Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
 
@@ -43,7 +43,7 @@ Den här resan är utformad för innehållsförfattarens personlighet. Som inneh
 
 På resan beskrivs krav, steg och tillvägagångssätt för att skapa innehåll för ett AEM Headless-projekt. Resan kommer att definiera ytterligare personligheter som författaren måste interagera med för ett framgångsrikt projekt, men utgångspunkten för resan är innehållsförfattarens.
 
-Information i den här resan kan förstås vara användbar för andra personer, men viss information är överflödig för vissa roller. Stanna kvar och vänta på kommande resor som omfattar fler roller.
+Information under den här resan kan vara användbar för andra personer, men viss information är överflödig för vissa roller. Stanna kvar och vänta på kommande resor som omfattar fler roller.
 
 ## The Headless Content Author Journey {#the-journey}
 
@@ -76,7 +76,7 @@ However, Adobe wants you to succeed as you get started with your AEM Headless pr
 
 Dokumentationsresor visar hur AEM löser ett affärsproblem genom att tillhandahålla en berättarröst som vägleder dig genom komplexa, samhörande processer och funktioner. En resa visar hur flera funktioner fungerar tillsammans för att tillgodose ett enda affärsbehov.
 
-Som sådana resor är utformade för att stå på egen hand. Ett antal av dem kan dock vara relaterade till varandra. Kolla in de här extra resorna för mer information om hur AEM kraftfulla funktioner fungerar tillsammans.
+Som sådana resor är utformade för att stå på egen hand. Flera av dem kan dock vara relaterade till varandra. Kolla in de här extra resorna för mer information om hur AEM kraftfulla funktioner fungerar tillsammans.
 
 * [AEM översättningsresa utan rubrik](/help/journey-headless/translation/overview.md) - Den här dokumentationsresan ger er en bred förståelse för headless-teknik, hur AEM levererar headless-innehåll och hur ni kan översätta det.
 * [AEM Headless Developer Journey](/help/journey-headless/developer/overview.md) - Börja här för att få en guidad resa genom de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du använder dem i ditt första utvecklingsprojekt.

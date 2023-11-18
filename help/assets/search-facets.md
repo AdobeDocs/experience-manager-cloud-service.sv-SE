@@ -4,9 +4,9 @@ description: I den här artikeln beskrivs hur du skapar, ändrar och använder s
 feature: Search,Metadata
 role: User,Admin
 exl-id: f994c1bf-3f9d-4cb2-88f4-72a9ad6fa999
-source-git-commit: 35d70cd3843b5e0857a24a17746e05072aed7e1b
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2389'
+source-wordcount: '2387'
 ht-degree: 16%
 
 ---
@@ -108,7 +108,7 @@ Om du vill använda en befintlig nod anger du den i valdialogrutan.
 1. Gör något av följande:
 
    * I **[!UICONTROL Property Name]** anger du sökvägen till JSON-filen där du definierar noderna för alternativen och anger motsvarande nyckelvärdepar.
-   * Tryck ![Ikon för att lägga till resurser](assets/do-not-localize/aem_assets_add_icon.png) bredvid fältet Alternativ för att ange visningstext och värde för de alternativ som du vill ange på panelen Filter. Om du vill lägga till ytterligare ett alternativ trycker du/klickar ![Ikon för att lägga till resurser](assets/do-not-localize/aem_assets_add_icon.png) och upprepa steget.
+   * Tryck ![Ikon för att lägga till resurser](assets/do-not-localize/aem_assets_add_icon.png) bredvid fältet Alternativ för att ange visningstext och värde för de alternativ som du vill ange på panelen Filter. Om du vill lägga till ytterligare ett alternativ väljer du ![Ikon för att lägga till resurser](assets/do-not-localize/aem_assets_add_icon.png) och upprepa steget.
 
 1. Kontrollera att **[!UICONTROL Single Select]** är avmarkerat så att användaren kan välja flera alternativ för filtyper samtidigt (till exempel bilder, dokument, multimedia och arkiv). Om du väljer **[!UICONTROL Single Select]** kan användaren bara välja ett alternativ åt gången för olika filtyper.
 
@@ -145,7 +145,7 @@ The `Tags` kan du göra taggbaserade sökningar efter resurser. Som standard [!D
 
    ![Vanliga inställningar för taggar-predikat](assets/tags_predicate.png)
 
-1. I **[!UICONTROL Description]** ange en valfri beskrivning och sedan klicka/peka **[!UICONTROL Done]**.
+1. I **[!UICONTROL Description]** fält, ange en valfri beskrivning och välj **[!UICONTROL Done]**.
 1. Navigera till sökpanelen. The **[!UICONTROL Tags]** predikatet läggs till på sökpanelen.
 1. Ange taggar baserat på vilka du vill söka efter resurser eller välj från listan med förslag.
 1. Välj **[!UICONTROL Match all]** om du vill söka efter matchningar som innehåller alla taggar som du anger.

@@ -2,7 +2,7 @@
 title: Skapa PDF i batch utan ansträngning - Lär dig mer om konsten med batchbearbetning - Självhjälp för att generera miljontals PDF-dokument!
 description: Hur skapar man varumärkesorienterad och personaliserad kommunikation?
 exl-id: 542c8480-c1a7-492e-9265-11cb0288ce98
-source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '1735'
 ht-degree: 0%
@@ -162,7 +162,7 @@ Svaret på statusbegäran innehåller statusavsnittet. Den innehåller informati
 
 När jobbet är klart lagras de genererade dokumenten i `success` på den målplats som anges i konfigurationen för batchdatalagret. Om det finns några fel skapar tjänsten en `failure` mapp. Här finns information om typ och orsak till fel.
 
-Låt oss förstå med hjälp av ett exempel: Anta att det finns en indatafil `record1.xml` och två utdatatyper: `PDF` och `PCL`. Sedan innehåller målplatsen två undermappar `pdf` och `pcl`, en för varje utdatatyp. Låt oss anta att genereringen av PDF har slutförts, och sedan `pdf` undermappen innehåller `success` undermapp som i sin tur innehåller det genererade PDF-dokumentet `record1.pdf`. Låt oss anta att PCL-genereringen misslyckades, sedan `pcl` undermappen innehåller en `failure` undermapp som i sin tur innehåller en felfil `record1.error.txt` som innehåller information om felet. Dessutom innehåller målplatsen en tillfällig mapp med namnet `__tmp__` som innehåller vissa filer som krävs vid batchkörning. Den här mappen kan tas bort när det inte finns några aktiva batchkörningar som refererar till målmappen.
+Låt oss förstå med hjälp av ett exempel: Anta att det finns en indatafil `record1.xml` och två utdatatyper: `PDF` och `PCL`. Sedan innehåller målplatsen två undermappar `pdf` och `pcl`, en för varje utdatatyp. Låt oss anta att genereringen av PDF har slutförts, och sedan `pdf` undermappen innehåller `success` undermapp som i sin tur innehåller det genererade PDF-dokumentet `record1.pdf`. Låt oss anta att PCL-genereringen misslyckades, sedan `pcl` undermappen innehåller en `failure` undermapp som i sin tur innehåller en felfil `record1.error.txt` som innehåller information om felet. Målplatsen innehåller också en temporär mapp med namnet `__tmp__` som innehåller vissa filer som krävs vid batchkörning. Den här mappen kan tas bort när det inte finns några aktiva batchkörningar som refererar till målmappen.
 
 >[!NOTE]
 >

@@ -6,10 +6,10 @@ mini-toc-levels: 3
 feature: Asset Management,Publishing,Collaboration,Asset Processing
 role: User,Architect,Admin
 exl-id: 51a26764-ac2b-4225-8d27-42a7fd906183
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '4196'
-ht-degree: 9%
+source-wordcount: '4153'
+ht-degree: 8%
 
 ---
 
@@ -73,7 +73,7 @@ Följ de här stegen för att förhandsgranska en resurs.
 
 1. I förhandsgranskningsläget finns zoomalternativ för [bildtyper som stöds](/help/assets/file-format-support.md) (med interaktiv redigering).
 
-   Om du vill zooma in på en resurs trycker/klickar du `+` (eller tryck/klicka på förstoringsglaset på resursen). Om du vill zooma ut trycker du/klickar `-`. När du zoomar in kan du titta närmare på alla delar av bilden genom att panorera. Med den återställda zoompilen återgår du till den ursprungliga vyn.
+   Om du vill zooma in en resurs väljer du `+` (eller välj förstoringsglaset på resursen). Om du vill zooma ut väljer du `-`. När du zoomar in kan du titta närmare på alla delar av bilden genom att panorera. Med den återställda zoompilen återgår du till den ursprungliga vyn.
 
    Tryck **[!UICONTROL Reset]** om du vill återställa vyn till den ursprungliga storleken.
 
@@ -81,7 +81,7 @@ Följ de här stegen för att förhandsgranska en resurs.
 
 1. Navigera till platsen för resursen vars metadata du vill redigera.
 
-1. Markera resursen och tryck/klicka på **[!UICONTROL Properties]** i verktygsfältet för att visa resursegenskaper. Du kan också välja **[!UICONTROL Properties]** Snabba åtgärder på tillgångskortet.
+1. Markera resursen och välj **[!UICONTROL Properties]** i verktygsfältet för att visa resursegenskaper. Du kan också välja **[!UICONTROL Properties]** Snabba åtgärder på tillgångskortet.
 
    ![properties_quickaction](assets/properties_quickaction.png)
 
@@ -106,7 +106,7 @@ Följ de här stegen för att förhandsgranska en resurs.
    >
    > Om du vill skapa taggar måste du ha skrivbehörighet på `/content/cq:tags/default` sökväg i CRX-databasen.
 
-1. Tryck/klicka på **[!UICONTROL Save & Close]**.
+1. Välj **[!UICONTROL Save & Close]**.
 
 1. Navigera till användargränssnittet Resurser. De redigerade metadataegenskaperna, inklusive rubrik, beskrivning och taggar, visas på resurskortet i kortvyn och under relevanta kolumner i listvyn.
 
@@ -138,7 +138,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
 Övriga egenskaper och metadatainformation bevaras. Ingen del av kopian skapas när en resurs kopieras.
 
-1. Välj en eller flera resurser i resursgränssnittet och tryck/klicka sedan på **[!UICONTROL Copy]** -ikonen i verktygsfältet. Du kan även välja **[!UICONTROL Copy]** ![copy_icon](assets/copy_icon.png) snabbåtgärd från tillgångskortet.
+1. Välj en eller flera resurser i resursgränssnittet och välj sedan **[!UICONTROL Copy]** -ikonen i verktygsfältet. Du kan även välja **[!UICONTROL Copy]** ![copy_icon](assets/copy_icon.png) snabbåtgärd från tillgångskortet.
 
    >[!NOTE]
    >
@@ -162,13 +162,13 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
 1. Navigera till platsen för resursen som du vill flytta.
 
-1. Markera resursen och tryck/klicka på **[!UICONTROL Move]** icon ![move_icon](assets/move_icon.png) i verktygsfältet.
+1. Markera resursen och välj **[!UICONTROL Move]** icon ![move_icon](assets/move_icon.png) i verktygsfältet.
 
 1. Gör något av följande i guiden Flytta resurser:
 
-   * Ange namnet på resursen när den har flyttats. Tryck sedan på/klicka **[!UICONTROL Next]** för att fortsätta.
+   * Ange namnet på resursen när den har flyttats. Välj sedan **[!UICONTROL Next]** för att fortsätta.
 
-   * Tryck/klicka **[!UICONTROL Cancel]** för att stoppa processen.
+   * Välj **[!UICONTROL Cancel]** för att stoppa processen.
 
    >[!NOTE]
    >
@@ -177,20 +177,20 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
 1. På **[!UICONTROL Select Destination]** gör du något av följande:
 
-   * Navigera till resursernas nya plats och tryck/klicka sedan på **[!UICONTROL Next]** för att fortsätta.
+   * Navigera till den nya platsen för resurserna och välj sedan **[!UICONTROL Next]** för att fortsätta.
 
-   * Tryck/klicka **[!UICONTROL Back]** för att gå tillbaka till **[!UICONTROL Rename]** skärm.
+   * Välj **[!UICONTROL Back]** för att gå tillbaka till **[!UICONTROL Rename]** skärm.
 
 1. Om de resurser som flyttas har några referenssidor, resurser eller samlingar, **[!UICONTROL Adjust References]** visas bredvid **[!UICONTROL Select Destination]** -fliken.
 
    Gör något av följande i dialogrutan **[!UICONTROL Adjust References]** skärm:
 
-   * Ange vilka referenser som ska justeras baserat på de nya detaljerna och tryck/klicka sedan på **[!UICONTROL Move]** för att fortsätta.
+   * Ange vilka referenser som ska justeras baserat på den nya informationen och välj sedan **[!UICONTROL Move]** för att fortsätta.
 
    * Från **[!UICONTROL Adjust]** markerar/avmarkerar du referenser till resurserna.
-   * Tryck/klicka **[!UICONTROL Back]** för att gå tillbaka till **[!UICONTROL Select Destination]** skärm.
+   * Välj **[!UICONTROL Back]** för att gå tillbaka till **[!UICONTROL Select Destination]** skärm.
 
-   * Tryck/klicka **[!UICONTROL Cancel]** för att stoppa flyttåtgärden.
+   * Välj **[!UICONTROL Cancel]** för att stoppa flyttåtgärden.
 
    Om du inte uppdaterar referenser fortsätter de att peka på resursens tidigare sökväg. Om du justerar referenserna uppdateras de till den nya resurssökvägen.
 
@@ -198,11 +198,11 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
 1. Du kan lägga till eller ta bort återgivningar för en resurs, förutom originalet. Navigera till platsen för resursen som du vill lägga till eller ta bort återgivningar för.
 
-1. Tryck/klicka på resursen för att öppna sidan för resursen.
+1. Välj resursen för att öppna dess resurssida.
 
    <!--![chlimage_1-220](assets/chlimage_1-220.png)-->
 
-1. Tryck/klicka på ikonen GlobalNav och välj **[!UICONTROL Renditions]** från listan.
+1. Välj ikonen GlobalNav och välj **[!UICONTROL Renditions]** från listan.
 
    ![renditions_menu](assets/renditions_menu.png)
 
@@ -218,13 +218,13 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    **Ta bort en återgivning**
 
-   Välj en återgivning på menyn **[!UICONTROL Renditions]** och sedan trycka/klicka på **[!UICONTROL Delete Rendition]** -ikonen i verktygsfältet. Det går inte att ta bort återgivningar gruppvis när resursbearbetningen är slutförd. För enskilda resurser kan du ta bort återgivningar manuellt från användargränssnittet. För flera resurser kan du anpassa [!DNL Experience Manager] om du vill ta bort en viss återgivning eller ta bort resurserna och överföra de borttagna resurserna igen.
+   Välj en återgivning på menyn **[!UICONTROL Renditions]** och sedan markera **[!UICONTROL Delete Rendition]** -ikonen i verktygsfältet. Det går inte att ta bort återgivningar gruppvis när resursbearbetningen är slutförd. För enskilda resurser kan du ta bort återgivningar manuellt från användargränssnittet. För flera resurser kan du anpassa [!DNL Experience Manager] om du vill ta bort en viss återgivning eller ta bort resurserna och överföra de borttagna resurserna igen.
 
    ![delete_renderingicon](assets/delete_renditionicon.png)
 
    **Överföra en ny återgivning**
 
-   Navigera till sidan med resursinformation för resursen och tryck/klicka på ikonen **[!UICONTROL Add Rendition]** i verktygsfältet för att överföra en ny återgivning för resursen.
+   Navigera till sidan med tillgångsinformation för resursen och välj **[!UICONTROL Add Rendition]** i verktygsfältet för att överföra en ny återgivning för resursen.
 
    <!--![chlimage_1-221](assets/chlimage_1-221.png)-->
 
@@ -314,7 +314,7 @@ En stängd användargrupp (CUG) används för att begränsa åtkomsten till spec
 
 CUG är ett extra sätt att begränsa åtkomsten till dina resurser. Du kan också konfigurera en inloggningssida för mappen.
 
-1. Välj en mapp i resursgränssnittet och visa egenskapssidan genom att trycka/klicka på egenskapsikonen i verktygsfältet.
+1. Välj en mapp i resursgränssnittet och välj egenskapsikonen i verktygsfältet för att visa egenskapssidan.
 1. Från **[!UICONTROL Permissions]** flik, lägga till medlemmar eller grupper under **[!UICONTROL Closed User Group]**.
 
    ![add_user](assets/add_user.png)
@@ -355,13 +355,13 @@ The editing tools in the [!DNL Experience Manager Assets] interface let you perf
 
 1. Do one of the following to open an asset in edit mode:
 
-    * Select the asset and then click/tap the **[!UICONTROL Edit]** icon in the toolbar.
-    * Tap/click the **[!UICONTROL Edit]** icon that appears on an asset in the Card view.
-    * In the asset page, tap/click the **[!UICONTROL Edit]** icon in the toolbar.
+    * Select the asset and then select the **[!UICONTROL Edit]** icon in the toolbar.
+    * Select the **[!UICONTROL Edit]** icon that appears on an asset in the Card view.
+    * In the asset page, select the **[!UICONTROL Edit]** icon in the toolbar.
 
    ![edit_icon](assets/edit_icon.png)
 
-1. To crop the image, tap/click the **Crop** icon.
+1. To crop the image, select the **Crop** icon.
 
    ![chlimage_1-226](assets/chlimage_1-226.png)
 
@@ -378,15 +378,15 @@ The editing tools in the [!DNL Experience Manager Assets] interface let you perf
 
    ![chlimage_1-229](assets/chlimage_1-229.png)
 
-1. Tap/click the appropriate Rotate icon to rotate the image clockwise or anti-clockwise.
+1. Select the appropriate Rotate icon to rotate the image clockwise or anti-clockwise.
 
    ![chlimage_1-230](assets/chlimage_1-230.png)
 
-1. Tap/click the appropriate Flip icon to flip the image horizontally or vertically.
+1. Select the appropriate Flip icon to flip the image horizontally or vertically.
 
    ![chlimage_1-231](assets/chlimage_1-231.png)
 
-1. Tap/click the **Finish** icon to save the changes.
+1. Select the **Finish** icon to save the changes.
 
    ![chlimage_1-232](assets/chlimage_1-232.png)
 
@@ -425,7 +425,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 >För innehållsfragment, [anteckningar skapas i fragmentredigeraren](content-fragments/content-fragments.md).
 
 1. Navigera till platsen för resursen som du vill lägga till anteckningar i.
-1. Tryck/klicka på **[!UICONTROL Annotate]** ikoner från något av följande:
+1. Välj **[!UICONTROL Annotate]** ikoner från något av följande:
 
    * [Snabbåtgärder](#quick-actions)
    * Från verktygsfältet när du har valt resursen eller navigerat till resurssidan
@@ -454,18 +454,18 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
    >
    >Du kan lägga till flera anteckningar innan du sparar dem.
 
-1. Tryck/klicka **[!UICONTROL Close]** om du vill avsluta anteckningsläget.
+1. Välj **[!UICONTROL Close]** om du vill avsluta anteckningsläget.
 1. Om du vill visa meddelandet loggar du in på Assets med Aaron MacDonalds inloggningsuppgifter och klickar på knappen **[!UICONTROL Notifications]** om du vill visa meddelandet.
 
    >[!NOTE]
    >
    >Anteckningar kan också läggas till i videomaterialet. När du kommenterar videoklipp pausas spelaren så att du kan anteckna i en bildruta. Mer information finns i [hantera videomaterial](manage-video-assets.md). Men MXF-videoformatet stöds ännu inte med videoanteckningar.
 
-1. Om du vill välja en annan färg så att du kan skilja på användarna klickar/trycker du på profilikonen och klickar/trycker **[!UICONTROL My Preferences]**.
+1. Om du vill välja en annan färg så att du kan skilja mellan användarna väljer du profilikonen och väljer **[!UICONTROL My Preferences]**.
 
    <!--![chlimage_1-237](assets/chlimage_1-237.png)-->
 
-   Ange önskad färg i rutan **[!UICONTROL Annotation Color]** och klicka/tryck sedan på **[!UICONTROL Accept]**.
+   Ange önskad färg i dialogrutan **[!UICONTROL Annotation Color]** och sedan markera **[!UICONTROL Accept]**.
 
 <!-- ![chlimage_1-238](assets/chlimage_1-238.png)-->
 
@@ -485,7 +485,7 @@ Du kan bara visa en anteckning åt gången.
 
 1. Om du vill visa sparade anteckningar för en resurs går du till resursens plats och öppnar resurssidan för resursen.
 
-1. Tryck/klicka på ikonen GlobalNav och välj **[!UICONTROL Timeline]** från listan.
+1. Välj ikonen GlobalNav och välj **[!UICONTROL Timeline]** från listan.
 
    <!--![chlimage_1-239](assets/chlimage_1-239.png)-->
 
@@ -493,11 +493,11 @@ Du kan bara visa en anteckning åt gången.
 
    <!--![chlimage_1-240](assets/chlimage_1-240.png)-->
 
-   Tryck/klicka på en kommentar i **[!UICONTROL Timeline]** för att visa motsvarande anteckning i bilden.
+   Markera en kommentar i **[!UICONTROL Timeline]** för att visa motsvarande anteckning i bilden.
 
    <!--![chlimage_1-241](assets/chlimage_1-241.png)-->
 
-   Tryck/klicka **[!UICONTROL Delete]**, om du vill ta bort en viss kommentar.
+   Välj **[!UICONTROL Delete]**, om du vill ta bort en viss kommentar.
 
 ### Skriv ut anteckningar {#printing-annotations}
 
@@ -509,7 +509,7 @@ Du kan också välja att bara skriva ut anteckningarna eller granskningsstatusen
 >
 >Du kan markera flera anteckningar när du skriver ut den kommenterade resursen som PDF.
 
-Tryck/klicka på knappen **[!UICONTROL Print]** och följ instruktionerna i guiden. The **[!UICONTROL Print]** visas bara i verktygsfältet när resursen har tilldelats minst en antecknings- eller granskningsstatus.
+Om du vill skriva ut anteckningarna och granskningsstatusen väljer du **[!UICONTROL Print]** och följ instruktionerna i guiden. The **[!UICONTROL Print]** visas bara i verktygsfältet när resursen har tilldelats minst en antecknings- eller granskningsstatus.
 
 1. Öppna förhandsgranskningssidan för en resurs i resursgränssnittet.
 1. Gör något av följande:
@@ -525,7 +525,7 @@ Tryck/klicka på knappen **[!UICONTROL Print]** och följ instruktionerna i guid
 
    <!--![chlimage_1-243](assets/chlimage_1-243.png)-->
 
-1. Tryck/klicka på ikonen **[!UICONTROL Print]** i verktygsfältet.
+1. Välj **[!UICONTROL Print]** -ikonen i verktygsfältet.
 
    <!--![chlimage_1-244](assets/chlimage_1-244.png)-->
 
@@ -565,21 +565,21 @@ Versionsfunktionen gör följande:
 * Visa aktuell revision för en tillgång.
 * Återställ resursen till en tidigare version.
 
-1. Navigera till platsen för resursen som du vill skapa en version för och öppna resursens sida genom att trycka/klicka på den.
+1. Navigera till platsen för resursen som du vill skapa en version för och markera den för att öppna resurssidan.
 
-1. Tryck/klicka på ikonen GlobalNav och välj **[!UICONTROL Timeline]** på menyn.
+1. Välj ikonen GlobalNav och välj **[!UICONTROL Timeline]** på menyn.
 
    ![tidslinje](assets/timeline.png)
 
-1. Tryck/klicka på **[!UICONTROL Actions]** (pil) längst ned för att visa de tillgängliga åtgärder du kan utföra på resursen.
+1. Välj **[!UICONTROL Actions]** (pil) längst ned för att visa de tillgängliga åtgärder du kan utföra på resursen.
 
    <!--![chlimage_1-249](assets/chlimage_1-249.png)-->
 
-1. Tryck/klicka **[!UICONTROL Save as Version]** för att skapa en version för resursen.
+1. Välj **[!UICONTROL Save as Version]** för att skapa en version för resursen.
 
 <!--![chlimage_1-250](assets/chlimage_1-250.png)-->
 
-1. Lägg till en etikett och kommentar och klicka sedan på **[!UICONTROL Create]** för att skapa en version. Du kan också trycka/klicka **Avbryt** för att avsluta åtgärden.
+1. Lägg till en etikett och kommentar och klicka sedan på **[!UICONTROL Create]** för att skapa en version. Du kan också välja **Avbryt** för att avsluta åtgärden.
 
    <!--![chlimage_1-251](assets/chlimage_1-251.png)-->
 
@@ -595,9 +595,9 @@ Versionsfunktionen gör följande:
 
    ![save_version](assets/save_version.png)
 
-1. Om du vill generera en förhandsgranskning för versionen trycker/klickar du på **[!UICONTROL Preview Version]**.
+1. Om du vill generera en förhandsgranskning för versionen väljer du **[!UICONTROL Preview Version]**.
 1. Om du vill visa den här versionen i resursgränssnittet väljer du **[!UICONTROL Revert to this Version]**.
-1. Om du vill jämföra två versioner går du till resursens tillgångssida och trycker/klickar på den version som ska jämföras med den aktuella versionen.
+1. Om du vill jämföra två versioner går du till tillgångssidan för resursen och väljer vilken version som ska jämföras med den aktuella versionen.
 
    ![select_version_tocompare](assets/select_version_tocompare.png)
 
@@ -607,16 +607,16 @@ Versionsfunktionen gör följande:
 
 ### Starta ett arbetsflöde för en resurs {#starting-a-workflow-on-an-asset}
 
-1. Navigera till platsen för resursen som du vill starta ett arbetsflöde för och tryck/klicka på resursen för att öppna resurssidan.
-1. Tryck/klicka på ikonen GlobalNav och välj **[!UICONTROL Timeline]** på menyn för att visa tidslinjen.
+1. Navigera till platsen för resursen som du vill starta ett arbetsflöde för och markera resursen för att öppna resurssidan.
+1. Välj ikonen GlobalNav och välj **[!UICONTROL Timeline]** på menyn för att visa tidslinjen.
 
    ![tidslinje-1](assets/timeline-1.png)
 
-1. Tryck/klicka på **[!UICONTROL Actions]** (pil) längst ned för att öppna en lista med tillgängliga åtgärder för resursen.
+1. Välj **[!UICONTROL Actions]** (pil) längst ned för att öppna en lista med tillgängliga åtgärder för resursen.
 
    <!--![chlimage_1-252](assets/chlimage_1-252.png)-->
 
-1. Tryck/klicka **[!UICONTROL Start Workflow]** från listan.
+1. Välj **[!UICONTROL Start Workflow]** från listan.
 
    <!--![chlimage_1-253](assets/chlimage_1-253.png)-->
 
@@ -628,7 +628,7 @@ Versionsfunktionen gör följande:
 
    <!--![chlimage_1-255](assets/chlimage_1-255.png)-->
 
-1. Tryck/klicka på **[!UICONTROL Start]** och sedan på **[!UICONTROL Proceed]** i dialogrutan för att bekräfta. Varje steg i arbetsflödet visas på tidslinjen som en händelse.
+1. Välj **[!UICONTROL Start]** och sedan **[!UICONTROL Proceed]** i dialogrutan för att bekräfta. Varje steg i arbetsflödet visas på tidslinjen som en händelse.
 
    <!--![chlimage_1-256](assets/chlimage_1-256.png)-->
 

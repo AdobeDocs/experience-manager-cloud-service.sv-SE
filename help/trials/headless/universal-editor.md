@@ -4,9 +4,9 @@ description: Upptäck hur du kan använda den universella redigeraren för att r
 hidefromtoc: true
 index: false
 exl-id: a4854a56-9434-4d15-a56a-f1798f27263a
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ Redigering på plats och i sitt sammanhang kan ofta vara fördelaktigt jämfört
 
 Med den universella redigeraren kan du smidigt redigera text både i sitt sammanhang och på plats, vilket gör det enkelt och intuitivt att skapa innehåll.
 
-1. Redigeraren bör läsas in som standard i **Komponenter** läge. Om inte, tryck eller klicka på **Komponenter** i fältet mode till vänster om redigeraren.
+1. Redigeraren bör läsas in som standard i **Komponenter** läge. Om inte väljer du **Komponenter** i fältet mode till vänster om redigeraren.
 
-1. Dubbeltryck eller klicka på titeln för den senaste artikeln för att redigera den.
+1. Dubbelmarkera titeln på den senaste artikeln för att redigera den.
 
    ![Universell redigerare](assets/do-not-localize/ue-component-mode.png)
 
@@ -49,7 +49,7 @@ Med den universella redigeraren kan du smidigt redigera text både i sitt samman
 
    ![Redigera text i den universella redigeraren](assets/do-not-localize/ue-edit-text-2.png)
 
-1. Tryck på Enter eller tryck eller klicka utanför textkomponenten så sparas ändringarna automatiskt.
+1. Tryck på Enter eller markera utanför textkomponenten så sparas ändringarna automatiskt.
 
 Den universella redigeraren sparar ändringarna automatiskt i redigeringsmiljön. Du måste fortfarande publicera dem så att läsarna kan se dem, vilket vi gör i ett senare steg.
 
@@ -57,15 +57,15 @@ Den universella redigeraren sparar ändringarna automatiskt i redigeringsmiljön
 
 Du kan också byta ut bilder samtidigt som du behåller innehållet genom att använda den universella redigeraren.
 
-1. Återstår i **Komponenter** markerar du surfarens bild genom att trycka eller klicka på den.
+1. Återstår i **Komponenter** markerar du surfarens bild för att markera den.
 
-1. I komponentspåret kan du se detaljerna för resursen. Tryck eller klicka på **Aktuell bild** miniatyrbild.
+1. I komponentspåret kan du se detaljerna för resursen. Välj **Aktuell bild** miniatyrbild.
 
    ![Markera en bild som ska redigeras](assets/do-not-localize/ue-edit-media.png)
 
-1. I **Välj resurser** bläddra nedåt och tryck eller klicka på `surfer-wave-02.JPG` för att markera den.
+1. I **Välj resurser** fönster, rulla nedåt och markera `surfer-wave-02.JPG` för att markera den.
 
-1. Tryck eller klicka **Välj** i **Välj resurser** -fönstret.
+1. Välj **Välj** i **Välj resurser** -fönstret.
 
    ![Använda fönstret Välj resurs för att välja en bild](assets/do-not-localize/ue-select-asset.png)
 
@@ -75,7 +75,7 @@ Bilden ersätts med den bild du har markerat.
 
 Med den universella redigeraren kan du interagera med ditt innehåll i dess sammanhang och se innehållet så som det levereras till användarnas enheter.
 
-1. Som standard återger redigeraren skrivbordsversionen av ditt innehåll. Tryck eller klicka på emulatorknappen längst upp till höger i redigeraren för att ändra målenheten.
+1. Som standard återger redigeraren skrivbordsversionen av ditt innehåll. Välj emulatorknappen längst upp till höger i redigeraren för att ändra målenheten.
 
    ![Emulatormenyalternativet](assets/do-not-localize/ue-emulator-1.png)
 
@@ -83,7 +83,7 @@ Med den universella redigeraren kan du interagera med ditt innehåll i dess samm
 
    ![Emulatormenyalternativet](assets/do-not-localize/ue-emulator-2.png)
 
-1. Se innehållsändringen i redigeraren. Emulatorns ikon ändras också för att återspegla det läge emulatorn är i. Tryck eller klicka var som helst utanför emulatormenyn för att stänga den och interagera med innehållet.
+1. Se innehållsändringen i redigeraren. Emulatorns ikon ändras också för att återspegla det läge emulatorn är i. Välj var som helst utanför emulatormenyn för att stänga den och interagera med innehållet.
 
 1. Återställa emulatorn till skrivbordsläge.
 
@@ -91,11 +91,11 @@ Du kan också ange exakta dimensioner för emulatorn och rotera den emulerade en
 
 ## Förhandsgranska och publicera {#preview}
 
-Eftersom du behöver trycka eller klicka på innehållet för att markera det i redigeraren kan du inte följa länkar eller interagera med innehållet genom att trycka eller klicka när det är i redigeringsläge. I förhandsgranskningsläget kan du följa länkarna i ditt innehåll och uppleva det som användarna gör innan de publicerar det.
+Eftersom du måste markera innehållet i redigeraren kan du inte följa länkar eller interagera med innehållet genom att trycka eller klicka när det är i redigeringsläge. I förhandsgranskningsläget kan du följa länkarna i ditt innehåll och uppleva det som användarna gör innan de publicerar det.
 
-1. Tryck eller klicka i fältet mode till vänster om redigeraren **Förhandsgranska**.
+1. I fältet mode till vänster om redigeraren väljer du **Förhandsgranska**.
 
-1. Tryck eller klicka på **Läs mer** för huvudartikeln.
+1. Välj **Läs mer** för huvudartikeln.
 
    ![Förhandsgranskningsläge](assets/do-not-localize/ue-preview-publish-1.png)
 
@@ -103,7 +103,7 @@ Eftersom du behöver trycka eller klicka på innehållet för att markera det i 
 
    ![Återgå till huvudsidan med hjälp av länken Bakåt](assets/do-not-localize/ue-preview-publish-3.png)
 
-1. Tryck eller klicka på **Publicera** längst upp till höger i redigeraren för att publicera ditt innehåll.
+1. Välj **Publicera** längst upp till höger i redigeraren för att publicera ditt innehåll.
 
    ![Förhandsgranska och publicera menyalternativ](assets/do-not-localize/ue-preview-publish-4.png)
 
@@ -117,12 +117,12 @@ För att snabba upp redigeringen av innehåll när strukturerad redigering av he
 
 1. I fältet mode till vänster om redigeraren väljer du **Komponenter**. På så sätt kan du välja sidkomponenter i redigeraren.
 
-1. Tryck eller klicka på något av äventyren som **Bali Surf Camp** för att markera den.
+1. Välj något av äventyren som **Bali Surf Camp** för att markera den.
 
    * Observera den markerade komponentens blå kontur. Fliken ska visa namnet på innehållsfragmentet när ett innehållsfragment är markerat. I detta fall **Bali Surf Camp**.
-   * Eftersom den universella redigeraren tillåter att du markerar ett objekt på sidan, kan komponenter som är delar av ett innehållsfragment också markeras individuellt. Tryck eller klicka där det visas på bilden för att markera hela komponenten för innehållsfragment.
+   * Eftersom den universella redigeraren tillåter att du markerar ett objekt på sidan, kan komponenter som är delar av ett innehållsfragment också markeras individuellt. Markera var som anges i bilden för att markera hela komponenten för innehållsfragment.
 
-1. The **Redigera** visas på komponenträlen. Tryck eller klicka på **Redigera** om du vill öppna redigeraren för innehållsfragment på en ny flik.
+1. The **Redigera** visas på komponenträlen. Välj **Redigera** om du vill öppna redigeraren för innehållsfragment på en ny flik.
 
 ![Markera innehållsfragment i den universella redigeraren](assets/do-not-localize/ue-content-fragments.png)
 

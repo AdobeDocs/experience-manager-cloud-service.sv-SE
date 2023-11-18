@@ -3,9 +3,9 @@ title: Anslutningar för Adobe Experience Manager as a Cloud Service
 description: Lär dig mer om kopplingar, vad de kan göra och hur du implementerar dessa värdefulla verktyg i Experience Manager.
 landing-page-description: Lär dig mer om kopplingar, vad de kan göra och hur du implementerar dessa värdefulla verktyg i Experience Manager.
 exl-id: 9dc88f13-a3d9-4177-9f1a-99ed3b2dd00a
-source-git-commit: 13cb8ae059f0a77e517d2e64eae96a08f88ac075
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '397'
 ht-degree: 68%
 
 ---
@@ -24,10 +24,10 @@ Lär dig mer om Connectors for Experience Manager as a Cloud Service, vad de kan
 
 | Användarhandbok | Beskrivning |
 |---|---|
-| [Översikt](/help/overview/home.md) | Den här guiden ger en introduktion till Experience Manager som en molntjänst, inklusive en introduktion, terminologi, arkitektur osv. |
+| [Översikt](/help/overview/home.md) | Den här guiden ger dig en introduktion till Experience Manager som en molntjänst, inklusive en introduktion, terminologi, arkitektur och så vidare. |
 | [Versionsinformation](/help/release-notes/home.md) | Den här guiden innehåller viktig information om den senaste versionen av Experience Manager as a Cloud Service inklusive nyheter, inaktuella och borttagna funktioner samt kända fel. |
 | [Användarhandbok om säkerhet](/help/security/home.md) | Läs om viktiga säkerhetsfrågor när det gäller Experience Manager as a Cloud Service. |
-| [Onboarding Journey](/help/journey-onboarding/overview.md) | Den här guiden sammanfattar hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du kommer åt det och viktig dataskyddsinformation. |
+| [Onboardresa](/help/journey-onboarding/overview.md) | Den här guiden sammanfattar hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du kommer åt det och viktig dataskyddsinformation. |
 | [Användarhandbok för Sites](/help/sites-cloud/home.md) | Läs om hur du utvecklar med och administrerar Experience Manager Sites as a Cloud Service. |
 | [Användarhandbok för Assets](/help/assets/home.md) | Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service. |
 | [Flytta till AEM as a Cloud Service](/help/journey-migration/getting-started.md) | Förstå övergången till Cloud Service. |

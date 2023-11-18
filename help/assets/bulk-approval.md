@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Collections,Collaboration
 role: User
 exl-id: 1e5bdd66-2707-4584-87ed-a0ff1bde3718
-source-git-commit: 80ac947976bab2b0bfedb4ff9d5dd4634de6b4fc
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 21%
+source-wordcount: '779'
+ht-degree: 5%
 
 ---
 
@@ -28,7 +28,7 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 ## Skapa en granskningsåtgärd för mappar {#creating-a-review-task-for-folders}
 
 1. I Assets-användargränssnittet väljer du den mapp som du vill skapa en granskningsuppgift för.
-1. I verktygsfältet trycker/klickar du på ikonen **[!UICONTROL Create Review Task]** för att öppna sidan **[!UICONTROL Review Task]**. Om du inte kan se ikonen i verktygsfältet trycker/klickar du på **[!UICONTROL More]** och väljer sedan ikonen.
+1. Välj **[!UICONTROL Create Review Task]** -ikonen för att öppna **[!UICONTROL Review Task]** sida. Om ikonen inte visas i verktygsfältet väljer du **[!UICONTROL More]** och sedan markera ikonen.
 
    ![chlimage_1-403](assets/chlimage_1-403.png)
 
@@ -36,7 +36,7 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 
    >[!NOTE]
    >
-   >Endast de projekt som du har redigeringsbehörighet för (eller högre) visas i **[!UICONTROL Projects]** lista.
+   >Endast de projekt som du har redigerarbehörighet för (eller högre) visas i **[!UICONTROL Projects]** lista.
 
 1. Ange ett namn för granskningsaktiviteten och välj en godkännare på menyn **[!UICONTROL Assign To]** lista.
 
@@ -48,21 +48,21 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 
    ![task_details](assets/task_details.png)
 
-1. På fliken Avancerat anger du en etikett som ska användas för att skapa URI:n.
+1. Ange en etikett som ska användas för att skapa URI på fliken Avancerat.
 
    ![review_name](assets/review_name.png)
 
-1. Tryck/klicka på **[!UICONTROL Submit]** och tryck/klicka sedan på **[!UICONTROL Done]** för att stänga bekräftelsemeddelandet. Ett meddelande om den nya uppgiften skickas till godkännaren.
-1. Logga in på [!DNL Experience Manager Assets] som godkännare och navigera till resursgränssnittet. Klicka/tryck på knappen **[!UICONTROL Notifications]** och välj sedan en granskningsåtgärd i listan.
+1. Välj **[!UICONTROL Submit]** och sedan markera **[!UICONTROL Done]** för att stänga bekräftelsemeddelandet. Ett meddelande om den nya uppgiften skickas till godkännaren.
+1. Logga in på [!DNL Experience Manager Assets] som godkännare och navigera till resursgränssnittet. Om du vill godkänna resurser väljer du **[!UICONTROL Notifications]** och välj sedan en granskningsåtgärd i listan.
 
    ![meddelande](assets/notification.png)
 
-1. Granska informationen om granskningsuppgiften på sidan **[!UICONTROL Review Task]** och tryck/klicka sedan på **[!UICONTROL Review]**.
-1. Markera resurser på sidan **[!UICONTROL Review Task]** och tryck/klicka på ikonen **[!UICONTROL Approve/Reject]** för att godkänna eller avvisa.
+1. I **[!UICONTROL Review Task]** Granska informationen om granskningsaktiviteten och välj **[!UICONTROL Review]**.
+1. I **[!UICONTROL Review Task]** väljer du resurser och väljer **[!UICONTROL Approve/Reject]** ikon för att godkänna eller avvisa, beroende på vad som är lämpligt.
 
    ![review_task](assets/review_task.png)
 
-1. Tryck/klicka på ikonen **[!UICONTROL Complete]** i verktygsfältet. Ange en kommentar i dialogrutan och tryck/klicka  **[!UICONTROL Complete]** för att bekräfta.
+1. Välj **[!UICONTROL Complete]** -ikonen i verktygsfältet. Skriv en kommentar i dialogrutan och välj  **[!UICONTROL Complete]** för att bekräfta.
 1. Navigera till resursgränssnittet och öppna mappen. Ikonerna för godkännandestatus för resurserna visas både i kort- och listvyn.
 
    **Kortvy**
@@ -76,7 +76,7 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 ## Skapa en granskningsuppgift för samlingar {#creating-a-review-task-for-collections}
 
 1. På sidan Samlingar väljer du den samling som du vill skapa en granskningsuppgift för.
-1. I verktygsfältet trycker/klickar du på ikonen **[!UICONTROL Create Review Task]** för att öppna sidan **[!UICONTROL Review Task]**. Om du inte kan se ikonen i verktygsfältet trycker/klickar du på **[!UICONTROL More]** och väljer sedan ikonen.
+1. Välj **[!UICONTROL Create Review Task]** -ikonen för att öppna **[!UICONTROL Review Task]** sida. Om ikonen inte visas i verktygsfältet väljer du **[!UICONTROL More]** och sedan markera ikonen.
 
    ![chlimage_1-405](assets/chlimage_1-405.png)
 
@@ -84,7 +84,7 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 
    >[!NOTE]
    >
-   >Endast de projekt som du har redigeringsbehörighet för (eller högre) visas i **[!UICONTROL Projects]** lista.
+   >Endast de projekt som du har redigerarbehörighet för (eller högre) visas i **[!UICONTROL Projects]** lista.
 
 1. Ange ett namn för granskningsaktiviteten och välj en godkännare på menyn **[!UICONTROL Assign To]** lista.
 
@@ -96,14 +96,14 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 
    ![task_details-collection](assets/task_details-collection.png)
 
-1. Tryck/klicka på **[!UICONTROL Submit]** och tryck/klicka sedan på **[!UICONTROL Done]** för att stänga bekräftelsemeddelandet. Ett meddelande om den nya uppgiften skickas till godkännaren.
-1. Logga in på [!DNL Experience Manager Assets] som godkännare och navigera till Assets-konsolen. Godkänn resurser genom att trycka/klicka på **[!UICONTROL Notifications]** och välj sedan en granskningsåtgärd i listan.
-1. Granska informationen om granskningsuppgiften på sidan **[!UICONTROL Review Task]** och tryck/klicka sedan på **[!UICONTROL Review]**.
-1. Alla resurser i samlingen visas på granskningssidan. Markera resurserna och tryck/klicka på **[!UICONTROL Approve/Reject]** -ikon för att godkänna eller avvisa resurser.
+1. Välj **[!UICONTROL Submit]** och sedan markera **[!UICONTROL Done]** för att stänga bekräftelsemeddelandet. Ett meddelande om den nya uppgiften skickas till godkännaren.
+1. Logga in på [!DNL Experience Manager Assets] som godkännare och navigera till Assets-konsolen. Om du vill godkänna resurser väljer du **[!UICONTROL Notifications]** och välj sedan en granskningsåtgärd i listan.
+1. I **[!UICONTROL Review Task]** Granska informationen om granskningsaktiviteten och välj **[!UICONTROL Review]**.
+1. Alla resurser i samlingen visas på granskningssidan. Markera resurserna och välj **[!UICONTROL Approve/Reject]** ikon för att godkänna eller avvisa resurser, beroende på vad som är lämpligt.
 
    ![review_task_collection](assets/review_task_collection.png)
 
-1. Tryck/klicka på ikonen **[!UICONTROL Complete]** i verktygsfältet. Ange en kommentar i dialogrutan och tryck/klicka **[!UICONTROL Complete]** för att bekräfta.
+1. Välj **[!UICONTROL Complete]** -ikonen i verktygsfältet. Skriv en kommentar i dialogrutan och välj **[!UICONTROL Complete]** för att bekräfta.
 1. Navigera till samlingskonsolen och öppna samlingen. Ikonerna för godkännandestatus för resurserna visas både i kort- och listvyn.
 
    **Kortvy**

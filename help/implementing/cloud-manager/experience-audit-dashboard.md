@@ -1,13 +1,13 @@
 ---
 title: Kontrollpanelen för Experience Audit
 description: Läs om hur Experience Audit validerar er distributionsprocess och ser till att de ändringar som driftsätts uppfyller grundläggande standarder för prestanda, tillgänglighet, bästa praxis och SEO via ett tydligt och informativt gränssnitt.
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+exl-id: 6d33c3c5-258c-4c9c-90c2-d566eaeb14c0
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '831'
 ht-degree: 0%
 
 ---
-
 
 # Kontrollpanelen för Experience Audit {#experience-audit-dashboard}
 
@@ -18,7 +18,7 @@ Läs om hur Experience Audit validerar er distributionsprocess och ser till att 
 >
 >Den här funktionen är bara tillgänglig för [det tidiga adopteringsprogrammet.](/help/implementing/cloud-manager/release-notes/current.md#early-adoption)
 >
->Mer information om den befintliga funktionen Experience Audit för AEM as a Cloud Service finns i dokumentet [Experience Audit Testing.](/help/implementing/cloud-manager/experience-audit-testing.md)
+>Mer information om den befintliga funktionen Experience Audit för AEM as a Cloud Service finns i [Testning av Experience Audit](/help/implementing/cloud-manager/experience-audit-testing.md).
 
 ## Översikt {#overview}
 
@@ -32,15 +32,15 @@ Experience Audit i Cloud Manager säkerställer att slutanvändarens upplevelse 
 
 Granskningsresultaten är informativa och gör det möjligt för distributionshanteraren att se poängen och ändringen mellan aktuella och tidigare poäng. Den här insikten är värdefull för att avgöra om det finns en regression som introducerades i den aktuella distributionen.
 
-Experience Audit drivs av [Google Lighthuse,](https://developer.chrome.com/docs/lighthouse/overview/) ett verktyg med öppen källkod från Google och är aktiverat i alla produktionspipelines i Cloud Manager.
+Experience Audit drivs av [Google Lighthuse](https://developer.chrome.com/docs/lighthouse/overview/), ett verktyg med öppen källkod från Google och är aktiverat i alla produktionspipelines i Cloud Manager.
 
 >[!TIP]
 >
->Du konfigurerar vilka sidor som ska ingå i Experience Audit när du [konfigurera din pipeline.](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#full-stack-code)
+>Du konfigurerar vilka sidor som ska ingå i Experience Audit när du [konfigurera din pipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#full-stack-code).
 
 ## Kontrollpanelen för Experience Audit {#dashboard}
 
-Resultaten av Experience Audit presenteras i **Stage testing** produktionsfasen via [körningssida för produktionsflöde.](/help/implementing/cloud-manager/deploy-code.md)
+Resultaten av Experience Audit presenteras i **Stage testing** produktionsfasen via [körningssida för produktionsflöde](/help/implementing/cloud-manager/deploy-code.md).
 
 ![Instrumentpanel i pipeline](assets/dashboard.png)
 
@@ -57,7 +57,7 @@ The **Insikter** -fliken innehåller en kort beskrivning av användbara rekommen
 
 ![Insikter](assets/insights.png)
 
-Tryck eller klicka på **Visa fler** för att öppna den fullständiga kontrollpanelen.
+Välj **Visa fler** för att öppna den fullständiga kontrollpanelen.
 
 I **Insikter och rekommendationer** hittar du en detaljerad lista med användbara rekommendationer med en tydlig värdeindikator kopplad till prestandavinster, tillsammans med hur många sidor som påverkas. På så sätt kan ni enkelt prioritera dessa rekommendationer för era team.
 
@@ -71,7 +71,7 @@ The **Ljushetsmusik** -fliken är en sammanfattning av Lightroom-poängen för k
 
 ![Ljushetsmusik](assets/lighthouse.png)
 
-Tryck eller klicka på **Visa fler** för att öppna den fullständiga kontrollpanelen.
+Välj **Visa fler** för att öppna den fullständiga kontrollpanelen.
 
 I **Ljushetsmusik** finns en trendvy över de olika poängen. Välj **Prestanda**, **Tillgänglighet**, **PWA**, eller **SEO** om du vill visa den månatliga trendvyn för dessa värden.
 
@@ -87,13 +87,13 @@ The **Sidor** är en sammanfattning av prestanda för sidor som är specifikt ko
 
 ![Fliken Sidor](assets/pages.png)
 
-Tryck eller klicka på **Visa fler** för att öppna den fullständiga kontrollpanelen.
+Välj **Visa fler** för att öppna den fullständiga kontrollpanelen.
 
 The **Sidor** -avsnittet innehåller en lista med sidor som har testats och deras senaste prestandaresultat i Lighthuse samt uppdelningen.
 
 ![Vyn Sidor](assets/pages-view.png)
 
-Du konfigurerar vilka sidor som ska ingå i Experience Audit när du [konfigurera din pipeline.](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#full-stack-code)
+Du konfigurerar vilka sidor som ska ingå i Experience Audit när du [konfigurera din pipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#full-stack-code).
 
 Om du vill gå tillbaka till sidan där produktionsflödet körs väljer du bara bakåtpilen i webbläsaren.
 
@@ -103,7 +103,7 @@ The **Problem** sammanfattar alla prestandaproblem som upptäcks i koden för de
 
 ![Fliken Problem](assets/issues.png)
 
-Tryck eller klicka på **Visa fler** för att öppna den fullständiga kontrollpanelen.
+Välj **Visa fler** för att öppna den fullständiga kontrollpanelen.
 
 I **Insikter och rekommendationer** hittar du en mer detaljerad lista över användbara rekommendationer med en tydlig värdeindikator kopplad till prestandavinster, tillsammans med hur många sidor som påverkas. På så sätt kan ni enkelt prioritera dessa rekommendationer för era team.
 
@@ -113,7 +113,7 @@ Om du vill gå tillbaka till sidan där produktionsflödet körs väljer du bara
 
 ### Sidinformation {#page-detail}
 
-Om du trycker eller klickar på länken för en sida på en flik i **Experience Audit** -avsnittet på fliken för pipeline-körningssidan eller i **Sidor** i den fullständiga kontrollpanelen för Experience Audit kan du visa information om en viss sida.
+Om du markerar länken till en sida på någon av flikarna i **Experience Audit** -avsnittet på fliken för pipeline-körningssidan eller i **Sidor** i den fullständiga kontrollpanelen för Experience Audit kan du visa information om en viss sida.
 
 ![Siddata](assets/page-data.png)
 

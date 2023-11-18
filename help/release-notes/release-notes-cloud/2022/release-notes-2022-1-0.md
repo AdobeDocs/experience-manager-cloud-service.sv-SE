@@ -2,9 +2,9 @@
 title: Versionsinformation för 2022.1.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.1.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 1c40ab67-8fd7-4f29-b8c9-dd98b6d5b490
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: fe19e99baa921247f86542c6643c1faf837e7d91
 workflow-type: tm+mt
-source-wordcount: '1074'
+source-wordcount: '1072'
 ht-degree: 1%
 
 ---
@@ -93,7 +93,7 @@ Ta en titt på [Versionsöversikt januari 2022](https://video.tv.adobe.com/v/340
    * Knappen&quot;Lägg till i önskelista&quot; kan aktiveras/inaktiveras på komponentnivå via en policy (exempel produktnivå, produktinformation)
    * Finns som kärnkomponent och i AEM Venia Storefront
 
-![Önsklista](/help/assets/CIF/wishlist.png)
+<!-- Image was not found during PR validation despite correct path ![Wishlist](/help/assets/CIF/wantlist.png) -->
 
 ## Cloud Manager {#cloud-manager}
 

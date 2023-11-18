@@ -1,17 +1,17 @@
 ---
 title: Använda arbetsflöden på sidor
-description: När du redigerar kan du anropa arbetsflöden för att utföra åtgärder på dina sidor. Det går också att använda mer än ett arbetsflöde.
+description: När du redigerar kan du anropa arbetsflöden för att agera på sidorna. Det går också att använda mer än ett arbetsflöde.
 exl-id: 86e71f0e-e53e-40bc-901d-2a1ab347bd0a
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '654'
 ht-degree: 11%
 
 ---
 
 # Använda arbetsflöden på sidor {#applying-workflows-to-pages}
 
-När du redigerar kan du anropa arbetsflöden för att utföra åtgärder på dina sidor. Det går också att använda mer än ett arbetsflöde.
+När du redigerar kan du anropa arbetsflöden för att agera på sidorna. Det går också att använda mer än ett arbetsflöde.
 
 När du använder arbetsflödet anger du följande information:
 
@@ -116,7 +116,7 @@ Du kan ange information:
 
 1. I **Omfång** steg du kan välja:
 
-   * **Lägg till innehåll** för att öppna [sökvägsläsare](/help/sites-cloud/authoring/fundamentals/environment-tools.md#path-browser) och välj ytterligare resurser. När du är i webbläsaren klickar/trycker du **Välj** för att lägga till innehållet i arbetsflödesinstansen.
+   * **Lägg till innehåll** för att öppna [sökvägsläsare](/help/sites-cloud/authoring/fundamentals/environment-tools.md#path-browser) och välj ytterligare resurser. När du är i webbläsaren väljer du **Välj** för att lägga till innehållet i arbetsflödesinstansen.
 
    * En befintlig resurs som visar ytterligare åtgärder:
 

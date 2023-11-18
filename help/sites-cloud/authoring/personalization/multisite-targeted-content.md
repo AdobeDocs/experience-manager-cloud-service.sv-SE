@@ -2,9 +2,9 @@
 title: Arbeta med riktat innehåll på flera webbplatser
 description: Om ni behöver hantera riktat innehåll, t.ex. aktiviteter, upplevelser och erbjudanden mellan era webbplatser, kan ni utnyttja AEM inbyggda stöd för flera webbplatser för riktat innehåll
 exl-id: 03d2d640-8de8-4c4c-8a1d-756bb2dc8457
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2885'
+source-wordcount: '2844'
 ht-degree: 4%
 
 ---
@@ -26,7 +26,7 @@ I det här dokumentet beskrivs följande:
 
 Om du vill ange hur dina webbplatser ska dela personaliserat innehåll måste du utföra följande steg:
 
-1. [Skapa ett nytt område](#creating-new-areas) eller [skapa ett område som en live-kopia](#creating-new-areas). Ett område innehåller alla aktiviteter som är tillgängliga för en *area* på sidan, d.v.s. den plats på sidan där komponenten är avsedd. När du skapar ett nytt område skapas ett tomt område, medan du kan ärva innehåll i olika webbplatsstrukturer genom att skapa ett nytt område som en dynamisk kopia.
+1. [Skapa ett nytt område](#creating-new-areas) eller [skapa ett område som en live-kopia](#creating-new-areas). Ett område innehåller alla aktiviteter som är tillgängliga för en *area* på sidan, d.v.s. den plats på sidan där komponenten är avsedd. När du skapar ett nytt område skapas ett tomt område, medan du kan ärva innehåll över webbplatsstrukturer genom att skapa ett område som en live-kopia.
 
 1. [Länka webbplatsen eller sidan](#linking-sites-to-an-area) till ett område.
 
@@ -144,18 +144,18 @@ Områden kan omfatta aktiviteter och erbjudanden. När du har skapat ett område
 
 >[!NOTE]
 >
->Standardområdet som kallas mallområde komprimeras som standard när du trycker eller klickar på namnet på ett varumärke **tills** du skapar ett annat område. När du sedan väljer ett varumärke på konsolen **Aktivitet** eller **Erbjudanden** visas konsolen **Område**.
+>Standardområdet som kallas mallområde komprimeras som standard när du väljer namnet på ett varumärke **tills** du skapar ett annat område. När du sedan väljer ett varumärke på konsolen **Aktivitet** eller **Erbjudanden** visas konsolen **Område**.
 
 Så här skapar du ett område:
 
 1. Navigera till **Personalisering** > **Aktiviteter** eller **Erbjudanden** och sedan till ert varumärke.
-1. Tryck eller klicka **Skapa område**.
+1. Välj **Skapa område**.
 
    ![Skapa område](/help/sites-cloud/authoring/assets/multisite-create-area.png)
 
 1. Klicka på **Område** ikon och klicka **Nästa**.
 1. I **Titel** anger du ett namn för det nya området. Du kan också välja taggar.
-1. Tryck eller klicka **Skapa**.
+1. Välj **Skapa**.
 
    AEM omdirigeras till varumärkesfönstret, där alla områden som skapas listas. Om det finns ett annat område förutom mallområdet kan du skapa områden direkt i varumärkeskonsolen.
 
@@ -168,7 +168,7 @@ Du skapar ett område som en live-kopia för att ärva målinnehållet i olika w
 Så här skapar du ett område som en livecopy:
 
 1. Navigera till **Personalisering** > **Aktiviteter** eller **Erbjudanden** och sedan till ert varumärke.
-1. Tryck eller klicka **Skapa område som Live Copy**.
+1. Välj **Skapa område som Live Copy**.
 
    ![Skapa område som live-kopia](/help/sites-cloud/authoring/assets/multisite-area-as-livecopy.png)
 
@@ -190,7 +190,7 @@ Så här skapar du ett område som en livecopy:
    >
    >När en sida förs ut till en Live-kopia och området som är konfigurerat för sidan Blå utskrift också är skissen för området som är konfigurerat för sidans Live-kopia, är LiveAction **personalizationContentRollout** utlöser en synkron subRollout, som är en del av **Standardkonfiguration för utrullning**.
 
-1. Tryck eller klicka **Skapa**.
+1. Välj **Skapa**.
 
    AEM omdirigeras till varumärkesfönstret, där alla områden som skapas listas. Om det finns ett annat område förutom mallområdet kan du skapa områden direkt från varumärkesfönstret.
 
@@ -209,13 +209,13 @@ När du länkar är bara de aktiviteter, upplevelser och erbjudanden från det v
 Så här länkar du en plats till ett område:
 
 1. Navigera till den webbplats (eller sida) som du vill länka till ett område.
-1. Markera webbplatsen eller sidan och tryck eller klicka på **Visa egenskaper**.
-1. Tryck eller klicka på **Personalisering** -fliken.
+1. Markera webbplatsen eller sidan och välj **Visa egenskaper**.
+1. Välj **Personalisering** -fliken.
 1. I **Varumärke** väljer du det varumärke som du vill länka området till. När du har valt varumärket finns tillgängliga områden på **Områdesreferens** -menyn.
 
    ![Länka platser](/help/sites-cloud/authoring/assets/multisite-english.png)
 
-1. Markera området på menyn **Områdesreferens** nedrullningsbar meny och tryck eller klicka **Spara**.
+1. Markera området på menyn **Områdesreferens** nedrullningsbar meny och välj **Spara**.
 
    ![Områdesreferens](/help/sites-cloud/authoring/assets/multisite-area-reference.png)
 
@@ -239,8 +239,8 @@ En aktivitet som ärver från en annan plats markeras som grön bredvid aktivite
 
 Så här gör du uppehåll i eller frånkoppling av arv av riktat innehåll i en aktivitet:
 
-1. Navigera till sidan där du vill koppla loss eller göra uppehåll i arv och tryck eller klicka **Målinriktning** i listrutan Läge.
-1. Om sidan är länkad till ett område som är en live-kopia ser du arvsstatusen. Tryck eller klicka **Börja målinrikta**.
+1. Navigera till sidan där du vill koppla loss eller göra uppehåll i arv och markera **Målinriktning** i listrutan Läge.
+1. Om sidan är länkad till ett område som är en live-kopia ser du arvsstatusen. Välj **Börja målinrikta**.
 1. Gör något av följande om du vill göra uppehåll i en aktivitet:
 
    1. Välj ett element i aktiviteten, t.ex. målgruppen. AEM visar automatiskt en bekräftelseruta för att pausa Live Copy. (Du kan göra uppehåll i live-kopieringen genom att trycka eller klicka på ett element under målprocessen.)
@@ -248,7 +248,7 @@ Så här gör du uppehåll i eller frånkoppling av arv av riktat innehåll i en
 
    ![Skjut upp live-kopia](/help/sites-cloud/authoring/assets/multisite-suspend-livecopy.png)
 
-1. Tryck eller klicka **Gör uppehåll** för att pausa aktiviteten. Avbrutna aktiviteter markeras med rött.
+1. Välj **Gör uppehåll** för att pausa aktiviteten. Avbrutna aktiviteter markeras med rött.
 
    ![Pausad live-kopia](/help/sites-cloud/authoring/assets/multisite-suspended.png)
 
@@ -256,10 +256,10 @@ Så här gör du uppehåll i eller frånkoppling av arv av riktat innehåll i en
 
 Så här bryter du arv av riktat innehåll i en aktivitet:
 
-1. Navigera till sidan där du vill koppla loss live-kopian från mallen och tryck eller klicka **Målinriktning** i listrutan Läge.
-1. Om sidan är länkad till ett område som är en live-kopia ser du arvsstatusen. Tryck eller klicka **Börja målinrikta**.
+1. Navigera till sidan där du vill koppla loss den aktiva kopian från mallen och markera **Målinriktning** i listrutan Läge.
+1. Om sidan är länkad till ett område som är en live-kopia ser du arvsstatusen. Välj **Börja målinrikta**.
 1. Välj **Koppla loss live-kopia** i listrutan i verktygsfältet. AEM bekräftar att du vill koppla loss live-kopian.
-1. Tryck eller klicka **Koppla loss** för att frigöra den aktiva kopian från aktiviteten. När den har kopplats loss visas inte längre listrutan för arv. Aktiviteten är nu en lokal aktivitet.
+1. Välj **Koppla loss** för att frigöra den aktiva kopian från aktiviteten. När den har kopplats loss visas inte längre listrutan för arv. Aktiviteten är nu en lokal aktivitet.
 
    ![Lokal aktivitet](/help/sites-cloud/authoring/assets/multisite-winter.png)
 
@@ -269,13 +269,13 @@ Om du har inaktiverat arv av riktat innehåll i en aktivitet kan du återställa
 
 Så här återställer du arv av riktat innehåll i en aktivitet:
 
-1. Navigera till sidan där du vill återställa arv och tryck eller klicka **Målinriktning** i listrutan Läge.
-1. Tryck eller klicka **Börja målinrikta**.
+1. Navigera till sidan där du vill återställa arv och markera **Målinriktning** i listrutan Läge.
+1. Välj **Börja målinrikta**.
 1. Välj **Återuppta live-kopia** i listrutan i verktygsfältet.
 
    ![Återupptar live-kopia](/help/sites-cloud/authoring/assets/multisite-resume.png)
 
-1. Tryck eller klicka **Återuppta** för att bekräfta att du vill återuppta arv av live-kopior. Alla ändringar som gjorts i den aktuella aktiviteten går förlorade om du återupptar arvet.
+1. Välj **Återuppta** för att bekräfta att du vill återuppta arv av live-kopior. Alla ändringar som gjorts i den aktuella aktiviteten går förlorade om du återupptar arvet.
 
 ## Ta bort områden {#deleting-areas}
 
@@ -284,5 +284,5 @@ När du tar bort ett område tar du bort alla aktiviteter i det området. AEM va
 Så här tar du bort ett område:
 
 1. Navigera till **Personalisering** > **Verksamhet** eller **Erbjudanden** och därefter ert varumärke.
-1. Tryck eller klicka på ikonen bredvid det område du vill ta bort.
-1. Tryck eller klicka **Ta bort** och bekräfta att du vill ta bort området.
+1. Markera ikonen bredvid det område du vill ta bort.
+1. Välj **Ta bort** och bekräfta att du vill ta bort området.

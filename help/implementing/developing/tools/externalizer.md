@@ -2,9 +2,9 @@
 title: Extern URL
 description: Externalizer är en OSGi-tjänst som gör att du programmässigt kan omvandla en resurssökväg till en extern och absolut URL.
 exl-id: 06efb40f-6344-4831-8ed9-9fc49f2c7a3f
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '651'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Så här definierar du en domänmappning för tjänsten Externalizer:
 
    * **`scheme`** är vanligtvis http eller https, men kan vara ett annat protokoll.
 
-      * Vi rekommenderar att du använder https för att framtvinga https-länkar.
+      * Adobe rekommenderar att du använder https för att framtvinga https-länkar.
       * Det används om klientkoden inte åsidosätter schemat när en URL-adress ska utgöras.
 
    * **`server`** är värdnamnet (antingen ett domännamn eller en IP-adress).

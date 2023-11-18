@@ -2,9 +2,9 @@
 title: Aktivera JSON-export för en komponent
 description: Komponenter kan anpassas för att generera JSON-export av deras innehåll baserat på ett modellramverk.
 exl-id: e9be5c0c-618e-4b56-a365-fcdd185ae808
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '462'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Komponenter kan anpassas för att generera JSON-export av deras innehåll basera
 
 JSON-exporten baseras på [Sling Models](https://sling.apache.org/documentation/bundles/models.html)och på [Export av försäljningsmodell](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130) som i sig förlitar sig på [Jackson annotations](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)).
 
-Det innebär att komponenten måste ha en Sling-modell om den behöver exportera JSON. Följ därför de här två stegen för att aktivera JSON-export för alla komponenter.
+Det innebär att komponenten måste ha en Sling-modell om den måste exportera JSON. Följ därför de här två stegen för att aktivera JSON-export för alla komponenter.
 
 * [Definiera en segmentmodell för komponenten](#define-a-sling-model-for-the-component)
 * [Anteckna gränssnittet för segmenteringsmodellen](#annotate-the-sling-model-interface)
@@ -66,7 +66,7 @@ Modellgränssnittet bör implementera `ComponentExporter` gränssnitt (eller `Co
 
 Motsvarande Sling Model-gränssnitt (`MyComponent`) kommenteras sedan med [Jackson annotations](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations) för att definiera hur den ska exporteras (serialiseras).
 
-Modellgränssnittet måste kommenteras ordentligt för att definiera vilka metoder som ska serialiseras. Som standard serialiseras alla metoder som respekterar den vanliga namnkonventionen för get-ters och härleder deras JSON-egenskapsnamn naturligt från get-namnen. Detta kan förhindras eller åsidosättas med `@JsonIgnore` eller `@JsonProperty` för att byta namn på JSON-egenskapen.
+Modellgränssnittet måste vara korrekt kommenterat för att definiera vilka metoder som ska serialiseras. Som standard serialiseras alla metoder som respekterar den vanliga namnkonventionen för get-ters och härleder deras JSON-egenskapsnamn naturligt från get-namnen. Detta kan förhindras eller åsidosättas med `@JsonIgnore` eller `@JsonProperty` för att byta namn på JSON-egenskapen.
 
 ## Exempel {#example}
 
@@ -75,8 +75,6 @@ Modellgränssnittet måste kommenteras ordentligt för att definiera vilka metod
 Ett exempel finns i Sling Model-implementeringen av Image Core-komponenten och dess kommenterade gränssnitt.
 
 ## Relaterad dokumentation {#related-documentation}
-
-Mer information finns i:
 
 * [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)
 * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)

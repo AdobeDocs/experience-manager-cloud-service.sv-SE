@@ -2,9 +2,9 @@
 title: Arbeta med sidversioner
 description: Lär dig hur du skapar, jämför och återställer versioner av dina sidor i AEM.
 exl-id: 33d8e43c-594d-4bba-9631-b2c42a1e910f
-source-git-commit: 31e6ec8e9977c8787e14481ee3a94df767262aec
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1505'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ Du kan skapa en version av resursen från:
 1. Navigera till sidan som du vill skapa en version för.
 1. Markera sidan i [markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources).
 1. Öppna **Tidslinje** järnväg.
-1. Klicka/tryck på ellipsen i kommentarfältet för att visa alternativen:
+1. Markera ellipsen i kommentarfältet för att visa alternativen:
 
    ![Versioner i tidslinjen](/help/sites-cloud/authoring/assets/versions-timeline-rail.png)
 

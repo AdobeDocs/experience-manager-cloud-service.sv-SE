@@ -4,9 +4,9 @@ description: Med Forms-centrerade arbetsflöden kan du snabbt skapa adaptiva For
 exl-id: e1403ba6-8158-4961-98a4-2954b2e32e0d
 google-site-verification: A1dSvxshSAiaZvk0yHu7-S3hJBb1THj0CZ2Uh8N_ck4
 keywords: Använd AEM arbetsflöden, tilldela uppgiftssteg, konvertera till PDF/A-steg, generera dokument för inspelat steg, använda arbetsflöden, signera dokumentsteg, generera utskrivet steg, generera icke-interaktiva utdata från PDF
-source-git-commit: a942e87a33775851631a1fe123fa3e8d2686bb30
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '6795'
+source-wordcount: '6793'
 ht-degree: 0%
 
 ---
@@ -572,7 +572,7 @@ Stegen Generera utskrift har följande egenskaper:
 
 * **Mallfil**: Anger platsen för XDP-mallen. Det är ett obligatoriskt fält.
 
-* **Datadokument**: Anger platsen för den data-XML som behöver sammanfogas med mallen.
+* **Datadokument**: Anger platsen för den data-XML som måste sammanfogas med mallen.
 
 ### Utdatadokument {#output-document}
 

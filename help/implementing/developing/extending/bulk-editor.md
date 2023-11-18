@@ -1,13 +1,13 @@
 ---
 title: Konfigurera massredigering av sidegenskaper
 description: Lär dig konfigurera gruppredigering så att du kan redigera egenskaperna för flera sidor samtidigt.
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+exl-id: 0d10c6b9-8643-479d-adc1-4066d227e83d
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera massredigering av sidegenskaper {#configuring-bulk-editing-of-page-properties}
 
@@ -20,7 +20,7 @@ Sidegenskaper är inte aktiverade för massredigering som standard. De måste va
 * Vissa fält är vanligtvis unika. Du måste bestämma om det är meningsfullt att aktivera sådana fält för massredigering, när ett värde ska användas.
    * Exempelvis är sidtitlar nästan alltid unika.
 * Vissa fält kan ha flera värden som behöver återges på ett meningsfullt sätt vid återgivningen.
-   * En nedrullningsbar meny med till exempel etiketten **Klar för publicering**. Detta kan ha flera värden före gruppredigering, till exempel **klar**, **granskning**, **pågående**, osv.
+   * En nedrullningsbar meny med till exempel etiketten **Klar för publicering**. Detta kan ha flera värden före gruppredigering, till exempel **klar**, **granskning**, **pågående** och så vidare.
 
 På grund av möjligheten att det finns flera värden bör du bara aktivera följande fälttyper för gruppredigering.
 

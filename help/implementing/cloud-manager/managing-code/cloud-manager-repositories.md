@@ -2,9 +2,9 @@
 title: Cloud Manager-databaser
 description: Lär dig hur du skapar, visar och tar bort Git-databaser i Cloud Manager.
 exl-id: 6e1cf636-78f5-4270-9a21-38b4d5e5a0b0
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Följ de här stegen för att visa och hantera databaser i Cloud Manager.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Från **Programöversikt** , tryck eller klicka på **Databaser** för att växla till **Databaser** sida.
+1. Från **Programöversikt** väljer du **Databaser** för att växla till **Databaser** sida.
 
 1. Klicka **Lägg till databas**.
 

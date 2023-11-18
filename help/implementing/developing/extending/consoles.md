@@ -2,9 +2,9 @@
 title: Anpassa konsoler
 description: Lär dig mer om de olika alternativ som AEM har för att anpassa konsolerna i din redigeringsförekomst.
 exl-id: 832f9a86-07c4-4229-a0dc-8ad50a8195b0
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ AEM innehåller alternativ för att anpassa konsolerna (och [sidredigeringsfunkt
 
 Med Clientlibs kan du utöka standardimplementeringen för att erbjuda nya funktioner, samtidigt som du återanvänder standardfunktioner, objekt och standardmetoder. När du anpassar med klienter kan du skapa ett eget klipp under `/apps.` Den kan till exempel innehålla den kod som krävs för den anpassade komponenten.
 
-Mer information om libs finns i dokumentet [Använda bibliotek på klientsidan på AEM as a Cloud Service.](/help/implementing/developing/introduction/clientlibs.md)
+Se [Använda bibliotek på klientsidan på AEM as a Cloud Service](/help/implementing/developing/introduction/clientlibs.md).
 
 ## Övertäckningar {#overlays}
 
@@ -25,11 +25,11 @@ Mer information om libs finns i dokumentet [Använda bibliotek på klientsidan p
 
 Övertäckningar kan användas på många olika sätt för att utöka AEM. Flera exempel finns i följande avsnitt.
 
-Mer information om övertäckningar finns i dokumentet [Övertäckningar för Adobe Experience Manager as a Cloud Service.](/help/implementing/developing/introduction/overlays.md)
+Se även [Övertäckningar för Adobe Experience Manager as a Cloud Service](/help/implementing/developing/introduction/overlays.md).
 
 >[!TIP]
 >
->Se dokumentet om du är intresserad av alternativ för att anpassa redigeringsfunktionen [Anpassa sidredigering.](/help/implementing/developing/extending/page-authoring.md)
+>Om du är intresserad av alternativ för att anpassa redigeringsupplevelsen läser du [Anpassa sidredigering](/help/implementing/developing/extending/page-authoring.md).
 
 ## Anpassa standardvyn för en konsol {#customizing-the-default-view-for-a-console}
 
@@ -117,4 +117,4 @@ Om du vill infoga ytterligare data måste du skriva en [PageInfoProvider](https:
 
 När en konsol används måste användaren ofta välja bland resurser som sidor, komponenter eller resurser. Detta kan vara en lista som författaren måste välja ett objekt från.
 
-För att hålla listan i en rimlig storlek och även relevant för användningsfallet kan ett filter implementeras i form av ett anpassat predikat. Se dokumentet[Anpassa sidredigering](/help/implementing/developing/extending/page-authoring.md#filtering-resources) för mer information.
+För att hålla listan i en rimlig storlek och även relevant för användningsfallet kan ett filter implementeras i form av ett anpassat predikat. Se [Anpassa sidredigering](/help/implementing/developing/extending/page-authoring.md#filtering-resources) för mer information.

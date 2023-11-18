@@ -2,9 +2,9 @@
 title: Formatsystem
 description: Med Style System kan mallskapare definiera formatklasser i en komponents innehållsprincip så att en innehållsförfattare kan markera dem när komponenten på en sida redigeras. Dessa format kan vara alternativa visuella varianter av en komponent, vilket gör den mer flexibel.
 exl-id: 224928dd-e365-4f3e-91af-4d8d9f47efdd
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1319'
+source-wordcount: '1317'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ På så sätt elimineras behovet av att utveckla en anpassad komponent för varj
 
 ## Användningsfall {#use-case}
 
-Mallförfattare behöver inte bara kunna konfigurera hur komponenterna fungerar för innehållsförfattarna, utan även konfigurera ett antal alternativa visuella varianter av en komponent.
+Mallförfattare behöver inte bara kunna konfigurera hur komponenterna fungerar för innehållsförfattarna, utan även konfigurera flera alternativa visuella varianter av en komponent.
 
 På samma sätt behöver innehållsförfattare inte bara kunna strukturera och ordna sitt innehåll, utan också kunna välja hur det ska presenteras visuellt.
 
@@ -73,7 +73,7 @@ Om du vill använda Style System för dina egna komponenter gör du följande:
 
    ![Formatsystem för författaren](/help/sites-cloud/authoring/assets/style-system-author1.png)
 
-1. Tryck eller klicka på **Stilar** i verktygsfältet i **Lista** om du vill öppna stilmenyn och ändra komponentens utseende.
+1. Välj **Stilar** i verktygsfältet i **Lista** om du vill öppna stilmenyn och ändra komponentens utseende.
 
    ![Välja format](/help/sites-cloud/authoring/assets/style-system-author2.png)
 
@@ -83,7 +83,7 @@ Om du vill använda Style System för dina egna komponenter gör du följande:
 
 ### Som mallskapare {#as-a-template-author}
 
-1. Under redigeringen av WKND:s engelska huvudsida på `http://<host>:<port>/sites.html/content/wknd/language-masters/en`, redigera sidans mall via **Sidinformation -> Redigera mall**.
+1. Under redigeringen av WKND:s engelska huvudsida på `http://<host>:<port>/sites.html/content/wknd/language-masters/en`, redigera sidans mall via **Sidinformation > Redigera mall**.
 
    ![Redigera mall](/help/sites-cloud/authoring/assets/style-system-edit-template.png)
 
@@ -159,4 +159,4 @@ Undvik att definiera elementnamn för format som kan kombineras. När flera elem
 
 Den här möjligheten att definiera formatnamn är användbar för generiska komponenter, som Layoutbehållaren eller komponenten Innehållsfragment, för att ge dem ytterligare innebörd.
 
-Den tillåter till exempel att en Layout Container får semantik som `<main>`, `<aside>`, `<nav>`, osv.
+Den tillåter till exempel att en Layout Container får semantik som `<main>`, `<aside>`, `<nav>`och så vidare.

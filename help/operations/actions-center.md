@@ -1,10 +1,10 @@
 ---
 title: Actions Center
-description: Utnyttja åtgärdscentret för att enkelt vidta åtgärder vid incidenter och annan viktig information
+description: Utnyttja åtgärdscentret för att enkelt hantera incidenter och annan viktig information
 exl-id: d5a95ac4-aa88-44d5-ba02-7c9702050208
-source-git-commit: 4adae6ffe45dcd2b80d7d199fc29a806ce5e78c4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---

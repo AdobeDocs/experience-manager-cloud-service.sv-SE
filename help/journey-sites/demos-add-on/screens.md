@@ -2,7 +2,7 @@
 title: Aktivera AEM Screens för din demowebbplats
 description: Lär dig hur du aktiverar AEM Screens as a Cloud Service upplevelse på din demosajt.
 exl-id: 369eea9f-2e81-4b87-841c-188b67657bab
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '2665'
 ht-degree: 0%
@@ -145,7 +145,7 @@ Först måste du skapa en Google API-nyckel för att underlätta datautbyte.
 
 Om du vill tillåta utbyte av Google Sheets-data med API-nyckeln måste du aktivera Google Sheets API.
 
-1. Återgå till Google Cloud Console på `https://console.cloud.google.com` för ditt projekt och använd sedan hamburger-menyn för att välja **API:er och tjänster -> Bibliotek**.
+1. Återgå till Google Cloud Console på `https://console.cloud.google.com` för ditt projekt och använd sedan hamburger-menyn för att välja **API:er och tjänster > Bibliotek**.
 
    ![API-bibliotek](assets/api-library.png)
 
@@ -221,9 +221,9 @@ När skärminnehållet visas anropar ContextHub vädertjänsten för att hitta d
 
 I demosyfte kan du ändra värdena i bladet. ContextHub känner igen detta och innehållet justeras i kanalen enligt den uppdaterade temperaturen.
 
-1. Gå till AEMaaCS-författarinstansen **Global navigering -> Verktyg -> Webbplatser -> ContextHub**.
+1. Gå till AEMaaCS-författarinstansen **Global Navigation > Tools > Sites > ContextHub**.
 1. Välj den konfigurationsbehållare som har samma namn som det du gav projektet när du skapade Skärmar-projektet från **Webbplatsmall för We.Cafe**.
-1. Välj **Configuration -> ContextHub Configuration -> Google Sheets** klicka sedan på **Nästa** överst till höger.
+1. Välj **Configuration > ContextHub Configuration > Google Sheets** klicka sedan på **Nästa** överst till höger.
 1. Konfigurationen bör redan ha förkonfigurerade JSON-data. Det finns två värden som måste ändras:
    1. Ersätt `[your Google Sheets id]` med det blad-ID som [du sparade tidigare](#create-spreadsheet).
    1. Ersätt `[your Google API Key]` med API-nyckeln som [du sparade tidigare](#create-api-key).
@@ -236,7 +236,7 @@ Nu kan du ändra temperaturvärdet i Google Sheet-kalkylbladet och ContextHub up
 Nu när AEM Screens och ContextHub är anslutna till din vädertjänst kan du testa den för att se hur skärmar kan uppdatera innehåll dynamiskt.
 
 1. Få åtkomst till din författarinstans för sandlådan.
-1. Navigera till webbplatskonsolen via **Global navigering -> Webbplatser** och välj följande sida **Skärmar -> &lt;project-name> -> Kanaler -> Ingångsmorgon (stående)**.
+1. Navigera till webbplatskonsolen via **Global Navigation > Sites** och välj följande sida **Skärmar > &lt;project-name> > Kanaler > Ingång morgon (stående)**.
 
    ![Välj innehåll för demoprojekt](assets/project-content.png)
 
@@ -325,7 +325,7 @@ Först måste du skapa en registreringskod för att säkert ansluta en spelare t
 
    ![Kontrollera din Screens-organisation](assets/screens-org.png)
 
-1. Klicka på i den vänstra panelen **Player Management -> Registration Codes** och sedan klicka **Skapa kod** längst upp till höger på skärmen.
+1. Klicka på i den vänstra panelen **Player Management > Registration Codes** och sedan klicka **Skapa kod** längst upp till höger på skärmen.
 
 ![Registreringskoder](assets/registration-codes.png)
 
@@ -360,7 +360,7 @@ Först måste du skapa en registreringskod för att säkert ansluta en spelare t
 
    ![Kontrollera din Screens-organisation](assets/screens-org.png)
 
-1. Klicka på i den vänstra panelen **Spelarhantering -> Spelare** och du ser den spelare som du har installerat och registrerat tidigare.
+1. Klicka på i den vänstra panelen **Spelarhantering > Spelare** och du ser den spelare som du har installerat och registrerat tidigare.
 
    ![Spelare](assets/players.png)
 

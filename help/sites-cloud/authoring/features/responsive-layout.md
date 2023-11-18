@@ -2,9 +2,9 @@
 title: Responsiv layout
 description: AEM kan du förverkliga en responsiv layout för dina sidor
 exl-id: 87202742-5bed-4e87-a427-456a1a0e72cc
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1731'
 ht-degree: 6%
 
 ---
@@ -108,7 +108,7 @@ När du t.ex. väljer enheten **iPhone 6 Plus** (definierat med en bredd på 540
 1. Om du vill välja en specifik enhet som ska emuleras kan du antingen:
 
    * Använd ikonen Välj enhet och välj i en nedrullningsbar väljare.
-   * Tryck/klicka på enhetsindikatorn i emulatorns verktygsfält.
+   * Markera enhetsindikatorn i emulatorns verktygsfält.
 
    ![Listrutan Välj enhet](/help/sites-cloud/authoring/assets/responsive-layout-select-device-dropdown.png)
 
@@ -143,7 +143,7 @@ A **Layoutbehållare** är ett styckesystem som
 
 ## Markera och vidta åtgärder på en layoutbehållare (redigeringsläge) {#selecting-and-taking-action-on-a-layout-container-edit-mode}
 
-Precis som med andra komponenter kan du markera och sedan vidta åtgärder för (klippa ut, kopiera, ta bort) en layoutbehållare (när de är **Redigera** läge):
+Precis som med andra komponenter kan du markera och sedan agera på (klippa ut, kopiera, ta bort) en layoutbehållare (när de är **Redigera** läge):
 
 >[!CAUTION]
 >
@@ -195,14 +195,14 @@ I layoutläget kan du utföra olika åtgärder på ett rutnät:
   >
   >Proportioner och proportioner bevaras när komponenter som **Bilder** storleksändras.
 
-* Klicka/peka på en innehållskomponent så kan du göra följande i verktygsfältet:
+* Markera en innehållskomponent och i verktygsfältet kan du:
    * **Överordnad** - Gör att du kan markera hela layoutbehållarkomponenten för att utföra en åtgärd i sin helhet.
    * **Flyt till ny rad** - Komponenten flyttas till en ny rad, beroende på vilket utrymme som är tillgängligt i stödrastret.
    * **Dölj komponent** - Komponenten är osynlig (den kan återställas från verktygsfältet i layoutbehållaren).
 
   ![Dölj komponent](/help/sites-cloud/authoring/assets/responsive-layout-hide.png)
 
-* I **Layout** det läge du kan trycka/klicka på **Dra komponenter hit** om du vill markera hela komponenten. Verktygsfältet visas för det här läget.
+* I **Layout** det läge du kan välja **Dra komponenter hit** om du vill markera hela komponenten. Verktygsfältet visas för det här läget.
 
   Verktygsfältet har olika alternativ beroende på layoutkomponentens läge och vilka komponenter som tillhör det. Till exempel:
 

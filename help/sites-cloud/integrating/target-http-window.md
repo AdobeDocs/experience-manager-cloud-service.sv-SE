@@ -1,9 +1,9 @@
 ---
 title: Adobe AEM Target HTTP Window
 description: Adobe AEM Target HTTP Window
-source-git-commit: c193b38718622cd2e960a8e8833c2d295822dc33
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '195'
+source-wordcount: '194'
 ht-degree: 1%
 
 ---

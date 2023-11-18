@@ -5,9 +5,9 @@ feature: Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb77a840-d705-4406-a94d-c85a6efc8f5d
-source-git-commit: b9fb484135fb2d16758548c525b59f5ba011afb5
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2032'
+source-wordcount: '2030'
 ht-degree: 0%
 
 ---
@@ -283,7 +283,7 @@ En OData-tjänst identifieras av tjänstens rot-URL. Konfigurera en OData-tjäns
 
    >[!NOTE]
    >
-   Du måste välja autentiseringstypen OAuth 2.0 att ansluta till [!DNL Microsoft®® Dynamics] tjänster som använder OData-slutpunkten som tjänstrot.
+   Välj autentiseringstypen OAuth 2.0 att ansluta till [!DNL Microsoft®® Dynamics] tjänster som använder OData-slutpunkten som tjänstrot.
 
 1. Tryck **[!UICONTROL Create]** för att skapa molnkonfigurationen för OData-tjänsten.
 

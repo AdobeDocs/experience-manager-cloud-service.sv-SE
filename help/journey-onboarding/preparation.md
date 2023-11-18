@@ -2,9 +2,9 @@
 title: Förberedelse för introduktion
 description: Innan introduktionsprocessen börjar finns det ett antal eller förberedande steg som systemadministratören måste förstå innan han eller hon loggar in på systemet.
 exl-id: 86139b1a-c22a-4716-a0f9-cf142cbc6c53
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '760'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Nu när du vet vad som finns i butik för dig i introduktionsprocessen genom att
 
 AEM as a Cloud Service är ett kraftfullt och flexibelt verktyg med många tillgängliga lösningar, tillägg och driftsättningsmodeller. Den lösning som organisationen har rätt att använda definieras i ditt avtal med Adobe, som vägleder starten av introduktionsprocessen.
 
-När du har läst det här dokumentet kommer du att förstå
+När du har läst det här dokumentet bör du förstå
 
 * Vilket kontraktet med Adobe definierar.
 * Vilka Adobe ska ha?
@@ -34,7 +34,7 @@ I den här videon sammanfattas den introduktionsprocess som beskrivs under resan
 
 ## Ditt kontrakt {#contract}
 
-Om du vill komma igång AEM as a Cloud Service börjar du med ett signerat avtal mellan din organisation och Adobe. Detta beror på att avtalet anger ett antal viktiga avtal mellan Adobe och din organisation, som:
+Om du vill komma igång AEM as a Cloud Service börjar du med ett signerat avtal mellan din organisation och Adobe. Orsaken är att avtalet anger flera viktiga avtal mellan Adobe och din organisation, som:
 
 * Vilka lösningar och tillägg din organisation kan använda.
 * Antalet och typerna av miljöer som du kan komma åt
@@ -73,7 +73,7 @@ Målet med samtalet är att ge dig möjlighet att ställa frågor, lära dig mer
 
 När miljöprovisioneringsprocessen är slutförd får systemadministratören som definieras i avtalet ett välkomstmeddelande med en bekräftelse på att de har beviljats åtkomst till Adobe Experience Cloud. Om du läser den här dokumentationsresan är det sannolikt du!
 
-E-postmeddelandet innehåller detaljerad information om hur du kommer igång med tjänsterna i Experience Cloud och självbetjäningsportalen för Cloud Manager. Dessutom innehåller e-postmeddelandet viktig information, till exempel var du kan hitta supportresurser, forum, frågor och svar och mycket annat. I listan över resurser i e-postmeddelandet finns även information om hur du får åtkomst till dina AEM molnmiljöer.
+E-postmeddelandet innehåller detaljerad information om hur du kommer igång med tjänsterna i Experience Cloud och självbetjäningsportalen för Cloud Manager. E-postmeddelandet innehåller även viktig information som var du kan hitta supportresurser, forum, frågor och svar och mycket annat. I listan över resurser i e-postmeddelandet finns även information om hur du får åtkomst till dina AEM molnmiljöer.
 
 >[!TIP]
 >

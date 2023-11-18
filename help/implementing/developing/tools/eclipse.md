@@ -2,9 +2,9 @@
 title: AEM Developer Tools for Eclipse
 description: Lär dig hur du använder AEM Developer Tools för Eclipse, ett Eclipse-plugin-program baserat på Eclipse-pluginprogrammet för Apache Sling.
 exl-id: 7f9c0f99-e230-440a-8bc9-a0ab7465e3bf
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1191'
 ht-degree: 1%
 
 ---
@@ -64,7 +64,7 @@ I Eclipse avgör ett perspektiv vilka åtgärder och vyer som finns tillgänglig
 
 _Experience Manager Development Tools for Eclipse_ har ett AEM perspektiv som ger dig full kontroll över dina AEM projekt och instanser. Så här öppnar du AEM perspektiv:
 
-1. Välj **Fönster** -> **Perspektiv** -> **Öppna perspektiv** -> **Övriga**.
+1. Välj **Fönster** > **Perspektiv** > **Öppna perspektiv** > **Övriga**.
 1. Välj **AEM** i dialogrutan och klicka på **Öppna**.
 
 ![AEM i Eclipse](assets/eclipse-aem-perspective.png)
@@ -83,7 +83,7 @@ Så här skapar du exempelprojektet:
 
    >[!NOTE]
    >
-   >Det här steget kan ta en stund eftersom m2eclipse behöver skanna arkivtypskatalogerna.
+   >Det här steget kan ta en stund eftersom m2eclipse måste skanna arkivtypskatalogerna.
 
 1. Välj `com.adobe.granite.archetypes : sample-project-archetype : <highest-number>` från menyn och sedan klicka på **Nästa**.
 
@@ -139,7 +139,7 @@ Du kan använda **Nytt projekt** för att skapa rätt struktur för dig:
 1. Gör sedan samma sak med `PROJECT.ui.content` och ersätta innehållsmappen med ett av dina paket:
 
    1. I projektutforskarpanelen, visa `PROJECT.ui.content` > `src` > `main` > `content` > `jcr_root` > `content`.
-   1. Högerklicka på den djupare innehållsmappen och välj **Visa i** -> **Systemutforskaren**.
+   1. Högerklicka på den djupare innehållsmappen och välj **Visa i** > **Systemutforskaren**.
    1. Ta bort innehållsmappen som du nu ska se och placera innehållsmappen i innehållspaketet här.
    1. Högerklicka på `PROJECT.ui.content` projekt och välj **Uppdatera**.
 
@@ -194,7 +194,7 @@ Du kan använda **Nytt projekt** för att skapa rätt struktur för dig:
 
 När du är klar bör du låta paketet köras på din instans, och när du sparar synkroniseras alla ändringar automatiskt till instansen.
 
-Högerklicka på `PROJECT.ui.apps` eller `PROJECT.ui.content` och välja **Kör som** -> **Maven Install**.
+Om du vill återskapa ett paket från projektet högerklickar du på `PROJECT.ui.apps` eller `PROJECT.ui.content` och välja **Kör som** > **Maven Install**.
 
 Nu har du en målmapp som skapats med ditt paket inuti (anropas till exempel `PROJECT.ui.apps-0.0.1-SNAPSHOT.zip`).
 
@@ -206,7 +206,7 @@ Så här löser du ogiltiga beroenden och projektdefinitioner:
 
 1. Markera alla skapade projekt.
 1. Högerklicka.
-1. Välj **Maven** -> **Uppdatera projekt**.
+1. Välj **Maven** > **Uppdatera projekt**.
 1. Kontrollera **Tvinga uppdateringar av ögonblicksbild/releaser**.
 1. Klicka **OK**.
 

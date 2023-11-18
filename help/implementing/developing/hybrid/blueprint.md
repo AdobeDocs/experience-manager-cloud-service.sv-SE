@@ -1,15 +1,15 @@
 ---
-title: SPA Blueprint
+title: SPA
 description: I det här dokumentet beskrivs det allmänna ramverksoberoende kontraktet som alla SPA ramverk ska uppfylla så att du kan implementera redigerbara SPA komponenter inom AEM.
 exl-id: 9d47c0e9-600c-4f45-9169-b3c9bbee9152
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2056'
+source-wordcount: '2055'
 ht-degree: 0%
 
 ---
 
-# SPA Blueprint {#spa-blueprint}
+# SPA {#spa-blueprint}
 
 Om du vill att författaren ska kunna använda AEM SPA Editor för att redigera innehållet i en SPA måste SPA uppfylla kraven.
 
@@ -17,7 +17,7 @@ Om du vill att författaren ska kunna använda AEM SPA Editor för att redigera 
 
 I det här dokumentet beskrivs det allmänna kontraktet att alla SPA ramverk ska uppfylla (d.v.s. AEM stödskikt) så att du kan implementera redigerbara SPA komponenter i AEM.
 
-Om du vill att författaren ska kunna använda AEM Page Editor för att redigera data som exponeras av ett ramverk för ett enkelsidigt program, måste ett projekt kunna tolka modellstrukturen som representerar semantiken för data som lagras för ett program i AEM. För att uppnå detta mål finns två ramverksbaserade bibliotek: den `PageModelManager` och `ComponentMapping`.
+Om du vill att författaren ska kunna använda AEM Page Editor för att redigera data som exponeras av ett ramverk för ett enkelsidigt program, måste ett projekt kunna tolka modellstrukturen som representerar semantiken för data som lagras för ett program i AEM. För att uppnå detta mål finns det två ramverksbaserade bibliotek: `PageModelManager` och `ComponentMapping`.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Vid initiering av `PageModelManager`läser biblioteket först in den angivna rot
 
 The `ComponentMapping` -modulen tillhandahålls som ett NPM-paket till frontendprojektet. Det lagrar komponenter i gränssnittet och tillhandahåller ett sätt för SPA att mappa komponenter i gränssnittet till AEM resurstyper. Detta aktiverar en dynamisk upplösning för komponenter när JSON-modellen för programmet analyseras.
 
-Varje objekt i modellen innehåller en `:type` fält som visar en AEM resurstyp. När den är monterad kan den främre komponenten återge sig själv med det fragment av modellen som den har fått från de underliggande biblioteken.
+Varje objekt i modellen innehåller en `:type` fält som visar en AEM. När den är monterad kan den främre komponenten återge sig själv med det fragment av modellen som den har fått från de underliggande biblioteken.
 
 #### Dynamisk mappning av modell till komponent {#dynamic-model-to-component-mapping}
 
@@ -55,7 +55,7 @@ Mer information om hur den dynamiska mappningen av modell till komponent sker i 
 
 Ett tredje lager måste implementeras för varje frontramverk. Detta tredje bibliotek ansvarar för interaktionen med de underliggande biblioteken och erbjuder en serie välintegrerade och lättanvända startpunkter för interaktion med datamodellen.
 
-Resten av detta dokument beskriver kraven för det mellanliggande ramverksspecifika lagret och strävar efter att vara ramverksoberoende. Genom att uppfylla följande krav kan ett ramverksspecifikt lager tillhandahållas för projektkomponenterna för interaktion med de underliggande biblioteken som ansvarar för att hantera datamodellen.
+I resten av detta dokument beskrivs kraven för det mellanliggande ramverksspecifika lagret och strävar efter att vara ramverksoberoende. Genom att uppfylla följande krav kan ett ramverksspecifikt lager tillhandahållas för projektkomponenterna för interaktion med de underliggande biblioteken som ansvarar för att hantera datamodellen.
 
 ## Allmänna begrepp {#general-concepts}
 
@@ -63,7 +63,7 @@ Resten av detta dokument beskriver kraven för det mellanliggande ramverksspecif
 
 Innehållsstrukturen för sidan lagras i AEM. Sidans modell används för att mappa och instansiera SPA. SPA utvecklare skapar SPA komponenter som de mappar till AEM komponenter. För att göra detta använder de resurstypen (eller sökvägen till AEM) som en unik nyckel.
 
-De SPA komponenterna måste vara synkroniserade med sidmodellen och uppdateras med eventuella ändringar av innehållet. Ett mönster som utnyttjar dynamiska komponenter måste användas för att instansiera komponenter i farten efter den angivna sidmodellstrukturen.
+De SPA komponenterna måste vara synkroniserade med sidmodellen och uppdateras med eventuella ändringar av innehållet. Ett mönster som använder dynamiska komponenter måste användas för att instansiera komponenter i farten efter den angivna sidmodellstrukturen.
 
 ### Metafält {#meta-fields}
 
@@ -71,10 +71,10 @@ Sidmodellen använder JSON Model Exporter, som i sin tur är baserad på [Sling 
 
 * `:type`: Typ av AEM (standard = resurstyp)
 * `:children`: Hierarkiska underordnade för den aktuella resursen. Underordnade är inte en del av den aktuella resursens inre innehåll (kan hittas på objekt som representerar en sida)
-* `:hierarchyType`: Hierarkisk typ av en resurs. The `PageModelManager` har för närvarande stöd för sidtypen
+* `:hierarchyType`: Hierarkisk typ av resurs. The `PageModelManager` har för närvarande stöd för sidtypen
 
 * `:items`: Underordnade innehållsresurser för den aktuella resursen (kapslad struktur, endast i behållare)
-* `:itemsOrder`: Ordnad lista över de underordnade. JSON-mappningsobjektet garanterar inte fältordningen. Genom att ha både kartan och den aktuella arrayen får API-konsumenten fördelarna med båda strukturerna
+* `:itemsOrder`: Ordnad lista över underordnade. JSON-mappningsobjektet garanterar inte fältordningen. Genom att ha både kartan och den aktuella arrayen får API-konsumenten fördelarna med båda strukturerna
 * `:path`: Innehållssökväg för ett objekt (finns i objekt som representerar en sida)
 
 Se även [Komma igång med AEM Content Services.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
@@ -159,7 +159,7 @@ Se även npm-resursen [@adobe/aem-rea-editable-components](https://www.npmjs.com
 
 #### Platshållare för det responsiva rutnätet {#placeholder-of-the-responsive-grid}
 
-Komponenten SPA mappas till en grafisk behållare, t.ex. det responsiva stödrastret, och måste lägga till en virtuell underordnad platshållare när innehållet skapas. När innehållet i SPA redigeras av sidredigeraren bäddas innehållet in i redigeraren med hjälp av en iframe och `data-cq-editor` -attribut läggs till i dokumentnoden för det innehållet. När `data-cq-editor` -attributet finns, måste behållaren innehålla ett HTMLElement som representerar det område som författaren interagerar med när en ny komponent infogas på sidan.
+Komponenten SPA mappas till en grafisk behållare, t.ex. det responsiva stödrastret, och måste lägga till en virtuell underordnad platshållare när innehållet skapas. När innehållet i SPA redigeras av sidredigeraren bäddas innehållet in i redigeraren med en iframe och `data-cq-editor` -attribut läggs till i dokumentnoden för det innehållet. När `data-cq-editor` -attributet finns, måste behållaren innehålla ett HTMLElement som representerar det område som författaren interagerar med när en ny komponent infogas på sidan.
 
 Till exempel:
 
@@ -226,13 +226,13 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 Projektkomponenterna måste generera minst följande dataattribut så att redigeraren kan interagera med dem.
 
-* `data-cq-data-path`: Komponentens relativa sökväg som anges av `PageModel` (t.ex. `"root/responsivegrid/image"`). Det här attributet ska inte läggas till på sidor.
+* `data-cq-data-path`: Relativ sökväg för komponenten enligt `PageModel` (till exempel `"root/responsivegrid/image"`). Det här attributet ska inte läggas till på sidor.
 
 Sammanfattningsvis, för att sidredigeraren ska kunna tolka som redigerbar, måste en projektkomponent respektera följande kontrakt:
 
 * Ange de förväntade attributen för att associera en komponentinstans i början till en AEM resurs.
 * Ange den förväntade serie attribut och klassnamn som gör att tomma platshållare kan skapas.
-* Ange de förväntade klassnamnen för att aktivera dra och släpp av resurser.
+* Ange de förväntade klassnamnen för att aktivera dra och släpp-funktionen för resurser.
 
 ### Normal elementstruktur i HTML {#typical-html-element-structure}
 

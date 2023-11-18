@@ -2,9 +2,9 @@
 title: Konfigurera din pipeline
 description: Skapa en pipeline för frontend för att hantera anpassningen av webbplatsens tema.
 exl-id: 0d77d1a6-98f3-4961-9283-f52c1b5b2a7b
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '956'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ På så sätt kan front end-utveckling fungera separat från och parallellt med 
 
 1. Logga in på Adobe Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/).
 
-1. Cloud Manager visar de olika tillgängliga programmen. Tryck eller klicka på den du vill hantera. Om du just har börjat med AEM as a Cloud Service har du antagligen bara ett program tillgängligt.
+1. Cloud Manager visar de olika tillgängliga programmen. Markera den du vill hantera. Om du just har börjat med AEM as a Cloud Service har du antagligen bara ett program tillgängligt.
 
    ![Välja ett program i Cloud Manager](assets/cloud-manager-select-program.png)
 
@@ -71,7 +71,7 @@ Observera namnet på programmet som du har öppnat eller kopierat URL:en. Du må
 
 Nu när du har öppnat Cloud Manager kan du skapa en pipeline för distribution direkt.
 
-1. I **Pipelines** på Cloud Manager-sidan trycker du på eller klickar på **Lägg till** -knappen.
+1. I **Pipelines** på sidan Cloud Manager väljer du **Lägg till** -knappen.
 
    ![Pipelines](assets/pipelines-add.png)
 
@@ -83,7 +83,7 @@ Nu när du har öppnat Cloud Manager kan du skapa en pipeline för distribution 
 
    ![Lägg till pipeline-konfiguration](assets/add-pipeline-configuration.png)
 
-1. Tryck eller klicka **Fortsätt**.
+1. Välj **Fortsätt**.
 
 1. På **Källkod** tab:
    * Välj **Front End-kod** som den typ av kod som ska distribueras.
@@ -94,7 +94,7 @@ Nu när du har öppnat Cloud Manager kan du skapa en pipeline för distribution 
 
    ![Källkodsinfo för att lägga till pipeline](assets/add-pipeline-source-code.png)
 
-1. Tryck eller klicka **Spara**.
+1. Välj **Spara**.
 
 Den nya pipelinen skapas och visas i **Pipelines** i Cloud Manager-fönstret. Om du trycker på ellipsen efter pipelinenamnet visas alternativ för ytterligare redigering eller visning av detaljer efter behov.
 

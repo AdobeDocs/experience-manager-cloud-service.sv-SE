@@ -2,9 +2,9 @@
 title: Bästa tillvägagångssätt för installation och användning av AEM GraphQL med innehållsfragment
 description: Lär dig de rekommenderade bästa metoderna för konfiguration och användning av AEM GraphQL med innehållsfragment.
 exl-id: 4d6a5aaa-c8be-4858-ad07-085dc4fb77e7
-source-git-commit: 25a4a6b9ae09cb71f50317990af1718db1e14355
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '739'
 ht-degree: 5%
 
 ---
@@ -201,7 +201,7 @@ För:
 
 ### Ytterligare resurser
 
-Mer information om AEM GraphQL och Content Fragments finns i:
+Mer information om AEM GraphQL och innehållsfragment finns i:
 
 * [AEM GraphQL API för användning med innehållsfragment](/help/headless/graphql-api/content-fragments.md)
 * [Använda GraphiQL IDE](/help/headless/graphql-api/graphiql-ide.md)

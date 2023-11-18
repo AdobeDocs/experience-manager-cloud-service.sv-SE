@@ -2,9 +2,9 @@
 title: Infoga innehåll i Cloud Service
 description: Lär dig hur du använder Cloud Acceleration Manager för att importera innehåll från din migreringsuppsättning till en instans av en Cloud Service.
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: 28cbdff5756b0b25916f8d9a523ab4745873b5fa
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2324'
+source-wordcount: '2326'
 ht-degree: 3%
 
 ---
@@ -162,13 +162,14 @@ Den här konflikten måste lösas manuellt. Någon som är bekant med innehålle
 ### Inmatningsfel högst upp på grund av att det inte går att ta bort referensnod
 
 En annan vanlig orsak till [Inmatning uppifrån](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#top-up-ingestion-process) fel är en versionskonflikt för en viss nod i målinstansen. Identifiera felet genom att hämta matningsloggen med användargränssnittet i Cloud Acceleration Manager och leta efter en post som följande:
+
 >java.lang.RuntimeException: org.apache.jackrabbit.oak.api.CommitFailedException: OakIntegrity001: Det går inte att ta bort refererad nod: 8a2289f4-b904-4bd0-8410-15e41e 0976a8
 
 Detta kan inträffa om en nod på målet ändras mellan ett intag och en efterföljande **Ej svep** så att en ny version har skapats. Om migreringsuppsättningen har extraherats med inkluderingsversioner aktiverat kan en konflikt uppstå eftersom målet nu har en senare version som versionshistorik och annat innehåll refererar till. Det går inte att ta bort den felaktiga versionsnoden eftersom den refereras.
 
 Lösningen kan kräva att extraheringen av den övre delen görs igen utan den felande noden. Eller skapa en liten migreringsuppsättning av den felande noden, men med inkluderingsversioner inaktiverade.
 
-Bästa tillvägagångssätt visar att om en **Ej svep** Tillåtelse måste utföras med en migreringsuppsättning som innehåller versioner (dvs. extraheras med&quot;include versions&quot;=true). Det är viktigt att innehållet på destinationen ändras så lite som möjligt, tills migreringsresan är klar. I annat fall kan dessa konflikter uppstå.
+Bästa tillvägagångssätt visar att om en **Ej svep** Tillåtelse måste utföras med en migreringsuppsättning som innehåller versioner (d.v.s. extraheras med&quot;include versions&quot;=true). Det är viktigt att innehållet på destinationen ändras så lite som möjligt, tills migreringsresan är klar. I annat fall kan dessa konflikter uppstå.
 
 ### Inmatningen har avbrutits
 

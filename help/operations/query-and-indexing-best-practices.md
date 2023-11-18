@@ -3,9 +3,9 @@ title: Bästa praxis för frågor och indexering
 description: Lär dig hur du optimerar index och frågor baserat på Adobe riktlinjer för bästa praxis.
 topic-tags: best-practices
 exl-id: 37eae99d-542d-4580-b93f-f454008880b1
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '3133'
+source-wordcount: '3128'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Om innehållet till exempel lagras i en taxonomi som liknar:
 
 den `/content/myUnstructuredContent/parentCategory/childCategory` noden kan bara hämtas, dess underordnade noder kan tolkas och användas för att återge komponenten.
 
-När du har att göra med en liten eller homogen resultatmängd kan det dessutom vara snabbare att gå igenom databasen och samla ihop de noder som behövs, i stället för att skapa en fråga som returnerar samma resultatmängd. Generellt sett bör frågor undvikas där det är möjligt att göra detta.
+När du har att göra med en liten eller homogen resultatuppsättning kan det dessutom vara snabbare att gå igenom databasen och samla ihop de noder som behövs, i stället för att skapa en fråga som returnerar samma resultatmängd. Generellt sett bör frågor undvikas där det är möjligt att göra detta.
 
 ### Förhämtningsresultat {#prefetching-results}
 
@@ -138,7 +138,7 @@ Med verktyget Förklara fråga kan utvecklare förstå frågekörningsplanen (se
 
 Så här förklarar du en fråga:
 
-* Välj lämpligt frågespråk med `Language` nedrullningsbar meny.
+* Välj lämpligt frågespråk med `Language` listruta.
 * Ange frågesatsen i dialogrutan `Query` fält.
 * Om det behövs väljer du hur frågan ska köras med de angivna kryssrutorna.
    * Som standard behöver JCR-frågor inte köras för att identifiera frågekörningsplanen (detta gäller inte för QueryBuilder-frågor).
@@ -239,7 +239,7 @@ I det här avsnittet av planen anges att
 
 Frågekörningsplanen resulterar i alla resurser under `/content/dam` som läses från indexet och sedan filtreras ytterligare av frågemotorn (som bara inkluderar de som matchar den icke-indexerade egenskapsbegränsningen i resultatuppsättningen).
 
-Även om bara en liten andel av resurserna matchar begränsningen `jcr:content/metadata/myProperty = "My Property Value"`behöver frågan läsa ett stort antal noder för att fylla i den begärda sidan med resultat. Detta kan resultera i en fråga som inte fungerar som den ska och som visas som låg `Read Optimization` poäng i verktyget Query Performance) och kan leda till WARN-meddelanden som anger att ett stort antal noder gås igenom (se [Indexgenomgång](#index-traversal)).
+Även om bara en liten andel av resurserna matchar begränsningen `jcr:content/metadata/myProperty = "My Property Value"`måste frågan läsa ett stort antal noder för att fylla i den begärda&quot;sidan&quot; med resultat. Detta kan resultera i en fråga som inte fungerar som den ska och som visas som låg `Read Optimization` poäng i verktyget Query Performance) och kan leda till WARN-meddelanden som anger att ett stort antal noder gås igenom (se [Indexgenomgång](#index-traversal)).
 
 Om du vill optimera prestandan för den andra frågan skapar du en anpassad version av `damAssetLucene-9` index (`damAssetLucene-9-custom-1`) och lägga till följande egenskapsdefinition -
 
@@ -309,6 +309,7 @@ Frågor som använder ett index, men ändå läser stora antal noder, loggas med
 ```
 
 Detta kan inträffa av flera orsaker -
+
 1. Alla begränsningar i frågan kan inte hanteras vid indexvärdet.
    * I det här fallet läses en överordnad uppsättning av den slutliga resultatuppsättningen från indexet och filtreras därefter i frågemotorn.
    * Detta är många gånger långsammare än om du tillämpar begränsningar i den underliggande indexfrågan.
@@ -316,7 +317,7 @@ Detta kan inträffa av flera orsaker -
    * I det här fallet måste alla resultat som returneras av indexet läsas av frågemotorn och sorteras i minnet.
    * Detta är många gånger långsammare än att tillämpa sortering i den underliggande indexfrågan.
 1. Frågeutföraren försöker iterera igenom en stor resultatuppsättning.
-   * Denna situation kan inträffa av en rad orsaker, som anges nedan:
+   * Denna situation kan inträffa av flera orsaker, som anges nedan:
 
 | Orsak | Minska |
 |----------|--------------|

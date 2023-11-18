@@ -2,7 +2,7 @@
 title: Hantera anpassade domännamn
 description: Lär dig hur du använder Cloud Manager för att visa, uppdatera, ersätta och ta bort anpassade domännamn.
 exl-id: 6cab8cf2-22c0-4f4b-9c54-a1425e74ddd0
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Använd **Visa och uppdatera** om du vill visa information om dina anpassade dom
 
 1. Navigera till **Miljö** från **Ökning** sida.
 
-1. Identifiera raden i det anpassade domännamnet som du vill visa eller uppdatera.
+1. Identifiera raden för det anpassade domännamn som du vill visa eller uppdatera.
 
 1. Klicka på ellipsknappen längst till höger på raden.
 

@@ -4,9 +4,9 @@ description: Lär dig hur du förbereder innehåll för översättning när du u
 feature: Language Copy
 role: Admin
 exl-id: afc577a2-2791-481a-ac77-468011e4302e
-source-git-commit: a1a92f8767186ba9e93b6b30870ecfa9f3b3bc28
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -50,14 +50,14 @@ The [WKND självstudiewebbplats](/help/implementing/developing/introduction/deve
             |- it
 ```
 
-Den språkkopia som du ursprungligen skapade webbplatsinnehållet för är överordnad. Överordnad språk är källan som översätts till andra språk.
+Den språkkopia som du ursprungligen skapade webbplatsinnehållet för är språkinställningen. Språkmallsidan är källan som översätts till andra språk.
 
 Varje språkgren på en webbplats kallas för en språkkopia. Rotsidan för en språkkopia, som kallas språkroten, identifierar språket för innehållet i språkkopian. Till exempel: `/content/wknd/fr` är språkroten för den franska språkkopian. Språkkopior måste använda en [korrekt konfigurerad språkrot](preparation.md#creating-a-language-root) så att rätt språk används när översättningar av en källplats utförs.
 
 Gör så här för att förbereda webbplatsen för översättning:
 
-1. Skapa språkroten för din överordnad. Exempelvis är språkroten för den engelska demowebbplatsen WKND `/content/wknd/language-masters/en`. Kontrollera att språkroten är korrekt konfigurerad enligt informationen i [Skapa en språkrot](preparation.md#creating-a-language-root).
-1. Skriv innehåll på ditt språk överordnad.
+1. Skapa språkroten för din språkinställning. Exempelvis är språkroten för den engelska demowebbplatsen WKND `/content/wknd/language-masters/en`. Kontrollera att språkroten är korrekt konfigurerad enligt informationen i [Skapa en språkrot](preparation.md#creating-a-language-root).
+1. Skriv innehållet i din språkmaster.
 1. Skapa språkroten för varje språkkopia för webbplatsen. Exempelwebbplatsen för WKND har en fransk språkkopia `/content/wknd/language-masters/fr`.
 
 När du har förberett innehållet för översättning kan du automatiskt skapa saknade sidor i dina språkkopior och tillhörande översättningsprojekt. (Se [Skapa ett översättningsprojekt](managing-projects.md).) En översikt över innehållsöversättningsprocessen i AEM finns i [Översätta innehåll för flerspråkiga webbplatser](overview.md).
@@ -71,20 +71,20 @@ Om du vill skapa språkroten skapar du en sida och använder en ISO-språkkod so
 * `<language-code>` - Den språkkod som stöds är en kod med två bokstäver som definieras av ISO-639-1, till exempel `en`.
 * `<language-code>_<country-code>` eller `<language-code>-<country-code>` - Den landskod som stöds är en kod med två bokstäver i gemener eller versaler enligt ISO 3166, till exempel `en_US`, `en_us`, `en_GB`, `en-gb`.
 
-Du kan använda båda formaten enligt den struktur som du har valt för den globala platsen. Rotsidan för den franska språkkopian av WKND-webbplatsen har `fr` som **Namn** -egenskap. Observera att **Namn** egenskapen används som namn på sidnoden i databasen och därför bestäms sidans sökväg (`http://<host>:<4502>/content/wknd/language-masters/fr.html`).
+Du kan använda båda formaten enligt den struktur som du har valt för den globala platsen. Rotsidan för den franska språkkopian av WKND-webbplatsen har `fr` som **Namn** -egenskap. The **Namn** egenskapen används som namn på sidnoden i databasen och därför bestäms sidans sökväg (`http://<host>:<4502>/content/wknd/language-masters/fr.html`).
 
 1. Navigera till webbplatser.
-1. Klicka på eller tryck på den webbplats som du vill skapa en språkkopia för.
-1. Klicka eller tryck **Skapa** och sedan klicka eller trycka **Sida**.
+1. Välj den webbplats som du vill skapa en språkkopia för.
+1. Välj **Skapa** och sedan markera **Sida**.
 
    ![Skapa sida](../assets/create-page.png)
 
-1. Välj sidmallen och klicka eller tryck sedan på **Nästa**.
+1. Markera sidmallen och välj sedan **Nästa**.
 1. I **Namn** fälttyp landskoden i formatet `<language-code>` eller `<language-code>_<country-code>`, till exempel `en`, `en_US`, `en_us`, `en_GB`, `en_gb`. Skriv en rubrik för sidan.
 
    ![Skapa språkets rotsida](../assets/create-language-root.png)
 
-1. Klicka eller tryck **Skapa**. I bekräftelsedialogrutan klickar du på eller trycker på **Klar** för att gå tillbaka till Sites-konsolen, eller **Öppna** för att öppna språkkopian.
+1. Välj **Skapa**. I bekräftelsedialogrutan väljer du antingen **Klar** för att gå tillbaka till Sites-konsolen, eller **Öppna** för att öppna språkkopian.
 
 ## Se status för språkrötter {#seeing-the-status-of-language-roots}
 
@@ -94,11 +94,11 @@ AEM tillhandahåller en **Referenser** som visar en lista med språkrötter som 
 
 Använd följande procedur för att visa språkkopiorna för en sida med [järnvägsväljare](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector).
 
-1. Välj en sida på webbplatsen i webbplatskonsolen och klicka eller tryck sedan på **Referenser**.
+1. På webbplatskonsolen markerar du en sida på platsen och väljer sedan **Referenser**.
 
    ![Räler för öppna referenser](../assets/opening-references-rail.png)
 
-1. Klicka eller tryck på referenslisten **Språkkopior**. Rälsen visar webbplatsens språkkopior.
+1. Välj **Språkkopior**. Rälsen visar webbplatsens språkkopior.
 
 ## Språkkopior på flera nivåer {#multiple-levels}
 

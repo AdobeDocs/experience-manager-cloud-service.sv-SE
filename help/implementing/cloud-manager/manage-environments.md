@@ -2,9 +2,9 @@
 title: Hantera miljöer
 description: Lär dig mer om de typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: 532f3ac9450d34f3e2a168c04695bafde5a44c9f
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2601'
+source-wordcount: '2585'
 ht-degree: 0%
 
 ---
@@ -87,9 +87,9 @@ När du lägger till en miljö kan du välja att konfigurera ytterligare regione
 1. Välj alternativet **Lägg till ytterligare publiceringsregioner** och en ny **Ytterligare publiceringsregioner** nedrullningsbar meny för alternativ visas.
 1. I **Ytterligare publiceringsregioner** väljer du ett extra område.
 1. Det markerade området läggs till under listrutan för att ange dess val.
-   * Tryck eller klicka på `X` bredvid det markerade området så att du kan avmarkera det.
+   * Välj `X` bredvid det markerade området så att du kan avmarkera det.
 1. Välj ett annat område på menyn **Ytterligare publiceringsregioner** listrutan för att lägga till en annan region.
-1. Tryck eller klicka **Spara** när du är redo att skapa din miljö.
+1. Välj **Spara** när du är redo att skapa din miljö.
 
 ![Markera flera områden](assets/select-multiple-regions.png)
 
@@ -115,7 +115,7 @@ Du kan även ta bort ytterligare publiceringsregioner. Du kan dock bara lägga t
 
    ![Redigeringsmiljö](assets/edit-environment.png)
 
-1. Tryck eller klicka **Spara** för att spara ändringarna.
+1. Välj **Spara** för att spara ändringarna.
 
 De ändringar som görs i produktionsmiljön gäller både produktions- och stagningsmiljöer. Ändringar i flera publiceringsregioner kan bara redigeras i produktionsmiljön.
 
@@ -200,12 +200,12 @@ Du kan även få åtkomst till samma information från **Miljö** -fliken.
 
 Om några problem har rapporterats med ytterligare publiceringsregioner:
 
-1. Var tålmodig. Cloud Manager försöker hela tiden återställa regionen och den kan bli tillgänglig när som helst.
-1. Om problemet kvarstår efter ett antal timmar kan du ta bort den extra publiceringsregionen och lägga till den igen (antingen samma region eller en annan region) för att utlösa en fullständig distribution.
+1. Var tålmodiga. Cloud Manager försöker ständigt återskapa regionen och den kan bli tillgänglig när som helst.
+1. Om problemet kvarstår efter flera timmar kan du ta bort den extra publiceringsregionen och lägga till den igen (antingen samma region eller en annan region) för att utlösa en fullständig distribution.
 
 Hur länge du väntar på att systemet ska återställas fristående innan du vidtar ytterligare åtgärder beror på hur svårt det är för dina system.
 
-Observera att under alla omständigheter [trafiken dirigeras alltid till den närmaste regionen som är online.](/help/operations/additional-publish-regions.md) Om du fortfarande ser problem kan du kontakta Adobe kundtjänst.
+Under alla omständigheter [trafiken dirigeras alltid till den närmaste regionen som är online.](/help/operations/additional-publish-regions.md) Kontakta Adobe kundtjänst om du fortsätter att se problem.
 
 ## Uppdaterar miljöer {#updating-dev-environment}
 

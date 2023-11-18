@@ -1,15 +1,13 @@
 ---
 title: Hur skapar man tillgänglig adaptiv Forms?
 description: AEM Forms innehåller verktyg för att skapa tillgänglig Adaptiv Forms och hjälper till att följa tillgänglighetsstandarder.
-uuid: 6472bc2d-47ca-4883-88b7-5de0b758fd00
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: 1e95c66b-d132-4c44-a1dc-31fd09af8113
 docset: aem65
 exl-id: 3b5247fa-decb-40eb-a629-6d834976d33c
-source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '2002'
 ht-degree: 0%
 
 ---
@@ -18,7 +16,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Ett hjälpmedelsanpassat formulär är ett formulär som alla kan använda, inklusive användare med särskilda behov. Adaptiva Forms har ett antal funktioner som gör dem mer användbara för användare med olika funktioner. Att bygga upp tillgängligheten i Adaptive Forms ger inte bara största möjliga publik av innehåll, utan det är också ett krav när man levererar dokument i de länder där det krävs överensstämmelse med tillgänglighetsstandarder. [!DNL AEM Forms] hjälper formulärutvecklare att följa standarderna för tillgänglighet.
+Ett hjälpmedelsanpassat formulär är ett formulär som alla kan använda, inklusive användare med särskilda behov. Adaptiva Forms har flera funktioner som gör dem mer användbara för användare med olika funktioner. Att bygga upp tillgängligheten i Adaptive Forms ger inte bara största möjliga publik av innehåll, utan det är också ett krav när man levererar dokument i de länder där det krävs överensstämmelse med tillgänglighetsstandarder. [!DNL AEM Forms] hjälper formulärutvecklare att följa standarderna för tillgänglighet.
 
 När du skapar ett adaptivt formulär bör du tänka på följande när du skapar tillgängliga adaptiva formulär:
 
@@ -159,7 +157,7 @@ Följande kortkommandon finns i [!DNL AEM Forms].
 | Återställ ifyllda data i ett formulär | Alt+R |
 | Skicka ett formulär | Alt+S |
 
-Dessutom finns det olika kortkommandon för **[!UICONTROL Date Picker]** i Adaptive Forms. Aktivera kortkommandona genom att trycka på **[!UICONTROL Date Picker]** och knacka ![Konfigurera](assets/configure-icon.svg) för att öppna egenskaperna. I **[!UICONTROL Patterns]** väljer du ett visningsmönster med **[!UICONTROL Type]** och **[!UICONTROL Pattern]** listrutor. Spara egenskaperna för att aktivera användning av kortkommandon för **[!UICONTROL Date Picker]** -komponenten.
+Dessutom finns det olika kortkommandon för **[!UICONTROL Date Picker]** i Adaptive Forms. Aktivera kortkommandona genom att trycka på **[!UICONTROL Date Picker]** och knacka ![Konfigurera](assets/configure-icon.svg) för att öppna egenskaperna. I **[!UICONTROL Patterns]** väljer du ett visningsmönster med **[!UICONTROL Type]** och **[!UICONTROL Pattern]** nedrullningsbara listor. Spara egenskaperna för att aktivera användning av kortkommandon för **[!UICONTROL Date Picker]** -komponenten.
 
 Följande kortkommandon är tillgängliga för datumväljarkomponenten i Adaptiv Forms:
 

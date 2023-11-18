@@ -3,9 +3,9 @@ title: Komma igång med Edge Delivery Services
 description: Komma igång med Edge Delivery Services (EDS).
 feature: Edge Delivery Services
 exl-id: 03a1aa93-d2e6-4175-9cf3-c7ae25c0d24e
-source-git-commit: 34965338015df868778a95582524df08a7c5f136
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '870'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 Med Edge Delivery Services levererar AEM exceptionella upplevelser som skapar engagemang och konverteringar. AEM gör det genom att leverera slagkraftiga upplevelser som är snabba att skapa och utveckla. Det är en sammanslagen uppsättning tjänster som möjliggör en snabb utvecklingsmiljö där författare snabbt kan uppdatera och publicera och nya webbplatser snabbt lanseras. Med Edge Delivery Services kan du öka konverteringsgraden, minska kostnaderna och skapa extrem innehållshastighet.
 
-Genom att utnyttja Edge Delivery kan man
+Med Edge Delivery kan man
 
 * Skapa snabba sajter med perfekt Lightroom Score och övervaka webbplatsens prestanda kontinuerligt med hjälp av RUM (Real User Monitoring).
 * Öka redigeringseffektiviteten genom att frikoppla innehållskällor. När du är klar kan du använda både AEM och dokumentbaserad redigering. På så sätt kan du arbeta med flera innehållskällor på samma webbplats.
@@ -50,7 +50,7 @@ Det är enkelt att komma igång med Edge Delivery Services. Kom igång genom att
 
 ## Få hjälp från Adobe {#adobe-gethelp}
 
-Du kan kontakta Adobe produktteam via den tilldelade produktsamarbetskanalen (se nedan för mer information) för att få svar på frågor om produktanvändning eller bästa praxis. Observera att det inte finns några servicenivåvillkor (SLT) kopplade till konversationerna via produktsamarbetskanalen. Om ett produktproblem kräver ytterligare utredning och felsökning, och måste uppfylla svars-SLT:er, kan du skicka ett supportärende efter [supportprocess](https://experienceleague.adobe.com/?lang=en&amp;support-tab=home#support).
+Du kan kontakta Adobe produktteam via den tilldelade produktsamarbetskanalen (se nedan för mer information) för att få svar på frågor om produktanvändning eller bästa praxis. Det finns inga servicenivåvillkor (SLT) kopplade till konversationerna via produktsamarbetskanalen. Om ett produktproblem kräver ytterligare utredning och felsökning, och måste uppfylla SLT-svarsalternativ, kan du skicka ett supportärende efter [supportprocess](https://experienceleague.adobe.com/?lang=en&amp;support-tab=home#support).
 
 Adobe har tre kanaler som kan hjälpa dig med Edge Delivery Services:
 
@@ -73,14 +73,14 @@ Mer information finns i [Använda Slack Bot](https://www.hlx.live/docs/slack) f�
 Steg för att logga en supportanmälan via Admin Console:
 
 1. Lägg till **Edge Delivery** i biljettens titel.
-2. Ange följande i beskrivningen:
+2. Ange följande information i beskrivningen:
 
    * Den publicerade webbplatsens URL. Till exempel: [www.mydomain.com].
    * URL för den ursprungliga webbplatsen (.hlx URL).
 
 ## What&#39;s Next {#whats-next}
 
-Kom igång genom att läsa nästa artikel: [Använda Edge Delivery Services](/help/edge/using.md).
+Kom igång genom att granska [Använda Edge Delivery Services](/help/edge/using.md).
 
 ## Användbara resurser {#useful-resources}
 

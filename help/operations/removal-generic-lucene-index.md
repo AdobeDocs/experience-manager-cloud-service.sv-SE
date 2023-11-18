@@ -2,9 +2,9 @@
 title: Generisk borttagning av Lucene-index
 description: Lär dig mer om den planerade borttagningen av generiska Lucene-index och hur du kan påverkas.
 exl-id: 3b966d4f-6897-406d-ad6e-cd5cda020076
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1335'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ I AEM 6.5 markerades det generiska Lucene-indexet som inaktuellt, vilket tyder p
 org.apache.jackrabbit.oak.plugins.index.lucene.LucenePropertyIndex This index is deprecated: /oak:index/lucene-2; it is used for query Filter(query=select [jcr:path], [jcr:score], * from [nt:base] as a where contains(*, 'search term') and isdescendantnode(a, '/content/mysite') /* xpath: /jcr:root/content/mysite//*[jcr:contains(.,"search term")] */ fullText="search" "term", path=/content/mysite//*). Change the query or the index definitions.
 ```
 
-I de senaste AEM har det generiska Lucene-indexet använts för att stödja ett mycket litet antal funktioner. Dessa omarbetas för att använda andra index eller ändras på annat sätt för att ta bort beroendet av detta index.
+I de senaste AEM versionerna har det generiska Lucene-indexet använts för att stödja ett mycket litet antal funktioner. Dessa omarbetas för att använda andra index eller ändras på annat sätt för att ta bort beroendet av detta index.
 
 Referenssökningsfrågor, till exempel i följande exempel, bör nu använda indexvärdet vid `/oak:index/pathreference`, som endast indexerar `String` egenskapsvärden som matchar ett reguljärt uttryck som söker efter JCR-sökvägar.
 
@@ -74,7 +74,7 @@ org.apache.jackrabbit.oak.query.QueryImpl Fulltext query without index for filte
 
 ## Potentiella beroenden på allmänna Lucene-index {#potential-dependencies}
 
-Det finns ett antal områden där dina program och AEM kan vara beroende av allmänna Lucene-index både på författare och publiceringsinstanser.
+Det finns flera områden där dina program och AEM kan vara beroende av generiska Lucene-index både på författare och publiceringsinstanser.
 
 ### Publiceringsinstans {#publish-instance}
 
@@ -109,7 +109,7 @@ I andra fall kan en fråga ange en nodtyp men innehålla en fullständig textbeg
 
 I det här fallet har frågan `dam:Asset` nodtyp, men innehåller en fullständig textbegränsning för den relativa `jcr:content/metadata/@cq:tags` -egenskap.
 
-Den här egenskapen är inte markerad som analyserad i `damAssetLucene` index, som är det fulltextindex som oftast används för frågor mot `dam:Asset` nodtyp. Det går därför inte att använda detta index för den här frågan.
+Den här egenskapen är inte markerad som analyserad i `damAssetLucene` index, som är det fulltextindex som oftast används för frågor mot `dam:Asset` nodtyp. Det går därför inte att använda det här indexet för den här frågan.
 
 Frågan återgår därför till det generiska fulltextindexet där alla inkluderade egenskaper markeras som analyserade av jokerteckensmatchningen vid `/oak:index/lucene-2/indexRules/nt:base/properties/prop`.
 
@@ -117,11 +117,11 @@ Frågan återgår därför till det generiska fulltextindexet där alla inkluder
 >
 >**Kundåtgärd krävs**
 >
->Markera `jcr:content/metadata/@cq:tags` egenskapen så som den har analyserats i en anpassad version av `damAssetLucene` leder till att den här frågan hanteras av det här indexet och ingen WARN loggas.
+>Markera `jcr:content/metadata/@cq:tags` egenskapen så som den har analyserats i en anpassad version av `damAssetLucene` leder till att den här frågan hanteras av det här indexet och att ingen WARN loggas.
 
 ### Författarinstans {#author-instance}
 
-Förutom frågor i kundens programservrar, OSGi-komponenter och återgivningsskript kan det finnas ett antal författarspecifika användningar av det generiska Lucene-indexet.
+Förutom frågor i kundens programservrar, OSGi-komponenter och återgivningsskript kan det finnas flera författarspecifika användningar av det generiska Lucene-indexet.
 
 #### Referenssökning {#reference-search}
 
@@ -141,9 +141,9 @@ För närvarande, om inte `nodeTypes` egenskapen finns, den underliggande sökfr
 
 Innan det generiska Lucene-indexet tas bort ska `pathfield` -komponenten uppdateras så att sökrutan döljs för komponenter som använder standardväljaren, som inte har någon `nodeTypes` -egenskap.
 
-| Sökvägsfältväljaren med sökning | Sökvägsfältväljaren utan sökning |
+| Sökvägsfältsväljaren med sökning | Sökvägsfältsväljaren utan sökning |
 |---|---|
-| ![Sökvägsfältväljaren med sökning](assets/index-pathfield-picker-with-search.png) | ![Sökvägsfältväljaren utan sökning](assets/index-pathfield-picker-without-search.png) |
+| ![Sökvägsfältsväljaren med sökning](assets/index-pathfield-picker-with-search.png) | ![Sökvägsfältsväljaren utan sökning](assets/index-pathfield-picker-without-search.png) |
 
 >[!IMPORTANT]
 >
@@ -162,7 +162,7 @@ Innan det generiska Lucene-indexet tas bort ska `pathfield` -komponenten uppdate
 
 Adobe kommer att arbeta i två faser för att ta bort det generiska Lucene-indexet.
 
-* **Fas 1** (planerad från och med den 31 januari 2022): Skapa inte längre `/oak:index/lucene-*` i nya AEM as a Cloud Service miljöer.
+* **Fas 1** (planerad från den 31 januari 2022): Skapa inte längre `/oak:index/lucene-*` i nya AEM as a Cloud Service miljöer.
 * **Fas 2** (planerad från och med den 31 mars 2022): Ta bort `/oak:index/lucene-*` index från befintliga AEM as a Cloud Service miljöer.
 
 Adobe kommer att övervaka de loggmeddelanden som anges ovan och försöka kontakta kunder som är beroende av det generiska Lucene-indexet.

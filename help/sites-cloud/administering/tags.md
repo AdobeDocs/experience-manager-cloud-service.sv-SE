@@ -2,9 +2,9 @@
 title: Administrera taggar
 description: Lär dig hur du administrerar taggar i AEM för att ordna ditt innehåll.
 exl-id: 42480699-b7a7-4678-a763-569a9b7573e2
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2265'
+source-wordcount: '2210'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Det finns några tekniska detaljer att tänka på när du skapar och hanterar ta
    * En tagg som inte är en behållartagg kallas för en lövtagg.
    * Ett taggnamnutrymme kan vara antingen en lövtagg eller en behållartagg.
 
-Mer teknisk information om hur märkord fungerar finns i dokumentet [AEM Tagging Framework.](/help/implementing/developing/introduction/tagging-framework.md)
+Mer teknisk information om hur märkord fungerar finns i [AEM Taggningsramverk](/help/implementing/developing/introduction/tagging-framework.md).
 
 ## Taggningskonsolen {#tagging-console}
 
@@ -62,14 +62,14 @@ Taggningskonsolen används för att skapa och hantera taggar och deras taxonomie
 Så här kommer du åt taggningskonsolen:
 
 1. Logga in i en redigeringsmiljö med administratörsbehörighet.
-1. Välj **`Tools`** -> **`General`** ->
+1. Välj **`Tools`** > **`General`** ->
    **`Tagging`**.
 
 ![Taggningskonsolen i AEM](/help/sites-cloud/administering/assets/tagging-console.png)
 
 ## Skapa nya taggar {#creating-new-tags}
 
-Det finns ett antal steg för att skapa och använda taggar för att ordna ditt innehåll.
+Det finns flera steg för att skapa och använda taggar för att ordna ditt innehåll.
 
 1. [Skapa ett namnutrymme för dina taggar](#creating-namespaces) (eller välj en befintlig som ska återanvändas).
 1. [Skapa en ny tagg.](#creating-tags)
@@ -79,7 +79,7 @@ Det finns ett antal steg för att skapa och använda taggar för att ordna ditt 
 
 Ett namnutrymme används för att ordna andra taggar. Den kan ses som den lägsta nivån av taggen och används vanligtvis för att gruppera andra taggar.
 
-1. Öppna dialogrutan [taggningskonsol](#tagging-console) och trycka eller klicka på **Skapa** i verktygsfältet och sedan **Skapa namnutrymme**.
+1. Öppna dialogrutan [taggningskonsol](#tagging-console) och väljer **Skapa** i verktygsfältet och sedan **Skapa namnutrymme**.
 
    ![Dialogrutan Lägg till namnutrymme](/help/sites-cloud/administering/assets/add-namespace.png)
 
@@ -89,7 +89,7 @@ Ett namnutrymme används för att ordna andra taggar. Den kan ses som den lägst
    * **Namn** - Om inget namn anges skapas ett giltigt nodnamn från **Titel**. Se dokumentet [AEM Taggningsramverk](/help/implementing/developing/introduction/tagging-framework.md#tagid) för mer information.
    * **Beskrivning** - En beskrivning av namnutrymmet (valfritt)
 
-1. När du angett den obligatoriska informationen trycker du eller klickar **Skapa**.
+1. När du angett den obligatoriska informationen väljer du **Skapa**.
 
 Namnutrymmet skapas. Observera att i taggningskonsolen är namnutrymmena på den lägsta nivån (längst till vänster i konsolen) och representeras av mappikoner, som visar deras natur som en&quot;behållare&quot; eller gruppering av andra taggar.
 
@@ -103,9 +103,9 @@ Taggar läggs vanligtvis till i namnutrymmen.
 
 1. Öppna [taggningskonsol.](#tagging-console)
 
-1. Välj det namnutrymme där du vill skapa taggen. Du kan också markera en annan tagg och skapa en undertagg under den.
+1. Markera det namnutrymme där du vill skapa taggen. Du kan också markera en annan tagg och skapa en undertagg under den.
 
-1. Tryck eller klicka på **Skapa** i verktygsfältet och sedan **Skapa tagg**.
+1. Välj **Skapa** i verktygsfältet och sedan **Skapa tagg**.
 
 1. The **Skapa tagg** öppnas. Ange nödvändig information för den nya taggen.
 
@@ -116,7 +116,7 @@ Taggar läggs vanligtvis till i namnutrymmen.
 
    ![Dialogrutan Skapa tagg](assets/create-tag.png)
 
-1. Tryck eller klicka **Skicka**.
+1. Välj **Skicka**.
 
 Taggen skapas och konsolen uppdateras för att visa den nya taggen.
 
@@ -131,11 +131,11 @@ Precis som när du skapar annat innehåll i AEM finns det bara i redigeringsmilj
 
 1. Öppna [taggningskonsol.](#tagging-console)
 
-1. Markera den eller de taggar du vill publicera och välj sedan **Publicera**.
+1. Markera taggen eller taggarna som du vill publicera och välj sedan i verktygsfältet **Publicera**.
 
    ![Välja taggar i konsolen](assets/select-tags.png)
 
-1. The **Publicera tagg** uppmanas du att bekräfta publiceringen av de markerade taggarna. Tryck eller klicka **Publicera**.
+1. The **Publicera tagg** uppmanas du att bekräfta publiceringen av de markerade taggarna. Välj **Publicera**.
 
    ![Bekräftelsemodal publiceringstagg](assets/publish-tag.png)
 
@@ -153,7 +153,7 @@ Be sure to [apply permissions](#setting-tag-permissions) to the namespace before
 
 ## Hantera taggar {#managing-tags}
 
-Det finns ett antal åtgärder som du kan vidta för befintliga taggar och namnutrymmen för att hantera och ordna dem. Markera bara en tagg eller ett namnutrymme i dialogrutan [taggningskonsol](#tagging-console) för att visa tillgängliga åtgärder i verktygsfältet.
+Det finns flera åtgärder som du kan vidta för befintliga taggar och namnutrymmen för att hantera och ordna dem. Markera bara en tagg eller ett namnutrymme i dialogrutan [taggningskonsol](#tagging-console) för att visa tillgängliga åtgärder i verktygsfältet.
 
 * [Visa egenskaper](#viewing-tag-properties)
 * [Redigera](#editing-tags)
@@ -183,7 +183,7 @@ Du kan visa mer information om taggen, inklusive vem som senast publicerade den 
 
    ![Visa taggegenskaper](assets/tag-properties.png)
 
-Mer information om hur du väljer visningsläge och räl finns i dokumentet [Grundläggande hantering.](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector)
+Mer information om hur du väljer visningslägen och skenor finns i [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector).
 
 ### Redigera taggar {#editing-tags}
 
@@ -199,7 +199,7 @@ Taggar och namnutrymmen kan redigeras när de har skapats.
    * **Beskrivning**
    * [**Lokalisering**](#managing-tags-in-different-languages)
 
-1. När redigeringarna är klara trycker eller klickar du **Skicka**.
+1. När du har redigerat **Skicka**.
 
 Mer information om hur du lägger till språköversättningar finns i avsnittet om [Hantera taggar på olika språk](#managing-tags-in-different-languages).
 
@@ -211,11 +211,11 @@ Om du vill inaktivera taggen på författarinstansen och ta bort den från publi
 
 1. Om du vill avpublicera en tagg öppnar du [taggningskonsol.](#tagging-console)
 
-1. Markera den eller de taggar du vill avpublicera och välj sedan **Avpublicera**.
+1. Markera taggen eller taggarna som du vill avpublicera och välj sedan **Avpublicera**.
 
    ![Välja taggar i konsolen](assets/select-tags.png)
 
-1. The **Avpublicera tagg** uppmanas du att bekräfta publiceringen av de markerade taggarna. Tryck eller klicka **Publicera**.
+1. The **Avpublicera tagg** uppmanas du att bekräfta publiceringen av de markerade taggarna. Välj **Publicera**.
 
    ![Bekräftelsemodal publiceringstagg](assets/unpublish-tag.png)
 
@@ -239,13 +239,13 @@ Det kan vara praktiskt att se vilket innehåll en viss tagg används på. Du kan
 
    ![Visa taggreferenser](assets/tag-references.png)
 
-1. Tryck eller klicka på antalet taggreferenser för att visa den detaljerade listan med innehåll som är tilldelat taggen.
+1. Välj antalet taggreferenser för att visa den detaljerade listan med innehåll som är tilldelat taggen.
 
    ![Visa detaljerna i taggens referenser](assets/tag-references-detail.png)
 
 Hovra musen eller tryck på ett refererande innehåll i listan för att visa innehållets fullständiga sökväg.
 
-Mer information om hur du väljer visningsläge och räl finns i dokumentet [Grundläggande hantering.](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector)
+Mer information om hur du väljer visningslägen och skenor finns i [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector).
 
 ### Flytta taggar {#moving-tags}
 
@@ -257,20 +257,20 @@ Du kan behöva rensa upp eller på annat sätt ordna om taggningen genom att fly
 
 1. Öppna [taggningskonsol.](#tagging-console)
 
-1. Markera taggen som du vill flytta eller byta namn på och tryck eller klicka på **Flytta** i verktygsfältet.
+1. Markera taggen som du vill flytta eller byta namn på och markera **Flytta** i verktygsfältet.
 
 1. I **Flytta tagg** anger du vilken egenskap du vill ändra.
 
    * **Byt namn till** - Det nya namn som du vill ge taggen
       * Det här fältet är förifyllt med taggens aktuella namn.
       * Ändra inte om du bara vill flytta taggen och inte byta namn på den.
-   * **Flytta till** - Var du vill flytta taggen
+   * **Flytta till** - Där du vill flytta taggen
       * Det här fältet är förifyllt med taggens aktuella plats.
       * Ändra inte om du bara vill byta namn på taggen och inte flytta den.
 
    ![Flytta tagg](assets/move-tag.png)
 
-1. Tryck eller klicka **Skicka**.
+1. Välj **Skicka**.
 
 Taggens namn ändras och/eller flyttas till den nya platsen. När den markerade taggen är en behållartagg flyttas även alla underordnade taggar om du flyttar taggen.
 
@@ -280,15 +280,15 @@ Om taggningstaxonomin innehåller dubbletter eller liknande taggar kan det vara 
 
 1. Om du vill sammanfoga två taggar öppnar du [taggningskonsol.](#tagging-console)
 
-1. Markera taggen som du vill sammanfoga med en annan tagg och tryck eller klicka sedan på **Sammanfoga** i verktygsfältet.
+1. Markera taggen som du vill sammanfoga till en annan tagg och markera sedan **Sammanfoga** i verktygsfältet.
 
-1. I **Sammanfoga tagg** trycker du på eller klickar på **Bläddra** ikonen för **Sammanfoga i** fält som anger i vilken tagg du vill sammanfoga den markerade taggen.
+1. I **Sammanfoga tagg** väljer du **Bläddra** ikonen för **Sammanfoga i** det fält som anger i vilken tagg du vill sammanfoga den markerade taggen.
 
    ![Dialogrutan Sammanfoga tagg](assets/merge-tag.png)
 
-1. Tryck eller klicka **Skicka**.
+1. Välj **Skicka**.
 
-Den tagg som valts i konsolen sammanfogas med taggen som anges i dialogrutan. När en refererad tagg flyttas eller sammanfogas tas taggen inte bort fysiskt så att det går att behålla referenser. Se dokumentet [AEM Taggningsramverk](/help/implementing/developing/introduction/tagging-framework.md#moving-and-merging-tags) för mer information.
+Den tagg som valts i konsolen sammanfogas med taggen som anges i dialogrutan. När en refererad tagg flyttas eller sammanfogas tas taggen inte bort fysiskt så att det går att behålla referenser. Se [AEM Taggningsramverk](/help/implementing/developing/introduction/tagging-framework.md#moving-and-merging-tags) för mer information.
 
 ### Ta bort taggar {#deleting-tags}
 
@@ -296,15 +296,15 @@ Om taxonomin för taggning ändras och en tagg eller ett namnutrymme inte behöv
 
 1. Öppna [taggningskonsol.](#tagging-console)
 
-1. Markera taggen som du vill ta bort och tryck eller klicka sedan på **Ta bort** i verktygsfältet.
+1. Markera taggen som du vill ta bort och markera sedan **Ta bort** i verktygsfältet.
 
-1. The **Ta bort tagg** uppmanas du att bekräfta borttagningen av de markerade taggarna. Tryck eller klicka **Ta bort**.
+1. The **Ta bort tagg** uppmanas du att bekräfta borttagningen av de markerade taggarna. Välj **Ta bort**.
 
    ![Bekräftelsen Ta bort tagg modal](assets/delete-tag.png)
 
 1. AEM kontrollerar att taggen inte refereras.
 
-   1. Om inga referenser hittas ber AEM om en slutgiltig bekräftelse att radera. Tryck eller klicka **Ta bort**
+   1. Om inga referenser hittas ber AEM om en slutgiltig bekräftelse att radera. Välj **Ta bort**
 
       ![Inga referenser hittades](assets/no-references-found.png)
 
@@ -357,7 +357,7 @@ Låt oss anta att vi har en tagg som heter `Animals` som vi vill översätta til
 
 1. Öppna [taggningskonsol.](#tagging-console)
 
-1. Markera taggen som du vill översätta och tryck eller klicka sedan på **Redigera** i verktygsfältet.
+1. Markera taggen som du vill översätta och markera sedan **Redigera** i verktygsfältet.
 
 1. I **Redigera tagg** i dialogrutan **Lokalisering** väljer du målspråk, till exempel tyska.
 
@@ -367,7 +367,7 @@ Låt oss anta att vi har en tagg som heter `Animals` som vi vill översätta til
 
    ![Översätta taggretitlar](assets/translate-tag.png)
 
-1. Tryck eller klicka **Skicka**.
+1. Välj **Skicka**.
 
 För innehållssidor hämtas det språk som valts för taggen från sidspråket, om tillgängligt.
 
@@ -377,4 +377,4 @@ Information om hur du lägger till ett nytt språk i dialogrutan finns i dokumen
 
 >[!TIP]
 >
->Om du vill veta mer om AEM lokaliseringsfunktioner kan du läsa dokumentet [Översätta ditt innehåll för flerspråkiga webbplatser.](/help/sites-cloud/administering/translation/overview.md)
+>Om du vill veta mer om AEM lokaliseringsfunktioner kan du läsa [Översätta ditt innehåll för flerspråkiga webbplatser](/help/sites-cloud/administering/translation/overview.md).

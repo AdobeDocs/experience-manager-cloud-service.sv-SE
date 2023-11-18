@@ -4,9 +4,9 @@ description: Få en introduktion till att återanvända innehåll med AEM kraftf
 feature: Multi Site Manager
 role: Admin
 exl-id: 22b4041f-1df9-4189-8a09-cbc0c89fbf2e
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2714'
+source-wordcount: '2702'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Den här sidan ger en översikt över återanvändning av innehåll med MSM. Fö
 
 >[!NOTE]
 >
->MSM kan också användas för resurser, inklusive innehållsfragment. Mer information finns i [Återanvänd innehållsfragment med MSM för resurser](/help/assets/reuse-assets-using-msm.md) (endast tillgängligt via Resurskonsolen).
+>MSM kan också användas för resurser, inklusive innehållsfragment. Se [Återanvänd innehållsfragment med MSM för resurser](/help/assets/reuse-assets-using-msm.md) (endast tillgängligt via Resurskonsolen).
 
 ## Möjliga scenarier {#possible-scenarios}
 
@@ -106,7 +106,7 @@ Det finns många användningsområden för MSM och Live-kopior. Exempel:
   >
   >Mot:
   >
-  >* Hur mycket av de enskilda kopiorna behöver justeras.
+  >* Hur mycket av de enskilda kopiorna måste justeras.
 
 ## MSM från användargränssnittet {#msm-from-the-ui}
 
@@ -172,7 +172,7 @@ Som en introduktion ger följande tabell en översikt över de viktigaste termer
 
 >[!TIP]
 >
->Se dokumentet [Utöka Multi Site Manager](/help/implementing/developing/extending/msm.md#overview-of-the-java-api) för objektnamnen.
+>Se [Utöka Multi Site Manager](/help/implementing/developing/extending/msm.md#overview-of-the-java-api) för objektnamnen.
 
 ## Live-kopior {#live-copies}
 
@@ -278,7 +278,7 @@ En utrullning är den centrala MSM-åtgärden som synkroniserar Live-kopior med 
 En utrullningskonfiguration definierar när och hur en Live Copy synkroniseras med källinnehållet. En utrullningskonfiguration består av en utlösare och en eller flera synkroniseringsåtgärder:
 
 * **Utlösare** - En utlösare är en händelse som gör att live-åtgärdssynkroniseringen utförs, till exempel aktiveringen av en källsida. MSM definierar de utlösare som du kan använda.
-* **Synkroniseringsåtgärder** - Synkroniseringsåtgärder utförs på Live-kopian för att synkronisera den med källan. Exempelåtgärder är att kopiera innehåll, ordna underordnade noder och aktivera sidan Live Copy. MSM tillhandahåller ett antal synkroniseringsåtgärder.
+* **Synkroniseringsåtgärder** - Synkroniseringsåtgärder utförs på Live-kopian för att synkronisera den med källan. Exempelåtgärder är att kopiera innehåll, ordna underordnade noder och aktivera sidan Live Copy. MSM erbjuder flera synkroniseringsåtgärder.
 
 >[!NOTE]
 >
@@ -296,7 +296,7 @@ Varje sida och komponent i en Live Copy kopplas till sin källsida och komponent
 
 Du kan **Gör uppehåll** Live Copy-arv för en Live Copy-sida så att du kan ändra sidegenskaper och komponenter. När du gör uppehåll i arv synkroniseras inte längre sidegenskaperna och komponenterna med källan.
 
-När man redigerar en enstaka sida kan man **Avbryt arv** för en komponent. När arvet avbryts pausas direktrelationen och synkronisering sker inte för den komponenten. Att avbryta arv och synkronisering är användbart när underavsnitt av innehållet behöver anpassas.
+När man redigerar en enstaka sida kan man **Avbryt arv** för en komponent. När arvet avbryts pausas direktrelationen och synkronisering sker inte för den komponenten. Att avbryta arv och synkronisering är användbart när underavsnitt av innehållet måste anpassas.
 
 ### Koppla loss en Live-kopia {#detaching-a-live-copy}
 
@@ -319,7 +319,7 @@ Följande steg beskriver standardproceduren för att använda MSM för att åter
 1. Utveckla innehållet på källwebbplatsen.
 1. Bestäm vilken utrullningskonfiguration som ska användas.
 
-   1. MSM [installerar flera utrullningskonfigurationer](live-copy-sync-config.md#installed-rollout-configurations) som kan uppfylla ett antal användningsfall.
+   1. MSM [installerar flera utrullningskonfigurationer](live-copy-sync-config.md#installed-rollout-configurations) som kan uppfylla flera användningsfall.
    1. Om du vill kan du [skapa en utrullningskonfiguration](live-copy-sync-config.md#creating-a-rollout-configuration) vid behov.
 
 1. Bestäm var du behöver [ange de utrullningskonfigurationer som ska användas](live-copy-sync-config.md#specifying-the-rollout-configurations-to-use) och konfigurera efter behov.

@@ -2,7 +2,7 @@
 title: Förstå installationen av tilläggsprogrammet för referensdemo
 description: Lär dig mer om Cloud Manager och hur det används för att installera tillägget.
 exl-id: 9418aac6-a8c4-43f7-b329-b02149fe2d53
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '956'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Lär dig mer om Cloud Manager och hur det används för att installera tillägge
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur installationsprocessen för tillägget Referensdemonstrationer fungerar, vilket illustrerar hur de olika delarna fungerar tillsammans. Efter läsning bör du:
+Det här dokumentet hjälper dig att förstå hur installationsprocessen för tillägget Referensdemonstrationer fungerar, vilket illustrerar hur de olika delarna fungerar tillsammans. När du har läst bör du:
 
 * Få en grundläggande förståelse för Cloud Manager.
 * Förstå hur rörledningar levererar innehåll och konfigurationer till AEM.
@@ -55,7 +55,7 @@ Cloud Manager används för att administrera de molnresurser som stöder dina AE
 
 >[!TIP]
 >
->Om du vill veta mer om Cloud Manager i detalj kan du läsa [Ytterligare resurser](#additional-resources) i den här artikeln om du vill ha länkar till mer information.
+>Om du vill lära dig mer om Cloud Manager i detalj kan du läsa [Ytterligare resurser](#additional-resources) i den här artikeln om du vill ha länkar till mer information.
 
 ### Program {#programs}
 
@@ -76,7 +76,7 @@ Skapa ett sandlådeprogram om du vill installera AEM Reference Demos Add-on.
 >
 >Tillägget AEM Reference Demos är bara tillgängligt i sandlådeprogram.
 
-## Installation och användningsflöde {#installation-flow}
+## Installations- och användningsflöde {#installation-flow}
 
 Nu när du förstår några grundläggande begrepp i Cloud Manager är det begreppsmässigt enkelt att installera tillägget AEM referensdemonstrationer.
 
@@ -85,7 +85,7 @@ Nu när du förstår några grundläggande begrepp i Cloud Manager är det begre
 1. Demonsinnehållet och konfigurationen distribueras till programmet. Demonsinnehållet innehåller:
    * Webbplatsmallar som används för att skapa olika AEM sajter med AEM funktioner, förifyllda med exempel på bästa praxis.
    * Konfigurationsverktyg för att hantera demoinnehåll.
-1. Logga in i AEM i ditt nya sandlådeprogram och använd verktyget för att snabbt skapa webbplatser och skapa demowebbplatser baserade på mallarna.
+1. Logga in i AEM i ditt nya sandlådeprogram och använd verktyget för att snabbt skapa webbplatser och skapa demosajter baserat på mallarna.
 1. Använd konfigurationsverktygen för att hantera demowebbplatser och -mallar, inklusive att ta bort dem när de inte längre behövs.
 
 ## AEM webbplatsmallar {#site-templates}

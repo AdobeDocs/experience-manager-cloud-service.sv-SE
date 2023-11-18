@@ -2,16 +2,16 @@
 title: API-referensmaterial
 description: AEM har omfattande och kraftfulla API:er som du kan använda för ditt digitala upplevelseprojekt.
 exl-id: d4ef3040-5a0a-4149-9e99-09eda9605038
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '662'
 ht-degree: 3%
 
 ---
 
 # API-referensmaterial {#api-reference-materials}
 
-Adobe Experience Manager (AEM) innehåller många API:er för utveckling av program och utökning av AEM. AEM bygger på ett antal öppen källkod-tekniker som också kan användas.
+Adobe Experience Manager (AEM) innehåller många API:er för utveckling av program och utökning av AEM. AEM bygger på flera öppen källkod-tekniker som också kan användas.
 
 ## AEM Core API:er {#core-aem-apis}
 
@@ -19,8 +19,8 @@ Följande API:er är viktiga för AEM.
 
 | API | Beskrivning |
 |---|---|
-| [Adobe Experience Manager as a Cloud Service](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/index.html) | Produktabstraktioner som sidor, resurser, arbetsflöden osv. |
-| [Granite-gränssnitt](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html#) | Adobe&#39;s Open Web stack, med olika viktiga komponenter (Observera att 6.5 Granite-material gäller för AEMaaCS) |
+| [Adobe Experience Manager as a Cloud Service](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/index.html) | Produktabstraktioner som sidor, resurser, arbetsflöden och så vidare. |
+| [Granite-gränssnitt](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html#) | Adobe&#39;s Open Web stack, med olika viktiga komponenter (6.5 Granite-materialet gäller AEMaaCS) |
 | [Coral UI](https://opensource.adobe.com/coral-spectrum/documentation/) | Adobe visuella stil för molngränssnitt som är utformade för att ge en konsekvent användarupplevelse |
 
 <!---
@@ -29,7 +29,7 @@ Följande API:er är viktiga för AEM.
 
 ## Ytterligare ramar {#additional-apis}
 
-AEM förlitar sig på ett antal andra API:er med öppen källkod.
+AEM använder flera andra API:er med öppen källkod.
 
 | API | Beskrivning |
 |---|---|
@@ -44,7 +44,7 @@ AEM bygger på följande fyra primära Java API-uppsättningar i fallande priori
 
 | Prioritet | API | Beskrivning |
 |---|---|---|
-| 1 | [Adobe Experience Manager as a Cloud Service](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/index.html) | Produktabstraktioner som sidor, resurser, arbetsflöden osv. |
+| 1 | [Adobe Experience Manager as a Cloud Service](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/index.html) | Produktabstraktioner som sidor, resurser, arbetsflöden och så vidare. |
 | 2 | [Apache Sling](https://sling.apache.org/apidocs/sling11/) | REST och resursbaserade abstraktioner som resurser, värdescheman och HTTP-begäranden. |
 | 3 | [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/oak_api/overview.html) | Data- och innehållsabstraktioner som nod, egenskaper och sessioner. |
 | 4 | [Apache Felix](https://felix.apache.org/) | OSSGi-programbehållarabstraktioner som tjänster och OSGi-komponenter. |
@@ -82,4 +82,4 @@ AEM SDK-ramverket (Single-Page Application (SPA) Editor innehåller specifika Ja
 
 >[!TIP]
 >
->Kolla in [SPA introduktion och genomgång](/help/implementing/developing/hybrid/introduction.md) för mer information om enkelsidiga program.
+>Kolla in [SPA introduktion och genomgång](/help/implementing/developing/hybrid/introduction.md) om du vill ha mer information om enkelsidiga program.

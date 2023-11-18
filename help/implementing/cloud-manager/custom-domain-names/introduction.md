@@ -2,9 +2,9 @@
 title: Introduktion till anpassade domännamn
 description: Med Cloud Managers användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt.
 exl-id: ed03bff9-dfcc-4dfe-a501-a7facd24aa7d
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '753'
 ht-degree: 1%
 
 ---
@@ -46,7 +46,7 @@ I en och samma miljö kan du ha båda domänerna installerade i det AEM CDN:et o
 
 ## Arbetsflöde {#workflow}
 
-Om du vill lägga till ett anpassat domännamn måste DNS-tjänsten och Cloud Manager interagera. På grund av detta krävs ett antal steg för att installera, konfigurera och verifiera anpassade domännamn. Följande tabell ger en översikt över de steg som krävs, inklusive vad som ska göras när vanliga fel inträffar.
+Om du vill lägga till ett anpassat domännamn måste DNS-tjänsten och Cloud Manager interagera. På grund av detta krävs flera steg för att installera, konfigurera och verifiera anpassade domännamn. Följande tabell ger en översikt över de steg som krävs, inklusive vad som ska göras när vanliga fel inträffar.
 
 | Steg | Beskrivning | Ansvarsområde | Läs mer |
 |--- |--- |--- |---|
@@ -66,7 +66,7 @@ Om du vill lägga till ett anpassat domännamn måste DNS-tjänsten och Cloud Ma
 
 ## Begränsningar {#limitations}
 
-Det finns ett antal begränsningar för hur du använder anpassade domännamn med AEMaaCS.
+Det finns flera begränsningar för hur du använder anpassade domännamn med AEMaaCS.
 
 * Anpassade domännamn stöds i Cloud Manager för både publicerings- och förhandsgranskningstjänster för Sites-program. Anpassade domäner för författartjänster stöds inte.
 * Varje Cloud Manager-miljö har plats för upp till 500 anpassade domäner per miljö.

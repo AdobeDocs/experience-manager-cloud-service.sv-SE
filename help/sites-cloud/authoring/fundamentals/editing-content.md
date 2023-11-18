@@ -2,9 +2,9 @@
 title: Redigera sidinnehåll
 description: När sidan har skapats kan du redigera innehållet för att göra de uppdateringar du behöver
 exl-id: 8af0f621-14e8-4605-a51a-a3be21f19092
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2975'
+source-wordcount: '2973'
 ht-degree: 4%
 
 ---
@@ -341,7 +341,7 @@ I stället för att växla från redigeringsläge till [layoutläge](/help/sites
 
    ![Komponentverktygsfältet för en sidkomponent](/help/sites-cloud/authoring/assets/editing-layout-toolbar.png)
 
-   Klicka eller tryck på **Layout** åtgärd för att justera komponentens layout.
+   Välj **Layout** åtgärd för att justera komponentens layout.
 
    ![Knappen Layout i komponentverktygsfältet](/help/sites-cloud/authoring/assets/editing-component-toolbar-layout.png)
 

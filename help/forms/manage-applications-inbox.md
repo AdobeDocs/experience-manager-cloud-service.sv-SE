@@ -5,9 +5,9 @@ uuid: c6c0d8ea-743f-4852-99d1-69fd50a0994e
 contentOwner: vishgupt
 topic-tags: document_services, publish
 discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
-source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1131'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,7 @@ Fliken visar också aktivitetshistorik för varje slutförd fas i arbetsflödet.
 
 Verktygsfältet Åtgärder visar alla tillgängliga alternativ för uppgiften. När Spara, Återställ och Delegera är standardåtgärder konfigureras andra tillgängliga åtgärder i [Tilldela aktivitetssteg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html#extending-aem). I exemplet ovan har Godkänn och Avvisa konfigurerats i arbetsflödet.
 
-När du utför en åtgärd fortsätter den i arbetsflödet.
+När du arbetar med uppgiften fortsätter den i arbetsflödet.
 
 ### Visa slutförda uppgifter {#view-completed-tasks}
 

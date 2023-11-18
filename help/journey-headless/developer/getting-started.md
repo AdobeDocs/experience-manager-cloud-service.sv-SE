@@ -2,9 +2,9 @@
 title: Komma igång med AEM Headless as a Cloud Service
 description: I den här delen av AEM Headless Developer Journey kan du läsa om AEM Headless-krav.
 exl-id: 9661e17b-fa9f-4689-900c-412b068e942c
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '3095'
+source-wordcount: '3093'
 ht-degree: 0%
 
 ---
@@ -123,7 +123,7 @@ Med SPA Editor konsumerar SPA inte bara innehåll från AEM, utan kan även redi
 
 ## Krav och krav {#requirements-prerequisites}
 
-Det finns ett antal krav innan du börjar AEM headless-projektet.
+Det finns flera krav innan du börjar ditt AEM.
 
 ### Kunskap {#knowledge}
 

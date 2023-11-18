@@ -2,9 +2,9 @@
 title: Bevilja åtkomst till klientutvecklaren
 description: Anlita gränssnittsutvecklare i Cloud Manager så att de får tillgång till era AEM och er pipeline.
 exl-id: 58e95c92-b859-4bb9-aa62-7766510486fd
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '784'
+source-wordcount: '778'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Först måste du lägga till frontutvecklaren som användare med Admin Console.
 
    ![Produktprofiler](assets/product-profiles.png)
 
-1. Om du vill tilldela frontend-utvecklaren till rätt profiler trycker eller klickar du på **Användare** -fliken och sedan **Lägg till användare** -knappen.
+1. Om du vill tilldela frontend-utvecklaren rätt profiler väljer du **Användare** -fliken och sedan **Lägg till användare** -knappen.
 
    ![Lägg till användare](assets/add-user.png)
 
@@ -73,11 +73,11 @@ Först måste du lägga till frontutvecklaren som användare med Admin Console.
 
    ![Lägg till användare i team](assets/add-to-team.png)
 
-1. I **Produkt** markerar, trycker eller klickar på plustecknet och väljer **Adobe Experience Manager as a Cloud Service** och tilldela **Distributionshanteraren** och **Utvecklare** produktprofiler till användaren.
+1. I **Produkt** markera, markera plustecknet och sedan markera **Adobe Experience Manager as a Cloud Service** och tilldela **Distributionshanteraren** och **Utvecklare** produktprofiler till användaren.
 
    ![Tilldela teamprofiler](assets/assign-team.png)
 
-1. Tryck eller klicka **Spara** och ett välkomstmeddelande skickas till den frontendutvecklare som du har lagt till som användare.
+1. Välj **Spara** och ett välkomstmeddelande skickas till den frontendutvecklare som du har lagt till som användare.
 
 Den inbjudna frontendutvecklaren kan komma åt Cloud Manager genom att klicka på länken i välkomstmeddelandet och logga in med sin Adobe ID.
 

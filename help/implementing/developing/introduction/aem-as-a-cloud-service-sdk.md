@@ -2,9 +2,9 @@
 title: SDK för AEM as a Cloud Service
 description: En översikt över AEM as a Cloud Service Software Development Kit
 exl-id: 06f3d5ee-440e-4cc5-877a-5038f9bd44c6
-source-git-commit: 33ba3e88a4116674c70c44a29273a04544b6b39b
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1232'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Vissa kunder som tidigare har distribuerats med AEM 6.5 eller tidigare använder
 
 ## Building for the SDK {#building-for-the-sdk}
 
-AEM as a Cloud Service SDK används för att skapa och distribuera anpassad kod. Mer information finns i [AEM Project Archetype-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en). På en hög nivå utförs följande steg:
+AEM as a Cloud Service SDK används för att skapa och distribuera anpassad kod. Se [AEM Project Archetype-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en). På en hög nivå utförs följande steg:
 
 * **Kompilera kod**. Som förväntat kompileras källkoden och de resulterande innehållspaketen genereras
 * **Skapa artefakter**. Artefakter skapas under den här processen
@@ -36,7 +36,7 @@ Samma steg utförs av Cloud Manager när du distribuerar till molnmiljöer. När
 
 >[!NOTE]
 >
->Den AEM as a Cloud Service SDK:n ska byggas med en distribution och version av Java som stöds av [Cloud Managers byggmiljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md). AEM as a Cloud Service kunder kan ladda ned Oracle-JDK från [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) och har Java 11 Extended Support till september 2026 på grund av Adobe’s licensing and support terms for the Oracle Java technology when used in Adobe Experience Manager projects.
+>Den AEM as a Cloud Service SDK:n ska byggas med en distribution och version av Java som stöds av [Cloud Managers byggmiljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md). AEM as a Cloud Service kunder kan ladda ned Oracle-JDK från [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) och har Java 11 Extended Support till september 2026 på grund av Adobe licensiering och supportvillkor för Oraclets Java-teknik när den används i Adobe Experience Manager-projekt.
 
 ## Åtkomst till AEM as a Cloud Service SDK {#accessing-the-aem-as-a-cloud-service-sdk}
 
@@ -65,7 +65,7 @@ När rekommenderas att det lokala projektet uppdateras med ett nytt SDK?
 
 Adobe *rekommenderas* att uppdatera den efter en månadsvis underhållsrelease.
 
-Det är *valfri* för att uppdatera den efter en daglig underhållsrelease. Kunderna informeras om när deras produktionsinstans har uppgraderats till en ny AEM. För de dagliga underhållsreleaserna förväntas inte att det nya SDK:t har ändrats avsevärt, om alls. Vi rekommenderar dock att du ibland uppdaterar den lokala AEM utvecklingsmiljön med den senaste SDK:n och sedan återskapar och testar det anpassade programmet. Den månatliga underhållsreleasen innehåller vanligtvis mer omfattande ändringar och utvecklare bör därför omedelbart uppdatera, återskapa och testa.
+Det är *valfri* för att uppdatera den efter en daglig underhållsrelease. Kunderna informeras om när deras produktionsinstans har uppgraderats till en ny AEM. För de dagliga underhållsreleaserna förväntas inte att det nya SDK:t har ändrats avsevärt, om alls. Vi rekommenderar dock att du emellanåt uppdaterar den lokala AEM utvecklingsmiljön med den senaste SDK:n och sedan återskapar och testar det anpassade programmet. Den månatliga underhållsreleasen innehåller vanligtvis mer omfattande ändringar och utvecklare bör därför omedelbart uppdatera, återskapa och testa.
 
 Nedan beskrivs den rekommenderade proceduren för uppdatering av en lokal miljö:
 
@@ -93,7 +93,7 @@ Som standard är AEM konfigurerat att lagra nyckeldata i en mapps datamapp, men 
 
 Så här kan du återanvända innehållspaket som innehåller de krypterade värdena:
 
-* När du startar den lokala quickstart.jar ska du lägga till parametern nedan: &quot;`-Dcom.adobe.granite.crypto.file.disable=true`&quot;. Vi rekommenderar att du alltid lägger till det, men det är valfritt.
+* När du startar den lokala quickstart.jar ska du lägga till följande parameter: &quot;`-Dcom.adobe.granite.crypto.file.disable=true`&quot;. Vi rekommenderar att du alltid lägger till det, men det är valfritt.
 * Första gången du startar en instans skapar du ett paket som innehåller ett filter för roten`/etc/key`&quot;. Det här paketet innehåller hemligheten som ska återanvändas i alla miljöer som du vill att de ska återanvändas för.
 * Exportera muterbart innehåll som innehåller hemligheter eller slå upp krypterade värden med hjälp av `/crx/de` så att du kan lägga till det i paketet som återanvänds i alla installationer.
 * När du skapar en ny instans (antingen för att ersätta med en ny version eller för att flera utvecklingsmiljöer ska dela inloggningsuppgifterna för testning) installerar du paketet som skapats i steg 2 och 3. På så sätt kan du återanvända innehållet utan att behöva konfigurera om det manuellt. Orsaken är att nu är kryptonyckeln synkroniserad.

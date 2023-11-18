@@ -2,9 +2,9 @@
 title: Hämta Git-databasåtkomstinformation
 description: Läs om hur frontendutvecklaren använder Cloud Manager för att få åtkomst till Git-databasinformation.
 exl-id: 3ef1cf86-6da4-4c09-9cfc-acafc8f6dd5c
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '880'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ Om du också är Cloud Managers eller AEM administratörs- och gränssnittsutvec
 
 I den här artikeln beskrivs hur frontendutvecklaren använder Cloud Manager-åtkomst för att hämta inloggningsuppgifter för att få åtkomst till databasen för AEM Git.
 
-Nu när det finns en webbplats som är baserad på en mall, där det finns en pipeline-konfiguration, där frontendutvecklaren är inbäddad och har all information de behöver, skiftar den här artikeln perspektiv från administratörer och enbart till frontendutvecklarrollen.
+Nu när det finns en webbplats som är baserad på en mall, där det finns en pipeline-konfiguration, där frontendutvecklaren är inbäddad och har all information de behöver, flyttar den här artikeln perspektiv från administratörer och enbart till frontendutvecklarrollen.
 
 ## Syfte {#objective}
 
@@ -78,7 +78,7 @@ Om du inte har fått det här e-postmeddelandet kontaktar du Cloud Manager-admin
 
 1. Logga in på Adobe Experience Cloud på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) eller klicka på länken i välkomstmeddelandet.
 
-1. Cloud Manager visar de olika tillgängliga programmen. Tryck eller klicka på den som du behöver ha åtkomst till enligt vad som angetts av Cloud Manager-administratören. Om detta är ditt första front end-projekt för AEMaaCS har du troligen bara ett program tillgängligt.
+1. Cloud Manager visar de olika tillgängliga programmen. Välj den som du behöver ha åtkomst till enligt Cloud Manager-administratören. Om detta är ditt första front end-projekt för AEMaaCS har du troligen bara ett program tillgängligt.
 
    ![Välja ett program i Cloud Manager](assets/cloud-manager-select-program.png)
 
@@ -88,7 +88,7 @@ Nu visas en översikt över programmet. Sidan ser annorlunda ut men liknar det h
 
 ## Hämta information om databasåtkomst {#repo-access}
 
-1. I **Pipelines** på Cloud Manager-sidan trycker du på eller klickar på **Åtkomst till svarsinformation** -knappen.
+1. I **Pipelines** på sidan Cloud Manager väljer du **Åtkomst till svarsinformation** -knappen.
 
    ![Pipelines](assets/pipelines-repo-info.png)
 
@@ -96,13 +96,13 @@ Nu visas en översikt över programmet. Sidan ser annorlunda ut men liknar det h
 
    ![Repo info](assets/repo-info.png)
 
-1. Tryck eller klicka på **Generera lösenord** om du vill skapa ett lösenord för dig själv.
+1. Välj **Generera lösenord** om du vill skapa ett lösenord för dig själv.
 
 1. Spara lösenordet som genererats i en säker lösenordshanterare. Lösenordet visas aldrig igen.
 
 1. Kopiera även **användarnamn** och **Git-kommandorad** fält. Du kommer att använda den här informationen senare för att komma åt rapporten.
 
-1. Tryck eller klicka **Stäng**.
+1. Välj **Stäng**.
 
 ## What&#39;s Next {#what-is-next}
 

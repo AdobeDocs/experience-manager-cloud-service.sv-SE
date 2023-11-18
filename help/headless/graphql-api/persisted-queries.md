@@ -3,9 +3,9 @@ title: Beständiga GraphQL-frågor
 description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager as a Cloud Service för att optimera prestandan. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
 feature: Content Fragments,GraphQL API
 exl-id: 080c0838-8504-47a9-a2a2-d12eadfea4c0
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1679'
+source-wordcount: '1676'
 ht-degree: 1%
 
 ---
@@ -392,7 +392,7 @@ Fältet `Respond with application/graphql-response+json` (`responseContentTypeGr
 
   >[!NOTE]
   >
-  >Mer information finns på https://graphql.github.io/graphql-over-http/draft/#sec-Status-Codes
+  >Se https://graphql.github.io/graphql-over-http/draft/#sec-Status-Codes
 
 ## Kodning av fråge-URL för användning av ett program {#encoding-query-url}
 

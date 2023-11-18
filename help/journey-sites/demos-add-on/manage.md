@@ -2,9 +2,9 @@
 title: Hantera dina demowebbplatser
 description: Lär dig mer om de verktyg du kan använda för att hantera demowebbplatser och hur du tar bort dem.
 exl-id: 988c6e09-c43e-415f-8d61-998c294c5a11
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '942'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Det här dokumentet hjälper dig att förstå hur du kan hantera de demowebbplat
 
 Nu när du har egna demosajter vill du antagligen veta hur du kan hantera dem. Det var inte bara webbplatsmallarna som distribuerades för att ge plats åt demonstrationssajterna, utan även en uppsättning verktyg för att hantera dessa sajter.
 
-1. I det AEM globala navigeringsfältet väljer du **verktyg** -> **Referensdemonstrationer** -> **Demonstrationsverktyg**.
+1. I det AEM globala navigeringsfältet väljer du **verktyg** > **Referensdemonstrationer** > **Demonstrationsverktyg**.
 
    ![Självbetjäningsdemoverktyg](assets/demo-utilities.png)
 
@@ -49,7 +49,7 @@ Nu när du har egna demosajter vill du antagligen veta hur du kan hantera dem. D
 
    ![Kontrollpanel](assets/dashboard.png)
 
-Självbetjäningsdemoverktyg innehåller ett antal verktyg.
+Självbetjäningsdemoverktyg har flera verktyg.
 
 * **Ta bort platser** - Markera den webbplats som du vill ta bort i den här Adobe Experience Manager-instansen. Tänk på att detta är en destruktiv åtgärd som inte kan ångras när den väl har initierats.
 * **Ta bort webbplatsmallar** - Markera den webbplatsmall som du vill ta bort i den här Adobe Experience Manager-instansen. Innan du tar bort en platsmall kontrollerar du att även alla webbplatser som refererar till mallen tas bort. Tänk på att detta är en destruktiv åtgärd som inte kan ångras när den väl har initierats.
@@ -62,11 +62,11 @@ Självbetjäningsdemoverktyg innehåller ett antal verktyg.
 
 När du har testat en uppsättning AEM funktioner behöver du kanske inte längre demowebbplatsen eller ens den mall som den baseras på. Det är enkelt att ta bort både demowebbplatser och webbplatsmallar.
 
-1. Öppna **Demonstrationsverktyg** och trycka eller klicka **Ta bort platser**.
+1. Öppna **Demonstrationsverktyg** och markera **Ta bort platser**.
 
    ![Ta bort platser](assets/delete-sites.png)
 
-1. De tillgängliga platserna visas i en lista. Markera den eller de webbplatser som du vill ta bort och tryck eller klicka sedan på **Ta bort**.
+1. De tillgängliga platserna visas i en lista. Markera platsen eller platserna som du vill ta bort och markera sedan **Ta bort**.
 
    >[!CAUTION]
    >

@@ -2,9 +2,9 @@
 title: Lär dig grunderna i innehållsmodellering
 description: Lär dig grunderna i att modellera innehåll för headless CMS med hjälp av innehållsfragment.
 exl-id: dc460490-dfc8-4a46-a468-3d03e593447d
-source-git-commit: 87630d9530194fd0c6d88e05a17db108b765ccb6
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '901'
 ht-degree: 1%
 
 ---
@@ -130,7 +130,7 @@ Du kan till exempel ha definierat följande modeller för innehållsfragment:
 * Person
 * Utmärkelser
 
-Det verkar ganska okomplicerat, men ett företag har förstås både en koncernchef och anställda ...och dessa är alla människor, var och en definierade som en person.
+Det verkar ganska enkelt, men ett företag har både koncernchef och medarbetare...och dessa är alla människor, var och en definierade som en person.
 
 Och en person kan ha en utmärkelse (eller kanske två).
 

@@ -1,20 +1,20 @@
 ---
 title: Hur tjänar du på att visa resurser AEM?
-description: Läs mer om de viktigaste fördelarna med vyn Resurser i AEM. Adobe, som utnyttjar sin expertis inom marknadsföring och kreativa yrkesutövare, introducerar en ny omvälvande användarupplevelse.
+description: Läs mer om de viktigaste fördelarna med vyn Resurser i AEM. Adobe, som använder sin expertis för att ge marknadsförare och kreatörer större frihet, introducerar en ny omvälvande användarupplevelse.
 mini-toc-levels: 3
-source-git-commit: 20e0527ebecb6720f39c0a4b2957dc899117d96f
+exl-id: c27134f5-178c-4db1-a8e6-ec45d020f2b5
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 0%
 
 ---
 
-
 # Vi presenterar resursvyn {#assets-view}
 
 ![Distribuera Assets Essentials](assets/banner-image.jpg)
 
-I dagens snabba digitala första landskap, där det är viktigt att skapa och leverera innehåll i realtid, är en DAM-upplevelse (Digital Asset Management) som är utformad för att snabba upp marknadsföringen längre fram i kedjan oerhört viktig. Adobe, som utnyttjar sin expertis inom marknadsföring och kreativa yrkesutövare, introducerar en ny omvälvande användarupplevelse. Det här arbetsflödet i första hand revolutionerar hur företag hanterar sina dynamiska digitala resurser och ger marknadsförarna möjlighet att maximera effektiviteten när det gäller att hitta, samarbeta, personalisera och leverera resurser. Dessa smidiga arbetsflöden snabbar upp innehållets hastighet och lyfter era marknadsföringssatsningar till nya höjder.
+I dagens snabba digitala första landskap, där det är viktigt att skapa och leverera innehåll i realtid, är en DAM-upplevelse (Digital Asset Management) som är utformad för att snabba upp marknadsföringen längre fram i kedjan oerhört viktig. Adobe, som använder sin expertis för att ge marknadsförare och kreatörer större frihet, introducerar en ny omvälvande användarupplevelse. Det här arbetsflödet i första hand revolutionerar hur företag hanterar sina dynamiska digitala resurser och ger marknadsförarna möjlighet att maximera effektiviteten när det gäller att hitta, samarbeta, personalisera och leverera resurser. Dessa smidiga arbetsflöden snabbar upp innehållets hastighet och lyfter era marknadsföringssatsningar till nya höjder.
 
 Om du vill veta mer om de tillgängliga personliga upplevelserna för Assets as a Cloud Service kan du läsa [Introduktion till as a Cloud Service resurser](/help/assets/overview.md#persona-based-experiences).
 
@@ -128,9 +128,3 @@ Använd de här länkarna för att snabbt komma igång med resursvyn:
 
 * [Min arbetsyta](/help/assets/my-workspace-assets-view.md)
 * [Kom igång med resursvyn](/help/assets/get-started-assets-view.md)
-
-
-
-
-
-

@@ -5,9 +5,9 @@ feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: 0cd38edb-2201-4ca6-8b84-6b5b7f76bd90
-source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1059'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## Introduktion till lazy loading {#introduction-to-lazy-loading}
 
-När formuläret blir stort och komplext med hundratals och tusentals fält får slutanvändarna lång svarstid när de återger formulär vid körning. Med Adaptive Forms kan du minimera svarstiden genom att dela upp formulär i logiska fragment och konfigurera så att initieringen eller inläsningen av fragment skjuts upp tills fragmentet behöver vara synligt. Det kallas för lat inläsningsarbete. Dessutom tas de fragment som konfigurerats för lazy loading bort när användaren navigerar till andra avsnitt i formuläret och fragmenten inte längre visas.
+När formuläret blir stort och komplext med hundratals och tusentals fält får slutanvändarna lång svarstid när de återger formulär vid körning. För att minimera svarstiden kan Adaptiv Forms dela upp formulär i logiska fragment och konfigurera så att initieringen eller inläsningen av fragment skjuts upp tills fragmentet är synligt. Det kallas för lat inläsningsarbete. Dessutom tas de fragment som konfigurerats för lazy loading bort när användaren navigerar till andra avsnitt i formuläret och fragmenten inte längre visas.
 
 Låt oss först förstå kraven och de förberedande stegen innan du konfigurerar lazy loading.
 
@@ -73,7 +73,7 @@ Du kan markera objektvärden i det lagerinlästa fragmentet som globala så att 
 
 Vissa begränsningar, rekommendationer och viktiga punkter som du bör tänka på när du arbetar med lazy loading är följande:
 
-* Vi rekommenderar att du använder XSD-schemabaserad Adaptiv Forms över XFA-baserad Adaptiv Forms för att konfigurera lat inläsande på stora formulär. Prestandavinster på grund av lazy loading-implementering i XFA-baserad Adaptive Forms är relativt mindre än förstärkning i XSD-baserad Adaptive Forms.
+* Adobe rekommenderar att man använder XSD-schemabaserad Adaptiv Forms över XFA-baserad Adaptiv Forms för att konfigurera lat inläsningsarbete i stora formulär. Prestandavinster på grund av lazy loading-implementering i XFA-baserad Adaptive Forms är relativt mindre än förstärkning i XSD-baserad Adaptive Forms.
 * Konfigurera inte lazy loading på fragment i ett adaptivt formulär som använder **[!UICONTROL Responsive -everything on one page without navigation]** rotpanelens layout. Som ett resultat av layoutkonfigurationen Responsiv läses alla fragment in samtidigt i en adaptiv form. Det kan också leda till försämrade prestanda.
 * Vi rekommenderar att du inte konfigurerar lazy loading på fragment på den första panelen som återges när det adaptiva formuläret läses in.
 * Lazy loading stöds upp till två nivåer i fragmenthierarkin.

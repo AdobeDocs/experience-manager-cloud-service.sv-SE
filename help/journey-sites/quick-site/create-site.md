@@ -2,9 +2,9 @@
 title: Skapa webbplats från mall
 description: Lär dig hur du snabbt skapar en AEM webbplats med hjälp av en webbplatsmall.
 exl-id: 31bb04c2-b3cc-44ca-b517-5b0d66d9b1fa
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1474'
 ht-degree: 0%
 
 ---
@@ -40,8 +40,8 @@ Webbplatsmallar är ett sätt att kombinera grundläggande webbplatsinnehåll i 
 
 * `files`: Mapp med UI-kit, XD och eventuellt andra filer
 * `previews`: Mapp med skärmbilder av platsmallen
-* `site`: Innehållspaket med innehåll som kopieras för varje plats som skapas från den här mallen, t.ex. sidmallar, sidor osv.
-* `theme`: Källor till malltemat för att ändra hur webbplatsen ser ut, t.ex. CSS, JavaScript etc.
+* `site`: Innehållspaket för det innehåll som kopieras för varje plats som skapas från den här mallen, till exempel sidmallar, sidor och så vidare.
+* `theme`: Källor till malltemat för att ändra hur webbplatsen ser ut, t.ex. CSS, JavaScript osv.
 
 Mallar är kraftfulla eftersom de kan återanvändas så att skribenterna snabbt kan skapa en webbplats. Och eftersom du kan ha flera mallar tillgängliga i AEM kan du tillgodose olika affärsbehov.
 
@@ -71,17 +71,17 @@ Det är enkelt att använda en mall för att skapa en plats.
 
    * `https://<your-author-environment>.adobeaemcloud.com/sites.html/content`
 
-1. Tryck eller klicka **Skapa** längst upp till höger på skärmen och i listrutan väljer **Plats från mall**.
+1. Välj **Skapa** längst upp till höger på skärmen och i listrutan väljer **Plats från mall**.
 
    ![Skapa en ny plats från en mall](assets/create-site-from-template.png)
 
-1. Tryck eller klicka på i guiden Skapa plats **Importera** överst i den vänstra kolumnen.
+1. Välj **Importera** överst i den vänstra kolumnen.
 
    ![Guiden Skapa webbplats](assets/site-creation-wizard.png)
 
-1. Leta reda på mallen i filläsaren [du laddat ned tidigare](#obtaining-template) och trycka eller klicka **Överför**.
+1. Leta reda på mallen i filläsaren [du laddat ned tidigare](#obtaining-template) och markera **Överför**.
 
-1. När den har överförts visas den i listan med tillgängliga mallar. Tryck eller klicka på den för att markera den (vilket även visar information om mallen i den högra kolumnen) och tryck eller klicka sedan på den **Nästa**.
+1. När den har överförts visas den i listan med tillgängliga mallar. Markera den för att markera den (vilket också visar information om mallen i den högra kolumnen) och markera den sedan **Nästa**.
 
    ![Välj en mall](assets/select-site-template.png)
 
@@ -90,11 +90,11 @@ Det är enkelt att använda en mall för att skapa en plats.
    * Platsens titel visas i webbläsarens namnlist.
    * Webbplatsnamnet blir en del av webbadressen.
 
-1. Tryck eller klicka **Skapa** och den nya platsen skapas från webbplatsmallen.
+1. Välj **Skapa** och den nya platsen skapas från webbplatsmallen.
 
    ![Information om den nya platsen](assets/create-site-details.png)
 
-1. I bekräftelsedialogrutan som visas: tryck eller klicka **Klar**.
+1. I bekräftelsedialogrutan väljer du **Klar**.
 
    ![Dialogrutan Slutfört](assets/success.png)
 
@@ -115,7 +115,7 @@ Webbplatsmallar är mycket kraftfulla och flexibla och alla nummer kan skapas f�
 
 Om du behöver anpassa gränssnittet ytterligare bör du tänka på att den som utvecklar gränssnittet kanske inte känner till detaljerna i materialet. Därför är det en bra idé att ge utvecklaren en väg till typiskt innehåll som kan användas som referensbas när temat anpassas. Ett typiskt exempel är startsidan för webbplatsens huvudspråk.
 
-1. Navigera till startsidan för webbplatsens huvudspråk i webbläsaren och tryck eller klicka sedan på sidan för att markera den och tryck eller klicka på den **Redigera** på menyraden.
+1. Navigera till startsidan för webbplatsens huvudspråk i webbläsaren och markera sedan den sida som du vill markera och markera sedan **Redigera** på menyraden.
 
    ![Normal hemsida](assets/home-page-in-console.png)
 
@@ -137,7 +137,7 @@ Nu när webbplatsen har skapats kan temat för webbplatsen som genererats av mal
 
    ![Visa webbplatsspåret](assets/show-site-rail.png)
 
-1. Tryck eller klicka på roten för den nya platsen och tryck eller klicka sedan på **Hämta temakällor** på platsjärnvägen.
+1. Välj roten för den nya platsen och välj sedan **Hämta temakällor** på platsjärnvägen.
 
    ![Hämta temakällor](assets/download-theme-sources.png)
 
@@ -147,8 +147,8 @@ Du har nu en kopia av temakällfilerna i dina nedladdningsfiler.
 
 För att frontendutvecklaren ska kunna förhandsgranska anpassningarna med verkligt AEM innehåll från webbplatsen måste du konfigurera en proxyanvändare.
 
-1. I AEM från huvudnavigeringen går du till **verktyg** -> **Säkerhet** -> **Användare**.
-1. Tryck eller klicka på i användarhanteringskonsolen **Skapa**.
+1. I AEM från huvudnavigeringen går du till **verktyg** > **Säkerhet** > **Användare**.
+1. I användarhanteringskonsolen väljer du **Skapa**.
 
    ![Konsol för användarhantering](assets/user-management-console.png)
 1. I **Skapa ny användare** fönster måste du åtminstone ange:
@@ -162,7 +162,7 @@ För att frontendutvecklaren ska kunna förhandsgranska anpassningarna med verkl
 
    ![Lägg till i grupp](assets/add-to-group.png)
 
-1. Tryck eller klicka **Spara och stäng**.
+1. Välj **Spara och stäng**.
 
 Du har nu slutfört konfigurationen. Innehållsförfattare kan nu börja skapa innehåll på webbplatsen och börja förbereda framsidan i nästa steg av kundresan.
 
@@ -181,7 +181,7 @@ Bygg vidare på den här kunskapen och fortsätt din AEM snabbwebbplats genom at
 Vi rekommenderar att du går vidare till nästa del av processen Skapa snabbwebbplats genom att granska dokumentet [Konfigurera din pipeline,](pipeline-setup.md) Nedan följer ytterligare, valfria resurser som fördjupar sig i några koncept som nämns i det här dokumentet, men som inte behöver fortsätta på resan.
 
 * [AEM standardmall för webbplats](https://github.com/adobe/aem-site-template-standard) - Detta är GitHub-databasen för AEM standardplatsmall.
-* [Skapa och ordna sidor](/help/sites-cloud/authoring/fundamentals/organizing-pages.md) - Den här guiden beskriver hur du hanterar sidor på din AEM webbplats om du vill anpassa den ytterligare efter att du har skapat den från mallen.
+* [Skapa och ordna sidor](/help/sites-cloud/authoring/fundamentals/organizing-pages.md) - Den här guiden beskriver hur du hanterar sidor på din AEM om du vill anpassa den ytterligare efter att du har skapat den från mallen.
 * [Så här arbetar du med paket](/help/implementing/developing/tools/package-manager.md) - Med paket kan du importera och exportera databasinnehåll. I det här dokumentet förklaras hur du arbetar med paket i AEM 6.5, som även gäller för AEMaaCS.
 * [Dokumentation för webbplatsadministration](/help/sites-cloud/administering/site-creation/create-site.md) - Läs de tekniska dokumenten om hur du skapar webbplatser för mer information om funktionerna i verktyget Skapa snabbwebbplats.
 * [Skapa eller lägga till formulär på en AEM Sites-sida](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md) - Lär dig stegvisa tekniker och metodtips för att integrera formulär på webbplatsen och optimera digitala upplevelser för maximal effekt.

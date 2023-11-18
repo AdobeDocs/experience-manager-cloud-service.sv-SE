@@ -2,9 +2,9 @@
 title: Referenshandbok för komponenter
 description: En referenshandbok för utvecklare som beskriver komponenterna och deras struktur
 exl-id: 45e5265b-39d6-4a5c-be1a-e66bb7ea387d
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '3646'
+source-wordcount: '3642'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Det innebär att du bara behöver definiera om skillnaderna, i stället för att
 
 ### Innehållslogik och återgivningsmarkeringar  {#content-logic-and-rendering-markup}
 
-Komponenten återges med [HTML](https://www.w3schools.com/htmL/html_intro.asp). Komponenten måste definiera den HTML som behövs för att ta det önskade innehållet och sedan återge det som det behövs, både i författarmiljön och i publiceringsmiljön.
+Komponenten återges med [HTML](https://www.w3schools.com/htmL/html_intro.asp). Komponenten måste definiera den HTML som behövs för att ta det önskade innehållet och sedan återge det efter behov, både i skribent- och publiceringsmiljöer.
 
 Vi rekommenderar att koden som ansvarar för kod och återgivning hålls åtskild från koden som styr logiken som används för att markera komponentens innehåll.
 
@@ -181,7 +181,7 @@ En komponent är en nod av typen `cq:Component` och har följande egenskaper och
 | `component.html` | `nt:file` | Det här är komponentens HTML-skriptfil. |
 | `cq:icon` | `String` | Detta värde pekar på [ikon för komponenten](#component-icon) och visas i komponentwebbläsaren. |
 
-Om vi tittar på **Text** kan vi se ett antal av dessa element:
+Om du tittar på **Text** kan du se flera av dessa element:
 
 ![Struktur för textkomponent](assets/components-text.png)
 
@@ -250,7 +250,7 @@ Content not found
 
 Om du vill skapa en widget som ska användas i en komponentdialogruta måste du skapa en del gränssnittskomponent.
 
-Om du ser dialogrutan som en enkel behållare för ett formulärelement kan du även se det primära innehållet i dialogrutan som formulärfält. När du skapar ett nytt formulärfält måste du skapa en resurstyp. Det motsvarar att skapa en ny komponent. För att du ska få hjälp med den uppgiften erbjuder Granite UI en generisk fältkomponent att ärva från (med `sling:resourceSuperType`):
+Om du ser dialogrutan som en enkel behållare för ett formulärelement kan du även se det primära innehållet i dialogrutan som formulärfält. När du skapar ett nytt formulärfält måste du skapa en resurstyp. Det motsvarar att skapa en komponent. För att du ska få hjälp med den uppgiften erbjuder Granite UI en generisk fältkomponent att ärva från (med `sling:resourceSuperType`):
 
 `/libs/granite/ui/components/coral/foundation/form/field`
 
@@ -441,7 +441,7 @@ Fältvalidering i GRÄNSSNITTET för Granite och GRÄNSSNITTET för Granite gör
 
 ### Dialogrutans tillgänglighet identifieras {#dialog-ready}
 
-Om du har ett anpassat JavaScript som bara behöver köras när dialogrutan är tillgänglig och klar bör du avlyssna `dialog-ready` -händelse.
+Om du har ett anpassat JavaScript som endast måste köras när dialogrutan är tillgänglig och klar bör du avlyssna `dialog-ready` -händelse.
 
 Den här händelsen utlöses när dialogrutan läses in (eller läses in igen) och är klar att användas, vilket innebär när det finns en ändring (skapa/uppdatera) i DOM för dialogrutan.
 

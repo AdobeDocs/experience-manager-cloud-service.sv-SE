@@ -2,9 +2,9 @@
 title: Indexering efter migrering av innehåll
 description: Lär dig hur migreringsprocessen indexerar det inkapslade Cloud Servicen i målinstansen.
 exl-id: a13d5df4-b351-410a-9336-1b34a8af21b6
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 När Cloud Acceleration Manager har slutfört inmatningen av innehåll i din Cloud Service är det klart att användas. Till att börja med är innehållet inte indexerat, vilket sannolikt leder till en instabil miljö där problem som till exempel osökbart innehåll och försämrade prestanda kan förväntas.
 För optimala prestanda för instansen kommer migreringsprocessen automatiskt att starta indexeringen av innehållet. Det finns inget att göra förutom att övervaka indexeringsförloppet.
 
-> Information om hur du påbörjar ett intag finns i [Infoga innehåll i Cloud Service](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md).
+> Mer information om hur du påbörjar ett intag finns i [Infoga innehåll i Cloud Service](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md).
 
 Följande steg visar det allmänna flöde som du kan förvänta dig att se i användargränssnittet vid indexering. En del etiketter har ett användbart sammanhang i verktygstipsen, så se till att du håller muspekaren över objekten för att lära dig mer om den aktuella indexeringsstatusen.
 
@@ -29,7 +29,7 @@ Börja med att gå till Cloud Acceleration Manager. Klicka på projektkortet och
 och se jobben.
 
 >[!NOTE]
->Du kan visa eller ladda ned indexeringsloggarna med hjälp av funktionsmakron för jobbet med hjälp av listrutan .... Loggarna finns i
+>Du kan visa eller ladda ned indexeringsloggarna med hjälp av funktionsmakrona i jobbet med hjälp av listrutan ..... Loggarna finns i
 > Indexeringslogg-åtgärdsavsnitt, när indexeringsjobbet har slutförts
 
 ### Väntande

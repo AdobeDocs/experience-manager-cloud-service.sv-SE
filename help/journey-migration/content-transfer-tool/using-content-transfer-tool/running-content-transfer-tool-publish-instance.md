@@ -2,9 +2,9 @@
 title: Köra verktyget Innehållsöverföring på en publiceringsinstans
 description: Köra verktyget Innehållsöverföring på en publiceringsinstans
 exl-id: 01faab94-a939-4004-b094-e9eb8f67b96e
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Följ de rekommenderade tillvägagångssätten som beskrivs nedan:
 
 * Använd samma version av verktyget Innehållsöverföring som användes på författarinstansen.
 
-* Endast en publiceringsnod behöver migreras. Den bör avlägsnas från belastningsutjämnaren innan extraheringen påbörjas.
+* Endast en publiceringsnod får migreras. Den bör avlägsnas från belastningsutjämnaren innan extraheringen påbörjas.
 
 * Publiceringsnivån skalas inte ned under publiceringsprocessen (till skillnad från författaren).
 

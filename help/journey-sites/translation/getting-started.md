@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: 9bfc3995-ac8e-488e-b68f-9e1b5b4a3176
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1398'
+source-wordcount: '1390'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Det här dokumentet hjälper dig att förstå hur du kommer igång med att över
 
 ## Krav och krav {#requirements-prerequisites}
 
-Det finns ett antal krav innan du börjar översätta AEM innehåll.
+Det finns flera krav innan du börjar översätta AEM innehåll.
 
 ### Kunskap {#knowledge}
 
@@ -65,7 +65,7 @@ Webbplatskonsolen ger en översikt över innehållets struktur, vilket gör det 
 
 Så här kommer du åt webbplatskonsolen:
 
-1. Klicka eller tryck på den globala navigeringsmenyn **Navigering** -> **Webbplatser**.
+1. Välj **Navigering** > **Webbplatser**.
 1. Platskonsolen öppnas på den översta nivån i ditt innehåll.
 1. Se till att **Kolumnvy** markeras med vyväljaren längst upp till höger i fönstret.
 
@@ -75,7 +75,7 @@ Så här kommer du åt webbplatskonsolen:
 
    ![Innehållshierarki](assets/sites-console-hierarchy.png)
 
-1. Genom att trycka eller klicka på kryssrutan för ett objekt i en kolumn, markeras objektet och det markerade objektets information visas i kolumnen till höger. Ett antal åtgärder som är tillgängliga för det markerade objektet visas i verktygsfältet ovan.
+1. Genom att trycka på eller klicka i kryssrutan för ett objekt i en kolumn, markeras objektet och det markerade objektets information visas i kolumnen till höger. Flera åtgärder som är tillgängliga för det markerade objektet visas i verktygsfältet ovan.
 
    ![Innehållsmarkering](assets/sites-console-selection.png)
 
@@ -97,7 +97,7 @@ Med platskonsolen kan du navigera i ditt innehåll och få en översikt över de
 
 Redigera en sida:
 
-1. Använd platskonsolen för att hitta och välja en sida. Kom ihåg att du måste trycka på eller klicka i kryssrutan för en enskild sida för att markera den.
+1. Använd platskonsolen för att hitta och välja en sida. Kom ihåg att du måste markera kryssrutan för en enskild sida för att kunna markera den.
 
    ![Markera en sida att redigera](assets/sites-editor-select-page.png)
 

@@ -2,9 +2,9 @@
 title: SLA-rapportering
 description: Lär dig hur du kan se hur din AEM fungerar i förhållande till det avtalade serviceavtalet (SLA).
 exl-id: 03932415-a029-4703-b44a-f86a87edb328
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Rulla markören över en datapunkt för att visa specifika värden för den punk
 
 ## SLA-mått {#sla-metrics}
 
-Diagrammet för det valda året innehåller ett antal datauppsättningar.
+Diagrammet för det valda året innehåller flera datauppsättningar.
 
 * **Publicera nivåkontrakt** - Det här är SLA-avtalet som definieras i ditt avtal med Adobe för publiceringsnivån.
 

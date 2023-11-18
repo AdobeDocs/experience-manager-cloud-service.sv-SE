@@ -2,7 +2,7 @@
 title: Vanliga frågor om Cloud Manager
 description: Hitta svar på de vanligaste frågorna om Cloud Manager på AEM as a Cloud Service.
 exl-id: eed148a3-4a40-4dce-bc72-c7210e8fd550
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '987'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Se dokumenten [Testning av kodkvalitet](/help/implementing/cloud-manager/code-qu
 
 ## Kan jag använda SNAPSHOT för versionen av Maven-projektet? {#use-snapshot}
 
-Ja. Git-grenen för utvecklardistributioner `pom.xml` måste innehålla `-SNAPSHOT` i slutet av `<version>` värde.
+Ja. Git-grenen för utvecklardistributioner `pom.xml` filerna måste innehålla `-SNAPSHOT` i slutet av `<version>` värde.
 
 Med det här värdet kan efterföljande distribution fortfarande installeras när versionen inte ändras. I utvecklingsmiljöer läggs ingen automatisk version till eller genereras för maven-bygget.
 
@@ -70,7 +70,7 @@ Cloud Manager lägger automatiskt till sin version i scen- och produktionsbyggen
 
 ## Min maven-konstruktion misslyckas för distributioner av Cloud Manager, men den byggs lokalt utan fel. Vad är det för fel? {#maven-build-fail}
 
-Se [den här Git-resursen](https://github.com/cqsupport/cloud-manager/blob/main/cm-build-step-fails.md) för mer information.
+Se [denna Git-resurs](https://github.com/cqsupport/cloud-manager/blob/main/cm-build-step-fails.md) för mer information.
 
 ## Vad gör jag om en Cloud Manager-distribution misslyckas vid distributionssteget på AEM as a Cloud Service? {#cloud-manager-deployment-cloud-service}
 
@@ -108,12 +108,12 @@ If [lägga till en RepositoryInitializer OSGi-konfiguration](#cloud-manager-depl
    * Följ de här stegen för att simulera problemet i en lokal konfiguration.
       1. Installera en författare och publicera instansen lokalt med de senaste AEM SDK-burkarna.
       1. Logga in på författarinstansen.
-      1. Gå till **verktyg** -> **Distribution** -> **Distribution**.
+      1. Gå till **verktyg** > **Distribution** > **Distribution**.
       1. Distribuera innehållspaketen som är en del av kodbasen och se om kön blockeras med ett fel.
 
 ## Jag kan inte ange en variabel med ett aio-kommando. Vad kan jag göra? {#set-variable}
 
-Du kan få en `403` fel som följande när du försöker lista eller ange pipeline-variabler med hjälp av `aio` kommandon.
+Du kan få `403` fel som följande när du försöker lista eller ange pipeline-variabler med hjälp av `aio` kommandon.
 
 ```shell
 $ aio cloudmanager:list-pipeline-variables 222
@@ -131,6 +131,6 @@ setting variables... !
 Cannot set variables: https://cloudmanager.adobe.io/api/program/111/environment/222/variables (403 Forbidden)
 ```
 
-I det här fallet måste användaren som kör dessa kommandon läggas till i **Distributionshanteraren** i Admin Console.
+I det här fallet måste användaren som kör dessa kommandon läggas till i **Distributionshanteraren** rollen i Admin Console.
 
 Se [API-behörigheter](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/) för mer information.

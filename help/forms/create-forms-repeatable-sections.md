@@ -3,9 +3,9 @@ title: Hur skapar man repeterbara paneler i komponenter med adaptiv Form Core?
 description: Lär dig att skapa upprepningsbara avsnitt eller fält i en adaptiv form.
 role: Architect, Developer, Admin, User
 exl-id: 02521bf3-83c1-40a0-8fe6-23af240727e9
-source-git-commit: 397e7d4f23202b8ae7419b0ad5436a6a10e2efb8
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1357'
 ht-degree: 0%
 
 ---
@@ -139,7 +139,7 @@ Panelens överordnade panel bör innehålla en borttagningsknapp för att ta bor
 
 >[!NOTE]
 >
-> När alla instanser av en panel har tagits bort från ett adaptivt formulär kan du lägga till en instans av den borttagna panelen med syntaxen _panelName för att fånga instanshanteraren på panelen och använda instanshanterarens addInstance API för att lägga till den borttagna instansen. Till exempel _panelName.addInstance(). En instans av den borttagna panelen läggs till.
+> När alla instanser av en panel tas bort från ett adaptivt formulär kan du lägga till en instans av den borttagna panelen med syntaxen _panelName för att fånga instanshanteraren på panelen och använda API:t addInstance för instanshanteraren för att lägga till den borttagna instansen. Till exempel _panelName.addInstance(). En instans av den borttagna panelen läggs till.
 
 <!--
 ![panel-repeatability-video](/help/adaptive-forms/assets/panel-repeatability-video.mp4)

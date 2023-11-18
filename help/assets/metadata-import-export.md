@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: fb70a068-3ba3-4459-952d-79155d286c42
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '666'
-ht-degree: 10%
+source-wordcount: '664'
+ht-degree: 9%
 
 ---
 
@@ -31,7 +31,7 @@ Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig
    | Parameter | Beskrivning |
    | ---------------------- | ------- |
    | Batchstorlek | Antal resurser i en grupp som metadata ska importeras för. Standardvärdet är 50. Maxvärdet är 100. |
-   | Fältavgränsare | Standardvärdet är `,` (komma). Du kan ange andra tecken. |
+   | Fältavgränsare | Standardvärdet är `,` (komma). Du kan ange vilket annat tecken som helst. |
    | Flervärdesavgränsare | Avgränsare för metadatavärden. Standardvärdet är `|`. |
    | Starta arbetsflöden | Falskt som standard. När inställt på `true` och standardinställningar används för arbetsflödet WriteBack för DAM-metadata (som skriver metadata till binära XMP). Om du aktiverar arbetsflödena blir systemet långsammare. |
    | Kolumnnamn för resurssökväg | Definierar kolumnnamnet för CSV-filen med resurser. |
@@ -70,12 +70,12 @@ Några exempel på användningsområden för att exportera flera metadata samtid
 
 1. I **[!UICONTROL Properties to be exported]** anger du om du vill exportera alla eller specifika egenskaper. Om du väljer Selektiva egenskaper som ska exporteras lägger du till de önskade egenskaperna.
 
-1. Tryck/klicka i verktygsfältet **[!UICONTROL Export]**. Ett meddelande bekräftar att metadata exporteras. Stäng meddelandet.
-1. Öppna inkorgsmeddelandet för exportjobbet. Markera jobbet och klicka på **[!UICONTROL Open]** i verktygsfältet. Om du vill hämta CSV-filen med metadata trycker/klickar du på **[!UICONTROL CSV Download]** i verktygsfältet. Klicka på **[!UICONTROL Close]**.
+1. Välj **[!UICONTROL Export]** i verktygsfältet. Ett meddelande bekräftar att metadata exporteras. Stäng meddelandet.
+1. Öppna inkorgsmeddelandet för exportjobbet. Markera jobbet och klicka på **[!UICONTROL Open]** i verktygsfältet. Om du vill hämta CSV-filen med metadata väljer du **[!UICONTROL CSV Download]** i verktygsfältet. Klicka på **[!UICONTROL Close]**.
 
    ![Dialogruta för att hämta CSV-filen som innehåller metadata som exporterats i grupp](assets/csv_download.png)
 
-   *Bild: Dialogruta för att hämta CSV-filen som innehåller metadata som exporterats i grupp.*
+   *Bild: Dialogruta där du kan hämta CSV-filen som innehåller metadata som exporterats i grupp.*
 
 **Se även**
 
@@ -94,4 +94,3 @@ Några exempel på användningsområden för att exportera flera metadata samtid
 >[!MORELIKETHIS]
 >
 >* [Importera metadata när du importerar resurser i grupp](/help/assets/add-assets.md#asset-bulk-ingestor)
-

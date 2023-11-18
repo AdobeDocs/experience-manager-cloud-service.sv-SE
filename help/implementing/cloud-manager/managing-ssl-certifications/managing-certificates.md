@@ -2,7 +2,7 @@
 title: Hantera SSL-certifikat
 description: Lär dig hur du använder Cloud Manager för att kontrollera statusen för dina SSL-certifikat och hur du redigerar, ersätter, uppdaterar och tar bort dem.
 exl-id: ad6170f4-93bd-4bac-9c54-63c35a0d4f06
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 0%
@@ -33,7 +33,7 @@ När ett certifikat upphör att gälla fungerar inte längre domäner som använ
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 1. Navigera till **Miljö** från **Ökning** sida.
 1. Navigera till **SSL-certifikat** från **Miljö** skärm.
-1. Du kan se en tabell med en rad för varje SSL-certifikat som har installerats i programmet. Klicka på ellipsknappen längst till höger i raden för det certifikat som du vill uppdatera och välj **Visa och uppdatera**.
+1. Du kan se en tabell med en rad för varje SSL-certifikat som har installerats i programmet. Klicka på ellipsknappen längst till höger i raden i certifikatet som du vill uppdatera och välj **Visa och uppdatera**.
 1. Certifikatinformationen visas och kan uppdateras.
 1. Kör pipeline för att distribuera det uppdaterade certifikatet.
 

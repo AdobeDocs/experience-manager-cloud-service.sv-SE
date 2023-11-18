@@ -2,9 +2,9 @@
 title: Versionsinformation om 2020.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.7.0."
 exl-id: 75d354a3-6987-4de0-aec8-24043461c516
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1028'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för Experience
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Experience Manager] as a Cloud Service 2020.7.0 är 30 juli 2020.
+Utgivningsdatum för [!DNL Experience Manager] as a Cloud Service 2020.7.0 är 30 juli 2020.
 
 ## Adobe Experience Manager Sites as a Cloud Service {#cloud-services-sites}
 
@@ -39,7 +39,7 @@ Releasedatum för [!DNL Experience Manager] as a Cloud Service 2020.7.0 är 30 j
 
 * Publicera resurser på [!DNL Dynamic Media] förenklas och görs mer robust genom att göra det till en integrerad del av den övergripande processen för bearbetning av tillgångar med hjälp av mikrotjänster och genom att förbättra grupppubliceringsbackend.
 
-* Arbetsflödessteg som inte är kompatibla med en Cloud Service-distribution markeras nu med en varning i [!UICONTROL workflow model] redigerare. När du kör de befintliga arbetsflödena i Cloud Service-miljön hoppas dessutom de inkompatibla arbetsflödesstegen över.
+* Arbetsflödessteg som inte är kompatibla med en Cloud Service-distribution har nu markerats med en varning i [!UICONTROL workflow model] redigerare. När du kör de befintliga arbetsflödena i Cloud Service-miljön hoppas de inkompatibla arbetsflödesstegen över.
 
 * Arbetsflödesmodeller som skapats av kunder som distribueras till `/conf/global` i Git-projektet som är kopplat till miljön i [!DNL Cloud Manager] distribueras automatiskt till `/var` och därmed tillgängliga i [!DNL Experience Manager]. Arbetsflödesmodellerna för produkter i `/libs` som ändrats av kunden inte automatiskt distribueras till `/var`.
 
@@ -105,7 +105,7 @@ Mer information finns i Använda Java 11-stöd.
 
 * Vissa fel i kodkvalitetsprocessen kan leda till att loggfilen inte genereras korrekt.
 
-* När du skapar ett nytt program returnerar det föreslagna namnet ibland en dubblett av ett befintligt programnamn.
+* När du skapar ett program returnerar det föreslagna namnet ibland en dubblett av ett befintligt programnamn.
 
 * Vissa stora stegloggar för pipeline kunde inte hämtas konsekvent via användargränssnittet.
 
@@ -121,13 +121,13 @@ Mer information finns i Använda Java 11-stöd.
 
 ### Nyheter {#what-is-new-foundations}
 
-* [Loggar kan vidarebefordras till Splunk-konton](/help/implementing/developing/introduction/logging.md#splunk-logs), som gör det möjligt för organisationer att använda sin Splunk-investering.
+* [Loggar kan vidarebefordras till Splunk-konton](/help/implementing/developing/introduction/logging.md#splunk-logs), som gör det möjligt att använda Splunk-investeringen.
 
 * [En statisk, dedikerad IP-adress för utgångar](/help/implementing/developing/introduction/development-guidelines.md#dedicated-egress-ip-address) kan tilldelas för utgående trafik som programmeras i Java-kod, vilket kan vara användbart för vissa integreringar.
 
-* Ported AEM Analytics cloud service UI from Classic UI to new AEM UI. Platsen för Analytics-molntjänsten i AEM från `/etc` till `/conf`, för att anpassa sig till andra AEM-molntjänster.
+* Ported AEM Analytics cloud service UI from Classic UI to new AEM UI. Platsen för Analytics-molntjänsten i AEM från har också flyttats `/etc` till `/conf`, för anpassning till andra AEM molntjänster.
 
-* Portat AEM molntjänstgränssnitt från Classic UI till nytt AEM. Platsen för målmolntjänsten i AEM från har också flyttats `/etc` till `/conf`, för att anpassa sig till andra AEM-molntjänster.
+* Portat AEM molntjänstgränssnitt från Classic UI till nytt AEM. Platsen för målmolntjänsten i AEM från har också flyttats `/etc` till `/conf`, för anpassning till andra AEM molntjänster.
 
 ## Cloud Readiness Analyzer {#cloud-readiness-analyzer}
 

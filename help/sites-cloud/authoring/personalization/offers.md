@@ -2,9 +2,9 @@
 title: Skapa och hantera erbjudanden (Erbjudandekonsol)
 description: Använd offertkonsolen för att skapa erbjudanden som du kan använda i aktivitetsupplevelser
 exl-id: 81d2fda2-06a9-48f6-820a-dd9e11d94fcc
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1351'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 The **Erbjudanden** Konsolen kommer att bli inaktuell i framtiden. Så från och med nu är det:
 
-* Endast tillgängligt för kunder som har *äldre* redan definierade erbjudanden (d.v.s. befintliga)
+* Endast tillgängligt för kunder som har *äldre* redan definierade erbjudanden (det vill säga, befintliga)
 * Vi rekommenderar att alla sådana gamla erbjudanden konverteras till Experience Fragment-erbjudanden
    * Så snart det senaste äldre erbjudandet konverteras/tas bort, **Erbjudanden** Konsolen är inte längre tillgänglig.
 
@@ -126,21 +126,21 @@ Skapa ett varumärke som era erbjudanden är kopplade till. Öppna ett varumärk
 
 När du skapar ett varumärke med hjälp av Erbjudandekonsolen visas det också i [Aktivitetskonsol](/help/sites-cloud/authoring/personalization/activities.md) där ni kan lägga till och administrera aktiviteter för varumärket.
 
-1. Klicka eller tryck på **Personalisering** > **Erbjudanden** i navigeringskonsolen.
+1. Välj i navigeringskonsolen **Personalisering** > **Erbjudanden**.
 
    ![Navigera till erbjudandekonsolen](/help/sites-cloud/authoring/assets/offers-navigation.png)
 
-1. Klicka eller tryck **Skapa** och sedan **Skapa** **Varumärke**.
-1. Välj varumärkesmallen och klicka eller peka **Nästa**.
+1. Välj **Skapa** och sedan **Skapa** **Varumärke**.
+1. Välj varumärkesmallen och välj **Nästa**.
 1. Skriv en rubrik för varumärket som du vill att det ska visas i konsolerna för erbjudanden och aktiviteter. Du kan också ange eller markera en eller flera taggar som ska kopplas till varumärket.
-1. Klicka eller tryck **Skapa**.
+1. Välj **Skapa**.
 
 ### Lägg till en mapp i ett offertbibliotek {#add-a-folder-to-an-offer-library}
 
 Lägg till en mapp i erbjudandebiblioteket för ett varumärke för att ordna och lagra erbjudanden. Du kan skapa en mapp under varumärket eller under andra mappar.
 
 1. Öppna den plats där du vill skapa mappen i konsolen Erbjudanden. Öppna till exempel varumärket för att skapa en mapp på den översta nivån eller öppna en annan mapp i biblioteket.
-1. Klicka eller tryck **Skapa** > **Skapa mapp eller erbjudande**.
+1. Välj **Skapa** > **Skapa mapp eller erbjudande**.
 
    ![Skapar erbjudandemapp](/help/sites-cloud/authoring/assets/offers-create-folder.png)
 
@@ -149,7 +149,7 @@ Lägg till en mapp i erbjudandebiblioteket för ett varumärke för att ordna oc
 
    ![Definiera mappegenskaper](/help/sites-cloud/authoring/assets/offers-folder-properties.png)
 
-1. Klicka eller tryck **Skapa**.
+1. Välj **Skapa**.
 
 ### Lägg till ett erbjudande i ett erbjudandebibliotek {#add-an-offer-to-an-offer-library}
 
@@ -158,13 +158,13 @@ Lägg till ett erbjudande i ett varumärkes erbjudandebibliotek så att det kan 
 När du har skapat erbjudandet kan du öppna det och redigera innehållet.
 
 1. I konsolen Erbjudanden öppnar du den plats där du vill skapa erbjudandet. Öppna till exempel varumärket för att skapa ett erbjudande på högsta nivå eller öppna en mapp i biblioteket.
-1. Klicka eller tryck **Skapa** > **Skapa mapp eller erbjudande**.
+1. Välj **Skapa** > **Skapa mapp eller erbjudande**.
 
    ![Skapar erbjudandemapp](/help/sites-cloud/authoring/assets/offers-create-folder.png)
 
-1. Välj **Erbjudandesida** mall och sedan klicka eller peka **Nästa**.
-1. Skriv en titel för erbjudandet och välj eller skriv in en eller flera taggar som ska kopplas till erbjudandet. Klicka eller tryck sedan **Skapa**.
-1. Öppna erbjudandet för redigering genom att klicka eller trycka på **Öppna sida**.
+1. Välj **Erbjudandesida** mall och välj sedan **Nästa**.
+1. Skriv en rubrik för erbjudandet och välj eller ange en eller flera taggar som ska kopplas till erbjudandet. Välj sedan **Skapa**.
+1. I bekräftelsedialogrutan öppnar du erbjudandet för redigering genom att välja **Öppna sida**.
 
 ### Redigera ett erbjudande {#editing-an-offer}
 
@@ -172,7 +172,7 @@ När du har skapat erbjudandet kan du öppna det och redigera innehållet.
 
 Du kan öppna ett erbjudande från en mapp i ett erbjudandebibliotek eller från sökresultat. Du kan också öppna ett erbjudande från en upplevelse som använder erbjudandet.
 
-1. Tryck eller klicka på ikonen bredvid erbjudandet i konsolen Erbjudanden och klicka eller tryck på **Redigera**.
+1. I konsolen Erbjudanden väljer du ikonen bredvid erbjudandet och väljer **Redigera**.
 1. Lägg till komponenter i erbjudandet och redigera komponentinnehållet som vanligt.
 
 ### Ta bort ett erbjudande {#deleting-an-offer}
@@ -181,15 +181,15 @@ Ta bort ett erbjudande när det inte längre behövs. När du försöker ta bort
 
 Du kan ta bort ett erbjudande när du visar antingen mappinnehåll i ett erbjudandebibliotek eller sökresultat.
 
-1. Tryck eller klicka på ikonen bredvid erbjudandet i konsolen Erbjudanden och klicka eller tryck på **Ta bort**.
+1. I konsolen Erbjudanden väljer du ikonen bredvid erbjudandet och väljer **Ta bort**.
 
-   Välj erbjudandet och klicka eller tryck **Ta bort**.
+   Välj erbjudandet och välj **Ta bort**.
 
-1. Klicka på eller tryck i dialogrutan som visas **Ta bort** för att bekräfta borttagningen.
+1. I dialogrutan som visas väljer du **Ta bort** för att bekräfta borttagningen.
 1. Om erbjudandet används i en eller flera upplevelser visas en dialogruta som anger att det hänvisas till erbjudandet:
 
-   * Om du vill ta bort erbjudandet och ta bort det från upplevelserna klickar eller trycker du på **Tvinga borttagning**.
-   * Klicka eller tryck för att behålla erbjudandet **Avbryt**.
+   * Om du vill ta bort erbjudandet och ta bort det från upplevelserna väljer du **Tvinga borttagning**.
+   * Välj **Avbryt**.
 
 ### Söker efter erbjudanden {#searching-for-offers}
 
@@ -201,5 +201,5 @@ De aktuella sökvillkoren visas bredvid sökresultaten. Du kan också sortera re
 
 Så här söker du efter erbjudanden:
 
-1. Klicka på eller tryck på förstoringsglaset längst upp på Offers-konsolen. Som standard är sökningen begränsad till erbjudanden.
+1. Högst upp i konsolen Erbjudanden väljer du förstoringsglaset. Som standard är sökningen begränsad till erbjudanden.
 1. Ange ditt nyckelord om du vill söka efter erbjudanden. Välj bland resultaten.

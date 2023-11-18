@@ -2,9 +2,9 @@
 title: Förstå begäranden om Cloud Service innehåll
 description: Om du har köpt innehållsförfrågningslicenser från Adobe kan du ta reda på vilka typer av innehållsförfrågningar som Adobe Experience Cloud som en tjänst mäter och varianterna med en organisations analysrapporteringsverktyg.
 exl-id: 3666328a-79a7-4dd7-b952-38bb60f0967d
-source-git-commit: dc01da4c85b37f21deb169b941c0cf2a958298b8
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1162'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Se även [Licensieringspanel](/help/implementing/cloud-manager/license-dashboard
 
 ## Förstå begäranden om Cloud Service innehåll {#about-content-request}
 
-Innehållsförfrågningar spåras automatiskt vid kanten av Adobe Experience Manager (AEM) as a Cloud Service, via automatiserad analys av loggfiler som kommer från det AEM as a Cloud Service CDN, där förfrågningar om att returnera HTML (text/html) eller JSON-innehåll (application/json) från CDN isoleras, och baserat på ett antal inkluderings- och exkluderingsregler som anges nedan. En innehållsbegäran sker oberoende av det returnerade innehåll som opereras från CDN-cachen eller går tillbaka till CDN-källan (AEM).
+Innehållsförfrågningar spåras automatiskt vid kanten av Adobe Experience Manager (AEM) as a Cloud Service, via automatiserad analys av loggfiler som kommer från det AEM as a Cloud Service CDN, där förfrågningar om att returnera HTML (text/html) eller JSON-innehåll (application/json) från CDN isoleras, och baserat på flera av de regler för inkludering och uteslutning som beskrivs nedan. En innehållsbegäran sker oberoende av det returnerade innehåll som opereras från CDN-cachen eller går tillbaka till CDN-källan (AEM).
 
 För kunder som lägger sitt eget CDN ovanpå AEM as a Cloud Service resulterar den här spårningen i siffror som inte kan användas för att jämföra med förfrågningar om licensierat innehåll, som måste mätas av kunden i kanten av det yttre CDN.
 

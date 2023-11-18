@@ -2,9 +2,9 @@
 title: Lägga till ContextHub på Pages och Access Stores
 description: Lägg till ContextHub på sidorna för att aktivera ContextHub-funktionerna och länka till ContextHub JavaScript-biblioteken
 exl-id: 8bfe2cff-3944-4e86-a95c-ebf1cb13913c
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '923'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ContextHub JavaScript-API:t ger åtkomst till kontextdata som ContextHub hantera
 
 ## Lägga till ContextHub i en sidkomponent {#adding-contexthub-to-a-page-component}
 
-Om du vill aktivera ContextHub-funktionerna och länka till ContextHub JavaScript-biblioteken inkluderar du `contexthub` i `head` på sidan. HTML-koden för sidkomponenten ska likna följande exempel:
+Om du vill aktivera ContextHub-funktionerna och länka till ContextHub JavaScript-biblioteken inkluderar du `contexthub` -komponenten i `head` på sidan. HTML-koden för sidkomponenten ska likna följande exempel:
 
 ```xml
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
@@ -34,14 +34,14 @@ Använd ContextHub-arkiv för att behålla kontextdata. ContextHub innehåller f
 * [JSONPStore](contexthub-api.md#contexthub-store-persistedjsonpstore)
 * [PersistedJSONPStore](contexthub-api.md#contexthub-store-persistedstore)
 
-Alla butikstyper är tillägg till [`ContextHub.Store.Core`](contexthub-api.md#contexthub-store-core) klassen. Mer information om hur du skapar en ny typ av butik finns i [Skapa anpassade butiker](extending-contexthub.md#creating-custom-store-candidates). Mer information om olika typer av exempelarkiv finns i [Exempel på ContextHub Store-kandidater](sample-stores.md).
+Alla butikstyper är tillägg till [`ContextHub.Store.Core`](contexthub-api.md#contexthub-store-core) klassen. Mer information om hur du skapar en butikstyp finns i [Skapa anpassade butiker](extending-contexthub.md#creating-custom-store-candidates). Mer information om olika typer av exempelarkiv finns i [Exempel på ContextHub Store-kandidater](sample-stores.md).
 
 ### Beständiga lägen {#persistence-modes}
 
 Kontextnavlager använder ett av följande beständiga lägen:
 
 * **Lokal:** Använder HTML5 localStorage för att behålla data. Lokal lagring sparas i webbläsaren i alla sessioner.
-* **Session:** HTML5 sessionStorage används för att lagra data. Sessionslagringsplatsen sparas under hela webbläsarsessionen och är tillgänglig för alla webbläsarfönster.
+* **Session:** Använder HTML5 sessionStorage för att behålla data. Sessionslagringsplatsen sparas under hela webbläsarsessionen och är tillgänglig för alla webbläsarfönster.
 * **Cookie:** Använder webbläsarens inbyggda stöd för cookies för datalagring. Cookie-data skickas till och från servern i HTTP-begäranden.
 * **Fönster.namn:** Använder egenskapen window.name för att behålla data.
 * **Minne:** Använder ett JavaScript-objekt för att bevara data.
@@ -85,7 +85,7 @@ Trädstrukturen definierar dataobjekt i arkivet som nyckel/värde-par. I ovanst�
 
 ContextHub tillhandahåller [`ContextHub.Utils.JSON.tree`](contexthub-api.md#contexthub-utils-json-tree) -klass för att hantera JavaScript-objekt. Använd funktionerna i den här klassen för att ändra JavaScript-objekt innan du lägger till dem i en butik eller efter att du har fått dem från en butik.
 
-Dessutom finns [`ContextHub.Utils.JSON`](contexthub-api.md#contexthub-utils-json) -klassen innehåller funktioner för att serialisera objekt till strängar och deserialisera strängar till objekt. Använd den här klassen för att hantera JSON-data för webbläsare som inte innehåller `JSON.parse` och `JSON.stringify` funktioner.
+Dessutom finns [`ContextHub.Utils.JSON`](contexthub-api.md#contexthub-utils-json) -klassen innehåller funktioner för att serialisera objekt till strängar och för att deserialisera strängar till objekt. Använd den här klassen för att hantera JSON-data för webbläsare som inte innehåller `JSON.parse` och `JSON.stringify` funktioner.
 
 ## Interagera med ContextHub Stores {#interacting-with-contexthub-stores}
 
@@ -134,7 +134,7 @@ Följande segment installeras med [WKND självstudiewebbplats](/help/implementin
 
 De regler som används för att lösa dessa segment sammanfattas enligt följande:
 
-* Först [geolokalisering](sample-stores.md#contexthub-geolocation-sample-store-candidate) används för att fastställa användarens latitud.
+* Först den [geolokalisering](sample-stores.md#contexthub-geolocation-sample-store-candidate) används för att fastställa användarens latitud.
 * Sedan månadsdataobjektet för [surferinfo store](sample-stores.md#contexthub-surferinfo-sample-store-candidate) bestämmer vilken årstid det är i den latituden.
 
 >[!WARNING]
@@ -143,7 +143,7 @@ De regler som används för att lösa dessa segment sammanfattas enligt följand
 
 ## Debugging ContextHub {#debugging-contexthub}
 
-Det finns ett antal alternativ för felsökning av ContextHub, bland annat att generera loggar. Se [ContextHub konfigureras för mer information.](configuring-contexthub.md#logging-debug-messages-for-contexthub)
+Det finns flera alternativ för felsökning av ContextHub, bland annat att generera loggar. Se [ContextHub konfigureras för mer information.](configuring-contexthub.md#logging-debug-messages-for-contexthub)
 
 ## Se en översikt över ContextHub Framework {#see-an-overview-of-the-contexthub-framework}
 

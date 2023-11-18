@@ -4,9 +4,9 @@ description: Läs om de kraftfulla synkroniseringsalternativen för Live Copy oc
 feature: Multi Site Manager
 role: Admin
 exl-id: 0c97652c-edac-436e-9b5b-58000bccf534
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2425'
+source-wordcount: '2414'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Konfigurera Live Copy-synkronisering {#configuring-live-copy-synchronization}
 
-Adobe Experience Manager har ett antal färdiga synkroniseringskonfigurationer. Innan du använder Live-kopior bör du överväga följande för att definiera hur och när Live-kopior ska synkroniseras med sitt källinnehåll.
+Adobe Experience Manager har flera färdiga synkroniseringskonfigurationer. Innan du använder Live-kopior bör du överväga följande för att definiera hur och när Live-kopior ska synkroniseras med sitt källinnehåll.
 
 1. Bestäm om befintliga utrullningskonfigurationer uppfyller dina krav
 1. Om befintliga utrullningskonfigurationer inte gör det, bestämmer du om du behöver skapa en egen.
@@ -157,7 +157,7 @@ I följande lista över platser där du kan ange vilka rollout-konfigurationer s
 En ritning använder till exempel [WKND, genomgång](/help/implementing/developing/introduction/develop-wknd-tutorial.md) som källinnehåll. En webbplats skapas utifrån planen. Varje post i följande lista beskriver olika scenarier för användning av utrullningskonfigurationer:
 
 * Ingen av ritningssidorna eller Live Copy-sidorna är konfigurerade att använda en utrullningskonfiguration. MSM använder systemets standardkonfiguration för utrullning av alla Live Copy-sidor.
-* WKND-platsens rotsida är konfigurerad med flera utrullningskonfigurationer. MSM använder dessa utrullningskonfigurationer för alla Live Copy-sidor.
+* WKND-platsens rotsida är konfigurerad med flera utrullningskonfigurationer. MSM använder dessa rollout-konfigurationer för alla Live Copy-sidor.
 * Rotsidan för WKND-webbplatsen är konfigurerad med flera rollout-konfigurationer och rotsidan för Live Copy-webbplatsen är konfigurerad med en annan uppsättning rollout-konfigurationer. MSM använder de utrullningskonfigurationer som är konfigurerade på Live Copy-webbplatsens rotsida.
 
 ### Ställa in utrullningskonfigurationer för en Live Copy-sida {#setting-the-rollout-configurations-for-a-live-copy-page}
@@ -182,13 +182,13 @@ Du kan också konfigurera utrullningskonfigurationerna för en Live Copy-sida n�
 
    ![Åsidosätter Live Copy-konfigurationsarv](../assets/live-copy-inherit-override.png)
 
-1. Klicka eller tryck **Spara och stäng**.
+1. Välj **Spara och stäng**.
 
 ### Ställa in utrullningskonfiguration för en blåtryckssida {#setting-the-rollout-configuration-for-a-blueprint-page}
 
 Konfigurera en ritningssida med de utrullningskonfigurationer som ska användas när ritningssidan rullas ut.
 
-Observera att de underordnade sidorna för den blå sidan ärver konfigurationen. När du konfigurerar utrullningskonfigurationen att använda kan du åsidosätta konfigurationen som sidan ärver från sin överordnade.
+De underordnade sidorna för ritningssidan ärver konfigurationen. När du konfigurerar utrullningskonfigurationen att använda kan du åsidosätta konfigurationen som sidan ärver från sin överordnade.
 
 1. Använd **Webbplatser** för att välja rotsidan för ritningen.
 1. Välj **Egenskaper** i verktygsfältet.

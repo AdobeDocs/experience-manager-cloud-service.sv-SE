@@ -2,9 +2,9 @@
 title: Utöka Multi Site Manager
 description: Lär dig hur du utökar funktionerna i Multi Site Manager.
 exl-id: 4b7a23c3-65d1-4784-9dea-32fcceca37d1
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2435'
+source-wordcount: '2425'
 ht-degree: 0%
 
 ---
@@ -110,7 +110,7 @@ Till exempel en `LiveAction` måste lagra namnet på den som skapat ritningen. E
 
 Parametern för [`LiveActionFactory.createAction`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/msm/api/LiveActionFactory.html) metoden är en `Resource` -objekt. Detta `Resource` objektet representerar `cq:LiveSyncAction` nod för den här live-åtgärden i rollout-konfigurationen.
 
-Se dokumentet [Skapa en utrullningskonfiguration](/help/sites-cloud/administering/msm/live-copy-sync-config.md#creating-a-rollout-configuration) för mer information.
+Se [Skapa en utrullningskonfiguration](/help/sites-cloud/administering/msm/live-copy-sync-config.md#creating-a-rollout-configuration) för mer information.
 
 Som vanligt när du använder en konfigurationsnod bör du anpassa den till en `ValueMap` objekt:
 
@@ -136,7 +136,7 @@ Följande objekt anges som parametrar för `execute` metod för `LiveAction` obj
    * The `autoSave` värdet anger om `LiveAction` bör spara ändringar som görs i databasen
    * The `reset` värdet anger läget för återställning av utrullning.
 
-Från dessa objekt kan du hämta all information om `LiveCopy`. Du kan också använda `Resource` objekt att hämta `ResourceResolver`, `Session`och `Node` objekt. De här objekten är användbara för att hantera databasinnehåll:
+Från dessa objekt kan du få information om `LiveCopy`. Du kan också använda `Resource` objekt att hämta `ResourceResolver`, `Session`och `Node` objekt. De här objekten är användbara för att hantera databasinnehåll:
 
 I den första raden i följande kod är källan `Resource` källsidans objekt:
 
@@ -349,7 +349,7 @@ Lägg till beroenden så att Eclipse-kompilatorn kan referera till klasserna som
 
 Följande `LiveActionFactory` class implements a `LiveAction` som loggar meddelanden om käll- och målsidor och kopierar `cq:lastModifiedBy` från källnoden till målnoden. Den aktiva åtgärdens namn är `exampleLiveAction`.
 
-1. I Eclipse Project Explorer högerklickar du på `MyLiveActionFactory-bundle/src/main/java/com.adobe.example.msm` paketera och klicka **Nytt** -> **Klass**.
+1. I Eclipse Project Explorer högerklickar du på `MyLiveActionFactory-bundle/src/main/java/com.adobe.example.msm` paketera och klicka **Nytt** > **Klass**.
 
 1. För **Namn**, ange `ExampleLiveActionFactory` och sedan klicka **Slutför**.
 
@@ -617,7 +617,7 @@ Då måste du se till att:
 * E-postadress:
 
    * Utesluts från de utrullade egenskaperna.
-   * Se dokumentet [Konfigurera Live Copy-synkronisering](/help/sites-cloud/administering/msm/live-copy-sync-config.md#excluding-properties-and-node-types-from-synchronization) för mer information.
+   * Se [Konfigurera Live Copy-synkronisering](/help/sites-cloud/administering/msm/live-copy-sync-config.md#excluding-properties-and-node-types-from-synchronization) för mer information.
 
 * Visuell huvudstil:
 

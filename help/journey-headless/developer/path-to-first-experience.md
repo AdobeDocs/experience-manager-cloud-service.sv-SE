@@ -2,9 +2,9 @@
 title: Vägen till din första upplevelse med AEM utan headless
 description: I den här delen av den AEM Headless Developer Journey kommer du att förstå hur du implementerar din första headless-upplevelse i AEM, inklusive planeringsöverväganden, och också lära dig bästa praxis för att göra din väg så smidig som möjligt.
 exl-id: 172ad8d8-5067-4452-bf91-1eea9a39a7bc
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '1995'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Ni vill skapa en enhetlig upplevelse och hantera personaliserade kampanjer i all
 
 Istället bör ni överväga hur innehåll på olika ytor är relaterat till en organiseringsprincip som varumärken och produkthierarkier, kategorier av varor eller ytor, eller steg i kundresan. Om du t.ex. har en uppsättning ytor som stöder ett visst varumärke med bilar som du tillverkar, kanske du vill börja med en innehållsmodell för allmän information som är sann för hela bilen och sedan har mer - specifika element som innehåll som behövs när bilen startar vid serviceproblem. En sådan modell kommer att genomdriva arv av allmänt varumärkesinnehåll samtidigt som den möjliggör förändringar baserat på det specifika sammanhang som behövs. Det hjälper även till med framtida hantering av uppdateringar av det här innehållet eftersom ni kan tillämpa kontroll baserat på roller som den övergripande marknadsföraren eller produktchefen för hela varumärket jämfört med en författare som ansvarar för upplevelsen av att starta bilen.
 
-När du har innehållsmodellen och en tydlig vy över de olika klienter som innehållet ska visas för, måste du se till att de GraphQL/API:er som är kopplade till åtkomsten till olika innehållsmodeller publiceras till alla klienter som behöver det här innehållet. Det finns olika sätt att komma åt visst innehåll. Du kan begära ett visst statiskt innehåll som möjliggör cachelagring av innehållet och högre prestanda. Du kan också begära dynamiskt genererat innehåll som kräver mer bearbetning. Se till att kunderna utnyttjar de API:er som är mest effektiva för deras affärsbehov.
+När du har innehållsmodellen och en tydlig bild av de olika klienterna som innehållet måste visas för, måste du se till att de GraphQL/API:er som är kopplade till åtkomsten till olika innehållsmodeller publiceras till alla klienter som behöver det här innehållet. Det finns olika sätt att komma åt visst innehåll. Du kan begära ett visst statiskt innehåll som möjliggör cachelagring av innehållet och högre prestanda. Du kan också begära dynamiskt genererat innehåll som kräver mer bearbetning. Se till att kunderna använder de API:er som är mest effektiva för deras affärsbehov.
 
 ## Förstå era miljöer {#understanding-environments}
 
@@ -68,7 +68,7 @@ Under utvecklingsfasen rekommenderar vi att du arbetar med en utvecklings- och s
 
 ### Samarbete mellan utvecklare och innehållsförfattare {#cooperation}
 
-Utvecklarna behöver en AEM utvecklingsmiljö som är anpassad efter de populära innehållsmodellerna. Utvecklaren utvecklar klienten som konsumerar innehåll från AEM headless eftersom innehållsförfattarna fortfarande skapar innehållet. Därför är API-definitionerna mycket viktiga. Genom att utnyttja AEM SDK kan utvecklaren skapa en testkrok så att klient- och enhetstester kan skapas för att säkerställa att klienten kan återge innehållet på rätt sätt.
+Utvecklarna behöver en AEM utvecklingsmiljö som är anpassad efter de populära innehållsmodellerna. Utvecklaren utvecklar klienten som konsumerar innehåll från AEM headless eftersom innehållsförfattarna fortfarande skapar innehållet. Därför är API-definitionerna mycket viktiga. Genom att använda AEM SDK kan utvecklaren skapa en testkrok så att klient- och enhetstester kan skapas för att säkerställa att klienten kan återge innehållet på rätt sätt.
 
 Innehållsförfattare skapar innehåll baserat på de innehållsmodeller som har definierats i mellanlagringsmiljön. Med hjälp av utvecklingsverktyget för innehållsfragment kan författaren skapa ett innehållsfragment eller redigera ett befintligt innehållsfragment. Innan den publiceras kan författaren förhandsgranska hur den kommer att se ut i klienten genom att arbeta med utvecklaren för att överföra innehållsmodellen till utveckling eller konfigurera en utvecklingsmiljö enbart för att författarna ska kunna se hur den skulle se ut i klienten.
 

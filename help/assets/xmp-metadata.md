@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: fd9af408-d2a3-4c7a-9423-c4b69166f873
-source-git-commit: 5da4be3ec9af6a00cce8d80b8eea7f7520754a1d
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 17%
@@ -23,7 +23,7 @@ XMP (Extensible Metadata Platform) är den metadatastandard som används av Expe
 
 Förutom universell metadatakodning som kan bäddas in i alla filformat har XMP [innehållsmodell](#xmp-core-concepts) och är [stöds av Adobe](#advantages-of-xmp) och andra företag, så att användare av XMP i kombination med [!DNL Assets] har en kraftfull plattform att bygga vidare på.
 
-## XMP översikt och ekosystem {#xmp-ecosystem}
+## Översikt över XMP och ekosystem {#xmp-ecosystem}
 
 [!DNL Assets] stöder XMP metadatastandard. XMP är en standard för bearbetning och lagring av standardiserade och egna metadata i digitala resurser. XMP är en standard som gör att flera program kan arbeta effektivt med metadata.
 
@@ -33,7 +33,7 @@ XMP standardiserar hur metadata definieras, skapas och bearbetas genom att tillh
 
 Alla äldre metadata från EXIF, ID3 eller Microsoft Office översätts automatiskt till XMP, som kan utökas för att stödja kundspecifika metadatamatchningar, som produktkataloger.
 
-Metadata i XMP består av en uppsättning egenskaper. Dessa egenskaper är alltid kopplade till en specifik enhet som kallas resurs. Egenskaperna är alltså&quot;om&quot; resursen. När det gäller XMP är resursen alltid resursen.
+Metadata i XMP består av en uppsättning egenskaper. De här egenskaperna är alltid kopplade till en specifik entitet som kallas en resurs, d.v.s. egenskaperna är&quot;om&quot; resursen. När det gäller XMP är resursen alltid resursen.
 
 XMP definierar en [metadatamodell](https://sv.wikipedia.org/wiki/Metadata) som kan användas med alla definierade metadataobjekt. XMP definierar också särskilda [scheman](https://en.wikipedia.org/wiki/XML_schema) för grundläggande egenskaper som är användbara för att logga en resurs historik genom olika bearbetningssteg – från fotografering, [skanning](https://sv.wikipedia.org/wiki/Bildl%C3%A4sare) och textredigering via fotoredigeringssteg (som [beskärning](https://sv.wikipedia.org/wiki/Bildbesk%C3%A4rning) eller färgjustering) till den slutliga bilden. Med XMP kan alla program och enheter längs vägen lägga till egen information i en digital resurs, som sedan sparas i den slutliga digitala filen.
 
@@ -92,9 +92,9 @@ I detta fall [!DNL Assets] sparar ändringarna i **[!UICONTROL Title]** -egenska
 >
 >Återskrivningsfunktionen är inte aktiverad som standard i [!DNL Assets]. Se hur man [aktivera metadatatillbakaskrivning](#enable-xmp-writeback). MSM för digitala resurser fungerar inte när återkoppling av metadata är aktiverat. Vid tillbakaskrivning avbryts arvet.
 
-### Aktivera XMP {#enable-xmp-writeback}
+### Aktivera XMP tillbakaskrivning {#enable-xmp-writeback}
 
-[!UICONTROL DAM Metadata Writeback] arbetsflödet används för att skriva tillbaka metadata för en resurs. Om du vill aktivera tillbakaskrivning följer du någon av följande tre metoder:
+[!UICONTROL DAM Metadata Writeback] arbetsflödet används för att skriva tillbaka metadata för en resurs. Gör något av följande om du vill aktivera tillbakaskrivning:
 
 * Använd startprogram.
 * Starta manuellt `DAM MetaData Writeback` arbetsflöde.
@@ -129,11 +129,11 @@ To let the XMP write-back feature propagate metadata changes to select rendition
 
 For the XMP write-back feature to propagate metadata to the rendition thumbnails 140.100.png and 319.319.png, perform these steps.
 
-1. Tap/click the Experience Manager logo, and then navigate to **[!UICONTROL Tools]** &gt; **[!UICONTROL Workflow]** &gt; **[!UICONTROL Models]**.
+1. Select the Experience Manager logo, and then navigate to **[!UICONTROL Tools]** &gt; **[!UICONTROL Workflow]** &gt; **[!UICONTROL Models]**.
 1. From the Models page, open the **[!UICONTROL DAM Metadata Writeback]** workflow model.
 1. In the **[!UICONTROL DAM Metadata Writeback]** properties page, open the **[!UICONTROL XMP Writeback Process]** step.
-1. In the **[!UICONTROL Step Properties]** dialog box, tap/click the **[!UICONTROL Process]** tab.
-1. In the **[!UICONTROL Arguments]** box, add `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`, and then tap/click **[!UICONTROL OK]**.
+1. In the **[!UICONTROL Step Properties]** dialog box, select the **[!UICONTROL Process]** tab.
+1. In the **[!UICONTROL Arguments]** box, add `rendition:cq5dam.thumbnail.140.100.png,rendition:cq5dam.thumbnail.319.319.png`, and then select **[!UICONTROL OK]**.
 
    ![step_properties](assets/step_properties.png)
 

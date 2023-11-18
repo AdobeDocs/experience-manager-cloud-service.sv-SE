@@ -2,10 +2,10 @@
 title: Projekt
 description: Med projekt kan du gruppera resurser i en enhet vars gemensamma, delade miljö gör det enkelt att hantera dina projekt
 exl-id: c5f3331e-637f-4816-be83-faf2df59bd5f
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1255'
-ht-degree: 9%
+source-wordcount: '1253'
+ht-degree: 8%
 
 ---
 
@@ -37,7 +37,7 @@ Projektkonsolen är den plats där du får åtkomst till och hanterar dina proje
 ![Projects-konsolen](/help/sites-cloud/authoring/assets/projects-console.png)
 
 * Välj **Tidslinje** och sedan ett projekt för att visa tidslinjen.
-* Klicka/tryck **Välj** för att gå till markeringsläge.
+* Välj **Välj** för att gå till markeringsläge.
 * Klicka **Skapa** för att lägga till projekt.
 * **Växla aktiva projekt** Med kan du växla mellan alla projekt och endast de som är aktiva.
 * **Visa statistikvy** I kan du visa projektstatistik för slutförda uppgifter.
@@ -71,7 +71,7 @@ Du överför resurser direkt i rutan. Du kan dessutom skapa bilduppsättningar, 
 
 ### Resurssamlingar {#asset-collections}
 
-På samma sätt som resurser kan du lägga till [resurssamlingar](/help/assets/manage-collections.md) direkt till projektet. Du definierar samlingar i Resurser.
+Precis som resurser kan du lägga till [resurssamlingar](/help/assets/manage-collections.md) direkt till projektet. Du definierar samlingar i Resurser.
 
 ![Resurssamling](/help/sites-cloud/authoring/assets/projects-asset-collections.png)
 
@@ -131,7 +131,7 @@ Du kan lägga till och ta bort teammedlemmar från teamet. Dessutom kan du redig
 
 ### Arbetsflöden {#workflows}
 
-Du kan tilldela ditt projekt för att följa vissa arbetsflöden. Om något arbetsflöde körs visas deras status i **Arbetsflöden** i Projekt.
+Du kan tilldela ditt projekt för att följa vissa arbetsflöden. Om något arbetsflöde körs visas deras status i **Arbetsflöden** sida vid sida i projekt.
 
 ![Arbetsflöden](/help/sites-cloud/authoring/assets/project-workflows.png)
 
@@ -165,17 +165,17 @@ Beroende på vilken mall du väljer har du olika alternativ tillgängliga, särs
 
 De olika användarrollerna anges i en projektmall och används av två primära orsaker:
 
-1. Behörigheter. Användarrollerna tillhör en av de tre kategorier som visas: Observer, Editor, Owner. En fotograf eller en copywriter har till exempel samma behörighet som en redigerare. Behörigheterna avgör vad en användare kan göra med innehållet i ett projekt.
-1. Arbetsflöden. Arbetsflödena avgör vem som tilldelas uppgifter i ett projekt. Uppgifterna kan kopplas till en projektroll. En uppgift kan till exempel tilldelas fotografer så att alla gruppmedlemmar som har rollen fotograf får uppgiften.
+1. Behörigheter. Användarrollerna tillhör en av de tre kategorierna: observatör, redigerare, ägare. En fotograf eller en copywriter har till exempel samma behörighet som en redigerare. Behörigheterna avgör vad en användare kan göra med innehållet i ett projekt.
+1. Arbetsflöden. Arbetsflödena avgör vem som tilldelas uppgifter i ett projekt. Uppgifterna kan associeras med en projektroll. En uppgift kan till exempel tilldelas fotografer så att alla gruppmedlemmar som har rollen fotograf får uppgiften.
 
 Alla projekt har stöd för följande standardroller så att du kan administrera säkerhet och kontrollbehörigheter:
 
 | Roll | Beskrivning | Behörigheter | Gruppmedlemskap |
 |---|---|---|---|
 | Observer | En användare i den här rollen kan visa projektinformation, inklusive projektstatus. | Skrivskyddade behörigheter i ett projekt | `workflow-users` grupp |
-| Redigerare | En användare med den här rollen kan överföra och redigera innehållet i ett projekt. | Läs- och skrivåtkomst för ett projekt, tillhörande metadata och tillhörande resurser. behörighet att ladda upp en tagningslista samt granska och godkänna mediefiler, skrivtillstånd för /etc/commerce, ändra behörighet för ett specifikt projekt | arbetsflödesgrupp |
+| Redigerare | En användare med den här rollen kan överföra och redigera innehållet i ett projekt. | Läs- och skrivbehörighet för ett projekt, associerade metadata och relaterade resurser, behörighet att överföra en tagningslista och granska och godkänna resurser, skrivbehörighet för /etc/commerce, ändra behörighet för ett specifikt projekt | arbetsflödesgrupp |
 | Ägare | En användare med den här rollen kan initiera ett projekt. En ägare kan skapa ett projekt, initiera arbete i ett projekt och även flytta godkända resurser till produktionsmappen. Även om alla andra uppgifter i projektet kan visas och utföras av ägaren. | Skrivbehörighet för `/etc/commerce` | `dam-users` grupp (för att kunna skapa ett projekt) projekt-administratörsgrupp (för att kunna skapa ett projekt och flytta resurser) |
 
 >[!NOTE]
 >
->När du skapar projektet och lägger till användare för de olika rollerna skapas grupper som är kopplade till projektet automatiskt för att hantera associerade behörigheter. Ett projekt med namnet Myproject skulle till exempel ha tre grupper, **Myproject Owners**, **Myproject Editors** och **Myproject Observers**. Om projektet tas bort tas de grupperna dock inte bort automatiskt. En administratör måste ta bort grupperna manuellt i **Verktyg** > **Säkerhet** > **Grupper**.
+>När du skapar projektet och lägger till användare för de olika rollerna skapas grupper som är kopplade till projektet automatiskt för att hantera associerade behörigheter. Ett projekt med namnet Myproject skulle till exempel ha tre grupper, **Myproject Owners**, **Myproject Editors** och **Myproject Observers**. Om projektet tas bort tas de grupperna dock inte bort automatiskt. Administratören måste ta bort grupperna i **verktyg** > **Säkerhet** > **Grupper**.

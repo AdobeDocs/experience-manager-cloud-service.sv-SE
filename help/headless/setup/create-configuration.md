@@ -1,15 +1,15 @@
 ---
-title: Skapa en konfiguration - Headless Setup
+title: Skapa en konfiguration - Headless-installation
 description: Skapa en konfiguration som ett första steg för att komma igång med headless på AEM as a Cloud Service.
 exl-id: 48801599-f279-4e55-8033-9c418d2af5bb
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '327'
-ht-degree: 0%
+source-wordcount: '325'
+ht-degree: 1%
 
 ---
 
-# Skapa en konfiguration - Headless Setup {#creating-configuration}
+# Skapa en konfiguration - Headless-installation {#creating-configuration}
 
 Som ett första steg till att komma igång med headless på AEM as a Cloud Service måste du skapa en konfiguration.
 
@@ -25,7 +25,7 @@ Om du känner till [sidmallar i en AEM-implementering,](/help/sites-cloud/author
 
 En administratör behöver bara skapa en konfiguration en gång, eller mycket sällan, när det krävs en ny arbetsyta för att kunna ordna dina innehållsmodeller. I den här guiden behöver vi bara skapa en konfiguration.
 
-1. Logga in AEM as a Cloud Service och välj **Verktyg -> Allmänt -> Konfigurationsläsaren**.
+1. Logga in AEM as a Cloud Service och välj **Verktyg > Allmänt > Konfigurationsläsaren**.
 1. Ange en **Titel** och **Namn** för din konfiguration.
    * The **Titel** ska vara beskrivande.
    * The **Namn** blir nodnamnet i databasen.
@@ -37,7 +37,7 @@ En administratör behöver bara skapa en konfiguration en gång, eller mycket s�
 
    ![Skapa konfiguration](../assets/create-configuration.png)
 
-1. Tryck eller klicka **Skapa**
+1. Välj **Skapa**
 
 Du kan skapa flera konfigurationer om det behövs. Konfigurationer kan också kapslas.
 

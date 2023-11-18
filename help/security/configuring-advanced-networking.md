@@ -2,9 +2,9 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '3598'
+source-wordcount: '3594'
 ht-degree: 0%
 
 ---
@@ -195,7 +195,7 @@ Utan den dedikerade IP-adressfunktionen aktiverad flödar trafik från AEM as a 
 
 IP-adressen för den dedikerade IP-adressen är identisk med [flexibel portutgång](#configuring-flexible-port-egress-provision).
 
-Den största skillnaden är att trafiken alltid kommer att gå från en dedikerad, unik IP-adress. Om du vill hitta IP-adressen använder du en DNS-matchare för att identifiera IP-adressen som är associerad med `p{PROGRAM_ID}.external.adobeaemcloud.com`. IP-adressen förväntas inte ändras, men om den behöver ändras i framtiden kommer ett avancerat meddelande att skickas.
+Den största skillnaden är att trafiken alltid kommer att gå från en dedikerad, unik IP-adress. Om du vill hitta IP-adressen använder du en DNS-matchare för att identifiera IP-adressen som är associerad med `p{PROGRAM_ID}.external.adobeaemcloud.com`. IP-adressen förväntas inte ändras, men om den måste ändras i framtiden kommer ett avancerat meddelande att skickas.
 
 Förutom routningsreglerna som stöds av flexibel portutgång i `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` slutpunkt, dedikerad IP-adress för utgångar stöder `nonProxyHosts` parameter. Detta gör att du kan deklarera en uppsättning värdar som ska dirigeras via ett delat IP-adressintervall i stället för den dedikerade IP-adressen, vilket kan vara användbart eftersom trafikutjämning via delade IP-adresser kan optimeras ytterligare. The `nonProxyHost` URL:er kan följa mönstren för `example.com` eller `*.example.com`, där jokertecknet bara stöds i början av domänen.
 
@@ -336,7 +336,7 @@ Kontrollera loggarna i måltjänsten om de är tillgängliga för att verifiera 
 ## Äldre dedikerade gruppadresskunder {#legacy-dedicated-egress-address-customers}
 
 Om du har etablerats med en dedikerad IP-adress före 2021.09.30, har din dedikerade IP-adressfunktion bara stöd för HTTP- och HTTPS-portar.
-Detta inkluderar HTTP/1.1 och HTTP/2 vid kryptering. Dessutom kan en dedikerad utgående slutpunkt bara prata med valfritt mål via HTTP/HTTPS på port 80/443.
+Detta inkluderar HTTP/1.1 och HTTP/2 vid kryptering. Dessutom kan en dedikerad slutpunkt bara kommunicera med vilket mål som helst via HTTP/HTTPS på port 80/443.
 
 ## VPN (Virtual Private Network) {#vpn}
 
@@ -371,7 +371,7 @@ Observera att även om det inte finns några trafikdirigeringsregler för miljö
 
 VPN-konfigurationen på programnivå kan uppdateras genom att anropa `PUT /api/program/<program_id>/network/<network_id>` slutpunkt.
 
-Observera att adressutrymmet inte kan ändras efter den första VPN-etableringen. Kontakta kundsupport om det är nödvändigt. Dessutom är `kind` parameter (`flexiblePortEgress`, `dedicatedEgressIP` eller `VPN`) kan inte ändras. Kontakta kundsupporten om du behöver hjälp med att beskriva vad som redan har skapats och orsaken till ändringen.
+Adressutrymmet kan inte ändras efter den första VPN-etableringen. Kontakta kundsupport om det är nödvändigt. Dessutom är `kind` parameter (`flexiblePortEgress`, `dedicatedEgressIP` eller `VPN`) kan inte ändras. Kontakta kundsupporten om du behöver hjälp med att beskriva vad som redan har skapats och orsaken till ändringen.
 
 Cirkulationsregler per miljö kan uppdateras genom att anropa `PUT /program/{programId}/environment/{environmentId}/advancedNetworking` slutpunkt, se till att inkludera hela uppsättningen konfigurationsparameter, i stället för en delmängd. Miljöuppdateringar tar vanligtvis 5-10 minuter att installera.
 
@@ -543,7 +543,7 @@ Om driftsavbrott skulle få allvarliga konsekvenser för verksamheten kontaktar 
 
 ## Avancerad nätverkskonfiguration för ytterligare publiceringsregioner {#advanced-networking-configuration-for-additional-publish-regions}
 
-När ytterligare en region läggs till i en miljö som redan har avancerade nätverk konfigurerade, dirigeras trafik från den extra publiceringsregionen som matchar de avancerade nätverksreglerna som standard via den primära regionen. Om den primära regionen blir otillgänglig tas emellertid den avancerade nätverkstrafiken bort om avancerade nätverk inte har aktiverats i den extra regionen. Om du vill optimera fördröjningen och öka tillgängligheten om någon av regionerna skulle drabbas av ett driftstopp är det nödvändigt att aktivera avancerade nätverk för ytterligare publiceringsregioner. Två olika scenarier beskrivs i följande avsnitt.
+När ytterligare en region läggs till i en miljö som redan har avancerade nätverk konfigurerade, dirigeras trafik från den extra publiceringsregionen som matchar de avancerade nätverksreglerna som standard via den primära regionen. Om den primära regionen blir otillgänglig tas emellertid den avancerade nätverkstrafiken bort om avancerade nätverk inte har aktiverats i den extra regionen. Om du vill optimera fördröjningen och öka tillgängligheten om någon av regionerna skulle råka ut för ett driftstopp är det nödvändigt att aktivera avancerade nätverk för ytterligare publiceringsregioner. Två olika scenarier beskrivs i följande avsnitt.
 
 >[!NOTE]
 >

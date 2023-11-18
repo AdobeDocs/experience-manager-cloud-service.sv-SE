@@ -4,9 +4,9 @@ description: Lär dig hur du hanterar AEM innehållsfragment från konsolen och 
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2532'
+source-wordcount: '2531'
 ht-degree: 0%
 
 ---
@@ -123,7 +123,7 @@ Vissa åtgärder är tillgängliga från konsolen - utan att du behöver välja 
 
   >[!NOTE]
   >
-  >The **Resurser** konsolen används för att komma åt resurser, som bilder, videor osv.  Konsolen kan nås:
+  >The **Resurser** konsolen används för att komma åt resurser, som bilder, videor och så vidare.  Konsolen kan nås:
   >
   >* med **Öppna i resurser** link (in the Content Fragments console)
   >* direkt från **Navigering** fönster
@@ -200,7 +200,7 @@ Vid hovring över mappnamnet visas JCR-sökvägen.
 
      ![Konsol för innehållsfragment - språkindikator](assets/cf-managing-console-language-indicator.png)
 
-   * Klicka/tryck på antalet för att öppna en dialogruta som visar alla språkkopior. Om du vill öppna en viss språkkopia klickar du på **Titel** i dialogrutan.
+   * Välj antal för att öppna en dialogruta som visar alla språkkopior. Om du vill öppna en viss språkkopia klickar du på **Titel** i dialogrutan.
 
      ![Konsol för innehållsfragment - språkdialogruta](assets/cf-managing-console-languages-dialog.png)
 
@@ -413,7 +413,7 @@ Ikonen anger språkområdet för innehållsfragmentet tillsammans med det totala
 
 ![Konsol för innehållsfragment - språkindikator](assets/cfc-console-language-indicator.png)
 
-Klicka/tryck på antalet för att öppna en dialogruta som visar alla språkkopior. Om du vill öppna en viss språkkopia klickar du på **Titel** i dialogrutan.
+Välj antal för att öppna en dialogruta som visar alla språkkopior. Om du vill öppna en viss språkkopia klickar du på **Titel** i dialogrutan.
 
 ![Konsol för innehållsfragment - språkdialogruta](assets/cf-managing-console-languages-dialog.png)
 

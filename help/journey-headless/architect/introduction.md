@@ -2,9 +2,9 @@
 title: Innehållsmodellering för AEM som ett headless CMS - en introduktion
 description: En introduktion till hur du använder funktionerna i Adobe Experience Manager as a Cloud Service som Headless CMS för att utforma innehåll för ditt projekt.
 exl-id: 62061d73-6fdb-440b-a7dd-b0d530d49186
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -29,14 +29,14 @@ Det här dokumentet hjälper er att förstå hur headless-innehåll levereras, h
 
 ![Klassisk CMS i full hög](/help/journey-headless/developer/assets/full-stack.png)
 
-I ett CMS-system i full hög finns alla funktioner för att hantera innehåll i CMS-systemet. Systemets funktioner består av olika komponenter i CMS-stacken. Lösningen i full hög har många fördelar.
+I ett CMS-system i full hög finns funktionen för att hantera innehåll i CMS-systemet. Systemets funktioner består av olika komponenter i CMS-stacken. Lösningen i full hög har många fördelar.
 
 * Det finns ett system att underhålla.
 * Innehållet hanteras centralt.
 * Alla tjänster i systemet är integrerade.
 * Det går smidigt att skapa innehåll.
 
-Om en ny kanal behöver läggas till eller stöd för nya typer av upplevelser krävs, kan en (eller flera) ny komponent infogas i högen och det finns bara en plats att göra ändringar på.
+Om en ny kanal måste läggas till eller stöd för nya typer av upplevelser krävs, kan en (eller flera) ny komponent infogas i högen och det finns bara en plats att göra ändringar på.
 
 ![Lägga till en ny kanal i högen](/help/journey-headless/developer/assets/adding-channel.png)
 
@@ -50,13 +50,13 @@ När vi talar om ett headless CMS hanterar CMS-systemet innehållet och fortsät
 
 ![Headless CMS](/help/journey-headless/developer/assets/headless-cms.png)
 
-De konsumerande tjänsterna, oavsett om de är AR-upplevelser, en webshop, mobilupplevelser, progressiva webbappar (PWA) osv., tar in innehåll från det headless CMS-systemet och tillhandahåller sin egen rendering. De ser till att kunna erbjuda sina egna huvuden för ert innehåll.
+De konsumerande tjänsterna, oavsett om de är AR-upplevelser, en webshop, mobilupplevelser, progressiva webbappar (PWA) och så vidare, tar in innehåll från det headless CMS-systemet och tillhandahåller sin egen rendering. De ser till att kunna erbjuda sina egna huvuden för ert innehåll.
 
 Om du utelämnar huvudet förenklas CMS-systemet genom att komplexiteten försvinner. När du gör det flyttas även ansvaret för att återge innehållet till de tjänster som faktiskt behöver innehållet och som ofta är bättre lämpade för sådan återgivning.
 
 ## Innehållsmodellering {#content-modeling}
 
-Innehållsmodellering (även kallat datamodellering) är din specialitet, så vad behöver du tänka på när du modellerar för headless?
+Innehållsmodellering (även kallat datamodellering) är din specialitet, så vad ska man tänka på när man modellerar för headless?
 
 För att headless-programmen ska kunna komma åt ditt innehåll och göra något med det måste innehållet verkligen ha en fördefinierad struktur. Det skulle vara möjligt att ha ert innehåll som fri form, men det skulle göra livet till *mycket* komplicerade för programmen.
 

@@ -2,9 +2,9 @@
 title: Miljövariabler för Cloud Manager
 description: Standardmiljövariabler kan konfigureras och hanteras via Cloud Manager och tillhandahållas i körningsmiljön, som används i OSGi-konfigurationen.
 exl-id: 5cdd5532-11fe-47a3-beb2-21967b0e43c6
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1010'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Exempel på vanliga användningsområden är:
 >Du måste vara medlem i [**Distributionshanteraren** roll](/help/onboarding/cloud-manager-introduction.md#role-based-premissions) för att lägga till eller ändra miljövariabler.
 
 1. Logga in på Adobe Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/).
-1. Cloud Manager visar de olika tillgängliga programmen. Välj den du vill hantera.
+1. Cloud Manager visar de olika tillgängliga programmen. Markera den du vill hantera.
 1. Välj **Miljö** väljer du sedan den miljö som du vill skapa en miljövariabel för i den vänstra navigeringspanelen.
 1. I detalj om miljön väljer du **Konfiguration** välj **Lägg till** för att öppna **Miljökonfiguration** -dialogrutan.
    * Om du lägger till en miljövariabel för första gången kan du se **Lägg till konfiguration** i mitten av sidan. Du kan använda den här knappen **Lägg till** för att öppna **Miljökonfiguration** -dialogrutan.
@@ -72,7 +72,7 @@ En indikator med status **Uppdaterar** visas högst upp i tabellen och bredvid d
 När du har skapat miljövariabler kan du uppdatera dem med **Lägg till/uppdatera** knappen för att starta **Miljökonfiguration** -dialogrutan.
 
 1. Logga in på Adobe Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/).
-1. Cloud Manager visar de olika tillgängliga programmen. Välj den du vill hantera.
+1. Cloud Manager visar de olika tillgängliga programmen. Markera den du vill hantera.
 1. Välj **Miljö** väljer du sedan den miljö som du vill skapa en miljövariabel för i den vänstra navigeringspanelen.
 1. I detalj om miljön väljer du **Konfiguration** välj **Lägg till/uppdatera** längst upp till höger för att öppna **Miljökonfiguration** -dialogrutan.
 
@@ -88,13 +88,13 @@ När du har skapat miljövariabler kan du uppdatera dem med **Lägg till/uppdate
 
    ![Redigera variabel](assets/edit-variable.png)
 
-1. När du har gjort alla nödvändiga konfigurationsändringar väljer du **Spara**.
+1. När du har gjort de nödvändiga konfigurationsändringarna väljer du **Spara**.
 
 [Som när du lägger till variabler](#add-variables) en indikator med status **Uppdaterar** visas högst upp i tabellen och bredvid de nyligen uppdaterade variablerna för att ange att miljön uppdateras med konfigurationen. När du är klar visas de uppdaterade miljövariablerna i tabellen.
 
 >[!TIP]
 >
->Du bör använda kommandot **Miljökonfiguration** om du vill uppdatera alla nödvändiga variabler samtidigt innan du trycker eller klickar **Spara**. På så sätt kan du lägga till dem med en uppdatering i miljön.
+>Om du vill uppdatera flera variabler bör du använda **Miljökonfiguration** om du vill uppdatera alla nödvändiga variabler samtidigt innan du trycker eller klickar **Spara**. På så sätt kan du lägga till dem med en uppdatering i miljön.
 
 ## Använda miljövariabler {#using}
 

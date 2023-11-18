@@ -2,10 +2,10 @@
 title: Hantera aktiviteter
 description: Med aktivitetskonsolen kan ni skapa, organisera och hantera marknadsföringsaktiviteter för era varumärken
 exl-id: e7cab16d-7678-472d-b75f-7f67b303ba8d
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2020'
-ht-degree: 18%
+source-wordcount: '1960'
+ht-degree: 15%
 
 ---
 
@@ -21,7 +21,7 @@ Med aktivitetskonsolen kan du skapa, ordna och hantera marknadsföring [verksamh
 >
 >Om du använder Adobe Target som målmotor kan du också [visa resultatdata för dina aktiviteter](#viewing-performance-and-converting-winning-experiences-a-b-test). Om du använder A/B-testning kan du [konvertera vinnare](#viewing-performance-and-converting-winning-experiences-a-b-test).
 
-På aktivitetskonsolen ordnas aktiviteterna efter varumärke. Du kan använda varumärken och mappar för att strukturera organisationen av dina aktiviteter. Du navigerar till aktivitetskonsolen genom att trycka/klicka **Personalisering** och knacka/klicka **Verksamhet**.
+På aktivitetskonsolen ordnas aktiviteterna efter varumärke. Du kan använda varumärken och mappar för att strukturera organisationen av dina aktiviteter. Du navigerar till aktivitetskonsolen genom att trycka på/klicka **Personalisering** och knacka/klicka **Verksamhet**.
 
 Aktiviteter är tillgängliga i målinriktningsläge för [skapa riktat innehåll](/help/sites-cloud/authoring/personalization/targeted-content.md), där du också kan skapa aktiviteter. Aktiviteter som du skapar i målläge visas i aktivitetskonsolen.
 
@@ -47,7 +47,7 @@ Aktiviteter visas med en etikett som beskriver vilken typ av aktivitet som defin
 >
 >Du måste skydda noden för aktivitetsinställningar `cq:ActivitySettings` på publiceringsinstansen så att den inte är tillgänglig för vanliga användare. Noden för aktivitetsinställningar ska bara vara tillgänglig för tjänsten som hanterar aktivitetssynkroniseringen till Adobe Target.
 >
->Mer information finns i Förutsättningar för att integrera med Adobe Target.
+>Mer information finns i Krav för att integrera med Adobe Target.
 <!--
 >See [Prerequisites for Integrating with Adobe Target](/help/sites-administering/target-requirements.md#securingtheactivitysettings) for detailed information.
 -->
@@ -58,14 +58,14 @@ Skapa ett varumärke som ni vill hantera marknadsföringsaktiviteter för.
 
 När du skapar ett varumärke med hjälp av aktivitetskonsolen visas det också i [Erbjuder konsol](/help/sites-cloud/authoring/personalization/offers.md) där ni kan skapa erbjudanden för upplevelserna av era aktiviteter.
 
-1. Klicka eller tryck på navigeringskonsolen **Personalisering**. Klicka eller tryck **Verksamhet**.
+1. Välj i navigeringskonsolen **Personalisering**. Välj **Verksamhet**.
 
    ![Navigera till aktiviteter](/help/sites-cloud/authoring/assets/activities-navigation.png)
 
-1. Klicka eller tryck på aktivitetskonsolen **Skapa** sedan **Skapa varumärke**.
-1. Välj varumärkesmallen och klicka eller peka **Nästa**.
+1. Välj i aktivitetskonsolen **Skapa** sedan **Skapa varumärke**.
+1. Välj varumärkesmallen och välj **Nästa**.
 1. Skriv en rubrik för varumärket som du vill att det ska visas i aktivitets- och offertkonsolerna. Du kan också ange eller markera en eller flera taggar som ska kopplas till varumärket.
-1. Klicka eller tryck **Skapa**. Ditt varumärke visas i aktivitetskonsolen.
+1. Välj **Skapa**. Ditt varumärke visas i aktivitetskonsolen.
 
 ## Lägga till/redigera en aktivitet med aktivitetskonsolen {#adding-editing-an-activity-using-the-activities-console}
 
@@ -74,7 +74,7 @@ Lägg till en aktivitet eller redigera en befintlig aktivitet för att fokusera 
 * **Namn:** Namnet på aktiviteten.
 * **Målinriktningsmotor:** Antingen [AEM](/help/sites-cloud/authoring/personalization/overview.md#aem) eller [Adobe Target](/help/sites-cloud/authoring/personalization/overview.md#adobe-target) som motor för målinriktat innehåll.
 * **Välj en målkonfiguration:** (Endast Adobe Target) Den molnkonfiguration som den här aktiviteten ska använda för att ansluta till Adobe Target. Det här alternativet visas bara när Adobe Target har valts som målinriktningsmotor.
-* **Typ av aktivitet**: Aktivitetstypen - A/B-test eller målinriktning mot upplevelsen
+* **Typ av aktivitet**: Aktivitetstyp - A/B-test eller målinriktning mot upplevelsen
 * **Mål:** (Valfritt) En beskrivning av aktiviteten.
 * **Upplevelser:** Mappningar mellan målgruppsnamn och de marknadssegment som ni riktar in er på.
 * **Trafikprocent:** Om A/B-test är valt kan du ändra hur mycket trafik (i procent) som går till varje upplevelse.
@@ -94,32 +94,32 @@ Lägg till en aktivitet eller redigera en befintlig aktivitet för att fokusera 
 
 Så här lägger du till en aktivitet:
 
-1. Klicka eller tryck på det varumärke som du skapar aktiviteten för och klicka eller tryck sedan på **Skapa** och slutligen på **Skapa aktivitet**. Om du redigerar markerar du aktiviteten på skärmen Masterområde och klickar eller trycker på **Redigera aktivitet**.
-1. Ange följande information och klicka eller tryck sedan på **Nästa**:
+1. Välj det varumärke som du skapar aktiviteten för och välj sedan **Skapa** sedan **Skapa aktivitet**. Om du redigerar markerar du aktiviteten på skärmen Masterområde och klickar eller trycker på **Redigera aktivitet**.
+1. Ange följande information och välj sedan **Nästa**:
    * Ett namn för aktiviteten.
    * Målmotorn som ska användas. ContextHub (AEM) är markerat som standard. Om du behöver använda Adobe Target skapar du aktiviteten i den aktiva innehållsredigeraren.
    * Om du valde Adobe Target som målmotor väljer/redigerar du den molnkonfiguration som ska användas för att ansluta till Adobe Target. (Se till att du inte väljer något ramverk som du har skapat för din molnkonfiguration.)
    * (Valfritt) Syftet med eller en beskrivning av aktiviteten.
    * Välj aktivitetstyp.
-1. Lägg till en eller flera upplevelser till aktiviteten. Klicka eller tryck på **Lägg till upplevelse**.
+1. Lägg till en eller flera upplevelser till aktiviteten. Välj **Lägg till upplevelse**.
 1. Om ni använder AEM målinriktning eller Adobe Target upplevelseanpassning:
-   1. Klicka eller tryck **Välj publik** och välj det segment som upplevelsen ska rikta in sig på.
-   1. Klicka eller tryck **Lägg till upplevelse**, skriv ett namn och klicka eller tryck **OK**.
-   1. Klicka eller tryck **Nästa**.
+   1. Välj **Välj publik** och välj det segment som upplevelsen ska rikta in sig på.
+   1. Välj **Lägg till upplevelse**, skriv ett namn och markera **OK**.
+   1. Välj **Nästa**.
 Om du använder Adobe Target A/B-testning:
-   1. Klicka på eller tryck på pennan i rutan Målgrupper för att välja en målgrupp.
-   1. Klicka eller tryck **Lägg till upplevelse**, skriv ett namn och klicka eller tryck **OK**.
+   1. Markera pennan i målgruppsrutan för att välja en målgrupp.
+   1. Välj **Lägg till upplevelse**, skriv ett namn och markera **OK**.
    1. Ange den procentandel av trafiken som visar varje upplevelse.
-   1. Klicka eller tryck **Nästa**.
+   1. Välj **Nästa**.
 1. Om du vill ange när aktiviteten ska starta använder du **Starta** i den nedrullningsbara menyn för att välja något av följande värden:
    * **Vid aktivering:** Aktiviteten startar när sidan som innehåller målinnehållet aktiveras.
-   * **Angivet datum och tid:** En viss tid. När du väljer det här alternativet klickar eller trycker du på kalenderikonen, väljer ett datum och anger vilken tid aktiviteten ska starta.
+   * **Angivet datum och tid:** En viss tid. När du väljer det här alternativet markerar du kalenderikonen, väljer ett datum och anger vilken tid aktiviteten ska starta.
 1. Om du vill ange när aktiviteten slutar använder du den nedrullningsbara menyn Slut och väljer något av följande värden:
    * **Vid inaktivering**: Aktiviteten avslutas när sidan som innehåller målinnehållet inaktiveras.
-   * **Angivet datum och tid**: En viss tid. När du väljer det här alternativet klickar eller trycker du på kalenderikonen, väljer ett datum och anger tidpunkten för att avsluta aktiviteten.
+   * **Angivet datum och tid**: En viss tid. När du väljer det här alternativet markerar du kalenderikonen, väljer ett datum och anger vilken tid aktiviteten ska avslutas.
 1. Om du vill ange en prioritet för aktiviteten använder du skjutreglaget och väljer antingen **Låg**, **Normal**, eller **Hög**.
-1. Om du använder Adobe Target som målmotor väljer du vad du vill mäta med den här aktiviteten. Se [Konfigurera aktivitets- och inställningsmål](/help/sites-cloud/authoring/personalization/targeted-content.md) om du vill ha mer information om tillgängliga framgångsvärden. Du måste välja minst ett mål.
-1. Klicka eller tryck **Spara**.
+1. Om du använder Adobe Target som målmotor väljer du vad du vill mäta med den här aktiviteten. Se [Konfigurera aktivitets- och inställningsmål](/help/sites-cloud/authoring/personalization/targeted-content.md) om du vill ha mer information om tillgängliga framgångsvärden. Välj minst ett mål.
+1. Välj **Spara**.
 
    >[!NOTE]
    >
@@ -135,12 +135,12 @@ Du måste publicera aktiviteter för att göra dem tillgängliga. Omvänt kanske
 
 Så här publicerar eller avpublicerar du aktiviteter:
 
-1. Klicka på eller tryck på varumärket och sedan det område som innehåller aktiviteten som du vill publicera eller avpublicera.
-1. Tryck eller klicka på ikonen bredvid aktiviteten eller aktiviteterna som du vill publicera eller avpublicera.
+1. Markera varumärket och sedan det område som innehåller aktiviteten som du vill publicera eller avpublicera.
+1. Markera ikonen bredvid aktiviteten eller aktiviteterna som du vill publicera eller avpublicera.
 
    ![Publicera från aktivitetskonsolen](/help/sites-cloud/authoring/assets/activities-console.png)
 
-1. Publicera genom att trycka eller klicka **Publicera**. Avpublicera genom att trycka eller klicka **Avpublicera**. Dina aktiviteter publiceras eller avpubliceras och deras status ändras i aktivitetskonsolen (kan kräva en uppdatering).
+1. Om du vill publicera väljer du **Publicera**. Avpublicera genom att välja **Avpublicera**. Dina aktiviteter publiceras eller avpubliceras och deras status ändras i aktivitetskonsolen (kan kräva en uppdatering).
 
 ## Aktiviteter för författare och publiceringsinstanser {#activities-on-author-and-publish-instances}
 
@@ -155,13 +155,13 @@ Du kan se prestanda för alla Adobe Target-aktiviteter (XT eller A/B). Om du anv
 
 Så här visar du aktivitetsprestanda och konverterar vinnande upplevelser:
 
-1. I **Personalisering**, klicka eller trycka **Verksamhet** för att navigera till **Verksamhet** konsol.
-1. Klicka på eller peka på det varumärke som du vill se aktiviteter för.
-1. Markera aktiviteten och klicka eller tryck på **Visa egenskaper**. Klicka sedan på fliken **Rapporter** och välj den aktivitet för vilken du vill visa resultatet eller konvertera vinnande upplevelser. Resultatdata visas.
+1. I **Personalisering**, markera **Verksamhet** navigera till **Verksamhet** konsol.
+1. Välj det varumärke som du vill se aktiviteter för.
+1. Markera aktiviteten och välj **Visa egenskaper** och klicka på **Rapporter** och välj den aktivitet du vill visa för/konvertera vinnande upplevelser. Resultatdata visas.
 
    ![Kontrollerar aktivitetsprestanda](/help/sites-cloud/authoring/assets/activities-performance.png)
 
-1. Klicka eller tryck på **Push-pristagare** för att göra den upplevelsen till standard.
+1. Välj **Push-pristagare** för att göra den upplevelsen till standardupplevelse.
 
    Att konvertera vinnaren gör följande:
 
@@ -172,7 +172,7 @@ Så här visar du aktivitetsprestanda och konverterar vinnande upplevelser:
 
    En vinnande upplevelse är den upplevelse som genererar mer Lyft i rapporterna, som baseras på konverteringsgraden.
 
-1. Klicka eller tryck **Ja** för att bekräfta att du vill konvertera vinnaren, inaktivera den aktuella upplevelsen och ersätta den med innehållet i den vinnande upplevelsen.
+1. Välj **Ja** för att bekräfta att du vill konvertera vinnaren, inaktivera den aktuella upplevelsen och ersätta den med innehållet i den vinnande upplevelsen.
 
 ## Synkronisera aktiviteter med Adobe Target {#synchronizing-activities-with-adobe-target}
 
@@ -213,7 +213,7 @@ Använd alltid unika namn för aktiviteter för att undvika synkroniseringsprobl
 
 >[!NOTE]
 >
->När du skapar en kampanj i Adobe Target tilldelas den en egenskap som kallas `thirdPartyId` till varje kampanj. När du tar bort kampanjen i Adobe Target `thirdPartyId` tas inte bort. Du kan inte återanvända `thirdPartyId` för kampanjer av olika typer (AB, XT) och kan inte tas bort manuellt. För att undvika detta bör varje kampanj namnges med ett unikt namn. kampanjnamn kan därför inte återanvändas i olika kampanjtyper.
+>När du skapar en kampanj i Adobe Target tilldelas den en egenskap som kallas `thirdPartyId` till varje kampanj. När du tar bort kampanjen i Adobe Target `thirdPartyId` tas inte bort. Du kan inte återanvända `thirdPartyId` för kampanjer av olika typer (AB, XT) och kan inte tas bort manuellt. För att undvika detta bör du namnge varje kampanj med ett unikt namn. Kampanjnamn kan därför inte återanvändas i olika kampanjtyper.
 >
 >Om du använder samma namn i samma kampanjtyp skriver du över den befintliga kampanjen.
 >

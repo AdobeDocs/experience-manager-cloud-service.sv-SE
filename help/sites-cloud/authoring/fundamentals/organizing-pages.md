@@ -2,10 +2,10 @@
 title: Skapa och ordna sidor
 description: Lär dig hur du organiserar din webbplats genom att skapa och hantera sidor med AEM.
 exl-id: c57096ca-34fe-4b19-98e0-8f3cd43cf24e
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2448'
-ht-degree: 2%
+source-wordcount: '2429'
+ht-degree: 1%
 
 ---
 
@@ -16,17 +16,17 @@ I det här dokumentet beskrivs hur du skapar och hanterar sidor med Adobe Experi
 
 >[!NOTE]
 >
->Ditt konto behöver rätt behörighet för att kunna utföra åtgärder på sidor som skapa, kopiera, flytta, redigera och ta bort.
+>Ditt konto behöver rätt behörighet för att kunna hantera sidor som att skapa, kopiera, flytta, redigera och ta bort.
 >
 >Om du råkar ut för problem rekommenderar vi att du kontaktar systemadministratören.
 
 <!--
->Your account needs the [appropriate access rights](/help/sites-administering/security.md) and [permissions](/help/sites-administering/security.md#permissions) to take action on pages such as create, copy, move, edit, and delete.
+>Your account needs the [appropriate access rights](/help/sites-administering/security.md) and [permissions](/help/sites-administering/security.md#permissions) to act on pages such as create, copy, move, edit, and delete.
 -->
 
 >[!TIP]
 >
->Det finns ett antal [kortkommandon](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) som du kan använda från webbplatskonsolen som gör det enklare att ordna sidorna.
+>Det finns flera [kortkommandon](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) som du kan använda från webbplatskonsolen som gör det enklare att ordna sidorna.
 
 {{edge-delivery-authoring}}
 
@@ -70,7 +70,7 @@ Du kan se grenen uppåt från vägbeskrivningar i sidhuvudsfältet:
 
 ### Konventioner för sidnamngivning {#page-naming-conventions}
 
-När du skapar en ny sida finns det två nyckelfält:
+När du skapar en sida finns det två nyckelfält:
 
 * **[Titel](#title)**:
 
@@ -95,7 +95,7 @@ Sidans **titel** och **namn** kan skapas separat men hänger ihop:
 >
 >Tänk också på att vissa webbläsare (till exempel äldre versioner av IE) bara kan acceptera URL:er med en viss längd, så det finns också tekniska skäl att hålla sidnamnen korta.
 
-AEM skapar en ny sida [validera sidnamnet enligt konventionerna](/help/implementing/developing/introduction/naming-conventions.md) som ålagts av AEM och JCR.
+När du skapar en sida AEM [validerar sidnamnet enligt konventionerna](/help/implementing/developing/introduction/naming-conventions.md) som ålagts av AEM och JCR.
 
 Minsta tillåtna tecken är:
 
@@ -113,7 +113,7 @@ Fullständig information om alla tillåtna tecken finns i [namnkonventioner](/he
 
 #### Titel {#title}
 
-Om du bara anger en **sidtitel** när du skapar en ny sida härleds sidans **namn**[ i AEM från den här strängen och namnet valideras enligt konventionerna i AEM och JCR.](/help/implementing/developing/introduction/naming-conventions.md)
+Om du bara anger en sida **Titel** när du skapar en sida, hämtar AEM sidan **Namn** från denna sträng och [validera namnet enligt konventionerna](/help/implementing/developing/introduction/naming-conventions.md) som ålagts av AEM och JCR.
 
 A **Titel** fält som innehåller ogiltiga tecken accepteras, men det härledda namnet har ogiltiga tecken som ersatts. Till exempel:
 
@@ -124,7 +124,7 @@ A **Titel** fält som innehåller ogiltiga tecken accepteras, men det härledda 
 
 #### Namn {#name}
 
-När du anger en sida **Namn** när du skapar en ny sida AEM [validera namnet enligt konventionerna](/help/implementing/developing/introduction/naming-conventions.md) som ålagts av AEM och JCR. Du kan inte skicka ogiltiga tecken i **Namn** fält. När AEM upptäcker ogiltiga tecken markeras fältet med en förklaring.
+När du anger en sida **Namn** när du skapar en sida, AEM [validerar namnet enligt konventionerna](/help/implementing/developing/introduction/naming-conventions.md) som ålagts av AEM och JCR. Du kan inte skicka ogiltiga tecken i **Namn** fält. När AEM upptäcker ogiltiga tecken markeras fältet med en förklaring.
 
 ![Exempel på att ange ett ogiltigt sidnamn](/help/sites-cloud/authoring/assets/organizing-invalid-name.png)
 
@@ -185,7 +185,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
 1. Från det första steget i guiden kan du antingen:
 
-   * Välj den mall som du vill använda för att skapa den nya sidan och klicka/tryck sedan på **Nästa** för att fortsätta.
+   * Välj den mall som du vill använda för att skapa den nya sidan och välj sedan **Nästa** för att fortsätta.
 
    * **Avbryt** om du vill avbryta processen.
 
@@ -193,7 +193,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
 1. Från det sista steget i guiden kan du antingen:
 
-   * Använd de tre flikarna för att ange [sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md) du vill tilldela till den nya sidan och sedan klicka/tryck **Skapa** för att skapa sidan.
+   * Använd de tre flikarna för att ange [sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md) du vill tilldela till den nya sidan väljer du **Skapa** för att skapa sidan.
 
    * Använd **Bakåt** för att återgå till mallval.
 
@@ -206,7 +206,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
    * **Namn**:
 
       * Detta används för att generera URI. Om inget anges hämtas namnet från titeln.
-      * Om du anger en sida **Namn** när du skapar en ny sida AEM [validera namnet enligt konventionerna](/help/implementing/developing/introduction/naming-conventions.md) som ålagts av AEM och JCR.
+      * Om du anger en sida **Namn** när du skapar en sida, AEM [validerar namnet enligt konventionerna](/help/implementing/developing/introduction/naming-conventions.md) som ålagts av AEM och JCR.
       * Du **kan inte skicka ogiltiga tecken** i **Namn** fält. När AEM upptäcker ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
 
    >[!TIP]
@@ -269,7 +269,7 @@ Du kan kopiera en sida och alla dess undersidor till en ny plats:
    ![Kopiera](/help/sites-cloud/authoring/assets/copy.png)
 
 1. Navigera till den nya kopians plats.
-1. Tryck eller klicka på **Klistra in** som blev tillgänglig.
+1. Välj **Klistra in** som blev tillgänglig.
 
    ![Klistra in](/help/sites-cloud/authoring/assets/paste.png)
 
@@ -279,7 +279,7 @@ Du kan kopiera en sida och alla dess undersidor till en ny plats:
 
    ![Dialogrutan Klistra in](/help/sites-cloud/authoring/assets/paste-dialog.png)
 
-1. Tryck eller klicka på **Klistra in** för att bekräfta inklistringstransaktionen och skapa nya sidor.
+1. Välj **Klistra in** för att bekräfta inklistringstransaktionen och skapa nya sidor.
 
 >[!NOTE]
 >
@@ -313,7 +313,7 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 
 1. Från **Byt namn** steg i guiden som du kan antingen:
 
-   * Ange det namn du vill att sidan ska ha efter att den har flyttats och klicka/tryck sedan på **Nästa** för att fortsätta.
+   * Ange namnet som du vill att sidan ska ha efter att den har flyttats och välj sedan **Nästa** för att fortsätta.
    * **Avbryt** om du vill avbryta processen.
 
    ![Flytta och byta namn på sida](/help/sites-cloud/authoring/assets/move-page-rename.png)
@@ -383,7 +383,7 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
   ![Asynchronous page move](assets/asynchronous-page-move.png)
 -->
 
-Status för asynkrona jobb kan kontrolleras i [**Status för asynkrona jobb** kontrollpanel](/help/operations/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) på **Global navigering** -> **verktyg** -> **Operationer** -> **Jobb**
+Status för asynkrona jobb kan kontrolleras i [**Status för asynkrona jobb** kontrollpanel](/help/operations/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) på **Global navigering** > **verktyg** > **Operationer** > **Jobb**
 
 >[!NOTE]
 >

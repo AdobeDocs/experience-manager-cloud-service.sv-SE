@@ -2,9 +2,9 @@
 title: Creating Accessible Content for Adobe Experience Manager as a Cloud Service (WCAG 2.1-överensstämmelse)
 description: Använd AEM as a Cloud Service för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 exl-id: 294fd1ed-9b4a-42cb-8f9e-e7a5d7e6930e
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '13861'
+source-wordcount: '13859'
 ht-degree: 3%
 
 ---
@@ -476,7 +476,7 @@ Till exempel kan ingen med rött-grönt-synfel skilja på grönt och rött. De k
 
 Färgen kan inte heller uppfattas av personer som använder webbläsare som bara innehåller text, enheter för monokrom visning eller som visar en svartvit utskrift av sidan.
 
-Ytterligare en tanke är *markerad* för ett gränssnittselement (t.ex. tabbar, växlingsknappar), som måste förmedlas på något annat sätt än bara med färg och utanför bara en visuell presentation. För sådana element är den extra användningen av mönster, former och programmatisk information användbar när du skapar en helomfattande användarupplevelse som inte är beroende av en viss innebörd.
+Ytterligare en tanke är *markerad* för ett gränssnittselement (t.ex. tabbar, växlingsknappar), som måste förmedlas på något annat sätt än bara med färg och bortom bara en visuell presentation. För sådana element är den extra användningen av mönster, former och programmatisk information användbar när du skapar en helomfattande användarupplevelse som inte är beroende av en viss innebörd.
 
 #### Hur man klarar - Färganvändning (1.4.1) {#how-to-meet-use-of-color}
 
@@ -671,7 +671,7 @@ Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 2.1.2](ht
 
 [Riktlinje 2.2 Tillräcklig tid: Ge användarna tillräckligt med tid för att läsa och använda innehållet.](https://www.w3.org/TR/WCAG/#enough-time)
 
-Det handlar om att se till att användarna har tillräckligt med tid för att läsa och vidta åtgärder.
+Det handlar om att se till att användarna har tillräckligt med tid att läsa och agera.
 
 ### Tidsjustering (2.2.1)  {#timing-adjustable}
 

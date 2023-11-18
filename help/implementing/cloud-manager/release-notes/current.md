@@ -3,9 +3,9 @@ title: Versionsinformation för Cloud Manager 2023.11.0 i Adobe Experience Manag
 description: Detta är versionsinformationen för Cloud Manager 2023.11.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Om du vill testa den här nya funktionen och dela med dig av dina synpunkter ski
 
 [Anpassade behörigheter för Cloud Manager](/help/implementing/cloud-manager/custom-permissions.md) Med kan du skapa nya anpassade behörighetsprofiler med konfigurerbara behörigheter för att begränsa åtkomst till program, pipelines och miljöer för användare av Cloud Manager.
 
-om du är intresserad av att testa den nya funktionen och dela med dig av dina synpunkter, skicka ett e-postmeddelande `Grp-CloudManager-custom-permissions@adobe.com` från den e-postadress som är kopplad till din Adobe ID.
+om du är intresserad av att testa den nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `Grp-CloudManager-custom-permissions@adobe.com` från den e-postadress som är kopplad till din Adobe ID.
 
 ### Självbetjäning för återställning av innehåll {#content-restore}
 
@@ -59,7 +59,7 @@ om du är intresserad av att testa den nya funktionen och dela med dig av dina s
 * Säkerhetskopiering vid bestämda tidpunkter för de senaste 24 timmarna
 * Återställningar i upp till sju dagar
 
-Om du vill testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `aemcs-restorefrombackup-adopter@adobe.com` via e-post som är kopplad till din Adobe ID. Observera:
+Om du vill testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `aemcs-restorefrombackup-adopter@adobe.com` via e-post som är kopplad till din Adobe ID.
 
 * Det tidiga adopterprogrammet är begränsat till utvecklingsmiljöer.
 * Tillgången till programmet för tidig användning av den här funktionen är begränsad.

@@ -2,10 +2,10 @@
 title: Redigeringsmiljö och -verktyg
 description: I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll
 exl-id: cc3bd4cf-93bd-429d-9a2a-4a02a7b42f7c
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2163'
-ht-degree: 9%
+source-wordcount: '2158'
+ht-degree: 8%
 
 ---
 
@@ -90,7 +90,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
    * Filtrera komponenter efter namn.
    * Begränsa visningen till en viss grupp med listrutan.
 
-  Om du vill ha en mer detaljerad beskrivning av komponenten kan du klicka eller trycka på informationsikonen bredvid komponenten i **komponentläsaren** (om den är tillgänglig). För **Innehållsfragment**:
+  Om du vill ha en mer detaljerad beskrivning av komponenten kan du markera informationsikonen bredvid komponenten i **Komponenter** webbläsare (om tillgängligt). För **Innehållsfragment**:
 
   ![Information om komponentwebbläsare](/help/sites-cloud/authoring/assets/component-browser-information.png)
 
@@ -169,7 +169,7 @@ Innehållsträdet är en flik i sidopanelen (tillsammans med komponenterna och r
 
 ![Knappen Innehållsträd](/help/sites-cloud/authoring/assets/content-tree-button.png)
 
-När du öppnar sidopanelen öppnas den (från vänster sida). Välj **Innehållsträd** tabba vid behov. När den är öppen kan du se en trädvyrepresentation av sidan eller mallen, så att det blir lättare att förstå hur innehållet är hierarkiskt strukturerat. På en komplex sida är det dessutom enklare att växla mellan sidans komponenter.
+När du öppnar sidopanelen öppnas den (från vänster sida). Välj **Innehållsträd** tabba vid behov. När den är öppen kan du se en trädvyrepresentation av sidan eller mallen, så att det blir lättare att förstå hur innehållet är hierarkiskt strukturerat. På en komplex sida är det också enklare att hoppa mellan sidans komponenter.
 
 ![Innehållsträd](/help/sites-cloud/authoring/assets/content-tree-editor.png)
 
@@ -315,7 +315,7 @@ Sökvägsläsaren är ordnad som [kolumnvy](/help/sites-cloud/authoring/getting-
 
 ![Sökvägsläsaren](/help/sites-cloud/authoring/assets/path-browser.png)
 
-* När en resurs har valts **Välj** knappen längst upp till höger i dialogrutan aktiveras. Klicka eller tryck för att bekräfta markeringen eller **Avbryt** för att avbryta.
+* När en resurs har valts **Välj** knappen längst upp till höger i dialogrutan aktiveras. Markera för att bekräfta markeringen eller **Avbryt** för att avbryta.
 * Om det går att välja flera resurser aktiveras även knappen **Välj** när du väljer en resurs och antalet valda resurser läggs till i det övre högra hörnet fönstret. Klicka på **X** bredvid talet för att avmarkera alla.
 * När du navigerar genom trädet visas platsen i de synliga kolumnerna högst upp i dialogrutan. Dessa vägbeskrivningar kan också användas för att snabbt hoppa in i resurshierarkin.
 * Du kan när som helst använda sökfältet högst upp i dialogrutan. Klicka på **X** i sökfältet för att rensa sökningen.

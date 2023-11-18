@@ -2,9 +2,9 @@
 title: Hantera sidor i Launch
 description: Du kan skapa nya sidor i Launch. Du kan också ta bort oönskade sidor.
 exl-id: 214c8c2f-d09a-4ce9-b474-9505b76084f7
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Alla dessa startpunkter öppnas i webbplatskonsolen där du kan:
 
 * Navigera,
 * **Skapa** nya sidor,
-* Välj befintliga sidor och vidta åtgärder, till exempel **Redigera**, öppna **Egenskaper**, **Lås**, **Kopiera**, **Klistra in** och **Ta bort**
+* Välj befintliga sidor och agera, till exempel **Redigera**, öppna **Egenskaper**, **Lås**, **Kopiera**, **Klistra in** och **Ta bort**
   ![Navigera till starten i webbplatskonsolen från Hantera innehåll](/help/sites-cloud/authoring/assets/launches-navigate-manage-content.png)
 * Använd **Referenser** för att återgå till **Startkälla** sidor:
   ![Platskonsolen - startkälla](/help/sites-cloud/authoring/assets/launches-navigate-launch-source.png)

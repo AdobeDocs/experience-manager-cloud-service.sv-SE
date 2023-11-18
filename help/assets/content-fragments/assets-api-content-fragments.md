@@ -3,9 +3,9 @@ title: Stöd för Adobe Experience Manager as a Cloud Service Content Fragments 
 description: Läs om stödet för innehållsfragment i Assets HTTP API, en viktig del av Adobe Experience Manager headless-leveransfunktion.
 feature: Content Fragments,Assets HTTP API
 exl-id: d72cc0c0-0641-4fd6-9f87-745af5f2c232
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1791'
+source-wordcount: '1788'
 ht-degree: 1%
 
 ---
@@ -257,7 +257,7 @@ Användningen kan variera beroende på om du använder en AEM författar- eller 
 
 >[!NOTE]
 >
->Mer information finns i [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference). Särskilt gäller följande: [Adobe Experience Manager Assets API - innehållsfragment](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/assets-api-content-fragments/index.html).
+>Se [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference). Särskilt gäller följande: [Adobe Experience Manager Assets API - innehållsfragment](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/assets-api-content-fragments/index.html).
 
 ## Begränsningar {#limitations}
 

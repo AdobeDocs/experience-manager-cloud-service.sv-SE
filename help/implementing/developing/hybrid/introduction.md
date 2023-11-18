@@ -2,9 +2,9 @@
 title: SPA introduktion och genomgång
 description: I den här artikeln beskrivs begreppen för en SPA och du kan gå igenom hur du använder ett grundläggande SPA för att skapa, vilket visar hur det är relaterat till den underliggande AEM SPA redigeraren.
 exl-id: 8dad48d5-fa90-467c-8bec-e4b76e057f80
-source-git-commit: 7d09cafc4f8518fee185d3f9efc76c33ec20f9a3
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2068'
+source-wordcount: '2066'
 ht-degree: 0%
 
 ---
@@ -167,7 +167,7 @@ Nästa avsnitt, [Läsa in ett SPA](#loading-a-spa-application), går djupare in 
    ![Förhandsgranskning SPA WKND-projekt](assets/wknd-preview.png)
 
 1. Använd det inbyggda verktyget i webbläsaren för att visa sidans källa.
-1. Observera att källans innehåll är begränsat.
+1. Källans innehåll är begränsat.
    * Sidan har inget innehåll i sin brödtext. Den består huvudsakligen av formatmallar och ett anrop till olika skript, som `clientlib-react.min.js`.
    * Dessa skript är de primära drivrutinerna för det här programmet och ansvarar för återgivningen av allt innehåll.
 
@@ -207,9 +207,9 @@ Nästa avsnitt, [Läsa in ett SPA](#loading-a-spa-application), går djupare in 
 
 ### Interaktion med SPA {#interaction-with-the-spa-editor}
 
-Med exempelprogrammet WKND SPA Project är det tydligt hur appen fungerar och läses in när den publiceras, och utnyttjar innehållstjänster för leverans av JSON-innehåll och asynkron inläsning av resurser.
+Med exempelprogrammet WKND SPA Project är det tydligt hur appen fungerar och läses in när den publiceras, med hjälp av innehållstjänster för JSON-innehållsleverans och asynkron inläsning av resurser.
 
-Dessutom är det smidigt för innehållsförfattaren att skapa innehåll med en SPA redigerare i AEM.
+Innehållsutvecklaren kan också skapa innehåll med en SPA redigerare utan skarvar i AEM.
 
 I följande avsnitt utforskar vi kontraktet som gör det möjligt för SPA Editor att relatera komponenter i SPA till AEM komponenter och uppnå denna smidiga redigeringsupplevelse.
 
@@ -219,7 +219,7 @@ I följande avsnitt utforskar vi kontraktet som gör det möjligt för SPA Edito
 
 1. Kontrollera sidans innehåll med hjälp av webbläsarens inbyggda utvecklarverktyg. Använd markeringsverktyget och markera en redigerbar komponent på sidan och visa elementinformationen.
 
-   Observera att komponenten har ett nytt dataattribut `data-cq-data-path`.
+   Komponenten har ett nytt dataattribut `data-cq-data-path`.
 
    ![Inspektera WKND SPA projektelement](assets/wknd-inspector.png)
 
@@ -229,7 +229,7 @@ I följande avsnitt utforskar vi kontraktet som gör det möjligt för SPA Edito
 
    Den här sökvägen tillåter hämtning och associering av konfigurationsobjektet för redigeringssammanhanget för varje komponent.
 
-   Det här är det enda markeringsattribut som krävs för att redigeraren ska kunna identifiera det som en redigerbar komponent i SPA. Utifrån det här attributet avgör SPA redigerare vilken redigerbar konfiguration som är kopplad till komponenten, så att rätt bildruta, verktygsfält osv. har lästs in.
+   Det här är det enda markeringsattribut som krävs för att redigeraren ska kunna identifiera det som en redigerbar komponent i SPA. Utifrån det här attributet avgör SPA redigerare vilken redigerbar konfiguration som är kopplad till komponenten så att rätt bildruta, verktygsfält och så vidare läses in.
 
    Vissa specifika klassnamn läggs också till för att markera platshållare och för att dra och släppa resurser.
 
@@ -241,7 +241,7 @@ I följande avsnitt utforskar vi kontraktet som gör det möjligt för SPA Edito
 
 ## Headless and Headless in AEM {#headful-headless}
 
-SPA kan aktiveras med flexibla integreringsnivåer i AEM, inklusive SPA som utvecklats och underhålls utanför AEM. Dessutom kan SPA användas inom AEM samtidigt som man använder AEM för att leverera innehåll till ytterligare slutpunkter utan huvud.
+SPA kan aktiveras med flexibla integreringsnivåer i AEM, inklusive SPA som utvecklats och underhålls utanför AEM. SPA kan också användas inom AEM och samtidigt använda AEM för att leverera innehåll till ytterligare slutpunkter utan huvud.
 
 >[!TIP]
 >

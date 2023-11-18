@@ -2,9 +2,9 @@
 title: Konfigurera översättningsregler för Headless-innehåll
 description: Lär dig hur du definierar översättningsregler för att identifiera innehåll för översättning.
 exl-id: 878ffd5d-0f10-4990-9779-bdf55cd95fac
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Eftersom modeller för innehållsfragment, som definierar strukturen för dina i
 
 >[!TIP]
 >
->Innehållsarkitekten förser översättningsspecialisten med **Egenskapsnamn**&#x200B;är en del av alla fält som behövs för översättning. Dessa namn behövs för att konfigurera översättningsregler. Som översättningsspecialist [kan hitta dessa **Egenskapsnamn**&#x200B;är dig själv](getting-started.md#content-modlels) som tidigare beskrivits under denna resa.
+>Innehållsarkitekten förser översättningsspecialisten med **Egenskapsnamn** som innehåller alla fält som behövs för översättning. Dessa namn behövs för att konfigurera översättningsregler. Som översättningsspecialist [kan hitta dessa **Egenskapsnamn**&#x200B;är dig själv](getting-started.md#content-modlels) som tidigare beskrivits under denna resa.
 
 ## Skapa översättningsregler {#creating-rules}
 
@@ -64,32 +64,30 @@ Flera regler kan skapas för komplexa översättningskrav. Ett projekt som du ka
 
 Det finns en **Översättningskonfiguration** konsolen är tillgänglig för konfigurering av översättningsregler. Så här kommer du åt den:
 
-1. Navigera till **verktyg** -> **Allmänt**.
-1. Tryck eller klicka **Översättningskonfiguration**.
+1. Navigera till **verktyg** > **Allmänt**.
+1. Välj **Översättningskonfiguration**.
 
-I **Översättningskonfiguration** Det finns ett antal alternativ för översättningsreglerna. Här beskrivs de mest nödvändiga och typiska stegen som krävs för en grundläggande headless-lokaliseringskonfiguration.
+I **Översättningskonfiguration** Gränssnittet innehåller flera alternativ för översättningsreglerna. Här beskrivs de mest nödvändiga och typiska stegen som krävs för en grundläggande headless-lokaliseringskonfiguration.
 
-1. Tryck eller klicka **Lägg till kontext**så att du kan lägga till en bana. Detta är sökvägen till innehållet som påverkas av regeln.
+1. Välj **Lägg till kontext** för att lägga till en bana. Detta är sökvägen till innehållet som påverkas av regeln.
    ![Lägg till kontext](assets/add-translation-context.png)
-1. Använd sökvägsläsaren för att välja önskad sökväg och tryck eller klicka på **Bekräfta** knappen som ska sparas. Kom ihåg att innehållsfragment, som innehåller headless-innehåll, vanligtvis finns under `/content/dam/<your-project>`.
+1. Använd sökvägsläsaren för att välja önskad sökväg och markera **Bekräfta** att spara. Kom ihåg att innehållsfragment, som innehåller headless-innehåll, vanligtvis finns under `/content/dam/<your-project>`.
    ![Markera banan](assets/select-context.png)
-1. AEM sparar konfigurationen.
-1. Du måste välja den kontext du just skapade och sedan trycka eller klicka **Redigera**. Då öppnas **Redigerare för översättningsregler** för att konfigurera egenskaperna.
+1. Markera den kontext du just skapade och välj sedan **Redigera**. Då öppnas **Redigerare för översättningsregler** för att konfigurera egenskaperna.
    ![Redigerare för översättningsregler](assets/translation-rules-editor.png)
 1. Som standard ärvs alla konfigurationer från den överordnade sökvägen, i det här fallet `/content/dam`. Avmarkera alternativet **Ärv från`/content/dam`** så att du kan lägga till fler fält i konfigurationen.
 1. När avmarkerat, under **Allmänt** i listan lägger du till egenskapsnamnen för de innehållsfragmentmodeller som du [som tidigare identifierats som fält för översättning.](getting-started.md#content-models)
-   1. Ange egenskapsnamnet i dialogrutan **Ny egenskap** fält.
-   1. Alternativen **Översätt** och **Inherit** kontrolleras automatiskt.
-   1. Tryck eller klicka **Lägg till**.
+   1. I **Ny egenskap** anger du egenskapsnamnet. Observera att alternativen **Översätt** och **Inherit** kontrolleras automatiskt.
+   1. Välj **Lägg till**.
    1. Upprepa dessa steg för alla fält som du måste översätta.
-   1. Tryck eller klicka **Spara**.
+   1. Välj **Spara**.
       ![Lägg till egenskap](assets/add-property.png)
 
 Du har nu konfigurerat dina översättningsregler.
 
 ## Avancerad användning {#advanced-usage}
 
-Det finns ett antal ytterligare egenskaper som kan konfigureras som en del av översättningsreglerna. Dessutom kan du ange regler manuellt som XML, vilket ger större specificitet och flexibilitet.
+Det finns flera andra egenskaper som kan konfigureras som en del av översättningsreglerna. Dessutom kan du ange regler manuellt som XML, vilket ger större specificitet och flexibilitet.
 
 Sådana funktioner behövs vanligtvis inte för att komma igång med lokalisering av ditt headless-innehåll, men du kan läsa mer om dem i [Ytterligare resurser](#additional-resources) om du är intresserad.
 

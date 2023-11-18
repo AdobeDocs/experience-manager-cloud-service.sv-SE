@@ -3,9 +3,9 @@ title: Hantera pipelines
 description: Lär dig hur du hanterar dina befintliga rörledningar, inklusive redigering, körning och borttagning av dem.
 index: true
 exl-id: 4aff5a84-134a-43fa-8de8-8d564f4edd16
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ The **Pipelines** visas en fullständig lista över alla pipelines för det vald
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Från **Programöversikt** , tryck eller klicka på **Pipelines** för att växla till **Pipelines** -fönstret.
+1. Från **Programöversikt** väljer du **Pipelines** för att växla till **Pipelines** -fönstret.
 
 1. Här visas en lista över alla rörledningar för programmet samt start och stopp för pipelinekörning på samma sätt som i **Förloppskort**.
 
@@ -57,7 +57,7 @@ The **Verksamhet** visas en fullständig lista över alla pipelines-körningar f
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Från **Programöversikt** , tryck eller klicka på **Aktivitet** för att växla till **Aktivitet** -fönstret.
+1. Från **Programöversikt** väljer du **Aktivitet** för att växla till **Aktivitet** -fönstret.
 
 1. Här visas en lista över alla pipeline-körningar för programmet, inklusive aktuella och historiska körningar.
 
@@ -87,7 +87,7 @@ Beroende på typen av pipeline kan du eventuellt avbryta körningen genom att kl
 
 1. The **Redigera produktionspipeline** eller **Redigera icke-produktionsförlopp** visas så att du kan redigera samma information som du angav när du skapade pipelinen.
 
-   * På följande sidor finns mer information om alla fält och konfigurationsalternativ som är tillgängliga för pipelines.
+   * På följande sidor finns mer information om fälten och konfigurationsalternativen för pipelines.
       * [Konfigurera produktionsförlopp](configuring-production-pipelines.md)
       * [Konfigurera icke-produktionsförlopp](configuring-non-production-pipelines.md)
 
@@ -127,7 +127,7 @@ När ett pipeline-steg är klart visas en sammanfattning.
 
 ![Stegsammanfattning](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-step.png)
 
-Tryck eller klicka på **Visa detaljer** länk för att visa **Varaktighet** -avsnitt. Detta inbegriper den genomsnittliga rörledningens varaktighet på grundval av den historiska trenden för det programmet.
+Välj **Visa detaljer** länk för att visa **Varaktighet** -avsnitt. Detta inbegriper den genomsnittliga rörledningens varaktighet på grundval av den historiska trenden för det programmet.
 
 ![Varaktighet](/help/implementing/cloud-manager/assets/configure-pipeline/duration.png)
 
@@ -145,16 +145,16 @@ Om en pipeline befinner sig i validerings- eller byggarfasen kan du avbryta pipe
 
    ![Avbryta en pipeline](/help/implementing/cloud-manager/assets/cancel-pipeline.png)
 
-1. Tryck eller klicka **Avbryt**.
+1. Välj **Avbryt**.
 
 Du kan även avbryta en pipeline från informationssidan för pipeline.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Navigera till **Pipelines** -fliken från **Programöversikt** och tryck eller klicka på den pipeline som du vill avbryta.
+1. Navigera till **Pipelines** -fliken från **Programöversikt** och välj den pipeline som du vill avbryta.
 
 1. Du dirigeras till informationssidan för den aktuella pipelinen.
 
    ![Avbryt pipeline-information](/help/implementing/cloud-manager/assets/cancel-pipeline-details.png)
 
-1. Tryck eller klicka **Avbryt**.
+1. Välj **Avbryt**.

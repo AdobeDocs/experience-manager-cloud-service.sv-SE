@@ -4,9 +4,9 @@ description: Lär dig hur du använder innehållsfragment och GraphQL API som et
 hidefromtoc: true
 index: false
 exl-id: f5e379c8-e63e-41b3-a9fe-1e89d373dc6b
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1069'
 ht-degree: 0%
 
 ---
@@ -119,9 +119,9 @@ Nu när du har kört de två primära typerna av frågor kan du fråga efter dit
 
 1. Definiera de objekt som frågan ska innehålla för den valda innehållsfragmentmodellen. Igen, skriv inledande hakparentes `{`och trycker sedan på Ctrl+Blanksteg eller Alt+Blanksteg för att visa en lista som fylls i automatiskt. Välj `items` från alternativen.
 
-1. Tryck eller klicka på **Förtifiera** för att automatiskt formatera koden så att den blir lättare att läsa.
+1. Välj **Förtifiera** för att automatiskt formatera koden så att den blir lättare att läsa.
 
-1. När du är klar trycker du på eller klickar på **Spela upp** längst upp till vänster i redigeraren för att köra frågan. Redigeraren fyller i `items`, som kortfattat markeras med gult och frågan körs.
+1. När du är klar väljer du **Spela upp** längst upp till vänster i redigeraren för att köra frågan. Redigeraren fyller i `items`, som kortfattat markeras med gult och frågan körs.
 
 1. Resultatet visas i den högra panelen bredvid frågeredigeraren.
 
@@ -177,7 +177,7 @@ Du skapar en beständig fråga som innehåller data som du vill använda från k
 
 1. I **Frågenamn** ge frågan namnet `adventure-list`.
 
-1. Tryck eller klicka **Spara som**.
+1. Välj **Spara som**.
 
    ![Beständig fråga](assets/do-not-localize/persist-query.png)
 

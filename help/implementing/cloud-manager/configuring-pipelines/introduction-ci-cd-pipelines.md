@@ -3,9 +3,9 @@ title: CI/CD-rör
 description: Lär dig mer om Cloud Managers pipelines för CI/CD och hur de kan användas för att driftsätta koden på ett effektivt sätt.
 index: true
 exl-id: 40d6778f-65e0-4612-bbe3-ece02905709b
-source-git-commit: 8b8f10bfaad2d8d7d409384e01a2c65a588d77e0
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1423'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Dessa beskrivs senare i detalj i det här dokumentet.
 
 ### Förstå CI-CD-pipeline i Cloud Manager {#understand-pipelines}
 
-I följande tabell sammanfattas alla rörledningar som är tillgängliga i Cloud Manager och deras användning.
+I följande tabell sammanfattas de rörledningar som är tillgängliga i Cloud Manager och deras användning.
 
 | Typ av pipeline | Driftsättnings- eller kodkvalitet | Källkod | Syfte | Anteckningar |
 |--- |--- |--- |---|---|
@@ -115,7 +115,7 @@ Om du vill veta mer om hur du konfigurerar rörledningar i full hög läser du i
 
 Med ett konfigurationsflöde kan du konfigurera och distribuera trafikfilterregler, inklusive WAF-regler, inom några minuter.
 
-Se dokumentet [Trafikfilterregler inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md) om du vill lära dig hur du hanterar konfigurationerna i din databas så att de distribueras på rätt sätt.
+Se [Trafikfilterregler inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md) om du vill lära dig hur du hanterar konfigurationerna i din databas så att de distribueras på rätt sätt.
 
 ### Konfigurera konfigurationsförlopp {#configure-config-deployment}
 

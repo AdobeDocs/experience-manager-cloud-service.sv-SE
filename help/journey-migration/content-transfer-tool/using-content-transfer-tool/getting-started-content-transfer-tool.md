@@ -2,9 +2,9 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Lär dig hur du kommer igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1427'
+source-wordcount: '1424'
 ht-degree: 6%
 
 ---
@@ -74,7 +74,7 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 >abstract="Lär dig skapa och hantera en migreringsuppsättning och hur du kopierar extraheringsnyckeln."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/content-transfer-tool.html#migration" text="Självstudiekurs - använda verktyget Innehållsöverföring"
 
-<!-- Contextualhelp id "aemcloud_ctt_extraction_setup" needs to be added here -->
+<!-- Contextualhelp id "aemcloud_ctt_extraction_setup" must be added here -->
 
 1. Logga in på CAM (Cloud Acceleration Manager) och klicka på CAM-projektet som du skapat tidigare för att utvärdera om du är redo att gå AEM as a Cloud Service. Om du inte har skapat något CAM-projekt, se Skapa och hantera ett projekt i CAM.
 

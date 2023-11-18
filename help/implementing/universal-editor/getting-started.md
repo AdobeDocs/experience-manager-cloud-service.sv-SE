@@ -2,9 +2,9 @@
 title: Komma igång med Universal Editor i AEM
 description: Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '920'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Lär dig hur du får tillgång till den universella redigeraren och hur du börj
 
 Även om den universella redigeraren kan redigera innehåll från valfri källa, kommer det här dokumentet att använda ett AEM program som exempel.
 
-Det finns ett antal steg för att komma igång med AEM och instrumentera den så att den kan använda den universella redigeraren.
+Det finns flera steg för att komma igång med AEM och instrumentera den så att den kan använda den universella redigeraren.
 
 1. [Begär åtkomst till Universal Editor.](#request-access)
 1. [Inkludera grundbiblioteket för Universal Editor.](#core-library)
@@ -103,7 +103,7 @@ Den här egenskapen måste anges i `org.apache.sling.engine.impl.SlingMainServle
 
 Tjänsten Universal Editor kräver en [enhetligt resursnamn (URN)](https://en.wikipedia.org/wiki/Uniform_Resource_Name) för att identifiera och använda rätt serverdelssystem för innehållet i den app som redigeras. Därför krävs ett URN-schema för att mappa tillbaka innehåll till innehållsresurser.
 
-De instrumentattribut som läggs till på sidan består huvudsakligen av [HTML Microdata,](https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata) en branschstandard som också kan användas för att göra HTML mer semantiskt, göra HTML-dokument indexerbara osv.
+De instrumentattribut som läggs till på sidan består huvudsakligen av [HTML Microdata,](https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata) en branschstandard som också kan användas för att göra HTML mer semantiskt, göra HTML-dokument indexerbara och så vidare.
 
 ### Skapa anslutningar {#connections}
 

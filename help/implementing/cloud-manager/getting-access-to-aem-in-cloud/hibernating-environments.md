@@ -2,9 +2,9 @@
 title: Viloläge och avvänjningsmiljöer för sandlådor
 description: Lär dig hur miljöer i ett sandlådeprogram automatiskt övergår i viloläge och hur du kan avviloläge.
 exl-id: c0771078-ea68-4d0d-8d41-2d9be86408a4
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '683'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ När viloläget är slutfört visas ett meddelande om viloläget för miljön i 
 
 ![Bekräftelse av viloläge](assets/hibernate-4.png)
 
-På Developer Console kan du även klicka på **Miljö** i textmarkeringarna ovanför **Pod** listruta för en lista över miljöer som ska placeras i viloläge.
+På Developer Console kan du även klicka på **Miljö** i textmarkeringarna ovanför **Pod** nedrullningsbar lista med miljöer som ska placeras i viloläge.
 
 ![Lista över miljöer att förvara](assets/hibernate-1b.png)
 
@@ -88,7 +88,7 @@ Du kan manuellt förvara ditt sandlådeprogram från utvecklarkonsolen.
    ![Avvänjningen är klar](assets/de-hibernation-img4.png)
 
 
-På Developer Console kan du även klicka på **Miljö** i textmarkeringarna ovanför **Pod** listruta för en lista över miljöer som ska avaktiveras.
+På Developer Console kan du även klicka på **Miljö** i textmarkeringarna ovanför **Pod** nedrullningsbar lista för en lista över miljöer som ska tas bort från viloläget.
 
 ![Lista över viloläge](assets/de-hibernate-1b.png)
 

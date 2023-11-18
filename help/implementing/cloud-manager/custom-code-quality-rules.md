@@ -2,9 +2,9 @@
 title: Anpassade regler för kodkvalitet
 description: Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av testningen av kodkvalitet. De bygger på god praxis från Adobe Experience Manager Engineering.
 exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
-source-git-commit: a62312954db0631cf594a27db36bab8a2441360f
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '4097'
+source-wordcount: '4095'
 ht-degree: 1%
 
 ---
@@ -542,7 +542,7 @@ AEM når ofta ut till andra program med HTTP-protokollet, och Apache HttpClient 
 
 Den här regeln kontrollerar att ett sådant HttpClient-objekt inte är privat inom en metod, utan globalt på en klassnivå, så att det kan återanvändas. I det här fallet ska fältet httpClient anges i konstruktorn för klassen eller `activate()` metod (om den här klassen är en OSGi-komponent/tjänst).
 
-Kontrollera även [Optimeringsguide](https://hc.apache.org/httpclient-legacy/performance.html) för HttpClient för några bästa metoder för användning av HttpClient.
+Kontrollera [Optimeringsguide](https://hc.apache.org/httpclient-legacy/performance.html) för HttpClient för några bästa metoder för användning av HttpClient.
 
 #### Kod som inte uppfyller kraven {#non-compliant-code-14}
 

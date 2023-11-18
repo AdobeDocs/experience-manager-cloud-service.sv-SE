@@ -2,9 +2,9 @@
 title: Komma igång med SPA i AEM med React
 description: I den här artikeln visas ett exempel SPA programmet, hur det sätts ihop och hur du snabbt kommer igång med ditt eget SPA med React Framework.
 exl-id: 13998526-65e7-4d1b-bd47-452bad3780a2
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1139'
 ht-degree: 0%
 
 ---
@@ -117,7 +117,7 @@ En förenklad bildkomponent används som exempel, men alla komponenter i program
 
 ### index.js {#index-js}
 
-Ingångspunkten i SPA är förstås `index.js` filen som visas här förenklades för att fokusera på det viktiga innehållet.
+Startpunkten i SPA är `index.js` filen som visas här förenklades för att fokusera på det viktiga innehållet.
 
 ```
 import ReactDOM from 'react-dom';

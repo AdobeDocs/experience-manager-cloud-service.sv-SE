@@ -2,9 +2,9 @@
 title: Lägga till ett SSL-certifikat
 description: Lär dig hur du lägger till ett eget SSL-certifikat med hjälp av självbetjäningsverktygen i Cloud Manager.
 exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Lär dig hur du lägger till ett eget SSL-certifikat med hjälp av självbetjän
 
 ## Certifikatkrav {#certificate-requirements}
 
-Läs igenom avsnittet **Certifikatkrav** av dokumentet [Introduktion till hantering av SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md#requirements) för att säkerställa att det certifikat du vill lägga till stöds av AEM as a Cloud Service.
+Granska avsnittet **Certifikatkrav** av dokumentet [Introduktion till hantering av SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md#requirements) för att säkerställa att det certifikat du vill lägga till stöds av AEM as a Cloud Service.
 
 ## Lägga till ett certifikat {#adding-a-cert}
 

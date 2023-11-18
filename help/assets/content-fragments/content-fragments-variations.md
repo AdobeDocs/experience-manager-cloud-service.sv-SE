@@ -2,9 +2,9 @@
 title: Variationer - innehåll i redigeringsfragment (resurser - innehållsfragment)
 description: Förstå hur variationer kan göra ert headless-innehåll i AEM ännu mer flexibelt genom att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte.
 exl-id: af05aae6-d535-4007-ba81-7f41213ff152
-source-git-commit: 78ead5f15c2613d9c3bed3025b43423a66805c59
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2532'
+source-wordcount: '2530'
 ht-degree: 4%
 
 ---
@@ -79,7 +79,7 @@ Du kan:
 
 ### Helskärmsredigerare {#full-screen-editor}
 
-När du redigerar ett textfält med flera rader kan du öppna redigeraren i helskärmsläge, trycka eller klicka i själva texten och sedan välja följande åtgärdsikon:
+När du redigerar ett textfält med flera rader kan du öppna redigeraren i helskärmsläge. Markera i själva texten och välj sedan följande åtgärdsikon:
 
 ![redigeringsikon för helskärm](assets/cfm-variations-03.png)
 

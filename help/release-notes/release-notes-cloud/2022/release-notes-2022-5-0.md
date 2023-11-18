@@ -2,9 +2,9 @@
 title: Versionsinformation för 2022.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 1b867582-e34c-435b-b8f8-fc71dddcaccb
-source-git-commit: 7d09cafc4f8518fee185d3f9efc76c33ec20f9a3
+source-git-commit: fe19e99baa921247f86542c6643c1faf837e7d91
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '784'
 ht-degree: 0%
 
 ---
@@ -62,15 +62,15 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner hittills [skilja 
 
   ![Guide för att skapa ett adaptivt formulär](/help/release-notes/assets/wizard.png)
 
-## CIF-tillägg {#cloud-services-cif}
+## CIF {#cloud-services-cif}
 
 ### Nyheter {#what-is-new-cif}
 
 * Snabb åtkomst till produktcockpit: Få enkelt tillgång till detaljerad produktinformation med ett enda klick i Sites Editor
 
-  ![Aktivera önskelista](/help/assets/CIF/enable-wishlist.png)
+<!-- Image was not found during PR validation despite correct path   ![Enable wantlist](/help/assets/CIF/enable-wishlist.png) -->
 
-* Stöd för ytterligare marknadsföringskomponenter: Komponenter kan konfigureras för att visa ett tillägg i en kundvagn och tillägg i en önskelista som anropar till en åtgärd
+* Stöd för ytterligare marknadsföringskomponenter: Komponenter kan konfigureras för att visa ett tillägg till varukorgen och tillägg till önskad lista för att ringa till åtgärd
 
   ![Kortkommando för webbplatsredigeraren till produktcockpit](/help/assets/CIF/sites-editor-shortcut-to-cockpit.png)
 

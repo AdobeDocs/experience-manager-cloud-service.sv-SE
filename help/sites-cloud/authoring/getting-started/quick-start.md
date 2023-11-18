@@ -2,9 +2,9 @@
 title: Snabbstartsguide till redigering av sidor
 description: En snabb guide på hög nivå som hjälper dig att komma igång med att skapa sidinnehåll
 exl-id: d37c9b61-7382-4bf6-8b90-59726b871264
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1541'
 ht-degree: 4%
 
 ---
@@ -51,7 +51,7 @@ Innan du börjar med snabbstartsguiden finns det en liten samling allmänna tips
 
 >[!NOTE]
 >
->Det finns ett antal kortkommandon som kan underlätta redigeringen.
+>Det finns flera kortkommandon som kan underlätta redigeringen.
 >
 >* [Kortkommandon vid sidredigering](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md)
 >* [Kortkommandon för konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md)
@@ -87,17 +87,17 @@ Till [skapa en sida](/help/sites-cloud/authoring/fundamentals/organizing-pages.m
 
 ### Välja sida för ytterligare åtgärd {#selecting-your-page-for-further-action}
 
-Du kan markera en sida så att du kan utföra en åtgärd på den. När du väljer en sida uppdateras verktygsfältet automatiskt så att de åtgärder som är relevanta för resursen visas.
+Du kan markera en sida så att du kan agera på den. När du väljer en sida uppdateras verktygsfältet automatiskt så att de åtgärder som är relevanta för resursen visas.
 
 Hur du väljer en sida beror på vilken vy du använder i konsolen:
 
 1. Kolumnvy:
 
-   * Tryck/klicka på miniatyrbilden för resursen - miniatyrbilden visas med en bock som visar att den har markerats.
+   * Markera miniatyrbilden för den resurs som du vill använda - miniatyrbilden överlappas med en bock som visar att den har markerats.
 
 1. Listvy:
 
-   * Tryck/klicka på miniatyrbilden för resursen - miniatyrbilden visas med en bock som visar att den har markerats.
+   * Markera miniatyrbilden för den resurs som du vill använda - miniatyrbilden överlappas med en bock som visar att den har markerats.
 
 1. Kortvy:
 
@@ -114,7 +114,7 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
 
 [Snabbåtgärder](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions) är tillgängliga:
 
-1. [Navigera till sidan](#finding-your-page) du vill vidta åtgärder för.
+1. [Navigera till sidan](#finding-your-page) du vill agera på.
 1. Håll muspekaren över kortet som representerar den resurs du behöver. Snabbåtgärderna visas:
 
    ![Kortåtgärder](/help/sites-cloud/authoring/assets/card-actions.png)
@@ -147,7 +147,7 @@ Så här redigerar du sidan:
 
    * [Redigera innehållet i en befintlig komponent](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) på sidan:
 
-      * Öppna komponentens verktygsfält genom att trycka eller klicka. Använd **Redigera** (penna) för att öppna dialogrutan.
+      * Öppna komponentverktygsfältet med någon av markeringarna. Använd **Redigera** (penna) för att öppna dialogrutan.
       * Öppna komponentens direktredigerare genom att trycka och hålla ned eller dubbelklicka. De tillgängliga åtgärderna visas (för vissa komponenter är det ett begränsat urval).
       * Om du vill visa alla tillgängliga åtgärder går du till helskärmsläge med:
 
@@ -155,16 +155,16 @@ Så här redigerar du sidan:
 
    * [Konfigurera egenskaperna för en befintlig komponent](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-edit-dialog)
 
-      * Öppna komponentens verktygsfält genom att trycka eller klicka. Använd **Konfigurera** (skiftnyckel) för att öppna dialogrutan.
+      * Öppna komponentverktygsfältet med någon av markeringarna. Använd **Konfigurera** (skiftnyckel) för att öppna dialogrutan.
 
    * [Flytta en komponent](/help/sites-cloud/authoring/fundamentals/editing-content.md#moving-a-component) antingen:
 
       * Dra den önskade komponenten till dess nya plats.
-      * Öppna komponentens verktygsfält genom att trycka eller klicka. Använd **Klipp ut** sedan **Klistra in** ikoner där det behövs.
+      * Öppna komponentverktygsfältet med någon av markeringarna. Använd **Klipp ut** sedan **Klistra in** ikoner där det behövs.
 
    * [Kopiera (och klistra in)](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) en komponent:
 
-      * Öppna komponentens verktygsfält genom att trycka eller klicka. Använd **Kopiera** sedan **Klistra in** vid behov.
+      * Öppna komponentverktygsfältet med någon av markeringarna. Använd **Kopiera** sedan **Klistra in** vid behov.
 
    >[!NOTE]
    >
@@ -172,7 +172,7 @@ Så här redigerar du sidan:
 
    * [Ta bort](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) en komponent:
 
-      * Öppna komponentens verktygsfält genom att trycka eller klicka och sedan använda **Ta bort** -ikon.
+      * Öppna komponentens verktygsfält med antingen markering och använd sedan kommandot **Ta bort** -ikon.
 
    * [Lägg till anteckningar](/help/sites-cloud/authoring/fundamentals/annotations.md#annotations) till sidan:
 
@@ -292,7 +292,7 @@ Låsikonen ser till exempel ut så här:
 
    ![Referensvy](/help/sites-cloud/authoring/assets/references-list.png)
 
-1. Tryck/klicka på önskad referenstyp för att visa mer information och (när det är lämpligt) vidta ytterligare åtgärder.
+1. Välj önskad typ av referens om du vill visa mer information och (när det är lämpligt) vidta ytterligare åtgärder.
 
 ### Skapa en version av din sida {#creating-a-version-of-your-page}
 
@@ -302,7 +302,7 @@ Skapa en [version](/help/sites-cloud/authoring/features/page-versions.md) på si
 
    ![Vyalternativ för tidslinje](/help/sites-cloud/authoring/assets/timeline.png)
 
-1. Tryck/klicka på ellipsen längst ned till höger i kolumnen Tidslinje för att visa extra knappar, inklusive **Spara som version**.
+1. Markera ellipsen längst ned till höger i kolumnen Tidslinje för att visa extra knappar, inklusive **Spara som version**.
 
    ![Tidslinjevy](/help/sites-cloud/authoring/assets/timeline-view.png)
 
@@ -318,7 +318,7 @@ Samma grundläggande funktion används när du återställer och/eller jämför 
 
    Om en version av sidan redan har sparats visas den på tidslinjen.
 
-1. Tryck/klicka på den version som du vill återställa. Då visas ytterligare åtgärdsknappar:
+1. Välj den version som du vill återställa. Då visas ytterligare åtgärdsknappar:
 
    * **Återgå till den här versionen**
 

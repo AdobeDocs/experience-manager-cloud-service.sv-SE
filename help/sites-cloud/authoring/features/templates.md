@@ -2,10 +2,10 @@
 title: Skapa sidmallar
 description: Mallen definierar strukturen för den resulterande sidan och med mallredigeraren är det inte längre en uppgift som bara är avsedd för utvecklare att skapa och underhålla mallar
 exl-id: 4c9dbf26-5852-45ab-b521-9f051c153b2e
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '4567'
-ht-degree: 9%
+source-wordcount: '4538'
+ht-degree: 8%
 
 ---
 
@@ -40,7 +40,7 @@ Detaljerad information om hur redigerbara mallar fungerar på teknisk nivå finn
 >
 >En administratör måste konfigurera en mallmapp i **Konfigurationsläsaren** och lägga in rätt behörigheter innan mallskaparen kan skapa en mall i mappen.
 
-Innan du börjar är det viktigt att tänka på att det krävs samarbete för att skapa en ny mall. Därför är [Roll](#roles) anges för varje uppgift. Detta påverkar inte hur du faktiskt använder en mall för att skapa en sida, men det påverkar hur en sida relaterar till dess mall.
+Innan du börjar är det viktigt att tänka på att det krävs samarbete när du skapar en mall. Därför är [Roll](#roles) anges för varje uppgift. Detta påverkar inte hur du faktiskt använder en mall för att skapa en sida, men det påverkar hur en sida relaterar till dess mall.
 
 ### Roller {#roles}
 
@@ -67,7 +67,7 @@ De uppgifter som beskrivs i det här dokumentet listas med den roll som ansvarar
 
 ## Skapa och hantera mallar {#creating-and-managing-templates}
 
-När du skapar en ny redigerbar mall:
+När du skapar en redigerbar mall:
 
 * Använd **Mall** konsol. Det här är tillgängligt i **Allmänt** i **verktyg** konsol.
    * Eller direkt på: `https://<host>:<port>/libs/wcm/core/content/sites/templates.html/conf`
@@ -89,7 +89,7 @@ När du skapar en ny redigerbar mall:
 
 >[!TIP]
 >
->Ange aldrig någon information som behöver internationaliseras i en mall. <!-- Never enter any information that needs to be [internationalized](/help/sites-developing/i18n.md) into a template.-->
+>Ange aldrig någon information som måste internationaliseras i en mall. <!-- Never enter any information that must be [internationalized](/help/sites-developing/i18n.md) into a template.-->
 >
 >För mallelement som sidhuvuden och sidfötter som måste lokaliseras använder du [lokaliseringsfunktioner för kärnkomponenterna.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)
 
@@ -161,11 +161,11 @@ Så här definierar du mallminiatyrbilden:
 
 1. Redigera mallegenskaperna.
 1. Välj om du vill överföra en miniatyrbild eller låta den genereras från mallinnehållet.
-   * Om du vill överföra en miniatyrbild klickar du på eller trycker **Överför bild**
-   * Om du vill generera en miniatyrbild klickar eller trycker du på **Generera förhandsgranskning**
+   * Om du vill överföra en miniatyrbild markerar du **Överför bild**
+   * Om du vill generera en miniatyrbild väljer du **Generera förhandsgranskning**
 1. För båda metoderna visas en förhandsvisning av miniatyrbilden.
-   * Om det inte är tillfredsställande klickar du på **Rensa** om du vill överföra en annan bild eller återskapa miniatyrbilden.
-1. När du är nöjd med miniatyrbilden klickar eller trycker du **Spara och stäng**.
+   * Om det inte är tillräckligt väljer du **Rensa** om du vill överföra en annan bild eller återskapa miniatyrbilden.
+1. När du är nöjd med miniatyrbilden väljer du **Spara och stäng**.
 
 ### Aktivera och tillåta en mall - mallförfattare {#enabling-and-allowing-a-template-template-author}
 
@@ -184,7 +184,7 @@ En mall kan aktiveras eller inaktiveras så att den blir tillgänglig eller inte
 
 1. I **Mallkonsol** markerar du mallen.
 1. Välj **Aktivera** eller **Inaktivera** i verktygsfältet och i bekräftelsedialogrutan igen.
-1. Nu kan du använda mallen när [skapa en ny sida](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#creating-a-new-page), även om du antagligen vill [redigera mallen](#editing-templates-template-authors) enligt dina krav.
+1. Nu kan du använda mallen när [skapa en sida](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#creating-a-new-page), även om du antagligen vill [redigera mallen](#editing-templates-template-authors) enligt dina krav.
 
 >[!NOTE]
 >
@@ -219,7 +219,7 @@ En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
 
 ### Publicera en mall - mallförfattare {#publishing-a-template-template-author}
 
-När det refereras till mallen när en sida återges måste den fullständigt konfigurerade mallen publiceras så att den är tillgänglig i publiceringsmiljön.
+Eftersom mallen refereras när en sida återges måste den fullständigt konfigurerade mallen publiceras så att den är tillgänglig i publiceringsmiljön.
 
 1. I **Mallkonsol** markerar du mallen.
 1. Välj **Publicera** Öppna guiden i verktygsfältet.
@@ -293,7 +293,7 @@ I **Struktur** I kan du definiera komponenter och innehåll för mallen och defi
 
 ![Mallredigerarens sidstruktur](/help/sites-cloud/authoring/assets/templates-page-structure.png)
 
-Det finns ett antal åtgärder du kan utföra i **strukturläget** i mallredigeraren och ett antal funktioner som du kan använda:
+Det finns flera åtgärder du kan vidta i **Struktur** mallredigerarens läge och flera funktioner som kan hjälpa dig:
 
 #### Lägg till komponenter {#add-components}
 
@@ -364,17 +364,17 @@ Under **Policy** Du kan välja en befintlig profil som ska tillämpas på kompon
 
 ![Välj princip](/help/sites-cloud/authoring/assets/templates-policy-selector.png)
 
-Du kan lägga till en ny profil genom att markera knappen Lägg till bredvid **Välj princip** nedrullningsbar meny. En ny titel bör sedan anges i **Principtitel** fält.
+Du kan lägga till en ny profil genom att markera knappen Lägg till bredvid **Välj princip** nedrullningsbar meny. Ge en ny titel i **Principtitel** fält.
 
 ![Knappen Lägg till princip](/help/sites-cloud/authoring/assets/templates-add-policy-button.png)
 
-Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Principtitel** fält. Som standard har den kopierade profilen namnet **Kopia av X**, där X är namnet på den kopierade profilen.
+Den valda befintliga profilen i **Välj princip** nedrullningsbar lista kan kopieras som en ny profil med kopieringsknappen bredvid listrutan. Ge en ny titel i **Principtitel** fält. Som standard har den kopierade profilen namnet **Kopia av X**, där X är namnet på den kopierade profilen.
 
 ![Kopiera princip, knapp](/help/sites-cloud/authoring/assets/templates-copy-policy-button.png)
 
 En beskrivning av profilen är valfri i **Principbeskrivning** fält.
 
-I **Andra mallar använder även den valda profilen** kan du enkelt se vilka andra mallar som använder den profil som valts i **Välj princip** nedrullningsbar meny.
+I **Andra mallar använder även den valda profilen** kan du enkelt se vilka andra mallar som använder den profil som valts i **Välj princip** listruta.
 
 ![Användning av befintlig princip](/help/sites-cloud/authoring/assets/templates-policy-use.png)
 
@@ -395,13 +395,13 @@ På **Huvud** -fliken definieras de viktigaste inställningarna för komponenten
 
 För en bildkomponent kan till exempel tillåtna bredder definieras tillsammans med aktivering av lazy loading.
 
-Om en inställning tillåter flera konfigurationer klickar du på eller trycker på **Lägg till** om du vill lägga till en annan konfiguration.
+Om en inställning tillåter flera konfigurationer väljer du **Lägg till** om du vill lägga till en annan konfiguration.
 
 ![Knappen Lägg till](/help/sites-cloud/authoring/assets/templates-add-button.png)
 
-Om du vill ta bort en konfiguration klickar eller trycker du på **Ta bort** till höger om konfigurationen.
+Om du vill ta bort en konfiguration väljer du **Ta bort** till höger om konfigurationen.
 
-Om du vill ta bort en konfiguration klickar eller trycker du på **Ta bort** -knappen.
+Om du vill ta bort en konfiguration väljer du **Ta bort** -knappen.
 
 ![Knappen Ta bort](/help/sites-cloud/authoring/assets/templates-delete-button.png)
 
@@ -461,9 +461,9 @@ På **Tillåtna komponenter** definierar du vilka komponenter som är tillgängl
 
 På **Standardkomponenter** definierar du vilka komponenter som automatiskt kopplas till vissa medietyper så att AEM vet vilken komponent som ska kopplas när en författare drar en resurs från resursläsaren. Observera att endast komponenter med släppzoner är tillgängliga för sådan konfiguration.
 
-Klicka eller tryck **Lägg till mappning** för att lägga till en helt ny komponent och MIME-typmappning.
+Välj **Lägg till mappning** för att lägga till en helt ny komponent och MIME-typmappning.
 
-Markera en komponent i listan och klicka eller tryck på **Lägg till typ** för att lägga till ytterligare en MIME-typ i en redan mappad komponent. Klicka på ikonen **Ta bort** för att ta bort en MIME-typ.
+Markera en komponent i listan och markera **Lägg till typ** om du vill lägga till ytterligare en MIME-typ i en redan mappad komponent. Klicka på ikonen **Ta bort** för att ta bort en MIME-typ.
 
 ![Fliken Standardkomponenter](/help/sites-cloud/authoring/assets/templates-default-components-tab.png)
 
@@ -568,20 +568,20 @@ Du kan tillämpa en innehållsprincip på antingen mallen eller de resulterande 
 
   ![Principväljare](/help/sites-cloud/authoring/assets/templates-policy-selector.png)
 
-  Du kan lägga till en ny profil genom att markera knappen Lägg till bredvid **Välj princip** nedrullningsbar meny. En ny titel bör sedan anges i **Principtitel** fält.
+  Du kan lägga till en ny profil genom att markera knappen Lägg till bredvid **Välj princip** listruta. Ge en ny titel i **Principtitel** fält.
 
   ![Knappen Lägg till princip](/help/sites-cloud/authoring/assets/templates-add-policy-button.png)
 
-  Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Principtitel** fält. Som standard har den kopierade profilen namnet **Kopia av X**, där X är namnet på den kopierade profilen.
+  Den valda befintliga profilen i **Välj princip** nedrullningsbar lista kan kopieras som en ny profil med kopieringsknappen bredvid listrutan. Ge en ny titel i **Principtitel** fält. Som standard har den kopierade profilen namnet **Kopia av X**, där X är namnet på den kopierade profilen.
 
   ![Kopiera princip, knapp](/help/sites-cloud/authoring/assets/templates-copy-policy-button.png)
 
-* Definiera en rubrik för profilen i dialogrutan **Principtitel** fält. En profil måste ha en titel så att den enkelt kan väljas i **Välj princip** nedrullningsbar meny.
+* Definiera en rubrik för profilen i dialogrutan **Principtitel** fält. En profil måste ha en titel så att den enkelt kan väljas i **Välj princip** listruta.
 
   ![Principtitel](/help/sites-cloud/authoring/assets/templates-policy-title.png)
 
 * En beskrivning av profilen är valfri i **Principbeskrivning** fält.
-* I **Andra mallar använder även den valda profilen** kan du enkelt se vilka andra mallar som använder den profil som valts i **Välj princip** nedrullningsbar meny.
+* I **Andra mallar använder även den valda profilen** kan du enkelt se vilka andra mallar som använder den profil som valts i **Välj princip** listruta.
 
   ![Policyanvändning](/help/sites-cloud/authoring/assets/templates-policy-use.png)
 

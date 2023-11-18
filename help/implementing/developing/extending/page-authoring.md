@@ -1,13 +1,13 @@
 ---
 title: Anpassa sidredigering
 description: Lär dig mer om de mekanismer som AEM as a Cloud Service har för att anpassa sidredigeringsfunktionerna.
-source-git-commit: f159f0ef86c2b82da4e7308a0892b4947b6e43fb
+exl-id: 98d3c7ab-46d2-4e8d-b0da-5c8a7b398135
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '969'
 ht-degree: 0%
 
 ---
-
 
 # Anpassa sidredigering {#customizing-page-authoring}
 
@@ -22,7 +22,7 @@ När du anpassar kan du skapa en egen klientlib under `/apps.` Den nya klientlib
 * Beroende på hur klientlib skapas `cq.authoring.editor.sites.page`.
 * Bli en del av `cq.authoring.editor.sites.page.hook` kategori.
 
-Mer information om libs finns i dokumentet [Använda bibliotek på klientsidan på AEM as a Cloud Service.](/help/implementing/developing/introduction/clientlibs.md)
+Se [Använda bibliotek på klientsidan på AEM as a Cloud Service](/help/implementing/developing/introduction/clientlibs.md).
 
 ## Övertäckningar {#overlays}
 
@@ -32,7 +32,7 @@ När du skapar en övertäckning behövs ingen 1:1-kopia av originalet, eftersom
 
 Mer information finns i [JS-dokumentationsuppsättning](https://developer.adobe.com/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html).
 
-Mer information om övertäckningar finns i dokumentet [Övertäckningar för Adobe Experience Manager as a Cloud Service.](/help/implementing/developing/introduction/overlays.md)
+Mer information om övertäckningar finns i [Övertäckningar för Adobe Experience Manager as a Cloud Service](/help/implementing/developing/introduction/overlays.md).
 
 ## Lägg till nytt lager (läge) {#add-new-layer-mode}
 
@@ -178,7 +178,7 @@ Om du vill ha ett anpassat beteende för en sådan aktivering kan du täcka öve
 
 1. I `/apps` överlägg **Webbplatser** guide `/libs/wcm/core/content/common/managepublicationwizard`
 
-   * Själva den här åsidosätter den vanliga förekomsten av `/libs/cq/gui/content/common/managepublicationwizard`.
+   * Detta i sig åsidosätter den vanliga förekomsten av `/libs/cq/gui/content/common/managepublicationwizard`.
 
 1. Uppdatera arbetsflödesmodellen och relaterade konfigurationer/skript efter behov.
 1. Ta bort höger till `replicate` åtgärd från alla lämpliga användare för alla relevanta sidor. Om du vill att det här arbetsflödet ska utlösas som en standardåtgärd när någon av användarna gör det, försöker du publicera (eller replikera) en sida.

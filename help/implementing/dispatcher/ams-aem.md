@@ -3,10 +3,10 @@ title: Migrera Dispatcher-konfigurationen från AMS till AEM as a Cloud Service
 description: Migrera Dispatcher-konfigurationen från AMS till AEM as a Cloud Service
 feature: Dispatcher
 exl-id: ff7397dd-b6e1-4d08-8e2d-d613af6b81b3
-source-git-commit: 24c6e5e78e3e1b30e4becfad2f4f6e57e75ad4e9
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 14%
+source-wordcount: '1455'
+ht-degree: 11%
 
 ---
 
@@ -93,7 +93,7 @@ Kör Dispatcher-valideraren i din katalog med `httpd` underkommando:
 $ validator httpd .
 ```
 
-Om felmeddelanden om saknade inkluderingsfiler visas, ska du kontrollera om du har bytt namn på filerna korrekt.
+Om du ser fel som handlar om saknade inkluderingsfiler ska du kontrollera om du har bytt namn på filerna korrekt.
 
 Om Apache-direktiv som inte är tillåtslista visas tar du bort dem.
 
@@ -227,7 +227,7 @@ Kör AEM as a Cloud Service Dispatcher-valideraren i din katalog med `dispatcher
 $ validator dispatcher .
 ```
 
-Om felmeddelanden om saknade inkluderingsfiler visas, ska du kontrollera om du har bytt namn på filerna korrekt.
+Om du ser fel som handlar om saknade inkluderingsfiler ska du kontrollera om du har bytt namn på filerna korrekt.
 
 Om felmeddelanden som rör en odefinierad variabel `PUBLISH_DOCROOT` visas, ändrar du namnet till `DOCROOT`.
 

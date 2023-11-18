@@ -5,7 +5,7 @@ mini-toc-levels: 1
 feature: Asset Management, Publishing, Collaboration, Asset Processing
 role: User, Architect, Admin
 exl-id: 691a0925-0061-4c62-85ac-8257b96dddf2
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '1545'
 ht-degree: 2%
@@ -96,7 +96,7 @@ När du har använt filtren klickar du på **[!UICONTROL OK]** och klicka sedan 
 
 I bilden ovan kan du se olika värden för **[!UICONTROL Publish Target]** -attribut. Låt oss komma ihåg att du har valt att publicera till [!DNL Experience Manager Assets] (`Destination: Publish`). Varför visar det då att bara en mapp och en resurs publiceras till `AEM`, och de andra två resurserna publiceras till båda `AEM` och `Dynamic Media`?
 
-Här måste du känna till mappegenskapernas roll. En mapps **[!UICONTROL Dynamic Media Publishing mode]** egenskapen spelar en viktig roll när det gäller publicering. Om du vill visa en mapps egenskaper markerar du en mapp och klickar på **[!UICONTROL Properties]** i verktygsfältet. Information om en resurs finns i egenskaperna för dess överordnade mapp.
+Här måste du känna till mappegenskapernas roll. En mapp **[!UICONTROL Dynamic Media Publishing mode]** egenskapen spelar en viktig roll när det gäller publicering. Om du vill visa egenskaperna för en mapp markerar du en mapp och klickar på **[!UICONTROL Properties]** i verktygsfältet. Information om en resurs finns i egenskaperna för dess överordnade mapp.
 
 I följande tabell förklaras hur publiceringen sker beroende på den definierade **[!UICONTROL Destination]** och **[!UICONTROL Dynamic Media Publish mode]**:
 
@@ -133,7 +133,6 @@ Låt oss nu ändra **[!UICONTROL Destination]** i ovanstående fall till **[!UIC
 >Om du har anpassat [!DNL Manage Publication] fortsätter anpassningen att fungera med de befintliga funktionerna.
 >
 >Du kan dock ta bort den befintliga anpassningen och använda den nya [!DNL Manager Publication] funktioner.
-
 
 ## Publicera resurser senare {#publish-assets-later}
 
@@ -179,9 +178,10 @@ Du kan publicera resurser, mappar och samlingar i [!DNL Experience Manager Asset
 
 ## Begär publikation {#request-publication}
 
-The `Request Publication` hjälper till att autentisera resursarbetsflöden innan de publiceras på [!DNL AEM] Resursmiljö. [!DNL AEM] ger olika behörighetsnivåer för olika användare. Du kan vara en *medverkande* som överför resurser men inte kan publicera dem förrän överföringarna har verifierats. Dessutom är *Administratör* kan du hantera arbetsflöden för att läsa och skriva resurser.
+The `Request Publication` hjälper till att autentisera resursarbetsflöden innan de publiceras på [!DNL AEM] Resursmiljö. [!DNL AEM] ger olika behörighetsnivåer för olika användare. Du kan vara en *medverkande* som överför resurser men inte kan publicera dem förrän överföringarna har verifierats. Och att vara *Administratör* kan du hantera arbetsflöden för att läsa och skriva resurser.
 
 Publiceringsalternativet för begäran är tillgängligt för följande användare:
+
 * **Medarbetare:** Om du är en användare som kan bidra till [!DNL AEM] Resurser, sedan har du begränsad tillgång till [!DNL AEM] Arbetsflöde för resurser. `Manage publication` knappen är dold för dig. Som deltagare kan du bara bidra genom att lägga till resurser, men du kan inte publicera dem eller ha läsåtkomst till arbetsflödet.
 
 * **Arbetsflödesanvändare:** Den här användaren kan inte publicera resurser men har läsåtkomst till arbetsflödet. Som arbetsflödesanvändare kan du:

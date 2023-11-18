@@ -2,9 +2,9 @@
 title: SPA
 description: Den här artikeln innehåller en omfattande översikt över SPA Editor och hur den fungerar. Den innehåller detaljerade arbetsflöden för interaktion med SPA Editor i AEM.
 exl-id: 9814d86e-8d87-4f7f-84ba-6943fe6da22f
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1630'
+source-wordcount: '1632'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Single page applications (SPA) can offer compelling experiences for website users. Utvecklare vill kunna skapa webbplatser med SPA ramverk och författare vill smidigt redigera innehåll i AEM för en webbplats som skapats med sådana ramverk.
 
-SPA Editor erbjuder en omfattande lösning för SPA inom AEM. På den här sidan får du en översikt över hur SPA stöds är strukturerat i AEM, hur SPA redigeraren fungerar och hur SPA ramverk och AEM är synkroniserade.
+SPA Editor erbjuder en omfattande lösning för SPA inom AEM. På den här sidan får du en översikt över hur SPA stöds är uppbyggt i AEM, hur SPA redigeraren fungerar och hur SPA ramverk och AEM är synkroniserade.
 
 ## Introduktion {#introduction}
 
@@ -23,15 +23,15 @@ Om du vill kunna redigera SPA i AEM måste du mappa mellan JSON-utdata för SPA 
 
 SPA i AEM innehåller ett tunt JS-lager som interagerar med den SPA JS-koden när den läses in i sidredigeraren. Händelser kan skickas med och platsen för redigeringskontrollerna kan aktiveras för redigering i sitt sammanhang. Den här funktionen bygger på API-slutpunktskonceptet för innehållstjänster eftersom innehållet från SPA måste läsas in via innehållstjänster.
 
-Mer information om SPA i AEM finns i följande dokument:
+Mer information om SPA i AEM finns i:
 
-* [SPA Blueprint](blueprint.md) för tekniska krav för en SPA
-* [Komma igång med SPA i AEM med React](getting-started-react.md) för en snabb genomgång av en enkel SPA med React
-* [Komma igång med SPA i AEM med Angular](getting-started-angular.md) för en snabb genomgång av en enkel SPA med Angular
+* [SPA](blueprint.md) för de tekniska kraven för en SPA.
+* [Komma igång med SPA i AEM med React](getting-started-react.md) för en snabb genomgång av en enkel SPA med React.
+* [Komma igång med SPA i AEM med Angular](getting-started-angular.md) för en snabb genomgång av en enkel SPA med Angular.
 
 ## Design {#design}
 
-Sidkomponenten för en SPA tillhandahåller inte elementen HTML i dess underordnade komponenter via JSP- eller HTML-filen. Den här åtgärden har delegerats till SPA ramverk. Representationen av underordnade komponenter eller modeller hämtas som en JSON-datastruktur från JCR. De SPA komponenterna läggs sedan till på sidan enligt den strukturen. Det här beteendet skiljer sidkomponentens ursprungliga brödkomposition från icke-SPA.
+Sidkomponenten för en SPA tillhandahåller inte elementen HTML i dess underordnade komponenter via JSP- eller HTL-filen. Den här åtgärden har delegerats till SPA ramverk. Representationen av underordnade komponenter eller modeller hämtas som en JSON-datastruktur från JCR. SPA komponenter läggs sedan till på sidan enligt den strukturen. Det här beteendet skiljer sidkomponentens ursprungliga brödkomposition från icke-SPA.
 
 ### Sidmodellshantering {#page-model-management}
 
@@ -71,7 +71,7 @@ Du kan förstå interaktionsflödet mellan SPA och AEM genom att tänka på SPA 
 
 Med tanke på de viktigaste elementen i SPA Editor visas arbetsflödet på hög nivå för redigering av en SPA i AEM för författaren enligt följande.
 
-![Animerat SPA](assets/workflow.gif)
+![Animerat SPA arbetsflöde](assets/workflow.gif)
 
 1. SPA Editor läses in.
 1. SPA läses in i en separat ram.
@@ -159,7 +159,7 @@ Tidigare versioner av dessa ramverk kan fungera med AEM SDK för redigeraren, me
 
 ### Ytterligare ramar {#additional-frameworks}
 
-Ytterligare SPA kan implementeras för att fungera med AEM SPA Editor SDK. Se [SPA Blueprint](blueprint.md) dokumentera de krav som ett ramverk måste uppfylla för att skapa ett ramverksspecifikt lager som består av moduler, komponenter och tjänster för att fungera med AEM SPA.
+Ytterligare SPA kan implementeras för att fungera med AEM SPA Editor SDK. Se [SPA](blueprint.md) dokumentera de krav som ett ramverk måste uppfylla för att skapa ett ramverksspecifikt lager som består av moduler, komponenter och tjänster för att fungera med AEM SPA.
 
 ### Använda flera väljare {#multiple-selectors}
 
@@ -181,9 +181,9 @@ AEM SPA Editor SDK stöds fullt ut av Adobe och fortsätter att förbättras och
 * Målläge
 * ContextHub
 * Redigering av infogad bild
-* Redigera konfigurationer (t.ex. avlyssnare)
+* Redigera konfigurationer (t ex avlyssnare)
 * Ångra/Gör om
-* Sidskillnader och tidsförvrängning
-* Funktioner för att skriva om HTML på serversidan, t.ex. Länkkontroll, CDN-omskrivartjänst, URL-förkortning etc.
+* Sidskillnader och tidsförskjutning
+* Funktioner för att skriva om HTML på serversidan, som Länkkontroll, CDN-omskrivartjänst, URL-förkortning och så vidare.
 * Utvecklarläge
 * AEM

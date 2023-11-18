@@ -2,7 +2,7 @@
 title: Implementeringsfas
 description: Kontrollera att koden och innehållet är klara för migrering till molnet
 exl-id: d124f9a5-a754-4ed0-a839-f2968c7c8faa
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '2339'
 ht-degree: 8%
@@ -75,7 +75,7 @@ Börja med att titta på dokumentationen som beskriver de grundläggande verktyg
 * Lär dig hur du konfigurerar en lokal utvecklingsmiljö genom att hämta [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en)
 * Äntligen bekanta dig med [AEM as a Cloud Service Java API](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/index.html).
 
-Dessutom kan du:
+Du kan också:
 
 * I den här videon får du veta hur du installerar Dispatcher SDK lokalt:
 

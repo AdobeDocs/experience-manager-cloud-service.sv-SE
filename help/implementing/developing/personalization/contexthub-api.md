@@ -2,9 +2,9 @@
 title: ContextHub JavaScript API-referens
 description: ContextHub JavaScript API är tillgängligt för skript när ContextHub-komponenten har lagts till på sidan
 exl-id: ec35bef5-610c-4e85-a43a-d4201b5eb03e
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '4620'
+source-wordcount: '4612'
 ht-degree: 0%
 
 ---
@@ -195,7 +195,7 @@ A `boolean` värde:
 
 #### announReadiness() {#announcereadiness}
 
-Utlöser `ready` händelse för den här butiken. Den här funktionen har inga parametrar och returnerar inget värde.
+Utlöser `ready` -händelse för den här butiken. Den här funktionen har inga parametrar och returnerar inget värde.
 
 #### clear() {#clean}
 
@@ -262,8 +262,8 @@ Initierar butiken.
 * **`name`:** Butikens namn.
 * **`config`:** Ett objekt som innehåller konfigurationsegenskaper:
    * `eventDeferring`: Standardvärdet är 32.
-   * `eventing`: The [ContextHub.Utils.Eventing](#contexthub-utils-eventing) objekt för den här butiken. Standardvärdet är `ContextHub.eventing` objekt använder.
-   * `persistence`: The `ContextHub.Utils.Persistence` objekt för den här butiken. Standardvärdet är `ContextHub.persistence` -objekt.
+   * `eventing`: [ContextHub.Utils.Eventing](#contexthub-utils-eventing) objekt för den här butiken. Standardvärdet är `ContextHub.eventing` objekt använder.
+   * `persistence`: `ContextHub.Utils.Persistence` objekt för den här butiken. Standardvärdet är `ContextHub.persistence` -objekt.
 
 #### isEventingPaused() {#iseventingpaused}
 
@@ -271,10 +271,10 @@ Avgör om händelser pausas för det här arkivet.
 
 ##### Returnerar {#returns-iseventingpaused}
 
-Ett booleskt värde:
+Boolesk:
 
-* `true`: Händelsen pausas så att inga händelser aktiveras för den här butiken.
-* `false`: Händelsen pausas inte så att händelser aktiveras för den här butiken.
+* `true`: Händelsen pausas så att inga händelser utlöses för det här arkivet.
+* `false`: Händelser pausas inte så att händelser utlöses för det här arkivet.
 
 #### pauseEventing() {#pauseeventing}
 
@@ -292,7 +292,7 @@ Du kan även förhindra att `data` -händelse.
 
 * **`key`:** (String) Namnet på nyckeln som ska tas bort.
 * **`options`:** (Objekt) Ett objekt med alternativ. Följande objektegenskaper är giltiga:
-   * tyst: Värdet för `true` förhindrar att `data` -händelse. Standardvärdet är `false`.
+   * silent: Ett värde på `true` förhindrar att `data` -händelse. Standardvärdet är `false`.
 
 ##### Returnerar {#returns-removeitem}
 
@@ -347,7 +347,7 @@ A `string` värdet som representerar den refererade nyckeln. Om ingen referens �
 
 Lägger till ett nyckel/värde-par i butiken.
 
-Utlöser `data` bara om värdet för nyckeln skiljer sig från värdet som för närvarande lagras för nyckeln. Du kan även förhindra att `data` -händelse.
+Utlöser `data` bara om värdet för nyckeln skiljer sig från värdet som för närvarande lagras för nyckeln. Du kan även förhindra att utlösaren av `data` -händelse.
 
 Händelsedata innehåller butiksnamnet, nyckeln, det föregående värdet, det nya värdet och åtgärdstypen för `set`.
 
@@ -383,11 +383,11 @@ Konfigurerar informationen för anslutning till den JSONP-tjänst som det här o
 
 * **`serviceConfig`:** Ett objekt som innehåller följande egenskaper:
    * `host`: (String) Servernamnet eller IP-adressen.
-   * `jsonp`: (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, i annat fall false. När true är {callback: &quot;ContextHub.Callbacks.*Object.name*}-objektet läggs till i service.params-objektet.
-   * `params`: (Objekt) URL-parametrar representeras som objektegenskaper. Parameternamn är egenskapsnamn och parametervärden är egenskapsvärden.
+   * `jsonp`: (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, i annat fall false. När värdet är true är {callback: &quot;ContextHub.Callbacks.*Object.name*}-objektet läggs till i service.params-objektet.
+   * `params`: (Object) URL-parametrar representeras som objektegenskaper. Parameternamn är egenskapsnamn och parametervärden är egenskapsvärden.
    * `path`: (String) Sökvägen till tjänsten.
-   * `port`: (Nummer) Tjänstens portnummer.
-   * `secure`: (Sträng eller Boolean) Anger vilket protokoll som ska användas för tjänstens URL:
+   * `port`: (Number) Tjänstens portnummer.
+   * `secure`: (String eller Boolean) Anger vilket protokoll som ska användas för tjänstens URL:
       * `auto`: //
       * `true`: https://
       * `false`: http://
@@ -403,14 +403,14 @@ Ett objekt som representerar råsvaret.
 
 #### getServiceDetails() {#getservicedetails}
 
-Hämtar tjänstobjektet för det här ContextHub.Store.JSONPStore-objektet. Tjänsteobjektet innehåller all information som krävs för att skapa tjänstens URL.
+Hämtar tjänstobjektet för det här ContextHub.Store.JSONPStore-objektet. Tjänsteobjektet innehåller den information som krävs för att skapa tjänst-URL:en.
 
 ##### Returnerar {#returns-getservicedetails}
 
 Ett objekt med följande egenskaper:
 
 * **`host`:** (String) Servernamnet eller IP-adressen.
-* **`jsonp`:** (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, i annat fall false. När true är {callback: &quot;ContextHub.Callbacks.*Object.name*}-objektet läggs till i service.params-objektet.
+* **`jsonp`:** (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, i annat fall false. När värdet är true är {callback: &quot;ContextHub.Callbacks.*Object.name*}-objektet läggs till i service.params-objektet.
 * **`params`:** (Objekt) URL-parametrar representeras som objektegenskaper. Parameternamn är egenskapsnamn och parametervärden är egenskapsvärden.
 * **`path`:** (String) Sökvägen till tjänsten.
 * **`port`:** (Nummer) Tjänstens portnummer.
@@ -440,19 +440,19 @@ initierar `ContextHub.Store.JSONPStore` -objekt.
 * **`name`:** (String) Butikens namn.
 * **`config`:** (Objekt) Ett objekt som innehåller egenskapen service. JSONPStore-objektet använder egenskaperna för `service` objekt för att skapa URL:en för JSONP-tjänsten:
    * `eventDeferring`: 32.
-   * `eventing`: Objektet ContextHub.Utils.Eventing för det här arkivet. Standardvärdet är `ContextHub.eventing` -objekt.
+   * `eventing`: ContextHub.Utils.Eventing-objektet för det här arkivet. Standardvärdet är `ContextHub.eventing` -objekt.
    * `persistence`: ContextHub.Utils.Persistence-objektet för det här arkivet. Som standard används minnesbeständighet (JavaScript-objekt).
-   * `service`: (Objekt)
+   * `service`: (Object)
       * `host`: (String) Servernamnet eller IP-adressen.
       * `jsonp`: (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, i annat fall false. När true är `{callback: "ContextHub.Callbacks.*Object.name*}`objekt läggs till i `service.params`.
-      * `params`: (Objekt) URL-parametrar representeras som objektegenskaper. Parameternamn och värden är objektegenskapsnamnen och -värdena.
+      * `params`: (Object) URL-parametrar representeras som objektegenskaper. Parameternamn och värden är objektegenskapsnamnen och -värdena.
       * `path`: (String) Sökvägen till tjänsten.
-      * `port`: (Nummer) Tjänstens portnummer.
-      * `secure`: (Sträng eller Boolean) Anger vilket protokoll som ska användas för tjänstens URL:
+      * `port`: (Number) Tjänstens portnummer.
+      * `secure`: (String eller Boolean) Anger vilket protokoll som ska användas för tjänstens URL:
          * `auto`: //
          * `true`: https://
          * `false`: http://
-      * `timeout`: (Nummer) Hur lång tid det tar att vänta på att JSONP-tjänsten ska svara före timeout, i millisekunder.
+      * `timeout`: (Number) Den väntetid i millisekunder som JSONP-tjänsten ska svara före timeout.
          * `ttl`: Den kortaste tiden i millisekunder som går mellan anrop till JSONP-tjänsten. (Se [queryService](#queryservice-reload) funktion).
 
 #### queryService(reload) {#queryservice-reload}
@@ -676,7 +676,7 @@ Avbinder en funktion från en händelse.
 ##### Parametrar {#parameters-off}
 
 * **`name`:** The [händelsens namn](#contexthub-utils-eventing) som du avbinder funktionen för.
-* **`selector`:** Väljaren som identifierar bindningen. (Se `selector` parametern för [`on`](#on-name-handler-selector-triggerforpastevents) och [`once`](#once-name-handler-selector-triggerforpastevents) funktioner).
+* **`selector`:** Väljaren som identifierar bindningen. (Se `selector` -parametern för [`on`](#on-name-handler-selector-triggerforpastevents) och [`once`](#once-name-handler-selector-triggerforpastevents) funktioner).
 
 ##### Returnerar {#returns-off}
 
@@ -695,7 +695,7 @@ Bindar en funktion till en händelse. Funktionen anropas varje gång händelsen 
 
 ##### Returnerar {#returns-on}
 
-När `triggerForPastEvents` argument `true`returnerar den här funktionen `boolean` värde som anger om händelsen har inträffat tidigare:
+När `triggerForPastEvents` argument `true`returnerar den här funktionen en `boolean` värde som anger om händelsen har inträffat tidigare:
 
 * `true`: Händelsen inträffade tidigare och hanteraren anropas.
 * `false`: Händelsen har inte inträffat tidigare.
@@ -735,7 +735,7 @@ Bindar en funktion till en händelse. Funktionen anropas bara en gång för den 
 
 ##### Returnerar {#returns-once}
 
-När `triggerForPastEvents` argument `true`returnerar den här funktionen `boolean` värde som anger om händelsen har inträffat tidigare:
+När `triggerForPastEvents` argument `true`returnerar den här funktionen en `boolean` värde som anger om händelsen har inträffat tidigare:
 
 * `true`: Händelsen inträffade tidigare och hanteraren anropas.
 * `false`: Händelsen har inte inträffat tidigare.
@@ -803,7 +803,7 @@ Serialiserar JavaScript-värden och -objekt till strängvärden i JSON-format.
 
 ##### Returnerar {#returns-stringify}
 
-Det serialiserade strängvärdet. När `data` är ett R `egExp` returnerar den här funktionen ett tomt objekt. När `data` är en funktion, returnerar `undefined`.
+Det serialiserade strängvärdet. När `data` är ett R `egExp` returnerar funktionen ett tomt objekt. När `data` är en funktion, returnerar `undefined`.
 
 ##### Exempel {#example-stringify}
 
@@ -1005,7 +1005,7 @@ myObject {
 
 Ändrar strängvärden så att de kan användas som nycklar. Om du vill sanera en sträng utför den här funktionen följande åtgärder:
 
-* Minskar flera på varandra följande snedstreck till ett enda snedstreck.
+* Minskar flera efterföljande snedstreck till ett enda snedstreck.
 * Tar bort mellanrum från början och slutet av strängen.
 * Delar upp resultatet i en array med strängar som avgränsas av snedstreck.
 
@@ -1021,7 +1021,7 @@ En array med `string` värden där varje sträng är den del av `key` som avgrä
 
 ##### Exempel {#example-sanitizekey}
 
-Följande kod sanerar en sträng för att skapa arrayen `["this", "is", "a", "path"]`och sedan genererar nyckeln `"/this/is/a/path"` från arrayen:
+Följande kod sanerar en sträng för att skapa arrayen `["this", "is", "a", "path"]`och sedan genererar nyckeln `"/this/is/a/path"` från matrisen:
 
 ```javascript
 var key = " / this////is/a/path ";
@@ -1086,7 +1086,7 @@ Ett objekt av lagringstyper. Objektegenskaperna är lagringstypsnamnen och egens
 
 #### getStoreFromCandidates(storeType) {#getstorefromcandidates-storetype}
 
-Returnerar en butikstyp från de registrerade anbudssökandena. Om fler än en lagringstyp med samma namn är registrerad returnerar funktionen den lagringstyp som har högst prioritet.
+Returnerar en butikstyp från de registrerade anbudssökande. Om fler än en lagringstyp med samma namn är registrerad returnerar funktionen den lagringstyp som har högst prioritet.
 
 ##### Parametrar {#parameters-getstorefromcandidates}
 
@@ -1113,9 +1113,9 @@ Prioriteten är ett tal som anger vikten av butiker med samma namn. När en buti
 ##### Parametrar {#parameters-registerstorecandidate}
 
 * **`store`:** (Objekt) Det lagringsobjekt som ska registreras som lagringskandidater.
-* **`storeType`:** (String) Namnet på lagringskandidaten. Det här värdet krävs när du skapar en instans av lagringskandidaten.
+* **`storeType`:** (String) Namnet på lagringskandidaten. Detta värde krävs när en instans av lagringskandidaten skapas.
 * **`priority`:** (Number) Prioriteten för butikskandidaten.
-* **`applies`:** (Funktion) Funktionen som ska anropas som utvärderar butikens tillämplighet i den aktuella miljön. Funktionen måste returnera `true` om butiken är tillämplig, och `false` i annat fall. Standardvärdet är en funktion som returnerar true: `function() {return true;}`
+* **`applies`:** (Funktion) Funktionen som ska anropas som utvärderar butikens tillämplighet i den aktuella miljön. Funktionen måste returnera `true` om butiken är tillämplig, och `false` annars. Standardvärdet är en funktion som returnerar true: `function() {return true;}`
 
 ##### Exempel {#example-registerstorecandidate}
 

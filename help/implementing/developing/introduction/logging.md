@@ -2,9 +2,9 @@
 title: Loggning för AEM as a Cloud Service
 description: Lär dig hur du använder loggning för AEM as a Cloud Service för att konfigurera globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
-source-git-commit: 9d1aab8f615f9e6aa9751fe978a56c915c9a8797
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2757'
+source-wordcount: '2753'
 ht-degree: 0%
 
 ---
@@ -279,7 +279,7 @@ AEM as a Cloud Service innehåller tre loggar för Apache-webbservrar och dispat
 * Fellogg för Apache HTTPD-webbserver
 * Dispatcher-logg
 
-Observera att dessa loggar endast är tillgängliga för publiceringsnivån.
+Dessa loggar är bara tillgängliga för publiceringsnivån.
 
 Den här uppsättningen loggar ger information om HTTP-begäranden till AEM as a Cloud Service publiceringsnivå innan dessa begäranden når AEM. Detta är viktigt att förstå eftersom de flesta HTTP-begäranden till publiceringsskiktsservrar betjänas av innehåll som cachas av Apache HTTPD-webbservern och AEM Dispatcher, och som aldrig når själva AEM. Därför finns det inga loggsatser för dessa förfrågningar i AEM Java-, Request- eller Access-loggar.
 
@@ -504,7 +504,7 @@ Define DISP_LOG_LEVEL debug
 
 AEM as a Cloud Service ger åtkomst till CDN-loggar, som är användbara vid användning, inklusive optimering av träffkvoten. Det går inte att anpassa CDN-loggformatet och det finns inget koncept för att ställa in det på olika lägen, till exempel info, warn eller error.
 
-Observera att funktionen Splunk Fording ännu inte stöder CDN-loggar.
+Splunk Fording-funktionen stöder ännu inte CDN-loggar.
 
 **Exempel**
 
@@ -643,7 +643,7 @@ Här nedan hittar du ett exempel på en kundsupportförfrågan:
 Program 123, Production Env
 
 * Splunk HEC-slutpunktsadress: `splunk-hec-ext.acme.com`
-* Segmentindex: acme_123prod (kunden kan välja vilken namnkonvention man vill)
+* Segmentindex: acme_123prod (kunden kan välja vilken namnkonvention man vill ha)
 * Segmentport: 443
 * Splunk HEC-token: ABC123
 

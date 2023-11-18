@@ -2,9 +2,9 @@
 title: Modeller för innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur Content Fragment Models fungerar som grund för ditt headless-innehåll i AEM och hur du skapar innehållsfragment med strukturerat innehåll.
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2935'
+source-wordcount: '2931'
 ht-degree: 2%
 
 ---
@@ -88,7 +88,7 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 
 1. **Ta bort ett fält**
 
-   Markera det obligatoriska fältet och klicka/tryck sedan på papperskorgsikonen. Du ombeds bekräfta åtgärden.
+   Markera det obligatoriska fältet och välj sedan papperskorgsikonen. Du ombeds bekräfta åtgärden.
 
    ![ta bort](assets/cfm-models-06.png)
 
@@ -113,7 +113,7 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
 * **Datum och tid**
    * Lägg till ett datum och/eller en tid
 * **Uppräkning**
-   * Lägga till en uppsättning kryssrutor, alternativknappar eller listrutor
+   * Lägga till en uppsättning kryssrutor, alternativknappar eller nedrullningsbara listfält
 * **Taggar**
    * Tillåter fragmentförfattare att komma åt och markera taggområden
 * **Innehållsreferens**
@@ -331,9 +331,9 @@ För fullständig kontroll över användningen av dina modeller för innehållsf
 
 ### Aktivera en innehållsfragmentmodell {#enabling-a-content-fragment-model}
 
-När en modell har skapats måste den aktiveras så att den:
+När en modell skapas måste den aktiveras så att den:
 
-* Kan markeras när du skapar ett nytt innehållsfragment.
+* Kan markeras när du skapar ett innehållsfragment.
 * Kan refereras inifrån en innehållsfragmentmodell.
 * Är tillgängligt för GraphQL, så schemat genereras.
 

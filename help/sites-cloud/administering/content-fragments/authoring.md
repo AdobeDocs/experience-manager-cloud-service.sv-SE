@@ -4,9 +4,9 @@ description: Lär dig hur du skapar innehåll för dina innehållsfragment och s
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2252'
+source-wordcount: '2251'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ När du först öppnar Content Fragment Editor visas fyra huvudområden:
    * i **Egenskaper** kan du uppdatera **Titel** och **Beskrivning** för fragmentet, eller **Variation**
 * central panel: visar de faktiska fälten och innehållet i den valda varianten
    * gör att du kan redigera innehållet
-   * if **Platshållare för flik** fält definieras i den modell de visas här och kan användas för navigering. De visas antingen vågrätt eller som en listruta
+   * if **Platshållare för flik** fält definieras i den modell de visas här och kan användas för navigering. De visas antingen vågrätt eller som en nedrullningsbar lista.
 
 ![Content Fragment Editor - Översikt](assets/cf-authoring-overview.png)
 
@@ -345,7 +345,7 @@ På fliken Egenskaper (den högra panelen) kan du även redigera:
 
 * **Titel**
 * **Beskrivning**
-* **Taggar**: med listrutan eller i valdialogrutan
+* **Taggar**: med listrutan eller valdialogrutan
 
   ![Content Fragment Editor - Hantera taggar](assets/cf-authoring-edit-tags.png)
 
@@ -399,7 +399,7 @@ Med redigeraren för innehållsfragment kan författare förhandsgranska sina re
 Om du vill använda den här funktionen måste du först:
 
 * Samarbeta med IT-avdelningen och skapa ett externt klientprogram som återger innehållsfragmentet genom att använda JSON-utdata.
-* När programmet för den externa frontend har konfigurerats **URL-mönster för standardförhandsvisning** måste definieras som [egenskap för lämplig innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#properties).
+* När det externa frontend-programmet är konfigurerat **URL-mönster för standardförhandsvisning** måste definieras som [egenskap för lämplig innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#properties).
 
 När URL:en har definierats **Förhandsgranska** knappen är aktiv. Du kan välja den här knappen om du vill starta det externa programmet (på en separat flik) för att återge innehållsfragmentet.
 
@@ -475,8 +475,6 @@ The **Fält** På panelen visas alla fält i innehållsfragmentet. Ikonen indike
 </table>
 
 ## Bra att veta {#good-to-know}
-
-Dessutom:
 
 * Om du vill redigera ett innehållsfragment behöver du [lämpliga behörigheter](/help/implementing/developing/extending/content-fragments-customizing.md#asset-permissions). Kontakta systemadministratören om du har problem.
 

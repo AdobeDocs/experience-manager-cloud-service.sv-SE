@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: d1a3eb42-e9e4-4118-9ff7-7aab5519cf0d
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1147'
 ht-degree: 0%
 
 ---
@@ -73,23 +73,23 @@ När kopplingspaketet för den översättningstjänst du föredrar har installer
 
 Så här skapar du en översättningskonfiguration:
 
-1. Klicka eller tryck på den globala navigeringsmenyn **verktyg** -> **Cloud Service** -> **Cloud Service för översättning**.
+1. Välj **verktyg** > **Cloud Service** > **Cloud Service för översättning**.
 1. Navigera till den plats där du vill skapa konfigurationen i innehållsstrukturen. Detta baseras ofta på ett visst projekt eller kan vara globalt.
    * I det här fallet kan till exempel en konfiguration göras globalt för att gälla allt innehåll, eller bara för WKND-projektet.
 
    ![Plats för översättningskonfiguration](assets/translation-configuration-location.png)
 
-1. Klicka eller tryck **Skapa** i verktygsfältet för att skapa den nya konfigurationen.
-1. Ange följande information i fälten och klicka eller tryck sedan **Skapa**.
+1. Välj **Skapa** i verktygsfältet för att skapa den nya konfigurationen.
+1. Ange följande information i fälten och välj sedan **Skapa**.
    1. Välj **Konfigurationstyp** i listrutan. Välj **Översättningsintegrering** från listan.
    1. Ange en **Titel** för din konfiguration. The **Titel** identifierar konfigurationen i **Cloud Service** console och in page property drop-down lists.
    1. Om du vill kan du skriva **Namn** som ska användas för den databasnod som lagrar konfigurationen.
 
    ![Skapa översättningskonfiguration](assets/create-translation-configuration.png)
 
-1. Tryck eller klicka **Skapa** och **Redigera konfiguration** visas där du kan konfigurera konfigurationsegenskaperna.
+1. Välj **Skapa** och **Redigera konfiguration** visas där du kan konfigurera konfigurationsegenskaperna.
 
-1. Eftersom ditt innehåll hanteras som webbplatser kan du trycka eller klicka på **Webbplatser** -fliken.
+1. Eftersom ditt innehåll hanteras som webbplatser väljer du **Webbplatser** -fliken.
 
 ![Egenskaper för översättningskonfiguration](assets/translation-configuration.png)
 
@@ -103,7 +103,7 @@ Så här skapar du en översättningskonfiguration:
    1. **Översätt taggar** - Markera det här alternativet om du vill översätta taggar som är kopplade till sidan.
    1. **Automatisk översättning** - Markera den här egenskapen om du vill att översättningar ska skickas automatiskt till översättningstjänsten.
 
-1. Tryck eller klicka **Spara och stäng**.
+1. Välj **Spara och stäng**.
 
 Du har nu konfigurerat kopplingen till översättningstjänsten.
 
@@ -117,12 +117,12 @@ Det gör du genom att navigera till innehållets språkrot. I våra exempel är 
 /content/<your-project>/en
 ```
 
-1. Gå till den globala navigeringen och gå till **Navigering** -> **Resurser** -> **Filer**.
-1. I resurskonsolen väljer du den språkrot som du vill konfigurera och klickar eller trycker på **Egenskaper**.
-1. Tryck eller klicka på **Cloud Service** -fliken.
-1. Under **Cloud Service Configurations** i **Lägg till konfiguration** väljer du kontakt. Den ska visas i listrutan när du har installerat paketet som [som beskrivits tidigare.](#connect-translation-provider)
-1. Under **Cloud Service Configurations** i **Lägg till konfiguration** väljer du även din konfiguration.
-1. Tryck eller klicka **Spara och stäng**.
+1. Gå till den globala navigeringen och gå till **Navigering** > **Resurser** > **Filer**.
+1. I resurskonsolen väljer du den språkrot som ska konfigureras och väljer **Egenskaper**.
+1. Välj **Cloud Service** -fliken.
+1. Under **Cloud Service Configurations** i **Lägg till konfiguration** väljer du din koppling. Den bör visas i listrutan när du har installerat paketet som [som beskrivits tidigare.](#connect-translation-provider)
+1. Under **Cloud Service Configurations** i **Lägg till konfiguration** väljer du konfiguration.
+1. Välj **Spara och stäng**.
 
 ![Välj molntjänstkonfigurationer](assets/select-cloud-service-configurations.png)
 

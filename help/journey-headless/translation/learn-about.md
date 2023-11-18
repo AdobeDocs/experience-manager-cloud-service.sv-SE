@@ -2,7 +2,7 @@
 title: Lär dig mer om Headless-innehåll och översättning i AEM
 description: Lär dig headless-koncept, hur de AEM och teorin om AEM översättning.
 exl-id: 72bb6646-e573-4576-8d17-49787d8c8c7f
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Det här dokumentet hjälper dig att förstå hur headless-innehåll levereras, 
 
 ![Klassisk CMS i full hög](/help/journey-headless/developer/assets/full-stack.png)
 
-I ett CMS-system i full hög finns alla funktioner för att hantera innehåll i CMS-systemet. Systemets funktioner består av olika komponenter i CMS-stacken. Lösningen i full hög har många fördelar.
+I ett CMS-system i full hög finns funktionen för att hantera innehåll i CMS-systemet. Systemets funktioner består av olika komponenter i CMS-stacken. Lösningen i full hög har många fördelar.
 
 * Det finns ett system att underhålla.
 * Innehållet hanteras centralt.
@@ -47,7 +47,7 @@ När vi talar om ett headless CMS hanterar CMS-systemet innehållet och fortsät
 
 ![Headless CMS](/help/journey-headless/developer/assets/headless-cms.png)
 
-De konsumerande tjänsterna, oavsett om de är AR-upplevelser, en webbutik, mobilupplevelser, progressiva webbappar (PWA) osv., tar in innehåll från det headless CMS-systemet och tillhandahåller sin egen rendering. De ser till att kunna erbjuda sina egna huvuden för ert innehåll.
+De konsumerande tjänsterna, oavsett om de är AR-upplevelser, en webbutik, mobilupplevelser, progressiva webbappar (PWA) och så vidare, tar in innehåll från det headless CMS-systemet och tillhandahåller sin egen rendering. De ser till att kunna erbjuda sina egna huvuden för ert innehåll.
 
 Om du utelämnar huvudet förenklas CMS-systemet genom att komplexiteten försvinner. När du gör det flyttas även ansvaret för att återge innehållet till de tjänster som faktiskt behöver innehållet och som ofta är bättre lämpade för sådan återgivning.
 

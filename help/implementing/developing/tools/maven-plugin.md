@@ -2,9 +2,9 @@
 title: Adobe Content Package Maven Plugin
 description: Använd plugin-programmet Content Package Maven för att distribuera AEM
 exl-id: d631d6df-7507-4752-862b-9094af9759a0
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1838'
+source-wordcount: '1832'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,8 @@ I det här dokumentet beskrivs hur du använder Maven för att hantera dessa upp
 >[!NOTE]
 >
 >Paket **skapa** ägs nu av [Apache Jackrabbit FileVault Package Maven plugin.](https://jackrabbit.apache.org/filevault-package-maven-plugin/)
->* The `content-package-maven-plugin` stöder inte längre paketering från och med version 1.0.2.
+>
+>* The `content-package-maven-plugin` stöder inte längre förpackningar från version 1.0.2.
 >* I den här artikeln beskrivs **distribution** av de tillverkade paketen som ska AEM utförs av pluginen för innehållspaketet Maven för Adobe.
 
 ## Paket och AEM projektstruktur {#aem-project-structure}
@@ -35,7 +36,7 @@ AEM as a Cloud Service följer de senaste metoderna för pakethantering och proj
 
 >[!TIP]
 >
->Mer information finns i [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) artikel i den AEM as a Cloud Service dokumentationen och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) dokumentation. Båda stöds fullt ut för AEM 6.5.
+>Se [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) artikel i den AEM as a Cloud Service dokumentationen och [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) dokumentation. Båda stöds fullt ut för AEM 6.5.
 
 ## Hämta innehållspaketet Maven Plugin {#obtaining-the-content-package-maven-plugin}
 
@@ -89,7 +90,7 @@ Parametrarna i följande tabell är gemensamma för alla mål utom när de anges
 | Namn | Typ | Obligatoriskt | Standardvärde | Beskrivning | Mål |
 |---|---|---|---|---|---|
 | `failOnError` | `boolean` | Nej | `false` | Värdet för `true` gör att bygget misslyckas när ett fel inträffar. Värdet för `false` gör att bygget ignorerar felet. | Alla mål utom `package` |
-| `name` | `String` | `build`: Ja, `install`: Nej, `rm`: Ja | `build`: Ingen standard, `install`: Värdet för `artifactId` Maven-projektets egendom | Namnet på paketet som ska användas | Alla mål utom `ls` |
+| `name` | `String` | `build`: Ja, `install`: Nej, `rm`: Ja | `build`: Inget standardvärde, `install`: Värdet för `artifactId` Maven-projektets egendom | Namnet på paketet som ska användas | Alla mål utom `ls` |
 | `password` | `String` | Ja | `admin` | Lösenordet som används för autentisering med AEM | Alla mål utom `package` |
 | `serverId` | `String` | Nej | Server-ID som användarnamn och lösenord för autentisering ska hämtas från | Alla mål utom `package` |
 | `targetURL` | `String` | Ja | `http://localhost:4502/crx/packmgr/service.jsp` | URL:en för HTTP-tjänstens API för AEM | Alla mål utom `package` |
@@ -98,7 +99,7 @@ Parametrarna i följande tabell är gemensamma för alla mål utom när de anges
 | `userId` | `String` | Ja | `admin` | Användarnamnet som ska autentiseras med AEM | Alla mål utom `package` |
 | `verbose` | `boolean` | Nej | `false` | Aktiverar eller inaktiverar utförlig loggning | Alla mål utom `package` |
 
-### bygga {#build}
+### bygg {#build}
 
 Skapar ett innehållspaket som redan har definierats på en AEM.
 
@@ -112,7 +113,7 @@ Alla parametrar för byggmålet beskrivs i [Gemensamma parametrar](#common-param
 
 ### installera {#install}
 
-Installerar ett paket i databasen. För att detta mål ska kunna uppnås krävs inget Maven-projekt. Målet är bundet till `install` Maven byggs livscykel.
+Installerar ett paket i databasen. För att detta mål ska kunna uppnås krävs inte något Maven-projekt. Målet är bundet till `install` Maven byggs livscykel.
 
 #### Parametrar {#parameters-1}
 
@@ -127,7 +128,7 @@ Förutom följande parametrar finns beskrivningarna i [Gemensamma parametrar](#c
 | `localRepository` | `org.apache.maven.artifact.repository.ArtifactRepository` | Nej | Värdet för `localRepository` systemvariabel | Den lokala Maven-databasen som inte kan konfigureras med plugin-konfigurationen eftersom systemegenskapen alltid används |
 | `packageFile` | `java.io.File` | Nej | Den primära artefakten som definieras för projektet Maven | Namnet på den paketfil som ska installeras |
 | `packaging` | `String` | Nej | `zip` | Den typ av förpackning av artefakten som ska installeras |
-| `pomRemoteRepositories` | `java.util.List` | Ja | Värdet för `remoteArtifactRepositories` egenskap som är definierad för projektet Maven | Det här värdet kan inte konfigureras med plugin-konfigurationen och måste anges i projektet. |
+| `pomRemoteRepositories` | `java.util.List` | Ja | Värdet för `remoteArtifactRepositories` egenskap som definieras för projektet Maven | Det här värdet kan inte konfigureras med plugin-konfigurationen och måste anges i projektet. |
 | `project` | `org.apache.maven.project.MavenProject` | Ja | Projektet som plugin-programmet är konfigurerat för | Maven-projektet som är implicit eftersom projektet innehåller plugin-konfigurationen |
 | `repositoryId` (POM), `repoID` (kommandorad) | `String` | Nej | `temp` | ID för databasen som artefakten hämtas från |
 | `repositoryUrl` (POM), `repoURL` (kommandorad) | `String` | Nej | Ingen | URL:en för databasen som artefakten hämtas från |
@@ -267,4 +268,4 @@ Den senaste AEM Project Archetype implementerar paketstrukturen med bästa praxi
 
 >[!TIP]
 >
->Mer information finns i [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) artikel i den AEM as a Cloud Service dokumentationen och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) dokumentation. Båda stöds fullt ut för AEM 6.5.
+>Se [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) artikel i den AEM as a Cloud Service dokumentationen och [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) dokumentation. Båda stöds fullt ut för AEM 6.5.

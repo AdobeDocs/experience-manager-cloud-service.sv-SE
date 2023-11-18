@@ -2,9 +2,9 @@
 title: Content Fragments – konfigurera komponenter för återgivning
 description: Content Fragments – konfigurera komponenter för återgivning
 exl-id: 6606dc3b-f1b8-4941-8fd0-f69cbd414afa
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '521'
 ht-degree: 4%
 
 ---
@@ -17,10 +17,10 @@ Detta görs genom att konfigurera [OSGi-tjänst - Konfiguration av komponent fö
 
 Denna information krävs när
 
-* Du måste implementera en egen Content Fragment-baserad komponent,
+* Du måste implementera en egen innehållsfragmentbaserad komponent,
 * Och måste utnyttja de avancerade tjänsterna.
 
-Vi rekommenderar att du använder kärnkomponenterna.
+Adobe rekommenderar att du använder kärnkomponenterna.
 
 >[!CAUTION]
 >
@@ -30,7 +30,7 @@ Vi rekommenderar att du använder kärnkomponenterna.
 >
 >* **Du kan skriva en helt ny komponent som endast använder API:t för innehållsfragment, utan några avancerade tjänster**. I så fall måste du dock utveckla komponenten så att den hanterar lämplig bearbetning.
 >
->Därför rekommenderar vi att du använder kärnkomponenterna.
+>Därför bör du använda kärnkomponenterna.
 
 ## Definition av avancerade tjänster som behöver konfigureras {#definition-of-advanced-services-that-need-configuration}
 
@@ -47,7 +47,7 @@ Om du behöver en eller flera av de här funktionerna är det (oftast) enklare a
 
 ## OSGi-tjänst - Konfiguration av komponent för innehållsfragment {#osgi-service-content-fragment-component-configuration}
 
-Konfigurationen måste bindas till OSGi-tjänsten **Konfiguration av komponent för innehållsfragment**:
+Konfigurationen måste vara bunden till OSGi-tjänsten **Konfiguration av komponent för innehållsfragment**:
 
 `com.adobe.cq.dam.cfm.impl.component.ComponentConfigImpl`
 
@@ -73,22 +73,22 @@ OSGi-konfigurationen är:
   <tr>
    <td><strong>Resurstyp</strong></td>
    <td><code>dam.cfm.component.resourceType</code></td>
-   <td>Resurstypen som ska registreras. till exempel <br /> <p><span class="cmp-examples-demo__property-value"><code>core/wcm/components/contentfragment/v1/contentfragment</code></code></p> </td>
+   <td>Resurstypen som ska registreras, till exempel <br /> <p><span class="cmp-examples-demo__property-value"><code>core/wcm/components/contentfragment/v1/contentfragment</code></code></p> </td>
   </tr>
   <tr>
    <td><strong>Referensegenskap</strong></td>
    <td><code>dam.cfm.component.fileReferenceProp</code></td>
-   <td>Namnet på den egenskap som innehåller referensen till fragmentet. till exempel <code>fragmentPath</code> eller <code>fileReference</code></td>
+   <td>Namnet på den egenskap som innehåller referensen till fragmentet, till exempel <code>fragmentPath</code> eller <code>fileReference</code></td>
   </tr>
   <tr>
    <td><strong>Elementegenskap(er)</strong></td>
    <td><code>dam.cfm.component.elementsProp</code></td>
-   <td>Namnet på den egenskap som innehåller namnen på de element som ska återges. till exempel<code>elementName</code></td>
+   <td>Namnet på den egenskap som innehåller namnen på elementen som ska återges, till exempel<code>elementName</code></td>
   </tr>
   <tr>
    <td><strong>Variationsegenskap</strong><br /> </td>
    <td><code>dam.cfm.component.variationProp</code></td>
-   <td>Namnet på den egenskap som innehåller namnet på variationen som ska återges. till exempel<code>variationName</code></td>
+   <td>Namnet på den egenskap som innehåller namnet på variationen som ska återges, till exempel<code>variationName</code></td>
   </tr>
  </tbody>
 </table>
@@ -105,10 +105,10 @@ För vissa funktioner måste komponenten följa fördefinierade konventioner. F�
  <tbody>
   <tr>
    <td><code>paragraphScope</code></td>
-   <td><p>En strängegenskap som definierar hur stycken ska skrivas ut om de finns i <em>renderingsläge för enskilt element</em>.</p> <p>Värden:</p>
+   <td><p>En strängegenskap som definierar hur stycken ska skrivas ut i <em>renderingsläge för enskilt element</em>.</p> <p>Värden:</p>
     <ul>
-     <li><code>all</code> : återge alla stycken</li>
-     <li><code>range</code> : för att återge styckeintervallet som tillhandahålls av <code>paragraphRange</code></li>
+     <li><code>all</code> : för att återge alla stycken</li>
+     <li><code>range</code> : för att återge styckeintervallet från <code>paragraphRange</code></li>
     </ul> </td>
   </tr>
   <tr>

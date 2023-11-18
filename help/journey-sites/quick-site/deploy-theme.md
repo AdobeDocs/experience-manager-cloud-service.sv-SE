@@ -2,9 +2,9 @@
 title: Driftsätt ditt anpassade tema
 description: Lär dig hur du distribuerar webbplatstemat med hjälp av pipeline.
 exl-id: fe065972-39db-4074-a802-85895c701efd
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1014'
 ht-degree: 0%
 
 ---
@@ -42,11 +42,11 @@ När du har implementerat ändringarna av temaanpassningen i AEM Git-databasen k
 
    ![Översikt över Cloud Manager](assets/cloud-manager-overview.png)
 
-1. Tryck eller klicka på ellipsen bredvid den pipeline du vill starta. Välj **Kör**.
+1. Markera ellipsen bredvid den pipeline du vill starta. Välj **Kör**.
 
    ![Kör pipeline](assets/run-pipeline.png)
 
-1. I **Kör pipeline** bekräftelsedialogruta: tryck eller klicka **Ja**.
+1. I **Kör pipeline** bekräftelsedialogruta, välja **Ja**.
 
    ![Bekräfta pipeline-körning](assets/pipeline-confirm.png)
 
@@ -58,7 +58,7 @@ När du har implementerat ändringarna av temaanpassningen i AEM Git-databasen k
 
 Du kan när som helst kontrollera status för pipeline för att se hur långt förloppet har kommit.
 
-1. Tryck eller klicka på ellipsen bredvid din pipeline.
+1. Markera ellipsen bredvid din pipeline.
 
    ![Visa försäljningsförloppsinformation](assets/view-pipeline-details.png)
 
@@ -68,7 +68,7 @@ Du kan när som helst kontrollera status för pipeline för att se hur långt f�
 
 >[!TIP]
 >
->I informationsfönstret för pipeline kan du trycka eller klicka **Hämtningslogg** för alla steg i pipeline för felsökning om något steg skulle misslyckas. Felsökning av pipeline ligger utanför den här kundresan. Läs de tekniska dokumenten för Cloud Manager i [Ytterligare resurser](#additional-resources) på den här sidan.
+>I fönstret med pipeline-information kan du välja **Hämtningslogg** för alla steg i pipeline för felsökning om något steg skulle misslyckas. Felsökning av pipeline ligger utanför den här kundresan. Läs de tekniska dokumenten för Cloud Manager i [Ytterligare resurser](#additional-resources) på den här sidan.
 
 ## Validera distribuerade anpassningar {#view-customizations}
 
@@ -112,7 +112,7 @@ Nedan följer ytterligare resurser som ger en djupdykning i några koncept som n
 * [AEM webbplatstema](https://github.com/adobe/aem-site-template-standard-theme-e2e) - Detta är GitHub-databasen för AEM webbplatstema.
 * [npm](https://www.npmjs.com) - AEM teman som används för att snabbt skapa webbplatser baseras på npm.
 * [webbpaket](https://webpack.js.org) - AEM teman som används för att snabbt bygga sajter bygger på webbpaket.
-* [Skapa och ordna sidor](/help/sites-cloud/authoring/fundamentals/organizing-pages.md) - Den här guiden beskriver hur du hanterar sidor på din AEM webbplats om du vill anpassa den ytterligare efter att du har skapat den från mallen.
+* [Skapa och ordna sidor](/help/sites-cloud/authoring/fundamentals/organizing-pages.md) - Den här guiden beskriver hur du hanterar sidor på din AEM om du vill anpassa den ytterligare efter att du har skapat den från mallen.
 * [Så här arbetar du med paket](/help/implementing/developing/tools/package-manager.md) - Med paket kan du importera och exportera databasinnehåll. I det här dokumentet förklaras hur du arbetar med paket i AEM 6.5, som även gäller för AEMaaCS.
 * [Onboardresa](/help/journey-onboarding/overview.md) - Den här guiden fungerar som en startpunkt för att säkerställa att era team är konfigurerade och har tillgång till AEM as a Cloud Service.
 * [Dokumentation för Adobe Experience Manager Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) - Utforska Cloud Manager-dokumentationen för att få fullständig information om dess funktioner.

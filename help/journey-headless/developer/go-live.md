@@ -2,7 +2,7 @@
 title: Så här Live med ditt headless-program
 description: I den här delen av AEM Headless Developer Journey lär du dig hur du distribuerar ett headless-program live genom att ta din lokala kod i Git och flytta den till Cloud Manager Git för CI/CD-pipeline.
 exl-id: 81616e31-764b-44b0-94a6-3ae24ce56bf6
-source-git-commit: 94e5d0e84d5c55d0ff61a705e079b4dc8e32a777
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '1093'
 ht-degree: 0%
@@ -67,7 +67,7 @@ När du har testat allt och fungerar som det ska kan du skicka koduppdateringarn
 
 När uppdateringarna har överförts till Cloud Manager kan de distribueras till AEM as a Cloud Service med [Cloud Managers pipeline för CI/CD](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html).
 
-Du kan börja distribuera koden genom att utnyttja Cloud Managers CI/CD-pipeline, som är omfattande och täcks [här](/help/implementing/deploying/overview.md).
+Du kan börja driftsätta din kod med hjälp av Cloud Managers CI/CD-pipeline, som behandlas utförligt [här](/help/implementing/deploying/overview.md).
 
 ## Prestandaövervakning {#performance-monitoring}
 

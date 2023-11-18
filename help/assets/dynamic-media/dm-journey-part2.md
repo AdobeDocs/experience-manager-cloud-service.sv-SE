@@ -11,22 +11,22 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: cdca41ad-a2cd-4f68-aaa4-5eec33c30f0b
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2842'
+source-wordcount: '2840'
 ht-degree: 0%
 
 ---
 
-# Dynamic Media Journey: Grunderna, del II  {#dm-journey-part2}
+# Dynamic Media Journey: The Basics, del II  {#dm-journey-part2}
 
-Välkommen till Dynamic Media Journey: Grundläggande information, del II, där du kan förvänta dig följande:
+Välkommen till Dynamic Media Journey: The Basics, Part II, där du kan förvänta dig följande:
 
 * Anatomi av en Dynamic Media-URL och hur Dynamic Media levererar innehåll
 * Grundläggande om att skapa bildförinställningar för att återge resurser
-* Bilduppsättningar, snurruppsättningar och blandade medieuppsättningar
+* Bilduppsättningar, snurpuppsättningar och blandade medieuppsättningar
 
-Se även [Dynamic Media Journey Grunderna, del I](/help/assets/dynamic-media/dm-journey-part1.md).
+Se även [Dynamic Media Journey; The Basics, Part I](/help/assets/dynamic-media/dm-journey-part1.md).
 
 >[!TIP]
 >
@@ -43,7 +43,7 @@ Den första delen av URL:en i rött refererar till själva serverdomänen. I det
 
 Kontonamnet är delen i lila. I det här fallet anropas kontot `jpearldemo`.
 
-Tillgångs-ID eller namn. `AdobeStock_28563982` är i grönt. Observera att tillgången har _no_ filtillägg som `.png` eller `.jpg`. När resurser hämtas till Dynamic Media tas filtillägget bort och en annan typ av fil skapas: en pyramid-TIFF-fil. Med pyramic-TIFF kan Dynamic Media snabbt skapa renderingar direkt.
+Tillgångs-ID eller namn. `AdobeStock_28563982` är i grönt. Observera att tillgången har _no_ filtillägg som `.png` eller `.jpg`. När resurser hämtas till Dynamic Media tas filtillägget bort och en annan typ av fil skapas: en pyramid-TIFF-fil. Med Pyramic-TIFF kan Dynamic Media snabbt skapa renderingar direkt.
 
 Slutligen finns det några bildbehandlingsparametrar, `?wid=1000&fmt=jpeg&qlt=85`, visas i gult på slutet.
 
@@ -53,7 +53,7 @@ Låt webbläsarfönstret fortfarande vara öppet för Dynamic Media URL och den 
 
 ### Återge den bevakade bilden via URL:en
 
-Börja med att manuellt ta bort endast bildbearbetningsreglerna i URL-sökvägen, lämna servernamnet, kontonamnet och resurs-ID:t eller bildnamnet. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock_28563982){target="_blank"}.
+Börja med att manuellt ta bort endast bildbearbetningsreglerna i URL-sökvägen. Lämna servernamnet, kontonamnet och resurs-ID:t eller bildnamnet. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock_28563982){target="_blank"}.
 
 Lägg nu till en bildbehandlingsparameter i slutet av URL:en. Skriv i URL-fältet till höger om bildnamnet `?wid=500`och sedan trycka **[!UICONTROL Enter]**. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock%5F28563982?wid=500){target="_blank"}.
 
@@ -77,18 +77,18 @@ Nu när du trycker **[!UICONTROL Enter]**, skapas en ny rendering av klockan nä
 Det finns flera sätt och platser där du vill skapa en bild eller ha en bild tillgänglig. Traditionellt sett går en Creative-användare in i Adobe Photoshop och sparar alla dessa olika renderingar som statiska bilder.
 
 ![Statiska bilder](/help/assets/dynamic-media/assets/dm-static-images.png)
-_Bra: statiska bilder, där var och en skapas manuellt._
+_Bra: statiska bilder som skapats manuellt._
 
 Nu kan du föreställa dig att Creative Director tittar på bilderna och säger:
 
 _&quot;Jag ville verkligen ha den här bilden så att den stora handen pekar mot de fyra, och den lilla handen pekar mot 1 för att göra det lättare att se på den där klockan.&quot;_
 
-Alla dessa nya statiska bilder måste fotograferas igen.
+Alla nya statiska bilder måste fotograferas igen.
 
 Men om du har olika bildförinställningar i Dynamic Media kan du använda dessa bilder var du vill. Bildförinställningarna följer standarder.
 
-![Grundläggande filhantering](/help/assets/dynamic-media/assets/dm-onefile.png)
-_Bäst: en fil med flera återgivningar skapade i farten med hjälp av bildförinställningar, som `Search_Grid` och `Thumbnail`._
+![Primär filhantering](/help/assets/dynamic-media/assets/dm-onefile.png)
+_Bästa: en fil med flera återgivningar skapade i farten med hjälp av bildförinställningar, till exempel `Search_Grid` och `Thumbnail`._
 
 | **Varför använda bildförinställningar?** | |
 |---|---|
@@ -121,7 +121,7 @@ _Skapa en bildförinställning genom att välja alternativ på fliken Avancerat.
 
 Du minns [Anatomi för en Dynamic Media URL](#dm-journey-d) som du läste om Dynamic Media-URL:en och hur den skapades. The **[!UICONTROL Image Modifier]** textrutan är den plats där du kan ange ytterligare bildbehandlingsparametrar som du vill använda. Parametrarna tas med i förinställningsnamnet för URL:en när bilderna levereras med hjälp av förinställningen. I skärmbilden ovan är parametern `bgc=451B15` lades till. Det vill säga, en mörkbrun bakgrundsfärg lades till.
 
-Du kan tänka dig en bildförinställning som ett recept för dina bilder. Den kommer att leverera alla bilder som använder förinställningen, konsekvent och varje gång. det kommer att bli likadant. Parametern `&op_brightness=+10` lades också till för att öka intensiteten något.
+Du kan tänka dig en bildförinställning som ett recept för dina bilder. Den kommer att leverera alla bilder som använder förinställningen, konsekvent, varje gång; den kommer att vara densamma. Parametern `&op_brightness=+10` lades också till för att öka intensiteten något.
 
 När du är klar sparar du förinställningen och nu är den tillgänglig för alla bilder som du har. I det här fallet vill vi tillämpa _Medel_ bildförinställning till en bild av en skål flytande choklad.
 
@@ -154,12 +154,12 @@ En del av de vanligaste användningsområdena för Dynamic Media är möjlighete
 
 Bilduppsättningar består vanligtvis av en serie bildresurser som presenteras som en enda enhet. Den här typen av uppsättningar ger användarna en integrerad visningsupplevelse, där användarna kan se olika vyer av ett objekt genom att klicka på en miniatyrbild. Med bilduppsättningar kan du presentera alternativa vyer av något och visningsprogrammet har zoomverktyg som gör att du kan granska bilder noggrant. [Visa en bilduppsättning med namnet&quot;Körning&quot; som använder visningsprogrammet för utfällbara bilder](https://s7d1.scene7.com/s7viewers/html5/FlyoutViewer.html?asset=jpearldemo/Running).
 
-Här i Dynamic Media ser du flera bilder på skor. Det är en produktserie som försäljning och marknadsföring vill att kunderna ska se som en enda presentation. en bilduppsättning.
+Här i Dynamic Media ser du flera bilder på skor. Det är en produktserie som försäljning och marknadsföring vill att kunderna ska se som en enda presentation - en Image-uppsättning.
 
 ![Skapa en bilduppsättning](/help/assets/dynamic-media/assets/dm-create-image-set.png)
 _Början på att skapa en bilduppsättning._
 
-Om du vill skapa bilduppsättningen väljer du **[!UICONTROL Image Set]** från **[!UICONTROL Create]** nedrullningsbar meny. Observera på menyn att det också finns alternativ för att skapa en **[!UICONTROL Mixed Media Set]**, a **[!UICONTROL Spin Set]** och en **[!UICONTROL Carousel Set]**. Du skapar uppsättningarna på ungefär samma sätt som en bilduppsättning.
+Om du vill skapa bilduppsättningen väljer du **[!UICONTROL Image Set]** från **[!UICONTROL Create]** nedrullningsbar meny. Lägg märke till att det också finns alternativ för att skapa en **[!UICONTROL Mixed Media Set]**, a **[!UICONTROL Spin Set]** och en **[!UICONTROL Carousel Set]**. Du skapar uppsättningarna på ungefär samma sätt som en bilduppsättning.
 
 En uppsättning med blandade media kan innehålla bilder, färgruteuppsättningar, snurruppsättningar, videor och adaptiva videouppsättningar. [Prova](https://s7d9.scene7.com/s7viewers/html5/MixedMediaViewer.html?asset=Scene7SharedAssets/Mixed_Media_Set_Sample). En snurra simulerar hur det verkliga händer att ett objekt testas. Med snurruppsättningar kan du visa viktiga visuella detaljer från alla vinklar. [Prova](https://s7d9.scene7.com/s7viewers/html5/SpinViewer.html?asset=Scene7SharedAssets/SpinSet_Sample&amp;stagesize=500,400){target="_blank"}.
 
@@ -179,7 +179,7 @@ Vare sig du har skapat en uppsättning med bilder, en uppsättning med blandade 
 
 Du börjar med att välja den inbyggda bilduppsättningen för att öppna den i en förhandsvisning som i följande exempel.
 
-![Den körbara bilden som angetts i förhandsvisningen med alternativet Visare markerat](/help/assets/dynamic-media/assets/dm-image-set-viewer.png)
+![Den bild som körs i förhandsvisningen med alternativet Visare markerat](/help/assets/dynamic-media/assets/dm-image-set-viewer.png)
 _The `Running` Bilduppsättningen i förhandsvisningen med alternativet Visare markerat._
 
 Observera i förhandsgranskningen att du kan välja de körbara färgrutorna och zooma in och ut på skorna. Om du vill använda ett visningsprogram för uppsättningen väljer du **[!UICONTROL Viewers]** i listrutan.
@@ -189,13 +189,13 @@ _The `Running` Bilduppsättningen med visningsprogrammet för utfällbara bilder
 
 I det här fallet `Flyout` visningsprogrammet har valts. Nu kan du förhandsvisa bilduppsättningen i visningsprogrammet. Men det är bäst att se det i webbläsaren, precis som kunden ser det. Du väljer **[!UICONTROL URL]** i det nedre vänstra hörnet kopierar du webbadressen och klistrar in den i webbläsaren. [Prova](https://s7d1.scene7.com/s7viewers/html5/FlyoutViewer.html?asset=jpearldemo/Running&amp;config=jpearldemo/Flyout){target="_blank"}.
 
-Med en enda URL kan du använda bilduppsättningen och visningsprogrammet där du behöver dem på webbplatsen. I föregående exempel kan du ha lagt märke till att **[!UICONTROL Embed]** finns till höger om knappen URL. Genom att välja **[!UICONTROL Embed]** kan du kopiera koden för den här bilduppsättningen/visningsprogrammet och lägga till den på en webbsida eller i en Experience Manager Sites-komponent.
+Med den enda URL:en kan du använda bilduppsättningen och visningsprogrammet där du behöver dem på webbplatsen. I föregående exempel kan du ha lagt märke till att **[!UICONTROL Embed]** finns till höger om knappen URL. Genom att välja **[!UICONTROL Embed]** kan du kopiera koden för den här bilduppsättningen/visningsprogrammet och lägga till den på en webbsida eller i en Experience Manager Sites-komponent.
 
 Utfällbara visningsprogram är ett standardvisningsprogram som inte kan öppnas och vars egenskaper du kan redigera. Eller, precis som när du skapar en bildförinställning, kan du skapa ett eget anpassat visningsprogram.
 
 Anta att ert sälj- och marknadsföringsteam inte gillar visningsprogrammet. De gillar zoomfunktionen men vill att kunderna ska se zoomeffekten direkt över skorna. I så fall tillämpar du bara InlineZoom-visningsprogrammet på bilduppsättningen och kopierar och klistrar in URL-adressen i webbläsaren för att se hur den fungerar. [Prova](https://s7d1.scene7.com/s7viewers/html5/FlyoutViewer.html?asset=jpearldemo/Running&amp;config=jpearldemo/InlineZoom){target="_blank"}.
 
-När du flyttar muspekaren över skon zoomar du in den bilden och du ser fler detaljer när du flyttar pekaren. Orsaken till det är bara storleken på bilden som ursprungligen överfördes till Dynamic Media.
+När du flyttar muspekaren över skon zoomar du in i den bilden och du ser fler detaljer när du flyttar pekaren. Orsaken till det är bara storleken på bilden som ursprungligen överfördes till Dynamic Media.
 
 När du funderar på att bo som konsument eller arbeta i din dagliga roll och när du besöker olika webbplatser ser du saker som detta. Fundera på hur det går till och hur du kan använda Dynamic Media i ditt eget arbete och på företagets webbplats.
 
@@ -217,7 +217,7 @@ _Hjälpavsnitt för Dynamic Media_
 * [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md)
 * [Förhandsgranska 3D-resurser](/help/assets/dynamic-media/previewing-3d-assets.md)
 * [Så här skapar du bilduppsättningar](/help/assets/dynamic-media/image-sets.md)
-* [Skapa snurra uppsättningar](/help/assets/dynamic-media/spin-sets.md)
+* [Så här skapar du snurra uppsättningar](/help/assets/dynamic-media/spin-sets.md)
 * [Så här skapar du blandade medieuppsättningar](/help/assets/dynamic-media/mixed-media-sets.md)
 
 _Dynamic Media självstudiekurser_

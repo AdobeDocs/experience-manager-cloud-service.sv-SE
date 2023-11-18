@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Lär dig riktlinjer för utveckling på AEM as a Cloud Service och om viktiga sätt som skiljer sig från AEM på plats och AEM i AMS.
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: 1683819d4f11d4503aa0d218ecff6375fc5c54d1
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2733'
+source-wordcount: '2732'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Tillståndet får inte sparas i minnet utan sparas i databasen. Annars kan det h
 
 Instansens filsystem bör inte användas på AEM as a Cloud Service. Disken är tillfällig och kasseras när instanser återvinns. Det är möjligt att använda filsystemet i begränsad omfattning för tillfällig lagring i samband med behandling av enstaka begäranden, men det bör inte missbrukas för stora filer. Detta beror på att det kan ha en negativ inverkan på resursanvändningskvoten och leda till diskbegränsningar.
 
-Som ett exempel där filsystemsanvändningen inte stöds bör publiceringsskiktet se till att alla data som behöver vara beständiga skickas iväg till en extern tjänst för längre lagring.
+Som ett exempel där filsystemsanvändningen inte stöds bör publiceringsskiktet se till att alla data som måste vara beständiga skickas till en extern tjänst för längre lagringstid.
 
 ## Observera {#observation}
 
@@ -243,7 +243,7 @@ Se [AEM 6.5-dokumentation](https://experienceleague.adobe.com/docs/experience-ma
 
 SMTP-serverporten ska anges som `portDest` värdet som anges i parametern portForwards som används i API-anropet när avancerade nätverk konfigureras och `portOrig` ska vara ett meningsfullt värde som ligger inom intervallet 30000-30999. Om till exempel SMTP-serverporten är 465 bör port 30465 användas som `portOrig` värde.
 
-I det här fallet och under förutsättning att SSL måste aktiveras, i konfigurationen av **Day CQ Mail Service OSGI** tjänst:
+I det här fallet, och under förutsättning att SSL måste aktiveras, i konfigurationen av **Day CQ Mail Service OSGI** tjänst:
 
 * Ange `smtp.port` till `30465`
 * Ange `smtp.ssl` till `true`

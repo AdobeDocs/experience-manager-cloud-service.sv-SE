@@ -6,7 +6,7 @@ feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: cde9523e-5409-4edd-af0f-2c2575cc22ea
-source-git-commit: 867b87e0b22fdc4f0466b517e8a04c18fb2dc860
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '3003'
 ht-degree: 0%
@@ -168,13 +168,13 @@ Så här väljer du en Cloud Service och signeringsordning:
 
    Om **[!UICONTROL Adobe Sign Cloud Service]** listan är tom, följ [Konfigurera [!DNL Adobe Sign] med [!DNL AEM Forms]](adobe-sign-integration-adaptive-forms.md) artikel för att konfigurera tjänsten.
 
-   I listrutan visas de Cloud Service som finns i `global` mapp i Verktyg > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Sign]**. I listrutan visas dessutom de Cloud Service som finns i den mapp som du har valt i **[!UICONTROL Configuration Container]** när du skapar ett adaptivt formulär.
+   I listrutan visas de Cloud Service som finns i `global` mapp i Verktyg > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Sign]**. Listrutan innehåller dessutom en lista över de Cloud Service som finns i den mapp som du har valt i **[!UICONTROL Configuration Container]** när du skapar ett adaptivt formulär.
 
 1. Välj signeringsordning på menyn **[!UICONTROL Recipients can complete]** -dialogrutan. Mottagarna kan signera ett adaptivt formulär **[!UICONTROL Sequentially]** - en efter en annan mottagare, eller **[!UICONTROL Simultaneously]** - i vilken ordning som helst.
 
    I tur och ordning får en mottagare avtalet i taget. När mottagaren har slutfört den tilldelade åtgärden skickas avtalet till nästa mottagare och så vidare.
 
-   I samtidiga beställningar får alla mottagare Adobe Sign-avtalet och kan vidta åtgärder parallellt.
+   Alla mottagare får avtalet och kan agera parallellt i samma ordning.
 
 1. Använd fältet för avtals-ID för att associera en bindef till avtals-ID (agreementId). Det lägger till avtals-ID i avsnittet afBoundData i skicka-data för schemabaserade formulär. Avtals-ID läggs också till i afSubmissionInfo-avsnittet i skickade data för alla Adobe Sign-aktiverade formulär. Du kan använda avtals-ID för att spåra avtalsstatus med hjälp av anpassad kod (kräver anpassad implementering).
 
@@ -286,7 +286,7 @@ Du kan även associera en bindef till avtals-ID (agreementId). Det lägger till 
 <!-- Remove when forms portal goes live
 >[!NOTE]
 >
->Data of the Adaptive Form is stored temporarily on Forms Portal. It is recommended to use [custom storage for Forms Portal](/help/forms/using/configuring-draft-submission-storage.md). It ensures that the PII (personally identifiable information) data is not stored on AEM servers. 
+>Data of the Adaptive Form is stored temporarily on Forms Portal. Adobe recommends using [custom storage for Forms Portal](/help/forms/using/configuring-draft-submission-storage.md). It ensures that the PII (personally identifiable information) data is not stored on AEM servers. 
 -->
 
 Din formulärsigneringsupplevelse är klar. Du kan förhandsgranska formuläret för att verifiera signeringsprocessen. På det publicerade formuläret [!DNL Adobe Sign] Blockfält visas när en mottagare tar emot formuläret för signering via ett e-postmeddelande. När **[!UICONTROL When Is the recipient and the person filling the form same?]** om alternativet är markerat som ja och villkoret är uppfyllt, omdirigeras användaren till Adobe Sign-avtalet efter det att dokumentet har skickats och användaren kan signera dokumentet omedelbart i stället för att vänta på att avtalet ska visas i e-postmeddelandet.

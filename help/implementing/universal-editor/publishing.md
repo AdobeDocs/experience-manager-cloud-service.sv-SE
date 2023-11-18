@@ -2,9 +2,9 @@
 title: Publicera innehåll med den universella redigeraren
 description: Lär dig hur den universella redigeraren publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
 exl-id: aee34469-37c2-4571-806b-06c439a7524a
-source-git-commit: 79fe3133a6b0553209b14c4cf47faa9db28caacc
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
@@ -34,4 +34,4 @@ Ett annat alternativ är att distribuera appen till två olika miljöer som är 
 
 Målet för den universella redigeraren är att inte införa något visst mönster, så att implementeringen bäst kan uppnå sina mål på ett helt fristående sätt samtidigt som allt förblir enkelt och rakt framåt för implementeringen.
 
-Det finns heller inga krav på hur ett visst projekt ska gå till för att avgöra från vilken nivå innehållet ska levereras. Det ger snarare ett antal möjligheter och låter projektet avgöra vilken lösning som är bäst för sina egna behov.
+Det finns heller inga krav på hur ett visst projekt ska gå till för att avgöra från vilken nivå innehållet ska levereras. Det ger snarare flera möjligheter och låter projektet avgöra vilken lösning som är bäst för sina egna behov.

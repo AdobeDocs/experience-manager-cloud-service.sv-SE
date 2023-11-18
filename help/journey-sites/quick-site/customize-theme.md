@@ -2,9 +2,9 @@
 title: Anpassa webbplatstemat
 description: Lär dig hur webbplatstemat byggs, hur du anpassar och hur du testar med AEM.
 exl-id: b561bee0-3a64-4dd3-acb8-996f0ca5bfab
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '960'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ När du känner dig trygg med temaprojektets struktur kan du starta den lokala p
 
    ![npm run live](assets/npm-run-live.png)
 
-1. När proxyservern startas öppnas en webbläsare automatiskt för att `http://localhost:7001/`. Tryck eller klicka **LOGGA IN LOKALT (ENDAST ADMINISTRATÖRSÅTGÄRDER)** och logga in med de autentiseringsuppgifter för proxyanvändare som du har fått från AEM.
+1. När proxyservern startas öppnas en webbläsare automatiskt för att `http://localhost:7001/`. Välj **LOGGA IN LOKALT (ENDAST ADMINISTRATÖRSÅTGÄRDER)** och logga in med de autentiseringsuppgifter för proxyanvändare som du har fått från AEM.
 
    ![Logga in lokalt](assets/sign-in-locally.png)
 

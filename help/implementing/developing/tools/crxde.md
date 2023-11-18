@@ -2,9 +2,9 @@
 title: Använda CRXDE Lite
 description: CRXDE Lite är en del av AEM snabbstart och är tillgängligt för dig att komma åt och ändra databasen i dina lokala utvecklingsmiljöer i webbläsaren.
 exl-id: 1581a7e5-6f84-4a45-8e8f-c83692ea077a
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1683'
+source-wordcount: '1685'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Gränssnittet CRXDE Lite visas så här i webbläsaren:
 
 >[!TIP]
 >
->Du kan också öppna CRXDE Lite från AEM-menyn. Välj på huvudmenyn **verktyg** -> **Allmänt** -> **CRXDE Lite**.
+>Du kan också öppna CRXDE Lite från AEM-menyn. Välj på huvudmenyn **verktyg** > **Allmänt** > **CRXDE Lite**.
 
 ## Översikt över användargränssnittet {#overview-of-the-user-interface}
 
@@ -163,7 +163,7 @@ The **Inloggningswidget** visar den inloggade användaren.
 
 Klicka på den för att logga in eller logga in igen som en annan användare. The `@crx.default` används för att visa att du befinner dig i standardarbetsytan (och endast) i databasen.
 
-The **Inställningar** kan användas för att ställa in användargränssnittets språk och för att visa och anpassa snabbtangenterna för olika åtgärder som att spara, söka, skapa anteckningar osv.
+The **Inställningar** kan användas för att ställa in användargränssnittets språk och för att visa och anpassa snabbtangenterna för olika åtgärder som att spara, söka, skapa anteckningar och så vidare.
 
 ## Skapa en mapp {#creating-a-folder}
 

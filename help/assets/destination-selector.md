@@ -4,9 +4,9 @@ description: Använd AEM målväljare för att visa och välja resurser som du k
 contentOwner: Adobe
 role: Admin,User
 exl-id: 7e7bc1ee-d580-4c88-b550-273e8b0620ba
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: 96a82439c51c22125c206b4e912e85e0bf603498
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1896'
 ht-degree: 0%
 
 ---
@@ -259,7 +259,7 @@ Med målväljaren kan du även visa valfria databasdata i AEM. Du kan använda `
 
 Det är ett exempel på `optionsFormSetup` -egenskap. Du kan använda den här för att bekräfta markeringen, den skickas till `onConfirm` -händelse.
 
-### Skapa en ny mapp {#create-new-folder}
+### Skapa en mapp {#create-new-folder}
 
 Du kan skapa en mapp i målmappen för [!DNL Adobe Experience Manager] som [!DNL Cloud Service].
 
@@ -274,7 +274,7 @@ Med målväljaren kan du visa resursen i fyra olika vyer:
 
 ### Info {#info}
 
-Med informations- eller informationsikonen kan du visa metadata för den valda resursen. Den innehåller olika detaljer som dimensioner, storlek, beskrivning, sökväg, ändringsdatum och skapad den. Metadatainformationen tillhandahålls när du överför eller kopierar eller skapar en ny resurs.
+Med informations- eller informationsikonen kan du visa metadata för den valda resursen. Den innehåller olika detaljer som dimensioner, storlek, beskrivning, sökväg, ändringsdatum och skapad den. Metadatainformationen tillhandahålls när du överför eller kopierar eller skapar en resurs.
 
 ### Välj mapp {#select-folder}
 

@@ -4,9 +4,9 @@ description: Lär dig hur du kan aktivera frontend-flödet för befintliga webbp
 feature: Administering
 role: Admin
 exl-id: 55d54d72-f87b-47c9-955f-67ec5244dd6e
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ När du aktiverar frontend-flödet för en webbplats gör AEM följande ändring
 
 * Alla sidor på webbplatsen kommer att innehålla ytterligare en CSS- och JS-fil, som kan ändras genom att distribuera uppdateringar via en dedikerad molnhanterare.
 * De tillagda CSS- och JS-filerna kommer från början att vara tomma, men en temakällsmapp kan laddas ned för att starta mappstrukturen som gör det möjligt att distribuera CSS- och JS-koduppdateringar via den pipeline som läggs till.
-* Den här ändringen kan bara ångras av en utvecklare genom att ta bort `SiteConfig` och `HtmlPageItemsConfig` noder som skapas nedan med den här åtgärden `/conf/<site-name>/sling:configs`.
+* Den här ändringen kan bara ångras av en utvecklare genom att ta bort `SiteConfig` och `HtmlPageItemsConfig` noder som skapas under den här åtgärden `/conf/<site-name>/sling:configs`.
 
 >[!NOTE]
 >
@@ -47,10 +47,10 @@ AEM kan automatiskt anpassa din befintliga webbplats så att den använder front
 
 ## Aktivera frontendspipeline {#enabling}
 
-Du aktiverar din plats från Sites-konsolen med hjälp av [Platsjärnvägar.](site-rail.md)
+Du aktiverar din plats från webbplatskonsolen med hjälp av [Platsjärnvägar.](site-rail.md)
 
 1. Logga in AEM och navigera till webbplatsen via **Global navigering** > **Webbplatser**.
-1. Välj din plats i konsolen. Du måste markera platsens rot och inte underordnade sidor.
+1. Välj din plats i konsolen. Markera platsens rot och inte underordnade sidor.
 1. När webbplatsen är markerad öppnar du [järnvägsväljare](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector) till vänster och välj **Plats**.
 1. I **Plats** klicka på knappen **Aktivera frontdelspipeline**.
 

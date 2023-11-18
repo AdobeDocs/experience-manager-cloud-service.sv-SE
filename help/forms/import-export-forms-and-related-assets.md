@@ -1,9 +1,9 @@
 ---
 title: Importera och exportera resurser till [!DNL AEM Forms]?
 description: Lär dig hur du använder DocuSign med ett adaptivt formulär för att samla in e-signaturer.
-source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1271'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Så här hämtar du Forms- och dokumentresurser:
 1. Välj formulärresurser och tryck på **[!UICONTROL Download]** -ikon.
 1. Välj något av följande alternativ i Hämta resurser och tryck sedan på **[!UICONTROL Download]**.
 
-   * **Hämta som CRX-paket:** Använd alternativet för att hämta och flytta alla valda resurser och relaterade beroenden från en [!DNL AEM Forms] till en annan instans. Alla resurser och mappar hämtas som crx-paket. Alla formulärresurser, inklusive formulär som skapats i AEM (adaptiva Forms- och adaptiva formulärfragment), PDF-dokument och resurser (XSD, XFS, bilder) kan hämtas som paket från [!DNL AEM Forms] Gränssnitt.
+   * **Hämta som CRX-paket:** Använd alternativet för att hämta och flytta alla markerade resurser och relaterade beroenden från en [!DNL AEM Forms] till en annan instans. Alla resurser och mappar hämtas som crx-paket. Alla formulärresurser, inklusive formulär som skapats i AEM (adaptiva Forms och adaptiva formulärfragment), PDF-dokument och resurser (XSD, XFS, bilder) kan hämtas som paket från [!DNL AEM Forms] Gränssnitt.
 Fördelen med att hämta resurser som paket är att det även hämtar resurser som har använts av den resurs som valts för hämtning. Om du till exempel har ett adaptivt formulär som använder en formulärmall, XSD och en bild. När du väljer det här adaptiva formuläret och hämtar det som paket innehåller det hämtade paketet även formulärmallen, XSD och bilden. Alla metadataegenskaper (inklusive anpassade egenskaper) som är kopplade till resursen hämtas också.
 
    * **Hämta resurser som binära filer:** Använd alternativet om du bara vill hämta formulärmallar (XDP), PDF forms (PDF), dokument (PDF) och resurser (bilder, scheman, formatmallar). Du kan redigera dessa resurser med externa program. Det hämtar formulärresurser som har binära filer, t.ex. XSD, XDP, bilder, PDF och XDP som en ZIP-fil.

@@ -2,9 +2,9 @@
 title: Använda bibliotek på klientsidan på AEM as a Cloud Service
 description: AEM innehåller biblioteksmappar på klientsidan, som gör att du kan lagra klientsidans kod (klientlibs) i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
 exl-id: 370db625-09bf-43fb-919d-4699edaac7c8
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2552'
+source-wordcount: '2551'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Om klientbiblioteksmappen innehåller en eller flera källfiler som sammanfogas 
 Klientbiblioteksmappar innehåller följande objekt:
 
 * JS- och/eller CSS-källfiler
-* Statiska resurser som stöder CSS-format, t.ex. ikoner, webbteckensnitt osv.
+* Statiska resurser som stöder CSS-format, som ikoner, webbteckensnitt osv.
 * Ett `js.txt` fil och/eller en `css.txt` som identifierar de källfiler som ska sammanfogas i de genererade JS- och/eller CSS-filerna
 
 ![Clientlib-arkitektur](assets/clientlib-architecture.drawio.png)
@@ -170,7 +170,7 @@ The `dumplibs` -komponenten innehåller en testväljare som visar den källkod s
 
 ## Ytterligare funktioner i klientbiblioteksmappen {#additional-features}
 
-Det finns ett antal andra funktioner som stöds av klientbiblioteksmappar i AEM. Dessa är dock inte nödvändiga på AEM as a Cloud Service och därför bör de inte användas. De listas här för fullständighet.
+Det finns flera andra funktioner som stöds av klientbiblioteksmappar i AEM. Dessa är dock inte nödvändiga på AEM as a Cloud Service och därför bör de inte användas. De listas här för fullständighet.
 
 >[!WARNING]
 >

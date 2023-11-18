@@ -4,9 +4,9 @@ description: Lär dig hur du använder AEM för att skapa en webbplats med hjäl
 feature: Administering
 role: Admin
 exl-id: 9c71c167-2934-4210-abd9-ab085b36593b
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '756'
 ht-degree: 0%
 
 ---
@@ -55,19 +55,19 @@ Det är enkelt att använda en mall för att skapa en plats.
 
    * `https://<your-author-environment>.adobeaemcloud.com/sites.html/content`
 
-1. Tryck eller klicka **Skapa** längst upp till höger på skärmen och i listrutan väljer **Plats från mall**.
+1. Välj **Skapa** längst upp till höger på skärmen och i listrutan väljer **Plats från mall**.
 
    ![Skapa en plats från en mall](../assets/create-site-from-template.png)
 
-1. Tryck eller klicka på en befintlig mall i den vänstra panelen eller på **Importera** längst upp i den vänstra kolumnen om du vill importera en ny mall.
+1. Välj en befintlig mall i den vänstra panelen eller på **Importera** längst upp i den vänstra kolumnen om du vill importera en ny mall.
 
    ![Guiden Skapa webbplats](../assets/site-creation-wizard.png)
 
-   1. Om du väljer att importera letar du i filläsaren reda på mallen som du vill använda och trycker eller klickar på **Överför**.
+   1. Om du väljer att importera letar du i filläsaren reda på mallen som du vill använda och väljer **Överför**.
 
    1. När den har överförts visas den i listan med tillgängliga mallar.
 
-1. När du väljer en mall visas information om mallen i den högra kolumnen. Välj önskad mall och tryck eller klicka **Nästa**.
+1. När du väljer en mall visas information om mallen i den högra kolumnen. Välj önskad mall och välj **Nästa**.
 
    ![Välj en mall](../assets/select-site-template.png)
 
@@ -77,11 +77,11 @@ Det är enkelt att använda en mall för att skapa en plats.
    * Webbplatsnamnet blir en del av webbadressen.
    * Platsnamnet måste uppfylla [AEM sidnamnkonventioner](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#page-name-restrictions-and-best-practices).
 
-1. Tryck eller klicka **Skapa** och webbplatsen skapas från webbplatsmallen.
+1. Välj **Skapa** och webbplatsen skapas från webbplatsmallen.
 
    ![Information om den nya platsen](../assets/create-site-details.png)
 
-1. I bekräftelsedialogrutan som visas: tryck eller klicka **Klar**.
+1. I bekräftelsedialogrutan väljer du **Klar**.
 
    ![Dialogrutan Slutfört](../assets/success.png)
 
@@ -93,10 +93,10 @@ Innehållsförfattare kan nu börja skriva!
 
 ## Webbplatsanpassning {#site-customization}
 
-Om sajten behöver anpassas utöver de tillgängliga mallarna finns det ett antal alternativ.
+Om webbplatsen kräver anpassning utöver de tillgängliga mallarna finns det flera alternativ.
 
-* Om webbplatsens struktur eller det ursprungliga innehållet behöver justeras, [webbplatsmallen kan anpassas efter dina behov](site-templates.md).
-* Om webbplatsens format behöver justeras [temat kan hämtas och anpassas](/help/journey-sites/quick-site/overview.md).
-* Om platsens funktionalitet behöver justeras, [sajten kan anpassas helt](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
+* Om webbplatsens struktur eller det ursprungliga innehållet måste justeras, [webbplatsmallen kan anpassas efter dina behov](site-templates.md).
+* Om platsens format måste justeras, [temat kan hämtas och anpassas](/help/journey-sites/quick-site/overview.md).
+* Om webbplatsfunktionaliteten måste justeras [sajten kan anpassas helt](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
 
 Alla anpassningar bör göras med stöd av en utvecklingsteam.

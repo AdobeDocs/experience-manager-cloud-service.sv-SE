@@ -2,9 +2,9 @@
 title: Trafikfilterregler inklusive WAF-regler
 description: Konfigurera trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF)
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: a129c188e9ec6871c86245acb5f0bf0333fdc340
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '3441'
+source-wordcount: '3435'
 ht-degree: 0%
 
 ---
@@ -112,8 +112,8 @@ The `kind` parametern ska anges till `CDN` och versionen bör anges till schemav
 
 1. För andra miljötyper än RDE skapar du en riktad distributionskonfiguration i Cloud Manager.
 
-   * [Se det här dokumentet för produktion av rörledningar.](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md)
-   * [Se det här dokumentet för icke-produktionsrörledningar.](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md)
+   * [Se konfigurera produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md).
+   * [Se konfigurera icke-produktionspipelinor](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md).
 
 Kommandoraden kommer att användas för RDE, men RDE stöds inte för närvarande.
 
@@ -587,7 +587,7 @@ Kontrollpanelsverktygen kan klonas direkt från [AEMCS-CDN-Log-Analysis-ELK-Tool
 
 ## Rekommenderade startregler {#recommended-starter-rules}
 
-Du kan kopiera de rekommenderade reglerna nedan till `cdn.yaml` för att komma igång. Starta i loggläge, analysera trafiken och när du är nöjd ändras den till blockläge. Du kanske vill ändra reglerna baserat på de unika egenskaperna i webbplatsens livstrafik.
+Du kan kopiera de rekommenderade reglerna nedan till `cdn.yaml` för att komma igång. Starta i loggläge, analysera trafiken och när du är nöjd ändras den till blockläge. Du kanske vill ändra reglerna baserat på de unika egenskaperna för webbplatsens livstrafik.
 
 ```
 kind: "CDN"

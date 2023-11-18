@@ -2,10 +2,10 @@
 title: Nyheter och skillnader – Adobe Experience Manager as a Cloud Service
 description: Nyheter och skillnader – Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: d1ce126e-960c-4367-b741-af709dd81010
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1895'
-ht-degree: 75%
+source-wordcount: '1889'
+ht-degree: 73%
 
 ---
 
@@ -36,7 +36,7 @@ Det finns grundläggande skillnader mellan dessa tidigare metoder och AEM as a C
 
 >[!NOTE]
 >
->Mer information om On-Premise- och Managed Service-versionerna finns i dokumentationen för [AEM 6.5](https://experienceleague.adobe.com/docs/experience-manager-65.html).
+>Mer information om On-Premise och Managed Service finns i [AEM 6.5-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65.html) .
 
 ## Arkitektur {#architecture}
 
@@ -156,7 +156,7 @@ En annan viktig skillnad är att det nu finns:
 
 >[!NOTE]
 >
->Mer information finns i [Utvecklingsriktlinjer](/help/implementing/developing/introduction/development-guidelines.md) och [Utveckling – WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
+>Om du vill ha mer information börjar du med [Utvecklingsriktlinjer](/help/implementing/developing/introduction/development-guidelines.md) och [Utveckla - WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
 
 Den nya arkitekturen som stöder AEM as a Cloud Service inbegriper några viktiga förändringar av den övergripande utvecklingsupplevelsen. Ett av de främsta målen för AEM as a Cloud Service är att göra det möjligt för erfarna kunder (som har använt AEM antingen lokalt eller i Adobe Managed Services) att migrera till AEM as a Cloud Service så snabbt som möjligt, utan att behöva skriva om en stor mängd av den anpassade koden. Vissa justeringar kan dock fortfarande behövas.
 
@@ -206,7 +206,7 @@ För att stödja snabba iterationer och utveckling är det också möjligt att u
 
 >[!NOTE]
 >
->Mer information börjar med [innehållsåterställning](/help/operations/backup.md), [Indexering](/help/operations/indexing.md)och [andra underhållsaktiviteter](/help/operations/maintenance.md).
+>Mer information får du från [innehållsåterställning](/help/operations/backup.md), [Indexering](/help/operations/indexing.md)och [andra underhållsaktiviteter](/help/operations/maintenance.md).
 
 Med AEM as a Cloud Service automatiseras sådana åtgärder så att tjänsten inte längre behöver avbrytas.
 
@@ -224,7 +224,7 @@ AEM as a Cloud Service stöds också av en ny infrastruktur för övervakning, r
 
 >[!NOTE]
 >
->Mer information finns i [Säkerhet – IMS-stöd](/help/security/ims-support.md).
+>Se [Säkerhet - IMS-stöd](/help/security/ims-support.md).
 
 En stor förändring i AEM as a Cloud Service är den helt integrerade användningen av Adobe ID:n för åtkomst till redigeringsmiljön.
 
@@ -240,7 +240,7 @@ Det kombinerar fördelarna med:
 
 >[!NOTE]
 >
->Mer information finns till att börja med i [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md).
+>Mer information finns i [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) är en bra utgångspunkt.
 
 De grundläggande principerna för användargränssnittet, för både Sites och Assets, är välkända för alla som tidigare har använt AEM.
 

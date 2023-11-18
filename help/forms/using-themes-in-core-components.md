@@ -2,9 +2,9 @@
 title: Hur skapar och använder vi teman i Adaptive Forms?
 description: Du kan använda teman för att utforma och ge en visuell identitet till ett adaptivt formulär med hjälp av kärnkomponenterna. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
 exl-id: 11c52b66-dbb1-4c47-a94d-322950cbdac1
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2631'
+source-wordcount: '2630'
 ht-degree: 0%
 
 ---
@@ -367,7 +367,7 @@ Temat distribueras med [rörledning.](https://experienceleague.adobe.com/docs/ex
 
    ![run-a-pipleine](/help/forms/assets/canvas-theme-run-pipeline.png)
 
-När bygget är klart blir temat tillgängligt vid författarinstansen för användning. Den visas under **[!UICONTROL Style]** i guiden Skapa anpassningsbara formulär när du skapar ett nytt anpassat formulär.
+När bygget är klart blir temat tillgängligt vid författarinstansen för användning. Den visas under **[!UICONTROL Style]** i guiden för att skapa anpassade formulär när du skapar ett anpassat formulär.
 
 ![anpassat tema tillgängligt under formatfliken](/help/forms/assets/custom-theme-style-tab.png)
 

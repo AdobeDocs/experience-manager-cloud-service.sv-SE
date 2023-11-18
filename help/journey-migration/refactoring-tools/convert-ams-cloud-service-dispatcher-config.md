@@ -1,9 +1,9 @@
 ---
 title: Konvertera en hanterad tjänst till en Adobe Experience Manager as a Cloud Service Dispatcher-konfiguration
 description: Konvertera en hanterad tjänst till en Adobe Experience Manager as a Cloud Service Dispatcher-konfiguration
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1282'
 ht-degree: 39%
 
 ---
@@ -79,7 +79,7 @@ Ta bort avsnitt som refererar till variabler med namnen DISP_ID, PUBLISH_FORCE_S
    Kör Dispatcher-valideraren i din katalog med underkommandot httpd:
 
    `$ validator httpd`
-Om fel uppstår om inkluderingsfiler saknas kontrollerar du om du har ändrat namn på filerna korrekt.
+Om du ser fel som handlar om saknade inkluderingsfiler ska du kontrollera om du har bytt namn på filerna korrekt.
 
    Om Apache-direktiv som inte är vitlistade visas tar du bort dem.
 
@@ -89,7 +89,7 @@ Om fel uppstår om inkluderingsfiler saknas kontrollerar du om du har ändrat na
 
 1. **Byta namn på servergruppsfiler**
 
-   Alla grupper i conf.dispatcher.d/enabled_farm måste byta namn för att matcha mönstret *.farm. Byt namn `customerX_farm.any` till `customerX.farm`.
+   Alla grupper i conf.dispatcher.d/enabled_farm måste byta namn för att matcha mönstret *.farm. Byt namn till exempel `customerX_farm.any` till `customerX.farm`.
 
 1. **Kontrollera cache**
 
@@ -190,7 +190,7 @@ med programsatsen:
 
      `$ validator dispatcher`
 
-   * Om fel uppstår om inkluderingsfiler saknas kontrollerar du om du har ändrat namn på filerna korrekt.
+   * Om du ser fel som handlar om saknade inkluderingsfiler ska du kontrollera om du har bytt namn på filerna korrekt.
 
    * Om felmeddelanden som rör en odefinierad variabel `PUBLISH_DOCROOT` visas, ändrar du namnet till `DOCROOT`.
 

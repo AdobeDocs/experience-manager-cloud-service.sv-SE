@@ -2,9 +2,9 @@
 title: Använda Sling Resource Merger i Adobe Experience Manager as a Cloud Service
 description: Med Sling Resource Merger får du tillgång till och kan sammanfoga resurser
 exl-id: 5b6e5cb5-4c6c-4246-ba67-6b9f752867f5
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1157'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Med Sling Resource Merger får du tillgång till och kan sammanfoga resurser. Den innehåller olika mekanismer (differentiering) för båda:
 
-* **[Övertäckningar](/help/implementing/developing/introduction/overlays.md)** av resurser som använder [sökvägar](/help/implementing/developing/introduction/overlays.md#search-paths).
+* **[Övertäckningar](/help/implementing/developing/introduction/overlays.md)** av resurser med [sökvägar](/help/implementing/developing/introduction/overlays.md#search-paths).
 
 * **Åsidosättningar** för komponentdialogrutor för det beröringsaktiverade användargränssnittet (`cq:dialog`), använda resurstyphierarkin (med hjälp av egenskapen `sling:resourceSuperType`).
 
@@ -40,7 +40,7 @@ Målet med Sling Resource Merger i AEM är att
 
 >[!CAUTION]
 >
->Du ***måste*** ändrar ingenting i `/libs` bana.
+>Du ***måste*** ändrar ingenting i dialogrutan `/libs` bana.
 >
 >Detta beror på innehållet i `/libs` kan skrivas över när som helst när uppgraderingar tillämpas på din instans.
 >
@@ -48,7 +48,7 @@ Målet med Sling Resource Merger i AEM är att
 >
 >* Åsidosättningar är inte beroende av sökvägarna, de använder egenskapen `sling:resourceSuperType` för att skapa anslutningen.
 >
->Åsidosättningar definieras ofta under `/apps`, vilket är den bästa metoden inom AEM as a Cloud Service är att definiera anpassningar enligt `/apps`; det beror på att du inte får ändra något under `/libs`.
+>Åsidosättningar definieras ofta under `/apps`, vilket är den bästa metoden inom AEM as a Cloud Service är att definiera anpassningar enligt `/apps`; detta beror på att du inte får ändra något under `/libs`.
 
 ### Egenskaper {#properties}
 
@@ -102,7 +102,7 @@ Om du vill skapa en övertäckning eller åsidosättning måste du återskapa de
 
      `/apps/the-project/components/text/cq:dialog`
 
-Om du vill skapa någon av dessa behöver du bara återskapa skelettstrukturen. För att förenkla återskapandet av strukturen kan alla mellanliggande noder vara av typen `nt:unstructured` (De behöver inte återspegla den ursprungliga nodtypen. till exempel i `/libs`).
+Om du vill skapa någon av dessa behöver du bara återskapa skelettstrukturen. För att förenkla återskapandet av strukturen kan alla mellanliggande noder vara av typen `nt:unstructured` (de behöver inte återspegla den ursprungliga nodtypen, till exempel i `/libs`).
 
 I ovanstående övertäckningsexempel behövs alltså följande noder:
 
@@ -121,7 +121,7 @@ I ovanstående övertäckningsexempel behövs alltså följande noder:
 
 ### Användningsexempel {#use-cases}
 
-Dessa tillsammans med standardfunktioner gör att du kan:
+Tillsammans med standardfunktionerna kan du:
 
 * **Lägg till en egenskap**
 
@@ -151,7 +151,7 @@ Dessa tillsammans med standardfunktioner gör att du kan:
   Som standard skapas automatiskt egenskaper (till exempel `jcr:primaryType`) är inte föremål för en övertäckning/åsidosättning för att säkerställa att den nodtyp som finns under `/libs` respekteras. Om du vill använda en övertäckning/åsidosättning måste du återskapa noden i `/apps`, döljer egenskapen explicit och definierar om den:
 
    1. Skapa motsvarande nod under `/apps` med önskat `jcr:primaryType`
-   1. Skapa egenskapen `sling:hideProperties` på den noden, med värdet inställt på värdet för den automatiskt skapade egenskapen, till exempel `jcr:primaryType`
+   1. Skapa egenskapen `sling:hideProperties` på den noden med värdet inställt på värdet för den automatiskt skapade egenskapen, till exempel `jcr:primaryType`
 
       Den här egenskapen, definierad under `/apps`, får nu högre prioritet än den som definieras under `/libs`
 
@@ -220,12 +220,12 @@ Sling Resource Merger innehåller två anpassade resursprovidrar - en för över
 >
 >När du använder resursen bör du använda rätt monteringspunkt.
 >
->Detta garanterar att Sling Resource Merger anropas och att den fullständigt sammanfogade resursen returneras (vilket minskar strukturen som behöver replikeras från) `/libs`).
+>Detta garanterar att Sling Resource Merger anropas och att den fullständigt sammanfogade resursen returneras (vilket minskar strukturen som måste replikeras från) `/libs`).
 
 * Övertäckning:
 
-   * syfte: sammanfoga resurser baserat på sökvägar
-   * monteringspunkt: `/mnt/overlay`
+   * syfte: sammanfoga resurser baserat på deras sökväg
+   * fästpunkt: `/mnt/overlay`
    * användning: `mount point + relative path`
    * exempel:
 
@@ -234,7 +234,7 @@ Sling Resource Merger innehåller två anpassade resursprovidrar - en för över
 * Åsidosätt:
 
    * syfte: sammanfoga resurser baserat på deras supertyp
-   * monteringspunkt: `/mnt/overide`
+   * fästpunkt: `/mnt/overide`
    * användning: `mount point + absolute path`
    * exempel:
 

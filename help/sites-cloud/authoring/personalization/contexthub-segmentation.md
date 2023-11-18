@@ -2,9 +2,9 @@
 title: Konfigurera segmentering med ContextHub
 description: Lär dig konfigurera segmentering med ContextHub.
 exl-id: fbc38611-dbee-426e-b823-df64b6730c45
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1682'
+source-wordcount: '1652'
 ht-degree: 0%
 
 ---
@@ -88,11 +88,11 @@ Så här definierar du det nya segmentet:
 
 1. Efter [komma åt segment](#accessing-segments), [navigera till mappen](#organizing-segments) där du vill skapa segmentet.
 
-1. Tryck eller klicka på **Skapa** knapp och markera **Skapa ContextHub-segment**.
+1. Välj **Skapa** knapp och markera **Skapa ContextHub-segment**.
 
    ![Lägg till segment](../assets/contexthub-create-segment.png)
 
-1. I **Nytt ContextHub-segment**, ange en titel för segmentet och ett ökningsvärde om det behövs och tryck eller klicka **Skapa**.
+1. I **Nytt ContextHub-segment**, ange en rubrik för segmentet och ett ökningsvärde om det behövs och markera sedan **Skapa**.
 
    ![Nytt segment](../assets/contexthub-new-segment.png)
 
@@ -103,7 +103,7 @@ Så här definierar du det nya segmentet:
 
 1. I segmentkonsolen redigerar du det nya segmentet och öppnar det i segmentredigeraren.
 1. Dra en jämförelse eller referens till segmentredigeraren som den visas i standardbehållaren OCH.
-1. Dubbelklicka på eller tryck på konfigurationsalternativet för den nya referensen eller segmentet för att redigera de specifika parametrarna. I det här exemplet testar vi för folk i Basel.
+1. Dubbelmarkera konfigurationsalternativet för den nya referensen eller segmentet för att redigera de specifika parametrarna. I det här exemplet testar vi för folk i Basel.
 
    ![Testning av människor i Basel](../assets/contexthub-comparing-property-value.png)
 
@@ -193,7 +193,7 @@ Om du har många segment kan det bli svårt att hantera dem som en platt lista. 
 
 ### Skapa en ny mapp {#create-folder}
 
-1. Efter [komma åt segment](#accessing-segments), klicka eller tryck på **Skapa** knapp och markera **Mapp**.
+1. Efter [komma åt segment](#accessing-segments)väljer du **Skapa** knapp och markera **Mapp**.
 
    ![Lägg till mapp](../assets/contexthub-create-segment.png)
 
@@ -205,24 +205,24 @@ Om du har många segment kan det bli svårt att hantera dem som en platt lista. 
 
    ![Skapa mapp](../assets/contexthub-create-folder.png)
 
-1. Tryck eller klicka **Skapa**.
+1. Välj **Skapa**.
 
    ![Bekräfta mapp](../assets/contexthub-confirm-folder.png)
 
 1. Mappen visas i segmentlistan.
    * Hur du sorterar kolumnerna påverkar var i listan den nya mappen visas.
-   * Du kan justera sorteringen genom att trycka eller klicka på kolumnrubrikerna.
+   * Du kan välja kolumnrubrikerna för att justera sorteringen.
      ![Den nya mappen](../assets/contexthub-folder.png)
 
 ### Ändra befintliga mappar {#modify-folders}
 
-1. Efter [komma åt segment](#accessing-segments)markerar du mappen genom att klicka på den eller trycka på den.
+1. Efter [komma åt segment](#accessing-segments)markerar du den mapp som du vill ändra.
 
    ![Välj mapp](../assets/contexthub-select-folder.png)
 
-1. Tryck eller klicka **Byt namn** i verktygsfältet för att byta namn på mappen.
+1. Välj **Byt namn** i verktygsfältet för att byta namn på mappen.
 
-1. Ange en ny **Mapptitel** och trycka eller klicka **Spara**.
+1. Ange en ny **Mapptitel** och markera **Spara**.
 
    ![Byt namn på mapp](../assets/contexthub-rename-folder.png)
 
@@ -232,25 +232,25 @@ Om du har många segment kan det bli svårt att hantera dem som en platt lista. 
 
 ### Ta bort en mapp
 
-1. Efter [komma åt segment](#accessing-segments)markerar du mappen genom att klicka på den eller trycka på den.
+1. Efter [komma åt segment](#accessing-segments)markerar du den mapp som du vill ändra.
 
    ![Välj mapp](../assets/contexthub-select-folder.png)
 
-1. Tryck eller klicka **Ta bort** i verktygsfältet för att ta bort mappen.
+1. Välj **Ta bort** i verktygsfältet för att ta bort mappen.
 
 1. En dialogruta innehåller en lista med mappar som har markerats för borttagning.
 
    ![Bekräfta borttagning](../assets/contexthub-confirm-segment-delete.png)
 
-   * Tryck eller klicka **Ta bort** för att bekräfta.
-   * Tryck eller klicka **Avbryt** för att avbryta.
+   * Välj **Ta bort** för att bekräfta.
+   * Välj **Avbryt** för att avbryta.
 
 1. Om någon av de markerade mapparna innehåller undermappar eller segment måste borttagningen bekräftas.
 
    ![Bekräfta borttagning av underordnade](../assets/contexthub-confirm-segment-child-delete.png)
 
-   * Tryck eller klicka **Tvinga borttagning** för att bekräfta.
-   * Tryck eller klicka **Avbryt** för att avbryta.
+   * Välj **Tvinga borttagning** för att bekräfta.
+   * Välj **Avbryt** för att avbryta.
 
 >[!NOTE]
 >

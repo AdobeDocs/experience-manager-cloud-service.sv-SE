@@ -2,9 +2,9 @@
 title: Skapa riktat innehåll med målläge
 description: Målinriktningsläget och Target-komponenten innehåller verktyg för att skapa innehåll för upplevelser
 exl-id: 8d80d867-2d0f-4ddb-8a06-f9441e6d85ce
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '5408'
+source-wordcount: '5306'
 ht-degree: 5%
 
 ---
@@ -68,11 +68,11 @@ Växla till målläget för att komma åt verktygen för att skapa riktat inneh�
 Så här växlar du till målläge:
 
 1. Öppna sidan som du vill skapa riktat innehåll för.
-1. Klicka eller tryck på listrutan Läge i verktygsfältet högst upp på sidan för att visa de tillgängliga lägestyperna.
+1. I verktygsfältet högst upp på sidan väljer du listrutan Läge för att visa de tillgängliga lägestyperna.
 
    ![Målläge](../assets/targeted-mode.png)
 
-1. Klicka eller tryck **Målinriktning**. Målinställningarna visas högst upp på sidan.
+1. Välj **Målinriktning**. Målinställningarna visas högst upp på sidan.
 
    ![Verktygsfältet Målinriktning](../assets/targeted-toolbar.png)
 
@@ -97,7 +97,7 @@ Så här lägger du till en aktivitet:
    >
    >Om du skapar ett varumärke på något annat sätt måste du se till att noden `/campaigns/<brand>/master` finns eller ett fel uppstår när du försöker skapa en aktivitet.
 
-1. Klicka eller tryck + bredvid **Aktivitet** listruta.
+1. Markera + bredvid **Aktivitet** listruta.
 1. Ange ett namn för aktiviteten.
 
    >[!NOTE]
@@ -106,7 +106,7 @@ Så här lägger du till en aktivitet:
 
 1. I **Målinriktning** i den nedrullningsbara menyn väljer du målmotor.
 
-   * Om du väljer **ContextHub-AEM**&#x200B;är de återstående fälten nedtonade och inte tillgängliga. Klicka eller tryck **Skapa**.
+   * Om du väljer **ContextHub-AEM**&#x200B;är de återstående fälten nedtonade och inte tillgängliga. Välj **Skapa**.
 
    * Om du väljer **Adobe Target** kan du välja en konfiguration (som standard är det den konfiguration du angav när du konfigurerade kontot) och aktivitetstyp. <!--If you select **Adobe Target**, you can select a configuration (by default, it is the configuration you provided when you [configured the account](/help/sites-administering/opt-in.md)) and Activity Type.-->
 
@@ -133,13 +133,13 @@ Så här lägger du till en aktivitet:
 
 1. I **Varumärke** väljer du det varumärke som innehåller den aktivitet du arbetar med.
 1. I **Aktivitet** väljer du den aktivitet som du skapar målinnehåll för.
-1. Om du vill visa kontrollerna som vägleder dig genom målprocessen klickar eller trycker du **Börja målinrikta**.
+1. Om du vill visa kontrollerna som vägleder dig genom målgruppsprocessen väljer du **Börja målinrikta**.
 
    ![Börja målinriktning](../assets/targeted-start-targeting.png)
 
    >[!NOTE]
    >
-   >Om du vill ändra aktiviteten som du arbetar med klickar eller trycker du **Bakåt**.
+   >Om du vill ändra aktiviteten som du arbetar med väljer du **Bakåt**.
 
 ## Skapa: Skapa upplevelser {#create-authoring-the-experiences}
 
@@ -191,14 +191,14 @@ Använda steget Skapa i [målgruppsprocessen](#the-targeting-process-create-targ
 
 Lägga till en upplevelse:
 
-1. Klicka eller tryck för att lägga till en upplevelse **+** **Lägg till Experience Targeting** som visas under de befintliga upplevelserna i **Målgrupper** fönster.
-1. Välj och få en målgrupp. Som standard är det namnet på upplevelsen. Om du vill kan du skriva ett annat namn. Klicka eller tryck **OK**.
+1. Välj om du vill lägga till en upplevelse **+** **Lägg till Experience Targeting** som visas under de befintliga upplevelserna i **Målgrupper** fönster.
+1. Välj och få en målgrupp. Som standard är det namnet på upplevelsen. Om du vill kan du skriva ett annat namn. Välj **OK**.
 
 #### Ta bort upplevelser med målläge {#removing-experiences-using-targeting-mode}
 
 Så här tar du bort en upplevelse:
 
-1. Klicka eller tryck på pilen bredvid upplevelsens namn.
+1. Välj pilen bredvid upplevelsenamnet.
 
    ![Radera och upplev](../assets/targeted-delete-experiene.png)
 
@@ -208,15 +208,15 @@ Så här tar du bort en upplevelse:
 
 Så här byter du namn på upplevelser med målläget:
 
-1. Klicka eller tryck på pilen bredvid upplevelsens namn.
+1. Välj pilen bredvid upplevelsenamnet.
 1. Klicka **Byt namn på upplevelsen** och skriv in det nya namnet.
-1. Klicka eller tryck någon annanstans på skärmen för att spara ändringarna.
+1. Välj någon annanstans på skärmen för att spara ändringarna.
 
 #### Redigera målgrupper med målläge {#editing-audiences-using-targeting-mode}
 
 Så här redigerar du målgrupper med målläget:
 
-1. Klicka eller tryck på pilen bredvid upplevelsens namn.
+1. Välj pilen bredvid upplevelsenamnet.
 1. Klicka **Redigera målgrupp** och välj en ny målgrupp.
 1. Klicka **OK**.
 
@@ -224,7 +224,7 @@ Så här redigerar du målgrupper med målläget:
 
 Så här kopierar du upplevelser med målläget:
 
-1. Klicka eller tryck på pilen bredvid upplevelsens namn.
+1. Välj pilen bredvid upplevelsenamnet.
 1. Klicka **Duplicera** och välja målgrupp.
 1. Byt namn på upplevelsen om så önskas och klicka på **OK**.
 
@@ -254,11 +254,11 @@ När du har en målkomponent som mål kan bara den komponenten användas i erbju
 
 Utför följande procedur efter [starta målinriktningsprocessen](#the-targeting-process-create-target-and-goals-settings).
 
-1. Klicka på eller tryck på den komponent som du vill ha som mål. Verktygsfältet för komponenten visas, ungefär som i följande exempel.
+1. Markera den komponent som du vill ha som mål. Verktygsfältet för komponenten visas, ungefär som i följande exempel.
 
    ![Målkomponent](../assets/targeted-component.png)
 
-1. Klicka på eller tryck på målikonen.
+1. Välj målikonen.
 
    ![Målknapp](../assets/targeted-target-button.png)
 
@@ -292,10 +292,10 @@ När du lägger till en komponent i Target-komponenten får den innehåll för e
 
 Du kan lägga till en Target-komponent på sidan i redigeringsläge eller i målläge. Du kan bara lägga till komponenter i Target-komponenten i Target-läge. Målkomponenten tillhör komponentgruppen Personalisering.
 
-Om du redigerar målinnehåll måste du klicka eller trycka **Börja målinrikta** innan du kan göra det.
+Om du redigerar riktat innehåll måste du välja **Börja målinrikta** innan du kan göra det.
 
 1. Dra Target-komponenten till sidan där du vill att erbjudandet ska visas.
-1. Som standard har inget plats-ID angetts. Klicka på eller tryck på konfigurationshjulet för att ange platsen.
+1. Som standard har inget plats-ID angetts. Välj konfigurationshjulet för att ange platsen.
 
    >[!NOTE]
    >
@@ -318,15 +318,15 @@ Skapa ett erbjudande genom att skapa innehållet i en målkomponent i målinrikt
 Om ni bestämmer er för att erbjudandet kan användas för andra upplevelser kan ni skapa ett anpassat erbjudande och [lägg till det i biblioteket](#adding-a-custom-offer-to-a-library). Mer information om hur du använder Offers-konsolen för att skapa ett återanvändbart erbjudande finns i [Lägg till ett erbjudande i ett erbjudandebibliotek](/help/sites-cloud/authoring/personalization/offers.md#add-an-offer-to-an-offer-library).
 
 1. Välj den upplevelse som du lägger till erbjudandet till.
-1. Om du vill visa komponentmenyn klickar eller trycker du på den målkomponent som du vill lägga till erbjudandet i.
+1. Om du vill visa komponentmenyn väljer du den målkomponent som du vill lägga till erbjudandet i.
 
    ![Lägga till ett erbjudande](../assets/targeted-component-menu.png)
 
-1. Klicka eller tryck på ikonen +.
+1. Välj ikonen +.
 
    Innehållet i standarderbjudandet används som erbjudande för den aktuella upplevelsen.
 
-1. Klicka på eller tryck på erbjudandet för att visa erbjudandemenyn och klicka eller tryck sedan på redigeringsikonen.
+1. Välj erbjudandet för att visa erbjudandemenyn och välj sedan redigeringsikonen.
 
    ![Verktygsfältet Målkomponent](../assets/targeted-offer-menu.png)
 
@@ -339,25 +339,25 @@ Lägg till ett erbjudande från [erbjudandebibliotek](/help/sites-cloud/authorin
 Du kan inte lägga till bibliotekserbjudanden i standardupplevelsen.
 
 1. Välj den upplevelse som du lägger till erbjudandet till.
-1. Om du vill visa komponentmenyn klickar eller trycker du på den målkomponent som du vill lägga till erbjudandet i.
+1. Om du vill visa komponentmenyn väljer du den målkomponent som du vill lägga till erbjudandet i.
 
    ![Målinriktat erbjudande](../assets/targeted-add-offer-large.png)
 
-1. Klicka på eller tryck på mappikonen.
+1. Välj mappikonen.
 
    ![Mappikon](../assets/targeted-folder-button.png)
 
-1. Välj erbjudandet från biblioteket och klicka eller tryck sedan på bockmarkeringsikonen.
+1. Välj erbjudandet från biblioteket och markera sedan bockmarkeringsikonen.
 
    ![Erbjudandebibliotek](../assets/targeted-select-content.png)
 
    Med erbjudandeväljaren kan du bläddra eller filtrera efter erbjudanden. När du bläddrar eller filtrerar kanske du också vill sortera erbjudandena och ändra hur du ser dem. Siffran i det övre högra hörnet visar hur många erbjudanden som är tillgängliga i det aktuella biblioteket.
 
-   * Klicka eller tryck **Bläddra** för att navigera till en annan mapp. Navigeringsrutan öppnas och du klickar på pilen för att gå ned i mapparna. Klicka eller tryck **Bläddra** igen för att stänga navigeringsrutan.
+   * Välj **Bläddra** för att navigera till en annan mapp. Navigeringsrutan öppnas och du klickar på pilen för att gå ned i mapparna. Välj **Bläddra** igen för att stänga navigeringsrutan.
 
    ![Bläddra i innehåll](../assets/targeted-select-content-browse.png)
 
-   * Klicka eller tryck **Filter** om du vill filtrera erbjudandena mot nyckelord eller taggar. Du anger nyckelord och väljer taggar i listrutan. Klicka eller tryck **Filter** igen för att stänga filtreringsrutan.
+   * Välj **Filter** om du vill filtrera erbjudandena mot nyckelord eller taggar. Du anger nyckelord och väljer taggar i listrutan. Välj **Filter** igen för att stänga filtreringsrutan.
 
    ![Filtrera innehåll](../assets/targeted-filter.png)
 
@@ -365,7 +365,7 @@ Du kan inte lägga till bibliotekserbjudanden i standardupplevelsen.
 
    ![Filtersorteringsordning](../assets/targeted-filter-sort.png)
 
-   Klicka eller tryck på ikonen bredvid **Visa som** för att visa erbjudanden som rutor eller som en lista.
+   Markera ikonen bredvid **Visa som** för att visa erbjudanden som rutor eller som en lista.
 
    ![Visa som knapp](../assets/targeted-view-as-button.png)
 
@@ -376,18 +376,18 @@ Lägg till ett anpassat erbjudande i [erbjudandebibliotek](/help/sites-cloud/aut
 Mer information om hur du använder Offers-konsolen för att skapa ett återanvändbart erbjudande finns i [Lägg till ett erbjudande i ett erbjudandebibliotek](/help/sites-cloud/authoring/personalization/offers.md#add-an-offer-to-an-offer-library).
 
 1. Välj upplevelsen för att visa det anpassade erbjudandet.
-1. Klicka på eller tryck på det anpassade erbjudandet för att visa erbjudandemenyn, klicka eller tryck på **Spara erbjudandet i erbjudandebiblioteket** -ikon.
+1. Välj det anpassade erbjudandet för att visa erbjudandemenyn och välj sedan **Spara erbjudandet i erbjudandebiblioteket** -ikon.
 
    ![Spara erbjudande om att erbjuda bibliotek](../assets/targeted-save-offer-library-button.png)
 
-1. Skriv ett namn för erbjudandet, markera det bibliotek som du vill lägga till erbjudandet till och klicka eller tryck sedan på bockmarkeringsikonen.
+1. Skriv ett namn för erbjudandet, markera det bibliotek som du vill lägga till erbjudandet i och markera sedan bockmarkeringsikonen.
 
 #### Konvertera ett bibliotekserbjudande till ett anpassat bibliotek {#converting-a-library-offer-to-a-custom-library}
 
 Konvertera ett bibliotekserbjudande till ett anpassat erbjudande för att ändra erbjudandet för den aktuella upplevelsen utan att ändra erbjudandet i andra upplevelser.
 
 1. Välj den upplevelse du vill visa bibliotekserbjudandet.
-1. Klicka på eller tryck på bibliotekserbjudandet för att visa erbjudandemenyn och klicka eller tryck sedan på ikonen Konvertera till infogat erbjudande.
+1. Välj bibliotekserbjudandet för att visa erbjudandemenyn och välj sedan ikonen Konvertera till infogat erbjudande.
 
    ![Konvertera till textbundet erbjudande](../assets/targeted-convert-inline.png)
 
@@ -423,9 +423,9 @@ En målgrupp får inte användas av mer än en upplevelse. En varningssymbol vis
 
 Använd följande procedur för att associera en upplevelse med en målgrupp när du använder AEM (eller Adobe Target Experience targeting):
 
-1. Klicka på eller tryck på den nedrullningsbara pilen bredvid den målgruppsruta som är kopplad till upplevelsen.
-1. (Valfritt) Klicka eller tryck **Redigera** och skriv sedan ett nyckelord för att söka efter det önskade segmentet.
-1. Välj målgrupp i listan över målgrupper och klicka eller tryck på **OK**.
+1. Välj den nedrullningsbara pilen bredvid den målgruppsruta som är kopplad till upplevelsen.
+1. (Valfritt) Välj **Redigera** och skriv sedan ett nyckelord för att söka efter det önskade segmentet.
+1. I listan över målgrupper väljer du målgrupp och väljer **OK**.
 
 ### Om du använder A/B-testning (Adobe Target) {#if-you-are-using-a-b-testing-adobe-target}
 
@@ -437,9 +437,9 @@ Du kan ändra procentsatserna så länge de adderar till 100 procent. En målgru
 
 ### Associera målgrupper och trafikprocent med A/B-tester {#associating-audiences-and-traffic-percentages-with-a-b-testing}
 
-1. Klicka på eller tryck på listrutan bredvid målgruppen som är kopplad till upplevelsen.
+1. Markera listrutan bredvid målgruppen som är kopplad till upplevelsen.
 1. (Valfritt) Klicka på **Redigera** skriver du ett nyckelord och söker efter det önskade segmentet.
-1. Klicka eller tryck **Okej.**
+1. Välj **Okej.**
 1. Ange i procent för att konfigurera hur målgruppstrafiken dirigeras till varje upplevelse. Det totala talet måste vara lika med 100.
 1. (Valfritt) Redigera upplevelsens namn genom att klicka på den nedrullningsbara menyn bredvid upplevelsens namn.
 
@@ -490,12 +490,12 @@ Så här konfigurerar du inställningar om du använder AEM mål:
 1. Om du vill ange när aktiviteten ska starta använder du **Starta** i den nedrullningsbara menyn för att välja något av följande värden:
 
    * **Vid aktivering**: Aktiviteten startar när sidan som innehåller målinnehållet aktiveras.
-   * **Angivet datum och tid**: En viss tid. När du väljer det här alternativet klickar eller trycker du på kalenderikonen, väljer ett datum och anger vilken tid aktiviteten ska starta.
+   * **Angivet datum och tid**: En viss tid. När du väljer det här alternativet markerar du kalenderikonen, väljer ett datum och anger vilken tid aktiviteten ska starta.
 
 1. Om du vill ange när aktiviteten ska sluta använder du **End** i den nedrullningsbara menyn för att välja något av följande värden:
 
    * **Vid inaktivering**: Aktiviteten avslutas när sidan som innehåller målinnehållet inaktiveras.
-   * **Angivet datum och tid**: En viss tid. När du väljer det här alternativet klickar eller trycker du på kalenderikonen, väljer ett datum och anger tidpunkten för att avsluta aktiviteten.
+   * **Angivet datum och tid**: En viss tid. När du väljer det här alternativet markerar du kalenderikonen, väljer ett datum och anger vilken tid aktiviteten ska avslutas.
 
 1. Om du vill ange en prioritet för aktiviteten använder du skjutreglaget och väljer antingen **Låg**, **Normal**, eller **Hög**.
 
@@ -506,12 +506,12 @@ Så här konfigurerar du mål och inställningar för Adobe Target:
 1. Om du vill ange när aktiviteten ska starta använder du **Starta** i den nedrullningsbara menyn för att välja något av följande värden:
 
    * **Vid aktivering**: Aktiviteten startar när sidan som innehåller målinnehållet aktiveras.
-   * **Angivet datum och tid**: En viss tid. När du väljer det här alternativet klickar eller trycker du på kalenderikonen, väljer ett datum och anger vilken tid aktiviteten ska starta.
+   * **Angivet datum och tid**: En viss tid. När du väljer det här alternativet markerar du kalenderikonen, väljer ett datum och anger vilken tid aktiviteten ska starta.
 
 1. Om du vill ange när aktiviteten ska sluta använder du **End** i den nedrullningsbara menyn för att välja något av följande värden:
 
    * **Vid inaktivering**: Aktiviteten avslutas när sidan som innehåller målinnehållet inaktiveras.
-   * **Angivet datum och tid**: En viss tid. När du väljer det här alternativet klickar eller trycker du på kalenderikonen, väljer ett datum och anger tidpunkten för att avsluta aktiviteten.
+   * **Angivet datum och tid**: En viss tid. När du väljer det här alternativet markerar du kalenderikonen, väljer ett datum och anger vilken tid aktiviteten ska avslutas.
 
 1. Om du vill ange en prioritet för aktiviteten använder du skjutreglaget och väljer antingen **Låg**, **Normal**, eller **Hög**.
 1. Om du har konfigurerat Adobe Analytics med ert Adobe Target-konto visas listrutan **Rapportkälla**. Välj **Adobe Target** eller **Adobe Analytics** som källa.
@@ -546,7 +546,7 @@ Så här konfigurerar du mål och inställningar för Adobe Target:
    >
    >Du kan ta bort ytterligare mål genom att klicka eller trycka på de tre punkterna och klicka eller trycka på **Ta bort**. AEM kräver att du har minst ett definierat mål.
 
-1. Om du vill ha mer kontroll över hur framgångsvärdena räknas klickar du på **Avancerade inställningar** för att få tillgång till dem.
+1. Om du vill ha större kontroll över hur framgångsvärden räknas väljer du **Avancerade inställningar** för att få tillgång till dem.
 1. Klicka **Spara**.
 
 När du har konfigurerat kan du [visa hur dina aktiviteter fungerar](/help/sites-cloud/authoring/personalization/activities.md#viewing-performance-and-converting-winning-experiences-a-b-test) som använder Adobe Target (antingen upplevelse eller A/B-testmål). Dessutom kan ni med A/B-testanpassning [konvertera vinnarna](/help/sites-cloud/authoring/personalization/activities.md#viewing-performance-and-converting-winning-experiences-a-b-test).
@@ -574,12 +574,12 @@ Använd följande verktyg för att simulera besökarens upplevelse:
 * Simuleringsaktivitet i målläge: Sidan visar erbjudanden för användaren som är markerad i kontextnavet. Du kan redigera erbjudanden som riktar sig till användaren.
 * Förhandsgranskningsläge: Använd kontextnavet för att välja de användare och platser som uppfyller villkoren för de segment som era upplevelser baseras på. När dina kontextnavmarkeringar ändras, ändras målinnehållet i enlighet med detta.
 
-1. Om du vill växla till förhandsgranskningsläget klickar eller trycker du på i verktygsfältet **Förhandsgranska**.
-1. Klicka på eller tryck på ikonen för snabbpanelen i verktygsfältet.
+1. Om du vill växla till förhandsgranskningsläget väljer du **Förhandsgranska**.
+1. I verktygsfältet väljer du ikonen för snabbpanelen.
 
    ![ContextHub-knapp](../assets/targeted-contexthub-button.png)
 
-1. Använd kontextnavet för att ändra kontextegenskaper. Du kan till exempel klicka på eller trycka på egenskapen Persona för att välja en annan användare.
+1. Använd kontextnavet för att ändra kontextegenskaper. Välj till exempel egenskapen Persona för att välja en annan användare.
 
    ![ContextHub-verktygsfältet](../assets/targeted-contexthub-toolbar.png)
 
@@ -591,7 +591,7 @@ Använd följande verktyg för att simulera besökarens upplevelse:
 
 Du kan anpassa Target-komponenten genom att komma åt komponentens alternativ på ett av två sätt:
 
-1. När du har angett komponenten som mål klickar eller trycker du på komponenten i Target och sedan på inställningsikonen (kugghjulet).
+1. När du har angett komponenten som mål markerar du komponenten i Target-komponenten och sedan inställningsikonen (kugghjulet).
 
    ![Komponentinställningar](../assets/targeted-component-settings.png)
 
@@ -599,7 +599,7 @@ Du kan anpassa Target-komponenten genom att komma åt komponentens alternativ p�
 
    ![Måldialogruta](../assets/targeted-dialog.png)
 
-1. Du kan även komma åt dessa inställningar i helskärmsläge genom att klicka på eller trycka på helskärmsikonen i alternativfönstret för målkomponenten.
+1. Du kan även få åtkomst till dessa inställningar i helskärmsläge genom att markera ikonen för helskärm i alternativfönstret för målkomponenten.
 
    ![Helskärmsknapp](../assets/targeted-fullscreen.png)
 
@@ -623,8 +623,8 @@ Om du väljer Adobe Target som motor:
 | Korrekt målinriktning | Om du aktiverar korrekt målinriktning anger du att komponenten ska vänta på att klientkontext eller kontextnav ska vara tillgängliga innan begäran skickas till Adobe Target. Det kan öka inläsningstiden. För redigering är korrekt målinriktning alltid aktiverat. Om du markerar kryssrutan Exakt målinriktning utför mboxDefine först och mboxUpdate senare, vilket resulterar i en Ajax-begäran när data är tillgängliga. Om du inte markerar kryssrutan Exakt målinriktning utför mboxCreate-funktionen, vilket resulterar i en synkron begäran direkt (i det här fallet är inte alla kontextdata tillgängliga än). Obs! Om du aktiverar eller inaktiverar korrekt målinriktning för en viss komponent påverkas inte inställningarna som du har angett globalt. Du kan alltid åsidosätta globala inställningar genom att välja Korrekt målanpassning i komponenten. |
 | Inkludera lösta segment | Om du markerar den här kryssrutan inkluderas alla lösta segment i mbox-anropet och alla parametrar som har konfigurerats på sidan och i ramverket. Detta fungerar bara i situationer med XML API där du synkroniserar AEM segment. Om du har segment i AEM som inte hanteras av Adobe Target (som skriptsegment) kan du med det här alternativet lösa segmentet i AEM och skicka information till Adobe Target om att segmentet är aktivt. |
 | Ärvda kontextparametrar | Visar kontextparametrar som ärvts från Adobe Target-ramverket, om sådana finns, och som är kopplade till den valda sidan. |
-| Kontextparametrar | Klicka på eller tryck på fältet Lägg till om du vill konfigurera ytterligare kontextparametrar (samma som finns i Target Framework). Sammanhangsparametrar som läggs till i komponenten gäller bara för komponenten och inte för andra komponenter, vilket skulle vara fallet om du lade till kontextparametrar direkt i ramverket. |
-| Statiska parametrar | Klicka på eller tryck på fältet Lägg till om du vill konfigurera ytterligare statiska parametrar (samma som finns i Target Framework). Statiska parametrar som läggs till i komponenten gäller bara för komponenten och inte för andra komponenter, vilket skulle vara fallet om du lade till statiska parametrar direkt i ramverket. Statiska parametrar kommer inte från kontext (klientkontext för innehållsnavet). |
+| Kontextparametrar | Välj fältet Lägg till om du vill konfigurera ytterligare kontextparametrar (samma som det som är tillgängligt i Target Framework). Sammanhangsparametrar som läggs till i komponenten gäller bara för komponenten och inte för andra komponenter, vilket skulle vara fallet om du lade till kontextparametrar direkt i ramverket. |
+| Statiska parametrar | Välj fältet Lägg till om du vill konfigurera ytterligare statiska parametrar (samma som det som är tillgängligt i Target Framework). Statiska parametrar som läggs till i komponenten gäller bara för komponenten och inte för andra komponenter, vilket skulle vara fallet om du lade till statiska parametrar direkt i ramverket. Statiska parametrar kommer inte från kontext (klientkontext för innehållsnavet). |
 
 >[!NOTE]
 >

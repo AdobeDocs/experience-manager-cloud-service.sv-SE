@@ -2,9 +2,9 @@
 title: Hantera målgrupper
 description: Med Audiences-konsolen kan du skapa, ordna och hantera målgrupper för ditt Adobe Target-konto eller hantera segment för ContextHub
 exl-id: dff72c15-afcd-4b16-a711-e9ca3010e3ec
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '932'
 ht-degree: 9%
 
 ---
@@ -33,8 +33,8 @@ Du kan skapa ett ContextHub-segment antingen i publikkonsolen eller under målin
 
 Så här skapar du ett ContextHub-segment i publikkonsolen:
 
-1. Klicka eller tryck på navigeringskonsolen **Personalisering**. Klicka eller tryck **Målgrupper**.
-1. Tryck eller klicka **Skapa ContextHub-segment**.
+1. Välj i navigeringskonsolen **Personalisering**. Välj **Målgrupper**.
+1. Välj **Skapa ContextHub-segment**.
 
    ![Skapa ett segment](/help/sites-cloud/authoring/assets/audiences-create-segment.png)
 
@@ -60,20 +60,20 @@ När du använder mer än en regel kombineras dessa regler av operatorn AND, vil
 
 Så här skapar du en Adobe Target-publik:
 
-1. Klicka eller tryck på navigeringskonsolen **Personalisering**. Klicka eller tryck **Målgrupper**.
+1. Välj i navigeringskonsolen **Personalisering**. Välj **Målgrupper**.
 
    ![Navigera till målgrupper](/help/sites-cloud/authoring/assets/audiences-navigation.png)
 
-1. Tryck eller klicka på i publikkonsolen **Skapa** och sedan **Skapa målgrupp**.
+1. I publikkonsolen väljer du **Skapa** och sedan **Skapa målgrupp**.
 
    ![Skapa en målgrupp](/help/sites-cloud/authoring/assets/audiences-create-target.png)
 
-1. I **Adobe Target Configuration** väljer du målkonfiguration och trycker eller klickar på **OK**.
-1. I området Regel#1 trycker eller klickar du på attributtypen och anger eventuell attributinformation i fälten som är tillgängliga. När du är klar markerar du kryssrutan till höger om attributet för att spara det. Se [Attribut och deras alternativ](#attributes-and-their-options) om du vill ha information om alla attribut.
+1. I **Adobe Target Configuration** väljer du målkonfiguration och väljer **OK**.
+1. I området Regel 1 väljer du attributtyp och anger eventuell attributinformation i de fält som är tillgängliga. När du är klar markerar du kryssrutan till höger om attributet för att spara det. Se [Attribut och deras alternativ](#attributes-and-their-options) om du vill ha information om alla attribut.
 1. Klicka på **Lägg till regel** för att lägga till en regel. Ange så många regler som behövs. Reglerna kombineras med den booleska operatorn AND, vilket innebär att målgruppen måste uppfylla alla krav i alla regler för att kunna delta i en aktivitet.
-1. Tryck eller klicka **Nästa**.
-1. Ange ett namn för publiken och tryck eller klicka **Spara**.
-1. Tryck eller klicka **Spara**. Din publik listas i målgruppslistan.
+1. Välj **Nästa**.
+1. Ange ett namn för målgruppen och välj **Spara**.
+1. Välj **Spara**. Din publik listas i målgruppslistan.
 
 ### Attribut och deras alternativ {#attributes-and-their-options}
 
@@ -97,6 +97,6 @@ Du kan skapa målregler för följande attribut:
 
 Du kan redigera alla ContextHub-målgrupper från publikkonsolen. Du kan också redigera Adobe Target-målgrupper, men bara de som har skapats i AEM:
 
-1. Klicka eller tryck på navigeringskonsolen **Personalisering**. Klicka eller tryck **Målgrupper**.
-1. Tryck eller klicka på ikonen bredvid det ContextHub-segment som du vill redigera och tryck eller klicka på **Redigera**.
+1. Välj i navigeringskonsolen **Personalisering**. Välj **Målgrupper**.
+1. Markera ikonen bredvid det ContextHub-segment som du vill redigera och markera **Redigera**.
 1. Gör eventuella redigeringar i segmentredigeraren. Mer information finns i ContextHub-dokumentationen. <!--See the [ContextHub](/help/sites-administering/contexthub-config.md) documentation for more information.-->

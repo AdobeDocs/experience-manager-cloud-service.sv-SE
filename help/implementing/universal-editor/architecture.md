@@ -2,9 +2,9 @@
 title: Universal Editor Architecture
 description: Läs mer om arkitekturen i den universella redigeraren och hur data flödar mellan tjänster och lager.
 exl-id: e6f40743-0f21-4fb6-bf23-76426ee174be
-source-git-commit: 79fe3133a6b0553209b14c4cf47faa9db28caacc
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '650'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ I det här dokumentet beskrivs dessa byggstenar och hur de utbyter data.
 
 >[!TIP]
 >
->Se dokumentet för att se hur den universella redigeraren och dess arkitektur fungerar [Komma igång med Universal Editor i AEM](getting-started.md) om du vill lära dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
+>För att se hur Universal Editor och dess arkitektur fungerar, se [Komma igång med Universal Editor i AEM](getting-started.md) om du vill lära dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 
 ### Redigerare {#editors}
 

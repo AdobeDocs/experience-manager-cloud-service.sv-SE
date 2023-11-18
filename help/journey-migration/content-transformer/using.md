@@ -1,9 +1,10 @@
 ---
 title: Använda innehållstransformeraren
 description: Lär dig hur du omvandlar innehållsstrukturen som förberedelse för migrering till AEM as a Cloud Service.
-source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
+exl-id: 40516ff7-5686-42e6-bdd1-c9c6de432b09
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '642'
 ht-degree: 1%
 
 ---
@@ -62,7 +63,7 @@ Innehållstransformeraren paketeras med [Verktyget Innehållsöverföring](/help
    >[!NOTE]
    > Alla åtgärder som kan ändra källinnehållet (`move`/`remove`/`rename`) skapas som standard ett säkerhetskopiepaket med källsökvägarna under `/etc/packages/content-transformation` före omformningen. Även om varje åtgärdsdialogruta har ett alternativ för att inaktivera/aktivera skapande av säkerhetskopieringspaket, rekommenderar vi att du alltid har aktiverat generering av paket.
 
-1. Ett exempel på ett säkerhetskopieringspaket som skapats för flyttningsåtgärden för sökvägarna visas nedan. Klicka på Installera för att återställa källsökvägarna. Observera att installationen endast tar tillbaka källsökvägarna till deras ursprungliga plats och inte tar bort sökvägarna som de flyttades till under omformningen. Om du vill ta bort banorna på den flyttade platsen klickar du på **Lägg till banor** knapp för att lägga till platsen (till exempel `/etc/packages/content-transformation/paths`) väljer du platsen och klickar på **Ta bort**.
+1. Ett exempel på ett säkerhetskopieringspaket som skapats för flyttningsåtgärden för sökvägarna visas nedan. Klicka på Installera för att återställa källsökvägarna. Vid installationen återställs bara källsökvägarna till den ursprungliga platsen och inte sökvägarna som flyttades under omvandlingen tas bort. Om du vill ta bort banorna på den flyttade platsen klickar du på **Lägg till banor** knapp för att lägga till platsen (till exempel `/etc/packages/content-transformation/paths`) väljer du platsen och klickar på **Ta bort**.
 
    >[!CAUTION]
    > Ta inte bort `/etc/packages/content-transformation` eftersom det är platsen där säkerhetskopieringspaketen finns. Du kan bara ta bort den här platsen om du är säker på att du inte behöver dessa paket längre för att minska databasstorleken.

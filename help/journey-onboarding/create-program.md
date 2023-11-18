@@ -3,9 +3,9 @@ title: Skapa ett program
 description: Lär dig hur du använder Cloud Manager för att skapa ditt första program.
 role: Admin, User, Developer
 exl-id: ade4bb43-5f48-4938-ac75-118009f0a73b
-source-git-commit: d67c5c9baafb9b7478f1d1c2ad924f5a8250a1ee
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '676'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Eftersom de har olika syften har de olika miljöerna olika alternativ. Processen
 
    ![Startsida för Cloud Manager](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/cloud-manager-my-programs.png)
 
-1. Välj **Konfigurera en sandlåda** anger du ett programnamn och trycker eller klickar på **Fortsätt**.
+1. Välj **Konfigurera en sandlåda** anger du ett programnamn och väljer **Fortsätt**.
 
    ![Skapa programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/create-sandbox.png)
 

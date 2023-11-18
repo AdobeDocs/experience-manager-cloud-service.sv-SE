@@ -2,9 +2,9 @@
 title: Introduktion till Universal Editor
 description: Se hur den universella redigeraren möjliggör WYSIWYG-redigering av headless och headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
 exl-id: d4fc2384-a0f5-4a6f-9572-62749786be4c
-source-git-commit: 79fe3133a6b0553209b14c4cf47faa9db28caacc
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '925'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Användare tror ofta att en headless-implementering begränsar författarens mö
 Kraven för en implementering som ska använda den universella redigeraren är raka framifrån och stöder följande:
 
 * **Valfri arkitektur** - Återgivning på serversidan, edge-side-återgivning, rendering på klientsidan osv.
-* **Alla ramverk** - Vanilla AEM, eller andra ramverk från tredje part som React, Next.js, Angular osv.
+* **Alla ramverk** - Vanilla AEM, eller ett ramverk från tredje part som React, Next.js, Angular osv.
 * **Alla värdtjänster** - Kan lagras lokalt på AEM eller på en fjärrdomän
 
 ### Allt innehåll {#any-content}
@@ -50,7 +50,7 @@ En innehållsförfattare bör ha samma kraftfulla redigeringsupplevelse som den 
 
 Innehållet handlar inte bara om informationen som finns, utan även om hur det återges och tas emot. Innehållet innehåller ytterligare metadata och instrumenteringsregler som den universella redigeraren kan förstå och redigera, inklusive:
 
-* **Använda layout och format** - Genom att använda ett formatsystem kan marknadsförare och innehållsförfattare tillämpa olika format på sitt innehåll och skapa olika layouter för innehåll som kolumner, karuseller, flikar, dragspel osv.
+* **Använda layout och format** - Genom att använda ett formatsystem kan marknadsförare och innehållsförfattare tillämpa olika format på sitt innehåll och skapa olika layouter för innehåll som kolumner, karuseller, flikar, dragspel och så vidare.
 
 ## Värde {#value}
 

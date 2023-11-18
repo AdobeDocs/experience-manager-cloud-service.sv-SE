@@ -4,9 +4,9 @@ description: Lär dig hur du använder delade köer för Forms-centrerade arbets
 topic-tags: process
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
-source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '798'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Dela och begära åtkomst till inkorgsobjekt från en användare {#share-and-request-access}
 
-En kö är en lista med objekt AEM en användares inkorg. Dessa kan vara objekt som tilldelats en användare eller objekt som delas med gruppen som en användare är medlem i. Du kan öppna Inkorgen för att visa och utföra åtgärder på Inkorgsobjektet. Du kan till exempel dela ett objekt med en annan användare.
+En kö är en lista med objekt AEM en användares inkorg. Dessa kan vara objekt som tilldelats en användare eller objekt som delas med gruppen som en användare är medlem i. Du kan öppna Inkorgen för att visa och agera på inkorgsobjektet. Du kan till exempel dela ett objekt med en annan användare.
 
 Du kan också dela dina inkorgsobjekt med en annan användare. När en annan användare har åtkomst till dina inkorgsobjekt kan användaren göra anspråk på och vidta lämpliga åtgärder för delade objekt. På samma sätt kan du begära åtkomst till inkorgsobjekt från andra användare.
 

@@ -2,9 +2,9 @@
 title: Skapa innehållsfragment - Headless-inställningar
 description: Lär dig använda AEM innehållsfragment för att utforma, skapa, strukturera och använda sidoberoende innehåll för rubrikfri leverans.
 exl-id: a227ae2c-f710-4968-8a00-bfe48aa66145
-source-git-commit: 7d09cafc4f8518fee185d3f9efc76c33ec20f9a3
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
@@ -25,10 +25,10 @@ Innehållsfragment innehåller strukturerat innehåll och kan levereras i JSON-f
 
 Innehållsförfattare skapar valfritt antal innehållsfragment som representerar det innehåll de skapar. Detta är deras huvuduppgift i AEM. I den här guiden behöver vi bara skapa en.
 
-1. Logga in AEM as a Cloud Service och välj **Navigering** -> **Innehållsfragment**.
+1. Logga in AEM as a Cloud Service och välj **Navigering** > **Innehållsfragment**.
 
-1. Tryck eller klicka på [mapp som du skapade tidigare.](create-assets-folder.md)
-1. Tryck eller klicka **Skapa**.
+1. Välj [mapp som du skapade tidigare.](create-assets-folder.md)
+1. Välj **Skapa**.
 1. Skapandet av ett innehållsfragment visas som en dialogruta.
 Välj den plats och modell som du vill använda för att skapa ditt innehållsfragment.
 
@@ -39,7 +39,7 @@ Välj den plats och modell som du vill använda för att skapa ditt innehållsfr
 
    ![Dialogrutan Skapa nytt innehållsfragment](/help/sites-cloud/administering/content-fragments/assets/cfc-console-create.png)
 
-1. Tryck eller klicka **Skapa** eller  **Skapa och öppna**.
+1. Välj **Skapa** eller  **Skapa och öppna**.
 
 Innehållsfragment kan referera till andra innehållsfragment, vilket möjliggör en kapslad innehållsstruktur om det behövs.
 

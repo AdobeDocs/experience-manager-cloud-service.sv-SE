@@ -2,9 +2,9 @@
 title: Local AEM Development with the Universal Editor
 description: Läs om hur den universella redigeraren stöder redigering i lokala AEM för utvecklingsändamål.
 exl-id: ba1bf015-7768-4129-8372-adfb86e5a120
-source-git-commit: 3b98543098f4125a7d7e5896e5aa46e441a40f32
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '580'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ I en yttre ram som skyddas med HTTPS kan en osäker HTTP-ram inte läsas in. Tj�
 
 För att göra detta måste du konfigurera AEM för att köra HTTPS. I utvecklingssyfte kan du använda självsignerade certifikat.
 
-Se det här dokumentet om hur du konfigurerar AEM som körs på HTTPS, inklusive ett självsignerat certifikat som du kan använda.
+Se det här dokumentet om hur du konfigurerar AEM som körs på HTTPS med ett självsignerat certifikat som du kan använda.
 
 ## Installera Universal Editor-tjänsten {#install-ue-service}
 
@@ -30,7 +30,7 @@ Universal Editor-tjänsten är den som binder Universal Editor och serverdelssys
 
 [NodeJS version 16](https://nodejs.org/en/download/releases) krävs för att köra en lokal kopia av Universal Editor-tjänsten
 
-Tjänsten Universal Editor distribueras direkt av AEM Engineering. kontakta er tekniska kontakt i VIP program för att få en lokal kopia.
+Tjänsten Universal Editor distribueras direkt av AEM Engineering. Kontakta teknikern i VIP program för en lokal kopia.
 
 Teknikern ger dig en `universal-editor-service.cjs` -fil. Spara detta i den lokala utvecklingsmiljön.
 

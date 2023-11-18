@@ -4,7 +4,7 @@ seo-title: Repository Browser
 description: Databasens webbläsare ger en skrivskyddad vy i databasen för alla miljöer på författar-, publicerings- och förhandsgranskningsnivåer.
 seo-description: The repository browser provides a read-only view into the repository for all environments on author, publish, and preview tiers.
 exl-id: 22473a97-8f7b-4014-b885-1233116aeda6
-source-git-commit: 7260649eaab303ba5bab55ccbe02395dc8159949
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '844'
 ht-degree: 1%
@@ -33,13 +33,13 @@ Följande villkor måste vara uppfyllda för att du ska få tillgång till Devel
 
 Så här öppnar du Developer Console:
 
-* För produktionsprogram måste användarna ha **Cloud Manager - Utvecklarroll** i Admin Console
+* För produktionsprogram måste användarna ha **Cloud Manager - Utvecklarroll** i ADMIN CONSOLE
 * För sandlådeprogram är den tillgänglig för alla användare med en produktprofil som ger dem tillgång till AEM as a Cloud Service.
 
 Så här öppnar du Databasläsaren:
 
 * Användarna måste ha **Cloud Manager - utvecklare** Roll i Admin Console för att visa författarinstanser och publiceringsinstanser.
-* Dessutom kan användare med AEM användarprofil visa databaswebbläsaren med minimal läsåtkomst. användarens behörigheter respekteras när användaren bläddrar i databasen. Användare med AEM administratörsproduktprofil kan visa databaswebbläsaren med fullständig läsåtkomst.
+* Dessutom kan användare med AEM användarprofil visa databaswebbläsaren med minimal läsåtkomst. Användarens behörigheter respekteras när de bläddrar i databasen. Användare med AEM administratörsproduktprofil kan visa databaswebbläsaren med fullständig läsåtkomst.
 
 Mer information om hur du ställer in användarbehörigheter finns i [Dokumentation för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html).
 
@@ -66,7 +66,7 @@ Du kan använda den vänstra navigeringsrutan för att navigera i innehållshier
 
 ![repobrowser3](/help/implementing/developing/tools/assets/repobrowser3.png)
 
-Du kan också navigera direkt till en sökväg genom att ange den i **Bana** enligt nedan. Sökvägen utökar också sin plats i innehållshierarkin till vänster.
+Du kan också navigera direkt till en sökväg genom att ange den i dialogrutan **Bana** enligt nedan. Sökvägen utökar också sin plats i innehållshierarkin till vänster.
 
 ![repobrowser14](/help/implementing/developing/tools/assets/repobrowser14.png)
 
@@ -76,7 +76,7 @@ När du klickar på en mapp ändras URL-adressen dynamiskt så att den innehåll
 
 Som standard visas endast offentligt innehåll i Databasläsaren för publicering, vilket innebär att vissa mappar `/conf` eller `/home` är inte synliga.
 
-Gör så här för att göra platserna synliga.
+Gör följande om du vill göra platserna synliga:
 
 1. Klicka på de tre punkterna bredvid den miljö du vill använda och välj **Hantera åtkomst**
 
@@ -86,7 +86,7 @@ Gör så här för att göra platserna synliga.
 
    ![repobrowser8](/help/implementing/developing/tools/assets/repobrowser8.png)
 
-1. Skapa en produktprofil för publiceringsadministratörer. I exemplet nedan anropas den **DEV - AEM administratörer publicerar**
+1. Skapa en produktprofil för administratörer. I exemplet nedan anropas den **DEV - AEM administratörer publicerar**
 
    ![repobrowser9](/help/implementing/developing/tools/assets/repobrowser9.png)
 
@@ -95,7 +95,7 @@ Gör så här för att göra platserna synliga.
    ![repobrowser10](/help/implementing/developing/tools/assets/repobrowser10.png)
 
 1. Vänta i några minuter och öppna sedan **AEM** konsol
-1. Lägg till gruppen som motsvarar den nya produktprofilen som medlem i administratörsgruppen genom att klicka på **Verktyg - Säkerhet - grupper på författaren** och sedan klicka på **administratörer** grupp. Lägg sedan till gruppen enligt nedan
+1. Lägg till gruppen som motsvarar den nya produktprofilen som medlem i administratörsgruppen genom att klicka på **Verktyg - Säkerhet - Grupper på författaren** och sedan klicka på **administratörer** grupp. Lägg sedan till gruppen enligt nedan
 
    ![repobrowser11](/help/implementing/developing/tools/assets/repobrowser11.png)
 
@@ -143,6 +143,6 @@ Och för följande textbaserade MIME-typer:
 
 ### Hämta innehåll {#download-content}
 
-Du kan också använda databaswebbläsaren för att hämta innehåll. I exemplet nedan kan du trycka på **ladda ned** länk för att ladda ned `jcr:data` som är associerad med den valda noden. Den här funktionen är tillgänglig för alla binära egenskaper genom att navigera till noden som innehåller egenskapsdefinitionen.
+Du kan också använda databaswebbläsaren för att hämta innehåll. I exemplet nedan kan du trycka på **ladda ned** länk för att ladda ned `jcr:data` associeras med den valda noden. Den här funktionen är tillgänglig för alla binära egenskaper genom att navigera till noden som innehåller egenskapsdefinitionen.
 
 ![repobrowser5](/help/implementing/developing/tools/assets/repobrowser52.png)

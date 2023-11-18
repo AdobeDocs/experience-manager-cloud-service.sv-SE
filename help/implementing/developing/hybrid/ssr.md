@@ -2,9 +2,9 @@
 title: SPA- och serveråtergivning
 description: Om du använder SSR-återgivning (server-side rendering) i SPA kan det snabba upp den initiala inläsningen av sidan och sedan skicka vidare återgivningen till klienten.
 exl-id: be409559-c7ce-4bc2-87cf-77132d7c2da1
-source-git-commit: 66c9e95f96c8ce181722488a34a175c80f6f917c
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1517'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ I följande avsnitt beskrivs hur Adobe I/O Runtime kan användas för att implem
 
 >[!NOTE]
 >
->Cloud Manager stöder inte distribution till Adobe I/O Runtime. Därför måste din egen infrastruktur konfigureras för att distribuera SSR-kod till Adobe I/O Runtime.
+>Cloud Manager stöder inte distribution till Adobe I/O Runtime. Därför måste din egen infrastruktur vara konfigurerad för att distribuera SSR-kod till Adobe I/O Runtime.
 
 ## Fjärrrenderarkonfiguration {#remote-content-renderer-configuration}
 

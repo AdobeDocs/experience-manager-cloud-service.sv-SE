@@ -2,9 +2,9 @@
 title: Projektinställningar
 description: Lär dig hur AEM byggs med Maven och de standarder du måste följa när du skapar ditt eget projekt.
 exl-id: 76af0171-8ed5-4fc7-b5d5-7da5a1a06fa8
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1404'
+source-wordcount: '1399'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ För att kunna bygga och distribuera med Cloud Manager måste AEM följa följan
 * Projekt måste byggas med [Apache Maven.](https://maven.apache.org)
 * Det måste finnas en `pom.xml` -filen i Git-databasens rot. Detta `pom.xml` filen kan referera till så många undermoduler (som i sin tur kan ha andra undermoduler och så vidare) som det behövs.
 * Du kan lägga till referenser till ytterligare Maven-artefaktdatabaser i dina `pom.xml` filer.
-   * Åtkomst till [lösenordsskyddade artefaktarkiv](#password-protected-maven-repositories) stöds vid konfigurering. Åtkomst till nätverksskyddade artefaktdatabaser stöds dock inte.
+   * Åtkomst till [lösenordsskyddade arkivhandlingar](#password-protected-maven-repositories) stöds vid konfigurering. Åtkomst till nätverksskyddade artefaktdatabaser stöds dock inte.
 * Distribuerbara innehållspaket identifieras genom sökning efter innehållspaket `.zip` filer som finns i en katalog med namnet `target`.
    * Ett valfritt antal undermoduler kan producera innehållspaket.
 * Distribuerbara dispatcherartefakter upptäcks vid sökning efter `.zip` filer (finns även i katalogen med namnet `target`), som har kataloger med namn `conf` och `conf.d`.
@@ -110,7 +110,7 @@ Och om du bara vill få ut ett enkelt meddelande när bygget körs utanför Clou
 
 >[!NOTE]
 >
->Artefakter från en lösenordsskyddad Maven-databas bör endast användas med försiktighet eftersom kod som distribueras via den här mekanismen för närvarande inte kan köras i alla [regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md) implementeras i Cloud Managers kvalitetsportar. Därför bör det endast användas i sällsynta fall och för kod som inte är knuten till AEM. Du bör också distribuera Java-källorna och hela projektets källkod tillsammans med binärfilen.
+>Artefakter från en lösenordsskyddad Maven-databas bör användas med försiktighet eftersom kod som distribueras via den här mekanismen för närvarande inte går igenom [regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md) implementeras i Cloud Managers kvalitetsportar. Därför bör det endast användas i sällsynta fall och för kod som inte är knuten till AEM. Du bör också distribuera Java-källorna och hela projektets källkod tillsammans med binärfilen.
 
 Så här använder du en lösenordsskyddad Maven-databas i Cloud Manager:
 
@@ -122,7 +122,7 @@ När Cloud Manager-byggprocessen startar:
 * The `<servers>` -elementet i den här filen sammanfogas med standardvärdet `settings.xml` som tillhandahålls av Cloud Manager.
    * Server-ID:n som börjar med `adobe` och `cloud-manager` betraktas som reserverade och bör inte användas av anpassade servrar.
    * Server-ID:n som inte matchar något av dessa prefix eller standard-ID:t `central` kommer aldrig att speglas av Cloud Manager.
-* När den här filen är på plats refereras server-ID:t inifrån en `<repository>` och/eller `<pluginRepository>` -element inuti `pom.xml` -fil.
+* När den här filen är på plats refereras server-ID:t inifrån en `<repository>` och/eller `<pluginRepository>` -elementet inuti `pom.xml` -fil.
 * I allmänhet gäller följande `<repository>` och/eller `<pluginRepository>` -element finns inuti en [Cloud Manager-specifik profil](#activating-maven-profiles-in-cloud-manager)även om det inte är absolut nödvändigt.
 
 Låt oss till exempel säga att databasen är `https://repository.myco.com/maven2`bör användarnamnet Cloud Manager använda `cloudmanager`och lösenordet är `secretword`. Du gör så här:
@@ -242,7 +242,7 @@ Det gör du genom att konfigurera maven-assembly-plugin i ditt projekt.
 
 I Cloud Manager kan byggen producera valfritt antal innehållspaket. Det kan av olika skäl vara önskvärt att skapa ett innehållspaket men inte distribuera det. Ett exempel kan vara när innehållspaket som bara används för testning skapas eller som paketeras om av ett annat steg i byggprocessen. Det vill säga ett underpaket till ett annat paket.
 
-För att hantera dessa scenarier söker Cloud Manager efter en egenskap med namnet `cloudManagerTarget` i egenskaperna för inbyggda innehållspaket. Om den här egenskapen är inställd på `none`, hoppas paketet över och distribueras inte.
+För att hantera dessa scenarier söker Cloud Manager efter en egenskap med namnet `cloudManagerTarget` i egenskaperna för det inbyggda innehållspaketet. Om den här egenskapen är inställd på `none`, hoppas paketet över och distribueras inte.
 
 Mekanismen för att ange den här egenskapen beror på hur bygget skapar innehållspaketet. Med `filevault-maven-plugin` konfigurerar du plugin-programmet enligt följande.
 
@@ -332,7 +332,7 @@ Om du vill kan återanvändningsbeteendet inaktiveras för specifika rörledning
 1. Pipelinen körs (exekvering nr 1) och den aktuella implementeringen i HEAD är `becdddb`. Körningen är klar och de resulterande artefakterna sparas.
 1. The `CM_DISABLE_BUILD_REUSE` variabeln är inställd.
 1. Pipelinen körs igen utan att koden ändras. Även om lagrade artefakter är associerade med `becdddb`, används de inte på grund av `CM_DISABLE_BUILD_REUSE` variabel.
-1. Koden ändras och pipeline körs. HEAD har bekräftat `f6ac5e6`. Körningen är klar och de resulterande artefakterna sparas.
+1. Koden ändras och pipeline körs. Utfästelsen från HEAD är nu `f6ac5e6`. Körningen är klar och de resulterande artefakterna sparas.
 1. The `CM_DISABLE_BUILD_REUSE` variabeln tas bort.
 1. Pipelinen körs igen utan att koden ändras. Eftersom lagrade artefakter är associerade med `f6ac5e6`, återanvänds dessa artefakter.
 

@@ -2,9 +2,9 @@
 title: Sidmallar
 description: Sidmallar används när du skapar en sida som används som bas för den nya sidan
 exl-id: ea42fce9-9af2-4349-a4e4-547e6e8da05c
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '3287'
+source-wordcount: '3279'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Det här dokumentet:
 
 Skapa sidmallar görs i första hand med [mallkonsol och mallredigerare](/help/sites-cloud/authoring/features/templates.md) av en mallskapare. I det här avsnittet ges en översikt över processen och en beskrivning av vad som händer på teknisk nivå.
 
-När du skapar en ny redigerbar mall:
+När du skapar en redigerbar mall:
 
 1. Skapa en [mapp för mallarna](#template-folders). Detta är inte obligatoriskt, men vi rekommenderar bästa praxis.
 1. Välj en [malltyp](#template-type). Detta kopieras för att skapa [malldefinition](#template-definitions).
@@ -112,7 +112,7 @@ När du skapar en ny redigerbar mall:
 
 >[!TIP]
 >
->Ange aldrig någon information som behöver internationaliseras i en mall. För internalisering [lokaliseringsfunktioner för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html) rekommenderas.
+>Ange aldrig någon information som måste internationaliseras i en mall. För internalisering [lokaliseringsfunktioner för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html) rekommenderas.
 
 >[!NOTE]
 >
@@ -191,13 +191,13 @@ Om du vill skapa en mapp kan du göra det här:
 
 1. Förutom de vanliga redigeringsbehörigheterna och behörigheterna (till exempel `content-authors`) måste du nu tilldela grupper och definiera de åtkomstbehörigheter som krävs för att författarna ska kunna skapa mallar i den nya mappen.
 
-   The `template-authors` grupp är standardgruppen som måste tilldelas. Se avsnittet [Behörighetslistor och grupper](#acls-and-groups) för mer information.
+   The `template-authors` grupp är standardgrupp som måste tilldelas. Se avsnittet [Behörighetslistor och grupper](#acls-and-groups) för mer information.
 
    <!--See [Access Right Management](/help/sites-administering/user-group-ac-admin.md#access-right-management) for full details on managing and assigning access rights.-->
 
 ### Använda Konfigurationsläsaren {#using-the-configuration-browser}
 
-1. Gå till **Global navigering** -> **verktyg** > [**Konfigurationsläsaren**](/help/implementing/developing/introduction/configurations.md#using-configuration-browser).
+1. Gå till **Global navigering** > **verktyg** > [**Konfigurationsläsaren**](/help/implementing/developing/introduction/configurations.md#using-configuration-browser).
 
    De befintliga mapparna visas till vänster, inklusive `global` mapp.
 
@@ -289,9 +289,9 @@ Den här standardinställningen `template-authors` gruppen täcker endast projek
 
 ## Malltyp {#template-type}
 
-När du skapar en ny mall måste du ange en malltyp:
+När du skapar en mall måste du ange en malltyp:
 
-* Malltyper tillhandahåller effektivt mallar för en mall. När du skapar en ny mall används strukturen och det ursprungliga innehållet för den valda malltypen för att skapa till den nya mallen.
+* Malltyper tillhandahåller effektivt mallar för en mall. När du skapar en mall används strukturen och det ursprungliga innehållet för den valda malltypen för att skapa till den nya mallen.
 
    * Malltypen kopieras för att skapa mallen.
    * När kopian är klar är den enda kopplingen mellan mallen och malltypen en statisk referens i informationssyfte.
@@ -338,7 +338,7 @@ The [device groups](/help/sites-developing/mobile.md#device-groups) used for an 
 * On the editable template type
 * On the editable template
 
-When creating a new editable template, the value is copied from the template type to the individual template. If the value is not set on the type, it can be set on the template. Once a template is created, there is no inheritance from the type to the template.
+When creating an editable template, the value is copied from the template type to the individual template. If the value is not set on the type, it can be set on the template. Once a template is created, there is no inheritance from the type to the template.
 
 >[!CAUTION]
 >
@@ -432,7 +432,7 @@ Den här noden innehåller egenskaper för mallen:
 
 Definierar strukturen för den resulterande sidan:
 
-* Sammanfogas med det ursprungliga innehållet ( `/initial`) när du skapar en ny sida.
+* Sammanfogas med det ursprungliga innehållet ( `/initial`) när du skapar en sida.
 * Ändringar som görs i strukturen återspeglas i alla sidor som skapas med mallen.
 * The `root` ( `structure/jcr:content/root`)-noden definierar listan med komponenter som är tillgängliga på den resulterande sidan.
    * Komponenter som definieras i mallstrukturen kan inte flyttas eller tas bort från resultatsidor.
@@ -446,7 +446,7 @@ Definierar strukturen för den resulterande sidan:
 Definierar det ursprungliga innehåll som en ny sida kommer att ha när den skapas:
 
 * Innehåller en `jcr:content` nod som kopieras till nya sidor.
-* Sammanfogas med strukturen ( `/structure`) när du skapar en ny sida.
+* Sammanfogas med strukturen ( `/structure`) när du skapar en sida.
 * Befintliga sidor uppdateras inte om det ursprungliga innehållet ändras efter att de har skapats.
 * The `root` noden innehåller en lista med komponenter som definierar vad som är tillgängligt på den resulterande sidan.
 * Om innehåll läggs till i en komponent i strukturläge och den komponenten sedan låses upp (eller vice versa), används det här innehållet som ursprungligt innehåll.
@@ -545,7 +545,7 @@ När en sida återges:
 
 ### Malltillgänglighet {#template-availability}
 
-När du skapar en ny sida i webbplatsens administratörsgränssnitt beror listan med tillgängliga mallar på platsen för den nya sidan och de placeringsbegränsningar som anges i varje mall.
+När du skapar en sida i webbplatsens administratörsgränssnitt beror listan med tillgängliga mallar på platsen för den nya sidan och de placeringsbegränsningar som anges i varje mall.
 
 Följande egenskaper avgör om en mall `T` får användas för en ny sida som ska placeras som underordnad till sidan `P`. Var och en av dessa egenskaper är en sträng med flera värden som innehåller noll eller flera reguljära uttryck som används för matchning med sökvägar:
 

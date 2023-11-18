@@ -2,7 +2,7 @@
 title: Adobe Experience Manager as a Cloud Service och riktlinjerna för webbtillgänglighet
 description: En introduktion till Adobe Experience Manager as a Cloud Service och riktlinjerna för webbtillgänglighet
 exl-id: ad7627cd-3c97-47b7-8a13-0aae39aa8169
-source-git-commit: 1473c1ffccc87cb3a0033750ee26d53baf62872f
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 97%
@@ -59,7 +59,7 @@ Med Adobe Experience Manager kan författare och/eller webbplatsägare skapa web
 <!--
 * [Accessibility in Assets](/help/assets/accessibility.md)
 * [Creating Accessible Adaptive Forms](/help/forms/using/creating-accessible-adaptive-forms.md)
-  Adobe Experience Manager (AEM) includes a number of features and capabilities that enhance the usability of adaptive forms for users with different abilities. The solution also assists form authors in creating accessible adaptive forms.
+  Adobe Experience Manager (AEM) includes several features and capabilities that enhance the usability of adaptive forms for users with different abilities. The solution also assists form authors in creating accessible adaptive forms.
 -->
 
 ## Tillgänglighet på Adobe {#accessibility-at-adobe}

@@ -2,10 +2,10 @@
 title: Arbeta med uppgifter
 description: Uppgifter representerar arbetsuppgifter som ska utföras på innehåll och används i projekt för att fastställa slutförandenivån för aktuella uppgifter
 exl-id: 66f95a1f-34d0-4e2e-aa8c-addc2029a1d9
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '576'
-ht-degree: 11%
+source-wordcount: '573'
+ht-degree: 10%
 
 ---
 
@@ -47,7 +47,7 @@ Klicka på ellipsen (..) i aktivitetspanelen för att visa en lista med uppgifte
 
 #### Uppgiftsinformation {#task-details}
 
-Mer information om en viss uppgift får du om du trycker/klickar på uppgiften i uppgiftslistan och **Öppna**.
+Mer information om en viss uppgift finns i uppgiftslistan. **Öppna**.
 
 ![Uppgiftsinformation](/help/sites-cloud/authoring/assets/projects-task-details.png)
 
@@ -63,12 +63,12 @@ Du kan lägga till nya uppgifter i projekt. Dessa uppgifter visas sedan på akti
 
 Så här lägger du till en uppgift:
 
-1. Tryck/klicka på ikonen + i rutan **Uppgifter** i projektet. Fönstret **Lägg till uppgift** öppnas.
+1. I projektet, i **Uppgifter** väljer du ikonen +. Fönstret **Lägg till uppgift** öppnas.
 1. Ange information om uppgiften. Titeln på uppgiften och vilken grupp den har tilldelats är obligatoriska. Ytterligare information som innehållssökväg, beskrivning, uppgiftsprioritet och förfallodatum är valfria. Dessutom kan du välja **Avancerat** för att ange namnet på uppgiften, som används för att namnge URL:en.
 
    ![Lägg till en uppgift](/help/sites-cloud/authoring/assets/projects-add-task.png)
 
-1. Tryck/klicka **Skapa**.
+1. Välj **Skapa**.
 
 ## Arbeta med uppgifter i Inkorgen {#working-with-tasks-in-the-inbox}
 
@@ -76,6 +76,6 @@ Ett annat sätt att komma åt uppgifter är via Inkorgen. I inkorgen kan du öpp
 
 ![Uppgifter i inkorgen](/help/sites-cloud/authoring/assets/projects-task-inbox.png)
 
-Om du vill slutföra en uppgift markerar du uppgiften och klickar på **Slutförd**. Lägg till information till uppgiften och klicka sedan på **Klar**. Se [Din inkorg](/help/sites-cloud/authoring/getting-started/inbox.md) för mer information.
+Om du vill slutföra en uppgift markerar du uppgiften och klickar på **Complete**. Lägg till information till uppgiften och klicka sedan på **Klar**. Se [Din inkorg](/help/sites-cloud/authoring/getting-started/inbox.md) för mer information.
 
 ![Uppgiftsmeddelanden](/help/sites-cloud/authoring/assets/projects-task-notifications.png)

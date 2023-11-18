@@ -2,9 +2,9 @@
 title: Aktivera progressiva webbprogramfunktioner
 description: AEM Sites gör det möjligt för innehållsförfattaren att aktivera progressiva webbprogramfunktioner för alla webbplatser genom enkel konfiguration istället för kodning.
 exl-id: 1552a4ce-137a-4208-b7f6-2fc06db8dc39
-source-git-commit: c31f43986e44099a3a36cc6c9c2f1a7251499ffb
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '1998'
 ht-degree: 0%
 
 ---
@@ -102,8 +102,8 @@ RewriteCond %{REQUEST_URI} (.html|.jpe?g|.png|.svg|.webmanifest)$
 Med [förutsättningarna](#prerequisites) är det enkelt för en innehållsförfattare att aktivera PWA-funktioner för en webbplats. Här följer en grundläggande beskrivning av hur du gör detta. Enskilda alternativ beskrivs i avsnittet [Detaljerade alternativ.](#detailed-options)
 
 1. Logga in i AEM.
-1. Tryck eller klicka på huvudmenyn **Navigering** -> **Webbplatser**.
-1. Välj ditt webbplatsprojekt och tryck eller klicka [**Egenskaper**](/help/sites-cloud/authoring/fundamentals/page-properties.md) eller använda snabbtangenten `p`.
+1. Välj **Navigering** > **Webbplatser**.
+1. Välj ditt webbplatsprojekt och välj [**Egenskaper**](/help/sites-cloud/authoring/fundamentals/page-properties.md) eller använda snabbtangenten `p`.
 1. Välj **Progressiv webbapp** och konfigurera tillämpliga egenskaper. Du vill åtminstone:
    1. Välj alternativet **Aktivera PWA**.
    1. Definiera **Start-URL**.
@@ -123,7 +123,7 @@ Med [förutsättningarna](#prerequisites) är det enkelt för en innehållsförf
 
       ![Definiera offlinesökvägar för PWA](../assets/pwa-offline.png)
 
-1. Tryck eller klicka **Spara och stäng**.
+1. Välj **Spara och stäng**.
 
 Din plats har nu konfigurerats och du kan [installera det som en lokal app.](#using-pwa-enabled-site)
 

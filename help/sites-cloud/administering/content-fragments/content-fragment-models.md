@@ -4,9 +4,9 @@ description: Lär dig hur Content Fragment Models fungerar som grund för dina C
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: 8ab5b15f-cefc-45bf-a388-928e8cc8c603
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '3060'
+source-wordcount: '3058'
 ht-degree: 1%
 
 ---
@@ -129,7 +129,7 @@ Content Fragment Model definierar effektivt strukturen för de resulterande inne
 
 1. **Ta bort ett fält**
 
-   Markera det obligatoriska fältet och klicka/tryck sedan på papperskorgsikonen. Du ombeds bekräfta åtgärden.
+   Markera det obligatoriska fältet och välj sedan papperskorgsikonen. Du ombeds bekräfta åtgärden.
 
    ![Ta bort](assets/cf-cfmodels-remove-icon.png)
 
@@ -161,7 +161,7 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
 * **Datum och tid**
    * Lägg till ett datum och/eller en tid
 * **Uppräkning**
-   * Lägga till en uppsättning kryssrutefält, alternativknappar eller listrutor
+   * Lägga till en uppsättning kryssrutefält, alternativknappar eller nedrullningsbara listrutor
 * **Taggar**
    * Tillåter fragmentförfattare att komma åt och markera taggområden
 * **Innehållsreferens**
@@ -374,7 +374,7 @@ Du kan antingen **Aktivera** eller **Inaktivera** dina modeller för innehållsf
 
 När en modell har skapats måste den aktiveras så att den:
 
-* Kan markeras när du skapar ett nytt innehållsfragment.
+* Kan markeras när du skapar ett innehållsfragment.
 * Kan refereras inifrån en innehållsfragmentmodell.
 * Är tillgängligt för GraphQL, så schemat genereras.
 

@@ -2,9 +2,9 @@
 title: Skapa snabbt webbplatser och anpassa gränssnittet
 description: Läs om hur verktyget för att skapa snabbwebbplatser använder webbplatsmallar, teman och produktionsflödet för att snabbt kunna driftsätta nya webbplatser och skapa en fristående utveckling.
 exl-id: 9ec5126b-bee4-445a-a4bb-0c27c1a93d3f
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
@@ -19,8 +19,8 @@ Verktyget Skapa snabbt webbplatser är ett lättanvänt verktyg som gör att adm
 
 För att göra detta använder verktyget Skapa snabbwebbplats flera kraftfulla AEM as a Cloud Service funktioner:
 
-1. **AEM webbplatsmallar** används för att definiera baswebbplatsinnehåll samt struktur och webbplatsformat och väljs av en administratör när en ny plats skapas.
-1. An **AEM** ingår i mallen och innehåller CSS-, JavaScript- och statiska resurser som definierar platsens format.
+1. **AEM webbplatsmallar** används för att definiera baswebbplatsinnehåll samt struktur och webbplatsformat och väljs av en administratör när en plats skapas.
+1. An **AEM webbplatstema** ingår i mallen och innehåller CSS-, JavaScript- och statiska resurser som definierar platsens format.
 1. The **Front-End Pipeline** kan användas för att distribuera anpassningar till webbplatstemat oberoende av serverutvecklingsarbetet.
 
 ## Skapa snabbt webbplatser {#quick-site-creation-journey}
@@ -33,4 +33,4 @@ Eftersom många AEM funktioner används i verktyget Skapa snabbwebbplats kan des
 
 * [Webbplatsmallar](/help/sites-cloud/administering/site-creation/site-templates.md) - Lär dig hur AEM webbplatsmallar kan användas för att fördefiniera webbplatsstrukturen och det ursprungliga innehållet så att du snabbt kan skapa nya webbplatser.
 * [Webbplatsteman](/help/sites-cloud/administering/site-creation/site-themes.md) - Lär dig hur AEM teman kan användas för att anpassa webbplatsens stil och design.
-* [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) - Med frontendriet får utvecklarna mer oberoende och utvecklingsprocessen kan gå mycket snabbare. I det här dokumentet beskrivs några överväganden som du bör tänka på för att få ut mesta möjliga av processen.
+* [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) - Med frontendriet får utvecklarna större oberoende och utvecklingsprocessen kan gå mycket snabbare. I det här dokumentet beskrivs några överväganden som du bör tänka på för att få ut mesta möjliga av processen.

@@ -2,7 +2,7 @@
 title: Hur integrerar man DocuSign med ett adaptivt formulär?
 description: Lär dig hur du använder DocuSign med ett adaptivt formulär för att samla in e-signaturer.
 exl-id: fb2e75d6-e454-4999-a079-f663af79051f
-source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '1438'
 ht-degree: 0%

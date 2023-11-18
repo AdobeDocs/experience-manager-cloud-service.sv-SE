@@ -1,13 +1,13 @@
 ---
 title: Anpassa vyer av Sidegenskaper
 description: Lär dig hur du visar och redigerar sidegenskaper av författare.
-source-git-commit: f159f0ef86c2b82da4e7308a0892b4947b6e43fb
+exl-id: 363b3c2d-f965-485f-bdae-2ea5b4cecb83
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '361'
 ht-degree: 0%
 
 ---
-
 
 # Anpassa vyer av Sidegenskaper{#customizing-views-of-page-properties}
 
@@ -70,10 +70,10 @@ Som standard är [**Skapa sida** guide](/help/sites-cloud/authoring/fundamentals
 
 >[!NOTE]
 >
->När du konfigurerar sidegenskaper för användning med live-kopior, se dokumentet [Utöka Multi Site Manager](/help/implementing/developing/extending/msm.md#configuring-msm-locks-on-page-properties) för mer information.
+>Information om hur du konfigurerar sidegenskaper för användning med live-kopior finns i [Utöka Multi Site Manager](/help/implementing/developing/extending/msm.md#configuring-msm-locks-on-page-properties) för mer information.
 
 ## Exempelkonfiguration av sidegenskaper {#sample-configuration-of-page-properties}
 
 I det här exemplet visas tekniken för dialogrutor i [Samla resurser](/help/implementing/developing/introduction/sling-resource-merger.md) inklusive användning av [`sling:orderBefore`](/help/implementing/developing/introduction/sling-resource-merger.md#properties). Det visar också hur man använder båda `cq:showOnCreate` och `cq:hideOnEdit`.
 
-Koden för den här sidan finns på [GitHub.](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-page-dialog)
+Koden för den här sidan finns på [GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-page-dialog).

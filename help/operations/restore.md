@@ -2,9 +2,9 @@
 title: Innehållsåterställning i AEM as a Cloud Service
 description: Lär dig hur du återställer AEM as a Cloud Service innehåll från en säkerhetskopia med hjälp av Cloud Manager.
 exl-id: 921d0c5d-5c29-4614-ad4b-187b96518d1f
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1158'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Lär dig hur du återställer AEM as a Cloud Service innehåll från en säkerhe
 >* Funktionen är bara tillgänglig i utvecklingsmiljöer.
 >* Innehållsåterställningar är begränsade till två per månad och program.
 >
->Information om det befintliga säkerhetskopierings- och återställningssystemet för AEM as a Cloud Service finns i dokumentet [Säkerhetskopiera och återställ i AEM as a Cloud Service](/help/operations/backup.md)
+>Mer information om det befintliga säkerhetskopierings- och återställningssystemet för AEM as a Cloud Service finns i [Säkerhetskopiera och återställ i AEM as a Cloud Service](/help/operations/backup.md).
 
 ## Översikt {#overview}
 
@@ -42,7 +42,7 @@ I båda fallen ändras inte versionen av den anpassade koden och AEM.
 
 ## Återställer innehåll {#restoring-content}
 
-Bestäm först tidsramen för det innehåll som du vill återställa. Utför sedan dessa steg för att återställa miljöns innehåll från en säkerhetskopia.
+Bestäm först tidsramen för innehållet som du vill återställa. Utför sedan dessa steg för att återställa miljöns innehåll från en säkerhetskopia.
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ Bestäm först tidsramen för det innehåll som du vill återställa. Utför sed
 
    * Du kan även navigera direkt till **Återställ innehåll** -fliken på sidan med miljöinformation i en viss miljö.
 
-1. På **Återställ innehåll** på sidan med miljöinformation, först väljer du tidsramen för återställningen under **Tid att återställa** nedrullningsbar meny.
+1. På **Återställ innehåll** på sidan med miljöinformation, först väljer du tidsramen för återställningen under **Tid att återställa** listruta.
 
    1. Om du väljer **De senaste 24 timmarna** granne **Tid** I kan du ange exakt tid inom de senaste 24 timmarna som ska återställas.
 
@@ -76,7 +76,7 @@ Bestäm först tidsramen för det innehåll som du vill återställa. Utför sed
 
    ![Säkerhetskopieringsinformation](assets/backup-info.png)
 
-   * Observera att tidsstämpeln som visas för återställningsalternativen baseras på användarens tidszon.
+   * Tidsstämpeln som visas för återställningsalternativen baseras på användarens tidszon.
 
 1. Klicka på **Återställ** ikonen till höger i raden som representerar den säkerhetskopia som du vill återställa för att starta återställningsprocessen.
 
@@ -103,7 +103,7 @@ Det finns flera scenarier.
    * I det här fallet visas inget implementerings-ID.
    * Vi rekommenderar att du klonar båda databaserna och använder ett diff-verktyg för att jämföra grenarna.
 
-Tänk dessutom på att en återställning kan göra att produktions- och staging-miljöerna inte synkroniseras. Du ansvarar för konsekvenserna av att återställa innehåll.
+Tänk också på att en återställning kan göra att produktions- och staging-miljöerna inte synkroniseras. Du ansvarar för konsekvenserna av att återställa innehåll.
 
 ## Återställ aktivitet {#restore-activity}
 

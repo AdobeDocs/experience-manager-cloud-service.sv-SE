@@ -2,9 +2,9 @@
 title: Din inkorg
 description: Lär dig hur du använder meddelanden som kommer in i din Inkorg för att hantera dina uppgifter.
 exl-id: 37d0cf43-192f-4a50-b174-42d7dced3b63
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '910'
 ht-degree: 14%
 
 ---
@@ -21,7 +21,7 @@ Du kan få meddelanden från olika AEM, inklusive arbetsflöden och projekt. Du 
       * Det här är produkten av arbetsflödet **Deltagare** steg.
    * Misslyckade objekt, så att administratörer kan försöka igen
 
-Du får dessa meddelanden i din egen Inkorg där du kan visa dem och vidta åtgärder.
+Du får dessa meddelanden i din egen Inkorg där du kan visa och agera på dem.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Från någon av konsolerna visas det aktuella antalet objekt i din inkorg i sidh
 
 Så här öppnar du AEM inkorg:
 
-1. Klicka/tryck på indikatorn i verktygsfältet.
+1. Markera indikatorn i verktygsfältet.
 
 1. Välj **Visa alla**. The **AEM** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
 1. Standardvyn är [Listvy](#inbox-list-view), men du kan även växla till [Kalendervy](#inbox-calendar-view). Detta görs med vyväljaren (verktygsfält, överst till höger).

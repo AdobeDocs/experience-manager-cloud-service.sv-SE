@@ -4,9 +4,9 @@ description: Lär dig hur översättningsregler identifierar innehåll som behö
 feature: Language Copy
 role: Admin
 exl-id: 24cc6aa6-5b3c-462b-a10a-8b25277229dc
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1288'
 ht-degree: 0%
 
 ---
@@ -167,7 +167,7 @@ I översättningsregelgränssnittet kan du:
 
    ![Lägg till översättningskontext](../assets/add-translation-context.png)
 
-1. Använd sökvägsläsaren för att välja önskad kontext och tryck eller klicka på **Bekräfta** knappen som ska sparas.
+1. Använd sökvägsläsaren för att välja önskad kontext och markera **Bekräfta** knappen som ska sparas.
 
    ![Välj kontext](../assets/select-context.png)
 

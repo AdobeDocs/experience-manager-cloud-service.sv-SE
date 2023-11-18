@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du tilldelar teammedlem
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: 555688e5-f937-462c-9fcc-b90685f1882b
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1527'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ När du har läst det här dokumentet bör du:
 
 ## Förutsättningar {#prerequisites}
 
-Om du vill tilldela teammedlemmar till produktprofiler måste du ha information om teammedlemmarna, som behöver få tillgång AEM as a Cloud Service, inklusive:
+Om du vill tilldela teammedlemmar till produktprofiler måste du ha information om teammedlemmarna, som måste ha tillgång AEM as a Cloud Service, inklusive:
 
 * Namn
 * E-postadresser

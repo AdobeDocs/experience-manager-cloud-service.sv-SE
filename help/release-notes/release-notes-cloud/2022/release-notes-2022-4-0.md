@@ -2,7 +2,7 @@
 title: Versionsinformation för 2022.4.0-versionen av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.4.0-versionen av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 6c86838a-cabf-4770-b1ae-618af70193a2
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 0%
@@ -15,7 +15,7 @@ I följande avsnitt beskrivs versionsinformationen för 2022.4.0-versionen av [!
 
 >[!NOTE]
 >
->Härifrån kan du navigera till versionsinformation för tidigare versioner; till exempel för 2020, 2021 och så vidare.
+>Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2020, 2021 och så vidare.
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ I följande avsnitt beskrivs versionsinformationen för 2022.4.0-versionen av [!
 
 ## Releasedatum {#release-date}
 
-Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2022.4.0) är 5 maj 2022.
+Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (202.4.0) är 5 maj 2022.
 Nästa version (2022.5.0) är planerad till 9 juni 2022.
 
 ## Släpp video {#release-video}
@@ -49,11 +49,11 @@ Ta en titt på [Versionsöversikt april 2022](https://video.tv.adobe.com/v/34261
 
 * **Kommunikation - Stöd för API:er för dokumenthantering i Forms as a Cloud Service SDK**: [API:er för dokumenthantering](/help/forms/aem-forms-cloud-service-communications.md) kan du kombinera, ordna om och validera PDF-dokument. Nu kan du använda Communications - Document Generation APIs i en lokal utvecklingsmiljö med hjälp av AEM Forms as a Cloud Service SDK.
 
-* **Använd anpassad XCI för att generera ett postdokument**: Nu kan du [använda en anpassad XCI-fil för att ange olika egenskaper för ett postdokument](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#use-a-custom-xci-file). Den åsidosätter det överordnad XCI med de anpassade ändringarna. Det ger bättre kontroll över genereringen av arkivhandlingar, ökar möjligheterna till personalisering och anpassning.
+* **Använd anpassad XCI för att generera ett postdokument**: Du kan nu [använda en anpassad XCI-fil för att ange olika egenskaper för ett postdokument](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#use-a-custom-xci-file). Det åsidosätter huvud-XCI med de anpassade ändringarna. Det ger bättre kontroll över genereringen av arkivhandlingar, ökar möjligheterna till personalisering och anpassning.
 
 * **Använd osynlig CAPTCHA i ett adaptivt formulär**: Du kan använda [osynlig CAPTCHA för att visa CAPTCHA-utmaning endast vid misstänkt aktivitet](/help/forms/captcha-adaptive-forms.md). Om ingen misstänkt aktivitet hittas visas inte CAPTCHA-utmaningen. Det gör det lättare att bedöma om formulär ska fyllas i av människor utan att det behövs kryssrutor, minska anpassningsarbetet och förbättra slutanvändarens upplevelse.
 
-* **Konfigurationer av formulärdatamodell**: Nu kan du [återanvänd formulärdatamodellskonfigurationer i olika miljöer](/help/forms/create-form-data-models.md#runmode-specific-context-aware-config), förenklar dataintegreringar och minskar IT-kostnaderna.
+* **Konfigurationer av formulärdatamodell**: Du kan nu [återanvänd formulärdatamodellskonfigurationer i olika miljöer](/help/forms/create-form-data-models.md#runmode-specific-context-aware-config), förenklar dataintegreringar och minskar IT-kostnaderna.
 
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}

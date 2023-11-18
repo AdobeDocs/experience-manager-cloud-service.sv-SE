@@ -2,10 +2,10 @@
 title: Använda Best Practices Analyzer
 description: Lär dig hur du använder Best Practices Analyzer för att förstå uppgraderingsberedskapen.
 exl-id: e8498e17-f55a-4600-87d7-60584d947897
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2478'
-ht-degree: 38%
+source-wordcount: '2476'
+ht-degree: 36%
 
 ---
 
@@ -161,7 +161,7 @@ Klicka på **CSV** CSV-formatet i Best Practices Analyzer-rapporten byggs från 
 
 Om cacheminnet har upphört att gälla genereras rapporten om innan CSV-filen skapas och hämtas.
 
-Rapporten i CSV-format innehåller information som genereras med utdata från Pattern Detector och som sorteras och organiseras efter kategorityp, undertyp och viktighetsgrad. Formatet är lämpligt för visning och redigering i program som Microsoft Excel. Avsikten är att ge information om alla resultat i ett upprepningsbart format som kan användas för att jämföra rapporter från olika tidpunkter för att mäta framsteg.
+Rapporten i CSV-format innehåller information som genereras med utdata från Pattern Detector och som sorteras och organiseras efter kategorityp, undertyp och viktighetsgrad. Formatet är lämpligt för visning och redigering i program som Microsoft Excel. Avsikten är att ge all sökinformation i ett upprepningsbart format, som kan vara användbar vid jämförelse av rapporter över tid för att mäta förloppet.
 
 Kolumnerna i rapporten i CSV-format är:
 

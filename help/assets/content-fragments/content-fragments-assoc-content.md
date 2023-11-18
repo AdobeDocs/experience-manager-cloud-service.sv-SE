@@ -2,9 +2,9 @@
 title: Associerat innehåll (resurser - innehållsfragment)
 description: Förstå hur AEM tillhörande innehållsfunktion tillhandahåller anslutningen så att resurser kan användas tillsammans med fragmentet.
 exl-id: 8c8ad768-a210-4d34-bb47-2347599bcac9
-source-git-commit: 5c59189abf809293a319d6bce4ef7389c2451f92
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '230'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ Funktionen AEM associerat innehåll tillhandahåller anslutningen så att resurs
 >
 >Det finns olika metoder att lägga till [visuella resurser (till exempel bilder)](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
 
-För att kunna skapa associationen måste du först [lägga till mediefiler i en samling](/help/assets/manage-collections.md). När det är klart kan du:
+För att kunna skapa associationen måste du först [lägga till medieresurser i en samling](/help/assets/manage-collections.md). När det är klart kan du:
 
 1. Öppna fragmentet och välj **Associerat innehåll** på sidopanelen.
 
@@ -32,7 +32,7 @@ För att kunna skapa associationen måste du först [lägga till mediefiler i en
 
 1. Välj önskad samling.
 
-   Du kan också lägga till själva fragmentet i den valda samlingen; detta hjälper till att spåra.
+   Du kan också lägga till själva fragmentet i den valda samlingen. Detta hjälper till att spåra.
 
    ![Välj samling](assets/cfm-assoc-content-02.png)
 

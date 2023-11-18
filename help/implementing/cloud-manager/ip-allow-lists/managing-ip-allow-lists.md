@@ -2,7 +2,7 @@
 title: Hantera IP-Tillåtelselista
 description: Lär dig hur du visar, redigerar, tar bort och kontrollerar status för IP-tillåtelselista i Cloud Manager.
 exl-id: 6efabe53-3f45-47d4-ac1f-979cae0ab33e
-source-git-commit: d67c5c9baafb9b7478f1d1c2ad924f5a8250a1ee
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '784'
 ht-degree: 0%
@@ -79,7 +79,7 @@ En användare i **Företagsägare** eller **Distributionshanteraren** kan följa
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 1. Navigera till **Miljö** från **Ökning** sida.
 1. Navigera till **IP-Tillåtelselista** sidan från **Miljö** skärm.
-1. Identifiera den rad i IP-tillåtelselista som du vill ta bort.
+1. Identifiera raden i IP-tillåtelselista som du vill ta bort.
 1. Välj ellipsmenyn längst till höger på raden.
 1. Klicka **Ta bort**.
 1. Bekräfta ditt bidrag.

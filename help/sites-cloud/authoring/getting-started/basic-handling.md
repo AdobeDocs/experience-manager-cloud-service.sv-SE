@@ -2,9 +2,9 @@
 title: Grundläggande hantering
 description: Bekanta dig med navigering i AEM och dess grundläggande användning
 exl-id: ae87a63a-c6d3-4220-ab3d-07a20b21b93b
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2970'
+source-wordcount: '2943'
 ht-degree: 3%
 
 ---
@@ -31,21 +31,21 @@ Omedelbart efter att du loggat in kommer du till [Navigeringspanelen](#navigatio
 
 ![Navigeringspanelen](/help/sites-cloud/authoring/assets/navigation.png)
 
-För att få en bättre förståelse för AEM basanvändning är det här dokumentet baserat på **Webbplatser** konsol. Klicka eller tryck på **Webbplatser** för att komma igång.
+För att få en bättre förståelse för AEM basanvändning är det här dokumentet baserat på **Webbplatser** konsol. Välj på **Webbplatser** för att komma igång.
 
 ## Produktnavigering {#product-navigation}
 
-När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudie. Klicka eller tryck en minut för att få en bra överblick över den grundläggande hanteringen av AEM.
+När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudie. Ta en minut att välja igenom och få en bra översikt över den grundläggande hanteringen av AEM.
 
 ![Navigering, genomgång](/help/sites-cloud/authoring/assets/tutorial.png)
 
-Klicka eller tryck **Nästa** för att gå vidare till nästa sida i översikten. Klicka eller tryck **Stäng** eller klicka eller tryck utanför översiktsdialogrutan för att stänga.
+Välj **Nästa** för att gå vidare till nästa sida i översikten. Välj **Stäng** eller välj utanför den översiktsdialogruta som du vill stänga.
 
 Översikten startas om nästa gång du öppnar en konsol, såvida du inte antingen visar alla bilder eller markerar alternativet **Visa inte det här igen**.
 
 ## Global navigering {#global-navigation}
 
-Du kan navigera mellan konsolerna med den globala navigeringspanelen. Detta aktiveras som en listruta i helskärmsläge när du klickar på eller trycker på länken Adobe Experience Manager längst upp till vänster på skärmen.
+Du kan navigera mellan konsolerna med den globala navigeringspanelen. Detta aktiveras som en listruta i helskärmsläge när du väljer länken Adobe Experience Manager längst upp till vänster på skärmen.
 
 Du kan stänga den globala navigeringspanelen genom att klicka eller trycka på **Stäng** för att återgå till din tidigare plats.
 
@@ -79,7 +79,7 @@ Följande konsoler finns i Navigation:
 
 ## Panelen Verktyg {#tools-panel}
 
-På verktygspanelen finns en sidopanel som innehåller en rad kategorier som grupperar liknande verktygskonsoler. Verktygskonsolerna ger tillgång till ett antal specialiserade verktyg och konsoler som hjälper dig att administrera dina webbplatser, digitala resurser och andra aspekter av ditt innehållslager. <!--The [Tools consoles](/help/sites-administering/tools-consoles.md) provide access to a number of specialized tools and consoles that help you administer your websites, digital assets, and other aspects of your content repository.-->
+På verktygspanelen finns en sidopanel som innehåller en rad kategorier som grupperar liknande verktygskonsoler. Verktygskonsolerna ger tillgång till flera specialiserade verktyg och konsoler som hjälper dig att administrera dina webbplatser, digitala resurser och andra aspekter av ditt innehållslager. <!--The [Tools consoles](/help/sites-administering/tools-consoles.md) provide access to several specialized tools and consoles that help you administer your websites, digital assets, and other aspects of your content repository.-->
 
 ![Verktygspanelen](/help/sites-cloud/authoring/assets/tools-panel.png)
 
@@ -304,7 +304,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 
    * Resursnamnet och förvrängningen markeras när användaren knackar på eller klickar på den.
    * De underordnade resurserna för den resurs som användaren klickar på/trycker på visas i kolumnen till höger om den resurs som användaren klickar på/trycker på.
-   * Om du trycker eller klickar på ett resursnamn som inte har några underordnade objekt visas informationen i den sista kolumnen.
+   * Om du väljer ett resursnamn som inte har några underordnade objekt visas informationen i den sista kolumnen.
 
 * Om du trycker eller klickar på miniatyrbilden markeras resursen.
 
@@ -331,7 +331,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
    * Sidans titel
    * Viktiga datum (t.ex. senast redigerade och publicerade)
    * Om sidan är låst, dold eller ingår i en livecopy
-   * Om det är lämpligt, när du måste vidta åtgärder som en del av ett arbetsflöde
+   * Om det är lämpligt, när du måste agera som en del av ett arbetsflöde
       * Markörer som anger obligatoriska åtgärder kan vara relaterade till poster i [Inkorg](/help/sites-cloud/authoring/getting-started/inbox.md).
 
 * [Snabbåtgärder](#quick-actions) är även tillgängliga i den här vyn, t.ex. markering och vanliga åtgärder som redigering.
@@ -352,12 +352,12 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 
    * När alla objekt i listan är markerade visas den här kryssrutan markerad.
 
-      * Avmarkera alla genom att klicka eller trycka på kryssrutan.
+      * Markera kryssrutan om du vill avmarkera alla.
 
    * När bara vissa objekt är markerade visas det med ett minustecken.
 
-      * Markera alla genom att klicka eller trycka på kryssrutan.
-      * Klicka eller tryck på kryssrutan igen för att avmarkera alla.
+      * Markera kryssrutan för att markera alla.
+      * Markera kryssrutan igen om du vill avmarkera alla.
 
 * Markera de kolumner som ska visas med **Visa inställningar** som finns under knappen Vyer. Följande kolumner är tillgängliga för visning:
 
@@ -383,7 +383,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 
   ![Kolumnordning](/help/sites-cloud/authoring/assets/column-order.png)
 
-  Klicka eller tryck på det lodräta markeringsfältet och dra objektet till en ny plats i listan.
+  Markera det lodräta markeringsfältet och dra objektet till en ny plats i listan.
 
   ![Orderlista](/help/sites-cloud/authoring/assets/order-list.png)
 
@@ -471,7 +471,7 @@ Se dokumentet [Använda webbplatsservern för att hantera ditt webbplatstema](/h
 
 >[!TIP]
 >
->En fullständig beskrivning av processen att skapa en ny webbplats från en mall och anpassa temat finns i [Skapa snabbt webbplatser](/help/journey-sites/quick-site/overview.md).
+>En fullständig beskrivning av processen att skapa en webbplats från en mall och anpassa dess tema finns i [Skapa snabbt webbplatser](/help/journey-sites/quick-site/overview.md).
 
 ### Filter {#filter}
 

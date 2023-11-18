@@ -4,9 +4,9 @@ description: Lägg smidigt in Adaptiv Forms på en AEM Sites-sida eller en webbs
 feature: Adaptive Forms
 Keywords: Forms AEM Sites, Embed Form to a Sites page, Adaptive Forms AEM Sites, Embed Adaptive Forms to AEM Page, Embed Forms in an AEM Sites page
 exl-id: 359b05e8-d8c1-4a77-9e70-6f6b6e668560
-source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2954'
+source-wordcount: '2953'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ AEM Forms tillhandahåller **[!UICONTROL Adaptive Form Container]** och **[!UICO
 Using **[!UICONTROL Adaptive Forms – Embed(v2)]** in AEM Page Editor lets you create seamless data capture experiences within a Sites page using the power of Adaptive Forms components including dynamic behavior, validations, data integration, generate document of record and business process automation. It also lets you use various features of AEM Sites pages like, versioning, targeting, translation, and multi-site manager, enhancing the overall form creation and management experience. Let's explore some of these features:
 
 * **Versioning:** AEM Sites pages offer [robust versioning capabilities](/help/sites-cloud/authoring/features/page-versions.md), allowing you to track and manage different versions of your forms. This enables you to make changes and enhancements to forms while maintaining the ability to roll back to previous versions if needed. Versioning ensures a controlled and organized approach to form development and evolution.
-* **Targeting (Integration with Adobe Target):** With AEM Sites pages targeting capabilities, you can also [personalize the form experience for different audiences](/help/sites-cloud/integrating/integration-adobe-target-ims.md). By leveraging user segments and targeting criteria, you can tailor the form's content, design, or behavior to specific groups of users. This enables you to provide a personalized and relevant form experience, increasing engagement and conversion rates.
+* **Targeting (Integration with Adobe Target):** With AEM Sites pages targeting capabilities, you can also [personalize the form experience for different audiences](/help/sites-cloud/integrating/integration-adobe-target-ims.md). By using user segments and targeting criteria, you can tailor the form's content, design, or behavior to specific groups of users. This enables you to provide a personalized and relevant form experience, increasing engagement and conversion rates.
 * **Translation:** AEM Sites [seamless integration with translation services](/help/sites-cloud/administering/translation/overview.md), allowing you to translate forms into multiple languages easily. This feature simplifies the localization process, ensuring that your forms are accessible to a global audience. You can manage translations efficiently within AEM translation projects, reducing time and effort required for multilingual form support. See considerations section for more information on translation.  
 * **Multi-site Management and Live Copy:** AEM Sites provide robust [Multi-site Management and Live Copy capabilities](/help/sites-cloud/administering/msm/overview.md), enabling you to create and manage multiple websites within a single environment. This feature now lets you reuse forms across different sites, ensuring consistency and reducing duplication efforts. With centralized control and management, you can efficiently maintain and update forms across multiple websites.
 * **Themes:** AEM Sites pages provide a framework for designing and maintaining consistent visual styles across multiple web pages. These define colors, fonts, style sheets, and other visual elements that contribute to the overall look and feel of the website. [You can use the themes designed for an AEM Sites page for an Adaptive Form, saving time and effort](/help/sites-cloud/administering/site-creation/site-themes.md#using-site-themes-using-themes). 
@@ -271,7 +271,7 @@ Du kan anpassa de avancerade inställningarna för **[!UICONTROL Adaptive Form -
      >
      > Om du vill bädda in flera formulär på en AEM Sites-sida väljer du **[!UICONTROL Form covers entire width of the frame]** kryssrutan.
 
-   * Om **[!UICONTROL Form covers entire width of the frame]** inte är markerad, ett anpassat formulär täcker inte hela behållarens bredd. I stället används en iframe för att återge formuläret, som inte kan utökas utanför en viss bredd. Detta är användbart när ett adaptivt formulär har definierade gränser och behöver finnas tillsammans med andra AEM komponenter bredvid det i behållaren. Om det här alternativet inte är markerat tillåter det endast att en Adaptiv Forms-sida på AEM Sites-sidan bäddas in utan iframe.
+   * Om **[!UICONTROL Form covers entire width of the frame]** inte är markerad, ett anpassat formulär täcker inte hela behållarens bredd. I stället används en iframe för att återge formuläret, som inte kan utökas utanför en viss bredd. Detta är användbart när ett adaptivt formulär har definierade gränser och måste finnas tillsammans med andra AEM-komponenter bredvid det i behållaren. Om det här alternativet inte är markerat tillåter det endast att en Adaptiv Forms-sida på AEM Sites-sidan bäddas in utan iframe.
 
      >[!NOTE]
      >

@@ -1,10 +1,10 @@
 ---
 title: Bygga in märkord i AEM
-description: Arbeta programmatiskt med taggar eller utöka taggar i ett anpassat AEM
+description: Arbeta med taggar eller utöka taggar i ett anpassat AEM
 exl-id: a106dce1-5d51-406a-a563-4dea83987343
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '758'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Mer information om taggning:
 * Se [Använda taggar](/help/sites-cloud/authoring/features/tags.md) om du vill ha information om hur du taggar innehåll som innehållsförfattare.
 * Se Administrera taggar för administratörens perspektiv om hur du skapar och hanterar taggar, och i vilka innehållstaggar har tillämpats.
 
-## Översikt över taggnings-API:t {#overview-of-the-tagging-api}
+## Översikt över taggnings-API {#overview-of-the-tagging-api}
 
 Genomförandet av [taggningsramverk](tagging-framework.md) i AEM kan hantera taggar och tagginnehåll med JCR-API:t. `TagManager` ser till att taggar anges som värden på `cq:tags` strängmatrisegenskapen är inte duplicerad, den tar bort `TagID`pekar på taggar och uppdateringar som inte finns `TagID`s för flyttade eller sammanfogade taggar. `TagManager` använder en JCR-observationslyssnare som återställer felaktiga ändringar. Huvudklasserna finns i [com.day.cq.tagging](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/tagging/package-summary.html) paket:
 
@@ -34,7 +34,7 @@ Genomförandet av [taggningsramverk](tagging-framework.md) i AEM kan hantera tag
 
 ### Hämta en JCR-baserad TagManager {#getting-a-jcr-based-tagmanager}
 
-Så här hämtar du en `TagManager` du måste ha en JCR `Session` och ringa `getTagManager(Session)`:
+Så här hämtar du `TagManager` du måste ha en JCR `Session` och ringa `getTagManager(Session)`:
 
 ```java
 @Reference
@@ -51,7 +51,7 @@ TagManager tagManager = resourceResolver.adaptTo(TagManager.class);
 
 ### Hämta ett taggobjekt {#retrieving-a-tag-object}
 
-A `Tag` kan hämtas via `TagManager`genom att antingen matcha en befintlig tagg eller skapa en ny:
+A `Tag` kan hämtas via `TagManager`genom att antingen matcha en befintlig tagg eller skapa en:
 
 ```java
 Tag tag = tagManager.resolve("my/tag"); // for existing tags
@@ -65,7 +65,7 @@ För den JCR-baserade implementeringen, som mappar `Tags` på JCR `Nodes`kan du 
 Tag tag = resource.adaptTo(Tag.class);
 ```
 
-Även om en tagg bara kan konverteras *från* en resurs (inte en nod), en tagg kan konverteras *till* både en nod och en resurs:
+Även om en tagg bara kan konverteras *från* en resurs (inte en nod), en tagg kan konverteras *till* både nod och resurs:
 
 ```java
 Node node = tag.adaptTo(Node.class);
@@ -138,7 +138,7 @@ Sökningen efter taggar och tagglistan fungerar enligt följande:
 
 En tagg `title` kan definieras på olika språk. Sedan läggs en språkkänslig egenskap till i taggnoden. Den här egenskapen har formatet `jcr:title.<locale>`, till exempel `jcr:title.fr` för den franska översättningen. `<locale>` måste vara en ISO-språksträng med gemener och använda understreck (`_`) i stället för bindestreck/streck (`-`), till exempel: `de_ch`.
 
-När **Djur** -taggen läggs till i **Produkter** sida, värdet `stockphotography:animals` läggs till i egenskapen `cq:tags` av noden `/content/wknd/en/products/jcr:content`. Översättningen refereras från taggnoden.
+När **Djur** -taggen läggs till **Produkter** sida, värdet `stockphotography:animals` läggs till i egenskapen `cq:tags` av noden `/content/wknd/en/products/jcr:content`. Översättningen refereras från taggnoden.
 
 API:t på serversidan har lokaliserats `title`-relaterade metoder:
 
@@ -168,4 +168,4 @@ Finska är nu tillgängligt i taggdialogrutan för sidegenskaperna och i **Redig
 
 >[!NOTE]
 >
->Det nya språket måste vara ett av de AEM identifierade språken, det vill säga det måste vara tillgängligt som en nod nedan `/libs/wcm/core/resources/languages`.
+>Det nya språket måste vara ett av de AEM identifierade språken. Det måste alltså vara tillgängligt som en nod nedan `/libs/wcm/core/resources/languages`.

@@ -6,7 +6,7 @@ mini-toc-levels: 2
 feature: Asset Management,Connected Assets,Asset Distribution,User and Groups
 role: Admin,User,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '3756'
 ht-degree: 14%
@@ -33,7 +33,7 @@ Funktionen för anslutna resurser har stöd för ovanstående användningsfall g
 
 Vid redigering av sidor i [!UICONTROL Page Editor] som målmål kan författarna söka, bläddra bland och bädda in resurser från ett annat [!DNL Assets] driftsättning som fungerar som en källa till resurser. Administratörerna skapar en engångsintegrering av en distribution av [!DNL Experience Manager] med [!DNL Sites] med en annan driftsättning av [!DNL Experience Manager] med [!DNL Assets] funktioner. Du kan också använda Dynamic Media-bilder på webbplatsens webbsidor med hjälp av Anslutna resurser och Dynamic Media-funktioner, som smarta beskärnings- och bildförinställningar.
 
-För [!DNL Sites] författare är fjärrresurserna tillgängliga som skrivskyddade lokala resurser. Funktionen stöder smidig sökning och åtkomst till fjärrresurser i Site Editor. För andra användningsområden där det kan krävas att hela resursen är tillgänglig på Sites bör du överväga att migrera resurserna satsvis i stället för att utnyttja anslutna resurser.
+För [!DNL Sites] författare är fjärrresurserna tillgängliga som skrivskyddade lokala resurser. Funktionen stöder smidig sökning och åtkomst till fjärrresurser i Site Editor. För andra användningsområden där det kan krävas att hela resursen är tillgänglig på platser bör du överväga att migrera resurserna satsvis i stället för att använda anslutna resurser.
 
 ### Förutsättningar och distributioner som stöds {#prerequisites}
 

@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar TLF (Translation Integration Framework
 feature: Language Copy
 role: Admin
 exl-id: 6e74cdee-7965-4087-a733-e9d81c4aa7c2
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1499'
 ht-degree: 0%
 
 ---
@@ -69,13 +69,13 @@ När du har konfigurerat ett ramverk för översättningsintegrering kan du [ass
 
 En enda konfiguration av ramverket styr hur sidinnehåll och resurser översätts. Så här skapar du en översättningskonfiguration:
 
-1. I [global navigeringsmeny,](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) klicka eller trycka **Verktyg -> Cloud Service - och översättnings-Cloud Service**.
+1. I [global navigeringsmeny,](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) välj **Verktyg > Cloud Service och översättningsCloud Service**.
 1. Navigera till den plats där du vill skapa konfigurationen i innehållsstrukturen. Detta baseras ofta på en viss webbplats eller kan vara globalt.
-1. Ange följande information i fälten och klicka eller tryck sedan **Skapa**.:
+1. Ange följande information i fälten och välj sedan **Skapa**.:
    1. Välj **Konfigurationstyp** i listrutan.
    1. Ange en **Titel** för din konfiguration. The **Titel** identifierar konfigurationen i **Cloud Service** console och in page property drop-down lists.
    1. Om du vill kan du skriva **Namn** som ska användas för den databasnod som lagrar konfigurationen.
-1. I **Redigera konfiguration** fönster, konfigurera egenskaperna för **Webbplatser** och **Resurser** och sedan klicka eller trycka på **Spara och stäng**.
+1. I **Redigera konfiguration** fönster, konfigurera egenskaperna för **Webbplatser** och **Resurser** och sedan markera **Spara och stäng**.
 
 ### Egenskaper för platskonfiguration {#sites-configuration-properties}
 
@@ -118,7 +118,7 @@ Om du vill konfigurera översättning av källsidor till andra språk associerar
 * Den molnkonfiguration som ansluter AEM till översättningsleverantören.
 * Översättningsintegrationsramverket som konfigurerar informationen för översättningen.
 
-Observera att molnkonfigurationen för översättningsintegreringsramverket identifierar den molnkonfiguration som ska användas för att ansluta till tjänstleverantören. När du associerar en källsida med en ramverkets molnkonfiguration måste sidan associeras med tjänstleverantörens molnkonfiguration som används i ramverkets molnkonfiguration.
+Konfigurationen av översättningsintegreringsramverket i molnet identifierar den molnkonfiguration som ska användas för att ansluta till tjänstleverantören. När du associerar en källsida med en ramverkets molnkonfiguration måste sidan associeras med tjänstleverantörens molnkonfiguration som används i ramverkets molnkonfiguration.
 
 När du associerar en sida med en molnkonfiguration ärver de underordnade sidorna kopplingen. Om du till exempel associerar `/content/wknd/language-masters/en/magazine` sida med ett Translation Integration Framework, `magazine` sidor och underordnade sidor under den översätts enligt ramverket.
 
@@ -128,16 +128,16 @@ Vid behov kan du åsidosätta associationen på en underordnad sida. Innehållet
 
 Koppla en sida till översättningsleverantören som du använder för att översätta sidan och underordnade sidor.
 
-1. I webbplatskonsolen väljer du den sida som ska konfigureras och klickar på eller trycker **Visa egenskaper**.
-1. Klicka eller tryck på **Cloud Service** -fliken.
-1. I **Lägg till konfiguration** väljer du konfigurationen.
-1. Klicka eller tryck **Spara och stäng**.
+1. I webbplatskonsolen väljer du den sida som ska konfigureras och markeras **Visa egenskaper**.
+1. Välj **Cloud Service** -fliken.
+1. I **Lägg till konfiguration** väljer du konfiguration.
+1. Välj **Spara och stäng**.
 
 ### Associera sidor med ett översättningsintegreringsramverk {#associating-pages-with-a-translation-integration-framework}
 
 Koppla en sida till översättningsintegreringsramverket som definierar hur du vill översätta sidan och underordnade sidor.
 
-1. I webbplatskonsolen väljer du den sida som ska konfigureras och klickar på eller trycker **Visa egenskaper**.
-1. Klicka eller tryck på **Cloud Service** -fliken.
-1. I **Lägg till konfiguration** väljer du konfigurationen.
-1. Klicka eller tryck **Spara och stäng**.
+1. I webbplatskonsolen väljer du den sida som ska konfigureras och markeras **Visa egenskaper**.
+1. Välj **Cloud Service** -fliken.
+1. I **Lägg till konfiguration** väljer du konfiguration.
+1. Välj **Spara och stäng**.

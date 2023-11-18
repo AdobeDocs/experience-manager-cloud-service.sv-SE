@@ -2,9 +2,9 @@
 title: Asynkrona jobb
 description: Adobe Experience Manager optimerar prestanda genom att asynkront slutföra vissa resurskrävande uppgifter som bakgrundsåtgärder.
 exl-id: 9c5c4604-1290-4dea-a14d-08f3ab3ef829
-source-git-commit: b658f303d25cca958c08a95ead12fa3b987bcb3b
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '808'
 ht-degree: 71%
 
 ---
@@ -21,7 +21,7 @@ Dessa åtgärder omfattar:
 * Att hämta resurser som ligger över det angivna gränsvärdet från en fjärrdistribution av Experience Manager.
 * Att öppna Live-kopior.
 
-Du kan visa status för asynkrona jobb från **[!UICONTROL Background Operations]** instrumentpanel på **Global navigering** -> **verktyg** -> **Allmänt** -> **Jobb**.
+Du kan visa status för asynkrona jobb från **[!UICONTROL Background Operations]** instrumentpanel på **Global navigering** > **verktyg** > **Allmänt** > **Jobb**.
 
 >[!NOTE]
 >
@@ -35,7 +35,7 @@ När AEM bearbetar en åtgärd asynkront får du ett meddelande i din [inkorg](/
 
 Gå till sidan **[!UICONTROL Background Operations]** för att se detaljerad status gällande asynkrona åtgärder.
 
-1. I gränssnittet Experience Manager väljer du **Global navigering** -> **verktyg** -> **Allmänt** -> **Jobb**.
+1. I gränssnittet Experience Manager väljer du **Global navigering** > **verktyg** > **Allmänt** > **Jobb**.
 
 1. Granska informationen om åtgärderna på sidan **[!UICONTROL Background Operations]**.
 
@@ -71,7 +71,7 @@ Gå till sidan **[!UICONTROL Background Operations]** för att se detaljerad sta
 
 ## Konfigurera asynkrona alternativ för jobbbearbetning {#configure}
 
-Det finns ett antal alternativ runt asynkrona jobb som kan konfigureras. I följande exempel visas hur detta kan göras med konfigurationshanteraren på ett lokalt utvecklingssystem.
+Det finns flera alternativ runt asynkrona jobb som kan konfigureras. I följande exempel visas hur detta kan göras med konfigurationshanteraren på ett lokalt utvecklingssystem.
 
 >[!NOTE]
 >

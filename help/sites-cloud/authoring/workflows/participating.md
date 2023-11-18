@@ -2,9 +2,9 @@
 title: Delta i arbetsflöden
 description: Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en aktivitet på en sida eller en resurs.
 exl-id: 62192da9-0b5b-4997-9c2b-d1aee04b01f9
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1507'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas o
    * Alla åtgärder som är tillgängliga för den aktuella användaren för det aktuella steget i arbetsflödet, till exempel Fullständigt, Delegera, Visa information.
    * Antalet arbetsflöden som sidan är underställd. Du kan:
       * Använd vänster-/högerpilarna för att navigera i statusinformationen för de olika arbetsflödena.
-      * klicka/tryck på det faktiska numret för att öppna en listruta med alla tillämpliga arbetsflöden och välj sedan det arbetsflöde som du vill visa i statusfältet.
+      * välj det faktiska numret för att öppna en listruta med alla tillämpliga arbetsflöden och välj sedan det arbetsflöde som du vill visa i statusfältet.
 
   ![Sida med flera arbetsflöden](/help/sites-cloud/authoring/assets/workflows-multiple.png)
 
@@ -48,7 +48,7 @@ När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas o
   >
   >Åtgärder visas när den aktuella användaren är direkt involverad i det aktuella steget i arbetsflödet.
 
-* När **Tidslinje** är öppet för resursen visas arbetsflödessteget. När du klickar/trycker på varningsbanderollen visas även de tillgängliga åtgärderna:
+* När **Tidslinje** är öppet för resursen visas arbetsflödessteget. När du väljer en varningsbanderoll visas även de tillgängliga åtgärderna:
 
   ![Arbetsflöde på tidslinjen](/help/sites-cloud/authoring/assets/workflows-timeline.png)
 
@@ -73,7 +73,7 @@ Du kan slutföra ett deltagarsteg från:
 Gör så här för att slutföra arbetsuppgiften:
 
 1. Öppna **[AEM](/help/sites-cloud/authoring/getting-started/inbox.md)**.
-1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
+1. Markera det arbetsflödesobjekt som du vill arbeta med (markera miniatyrbilden).
 1. Välj **Complete** i verktygsfältet.
 1. The **Slutför arbetsuppgift** öppnas. Välj **Nästa steg** i listrutan och lägg till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
@@ -95,7 +95,7 @@ Du kan också använda tidslinjen för att slutföra och gå vidare ett steg:
 
    ![Slutför ett steg](/help/sites-cloud/authoring/assets/workflows-timeline-completing.png)
 
-1. Klicka/tryck på varningsbanderollen för att visa tillgängliga åtgärder. Välj **Förskott**:
+1. Markera varningsbanderollen om du vill visa tillgängliga åtgärder. Välj **Förskott**:
 
    ![Avancerar steget](/help/sites-cloud/authoring/assets/workflows-timeline-advance.png)
 
@@ -107,7 +107,7 @@ Du kan också använda tidslinjen för att slutföra och gå vidare ett steg:
 
 ### Delegera ett deltagarsteg {#delegating-a-participant-step}
 
-Om du har tilldelats ett steg, men av någon anledning inte kan utföra någon åtgärd, kan du delegera steget till en annan användare eller grupp.
+Om du har tilldelats ett steg, men av någon anledning inte kan agera, kan du delegera steget till en annan användare eller grupp.
 
 Vilka användare som är tillgängliga för delegering beror på vem som har tilldelats arbetsposten:
 
@@ -132,7 +132,7 @@ Du kan delegera ett deltagarsteg från antingen:
 Använd följande procedur för att delegera en arbetsuppgift:
 
 1. Öppna **[AEM](/help/sites-cloud/authoring/getting-started/inbox.md)**.
-1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
+1. Markera det arbetsflödesobjekt som du vill arbeta med (markera miniatyrbilden).
 1. Välj **Delegera** i verktygsfältet.
 1. Dialogrutan öppnas. Ange **Användare** i den nedrullningsbara väljaren (detta kan också vara en grupp) och lägga till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
@@ -151,7 +151,7 @@ Använd följande procedur för att delegera en arbetsuppgift:
 Du kan också använda tidslinjen för att delegera och/eller tilldela ett steg:
 
 1. Välj önskad sida och öppna **Tidslinje** (eller öppna **Tidslinje** och markera sidan).
-1. Klicka/tryck på varningsbanderollen för att visa tillgängliga åtgärder. Välj **Ändra tilldelad**:
+1. Markera varningsbanderollen om du vill visa tillgängliga åtgärder. Välj **Ändra tilldelad**:
 
    ![Delegera steg](/help/sites-cloud/authoring/assets/workflows-delegate.png)
 
@@ -182,7 +182,7 @@ Du kan utföra steg tillbaka för ett deltagarsteg från antingen:
 Använd följande procedur för att stega bakåt:
 
 1. Öppna **[AEM](/help/sites-cloud/authoring/getting-started/inbox.md)**.
-1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
+1. Markera det arbetsflödesobjekt som du vill arbeta med (markera miniatyrbilden).
 1. Välj **Gå bakåt** för att öppna dialogrutan.
 1. Ange **Tidigare steg** och lägga till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
@@ -201,7 +201,7 @@ Använd följande procedur för att stega bakåt:
 Du kan också använda tidslinjen för att återställa (steg) till ett tidigare steg:
 
 1. Välj önskad sida och öppna **Tidslinje** (eller öppna **Tidslinje** och markera sidan).
-1. Klicka/tryck på varningsbanderollen för att visa tillgängliga åtgärder. Välj **Återställ**:
+1. Markera varningsbanderollen om du vill visa tillgängliga åtgärder. Välj **Återställ**:
 
    ![Återställa ett steg](/help/sites-cloud/authoring/assets/workflows-roll-back.png)
 
@@ -243,7 +243,7 @@ Du kan öppna information om arbetsobjekt från:
 Så här öppnar du ett arbetsflödesobjekt och visar information:
 
 1. Öppna **[AEM](/help/sites-cloud/authoring/getting-started/inbox.md)**.
-1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
+1. Markera det arbetsflödesobjekt som du vill arbeta med (markera miniatyrbilden).
 1. Välj **Öppna** för att öppna informationsflikarna.
 1. Om det behövs väljer du lämplig åtgärd, anger information och bekräftar med **OK** (eller **Avbryt**).
 1. Använd **Spara** eller **Avbryt** för att avsluta.
@@ -264,7 +264,7 @@ Du kan visa information om nyttolasten som är kopplad till arbetsflödesinstans
 Så här visar du arbetsflödesinstansens nyttolast och resurser:
 
 1. Öppna **[AEM](/help/sites-cloud/authoring/getting-started/inbox.md)**.
-1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
+1. Markera det arbetsflödesobjekt som du vill arbeta med (markera miniatyrbilden).
 1. Välj **Visa nyttolast** i verktygsfältet för att öppna dialogrutan.
    * Eftersom ett arbetsflödespaket är en samling pekare till sökvägar i databasen, kan du lägga till/ta bort/ändra posterna här för att justera vad som refereras av arbetsflödespaketet. Använd **Resursdefinition** för att lägga till nya poster.
 1. Länkarna kan användas för att öppna de enskilda sidorna.

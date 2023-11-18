@@ -4,9 +4,9 @@ description: Använd en React-exempelapp för att lära dig hur du anpassar inne
 hidefromtoc: true
 index: false
 exl-id: 32290ad4-d915-41b7-a073-2637eb38e978
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1018'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 Du börjar i Content Fragment-redigeraren med exempelappen som medföljer AEM Headless-testversion redan inläst. Exempelappen drivs av innehållsfragment som levereras via GraphQL. Använd Content Fragment-redigeraren för att bekanta dig med redigeraren genom att förhandsgranska exempelappen.
 
-1. Tryck eller klicka på **Förhandsgranska** längst upp till höger på redigeringsskärmen.
+1. Välj **Förhandsgranska** längst upp till höger på redigeringsskärmen.
 
 1. Demonstrationsappen öppnas på en ny flik. Appen är till för WKND:s påhittade livsstilsmärke. Bläddra nedåt på sidan för att navigera i exempelinnehållet.
 
@@ -45,7 +45,7 @@ Du börjar i Content Fragment-redigeraren med exempelappen som medföljer AEM He
 
 Innehållsfragmentsredigeraren visar programmets grundläggande layout som ett sidinnehållsfragment. The **Panel** representerar olika sidor i programmet, som var och en är sin egen innehållsfragment. Genom att ändra dessa fragment kan du ändra innehållet i appen.
 
-1. Tryck eller klicka **Mtn Biker i Canyon** i **Panel** -avsnitt.
+1. Välj **Mtn Biker i Canyon** i **Panel** -avsnitt.
 
    ![Markera textpanelen](assets/do-not-localize/edit-header-1.png)
 
@@ -57,7 +57,7 @@ Innehållsfragmentsredigeraren visar programmets grundläggande layout som ett s
 
 1. Ändra texten från `Your next great adventure is calling` till `Choose your own adventure`. Ändringen sparas automatiskt av redigeraren.
 
-1. Tryck eller klicka **Förhandsgranska** i fönstrets övre högra hörn för att se ändringarna. Förhandsgranskningen av demoappen öppnas på en ny flik.
+1. Välj **Förhandsgranska** i fönstrets övre högra hörn för att se ändringarna. Förhandsgranskningen av demoappen öppnas på en ny flik.
 
    ![Förhandsgranskning av demoapp](assets/do-not-localize/edit-header-5-6.png)
 
@@ -75,19 +75,19 @@ Nu när du har ändrat en rubrik i appen kan du prova att ändra en bild.
 
 1. Välj **Mtn Biking - Biker** bildlager. Då öppnas Content Fragment Editor
 
-1. Tryck eller klicka på **X** om du vill ta bort den större bilden. Bilden försvinner och redigeraren visar ett fel eftersom bilden krävs för den här modellen för innehållsfragment.
+1. Välj **X** om du vill ta bort den större bilden. Bilden försvinner och redigeraren visar ett fel eftersom bilden krävs för den här modellen för innehållsfragment.
 
    ![Ta bort bild från fragment](assets/do-not-localize/swap-image-4.png)
 
-1. Tryck eller klicka **Lägg till resurs** och sedan **Bläddra bland resurser** på snabbmenyn.
+1. Välj **Lägg till resurs** och sedan **Bläddra bland resurser** på snabbmenyn.
 
 1. The **Välj resurs** öppnas och sökvägen **sample-wknd-app** > **en** > **bildfiler** väljs automatiskt åt dig.
 
-1. Markera bilden `biker-yellow.png` och sedan trycka eller klicka **Välj**.
+1. Markera bilden `biker-yellow.png` och sedan **Välj**.
 
 1. Bilden på den här färgväljaren ersätts med den valda bilden. Redigeraren sparar ändringarna automatiskt.
 
-1. Tryck eller klicka **Förhandsgranska** i fönstrets övre högra hörn för att se ändringarna. Förhandsgranskningen av demoappen öppnas på en ny flik. Klicka på Uppdatera i webbläsaren så ser du din nya bikerbild med gula kortkommandon i appen.
+1. Välj **Förhandsgranska** i fönstrets övre högra hörn för att se ändringarna. Förhandsgranskningen av demoappen öppnas på en ny flik. Klicka på Uppdatera i webbläsaren så ser du din nya bikerbild med gula kortkommandon i appen.
 
 Det är så enkelt att uppdatera bilder och resurser i apparna med AEM headless CMS.
 
@@ -99,13 +99,13 @@ Nu när du har uppdaterat bilden av budgivaren ska vi gå igenom hur man lägger
 
 1. Gå tillbaka till fliken Webbläsare i redigeraren för innehållsfragment på fliken Förhandsgranska.
 
-1. Du måste gå tillbaka till rätt plats i Content Fragment Editor. Bröderna högst upp till vänster i redigeraren visar var du befinner dig i innehållshierarkin. Tryck eller klicka **WKND Home** i vägbeskrivningarna för att återgå till den sidan.
+1. Du måste gå tillbaka till rätt plats i Content Fragment Editor. Bröderna högst upp till vänster i redigeraren visar var du befinner dig i innehållshierarkin. Välj **WKND Home** i vägbeskrivningarna för att återgå till den sidan.
 
 1. Välj **Mtn Biker på WKND Gul** -panelen.
 
 1. Välj **Mtn Biking - köpbar** lager.
 
-1. Om du vill ringa upp den här panelen skapar du en Content Fragment som kan köpas. Tryck eller klicka på **+ Skapa nytt fragment** -knappen.
+1. Om du vill ringa upp den här panelen skapar du en Content Fragment som kan köpas. Välj **+ Skapa nytt fragment** -knappen.
 
    ![Lägg till en köpbar stund](assets/do-not-localize/add-reference-1-5.png)
 
@@ -113,7 +113,7 @@ Nu när du har uppdaterat bilden av budgivaren ska vi gå igenom hur man lägger
 
 1. Ge Content Fragment ett namn. Skriv till exempel `Shorts` till **Namn** fält.
 
-1. Tryck eller klicka **Skapa och öppna**.
+1. Välj **Skapa och öppna**.
 
    ![Ge kunderna ett namn](assets/do-not-localize/add-reference-6-7-8.png)
 
@@ -126,7 +126,7 @@ Nu när du har uppdaterat bilden av budgivaren ska vi gå igenom hur man lägger
    * **X**: `-5`
    * **Y**: `-10`
 
-1. Tryck eller klicka **Förhandsgranska** i fönstrets övre högra hörn för att se ändringarna. Förhandsgranskningen av demoappen öppnas på en ny flik. Klicka på Uppdatera i webbläsaren för att testa placeringen och göra de justeringar som behövs i redigeraren.
+1. Välj **Förhandsgranska** i fönstrets övre högra hörn för att se ändringarna. Förhandsgranskningen av demoappen öppnas på en ny flik. Klicka på Uppdatera i webbläsaren för att testa placeringen och göra de justeringar som behövs i redigeraren.
 
    ![Förhandsgranska](assets/do-not-localize/add-reference-10-11-12.png)
 

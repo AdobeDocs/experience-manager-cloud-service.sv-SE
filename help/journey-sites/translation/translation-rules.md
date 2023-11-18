@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: 831009b8-8e09-4b0f-b0fd-4e21221c1455
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
@@ -57,22 +57,22 @@ Det finns en **Översättningskonfiguration** konsolen är tillgänglig för kon
 
 Så här kommer du åt den:
 
-1. Navigera till **verktyg** -> **Allmänt**.
-1. Tryck eller klicka **Översättningskonfiguration**.
+1. Navigera till **verktyg** > **Allmänt**.
+1. Välj **Översättningskonfiguration**.
 
 AEM skapar automatiskt översättningsregler för allt innehåll. Så här visar du de här reglerna:
 
-1. Välj `/content` kontext och sedan **Redigera** i verktygsfältet.
+1. Välj `/content` kontext.
+1. Välj **Redigera**.
 1. Översättningsregelredigeraren öppnas med de regler som AEM automatiskt har skapats för `/content` bana.
 
    ![Redigerare för översättningsregler](assets/translation-rules-editor.png)
 
 1. De översatta sidegenskaperna finns under **Allmänt** i listan. Du kan lägga till eller uppdatera befintliga egenskapsnamn som du vill inkludera explicit i översättning.
-   1. Ange egenskapsnamnet i dialogrutan **Ny egenskap** fält.
-   1. Alternativen **Översätt** och **Inherit** kontrolleras automatiskt.
-   1. Tryck eller klicka **Lägg till**.
+   1. I **Ny egenskap** anger du egenskapsnamnet. Alternativen **Översätt** och **Inherit** kontrolleras automatiskt.
+   1. Välj **Lägg till**.
    1. Upprepa dessa steg för alla fält som du måste översätta.
-   1. Tryck eller klicka **Spara**.
+   1. Välj **Spara**.
 
 Du har nu konfigurerat dina översättningsregler.
 
@@ -86,7 +86,7 @@ Du har nu konfigurerat dina översättningsregler.
 
 ## Avancerad användning {#advanced-usage}
 
-Det finns ett antal ytterligare egenskaper som kan konfigureras som en del av översättningsreglerna. Dessutom kan du ange regler manuellt som XML, vilket ger större specificitet och flexibilitet.
+Det finns flera andra egenskaper som kan konfigureras som en del av översättningsreglerna. Dessutom kan du ange regler manuellt som XML, vilket ger större specificitet och flexibilitet.
 
 Sådana funktioner behövs vanligtvis inte för att komma igång med lokalisering av ditt innehåll, men du kan läsa mer om dem i [Ytterligare resurser](#additional-resources) om du är intresserad.
 

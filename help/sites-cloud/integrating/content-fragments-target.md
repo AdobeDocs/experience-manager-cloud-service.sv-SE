@@ -2,9 +2,9 @@
 title: Exportera innehållsfragment till Adobe Target
 description: Lär dig hur du exporterar innehållsfragment till Adobe Target för att testa och personalisera upplevelser.
 exl-id: 760e0a39-0805-498e-a2c9-038fd1e1058d
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2231'
+source-wordcount: '2223'
 ht-degree: 0%
 
 ---
@@ -163,7 +163,7 @@ Nu kan du välja den nya konfigurationen för redigering.
    >1. Navigate to **Tools** &gt; **General** &gt; **CRXDE Lite**.
    >1. Navigate to **/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig**
    >1. Set the property **disable** to **false**.
-   >1. Tap or click **Save All**.
+   >1. Select **Save All**.
 
    -->
 
@@ -187,7 +187,7 @@ Nu kan du välja den nya konfigurationen för redigering.
 
    * **Använd korrekt målinriktning:** Som standard är den här kryssrutan markerad. Om du väljer det här alternativet väntar molntjänstkonfigurationen på att kontexten ska läsas in innan innehållet läses in. Se följande.
 
-   * **Synkronisera segment från Adobe Target:** Välj det här alternativet om du vill hämta segment som har definierats i Target för att använda dem i AEM. Du måste välja det här alternativet när API-typegenskapen är REST, eftersom infogade segment inte stöds och du alltid måste använda segment från Target. (Observera att den AEM termen segment motsvarar målgruppen.)
+   * **Synkronisera segment från Adobe Target:** Välj det här alternativet om du vill hämta segment som har definierats i Target för att använda dem i AEM. Välj det här alternativet när API-typegenskapen är REST, eftersom textbundna segment inte stöds och du alltid måste använda segment från Target. (Den AEM termen segment motsvarar målgruppen.)
 
    * **Klientbibliotek:** this default to AT.js (mbox.js is deprecated)
 
@@ -288,8 +288,8 @@ When you associate a page with the framework, the child pages inherit the associ
 1. In the **Sites** console, navigate to the site that you want to configure.
 1. Using either [quick actions](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions) or [selection mode](/help/sites-cloud/authoring/getting-started/basic-handling.md#selecting-resources), select **View Properties.**
 1. Select the **Cloud Services** tab.
-1. Tap/click **Edit**.
-1. Tap/click **Add Configuration** under **Cloud Service Configurations** and select **Adobe Target**.
+1. Select **Edit**.
+1. Select **Add Configuration** under **Cloud Service Configurations** and select **Adobe Target**.
 
   ![Cloud Service Configurations](assets/chlimage_1-165.png)
 
@@ -299,7 +299,7 @@ When you associate a page with the framework, the child pages inherit the associ
    >
    >Make sure that you select the specific **framework** that you created and not the Target cloud configuration under which it was created.
 
-1. Tap/click **Done**.
+1. Select **Done**.
 1. Activate the root page of the website to replicate it to the publish server. (See [How To Publish Pages](/help/sites-cloud/authoring/fundamentals/publishing-pages.md).)
 
    >[!NOTE]
@@ -320,7 +320,7 @@ Så här exporterar du ett innehållsfragment från AEM till mål (efter att du 
 1. Navigera till ditt innehållsfragment i **Resurser** konsol.
 1. Markera det innehållsfragment som du vill exportera till mål.
 
-1. Tryck/klicka **Exportera till Adobe Target**.
+1. Välj **Exportera till Adobe Target**.
 
    ![Exportera till Adobe Target](assets/cfm-export-target-01.png)
 
@@ -334,7 +334,7 @@ Så här exporterar du ett innehållsfragment från AEM till mål (efter att du 
    
    -->
 
-1. Tryck/klicka **Exportera utan publicering** eller **Publicera** efter behov.
+1. Välj **Exportera utan publicering** eller **Publicera** efter behov.
 
    >[!NOTE]
    >
@@ -346,7 +346,7 @@ Så här exporterar du ett innehållsfragment från AEM till mål (efter att du 
    >
    >Markera **Publicera** publicerar innehållsfragmentet omedelbart och skickar det till Target.
 
-1. Tryck/klicka **OK** i bekräftelsedialogrutan.
+1. Välj **OK** i bekräftelsedialogrutan.
 
    Ditt innehållsfragment bör nu vara i Target.
 

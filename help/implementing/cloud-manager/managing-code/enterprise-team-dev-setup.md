@@ -2,7 +2,7 @@
 title: Installation av Enterprise Development Team
 description: Lär dig hur du konfigurerar och skalar ditt utvecklingsteam och se hur AEM as a Cloud Service kan stödja din utvecklingsprocess.
 exl-id: 85f8779b-12cb-441b-a34d-04641184497a
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '1437'
 ht-degree: 0%
@@ -15,7 +15,7 @@ Lär dig hur du konfigurerar och skalar ditt utvecklingsteam och se hur AEM as a
 
 ## Introduktion {#introduction}
 
-För att ge stöd åt kunder med Enterprise-utvecklingsmiljöer AEM as a Cloud Service fullt integrerat med Cloud Manager och dess specialbyggda [påtalade CI/CD-ledningar](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md). Dessa rörledningar och tjänster byggs baserat på bästa praxis och säkerställer en grundlig [testning och högsta kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md).
+För att ge stöd åt kunder med Enterprise-utvecklingsmiljöer AEM as a Cloud Service fullt integrerat med Cloud Manager och dess specialbyggda [påtalade CI/CD-rörledningar](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md). Dessa rörledningar och tjänster byggs baserat på bästa praxis och säkerställer en grundlig [testning och högsta kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md).
 
 ## Cloud Managers support i Enterprise Team Development Setup {#cloud-manager}
 
@@ -29,7 +29,7 @@ Det finns tre typer av miljöer i Cloud Manager.
 * Scen
 * Produktion
 
-Kod kan distribueras till utvecklingsmiljöer med hjälp av ett icke-produktionsflöde. För miljöer med staging och produktion, som alltid hänger ihop och därmed säkerställer validering före driftsättning som bästa praxis, används en produktionspipeline [kvalitetsportar](/help/implementing/cloud-manager/custom-code-quality-rules.md) för att validera programkoden och konfigurationsändringarna.
+Kod kan distribueras till utvecklingsmiljöer med hjälp av ett icke-produktionsflöde. För miljöer med staging och produktion, som alltid hänger ihop och därmed säkerställer validering före driftsättning som bästa praxis, används en produktionsprocess [kvalitetsportar](/help/implementing/cloud-manager/custom-code-quality-rules.md) för att validera programkoden och konfigurationsändringarna.
 
 Produktionspipelinen distribuerar koden och konfigurationen till staging-miljön först, testar programmet och distribuerar slutligen till produktionen.
 
@@ -41,7 +41,7 @@ Cloud Manager har stöd för flexibla konfigurationer för flera team som kan an
 
 Varje företag har olika behov, inklusive olika arbetsflöden för teamkonfiguration, processer och utveckling. Konfigurationen som beskrivs nedan används av Adobe för flera projekt som levererar upplevelser utöver AEM as a Cloud Service.
 
-Adobe Creative Cloud-programmen, till exempel Adobe Photoshop och Adobe Illustrator, innehåller t.ex. självstudiekurser, exempel och guider som är tillgängliga för slutanvändarna. Det här innehållet används av klientprogrammen AEM as a Cloud Service på ett headless sätt genom att API-anrop görs till publiceringsnivån i AEM Cloud för att hämta det strukturerade innehållet som JSON-strömmar, och genom att utnyttja [CDN (Content Delivery Network) på AEM as a Cloud Service](/help/implementing/dispatcher/cdn.md#content-delivery) för att leverera både strukturerat och ostrukturerat innehåll med optimala prestanda.
+Adobe Creative Cloud-programmen, till exempel Adobe Photoshop och Adobe Illustrator, innehåller t.ex. självstudiekurser, exempel och guider som är tillgängliga för slutanvändarna. Det här innehållet används av klientprogrammen AEM as a Cloud Service utan problem, genom att API-anrop görs till publiceringsnivån i AEM Cloud för att hämta det strukturerade innehållet som JSON-strömmar och genom att använda [CDN (Content Delivery Network) på AEM as a Cloud Service](/help/implementing/dispatcher/cdn.md#content-delivery) för att leverera både strukturerat och ostrukturerat innehåll med optimala prestanda.
 
 De team som bidrar till projektet följer följande process.
 
@@ -51,7 +51,7 @@ För att ett nytt projekt ska kunna introduceras måste det finnas en lista i pr
 
 ![Arbetsflödesdiagram](/help/implementing/cloud-manager/assets/team-setup1.png)
 
-Git-databasen för varje konfiguration skapas med [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) och följer därför de bästa sätten att skapa AEM projekt. Det enda undantaget är dispatcherkonfigurationen som görs i den delade Git-databasen enligt ovan.
+Git-databasen för varje konfiguration skapas med [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) och följer därför de bästa sätten att skapa AEM projekt. Det enda undantaget är dispatcherkonfigurationen som görs i den delade Git-databasen enligt ovan.
 
 Varje team använder ett förenklat Git-arbetsflöde med två + N-grenar, enligt Git-flödesmodellen:
 
@@ -94,7 +94,7 @@ Denna verkliga konfiguration kan användas som en plan och sedan anpassas efter 
 
 ### Att tänka på vid installation av flera team {#considerations}
 
-Med Cloud Managers Git-databas och produktionsflödet körs hela produktionskoden alltid genom alla kvalitetsportar, vilket behandlar den som en enda distributionsenhet. På så sätt fungerar produktionssystemet alltid utan avbrott eller driftavbrott.
+Med Cloud Managers Git-databas och produktionsflödet körs den fullständiga produktionskoden alltid genom alla kvalitetsportar, vilket behandlar den som en enda distributionsenhet. På så sätt fungerar produktionssystemet alltid utan avbrott eller driftavbrott.
 
 Utan ett sådant system finns det däremot en risk att en uppdatering från ett team kan leda till produktionsstabilitetsproblem. Dessutom krävs samordning och planerad driftstopp för att lansera uppdateringar. Med ett ökande antal team blir samordningen mycket mer komplex och snabbt ohanterlig.
 

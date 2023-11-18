@@ -5,9 +5,9 @@ uuid: ffeba886-9b24-4ed1-95c0-e19356ff2f23
 products: SG_EXPERIENCEMANAGER/FORMS
 topic-tags: author
 exl-id: dc89ecb1-2d9e-4d1d-b85b-af90c550e7d8
-source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '725'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ Du kan trycka på **Konfigurera** ![konfigurera ikon](assets/configure.png) -iko
    * **Mallmeddelande:** Ange meddelandet som ska visas medan signaturen PDF läses in. Adobe Sign tjänster tar lite tid att förbereda och läsa in signaturen PDF.
    * **Underteckningstjänst:** Välj **Klottersignatur** alternativ.
 
-   * **CSS-klass**: Ange CSS-klass för klientbiblioteket, om sådan finns. Det rekommenderas att använda [teman](themes.md) och [infogade format](inline-style-adaptive-forms.md) i stället för CSS-klassen.
+   * **CSS-klass**: Ange CSS-klass för klientbiblioteket, om sådan finns. Adobe rekommenderar att du använder [teman](themes.md) och [infogade format](inline-style-adaptive-forms.md) i stället för CSS-klassen.
 
    Tryck på Klar ![aem_forms_save](assets/aem_forms_save.png) om du vill spara ändringarna. Signaturen har konfigurerats.
 

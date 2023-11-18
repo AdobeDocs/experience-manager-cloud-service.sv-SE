@@ -2,9 +2,9 @@
 title: ContextHub konfigureras
 description: Lär dig hur du konfigurerar Context Hub, ett ramverk för lagring, manipulering och presentation av kontextdata.
 exl-id: 1fd7d41e-31ad-4838-8749-a5791edcfd63
-source-git-commit: 31e6ec8e9977c8787e14481ee3a94df767262aec
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1629'
 ht-degree: 0%
 
 ---
@@ -43,10 +43,10 @@ Ikoner är referenser från [Coral UI icon library](https://helpx.adobe.com/expe
 
 Lägg till ett gränssnittsläge för att gruppera relaterade ContextHub-moduler. När du skapar gränssnittsläget anger du den titel och ikon som visas i ContextHub-verktygsfältet.
 
-1. Klicka eller tryck på Verktyg > Platser > Kontextnav på Experience Manager-listen.
-1. Klicka på eller tryck på standardkonfigurationsbehållaren.
-1. Klicka eller tryck på Kontextnavkonfigurationen.
-1. Klicka på eller tryck på knappen Skapa och klicka sedan på eller tryck på gränssnittsläget för kontextnav.
+1. I Experience Manager väljer du Verktyg > Webbplatser > Kontextnav.
+1. Välj standardkonfigurationsbehållaren.
+1. Välj Kontextnavskonfiguration.
+1. Markera knappen Skapa och välj sedan gränssnittsläge för kontextnav.
 
    ![Lägg till gränssnittsläge](assets/contexthub-ui-mode.png)
 
@@ -56,7 +56,7 @@ Lägg till ett gränssnittsläge för att gruppera relaterade ContextHub-moduler
    * Lägesikon: Väljaren för [Coral UI icon](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) att använda, till exempel `coral-Icon--user`
    * Aktiverad: Välj det här alternativet om du vill visa användargränssnittsläget i verktygsfältet ContextHub
 
-1. Klicka på eller tryck på Spara.
+1. Välj Spara.
 
 ### Lägga till en gränssnittsmodul {#adding-a-ui-module}
 
@@ -76,11 +76,11 @@ Egenskaperna för användargränssnittsmodulen innehåller en detaljkonfiguratio
 | [contexthub.tagcloud](sample-modules.md#contexthub-tagcloud-ui-module-type) | Visar statistik om sidtaggar | `tagcloud` |
 | [granite.profile](sample-modules.md#granite-profile-ui-module-type) | Visar profilinformationen för den aktuella användaren, inklusive `authorizableID`, `displayName` och `familyName`. Du kan ändra värdet för `displayName` och `familyName`. | `profile` |
 
-1. Klicka eller tryck på Verktyg > Platser > ContextHub på Experience Manager-listen.
-1. Klicka på eller tryck på den konfigurationsbehållare som du vill lägga till en gränssnittsmodul i.
+1. I Experience Manager väljer du Verktyg > Webbplatser > ContextHub.
+1. Välj den konfigurationsbehållare som du vill lägga till en gränssnittsmodul i.
 1. Klicka på eller skriv den ContextHub-konfiguration som du vill lägga till gränssnittsmodulen i.
-1. Klicka eller tryck på det användargränssnittsläge som du lägger till användargränssnittsmodulen i.
-1. Klicka på eller tryck på knappen Skapa och sedan på eller tryck på ContextHub UI Module (generisk).
+1. Välj det användargränssnittsläge som du lägger till användargränssnittsmodulen i.
+1. Markera knappen Skapa och välj sedan ContextHub UI Module (generisk).
 
    ![Användargränssnittsmodulen ContextHub](assets/contexthub-ui-module.png)
 
@@ -91,7 +91,7 @@ Egenskaperna för användargränssnittsmodulen innehåller en detaljkonfiguratio
    * Aktiverad: Välj det här alternativet om du vill visa gränssnittsmodulen i ContextHub-verktygsfältet
 
 1. (Valfritt) Om du vill åsidosätta standardkonfigurationen för lagring anger du ett JSON-objekt för att konfigurera UI-modulen.
-1. Klicka på eller tryck på Spara.
+1. Välj Spara.
 
 ## Skapa ett ContextHub Store {#creating-a-contexthub-store}
 
@@ -111,18 +111,18 @@ AEM innehåller följande exempel på butikskandidater som du kan basera en buti
 |---|---|
 | [aem.segmentation](sample-stores.md#aem-segmentation-sample-store-candidate) | Lagra för lösta och olösta ContextHub-segment. Hämtar automatiskt segment från ContextHub SegmentManager |
 | [contexthub.geolocation](sample-stores.md#contexthub-geolocation-sample-store-candidate) | Lagrar latitud- och longitudvärdena för webbläsarplatsen. |
-| [granite.emulators](sample-stores.md#granite-emulators-sample-store-candidate) | Definierar egenskaper och funktioner för ett antal enheter och identifierar den aktuella klientenheten |
+| [granite.emulators](sample-stores.md#granite-emulators-sample-store-candidate) | Definierar egenskaper och funktioner för flera enheter och identifierar den aktuella klientenheten |
 | [granite.profile](sample-stores.md#granite-profile-sample-store-candidate) | Lagrar profildata för den aktuella användaren |
 | [contexthub.surferinfo](sample-stores.md#contexthub-surferinfo-sample-store-candidate) | Lagrar information om klienten, till exempel enhetsinformation, webbläsartyp och fönsterorientering |
 
-1. Klicka eller tryck på Verktyg > Platser > ContextHub på Experience Manager-listen.
-1. Klicka eller tryck på standardkonfigurationsbehållaren.
-1. Klicka på Kontexthub-konfiguration
-1. Om du vill lägga till en butik klickar eller trycker du på ikonen Skapa och sedan på eller trycker du på ContextHub Store Configuration.
+1. I Experience Manager väljer du Verktyg > Webbplatser > ContextHub.
+1. Välj standardkonfigurationsbehållaren.
+1. Välj kontextubkonfiguration
+1. Om du vill lägga till en butik väljer du ikonen Skapa och sedan KontextHub Store Configuration.
 
    ![Konfiguration av ContextHub-butik](assets/contexthub-store-configuration.png)
 
-1. Ange värden för de grundläggande konfigurationsegenskaperna och klicka eller tryck sedan på Nästa:
+1. Ange värden för de grundläggande konfigurationsegenskaperna och välj sedan Nästa:
 
    * **Konfigurationstitel:** Titeln som identifierar butiken
    * **Lagringstyp:** Värdet på egenskapen storeType för butikskandidaten som butiken ska baseras på
@@ -130,7 +130,7 @@ AEM innehåller följande exempel på butikskandidater som du kan basera en buti
    * **Aktiverad:** Markera för att aktivera butiken
 
 1. (Valfritt) Om du vill åsidosätta standardarkivkonfigurationen anger du ett JSON-objekt i rutan Detaljkonfiguration (JSON).
-1. Klicka på eller tryck på Spara.
+1. Välj Spara.
 
 ## Exempel: Använda en JSONP-tjänst  {#example-using-a-jsonp-service}
 
@@ -205,10 +205,10 @@ Ett felsökningsläge för ContextHub kan aktiveras för att tillåta felsöknin
 
 Redigera ContextHub-konfigurationen och markera alternativet **Felsök**
 
-1. Klicka eller tryck i rälen **Verktyg > Sites > ContextHub**
-1. Klicka eller tryck på standardinställningen **Konfigurationsbehållare**
-1. Välj **KontextHub-konfiguration** och klicka eller trycka **Redigera markerat element**
-1. Klicka eller tryck **Felsök** och klicka eller trycka **Spara**
+1. Markera **Verktyg > Sites > ContextHub**
+1. Välj standard **Konfigurationsbehållare**
+1. Välj **KontextHub-konfiguration** och markera **Redigera markerat element**
+1. Välj **Felsök** och markera **Spara**
 
 ### Via CRXDE {#via-crxde}
 
@@ -243,10 +243,10 @@ ContextHub kan inaktiveras för att förhindra att den läser in js/css och init
 
 * Redigera ContextHub-konfigurationen och markera alternativet **Inaktivera ContextHub**
 
-   1. Klicka eller tryck i rälen **Verktyg > Sites > ContextHub**
-   1. Klicka eller tryck på standardinställningen **Konfigurationsbehållare**
-   1. Välj **KontextHub-konfiguration** och klicka eller trycka **Redigera markerat element**
-   1. Klicka eller tryck **Inaktivera ContextHub** och klicka eller trycka **Spara**
+   1. Markera **Verktyg > Sites > ContextHub**
+   1. Välj standard **Konfigurationsbehållare**
+   1. Välj **KontextHub-konfiguration** och markera **Redigera markerat element**
+   1. Välj **Inaktivera ContextHub** och markera **Spara**
 
 eller
 

@@ -2,9 +2,9 @@
 title: Arbeta med dina egna GitHub-databaser i Cloud Manager
 description: Lär dig hur du konfigurerar Cloud Manager så att det fungerar med dina egna GitHub-databaser.
 feature: Release Information
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Konfigurationen består av två huvudsteg:
 
 ### Lägg till databas {#add-repo}
 
-1. I Cloud Manager kan du gå till **Programöversikt** , tryck eller klicka på **Databaser** för att växla till **Databaser** sida och klicka **Lägg till databas**.
+1. I Cloud Manager kan du gå till **Programöversikt** väljer du **Databaser** för att växla till **Databaser** sida och klicka **Lägg till databas**.
 
 1. I **Lägg till databas** dialogruta, välja **Privat databas** som databastyp.
 
@@ -39,11 +39,11 @@ Konfigurationen består av två huvudsteg:
 
    ![Lägg till egen databas](/help/implementing/cloud-manager/assets/repos/add-own-github.png)
 
-1. Tryck eller klicka **Spara**.
+1. Välj **Spara**.
 
 >[!TIP]
 >
->Mer information om hur du hanterar databaser i Cloud Manager finns i dokumentet [Databaser för Cloud Manager.](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md)
+>Mer information om hur du hanterar databaser i Cloud Manager finns i [Cloud Manager-databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md).
 
 ### Validering av privat databasägande {#validate-ownership}
 
@@ -57,7 +57,7 @@ Cloud Manager känner nu till din GitHub-databas, men den behöver fortfarande �
    * En ägare till din GitHub-organisation måste installera appen som finns på `https://github.com/apps/cloud-manager-for-aem-stage` och ge åtkomst till databasen.
    * Mer information om hur du gör detta finns i dokumentationen för GitHub.
 
-1. För att förbättra säkerheten måste du skapa en hemlig fil i databasens standardgren. Tryck eller klicka **Generera**.
+1. För att förbättra säkerheten måste du skapa en hemlig fil i databasens standardgren. Välj **Generera**.
 
 1. Bekräfta genereringen av den hemliga filen genom att trycka eller klicka **Bekräfta**.
 
@@ -71,7 +71,7 @@ Cloud Manager känner nu till din GitHub-databas, men den behöver fortfarande �
 
 1. Skapa en ny fil i standardgrenen för GitHub-repon som anropades `.well-known/adobe/cloud-manager-challenge` och klistra in det hemliga filinnehållet i filen och spara.
 
-1. När appen är installerad och den hemliga filen finns i databasen kan du trycka eller klicka på **Validera** i **Validering av privat databasägande** -dialogrutan.
+1. När appen har installerats och den hemliga filen finns i databasen kan du välja **Validera** i **Validering av privat databasägande** -dialogrutan.
 
 Programmet kan installeras och en hemlig fil kan skapas i vilken ordning som helst. Båda stegen måste dock slutföras innan du kan validera.
 
@@ -79,9 +79,9 @@ Till valideringen visas databasen med en röd ikon, som anger att den ännu inte
 
 ![Ovaliderat svar](/help/implementing/cloud-manager/assets/repos/unvalidated-repo.png)
 
-Observera att **Typ** kolumnen identifierar enkelt databaser som tillhandahålls av Adobe (**Adobe**) och dina egna GitHub-databaser (**GitHub**).
+The **Typ** kolumnen identifierar enkelt databaser som tillhandahålls av Adobe (**Adobe**) och dina egna GitHub-databaser (**GitHub**).
 
-Om du behöver gå tillbaka till databasen vid ett senare datum för att slutföra valideringen, på **Databaser** trycker eller klickar du på ellipsknappen på raden som representerar GitHub-databasen som du just lade till och väljer **Ägarverifiering** i listrutan.
+Om du behöver gå tillbaka till databasen vid ett senare datum för att slutföra valideringen, på **Databaser** väljer du ellipsknappen på raden som representerar GitHub-databasen som du just lade till och väljer **Ägarverifiering** i listrutan.
 
 ## Använda dina egna GitHub-databaser med Cloud Manager {#using}
 
@@ -101,7 +101,7 @@ När pull-begäran stängs eller sammanfogas, tas hela stackkodens kvalitetsflö
 
 ## Begränsningar {#limitations}
 
-Tänk på följande begränsningar när du använder egna GitHub-databaser med Cloud Manager.
+Begränsningar när du använder egna GitHub-databaser med Cloud Manager.
 
 * Du kan inte använda GitHub-databaser som direkt datakälla för de pipelines som du hanterar.
    * Den här funktionen är planerad.

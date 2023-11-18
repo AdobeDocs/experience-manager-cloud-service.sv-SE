@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-source-git-commit: f58581f6f81e60edafd79dd1d305bd479b65eed5
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '4922'
+source-wordcount: '4921'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ GraphQL är:
   Se [GraphQL Foundation](https://foundation.graphql.org/).
 
 <!--
-"*Explore GraphQL is maintained by the Apollo team. Our goal is to give developers and technical leaders around the world all of the tools they need to understand and adopt GraphQL.*". 
+"*Explore GraphQL is maintained by the Apollo team. Our goal is to give developers and technical leaders around the world the tools they need to understand and adopt GraphQL.*". 
 -->
 
 Mer information om GraphQL API finns i följande avsnitt (bland annat på engelska):
@@ -156,13 +156,13 @@ Behörigheterna är de som krävs för åtkomst av resurser.
 
 GraphQL-frågor körs med tillstånd från den AEM användaren av den underliggande begäran. Om användaren inte har läsåtkomst till vissa fragment (som lagras som resurser) blir de inte en del av resultatuppsättningen.
 
-Dessutom måste användaren ha åtkomst till en GraphQL-slutpunkt för att kunna köra GraphQL-frågor.
+Användaren måste också ha tillgång till en GraphQL-slutpunkt för att kunna köra GraphQL-frågor.
 
 ## Schemagenerering {#schema-generation}
 
 GraphQL är ett högtypat API, vilket innebär att data måste vara tydligt strukturerade och ordnade efter typ.
 
-GraphQL-specifikationen innehåller en serie riktlinjer för hur du skapar ett robust API för att förhöra data i en viss instans. För att göra detta måste en kund hämta [Schema](#schema-generation), som innehåller alla typer som behövs för en fråga.
+GraphQL-specifikationen innehåller en serie riktlinjer för hur du skapar ett robust API för att förhöra data i en viss instans. För att kunna göra detta måste klienten hämta [Schema](#schema-generation), som innehåller alla typer som behövs för en fråga.
 
 För innehållsfragment baseras GraphQL-scheman (struktur och typer) på **Aktiverad** [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md) och deras datatyper.
 
@@ -237,7 +237,7 @@ Inom schemat finns det enskilda fält av två baskategorier:
 
    * Det finns också **Återge som** inställning som ska beaktas, eftersom användare kan konfigurera vissa datatyper. Ett textfält med en rad kan till exempel konfigureras att innehålla flera textrader genom att välja `multifield` i listrutan.
 
-* GraphQL for AEM genererar också ett antal [hjälpfält](#helper-fields).
+* GraphQL för AEM genererar också flera [hjälpfält](#helper-fields).
 
 ### Datatyper {#data-types}
 
@@ -245,7 +245,7 @@ GraphQL för AEM har stöd för en lista med typer. Alla Content Fragment Model-
 
 | Content Fragment Model - datatyp | GraphQL Type | Beskrivning |
 |--- |--- |--- |
-| Enkelradig text | `String`, `[String]` | Används för enkla strängar som författarnamn, platsnamn osv. |
+| Enkelradig text | `String`, `[String]` | Används för enkla strängar som författarnamn, platsnamn och så vidare. |
 | Flerradstext | `String`, `[String]` | Används för att skriva ut text, t.ex. brödtexten i en artikel |
 | Siffra | `Float`, `[Float]` | Används för att visa flyttal och reguljära tal |
 | Boolean | `Boolean` | Används för att visa kryssrutor → enkla sant/falskt-satser |
@@ -259,7 +259,7 @@ GraphQL för AEM har stöd för en lista med typer. Alla Content Fragment Model-
 
 ### Hjälpfält {#helper-fields}
 
-Förutom datatyperna för användargenererade fält genererar GraphQL för AEM även ett antal *hjälpare* fält som hjälper dig att identifiera ett innehållsfragment eller att ge mer information om ett innehållsfragment.
+Förutom datatyperna för användargenererade fält genererar GraphQL för AEM även flera *hjälpare* fält som hjälper dig att identifiera ett innehållsfragment eller att ge mer information om ett innehållsfragment.
 
 Dessa [hjälpfält](#helper-fields) markeras med föregående `_` för att skilja mellan vad som har definierats av användaren och vad som har genererats automatiskt.
 
@@ -365,7 +365,7 @@ The `_variations` -fältet har implementerats för att förenkla frågor om vari
 
 >[!NOTE]
 >
->Observera att `_variations` fältet innehåller inte `master` variation, som tekniskt sett originaldata (refereras som *Master* i användargränssnittet) inte betraktas som en explicit variation.
+>The `_variations` fältet innehåller inte `master` variation, som tekniskt sett originaldata (refereras som *Master* i användargränssnittet) inte betraktas som en explicit variation.
 
 Se [Exempelfråga - Alla städer med en namngiven variant](/help/headless/graphql-api/sample-queries.md#sample-cities-named-variation).
 
@@ -571,8 +571,8 @@ Med den här funktionen kan du sortera frågeresultaten enligt ett angivet fält
 Sorteringskriterierna:
 
 * är en kommaavgränsad lista med värden som representerar fältsökvägen
-   * det första fältet i listan definierar den primära sorteringsordningen, det andra fältet används om två värden för det primära sorteringsvillkoret är lika, det tredje om de första två kriterierna är lika, osv.
-   * punktnotation, d.v.s. field1.subfield.subfield osv.
+   * det första fältet i listan definierar den primära sorteringsordningen, det andra fältet används om två värden för det primära sorteringsvillkoret är lika, det tredje om de första två kriterierna är lika, och så vidare.
+   * punktnotation, d.v.s. field1.subfield.subfield och så vidare..
 * med valfri orderriktning
    * ASC (stigande) eller DESC (fallande); som standard används ASC
    * riktningen kan anges per fält, vilket betyder att du kan sortera ett fält i stigande ordning och ett annat i fallande ordning (namn, firstName DESC)

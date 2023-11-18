@@ -2,9 +2,9 @@
 title: Headless and Headless in AEM
 description: AEM kan implementeras i en headful och headless-modell, men valet är inte binärt. AEM erbjuder flexibiliteten att utnyttja fördelarna med båda modellerna i ett och samma projekt.
 exl-id: 709850ca-7757-47ab-9625-f411121cde2c
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1014'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Men detta behöver inte vara ett binärt val. AEM erbjuder oöverträffad flexib
 
 ![AEM implementeringsmodeller](/help/headless/assets/aem-implementation-models.png)
 
-I en modell med headful eller full stack hanteras innehållet i den AEM databasen och AEM komponenter baserade på Java, HTML osv. används för att återge innehållet för användarupplevelsen. I den här modellen skapas innehållet, formateras, presenteras och distribueras allt i AEM.
+I en modell med headful eller full stack hanteras innehållet i AEM och AEM komponenter som baseras på Java, HTL och så vidare används för att återge innehållet för användarupplevelsen. I den här modellen skapas innehållet, formateras, presenteras och distribueras allt i AEM.
 
 I en headless-modell hanteras innehållet i AEM, men levereras via API:er som REST och GraphQL till ett annat system för att återge innehållet för användarupplevelsen. I den här modellen skapas innehåll i AEM, men formateras, presenteras och distribueras allt på en annan plattform.
 

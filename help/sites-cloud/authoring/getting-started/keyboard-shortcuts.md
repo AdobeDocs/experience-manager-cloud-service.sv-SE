@@ -2,9 +2,9 @@
 title: Kortkommandon för konsoler
 description: Spara tid när du redigerar med dessa kortkommandon
 exl-id: 68508d05-a98d-483a-aa6d-f743ee29c284
-source-git-commit: d6b98559e7cbe5fc5bd05d9cf37225e960e668e7
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Dessutom är kortkommandon samma för alla språk och tangentbordslayouter.
 
 ## Inaktivera kortkommandon {#deactivating-keyboard-shortcuts}
 
-AEM innehåller kortkommandon för några av de vanligaste funktionerna (redigering, egenskaper, kopiera/klistra in, med olika sidospetsmenyer osv.).
+AEM innehåller kortkommandon för några av de vanligaste funktionerna (redigering, egenskaper, kopiera/klistra in, med olika sidospetsmenyer och så vidare).
 
 För användare som inte använder kortkommandon eller har vissa tillgänglighetskrav kan alla kortkommandon inaktiveras.
 

@@ -3,13 +3,13 @@ title: Markdown
 description: Förstå hur Content Fragment Editor använder markeringssyntax för att enkelt skapa innehåll, både för sidredigering och rubrikfri leverans.
 feature: Content Fragments
 role: User
-source-git-commit: af97fec754edae6216551763fd20cad5ee07179c
+exl-id: 6fbf8128-3b7f-4eda-bbbd-3336578d2586
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '559'
 ht-degree: 3%
 
 ---
-
 
 # Markdown {#markdown}
 
@@ -31,7 +31,7 @@ Du kan definiera:
 
 ## Rubriknotation {#heading-notation}
 
-Om du vill skapa en rubrik genom att placera en hash-tagg (#) framför rubriken. En hash-tagg (#) används för en H1, två hash-taggar (#) för en H2 osv. Du kan använda upp till 6 hash-taggar. Till exempel:
+Om du vill skapa en rubrik genom att placera en hash-tagg (#) framför rubriken. En hash-tagg (#) används för en H1, två hash-taggar (#) för en H2 och så vidare. Du kan använda upp till 6 hash-taggar. Till exempel:
 
     `## This is an H2`
 

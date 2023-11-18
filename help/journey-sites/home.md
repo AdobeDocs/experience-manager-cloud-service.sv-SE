@@ -2,9 +2,9 @@
 title: AEM Sites Journeys
 description: Börja här för att få en översikt över de guidade resor som finns för att förstå AEM kraftfulla webbplatsfunktioner.
 exl-id: d18bc8b8-8d94-4296-a218-b21b59e6563d
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Börja här för att få en översikt över de guidade resor som finns för att 
 
 ## AEM dokumentationsresor {#documentation-journeys}
 
-[En dokumentationsresa](/help/journey-documentation/documentation-journeys.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
+[En dokumentationsresa](/help/journey-documentation/documentation-journeys.md) binder samman många olika, komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny på att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
 
 Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
 
@@ -31,7 +31,7 @@ Sites Journeys är utformade för olika personligheter och innehåller krav, ste
 
 En enskild resa definieras för en viss person eller målgrupp, men definierar även ytterligare personligheter som läsaren interagerar med.
 
-Information på resorna kan förstås vara användbar för flera personer, men en resa är inriktad på en viss person och viss information kan vara överflödig för vissa roller.
+Information på resorna kan vara användbar för flera personer, men en resa är inriktad på en viss person och viss information kan vara överflödig för vissa roller.
 
 ## Sites Journeys {#sites-journeys}
 

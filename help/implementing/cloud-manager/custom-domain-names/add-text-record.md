@@ -2,9 +2,9 @@
 title: Lägga till en TXT-post
 description: Lär dig hur du lägger till en TXT-post för att lägga till ett eget domännamn i Cloud Manager.
 exl-id: d441de29-af41-4d3e-9155-531af9702841
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '327'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ När du initierar domänverifiering får du det namn och TXT-värde du ska anvä
 
 Se exemplen i den här tabellen.
 
-| Domän | Namn | TXT-värde |
+| Domän | Namn | TXT Value |
 |--- |--- |---|
 | `example.com` | `_aemverification.example.com` | Kopiera hela värdet som visas i användargränssnittet i Cloud Manager. Detta är specifikt för domänen och miljön. Till exempel:<br>`adobe-aem-verification=example.com/[program]/[env]/..*` |
 | `www.example.com` | `_aemverification.www.example.com` | Kopiera hela värdet som visas i användargränssnittet i Cloud Manager. Detta är specifikt för domänen och miljön. Till exempel:<br>`adobe-aem-verification=www.example.com/[program]/[env]/..*` |
@@ -46,4 +46,4 @@ dig TXT _aemverification.example.com -t txt
 
 >[!TIP]
 >
->Det finns ett antal [Verktyg för DNS-sökning](https://www.ultratools.com/tools/dnsLookup) tillgängliga. Google DoH kan användas för att söka efter TXT-postposter och identifiera om TXT-posten saknas eller är felaktig.
+>Det finns flera [Verktyg för DNS-sökning](https://www.ultratools.com/tools/dnsLookup) tillgängliga. Google DoH kan användas för att söka efter TXT-postposter och identifiera om TXT-posten saknas eller är felaktig.

@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Search,Metadata,Asset Distribution
 role: User,Admin
 exl-id: 68bdaf25-cbd4-47b3-8e19-547c32555730
-source-git-commit: 35d70cd3843b5e0857a24a17746e05072aed7e1b
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '5495'
+source-wordcount: '5493'
 ht-degree: 4%
 
 ---
@@ -509,11 +509,11 @@ Skapa en version för resurserna som visas i sökresultaten. Markera resursen oc
 
 ### Skapa ett arbetsflöde {#create-workflow}
 
-På samma sätt som när du skapar en version kan du också skapa ett arbetsflöde för resurserna som visas i sökresultaten. Markera resursen/resurserna och klicka på **[!UICONTROL Create]** > **[!UICONTROL Workflow]**. Välj arbetsflödesmodell, ange en rubrik för arbetsflödet och klicka på **[!UICONTROL Start]**.
+På samma sätt som när du skapar en version kan du också skapa ett arbetsflöde för resurserna som visas i sökresultaten. Markera resurserna och klicka på **[!UICONTROL Create]** > **[!UICONTROL Workflow]**. Välj arbetsflödesmodell, ange en rubrik för arbetsflödet och klicka på **[!UICONTROL Start]**.
 
 ### Relatera och inte relatera tillgångar {#relate-unrelate-assets}
 
-Relatera och dela upp resurser som visas i sökresultaten. Markera resursen/resurserna och klicka på **[!UICONTROL Relate]** eller **[!UICONTROL Unrelate]**.
+Relatera och dela upp resurser som visas i sökresultaten. Markera resurserna och klicka på **[!UICONTROL Relate]** eller **[!UICONTROL Unrelate]**.
 
 ### Navigera till resursmappens plats {#navigate-asset-folder-location}
 

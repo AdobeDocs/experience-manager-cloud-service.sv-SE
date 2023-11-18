@@ -1,9 +1,10 @@
 ---
 title: AEM Assets-tillägg för Adobe Express
 description: AEM Assets-tillägg för Adobe Express ger dig direktåtkomst till resurser som lagras i AEM Assets inifrån användargränssnittet för Adobe Expressen.
-source-git-commit: e9ff2f2b15642288e82ac6f900dc567231bf85c7
+exl-id: d43e4451-da2a-444d-9aa4-4282130ee44f
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '471'
 ht-degree: 0%
 
 ---
@@ -27,7 +28,7 @@ Gör så här för att lägga till AEM Assets-tillägg i Adobe Expressen:
 
 1. Öppna Adobe Expressens webbprogram.
 
-1. Öppna en ny tom arbetsyta genom att läsa in en ny mall eller ett projekt, eller genom att skapa en ny resurs.
+1. Öppna en ny tom arbetsyta genom att läsa in en ny mall eller ett projekt, eller genom att skapa en resurs.
 
 1. Klicka **[!UICONTROL Add-ons]** finns i den vänstra navigeringsrutan.
 
@@ -64,4 +65,3 @@ När du har infogat lämpliga ändringar på arbetsytan Express kan du spara den
 1. Klicka **[!UICONTROL Upload]** för att överföra resursen till AEM Assets.
 
    ![Spara resurser i AEM](assets/aem-assets-add-on-save.png)
-

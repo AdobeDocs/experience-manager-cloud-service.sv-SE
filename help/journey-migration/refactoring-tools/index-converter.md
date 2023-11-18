@@ -2,9 +2,9 @@
 title: Indexkonverterare
 description: Lär dig hur du migrerar indexdefinitioner som förberedelse för övergången till AEM as a Cloud Service.
 exl-id: ac02ca41-eb35-4f24-bf17-d00ce318423d
-source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ If [Kontrollera läckindex](https://adobe-consulting-services.github.io/acs-aem-
 
 ## Använda indexkonverteraren {#using-index-converter}
 
-* I Adobe I/O CLI: Du bör använda indexkonverteraren med hjälp av `aio-cli-plugin-aem-cloud-service-migration` (AEM plugin-program för omfaktorisering av as a Cloud Service kod för CLI-programmet för Adobe I/O).
+* Som Adobe I/O CLI: Adobe rekommenderar vi att du använder indexkonverteraren via `aio-cli-plugin-aem-cloud-service-migration` (AEM plugin-program för omfaktorisering av as a Cloud Service kod för CLI-programmet för Adobe I/O).
 
   Se **[Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#introduction)** om du vill lära dig hur du installerar och använder plugin-programmet.
 

@@ -4,9 +4,9 @@ description: Använd modellen för innehållsfragment som du skapade tidigare f�
 hidefromtoc: true
 index: false
 exl-id: d74cf5fb-4c4a-4363-a500-6e2ef6811e60
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
@@ -37,15 +37,15 @@ I den här modulen skapar du ett innehållsfragment baserat på den modellen med
 
 Konsolen för innehållsfragment används för att skapa och redigera headless-innehåll i olika distributionskanaler och oberoende av sammanhang, vilket kan vara den mest effektiva metoden i många fall. I en senare modul kommer vi att utforska redigering av headless-innehåll på plats och i sitt sammanhang.
 
-1. Tryck eller klicka på **Skapa** längst upp till höger på konsolen.
+1. Välj **Skapa** längst upp till höger på konsolen.
 
-1. The **Nytt innehållsfragment** öppnas där du kan börja skapa ett nytt innehållsfragment. **Plats** fylls automatiskt i där det nya innehållet sparas.
+1. The **Nytt innehållsfragment** öppnas där du kan börja skapa ett innehållsfragment. **Plats** fylls automatiskt i där det nya innehållet sparas.
 
 1. I **Modell för innehållsfragment** väljer du **Adventure** Modell för innehållsfragment som du skapade tidigare.
 
 1. Lägg till `Tuscany` som en beskrivande **Titel** för innehållsfragmentet. Detta är för att identifiera ditt fragment i konsolen.
 
-1. Tryck eller klicka **Skapa och öppna**.
+1. Välj **Skapa och öppna**.
 
 ![Skapa ett nytt innehållsfragment](assets/do-not-localize/create-content.png)
 
@@ -71,7 +71,7 @@ När du har sparat och öppnat ditt nya innehållsfragment öppnas redigeraren f
 
 1. Ange en **Bild** som representerar resan genom att trycka eller klicka **Lägg till resurs** i **Bild** fält.
 
-1. Tryck eller klicka på i popup-fönstret för resurser **Bläddra bland resurser** för att välja från en befintlig resurs i resursbiblioteket.
+1. I popup-fönstret för resurser väljer du **Bläddra bland resurser** för att välja från en befintlig resurs i resursbiblioteket.
 
    ![Lägg till resurs](assets/do-not-localize/add-asset.png)
 
@@ -79,17 +79,17 @@ När du har sparat och öppnat ditt nya innehållsfragment öppnas redigeraren f
 
 1. Innehållet i **cykling-tuscany** visas till höger. Markera bilden `ADOBESTOCK_141786166.JPEG`.
 
-1. Tryck eller klicka **Välj**.
+1. Välj **Välj**.
 
    ![Välj resurs](assets/do-not-localize/select-asset.png)
 
 1. Den valda bilden visas i innehållsfragmentet. Redigeraren sparar ändringarna automatiskt.
 
-1. När du är klar med att lägga till innehåll trycker du på eller klickar på **Publicera** längst upp till höger i redigeraren. Detta gör att ditt innehållsfragment blir tillgängligt för konsumtion i externa appar. Välj sedan **Nu** i listrutan. Du kan också schemalägga det för publicering vid ett senare tillfälle.
+1. När du är klar med att lägga till innehåll väljer du **Publicera** längst upp till höger i redigeraren. Detta gör att ditt innehållsfragment blir tillgängligt för konsumtion i externa appar. Välj sedan **Nu** i listrutan. Du kan också schemalägga det för publicering vid ett senare tillfälle.
 
    ![Publicera innehåll](assets/do-not-localize/publish.png)
 
-1. The **Publicera innehållsfragment** visas. AEM utför automatiskt en referenskontroll för att se till att alla nödvändiga resurser publiceras för ditt innehållsfragment. I det här fallet måste du även publicera modellen som du skapade. Tryck eller klicka **Publicera**.
+1. The **Publicera innehållsfragment** visas. AEM utför automatiskt en referenskontroll för att se till att alla nödvändiga resurser publiceras för ditt innehållsfragment. I det här fallet måste du även publicera modellen som du skapade. Välj **Publicera**.
 
    ![Publicerings- och referenskontroll](assets/do-not-localize/publish-confirm.png)
 

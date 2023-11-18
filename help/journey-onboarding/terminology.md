@@ -2,9 +2,9 @@
 title: AEM as a Cloud Service terminologi
 description: Innan du loggar in på AEMaaCS är det praktiskt att förstå en del av terminologin i systemet och dess grundläggande struktur.
 exl-id: d02776a7-836a-4894-a5d5-ae88cc7e4e76
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '463'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Nu när du förstår vad som har lett till introduktionsprocessen genom att läs
 
 AEM as a Cloud Service är ett kraftfullt och flexibelt verktyg och för att kunna använda vilket verktyg som helst måste du känna till dess organisation och det språk och terminologi som används för att beskriva den. I det här dokumentet sammanfattas några viktiga termer som du behöver förstå innan du börjar använda systemet.
 
-När du har läst det här dokumentet kommer du att förstå:
+När du har läst det här dokumentet bör du förstå
 
 * De olika lager som utgör AEMaaCS.
 * Grunderna i vad varje lager gör.
@@ -44,9 +44,9 @@ Ett exempel är ofta användbart när hierarkin ska sammanställas.
    * Ett Assets-program för WKND Media Division
 * Programmen WKND Magazine och WKND Media skulle ha både utveckling, staging och produktion **miljöer**.
 * **Databaser** används för att underhålla anpassad kod och program för WKND Magazine och WKND Media.
-* Olika **verktyg och arbetsflöden** arbeta i alla rapporter för att driftsätta kod med CI/CD-pipelines, åtkomstloggar, AEM etc.
+* Olika **verktyg och arbetsflöden** arbeta i alla rapporter för att driftsätta kod med CI/CD-pipelines, åtkomstloggar, AEM och så vidare.
 
-## What’s Next {#what-is-next}
+## What&#39;s Next {#what-is-next}
 
 Nu när du har slutfört den här delen av AEM introduktionsresa bör du förstå:
 

@@ -4,9 +4,9 @@ description: Lär dig hur AEM webbplatsmallar kan användas för att fördefinie
 feature: Administering
 role: Admin
 exl-id: 42eec922-b02e-4f2c-8107-7336192919c7
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '566'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Lär dig hur AEM webbplatsmallar kan användas för att fördefiniera webbplatss
 
 Det är bekvämt att ha fördefinierade strukturer tillgängliga för att snabbt kunna driftsätta en ny webbplats baserat på en uppsättning befintliga standarder. Webbplatsmallar är ett sätt att kombinera grundläggande webbplatsinnehåll i ett bekvämt och återanvändbart paket.
 
-Webbplatsmallar innehåller i allmänhet information om baswebbplatsinnehåll och struktur och webbplatsformat, som kallas [webbplatstema,](site-themes.md) för att snabbt komma igång med en ny webbplats. Administratörer väljer en webbplatsmall som webbplatsen ska baseras på [när webbplatsen skapades.](create-site.md)
+Webbplatsmallar innehåller i allmänhet information om baswebbplatsinnehåll samt struktur- och webbplatsformatmallar, som kallas [webbplatstema,](site-themes.md) för att snabbt komma igång med en ny webbplats. Administratörer väljer en webbplatsmall som webbplatsen ska baseras på [när webbplatsen skapades.](create-site.md)
 
 Mallarna är kraftfulla eftersom de kan återanvändas och anpassas. Och eftersom du kan ha flera mallar tillgängliga i AEM kan du skapa olika webbplatser som passar olika affärsbehov.
 
@@ -27,7 +27,7 @@ Mallarna är kraftfulla eftersom de kan återanvändas och anpassas. Och efterso
 >
 >AEM webbplatsmallar ska inte blandas ihop med [sidmallar](/help/sites-cloud/authoring/features/templates.md). Platsmallar definierar den övergripande strukturen för en plats. En sidmall definierar strukturen och det ursprungliga innehållet för en enskild sida.
 >
->AEM webbplatsmallar ska inte blandas ihop med [AEM webbplatsteman](site-themes.md). AEM webbplatsteman innehåller bara formatinformation för en AEM. AEM webbplatsmallar definierar webbplatsens struktur och innehåll samt innehåller ett AEM webbplatstema för [skapa webbplatser snabbt](create-site.md).
+>AEM webbplatsmallar ska inte blandas ihop med [AEM teman](site-themes.md). AEM webbplatsteman innehåller bara formatinformation för en AEM. AEM webbplatsmallar definierar webbplatsens struktur och innehåll samt innehåller ett AEM webbplatstema för [skapa webbplatser snabbt](create-site.md).
 
 ## Lägga till en platsmall i AEM {#adding}
 
@@ -37,15 +37,15 @@ Du kan lägga till flera mallar i AEM, som sedan kan användas för att [skapa w
 
    * `https://<your-author-environment>.adobeaemcloud.com/sites.html/content`
 
-1. Tryck eller klicka **Skapa** längst upp till höger på skärmen och i listrutan väljer **Plats från mall**.
+1. Välj **Skapa** längst upp till höger på skärmen och i listrutan väljer **Plats från mall**.
 
    ![Skapa en plats från en mall](../assets/create-site-from-template.png)
 
-1. Tryck eller klicka på i guiden Skapa plats **Importera** överst i den vänstra kolumnen.
+1. Välj **Importera** överst i den vänstra kolumnen.
 
    ![Guiden Skapa webbplats](../assets/site-creation-wizard.png)
 
-1. Leta reda på mallen som du vill använda i filläsaren och tryck eller klicka på **Överför**.
+1. Leta reda på mallen som du vill använda och välj **Överför**.
 
 1. När den har överförts visas den i listan med tillgängliga mallar.
 
@@ -61,8 +61,8 @@ Webbplatsmallar är helt enkelt paket med en logisk struktur som tydligt återsp
 
 * `files`: Mapp med UI-kit, XD och eventuellt andra filer
 * `previews`: Mapp med skärmbilder av platsmallen
-* `site`: Innehållspaket för det innehåll som kopieras för varje plats som skapas från den här mallen, t.ex. sidmallar, sidor osv.
-* `theme`: Källor till [webbplatstema](site-themes.md) för att ändra hur webbplatsen ser ut, t.ex. CSS, JavaScript osv.
+* `site`: Innehållspaket för det innehåll som kopieras för varje plats som skapas från den här mallen, till exempel sidmallar, sidor och så vidare.
+* `theme`: Källor till [webbplatstema](site-themes.md) om du vill ändra hur webbplatsen ser ut, t.ex. CSS, JavaScript och så vidare.
 
 ## Standardmall för webbplats {#standard-site-template}
 

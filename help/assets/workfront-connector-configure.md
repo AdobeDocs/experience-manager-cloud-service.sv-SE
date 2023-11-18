@@ -4,7 +4,7 @@ description: Konfigurera [!DNL Workfront for Experience Manager enhanced connect
 role: Admin
 feature: Integrations
 exl-id: d4e1247a-342c-4bc4-83bf-4e4902468fb3
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '1654'
 ht-degree: 0%
@@ -61,7 +61,7 @@ Så här prenumererar du på händelserna:
 ### Konfiguration av länkad mappstruktur {#linked-folder-structure}
 
 1. Gå till fliken Projektlänkade mappar i molntjänsterna.
-1. Länkad mappsökväg: Välj en mapp i DAM där du vill skapa de länkade mapparna. Om det lämnas tomt används /content/dam som standard. Se till att metadatamatchemat för Workfront Tools och Workfront-mappen för länkade mappar har tillämpats på den markerade mappen.
+1. Länkad mappens överordnade sökväg: Välj en mapp i DAM där du vill skapa de länkade mapparna. Om det lämnas tomt används /content/dam som standard. Se till att metadatamatchemat för Workfront Tools och Workfront-mappen för länkade mappar har tillämpats på den markerade mappen.
 1. Länkad mappstruktur: Ange kommaavgränsade värden. Varje värde ska `DE:<some-project-custom-form-field>`, Portfolio, Program, Year, Name eller lite Literal String Value (det här sista med citattecken). Den är för närvarande inställd på Portfolio, Program, År, DE:Projekttyp, Namn.
 1. Skapa länkad mapptitel i Workfront med hjälp av kryssrutan Mappstrukturnamn bör vara markerad om mappens titel i Workfront ska innehålla alla mappar i strukturen. I annat fall är det den sista mappens namn.
 1. Med undermappsmappar kan du ange en lista med mappar som ska skapas som en underordnad mapp till den länkade mappen.
@@ -76,14 +76,14 @@ Så här prenumererar du på händelserna:
 
 ### Konfigurera mappning av metadata {#folder-metadata-mapping}
 
-Metadatamappning mellan Workfront-projekt och AEM-mappar definieras AEM mappmetadatamappningar. Mappens metadatascheman ska skapas och konfigureras som vanligt i AEM. Workfront Tools lägger till en automatiskt ifylld listruta på konfigurationsfliken Inställningar för varje formulärfält för mappmetadataram. I den här listrutan kan du ange till vilket Workfront-fält varje AEM ska mappas.
+Metadatamappning mellan Workfront-projekt och AEM-mappar definieras AEM mappmetadatamappningar. Mappens metadatascheman ska skapas och konfigureras som vanligt i AEM. Workfront Tools lägger till en automatiskt ifylld listruta på konfigurationsfliken Inställningar i varje formulärfält för mappmetadataram. I den här listrutan kan du ange till vilket Workfront-fält varje AEM ska mappas.
 
 Så här konfigurerar du mappningarna:
 
 1. Lägg till `jcr:read` behörigheter till `/conf/global/settings/dam/adminui-extension/foldermetadataschema` for `wf-workfront-users` grupp.
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Folder Metadata Schemas]**.
 1. Markera det mappmetadatamatchschema som du vill redigera och klicka på Redigera.
-1. Markera det formulärfält för mappmetadatamatchema som du vill redigera och välj fliken Inställningar på den högra panelen.
+1. Markera det formulärfält för mappmetadataram som du vill redigera och välj fliken Inställningar på den högra panelen.
 1. I [!UICONTROL Mapped from Workfront Field] markerar du namnet på det Workfront-fält som du vill mappa till den markerade AEM mappegenskapen. Tillgängliga alternativ är:
 
    * Anpassade formulärfält för projekt
@@ -98,8 +98,8 @@ Metadatamappning mellan Adobe Workfront-dokument och -resurser definieras AEM me
 Så här konfigurerar du mappningarna:
 
 1. Navigera till **verktyg** > **Resurser** > **Metadata-scheman**.
-1. Markera det metadatamatchemaformulär som du vill redigera och klicka på **Redigera** eller skapa ett metadatamatchema från grunden.
-1. Markera det formulärfält för metadatdataschema som du vill redigera och markera **Inställningar** på den högra panelen.
+1. Välj det metadatamatchformulär som du vill redigera och klicka på **Redigera** eller skapa ett metadatamatchema från grunden.
+1. Markera det formulärfält för metadataschemat som du vill redigera och välj **Inställningar** på den högra panelen.
 1. I [!DNL Workfront] Anpassat formulärfält markerar namnet på [!DNL Workfront] fält som du vill mappa till den markerade AEM. Tillgängliga alternativ är:
 
    * Anpassade formulärfält för dokument
@@ -108,7 +108,7 @@ Så här konfigurerar du mappningarna:
    * Anpassade formulärfält för uppgift
    * Projektöversiktsfält (ID, namn, beskrivning eller referensnummer)
 
-1. I det fall [!DNL Workfront] fält markerat i [!UICONTROL Workfront Custom Form Field] är ett fält av typen Workfront-användare måste du ange vilket Workfront-användarfält som du vill mappa. Om du vill göra det markerar du Hämta värde från objektfältet som Workfront refererar till och anger sedan namnet på [!UICONTROL Workfront User Custom Form Field] som värdet ska mappas från.
+1. I det fall [!DNL Workfront] fält markerat i [!UICONTROL Workfront Custom Form Field] är ett fält av typen Workfront-användare måste du ange vilket Workfront-användarfält du vill mappa. Om du vill göra det markerar du Hämta värde från objektfältet som Workfront refererar till och anger sedan namnet på [!UICONTROL Workfront User Custom Form Field] som värdet ska mappas från.
 
    ![konfiguration för metadatamappning](/help/assets/assets/wf-metadata-mapping-config1.png)
 

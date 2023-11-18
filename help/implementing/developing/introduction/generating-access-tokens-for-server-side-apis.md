@@ -2,9 +2,9 @@
 title: Genererar åtkomsttoken för API:er på serversidan
 description: Lär dig att underlätta kommunikationen mellan en tredjepartsserver och AEM as a Cloud Service genom att generera en säker JWT-token
 exl-id: 20deaf8f-328e-4cbf-ac68-0a6dd4ebf0c9
-source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2089'
 ht-degree: 0%
 
 ---
@@ -23,12 +23,12 @@ Flödet server-till-server beskrivs nedan tillsammans med ett förenklat utveckl
 
 ## Server-till-server-flödet {#the-server-to-server-flow}
 
-Användare med en IMS-organisationsadministratörsroll, och som är medlem i produktprofilen AEM användare eller AEM administratörer på AEM Author, kan generera en uppsättning inloggningsuppgifter från AEM as a Cloud Service. Varje referens är en JSON-nyttolast som innehåller ett certifikat (den offentliga nyckeln), en privat nyckel och ett tekniskt konto som består av en `clientId` och `clientSecret`. Dessa autentiseringsuppgifter kan senare hämtas av en användare med AEM as a Cloud Service miljöadministratörsroll och bör installeras på en icke-AEM server och behandlas noggrant som en hemlig nyckel. Den här JSON-formatfilen innehåller alla data som behövs för att integrera med ett AEM as a Cloud Service API. Data används för att skapa en signerad JWT-token, som byts med Adobe Identity Management Services (IMS) för en IMS-åtkomsttoken. Denna åtkomsttoken kan sedan användas som en Bearer-autentiseringstoken för att göra förfrågningar till AEM as a Cloud Service. Certifikatet i inloggningsuppgifterna upphör att gälla efter ett år som standard, men de kan uppdateras vid behov enligt beskrivningen [här](#refresh-credentials).
+Användare med en IMS-organisationsadministratörsroll och som är medlem av produktprofilen AEM användare eller AEM administratörer AEM författare kan generera en uppsättning inloggningsuppgifter från AEM as a Cloud Service. Varje referens är en JSON-nyttolast som innehåller ett certifikat (den offentliga nyckeln), en privat nyckel och ett tekniskt konto som består av en `clientId` och `clientSecret`. Dessa autentiseringsuppgifter kan senare hämtas av en användare med AEM as a Cloud Service miljöadministratörsroll och bör installeras på en icke-AEM server och behandlas noggrant som en hemlig nyckel. Den här JSON-formatfilen innehåller alla data som behövs för att integrera med ett AEM as a Cloud Service API. Data används för att skapa en signerad JWT-token, som byts med Adobe Identity Management Services (IMS) för en IMS-åtkomsttoken. Denna åtkomsttoken kan sedan användas som en Bearer-autentiseringstoken för att göra förfrågningar till AEM as a Cloud Service. Certifikatet i inloggningsuppgifterna upphör att gälla efter ett år som standard, men de kan uppdateras vid behov enligt beskrivningen [här](#refresh-credentials).
 
-Flödet server-till-server omfattar följande steg:
+I flödet från server till server ingår följande steg:
 
 * Hämta autentiseringsuppgifterna på AEM as a Cloud Service från Developer Console
-* Installera autentiseringsuppgifterna för AEM as a Cloud Service på en icke-AEM server som gör anrop till AEM
+* Installera autentiseringsuppgifterna för AEM as a Cloud Service på en icke-AEM server som anropar AEM
 * Generera en JWT-token och byt ut denna token mot en åtkomsttoken med hjälp av Adobe IMS API:er
 * Anropa AEM-API:t med åtkomsttoken som en Bearer-autentiseringstoken
 * Ange lämplig behörighet för den tekniska kontoanvändaren i AEM
@@ -49,7 +49,7 @@ När inloggningsuppgifterna har skapats visas de under **Tekniska konton** i **I
 
 ![Visa autentiseringsuppgifter](/help/implementing/developing/introduction/assets/s2s-viewcredentials.png)
 
-Användarna kan senare visa inloggningsuppgifterna med åtgärden Visa. Dessutom kan användare redigera inloggningsuppgifterna för samma tekniska konto, vilket beskrivs senare i artikeln. De gör den här redigeringen genom att skapa en ny privat nyckel eller ett certifikat, i de fall då certifikatet måste förnyas eller återkallas.
+Användarna kan senare visa inloggningsuppgifterna med åtgärden Visa. Dessutom kan användare redigera inloggningsuppgifterna för samma tekniska konto, vilket beskrivs senare i artikeln. De utför redigeringen genom att skapa en privat nyckel eller ett certifikat, i de fall då certifikatet måste förnyas eller återkallas.
 
 Användare med rollen AEM as a Cloud Service miljöadministratör kan senare skapa autentiseringsuppgifter för ytterligare tekniska konton. Den här funktionen är användbar när olika API:er har olika åtkomstkrav. Till exempel läs kontra läs/skriv.
 
@@ -59,7 +59,7 @@ Användare med rollen AEM as a Cloud Service miljöadministratör kan senare ska
 
 >[!IMPORTANT]
 >
->En IMS-organisationsadministratör (vanligtvis samma användare som provisionerade miljön via Cloud Manager), som också är medlem i produktprofilen AEM användare eller AEM administratörer för AEM-författare, måste först få åtkomst till Developer Console. Klicka sedan på **Skapa nytt tekniskt konto** för de autentiseringsuppgifter som ska genereras och senare hämtas av en användare med administratörsbehörighet till den AEM as a Cloud Service miljön. Om IMS-organisationsadministratören inte har skapat det tekniska kontot än visas ett meddelande om att de behöver rollen IMS-organisationsadministratör.
+>En IMS-organisationsadministratör (vanligtvis samma användare som provisionerade miljön via Cloud Manager), som också är medlem i produktprofilen AEM användare eller AEM administratörer AEM författare, måste först få åtkomst till Developer Console. Klicka sedan på **Skapa nytt tekniskt konto** för de autentiseringsuppgifter som ska genereras och senare hämtas av en användare med administratörsbehörighet till den AEM as a Cloud Service miljön. Om IMS-organisationsadministratören inte har skapat det tekniska kontot än visas ett meddelande om att de behöver rollen IMS-organisationsadministratör.
 
 ### Installera autentiseringsuppgifterna för AEM på en icke-AEM server {#install-the-aem-service-credentials-on-a-non-aem-server}
 
@@ -89,7 +89,7 @@ exchange(config).then(accessToken => {
 });
 ```
 
-Samma utbyte kan utföras på vilket språk som helst som kan generera en signerad JWT-token med rätt format och anropa API:erna för IMS Token Exchange.
+Samma utbyte kan utföras på alla språk som kan generera en signerad JWT-token med rätt format och anropa API:erna för IMS Token Exchange.
 
 Åtkomsttoken definierar när den upphör att gälla, vilket vanligtvis är 24 timmar. Det finns exempelkod i Git-databasen för att hantera en åtkomsttoken och uppdatera den innan den upphör att gälla.
 
@@ -135,10 +135,10 @@ Först måste en ny produktprofil skapas i Adobe Admin Console.
 
 När du har gjort API-anropet visas produktprofilen som en användargrupp i den AEM as a Cloud Service författarinstansen, med lämpligt tekniskt konto som medlem i den gruppen.
 
-Så här kontrollerar du informationen:
+Så här kontrollerar du den här informationen:
 
 1. Logga in på författarinstansen.
-1. Gå till **verktyg** > **Säkerhet** klickar du på **Grupper** kort.
+1. Gå till **verktyg** > **Säkerhet** och klickar sedan på **Grupper** kort.
 1. Leta reda på namnet på profilen som du skapade i listan med grupper och klicka på den:
 
    ![Gruppprofil](/help/implementing/developing/introduction/assets/s2s-groupprofile.png)
@@ -162,7 +162,7 @@ Du kan också verifiera att det tekniska kontot visas i användarlistan genom at
 
 <u>**Ange lämpliga gruppbehörigheter**</u>
 
-Slutligen måste du konfigurera gruppen med de behörigheter som krävs så att du kan anropa eller låsa API:erna korrekt.
+Konfigurera slutligen gruppen med de behörigheter som krävs så att du kan anropa eller låsa API:erna på rätt sätt.
 
 1. Logga in på rätt författarinstans och navigera till **Inställningar** > **Säkerhet** > **Behörigheter**
 1. Sök efter namnet på gruppen som motsvarar produktprofilen i den vänstra rutan (i det här fallet skrivskyddade API:er) och markera den:
@@ -185,7 +185,7 @@ Slutligen måste du konfigurera gruppen med de behörigheter som krävs så att 
 
 Utvecklare vill antagligen testa med en utvecklingsinstans av sina icke-AEM program (som antingen körs på bärbara datorer eller på värdtjänster) som begär en utveckling AEM as a Cloud Service utvecklingsmiljö. Eftersom utvecklare inte nödvändigtvis har behörigheten IMS-administratörsroll kan Adobe inte anta att de kan generera JWT-bäraren som beskrivs i det vanliga server-till-server-flödet. Därför erbjuder Adobe en mekanism för en utvecklare att generera en åtkomsttoken direkt som kan användas i begäranden till miljöer på AEM as a Cloud Service som de har tillgång till.
 
-Se [Dokumentation till Developer Guidelines](/help/implementing/developing/introduction/development-guidelines.md#crxde-lite-and-developer-console) om du vill ha information om de behörigheter som krävs för att använda den AEM as a Cloud Service utvecklarkonsolen.
+Se [Dokumentation till Developer Guidelines](/help/implementing/developing/introduction/development-guidelines.md#crxde-lite-and-developer-console) för information om de behörigheter som krävs för att använda den AEM as a Cloud Service utvecklarkonsolen.
 
 >[!NOTE]
 >
@@ -198,7 +198,7 @@ Utvecklarflödet omfattar följande steg:
 * Generera en åtkomsttoken från Developer Console
 * Anropa AEM program med åtkomsttoken.
 
-Utvecklare kan också göra API-anrop till ett AEM projekt som körs på deras lokala dator. I så fall behövs ingen åtkomsttoken.
+Utvecklare kan också göra API-anrop till ett AEM projekt som körs på den lokala datorn. I så fall behövs ingen åtkomsttoken.
 
 ### Genererar åtkomsttoken {#generating-the-access-token}
 
@@ -239,7 +239,7 @@ Om den privata nyckeln komprometteras måste du skapa autentiseringsuppgifter me
 
    ![Privata nycklar i användargränssnittet](/help/implementing/developing/introduction/assets/s2s-twokeys.png)
 
-1. Installera de nya autentiseringsuppgifterna på den icke-AEM servern och kontrollera att anslutningen fungerar som förväntat. Se [Avsnittet Server-till-server-flöde](#the-server-to-server-flow) för mer information.
+1. Installera de nya autentiseringsuppgifterna på den icke-AEM servern och kontrollera att anslutningen fungerar som förväntat. Se [Avsnittet Server till serverflöde](#the-server-to-server-flow) för mer information.
 1. Återkalla det gamla certifikatet genom att välja tre punkter (**...**) till höger om certifikatet och välja **Återkalla**:
 
    ![Återkalla certifikat](/help/implementing/developing/introduction/assets/s2s-revokecert.png)

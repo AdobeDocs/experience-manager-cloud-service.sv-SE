@@ -2,9 +2,9 @@
 title: Kom igång med AEM Headless Translation
 description: Lär dig hur du ordnar ditt headless-innehåll och hur AEM översättningsverktyg fungerar.
 exl-id: 04ae2cd6-aba3-4785-9099-2f6ef24e1daf
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1422'
+source-wordcount: '1413'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Det här dokumentet hjälper dig att förstå hur du kommer igång med att över
 
 ## Krav och krav {#requirements-prerequisites}
 
-Det finns ett antal krav innan du börjar översätta ditt AEM innehåll.
+Det finns flera krav innan du börjar översätta ditt AEM innehåll utan rubrik.
 
 ### Kunskap {#knowledge}
 
@@ -78,17 +78,17 @@ Innehållsarkitekten arbetar tidigt i projektet för att definiera den här stru
 
 Eftersom innehållsmodellerna definierar innehållsstrukturen måste du veta vilka fält i modellerna som måste översättas. I allmänhet arbetar du med innehållsarkitekten för att definiera detta. Följ stegen nedan för att bläddra bland fälten i dina innehållsmodeller.
 
-1. Navigera till **verktyg** -> **Allmänt** -> **Modeller för innehållsfragment**.
-1. Modeller för innehållsfragment lagras vanligtvis i en mappstruktur. Tryck eller klicka på mappen för projektet.
-1. Modellerna listas. Tryck eller klicka på modellen för att visa informationen.
+1. Navigera till **verktyg** > **Allmänt** > **Modeller för innehållsfragment**.
+1. Modeller för innehållsfragment lagras vanligtvis i en mappstruktur. Välj mapp för ditt projekt.
+1. Modellerna listas. Markera modellen om du vill se detaljerna.
    ![Modeller för innehållsfragment](assets/content-fragment-models.png)
 1. The **Modellredigerare för innehållsfragment** öppnas.
    1. Den vänstra kolumnen innehåller modellens fält. Den här kolumnen intresserar oss.
    1. Den högra kolumnen innehåller de fält som kan läggas till i modellen. Den här kolumnen kan vi ignorera.
       ![Modellredigerare för innehållsfragment](assets/content-fragment-model-editor.png)
-1. Tryck eller klicka på ett av modellens fält. AEM markerar det och detaljerna för det fältet visas i den högra kolumnen.
+1. Markera ett av modellens fält. AEM markerar det och detaljerna för det fältet visas i den högra kolumnen.
    ![Information om Modellredigerare för innehållsfragment](assets/content-fragment-model-editor-detail.png)
-1. Innehållsarkitekten ger **Översättningsbar** på alla fält i innehållsmodellen som behöver översättas.
+1. Innehållsarkitekten ger **Översättningsbar** på alla fält i innehållsmodellen som måste översättas.
 
 >[!TIP]
 >

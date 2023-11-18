@@ -4,9 +4,9 @@ description: Lär dig de kraftfulla funktionerna i webbplatsspåret för att enk
 feature: Administering
 role: Admin
 exl-id: 45785e5a-4fa2-4cf2-a300-f1865f6f5807
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Markera platsens rot för att visa temainformation om platsen när webbplatsspå
 
 ![Hämta temakällor](/help/sites-cloud/administering/assets/download-theme-wireframe.png)
 
-Tryck eller klicka **Hämta temakällor** för att ladda ned en lokal kopia av webbplatstemat som `.zip` -fil för anpassning.
+Välj **Hämta temakällor** för att ladda ned en lokal kopia av webbplatstemat som `.zip` -fil för anpassning.
 
 ## Hämtar mallresurser {#downloading-template-resources}
 
@@ -48,7 +48,7 @@ Om webbplatsen är baserad på en webbplatsmall, där webbplatsspåret visas i p
 
 ![Hämta temakällor](/help/sites-cloud/administering/assets/download-theme-wireframe.png)
 
-Tryck eller klicka på knappen eller knapparna under rubriken **Hämta ytterligare mallresurser** om du vill hämta en lokal kopia av de tillgängliga filerna.
+Markera knappen eller knapparna under rubriken **Hämta ytterligare mallresurser** om du vill hämta en lokal kopia av de tillgängliga filerna.
 
 ## Visa och ändra temaversioner {#them-versions}
 
@@ -60,11 +60,11 @@ Markera platsens rot för att visa temainformation om platsen när webbplatsspå
 
 Den aktuella versionen av temat visas med sin implementeringshash tillsammans med tidsstämpeln för den senaste uppdateringen.
 
-Tryck eller klicka **Välj version** om du vill visa tidigare versioner av temat.
+Välj **Välj version** om du vill visa tidigare versioner av temat.
 
 ![Välj temaversion](/help/sites-cloud/administering/assets/select-theme-versions.png)
 
-Tryck eller klicka på den version du vill ändra till och tryck eller klicka sedan på **Använd** för att göra ändringen.
+Markera den version som du vill ändra till och välj sedan **Använd** för att göra ändringen.
 
 Om AEM upptäcker att en nyare version av temat har distribuerats via front end-pipeline men inte tillämpats på din webbplats, visas en meddelandeikon.
 
@@ -78,7 +78,7 @@ Om webbplatsen inte har skapats med en webbplatsmall går det inte att använda 
 
 Du kan emellertid aktivera frontendspipelinen för din webbplats med hjälp av platsspåret.
 
-När webbplatsspåret visas i webbplatskonsolen markerar du platsens rot för att visa temainformation om webbplatsen och trycker eller klickar sedan på **Aktivera frontdelspipeline**.
+Markera platsens rot för att visa temainformation om webbplatsen och välj sedan **Aktivera frontdelspipeline**.
 
 ![Aktivera frontendpipeline](/help/sites-cloud/administering/assets/enable-fep.png)
 

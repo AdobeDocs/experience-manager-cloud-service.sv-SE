@@ -2,16 +2,16 @@
 title: Komponenter
 description: Komponenter är den grundläggande byggstenen för innehållssidor i AEM
 exl-id: a8118329-1330-49b0-a3f8-a27774f1c5df
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
 
 # Komponenter {#components}
 
-Komponenter är den grundläggande byggstenen för innehållssidor i Adobe Experience Manager (AEM). Komponenter som bilder, text, titlar osv. kan enkelt dras och släppas för att skapa ditt innehåll.
+Komponenter är den grundläggande byggstenen för innehållssidor i Adobe Experience Manager (AEM). Komponenter som bilder, text, titlar och så vidare, kan enkelt dras och släppas för att skapa innehåll.
 
 AEM innehåller en mängd färdiga komponenter som ger omfattande funktionalitet för webbplatsförfattare. De är tillgängliga när [redigera en sida](/help/sites-cloud/authoring/fundamentals/editing-content.md) och grupperas efter huvudfunktionsområde (kallas komponentgrupp) för att underlätta filtreringen.
 

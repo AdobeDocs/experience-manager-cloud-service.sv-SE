@@ -2,9 +2,9 @@
 title: Skapa innehåll med den universella redigeraren
 description: Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
 exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '2432'
+source-wordcount: '2398'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ Klicka på länken Adobe Experience Cloud till vänster om rubriken för att nav
 
 #### Organisation {#organization}
 
-Här visas den organisation du är inloggad på. Tryck eller klicka för att växla till en annan organisation om din Adobe ID är kopplad till flera.
+Här visas den organisation du är inloggad på. Välj om du vill byta till en annan organisation om din Adobe ID är kopplad till flera.
 
 ![Organisationsindikator](assets/organization.png)
 
@@ -92,7 +92,7 @@ Den här ikonen är märkt med antalet tilldelade ofullständiga [meddelanden.](
 
 #### Användaregenskaper {#user-properties}
 
-Tryck eller klicka på ikonen som representerar användaren för att få åtkomst till dina användarinställningar. Om du inte har konfigurerat någon användarbild tilldelas ikonen slumpmässigt.
+Välj den ikon som representerar användaren för att få åtkomst till dina användarinställningar. Om du inte har konfigurerat någon användarbild tilldelas ikonen slumpmässigt.
 
 ![Användaregenskaper](assets/user-properties.png)
 
@@ -118,7 +118,7 @@ På startsidan anger du URL-adressen till den webbplats som du vill redigera med
 
 #### Platsfält {#location-bar}
 
-Platsfältet visar adressen till sidan som du redigerar. Tryck eller klicka för att ange adressen till en annan sida som ska redigeras.
+Platsfältet visar adressen till sidan som du redigerar. Välj det här alternativet om du vill ange adressen till en annan sida som ska redigeras.
 
 ![Platsfält](assets/location-bar.png)
 
@@ -132,13 +132,13 @@ Platsfältet visar adressen till sidan som du redigerar. Tryck eller klicka för
 
 #### Inställningar för autentiseringshuvud {#authentication-settings}
 
-Tryck eller klicka på ikonen för inställningar för autentiseringshuvudet om du behöver ange en autentiseringshemlighet.
+Välj ikonen med inställningar för autentiseringshuvudet om du behöver ange en autentiseringshemlighet.
 
 ![Inställningsknapp för autentiseringsrubriker](assets/authentication-header-settings.png)
 
 #### Emulatorinställningar {#emulator}
 
-Tryck eller klicka på emuleringsikonen för att definiera hur den universella redigeraren ska återge sidan.
+Välj emuleringsikonen för att definiera hur den universella redigeraren ska återge sidan.
 
 ![Emulatorikon](assets/emulator.png)
 
@@ -156,7 +156,7 @@ Du kan också välja att emulera en mobil enhet och i Universell redigerare:
 
 #### Öppna programförhandsgranskning {#open-app-preview}
 
-Tryck eller klicka på ikonen för att öppna förhandsgranskning av program för att öppna sidan som du redigerar på en egen webbläsarflik, utan redigeraren, för att förhandsgranska innehållet.
+Välj ikonen för förhandsgranskning av öppna program om du vill öppna sidan som du redigerar på en egen webbläsarflik, utan redigeraren, för att förhandsgranska innehållet.
 
 ![Öppna appförhandsgranskning](assets/open-app-preview.png)
 
@@ -166,7 +166,7 @@ Tryck eller klicka på ikonen för att öppna förhandsgranskning av program fö
 
 #### Publicera {#publish}
 
-Tryck eller klicka på publiceringsknappen så att du kan publicera ändringarna i innehållet live för läsning.
+Välj publiceringsknappen så att du kan publicera ändringarna i innehållet live för att användas av läsarna.
 
 ![Knappen Publicera](assets/publish.png)
 
@@ -182,7 +182,7 @@ Lägesfältet ligger precis under hemknappen och finns alltid till vänster i re
 
 #### Förhandsgranskningsläge {#preview-mode}
 
-I förhandsgranskningsläget återges sidan i redigeraren som den skulle se ut i din publicerade tjänst. Detta gör att innehållsförfattaren kan navigera i innehållet genom att klicka på länkar, osv.
+I förhandsgranskningsläget återges sidan i redigeraren som den skulle se ut i din publicerade tjänst. Det gör att innehållsförfattaren kan navigera i innehållet genom att klicka på länkar och så vidare.
 
 ![Förhandsgranskningsläge](assets/preview-mode.png)
 
@@ -254,13 +254,13 @@ När du väljer ett objekt i innehållsträdet rullar redigeraren till det inneh
 
 ##### Redigera {#edit}
 
-När [komponentläge,](#component-mode) Redigeringsalternativen för den markerade komponenten visas i egenskapsfältet. I egenskapsfältet kan du redigera den markerade komponenten. Om den markerade komponenten är ett innehållsfragment kan du också trycka eller klicka på redigeringsknappen.
+När [komponentläge,](#component-mode) Redigeringsalternativen för den markerade komponenten visas i egenskapsfältet. I egenskapsfältet kan du redigera den markerade komponenten. Om den markerade komponenten är ett innehållsfragment kan du även välja redigeringsknappen.
 
 ![Ikonen Redigera](assets/edit.png)
 
 Om du trycker eller klickar på redigeringsknappen öppnas knappen [Innehållsfragmentsredigerare](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor) på en ny flik. Detta ger dig tillgång till den fulla kraften i Content Fragment Editor för att redigera det tillhörande innehållsfragmentet.
 
-Beroende på arbetsflödets behov kan du redigera innehållsfragmentet i den universella redigeraren eller direkt i redigeraren för innehållsfragment.
+Beroende på arbetsflödets behov kan du behöva redigera innehållsfragmentet i den universella redigeraren eller direkt i redigeraren för innehållsfragment.
 
 >[!TIP]
 >
@@ -300,7 +300,7 @@ Det är enkelt och intuitivt att redigera innehåll. I [komponentläge](#compone
 
 >[!TIP]
 >
->Observera att när du trycker eller klickar på innehåll i komponentläget markeras det för redigering. Om du vill navigera i ditt innehåll genom att följa länkar växlar du till [förhandsgranskningsläge.](#preview-mode)
+>Observera att när du trycker eller klickar på innehåll i komponentläget markeras det för redigering. Om du vill navigera i innehållet genom att följa länkar växlar du till [förhandsgranskningsläge.](#preview-mode)
 
 Beroende på vilket innehåll du väljer kan du ha olika redigeringsalternativ på plats och du kan få ytterligare information och alternativ för innehållet i [Egenskaper.](#properties-rail)
 
@@ -310,9 +310,9 @@ Om du är [komponentläge](#component-mode) och markerar en oformaterad textkomp
 
 ![Redigera innehåll](assets/editing-content.png)
 
-Tryck på Enter eller tryck eller klicka utanför textrutan för att spara ändringarna.
+Tryck på Enter eller välj utanför textrutan för att spara ändringarna.
 
-När du trycker eller klickar för att markera textkomponenten visas detaljerna i egenskapsfältet. Du kan också redigera texten på rälsen.
+När du väljer att markera textkomponenten visas informationen om den i egenskapsfältet. Du kan också redigera texten på rälsen.
 
 ![Redigera text i egenskapsfältet](assets/ue-editing-text-component-rail.png)
 
@@ -322,7 +322,7 @@ Dessutom finns information om texten i egenskapsfältet. Ändringarna sparas aut
 
 Om du är [komponentläge](#component-mode) och markerar en RTF-komponent kan du redigera texten på plats genom att dubbelklicka eller dubbelklicka på komponenten.
 
-Tryck på Enter eller tryck eller klicka utanför textrutan för att spara ändringarna.
+Tryck på Enter eller välj utanför textrutan för att spara ändringarna.
 
 ![Redigera en RTF-komponent](assets/rich-text-editing.png)
 
@@ -334,11 +334,11 @@ Om du är [komponentläge](#component-mode) och du väljer en bild kan du visa i
 
 ![Redigera media](assets/ue-edit-media.png)
 
-Tryck eller klicka på **Ersätt** under förhandsgranskningen av den markerade bilden i egenskapsfältet för att ersätta bilden med en annan bild från ditt resursbibliotek.
+Välj **Ersätt** under förhandsgranskningen av den markerade bilden i egenskapsfältet för att ersätta bilden med en annan bild från ditt resursbibliotek.
 
 1. The [resursväljare](/help/assets/asset-selector.md#using-asset-selector) öppnas så att du kan välja en resurs.
-1. Tryck eller klicka för att välja en ny resurs.
-1. Tryck eller klicka **Välj** för att gå tillbaka till egenskapsfältet där tillgången ersattes.
+1. Välj för att välja en ny resurs.
+1. Välj **Välj** för att gå tillbaka till egenskapsfältet där tillgången ersattes.
 
 Ändringarna sparas automatiskt i innehållet.
 
@@ -360,12 +360,12 @@ Om du markerar ett fält som är relaterat till ett innehållsfragment läses in
 
 Om du vill redigera ditt innehållsfragment i dialogrutan [Innehållsfragmentsredigerare](/help/sites-cloud/administering/content-fragments/authoring.md) i stället klickar du på [redigeringsknapp](#edit) i lägesrälen.
 
-Beroende på arbetsflödets behov kan du redigera innehållsfragmentet i den universella redigeraren eller direkt i redigeraren för innehållsfragment.
+Beroende på arbetsflödets behov kan du behöva redigera innehållsfragmentet i den universella redigeraren eller direkt i redigeraren för innehållsfragment.
 
 ### Lägga till komponenter i behållare {#adding-components}
 
 1. Markera en behållarkomponent i innehållsträdet eller i redigeraren.
-1. Tryck eller klicka sedan på ikonen Lägg till i egenskapsfältet.
+1. Välj sedan ikonen Lägg till i egenskapsfältet.
 
    ![Välja en komponent som ska läggas till i en behållare](assets/ue-add-component.png)
 
@@ -378,9 +378,9 @@ Komponenten infogas i behållaren och kan redigeras i redigeraren.
 ### Ta bort komponenter från behållare {#deleting-components}
 
 1. Markera en behållarkomponent i innehållsträdet eller i redigeraren.
-1. Tryck eller klicka på ikonen för avfasning för behållaren för att expandera dess innehåll i innehållsträdet.
+1. Markera ikonen för avfasning för behållaren för att expandera dess innehåll i innehållsträdet.
 1. Markera sedan en komponent i behållaren i innehållsträdet.
-1. Tryck eller klicka på ikonen Ta bort i egenskapsfältet.
+1. Markera borttagningsikonen i egenskapsfältet.
 
    ![Ta bort en komponent](assets/ue-delete-component.png)
 
@@ -394,7 +394,7 @@ Den markerade komponenten har tagits bort.
 
 1. Markera en behållarkomponent i innehållsträdet eller i redigeraren.
 1. Om inte redan [content tree-läge,](#content-tree-mode) växla till den.
-1. Tryck eller klicka på ikonen för avfasning för behållaren för att expandera dess innehåll i innehållsträdet.
+1. Markera ikonen för avfasning för behållaren för att expandera dess innehåll i innehållsträdet.
 1. Dra handtagsikonerna intill komponenterna i behållaren för att visa att du kan ordna om dem. Dra komponenterna för att ordna om dem i behållaren.
 
    ![Ändra ordning på komponenter](assets/ue-reordering-components.png)
