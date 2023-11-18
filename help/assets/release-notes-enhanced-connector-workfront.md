@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 description: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 16aa0241dd954b7f66523d746827d81b956578bd
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1324'
 ht-degree: 0%
 
 ---
@@ -15,20 +15,14 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Work
 
 ## Releasedatum {#release-date}
 
-Releasedatum för den senaste versionen, 1.9.14 av [!DNL Workfront for Experience Manager enhanced connector] är 13 oktober 2023.
+Releasedatum för den senaste versionen, 1.9.15 av [!DNL Workfront for Experience Manager enhanced connector] är 17 november 2023.
 
 ## Frigör högdagrar {#release-highlights}
 
 Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connector] innehåller följande felkorrigeringar:
 
-* När händelseprenumerationer är inaktiverade under Avancerade inställningar kan du fortfarande välja alternativ för att **Prenumerera på dokumentuppdateringshändelser för att uppdatera AEM metadata**, **Publicera allt projektmaterial till Brand Portal när projektet är klart** och **Aktivera kommentarsynkronisering**.
-
-* Vissa av resurserna som lagras i Experience Manager återges inte korrekt när du förhandsgranskar dem i Workfront.
-
-* Vid omkonfigurering av Experience Manager-anslutning med Workfront skapas inte händelseprenumerationer som uppdatering av kommentarsynkronisering, borttagning och dokumentuppdatering.
-
-* Större prestandaförbättringar i API för att skapa länkade mappar, uppdatera, aktivera länkade mappar, aktivera och inaktivera kommentarsynkronisering, spara avancerade inställningar på koppling.
-
+* När du visar listan med AEM mappar tar det mer än en minut att läsa in dialogrutan.
+* Auktoriserad [!DNL Workfront] -användare får upprepade gånger felloggar för autentiseringsfel.
 
 >[!NOTE]
 >
@@ -37,7 +31,7 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 >[!IMPORTANT]
 >
->Adobe rekommenderar dig [uppgradera till den senaste 1.9.14-versionen](/help/assets/workfront-connector-install.md) i [!DNL Workfront for Experience Manager enhanced connector].
+>Adobe rekommenderar dig [uppgradera till den senaste 1.9.15-versionen](/help/assets/workfront-connector-install.md) i [!DNL Workfront for Experience Manager enhanced connector].
 
 ## Kända fel {#known-issues}
 
@@ -46,6 +40,16 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 * När du använder den klassiska Workfront-upplevelsen är **[!UICONTROL Send to]** som finns i **[!UICONTROL More]** I den nedrullningsbara listan kan du inte välja måldestinationen i Experience Manager. The **[!UICONTROL Send to]** fungerar korrekt med **[!UICONTROL Document Actions]** listruta. The **[!UICONTROL Send to]** alternativet fungerar korrekt för **[!UICONTROL More]** nedrullningsbar lista och **[!UICONTROL Document Actions]** nedrullningsbar lista som finns i nya Workfront.
 
 ## Tidigare versioner {#previous-releases}
+
+### Oktober 2023-versionen {#october-2023-release}
+
+* När händelseprenumerationer är inaktiverade under Avancerade inställningar kan du fortfarande välja alternativ för att **Prenumerera på dokumentuppdateringshändelser för att uppdatera AEM metadata**, **Publicera allt projektmaterial till Brand Portal när projektet är klart** och **Aktivera kommentarsynkronisering**.
+
+* Vissa av resurserna som lagras i Experience Manager återges inte korrekt när du förhandsgranskar dem i Workfront.
+
+* Vid omkonfigurering av Experience Manager-anslutning med Workfront skapas inte händelseprenumerationer som uppdatering av kommentarsynkronisering, borttagning och dokumentuppdatering.
+
+* Större prestandaförbättringar i API för att skapa länkade mappar, uppdatera, aktivera länkade mappar, aktivera och inaktivera kommentarsynkronisering, spara avancerade inställningar på koppling.
 
 ### September 2023-utgåvan {#september-2023-release}
 
