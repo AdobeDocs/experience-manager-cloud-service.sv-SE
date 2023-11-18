@@ -2,7 +2,7 @@
 title: Förhandsgranska sidor med ContextHub-data
 description: Verktygsfältet ContextHub visar data från ContextHub-butiker och gör att du kan ändra lagringsdata. Det är användbart för förhandsgranskning av innehåll
 exl-id: 9c0536c5-900e-4814-9e31-f9fee5adc17c
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 2%
@@ -46,7 +46,7 @@ Gränssnittsmoduler kan visa data från en eller flera ContextHub-butiker i verk
 
 ### Popup-innehåll {#popup-content}
 
-Vissa gränssnittsmoduler visar en popup-övertäckning när de klickas eller trycks på. Vanligtvis innehåller popup-fönstret mer information än vad som visas i verktygsfältet.
+I vissa gränssnittsmoduler visas en popup-övertäckning när användaren klickar eller trycker på den. Vanligtvis innehåller popup-fönstret mer information än vad som visas i verktygsfältet.
 
 ![Profilinformation för ContextHub](/help/sites-cloud/authoring/assets/contexthub-profile.png)
 

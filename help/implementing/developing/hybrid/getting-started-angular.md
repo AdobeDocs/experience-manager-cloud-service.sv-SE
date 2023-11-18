@@ -2,9 +2,9 @@
 title: Komma igång med SPA i AEM med Angular
 description: I den här artikeln visas ett exempel SPA programmet, hur det sätts ihop och hur du snabbt kommer igång med ditt eget SPA med hjälp av ramverket för Angular.
 exl-id: 8013ac2c-d1a7-4940-bb65-15e3ed7652d6
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '989'
 ht-degree: 0%
 
 ---
@@ -239,7 +239,7 @@ export class ImageComponent {
 MapTo('my-angular-app/components/image')(ImageComponent, ImageEditConfig);
 ```
 
-Det centrala SPA i AEM är att mappa SPA komponenter till AEM och uppdatera komponenten när innehållet ändras (och vice versa). Se dokumentet [SPA](editor-overview.md) för en sammanfattning av den här kommunikationsmodellen.
+Det centrala SPA i AEM är att mappa SPA komponenter till AEM och uppdatera komponenten när innehållet ändras (och omvänt). Se dokumentet [SPA](editor-overview.md) för en sammanfattning av den här kommunikationsmodellen.
 
 `MapTo('my-angular-app/components/image')(Image, ImageEditConfig);`
 

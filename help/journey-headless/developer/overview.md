@@ -3,9 +3,9 @@ title: AEM Headless CMS Developer Journey
 description: Läs om headless-utveckling med Adobe Experience Manager (AEM) som Headless CMS. Lär dig hur du använder funktioner som innehållsmodeller, innehållsfragment och ett GraphQL-API för att leverera headless-innehåll.
 landing-page-description: Få en förståelse för innehållsleverans och implementering utan problem. Läs mer om hur ni utvecklar er strategi inom ert företag.
 exl-id: d14a1e30-dd04-49a8-8cda-27c80a4bb0f5
-source-git-commit: 94e5d0e84d5c55d0ff61a705e079b4dc8e32a777
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1095'
 ht-degree: 1%
 
 ---
@@ -28,11 +28,11 @@ Läs om de kraftfulla och flexibla headless-funktionerna, deras funktioner och h
 
 Vid den Headless-implementeringen av AEM används Content Fragments-modeller och Content Fragments för att fokusera på att skapa strukturerade, kanalneutrala och återanvändbara fragment av innehåll och deras flerkanalsleverans. För att uppnå detta glömmer man att hantera sidor och komponenter på samma sätt som man gör i helstackslösningar. Det är ett modernt och dynamiskt utvecklingsmönster för implementering av digitala upplevelser.
 
-Den här guiden leder dig igenom rubrikfria implementeringsämnen i AEM så när du är klar kommer du att:
+Den här guiden leder dig igenom rubrikfria implementeringsämnen i AEM så att du när du är klar kan:
 
 * Få en fullständig förståelse för vad headless content delivery är och dess fördelar.
 * Förstå AEM headless-funktioner och hur de fungerar tillsammans för att leverera en headless-upplevelse.
-* Har möjlighet att ta de första stegen för att implementera ditt första AEM headless-projekt.
+* Ta de första stegen för att implementera ditt första AEM headless-projekt.
 
 >[!TIP]
 >

@@ -2,9 +2,9 @@
 title: Hur skaffar man referensteman och mallar för AEM?
 description: AEM Forms innehåller exempel på adaptiva formulärteman, mallar och formulärdatamodeller som hjälper dig att snabbt skapa formulär.
 exl-id: 81588759-22da-4123-92fe-5ca97e97f1e4
-source-git-commit: 046ffed13569ca3f9c104fb4525d28361873277a
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '867'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ Med den grundläggande mallen kan du snabbt skapa ett registreringsformulär. Du
 Den adaptiva Forms kan sedan interagera med Microsoft Dynamics 365- och Salesforce-servrar för att möjliggöra affärsarbetsflöden. Till exempel:
 
 * Skriv in data i Microsoft Dynamics 365 och Salesforce när ni skickar adaptiva formulär.
-* Skriv data i Microsoft Dynamics 365 och Salesforce via anpassade entiteter som definierats i formulärdatamodellen och vice versa.
+* Skriv data i Microsoft Dynamics 365 och Salesforce via anpassade entiteter som definierats i formulärdatamodellen och omvänt.
 * Fråga Microsoft Dynamics 365- och Salesforce-servern efter data och fyll i adaptiva Forms i förväg.
 * Läs data från Microsoft Dynamics 365- och Salesforce-servern.
 

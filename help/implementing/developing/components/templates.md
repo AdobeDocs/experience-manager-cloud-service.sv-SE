@@ -2,9 +2,9 @@
 title: Sidmallar
 description: Sidmallar används när du skapar en sida som används som bas för den nya sidan
 exl-id: ea42fce9-9af2-4349-a4e4-547e6e8da05c
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '3279'
+source-wordcount: '3278'
 ht-degree: 0%
 
 ---
@@ -449,7 +449,7 @@ Definierar det ursprungliga innehåll som en ny sida kommer att ha när den skap
 * Sammanfogas med strukturen ( `/structure`) när du skapar en sida.
 * Befintliga sidor uppdateras inte om det ursprungliga innehållet ändras efter att de har skapats.
 * The `root` noden innehåller en lista med komponenter som definierar vad som är tillgängligt på den resulterande sidan.
-* Om innehåll läggs till i en komponent i strukturläge och den komponenten sedan låses upp (eller vice versa), används det här innehållet som ursprungligt innehåll.
+* Om innehåll läggs till i en komponent i strukturläge och komponenten sedan låses upp (eller omvänt), används det här innehållet som ursprungligt innehåll.
 
 ### Layout {#layout}
 

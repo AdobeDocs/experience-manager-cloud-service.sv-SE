@@ -2,9 +2,9 @@
 title: Trafikfilterregler inklusive WAF-regler
 description: Konfigurera trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF)
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '3435'
+source-wordcount: '3437'
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ Nedan följer en högnivårekommenderad process från början till slut för att
 The `kind` parametern ska anges till `CDN` och versionen bör anges till schemaversionen, som för närvarande är `1`. Se exemplen längre fram.
 
 
-<!-- Two properties -- `envType` and `envId` -- may be included to limit the scope of the rules. The envType property may have values "dev", "stage", or "prod", while the envId property is the environment (e.g., "53245"). This approach is useful if it is desired to have a single configuration pipeline, even if some environments have different rules. However, a different approach could be to have multiple configuration pipelines, each pointing to different repositories or git branches. -->
+<!-- Two properties -- `envType` and `envId` -- may be included to limit the scope of the rules. The envType property may have values "dev", "stage", or "prod", while the envId property is the environment (for example, "53245"). This approach is useful if it is desired to have a single configuration pipeline, even if some environments have different rules. However, a different approach could be to have multiple configuration pipelines, each pointing to different repositories or git branches. -->
 
 1. Om WAF-regler är licensierade bör du aktivera funktionen i Cloud Manager, enligt beskrivningen nedan för både nya och befintliga programscenarier.
 
@@ -119,7 +119,7 @@ Kommandoraden kommer att användas för RDE, men RDE stöds inte för närvarand
 
 **Anteckningar**
 
-* Du kan använda `yq` för att lokalt validera YAML-formateringen i konfigurationsfilen (t.ex. `yq cdn.yaml`).
+* Du kan använda `yq` för att lokalt validera YAML-formateringen i konfigurationsfilen (till exempel `yq cdn.yaml`).
 
 ## Syntax för trafikfilterregler {#rules-syntax}
 
@@ -489,7 +489,7 @@ Reglerna fungerar på följande sätt:
 
 * Alla matchande regelnamn som har deklarerats av kunden listas i `match` -attribut.
 * The `action` -attribut avgör om reglerna har effekten av att blockera, tillåta eller logga.
-* Om WAF är licensierat och aktiverat visas `waf` Alla WAF-flaggor (t.ex. SQLI) som har identifierats listas i -attributet, oavsett om WAF-flaggorna finns listade i några regler eller inte. Detta är för att ge insikter i eventuella nya regler att deklarera.
+* Om WAF är licensierat och aktiverat visas `waf` Alla WAF-flaggor (till exempel SQLI) som har identifierats listas, oavsett om WAF-flaggorna finns listade i några regler. Detta är för att ge insikter i eventuella nya regler att deklarera.
 * Om inga kunddeklarerade regler matchar och inga SWF-regler matchar `rules` egenskapen kommer att vara tom.
 
 Som tidigare nämnts visas matchningar av WAF-regler endast i CDN-loggar för CDN-missar och -pass, inte träffar.

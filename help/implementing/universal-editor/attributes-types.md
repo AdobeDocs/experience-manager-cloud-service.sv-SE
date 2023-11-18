@@ -2,9 +2,9 @@
 title: Attribut och typer
 description: Läs mer om de dataattribut och datatyper som krävs för den universella redigeraren.
 exl-id: 02795a31-244a-42b4-8297-2649125d7777
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '682'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ För att ett program ska kunna redigeras av den universella redigeraren måste d
 | `data-editor-itemfilter` | Definierar vilka referenser som kan användas |
 | `data-editor-itemlabel` | Definierar en anpassad etikett för ett markeringsbart objekt som visas i redigeraren <br>Om `itemmodel` är inställd hämtas etiketten med hjälp av modellen |
 | `data-editor-itemmodel` | Definierar en modell som används för formulärbaserad redigering i egenskapsfältet |
-| `data-editor-behavior` | Definierar beteendet för en instrumentering, t.ex. fristående text eller bild kan också efterlikna en komponent så att den kan flyttas eller tas bort |
+| `data-editor-behavior` | Definierar beteendet för en instrumentering, t.ex. fristående text eller bild, kan också efterlikna en komponent så att den kan flyttas eller tas bort |
 
 ## Objekttyper {#item-types}
 
@@ -40,10 +40,10 @@ För att ett program ska kunna redigeras av den universella redigeraren måste d
 |---|---|---|---|---|---|---|---|
 | `text` | Texten kan redigeras i HTML-taggarna, men bara i ett enkelt textformat, ingen formatering, det här används ofta för rubrikkomponenter, till exempel | Valfritt | Obligatoriskt | n/a | Valfritt | n/a | Valfritt |
 | `richtext` | Texten kan redigeras med omfattande textfunktioner. RTE visas på den högra panelen | Valfritt | Obligatoriskt | n/a | Valfritt | n/a | Valfritt |
-| `media` | Det redigerbara är en resurs, t.ex. bild eller video | Valfritt | Obligatoriskt | Valfritt<br>lista med bild- eller videofiltervillkor som skickas till resursväljaren | Valfritt | n/a | Valfritt |
+| `media` | Det redigerbara objektet är en resurs, till exempel bild eller video | Valfritt | Obligatoriskt | Valfritt<br>lista med bild- eller videofiltervillkor som skickas till resursväljaren | Valfritt | n/a | Valfritt |
 | `container` | De redigerbara funktionerna fungerar som behållare för komponenter som kallas Styckesystem. | Beroende <br>se nedan | Beroende <br>se nedan | Valfritt<br>en lista över tillåtna komponenter | Valfritt | n/a | n/a |
 | `component` | Det redigerbara är en komponent. Det lägger inte till ytterligare funktioner. Det är obligatoriskt att ange flyttbara/borttagbara delar av DOM och att öppna egenskapsspåret och dess fält | Obligatoriskt | n/a | n/a | Valfritt | Valfritt | n/a |
-| `reference` | Det redigerbara är en referens, t.ex. Content Fragment, Experience Fragment eller Product | Beroende <br>se nedan | Beroende <br>se nedan | Valfritt<br>lista med villkor för innehållsfragment, produkt eller Experience Fragment-filter som skickas vidare till referensväljaren | Valfritt | Valfritt | n/a |
+| `reference` | Det redigerbara är en referens, till exempel Innehållsfragment, Upplevelsefragment eller Produkt | Beroende <br>se nedan | Beroende <br>se nedan | Valfritt<br>lista med villkor för innehållsfragment, produkt eller Experience Fragment-filter som skickas vidare till referensväljaren | Valfritt | Valfritt | n/a |
 
 Beroende på användningsfallet `itemprop` eller `itemid` kan vara nödvändigt eller inte. Till exempel:
 

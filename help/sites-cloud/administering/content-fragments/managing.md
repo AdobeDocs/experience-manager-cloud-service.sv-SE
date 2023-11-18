@@ -4,7 +4,7 @@ description: Lär dig hur du hanterar AEM innehållsfragment från konsolen och 
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '2531'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Lär dig hantera dina **Innehållsfragment** i Adobe Experience Manager (AEM) as
 
 >[!NOTE]
 >
->Ditt projektteam kan vid behov anpassa konsolen och redigeraren. Se [Anpassa konsolen och redigeraren för innehållsfragment](/help/implementing/developing/extending/content-fragments-console-and-editor.md) för mer information.
+>Ditt projektteam kan anpassa konsolen och redigeraren om det behövs. Se [Anpassa konsolen och redigeraren för innehållsfragment](/help/implementing/developing/extending/content-fragments-console-and-editor.md) för mer information.
 
 När du har definierat [Modeller för innehållsfragment](#creating-a-content-model) kan du använda dessa för att:
 
@@ -225,7 +225,7 @@ Så här skapar du ett innehållsfragment:
 
 1. The **Nytt innehållsfragment** öppnas dialogrutan där du kan ange:
 
-   * **Plats** - den här fylls i automatiskt med den aktuella platsen, men du kan välja en annan plats om det behövs
+   * **Plats** - detta fylls i automatiskt med den aktuella platsen, men du kan välja en annan plats om det behövs
    * **Content Fragment Model** - välj den modell som ska användas som bas för fragmentet i listrutan.
    * **Titel**
    * **Namn** - detta slutförs automatiskt baserat på **Titel**, men du kan redigera det om det behövs

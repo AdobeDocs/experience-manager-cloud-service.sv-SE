@@ -2,9 +2,9 @@
 title: Ytterligare publiceringsregioner
 description: Läs om hur AEM as a Cloud Service stöder ytterligare publiceringsregioner för ökad tillgänglighet och minskad latens.
 exl-id: b9ac3c6a-eb8b-461d-8f1d-a0356046a3f9
-source-git-commit: c0c669f847c9ef64b1fa22cfc24ac693c3c8ad90
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---

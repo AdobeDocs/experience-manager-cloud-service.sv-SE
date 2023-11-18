@@ -2,9 +2,9 @@
 title: Din inkorg
 description: Lär dig hur du använder meddelanden som kommer in i din Inkorg för att hantera dina uppgifter.
 exl-id: 37d0cf43-192f-4a50-b174-42d7dced3b63
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '911'
 ht-degree: 14%
 
 ---
@@ -148,7 +148,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
    Beroende på om en dialogruta, guide, dokumentationssida har öppnats kan du:
 
-   * Bekräfta lämplig åtgärd, t.ex. omtilldelning.
+   * Bekräfta lämplig åtgärd, till exempel omtilldelning.
    * Avbryt åtgärden
    * Välj bakåtpilen för att återgå till inkorgen, t.ex. om en åtgärdsguide eller dokumentationssida har öppnats, kan du återgå till inkorgen.
 

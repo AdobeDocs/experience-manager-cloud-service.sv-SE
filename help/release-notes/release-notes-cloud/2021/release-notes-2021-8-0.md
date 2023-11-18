@@ -2,7 +2,7 @@
 title: Versionsinformation om 2021.8.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2021.8.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 8b041934-1c4a-4670-9b03-d38f683b99e5
-source-git-commit: f956b8379b5b93bc00e25f0eec641430c5565e34
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '1023'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Ta en titt på [Versionsöversikt augusti 2021](https://video.tv.adobe.com/v/336
 ### Fel som har åtgärdats i [!DNL Assets] {#assets-bugs-fixed}
 
 * När en medlem i medverkargruppen navigerar till [!DNL Assets] Konsol, en extra `POST` begäran genereras för att skapa en samling. Denna begäran är inte obligatorisk. Den misslyckas på grund av behörighetsproblem och skapar många fel i loggarna. (CQ-4328856)
-* När användare visar en resurs och väljer [!UICONTROL Timeline] på popup-menyn i den vänstra panelen visas ett fel. I loggarna loggas många varningar på grund av en felaktig fråga. (CQ-4328919)
+* När användare visar en resurs och väljer [!UICONTROL Timeline] på snabbmenyn i den vänstra panelen visas ett fel. I loggarna loggas många varningar på grund av en felaktig fråga. (CQ-4328919)
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
 
@@ -74,7 +74,7 @@ Ta en titt på [Versionsöversikt augusti 2021](https://video.tv.adobe.com/v/336
 
 * **Anslut enkelt AEM Forms med Microsoft® Dynamics och Salesforce.com** - Tjänsten tillhandahåller out of the box-datakällkonfiguration och datamodeller för Microsoft® Dynamics och Salesforce.com. Detta gör det snabbare och enklare för utvecklare att konfigurera Microsoft® Dynamics och Salesforce.com som datakällor för ett anpassat formulär.
 
-## CIF-tillägg {#cloud-services-cif}
+## CIF {#cloud-services-cif}
 
 ### Nyheter {#what-is-new-cif}
 

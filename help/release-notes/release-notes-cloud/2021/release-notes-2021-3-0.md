@@ -2,7 +2,7 @@
 title: Versionsinformation för 2021.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2021.3.0."
 exl-id: 0c07364c-ba25-4081-8e35-3c1c84ed556f
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '1290'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuella (senaste) versionen av [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
->Härifrån kan du navigera till versionsinformation för tidigare versioner; till exempel för 2020, 2021 och så vidare.
+>Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2020, 2021 och så vidare.
 
 >[!NOTE]
 >
@@ -45,14 +45,14 @@ Ability to select a root path. select if a minimum number of tags is required.
 
 Add a Boolean or radio widget type to metadata schema setup. -->
 
-* [!DNL Experience Manager] utökar funktionen för anslutna resurser så att den stöder användning av [!DNL Dynamic Media] bilder i de kärnkomponenter som stöds. Se [använd anslutna resurser](/help/assets/use-assets-across-connected-assets-instances.md).
+* [!DNL Experience Manager] utökar funktionerna för anslutna resurser så att de kan använda [!DNL Dynamic Media] bilder i de kärnkomponenter som stöds. Se [använd anslutna resurser](/help/assets/use-assets-across-connected-assets-instances.md).
 * Experience Manager-administratörer kan schemalägga inmatningar av gruppresurser vid ett visst datum eller en viss tidpunkt. Administratörer kan även schemalägga återkommande frågor baserat på datum och tid. Se [massmaterialinmatning](/help/assets/add-assets.md#asset-bulk-ingestor).
 
 ### Felkorrigeringar i [!DNL Assets] {#bug-fixes-assets}
 
 * Copyright-sidan visas inte när du försöker hämta flera rättighetshanterade resurser. (CQ-4314403)
 * När du väljer att redigera en INDD-fil ändras upplösningen oväntat. (CQ-4317376)
-* Det är bara mallens sista sida i PDF Rendering som finns där. (CQ-4317305)
+* Det är bara den sista InDesignen i mallen som finns i renderingen PDF. (CQ-4317305)
 * Det tar lång tid att öppna taggväljaren när väljaren är en del av ett komplext metadataschema. (CQ-4316426)
 * När du överför en resurs med samma filnamn som en befintlig, visas inte dialogrutan för namnkonflikt för att uppmana användaren att skapa en version. (CQ-4315424)
 * Egenskaper för mappmetadata kan anges och sparas på popup-menyn på mappens egenskapssida. När markeringen sparas i databasen visas den inte när mappmetadataegenskaperna öppnas igen. (CQ-4314429)
@@ -68,7 +68,7 @@ Du kan kontakta din Adobe-representant för att få en demo eller anmäla dig ti
 
 ## Adobe Experience Manager Commerce as a Cloud Service {#cloud-services-commerce}
 
-### Vad är nytt? {#what-is-new-commerce}
+### Nyheter {#what-is-new-commerce}
 
 * Stöd för Adobe Commerce 2.4.2
 
@@ -76,7 +76,7 @@ Du kan kontakta din Adobe-representant för att få en demo eller anmäla dig ti
 
 * Lanserade CIF Venia Reference Site - 2021.03.25 som innehåller den senaste CIF Core Components version v1.9.0. Se [CIF Venias referenswebbplats](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.03.25) för mer information.
 
-* Frisläppta CIF-kärnkomponenter v1.9.0. Se [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.9.0) för mer information.
+* Frisläppta CIF kärnkomponenter v1.9.0. Se [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.9.0) för mer information.
 
 
 ## Cloud Manager {#cloud-manager}
@@ -106,13 +106,13 @@ Nästa version är planerad till den 8 april 2021.
 
 * Etiketten **Ansökan om godkännande** har fått en ny etikett till **Produktionsgodkännande** för större tydlighet.
 
-* The **Version** etiketten har ändrats till **Git-tagg** i körningsfönstret för produktionspipeline.
+* The **Version** etiketten har ändrats till **Git-kod** i körningsfönstret för produktionspipeline.
 
 * Etiketterna som definierar beteendet när viktiga mätvärden inte uppfyller det definierade tröskelvärdet har märkts om för att återspegla deras verkliga beteende: **Avbryt omedelbart** och **Godkänn omedelbart**.
 
 * Listorna över klass- och metodborttagning har uppdaterats baserat på version `2021.3.4997.20210303T022849Z-210225` av AEM Cloud Service SDK.
 
-* Produktionspipelinen för Cloud Manager kommer nu att innehålla [Testning av anpassat användargränssnitt](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing) funktioner.
+* Produktionspipelinen för Cloud Manager kommer nu att innehålla [Anpassade gränssnittstestningar](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing) funktioner.
 
 ### Felkorrigeringar {#bug-fixes-cm-march}
 
@@ -167,7 +167,7 @@ Releasedatum för Best Practices Analyzer v2.1.8 är 22 mars 2021.
 
 ### Nyheter i verktygen för kodkorrigering {#what-is-new-crt}
 
-* Nya funktioner och förbättringar för Databasmodernisering. Se [GitHub-resurs: Databasmodernisering](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer) för den senaste versionen.
+* Nya funktioner och förbättringar för Databasmodernisering. Se [GitHub-resurs: Databasmoderering](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer) för den senaste versionen.
    * Normalisera OSGi-konfigurationer (utom RepoInit-konfigurationer) till det önskade .cfg.json-formatet.
    * Byt namn på OSGi-konfigurationsmappar till det angivna formatet.
    * Generera ui.apps.structure-projektet.

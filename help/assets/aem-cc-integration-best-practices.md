@@ -6,7 +6,7 @@ mini-toc-levels: 1
 feature: Collaboration,Adobe Asset Link,Desktop App
 role: Architect,User,Admin
 exl-id: cbed0d62-5148-45eb-b6a0-9fd164060fdc
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '3489'
 ht-degree: 13%
@@ -82,7 +82,7 @@ Ta hänsyn till följande alternativ om du vill stödja användningsexempel för
 * [Experience Manager Assets Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html) för ett konfigurerbart tillägg till Assets för att publicera resurser.
 
 * Anpassade lösningar skapas baserat på [Kommandon för resursdelning](https://opensource.adobe.com/asset-share-commons/) kodbas.
-* Experience Manager [länkresurs](/help/assets/share-assets.md) för att dela resurser för särskilda ändamål med hjälp av länkar.
+* Experience Manager [länkresurs](/help/assets/share-assets.md) för att dela resurser på begäran med hjälp av länkar.
 * [Resursens webbgränssnitt](/help/assets/manage-digital-assets.md) med områden för externa parter som skyddas av Experience Manager Access Control-installationen och med nödvändiga IT-/nätverkskonfigurationsjusteringar, vilket ger dessa externa användare tillgång till Experience Manager.
 
 ## Viktiga begrepp och användningsområden {#key-concepts-and-use-cases}

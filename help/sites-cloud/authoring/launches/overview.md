@@ -2,9 +2,9 @@
 title: Launches
 description: Med lanseringar kan du effektivt utveckla innehåll för en framtida release. De gör att du kan göra ändringar redo för framtida publicering, samtidigt som du behåller dina aktuella sidor
 exl-id: 3e410120-d08f-4d05-932f-07bc4440af2b
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '898'
 ht-degree: 5%
 
 ---
@@ -102,7 +102,7 @@ Med Launes kan du:
 
 ## Startkonsolen {#the-launches-console}
 
-På startkonsolen får du en översikt över dina starter och kan vidta åtgärder för dem som visas. Konsolen kan nås av:
+På startkonsolen får du en översikt över dina starter och kan agera på dem som visas. Konsolen kan nås av:
 
 * The **verktyg** Konsol: **verktyg**, **Webbplatser**, **Startar**.
 

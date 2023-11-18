@@ -2,7 +2,7 @@
 title: Skapa produktionsprogram
 description: Lär dig hur du använder Cloud Manager för att skapa ett eget produktionsprogram för livstrafik.
 exl-id: 4ccefb80-de77-4998-8a9d-e68d29772bb4
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Följ de här stegen för att skapa ett produktionsprogram.
 
 1. Du kan också lägga till en bild i programmet genom att dra och släppa en bildfil i **Lägg till en programavbildning** markera eller klicka på en bild i en filläsare. Välj **Fortsätt**.
 
-1. Om du har de rättigheter du behöver **Säkerhet** visas och du kan välja att aktivera **HIPAA** och/eller **WAF-DDOS-skydd** för produktionsprogrammet. Om det behövs för det program du skapar ska du kontrollera tillämpliga alternativ och sedan välja **Fortsätt**.
+1. Om du har de rättigheter du behöver **Säkerhet** visas och du kan välja att aktivera **HIPAA** och/eller **WAF-DDOS-skydd** för produktionsprogrammet. Om det behövs för det program du skapar kontrollerar du de tillämpliga alternativen och väljer sedan **Fortsätt**.
 
    * HIPAA kan inte aktiveras eller inaktiveras efter att programmet har skapats.
       * [Läs mer](https://www.adobe.com/go/hipaa-ready) om implementering av Adobe HIPAA-klar lösning.

@@ -4,7 +4,7 @@ description: Läs om de kraftfulla synkroniseringsalternativen för Live Copy oc
 feature: Multi Site Manager
 role: Admin
 exl-id: 0c97652c-edac-436e-9b5b-58000bccf534
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '2414'
 ht-degree: 0%

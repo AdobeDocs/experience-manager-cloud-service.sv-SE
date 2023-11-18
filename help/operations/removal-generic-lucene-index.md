@@ -2,7 +2,7 @@
 title: Generisk borttagning av Lucene-index
 description: Lär dig mer om den planerade borttagningen av generiska Lucene-index och hur du kan påverkas.
 exl-id: 3b966d4f-6897-406d-ad6e-cd5cda020076
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '1335'
 ht-degree: 0%

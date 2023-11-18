@@ -2,9 +2,9 @@
 title: Universal Editor Architecture
 description: Läs mer om arkitekturen i den universella redigeraren och hur data flödar mellan tjänster och lager.
 exl-id: e6f40743-0f21-4fb6-bf23-76426ee174be
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '651'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ I det här dokumentet beskrivs dessa byggstenar och hur de utbyter data.
 ### Redigerare {#editors}
 
 * **Universal Editor** - Universell redigerare använder en instrumenterad DOM för att tillåta redigering på plats av innehåll. Se [Attribut och typer](attributes-types.md) om du vill ha information om nödvändiga metadata. Se dokumentet [Komma igång med Universal Editor i AEM](getting-started.md) för ett exempel på instrumentering i AEM.
-* **Properties Rail** - Vissa egenskaper hos komponenterna kan inte redigeras i sitt sammanhang, t.ex. rotationstid för en karusell eller vilken dragspelsflik som alltid ska öppnas eller stängas. För att sådan komponentinformation ska kunna redigeras finns en formulärbaserad redigerare i sidlisten i redigeraren.
+* **Properties Rail** - Vissa egenskaper hos komponenter kan inte redigeras i sitt sammanhang, till exempel ska en karusells rotationstid eller vilken dragspelsflik alltid öppnas eller stängas. För att sådan komponentinformation ska kunna redigeras finns en formulärbaserad redigerare i sidlisten i redigeraren.
 
 ### Remote App {#remote-app}
 

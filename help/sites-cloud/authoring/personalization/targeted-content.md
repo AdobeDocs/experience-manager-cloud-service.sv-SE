@@ -2,9 +2,9 @@
 title: Skapa riktat innehåll med målläge
 description: Målinriktningsläget och Target-komponenten innehåller verktyg för att skapa innehåll för upplevelser
 exl-id: 8d80d867-2d0f-4ddb-8a06-f9441e6d85ce
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '5306'
+source-wordcount: '5304'
 ht-degree: 5%
 
 ---
@@ -585,7 +585,7 @@ Använd följande verktyg för att simulera besökarens upplevelse:
 
    Sidan ändras för att visa innehållet som är avsett för den aktuella kontexten.
 
-1. Om du vill ändra de erbjudanden som visas växlar du till målläget. När simuleringsaktiviteten är markerad redigerar du erbjudandena för den kontext som du konfigurerade i förhandsgranskningsläget.
+1. Om du vill ändra erbjudandena som visas växlar du till målläget. När simuleringsaktiviteten är markerad redigerar du erbjudandena för den kontext som du konfigurerade i förhandsgranskningsläget.
 
 ## Konfigurera alternativ för målkomponent {#configuring-target-component-options}
 

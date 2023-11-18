@@ -2,9 +2,9 @@
 title: Publicera översatt rubrikfritt innehåll
 description: Lär dig hur du publicerar översatt innehåll och uppdaterar översättningarna när innehållet uppdateras.
 exl-id: eb8d1152-ed37-47ca-86a8-6a66c010ee62
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1359'
 ht-degree: 0%
 
 ---
@@ -155,7 +155,7 @@ Grattis! Du har fullföljt den headless översättningsresan! Nu bör du:
 * Få en översikt över vad headless content delivery är.
 * Få en grundläggande förståelse AEM headless-funktioner.
 * Förstå AEM översättningsfunktioner och hur de relaterar till headless-innehåll.
-* Har möjlighet att börja översätta sitt eget headless-innehåll.
+* Förmåga att börja översätta sitt eget headless-innehåll.
 
 Nu kan du översätta ditt eget headless-innehåll i AEM. AEM är dock ett kraftfullt verktyg och det finns många andra alternativ. Se vilka ytterligare resurser som finns i [Avsnittet Ytterligare resurser](#additional-resources) om du vill veta mer om de funktioner du såg under den här resan.
 

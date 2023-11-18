@@ -2,9 +2,9 @@
 title: Publicera innehåll med den universella redigeraren
 description: Lär dig hur den universella redigeraren publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
 exl-id: aee34469-37c2-4571-806b-06c439a7524a
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '360'
 ht-degree: 0%
 
 ---

@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Interactive Images,Interactive Videos,Carousel Banners
 role: Admin,User
 exl-id: c2bc6ec8-d46e-4681-ac3e-3337b9e6ae5c
-source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Quickview stöds av följande visningsprogram i Dynamic Media:
     <tbody>
     <tr>
     <td><strong>Visningsprogram som du använder</strong></td>
-    <td><strong>Följ de här stegen för att skapa snabbvyn</strong></td>
+    <td><strong>Så här skapar du snabbvyn:</strong></td>
     </tr>
     <tr>
     <td>Interaktiva bilder</td>
@@ -144,9 +144,10 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
    * Mappa eventuella ytterligare variabler som finns i snabbvyn.
 
       * Uppdatera `loadQuickView(sku,*var1*,*var2*)` anropa om du lägger till fler variabler.
+
    * Skapa en enkel `loadQuickView` () på sidan, utanför visningsprogrammet.
 
-      Följande skriver till exempel värdet på SKU till webbläsarkonsolen:
+     Följande skriver till exempel värdet på SKU till webbläsarkonsolen:
 
    ```xml {.line-numbers}
    function loadQuickView(sku){
@@ -156,11 +157,9 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
 
    * Ladda upp en testsida för HTML till en webbserver och öppna den.
 
-      Variablerna från snabbvyn mappas. Funktionsanropet är på plats. Och webbläsarkonsolen skriver variabelvärdet till webbläsarkonsolen. Detta görs med den exempelfunktion som finns.
+     Variablerna från snabbvyn mappas. Funktionsanropet är på plats. Och webbläsarkonsolen skriver variabelvärdet till webbläsarkonsolen. Detta görs med den exempelfunktion som finns.
 
-
-
-1. Du kan nu använda en funktion för att anropa ett enkelt popup-fönster i snabbvyn. I följande exempel används en `DIV` för en popup.
+1. Du kan nu använda en funktion för att anropa ett enkelt popup-fönster i snabbvyn. I följande exempel används en `DIV` för ett popup-fönster.
 1. Formatera popup-fönstret `DIV` på följande sätt. Lägg till extra formatering efter behov.
 
    ```xml {.line-numbers}
@@ -192,7 +191,7 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
    <script type="text/javascript">
        function loadQuickView(sku){
            document.getElementById("txtSku").setAttribute("value",sku); // write sku value
-           document.getElementById("quickview_div").style.display="block"; // show popup
+           document.getElementById("quickview_div").style.display="block"; // show pop-up
        }
    </script>
    ```

@@ -2,9 +2,9 @@
 title: AEM översättningsresa utan rubrik
 description: Börja här för en guidad resa genom att översätta ert headless-innehåll med AEM kraftfulla översättningsverktyg.
 exl-id: b677f691-5257-43c3-a4b9-c34932577b31
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1037'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Den här guiden leder dig igenom de viktigaste rubrikfria översättningsämnena
 * Få en översikt över vad headless content delivery är.
 * Få en grundläggande förståelse AEM headless-funktioner.
 * Förstå AEM översättningsfunktioner och hur de relaterar till headless-innehåll.
-* Har möjlighet att börja översätta sitt eget headless-innehåll.
+* Kan börja översätta sitt eget headless-innehåll.
 
 Målet är att ge er en bred förståelse för headless-teknik, hur AEM tjänar headless-innehåll och hur ni kan översätta det. Om du inte är bekant med något av dessa ämnen är detta den idealiska platsen att börja på.
 

@@ -2,7 +2,7 @@
 title: Använda CRXDE Lite
 description: CRXDE Lite är en del av AEM snabbstart och är tillgängligt för dig att komma åt och ändra databasen i dina lokala utvecklingsmiljöer i webbläsaren.
 exl-id: 1581a7e5-6f84-4a45-8e8f-c83692ea077a
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '1685'
 ht-degree: 0%

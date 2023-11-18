@@ -2,9 +2,9 @@
 title: Hur hanterar jag taggar i resursvyn?
 description: Lär dig hur du hanterar taggar i resursvyn. Taggar hjälper dig att kategorisera resurser som kan bläddras och sökas effektivare.
 exl-id: 7c5e1212-054f-46ca-9982-30e40b0482e1
-source-git-commit: 0109cea1be85e647fb6c04dde4714b162bdc75a5
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '1422'
+source-wordcount: '1416'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="assets_taxonomy_management"
 >title="Hantera taggar"
->abstract="Taggar hjälper dig att kategorisera resurser som kan bläddras och sökas effektivare. Administratörer kan använda den hierarkiska taggningsstrukturen, som gör det lättare att använda relevanta metadata, kategorisera resurser, söka, återanvända taggar, förbättra upptäckbarheten och så vidare."
+>abstract="Taggar hjälper dig att kategorisera resurser som kan bläddras och sökas effektivare. Administratörer kan använda den hierarkiska taggningsstrukturen, som gör det lättare att använda relevanta metadata, kategorisera resurser, stödja sökning, återanvända taggar, förbättra upptäckbarheten och så vidare."
 
 Taggar hjälper dig att kategorisera resurser som kan bläddras och sökas effektivare. Taggning hjälper till att sprida rätt taxonomi till andra användare och arbetsflöden.
 
-Platta listor med kontrollerade vokabulärer kan bli ohanterliga över tid. Administratörer kan använda den hierarkiska taggningsstrukturen, som gör det lättare att använda relevanta metadata, kategorisera resurser, söka, återanvända taggar, förbättra upptäckbarheten och så vidare.
+Platta listor med kontrollerade vokabulärer kan bli ohanterliga över tid. Administratörer kan använda den hierarkiska taggningsstrukturen, som gör det lättare att använda relevanta metadata, kategorisera resurser, stödja sökning, återanvända taggar, förbättra upptäckbarheten och så vidare.
 
 Du kan skapa ett namnutrymme på rotnivå och skapa en hierarkisk struktur med undertaggar i namnutrymmet. Du kan till exempel skapa en `Activities` namnutrymme på rotnivå och har `Cycling`, `Hiking`och `Running` -taggar i namnutrymmet. Du kan ha fler undertaggar `Clothing` och `Shoes` inom `Running`.
 

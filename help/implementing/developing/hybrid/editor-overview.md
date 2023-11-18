@@ -2,9 +2,9 @@
 title: SPA
 description: Den här artikeln innehåller en omfattande översikt över SPA Editor och hur den fungerar. Den innehåller detaljerade arbetsflöden för interaktion med SPA Editor i AEM.
 exl-id: 9814d86e-8d87-4f7f-84ba-6943fe6da22f
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '1632'
+source-wordcount: '1633'
 ht-degree: 0%
 
 ---
@@ -181,7 +181,7 @@ AEM SPA Editor SDK stöds fullt ut av Adobe och fortsätter att förbättras och
 * Målläge
 * ContextHub
 * Redigering av infogad bild
-* Redigera konfigurationer (t ex avlyssnare)
+* Redigera konfigurationer (till exempel avlyssnare)
 * Ångra/Gör om
 * Sidskillnader och tidsförskjutning
 * Funktioner för att skriva om HTML på serversidan, som Länkkontroll, CDN-omskrivartjänst, URL-förkortning och så vidare.

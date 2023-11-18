@@ -2,7 +2,7 @@
 title: Använda bibliotek på klientsidan på AEM as a Cloud Service
 description: AEM innehåller biblioteksmappar på klientsidan, som gör att du kan lagra klientsidans kod (klientlibs) i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
 exl-id: 370db625-09bf-43fb-919d-4699edaac7c8
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '2551'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Clientlibs är den inbyggda lösningen för CSS och JavaScript från AEM.
 
 ## Vad är klientbibliotek? {#what-are-clientlibs}
 
-Webbplatser kräver JavaScript och CSS samt statiska resurser som ikoner och webbteckensnitt för att behandlas på klientsidan. En klientlib är AEM som refererar (efter kategori om det behövs) och betjänar sådana resurser.
+Webbplatser kräver JavaScript och CSS samt statiska resurser som ikoner och webbteckensnitt för att behandlas på klientsidan. En klientlib är en AEM som refererar (vid behov efter kategori) och betjänar sådana resurser.
 
 AEM samlar in webbplatsens CSS och JavaScript i en enda fil, på en central plats, för att säkerställa att endast en kopia av en resurs inkluderas i HTML-utdata. Detta maximerar effektiviteten vid leverans och gör att sådana resurser kan underhållas centralt i databasen via proxy, vilket skyddar åtkomsten.
 

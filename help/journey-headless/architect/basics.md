@@ -2,9 +2,9 @@
 title: Lär dig grunderna i innehållsmodellering
 description: Lär dig grunderna i att modellera innehåll för headless CMS med hjälp av innehållsfragment.
 exl-id: dc460490-dfc8-4a46-a468-3d03e593447d
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '900'
 ht-degree: 1%
 
 ---
@@ -109,7 +109,7 @@ Datatypen kan konfigureras så att fragmentförfattare kan:
 
 >[!NOTE]
 >
->Du kan också skapa ad hoc-referenser genom att använda länkar i textblock.
+>Du kan också skapa improviserade referenser genom att använda länkar i textblock.
 
 ## Strukturnivåer (kapslade fragment) {#levels-of-structure-nested-fragments}
 

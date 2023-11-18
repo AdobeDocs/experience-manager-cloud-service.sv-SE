@@ -4,9 +4,9 @@ description: Få en introduktion till att återanvända innehåll med AEM kraftf
 feature: Multi Site Manager
 role: Admin
 exl-id: 22b4041f-1df9-4189-8a09-cbc0c89fbf2e
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '2702'
+source-wordcount: '2698'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Med Multi Site Manager (MSM) kan du använda samma platsinnehåll på flera plat
    * Skapa innehåll en gång och sedan
    * Återanvänd det här innehållet i andra områden (via [Live-kopior](#live-copies)) på samma eller andra webbplatser.
 * MSM upprätthåller sedan Live-relationerna mellan källinnehållet och dess Live-kopior så att:
-   * När du gör ändringar i källinnehållet synkroniseras källan och Live-kopior.
+   * När du ändrar källinnehållet synkroniseras källan och Live-kopior.
    * Du kan bara justera innehållet i Live-kopior genom att koppla från direktrelationen för enskilda undersidor och/eller komponenter.
 
 Den här sidan ger en översikt över återanvändning av innehåll med MSM. Följande sidor handlar om relaterade frågor i detalj.
@@ -189,7 +189,7 @@ I föregående exempel `/content/wknd/language-masters/en` är den globala huvud
 
 * Innehållet nedan `/content/wknd/language-masters/en` är källan.
 * Innehållet nedan `/content/wknd/language-masters/en` kopieras under `/content/wknd/us/en/` och `/content/wknd/ca/en` noder. Det här är Live-kopior.
-* Författare gör ändringar på sidorna nedan `/content/wknd/language-masters/en`.
+* Författare ändrar sidor nedan `/content/wknd/language-masters/en`.
 * När MSM aktiveras synkroniseras dessa ändringar med Live-kopior.
 
 ### Live-kopior - komposition {#live-copies-composition}
@@ -323,7 +323,7 @@ Följande steg beskriver standardproceduren för att använda MSM för att åter
    1. Om du vill kan du [skapa en utrullningskonfiguration](live-copy-sync-config.md#creating-a-rollout-configuration) vid behov.
 
 1. Bestäm var du behöver [ange de utrullningskonfigurationer som ska användas](live-copy-sync-config.md#specifying-the-rollout-configurations-to-use) och konfigurera efter behov.
-1. Om det behövs, [skapa en ritningskonfiguration](creating-live-copies.md#creating-a-blueprint-configuration) som identifierar källinnehållet i Live Copy.
+1. Vid behov, [skapa en ritningskonfiguration](creating-live-copies.md#creating-a-blueprint-configuration) som identifierar källinnehållet i Live Copy.
 1. [Skapa en Live-kopia.](creating-live-copies.md#creating-a-live-copy)
 1. Ändra källinnehållet efter behov. Ni bör använda den normala process för granskning och godkännande av innehåll som er organisation har etablerat.
 1. [Rulla ut](creating-live-copies.md#rolling-out-a-blueprint) ritningen, eller [synkronisera Live Copy](creating-live-copies.md#synchronizing-a-live-copy) med ändringarna.

@@ -2,7 +2,7 @@
 title: Modeller för innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur Content Fragment Models fungerar som grund för ditt headless-innehåll i AEM och hur du skapar innehållsfragment med strukturerat innehåll.
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '2931'
 ht-degree: 2%
@@ -153,7 +153,7 @@ Många egenskaper är självförklarande, för vissa egenskaper finns ytterligar
 De olika alternativen för att realisera/återge fältet i ett fragment. Med den här egenskapen kan du ofta definiera om författaren ska se en enda instans av fältet eller om han eller hon ska kunna skapa flera instanser.
 
 * **Fältetikett**
-Ange en **Fältetikett** genererar automatiskt en **Egenskapsnamn**, som sedan kan uppdateras manuellt vid behov.
+Ange en **Fältetikett** genererar automatiskt en **Egenskapsnamn**, som sedan kan uppdateras manuellt om det behövs.
 
 * **Validering**
 Grundläggande validering är tillgängligt via funktioner som **Obligatoriskt** -egenskap. Vissa datatyper har ytterligare valideringsfält. Se [Validering](#validation) för mer information.

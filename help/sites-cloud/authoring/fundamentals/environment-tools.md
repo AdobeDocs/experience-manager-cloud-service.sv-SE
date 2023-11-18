@@ -2,9 +2,9 @@
 title: Redigeringsmiljö och -verktyg
 description: I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll
 exl-id: cc3bd4cf-93bd-429d-9a2a-4a02a7b42f7c
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '2158'
+source-wordcount: '2161'
 ht-degree: 8%
 
 ---
@@ -288,7 +288,7 @@ Du kommer åt dessa med ikonerna i det övre högra hörnet. Den faktiska ikonen
 >* Beroende på sidans egenskaper kanske vissa lägen inte är tillgängliga.
 >* Åtkomst till vissa lägen kräver lämplig behörighet/behörighet.
 >* Utvecklarläget är inte tillgängligt på mobila enheter på grund av utrymmesbegränsningar.
->* Det finns en [kortkommando](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) ( `Ctrl-Shift-M`) för att växla mellan **Förhandsgranska** och det valda läget (till exempel **Redigera**, **Layout**, etc).
+>* Det finns en [kortkommando](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) ( `Ctrl-Shift-M`) för att växla mellan **Förhandsgranska** och det valda läget (till exempel **Redigera**, **Layout** och så vidare).
 >
 
 ## Banmarkering {#path-selection}
@@ -315,7 +315,7 @@ Sökvägsläsaren är ordnad som [kolumnvy](/help/sites-cloud/authoring/getting-
 
 ![Sökvägsläsaren](/help/sites-cloud/authoring/assets/path-browser.png)
 
-* När en resurs har valts **Välj** knappen längst upp till höger i dialogrutan aktiveras. Markera för att bekräfta markeringen eller **Avbryt** för att avbryta.
+* När en resurs har valts **Välj** knappen längst upp till höger i dialogrutan blir aktiv. Markera för att bekräfta markeringen eller **Avbryt** för att avbryta.
 * Om det går att välja flera resurser aktiveras även knappen **Välj** när du väljer en resurs och antalet valda resurser läggs till i det övre högra hörnet fönstret. Klicka på **X** bredvid talet för att avmarkera alla.
 * När du navigerar genom trädet visas platsen i de synliga kolumnerna högst upp i dialogrutan. Dessa vägbeskrivningar kan också användas för att snabbt hoppa in i resurshierarkin.
 * Du kan när som helst använda sökfältet högst upp i dialogrutan. Klicka på **X** i sökfältet för att rensa sökningen.

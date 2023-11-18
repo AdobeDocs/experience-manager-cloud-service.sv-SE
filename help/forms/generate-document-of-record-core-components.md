@@ -2,9 +2,9 @@
 title: Hur skapar man urkunder för Adaptive Forms?
 description: Lär dig att generera en mall för ett dokument för inspelning (Document of Record, DoR) för adaptiva Forms Core-komponenter.
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
-source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '3007'
+source-wordcount: '3005'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,7 @@ Du kan använda skicka-åtgärder som&quot;Skicka e-post&quot;,&quot;Anropa ett 
 
 Anpassningsbara formulär och motsvarande dokument med postmallar kan utvecklas under en längre tid. Du kan välja att lägga till, ta bort eller ändra fält i ett adaptivt formulär eller en dokumentmall.
 
-När du ändrar i en dokumentmall och överför den ändrade dokumentmallen till AEM Forms, identifierar den adaptiva Forms-redigeraren automatiskt de ändrade bindningarna och informerar dig om adaptiva formulärkomponenter som kräver nya bindningar. Du kan göra inkrementella uppdateringar i en dokumentmall.
+När du ändrar en dokumentmall och överför den ändrade dokumentmallen till AEM Forms, identifierar den adaptiva Forms-redigeraren automatiskt de ändrade bindningarna och informerar dig om adaptiva formulärkomponenter som kräver nya bindningar. Du kan göra inkrementella uppdateringar i en dokumentmall.
 
 Exempel: en organisation *Vi.butik* har en AcroForm-baserad dokumentmall, *we-retail-invoice.pdf*. Mallen ser ut så här:
 

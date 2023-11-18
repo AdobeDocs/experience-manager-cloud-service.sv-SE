@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: afb3de515336d3d13b392f8fcc4d263f4f063689
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '917'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Titta på videon med versionsöversikten för oktober 2023 om du vill se en samm
 
 ### Nya funktioner i resursvyn {#assets-view-features}
 
-* **Massimportera resurser från OneDrive-datakällan**: Nu kan administratörer [importera ett stort antal resurser från OneDrive till AEM Assets](/help/assets/bulk-import-assets-view.md#onedrive-developer-application). Den uppdaterade listan över de datakällor som stöds för bulkimport är Azure, AWS, Google Cloud, Dropbox och OneDrive.
+* **Massimportera resurser från OneDrive-datakällan**: Administratörer kan nu [importera ett stort antal resurser från OneDrive till AEM Assets](/help/assets/bulk-import-assets-view.md#onedrive-developer-application). Den uppdaterade listan över de datakällor som stöds för bulkimport är Azure, AWS, Google Cloud, Dropbox och OneDrive.
 
   ![tilldela metadataformulär till en mapp](/help/assets/assets/bulk-import-source-details-onedrive.png)
 

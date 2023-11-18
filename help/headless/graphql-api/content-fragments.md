@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '4921'
+source-wordcount: '4923'
 ht-degree: 0%
 
 ---
@@ -503,7 +503,7 @@ I vissa typer kan du även ange ytterligare alternativ som ändrar hur ett uttry
 
 | Alternativ | Typ(er) | Beskrivning |
 |--- |--- |--- |
-| `_ignoreCase` | `String` | Ignorerar skiftläget för en sträng, t.ex. värdet `time` matchar `TIME`, `time`, `tImE`, ... |
+| `_ignoreCase` | `String` | Ignorerar skiftläget för en sträng, till exempel värdet `time` matchar `TIME`, `time`, `tImE`, ... |
 | `_sensitiveness` | `Float` | Tillåter en viss marginal för `float` värden som ska anses vara desamma (för att kringgå tekniska begränsningar på grund av den interna representationen av `float` värden; bör undvikas eftersom detta alternativ kan ha en negativ inverkan på prestandan |
 
 Uttryck kan kombineras till en uppsättning med hjälp av en logisk operator (`_logOp`):
@@ -515,7 +515,7 @@ Varje fält kan filtreras med en egen uppsättning uttryck. Uttrycksuppsättning
 
 En filterdefinition (skickas som `filter` argument till en fråga) innehåller:
 
-* En underdefinition för varje fält (fältet kan nås via sitt namn, t.ex. finns det en `lastName` i filtret för `lastName` i fältet Data (fälttyp)
+* En underdefinition för varje fält (fältet kan nås via namnet, till exempel finns det en `lastName` i filtret för `lastName` i fältet Data (fälttyp)
 * Varje underdefinition innehåller `_expressions` -array, som innehåller uttrycksuppsättningen och `_logOp` fält som definierar den logiska operatorn ska uttrycken kombineras med
 * Varje uttryck definieras av värdet (`value` fält) och operatorn (`_operator` fält) innehållet i ett fält ska jämföras med
 
@@ -914,7 +914,7 @@ Följande begränsningar finns:
 Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL standardspecifikation. För GraphQL-frågor med AEM finns det några tillägg:
 
 * Om du behöver ett enda resultat:
-   * använd modellnamnet, t.ex. ort
+   * använd modellnamnet, till exempel ort
 
 * Om du förväntar dig en resultatlista:
    * lägg till `List` till modellnamnet, till exempel  `cityList`

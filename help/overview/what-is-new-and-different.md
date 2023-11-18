@@ -2,10 +2,10 @@
 title: Nyheter och skillnader – Adobe Experience Manager as a Cloud Service
 description: Nyheter och skillnader – Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: d1ce126e-960c-4367-b741-af709dd81010
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '1889'
-ht-degree: 73%
+source-wordcount: '1891'
+ht-degree: 72%
 
 ---
 
@@ -182,7 +182,7 @@ Ett annat vanligt behov hos utvecklare är snabb åtkomst till loggfilerna i oli
 
 På grund av den tydliga åtskillnaden mellan kod och innehåll kan utvecklare använda en viss process för att uppdatera innehåll som en del av en distribution. De typiska användningsområdena för innehåll som kan ändras är:
 
-* *Standardinnehåll* som ingår i kundprojektet (t.ex. mappar, mallar, arbetsflöden)
+* Standard *standard* innehåll som ingår i kundprojektet (till exempel mappar, mallar, arbetsflöden och så vidare)
 
 * Definitioner för sökindex
 

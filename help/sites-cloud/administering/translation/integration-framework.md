@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar TLF (Translation Integration Framework
 feature: Language Copy
 role: Admin
 exl-id: 6e74cdee-7965-4087-a733-e9d81c4aa7c2
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 0%

@@ -2,9 +2,9 @@
 title: Läs om hur du använder referenser i innehållsfragment
 description: Lär dig hur du använder referenser i innehållsfragment, för innehåll, andra fragment och andra resurser (media). Lägg in behovet av och mekanismerna i kapslade fragment för Headless CMS Authoring.
 exl-id: a65e8a5a-954b-4307-8027-ca8bac5f4261
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '705'
 ht-degree: 1%
 
 ---
@@ -27,13 +27,13 @@ Den här artikeln bygger vidare på dessa så att du förstår hur du använder 
    * Innehållsreferenser
    * Resurs-/mediereferenser
    * Fragmentreferenser
-   * Ad hoc-referenser inifrån ett textblock
+   * Avancerade referenser från ett textblock
 
 ## Vad är referenser? {#what-are-references}
 
 Referenser är helt enkelt en mekanism för att koppla samman resurser, oavsett om det är annat innehåll, resurser (som i bilder) eller andra fragment. Även om de är mycket lika finns det vissa skillnader.
 
-Vissa referenser har särskilda datatyper (till exempel Innehållsreferenser och Fragmentreferenser), medan andra bara läggs till som en referens i ett textblock (resursreferenser och ad hoc-referenser).
+Vissa referenser har särskilda datatyper (till exempel Innehållsreferenser och Fragmentreferenser), medan andra bara läggs till som en referens i ett textblock (resursreferenser och improviserade referenser).
 
 ![Innehållsfragment - referenser](/help/sites-cloud/administering/content-fragments/assets/cf-authoring-overview.png)
 
@@ -96,7 +96,7 @@ Använda **Strukturträd** på fliken i redigeraren för innehållsfragment kan 
 
 ## Ad hoc-referenser {#adhoc-references}
 
-Ad hoc-referenser kan läggas till som en enkel länk i ett textblock:
+Tillåtna referenser kan läggas till som en enkel länk i ett textblock:
 
 ![Innehållsfragment - Ad hoc-referenser](/help/journey-headless/author/assets/headless-journey-author-references-04.png)
 

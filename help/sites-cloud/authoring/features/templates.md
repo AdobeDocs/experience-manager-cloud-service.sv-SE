@@ -2,9 +2,9 @@
 title: Skapa sidmallar
 description: Mallen definierar strukturen för den resulterande sidan och med mallredigeraren är det inte längre en uppgift som bara är avsedd för utvecklare att skapa och underhålla mallar
 exl-id: 4c9dbf26-5852-45ab-b521-9f051c153b2e
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '4538'
+source-wordcount: '4535'
 ht-degree: 8%
 
 ---
@@ -73,7 +73,7 @@ När du skapar en redigerbar mall:
    * Eller direkt på: `https://<host>:<port>/libs/wcm/core/content/sites/templates.html/conf`
 * Kan [skapa en mapp för mallarna](#creating-a-template-folder-admin) vid behov
 * [Skapa en ny mall](#creating-a-new-template-template-author), som till att börja med är tom
-* [Definiera ytterligare egenskaper](#defining-template-properties-template-author) för mallen om det behövs
+* [Definiera ytterligare egenskaper](#defining-template-properties-template-author) för mallen vid behov
 * [Redigera mallen](#editing-templates-template-authors) för att definiera
    * [Struktur](#editing-a-template-structure-template-author) - Fördefinierat innehåll som inte kan ändras på sidor som skapas med mallen.
    * [Ursprungligt innehåll](#editing-a-template-initial-content-author) - Fördefinierat innehåll som kan ändras på sidor som skapas med mallen.
@@ -351,7 +351,7 @@ På så sätt kan du definiera designdetaljerna.
 
 Konfigurationsfönstret är uppdelat i två delar.
 
-* Till vänster i dialogrutan under **Policy** kan du välja en befintlig princip eller välja en befintlig.
+* Till vänster i dialogrutan under **Policy** kan du välja en befintlig profil eller en befintlig.
 * Till höger i dialogrutan under **Egenskaper** kan du ange egenskaper som är specifika för komponenttypen.
 
 Vilka egenskaper som är tillgängliga beror på den valda komponenten. För en textkomponent definierar till exempel egenskaperna alternativ för kopiera och klistra in, formatering och styckeformat bland annat.

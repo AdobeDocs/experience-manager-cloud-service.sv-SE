@@ -3,9 +3,9 @@ title: Komma igång med Edge Delivery Services
 description: Komma igång med Edge Delivery Services (EDS).
 feature: Edge Delivery Services
 exl-id: 03a1aa93-d2e6-4175-9cf3-c7ae25c0d24e
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '862'
 ht-degree: 1%
 
 ---
@@ -22,15 +22,15 @@ Med Edge Delivery kan man
 
 ## Så fungerar Edge Delivery {#edge-works}
 
-Följande diagram visar hur du kan redigera innehåll i Microsoft Word (dokumentbaserad redigering) och publicera på Edge Delivery. Det visar också den traditionella AEM publiceringsmetoden med olika redigerare.
+Följande diagram visar hur du kan redigera innehåll i Microsoft® Word (dokumentbaserad redigering) och publicera på Edge Delivery. Det visar också den traditionella AEM publiceringsmetoden med olika redigerare.
 
 ![Edge Delivery Architecture](assets/edgedelivery.png)
 
 Edge Delivery är en sammansatt uppsättning tjänster som ger stor flexibilitet när det gäller hur du skapar innehåll på din webbplats. Som tidigare nämnts kan du använda båda [AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/concepts.html) och [dokumentbaserad redigering](https://www.hlx.live/docs/authoring).
 
-Du kan till exempel använda innehåll direkt från Microsoft Word eller Google Docs. Det innebär att dokument från dessa källor kan bli sidor på din webbplats. Dessutom kan rubriker, listor, bilder och teckensnittselement överföras från den ursprungliga källan till webbplatsen. Det nya innehållet läggs till omedelbart utan någon omgenereringsprocess.
+Du kan till exempel använda innehåll direkt från Microsoft® Word eller Google Docs. Det innebär att dokument från dessa källor kan bli sidor på din webbplats. Dessutom kan rubriker, listor, bilder och teckensnittselement överföras från den ursprungliga källan till webbplatsen. Det nya innehållet läggs till omedelbart utan någon omgenereringsprocess.
 
-Edge Delivery utnyttjar GitHub så att kunderna kan hantera och driftsätta kod direkt från sin GitHub-databas. Du kan till exempel skriva innehåll i antingen Google Docs eller Microsoft Word och du kan utveckla funktionerna för din webbplats med hjälp av CSS och JavaScript i GitHub. När du är klar kan du använda webbläsartillägget Sidekick för att förhandsgranska och publicera innehållsuppdateringar.
+Edge Delivery använder GitHub så att kunderna kan hantera och driftsätta kod direkt från sin GitHub-databas. Du kan t.ex. skriva innehåll i antingen Google Docs eller Microsoft® Word och du kan utveckla webbplatsens funktionalitet med hjälp av CSS och JavaScript i GitHub. När du är klar kan du använda webbläsartillägget Sidekick för att förhandsgranska och publicera innehållsuppdateringar.
 
 Läs mer:
 
@@ -40,9 +40,9 @@ Läs mer:
 
 ## Edge Delivery Services och andra Adobe Experience Cloud-produkter {#edge-other-products}
 
-Edge Delivery Services är en del av Adobe Experience Manager och som sådana kan sajterna Edge Delivery och AEM finnas samtidigt i samma domän. Detta är ett vanligt användningsexempel för större webbplatser. Dessutom kan innehåll från Edge Delivery enkelt användas på dina AEM Sites-sidor och vice versa.
+Edge Delivery Services är en del av Adobe Experience Manager och som sådana kan sajterna Edge Delivery och AEM finnas samtidigt i samma domän. Detta är ett vanligt användningsexempel för större webbplatser. Dessutom kan innehåll från Edge Delivery enkelt användas på dina AEM Sites-sidor och omvänt.
 
-Du kan också använda Edge Delivery Services i kombination med Adobe Target, Analytics och Launch.
+Du kan också använda Edge Delivery Services med Adobe Target, Analytics och Launch.
 
 ## Få åtkomst till Edge Delivery Services {#getting-access}
 
@@ -64,7 +64,7 @@ Adobe vill ge dig bästa möjliga engagemang och stöd för Edge Delivery Servic
 
 ### Så här kommer du åt din produktsamarbetskanal {#collab-channel}
 
-Med tanke på värdet av direktkommunikationskanalen med kunderna kommer alla AEM vid lanseringen att skapa en Slack-kanal för snabbhet, viktiga uppdateringar och skalad rapportering om upplevelsekvalitet. Du får en inbjudan från Adobe om att gå med i en Slack-kanal som är specifik för din organisation.
+Med tanke på värdet av direktkommunikationskanalen med kunder kommer alla AEM vid lanseringen att skapa en Slack-kanal för snabbhet, viktiga uppdateringar och skalad rapportering om upplevelsekvalitet. Du får en inbjudan från Adobe om att gå med i en Slack-kanal som är specifik för din organisation.
 
 Mer information finns i [Använda Slack Bot](https://www.hlx.live/docs/slack) för mer information.
 

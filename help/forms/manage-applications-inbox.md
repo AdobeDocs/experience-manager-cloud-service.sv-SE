@@ -5,9 +5,9 @@ uuid: c6c0d8ea-743f-4852-99d1-69fd50a0994e
 contentOwner: vishgupt
 topic-tags: document_services, publish
 discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '1131'
+source-wordcount: '1130'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Uppgifter som tilldelas en grupp visas i Inkorgen för alla gruppmedlemmar. Alla
 När du öppnar en uppgift kan du visa uppgiftsinformation och utföra tillgängliga åtgärder. Vilka åtgärder som är tillgängliga för en uppgift definieras i steget Tilldela uppgift i den associerade Formens Workflow.
 
 1. Tryck för att markera aktivitetens miniatyrbild. Alternativ för att öppna eller delegera den valda uppgiften visas högst upp.
-1. Tryck **Öppna** för att visa information om uppgifter och vidta åtgärder. Den detaljerade uppgiftsvyn öppnas. I den här vyn kan du visa aktivitetsinformation och vidta åtgärder för uppgiften.
+1. Välj **Öppna** om du vill visa information om aktiviteter och tillgängliga åtgärder. Den detaljerade uppgiftsvyn öppnas. I den här vyn kan du visa aktivitetsinformation och agera på en uppgift.
 
    >[!NOTE]
    >

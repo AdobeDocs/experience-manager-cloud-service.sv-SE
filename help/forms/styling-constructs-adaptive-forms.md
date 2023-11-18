@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: ed50fa70-a8dd-4cc6-82a9-d59de0fa417d
 docset: aem65
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '2316'
+source-wordcount: '2314'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ För närvarande definieras LESS-variabler bara för dessa egenskaper för de ol
 
 ## Ändra komponentstil {#changing-component-style}
 
-Du kan ändra elementens utseende, layout, placering och synlighet. För att utföra den här uppgiften skapar eller uppdaterar du dina anpassade css-filer så att de innehåller de formateringskonstruktioner som listas i den här artikeln.
+Du kan ändra utseende, layout, placering och synlighet för element. För att utföra den här uppgiften skapar eller uppdaterar du dina anpassade css-filer så att de innehåller de formateringskonstruktioner som listas i den här artikeln.
 
 Om du vill använda ett format på ett adaptivt formulär öppnar du det adaptiva formuläret i för redigering, öppnar egenskaper för adaptiv formulärbehållare och anger sökvägen till en anpassad CSS-fil på fliken Grundläggande. Standardformateringskonstruktioner för den adaptiva formen och åsidosätts av de konstruktioner som anges i den anpassade css-filen.
 

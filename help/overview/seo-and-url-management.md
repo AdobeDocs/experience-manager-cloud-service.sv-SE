@@ -2,7 +2,7 @@
 title: Bästa metoder för SEO- och URL-hantering för Adobe Experience Manager as a Cloud Service
 description: Bästa metoder för SEO- och URL-hantering för Adobe Experience Manager as a Cloud Service
 exl-id: abe3f088-95ff-4093-95a1-cfc610d4b9e9
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '3705'
 ht-degree: 53%
@@ -384,7 +384,7 @@ AEM Sites innehåller en standardimplementering av en `SitemapGenerator` som gå
 För att begränsa innehållet i en webbplatskarta kan följande gränssnitt implementeras vid behov:
 
 * den [SitemapPageFilter](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/sitemap/SitemapPageFilter.html) kan implementeras för att dölja sidor från XML-webbplatskartor som genereras av den AEM Sites-specifika webbplatskartan
-* a [SitemapProductFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapProductFilter.html) eller [SitemapCategoryFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapCategoryFilter.html) kan implementeras för att filtrera bort produkter eller kategorier från XML-webbplatskartor som genereras av [Ramverk för handelsintegrering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html) specifika generatorer för webbplatskartor
+* a [SitemapProductFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapProductFilter.html) eller [SitemapCategoryFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapCategoryFilter.html) kan implementeras för att filtrera bort produkter eller kategorier från XML-webbplatskartor som genereras av [Commerce integrationa frameworkar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html) specifika generatorer för webbplatskartor
 
 Om standardimplementeringarna inte fungerar med ett visst användningsfall eller om tilläggspunkterna inte är tillräckligt flexibla, kan en anpassad `SitemapGenerator` kan implementeras för att få full kontroll över innehållet i en genererad webbplatskarta. I följande exempel visas hur detta kan göras med hjälp av standardimplementeringens logik för AEM Sites. Den använder [ResourceTreeSitemapGenerator](https://javadoc.io/doc/org.apache.sling/org.apache.sling.sitemap/latest/org/apache/sling/sitemap/spi/generator/ResourceTreeSitemapGenerator.html) som en startpunkt för att gå igenom ett sidträd:
 
@@ -429,7 +429,7 @@ public class SitemapGeneratorImpl extends ResourceTreeSitemapGenerator {
         }
         String location = externalizer.externalize(resource);
         Url url = sitemap.addUrl(location + ".html");
-        // add any additional content to the Url like lastmod, change frequency, etc
+        // add any additional content to the Url like lastmod, change frequency, and so on
     }
 
     @Override

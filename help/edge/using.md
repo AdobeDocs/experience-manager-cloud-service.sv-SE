@@ -3,9 +3,9 @@ title: Använda Edge Delivery Services
 description: Använda Edge Delivery Services
 feature: Edge Delivery Services
 exl-id: 41999302-b4c9-4f5a-b659-6e7398a3c4f4
-source-git-commit: 34965338015df868778a95582524df08a7c5f136
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '617'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Edge Delivery utnyttjar GitHub så att kunderna kan hantera och driftsätta kod 
 
 ## Använda Sidekick {#using-sidekick}
 
-AEM har ett verktygsfält med sammanhangsberoende alternativ så att du enkelt kan redigera, förhandsgranska och publicera innehåll. Efter [installera](https://www.hlx.live/docs/sidekick-extension) AEM kan användas antingen i projektmiljöer eller när du redigerar innehåll (till exempel i Google Docs). Beroende på miljön finns det flera tillgängliga åtgärder, som: Förhandsgranska, Läs in igen, Redigera och Publicera. Du kan också växla miljöer när du använder sidekick, från förhandsgranskning till produktion och vice versa.
+AEM har ett verktygsfält med sammanhangsberoende alternativ så att du enkelt kan redigera, förhandsgranska och publicera innehåll. Efter [installera](https://www.hlx.live/docs/sidekick-extension) AEM kan användas antingen i projektmiljöer eller när du redigerar innehåll (till exempel i Google Docs). Beroende på miljön finns det flera tillgängliga åtgärder, som: Förhandsgranska, Läs in igen, Redigera och Publicera. Du kan också växla miljöer när du använder sidbrytaren, från förhandsgranskning till produktion och omvänt.
 
 **Publicera**&#x200B;öppnar du sidesparken på en förhandsgranskningssida och använder åtgärden Publicera. När du har klickat på Publicera är den aktuella förhandsvisningsversionen av sidan tillgänglig i lever- och produktionsmiljöer.
 

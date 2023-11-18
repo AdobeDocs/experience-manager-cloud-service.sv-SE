@@ -3,9 +3,9 @@ title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service versi
 description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.2.0
 feature: Release Information
 exl-id: b1cd871d-c71e-4902-a97e-2c859f6a4da4
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '241'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ Releasedatum för Content Transfer Tool v1.8.6 är 3 februari 2022.
 
 ### Nyheter {#what-is-new-ctt}
 
-* Innehållsvalidering - Användare kan på ett tillförlitligt sätt avgöra om allt innehåll som extraherats med verktyget Innehållsöverföring har importerats till målinstansen. Om du vill använda den här funktionen aktiverar du den i `System Console` i AEM. Se [Verifierar innehållsöverföringar - Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/validating-content-transfers.html?lang=en#getting-started) för mer information.
+* Innehållsvalidering - Användarna kan på ett tillförlitligt sätt avgöra om allt innehåll som extraherats av verktyget Innehållsöverföring har importerats till målinstansen. Om du vill använda den här funktionen aktiverar du den i `System Console` i AEM. Se [Verifierar innehållsöverföringar - Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/validating-content-transfers.html?lang=en#getting-started) för mer information.
 
 ### Felkorrigeringar {#bug-fixes-ctt}
 

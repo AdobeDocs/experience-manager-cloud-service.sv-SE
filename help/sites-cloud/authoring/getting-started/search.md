@@ -2,7 +2,7 @@
 title: Sökning
 description: Hitta materialet snabbare med omfattande sökfunktioner
 exl-id: 8a799e9a-1461-4e79-ae90-1978af6cf0ed
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 6%
@@ -41,7 +41,7 @@ Så här söker och filtrerar du resurser:
 
    ![Sökplats](/help/sites-cloud/authoring/assets/search-term-location.png)
 
-1. Om det behövs kan du ta bort platsfiltret (välj **X** på filtret som du vill ta bort) för att söka i alla konsoler/resurstyper.
+1. Om det behövs kan du ta bort platsfiltret (markera **X** på filtret som du vill ta bort) för att söka i alla konsoler/resurstyper.
 1. Resultaten visas, grupperade efter konsol och relaterad resurstyp.
 
    Du kan antingen välja en specifik resurs (för ytterligare åtgärd) eller gå ned på detaljnivå genom att välja önskad resurstyp, till exempel **Visa alla platser**:

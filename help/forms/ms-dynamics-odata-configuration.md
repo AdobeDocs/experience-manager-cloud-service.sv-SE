@@ -5,9 +5,9 @@ feature: Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb7b41f0-fd4f-4ba6-9f45-792a66ba6368
-source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '940'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 * Fråga [!DNL Microsoft Dynamics] server för data och förifylla Adaptive Forms
 * Skriv data i [!DNL Microsoft Dynamics] om inlämning av anpassade formulär
-* Skriv data i [!DNL Microsoft Dynamics] via anpassade entiteter som definierats i formulärdatamodellen och vice versa
+* Skriv data i [!DNL Microsoft Dynamics] via anpassade entiteter som definierats i formulärdatamodellen och omvänt
 
 <!--[!DNL Experience Manager Forms] add-on package also includes reference OData configuration that you can use to quickly integrate [!DNL Microsoft Dynamics] with [!DNL Experience Manager Forms].-->
 

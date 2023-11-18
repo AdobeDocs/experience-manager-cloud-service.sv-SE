@@ -2,9 +2,9 @@
 title: Använda innehållstransformeraren
 description: Lär dig hur du omvandlar innehållsstrukturen som förberedelse för migrering till AEM as a Cloud Service.
 exl-id: 40516ff7-5686-42e6-bdd1-c9c6de432b09
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '638'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ Innehållstransformeraren paketeras med [Verktyget Innehållsöverföring](/help
 
    ![bild](/help/journey-migration/content-transformer/assets/ct-4.png)
 
-1. Du kan markera alla eller specifika problem och vidta åtgärder som att flytta, ta bort och byta namn på dem för att lösa dem. Anpassade banor kan också läggas till med **Lägg till banor** längst upp till höger.
+1. Du kan markera alla eller specifika problem och flytta, ta bort eller byta namn för att lösa dem. Anpassade banor kan också läggas till med **Lägg till banor** längst upp till höger.
 
    >[!NOTE]
    > När du använder flyttåtgärden bör du flytta alla sökvägar till endast en mapp (till exempel under `/etc/packages/content-transformation/paths`), så när säkerhetskopieringspaketen installeras för att återföra instansen till det ursprungliga läget, är mappen (`/etc/packages/content-transformation/paths`) kan tas bort med åtgärden remove för att minska databasstorleken.

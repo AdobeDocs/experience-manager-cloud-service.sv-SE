@@ -2,9 +2,9 @@
 title: AEM Headless Content Author Trney
 description: Börja här för en guidad resa med de kraftfulla och flexibla headlessfunktionerna i AEM, deras funktioner och hur du skapar innehåll för ditt projekt.
 exl-id: fe124c6b-932a-44fc-a87b-12691aefea56
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '873'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Den här guiden leder dig igenom de viktigaste avsnitten så att du när du är 
 
 * Få en grundläggande förståelse för vad headless content delivery är och dess fördelar.
 * Förstå AEM headless-funktioner och hur de fungerar tillsammans för att leverera en headless-upplevelse.
-* Har möjlighet att skapa innehåll för AEM headless-projekt.
+* Kan skapa innehåll för AEM headless-projekt.
 
 ## AEM dokumentationsresor {#documentation-journeys}
 

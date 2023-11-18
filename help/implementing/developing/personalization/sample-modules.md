@@ -2,7 +2,7 @@
 title: Exempeltyper för ContextHub-gränssnittsmodul
 description: ContextHub innehåller flera exempelmoduler för användargränssnitt som du kan använda i dina lösningar
 exl-id: 31ff4444-8d96-4817-9676-ea5ad36dcda5
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '1124'
 ht-degree: 0%
@@ -186,7 +186,7 @@ Förekomster av `contexthub.screen-orientation` Gränssnittsmodulen kräver inge
 
 ## contexthub.tagcloud-modultyp {#contexthub-tagcloud-ui-module-type}
 
-The `contexthub.tagcloud` I modulen Gränssnitt visas information om taggar. I verktygsfältet visar gränssnittsmodulen antalet taggar. Popup-fönstret visar ett tagcloud och en textruta för att lägga till nya taggar. Användargränssnittsmodulen hämtar information från ett ContextHub-arkiv med namnet tagcloud som är baserat på `contexthub.tagcloud` lagringskandidat.
+The `contexthub.tagcloud` I modulen Gränssnitt visas information om taggar. I verktygsfältet visar gränssnittsmodulen antalet taggar. I popup-fönstret visas ett tagcloud och en textruta för att lägga till nya taggar. Användargränssnittsmodulen hämtar information från ett ContextHub-arkiv med namnet tagcloud som är baserat på `contexthub.tagcloud` lagringskandidat.
 
 ![contexthub.tagcloud-modul](assets/tagcloud-module.png)
 

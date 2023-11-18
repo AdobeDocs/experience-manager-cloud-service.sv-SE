@@ -2,7 +2,7 @@
 title: Redigera sidinnehåll
 description: När sidan har skapats kan du redigera innehållet för att göra de uppdateringar du behöver
 exl-id: 8af0f621-14e8-4605-a51a-a3be21f19092
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '2973'
 ht-degree: 4%
@@ -173,7 +173,7 @@ Så här skapar du en komponent genom att dra en av resurstyperna ovan:
 
    En komponent som passar för resurstypen skapas på den önskade platsen - den innehåller den valda resursen.
 
-1. [Redigera](#edit-content) komponenten om det behövs.
+1. [Redigera](#edit-content) komponenten, om det behövs.
 
 >[!NOTE]
 >

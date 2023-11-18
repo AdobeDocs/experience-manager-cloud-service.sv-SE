@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: 081167dd-da4c-48d2-a6d3-f95e873be3e9
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1326'
 ht-degree: 0%
 
 ---
@@ -157,7 +157,7 @@ Grattis! Du har slutfört AEM Sites översättningsresa! Nu bör du:
 
 * Lär dig grundläggande kunskaper AEM innehållshanteringsfunktioner.
 * Förstå AEM översättningsfunktioner och hur de relaterar till webbplatsens innehåll.
-* Ha möjlighet att börja översätta eget innehåll.
+* Var noga med att översätta ert eget innehåll.
 
 Nu kan du översätta ditt eget innehåll i AEM. AEM är dock ett kraftfullt verktyg och det finns många andra alternativ. Se vilka ytterligare resurser som finns i [Avsnittet Ytterligare resurser](#additional-resources) om du vill veta mer om de funktioner du såg under den här resan.
 

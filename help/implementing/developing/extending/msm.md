@@ -2,9 +2,9 @@
 title: Utöka Multi Site Manager
 description: Lär dig hur du utökar funktionerna i Multi Site Manager.
 exl-id: 4b7a23c3-65d1-4784-9dea-32fcceca37d1
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '2425'
+source-wordcount: '2429'
 ht-degree: 0%
 
 ---
@@ -565,7 +565,7 @@ AEM använder en standarduppsättning med språk- och landskoder.
 * Standardspråkkoden är den gemena tvåbokstavskoden enligt ISO-639-1.
 * Standardlandskoden är den gemena eller versala tvåbokstavskoden enligt ISO 3166.
 
-MSM använder en lagrad lista med språk- och landskoder för att fastställa namnet på landet som är associerat med namnet på språkversionen av sidan. Du kan ändra följande aspekter av listan om det behövs:
+MSM använder en lagrad lista med språk- och landskoder för att fastställa namnet på landet som är associerat med namnet på språkversionen av sidan. Du kan ändra följande delar av listan om det behövs:
 
 * Språktitlar
 * Landsnamn
@@ -606,11 +606,11 @@ Om till exempel två nya sidegenskaper läggs till:
 
 * E-postadress:
 
-   * Den här egendomen behöver inte rullas ut eftersom den kommer att vara olika i varje land (eller varumärke osv.).
+   * Den här egendomen behöver inte lanseras eftersom den kommer att vara olika i varje land (eller varumärke osv.).
 
 * Visuell huvudstil:
 
-   * Projektkravet är att denna egenskap ska rullas ut eftersom den (vanligtvis) är gemensam för alla länder (eller varumärken, osv.).
+   * Projektkravet är att den här egenskapen ska rullas ut eftersom den (vanligtvis) är gemensam för alla länder (eller varumärken osv.).
 
 Då måste du se till att:
 

@@ -2,7 +2,7 @@
 title: Delta i arbetsflöden
 description: Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en aktivitet på en sida eller en resurs.
 exl-id: 62192da9-0b5b-4997-9c2b-d1aee04b01f9
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '1507'
 ht-degree: 1%
@@ -59,7 +59,7 @@ Du kan slutföra ett objekt så att arbetsflödet kan fortsätta till nästa ste
 På den här åtgärden kan du ange:
 
 * **Nästa steg**: nästa steg som ska tas; du kan välja från en lista
-* **Kommentar**: om obligatoriskt
+* **Kommentar**: vid behov
 
 Du kan slutföra ett deltagarsteg från:
 
@@ -118,7 +118,7 @@ Vilka användare som är tillgängliga för delegering beror på vem som har til
 På den här åtgärden kan du ange:
 
 * **Användare**: den användare du vill delegera till; du kan välja i en lista
-* **Kommentar**: om obligatoriskt
+* **Kommentar**: vid behov
 
 Du kan delegera ett deltagarsteg från antingen:
 
@@ -168,7 +168,7 @@ Om du upptäcker att ett steg, eller en serie steg, måste upprepas, kan du steg
 På den här åtgärden kan du ange:
 
 * **Tidigare steg**: det steg som du vill returnera till; du kan välja från en lista
-* **Kommentar**: om obligatoriskt
+* **Kommentar**: vid behov
 
 Du kan utföra steg tillbaka för ett deltagarsteg från antingen:
 
@@ -245,7 +245,7 @@ Så här öppnar du ett arbetsflödesobjekt och visar information:
 1. Öppna **[AEM](/help/sites-cloud/authoring/getting-started/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill arbeta med (markera miniatyrbilden).
 1. Välj **Öppna** för att öppna informationsflikarna.
-1. Om det behövs väljer du lämplig åtgärd, anger information och bekräftar med **OK** (eller **Avbryt**).
+1. Välj vid behov lämplig åtgärd, ange eventuella detaljer och bekräfta med **OK** (eller **Avbryt**).
 1. Använd **Spara** eller **Avbryt** för att avsluta.
 
 #### Öppnar arbetsflödesinformation - sidredigeraren {#opening-workflow-details-page-editor}
@@ -254,7 +254,7 @@ Så här öppnar du ett arbetsflödesobjekt och visar information:
 
 1. Öppna [sida för redigering](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#opening-a-page-for-editing).
 1. Välj **Visa detaljer** i statusfältet för att öppna informationsflikarna.
-1. Om det behövs väljer du lämplig åtgärd, anger information och bekräftar med **OK** (eller **Avbryt**).
+1. Välj vid behov lämplig åtgärd, ange eventuella detaljer och bekräfta med **OK** (eller **Avbryt**).
 1. Använd **Spara** eller **Avbryt** för att avsluta.
 
 ### Visa arbetsflödets nyttolast (flera resurser) {#viewing-the-workflow-payload-multiple-resources}

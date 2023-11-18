@@ -2,7 +2,7 @@
 title: Exportera innehållsfragment till Adobe Target
 description: Lär dig hur du exporterar innehållsfragment till Adobe Target för att testa och personalisera upplevelser.
 exl-id: 760e0a39-0805-498e-a2c9-038fd1e1058d
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '2223'
 ht-degree: 0%
@@ -98,7 +98,7 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** av den mapp eller 
    * lämplig konfiguration
    * det obligatoriska formatalternativet
    * en Adobe Target-arbetsyta
-   * om det behövs - externaliseringsdomänen
+   * vid behov - externaliseringsdomänen
 
    >[!CAUTION]
    >

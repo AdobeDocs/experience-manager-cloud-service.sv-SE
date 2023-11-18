@@ -2,9 +2,9 @@
 title: Hantera projekt
 description: Med projekt kan du ordna ditt projekt genom att gruppera resurser i en enhet som du kan komma åt och hantera i projektkonsolen
 exl-id: be4616e7-18bc-4b2d-89f6-d04178ac7f3a
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '875'
 ht-degree: 9%
 
 ---
@@ -138,7 +138,7 @@ Så här gör du ett projekt inaktivt (eller aktivt):
    Du kan behöva lägga till den här panelen om den inte redan finns i ditt projekt. Se [Lägga till rutor](#adding-items-to-a-tile).
 
 1. Välj **Redigera**.
-1. Ändra väljaren från **Aktiv** till **Inaktiv** (eller vice versa).
+1. Ändra väljaren från **Aktiv** till **Inaktiv** (eller omvänt).
 
    ![Aktivera ett projekt](/help/sites-cloud/authoring/assets/projects-add-team.png)
 

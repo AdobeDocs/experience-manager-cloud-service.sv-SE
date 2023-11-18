@@ -2,10 +2,10 @@
 title: Exportera till CSV
 description: Exportera information om sidorna till en CSV-fil på det lokala systemet
 exl-id: 818e927e-40b2-4ccb-bfb3-88284ad49829
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '197'
-ht-degree: 23%
+ht-degree: 18%
 
 ---
 
@@ -46,7 +46,7 @@ Resultatet `export.csv` filen kan öppnas i Excel eller något annat kompatibelt
 
 Så här skapar du en CSV-export:
 
-1. Öppna konsolen **Sites** och navigera till önskad plats om det behövs.
+1. Öppna **Webbplatser** navigera till önskad plats om det behövs.
    * Alternativet Skapa **CSV-rapport** är tillgängligt när du bläddrar i **Sites-konsolen** (i listvyn)
    * Det är ett alternativ i **Skapa** nedrullningsbar meny:
 

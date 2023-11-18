@@ -4,7 +4,7 @@ description: Lär dig hur du skapar och synkroniserar Live-kopior för att åter
 feature: Multi Site Manager
 role: Admin
 exl-id: 53ed574d-e20d-4e73-aaa2-27168b9d05fe
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '4270'
 ht-degree: 0%
@@ -417,7 +417,7 @@ En gång [pausad](#suspending-inheritance-from-page-properties) den **Återuppta
 
 ![Återuppta knapp](../assets/resume.png)
 
-När du väljer det här alternativet visas dialogrutan. Du kan välja en synkronisering, om det behövs, och sedan bekräfta åtgärden.
+När du väljer det här alternativet visas dialogrutan. Om det behövs kan du välja en synkronisering och sedan bekräfta åtgärden.
 
 #### Återuppta en Live Copy-sida från Live Copy-översikten {#resume-a-live-copy-page-from-the-live-copy-overview}
 

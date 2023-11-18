@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Lär dig riktlinjer för utveckling på AEM as a Cloud Service och om viktiga sätt som skiljer sig från AEM på plats och AEM i AMS.
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '2732'
+source-wordcount: '2733'
 ht-degree: 1%
 
 ---
@@ -79,7 +79,7 @@ AEM as a Cloud Service stöder bara Touch-gränssnittet för kundkod från tredj
 
 Inbyggda binära filer och bibliotek får inte distribueras till eller installeras i molnmiljöer.
 
-Koden bör inte heller försöka hämta inbyggda binära filer eller inbyggda Java-tillägg (t.ex. JNI) vid körning.
+Koden bör inte heller försöka hämta inbyggda binära filer eller inbyggda Java-tillägg (till exempel JNI) vid körning.
 
 ## Inga bindningar för direktuppspelning via AEM as a Cloud Service {#no-streaming-binaries}
 

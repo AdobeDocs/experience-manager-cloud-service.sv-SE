@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: 464a97ce-da3e-47b5-9879-fafaf2f2378c
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Metadata är ytterligare information om resursen som kan sökas igenom. Den extraheras automatiskt när du överför en bild. Du kan redigera befintliga metadata eller lägga till nya metadataegenskaper i befintliga fält (till exempel när ett metadatafält är tomt).
 
-Eftersom företag behöver kontrollerade och tillförlitliga metadata-språk, [!DNL Experience Manager Assets] tillåter inte ad hoc-tillägg av nya metadataegenskaper. Även om författare inte kan lägga till nya metadatafält för resurser kan utvecklare göra det. Se [Skapar ny metadataegenskap för resurser](meta-edit.md#editing-metadata-schema).
+Eftersom företag behöver kontrollerade och tillförlitliga metadata-språk, [!DNL Experience Manager Assets] tillåter inte att nya metadataegenskaper läggs till på begäran. Även om författare inte kan lägga till nya metadatafält för resurser kan utvecklare göra det. Se [Skapar ny metadataegenskap för resurser](meta-edit.md#editing-metadata-schema).
 
 ## Redigera metadata för en resurs {#editing-metadata-for-an-asset}
 

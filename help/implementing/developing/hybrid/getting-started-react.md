@@ -2,9 +2,9 @@
 title: Komma igång med SPA i AEM med React
 description: I den här artikeln visas ett exempel SPA programmet, hur det sätts ihop och hur du snabbt kommer igång med ditt eget SPA med React Framework.
 exl-id: 13998526-65e7-4d1b-bd47-452bad3780a2
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1138'
 ht-degree: 0%
 
 ---
@@ -209,7 +209,7 @@ class Image extends Component {
 MapTo('my-react-app/components/content/image')(Image, ImageEditConfig);
 ```
 
-Det centrala SPA i AEM är att mappa SPA komponenter till AEM och uppdatera komponenten när innehållet ändras (och vice versa). Se dokumentet [SPA](editor-overview.md) för en sammanfattning av den här kommunikationsmodellen.
+Det centrala SPA i AEM är att mappa SPA komponenter till AEM och uppdatera komponenten när innehållet ändras (och omvänt). Se dokumentet [SPA](editor-overview.md) för en sammanfattning av den här kommunikationsmodellen.
 
 `MapTo('my-react-app/components/content/image')(Image, ImageEditConfig);`
 

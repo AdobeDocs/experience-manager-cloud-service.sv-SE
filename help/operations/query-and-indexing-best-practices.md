@@ -3,7 +3,7 @@ title: Bästa praxis för frågor och indexering
 description: Lär dig hur du optimerar index och frågor baserat på Adobe riktlinjer för bästa praxis.
 topic-tags: best-practices
 exl-id: 37eae99d-542d-4580-b93f-f454008880b1
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
 source-wordcount: '3128'
 ht-degree: 0%
@@ -147,9 +147,9 @@ Så här förklarar du en fråga:
       * `Read first page of results` - kör frågan och läs den första&quot;sidan&quot; av 20 resultat (som är den bästa metoden för att köra frågor).
       * `Include Node Count` - kör frågan och läser hela resultatuppsättningen (vanligtvis rekommenderas inte detta - se [Indexgenomgång](#index-traversal)).
 
-#### Popup för frågeförklaring {#query-explanation-popup}
+#### Popup-fönstret Frågeförklaring {#query-explanation-popup}
 
-![Popup för frågeförklaring](./assets/query-explanation-popup.png)
+![Popup-fönstret Frågeförklaring](./assets/query-explanation-popup.png)
 
 Efter markering `Explain`, visas ett popup-fönster som beskriver resultatet av frågan (och körningen, om detta är markerat).
 Det här popup-fönstret innehåller information om

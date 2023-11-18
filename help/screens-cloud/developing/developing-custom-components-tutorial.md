@@ -2,9 +2,9 @@
 title: Utveckla en anpassad komponent för skärmar as a Cloud Service
 description: I följande självstudiekurs går du igenom stegen för att skapa en anpassad komponent för AEM Screens. AEM Screens återanvänder många befintliga designmönster och tekniker från andra AEM produkter. I självstudiekursen beskrivs skillnader och speciella överväganden när du utvecklar för AEM Screens.
 exl-id: fe8e7bf2-6828-4a5a-b650-fb3d9c172b97
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
 workflow-type: tm+mt
-source-wordcount: '2105'
+source-wordcount: '2107'
 ht-degree: 0%
 
 ---
@@ -289,7 +289,7 @@ AEM Screens-komponenter återges annorlunda i redigeringsläge jämfört med fö
 
    Egenskapen categories är en sträng som identifierar klientbiblioteket. Kategorin cq.screens.component används i både redigeringsläget och läget Förhandsgranska/produktion. Därför läses alla CSS/JS som definierats i SharedClientlib in i alla lägen.
 
-   Det är en god vana att aldrig visa några sökvägar direkt för /apps i en produktionsmiljö. Egenskapen allowProxy ser till att klientbibliotekets CSS och JS refereras via ett prefix of/etc.clientlibs.
+   Det är en god vana att aldrig visa några sökvägar direkt för /apps i en produktionsmiljö. Egenskapen allowProxy ser till att klientbibliotekets CSS och JS refereras via prefixet of/etc.clientlibs.
 
 1. Skapa en fil med namnet `css.txt` under den delade mappen.
 
