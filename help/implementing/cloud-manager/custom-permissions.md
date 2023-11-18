@@ -2,9 +2,9 @@
 title: Anpassade behörigheter
 description: Lär dig hur du kan använda anpassade behörigheter för att skapa nya anpassade behörighetsprofiler med konfigureringsbara behörigheter för att begränsa åtkomst till program, pipelines och miljöer för användare av Cloud Managers.
 exl-id: 167da985-7f19-45b3-90a3-884817907da2
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 33d14ac66fa46c25f1e027aa86848768fd0271ff
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1559'
 ht-degree: 1%
 
 ---
@@ -96,11 +96,6 @@ Nu när du har en ny produktprofil kan du tilldela den anpassade behörigheter.
 
 1. Välj **Lägg till alla** längst upp på **Tillgängliga behörigheter** för att lägga till alla behörigheter.
 
-1. Om profilen alltid ska ha alla behörighetsobjekt bör du använda **Inkludera automatiskt** alternativ.
-
-   * **På** - Alla aktuella behörighetsobjekt och framtida behörighetsobjekt flyttas till Inkluderade behörighetsobjekt och tillämpas därefter när de sparas.
-   * **Av** - Alla behörighetsobjekt flyttas tillbaka till tillgängliga behörighetsobjekt och när de sparas används de i enlighet med detta.
-
 1. Välj **Spara** när du har definierat behörighetsobjekten för den nya produktprofilen.
 
 Din nya produktprofil sparas nu med anpassade behörigheter.
@@ -129,6 +124,10 @@ Följande behörigheter är tillgängliga för att skapa anpassade profiler.
 | Miljöskapande | Tillåt användare att skapa en miljö |
 | Miljöredigering | Tillåt användare att uppdatera och redigera miljöer |
 | Miljöloggar Läs | Tillåt användare att läsa miljöloggar |
+| Hantera miljövariabler | Tillåt användare att skapa/redigera/ta bort miljökonfigurationer |
+| Miljöåterställning - skapa | Tillåt användare att skapa miljöåterställning |
+| Snabb återställning av utvecklingsmiljö | Tillåt användare att återställa snabb utvecklingsmiljö |
+| Hantera innehållskopia | Tillåt användare att hantera kopieringsåtgärder för innehåll |
 | Skapa pipeline | Tillåt användare att skapa nya rörledningar |
 | Ta bort pipeline | Tillåt användare att ta bort rörledningar |
 | Redigera pipeline | Tillåt användare att redigera rörledningar |
@@ -138,6 +137,15 @@ Följande behörigheter är tillgängliga för att skapa anpassade profiler.
 | Åsidosätt/avvisa viktiga måttfel | Tillåt användare att åsidosätta/ignorera viktiga mätfel |
 | Produktionsdistributionsschema | Tillåt användare att schemalägga ett produktionsdistributionssteg |
 | Datainformationsåtkomst | Tillåt användare att komma åt databasinformation och generera lösenord för åtkomst |
+| Skapa databas | Tillåt användare att skapa nya Git-databaser |
+| Radera databas | Tillåt användare att ta bort Git-databaser |
+| Databasredigering | Tillåt användare att redigera Git-databaser |
+| Generera databaskod | Tillåt användare att generera projekt från arkityp |
+| Domännamnshantering | Tillåt användare att skapa/redigera/ta bort domännamn |
+| Hantera IP Tillåtelselista | Tillåt användare att skapa/redigera/ta bort IP tillåtelselista och IP tillåtelselista-bindning |
+| Hantera nätverksinfrastruktur | Tillåt användare att skapa/redigera/ta bort nätverksinfrastruktur |
+| SSL-certifikatshantering | Tillåt användare att skapa/redigera/ta bort SSL-certifikat |
+| New Relic Sub Account User Manage | Tillåt användare att läsa/redigera nya tillförlitliga underkontoanvändare |
 
 ### Behörigheter på organisationsnivå {#organization-level}
 
