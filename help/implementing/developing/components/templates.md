@@ -2,7 +2,7 @@
 title: Sidmallar
 description: Sidmallar används när du skapar en sida som används som bas för den nya sidan
 exl-id: ea42fce9-9af2-4349-a4e4-547e6e8da05c
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '3278'
 ht-degree: 0%
@@ -356,7 +356,7 @@ When creating an editable template, the value is copied from the template type t
 Om du har skapat en mall som kan användas som bas för andra mallar kan du kopiera den här mallen som en malltyp.
 
 1. Skapa en mall på samma sätt som vilken sidmall som helst [dokumenteras här](/help/sites-cloud/authoring/features/templates.md#creating-a-new-template-template-author), som kommer att fungera som bas för din malltyp.
-1. Kopiera den nya mallen från CRXDE Lite med hjälp av `templates` nod till `template-types` noden under [mallmapp](#template-folders).
+1. Kopiera den skapade mallen från CRXDE Lite `templates` nod till `template-types` noden under [mallmapp](#template-folders).
 1. Ta bort mallen från `templates` noden under [mallmapp](#template-folders).
 1. I kopian av mallen som finns under `template-types` nod, ta bort alla `cq:template` och `cq:templateType` egenskaper från alla `jcr:content` noder.
 
@@ -595,6 +595,6 @@ I följande diagram visas mallutvärderingsprocessen:
 
 Om du vill begränsa vilka mallar som kan användas för att skapa underordnade sidor under en viss sida använder du `cq:allowedTemplates` egenskap för `jcr:content` nod på sidan för att ange listan med mallar som ska tillåtas som underordnade sidor. Varje värde i listan måste vara en absolut sökväg till en mall för en tillåten underordnad sida, till exempel `/apps/wknd/templates/page-content`.
 
-Du kan använda `cq:allowedTemplates` på mallens  `jcr:content` nod som den här konfigurationen ska tillämpas på alla nyskapade sidor som använder den här mallen.
+Du kan använda `cq:allowedTemplates` på mallens  `jcr:content` nod som den här konfigurationen ska tillämpas på alla skapade sidor som använder mallen.
 
 Om du vill lägga till fler begränsningar, till exempel för mallhierarkin, kan du använda `allowedParents/allowedChildren` -egenskaper i mallen. Du kan sedan uttryckligen ange att sidor som skapats från en mall T måste vara överordnade/underordnade sidor till sidor som skapats från en mall T.

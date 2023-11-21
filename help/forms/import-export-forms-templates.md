@@ -3,7 +3,7 @@ title: Hur importerar, exporterar och organiserar man Adaptive Forms eller PDF f
 description: Lär dig att migrera adaptiva Forms, PDF forms, teman och andra stödresurser till och från en AEM.
 topic-tags: forms-manager
 exl-id: f5105fb7-b8c0-4656-8095-b21d392746c0
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 1%
@@ -185,7 +185,7 @@ Du kan använda mappar för att ordna och ordna resurser. Genom att ordna dokume
 
    Om det finns en mapp med det angivna namnet misslyckas överföringen. Du kan visa felmeddelandet genom att hovra över felet ![aem6forms_error_alert](assets/Smock_Alert_18_N.svg) -ikonen som visas bredvid namnfältet.
 
-   Du kan trycka på den nyligen skapade mappen för att gå in i mappen och skapa resurser eller mappar i mappen. Du kan också markera en mapp och välja att placera den i kö för hämtning, ta bort den eller redigera namnet på den.
+   Du kan trycka på den skapade mappen för att gå in i mappen och skapa resurser eller mappar i mappen. Du kan också markera en mapp och välja att placera den i kö för hämtning, ta bort den eller redigera namnet på den.
 
 
 <!-- ### Create copies of one or more assets or letters {#create-copies-of-one-or-more-assets-or-letters}

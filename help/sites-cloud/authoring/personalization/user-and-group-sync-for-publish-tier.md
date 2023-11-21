@@ -2,9 +2,9 @@
 title: Registrering, inloggning och användarprofil
 description: Läs mer om registrering, inloggning, användardata och gruppsynkronisering för AEM as a Cloud Service
 exl-id: a991e710-a974-419f-8709-ad86c333dbf8
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
@@ -27,16 +27,16 @@ Webbprogram har ofta funktioner för kontohantering så att slutanvändarna kan 
 
 ## Registrering {#registration}
 
-När en slutanvändare registrerar sig för ett konto i ett AEM skapas ett användarkonto i AEM Publish-tjänsten, vilket återspeglas på en användarresurs under `/home/users` i JCR-databasen.
+När en slutanvändare registrerar sig för ett konto i ett AEM program skapas ett användarkonto i AEM Publish-tjänsten, vilket återspeglas på en användarresurs under `/home/users` i JCR-databasen.
 
 Det finns två sätt att genomföra registreringen, som beskrivs nedan.
 
 ### AEM hanterad {#aem-managed-registration}
 
-Du kan skriva en egen registreringskod som minimalt tar slutanvändarens användarnamn och lösenord och skapar en användarpost i AEM som sedan kan användas för att autentisera mot vid inloggning. Följande steg används vanligtvis för att konstruera den här registreringsmekanismen:
+Du kan skriva en egen registreringskod som innehåller användarens användarnamn och lösenord och som skapar en användarpost i AEM som sedan kan användas för att autentisera mot vid inloggning. Följande steg används vanligtvis för att konstruera den här registreringsmekanismen:
 
 1. Visa en anpassad AEM som samlar in registreringsinformation
-1. Vid inlämningen används en korrekt etablerad tjänstanvändare för att
+1. Vid inlämningen används en korrekt etablerad tjänstanvändare för
    1. Verifiera att en befintlig användare inte redan finns, med en av API:erna för UserManager `findAuthorizables()` metoder
    1. Skapa en användarpost med någon av API:erna för UserManager `createUser()` metoder
    1. Bevara alla profildata som samlats in med det redigerbara gränssnittets `setProperty()` metoder
@@ -67,7 +67,7 @@ Kunder kan integrera med en IdP (identitetsleverantör) som autentiserar använd
 
 **SAML-BASERAT**
 
-Kunder kan använda SAML-baserad autentisering via SAML IdP. När IdP används med AEM ansvarar IdP för att autentisera slutanvändarens inloggningsuppgifter och förmedla användarens autentisering med AEM, skapa användarposten i AEM efter behov och hantera användarens gruppmedlemskap i AEM, vilket beskrivs i SAML-försäkran.
+Kunder kan använda SAML-baserad autentisering via SAML IdP. När en IdP används med AEM ansvarar IdP för att autentisera användarens inloggningsuppgifter och förmedla användarens autentisering med AEM, skapa användarposten i AEM efter behov och hantera användarens gruppmedlemskap i AEM, vilket beskrivs i SAML-försäkran.
 
 >[!NOTE]
 >
@@ -87,11 +87,11 @@ AEM as a Cloud Service har aktiverat cookie-baserade klistersessioner, vilket se
 
 ## Användarprofil {#user-profile}
 
-Det finns olika sätt att se på beständiga data, beroende på vilken typ av data det rör sig om.
+Det finns olika sätt att se på beständiga data, beroende på vilken typ av data det gäller.
 
 ### AEM {#aem-repository}
 
-Användarprofilinformation kan skrivas och läsas på två sätt:
+Information om användarprofiler kan skrivas och läsas på två sätt:
 
 * Användning på serversidan med `com.adobe.granite.security.user` Gränssnittet UserPropertiesManager som placerar data under användarens nod i `/home/users`. Se till att sidor som är unika per användare inte cachelagras.
 * Klientsidan som använder ContextHub, enligt beskrivningen i [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/personalization/contexthub.html?lang=en#personalization).
@@ -100,11 +100,11 @@ Användarprofilinformation kan skrivas och läsas på två sätt:
 
 Slutanvändardata kan skickas till tredjepartsleverantörer som CRM och hämtas via API:er när användaren loggar in på AEM och sparas (eller uppdateras) på AEM profilnod, och användas av AEM efter behov.
 
-Det är möjligt att få åtkomst till tredjepartstjänster i realtid för att hämta profilattribut, men det är viktigt att se till att detta inte i väsentlig grad påverkar behandlingen av förfrågningar i AEM.
+Det är möjligt att få åtkomst i realtid till tredjepartstjänster för att hämta profilattribut, men det är viktigt att se till att detta inte påverkar behandlingen av förfrågningar i AEM.
 
 ## Behörigheter (stängda användargrupper) {#permissions-closed-user-groups}
 
-Åtkomstprinciper på publiceringsnivå, som även kallas stängda användargrupper, definieras i AEM författare som [beskrivs här](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html?lang=en#applying-your-closed-user-group-to-content-pages). Om du vill begränsa vissa avsnitt eller sidor på en webbplats för vissa användare, tillämpar du de CUG-grupper som behövs med hjälp av AEM författare enligt beskrivningen här och replikerar dem till publiceringsnivån.
+Åtkomstprinciper på publiceringsnivå, som även kallas stängda användargrupper, definieras i AEM författare som [beskrivs här](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html?lang=en#applying-your-closed-user-group-to-content-pages). Om du vill begränsa vissa avsnitt eller sidor på en webbplats för vissa användare, tillämpar du de CUG-grupper som behövs med hjälp av AEM författare, enligt beskrivningen här, och replikerar dem till publiceringsnivån.
 
 * Om användare loggar in genom att autentisera med en identitetsleverantör (IdP) med SAML, identifierar autentiseringshanteraren användarens gruppmedlemskap (som ska matcha användargrupperna på publiceringsnivån) och behåller kopplingen mellan användaren och gruppen via en databaspost
 * Om inloggning sker utan IdP-integrering kan anpassad kod använda samma databasstrukturrelationer.
@@ -119,7 +119,7 @@ Till skillnad från andra AEM lösningar använder synkronisering av användare 
 
 >[!NOTE]
 >
->Som standard är synkronisering av användarprofiler och gruppmedlemskap inte aktiverat och data kommer därför inte att synkroniseras till eller ens bli permanent beständiga på publiceringsnivån. Om du vill aktivera funktionen skickar du en begäran till kundsupport med information om rätt program och miljöer.
+>Som standard är synkronisering av användarprofiler och gruppmedlemskap inte aktiverat och data kommer därför inte att synkroniseras till eller ens bli permanent beständiga på publiceringsnivån. Om du vill aktivera funktionen skickar du en begäran till kundsupport med information om vilket program och vilken miljö som är lämplig.
 
 ## Cacheöverväganden {#cache-considerations}
 

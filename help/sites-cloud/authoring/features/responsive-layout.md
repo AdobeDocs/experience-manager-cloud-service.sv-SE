@@ -2,9 +2,9 @@
 title: Responsiv layout
 description: AEM kan du förverkliga en responsiv layout för dina sidor
 exl-id: 87202742-5bed-4e87-a427-456a1a0e72cc
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1732'
 ht-degree: 6%
 
 ---
@@ -149,7 +149,7 @@ Precis som med andra komponenter kan du markera och sedan agera på (klippa ut, 
 >
 >När en layoutbehållare är ett styckesystem tas både layoutstödrastret och alla komponenter (och deras innehåll) som finns i behållaren bort om komponenten tas bort.
 
-1. Om du för musen över eller trycker på platshållaren för stödrastret visas åtgärdsmenyn.
+1. Om du håller muspekaren över eller trycker på platshållaren för stödrastret visas åtgärdsmenyn.
 
    ![Lägg till i layoutbehållaren](/help/sites-cloud/authoring/assets/responsive-layout-container.png)
 

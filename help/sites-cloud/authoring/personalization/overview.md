@@ -2,9 +2,9 @@
 title: Personalisering och målgruppsanpassning av innehåll
 description: Lär dig hur du kan skapa personaliserat, riktat innehåll med AEM
 exl-id: b9b5dbf6-d491-48a6-99b1-19bc1b651b8c
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '1053'
+source-wordcount: '1054'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ AEM tillhandahåller ett ramverk av verktyg för:
 * Definiera reglerna som används för att matcha den kända användarinformationen mot en målgruppsdefinition.
 * Konfigurera sidorna för att presentera målinriktade personaliserade upplevelser, för att göra det specifika innehållet tillgängligt för den aktuella slutanvändaren.
 
-I följande översikt visas några termer som används för personalisering i AEM as a Cloud Service, följt av en rekommenderad åtgärdsordning.
+I följande översikt visas några av de termer som används för personalisering i AEM as a Cloud Service, följt av en rekommenderad åtgärdsordning.
 
 ## Upplevelse {#experience}
 

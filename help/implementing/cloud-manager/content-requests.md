@@ -2,9 +2,9 @@
 title: Förstå begäranden om Cloud Service innehåll
 description: Om du har köpt innehållsförfrågningslicenser från Adobe kan du ta reda på vilka typer av innehållsförfrågningar som Adobe Experience Cloud som en tjänst mäter och varianterna med en organisations analysrapporteringsverktyg.
 exl-id: 3666328a-79a7-4dd7-b952-38bb60f0967d
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 ## Varianter på begäranden om Cloud Service{#content-requests-variances}
 
-Innehållsförfrågningar kan innehålla avvikelser med en organisations analysrapporteringsverktyg som sammanfattas i följande tabell. I allmänhet samlar analysverktyg in data via instrumentering på klientsidan <b>ska inte användas</b> att rapportera om antalet innehållsförfrågningar för en viss webbplats, helt enkelt eftersom de ofta är beroende av att slutanvändarnas samtycke aktiveras, och därför saknas en betydande del av trafiken. Analysverktyg som samlar in data på serversidan i loggfiler, eller CDN-rapporter för kunder som lägger till egna CDN AEM as a Cloud Service, ger bättre antal. Adobe RUM-datatjänsten rekommenderas som alternativ för rapportering av sidvyer och deras associerade prestanda.
+Innehållsförfrågningar kan innehålla avvikelser med en organisations analysrapporteringsverktyg som sammanfattas i följande tabell. I allmänhet samlar analysverktyg in data via instrumentering på klientsidan <b>ska inte användas</b> att rapportera om antalet innehållsförfrågningar för en viss webbplats, helt enkelt eftersom de ofta är beroende av att användarens samtycke aktiveras, och därför saknas en betydande del av trafiken. Analysverktyg som samlar in data på serversidan i loggfiler, eller CDN-rapporter för kunder som lägger till egna CDN AEM as a Cloud Service, ger bättre antal. Adobe RUM-datatjänsten rekommenderas som alternativ för rapportering av sidvyer och deras associerade prestanda.
 
 | Orsak till avvikelse | Förklaring |
 |---|---|
-| Användarens samtycke | Analysverktyg som förlitar sig på klientverktyg är ofta beroende av att slutanvändarnas samtycke aktiveras. Detta skulle kunna representera merparten av den trafik som inte spåras. För kunder som vill mäta innehållsförfrågningar på egen hand rekommenderar vi att man använder analysverktyg för att samla in data på serversidan eller CDN-rapporter. |
+| Användarens samtycke | Analysverktyg som förlitar sig på klientens instruktioner är ofta beroende av att användarens samtycke aktiveras. Detta skulle kunna representera merparten av den trafik som inte spåras. För kunder som vill mäta innehållsförfrågningar på egen hand rekommenderar vi att man använder analysverktyg för att samla in data på serversidan eller CDN-rapporter. |
 | Taggar | Alla sidor eller API-anrop som spåras som Adobe Experience Manager (AEM)-innehållsbegäranden kanske inte taggas med Analytics-spårning. |
 | Tag Management Rules | Regelinställningar för tagghantering kan resultera i olika datainsamlingskonfigurationer på en sida, vilket resulterar i en kombination av avvikelser med spårning av innehållsbegäran. |
 | Bots | Okända botar som inte har föridentifierats och tagits bort av AEM kan orsaka spårningsavvikelser. |

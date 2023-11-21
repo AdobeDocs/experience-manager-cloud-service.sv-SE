@@ -1,17 +1,17 @@
 ---
 title: Anpassade behörigheter
-description: Lär dig hur du kan använda anpassade behörigheter för att skapa nya anpassade behörighetsprofiler med konfigureringsbara behörigheter för att begränsa åtkomst till program, pipelines och miljöer för användare av Cloud Managers.
+description: Lär dig hur du kan använda anpassade behörigheter för att skapa anpassade behörighetsprofiler med konfigureringsbara behörigheter för att begränsa åtkomst till program, pipelines och miljöer för användare av Cloud Managers.
 exl-id: 167da985-7f19-45b3-90a3-884817907da2
-source-git-commit: 33d14ac66fa46c25f1e027aa86848768fd0271ff
+source-git-commit: be38ca5bf79d401fc12c1422c270a2ee84bbbad2
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1532'
 ht-degree: 1%
 
 ---
 
 # Anpassade behörigheter {#custom-permissions}
 
-Lär dig hur du kan använda anpassade behörigheter för att skapa nya anpassade behörighetsprofiler med konfigureringsbara behörigheter för att begränsa åtkomst till program, pipelines och miljöer för användare av Cloud Managers.
+Lär dig hur du kan använda anpassade behörigheter för att skapa anpassade behörighetsprofiler med konfigureringsbara behörigheter för att begränsa åtkomst till program, pipelines och miljöer för användare av Cloud Managers.
 
 >[!NOTE]
 >
@@ -26,33 +26,33 @@ Cloud Manager har en uppsättning fördefinierade roller som styr åtkomsten til
 * Deployment Manager
 * Developer
 
-Med anpassade behörigheter kan användare skapa nya anpassade behörighetsprofiler med konfigurerbara behörigheter för att begränsa åtkomst för molnhanterare till program, rörledningar och miljöer.
+Med anpassade behörigheter kan användare skapa anpassade behörighetsprofiler med konfigurerbara behörigheter för att begränsa åtkomst för molnhanterare till program, rörledningar och miljöer.
 
 >[!TIP]
 >
->Mer information om fördefinierade roller finns i dokumentet [AEM as a Cloud Service team och produktprofiler.](/help/onboarding/aem-cs-team-product-profiles.md)
+>Mer information om fördefinierade roller finns i [AEM as a Cloud Service team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md).
 
 ## Använda anpassade behörigheter {#using}
 
-För att skapa och använda egna behörigheter krävs tre steg:
+Om du vill skapa och använda egna behörigheter krävs det tre steg:
 
-1. [Skapa en ny produktprofil.](#create)
-1. [Tilldela anpassade behörigheter till den nya produktprofilen.](#assign-permissions)
-1. [Tilldela användare till den nya produktprofilen.](#assign-users)
+1. [Skapa en produktprofil.](#create)
+1. [Tilldela anpassade behörigheter till produktprofilen.](#assign-permissions)
+1. [Tilldela användare till produktprofilen.](#assign-users)
 
-I det här avsnittet beskrivs de här stegen. Det kan vara praktiskt att använda [Villkor](#terms) och [Konfigurerbara behörigheter](#configurable-permissions) när du skapar egna behörigheter.
+I det här avsnittet beskrivs dessa steg. Det kan vara praktiskt att använda [Villkor](#terms) och [Konfigurerbara behörigheter](#configurable-permissions) när du skapar egna behörigheter.
 
 >[!NOTE]
 >
->Du måste ha produktadministratörsbehörighet i Admin Console för att Adobe Experience Manager as a Cloud Service ska kunna skapa nya profiler och hantera behörigheter för Cloud Manager.
+>Du måste ha produktadministratörsbehörighet i Admin Console för att Adobe Experience Manager as a Cloud Service ska kunna skapa profiler och hantera behörigheter för Cloud Manager.
 
 ### Skapa en ny produktprofil {#create}
 
-Du måste först skapa en produktprofil innan du kan tilldela anpassade behörigheter.
+Skapa först en produktprofil som du kan tilldela anpassade behörigheter till.
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/)
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/).
 
-1. På landningssidan för Cloud Manager väljer du **Hantera åtkomst** knapp
+1. På landningssidan för Cloud Manager väljer du **Hantera åtkomst** -knappen.
 
 ![Knappen Hantera åtkomst](assets/manage-access.png)
 
@@ -75,26 +75,26 @@ Den nya produktprofilen sparas och visas i listan över produktprofiler på Admi
 
 Nu när du har en ny produktprofil kan du tilldela den anpassade behörigheter.
 
-1. I Admin Console markerar du namnet på [en ny produktprofil som du just har skapat.](#create)
+1. I Admin Console markerar du namnet på [ny produktprofil som du har skapat](#create).
 
 1. I det fönster som öppnas väljer du **Behörigheter** om du vill visa en lista med redigerbara behörigheter.
 
    ![Redigerbara behörigheter](assets/permissions-tab.png)
 
-1. Välj **Redigera** länk till en behörighet att redigera den.
+1. Välj **Redigera** länk till en behörighet så att du kan redigera den.
 
-1. The **Redigera behörigheter** öppnas.
+1. The **Redigera behörighet** öppnas.
    * Den behörighet du valde i föregående steg är markerad i den vänstra kolumnen.
    * Behörighetsobjekten som är tillgängliga för tilldelning av behörigheten finns i den mellersta kolumnen med etiketten **Tillgänglig behörighet** Objekt.
    * De tilldelade behörighetsobjekten finns i den högra kolumnen med etiketten **Behörighetsobjekt som ingår**.
 
    ![Redigera behörighetsobjekt](assets/edit-permission-items.png)
 
-1. Markera plustecknet (`+`) bredvid behörighetsobjektet för att lägga till det i kolumnen **Behörighetsobjekt som ingår**.
+1. Markera plustecknet (`+`) bredvid behörighetsobjektet så att du kan lägga till det i kolumnen **Behörighetsobjekt som ingår**.
 
-   * Välj `i` -ikon bredvid ett behörighetsobjekt om du vill veta mer om det.
+   * Välj `i` -ikonen bredvid ett behörighetsobjekt om du vill veta mer om det.
 
-1. Välj **Lägg till alla** längst upp på **Tillgängliga behörigheter** för att lägga till alla behörigheter.
+1. Välj **Lägg till alla** längst upp på **Tillgängliga behörigheter** så att du kan lägga till alla behörigheter.
 
 1. Välj **Spara** när du har definierat behörighetsobjekten för den nya produktprofilen.
 
@@ -104,7 +104,7 @@ Din nya produktprofil sparas nu med anpassade behörigheter.
 
 Nu kan du tilldela användare till den nya produktprofilen som du skapade med anpassade behörigheter.
 
-1. I Admin Console markerar du namnet på [ny produktprofil som du just har tilldelat anpassade behörigheter till.](#assign-permissions)
+1. I Admin Console markerar du namnet på [ny produktprofil som du har tilldelat anpassade behörigheter till.](#assign-permissions)
 
 1. I det fönster som öppnas väljer du **Användare** -fliken.
 
@@ -128,7 +128,7 @@ Följande behörigheter är tillgängliga för att skapa anpassade profiler.
 | Miljöåterställning - skapa | Tillåt användare att skapa miljöåterställning |
 | Snabb återställning av utvecklingsmiljö | Tillåt användare att återställa snabb utvecklingsmiljö |
 | Hantera innehållskopia | Tillåt användare att hantera kopieringsåtgärder för innehåll |
-| Skapa pipeline | Tillåt användare att skapa nya rörledningar |
+| Skapa pipeline | Tillåt användare att skapa rörledningar |
 | Ta bort pipeline | Tillåt användare att ta bort rörledningar |
 | Redigera pipeline | Tillåt användare att redigera rörledningar |
 | Godkänn/avvisa produktionsdistributioner | Tillåt användare att godkänna eller avvisa ett produktionsdistributionssteg |
@@ -137,7 +137,7 @@ Följande behörigheter är tillgängliga för att skapa anpassade profiler.
 | Åsidosätt/avvisa viktiga måttfel | Tillåt användare att åsidosätta/ignorera viktiga mätfel |
 | Produktionsdistributionsschema | Tillåt användare att schemalägga ett produktionsdistributionssteg |
 | Datainformationsåtkomst | Tillåt användare att komma åt databasinformation och generera lösenord för åtkomst |
-| Skapa databas | Tillåt användare att skapa nya Git-databaser |
+| Skapa databas | Tillåt användare att skapa Git-databaser |
 | Radera databas | Tillåt användare att ta bort Git-databaser |
 | Databasredigering | Tillåt användare att redigera Git-databaser |
 | Generera databaskod | Tillåt användare att generera projekt från arkityp |
@@ -145,7 +145,7 @@ Följande behörigheter är tillgängliga för att skapa anpassade profiler.
 | Hantera IP Tillåtelselista | Tillåt användare att skapa/redigera/ta bort IP tillåtelselista och IP tillåtelselista-bindning |
 | Hantera nätverksinfrastruktur | Tillåt användare att skapa/redigera/ta bort nätverksinfrastruktur |
 | SSL-certifikatshantering | Tillåt användare att skapa/redigera/ta bort SSL-certifikat |
-| New Relic Sub Account User Manage | Tillåt användare att läsa/redigera nya tillförlitliga underkontoanvändare |
+| New Relic Sub Account User Manage | Tillåt användare att läsa/redigera New Relic-underkontoanvändare |
 
 ### Behörigheter på organisationsnivå {#organization-level}
 
@@ -154,7 +154,7 @@ Behörigheter på organisationsnivå avser behörigheter som alltid ges i alla p
 Följande behörigheter är behörigheter på organisationsnivå:
 
 * **Skapa program** - Med den här behörigheten kan användare skapa ett program i organisationen.
-* **Datainformationsåtkomst** Behörigheten på innehavar-/organisationsnivå ger användarna möjlighet att generera användarnamn, lösenord och databas-URL för åtkomst och att bidra till kundprojekt.
+* **Datainformationsåtkomst** Behörigheten på innehavar-/organisationsnivå tillåter användare att generera användarnamn, lösenord och databas-URL för åtkomst och att bidra till kundprojekt.
    * Användarnamn och lösenord för databasåtkomst är gemensamma för alla rapporter i organisationen, men databasens URL är unik för varje program.
    * Se [Åtkomst till databaser](/help/implementing/cloud-manager/managing-code/accessing-repos.md) för mer information.
 
@@ -164,17 +164,17 @@ Följande termer används för att skapa och hantera anpassade behörigheter och
 
 | Term | Beskrivning |
 |---|---|
-| Fördefinierade behörigheter | Fördefinierade roller som **Företagsägare**, **Distributionshanteraren** och så vidare för att styra olika funktioner i Cloud Manager. Mer information om fördefinierade roller finns i dokumentet [AEM as a Cloud Service team och produktprofiler.](/help/onboarding/aem-cs-team-product-profiles.md) |
-| Anpassade behörigheter | Funktioner i Cloud Manager som gör att användare kan skapa behörighetsprofiler för att definiera roller som styr funktioner som stöds i Cloud Manager |
-| Produktprofil | Skapat i Admin Console för att hantera konfigurerbara behörigheter som gäller för användare som ingår i behörighetsprofilen |
+| Fördefinierade behörigheter | Fördefinierade roller som **Företagsägare** och **Distributionshanteraren** för att styra olika funktioner i Cloud Manager. Mer information om fördefinierade roller finns i [AEM as a Cloud Service team och produktprofiler.](/help/onboarding/aem-cs-team-product-profiles.md) |
+| Anpassade behörigheter | Med funktionerna i Cloud Manager kan användare skapa behörighetsprofiler för att definiera roller som styr funktioner som stöds i Cloud Manager |
+| Produktprofil | Skapat i Admin Console för att hantera konfigurerbara behörigheter som är tillämpliga för användare som är en del av behörighetsprofilen |
 | Konfigurerbar behörighet | Cloud Manager-behörigheter som kan konfigureras i behörighetsprofilen |
-| Behörighetsobjekt | Ett program, en miljö eller en pipeline-resurs som en behörighet kan tillämpas på |
+| Behörighetsobjekt | Ett program, en miljö eller en pipeline-resurs där en behörighet kan tillämpas |
 
-Behörighetsobjekt avser det område där behörigheten ska tillämpas. Vanligtvis är det något av följande.
+Behörighetsobjekt avser det område där behörigheten tillämpas. Vanligtvis är det något av följande.
 
 | Typ av behörighetsobjekt | Exempel | Beskrivning |
 |---|---|---|
-| Organisation | organisation:företagA | Alla tillämpliga resurser i en organisation. En resurs kan vara ett program, en miljö eller en pipeline. Om användaren lägger till en organisation för någon behörighet får även alla nya resurser i den organisationen den behörigheten. |
+| Organisation | organisation:företagA | Alla tillämpliga resurser i en organisation. En resurs kan vara ett program, en miljö eller en pipeline. Om användaren lägger till en organisation för någon behörighet har alla nya resurser i den organisationen också den behörigheten. |
 | Program | Program A | Alla tillämpliga resurser i ett program |
 | Miljö | Program A: miljö | Tillämpligt på en viss miljö |
 | Pipeline | Program A: Pipeline | Gäller för en viss rörledning |
@@ -183,8 +183,8 @@ Behörighetsobjekt avser det område där behörigheten ska tillämpas. Vanligtv
 
 Tänk på följande begränsningar när du använder anpassade behörigheter.
 
-* Profilen för anpassade behörigheter listar även AMS-program, -miljöer och -pipelines när behörigheter konfigureras.
-* Resurser som program, miljö, pipeline och så vidare som skapats i Cloud Manager kan ta upp till två minuter att visa i Admin Console för behörighetskonfiguration.
+* Anpassad behörighetsprofil listar även AMS-program, -miljöer och -pipelines när behörigheter konfigureras.
+* Resurser som program, miljö och pipeline som skapats i Cloud Manager kan ta upp till två minuter att visa i Admin Console för behörighetskonfiguration.
 * I sällsynta fall där anpassade behörighetstjänster inte svarar är fördefinierade profiler fortfarande tillgängliga och användare i fördefinierade profiler fortfarande har lämplig åtkomst.
 
 ## Vanliga frågor {#faq}
@@ -208,12 +208,12 @@ Nej, standardprofiler kan inte redigeras. Du kan inte lägga till eller ta bort 
 
 ### Ska jag ta bort fördefinierade behörighetsprofiler eftersom anpassade profiler nu är tillgängliga?
 
-Fördefinierade behörighetsprofiler får inte tas bort från Admin Console.
+Ta inte bort fördefinierade behörighetsprofiler från Admin Console.
 
 ### Kan jag lägga till användare i flera behörighetsprofiler?
 
-Ja, en användare kan ingå i flera profiler, inklusive fördefinierade och anpassade behörighetsprofiler. När en användare tilldelas till flera profiler blir de kombinerade behörigheterna från alla tilldelade behörighetsprofiler tillgängliga för den användaren.
+Ja, en användare kan ingå i flera profiler, inklusive fördefinierade och anpassade behörighetsprofiler. När en användare tilldelas till flera profiler är de kombinerade behörigheterna från alla tilldelade behörighetsprofiler tillgängliga för den användaren.
 
 ### Vad händer om en användare har behörighet att redigera en miljö/pipeline men inte har åtkomst till ett program som innehåller miljön/pipeline?
 
-I det här fallet kan användaren inte komma åt miljön eller pipeline om han/hon inte har **Programåtkomst** behörigheter som innehåller miljön eller pipeline.
+I det här fallet kan användaren inte komma åt miljön eller pipelinen om han/hon inte har **Programåtkomst** behörigheter som innehåller miljön eller pipeline.

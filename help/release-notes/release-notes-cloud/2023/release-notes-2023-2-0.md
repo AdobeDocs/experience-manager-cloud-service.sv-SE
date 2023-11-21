@@ -1,13 +1,13 @@
 ---
 title: Versionsinformation för 2023.2.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2023.2.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+exl-id: 671056e6-84cc-4c2c-bca3-fde68d5cc835
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '731'
 ht-degree: 0%
 
 ---
-
 
 # Versionsinformation 2023.2.0 för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
@@ -15,9 +15,9 @@ I följande avsnitt beskrivs versionsinformationen för 2023.2.0-versionen av [!
 
 >[!NOTE]
 >
->Härifrån kan du navigera till versionsinformation för tidigare versioner; till exempel för 2021, 2022 och så vidare.
+>Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2021, 2022 och så vidare.
 >
->Ta en titt på [Roadmap för lansering av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) om de kommande funktionsaktiviteterna för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) om de kommande funktionsaktiviteterna för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ I följande avsnitt beskrivs versionsinformationen för 2023.2.0-versionen av [!
 
 ## Releasedatum {#release-date}
 
-Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2023.2.0) är 12 april 2023. Nästa version (2023.4.0) är planerad till 7 juni 2023.
+Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2023.2.0) är 12 april 2023. Nästa version (2023.4.0) är planerad till 7 juni 2023.
 
 ## Släpp video {#release-video}
 
@@ -45,7 +45,7 @@ Titta på videon med versionsöversikten från februari 2023 om du vill se en sa
 ### Nya funktioner i [!DNL Assets] {#assets-features}
 
 * Stöd för nytt protokoll (DASH - Dynamic Adaptive Streaming over HTTP) har startats för adaptiv strömning i Dynamic Media (med CMAF aktiverat):
-   * Adaptiv direktuppspelning (DASH/HLS) ger en bättre visningsupplevelse för videor
+   * Adaptiv strömning (DASH/HLS) ger en bättre användarupplevelse för videor
    * DASH är det internationella standardprotokollet för strömning av adaptiv video och används ofta i branschen
    * Finns i NA, att aktiveras via supportanmälan, kommer snart i APAC, EMEA
 
@@ -57,7 +57,7 @@ Titta på videon med versionsöversikten från februari 2023 om du vill se en sa
 
 * **[Använd kärnkomponenterna för datainhämtning för att bygga adaptiva Forms](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en)**: [Använda adaptiv Forms-redigerare](/help/forms/creating-adaptive-form-core-components.md) för att skapa formulär baserade på standardiserade datainhämtningskomponenter (kärnkomponenter). Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser.
 
-* **[Stöd för Frontend-pipeline för styling core Component-baserad Adaptive Forms](/help/forms/using-themes-in-core-components.md)**: Utnyttja standardiserade BEM-baserade teman för Core Components-baserade Adaptive Forms genom att använda dem med Frontend Deployment Pipeline för att förbättra utseendet och känslan i era formulär och anpassa dem efter företagets varumärkesgodkända riktlinjer.
+* **[Stöd för Frontend-pipeline för styling core Component-baserad Adaptive Forms](/help/forms/using-themes-in-core-components.md)**: Använd standardiserade BEM-baserade teman för Core Components-baserade Adaptive Forms genom att använda dem med Frontend Deployment Pipeline för att förbättra utseendet och känslan i era formulär och anpassa dem efter företagets varumärkesgodkända riktlinjer.
 
 * **[Generera arkivdokument för centrala komponentbaserade adaptiva Forms](/help/forms/generate-document-of-record-core-components.md)**: Skapa ett urkunder som innehåller inlämnade data för Adaptive Forms som byggts med hjälp av centrala komponenter för arkivering eller referens till slutanvändare, i utskrift eller i dokumentformat.
 
@@ -69,12 +69,12 @@ Titta på videon med versionsöversikten från februari 2023 om du vill se en sa
 
 * **[Integrera med REST-slutpunkter med Open API 3.0](/help/forms/configure-data-sources.md#configure-restful-services-open-api-specification-version-20-configure-restful-services-swagger-version30)**: Integrera smidigt i databassystem som stöder Open API 3.0 för att lagra och hämta data med hjälp av formulärdatamodeller.
 
-* **[Dela ett adaptivt formulär för granskning](/help/forms/create-reviews-forms.md)**: Använd den adaptiva Forms granskningsfunktionen för att låta en eller flera granskare granska formuläret.
+* **[Dela ett adaptivt formulär för granskning](/help/forms/create-reviews-forms.md)**: Använd den adaptiva Forms-granskningsfunktionen för att låta en eller flera granskare granska formuläret.
 
 
 ### Funktioner i [!DNL Forms] prerelease {#prerelease-features-forms}
 
-* **[Skicka anpassningsbara Forms till Microsoft SharePoint och Microsoft OneDrive](/help/forms/configuring-submit-actions.md)**: Förbättra affärsanvändarnas möjligheter att snabbt öppna nya formulär och lagra inlämnade data i vardagliga verktyg som de använder som Microsoft SharePoint webbplats eller OneDrive-mapp.
+* **[Skicka anpassningsbara Forms till Microsoft SharePoint och Microsoft OneDrive](/help/forms/configuring-submit-actions.md)**: Förbättra affärsanvändarnas möjlighet att snabbt öppna nya formulär och lagra inlämnade data i vardagliga verktyg som de använder som Microsoft SharePoint webbplats eller OneDrive-mapp.
 
 ![Skicka anpassningsbara Forms till Microsoft SharePoint och Microsoft OneDrive](/help/forms/assets/onedrive-and-sharepoint.jpg)
 

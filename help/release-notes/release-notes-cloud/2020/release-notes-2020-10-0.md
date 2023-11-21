@@ -2,9 +2,9 @@
 title: Versionsinformation för version 2020.10.0 av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.10.0."
 exl-id: ac741744-5b47-47a4-b5af-e1089e92c3f0
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1194'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Följande version (2020.11.0) kommer att vara den 1 december 2020.
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms-oct-2021}
 
-* **Analytics för Adaptive Forms**: Du kan nu fånga in och spåra beteenden hos både inloggad och ej inloggad (anonym) via Adobe Analytics för Adaptive Forms för att samla in slutanvändarinsikter. Det hjälper företagsanvändare att fatta välgrundade beslut om anpassat formulärinnehåll, layout och format baserat på insamlade insikter.
+* **Analytics för Adaptive Forms**: Du kan nu fånga in och spåra beteenden hos både inloggad och ej inloggad (anonym) via Adobe Analytics för Adaptive Forms för att samla in användarinsikter. Det hjälper företagsanvändare att fatta välgrundade beslut om anpassat formulärinnehåll, layout och format baserat på insamlade insikter.
 
 ### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms-oct-2021}
 
@@ -65,13 +65,13 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betapr
 
 * Lanserade CIF Venia Reference Site - 2020.10.2 som innehåller den senaste CIF Core Components version v1.4.0. Se [CIF Venias referenswebbplats](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2020.10.2) för mer information.
 
-* Frisläppta CIF-kärnkomponenter v1.4.0. Se [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.4.0) för mer information.
+* Frisläppta CIF kärnkomponenter v1.4.0. Se [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.4.0) för mer information.
 
 ### Felkorrigeringar {#bug-fixes-commerce}
 
 * GraphQL-begäranden som fanns i produktkonsolen och väljarna gjordes via HTTP-POST. Problemet har åtgärdats för att säkerställa att Apollo GraphQL-klienten respekterar inställningen i GraphQL klient-OSGi-konfigurationen för att stödja GET-begäranden om de är konfigurerade.
 
-* CIF Cloud-konfigurationsgränssnittet visade knapparna Spara och stäng för konfigurationer i /lib och /apps/. Gränssnitten är skrivskyddade och därför är användargränssnittet fast att bara visa stängningsknappen.
+* Gränssnittet för konfiguration av CIF Cloud visade knapparna Spara och stäng för konfigurationerna i /lib och /apps/. Gränssnitten är skrivskyddade och därför är användargränssnittet fast att bara visa stängningsknappen.
 
 ## Cloud Manager {#cloud-manager}
 

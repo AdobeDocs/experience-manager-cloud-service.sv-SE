@@ -2,9 +2,9 @@
 title: Installera och konfigurera spelare på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du installerar och konfigurerar spelare på skärmar as a Cloud Service.
 exl-id: a022738a-c543-4629-a244-f70fa294fe7f
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
@@ -49,11 +49,11 @@ Spelaren rapporterar olika uppspelningsmått för varje `ping` som standard är 
 
 Med grundläggande uppspelningsövervakning i en AEM Screens-spelare kan vi:
 
-* Fjärrövervaka om en spelare spelar upp innehållet på rätt sätt.
+* Fjärrövervaka om en spelare spelar upp innehållet korrekt.
 
 * Förbättra reaktiviteten till tomma skärmar eller trasiga upplevelser på fältet.
 
-* Minskar risken för att slutanvändaren får en trasig upplevelse.
+* Minskar risken för att användaren får en trasig upplevelse.
 
 ### Förstå egenskaper {#understand-properties}
 
@@ -84,7 +84,7 @@ Några begränsningar för grundläggande uppspelningsövervakning visas nedan:
 
 * Den här funktionen stöds bara för sekvenskanaler och täcker ännu inte de interaktiva kanalernas (SPA) användningsfall.
 
-* Måtten är ännu inte helt exponerade för kunderna. Adobe arbetar snart med att aktivera kontrollpanelsliknande rapporterings- och varningsmekanismer.
+* Måtten är ännu inte helt exponerade för kunderna. Adobe arbetar på att aktivera kontrollpanelsliknande rapporterings- och varningsfunktioner inom kort.
 
 ## What&#39;s Next {#whats-next}
 

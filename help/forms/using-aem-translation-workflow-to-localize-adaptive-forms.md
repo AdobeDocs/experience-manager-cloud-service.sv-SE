@@ -6,7 +6,7 @@ content-type: reference
 topic-tags: develop
 discoiquuid: f5642571-9657-4ca1-93c5-4ae2eb91e967
 noindex: true
-source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Maskinöversättningstjänsten översätter omedelbart ditt innehåll i Adaptiv 
 1. I **Lägg till ordlista i översättningsprojekt** väljer du **Skapa ett nytt översättningsprojekt** eller **Lägg till i ett befintligt översättningsprojekt** alternativ.
 1. I **Projektets titel** anger du rubriken. Till exempel, `Government Reference Site - German locale.`
 1. I **Målspråk** anger du nationella inställningar (till exempel `German(de)`) och klicka på **Klar**. Du kan ange flera språkinställningar. Formuläret översätts till alla språkområden som anges i **Målspråk** fält.
-1. I dialogrutan Lexikon tillagd klickar du på **Öppna projekt**. Öppna det nyskapade projektet på projektskärmen.
+1. I dialogrutan Lexikon tillagd klickar du på **Öppna projekt**. Öppna det skapade projektet på skärmen Projekt.
 1. Klicka på **ellipser** längst ned i **Översättningssammanfattning** platta. Skärmen Översättningssammanfattning öppnas.
 1. Klicka på **Redigera** ikonen längst upp på **Översättningssammanfattning** skärm. Öppna **Översättning** och välj Maskinöversättning i **Översättningsmetod** skärm. Välj lämplig **Översättningsprovider** och **Molnkonfiguration**. Klicka på **Klar** ikonen längst upp på skärmen.
 1. På **Översättningsjobb** platta, klicka på ![aem62forms_down](assets/aem62forms_downarrow.png) och klicka på **Starta**. Status för rutan ändras till Utkast. När översättningen är klar ändras statusen till **Klar för granskning**. Uppdatera sidan efter några minuter och kontrollera statusen.

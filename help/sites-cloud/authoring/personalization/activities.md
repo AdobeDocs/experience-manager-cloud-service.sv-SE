@@ -2,9 +2,9 @@
 title: Hantera aktiviteter
 description: Med aktivitetskonsolen kan ni skapa, organisera och hantera marknadsföringsaktiviteter för era varumärken
 exl-id: e7cab16d-7678-472d-b75f-7f67b303ba8d
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '1960'
+source-wordcount: '1958'
 ht-degree: 15%
 
 ---
@@ -213,7 +213,7 @@ Använd alltid unika namn för aktiviteter för att undvika synkroniseringsprobl
 
 >[!NOTE]
 >
->När du skapar en kampanj i Adobe Target tilldelas den en egenskap som kallas `thirdPartyId` till varje kampanj. När du tar bort kampanjen i Adobe Target `thirdPartyId` tas inte bort. Du kan inte återanvända `thirdPartyId` för kampanjer av olika typer (AB, XT) och kan inte tas bort manuellt. För att undvika detta bör du namnge varje kampanj med ett unikt namn. Kampanjnamn kan därför inte återanvändas i olika kampanjtyper.
+>När du skapar en kampanj i Adobe Target tilldelas den en egenskap som kallas `thirdPartyId` till varje kampanj. När du tar bort kampanjen i Adobe Target `thirdPartyId` tas inte bort. Du kan inte återanvända `thirdPartyId` för kampanjer av olika typer (AB, XT) och kan inte tas bort manuellt. För att undvika det här problemet kan du namnge varje kampanj med ett unikt namn. Kampanjnamn kan inte återanvändas i olika kampanjtyper.
 >
 >Om du använder samma namn i samma kampanjtyp skriver du över den befintliga kampanjen.
 >

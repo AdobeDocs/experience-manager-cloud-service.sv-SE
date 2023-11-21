@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: 464a97ce-da3e-47b5-9879-fafaf2f2378c
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 2%
@@ -36,7 +36,7 @@ Så här redigerar du metadata:
    >
    >Om ett textfält är tomt finns det ingen befintlig metadatauppsättning. Du kan ange ett värde i fältet och spara det för att lägga till metadataegenskapen.
 
-Alla ändringar av metadata för en resurs skrivs tillbaka till den ursprungliga binärfilen som en del av dess XMP data. Detta görs via Experience Manager metadata-återskrivningsarbetsflöde. Ändringar som gjorts i befintliga egenskaper (till exempel `dc:title`) är överskrivna och nyligen skapade egenskaper (inklusive anpassade egenskaper som `cq:tags`) läggs till tillsammans med schemat.
+Alla ändringar av metadata för en resurs skrivs tillbaka till den ursprungliga binärfilen som en del av dess XMP data. Detta görs via Experience Manager metadata-återskrivningsarbetsflöde. Ändringar som gjorts i befintliga egenskaper (till exempel `dc:title`) skrivs över och skapas egenskaper (inklusive anpassade egenskaper som `cq:tags`) läggs till tillsammans med schemat.
 
 <!-- XMP write-back is supported and enabled for the platforms and file formats described in technical requirements. -->
 

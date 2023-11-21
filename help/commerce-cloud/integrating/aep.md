@@ -11,7 +11,7 @@ level: Beginner
 kt: 10834
 thumbnail: 346811.jpeg
 exl-id: 30bb9b2c-5f00-488e-ad5c-9af7cd2c4735
-source-git-commit: 43220614f567bdfad17c6ac9c8b3adcc856ff044
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '2068'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Följ [AEM Project Archettype](https://experienceleague.adobe.com/docs/experienc
 ![AEM](../assets/aep-integration/aem-project-with-commerce.png)
 
 
-Skapa och distribuera det nya AEM Commerce-projektet till den lokala AEM SDK genom att köra följande kommando från projektets rotkatalog.
+Skapa och distribuera det skapade AEM Commerce-projektet till den lokala AEM SDK genom att köra följande kommando från projektets rotkatalog.
 
 ```bash
 $ mvn clean install -PautoInstallSinglePackage
@@ -403,11 +403,11 @@ Följ de här stegen för att skapa ett datastream i Experience Platform.
 
    ![AEP Skapa datastreams](../assets/aep-integration/AEP-Datastream-Create.png)
 
-1. Namnge ditt datastream med __Namn__ obligatoriskt fält. Under __Händelseschema__ markerar du det nyligen skapade schemat och klickar på __Spara__.
+1. Namnge ditt datastream med __Namn__ obligatoriskt fält. Under __Händelseschema__ markerar du det skapade schemat och klickar på __Spara__.
 
    ![AEP Definiera datastreams](../assets/aep-integration/AEP-Datastream-Define.png)
 
-1. Öppna den nya dataströmmen och klicka på __Lägg till tjänst__.
+1. Öppna det skapade dataströmmen och klicka på __Lägg till tjänst__.
 
    ![AEP-datastreams Add Service](../assets/aep-integration/AEP-Datastream-Add-Service.png)
 

@@ -1,7 +1,7 @@
 ---
 title: Vad är adaptiva formuläruttryck?
 description: Använd adaptiva Forms-uttryck för att lägga till automatisk validering, beräkning och aktivera eller inaktivera synlighet för ett avsnitt.
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '2698'
 ht-degree: 0%
@@ -121,7 +121,7 @@ Sammanfattningsuttrycket används vanligtvis för att upprepa underordnade objek
 
 **Returtyp:** Uttrycket returnerar en sträng som blir dragspelets titel.
 
-**Exempel:** &quot;Kontonummer: &quot;+ texbox1.value
+**Exempel:** &quot;Kontonummer: &quot; + texbox1.value
 
 ### Validera uttryck {#validate-expression}
 
@@ -187,7 +187,7 @@ Du kan lägga till valideringar i ett fält på följande sätt:
 
 ### Obligatoriskt {#required}
 
-Göra en komponent obligatorisk i **Redigera** -komponenten kan du välja **Titel och text > Obligatoriskt**. Du kan också lägga till rätt meddelande (valfritt). .
+Göra en komponent obligatorisk i **Redigera** -komponenten kan du välja **Titel och text > Obligatoriskt**. Du kan också lägga till ett meddelande (valfritt).
 
 ### Valideringsmönster {#validation-patterns}
 

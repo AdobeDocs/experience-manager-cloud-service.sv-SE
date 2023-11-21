@@ -2,9 +2,9 @@
 title: Kontrollerar domännamnsstatus
 description: Lär dig hur du avgör om ditt anpassade domännamn har verifierats av Cloud Manager.
 exl-id: 8fdc8dda-7dbf-46b6-9fc6-d304ed377197
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '646'
 ht-degree: 0%
 
 ---

@@ -3,7 +3,7 @@ title: Hur kan vi översätta en grundkomponentbaserad adaptiv form?
 description: Lär dig skapa en formulärdatamodell i AEM Forms, testa modellen med exempeldata och tjänster och konfigurera olika alternativ för en modell.
 feature: Adaptive Forms
 exl-id: ad46bf0f-e6ec-4c52-9695-5768a9968e16
-source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Maskinöversättningstjänsten översätter omedelbart ditt innehåll i adaptiv 
    * Om du vill lägga till en ny ordlista i ett befintligt översättningsprojekt väljer du **[!UICONTROL Add to an existing translation project]** och välja en **[!UICONTROL Existing translation project]**.
 1. I **Målspråk** anger du nationella inställningar (till exempel `German(de)`). Du kan ange flera språkinställningar. Formuläret översätts till alla språkområden som anges i **Målspråk** fält. Klicka **Klar**.
 1. I dialogrutan Lexikon tillagd klickar du på **Öppna projekt**.
-1. Klicka på det nyligen skapade projektet på skärmen Projekt. Klicka till exempel på **Statlig referenswebbplats - tyska språk** platta.
+1. Klicka på det skapade projektet på skärmen Projekt. Klicka till exempel på **Statlig referenswebbplats - tyska språk** platta.
 1. På **Översättningsjobb** platta, klicka på ![aem62forms_down](assets/aem62forms_downarrow.png) och klicka på **Starta**. Status för rutan ändras till Utkast. När översättningen är klar ändras statusen till **Godkänd**. Uppdatera sidan efter några minuter och kontrollera statusen.
 
    ![Starta översättning](/help/forms/assets/adaptive-forms-core-components-start-translation.png)
@@ -68,7 +68,7 @@ Utför följande steg för att lokalisera ett formulär och dess urkunder med pe
    * Om du vill lägga till en ny ordlista i ett befintligt översättningsprojekt väljer du **[!UICONTROL Add to an existing translation project]** och välja en **[!UICONTROL Existing translation project]**.
 1. I **Målspråk** anger du nationella inställningar (till exempel `German(de)`). Du kan ange flera språkinställningar. Formuläret översätts till alla språkområden som anges i **Målspråk** fält. Klicka **Klar**.
 1. I dialogrutan Lexikon tillagd klickar du på **Öppna projekt**.
-1. Klicka på det nyligen skapade projektet på skärmen Projekt. Klicka till exempel på **Statlig referenswebbplats - tyska språk** platta.
+1. Klicka på det skapade projektet på skärmen Projekt. Klicka till exempel på **Statlig referenswebbplats - tyska språk** platta.
 1. Längst ned på **Sammanfattning** platta, klicka på **ellipser**. Skärmen Egenskaper för översättningsprojekt öppnas.
 1. Öppna **[!UICONTROL Advanced]** överst på **Egenskaper för översättningsprojekt** skärm. För **[!UICONTROL Translation field]**, markera **[!UICONTROL Human Translation]**. Klicka **Spara och stäng** längst upp på skärmen.
 1. På **Översättningsjobb** platta, klicka på ![aem62forms_down](assets/aem62forms_downarrow.png) och klicka på **Exportera**. I dialogrutan Exportera klickar du på alternativet Hämta exporterad fil. Den hämtar en ZIP-fil.

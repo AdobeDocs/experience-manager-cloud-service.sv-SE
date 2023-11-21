@@ -4,7 +4,7 @@ description: Lär dig de bästa arbetssätten som skapats av tekniker och konsul
 feature: Multi Site Manager
 role: Admin
 exl-id: 61b8ded8-3b9e-423f-85a9-7280e1a721cc
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 0%
@@ -113,9 +113,9 @@ Tänk på följande när du funderar på att flytta sidor i en Live-kopia.
    * Lägg inte till andra åtgärder i den här konfigurationen.
 1. Placera den nya konfigurationen.
    * Om du vill flytta sidan helt och hållet och ta bort respektive sidor på den gamla platsen i Live Copy:
-      * Placera den nyskapade konfigurationen före standardkonfigurationen för utrullning. Standardkonfigurationen för utrullning hanterar borttagning av sidor på deras gamla platser.
+      * Placera den skapade konfigurationen före standardkonfigurationen för utrullning. Standardkonfigurationen för utrullning hanterar borttagning av sidor på deras gamla platser.
       * Så här flyttar du sidan samtidigt som du behåller sidorna på de gamla platserna i Live-kopior (duplicerar i stort sett innehållet):
-         * Placera den nyskapade konfigurationen efter standardkonfigurationen för utrullning. Detta säkerställer att inget innehåll tas bort i Live Copy eller inaktiveras från publicering.
+         * Placera den skapade konfigurationen efter standardkonfigurationen för utrullning. Detta säkerställer att inget innehåll tas bort i Live Copy eller inaktiveras från publicering.
 
 ## Anpassa utrullningar {#customizing-rollouts}
 

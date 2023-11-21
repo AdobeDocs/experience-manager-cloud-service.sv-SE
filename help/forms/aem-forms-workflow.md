@@ -4,7 +4,7 @@ seo-title: Rapidly build Adaptive Forms-based processes, automate document servi
 description: 'Använd AEM Forms Workflow för att automatisera och snabbt skapa affärsprocessarbetsflöden. Exempel: granska och godkänna, PDF Generation, Adobe Sign arbetsflöden.'
 uuid: 797ba0f7-a378-45ac-9f82-fa9a952027be
 topic-tags: publish, document_services
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '2367'
 ht-degree: 0%
@@ -66,7 +66,7 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 1. Öppna konsolen Arbetsflödesmodeller. Standardwebbadressen är `https://[server]:[port]/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models`
 1. Välj **Skapa** sedan **Skapa modell**. Dialogrutan Lägg till arbetsflödesmodell visas.
 1. Ange **Titel** och **Namn** (valfritt). Till exempel en låneansökan. Tryck **Klar**.
-1. Välj den nya arbetsflödesmodellen och tryck **Redigera**. Nu kan du lägga till arbetsflödessteg för att skapa affärslogik. När du först skapar en arbetsflödesmodell innehåller den:
+1. Välj den skapade arbetsflödesmodellen och tryck på **Redigera**. Nu kan du lägga till arbetsflödessteg för att skapa affärslogik. När du först skapar en arbetsflödesmodell innehåller den:
 
    * Stegen: Flödesstart och Flödesslut. De här stegen representerar början och slutet av arbetsflödet. Dessa steg är obligatoriska och kan inte redigeras eller tas bort.
    * Ett exempel på deltagarsteg som heter Steg 1. Det här steget är konfigurerat för att tilldela en arbetsuppgift till administratörsanvändaren. Ta bort steget.

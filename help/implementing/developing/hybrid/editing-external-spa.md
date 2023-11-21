@@ -2,7 +2,7 @@
 title: Redigera en extern SPA i AEM
 description: I det här dokumentet beskrivs de rekommenderade stegen för att överföra en fristående SPA till en AEM, lägga till redigerbara innehållsavsnitt och aktivera redigering.
 exl-id: 7978208d-4a6e-4b3a-9f51-56d159ead385
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '2418'
 ht-degree: 0%
@@ -111,7 +111,7 @@ The `initializationAsync` kan acceptera `options` objekt som parameter:
 
    ![Egenskaper för textkomponent](assets/external-spa-text-properties.png)
 
-   Dessa värden skickas som egenskaper till de nyskapade `AEMText` Reaktionskomponent och kan användas för att återge innehållet.
+   Dessa värden skickas som egenskaper till de skapade `AEMText` Reaktionskomponent och kan användas för att återge innehållet.
 
    ```javascript
    import React from 'react';
@@ -343,7 +343,7 @@ Följande steg krävs för att aktivera redigering i AEM för det här SPA.
 
 1. Lägg till hjälpredor i SPA.
 
-   * Den nya sidan kan inte återge det förväntade innehållet i AEM ännu. Orsaken är att routern förväntar sig en sökväg till `/test` Den AEM aktiva banan är `/wknd-spa-react/us/en/test`. För att få plats med den AEM delen av URL:en måste du lägga till några hjälpredor på SPA.
+   * Den skapade sidan kan ännu inte återge det förväntade innehållet i AEM. Orsaken är att routern förväntar sig en sökväg till `/test` Den AEM aktiva banan är `/wknd-spa-react/us/en/test`. För att få plats med den AEM delen av URL:en måste du lägga till några hjälpredor på SPA.
 
    ![Hjälpprogram för routning](assets/external-spa-router-helper.png)
 
@@ -356,7 +356,7 @@ Följande steg krävs för att aktivera redigering i AEM för det här SPA.
 
 1. Verifiera redigering av sidan i AEM.
 
-   * Distribuera projektet till AEM och navigera till det nyskapade projektet `test` sida. Sidinnehållet återges nu och AEM kan redigeras.
+   * Distribuera projektet till AEM och navigera till det skapade projektet `test` sida. Sidinnehållet återges nu och AEM kan redigeras.
 
 ## Rambegränsningar {#framework-limitations}
 

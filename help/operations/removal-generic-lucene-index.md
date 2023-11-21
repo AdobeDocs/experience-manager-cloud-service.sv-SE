@@ -2,7 +2,7 @@
 title: Generisk borttagning av Lucene-index
 description: Lär dig mer om den planerade borttagningen av generiska Lucene-index och hur du kan påverkas.
 exl-id: 3b966d4f-6897-406d-ad6e-cd5cda020076
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '1335'
 ht-degree: 0%
@@ -154,6 +154,7 @@ Innan det generiska Lucene-indexet tas bort ska `pathfield` -komponenten uppdate
 >[!NOTE]
 >
 >I Modellredigeraren för innehållsfragment används speciella sökvägsfält med resurstypen Sling `dam/cfm/models/editor/components/contentreference`.
+>
 > * För närvarande utför dessa frågor utan angivna nodtyper, vilket resulterar i att en WARN loggas på grund av användningen av det generiska Lucene-indexet.
 > * Förekomster av de här komponenterna används snart automatiskt som standard `cq:Page` och `dam:Asset` nodtyper utan ytterligare kundåtgärder.
 > * The `nodeTypes` kan läggas till för att åsidosätta dessa standardnodtyper.
@@ -167,6 +168,6 @@ Adobe kommer att arbeta i två faser för att ta bort det generiska Lucene-index
 
 Adobe kommer att övervaka de loggmeddelanden som anges ovan och försöka kontakta kunder som är beroende av det generiska Lucene-indexet.
 
-Som en kortsiktig begränsning kommer Adobe att lägga till anpassade indexdefinitioner direkt i kundsystemen för att förhindra funktions- eller prestandaproblem som en följd av att det generiska Lucene-indexet tas bort vid behov.
+Som en kortsiktig begränsning lägger Adobe till anpassade indexdefinitioner direkt i kundsystemen för att förhindra funktions- eller prestandaproblem till följd av att det generiska Lucene-indexet tas bort vid behov.
 
-I sådana fall får kunden den uppdaterade indexdefinitionen och tillråds att inkludera den i framtida versioner av programmet via Cloud Manager.
+I sådana fall får kunden den uppdaterade indexdefinitionen och vi rekommenderar att de inkluderar den i framtida versioner av programmet via Cloud Manager.

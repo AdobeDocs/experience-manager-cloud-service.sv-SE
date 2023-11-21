@@ -2,7 +2,7 @@
 title: Hantera målgrupper
 description: Med Audiences-konsolen kan du skapa, ordna och hantera målgrupper för ditt Adobe Target-konto eller hantera segment för ContextHub
 exl-id: dff72c15-afcd-4b16-a711-e9ca3010e3ec
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '932'
 ht-degree: 9%
@@ -42,7 +42,7 @@ Så här skapar du ett ContextHub-segment i publikkonsolen:
 
    >[!NOTE]
    >
-   >Du kan sortera den ändrade listan genom att trycka eller klicka **Ändrad** för att sortera efter fallande ordning för att se nya målgrupper.
+   >Du kan sortera den ändrade listan genom att trycka eller klicka **Ändrad** för att sortera efter fallande ordning för att se alla skapade målgrupper.
 
 Mer information om hur du skapar segment med ContextHub finns i Configuring Segmentation with ContextHub-dokumentationen. <!--For further detail about creating segments using ContextHub, see [Configuring Segmentation with ContextHub](/help/sites-administering/segmentation.md).-->
 

@@ -2,7 +2,7 @@
 title: Hur lägger jag till stöd för nya språkområden i ett adaptivt formulär baserat på Foundation Components?
 description: För Adaptiv Forms kan du lägga till språkområden för fler språk förutom det som finns i kartongen.
 exl-id: 4c7d6caa-1adb-4663-933f-b09129b9baef
-source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '1266'
 ht-degree: 0%
@@ -102,7 +102,7 @@ Utför endast det här steget om `<locale>` du lägger till är inte bland `en`,
 1. Lägg till `<locale-name>` standardvärden för nationella inställningar `de`, `es`, `fr`, `it`, `pt-br`, `zh-cn`, `zh-tw`, `ja`, `ko-kr`, om det inte redan finns.
 
 1. Lägg till `<locale>` till värdena för `languages` egenskap för `/etc/languages`.
-1. Lägg till de nyligen skapade mapparna i `filter.xml` under etc/META-INF/[mapphierarki] as:
+1. Lägg till skapade mappar i `filter.xml` under etc/META-INF/[mapphierarki] as:
 
    ```
    <filter root="/etc/clientlibs/[locale-name]"/>

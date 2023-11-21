@@ -2,7 +2,7 @@
 title: Versionsinformation för 2022.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: b339ab48-e836-4589-a573-9c50917b9280
-source-git-commit: d6b98559e7cbe5fc5bd05d9cf37225e960e668e7
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '949'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Titta på videon med versionsöversikten för juli 2022 om du vill se en sammanf
 
 * The [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console) nu stöder [kortkommandon](/help/sites-cloud/administering/content-fragments/keyboard-shortcuts.md).
 
-* AEM som Cloud Servicens [webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) ger möjlighet att avsevärt förbättra sidhastigheten genom att leverera format som WebP. Den här nya tjänsten erbjuder också flexiblare alternativ för storleksändring och omformning av bilder. Alla versioner av [Core Image Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) kan använda den här tjänsten och leverera bilder som WebP genom att klicka på ett alternativ i bildkomponentens profil.
+* AEM som Cloud Servicens [webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) ger möjlighet att avsevärt förbättra sidhastigheten genom att leverera format som WebP. Den här nya tjänsten erbjuder också flexiblare alternativ för storleksändring och omformning av bilder. Alla versioner av [Core Image Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) kan du använda den här tjänsten och leverera bilder som WebP genom att klicka på ett alternativ i bildkomponentens profil.
 
 * AEM personaliseringsaktiviteter kan nu använda upplevelsefragment i stället för våra gamla erbjudanden. Den här funktionen:
    * möjliggör en migreringsväg där AEM innehåll skulle främja upplevelsefragmenterbjudanden i stället för äldre bibliotekserbjudanden för att tillhandahålla lämpligt formaterat innehåll som passar personaliseringen i stor skala framåt.
@@ -83,13 +83,13 @@ Nu kan du konfigurera Adobe Experience Manager Assets till [begränsa vilken typ
 * **[Konvertera till PDF/A - ett AEM arbetsflödessteg](/help/forms/aem-forms-workflow-step-reference.md##convert-pdfa)**: PDF/A är ett arkiveringsformat som gör att dokumentets innehåll bevaras på lång sikt. Alla teckensnitt bäddas in och filen är okomprimerad. Nu kan du använda steget Konvertera till PDF/A och AEM arbetsflöde för att konvertera dina dokument eller filer i valfritt format till PDF/A-format.
 
 
-## CIF-tillägg {#cloud-services-cif}
+## CIF {#cloud-services-cif}
 
 ### Nyheter {#what-is-new-cif}
 
 * Produktkatalogsberikning har nu stöd för AEM sidor. Detta gör att författare kan hantera sida - produktassociation.
 
-* Olika förbättringar av CIF-kärnkomponenten
+* Förbättringar av CIF kärnkomponent
 
 ### Felkorrigeringar {#bug-fixes-cif}
 

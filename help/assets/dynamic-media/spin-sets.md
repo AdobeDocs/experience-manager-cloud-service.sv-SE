@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Spin Sets
 role: User
 exl-id: ed470472-62d9-4684-971b-30df3919c180
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '1862'
 ht-degree: 8%
@@ -168,7 +168,7 @@ Se även [Dynamic Media begränsningar](/help/assets/dynamic-media/limitations.m
 
    * Om du vill använda en förinställning väljer du **[!UICONTROL Preset]** väljer du sedan en förinställning som ska användas på alla resurser samtidigt.
 
-1. Välj **[!UICONTROL Save]**. Den nyligen skapade rotationsuppsättningen visas i den mapp du skapade den i.
+1. Välj **[!UICONTROL Save]**. Den skapade rotationsuppsättningen visas i den mapp du skapade den i.
 
 ## Visa snurruppsättningar {#viewing-spin-sets}
 

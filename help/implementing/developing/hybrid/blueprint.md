@@ -2,7 +2,7 @@
 title: SPA
 description: I det här dokumentet beskrivs det allmänna ramverksoberoende kontraktet som alla SPA ramverk ska uppfylla så att du kan implementera redigerbara SPA komponenter inom AEM.
 exl-id: 9d47c0e9-600c-4f45-9169-b3c9bbee9152
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '2055'
 ht-degree: 0%

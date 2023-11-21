@@ -2,9 +2,9 @@
 title: Optimera GraphQL-frågor
 description: Lär dig hur du optimerar dina GraphQL-frågor när du filtrerar, sidlägger och sorterar innehållsfragment i Adobe Experience Manager as a Cloud Service för leverans av headless-innehåll.
 exl-id: 67aec373-4e1c-4afb-9c3f-a70e463118de
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '1876'
+source-wordcount: '1877'
 ht-degree: 0%
 
 ---
@@ -279,7 +279,7 @@ Det finns flera andra situationer där ett filteruttryck inte kan utvärderas p�
 
 ### Minimera innehållets fragmentkapsling {#minimize-content-fragment-nesting}
 
-Att kapsla innehållsfragment är ett bra sätt att modellera anpassade innehållsstrukturer. Du kan till och med ha ett fragment med ett kapslat fragment, som har ett kapslat fragment, som har ...och så vidare.
+Att kapsla innehållsfragment är ett bra sätt att modellera anpassade innehållsstrukturer. Du kan till och med ha ett fragment med ett kapslat fragment, som också har ett kapslat fragment, som har ...och så vidare.
 
 Om du skapar en struktur med för många nivåer kan bearbetningstiden för en GraphQL-fråga öka, eftersom GraphQL måste gå igenom hela hierarkin för alla kapslade innehållsfragment.
 

@@ -3,9 +3,9 @@ title: Använda GraphiQL IDE i AEM
 description: Lär dig använda GraphiQL IDE i Adobe Experience Manager.
 feature: Content Fragments,GraphQL API
 exl-id: be2ebd1b-e492-4d77-b6ef-ffdea9a9c775
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1138'
 ht-degree: 0%
 
 ---
@@ -105,7 +105,7 @@ Till exempel:
 >
 >Anpassade omskrivningsregler för Dispatcher kan åsidosätta standardvärden från AEM publicering.
 >
->Om du skickar TTL-baserade headers för cachekontroll från dispatchern, baserat på ett matchningsmönster för plats, kan du vid behov utelämna `/graphql/execute.json/*` från matcherna.
+>Om du skickar TTL-baserade headers för cachekontroll från dispatchern, baserat på ett matchningsmönster för plats, kan det vara bra att utesluta dem om det behövs `/graphql/execute.json/*` från matcherna.
 
 Med GraphQL kan du konfigurera HTTP-cache-rubrikerna för att styra de här parametrarna för din enskilda beständiga fråga.
 

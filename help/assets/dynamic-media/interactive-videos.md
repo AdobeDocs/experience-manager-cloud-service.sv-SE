@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Interactive Videos
 role: User
 exl-id: e4859223-91de-47a1-a789-c2a9447e5f71
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '5919'
+source-wordcount: '5917'
 ht-degree: 3%
 
 ---
@@ -586,7 +586,7 @@ Den befintliga Quickview-implementeringen representerar normalt en kedja av inte
 1. Bakåtlogiken returnerar motsvarande QuickView-data eller -innehåll tillbaka till slutkoden.
 1. Slutkoden läser in QuickView-data eller -innehåll.
 1. Om du vill kan du konvertera den inlästa QuickView-informationen till en HTML-representation med hjälp av koden.
-1. I slutkoden visas en modal dialogruta eller panel och HTML-innehållet på skärmen återges för slutanvändaren.
+1. I slutkoden visas en modal dialogruta eller panel och HTML-innehållet på skärmen återges för användaren.
 
 Dessa anrop representerar inte oberoende offentliga API-anrop som kan anropas av webbsidans logik från ett godtyckligt steg. I stället är det ett kedjat anrop där varje steg döljs i den sista fasen (återanrop) av föregående steg.
 
@@ -598,7 +598,7 @@ I en sådan händelsehanterare gör koden längst fram följande:
 * Skapar en QuickView-URL som baseras på miniatyrbildsdata.
 * Startar processen att läsa in snabbvyn från serverdelen och återge den på skärmen för visning.
 
-Dessutom har Interactive Video Viewer stöd för helskärmsläge. Slutanvändaren aktiverar snabbvyer genom att välja en miniatyrbild utan att lämna helskärmsläget. För att uppnå den här funktionen ändrar du frontdelskoden så att den modala dialogrutan för snabbvyn bifogas till visningsprogrammets behållare. Lägg inte till dokument-BODY eller något annat webbsideselement som inte är tillgängligt när visningsprogrammet är i helskärmsläge. Koden som utför det här jobbet lyssnar på ett till återanrop som skickas när visningsprogrammet har lästs in på sidan.
+Dessutom har Interactive Video Viewer stöd för helskärmsläge. Användaren aktiverar snabbvyer genom att välja en miniatyrbild utan att lämna helskärmsläget. För att uppnå den här funktionen ändrar du frontdelskoden så att den modala dialogrutan för snabbvyn bifogas till visningsprogrammets behållare. Lägg inte till dokument-BODY eller något annat webbsideselement som inte är tillgängligt när visningsprogrammet är i helskärmsläge. Koden som utför det här jobbet lyssnar på ett till återanrop som skickas när visningsprogrammet har lästs in på sidan.
 
 Den inbäddningskod som returneras av Experience Manager har redan en färdig händelsehanterare på plats. Den kommenteras ut enligt följande markerade kodfragment:
 

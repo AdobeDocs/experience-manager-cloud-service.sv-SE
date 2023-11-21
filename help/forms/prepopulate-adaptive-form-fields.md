@@ -3,9 +3,9 @@ title: Hur förifyller man adaptiva formulärfält?
 description: Använda befintliga data för att förifylla fält i ett adaptivt formulär kan användarna förifylla grundläggande information i ett formulär genom att logga in med sina sociala profiler.
 topic-tags: develop
 exl-id: e2a87233-a0d5-48f0-b883-915fe56f105f
-source-git-commit: ebb77adfc97c805383de660d238e04a2173122b7
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '2041'
+source-wordcount: '2040'
 ht-degree: 0%
 
 ---
@@ -261,7 +261,7 @@ Vanligtvis skapas bundna (formulärschema) och obundna fält i samma adaptiva fo
 
 >[!NOTE]
 >
-> Som tumregel ska du inte blanda bundna och obundna fält om de korsas i data som fylls i av slutanvändaren i obundna fält. Om det är möjligt bör du ändra schemat eller XFA-formulärmallen och lägga till en post för obundna fält, så att den också blir bunden och dess data är tillgängliga som andra fält i skickade data.
+> Som tumregel ska du inte blanda bundna och obundna fält om de korsas i data som fylls i av användaren i obundna fält. Om det är möjligt bör du ändra schemat eller XFA-formulärmallen och lägga till en post för obundna fält, så att den också blir bunden och dess data är tillgängliga som andra fält i skickade data.
 
 ## Protokoll som stöds för förifyllning av användardata {#supported-protocols-for-prefilling-user-data}
 

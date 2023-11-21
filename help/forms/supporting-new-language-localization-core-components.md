@@ -2,7 +2,7 @@
 title: Hur lägger jag till stöd för nya språkområden i en adaptiv form som bygger på kärnkomponenterna?
 description: Lär dig hur du lägger till nya språkområden i ett adaptivt formulär.
 exl-id: bc06542b-84c8-4c6a-a305-effbd16d5630
-source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '1328'
 ht-degree: 0%
@@ -145,7 +145,7 @@ Utför endast det här steget om `<locale>` du lägger till är inte bland `en`,
    <filter root="/etc/languages"/>
    ```
 
-   ![Lägg till de nyligen skapade mapparna i `filter.xml` under `/ui.content/src/main/content/meta-inf/vault/filter.xml`](langauge-filter.png)
+   ![Lägg till skapade mappar i `filter.xml` under `/ui.content/src/main/content/meta-inf/vault/filter.xml`](langauge-filter.png)
 
 ### 6. Genomför ändringarna och distribuera pipelinen {#commit-changes-in-repo-deploy-pipeline}
 

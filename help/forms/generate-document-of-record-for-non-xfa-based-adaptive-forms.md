@@ -2,9 +2,9 @@
 title: Hur skapar man ett urkunder för AEM Forms?
 description: Lär dig att generera en mall för ett dokument för inspelning (DoR) för Adaptiv Forms.
 exl-id: 16d07932-3308-4b62-8fa4-88c4e42ca7b6
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '4000'
+source-wordcount: '3999'
 ht-degree: 0%
 
 ---
@@ -137,7 +137,7 @@ När det adaptiva formuläret skickas skapas nu ett uppdaterat arkivdokument.
 
 Tänk på följande när du arbetar med arkivhandlingar för Adaptiv Forms.
 
-* Dokumentmallar stöder inte RTF-text. Därför visas all RTF-text i det statiska adaptiva formuläret eller i den information som användaren fyller i som oformaterad text i arkivdokumentet.
+* Dokumentmallar stöder inte RTF-text. Därför visas all RTF-text i det statiska adaptiva formuläret eller i den information som användaren fyller i som oformaterad text i postdokumentet.
 * Dokumentfragment i ett anpassat formulär visas inte i postdokumentet. Adaptiva formulärfragment stöds dock.
 * Innehållsbindning i dokument för post som genererats för XML-schemabaserat anpassat formulär stöds inte.
 * Lokaliserad version av Document of Record skapas vid behov för en språkinställning när användaren begär återgivningen av Document of Record. Lokalisering av arkivdokument sker tillsammans med lokalisering av adaptiv form. <!-- For more information on localization of Document of Record and Adaptive Forms see Using AEM translation workflow to localize Adaptive Forms and Document of Record.-->

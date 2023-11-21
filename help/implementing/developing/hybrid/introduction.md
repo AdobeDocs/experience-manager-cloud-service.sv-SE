@@ -2,9 +2,9 @@
 title: SPA introduktion och genomgång
 description: I den här artikeln beskrivs begreppen för en SPA och du kan gå igenom hur du använder ett grundläggande SPA för att skapa, vilket visar hur det är relaterat till den underliggande AEM SPA redigeraren.
 exl-id: 8dad48d5-fa90-467c-8bec-e4b76e057f80
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2065'
 ht-degree: 0%
 
 ---
@@ -130,7 +130,7 @@ Ytterligare redigeringsverktyg som att dra och släppa ytterligare komponenter p
 
 ## SPA och AEM SPA {#spa-apps-and-the-aem-spa-editor}
 
-Genom att uppleva hur en SPA fungerar för slutanvändaren och sedan inspektera den SPA sidan blir det lättare att förstå hur en SAP-app fungerar med SPA Editor i AEM.
+Genom att uppleva hur en SPA fungerar för användaren och sedan inspektera den SPA sidan blir det lättare att förstå hur en SAP-app fungerar med SPA redigerare i AEM.
 
 ### Använda ett SPA {#using-an-spa-application}
 

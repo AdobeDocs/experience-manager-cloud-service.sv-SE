@@ -2,7 +2,7 @@
 title: OAuth2-stöd för e-posttjänsten
 description: Oauth2-stöd för e-posttjänsten i Adobe Experience Manager as a Cloud Service
 exl-id: 93e7db8b-a8bf-4cc7-b7f0-cda481916ae9
-source-git-commit: ede877212de3394cbdc81e1097d3d6eaf9f390cc
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '679'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Mer information om AEM as a Cloud Service Mail Service finns i [Skickar e-post](
    ![Starta appregistreringsprocessen](assets/oauth-outlook1.png)
 
 1. Fyll i informationen enligt dina krav och klicka sedan **Registrera**.
-1. Gå till den nya appen och välj **API-behörigheter**.
+1. Gå till den skapade appen och välj **API-behörigheter**.
 1. Klicka **Lägg till behörighet** > **Diagrambehörighet** > **Delegerade behörigheter**.
 1. Välj behörigheter nedan för din app och klicka sedan på **Lägg till behörighet**:
    * `https://outlook.office.com/SMTP.Send`

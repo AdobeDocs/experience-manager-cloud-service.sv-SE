@@ -3,9 +3,9 @@ title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service versi
 description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.09.0
 feature: Release Information
 exl-id: 484a60d4-a439-43d6-a23e-4a3b45ef4160
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: be38ca5bf79d401fc12c1422c270a2ee84bbbad2
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '147'
 ht-degree: 3%
 
 ---
@@ -22,8 +22,8 @@ Releasedatum för Content Transfer Tool v3.0.0 är 7 september 2023.
 
 ### Nyheter {#what-is-new-ctt}
 
-Verktyget Innehållsöverföring har förbättrats avsevärt och ger följande fördelar:
+Verktyget Innehållsöverföring har förbättrats och ger följande fördelar:
 
-* Minskad överföringstid vid migrering av en delmängd av en innehållsdatabas genom att använda AzCopy för att endast kopiera de blob-ID som krävs i stället för att kopiera alla blob-ID:n
-* Snabbare uppdatering av differentiellt innehåll med Oak-upgrade
-* Förbättrad tillförlitlighet genom att separera indexeringsprocessen från innehållsöverföringsprocessen. Om indexeringen misslyckas behöver innehållet inte importeras igen. Endast indexeringen startar om automatiskt, vilket sparar både tid och pengar
+* Minskad överföringstid vid migrering av en delmängd av en innehållsdatabas genom att använda AzCopy för att endast kopiera de blob-ID som behövs, i stället för att kopiera alla blob-ID:n.
+* Snabbare tillägg av differentiellt innehåll med Oak-upgrade.
+* Förbättrad tillförlitlighet genom att separera indexeringsprocessen från innehållsöverföringsprocessen. Om indexeringen misslyckas behöver innehållet inte hämtas igen. Det är bara indexeringen som startar om automatiskt, vilket sparar både tid och kraft.

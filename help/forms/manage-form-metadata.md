@@ -2,9 +2,9 @@
 title: Hur hanterar vi metadata för AEM Forms?
 description: Metadata gör det enklare att kategorisera och ordna resurser och hjälper användare som letar efter en viss resurs.
 exl-id: 8527246a-37f0-4d43-a49e-1c76c265514e
-source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '1725'
+source-wordcount: '1724'
 ht-degree: 0%
 
 ---
@@ -140,7 +140,7 @@ Nedan följer en omfattande lista över metadataegenskaper som stöds i [!DNL AE
      <li>HTML</li> 
      <li>PDF</li> 
      <li>Båda</li> 
-    </ul> <p>Det här alternativet används endast för att begränsa formulärens återgivningsformat på formulärportalen där de är synliga för slutanvändaren.</p> </td> 
+    </ul> <p>Det här alternativet används endast för att begränsa formulärens återgivningsformat på formulärportalen där de är synliga för användaren.</p> </td> 
   </tr> 
   <tr> 
    <td>Taggar</td> 

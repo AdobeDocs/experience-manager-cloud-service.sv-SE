@@ -2,7 +2,7 @@
 title: Replikering
 description: Lär dig mer om distribution och felsökning av replikering på AEM as a Cloud Service.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '1341'
 ht-degree: 0%
@@ -64,7 +64,7 @@ Du kan också skapa en arbetsflödesmodell som använder `Publish Content Tree` 
 1. Från den AEM as a Cloud Service hemsidan går du till **Verktyg - Arbetsflöde - Modeller**.
 1. Tryck på **Skapa** i skärmens övre högra hörn.
 1. Lägg till en titel och ett namn i modellen. Mer information finns i [Skapa arbetsflödesmodeller](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html).
-1. Välj den nyskapade modellen i listan och tryck på **Redigera**
+1. Markera den skapade modellen i listan och tryck på **Redigera**
 1. I följande fönster drar och släpper du Processsteg till det aktuella modellflödet:
 
    ![Processsteg](/help/operations/assets/processstep.png)

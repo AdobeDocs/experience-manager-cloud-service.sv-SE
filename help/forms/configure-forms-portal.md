@@ -2,9 +2,9 @@
 title: Hur skapar man en Forms Portal på en Experience Manager Sites-sida?
 description: Lär dig hur du skapar en Forms Portal och använder färdiga komponenter på en AEM Sites-sida.
 exl-id: 13cfe3ba-2e85-46bf-a029-2673de69c626
-source-git-commit: e48272f4d36c608d516c7a947fc16cff3a3b408e
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1760'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Med Form Portal-komponenterna kan du lägga till följande funktioner:
 * Möjliggör sökning av formulär baserat på titel och beskrivning.
 * Använd anpassad CSS för att anpassa utseendet på portalen.
 * Skapa länkar till formulär.
-* Visar utkast och inskickade data som rör Adaptiv Forms som har skapats av slutanvändaren.
+* Visar utkast och inskickat material som rör Adaptiv Forms som har skapats av användaren.
 
 ## Komponenter på en Forms Portal-sida {#forms-portal-components}
 

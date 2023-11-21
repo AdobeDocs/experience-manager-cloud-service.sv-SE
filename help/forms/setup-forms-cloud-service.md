@@ -2,9 +2,9 @@
 title: Hur skapar jag en [!DNL AEM Forms] som en molntjänstmiljö?
 description: Lär dig konfigurera och konfigurera [!DNL AEM Forms] as a Cloud Service miljö.
 exl-id: 42f53662-fbcf-4676-9859-bf187ee9e4af
-source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '640'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 * **AEM**: En AEM administratör hjälper till med den övergripande konfigurationen, som att konfigurera användare, göra miljön skarpare, konfigurera datakällor, konfigurera e-post och tredjepartsprogram. AEM kan också hjälpa till med integreringar som integrering med Adobe Analytics, Adobe Target och Adobe Sign.
 
-* **Slutanvändare**: Slutanvändaren interagerar med och skickar in det publicerade formuläret, signerar skickade formulär, spårar skickade ansökningar via en webbportal och får personligt anpassad kommunikation.
+* **Slutanvändare**: En användare interagerar med och skickar det publicerade formuläret, signerar skickade formulär, spårar skickade ansökningar via en webbportal och får personligt anpassad kommunikation.
 
 <!-- While onboarding to the service, assign the following AEM groups to [!DNL AEM Forms] as a Cloud Service based on their role:
 

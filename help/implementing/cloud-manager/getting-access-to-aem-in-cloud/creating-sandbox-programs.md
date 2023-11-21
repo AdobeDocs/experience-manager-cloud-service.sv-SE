@@ -2,7 +2,7 @@
 title: Skapa sandlådeprogram
 description: Lär dig hur du använder Cloud Manager för att skapa ett eget sandlådeprogram för utbildning, demo, POC eller andra icke-produktionssyften.
 exl-id: 10011392-3059-4bb0-88db-0af1d390742e
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
@@ -49,7 +49,7 @@ Du ser ett nytt sandlådeprogramkort på landningssidan med en statusindikator a
 
 Du kan visa detaljerna i sandlådekonfigurationen och få tillgång till miljön (när den är tillgänglig) genom att visa programöversiktssidan.
 
-1. På landningssidan för Cloud Manager klickar du på ellipsknappen i det nya programmet.
+1. På landningssidan för Cloud Manager klickar du på ellipsknappen på det skapade programmet.
 
    ![Åtkomst till programöversikt](assets/program-overview-sandbox.png)
 

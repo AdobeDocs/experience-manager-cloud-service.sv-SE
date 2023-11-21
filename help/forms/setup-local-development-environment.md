@@ -2,7 +2,7 @@
 title: Hur konfigurerar jag en lokal utvecklingsmiljö för AEM Forms?
 description: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
 exl-id: 12877a77-094f-492a-af58-cffafecf79ae
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '2840'
 ht-degree: 1%
@@ -286,7 +286,7 @@ Utför följande steg för att konfigurera lokal Dispatcher och lägg sedan till
 
 ### Konfigurera lokal Dispatcher {#setup-local-dispatcher}
 
-The [!DNL Experience Manager] as a Cloud Service SDK innehåller den rekommenderade versionen av Dispatcher Tools, som gör det lättare att konfigurera, validera och simulera Dispatcher lokalt. Dispatcher Tools är Docker-baserade och har kommandoradsverktyg för att överföra konfigurationsfilerna för Apache HTTP Web Server och Dispatcher till ett kompatibelt format och distribuera dem till Dispatcher som körs i Docker-behållaren.
+The [!DNL Experience Manager] as a Cloud Service SDK innehåller den rekommenderade versionen av Dispatcher Tools som underlättar konfigurering, validering och simulering av Dispatcher lokalt. Dispatcher Tools är Docker-baserade och har kommandoradsverktyg för att överföra konfigurationsfilerna för Apache HTTP Web Server och Dispatcher till ett kompatibelt format och distribuera dem till Dispatcher som körs i Docker-behållaren.
 
 Cachelagring av Dispatcher tillåter [!DNL AEM Forms] för att förifylla Adaptiv Forms på en kund. Det förbättrar återgivningshastigheten för förfyllda formulär.
 
@@ -298,7 +298,7 @@ Så här konfigurerar du Dispatcher-cachen för Experience Manager Forms as a Cl
 
 1. Öppna AEM och gå till `\src\conf.dispatcher.d\available_farms`
 1. Skapa en kopia av `default.farm` -fil. Till exempel, `forms.farm`.
-1. Öppna den nyskapade `forms.farm` -fil för redigering och ersättning av följande kod:
+1. Öppna den skapade `forms.farm` -fil för redigering och ersättning av följande kod:
 
    ```json
    #/ignoreUrlParams {

@@ -2,9 +2,9 @@
 title: Konfigurera metadatamappning mellan Workfront och Experience Manager Assets
 description: Mappa metadatafälten för resurser mellan as a Cloud Service Adobe Workfront- och Experience Manager-program. När du skickar en resurs från Workfront till Experience Manager Assets kan du mappa metadata för resursen i Experience Manager Assets genom att mappa metadatafält.
 exl-id: 71400769-b2bc-4f5d-8b6b-a73598e837b4
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '947'
 ht-degree: 2%
 
 ---

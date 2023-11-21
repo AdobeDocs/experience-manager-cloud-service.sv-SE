@@ -1,26 +1,26 @@
 ---
 title: 360/VR-video
-description: Lär dig hur du arbetar med 360- och VR-video (Virtual Reality) i Dynamic Media.
+description: Lär dig arbeta med 360- och VR-video (Virtual Reality) i Dynamic Media.
 contentOwner: Rick Brough
 feature: 360 VR Video
 role: User
 exl-id: ffd092d3-2188-47b0-a475-8bfa660c03c1
-source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '980'
 ht-degree: 0%
 
 ---
 
 # 360/VR-video {#vr-video}
 
-360-gradersvideor spelar in en vy i alla riktningar samtidigt. De filmas med en omdirigerad kamera eller en samling kameror. Vid uppspelning på en platt skärm har användaren kontroll över betraktningsvinkeln. de inbyggda gyroskopiska kontrollerna används vanligtvis vid uppspelning på mobila enheter.
+360-gradersvideor spelar in en vy i alla riktningar samtidigt. De filmas med en omdirigerad kamera eller en samling kameror. Vid uppspelning på en platt skärm har användaren kontroll över visningsvinkeln. Vid uppspelning på mobila enheter används vanligtvis de inbyggda gyroskopkontrollerna.
 
 Dynamic Media har inbyggt stöd för leverans av 360 videomaterial. Som standard krävs ingen ytterligare konfiguration för visning eller uppspelning. Du levererar 360-video med standardvideotillägg som .mp4, .mkv och .mov. Den vanligaste kodeken är H.264.
 
 Du kan använda 360/VR-visningsprogrammet för att återge ekvirektangulär video. Resultatet blir en engagerande tittarupplevelse av ett rum, en fastighet, en plats, ett landskap, ett medicinskt förfarande och så vidare.
 
-Spatial audio stöds för närvarande inte. om ljudet blandas i stereo ändras inte balansen (L/R) när kunden ändrar kamerans visningsvinkel.
+Spatial audio stöds inte för närvarande. Om ljudet blandas i stereo ändras inte balansen (L/R) när kunden ändrar kamerans visningsvinkel.
 
 Se [Använda Dynamic Media 360-videor och en anpassad videominiatyr med AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.html#dynamic-media).
 
@@ -31,7 +31,7 @@ Se även [Hantera visningsförinställningar](/help/assets/dynamic-media/managin
 Välj [Space Station 360](https://s7d1.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS) för att öppna ett webbläsarfönster och titta på en 360-gradersvideo. Under videouppspelningen drar du pekaren till en ny plats för att ändra visningsvinkeln.
 
 ![Videobildruta från Space Station 360-video](assets/6_5_360videoiss_simplified.png)
-*Videobildruta från Space Station 360*
+*Bildruta från Space Station 360*
 
 ## 360/VR Video och Adobe Premiere Pro {#vr-video-and-adobe-premiere-pro}
 
@@ -44,7 +44,7 @@ Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-
 360 videomaterial som överförs till [!DNL Experience Manager] är märkta som **Multimedia** på en Assets-sida, ungefär som i en vanlig videoresurs.
 
 ![En överförd 360-videoresurs som visas i kortvyn](assets/6_5_360video-selecttopreview.png)
-*En överförd 360-videoresurs som visas i kortvyn. Resursen är märkt som Multimedia.*
+*En överförd 360-videoresurs som visas i kortvyn. Resursen kallas Multimedia.*
 
 **Ladda upp material som ska användas med 360-videovisningsprogrammet:**
 
@@ -58,15 +58,17 @@ Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-
    * Helst har ditt ursprungliga 360-videoinnehåll någon av följande upplösningar:
 
       * 1080p - 1920 x 1080, känd som Full HD eller FHD upplösning eller
-      * 2160p - 3840 x 2160, känd som 4k, UHD eller Ultra HD-upplösning. Den här stora skärmupplösningen finns oftast på tv-apparater och datorskärmar. Upplösningen 2160p kallas ofta för&quot;4k&quot; eftersom bredden är nästan 4 000 pixlar. Med andra ord har den fyra gånger så många pixlar som 1080p.
+      * 2160p - 3 840 x 2 160, känd som 4k, UHD eller Ultra HD-upplösning. Den här stora skärmupplösningen finns oftast på tv-apparater och datorskärmar. Upplösningen 2160p kallas ofta för&quot;4k&quot; eftersom bredden är nästan 4 000 pixlar. Med andra ord har den fyra gånger så många pixlar som 1080p.
+
    * [Skapa en anpassad adaptiv videoprofil](/help/assets/dynamic-media/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming) med renderingar av högre kvalitet. Du kan till exempel skapa en adaptiv videoprofil som innehåller följande tre inställningar:
 
-      * Width=auto; Höjd=720; Bithastighet=2 500 kbit/s
-      * Width=auto; Höjd=1080; Bithastighet=5000 kbit/s
-      * Width=auto; Höjd=1440; Bithastighet=6600 kbit/s
+      * Bredd=auto; Höjd=720; bithastighet=2 500 kbit/s
+      * width=auto; Height=1080; Bit rate=5000 kbit/s
+      * width=auto; Height=1440; Bit rate=6600 kbit/s
+
    * Bearbeta 360-videomaterial i en mapp som är exklusivt dedikerad till 360-videomaterial.
 
-   Detta tillvägagångssätt ställer större krav på slutanvändarens nätverk och processor.
+   Detta tillvägagångssätt ställer större krav på användarens nätverk och processor.
 
 1. [Överför videon till mappen](/help/assets/manage-video-assets.md#upload-and-preview-video-assets).
 
@@ -95,7 +97,7 @@ Start by uploading 360 Videos.
 
 Du kan använda Förhandsgranska för att se hur 360-videon ser ut för kunderna och kontrollera att den beter sig som förväntat.
 
-Se även [Redigera visningsförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md#editing-viewer-presets).
+Se även [Redigera förinställningar för visningsprogram](/help/assets/dynamic-media/managing-viewer-presets.md#editing-viewer-presets).
 
 När du är nöjd med 360-videon kan du publicera den.
 
@@ -103,13 +105,13 @@ Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/
 Se [Länka URL:er till webbprogrammet](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till [!DNL Experience Manager Sites] sidor.
 Se [Lägga till Dynamic Media Assets på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
 
-**Så här förhandsgranskar du 360-videoklipp:**
+**Så här förhandsgranskar du 360-videor:**
 
 1. I **[!UICONTROL Assets]** navigera till en befintlig 360-video som du har skapat. Om du vill öppna den i förhandsgranskningsläge väljer du videouppsättningen 360.
 
    ![Skärmbild av ett överfört 360-videomaterial som det visas i kortvyn i Experience Manager.](assets/6_5_360video-selecttopreview-1.png)
 
-   Om du vill förhandsgranska videon väljer du resursen med 360 videoklipp.
+   Om du vill förhandsgranska videon väljer du resursen med 360 videor.
 
 1. Markera listrutan på förhandsvisningssidan, i det övre vänstra hörnet på sidan, och välj sedan **[!UICONTROL Viewers]**.
 
@@ -118,13 +120,14 @@ Se [Lägga till Dynamic Media Assets på sidor](/help/assets/dynamic-media/addin
    I visningslistan väljer du **[!UICONTROL Video360_social]** gör du något av följande:
 
    * Om du vill ändra visningsvinkeln för den statiska scenen drar du pekaren över videon.
-   * Välj videons **[!UICONTROL Play]** -knappen. När videon spelas upp drar du pekaren över videon för att ändra visningsvinkeln.
+   * För att börja spela upp väljer du videons **[!UICONTROL Play]** -knappen. När videon spelas upp drar du pekaren över videon för att ändra visningsvinkeln.
 
    ![Skärmbild av en användare som väljer Video360_Social-visningsprogrammet för att förhandsgranska en 360-gradersvideo.](assets/6_5_360video-preview-video360-social.png)*En 360-videobildbild.*
 
    * I visningslistan väljer du **[!UICONTROL Video360VR]**.
 
-      VR-video (Virtual Reality) är engagerande videomaterial som nås via virtuella verklighetshuvuden. Precis som med vanliga videor skapar du VR-videor i början när en video spelas in eller spelas in med 360-graderskameror.
+     VR-video (Virtual Reality) är engagerande videomaterial som nås via virtuella verklighetshuvuden. Precis som med vanliga videor skapar du VR-videor i början när en video spelas in eller spelas in med 360-graderskameror.
+
    ![Skärmbild av en användare som håller muspekaren över alternativet Video360VR Viewer.](assets/6_5_360video-preview-video360vr.png)
    *En 360 VR-videobildskärm.*
 

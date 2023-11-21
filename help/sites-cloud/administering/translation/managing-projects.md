@@ -4,7 +4,7 @@ description: Lär dig hur du skapar och hanterar både maskinöversättning och 
 feature: Language Copy
 role: Admin
 exl-id: dc2f3958-72b5-4ae3-a224-93d8b258bc80
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '3971'
 ht-degree: 0%
@@ -455,7 +455,7 @@ Det bästa sättet i detta scenario är att följa denna procedur:
 1. Avpublicera de språkkopior som är associerade med den källsida som du vill flytta.
 1. Ta bort dem.
 1. Skapa nya språkkopior från den nyligen flyttade källsidan.
-1. Publicera de nyskapade språkkopiorna.
+1. Publicera de skapade språkkopiorna.
 
 ## Importera och exportera översättningsjobb {#import-export}
 

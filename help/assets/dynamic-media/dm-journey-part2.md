@@ -11,9 +11,9 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: cdca41ad-a2cd-4f68-aaa4-5eec33c30f0b
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '2840'
+source-wordcount: '2842'
 ht-degree: 0%
 
 ---
@@ -154,7 +154,7 @@ En del av de vanligaste användningsområdena för Dynamic Media är möjlighete
 
 Bilduppsättningar består vanligtvis av en serie bildresurser som presenteras som en enda enhet. Den här typen av uppsättningar ger användarna en integrerad visningsupplevelse, där användarna kan se olika vyer av ett objekt genom att klicka på en miniatyrbild. Med bilduppsättningar kan du presentera alternativa vyer av något och visningsprogrammet har zoomverktyg som gör att du kan granska bilder noggrant. [Visa en bilduppsättning med namnet&quot;Körning&quot; som använder visningsprogrammet för utfällbara bilder](https://s7d1.scene7.com/s7viewers/html5/FlyoutViewer.html?asset=jpearldemo/Running).
 
-Här i Dynamic Media ser du flera bilder på skor. Det är en produktserie som försäljning och marknadsföring vill att kunderna ska se som en enda presentation - en Image-uppsättning.
+Här i Dynamic Media ser du flera bilder på skor. Det är en produktserie som försäljning och marknadsföring vill att kunderna ska se som en enda presentation, en Image-uppsättning.
 
 ![Skapa en bilduppsättning](/help/assets/dynamic-media/assets/dm-create-image-set.png)
 _Början på att skapa en bilduppsättning._

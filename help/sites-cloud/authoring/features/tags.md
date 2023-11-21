@@ -2,7 +2,7 @@
 title: Använda taggar
 description: Taggar är ett snabbt och enkelt sätt att klassificera innehåll på en webbplats
 exl-id: d2a9f578-fe0a-48ea-851c-2c84463661e0
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 6%
@@ -47,7 +47,7 @@ På samma sätt som du kan publicera och avpublicera sidor kan du göra följand
 
 * Aktivera enskilda taggar.
 
-  Precis som för sidor måste nyligen skapade taggar aktiveras innan de blir tillgängliga i publiceringsmiljön.
+  Precis som med sidor måste skapade taggar aktiveras innan de blir tillgängliga i publiceringsmiljön.
 
 >[!NOTE]
 >

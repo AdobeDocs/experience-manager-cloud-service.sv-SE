@@ -3,7 +3,7 @@ title: Beständiga GraphQL-frågor
 description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager as a Cloud Service för att optimera prestandan. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
 feature: Content Fragments,GraphQL API
 exl-id: 080c0838-8504-47a9-a2a2-d12eadfea4c0
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '1676'
 ht-degree: 1%
@@ -440,7 +440,7 @@ Skapa ett paket:
 1. Ange ett versionsnummer som &quot;1.0&quot;.
 1. Under **Filter** lägg till en ny **Filter**. Använd Sökväg för att välja `persistentQueries` under konfigurationen. För `wknd` konfiguration, den fullständiga sökvägen `/conf/wknd/settings/graphql/persistentQueries`.
 1. Tryck **Spara** för att spara den nya paketdefinitionen och stänga dialogrutan.
-1. Tryck på **Bygge** i den nyligen skapade paketdefinitionen.
+1. Tryck på **Bygge** i den skapade paketdefinitionen.
 
 När paketet har byggts kan du:
 

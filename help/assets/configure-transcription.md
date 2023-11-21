@@ -1,8 +1,6 @@
 ---
 title: Konfigurera transkriberingstjänsten
-seo-title: Configure transcription service
 description: Adobe Experience Manager Assets har konfigurerats med [!DNL Azure Media Services] som automatiskt genererar textutskrift av det talade språket i en ljud- eller videofil som stöds i WebVTT-format (Vtt).
-seo-description: When an audio or video asset is processed in Experience Manager Assets, the AI-based transcription service automatically generates the text transcript rendition of the audio or video asset and stores it at the same location within your Assets repository where the original asset resides. The Experience Manager Assets transcription service allows marketers to effectively manage their audio and video content with added discoverability of the text content and increase the ROI of these assets by supporting accessibility and localization.
 products: SG_EXPERIENCEMANAGER/ASSETS and Experience Manager as a Cloud Service
 sub-product: assets
 content-type: reference
@@ -11,9 +9,9 @@ topic-tags: Configuration
 feature: Asset Management, Configuration
 role: Admin
 exl-id: e96c8d68-74a6-4d61-82dc-20e619338d4b
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '1627'
+source-wordcount: '1626'
 ht-degree: 0%
 
 ---
@@ -158,7 +156,7 @@ Följande ljud- och videofilformat stöds för transkription:
 ## Kända begränsningar {#known-limitations}
 
 * transkriberingsfunktionen stöds för videoklipp med en varaktighet på upp till 10 minuter.
-* Videotiteln får inte innehålla fler än 80 tecken.
+* Videotiteln får innehålla högst 80 tecken.
 * Filstorleken är upp till 15 GB.
 * Den maximala bearbetningstiden som stöds är 60 minuter.
 * I en betald [!DNL Azure] kan du överföra upp till 50 filmer per minut. I ett testversionskonto kan du dock överföra upp till fem filmer per minut.

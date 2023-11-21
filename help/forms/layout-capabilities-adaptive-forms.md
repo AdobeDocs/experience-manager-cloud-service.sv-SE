@@ -2,9 +2,9 @@
 title: Vilka layoutfunktioner har Adaptive Forms?
 description: Layout och utseende för Adaptive Forms på olika enheter styrs av layoutinställningarna. Förstå de olika layouterna och hur de ska användas.
 exl-id: e30c6ff9-692b-4415-8f14-b4ef616b2d12
-source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '786'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 Med den här layouten kan du montera **[!UICONTROL Panel Adaptive Form]** i en panel med navigering i dragspelsstil. Med den här layouten kan du även skapa upprepningsbara paneler. Med upprepningsbara paneler kan du lägga till eller ta bort paneler dynamiskt efter behov. Du kan definiera minsta och högsta antal gånger en panel upprepas. Panelens namn kan också bestämmas dynamiskt utifrån informationen som finns i panelobjekten.
 
-Sammanfattningsuttryck kan användas för att visa de värden som slutanvändaren anger i titeln på den minimerade panelen.
+Sammanfattningsuttryck kan användas för att visa de värden som användaren anger i den minimerade panelens titel.
 
 ![Repeterbara paneler med dragspelslayout i adaptiv Forms](assets/accordion-layout.png)
 

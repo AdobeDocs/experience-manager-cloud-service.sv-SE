@@ -2,9 +2,9 @@
 title: Använda CRXDE Lite
 description: CRXDE Lite är en del av AEM snabbstart och är tillgängligt för dig att komma åt och ändra databasen i dina lokala utvecklingsmiljöer i webbläsaren.
 exl-id: 1581a7e5-6f84-4a45-8e8f-c83692ea077a
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1683'
 ht-degree: 0%
 
 ---
@@ -192,7 +192,7 @@ Nu kan du anpassa noden efter dina behov genom att ändra egenskaper eller skapa
 >
 De flesta redigeringsåtgärderna, inklusive **Skapa nod** sparar alla ändringar i minnet och lagrar dem endast i databasen när de sparas (med [**Spara alla, knapp**](#save-all-button)). Vissa åtgärder, till exempel move, sparas dock automatiskt.
 >
-Valideringen av om den nyskapade noden tillåts av den överordnade nodens nodtyp utförs även av databasen när ändringar sparas. Om du får ett felmeddelande när du sparar en nod kontrollerar du om innehållsstrukturen är giltig (du kan till exempel inte skapa en `nt:unstructured` nod som underordnad `nt:folder` nod).
+Valideringen av om den skapade noden tillåts av den överordnade nodens nodtyp utförs även av databasen när ändringar sparas. Om du får ett felmeddelande när du sparar en nod kontrollerar du om innehållsstrukturen är giltig (du kan till exempel inte skapa en `nt:unstructured` nod som underordnad `nt:folder` nod).
 
 ## Skapa en egenskap {#creating-a-property}
 

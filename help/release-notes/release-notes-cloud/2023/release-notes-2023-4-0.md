@@ -1,13 +1,13 @@
 ---
 title: Versionsinformation för 2023.4.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2023.4.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
-source-git-commit: 104065f208adf9bcc8e6a090b224517a7904f5f9
+exl-id: c34aedee-e45a-4e2a-ae7f-930bc0cc026f
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1170'
 ht-degree: 0%
 
 ---
-
 
 # Versionsinformation 2023.4.0 för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
@@ -17,7 +17,7 @@ I följande avsnitt beskrivs versionsinformationen för 2023.4.0-versionen av [!
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2021 eller 2022.
 >
->Ta en titt på [Roadmap för lansering av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) om de kommande funktionsaktiviteterna för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) om de kommande funktionsaktiviteterna för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ I följande avsnitt beskrivs versionsinformationen för 2023.4.0-versionen av [!
 
 ## Releasedatum {#release-date}
 
-Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2023.4.0) är 7 juni 2023. Nästa version (2023.6.0) är planerad till 29 juni 2023.
+Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2023.4.0) är 7 juni 2023. Nästa version (2023.6.0) är planerad till 29 juni 2023.
 
 ## Släpp video {#release-video}
 
@@ -43,7 +43,7 @@ Titta på videon med versionsöversikten för april 2023 om du vill se en samman
 ### Nya funktioner i [!DNL Experience Manager Sites] prerelease {#prerelease-sites}
 
 * Innehållsfragment och deras referenser kan nu publiceras i [Tjänsten AEM Preview](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#access-preview-service) med [Konsol för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=en), vilket gör att användarna kan förhandsgranska slutresultatet i ett fristående förhandsvisningsprogram innan de publicerar.
-* Bilderna kan nu optimeras dynamiskt för webbleverans i headlessscenarier med AEM GraphQL. [Frågevariabler](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/images.html?lang=en#query-variables) kan definieras i GraphQL-frågor för att tillåta att fristående klientprogram begär optimerade bilder från AEM.
+* Bilderna kan nu optimeras dynamiskt för webbleverans i headless-scenarier med AEM GraphQL. [Frågevariabler](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/images.html?lang=en#query-variables) kan definieras i GraphQL-frågor för att tillåta att fristående klientprogram begär optimerade bilder från AEM.
 * Taggar på [Variationer för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-variations.html?lang=en) kan nu skrivas ut till JSON med AEM GraphQL Content Delivery API.
 
 ## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
@@ -63,7 +63,7 @@ Titta på videon med versionsöversikten för april 2023 om du vill se en samman
 * Förbättrad användbarhet för färgsökningsaspekten - Indatafältet för färgvärden kan nu redigeras och sökresultaten uppdateras endast när du avslutar färgväljaren.
 
 * Nytt protokollstöd har startats (DASH - Dynamic Adaptive Streaming over HTTP) för adaptiv strömning i Dynamic Media (med CMAF aktiverat):
-   * Adaptiv direktuppspelning (DASH/HLS) ger en bättre visningsupplevelse för videor
+   * Adaptiv strömning (DASH/HLS) ger en bättre användarupplevelse för videor
    * DASH är det internationella standardprotokollet för strömning av adaptiv video och används ofta i branschen
    * Tillgängligt i alla regioner, för att aktiveras via supportanmälan
 
@@ -77,7 +77,7 @@ Titta på videon med versionsöversikten för april 2023 om du vill se en samman
 
 ### Nya funktioner i [!DNL Forms] {#new-features-available-in-channel}
 
-* **[Skicka anpassningsbara Forms till Microsoft® SharePoint och Microsoft® OneDrive](/help/forms/configuring-submit-actions.md)**: Öka användarflexibiliteten så att ni snabbt kan starta nya formulär och lagra inlämnade data i vardagliga verktyg som Microsoft® SharePoint eller OneDrive.
+* **[Skicka anpassningsbara Forms till Microsoft® SharePoint och Microsoft® OneDrive](/help/forms/configuring-submit-actions.md)**: Öka användarflexibiliteten så att du snabbt kan starta nya formulär och lagra inskickade data i vanliga verktyg som Microsoft® SharePoint eller OneDrive.
 
 ### Funktioner i [!DNL Forms] prerelease {#prerelease-features-forms}
 
@@ -110,9 +110,9 @@ Du kan skicka ett e-postmeddelande till `aem-forms-headless@adobe.com` från dit
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
 
-### Vad är nytt? {#what-is-new-foundation}
+### Nyheter {#what-is-new-foundation}
 
-* Ytterligare publiceringsregioner: Webbplatser Kunder kan licensiera upp till tre publiceringsregioner utöver den primära regionen. Trafiken dirigeras till ytterligare publiceringsanläggningar, vilket leder till minskad fördröjning för vissa förfrågningar och ökad motståndskraft mot regionala avbrott. Kontakta kontohanteraren för Adobe om du vill ha information om licensiering [Ytterligare publiceringsregioner](/help/operations/additional-publish-regions.md) för programmen.
+* Ytterligare publiceringsregioner: Webbplatskunder kan licensiera upp till tre publiceringsregioner utöver den primära regionen. Trafiken dirigeras till ytterligare publiceringsanläggningar, vilket leder till minskad fördröjning för vissa förfrågningar och ökad motståndskraft mot regionala avbrott. Kontakta kontohanteraren för Adobe om du vill ha information om licensiering [Ytterligare publiceringsregioner](/help/operations/additional-publish-regions.md) för programmen.
 
 ## Versionsinformation om underhåll {#maintenance}
 

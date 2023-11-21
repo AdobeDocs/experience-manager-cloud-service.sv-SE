@@ -2,9 +2,9 @@
 title: Vad är överväganden, kända problem och bästa praxis i AEM Forms?
 description: Kända fel och metodtips för AEM Forms Communication API:er är viktiga.
 exl-id: e95615dd-e494-40cd-9cdf-6e9761ca3b3e
-source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '1748'
+source-wordcount: '1749'
 ht-degree: 0%
 
 ---
@@ -171,7 +171,7 @@ I följande tabell anges XCI-alternativ.
 
 ## Bästa praxis
 
-* Adobe rekommenderar att du använder blobbbehållarlagring för datafiler i molnregionen som används av AEM Cloud Service.
+* Adobe rekommenderar att du har blobbbehållararkivet för datafiler i molnregionen som används av AEM Cloud Service.
 
 ## Vanliga frågor {#faq}
 

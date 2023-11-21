@@ -2,7 +2,7 @@
 title: Skapa modeller för innehållsfragment - Headless-konfiguration
 description: Definiera strukturen för det innehåll du skapar och använd AEM headless-funktioner med hjälp av Content Fragment-modeller.
 exl-id: 8e3e4d00-34d3-4d4f-bc3a-43b8a322b986
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 0%
@@ -44,7 +44,7 @@ En informationsarkitekt skulle utföra dessa uppgifter endast sporadiskt när ny
 
 1. När du är klar med att skapa modellen väljer du **Spara**.
 
-1. Läget för den nyskapade modellen beror på om du har valt **Aktivera modell** när du skapar modellen:
+1. Läget för den skapade modellen beror på om du har valt **Aktivera modell** när du skapar modellen:
    * vald - den nya modellen kommer redan att **Aktiverad**
    * inte valt - den nya modellen skapas i **Utkast** läge
 

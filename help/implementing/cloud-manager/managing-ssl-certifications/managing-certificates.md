@@ -2,9 +2,9 @@
 title: Hantera SSL-certifikat
 description: Lär dig hur du använder Cloud Manager för att kontrollera statusen för dina SSL-certifikat och hur du redigerar, ersätter, uppdaterar och tar bort dem.
 exl-id: ad6170f4-93bd-4bac-9c54-63c35a0d4f06
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Så här tar du bort ett SSL-certifikat.
 
 ## Befintliga CDN-konfigurationer {#pre-existing-cdn}
 
-Om du har en befintlig CDN-konfiguration för ditt SSL-certifikat finns det ett informationsmeddelande på **SSL-certifikat** som uppmanar dig att lägga till dessa konfigurationer via användargränssnittet så att de är synliga och konfigurerbara i Cloud Manager.
+Om du har en befintlig CDN-konfiguration för ditt SSL-certifikat visas ett informationsmeddelande på **SSL-certifikat** som uppmanar dig att lägga till dessa konfigurationer via användargränssnittet så att de är synliga och konfigurerbara i Cloud Manager.
 
 Meddelandet försvinner när alla befintliga miljökonfigurationer migreras med användargränssnittet. Det kan ta 1-2 arbetsdagar innan meddelandet försvinner.
 

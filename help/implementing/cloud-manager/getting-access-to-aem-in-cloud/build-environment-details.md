@@ -2,7 +2,7 @@
 title: Bygg miljö
 description: Lär dig mer om Cloud Managers byggmiljö och hur den bygger och testar din kod.
 exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '1004'
 ht-degree: 0%
@@ -159,7 +159,7 @@ Variabelnamn måste följa följande konventioner.
 * Det finns en gräns på 200 variabler per pipeline.
 * Varje namn får innehålla högst 100 tecken.
 * Varje `string` variabelvärdet måste vara mindre än 2 048 tecken.
-* Varje `secretString` variabelvärdet type måste vara mindre än 500 tecken.
+* Varje `secretString` variabelvärdet type får vara högst 500 tecken.
 
 Vid användning i en Maven `pom.xml` är det praktiskt att mappa dessa variabler till Maven-egenskaper med en syntax som liknar den här.
 

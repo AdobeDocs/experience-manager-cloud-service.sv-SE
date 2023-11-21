@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Asset Reports
 role: Admin,User
 exl-id: a71fef45-c9a4-4091-8af1-c3c173324b7a
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '6271'
+source-wordcount: '6269'
 ht-degree: 8%
 
 ---
@@ -52,7 +52,7 @@ Integreringen utnyttjar två separata och oberoende typer av spårning av Dynami
 
 ### Om spårning med Adobe Analytics  {#about-tracking-using-adobe-analytics}
 
-Med Adobe Analytics kan du spåra åtgärder som slutanvändaren utför när de interagerar med Dynamic Media-visningsprogram på webbplatsen. Med Adobe Analytics kan du också spåra visningsprogramspecifika data. Du kan till exempel spåra och spela in inläsningshändelser tillsammans med resursnamnet, eventuella zoomåtgärder som har utförts och videouppspelningsåtgärder.
+Med Adobe Analytics kan du spåra åtgärder som användaren utför när han/hon interagerar med Dynamic Media-visningsprogram på webbplatsen. Med Adobe Analytics kan du också spåra visningsprogramspecifika data. Du kan till exempel spåra och spela in inläsningshändelser tillsammans med resursnamnet, eventuella zoomåtgärder som har utförts och videouppspelningsåtgärder.
 
 I Experience Platform-taggar är koncepten *Dataelement* och *Regler* samarbeta för att möjliggöra Adobe Analytics-spårning.
 
@@ -221,9 +221,9 @@ Det exakta värdet som returneras av dataelementet beror på sammanhanget. Om da
    * Använder tangenttryckningshändelsen från Core Experience Platform Tags-tillägget som utlösare.
    * Skickar värdet för **[!UICONTROL ZoomScale]** Dataelement till Adobe Analytics.
 
-Anta nu att slutanvändaren läser in webbsidan med de två visningsprogrammen. I *viewer1* zoomar de in till 50 % skala och sedan in *viewer2* zoomar de in till 25 %. I *viewer1* panorerar de runt bilden och trycker slutligen på en tangent på tangentbordet.
+Anta nu att användaren läser in webbsidan med de två visningsprogrammen. I *viewer1* zoomar de in till 50 % skala och sedan in *viewer2* zoomar de in till 25 %. I *viewer1* panorerar de runt bilden och trycker slutligen på en tangent på tangentbordet.
 
-Slutanvändarens aktivitet resulterar i följande två spårningsanrop till Adobe Analytics:
+Användarens aktivitet resulterar i följande två spårningsanrop till Adobe Analytics:
 
 * Det första anropet sker eftersom **[!UICONTROL TrackPan]** Regeln aktiveras när användaren panorerar *viewer1*. Det anropet skickar 50 % som ett värde av **[!UICONTROL ZoomScale]** Dataelement eftersom dataelementet vet att regeln aktiveras av *viewer1* och hämtar motsvarande skalvärde,
 * Det andra anropet sker eftersom **[!UICONTROL TrackKey]** Regeln aktiveras när användaren trycker på en tangent på tangentbordet. Det anropet skickar 25 % som ett värde av **[!UICONTROL ZoomScale]** Dataelement eftersom regeln inte utlöstes av användaren. Därför returnerar dataelementet det senaste värdet.
@@ -519,7 +519,7 @@ Se även [Konfigurera en tryckegenskap](https://experienceleague.adobe.com/docs/
 
 1. Välj **[!UICONTROL Save]**.
 
-   Välj den nyskapade egenskapen och fortsätt sedan till *Installation och installation av tillägg*.
+   Välj den skapade egenskapen och gå sedan vidare till *Installation och installation av tillägg*.
 
 ### Installera och konfigurera tillägg {#installing-and-setup-of-extensions}
 

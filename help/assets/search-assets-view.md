@@ -3,9 +3,9 @@ title: Lär dig hur du söker efter och identifierar resurser i [!DNL Assets vie
 description: Läs om hur du söker efter och identifierar resurser i AEM Assets-vyn. Med de kraftfulla sökfunktionerna kan du snabbt hitta rätt resurs och hjälpa dig att förbättra innehållets hastighet.
 role: User
 exl-id: be9597a3-056c-436c-a09e-15a03567c85a
-source-git-commit: d663c258a83473ec8d3c68bc5683955003d889c7
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -123,7 +123,7 @@ Så här tar du bort anpassade filter:
 
 ## Sparade sökningar {#saved-search}
 
-Sökfunktionen är mycket enkel att använda i [!DNL Assets view]. I sökrutan kan du inte bara skriva ett nyckelord och trycka på Retur för att se resultatet. Du kan också snabbt söka igen efter dina nyligen sökta nyckelord med ett enda klick.
+Sökfunktionen är mycket enkel att använda i [!DNL Assets view]. I sökrutan kan du bara skriva ett nyckelord och trycka på Retur för att se resultatet. Du kan också snabbt söka efter dina nyligen sökta nyckelord igen med ett enda klick.
 
 Du kan också filtrera sökresultaten baserat på specifika villkor runt metadata och resurstyp. För filter som används ofta, för att förbättra sökupplevelsen, [!DNL Assets view] I kan du spara sökparametrarna. Du kan sedan markera den sparade sökningen och använda filtret med bara ett klick.
 

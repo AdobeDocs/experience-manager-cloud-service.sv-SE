@@ -2,9 +2,9 @@
 title: Query Builder API
 description: Funktionerna i Asset Share Query Builder visas via Java&trade; API och REST API.
 exl-id: d5f22422-c9da-4c9d-b81c-ffa5ea7cdc87
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '2006'
+source-wordcount: '2008'
 ht-degree: 0%
 
 ---
@@ -351,7 +351,7 @@ Du kan även kontrollera [Javadoc för `PredicateEvaluator` klasser](https://dev
 
 Klassnamnets prefix (till exempel `similar` in [`SimilarityPredicateEvaluator`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/eval/SimilarityPredicateEvaluator.html)) är *huvudegenskap* av klassen. Den här egenskapen är också namnet på predikatet som ska användas i frågan (i gemener).
 
-För sådana huvudegenskaper kan du förkorta frågan och använda `similar=/content/en` i stället för den fullständigt kvalificerade varianten `similar.similar=/content/en`. Det fullständigt kvalificerade formuläret måste användas för alla icke-huvudsakliga egenskaper i en klass.
+För sådana huvudegenskaper kan du förkorta frågan och använda `similar=/content/en` i stället för den fullständigt kvalificerade varianten `similar.similar=/content/en`. Det fullständiga, kvalificerade formuläret måste användas för alla icke-huvudsakliga egenskaper i en klass.
 
 ## Exempel på API-användning för frågebyggaren {#example-query-builder-api-usage}
 

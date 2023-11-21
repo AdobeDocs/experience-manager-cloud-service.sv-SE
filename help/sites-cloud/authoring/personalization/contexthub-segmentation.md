@@ -2,7 +2,7 @@
 title: Konfigurera segmentering med ContextHub
 description: Lär dig konfigurera segmentering med ContextHub.
 exl-id: fbc38611-dbee-426e-b823-df64b6730c45
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '1652'
 ht-degree: 0%
@@ -101,7 +101,7 @@ Så här definierar du det nya segmentet:
    * Minsta värde: `0`
    * Högsta värde: `1000000`
 
-1. I segmentkonsolen redigerar du det nya segmentet och öppnar det i segmentredigeraren.
+1. I segmentkonsolen redigerar du det segment du har skapat och öppnar det i segmentredigeraren.
 1. Dra en jämförelse eller referens till segmentredigeraren som den visas i standardbehållaren OCH.
 1. Dubbelmarkera konfigurationsalternativet för den nya referensen eller segmentet för att redigera de specifika parametrarna. I det här exemplet testar vi för folk i Basel.
 

@@ -5,7 +5,7 @@ contentOwner: Vishabh Gupta
 feature: Search,Adobe Stock
 role: Admin,User
 exl-id: 13f21d79-2a8d-4cb1-959e-c10cc44950ea
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '2335'
 ht-degree: 4%
@@ -271,7 +271,7 @@ Du kan skapa en användargrupp eller tilldela behörigheter till en befintlig an
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Stock]**. Välj [!DNL Adobe Stock] molnkonfiguration och klicka på **[!UICONTROL Properties]**.
 
-1. Lägg till den nya användargruppen i [!DNL Adobe Stock] konfiguration. Klicka på **[!UICONTROL Save & Close]**.
+1. Lägg till den skapade användargruppen i [!DNL Adobe Stock] konfiguration. Klicka på **[!UICONTROL Save & Close]**.
 
    ![assign-user](assets/aem-stock-adduser.png)
 

@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Asset Management,Image Profiles,Renditions
 role: User
 exl-id: 0856f8a1-e0a9-4994-b338-14016d2d67bd
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '3382'
 ht-degree: 3%
@@ -134,7 +134,7 @@ Se även [Bästa metoderna för att ordna dina digitala resurser så att du kan 
 
    ![beskära](assets/crop.png)
 
-1. Välj **[!UICONTROL Save]**. Den nya profilen visas i listan med tillgängliga profiler.
+1. Välj **[!UICONTROL Save]**. Den skapade profilen visas i listan med tillgängliga profiler.
 
 ## Redigera eller ta bort Dynamic Media bildprofiler {#editing-or-deleting-image-profiles}
 

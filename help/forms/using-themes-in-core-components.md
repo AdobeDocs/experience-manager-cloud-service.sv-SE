@@ -2,7 +2,7 @@
 title: Hur skapar och använder vi teman i Adaptive Forms?
 description: Du kan använda teman för att utforma och ge en visuell identitet till ett adaptivt formulär med hjälp av kärnkomponenterna. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
 exl-id: 11c52b66-dbb1-4c47-a94d-322950cbdac1
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '2630'
 ht-degree: 0%
@@ -319,7 +319,7 @@ Du behöver en databas för att distribuera temat. Logga in på [AEM Cloud Manag
 
 ##### 5.2. Skicka ändringarna till databasen {#committing-the-changes}
 
-Nu kan du överföra ändringarna till temadeatalogen för din AEM Forms-Cloud Service. .
+Nu kan du överföra ändringarna till temadeatalogen för din AEM Forms-Cloud Service.
 
 1. Navigera till temamappens rot.  I det här fallet är temamappens namn `aem-forms-theme-canvas`.
 1. Öppna kommandotolken eller terminalen.

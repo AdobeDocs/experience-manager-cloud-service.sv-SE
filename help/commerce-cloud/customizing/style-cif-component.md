@@ -1,6 +1,6 @@
 ---
-title: Formatera Adobe Experience Manager CIF-kärnkomponenter
-description: Lär dig hur du utformar Adobe Experience Manager (AEM) CIF Core Components. Självstudiekursen beskriver hur bibliotek och klientlibs på klientsidan används för att distribuera och hantera CSS och JavaScript för en AEM Commerce-implementering. Den här självstudiekursen handlar också om hur modulen ui.front och ett webbpaketprojekt är integrerade i hela byggprocessen.
+title: Formatera Adobe Experience Manager CIF Core Components
+description: Lär dig hur du formaterar Adobe Experience Manager (AEM) CIF Core Components. Självstudiekursen beskriver hur bibliotek och klientlibs på klientsidan används för att distribuera och hantera CSS och JavaScript för en AEM Commerce-implementering. Den här självstudiekursen handlar också om hur modulen ui.front och ett webbpaketprojekt är integrerade i hela byggprocessen.
 sub-product: Commerce
 topics: Development
 version: Cloud Service
@@ -11,16 +11,16 @@ feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 exl-id: 521c1bb8-7326-4ee8-aba3-f386727e2b34
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '2535'
 ht-degree: 0%
 
 ---
 
-# Stil AEM CIF-kärnkomponenter {#style-aem-cif-core-components}
+# Stil AEM CIF kärnkomponenter {#style-aem-cif-core-components}
 
-The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en referenskodbas för att använda [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components). I den här självstudiekursen inspekterar du Venias referensprojekt och förstår hur CSS och JavaScript som används AEM CIF Core-komponenter är organiserade. Du kan också skapa ett format med hjälp av CSS för att uppdatera standardformatet för **Product Teaser** -komponenten.
+The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en referenskodbas för att använda [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components). I den här självstudiekursen inspekterar du Venias referensprojekt och förstår hur CSS och JavaScript som används AEM kärnkomponenterna är ordnade. Du kan också skapa ett format med hjälp av CSS för att uppdatera standardformatet för **Product Teaser** -komponenten.
 
 >[!TIP]
 >
@@ -28,7 +28,7 @@ The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en re
 
 ## Vad du ska bygga
 
-I den här självstudiekursen implementeras en ny stil för Product Teaser-komponenten som liknar ett kort. Lektioner som du lär dig i självstudiekursen kan användas på andra CIF-kärnkomponenter.
+I den här självstudiekursen implementeras en ny stil för Product Teaser-komponenten som liknar ett kort. Lektioner du lär dig i självstudiekursen kan användas på andra CIF.
 
 ![Vad du ska bygga](../assets/style-cif-component/what-you-will-build.png)
 
@@ -57,7 +57,7 @@ Du kommer att klona [Venedig-projektet](https://github.com/adobe/aem-cif-guides-
    $ mvn clean install -PautoInstallPackage,cloud
    ```
 
-1. Lägg till nödvändiga OSGi-konfigurationer så att du kan ansluta AEM till en Adobe Commerce-instans eller lägga till konfigurationerna i det nyskapade projektet.
+1. Lägg till nödvändiga OSGi-konfigurationer så att du kan ansluta AEM till en Adobe Commerce-instans eller lägga till konfigurationerna i det skapade projektet.
 
 1. Nu bör du ha en fungerande version av en storefront som är ansluten till en Adobe Commerce-instans. Navigera till `US` > `Home` sida vid: [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html).
 
@@ -69,7 +69,7 @@ Du kommer att klona [Venedig-projektet](https://github.com/adobe/aem-cif-guides-
 
 Den CSS och JavaScript som ansvarar för återgivningen av temat/formaten för butiken hanteras i AEM av en [klientbibliotek](/help/implementing/developing/introduction/clientlibs.md) eller&quot;clientlibs&quot; för kort tid. Klientbibliotek erbjuder en mekanism för att ordna CSS och JavaScript i ett projekts kod och sedan leverera på sidan.
 
-Märkesspecifika format kan användas på AEM CIF Core-komponenter genom att lägga till och åsidosätta den CSS som hanteras av dessa klientbibliotek. Det är viktigt att förstå hur klientbibliotek är strukturerade och inkluderas på sidan.
+Du kan använda varumärkesspecifika format på AEM kärnkomponenter genom att lägga till och åsidosätta den CSS som hanteras av dessa klientbibliotek. Det är viktigt att förstå hur klientbibliotek är strukturerade och inkluderas på sidan.
 
 The [ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) är en dedikerad [webbpaket](https://webpack.js.org/) projekt för att hantera alla resurser för ett projekt. Med det här webbpaketet kan utvecklare använda valfritt antal språk och tekniker som [TypeScript](https://www.typescriptlang.org/), [Sass](https://sass-lang.com/)och mycket annat.
 

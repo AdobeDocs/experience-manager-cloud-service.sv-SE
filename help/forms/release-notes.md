@@ -2,9 +2,9 @@
 title: Versionsinformation för AEM Forms as a Cloud Service
 description: Läs om nya funktioner, betaversioner, förhandsversionsinformation med mera för AEM Forms as a Cloud Service.
 exl-id: 35950b81-6e45-4a75-bd27-8c28fd68e42e
-source-git-commit: 8074c0e9566b679830a56094bc9b47cb22f4bb4a
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '2024'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Manager [!DNL AEM Forms] as a Cloud Service får fortlöpande f
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms-oct-2021}
 
-- **Analytics för Adaptive Forms**: Du kan nu fånga in och spåra beteenden hos både inloggad och ej inloggad (anonym) via Adobe Analytics för Adaptive Forms för att samla in slutanvändarinsikter. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
+- **Analytics för Adaptive Forms**: Du kan nu fånga in och spåra beteenden hos både inloggad och ej inloggad (anonym) via Adobe Analytics för Adaptive Forms för att samla in användarinsikter. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
 
 ### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms-oct-2021}
 
@@ -61,7 +61,7 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betapr
 ### Betafunktioner i [!DNL Forms] {#sep-what-is-new-forms-prerelease}
 
 - **Enhetlig lagringsanslutning:** Använd Unified Storage Connector för att externalisera processdata i kundhanterade databaser. Du kan t.ex. lagra AEM arbetsflödesdata (AEM arbetsflödesvariabeldata) som innehåller känsliga personuppgifter (SPD) i en kundhanterad databas.
-  <!--* Enable Forms Portal’s save and resume functionality and store adaptive forms drafts in a customer-managed data repository.-->
+  <!--* Enable Forms Portal's save and resume functionality and store adaptive forms drafts in a customer-managed data repository.-->
 
 - **[!DNL AEM Forms as a Cloud Service - Communications]**: [Kommunikations-API:er](aem-forms-cloud-service-communications.md) hjälper dig att kombinera XDP-mallar och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
    - Generera dokument genom att fylla i mallfiler med XML-data.
@@ -90,7 +90,7 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betapr
 
   * Enable searching of forms based on a various criteria, such as form properties, metadata, and tags.
 
-  * Lists drafts and submissions related to Adaptive Form created by end user.
+  * Lists drafts and submissions related to Adaptive Form created by user.
 
   -->
 
@@ -124,7 +124,7 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betapr
 
 - **Använda Adobe Sign-roller i ett adaptivt formulär**: Adobe Sign för företags- och företagsnivåer har möjlighet att utöka rollerna för avtalsmottagare, utöver bara signeraren, så att de bättre motsvarar deras arbetsflödesbehov. Nu kan du [göra det möjligt för alla mottagare av avtal att konfigurera sin roll i ett adaptivt formulär](working-with-adobe-sign.md#addsignerstoanadaptiveform), med signerare som standardroll.
 
-- **Analytics för Adaptive Forms**: Nu kan du samla in och spåra användarbeteende via Adobe Analytics för Adaptive Forms för att få information om slutanvändarna. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
+- **Analytics för Adaptive Forms**: Nu kan du fånga in och spåra användarbeteende med hjälp av Adobe Analytics for Adaptive Forms för att samla in användarinsikter. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
 
 - **Koppla enkelt upp AEM Forms med Microsoft Dynamics och Salesforce**: Tjänsten tillhandahåller out of the box-datakällkonfiguration och datamodeller för Microsoft Dynamics och Salesforce, vilket gör den [snabbare och enklare för utvecklare att konfigurera Microsoft Dynamics och Salesforce som datakällor för ett adaptivt formulär](configure-msdynamics-salesforce.md).
 
@@ -207,9 +207,9 @@ Du kan skriva till formscsbeta@adobe.com och registrera dig för betaprogrammet.
 
 - **Använd autentiseringsmetoden för myndighets-ID i Adobe Sign-aktiverad Adaptive Forms**
 
-  Adobe Sign Government ID-process bygger på avancerade maskininlärningsalgoritmer och ger företag över hela världen möjlighet att säkra en högkvalitativ autentisering av mottagarens identitet. Nu kan du använda autentiseringsmetoden för myndighets-ID i Adobe Sign-aktiverade Adaptive Forms.
+  Adobe Sign Government ID-process drivs av avancerade maskininlärningsalgoritmer och ger företag över hela världen möjlighet att säkra en högkvalitativ autentisering av mottagarens identitet. Nu kan du använda autentiseringsmetoden för myndighets-ID i Adobe Sign-aktiverade Adaptive Forms.
 
-  Myndighets-ID är en autentiseringsmetod för premiumidentitet som instruerar mottagaren att [överföra bilden av ett foto på ett foto av ett foto av ett foto som utfärdats av en myndighet (körkort, nationellt id, pass),](https://helpx.adobe.com/in/sign/using/adobesign-authentication-government-id.html)och utvärderar sedan dokumentet för att säkerställa att det är autentiskt.
+  Myndighets-ID är en autentiseringsmetod för premiumidentitet som instruerar mottagaren att [ladda upp bilden av ett foto på ett foto av ett foto av ett foto som utfärdats av en myndighet (körkort, nationellt ID, pass)](https://helpx.adobe.com/in/sign/using/adobesign-authentication-government-id.html)och utvärderar sedan dokumentet för att säkerställa att det är autentiskt.
 
 - **Stöd för att använda signeringsfunktionen i formulär för asynkrona inskickade formulär med adaptiv formatering**
 

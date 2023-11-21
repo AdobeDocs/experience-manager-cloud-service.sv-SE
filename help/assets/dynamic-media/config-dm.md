@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar Dynamic Media i Adobe Experience Manag
 contentOwner: Rick Brough
 role: Admin,User
 exl-id: 8e07bc85-ef26-4df4-8e64-3c69eae91e11
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '3558'
 ht-degree: 2%
@@ -84,7 +84,7 @@ To migrate any custom viewer presets and configurations that you have created fr
 
    Det nya lösenordet sparas när du väljer **[!UICONTROL Save]** i det övre högra hörnet av **[!UICONTROL Create Dynamic Media Configuration]** sida.
 
-   Om du valde **[!UICONTROL Cancel]** i **[!UICONTROL Change Password]** måste du fortfarande ange ett nytt lösenord när du sparar den nya Dynamic Media-konfigurationen.
+   Om du valde **[!UICONTROL Cancel]** i **[!UICONTROL Change Password]** måste du fortfarande ange ett nytt lösenord när du sparar den skapade Dynamic Media-konfigurationen.
 
    Se även [Ändra lösenordet till Dynamic Media](#change-dm-password).
 

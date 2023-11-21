@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Compute Microservices,Workflow,Asset Processing
 role: Architect,Admin
 exl-id: 7e01ee39-416c-4e6f-8c29-72f5f063e428
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
 workflow-type: tm+mt
 source-wordcount: '2864'
 ht-degree: 1%
@@ -246,7 +246,7 @@ När efterbearbetning inte behövs skapar och använder du en tom arbetsflödesm
    * Titel: Inaktivera autostart av arbetsflöde
    * Namn: disable-auto-start-workflow
 1. Välj __Klar__ för att skapa arbetsflödesmodellen
-1. __Välj__ och __Redigera__ den nyskapade arbetsflödesmodellen
+1. __Välj__ och __Redigera__ den skapade arbetsflödesmodellen
 1. Välj __Steg 1__ från modelldefinitionen och ta bort den
 1. Öppna __Side Panel__ och markera __Steg__
 1. Dra __DAM-uppdateringsarbetsflödet för resurser har slutförts__ steg in i modelldefinitionen
