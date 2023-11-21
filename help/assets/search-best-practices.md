@@ -3,14 +3,14 @@ title: Sök efter bästa praxis för [!DNL Adobe Experience Manager] som [!DNL C
 description: Metodtips om hur du söker efter, hittar och hämtar metadata för resurser i programmet.
 contentOwner: KK
 exl-id: 446692de-5cea-4dbd-a98e-ec5177c7017e
-source-git-commit: b3b2cc516743243fbfdcf6189bfd851a1272bf78
+source-git-commit: 47003c9aa0faefc01a9935c53a5a78938c37cf66
 workflow-type: tm+mt
-source-wordcount: '2431'
+source-wordcount: '2432'
 ht-degree: 1%
 
 ---
 
-# Bästa praxis för AEM-sökning
+# AEM Assets Search - metodtips
 
 [!DNL Adobe Experience Manager Assets] har robusta metoder för resurssökning som hjälper dig att få högre innehållshastighet. Ibland kan det vara besvärligt och tidskrävande att hitta rätt mediefil. Därför kan du söka efter resurser i [!DNL Adobe Experience Manager Assets] är en central del i användningen av ett digitalt resurshanteringssystem - vare sig det är till för kreativa användare eller företagsanvändare och marknadsförare, eller för administration av DAM-administratörer.
 
