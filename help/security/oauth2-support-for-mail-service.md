@@ -2,9 +2,9 @@
 title: OAuth2-stöd för e-posttjänsten
 description: Oauth2-stöd för e-posttjänsten i Adobe Experience Manager as a Cloud Service
 exl-id: 93e7db8b-a8bf-4cc7-b7f0-cda481916ae9
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: c8e8a1c862784976094391d567fac0f9122af8b4
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '712'
 ht-degree: 0%
 
 ---
@@ -29,10 +29,12 @@ Mer information om AEM as a Cloud Service Mail Service finns i [Skickar e-post](
 1. Gå till den skapade appen och välj **API-behörigheter**.
 1. Klicka **Lägg till behörighet** > **Diagrambehörighet** > **Delegerade behörigheter**.
 1. Välj behörigheter nedan för din app och klicka sedan på **Lägg till behörighet**:
+
+   >[!NOTE]
+   >
+   >Behörighetskonfigurationen kan förändras över tid. Kontakta Microsoft om de inte fungerar som förväntat.
+
    * `https://outlook.office.com/SMTP.Send`
-   * `https://graph.microsoft.com/Mail.Read`
-   * `https://graph.microsoft.com/Mail.Send`
-   * `https://graph.microsoft.com/User.Read`
    * `openid`
    * `offline_access`
    * `email`
@@ -134,10 +136,12 @@ Innan du fortsätter att konfigurera OAuth på AEM-sidan måste du verifiera bå
 
 1. Fyll i `authUrl`, `tokenUrl`och `refreshURL` genom att konstruera dem enligt beskrivningen i föregående avsnitt.
 1. Lägg till följande scope i konfigurationen:
+
+   >[!NOTE]
+   >
+   >Omfattningar kan utvecklas över tid. Kontakta Microsoft om de inte fungerar som förväntat.
+
    * `https://outlook.office.com/SMTP.Send`
-   * `https://graph.microsoft.com/Mail.Read`
-   * `https://graph.microsoft.com/Mail.Send`
-   * `https://graph.microsoft.com/User.Read`
    * `openid`
    * `offline_access`
    * `email`
