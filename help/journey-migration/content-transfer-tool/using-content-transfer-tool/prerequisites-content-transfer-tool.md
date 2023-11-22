@@ -2,7 +2,7 @@
 title: Krav för verktyget Innehållsöverföring
 description: Bekanta dig med kraven för verktyget Innehållsöverföring
 exl-id: 41a9cff1-4d89-480c-b9fc-5e8efc2a0705
-source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
+source-git-commit: 5964801192fc4a50b7f04852e3128f8218ca4cc5
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Granska alla överväganden som anges nedan:
 | Överväganden | Vad stöds för närvarande? |
 |---------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AEM | Verktyget Innehållsöverföring kan endast köras i AEM 6.3 eller senare. |
-| Storlek på segmentlager | En befintlig databas som har mindre än 55 miljoner JCR-noder och upp till 250 GB (komprimerad storlek online) på *Upphovsman* och 50 GB på *Publicera* stöds för närvarande. Skapa en supportanmälan med Adobe kundtjänst så att du kan diskutera olika alternativ för segmentbutikens storlek över dessa gränser. |
+| Storlek på segmentlager | En befintlig databas som har mindre än 750 miljoner JCR-noder och upp till 500 GB (komprimerad storlek online) på *Upphovsman* och 50 GB på *Publicera* stöds för närvarande. Skapa en supportanmälan med Adobe kundtjänst så att du kan diskutera olika alternativ för segmentbutikens storlek över dessa gränser. |
 | Total storlek på innehållsdatabas <br>*(segmentbutik + datalager)* | Verktyget Innehållsöverföring är utformat för att överföra innehåll på upp till 20 terabyte för datalagringstypen. Allt som är större än 20 terabyte stöds för närvarande inte. Skapa en supportanmälan med Adobe kundtjänst så att ni kan diskutera olika alternativ för innehåll som är större än 20 terabyte. <br>Om du vill snabba upp innehållsöverföringsprocessen avsevärt för stora databaser kan du välja [pre-copy](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/handling-large-content-repositories.html#setting-up-pre-copy-step) kan användas. Den här processen gäller datalagrets fildatalager, Amazon S3 och Azure Data Store-typer. För Amazon S3 och Azure Data Store stöds databasstorlekar större än 20 terabyte. |
 | Total Lucene-indexstorlek | Total Lucene-indexstorlek på högst 25 GB, exklusive `/oak:index/lucene` och `/oak:index/damAssetLucene` stöds. Skapa en supportanmälan med Adobe kundtjänst så att du kan diskutera olika alternativ för indexstorlek över denna gräns. |
 | Nodnamnslängd | Längden på ett nodnamn måste vara 150 byte eller mindre när nodens överordnade sökväg är >= (lika med eller större än) 350 byte. Dessa nodnamn måste förkortas till &lt;= 150 byte för att kunna användas av dokumentnodarkivet på AEM as a Cloud Service. Inställningarna misslyckas om de långa nodnamnen inte är fasta. |
