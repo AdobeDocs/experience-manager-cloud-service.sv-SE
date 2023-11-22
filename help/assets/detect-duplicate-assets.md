@@ -5,13 +5,13 @@ contentOwner: KK
 mini-toc-levels: 3
 feature: Asset Management,Publishing,Collaboration,Asset Processing
 role: User,Architect,Admin
-source-git-commit: bd0981b262f645653723f1b35d871808506d47ba
+exl-id: 40f63933-4f4e-4318-8d42-4b5c9b01f7cd
+source-git-commit: 237b4a8e01af74dbaac0ba1715b5fa95c931be7c
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 2%
 
 ---
-
 
 # Identifiera duplicerade resurser {#detect-duplicate-assets}
 
@@ -43,4 +43,3 @@ När den är aktiverad skickar Experience Manager meddelanden om duplicerade res
 >[!NOTE]
 >
 >När du överför resurser till databasen upptäcker Experience Manager duplicering och meddelar dig om de första 100 duplicerade resurserna.
-
