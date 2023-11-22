@@ -1,8 +1,9 @@
 ---
 title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.03.0
-description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.03.0
+description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.03.0
 feature: Release Information
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+exl-id: cdc57cca-e10a-4b0d-b803-910ccc9350a6
+source-git-commit: d7e5a14c2dfee41b4ab5af733218fe58d17871fa
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 2%
@@ -11,7 +12,7 @@ ht-degree: 2%
 
 # Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.03.0 {#release-notes}
 
-Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2022.03.0.
+Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2023.03.0.
 
 ## Best Practices Analyzer {#bpa-release}
 
@@ -32,7 +33,7 @@ Releasedatum för Best Practices Analyzer v2.1.40 är 3 mars 2023.
 
 ### Releasedatum {#release-date-ctt}
 
-Releasedatum för Content Transfer Tool v 2.0.16 är 8 mars 2022.
+Releasedatum för Content Transfer Tool v 2.0.16 är 8 mars 2023.
 
 ### Nyheter {#what-is-new-ctt}
 
