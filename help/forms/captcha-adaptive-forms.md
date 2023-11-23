@@ -6,9 +6,9 @@ contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: adaptive_forms, author
 exl-id: 3fdbe5a3-5c3c-474d-b701-e0182da4191a
-source-git-commit: 397e7d4f23202b8ae7419b0ad5436a6a10e2efb8
+source-git-commit: 9d2f8794a061c44cab016ab049c8c8ac7b3b2784
 workflow-type: tm+mt
-source-wordcount: '1855'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -291,11 +291,13 @@ Du kan anropa den anpassade servern som innehåller `ValidateCAPTCHA` API med re
 
 På samma sätt kan du använda regelredigeraren för att inkludera en anpassad metod för att validera CAPTCHA i ett adaptivt formulär.
 
-### Lägg till anpassade CAPTCHA-tjänster {#add-custom-captcha-service}
+<!--
 
-[!DNL Experience Manager Forms] tillhandahåller reCAPTCHA som CAPTCHA-tjänst. Du kan dock lägga till en anpassad tjänst som ska visas i **[!UICONTROL CAPTCHA Service]** listruta.
+### Add custom CAPTCHA services {#add-custom-captcha-service}
 
-Nedan följer ett exempel på en implementering av gränssnittet för att lägga till ytterligare CAPTCHA-tjänst i ditt adaptiva formulär:
+[!DNL Experience Manager Forms] provides reCAPTCHA as the CAPTCHA service. However, you can add a custom service to display in the **[!UICONTROL CAPTCHA Service]** drop-down list.  
+
+The following is a sample implementation of the interface to add additional CAPTCHA service to your Adaptive Form:
 
 ```javascript
 package com.adobe.aemds.guide.service;
@@ -325,15 +327,15 @@ public interface GuideCaptchaValidator {
 }
 ```
 
-`captchaPropertyNodePath` refererar till resurssökvägen för CAPTCHA-komponenten i Sling-databasen. Använd den här egenskapen om du vill ta med information som är specifik för CAPTCHA-komponenten. Till exempel: `captchaPropertyNodePath` innehåller information om reCAPTCHA-molnkonfigurationen som konfigurerats för CAPTCHA-komponenten. Molnkonfigurationsinformationen innehåller **[!UICONTROL Site Key]** och **[!UICONTROL Secret Key]** inställningar för implementering av tjänsten reCAPTCHA.
+`captchaPropertyNodePath` refers to the resource path of the CAPTCHA component in the Sling repository. Use this property to include details specific to the CAPTCHA component. For example, `captchaPropertyNodePath` includes information for the reCAPTCHA cloud configuration configured on the CAPTCHA component. The cloud configuration information provides **[!UICONTROL Site Key]** and **[!UICONTROL Secret Key]** settings for implementing the reCAPTCHA service.
 
-`userResponseToken` refererar till `g_recaptcha_response` som genereras när en CAPTCHA har lösts i ett formulär.
+`userResponseToken` refers to the `g_recaptcha_response` that gets generated after solving a CAPTCHA in a form.
 
-### Redigera reCAPTCHA-tjänstdomän {#reCAPTCHA-service-domain}
+### Edit reCAPTCHA service domain {#reCAPTCHA-service-domain}
 
-reCAPTCHA-tjänsten använder `https://www.recaptcha.net/` som standarddomän. Du kan ändra inställningarna för att ange `https://www.google.com/` eller ett anpassat domännamn för inläsning, återgivning och validering av reCAPTCHA-tjänsten.
+reCAPTCHA service uses `https://www.recaptcha.net/` as the default domain. You can modify the settings to set `https://www.google.com/` or any custom domain name for loading, rendering, and validating the reCAPTCHA service.
 
-Ange **[!UICONTROL af.cloudservices.recaptcha.domain]** egenskapen för **[!UICONTROL Adaptive Form and Interactive Communication Web Channel Configuration]** konfiguration som ska anges `https://www.google.com/` eller något annat anpassat domännamn. I följande JSON-fil visas ett exempel:
+Set the **[!UICONTROL af.cloudservices.recaptcha.domain]** property of the **[!UICONTROL Adaptive Form and Interactive Communication Web Channel Configuration]** configuration to specify `https://www.google.com/` or any other custom domain name. The following JSON file displays a sample:
 
 ```json
 {
@@ -341,9 +343,9 @@ Ange **[!UICONTROL af.cloudservices.recaptcha.domain]** egenskapen för **[!UICO
 }
 ```
 
-Så här anger du värden för en konfiguration: [Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart)och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service.
+To set values of a configuration, [Generate OSGi Configurations using the AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart), and [deploy the configuration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) to your Cloud Service instance.
 
-## Se även {#see-also}
+## See Also {#see-also}
 
 {{see-also}}
 
