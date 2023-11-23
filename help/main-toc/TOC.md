@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 219eb2544dbac8ac5104be4ef8eb1bae996d95f0
+source-git-commit: 700d07e941dafd8dadd8f7abbfc10b92cb7e8144
 workflow-type: tm+mt
-source-wordcount: '4384'
+source-wordcount: '4390'
 ht-degree: 19%
 
 ---
@@ -680,6 +680,7 @@ ht-degree: 19%
    + Översikt till as a Cloud Service skärmar {#overview}
       + [Introduktion](/help/screens-cloud/introduction/introduction.md)
       + [Om rolldefinitioner](/help/screens-cloud/introduction/personas-screens-cloud.md)
+      + [Adobe Analytics-integrering med Screens Cloud](/help/screens-cloud/introduction/adobe-analytics-integration-with-screens.md)
    + As a Cloud Service introduktion till skärmar {#onboarding-screens-cloud}
       + [Inloggning för första gången](/help/screens-cloud/onboarding-screens-cloud/first-time-login-screens-cloud.md)
       + Lägga till skärmar som ett tillägg i Cloud Manager {#adding-screens-addon}
