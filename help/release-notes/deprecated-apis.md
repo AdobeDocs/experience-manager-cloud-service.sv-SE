@@ -2,7 +2,7 @@
 title: Föråldrade API:er
 description: Versionsinformation om borttagna och borttagna API:er i [!DNL Adobe Experience Manager] som [!DNL Cloud Service].
 exl-id: fbd8c60a-3e2b-4696-aaba-f4db97923184
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: d2c7e3d88b5545eee3e6f1c511088c0f6638cfe7
 workflow-type: tm+mt
 source-wordcount: '1116'
 ht-degree: 5%
@@ -14,13 +14,12 @@ ht-degree: 5%
 Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntade borttagningsdatum. Kunder förväntas ta bort API:erna vid målborttagningsdatumet från sin kod. Om API:t används efter borttagningsdatumet genereras fel i den lokala SDK/Development Environment och Cloud Manager-byggprocessen.
 
 
-<table>
-<thead>
 <table style="table-layout:auto">
+<thead>
   <tr>
     <th>Paket/klass</th>
-    <th>Kommentarer</th>
-    <th>Föråldringsdatum</th>
+    <th>Kommentar</th>
+    <th>Inaktuellt datum</th>
     <th>Borttagningsdatum för mål</th>
   </tr>
 </thead>
@@ -39,7 +38,7 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
   </tr>
   <tr>
     <td>com.day.cq.jcrclustersupport</td>
-    <td>Använd Sling's Discovery API som ett alternativ</td>
+    <td>Använd Sling Discovery API som ett alternativ</td>
     <td>2015</td>
     <td>borttagen</td>
   </tr>
@@ -87,7 +86,7 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
   </tr>
   <tr>
     <td>org.apache.felix.systemready</td>
-    <td>Vi rekommenderar att du använder API:t Apache Felix HealthCheck i stället</td>
+    <td>Du bör använda API:t Apache Felix HealthCheck i stället</td>
     <td>4/30/21</td>
     <td>borttagen</td>
   </tr>
