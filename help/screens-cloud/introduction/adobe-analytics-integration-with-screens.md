@@ -1,5 +1,5 @@
 ---
-title: Adobe Analytics Integration med AEM Screens
+title: Adobe Analytics-integrering med AEM Screens Cloud
 seo-title: Adobe Analytics Integration with AEM Screens
 description: Följ den här sidan om du vill veta mer om hur AEM Screens kan integreras med Adobe Analytics och få ett spelbevis.
 seo-description: Follow this page to learn about out of the box integration of AEM Screens with Adobe Analytics and provides you with a proof of play.
@@ -12,14 +12,15 @@ discoiquuid: b1a0e00e-0368-42c9-8bcd-5f00b4d0990c
 docset: aem65
 role: Admin, Developer
 level: Intermediate
-source-git-commit: bf0a841a5cd5eb278fd3d59484c84d1cee172b4e
+exl-id: e22242ce-e5ce-4486-bba4-e6a89ac4fb5e
+source-git-commit: 75d147886c8151f8b8ac41af907e17b5deff5a9c
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
 
-# Adobe Analytics Integration med AEM Screens {#adobe-analytics-integration-with-aem-screens}
+# Adobe Analytics-integrering med AEM Screens Cloud {#adobe-analytics-integration-with-aem-screens}
 
 Detta avsnitt behandlar följande ämnen:
 
@@ -54,18 +55,15 @@ I följande diagram förklaras Adobe Analytics Integration med AEM Screens:
 
 ![Integrering med Adobe Analytics](/help/screens-cloud/assets/analytics-architecture.png)
 
-## Aktivera Adobe Analytics i AEM Screens moln {#enabling-adobe-analytics-in-aem-screens-cloud}
+## Aktivera Adobe Analytics i AEM Screens Cloud {#enabling-adobe-analytics-in-aem-screens-cloud}
 
 Kontakta din Adobe Relationship Manager för att aktivera Adobe-analys i Screens Cloud.
 
-## Skärmanalys: Aktiveringsflöde {#screens-analytics-enablement-flow}
-
->[!CAUTION]
->
->Innan du konfigurerar egenskaperna bör du kontakta din Adobe Relationship Manager och skapa en biljett för att få en **API-nyckel för analyser** och **Analysprojekt** för AEM Screens.
-
-## Använda Adobe Analytics-tjänsten i AEM Screens {#using-adobe-analytics-service-in-aem-screens}
+## Använda Adobe Analytics-tjänsten i AEM Screens Cloud {#using-adobe-analytics-service-in-aem-screens}
 
 Det här scenariot anropar Analytics API via REST-anrop från en analystjänst i den inbyggda programvaran och kärnkomponenter för instrumentskärmar för att explicit skapa och skicka händelser som är specifika för ett visst användningsfall, samtidigt som det tillåter utökningsmöjligheter där anpassade meddelanden kan skickas till Analytics från en anpassad utvecklad kanal.
 
 Analyshändelser lagras offline i indexedDB och sedan i chunked-läge och skickas till molnet.
+
+>[!NOTE]
+>Mer information om sekvensering och standarddatamodell för händelser finns i [Konfigurera Adobe Analytics för AEM Screens](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/administering/analytics-integration/configuring-adobe-analytics-aem-screens.html) för mer information.
