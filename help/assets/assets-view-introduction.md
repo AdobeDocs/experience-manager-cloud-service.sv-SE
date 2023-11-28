@@ -3,7 +3,7 @@ title: Hur tjänar du på att visa resurser AEM?
 description: Läs mer om de viktigaste fördelarna med vyn Resurser i AEM. Adobe, som använder sin expertis för att ge marknadsförare och kreatörer större frihet, introducerar en ny omvälvande användarupplevelse.
 mini-toc-levels: 3
 exl-id: c27134f5-178c-4db1-a8e6-ec45d020f2b5
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 408a691de8a6fe2801a9907308db43f2050528c3
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 0%
@@ -95,7 +95,7 @@ Konfigurera snabbt en mappstruktur för organisationen med resursvyn genom att �
 
 ### Sökning i första rummet för ökad effektivitet {#search-first}
 
-Utnyttja potentialen i organisationens digitala resursbibliotek med kraftfulla sökfunktioner. Du kan lägga ett bra bud om du vill gå igenom en mängd olika filer och mappar manuellt. Alla användare kan direkt hitta den perfekta bild, video eller det dokument ni behöver för att skapa fantastiska marknadsföringskampanjer, fängslande presentationer och engagerande innehåll. Med vår första sökmotor kan du enkelt navigera bland resurstyper, metadata, smarta taggar och till och med själva innehållet utan att kunna det exakta nyckelordet. Ge liv åt DAM:s framtid med Search-First och utnyttja hela potentialen i ert digitala resursbibliotek.
+Utnyttja potentialen i organisationens digitala resursbibliotek med kraftfulla sökfunktioner. Du kan lägga ett bra bud på att navigera bland ett otal filer och mappar manuellt. Alla användare kan direkt hitta den perfekta bild, video eller det dokument ni behöver för att skapa fantastiska marknadsföringskampanjer, fängslande presentationer och engagerande innehåll. Med vår första sökmotor kan du enkelt navigera bland resurstyper, metadata, smarta taggar och till och med själva innehållet utan att kunna det exakta nyckelordet. Ge liv åt DAM:s framtid med Search-First och utnyttja hela potentialen i ert digitala resursbibliotek.
 
 ![Sök först](assets/search-first.gif)
 
