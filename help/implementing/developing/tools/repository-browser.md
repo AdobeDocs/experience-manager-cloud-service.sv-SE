@@ -4,9 +4,9 @@ seo-title: Repository Browser
 description: Databasens webbläsare ger en skrivskyddad vy i databasen för alla miljöer på författar-, publicerings- och förhandsgranskningsnivåer.
 seo-description: The repository browser provides a read-only view into the repository for all environments on author, publish, and preview tiers.
 exl-id: 22473a97-8f7b-4014-b885-1233116aeda6
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: a7fa9ecc54bdee394852d765011df2ddd0a4950c
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '866'
 ht-degree: 1%
 
 ---
@@ -25,20 +25,20 @@ ht-degree: 1%
 
 Databasens webbläsare är ett utvecklarverktyg som ger en skrivskyddad vy i databasen för alla miljöer när det gäller författare, publicering och förhandsgranskningsnivåer. Den är utformad för att göra det enklare att se och felsöka innehåll genom att visa innehållsstrukturen.
 
-Den är tillgänglig från Developer Console och kan användas för att bläddra i databasen för en författare eller publicera en instans för en vald miljö.
+Tillgänglig från [AEM as a Cloud Service Developer Console](/help/implementing/developing/introduction/development-guidelines.md#crxde-lite-and-developer-console)kan den användas för att bläddra i databasen för en författare eller publicera en instans för en vald miljö.
 
 ### Åtkomstkrav {#access-prerequisites}
 
-Följande villkor måste vara uppfyllda för att du ska få tillgång till Developer Console eller Databaswebbläsaren
+Följande villkor måste vara uppfyllda för att du ska få tillgång till AEM as a Cloud Service Developer Console eller Databaswebbläsaren
 
-Så här öppnar du Developer Console:
+Så här kommer du åt AEM as a Cloud Service Developer Console:
 
-* För produktionsprogram måste användarna ha **Cloud Manager - Utvecklarroll** i ADMIN CONSOLE
+* För produktionsprogram måste användarna ha **Cloud Manager - Utvecklarroll** i ADOBE ADMIN CONSOLE
 * För sandlådeprogram är den tillgänglig för alla användare med en produktprofil som ger dem tillgång till AEM as a Cloud Service.
 
 Så här öppnar du Databasläsaren:
 
-* Användarna måste ha **Cloud Manager - utvecklare** Roll i Admin Console för att visa författarinstanser och publiceringsinstanser.
+* Användarna måste ha **Cloud Manager - utvecklare** Roll i den AEM as a Cloud Service utvecklarkonsolen för att visa författarinstanser och publiceringsinstanser.
 * Dessutom kan användare med AEM användarprofil visa databaswebbläsaren med minimal läsåtkomst. Användarens behörigheter respekteras när de bläddrar i databasen. Användare med AEM administratörsproduktprofil kan visa databaswebbläsaren med fullständig läsåtkomst.
 
 Mer information om hur du ställer in användarbehörigheter finns i [Dokumentation för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html).

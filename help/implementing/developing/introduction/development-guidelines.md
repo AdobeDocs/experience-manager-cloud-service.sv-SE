@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Lär dig riktlinjer för utveckling på AEM as a Cloud Service och om viktiga sätt som skiljer sig från AEM på plats och AEM i AMS.
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: c706757857a528a0475f659c6b38110db6f6572a
 workflow-type: tm+mt
-source-wordcount: '2733'
+source-wordcount: '2791'
 ht-degree: 1%
 
 ---
@@ -166,7 +166,7 @@ Loggnivåerna är följande:
 
 Tråddumpar i molnmiljöer samlas in kontinuerligt, men kan för närvarande inte hämtas på ett självbetjäningssätt. Under tiden kontaktar du AEM om det behövs tråddumpar för att felsöka ett problem och ange exakt tidsfönster.
 
-## CRX/DE Lite och Developer Console {#crxde-lite-and-developer-console}
+## CRX/DE Lite och AEM as a Cloud Service Developer Console {#crxde-lite-and-developer-console}
 
 ### Lokal utveckling {#local-development}
 
@@ -176,15 +176,19 @@ Observera att vid lokal utveckling (med SDK) `/apps` och `/libs` kan skrivas dir
 
 ### AEM as a Cloud Service utvecklingsverktyg {#aem-as-a-cloud-service-development-tools}
 
+>[!NOTE]
+>Den AEM as a Cloud Service utvecklarkonsolen ska inte blandas ihop med liknande namn [*Adobe Developer Console*](https://developer.adobe.com/developer-console/).
+>
+
 Kunderna har tillgång till CRXDE-klassen i utvecklingsmiljön, men inte i fas eller produktion. Oändringsbar databas (`/libs`, `/apps`) kan inte skrivas till vid körning, så om du försöker göra det uppstår fel.
 
-I stället kan databasläsaren startas från utvecklarkonsolen, vilket ger en skrivskyddad vy i databasen för alla miljöer med författare, publicering och förhandsgranskningsnivåer. Läs mer om Databasläsaren [här](/help/implementing/developing/tools/repository-browser.md).
+I stället kan databasläsaren startas från den AEM as a Cloud Service utvecklarkonsolen, vilket ger en skrivskyddad vy i databasen för alla miljöer med författare, publicering och förhandsgranskningsnivåer. Läs mer om Databasläsaren [här](/help/implementing/developing/tools/repository-browser.md).
 
-En uppsättning verktyg för felsökning AEM as a Cloud Service utvecklingsmiljöer finns i Developer Console för RDE-, dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller publiceringstjänstens URL:er enligt följande:
+En uppsättning verktyg för felsökning AEM as a Cloud Service utvecklingsmiljöer finns på AEM as a Cloud Service Developer Console för RDE-, dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller publiceringstjänstens URL:er enligt följande:
 
 `https://dev-console/-<namespace>.<cluster>.dev.adobeaemcloud.com`
 
-Följande CLI-kommando för Cloud Manager kan användas som en genväg för att starta utvecklarkonsolen baserat på en miljöparameter som beskrivs nedan:
+Följande CLI-kommando för Cloud Manager kan användas som en genväg för att starta den AEM as a Cloud Service utvecklarkonsolen baserat på en miljöparameter som beskrivs nedan:
 
 `aio cloudmanager:open-developer-console <ENVIRONMENTID> --programId <PROGRAMID>`
 
@@ -202,11 +206,11 @@ Som framgår nedan kan utvecklare lösa paketberoenden och -servrar:
 
 ![Dev Console 3](/help/implementing/developing/introduction/assets/devconsole3.png)
 
-Utvecklarkonsolen är också användbar vid felsökning och har en länk till verktyget Förklara fråga:
+Den AEM as a Cloud Service utvecklarkonsolen är också användbar för felsökning och har en länk till verktyget Förklara fråga:
 
 ![Dev Console 4](/help/implementing/developing/introduction/assets/devconsole4.png)
 
-För produktionsprogram definieras åtkomst till Developer Console av&quot;Cloud Manager - Developer Role&quot; i Admin Console, medan Developer Console för sandlådeprogram är tillgänglig för alla användare med en produktprofil som ger dem tillgång till AEM as a Cloud Service. För alla program krävs&quot;Cloud Manager - Developer Role&quot; för statusdumpar och databasens webbläsare och användare måste också definieras i produktprofilen AEM användare eller AEM administratörer för både författar- och publiceringstjänster för att visa data från båda tjänsterna. Mer information om hur du ställer in användarbehörigheter finns i [Dokumentation för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
+För produktionsprogram definieras åtkomsten till den AEM as a Cloud Service utvecklarkonsolen av&quot;Cloud Manager - utvecklarrollen&quot; i Adobe Admin Console, medan den AEM as a Cloud Service utvecklarkonsolen är tillgänglig för alla användare med en produktprofil som ger dem tillgång till AEM as a Cloud Service för sandlådeprogram. För alla program krävs&quot;Cloud Manager - Developer Role&quot; för statusdumpar och databasens webbläsare och användare måste också definieras i produktprofilen AEM användare eller AEM administratörer för både författar- och publiceringstjänster för att visa data från båda tjänsterna. Mer information om hur du ställer in användarbehörigheter finns i [Dokumentation för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
 
 ### Prestandaövervakning {#performance-monitoring}
 
