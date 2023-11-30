@@ -4,9 +4,9 @@ description: Lär dig hur du skapar innehåll för dina innehållsfragment och s
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 3f934add7521586caf728c4bfa37f2d1a82b144a
 workflow-type: tm+mt
-source-wordcount: '2251'
+source-wordcount: '2267'
 ht-degree: 0%
 
 ---
@@ -59,6 +59,10 @@ När du först öppnar Content Fragment Editor visas fyra huvudområden:
 * central panel: visar de faktiska fälten och innehållet i den valda varianten
    * gör att du kan redigera innehållet
    * if **Platshållare för flik** fält definieras i den modell de visas här och kan användas för navigering. De visas antingen vågrätt eller som en nedrullningsbar lista.
+
+  >[!NOTE]
+  >
+  >Beroende på definitioner i den underliggande modellen kan fält vara av vissa typer av [Validering](/help/assets/content-fragments/content-fragments-models.md#validation).
 
 ![Content Fragment Editor - Översikt](assets/cf-authoring-overview.png)
 

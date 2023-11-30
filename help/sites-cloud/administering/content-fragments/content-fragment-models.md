@@ -4,9 +4,9 @@ description: Lär dig hur Content Fragment Models fungerar som grund för dina C
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: 8ab5b15f-cefc-45bf-a388-928e8cc8c603
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 3f934add7521586caf728c4bfa37f2d1a82b144a
 workflow-type: tm+mt
-source-wordcount: '3058'
+source-wordcount: '3121'
 ht-degree: 1%
 
 ---
@@ -199,7 +199,8 @@ Många egenskaper är självförklarande, för vissa egenskaper finns ytterligar
   >Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
 
 * **Återge som**
-De olika alternativen för att realisera/återge fältet i ett fragment. Detta gör ofta att du kan definiera om författaren ska se en enda instans av fältet eller om han eller hon ska kunna skapa flera instanser.
+
+  De olika alternativen för att realisera/återge fältet i ett fragment. Detta gör ofta att du kan ange om författaren ska se en enda instans av fältet eller om den ska kunna skapa flera instanser. När **Flera fält** används kan du definiera minsta och högsta antal objekt - se [Validering](#validation) för mer information.
 
 * **Fältetikett**
 Ange en **Fältetikett** autogenererar en **Egenskapsnamn**, som sedan kan uppdateras manuellt om det behövs.
@@ -257,6 +258,14 @@ Olika datatyper kan nu definiera valideringskrav för när innehåll anges i det
    * Det går endast att referera till bilder inom ett fördefinierat intervall med bredd och/eller höjd (i pixlar).
 * **Fragmentreferens**
    * Testa om det finns en viss modell för innehållsfragment.
+* **Minsta antal objekt** / **Maximalt antal objekt**
+
+  Fält som har definierats som **Flera fält** (anges med **Återge som**) har följande alternativ:
+
+   * **Minsta antal objekt**
+   * **Maximalt antal objekt**
+
+  Dessa valideras i [Innehållsfragmentsredigerare](/help/sites-cloud/administering/content-fragments/authoring.md).
 
 ## Använda referenser till kapslat innehåll {#using-references-to-form-nested-content}
 

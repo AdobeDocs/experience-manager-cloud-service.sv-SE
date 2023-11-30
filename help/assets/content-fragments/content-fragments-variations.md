@@ -2,9 +2,9 @@
 title: Variationer - innehåll i redigeringsfragment (resurser - innehållsfragment)
 description: Förstå hur variationer kan göra ert headless-innehåll i AEM ännu mer flexibelt genom att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte.
 exl-id: af05aae6-d535-4007-ba81-7f41213ff152
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 3f934add7521586caf728c4bfa37f2d1a82b144a
 workflow-type: tm+mt
-source-wordcount: '2530'
+source-wordcount: '2546'
 ht-degree: 4%
 
 ---
@@ -76,6 +76,10 @@ Du kan:
   >**Taggar** kan också läggas till (i **Master** som en del av [Metadata](/help/assets/content-fragments/content-fragments-metadata.md)
 
 * [Skapa och hantera variationer](#managing-variations) i **Master** innehåll.
+
+>[!NOTE]
+>
+>Beroende på definitioner i den underliggande modellen kan fält vara av vissa typer av [Validering](/help/assets/content-fragments/content-fragments-models.md#validation).
 
 ### Helskärmsredigerare {#full-screen-editor}
 

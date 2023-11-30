@@ -2,9 +2,9 @@
 title: Modeller för innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur Content Fragment Models fungerar som grund för ditt headless-innehåll i AEM och hur du skapar innehållsfragment med strukturerat innehåll.
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 3f934add7521586caf728c4bfa37f2d1a82b144a
 workflow-type: tm+mt
-source-wordcount: '2931'
+source-wordcount: '3005'
 ht-degree: 2%
 
 ---
@@ -150,7 +150,7 @@ Många egenskaper är självförklarande, för vissa egenskaper finns ytterligar
   >Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
 
 * **Återge som**
-De olika alternativen för att realisera/återge fältet i ett fragment. Med den här egenskapen kan du ofta definiera om författaren ska se en enda instans av fältet eller om han eller hon ska kunna skapa flera instanser.
+De olika alternativen för att realisera/återge fältet i ett fragment. Med den här egenskapen kan du ofta definiera om författaren ska se en enda instans av fältet eller om han eller hon ska kunna skapa flera instanser. När **Flera fält** används kan du definiera minsta och högsta antal objekt - se [Validering](#validation) för mer information.
 
 * **Fältetikett**
 Ange en **Fältetikett** genererar automatiskt en **Egenskapsnamn**, som sedan kan uppdateras manuellt om det behövs.
@@ -212,6 +212,17 @@ Olika datatyper kan nu definiera valideringskrav för när innehåll anges i det
    * Det går endast att referera till bilder inom ett fördefinierat intervall med bredd och/eller höjd (i pixlar).
 * **Fragmentreferens**
    * Testa om det finns en specifik innehållsfragmentmodell.
+* **Minsta antal objekt** / **Maximalt antal objekt**
+
+  Fält som har definierats som **Flera fält** (anges med **Återge som**) har följande alternativ:
+
+   * **Minsta antal objekt**
+   * **Maximalt antal objekt**
+
+  Dessa valideras:
+
+   * Det högsta värdet valideras i [ursprunglig redigerare för innehållsfragment](/help/assets/content-fragments/content-fragments-variations.md).
+   * Båda valideras i [Innehållsfragmentsredigerare](/help/sites-cloud/administering/content-fragments/authoring.md).
 
 ## Använda referenser till kapslat innehåll {#using-references-to-form-nested-content}
 

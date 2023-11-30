@@ -4,9 +4,9 @@ description: Lär dig hur du hanterar AEM innehållsfragment från konsolen och 
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 3f934add7521586caf728c4bfa37f2d1a82b144a
 workflow-type: tm+mt
-source-wordcount: '2531'
+source-wordcount: '2622'
 ht-degree: 0%
 
 ---
@@ -142,10 +142,7 @@ Om du markerar ett visst fragment öppnas ett verktygsfält som fokuserar på de
 * **[Flytta](/help/assets/manage-digital-assets.md)**
 * **[Byt namn](/help/assets/manage-digital-assets.md)**
 * **[Ta bort](#deleting-a-fragment)**
-
-<!--
-* **[Replace](#find-and-replace)**
--->
+* **[Ersätt](#find-and-replace)**
 
 >[!NOTE]
 >
@@ -368,13 +365,22 @@ När dialogrutan öppnas kan du välja rätt tjänst:
 >
 >Om fragmentet redan refereras från ett annat fragment, eller från en sida, visas ett varningsmeddelande och du måste bekräfta att du vill fortsätta.
 
-<!--
-## Find and Replace {#find-and-replace}
+## Sök och ersätt {#find-and-replace}
 
-The **Replace** option is available to find, and replace, specified text in your selected Content Fragment:
+The **Ersätt** (i det övre verktygsfältet) för att söka efter och ersätta angiven text i de valda innehållsfragmenten.
 
-![Unpublish dialog](assets/cf-managing-find-replace.png)
--->
+![Sök och ersätt](assets/cf-managing-find-replace.png)
+
+Innan du ersätter en produkt kontrolleras valideringskriterierna och du informeras om eventuella konflikter, så att du kan ändra ersättningssträngen eller bara ersätta de validerade instanserna.
+
+>[!NOTE]
+>
+>Åtgärden Sök och ersätt kan bara utföras på högst 20 markerade innehållsfragment (i taget).
+>
+>Om du markerar fler än 20 innehållsfragment visas meddelandet **Det går inte att hitta och ersätta**.
+
+![Bekräfta ersättning](assets/cf-managing-confirm-replace.png)
+
 
 ## Ta bort ett fragment {#deleting-a-fragment}
 
