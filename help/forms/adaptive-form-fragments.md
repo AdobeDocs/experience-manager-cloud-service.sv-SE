@@ -7,9 +7,9 @@ topic-tags: author
 discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
 exl-id: e4d8bcb9-ce1f-425e-b35c-d0a79fa771f3
-source-git-commit: 237b4a8e01af74dbaac0ba1715b5fa95c931be7c
+source-git-commit: 1d0f8bfd955c9315b01e49d8b1924add996b1599
 workflow-type: tm+mt
-source-wordcount: '2133'
+source-wordcount: '2131'
 ht-degree: 0%
 
 ---
@@ -173,7 +173,7 @@ Du kan använda ett schemabaserat formulärfragment flera gånger i ett adaptivt
 
 >[!NOTE]
 >
-> Om du använder icke-baserade formulärfragment flera gånger i ett adaptivt formulär uppstår problem med datasynkronisering mellan fragmentens fält. Du kan använda ett enda [formulärfragment (baserat på kärnkomponenter)](/help/forms/adaptive-form-fragments-core-components.md) som inte är knutet till någon formulärdatamodell, flera gånger i ett formulär utan att det uppstår problem med datasynkroniseringen.
+> Om du använder icke-baserade formulärfragment flera gånger i ett adaptivt formulär uppstår problem med datasynkronisering mellan fragmentens fält. Du kan använda ett kärnkomponentbaserat formulärfragment](/help/forms/adaptive-form-fragments-core-components.md) som inte är knutet till någon formulärdatamodell, flera gånger i ett [formulär utan att det uppstår problem med datasynkroniseringen.
 
 ## Automatisk mappning av fragment för databindning {#auto-mapping-of-fragments-for-data-binding}
 
