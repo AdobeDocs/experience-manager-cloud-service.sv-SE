@@ -3,9 +3,9 @@ title: Lär dig hur du söker efter och identifierar resurser i [!DNL Assets vie
 description: Läs om hur du söker efter och identifierar resurser i AEM Assets-vyn. Med de kraftfulla sökfunktionerna kan du snabbt hitta rätt resurs och hjälpa dig att förbättra innehållets hastighet.
 role: User
 exl-id: be9597a3-056c-436c-a09e-15a03567c85a
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 224529293f87b772c150dd26ce5260a9172c8b68
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '1259'
 ht-degree: 0%
 
 ---
@@ -141,6 +141,67 @@ What about temporarily hiding an asset (suspending search on it) from the search
 
 When userA is searching and userB add an asset that matches search results, will the asset display in search as soon as userA refreshes the page? Assuming indexing is near real-time. May not be so for bulk uploads.
 -->
+
+## Arbeta med sökresultat {#work-with-search-results}
+
+Du kan markera de resurser som visas i sökresultaten och göra följande:
+
+* **Information**: Visa och redigera resursegenskaper.
+
+* **Lägg till i samling**: Lägg till den valda resursen i en samling.
+
+* **Ladda ned**: Hämta en resurs.
+
+* **Ta bort**: Ta bort en resurs.
+
+* **Kopiera**: Kopiera en resurs till en annan mapplats.
+
+* **Flytta**: Flytta en resurs till en annan mapplats.
+
+* **Byt namn**: Byt namn på en resurs.
+
+* **Tilldela uppgifter**: Tilldela användare uppgifter för en resurs.
+
+* **Dela länk**: [Dela länkar](share-links-for-assets-view.md) för en resurs med andra användare så att de kan komma åt och hämta den.
+
+* **Titta**: [Övervaka åtgärderna](manage-notifications-assets-view.md) som utförs på en tillgång.
+
+* **Visa filplats**: Navigera till resursmappens plats.
+
+* **Fäst i snabbåtkomst**: [Fäst en resurs](my-workspace-assets-view.md) för snabbare åtkomst när du behöver det senare. Alla fästa objekt visas i **Snabb åtkomst** i Min arbetsyta.
+
+## Konfigurera första sökhemsida {#configuring-search-first-homepage}
+
+På den första startsidan kan du navigera i olika filer och mappar direkt. Du kan enkelt navigera bland resurstyper, metadata, smarta taggar och till och med själva innehållet utan att kunna det exakta nyckelordet. [!DNL Assets view] låter dig konfigurera din hemsida genom att styra vad som ska visas när du loggar in på [!DNL Assets view].
+
+Så här konfigurerar du den första startsidan för sökningen:
+
+1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL General Settings]**.
+1. Välj **[!UICONTROL Search first]**. Sökningen öppnas sedan i den första relaterade konfigurationen. Du kan ange [justering](#setting-alignment-search-bar) eller [ange bakgrund och logotypbild](#setting-background-image-and-logo) på din hemsida.
+
+### Ange justering för sökfältet {#setting-alignment-search-bar}
+
+[!DNL Assets view] använder du för att ändra justeringen i sökfältet. Du kan ange att sökfältet ska visas antingen i mitten eller högst upp. Välj lämplig justering och klicka på **[!UICONTROL Save]**.
+
+![Sök efter justering av första startsida](assets/search-first-alignment.png)
+
+### Ställa in bakgrunds- och logotypbild för hemsidan {#setting-background-image-and-logo}
+
+Du kan lägga till logotyp och bakgrundsbild på din första söksida. Utför följande steg:
+
+1. Navigera till **[!UICONTROL Background and Logo image]** avsnitt under **[!UICONTROL Homepage]**.
+1. Klicka **[!UICONTROL Replace]** om du vill bläddra bland bilder från befintliga resurslager.
+1. Klicka på **[!UICONTROL Save]**. [Förhandsgranska](#preview-configured-homepage) de ändringar som ska göras.
+
+### Förgranska konfigurerad startsida {#preview-configured-homepage}
+
+Du kan förhandsgranska om du vill kontrollera layout och formatering för den första söksidan. Använda **[!UICONTROL Preview]** kan du korrigera layouten eller göra ändringar efter behov. Om du vill förhandsgranska den konfigurerade startsidan följer du stegen nedan:
+
+1. Klicka på **[!UICONTROL General Settings]** och välj **[!UICONTROL Search first]**.
+1. Navigera till **[!UICONTROL Customize search first homepage]** och klicka **[!UICONTROL Preview]**. Växla mellan **[!UICONTROL Dark theme]** för att förhandsgranska hemsidan i mörkt eller ljust tema.
+1. Klicka **[!UICONTROL Close]** för att stänga förhandsvisningsskärmen.
+
+   ![Förhandsgranska den första startsidan](assets/search-first-preview.gif)
 
 ## Nästa steg {#next-steps}
 

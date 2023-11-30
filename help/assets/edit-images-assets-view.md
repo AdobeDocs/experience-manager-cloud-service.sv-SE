@@ -3,9 +3,9 @@ title: Redigera bilder
 description: Redigera bilder med [!DNL Adobe Photoshop Express] och spara uppdaterade bilder som versioner.
 role: User
 exl-id: fc21a6ee-bf23-4dbf-86b0-74695a315b2a
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: e6ff21ee705a1164fdf163ce4f49064d83f149d8
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '1041'
 ht-degree: 0%
 
 ---
@@ -79,6 +79,36 @@ Du kan snabbt konvertera en JPEG-bild till ett PNG-format med Adobe Express. Utf
 * Bildupplösning som stöds: Minimal - 50 pixlar, Maximal - 6 000 pixlar per dimension
 
 * Största filstorlek som stöds: 17 MB
+
+## Redigera bilder med Adobe Expressens inbäddade redigerare {#edit-using-embedded-editor}
+
+[!DNL Assets view] ger omfattande redigering av bilderna direkt från ert resurslager. Den inbäddade redigeraren gör det enkelt och intuitivt att redigera en bild med [!DNL Adobe Express]. Det snabbar upp återanvändbarheten för resurserna genom att använda mallar eller ändra befintliga resurser. Du kan använda fördefinierade element för att få dina resurser att se fantastiska ut eller utföra snabba åtgärder för att redigera bilden med bara några klick.
+
+Redigera bilder med [!DNL Adobe Express] följer du stegen nedan:
+
+1. Välj en bild från [!DNL Experience Manager] Resurskatalog.
+1. Klicka på **[!UICONTROL Open in Adobe Express]**. [!DNL Adobe Express] visas.
+
+   ![Adobe Expressens inbäddade redigerare](assets/embedded-editor.png)
+
+   Du kan utnyttja funktionerna i [!DNL Adobe Express] för att utföra alla bildredigeringsrelaterade åtgärder, som [ändra storlek på bild](https://helpx.adobe.com/in/express/using/resize-image.html), [ta bort eller ändra bakgrundsfärg](https://helpx.adobe.com/in/express/using/remove-background.html), [beskära bild](https://helpx.adobe.com/in/express/using/crop-image.html)och mycket annat.
+
+1. När du är klar med bildredigeringen kan du hämta en resurs som en ny resurs eller spara resursen som en ny version.
+
+## Skapa ny resurs med Adobe Express {#create-new-embedded-editor}
+
+[!DNL Assets view] innehåller funktioner för att skapa en ny mall från grunden med [!DNL Adobe Express] inbäddad redigerare Skapa en ny resurs med [!DNL Adobe Expresss]utför du följande steg:
+
+1. Navigera till **[!UICONTROL My Workspace]** och klicka **[!UICONTROL Create]**. [!DNL Adobe Express] tom arbetsyta visas i [!DNL Assets view] användargränssnitt.
+1. Skapa innehåll med [Mallar](https://helpx.adobe.com/in/express/using/work-with-templates.html). I annat fall går du till **[!UICONTROL Your Stuff]** för att ändra befintligt innehåll.
+1. När du är klar klickar du **[!UICONTROL Save as new asset]**.
+1. Ange målsökväg för den skapade resursen.
+
+>[!NOTE]
+>
+>* Du kan bara ändra `JPEG` och `PNG` format.
+>* Resursens storlek bör vara mindre än 14 MB.
+>* Du kan spara en bild som `PDF`, `JPEG`, eller `PNG` format.
 
 ## Redigera bilder med [!DNL Adobe Photoshop Express] {#edit-using-photoshop-express}
 
