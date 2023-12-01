@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 0290e40094147a1c85eacf157904c7ef7388c5e7
+source-git-commit: a801e6c605fff46ca07699727f3078c9a285a943
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '1297'
 ht-degree: 0%
 
 ---
@@ -146,6 +146,6 @@ Du hittar en fullständig lista över versioner av migreringsverktyg [här](/hel
 
 ## Kända fel {#known-issues}
 
-* Användare kan inte skicka adaptiv Forms baserat på kärnkomponenter. Problemet inträffar för Adaptive Forms som byggts med Core Components version 2.0.38 - 2.0.60.
+* Det går inte att skicka Adaptiv Forms baserat på kärnkomponenter. Problemet inträffar för Adaptive Forms som byggts med Core Components version 2.0.38 - 2.0.60.
 
   För att lösa problemet. du kan gå över till Adaptive Form Core Components version 2.0.62 eller senare. Om du vill ange en version av adaptiva Forms Core-komponenter för din miljö, [ange versioner av komponenterna core.forms.components.version, core.forms.components.af.version och core.wcm.components.version](/help/forms/enable-adaptive-forms-core-components.md#2-add-adaptive-forms-core-components-dependencies-to-your-git-repository) beroenden i ditt Forms as a Cloud Service arkiv eller AEM Archetype-baserade projekt och [driftsätta ändringarna i Forms as a Cloud Service miljö](/help/forms/enable-adaptive-forms-core-components.md#build-and-deploy-updated-code-on-an-aem-forms-as-a-cloud-service-environment). Du hittar den senaste versionen av adaptiva Forms Core Components-beroenden på [Adaptiv Forms Core Components Git-databas](https://github.com/adobe/aem-core-forms-components#system-requirements).

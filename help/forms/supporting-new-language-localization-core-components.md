@@ -2,9 +2,9 @@
 title: Hur lägger jag till stöd för nya språkområden i en adaptiv form som bygger på kärnkomponenterna?
 description: Lär dig hur du lägger till nya språkområden i ett adaptivt formulär.
 exl-id: bc06542b-84c8-4c6a-a305-effbd16d5630
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: a801e6c605fff46ca07699727f3078c9a285a943
 workflow-type: tm+mt
-source-wordcount: '1328'
+source-wordcount: '1348'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 | Foundation Components | [Klicka här](supporting-new-language-localization.md) |
 | Kärnkomponenter | Den här artikeln |
 
-AEM Forms har stöd för engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska-brasilianska (pt-BR), kinesiska (zh-CN), kinesiska-taiwanesiska (zh-TW) och koreanska (ko-KR). Du kan även lägga till stöd för fler språkområden, som Hindi(hi_IN).
+AEM Forms har stöd för engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska-brasilianska (pt-BR), kinesiska (zh-CN), kinesiska-taiwanesiska (zh-TW) och koreanska (ko-KR). Du kan även lägga till stöd för fler språkområden, som Hindi(hi_IN). Du kan också presentera Adaptiv Forms på höger-till-vänster-språk (RTL) som arabiska, persiska och urdu genom att lägga till dessa språkområden.
 
 ## Hur väljs språkinställningen för ett anpassat formulär?
 
