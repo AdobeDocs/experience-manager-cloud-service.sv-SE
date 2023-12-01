@@ -3,9 +3,9 @@ title: Lär dig hur du söker efter och identifierar resurser i [!DNL Assets vie
 description: Läs om hur du söker efter och identifierar resurser i AEM Assets-vyn. Med de kraftfulla sökfunktionerna kan du snabbt hitta rätt resurs och hjälpa dig att förbättra innehållets hastighet.
 role: User
 exl-id: be9597a3-056c-436c-a09e-15a03567c85a
-source-git-commit: 224529293f87b772c150dd26ce5260a9172c8b68
+source-git-commit: da54e996bad3e6dc8558cecd5bfd7eb99670b142
 workflow-type: tm+mt
-source-wordcount: '1259'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -172,7 +172,7 @@ Du kan markera de resurser som visas i sökresultaten och göra följande:
 
 ## Konfigurera första sökhemsida {#configuring-search-first-homepage}
 
-På den första startsidan kan du navigera i olika filer och mappar direkt. Du kan enkelt navigera bland resurstyper, metadata, smarta taggar och till och med själva innehållet utan att kunna det exakta nyckelordet. [!DNL Assets view] låter dig konfigurera din hemsida genom att styra vad som ska visas när du loggar in på [!DNL Assets view].
+Med Experience Manager Assets kan du välja standardlandningssida för din organisation. När du använder Sök först som startsida har du också möjlighet att anpassa sidans varumärke genom att konfigurera bakgrunds- och logotypbilderna så att de passar ert varumärke.
 
 Så här konfigurerar du den första startsidan för sökningen:
 
@@ -191,7 +191,7 @@ Du kan lägga till logotyp och bakgrundsbild på din första söksida. Utför f�
 
 1. Navigera till **[!UICONTROL Background and Logo image]** avsnitt under **[!UICONTROL Homepage]**.
 1. Klicka **[!UICONTROL Replace]** om du vill bläddra bland bilder från befintliga resurslager.
-1. Klicka på **[!UICONTROL Save]**. [Förhandsgranska](#preview-configured-homepage) de ändringar som ska göras.
+1. Klicka på **[!UICONTROL Save]**. [Förhandsgranska](#preview-configured-homepage) ändringarna för att granska ändringarna.
 
 ### Förgranska konfigurerad startsida {#preview-configured-homepage}
 
