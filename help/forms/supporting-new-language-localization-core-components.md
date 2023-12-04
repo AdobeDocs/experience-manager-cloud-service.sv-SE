@@ -2,9 +2,9 @@
 title: Hur lägger jag till stöd för nya språkområden i en adaptiv form som bygger på kärnkomponenterna?
 description: Lär dig hur du lägger till nya språkområden i ett adaptivt formulär.
 exl-id: bc06542b-84c8-4c6a-a305-effbd16d5630
-source-git-commit: a801e6c605fff46ca07699727f3078c9a285a943
+source-git-commit: 5be0c5e347d2ec7ef660a701c8c6faf6a2d6d17a
 workflow-type: tm+mt
-source-wordcount: '1348'
+source-wordcount: '1335'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,8 @@ ht-degree: 0%
 | -------- | ---------------------------- |
 | Foundation Components | [Klicka här](supporting-new-language-localization.md) |
 | Kärnkomponenter | Den här artikeln |
+
+<span class="preview"> Funktionen för höger-till-vänster-språkstöd är tillgänglig i ett program för tidig användning. Du kan skriva till aem-forms-early-adopter-program@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
 AEM Forms har stöd för engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska-brasilianska (pt-BR), kinesiska (zh-CN), kinesiska-taiwanesiska (zh-TW) och koreanska (ko-KR). Du kan även lägga till stöd för fler språkområden, som Hindi(hi_IN). Du kan också presentera Adaptiv Forms på höger-till-vänster-språk (RTL) som arabiska, persiska och urdu genom att lägga till dessa språkområden.
 
@@ -44,7 +46,7 @@ Innan du börjar lägga till en språkinställning:
 * Installera en vanlig textredigerare (IDE) för enklare redigering. Exemplen i det här dokumentet är baserade på [Microsoft® Visual Studio Code](https://code.visualstudio.com/download).
 * Installera en version av [Git](https://git-scm.com), om det inte finns på din dator.
 * Klona [Adaptiva Forms Core-komponenter](https://github.com/adobe/aem-core-forms-components) databas. Så här klonar du databasen:
-   1. Öppna kommandoraden eller terminalfönstret och navigera till en plats där databasen ska lagras. Till exempel, `/adaptive-forms-core-components`
+   1. Öppna kommandoraden eller terminalfönstret och navigera till en plats där databasen ska lagras. Exempel: `/adaptive-forms-core-components`
    1. Kör följande kommando för att klona databasen:
 
       ```SHELL
