@@ -6,23 +6,23 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 3f934add7521586caf728c4bfa37f2d1a82b144a
+source-git-commit: ba7976c192e3696b1367a4f9a5bf0c320a5f258e
 workflow-type: tm+mt
-source-wordcount: '4393'
-ht-degree: 19%
+source-wordcount: '4420'
+ht-degree: 4%
 
 ---
 
 
-# Hjälp för Experience Manager as a Cloud Service {#content}
+# Hjälp om Experience Manager as a Cloud Service {#content}
 
 + [AEMaaCS Home](/help/overview/home.md)
 + Översikt {#overview}
    + [Introduktion till AEM as a Cloud Service](/help/overview/introduction.md)
-   + [Nyheter och skillnader](/help/overview/what-is-new-and-different.md)
-   + [Terminologi – nytt för molnet](/help/overview/terminology.md)
+   + [Vad är nytt och vad är annorlunda?](/help/overview/what-is-new-and-different.md)
+   + [Terminologi - nytt för molnet](/help/overview/terminology.md)
    + [En introduktion till arkitekturen i AEM as a Cloud Service](/help/overview/architecture.md)
-   + [SEO- och URL-hantering](/help/overview/seo-and-url-management.md)
+   + [SEO och URL-hantering](/help/overview/seo-and-url-management.md)
    + [AEM as a Cloud Service on Unified Shell](/help/overview/aem-cloud-service-on-unified-shell.md)
    + [Utvärderar nyckeltal](/help/overview/assessing-kpis.md)
    + [Justera KPI:er](/help/overview/aligning-kpis.md)
@@ -190,7 +190,7 @@ ht-degree: 19%
       + [Uppgifter för utvecklare och distributionsansvarig](/help/journey-onboarding/developers.md)
       + [AEM användaruppgifter](/help/journey-onboarding/aem-users.md)
    + AEM Reference Demos Add-On Journey {#demo-add-on}
-      + [Översikt](/help/journey-sites/demos-add-on/overview.md)
+      + [Ökning](/help/journey-sites/demos-add-on/overview.md)
       + [Installation](/help/journey-sites/demos-add-on/installation.md)
       + [Skapa program](/help/journey-sites/demos-add-on/create-program.md)
       + [Skapa demowebbplats](/help/journey-sites/demos-add-on/create-site.md)
@@ -217,7 +217,7 @@ ht-degree: 19%
    + [Migreringshandbok till Experience Manager as a Cloud Service for Partners](/help/journey-migration/getting-started-partners.md)
    + Cloud Acceleration Manager {#cloud-acceleration-manager}
       + Introduktion till Cloud Acceleration Manager {#introduction-cam}
-         + [Översikt](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md)
+         + [Ökning](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md)
          + [Fördelar](/help/journey-migration/cloud-acceleration-manager/introduction/benefits-cam.md)
       + Använda Cloud Acceleration Manager {#using-cam}
          + [Komma igång med Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/using-cam/getting-started-cam.md)
@@ -226,13 +226,13 @@ ht-degree: 19%
          + [Go Live Phase](/help/journey-migration/cloud-acceleration-manager/using-cam/cam-golive-phase.md)
    + Verktyg för övergång till molnet{#cloud-migration}
       + Best Practices Analyzer {#best-practices-analyzer}
-         + [Översikt](/help/journey-migration/best-practices-analyzer/overview-best-practices-analyzer.md)
+         + [Ökning](/help/journey-migration/best-practices-analyzer/overview-best-practices-analyzer.md)
          + [Använda Best Practices Analyzer](/help/journey-migration/best-practices-analyzer/using-best-practices-analyzer.md)
       + Innehållstransformator {#content-transformer}
-         + [Översikt](/help/journey-migration/content-transformer/overview.md)
+         + [Ökning](/help/journey-migration/content-transformer/overview.md)
          + [Använda innehållstransformeraren](/help/journey-migration/content-transformer/using.md)
       + Content Transfer Tool {#content-transfer-tool}
-         + [Översikt](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md)
+         + [Ökning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md)
          + [Krav för verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/prerequisites-content-transfer-tool.md)
          + [Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/guidelines-best-practices-content-transfer-tool.md)
          + [Komma igång med verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/getting-started-content-transfer-tool.md)
@@ -248,26 +248,26 @@ ht-degree: 19%
          + [Köra verktyget Innehållsöverföring på en publiceringsinstans](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/running-content-transfer-tool-publish-instance.md)
          + [Felsöka verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/troubleshooting-content-transfer-tool.md)
          + Äldre användarmappningsverktyg (äldre){#legacy-user-mapping-tool}
-            + [Översikt](/help/journey-migration/content-transfer-tool/user-mapping-tool-legacy/overview-user-mapping-tool-legacy.md)
+            + [Ökning](/help/journey-migration/content-transfer-tool/user-mapping-tool-legacy/overview-user-mapping-tool-legacy.md)
             + [Viktiga överväganden](/help/journey-migration/content-transfer-tool/user-mapping-tool-legacy/considerations-user-mapping-tool-legacy.md)
             + [Använda verktyget för användarmappning](/help/journey-migration/content-transfer-tool/user-mapping-tool-legacy/using-user-mapping-tool-legacy.md)
    + Verktyg för omstrukturering av kod {#refactoring-tools}
       + [Enhetlig upplevelse](/help/journey-migration/unified-experience.md)
       + [Databasmodernisering](/help/journey-migration/refactoring-tools/repo-modernizer.md)
       + [Indexkonverterare](/help/journey-migration/refactoring-tools/index-converter.md)
-      + [Resursarbetsflödesmigrering](/help/journey-migration/moving-to-aem-assets/asset-workflow-migration-tool.md)
+      + [Migrering av arbetsflöde för tillgångar](/help/journey-migration/moving-to-aem-assets/asset-workflow-migration-tool.md)
       + [AEM Dispatcher Converter](/help/journey-migration/refactoring-tools/dispatcher-transformation-utility-tools.md)
       + [AEM Modernization Tools](/help/journey-migration/refactoring-tools/aem-modernization-tools.md)
 + Sites {#sites}
    + [AEM Sites as a Cloud Service](/help/sites-cloud/home.md)
-   + [Viktiga ändringar av AEM Sites i AEM Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
+   + [Betydande förändringar av AEM Sites i AEM Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
    + Redigering {#authoring}
       + Komma igång {#getting-started}
-         + [Snabbstartsguide till redigering av sidor](/help/sites-cloud/authoring/getting-started/quick-start.md)
-         + [Redigeringsbegrepp](/help/sites-cloud/authoring/getting-started/concepts.md)
+         + [Snabbstartsguide till framtagning av sidor](/help/sites-cloud/authoring/getting-started/quick-start.md)
+         + [Authoring Concepts](/help/sites-cloud/authoring/getting-started/concepts.md)
          + [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md)
-         + [Sökning](/help/sites-cloud/authoring/getting-started/search.md)
-         + [Konfigurera kontomiljön](/help/sites-cloud/authoring/getting-started/account-environment.md)
+         + [Sök](/help/sites-cloud/authoring/getting-started/search.md)
+         + [Konfigurerar din kontomiljö](/help/sites-cloud/authoring/getting-started/account-environment.md)
          + [Din inkorg](/help/sites-cloud/authoring/getting-started/inbox.md)
          + [Kortkommandon](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md)
       + [Headless Content Author Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/author/overview.html)
@@ -282,11 +282,11 @@ ht-degree: 19%
          + [Förhandsgranska innehåll](/help/sites-cloud/authoring/fundamentals/previewing-content.md)
          + [Publicera sidor](/help/sites-cloud/authoring/fundamentals/publishing-pages.md)
          + [Innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md)
-         + [Experience Fragments](/help/sites-cloud/authoring/fundamentals/experience-fragments.md)
+         + [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md)
          + [Exportera till CSV](/help/sites-cloud/authoring/fundamentals/csv-export.md)
          + [Komponenter](/help/sites-cloud/authoring/fundamentals/components.md)
          + [Skapa för mobila enheter](/help/sites-cloud/authoring/fundamentals/mobile.md)
-         + [Skapa tillgängligt innehåll (WCAG 2.1-överensstämmelse)](/help/sites-cloud/authoring/fundamentals/accessible-content.md)
+         + [Skapa hjälpmedelsanpassat innehåll (WCAG 2.1-överensstämmelse)](/help/sites-cloud/authoring/fundamentals/accessible-content.md)
          + [Felsökning](/help/sites-cloud/authoring/fundamentals/troubleshooting.md)
          + [Kortkommandon](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md)
       + Redigeringsfunktioner {#features}
@@ -305,21 +305,21 @@ ht-degree: 19%
          + [Arbeta med projektarbetsflöden](/help/sites-cloud/authoring/projects/workflows.md)
       + Launches {#launches}
          + [Arbeta med Launches](/help/sites-cloud/authoring/launches/overview.md)
-         + [Skapa Launches](/help/sites-cloud/authoring/launches/creating.md)
+         + [Skapa startprogram](/help/sites-cloud/authoring/launches/creating.md)
          + [Hantera sidor i starter](/help/sites-cloud/authoring/launches/managing-pages.md)
-         + [Redigera Launches](/help/sites-cloud/authoring/launches/editing.md)
+         + [Redigeringsövningar](/help/sites-cloud/authoring/launches/editing.md)
          + [Förhandsgranska startprogram med Timewarp](/help/sites-cloud/authoring/launches/preview.md)
-         + [Marknadsföra Launches](/help/sites-cloud/authoring/launches/promoting.md)
+         + [Befordra lanseringar](/help/sites-cloud/authoring/launches/promoting.md)
       + Arbetsflöden {#workflows}
          + [Arbeta med arbetsflöden](/help/sites-cloud/authoring/workflows/overview.md)
          + [Använda arbetsflöden på sidor](/help/sites-cloud/authoring/workflows/applying.md)
          + [Delta i arbetsflöden](/help/sites-cloud/authoring/workflows/participating.md)
       + Personanpassning {#personalization}
-         + [Översikt över personanpassning](/help/sites-cloud/authoring/personalization/overview.md)
+         + [Personalisering - översikt](/help/sites-cloud/authoring/personalization/overview.md)
          + [Förhandsgranska sidor med ContextHub-data](/help/sites-cloud/authoring/personalization/contexthub.md)
          + [Skapa riktat innehåll med målläge](/help/sites-cloud/authoring/personalization/targeted-content.md)
          + [Arbeta med riktat innehåll på flera webbplatser](/help/sites-cloud/authoring/personalization/multisite-targeted-content.md)
-         + [Så här struktureras hantering av flera webbplatser för riktat innehåll](/help/sites-cloud/authoring/personalization/multisite-structure.md)
+         + [Hur hantering av flera webbplatser för riktat innehåll är strukturerad](/help/sites-cloud/authoring/personalization/multisite-structure.md)
          + [Hantera aktiviteter](/help/sites-cloud/authoring/personalization/activities.md)
          + [Hantera målgrupper](/help/sites-cloud/authoring/personalization/audiences.md)
          + [Skapa och hantera erbjudanden (Erbjudandekonsol)](/help/sites-cloud/authoring/personalization/offers.md)
@@ -334,7 +334,7 @@ ht-degree: 19%
          + [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
          + [Hantera innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md)
          + [Skapa fragmentinnehåll](/help/sites-cloud/administering/content-fragments/authoring.md)
-         + [Markdown](/help/sites-cloud/administering/content-fragments/markdown.md)
+         + [Markering](/help/sites-cloud/administering/content-fragments/markdown.md)
          + [Ta bort överväganden](/help/sites-cloud/administering/content-fragments/delete-considerations.md)
          + [Analyserar struktur](/help/sites-cloud/administering/content-fragments/analysis.md)
          + [Kortkommandon](/help/sites-cloud/administering/content-fragments/keyboard-shortcuts.md)
@@ -399,17 +399,17 @@ ht-degree: 19%
    + [Betydande ändringar i [!DNL Assets] som [!DNL Cloud Service]](/help/assets/assets-cloud-changes.md)
    + [[!DNL Assets] arkitektur](/help/assets/architecture.md)
    + [Filformat som stöds](/help/assets/file-format-support.md)
-   + [Översikt över mikrotjänster för material](/help/assets/asset-microservices-overview.md)
+   + [Översikt över tillgångsmikrotjänster](/help/assets/asset-microservices-overview.md)
    + [Tillgänglighet i [!DNL Assets]](/help/assets/accessibility.md)
    + Hantera digitala resurser {#manage}
       + [Mikrofrontsväljare för mediefiler](/help/assets/asset-selector.md)
       + [Micro-FrontEnd-målväljare](/help/assets/destination-selector.md)
       + [Dela resurser](/help/assets/share-assets.md)
       + [Övervaka aktiviteter och DAM-uppgifter](/help/assets/assets-activity-history.md)
-      + [Komma igång med mikrotjänster för material](/help/assets/asset-microservices-configure-and-use.md)
+      + [Kom igång med att använda objektmikrotjänster](/help/assets/asset-microservices-configure-and-use.md)
       + [Lägga till och överföra resurser](/help/assets/add-assets.md)
-      + [Söka efter resurser](/help/assets/search-assets.md)
-      + [Vanliga åtgärder för hantering av material](/help/assets/manage-digital-assets.md)
+      + [Sök resurser](/help/assets/search-assets.md)
+      + [Vanliga resurshanteringsåtgärder](/help/assets/manage-digital-assets.md)
       + [Hantera publikation](/help/assets/manage-publication.md)
       + [Förhandsgranska 3D-resurser](/help/assets/dynamic-media/previewing-3d-assets.md)
       + [Smarta taggar för bilder](/help/assets/smart-tags.md)
@@ -419,15 +419,15 @@ ht-degree: 19%
       + [Hantera samlingar](/help/assets/manage-collections.md)
       + [Översikt över metadata](/help/assets/manage-metadata.md)
       + [Integrera med [!DNL Adobe Creative Cloud]](/help/assets/aem-cc-integration-best-practices.md)
-      + [Lägga till och redigera metadata](/help/assets/meta-edit.md)
-      + [Granska resurser i mappar och samlingar](/help/assets/bulk-approval.md)
-      + [Använda och konfigurera Asset Insights](/help/assets/assets-insights.md)
+      + [Lägga till eller redigera metadata](/help/assets/meta-edit.md)
+      + [Granska mappresurser och samlingar](/help/assets/bulk-approval.md)
+      + [Använd och konfigurera resursinsikter](/help/assets/assets-insights.md)
       + [Metadataprofiler](/help/assets/metadata-profiles.md)
-      + [Metadataschema](/help/assets/metadata-schemas.md)
-      + [Hantera videoresurser](/help/assets/manage-video-assets.md)
+      + [Metadata-schema](/help/assets/metadata-schemas.md)
+      + [Hantera videomaterial](/help/assets/manage-video-assets.md)
       + [Återanvända resurser med MSM](/help/assets/reuse-assets-using-msm.md)
       + [Hämta resurser](/help/assets/download-assets-from-aem.md)
-      + [Checka in och checka ut resurser för redigering](/help/assets/check-out-and-submit-assets.md)
+      + [Checka in och checka ut resurser att redigera](/help/assets/check-out-and-submit-assets.md)
       + [Skapa och dela privata mappar](/help/assets/private-folder.md)
       + [Digital Rights Management för tillgångar](/help/assets/drm.md)
       + [Vattenstämpelresurser](/help/assets/watermark-assets.md)
@@ -437,20 +437,20 @@ ht-degree: 19%
    + Konfigurera, administrera och utöka [!DNL Assets] {#admin}
       + [Identifiera duplicerade resurser](/help/assets/detect-duplicate-assets.md)
       + [Dokumentreferenser för utvecklare och API:er](/help/assets/developer-reference-material-apis.md)
-      + [Metadataschema för mapp](/help/assets/folder-metadata-schema.md)
+      + [Mappmetadatamatchschema](/help/assets/folder-metadata-schema.md)
       + [Arbeta med bild- och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md)
       + [Konfigurera transkription för ljud- och videomaterial](/help/assets/configure-transcription.md)
       + [Översätta resurser](/help/assets/translate-assets.md)
-      + [Söka efter fasetter](/help/assets/search-facets.md)
-      + [HTTP API för Assets](/help/assets/mac-api-assets.md)
+      + [Sök efter ansikten](/help/assets/search-facets.md)
+      + [Resurser för HTTP API](/help/assets/mac-api-assets.md)
       + [Content Fragments support in Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md)
       + [Anslutna resurser](/help/assets/use-assets-across-connected-assets-instances.md)
       + [Generera renderingar endast för placering](/help/assets/configure-fpo-renditions.md)
-      + [Materialrapporter](/help/assets/asset-reports.md)
+      + [Resursrapporter](/help/assets/asset-reports.md)
       + [Överlappande metadata](/help/assets/cascading-metadata.md)
-      + [XMP-metadata](/help/assets/xmp-metadata.md)
+      + [XMP metadata](/help/assets/xmp-metadata.md)
       + [MediaLibrary-funktioner](/help/assets/medialibrary.md)
-      + [Importera och exportera metadata för material](/help/assets/metadata-import-export.md)
+      + [Importera och exportera metadata för resurser](/help/assets/metadata-import-export.md)
       + [Konfigurera överföringsbegränsningar för resurser](/help/assets/configure-asset-upload-restrictions.md)
    + Dela och driftsätta resurser {#brand-portal}
       + [Konfigurera [!DNL Assets] med [!DNL Brand Portal]](/help/assets/configure-aem-assets-with-brand-portal.md)
@@ -462,11 +462,11 @@ ht-degree: 19%
       + [Aktivera funktionen för innehållsfragment för instansen](/help/assets/content-fragments/content-fragments-configuration-browser.md)
       + [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
       + [Hantera innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md)
-      + [Variationer – redigera innehållsfragment](/help/assets/content-fragments/content-fragments-variations.md)
-      + [Innehållsfragment med associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md)
-      + [Metadata – fragmentegenskaper](/help/assets/content-fragments/content-fragments-metadata.md)
-      + [Innehållsfragment – ta bort överväganden](/help/assets/content-fragments/content-fragments-delete.md)
-      + [Markdown](/help/assets/content-fragments/content-fragments-markdown.md)
+      + [Variationer - innehåll för redigeringsfragment](/help/assets/content-fragments/content-fragments-variations.md)
+      + [Associerat innehåll för innehållsfragment](/help/assets/content-fragments/content-fragments-assoc-content.md)
+      + [Metadata - Fragmentegenskaper](/help/assets/content-fragments/content-fragments-metadata.md)
+      + [Innehållsfragment - Ta bort överväganden](/help/assets/content-fragments/content-fragments-delete.md)
+      + [Markering](/help/assets/content-fragments/content-fragments-markdown.md)
       + [Strukturträd](/help/assets/content-fragments/content-fragments-structure-tree.md)
       + [Förhandsgranska - JSON-representation](/help/assets/content-fragments/content-fragments-json-preview.md)
       + [Återanvänd innehållsfragment med MSM för resurser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/reuse-assets-using-msm.html)
@@ -484,7 +484,7 @@ ht-degree: 19%
       + [Konfigurera ett Dynamic Media Alias-konto](/help/assets/dynamic-media/dm-alias-account.md)
       + [Tillgänglighet i Dynamic Media](/help/assets/dynamic-media/accessibility-dm.md)
       + [Hantera Dynamic Media-resurser](/help/assets/dynamic-media/managing-assets.md)
-      + [Bästa tillvägagångssätt för att optimera bildkvalitet](/help/assets/dynamic-media/best-practices-for-optimizing-the-quality-of-your-images.md)
+      + [Bästa tillvägagångssätt för att optimera bildkvaliteten](/help/assets/dynamic-media/best-practices-for-optimizing-the-quality-of-your-images.md)
       + [Bildprofiler](/help/assets/dynamic-media/image-profiles.md)
       + [Videoprofiler](/help/assets/dynamic-media/video-profiles.md)
       + [Hantera Dynamic Media bildförinställningar](/help/assets/dynamic-media/managing-image-presets.md)
@@ -501,11 +501,11 @@ ht-degree: 19%
       + [Stöd för 3D](/help/assets/dynamic-media/assets-3d.md)
       + [Dynamic Media begränsningar](/help/assets/dynamic-media/limitations.md)
       + [Bilduppsättningar](/help/assets/dynamic-media/image-sets.md)
-      + [Panoramabilder](/help/assets/dynamic-media/panoramic-images.md)
+      + [Panorambilder](/help/assets/dynamic-media/panoramic-images.md)
       + [Blandade medieuppsättningar](/help/assets/dynamic-media/mixed-media-sets.md)
-      + [Snurrande uppsättningar](/help/assets/dynamic-media/spin-sets.md)
+      + [Snurra uppsättningar](/help/assets/dynamic-media/spin-sets.md)
       + [Video i Dynamic Media](/help/assets/dynamic-media/video.md)
-      + [Karusellbanner](/help/assets/dynamic-media/carousel-banners.md)
+      + [Carousel Banners](/help/assets/dynamic-media/carousel-banners.md)
       + [Interaktiva bilder](/help/assets/dynamic-media/interactive-images.md)
       + [Interaktiva videoklipp](/help/assets/dynamic-media/interactive-videos.md)
       + [360 VR-video](/help/assets/dynamic-media/360-video.md)
@@ -521,7 +521,7 @@ ht-degree: 19%
       + [Publicera Dynamic Media-resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md)
       + [Arbeta med selektiv publicering i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md)
       + [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md)
-      + [Vanliga frågor om leverans av innehåll med HTTP2](/help/assets/dynamic-media/http2faq.md)
+      + [HTTP2 Delivery of Content FAQ](/help/assets/dynamic-media/http2faq.md)
       + [Flash Viewers End-of-Life](/help/assets/dynamic-media/flash-viewers-eol.md)
       + [DHTML-visningsprogram - slutdatum](/help/assets/dynamic-media/dhtml-viewer-endoflifefaqs.md)
    + Arbeta med resursvyn {#assets-view}
@@ -563,7 +563,7 @@ ht-degree: 19%
       + [De viktigaste nyheterna i Adobe Experience Manager Forms](/help/forms/latest-innovations.md)
       + [Betydande ändringar](/help/forms/notable-changes.md)
       + [Arkitektur](/help/forms/aem-forms-cloud-service-architecture.md)
-      + [Vanliga frågor](/help/forms/faq.md)
+      + [Frågor och svar](/help/forms/faq.md)
       + [Kända fel](/help/forms/known-issues.md)
    + Konfigurera och migrera {#setup-configure-migrate}
       + [Anmäl dig till Cloud Servicen](/help/forms/setup-forms-cloud-service.md)
@@ -585,6 +585,7 @@ ht-degree: 19%
          + [Bädda in anpassningsbara formulär baserade på kärnkomponenter på en extern webbsida](/help/forms/embed-adaptive-form-core-components-external-web-page.md)
          + [Bädda in anpassat formulär baserat på Foundation Components på en extern webbsida](/help/forms/embed-adaptive-form-external-web-page.md)
       + Formulärdatamodell {#use-form-data-model}
+         + [Skicka ett anpassat formulär till Adobe Workfront Fusion](/help/forms/submit-adaptive-form-to-workfront-fusion.md)
          + [Koppla AEM Forms till databas eller datakälla](/help/forms/data-integration.md)
          + [Konfigurera datakällor](/help/forms/configure-data-sources.md)
          + [Konfigurera [!DNL Microsoft Dynamics] OData](/help/forms/ms-dynamics-odata-configuration.md)
@@ -825,7 +826,7 @@ ht-degree: 19%
          + [Läs om hur du använder referenser i innehållsfragment](/help/journey-headless/author/references.md)
          + [Läs om hur du definierar metadata och taggar för innehållsfragment](/help/journey-headless/author/metadata-tagging.md)
 + Implementera {#implementing}
-   + [Implementera program för AEM as a Cloud Service](/help/implementing/home.md)
+   + [Implementera ansökningar för AEM as a Cloud Service](/help/implementing/home.md)
    + Använda Cloud Manager {#using-cloud-manager}
       + Program {#programs}
          + [Program och programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md)
@@ -835,7 +836,7 @@ ht-degree: 19%
          + [Skapa sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-sandbox-programs.md)
          + [Redigeringsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md)
          + [Vilolägen](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/hibernating-environments.md)
-      + Skapa ett AEM-programprojekt {#create-application-project}
+      + Skapa ett AEM {#create-application-project}
          + [Guiden Skapa projekt](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md)
          + [Projektinställningar](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md)
          + [Bygg miljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md)
@@ -855,8 +856,8 @@ ht-degree: 19%
          + [Konfigurera en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md)
          + [Hantera pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md)
       + [Distribuera koden](/help/implementing/cloud-manager/deploy-code.md)
-      + Förstå testresultat {#test-results}
-         + [Översikt](/help/implementing/cloud-manager/overview-test-results.md)
+      + Förstå testresultaten {#test-results}
+         + [Ökning](/help/implementing/cloud-manager/overview-test-results.md)
          + [Testning av kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md)
          + [Anpassade regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md)
          + Funktionstestning {#functional-testing}
@@ -865,7 +866,7 @@ ht-degree: 19%
             + [UI-testning](/help/implementing/cloud-manager/ui-testing.md)
          + [Testning av Experience Audit](/help/implementing/cloud-manager/experience-audit-testing.md)
          + [Kontrollpanelen för Experience Audit](/help/implementing/cloud-manager/experience-audit-dashboard.md)
-      + [Komma åt och hantera loggar](/help/implementing/cloud-manager/manage-logs.md)
+      + [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md)
       + [Anpassade behörigheter](/help/implementing/cloud-manager/custom-permissions.md)
       + [SLA-rapportering](/help/implementing/cloud-manager/sla-reporting.md)
       + [New Relic One](/help/implementing/cloud-manager/user-access-new-relic.md)
@@ -891,11 +892,11 @@ ht-degree: 19%
       + [Förstå begäranden om Cloud Service innehåll](/help/implementing/cloud-manager/content-requests.md)
       + [Vanliga frågor om Cloud Manager](/help/implementing/cloud-manager/faqs.md)
    + Utveckla för AEM as a Cloud Service {#developing}
-      + [AEM-projektstruktur](/help/implementing/developing/introduction/aem-project-content-package-structure.md)
-      + [Strukturpaket för AEM-projektdatabas](/help/implementing/developing/introduction/repository-structure-package.md)
-      + [SDK för AEM as a Cloud Service](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md)
+      + [AEM projektstruktur](/help/implementing/developing/introduction/aem-project-content-package-structure.md)
+      + [AEM projektdatabasstrukturpaket](/help/implementing/developing/introduction/repository-structure-package.md)
+      + [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md)
       + [AEM miljöer för snabb utveckling](/help/implementing/developing/introduction/rapid-development-environments.md)
-      + [Utvecklingsriktlinjer för AEM as a Cloud Service](/help/implementing/developing/introduction/development-guidelines.md)
+      + [AEM riktlinjer för as a Cloud Service utveckling](/help/implementing/developing/introduction/development-guidelines.md)
       + [Loggning](/help/implementing/developing/introduction/logging.md)
       + [Konfigurationer och Configuration Browser](/help/implementing/developing/introduction/configurations.md)
       + [AEM Technical Foundations](/help/implementing/developing/introduction/aem-technologies.md)
@@ -907,12 +908,12 @@ ht-degree: 19%
       + [Anpassa webbplatsmallar och teman](/help/implementing/developing/introduction/customizing-site-templates-themes.md)
       + [Headless and Headless in AEM](/help/implementing/developing/headful-headless.md)
       + Full Stack AEM Development {#full-stack}
-         + [Komma igång med utveckling i AEM Sites – WKND-självstudiekurs](/help/implementing/developing/introduction/develop-wknd-tutorial.md)
+         + [Getting Started Developing AEM Sites - WKND Tutorial](/help/implementing/developing/introduction/develop-wknd-tutorial.md)
          + [Struktur för AEM](/help/implementing/developing/introduction/ui-structure.md)
-         + [Fusklapp för Sling](/help/implementing/developing/introduction/sling-cheatsheet.md)
-         + [Använda Sling-adaptrar](/help/implementing/developing/introduction/sling-adapters.md)
+         + [Sling Cheatsheet](/help/implementing/developing/introduction/sling-cheatsheet.md)
+         + [Använda delningsadaptrar](/help/implementing/developing/introduction/sling-adapters.md)
          + [Använda Sling Resource Merger i AEM as a Cloud Service](/help/implementing/developing/introduction/sling-resource-merger.md)
-         + [Överlagring i AEM as a Cloud Service](/help/implementing/developing/introduction/overlays.md)
+         + [Övertäckningar i AEM as a Cloud Service](/help/implementing/developing/introduction/overlays.md)
          + [Använda bibliotek på klientsidan](/help/implementing/developing/introduction/clientlibs.md)
          + [Sidskillnader](/help/implementing/developing/introduction/page-diff.md)
          + [Begränsningar för redigerare](/help/implementing/developing/introduction/editor-limitations.md)
@@ -930,7 +931,7 @@ ht-degree: 19%
             + [Referenshandbok för komponenter](/help/implementing/developing/components/reference.md)
          + [AEM Taggningsramverk](/help/implementing/developing/introduction/tagging-framework.md)
          + [Bygga in märkord i AEM](/help/implementing/developing/introduction/tagging-applications.md)
-         + Sökning {#search}
+         + Sök {#search}
             + [Query Builder API](/help/implementing/developing/introduction/query-builder-api.md)
             + [Predikatreferens för Query Builder](/help/implementing/developing/introduction/query-builder-predicates.md)
             + [Implementera en anpassad predikatutvärderare](/help/implementing/developing/introduction/query-builder-custom-predicate.md)
@@ -992,15 +993,15 @@ ht-degree: 19%
          + [Dokumentskydd](/help/implementing/developing/extending/app-builder/videos/security.md)
          + [Distribuera program](/help/implementing/developing/extending/app-builder/videos/deploy.md)
          + [Publicera program](/help/implementing/developing/extending/app-builder/videos/publish.md)
-      + [Utöka Experience Fragments](/help/implementing/developing/extending/experience-fragments.md)
-      + [Anpassa och utöka Content Fragments](/help/implementing/developing/extending/content-fragments-customizing.md)
-      + [Content Fragments – konfigurera komponenter för återgivning](/help/implementing/developing/extending/content-fragments-configuring-components-rendering.md)
+      + [Utöka upplevelsefragment](/help/implementing/developing/extending/experience-fragments.md)
+      + [Anpassa och utöka innehållsfragment](/help/implementing/developing/extending/content-fragments-customizing.md)
+      + [Innehållsfragment Konfigurera komponenter för återgivning](/help/implementing/developing/extending/content-fragments-configuring-components-rendering.md)
       + [Anpassa konsolen för innehållsfragment](/help/implementing/developing/extending/content-fragment-console-customizing.md)
       + [Anpassa konsolen och redigeraren för innehållsfragment](/help/implementing/developing/extending/content-fragments-console-and-editor.md)
       + Hantera sökning i Forms {#manage-search-forms}
-         + [Konfigurera sökformulär](/help/implementing/developing/extending/search-forms.md)
+         + [Konfigurera Sök i Forms](/help/implementing/developing/extending/search-forms.md)
          + [Konfigurera sökfilter för Inkorgen](/help/implementing/developing/extending/configure-inbox-search-rail.md)
-      + [Konfigurera RTE-redigeraren](/help/implementing/developing/extending/rich-text-editor.md)
+      + [Konfigurera RTF-redigerare](/help/implementing/developing/extending/rich-text-editor.md)
       + [Konfigurera RTE-plugin-program](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md)
       + [Konfigurera RTE för att skapa tillgängliga webbplatser](/help/implementing/developing/extending/rte-accessible-content.md)
       + [Utöka sidredigering](/help/implementing/developing/extending/page-authoring.md)
@@ -1011,7 +1012,7 @@ ht-degree: 19%
    + Distribuera till AEM as a Cloud Service {#deploying}
       + [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md)
       + [Uppdateringar av AEM](/help/implementing/deploying/aem-version-updates.md)
-      + [Konfigurera OSGI för AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md)
+      + [Konfigurera OSGi för AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md)
       + [OSGi Configuration API](/help/implementing/deploying/osgi-configuration-api.md)
       + [Resursmappning](/help/implementing/deploying/resource-mapping.md)
    + Författarnivå {#author-tier}
@@ -1020,18 +1021,18 @@ ht-degree: 19%
    + Förhandsgranskningsnivå {#preview-tier}
       + [Konfigurera OSGi-inställningar för förhandsgranskningsnivån](/help/implementing/preview-tier/preview-tier-configuring-osgi.md)
    + Översikt över innehållsleverans {#content-delivery}
-      + [Flöde för innehållsleverans](/help/implementing/dispatcher/overview.md)
+      + [Leveransflöde](/help/implementing/dispatcher/overview.md)
       + [Dispatcher i molnet](/help/implementing/dispatcher/disp-overview.md)
       + [Validera och felsöka med Dispatcher Tools](/help/implementing/dispatcher/validation-debug.md)
       + [Migrera Dispatcher-konfigurationen från AMS till AEM as a Cloud Service](/help/implementing/dispatcher/ams-aem.md)
       + [Validera och felsöka med Dispatcher Tools Legacy](/help/implementing/dispatcher/validation-debug-legacy.md)
-      + [CDN i AEM as a Cloud Service](/help/implementing/dispatcher/cdn.md)
-      + [Cache i AEM as a Cloud Service](/help/implementing/dispatcher/caching.md)
+      + [CDN på AEM as a Cloud Service](/help/implementing/dispatcher/cdn.md)
+      + [Cachelagring i AEM as a Cloud Service](/help/implementing/dispatcher/caching.md)
 + Anslutningar {#connectors}
-   + [Implementera anslutningar för AEM as a Cloud Service](/help/connectors/home.md)
-   + [Implementera en AEM-anslutning](/help/connectors/implement.md)
-   + [Skicka en AEM-anslutning](/help/connectors/submit.md)
-   + [Underhålla en AEM-anslutning](/help/connectors/maintain.md)
+   + [Implementera kopplingar för AEM as a Cloud Service](/help/connectors/home.md)
+   + [Implementera en AEM Connector](/help/connectors/implement.md)
+   + [Skicka en AEM](/help/connectors/submit.md)
+   + [Underhålla en AEM](/help/connectors/maintain.md)
 + Användning {#operations}
    + [Använda och underhålla AEM as a Cloud Service](/help/operations/home.md)
    + [Actions Center](/help/operations/actions-center.md)
@@ -1039,7 +1040,7 @@ ht-degree: 19%
    + [Tjänsten Innehållsreplikering](/help/operations/replication.md)
    + [Ytterligare publiceringsregioner](/help/operations/additional-publish-regions.md)
    + [Infrastruktur- och serviceövervakning på AEM as a Cloud Service](/help/operations/monitoring.md)
-   + [Underhållsåtgärder](/help/operations/maintenance.md)
+   + [Underhållsaktiviteter](/help/operations/maintenance.md)
    + [Säkerhetskopiering och återställning](/help/operations/backup.md)
    + [Självbetjäningsåterställning](/help/operations/restore.md)
    + [Asynkrona jobb](/help/operations/asynchronous-jobs.md)
@@ -1048,11 +1049,11 @@ ht-degree: 19%
 + Regelefterlevnad {#compliance}
    + [Efterlevnad av AEM as a Cloud Service](/help/compliance/home.md)
    + Kompatibilitet med dataintegritet och dataskydd {#data-privacy}
-      + [AEM-kompatibilitet med föreskrifter om dataskydd och dataintegritet](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md)
-      + [AEM Foundation-kompatibilitet med föreskrifter om dataskydd och dataintegritet](/help/compliance/data-privacy-and-protection-readiness/foundation-readiness.md)
-      + [AEM Sites-kompatibilitet med föreskrifter om dataskydd och dataintegritet](/help/compliance/data-privacy-and-protection-readiness/sites-readiness.md)
+      + [AEM beredskap för dataskydd och dataintegritet](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md)
+      + [AEM Foundation Ready for Data Protection and Data Privacy Regulations](/help/compliance/data-privacy-and-protection-readiness/foundation-readiness.md)
+      + [AEM Sites beredskap för dataskydd och dataintegritet](/help/compliance/data-privacy-and-protection-readiness/sites-readiness.md)
    + Tillgänglighet {#accessibility}
-      + [AEM as a Cloud Service och riktlinjerna för webbtillgänglighet](/help/compliance/accessibility/web-accessibility.md)
+      + [AEM as a Cloud Service och Web Accessibility Guidelines](/help/compliance/accessibility/web-accessibility.md)
       + [En snabbguide till WCAG 2.1](/help/compliance/accessibility/quick-guide-wcag.md)
 + Universal Editor {#universal-editor}
    + [Introduktion till Universal Editor](/help/implementing/universal-editor/introduction.md)
