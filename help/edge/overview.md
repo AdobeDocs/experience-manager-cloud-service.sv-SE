@@ -3,10 +3,10 @@ title: Komma igång med Edge Delivery Services
 description: Komma igång med Edge Delivery Services.
 feature: Edge Delivery Services
 exl-id: 03a1aa93-d2e6-4175-9cf3-c7ae25c0d24e
-source-git-commit: 185a192b0d40e25cdb09fd8a1f222d9d9b1bd631
+source-git-commit: c3c1a2c89031b6a7a44ac8d16ecb2e64f37490a8
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 2%
+source-wordcount: '823'
+ht-degree: 0%
 
 ---
 
@@ -50,7 +50,7 @@ Det är enkelt att komma igång med Edge Delivery Services. Kom igång genom att
 
 ## Få hjälp från Adobe {#adobe-gethelp}
 
-Du kan kontakta Adobe produktteam via den tilldelade produktsamarbetskanalen (se nedan för mer information) för att få svar på frågor om produktanvändning eller bästa praxis. Det finns inga servicenivåvillkor (SLT) kopplade till konversationerna via produktsamarbetskanalen. Om ett produktproblem kräver ytterligare utredning och felsökning, och måste uppfylla SLT-svarsalternativ, kan du skicka ett supportärende efter [supportprocess](https://experienceleague.adobe.com/?lang=en&amp;support-tab=home#support).
+Du kan kontakta Adobe produktteam via den tilldelade produktsamarbetskanalen (se nedan för mer information) för att få svar på frågor om produktanvändning eller bästa praxis. Det finns inga servicenivåmål (SLT) kopplade till konversationerna via produktsamarbetskanalen. Om ett produktproblem kräver ytterligare utredning och felsökning, och måste uppfylla SLT-svarsalternativ, kan du skicka ett supportärende efter [supportprocess](https://experienceleague.adobe.com/?lang=en&amp;support-tab=home#support).
 
 Adobe har tre kanaler som kan hjälpa dig med Edge Delivery Services:
 
