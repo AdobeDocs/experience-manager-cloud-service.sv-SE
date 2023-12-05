@@ -3,9 +3,9 @@ title: Integrering av Adobe Workfront Fusion med AEM Forms Submission
 description: Med Adobe Workfront Fusion kan du fokusera på nya uppgifter istället för att fokusera på repetitiva uppgifter. Du kan ansluta Adobe Workfront Fusion till ett adaptivt formulär genom att skicka formulär.
 keywords: Skicka in ett adaptivt formulär till Adobe Workfront Fusion, Integration of Adobe Workfront Fusion with AEM Forms Submission, Adobe Workfront Fusion with AEM Forms, Workfront Fusion with AEM Forms, Connect Workfront Fusion to AEM Forms, AEM Forms and Workfront Fusion, How to connect Workfront Fusion with AEM Forms?, Connect Workfront Fusion to a Form
 topic-tags: author, developer
-source-git-commit: 5be0c5e347d2ec7ef660a701c8c6faf6a2d6d17a
+source-git-commit: cebdd5c4b1ad9531f2cc2893c2e7900658e451ed
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1154'
 ht-degree: 0%
 
 ---
@@ -144,7 +144,7 @@ Du kan konfigurera åtgärden skicka för Workfont Fusion för:
 - [Ny adaptiv Forms](#new-af-submit-action)
 - [Befintliga adaptiva formulär](#existing-af-submit-action)
 
-#### 2.1 Konfigurera skicka-åtgärd för nytt adaptivt formulär för Workfront Fusion {#new-af-submit-action}
+#### Konfigurera åtgärden skicka för det nya adaptiva formuläret för Workfront Fusion {#new-af-submit-action}
 
 Så här konfigurerar du skickaåtgärden för det nya adaptiva formuläret för Workfront Fusion:
 
@@ -165,7 +165,7 @@ Så här konfigurerar du skickaåtgärden för det nya adaptiva formuläret för
 1. Klicka på **[!UICONTROL Create]**.
 1. Ange namnet på det nya adaptiva formuläret och klicka på **[!UICONTROL Create]**.
 
-#### 2.2 Konfigurera skicka-åtgärd för befintligt adaptivt formulär för Workfront Fusion {#existing-af-submit-action}
+#### Konfigurera skicka-åtgärd för befintligt adaptivt formulär för Workfront Fusion {#existing-af-submit-action}
 
 Så här konfigurerar du skickaåtgärden för det befintliga adaptiva formuläret för Workfront Fusion:
 
@@ -178,7 +178,7 @@ Så här konfigurerar du skickaåtgärden för det befintliga adaptiva formulär
    ![Skicka åtgärd för Workfront Fusion](/help/forms/assets/workfront-scenario-existing-af.png)
 
 1. Öppna **[!UICONTROL Submission]** -fliken.
-1. Välj **[Skicka åtgärd]** as **[!UICONTROL Invoke a WorkFront Fusion Scenario]**
+1. Välj **[!UICONTROL Submit action]** as **[!UICONTROL Invoke a WorkFront Fusion Scenario]**
 1. Välj **[!UICONTROL Workfront Fusion scenario]** i listrutan.
 1. Klicka på **[!UICONTROL Done]**.
 
