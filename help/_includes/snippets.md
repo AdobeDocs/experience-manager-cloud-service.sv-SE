@@ -1,7 +1,7 @@
 ---
-source-git-commit: c20f59770f4eb722d49a96952126993577bfd65e
+source-git-commit: 8bc20c66aad7bf4befdd28db2c628a1535ae375b
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '205'
 ht-degree: 0%
 
 ---
@@ -14,12 +14,6 @@ ht-degree: 0%
 ## Redigering av Edge Delivery Services {#edge-delivery-authoring}
 
 [!BADGE Klicka här om du vill skapa AEM innehåll för Edge Delivery Services.]{type=Positive url="/help/edge/overview.md" tooltip="Skapa AEM innehåll för Edge Delivery Services"}
-
-## IMS-stöd för tilldelning av grupper till profiler {#ims-group-profiles}
-
->[!NOTE]
->
->AEM stöder för närvarande inte tilldelning av grupper till profiler. Användare bör läggas till individuellt i stället.
 
 ## WAF Config Limited Release {#waf-limited-release}
 
