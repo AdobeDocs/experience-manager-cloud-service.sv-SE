@@ -2,9 +2,9 @@
 title: Så här modellerar du ditt innehåll
 description: I den här delen av Adobe Experience Manager (AEM) Headless Developer Journey kan du lära dig att modellera ditt innehåll för AEM Headless-leverans med hjälp av Content Modeling med Content Fragment Models och Content Fragments.
 exl-id: f052183d-18fd-4615-a81e-e45db5928fc1
-source-git-commit: d67c5c9baafb9b7478f1d1c2ad924f5a8250a1ee
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '1827'
+source-wordcount: '1814'
 ht-degree: 0%
 
 ---
@@ -176,7 +176,7 @@ AEM innehåller följande datatyper som du kan använda för att modellera ditt 
 
 * Enkelradig text
 * Flerradstext
-* Siffra
+* Nummer
 * Boolean
 * Datum och tid
 * Uppräkning
@@ -210,7 +210,7 @@ Först måste du aktivera Content Fragment Models för webbplatsen. Detta görs 
 >
 >Se Ytterligare resurser - Innehållsfragment i Configuration Browser
 
-Sedan kan du skapa modellerna för innehållsfragment och definiera strukturen. Detta kan göras under **verktyg** -> **Allmänt** -> **Modeller för innehållsfragment**. Till exempel:
+Sedan kan du skapa modellerna för innehållsfragment och definiera strukturen. Detta kan göras under **verktyg** > **Allmänt** > **Modeller för innehållsfragment**. Till exempel:
 
 ![Content Fragment Model](assets/cfm-model.png)
 
@@ -224,7 +224,7 @@ Innehållsfragment baseras alltid på en innehållsfragmentmodell. Modellen inne
 
 ### Välja lämplig modell {#select-model}
 
-Det första steget till att skapa innehåll är att skapa ett innehållsfragment. Detta görs med Skapa -> Innehållsfragment i den obligatoriska mappen under Resurser -> Filer. Guiden vägleder dig genom stegen.
+Det första steget till att skapa innehåll är att skapa ett innehållsfragment. Detta görs med Skapa > Innehållsfragment i den obligatoriska mappen under Resurser > Filer. Guiden vägleder dig genom stegen.
 
 Ett innehållsfragment baseras på en viss innehållsfragmentmodell som du väljer som första steg i skapandet.
 

@@ -2,9 +2,9 @@
 title: Använda CRXDE Lite
 description: CRXDE Lite är en del av AEM snabbstart och är tillgängligt för dig att komma åt och ändra databasen i dina lokala utvecklingsmiljöer i webbläsaren.
 exl-id: 1581a7e5-6f84-4a45-8e8f-c83692ea077a
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1683'
+source-wordcount: '1678'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Widgeten Nodsökväg visar sökvägen till den markerade noden.
 
 Du kan också använda den för att hoppa till en nod genom att ange sökvägen manuellt eller klistra in den någon annanstans och trycka på Retur.
 
-Det finns även stöd för att söka efter noder med ett specifikt nodnamn. Ange namnet på noden som du vill söka efter och vänta (eller välj sökikonen till höger). Om en viss nod eller noder läses in i utforskarrutan visas listan och du kan välja sökvägen och trycka på Retur för att navigera till den. Observera att det bara fungerar för de noder som för närvarande är inlästa i CRXDE-klientprogrammet i webbläsaren. Om du vill söka i hela databasen använder du **verktyg** ->: **Fråga**.
+Det finns även stöd för att söka efter noder med ett specifikt nodnamn. Ange namnet på noden som du vill söka efter och vänta (eller välj sökikonen till höger). Om en viss nod eller noder läses in i utforskarrutan visas listan och du kan välja sökvägen och trycka på Retur för att navigera till den. Det fungerar bara för de noder som för närvarande är inlästa i CRXDE-klientprogrammet i webbläsaren. Om du vill söka i hela databasen använder du **verktyg** ->: **Fråga**.
 
 ### Utforskarfönster {#explorer-pane}
 

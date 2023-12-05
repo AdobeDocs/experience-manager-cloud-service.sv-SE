@@ -2,10 +2,10 @@
 title: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service
 description: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service.
 exl-id: 3fe856b7-a0fc-48fd-9c03-d64c31a51c5d
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2665'
-ht-degree: 9%
+source-wordcount: '2658'
+ht-degree: 8%
 
 ---
 
@@ -39,7 +39,7 @@ Ett program kan konfigureras med valfri kombination av högnivålösningar och v
 
 ![AEM as a Cloud Service - Program](assets/architecture-aem-edge-programs.png "AEM as a Cloud Service - driftsättningsarkitektur")
 
-### Miljöer {#environments}
+### Miljö {#environments}
 
 När ett program har skapats med AEM Sites-, AEM Assets- eller AEM Forms-lösningarna kommer tillhörande AEM att representeras i form av AEM miljöer i det här programmet.
 
@@ -190,7 +190,7 @@ Utvecklare och administratörer hanterar det AEM as a Cloud Service programmet m
 
 Cloud Manager hanterar alla uppdateringar av dina instanser av AEM as a Cloud Service. Det är obligatoriskt, eftersom det är det enda sättet att bygga, testa och distribuera kundapplikationen till författaren, förhandsgranskningen och publiceringsnivåerna. Dessa uppdateringar kan aktiveras av Adobe, när en ny version av AEM Cloud Service är klar, eller av dig själv, när en ny version av ditt program är klar.
 
-Detta implementeras av en distributionspipeline som är kopplad till varje miljö i ett program. När en pipeline för Cloud Manager körs skapas en ny version av kundprogrammet, både på redigerings- och publiceringsnivå. Det uppnås genom att de senaste kundpaketen kombineras med den senaste Adobe-baslinjebilden.
+Detta implementeras av en distributionspipeline som är kopplad till varje miljö i ett program. När en pipeline för Cloud Manager körs skapas en ny version av kundprogrammet, både på redigerings- och publiceringsnivå. Detta uppnås genom att de senaste kundpaketen kombineras med den senaste Adobe-bilden från baslinjen.
 
 Distributionsflödet utlöses antingen när kunderna gör kodändringar eller när Adobe distribuerar en ny underhållsrelease.
 

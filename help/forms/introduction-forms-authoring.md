@@ -6,9 +6,9 @@ topic-tags: author, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
 exl-id: 16f86dae-86fb-481b-8978-b8898705ed7e
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2467'
+source-wordcount: '2450'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/getting-started/introduction-forms-authoring.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Med adaptiva Forms kan du skapa engagerande, responsiva, dynamiska och anpassningsbara formulär. [!DNL AEM Forms] har ett intuitivt användargränssnitt och färdiga komponenter för att skapa och arbeta med Adaptive Forms. Du kan välja att skapa ett adaptivt formulär baserat på en formulärmodell eller ett schema eller utan en formulärmodell. Det är viktigt att du noga väljer den formulärmodell som inte bara passar dina behov, utan som utökar dina befintliga infrastrukturinvesteringar och resurser. Du kan välja mellan följande alternativ för att skapa ett adaptivt formulär:
 
@@ -96,7 +96,7 @@ Du kan dra och släppa formulärmodellelement i det adaptiva formuläret. De til
 
   Gör att du kan redigera egenskaperna för en komponent. Egenskaperna ändras enligt en komponent. Så här visar du egenskaper för behållaren för adaptiva formulär:
 
-  Markera en komponent och tryck sedan på ![fältnivå](assets/Smock_SelectContainer_18_N.svg) > **[!UICONTROL Adaptive Form Container]** och sedan trycka ![egenskaper](assets/Smock_Wrench_18_N.svg).
+  Markera en komponent och markera sedan ![fältnivå](assets/Smock_SelectContainer_18_N.svg) > **[!UICONTROL Adaptive Form Container]** och sedan markera ![egenskaper](assets/Smock_Wrench_18_N.svg).
 
 * **Resursläsaren**
 
@@ -307,7 +307,7 @@ Verktygsfältet längst upp på sidan innehåller alternativ som gör att du kan
 
 När du markerar en komponent visas ett verktygsfält där du kan arbeta med den. Du får alternativ för att klippa ut, klistra in, flytta och ange egenskaper för komponenterna. Dina alternativ är:
 
-S.**Konfigurera**: När du trycker **[!UICONTROL Configure]** visas komponentegenskaperna i sidlisten. Om du konfigurerar dessa egenskaper kan du anpassa datainhämtningen. Du kan ändra komponentens elementnamn och ange etikettexten i komponentens rubrikfält. Med elementnamnet kan du hämta värden som användarna anger med komponenten. I komponentegenskaperna anger du komponentens beteende och hanterar användarindata. Konfigurera egenskaperna i sidofältet för att hämta användardata och använda dem för vidare bearbetning. Med egenskaper för behållare för adaptiva formulär kan du ange klientbibliotek, layouter, teman, inställningar för dokumentdokument, inställningar för att spara, inställningar för överföring och metadatainställningar.
+S.**Konfigurera**: När du väljer **[!UICONTROL Configure]** visas komponentegenskaperna i sidlisten. Om du konfigurerar dessa egenskaper kan du anpassa datainhämtningen. Du kan ändra komponentens elementnamn och ange etikettexten i komponentens rubrikfält. Med elementnamnet kan du hämta värden som användarna anger med komponenten. I komponentegenskaperna anger du komponentens beteende och hanterar användarindata. Konfigurera egenskaperna i sidofältet för att hämta användardata och använda dem för vidare bearbetning. Med egenskaper för behållare för adaptiva formulär kan du ange klientbibliotek, layouter, teman, inställningar för dokumentdokument, inställningar för att spara, inställningar för överföring och metadatainställningar.
 
 B.**Kopiera**: Du kan använda kopieringsalternativet för att kopiera en komponent och klistra in den på andra platser i formuläret. När du klistrar in en komponent får den inklistrade komponenten ett nytt elementnamn men behåller den kopierade komponentens egenskaper.
 
@@ -325,7 +325,7 @@ H. **Grupp**: Gör att du kan markera flera komponenter om du vill klippa ut, ko
 
 Jag. **Överordnad**: Gör att du kan välja överordnad för en komponent. Ett textfält ligger till exempel i ett underavsnitt som finns i ett avsnitt. Avsnittet finns i stödlinjens rotpanel och behållaren för adaptiv form är överordnad en stödlinjens rotpanel. För en komponent kan du se alla alternativ med hierarkin sorterad längst ned.
 
-Om du till exempel trycker **[!UICONTROL Parent]** för en textruta ser du:
+Om du till exempel väljer **[!UICONTROL Parent]** för en textruta ser du:
 
 * Underavsnitt
 * Avsnitt

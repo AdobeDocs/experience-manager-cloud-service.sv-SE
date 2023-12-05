@@ -2,9 +2,9 @@
 title: Predikatreferens för Query Builder
 description: Förutse referens för Query Builder API på AEM as a Cloud Service.
 exl-id: 77118ef7-4d29-470d-9c4b-20537a408940
-source-git-commit: e10c39c1d7fa05b738dd8f25662617a3a9568f83
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2295'
+source-wordcount: '2270'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Namnet&quot;root&quot; används aldrig i en fråga, utan är implicit.
 
 * **`p.offset`** - ett tal som anger början på resultatsidan, det vill säga hur många objekt som ska hoppas över.
 * **`p.limit`** - ett tal som anger sidstorleken.
-* **`p.guessTotal`** - rekommenderas: undvik att beräkna det totala resultatet, vilket kan vara kostsamt. Antingen en siffra som anger den högsta summan som ska räknas upp till (till exempel 1000, ett tal som ger användarna tillräckligt med feedback på grovstorleken och exakta tal för mindre resultat). Eller `true` för att räkna endast upp till det minsta nödvändiga `p.offset` + `p.limit`.
+* **`p.guessTotal`** - rekommenderas: undvik att beräkna det totala resultatet, vilket kan vara kostsamt. Antingen en siffra som anger den högsta summan som ska räknas upp till (till exempel 1 000, ett tal som ger användarna tillräckligt med feedback på grovstorleken och exakta tal för mindre resultat). Eller `true` för att räkna endast upp till det minsta nödvändiga `p.offset` + `p.limit`.
 * **`p.excerpt`** - om inställt på `true`, inkludera utdrag av fullständig text i resultatet.
 * **`p.indexTag`** - om den anges kommer att innehålla ett alternativ för indextagg i frågan (se [Indextagg för frågealternativ](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#query-option-index-tag)).
 * **`p.facetStrategy`** - om inställt på `oak`kommer Query Builder att delegera facetextraheringen till Oak (se [Fasetter](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#facets)).
@@ -76,7 +76,7 @@ Med det här predikatet kan du sortera resultaten. Om det krävs en ordning efte
 
 #### Egenskaper {#properties-13}
 
-* **`orderby`** - antingen JCR-egenskapsnamnet som anges av radavståndet @, till exempel `@jcr:lastModified` eller `@jcr:content/jcr:title`eller ett annat predikat i frågan, till exempel `2_property`, som sorteringen ska göras på
+* **`orderby`** - antingen JCR-egenskapsnamnet som anges av ett radavstånd @, till exempel `@jcr:lastModified` eller `@jcr:content/jcr:title`eller ett annat predikat i frågan, till exempel `2_property`, som sorteringen ska göras på
 * **`sort`** - sorteringsriktning, antingen `desc` för fallande eller `asc` för stigande (standard)
 * **`case`** - om inställt på `ignore`, vilket gör sorteringsskiftläget okänsligt, vilket betyder `a` kommer före `B`Om den är tom eller utelämnad är sorteringen skiftlägeskänslig, vilket betyder `B` kommer före `a`
 
@@ -92,7 +92,7 @@ Det här predikatet har stöd för facetextrahering och erbjuder bucket för var
 
 #### Egenskaper {#properties}
 
-* **`boolproperty`** - relativ sökväg till egenskap, till exempel `myFeatureEnabled` eller `jcr:content/myFeatureEnabled`
+* **`boolproperty`** - relativ sökväg till egenskapen, till exempel `myFeatureEnabled` eller `jcr:content/myFeatureEnabled`
 * **`value`** - värde för att kontrollera egenskapen för `true` eller `false`
 
 ### innehållfragment {#contentfragment}
@@ -135,7 +135,7 @@ Det stöder inte filtrering.
 #### Egenskaper {#properties-3}
 
 * **`property`** - relativ sökväg till en `DATE` egenskap, till exempel `jcr:lastModified`
-* **`lowerBound`** - nedre gräns för att kontrollera egenskap, till exempel `2014-10-01`
+* **`lowerBound`** - nedre gräns för att kontrollera egenskapen för exempelvis `2014-10-01`
 * **`lowerOperation`** - `>` (nyare) eller `>=` (på eller nyare), gäller för `lowerBound`. Standardvärdet är `>`
 * **`upperBound`** - övre gräns för att kontrollera egenskap för, till exempel `2014-10-01T12:15:00`
 * **`upperOperation`** - `<` (äldre) eller `<=` (på eller tidigare) gäller för `upperBound`. Standardvärdet är `<`
@@ -174,7 +174,7 @@ Ett predikat som bara kan filtreras och som inte kan använda ett sökindex. Det
 
 #### Egenskaper {#properties-7}
 
-* **`hasPermission`** - alla kommaavgränsade JCR-behörigheter som den aktuella användarsessionen måste ha för noden i fråga. Till exempel, `jcr:write`, `jcr:modifyAccessControl`
+* **`hasPermission`** - alla kommaavgränsade JCR-behörigheter som den aktuella användarsessionen måste ha för noden i fråga. Till exempel: `jcr:write`, `jcr:modifyAccessControl`
 
 ### språk {#language}
 
@@ -260,7 +260,7 @@ Det har stöd för facetextrahering och innehåller bucket för varje unikt egen
 
 #### Egenskaper {#properties-15}
 
-* **`property`** - relativ sökväg till egenskap, till exempel `jcr:title`.
+* **`property`** - relativ sökväg till egenskapen, till exempel `jcr:title`.
 * **`value`** - värde att kontrollera egenskap för; följer JCR-egenskapstypen till strängkonverteringar.
 * **`N_value`** - användning `1_value`, `2_value`, ... för att kontrollera om det finns flera värden (i kombination med `OR` som standard med `AND` if `and=true`).
 * **`and`** - ställs in på `true` för att kombinera flera värden (`N_value`) med `AND`
@@ -347,7 +347,7 @@ Det har stöd för facet-extrahering och tillhandahåller bucket för varje unik
 
 #### Egenskaper {#properties-21}
 
-* **`tag`** - taggens titelsökväg att söka efter, till exempel `properties:orientation/landscape`
+* **`tag`** - sökväg till taggen som du vill söka efter, till exempel `properties:orientation/landscape`
 * **`N_value`** - användning `1_value`, `2_value`, ... för att kontrollera om det finns flera taggar (i kombination med `OR` som standard med `AND` if `and=true`)
 * **`property`** - egenskap (eller relativ sökväg till egenskap) att titta på (standard) `cq:tags`)
 

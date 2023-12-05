@@ -4,10 +4,10 @@ description: Använda verktyget för användarmappning (äldre)
 exl-id: dcb750c4-0f81-4d11-ac6c-0592162b683d
 hide: true
 hidefromtoc: true
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 2%
+source-wordcount: '806'
+ht-degree: 1%
 
 ---
 
@@ -30,16 +30,16 @@ Följ stegen nedan för att konfigurera detta:
 1. Lägg till ett API - klicka **Lägg till i projekt** och markera **API**
 1. Välj API för användarhantering. Du måste ha behörighet som systemadministratör för att det här alternativet ska vara tillgängligt.
 1. Skapa en JWT-autentiseringsuppgift.
-1. Skapa ett nyckelpar eller Överför en offentlig nyckel (rsa är inte bra). Det finns en knapp, **Generera ett offentligt/privat nyckelpar** som skapar detta nyckelpar åt dig. Se till att du sparar både offentliga och privata nycklar.
+1. Skapa ett nyckelpar eller Överför en offentlig nyckel (rsa är inte bra). Det finns en knapp, **Generera ett offentligt/privat nyckelpar** som skapar det här nyckelparet åt dig. Se till att du sparar både offentliga och privata nycklar.
 1. Navigera till API:t för användarhantering.
 1. Generera en åtkomsttoken (eller innehavartoken) genom att klistra in innehållet i den privata nyckeln i textrutan och klicka på **Generera token**.
-1. Spara all denna information, t.ex. **Klient-ID**, **Klienthemlighet**, **ID för tekniskt konto**, **E-post för tekniskt konto**, **Organisations-ID** och **Åtkomsttoken** säkert.
+1. Spara all denna information, t.ex. **Klient-ID**, **Klienthemlighet**, **Tekniskt konto-ID**, **E-post för tekniskt konto**, **Organisations-ID** och **Åtkomsttoken** säkert.
 
 ## Åtkomst till användargränssnittet för verktyget för användarmappning {#user-interface}
 
 Verktyget för användarmappning är integrerat i verktyget Innehållsöverföring. Du kan hämta verktyget Innehållsöverföring från [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). Mer information om den senaste versionen finns på [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md).
 
-1. Markera Adobe Experience Manager och gå till verktygen -> **Operationer** -> **Innehållsmigrering**.
+1. Markera Adobe Experience Manager och gå till verktygen > **Operationer** > **Innehållsmigrering**.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-user-mapping/user-mapping-access1.png)
 
@@ -62,7 +62,7 @@ Verktyget för användarmappning är integrerat i verktyget Innehållsöverföri
    * **Organisations-ID**: Ange IMS-organisationsnumret (Adobe Identity Management System) för den organisation som användarna migreras till.
 
      >[!NOTE]
-     >Logga in på [Admin Console](https://adminconsole.adobe.com/) och välj organisation (i det övre högra hörnet) om du tillhör fler än en. Org-ID:t finns i URL:en för den sidan, i ett format som `xx@AdobeOrg`, där xx är IMS Org ID. Du kan också hitta ditt Org ID i [Adobe Developer Console](https://developer.adobe.com/console/) sidan där du genererar åtkomsttoken.
+     >Logga in på [Admin Console](https://adminconsole.adobe.com/) och välj organisation (i det övre högra hörnet) om du tillhör fler än en. Org-ID:t finns i URL:en för den sidan, i ett format som `xx@AdobeOrg`, där xx är IMS Org ID. Du kan också hitta ditt Org ID i dialogrutan [Adobe Developer Console](https://developer.adobe.com/console/) sidan där du genererar åtkomsttoken.
 
    * **Klient-ID**: Ange det klient-ID som du sparade i konfigurationssteget.
 
@@ -71,7 +71,7 @@ Verktyget för användarmappning är integrerat i verktyget Innehållsöverföri
      >[!NOTE]
      >Åtkomsttoken upphör att gälla var 24:e timme och en ny måste skapas. Om du vill skapa en token går du tillbaka till [Adobe Developer Console](https://developer.adobe.com/console/), väljer projektet, klickar på **API för användarhantering** och klistra in samma privata nyckel i rutan.
 
-1. När du har fyllt i fälten klickar du på **Testa konfiguration** för att testa anslutningen till API-tjänsten för användarhantering. Om anslutningen lyckas kan du klicka på **Spara** för att spara konfigurationen.
+1. När du fyllt i fälten klickar du på **Testa konfiguration** för att testa anslutningen till API-tjänsten för användarhantering. Om anslutningen lyckas kan du klicka på **Spara** för att spara konfigurationen.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-user-mapping/user-mapping-access4.png)
 

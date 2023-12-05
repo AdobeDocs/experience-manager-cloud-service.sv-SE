@@ -8,9 +8,9 @@ level: Beginner
 hide: true
 hidefromtoc: true
 exl-id: 6f1c3fe7-b61e-47ce-b565-15b4904db092
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2659'
+source-wordcount: '2597'
 ht-degree: 0%
 
 ---
@@ -57,9 +57,9 @@ Du behöver följande för att skapa ett adaptivt formulär:
 
 1. Logga in på [!DNL Experience Manager Forms] Författarinstans. Det kan vara en molninstans eller en lokal utvecklingsinstans.
 
-1. Ange dina uppgifter på inloggningssidan för Experience Manager. När du är inloggad trycker du på **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
+1. Ange dina uppgifter på inloggningssidan för Experience Manager. När du är inloggad väljer du **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 
-1. Tryck på **[!UICONTROL Create]**  > **[!UICONTROL Adaptive Forms]**. Guiden öppnas. Välj en mall på fliken Källa:
+1. Välj **[!UICONTROL Create]**  > **[!UICONTROL Adaptive Forms]**. Guiden öppnas. Välj en mall på fliken Källa:
 
    ![Kärnkomponentmall](/help/forms/assets/core-components-template.png){width="100%" align="center"}
 
@@ -92,24 +92,24 @@ Du behöver följande för att skapa ett adaptivt formulär:
 
 1. (Valfritt) I dialogrutan **[!UICONTROL Delivery]** kan du ange ett publicerings- eller avpubliceringsdatum för ett adaptivt formulär.
 
-1. Tryck på **[!UICONTROL Create]**. En dialogruta där du kan ange namn, namn och plats för att spara det adaptiva formuläret visas:
+1. Välj **[!UICONTROL Create]**. En dialogruta där du kan ange namn, namn och plats för att spara det adaptiva formuläret visas:
 
    * **[!UICONTROL Title]** Anger formulärets visningsnamn. Titeln hjälper dig att identifiera formuläret i [!DNL Experience Manager Forms] användargränssnitt.
    * **[!UICONTROL Name:]** Anger formulärets namn. En nod med det angivna namnet skapas i databasen. När du börjar skriva en titel genereras värdet för namnfältet automatiskt. Du kan ändra det föreslagna värdet. Namnfältet får endast innehålla alfanumeriska tecken, bindestreck och understreck. Alla ogiltiga indata ersätts med ett bindestreck.
    * **[!UICONTROL Path:]** Anger platsen där det adaptiva formuläret ska sparas. Du kan spara det anpassade formuläret direkt på `/content/dam/formsanddocuments` eller skapa en mapp som `/content/dam/formsanddocuments/adaptiveforms` för att spara ett adaptivt formulär. Se till att du skapar mappen innan du använder den i sökvägen. The **[!UICONTROL Path]** skapas ingen mapp automatiskt.
 
-1. Tryck på **[!UICONTROL Create]**. Ett adaptivt formulär skapas och öppnas i den adaptiva Forms-redigeraren. Redigeraren visar det innehåll som är tillgängligt i mallen.  Baserat på typen av adaptiv form finns formulärelementen i den associerade <!--XFA form template, XML schema or --> JSON-schema eller formulärdatamodell visas i **[!UICONTROL Data Model Objects]** -fliken i **[!UICONTROL Content Browser]** i sidlisten.
+1. Välj **[!UICONTROL Create]**. Ett adaptivt formulär skapas och öppnas i den adaptiva Forms-redigeraren. Redigeraren visar det innehåll som är tillgängligt i mallen.  Baserat på typen av adaptiv form finns formulärelementen i den associerade <!--XFA form template, XML schema or --> JSON-schema eller formulärdatamodell visas i **[!UICONTROL Data Model Objects]** -fliken i **[!UICONTROL Content Browser]** i sidlisten.
 
 Nu kan du dra och släppa [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en#components) eller schemaelement för att skapa ett adaptivt formulär.
 
 
 ## Redigera formulärmodellegenskaper för ett adaptivt formulär {#edit-form-model-core-components-based-adaptive-forms}
 
-1. Markera det adaptiva formuläret och tryck på ![Sidinformation](/help/forms/assets/Smock_Properties_18_N.svg) > **[!UICONTROL Open Properties]**. Sidan Formuläregenskaper öppnas.
+1. Markera det adaptiva formuläret och välj ![Sidinformation](/help/forms/assets/Smock_Properties_18_N.svg) > **[!UICONTROL Open Properties]**. Sidan Formuläregenskaper öppnas.
 
 1. Gå till **[!UICONTROL Form Model]** och välj en formulärmodell. Om det adaptiva formuläret inte har någon formulärmodell kan du välja antingen ett JSON-schema eller en formulärdatamodell. Om det adaptiva formuläret däremot redan är baserat på en formulärmodell kan du växla till en annan formulärmodell av samma typ. Om formuläret till exempel använder ett JSON-schema kan du enkelt växla till ett annat JSON-schema, och på samma sätt kan du växla till en annan formulärdatamodell om formuläret använder en formulärdatamodell.
 
-1. Tryck **[!UICONTROL Save]** för att spara egenskaperna.
+1. Välj **[!UICONTROL Save]** för att spara egenskaperna.
 
 >[!TAB Skapa adaptiv Forms med Foundation Components]
 
@@ -132,9 +132,9 @@ Du behöver följande för att skapa ett adaptivt formulär:
 
 1. Ange dina uppgifter på inloggningssidan för Experience Manager.
 
-   När du är inloggad trycker du på **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
+   När du är inloggad väljer du **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 
-1. Tryck på **[!UICONTROL Create]**  > **[!UICONTROL Adaptive Forms]**. Guiden öppnas.
+1. Välj **[!UICONTROL Create]**  > **[!UICONTROL Adaptive Forms]**. Guiden öppnas.
 1. Välj en mall på fliken Källa:
 
    * När du väljer en redigerbar mall markeras ett tema och en skicka-åtgärd som anges i mallen automatiskt, och **[!UICONTROL Create]** knappen är aktiverad. Du kan gå till **[!UICONTROL Style]** eller **[!UICONTROL Submission]** för att välja ett annat tema eller skicka-åtgärd. Om den valda redigerbara mallen inte anger något tema är knappen Skapa inaktiverad. Du kan gå till **[!UICONTROL Styles]** om du vill välja ett tema manuellt.
@@ -172,13 +172,13 @@ Du behöver följande för att skapa ett adaptivt formulär:
 
 1. (Valfritt) På fliken Leverans kan du ange ett publicerings- eller avpubliceringsdatum för ett adaptivt formulär.
 
-1. Tryck på **[!UICONTROL Create]**. En dialogruta där du kan ange namn, namn och plats för att spara det adaptiva formuläret visas:
+1. Välj **[!UICONTROL Create]**. En dialogruta där du kan ange namn, namn och plats för att spara det adaptiva formuläret visas:
 
    * **[!UICONTROL Title]** Anger formulärets visningsnamn. Titeln hjälper dig att identifiera formuläret i [!DNL Experience Manager Forms] användargränssnitt.
    * **[!UICONTROL Name:]** Anger formulärets namn. En nod med det angivna namnet skapas i databasen. När du börjar skriva en titel genereras värdet för namnfältet automatiskt. Du kan ändra det föreslagna värdet. Namnfältet får endast innehålla alfanumeriska tecken, bindestreck och understreck. Alla ogiltiga indata ersätts med ett bindestreck.
    * **[!UICONTROL Path:]** Anger platsen där det adaptiva formuläret ska sparas. Du kan spara det anpassade formuläret direkt på `/content/dam/formsanddocuments` eller skapa en mapp som `/content/dam/formsanddocuments/adaptiveforms` för att spara ett adaptivt formulär. Se till att du skapar mappen innan du använder den i sökvägen. The **[!UICONTROL Path:]** skapas ingen mapp automatiskt.
 
-1. Tryck på **[!UICONTROL Create]**. Ett adaptivt formulär skapas och öppnas i den adaptiva Forms-redigeraren. Redigeraren visar det innehåll som är tillgängligt i mallen. Här visas också sidlisten där du kan anpassa det skapade formuläret efter behov.
+1. Välj **[!UICONTROL Create]**. Ett adaptivt formulär skapas och öppnas i den adaptiva Forms-redigeraren. Redigeraren visar det innehåll som är tillgängligt i mallen. Här visas också sidlisten där du kan anpassa det skapade formuläret efter behov.
 
    Baserat på typen av adaptiv form finns formulärelementen i den associerade <!--XFA form template, XML schema or --> JSON-schema eller formulärdatamodell visas i **[!UICONTROL Data Model Objects]** -fliken i **[!UICONTROL Content Browser]** i sidlisten. Du kan också dra och släppa dessa element för att skapa ett anpassat formulär.
 
@@ -192,7 +192,7 @@ To use a Form Data Model for creating an Adaptive Form:
 
    ![Create an Adaptive Form](assets/create-af-1-1.png)
 
-1. Tap to expand **[!UICONTROL Select Form Data Model]**. All available form data models are listed.Select a from data model.
+1. Select to expand **[!UICONTROL Select Form Data Model]**. All available form data models are listed.Select a from data model.
 
 >[!NOTE]
 >
@@ -209,12 +209,12 @@ See the following documents to understand how to design XML or JSON schema for a
 
 Do the following to use XML or JSON schema as form model for an Adaptive Form:
 
-1. On the **[!UICONTROL Add Properties]** step of Adaptive Form creation page, tap on the **[!UICONTROL Form Model]** tab.
+1. On the **[!UICONTROL Add Properties]** step of Adaptive Form creation page, select on the **[!UICONTROL Form Model]** tab.
 1. In the Form Model tab, select **[!UICONTROL Schema]** from the **[!UICONTROL Select From]** drop-down field.
 
-1. Tap **[!UICONTROL Select Schema]** and do one of the following:
+1. Select **[!UICONTROL Select Schema]** and do one of the following:
 
-    * **[!UICONTROL Upload from disk]** - Select this option and tap Upload Schema Definition to browse and upload an XML schema or JSON schema from your file system. The uploaded schema file resides with the form and is not accessible to other Adaptive Forms.
+    * **[!UICONTROL Upload from disk]** - Select this option and select Upload Schema Definition to browse and upload an XML schema or JSON schema from your file system. The uploaded schema file resides with the form and is not accessible to other Adaptive Forms.
     * **[!UICONTROL Search in repository]** - Select this option to select from the list of schema definition files available in the repository. Select the XML or JSON schema file as form model. The selected schema is associated with the form by reference and is accessible for use in other Adaptive Forms.
 
       Ensure that the JSON schema filename ends with **.schema.json**. For example: mySchema.schema.json
@@ -235,13 +235,13 @@ Do the following to use XML or JSON schema as form model for an Adaptive Form:
 
 Du kan ändra formulärmodellen för ett adaptivt formulär (JSON-baserat eller Formulärdatamodell). Du kan inte ändra från en formulärmodell till en annan.
 
-1. Markera det adaptiva formuläret och tryck på **Egenskaper** -ikon.
+1. Markera det adaptiva formuläret och välj **Egenskaper** -ikon.
 1. Öppna **[!UICONTROL Form Model]** och gör något av följande.
 
    * Om det adaptiva formuläret inte har någon formulärmodell kan du välja en annan formulärmodell och därefter välja <!-- a form template, --> XML- eller JSON-schema eller formulärdatamodell.
    * Om det adaptiva formuläret är baserat på en formulärmodell kan du välja ett annat <!-- form template, --> XML- eller JSON-schema eller formulärdatamodell för samma formulärmodell.
 
-1. Tryck **[!UICONTROL Save]** för att spara egenskaperna.
+1. Välj **[!UICONTROL Save]** för att spara egenskaperna.
 
 Du kan också ändra formulärmodellens egenskaper i den adaptiva formulärredigeraren eller i den adaptiva formulärmallsredigeraren.
 
@@ -251,7 +251,7 @@ Du kan också ändra formulärmodellens egenskaper i den adaptiva formulärredig
 
    * Om det adaptiva formuläret inte har någon formulärmodell kan du välja en formulärmodell och därefter välja <!-- a form template, --> XML- eller JSON-schema eller formulärdatamodell.
    * Om det adaptiva formuläret är baserat på en formulärmodell kan du inte ändra formulärmodellen. Du kan välja ett annat <!-- form template, --> XML- eller JSON-schema eller formulärdatamodell för samma formulärmodell som är tillämplig.
-1. Tryck ![Spara](/help/forms/assets/check-button.png) för att spara egenskaperna.
+1. Välj ![Spara](/help/forms/assets/check-button.png) för att spara egenskaperna.
 
 ![FDM-Schema-support](/help/forms/assets/fdmsupport.png){width="100%" align="center"}
 

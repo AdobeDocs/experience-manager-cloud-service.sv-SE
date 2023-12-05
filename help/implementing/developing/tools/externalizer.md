@@ -2,9 +2,9 @@
 title: Extern URL
 description: Externalizer är en OSGi-tjänst som gör att du programmässigt kan omvandla en resurssökväg till en extern och absolut URL.
 exl-id: 06efb40f-6344-4831-8ed9-9fc49f2c7a3f
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -99,7 +99,7 @@ I det här avsnittet visas några exempel på hur Externalizer-tjänsten kan anv
 
 >[!NOTE]
 >
->Inga absoluta länkar bör skapas i HTML. Denna funktion bör därför inte användas i sådana fall.
+>Inga absoluta länkar bör skapas i HTML. Använd därför inte denna funktion i sådana fall.
 
 * **Så här gör du en extern sökväg med domänen &#39;publish&#39;:**
 

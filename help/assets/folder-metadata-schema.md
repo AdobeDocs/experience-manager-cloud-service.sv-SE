@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: c86760ed-169d-40f7-91a4-8aee449b286c
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '1011'
-ht-degree: 4%
+source-wordcount: '1002'
+ht-degree: 3%
 
 ---
 
@@ -77,7 +77,7 @@ The **[!UICONTROL Build Form]** På fliken visas formulärobjekt som du använde
    <td><p> Lägg till en textegenskap med flera värden. Den lagras som en strängarray.</p> </td>
   </tr>
   <tr>
-   <td><p>Siffra</p> </td>
+   <td><p>Nummer</p> </td>
    <td><p> Lägg till en sifferkomponent.</p> </td>
   </tr>
   <tr>
@@ -141,7 +141,7 @@ Om du konfigurerar ett metadataschema för en mapp lagras sökvägen till schema
 
 1. Välj [!DNL Experience Manager] logotyp och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]**> **[!UICONTROL Folder Metadata Schemas]**.
 1. På Forms-sidan för mappmetadataschema väljer du det schemaformulär som du vill tillämpa på en mapp.
-1. Välj **[!UICONTROL Apply to Folder(s)]** i verktygsfältet.
+1. Välj **[!UICONTROL Apply to Folders]** i verktygsfältet.
 
 1. Välj den mapp som schemat ska tillämpas på och välj sedan **[!UICONTROL Apply]**. Om ett metadatamatchema redan används för mappen visas ett varningsmeddelande om att du håller på att skriva över det befintliga metadatamodemet. Välj **[!UICONTROL Overwrite]**.
 1. Öppna metadataegenskaperna för den mapp som du tillämpade metadataschemat på.
@@ -176,14 +176,14 @@ Ange metadatavärden i de olika fälten och välj **[!UICONTROL Save]** för att
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)

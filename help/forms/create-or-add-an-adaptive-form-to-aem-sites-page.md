@@ -4,9 +4,9 @@ description: Upptäck hur du skapar eller lägger till ett anpassat formulär p�
 feature: Adaptive Forms, Page Editor, Authoring
 Keywords: AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
 exl-id: a1846c5d-7b0f-4f48-9d15-96b2a8836a9d
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '3119'
+source-wordcount: '3088'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/create-or-add-an-adaptive-form-to-aem-sites-page.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Med AEM Forms kan du enkelt lägga till ett formulär på din AEM Sites-sida. På så sätt kan besökarna enkelt fylla i och skicka in formulär utan att lämna den sida de är på. På så sätt kan de enkelt hålla kontakten med andra element på webbplatsen samtidigt som de interagerar aktivt med formuläret.
 
@@ -53,7 +53,7 @@ Du kan utnyttja den här funktionen till fullo genom att använda följande alte
 
 * **[Konvertera ett anpassat formulär till Experience Fragment](#convert-an-adaptive-form-in-sites-page-to-an-experience-fragment):** Konvertera ett anpassat formulär som lagts till på en AEM Sites-sida till ett Experience Fragment för återanvändning av formuläret på flera AEM Sites-sidor.
 
-* **[Skapa och lägg till formulär baserade på godkända mallar på en AEM Sites-sida:](/help/forms/embed-adaptive-form-aem-sites.md#embed-form-using-adaptive-form-wizzard-aem-sites)** Ni kan använda redan godkända mallar för att snabbt skapa adaptiva Forms som är anpassade efter företagets grafiska profil och designstandarder. Alternativet är bara tillgängligt för Adaptiv Forms som har skapats med Adaptiv Forms Editor eller Adaptiv Forms - Bädda in komponent.
+* **[Skapa och lägg till formulär baserade på godkända mallar på en AEM Sites-sida:](/help/forms/embed-adaptive-form-aem-sites.md#embed-form-using-adaptive-form-wizzard-aem-sites)** Du kan använda redan godkända mallar för att snabbt skapa adaptiva Forms som är anpassade efter organisationens riktlinjer och designstandarder. Alternativet är bara tillgängligt för Adaptiv Forms som har skapats med Adaptiv Forms Editor eller Adaptiv Forms - Bädda in komponent.
 
 * **[Lägga till befintliga formulär på en AEM Sites-sida:](/help/forms/embed-adaptive-form-aem-sites.md#embed-an-adaptive-form-in-sites-editor)** Ni kan enkelt integrera formulär som ni redan har skapat på era webbplatser, så att besökarna kan interagera direkt med dem. Alternativet är bara tillgängligt för Adaptiv Forms som har skapats med Adaptiv Forms Editor eller Adaptiv Forms - Bädda in komponent.
 

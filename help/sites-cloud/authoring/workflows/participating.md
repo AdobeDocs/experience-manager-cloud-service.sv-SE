@@ -2,7 +2,7 @@
 title: Delta i arbetsflöden
 description: Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en aktivitet på en sida eller en resurs.
 exl-id: 62192da9-0b5b-4997-9c2b-d1aee04b01f9
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
 source-wordcount: '1507'
 ht-degree: 1%
@@ -33,7 +33,7 @@ När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas o
   ![Meddelanden i inkorgen](/help/sites-cloud/authoring/assets/workflows-inbox.png)
 
 * När du använder sidredigeraren visas statusfältet:
-   * Namnet på arbetsflödet eller arbetsflödena som används på sidan, till exempel Begäran om aktivering.
+   * Namnet på arbetsflödet eller arbetsflödena som används på sidan, till exempel begäran om aktivering.
    * Alla åtgärder som är tillgängliga för den aktuella användaren för det aktuella steget i arbetsflödet, till exempel Fullständigt, Delegera, Visa information.
    * Antalet arbetsflöden som sidan är underställd. Du kan:
       * Använd vänster-/högerpilarna för att navigera i statusinformationen för de olika arbetsflödena.

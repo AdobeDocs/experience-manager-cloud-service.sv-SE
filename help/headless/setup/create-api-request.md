@@ -2,7 +2,7 @@
 title: Skapa en API-begäran - Headless-konfiguration
 description: Lär dig hur du använder GraphQL API för headless-leverans av Content Fragment-innehåll och AEM Assets REST API för att hantera innehållsfragment.
 exl-id: 2b72f222-2ba5-4a21-86e4-40c763679c32
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 0%
@@ -51,7 +51,7 @@ GraphiQL är en integrerad utvecklingsmiljö som ingår i AEM. Den är tillgäng
 
    Du kan öppna frågeredigeraren från:
 
-   * **verktyg** -> **Allmänt** -> **GraphQL Query Editor**
+   * **verktyg** > **Allmänt** > **GraphQL Query Editor**
    * direkt, till exempel `http://localhost:4502/aem/graphiql.html`
 
 1. GraphiQL IDE är en frågeredigerare i webbläsaren för GraphQL. Du kan använda den för att skapa frågor för att hämta innehållsfragment och leverera dem i headlessläge som JSON.

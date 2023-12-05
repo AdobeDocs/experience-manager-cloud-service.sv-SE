@@ -4,9 +4,9 @@ description: Lär dig konfigurera [!DNL Adobe Experience Manager] Plugin-program
 contentOwner: AG
 mini-toc-levels: 1
 exl-id: 91619662-e865-47d1-8bec-0739f402353a
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '4276'
+source-wordcount: '4281'
 ht-degree: 0%
 
 ---
@@ -228,7 +228,7 @@ Detta görs genom att plugin-programmet för format aktiveras.
 
 Ange sedan platsen/platserna för de formatmallar som du vill referera till:
 
-1. Navigera till textkomponentens rotnod, till exempel `/apps/<myProject>/components/text`.
+1. Navigera till rotnoden för textkomponenten, till exempel `/apps/<myProject>/components/text`.
 1. Lägg till egenskapen `externalStyleSheets` till den överordnade noden för `<rtePlugins-node>`:
 
    * **Namn** `externalStyleSheets`
@@ -329,7 +329,7 @@ All text som skapas i textredigeraren placeras i en blocktagg med standardvärde
 
 >[!NOTE]
 >
->Om en blocktagg används till exempel en `<hr>` -tagg, kan inte tilldelas till ett stycke, det är inte ett giltigt användningsfall för ett `paraformat` plugin-program.
+>Om en blocktagg exempelvis `<hr>` -tagg, kan inte tilldelas till ett stycke, det är inte ett giltigt användningsfall för ett `paraformat` plugin-program.
 
 När plugin-programmet Styckeformat är aktiverat för första gången är inga standardstyckeformat tillgängliga. Popup-listan är tom. Så här förser du författarna med styckeformat:
 

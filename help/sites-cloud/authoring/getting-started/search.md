@@ -1,15 +1,15 @@
 ---
-title: Sökning
+title: Sök
 description: Hitta materialet snabbare med omfattande sökfunktioner
 exl-id: 8a799e9a-1461-4e79-ae90-1978af6cf0ed
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 6%
 
 ---
 
-# Sökning {#search-feature}
+# Sök {#search-feature}
 
 I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende på resurstypen.
 

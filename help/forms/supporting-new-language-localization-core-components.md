@@ -2,9 +2,9 @@
 title: Hur lägger jag till stöd för nya språkområden i en adaptiv form som bygger på kärnkomponenterna?
 description: Lär dig hur du lägger till nya språkområden i ett adaptivt formulär.
 exl-id: bc06542b-84c8-4c6a-a305-effbd16d5630
-source-git-commit: 5be0c5e347d2ec7ef660a701c8c6faf6a2d6d17a
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '1335'
+source-wordcount: '1333'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ Så här lägger du till stöd för en ny språkinställning:
    git clone https://git.cloudmanager.adobe.com/<my-org>/<my-program>/
    ```
 
-   Ersätt `<my-org>` och `<my-program>` i ovanstående URL med ditt organisationsnamn och programnamn. Detaljerade instruktioner om hur du får reda på organisationens namn, programnamn eller den fullständiga sökvägen till Git-databasen och de inloggningsuppgifter som krävs för att klona databasen finns i [Åtkomst till Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git) artikel.
+   Ersätt `<my-org>` och `<my-program>` i ovanstående URL med ditt organisationsnamn och programnamn. Detaljerade instruktioner om hur du får reda på organisationsnamnet, programnamnet eller den fullständiga sökvägen till Git-databasen och de inloggningsuppgifter som krävs för att klona databasen finns i [Åtkomst till Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git) artikel.
 
    När kommandot är klart skapas en mapp `<my-program>` skapas. Den innehåller det innehåll som klonats från Git-databasen. I resten av artikeln refereras mappen som, `[AEM Forms as a Cloud Service Git repository]`.
 

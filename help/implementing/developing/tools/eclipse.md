@@ -2,10 +2,10 @@
 title: AEM Developer Tools for Eclipse
 description: Lär dig hur du använder AEM Developer Tools för Eclipse, ett Eclipse-plugin-program baserat på Eclipse-pluginprogrammet för Apache Sling.
 exl-id: 7f9c0f99-e230-440a-8bc9-a0ab7465e3bf
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1191'
-ht-degree: 1%
+source-wordcount: '1138'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 ![Experience Manager Developer Tools for Eclipse logo](assets/eclipse-logo.png)
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 _Experience Manager Developer Tools for Eclipse_ är ett Eclipse-plugin-program baserat på [Eclipse-plugin för Apache Sling](https://sling.apache.org/documentation/development/ide-tooling.html) som släpps under Apache License 2.
 

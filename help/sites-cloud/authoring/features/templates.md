@@ -2,10 +2,10 @@
 title: Skapa sidmallar
 description: Mallen definierar strukturen för den resulterande sidan och med mallredigeraren är det inte längre en uppgift som bara är avsedd för utvecklare att skapa och underhålla mallar
 exl-id: 4c9dbf26-5852-45ab-b521-9f051c153b2e
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '4535'
-ht-degree: 8%
+source-wordcount: '4523'
+ht-degree: 7%
 
 ---
 
@@ -49,7 +49,7 @@ Om du vill skapa en ny mall med hjälp av **mallkonsolen** och **mallredigeraren
 * **Administratör**:
    * Skapar en ny mapp för mallar som krävs `admin` rättigheter.
    * Sådana uppgifter kan ofta även utföras av en utvecklare
-* **Developer**:
+* **Utvecklare**:
    * Koncentrerar sig på tekniska/interna detaljer
    * Kräver erfarenhet av utvecklingsmiljön.
    * Förser mallskaparen med nödvändig information.
@@ -95,11 +95,11 @@ När du skapar en redigerbar mall:
 
 ### Skapa en mallmapp - administratör {#creating-a-template-folder-admin}
 
-Du bör skapa en mallmapp för ditt projekt för dina projektspecifika mallar. Detta är en administratörsåtgärd och beskrivs i dokumentet [Sidmallar](/help/implementing/developing/components/templates.md#template-folders).—>
+Du bör skapa en mallmapp för ditt projekt för dina projektspecifika mallar. Detta är en administratörsåtgärd och beskrivs i dokumentet [Sidmallar](/help/implementing/developing/components/templates.md#template-folders).
 
 ### Skapa en ny mall - mallskapare {#creating-a-new-template-template-author}
 
-1. Öppna **mallkonsolen** (via **Verktyg ->** **Allmänt**) och navigera sedan till önskad mapp.
+1. Öppna **Mallkonsol** (genom **Verktyg >** **Allmänt**) navigera sedan till önskad mapp.
 
    >[!NOTE]
    >
@@ -143,7 +143,7 @@ En mall kan ha följande egenskaper:
 * Titel
    * En titel som används för att identifiera mallen, till exempel i **Skapa sida** guide.
 * Beskrivning
-   * En valfri beskrivning som ger mer information om mallen och dess användning, som kan visas t.ex. i **Skapa sida** guide.
+   * En valfri beskrivning som ger mer information om mallen och hur den används, som kan visas t.ex. i **Skapa sida** guide.
 
 Så här visar och/eller redigerar du egenskaperna:
 
@@ -415,7 +415,7 @@ För en bildkomponent kan du till exempel definiera beskärningsproportionerna, 
 
 >[!CAUTION]
 >
->Observera att AEM beskärningsproportioner definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av bakåtkompatibilitetsskäl. Sidredigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar **Namn** så här visas det tydligt i användargränssnittet.
+>I AEM definieras beskärningsproportioner som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av bakåtkompatibilitetsskäl. Sidredigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar **Namn** så här visas det tydligt i användargränssnittet.
 
 >[!NOTE]
 >
@@ -459,7 +459,7 @@ På **Tillåtna komponenter** definierar du vilka komponenter som är tillgängl
 
 ###### Standardkomponenter {#default-components}
 
-På **Standardkomponenter** definierar du vilka komponenter som automatiskt kopplas till vissa medietyper så att AEM vet vilken komponent som ska kopplas när en författare drar en resurs från resursläsaren. Observera att endast komponenter med släppzoner är tillgängliga för sådan konfiguration.
+På **Standardkomponenter** definierar du vilka komponenter som automatiskt kopplas till vissa medietyper så att AEM vet vilken komponent som ska kopplas när en författare drar en resurs från resursläsaren. Endast komponenter med släppzoner är tillgängliga för sådan konfiguration.
 
 Välj **Lägg till mappning** för att lägga till en helt ny komponent och MIME-typmappning.
 

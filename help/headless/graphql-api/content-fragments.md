@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '4923'
+source-wordcount: '4863'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Mer information om GraphQL API finns i följande avsnitt (bland annat på engels
 
    * [Stödlinjer](https://www.graphql.com/guides/)
 
-   * [Självstudiekurser](https://www.graphql.com/tutorials/)
+   * [Tutorials](https://www.graphql.com/tutorials/)
 
    * [Fallstudier](https://www.graphql.com/case-studies/)
 
@@ -115,7 +115,7 @@ The [Beständiga frågor](/help/headless/graphql-api/persisted-queries.md) är d
 
 GraphQL-frågor som använder förfrågningar om POST rekommenderas inte eftersom de inte cachelagras, så i en standardinstans är Dispatcher konfigurerad att blockera sådana frågor.
 
-Även om GraphQL har stöd för GET-förfrågningar kan dessa få träffgränser (till exempel längden på URL:en) som kan undvikas med beständiga frågor.
+Även om GraphQL har stöd för GET-förfrågningar kan dessa få träffgränser (t.ex. längden på URL:en) som kan undvikas med beständiga frågor.
 
 Se [Aktivera cachelagring av beständiga frågor](/help/headless/deployment/dispatcher-caching.md) för mer information.
 
@@ -247,7 +247,7 @@ GraphQL för AEM har stöd för en lista med typer. Alla Content Fragment Model-
 |--- |--- |--- |
 | Enkelradig text | `String`, `[String]` | Används för enkla strängar som författarnamn, platsnamn och så vidare. |
 | Flerradstext | `String`, `[String]` | Används för att skriva ut text, t.ex. brödtexten i en artikel |
-| Siffra | `Float`, `[Float]` | Används för att visa flyttal och reguljära tal |
+| Nummer | `Float`, `[Float]` | Används för att visa flyttal och reguljära tal |
 | Boolean | `Boolean` | Används för att visa kryssrutor → enkla sant/falskt-satser |
 | Datum och tid | `Calendar` | Används för att visa datum och tid i ett ISO 8601-format. Beroende på vilken typ som valts finns det tre aromer som kan användas i AEM GraphQL: `onlyDate`, `onlyTime`, `dateTime` |
 | Uppräkning | `String` | Används för att visa ett alternativ från en lista med alternativ som definieras när modellen skapas |
@@ -519,7 +519,7 @@ En filterdefinition (skickas som `filter` argument till en fråga) innehåller:
 * Varje underdefinition innehåller `_expressions` -array, som innehåller uttrycksuppsättningen och `_logOp` fält som definierar den logiska operatorn ska uttrycken kombineras med
 * Varje uttryck definieras av värdet (`value` fält) och operatorn (`_operator` fält) innehållet i ett fält ska jämföras med
 
-Observera att du kan utesluta `_logOp` om du vill kombinera objekt med `AND` och `_operator` om du vill kontrollera likhet, eftersom det här är standardvärdena.
+Du kan utesluta `_logOp` om du vill kombinera objekt med `AND` och `_operator` om du vill kontrollera likhet, eftersom det här är standardvärdena.
 
 I följande exempel visas en fullständig fråga som filtrerar alla personer som har en `lastName` av `Provo` eller innehåller `sjö`, oberoende av omständigheterna:
 

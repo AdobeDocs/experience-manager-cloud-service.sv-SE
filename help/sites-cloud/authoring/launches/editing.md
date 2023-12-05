@@ -1,15 +1,15 @@
 ---
-title: Redigera Launches
+title: Redigeringsövningar
 description: När du har skapat en startsida för sidan (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna.
 exl-id: d3cd3383-e0a0-4019-9f97-8baa3be99e6e
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '551'
 ht-degree: 17%
 
 ---
 
-# Redigera Launches {#editing-launches}
+# Redigeringsövningar {#editing-launches}
 
 ## Redigera startsidor {#editing-launch-pages}
 

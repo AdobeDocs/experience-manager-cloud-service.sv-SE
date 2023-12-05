@@ -2,7 +2,7 @@
 title: Developing and Page Diff
 description: Förstå hur funktionen för sidskillnader fungerar och hur den kan påverka en utvecklare
 exl-id: 03c08616-2203-4b90-bed6-4836266e2507
-source-git-commit: 7260649eaab303ba5bab55ccbe02395dc8159949
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Developing and Page Diff {#developing-and-page-diff}
 
-## Funktionsöversikt {#feature-overview}
+## Översikt över funktioner {#feature-overview}
 
 Att skapa innehåll är en repetitiv process. Effektiv redigering kräver att man kan se vad som har ändrats från en iteration till en annan. Om du visar den ena sidversionen och den andra är ineffektiv och felbenägen kan uppstå. En författare vill kunna jämföra den aktuella sidan med en tidigare version sida vid sida med skillnaderna markerade.
 
@@ -19,9 +19,9 @@ Med sidskillnaden kan användaren jämföra den aktuella sidan med startsidor, t
 
 ## Operationsinformation {#operation-details}
 
-När du jämför versioner av en sida skapas den tidigare versionen som användaren vill jämföra av AEM i bakgrunden för att underlätta skillnaderna. Denna tidigare version är nödvändig för att återge innehållet [för jämförelse sida vid sida](/help/sites-cloud/authoring/features/page-diff.md).
+När du jämför versioner av en sida skapas den tidigare versionen som användaren vill jämföra av AEM i bakgrunden för att underlätta skillnaderna. Den här tidigare versionen är nödvändig för att återge innehållet [för jämförelse sida vid sida](/help/sites-cloud/authoring/features/page-diff.md).
 
-Denna rekreationsåtgärd görs internt av AEM och är transparent för användaren och kräver ingen åtgärd. En administratör som visar databasen, t.ex. i CRXDE Lite, kan se dessa återskapade versioner i innehållsstrukturen.
+Denna rekreationsåtgärd görs internt av AEM och är transparent för användaren och kräver ingen åtgärd. En administratör som visar databasen, till exempel i CRXDE Lite, skulle kunna se dessa återskapade versioner i innehållsstrukturen.
 
 När innehållet jämförs återskapas hela trädet fram till sidan som ska jämföras på följande plats:
 

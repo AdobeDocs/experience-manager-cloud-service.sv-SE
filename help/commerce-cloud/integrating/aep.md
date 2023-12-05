@@ -11,9 +11,9 @@ level: Beginner
 kt: 10834
 thumbnail: 346811.jpeg
 exl-id: 30bb9b2c-5f00-488e-ad5c-9af7cd2c4735
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '2068'
+source-wordcount: '1870'
 ht-degree: 0%
 
 ---
@@ -266,7 +266,7 @@ Om du vill initiera den Reaktionsbaserade Premiere och CIF kärnkomponenter skap
        useDataLayerEvents();
    
        useEffect(() => {
-           // implement a proper marketing opt-in, for demo purpose we hard-set the consent cookie
+           // implement a proper marketing opt-in, for demo purpose you hard-set the consent cookie
            if (document.cookie.indexOf('mg_dnt') < 0) {
                document.cookie += '; mg_dnt=track';
            }
@@ -347,7 +347,7 @@ Så här tar du emot och lagrar händelsedata från AEM Commerce-sidor, t.ex. ka
 
 Om du vill definiera strukturen för e-handelshändelsedata måste du skapa ett XDM-schema (Experience Data Model). Ett schema är en uppsättning regler som representerar och validerar datastrukturen och dataformatet.
 
-1. I webbläsaren går du till __Adobe Experience Platform__ startsida för produkten. Till exempel, <https://experience.adobe.com/#/@YOUR-ORG-NAME/sname:prod/platform/home>.
+1. I webbläsaren går du till __Adobe Experience Platform__ startsida för produkten. Till exempel: <https://experience.adobe.com/#/@YOUR-ORG-NAME/sname:prod/platform/home>.
 
 1. Leta reda på __Scheman__ i det vänstra navigeringsavsnittet klickar du på __Skapa schema__ i det övre högra avsnittet och väljer __XDM ExperienceEvent__.
 
@@ -370,7 +370,7 @@ Om du vill definiera strukturen för e-handelshändelsedata måste du skapa ett 
 
 Om du vill lagra händelsedata måste du skapa en datauppsättning som överensstämmer med schemadefinitionen. En datauppsättning är en lagrings- och hanteringskonstruktion för en datamängd, vanligtvis en tabell, som innehåller ett schema (kolumner) och fält (rader).
 
-1. I webbläsaren går du till __Adobe Experience Platform__ startsida för produkten. Till exempel, <https://experience.adobe.com/#/@YOUR-ORG-NAME/sname:prod/platform/home>.
+1. I webbläsaren går du till __Adobe Experience Platform__ startsida för produkten. Till exempel: <https://experience.adobe.com/#/@YOUR-ORG-NAME/sname:prod/platform/home>.
 
 1. Leta reda på __Datauppsättningar__ i det vänstra navigeringsavsnittet och klicka på __Skapa datauppsättning__ i det övre högra avsnittet.
 
@@ -397,7 +397,7 @@ Om du vill lagra händelsedata måste du skapa en datauppsättning som överenss
 
 Följ de här stegen för att skapa ett datastream i Experience Platform.
 
-1. I webbläsaren går du till __Adobe Experience Platform__ startsida för produkten. Till exempel, <https://experience.adobe.com/#/@YOUR-ORG-NAME/sname:prod/platform/home>.
+1. I webbläsaren går du till __Adobe Experience Platform__ startsida för produkten. Till exempel: <https://experience.adobe.com/#/@YOUR-ORG-NAME/sname:prod/platform/home>.
 
 1. Leta reda på __Datastreams__ i det vänstra navigeringsavsnittet och klicka på __Ny datastream__ i det övre högra avsnittet.
 

@@ -2,9 +2,9 @@
 title: Redigera sidinnehåll
 description: När sidan har skapats kan du redigera innehållet för att göra de uppdateringar du behöver
 exl-id: 8af0f621-14e8-4605-a51a-a3be21f19092
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2973'
+source-wordcount: '2974'
 ht-degree: 4%
 
 ---
@@ -322,7 +322,7 @@ Till exempel **Text** komponent:
 
 Så här flyttar du en styckekomponent:
 
-1. Markera det stycke som ska flyttas genom att trycka och hålla ned eller klicka och hålla ned.
+1. Markera det stycke som ska flyttas genom att markera och hålla ned eller klicka och hålla ned.
 1. Dra stycket till den nya platsen. AEM anger var stycket kan placeras. Släpp den där du vill.
 
    ![Flytta en komponent](/help/sites-cloud/authoring/assets/editing-moving-component.png)

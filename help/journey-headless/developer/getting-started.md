@@ -2,9 +2,9 @@
 title: Komma igång med AEM Headless as a Cloud Service
 description: I den här delen av AEM Headless Developer Journey kan du läsa om AEM Headless-krav.
 exl-id: 9661e17b-fa9f-4689-900c-412b068e942c
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '3093'
+source-wordcount: '3057'
 ht-degree: 0%
 
 ---
@@ -181,7 +181,7 @@ Skapa en plan för vilken innehållsöversättning du behöver.
 
 Var tydlig med arbetsflödet för innehållsuppdatering. Vilken godkännandeprocess måste systemet stödja? Kan AEM arbetsflöden användas för att automatisera den här processen?
 
-Observera att [innehållshierarki](#content-hierarchy) kan användas för att underlätta översättning.
+Dina [innehållshierarki](#content-hierarchy) kan användas för att underlätta översättning.
 
 Se [ytterligare resurser](#additional-resources) för ytterligare dokumentation om AEM arbetsflöden och översättningsverktyg, inklusive länkar till den AEM Headless Translation Journey.
 

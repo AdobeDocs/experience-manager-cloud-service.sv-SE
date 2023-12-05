@@ -2,9 +2,9 @@
 title: Komma igång med SPA i AEM med Angular
 description: I den här artikeln visas ett exempel SPA programmet, hur det sätts ihop och hur du snabbt kommer igång med ditt eget SPA med hjälp av ramverket för Angular.
 exl-id: 8013ac2c-d1a7-4940-bb65-15e3ed7652d6
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '981'
 ht-degree: 0%
 
 ---
@@ -266,7 +266,7 @@ Slutligen kan bilden återges i `image.component.html`.
 
 Det är regelbundet nödvändigt att komponenter i ett ensidigt program delar information. Det finns flera rekommenderade sätt att göra detta, som anges nedan i ökande komplexitetsordning.
 
-* **Alternativ 1:** Centralisera logiken och skicka till de nödvändiga komponenterna, till exempel genom att använda en util-klass som en ren objektorienterad lösning.
+* **Alternativ 1:** Centralisera logiken och skicka till nödvändiga komponenter, till exempel genom att använda en util-klass som en helt objektorienterad lösning.
 * **Alternativ 2:** Dela komponentlägen med hjälp av ett lägesbibliotek som NgRx.
 * **Alternativ 3:** Utnyttja objekthierarkin genom att anpassa och utöka behållarkomponenten.
 

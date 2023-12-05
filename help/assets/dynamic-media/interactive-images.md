@@ -5,16 +5,16 @@ contentOwner: Rick Brough
 feature: Interactive Images
 role: User
 exl-id: 89eef5e6-d508-4f33-b54e-24d4df49f8c3
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '4141'
-ht-degree: 1%
+source-wordcount: '4039'
+ht-degree: 0%
 
 ---
 
 # Interaktiva bilder{#interactive-images}
 
-Du kan enkelt skapa statiska bilder med engagerande upplevelser för kunderna genom att dra och släppa&quot;köpbara&quot; hotspot-områden på en bild. De köpbara hotspotten kombinerar ytterligare information om en produkt eller tjänst med en direktförsäljningsfunktion,&quot;Lägg i kundvagnen&quot; eller&quot;Köp&quot;. Kunderna kan trycka på dessa hotspot-områden som länkar direkt till produkten eller tjänsten, lägga till den i en kundvagn eller länkas till en webbsida. Direktupplevelser som dessa ökar kundernas engagemang och konverteringar på er webbplats.
+Du kan enkelt skapa statiska bilder med engagerande upplevelser för kunderna genom att dra och släppa&quot;köpbara&quot; hotspot-områden på en bild. De köpbara hotspotten kombinerar ytterligare information om en produkt eller tjänst med en direktförsäljningsfunktion,&quot;Lägg i kundvagnen&quot; eller&quot;Köp&quot;. Kunderna kan välja dessa hotspot-områden som länkar direkt till produkten eller tjänsten, lägga till dem i en kundvagn eller länkas till en webbsida. Direktupplevelser som dessa ökar kundernas engagemang och konverteringar på er webbplats.
 
 Här följer en köpbar banderoll med ett popup-fönster i snabbvyn. En användare aktiverar snabbvyn genom att trycka på cirkeln eller aktiveringspunkten på modellen.
 
@@ -179,20 +179,20 @@ När du har sparat visningsförinställningen aktiveras den automatiskt (aktiver
 **Så här skapar du en förinställning för Interactive Image Viewer:**
 
 1. Gå till vänster **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Viewer Presets]**.
-1. I sidans övre högra hörn trycker du **[!UICONTROL Create]**.
+1. I sidans övre högra hörn väljer du **[!UICONTROL Create]**.
 1. I dialogrutan Ny visningsförinställning för visningsprogrammet skriver du ett namn som beskriver förinställningen för det interaktiva visningsprogrammet för banderollen.
 
    Titeln visas på listsidan för visningsförinställningar när du har sparat.
 
 1. I listrutan Multimedietyp väljer du **[!UICONTROL Interactive Image]**.
 1. Välj **[!UICONTROL Create]**.
-1. Tryck på knappen **[!UICONTROL Appearance]** -fliken.
+1. På sidan Redigera visningsförinställning väljer du **[!UICONTROL Appearance]** -fliken.
 1. Gör något av följande:
 
-   * Om du vill överföra en egen hotspot-bild som du vill använda på bilder trycker du på ikonen Resursväljaren. Gå till den hotspot-bild som du vill använda på sidan Välj innehåll och markera den. Markera bockmarkeringsikonen i det övre högra hörnet.
-   * Om du vill välja en fördefinierad hotspot-bild trycker du på ikonen för Hotspot-galleriet. Tryck på den hotspot-bild som du vill använda på paletten för aktivt punktgalleri.
+   * Om du vill överföra en egen hotspot-bild som du vill använda på bilder väljer du ikonen Resursväljaren. Gå till den hotspot-bild som du vill använda på sidan Välj innehåll och markera den. Markera bockmarkeringsikonen i det övre högra hörnet.
+   * Om du vill välja en fördefinierad hotspot-bild väljer du ikonen för Hotspot-galleriet. Markera den hotspot-bild som du vill använda på paletten för aktivt punktgalleri.
 
-1. I sidans övre högra hörn trycker du **[!UICONTROL Save]**.
+1. I sidans övre högra hörn väljer du **[!UICONTROL Save]**.
 
    Var noga med att publicera den nya visningsförinställningen.
 
@@ -247,35 +247,35 @@ Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas
 1. I resursvyn navigerar du till den bildbanderoll som du vill göra interaktiv.
 1. Gör något av följande:
 
-   * Hovra över bilden och tryck sedan **[!UICONTROL Select]** (bockmarkeringsikon). Tryck på i verktygsfältet **[!UICONTROL Edit]**.
+   * Hovra över bilden och välj sedan **[!UICONTROL Select]** (bockmarkeringsikon). I verktygsfältet väljer du **[!UICONTROL Edit]**.
 
-   * Hovra över bilden och tryck sedan **[!UICONTROL More actions]** (ikon med tre punkter) **[!UICONTROL > Edit]**.
+   * Hovra över bilden och välj sedan **[!UICONTROL More actions]** (ikon med tre punkter) **[!UICONTROL > Edit]**.
 
-   * Tryck på bilden för att öppna den på sidan Detaljvy. Tryck på i verktygsfältet **[!UICONTROL Edit]**.
+   * Markera bilden om du vill öppna den på sidan Detaljvy. Välj **[!UICONTROL Edit]**.
 
-1. I närheten av sidans övre vänstra hörn trycker du på **[!UICONTROL Add Hotspot]** (pekaren) för att öppna sidan för hantering av hotspot-områden.
-1. Knacka i det övre vänstra hörnet av sidan **[!UICONTROL Hotspot]**.
+1. I närheten av sidans övre vänstra hörn väljer du **[!UICONTROL Add Hotspot]** (välj ikon med fingret) för att öppna sidan för hantering av aktiveringspunkter.
+1. I närheten av sidans övre vänstra hörn väljer du **[!UICONTROL Hotspot]**.
 
-   1. I närheten av det övre vänstra hörnet på sidan Hantering av hotspot trycker du på **[!UICONTROL Hotspot]**.
-   1. Tryck på den plats i bilden där du vill att hotspot-området ska visas. Dra hotspot-området om det behövs för att justera dess placering. Du kan också använda piltangenterna på tangentbordet för att styra positionen för en markerad aktiveringspunkt.
+   1. I närheten av det övre vänstra hörnet på sidan Hantering av aktiveringspunkter väljer du **[!UICONTROL Hotspot]**.
+   1. På bilden väljer du en plats där du vill att hotspot-området ska visas. Dra hotspot-området om det behövs för att justera dess placering. Du kan också använda piltangenterna på tangentbordet för att styra positionen för en markerad aktiveringspunkt.
    1. Lägg till fler hotspot-områden efter behov genom att upprepa stegen a och b.
-   1. (Valfritt) Om du vill ta bort en aktiveringspunkt markerar du den i bilden och trycker sedan på **[!UICONTROL Delete]** (papperskorgsikonen) under **[!UICONTROL Hotspots]** rubrik.
+   1. (Valfritt) Om du vill ta bort en aktiveringspunkt markerar du den i bilden och väljer sedan **[!UICONTROL Delete]** (papperskorgsikonen) under **[!UICONTROL Hotspots]** rubrik.
 
 1. Skriv namnet på aktiveringspunkten i textfältet Namn. Det här namnet visas också i listrutan Markerad aktiveringspunkt.
 1. Gör något av följande:
 
    * Välj **[!UICONTROL Quickview]**.
 
-      * Om du är Experience Manager Sites- eller e-handelskund väljer du produktväljarikonen (förstoringsglas) för att öppna sidan Välj produkt. Välj den produkt du vill använda och tryck sedan på **Välj** i det övre högra hörnet på sidan. Du återgår till sidan för hantering av hotspot.
+      * Om du är Experience Manager Sites- eller e-handelskund väljer du produktväljarikonen (förstoringsglas) för att öppna sidan Välj produkt. Välj den produkt du vill använda och välj sedan **Välj** i det övre högra hörnet på sidan. Du återgår till sidan för hantering av hotspot.
       * Om du *not* en Experience Manager Sites- eller e-handelskund
 
          * Se [Identifiera hotspot-variabler](#optional-identifying-hotspot-variables); du måste definiera dessa variabler.
          * Ange sedan SKU-värdet manuellt. Skriv produktens SKU i textfältet SKU-värde. Det angivna SKU-värdet fyller automatiskt i variabeldelen av QuickView-mallen. Det ser till att systemet känner till att koppla den aktiveringspunkt som användaren knackar på till en viss SKU:s snabbvy.
-         * (Valfritt) Om det finns andra variabler i snabbvyn som används för att identifiera en produkt ytterligare trycker du på **[!UICONTROL Add Generic Variable]**. Ange en extra variabel i textfältet. Till exempel: `category=Mens` är en tillagd variabel.
+         * (Valfritt) Om det finns andra variabler i snabbvyn som används för att identifiera en produkt ytterligare väljer du **[!UICONTROL Add Generic Variable]**. Ange en extra variabel i textfältet. Till exempel: `category=Mens` är en tillagd variabel.
 
    * Välj **[!UICONTROL Hyperlink]**.
 
-      * Om du är kund hos Experience Manager Sites trycker du på ikonen för platsväljaren (mappen). Navigera till en URL. Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager Sites-sidor.
+      * Om du är kund hos Experience Manager Sites väljer du ikonen Platsväljare (mapp). Navigera till en URL. Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager Sites-sidor.
       * Om du är en fristående kund anger du den fullständiga URL-sökvägen till en länkad webbsida i textfältet HREF.
 
    Var noga med att ange om länken ska öppnas på en ny webbläsarflik (rekommenderat standardvärde) eller på samma flik.
@@ -284,7 +284,7 @@ Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas
 
    * Välj **[!UICONTROL Experience Fragment]**.
 
-      * Om du är Experience Manager Sites-kund väljer du sökikonen (förstoringsglas) för att öppna sidan Experience Fragment. Välj det Experience Fragment som du vill använda. Tryck sedan **[!UICONTROL Select]** i det övre högra hörnet på sidan. Du återgår till sidan för hantering av hotspot.
+      * Om du är Experience Manager Sites-kund väljer du sökikonen (förstoringsglas) för att öppna sidan Experience Fragment. Välj det Experience Fragment som du vill använda. Välj sedan **[!UICONTROL Select]** i det övre högra hörnet på sidan. Du återgår till sidan för hantering av hotspot.
 Se [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md).
 
       * Ange bredden och höjden på Experience Fragment så som du vill att det ska visas på banderollen.
@@ -317,10 +317,10 @@ Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/dynamic-media/add
 
 **Så här förhandsgranskar du interaktiva bilder:**
 
-1. I resursvyn navigerar du till en befintlig interaktiv bild som du har skapat och trycker på den för att öppna den i förhandsvisningen.
-1. I den övre vänstra hörnet av förhandsvisningssidan trycker du på i den nedrullningsbara listan Innehåll **[!UICONTROL Viewers]**.
-1. Tryck på i visningslistan **[!UICONTROL Shoppable_Banner]** eller namnet på den interaktiva bildvisningsförinställning som du har skapat.
-1. Om du vill testa de associerade åtgärderna för aktiveringspunkter trycker du på hotspot-områden i bilden.
+1. I resursvyn navigerar du till en befintlig interaktiv bild som du har skapat och väljer att öppna den i förhandsvisningen.
+1. I den övre vänstra hörnet av förhandsvisningssidan väljer du **[!UICONTROL Viewers]**.
+1. I visningslistan väljer du **[!UICONTROL Shoppable_Banner]** eller namnet på den interaktiva bildvisningsförinställning som du har skapat.
+1. Om du vill testa associerade åtgärder för aktiveringspunkter markerar du aktiveringspunkter i bilden.
 
 ## Publicera interaktiva bildresurser {#publishing-interactive-image-assets}
 

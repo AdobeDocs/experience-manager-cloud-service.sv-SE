@@ -3,7 +3,7 @@ title: Hur konfigurerar man en Skicka-åtgärd för ett anpassat formulär?
 description: Ett anpassat formulär innehåller flera överföringsåtgärder. En Skicka-åtgärd definierar hur ett anpassat formulär ska bearbetas när det har skickats in. Du kan använda inbyggda Skicka-åtgärder eller skapa egna
 keywords: hur du väljer en inskickningsåtgärd för ett tilläggsformulär, kopplar ett adaptivt formulär till SharePoint-listan, kopplar ett adaptivt formulär till SharePoint-dokumentbiblioteket, kopplar ett adaptivt formulär till formulärdatamodellen
 exl-id: 495948e8-30a7-4e7c-952f-c71de15520f0
-source-git-commit: 5be0c5e347d2ec7ef660a701c8c6faf6a2d6d17a
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
 source-wordcount: '3796'
 ht-degree: 0%
@@ -198,7 +198,7 @@ Så här ansluter du AEM Forms till din Microsoft® Sharepoint-lista:
 
 1. Klicka på **[!UICONTROL Connect]**. Vid en lyckad anslutning `Connection Successful` visas.
 1. Välj **[!UICONTROL SharePoint Site]** och **[!UICONTROL SharePoint List]** i listrutan.
-1. Tryck **[!UICONTROL Create]** för att skapa molnkonfigurationen för Microsoft® SharePointList.
+1. Välj **[!UICONTROL Create]** för att skapa molnkonfigurationen för Microsoft® SharePointList.
 
 
 #### Använda Skicka med formulärdatamodellen i ett anpassat formulär {#use-submit-using-fdm}

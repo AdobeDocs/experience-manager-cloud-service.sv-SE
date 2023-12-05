@@ -5,9 +5,9 @@ content-type: reference
 topic-tags: publish
 discoiquuid: 32a7a50c-74f4-49bc-a0bd-a9ec142527cb
 docset: aem65s
-source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1299'
 ht-degree: 0%
 
 ---
@@ -62,19 +62,19 @@ En resurs kan ha följande lägen:
 1. Logga in på [!DNL AEM Forms] server.
 1. Använd något av följande för att välja och publicera en resurs.
 
-   1. Flytta pekaren över en resurs och tryck på **[!UICONTROL Publish]** ![aem6forms_globe](assets/aem6forms_globe.pngasset.png).
-   1. Gör något av följande och tryck sedan på Publicera:
+   1. Flytta pekaren över en resurs och markera **[!UICONTROL Publish]** ![aem6forms_globe](assets/aem6forms_globe.pngasset.png).
+   1. Gör något av följande och välj sedan Publicera:
 
-      * Tryck på om du är i kortvyn **[!UICONTROL Enter Selection]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png)och tryck på resursen. Resursen har valts.
+      * Om du är i kortvyn väljer du **[!UICONTROL Enter Selection]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png)och välj resursen. Resursen har valts.
       * Om du är i listvyn markerar du kryssrutan för en resurs. Resursen har valts.
-      * Tryck på en resurs för att visa dess information.
+      * Välj en resurs om du vill visa information om den.
       * Visa egenskaper för en resurs genom att trycka på Visa egenskaper ![visningsegenskaper](assets/viewproperties.png).
 
       >[!NOTE]
       >
       >Markera inte flera resurser. Det går inte att publicera flera resurser samtidigt.
 
-1. När publiceringsprocessen startar visas en bekräftelsedialogruta med alla relaterade resurser och resurser. Tryck på i dialogrutan som innehåller relaterade resurser **[!UICONTROL Publish]**. Resursen publiceras och dialogrutan Publicera resurser har slutförts visas.
+1. När publiceringsprocessen startar visas en bekräftelsedialogruta med alla relaterade resurser och resurser. I dialogrutan som innehåller relaterade resurser väljer du **[!UICONTROL Publish]**. Resursen publiceras och dialogrutan Publicera resurser har slutförts visas.
 
    >[!NOTE]
    >
@@ -99,9 +99,9 @@ En resurs kan ha följande lägen:
 Följ de här stegen för att publicera alla Correspondence Management-resurser på en server:
 
 1. Logga in på [!DNL AEM Forms] server.
-1. Tryck **Adobe Experience Manager** i det globala navigeringsfältet.
-1. Tryck ![verktyg](assets/tools.png)och sedan trycka **Forms**.
-1. Tryck **Publicera Correspondence Management Assets**.
+1. Välj **Adobe Experience Manager** i det globala navigeringsfältet.
+1. Välj ![verktyg](assets/tools.png)och sedan markera **Forms**.
+1. Välj **Publicera Correspondence Management Assets**.
 
    ![publish-cmp-assets](assets/publish-cmp-assets.png)
 
@@ -109,7 +109,7 @@ Följ de här stegen för att publicera alla Correspondence Management-resurser 
 
    ![publish-last-run-details](assets/publish-last-run-details.png)
 
-1. Tryck **Publicera** och, i bekräftelsemeddelandet, tryck **OK**.
+1. Välj **Publicera** och i bekräftelsemeddelandet väljer du **OK**.
 
    När en gruppbearbetning är klar kan du visa information om den senaste körningen. Detta inkluderar information som administratörsinloggning och om batchkörningen lyckades eller misslyckades.
 
@@ -123,27 +123,27 @@ Följ de här stegen för att publicera alla Correspondence Management-resurser 
 
 Följ de här stegen för att schemalägga datum och tid för publicering och avpublicering av Forms- och dokumentresurser:
 
-1. Välj en resurs och tryck **[!UICONTROL View Properties]**. Sidan Metadataegenskaper öppnas.
-1. Tryck på på Egenskaper för metadata **[!UICONTROL Advanced]** och sedan trycka **[!UICONTROL Edit]** ![illustrator_cc_penciltool_cur_edit_2_17](assets/illustratorcc_penciltool_cur_edit_2_17.png).
+1. Välj en resurs och välj **[!UICONTROL View Properties]**. Sidan Metadataegenskaper öppnas.
+1. På sidan Metadataegenskaper väljer du **[!UICONTROL Advanced]** och sedan markera **[!UICONTROL Edit]** ![illustrator_cc_penciltool_cur_edit_2_17](assets/illustratorcc_penciltool_cur_edit_2_17.png).
 1. I **[!UICONTROL Publish On Time]** och **[!UICONTROL Publish Off Time]** väljer du datum och tid.\
-   Tryck **[!UICONTROL Done]** ![aem6forms_check](assets/aem6forms_check.png).
+   Välj **[!UICONTROL Done]** ![aem6forms_check](assets/aem6forms_check.png).
 
 ## Avpublicera en resurs {#unpublish-an-asset}
 
-1. Välj en publicerad resurs och tryck **[!UICONTROL Unpublish]** ![avpublicera](assets/unpublish.png).
+1. Välj en publicerad resurs och välj **[!UICONTROL Unpublish]** ![avpublicera](assets/unpublish.png).
 1. Använd något av följande för att välja och avpublicera en resurs.
 
-   1. Flytta pekaren över en resurs och tryck på **[!UICONTROL Unpublish]** ![avpublicera](assets/unpublish.png).
-   1. Gör något av följande och tryck sedan på Unpublish (Avpublicera):
+   1. Flytta pekaren över en resurs och markera **[!UICONTROL Unpublish]** ![avpublicera](assets/unpublish.png).
+   1. Gör något av följande och välj sedan Avpublicera:
 
-      * Tryck på om du är i kortvyn **[!UICONTROL Enter Selection]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png)och tryck på resursen. Resursen har valts.
+      * Om du är i kortvyn väljer du **[!UICONTROL Enter Selection]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png)och välj resursen. Resursen har valts.
 
-      * Om du är i listvyn håller du pekaren över en resurs och trycker ![selectassetbock](assets/selectassetcheckmark.png) . Resursen har valts.
+      * Om du är i listvyn håller du pekaren över en resurs och väljer ![selectassetbock](assets/selectassetcheckmark.png) . Resursen har valts.
 
-      * Tryck på en resurs för att visa dess information.
+      * Välj en resurs om du vill visa information om den.
       * Visa egenskaper för en resurs genom att trycka på Visa egenskaper ![visningsegenskaper](assets/viewproperties.png).
 
-1. När avpubliceringsprocessen startar visas en bekräftelsedialogruta. Tryck på **[!UICONTROL Unpublish]**.
+1. När avpubliceringsprocessen startar visas en bekräftelsedialogruta. Välj **[!UICONTROL Unpublish]**.
 
    >[!NOTE]
    >
@@ -157,8 +157,8 @@ Varje gång du publicerar en resurs eller ett brev efter att ha redigerat den sk
 >
 >Återställ inte ett brev till ett senast publicerat tillstånd om någon beroende resurs som används i det publicerade brevet tas bort från systemet.
 
-1. Välj en resurs och tryck **[!UICONTROL Revert to Previously Published Version]** ![återgår till publicerad version](assets/reverttopreviouslypublishedversion.png).
-1. Innan resursen återställs visas en bekräftelsedialogruta. Tryck på **[!UICONTROL Revert]**.
+1. Välj en resurs och välj **[!UICONTROL Revert to Previously Published Version]** ![återgår till publicerad version](assets/reverttopreviouslypublishedversion.png).
+1. Innan resursen återställs visas en bekräftelsedialogruta. Välj **[!UICONTROL Revert]**.
 
    Resursen eller bokstaven återställs till den tidigare publicerade versionen.
 
@@ -168,17 +168,17 @@ Varje gång du publicerar en resurs eller ett brev efter att ha redigerat den sk
 >
 >Om du tar bort en resurs tas den bort från publiceringsinstansen. När du tar bort ett objekt tas även dess versionshistorik bort, förutom basversionen.
 
-1. Välj en resurs och tryck **[!UICONTROL Delete]** ![delete](assets/delete.png).
+1. Välj en resurs och välj **[!UICONTROL Delete]** ![delete](assets/delete.png).
 
    >[!NOTE]
    >
    >Alternativet Ta bort är också tillgängligt när du visar resursinformation genom att trycka på en resurs eller genom att trycka på Visa egenskaper för en resurs ![visningsegenskaper](assets/viewproperties.png).
 
-1. Innan resursen tas bort visas en bekräftelsedialogruta. Tryck på **[!UICONTROL Delete]**.
+1. Innan resursen tas bort visas en bekräftelsedialogruta. Välj **[!UICONTROL Delete]**.
 
    >[!NOTE]
    >
-   >Endast den markerade resursen tas bort och de beroende resurserna tas inte bort. Om du vill kontrollera referenser till en resurs trycker du ![referenser](assets/references.png) och sedan välja en resurs.
+   >Endast den markerade resursen tas bort och de beroende resurserna tas inte bort. Om du vill kontrollera referenser till en resurs väljer du ![referenser](assets/references.png) och sedan välja en resurs.
    >
    >
    >Om den resurs du försöker ta bort är underordnad en annan resurs tas den inte bort. Om du vill ta bort en sådan resurs tar du bort referenser till den från andra resurser och försöker sedan igen.

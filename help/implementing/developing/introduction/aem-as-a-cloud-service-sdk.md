@@ -1,11 +1,11 @@
 ---
-title: SDK för AEM as a Cloud Service
+title: AEM as a Cloud Service SDK
 description: En översikt över AEM as a Cloud Service Software Development Kit
 exl-id: 06f3d5ee-440e-4cc5-877a-5038f9bd44c6
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1232'
-ht-degree: 1%
+source-wordcount: '1209'
+ht-degree: 0%
 
 ---
 
@@ -85,7 +85,7 @@ Nedan beskrivs den rekommenderade proceduren för uppdatering av en lokal miljö
 
 Om det finns innehåll som ska installeras med varje ny AEM snabbstartversion, inkluderar du det i ett innehållspaket och i projektets källkontroll. Installera det sedan varje gång.
 
-Rekommendationen är att uppdatera SDK ofta (t.ex. varannan vecka) och ta bort hela lokala tillstånd varje dag för att inte vara beroende av tillståndskänsliga data i programmet.
+Rekommendationen är att uppdatera SDK ofta (till exempel varannan vecka) och ta bort hela lokala tillstånd varje dag för att inte oavsiktligt vara beroende av tillståndskänsliga data i programmet.
 
 Om du är beroende av CryptoSupport ([antingen genom att konfigurera autentiseringsuppgifterna för molntjänsterna eller SMTP Mail-tjänsten i AEM eller genom att använda CryptoSupport API i ditt program](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/granite/crypto/CryptoSupport.html)) krypteras de krypterade egenskaperna av en nyckel. Den här nyckeln genereras automatiskt första gången en AEM startas. Molninstallationen hanterar automatiskt återanvändning av den miljöspecifika CryptoKey, men du måste injicera kryptonyckeln i den lokala utvecklingsmiljön.
 

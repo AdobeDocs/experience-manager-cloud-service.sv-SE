@@ -2,9 +2,9 @@
 title: AEM
 description: AEM är en enkel lösning för att överföra JCR-innehåll mellan det lokala filsystemet och den AEM servern via kommandoraden som kan jämföras med FTP.
 exl-id: fb887ba3-e40b-4ab1-b142-0748c6d9f18e
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ AEM är en enkel lösning för att överföra JCR-innehåll mellan det lokala fi
 
 Detta verktyg förenklar filöverföringen för utvecklaren och kan även integreras i Eclipse och IntelliJ för att göra utvecklingen ännu effektivare.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 För en given bana inuti en `jcr_root` FileVault-strukturen i filsystemet skapar AEM Repo-verktyget ett paket med ett enda filter för hela underträdet och skickar det till servern (liknande FTP) `put`), hämtar den från servern ( `get`) eller jämför skillnaderna ( `status` och `diff`).
 

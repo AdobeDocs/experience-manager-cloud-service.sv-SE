@@ -1,7 +1,7 @@
 ---
-source-git-commit: 8d8e5ba548c13d3d908a549f52a8b91946b35361
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '739'
 ht-degree: 3%
 
 ---
@@ -25,7 +25,7 @@ Bidrag som inte uppfyller dessa standarder kan avvisas.
 
 ### Experience Manager dokumentationsteam dokumenterar standardanvändningsfall.
 
-AEM dokumentation täcker standardanvändningsfall. Användningsfall som inte omfattas av standardinstallation och -användning ingår inte i AEM.
+AEM dokumentation täcker standardanvändningsfall. Användningsfall som inte omfattas av standardinstallationer och standardanvändning av produkten ingår inte i AEM.
 
 ### Dokumentationsteamet i Experience Manager dokumenterar vanligtvis inte buggar eller deras tillfälliga lösningar.
 
@@ -35,7 +35,7 @@ Undantag från den här regeln gäller versionsinformationen där kända problem
 
 ### Dokumentationsbidragen är inte till för att besvara tekniska frågor.
 
-Alla idéer du kan behöva förbättra AEM dokumentation är välkomna som bidrag. Kommentarer, problem och pull-förfrågningar är dock avsedda för *avgifter* endast. De är inte avsedda att användas för att besvara frågor om hur du använder AEM, implementerar ditt AEM eller löser tekniska problem.
+Alla idéer du kan behöva förbättra AEM dokumentation är välkomna som bidrag. Kommentarer, problem och förfrågningar är dock avsedda för *avgifter* endast. De är inte avsedda att användas för att besvara frågor om hur du använder AEM, implementerar ditt AEM eller löser tekniska problem.
 
 Om du har frågor om hur AEM eller tekniska fel har använts ska du rapportera via den normala supportprocessen via [Experience Manager supportportal](https://experienceleague.adobe.com/?support-solution=Experience+Manager#home) eller diskuteras i [Experience Manager community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
 
@@ -79,7 +79,7 @@ Kom ihåg att läsarna av AEM är från hela världen och inte kan förväntas v
 
 Skärmbilder ska användas med omdöme och endast när en textbeskrivning är otillräcklig.
 
-Markörer eller andra anteckningar i skärmbilder (som röda ramar, pilar eller text) bör inte användas. På så sätt är skärmbilderna enklare att återanvända eller replikera i lokaliserade versioner av dokumentationen.
+Använd inte markörer eller andra anteckningar i skärmbilder (som röda ramar, pilar eller text). På så sätt är skärmbilderna enklare att återanvända eller replikera i lokaliserade versioner av dokumentationen.
 
 ### Versionsspecifika referenser
 
@@ -89,4 +89,4 @@ Undvik om möjligt direkta referenser till en viss version i dokumentationsinneh
 
 The product should always be called by its full name **Adobe Experience Manager** för första gången i en artikel och kan därefter kallas **AEM**.
 
-Day, Day Software, CQ och CRX bör inte användas utom när det är oundvikligt, t.ex. i klassnamn eller med hänvisning till AEM.
+Använd inte Dag, Dag Software, CQ och CRX utom när det är oundvikligt, t.ex. i klassnamn eller med hänvisning till AEM.

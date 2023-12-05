@@ -1,18 +1,18 @@
 ---
-title: Snurrande uppsättningar
+title: Snurra uppsättningar
 description: Lär dig hur du arbetar med snurruppsättningar i Dynamic Media.
 contentOwner: Rick Brough
 feature: Spin Sets
 role: User
 exl-id: ed470472-62d9-4684-971b-30df3919c180
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1862'
-ht-degree: 8%
+source-wordcount: '1892'
+ht-degree: 7%
 
 ---
 
-# Snurrande uppsättningar{#spin-sets}
+# Snurra uppsättningar{#spin-sets}
 
 Med en snurra uppsättning kan du simulera hur det ser ut när du vrider ett objekt för att undersöka det. Med snurra uppsättningar kan du visa objekt från vilken vinkel som helst och få fram viktiga visuella detaljer från vilken vinkel som helst.
 
@@ -128,7 +128,7 @@ Se även [Dynamic Media begränsningar](/help/assets/dynamic-media/limitations.m
 
 **Så här skapar du snurruppsättningar:**
 
-1. I Resurser navigerar du till den plats där du vill skapa en snurruppsättning och väljer **[!UICONTROL Create]** och sedan markera **[!UICONTROL Spin Set]**. Du kan också skapa uppsättningen inifrån en mapp som innehåller resurserna.
+1. I Resurser navigerar du till den plats där du vill skapa en snurruppsättning och väljer **[!UICONTROL Create]** och sedan markera **[!UICONTROL Spin Set]**. Du kan också skapa uppsättningen inifrån en mapp som innehåller dina resurser.
 
    ![6_5_spinset-createpulldownmenu](assets/6_5_spinset-createpulldownmenu.png)
 
@@ -144,7 +144,7 @@ Se även [Dynamic Media begränsningar](/help/assets/dynamic-media/limitations.m
 
    * I närheten av det övre vänstra hörnet på sidan för redigeraren för sned uppsättning väljer du **[!UICONTROL Add Asset]**.
 
-   * I mitten av sidan för redigeraren för sned uppsättning väljer du **[!UICONTROL Tap to open Asset Selector]**.
+   * I mitten av sidan för redigeraren för sned uppsättning väljer du **[!UICONTROL Select to open Asset Selector]**.
 
    Välj de resurser som du vill inkludera i din snurruppsättning. De markerade resurserna visas med en bock. När du är klar väljer du **[!UICONTROL Select]**.
 

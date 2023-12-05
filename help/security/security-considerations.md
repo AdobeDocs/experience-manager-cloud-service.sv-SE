@@ -4,9 +4,9 @@ description: Läs om viktiga säkerhetsfrågor när du använder AEM as a Cloud 
 hidefromtoc: true
 hide: true
 exl-id: d2dfde05-ce02-478e-8697-b939fb8740c3
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ För att stödja asymmetriska, kryptografiska åtgärder lagrar AEM certifikat i
 
 ### Egenskaper hos Trust Store {#truststore-characteristics}
 
-* Förtroendearkivet finns nedan `/etc/truststore` och består av en Java-nyckelfil, nyckelbehållarlösenordet och databasmetadata. Observera att både lösenordet och själva nyckelbehållaren är krypterade av tekniska skäl, även om de certifikat som finns som standard är tillgängliga för alla via API:t
+* Förtroendearkivet finns nedan `/etc/truststore` och består av en Java-nyckelfil, nyckelbehållarlösenordet och databasmetadata. Både lösenordet och själva nyckelbehållaren krypteras av tekniska skäl, även om de certifikat som finns som standard är tillgängliga för alla via API:t
 * Innan i rutan används certifikaten endast för HTTPS- och SAML-stöd, och arkivet måste skapas manuellt först
 * Kunderna kan använda den i sin egen kod via [API för nyckelbehållare](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/keystore/KeyStoreService.html#getTrustStore-org.apache.sling.api.resource.ResourceResolver-)
 * Trust-butiken kan hanteras via användargränssnittet på **verktyg** - **Säkerhet** - **Trust Store** eller genom åtkomst *`https://serveraddress:serverport/libs/granite/security/content/truststore.html`*, enligt nedan:

@@ -1,15 +1,13 @@
 ---
 title: Hur ändrar man sidans nollinnehåll i Designer?
 description: Ändra meddelandet som visas på sidnoll i en XFA-PDF för visningsprogram som inte kommer från Adobe PDF.
-uuid: ac23fb21-3f15-48ea-aeeb-4ecc12b771ac
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 56b6a573-8aba-43e7-acb7-c2da45869d95
 docset: aem65
-source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 2%
+source-wordcount: '241'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +24,7 @@ Sidnollinnehåll visas som standard när ett visningsprogram som inte är Adobe 
 
 1. Öppna formuläret som du vill ändra sidans nollinnehåll för.
 
-1. Klicka på **[!UICONTROL File]** > **[!UICONTROL Form Properties]**.
+1. Klicka **[!UICONTROL File]** > **[!UICONTROL Form Properties]**.
 
 1. I [!UICONTROL Form Properties] dialogruta, klicka ![plus](assets/plus.png) (Plus-ikon) om du vill lägga till en anpassad egenskap.
 
@@ -44,7 +42,7 @@ Sidnollinnehåll visas som standard när ett visningsprogram som inte är Adobe 
 
 >[!NOTE]
 >
->Den anpassade egenskap som du just skapade kanske inte visas korrekt i dialogrutan Formuläregenskaper när du öppnar formuläret igen. Det fungerar dock bra och formuläret visar det uppdaterade sidnollmeddelandet.
+>Den anpassade egenskap som du skapade kanske inte visas korrekt i dialogrutan Formuläregenskaper när du öppnar formuläret igen. Det fungerar dock bra och formuläret visar det uppdaterade sidnollmeddelandet.
 
 >[!MORELIKETHIS]
 >

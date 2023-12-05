@@ -5,10 +5,10 @@ contentOwner: Rick Brough
 feature: Asset Reports
 role: Admin,User
 exl-id: a71fef45-c9a4-4091-8af1-c3c173324b7a
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '6269'
-ht-degree: 8%
+source-wordcount: '6305'
+ht-degree: 7%
 
 ---
 
@@ -257,7 +257,7 @@ Det enklaste sättet att göra detta är att slutföra följande tvåstegsproces
 
 ![image2019-7-10_20-41-52](assets/image2019-7-10_20-41-52.png)
 
-Det är dock möjligt att använda en alternativ metod och åsidosätta skapande av dataelement. Du kan referera direkt till ett argument från en Dynamic Media Viewer-händelse. Ange det fullständiga namnet på händelseargumentet i **[!UICONTROL value]** indatafält för variabeltilldelningen i Analytics. Försäkra dig om att du omger med procenttecken (%). Till exempel,
+Det är dock möjligt att använda en alternativ metod och åsidosätta skapande av dataelement. Du kan referera direkt till ett argument från en Dynamic Media Viewer-händelse. Ange det fullständiga namnet på händelseargumentet i **[!UICONTROL value]** indatafält för variabeltilldelningen i Analytics. Försäkra dig om att du omger med procenttecken (%). Exempel:
 
 `%event.detail.dm.LOAD.asset%`
 
@@ -479,7 +479,7 @@ Se även [Implementeringshandbok för analyser](https://experienceleague.adobe.c
 
    Det räcker dock att veta att rapporterna om anpassad trafik automatiskt blir tillgängliga i Adobe Analytics när du har konfigurerat anpassade trafikvariabler i **[Konfigurera Adobe Analytics-variabler](#setting-up-adobe-analytics-variables)**.
 
-   Till exempel finns rapporten för variabeln **[!UICONTROL Viewer asset (prop 30)]** på menyn Rapporter under **[!UICONTROL Custom Traffic]** > **[!UICONTROL Custom Traffic 21-30]** > **[!UICONTROL Viewer asset (prop 30)]**.
+   Till exempel rapporten för **[!UICONTROL Viewer asset (prop 30)]** variabeln är tillgänglig från rapportmenyn under **[!UICONTROL Custom Traffic]** > **[!UICONTROL Custom Traffic 21-30]** > **[!UICONTROL Viewer asset (prop 30)]**.
 
    Inga data visas när du besöker den här rapporten direkt efter att **[!UICONTROL Viewer asset (prop 30)]** har skapats, vilket är som väntat vid den här tidpunkten i integreringen.
 
@@ -506,12 +506,12 @@ När du har konfigurerat Experience Platform-taggar ställs följande in för in
 
 En egenskap i Experience Platform Tags är en namngiven konfiguration som håller ihop alla inställningar. Ett bibliotek med konfigurationsinställningarna genereras och publiceras på olika miljönivåer (utveckling, mellanlagring och produktion).
 
-Se även [Konfigurera en tryckegenskap](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/initial-configuration/configure-tags.html).
+Se även [Konfigurera en select-egenskap](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/initial-configuration/configure-tags.html).
 
 **Så här skapar du en egenskap i Experience Platform-taggar:**
 
 1. I Experience Platform-taggar väljer du **[!UICONTROL New Property]**.
-1. I dialogrutan **[!UICONTROL Create Property]** anger du ett beskrivande namn, till exempel webbplatsens titel, i fältet **[!UICONTROL Name]**. Till exempel, `DynamicMediaViewersProp.`
+1. I dialogrutan **[!UICONTROL Create Property]** anger du ett beskrivande namn, till exempel webbplatsens titel, i fältet **[!UICONTROL Name]**. Exempel: `DynamicMediaViewersProp.`
 1. I **[!UICONTROL Domains]** anger du webbplatsens domän.
 1. Aktivera **[!UICONTROL Configure for extension development (cannot be modified later)]** i listrutan **[!UICONTROL Advanced Options]** om det tillägg som du vill använda – i det här fallet *Dynamic Media-visningsprogram* – inte släppts än.
 
@@ -606,7 +606,7 @@ Publicering av ett bibliotek omfattar följande två steg:
 
    ![image2019-7-15_14-43-17](assets/image2019-7-15_14-43-17.png)
 
-1. På sidan Skapa nytt bibliotek, i **[!UICONTROL Name]** anger du ett beskrivande namn för det nya biblioteket. Till exempel,
+1. På sidan Skapa nytt bibliotek, i **[!UICONTROL Name]** anger du ett beskrivande namn för det nya biblioteket. Exempel:
 
    *DynamicMediaViewersLib*
 
@@ -748,7 +748,7 @@ Konfigurationen av Experience Manager består av följande två stora steg:
    * **[!UICONTROL Title]** - Ange en beskrivande kontotitel.
    * **[!UICONTROL Authorization Server]** - Gå tillbaka till sidan Integreringsinformation som du öppnade tidigare. Välj **[!UICONTROL JWT]** -fliken. Kopiera servernamnet - utan sökvägen - enligt markeringen nedan.
 
-   Gå tillbaka till sidan **[!UICONTROL Account]** och klistra sedan in namnet i respektive fält.
+   Återgå till **[!UICONTROL Account]** och klistra sedan in namnet i respektive fält.
 Till exempel: `https://ims-na1.adobelogin.com/`
 (exempelservernamnet är endast avsett för förklaringar)
 
@@ -798,7 +798,7 @@ Till exempel: `https://ims-na1.adobelogin.com/`
 1. I närheten av sidans övre vänstra hörn väljer du **[!UICONTROL Create]**.
 1. På sidan **[!UICONTROL General]** (sida 1/3) i fönstret **[!UICONTROL Create Experience Platform Tags Configuration]** fyller du i följande fält:
 
-   * **[!UICONTROL Title]** - Ange en beskrivande konfigurationstitel. Till exempel, `We.Retail Tags cloud configuration`.
+   * **[!UICONTROL Title]** - Ange en beskrivande konfigurationstitel. Till exempel: `We.Retail Tags cloud configuration`.
 
    * **[!UICONTROL Associated Adobe IMS Configuration]** - Välj den IMS-konfiguration som du skapade tidigare i [Konfigurera Experience Manager IMS](#configuring-aem-ims).
 

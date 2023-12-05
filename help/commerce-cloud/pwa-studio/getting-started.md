@@ -5,9 +5,9 @@ topics: Commerce
 feature: Commerce Integration Framework
 thumbnail: 37843.jpg
 exl-id: a7c187ba-885e-45bf-a538-3c235b09a0f1
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '719'
 ht-degree: 0%
 
 ---
@@ -105,9 +105,9 @@ Följ AEM Content Fragments dokumentation för att konfigurera en GraphQL-slutpu
 
 Du hittar fullständiga exempel på båda konfigurationerna här: <https://github.com/adobe/aem-pwa-studio-extensions/tree/master/aem-cfm-blog-extension/aem/config/src/main/content/jcr_root/apps/blog-demo/config>.
 
-För att visa GraphQL-slutpunkten har vi förberett några innehållsfragmentmodeller och data via ett innehållspaket. Dessa fungerar bra tillsammans med React Components som medföljer PWA Studio.
+För att visa GraphQL-slutpunkten finns det några färdiga modeller och data för innehållsfragment via ett innehållspaket. Dessa fungerar bra tillsammans med React Components som medföljer PWA Studio.
 
-## Användning {#how-to-use}
+## Använda {#how-to-use}
 
 Det här tillägget är ett exempel på implementering av hur du ansluter ett PWA Studio-program med AEM för att hämta och återge innehåll via GraphQL.
 

@@ -6,9 +6,9 @@ contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: adaptive_forms, author
 exl-id: 3fdbe5a3-5c3c-474d-b701-e0182da4191a
-source-git-commit: 9e06c115af2a262859d39bcd5ee0016df2475591
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1673'
 ht-degree: 0%
 
 ---
@@ -54,21 +54,21 @@ Formulärförfattare kan använda tjänsten reCAPTCHA från Google för att impl
 
    1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**.
    1. Välj en mapp eller skapa en mapp och aktivera mappen för molnkonfigurationer med följande steg:
-      1. Markera mappen i Configuration Browser och tryck på **[!UICONTROL Properties]**.
+      1. Markera mappen och välj **[!UICONTROL Properties]**.
       1. Aktivera i dialogrutan Konfigurationsegenskaper **[!UICONTROL Cloud Configurations]**.
-      1. Tryck **[!UICONTROL Save & Close]** för att spara konfigurationen och stänga dialogrutan.
+      1. Välj **[!UICONTROL Save & Close]** för att spara konfigurationen och stänga dialogrutan.
 
 1. Konfigurera molntjänsten för [!DNL reCAPTCHA Enterprise].
 
    1. Gå till Experience Manager ![verktyg-1](assets/tools-1.png) > **[!UICONTROL Cloud Services]**.
-   1. Tryck på **[!UICONTROL reCAPTCHA]**. Sidan Konfigurationer öppnas. Välj den konfigurationsbehållare som du skapade och tryck på **[!UICONTROL Create]**.
+   1. Välj **[!UICONTROL reCAPTCHA]**. Sidan Konfigurationer öppnas. Välj den konfigurationsbehållare som du skapade och välj **[!UICONTROL Create]**.
    1. Välj version som [!DNL reCAPTCHA Enterprise] och ange namn, projekt-ID, platsnyckel och API-nyckel (hämtas i steg 2) för reCAPTCHA Enterprise-tjänsten.
    1. Välj nyckeltyp. Nyckeltypen ska vara densamma som platsnyckeln som du konfigurerade i [Google Cloud-projekt](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin), till exempel **Platsnyckel för kryssruta** eller **Poängbaserad webbplatsnyckel**.
    1. Ange en [tröskelpoäng i intervallet 0 till 1](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment#interpret_scores). Poängvärden som är större än eller lika med tröskelvärdena identifierar mänsklig interaktion, vilket i annat fall omfattar båda interaktioner.
-   1. Tryck **[!UICONTROL Create]** för att skapa molntjänstkonfigurationen.
+   1. Välj **[!UICONTROL Create]** för att skapa molntjänstkonfigurationen.
 
 <!--
-    1. In the Edit Component dialog, specify the name, project ID, site key, API key (obtained in steps 2 and 3), select the key type, and enter the threshold score. Tap **[!UICONTROL Save Settings]** and then tap **[!UICONTROL OK]** to complete the configuration.
+    1. In the Edit Component dialog, specify the name, project ID, site key, API key (obtained in steps 2 and 3), select the key type, and enter the threshold score. Select **[!UICONTROL Save Settings]** and then select **[!UICONTROL OK]** to complete the configuration.
 -->
 
 När du har aktiverat tjänsten reCAPTCHA Enterprise kan den användas i anpassningsbara formulär. Se [använda CAPTCHA i anpassningsbara formulär](#using-reCAPTCHA).
@@ -83,16 +83,16 @@ När du har aktiverat tjänsten reCAPTCHA Enterprise kan den användas i anpassn
 1. Skapa konfigurationsbehållare för molntjänster.
    1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**.
    1. Välj en mapp eller skapa en mapp och aktivera mappen för molnkonfigurationer med följande steg:
-      1. Markera mappen i Configuration Browser och tryck på **[!UICONTROL Properties]**.
+      1. Markera mappen och välj **[!UICONTROL Properties]**.
       1. Aktivera i dialogrutan Konfigurationsegenskaper **[!UICONTROL Cloud Configurations]**.
-      1. Tryck **[!UICONTROL Save & Close]** för att spara konfigurationen och stänga dialogrutan.
+      1. Välj **[!UICONTROL Save & Close]** för att spara konfigurationen och stänga dialogrutan.
 
 1. Konfigurera molntjänsten för reCAPTCHA v2.
 
    1. Gå till AEM ![verktyg-1](assets/tools-1.png) > **Cloud Service**.
-   1. Tryck på **[!UICONTROL reCAPTCHA]**. Sidan Konfigurationer öppnas. Välj den konfigurationsbehållare som du skapade och tryck på **[!UICONTROL Create]**.
-   1. Välj version som [!DNL reCAPTCHA v2] anger du Namn, Webbplatsnyckel och Hemlig nyckel för tjänsten reCAPTCHA (hämtas i steg 1) och trycker på **[!UICONTROL Create]** för att skapa molntjänstkonfigurationen.
-   1. I dialogrutan Redigera komponent anger du platsen och de hemliga nycklarna som fås i steg 1. Tryck **[!UICONTROL Save Settings]** och sedan trycka **OK** för att slutföra konfigurationen.
+   1. Välj **[!UICONTROL reCAPTCHA]**. Sidan Konfigurationer öppnas. Välj den konfigurationsbehållare som du skapade och välj **[!UICONTROL Create]**.
+   1. Välj version som [!DNL reCAPTCHA v2] , anger namn, platsnyckel och hemlig nyckel för reCAPTCHA-tjänsten (hämtas i steg 1) och väljer **[!UICONTROL Create]** för att skapa molntjänstkonfigurationen.
+   1. I dialogrutan Redigera komponent anger du platsen och de hemliga nycklarna som fås i steg 1. Välj **[!UICONTROL Save Settings]** och sedan **OK** för att slutföra konfigurationen.
 
    När reCAPTCHA-tjänsten har konfigurerats är den tillgänglig för användning i adaptiva formulär. Mer information finns i [använda CAPTCHA i anpassningsbara formulär](#using-reCAPTCHA).
 
@@ -116,7 +116,7 @@ Så här använder du reCAPTCHA i adaptiva former:
    >* Det går inte att använda mer än en Captcha-komponent i ett adaptivt formulär. Du bör inte heller använda CAPTCHA i en panel som är markerad för lazy loading eller i ett fragment.
    >* reCaptcha är tidskänsligt och upphör om cirka ett par minuter. Därför rekommenderar vi att du placerar Captcha-komponenten precis före Skicka-knappen i den anpassade formen.
 
-1. Välj den Captcha-komponent som du har lagt till och tryck på ![cmppr](assets/cmppr.png) om du vill redigera dess egenskaper.
+1. Välj den Captcha-komponent som du har lagt till och välj ![cmppr](assets/cmppr.png) om du vill redigera dess egenskaper.
 1. Ange en titel för CAPTCHA-widgeten. Standardvärdet är **Captcha**. Välj **Dölj titel** om du inte vill att rubriken ska visas.
 1. Från **Captcha-tjänst** nedrullningsbar meny, välja **reCAPTCHA** för att aktivera tjänsten reCAPTCHA om du har konfigurerat den enligt beskrivningen i [reCAPTCHA-tjänst från Google](#google-reCAPTCHA).
 1. Välj en konfiguration i listrutan Inställningar för **reCAPTCHA Enterprise** eller **reCAPTCHA v2**
@@ -219,11 +219,11 @@ Så här använder du reCAPTCHA i adaptiva former:
 
 ### Visa eller dölj CAPTCHA-komponent baserat på regler {#show-hide-captcha}
 
-Du kan välja att visa eller dölja CAPTCHA-komponenten baserat på regler som du tillämpar på en komponent i ett adaptivt formulär. Tryck på komponenten, markera ![redigera regler](assets/edit-rules-icon.svg)och trycka **[!UICONTROL Create]** för att skapa en regel. Mer information om hur du skapar regler finns i [Regelredigeraren](rule-editor.md).
+Du kan välja att visa eller dölja CAPTCHA-komponenten baserat på regler som du tillämpar på en komponent i ett adaptivt formulär. Markera komponenten, markera ![redigera regler](assets/edit-rules-icon.svg)och markera **[!UICONTROL Create]** för att skapa en regel. Mer information om hur du skapar regler finns i [Regelredigeraren](rule-editor.md).
 
 CAPTCHA-komponenten måste till exempel bara visas i ett adaptivt formulär om fältet Valutavärde i formuläret har ett värde över 25000.
 
-Tryck på **[!UICONTROL Currency Value]** i formuläret och skapa följande regler:
+Välj **[!UICONTROL Currency Value]** i formuläret och skapa följande regler:
 
 ![Visa eller dölja regler](assets/rules-show-hide-captcha.png)
 
@@ -239,17 +239,17 @@ Du kan validera CAPTCHA i ett adaptivt formulär antingen när du skickar formul
 
 Så här validerar du en CAPTCHA automatiskt när du skickar in ett adaptivt formulär:
 
-1. Tryck på CAPTCHA-komponenten och välj ![cmppr](assets/configure-icon.svg) för att visa komponentegenskaperna.
+1. Markera CAPTCHA-komponenten och markera ![cmppr](assets/configure-icon.svg) för att visa komponentegenskaperna.
 1. I **[!UICONTROL Validate CAPTCHA]** avsnitt, markera **[!UICONTROL Validate CAPTCHA at form submission]**.
-1. Tryck ![Klar](assets/save_icon.svg) för att spara komponentegenskaperna.
+1. Välj ![Klar](assets/save_icon.svg) för att spara komponentegenskaperna.
 
 #### Validera CAPTCHA på användaråtgärder och villkor {#validate-captcha-user-action}
 
 Så här validerar du en CAPTCHA baserat på villkor och användaråtgärder:
 
-1. Tryck på CAPTCHA-komponenten och välj ![cmppr](assets/configure-icon.svg) för att visa komponentegenskaperna.
+1. Markera CAPTCHA-komponenten och markera ![cmppr](assets/configure-icon.svg) för att visa komponentegenskaperna.
 1. I **[!UICONTROL Validate CAPTCHA]** avsnitt, markera **[!UICONTROL Validate CAPTCHA on a user action]**.
-1. Tryck ![Klar](assets/save_icon.svg) för att spara komponentegenskaperna.
+1. Välj ![Klar](assets/save_icon.svg) för att spara komponentegenskaperna.
 
 [!DNL Experience Manager Forms] innehåller `ValidateCAPTCHA` API för att validera CAPTCHA med fördefinierade villkor. Du kan anropa API:t med en anpassad skickaåtgärd eller genom att definiera regler för komponenter i ett anpassat formulär.
 
@@ -275,7 +275,7 @@ Utför följande steg för att använda `ValidateCAPTCHA` API för att validera 
 
 1. Lägg till skriptet som innehåller `ValidateCAPTCHA` API till anpassad skickaåtgärd. Mer information om anpassade överföringsåtgärder finns i [Skapa en anpassad inskickningsåtgärd för Adaptiv Forms](custom-submit-action-form.md).
 1. Välj namnet på den anpassade Skicka-åtgärden på menyn **[!UICONTROL Submit Action]** nedrullningsbar lista i **[!UICONTROL Submission]** egenskaper för ett adaptivt formulär.
-1. Tryck på **[!UICONTROL Submit]**. CAPTCHA valideras baserat på de villkor som definieras i `ValidateCAPTCHA` API för den anpassade åtgärden Skicka.
+1. Välj **[!UICONTROL Submit]**. CAPTCHA valideras baserat på de villkor som definieras i `ValidateCAPTCHA` API för den anpassade åtgärden Skicka.
 
 **Alternativ 2: Använd [!DNL Experience Manager Forms] Validera CAPTCHA API för att validera CAPTCHA på en användaråtgärd innan formuläret skickas**
 

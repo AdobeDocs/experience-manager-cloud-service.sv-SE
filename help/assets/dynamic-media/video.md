@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Video Profiles
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '9329'
+source-wordcount: '9322'
 ht-degree: 1%
 
 ---
@@ -315,10 +315,10 @@ I följande tabell beskrivs hur formelresultaten översätts till vanliga altern
 
 | Formelresultat | Proportioner |
 |--- |--- |
-| 1.33 | 4:3 |
-| 0.75 | 3:4 |
-| 1.78 | 16:9 |
-| 0.56 | 9:16 |
+| 1,33 | 4:3 |
+| 0,75 | 3:4 |
+| 1,78 | 16:9 |
+| 0,56 | 9:16 |
 
 En video som till exempel är 1440 bredd x 1080 höjd har proportionerna 1440/1080 eller 1,33. I det här fallet väljer du en förinställning för videokodning med 4:3-proportioner för att koda videofilen.
 
@@ -360,8 +360,8 @@ Upplösning och datahastighet är två sammankopplade faktorer som avgör videok
 
 | Upplösning | Pixlar per bildruta |
 |--- |--- |
-| 320 x 240 | 76,800 |
-| 640 x 480 | 307,200 |
+| 320 x 240 | 76 800 |
+| 640 x 480 | 307 200 |
 
 Filen på 640 x 480 har fyra gånger fler pixlar per bildruta. För att uppnå samma datahastighet för dessa två exempelupplösningar tillämpar du fyra gånger komprimeringen på 640 x 480-filen, vilket kan minska videons kvalitet. En videodatahastighet på 250 kbit/s ger därför en högkvalitativ bild med upplösningen 320 x 240, men inte med upplösningen 640 x 480.
 
@@ -628,7 +628,7 @@ Undertexter och bildtexter som lagts till stöds i formaten WebVTT och Adobe VTT
      | Filnamn | Standardfilnamnet härleds från det ursprungliga filnamnet. Filnamnet kan bara ändras under överföring och kan inte ändras senare. Teckenkraven för filnamn är desamma som för AEM Assets.<br>Samma filnamn kan inte användas för ytterligare undertextningsfiler och ljudspårsfiler. |
      | Språk | Välj språk för underrubriken. |
      | Typ | Välj den typ av underrubrik som du använder.<br>**Underrubrik** - Undertexten som visas med videon som översätter eller transkriberar dialogrutan.<br>**Bildtext** - Bildtexten innehåller även bakgrundsljud, talardifferentiering och annan relevant information, tillsammans med översättningen eller transkriberingen av dialogen, som gör innehållet mer tillgängligt för personer som är döva eller hörselskadade. |
-     | Etikett | Den text som visas för undertextens namn i **[!UICONTROL Select audio or caption]** popup-lista i mediespelaren. Etiketten är det som kunden ser och som motsvarar ett underrubrik- eller bildtextspår. Till exempel, `English (CC)`. |
+     | Etikett | Den text som visas för undertextens namn i **[!UICONTROL Select audio or caption]** popup-lista i mediespelaren. Etiketten är det som kunden ser och som motsvarar ett underrubrik- eller bildtextspår. Till exempel: `English (CC)`. |
 
      Om det behövs kan du ändra eller redigera metadata för underrubriken senare. När videon publiceras återspeglas dessa uppgifter på offentliga URL:er i publicerade videor.
 
@@ -642,7 +642,7 @@ Undertexter och bildtexter som lagts till stöds i formaten WebVTT och Adobe VTT
      | Filnamn | Standardfilnamnet härleds från det ursprungliga filnamnet. Filnamnet kan bara ändras under överföring och kan inte ändras senare. Teckenkraven för filnamn är desamma som för AEM Assets.<br>Samma filnamn kan inte användas för ytterligare ljudspårfiler eller undertextfiler. |
      | Språk | Välj språk för ljudspåret. |
      | Typ | Välj vilken typ av ljudspår du använder.<br>**Original** - Ljudspåret som ursprungligen var kopplat till videon och representeras som `[Original]` i etiketten med `English` som är valt som standard. while **[!UICONTROL Label]** och **[!UICONTROL Language]** kan ändras i **[!UICONTROL Edit Audio Track]** används de ursprungliga värdena om den primära videon bearbetas om.<br>**Standard** - Ett tilläggsljudspår för ett annat språk än originalspråket.<br>**Ljudbeskrivning** - Ett ljudspår som även innehåller en beskrivande berättarröst för icke-verbala händelser och gester i videon, vilket gör innehållet mer tillgängligt för personer med nedsatt syn. |
-     | Etikett | Texten som visas som ljudspårets namn i **[!UICONTROL Select audio or caption]** popup-lista i mediespelaren. Etiketten är det kunden ser och motsvarar ett ljudspår. Till exempel, `English [Original]`. Etiketten för ljud som är kopplat till en video är inställd på `[Original|` som standard. |
+     | Etikett | Texten som visas som ljudspårets namn i **[!UICONTROL Select audio or caption]** popup-lista i mediespelaren. Etiketten är det kunden ser och motsvarar ett ljudspår. Till exempel: `English [Original]`. Etiketten för ljud som är kopplat till en video är inställd på `[Original|` som standard. |
 
      Om det behövs kan du ändra eller redigera metadata för ljudspåret senare. När videon publiceras återspeglas dessa uppgifter på offentliga URL:er i publicerade videor.
 
@@ -1063,7 +1063,7 @@ See [Adding a video thumbnail](#adding-a-video-thumbnail).
 
    if the directory panel is not visible, you may need to select the >> icon to the left of the Home tab.
 
-1. On the lower-right panel, in the Properties tab, double-tap `thumbnailtime`.
+1. On the lower-right panel, in the Properties tab, double-select `thumbnailtime`.
 1. In the Edit thumbnailtime dialog box, use the text fields to enter interval values as percentages.
 
     * Select the plus sign (+) icon to add one or more interval value fields. You may need to scroll to the bottom of the dialog box to see the icon.

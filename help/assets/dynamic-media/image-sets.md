@@ -5,10 +5,10 @@ contentOwner: Rick Brough
 feature: Image Sets
 role: User
 exl-id: 2eb71f24-73d9-4b5c-8605-923a0e3d1505
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2067'
-ht-degree: 5%
+source-wordcount: '2078'
+ht-degree: 3%
 
 ---
 
@@ -128,7 +128,7 @@ Du kan skapa bilduppsättningar via användargränssnittet eller via API:t.
 >[!NOTE]
 >
 >Du kan också skapa bilduppsättningar automatiskt med [gruppuppsättningsförinställningar](/help/assets/dynamic-media/batch-set-presets-dm.md).
->**Viktigt!** Gruppuppsättningar skapas av IPS (Image Production System) som en del av resurshämtningen.
+>**Viktigt:** Batchuppsättningar skapas av IPS (Image Production System) som en del av tillgångsinmatningen.
 
 När du lägger till resurser i uppsättningen läggs de automatiskt till i alfanumerisk ordning. Du kan ändra ordning på eller sortera resurser manuellt när de har lagts till.
 
@@ -148,9 +148,9 @@ Se även [Dynamic Media begränsningar](/help/assets/dynamic-media/limitations.m
 **Så här skapar du bilduppsättningar:**
 
 1. I Adobe Experience Manager väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen.
-1. Tryck på **[!UICONTROL Navigation]** > **[!UICONTROL Assets]**. Navigera till den plats där du vill skapa en bilduppsättning och gå sedan till **[!UICONTROL Create]** > **[!UICONTROL Image Set]** för att öppna sidan Bilduppsättningsredigerare.
+1. Välj **[!UICONTROL Navigation]** > **[!UICONTROL Assets]**. Navigera till den plats där du vill skapa en bilduppsättning och gå sedan till **[!UICONTROL Create]** > **[!UICONTROL Image Set]** för att öppna sidan Bilduppsättningsredigerare.
 
-   Du kan också skapa uppsättningen inifrån en mapp som innehåller resurserna.
+   Du kan också skapa uppsättningen inifrån en mapp som innehåller dina resurser.
 
    ![6_5_imagesets-createpulldown](assets/6_5_imagesets-createpulldown.png)
 
@@ -164,7 +164,7 @@ Se även [Dynamic Media begränsningar](/help/assets/dynamic-media/limitations.m
 
    * I mitten av bilduppsättningens redigeringssida väljer du **[!UICONTROL Tap to open Asset Selector]**.
 
-   Tryck för att välja resurser som du vill inkludera i din bilduppsättning. Markerade resurser har en bockmarkeringsikon över sig. När du är klar väljer du **[!UICONTROL Select]**.
+   Välj det här alternativet om du vill välja resurser som ska ingå i din bilduppsättning. Markerade resurser har en bockmarkeringsikon över sig. När du är klar väljer du **[!UICONTROL Select]**.
 
    Med resursväljaren kan du söka efter resurser genom att skriva ett nyckelord och välja **[!UICONTROL Return]**. Du kan också använda filter för att förfina sökresultatet. Du kan filtrera efter sökväg, samling, filtyp och tagg. Markera filtret och välj sedan **[!UICONTROL Filter]** i verktygsfältet. Ändra vyn genom att markera ikonen Visa och välja **[!UICONTROL Column View]**, **[!UICONTROL Card View]**, eller **[!UICONTROL List View]**.
 
@@ -236,7 +236,7 @@ Du kan utföra olika redigeringsåtgärder på bilduppsättningar, till exempel 
 
    * Håll pekaren över en bilduppsättningsresurs och välj sedan **[!UICONTROL Edit]** (pennikon).
    * Hovra över en bilduppsättningsresurs, välj **[!UICONTROL Select]** (bockmarkeringsikon) och sedan välja **[!UICONTROL Edit]** i verktygsfältet.
-   * Tryck på en bilduppsättningsresurs och välj sedan **[!UICONTROL Edit]** (pennikon) i verktygsfältet.
+   * Välj en bilduppsättningsresurs och välj sedan **[!UICONTROL Edit]** (pennikon) i verktygsfältet.
 
 1. Gör något av följande om du vill redigera bilderna i bilduppsättningen:
 
@@ -255,7 +255,7 @@ Du kan utföra olika redigeringsåtgärder på bilduppsättningar, till exempel 
    >
    >Du kan redigera bilderna i en bilduppsättning. Navigera till uppsättningen och markera **[!UICONTROL Set Members]** till vänster. Om du vill öppna redigeringsfönstret väljer du pennikonen på en resurs.
 
-1. Tryck **[!UICONTROL Save]** när du är klar med redigeringen.
+1. Välj **[!UICONTROL Save]** när du är klar med redigeringen.
 
 ## Förhandsvisa bilduppsättningar {#previewing-image-sets}
 

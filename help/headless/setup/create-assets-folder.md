@@ -2,9 +2,9 @@
 title: Skapa en resursmapp - Headless-konfiguration
 description: Använd AEM Content Fragment Models för att definiera strukturen för Content Fragments, som är grunden för ditt headless-innehåll.
 exl-id: 9a156a17-8403-40fc-9bd0-dd82fb7b2235
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ En administratör behöver bara skapa mappar då och då för att ordna innehål
       * Den kan vid behov justeras.
 
    ![Skapa mapp](../assets/assets-folder-create.png)
-1. Markera mappen som du nyss skapade genom att hålla muspekaren nedtryckt och trycka på bockmarkeringen. Välj sedan **Egenskaper** i verktygsfältet (eller använd `p` [kortkommando](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md)).
+1. Markera mappen som du skapade genom att hålla markeringen nedtryckt och trycka på den. Välj sedan **Egenskaper** i verktygsfältet (eller använd `p` [kortkommando](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md)).
 1. I **Egenskaper** väljer du **Cloud Service** -fliken.
 1. För **Molnkonfiguration** Välj [konfiguration som du skapade tidigare.](create-configuration.md)
    ![Konfigurera resursmapp](../assets/assets-folder-configure.png)
@@ -43,7 +43,7 @@ En administratör behöver bara skapa mappar då och då för att ordna innehål
 
    ![Bekräftelsefönstret](../assets/assets-folder-confirmation.png)
 
-Du kan skapa ytterligare undermappar i den mapp du just skapade. Undermapparna ärver **Molnkonfiguration** för den överordnade mappen. Detta kan åsidosättas om du vill använda modeller från en annan konfiguration.
+Du kan skapa ytterligare undermappar i den mapp du skapade. Undermapparna ärver **Molnkonfiguration** för den överordnade mappen. Detta kan åsidosättas om du vill använda modeller från en annan konfiguration.
 
 Om du använder en lokaliserad platsstruktur kan du [skapa en språkrot](/help/assets/translate-assets.md) nedanför den nya mappen.
 

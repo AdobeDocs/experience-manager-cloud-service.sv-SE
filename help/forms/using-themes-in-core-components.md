@@ -2,9 +2,9 @@
 title: Hur skapar och använder vi teman i Adaptive Forms?
 description: Du kan använda teman för att utforma och ge en visuell identitet till ett adaptivt formulär med hjälp av kärnkomponenterna. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
 exl-id: 11c52b66-dbb1-4c47-a94d-322950cbdac1
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2630'
+source-wordcount: '2564'
 ht-degree: 0%
 
 ---
@@ -158,7 +158,7 @@ Du kan anpassa enskilda komponenter eller göra ändringar på temanivå med hj�
 The `variable.scss` filen innehåller temats globala variabler. Genom att uppdatera dessa variabler kan du göra formatrelaterade ändringar på temanivå. Så här använder du format på temanivå:
 
 1. Öppna `<your-theme-sources>/src/site/_variables.scss` fil för redigering.
-1. Ändra värdet för alla egenskaper. Standardfelfärgen är till exempel `red`. Ändra felfärgen från `red` till `blue`, ändra färghexkoden för `$errorvariable`. Till exempel, `$error: #196ee5`.
+1. Ändra värdet för alla egenskaper. Standardfelfärgen är till exempel `red`. Ändra felfärgen från `red` till `blue`, ändra färghexkoden för `$errorvariable`. Till exempel: `$error: #196ee5`.
 1. Spara och stäng filen.
 
    ![Redigera tema](/help/forms/assets/edit_theme.png)
@@ -363,7 +363,7 @@ Temat distribueras med [rörledning.](https://experienceleague.adobe.com/docs/ex
    När pipeline-konfigurationen är klar uppdateras åtgärdskortet.
 
 1. Högerklicka på den pipeline som skapats.
-1. Klicka på **[!UICONTROL Run]** .
+1. Klicka **[!UICONTROL Run]** .
 
    ![run-a-pipleine](/help/forms/assets/canvas-theme-run-pipeline.png)
 
@@ -377,7 +377,7 @@ Steg för att tillämpa ett tema på ett adaptivt formulär är:
 
 1. Logga in på din AEM Forms-författarinstans.
 
-1. Tryck **Adobe Experience Manager** > **Forms** > **Forms och dokument**.
+1. Välj **Adobe Experience Manager** > **Forms** > **Forms och dokument**.
 
 1. Klicka **Skapa** > **Adaptiv Forms**. Guiden för att skapa adaptiva formulär öppnas.
 
@@ -404,7 +404,7 @@ Adaptiva formulärteman används som en del av en adaptiv formulärmall för att
   Använd temaredigeraren om du vill formatera sidhuvud och sidfot med formatalternativ som teckensnittsformat, bakgrund och genomskinlighet.
 Om du vill ange information som logotypbild, företagsnamn i sidhuvud och copyrightinformation i sidfoten använder du alternativen för formulärredigeraren.
 
-## Vanliga frågor {#faq}
+## Frågor och svar {#faq}
 
 **F:** Vilken anpassning prioriteras när du gör anpassningar i en temamapp på både global nivå och komponentnivå?
 

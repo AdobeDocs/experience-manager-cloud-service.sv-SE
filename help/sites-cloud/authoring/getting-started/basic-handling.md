@@ -2,9 +2,9 @@
 title: Grundläggande hantering
 description: Bekanta dig med navigering i AEM och dess grundläggande användning
 exl-id: ae87a63a-c6d3-4220-ab3d-07a20b21b93b
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2945'
+source-wordcount: '2943'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Det här dokumentet är utformat för att ge en översikt över grundläggande h
 
 ## Ett pekaktiverat användargränssnitt {#a-touch-enabled-ui}
 
-AEM användargränssnitt har aktiverats för beröring. Med ett pekaktiverat gränssnitt kan du använda touchfunktioner för att interagera med programmet med gester som att trycka, hålla ned och dra. Eftersom användargränssnittet för AEM är pekaktiverat kan du använda pekgester på enheter med pekskärm som mobiltelefonen eller surfplattan. Det finns dock även musåtgärder på en traditionell stationär enhet, vilket ger dig flexibilitet när det gäller hur du väljer att skapa ditt innehåll.
+AEM användargränssnitt har aktiverats för beröring. Med ett pekaktiverat gränssnitt kan du använda touchfunktioner för att interagera med programvaran med gester som att markera, hålla ned och dra. Eftersom användargränssnittet för AEM är pekaktiverat kan du använda pekgester på enheter med pekskärm som mobiltelefonen eller surfplattan. Det finns dock även musåtgärder på en traditionell stationär enhet, vilket ger dig flexibilitet när det gäller hur du väljer att skapa ditt innehåll.
 
 ## Steg 1 {#first-steps}
 
@@ -72,9 +72,9 @@ Följande konsoler finns i Navigation:
 |---|---|
 | Projekt | Med projektkonsolen får du direktåtkomst till dina projekt. [Projekt är virtuella kontrollpaneler](/help/sites-cloud/authoring/projects/overview.md) som kan användas för att bygga ett team. Sedan kan ni ge teamet tillgång till resurser, arbetsflöden och uppgifter och på så sätt låta andra arbeta mot ett gemensamt mål. |
 | Sites | Med platskonsolerna kan du [skapa, visa och hantera webbplatser](/help/sites-cloud/authoring/fundamentals/organizing-pages.md) som körs på din AEM. Med den här konsolen kan du skapa, redigera, kopiera, flytta och ta bort sidor, starta arbetsflöden och publicera sidor. |
-| Experience Fragments | An [Experience Fragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md) är en fristående upplevelse som kan återanvändas i olika kanaler och som har variationer, vilket besparar dig problem med att kopiera och klistra in upplevelser eller delar av upplevelser. |
+| Upplevelsefragment | An [Experience Fragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md) är en fristående upplevelse som kan återanvändas i olika kanaler och som har variationer, vilket besparar dig problem med att kopiera och klistra in upplevelser eller delar av upplevelser. |
 | Assets | Med Resurskonsolen kan du importera och hantera [digitalt material som bilder, videoklipp, dokument och ljudfiler](/help/assets/overview.md). Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM. Du kan också skapa och hantera [Innehållsfragment](/help/assets/content-fragments/content-fragments.md) från Assets-konsolen. |
-| Personanpassning | Den här konsolen innehåller ett ramverk med verktyg för [skapa riktat innehåll och presentera personaliserade upplevelser](/help/sites-cloud/authoring/personalization/overview.md). |
+| Personalisering | Den här konsolen innehåller ett ramverk med verktyg för [skapa riktat innehåll och presentera personaliserade upplevelser](/help/sites-cloud/authoring/personalization/overview.md). |
 | Innehållsfragment | [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) Med kan du utforma, skapa, strukturera och publicera sidoberoende innehåll. De gör att du kan ta fram strukturerat innehåll som är klart för användning på flera platser/i flera kanaler, och som är idealiskt för både sidutveckling och headless-leverans. |
 
 ## Panelen Verktyg {#tools-panel}
@@ -95,7 +95,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   ![Global navigering](/help/sites-cloud/authoring/assets/global-navigation.png)
 
-* [Sökning](/help/sites-cloud/authoring/getting-started/search.md)
+* [Sök](/help/sites-cloud/authoring/getting-started/search.md)
 
   ![Ikonen Sök](/help/sites-cloud/authoring/assets/search-icon.png)
 
@@ -255,9 +255,9 @@ Välja en specifik resurs beror på en kombination av vyn och enheten:
 
 | Visa | Välj Touch | Välj skrivbord | Avmarkera Touch | Avmarkera skrivbord |
 |---|---|---|---|---|
-| Kolumn | Tryck på miniatyrbilden | Klicka på miniatyrbilden | Tryck på miniatyrbilden | Klicka på miniatyrbilden |
-| Kort | Tryck och håll på kortet | Muspekaren använder sedan snabbåtgärden bock | Tryck på kortet | Klicka på kortet |
-| Lista | Tryck på miniatyrbilden | Klicka på miniatyrbilden | Tryck på miniatyrbilden | Klicka på miniatyrbilden |
+| Kolumn | Markera miniatyrbilden | Klicka på miniatyrbilden | Markera miniatyrbilden | Klicka på miniatyrbilden |
+| Kort | Markera och håll ned kortet | Muspekaren använder sedan snabbåtgärden bock | Välj kort | Klicka på kortet |
+| Lista | Markera miniatyrbilden | Klicka på miniatyrbilden | Markera miniatyrbilden | Klicka på miniatyrbilden |
 
 #### Markera alla {#select-all}
 

@@ -2,9 +2,9 @@
 title: Exempel på ContextHub Store-kandidater
 description: ContextHub innehåller flera exempel på arkivkandidater som du kan använda i dina lösningar
 exl-id: 9493d91e-0b23-4dc4-a014-d8d13687efad
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '457'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ContextHub innehåller flera exempel på lämpliga lagringskanaler som du kan an
 
 >[!WARNING]
 >
->Exempelbutikskandidaterna tillhandahålls som referenskonfigurationer som hjälper dig att skapa en egen dedikerad konfiguration för ditt projekt och bör därför inte användas direkt.
+>Exempelbutikskandidaterna tillhandahålls som referenskonfigurationer som hjälper dig att skapa en egen dedikerad konfiguration för ditt projekt. Använd dem inte direkt.
 
 ## aem.segmentation Sample Store Candidate {#aem-segmentation-sample-store-candidate}
 
@@ -35,7 +35,7 @@ Affärskandidaten aem.segmentation utökar [`ContextHub.Store.PersistedJSONPStor
 
 ### Konfiguration {#configuration-segmentation}
 
-När du skapar en `aem.segmentation` butik behöver du inte ange någon detaljerad konfiguration. Standardkonfigurationen anger platsen för ContextHub-segmentdefinitionerna.
+När du skapar `aem.segmentation` butik behöver du inte ange någon detaljerad konfiguration. Standardkonfigurationen anger platsen för ContextHub-segmentdefinitionerna.
 
 ```xml
 {
@@ -105,7 +105,7 @@ I butiken används ett dataträd som liknar följande exempel:
 >
 >En säkerhetsprincip som introducerades i Chrome 50.x kräver att alla geopositioneringsrelaterade anrop görs via en skyddad anslutning. AEM tvingar därför även https-användning för API-anrop för geopositionering om AEM körs över https. Annars används http för att följa principen för samma ursprung.
 >
->Se [det här Google-blogginlägget](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only) för mer information om förändringen i Chrome.
+>Se [det här Google-blogginlägget](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only) om du vill ha mer information om förändringen i Chrome.
 
 ## contexthub.surferinfo Sample Store Candidate {#contexthub-surferinfo-sample-store-candidate}
 

@@ -1,17 +1,17 @@
 ---
-title: Söka efter fasetter.
+title: Sök ansikten.
 description: I den här artikeln beskrivs hur du skapar, ändrar och använder sökfaktorer i Experience Manager.
 feature: Search,Metadata
 role: User,Admin
 exl-id: f994c1bf-3f9d-4cb2-88f4-72a9ad6fa999
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2387'
-ht-degree: 16%
+source-wordcount: '2381'
+ht-degree: 13%
 
 ---
 
-# Söka efter fasetter {#search-facets}
+# Sök efter ansikten {#search-facets}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -24,7 +24,7 @@ Använd sökfaktorer på panelen Filter för att göra sökningen mer detaljerad
 
 Med sökfaktorer kan du söka efter resurser på flera olika sätt i stället för i en enda, förutbestämd, taxonisk ordning. Du kan enkelt gå ned till önskad detaljnivå för en mer fokuserad sökning.
 
-Om du till exempel söker efter en bild kan du välja om du vill ha en bitmapp eller en vektorbild. Du kan minska sökningen ytterligare genom att ange MIME-typen för bilden. På samma sätt kan du ange formatet när du söker efter dokument, till exempel PDF eller MS Word.
+Om du till exempel söker efter en bild kan du välja om du vill ha en bitmapp eller en vektorbild. Du kan minska sökningen ytterligare genom att ange MIME-typen för bilden. På samma sätt kan du ange formatet, till exempel PDF eller MS Word, när du söker efter dokument.
 
 ## Lägg till ett predikat {#adding-a-predicate}
 
@@ -33,7 +33,7 @@ De sökfaktorer som visas på panelen Filter definieras i det underliggande sök
 Lägg till `Fulltext` förutsäga formuläret. Använd predikatet Egenskap för att söka efter resurser som matchar en enskild egenskap som du anger. Använd predikatet Alternativ för att söka efter resurser som matchar ett eller flera värden för en viss egenskap. Lägg till predikatet för datumintervall för att söka efter resurser som skapats inom ett angivet datumintervall.
 
 1. Klicka på Experience Manager-logotypen och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
-1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och sedan trycka  **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
+1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** väljer  **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
 
    ![Leta reda på och välj Resursadministratörens sökspår](assets/assets_admin_searchrail.png)
 
@@ -63,7 +63,7 @@ Lägg till `Fulltext` förutsäga formuläret. Använd predikatet Egenskap för 
    Förhandsgranska sökformuläret innan ändringarna skickas
 
 1. Om du vill stänga förhandsgranskningen klickar du på **[!UICONTROL Close]** ![stäng](assets/do-not-localize/close_icon.png) i förhandsvisningens övre högra hörn.
-1. Tryck **[!UICONTROL Done]** för att spara inställningarna.
+1. Välj **[!UICONTROL Done]** för att spara inställningarna.
 1. Navigera till sökpanelen i användargränssnittet Resurser. Egenskapspredikatet läggs till på panelen.
 1. Ange en beskrivning av resursen som ska genomsökas i textrutan. Ange t.ex. &quot;Adobe.&quot; När du gör en sökning visas resurser med en beskrivning som matchar&quot;Adobe&quot; i sökresultaten.
 
@@ -101,14 +101,14 @@ Om du vill använda en befintlig nod anger du den i valdialogrutan.
 >
 >Alternativpredikatet är en anpassad wrapper som innehåller egenskapspredikat som demonstrerar det beskrivna beteendet. För närvarande finns det ingen tillgänglig REST-slutpunkt som stöder funktionen internt.
 
-1. Tryck på Experience Manager-logotypen och gå sedan till **[!UICONTROL Tools > General > Search Forms]**.
-1. På sidan **[!UICONTROL Search Forms]** väljer du **[!UICONTROL Assets Admin Search Rail]** och trycker sedan på ikonen Redigera.
+1. Markera Experience Manager-logotypen och gå sedan till **[!UICONTROL Tools > General > Search Forms]**.
+1. Från **[!UICONTROL Search Forms]** sida, markera **[!UICONTROL Assets Admin Search Rail]** väljer du sedan ikonen Redigera.
 1. På sidan **[!UICONTROL Edit Search Form]** drar du **[!UICONTROL Options Predicate]** från fliken **[!UICONTROL Select Predicate]** till huvudrutan.
-1. Ange en etikett och ett namn för egenskapen på fliken **[!UICONTROL Settings]**. Om du till exempel vill söka efter resurser baserat på deras format anger du ett användarvänligt namn på etiketten, till exempel **[!UICONTROL File Type]**. Ange egenskapen som ska användas för sökningen i egenskapsfältet, till exempel `jcr:content/metadata/dc:format.`
+1. Ange en etikett och ett namn för egenskapen på fliken **[!UICONTROL Settings]**. Om du till exempel vill söka efter resurser baserat på deras format anger du ett användarvänligt namn för etiketten, till exempel: **[!UICONTROL File Type]**. Ange egenskapen som ska användas för att utföra sökningen i egenskapsfältet, till exempel `jcr:content/metadata/dc:format.`
 1. Gör något av följande:
 
    * I **[!UICONTROL Property Name]** anger du sökvägen till JSON-filen där du definierar noderna för alternativen och anger motsvarande nyckelvärdepar.
-   * Tryck ![Ikon för att lägga till resurser](assets/do-not-localize/aem_assets_add_icon.png) bredvid fältet Alternativ för att ange visningstext och värde för de alternativ som du vill ange på panelen Filter. Om du vill lägga till ytterligare ett alternativ väljer du ![Ikon för att lägga till resurser](assets/do-not-localize/aem_assets_add_icon.png) och upprepa steget.
+   * Välj ![Ikon för att lägga till resurser](assets/do-not-localize/aem_assets_add_icon.png) bredvid fältet Alternativ för att ange visningstext och värde för de alternativ som du vill ange på panelen Filter. Om du vill lägga till ytterligare ett alternativ väljer du ![Ikon för att lägga till resurser](assets/do-not-localize/aem_assets_add_icon.png) och upprepa steget.
 
 1. Kontrollera att **[!UICONTROL Single Select]** är avmarkerat så att användaren kan välja flera alternativ för filtyper samtidigt (till exempel bilder, dokument, multimedia och arkiv). Om du väljer **[!UICONTROL Single Select]** kan användaren bara välja ett alternativ åt gången för olika filtyper.
 
@@ -124,11 +124,11 @@ Om du vill använda en befintlig nod anger du den i valdialogrutan.
 The `Multi Value Property` kan du söka efter flera värden i resurser. Tänk dig ett scenario där du har bilder på flera produkter i [!DNL Assets] och metadata för varje bild innehåller ett SKU-nummer som är kopplat till produkten. Du kan använda det här predikatet för att söka efter produktbilder baserat på flera SKU-nummer.
 
 1. Klicka på Experience Manager-logotypen och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
-1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]**, tryck **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
+1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** väljer **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
 1. På sidan Redigera sökformulär drar du **[!UICONTROL Multi Value Property Predicate]** från fliken **[!UICONTROL Select Predicate]** till huvudrutan.
 1. I **[!UICONTROL Settings]** anger du en etikett och platshållartext för predikatet. Ange egenskapsnamnet som ska användas för att utföra sökningen i egenskapsfältet, till exempel `jcr:content/metadata/dc:value`. Du kan också använda valdialogrutan för att välja en nod.
 1. Kontrollera att **[!UICONTROL Delimiter Support]** är markerat. I fältet **[!UICONTROL Input Delimiters]** anger du avgränsare för att separera enskilda värden. Som standard anges kommatecken som avgränsare. Du kan ange en annan avgränsare.
-1. I **Beskrivning** anger du en valfri beskrivning och trycker sedan **[!UICONTROL Done]**.
+1. I **Beskrivning** fält, ange en valfri beskrivning och välj **[!UICONTROL Done]**.
 1. Navigera till panelen Filter i Assets-gränssnittet. Predikatet **[!UICONTROL Multi Value Property]** läggs till på panelen.
 1. Ange flera värden i fältet Flervärde avgränsat med avgränsarna och utför sökningen. Predikatet hämtar en exakt textmatchning för de värden du anger.
 
@@ -137,7 +137,7 @@ The `Multi Value Property` kan du söka efter flera värden i resurser. Tänk di
 The `Tags` kan du göra taggbaserade sökningar efter resurser. Som standard [!DNL Assets] söker efter resurser efter en eller flera taggar som matchar baserat på de taggar du anger. Med andra ord utför sökfrågan en ELLER-åtgärd med de angivna taggarna. Du kan dock använda alternativet Matcha alla taggar för att söka efter resurser som innehåller alla taggar som du anger.
 
 1. Klicka på Experience Manager-logotypen och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
-1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och sedan trycka **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
+1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och sedan **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
 1. Dra på sidan Redigera sökformulär **[!UICONTROL Tags Predicate]** från fliken Välj predikat till huvudrutan.
 1. Ange en platshållartext för predikatet på fliken Inställningar. Ange egenskapsnamnet som ska användas för att utföra sökningen i egenskapsfältet, till exempel `jcr:content/metadata/cq:tags`. Du kan också välja en nod i CRXDE i urvalsdialogrutan.
 1. Konfigurera sökvägsegenskapen för rottaggar för det här predikatet för att fylla i olika taggar i listan Taggar.
@@ -325,8 +325,8 @@ Låsikonen mot ett alternativ på söksidan i Forms anger att standardinställni
 Så här återställer du standardsökaspekten:
 
 1. Välj **[!UICONTROL Assets Admin Search Rail]** i **[!UICONTROL Search Forms]** sida.
-1. Tryck **[!UICONTROL Delete]** ![ta bort ikon](assets/do-not-localize/deleteoutline.png) i verktygsfältet.
-1. Tryck på **[!UICONTROL Delete]** för att ta bort de anpassade ändringarna.
+1. Välj **[!UICONTROL Delete]** ![ta bort ikon](assets/do-not-localize/deleteoutline.png) i verktygsfältet.
+1. I bekräftelsedialogrutan väljer du **[!UICONTROL Delete]** för att ta bort de anpassade ändringarna.
 
    När du har tagit bort de anpassade ändringarna för sökfasetter visas låsikonen igen före **[!UICONTROL Assets Admin Search Rail]** på sidan **[!UICONTROL Search Forms]**.
 
@@ -344,11 +344,11 @@ Om du inte har tilldelats en administratörsroll finns det en lista med behörig
 
 * [Sök efter bästa praxis](search-best-practices.md)
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)

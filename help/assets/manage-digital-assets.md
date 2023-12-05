@@ -6,9 +6,9 @@ mini-toc-levels: 3
 feature: Asset Management,Publishing,Collaboration,Asset Processing
 role: User,Architect,Admin
 exl-id: 51a26764-ac2b-4225-8d27-42a7fd906183
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '4153'
+source-wordcount: '4122'
 ht-degree: 8%
 
 ---
@@ -69,13 +69,13 @@ Så här extraherar du ZIP-filerna:
 Följ de här stegen för att förhandsgranska en resurs.
 
 1. Navigera från användargränssnittet Resurser till platsen för den resurs som du vill förhandsgranska.
-1. Tryck på önskad resurs för att öppna den.
+1. Välj önskad resurs för att öppna den.
 
 1. I förhandsgranskningsläget finns zoomalternativ för [bildtyper som stöds](/help/assets/file-format-support.md) (med interaktiv redigering).
 
    Om du vill zooma in en resurs väljer du `+` (eller välj förstoringsglaset på resursen). Om du vill zooma ut väljer du `-`. När du zoomar in kan du titta närmare på alla delar av bilden genom att panorera. Med den återställda zoompilen återgår du till den ursprungliga vyn.
 
-   Tryck **[!UICONTROL Reset]** om du vill återställa vyn till den ursprungliga storleken.
+   Välj **[!UICONTROL Reset]** om du vill återställa vyn till den ursprungliga storleken.
 
 ## Redigera egenskaper {#editing-properties}
 
@@ -330,7 +330,7 @@ CUG är ett extra sätt att begränsa åtkomsten till dina resurser. Du kan ocks
 1. Publicera mappen och försök sedan komma åt den från publiceringsinstansen. En inloggningsskärm visas.
 1. Om du är CUG-medlem anger du dina säkerhetsuppgifter. Mappen visas efter [!DNL Experience Manager] autentiserar dig.
 
-## Söka efter resurser {#search-assets}
+## Sök resurser {#search-assets}
 
 Att söka resurser är centralt för användningen av ett digitalt resurshanteringssystem - oavsett om det är avsett för kreativa användare, för robust hantering av resurser av företagsanvändare och marknadsförare eller för administration av DAM-administratörer.
 
@@ -340,7 +340,7 @@ Mer information om enkla, avancerade och anpassade sökningar för att hitta och
 
 Snabbåtgärdsikoner är tillgängliga för en enskild resurs i taget. Beroende på vilken enhet du använder utför du följande åtgärder för att visa snabbåtgärdsikonerna:
 
-* Pekskärmar: Tryck och håll. På en iPad kan du till exempel trycka och hålla ned en resurs så att snabbåtgärderna visas.
+* Pekskärmar: Tryck och håll. På en iPad kan du till exempel markera och hålla kvar en resurs så att snabbåtgärderna visas.
 * Ej pekskärmar: pekare. På en stationär enhet visas t.ex. snabbåtgärdsfältet om du håller pekaren över miniatyrbilden för resursen.
 
 <!-- Hiding this topic via cqdoc-18707
@@ -543,7 +543,7 @@ Om du vill skriva ut anteckningarna och granskningsstatusen väljer du **[!UICON
 
    <!--![chlimage_1-247](assets/chlimage_1-247.png)-->
 
-   Om du vill ändra utseendet på den återgivna PDF-filen, till exempel teckensnittsfärg, storlek och format, bakgrundsfärg för kommentarer och statusvärden, öppnar du **[!UICONTROL Annotation PDF configuration]** från Configuration Manager och ändra önskade alternativ. Om du till exempel vill ändra visningsfärgen för den godkända statusen ändrar du färgkoden i motsvarande fält. Mer information om hur du ändrar teckenfärg för anteckningar finns i [Anteckningar](/help/assets/manage-digital-assets.md#annotating).
+   Om du vill ändra utseendet på den återgivna PDF-filen, t.ex. teckenfärg, storlek och format, bakgrundsfärg för kommentarer och statusvärden, öppnar du **[!UICONTROL Annotation PDF configuration]** från Configuration Manager och ändra önskade alternativ. Om du till exempel vill ändra visningsfärgen för den godkända statusen ändrar du färgkoden i motsvarande fält. Mer information om hur du ändrar teckenfärg för anteckningar finns i [Anteckningar](/help/assets/manage-digital-assets.md#annotating).
 
    Återgå till den återgivna PDF-filen och uppdatera den. Det uppdaterade PDF återspeglar de ändringar du gjorde.
 
@@ -664,14 +664,14 @@ Om du vill veta mer kan du se hur [bläddra bland DAM-resurser med datorprogramm
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)

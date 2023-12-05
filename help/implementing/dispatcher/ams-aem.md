@@ -3,10 +3,10 @@ title: Migrera Dispatcher-konfigurationen från AMS till AEM as a Cloud Service
 description: Migrera Dispatcher-konfigurationen från AMS till AEM as a Cloud Service
 feature: Dispatcher
 exl-id: ff7397dd-b6e1-4d08-8e2d-d613af6b81b3
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1455'
-ht-degree: 11%
+source-wordcount: '1459'
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 11%
 
 Konfigurationen av Apache och Dispatcher i AEM as a Cloud Service liknar den i AMS. De viktigaste skillnaderna är:
 
-* I AEM as a Cloud Service kan vissa Apache-direktiv inte användas (till exempel `Listen` eller `LogLevel`)
+* I AEM as a Cloud Service kanske vissa Apache-direktiv inte används (till exempel `Listen` eller `LogLevel`)
 * På AEM as a Cloud Service kan endast vissa delar av Dispatcher-konfigurationen placeras i inkluderingsfiler och deras namn är viktigt. Du måste till exempel lägga in filterregler som du vill återanvända på olika värdar i en fil som kallas `filters/filters.any`. Mer information finns på referenssidan.
 * På AEM as a Cloud Service finns det extra validering för att inte tillåta filterregler skrivna med `/glob` för att förhindra säkerhetsproblem. För `deny *` används i stället för `allow *` (som inte kan användas) har kunderna nytta av att köra Dispatcher lokalt och göra en testversion och ett fel. Loggarna visar exakt vilka vägar Dispatcher-filtren blockerar för att de ska kunna läggas till.
 
@@ -37,7 +37,7 @@ Extrahera arkivet till en mapp och se till att de omedelbara undermapparna börj
 
 Ta bort undermappar `conf` och `conf.modules.d`och filer som matchar `conf.d/*.conf`.
 
-### Ta bort alla virtuella värdar som inte är publicerade 
+### Ta bort alla virtuella värdar som inte är publicerade
 
 Ta bort alla virtuella värdfiler i `conf.d/enabled_vhosts` som har `author`, `unhealthy`, `health`,
 `lc` eller `flush` i namnet. Alla virtuella värdfiler i `conf.d/available_vhosts` som inte är länkade till kan också tas bort.
@@ -52,7 +52,7 @@ Om du fortfarande har avsnitt i dina virtuella värdfiler som endast refererar t
 </VirtualHost>
 ```
 
-ska du ta bort eller kommentera dem. Programsatser i de här avsnitten bearbetas inte, men om du behåller dem kan du ändå redigera dem utan någon effekt, vilket är förvirrande.
+ta bort eller kommentera dem. Programsatser i de här avsnitten bearbetas inte, men om du behåller dem kan du ändå redigera dem utan någon effekt, vilket är förvirrande.
 
 ### Kontrollera återskrivningar
 
@@ -85,7 +85,7 @@ I alla virtuell värd-filer:
 Byt namn `PUBLISH_DOCROOT` till `DOCROOT`
 Ta bort avsnitt som refererar till variabler med namnet `DISP_ID`, `PUBLISH_FORCE_SSL` eller `PUBLISH_WHITELIST_ENABLED`
 
-### Kontrollera status genom att köra valideraren
+### Kontrollera ditt tillstånd genom att köra valideraren
 
 Kör Dispatcher-valideraren i din katalog med `httpd` underkommando:
 
@@ -102,7 +102,7 @@ Om Apache-direktiv som inte är tillåtslista visas tar du bort dem.
 Ta bort en servergruppsfil i `conf.dispatcher.d/enabled_farms` som har `author`, `unhealthy`, `health`,
 `lc` eller `flush` i namnet. Alla gruppfiler i `conf.dispatcher.d/available_farms` som inte är länkade till kan också tas bort.
 
-### Byta namn på servergruppsfiler
+### Byt namn på gruppfiler
 
 Alla gårdar i `conf.dispatcher.d/enabled_farms` måste byta namn för att matcha mönstret `*.farm`, t.ex. en servergruppsfil som kallas `customerX_farm.any` ska byta namn `customerX.farm`.
 
@@ -219,7 +219,7 @@ med programsatsen:
 $include "../virtualhosts/default_virtualhosts.any"
 ```
 
-### Kontrollera status genom att köra valideraren
+### Kontrollera ditt tillstånd genom att köra valideraren
 
 Kör AEM as a Cloud Service Dispatcher-valideraren i din katalog med `dispatcher` underkommando:
 
@@ -231,7 +231,7 @@ Om du ser fel som handlar om saknade inkluderingsfiler ska du kontrollera om du 
 
 Om felmeddelanden som rör en odefinierad variabel `PUBLISH_DOCROOT` visas, ändrar du namnet till `DOCROOT`.
 
-Alla andra fel finns i felsökningsavsnittet i dokumentationen för valideringsverktyget. 
+Alla andra fel finns i felsökningsavsnittet i dokumentationen för valideringsverktyget.
 
 ### Testa konfigurationen med en lokal distribution (kräver installation av Docker)
 

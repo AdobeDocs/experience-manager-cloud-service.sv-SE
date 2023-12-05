@@ -5,9 +5,9 @@ uuid: f8d2aed3-52aa-437f-bfe3-0c8779e7986c
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 docset: aem65
-source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Du kan använda layoutläget för att definiera antalet kolumner som avgränsnin
 
 Så här anger du egenskaper för en avgränsningskomponent:
 
-1. Markera en separationskomponent och tryck på ![cmppr](assets/cmppr.png). Egenskaperna öppnas i sidofältet.
+1. Markera en avgränsningskomponent och markera ![cmppr](assets/cmppr.png). Egenskaperna öppnas i sidofältet.
 1. Klicka på en flik i avsnittet Infoga CSS-egenskaper så att du kan ange CSS-egenskaper. Exempel: a. Klicka på fliken Fält **Lägg till objekt**. En rad med två fält läggs till.
 1. I det första fältet från vänster anger du den CSS3-egenskap som du vill använda. Till exempel: **border**. Du kan också välja en egenskap genom att klicka på nedpilsknappen. Listrutan är inte fullständig och du kan ange ett CSS3-egenskapsnamn som stöds i det här fältet.
 1. Ange ett giltigt värde för den angivna CSS3-egenskapen i det intilliggande fältet. Till exempel: **3 pixlar solid black**.

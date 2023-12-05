@@ -2,9 +2,9 @@
 title: Så här Live med ditt headless-program
 description: I den här delen av AEM Headless Developer Journey lär du dig hur du distribuerar ett headless-program live genom att ta din lokala kod i Git och flytta den till Cloud Manager Git för CI/CD-pipeline.
 exl-id: 81616e31-764b-44b0-94a6-3ae24ce56bf6
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '1093'
+source-wordcount: '1060'
 ht-degree: 0%
 
 ---
@@ -124,7 +124,7 @@ Antingen har du redan startat ditt första AEM Headless-projekt eller så har du
 
 ### Utforska Single Page-program {#explore-spa}
 
-De headless butikerna i AEM behöver inte stanna här. Du kanske kommer ihåg i [Komma igång med en del av resan](getting-started.md#integration-levels) Vi diskuterade kortfattat hur AEM inte bara stöder headless-leverans och traditionella fullstacksmodeller, utan också kan stödja hybridmodeller som kombinerar fördelarna med båda.
+De headless butikerna i AEM behöver inte stanna här. Du kanske kommer ihåg i [Komma igång med en del av resan](getting-started.md#integration-levels) Vi diskuterade kortfattat hur AEM inte bara stöder headless-leverans och traditionella fullstacksmodeller, utan även stöder hybridmodeller som kombinerar fördelarna med båda.
 
 Om den här typen av flexibilitet är något du behöver för ditt projekt kan du fortsätta med den valfria, extra delen av resan, [Skapa enkelsidiga program (SPA) med AEM.](create-spa.md)
 

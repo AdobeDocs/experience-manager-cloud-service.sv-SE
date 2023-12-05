@@ -2,9 +2,9 @@
 title: SPA introduktion och genomgång
 description: I den här artikeln beskrivs begreppen för en SPA och du kan gå igenom hur du använder ett grundläggande SPA för att skapa, vilket visar hur det är relaterat till den underliggande AEM SPA redigeraren.
 exl-id: 8dad48d5-fa90-467c-8bec-e4b76e057f80
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '2065'
+source-wordcount: '2045'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Genomgången baseras på AEM och exempelappen WKND SPA Project. Om du vill följ
 
 >[!CAUTION]
 >
->Det här dokumentet använder [WKND SPA Project-app](https://github.com/adobe/aem-guides-wknd-spa) endast i demonstrationssyfte. Det ska inte användas för något projektarbete.
+>Det här dokumentet använder [WKND SPA Project-app](https://github.com/adobe/aem-guides-wknd-spa) endast i demonstrationssyfte. Använd den inte för något projektarbete.
 
 >[!TIP]
 >

@@ -5,10 +5,10 @@ contentOwner: Rick Brough
 feature: Mixed Media Sets
 role: User
 exl-id: 7ccde741-38d2-44c9-9378-f2721384aab7
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1425'
-ht-degree: 14%
+source-wordcount: '1432'
+ht-degree: 11%
 
 ---
 
@@ -158,9 +158,9 @@ Du kan utföra olika redigeringsåtgärder för resurser i blandade medieuppsät
 
    >[!NOTE]
    >
-   >* Om du vill redigera resurserna i en uppsättning med blandade medier navigerar du till den blandade medieuppsättningen. Tryck (markera inte) på uppsättningen så att du kan öppna den på Experience Manager-sidan för förhandsvisning. Markera nedåtpilen i den vänstra listen för att öppna listrutan och välj sedan **[!UICONTROL Set Members]**. Håll markören över en resurs på sidan Ange medlemmar och välj sedan **[!UICONTROL Edit]** (pennikon) för att öppna redigeringssidan.
+   >* Om du vill redigera resurserna i en uppsättning med blandade media navigerar du till den blandade medieuppsättningen. Markera (markera inte) uppsättningen så att du kan öppna den på sidan Förhandsvisa Experience Manager. Markera nedåtpilen i den vänstra listen för att öppna listrutan och välj sedan **[!UICONTROL Set Members]**. Håll markören över en resurs på sidan Ange medlemmar och välj sedan **[!UICONTROL Edit]** (pennikon) för att öppna redigeringssidan.
    >
-   >* Om du vill ta bort en hel uppsättning med blandade medier – I valfritt visningsläge (som kortvyn eller kolumnvyn) går du till uppsättningen med blandade medier. Hovra på scenen och välj sedan **[!UICONTROL Select]** (bockmarkeringsikon). Tryck **[!UICONTROL Backspace]** på tangentbordet, eller välj **[!UICONTROL More]** (rad om tre punkter), markera sedan **[!UICONTROL Delete]**.
+   >* Om du vill ta bort en hel uppsättning med blandade media - I valfritt visningsläge (som kortvyn eller kolumnvyn) går du till den blandade medieuppsättningen. Hovra på scenen och välj sedan **[!UICONTROL Select]** (bockmarkeringsikon). Tryck **[!UICONTROL Backspace]** på tangentbordet, eller välj **[!UICONTROL More]** (rad om tre punkter), markera sedan **[!UICONTROL Delete]**.
 
 ## Förhandsgranska blandade medieuppsättningar {#previewing-mixed-media-sets}
 

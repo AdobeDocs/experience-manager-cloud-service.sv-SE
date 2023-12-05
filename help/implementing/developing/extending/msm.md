@@ -2,9 +2,9 @@
 title: Utöka Multi Site Manager
 description: Lär dig hur du utökar funktionerna i Multi Site Manager.
 exl-id: 4b7a23c3-65d1-4784-9dea-32fcceca37d1
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2429'
+source-wordcount: '2337'
 ht-degree: 0%
 
 ---

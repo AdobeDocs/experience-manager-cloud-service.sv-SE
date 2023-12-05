@@ -2,10 +2,10 @@
 title: Responsiv layout
 description: AEM kan du förverkliga en responsiv layout för dina sidor
 exl-id: 87202742-5bed-4e87-a427-456a1a0e72cc
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '1732'
-ht-degree: 6%
+source-wordcount: '1737'
+ht-degree: 5%
 
 ---
 
@@ -96,7 +96,7 @@ När du t.ex. väljer enheten **iPhone 6 Plus** (definierat med en bredd på 540
 
    Emulatorverktygsfältet innehåller ytterligare layoutalternativ:
 
-   * **Rotera enhet** - Du kan rotera en enhet från lodrät (stående) orientering till vågrät (liggande) orientering och tvärtom.
+   * **Rotera enhet** - Du kan rotera en enhet från lodrät (stående) orientering till vågrät (liggande) orientering och omvänt.
 
    ![Rotera enhetens liggande knapp](/help/sites-cloud/authoring/assets/responsive-layout-rotate-device-landscape-button.png)
    ![Rotera enhetens stående knapp](/help/sites-cloud/authoring/assets/responsive-layout-rotate-device-portrait-button.png)
@@ -124,7 +124,7 @@ När du t.ex. väljer enheten **iPhone 6 Plus** (definierat med en bredd på 540
    * Flödets linje visas inte om höjden på den enhet som emuleras är högre än skärmstorleken.
    * Flödet visas för författarens bekvämlighet och visas inte på den publicerade sidan.
 
-## Lägga till en layoutbehållare och dess innehåll (redigeringsläge) {#adding-a-layout-container-and-its-content-edit-mode}
+## Lägga till en layoutbehållare och dess innehåll (redigeringsläget) {#adding-a-layout-container-and-its-content-edit-mode}
 
 A **Layoutbehållare** är ett styckesystem som
 
@@ -149,7 +149,7 @@ Precis som med andra komponenter kan du markera och sedan agera på (klippa ut, 
 >
 >När en layoutbehållare är ett styckesystem tas både layoutstödrastret och alla komponenter (och deras innehåll) som finns i behållaren bort om komponenten tas bort.
 
-1. Om du håller muspekaren över eller trycker på platshållaren för stödrastret visas åtgärdsmenyn.
+1. Om du håller muspekaren över eller väljer platshållaren för stödrastret visas åtgärdsmenyn.
 
    ![Lägg till i layoutbehållaren](/help/sites-cloud/authoring/assets/responsive-layout-container.png)
 

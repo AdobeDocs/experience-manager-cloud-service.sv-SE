@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Smart Tags,Tagging
 role: Admin,User
 exl-id: a2abc48b-5586-421c-936b-ef4f896d78b7
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2409'
+source-wordcount: '2401'
 ht-degree: 4%
 
 ---
@@ -261,15 +261,15 @@ Om du vill söka efter filer med smarta taggar (vanliga eller förbättrade) anv
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
 

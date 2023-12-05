@@ -1,16 +1,14 @@
 ---
 title: Lägg till en anpassad felhanterare i Adaptive Forms för AEM Adaptive Forms
-seo-title: Error Handlers in Adaptive Forms for AEM Adaptive Forms
-description: AEM Forms har körklara hanterare och felhanterare för ett formulär som använder REST-slutpunkten som konfigurerats för att anropa en extern tjänst. Du kan lägga till en standardfelhanterare samt en anpassad felhanterare i en AEM anpassad form.
-seo-description: Error handler function and Rule Editor in Adaptive Forms helps you to effectively manage and customize error handling. You can add a default error handler as well as custom error handler in an AEM Adaptive Form.
+description: AEM Forms har körklara hanterare och felhanterare för ett formulär som använder REST-slutpunkten som konfigurerats för att anropa en extern tjänst. Du kan lägga till en standardfelhanterare och en anpassad felhanterare i en AEM anpassad form.
 keywords: Lägg till en anpassad felhanterare, lägg till en standardfelhanterare, lägg till en felhanterare i formuläret, använd regelredigerarens anropstjänst för att lägga till en anpassad felhanterare, konfigurera regelredigeraren för att lägga till en anpassad felhanterare, lägg till en anpassad felhanterare med regelredigeraren
 contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms
 exl-id: 198a26a9-d6bb-457d-aab8-0a5d15177c48
-source-git-commit: 1dd0bbbe8a366b38a923e61bd987e248c2f78e86
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2414'
+source-wordcount: '2346'
 ht-degree: 0%
 
 ---
@@ -194,8 +192,8 @@ Med regelredigeraren kan du:
 En standardfelhanterare stöds för att visa felmeddelanden i fält om felsvaret är i standardschema eller i valideringsfel på serversidan.
 Så här använder du en standardfelhanterare med [Regelredigerarens anropstjänst](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=en#invoke) åtgärd, ta ett exempel på ett enkelt adaptivt formulär med två fält, **Djurs-ID** och **Djurnamn** och använder en standardfelhanterare på **Djurs-ID** fält för att kontrollera olika fel som returneras av REST-slutpunkten som konfigurerats för att anropa en extern tjänst, till exempel `200 - OK`,`404 - Not Found`, `400 - Bad Request`. Så här lägger du till en standardfelhanterare med hjälp av åtgärden Anropa tjänst i regelredigeraren:
 
-1. Öppna ett adaptivt formulär i redigeringsläge, markera en formulärkomponent och tryck på **[!UICONTROL Rule Editor]** för att öppna regelredigeraren.
-1. Tryck på **[!UICONTROL Create]**.
+1. Öppna ett adaptivt formulär i redigeringsläge, markera en formulärkomponent och markera **[!UICONTROL Rule Editor]** för att öppna regelredigeraren.
+1. Välj **[!UICONTROL Create]**.
 1. Skapa ett villkor i **När** -delen av regeln. Till exempel: **När[Namn på Pet ID-fält]** ändras. Markeringen ändras från **Välj läge** listruta.
 1. I **Sedan** avsnitt, markera **[!UICONTROL Invoke Service]** från **Välj åtgärd** listruta.
 1. Välj en **Bokför tjänst** och dess motsvarande databindningar från **Indata** -avsnitt. Validera till exempel **Djurs-ID** väljer du en **Bokför tjänst** as **GET /husdjur/{petId}** och markera **Djurs-ID** i **Indata** -avsnitt.
@@ -305,8 +303,8 @@ I det här fallet anges klientbiblioteksnamnet som `customfunctionsdemo` i `.con
 
 Använda en anpassad felhanterare med **[!UICONTROL Rule Editor's Invoke Service]** åtgärd:
 
-1. Öppna ett adaptivt formulär i redigeringsläge, markera en formulärkomponent och tryck på **[!UICONTROL Rule Editor]** för att öppna regelredigeraren.
-1. Tryck på **[!UICONTROL Create]**.
+1. Öppna ett adaptivt formulär i redigeringsläge, markera en formulärkomponent och markera **[!UICONTROL Rule Editor]** för att öppna regelredigeraren.
+1. Välj **[!UICONTROL Create]**.
 1. Skapa ett villkor i **När** -delen av regeln. Till exempel När **[Namn på Pet ID-fält]** ändras, välj **ändras** från **Välj läge** listruta.
 1. I **Sedan** avsnitt, markera **[!UICONTROL Invoke Service]** från **Välj åtgärd** listruta.
 1. Välj en **Bokför tjänst** och dess motsvarande databindningar från **Indata** -avsnitt. Validera till exempel **Djurs-ID** väljer du en **Bokför tjänst** as **GET /husdjur/{petId}** och markera **Djurs-ID** i **Indata** -avsnitt.
@@ -335,7 +333,7 @@ If the server validation error message does not display in the standard format, 
 
 Before adding custom handler, you must configure the adaptive form for asynchronous submission. Execute the following steps:
 
-1. In adaptive form authoring mode, select the Form Container object and tap ![adaptive form properties](assets/configure_icon.png) to open its properties.
+1. In adaptive form authoring mode, select the Form Container object and select ![adaptive form properties](assets/configure_icon.png) to open its properties.
 1. In the **[!UICONTROL Submission]** properties section, enable **[!UICONTROL Use asynchronous submission]**.
 1. Select **[!UICONTROL Revalidate on server]** to validate the input field values on server before submission.
 1. Select the Submit Action:
@@ -345,7 +343,7 @@ Before adding custom handler, you must configure the adaptive form for asynchron
 
     ![adaptive form submission properties](assets/af_submission_properties.png)
 
-1. Tap ![Save](assets/save_icon.png) to save the properties.
+1. Select ![Save](assets/save_icon.png) to save the properties.
 
 ### Add custom error handler on Adaptive Form submission {#add-custom-error-handler-af-submission}
 
@@ -353,10 +351,10 @@ AEM Forms provides out-of-the-box success and error handlers for form submission
 
 Execute the following steps to add custom error handler on Adaptive Form submission:
 
-1. Open an Adaptive Form in authoring mode, select any form object, and tap  to open the rule editor.
-1. Select **[!UICONTROL Form]** in the Form Objects tree and tap **[!UICONTROL Create]**.
+1. Open an Adaptive Form in authoring mode, select any form object, and select  to open the rule editor.
+1. Select **[!UICONTROL Form]** in the Form Objects tree and select **[!UICONTROL Create]**.
 1. Select **[!UICONTROL Error in Submission]** from the Event drop-down list.
-1. Write a rule to convert custom error structure to the standard error structure and tap **[!UICONTROL Done]** to save the rule.
+1. Write a rule to convert custom error structure to the standard error structure and select **[!UICONTROL Done]** to save the rule.
 
 The following is a sample code to convert a custom error structure to the standard error structure:
 

@@ -4,9 +4,9 @@ description: Använd tabellkomponenten för att lägga till tabeller i ett adapt
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Adaptive Forms
 exl-id: 88ace1d4-b68d-40e6-a7b4-918ba25f2e91
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2480'
+source-wordcount: '2462'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,7 @@ Om du vill lägga till eller ta bort en kolumn klickar du på textcellen i rubri
 
 Du kan lägga till en beskrivning av tabellen för att förklara hur informationen är organiserad och att skärmläsare kan tolka och läsa upp den. Så här lägger du till beskrivningen:
 
-1. Markera tabellen och tryck på ![cmppr](assets/cmppr.png) om du vill visa dess egenskaper i sidofältet.
+1. Markera tabellen och välj ![cmppr](assets/cmppr.png) om du vill visa dess egenskaper i sidofältet.
 1. Ange en sammanfattning på fliken Tillgänglighet.
 1. Klicka **Klar**.
 
@@ -107,9 +107,9 @@ Om du vill använda sortering på tabellkolumner måste tabellkolumncellerna inn
 
 Så här aktiverar du sortering:
 
-1. Markera tabellen och tryck på ![configure_icon](assets/configure_icon.png) (Konfigurera). Du kan också markera tabellen med **Innehåll** webbläsaren i sidospåret av Interactive Communication.
+1. Markera tabellen och välj ![configure_icon](assets/configure_icon.png) (Konfigurera). Du kan också markera tabellen med **Innehåll** webbläsaren i sidospåret av Interactive Communication.
 1. Välj **Aktivera sortering**.
-1. Tryck ![ready_icon](assets/done_icon.png) om du vill spara tabellegenskaperna. Sorteringsikonerna, uppåt- och nedåtpilarna, i kolumnrubriker representerar att sorteringen har aktiverats.
+1. Välj ![ready_icon](assets/done_icon.png) om du vill spara tabellegenskaperna. Sorteringsikonerna, uppåt- och nedåtpilarna, i kolumnrubriker representerar att sorteringen har aktiverats.
 
    ![Aktivera sortering](assets/enable_sorting_new.png)
 
@@ -128,7 +128,7 @@ Så här aktiverar du sortering:
 
 Gör så här för att ange kolumnbredd för en tabell:
 
-1. I **[!UICONTROL Content]** trycker du på **[!UICONTROL Table]** och tryck på Konfigurera (![Konfigurera](assets/configure-icon.svg)).
+1. I **[!UICONTROL Content]** väljer du **[!UICONTROL Table]** och väljer Konfigurera (![Konfigurera](assets/configure-icon.svg)).
 
 1. Ange den kommaavgränsade listan med värden i dialogrutan **[!UICONTROL Column Width]** -fält för att ange den proportionella bredden för varje kolumn i tabellen. För en tabell som innehåller 3 kolumner anger du till exempel 2,4,6 som värde i **[!UICONTROL Column Width]** resulterar i att kolumnbredden ställs in som 2/12 för den första kolumnen, 4/12 för den andra kolumnen och 6/12 för den tredje kolumnen. 2/12 som bredd för den första kolumnen avser en sjättedel av tabellbredden. På samma sätt anger 4/12 den andra kolumnbredden som en tredjedel av tabellbredden och 6/12 den tredje kolumnbredden som halva tabellbredden.
 
@@ -136,9 +136,9 @@ Gör så här för att ange kolumnbredd för en tabell:
 
 Du kan definiera formatet för en tabell med hjälp av stilläget i verktygsfältet på sidan. Utför följande steg för att växla till formateringsläge och redigera tabellformatet
 
-1. Tryck på innan du förhandsgranskar i sidverktygsfältet ![canvas-drop-down](assets/canvas-drop-down.png) > **Stil**.
+1. I verktygsfältet för sidan, före förhandsvisning, väljer du ![canvas-drop-down](assets/canvas-drop-down.png) > **Stil**.
 
-1. Markera en tabell i sidlisten och tryck på redigeringsknappen ![edit-button](assets/edit-button.png).
+1. Markera en tabell i sidlisten och välj knappen Redigera ![edit-button](assets/edit-button.png).
 Du kan se formategenskaperna i sidofältet.
 
 ![Formategenskaper för en tabell](assets/style-table.png)
@@ -151,7 +151,7 @@ Du kan se formategenskaperna i sidofältet.
 
 Tabeller har färdiga funktioner för att dynamiskt lägga till eller ta bort rader vid körning.
 
-1. Markera en tabellrad och tryck på ![cmppr](assets/cmppr.png).
+1. Markera en tabellrad och markera ![cmppr](assets/cmppr.png).
 1. På fliken Upprepa inställningar anger du minsta och högsta antal rader för att begränsa antalet rader i tabellen.
 1. Klicka **Klar**.
 
@@ -328,7 +328,7 @@ Dessutom kan du dra och släppa en grupp XSD-element med komplex typ för att sk
 * Om du flyttar rader uppåt och nedåt när du redigerar en XSD-baserad tabell, visas en del dataförluster från tabellrader i den data-XML som genereras när formuläret skickas.
 * Varje tabellcell i standardtabellen har ett fördefinierat elementnamn kopplat till sig. Om du lägger till en annan tabell i det adaptiva formuläret får standardcellerna i den nya tabellen samma elementnamn som i den första tabellen. I sådana fall kommer de data som genereras när formuläret skickas endast att innehålla data i standardcellerna för en av tabellerna. Se därför till att du byter namn på elementnamnen för standardcellerna för brödtext så att de är unika i alla tabeller och undvika dataförlust.
 
-  Observera att detta endast gäller för standardcellerna. Om du lägger till fler rader eller kolumner i en tabell genereras unika elementnamn automatiskt för brödtextceller som inte är standard.
+  Gäller endast standardcellerna. Om du lägger till fler rader eller kolumner i en tabell genereras unika elementnamn automatiskt för brödtextceller som inte är standard.
 
 ## Se även {#see-also}
 

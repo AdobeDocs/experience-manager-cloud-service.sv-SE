@@ -5,9 +5,9 @@ feature: Form Data Model
 role: User
 level: Beginner, Intermediate
 exl-id: c17c0443-d4dc-41f8-9315-6cc49e6c471f
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '3962'
+source-wordcount: '3934'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Så här lägger du till datamodellsobjekt och -tjänster:
 
 1. Logga in på [!DNL Experience Manager] författarinstans, navigera till **[!UICONTROL Forms > Data Integrations]** och öppna den formulärdatamodell i vilken du vill lägga till datamodellsobjekt.
 1. Expandera datakällor i rutan Datakällor för att visa tillgängliga datamodellsobjekt och tjänster.
-1. Markera datamodellsobjekt och tjänster som du vill lägga till i formulärdatamodellen och tryck på **[!UICONTROL Add Selected]**.
+1. Markera datamodellsobjekt och tjänster som du vill lägga till i formulärdatamodellen och välj **[!UICONTROL Add Selected]**.
 
    ![selected-objects](assets/selected-objects.png)
 
@@ -72,7 +72,7 @@ Så här lägger du till datamodellsobjekt och -tjänster:
    >
    >Förutom datamodellsobjekt och -tjänster innehåller OData-tjänstens metadatadokument navigeringsegenskaper som definierar associationen mellan två datamodellsobjekt. Mer information finns i [Arbeta med navigeringsegenskaper för OData-tjänster](#work-with-navigation-properties-of-odata-services).
 
-1. Tryck **[!UICONTROL Save]** för att spara formulärmodellobjektet.
+1. Välj **[!UICONTROL Save]** för att spara formulärmodellobjektet.
 
    >[!NOTE]
    >
@@ -87,8 +87,8 @@ Du kan lägga till datamodellsobjekt från konfigurerade datakällor, men du kan
 Så här skapar du ett datamodellsobjekt utan datakällor:
 
 1. Logga in på [!DNL Experience Manager] författarinstans, navigera till **[!UICONTROL Forms > Data Integrations]** och öppna den formulärdatamodell i vilken du vill skapa ett datamodellsobjekt eller en datamodell.
-1. Tryck på **[!UICONTROL Create Entity]**.
-1. I [!UICONTROL Create data Model] anger du ett namn för datamodellobjektet och trycker på **[!UICONTROL Add]**. Ett datamodellsobjekt läggs till i formulärdatamodellen. Det nya datamodellsobjektet är inte bundet till en datakälla och har inga egenskaper som visas i följande bild.
+1. Välj **[!UICONTROL Create Entity]**.
+1. I [!UICONTROL Create data Model] anger du ett namn för datamodellobjektet och väljer **[!UICONTROL Add]**. Ett datamodellsobjekt läggs till i formulärdatamodellen. Det nya datamodellsobjektet är inte bundet till en datakälla och har inga egenskaper som visas i följande bild.
 
    ![new-entity](assets/new-entity.png)
 
@@ -100,14 +100,14 @@ Med formulärdatamodellsredigeraren kan du skapa underordnade egenskaper i ett d
 
 Så här skapar du en underordnad egenskap:
 
-1. Markera ett datamodellsobjekt i en formulärdatamodell och tryck på **[!UICONTROL Create Child Property]**.
+1. Markera ett datamodellsobjekt i en formulärdatamodell och välj **[!UICONTROL Create Child Property]**.
 1. I **[!UICONTROL Create Child Property]** anger du ett namn och en datatyp för egenskapen i dialogrutan **[!UICONTROL Name]** och **[!UICONTROL Type]** fält. Du kan också ange en titel och en beskrivning för egenskapen.
 1. Aktivera beräknad om egenskapen är en beräknad egenskap. Värdet för en beräknad egenskap utvärderas baserat på en regel eller ett uttryck. Mer information finns i [Redigera egenskaper](#properties).
 1. Om datamodellobjektet är bundet till en datakälla, binds den tillagda underordnade egenskapen automatiskt till egenskapen för det överordnade datamodellobjektet med samma namn och datatyp.
 
-   Om du vill binda en underordnad egenskap manuellt med en datamodellsobjektegenskap trycker du på bläddringsikonen bredvid **[!UICONTROL Bind Reference]** fält. The **[!UICONTROL Select Object]** visas alla egenskaper från det överordnade datamodellobjektet. Välj en egenskap som du vill binda med och tryck på bockikonen. Du kan bara välja en egenskap av samma datatyp som den underordnade egenskapen.
+   Om du vill binda en underordnad egenskap manuellt med en datamodellsobjektegenskap väljer du bläddringsikonen bredvid **[!UICONTROL Bind Reference]** fält. The **[!UICONTROL Select Object]** visas alla egenskaper från det överordnade datamodellobjektet. Välj en egenskap som du vill binda med och markera kryssruteikonen. Du kan bara välja en egenskap av samma datatyp som den underordnade egenskapen.
 
-1. Tryck **[!UICONTROL Done]** för att spara egenskapen child och trycka **[!UICONTROL Save]** för att spara formulärdatamodellen.. Egenskapen child läggs nu till i datamodellsobjektet.
+1. Välj **[!UICONTROL Done]** för att spara den underordnade egenskapen och markera **[!UICONTROL Save]** för att spara formulärdatamodellen.. Egenskapen child läggs nu till i datamodellsobjektet.
 
 När du har skapat datamodellsobjekt och -egenskaper kan du fortsätta skapa Adaptiv Forms <!--and interactive communications--> baserat på formulärdatamodellen. När du har datakällor tillgängliga och konfigurerade kan du senare binda formulärdatamodellen till datakällor. Bindningen uppdateras automatiskt i tillhörande adaptiva Forms <!--and interactive communications-->. Mer information om hur du skapar Adaptive Forms <!--and interactive communications--> använda formulärdatamodell, se [Använd formulärdatamodell](using-form-data-model.md).
 
@@ -116,13 +116,13 @@ När du har skapat datamodellsobjekt och -egenskaper kan du fortsätta skapa Ada
 När datakällorna som du vill integrera med formulärdatamodellen är tillgängliga kan du lägga till dem i formulärdatamodellen enligt beskrivningen i [Uppdatera datakällor](create-form-data-models.md#update). Gör sedan följande för att binda obundna datamodellsobjekt och egenskaper:
 
 1. Välj den obundna datakälla som du vill binda till en datakälla i formulärdatamodellen.
-1. Tryck på **[!UICONTROL Edit Properties]**.
-1. I **[!UICONTROL Edit Properties]** trycker du på bläddringsikonen bredvid **[!UICONTROL Binding]** fält. Den öppnar **[!UICONTROL Select Object]** som visar datakällor som lagts till i formulärdatamodellen.
+1. Välj **[!UICONTROL Edit Properties]**.
+1. I **[!UICONTROL Edit Properties]** markerar du bläddringsikonen bredvid **[!UICONTROL Binding]** fält. Den öppnar **[!UICONTROL Select Object]** som visar datakällor som lagts till i formulärdatamodellen.
 
    ![select-object](assets/select-object.png)
 
-1. Expandera trädet för datakällor och markera ett datamodellsobjekt som du vill binda med och tryck på ikonen för att kryssa.
-1. Tryck **[!UICONTROL Done]** för att spara egenskaperna och sedan trycka **[!UICONTROL Save]** för att spara formulärdatamodellen. Datamodellobjektet är nu bundet till en datakälla. Observera att datamodellobjektet inte längre är markerat som Obundet.
+1. Expandera trädet för datakällor och markera ett datamodellsobjekt som du vill binda med, och markera kryssruteikonen.
+1. Välj **[!UICONTROL Done]** för att spara egenskaperna och sedan välja **[!UICONTROL Save]** för att spara formulärdatamodellen. Datamodellobjektet är nu bundet till en datakälla. Observera att datamodellobjektet inte längre är markerat som Obundet.
 
    ![bound-model-object](assets/bound-model-object.png)
 
@@ -130,7 +130,7 @@ När datakällorna som du vill integrera med formulärdatamodellen är tillgäng
 
 Så här konfigurerar du läs- och skrivtjänster för att läsa och skriva data för ett datamodellsobjekt:
 
-1. Markera kryssrutan högst upp i ett datamodellsobjekt för att markera det och trycka på **[!UICONTROL Edit Properties]**.
+1. Markera kryssrutan högst upp i ett datamodellsobjekt för att markera det och markera det **[!UICONTROL Edit Properties]**.
 
    ![edit-properties](assets/edit-properties.png)
 
@@ -159,8 +159,8 @@ Så här konfigurerar du läs- och skrivtjänster för att läsa och skriva data
 
    Läs- och skrivtjänster har konfigurerats för personaldatakälla
 
-1. Tryck ![aem_6_3_edit](assets/edit.svg) för lästjänstargumentet till [binda argumentet till ett användarprofilattribut, begärandeattribut eller litteralvärde](#bindargument) och ange bindningsvärdet.
-1. Tryck **[!UICONTROL Done]** för att spara argumentet, **[!UICONTROL Done]** för att spara egenskaperna och sedan **[!UICONTROL Save]** för att spara formulärdatamodellen.
+1. Välj ![aem_6_3_edit](assets/edit.svg) för lästjänstargumentet till [binda argumentet till ett användarprofilattribut, begärandeattribut eller litteralvärde](#bindargument) och ange bindningsvärdet.
+1. Välj **[!UICONTROL Done]** för att spara argumentet, **[!UICONTROL Done]** för att spara egenskaperna och sedan **[!UICONTROL Save]** för att spara formulärdatamodellen.
 
 ### Bind Läs tjänsteargument {#bindargument}
 
@@ -238,7 +238,7 @@ När du lägger till associerade datamodellobjekt i en datakälla i en formulär
 
 Så här lägger du till en association:
 
-1. Markera kryssrutan högst upp i ett datamodellsobjekt för att markera det och trycka på **[!UICONTROL Add Association]**. Dialogrutan Lägg till association öppnas.
+1. Markera kryssrutan högst upp i ett datamodellsobjekt för att markera det och markera det **[!UICONTROL Add Association]**. Dialogrutan Lägg till association öppnas.
 
    ![add-association](assets/add-association.png)
 
@@ -271,16 +271,16 @@ Så här lägger du till en association:
 
    Uppdaterat argument och bindning
 
-   Tryck **[!UICONTROL Done]** för att spara argumentet.
+   Välj **[!UICONTROL Done]** för att spara argumentet.
 
-1. Tryck **[!UICONTROL Done]** för att spara associationen och sedan **[!UICONTROL Save]** för att spara formulärdatamodellen.
+1. Välj **[!UICONTROL Done]** för att spara associationen och sedan **[!UICONTROL Save]** för att spara formulärdatamodellen.
 1. Upprepa stegen för att skapa fler associationer efter behov.
 
 >[!NOTE]
 >
 >Den tillagda kopplingen visas i datamodellens objektruta med den angivna titeln och en linje som förbinder de associerade datamodellsobjekten.
 >
->Du kan redigera en association genom att markera kryssrutan mot den och trycka på **[!UICONTROL Edit Association]**.
+>Du kan redigera en association genom att markera kryssrutan för den och markera **[!UICONTROL Edit Association]**.
 
 ![added-association](assets/added-association.png)
 
@@ -291,7 +291,7 @@ Du kan redigera egenskaper för datamodellsobjekt, deras egenskaper och tjänste
 Så här redigerar du egenskaper:
 
 1. Markera kryssrutan bredvid ett datamodellsobjekt, en egenskap eller en tjänst i formulärdatamodellen.
-1. Tryck på **[!UICONTROL Edit Properties]**. The **[!UICONTROL Edit Properties]** för det valda modellobjektet, egenskapen eller tjänsten öppnas.
+1. Välj **[!UICONTROL Edit Properties]**. The **[!UICONTROL Edit Properties]** för det valda modellobjektet, egenskapen eller tjänsten öppnas.
 
    * **[!UICONTROL Data model object]**: Ange läs- och skrivtjänster och redigeringsargument.
    * **[!UICONTROL Property]**: Ange typ, undertyp och format för egenskapen. Du kan också ange om den valda egenskapen är primärnyckeln för datamodellobjektet.
@@ -301,7 +301,7 @@ Så här redigerar du egenskaper:
 
    Dialogrutan Redigera egenskaper för en get-tjänst
 
-1. Tryck **[!UICONTROL Done]** för att spara egenskaper och sedan **[!UICONTROL Save]** för att spara formulärdatamodellen.
+1. Välj **[!UICONTROL Done]** för att spara egenskaper och sedan **[!UICONTROL Save]** för att spara formulärdatamodellen.
 
 ### Skapa beräknade egenskaper {#computed}
 
@@ -310,7 +310,7 @@ En beräknad egenskap är den vars värde beräknas baserat på en regel eller e
 Du kan till exempel skapa en beräknad egenskap **FullName** vars värde är ett resultat av sammanfogning av den befintliga **FirstName** och **LastName** egenskaper. Så här gör du:
 
 1. Skapa en ny egenskap med namnet `FullName` vars datatyp är String.
-1. Aktivera **[!UICONTROL Computed]** och knacka **[!UICONTROL Done]** för att skapa egenskapen.
+1. Aktivera **[!UICONTROL Computed]** och markera **[!UICONTROL Done]** för att skapa egenskapen.
 
    ![beräknad](assets/computed.png)
 
@@ -318,18 +318,18 @@ Du kan till exempel skapa en beräknad egenskap **FullName** vars värde är ett
 
    ![computed-prop](assets/computed-prop.png)
 
-1. Välj egenskapen FullName och tryck på **[!UICONTROL Edit Rule]**. Ett regelredigeringsfönster öppnas.
-1. I regelredigeringsfönstret trycker du på **[!UICONTROL Create]**. A **[!UICONTROL Set Value]** regelfönstret öppnas.
+1. Välj egenskapen FullName och välj **[!UICONTROL Edit Rule]**. Ett regelredigeringsfönster öppnas.
+1. I regelredigeringsfönstret väljer du **[!UICONTROL Create]**. A **[!UICONTROL Set Value]** regelfönstret öppnas.
 
    Välj i listrutan Välj alternativ **[!UICONTROL Mathematical Expression]**. Andra tillgängliga alternativ är **[!UICONTROL Form Data Model Object]** och **[!UICONTROL String]**.
 
 1. I det matematiska uttrycket väljer du **[!UICONTROL FirstName]** och **[!UICONTROL LastName]** i första och andra objektet. Välj **[!UICONTROL plus]** som -operatorn.
 
-   Tryck **[!UICONTROL Done]** och sedan trycka **[!UICONTROL Close]** för att stänga regelredigeringsfönstret. Regeln ser ut ungefär så här.
+   Välj **[!UICONTROL Done]** och sedan **[!UICONTROL Close]** för att stänga regelredigeringsfönstret. Regeln ser ut ungefär så här.
 
    ![regel](assets/rule.png)
 
-1. Tryck på formulärdatamodellen **[!UICONTROL Save]**. Den beräknade egenskapen är konfigurerad.
+1. Välj **[!UICONTROL Save]**. Den beräknade egenskapen är konfigurerad.
 
 ## Arbeta med navigeringsegenskaper för OData-tjänster {#work-with-navigation-properties-of-odata-services}
 
@@ -391,11 +391,11 @@ Med formulärdatamodellsredigeraren kan du generera exempeldata för alla datamo
 
 Så här genererar och redigerar du exempeldata:
 
-1. Öppna en formulärdatamodell och tryck på **[!UICONTROL Edit Sample Data]**. Den genererar och visar exempeldata i fönstret Redigera exempeldata.
+1. Öppna en formulärdatamodell och välj **[!UICONTROL Edit Sample Data]**. Den genererar och visar exempeldata i fönstret Redigera exempeldata.
 
    ![Generera exempeldata](assets/form_data_model_generate_sample_data_new.png)
 
-1. I **[!UICONTROL Edit Sample Data]** fönster, redigera data efter behov och trycka **[!UICONTROL Save]**.
+1. I **[!UICONTROL Edit Sample Data]** fönster, redigera data efter behov och markera **[!UICONTROL Save]**.
 
 <!--Next, you can use the sample data to prefill and test interactive communications based on the form data model. For more information, see [Use form data model](using-form-data-model.md).-->
 
@@ -403,7 +403,7 @@ Så här genererar och redigerar du exempeldata:
 
 Din formulärdatamodell är konfigurerad, men innan den används kanske du vill testa om de konfigurerade datamodellsobjekten och -tjänsterna fungerar som förväntat. Så här testar du datamodellsobjekt och -tjänster:
 
-1. Markera ett datamodellsobjekt eller en tjänst i formulärdatamodellen och tryck på **[!UICONTROL Test Model Object]** eller **[!UICONTROL Test Service]**, respektive
+1. Markera ett datamodellsobjekt eller en tjänst i formulärdatamodellen och välj **[!UICONTROL Test Model Object]** eller **[!UICONTROL Test Service]**, respektive
 
    Fönstret Testa formulärdatamodell öppnas.
 
@@ -411,7 +411,7 @@ Din formulärdatamodell är konfigurerad, men innan den används kanske du vill 
 
 1. I [!UICONTROL Test Form Data Model] markerar du datamodellobjektet eller datatjänsten som ska testas i indatapanelen.
 
-1. Ange ett argumentvärde i testkoden och tryck på **[!UICONTROL Test]**. Ett lyckat test returnerar utdata i utdatapanelen.
+1. Ange ett argumentvärde i testkoden och välj **[!UICONTROL Test]**. Ett lyckat test returnerar utdata i utdatapanelen.
 
    ![Testresultat](assets/test_results_form_data_model_new.png)
 
@@ -541,7 +541,7 @@ I det här exemplet valideras indata baserat på maximala, minimala och obligato
    ]
 ```
 
-Ett undantag visas om indata inte uppfyller valideringskriterierna. Om loggnivån är inställd på **Felsök**, loggas ett fel på **error.log** -fil. Till exempel,
+Ett undantag visas om indata inte uppfyller valideringskriterierna. Om loggnivån är inställd på **Felsök**, loggas ett fel på **error.log** -fil. Exempel:
 
 ```verilog
 21.01.2019 17:26:37.411 *ERROR* com.adobe.aem.dermis.core.validation.JsonSchemaValidator {"errorCode":"AEM-FDM-001-044","errorMessage":"Input validations failed during operation execution.","violations":{"/orderId":["numeric instance is greater than the required maximum (maximum: 10, found: 16)"]}}

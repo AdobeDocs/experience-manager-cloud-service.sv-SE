@@ -1,17 +1,17 @@
 ---
-title: AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
-description: AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
+title: AEM - Vanliga frågor om handelsintegrering med Commerce integration framework
+description: AEM - Vanliga frågor om handelsintegrering med Commerce integration framework
 exl-id: 0a946d98-22c7-445d-984a-9e09c306ce45
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '963'
 ht-degree: 0%
 
 ---
 
-# AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
+# AEM - Vanliga frågor om handelsintegrering med Commerce integration framework
 
-## 1. Används CIF GraphQL endast för e-handel eller kommer det att finnas tillgängligt för frågor som författas AEM JCR?
+## 1. Används CIF GraphQL endast för e-handel eller kommer detta att vara tillgängligt för frågor som skapats AEM JCR?
 
 Adobe har antagit Adobe Commerce GraphQL API:er som sin officiella e-handels-API för alla e-handelsrelaterade data. AEM använder därför GraphQL för att utbyta affärsdata med Adobe Commerce och med valfri e-handelsmotor via I/O Runtime. Det här GraphQL-API:t är oberoende av AEM GraphQL-API:t för att komma åt innehållsfragment.
 
@@ -31,9 +31,9 @@ Katalogsidor och produktsidor skapas och cachelagras dynamiskt i AEM baserat på
 
 ## 5. När ni uppdaterar produktdata i er e-handelslösning, är detta en reell satsning på AEM? Eller är det en gruppbearbetning?
 
-Det CIF-tillägg som används med AEM Cloud Service gör att data kan flöda från e-handelslösningen till AEM on-demand. Detta är alltså inte en push- eller batchprocess i realtid när det finns en uppdatering i e-handelslösningen.
+Det CIF tillägg som används med AEM Cloud Service gör att data kan flöda från e-handelslösningen till AEM on-demand. Detta är alltså inte en push- eller batchprocess i realtid när det finns en uppdatering i e-handelslösningen.
 
-## 6. Vilken katalogstorlek AEM med CIF-stöd?
+## 6. Vilken katalogstorlek AEM med CIF stöd?
 
 Detta beror på några andra aspekter som du måste tänka på. Hur stor är cachekvoten för katalogdata och sidor? Hur många samtidiga förfrågningar förväntar du dig under högtider? Hur skalbar är API:erna för era e-handelslösningar?
 
@@ -53,9 +53,9 @@ Adobe rekommenderar att du ställer in TTL-baserad cacheogiltigförklaring för 
 
 En referensimplementering av produktsökningar tillhandahålls, men ingen enhetlig sökning med innehåll. Den här funktionen är kundspecifik och bättre på projektspecifik nivå.
 
-## 11. Hur fungerar sökningen med AEM och handel med CIF?
+## 11. Hur fungerar Sök med AEM och e-handel med CIF?
 
-CIF innehåller komponenterna Sökfält och Sökresultat. Sökfältskomponenten skickar en GraphQL-begäran med söktermen till e-handelslösningen som sedan returnerar en produktlista som innehåller produktnamn, pris, SLUG och så vidare. Sökresultatkomponenten visar sedan sökresultaten i en gallerivy på en sökresultatsida som skapats i AEM. Sökfunktionen har stöd för grundläggande textsökning. Vi använder SLUG/url-tangenten för att skapa en referens till PDP.
+CIF innehåller sökfältet och komponenterna för sökresultat. Sökfältskomponenten skickar en GraphQL-begäran med söktermen till e-handelslösningen som sedan returnerar en produktlista som innehåller produktnamn, pris, SLUG och så vidare. Sökresultatkomponenten visar sedan sökresultaten i en gallerivy på en sökresultatsida som skapats i AEM. Sökfunktionen har stöd för grundläggande textsökning. Vi använder SLUG/url-tangenten för att skapa en referens till PDP.
 
 ## 12. Hur kan produktdata användas i MSM eller översättningar?
 
@@ -65,7 +65,7 @@ Produktdata är redan översatta i PIM eller Adobe Commerce. AEM - Adobe Commerc
 
 Adobe rekommenderar att man hanterar marknadsföringsrelaterade data och innehåll i AEM. Dekorera produktdata från er e-handelslösning med ytterligare attribut med hjälp av innehållsfragment eller skapa och länka Experience Fragments för ostrukturerat innehåll till era produkter.
 
-## 14. Hur kan vi säkerställa PCI-kompatibilitet när vi använder AEM för hela presentationslagret?
+## 14. Hur kan PCI-kompatibilitet säkerställas när AEM används för hela presentationslagret?
 
 Adobe rekommenderar att abstrakta betalningsmetoder används. Detta innebär att webbläsarklienten kommunicerar direkt med betalgatewayleverantören så att varken Adobe eller e-handelslösningarna lagrar eller skickar kortinnehavardata. Den här metoden kräver endast en nivå 3 PCI-kompatibilitet. Det finns dock ytterligare saker att tänka på som helt PCI-kompatibla, till exempel hur medarbetarna interagerar med systemet och data. Mer information om Adobe Commerce PCI-kompatibilitet finns i [Krav för PCI-kompatibilitet](https://business.adobe.com/products/magento/pci-compliance.html).
 

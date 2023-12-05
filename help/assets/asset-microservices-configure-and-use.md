@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Asset Compute Microservices,Workflow,Asset Processing
 role: Architect,Admin
 exl-id: 7e01ee39-416c-4e6f-8c29-72f5f063e428
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '2864'
-ht-degree: 1%
+source-wordcount: '2796'
+ht-degree: 0%
 
 ---
 
@@ -159,7 +159,7 @@ Skapa och använd de extra anpassade bearbetningsprofilerna på specifika mappar
 
 Använd bearbetningsprofiler på mappar på något av följande sätt:
 
-* Administratörer kan välja en bearbetningsprofildefinition i **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]** och använda **[!UICONTROL Apply Profile to Folder(s)]** åtgärd. Den öppnar en innehållsläsare där du kan navigera till specifika mappar, markera dem och bekräfta programmet för profilen.
+* Administratörer kan välja en bearbetningsprofildefinition i **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]** och använda **[!UICONTROL Apply Profile to Folders]** åtgärd. Den öppnar en innehållsläsare där du kan navigera till specifika mappar, markera dem och bekräfta programmet för profilen.
 * Användare kan välja en mapp i Assets-användargränssnittet och använda **[!UICONTROL Properties]** åtgärd för att öppna fönstret för mappegenskaper klickar du på **[!UICONTROL Asset Processing]** -fliken och i [!UICONTROL Processing Profile] väljer du lämplig bearbetningsprofil för den mappen. Klicka på **[!UICONTROL Save & Close]**.
   ![Använda bearbetningsprofil på en mapp från fliken Resursegenskaper](assets/folder-properties-processing-profile.png)
 
@@ -269,15 +269,15 @@ Följ stegen som beskrivs i [använda en arbetsflödesmodell i en mapp](#apply-w
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
 

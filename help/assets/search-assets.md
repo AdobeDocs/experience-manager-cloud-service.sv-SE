@@ -6,10 +6,10 @@ mini-toc-levels: 1
 feature: Search,Metadata,Asset Distribution
 role: User,Admin
 exl-id: 68bdaf25-cbd4-47b3-8e19-547c32555730
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '5493'
-ht-degree: 4%
+source-wordcount: '5427'
+ht-degree: 3%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 4%
 
 Resurssökning i AEM stöder följande användningsfall och den här artikeln beskriver användning, begrepp, konfigurationer, begränsningar och felsökning för dessa användningsfall.
 
-| Söka efter resurser | Konfigurera och administrera sökfunktioner | Arbeta med resurssökningsresultat |
+| Sök resurser | Konfigurera och administrera sökfunktioner | Arbeta med resurssökningsresultat |
 |---|---|---|
 | [Grundläggande sökningar](#searchbasics) | [Sökindex](#searchindex) | [Sortera resultat](#sort) |
 | [Förstå sökgränssnittet](#searchui) | [Textextrahering](#extracttextupload) | [Kontrollera egenskaper och metadata för en resurs](#checkinfo) |
@@ -183,7 +183,7 @@ Så här konfigurerar du batchstorleken för resursen:
 
 ### Söka efter liknande bilder {#visualsearch}
 
-Om du vill söka efter bilder som visuellt liknar en användarvald bild klickar du på alternativet **[!UICONTROL Find Similar]** i kortvyn för en bild eller i verktygsfältet. [!DNL Experience Manager] visar smarta taggade bilder från DAM-databasen som liknar den användarvalda bilden.
+Om du vill söka efter bilder som visuellt liknar en användarvald bild klickar du på alternativet **[!UICONTROL Find Similar]** i kortvyn för en bild eller i verktygsfältet. [!DNL Experience Manager] I visas smarta taggade bilder från DAM-databasen som liknar den bild som användaren har valt.
 
 ![Söka efter liknande bilder med hjälp av alternativet i kortvyn](assets/search_find_similar.png)
 
@@ -195,7 +195,7 @@ Från [!DNL Experience Manager] användargränssnitt, användare kan söka [Adob
 
 ### Dynamic Media-resurser {#dmassets}
 
-Du kan filtrera efter dynamiska mediebilder genom att välja **[!UICONTROL Dynamic Media]** > **[!UICONTROL Sets]** på panelen **[!UICONTROL Filters]**. Den filtrerar och visar resurser som bilduppsättningar, karuseller, blandade medieuppsättningar och rotationsuppsättningar.
+Du kan filtrera efter dynamiska mediebilder genom att välja **[!UICONTROL Dynamic Media]** > **[!UICONTROL Sets]** på panelen **[!UICONTROL Filters]**. Den filtrerar och visar resurser som bilduppsättningar, karuseller, blandade medieuppsättningar och snurruppsättningar.
 
 ### GQL-sökning med specifika värden i metadatafält {#gql-search}
 
@@ -284,7 +284,7 @@ Skicka följande frågeparametrar i en URL för att starta resursväljaren i en 
 
 | Namn | Värden | Exempel | Syfte |
 |---|---|---|---|
-| resurssuffix (B) | Mappsökväg som resurssuffix i URL: [https://localhost:4502/aem/assetpicker.html/&lt;folder_path>](https://localhost:4502/aem/assetpicker.html) | Så här startar du resursväljaren med en viss mapp markerad, t.ex. med mappen `/content/dam/we-retail/en/activities` markerat ska URL:en ha följande format: `https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images` | Om du vill att en viss mapp ska väljas när resursväljaren startas, skickar du den som ett resurssuffix. |
+| resurssuffix (B) | Mappsökväg som resurssuffix i URL: [https://localhost:4502/aem/assetpicker.html/&lt;folder_path>](https://localhost:4502/aem/assetpicker.html) | Så här startar du resursväljaren med en viss mapp markerad, till exempel med mappen `/content/dam/we-retail/en/activities` markerat ska URL:en ha följande format: `https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images` | Om du vill att en viss mapp ska väljas när resursväljaren startas, skickar du den som ett resurssuffix. |
 | `mode` | en, flera | <ul><li>`https://localhost:4502/aem/assetpicker.html?mode=single`</li><li>`https://localhost:4502/aem/assetpicker.html?mode=multiple`</li></ul> | I flera lägen kan du markera flera resurser samtidigt med resursväljaren. |
 | `dialog` | true, false | [https://localhost:4502/aem/assetpicker.html?dialog=true](https://localhost:4502/aem/assetpicker.html?dialog=true) | Använd de här parametrarna för att öppna resursväljaren som Granite-dialogrutan. Det här alternativet kan bara användas när du startar resursväljaren via fältet Bevilja sökväg och konfigurerar den som URL för pickerSrc. |
 | `root` | &lt;folder_path> | `https://localhost:4502/aem/assetpicker.html?assettype=images&root=/content/dam/we-retail/en/activities` | Använd det här alternativet om du vill ange rotmappen för resursväljaren. I det här fallet kan du bara välja underordnade resurser (direkt/indirekt) under rotmappen med resursväljaren. |
@@ -341,7 +341,7 @@ Använd citattecken runt nyckelord för att hitta resurser som innehåller den e
 
 *Bild: Sökbeteende med och utan citattecken.*
 
-**Sök med asterisk som jokertecken**: Om du vill bredda sökningen använder du en asterisk före eller efter sökordet för att matcha ett valfritt antal tecken. Om du till exempel söker efter en körning utan asterisk returneras inga resurser som innehåller någon variant av ordet (inklusive i metadata). En asterisk ersätter ett valfritt antal tecken. Till exempel,
+**Sök med asterisk som jokertecken**: Om du vill bredda sökningen använder du en asterisk före eller efter sökordet för att matcha ett valfritt antal tecken. Om du till exempel söker efter en körning utan asterisk returneras inga resurser som innehåller någon variant av ordet (inklusive i metadata). En asterisk ersätter ett valfritt antal tecken. Exempel:
 
 * `run` returnerar resurser med nyckelordet exakt run
 * `run*` returnerar resurser med `running`, `run`, `runaway`och så vidare.
@@ -466,7 +466,7 @@ Du kan göra följande med de resurser du har sökt i [!DNL Experience Manager]:
 
 ### Sortera sökresultat {#sort}
 
-Sortera sökresultaten för att hitta de resurser som behövs snabbare. Du kan sortera sökresultaten i listvyn och endast när du väljer **[[!UICONTROL Files]](#searchui)** från **[!UICONTROL Filters]** -panelen. [!DNL Assets]I används serversortering för att snabbt sortera alla resurser (oavsett hur många) i en mapp eller i resultatet av en sökfråga. Sortering på serversidan ger snabbare och exaktare resultat än sortering på klientsidan.
+Sortera sökresultaten för att hitta de resurser som behövs snabbare. Du kan sortera sökresultaten i listvyn och endast när du väljer **[[!UICONTROL Files]](#searchui)** från **[!UICONTROL Filters]** -panelen. [!DNL Assets] använder sortering på serversidan för att snabbt sortera alla resurser (oavsett hur många) i en mapp eller resultaten av en sökfråga. Sortering på serversidan ger snabbare och exaktare resultat än sortering på klientsidan.
 
 I listvyn kan du sortera sökresultaten på samma sätt som du kan sortera resurser i valfri mapp. Sortering fungerar för de här kolumnerna - Namn, Titel, Status, Dimensioner, Storlek, Klassificering, Användning, Skapat (Datum), Ändrat (Datum), Publicerat (Datum), Arbetsflöde och Utcheckat.
 
@@ -541,14 +541,14 @@ Navigera till mapplatsen för resurser som visas i sökresultaten. Markera resur
 
 * [Sök efter bästa praxis](search-best-practices.md)
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
 

@@ -2,7 +2,7 @@
 title: Hantera produktkatalogsidor och mallar
 description: Lär dig hur du hanterar produktkatalogsidor och mallar
 exl-id: 0d795d85-c865-40d5-941e-e02ee96fdd11
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 0%
@@ -89,7 +89,7 @@ Mallen kan förhandsgranskas med alla kategorier och produkter. Öppna **Sidinfo
 
 ![skapa mall ](assets/create-template-picker.png)
 
-Nu måste vi tilldela den här mallen till den specifika kategorin. Öppna egenskaper i **Sidinformation** och växla till fliken E-handel. Klicka på mappikonen och välj **Köp looken** -kategorin i kategoriväljaren. Du kan tilldela flera kategorier till en mall och även inkludera underkategorier genom att markera kryssrutan.
+Nu måste du tilldela mallen till den specifika kategorin. Öppna egenskaper i **Sidinformation** och växla till fliken E-handel. Klicka på mappikonen och välj **Köp looken** -kategorin i kategoriväljaren. Du kan tilldela flera kategorier till en mall och även inkludera underkategorier genom att markera kryssrutan.
 
 ![skapa mallkoppling](assets/create-template-associate.png)
 

@@ -2,9 +2,9 @@
 title: Hur skapar man en Forms Portal på en Experience Manager Sites-sida?
 description: Lär dig hur du skapar en Forms Portal och använder färdiga komponenter på en AEM Sites-sida.
 exl-id: 13cfe3ba-2e85-46bf-a029-2673de69c626
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1760'
+source-wordcount: '1705'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,7 @@ Så här importerar du färdiga Forms Portal-komponenter på AEM Forms as a Clou
 Innan du utför dessa steg måste du se till att du har ett Azure-lagringskonto och en åtkomstnyckel för att auktorisera åtkomst till [!DNL Azure] lagringskonto.
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Azure Storage]**.
-1. Välj en mapp för att skapa konfigurationen och tryck på **[!UICONTROL Create]**.
+1. Välj en mapp för att skapa konfigurationen och välj **[!UICONTROL Create]**.
 1. Ange en rubrik för konfigurationen i dialogrutan **[!UICONTROL Title]** fält.
 1. Ange namnet på [!DNL Azure] lagringskonto i **[!UICONTROL Azure Storage Account]** fält.
 
@@ -100,7 +100,7 @@ Så här konfigurerar du Unified Storage Connector för AEM arbetsflöden:
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Forms]** > **[!UICONTROL Unified Storage Connector]**.
 1. I **[!UICONTROL Forms Portal]** avsnitt, markera **[!UICONTROL Azure]** från **[!UICONTROL Storage]** listruta.
 1. Ange [konfigurationssökväg för Azure-lagringskonfigurationen](#create-azure-storage-configuration) i **[!UICONTROL Storage Configuration Path]** fält.
-1. Tryck **[!UICONTROL Publish]** och sedan trycka **[!UICONTROL Save]** för att spara konfigurationen.
+1. Välj **[!UICONTROL Publish]** och sedan **[!UICONTROL Save]** för att spara konfigurationen.
 
 ## Aktivera Forms Portal-komponenter {#enable-forms-portal-components}
 
@@ -112,11 +112,11 @@ När en portalkomponent är aktiverad kan du använda den i författarinstansen 
 
 Du kan skapa och anpassa Forms Portal på webbplatser som skapats med AEM genom att lägga till och konfigurera portalkomponenterna. Se till att [komponenter är aktiverade](#enable-forms-portal-components) innan du använder dem i Forms Portal.
 
-Om du vill lägga till en komponent drar och släpper du komponenten från rutan Komponenter till layoutbehållaren på sidan eller trycker på ikonen Lägg till i layoutbehållaren och lägger till komponenten från [!UICONTROL Insert New Component] -dialogrutan.
+Om du vill lägga till en komponent drar och släpper du komponenten från rutan Komponenter till layoutbehållaren på sidan eller väljer ikonen Lägg till i layoutbehållaren och lägger till komponenten från [!UICONTROL Insert New Component] -dialogrutan.
 
 ### Konfigurera komponenten Utkast och överföringar {#configure-drafts-submissions-component}
 
-Komponenten Utkast och inskickningar visar formulär som har sparats som utkast för att fylla i senare och skickade formulär. Konfigurera genom att trycka på komponenten och sedan på knappen ![Ikonen Konfigurera](assets/configure_icon.png). I [!UICONTROL Drafts and Submissions] anger du rubriken för att ange att formulärlistan ska vara ett utkast eller skickade formulär. Ange också om komponenten ska lista formulärutkast eller inskickade formulär i kort- eller listformat.
+Komponenten Utkast och inskickningar visar formulär som har sparats som utkast för att fylla i senare och skickade formulär. Konfigurera genom att markera komponenten och sedan välja ![Ikonen Konfigurera](assets/configure_icon.png). I [!UICONTROL Drafts and Submissions] anger du rubriken för att ange att formulärlistan ska vara ett utkast eller skickade formulär. Ange också om komponenten ska lista formulärutkast eller inskickade formulär i kort- eller listformat.
 
 ![Ikonen Utkast](assets/drafts-component.png)
 
@@ -128,7 +128,7 @@ Komponenten Sök och lista används för att lista anpassningsbara formulär på
 
 ![Ikonen Sök och visa](assets/search-and-lister-component.png)
 
-Konfigurera genom att trycka på komponenten och sedan på knappen ![Ikonen Konfigurera](assets/configure_icon.png). The [!UICONTROL Search and Lister] öppnas.
+Konfigurera genom att markera komponenten och sedan välja ![Ikonen Konfigurera](assets/configure_icon.png). The [!UICONTROL Search and Lister] öppnas.
 
 1. I [!UICONTROL Display] konfigurerar du följande på -fliken:
    * I **[!UICONTROL Title]** anger du namnet på komponenten Sök efter och visa. Med en titel kan användarna göra snabba sökningar i hela formulärlistan.
@@ -140,7 +140,7 @@ Konfigurera genom att trycka på komponenten och sedan på knappen ![Ikonen Konf
 
 ### Konfigurera länkkomponent {#configure-link-component}
 
-Med länkkomponenten kan du skapa länkar till ett anpassat formulär på sidan. Konfigurera genom att trycka på komponenten och sedan på knappen ![Ikonen Konfigurera](assets/configure_icon.png). The [!UICONTROL Edit Link Component] öppnas.
+Med länkkomponenten kan du skapa länkar till ett anpassat formulär på sidan. Konfigurera genom att markera komponenten och sedan välja ![Ikonen Konfigurera](assets/configure_icon.png). The [!UICONTROL Edit Link Component] öppnas.
 
 1. I [!UICONTROL Display] ska du ange länkens beskrivning och verktygstips för att underlätta identifiering av de formulär som länken representerar.
 1. I [!UICONTROL Asset Info] anger du databassökvägen där resursen lagras.
@@ -151,34 +151,35 @@ Med länkkomponenten kan du skapa länkar till ett anpassat formulär på sidan.
 Du kan konfigurera så att ett anpassat formulär skickas endast när alla mottagare har slutfört signeringsceremonin. Följ stegen nedan för att konfigurera inställningen med Adobe Sign.
 
 1. Öppna ett adaptivt formulär i redigeringsläget i författarinstansen.
-1. Tryck på ikonen Egenskaper i den vänstra rutan och expandera dialogrutan **[!UICONTROL ELECTRONIC SIGNTATURE]** alternativ.
+1. Välj ikonen Egenskaper i den vänstra rutan och expandera dialogrutan **[!UICONTROL ELECTRONIC SIGNTATURE]** alternativ.
 1. Välj **[!UICONTROL Enable Adobe Sign]**. Olika konfigurationsalternativ visas.
 1. I [!UICONTROL Submit the form] väljer du **[!UICONTROL after every recipient completes signing ceremony]** för att konfigurera åtgärden Skicka formulär, där formuläret först skickas till alla mottagare för signering. När alla mottagare har signerat formuläret skickas bara formuläret.
 
 ## Spara adaptiva Forms som utkast {#save-adaptive-forms-as-drafts}
 
 Du kan spara formulär som utkast och fylla i dem senare. Det finns två sätt att spara ett formulär som ett utkast:
+
 * Skapa en regel av typen &quot;Spara formulär&quot; för en formulärkomponent, till exempel en knapp. När du klickar på knappen utlöses regeln och formuläret sparas som ett utkast.
 * Aktivera funktionen Spara automatiskt, som sparar formuläret enligt den angivna händelsen eller efter ett konfigurerat tidsintervall.
 
 ### Skapa regler för att spara ett anpassat formulär som utkast {#rule-to-save-adaptive-form-as-draft}
 
-Följ stegen nedan för att skapa en&quot;Spara formulär&quot;-regel för en formulärkomponent, till exempel en knapp:
+Om du vill skapa en regel för&quot;Spara formulär&quot; för en formulärkomponent, till exempel en knapp, följer du stegen nedan:
 
 1. Öppna ett adaptivt formulär i redigeringsläge i författarinstansen.
-1. Tryck på ![Ikon för komponenter](assets/components_icon.png) och dra [!UICONTROL Button] till formuläret.
-1. Tryck på [!UICONTROL Button] och sedan trycka på ![Ikonen Konfigurera](assets/configure_icon.png).
-1. Tryck på [!UICONTROL Edit Rules] om du vill öppna Regelredigeraren.
-1. Tryck **[!UICONTROL Create]** för att konfigurera och skapa regeln.
+1. Välj ![Ikon för komponenter](assets/components_icon.png) och dra [!UICONTROL Button] till formuläret.
+1. Välj [!UICONTROL Button] och sedan markera ![Ikonen Konfigurera](assets/configure_icon.png).
+1. Välj [!UICONTROL Edit Rules] om du vill öppna Regelredigeraren.
+1. Välj **[!UICONTROL Create]** för att konfigurera och skapa regeln.
 1. I [!UICONTROL When] väljer du&quot;klickas&quot; och i [!UICONTROL Then] väljer du alternativet &quot;Spara formulär&quot;.
-1. Tryck **[!UICONTROL Done]** för att spara regeln.
+1. Välj **[!UICONTROL Done]** för att spara regeln.
 
 ### Aktivera Spara automatiskt {#enable-auto-save}
 
 Du kan konfigurera funktionen för att spara automatiskt för ett anpassat formulär enligt följande:
 
 1. Öppna ett adaptivt formulär i redigeringsläge i författarinstansen.
-1. Tryck på ![Ikonen Egenskaper](assets/configure_icon.png) och utöka [!UICONTROL AUTO-SAVE] alternativ.
+1. I den vänstra rutan väljer du ![Ikonen Egenskaper](assets/configure_icon.png) och utöka [!UICONTROL AUTO-SAVE] alternativ.
 1. Välj **[!UICONTROL Enable]** om du vill att formuläret ska sparas automatiskt. Du kan konfigurera följande:
 * Som standard är [!UICONTROL Adaptive Form Event] är inställt på &quot;true&quot;, vilket betyder att formuläret sparas automatiskt efter varje händelse.
 * I [!UICONTROL Trigger], konfigurera så att automatiskt sparas baserat på förekomsten av en händelse eller efter ett visst tidsintervall.

@@ -3,9 +3,9 @@ title: Hantera GraphQL-slutpunkter i AEM
 description: Lär dig hur du hanterar GraphQL slutpunkter i Adobe Experience Manager as a Cloud Service för leverans av headless-material.
 feature: Content Fragments,GraphQL API
 exl-id: f7164ae3-4074-4db7-8c43-a79cc2ef00b1
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '512'
 ht-degree: 0%
 
 ---
@@ -91,4 +91,4 @@ Markera den nya slutpunkten och **Publicera** för att göra den helt tillgängl
 >
 >På publiceringsinstanser kan detta utgöra ett säkerhetsproblem, eftersom GraphQL-frågor kan medföra en stor belastning på servern.
 >
->Du måste konfigurera [Behöriga åtkomstkontrollistor för ditt användningsfall](/help/headless/security/permissions.md) på slutpunkten.
+>Konfigurera [Behöriga åtkomstkontrollistor för ditt användningsfall](/help/headless/security/permissions.md) på slutpunkten.

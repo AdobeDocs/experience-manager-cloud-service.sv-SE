@@ -2,9 +2,9 @@
 title: SPA
 description: För enkelsidiga program i AEM ansvarar appen för routningen. I det här dokumentet beskrivs routningsmekanismen, kontraktet och tillgängliga alternativ.
 exl-id: 1186b64e-11f8-43a6-bc75-450c4d7587ec
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ The `ModelRouter` - när det är aktiverat - kapslar in API-funktioner för hän
 
 ## Manuell kontra automatisk modellroutning {#manual-vs-automatic-model-routing}
 
-The `ModelRouter` automatiserar hämtning av fragment av modellen. Men som alla automatiserade verktyg har de begränsningar. Vid behov `ModelRouter` kan inaktiveras eller konfigureras för att ignorera sökvägar med hjälp av metaegenskaper (se avsnittet Metaegenskaper i [SPA](page-component.md) -dokument). Utvecklare kan sedan implementera sitt eget modellroutningslager genom att begära `PageModelManager` för att läsa in ett givet fragment av modellen med `getData()` funktion.
+The `ModelRouter` automatiserar hämtning av fragment av modellen. Men som alla automatiserade verktyg har de begränsningar som behövs. Vid behov `ModelRouter` kan inaktiveras eller konfigureras så att sökvägar ignoreras med metaegenskaper (se avsnittet Metaegenskaper i [SPA sidkomponent](page-component.md) -dokument). Utvecklare kan sedan implementera sitt eget modellroutningslager genom att begära `PageModelManager` för att läsa in ett givet fragment av modellen med `getData()` funktion.
 
 >[!CAUTION]
 >
@@ -47,7 +47,7 @@ Som standard aktiveras det här beteendet automatiskt. SPA bör återge följand
 <meta property="cq:pagemodel_router" content="disabled"\>
 ```
 
-Observera att varje väg i SPA ska motsvara en tillgänglig resurs i AEM (till exempel &quot; `/content/mysite/mypage"`) sedan `PageModelManager` försöker automatiskt att läsa in motsvarande sidmodell när flödet har valts. Vid behov kan SPA även definiera en &quot;blockeringslista&quot; av rutter som ska ignoreras av `PageModelManager`:
+Varje väg i SPA ska motsvara en tillgänglig resurs i AEM (till exempel &quot; `/content/mysite/mypage"`) sedan `PageModelManager` försöker automatiskt att läsa in motsvarande sidmodell när flödet har valts. Vid behov kan SPA även definiera en &quot;blockeringslista&quot; av rutter som ska ignoreras av `PageModelManager`:
 
 ```
 <meta property="cq:pagemodel_route_filters" content="route/not/found,^(.*)(?:exclude/path)(.*)"/>

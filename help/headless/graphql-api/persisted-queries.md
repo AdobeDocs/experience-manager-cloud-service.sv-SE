@@ -3,10 +3,10 @@ title: Beständiga GraphQL-frågor
 description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager as a Cloud Service för att optimera prestandan. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
 feature: Content Fragments,GraphQL API
 exl-id: 080c0838-8504-47a9-a2a2-d12eadfea4c0
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1676'
-ht-degree: 1%
+source-wordcount: '1656'
+ht-degree: 0%
 
 ---
 
@@ -255,7 +255,7 @@ Frågan kan sparas under en sökväg `wknd/adventures-by-activity`. Anropa den b
 <AEM_HOST>/graphql/execute.json/wknd/adventures-by-activity%3Bactivity%3DCamping
 ```
 
-Observera att `%3B` är UTF-8-kodning för `;` och `%3D` är kodningen för `=`. Frågevariablerna och eventuella specialtecken måste [korrekt kodad](#encoding-query-url) för den beständiga frågan som ska köras.
+UTF-8-kodning `%3B` är för `;` och `%3D` är kodningen för `=`. Frågevariablerna och eventuella specialtecken måste [korrekt kodad](#encoding-query-url) för den beständiga frågan som ska köras.
 
 ## Cachelagra beständiga frågor {#caching-persisted-queries}
 
@@ -439,8 +439,8 @@ Skapa ett paket:
 1. I dialogrutan Paketdefinition, under **Allmänt** ange en **Namn** som &quot;wknd-persistent-queries&quot;.
 1. Ange ett versionsnummer som &quot;1.0&quot;.
 1. Under **Filter** lägg till en ny **Filter**. Använd Sökväg för att välja `persistentQueries` under konfigurationen. För `wknd` konfiguration, den fullständiga sökvägen `/conf/wknd/settings/graphql/persistentQueries`.
-1. Tryck **Spara** för att spara den nya paketdefinitionen och stänga dialogrutan.
-1. Tryck på **Bygge** i den skapade paketdefinitionen.
+1. Välj **Spara** för att spara den nya paketdefinitionen och stänga dialogrutan.
+1. Välj **Bygge** i den skapade paketdefinitionen.
 
 När paketet har byggts kan du:
 

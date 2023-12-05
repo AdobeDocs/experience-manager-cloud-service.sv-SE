@@ -3,9 +3,9 @@ title: Lära sig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig använda GraphQL med AEM så att du kan leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 feature: Content Fragments,GraphQL API
 exl-id: b60fcf97-4736-4606-8b41-4051b8b0c8a7
-source-git-commit: 7d09cafc4f8518fee185d3f9efc76c33ec20f9a3
+source-git-commit: 667cac9153947d1c236ff1117fc7200883416d8d
 workflow-type: tm+mt
-source-wordcount: '1752'
+source-wordcount: '1754'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ I de här exempelfrågorna finns illustrationer av hur du skapar frågor, tillsa
 >
 >Du kan öppna frågeredigeraren från:
 >
->* **verktyg** -> **Allmänt** -> **GraphQL Query Editor**
+>* **verktyg** > **Allmänt** > **GraphQL Query Editor**
 >* direkt, till exempel `http://localhost:4502/aem/graphiql.html`
 
 >[!NOTE]
@@ -1258,7 +1258,7 @@ Detta exempel på frågor intervjuar:
 * för ett enda innehållsfragment av typen `article` vid en viss sökväg
    * inom det fragmentet, alla innehållsformat:
       * HTML
-      * Markdown
+      * Markering
       * Oformaterad text
       * JSON
 
@@ -1850,7 +1850,7 @@ Fälten för att definiera en stad är:
 |--- |--- |--- |
 | Namn | Enkelradig text | |
 | Land | Enkelradig text | |
-| Population | Siffra | |
+| Population | Nummer | |
 | Kategorier | Taggar | |
 
 ### Exempel på innehållsfragment {#sample-content-fragments}

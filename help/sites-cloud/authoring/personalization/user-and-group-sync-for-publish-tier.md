@@ -2,9 +2,9 @@
 title: Registrering, inloggning och användarprofil
 description: Läs mer om registrering, inloggning, användardata och gruppsynkronisering för AEM as a Cloud Service
 exl-id: a991e710-a974-419f-8709-ad86c333dbf8
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1132'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ Oberoende av inloggning kan den anpassade koden också innehålla och hantera en
 
 ## Datasynkronisering {#data-synchronization}
 
-Slutanvändarna på webbplatsen förväntar sig en enhetlig upplevelse på alla webbsidesförfrågningar eller till och med när de loggar in i en annan webbläsare, även om de inte känner till dem, kommer de till olika servernoder i infrastrukturen på publiceringsnivån. AEM as a Cloud Service gör detta genom att snabbt synkronisera `/home` mapphierarki (användarprofilinformation, gruppmedlemskap osv.) över alla noder i publiceringsnivån.
+Slutanvändarna på webbplatsen förväntar sig en enhetlig upplevelse på alla webbsidesförfrågningar eller till och med när de loggar in i en annan webbläsare, även om de inte känner till dem, kommer de till olika servernoder i infrastrukturen på publiceringsnivån. AEM as a Cloud Service gör detta genom att snabbt synkronisera `/home` mapphierarki (användarprofilinformation, gruppmedlemskap och så vidare) över alla noder i publiceringsnivån.
 
 Till skillnad från andra AEM lösningar använder synkronisering av användare och grupper i AEM as a Cloud Service inte en metod för att skicka meddelanden från punkt till punkt, utan implementerar i stället en strategi för att publicera prenumerationer som inte kräver någon kundkonfiguration.
 

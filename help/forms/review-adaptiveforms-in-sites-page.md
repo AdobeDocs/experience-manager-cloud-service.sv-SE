@@ -4,9 +4,9 @@ description: Granskning är en mekanism som gör att granskare kan utföra olika
 feature: Adaptive Forms
 hide: true
 hidefromtoc: true
-source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '311'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Använda [Tilldela steg](https://experienceleague.adobe.com/docs/experience-mana
 1. Öppna författarinstansen i redigeringsläge.
 1. Gå till **[!UICONTROL Tools]** >  **[!UICONTROL Workflow]** >  **[!UICONTROL Models]** > **[!UICONTROL Create]** > **[!UICONTROL Create Model]**
 1. Ange arbetsflödets namn och lägg till **[Tilldela uppgift]** steg
-1. Tryck ![settings_icon](assets/settings_icon.png) i åtgärdsfältet. The **[!UICONTROL Assign Task]** öppnas.
+1. Välj ![settings_icon](assets/settings_icon.png) i åtgärdsfältet. The **[!UICONTROL Assign Task]** öppnas.
 1. Öppna [!UICONTROL Form and Document] flik och öppna [!UICONTROL Pre-populated] och ange:
 
    * Välj indatafil med
@@ -44,7 +44,7 @@ Använda [Tilldela steg](https://experienceleague.adobe.com/docs/experience-mana
 Konfigurera nu åtgärden Skicka för en komponent med adaptiv formulärbehållare på webbplatsens sida:
 
 1. Gå till webbplatsens sida.
-1. Tryck ![settings_icon](assets/settings_icon.png) för en adaptiv formulärbehållare. The **[!UICONTROL Adaptive Form Container]** öppnas.
+1. Välj ![settings_icon](assets/settings_icon.png) för en adaptiv formulärbehållare. The **[!UICONTROL Adaptive Form Container]** öppnas.
 1. Öppna **[!UICONTROL Submission]** -flik och ange **[!UICONTROL Submit Action]** till [Anropa ett AEM arbetsflöde](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=en#invoke-an-aem-workflow)
 
 1. Klicka [Klar] för att spara inställningarna.

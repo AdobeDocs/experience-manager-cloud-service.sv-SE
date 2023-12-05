@@ -1,15 +1,15 @@
 ---
-title: Content Fragments – konfigurera komponenter för återgivning
-description: Content Fragments – konfigurera komponenter för återgivning
+title: Innehållsfragment Konfigurera komponenter för återgivning
+description: Innehållsfragment Konfigurera komponenter för återgivning
 exl-id: 6606dc3b-f1b8-4941-8fd0-f69cbd414afa
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 4%
+source-wordcount: '519'
+ht-degree: 0%
 
 ---
 
-# Content Fragments – konfigurera komponenter för återgivning{#content-fragments-configuring-components-for-rendering}
+# Innehållsfragment Konfigurera komponenter för återgivning{#content-fragments-configuring-components-for-rendering}
 
 Det finns flera [avancerade tjänster](#definition-of-advanced-services-that-need-configuration) relaterat till återgivning av innehållsfragment. För att kunna använda dessa tjänster måste resurstyperna för sådana komponenter göra sig kända för innehållsfragmentets ramverk.
 
@@ -18,7 +18,7 @@ Detta görs genom att konfigurera [OSGi-tjänst - Konfiguration av komponent fö
 Denna information krävs när
 
 * Du måste implementera en egen innehållsfragmentbaserad komponent,
-* Och måste utnyttja de avancerade tjänsterna.
+* Och måste använda de avancerade tjänsterna.
 
 Adobe rekommenderar att du använder kärnkomponenterna.
 

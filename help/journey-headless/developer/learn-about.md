@@ -2,9 +2,9 @@
 title: Läs om CMS Headless Development
 description: I den här delen av AEM Headless Developer Journey kan du lära dig mer om headless-teknik och varför du skulle använda den.
 exl-id: 8c1fcaf7-1551-4133-b363-6f50af681661
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1636'
+source-wordcount: '1626'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ Om du utelämnar huvudet förenklas CMS-systemet genom att komplexiteten försvi
 
 ## Frikoppling {#decoupling}
 
-Headless-leverans är möjlig genom att en uppsättning robusta och flexibla API:er (Application Programming Interface) visas som alla era upplevelser kan utnyttja. API fungerar som ett gemensamt språk mellan tjänsterna och binder ihop dem på innehållsnivå genom standardiserad innehållsleverans, men ger dem flexibilitet att implementera sina egna lösningar.
+Headless-leverans är möjlig genom att en uppsättning robusta och flexibla API:er (Application Programming Interface) som alla era upplevelser kan välja mellan visas. API fungerar som ett gemensamt språk mellan tjänsterna och binder ihop dem på innehållsnivå genom standardiserad innehållsleverans, men ger dem flexibilitet att implementera sina egna lösningar.
 
 Headless är ett exempel på hur du frigör innehåll från presentationen. Eller i mer generiska avseenden: koppla loss den främre änden från den bakre änden av servicestacken. I en headlessmiljö är presentationssystemet (huvudet) fristående från innehållshanteringen (svansen). De två interagerar bara via API-anrop.
 

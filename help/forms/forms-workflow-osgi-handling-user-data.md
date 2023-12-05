@@ -5,9 +5,9 @@ uuid: 6eefbe84-6496-4bf8-b065-212aa50cd074
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9f400560-8152-4d07-a946-e514e9b9cedf
-source-git-commit: f70e18b1c21fd530587694f91c3969e831cfc640
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '986'
 ht-degree: 0%
 
 ---
@@ -137,7 +137,7 @@ Du måste vara AEM administratör för att kunna ta bort användardata från arb
 
    1. Gå till `https://'[server]:[port]'/aem/start.html` och logga in med administratörsuppgifter.
    1. Navigera till **[!UICONTROL Tools > Workflow> Instances]**.
-   1. Välj relevanta arbetsflödesinstanser för användaren och tryck på **[!UICONTROL Terminate]** för att avsluta instanser som körs.
+   1. Välj relevanta arbetsflödesinstanser för användaren och välj **[!UICONTROL Terminate]** för att avsluta instanser som körs.
 
       Mer information om hur du arbetar med arbetsflödesinstanser finns i [Administrera arbetsflödesinstanser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/workflows/overview.html#authoring).
 

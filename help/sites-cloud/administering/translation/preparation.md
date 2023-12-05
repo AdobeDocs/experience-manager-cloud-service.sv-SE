@@ -4,9 +4,9 @@ description: Lär dig hur du förbereder innehåll för översättning när du u
 feature: Language Copy
 role: Admin
 exl-id: afc577a2-2791-481a-ac77-468011e4302e
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '756'
 ht-degree: 0%
 
 ---
@@ -68,8 +68,8 @@ Skapa en språkrot som rotsida för en språkkopia som identifierar språket i i
 
 Om du vill skapa språkroten skapar du en sida och använder en ISO-språkkod som värde för **Namn** -egenskap. Språkkoden måste ha något av följande format:
 
-* `<language-code>` - Den språkkod som stöds är en kod med två bokstäver som definieras av ISO-639-1, till exempel `en`.
-* `<language-code>_<country-code>` eller `<language-code>-<country-code>` - Den landskod som stöds är en kod med två bokstäver i gemener eller versaler enligt ISO 3166, till exempel `en_US`, `en_us`, `en_GB`, `en-gb`.
+* `<language-code>` - Den språkkod som stöds är en kod med två bokstäver enligt ISO-639-1, till exempel `en`.
+* `<language-code>_<country-code>` eller `<language-code>-<country-code>` - Den landskod som stöds är en kod med två bokstäver (gemener eller versaler) enligt ISO 3166, till exempel `en_US`, `en_us`, `en_GB`, `en-gb`.
 
 Du kan använda båda formaten enligt den struktur som du har valt för den globala platsen. Rotsidan för den franska språkkopian av WKND-webbplatsen har `fr` som **Namn** -egenskap. The **Namn** egenskapen används som namn på sidnoden i databasen och därför bestäms sidans sökväg (`http://<host>:<4502>/content/wknd/language-masters/fr.html`).
 

@@ -2,9 +2,9 @@
 title: ContextHub JavaScript API-referens
 description: ContextHub JavaScript API är tillgängligt för skript när ContextHub-komponenten har lagts till på sidan
 exl-id: ec35bef5-610c-4e85-a43a-d4201b5eb03e
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '4613'
+source-wordcount: '4602'
 ht-degree: 0%
 
 ---
@@ -162,7 +162,7 @@ Sammanfogar ett dataobjekt eller en array med lagringsdata. Varje nyckel/värde-
 * **Objekt:** Tangenter är egenskapsnamnen.
 * **Array:** Tangenter är matrisindex.
 
-Observera att värden kan vara objekt.
+Värden kan vara objekt.
 
 ##### Parametrar {#parameters-addallitems}
 

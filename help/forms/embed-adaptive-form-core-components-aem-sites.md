@@ -4,9 +4,9 @@ description: Använd komponenter för adaptiv Form Core på en AEM Sites-sida f�
 feature: Adaptive Forms
 hide: true
 hidefromtoc: true
-source-git-commit: 2d4a81aa0d6755270d4d6efb8649782f4bde4537
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2031'
+source-wordcount: '1948'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,7 @@ Formuläret är klart. När du publicerar AEM Sites-sidan publiceras automatiskt
 
 #### Konfigurera egenskaper för adaptiv formulärbehållare {#configure-additional-settings-container}
 
-Du kan anpassa de avancerade inställningarna för [!UICONTROL Adaptive Form Container] -komponenten. Till exempel,
+Du kan anpassa de avancerade inställningarna för [!UICONTROL Adaptive Form Container] -komponenten. Exempel:
 
 * Du kan konfigurera förifyllningstjänsten så att den läser in ett adaptivt formulär med förfyllda värden på en webbplats sida.
 * Du kan konfigurera datamodellsinställningarna för att associera det adaptiva formuläret med en datakälla.
@@ -203,7 +203,7 @@ Om du vill använda adaptiva Forms-komponenter på en AEM Sites-sida inkluderar 
 
 1. Öppna AEM Sites-sidan i redigeringsläge.
 1. Dra och släpp komponentens [!UICONTROL Adaptive Forms - Embed] på sidan.
-1. Tryck på [!UICONTROL Adaptive Forms - Embed] -komponenten på webbplatssidan och tryck på ![settings_icon](/help/forms/assets/Smock_Wrench_18_N.svg) i åtgärdsfältet. The **[!UICONTROL Edit Adaptive Forms - Embed]** öppnas.
+1. Välj [!UICONTROL Adaptive Forms - Embed] på webbplatssidan och markera ![settings_icon](/help/forms/assets/Smock_Wrench_18_N.svg) i åtgärdsfältet. The **[!UICONTROL Edit Adaptive Forms - Embed]** öppnas.
 1. Bläddra och välj det adaptiva formulär som ska bäddas in i [!UICONTROL Asset Path].
 1. Spara inställningarna. Det adaptiva formuläret är nu inbäddat på sidan.
 
@@ -253,7 +253,7 @@ Tänk på följande scenarier för publicering av tillagd Adaptive Forms med **[
 Gör något av följande om du vill ändra någon konfiguration eller egenskap för ett adaptivt formulär:
 
 * Öppna originalformuläret i ett adaptivt formulär i respektive redigerare och ändra dem.
-* Tryck på det adaptiva formuläret på webbplatssidan i redigeringsläge och tryck sedan på **[!UICONTROL Edit in a new window]**. Det ursprungliga formuläret öppnas i redigeringsläge som du kan ändra.
+* Markera det adaptiva formuläret på webbplatssidan i redigeringsläge och välj sedan **[!UICONTROL Edit in a new window]**. Det ursprungliga formuläret öppnas i redigeringsläge som du kan ändra.
 
 ## Ändra layout för ett adaptivt formulär som lagts till på en AEM Sites-sida {#change-layout-af-aem-sites-page}
 

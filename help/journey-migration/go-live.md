@@ -2,9 +2,9 @@
 title: GoLive
 description: Lär dig hur du utför migreringen när koden och innehållet är molnklara
 exl-id: 10ec0b04-6836-4e26-9d4c-306cf743224e
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1697'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ När du utför produktionsmigreringen bör du undvika att köra verktyget Inneh�
 
 **Optimera inläsningen på AEM när innehållsmigreringen utförs**
 
-Kom ihåg att belastningen på AEM är större under extraheringsfasen. Du bör vara medveten om följande:
+Kom ihåg att belastningen på AEM är större under extraheringsfasen. Tänk på följande:
 
 * Innehållsöverföringsverktyget är en extern Java-process som använder en JVM-heap på 4 GB
 * Icke-AzCopy-versionen hämtar binärfiler, lagrar dem på ett temporärt utrymme på AEM, förbrukar disk-I/O och överför dem sedan till Azure-behållaren som förbrukar nätverksbandbredd

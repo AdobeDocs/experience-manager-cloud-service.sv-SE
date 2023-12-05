@@ -2,16 +2,16 @@
 title: Hur skapar man urkunder för Adaptive Forms?
 description: Lär dig att generera en mall för ett dokument för inspelning (Document of Record, DoR) för adaptiva Forms Core-komponenter.
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '3004'
+source-wordcount: '3006'
 ht-degree: 0%
 
 ---
 
 # Generera urkunder för adaptiva Forms (kärnkomponenter)
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 När ett formulär fylls i eller skickas kan du spara en post med formuläret, i utskrift eller i dokumentformat. Den här posten kallas dokumentarkivhandling (DoR). Det är en utskriftsvänlig kopia av det inskickade formuläret. Du kan också hänvisa till urkunder för den information de fyller i vid ett senare tillfälle eller använda arkiveringsdokumentet för att arkivera formulär och innehåll tillsammans i PDF-format.
 
@@ -39,10 +39,10 @@ Innan du börjar lära dig mer och förbereder de resurser som krävs för ett d
 
 1. I författarinstansen av Experience Manager klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
 1. Välj ett formulär eller Skapa ett anpassat formulär och klicka på **[!UICONTROL Properties]**.
-1. I fönstret Egenskaper trycker du på **[!UICONTROL Form Model]**.
+1. Välj **[!UICONTROL Form Model]**.
 1. På  **[!UICONTROL Form Model]** -fliken, i **[!UICONTROL Select From]** nedrullningsbar meny, välja **[!UICONTROL Form Data Model]**, **[!UICONTROL Schema]** eller **[!UICONTROL None]**. Du kan också välja en formulärmodell när du skapar ett formulär.
 1. I avsnittet Dokumentmall på fliken Formulärmodell väljer du **Associera formulärmall som postdokumentmall**. När du väljer det här alternativet visas alla XFA-mallar (XDP-filer) som är tillgängliga på datorn. Välj lämplig fil. Se även till att samma schema (dataschema) används för Adaptivt formulär och vald XFA-mall (XDP-fil).
-1. Klicka på **[!UICONTROL Done.]**
+1. Klicka **[!UICONTROL Done.]**
 
 Ditt adaptiva formulär är nu konfigurerat att använda en XDP-fil som mall för postdokument. Nästa steg är att [binda adaptiva formulärkomponenter till motsvarande mallfält](#bind-adaptive-form-components-with-template-fields).
 
@@ -52,10 +52,10 @@ Ditt adaptiva formulär är nu konfigurerat att använda en XDP-fil som mall fö
 
 1. I författarinstansen av Experience Manager klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
 1. Välj ett formulär eller **[!UICONTROL Create an Adaptive Form]** och klicka **[!UICONTROL Properties]**.
-1. I fönstret Egenskaper trycker du på **[!UICONTROL Form Model]**.
+1. Välj **[!UICONTROL Form Model]**.
 1. På  **[!UICONTROL Form Model]** -fliken, i **[!UICONTROL Select From]** nedrullningsbar meny, välja **[!UICONTROL Form Data Model]**, **[!UICONTROL Schema]** eller **[!UICONTROL None]**. Du kan också välja en formulärmodell när du skapar ett formulär.
 1. I avsnittet Dokumentmall på fliken Formulärmodell väljer du **Associera formulärmall som postdokumentmall**. När du väljer det här alternativet visas alla Acrobat-PDF (Acrobat) som är tillgängliga på datorn. Markera den Acrobat som du vill använda.
-1. Klicka på **[!UICONTROL Done.]**
+1. Klicka **[!UICONTROL Done.]**
 
 Ditt adaptiva formulär är nu konfigurerat att använda en Acrobat som mall för arkivdokument. Nästa steg är att [binda adaptiva formulärkomponenter till motsvarande mallfält](#bind-adaptive-form-components-with-template-fields).
 
@@ -73,10 +73,10 @@ Så här konfigurerar du ett anpassat formulär så att det automatiskt generera
 
 1. I författarinstansen av Experience Manager klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
 1. Välj ett formulär eller Skapa ett anpassat formulär och klicka på **[!UICONTROL Properties]**.
-1. I fönstret Egenskaper trycker du på **[!UICONTROL Form Model]**.
+1. Välj **[!UICONTROL Form Model]**.
 1. På  **[!UICONTROL Form Model]** -fliken, i **[!UICONTROL Select From]** nedrullningsbar meny, välja **[!UICONTROL Form Data Model]**, **[!UICONTROL Schema]** eller **[!UICONTROL None]**. Du kan också välja en formulärmodell när du skapar ett formulär.
 1. I avsnittet Dokumentmall på fliken Formulärmodell väljer du **Generera postdokument**.
-1. Klicka på **[!UICONTROL Done.]**
+1. Klicka **[!UICONTROL Done.]**
 
 ## Bind adaptiva formulärkomponenter till mallfält {#bind-adaptive-form-components-with-template-fields}
 
@@ -291,7 +291,7 @@ En basmall används för att definiera sidhuvud, sidfot, format och utseende fö
 
 Så här skapar du en basmall i Forms Designer.
 
-1. Klicka på **[!UICONTROL File]** > **[!UICONTROL New]**.
+1. Klicka **[!UICONTROL File]** > **[!UICONTROL New]**.
 1. Välj **[!UICONTROL Based on a template]** alternativ.
 
 1. Välj **[!UICONTROL Forms - Document of Record]** kategori.
@@ -317,10 +317,10 @@ När du genererar ett dokument för registrering kan du ändra profileringsinfor
 
 Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokument av post kontrollerar du att webbläsarens språkområde är korrekt inställt. Så här anpassar du profileringsinformationen i Document of Record:
 
-1. Markera en panel (rotpanelen) i postdokumentet och tryck sedan på ![konfigurera](assets/configure.png).
-1. Tryck ![dortab](assets/dortab.png). Fliken Dokument för post visas.
+1. Markera en panel (rotpanelen) i postdokumentet och välj sedan ![konfigurera](assets/configure.png).
+1. Välj ![dortab](assets/dortab.png). Fliken Dokument för post visas.
 1. Välj antingen standardmallen eller en anpassad mall för återgivning av postdokumentet. Om du väljer standardmallen visas en miniatyrförhandsvisning av postdokumentet under listrutan Mall.
-1. Beroende på om du väljer en standardmall eller en anpassad mall visas några eller alla följande egenskaper på fliken Dokument för post. Ange nedanstående egenskaper för att definiera utseendet på postdokumentet:
+1. Beroende på om du väljer en standardmall eller en anpassad mall visas några av följande egenskaper, eller alla egenskaper, på fliken Dokument för post. Ange nedanstående egenskaper för att definiera utseendet på postdokumentet:
 
    1. **Grundläggande egenskaper**:
       * **Mall**: Om du vill välja en anpassad mall bläddrar du och väljer en XDP-fil på din [!DNL AEM Forms] server. Om du vill använda en mall som inte är tillgänglig på din [!DNL AEM Forms] ska du först överföra XDP-filen till din [!DNL AEM Forms] server.
@@ -369,7 +369,7 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
    </proto>
    ```
 
-1. Om du vill spara ändringarna för varumärket trycker du **[!UICONTROL Done]**.
+1. Om du vill spara varumärkeskonfigurationen väljer du **[!UICONTROL Done]**.
 
 
 

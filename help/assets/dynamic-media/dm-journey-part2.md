@@ -11,9 +11,9 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: cdca41ad-a2cd-4f68-aaa4-5eec33c30f0b
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '2842'
+source-wordcount: '2647'
 ht-degree: 0%
 
 ---
@@ -123,7 +123,7 @@ Du minns [Anatomi för en Dynamic Media URL](#dm-journey-d) som du läste om Dyn
 
 Du kan tänka dig en bildförinställning som ett recept för dina bilder. Den kommer att leverera alla bilder som använder förinställningen, konsekvent, varje gång; den kommer att vara densamma. Parametern `&op_brightness=+10` lades också till för att öka intensiteten något.
 
-När du är klar sparar du förinställningen och nu är den tillgänglig för alla bilder som du har. I det här fallet vill vi tillämpa _Medel_ bildförinställning till en bild av en skål flytande choklad.
+När du är klar sparar du förinställningen och nu är den tillgänglig för alla bilder som du har. I det här fallet vill du använda _Medel_ bildförinställning till en bild av en skål flytande choklad.
 
 ![Använda bildförinställningen *Medel* för att generera en återgivning av en bild](/help/assets/dynamic-media/assets/dm-medium-image-preset.png)
 _Använda bildförinställningen Medium för att generera en återgivning av en bild._

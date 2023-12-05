@@ -1,15 +1,15 @@
 ---
-title: Experience Fragments
+title: Upplevelsefragment
 description: Använd Adobe Experience Manager as a Cloud Service Experience Fragments för att göra upplevelserna återanvändbara och flexibla.
 exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2042'
-ht-degree: 4%
+source-wordcount: '2035'
+ht-degree: 2%
 
 ---
 
-# Experience Fragments {#experience-fragments}
+# Upplevelsefragment {#experience-fragments}
 
 Inom Adobe Experience Manager as a Cloud Service, en Experience Fragment:
 
@@ -196,7 +196,7 @@ Så här skapar du ett Experience Fragment:
 
 1. Klicka **Skapa**.
 
-   Ett meddelande  visas. Välj:
+   Ett meddelande visas. Välj:
 
    * **Klar** för att återgå till konsolen
    * **Öppna** för att öppna fragmentredigeraren
@@ -382,7 +382,7 @@ Det här läget fungerar på samma sätt som för sidredigering. Se [Målläge f
 Information om ditt fragment kan ses:
 
 1. Navigera till platsen för dina Experience Fragments (navigera inte längre till variationerna i fragmentet).
-Detaljer visas i alla vyer av konsolen **Upplevelsefragment** och **listvyn**[ visar även information om export till Target](/help/sites-cloud/integrating/integrating-adobe-target.md):
+Detaljer visas i alla vyer av **Upplevelsefragment** konsol, med **Listvy** inklusive uppgifter om en [exportera till Target](/help/sites-cloud/integrating/integrating-adobe-target.md):
 
    ![Information om Experience Fragment](/help/sites-cloud/authoring/assets/xf-15.png)
 
@@ -408,14 +408,14 @@ Detaljer visas i alla vyer av konsolen **Upplevelsefragment** och **listvyn**[ v
       * **Antal webbvarianter** - endast information
       * **Antal icke-webbvarianter** - endast information
       * **Antal sidor som använder det här fragmentet** - endast information
-   * **Cloud Services**
+   * **Cloud Service**
       * **Molnkonfiguration**
       * **Cloud Service Configurations**
       * **Facebook page ID**
       * **Pinterest board**
    * **Referenser**
       * En lista med referenser
-   * **Personanpassning**
+   * **Personalisering**
       * **ContextHub-sökväg**
       * **Segmentsökväg**
       * **Varumärke**

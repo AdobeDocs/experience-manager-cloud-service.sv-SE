@@ -2,9 +2,9 @@
 title: Versionsinformation för 2021.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2021.3.0."
 exl-id: 0c07364c-ba25-4081-8e35-3c1c84ed556f
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1271'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ Nästa version är planerad till den 8 april 2021.
 
 * Användare med nödvändig behörighet kan nu redigera ett program och göra följande på ett självbetjäningssätt:
 
-   * Lägg till Sites-lösning i ett befintligt program med Assets eller vice versa.
+   * Lägg till Sites-lösning i ett befintligt program med Assets eller omvänt.
    * Ta bort platser eller resurser från ett befintligt program med både platser och resurser.
    * Lägg till andra, outnyttjade lösningsberättigande antingen till ett befintligt program eller som ett nytt program.
 
@@ -130,7 +130,7 @@ Nästa version är planerad till den 8 april 2021.
 
 * Alla befintliga produktionspipelines aktiveras automatiskt med Experience Audit-steget.
 
-## Content Transfer Tool {#content-transfer-tool}
+## Verktyget Innehållsöverföring {#content-transfer-tool}
 
 ### Releasedatum {#release-date-ctt}
 
@@ -163,7 +163,7 @@ Releasedatum för Best Practices Analyzer v2.1.8 är 22 mars 2021.
 
 * Möjlighet att filtrera bort ACS Commons-resultat från BPA-rapporten i användargränssnittet och från rapporten som exporterats som en CSV-fil.
 
-## Verktyg för omstrukturering av kod {#code-refactoring-tools}
+## Kodomfaktoriseringsverktyg {#code-refactoring-tools}
 
 ### Nyheter i verktygen för kodkorrigering {#what-is-new-crt}
 

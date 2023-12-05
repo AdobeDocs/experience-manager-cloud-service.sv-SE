@@ -5,9 +5,9 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 8eeb9c5e-6866-4bfe-b922-1f028728ef0d
-source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1335'
+source-wordcount: '1321'
 ht-degree: 0%
 
 ---
@@ -738,7 +738,7 @@ Följ de här stegen för att aktivera alla schemabaserade anpassningsbara Forms
 
 1. Gå till webbkonsolen Experience Manager på `https://server:host/system/console/configMgr`.
 1. Sök **[!UICONTROL Adaptive Form and Interactice Communication Web Channel Configuration]**.
-1. Tryck för att öppna konfigurationen i redigeringsläge.
+1. Välj det här alternativet om du vill öppna konfigurationen i redigeringsläge.
 1. Välj **[!UICONTROL Generate Schema Compliant Data]** kryssrutan.
 1. Spara inställningarna.
 
@@ -754,7 +754,7 @@ Adaptiv Forms stöder inte följande JSON-schemakonstruktioner:
 * OneOf, AnyOf, AllOf, och NOT
 * Endast homogena arrayer stöds. Objektbegränsningen måste därför vara ett objekt och inte en array.
 
-## Vanliga frågor {#frequently-asked-questions}
+## Frågor och svar {#frequently-asked-questions}
 
 **Varför kan jag inte dra enskilda element i ett delformulär (struktur som genereras från en komplex typ) för repeterbara delformulär (värdena minOcCours och maxOccurs är större än 1)?**
 

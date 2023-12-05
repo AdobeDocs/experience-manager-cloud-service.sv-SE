@@ -5,10 +5,10 @@ feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: 25adabfb-ff19-4cb2-aef5-0a8086d2e552
-source-git-commit: 397e7d4f23202b8ae7419b0ad5436a6a10e2efb8
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '744'
-ht-degree: 1%
+source-wordcount: '734'
+ht-degree: 0%
 
 ---
 
@@ -27,8 +27,8 @@ Du kan definiera det övergripande utseendet och formatet för ett anpassat form
 
 Så här lägger du till infogade format i en komponent:
 
-1. Öppna formuläret i formulärredigeraren och ändra läget till formateringsläge. Om du vill ändra läge till formateringsläge trycker du på ![canvas-drop-down](assets/Smock_ChevronDown.svg) > **[!UICONTROL Style]**.
-1. Markera en komponent på sidan och tryck på knappen Redigera ![edit-button](assets/edit.svg). Stilegenskaper öppnas i sidofältet.
+1. Öppna formuläret i formulärredigeraren och ändra läget till formateringsläge. Om du vill ändra läge till formateringsläge väljer du ![canvas-drop-down](assets/Smock_ChevronDown.svg) > **[!UICONTROL Style]**.
+1. Markera en komponent på sidan och markera redigeringsknappen ![edit-button](assets/edit.svg). Stilegenskaper öppnas i sidofältet.
 
    Du kan också välja komponenter från formulärhierarkiträdet i sidlisten. Formulärhierarkiträdet är tillgängligt som formulärobjekt i sidlisten.
 
@@ -46,7 +46,7 @@ Så här lägger du till infogade format i en komponent:
    * [!UICONTROL Advanced] (Gör att du kan skriva anpassad CSS för komponenten)
 
 1. På samma sätt kan du använda format för andra delar av en komponent, som [!UICONTROL Widget], [!UICONTROL Caption]och [!UICONTROL Help].
-1. Tryck **[!UICONTROL Done]** för att bekräfta ändringarna eller **[!UICONTROL Cancel]** för att ignorera ändringarna.
+1. Välj **[!UICONTROL Done]** för att bekräfta ändringarna eller **[!UICONTROL Cancel]** för att ignorera ändringarna.
 
 ## Exempel: textbundna format för en fältkomponent {#example-inline-styles-for-a-field-component}
 
@@ -111,9 +111,9 @@ Följ stegen ovan för att markera och formatera andra komponenter, till exempel
 
 ## Kopiera och klistra in format {#copy-paste-styles}
 
-Du kan också kopiera och klistra in en stil från en komponent till en annan i ett adaptivt formulär. I **[!UICONTROL Style]** trycker du på komponenten och trycker på ikonen Kopiera ![Kopiera](assets/property-copy-icon.svg).
+Du kan också kopiera och klistra in en stil från en komponent till en annan i ett adaptivt formulär. I **[!UICONTROL Style]** markerar du komponenten och väljer ikonen Kopiera ![Kopiera](assets/property-copy-icon.svg).
 
-Tryck på den andra komponenten av samma typ och tryck på ikonen Klistra in ![Kopiera](assets/Smock_Paste_18_N.svg) om du vill klistra in det kopierade formatet. Du kan också trycka på ikonen Rensa stil ![Kopiera](assets/clear-style-icon.svg) om du vill ta bort det använda formatet.
+Markera den andra komponenten av samma typ och välj ikonen Klistra in ![Kopiera](assets/Smock_Paste_18_N.svg) om du vill klistra in det kopierade formatet. Du kan också välja ikonen Radera format ![Kopiera](assets/clear-style-icon.svg) om du vill ta bort det använda formatet.
 
 ## Ange format för olika lägen i en komponent {#set-styles-for-states}
 
@@ -121,15 +121,15 @@ Du kan ange format för olika lägen för en komponenttyp. De olika lägena är:
 
 Så här definierar du format för ett läge för en komponent:
 
-1. I **[!UICONTROL Style]** läge, tryck på komponenten och tryck på ikonen Redigera ![Redigera](assets/Smock_Edit_18_N.svg).
+1. I **[!UICONTROL Style]** markerar du komponenten och väljer ikonen Redigera ![Redigera](assets/Smock_Edit_18_N.svg).
 
 1. Välj läge för komponenten med **[!UICONTROL State]** listruta.
 
    ![Välj läge](assets/select-state.png)
 
-1. Definiera formatet för komponentens valda läge och tryck på ![Spara](assets/save_icon.svg) för att spara egenskaperna.
+1. Definiera formatet för komponentens markerade läge och markera ![Spara](assets/save_icon.svg) för att spara egenskaperna.
 
-Du kan också simulera status för lyckade och fel. Tryck på ikonen Expandera för att visa **[!UICONTROL Simulate Success]** och **[!UICONTROL Simulate Error]** alternativ.
+Du kan också simulera status för lyckade och fel. Välj ikonen Expandera om du vill visa **[!UICONTROL Simulate Success]** och **[!UICONTROL Simulate Error]** alternativ.
 
 ![Simulera lägen](assets/simulate-states.png)
 

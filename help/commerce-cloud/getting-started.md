@@ -8,9 +8,9 @@ doc-type: tutorial
 kt: 4947
 thumbnail: 37843.jpg
 exl-id: 73ba707e-5e2d-459a-8cc8-846d1a5f2fd7
-source-git-commit: 78ead5f15c2613d9c3bed3025b43423a66805c59
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1066'
 ht-degree: 0%
 
 ---
@@ -107,7 +107,7 @@ Tillägget CIF och [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-
 
 Den här konfigurationen kan justeras för projektet med hjälp av CIF Cloud Service-konfigurationen enligt följande steg:
 
-1. AEM går till Verktyg -> Cloud Service -> CIF Konfiguration.
+1. Gå AEM till Verktyg > Cloud Service > CIF Konfiguration.
 
 2. Välj den e-postkonfiguration som du vill ändra.
 

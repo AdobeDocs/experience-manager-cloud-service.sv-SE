@@ -2,9 +2,9 @@
 title: Hur kan vi skapa och använda teman för att utforma ett anpassat formulär?
 description: Använd adaptiva formulärteman för att utforma och ge en visuell identitet till ett adaptivt formulär. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
 exl-id: 99c3d1f7-5756-49d2-98ee-72dd62063110
-source-git-commit: f70e18b1c21fd530587694f91c3969e831cfc640
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '5441'
+source-wordcount: '5421'
 ht-degree: 0%
 
 ---
@@ -363,7 +363,7 @@ När du markerar en komponent på arbetsytan visas komponentens verktygsfält ov
 * **[!UICONTROL Numeric Box Widget]**: Gör att du kan markera komponenten för att anpassa dess utseende i sidofältet.
 * **[!UICONTROL Field Widget]**: Gör att du kan välja den generiska komponenten för formatering. I det här exemplet markeras alla textindatakomponenter (textruta/numerisk ruta/numerisk nummerlista/datumindata) för formatering.
 
-* ![fältnivå](assets/select_parent_icon.svg): Välj den överordnade komponenten för formatering. Om du markerar en numerisk ruta och trycker på den här ikonen markeras fältkomponenten. Om du markerar en fältkomponent och trycker på den här ikonen markeras panelen. Om du fortsätter att trycka på den här ikonen för markering, kommer du att välja layouten för formatering.
+* ![fältnivå](assets/select_parent_icon.svg): Välj den överordnade komponenten för formatering. Om du markerar en numerisk ruta och väljer den här ikonen markeras fältkomponenten. Om du markerar en fältkomponent och väljer den här ikonen markeras panelen. Om du fortsätter att trycka på den här ikonen för markering, kommer du att välja layouten för formatering.
 
 >[!NOTE]
 >
@@ -587,7 +587,7 @@ Så här kopierar du ett tema:
 
 1. I redigeringsinstansen navigerar du till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Themes]**.
 1. Öppna mappen Temabibliotek.
-1. I temabiblioteksmappen håller du pekaren över motsvarande färdiga tema och trycker **[!UICONTROL Copy]**.
+1. I temabiblioteksmappen håller du pekaren över motsvarande färdiga tema och väljer **[!UICONTROL Copy]**.
 1. Klistra in det kopierade temat utanför temabiblioteksmappen.
 1. Anpassa det kopierade temat.
 

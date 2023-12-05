@@ -2,10 +2,10 @@
 title: Formatsystem
 description: Med Style System kan mallskapare definiera formatklasser i en komponents innehållsprincip så att en innehållsförfattare kan markera dem när komponenten på en sida redigeras. Dessa format kan vara alternativa visuella varianter av en komponent, vilket gör den mer flexibel.
 exl-id: 224928dd-e365-4f3e-91af-4d8d9f47efdd
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1317'
-ht-degree: 1%
+source-wordcount: '1305'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +28,7 @@ Style System ger en enhetlig lösning för både mallskaparens och innehållsfö
 
 Klassen style infogas sedan i elementet dekoration wrapper i komponenten så att komponentutvecklaren inte behöver bekymra sig om att hantera formaten utöver att tillhandahålla sina CSS-regler.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Vanligtvis har du följande format när du använder Style System.
 
@@ -46,7 +46,7 @@ Vanligtvis har du följande format när du använder Style System.
 
 1. AEM kan sedan välja de formgivna formaten i sidredigeraren via formatmenyn i komponentens verktygsfält.
 
-Observera att endast de tre sista stegen faktiskt utförs i AEM. Detta innebär att all utveckling av nödvändig CSS och JavaScript kan göras utan AEM.
+Endast de tre sista stegen genomförs i AEM. Detta innebär att all utveckling av nödvändig CSS och JavaScript kan göras utan AEM.
 
 För att kunna implementera formaten behöver du bara distribuera AEM och välja mellan komponenterna i de önskade mallarna.
 

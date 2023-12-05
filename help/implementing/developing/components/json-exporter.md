@@ -2,10 +2,10 @@
 title: JSON-exporterare för innehållstjänster
 description: AEM Content Services är utformat för att generera beskrivning och leverans av innehåll i/från AEM utöver fokus på webbsidor. De levererar innehåll till kanaler som inte är traditionella AEM webbsidor, med standardiserade metoder som kan användas av alla kunder.
 exl-id: d3ddffb7-cef9-4c86-aa31-175f13f9b4a5
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 2%
+source-wordcount: '383'
+ht-degree: 0%
 
 ---
 
@@ -67,8 +67,8 @@ Sidan kan innehålla antingen ett enda innehållsfragment eller flera komponente
 
 ### Ytterligare information {#further-information}
 
-* HTTP API för Assets
-   * [HTTP API för Assets](/help/assets/developer-reference-material-apis.md)
+* Resurser för HTTP API
+   * [Resurser för HTTP API](/help/assets/developer-reference-material-apis.md)
 * Sling Models:
    * [Sling Models - Associera en modellklass med en resurstyp sedan 130](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)
 * AEM med JSON:

@@ -2,9 +2,9 @@
 title: Loggning för AEM as a Cloud Service
 description: Lär dig hur du använder loggning för AEM as a Cloud Service för att konfigurera globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '2753'
+source-wordcount: '2720'
 ht-degree: 0%
 
 ---
@@ -190,14 +190,14 @@ Nedan följer exempel på rekommenderade loggningskonfigurationer (med platshål
 
 AEM as a Cloud Service loggning av HTTP-begäran ger insikt i HTTP-begäranden som gjorts till AEM och deras HTTP-svar i tidsordning. Loggen är användbar för att förstå HTTP-begäranden som gjorts till AEM och i vilken ordning de bearbetas och besvaras.
 
-Nyckeln till att förstå den här loggen är att mappa HTTP-begärande- och svarspar med deras ID:n, som anges med det numeriska värdet inom hakparenteser. Observera att ofta förfrågningar och deras motsvarande svar har andra HTTP-förfrågningar och svar som har intervjuats mellan dem i loggen.
+Nyckeln till att förstå den här loggen är att mappa HTTP-begärande- och svarspar med deras ID:n, som anges med det numeriska värdet inom hakparenteser. Förfrågningar och deras motsvarande svar har ofta andra HTTP-förfrågningar och svar som skickas mellan dem i loggen.
 
 **Exempellogg**
 
 ```
-29/Apr/2020:19:14:21 +0000 [137] -> POST /conf/global/settings/dam/adminui-extension/metadataprofile/ HTTP/1.1 [cm-p1234-e5678-aem-author-59555cb5b8-q7l9s]
+29/Apr/2020:19:14:21 +0000 [137] > POST /conf/global/settings/dam/adminui-extension/metadataprofile/ HTTP/1.1 [cm-p1234-e5678-aem-author-59555cb5b8-q7l9s]
 ...
-29/Apr/2020:19:14:22 +0000 [139] -> GET /mnt/overlay/dam/gui/content/processingprofilepage/metadataprofiles/editor.html/conf/global/settings/dam/adminui-extension/metadataprofile/main HTTP/1.1 [cm-p1234-e5678-aem-author-59555cb5b8-q7l9s]
+29/Apr/2020:19:14:22 +0000 [139] > GET /mnt/overlay/dam/gui/content/processingprofilepage/metadataprofiles/editor.html/conf/global/settings/dam/adminui-extension/metadataprofile/main HTTP/1.1 [cm-p1234-e5678-aem-author-59555cb5b8-q7l9s]
 ...
 29/Apr/2020:19:14:21 +0000 [137] <- 201 text/html 111ms [cm-p1234-e5678-aem-author-59555cb5b8-q7l9s]
 ...
@@ -285,7 +285,7 @@ Den här uppsättningen loggar ger information om HTTP-begäranden till AEM as a
 
 ### Åtkomstlogg för Apache HTTPD-webbserver {#apache-httpd-web-server-access-log}
 
-Åtkomstloggen för Apache HTTP Web Server innehåller programsatser för varje HTTP-begäran som når publiceringsskiktets webbserver/Dispatcher. Observera att förfrågningar som hanteras från ett CDN i ett tidigare flöde inte återspeglas i dessa loggar.
+Åtkomstloggen för Apache HTTP Web Server innehåller programsatser för varje HTTP-begäran som når publiceringsskiktets webbserver/Dispatcher. Begäranden som hanteras från ett CDN-uppströms återspeglas inte i dessa loggar.
 
 Mer information om felloggformatet finns i [officiell dokumentation om apache](https://httpd.apache.org/docs/2.4/logs.html#accesslog).
 
@@ -611,7 +611,7 @@ Kunder som har Splunk-konton kan via kundsupportbiljetten begära att deras AEM 
 
 Nätverksbandbredden som är kopplad till loggar som skickas till Splunk räknas som en del av kundens I/O-användning i nätverket.
 
-Observera att Splunk Fording ännu inte stöder CDN-loggar.
+Splunk-vidarebefordran stöder ännu inte CDN-loggar.
 
 ### Aktivera vidarebefordran av segment {#enabling-splunk-forwarding}
 

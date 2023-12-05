@@ -2,9 +2,9 @@
 title: OAuth2-stöd för e-posttjänsten
 description: Oauth2-stöd för e-posttjänsten i Adobe Experience Manager as a Cloud Service
 exl-id: 93e7db8b-a8bf-4cc7-b7f0-cda481916ae9
-source-git-commit: c8e8a1c862784976094391d567fac0f9122af8b4
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Mer information om AEM as a Cloud Service Mail Service finns i [Skickar e-post](
 
    >[!NOTE]
    >
-   >Behörighetskonfigurationen kan förändras över tid. Kontakta Microsoft om de inte fungerar som förväntat.
+   >Behörighetskonfigurationen kan förändras över tid. Arbeta med Microsoft om dessa inte fungerar som förväntat.
 
    * `https://outlook.office.com/SMTP.Send`
    * `openid`
@@ -139,7 +139,7 @@ Innan du fortsätter att konfigurera OAuth på AEM-sidan måste du verifiera bå
 
    >[!NOTE]
    >
-   >Omfattningar kan utvecklas över tid. Kontakta Microsoft om de inte fungerar som förväntat.
+   >Omfattningar kan utvecklas över tid. Arbeta med Microsoft om dessa inte fungerar som förväntat.
 
    * `https://outlook.office.com/SMTP.Send`
    * `openid`

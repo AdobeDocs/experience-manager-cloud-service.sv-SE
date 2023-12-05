@@ -2,9 +2,9 @@
 title: Administrera taggar
 description: Lär dig hur du administrerar taggar i AEM för att ordna ditt innehåll.
 exl-id: 42480699-b7a7-4678-a763-569a9b7573e2
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2210'
+source-wordcount: '2200'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Taggningskonsolen används för att skapa och hantera taggar och deras taxonomie
 Så här kommer du åt taggningskonsolen:
 
 1. Logga in i en redigeringsmiljö med administratörsbehörighet.
-1. Välj **`Tools`** > **`General`** ->
+1. Välj **`Tools`** > **`General`** >
    **`Tagging`**.
 
 ![Taggningskonsolen i AEM](/help/sites-cloud/administering/assets/tagging-console.png)
@@ -91,7 +91,7 @@ Ett namnutrymme används för att ordna andra taggar. Den kan ses som den lägst
 
 1. När du angett den obligatoriska informationen väljer du **Skapa**.
 
-Namnutrymmet skapas. Observera att i taggningskonsolen är namnutrymmena på den lägsta nivån (längst till vänster i konsolen) och representeras av mappikoner, som visar deras natur som en&quot;behållare&quot; eller gruppering av andra taggar.
+Namnutrymmet skapas. I taggningskonsolen finns namnutrymmena på den lägsta nivån (längst till vänster i konsolen) och representeras av mappikoner, som visar deras karaktär som en&quot;behållare&quot; eller gruppering av andra taggar.
 
 Nu kan du [skapa nya taggar](#creating-tags) i detta namnutrymme eller [hantera befintliga taggar.](#managing-tags)
 
@@ -163,7 +163,7 @@ Det finns flera åtgärder som du kan vidta för befintliga taggar och namnutrym
 * [Sammanfoga](#merging-tags)
 * [Ta bort](#deleting-tags)
 
-Observera att när det finns tillräckligt med utrymme i verktygsfältet finns det ytterligare alternativ bakom ellipsikonen.
+Om det finns tillräckligt med utrymme i verktygsfältet finns det ytterligare alternativ bakom ellipsikonen.
 
 ### Visa taggegenskaper {#viewing-tag-properties}
 
@@ -243,7 +243,7 @@ Det kan vara praktiskt att se vilket innehåll en viss tagg används på. Du kan
 
    ![Visa detaljerna i taggens referenser](assets/tag-references-detail.png)
 
-Hovra musen eller tryck på ett refererande innehåll i listan för att visa innehållets fullständiga sökväg.
+Hovra musen eller markera ett referensinnehåll i listan för att visa hela sökvägen för innehållet.
 
 Mer information om hur du väljer visningslägen och skenor finns i [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector).
 

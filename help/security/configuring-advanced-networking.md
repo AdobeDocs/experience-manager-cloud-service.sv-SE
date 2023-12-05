@@ -2,9 +2,9 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '3594'
+source-wordcount: '3526'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Den här artikeln beskriver de olika avancerade nätverksfunktionerna i AEM as a
 >
 >Du kan även hitta en serie artiklar som är utformade för att hjälpa dig igenom de avancerade nätverksalternativen i det här [plats](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/advanced-networking.html?lang=en).
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 AEM as a Cloud Service har flera typer av avancerade nätverksfunktioner som kan konfigureras av kunder med API:er för Cloud Manager. Bland dessa finns:
 
@@ -365,7 +365,7 @@ Regler för portvidarebefordran ska deklareras för TCP-trafik som inte är http
 
 API:t bör svara på bara några sekunder, vilket anger statusen `updating` och efter cirka 10 minuter visar ett anrop till Cloud Managers miljöslutpunkt statusen för GET `ready`, vilket anger att uppdateringen av miljön har tillämpats.
 
-Observera att även om det inte finns några trafikdirigeringsregler för miljön (värdar eller bypass), `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` måste fortfarande anropas, bara med en tom nyttolast.
+Även om det inte finns några trafikdirigeringsregler för miljön (värdar eller bypass), `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` måste fortfarande anropas, bara med en tom nyttolast.
 
 ### Uppdaterar VPN {#updating-the-vpn}
 
@@ -555,7 +555,7 @@ När ytterligare en region läggs till i en miljö som redan har avancerade nät
 
 Om en avancerad nätverkskonfiguration redan är aktiverad i den primära regionen gör du så här:
 
-1. Om du har låst din infrastruktur så att den dedikerade IP-adressen för AEM är tillåten, bör du tillfälligt inaktivera eventuella spärrregler i den infrastrukturen. Om detta inte görs finns det en kort period då förfrågningar från den nya regionens IP-adresser nekas av din egen infrastruktur. Observera att detta inte är nödvändigt om du har låst din infrastruktur med ett fullständigt kvalificerat domännamn (FQDN), (`p1234.external.adobeaemcloud.com`, till exempel) eftersom alla AEM regioner utlöser avancerad nätverkstrafik från samma FQDN
+1. Om du har låst din infrastruktur så att den dedikerade IP-adressen för AEM är tillåten, bör du tillfälligt inaktivera eventuella spärrregler i den infrastrukturen. Om detta inte görs finns det en kort period då förfrågningar från den nya regionens IP-adresser nekas av din egen infrastruktur. Detta är inte nödvändigt om du har låst din infrastruktur med ett FQDN (FullyQualified Domain Name), (`p1234.external.adobeaemcloud.com`, till exempel) eftersom alla AEM regioner utlöser avancerad nätverkstrafik från samma FQDN
 1. Skapa en nätverksinfrastruktur som omfattar programmet för den sekundära regionen genom ett POST-anrop till API:t för att skapa nätverksinfrastruktur i Cloud Manager, vilket beskrivs i avancerad nätverksdokumentation. Den enda skillnaden i nyttolastens JSON-konfiguration i förhållande till den primära regionen är egenskapen region
 1. Om din infrastruktur måste låsas av IP för att tillåta AEM trafik lägger du till IP-adresser som matchar `p1234.external.adobeaemcloud.com`. Det ska finnas en per region.
 
@@ -565,7 +565,7 @@ Proceduren liknar oftast de föregående instruktionerna. Om produktionsmiljön 
 
 1. Skapa nätverksinfrastruktur för alla regioner genom att ringa POSTEN till [Cloud Manager Skapa API för nätverksinfrastruktur](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Network-infrastructure/operation/createNetworkInfrastructure). Den enda skillnaden i nyttolastens JSON-konfiguration i förhållande till den primära regionen är egenskapen region.
 1. Aktivera och konfigurera avancerat nätverk för miljön genom att köra `PUT api/program/{programId}/environment/{environmentId}/advancedNetworking`. Mer information finns i API-dokumentationen [här](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Environment-Advanced-Networking-Configuration/operation/enableEnvironmentAdvancedNetworkingConfiguration)
-1. Om det behövs låser du den externa infrastrukturen, helst av FQDN (t.ex. `p1234.external.adobeaemcloud.com`). Annars kan du göra det via IP-adressen
+1. Vid behov kan du låsa den externa infrastrukturen, helst av FQDN (t.ex. `p1234.external.adobeaemcloud.com`). Annars kan du göra det via IP-adressen
 1. Om staging-miljön fungerar som förväntat aktiverar och konfigurerar du den miljöanpassade avancerade nätverkskonfigurationen för produktion.
 
 #### VPN {#vpn-regions}

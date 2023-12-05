@@ -1,8 +1,8 @@
 ---
-title: Snabbstartsguide till redigering av sidor
+title: Snabbstartsguide till framtagning av sidor
 description: En snabb guide på hög nivå som hjälper dig att komma igång med att skapa sidinnehåll
 exl-id: d37c9b61-7382-4bf6-8b90-59726b871264
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
 source-wordcount: '1541'
 ht-degree: 4%
@@ -10,7 +10,7 @@ ht-degree: 4%
 ---
 
 
-# Snabbstartsguide till redigering av sidor {#quick-guide-to-authoring-pages}
+# Snabbstartsguide till framtagning av sidor {#quick-guide-to-authoring-pages}
 
 Det här dokumentet är avsett som en snabbstartguide på hög nivå för de viktigaste redigeringsåtgärderna för sidor i AEM. Det här dokumentet:
 
@@ -103,7 +103,7 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
 
    * Ange markeringsläge med [välja den resurs som krävs](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources). Hur du gör detta beror på din enhet:
 
-      * På en mobil enhet: tryck och håll på kortet
+      * På en mobil enhet: välj och håll ned kortet
       * På en stationär enhet använder du [snabbåtgärd](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions) som representeras av tickningsikonen:
 
    * Kortet är dolt med en bock som visar att sidan har valts.
@@ -148,7 +148,7 @@ Så här redigerar du sidan:
    * [Redigera innehållet i en befintlig komponent](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) på sidan:
 
       * Öppna komponentverktygsfältet med någon av markeringarna. Använd **Redigera** (penna) för att öppna dialogrutan.
-      * Öppna komponentens direktredigerare genom att trycka och hålla ned eller dubbelklicka. De tillgängliga åtgärderna visas (för vissa komponenter är det ett begränsat urval).
+      * Öppna komponentens in-place-redigerare genom att markera och hålla ned eller dubbelklicka. De tillgängliga åtgärderna visas (för vissa komponenter är det ett begränsat urval).
       * Om du vill visa alla tillgängliga åtgärder går du till helskärmsläge med:
 
         ![Helskärmsknapp](/help/sites-cloud/authoring/assets/full-screen.png)

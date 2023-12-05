@@ -3,9 +3,9 @@ title: Konfigurera OSGi för Adobe Experience Manager as a Cloud Service
 description: OSGi-konfiguration med hemliga värden och miljöspecifika värden
 feature: Deploying
 exl-id: f31bff80-2565-4cd8-8978-d0fd75446e15
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '3317'
+source-wordcount: '3265'
 ht-degree: 0%
 
 ---
@@ -176,7 +176,7 @@ JSON-formaterade OSGi-konfigurationsfiler kan skrivas för hand direkt i AEM. De
 1. Öppna `ui.apps` , leta upp eller skapa konfigurationsmappen (`/apps/.../config.<runmode>`) som är avsedd för de runmodes som den nya OSGi-konfigurationen måste ha
 1. Skapa en `<PID>.cfg.json` -fil. PID är den beständiga identiteten för OSGi-komponenten. Det är vanligtvis det fullständiga klassnamnet för OSGi-komponentimplementeringen. Till exempel:
    `/apps/.../config/com.example.workflow.impl.ApprovalWorkflow.cfg.json`
-Observera att namn på OSGi-konfigurationsfabriksfiler använder `<factoryPID>-<name>.cfg.json` namnkonvention
+I-konfigurationens fabriksfilnamn använder filnamnen `<factoryPID>-<name>.cfg.json` namnkonvention
 1. Öppna den nya `.cfg.json` och definiera nyckel/värde-kombinationerna för OSGi-egenskapen och värdepar enligt följande [Konfigurationsformat för JSON OSGi](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#configuration-files-cfgjson-1).
 1. Spara ändringarna i den nya `.cfg.json` fil
 1. Lägg till och implementera din nya OSGi-konfigurationsfil i Git
@@ -191,14 +191,14 @@ AEM SDK Quickstart Jars AEM Web Console kan användas för att konfigurera OSGi-
 
 1. Logga in på AEM SDK Quickstart Jars AEM Web console på `https://<host>:<port>/system/console` som admin-användare
 1. Navigera till **OSGi** > **Konfiguration**
-1. Om du vill konfigurera letar du reda på OSGi-komponenten och trycker på dess titel för att redigera
+1. Om du vill konfigurera letar du reda på OSGi-komponenten och väljer dess titel att redigera
    ![OSGi-konfiguration](./assets/configuring-osgi/configuration.png)
 1. Redigera OSGi-konfigurationens egenskapsvärden via webbgränssnittet efter behov
 1. Registrera beständig identitet (PID) på en säker plats. Detta används senare för att generera OSGi-konfigurationens JSON
-1. Tryck på Spara
+1. Välj Spara
 1. Navigera till OSGi > OSGi Installer Configuration Printer
 1. Klistra in den PID som kopierats i steg 5, kontrollera att Serialization Format är inställt på OSGi Configurator JSON
-1. Tryck på Skriv ut
+1. Välj Skriv ut
 1. OSGi-konfigurationen i JSON-format visas i avsnittet Serialiserade konfigurationsegenskaper
    ![OSGi Installer Configuration Printer](./assets/configuring-osgi/osgi-installer-configurator-printer.png)
 1. Öppna `ui.apps` , leta upp eller skapa konfigurationsmappen (`/apps/.../config.<runmode>`) som är avsett för de runmodes som den nya OSGi-konfigurationen måste ha.

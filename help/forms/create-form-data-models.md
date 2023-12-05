@@ -5,9 +5,9 @@ feature: Form Data Model
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: b17b7441-912c-44c7-a835-809f014a8c86
-source-git-commit: a942e87a33775851631a1fe123fa3e8d2686bb30
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1446'
 ht-degree: 0%
 
 ---
@@ -37,17 +37,17 @@ ht-degree: 0%
 Kontrollera att du har konfigurerat de datakällor som du vill använda i formulärdatamodellen enligt beskrivningen i [Konfigurera datakällor](configure-data-sources.md). Så här skapar du en formulärdatamodell som baseras på konfigurerade datakällor:
 
 1. I [!DNL Experience Manager] författarinstans, navigera till **[!UICONTROL Forms > Data Integrations]**.
-1. Tryck på **[!UICONTROL Create > Form Data Model]**.
+1. Välj **[!UICONTROL Create > Form Data Model]**.
 1. I dialogrutan Skapa formulärdatamodell:
 
    * Ange ett namn för formulärdatamodellen.
    * (**Valfritt**) Ange rubrik, beskrivning och taggar för formulärdatamodellen.
-   * (**Valfritt och endast tillämpligt om datakällor har konfigurerats**) Tryck på bockikonen bredvid **[!UICONTROL Data Source Configuration]** och välj den konfigurationsnod där molntjänster för de datakällor som du vill använda finns. Den begränsar listan med datakällor som är tillgängliga för val på nästa sida till de som är tillgängliga i den valda konfigurationsnoden. Men om [!DNL Experience Manager] datakällor för användarprofiler listas som standard. Om du inte väljer en konfigurationsnod visas datakällor från alla konfigurationsnoder.
+   * (**Valfritt och endast tillämpligt om datakällor har konfigurerats**) Markera kryssruteikonen bredvid **[!UICONTROL Data Source Configuration]** och välj den konfigurationsnod där molntjänster för de datakällor som du vill använda finns. Den begränsar listan med datakällor som är tillgängliga för val på nästa sida till de som är tillgängliga i den valda konfigurationsnoden. Men om [!DNL Experience Manager] datakällor för användarprofiler listas som standard. Om du inte väljer en konfigurationsnod visas datakällor från alla konfigurationsnoder.
 
-1. Tryck på **[!UICONTROL Next]**.
+1. Välj **[!UICONTROL Next]**.
 
 1. (**Gäller endast om datakällor har konfigurerats**) **[!UICONTROL Select Datasource]** visas tillgängliga datakällor, om det finns några. Välj de datakällor som du vill använda i formulärdatamodellen.
-1. Tryck **[!UICONTROL Create]** och i bekräftelsedialogrutan trycker du på **[!UICONTROL Open]** för att öppna formulärdatamodellredigeraren.
+1. Välj **[!UICONTROL Create]** och i bekräftelsedialogrutan väljer **[!UICONTROL Open]** för att öppna formulärdatamodellredigeraren.
 
    Låt oss granska de olika komponenterna i användargränssnittet för formulärdatamodellsredigeraren.
 
@@ -71,21 +71,21 @@ Mer information om redigeraren för formulärdatamodellen och hur du kan arbeta 
 
 Gör följande för att lägga till eller uppdatera datakällor till en befintlig formulärdatamodell.
 
-1. Gå till **[!UICONTROL Forms > Data Integrations]** väljer du den formulärdatamodell i vilken du vill lägga till eller uppdatera datakällor och trycker **[!UICONTROL Properties]**.
+1. Gå till **[!UICONTROL Forms > Data Integrations]** väljer du den formulärdatamodell i vilken du vill lägga till eller uppdatera datakällor och väljer **[!UICONTROL Properties]**.
 1. Gå till egenskaperna för formulärdatamodellen **[!UICONTROL Update Source]** -fliken.
 
    I **[!UICONTROL Update Source]** tab:
 
-   * Tryck på bläddringsikonen i dialogrutan **[!UICONTROL Context-Aware Configuration]** och välj en konfigurationsnod där molnkonfigurationen för den datakälla som du vill lägga till finns. Om du inte väljer en nod finns molnkonfigurationer endast i `global` visas när du trycker **[!UICONTROL Add Sources]**.
+   * Välj bläddringsikonen i dialogrutan **[!UICONTROL Context-Aware Configuration]** och välj en konfigurationsnod där molnkonfigurationen för den datakälla som du vill lägga till finns. Om du inte väljer en nod finns molnkonfigurationer endast i `global` noden visas när du väljer **[!UICONTROL Add Sources]**.
 
-   * Om du vill lägga till en ny datakälla trycker du **[!UICONTROL Add Sources]** och välj datakällor att lägga till i formulärdatamodellen. Alla datakällor konfigurerade i `global` och den valda konfigurationsnoden (om sådan finns) visas.
+   * Välj om du vill lägga till en ny datakälla **[!UICONTROL Add Sources]** och välj datakällor att lägga till i formulärdatamodellen. Alla datakällor konfigurerade i `global` och den valda konfigurationsnoden (om sådan finns) visas.
 
-   * Om du vill ersätta en befintlig datakälla med en annan datakälla av samma typ trycker du på **[!UICONTROL Edit]** -ikonen för datakällan och välj i listan över tillgängliga datakällor.
-   * Ta bort en befintlig datakälla genom att trycka på **[!UICONTROL Delete]** -ikon för datakällan. Ikonen Ta bort är inaktiverad om ett datamodellsobjekt i datakällan läggs till i formulärdatamodellen.
+   * Om du vill ersätta en befintlig datakälla med en annan datakälla av samma typ väljer du **[!UICONTROL Edit]** -ikonen för datakällan och välj i listan över tillgängliga datakällor.
+   * Om du vill ta bort en befintlig datakälla väljer du **[!UICONTROL Delete]** -ikon för datakällan. Ikonen Ta bort är inaktiverad om ett datamodellsobjekt i datakällan läggs till i formulärdatamodellen.
 
      ![fdm-properties](assets/fdm-properties.png)
 
-1. Tryck **[!UICONTROL Save & Close]** för att spara uppdateringarna.
+1. Välj **[!UICONTROL Save & Close]** för att spara uppdateringarna.
 
 >[!NOTE]
 >
@@ -95,7 +95,7 @@ Gör följande för att lägga till eller uppdatera datakällor till en befintli
 
 [!UICONTROL Form Data Model] använder [Skicka kontextmedvetna konfigurationer](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/context-aware-configs.html) som stöder olika datakällparametrar för att ansluta till datakällor för olika [!DNL Experience Manager] körningslägen.
 
-När [!UICONTROL Form Data Model] använder molnkonfigurationer för att lagra parametrar, som när de checkas in och distribueras via källkontroll (Cloud-Manager GIT-databas) skapar molnkonfiguration med samma parametrar för alla körningslägen (Utveckling, Scen och Produktion). I de fall där det finns behov av olika datauppsättningar för test- och produktionsmiljöer använder vi datakällparametrar (till exempel URL-adress för datakälla) för olika [!DNL Experience Manager] körningslägen.
+När [!UICONTROL Form Data Model] använder molnkonfigurationer för att lagra parametrar, som när de checkas in och distribueras via källkontroll (Cloud-Manager GIT-databas) skapar molnkonfiguration med samma parametrar för alla körningslägen (Utveckling, Scen och Produktion). I de fall där det finns behov av olika datauppsättningar för test- och produktionsmiljöer använder vi datakällparametrar (till exempel datakällans URL) för olika [!DNL Experience Manager] körningslägen.
 
 För att uppnå detta måste du skapa en OSGi-konfiguration som innehåller parametrar för datakällans värde. Detta åsidosätter samma par från [!UICONTROL Form Data Model] molnkonfiguration vid körning. Eftersom OSGi-konfigurationerna stöder dessa körningslägen som standard kan du åsidosätta en datakällparameter till olika värden baserat på körningsläge.
 
@@ -120,7 +120,7 @@ Skapa OSGi Factory Configuration-filer med PID `org.apache.sling.caconfig.impl.o
       1. On local development instance `/system/console/configMgr`väljer du OSGi-fabrikskonfiguration med namnet **[!UICONTROL Apache Sling Context-Aware Configuration Override Provider: OSGi configuration]**.
       1. Ange beskrivning.
       1. Välj **[!UICONTROL enabled]**.
-      1. Under overrides anger du fält som behöver ändras baserat på miljön vid sling override syntax. Mer information finns i [Kontextmedveten konfiguration för Apache Sling - Åsidosätt](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration-override.html#override-syntax). Till exempel, `cloudconfigs/fdm/{configName}/url="newURL"`.
+      1. Under overrides anger du fält som behöver ändras baserat på miljön vid sling override syntax. Mer information finns i [Kontextmedveten konfiguration för Apache Sling - Åsidosätt](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration-override.html#override-syntax). Till exempel: `cloudconfigs/fdm/{configName}/url="newURL"`.
 Du kan lägga till flera åsidosättningar genom att välja **[!UICONTROL +]**.
       1. Välj **[!UICONTROL Save]**.
       1. Så här hämtar du OSGi Configuration JSON: [Generera OSGi-konfigurationer med AEM SDK QuickStart](/help/implementing/deploying/configuring-osgi.md#generating-osgi-configurations-using-the-aem-sdk-quickstart).

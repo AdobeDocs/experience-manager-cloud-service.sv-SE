@@ -5,9 +5,9 @@ feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: 026f4920-f8f9-4b08-b1b0-af50229633d7
-source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '716'
 ht-degree: 0%
 
 ---
@@ -31,14 +31,14 @@ Läs vidare om du vill ha mer information om asynkron överföring i Adaptive Fo
 
 Så här konfigurerar du asynkron överföring för ett adaptivt formulär:
 
-1. I redigeringsläget Adaptivt formulär markerar du objektet Formulärbehållare och trycker på ![cmppr1](assets/configure-icon.svg) för att öppna dess egenskaper.
+1. I redigeringsläget Adaptivt formulär markerar du objektet Formulärbehållare och väljer ![cmppr1](assets/configure-icon.svg) för att öppna dess egenskaper.
 1. I **[!UICONTROL Submission]** egenskapsavsnittet, aktivera **[!UICONTROL Use asynchronous submission]**.
 1. I **[!UICONTROL On Submit]** väljer du något av följande alternativ när formuläret har skickats.
 
    * **[!UICONTROL Redirect to URL]**: Omdirigerar till angiven URL eller sida när formulär skickas. Du kan ange en URL-adress eller bläddra för att välja sökvägen till en sida i dialogrutan **[!UICONTROL Redirect URL/Path]** fält.
    * **[!UICONTROL Show Message]**: Visar ett meddelande när formulär skickas. Du kan skriva ett meddelande i textfältet under **[!UICONTROL Show Message]** alternativ. Textfältet har stöd för RTF-formatering.
 
-1. Tryck ![check-button1](assets/save_icon.svg) för att spara egenskaperna.
+1. Välj ![check-button1](assets/save_icon.svg) för att spara egenskaperna.
 
 ## Hur asynkron inlämning fungerar {#how-asynchronous-submission-works}
 
@@ -108,11 +108,11 @@ Formulärutvecklare och författare kan skriva regler på formulärnivå för at
 
 Utför följande steg för att skriva regler för att hantera lyckade och felade händelser.
 
-1. Öppna det adaptiva formuläret i redigeringsläge, markera ett formulärobjekt och tryck på ![edit-rules1](assets/edit-rules-icon.svg) för att öppna regelredigeraren.
-1. Välj **[!UICONTROL Form]** i trädet Formulärobjekt och tryck på **[!UICONTROL Create]**.
+1. Öppna det adaptiva formuläret i redigeringsläge, markera ett formulärobjekt och välj ![edit-rules1](assets/edit-rules-icon.svg) för att öppna regelredigeraren.
+1. Välj **[!UICONTROL Form]** i trädet Formulärobjekt och välj **[!UICONTROL Create]**.
 1. Välj **[!UICONTROL is submitted successfully]** eller **[!UICONTROL submission fails]** från **[!UICONTROL Select state]** listruta.
 1. Definiera en **[!UICONTROL Then]** åtgärd för det markerade läget. Välj till exempel **[!UICONTROL Navigate To]** och skriv eller klistra in en URL. Du kan också dra valfri funktion med **[!UICONTROL Functions]** till regeln.
 
    ![hanterare för skickad överföring](assets/form-submission-handler.png)
 
-1. Tryck **[!UICONTROL Done]** för att spara regeln.
+1. Välj **[!UICONTROL Done]** för att spara regeln.

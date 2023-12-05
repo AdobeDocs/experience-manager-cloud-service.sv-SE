@@ -4,9 +4,9 @@ description: Integrera ett adaptivt formulär med Microsoft® Power Automate.
 hide: true
 hidefromtoc: true
 exl-id: a059627b-df12-454d-9e2c-cc56986b7de6
-source-git-commit: 397e7d4f23202b8ae7419b0ad5436a6a10e2efb8
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1078'
+source-wordcount: '1063'
 ht-degree: 0%
 
 ---
@@ -78,8 +78,8 @@ Utför följande åtgärder för att ansluta din as a Cloud Service Forms-instan
 ### Skapa Microsoft® Power Automate Dataverse Cloud-konfiguration {#microsoft-power-automate-dataverse-cloud-configuration}
 
 1. I AEM Forms-författarinstansen går du till **[!UICONTROL Tools]** ![hammare](assets/hammer.png) > **[!UICONTROL General]** > **[!UICONTROL Configuration Browser]**.
-1. På **[!UICONTROL Configuration Browser]** sida, tryck **[!UICONTROL Create]**.
-1. I **[!UICONTROL Create Configuration]** dialogruta, ange **[!UICONTROL Title]** för konfigurationen, aktivera **[!UICONTROL Cloud Configurations]** och trycka **[!UICONTROL Create]**. Den skapar en konfigurationsbehållare för lagring av Cloud Service. Kontrollera att mappnamnet inte innehåller något utrymme.
+1. På **[!UICONTROL Configuration Browser]** sida, markera **[!UICONTROL Create]**.
+1. I **[!UICONTROL Create Configuration]** dialogruta, ange **[!UICONTROL Title]** för konfigurationen, aktivera **[!UICONTROL Cloud Configurations]** och markera **[!UICONTROL Create]**. Den skapar en konfigurationsbehållare för lagring av Cloud Service. Kontrollera att mappnamnet inte innehåller något utrymme.
 1. Navigera till **[!UICONTROL Tools]** ![hammare](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Microsoft® Power Automate Dataverse]** och öppna konfigurationsbehållaren som du skapade i föregående steg.
 
 
@@ -87,12 +87,12 @@ Utför följande åtgärder för att ansluta din as a Cloud Service Forms-instan
    >
    När du skapar ett adaptivt formulär anger du behållarnamnet i dialogrutan **[!UICONTROL Configuration Container]** fält.
 
-1. Tryck på på konfigurationssidan **[!UICONTROL Create]** att skapa [!DNL Microsoft®® Power Automate Flow Service] i AEM Forms.
+1. Välj på konfigurationssidan **[!UICONTROL Create]** att skapa [!DNL Microsoft®® Power Automate Flow Service] i AEM Forms.
 1. På **[!UICONTROL Configure Dataverse Service for Microsoft®® Power Automate]** sida, ange **[!UICONTROL Client ID]** (kallas även program-ID), **[!UICONTROL Client Secret]**, **[!UICONTROL OAuth URL]** och **[!UICONTROL Dynamic Environment URL]**. Använd klient-ID, klienthemlighet, OAuth URL och Dynamic Environment-URL för [Microsoft® Azure Active Directory-program](#ms-power-automate-application) som du skapade i föregående avsnitt. Använd alternativet Endpoints i användargränssnittet i Microsoft® Azure Active Directory för att hitta OAuth-URL
 
    ![Använd slutpunktsalternativet i Microsoft Power Automate-användargränssnittet för att hitta OAuth-URL](assets/endpoints.png)
 
-1. Tryck på **[!UICONTROL Connect]** . Logga in på ditt Microsoft® Azure-konto om du blir tillfrågad. Tryck på **[!UICONTROL Save]**.
+1. Välj **[!UICONTROL Connect]** . Logga in på ditt Microsoft® Azure-konto om du blir tillfrågad. Välj **[!UICONTROL Save]**.
 
 ### Skapa Microsoft® Power Automate Flow Service Cloud-konfiguration {#create-microsoft-power-automate-flow-cloud-configuration}
 
@@ -103,15 +103,15 @@ Utför följande åtgärder för att ansluta din as a Cloud Service Forms-instan
    >
    När du skapar ett adaptivt formulär anger du behållarnamnet i dialogrutan **[!UICONTROL Configuration Container]** fält.
 
-1. Tryck på på konfigurationssidan **[!UICONTROL Create]** att skapa [!DNL Microsoft®® Power Automate Flow Service] i AEM Forms.
-1. På **[!UICONTROL Configure Dataverse for Microsoft®® Power Automate]** sida, ange **[!UICONTROL Client ID]** (kallas även program-ID), **[!UICONTROL Client Secret]**, **[!UICONTROL OAuth URL]** och **[!UICONTROL Dynamic Environment URL]**. Använd klient-ID, Klienthemlighet, OAuth URL och Dynamics Environment-ID. Använd alternativet Endpoints i användargränssnittet i Microsoft® Azure Active Directory för att hitta OAuth-URL:en. Öppna [Mina flöden](https://us.flow.microsoft.com) och tryck på Mina flöden använder det ID som anges i URL:en som Dynamics Environment ID.
-1. Tryck på **[!UICONTROL Connect]**. Logga in på ditt Microsoft® Azure-konto om du blir tillfrågad. Tryck på **[!UICONTROL Save]**.
+1. Välj på konfigurationssidan **[!UICONTROL Create]** att skapa [!DNL Microsoft®® Power Automate Flow Service] i AEM Forms.
+1. På **[!UICONTROL Configure Dataverse for Microsoft®® Power Automate]** sida, ange **[!UICONTROL Client ID]** (kallas även program-ID), **[!UICONTROL Client Secret]**, **[!UICONTROL OAuth URL]** och **[!UICONTROL Dynamic Environment URL]**. Använd klient-ID, Klienthemlighet, OAuth URL och Dynamics Environment-ID. Använd alternativet Endpoints i användargränssnittet i Microsoft® Azure Active Directory för att hitta OAuth-URL:en. Öppna [Mina flöden](https://us.flow.microsoft.com) och väljer Mina flöden använder det ID som anges i URL:en som Dynamics Environment ID.
+1. Välj **[!UICONTROL Connect]**. Logga in på ditt Microsoft® Azure-konto om du blir tillfrågad. Välj **[!UICONTROL Save]**.
 
 ### Publicera både Microsoft® Power Automate Dataverse och Microsoft® Power Automate Flow Service Cloud-konfigurationer {#publish-microsoft-power-automate-dataverse-cloud-configuration}
 
 1. Navigera till **[!UICONTROL Tools]** ![hammare](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Microsoft®® Power Automate Dataverse]** och öppna konfigurationsbehållaren som du skapade i föregående [Skapa Microsoft® Power Automate Dataverse Cloud-konfiguration](#microsoft-power-automate-dataverse-cloud-configuration) -avsnitt.
-1. Välj `dataverse` konfiguration och knacka **[!UICONTROL Publish]**.
-1. På sidan Publicera väljer du **[!UICONTROL All Configurations]** och knacka **[!UICONTROL Publish]**. Publicera både Power Automate Dataverse och Power Automate Flow Service Cloud-konfigurationer.
+1. Välj `dataverse` konfigurera och välja **[!UICONTROL Publish]**.
+1. På sidan Publicera väljer du **[!UICONTROL All Configurations]** och markera **[!UICONTROL Publish]**. Publicera både Power Automate Dataverse och Power Automate Flow Service Cloud-konfigurationer.
 
 Forms as a Cloud Service instans är nu ansluten till Microsoft® Power Automate. Nu kan du skicka adaptiva Forms-data till ett Power Automate-flöde.
 
@@ -120,7 +120,7 @@ Forms as a Cloud Service instans är nu ansluten till Microsoft® Power Automate
 Efter dig [Koppla samman din as a Cloud Service Forms-instans med Microsoft® Power Automate](#connect-forms-server-with-power-automate)utför du följande åtgärd för att konfigurera ditt adaptiva formulär så att inhämtade data skickas till ett Microsoft®-flöde när formulär skickas.
 
 1. Logga in på din Author-instans, välj ditt adaptiva formulär och klicka på **[!UICONTROL Properties]**.
-1. I konfigurationsbehållaren bläddrar du till och väljer den behållare som har skapats i avsnittet [Skapa Microsoft® Power Automate Dataverse Cloud-konfiguration](#microsoft-power-automate-dataverse-cloud-configuration)och trycka **[!UICONTROL Save and Close]**.
+1. I konfigurationsbehållaren bläddrar du till och väljer den behållare som har skapats i avsnittet [Skapa Microsoft® Power Automate Dataverse Cloud-konfiguration](#microsoft-power-automate-dataverse-cloud-configuration)och markera **[!UICONTROL Save and Close]**.
 1. Öppna det adaptiva formuläret för redigering och navigera till **[!UICONTROL Submission]** i egenskaperna för den adaptiva formulärbehållaren.
 1. I egenskapsbehållaren, för **[!UICONTROL Submit Actions]** välj **[!UICONTROL Invoke a Power Automate flow]** och välja **[!UICONTROL Power Automate flow]**. Välj önskat flöde och adaptiva Forms-data skickas till det när de skickas.
 

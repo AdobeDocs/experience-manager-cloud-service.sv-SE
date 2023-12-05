@@ -5,9 +5,9 @@ feature: Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb7b41f0-fd4f-4ba6-9f45-792a66ba6368
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '911'
 ht-degree: 1%
 
 ---
@@ -122,11 +122,11 @@ En OData-tjänst identifieras av tjänstens rot-URL. Konfigurera en OData-tjäns
 >
 >Stegvisa anvisningar för konfiguration [!DNL Microsoft Dynamics 365], online eller lokalt, se [[!DNL Microsoft Dynamics] OData-konfiguration](ms-dynamics-odata-configuration.md).
 
-1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Tryck för att välja den mapp där du vill skapa en molnkonfiguration.
+1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Välj den mapp där du vill skapa en molnkonfiguration.
 
    Se [Konfigurera mapp för molntjänstkonfigurationer](#cloud-folder) för information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
 
-1. Tryck **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL OData Service]** från **[!UICONTROL Service Type]** nedrullningsbar meny, där du kan bläddra och välja en miniatyrbild för konfigurationen, och trycka på **[!UICONTROL Next]**.
+1. Välj **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL OData Service]** från **[!UICONTROL Service Type]** nedrullningsbar meny där du kan bläddra och välja en miniatyrbild för konfigurationen och välja **[!UICONTROL Next]**.
 I **[!UICONTROL Authentication Settings]** tab:
 
    1. Ange värdet för **[!UICONTROL Service Root]** fält. Gå till Dynamics-instansen och navigera till **[!UICONTROL Developer Resources]** om du vill visa värdet för fältet Tjänstrot. Till exempel https://&lt;tenant-name>/api/data/v9.1/

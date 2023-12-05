@@ -2,9 +2,9 @@
 title: Få åtkomst till ditt innehåll via AEM-API:er
 description: I den här delen av AEM Headless Developer Journey kan du lära dig hur du använder GraphQL-frågor för att komma åt ditt innehåll i Content Fragments.
 exl-id: 1adecc69-5f92-4007-8a2a-65bf1e960645
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1335'
 ht-degree: 0%
 
 ---
@@ -242,7 +242,7 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 Innan du börjar med frågor om ditt innehåll måste du:
 
 * Aktivera slutpunkten
-   * Använd verktyg -> Allmänt -> GraphQL
+   * Använd Verktyg > Allmänt > GraphQL
    * [Aktivera din GraphQL-slutpunkt](/help/headless/graphql-api/graphql-endpoint.md)
       * Detta aktiverar även GraphiQL IDE.
 
@@ -269,7 +269,7 @@ Fragmentmodellerna används:
 
 Frågorna kan anges i GraphiQL-gränssnittet. Du kan öppna frågeredigeraren från:
 
-* **verktyg** -> **Allmänt** -> **GraphQL Query Editor**
+* **verktyg** > **Allmänt** > **GraphQL Query Editor**
 * direkt, till exempel `http://localhost:4502/aem/graphiql.html`
 
 ![GraphiQL-gränssnitt](assets/graphiql-interface.png "GraphiQL-gränssnitt")

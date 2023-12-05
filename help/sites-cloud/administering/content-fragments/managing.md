@@ -4,9 +4,9 @@ description: Lär dig hur du hanterar AEM innehållsfragment från konsolen och 
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
-source-git-commit: 3f934add7521586caf728c4bfa37f2d1a82b144a
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2622'
+source-wordcount: '2617'
 ht-degree: 0%
 
 ---
@@ -222,10 +222,10 @@ Så här skapar du ett innehållsfragment:
 
 1. The **Nytt innehållsfragment** öppnas dialogrutan där du kan ange:
 
-   * **Plats** - detta fylls i automatiskt med den aktuella platsen, men du kan välja en annan plats om det behövs
-   * **Content Fragment Model** - välj den modell som ska användas som bas för fragmentet i listrutan.
+   * **Plats** - Kompletteras automatiskt med den aktuella platsen, men du kan välja en annan plats om det behövs.
+   * **Content Fragment Model** - Välj den modell som ska användas som bas för fragmentet i listrutan.
    * **Titel**
-   * **Namn** - detta slutförs automatiskt baserat på **Titel**, men du kan redigera det om det behövs
+   * **Namn** - Kompletteras automatiskt baserat på **Titel**, men du kan redigera den om det behövs.
    * **Beskrivning**
 
    ![Dialogrutan Nytt innehållsfragment](assets/cf-managing-new-cf-dialog.png)

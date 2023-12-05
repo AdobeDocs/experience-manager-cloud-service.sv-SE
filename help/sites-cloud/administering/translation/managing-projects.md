@@ -4,9 +4,9 @@ description: Lär dig hur du skapar och hanterar både maskinöversättning och 
 feature: Language Copy
 role: Admin
 exl-id: dc2f3958-72b5-4ae3-a224-93d8b258bc80
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '3971'
+source-wordcount: '3960'
 ht-degree: 0%
 
 ---
@@ -471,7 +471,7 @@ Du kan hämta innehållet i ett översättningsjobb, till exempel för att skick
 
 ### Importera ett översättningsjobb {#importing-a-translation-job}
 
-Du kan importera översatt innehåll till AEM, till exempel när översättningsleverantören skickar det till dig eftersom de inte är integrerade med AEM via en koppling.
+Du kan importera översatt innehåll till AEM när översättningsleverantören skickar det till dig eftersom det inte är integrerat med AEM via en koppling.
 
 1. I översättningsjobbpanelens nedrullningsbara meny väljer du **Importera**.
 1. Använd webbläsarens dialogruta för att markera filen som ska importeras.

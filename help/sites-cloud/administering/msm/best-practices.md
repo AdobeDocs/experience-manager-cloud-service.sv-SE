@@ -4,9 +4,9 @@ description: Lär dig de bästa arbetssätten som skapats av tekniker och konsul
 feature: Multi Site Manager
 role: Admin
 exl-id: 61b8ded8-3b9e-423f-85a9-7280e1a721cc
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1413'
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ Tänk på följande när du funderar på att flytta sidor i en Live-kopia.
 
 ## Anpassa utrullningar {#customizing-rollouts}
 
-MSM-utrullningskonfigurationer är mycket anpassningsbara. Du bör vara medveten om att automatisering av utrullningar kan få omfattande konsekvenser. Som en god vana bör du planera mycket noggrant innan du deltar i följande aktiviteter:
+MSM-utrullningskonfigurationer är mycket anpassningsbara. Automatisering av utrullningar kan få stora konsekvenser. Som en god vana bör du planera mycket noggrant innan du deltar i följande aktiviteter:
 
 * Automatisera utrullningar som med [onModify-utlösare](#onmodify)
 * Anpassa [nodtyper/egenskaper](#node-types-properties)

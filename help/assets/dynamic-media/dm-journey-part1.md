@@ -11,9 +11,9 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: f3472006-d5ae-4f70-af3e-44e73aee85cc
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '3703'
+source-wordcount: '3682'
 ht-degree: 0%
 
 ---
@@ -182,7 +182,7 @@ Ett annat användningsfall som Dynamic Media löser är video. Video är komplex
 
 Kunder kommer till Dynamic Media med följande problem som de hoppas kunna lösa:
 
-&quot;_Vi har videon och spenderade mycket pengar på att skapa den. Men vi slipper lägga ut den på webbsidor eller leverera den eftersom vi inte kan garantera kvaliteten på videon, eller om den verkligen kommer att spelas upp. Och i slutändan påverkar det våra varumärken och kanske vår roll till och med konverteringsgraden._&quot;
+&quot;_Mitt företag har videon, och vår avdelning spenderade mycket pengar på att skapa den, men slet bort från att placera den på sidor eller leverera den. Anledningen var att videons kvalitet inte kunde garanteras av våra tester, eller ens om den faktiskt skulle spelas upp. Och i slutändan påverkar det våra varumärken och kanske vår roll till och med konverteringsgraden._&quot;
 
 Dynamic Media lösning är att ta den här primära videofilen och låta Dynamic Media göra alla storlekar genom sin transkodningsprocess. Koppla sedan ihop det med Dynamic Media intelligenta videospelare. Detta arbetsflöde garanterar att videon, oavsett om du använder den på landningssidan eller på en kategori- eller produktinformationssida, är konsekvent hela tiden och levereras med hög kvalitet.
 
@@ -272,7 +272,7 @@ _Hjälpavsnitt för Dynamic Media_
 * [Arbeta med Dynamic Media i Experience Manager](/help/assets/dynamic-media/dynamic-media.md)
 * [Om Smart Imaging](/help/assets/dynamic-media/imaging-faq.md)
 * [Skapa adaptiva videouppsättningar](/help/assets/dynamic-media/video.md)
-* [Bästa tillvägagångssätt för att optimera bildkvalitet](/help/assets/dynamic-media/best-practices-for-optimizing-the-quality-of-your-images.md)
+* [Bästa tillvägagångssätt för att optimera bildkvaliteten](/help/assets/dynamic-media/best-practices-for-optimizing-the-quality-of-your-images.md)
 * [Så här överför du resurser](/help/assets/add-assets.md#upload-assets)
 * [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md)
 * [Förhandsgranska 3D-resurser](/help/assets/dynamic-media/previewing-3d-assets.md)

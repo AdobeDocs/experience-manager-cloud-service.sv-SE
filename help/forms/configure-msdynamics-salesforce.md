@@ -2,9 +2,9 @@
 title: Hur konfigurerar jag Microsoft Dynamics 365 och Salesforce från kartongdatamodeller för Adaptiv Forms?
 description: Lär dig hur du integrerar Microsoft Dynamics 365 och Salesforce med Adaptiv Forms.
 exl-id: 2a43b2db-2dfb-4c79-88be-ea770b44dac1
-source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '883'
 ht-degree: 1%
 
 ---
@@ -48,20 +48,20 @@ Innan du konfigurerar [!DNL Salesforce] molntjänster, se till att du utför fö
 Utför följande steg för att konfigurera [!DNL Salesforce] molntjänst:
 
 1. På [!DNL AEM Forms] författarinstans, navigera till **[!UICONTROL Tools]** ![hammare](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Data Sources]**. I listan över tillgängliga omslutningsmappar finns en mapp med den rubrik som har angetts för `DappTitle`  while [generera AEM arkivtypprojekt](setup-local-development-environment.md#forms-cloud-service-local-development-environment).
-1. Tryck på mappnamnet och välj **[!UICONTROL Salesforce Cloud Config]** och trycka **[!UICONTROL Properties]**.
+1. Markera mappnamnet och välj **[!UICONTROL Salesforce Cloud Config]** och markera **[!UICONTROL Properties]**.
 1. I **[!UICONTROL Authentication Settings]** tab:
    1. Ange [!DNL Salesforce] Domänens URL i **[!UICONTROL Host]** fält. Till exempel: [Domännamn].my.salesforce.com.
    1. Ange klient-ID (kallas konsumentnyckel) och klienthemlighet (kallas konsumenthemlighet) för det anslutna programmet.
    1. Ange **full offline_access** (`full` och `offine_access` värden avgränsade med blanksteg) i **[!UICONTROL Authorization Scope]** fält.
-   1. Tryck på **[!UICONTROL Connect to OAuth]**. Du omdirigeras till [!DNL Microsoft® Dynamics] inloggningssida.
+   1. Välj **[!UICONTROL Connect to OAuth]**. Du omdirigeras till [!DNL Microsoft® Dynamics] inloggningssida.
    1. Logga in med [!DNL Salesforce] autentiseringsuppgifter och acceptera för att tillåta molntjänstkonfigurationen att ansluta till [!DNL Salesforce] service. Om anslutningen lyckas omdirigeras du till [!DNL Salesforce] konfigurationssida för molntjänster, som visar ett meddelande om att molntjänsten lyckades.
-1. Tryck **[!UICONTROL Save & Close]** för att slutföra konfigurationsinställningen.
+1. Välj **[!UICONTROL Save & Close]** för att slutföra konfigurationsinställningen.
 
 ### Åtkomst direkt [!DNL Salesforce] Formulärdatamodell
 
 A [!DNL Salesforce] Formulärdatamodellen är tillgänglig direkt i dialogrutan [!DNL AEM Forms] Server efter [skapa ett utvecklingsprojekt för Forms baserat på Experience Manager-arkitypen](setup-local-development-environment.md#forms-cloud-service-local-development-environment).
 
-Om du vill komma åt formulärdatamodellen går du till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**. Listan med tillgängliga mappar innehåller en mapp med den titel som angetts för `DappTitle`  while [generera AEM arkivtypprojekt](setup-local-development-environment.md#forms-cloud-service-local-development-environment). Tryck på mappnamnet och välj **[!UICONTROL Salesforce Data Model]** och tryck på Redigera ![Redigera](assets/edit.png) om du vill visa formulärdatamodellen.
+Om du vill komma åt formulärdatamodellen går du till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**. Listan med tillgängliga mappar innehåller en mapp med den titel som angetts för `DappTitle`  while [generera AEM arkivtypprojekt](setup-local-development-environment.md#forms-cloud-service-local-development-environment). Markera mappnamnet och välj **[!UICONTROL Salesforce Data Model]** och väljer Redigera ![Redigera](assets/edit.png) om du vill visa formulärdatamodellen.
 
 När du har konfigurerat [[!DNL Salesforce] Konfigurationstjänst för molnet](#configure-salesforce-cloud-service)kan du integrera adaptiva formulär direkt [!DNL Salesforce] Datamodell.
 
@@ -82,22 +82,22 @@ Innan du konfigurerar [!DNL Microsoft® Dynamics 365] molntjänst, se till att d
 Utför följande steg för att konfigurera [!DNL Microsoft® Dynamics 365] molntjänst:
 
 1. På [!DNL AEM Forms] författarinstans, navigera till **[!UICONTROL Tools]** ![hammare](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Data Sources]**. I listan över tillgängliga omslutningsmappar finns en mapp med den rubrik som har angetts för `DappTitle`  while [generera AEM arkivtypprojekt](setup-local-development-environment.md#forms-cloud-service-local-development-environment).
-1. Tryck på mappnamnet och välj **[!UICONTROL Microsoft® Dynamics 365 Cloud Config]** och trycka **[!UICONTROL Properties]**.
+1. Markera mappnamnet och välj **[!UICONTROL Microsoft® Dynamics 365 Cloud Config]** och markera **[!UICONTROL Properties]**.
 1. I **[!UICONTROL Authentication Settings]** tab:
-   1. Ange värdet för **[!UICONTROL Service Root]** fält. Gå till Dynamics-instansen och navigera till [Resurser för utvecklare](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/view-download-developer-resources) om du vill visa värdet för fältet Tjänstrot. Till exempel, `https://<tenant-name>.dynamics.com/api/data/v9.1/`
+   1. Ange värdet för **[!UICONTROL Service Root]** fält. Gå till Dynamics-instansen och navigera till [Resurser för utvecklare](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/view-download-developer-resources) om du vill visa värdet för fältet Tjänstrot. Exempel: `https://<tenant-name>.dynamics.com/api/data/v9.1/`
    1. Ange klient-ID (kallas program-ID) och klienthemlighet för det anslutna programmet.
    1. Ersätt `{tenant}` med ett klient-ID i **[!UICONTROL OAuth URL]**, **[!UICONTROL Refresh Token URL]** och **[!UICONTROL Access Token URL]** fält.
-   1. Ange URL för dynamicinstansen i **[!UICONTROL Resource]** fält att konfigurera [!UICONTROL Microsoft® Dynamics] med en formulärdatamodell. Använd tjänstens rot-URL för att härleda Dynamics-instansens URL. Till exempel, `https://<tenant-name>.dynamics.com`.
+   1. Ange URL för dynamicinstansen i **[!UICONTROL Resource]** fält att konfigurera [!UICONTROL Microsoft® Dynamics] med en formulärdatamodell. Använd tjänstens rot-URL för att härleda Dynamics-instansens URL. Till exempel: `https://<tenant-name>.dynamics.com`.
 
    1. Ange `openid` i **[!UICONTROL Authorization Scope]** fält för auktoriseringsprocess på [!DNL Microsoft® Dynamics 365].
    1. Logga in med [!DNL Microsoft® Dynamics 365] autentiseringsuppgifter och acceptera för att tillåta molntjänstkonfigurationen att ansluta till [!DNL Microsoft® Dynamics 365] service. Om anslutningen lyckas omdirigeras du till [!DNL Microsoft® Dynamics 365] konfigurationssida för molntjänster, som visar ett meddelande om att molntjänsten lyckades.
-1. Tryck **[!UICONTROL Save & Close]** för att slutföra konfigurationsinställningen.
+1. Välj **[!UICONTROL Save & Close]** för att slutföra konfigurationsinställningen.
 
 ### Åtkomst direkt [!DNL Microsoft® Dynamics 365] Formulärdatamodell
 
 A [!DNL Microsoft® Dynamics 365] Formulärdatamodellen är tillgänglig direkt i dialogrutan [!DNL AEM Forms] Server efter [skapa ett utvecklingsprojekt för Forms baserat på Experience Manager-arkitypen](setup-local-development-environment.md##forms-cloud-service-local-development-environment).
 
-Om du vill komma åt formulärdatamodellen går du till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**. Listan med tillgängliga mappar innehåller en mapp med den titel som angetts för `DappTitle`  while [generera AEM arkivtypprojekt](setup-local-development-environment.md#forms-cloud-service-local-development-environment). Tryck på mappnamnet och välj **[!UICONTROL Microsoft® Dynamics 365 Data Model]** och tryck på Redigera ![Redigera](assets/edit.png) om du vill visa formulärdatamodellen.
+Om du vill komma åt formulärdatamodellen går du till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**. Listan med tillgängliga mappar innehåller en mapp med den titel som angetts för `DappTitle`  while [generera AEM arkivtypprojekt](setup-local-development-environment.md#forms-cloud-service-local-development-environment). Markera mappnamnet och välj **[!UICONTROL Microsoft® Dynamics 365 Data Model]** och väljer Redigera ![Redigera](assets/edit.png) om du vill visa formulärdatamodellen.
 
 När du har konfigurerat [[!DNL Microsoft® Dynamics 365] Konfigurationstjänst för molnet](#configure-dynamics-cloud-service)kan du integrera adaptiva formulär direkt [!DNL Microsoft® Dynamics 365] Datamodell.
 

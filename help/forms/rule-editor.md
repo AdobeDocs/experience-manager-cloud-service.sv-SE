@@ -5,9 +5,9 @@ feature: Adaptive Forms
 role: User
 level: Beginner, Intermediate
 exl-id: 6fd38e9e-435e-415f-83f6-3be177738c00
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '6240'
+source-wordcount: '6257'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Regelredigerarfunktionen ger formuläranvändare och utvecklare möjlighet att skriva regler på adaptiva formulärobjekt. Dessa regler definierar åtgärder som ska utlösas av formulärobjekt baserat på förinställda villkor, användarindata och användaråtgärder i formuläret. Det effektiviserar formulärifyllningen ytterligare och ger större precision och snabbhet.
 
@@ -41,7 +41,7 @@ Användare som läggs till i användargruppen för formulär kan skapa skript oc
 
 ## Förstå en regel {#understanding-a-rule}
 
-En regel är en kombination av åtgärder och villkor. I regelredigeraren omfattar åtgärderna aktiviteter som att dölja, visa, aktivera, inaktivera eller beräkna värdet för ett objekt i ett formulär. Villkor är booleska uttryck som utvärderas genom att kontroller och åtgärder utförs på ett formulärobjekts status, värde eller egenskap. Åtgärder utförs baserat på värdet ( `True` eller `False`) returneras genom att ett villkor utvärderas.
+En regel är en kombination av åtgärder och villkor. I regelredigeraren omfattar åtgärderna aktiviteter som att dölja, visa, aktivera, inaktivera eller beräkna värdet för ett objekt i ett formulär. Villkor är booleska uttryck som utvärderas genom att kontroller och åtgärder utförs på ett formulärobjekts status, värde eller egenskap. Åtgärder utförs baserat på värdet ( `True` eller `False`) som returneras genom att utvärdera ett villkor.
 
 Regelredigeraren innehåller en uppsättning fördefinierade regeltyper, till exempel När, Visa, Dölj, Aktivera, Inaktivera, Ange värde för och Validera, som hjälper dig att skriva regler. Med varje regeltyp kan du definiera villkor och åtgärder i en regel. I dokumentet förklaras dessutom varje regeltyp i detalj.
 
@@ -53,7 +53,7 @@ I regelredigeraren **När** regeltypen framtvingar konstruktorn för villkorsåt
 
 **Action-Condition** I den här konstruktionen definierar en regel först en åtgärd som ska utlösas följt av villkor för utvärdering. En annan variant av den här konstruktionen är action-condition-alternate action, som också definierar en alternativ åtgärd som ska utlösas om villkoret returnerar False.
 
-Regeltyperna Visa, Dölj, Aktivera, Inaktivera, Ange värde för och Validera i regelredigeraren framtvingar regelkonstruktionen för åtgärdsvillkor. Som standard är den alternativa åtgärden för Visa är Dölj och för Aktivera är Inaktivera, och tvärtom. Du kan inte ändra den alternativa standardåtgärden.
+Regeltyperna Visa, Dölj, Aktivera, Inaktivera, Ange värde för och Validera i regelredigeraren framtvingar regelkonstruktionen för åtgärdsvillkor. Som standard är den alternativa åtgärden för Visa Dölj och Aktivera Inaktivera, och tvärtom. Du kan inte ändra den alternativa standardåtgärden.
 
 >[!NOTE]
 >
@@ -328,13 +328,13 @@ Regelredigeraren har ett omfattande men ändå enkelt användargränssnitt för 
 Så här startar du användargränssnittet för regelredigeraren:
 
 1. Öppna ett adaptivt formulär i redigeringsläge.
-1. Tryck på det formulärobjekt som du vill skriva en regel för och tryck i komponentverktygsfältet ![edit-rules](assets/edit-rules-icon.svg). Användargränssnittet för regelredigeraren visas.
+1. Markera det formulärobjekt som du vill skriva en regel för och välj Komponentverktygsfältet ![edit-rules](assets/edit-rules-icon.svg). Användargränssnittet för regelredigeraren visas.
 
    ![create-rules](assets/create-rules.png)
 
    Alla befintliga regler för de markerade formulärobjekten visas i den här vyn. Mer information om hur du hanterar befintliga regler finns i [Hantera regler](rule-editor.md#p-manage-rules-p).
 
-1. Tryck **[!UICONTROL Create]** för att skriva en ny regel. Den visuella redigeraren för regelredigerarens användargränssnitt öppnas som standard när du startar regelredigeraren första gången.
+1. Välj **[!UICONTROL Create]** för att skriva en ny regel. Den visuella redigeraren för regelredigerarens användargränssnitt öppnas som standard när du startar regelredigeraren första gången.
 
    ![Regelredigeringsgränssnitt](assets/rule-editor-ui.png)
 
@@ -360,7 +360,7 @@ Fliken Funktioner innehåller en uppsättning inbyggda funktioner, till exempel 
 >
 >Du kan utföra textsökning på objekt och funktionsnamn och titlar på flikarna Forms Objekt och Funktioner.
 
-I det vänstra trädet för formulärobjekten kan du trycka på formulärobjekten för att visa reglerna som tillämpas på vart och ett av objekten. Du kan inte bara navigera bland reglerna för de olika formulärobjekten, du kan även kopiera och klistra in regler mellan formulärobjekten. Mer information finns i [Kopiera och klistra in regler](rule-editor.md#p-copy-paste-rules-p).
+I det vänstra trädet för formulärobjekten kan du markera de formulärobjekt som ska visa de regler som tillämpas på vart och ett av objekten. Du kan inte bara navigera bland reglerna för de olika formulärobjekten, du kan även kopiera och klistra in regler mellan formulärobjekten. Mer information finns i [Kopiera och klistra in regler](rule-editor.md#p-copy-paste-rules-p).
 
 ### C. Växla mellan formulärobjekt och funktioner {#c-form-objects-and-functions-toggle-br}
 
@@ -412,15 +412,15 @@ Så här skriver du regler:
 
 1. Först skriver du regeln för att styra synligheten för fältet för makslön baserat på det alternativ som användaren väljer för alternativknappen för civilstånd.
 
-   Öppna låneansökningsformuläret i redigeringsläge. Tryck på **[!UICONTROL Marital Status]** och knacka ![edit-rules](assets/edit-rules-icon.svg). Tryck sedan på **[!UICONTROL Create]** för att starta regelredigeraren.
+   Öppna låneansökningsformuläret i redigeringsläge. Välj **[!UICONTROL Marital Status]** -komponent och markera ![edit-rules](assets/edit-rules-icon.svg). Nästa, välj **[!UICONTROL Create]** för att starta regelredigeraren.
 
    ![write-rules-visual-editor-1](assets/write-rules-visual-editor-1.png)
 
    När du startar regelredigeraren markeras regeln När som standard. Dessutom anges formulärobjektet (i det här fallet Marital status) från vilket du startade regelredigeraren i programsatsen When.
 
-   Du kan inte ändra eller ändra det markerade objektet, men du kan välja en annan regeltyp med hjälp av den nedrullningsbara menyn. Om du vill skapa en regel för ett annat objekt trycker du på Avbryt för att avsluta regelredigeraren och starta den igen från det önskade formulärobjektet.
+   Du kan inte ändra eller ändra det markerade objektet, men du kan välja en annan regeltyp med hjälp av den nedrullningsbara menyn. Om du vill skapa en regel för ett annat objekt väljer du Avbryt om du vill avsluta regelredigeraren och starta den igen från det önskade formulärobjektet.
 
-1. Tryck **[!UICONTROL Select State]** nedrullningsbar meny och välj **[!UICONTROL is equal to]**. The **[!UICONTROL Enter a String]** visas.
+1. Välj **[!UICONTROL Select State]** nedrullningsbar meny och välj **[!UICONTROL is equal to]**. The **[!UICONTROL Enter a String]** visas.
 
    ![write-rules-visual-editor-2](assets/write-rules-visual-editor-2.png)
 
@@ -438,7 +438,7 @@ Så här skriver du regler:
 
    ![write-rules-visual-editor-5](assets/write-rules-visual-editor-5.png)
 
-1. Dra och släpp **[!UICONTROL Spouse Salary]** från fliken Formulärobjekt på fliken **[!UICONTROL Drop object or select here]** fält. Du kan också trycka på **[!UICONTROL Drop object or select here]** och välj **[!UICONTROL Spouse Salary]** på popup-menyn som visar alla formulärobjekt i formuläret.
+1. Dra och släpp **[!UICONTROL Spouse Salary]** från fliken Formulärobjekt på fliken **[!UICONTROL Drop object or select here]** fält. Du kan även välja **[!UICONTROL Drop object or select here]** och välj **[!UICONTROL Spouse Salary]** på popup-menyn som visar alla formulärobjekt i formuläret.
 
    ![write-rules-visual-editor-6](assets/write-rules-visual-editor-6.png)
 
@@ -446,7 +446,7 @@ Så här skriver du regler:
 
    ![write-rules-visual-editor-7](assets/write-rules-visual-editor-7.png)
 
-1. Tryck **[!UICONTROL Done]** för att spara regeln.
+1. Välj **[!UICONTROL Done]** för att spara regeln.
 
 1. Upprepa steg 1 till 5 om du vill definiera en annan regel som döljer fältet för makens lön om äktenskapsstatus är Enskild. Regeln visas så här i regelredigeraren.
 
@@ -460,13 +460,13 @@ Så här skriver du regler:
 
 1. Skriv sedan en regel för att beräkna lånebeloppet, som är 50 % av den totala lönen, och visa det i fältet Låneberättigande. För att uppnå detta skapar du **[!UICONTROL Set value Of]** regler för fältet Lånekvalificering.
 
-   I redigeringsläget trycker du på **[!UICONTROL Loan Eligibility]** fält och knacka ![edit-rules](assets/edit-rules-icon.svg). Tryck sedan på **[!UICONTROL Create]** för att starta regelredigeraren.
+   I redigeringsläget väljer du **[!UICONTROL Loan Eligibility]** fält och markera ![edit-rules](assets/edit-rules-icon.svg). Nästa, välj **[!UICONTROL Create]** för att starta regelredigeraren.
 
 1. Välj **[!UICONTROL Set Value Of]** regel från listrutan Regel.
 
    ![write-rules-visual-editor-10](assets/write-rules-visual-editor-10.png)
 
-1. Tryck **[!UICONTROL Select Option]** och markera **[!UICONTROL Mathematical Expression]**. Ett fält som skriver matematiskt uttryck öppnas.
+1. Välj **[!UICONTROL Select Option]** och markera **[!UICONTROL Mathematical Expression]**. Ett fält som skriver matematiskt uttryck öppnas.
 
    ![write-rules-visual-editor-11](assets/write-rules-visual-editor-11.png)
 
@@ -480,7 +480,7 @@ Så här skriver du regler:
 
    ![write-rules-visual-editor-12](assets/write-rules-visual-editor-12.png)
 
-1. Tryck sedan på det markerade området runt uttrycksfältet och tryck **[!UICONTROL Extend Expression]**.
+1. Välj sedan i det markerade området runt uttrycksfältet och välj **[!UICONTROL Extend Expression]**.
 
    ![write-rules-visual-editor-13](assets/write-rules-visual-editor-13.png)
 
@@ -494,7 +494,7 @@ Så här skriver du regler:
 
    Skapa sedan ett villkor som körs när true returneras.
 
-1. Tryck **[!UICONTROL Add Condition]** om du vill lägga till en When-programsats.
+1. Välj **[!UICONTROL Add Condition]** om du vill lägga till en When-programsats.
 
    ![write-rules-visual-editor-15](assets/write-rules-visual-editor-15.png)
 
@@ -508,7 +508,7 @@ Så här skriver du regler:
 
    Regeln visas slutligen så här i regelredigeraren.  ![write-rules-visual-editor-16](assets/write-rules-visual-editor-16.png)
 
-1. Tryck på **[!UICONTROL Done]**. Den sparar regeln.
+1. Välj **[!UICONTROL Done]**. Den sparar regeln.
 
 1. Upprepa steg 7 till 14 för att definiera en annan regel som beräknar låneberättigandet om civilstånd är enkel. Regeln visas så här i regelredigeraren.
 
@@ -640,18 +640,18 @@ Så här skapar du ett klientbibliotek och lägger till det i CRX-databasen:
 När du har lagt till ditt klientbibliotek i CRX-databasen kan du använda det i ditt adaptiva formulär. Du kan använda den anpassade funktionen som en regel i formuläret. Så här lägger du till klientbiblioteket i ditt adaptiva formulär:
 
 1. Öppna formuläret i redigeringsläge.
-Om du vill öppna ett formulär i redigeringsläge markerar du ett formulär och trycker på **[!UICONTROL Open]**.
-1. Markera en komponent i redigeringsläget och tryck sedan på ![fältnivå](assets/select_parent_icon.svg) > **[!UICONTROL Adaptive Form Container]** och sedan trycka ![cmppr](assets/configure-icon.svg).
+Om du vill öppna ett formulär i redigeringsläge markerar du ett formulär och väljer **[!UICONTROL Open]**.
+1. Markera en komponent i redigeringsläget och välj sedan ![fältnivå](assets/select_parent_icon.svg) > **[!UICONTROL Adaptive Form Container]** och sedan markera ![cmppr](assets/configure-icon.svg).
 1. Lägg till ditt klientbibliotek i sidofältet under Klientbibliotekets namn. ( `customfunction` i exemplet.)
 
    ![Lägga till klientbiblioteket för anpassade funktioner](assets/clientlib.png)
 
-1. Markera den numeriska rutan och tryck på ![edit-rules](assets/edit-rules-icon.svg) för att öppna regelredigeraren.
-1. Tryck på **[!UICONTROL Create Rule]**. Använd alternativen som visas nedan för att skapa en regel som sparar indatavärdet i fyrkantiga värden i formulärutdatafältet.
+1. Markera den numeriska rutan och välj ![edit-rules](assets/edit-rules-icon.svg) för att öppna regelredigeraren.
+1. Välj **[!UICONTROL Create Rule]**. Använd alternativen som visas nedan för att skapa en regel som sparar indatavärdet i fyrkantiga värden i formulärutdatafältet.
 
    [![Skapa en regel med anpassade funktioner](assets/add_custom_rule_new.png)](assets/add-custom-rule.png)
 
-1. Tryck på **[!UICONTROL Done]**. Din anpassade funktion har lagts till.
+1. Välj **[!UICONTROL Done]**. Din anpassade funktion har lagts till.
 
    >[!NOTE]
    >
@@ -722,22 +722,22 @@ var c = {
 
 ## Hantera regler {#manage-rules}
 
-Alla befintliga regler för ett formulärobjekt visas när du trycker på objektet och trycker på ![edit-rules1](assets/edit-rules-icon.svg). Du kan visa titeln och förhandsgranska regelsammanfattningen. I användargränssnittet kan du dessutom expandera och visa hela regelsammanfattningen, ändra ordningen på regler, redigera regler och ta bort regler.
+Alla befintliga regler för ett formulärobjekt visas när du markerar objektet och väljer ![edit-rules1](assets/edit-rules-icon.svg). Du kan visa titeln och förhandsgranska regelsammanfattningen. I användargränssnittet kan du dessutom expandera och visa hela regelsammanfattningen, ändra ordningen på regler, redigera regler och ta bort regler.
 
 ![List-rules](assets/list-rules.png)
 
 Du kan utföra följande åtgärder på regler:
 
-* **Expandera/komprimera**: Innehållskolumnen i regellistan visar regelinnehållet. Om hela regelinnehållet inte visas i standardvyn trycker du på ![expand-rule-content](assets/Smock_ChevronDown.svg) för att utöka den.
+* **Expandera/komprimera**: Innehållskolumnen i regellistan visar regelinnehållet. Om hela regelinnehållet inte visas i standardvyn väljer du ![expand-rule-content](assets/Smock_ChevronDown.svg) för att utöka den.
 
 * **Ändra ordning**: Alla nya regler som du skapar staplas längst ned i regellistan. Reglerna körs uppifrån och ned. Regeln längst upp körs först följt av andra regler av samma typ. Om du till exempel har reglerna When, Show, Enable och When vid första, andra, tredje respektive fjärde positionen uppifrån, kommer regeln When överst att köras först följt av regeln When vid den fjärde positionen. Sedan körs reglerna Visa och Aktivera.
 Du kan ändra ordningen på en regel genom att trycka på ![sort-rules](assets/sort-rules.svg) eller dra och släpp det i önskad ordning i listan.
 
-* **Redigera**: Om du vill redigera en regel markerar du kryssrutan bredvid regeltiteln. Alternativ för att redigera och ta bort regeln visas. Tryck **[!UICONTROL Edit]** för att öppna den valda regeln i regelredigeraren <!-- in visual  or code editor mode depending on the mode used to create the rule -->.
+* **Redigera**: Om du vill redigera en regel markerar du kryssrutan bredvid regeltiteln. Alternativ för att redigera och ta bort regeln visas. Välj **[!UICONTROL Edit]** för att öppna den valda regeln i regelredigeraren <!-- in visual  or code editor mode depending on the mode used to create the rule -->.
 
-* **Ta bort**: Om du vill ta bort en regel markerar du den och trycker på **[!UICONTROL Delete]**.
+* **Ta bort**: Om du vill ta bort en regel markerar du den och väljer **[!UICONTROL Delete]**.
 
-* **Aktivera/inaktivera**: När du tillfälligt måste inaktivera användningen av en regel kan du välja en eller flera regler och trycka på **[!UICONTROL Disable]** i verktygsfältet Åtgärder för att inaktivera dem. Om en regel är inaktiverad körs den inte vid körningen. Om du vill aktivera en inaktiverad regel kan du markera den och trycka på Aktivera i åtgärdsverktygsfältet. Statuskolumnen för regeln visar om regeln är aktiverad eller inaktiverad.
+* **Aktivera/inaktivera**: När du tillfälligt måste avbryta användningen av en regel kan du markera en eller flera regler och välja **[!UICONTROL Disable]** i verktygsfältet Åtgärder för att inaktivera dem. Om en regel är inaktiverad körs den inte vid körningen. Om du vill aktivera en inaktiverad regel kan du markera den och välja Aktivera i verktygsfältet Åtgärder. Statuskolumnen för regeln visar om regeln är aktiverad eller inaktiverad.
 
 ![Inaktivera regel](assets/disablerule.png)
 
@@ -747,23 +747,23 @@ Du kan kopiera och klistra in en regel från ett fält till andra liknande fält
 
 Så här kopierar och klistrar du in regler:
 
-1. Tryck på det formulärobjekt du vill kopiera en regel från och tryck i komponentens verktygsfält ![redigeringsregel](assets/edit-rules-icon.svg). Användargränssnittet för regelredigeraren visas med formulärobjektet markerat och de befintliga reglerna visas.
+1. Markera det formulärobjekt som du vill kopiera en regel från och välj sedan i komponentverktygsfältet ![redigeringsregel](assets/edit-rules-icon.svg). Användargränssnittet för regelredigeraren visas med formulärobjektet markerat och de befintliga reglerna visas.
 
    ![kopieringsregel](assets/copyrule.png)
 
    Mer information om hur du hanterar befintliga regler finns i [Hantera regler](rule-editor.md#p-manage-rules-p).
 
-1. Markera kryssrutan bredvid regeltiteln. Då visas alternativ för att hantera regeln. Tryck på **[!UICONTROL Copy]**.
+1. Markera kryssrutan bredvid regeltiteln. Då visas alternativ för att hantera regeln. Välj **[!UICONTROL Copy]**.
 
    ![copyrule2](assets/copyrule2.png)
 
-1. Markera ett annat formulärobjekt som du vill klistra in regeln i och tryck på **[!UICONTROL Paste]**. Dessutom kan du redigera regeln för att göra ändringar i den.
+1. Markera ett annat formulärobjekt som du vill klistra in regeln i och markera **[!UICONTROL Paste]**. Dessutom kan du redigera regeln för att göra ändringar i den.
 
    >[!NOTE]
    >
    >Du kan bara klistra in en regel i ett annat formulärobjekt om det formulärobjektet har stöd för den kopierade regelns händelse. En knapp stöder till exempel händelsen click. Du kan klistra in en regel med en klickningshändelse på en knapp, men inte i en kryssruta.
 
-1. Tryck **[!UICONTROL Done]** för att spara regeln.
+1. Välj **[!UICONTROL Done]** för att spara regeln.
 
 ## Kapslade uttryck {#nestedexpressions}
 
@@ -773,7 +773,7 @@ Nedan visas ett exempel på en kapslad regel som visar ett meddelande till anvä
 
 ![Komplext uttryck](assets/complexexpression.png)
 
-Du kan också redigera genom att dra och släppa villkor i en regel. Tryck och hovra över handtaget ( ![handtag](assets/drag-handle.svg)) före ett villkor. När pekaren ändras till en handsymbol enligt nedan drar och släpper du villkoret någonstans i linjen. Regelstrukturen ändras.
+Du kan också redigera genom att dra och släppa villkor i en regel. Markera och hovra över handtaget ( ![handtag](assets/drag-handle.svg)) före ett villkor. När pekaren ändras till en handsymbol enligt nedan drar och släpper du villkoret någonstans i linjen. Regelstrukturen ändras.
 
 ![Dra och släppa](assets/drag-and-drop.png)
 

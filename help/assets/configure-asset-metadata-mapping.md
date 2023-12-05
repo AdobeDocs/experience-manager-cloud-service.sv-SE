@@ -2,10 +2,10 @@
 title: Konfigurera metadatamappning mellan Workfront och Experience Manager Assets
 description: Mappa metadatafälten för resurser mellan as a Cloud Service Adobe Workfront- och Experience Manager-program. När du skickar en resurs från Workfront till Experience Manager Assets kan du mappa metadata för resursen i Experience Manager Assets genom att mappa metadatafält.
 exl-id: 71400769-b2bc-4f5d-8b6b-a73598e837b4
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '947'
-ht-degree: 2%
+source-wordcount: '929'
+ht-degree: 0%
 
 ---
 
@@ -123,7 +123,7 @@ Så här använder du metadatainställningar för bildmappen:
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**.
 
-1. Välj metadatamatchemat i listan och klicka på **[!UICONTROL Apply to Folder(s)]**.
+1. Välj metadatamatchemat i listan och klicka på **[!UICONTROL Apply to Folders]**.
 
 1. Välj målmappen som [bilden skickas från Adobe Workfront](#send-image-workfront-assets) och klicka **[!UICONTROL Apply]**.
 
@@ -132,14 +132,14 @@ Du kan navigera till bilden i Experience Manager Assets och visa de metadata som
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)

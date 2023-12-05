@@ -1,9 +1,9 @@
 ---
 title: Vad är adaptiva formuläruttryck?
 description: Använd adaptiva Forms-uttryck för att lägga till automatisk validering, beräkning och aktivera eller inaktivera synlighet för ett avsnitt.
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2698'
+source-wordcount: '2683'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ JavaScript™ är uttrycksspråket i Adaptive Forms. Alla uttryck är giltiga Ja
 
 ## Bästa tillvägagångssätt för att skriva uttryck {#best-practices-for-writing-expressions}
 
-* När du skriver uttryck kan du använda namnet på fältet eller panelen för att komma åt fält och paneler. Använd egenskapen value om du vill komma åt ett fälts värde. Till exempel, `field1.value`
+* När du skriver uttryck kan du använda namnet på fältet eller panelen för att komma åt fält och paneler. Använd egenskapen value om du vill komma åt ett fälts värde. Exempel: `field1.value`
 * Använd unika namn för fält och paneler i hela formuläret. Det hjälper till att undvika eventuella konflikter med fältnamn som används när uttryck skrivs.
 * När du skriver flerradsuttryck kan du använda ett semikolon för att avsluta en -programsats.
 
@@ -63,7 +63,7 @@ Du kan använda åtkomstuttrycket för att aktivera eller inaktivera ett fält. 
 
 ### Beräkna uttryck {#calculate-expression}
 
-Beräkningsuttrycket används för att automatiskt beräkna värdet för ett fält med hjälp av ett uttryck. Vanligtvis används egenskapen value för andra fält i ett sådant uttryck. Till exempel, `field2.value + field3.value`. När värdet för `field2`eller `field3`ändras, uttrycket hämtas och värdet beräknas om.
+Beräkningsuttrycket används för att automatiskt beräkna värdet för ett fält med hjälp av ett uttryck. Vanligtvis används egenskapen value för andra fält i ett sådant uttryck. Till exempel: `field2.value + field3.value`. När värdet för `field2`eller `field3`ändras, uttrycket hämtas och värdet beräknas om.
 
 **Gäller för**: fält
 
@@ -138,7 +138,7 @@ I ovanstående exempel returneras uttrycket om det icke-tomma värdet inte match
 
 >[!NOTE]
 >
->Om du skriver ett valideringsuttryck för ett icke-obligatoriskt eller obligatoriskt fält utvärderas uttrycket oavsett fältets synlighetsstatus. Om du vill stoppa valideringen för de dolda fälten anger du egenskapen validationsDisabled i Initialization eller Value Commit Script till true. Till exempel, `this.validationsDisabled=true`
+>Om du skriver ett valideringsuttryck för ett icke-obligatoriskt eller obligatoriskt fält utvärderas uttrycket oavsett fältets synlighetsstatus. Om du vill stoppa valideringen för de dolda fälten anger du egenskapen validationsDisabled i Initialization eller Value Commit Script till true. Exempel: `this.validationsDisabled=true`
 
 ### Värde för implementeringsskript {#value-commit-script}
 
@@ -274,7 +274,7 @@ Utför följande steg för att skapa ett anpassat mönster för en viss fälttyp
 1. Öppna fliken Egenskaper för noden som skapades. Öppna till exempel fliken Egenskaper för `textboxpatterns`. Lägg till `guideComponentType` egenskapen för den här noden och ange dess värde till *fd/af/components/formter/guideTextBox*.
 
 1. Värdet för den här egenskapen varierar beroende på vilket fält du vill definiera mönstren för. För numeriska fält är värdet för `guideComponentType` egenskapen är *fd/af/components/formter/guideNumericBox*. Värdet för Datepicker-fältet är *fd/af/components/formter/guideDatepicker*. &quot;
-1. Du kan lägga till ett eget mönster genom att tilldela en egenskap till `textboxpatterns` nod. Lägga till en egenskap med ett namn (till exempel `pattern1`) och ange värdet för mönstret som du vill lägga till. Lägg till en egenskap `pattern1` med värdet Fax=text{99-999-9999999}. Mönstret är tillgängligt för alla textrutor som du använder i Adaptiv Forms.
+1. Du kan lägga till ett eget mönster genom att tilldela en egenskap till `textboxpatterns` nod. Lägg till en egenskap med ett namn (till exempel `pattern1`) och ange värdet för mönstret som du vill lägga till. Lägg till en egenskap `pattern1` med värdet Fax=text{99-999-9999999}. Mönstret är tillgängligt för alla textrutor som du använder i Adaptiv Forms.
 
    ![Skapa anpassade mönster för fält i CrxDe](assets/creating-custom-patterns.png)
 

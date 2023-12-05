@@ -5,14 +5,14 @@ contentOwner: AG
 feature: Asset Reports,Asset Management
 role: Admin,User
 exl-id: ef617b01-0019-4379-8d58-c03215d7e28f
-source-git-commit: 80ac947976bab2b0bfedb4ff9d5dd4634de6b4fc
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 7%
+source-wordcount: '886'
+ht-degree: 3%
 
 ---
 
-# Materialrapporter {#asset-reports}
+# Resursrapporter {#asset-reports}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -34,8 +34,8 @@ När en rapport skapas meddelas du via <!-- through an email (optional) and --> 
 [!DNL Experience Manager Assets] genererar följande standardrapporter:
 
 * Överför
-* Hämta
-* Förfaller
+* Ladda ned
+* Förfallotid
 * Ändring
 * Publicera
 * [!DNL Brand Portal] publicera
@@ -76,7 +76,7 @@ När en rapport skapas meddelas du via <!-- through an email (optional) and --> 
    >
    >Om du väljer att schemalägga rapporten senare måste du ange datum och tid i fälten Datum och Tid. Om du inte anger något värde behandlas det som en rapport som ska genereras omedelbart.
 
-   Konfigurationsfälten kan variera beroende på vilken typ av rapport du skapar. Till exempel **[!UICONTROL Disk Usage]** rapporten innehåller alternativ för att inkludera resursåtergivningar när du beräknar det diskutrymme som används av resurserna. Du kan välja att inkludera eller exkludera resurser i undermappar för beräkning av diskanvändning.
+   Konfigurationsfälten kan skilja sig åt beroende på vilken typ av rapport du skapar. Till exempel **[!UICONTROL Disk Usage]** rapporten innehåller alternativ för att inkludera resursåtergivningar när du beräknar det diskutrymme som används av resurserna. Du kan välja att inkludera eller exkludera resurser i undermappar för beräkning av diskanvändning.
 
    >[!NOTE]
    >
@@ -88,7 +88,7 @@ När en rapport skapas meddelas du via <!-- through an email (optional) and --> 
 
    ![Detaljsida för rapporten Filer](assets/files_report.png)
 
-   I rapporten **[!UICONTROL Link Share]** visas URL:er till resurser som delas med externa användare inifrån [!DNL Assets]. <!-- It includes email ids of the user who shared the assets, emails ids of users with which the assets are shared, share date, and expiration date for the link. --> Det går inte att anpassa kolumnerna.
+   The **[!UICONTROL Link Share]** rapporten visar URL:er till resurser som delas med externa användare inifrån [!DNL Assets]. <!-- It includes email ids of the user who shared the assets, emails ids of users with which the assets are shared, share date, and expiration date for the link. --> Det går inte att anpassa kolumnerna.
 
    The **[!UICONTROL Link Share]** , innehåller inga alternativ för undermappar och återgivningar eftersom den bara publicerar de delade URL:er som visas under `/var/dam/share`.
 
@@ -100,12 +100,12 @@ När en rapport skapas meddelas du via <!-- through an email (optional) and --> 
 
    ![Markera eller avbryta markering av rapportkolumner](assets/configure_columns.png)
 
-   Om du vill visa ett anpassat kolumnnamn eller en egenskapssökväg konfigurerar du egenskaperna för resursens binärfil under `jcr:content` nod i CRX. Du kan också lägga till den via egenskapssökvägsväljaren.
+   Om du vill visa ett anpassat kolumnnamn eller en egenskapssökväg konfigurerar du egenskaperna för resursens binärfil under `jcr:content` i CRX. Du kan också lägga till den via egenskapssökvägsväljaren.
 
    ![Markera eller avbryta markering av rapportkolumner](assets/custom_columns.png)
 
 1. Klicka på **[!UICONTROL Create]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
-1. På [!UICONTROL Asset Reports] sidan, baseras rapportgenereringsstatusen på rapportjobbets aktuella tillstånd, till exempel [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued], eller [!UICONTROL Scheduled]. Samma status visas i inkorgen för meddelanden.Om du vill visa rapportsidan klickar du på rapportlänken. Du kan också markera rapporten och klicka på **[!UICONTROL View]** i verktygsfältet.
+1. På [!UICONTROL Asset Reports] sidan baseras rapportgenereringsstatusen på rapportjobbets aktuella tillstånd, till exempel [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued], eller [!UICONTROL Scheduled]. Samma status visas i inkorgen för meddelanden.Om du vill visa rapportsidan klickar du på rapportlänken. Du kan också markera rapporten och klicka på **[!UICONTROL View]** i verktygsfältet.
 
    ![En genererad rapport](assets/report_page.png)
 
@@ -130,7 +130,7 @@ Du kan lägga till anpassade kolumner i följande rapporter om du vill visa mer 
 -->
 
 * Överför
-* Förfaller
+* Förfallotid
 * Ändring
 * Publicera
 * [!DNL Brand Portal] publicera
@@ -194,13 +194,13 @@ TBD: How do enable this in CS now? Is it done using some OSGi config now?
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)

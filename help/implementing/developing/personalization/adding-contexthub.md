@@ -2,9 +2,9 @@
 title: Lägga till ContextHub på Pages och Access Stores
 description: Lägg till ContextHub på sidorna för att aktivera ContextHub-funktionerna och länka till ContextHub JavaScript-biblioteken
 exl-id: 8bfe2cff-3944-4e86-a95c-ebf1cb13913c
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '897'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Om du vill aktivera ContextHub-funktionerna och länka till ContextHub JavaScrip
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
 ```
 
-Observera att du även måste konfigurera om ContextHub-verktygsfältet ska visas i förhandsgranskningsläget. Se [Visa och dölja ContextHub-gränssnittet](configuring-contexthub.md#showing-and-hiding-the-contexthub-ui).
+Du måste också konfigurera om ContextHub-verktygsfältet ska visas i förhandsgranskningsläget. Se [Visa och dölja ContextHub-gränssnittet](configuring-contexthub.md#showing-and-hiding-the-contexthub-ui).
 
 ## Om ContextHub Stores {#about-contexthub-stores}
 
@@ -103,7 +103,7 @@ Enskilda dataobjekt lagras som en uppsättning nyckel/värde-par. Om du vill lag
 * [getItem](contexthub-api.md#getitem-key)
 * [setItem](contexthub-api.md#setitem-key-value-options)
 
-Observera att anpassade lagringskandidater kan definiera ytterligare funktioner som ger åtkomst till lagringsdata.
+Ansökande till anpassade arkiv kan definiera ytterligare funktioner som ger åtkomst till lagrade data.
 
 >[!NOTE]
 >
@@ -139,7 +139,7 @@ De regler som används för att lösa dessa segment sammanfattas enligt följand
 
 >[!WARNING]
 >
->De installerade segmenten tillhandahålls som referenskonfigurationer som hjälper dig att skapa en egen dedikerad konfiguration för ditt projekt och bör därför inte användas direkt.
+>De installerade segmenten tillhandahålls som referenskonfigurationer som hjälper dig att skapa en egen dedikerad konfiguration för ditt projekt. Använd dem inte direkt.
 
 ## Debugging ContextHub {#debugging-contexthub}
 

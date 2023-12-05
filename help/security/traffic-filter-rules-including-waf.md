@@ -2,9 +2,9 @@
 title: Trafikfilterregler inklusive WAF-regler
 description: Konfigurera trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF)
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: 8407f3142de78ee792bdece327734dd02a4f234b
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '3357'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Den här artikeln är indelad i följande avsnitt:
 * **Trafikskydd - översikt:** Lär dig hur du skyddas mot skadlig trafik.
 * **Föreslagen process för att konfigurera regler:** Läs om en högnivåmetod för att skydda er webbplats.
 * **Inställningar:** Upptäck hur du konfigurerar, konfigurerar och distribuerar trafikfilterregler, inklusive avancerade WAF-regler.
-* **Regelsyntax:** Läs om hur du deklarerar trafikfilterregler i `cdn.yaml` konfigurationsfil. Detta omfattar både trafikfilterreglerna som är tillgängliga för alla Sites- och Forms-kunder samt underkategorin med WAF-regler för dem som licensierar den funktionen.
+* **Regelsyntax:** Läs om hur du deklarerar trafikfilterregler i `cdn.yaml` konfigurationsfil. Detta omfattar både trafikfilterreglerna som är tillgängliga för alla Sites- och Forms-kunder och underkategorin med WAF-regler för dem som licensierar den funktionen.
 * **Exempel på regler:** Se exempel på deklarerade regler som hjälper dig att komma igång.
 * **Regler för hastighetsbegränsning:** Lär dig hur du använder hastighetsbegränsande regler för att skydda din webbplats från attacker med stora volymer.
 * **CDN-loggar:** Se vilka regler och WAF-flaggor som matchar er trafik.
@@ -78,7 +78,7 @@ Nedan följer en högnivårekommenderad process från början till slut för att
         cdn.yaml
    ```
 
-1. `cdn.yaml` ska innehålla metadata samt en lista över trafikfilterregler och WAF-regler.
+1. `cdn.yaml` ska innehålla metadata och en lista med trafikfilterregler och WAF-regler.
 
    ```
    kind: "CDN"
@@ -148,7 +148,7 @@ data:
           wafFlags: [ SQLI, XSS]
 ```
 
-Formatet på trafikfilterreglerna i `cdn.yaml` filen beskrivs nedan. Se några [andra exempel](#examples) i ett senare avsnitt, samt i ett separat avsnitt om [Regler för hastighetsbegränsning](#rate-limit-rules).
+Formatet på trafikfilterreglerna i `cdn.yaml` filen beskrivs nedan. Se några [andra exempel](#examples) i ett senare avsnitt och ett separat avsnitt på [Regler för hastighetsbegränsning](#rate-limit-rules).
 
 
 | **Egenskap** | **De flesta trafikfilterreglerna** | **WAF-trafikfilterregler** | **Typ** | **Standardvärde** | **Beskrivning** |
@@ -470,7 +470,7 @@ data:
 
 AEM as a Cloud Service ger åtkomst till CDN-loggar, som är användbara för fall som till exempel optimering av träffkvoten och konfigurering av trafikfilterregler. CDN-loggar visas i Cloud Manager **Hämta loggar** när du väljer Författare eller Publiceringstjänst.
 
-Observera att CDN-loggar kan fördröjas upp till 5 minuter.
+CDN-loggar kan fördröjas upp till fem minuter.
 
 The `rules` egenskapen beskriver vilka trafikfilterregler som matchas och har följande mönster:
 

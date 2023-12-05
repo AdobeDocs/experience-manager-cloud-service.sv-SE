@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: b8ab2525-3f15-4844-866c-da47bfc7518c
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2529'
+source-wordcount: '2526'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ För rättighetsinnehavare som också ansvarar för översättning är det ofta 
 
 1. Navigera till **Navigering** > **Webbplatser** och välj projekt.
 1. Leta reda på projektets språkrot. Om du t.ex. har språkroten engelska `/content/<your-project>/en`.
-   * Observera att de andra språkmapparna är tomma platshållare före den första översättningen. Dessa skapas vanligtvis av innehållsarkitekten.
+   * Före den första översättningen är de andra språkmapparna tomma platshållare. Dessa skapas vanligtvis av innehållsarkitekten.
 1. Leta reda på projektets språkrot.
 1. Markera spårväljaren och visa **Referenser** -panelen.
 1. Välj **Språkkopior**.
@@ -123,7 +123,7 @@ Projektet är uppdelat i flera kort.
 
 * **Sammanfattning** - Det här kortet visar grundläggande rubrikinformation för projektet inklusive ägare, språk och översättningsleverantör.
 * **Översättningsjobb** - Kortet eller korten ger en översikt över det faktiska översättningsjobbet inklusive status, antal resurser och så vidare. Vanligtvis finns det ett jobb per språk med ISO-2-språkkoden tillagd till jobbnamnet.
-   * Observera att när [automatiskt skapa översättningsjobb,](#automatically-creating) AEM skapar jobben asynkront och kanske inte visas direkt i projektet.
+   * När [automatiskt skapa översättningsjobb,](#automatically-creating) AEM skapar jobben asynkront och kanske inte visas direkt i projektet.
 * **Team** - Det här kortet visar vilka användare som samarbetar i det här översättningsprojektet. Den här resan täcker inte det här ämnet.
 * **Uppgifter** - Ytterligare uppgifter som är kopplade till översättning av innehåll som att göra objekt eller arbetsflödesobjekt. Den här resan täcker inte det här ämnet.
 

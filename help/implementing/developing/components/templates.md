@@ -2,9 +2,9 @@
 title: Sidmallar
 description: Sidmallar används när du skapar en sida som används som bas för den nya sidan
 exl-id: ea42fce9-9af2-4349-a4e4-547e6e8da05c
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '3278'
+source-wordcount: '3267'
 ht-degree: 0%
 
 ---
@@ -597,4 +597,4 @@ Om du vill begränsa vilka mallar som kan användas för att skapa underordnade 
 
 Du kan använda `cq:allowedTemplates` på mallens  `jcr:content` nod som den här konfigurationen ska tillämpas på alla skapade sidor som använder mallen.
 
-Om du vill lägga till fler begränsningar, till exempel för mallhierarkin, kan du använda `allowedParents/allowedChildren` -egenskaper i mallen. Du kan sedan uttryckligen ange att sidor som skapats från en mall T måste vara överordnade/underordnade sidor till sidor som skapats från en mall T.
+Om du vill lägga till fler begränsningar för mallhierarkin kan du använda `allowedParents/allowedChildren` -egenskaper i mallen. Du kan sedan uttryckligen ange att sidor som skapats från en mall T måste vara överordnade/underordnade sidor till sidor som skapats från en mall T.

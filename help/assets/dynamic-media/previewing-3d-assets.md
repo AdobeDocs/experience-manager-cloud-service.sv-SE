@@ -5,10 +5,10 @@ contentOwner: Rick Brough
 feature: 3D Assets
 role: User
 exl-id: e873bd25-f841-4063-824f-7e48f40bb678
-source-git-commit: d00e1f49438ad36339a09f8914496faeda3d4de6
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 1%
+source-wordcount: '615'
+ht-degree: 0%
 
 ---
 
@@ -46,7 +46,7 @@ Experience Manager har stöd för interaktiv 3D-förhandsgranskning i följande 
 | GLB | Binär GL-överföring | model/gltf-binary |  |
 | GLTF | GL-överföringsformat | model/gltf+json | Se **Anteckning** nedan. |
 | OBJ | WaveFront 3D-objektfil | application/x-tgif |  |
-| STL | Stereolitografi | application/vnd.ms-pki.stl |  |
+| STL | Stereolithografi | application/vnd.ms-pki.stl |  |
 
 
 >[!NOTE]
@@ -74,7 +74,7 @@ Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-asse
 
    ![Navigeringssida](/help/assets/dynamic-media/assets/navigation-assets.png)
 
-1. I den övre högra hörnet av sidan väljer du **[!UICONTROL Card View]** navigera sedan till en 3D-resurs som du vill förhandsgranska.
+1. I den nedrullningsbara listan Visa i det övre högra hörnet på sidan väljer du **[!UICONTROL Card View]** navigera sedan till en 3D-resurs som du vill förhandsgranska.
 
    ![Val av 3D-kort](/help/assets/dynamic-media/assets/3d-card-select.png)
    _I kortvyn väljer du kortet för den 3D-resurs som du vill förhandsgranska._
@@ -82,7 +82,7 @@ Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-asse
 1. Välj kortet för 3D-resursen.
 
    ![Interaktiv förhandsvisning av 3D](/help/assets/dynamic-media/assets/3d-preview.png)
-   _Interaktiv förhandsvisning av en 3D-resurs på sidan med resursinställningsvyn._
+   _Interaktiv förhandsgranskning av en 3D-resurs på sidan med resursinformationsvyn._
 1. Gör något av följande på sidan med resursinformationsvyn för 3D-resursen:
 
    | Visa | Beskrivning | Musåtgärd | Åtgärd på pekskärmen |
@@ -90,7 +90,7 @@ Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-asse
    | **Vrid kameran** | Ordna vyn runt 3D-scenen och objekt. | Vänsterklicka och dra. | Tryck med ett finger och dra. |
    | **Panorera kameran** | Panorera vyn åt vänster, åt höger, uppåt eller nedåt. | Högerklicka och dra. | Tryck med två fingrar och dra. |
    | **Zooma kameran** | Flytta in och ut från områden i 3D-scenen. | Rullningshjul. | Nyp med två fingrar. |
-   | **Ange kameran igen** | Centrera kameran igen till en punkt på ett objekt i 3D-scenen. | Dubbelklicka. | Dubbeltryck. |
+   | **Ange kameran igen** | Centrera kameran igen till en punkt på ett objekt i 3D-scenen. | Dubbelklicka. | Dubbelmarkera. |
    | **Återställ** | I närheten av det nedre högra hörnet av sidan väljer du ikonen Återställ om du vill återställa målpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |   |   |
    | **Helskärmsläge** | Om du vill aktivera helskärmsläget väljer du Helskärmsikonen längst ned till höger på sidan. |   |   |
 

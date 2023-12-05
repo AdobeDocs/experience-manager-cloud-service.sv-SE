@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Lär dig mer om innehållssökning och indexering på AEM as a Cloud Service.
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2427'
+source-wordcount: '2442'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Begränsningar:
 >Mer information om indexering och frågor, inklusive en detaljerad beskrivning av avancerade sök- och indexeringsfunktioner, finns i [Apache Oak-dokumentation](https://jackrabbit.apache.org/oak/docs/query/query.html).
 
 
-## Användning {#how-to-use}
+## Använda {#how-to-use}
 
 Indexdefinitioner kan kategoriseras i tre primära användningsområden:
 
@@ -67,7 +67,7 @@ En indexdefinition kan delas in i någon av följande kategorier:
 
 >[!NOTE]
 >
->Om du till exempel anpassar ett index som inte finns i kartongen `damAssetLucene-8`, kopierar den senaste körklara indexdefinitionen från en *Cloud Service* med hjälp av CRX DE Package Manager (`/crx/packmgr/`) . Byt namn på den till `damAssetLucene-8-custom-1` (eller senare) och lägg till anpassningar i XML-filen. Detta säkerställer att de nödvändiga konfigurationerna inte tas bort av misstag. Till exempel `tika` nod under `/oak:index/damAssetLucene-8/tika` krävs i det anpassade indexet som distribueras till en AEM Cloud Service-miljö, men inte på den lokala AEM SDK:n.
+>Om du t.ex. anpassar ett index som inte finns i kartongen `damAssetLucene-8`, kopierar den senaste körklara indexdefinitionen från en *Cloud Service* med hjälp av CRX DE Package Manager (`/crx/packmgr/`) . Byt namn på den till `damAssetLucene-8-custom-1` (eller senare) och lägg till anpassningar i XML-filen. Detta säkerställer att de nödvändiga konfigurationerna inte tas bort av misstag. Till exempel `tika` nod under `/oak:index/damAssetLucene-8/tika` krävs i det anpassade indexet som distribueras till en AEM Cloud Service-miljö, men inte på den lokala AEM SDK:n.
 
 Om du vill anpassa ett OOTB-index förbereder du ett nytt paket som innehåller den faktiska indexdefinitionen som följer namnmönstret:
 

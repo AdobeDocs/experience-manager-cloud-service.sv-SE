@@ -4,9 +4,9 @@ description: Experience Cloud Setup Automation är ett enkelt och automatiserat 
 feature: Administering
 role: Admin
 exl-id: 351ead2c-7b0d-4bd9-a020-47516948d467
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '719'
 ht-degree: 0%
 
 ---
@@ -44,15 +44,15 @@ Miljön bör nu vara redo för Experience Cloud Setup Automation.
 ## Så här konfigurerar du
 
 1. Navigera till **Webbplatser** och välj roten på webbplatsen som ska integreras med Adobe Analytics.
-1. Expandera menyn för sidospåret och tryck **Konfigurationsanalys**.
+1. Utöka menyn för sidospåret och markera **Konfigurationsanalys**.
 
    Det här är ett nytt alternativ på sidospåret som öppnar en panel med kontroller och status för automatisk installation av Experience Cloud.
-1. Tryck på **Integrera analyser** -knappen.
+1. Välj **Integrera analyser** -knappen.
 1. Ange ett namn för **Report Suite-ID**.
 
    Den här strängen används för att skapa en [Report Suite-ID](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html?lang=en) i Adobe Analytics som datalager för analysdata för den valda AEM. Den angivna strängen har bifogats med miljö- och skiktidentifierare för att säkerställa unikt utseende.
 
-1. Uppdatera sidan och panelen och tryck på **Kontrollera integreringsstatus** för att kontrollera automatiseringsstatus.
+1. Uppdatera sidan och panelen och välj **Kontrollera integreringsstatus** för att kontrollera automatiseringsstatus.
 
    Automatiseringsinställningarna görs asynkront. The **Kontrollera integreringsstatus** visar integreringens aktuella status.
 
@@ -75,7 +75,7 @@ Navigera sedan till Adobe Analytics för att visa data som flödar in från hän
 
 1. Navigera till Adobe Analytics i samma IMS-organisation som din AEM.
 1. Skapa en ny översiktsrapport för AEM Sites genom att navigera till **Rapporter** > **Engagemang** > **Adobe Experience Manager** > **Platsprestandaöversikt**.
-1. Tryck **Öppna rapport**.
+1. Välj **Öppna rapport**.
 1. Välj **Report Suite-ID** som matchar namnet på Report Suite som användes i föregående övning.
 1. Visa dataflödet för analyser i den nya mallen över tid.
 

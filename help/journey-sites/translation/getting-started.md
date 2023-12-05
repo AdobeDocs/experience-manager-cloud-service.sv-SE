@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: 9bfc3995-ac8e-488e-b68f-9e1b5b4a3176
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1391'
 ht-degree: 0%
 
 ---
@@ -101,7 +101,7 @@ Redigera en sida:
 
    ![Markera en sida att redigera](assets/sites-editor-select-page.png)
 
-1. Tryck på **Redigera** i verktygsfältet.
+1. Välj **Redigera** i verktygsfältet.
 1. Webbplatsredigeraren öppnas med den valda sidan inläst för redigering på en ny flik i webbläsaren.
 1. När du för musen över eller knackar på innehåll visas väljare för enskilda komponenter. Komponenter är de dra och släpp-byggstenar som utgör sidan.
 

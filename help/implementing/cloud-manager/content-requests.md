@@ -2,9 +2,9 @@
 title: Förstå begäranden om Cloud Service innehåll
 description: Om du har köpt innehållsförfrågningslicenser från Adobe kan du ta reda på vilka typer av innehållsförfrågningar som Adobe Experience Cloud som en tjänst mäter och varianterna med en organisations analysrapporteringsverktyg.
 exl-id: 3666328a-79a7-4dd7-b952-38bb60f0967d
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Varianter på begäranden om Cloud Service{#content-requests-variances}
 
-Innehållsförfrågningar kan innehålla avvikelser med en organisations analysrapporteringsverktyg som sammanfattas i följande tabell. I allmänhet samlar analysverktyg in data via instrumentering på klientsidan <b>ska inte användas</b> att rapportera om antalet innehållsförfrågningar för en viss webbplats, helt enkelt eftersom de ofta är beroende av att användarens samtycke aktiveras, och därför saknas en betydande del av trafiken. Analysverktyg som samlar in data på serversidan i loggfiler, eller CDN-rapporter för kunder som lägger till egna CDN AEM as a Cloud Service, ger bättre antal. Adobe RUM-datatjänsten rekommenderas som alternativ för rapportering av sidvyer och deras associerade prestanda.
+Innehållsförfrågningar kan innehålla avvikelser med en organisations analysrapporteringsverktyg som sammanfattas i följande tabell. I allmänhet *inte* använda analysverktyg som samlar in data via instrumentering på klientsidan för att rapportera antalet innehållsförfrågningar för en viss webbplats, helt enkelt eftersom de ofta är beroende av att användarens samtycke aktiveras, och därför saknas en betydande del av trafiken. Analysverktyg som samlar in data på serversidan i loggfiler, eller CDN-rapporter för kunder som lägger till egna CDN AEM as a Cloud Service, ger bättre antal. För rapportering om sidvyer och deras prestanda är Adobe RUM Data Service det alternativ som rekommenderas av Adobe.
 
 | Orsak till avvikelse | Förklaring |
 |---|---|

@@ -2,7 +2,7 @@
 title: Komma igång med CIF-redigering
 description: Komma igång med CIF.
 exl-id: 0bef4d8c-0ad3-4ec8-ab08-8c83203b3b68
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
 source-wordcount: '778'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Om produkt- och kategoridata krävs i e-handelskomponenter eller AEM dialogrutor
 
 ### Produktväljare
 
-När du klickar på mappikonen öppnas det modala användargränssnittet för väljaren (till exempel produktväljaren)
+När du klickar på mappikonen öppnas det modala användargränssnittet för väljaren (till exempel produktsuddgummi)
 ![produktväljare](assets/product-picker-open.png)
 
 Du hittar produkterna antingen genom att bläddra i katalogstrukturen till vänster eller genom att söka. Fulltextsökning respekterar den valda kategorin och begränsar sökresultaten till den här kategorin.
@@ -57,7 +57,7 @@ Produkter med variationer markeras med en mappikon som du kan klicka på för at
 
 ### Kategoriväljaren
 
-Fungerar som en produktväljare. När du klickar på mappikonen öppnas det modala användargränssnittet för väljaren (t.ex. karusellkategori)
+Fungerar som en produktväljare. När du klickar på mappikonen öppnas det modala användargränssnittet för väljaren (till exempel kategori carousel)
 ![kategoriväljare](assets/category-picker-open.png)
 
 Bläddra i katalogstrukturen till vänster och markera kategorin.

@@ -3,9 +3,9 @@ title: Hantera pipelines
 description: Lär dig hur du hanterar dina befintliga rörledningar, inklusive redigering, körning och borttagning av dem.
 index: true
 exl-id: 4aff5a84-134a-43fa-8de8-8d564f4edd16
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '928'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ The **Pipelines** visas en fullständig lista över alla pipelines för det vald
 
 1. Från **Programöversikt** väljer du **Pipelines** för att växla till **Pipelines** -fönstret.
 
-1. Här visas en lista över alla rörledningar för programmet samt start och stopp för pipelinekörning på samma sätt som i **Förloppskort**.
+1. Här visas en lista med alla pipelines för programmet och hur du startar och stoppar pipelinekörningen som i **Förloppskort**.
 
 Om en pipeline körs håller du pekaren över den **Status** -kolumnen visar information om körningen.
 

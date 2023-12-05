@@ -10,9 +10,9 @@ feature: Commerce Integration Framework
 kt: 3046
 thumbnail: 28952.jpg
 exl-id: 4385c9e5-2b25-4f95-952f-72349431cf94
-source-git-commit: 97a6a7865f696f4d61a1fb4e25619caac7b68b51
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ En videogenomgång av olika alternativ för integrering av flera Adobe Commerce 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28952/?quality=12)
 
-Funktionerna för hantering av flera webbplatser i Live Copy och Language Copy används tillsammans med Commerce Integration Framework för att globalt hantera webbplatser i olika regioner och på olika språk.
+AEM funktioner för hantering av flera webbplatser i Live Copy och Language Copy används tillsammans med Commerce integrationa frameworken för att globalt hantera webbplatser i olika regioner och språkområden.
 
 Den rekommenderade konfigurationen är att använda en 1:1-relation mellan AEM och Adobe Commerce Store-vyn.
 
@@ -39,11 +39,11 @@ Så här ansluter du en AEM plats och AEM CIF kärnkomponenter till en dedikerad
 
 3. Skapa en underordnad konfiguration för CIF-Cloud Servicens konfiguration enligt följande:
 
-   * AEM går till Verktyg -> Allmänt -> [Konfigurationsläsaren](/help/implementing/developing/introduction/configurations.md#using-configuration-browser)
+   * Gå AEM till Verktyg > Allmänt > [Konfigurationsläsaren](/help/implementing/developing/introduction/configurations.md#using-configuration-browser)
    * Välj den baskonfiguration som du har skapat
    * Skapa en konfiguration med stegen som beskrivs i punkt 2 ovan
 
-   Den nya konfigurationen skapas som en underordnad konfiguration till den grundläggande konfigurationen. Du kan nu gå till Verktyg -> Allmänt -> Konfigurationsläsaren och skapa konfigurationsinställningarna.
+   Den nya konfigurationen skapas som en underordnad konfiguration till den grundläggande konfigurationen. Du kan nu gå till Verktyg > Allmänt > Konfigurationsläsaren och skapa konfigurationsinställningarna.
 
    >[!TIP]
    >
@@ -60,6 +60,6 @@ Så här ansluter du en AEM plats och AEM CIF kärnkomponenter till en dedikerad
 ## Ytterligare resurser
 
 * [Adobe Commerce webbplatser, butiker och vyer](https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html)
-* [AEM CIF Core Components - konfiguration av flera butiker/platser](https://github.com/adobe/aem-core-cif-components#multi-store--site-configuration)
+* [AEM CIF kärnkomponenter - konfiguration av flera butiker/platser](https://github.com/adobe/aem-core-cif-components#multi-store--site-configuration)
 * [Använda Multi-Site Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/translation/multi-site-manager-feature-video-use.html)
 * [Återanvända innehåll: Multi Site Manager och Live Copy](/help/sites-cloud/administering/msm/overview.md)

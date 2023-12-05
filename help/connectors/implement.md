@@ -1,20 +1,20 @@
 ---
-title: Implementera en AEM-anslutning
+title: Implementera en AEM Connector
 description: Lär dig hur du bygger, testar och implementerar en AEM. Du lär dig också om vanliga integreringsmönster.
 exl-id: 70024424-8c52-493e-bbc9-03d238b8a5f5
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '980'
-ht-degree: 6%
+source-wordcount: '935'
+ht-degree: 5%
 
 ---
 
-Implementera en AEM-anslutning
+Implementera en AEM Connector
 =============================
 
 Nedan finns användbara referenser för att bygga [AEM-kopplingar](https://www.adobe.io/apis/experiencecloud/aem/aemconnectors.html) och de bör läsas tillsammans med riktlinjerna för hur kopplingar [skickas in](submit.md) och [underhålls](maintain.md).
 
-Observera att en utvecklarlicens för AEM kan hämtas via [Adobe Exchange Program](https://partners.adobe.com/exchangeprogram/experiencecloud).
+En utvecklarlicens för AEM kan fås via [Adobe Exchange Program](https://partners.adobe.com/exchangeprogram/experiencecloud).
 
 Vanliga integreringsmönster
 ---------------------------

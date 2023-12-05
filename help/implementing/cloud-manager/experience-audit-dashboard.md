@@ -2,9 +2,9 @@
 title: Kontrollpanelen för Experience Audit
 description: Läs om hur Experience Audit validerar er distributionsprocess och ser till att de ändringar som driftsätts uppfyller grundläggande standarder för prestanda, tillgänglighet, bästa praxis och SEO via ett tydligt och informativt gränssnitt.
 exl-id: 6d33c3c5-258c-4c9c-90c2-d566eaeb14c0
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Läs om hur Experience Audit validerar er distributionsprocess och ser till att 
 >
 >Mer information om den befintliga funktionen Experience Audit för AEM as a Cloud Service finns i [Testning av Experience Audit](/help/implementing/cloud-manager/experience-audit-testing.md).
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Experience Audit är en funktion i Cloud Manager Sites Production pipelines som validerar distributionsprocessen och hjälper till att säkerställa att ändringar som distribueras:
 
@@ -77,7 +77,7 @@ I **Ljushetsmusik** finns en trendvy över de olika poängen. Välj **Prestanda*
 
 ![Diagram över bakgrundsmusik](assets/lighthouse-scores.png)
 
-Observera att varje punkt i diagrammet är genomsnittet för alla distributioner under den aktuella månaden.
+Varje punkt i diagrammet är genomsnittet för alla distributioner under den aktuella månaden.
 
 Om du vill gå tillbaka till sidan där produktionsflödet körs väljer du bara bakåtpilen i webbläsaren.
 

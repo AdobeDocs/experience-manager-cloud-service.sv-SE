@@ -9,9 +9,9 @@ topic-tags: Configuration
 feature: Asset Management, Configuration
 role: Admin
 exl-id: e96c8d68-74a6-4d61-82dc-20e619338d4b
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '1626'
+source-wordcount: '1601'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ Låt oss nu konfigurera transkriberingen i den här videoprofilen. Navigera till
 
 När bearbetningsprofilen har konfigurerats för transkription av ljud- och videofiler kan du använda den här bearbetningsprofilen för mappar på något av följande sätt:
 
-* Välj en bearbetningsprofildefinition i **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]** och använda **[!UICONTROL Apply Profile to Folder(s)]** åtgärd. I innehållsläsaren kan du navigera till en viss mapp, välja en mapp och bekräfta programmet för profilen.
+* Välj en bearbetningsprofildefinition i **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]** och använda **[!UICONTROL Apply Profile to Folders]** åtgärd. I innehållsläsaren kan du navigera till en viss mapp, välja en mapp och bekräfta programmet för profilen.
 * Välj en mapp i Assets-användargränssnittet och klicka på **[!UICONTROL Properties]** åtgärd för att öppna mappegenskaper. Klicka på **[!UICONTROL Asset Processing]** och väljer lämplig bearbetningsprofil för mappen på **[!UICONTROL Processing Profile]** lista. Klicka på **[!UICONTROL Save & Close]**.
 
   ![configure-transcription-service](assets/video-processing-profile3.png)
@@ -168,14 +168,14 @@ Logga in på [!DNL Azure Media Services] konto med samma inloggningsuppgifter (s
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)

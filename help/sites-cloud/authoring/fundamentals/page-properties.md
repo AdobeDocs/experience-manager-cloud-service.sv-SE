@@ -2,9 +2,9 @@
 title: Redigera sidegenskaper
 description: Lär dig hur du definierar de egenskaper som krävs för att hantera en sida i AEM.
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2270'
+source-wordcount: '2268'
 ht-degree: 2%
 
 ---
@@ -81,7 +81,7 @@ Egenskaperna fördelas på flera flikar.
 
   >[!CAUTION]
   >
-  >Alternativa URL:er:
+  >Vanity URL:er:
   >
   >* Måste vara unikt så du bör vara försiktig med att värdet inte redan används av en annan sida.
   >* Använd inte regex-mönster.
@@ -166,11 +166,11 @@ Egenskaperna fördelas på flera flikar.
    * **Välj bild** - Välj en befintlig resurs som ska användas som miniatyrbild
    * **Återställ** - Det här alternativet blir tillgängligt när du har ändrat miniatyrbilden. Om du inte vill behålla ändringen kan du återställa den innan du sparar.
 
-### Cloud Services {#cloud-services}
+### Cloud Service {#cloud-services}
 
 * **Cloud Service Configurations** - Definiera egenskaper för molntjänster
 
-### Personanpassning {#personalization}
+### Personalisering {#personalization}
 
 * **ContextHub-konfigurationer**
 

@@ -2,9 +2,9 @@
 title: Skapa innehåll med den universella redigeraren
 description: Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
 exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2398'
+source-wordcount: '2387'
 ht-degree: 0%
 
 ---
@@ -232,7 +232,7 @@ Beroende på vilken typ av komponent du väljer kan information visas och ändra
 
 ![Komponentinformation](assets/component-details.png)
 
-Observera att inte alla komponenter har information som kan visas och/eller redigeras.
+Alla komponenter har inte information som kan visas och/eller redigeras.
 
 >[!TIP]
 >
@@ -300,7 +300,7 @@ Det är enkelt och intuitivt att redigera innehåll. I [komponentläge](#compone
 
 >[!TIP]
 >
->Observera att när du trycker eller klickar på innehåll i komponentläget markeras det för redigering. Om du vill navigera i innehållet genom att följa länkar växlar du till [förhandsgranskningsläge.](#preview-mode)
+>Om du trycker eller klickar på innehåll i komponentläget markeras det för redigering. Om du vill navigera i innehållet genom att följa länkar växlar du till [förhandsgranskningsläge.](#preview-mode)
 
 Beroende på vilket innehåll du väljer kan du ha olika redigeringsalternativ på plats och du kan få ytterligare information och alternativ för innehållet i [Egenskaper.](#properties-rail)
 
@@ -407,7 +407,7 @@ Komponenterna ordnas om i både innehållsträdet och i redigeraren
 
 När du är klar med redigeringen av innehållet vill du ofta navigera i det och se hur det ser ut i innehållet på andra sidor. I [förhandsgranskningsläge](#preview-mode) Du kan klicka på länkar för att navigera i innehållet som en läsare skulle kunna. Innehållet återges i redigeraren på samma sätt som det publiceras.
 
-Observera att när du trycker eller klickar på ett innehåll i förhandsgranskningsläget fungerar det som om det gjordes för en läsare av innehållet. Om du vill markera innehållet för redigering växlar du till [komponentläge.](#component-mode)
+I förhandsgranskningsläget fungerar knapptryckning eller klickning på innehåll på samma sätt som för en läsare av innehållet. Om du vill markera innehållet för redigering växlar du till [komponentläge.](#component-mode)
 
 ## Ytterligare resurser {#additional-resources}
 

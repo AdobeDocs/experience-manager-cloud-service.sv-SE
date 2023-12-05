@@ -2,7 +2,7 @@
 title: Projektinställningar
 description: Lär dig hur AEM byggs med Maven och de standarder du måste följa när du skapar ditt eget projekt.
 exl-id: 76af0171-8ed5-4fc7-b5d5-7da5a1a06fa8
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
 source-wordcount: '1399'
 ht-degree: 0%
@@ -120,7 +120,7 @@ Så här använder du en lösenordsskyddad Maven-databas i Cloud Manager:
 När Cloud Manager-byggprocessen startar:
 
 * The `<servers>` -elementet i den här filen sammanfogas med standardvärdet `settings.xml` som tillhandahålls av Cloud Manager.
-   * Server-ID:n som börjar med `adobe` och `cloud-manager` betraktas som reserverade och bör inte användas av anpassade servrar.
+   * Server-ID:n som börjar med `adobe` och `cloud-manager` betraktas som reserverade. Använd dem inte på anpassade servrar.
    * Server-ID:n som inte matchar något av dessa prefix eller standard-ID:t `central` kommer aldrig att speglas av Cloud Manager.
 * När den här filen är på plats refereras server-ID:t inifrån en `<repository>` och/eller `<pluginRepository>` -elementet inuti `pom.xml` -fil.
 * I allmänhet gäller följande `<repository>` och/eller `<pluginRepository>` -element finns inuti en [Cloud Manager-specifik profil](#activating-maven-profiles-in-cloud-manager)även om det inte är absolut nödvändigt.

@@ -2,10 +2,10 @@
 title: Hur konfigurerar jag USC (Unified Storage Connector) för AEM Forms?
 description: Lär dig hantera USC (Unified Storage Connector) för AEM Forms. Använd USC (Unified Storage Connector) för att ansluta AEM Forms till externa datalagringsplatser.
 exl-id: c93d0242-0c15-4d69-82a1-d6fcc7da4bae
-source-git-commit: c33f59cb56decf1e5bbbe0b5bb084e906585e702
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '581'
-ht-degree: 1%
+source-wordcount: '582'
+ht-degree: 0%
 
 ---
 
@@ -26,10 +26,10 @@ Innan du utför dessa steg måste du se till att du har en [!DNL Azure] lagrings
 Så här skapar du en [!DNL Azure] lagringskonfiguration:
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Azure Storage]**.
-1. Välj en mapp för att skapa konfigurationen och tryck på **[!UICONTROL Create]**.
+1. Välj en mapp för att skapa konfigurationen och välj **[!UICONTROL Create]**.
 1. Ange en rubrik för konfigurationen i dialogrutan **[!UICONTROL Title]** fält.
 1. Ange namnet på [!DNL Azure] lagringskonto i **[!UICONTROL Azure Storage Account]** fält.
-1. Ange nyckeln för åtkomst till Azure-lagringskontot i **[!UICONTROL Azure Access Key]** fält och knacka **[!UICONTROL Save]**.
+1. Ange nyckeln för åtkomst till Azure-lagringskontot i **[!UICONTROL Azure Access Key]** fält och markera **[!UICONTROL Save]**.
 
 ### Konfigurera USC (Unified Storage Connector) för AEM {#configure-unified-storage-connector-workflows}
 
@@ -39,17 +39,17 @@ Utför följande steg för att konfigurera USC (Unified Storage Connector) för 
 
 1. I **[!UICONTROL Workflow]** avsnitt, Välj **[!UICONTROL Azure]** från listrutan Lagring.
 1. Ange [konfigurationssökväg för Azure-lagringskonfigurationen](#create-azure-storage-configuration) i **[!UICONTROL Storage Configuration Path]** fält.
-1. Tryck **[!UICONTROL Publish]** och sedan trycka **[!UICONTROL Save]** för att spara konfigurationen.
+1. Välj **[!UICONTROL Publish]** och sedan **[!UICONTROL Save]** för att spara konfigurationen.
 
 ### Konfigurera en AEM arbetsflödesmodell för extern datalagring {#configure-workflow-external-data-storage}
 
 Utför följande steg för att konfigurera en AEM arbetsflödesmodell för en extern datalagring:
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
-1. Välj ett modellnamn och tryck **[!UICONTROL Edit]**.
-1. Tryck på ikonen Sidinformation och tryck på **[!UICONTROL Open Properties]**.
+1. Välj ett modellnamn och välj **[!UICONTROL Edit]**.
+1. Välj ikonen Sidinformation och välj **[!UICONTROL Open Properties]**.
 1. Välj **[!UICONTROL Externalize workflow data storage]**.
-1. Tryck **[!UICONTROL Save & Close]** för att spara egenskaperna.
+1. Välj **[!UICONTROL Save & Close]** för att spara egenskaperna.
 
 >[!NOTE]
 >

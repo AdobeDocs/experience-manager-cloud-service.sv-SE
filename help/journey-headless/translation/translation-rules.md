@@ -2,9 +2,9 @@
 title: Konfigurera översättningsregler för Headless-innehåll
 description: Lär dig hur du definierar översättningsregler för att identifiera innehåll för översättning.
 exl-id: 878ffd5d-0f10-4990-9779-bdf55cd95fac
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '912'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ I **Översättningskonfiguration** Gränssnittet innehåller flera alternativ f�
    ![Lägg till kontext](assets/add-translation-context.png)
 1. Använd sökvägsläsaren för att välja önskad sökväg och markera **Bekräfta** att spara. Kom ihåg att innehållsfragment, som innehåller headless-innehåll, vanligtvis finns under `/content/dam/<your-project>`.
    ![Markera banan](assets/select-context.png)
-1. Markera den kontext du just skapade och välj sedan **Redigera**. Då öppnas **Redigerare för översättningsregler** för att konfigurera egenskaperna.
+1. Markera den kontext du skapade och markera sedan **Redigera**. Då öppnas **Redigerare för översättningsregler** för att konfigurera egenskaperna.
    ![Redigerare för översättningsregler](assets/translation-rules-editor.png)
 1. Som standard ärvs alla konfigurationer från den överordnade sökvägen, i det här fallet `/content/dam`. Avmarkera alternativet **Ärv från`/content/dam`** så att du kan lägga till fler fält i konfigurationen.
 1. När avmarkerat, under **Allmänt** i listan lägger du till egenskapsnamnen för de innehållsfragmentmodeller som du [som tidigare identifierats som fält för översättning.](getting-started.md#content-models)

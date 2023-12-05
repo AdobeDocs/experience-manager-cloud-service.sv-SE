@@ -2,16 +2,16 @@
 title: Hantera stora innehållsdatabaser
 description: I det här avsnittet beskrivs hantering av stora innehållsdatabaser
 exl-id: 21bada73-07f3-4743-aae6-2e37565ebe08
-source-git-commit: 858e10f99e2015a1488bb9e1d0990a553c5f6d04
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '1835'
+source-wordcount: '1800'
 ht-degree: 0%
 
 ---
 
 # Hantera stora innehållsdatabaser {#handling-large-content-repositories}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_precopy"
@@ -179,7 +179,7 @@ Loggposterna från AzCopy visas i extraheringsloggen och har prefixet c.a.g.s.m.
 > Under de första minuterna av en extrahering bör du noggrant se efter om det finns några tecken på ett problem i extraheringsloggarna. Här är till exempel vad som skulle loggas om Azure-källbehållaren inte kunde hittas:
 
 ```
-[AzCopy pre-copy] failed to perform copy command due to error: cannot start job due to error: cannot list files due to reason -> github.com/Azure/azure-storage-blob-go/azblob.newStorageError, github.com/Azure/azure-storage-blob-go@v0.10.1-0.20210407023846-16cf969ec1c3/azblob/zc_storage_error.go:42
+[AzCopy pre-copy] failed to perform copy command due to error: cannot start job due to error: cannot list files due to reason > github.com/Azure/azure-storage-blob-go/azblob.newStorageError, github.com/Azure/azure-storage-blob-go@v0.10.1-0.20210407023846-16cf969ec1c3/azblob/zc_storage_error.go:42
 [AzCopy pre-copy] ===== RESPONSE ERROR (ServiceCode=ContainerNotFound) =====
 [AzCopy pre-copy] Description=The specified container does not exist.
 [AzCopy pre-copy] RequestId:5fb674b9-201e-001b-2a5b-527400000000

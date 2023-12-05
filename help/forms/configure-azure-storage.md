@@ -2,9 +2,9 @@
 title: Hur konfigurerar jag Azure-lagring?
 description: Lär dig hur du integrerar formulär med Azure-lagringsservern.
 exl-id: 606383b3-293c-43d2-9ba0-5843c4e0caa8
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -26,10 +26,10 @@ ht-degree: 0%
 Innan du utför dessa steg måste du se till att du har en [!DNL Azure] lagringskonto och en åtkomstnyckel för att auktorisera åtkomst till [!DNL Azure] lagringskonto.
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Azure Storage]**.
-1. Välj en mapp för att skapa konfigurationen och tryck på **[!UICONTROL Create]**.
+1. Välj en mapp för att skapa konfigurationen och välj **[!UICONTROL Create]**.
 1. Ange en rubrik för konfigurationen i dialogrutan **[!UICONTROL Title]** fält.
 1. Ange namnet på [!DNL Azure] lagringskonto i **[!UICONTROL Azure Storage Account]** fält.
-1. Ange nyckeln för åtkomst till Azure-lagringskontot i **[!UICONTROL Azure Access Key]** fält och knacka **[!UICONTROL Save]**.
+1. Ange nyckeln för åtkomst till Azure-lagringskontot i **[!UICONTROL Azure Access Key]** fält och markera **[!UICONTROL Save]**.
 
 ## Skapa formulärdatamodell {#create-azure-form-data-model}
 
@@ -41,13 +41,13 @@ När du har skapat objekten för formulärdatamodell och datamodell kan du lägg
 
 Lägg till [!DNL Azure] tjänster:
 
-1. I redigeringsläget väljer du tjänsterna i **[!UICONTROL Services]** till vänster och tryck **[!UICONTROL Add Selected]**. De valda tjänsterna visas i **[!UICONTROL Services]** i formulärdatamodellen.
+1. I redigeringsläget väljer du tjänsterna i **[!UICONTROL Services]** i den vänstra rutan och väljer **[!UICONTROL Add Selected]**. De valda tjänsterna visas i **[!UICONTROL Services]** i formulärdatamodellen.
 
    ![Lägg till markerade tjänster](assets/select-services.png)
 
 1. I **[!UICONTROL Services]** väljer du tjänsten och **[!UICONTROL Edit Properties]**. Definiera tjänstens in- eller utdatamodellsobjekt baserat på tjänsten.
 
-1. Tryck **[!UICONTROL Save]** för att spara formulärdatamodellen.
+1. Välj **[!UICONTROL Save]** för att spara formulärdatamodellen.
 
    Följande tabell beskriver tillgängliga [!DNL Azure] tjänster:
 
@@ -92,9 +92,9 @@ Lägg till [!DNL Azure] tjänster:
 
 Så här definierar du en objektegenskap för datamodell som en söknyckel:
 
-1. I **[!UICONTROL Model]** väljer du datamodellens objektegenskap och trycker på **[!UICONTROL Edit Properties]**.
+1. I **[!UICONTROL Model]** väljer du datamodellens objektegenskap och väljer **[!UICONTROL Edit Properties]**.
 1. Byt **[!UICONTROL Search Key]** växla till ON-läge. Det här alternativet är bara tillgängligt för primära datatyper.
-1. Tryck **[!UICONTROL Done]** och sedan trycka **[!UICONTROL Save]** för att spara formulärdatamodellen.
+1. Välj **[!UICONTROL Done]** och sedan **[!UICONTROL Save]** för att spara formulärdatamodellen.
 
 När du har definierat egenskaper för datamodellsobjekt som söknycklar lagras hash-värdena i Azure-indextaggar och Base64-kodade värden lagras i Azure-metadata.
 

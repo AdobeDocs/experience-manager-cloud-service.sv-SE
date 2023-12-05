@@ -2,10 +2,10 @@
 title: Asynkrona jobb
 description: Adobe Experience Manager optimerar prestanda genom att asynkront slutföra vissa resurskrävande uppgifter som bakgrundsåtgärder.
 exl-id: 9c5c4604-1290-4dea-a14d-08f3ab3ef829
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 71%
+source-wordcount: '801'
+ht-degree: 66%
 
 ---
 
@@ -29,7 +29,7 @@ Du kan visa status för asynkrona jobb från **[!UICONTROL Background Operations
 >
 >Mer information finns i [konfigurationer av kön](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#queue-configurations).
 
-## Övervaka statusen för asynkrona åtgärder {#monitor-the-status-of-asynchronous-operations}
+## Övervaka status för asynkrona åtgärder {#monitor-the-status-of-asynchronous-operations}
 
 När AEM bearbetar en åtgärd asynkront får du ett meddelande i din [inkorg](/help/sites-cloud/authoring/getting-started/inbox.md) och via e-post (om den är aktiverad).
 
@@ -55,7 +55,7 @@ Gå till sidan **[!UICONTROL Background Operations]** för att se detaljerad sta
 
    ![stop_icon](assets/async-stop-icon.png)
 
-1. Välj åtgärden och klicka på **[!UICONTROL Open]** i verktygsfältet för att se ytterligare information såsom beskrivning och loggar.
+1. Om du vill visa extra information, till exempel beskrivning och loggar, markerar du åtgärden och klickar på **[!UICONTROL Open]** i verktygsfältet.
 
    ![open_icon](assets/async-open-icon.png)
 
@@ -77,7 +77,7 @@ Det finns flera alternativ runt asynkrona jobb som kan konfigureras. I följande
 >
 >[OSGi-konfigurationer](/help/implementing/deploying/configuring-osgi.md#creating-osgi-configurations) anses ha muterbart innehåll och sådana konfigurationer måste distribueras som ett innehållspaket för en produktionsmiljö.
 
-### Rensa slutförda jobb {#purging-completed-jobs}
+### Töm slutförda jobb {#purging-completed-jobs}
 
 AEM kör ett rensningsjobb varje dag klockan 01:00 för att ta bort slutförda asynkrona jobb som är mer än en dag gamla.
 
@@ -109,7 +109,7 @@ Om antalet resurser eller mappar som ska tas bort överstiger gränsvärdet utf�
 1. Markera alternativet **Enable email notification** för att få e-postmeddelanden för den här jobbstatusen. till exempel om det lyckades, misslyckades.
 1. Spara ändringarna.
 
-### Konfigurera asynkrona åtgärder för att flytta resurser {#configuring-asynchronous-move-operations}
+### Konfigurera asynkrona åtgärder för flyttning av tillgångar {#configuring-asynchronous-move-operations}
 
 Om antalet resurser/mappar eller referenser som ska flyttas överstiger gränsvärdet utförs flytten asynkront.
 

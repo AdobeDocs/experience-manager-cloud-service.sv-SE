@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 5be0c5e347d2ec7ef660a701c8c6faf6a2d6d17a
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1279'
+source-wordcount: '1278'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ Titta på videon med versionsöversikten för november 2023 om du vill se en sam
 
 ### Nya funktioner i [!DNL Forms] prerelease {#prerelease-features-forms}
 
-* **[Ansluta en adaptiv Forms med Microsoft® SharePoint List](/help/forms/configure-submit-actions-core-components.md#submit-to-sharepoint)**: AEM Forms erbjuder en OOTB-integrering för att skicka in formulärdata direkt till SharePoint List, vilket gör att du kan utnyttja SharePoint Lists funktioner. Du kan konfigurera Microsoft SharePoint List som en datakälla för en formulärdatamodell och använda **Skicka med formulärdatamodell** skicka-åtgärd för att ansluta ett adaptivt formulär till SharePoint List.
+* **[Ansluta en adaptiv Forms med Microsoft® SharePoint List](/help/forms/configure-submit-actions-core-components.md#submit-to-sharepoint)**: AEM Forms erbjuder en OOTB-integrering för att skicka formulärdata direkt till SharePoint List, så att du kan använda funktionerna i SharePoint Lists. Du kan konfigurera Microsoft SharePoint List som en datakälla för en formulärdatamodell och använda **Skicka med formulärdatamodell** skicka-åtgärd för att ansluta ett adaptivt formulär till SharePoint List.
 
 <!-- 
 
@@ -105,7 +105,7 @@ Titta på videon med versionsöversikten för november 2023 om du vill se en sam
 
 * **[Skicka ett anpassat formulär till Adobe Workfront Fusion Scenario](/help/forms/submit-adaptive-form-to-workfront-fusion.md)**: Forms as a Cloud Service har ett körklart alternativ för smidig anslutning av adaptiva formulär till Adobe Workfront. Detta förenklar processen att skicka in ett adaptivt formulär till ett Adobe Workfront-scenario, vilket gör att du kan utlösa ett Workfront Fusion-scenario när ett adaptivt formulär skickas in.
 
-* **[Stöd för språk från höger till vänster](/help/forms/supporting-new-language-localization-core-components.md)**: Adaptiv Forms som bygger på kärnkomponenter kan nu presenteras på höger-till-vänster-språk (RTL) som arabiska, persiska och urdu. RTL-språken talas av över 2 miljarder människor globalt. Med hjälp av ett formulär på RTL-språk kan ni utöka räckvidden för era adaptiva formulär så att de kan passa olika målgrupper och utnyttja RTL-marknader. I vissa regioner är det också ett juridiskt mandat att tillhandahålla formulär på det lokala språket. Genom att ta hand om lokala språk kan ni inte bara öppna dörrar för en bredare publik utan också säkerställa att relevanta lagar och bestämmelser följs.
+* **[Stöd för språk från höger till vänster](/help/forms/supporting-new-language-localization-core-components.md)**: Adaptiv Forms som bygger på kärnkomponenter kan nu presenteras på höger-till-vänster-språk (RTL) som arabiska, persiska och urdu. RTL-språken talas av över 2 miljarder människor globalt. Genom att använda ett formulär på RTL-språk kan ni utöka räckvidden för era adaptiva formulär så att de kan anpassas till dessa olika målgrupper och väljas ut på RTL-marknader. I vissa regioner är det också ett juridiskt mandat att tillhandahålla formulär på det lokala språket. Genom att ta hand om lokala språk kan ni inte bara öppna dörrar för en bredare publik utan också säkerställa att relevanta lagar och bestämmelser följs.
 
   ![Stöd för höger-till-vänster-språk](/help/forms/assets/right-to-left-language-support.png)
 

@@ -2,23 +2,23 @@
 title: Creating Accessible Content for Adobe Experience Manager as a Cloud Service (WCAG 2.1-överensstämmelse)
 description: Använd AEM as a Cloud Service för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 exl-id: 294fd1ed-9b4a-42cb-8f9e-e7a5d7e6930e
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '13859'
-ht-degree: 3%
+source-wordcount: '13685'
+ht-degree: 2%
 
 ---
 
-# Skapa tillgängligt innehåll (WCAG 2.1-överensstämmelse) {#creating-accessible-content-wcag-conformance}
+# Skapa hjälpmedelsanpassat innehåll (WCAG 2.1-överensstämmelse) {#creating-accessible-content-wcag-conformance}
 
-The [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG/) upprättas av [en arbetsgrupp inom World Wide Web Consortium](https://www.w3.org/grupper/#Accessibility_guidelines_working_group). Det består av en uppsättning teknikoberoende riktlinjer och framgångskriterier som gör webbinnehåll tillgängligt för och användbart för personer med funktionshinder.
+The [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG/) upprättas av [en arbetsgrupp inom World Wide Web Consortium](https://www.w3.org/groups/#Accessibility_Guidelines_Working_Group). Det består av en uppsättning teknikoberoende riktlinjer och framgångskriterier som gör webbinnehåll tillgängligt för och användbart för personer med funktionshinder.
 
 Som en introduktion tillhandahåller konsortiet en serie sektioner och styrkande dokument:
 
 * [Nya funktioner i WCAG 2.1](https://www.w3.org/TR/WCAG/#new-features-in-wcag-2-1)
-* [Så här uppfyller du WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/)
-* [Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/)
-* [Techniques for WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/)
+* [Hur WCAG 2.1 fungerar](https://www.w3.org/WAI/WCAG21/quickref/)
+* [Om WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/)
+* [Tekniker för WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/)
 * [WCAG-dokument](https://www.w3.org/WAI/standards-guidelines/wcag/docs/)
 
 Se även:
@@ -335,7 +335,7 @@ Du kan se till att dina webbsidor får rätt struktur genom att använda följan
 
   >[!NOTE]
   >
-  Som standard är dessa element och attribut inte direkt tillgängliga, men systemadministratören kan lägga till stöd för dessa värden i dialogrutan **Tabellegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/implementing/developing/extending/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+  Som standard är dessa element och attribut inte direkt tillgängliga, men det är möjligt för systemadministratören att lägga till stöd för dessa värden i **Tabellegenskaper** (se [Stöd för ytterligare element och attribut i HTML](/help/implementing/developing/extending/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
 
   Öppna **Tabell** där du kan välja **Tabellegenskaper** tab:
 
@@ -357,7 +357,7 @@ Du kan se till att dina webbsidor får rätt struktur genom att använda följan
      >
      De är i själva verket desamma, men `<strong>` och `<em>` är att föredra eftersom de är semantiskt korrekta i html. Utvecklingsteamet kan konfigurera RTE att använda `<strong>` och `<em>` (i stället för `<b>` och `<i>`) när du utvecklar din projektinstans.
 
-* **Komplexa datatabeller**: Om det finns komplexa tabeller med två eller flera rubriknivåer kan det hända att de grundläggande tabellegenskaperna inte räcker till för att ge all nödvändig strukturinformation. För den här typen av komplexa tabeller måste direkta relationer skapas mellan rubrikerna och deras relaterade celler med hjälp av attributen **header** och **id.**
+* **Komplexa datatabeller**: Om det finns komplexa tabeller med två eller flera rubriknivåer kan det hända att de grundläggande tabellegenskaperna inte räcker till för att ge all nödvändig strukturinformation. För den här typen av komplexa tabeller måste direkta relationer skapas mellan rubrikerna och deras relaterade celler med hjälp av **header** och **id** attribut.
 
   >[!NOTE]
   >
@@ -1195,7 +1195,7 @@ Där bildknappar används (till exempel **Bildknapp** komponenten i WKND-projekt
 
 I WKND-projektet, där det finns en grupp med relaterade kontroller, till exempel **Alternativgrupp**, kan en titel behövas för gruppen och enskilda kontroller. När du lägger till en uppsättning med alternativknappar i AEM visas den här grupptiteln i fältet **Titel**, medan enskilda titlar anges när alternativknapparna (**Objekt**) skapas.
 
-Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativknapparna själva. Mallredigerare måste kapsla in titeln i de nödvändiga `fieldset`- och `legend`-taggarna för att skapa den här kopplingen. Detta kan bara göras genom att redigera sidans källkod. En systemadministratör kan också lägga till stöd för dessa element så att de visas i dialogrutan **Fältegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/implementing/developing/extending/rte-accessible-content.md)).
+Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativknapparna själva. Mallredigerare måste kapsla in titeln i de nödvändiga `fieldset`- och `legend`-taggarna för att skapa den här kopplingen. Detta kan bara göras genom att redigera sidans källkod. En systemadministratör kan också lägga till stöd för dessa element så att de visas i **Fältegenskaper** dialogruta (se [Stöd för ytterligare element och attribut i HTML](/help/implementing/developing/extending/rte-accessible-content.md)).
 
 ###### Ytterligare överväganden för Forms {#additional-considerations-for-forms}
 

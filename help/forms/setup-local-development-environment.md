@@ -2,10 +2,10 @@
 title: Hur konfigurerar jag en lokal utvecklingsmiljö för AEM Forms?
 description: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
 exl-id: 12877a77-094f-492a-af58-cffafecf79ae
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2840'
-ht-degree: 1%
+source-wordcount: '2676'
+ht-degree: 0%
 
 ---
 
@@ -89,7 +89,7 @@ Om du vill hämta den senaste versionen av Adobe Experience Manager as a Cloud S
 1. Navigera till fliken **[!UICONTROL AEM as a Cloud Service]**.
 1. Sortera efter publicerat datum i fallande ordning.
 1. Klicka på den senaste versionen av Adobe Experience Manager as a Cloud Service SDK, Experience Manager Forms feature archive (AEM Forms-tillägg), formulärreferensmaterial eller Forms Designer.
-1. Granska och godkänn slutanvändaravtalet. Tryck på **[!UICONTROL Download]** -knappen.
+1. Granska och godkänn slutanvändaravtalet. Välj **[!UICONTROL Download]** -knappen.
 
 ## Ställ in utvecklingsverktyg för AEM projekt {#setup-development-tools-for-AEM-projects}
 
@@ -297,7 +297,7 @@ Detaljerade anvisningar om hur du konfigurerar Dispatcher finns i [Konfigurera l
 Så här konfigurerar du Dispatcher-cachen för Experience Manager Forms as a Cloud Service:
 
 1. Öppna AEM och gå till `\src\conf.dispatcher.d\available_farms`
-1. Skapa en kopia av `default.farm` -fil. Till exempel, `forms.farm`.
+1. Skapa en kopia av `default.farm` -fil. Till exempel: `forms.farm`.
 1. Öppna den skapade `forms.farm` -fil för redigering och ersättning av följande kod:
 
    ```json

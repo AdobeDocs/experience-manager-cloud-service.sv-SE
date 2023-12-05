@@ -2,9 +2,9 @@
 title: Anpassade behörigheter
 description: Lär dig hur du kan använda anpassade behörigheter för att skapa anpassade behörighetsprofiler med konfigureringsbara behörigheter för att begränsa åtkomst till program, pipelines och miljöer för användare av Cloud Managers.
 exl-id: 167da985-7f19-45b3-90a3-884817907da2
-source-git-commit: be38ca5bf79d401fc12c1422c270a2ee84bbbad2
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1525'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ Om du vill skapa och använda egna behörigheter krävs det tre steg:
 1. [Tilldela anpassade behörigheter till produktprofilen.](#assign-permissions)
 1. [Tilldela användare till produktprofilen.](#assign-users)
 
-I det här avsnittet beskrivs dessa steg. Det kan vara praktiskt att använda [Villkor](#terms) och [Konfigurerbara behörigheter](#configurable-permissions) när du skapar egna behörigheter.
+I det här avsnittet beskrivs dessa steg. Det kan vara praktiskt att se [Villkor](#terms) och [Konfigurerbara behörigheter](#configurable-permissions) när du skapar egna behörigheter.
 
 >[!NOTE]
 >

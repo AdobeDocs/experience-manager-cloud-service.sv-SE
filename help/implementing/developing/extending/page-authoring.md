@@ -2,9 +2,9 @@
 title: Anpassa sidredigering
 description: Lär dig mer om de mekanismer som AEM as a Cloud Service har för att anpassa sidredigeringsfunktionerna.
 exl-id: 98d3c7ab-46d2-4e8d-b0da-5c8a7b398135
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '937'
 ht-degree: 0%
 
 ---

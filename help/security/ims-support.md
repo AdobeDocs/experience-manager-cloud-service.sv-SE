@@ -2,10 +2,10 @@
 title: IMS-stöd för Adobe Experience Manager as a Cloud Service
 description: Stöd för Image Management System i Adobe Experience Manager as a Cloud Service
 exl-id: fb563dbd-a761-4d83-9da1-58f8e462b383
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1978'
-ht-degree: 37%
+source-wordcount: '1917'
+ht-degree: 32%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 37%
 
 {{ims-group-profiles}}
 
-## Viktiga funktioner {#key-highlights}
+## Viktiga högdagrar {#key-highlights}
 
 AEM as a Cloud Service har endast stöd för IMS-autentisering för författare, administratörer och utvecklare. Det har inte stöd för externa slutanvändare på kundwebbplatser som webbplatsbesökare.
 
@@ -42,7 +42,7 @@ Användarens inloggningsflöde visas nedan, användaren omdirigeras till IMS och
 
 ## Konfigurera {#how-to-set-up}
 
-### Integrera organisationer i Adobe Admin Console {#onboarding-orgs-to-adobe-admin-console}
+### Integrering av organisationer i Adobe Admin Console {#onboarding-orgs-to-adobe-admin-console}
 
 Kunden måste registreras för Adobe Admin Console för att kunna använda Adobe IMS för AEM-autentisering.
 
@@ -55,7 +55,7 @@ När en kund finns som IMS-organisation måste han/hon konfigurera sitt system e
 ![IMS-integrering](/help/security/assets/ims2.png)
 
 1. Den utsedda systemadministratören får en inbjudan att logga in på Cloud Manager. Efter inloggning på Cloud Manager kan systemadministratörerna välja att etablera AEM-program och -miljöer eller navigera till Admin Console för administrativa uppgifter.
-1. Systemadministratören gör anspråk på en domän för att bekräfta ägarskap av domänen (till exempel acme.com).
+1. Systemadministratören gör anspråk på en domän för att bekräfta ägarskapet för respektive domän (till exempel acme.com)
 1. Systemadministratören ställer in användarkataloger.
 1. Systemadministratören gör IDP-konfiguration i Admin Console för att konfigurera enkel inloggning.
 1. AEM-administratören hanterar lokala grupper samt behörigheter och privilegier som vanligt.
@@ -64,7 +64,7 @@ Grunderna om Adobe Identity Management, inklusive IDP-konfiguration, beskrivs [h
 
 Användning av Enterprise Administration och Admin Console beskrivs [här](https://helpx.adobe.com/enterprise/admin-guide.html).
 
-### Integrera användare i Admin Console {#onboarding-users-in-admin-console}
+### Onboarding-användare i Admin Console {#onboarding-users-in-admin-console}
 
 Det finns tre sätt att introducera användare. Varje metod beror på kundens storlek och önskemål. Du kan skapa användare i Admin Console manuellt, överföra en CSV-fil eller synkronisera användare från kundens Enterprise Active Directory.
 
@@ -112,7 +112,7 @@ Adobe Developer Console Documentation finns [här](https://developer.adobe.com/d
 
 API:t för User Management som används av verktyget för användarsynkronisering beskrivs [här](https://adobe-apiplatform.github.io/user-sync.py/en/).
 
-## Adobe Experience as a Cloud Service-konfiguration {#aem-configuration}
+## as a Cloud Service konfiguration för Adobe Experience {#aem-configuration}
 
 >[!NOTE]
 >
@@ -126,7 +126,7 @@ Nedan visas de viktigaste OSGI-konfigurationerna som måste ändras för att än
 
 <!-- Arun to provide list of osgi configs -->
 
-## Användning {#how-to-use}
+## Använda {#how-to-use}
 
 ### Hantera produkter och användaråtkomst i Admin Console {#managing-products-and-user-access-in-admin-console}
 
@@ -234,7 +234,7 @@ Mer information om roller för användare som styr tillgängligheten av specifik
 1. När du har lagts till i rätt profil bör du kunna komma åt respektive innehavare i Cloud Manager via [Adobe Experience Cloud](https://my.cloudmanager.adobe.com) med hjälp av det övre högra hörnet i användargränssnittet.
 
 
-### Få tillgång till Experience Manager as a Cloud Service {#accessing-instance-cloud-service}
+### Åtkomst till en instans i AEM as a Cloud Service {#accessing-instance-cloud-service}
 
 >[!IMPORTANT]
 >Stegen som nämns i föregående avsnitt måste vara slutförda innan du beviljas åtkomst till en instans i AEM as a Cloud Service.

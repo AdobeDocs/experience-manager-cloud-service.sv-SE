@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: 9e94afeb-1c54-4653-bf52-b0910c0cb6c1
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '2497'
+source-wordcount: '2490'
 ht-degree: 5%
 
 ---
@@ -228,7 +228,7 @@ Metadatarv av resurser baseras på det schema som tillämpas på den översta ma
 1. I **[!UICONTROL Metadata Schema Forms]** väljer du `my_default` formulär och klicka sedan på **[!UICONTROL Edit]**.
 1. I **[!UICONTROL Metadata Schema Editor]** lägger du till ett textfält i schemaformuläret. Lägg till exempel till ett fält med etiketten **[!UICONTROL Category]**.
 1. Klicka på **[!UICONTROL Save]**. Det ändrade formuläret finns i listan i **[!UICONTROL Metadata Schema Forms]** sida.
-1. Välj **[!UICONTROL Apply to Folder(s)]** i verktygsfältet för att använda anpassade metadata i en mapp.
+1. Välj **[!UICONTROL Apply to Folders]** i verktygsfältet för att använda anpassade metadata i en mapp.
 1. Välj den mapp som det ändrade schemat ska tillämpas på och välj sedan **[!UICONTROL Apply]**.
 1. Om det andra metadataschemat används i mappen visas ett varningsmeddelande om att du håller på att skriva över det befintliga metadataschemat. Klicka **Skriv över**.
 1. Klicka **OK** för att stänga meddelandet om att åtgärden lyckades.
@@ -245,7 +245,7 @@ Du kan definiera obligatoriska fält på mappnivå, vilket tillämpas på resurs
 1. Klicka på Experience Manager-logotypen och navigera sedan till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**. Sidan **[!UICONTROL Metadata Schema Forms]** visas.
 1. Spara standardformuläret för metadata som ett anpassat formulär. Spara den som `my_default`.
 1. Redigera det anpassade formuläret. Lägg till ett obligatoriskt fält. Lägg till exempel till en **[!UICONTROL Category]** och gör fältet obligatoriskt.
-1. Klicka på **[!UICONTROL Save]**. Det ändrade formuläret finns i listan i **[!UICONTROL Metadata Schema Forms]** sida. Markera formuläret och markera det **[!UICONTROL Apply to Folder(s)]** i verktygsfältet för att använda anpassade metadata i en mapp.
+1. Klicka på **[!UICONTROL Save]**. Det ändrade formuläret finns i listan i **[!UICONTROL Metadata Schema Forms]** sida. Markera formuläret och markera det **[!UICONTROL Apply to Folders]** i verktygsfältet för att använda anpassade metadata i en mapp.
 1. Navigera till mappen och överför vissa resurser med saknade metadata för det obligatoriska fältet som du lade till i det anpassade formuläret. Ett meddelande om saknade metadata för det obligatoriska fältet visas i kortvyn för resursen.
 1. (Valfritt) Åtkomst `https://[server]:[port]/system/console/components/`. Konfigurera och aktivera `com.day.cq.dam.core.impl.MissingMetadataNotificationJob` som är inaktiverad som standard. Ange en frekvens som Experience Manager ska kontrollera om metadata för resurserna är giltiga.
 
@@ -262,13 +262,13 @@ Du kan definiera obligatoriska fält på mappnivå, vilket tillämpas på resurs
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)

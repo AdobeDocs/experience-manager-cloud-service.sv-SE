@@ -2,9 +2,9 @@
 title: Innehållsåterställning i AEM as a Cloud Service
 description: Lär dig hur du återställer AEM as a Cloud Service innehåll från en säkerhetskopia med hjälp av Cloud Manager.
 exl-id: 921d0c5d-5c29-4614-ad4b-187b96518d1f
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1157'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Lär dig hur du återställer AEM as a Cloud Service innehåll från en säkerhe
 >
 >Mer information om det befintliga säkerhetskopierings- och återställningssystemet för AEM as a Cloud Service finns i [Säkerhetskopiera och återställ i AEM as a Cloud Service](/help/operations/backup.md).
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Cloud Managers självbetjäningsåterställningsprocess kopierar data från säkerhetskopieringar av Adobe-system och återställer dem till den ursprungliga miljön. En återställning utförs för att returnera data som har gått förlorade, skadats eller tagits bort av misstag till det ursprungliga tillståndet.
 
@@ -111,7 +111,7 @@ The **Återställ aktivitet** visas status för de tio senaste återställningsb
 
 ![Återställ aktivitet](assets/backup-activity.png)
 
-Genom att klicka på informationsikonen för en säkerhetskopia kan du ladda ned loggar för den säkerhetskopian samt kontrollera kodinformationen, inklusive skillnaderna mellan ögonblicksbilden och data när återställningen initierades.
+Genom att klicka på informationsikonen för en säkerhetskopia kan du hämta loggar för den säkerhetskopian och kontrollera kodinformationen, inklusive skillnaderna mellan ögonblicksbilden och data när återställningen initierades.
 
 ## Säkerhetskopiering offline {#offsite-backup}
 

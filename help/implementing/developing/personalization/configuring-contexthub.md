@@ -2,9 +2,9 @@
 title: ContextHub konfigureras
 description: Lär dig hur du konfigurerar Context Hub, ett ramverk för lagring, manipulering och presentation av kontextdata.
 exl-id: 1fd7d41e-31ad-4838-8749-a5791edcfd63
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1629'
+source-wordcount: '1609'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Lägg till ett gränssnittsläge för att gruppera relaterade ContextHub-moduler
 1. Ange värden för följande egenskaper:
 
    * Rubrik för användargränssnittsläge: Den titel som identifierar användargränssnittsläget
-   * Lägesikon: Väljaren för [Coral UI icon](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) att använda, till exempel `coral-Icon--user`
+   * Lägesikon: Väljaren för [Coral UI icon](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) till exempel använda `coral-Icon--user`
    * Aktiverad: Välj det här alternativet om du vill visa användargränssnittsläget i verktygsfältet ContextHub
 
 1. Välj Spara.
@@ -78,7 +78,7 @@ Egenskaperna för användargränssnittsmodulen innehåller en detaljkonfiguratio
 
 1. I Experience Manager väljer du Verktyg > Webbplatser > ContextHub.
 1. Välj den konfigurationsbehållare som du vill lägga till en gränssnittsmodul i.
-1. Klicka på eller skriv den ContextHub-konfiguration som du vill lägga till gränssnittsmodulen i.
+1. Markera eller skriv den ContextHub-konfiguration som du vill lägga till gränssnittsmodulen i.
 1. Välj det användargränssnittsläge som du lägger till användargränssnittsmodulen i.
 1. Markera knappen Skapa och välj sedan ContextHub UI Module (generisk).
 

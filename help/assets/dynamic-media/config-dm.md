@@ -4,10 +4,10 @@ description: Lär dig hur du konfigurerar Dynamic Media i Adobe Experience Manag
 contentOwner: Rick Brough
 role: Admin,User
 exl-id: 8e07bc85-ef26-4df4-8e64-3c69eae91e11
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '3558'
-ht-degree: 2%
+source-wordcount: '3575'
+ht-degree: 1%
 
 ---
 
@@ -73,7 +73,7 @@ To migrate any custom viewer presets and configurations that you have created fr
 
    * Versaler
    * Gemener
-   * Siffra
+   * Nummer
    * Specialtecken: `# $ & . - _ : { }`
 
    The **[!UICONTROL Current Password]** fältet är avsiktligt ifyllt och dolt för interaktion.
@@ -105,7 +105,7 @@ To migrate any custom viewer presets and configurations that you have created fr
    >
    >När en mediefil har aktiverats publiceras alla uppdateringar direkt till S7 Delivery.
 
-   ![dynamicmediaconfiguration2updated](/help/assets/assets-dm/dynamicmediaconfigurationupdated.png)
+   ![dynamicmediaconfiguration2uppdaterad](/help/assets/assets-dm/dynamicmediaconfigurationupdated.png)
 
 1. Välj **[!UICONTROL Save]**. Det nya lösenordet och den nya konfigurationen för Dynamic Media sparas. Om du valde **[!UICONTROL Cancel]** i stället görs ingen lösenordsuppdatering.
 1. I **[!UICONTROL Configuring Dynamic Media]** väljer **[!UICONTROL OK]** för att starta konfigurationen.
@@ -162,7 +162,7 @@ Lösenordet måste innehålla minst ett av följande:
 
 * Versaler
 * Gemener
-* Siffra
+* Nummer
 * Specialtecken: `# $ & . - _ : { }`
 
 Om det behövs kan du kontrollera stavningen av ett lösenord som du har skrivit eller skrivit in igen genom att markera lösenordsikonen för att visa lösenordet. Klicka på ikonen igen om du vill dölja lösenordet.
@@ -262,7 +262,7 @@ Så här konfigurerar du standardfärgegenskaperna för aktivering av färgkorri
 1. Öppna [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)loggar sedan in på ditt konto med de autentiseringsuppgifter som anges under etableringen.
 1. Gå till **[!UICONTROL Setup > Application Setup]**.
 1. Expandera området **[!UICONTROL Publish Setup]** och markera **[!UICONTROL Image Server]**. Ange **[!UICONTROL Publish Context]** som **[!UICONTROL Image Serving]** när du anger standardvärden för publiceringsinstanser.
-1. Bläddra till den egenskap som du måste ändra, till exempel en egenskap i **[!UICONTROL Color Management Attributes]** område.
+1. Bläddra till egenskapen som du måste ändra, till exempel en egenskap i **[!UICONTROL Color Management Attributes]** område.
 Du kan ange följande egenskaper för färgkorrigering:
 
    | Egenskap | Beskrivning |
@@ -311,9 +311,9 @@ Se [Överför resurser](/help/assets/add-assets.md).
 1. Välj en MIME-typ i mappen mimeTypes.
 1. Till höger på CRXDE Lite-sidan i den nedre delen:
 
-   * Dubbeltryck på **[!UICONTROL enabled]** fält. Som standard är alla MIME-typer för resurser aktiverade (inställda på **[!UICONTROL true]**), vilket innebär att resurserna synkroniseras till Dynamic Media för bearbetning. Om du vill utesluta den här resursens MIME-typ från bearbetningen ändrar du den här inställningen till **[!UICONTROL false]**.
+   * Dubbelmarkera **[!UICONTROL enabled]** fält. Som standard är alla MIME-typer för resurser aktiverade (inställda på **[!UICONTROL true]**), vilket innebär att resurserna synkroniseras till Dynamic Media för bearbetning. Om du vill utesluta den här resursens MIME-typ från bearbetningen ändrar du den här inställningen till **[!UICONTROL false]**.
 
-   * Dubbelknacka **[!UICONTROL jobParam]** för att öppna det tillhörande textfältet. Se [MIME-typer som stöds](/help/assets/file-format-support.md) för en lista över tillåtna värden för bearbetningsparametrar som du kan använda för en viss MIME-typ.
+   * Dubbelmarkera **[!UICONTROL jobParam]** för att öppna det tillhörande textfältet. Se [MIME-typer som stöds](/help/assets/file-format-support.md) för en lista över tillåtna värden för bearbetningsparametrar som du kan använda för en viss MIME-typ.
 
 1. Gör något av följande:
    * Upprepa steg 3-4 för att redigera fler MIME-typer.
@@ -336,7 +336,7 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience
 
    ![2019-08-02_16-17-29](assets/2019-08-02_16-17-29.png)
 
-1. På sidan bläddrar du nedåt till namnet *Adobe CQ Scene7 Asset MIME type Service* enligt följande skärmbild. Tryck på **[!UICONTROL Edit the configuration values]** (pennikonen) till höger om namnet.
+1. På sidan bläddrar du nedåt till namnet *Adobe CQ Scene7 Asset MIME type Service* enligt följande skärmbild. Till höger om namnet väljer du **[!UICONTROL Edit the configuration values]** (pennikon).
 
    ![Redigera konfigurationsvärdena](assets/2019-08-02_16-44-56.png)
 
@@ -369,7 +369,7 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience
 
    ![Redigera en DWG-fil i CRXDE Lite](assets/crxdelite_cqdoc-14627.png)
 
-1. Med MIME-typen `image_vnd.dwg` fortfarande markerad, från **[!UICONTROL Properties]** -fliken, i **[!UICONTROL enabled]** rad, under **[!UICONTROL Value]** kolumnrubrik, dubbeltryck på värdet. The **[!UICONTROL Value]** listrutan öppnas.
+1. Med MIME-typen `image_vnd.dwg` fortfarande markerad, från **[!UICONTROL Properties]** -fliken, i **[!UICONTROL enabled]** rad, under **[!UICONTROL Value]** kolumnrubrik, dubbelmarkera värdet. The **[!UICONTROL Value]** listrutan öppnas.
 1. Typ `false` i fältet (eller markera **[!UICONTROL false]** från listrutan).
 
    ![Redigera MIME-typer i CRXDE Lite](assets/2019-08-02_16-60-30.png)

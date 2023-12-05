@@ -3,9 +3,9 @@ title: Hur skapar man repeterbara paneler i komponenter med adaptiv Form Core?
 description: Lär dig att skapa upprepningsbara avsnitt eller fält i en adaptiv form.
 role: Architect, Developer, Admin, User
 exl-id: 02521bf3-83c1-40a0-8fe6-23af240727e9
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1357'
+source-wordcount: '1256'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Om du vill upprepa en panel i formuläret eller ta bort repeterbara paneler anv�
 ![Fliken Tillgänglighet](/help/forms/assets/repeat-panel.png)
 
 Så här gör du en panel upprepningsbar:
-1. Välj en panelbehållare och tryck på ![cmppr](/help/forms/assets/cmppr.png).
+1. Välj en panelbehållare och markera ![cmppr](/help/forms/assets/cmppr.png).
 1. Klicka på **upprepningspanel** och växla **gör panelen upprepningsbar**.
 1. Ange **minsta repetitioner** som krävs för minst repeterbara avsnitt kan du ange **minsta repetitioner** till noll för att inte hämta paneler eller för att ta bort de upprepade panelerna. Som standard är värdet för minsta repetition noll.
 1. Ange **maximalt antal upprepningar** om du vill upprepa panelens antal gånger som krävs är värdet som standard oändligt.
@@ -63,7 +63,7 @@ Så här gör du en panel upprepningsbar:
 
 Panelens överordnade objekt som ska upprepas bör innehålla en Lägg till-knapp för att hantera upprepad instans av panelen. Följ de här stegen för att infoga knappar i det överordnade objektet och aktivera skript på knapparna:
 
-1. Lägg till en **knappkomponent** till panelens överordnade panel. I exempelvideon nedan är det en knappkomponent med etikettnamnet **Lägg till** och fältnamn **AddPanel**, används. Markera komponenten och tryck på ![edit-rules](/help/forms/assets/edit-rules.png). Reglerna för knappkomponenten öppnas i regelredigeraren.
+1. Lägg till en **knappkomponent** till panelens överordnade panel. I exempelvideon nedan är det en knappkomponent med etikettnamnet **Lägg till** och fältnamn **AddPanel**, används. Markera komponenten och markera ![edit-rules](/help/forms/assets/edit-rules.png). Reglerna för knappkomponenten öppnas i regelredigeraren.
 1. Klicka på **Skapa**.
 
    Välj **Visual Editor** på raden Formulärobjekt och -funktioner.
@@ -84,7 +84,7 @@ Panelens överordnade objekt som ska upprepas bör innehålla en Lägg till-knap
 
 Panelens överordnade panel bör innehålla en borttagningsknapp för att ta bort en instans av de repeterbara panelerna. Följ de här stegen för att infoga knappar i det överordnade objektet och aktivera skript på knapparna för att ta bort repeterbara paneler:
 
-1. Lägg till en **knappkomponent** till panelens överordnade, i videon nedan, en knappkomponent med etikettnamnet **delete** och fältnamn **DeletePanel** används. Markera komponenten och tryck på ![edit-rules](/help/forms/assets/edit-rules.png). Reglerna för knappkomponenten öppnas i regelredigeraren.
+1. Lägg till en **knappkomponent** till panelens överordnade, i videon nedan, en knappkomponent med etikettnamnet **delete** och fältnamn **DeletePanel** används. Markera komponenten och markera ![edit-rules](/help/forms/assets/edit-rules.png). Reglerna för knappkomponenten öppnas i regelredigeraren.
 1. Klicka på **Skapa**.
 
    Välj **Visual Editor** på raden Formulärobjekt och -funktioner.
@@ -151,8 +151,8 @@ Panelens överordnade panel bör innehålla en borttagningsknapp för att ta bor
 
 A panel has various layouts options. The Layout for accordian design option has out of the box support for repeatable panels. Perform the following steps to repeatable panel with Layout for accordian design option:
 
-1. On the parent of panel to be repeated, tap ![cmppr](assets/cmppr.png). You can see the properties in the sidebar. In the **Layout** drop-down, select **Accordion**.
-1. On a panel, which is to be repeated, tap ![cmppr](assets/cmppr.png). You can see the panel properties in the sidebar. Enable the **Make Panel Repeatable** tab, and specify value for the **Maximum** and **Minimum** fields.
+1. On the parent of panel to be repeated, select ![cmppr](assets/cmppr.png). You can see the properties in the sidebar. In the **Layout** drop-down, select **Accordion**.
+1. On a panel, which is to be repeated, select ![cmppr](assets/cmppr.png). You can see the panel properties in the sidebar. Enable the **Make Panel Repeatable** tab, and specify value for the **Maximum** and **Minimum** fields.
 
    Now, you can use the plus (+) and delete ( ![delete-panel](assets/delete-panel.png)) buttons to add and remove the panels.
 

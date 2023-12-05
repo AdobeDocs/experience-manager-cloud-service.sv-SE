@@ -6,10 +6,10 @@ mini-toc-levels: 1
 feature: Collections,Asset Management
 role: User
 exl-id: b0798adc-56a4-4577-b4ee-8d1fca3bff09
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2247'
-ht-degree: 14%
+source-wordcount: '2238'
+ht-degree: 13%
 
 ---
 
@@ -44,7 +44,7 @@ Du kan skapa en samling med [statiska referenser](#create-a-collection-with-stat
 
 ### Skapa en samling med statiska referenser {#create-a-collection-with-static-references}
 
-Du kan skapa en samling med statiska referenser, t.ex. en samling med referenser till resurser, mappar, samlingar, snurrsuppsättningar och bilduppsättningar.
+Du kan skapa en samling med statiska referenser, t.ex. en samling med referenser till resurser, mappar, samlingar, snurruppsättningar och bilduppsättningar.
 
 1. Navigera till **[!UICONTROL Collections]** konsol.
 1. Välj **[!UICONTROL Create]** i verktygsfältet.
@@ -140,7 +140,7 @@ Du kan redigera metadata för flera samlingar samtidigt. Med den här funktionen
    >
    >Tilläggsläget fungerar bara för fält som kan innehålla flera värden. För fält som bara kan innehålla ett enda värde läggs de nya metadata inte till i det befintliga värdet i fältet, även om du väljer **[!UICONTROL Append mode]**.
 
-## Sökning {#searching}
+## Sök {#searching}
 
 Sökfunktionen i samlingar har stöd för båda [Sök efter samlingar](#search-collections) och [Söka efter resurser i en samling](#search-within-collections).
 
@@ -231,7 +231,7 @@ Du kan lägga till en samling i en annan samling och på så sätt skapa en kaps
 
 I Assets-gränssnittet kan du söka efter eller filtrera resurser baserat på vissa regler, sökvillkor eller anpassade sökfasetter. Om du sparar dem som **[!UICONTROL Saved Searches]** kan du komma åt dem senare från listan **[!UICONTROL Saved Searches]** på panelen Filter. När du skapar en sparad sökning skapas även en smart samling.
 
-Sparade sökningar skapas när du skapar en smart samling. Smarta samlingar läggs automatiskt till i listan **[!UICONTROL Saved Searches]**. Frågan om sparade sökningar för samlingen sparas i egenskapen `dam:query` i CRXDE på den relativa sökvägen `/content/dam/collections/`. Det finns inga begränsningar för de sökningar som du kan spara och för de sparade sökningarna som visas i listan.
+Sparade sökningar skapas när du skapar en smart samling. Smarta samlingar läggs automatiskt till i listan **[!UICONTROL Saved Searches]**. Frågan om sparade sökningar för samlingen sparas i `dam:query` egenskapen i CRXDE på den relativa platsen `/content/dam/collections/`. Det finns inga begränsningar för de sökningar som du kan spara och för de sparade sökningarna som visas i listan.
 
 >[!NOTE]
 >
@@ -254,7 +254,7 @@ Du kan köra ett arbetsflöde för resurserna i en samling. Om samlingen innehå
 
 1. Välj en samling som du vill köra ett arbetsflöde för i samlingskonsolen.
 1. Välj ikonen GlobalNav och välj **[!UICONTROL Timeline]** från listan.
-1. Välj eller tryck på ikonen Cirkumflex längst ned på tidslinjen och välj sedan **[!UICONTROL Start Workflow]**.
+1. Välj ikonen Cirkumflex längst ned på tidslinjen och välj sedan **[!UICONTROL Start Workflow]**.
 1. I **[!UICONTROL Start Workflow]** väljer du en arbetsflödesmodell i listan. Välj till exempel **[!UICONTROL DAM Update Asset]** modell.
 1. Ange en titel för arbetsflödet och välj **[!UICONTROL Start]**.
 1. I dialogrutan väljer du **[!UICONTROL Proceed]**. Arbetsflödet körs på alla resurser i samlingen.
@@ -262,15 +262,15 @@ Du kan köra ett arbetsflöde för resurserna i en samling. Om samlingen innehå
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Import av massmetadata](metadata-import-export.md)
 
 >[!MORELIKETHIS]

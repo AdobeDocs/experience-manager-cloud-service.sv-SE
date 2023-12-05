@@ -1,16 +1,16 @@
 ---
-title: Viktiga ändringar av AEM Sites i AEM Cloud Service
+title: Betydande förändringar av AEM Sites i AEM Cloud Service
 description: Läs mer om betydande förändringar av AEM Sites i AEM Cloud Service
 exl-id: 60b1aec4-75a0-459f-bf77-8d8c1af757ce
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '535'
-ht-degree: 13%
+source-wordcount: '513'
+ht-degree: 10%
 
 ---
 
 
-# Viktiga ändringar i AEM Sites as a Cloud Service {#notable-changes}
+# Betydande förändringar av AEM Sites as a Cloud Service {#notable-changes}
 
 AEM Sites as a Cloud Service har funktioner för upplevelsehantering som en del av den as a Cloud Service AEM molnbaserade plattformen. Förutom de viktigaste fördelarna med AEM as a Cloud Service, som molnbaserad skalbarhet, drifttid och att alltid vara uppdaterad, innehåller AEM Sites as a Cloud Service även flera platsspecifika ändringar och tillägg.
 
@@ -41,7 +41,7 @@ Initieraren av sådana åtgärder kan kontrollera deras status i ett nytt använ
 
 >[!NOTE]
 >
->Användaren av systemet behöver inte göra några ändringar för att kunna använda den här nya funktionen. Här noteras helt enkelt en förändring i beteendet jämfört med tidigare lokala versioner av AEM.
+>Användaren av systemet behöver inte ändra den här nya funktionen. Här noteras helt enkelt en förändring i beteendet jämfört med tidigare lokala versioner av AEM.
 
 ## Ny referenswebbplats och självstudiekurs {#new-reference-site-and-tutorial}
 

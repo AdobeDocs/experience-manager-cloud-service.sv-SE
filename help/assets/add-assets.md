@@ -4,9 +4,9 @@ description: Lägg till digitala resurser i [!DNL Adobe Experience Manager] som 
 feature: Asset Management,Upload
 role: User,Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '3106'
+source-wordcount: '3064'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Du kan också välja att utföra ytterligare bearbetning av de överförda resur
 
 <!-- #ENGCHECK do we support pausing? I couldn't get pause to show with 1.5GB upload.... If not, this should be removed#
 
-   You can pause the uploading of large assets (greater than 500 MB) and resume it later from the same page. Tap the **[!UICONTROL Pause]** icon beside progress bar that appears when an upload starts.
+   You can pause the uploading of large assets (greater than 500 MB) and resume it later from the same page. Select the **[!UICONTROL Pause]** icon beside progress bar that appears when an upload starts.
 
    The size above which an asset is considered a large asset is configurable. For example, you can configure the system to consider assets above 1000 MB (instead of 500 MB) as large assets. In this case, **[!UICONTROL Pause]** appears on the progress bar when assets of size greater than 1000 MB are uploaded.
 
@@ -187,7 +187,7 @@ Så här konfigurerar du verktyget för massimport:
 
 1. (Valfritt) Ange den maximala filstorleken för resurser i MB för att inkludera dem i överföringsprocessen i **[!UICONTROL Filter by Max Size]** fält.
 
-1. (Valfritt) Ange en kommaavgränsad lista med MIME-typer som ska uteslutas från intaget i dialogrutan **[!UICONTROL Exclude MIME Types]** fält. Till exempel, `image/jpeg, image/.*, video/mp4`. Se [alla filformat som stöds](/help/assets/file-format-support.md).
+1. (Valfritt) Ange en kommaavgränsad lista med MIME-typer som ska uteslutas från intaget i dialogrutan **[!UICONTROL Exclude MIME Types]** fält. Till exempel: `image/jpeg, image/.*, video/mp4`. Se [alla filformat som stöds](/help/assets/file-format-support.md).
 
 1. Ange en kommaavgränsad lista med MIME-typer som ska tas med i intaget i **[!UICONTROL Include MIME Types]** fält. Se [alla filformat som stöds](/help/assets/file-format-support.md).
 
@@ -195,7 +195,7 @@ Så här konfigurerar du verktyget för massimport:
 
 1. Välj **[!UICONTROL Import Mode]**. Välj **Hoppa över**, **Ersätt**, eller **Skapa version**. Hoppa över är standardläget och i det här läget hoppar användaren över att importera en resurs om den redan finns. Se innebörden i [ersätta och skapa versionsalternativ](#handling-upload-existing-file).
 
-1. Definiera en plats i DAM där resurser ska importeras med **[!UICONTROL Assets Target Folder]** anger du en sökväg. Till exempel, `/content/dam/imported_assets`.
+1. Definiera en plats i DAM där resurser ska importeras med **[!UICONTROL Assets Target Folder]** anger du en sökväg. Till exempel: `/content/dam/imported_assets`.
 
 1. (Valfritt) Ange den metadatafil som ska importeras, som finns i CSV-format, i **[!UICONTROL Metadata File]** fält. Ange CSV-filen på blobbplatsen för källan och referera till sökvägen när verktyget för massimport konfigureras. CSV-filformatet som refereras i det här fältet är samma som CSV-filformatet när du [Importera och exportera metadata för resurser i grupp](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/metadata-import-export.html). Om du väljer **Ta bort källfil efter import** -alternativ, filtrera CSV-filer med **Exkludera** eller **Inkludera MIME-typ** eller **Filtrera efter sökväg/fil** fält. Du kan använda ett reguljärt uttryck för att filtrera CSV-filer i dessa fält.
 
@@ -401,15 +401,15 @@ Teknisk information om överförings-API:er och protokoll samt länkar till SDK 
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
 

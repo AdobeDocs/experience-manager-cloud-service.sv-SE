@@ -4,9 +4,9 @@ description: Lär dig hur du skapar innehåll för dina innehållsfragment och s
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
-source-git-commit: 3f934add7521586caf728c4bfa37f2d1a82b144a
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2267'
+source-wordcount: '2266'
 ht-degree: 0%
 
 ---
@@ -178,7 +178,7 @@ Så här tar du bort en variant av ditt innehållsfragment:
 **[Flerradstext](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types)** fält kan ha något av tre format:
 
 * Oformaterad text
-* [Markdown](/help/sites-cloud/administering/content-fragments/markdown.md)
+* [Markering](/help/sites-cloud/administering/content-fragments/markdown.md)
 * [RTF](#edit-multi-line-text-fields-rich-text)
 
 Fält som definieras som antingen Oformaterad text eller Oformaterad markering har en enkel textruta utan formateringsalternativ (på skärmen):
@@ -440,7 +440,7 @@ The **Fält** På panelen visas alla fält i innehållsfragmentet. Ikonen indike
    <td><p> <img src="assets/cf-authoring-multi-line-text-icon.png"> </p></td>
   </tr>
   <tr>
-   <td><p><b>Siffra</b></p> </td>
+   <td><p><b>Nummer</b></p> </td>
    <td><p> <img src="assets/cf-authoring-number-icon.png"> </p></td>
   </tr>
   <tr>

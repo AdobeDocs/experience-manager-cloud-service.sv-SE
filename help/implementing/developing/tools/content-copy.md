@@ -2,9 +2,9 @@
 title: Verktyget Innehållskopia
 description: Med innehållskopieringsverktyget kan man kopiera muterbart innehåll on demand från produktionsmiljön i AEM as a Cloud Service till lägre miljöer i testsyfte.
 exl-id: 5883e4bc-9861-498e-bd35-32ff03d901cc
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '1292'
+source-wordcount: '1290'
 ht-degree: 0%
 
 ---
@@ -196,7 +196,7 @@ Verktyget för innehållskopiering har följande begränsningar.
 * Det går inte att kopiera innehåll mellan program.
 * Det går inte att köra samtidiga kopieringsåtgärder för innehåll i samma miljö.
 * Upp till 50 sökvägar kan anges per innehållsuppsättning. Det finns ingen begränsning för uteslutna banor.
-* Verktyget för innehållskopia bör inte användas som kloning eller spegling eftersom det inte går att spåra flyttat eller borttaget innehåll i källan.
+* Använd inte verktyget för innehållskopiering som kloning eller spegling eftersom det inte går att spåra flyttat eller borttaget innehåll i källan.
 * Verktyget för innehållskopiering har ingen versionshantering och kan inte automatiskt identifiera ändrat innehåll eller skapat innehåll i källmiljön i en innehållsuppsättning sedan den senaste kopieringsåtgärden.
    * Om du bara vill uppdatera målmiljön med innehållsändringar sedan den senaste kopieringsåtgärden måste du skapa en innehållsuppsättning. Ange sedan sökvägarna i källinstansen där ändringar har gjorts sedan den senaste kopieringsåtgärden.
 * Versionsinformation ingår inte i en innehållskopia.

@@ -5,9 +5,9 @@ uuid: c6c0d8ea-743f-4852-99d1-69fd50a0994e
 contentOwner: vishgupt
 topic-tags: document_services, publish
 discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1066'
 ht-degree: 0%
 
 ---
@@ -30,8 +30,8 @@ Sammanfattningsvis kan du i Inkorgen skapa ett program och hantera tilldelade up
 ## Skapa program {#create-application}
 
 1. Gå till AEM Inkorg på https://&#39;[server]:[port]/aem/inbox.
-1. Tryck på i Inkorgen **[!UICONTROL Create > Application]**. Sidan Välj program visas.
-1. Välj ett program och klicka på **[!UICONTROL Create]**. Det adaptiva formulär som är associerat med programmet öppnas. Fyll i informationen i det adaptiva formuläret och tryck på **[!UICONTROL Submit]**. Det startar det associerade arbetsflödet och skapar en uppgift i den tilldelades inkorg.
+1. I Inkorgen väljer du **[!UICONTROL Create > Application]**. Sidan Välj program visas.
+1. Välj ett program och klicka på **[!UICONTROL Create]**. Det adaptiva formulär som är associerat med programmet öppnas. Fyll i informationen i det adaptiva formuläret och markera **[!UICONTROL Submit]**. Det startar det associerade arbetsflödet och skapar en uppgift i den tilldelades inkorg.
 
 ## Hantera uppgifter {#manage-tasks}
 
@@ -41,17 +41,17 @@ När en Forms-arbetsflödesutlösare och du är tilldelad eller en del av den ti
 
 Uppgifter som tilldelas en grupp visas i Inkorgen för alla gruppmedlemmar. Alla gruppmedlemmar kan göra anspråk på den uppgiften eller delegera den till en annan gruppmedlem. Så här gör du:
 
-1. Tryck för att markera aktivitetens miniatyrbild. Alternativ för att öppna eller delegera uppgiften visas högst upp.
+1. Välj det här alternativet om du vill välja en miniatyrbild av uppgiften. Alternativ för att öppna eller delegera uppgiften visas högst upp.
 
    ![välj uppgift](assets/select-task.png)
 
 1. Gör något av följande:
 
-   * Om du vill delegera uppgiften trycker du **[!UICONTROL Delegate]**. Dialogrutan Delegera objekt öppnas. Välj en användare, lägg till en kommentar och tryck på **[!UICONTROL OK]**.
+   * Om du vill delegera uppgiften väljer du **[!UICONTROL Delegate]**. Dialogrutan Delegera objekt öppnas. Välj en användare, lägg till en kommentar om du vill och markera **[!UICONTROL OK]**.
 
    ![delegera](assets/delegate.png)
 
-   * Om du vill göra anspråk på uppgiften trycker du **[!UICONTROL Open]**. Dialogrutan Tilldela till mig själv öppnas. Tryck **[!UICONTROL Proceed]** för att göra anspråk på uppgiften. Uppgiften visas med dig som tilldelad i din inkorg.
+   * Välj **[!UICONTROL Open]**. Dialogrutan Tilldela till mig själv öppnas. Välj **[!UICONTROL Proceed]** för att göra anspråk på uppgiften. Uppgiften visas med dig som tilldelad i din inkorg.
 
    ![krav](assets/claim.png)
 
@@ -59,7 +59,7 @@ Uppgifter som tilldelas en grupp visas i Inkorgen för alla gruppmedlemmar. Alla
 
 När du öppnar en uppgift kan du visa uppgiftsinformation och utföra tillgängliga åtgärder. Vilka åtgärder som är tillgängliga för en uppgift definieras i steget Tilldela uppgift i den associerade Formens Workflow.
 
-1. Tryck för att markera aktivitetens miniatyrbild. Alternativ för att öppna eller delegera den valda uppgiften visas högst upp.
+1. Välj det här alternativet om du vill välja en miniatyrbild av uppgiften. Alternativ för att öppna eller delegera den valda uppgiften visas högst upp.
 1. Välj **Öppna** om du vill visa information om aktiviteter och tillgängliga åtgärder. Den detaljerade uppgiftsvyn öppnas. I den här vyn kan du visa aktivitetsinformation och agera på en uppgift.
 
    >[!NOTE]
@@ -87,7 +87,7 @@ Fliken Formulär i området för huvudinnehållet visar eventuella bifogade form
 
 Fliken Arbetsflödesinformation överst visar förloppet för uppgiften genom olika steg i arbetsflödet. Här visas slutförda, aktuella och väntande faser för uppgiften. Stegen för ett arbetsflöde definieras i [Tilldela aktivitetssteg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html#extending-aem) för det associerade arbetsflödet.
 
-Fliken visar också aktivitetshistorik för varje slutförd fas i arbetsflödet. Du kan trycka **[!UICONTROL View Details]** för att få information om det stadiet. Här visas kommentarer, formulär och uppgiftsbilagor, status, start- och slutdatum och så vidare, om uppgiften.
+Fliken visar också aktivitetshistorik för varje slutförd fas i arbetsflödet. Du kan välja **[!UICONTROL View Details]** för att få information om det stadiet. Här visas kommentarer, formulär och uppgiftsbilagor, status, start- och slutdatum och så vidare, om uppgiften.
 
 ![arbetsflödesinformation](assets/workflow-details.png)
 
@@ -101,12 +101,12 @@ När du arbetar med uppgiften fortsätter den i arbetsflödet.
 
 AEM Inkorg visar bara aktiva uppgifter. Slutförda uppgifter visas inte i listan. Du kan emellertid använda inkorgsfilter för att filtrera uppgifter baserat på flera parametrar, till exempel uppgiftstyp, status, start- och slutdatum. Så här visar du slutförda uppgifter:
 
-1. I AEM Inkorg trycker du ![toggle-side-panel1](assets/toggle-side-panel1.png) för att öppna filterväljaren.
-1. Tryck **[!UICONTROL Task Status]** dragspelspanel och markera **[!UICONTROL Complete]**. Alla slutförda uppgifter visas.
+1. I AEM ![toggle-side-panel1](assets/toggle-side-panel1.png) för att öppna filterväljaren.
+1. Välj **[!UICONTROL Task Status]** dragspelspanel och markera **[!UICONTROL Complete]**. Alla slutförda uppgifter visas.
 
    ![filter](assets/filter.png)
 
-1. Tryck för att markera en uppgift och klicka på **[!UICONTROL Open]**.
+1. Markera en uppgift och klicka på **[!UICONTROL Open]**.
 
 Aktiviteten öppnas och dokumentet eller det adaptiva formuläret som är kopplat till uppgiften visas. För adaptiv form visar uppgiften det skrivskyddade adaptiva formuläret eller dess PDF-dokument för post som konfigurerats på fliken Formulär/dokument i [Tilldela arbetsflödessteg för uppgift](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html#extending-aem).
 
@@ -114,7 +114,7 @@ I avsnittet med aktivitetsinformation visas information om till exempel åtgärd
 
 ![slutförd uppgift](assets/completed-task.png)
 
-The **[!UICONTROL Workflow Details]** -fliken visar varje steg i arbetsflödet. Tryck **[!UICONTROL View details]** om du vill få detaljerad information.
+The **[!UICONTROL Workflow Details]** -fliken visar varje steg i arbetsflödet. Välj **[!UICONTROL View details]** om du vill få detaljerad information.
 
 ![complete-task-workflow](assets/completed-task-workflow.png)
 

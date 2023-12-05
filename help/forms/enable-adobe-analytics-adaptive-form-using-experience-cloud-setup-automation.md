@@ -3,9 +3,9 @@ title: Hur aktiverar man Adobe Analytics för ett adaptivt formulär?
 description: Experience Cloud Setup Automation kan koppla Adobe Analytics till ett adaptivt formulär för att spåra insikter om besökarinteraktioner och engagemang.
 keywords: Aktivera Adobe Analytics för ett adaptivt formulär med Experience Cloud Setup Automation, Enable Adobe Analytics in Forms, Adobe Analytics in Adaptive Forms, Forms analytics integration, Forms and Adobe Analytics
 exl-id: 0e1aa040-08b4-4c1a-b247-ad6fff410187
-source-git-commit: fa107ee89deb217ada2cfbcccb4602a7a6aff125
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1521'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ Följ stegen nedan för att aktivera och konfigurera Adobe Analytics för din ad
 1. Skapa en konfigurationsbehållare för molntjänster:
    1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**.
    1. Välj eller skapa en konfigurationsbehållare och aktivera mappen för **[!UICONTROL Cloud Configurations]**.
-   1. Tryck **[!UICONTROL Save & Close]** för att spara konfigurationen och stänga dialogrutan.
+   1. Välj **[!UICONTROL Save & Close]** för att spara konfigurationen och stänga dialogrutan.
 1. Gå till på din AEM **[Forms]** >> **[Forms och dokument]**.
 1. Välj **[!UICONTROL Form]** >> **[!UICONTROL Properties]**, i **[!UICONTROL Configuration Container]** väljer du konfigurationsbehållaren som du skapade eller markerade i dialogrutan **[!UICONTROL Configuration Browser]** i steg 1.
 1. Välj aktivitetspanelen i det vänstra fältet och klicka på **Konfigurationsanalys** och **Aktivera Adobe Analytics**.

@@ -5,9 +5,9 @@ feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: 0cd38edb-2201-4ca6-8b84-6b5b7f76bd90
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1048'
 ht-degree: 0%
 
 ---
@@ -52,8 +52,8 @@ Forms innehåller fält och avsnitt som inte är tillämpliga för alla använda
 Utför följande steg för att aktivera lazy loading på ett adaptivt formulärfragment:
 
 1. Öppna det adaptiva formuläret i det redigeringsläge som innehåller det fragment som du vill aktivera för lazy loading.
-1. Markera det adaptiva formulärfragmentet och tryck på ![konfigurera](assets/configure-icon.svg).
-1. Aktivera **[!UICONTROL Load fragment lazily]** och knacka **Klar**.
+1. Markera det adaptiva formulärfragmentet och välj ![konfigurera](assets/configure-icon.svg).
+1. Aktivera **[!UICONTROL Load fragment lazily]** och markera **Klar**.
 
    ![Aktivera lazy loading för det anpassade formulärfragmentet](assets/lazy-loading-fragment.png)
 
@@ -62,7 +62,7 @@ Utför följande steg för att aktivera lazy loading på ett adaptivt formulärf
 Du kan markera objektvärden i det lagerinlästa fragmentet som globala så att de är tillgängliga för användning i skript när det innehållande fragmentet inte läses in. Gör följande:
 
 1. Öppna det adaptiva formulärfragmentet i redigeringsläge.
-1. Tryck på fältet vars värde du vill markera som globalt och tryck sedan på ![konfigurera](assets/configure-icon.svg).
+1. Markera det fält vars värde du vill markera som globalt och välj sedan ![konfigurera](assets/configure-icon.svg).
 1. Aktivera **[!UICONTROL Use value during lazy loading]**.
 
    ![Lazy loading field in sidebar](assets/enable-lazy-loading.png)

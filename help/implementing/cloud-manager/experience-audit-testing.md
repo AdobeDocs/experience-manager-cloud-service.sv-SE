@@ -2,9 +2,9 @@
 title: Testning av Experience Audit
 description: Läs om hur Experience Audit validerar er distributionsprocess och ser till att de ändringar som driftsätts uppfyller grundläggande standarder för prestanda, tillgänglighet, bästa praxis och SEO.
 exl-id: 8d31bc9c-d38d-4d5b-b2ae-b758e02b7073
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Läs om hur Experience Audit validerar er distributionsprocess och ser till att de ändringar som driftsätts uppfyller grundläggande standarder för prestanda, tillgänglighet, bästa praxis och SEO.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Experience Audit är en funktion i Cloud Manager Sites Production pipelines som validerar distributionsprocessen och hjälper till att säkerställa att ändringar som distribueras:
 
@@ -35,7 +35,7 @@ Experience Audit drivs av Google Lightroom, ett verktyg med öppen källkod frå
 
 >[!INFO]
 >
->Från och med 31 augusti 2023 kommer Experience Audit att gå över till att visa resultat som är specifika för den mobila plattformen. Observera att mobilprestandamätningar vanligtvis registrerar lägre värden än stationära datorer, så du bör förutse en förändring i rapporterade prestanda efter den här ändringen.
+>Från och med 31 augusti 2023 kommer Experience Audit att gå över till att visa resultat som är specifika för den mobila plattformen. Mätvärden för mobila prestanda registrerar vanligtvis lägre än de för stationära datorer, så du bör förutse en förändring i rapporterade prestanda efter den här ändringen.
 
 >[!TIP]
 >
@@ -58,9 +58,9 @@ Det finns en sammanställd nivå för varje testtyp, som prestanda, tillgänglig
 
 Ändringsmåttet kan ha något av följande värden.
 
-* **Positivt värde** - Sidorna har förbättrats på det valda testet sedan den senaste produktionspipeline-körningen.
+* **Positivt värde** - Sidorna har förbättrats på det valda testet sedan den senaste produktionsflödet kördes.
 
-* **Negativt värde** - sidan/sidorna har gått om på det valda testet sedan den senaste produktionspipeline-körningen.
+* **Negativt värde** - sidorna har kraschat på det valda testet sedan den senaste produktionspipeline kördes.
 
 * **Ingen ändring** - Sidorna har fått samma resultat sedan den senaste produktionsflödet.
 

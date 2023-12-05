@@ -2,16 +2,16 @@
 title: Anpassade HTTP-huvuden
 description: Lär dig hur du konfigurerar anpassade HTTP-rubriker som ska skickas till e-handelsmotorn, tillsammans med de som redan skickats av CIF.
 exl-id: 2cef5d4b-45f6-4d72-a24b-67ca53d9057d
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '279'
 ht-degree: 0%
 
 ---
 
 # Anpassade HTTP-huvuden {#custom-http-headers}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 För att få bättre kontroll över sin serverdel kan författarna konfigurera anpassade HTTP-rubriker som skickas till e-handelsmotorn, tillsammans med de som redan skickats av CIF. Vanliga användningsfall är bland annat multibutiksinställningar där du kan använda HTTP-huvuden för att styra svaret från e-handelsserverdelen.
 
@@ -26,7 +26,7 @@ Om du vill konfigurera anpassade HTTP-huvuden måste du först definiera dem. De
 
 Du kan konfigurera värdena för HTTP-rubrikerna på Cloud Servicens konfigurationssida för ditt projekt:
 
-1. Gå till konfigurationssidan för Cloud Servicen under Verktyg -> Cloud Services -> CIF Konfiguration
+1. Gå till konfigurationssidan för Cloud Servicen under Verktyg > Cloud Services > CIF Konfiguration
 1. Öppna en befintlig konfiguration eller skapa en
 1. Gå till fliken &quot;Avancerat&quot; och leta upp det anpassade fältet för HTTP-rubriker. Du kan markera rubrikerna som du definierade tidigare och tilldela dem värden.
 

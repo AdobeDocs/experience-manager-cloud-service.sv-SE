@@ -1,14 +1,14 @@
 ---
-title: HTTP API för Assets
+title: Resurser för HTTP API
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i [!DNL Experience Manager Assets].
 contentOwner: AG
 feature: Assets HTTP API,APIs
 role: Developer,Architect,Admin
 exl-id: a3b7374d-f24b-4d6f-b6db-b9c9c962bb8d
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1556'
-ht-degree: 1%
+source-wordcount: '1581'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 1%
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 The [!DNL Assets] HTTP-API:t gör det möjligt att skapa, läsa, uppdatera och ta bort (CRUD) på digitala resurser, inklusive metadata, återgivningar och kommentarer, samt strukturerat innehåll med [!DNL Experience Manager] Innehållsfragment. Den exponeras vid `/api/assets` och implementeras som REST API. Den innehåller [stöd för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md).
 
@@ -28,11 +28,11 @@ Så här kommer du åt API:
 1. Öppna API-tjänstdokumentet på `https://[hostname]:[port]/api.json`.
 1. Följ [!DNL Assets] tjänstlänk som leder till `https://[hostname]:[server]/api/assets.json`.
 
-API-svaret är en JSON-fil för vissa MIME-typer och en svarskod för alla MIME-typer. JSON-svaret är valfritt och kanske inte är tillgängligt, till exempel för PDF-filer. Använd svarskoden för ytterligare analyser eller åtgärder.
+API-svaret är en JSON-fil för vissa MIME-typer och en svarskod för alla MIME-typer. JSON-svaret är valfritt och kanske inte är tillgängligt för exempelvis PDF-filer. Använd svarskoden för ytterligare analyser eller åtgärder.
 
 >[!NOTE]
 >
->Alla API-anrop som rör överföring eller uppdatering av resurser eller binära filer i allmänhet (som återgivningar) är föråldrade [!DNL Experience Manager] som [!DNL Cloud Service] distribution. Använd för att överföra binära filer [API:er för direkt binär överföring](developer-reference-material-apis.md#asset-upload) i stället.
+>Alla API-anrop som rör överföring eller uppdatering av resurser eller binära filer i allmänhet (som återgivningar) är föråldrade [!DNL Experience Manager] som [!DNL Cloud Service] distribution. Om du vill överföra binära filer använder du [API:er för direkt binär överföring](developer-reference-material-apis.md#asset-upload) i stället.
 
 ## Innehållsfragment {#content-fragments}
 
@@ -46,7 +46,7 @@ The [!DNL Assets] HTTP API visar två huvudelement, mappar och resurser (för st
 
 ### Mappar {#folders}
 
-Mappar är som kataloger som i de traditionella filsystemen. Mappen kan bara innehålla resurser, bara mappar eller mappar och resurser. Mappar har följande komponenter:
+Mappar är som kataloger som i de traditionella filsystemen. Mappen kan bara innehålla resurser, bara mappar, eller mappar och resurser. Mappar har följande komponenter:
 
 **Enheter**: Enheterna i en mapp är dess underordnade element, som kan vara mappar och resurser.
 
@@ -57,13 +57,13 @@ Mappar är som kataloger som i de traditionella filsystemen. Mappen kan bara inn
 
 >[!NOTE]
 >
->Vissa egenskaper för mapp eller resurs är mappade till ett annat prefix. The `jcr` prefix för `jcr:title`, `jcr:description`och `jcr:language` ersätts med `dc` prefix. I den returnerade JSON-koden `dc:title` och `dc:description` innehåller värdena för `jcr:title` och `jcr:description`, respektive.
+>Vissa egenskaper för mapp eller resurs är mappade till ett annat prefix. The `jcr` prefix för `jcr:title`, `jcr:description`och `jcr:language` ersätts med `dc` prefix. I den returnerade JSON-koden `dc:title` och `dc:description` innehåller värdena för `jcr:title` och `jcr:description`, respektive
 
 **Länkar** I mapparna visas tre länkar:
 
 * `self`: Länka till sig själv.
-* `parent`: Länka till den överordnade mappen.
-* `thumbnail`: (Valfritt) länka till en mappminiatyrbild.
+* `parent`: Länk till den överordnade mappen.
+* `thumbnail`: (Valfritt) länk till en mappminiatyrbild.
 
 ### Assets {#assets}
 
@@ -78,7 +78,7 @@ Mer information om element i innehållsfragment finns i [Stöd för innehållsfr
 
 I [!DNL Experience Manager] en mapp har följande komponenter:
 
-* Enheter: Resursernas underordnade är dess återgivningar.
+* Enheter: De underordnade resurserna är dess återgivningar.
 * Egenskaper.
 * Länkar.
 
@@ -217,7 +217,7 @@ Uppdateringarna ersätter en resursåtergivning med nya binära data.
 
 ## Kopiera en mapp eller en resurs {#copy-a-folder-or-asset}
 
-Kopierar en mapp eller resurs som är tillgänglig på den angivna sökvägen till ett nytt mål.
+Kopierar en mapp eller en resurs som är tillgänglig på den angivna sökvägen till ett nytt mål.
 
 **Begäranrubriker**: Parametrarna är:
 
@@ -275,19 +275,19 @@ Tar bort en resurs (-tree) vid den angivna sökvägen.
 
 * Resursens HTTP API returnerar inte alla metadata. Namnutrymmena är hårdkodade och endast dessa namnutrymmen returneras. Fullständiga metadata finns i resurssökvägen `/jcr_content/metadata.json`.
 
-* Vissa egenskaper för mapp eller resurs mappas till ett annat prefix när de uppdateras med API:er. The `jcr` prefix för `jcr:title`, `jcr:description`och `jcr:language` ersätts med `dc` prefix. I den returnerade JSON-koden `dc:title` och `dc:description` innehåller värdena för `jcr:title` och `jcr:description`, respektive.
+* Vissa egenskaper för mapp eller resurs mappas till ett annat prefix när de uppdateras med API:er. The `jcr` prefix för `jcr:title`, `jcr:description`och `jcr:language` ersätts med `dc` prefix. I den returnerade JSON-koden `dc:title` och `dc:description` innehåller värdena för `jcr:title` och `jcr:description`, respektive
 
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
 

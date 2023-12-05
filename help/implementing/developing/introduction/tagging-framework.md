@@ -2,9 +2,9 @@
 title: AEM Taggningsramverk
 description: Tagga innehåll och använd infrastrukturen för AEM taggar för att kategorisera och organisera det.
 exl-id: 25418d44-aace-4e73-be1a-4b1902f40403
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1569'
+source-wordcount: '1562'
 ht-degree: 0%
 
 ---
@@ -58,13 +58,13 @@ The `TagID` består av en [namespace](#tag-namespace) följt av `TagID`. [Behål
 
 ### Taxonomirotnod {#taxonomy-root-node}
 
-Taxonomirotnoden är grundsökvägen för alla taggar i databasen. Rotnoden taxonomi måste *not* vara en nod av typen `cq:Tag`.
+Taxonomirotnoden är grundsökvägen för alla taggar i databasen. Rotnoden för taxonomi måste *not* vara en nod av typen `cq:Tag`.
 
 I AEM är bassökvägen `/content/cq:tags` och rotnoden är av typen `cq:Folder`.
 
 ### Namnutrymme för tagg {#tag-namespace}
 
-Med namnutrymmen kan du gruppera saker. Det vanligaste användningsfallet är att ha ett namnutrymme per plats (till exempel public kontra internal) eller per större program (till exempel Sites eller Assets), men namnutrymmen kan användas för olika andra behov. Namnutrymmen används i användargränssnittet för att endast visa deluppsättningen med taggar (d.v.s. taggar för ett visst namnutrymme) som kan användas för det aktuella innehållet.
+Med namnutrymmen kan du gruppera saker. Det vanligaste användningsfallet är att ha ett namnutrymme per plats (till exempel public jämfört med internal) eller per större program (till exempel Sites eller Assets), men namnutrymmen kan användas för olika andra behov. Namnutrymmen används i användargränssnittet för att endast visa deluppsättningen med taggar (d.v.s. taggar för ett visst namnutrymme) som kan användas för det aktuella innehållet.
 
 Taggens namnutrymme är den första nivån i taxonomiunderträdet, som är noden direkt under [taxonomirotnod.](#taxonomy-root-node) Ett namnutrymme är en nod av typen `cq:Tag` vars överordnade inte är en `cq:Tag` nodtyp.
 
@@ -115,7 +115,7 @@ Ett typiskt exempel är:
 * Ge användare/författare läsåtkomst till alla namnutrymmen som ska vara läsbara för dem (oftast alla).
 * Ger användare/författare skrivåtkomst till de namnutrymmen där taggar ska kunna definieras fritt av användare/författare (`add_node` under `/content/cq:tags/some_namespace`)
 
-## Taggbart innehåll: cq:Taggable Mixin {#taggable-content-cq-taggable-mixin}
+## Taggbart innehåll : cq:Taggable Mixin {#taggable-content-cq-taggable-mixin}
 
 För programutvecklare som vill bifoga taggning till en innehållstyp, nodens registrering ([CND](https://jackrabbit.apache.org/jcr/node-type-notation.html)) måste innehålla `cq:Taggable` blanda eller `cq:OwnerTaggable` blanda.
 
@@ -132,7 +132,7 @@ The `cq:OwnerTaggable` mixin, som ärver från `cq:Taggable`, är avsedd att ind
 
 Det finns nodtypsdefinitioner i databasen som CND-filer. CND-notation definieras som en del av [JCR-dokumentation](https://jackrabbit.apache.org/jcr/node-type-notation.html).
 
-De viktigaste definitionerna för de nodtyper som ingår i AEM är följande:
+De viktigaste definitionerna för nodtyperna i AEM är följande:
 
 ```xml
 [cq:Tag] > mix:title, nt:base

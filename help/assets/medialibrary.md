@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Asset Management,Publishing
 role: User,Architect,Leader
 exl-id: 4737d5ee-9a93-49f3-9f20-d4368e60e9fb
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '592'
-ht-degree: 2%
+source-wordcount: '576'
+ht-degree: 0%
 
 ---
 
@@ -30,19 +30,19 @@ Define what is not included
 
 [!DNL Adobe Experience Manager] -plattformen har olika funktioner för att hantera resurser. Med Media Library kan användarna överföra ett litet antal resurser till databasen, söka efter och använda dem på webbsidorna och utföra enkla resurshanteringsåtgärder på resurserna.
 
-Media Library är en lättviktig DAM-lösning (Digital Asset Management) som medföljer [!DNL Adobe Experience Manager Sites] licens. [!DNL Sites] är ett web content management-erbjudande. Media Library fungerar med alla funktioner i Experience Manager.
+Media Library är en lättviktig DAM-lösning som medföljer [!DNL Adobe Experience Manager Sites] licens. [!DNL Sites] är ett web content management-erbjudande. Media Library fungerar med alla funktioner i Experience Manager.
 
 [!DNL Adobe Experience Manager Assets] kan köpas separat. [!DNL Experience Manager Assets] möjliggör robust hantering av resurser via företagsbruk, anpassningar av metadata, scheman, sökning och användargränssnitt samt många andra funktioner utöver vad Media Library erbjuder.
 
 ## Licenskrav {#avail-media-library-license}
 
-Kunder som har [!DNL Sites] har rätt att använda Media Library. Fungerar med alla komponenter i [!DNL Experience Manager].
+Kunder som har [!DNL Sites] licens har rätt att använda Media Library. Fungerar med alla komponenter i [!DNL Experience Manager].
 
 Media Library installeras som en del av Sites. Ingen ytterligare licens eller paket krävs utöver Sites-licens och -installation.
 
 ## [!DNL Assets] jämfört med Media Library {#assets-and-media-library}
 
-Experience Manager Assets tillhandahåller DAM-funktioner i enterpriseklass. Funktionen för resurser levereras med [!DNL Experience Manager] i ett och samma paket. Användare som inte har köpt en Assets-licens har dock inte rätt att använda de avancerade DAM-funktionerna. Utan Assets-licens, endast [Funktioner i Media Library](#use-media-library) är tillgängliga.
+Experience Manager Assets tillhandahåller DAM-funktionalitet i enterpriseklass. Funktionen för resurser levereras med [!DNL Experience Manager] i ett och samma paket. Användare som inte har köpt en Assets-licens har dock inte rätt att använda de avancerade DAM-funktionerna. Utan Assets-licens, endast [Media Library-funktioner](#use-media-library) är tillgängliga.
 
 Om du vill förhindra oavsiktlig användning av [!DNL Assets] funktioner som du inte har licens för, ta sedan bort alla [!DNL Assets]-specifika arbetsflöden, komponenter, taxonomier, alternativ och [!DNL Assets] admin från [!DNL Experience Manager]. På så sätt förhindras användarna från att oavsiktligt använda [!DNL Assets] funktioner som du inte licensierat.
 
@@ -61,7 +61,7 @@ Media Library omfattar i stort sett följande användningsområden:
 
 -->
 
-Om du vill använda Media Library-funktionen kan du använda standardfunktionen [!DNL Experience Manager] användargränssnitt. Media Library ingår i [!DNL Experience Manager Sites] och inget separat gränssnitt eller tillägg krävs. Med det befintliga gränssnittet har Media Library-användare rätt att utföra följande uppgifter:
+Om du vill använda Media Library-funktionen kan du använda standardfunktionen [!DNL Experience Manager] användargränssnitt. Media Library ingår i [!DNL Experience Manager Sites] installation och inget separat gränssnitt eller tillägg krävs. Med det befintliga gränssnittet har Media Library-användare rätt att utföra följande uppgifter:
 
 * Skapa mappar för att ordna resurser.
 * Överför resurser.
@@ -82,7 +82,7 @@ Om du vill använda Media Library-funktionen kan du använda standardfunktionen 
 * Gå till Query Builder (API) för att utöka sökfunktionen.
 * Skapa statiska taggar.
 * Skapa projekt och uppgifter.
-* Aktivitetsström (tidslinje).
+* Activity stream (timeline).
 * Kommentarer och kommentarer.
 
 <!-- TBD: Define exactly which basic Assets workflow are available for use with Media Library?
@@ -94,26 +94,26 @@ As per PM, we must avoid stating such a list, as we do not have a list that make
 >
 >Många avancerade DAM-användningsfall uppfylls av [!DNL Experience Manager Assets]. Media Library-licens berättigar dig att endast fylla i de angivna användningsområdena med Media Library. Om ett användningsexempel inte finns med i listan ska du inte använda det med Media Library-licens. Kontakta kundsupport om du har frågor.
 
-Observera att du inte kan använda smarta taggar, [!DNL Asset] länk, [!DNL Asset] väljare, bulktaggning, arbetsflöden för att ändra resurser eller standard [!DNL Adobe Experience Manager] användargränssnitt som ger åtkomst till Media Library utan [!DNL Assets] licens.
+Du kan inte använda smarta taggar, [!DNL Asset] länk, [!DNL Asset] väljare, bulktaggning, arbetsflöden för att ändra resurser eller standard [!DNL Adobe Experience Manager] användargränssnitt som ger åtkomst till Media Library utan [!DNL Assets] licens.
 
 <!-- TBD: Add a CTA - how to contact Adobe for queries. -->
 
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
 
 >[!MORELIKETHIS]
 >
 >* [DAM-funktioner i [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home.html)
->* [[!DNL Experience Manager] as a [!DNL Cloud Service] produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-cloud-service.html)
+>* [[!DNL Experience Manager] som [!DNL Cloud Service] produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-cloud-service.html)

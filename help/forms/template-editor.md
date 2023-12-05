@@ -2,10 +2,10 @@
 title: Hur skapar vi en anpassad formulärmall?
 description: Skapa adaptiva formulärmallar för att definiera den grundläggande strukturen och det ursprungliga innehållet med mallredigeraren.
 exl-id: a882cba2-c621-4ff7-a972-c504641b5639
-source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2033'
-ht-degree: 1%
+source-wordcount: '1994'
+ht-degree: 0%
 
 ---
 
@@ -38,13 +38,13 @@ I Experience Manager finns en global mapp där du kan ordna mallar. Den är dock
 
 När du har skapat en mapp öppnar du mappen och utför följande steg för att skapa en mall:
 
-1. Tryck **[!UICONTROL Create]** i den mapp du har skapat.
-1. I avsnittet Välj en malltyp väljer du **[!UICONTROL Adaptive Form template]** och knacka **[!UICONTROL Next]**.
+1. Välj **[!UICONTROL Create]** i den mapp du har skapat.
+1. I avsnittet Välj en malltyp väljer du **[!UICONTROL Adaptive Form template]** och markera **[!UICONTROL Next]**.
 
-1. Ange en malltitel i avsnittet Mallinformation och tryck på **[!UICONTROL Create]**.
+1. Ange en malltitel i avsnittet Mallinformation och välj **[!UICONTROL Create]**.
 Du kan också ange en beskrivning.
 
-1. Tryck **[!UICONTROL Done]** för att gå tillbaka till konsolen, eller tryck **[!UICONTROL Open]** om du vill öppna mallen i redigeraren.
+1. Välj **[!UICONTROL Done]** för att gå tillbaka till konsolen, eller välj **[!UICONTROL Open]** om du vill öppna mallen i redigeraren.
 
 ### Mallredigeringsgränssnitt {#template-editor-ui}
 
@@ -105,7 +105,7 @@ Du kan till exempel lägga till rubrikkomponenten i mallen. När du markerar kom
 
 När alternativet Ursprungligt innehåll är markerat öppnas mallens adaptiva formulärbehållare som ett adaptivt formulär för redigering. Precis som när du skapar ett adaptivt formulär kan du ange inledande inställningar, som att välja ett tema och skicka åtgärder.
 
-Formulärförfattare använder det som bas för att skapa ett formulär. Innehållsflödesstrukturen anges i lagret Ursprungligt innehåll i mallen. Om du vill växla till att redigera det ursprungliga innehållet i formulärmallen innan du förhandsgranskar i sidverktygsfältet trycker du på ![canvas-drop-down](assets/canvas-drop-down.png) **>** **[!UICONTROL Initial Content]**.
+Formulärförfattare använder det som bas för att skapa ett formulär. Innehållsflödesstrukturen anges i lagret Ursprungligt innehåll i mallen. Om du vill växla till att redigera det ursprungliga innehållet i formulärmallen innan du förhandsgranskar i sidverktygsfältet väljer du ![canvas-drop-down](assets/canvas-drop-down.png) **>** **[!UICONTROL Initial Content]**.
 
 
 I lagret Ursprungligt innehåll skapar du mallen Adaptivt formulär som dina författare använder som bas. Om du redigerar en mall på samma sätt som när du redigerar ett formulär, använder du de alternativ som finns i sidofältet. Sidofältet innehåller webbläsare för innehåll, egenskaper, resurser och komponenter.
@@ -132,7 +132,7 @@ Du har lagt till en logotyp, angett en rubrik och lagt till en sidfot i struktur
 * Du kan dra och släppa panelkomponenten från komponentwebbläsaren i sidofältet.
 * Du kan lägga till en underordnad panel till `guideRootPanel` i komponentens verktygsfält.
 
-Om du vill skapa flikarna Allmän information och Professional Information lägger du till två paneler i den underordnade panelen i `guideRootPanel`. Markera panelerna och tryck på ![cmppr](assets/configure-icon.svg) för att öppna egenskaperna i sidofältet. Ändra elementnamnen som `general-info` och `professional-info`och titlar som General Information respektive Professional Information. I sidlisten: tryck på innehåll för att öppna innehållsläsaren. På fliken Formulärobjekt väljer du `guideRootPanel`. I redigeraren markeras guideRootPanel. Tryck ![cmppr](assets/configure-icon.svg) i komponentens verktygsfält för att öppna dess egenskaper. I fältet Panellayout väljer du **[!UICONTROL Tabs on Top]** och knacka **[!UICONTROL Done]**. Flikmallstrukturen används.
+Om du vill skapa flikarna Allmän information och Professional Information lägger du till två paneler i den underordnade panelen i `guideRootPanel`. Markera panelerna och markera ![cmppr](assets/configure-icon.svg) för att öppna egenskaperna i sidofältet. Ändra elementnamnen som `general-info` och `professional-info`och titlar som General Information respektive Professional Information. I sidlisten väljer du innehåll för att öppna innehållsläsaren. På fliken Formulärobjekt väljer du `guideRootPanel`. I redigeraren markeras guideRootPanel. Välj ![cmppr](assets/configure-icon.svg) i komponentens verktygsfält för att öppna dess egenskaper. I fältet Panellayout väljer du **[!UICONTROL Tabs on Top]** och markera **[!UICONTROL Done]**. Flikmallstrukturen används.
 
 #### Lägga till innehåll på flikar {#adding-content-in-tabs}
 
@@ -151,7 +151,7 @@ När du skapar en mall läggs den till som ett utkast. Aktivera mallen för att 
 1. Navigera till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL Templates]** och öppna mappen där du har skapat mallen.
 
 1. Mallen som du har skapat markeras som Utkast.
-1. Markera mallen och tryck på **[!UICONTROL Enable]** i verktygsfältet.
+1. Markera mallen och välj **[!UICONTROL Enable]** i verktygsfältet.
 När du skapar ett adaptivt formulär kan du se mallen som visas när du ombeds att välja en mall.
 
 ## Importera eller exportera en mall {#importing-or-exporting-a-template}
@@ -167,7 +167,7 @@ Ett formulär fungerar med sin mall. När du hämtar ett adaptivt formulär som 
 
 Författare kan associera en [!UICONTROL Form Data Model Schema] till en adaptiv formulärmall i mallredigeraren. Det gör att författare kan välja ett schema i mallredigeraren. När du kopplar ett schema till en mall och en formulärförfattare skapar ett formulär baserat på mallen, markeras schemat automatiskt för formuläret. Det hjälper formulärförfattare att reglera användningen av scheman och sparar tid även för formulärförfattare. Så här väljer du ett formulärdatamodellschema i mallredigeraren:
 
-1. Tryck **[!UICONTROL Content Browser]** på vänster sida.
+1. Välj **[!UICONTROL Content Browser]** på vänster sida.
 1. Gå till formulärbehållaren **[!UICONTROL Setting]**.
 1. Välj **[!UICONTROL Data Model]**.
 1. Välj formulärdatamodell genom att **[!UICONTROL Select Form Data Model]** och spara konfigurationen.

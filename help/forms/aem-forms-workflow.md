@@ -4,9 +4,9 @@ seo-title: Rapidly build Adaptive Forms-based processes, automate document servi
 description: 'Använd AEM Forms Workflow för att automatisera och snabbt skapa affärsprocessarbetsflöden. Exempel: granska och godkänna, PDF Generation, Adobe Sign arbetsflöden.'
 uuid: 797ba0f7-a378-45ac-9f82-fa9a952027be
 topic-tags: publish, document_services
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2367'
+source-wordcount: '2348'
 ht-degree: 0%
 
 ---
@@ -65,8 +65,8 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
 1. Öppna konsolen Arbetsflödesmodeller. Standardwebbadressen är `https://[server]:[port]/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models`
 1. Välj **Skapa** sedan **Skapa modell**. Dialogrutan Lägg till arbetsflödesmodell visas.
-1. Ange **Titel** och **Namn** (valfritt). Till exempel en låneansökan. Tryck **Klar**.
-1. Välj den skapade arbetsflödesmodellen och tryck på **Redigera**. Nu kan du lägga till arbetsflödessteg för att skapa affärslogik. När du först skapar en arbetsflödesmodell innehåller den:
+1. Ange **Titel** och **Namn** (valfritt). Till exempel en låneansökan. Välj **Klar**.
+1. Välj den skapade arbetsflödesmodellen och välj **Redigera**. Nu kan du lägga till arbetsflödessteg för att skapa affärslogik. När du först skapar en arbetsflödesmodell innehåller den:
 
    * Stegen: Flödesstart och Flödesslut. De här stegen representerar början och slutet av arbetsflödet. Dessa steg är obligatoriska och kan inte redigeras eller tas bort.
    * Ett exempel på deltagarsteg som heter Steg 1. Det här steget är konfigurerat för att tilldela en arbetsuppgift till administratörsanvändaren. Ta bort steget.
@@ -79,7 +79,7 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
 1. Skapa arbetsflödesfaser. Ett arbetsflöde kan ha flera steg. De här stegen visas i AEM Inkorg och rapporterar arbetsflödets förlopp.
 
-   Definiera en scen genom att trycka på ![info-circle](assets/info-circle.png) ikon för att öppna arbetsflödesmodellegenskaper, öppna **Steg** lägg till faser för arbetsflödesmodellen och tryck på **Spara och stäng**. I exemplet med låneansökan kan du skapa faser: låneansökan, status för låneansökan, signerade dokument och signerade lånedokument.
+   Om du vill definiera en scen väljer du ![info-circle](assets/info-circle.png) ikon för att öppna arbetsflödesmodellegenskaper, öppna **Steg** lägg till faser för arbetsflödesmodellen och markera **Spara och stäng**. I exemplet med låneansökan kan du skapa faser: låneansökan, status för låneansökan, signerade dokument och signerade lånedokument.
 
 1. Dra och släpp **Tilldela uppgift** steg webbläsare till arbetsflödesmodellen. Gör det till modellens första steg.
 
@@ -91,7 +91,7 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
    I exemplet med låneansökan ska du konfigurera tilldelningssteget så att det använder ett skrivskyddat anpassat formulär och visa PDF-dokument när uppgiften är klar. Välj även en användargrupp som kan godkänna lånebegäran. På **Åtgärder** -flik, inaktivera **Skicka** alternativ. Skapa en **actionTaken** variabeln för datatypen String och ange variabeln som **Flödesvariabel**. Till exempel actionTaken. Lägg även till rutterna Godkänn och Avvisa. Vägarna visas som separata åtgärder (knappar) i AEM. Arbetsflödet väljer en gren baserat på den åtgärd (knapp) som användaren knackar på.
 
-   Du kan importera exempelpaketet, som är tillgängligt för hämtning i början av avsnittet, för den fullständiga uppsättningen värden för alla fält i tilldelningssteget som konfigurerats för exempelvis låneprogram.
+   Du kan importera exempelpaketet, som är tillgängligt för nedladdning i början av avsnittet, för den fullständiga uppsättningen värden för alla fält i tilldelningssteget som konfigurerats, till exempel låneansökan.
 
 1. Dra och släpp OR-komponenten från stegwebbläsaren till arbetsflödesmodellen. Med ELLER-delning skapas en delning i arbetsflödet, varefter endast en gren är aktiv. I det här steget kan du lägga in sökvägar för villkorlig bearbetning i arbetsflödet. Du kan lägga till arbetsflödessteg i varje gren efter behov.
 
@@ -117,7 +117,7 @@ I exemplet skapas en arbetsflödesmodell för en låneansökan som ska fyllas av
 
    I hypoteksexemplet lägger du till ett generera dokument för post, två steg för tilldelning av uppgifter och ett steg för signeringsdokument i förgrening 1 av modellen, som visas i bilden nedan. Ett tilldelningssteg är att visa och skicka **ska undertecknas av den sökande** och en annan tilldelad uppgiftskomponent är **för att visa signerade dokument**. Lägg också till en tilldelad uppgiftskomponent i gren 2. Den aktiveras när en användare trycker på Avvisa i AEM Inkorg.
 
-   Om du vill visa en fullständig uppsättning värden för alla fält i tilldelningsstegen, dokumentsteget och signeringsdokumentsteget som konfigurerats för exempelvis låneprogram importerar du exempelpaketet som är tillgängligt för hämtning i början av det här avsnittet.
+   Om du vill visa en komplett uppsättning värden för alla fält i tilldelningsstegen, dokumentsteget och dokumentsteget för signering, som konfigurerats för till exempel låneprogrammet, importerar du exempelpaketet, som är tillgängligt för hämtning i början av det här avsnittet.
 
    Arbetsflödesmodellen är klar. Du kan starta arbetsflödet på olika sätt. Mer information finns i [Starta ett Forms-orienterat arbetsflöde i OSGi](#launch).
 
@@ -214,7 +214,7 @@ Du kan konfigurera Skicka-åtgärder för ett anpassat formulär så att ett arb
 An administrator (a member of fd-administrators group) can configure a network folder to run a pre-configured workflow when a user places a file (such as a PDF file) in the folder. After the workflow completes, it can save the result file to a specified output folder. Such a folder is known as [Watched Folder](watched-folder-in-aem-forms.md). Perform the following procedure to configure a watched folder to launch a workflow:
 
 1. On your AEM author instance, go to ![tools-1](assets/tools-1.png) > **[!UICONTROL Forms]** > **[!UICONTROL Configure Watched Folder]**. A list of already configured watched folders is displayed.
-1. Tap **[!UICONTROL New]**. A list of fields is displayed. Specify a value for the following fields to configure a Watched Folder for a workflow:
+1. Select **[!UICONTROL New]**. A list of fields is displayed. Specify a value for the following fields to configure a Watched Folder for a workflow:
 
 <table>
  <tbody>
@@ -245,7 +245,7 @@ An administrator (a member of fd-administrators group) can configure a network f
  </tbody>
 </table>
 
-1. Tap **Advanced**. Specify a value for the following field and taps **Create**. The Watched Folder is configured to launch a workflow. Now, whenever a file is placed in the input directory of the Watched Folder, the specified workflow is triggered.
+1. Select **Advanced**. Specify a value for the following field and taps **Create**. The Watched Folder is configured to launch a workflow. Now, whenever a file is placed in the input directory of the Watched Folder, the specified workflow is triggered.
 
    | Field |Description |
    |---|---|

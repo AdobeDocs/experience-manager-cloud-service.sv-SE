@@ -9,10 +9,10 @@ role: User, Developer
 level: Intermediate
 topic: Migration
 exl-id: 090e77ff-62ec-40cb-8263-58720f3b7558
-source-git-commit: 397e7d4f23202b8ae7419b0ad5436a6a10e2efb8
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1510'
-ht-degree: 1%
+source-wordcount: '1357'
+ht-degree: 0%
 
 ---
 
@@ -105,20 +105,20 @@ Utför följande steg för att göra [!DNL AEM Forms] resurser som är kompatibl
 
 1. Använd alternativet en efter en för att skapa [!DNL AEM Forms] resurser som är kompatibla med [!DNL AEM] as a Cloud Service:
 
-   1. Tryck **[!UICONTROL AEM Forms Assets Migration]** och på nästa skärm trycker du **[!UICONTROL Start Migration]**. Det gör Adaptiv Forms och teman på dina [!DNL AEM Forms] miljö kompatibel med [!DNL AEM] AS A CLOUD SERVICE .
+   1. Välj **[!UICONTROL AEM Forms Assets Migration]** och på nästa skärm väljer du **[!UICONTROL Start Migration]**. Det gör Adaptiv Forms och teman på dina [!DNL AEM Forms] miljö kompatibel med [!DNL AEM] AS A CLOUD SERVICE .
 
-   1. Tryck **[!UICONTROL Adaptive Forms Custom Components Migration]** och på sidan för migrering av anpassade komponenter trycker du på **[!UICONTROL Start Migration]**. Alla anpassade komponenter som utvecklats för Adaptive Forms och komponentövertäckningar i [!DNL AEM Forms] miljö kompatibel med [!DNL AEM] AS A CLOUD SERVICE .
+   1. Välj **[!UICONTROL Adaptive Forms Custom Components Migration]** och på sidan för migrering av anpassade komponenter väljer du **[!UICONTROL Start Migration]**. Alla anpassade komponenter som utvecklats för Adaptive Forms och komponentövertäckningar i [!DNL AEM Forms] miljö kompatibel med [!DNL AEM] AS A CLOUD SERVICE .
 
-   1. Tryck **[!UICONTROL Adaptive Forms Template Migration]** och på sidan för migrering av anpassade komponenter trycker du på **[!UICONTROL Start Migration]**. Det gör adaptiva formulärmallar på `/apps` eller `/conf` som skapats med AEM mallredigerare kompatibel med [!DNL AEM] AS A CLOUD SERVICE .
+   1. Välj **[!UICONTROL Adaptive Forms Template Migration]** och på sidan för migrering av anpassade komponenter väljer du **[!UICONTROL Start Migration]**. Det gör adaptiva formulärmallar på `/apps` eller `/conf` som skapats med AEM mallredigerare kompatibel med [!DNL AEM] AS A CLOUD SERVICE .
 
-   1. Tryck **[!UICONTROL AEM Forms Cloud Configurations Migration]** och sedan på sidan Konfigurationsmigrering trycker du på **[!UICONTROL Start Migration]**. Den uppdaterar och flyttar följande Cloud Service till en ny plats:
+   1. Välj **[!UICONTROL AEM Forms Cloud Configurations Migration]** och sedan på sidan Konfigurationsmigrering väljer du **[!UICONTROL Start Migration]**. Den uppdaterar och flyttar följande Cloud Service till en ny plats:
 
       * Cloud Service för formulärdatamodell
       * Google reCAPTCHA-Cloud Service
       * [!DNL Adobe Sign] Cloud Service
       * Adobe Fonts Cloud Service
 
-   1. Tryck **[!UICONTROL Code Editor Script Migration]**, ange var återanvändbara funktioner ska sparas och tryck på **[!UICONTROL Start Migration].
+   1. Välj **[!UICONTROL Code Editor Script Migration]**, anger var återanvändbara funktioner ska sparas och väljer **[!UICONTROL Start Migration].
 
    Cloud Servicen stöder inte regelredigeringsskript. The **[!UICONTROL Code editor script migration]** används för att konvertera alla regelskript i miljön till återanvändbara funktioner och de återanvändbara funktionerna används i den visuella redigeraren på lämplig plats. Dessa återanvändbara funktioner sparas i form av klientbibliotek och hjälper dig att behålla befintliga funktioner intakta. Verktyget tillämpar automatiskt de genererade återanvändbara funktionerna på motsvarande Adaptive Forms.
 
@@ -135,7 +135,7 @@ Utför följande steg för att göra [!DNL AEM Forms] resurser som är kompatibl
 När du migrerar från AEM Forms 6.5 till molntjänsten kan du hitta de AEM Forms-specifika resurserna på:
 
 * **Adaptiv Forms**: Du kan hitta adaptiva formulär på `/content/dam/formsanddocuments/`och `/content/forms/af`. För ett adaptivt formulär med namnet WKND Registration kan du till exempel lägga till banor `/content/dam/formsanddocuments/wknd-registration` och `/content/forms/af/wknd-registration`.
-* **Formulärdatamodell**: Du hittar alla formulärdatamodeller på `/content/dam/formsanddocuments-fdm`. Till exempel, `/content/dam/formsanddocuments-fdm/ms-dynamics-fdm`.
+* **Formulärdatamodell**: Du hittar alla formulärdatamodeller på `/content/dam/formsanddocuments-fdm`. Till exempel: `/content/dam/formsanddocuments-fdm/ms-dynamics-fdm`.
 
 * **Klientbibliotek**: Standardsökvägen för klientbibliotek är `/etc/clientlibs/fd/theme`.
 

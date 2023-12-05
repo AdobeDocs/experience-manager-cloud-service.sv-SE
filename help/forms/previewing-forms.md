@@ -1,13 +1,12 @@
 ---
 title: Hur förhandsgranskar man ett anpassat formulär?
 description: Användarna kan förhandsgranska blanketterna innan de publiceras eller aktiveras för att säkerställa att de motsvarar förväntningarna. Alternativen för förhandsgranskning kan variera mellan olika formulärtyper som stöds.
-uuid: 9ec359ea-f518-441c-9c3d-e3c1ea07a532
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 377d804d-4a75-4c93-8125-d2660cf56418
-source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
@@ -15,11 +14,11 @@ ht-degree: 0%
 
 # Förhandsgranska ett formulär {#previewing-a-form}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 I [!DNL AEM Forms]kan du förhandsgranska de formulär och dokument som finns i databasen. Med Förhandsgranska vet man exakt hur formulären ser ut och beter sig när de släpps för slutanvändarna.
 
-När du förhandsgranskar formulär återges de i ett interaktivt gränssnitt och användaren kan fylla i formulären med data. När du förhandsgranskar dokument återges de i icke-interaktivt läge och användaren kan bara visa dokumentet. För formulär finns ytterligare ett alternativ för Anpassad förhandsgranskning. Med det här alternativet kan du förhandsgranska formuläret med data från en XML-fil. Informationen fyller i vissa eller alla fält i formuläret som förhandsgranskas.
+När du förhandsgranskar formulär återges de i ett interaktivt gränssnitt och användaren kan fylla i formulären med data. När du förhandsgranskar dokument återges de i icke-interaktivt läge och användaren kan bara visa dokumentet. För formulär finns ytterligare ett alternativ för Anpassad förhandsgranskning. Med det här alternativet kan du förhandsgranska formuläret med data från en XML-fil. Informationen fyller i vissa av fälten, eller alla fält, i det formulär som förhandsgranskas.
 
 I följande tabell visas de förhandsvisningsalternativ som är tillgängliga för olika typer av formulär som stöds:
 

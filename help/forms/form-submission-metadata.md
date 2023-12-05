@@ -4,9 +4,9 @@ description: Lär dig hur du lägger till information i metadata för ett skicka
 feature: Adaptive Forms
 role: User
 level: Intermediate
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '692'
 ht-degree: 0%
 
 ---
@@ -27,8 +27,8 @@ Ta ett exempel på ett formulär som innehåller e-post-ID och telefonnummer. N�
 Gör så här för att lägga till ett element i metadata:
 
 1. Öppna det adaptiva formuläret i redigeringsläge.\
-   Om du vill öppna formuläret i redigeringsläge markerar du formuläret i formulärhanteraren och trycker på **[!UICONTROL Open]**.
-1. Markera en komponent i redigeringsläget och tryck på ![fältnivå](assets/select_parent_icon.svg) > **[!DNL Adaptive Form Container]** och sedan trycka ![cmppr](assets/configure-icon.svg).
+   Om du vill öppna formuläret i redigeringsläge markerar du formuläret i formulärhanteraren och väljer **[!UICONTROL Open]**.
+1. Markera en komponent i redigeringsläget och välj ![fältnivå](assets/select_parent_icon.svg) > **[!DNL Adaptive Form Container]** och sedan markera ![cmppr](assets/configure-icon.svg).
 1. Klicka på **[!DNL Metadata]**.
 1. Klicka på i avsnittet Metadata **[!DNL Add]**.
 1. Använd fältet Värde på fliken Metadata för att lägga till skript. De skript du lägger till samlar in data från element i formuläret och beräknar värden som matas in i metadata.

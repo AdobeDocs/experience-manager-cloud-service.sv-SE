@@ -5,10 +5,10 @@ contentOwner: Vishabh Gupta
 feature: Asset Management
 role: User
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-source-git-commit: f2f81e2e3e7ff0b5bad4a5490f5cbec752c92578
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 2%
+source-wordcount: '1300'
+ht-degree: 0%
 
 ---
 
@@ -139,7 +139,7 @@ Aktivera `OnOffTimeAssetAccessFilter` måste du skapa en OSGi-konfiguration. Den
 1. Skapa en konfigurationsfil på `/apps/system/config/com.day.cq.dam.core.impl.servlet.OnOffTimeAssetAccessFilter.cfg.json`. Filen ska innehålla `{}` som innehåll, vilket innebär en tom OSGi-konfiguration för motsvarande OSGi-komponent. Den här åtgärden aktiverar tjänsten.
 1. Distribuera koden, inklusive den nya konfigurationen, via [!DNL Cloud Manager].
 1. När de distribuerats är återgivningarna och metadata tillgängliga enligt objektens tidsinställningar. Om det aktuella datumet eller den aktuella tiden infaller före eller efter tidpunkten för avaktiveringen visas ett felmeddelande.
-Mer information om hur du lägger till en tom OSGi-konfiguration finns i [stödlinje](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=en).
+Mer information om hur du lägger till en tom OSGi-konfiguration finns i det här [stödlinje](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=en).
 
 ## Tips och begränsningar {#tips-limitations}
 
@@ -148,14 +148,14 @@ Mer information om hur du lägger till en tom OSGi-konfiguration finns i [stödl
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
 

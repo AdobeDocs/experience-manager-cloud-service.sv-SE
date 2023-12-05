@@ -2,10 +2,10 @@
 title: Din inkorg
 description: Lär dig hur du använder meddelanden som kommer in i din Inkorg för att hantera dina uppgifter.
 exl-id: 37d0cf43-192f-4a50-b174-42d7dced3b63
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '911'
-ht-degree: 14%
+source-wordcount: '910'
+ht-degree: 13%
 
 ---
 
@@ -33,7 +33,7 @@ Du får dessa meddelanden i din egen Inkorg där du kan visa och agera på dem.
 
 ## Inkorgen i sidhuvudet {#inbox-in-the-header}
 
-Från någon av konsolerna visas det aktuella antalet objekt i din inkorg i sidhuvudet. Indikatorn kan också öppnas för att ge snabb åtkomst till sidan/sidorna som kräver åtgärder eller åtkomst till inkorgen:
+Från någon av konsolerna visas det aktuella antalet objekt i din inkorg i sidhuvudet. Indikatorn kan också öppnas för att ge snabb åtkomst till sidor som kräver åtgärder eller åtkomst till inkorgen:
 
 ![Översikt över Inkorgen i rubriken](/help/sites-cloud/authoring/assets/inbox-header.png)
 
@@ -150,7 +150,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
    * Bekräfta lämplig åtgärd, till exempel omtilldelning.
    * Avbryt åtgärden
-   * Välj bakåtpilen för att återgå till inkorgen, t.ex. om en åtgärdsguide eller dokumentationssida har öppnats, kan du återgå till inkorgen.
+   * Välj bakåtpilen om du vill återgå till inkorgen, t.ex. om en åtgärdsguide eller dokumentationssida har öppnats, kan du återgå till inkorgen.
 
 ## Skapa en uppgift {#creating-a-task}
 

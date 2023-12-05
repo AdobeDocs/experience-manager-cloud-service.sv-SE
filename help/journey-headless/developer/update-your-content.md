@@ -2,10 +2,10 @@
 title: Så här uppdaterar du innehåll via AEM Assets API:er
 description: I den här delen av den AEM Headless Developer Journey kan du lära dig hur du använder REST API för att komma åt och uppdatera innehållet i dina innehållsfragment.
 exl-id: 84120856-fd1d-40f7-8df4-73d4cdfcc43b
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1093'
-ht-degree: 1%
+source-wordcount: '1052'
+ht-degree: 0%
 
 ---
 
@@ -45,7 +45,7 @@ Med Assets HTTP API kan du **Läs** innehållet, men det gör det också möjlig
 
 Resursens REST API är tillgängligt för varje körklar installation av en nyligen använd Adobe Experience Manager as a Cloud Service-version.
 
-## HTTP API för Assets {#assets-http-api}
+## Resurser för HTTP API {#assets-http-api}
 
 Resursens HTTP-API omfattar:
 
@@ -163,7 +163,7 @@ The response will contain paging information as part of the `properties` section
 
 Folders act as containers for assets and other folders. They reflect the structure of the AEM content repository.
 
-The Assets REST API exposes access to the properties of a folder; for example its name, title, and so on Assets are exposed as child entities of folders, and sub-folders.
+The Assets REST API exposes access to the properties of a folder; for example, its name, title, and so on Assets are exposed as child entities of folders, and sub-folders.
 
 >[!NOTE]
 >
@@ -321,12 +321,12 @@ Du bör fortsätta den AEM resan utan trassel genom att nästa gång du granskar
 
 ## Ytterligare resurser {#additional-resources}
 
-* [HTTP API för Assets](/help/assets/mac-api-assets.md)
+* [Resurser för HTTP API](/help/assets/mac-api-assets.md)
 * [Innehållsfragment REST API](/help/assets/content-fragments/assets-api-content-fragments.md)
    * [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference)
 * [Adobe Experience Manager Assets API - innehållsfragment](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/assets-api-content-fragments/index.html)
 * [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)
-* [Grundläggande komponenter i AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [CORS/AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
 * [Video - Utveckla för CORS med AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
 * [Introduktion till AEM som headless CMS](/help/headless/introduction.md)

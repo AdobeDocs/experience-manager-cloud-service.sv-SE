@@ -7,9 +7,9 @@ topic-tags: author
 discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
 exl-id: e4d8bcb9-ce1f-425e-b35c-d0a79fa771f3
-source-git-commit: 1d0f8bfd955c9315b01e49d8b1924add996b1599
+source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
 workflow-type: tm+mt
-source-wordcount: '2131'
+source-wordcount: '2122'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,7 @@ Om du dessutom har valt ett XML-schema eller en XDP-formulärmall som formulärm
 
    * **Formulärmodell**: Beroende på formulärmodellen för det adaptiva formuläret visas det här fältet **XML-schema**, **Formulärmall**, eller **Ingen**. Det är ett icke-redigerbart fält.
 
-   * **Fragment Model Root**: Visas bara i XSD-baserad adaptiv Forms. Den anger fragmentmodellens rot. Du kan välja **/** eller XSD-komplextypen från rullgardinsmenyn. Observera att du bara kan återanvända fragmentet i ett annat adaptivt formulär om du väljer den komplexa typen som fragmentmodellrot.
+   * **Fragment Model Root**: Visas bara i XSD-baserad adaptiv Forms. Den anger fragmentmodellens rot. Du kan välja **/** eller XSD-komplextypen från rullgardinsmenyn. Du kan bara återanvända fragmentet i ett annat adaptivt formulär om du väljer den komplexa typen som fragmentmodellroten.
 Om du väljer **/** som fragmentmodellrot är det fullständiga XSD-trädet från roten synligt på fliken Adaptiv formulärdatamodell. För en fragmentmodellrot av en komplex typ visas bara de underordnade för den valda komplexa typen på fliken Adaptiv formulärdatamodell.
 
    * **XSD-referens**: Visas endast i XSD-baserad Adaptive Forms. Den visar platsen för XML-schemat.
@@ -251,7 +251,7 @@ Om du vill lokalisera ett adaptivt formulär som innehåller adaptiva formulärf
 * Kontrollera att fragmentnamnet är unikt. Fragmentet kan inte skapas om det finns ett befintligt fragment med samma namn.
 * Om du sparar en panel som ett fragment som innehåller ett annat XDP-fragment i ett XDP-baserat adaptivt formulär, binds det resulterande fragmentet automatiskt till det underordnade XDP-fragmentet. Om det finns ett XSD-baserat adaptivt formulär är det resulterande fragmentet bundet till schemaroten.
 * När du skapar ett adaptivt formulärfragment skapas en fragmentnod, som liknar noden guideContainer för ett adaptivt formulär i CRXDe Lite.
-* Ett fragment i ett adaptivt formulär som använder en annan formulärdatamodell stöds inte. Ett XDP-baserat fragment stöds till exempel inte i en XSD-baserad Adaptiv form och vice versa.
+* Ett fragment i ett adaptivt formulär som använder en annan formulärdatamodell stöds inte. Ett XDP-baserat fragment stöds till exempel inte i en XSD-baserad adaptiv form och omvänt.
 * Anpassade formulärfragment kan användas via fliken Adaptiva formulärfragment i AEM innehållssökaren.
 * Alla uttryck, skript och format i ett fristående adaptivt formulärfragment behålls när de infogas som referens eller bäddas in i ett adaptivt formulär.
 * Du kan inte redigera ett adaptivt formulärfragment som infogas med referens i ett adaptivt formulär. Om du vill redigera kan du antingen redigera det fristående adaptiva formulärfragmentet eller bädda in fragmentet i det adaptiva formuläret.

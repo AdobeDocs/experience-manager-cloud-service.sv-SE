@@ -3,9 +3,9 @@ title: Redigera bilder
 description: Redigera bilder med [!DNL Adobe Photoshop Express] och spara uppdaterade bilder som versioner.
 role: User
 exl-id: fc21a6ee-bf23-4dbf-86b0-74695a315b2a
-source-git-commit: da54e996bad3e6dc8558cecd5bfd7eb99670b142
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1027'
 ht-degree: 0%
 
 ---
@@ -91,7 +91,7 @@ Redigera bilder med [!DNL Adobe Express] följer du stegen nedan:
 
    ![Adobe Expressens inbäddade redigerare](assets/embedded-editor.png)
 
-   Du kan utnyttja funktionerna i [!DNL Adobe Express] för att utföra alla bildredigeringsrelaterade åtgärder, som [ändra storlek på bild](https://helpx.adobe.com/in/express/using/resize-image.html), [ta bort eller ändra bakgrundsfärg](https://helpx.adobe.com/in/express/using/remove-background.html), [beskära bild](https://helpx.adobe.com/in/express/using/crop-image.html)och mycket annat.
+   Du kan använda funktionerna i [!DNL Adobe Express] för att utföra alla bildredigeringsrelaterade åtgärder, som [ändra storlek på bild](https://helpx.adobe.com/in/express/using/resize-image.html), [ta bort eller ändra bakgrundsfärg](https://helpx.adobe.com/in/express/using/remove-background.html), [beskära bild](https://helpx.adobe.com/in/express/using/crop-image.html)och mycket annat.
 
 1. När du är klar med bildredigeringen kan du hämta en resurs som en ny resurs eller spara resursen som en ny version.
 

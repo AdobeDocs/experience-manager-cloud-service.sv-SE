@@ -2,9 +2,9 @@
 title: Versionsinformation för 2023.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2023.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 7866d94c-e54c-4bb2-aaa6-66c019e46336
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '896'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Assets Essentials sorterar nu sökresultaten baserat på relevans som standard. 
 
 * [**Färdiga teman**](/help/forms/using-themes-in-core-components.md) **och mallar**: Kom igång snabbt med processen för att skapa formulär med våra färdiga OOTB-teman och mallar som är skräddarsydda för både erfarna proffs och nya formulärförfattare. Dessa välstrukturerade teman och mallar är sömlöst byggda med adaptiva Forms Core-komponenter och gör att du snabbt kan börja skapa formulär för vanliga användningsområden.
 
-* **[Reaktionskomponenter för Headless Forms](https://github.com/adobe/aem-forms-headless-components/tree/main/packages/react-vanilla-components)**: Nu kan du förhandsgranska och anpassa Headless Adaptive Form-renderingar med React-komponenterna som medföljer. Dessa komponenter utnyttjar BEM-klasser från adaptiva Forms Core-komponenter för formatering, vilket gör det enkelt för dig att anpassa deras utseende efter dina specifika krav.
+* **[Reaktionskomponenter för Headless Forms](https://github.com/adobe/aem-forms-headless-components/tree/main/packages/react-vanilla-components)**: Nu kan du förhandsgranska och anpassa Headless Adaptive Form-renderingar med React-komponenterna som medföljer. Dessa komponenter använder BEM-klasser från adaptiva Forms Core-komponenter för formatering, vilket gör det enkelt för dig att anpassa deras utseende efter dina specifika krav.
 
 * [**Skapa adaptiv Forms med repeterbara avsnitt**](/help/forms/create-forms-repeatable-sections.md): Nu kan du [Dragspel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion.html), [guide](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard.html), [Panel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel-container.html)och [Vågräta flikar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs.html) komponentbaserad Adaptiv form repeterbar för inspelning av flera dataposter.  Dessa upprepningsbara avsnitt gör att du enkelt kan ange flera datainmatningar. Det är användbart när de nödvändiga instanserna av data är okända i förväg. En formuläranvändare kan enkelt lägga till eller ta bort avsnitt, göra formulären anpassningsbara till olika datainmatningsscenarier och förenkla insamlingen av flera förekomster av samma datapost.
 

@@ -2,9 +2,9 @@
 title: Vilka layoutfunktioner har Adaptive Forms?
 description: Layout och utseende för Adaptive Forms på olika enheter styrs av layoutinställningarna. Förstå de olika layouterna och hur de ska användas.
 exl-id: e30c6ff9-692b-4415-8f14-b4ef616b2d12
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '773'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Använd redigeringsläget i [!DNL Experience Manager].
 
 En formulärförfattare kan koppla en layout till varje panel i ett adaptivt formulär, inklusive rotpanelen.
 
-Panellayouterna finns på `/libs/fd/af/layouts/panel` plats. Tryck på panelen och välj ![cmppr1](assets/configure-icon.svg) om du vill visa panelegenskaperna.
+Panellayouterna finns på `/libs/fd/af/layouts/panel` plats. Markera panelen och markera ![cmppr1](assets/configure-icon.svg) om du vill visa panelegenskaperna.
 
 ![Lista över panellayouter för rotpanelen i ett adaptivt formulär](assets/layouts.png)
 

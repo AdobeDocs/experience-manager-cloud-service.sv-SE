@@ -2,9 +2,9 @@
 title: Hur konfigurerar jag sökfilter för Inkorgen?
 description: Lär dig hur du konfigurerar sökfilter för inkorgsobjekt.
 exl-id: 0e82d7ad-7a82-4d67-8eb8-9af6936652d8
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '925'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,13 @@ Följande predikattyper är tillgängliga för Inkorg:
 
 >[!NOTE]
 >
->Se till att du är medlem i `workflow-administrators` grupp för att konfigurera sökfilter för Inkorg.
+>Se till att du är medlem i `workflow-administrators` grupp för att konfigurera sökfilter för Inkorgen.
 
 ## Skapa eller öppna en anpassad konfiguration {#creating-opening-customized-configuration}
 
 1. Navigera till **[!UICONTROL Tools]**, **[!UICONTROL General]**, **[!UICONTROL Search Forms]**.
 
-1. Välj **[!UICONTROL Inbox Search Rail]** konfiguration och knacka **[!UICONTROL Edit]**.
+1. Välj **[!UICONTROL Inbox Search Rail]** konfigurera och välja **[!UICONTROL Edit]**.
 1. Inkludera ändringar av predikatkonfigurationen med **[!UICONTROL Edit Search Forms]**.
 1. Välj **[!UICONTROL Done]** för att spara konfigurationen.
 
@@ -43,7 +43,7 @@ Så här tar du bort en anpassad konfiguration:
 
 1. Navigera till **[!UICONTROL Tools]**, **[!UICONTROL General]**, **[!UICONTROL Search Forms]**.
 
-1. Välj **[!UICONTROL Inbox Search Rail]** konfiguration och knacka **[!UICONTROL Delete]**.
+1. Välj **[!UICONTROL Inbox Search Rail]** konfigurera och välja **[!UICONTROL Delete]**.
 
 ## Konfigurera intervallpredikat {#range-predicate}
 
@@ -52,10 +52,10 @@ Du kan filtrera inkorgsobjekt om du vill söka efter ett nummerintervall i en in
 Så här konfigurerar du en intervallpredikat:
 
 1. Öppna [formulär för konfiguration](#creating-opening-customized-configuration).
-1. Tryck på **[!UICONTROL Select Predicate]** tabb och dra **[!UICONTROL Range Predicate]** till formuläret.
-1. I **[!UICONTROL Settings]** väljer du namnet på inkorgskolumnen som du vill basera sökningen på, från **[!UICONTROL Column Name]** fält.
-1. Ange etiketten för filtret i **[!UICONTROL Filter Label]** fält. Välj **[!UICONTROL Enable Decimal Values]** om du vill acceptera decimalvärden för tal när du definierar intervallet.
-1. Ange en valfri beskrivning för konfigurationen och tryck på **[!UICONTROL Done]** för att spara den.
+1. Välj **[!UICONTROL Select Predicate]** tabb och dra **[!UICONTROL Range Predicate]** till formuläret.
+1. I **[!UICONTROL Settings]** väljer du namnet på inkorgskolumnen som du vill basera sökningen på från **[!UICONTROL Column Name]** fält.
+1. Ange filteretiketten i dialogrutan **[!UICONTROL Filter Label]** fält. Välj **[!UICONTROL Enable Decimal Values]** om du vill acceptera decimalvärden för tal när du definierar intervallet.
+1. Ange en valfri beskrivning av konfigurationen och välj **[!UICONTROL Done]** för att spara den.
 
 Konfigurationsändringarna återspeglas när du öppnar filtersidan. Filteretiketten som du angav i steg 4 visas som etikett med ett alternativ för att definiera maximum- och minimum-värden. När du trycker på Retur [!DNL Experience Manager] använder sökvillkoren på kolumnnamnet som anges i steg 3 och returnerar inkorgsobjekten.
 
@@ -70,10 +70,10 @@ Filtrera inkorgsobjekt om du vill söka efter en textsträng i en inkorgskolumn 
 Så här konfigurerar du en textpredikat:
 
 1. Öppna [formulär för konfiguration](#creating-opening-customized-configuration).
-1. Tryck på **[!UICONTROL Select Predicate]** tabb och dra **[!UICONTROL Text Predicate]** till formuläret.
-1. I **[!UICONTROL Settings]** väljer du namnet på inkorgskolumnen som du vill basera sökningen på, från **[!UICONTROL Column Name]** fält.
+1. Välj **[!UICONTROL Select Predicate]** tabb och dra **[!UICONTROL Text Predicate]** till formuläret.
+1. I **[!UICONTROL Settings]** väljer du namnet på inkorgskolumnen som du vill basera sökningen på från **[!UICONTROL Column Name]** fält.
 1. Ange den text som visas i söktextrutan som platshållartext i dialogrutan **[!UICONTROL Search Text Box Placeholder]** fält.
-1. Ange en valfri beskrivning för konfigurationen och tryck på **[!UICONTROL Done]** för att spara den.
+1. Ange en valfri beskrivning av konfigurationen och välj **[!UICONTROL Done]** för att spara den.
 
 Konfigurationsändringarna återspeglas när du öppnar filtersidan. När du trycker på Retur [!DNL Experience Manager] använder söktexten som anges i steg 4 på kolumnnamnet som anges i steg 3 och returnerar inkorgsobjekten.
 
@@ -84,27 +84,27 @@ Du kan filtrera inkorgsobjekt om du vill söka efter ett datumintervall i en ink
 Så här konfigurerar du en predikat för datumintervall:
 
 1. Öppna [formulär för konfiguration](#creating-opening-customized-configuration).
-1. Tryck på **[!UICONTROL Select Predicate]** tabb och dra **[!UICONTROL Date Range Predicate]** till formuläret.
-1. I **[!UICONTROL Settings]** väljer du namnet på inkorgskolumnen som du vill basera sökningen på, från **[!UICONTROL Column Name]** fält.
+1. Välj **[!UICONTROL Select Predicate]** tabb och dra **[!UICONTROL Date Range Predicate]** till formuläret.
+1. I **[!UICONTROL Settings]** väljer du namnet på inkorgskolumnen som du vill basera sökningen på från **[!UICONTROL Column Name]** fält.
 1. Ange etiketten för datumintervallfiltret i **[!UICONTROL Filter Label]** fält.
 1. Ange startdatum och slutdatumetiketter för filtret.
-1. Ange en valfri beskrivning för konfigurationen och tryck på **[!UICONTROL Done]** för att spara den.
+1. Ange en valfri beskrivning av konfigurationen och välj **[!UICONTROL Done]** för att spara den.
 
 Konfigurationsändringarna återspeglas när du öppnar filtersidan. Filteretiketten som du angav i steg 4 visas som etikett för datumintervallfiltret tillsammans med etiketterna för startdatum och slutdatum som anges i steg 5. [!DNL Experience Manager] använder sökvillkoren på kolumnnamnet som anges i steg 3 och returnerar inkorgsobjekten.
 
-## Konfigurera alternativ för anpassade kolumner {#custom-column-options-predicate}
+## Konfigurera alternativ för anpassade kolumner - predikat {#custom-column-options-predicate}
 
-Du kan filtrera inkorgsobjekt om du vill söka efter ett anpassat alternativ i en inkorgskolumn med hjälp av Förutsägelse för anpassade kolumnalternativ.
+Du kan filtrera inkorgsobjekt om du vill söka efter ett anpassat alternativ i en inkorgskolumn med hjälp av alternativet Förutsägelse för anpassade kolumnalternativ.
 
 Så här konfigurerar du en predikat för anpassade kolumnalternativ:
 
 1. Öppna [formulär för konfiguration](#creating-opening-customized-configuration).
-1. Tryck på **[!UICONTROL Select Predicate]** tabb och dra **[!UICONTROL Custom Column Options Predicate]** till formuläret.
-1. I **[!UICONTROL Settings]** väljer du namnet på inkorgskolumnen som du vill basera sökningen på, från **[!UICONTROL Column Name]** fält.
+1. Välj **[!UICONTROL Select Predicate]** tabb och dra **[!UICONTROL Custom Column Options Predicate]** till formuläret.
+1. I **[!UICONTROL Settings]** väljer du namnet på inkorgskolumnen som du vill basera sökningen på från **[!UICONTROL Column Name]** fält.
 1. Ange etiketten för det anpassade kolumnalternativfiltret i dialogrutan **[!UICONTROL Filter Label]** fält.
 1. Välj **[!UICONTROL Single Select]** om du vill aktivera valet av endast ett alternativ när du använder filter på en inkorgskolumn.
 1. I **[!UICONTROL Add Options]** avsnitt:
-   1. Välj **[!UICONTROL Manual]** om du vill definiera filtersökalternativen manuellt. Tryck **[!UICONTROL Add Filter Options]** för att definiera det första alternativet. Ange etiketten för kolumnalternativet och alternativvärdestexten som du vill söka efter. Om du till exempel vill söka efter **Kvinna** som ett värde i en inkorgskolumn kan du ange **F** som etikett för kolumnalternativet och lägg till **Kvinna** som alternativvärdestext. På samma sätt kan du lägga till fler filteralternativ.
+   1. Välj **[!UICONTROL Manual]** om du vill definiera filtersökalternativen manuellt. Välj **[!UICONTROL Add Filter Options]** för att definiera det första alternativet. Ange etiketten för kolumnalternativet och alternativvärdestexten som du vill söka efter. Om du till exempel vill söka efter **Kvinna** som ett värde i en inkorgskolumn kan du ange **F** som etikett för kolumnalternativet och lägg till **Kvinna** som alternativvärdestext. På samma sätt kan du lägga till fler filteralternativ.
    1. Välj **[!UICONTROL JSON Path]** för att definiera alternativ med hjälp av en JSON-filsökväg. Här följer ett exempel på en JSON-fil som definierar filteralternativ:
 
       ```JSON
@@ -122,7 +122,7 @@ Så här konfigurerar du en predikat för anpassade kolumnalternativ:
         }
       ```
 
-   1. Välj **[!UICONTROL CRX Options Path]** för att definiera alternativ med hjälp av sökvägar för CRX-databaser. Tryck **[!UICONTROL Add Option Paths]** om du vill lägga till flera sökvägar. Här följer ett exempel som du kan definiera `Male` och `Female` filteralternativ:
+   1. Välj **[!UICONTROL CRX Options Path]** för att definiera alternativ med hjälp av sökvägar för CRX-databaser. Välj **[!UICONTROL Add Option Paths]** om du vill lägga till flera sökvägar. Här följer ett exempel som du kan definiera `Male` och `Female` filteralternativ:
 
       ```JSON
          <gender jcr:primaryType="sling:OrderedFolder">
@@ -137,7 +137,7 @@ Så här konfigurerar du en predikat för anpassade kolumnalternativ:
                     </gender>
       ```
 
-1. Ange en valfri beskrivning för konfigurationen och tryck på **[!UICONTROL Done]** för att spara den.
+1. Ange en valfri beskrivning av konfigurationen och välj **[!UICONTROL Done]** för att spara den.
 
 Konfigurationsändringarna återspeglas när du öppnar filtersidan. Filteretiketten som du angav i steg 4 visas som etikett för alternativet för anpassade kolumner. [!DNL Experience Manager] använder sökvillkoren som definieras i steg 6 på kolumnnamnet som anges i steg 3 och returnerar inkorgsobjekten.
 

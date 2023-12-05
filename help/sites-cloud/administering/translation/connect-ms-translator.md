@@ -4,9 +4,9 @@ description: Lär dig hur du kan koppla AEM till Microsoft Translator körklart 
 feature: Language Copy
 role: Admin
 exl-id: ca3c50f9-005e-4871-8606-0cfd3ed21936
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Skapa en konfiguration för [Microsoft Translator](https://www.microsoft.com/en-
 | Egenskap | Beskrivning |
 |---|---|
 | Översättningsetikett | Översättningstjänstens visningsnamn |
-| Översättningsattribut | (Valfritt) För användargenererat innehåll visas attributet bredvid översatt text, till exempel `Translations by Microsoft` |
+| Översättningsattribut | (Valfritt) För användargenererat innehåll visas attributet bredvid översatt text, till exempel: `Translations by Microsoft` |
 | ID för arbetsyta | (Valfritt) ID:t för den anpassade Microsoft Translator-motorn som ska användas |
 | Prenumerationsnyckel | Din Microsoft-prenumerationsnyckel för Microsoft Translator |
 

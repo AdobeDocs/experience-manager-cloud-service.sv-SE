@@ -4,10 +4,10 @@ description: Lär dig hur du använder delade köer för Forms-centrerade arbets
 topic-tags: process
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
 source-wordcount: '798'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -30,11 +30,11 @@ Med AEM Inkorg kan du dela ett eller alla objekt i din inkorg med en annan anvä
 
 Så här delar du alla objekt i en inkorg med en annan användare:
 
-1. Logga in på din AEM. Tryck på ![Inkorg](assets/bell.svg) ikon och tryck **[!UICONTROL View All]**. En lista över dina inkorgsobjekt visas.
-1. Tryck på ![Visa väljare](assets/viewlist.svg) eller ![Visa väljare](assets/calendar.svg) -ikonen bredvid **[!UICONTROL Create]** knapp och knacka **[!UICONTROL Settings]**. Dialogrutan Inställningar visas.
+1. Logga in på din AEM. Välj ![Inkorg](assets/bell.svg) ikon och markera **[!UICONTROL View All]**. En lista över dina inkorgsobjekt visas.
+1. Välj ![Visa väljare](assets/viewlist.svg) eller ![Visa väljare](assets/calendar.svg) -ikonen bredvid **[!UICONTROL Create]** knapp och markera **[!UICONTROL Settings]**. Dialogrutan Inställningar visas.
 1. Öppna **[!UICONTROL Share]** i inställningsdialogrutan.
-1. Ange namnet på en användare i **[!UICONTROL Grant access of your Inbox items]** textruta och tryck **[!UICONTROL Grant]**. Upprepa steget för att lägga till fler användare. Alla användare med åtkomst till dina objekt visas under **Användarnamn** -avsnitt.
-1. Tryck på **[!UICONTROL Save]**.
+1. Ange namnet på en användare i **[!UICONTROL Grant access of your Inbox items]** textruta och markera **[!UICONTROL Grant]**. Upprepa steget för att lägga till fler användare. Alla användare med åtkomst till dina objekt visas under **Användarnamn** -avsnitt.
+1. Välj **[!UICONTROL Save]**.
 
 >[!NOTE]
 >
@@ -44,10 +44,10 @@ Så här delar du alla objekt i en inkorg med en annan användare:
 
 Så här delar du ett Inkorgsobjekt med en annan användare:
 
-1. Logga in på din AEM. Tryck på ![Inkorg](assets/bell.svg) ikon och tryck **[!UICONTROL View All]**. En lista över dina inkorgsobjekt visas.
-1. Markera ett objekt och tryck **[!UICONTROL Share]**. En dialogruta visas.
-1. Ange namnet på en användare i textrutan Lägg till användare för att dela det här objektet och tryck på **[!UICONTROL Add]**. Upprepa steget för att lägga till fler användare. Alla användare med åtkomst till dina objekt visas under **[!UICONTROL Username]** -avsnitt.
-1. Tryck på **[!UICONTROL Save]**.
+1. Logga in på din AEM. Välj ![Inkorg](assets/bell.svg) ikon och markera **[!UICONTROL View All]**. En lista över dina inkorgsobjekt visas.
+1. Markera ett objekt och markera **[!UICONTROL Share]**. En dialogruta visas.
+1. Ange namnet på en användare i textrutan Lägg till användare för att dela det här objektet och välj **[!UICONTROL Add]**. Upprepa steget för att lägga till fler användare. Alla användare med åtkomst till dina objekt visas under **[!UICONTROL Username]** -avsnitt.
+1. Välj **[!UICONTROL Save]**.
 
 
 >[!NOTE]
@@ -58,20 +58,20 @@ Så här delar du ett Inkorgsobjekt med en annan användare:
 
 Du kan begära åtkomst till inkorgsobjekten för en annan användare. När åtkomsten har beviljats kan du visa, göra anspråk på och vidta lämpliga åtgärder för delade objekt. Utför följande steg för att begära åtkomst till inkorgsobjekt från en annan användare:
 
-1. Logga in på din AEM. Tryck på ![Visa väljare](assets/bell.svg) ikon och tryck **[!UICONTROL View All]**.
-1. Tryck på ![Visa väljare](assets/viewlist.svg) eller ![Visa väljare](assets/calendar.svg) -ikonen bredvid **[!UICONTROL Create]** knapp och knacka **[!UICONTROL Settings]**. Dialogrutan Inställningar visas.
-1. Ange namnet på en användare i **[!UICONTROL Request access to Inbox items of the user]** textruta och tryck **[!UICONTROL Request]**. En begäran skickas till användaren och status för begäran visas mot användarens namn. Upprepa steget för att lägga till fler användare.
-1. Tryck på **[!UICONTROL Save]**. Begäran skickas som ett inkorgsobjekt till användarna. Användaren kan markera objektet och trycka på Godkänn eller Avvisa för att bevilja eller avvisa åtkomsten.
+1. Logga in på din AEM. Välj ![Visa väljare](assets/bell.svg) ikon och markera **[!UICONTROL View All]**.
+1. Välj ![Visa väljare](assets/viewlist.svg) eller ![Visa väljare](assets/calendar.svg) -ikonen bredvid **[!UICONTROL Create]** knapp och markera **[!UICONTROL Settings]**. Dialogrutan Inställningar visas.
+1. Ange namnet på en användare i **[!UICONTROL Request access to Inbox items of the user]** textruta och markera **[!UICONTROL Request]**. En begäran skickas till användaren och status för begäran visas mot användarens namn. Upprepa steget för att lägga till fler användare.
+1. Välj **[!UICONTROL Save]**. Begäran skickas som ett inkorgsobjekt till användarna. Användaren kan markera objektet och välja Godkänn eller Avvisa för att bevilja eller avvisa åtkomsten.
 
 
 ## Göra anspråk på objekt som delas av andra användare {#claim-items}
 
 Du kan bara börja arbeta med ett delat objekt efter att du har gjort anspråk på det. Det förhindrar att flera användare arbetar med ett enda objekt. Utför följande steg för att göra anspråk på ett objekt:
 
-1. Logga in på din AEM. Tryck på inkorgen ![Inkorg](assets/bell.svg) ikon och tryck **[!UICONTROL View All]**.
-1. Tryck på ![Endast innehåll](assets/railleft.svg) -ikonen för att öppna filterväljaren.
-1. Tryck på **[!UICONTROL Select Assignee]** för att visa och välja användare som har delat sina inkorgsobjekt med dig.
-1. Markera ett objekt och tryck **[!UICONTROL Claim]**. Objektet läggs till i din inkorg.
+1. Logga in på din AEM. Markera inkorgen ![Inkorg](assets/bell.svg) ikon och markera **[!UICONTROL View All]**.
+1. Välj ![Endast innehåll](assets/railleft.svg) -ikonen för att öppna filterväljaren.
+1. Välj **[!UICONTROL Select Assignee]** för att visa och välja användare som har delat sina inkorgsobjekt med dig.
+1. Markera ett objekt och markera **[!UICONTROL Claim]**. Objektet läggs till i din inkorg.
 
 ## Frisläpp begärda artiklar {#release-items}
 
@@ -79,8 +79,8 @@ Du kan bara arbeta med ett delat objekt efter att du har gjort anspråk på det.
 
 Utför följande steg för att frigöra ett objekt:
 
-1. Logga in på din AEM. Tryck på inkorgen ![Inkorg](assets/bell.svg) ikon och tryck **[!UICONTROL View All]**. En lista över dina inkorgsobjekt visas.
-1. Välj det objekt som ska frisläppas och tryck på **[!UICONTROL UnClaim]**. Objektet läggs till i poolen igen. Andra kan nu göra anspråk på objektet.
+1. Logga in på din AEM. Markera inkorgen ![Inkorg](assets/bell.svg) ikon och markera **[!UICONTROL View All]**. En lista över dina inkorgsobjekt visas.
+1. Markera objektet som ska frisläppas och markera **[!UICONTROL UnClaim]**. Objektet läggs till i poolen igen. Andra kan nu göra anspråk på objektet.
 
 ## Begränsningar {#limitations}
 

@@ -2,9 +2,9 @@
 title: Hur konfigurerar man en Skicka-åtgärd för ett anpassat formulär?
 description: Ett anpassat formulär innehåller flera överföringsåtgärder. En Skicka-åtgärd definierar hur ett anpassat formulär ska bearbetas när det har skickats in. Du kan använda inbyggda Skicka-åtgärder eller skapa egna.
 exl-id: a4ebedeb-920a-4ed4-98b3-2c4aad8e5f78
-source-git-commit: 0e6c4e6745a03e0d48c535e2e113d2a7e5ff4e78
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '3655'
+source-wordcount: '3601'
 ht-degree: 0%
 
 ---
@@ -87,7 +87,7 @@ Som visas i bilden nedan, `param1` och `param2` skickas som parametrar med värd
 
 ![Konfigurerar åtgärden Skicka för resterande slutpunkt](assets/action-config.png)
 
-Du kan också **[!UICONTROL Enable POST request]** och ange en URL för att skicka begäran. Om du vill skicka data till den AEM servern som är värd för formuläret använder du en relativ sökväg som motsvarar rotsökvägen för AEM. Till exempel, `/content/forms/af/SampleForm.html`. Om du vill skicka data till en annan server använder du den absoluta sökvägen.
+Du kan också **[!UICONTROL Enable POST request]** och ange en URL för att skicka begäran. Om du vill skicka data till den AEM servern som är värd för formuläret använder du en relativ sökväg som motsvarar rotsökvägen för AEM. Till exempel: `/content/forms/af/SampleForm.html`. Om du vill skicka data till en annan server använder du den absoluta sökvägen.
 
 >[!NOTE]
 >
@@ -264,7 +264,7 @@ Så här ansluter du AEM Forms till din Microsoft® Sharepoint-lista:
 
 1. Klicka på **[!UICONTROL Connect]**. Vid en lyckad anslutning `Connection Successful` visas.
 1. Välj **[!UICONTROL SharePoint Site]** och **[!UICONTROL SharePoint List]** i listrutan.
-1. Tryck **[!UICONTROL Create]** för att skapa molnkonfigurationen för Microsoft® SharePointList.
+1. Välj **[!UICONTROL Create]** för att skapa molnkonfigurationen för Microsoft® SharePointList.
 
 
 #### Använda Skicka med formulärdatamodellen i ett anpassat formulär {#use-submit-using-fdm}
