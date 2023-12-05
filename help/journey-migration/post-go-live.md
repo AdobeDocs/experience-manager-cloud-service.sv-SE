@@ -4,8 +4,8 @@ description: Lär dig hur du övervakar problem och förbättrar prestanda
 exl-id: 487f0b51-501b-48fc-a796-3cb8a6d64462
 source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 9%
+source-wordcount: '459'
+ht-degree: 4%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 9%
 >id="aemcloud_golive_troubleshooting"
 >title="AEM"
 >abstract="Granska metodtips för kontinuerlig utveckling och hantera loggar tillsammans med verktyg som Developer Console och CRXDE Lite för att få hjälp med felsökning av AEM"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-logs.html" text="Komma åt och hantera loggar"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-logs.html" text="Åtkomst till och hantering av loggar"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#aem-as-a-cloud-service-development-tools" text="AEM as a Cloud Service utvecklingsverktyg"
 
 Den här resan är den sista delen, så du lär dig att övervaka problem och förbättra resultatet när migreringen är klar. Du bör se till att tillfälliga filer rensas, granska bästa praxis för kontinuerlig utveckling och hantera loggar.
@@ -40,7 +40,7 @@ Se [Implementera för AEM as a Cloud Service](/help/implementing/developing/intr
 
 ## CRXDE Lite {#crxde-lite}
 
-Som användare har du åtkomst till CRXDE Lite i utvecklingsmiljön, men inte i mellanlagring eller produktion.
+Som användare har du åtkomst till CRXDE Lite i utvecklingsmiljön, men inte till scenen eller produktionen.
 
 >[!IMPORTANT]
 >Skriva till oföränderliga databaser som `/libs` och `/apps` vid körning resulterar i fel. Du har inte heller tillgång till utvecklarverktyg för staging- och produktionsmiljöer.

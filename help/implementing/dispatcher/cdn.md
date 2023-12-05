@@ -1,20 +1,20 @@
 ---
-title: CDN i AEM as a Cloud Service
+title: CDN på AEM as a Cloud Service
 description: Lär dig hur du använder det AEM-hanterade CDN och hur du pekar ditt eget CDN mot det AEM-hanterade CDN.
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
 source-git-commit: 127b79d766a4dfc33a2ed6016e191e771206d791
 workflow-type: tm+mt
-source-wordcount: '1033'
-ht-degree: 9%
+source-wordcount: '1031'
+ht-degree: 6%
 
 ---
 
-# CDN i AEM as a Cloud Service {#cdn}
+# CDN på AEM as a Cloud Service {#cdn}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_cdn"
->title="CDN i AEM as a Cloud Service"
+>title="CDN på AEM as a Cloud Service"
 >abstract="AEM när Cloud Servicen levereras med ett inbyggt CDN. Dess huvudsakliga syfte är att minska latensen genom att leverera tillgängligt innehåll från CDN-noder nära webbläsaren. Det är helt managerat och konfigurerat för optimal prestanda i AEM-program."
 
 AEM när Cloud Servicen levereras med ett inbyggt CDN. Dess huvudsakliga syfte är att minska latensen genom att leverera tillgängligt innehåll från CDN-noder nära webbläsaren. Det är helt managerat och konfigurerat för optimal prestanda i AEM-program.
@@ -57,7 +57,7 @@ Om en kund måste använda sitt befintliga CDN kan de hantera det och peka det m
 
 Konfigurationsanvisningar:
 
-1. Peka ditt CDN mot Adobe CDN:s ingress som ursprungsdomän. Till exempel, `publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com`.
+1. Peka ditt CDN mot Adobe CDN:s ingress som ursprungsdomän. Till exempel: `publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com`.
 1. Ställ in SNI på Adobe CDN:s ingress.
 1. Ange värdhuvudet som den ursprungliga domänen. Till exempel: `Host:publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com`.
 1. Ange `X-Forwarded-Host` header med domännamnet så att AEM kan avgöra värdhuvudet. Till exempel: `X-Forwarded-Host:example.com`.

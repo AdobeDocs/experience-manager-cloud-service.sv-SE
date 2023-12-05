@@ -4,8 +4,8 @@ description: Lär dig hur du kommer igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
 source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1424'
-ht-degree: 6%
+source-wordcount: '1370'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_download"
 >title="Ladda ned"
->abstract="Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM). Glöm inte att hämta den senaste versionen."
+>abstract="Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via Package Manager på Adobe Experience Manager-källinstansen (AEM). Glöm inte att hämta den senaste versionen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html" text="Versionsinformation"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="Programdistributionsportal"
 
@@ -55,7 +55,7 @@ Det kan vara svårt att förstå SSL-/TLS-anslutningsproblem. Om du vill felsök
 >[!NOTE]
 >Den här flaggan används endast för felsökning av SSL-problem. Se till att flaggan är inaktiverad innan du kör extraheringen, eftersom det kan kräva mycket diskutrymme. Detta kan potentiellt fylla diskkapaciteten och orsaka att extraheringsprocessen misslyckas.
 
-## Köra Content Transfer Tool {#running-tool}
+## Använda verktyget Innehållsöverföring {#running-tool}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_demo"
@@ -132,7 +132,7 @@ Om du vill fylla i den migreringsuppsättning du skapade i Cloud Acceleration Ma
 
 1. Välj sedan följande parametrar för att skapa en migreringsuppsättning:
 
-   1. **Include Version**: Välj det som behövs. När versioner inkluderas, banan `/var/audit` inkluderas automatiskt för att migrera granskningshändelser.
+   1. **Inkludera version**: Välj det som behövs. När versioner inkluderas, banan `/var/audit` inkluderas automatiskt för att migrera granskningshändelser.
 
       ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam7.png)
 
@@ -140,7 +140,7 @@ Om du vill fylla i den migreringsuppsättning du skapade i Cloud Acceleration Ma
       >Om du tänker ta med versioner som en del av en migreringsuppsättning och utför uppsättningar med `wipe=false`måste du inaktivera versionsrensning på grund av en aktuell begränsning i verktyget Innehållsöverföring. Om du föredrar att behålla versionsrensning aktiverad och utför summeringar i en migreringsuppsättning, måste du utföra inmatningen som `wipe=true`.
 
 
-   1. **Paths to be included**: Använd sökvägsläsaren för att välja sökvägar som behöver migreras. Banväljaren accepterar indata genom att skriva eller genom att välja.
+   1. **Banor som ska inkluderas**: Använd sökvägsläsaren för att välja sökvägar som ska migreras. Banväljaren accepterar indata genom att skriva eller genom att välja.
 
       >[!IMPORTANT]
       >Följande sökvägar är begränsade när du skapar en migreringsuppsättning:

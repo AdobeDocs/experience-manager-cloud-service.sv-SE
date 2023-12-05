@@ -4,8 +4,8 @@ description: Bekanta dig med kraven för verktyget Innehållsöverföring
 exl-id: 41a9cff1-4d89-480c-b9fc-5e8efc2a0705
 source-git-commit: 5964801192fc4a50b7f04852e3128f8218ca4cc5
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 1%
+source-wordcount: '500'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 1%
 >id="aemcloud_ctt_prereqs"
 >title="Viktigt att tänka på när du använder verktyget Innehållsöverföring"
 >abstract="Läs igenom viktiga aspekter av att använda verktyget för innehållsöverföring, inklusive Java™- och AEM-versioner, datastortyper som stöds, användargrupper med mera."
-additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html?lang=en" text="Viktigt att tänka på när du använder Content Transfer Tool"
+additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html?lang=en" text="Viktigt att tänka på när du använder verktyget Innehållsöverföring"
 additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html?lang=en#best-practices" text="God praxis och riktlinjer"
 
 I följande tabell sammanfattas förutsättningarna för att använda verktyget Innehållsöverföring.

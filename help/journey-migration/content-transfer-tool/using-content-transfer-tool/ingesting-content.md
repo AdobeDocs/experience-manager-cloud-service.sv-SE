@@ -2,10 +2,10 @@
 title: Infoga innehåll i Cloud Service
 description: Lär dig hur du använder Cloud Acceleration Manager för att importera innehåll från din migreringsuppsättning till en instans av en Cloud Service.
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '2326'
-ht-degree: 3%
+source-wordcount: '2275'
+ht-degree: 1%
 
 ---
 
@@ -49,7 +49,7 @@ Följ stegen nedan för att importera din migreringsuppsättning med Cloud Accel
 
    * **Svep:** Välj `Wipe` value
       * The **Svep** anger målets startpunkt för inmatningen. If **Svep** är aktiverat återställs målet, inklusive allt innehåll, till den version av AEM som anges i Cloud Manager. Om det inte är aktiverat behåller målet sitt aktuella innehåll som startpunkt.
-      * Observera att det här alternativet gör det **NOT** påverka hur innehållsintaget kommer att ske. Inmatningen använder alltid en innehållsersättningsstrategi och _not_ en strategi för sammanfogning av innehåll så att, i båda **Svep** och **Ej svep** om en migreringsuppsättning matas in skrivs innehållet i samma sökväg över på destinationen. Om till exempel migreringsuppsättningen innehåller `/content/page1` och målet innehåller redan `/content/page1/product1`, tar det bort hela `page1` bana och dess undersidor, inklusive `product1`och ersätt den med innehållet i migreringsuppsättningen. Detta innebär att noggrann planering måste göras när du utför en **Ej svep** Inmatning till ett mål som innehåller innehåll som bör behållas.
+      * Det här alternativet gör det **NOT** påverka hur innehållsintaget kommer att ske. Inmatningen använder alltid en innehållsersättningsstrategi och _not_ en strategi för sammanfogning av innehåll så att, i båda **Svep** och **Ej svep** om en migreringsuppsättning matas in skrivs innehållet i samma sökväg över på destinationen. Om till exempel migreringsuppsättningen innehåller `/content/page1` och målet innehåller redan `/content/page1/product1`, tar det bort hela `page1` bana och dess undersidor, inklusive `product1`och ersätt den med innehållet i migreringsuppsättningen. Detta innebär att noggrann planering måste göras när du utför en **Ej svep** Inmatning till ett mål som innehåller innehåll som bör behållas.
 
    >[!IMPORTANT]
    > Om inställningen **Svep** är aktiverat för inmatningen, återställs hela den befintliga databasen inklusive användarbehörigheter för målinstansen av Cloud Servicen. Återställningen gäller även för en admin-användare som lagts till i **administratörer** gruppen och den användaren måste läggas till i administratörsgruppen igen för att påbörja ett intag.
@@ -73,18 +73,18 @@ Följ stegen nedan för att importera din migreringsuppsättning med Cloud Accel
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam23b.png)
 
-## Uppdatera inmatning {#top-up-ingestion-process}
+## Övre inmatning {#top-up-ingestion-process}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_ingestion_topup"
->title="Uppdatera inmatning"
+>title="Övre inmatning"
 >abstract="Använd den övre funktionen för att flytta ändrat innehåll sedan föregående innehållsöverföringsaktivitet. Kontrollera loggarna efter eventuella fel/varningar när du har slutfört Ingestition. Felen bör åtgärdas omedelbart, antingen genom att man hanterar de rapporterade problemen eller genom att kontakta Adobe kundtjänst."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/viewing-logs.html" text="Visa loggar"
 
 Verktyget Innehållsöverföring har en funktion som gör att du kan extrahera differentiellt innehåll genom att utföra en *uppifrån* av migreringsuppsättningen. Detta gör att migreringsuppsättningen kan ändras så att endast innehåll som har ändrats sedan den föregående extraheringen tas med, utan att allt innehåll behöver extraheras igen.
 
 >[!NOTE]
->Efter den första innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du börjar använda Cloud Service. Om du har använt steget före kopiering för det första intaget kan du hoppa över förkopiering för efterföljande toppkopieringsförslag (om den övre migreringsuppsättningsstorleken är mindre än 200 GB). Orsaken är att det kan lägga till tid i hela processen.
+>Efter den initiala innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du publicerar på Cloud Servicen. Om du har använt steget före kopiering för det första intaget kan du hoppa över förkopiering för efterföljande toppkopieringsförslag (om den övre migreringsuppsättningsstorleken är mindre än 200 GB). Orsaken är att det kan lägga till tid i hela processen.
 
 Om du vill importera differentierat innehåll efter att en del inmatningar är slutförda måste du köra en [Extrahering uppifrån och ned](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md#top-up-extraction-process)och sedan använda metoden för att få ett intag med **Svep** option **inaktiverad**. Läs mer i **Svep** ovan för att undvika att innehåll som redan finns på målet går förlorat.
 

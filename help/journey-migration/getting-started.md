@@ -4,8 +4,8 @@ description: Börja din migreringsresa genom att bekanta dig med grunderna i att
 exl-id: e1a79630-56c1-4648-aa11-3348c3b37541
 source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 10%
+source-wordcount: '560'
+ht-degree: 6%
 
 ---
 
@@ -20,7 +20,7 @@ Det här dokumentet hjälper dig att förstå varför du bör använda en molnba
 * Förstå fördelarna med att flytta AEM as a Cloud Service
 * Bekanta dig med de breda steg du måste ta så att du kan gå över till molnet
 
-## Fördelar med att flytta till AEM as a Cloud Service {#benefits-of-moving-to-aem-as-a-cloud-service}
+## Fördelar med att gå över till AEM as a Cloud Service {#benefits-of-moving-to-aem-as-a-cloud-service}
 
 AEM as a Cloud Service utgör en skalbar, säker och flexibel teknikgrund för Experience Manager Assets, Forms och skärmar som gör att marknadsförare och IT-personal kan fokusera på att leverera slagkraftiga upplevelser i stor skala.
 
@@ -49,8 +49,8 @@ Du kan även se bilden nedan för en mer detaljerad bild av migreringsresan.
 >id="aemcloud_cam_overview"
 >title="Om Cloud Acceleration Manager"
 >abstract="Cloud Acceleration Manager är en molnbaserad applikation som är utformad för att vägleda era IT-team under hela övergångsresan, från planering till live Cloud Service."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/home.html#aem-moving-to-aem-guide" text="Flytta till AEM as a Cloud Service"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/sites-cloud-changes.html" text="Viktiga ändringar i AEM Sites as a Cloud Service"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/home.html#aem-moving-to-aem-guide" text="Flyttar till AEM as a Cloud Service"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/sites-cloud-changes.html" text="Betydande förändringar av AEM Sites as a Cloud Service"
 
 Förutom de steg som beskrivs under den här resan tillhandahåller Adobe Cloud Acceleration Manager, en molnbaserad applikation som är utformad för att vägleda dina IT-team genom hela övergångsprocessen från planering till live Cloud Service. Konfigurera era team för en framgångsrik migrering med bästa praxis, tips, dokumentation och verktyg som rekommenderas av Adobe för att hjälpa er att AEM som Cloud Service under hela kundresan.
 

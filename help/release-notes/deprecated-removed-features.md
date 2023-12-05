@@ -4,8 +4,8 @@ description: Versionsinformation om borttagna och borttagna funktioner i [!DNL A
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
 source-git-commit: 459e6cbf91f9b7f995bd1fd9c8758962c41c9341
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 4%
+source-wordcount: '657'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 4%
 >abstract="AEM as a Cloud Service har en distributionsmodell som bygger på molnet. Vissa funktioner har ersatts av molnbaserade motsvarigheter och på den här fliken visas dessa funktioner."
 
 
-Adobe utvärderar ständigt produktfunktioner för att så småningom förnya eller ersätta äldre funktioner med modernare alternativ för att förbättra det totala kundvärdet, alltid med noggrant övervägande av bakåtkompatibilitet. Som [!DNL Adobe Experience Manager] som [!DNL Cloud Service] innehåller en distributionsmodell som bygger på molnet, och vissa funktioner har ersatts av molnbaserade motsvarigheter.
+Adobe utvärderar ständigt produktfunktioner och kan med tiden förnya eller ersätta äldre funktioner med modernare alternativ för att förbättra det totala kundvärdet, alltid under noggrant övervägande av bakåtkompatibilitet. Som [!DNL Adobe Experience Manager] som [!DNL Cloud Service] innehåller en distributionsmodell som bygger på molnet, och vissa funktioner har ersatts av molnbaserade motsvarigheter.
 
 Att informera om den förestående borttagningen/ersättningen av [!DNL Experience Manager] funktioner gäller följande regler:
 
@@ -26,7 +26,7 @@ Att informera om den förestående borttagningen/ersättningen av [!DNL Experien
 
 Den här processen ger kunderna minst en releasecykel för att anpassa implementeringen till en ny version eller en efterföljare till en borttagningsfunktion, innan den faktiska borttagningen.
 
-## Borttagna funktioner {#deprecated-features}
+## Föråldrade funktioner {#deprecated-features}
 
 I det här avsnittet visas funktioner som har markerats som inaktuella i [!DNL Experience Manager] som [!DNL Cloud Service]. Vanligtvis är funktioner som ska tas bort i en framtida version först inaktuella, med ett alternativ.
 

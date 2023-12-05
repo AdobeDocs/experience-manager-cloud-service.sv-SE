@@ -4,8 +4,8 @@ description: Lär dig hur du extraherar innehåll från en Adobe Experience Mana
 exl-id: c5c08c4e-d5c3-4a66-873e-96986e094fd3
 source-git-commit: 858e10f99e2015a1488bb9e1d0990a553c5f6d04
 workflow-type: tm+mt
-source-wordcount: '735'
-ht-degree: 21%
+source-wordcount: '728'
+ht-degree: 9%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 21%
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_extraction"
 >title="Innehållsextrahering"
->abstract="Extrahering avser att extrahera innehåll från Adobe Experience Manager-källinstansen (AEM) till ett temporärt område som kallas migreringsuppsättning. En migreringsuppsättning är ett molnlagringsutrymme som finns hos Adobe för att tillfälligt lagra det överförda innehållet mellan AEM-källinstansen och Cloud Service AEM-instansen."
+>abstract="Extrahering avser att extrahera innehåll från Adobe Experience Manager-källinstansen (AEM) till ett temporärt område som kallas migreringsuppsättning. En migreringsuppsättning är ett molnlagringsutrymme som tillhandahålls av Adobe för att tillfälligt lagra det överförda innehållet mellan AEM och Cloud Service AEM."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html#top-up-extraction-process" text="Extrahering uppifrån"
 
 
@@ -61,15 +61,15 @@ Följ stegen nedan för att extrahera migreringsuppsättningen från Content Tra
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam18b.png)
 
 
-## Uppdateringsextrahering {#top-up-extraction-process}
+## Extrahering uppifrån och ned {#top-up-extraction-process}
 
 Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen.
 
 >[!NOTE]
->Efter den första innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du börjar använda Cloud Service. Om du har använt förkopieringssteget för den första fullständiga extraheringen kan du hoppa över förkopieringen för efterföljande extraheringar (om den övre migreringsuppsättningsstorleken är mindre än 200 GB). Orsaken är att det kan lägga till tid i hela processen.
+>Efter den initiala innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du publicerar på Cloud Servicen. Om du har använt förkopieringssteget för den första fullständiga extraheringen kan du hoppa över förkopieringen för efterföljande extraheringar (om den övre migreringsuppsättningsstorleken är mindre än 200 GB). Orsaken är att det kan lägga till tid i hela processen.
 >Det är också viktigt att innehållsstrukturen i befintligt innehåll inte ändras från den tidpunkt då den första extraheringen utförs till den tidpunkt då extraheringen görs. Det går inte att köra uppsättningar på innehåll vars struktur har ändrats sedan den första extraheringen. Kontrollera att du begränsar detta under migreringsprocessen.
 
-När extraheringen är klar kan du överföra delta-innehåll med extraheringsmetoden för uppdateringar.
+När extraheringen är klar kan du överföra delta-innehåll med extraheringsmetoden top-up.
 
 Följ stegen nedan:
 
@@ -77,7 +77,7 @@ Följ stegen nedan:
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam19.png)
 
-1. Dialogrutan **Migration Set extraction** visas. Klicka **Extract**.
+1. The **Extrahering av migreringsuppsättning** visas. Klicka **Extract**.
 
    >[!IMPORTANT]
    >Du bör inaktivera alternativet **Overwrite staging container during extraction**.

@@ -3,9 +3,9 @@ title: Distribuera till AEM as a Cloud Service
 description: Läs mer om grunderna och de bästa sätten att distribuera till AEM as a Cloud Service
 feature: Deploying
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
-source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
-source-wordcount: '3470'
+source-wordcount: '3429'
 ht-degree: 0%
 
 ---
@@ -150,7 +150,7 @@ När Cloud Manager distribuerar programmet körs dessa programsatser, oberoende 
 Skapa `repoinit` -programsatser, följ proceduren nedan:
 
 1. Lägg till OSGi-konfiguration för fabriks-PID `org.apache.sling.jcr.repoinit.RepositoryInitializer` i en konfigurationsmapp för projektet. Använd ett beskrivande namn för konfigurationen som **org.apache.sling.jcr.repoinit.RepositoryInitializer~initstructure**.
-1. Lägg till `repoinit` -programsatser till egenskapen script för config. Syntaxen och alternativen beskrivs i [Sling-dokumentation](https://sling.apache.org/documentation/bundles/repository-initialization.html). En överordnad mapp bör skapas explicit före de underordnade mapparna. Ett exempel på en explicit skapelse av `/content` före `/content/myfolder`, före `/content/myfolder/mysubfolder`. För åtkomstkontrollistor som ställs in på lågnivåstrukturer bör du ställa in dem på en högre nivå och arbeta med en `rep:glob` begränsning. Till exempel, `(allow jcr:read on /apps restriction(rep:glob,/msm/wcm/rolloutconfigs))`.
+1. Lägg till `repoinit` -programsatser till egenskapen script för config. Syntaxen och alternativen beskrivs i [Sling-dokumentation](https://sling.apache.org/documentation/bundles/repository-initialization.html). En överordnad mapp bör skapas explicit före de underordnade mapparna. Ett exempel på en explicit skapelse av `/content` före `/content/myfolder`, före `/content/myfolder/mysubfolder`. För åtkomstkontrollistor som ställs in på lågnivåstrukturer bör du ställa in dem på en högre nivå och arbeta med en `rep:glob` begränsning. Till exempel: `(allow jcr:read on /apps restriction(rep:glob,/msm/wcm/rolloutconfigs))`.
 1. Validera på den lokala utvecklingsmiljön vid körning.
 
 <!-- last statement in step 2 to be clarified with Brian -->
@@ -175,7 +175,7 @@ above appears to be internal, to confirm with Brian -->
 >id="aemcloud_packagemanager"
 >title="Pakethanteraren - migrerar paket med ändringsbart innehåll"
 >abstract="Utforska användningen av Package Manager för de användningsområden där ett innehållspaket ska installeras som en av. I installationen ingår att importera specifikt innehåll från produktion till testning för att felsöka ett produktionsproblem, överföra ett litet innehållspaket från en lokal miljö till AEM Cloud-miljöer, med mera."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=en" text="Content Transfer Tool"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=en" text="Verktyget Innehållsöverföring"
 
 I vissa fall bör ett innehållspaket installeras som en&quot;engångspaket&quot;. Om du till exempel importerar visst innehåll från produktion till mellanlagring felsöker du ett produktionsproblem. För dessa scenarier [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) kan användas i miljöer på AEM as a Cloud Service.
 
@@ -295,7 +295,7 @@ I befintliga AEM kan kunderna köra instanser med godtyckliga körningslägen oc
 
 AEM as a Cloud Service å andra sidan är mer övertygande om vilka körlägen som finns tillgängliga och hur OSGI-paket och OSGI-konfigurationer kan mappas till dem:
 
-* OSGI-konfigurationens körningslägen måste referera till RDE, utveckling, stadium, produktion för miljön eller författaren, publicera för tjänsten. En kombination av `<service>.<environment_type>` stöds, medan dessa miljöer måste användas i just den här ordningen (till exempel `author.dev` eller `publish.prod`). OSGI-tokens ska refereras direkt från koden i stället för att använda `getRunModes` som inte längre innehåller `environment_type` vid körning. Mer information finns i [Konfigurera OSGi för AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md).
+* OSGI-konfigurationens körningslägen måste referera till RDE, utveckling, stadium, produktion för miljön eller författaren, publicera för tjänsten. En kombination av `<service>.<environment_type>` stöds, medan dessa miljöer måste användas i just denna ordning (till exempel `author.dev` eller `publish.prod`). OSGI-tokens ska refereras direkt från koden i stället för att använda `getRunModes` som inte längre innehåller `environment_type` vid körning. Mer information finns i [Konfigurera OSGi för AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md).
 * Körningslägena för OSGI-paket är begränsade till tjänsten (författare, publicera). OSGI-paket per körning ska installeras i innehållspaketet under antingen `install.author` eller `install.publish`.
 
 AEM as a Cloud Service tillåter inte att körningslägen används för att installera innehåll för specifika miljöer eller tjänster. Om en utvecklingsmiljö måste sjösättas med data eller HTML som inte finns i mellanlagrings- eller produktionsmiljöerna kan du använda Package Manager.

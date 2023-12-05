@@ -4,7 +4,7 @@ description: Upptäck hur du kan använda den universella redigeraren för att r
 hidefromtoc: true
 index: false
 exl-id: a4854a56-9434-4d15-a56a-f1798f27263a
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 0%
@@ -17,12 +17,12 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_edit_inline_universal_editor"
 >title="Redigera i kontext med den universella redigeraren"
->abstract="Se hur era headless-appar kan utnyttja den universella redigeraren för att ge dina författare lättanvända kontextredigeringar."
+>abstract="Se hur era headless-appar kan använda den universella redigeraren för att ge dina författare lättanvända kontextredigeringar."
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_edit_inline_universal_editor_guide"
 >title="Starta den universella redigeraren"
->abstract="I den här guiden ska vi utforska den universella redigeraren och se hur den gör det möjligt för alla att redigera alla delar av ditt innehåll i alla implementeringar, vilket leder till förbättrad innehållshastighet.<br><br>Starta den här modulen på en ny flik genom att klicka nedan och följ sedan den här guiden."
+>abstract="I den här guiden utforskar du den universella redigeraren och hur den gör det möjligt för alla att redigera alla delar av ditt innehåll i alla implementeringar, vilket leder till förbättrad innehållshastighet.<br><br>Starta den här modulen på en ny flik genom att klicka nedan och följ sedan den här guiden."
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_edit_inline_universal_editor_guide_footer"
