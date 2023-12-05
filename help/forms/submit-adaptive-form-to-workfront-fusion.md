@@ -3,7 +3,7 @@ title: Integrering av Adobe Workfront Fusion med AEM Forms Submission
 description: Med Adobe Workfront Fusion kan du fokusera på nya uppgifter istället för att fokusera på repetitiva uppgifter. Du kan ansluta Adobe Workfront Fusion till ett adaptivt formulär genom att skicka formulär.
 keywords: Skicka in ett adaptivt formulär till Adobe Workfront Fusion, Integration of Adobe Workfront Fusion with AEM Forms Submission, Adobe Workfront Fusion with AEM Forms, Workfront Fusion with AEM Forms, Connect Workfront Fusion to AEM Forms, AEM Forms and Workfront Fusion, How to connect Workfront Fusion with AEM Forms?, Connect Workfront Fusion to a Form
 topic-tags: author, developer
-source-git-commit: cebdd5c4b1ad9531f2cc2893c2e7900658e451ed
+source-git-commit: 68314ca09594d3c4c5639363326117b89b733a4d
 workflow-type: tm+mt
 source-wordcount: '1154'
 ht-degree: 0%
@@ -128,6 +128,7 @@ Så här lägger du till en anslutning:
 #### 1.3 Aktivera Workfront {#activate-scenario}
 
 Så här aktiverar du scenariot:
+
 1. Klicka **[!UICONTROL Scenarios]** ![Delningsikon](/help/forms/assets/Smock_ShareAndroid_18_N.svg) till vänster.
 1. Klicka på **[!UICONTROL Inactive Scenario]** -fliken.
 1. Klicka på **PÅ/AV** växlingsknapp för ditt AEM Forms-scenario.
