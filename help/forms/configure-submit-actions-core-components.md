@@ -3,7 +3,7 @@ title: Hur konfigurerar man en Skicka-åtgärd för ett anpassat formulär?
 description: Ett anpassat formulär innehåller flera överföringsåtgärder. En Skicka-åtgärd definierar hur ett anpassat formulär ska bearbetas när det har skickats in. Du kan använda inbyggda Skicka-åtgärder eller skapa egna
 keywords: hur du väljer en inskickningsåtgärd för ett tilläggsformulär, kopplar ett adaptivt formulär till SharePoint-listan, kopplar ett adaptivt formulär till SharePoint-dokumentbiblioteket, kopplar ett adaptivt formulär till formulärdatamodellen
 exl-id: 495948e8-30a7-4e7c-952f-c71de15520f0
-source-git-commit: 4e5a730f59a7594085319435bfe1ea3a7368bfc2
+source-git-commit: e9110b5f5b46d38712b7462490afc1052fb8d00c
 workflow-type: tm+mt
 source-wordcount: '3904'
 ht-degree: 0%
@@ -439,6 +439,7 @@ När konfigurationen är klar använder du [Anropa ett Microsoft® Power Automat
 Du kan konfigurera ett adaptivt formulär så att data skickas till Workfront Fusion när de skickas. Med Workfront Fusion kan man automatisera processer så att man kan koncentrera sig på nya uppgifter istället för att upprepa samma uppgifter om och om igen. Den automatiserar både enkla och komplexa uppgifter, sparar tid och säkerställer ett konsekvent processutförande.
 
 Adaptive Forms editor innehåller **Anropa ett Workfront Fusion-scenario** skicka en åtgärd för att skicka data eller bilagor till adaptiva Forms till ett Workfront Fusion-scenario. Om du vill använda åtgärden Skicka för att skicka inhämtade data till ett Workfront Fusion-scenario, se [Skicka ett anpassat formulär till Adobe Workfront Fusion](/help/forms/submit-adaptive-form-to-workfront-fusion.md).
+
 
 ## Använd synkron eller asynkron sändning {#use-synchronous-or-asynchronous-submission}
 
