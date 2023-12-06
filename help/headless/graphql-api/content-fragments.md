@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 7aeab6ab7dcd933a1d02514b6eea752527055c77
 workflow-type: tm+mt
-source-wordcount: '4863'
+source-wordcount: '4910'
 ht-degree: 0%
 
 ---
@@ -1035,6 +1035,15 @@ Om du vill komma åt GraphQL-slutpunkten från en extern webbplats måste du kon
 ## Autentisering {#authentication}
 
 Se [Autentisering för fjärrfrågor AEM GraphQL-frågor om innehållsfragment](/help/headless/security/authentication.md).
+
+## Begränsningar {#limitations}
+
+För att skydda dig mot potentiella problem finns det standardbegränsningar för dina frågor:
+
+* Frågan får inte innehålla fler än 1M (1024 * 1024) tecken
+* Frågan får inte innehålla fler än 15000 token
+* Frågan får inte innehålla fler än 200000 blankstegstoken
+* Frågans djup får inte överskrida 500
 
 ## Vanliga frågor {#faqs}
 
