@@ -11,9 +11,9 @@ level: Beginner
 kt: 10834
 thumbnail: 346811.jpeg
 exl-id: 30bb9b2c-5f00-488e-ad5c-9af7cd2c4735
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+source-git-commit: d9d4ed55722920a8528056defbc0d8a411dd6807
 workflow-type: tm+mt
-source-wordcount: '1870'
+source-wordcount: '1866'
 ht-degree: 0%
 
 ---
@@ -215,10 +215,9 @@ Om du vill initiera den Reaktionsbaserade Premiere och CIF kärnkomponenter skap
            baseUrl: storeConfig.storeRootUrl
        },
        eventsCollector: {
-           // Enable the Experience Platform Connector and define the org and datastream to use
-           aep: {
-               orgId: // TODO: add your orgId
-               datastreamId: // TODO: add your datastreamId
+           eventForwarding: {
+               commerce: true,
+               aep: false,
            }
        }
    };
@@ -432,7 +431,7 @@ När du är klar med konfigurationen ovan för Experience Platform bör du ha `d
 
 ## Utlösare `addToCart` händelse och verifiera datainsamling {#event-trigger-verify}
 
-Ovanstående steg avslutar installationen av AEM Commerce och Experience Platform. Nu kan du aktivera en `addToCart` händelse och verifiera datainsamling med Experience Platform-felsökaren och datauppsättningen __Mätvärden och diagram__ i produktgränssnittet.
+Ovanstående steg avslutar installationen av AEM Commerce och Experience Platform. Nu kan du aktivera en `addToCart` händelsen och verifiera datainsamling med [Snowplow Inspector](https://chromewebstore.google.com/detail/snowplow-inspector/maplkdomeamdlngconidoefjpogkmljm?pli=1) och datauppsättning __Mätvärden och diagram__ i produktgränssnittet.
 
 Om du vill utlösa händelsen kan du använda AEM författare eller publiceringstjänsten från din lokala konfiguration. I det här exemplet använder du AEM författare genom att logga in på ditt konto.
 
@@ -443,9 +442,7 @@ Om du vill utlösa händelsen kan du använda AEM författare eller publicerings
 1. Klicka på ett önskat produktkort i __Produktsida__ väljer __färg, storlek__ för att aktivera __Lägg i kundvagnen__ -knappen.
 
 
-1. Öppna __Adobe Experience Platform Debugger__ tillägg från webbläsarens tilläggspanel och välj __Experience Platform Wed SDK__ till vänster.
-
-   ![AEP Debugger](../assets/aep-integration/AEP-Debugger.png)
+1. Öppna __Snowplow Inspector__ tillägg från webbläsarens tilläggspanel och välj __Experience Platform Wed SDK__ till vänster.
 
 
 1. Återgå till __Produktsida__ och klicka __Lägg i kundvagnen__ -knappen. Detta skickar data till Experience Platform. The __Adobe Experience Platform Debugger__ tillägget visar händelseinformation.
@@ -462,9 +459,9 @@ Om du vill utlösa händelsen kan du använda AEM författare eller publicerings
 
 ## Implementeringsinformation {#implementation-details}
 
-The [CIF Experience Platform Connector](https://github.com/adobe/aem-core-cif-components/tree/master/extensions/experience-platform-connector) är byggd ovanpå [Experience Platform Connector for Adobe Commerce](https://marketplace.magento.com/magento-experience-platform-connector.html), som ingår i [PWA Studio](https://developer.adobe.com/commerce/pwa-studio/) projekt.
+The [CIF Experience Platform Connector](https://github.com/adobe/aem-core-cif-components/tree/master/extensions/experience-platform-connector) är byggd ovanpå [Dataanslutning för Adobe Commerce](https://marketplace.magento.com/magento-experience-platform-connector.html), som ingår i [PWA Studio](https://developer.adobe.com/commerce/pwa-studio/) projekt.
 
-Med PWA Studio-projektet kan du skapa Progressive Web Application (PWA) butiker med Adobe Commerce eller Magento Open Source. Projektet innehåller också ett komponentbibliotek som kallas [Peregrin](https://developer.adobe.com/commerce/pwa-studio/api/peregrine/) för att lägga till logik i visuella komponenter. The [Bibliotek för pärmar](https://developer.adobe.com/commerce/pwa-studio/api/peregrine/) innehåller även anpassade React-kopplingar som används av [Experience Platform Connector](https://github.com/adobe/aem-core-cif-components/tree/master/extensions/experience-platform-connector) för smidig integrering med Experience Platform.
+Med PWA Studio-projektet kan du skapa Progressive Web Application (PWA) butiker med Adobe Commerce eller Magento Open Source. Projektet innehåller också ett komponentbibliotek som kallas [Peregrin](https://developer.adobe.com/commerce/pwa-studio/api/peregrine/) för att lägga till logik i visuella komponenter. The [Bibliotek för pärmar](https://developer.adobe.com/commerce/pwa-studio/api/peregrine/) innehåller även anpassade React-kopplingar som används av [CIF Experience Platform Connector](https://github.com/adobe/aem-core-cif-components/tree/master/extensions/experience-platform-connector) för smidig integrering med Experience Platform.
 
 
 ## Händelser som stöds {#supported-events}
