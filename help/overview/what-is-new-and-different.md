@@ -2,14 +2,14 @@
 title: Nyheter och skillnader – Adobe Experience Manager as a Cloud Service
 description: Nyheter och skillnader – Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: d1ce126e-960c-4367-b741-af709dd81010
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: d4502c7558fca7ecee89b2ce9429fd1c749d8e92
 workflow-type: tm+mt
-source-wordcount: '1891'
-ht-degree: 72%
+source-wordcount: '1883'
+ht-degree: 66%
 
 ---
 
-# Nyheter och skillnader {#what-is-new-and-what-is-different}
+# Vad är nytt och vad är annorlunda? {#what-is-new-and-what-is-different}
 
 I många år har AEM varit tillgängligt:
 
@@ -23,7 +23,7 @@ Det finns grundläggande skillnader mellan dessa tidigare metoder och AEM as a C
 * [Uppgraderingar](#upgrades)
 * [Cloud Manager](#cloud-manager)
 * [Onboarding](#onboarding)
-* [Utveckling](#developing)
+* [Utvecklar](#developing)
 * [Drift och prestanda](#operations-and-performance)
 * [Identity Management](#identity-management)
 * [Användargränssnitt för redigering](#authoring-user-interface)
@@ -115,9 +115,9 @@ Cloud Manager har utvecklats till en självbetjäningsportal där huvudkomponent
 
 * Skapa och hantera nya program. Se [Program och programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md) för mer information.
 
-* Skapa och hantera AEM-miljöer i dessa program. Se [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md) för mer information.
+* Skapa och hantera AEM miljöer i dessa program. Se [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md) för mer information.
 
-* Skapa och hantera pipelines för distribution av kundkoden och den relaterade konfigurationen för en viss miljö. Se [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) för mer information.
+* Skapa och hantera pipelines för distribution av kundkoden och den relaterade konfigurationen till en viss miljö. Se [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) för mer information.
 
 * Meddelas om viktiga livscykelhändelser för dessa komponenter (t.ex. produktuppdateringar).
 
@@ -152,7 +152,7 @@ En annan viktig skillnad är att det nu finns:
 >
 >En fullständig översikt över introduktionsprocessen finns i [introduktionsresa](/help/journey-onboarding/overview.md).
 
-## Utveckling {#developing}
+## Utvecklar {#developing}
 
 >[!NOTE]
 >
@@ -242,7 +242,7 @@ Det kombinerar fördelarna med:
 >
 >Mer information finns i [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) är en bra utgångspunkt.
 
-De grundläggande principerna för användargränssnittet, för både Sites och Assets, är välkända för alla som tidigare har använt AEM.
+De grundläggande principerna i redigeringsgränssnittet för Sites och Assets är välbekanta för alla som har använt AEM tidigare.
 
 Den största skillnaden är att användargränssnittet är helt pekskärmskompatibelt och det klassiska användargränssnittet inte längre är tillgängligt. I övrigt är grunderna oförändrade med endast små synliga ändringar.
 
@@ -254,21 +254,21 @@ Mer information finns i översikten över [Ändringar i Sites](/help/sites-cloud
 
 ## AEM Assets {#aem-assets}
 
-Adobe Experience Manager Assets as a Cloud Service är en molnbaserad, PaaS-lösning som gör att företag inte bara kan utföra sin hantering av digitala resurser och Dynamic Media-åtgärder snabbt och effektivt, utan även använda nästa generations smarta funktioner, som AI/ML, inifrån ett system som alltid är aktuellt, alltid tillgängligt och alltid håller på att lära sig.
+Adobe Experience Manager Assets as a Cloud Service är en molnbaserad, PaaS-lösning som gör att företag inte bara kan använda sin hantering av digitala resurser och Dynamic Media-åtgärder snabbt och effektivt, utan även använda nästa generations smarta funktioner, som AI/ML, inifrån ett system som alltid är aktuellt, alltid tillgängligt och alltid håller på att lära sig.
 
 Assets inkluderar nästa generations materialbearbetning i molnet samt högpresterande materialimport och sökning.
 
 Mer information finns i [Översikt och introduktion till Assets as a Cloud Service](/help/assets/overview.md).
 
-## Lär känna Adobe Experience Manager as a Cloud Service {#getting-to-know-aem-as-cloud-service}
+## Bekanta dig med Adobe Experience Manager as a Cloud Service {#getting-to-know-aem-as-cloud-service}
 
 Mer information finns i:
 
 * [En introduktion till Adobe Experience Manager as a Cloud Service](/help/overview/introduction.md)
 * [Arkitekturen](/help/overview/architecture.md) i Adobe Experience Manager as a Cloud Service
-* [Viktiga ändringar i AEM as a Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
-* [Viktiga ändringar i AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
-* [Viktiga ändringar i AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
+* [Betydande ändringar i AEM as a Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
+* [Betydande förändringar av AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
+* [Betydande förändringar av AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
 * [Nu kommer AEM Assets as a Cloud Service](/help/assets/overview.md)
 * [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
 
