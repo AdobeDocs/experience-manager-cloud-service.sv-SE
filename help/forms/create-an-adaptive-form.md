@@ -1,16 +1,16 @@
 ---
 title: Hur skapar man ett adaptivt formulär?
 description: Lär dig hur du skapar mobilresponsiva adaptiva Forms med vår stegvisa självstudiekurs. Dessa formulär kan anpassas sömlöst mellan olika enheter och ger en smidig upplevelse.
-keywords: Adaptiv Forms, Mobile Forms, responsiv Forms, HTML5 Forms
+keywords: Adaptiv Forms, responsiv Forms, HTML5 Forms
 feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner
 hide: true
 hidefromtoc: true
 exl-id: 6f1c3fe7-b61e-47ce-b565-15b4904db092
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: eaab351460363b83c7d3667e048235506cc71c41
 workflow-type: tm+mt
-source-wordcount: '2597'
+source-wordcount: '2595'
 ht-degree: 0%
 
 ---

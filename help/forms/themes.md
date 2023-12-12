@@ -1,8 +1,9 @@
 ---
 title: Hur kan vi skapa och använda teman för att utforma ett anpassat formulär?
 description: Använd adaptiva formulärteman för att utforma och ge en visuell identitet till ett adaptivt formulär. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
+feature: Adaptive Forms, Foundation Components
 exl-id: 99c3d1f7-5756-49d2-98ee-72dd62063110
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: eaab351460363b83c7d3667e048235506cc71c41
 workflow-type: tm+mt
 source-wordcount: '5421'
 ht-degree: 0%

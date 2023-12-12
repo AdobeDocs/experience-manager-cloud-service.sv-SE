@@ -2,10 +2,11 @@
 title: Hur förifyller man adaptiva formulärfält?
 description: Använda befintliga data för att förifylla fält i ett adaptivt formulär kan användarna förifylla grundläggande information i ett formulär genom att logga in med sina sociala profiler.
 topic-tags: develop
+feature: Adaptive Forms, Foundation Components
 exl-id: e2a87233-a0d5-48f0-b883-915fe56f105f
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 6821856bd9f1a87a66ba296b3e315c0a4e78cea8
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2006'
 ht-degree: 0%
 
 ---

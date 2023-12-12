@@ -2,9 +2,9 @@
 title: Hur lägger man till tabeller i ett anpassat formulär?
 description: Använd tabellkomponenten för att lägga till tabeller i ett adaptivt formulär. Förutom att bidra med den responsiva layouten kan tabellkomponenten lägga till XDP-tabellelement.
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 exl-id: 88ace1d4-b68d-40e6-a7b4-918ba25f2e91
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: eaab351460363b83c7d3667e048235506cc71c41
 workflow-type: tm+mt
 source-wordcount: '2462'
 ht-degree: 0%

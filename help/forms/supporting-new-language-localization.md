@@ -1,10 +1,11 @@
 ---
 title: Hur lägger jag till stöd för nya språkområden i ett adaptivt formulär baserat på Foundation Components?
 description: För Adaptiv Forms kan du lägga till språkområden för fler språk förutom det som finns i kartongen.
+feature: Adaptive Forms, Foundation Components
 exl-id: 4c7d6caa-1adb-4663-933f-b09129b9baef
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 6821856bd9f1a87a66ba296b3e315c0a4e78cea8
 workflow-type: tm+mt
-source-wordcount: '1266'
+source-wordcount: '1220'
 ht-degree: 0%
 
 ---

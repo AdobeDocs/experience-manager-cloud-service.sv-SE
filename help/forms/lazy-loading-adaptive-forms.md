@@ -1,11 +1,11 @@
 ---
 title: Hur kan vi förbättra prestanda för stora formulär med lat inläsningsarbete?
 description: Lär dig hur du kan förbättra prestanda för stora formulär med lazy loading. Lazy loading förbättrar prestanda avsevärt för stora och komplexa adaptiva Forms genom att skjuta upp initieringen och inläsningen av formulärfragment tills de syns.
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 role: User
 level: Intermediate
 exl-id: 0cd38edb-2201-4ca6-8b84-6b5b7f76bd90
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: eaab351460363b83c7d3667e048235506cc71c41
 workflow-type: tm+mt
 source-wordcount: '1048'
 ht-degree: 0%

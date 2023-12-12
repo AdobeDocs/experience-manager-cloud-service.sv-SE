@@ -2,11 +2,11 @@
 title: Hur kan vi använda Adobe Sign i en adaptiv form?
 description: Använd Adobe Sign i ett adaptivt formulär för att låta formulärmottagarna e-signera ett formulär från valfri enhet.
 topic-tags: develop
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 role: User
 level: Intermediate
 exl-id: cde9523e-5409-4edd-af0f-2c2575cc22ea
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: eaab351460363b83c7d3667e048235506cc71c41
 workflow-type: tm+mt
 source-wordcount: '2962'
 ht-degree: 0%
