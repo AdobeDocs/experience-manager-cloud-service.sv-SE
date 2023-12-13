@@ -2,9 +2,9 @@
 title: Så här uppdaterar du innehåll via AEM Assets API:er
 description: I den här delen av den AEM Headless Developer Journey kan du lära dig hur du använder REST API för att komma åt och uppdatera innehållet i dina innehållsfragment.
 exl-id: 84120856-fd1d-40f7-8df4-73d4cdfcc43b
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 31b0eecd01ee319aaf700505293530fec129b00f
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1061'
 ht-degree: 0%
 
 ---
@@ -321,6 +321,7 @@ Du bör fortsätta den AEM resan utan trassel genom att nästa gång du granskar
 
 ## Ytterligare resurser {#additional-resources}
 
+* [Adobe Experience Manager as a Cloud Service API:er](https://developer.adobe.com/experience-cloud/experience-manager-apis/)
 * [Resurser för HTTP API](/help/assets/mac-api-assets.md)
 * [Innehållsfragment REST API](/help/assets/content-fragments/assets-api-content-fragments.md)
    * [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference)

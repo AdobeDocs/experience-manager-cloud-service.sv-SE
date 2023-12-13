@@ -3,16 +3,16 @@ title: Stöd för Adobe Experience Manager as a Cloud Service Content Fragments 
 description: Läs om stödet för innehållsfragment i Assets HTTP API, en viktig del av Adobe Experience Manager headless-leveransfunktion.
 feature: Content Fragments,Assets HTTP API
 exl-id: d72cc0c0-0641-4fd6-9f87-745af5f2c232
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 38cb2605e2133e858c60644084cf515a03b54f60
 workflow-type: tm+mt
-source-wordcount: '1788'
-ht-degree: 1%
+source-wordcount: '1747'
+ht-degree: 0%
 
 ---
 
-# Stöd för Content Fragments i AEM Assets HTTP API {#content-fragments-support-in-aem-assets-http-api}
+# Stöd för innehållsfragment i AEM Assets HTTP API {#content-fragments-support-in-aem-assets-http-api}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -29,6 +29,10 @@ Läs mer om stöd för innehållsfragment i Assets HTTP API, en viktig del av Ad
 >* inklusive stöd för innehållsfragment
 >
 >Den aktuella implementeringen av Assets HTTP API baseras på [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) arkitekturstil.
+
+>[!NOTE]
+>
+>Den senaste informationen om Experience Manager API:er finns även på [Adobe Experience Manager as a Cloud Service API:er](https://developer.adobe.com/experience-cloud/experience-manager-apis/).
 
 The [Resurser REST API](/help/assets/mac-api-assets.md) ger utvecklare av Adobe Experience Manager as a Cloud Service tillgång till innehåll (som lagras i AEM) direkt via HTTP-API:t via CRUD-åtgärder (Create, Read, Update, Delete).
 
@@ -345,7 +349,7 @@ Här finns detaljerade API-referenser:
 
 * [Adobe Experience Manager Assets API - innehållsfragment](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/assets-api-content-fragments/index.html)
 
-* [HTTP API för Assets](/help/assets/mac-api-assets.md)
+* [Resurser för HTTP API](/help/assets/mac-api-assets.md)
 
    * [Tillgängliga funktioner](/help/assets/mac-api-assets.md#available-features)
 

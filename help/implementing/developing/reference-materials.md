@@ -2,10 +2,10 @@
 title: API-referensmaterial
 description: AEM har omfattande och kraftfulla API:er som du kan använda för ditt digitala upplevelseprojekt.
 exl-id: d4ef3040-5a0a-4149-9e99-09eda9605038
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 3434d51c9b0bad02b0c3f0836341f671c9405182
 workflow-type: tm+mt
-source-wordcount: '662'
-ht-degree: 3%
+source-wordcount: '594'
+ht-degree: 1%
 
 ---
 
@@ -26,6 +26,10 @@ Följande API:er är viktiga för AEM.
 <!---
 |Editor core JavaScript API reference|Provides all the base objects and concepts to support authoring of content resources|
 --->
+
+>[!NOTE]
+>
+>Den senaste informationen om Experience Manager API:er finns även på [Adobe Experience Manager as a Cloud Service API:er](https://developer.adobe.com/experience-cloud/experience-manager-apis/).
 
 ## Ytterligare ramar {#additional-apis}
 

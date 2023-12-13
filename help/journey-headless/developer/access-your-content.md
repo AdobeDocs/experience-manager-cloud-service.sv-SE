@@ -2,9 +2,9 @@
 title: Få åtkomst till ditt innehåll via AEM-API:er
 description: I den här delen av AEM Headless Developer Journey kan du lära dig hur du använder GraphQL-frågor för att komma åt ditt innehåll i Content Fragments.
 exl-id: 1adecc69-5f92-4007-8a2a-65bf1e960645
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+source-git-commit: 0d0b91551582040c39d57b29c8f2141c2ff6d553
 workflow-type: tm+mt
-source-wordcount: '1335'
+source-wordcount: '1344'
 ht-degree: 0%
 
 ---
@@ -356,6 +356,7 @@ Nu när du har lärt dig hur du får åtkomst till och frågar efter headless-in
 
 ## Ytterligare resurser {#additional-resources}
 
+* [Adobe Experience Manager as a Cloud Service API:er](https://developer.adobe.com/experience-cloud/experience-manager-apis/)
 * [GraphQL.org](https://graphql.org)
    * [Scheman](https://graphql.org/learn/schema/)
    * [Variabel](https://graphql.org/learn/queries/#variables)
