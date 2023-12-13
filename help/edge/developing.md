@@ -2,9 +2,9 @@
 title: Utveckla för Edge Delivery Services
 description: Lär dig hur du utvecklar block och anpassar AEM projekt så att du kan arbeta med Edge Delivery Services.
 feature: Edge Delivery Services
-source-git-commit: eca5126ca46a9b3b837739c31a6891471a16cfe3
+source-git-commit: 22a791311c618fcbd61f321b8efa79c3a52ec65d
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Block är den mest grundläggande delen av en sida som levereras av Edge Deliver
 
 AEM tillhandahåller standardblock som en del av produkten i projektmallen. Exempel på sådana block är rubrik, text, bilder, länkar, listor osv.
 
-Se [Byggavsnitt](https://www.aem.live/docs/#build) av dokumentationen till Edge Delivery Servicens för mer information om block och hur du utvecklar för Edge Delivery-tjänster.
+Se [Byggavsnitt](/help/edge/developer/block-collection.md) av dokumentationen till Edge Delivery Servicens för mer information om block och hur du utvecklar för Edge Delivery-tjänster.
 
 ## Edge Delivery Services och GitHub {#github-edge}
 
@@ -30,4 +30,4 @@ Dina författare kan skapa innehåll antingen med dokumentbaserad redigering ell
 
 Webbplatser skapas automatiskt för var och en av dina grenar, från förhandsgranskning av innehåll till produktion. Alla resurser du lägger in i GitHub-databasen är tillgängliga på din webbplats utan någon byggprocess.
 
-Se [Byggavsnitt](https://www.aem.live/docs/#build) av dokumentationen till Edge Delivery Servicens för mer information om block och hur du utvecklar för Edge Delivery-tjänster.
+Se [Byggavsnitt](/help/edge/developer/block-collection.md) av dokumentationen till Edge Delivery Servicens för mer information om block och hur du utvecklar för Edge Delivery-tjänster.

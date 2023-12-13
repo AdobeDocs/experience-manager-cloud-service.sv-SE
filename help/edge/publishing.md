@@ -2,9 +2,9 @@
 title: Publicera innehåll för Edge Delivery Services
 description: Lär dig hur innehållspublicering fungerar med Edge Delivery Services och hur du publicerar AEM innehåll med Edge Delivery Services.
 feature: Edge Delivery Services
-source-git-commit: f6e1c5de57ee0297abdf6b03faf550a266dfac32
+source-git-commit: e3bbcfa3fcef1ed1e5b6cf2da5a17c7e636b9539
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '200'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Med Edge Delivery Services är det smidigt att publicera innehåll oavsett innehållskälla:
 
-* Dokumentbaserat innehåll - se [Publiceringsavsnitt](https://www.aem.live/docs/#publish) av Edge Delivery Servicens dokumentation.
+* Dokumentbaserat innehåll - se [Publiceringsavsnitt](/help/edge/docs/authoring.md) av Edge Delivery Servicens dokumentation.
 * AEM - Se informationen nedan.
 
 ## Publiceringsflöde från AEM {#publishing-flow}

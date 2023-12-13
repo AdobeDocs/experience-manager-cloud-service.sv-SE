@@ -2,9 +2,9 @@
 title: Skapa innehåll för Edge Delivery Services
 description: Lär dig hur innehållsredigering fungerar med Edge Delivery Services och hur du redigerar AEM innehåll med Edge Delivery Services.
 feature: Edge Delivery Services
-source-git-commit: f6e1c5de57ee0297abdf6b03faf550a266dfac32
+source-git-commit: 22a791311c618fcbd61f321b8efa79c3a52ec65d
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Med Edge Delivery Services är det enkelt, snabbt och flexibelt att skapa. Du ka
 
 Vid dokumentbaserad redigering kan du arbeta med olika källor som Microsoft Word och Google Docs. Dokument från dessa källor blir sidor på din webbplats. Rubriker, listor, bilder, teckensnittselement och videor kan alla överföras från den ursprungliga källan till webbplatsen. Du kan lägga till metadata för SEO-syften eller använda block för att arbeta med strukturerat innehåll och lägga till funktioner.
 
-Mer information om dokumentbaserad redigering finns i [det här dokumentet i dokumentationen för Edge Delivery Services.](https://www.aem.live/docs/authoring)
+Mer information om dokumentbaserad redigering finns i [det här dokumentet i dokumentationen för Edge Delivery Services.](/help/edge/docs/authoring.md)
 
 ## Redigering i Universal Editor {#universal-editor}
 
@@ -40,7 +40,7 @@ När du använder Edge Delivery Services med AEM as a Cloud Service är det mest
    * Innehållet sparas i AEM.
    * AEM återger semantiskt HTML som behövs för intag.
    * Innehåll publiceras till Edge Delivery Services.
-1. [Edge Delivery Services](https://www.aem.live/home) säkerställa 100 % Lighhade-poäng.
+1. [Edge Delivery Services](/help/edge/developer/keeping-it-100.md) säkerställa 100 % Lighhade-poäng.
 
 Block är grundläggande komponenter i en sida som levereras av Edge Delivery Services. Författare kan välja bland standardblock som tillhandahålls som standard av Adobe eller block som anpassas för ditt projekt av utvecklarna.
 
