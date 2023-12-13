@@ -1,61 +1,54 @@
 ---
 title: Använda Edge Delivery Services
-description: Använda Edge Delivery Services
+description: Lär dig hur AEM as a Cloud Service kan användas med Edge Delivery Services.
 feature: Edge Delivery Services
 exl-id: 41999302-b4c9-4f5a-b659-6e7398a3c4f4
-source-git-commit: 5df61db6e0bd24d55ce73290b37ed55f167e0da2
+source-git-commit: 5197a53b8aa763d7e1b2b2ce9097ee2bc8521dfa
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 1%
+source-wordcount: '389'
+ht-degree: 0%
 
 ---
 
+
 # Använda Edge Delivery Services {#usingedge}
 
-Med Edge Delivery kan man snabbt skapa utvecklingsmiljöer där man snabbt kan uppdatera och publicera material och nya webbplatser snabbt kan lanseras. Därför kan du arbeta med flera olika innehållskällor på samma webbplats och publiceringen blir smidig och smidig oavsett vilken källa du väljer. Det tar därför bara några sekunder att gå från redigering till att se innehållet live på internet.
+Med Edge Delivery Services kan ni skapa snabba utvecklingsmiljöer där författare snabbt kan uppdatera och publicera innehåll, och nya webbplatser kan lanseras snabbt. Därför kan du arbeta med flera olika innehållskällor på samma webbplats och publiceringen blir smidig och smidig oavsett vilken källa du väljer. Det tar därför bara några sekunder att gå från redigering till att se innehållet live på internet.
+
+## Hitta rätt verktyg {#right-tool}
+
+Edge Delivery Services är fristående från innehållskällan och kan importera innehåll från olika innehållskällor.
+
+![Innehållskällor för Edge Delivery](assets/content-sources.png)
+
+Inhämtning från olika innehållskällor ger maximal flexibilitet för användaren. Adobe har hjälp att välja vilka innehållskällor som passar bäst för ditt projekt.
+
+Det finns fall där innehållskällan är fördefinierad eller på annat sätt inte flexibel (projektet kan t.ex. inte använda Sharepoint eller Google Drive). Men i många fall är verktyget inte förberett och valet av verktyg är inte svartvitt.
+
+Adobe är enkel. Börja med dokumentbaserad redigering och lägg till komplexitet vid behov. Om det behövs en verktygsändring omfattar integreringen av AEM Edge Delivery Services innehållsmigrering.
+
+![Flexibel innehållskälla](assets/content-source-flexiblity.png)
 
 ## Redigering {#authoring-edge}
 
-Med Edge Delivery är det enkelt, snabbt och flexibelt att skapa. Du kan använda två olika sökvägar för att skapa i kontexten för Edge Delivery Services:
+Med Edge Delivery Services är det enkelt, snabbt och flexibelt att skapa. Du kan välja att redigera med hjälp av dokumentbaserad redigering eller redigering i AEM med den universella redigeraren.
 
-* Dokumentbaserad redigering (t.ex. Microsoft Word eller Google Docs) - [Mer information finns på den här länken](https://www.hlx.live/docs/authoring).
-* Page Editor/Universal Editor - Kontakta din Adobe-säljare.
-
-Vid dokumentbaserad redigering kan du arbeta med olika källor som Microsoft Word och Google Docs. Dokument från dessa källor blir sidor på din webbplats. Rubriker, listor, bilder, teckensnittselement och videor kan alla överföras från den ursprungliga källan till webbplatsen. Du kan lägga till metadata för SEO-syften eller använda block för att arbeta med strukturerat innehåll och lägga till funktioner.
+Se dokumentet [Skapa innehåll för Edge Delivery Services](authoring.md) för mer information.
 
 ## Publicering {#publishing-edge}
 
-Med Edge Delivery är det smidigt att publicera innehåll oavsett innehållskälla. Processen är följande: du använder [sidekick-tillägg](#using-sidekick) för att aktivera publiceringsmekanismen så kommer ditt innehåll att vara tillgängligt live på din webbplats på några sekunder.
+Med Edge Delivery Services är det smidigt att publicera innehåll oavsett innehållskälla.
 
-## Edge Delivery Services och GitHub {#github-edge}
+Se dokumentet [Publicera innehåll för Edge Delivery Services](publishing.md) för mer information.
 
-Edge Delivery utnyttjar GitHub så att kunderna kan hantera och driftsätta kod direkt från sin GitHub-databas. Du kan till exempel skriva innehåll i antingen Google Docs eller Microsoft Word och utveckla webbplatsens funktionalitet med hjälp av CSS och JavaScript i GitHub. Webbplatser skapas automatiskt för var och en av dina grenar, från förhandsgranskning av innehåll till produktion. Alla resurser du lägger in i GitHub-databasen är tillgängliga på din webbplats utan någon byggprocess.
+## Utvecklar {#developing-edge}
 
-## Använda Sidekick {#using-sidekick}
+Edge Delivery Services bygger på konceptet med block. AEM innehåller ett omfattande bibliotek med fördefinierade block, som kan byggas ut efter dina projektbehov. Kod för Edge Delivery Services-projekt hanteras i GitHub.
 
-AEM har ett verktygsfält med sammanhangsberoende alternativ så att du enkelt kan redigera, förhandsgranska och publicera innehåll. Efter [installera](https://www.hlx.live/docs/sidekick-extension) AEM kan användas antingen i projektmiljöer eller när du redigerar innehåll (till exempel i Google Docs). Beroende på miljön finns det flera tillgängliga åtgärder, som: Förhandsgranska, Läs in igen, Redigera och Publicera. Du kan också växla miljöer när du använder sidbrytaren, från förhandsgranskning till produktion och omvänt.
+Se dokumentet [Utveckla för Edge Delivery Services](developing.md) för mer information.
 
-**Publicera**&#x200B;öppnar du sidesparken på en förhandsgranskningssida och använder åtgärden Publicera. När du har klickat på Publicera är den aktuella förhandsvisningsversionen av sidan tillgänglig i lever- och produktionsmiljöer.
+## Befintliga AEM {#existing-projects}
 
-## Integrera AEM Assets med dokumentbaserad framtagning {#integrate-assets-edge}
+Du behöver inte vänta på ett nytt AEM projekt för att kunna dra nytta av Edge Delivery Services. Edge Delivery Services kan integreras i ditt befintliga AEM så att du kan utnyttja prestandavinster direkt.
 
-Med Edge Delivery kan du använda bilder som finns i AEM Assets-arkiv när du redigerar dokument i Microsoft Word eller Google Docs.
-
-Alternativen för att använda bilder i dina dokument är bara tillgängliga efter [konfigurera AEM Assets-plugin-programmet för sidspark](https://www.hlx.live/developer/configuring-aem-assets-sidekick-plugin).
-
-Sidsparkpluginen för AEM Assets ger åtkomst till:
-
-* AEM Assets as a Cloud Service
-
-* AEM Assets Essentials
-
-När du har konfigurerat AEM Assets-plugin-programmet för sidspark kan du [börja använda bilder i dina Google Docs- eller Microsoft Word-dokument](https://www.hlx.live/docs/aem-assets-sidekick-plugin).
-
-## Ytterligare läsning {#further-reading}
-
-Mer information finns på följande sidor:
-
-* Mer information om hur du kommer igång med Edge Delivery finns i [Bygge](https://www.hlx.live/docs/#build) i leveransdokumentationen för Edge.
-* Om du vill veta hur du redigerar och publicerar innehåll med hjälp av Edge Delivery kan du läsa [Publiceringsavsnitt](https://www.hlx.live/docs/authoring).
-* Mer information om hur du använder filnamnstillägget för sidosparkning finns i [Använda sidsparken](https://www.hlx.live/docs/sidekick) sida.
-* AEM finns i [Sidan Authoring Concepts](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/concepts.html)
+Se dokumentet [Använda Edge Delivery Services med befintliga AEM](existing-projects.md) för mer information.

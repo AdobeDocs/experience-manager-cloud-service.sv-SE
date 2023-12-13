@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 46575e36a7037bee7c33c94748fc0fc92880ea87
+source-git-commit: 97f08d3474ad395d3228fb848a546927e6431050
 workflow-type: tm+mt
-source-wordcount: '4437'
+source-wordcount: '4456'
 ht-degree: 4%
 
 ---
@@ -755,8 +755,12 @@ ht-degree: 4%
    + [Migrering](/help/commerce-cloud/migration.md)
    + [Vanliga frågor](/help/commerce-cloud/faq.md)
 + Edge Delivery Services {#edge-delivery}
-   + [Komma igång med Edge Delivery](/help/edge/overview.md)
+   + [AEM och Edge Delivery Services](/help/edge/overview.md)
    + [Använda Edge Delivery](/help/edge/using.md)
+   + [Skapa innehåll för Edge Delivery](/help/edge/authoring.md)
+   + [Publicera innehåll för Edge Delivery](/help/edge/publishing.md)
+   + [Developing for Edge Delivery](/help/edge/developing.md)
+   + [Befintliga projekt och Edge Delivery](/help/edge/existing-projects.md)
 + Headless {#headless}
    + [Vad är ett headless CMS?](/help/headless/what-is-headless.md)
    + [Introduktion till AEM Headless](/help/headless/introduction.md)
