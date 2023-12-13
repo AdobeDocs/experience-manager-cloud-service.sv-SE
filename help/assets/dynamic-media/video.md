@@ -5,10 +5,10 @@ contentOwner: Rick Brough
 feature: Video Profiles
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 0d5f95cc2e7378f09c8f6c4bc3858e7b42c07924
 workflow-type: tm+mt
-source-wordcount: '9322'
-ht-degree: 1%
+source-wordcount: '9230'
+ht-degree: 0%
 
 ---
 
@@ -849,21 +849,21 @@ Se [Hantera statiskt innehåll (inte bildinnehåll)](https://experienceleague.ad
 
    Se [WebVTT: Textspår för webbvideo](https://w3c.github.io/webvtt/).
 
-   Det finns både kostnadsfria och premiumverktyg och tjänster som du kan använda för att skapa bildtexter/undertexter utanför Dynamic Media. Om du till exempel vill skapa en enkel videobildtextfil utan formatering kan du använda följande kostnadsfria redigerings- och redigeringsverktyg för bildtexter online:
+   Det finns många webbplatser som innehåller både kostnadsfria och premiumverktyg och tjänster som du kan använda för att skapa WebVTT-bildtexter/undertexter utanför Dynamic Media. <!-- THE FOLLOWING LINK IS NO LONGER LIVE. CHECKED DECEMBER 13, 2023 For example, to create a simple video caption file with no styling, you can use the following free online caption authoring and editing tool: -->
 
-   [WebVTT Caption Maker](https://testdrive-archive.azurewebsites.net/Graphics/CaptionMaker/Default.html)
+   <!-- [WebVTT Caption Maker](https://testdrive-archive.azurewebsites.net/Graphics/CaptionMaker/Default.html)
 
-   Du får bäst resultat om du använder verktyget i Internet Explorer 9 eller senare, Google Chrome eller Safari.
+   For best results, use the tool in Internet Explorer 9 or above, Google Chrome, or Safari.
 
-   I verktyget, i **[!UICONTROL Enter URL of video file]** -fält, klistra in den kopierade URL-adressen för videofilen och markera sedan **[!UICONTROL Load]**. Se [Hämta en URL för en resurs](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) för att hämta URL:en till själva videofilen som du sedan kan klistra in i **[!UICONTROL Enter URL of video file field]**. Internet Explorer, Chrome och Safari kan sedan spela upp videon direkt.
+   In the tool, in the **[!UICONTROL Enter URL of video file]** field, paste the copied URL of your video file and then select **[!UICONTROL Load]**. See [Obtain a URL for an Asset](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) to get the URL to the video file itself which you can then paste into the **[!UICONTROL Enter URL of video file field]**. Internet Explorer, Chrome, or Safari can then natively play back the video.-->
 
-   Följ nu instruktionerna på skärmen för att skapa och spara WebVTT-filen. När du är klar kopierar du bildtextfilens innehåll och klistrar in det i en vanlig textredigerare och sparar det med filnamnstillägget VTT.
+Följ instruktionerna på skärmen för att skapa och spara WebVTT-filen. När du är klar kopierar du bildtextfilens innehåll och klistrar in det i en vanlig textredigerare och sparar det med filnamnstillägget VTT.
 
-   >[!NOTE]
-   >
-   För globalt stöd för videoundertexter på flera språk kräver WebVTT-standarden att du skapar separata .vtt-filer och anropar varje språk som du vill ha stöd för.
+>[!NOTE]
+>
+För globalt stöd för videoundertexter på flera språk kräver WebVTT-standarden att du skapar separata .vtt-filer och anropar varje språk som du vill ha stöd för.
 
-   Vanligtvis vill du ge bildtexten VTT ett namn som är detsamma som videofilen och bifoga den med språkinställningen -EN, -FR eller -DE. Genom att göra det kan det hjälpa dig att automatisera genereringen av video-URL:er med ditt befintliga system för hantering av webbinnehåll.
+Vanligtvis vill du ge bildtexten VTT ett namn som är detsamma som videofilen och bifoga den med språkinställningen -EN, -FR eller -DE. Genom att göra det kan det hjälpa dig att automatisera genereringen av video-URL:er med ditt befintliga system för hantering av webbinnehåll.
 
 1. I Experience Manager överför du WebVTT-bildtextfilen till DAM.
 1. Navigera till *publicerad* videoresurs som du vill associera med bildtextfilen som du överförde.

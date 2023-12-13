@@ -1,18 +1,18 @@
 ---
-title: Hantera videoresurser
+title: Hantera videomaterial
 description: Överföra, förhandsgranska, kommentera och publicera videomaterial i [!DNL Adobe Experience Manager].
 contentOwner: AG
 feature: Asset Management,Publishing,Collaboration,Video
 role: User
 exl-id: 91edce4a-dfa0-4eca-aba7-d41ac907b81e
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 0d5f95cc2e7378f09c8f6c4bc3858e7b42c07924
 workflow-type: tm+mt
-source-wordcount: '4595'
-ht-degree: 6%
+source-wordcount: '4563'
+ht-degree: 5%
 
 ---
 
-# Hantera videoresurser {#manage-video-assets}
+# Hantera videomaterial {#manage-video-assets}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -73,8 +73,7 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
 **Så här konfigurerar du inställningarna för Google Cloud:**
 
-1. Skapa ett Google-konto.
-   [https://accounts.google.com/signup/v2?service=mail&amp;flowName=GlifWebSignIn&amp;flowEntry=SignUp](https://accounts.google.com/signup/v2?service=mail&amp;flowName=GlifWebSignIn&amp;flowEntry=SignUp)
+1. [Skapa ett Google-konto](https://accounts.google.com/lifecycle/flows/signup?flowEntry=SignUp&amp;flowName=GlifWebSignIn&amp;service=mail&amp;dsh=S-1878016829%3A1702493284416645&amp;theme=glif).
 
    Om du redan har ett Google-konto kan du gå vidare till nästa steg.
 
@@ -122,7 +121,7 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
    `https://<servername.domain>:<port_number>`
 
-   Till exempel, `https://1a2b3c.mycompany.com:4321`
+   Exempel: `https://1a2b3c.mycompany.com:4321`
 
    >[!NOTE]
    >
@@ -133,7 +132,7 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
    `https://<servername.domain>:<port_number>/etc/cloudservices/youtube.youtubecredentialcallback.json`
 
-   Till exempel, `https://1a2b3c.mycompany.com:4321/etc/cloudservices/youtube.youtubecredentialcallback.json`
+   Exempel: `https://1a2b3c.mycompany.com:4321/etc/cloudservices/youtube.youtubecredentialcallback.json`
 
    >[!NOTE]
    >
@@ -614,15 +613,15 @@ MXF-videoformatet stöds ännu inte med videoresursanteckningar.
   **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
 

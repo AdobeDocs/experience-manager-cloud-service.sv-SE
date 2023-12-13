@@ -2,9 +2,9 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Lär dig hur du kommer igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 0161477e5248267224fe6d637a192f409161f6d3
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1362'
 ht-degree: 2%
 
 ---
@@ -18,10 +18,10 @@ ht-degree: 2%
 >id="aemcloud_ctt_download"
 >title="Ladda ned"
 >abstract="Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via Package Manager på Adobe Experience Manager-källinstansen (AEM). Glöm inte att hämta den senaste versionen."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html" text="Versionsinformation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current.html" text="Versionsinformation"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="Programdistributionsportal"
 
-Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) på din källinstans av Adobe Experience Manager (AEM). Glöm inte att hämta den senaste versionen. Mer information om den senaste versionen finns på [Versionsinformation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
+Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) på din källinstans av Adobe Experience Manager (AEM). Glöm inte att hämta den senaste versionen. Mer information om den senaste versionen finns på [Versionsinformation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current.html).
 
 Endast version 2.0.0 och senare stöds, och du bör använda den senaste versionen.
 
@@ -45,7 +45,7 @@ Källinstansen AEM kanske köras bakom en brandvägg där den bara kan nå vissa
 
 Det kan vara svårt att förstå SSL-/TLS-anslutningsproblem. Om du vill felsöka anslutningsproblem under en extraheringsprocess kan du aktivera SSL-loggning via systemkonsolen i AEM genom att följa dessa steg:
 
-1. Navigera till Adobe Experience Manager Web Console i källinstansen genom att gå till **Verktyg - Åtgärder - Webbkonsol** eller direkt till URL:en på *https://serveraddress:serverport/system/console/configMgr*
+1. Navigera till Adobe Experience Manager Web Console i källinstansen genom att gå till **Verktyg > Åtgärder > Webbkonsol** eller direkt till URL:en på *https://serveraddress:serverport/system/console/configMgr*
 1. Sök efter **Konfiguration av extraheringstjänst för innehållsöverföringsverktyg**
 1. Använd pennikonknappen för att redigera dess konfigurationsvärden
 1. Aktivera **Aktivera SSL-loggning för extrahering** ställa in och sedan trycka **Spara**:
@@ -78,7 +78,7 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 
 1. Logga in på CAM (Cloud Acceleration Manager) och klicka på CAM-projektet som du skapat tidigare för att utvärdera om du är redo att gå AEM as a Cloud Service. Om du inte har skapat något CAM-projekt, se Skapa och hantera ett projekt i CAM.
 
-1. Klicka på **Innehållsöverföring** kort. Du kommer nu till vyn Migreringsuppsättningslista.
+1. Klicka på **Innehållsöverföring** för att öppna vyn Migreringsuppsättningslista.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam1.png)
 
@@ -90,7 +90,7 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam2.png)
 
-   Följande dialogruta visas. Observera att ett migreringsuppsättning upphör att gälla efter en längre inaktivitetsperiod. När varningar visas på projektkortet och migreringsjobbtabellsraderna under en tidsperiod, kommer migreringsuppsättningen att upphöra och dess data kommer inte längre att vara tillgängliga. Granska [Förfallotid för migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md#migration-set-expiry) för mer information.
+   Följande dialogruta visas. Observera att ett migreringsuppsättning upphör att gälla efter en längre inaktivitetsperiod. När varningar visas på projektkortet och migreringsjobbtabellsraderna för en tidsperiod, kommer migreringsuppsättningen att upphöra att gälla och dess data kommer inte längre att vara tillgängliga. Granska [Förfallotid för migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md#migration-set-expiry) för mer information.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam3.png)
 
@@ -114,11 +114,11 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 >abstract="När du har skapat en migreringsuppsättning måste den fyllas i med innehållet från källinstansen som måste flyttas till den AEM as a Cloud Service miljön. För att göra detta måste verktyget Innehållsöverföring vara installerat på källinstansen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/extracting-content.html" text="Extraherar innehåll"
 
-Om du vill fylla i den migreringsuppsättning du skapade i Cloud Acceleration Manager måste du installera den senaste versionen av verktyget för innehållsöverföring på din Adobe Experience Manager-källinstans (AEM). Följ det här avsnittet för att lära dig hur du fyller i migreringsuppsättningen.
+Om du vill fylla i den migreringsuppsättning du skapade i Cloud Acceleration Manager installerar du den senaste versionen av verktyget Innehållsöverföring på din Adobe Experience Manager-källinstans (AEM). Följ det här avsnittet om du vill lära dig hur du fyller i migreringsuppsättningen.
 
 1. När du har installerat den senaste versionen av verktyget Innehållsöverföring på Adobe Experience Manager-källinstansen går du till **Åtgärder - innehållsmigrering**
 
-1. Klicka **Skapa migreringsuppsättning**
+1. Klicka **Skapa migreringsuppsättning**.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam5.png)
 
@@ -126,7 +126,7 @@ Om du vill fylla i den migreringsuppsättning du skapade i Cloud Acceleration Ma
 
    >[!NOTE]
    >
-   >Kontrollera att extraheringsnyckeln är giltig och att den inte ligger nära utgångsdatumet. Du kan hämta den här informationen i **Skapa migreringsuppsättning** när du har klistrat in extraheringsnyckeln. Om du får ett anslutningsfel kan du läsa [Anslutning för källmiljö](#source-environment-connectivity) för mer information.
+   >Kontrollera att extraheringsnyckeln är giltig och att den inte är i närheten av utgångsdatumet. Du kan hämta den här informationen i **Skapa migreringsuppsättning** när du har klistrat in extraheringsnyckeln. Om du får ett anslutningsfel kan du läsa [Anslutning för källmiljö](#source-environment-connectivity) för mer information.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam6.png)
 
