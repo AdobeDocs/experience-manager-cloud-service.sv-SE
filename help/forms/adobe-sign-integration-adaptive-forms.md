@@ -5,9 +5,9 @@ feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: 609c3072-1c3d-43fa-898a-b4e62db8483b
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 821c243ab2d8ce1468c80c36d01b5c4c8f2bec76
 workflow-type: tm+mt
-source-wordcount: '1837'
+source-wordcount: '1869'
 ht-degree: 0%
 
 ---
@@ -231,9 +231,12 @@ Representanten genererar och delar uppgifter med dig. I nästa avsnitt använder
 
 Nu kan du [använda lägg till Adobe Acrobat Sign-fält i ett adaptivt formulär](working-with-adobe-sign.md) eller [AEM](/help/forms/aem-forms-workflow-step-reference.md#sign-document-step-sign-document-step). Se till att du lägger till konfigurationsbehållaren som används för konfigurationen av Cloud Servicen i alla adaptiva Forms som aktiveras för [!DNL Adobe Acrobat Sign]. Du kan ange en konfigurationsbehållare bland egenskaperna för ett adaptivt formulär.
 
-## (Endast för AEM arbetsflöden) Konfigurera [!DNL Adobe Acrobat Sign] schemaläggaren för att synkronisera signeringsstatusen {#configure-adobe-sign-scheduler-to-sync-the-signing-status}
+## Konfigurera [!DNL Adobe Acrobat Sign] schemaläggaren för att synkronisera signeringsstatusen {#configure-adobe-sign-scheduler-to-sync-the-signing-status}
 
-När du använder [!DNL Adobe Acrobat Sign] Arbetsflödessteg för att signera ett adaptivt formulär kan skickas mellan signerare efter varandra eller kan skickas till alla signerare samtidigt, beroende på arbetsflödesstegets konfiguration. [!DNL Adobe Acrobat Sign] Adaptiv Forms som aktiverats skickas till Experience Manager Forms Server först när alla signerare har slutfört signeringsprocessen.
+AEM Forms as a Cloud Service tillhandahåller en schemaläggningstjänst som kontrollerar signerarnas status med definierade intervall. Scenerna där du konfigurerar schemaläggningstjänsten:
+
+* Om du [Skicka formuläret (när alla mottagare har slutfört signeringsceremonin)](/help/forms/working-with-adobe-sign.md#select-adobe-sign-cloud-service-and-signing-order) om du vill signera ett dokument skickas formuläret bara när alla signerare har signerat formuläret.
+* Om du använder [Signera steget i ett AEM arbetsflöde](/help/forms/aem-forms-workflow-step-reference.md#sign-document-step) om du vill signera ett dokument väntar signeringssteget på att alla signerare ska signera dokumentet innan nästa steg i arbetsflödet.
 
 Som standard är [!DNL Adobe Acrobat Sign] Tjänsten Scheduler kontrollerar (enkäter) signerarens svar efter var 24:e timme. Du kan ändra standardintervallet för din miljö.
 

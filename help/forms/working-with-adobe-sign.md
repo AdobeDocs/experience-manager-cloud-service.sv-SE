@@ -6,9 +6,9 @@ feature: Adaptive Forms, Foundation Components
 role: User
 level: Intermediate
 exl-id: cde9523e-5409-4edd-af0f-2c2575cc22ea
-source-git-commit: eaab351460363b83c7d3667e048235506cc71c41
+source-git-commit: e81da7414335e00411942adeb41978d39f172b52
 workflow-type: tm+mt
-source-wordcount: '2962'
+source-wordcount: '3070'
 ht-degree: 0%
 
 ---
@@ -160,7 +160,7 @@ Ett dokument kan också ha flera mottagare. En kreditkortsansökan kan t.ex. ha 
 
 Så här väljer du en Cloud Service och signeringsordning:
 
-![Molntjänst](assets/cloud-service.png)
+![Molntjänst](/help/forms/assets/adobe-sign-cloud-service.png)
 
 1. Välj **[!UICONTROL Form Container]** och väljer **[!UICONTROL Configure]** ![konfigurera](assets/Smock_Wrench_18_N.svg) -ikon. Egenskaper öppnas i webbläsaren och egenskaper för behållare för adaptiva formulär visas.
 1. Utöka **[!UICONTROL Electronic Signature]** dragspelspanelen och välj **[!UICONTROL Enable Adobe Sign]** alternativ. Det gör att [!DNL Adobe Sign] för en adaptiv form.
@@ -170,6 +170,10 @@ Så här väljer du en Cloud Service och signeringsordning:
 
    I listrutan visas de Cloud Service som finns i `global` mapp i Verktyg > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Sign]**. Listrutan innehåller dessutom en lista över de Cloud Service som finns i den mapp som du har valt i **[!UICONTROL Configuration Container]** när du skapar ett adaptivt formulär.
 
+1. Välj alternativet att konfigurera åtgärden skicka med **[!UICONTROL Submit the form]**. Du kan välja något av följande två alternativ:
+   * **Skicka formuläret (och skicka avtalet för signering)**: Det här alternativet skickar formuläret omedelbart och skickar sedan formuläret för signering till mottagarna.
+   * **Skicka formuläret (när alla mottagare har slutfört signeringsceremonin)**: Det här alternativet skickar bara Adaptiv Forms när alla signerare har slutfört signeringsprocessen. Du kan konfigurera intervallet för att kontrollera signeringsstatusen för alla signerare. Mer information finns i  [Konfigurera [!DNL Adobe Acrobat Sign] schemaläggare](/help/forms/adobe-sign-integration-adaptive-forms.md#configure-dnl-adobe-acrobat-sign-scheduler-to-sync-the-signing-status).
+
 1. Välj signeringsordning på menyn **[!UICONTROL Recipients can complete]** -dialogrutan. Mottagarna kan signera ett adaptivt formulär **[!UICONTROL Sequentially]** - en efter en annan mottagare, eller **[!UICONTROL Simultaneously]** - i vilken ordning som helst.
 
    I tur och ordning får en mottagare avtalet i taget. När mottagaren har slutfört den tilldelade åtgärden skickas avtalet till nästa mottagare och så vidare.
@@ -177,6 +181,10 @@ Så här väljer du en Cloud Service och signeringsordning:
    Alla mottagare får avtalet och kan agera parallellt i samma ordning.
 
 1. Använd fältet för avtals-ID för att associera en bindef till avtals-ID (agreementId). Det lägger till avtals-ID i avsnittet afBoundData i skicka-data för schemabaserade formulär. Avtals-ID läggs också till i afSubmissionInfo-avsnittet i skickade data för alla Adobe Sign-aktiverade formulär. Du kan använda avtals-ID för att spåra avtalsstatus med hjälp av anpassad kod (kräver anpassad implementering).
+
+   >[!NOTE]
+   >
+   > Om ett anpassat formulär skapas med en formulärdatamodell visas fältet Avtals-ID i dialogrutan.
 
 1. [Lägga till mottagare i ett anpassat formulär](working-with-adobe-sign.md#addsignerstoanadaptiveform) och väljer Klar ![Spara](assets/save_icon.svg) om du vill spara ändringarna.
 
