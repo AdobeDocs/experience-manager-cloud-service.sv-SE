@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: acaf2371886b161ce5e8b9f9a9771267703bb32d
+source-git-commit: a5121436b2e48302fcf14478764aede1495e089c
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -26,72 +26,53 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 
 ## Releasedatum {#release-date}
 
-Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2023.11.0) är 30 november 2023. Nästa funktionsrelease (2023.12.0) planeras att släppas den 14 december 2023.
+Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2023.12.0) är 14 december 2023. Nästa funktionsversion (2024.1.0) är planerad till 25 januari 2023.
 
 ## Versionsinformation om underhåll {#maintenance}
 
 Du kan hitta den senaste underhållsreleasenumerationen [här](/help/release-notes/maintenance/latest.md).
 
-## Släpp video {#release-video}
+<!-- 
 
-Titta på videon med versionsöversikten för november 2023 om du vill se en sammanfattning av funktioner som lagts till i version 2023.11.0:
+## Release Video {#release-video}
+
+Have a look at the December 2023 Release Overview video for a summary of the features added in the 2023.12.0 release:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425864?quality=12)
 
+-->
+
 ## [!DNL Experience Manager Sites] som [!DNL Cloud Service] {#sites}
 
-### Program för tidig användning {#sites-early-adopter}
+### Tidiga Adobe-program {#sites-early-adopter}
 
-**[Sök och ersätt strängar i innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#find-and-replace-find-and-replace)**: Med Content Fragment Console kan användarna enkelt och intuitivt ersätta en sträng som finns i flera innehållsfragment samtidigt för att snabba upp innehållets hastighet.
+**Du kan använda [Real User Monitoring (RUM) Data Service](/help/implementing/cloud-manager/content-requests.md#real-user-monitoring-for-aem-as-a-cloud-service)** för att aktivera klientsidessamling för AEM as a Cloud Service.
 
-![Sök och ersätt](/help/sites-cloud/administering/content-fragments/assets/cf-managing-find-replace.png)
+Real User Monitoring (RUM) Data Service ger en mer exakt återgivning av användarinteraktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det är en utmärkt möjlighet att få avancerade insikter om hur sidan fungerar. Detta är fördelaktigt för kunder som använder antingen Adobe-hanterat CDN eller icke-Adobe-hanterat CDN. För kunder som använder ett icke-Adobe-hanterat CDN kan nu dessutom automatiserad trafikrapportering aktiveras för dem, vilket eliminerar behovet av att dela trafikrapporter med Adobe.
 
-Är du intresserad av att testa funktionen och ge feedback? Skicka e-post till **aemcs-headless-adopter@adobe.com** från ditt officiella e-post-ID om du vill veta mer om programmet för tidig användning.
+Om du vill testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `aemcs-rum-adopter@adobe.com`, tillsammans med ditt domännamn för produktions-, scen- och utvecklingsmiljön från din e-postadress som är kopplad till din Adobe ID. Adobe produktteam aktiverar sedan datatjänsten Real User Monitoring (RUM) åt dig.
 
-## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
-
-### Nya funktioner i resursvyn {#assets-view-features}
-
-* **Redigerare för inbäddad Adobe Express i AEM Assets**: Användare med tillgång till Express har nu integrerade bildredigerings- och redigeringsverktyg från Adobe Express och Adobe Firefly som är tillgängliga direkt inifrån AEM Assets för att förbättra återanvändningen av innehåll och snabba upp innehållets hastighet.
-
-  ![tilldela metadataformulär till en mapp](/help/assets/assets/adobe-express-aem-assets.png)
 
 <!--
+
+## [!DNL Experience Manager Assets] as a [!DNL Cloud Service] {#assets}
+
+### New Features in Admin View {#admin-view-features}
+
+
 
 * **Smart tags blocklist**: Experience Manager Assets now enables you to define a list of blocked tags. These tags are automatically removed from the auto-generated smart tags when you upload assets to the repository. This capability performs tags governance and saves a lot of time as you can add a tag to the block list and AEM Assets automatically excludes it from the list of tags for any of the assets that are added to the repository.
 
   ![storage usage insights](/help/assets/assets/block-tags.png)
 
+
+**Video Preview**: AEM Assets now generates preview renditions of all supported video formats by default, without the need to configure a processing profile.
+
 -->
-
-
-* **Rapporter om lagringsanvändning i insikter**: Administratörer kan nu visa användningsrapporter för lagring som ingår i Insights.
-
-  ![information om lagringsanvändning](/help/assets/assets/storage-usage-insights.png)
-
-* **Sök i den första startsidans konfiguration**: Med Experience Manager Assets kan du nu konfigurera startsidan för din organisation. Om du väljer att söka först som startsida kan du konfigurera sökfältets justering, bakgrundsbild och logotyp för din organisation.
-
-  ![söka efter första konfigurationen](/help/assets/assets/search-first-configuration.png)
-
-### Nya funktioner i förhandsversionen för administratörsvyn {#admin-view-features-prerelease}
-
-**Videoförhandsgranskning**: AEM Assets genererar nu förhandsvisningsåtergivningar av alla videoformat som stöds som standard, utan att du behöver konfigurera en bearbetningsprofil.
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
 
 ### Nya funktioner i [!DNL Experience Manager Forms] {#forms-features}
-
-* **[Kryssrutekomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu innehålla en kryssrutekomponent. Det gör att användare kan göra binära val, markera eller avmarkera ett visst alternativ. Det visas vanligtvis som en liten ruta som du kan klicka på eller peka på för att växla mellan två lägen: markerad och avmarkerad. Kryssrutan är ett vanligt formulärelement som används för att ange ett ja/nej- eller sant/falskt-val.
-
-* **[Villkorskomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu innehålla en villkorskomponent. Det gör det möjligt för formulärförfattare att infoga ett specifikt avsnitt i formuläret där användarna presenteras med de villkor eller juridiska avtal som är kopplade till användningen av en tjänst, produkt eller plattform. Den här komponenten är utformad för att informera användare om de regler, bestämmelser och skyldigheter som de godkänner genom att skicka in formuläret.
-
-  ![Komponenter på fliken Kryssruta, Villkor och Lodrätt](/help/forms/assets/forms-components.png)
-
-* **[Lodräta flikar, komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu ordna formulärinnehåll i en lodrät lista med flikar, vilket ger en strukturerad och navigeringsbar layout. Om du använder vertikala flikar i ett formulär kan det förbättra användarupplevelsen genom att förenkla navigeringen och förbättra organisationen av formulärinnehållet, särskilt i situationer där ett formulär innehåller flera avsnitt eller komplex information.
-
-
-
-### Nya funktioner i [!DNL Forms] prerelease {#prerelease-features-forms}
 
 * **[Ansluta en adaptiv Forms med Microsoft® SharePoint List](/help/forms/configure-submit-actions-core-components.md#submit-to-sharepoint)**: AEM Forms erbjuder en OOTB-integrering för att skicka formulärdata direkt till SharePoint List, så att du kan använda funktionerna i SharePoint Lists. Du kan konfigurera Microsoft SharePoint List som en datakälla för en formulärdatamodell och använda **Skicka med formulärdatamodell** skicka-åtgärd för att ansluta ett adaptivt formulär till SharePoint List.
 
@@ -101,7 +82,7 @@ Titta på videon med versionsöversikten för november 2023 om du vill se en sam
 
 -->
 
-### Program för tidig användning {#forms-early-adopter}
+### Tidiga Adobe-program {#forms-early-adopter}
 
 * **[Skicka ett anpassat formulär till Adobe Workfront Fusion Scenario](/help/forms/submit-adaptive-form-to-workfront-fusion.md)**: Forms as a Cloud Service har ett körklart alternativ för smidig anslutning av adaptiva formulär till Adobe Workfront. Detta förenklar processen att skicka in ett adaptivt formulär till ett Adobe Workfront-scenario, vilket gör att du kan utlösa ett Workfront Fusion-scenario när ett adaptivt formulär skickas in.
 
@@ -115,17 +96,9 @@ Titta på videon med versionsöversikten för november 2023 om du vill se en sam
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
 
-### WAF Traffic Filter Rules kan nu licensieras {#cdn-waf-license}
+### CDN-konfiguration Tidigt program {#cdn-config-early-adopter}
 
-Traffic Filter Rules släpptes i oktober och innehöll en kommentar om att den speciella kategorin för reglerna för Web Application Firewall (WAF) skulle vara tillgänglig senare i år för att komplettera de regler som redan finns för Sites och Forms-kunder. Som uppdatering kan WAF-DDoS Protection-erbjudandet nu licensieras.
-
-När dessa avancerade WAF-regler har licensierats kan de distribueras till CDN med Cloud Manager Configuration Pipeline för att lägga till ett extra skydd mot webbattacker.
-
-Läs om [Trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md), inklusive WAF. Tala med ditt AEM om licenser för WAF-DDoS Protection eller Enhanced Security.
-
-### CDN-konfiguration för tidigt adoptivprogram {#cdn-config-early-adopter}
-
-Förutom den nyligen släppta [Trafikfilterregler (inklusive WAF)](/help/security/traffic-filter-rules-including-waf.md)kan du använda Configuration Pipeline för att deklarera och distribuera andra typer av CDN-konfigurationer. Vi vill gärna veta mer om dina användningsexempel, bland annat:
+Förutom den nyligen släppta [Trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md), som innehåller reglerna för valfri brandvägg för webbprogram (WAF), finns en möjlighet att använda Configuration Pipeline för att deklarera och distribuera andra typer av CDN-konfigurationer. Vi vill gärna veta mer om dina användningsexempel, bland annat:
 * 301/302 klientomdirigeringar
 * förbluffande förfrågningar vid kanten till godtyckliga ursprung
 * URL-omformningar
@@ -143,9 +116,3 @@ Du hittar en fullständig lista över månatliga utgåvor av Cloud Manager [här
 ## Migreringsverktyg {#migration-tools}
 
 Du hittar en fullständig lista över versioner av migreringsverktyg [här](/help/journey-migration/release-notes/release-notes-migration-tools-current.md).
-
-## Kända fel {#known-issues}
-
-* Det går inte att skicka Adaptiv Forms baserat på kärnkomponenter. Problemet inträffar för Adaptive Forms som byggts med Core Components version 2.0.38 - 2.0.60.
-
-  För att lösa problemet. du kan gå över till Adaptive Form Core Components version 2.0.62 eller senare. Om du vill ange en version av adaptiva Forms Core-komponenter för din miljö, [ange versioner av komponenterna core.forms.components.version, core.forms.components.af.version och core.wcm.components.version](/help/forms/enable-adaptive-forms-core-components.md#2-add-adaptive-forms-core-components-dependencies-to-your-git-repository) beroenden i ditt Forms as a Cloud Service arkiv eller AEM Archetype-baserade projekt och [driftsätta ändringarna i Forms as a Cloud Service miljö](/help/forms/enable-adaptive-forms-core-components.md#build-and-deploy-updated-code-on-an-aem-forms-as-a-cloud-service-environment). Du hittar den senaste versionen av adaptiva Forms Core Components-beroenden på [Adaptiv Forms Core Components Git-databas](https://github.com/adobe/aem-core-forms-components#system-requirements).

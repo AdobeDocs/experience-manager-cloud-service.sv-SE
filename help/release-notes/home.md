@@ -2,10 +2,10 @@
 title: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud Service.
 description: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: 05b9e51f-467e-4c8e-baea-b1cf832597cd
-source-git-commit: 3f934add7521586caf728c4bfa37f2d1a82b144a
+source-git-commit: 626f38141bafba8f5463c8793d52ea15448ed433
 workflow-type: tm+mt
-source-wordcount: '644'
-ht-degree: 29%
+source-wordcount: '599'
+ht-degree: 25%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 29%
 
 | Produkt | Adobe Experience Manager as a Cloud Service |
 |---|---|
-| Version | 2023.11.0 |
+| Version | 2023.12.0 |
 | Typ | Kontinuerliga uppdateringar |
 | Tillgänglighetsdatum | Kontinuerlig uppdatering |
 
@@ -42,10 +42,10 @@ Så här förbereder du en release:
 * [Versionsinformation om funktioner](/help/release-notes/release-notes-cloud/release-notes-current.md)
 * [Versionsinformation om underhåll](/help/release-notes/maintenance/latest.md)
 * [Nyheter](what-is-new.md)
-* [Viktiga ändringar](aem-cloud-changes.md)
+* [Betydande ändringar](aem-cloud-changes.md)
 * [Föråldrade och borttagna funktioner](deprecated-removed-features.md)
 
-## Handböcker om Experience Manager as a Cloud Service {#aem-guides}
+## as a Cloud Service stödlinjer för Experience Manager {#aem-guides}
 
 | Användarhandbok | Beskrivning |
 |---|---|
@@ -61,14 +61,14 @@ Så här förbereder du en release:
 | [Användarhandbok för åtgärder](/help/operations/home.md) | Läs om backend-funktionerna i Experience Manager as a Cloud Service, till exempel indexerings- och underhållsåtgärder. |
 | [Handbok för Commerce](/help/commerce-cloud/home.md) | Läs mer om Commerce Integration Framework på AEM as a Cloud Service. |
 
-## Andra Experience Manager-resurser {#other-resources}
+## Andra resurser i Experience Manager {#other-resources}
 
 * [Senaste dokumentationsuppdateringarna](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)
-* [Dispatcher-dokumentation](/help/implementing/dispatcher/overview.md)
+* [Dispatcher Documentation](/help/implementing/dispatcher/overview.md)
 * [HTML-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html)
 * [Dokumentation om viktiga komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [Dokumentation om Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/what-is-required/navigate-to-cloud-manager.html)
-* [GDPR-efterlevnad](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md)
+* [GDPR-beredskap](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md)
 * [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
 * [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
 * [AEM-communityforum](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)
