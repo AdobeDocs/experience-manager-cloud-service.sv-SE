@@ -1,17 +1,23 @@
 ---
-title: Hantera digitala resurser
+title: Identifiera duplicerade resurser för [!DNL Adobe Experience Manager] som [!DNL Cloud Service]
 description: Lär dig hur du identifierar dubblettresurser
 contentOwner: KK
 mini-toc-levels: 3
 feature: Asset Management,Publishing,Collaboration,Asset Processing
 role: User,Architect,Admin
 exl-id: 40f63933-4f4e-4318-8d42-4b5c9b01f7cd
-source-git-commit: 237b4a8e01af74dbaac0ba1715b5fa95c931be7c
+source-git-commit: f18b8cf1922f05c0d7da2c58fb0a57bc5ff3d3b7
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 2%
+source-wordcount: '188'
+ht-degree: 3%
 
 ---
+
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | Den här artikeln |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/duplicate-detection.html?lang=en) |
 
 # Identifiera duplicerade resurser {#detect-duplicate-assets}
 

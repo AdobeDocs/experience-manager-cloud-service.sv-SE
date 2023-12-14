@@ -1,15 +1,21 @@
 ---
 title: Resursväljare för [!DNL Adobe Experience Manager] som [!DNL Cloud Service]
 description: Använd resursväljaren för att söka efter, hitta och hämta resursers metadata och återgivningar i programmet.
-contentOwner: Adobe
+contentOwner: KK
 role: Admin,User
-exl-id: b968f63d-99df-4ec6-a9c9-ddb77610e258
-source-git-commit: dd923ae9d63f1ca1379d8e177ff7b00648da052a
+exl-id: 5f962162-ad6f-4888-8b39-bf5632f4f298
+source-git-commit: f18b8cf1922f05c0d7da2c58fb0a57bc5ff3d3b7
 workflow-type: tm+mt
-source-wordcount: '2361'
+source-wordcount: '2359'
 ht-degree: 0%
 
 ---
+
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | Den här artikeln |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/asset-selector.html?lang=en) |
 
 # Mikrofrontsväljare för mediefiler {#Overview}
 
@@ -372,18 +378,18 @@ Du kan använda egenskaperna för resursväljaren för att anpassa hur resursvä
 | *filterFormProps* | Objekt | Nej | | Ange de filteregenskaper som du behöver använda för att förfina sökningen. Exempel: MIME-typ JPG, PNG, GIF. |
 | *selectedAssets* | Array `<Object>` | Nej |                 | Ange valda resurser när resursväljaren återges. Det krävs en array med objekt som innehåller en id-egenskap för resurserna. Till exempel: `[{id: 'urn:234}, {id: 'urn:555'}]` En resurs måste vara tillgänglig i den aktuella katalogen. Om du behöver använda en annan katalog anger du ett värde för `path` också. |
 | *acvConfig* | Objekt | Nej | | Resurssamlingens visningsegenskap som innehåller objekt med anpassad konfiguration som åsidosätter standardvärden. |
-| *i18nSymbols* | `Object<{ id?: string, defaultMessage?: string, description?: string}>` | Nej |                 | Om OTB-översättningarna inte är tillräckliga för ditt programs behov kan du visa ett gränssnitt genom vilket du kan skicka dina egna anpassade lokaliserade värden via `i18nSymbols` prop. Om du skickar ett värde genom det här gränssnittet åsidosätts standardöversättningarna och i stället används dina egna.  Om du vill utföra åsidosättningen måste du skicka en giltig [Meddelandebeskrivning](https://formatjs.io/docs/react-intl/api/#message-descriptor) objekt till nyckeln för `i18nSymbols` som du vill åsidosätta. |
+| *i18nSymboler* | `Object<{ id?: string, defaultMessage?: string, description?: string}>` | Nej |                 | Om OTB-översättningarna inte är tillräckliga för ditt programs behov kan du visa ett gränssnitt genom vilket du kan skicka dina egna anpassade lokaliserade värden via `i18nSymbols` prop. Om du skickar ett värde genom det här gränssnittet åsidosätts standardöversättningarna och i stället används dina egna.  Om du vill utföra åsidosättningen måste du skicka en giltig [Meddelandebeskrivning](https://formatjs.io/docs/react-intl/api/#message-descriptor) objekt till nyckeln för `i18nSymbols` som du vill åsidosätta. |
 | *intl* | Objekt | Nej | | Resursväljaren innehåller standardöversättningar, OOTB. Du kan välja översättningsspråk genom att ange en giltig språksträng via `intl.locale` prop. Till exempel: `intl={{ locale: "es-es" }}` </br></br> De språksträngar som stöds följer [ISO 639 - Koder](https://www.iso.org/iso-639-language-codes.html) för representation av namn på språkstandarder. </br></br> Lista över språk som stöds: engelska - en-us (standard) spanska - es-es&#39; German - de-de&#39; French - fr-fr&#39; Italian - it-it&#39; Japanese - ja-jp&#39; Korean - ko-kr&#39; Portuguese - pt-br&#39; Chinese (Traditional) - zh-cn&#39; Chinese (Taiwan) - zh-tw |
 | *databaseId* | string | Nej | &#39; | Databas från vilken resursväljaren läser in innehållet. |
 | *additionalAemSolutions* | `Array<string>` | Nej | [ ] | Här kan du lägga till en lista med ytterligare AEM. Om ingen information anges i den här egenskapen beaktas endast mediebibliotek eller AEM Assets-databaser. |
 | *hideTreeNav* | boolesk | Nej |  | Anger om navigeringssidofältet för resursträd ska visas eller döljas. Den används endast i modal vy och därför har den här egenskapen ingen effekt i järnvägsvy. |
-| *onDrop* |  -funktion | Nej | | Egenskapen gör att en resurs kan släppas. |
+| *onDrop* | Funktion | Nej | | Egenskapen gör att en resurs kan släppas. |
 | *dropOptions* | `{allowList?: Object}` | Nej | | Konfigurerar släppningsalternativ med tillåtelselista. |
 | *colorScheme* | string | Nej | | Konfigurera tema (`light` eller `dark`) för resursväljaren. |
-| *handleSelection* |  -funktion | Nej | | Anropas med en array med tillgångsobjekt när resurser är markerade och `Select` klickar du på spärrknappen. Den här funktionen anropas bara i modal vy. För järnvägsvy använder du `handleAssetSelection` eller `onDrop` funktioner. Exempel: <pre>handleSelection=(assets: Asset[])=> {..}</pre> Se [Markerad resurstyp](#selected-asset-type) för mer information. |
-| *handleAssetSelection* |  -funktion | Nej | | Anropas med en array med objekt när resurserna markeras eller avmarkeras. Detta är användbart när du vill lyssna efter resurser när användaren väljer dem. Exempel: <pre>handleSelection=(assets: Asset[])=> {..}</pre> Se [Markerad resurstyp](#selected-asset-type) för mer information. |
-| *onClose* |  -funktion | Nej | | Anropas när `Close` knappen i modal vy trycks ned. Detta anropas bara `modal` visa och ignorera i `rail` vy. |
-| *onFilterSubmit* |  -funktion | Nej | | Anropas med filterobjekt när användaren ändrar olika filtervillkor. |
+| *handleSelection* | Funktion | Nej | | Anropas med en array med tillgångsobjekt när resurser är markerade och `Select` klickar du på spärrknappen. Den här funktionen anropas bara i modal vy. För järnvägsvy använder du `handleAssetSelection` eller `onDrop` funktioner. Exempel: <pre>handleSelection=(assets: Asset[])=> {..}</pre> Se [Markerad resurstyp](#selected-asset-type) för mer information. |
+| *handleAssetSelection* | Funktion | Nej | | Anropas med en array med objekt när resurserna markeras eller avmarkeras. Detta är användbart när du vill lyssna efter resurser när användaren väljer dem. Exempel: <pre>handleSelection=(assets: Asset[])=> {..}</pre> Se [Markerad resurstyp](#selected-asset-type) för mer information. |
+| *onClose* | Funktion | Nej | | Anropas när `Close` knappen i modal vy trycks ned. Detta anropas bara `modal` visa och ignorera i `rail` vy. |
+| *onFilterSubmit* | Funktion | Nej | | Anropas med filterobjekt när användaren ändrar olika filtervillkor. |
 | *selectionType* | string | Nej | enkel | Konfiguration för `single` eller `multiple` urval av resurser i taget. |
 
 ## Exempel på hur du använder egenskaper för resursväljare {#usage-examples}
