@@ -2,7 +2,7 @@
 title: Publicera innehåll för Edge Delivery Services
 description: Lär dig hur innehållspublicering fungerar med Edge Delivery Services och hur du publicerar AEM innehåll med Edge Delivery Services.
 feature: Edge Delivery Services
-source-git-commit: e3bbcfa3fcef1ed1e5b6cf2da5a17c7e636b9539
+source-git-commit: 166525b6987215a64521d1ff63a222187376ba65
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Informationsflödet vid publicering är följande. När författaren börjar pub
 1. Innehållsförfattaren publicerar AEM i Universell redigerare.
 1. En publiceringshändelse skickas till Adobe Pipeline-kön.
 1. Edge Delivery Publish Service skickar relevanta händelser till Edge Delivery Admin API.
-1. Edge Delivery pulls and ingest semantic HTML from AEM Author.
+1. Edge Delivery pulls and ingests semantic HTML från AEM Author.
 1. AEM uppdateras med publiceringsstatus.
 
 ## Så här kommer du igång {#how-to-get-started}
