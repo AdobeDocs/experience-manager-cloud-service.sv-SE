@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 475505fc8b5eb63c3563e8fabb28f515ff690393
+source-git-commit: a768eddbddb4b418b228839fdf5a9cdaf1488991
 workflow-type: tm+mt
-source-wordcount: '4456'
+source-wordcount: '4545'
 ht-degree: 4%
 
 ---
@@ -761,6 +761,45 @@ ht-degree: 4%
    + [Publicera innehåll för Edge Delivery](/help/edge/publishing.md)
    + [Developing for Edge Delivery](/help/edge/developing.md)
    + [Befintliga projekt och Edge Delivery](/help/edge/existing-projects.md)
+   + Bygger Edge Delivery Applications {#build}
+      + [Komma igång - självstudiekurs för utvecklare](/help/edge/developer/tutorial.md)
+      + [Anatomi i ett projekt](/help/edge/developer/anatomy-of-a-franklin-project.md)
+      + [Blockera samling](/help/edge/developer/block-collection.md)
+      + [Kalkylblad](/help/edge/developer/spreadsheets.md)
+      + [Forms](/help/edge/developer/forms.md)
+      + [Indexering](/help/edge/developer/indexing.md)
+      + [Hålla den 100](/help/edge/developer/keeping-it-100.md)
+      + [Markering - avsnitt](/help/edge/developer/markup-sections-blocks.md)
+      + [Favicon](/help/edge/developer/favicon.md)
+      + [Anpassade rubriker](/help/edge/docs/custom-headers.md)
+      + [Bästa praxis för utvecklare](/help/edge/docs/dev-collab-and-good-practices.md)
+   + Publishing Edge Delivery Applications {#publish}
+      + [Redigering](/help/edge/docs/authoring.md)
+      + [Massmetadata](/help/edge/docs/bulk-metadata.md)
+      + [Slack Bot](/help/edge/docs/slack.md)
+      + [Platshållare](/help/edge/docs/placeholders.md)
+      + [Webbplatskarta](/help/edge/developer/sitemap.md)
+      + [SharePoint Setup](/help/edge/docs/setup-customer-sharepoint.md)
+   + Startar program för Edge Delivery {#launch}
+      + [Go Live Checklist](/help/edge/docs/go-live-checklist.md)
+      + [Push-invalidering](/help/edge/docs/setup-byo-cdn-push-invalidation.md)
+      + [Installation av CloudFlare Worker](/help/edge/docs/byo-cdn-cloudflare-worker-setup.md)
+      + [Akamai-inställningar](/help/edge/docs/byo-cdn-akamai-setup.md)
+      + [Snabbinstallation](/help/edge/docs/byo-cdn-fastly-setup.md)
+      + [Omdirigeringar](/help/edge/docs/redirects.md)
+   + Resurser för Edge Delivery {#resources}
+      + Sidekick {#sidekick}
+         + [Använda Sidekick](/help/edge/docs/sidekick.md)
+         + [Installerar tillägg](/help/edge/docs/sidekick-extension.md)
+         + [Project Configurator](https://www.aem.live/tools/sidekick/)
+         + [Sidekick Library](/help/edge/docs/sidekick-library.md)
+      + [Vanliga frågor](/help/edge/docs/faq.md)
+      + [Admin-API](https://www.aem.live/docs/admin.html)
+      + [status.hlx.live](https://status.hlx.live/history)
+      + verktyg {#tools}
+         + [Sidekick Chrome Extension](https://chrome.google.com/webstore/detail/aem-sidekick/ccfggkjabjahcjoljmgmklhpaccedipo)
+         + [Github Bot](https://github.com/apps/aem-code-sync)
+         + [Granskningslogg](/help/edge/docs/auditlog.md)
 + Headless {#headless}
    + [Vad är ett headless CMS?](/help/headless/what-is-headless.md)
    + [Introduktion till AEM Headless](/help/headless/introduction.md)
