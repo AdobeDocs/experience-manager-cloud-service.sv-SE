@@ -2,9 +2,9 @@
 title: New Relic One
 description: Läs mer om New Relic One APM-tjänst (Application Performance Monitoring) för AEM as a Cloud Service och hur du kan komma åt den.
 exl-id: 9fa0c5eb-415d-4e56-8136-203d59be927e
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 3891a55ff48f48de4e55e0229e9f76e5bf500cb3
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1843'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Adobe lägger stor vikt vid övervakning, tillgänglighet och prestanda för pro
 
 I det här dokumentet beskrivs hur du hanterar åtkomst till New Relic One APM-funktioner (application performance monitoring) som är aktiverade i dina AEM as a Cloud Service miljöer för att ge bättre prestanda och få ut så mycket som möjligt av AEM as a Cloud Service.
 
-När ett nytt produktionsprogram skapas skapas automatiskt det New Relic One-underkonto som är kopplat till ditt AEM as a Cloud Service program.
+När ett nytt produktionsprogram skapas skapas automatiskt det New Relic One-underkonto som är kopplat till ditt AEM as a Cloud Service program. [Detta underkonto måste aktiveras](#activate-sub-account) för att börja inhämta data.
 
 ## Funktioner {#transaction-monitoring}
 
@@ -33,6 +33,28 @@ New Relic One APM för AEM as a Cloud Service har många funktioner.
 * Holistisk prestandaoptimering genom att kombinera nyckelvärden från övervakning på infrastrukturnivå och programövervakning (Adobe Experience Manager)
 
 * Exponering av AEM as a Cloud Service JMX-bönor och hälsokontroller direkt inom New Relic Insights-mätvärden, vilket gör det möjligt att göra djupgående kontroller av programstackens prestanda och hälsomått.
+
+## Aktivera ditt New Relic One-underkonto {#activate-sub-account}
+
+För ett nyskapat program skapas ett New Relic One-underkonto åt dig. Du måste dock aktivera den för att den ska kunna importera data. Detta görs inte automatiskt. Följ de här stegen för att aktivera ditt underkonto.
+
+>[!NOTE]
+>
+>En användare i **Företagsägare** eller **Distributionshanteraren** roll måste vara inloggad för att hantera New Relic One underkonto.
+
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
+
+1. Klicka på det program som du vill hantera dina New Relic One-användare för.
+
+1. Längst ned på **Miljö** på programöversiktssidan klickar du på ellipsknappen och väljer **Aktivera New Relic**.
+
+   ![Hantera användare](assets/newrelic-activate-sub-account.png)
+
+   * Du kan även komma åt **Hantera användare** via ellipsknappen längst upp på **Miljö** programskärmen.
+
+1. [Köra en pipeline](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#running-pipelines) för att slutföra aktiveringen av underkontot i samma miljö.
+
+När underkontot inaktiveras finns det inget databehov.
 
 ## Hantera New Relic One-användare {#manage-users}
 
@@ -66,7 +88,7 @@ När användarna har definierats skickar New Relic ett bekräftelsemeddelande vi
 >
 >Om du hanterar New Relic One-användare måste du även lägga till dig själv som användare för att få tillgång till dem. Att vara **Företagsägare** eller **Distributionshanteraren** inte ger tillgång till New Relic One. Du måste också skapa dig själv som användare.
 
-## Aktivera ditt New Relic One-användarkonto {#activate-account}
+## Aktivera ditt New Relic One-användarkonto {#activate-user-account}
 
 När ett New Relic One-användarkonto har skapats enligt beskrivningen i förhandsvisningsavsnittet [Hantera New Relic One-användare](#manage-users)skickar New Relic ett bekräftelsemeddelande till den angivna adressen. För att kunna använda dessa konton måste användarna först aktivera sina konton hos New Relic genom att återställa sina lösenord.
 
@@ -118,7 +140,7 @@ Om du inte verifierar din e-postadress försöker New Relic logga in dig med den
 
 Om du vill ha mer hjälp öppnar du en supportanmälan via [AEM supportportal](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 
-## Felsöka New Relic One Access {#troubleshooting}
+## Felsöka New Relic One användaråtkomst {#troubleshooting}
 
 Om du har lagts till som New Relic One-användare enligt beskrivningen i avsnittet [Hantera New Relic One-användare](#manage-users) och kan inte hitta e-postmeddelandet med den ursprungliga kontobekräftelsen genom att följa dessa steg.
 
@@ -152,11 +174,11 @@ Följande begränsningar gäller när du lägger till användare i New Relic One
 
 >[!NOTE]
 >
->Om ingen aktivitet identifieras på ditt New Relic One-konto under minst 90 dagar stoppas APM-agenten.
+>Om ingen aktivitet identifieras i ditt New Relic One-underkonto under minst 90 dagar stoppas APM-agenten.
 >
->Öppna en supportanmälan via [AEM supportportal](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) om du vill återaktivera APM-agenten för dina AEMaaCS-miljöer.
+>Följ samma steg i [Aktivera ditt New Relic One-underkonto](#activate-sub-account) för att återaktivera ditt New Relic One-underkonto.
 
-Om du vill ha mer hjälp eller mer information om New Relic One-erbjudanden för ditt AEM as a Cloud Service program kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
+Om du vill ha mer hjälp eller mer information om New Relic One-erbjudanden för ditt AEM as a Cloud Service program kan du öppna ett supportärende via [AEM supportportal.](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html)
 
 ## Frågor och svar om New Relic One {#faqs}
 
@@ -202,4 +224,4 @@ Medan supporten i Adobe övervakar den AEM as a Cloud Service applikationen med 
 
 ### APM-agenten för mitt New Relic One-konto har stoppats. Vad hände? {#deactivated}
 
-[APM-agenter har stoppats](#limitations) om ingen aktivitet har identifierats under minst 90 dagar. Öppna en supportanmälan via [AEM supportportal](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) om du vill återaktivera APM-agenten för dina AEMaaCS-miljöer.
+[APM-agenter har stoppats](#limitations) om ingen aktivitet har identifierats under minst 90 dagar. Följ samma steg i [Aktivera ditt New Relic One-underkonto](#activate-sub-account) för att återaktivera ditt New Relic One-underkonto.

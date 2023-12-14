@@ -2,9 +2,9 @@
 title: Bygg miljö
 description: Lär dig mer om Cloud Managers byggmiljö och hur den bygger och testar din kod.
 exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 3e7d3113b25e9b4058130bf3352a612f36ef5c63
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '1029'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Lär dig mer om Cloud Managers byggmiljö och hur den bygger och testar din kod.
 
 Cloud Manager bygger och testar koden med en specialiserad byggmiljö.
 
-* Byggmiljön är Linux-baserad och kommer från Ubuntu 18.04.
+* Byggmiljön är Linux-baserad och kommer från Ubuntu 2.04.
 * Apache Maven 3.8.8 är installerad.
 * Java-versionerna är Oracle JDK 8u371 och Oracle JDK 11.0.20.
 * Som standard är `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk1.8.0_371` som innehåller Oraclet JDK 8u371. Se [Alternate Maven Execution JDK Version](#alternate-maven-jdk-version) för mer information.
@@ -35,6 +35,7 @@ Cloud Manager bygger och testar koden med en specialiserad byggmiljö.
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
 * Maven konfigureras på systemnivå med en `settings.xml` -fil, som automatiskt inkluderar den offentliga Adobe-artefaktdatabasen med en profil med namnet `adobe-public`. (Se [Adobe Public Maven Repository](https://repo1.maven.org/) för mer information).
+* Node.js 18 finns för [rörledningar för framände och högstackar.](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md)
 
 >[!NOTE]
 >
