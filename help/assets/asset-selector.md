@@ -4,20 +4,19 @@ description: Använd resursväljaren för att söka efter, hitta och hämta resu
 contentOwner: KK
 role: Admin,User
 exl-id: 5f962162-ad6f-4888-8b39-bf5632f4f298
-source-git-commit: f18b8cf1922f05c0d7da2c58fb0a57bc5ff3d3b7
+source-git-commit: e882e89afa213f3423efe497585994eb91186fd7
 workflow-type: tm+mt
 source-wordcount: '2359'
 ht-degree: 0%
 
 ---
 
+# Mikrofrontsväljare för mediefiler {#Overview}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | Den här artikeln |
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/asset-selector.html?lang=en) |
-
-# Mikrofrontsväljare för mediefiler {#Overview}
+| AEM as a Cloud Service | Den här artikeln |
 
 Micro-Frontend Asset Selector har ett användargränssnitt som enkelt kan integreras med [!DNL Experience Manager Assets as a Cloud Service] -databas så att du kan bläddra bland eller söka efter digitala resurser som är tillgängliga i databasen och använda dem när du redigerar program.
 

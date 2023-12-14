@@ -6,7 +6,7 @@ mini-toc-levels: 3
 feature: Asset Management,Publishing,Collaboration,Asset Processing
 role: User,Architect,Admin
 exl-id: 40f63933-4f4e-4318-8d42-4b5c9b01f7cd
-source-git-commit: f18b8cf1922f05c0d7da2c58fb0a57bc5ff3d3b7
+source-git-commit: e882e89afa213f3423efe497585994eb91186fd7
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 3%
@@ -14,12 +14,12 @@ ht-degree: 3%
 ---
 
 
+# Identifiera duplicerade resurser {#detect-duplicate-assets}
+
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | Den här artikeln |
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/duplicate-detection.html?lang=en) |
-
-# Identifiera duplicerade resurser {#detect-duplicate-assets}
+| AEM as a Cloud Service | Den här artikeln |
 
 Om en DAM-användare överför en eller flera resurser som redan finns i databasen, [!DNL Experience Manager] identifierar dupliceringen och meddelar användaren. Dubblettidentifiering är inaktiverat som standard eftersom det kan påverka prestanda beroende på databasens storlek och antalet överförda resurser.
 
