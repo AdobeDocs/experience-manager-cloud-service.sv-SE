@@ -2,9 +2,9 @@
 title: GoLive
 description: Lär dig hur du utför migreringen när koden och innehållet är molnklara
 exl-id: 10ec0b04-6836-4e26-9d4c-306cf743224e
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 75d702cf45e38da4b7259907e7f707b6f18bd428
 workflow-type: tm+mt
-source-wordcount: '1697'
+source-wordcount: '1721'
 ht-degree: 0%
 
 ---
@@ -152,6 +152,8 @@ Granska den här listan över aktiviteter för att säkerställa att du utför e
       * TTL är den tid som en DNS-post finns kvar i ett cacheminne innan servern tillfrågas om en uppdatering.
       * Om du har en mycket hög TTL tar det längre tid att sprida uppdateringar till DNS-posten.
 * Kör prestanda- och säkerhetstester som uppfyller dina affärskrav och mål.
+   * Utför tester på scenmiljön.  Den har samma storlek som produktionen.
+   * Utvecklingsmiljöer har inte samma storlek som fas och produktion.
 * Klipp ut och se till att den faktiska publiceringen utförs utan någon ny driftsättning eller uppdatering av innehållet.
 * Skapa meddelandeprofiler för Admin Console. Se [Meddelandeprofiler](/help/journey-onboarding/notification-profiles.md)
 
