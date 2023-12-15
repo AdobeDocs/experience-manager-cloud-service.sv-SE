@@ -2,9 +2,9 @@
 title: Infrastruktur- och serviceövervakning på AEM as a Cloud Service
 description: Infrastruktur- och serviceövervakning på AEM as a Cloud Service
 exl-id: 82432c11-37ec-48ac-a52b-487abdc859fa
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 484a9a133b2f3d873d725542fc66652134c5e4d5
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '562'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Manager as a Cloud Service ger möjlighet att observera och öv
 * [Intern modulövervakning](#module-monitoring)
 * [Kundobserverbarhet](#customer-observability)
 
-AEM as a Cloud Service använder hundratals molnbaserade bildskärmar för att kontinuerligt rapportera varje miljös tillstånd (dygnet runt) i 365 dagar per år. Skärmdefinitionerna är inte statiska, de granskas kontinuerligt för att förbättra funktionen för tidig upptäckt. Dessutom har Adobe förfaranden för att ta emot samtal som är utformade för att besvara varningar.
+AEM as a Cloud Service använder hundratals molnbaserade bildskärmar för att kontinuerligt rapportera varje miljös tillstånd (dygnet runt) i 365 dagar per år. Skärmdefinitionerna är inte statiska, de granskas kontinuerligt för att förbättra funktionen för tidig upptäckt. Dessutom har Adobe förfaranden för att ta emot samtal som är utformade för att svara på varningar.
 
 Om du behöver information om andra typer av övervakning, som loggning eller övervakning via Cloud Manager, kan du läsa [Ytterligare resurser](#resources).
 
@@ -31,11 +31,11 @@ Alla dina miljöer med AEM as a Cloud Service övervakas med avseende på tillg�
 
 ### Anpassad övervakning {#custom-monitoring}
 
-Med anpassad övervakning kan kunderna välja att tillhandahålla upp till fem olika URL:er för webbegenskaper före [live](/help/journey-migration/go-live.md). Dessa URL:er ska vara giltiga och returnera en HTTP 200-svarskod. Dessa skärmar ger stöd åt kunder som [egen CDN](/help/implementing/dispatcher/cdn.md#point-to-point-CDN) framför Adobe CDN och eventuell extern trafikledning som är anställd framför AEM as a Cloud Service som inte står under Adobe. Varningar från anpassade övervakningskontroller engagerar Adobe supportteam och processer.
+Med anpassad övervakning kan kunderna välja att tillhandahålla upp till fem olika URL:er för webbegenskaper före [live](/help/journey-migration/go-live.md). Dessa URL:er ska vara giltiga och returnera en HTTP 200-svarskod. Dessa skärmar ger stöd åt kunder som [egen CDN](/help/implementing/dispatcher/cdn.md#point-to-point-CDN) framför CDN i Adobe och eventuell extern trafikledning som är anställd framför AEM as a Cloud Service som inte står under Adobe. Varningar från anpassade övervakningskontroller engagerar Adobe supportteam och processer.
 
 >[!NOTE]
 >
-> Den här funktionaliteten erbjuds endast kunder med [Avancerad molnsupport.](https://experienceleague.adobe.com/docs/support-resources/data-sheets/overview.html#support-add-ons) Kontakta ditt Adobe-kontoteam om du har några frågor.
+> Den här funktionaliteten erbjuds endast för produktionsmiljöer och kunder med [Avancerad molnsupport.](https://experienceleague.adobe.com/docs/support-resources/data-sheets/overview.html#support-add-ons) Kontakta ditt Adobe-kontoteam om du har några frågor.
 
 ## Intern modulövervakning {#module-monitoring}
 
@@ -47,16 +47,16 @@ Den externa tillgängligheten fokuseras på slutanvändarövervakning, medan int
 * Författarens databasstorlek är inom vissa gränser.
 * Säkerhetskopieringen har slutförts.
 * Databasens hälsa och prestanda övervakas.
-* AEM Cloud-tjänsterna beter sig som förväntat, inklusive inga blockerade replikeringsköer, konsekventa data och prestandafrågor.
+* AEM Cloud-tjänster beter sig som förväntat, inklusive inga blockerade replikeringsköer, konsekventa data och prestandafrågor.
 
 Ytterligare kontroller läggs till i miljöer som tillhandahålls för Forms. Kontrolldefinitionerna är inte statiska och kan komma att ändras och uppdateras.
 
 ## Kundobserverbarhet {#customer-observability}
 
-Kunderna kan använda [Prestandaövervakning för New Relic-program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic.html) som tillhandahåller realtidsprestandadata som samlas in och diagram för analys och felsökning. Genom att använda övervakningssviten kan kunderna direkt observera olika mätvärden som: Prestandamätningar för JVM, transaktionstid för Java™, externa bakgrundsanrop och databasanrop.
+Kunderna kan använda [Prestandaövervakning för New Relic](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic.html) som tillhandahåller realtidsprestandadata som samlas in och diagram för analys och felsökning. Genom att använda övervakningssviten kan kunderna direkt observera olika mätvärden som JVM-prestandamått, transaktionstid för Java™, externa bakgrundsanrop och databasanrop.
 
 ## Ytterligare resurser {#resources}
 
-* [Prestandaövervakning för New Relic-program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic.html)
+* [Prestandaövervakning för New Relic](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic.html)
 * [Loggning för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html)
 * [Övervakningsmiljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/monitoring-environments.html)
