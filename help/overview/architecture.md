@@ -2,9 +2,9 @@
 title: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service
 description: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service.
 exl-id: 3fe856b7-a0fc-48fd-9c03-d64c31a51c5d
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 3e40832ee4351c92ffc4eb22540223e331323821
 workflow-type: tm+mt
-source-wordcount: '2658'
+source-wordcount: '2696'
 ht-degree: 8%
 
 ---
@@ -56,9 +56,11 @@ Det finns fyra typer av [miljö](/help/implementing/cloud-manager/manage-environ
       * Detta är oberoende av de ändringar som initieras av Adobe som en del av en underhållsuppdatering eller av koddistributionerna.
       * Du kan också utföra manuell testning om en koddistribution sker.
    * Innehållet i scenmiljön synkroniseras vanligtvis med produktionsinnehållet med hjälp av funktionen för självbetjäning av innehållskopiering.
+   * Utför prestanda- och säkerhetstester på scenmiljön.  Den har samma storlek som produktionen.
 * Utvecklingsmiljö:
    * Med en utvecklingsmiljö kan utvecklare implementera och testa AEM program under samma körningsförhållanden som scen- och produktionsmiljöer.
    * Ändringarna går igenom en distributionspipeline som ger samma kodkvalitet och säkerhetsportar som i produktionsdistributionspipelines.
+   * Utvecklingsmiljöer har inte samma storlek som fas och produktion och bör inte användas för att utföra prestanda- och säkerhetstester.
 * Rapid development environment (RDE):
    * I en RDE-miljö går det att snabbt utveckla iterationer när ny eller befintlig kod distribueras till RDE-instanserna, utan att behöva gå igenom en formell distributionskanal som i vanliga utvecklingsmiljöer.
 
