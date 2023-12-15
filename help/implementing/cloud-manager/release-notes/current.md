@@ -3,9 +3,9 @@ title: Versionsinformation om Cloud Manager 2023.12.0 i Adobe Experience Manager
 description: Detta är versionsinformationen för Cloud Manager 2023.12.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: b3a338f469ea04d2c31204149d619931a55f2b24
+source-git-commit: 71ce915413cd968a78a33b7a52d02e09841e1707
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,8 @@ Releasedatum för Cloud Manager version 2023.12.0 i AEM as a Cloud Service är 1
    * Java 8 minor version har uppdaterats till `jdk1.8.0_371`.
    * Java 11 minor version har uppdaterats till `jdk-11.0.20`.
    * Maven uppdaterades till version 3.8.8
+      * Maven inaktiverar nu alla osäkra `http://*` speglar som standard.
+      * [Adobe rekommenderar](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md) -användare uppdaterar sina Maven-databaser så att de använder HTTPS i stället för HTTP.
    * Bas-bilden för byggbehållaren uppdaterades till Ubuntu 22.04.
 
 ## Tidig användning {#early-adoption}
