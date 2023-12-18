@@ -2,9 +2,9 @@
 title: Infoga innehåll i Cloud Service
 description: Lär dig hur du använder Cloud Acceleration Manager för att importera innehåll från din migreringsuppsättning till en instans av en Cloud Service.
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: b674b3d8cd89675ed30c1611edec2281f0f1cb05
+source-git-commit: 4c8565d60ddcd9d0675822f37e77e70dd42c0c36
 workflow-type: tm+mt
-source-wordcount: '2392'
+source-wordcount: '2407'
 ht-degree: 1%
 
 ---
@@ -97,7 +97,7 @@ Börja med att skapa ett matningsjobb och se till att **Svep** är inaktiverat u
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_ingestion_troubleshooting"
 >title="Felsökning av innehållsmatning"
->abstract="Läs i förbrukningsloggarna och dokumentationen för att hitta lösningar på vanliga orsaker till varför ett intag kan misslyckas och hitta ett sätt att åtgärda problemet. När intaget har åtgärdats kan det köras igen."
+>abstract="Läs i förbrukningsloggarna och dokumentationen för att hitta lösningar på vanliga orsaker till varför ett intag kan misslyckas och hitta ett sätt att åtgärda problemet. När det är klart kan intaget köras igen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/validating-content-transfers.html" text="Verifierar innehållsöverföringar"
 
 ### CAM kan inte hämta migreringstoken {#cam-unable-to-retrieve-the-migration-token}
@@ -159,9 +159,11 @@ En vanlig orsak till [Inmatning uppifrån](/help/journey-migration/content-trans
 
 >java.lang.RuntimeException: org.apache.jackrabbit.oak.api.CommitFailedException: OakConstraint0030: Unikhetsvillkoret bröt egenskap [jcr:uuid] med värdet a1a1a1a1-b2b2-c3c3-d4d4-e5e5e5e5e5e5: /some/path/jcr:content, /some/other/path/jcr:content
 
-Varje nod i AEM måste ha ett unikt uuid. Det här felet anger att en nod som importeras har samma UID som en som finns någon annanstans på en annan sökväg i målinstansen.
-Detta kan inträffa om en nod flyttas på källan mellan en extrahering och en efterföljande [Extrahering uppifrån och ned](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md#top-up-extraction-process).
-Det kan också inträffa om en nod på målet flyttas mellan ett intag och ett efterföljande uppåtgående intag.
+Varje nod i AEM måste ha ett unikt uuid. Detta fel anger att en nod som importeras har samma UID som en som finns på en annan sökväg i målinstansen. Detta kan bero på två orsaker:
+
+* En nod flyttas på källan mellan en extrahering och en efterföljande [Extrahering uppifrån och ned](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md#top-up-extraction-process)
+   * _KOM IHÅG_: För top-up-extraheringar finns noden fortfarande i migreringsuppsättningen, även om den inte längre finns i källan.
+* En nod på destinationen flyttas mellan ett intag och ett efterföljande uppåtgående intag.
 
 Den här konflikten måste lösas manuellt. Någon som är bekant med innehållet måste bestämma vilken av de två noderna som ska tas bort, med hänsyn tagen till annat innehåll som refererar till det. Lösningen kan kräva att extraheringen av den övre delen görs igen utan den felande noden.
 
@@ -179,7 +181,7 @@ Bästa tillvägagångssätt visar att om en **Ej svep** Tillförsel måste utfö
 
 ### Inmatningsfel på grund av stora nodegenskapsvärden {#ingestion-failure-due-to-large-node-property-values}
 
-Nodegenskapsvärden som lagras i MongoDB får inte överskrida 16 MB. Om ett nodvärde överskrider den storlek som stöds misslyckas importen och loggen innehåller en `BSONObjectTooLarge` fel och ange vilken nod som överskrider maxgränsen. Observera att detta är en MongoDB-begränsning.
+Nodegenskapsvärden som lagras i MongoDB får inte överskrida 16 MB. Om ett nodvärde överskrider den storlek som stöds misslyckas importen och loggen innehåller en `BSONObjectTooLarge` fel och ange vilken nod som överskrider maxgränsen. Detta är en MongoDB-begränsning.
 
 Se `Node property value in MongoDB` anteckning i [Krav för verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/prerequisites-content-transfer-tool.md) om du vill ha mer information och en länk till ett ekverktyg som kan hjälpa dig att hitta alla stora noder. När alla noder med stora storlekar har åtgärdats kör du extraheringen och intaget igen.
 
