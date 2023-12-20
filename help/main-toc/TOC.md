@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 7734a0f476d6f5a4e8f15ee3c0e6a9d89797b2b9
+source-git-commit: c54ef4f80703497e9f26847be2fe99867b74c094
 workflow-type: tm+mt
-source-wordcount: '4557'
+source-wordcount: '4556'
 ht-degree: 4%
 
 ---
@@ -778,7 +778,6 @@ ht-degree: 4%
    + Publishing Edge Delivery Applications {#publish}
       + [Redigering](/help/edge/docs/authoring.md)
       + [Massmetadata](/help/edge/docs/bulk-metadata.md)
-      + [Slack Bot](/help/edge/docs/slack.md)
       + [Platshållare](/help/edge/docs/placeholders.md)
       + [Webbplatskarta](/help/edge/developer/sitemap.md)
       + [SharePoint Setup](/help/edge/docs/setup-customer-sharepoint.md)
@@ -797,7 +796,7 @@ ht-degree: 4%
          + [Sidekick Library](/help/edge/docs/sidekick-library.md)
       + [Vanliga frågor](/help/edge/docs/faq.md)
       + [Admin-API](https://www.aem.live/docs/admin.html)
-      + [status.hlx.live](https://status.hlx.live/history)
+      + [AEM](https://www.aemstatus.net)
       + verktyg {#tools}
          + [Sidekick Chrome Extension](https://chrome.google.com/webstore/detail/aem-sidekick/ccfggkjabjahcjoljmgmklhpaccedipo)
          + [Github Bot](https://github.com/apps/aem-code-sync)
