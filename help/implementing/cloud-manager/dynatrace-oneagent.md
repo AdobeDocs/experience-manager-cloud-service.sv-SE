@@ -1,9 +1,9 @@
 ---
 title: Dynatrace OneAgent
 description: Lär dig använda Dynatracs OneAgent med AEM as a Cloud Service
-source-git-commit: 2e70c8be73915bea860b98e02c08772bb4f5dcd2
+source-git-commit: 9379e6a1ec323ff4f05e994e9265da1363b4a3df
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ Nedan beskrivs mer ingående information om anslutningsbegäranden:
 
 | **Fält** | **Beskrivning** |
 |---|---|
-| URL för Dynatrace Environment | Din URL för Dynatracemiljö.<br><br>För Dynatrace SaaS-kunder är formatet `https://<environment>.live.dynatrace.com`.<br><br>För kunder som är hanterade med Dynatrace är formatet `https://<your-managed-url>/e/<environmentId>` |
+| URL för Dynatrace Environment | Din URL för Dynatracemiljö.<br><br>För Dynatrace SaaS-kunder är formatet `https://<you-environment-id>.live.dynatrace.com`.<br><br>För kunder som är hanterade med Dynatrace är formatet `https://<your-managed-url>/e/<environmentId>` |
 | Dynatrace Environment ID | Ditt ID för Dynatracemiljö, som finns i URL:en för miljön |
 | Dynatrace Environment-token | Din OneAgent-miljötoken. Läs dokumentationen för Dynatrace om hur du skapar detta.<br><br>Detta bör betraktas som en hemlighet, så använd lämpliga säkerhetsrutiner. Lösenordsskydda den till exempel på en webbplats **zerobin.net** som kundsupportbiljetten kan referera till tillsammans med lösenordet. |
 | Åtkomsttoken för Dynatrace API | API-åtkomsttoken för din Dynatrace-miljö. Läs dokumentationen för Dynatrace om hur du skapar detta.<br><br>Detta bör betraktas som en hemlighet, så använd lämpliga säkerhetsrutiner. Lösenordsskydda den till exempel på en webbplats **zerobin.net** som kundsupportbiljetten kan referera till tillsammans med lösenordet.<br><br>Obs! Detta är endast nödvändigt för Dynatracehantering. |
-| Målport för Dynatrace | Målporten för Dynatracus.<br><br>Obs! Detta är endast nödvändigt för Dynatracehantering. |
+| Dynatrace ActiveGate-port | Din ActiveGate-port för Dynatrace som OneAgent ska ansluta till.<br><br>Obs! Detta är endast nödvändigt för Dynatracehantering. |
 | AEM miljö-ID:n | Den eller de AEM miljö-ID som Dynatracs ska övervaka. |
 
 
