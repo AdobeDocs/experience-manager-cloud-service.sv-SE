@@ -1,8 +1,14 @@
 ---
-description: The go-live checklist is a summary of best practices to consider when launching a website. These steps are generally good practices but have some aspects specific to Adobe Experience Manager.
-title: Go-Live Checklist
+description: Checklistan live är en sammanfattning av de bästa metoderna att tänka på när du startar en webbplats. Dessa steg är vanligtvis bra men har vissa aspekter specifika för Adobe Experience Manager.
+title: GoLive Checklist
 feature: Edge Delivery Services
+source-git-commit: 80d974c23cb3dd7c0844b4d2cec2b608ff813438
+workflow-type: tm+mt
+source-wordcount: '34'
+ht-degree: 0%
+
 ---
-# Go-Live Checklist
+
+# GoLive Checklist
 
 {{$include 4060ebc0-13ed-439d-92c3-808c69275705}}
