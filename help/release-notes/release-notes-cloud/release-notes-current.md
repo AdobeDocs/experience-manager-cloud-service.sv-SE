@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: a5121436b2e48302fcf14478764aede1495e089c
+source-git-commit: 17903c6e44afd1742d21b7fc7dbe4d7c63fe8b6b
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '828'
 ht-degree: 0%
 
 ---
@@ -53,13 +53,21 @@ Real User Monitoring (RUM) Data Service ger en mer exakt återgivning av använd
 Om du vill testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `aemcs-rum-adopter@adobe.com`, tillsammans med ditt domännamn för produktions-, scen- och utvecklingsmiljön från din e-postadress som är kopplad till din Adobe ID. Adobe produktteam aktiverar sedan datatjänsten Real User Monitoring (RUM) åt dig.
 
 
+## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
+
+### Nya funktioner i resursvyn {#assets-view-features}
+
+**Skapa GenAI-bilder med Adobe Firefly**
+
+Skapa nya bilder baserat på sökfrågor med en integrerad Adobe Firefly text-till-bild-funktion (kräver licens för Adobe Firefly).
+
+![Integrering av Assets Firefly](/help/assets/assets/assets-firefly-integration.png)
+
+**Sök efter liknande bilder**
+
+Nu kan du enkelt hitta innehåll genom att välja en bild och visa liknande bilder i Experience Manager Assets-databasen.
+
 <!--
-
-## [!DNL Experience Manager Assets] as a [!DNL Cloud Service] {#assets}
-
-### New Features in Admin View {#admin-view-features}
-
-
 
 * **Smart tags blocklist**: Experience Manager Assets now enables you to define a list of blocked tags. These tags are automatically removed from the auto-generated smart tags when you upload assets to the repository. This capability performs tags governance and saves a lot of time as you can add a tag to the block list and AEM Assets automatically excludes it from the list of tags for any of the assets that are added to the repository.
 
