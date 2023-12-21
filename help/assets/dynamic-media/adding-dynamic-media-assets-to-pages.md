@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Asset Management
 role: User
 exl-id: 2f2fd6cb-8b53-4167-a7e3-453f27549109
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: e2d79742c2097748d736bc4d2d2046711d978fc5
 workflow-type: tm+mt
-source-wordcount: '3053'
+source-wordcount: '3000'
 ht-degree: 5%
 
 ---
@@ -37,7 +37,7 @@ Att lägga till en 3D-mediekomponent, Dynamic Media, Interactive Media, Panorami
 
 1. Dra en **[!UICONTROL Dynamic Media]** och släpp den på önskad plats på sidan.
 
-1. Håll pekaren direkt på komponenten. När komponenten omges av en blå ruta väljer du en gång för att visa komponentens verktygsfält. Välj **[!UICONTROL Configuration (wrench)]** ikon.
+1. Håll pekaren direkt på komponenten. När komponenten omges av en blå ruta väljer du en gång för att visa komponentens verktygsfält. Välj **[!UICONTROL Configuration (wrench)]** -ikon.
 
    ![6_5_360video_wcmComponentconfigure](assets/6_5_360video_wcmcomponentconfigure.png)
 
@@ -65,7 +65,7 @@ Om det inte finns några Dynamic Media-komponenter att lägga till på en sida b
    ![Policy](/help/assets/assets-dm/structure-mode.png)
 
 1. Långt ned på sidan väljer du **[!UICONTROL Layout Container]** för att öppna verktygsfältet och sedan välja ikonen Policy.
-1. På **[!UICONTROL Layout Container]** sida, under **[!UICONTROL Properties]** måste du se till att **[!UICONTROL Allowed Components]** -fliken är markerad.
+1. På **[!UICONTROL Layout Container]** sida, under **[!UICONTROL Properties]** måste du se till att **[!UICONTROL Allowed Components]** är markerad.
 
    ![Tillåtna komponenter](/help/assets/assets-dm/allowed-components.png)
 
@@ -106,7 +106,7 @@ Följande Dynamic Media-komponenter är tillgängliga:
 
 >[!NOTE]
 >
->De här komponenterna är inte tillgängliga som standard och måste göras tillgängliga via mallredigeraren innan du använder dem. När de har gjorts tillgängliga i mallredigeraren kan du lägga till komponenterna på sidan precis som andra komponenter [!DNL Experience Manager] -komponenten.
+>Dessa komponenter är inte tillgängliga som standard och måste göras tillgängliga via mallredigeraren innan du använder dem. När de har gjorts tillgängliga i mallredigeraren kan du lägga till komponenterna på sidan precis som andra komponenter [!DNL Experience Manager] -komponenten.
 
 ![6_5_dynamicmediawcmcomponents](assets/6_5_dynamicmediawcmcomponents.png)
 
@@ -166,7 +166,7 @@ Du kan redigera följande Dynamic Media-inställningar genom att välja **[!UICO
 * **[!UICONTROL Optimize for higher resolution devices]** - Markera (standard) kryssrutan för att tillåta optimering av DPR (Device Pixel Ratio).
 
   The **[!UICONTROL Optimize for higher resolution devices]** visas bara när följande är sant:
-   * Under Förinställningstyp, **[!UICONTROL Image Preset]** är markerat och **[!UICONTROL RESS_IP]** är markerat i **[!UICONTROL Image Preset]** nedrullningsbar lista.
+   * Under Förinställningstyp, **[!UICONTROL Image Preset]** är markerat och **[!UICONTROL RESS_IP]** är markerat i **[!UICONTROL Image Preset]** listruta.
 
   ![inställning för enhetens pixelproportioner för bildförinställning](/help/assets/dynamic-media/assets/dpr-ress-ip.png)
 
@@ -184,9 +184,9 @@ Du kan redigera följande Dynamic Media-inställningar genom att välja **[!UICO
 
   Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
-* **[!UICONTROL Width]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
+* **[!UICONTROL Width]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om värdet lämnas tomt anpassas resursen.
 
-* **[!UICONTROL Height]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
+* **[!UICONTROL Height]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om värdet lämnas tomt anpassas resursen.
 
 #### När du arbetar med video {#when-working-with-video}
 
@@ -198,7 +198,7 @@ Du kan redigera följande Dynamic Media-inställningar genom att välja **[!UICO
 
 >[!NOTE]
 >
->Som standard är videokomponenten i Dynamic Media adaptiv. Om du vill göra den till en fast storlek anger du den i komponenten med **[!UICONTROL Width]** och **[!UICONTROL Height]** i **[!UICONTROL Advanced]** -fliken.
+>Som standard är videokomponenten i Dynamic Media adaptiv. Om du vill ha en fast storlek anger du den i komponenten med **[!UICONTROL Width]** och **[!UICONTROL Height]** i **[!UICONTROL Advanced]** -fliken.
 
 * **[!UICONTROL Viewer preset]** - Välj en befintlig förinställning för visningsprogrammet för video i listrutan. Om den visningsförinställning du söker efter inte visas måste du göra den synlig. Se Hantera förinställningar för visningsprogram.
 
@@ -213,9 +213,9 @@ Du kan redigera följande Dynamic Media-inställningar genom att välja **[!UICO
 
 * **[!UICONTROL Title]** - Ändra videons titel.
 
-* **[!UICONTROL Width]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
+* **[!UICONTROL Width]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om värdet lämnas tomt anpassas resursen.
 
-* **[!UICONTROL Height]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
+* **[!UICONTROL Height]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om värdet lämnas tomt anpassas resursen.
 
 #### När du arbetar med smart beskärning {#when-working-with-smart-crop}
 
@@ -239,7 +239,7 @@ Du kan redigera följande Dynamic Media-inställningar genom att välja **[!UICO
 
   Du kan redigera följande avancerade inställningar genom att välja **[!UICONTROL Edit]** i komponenten.
 
-* **[!UICONTROL Enable Aspect Ration match]** - Välj det här alternativet om du vill att Dynamic Media ska välja en smart beskärningsåtergivning med de proportioner som bäst matchar originalbildens proportioner.
+* **[!UICONTROL Enable Aspect Ratio match]** - Välj det här alternativet om du vill att Dynamic Media ska välja en smart beskärningsåtergivning med de proportioner som bäst matchar originalbildens proportioner.
 
 * **[!UICONTROL Optimize for higher resolution devices]** - Markera (standard) kryssrutan för att tillåta optimering av DPR (Device Pixel Ratio).
 
@@ -263,9 +263,9 @@ Du kan redigera följande Dynamic Media-inställningar genom att välja **[!UICO
 
   Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
-* **[!UICONTROL Width]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
+* **[!UICONTROL Width]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om värdet lämnas tomt anpassas resursen.
 
-* **[!UICONTROL Height]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
+* **[!UICONTROL Height]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om värdet lämnas tomt anpassas resursen.
 
 ### Komponent: Interaktiva media {#interactive-media-component}
 
@@ -292,21 +292,21 @@ Du kan redigera följande **[!UICONTROL General]** inställningar genom att väl
 
 * **[!UICONTROL Title]** - Ändra videons titel.
 
-* **[!UICONTROL Width]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
+* **[!UICONTROL Width]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om värdet lämnas tomt anpassas resursen.
 
-* **[!UICONTROL Height]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
+* **[!UICONTROL Height]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om värdet lämnas tomt anpassas resursen.
 
   Du kan redigera följande **[!UICONTROL Add To Cart]** inställningar genom att välja **[!UICONTROL Edit]** i komponenten.
 
-* **[!UICONTROL Show Product Asset]** - Som standard är det här värdet valt. Produktresursen visar en bild av produkten enligt definitionen i modulen Handel. Avmarkera kryssrutan om du inte vill visa produktresursen.
+* **[!UICONTROL Show Product Asset]** - Som standard är det här värdet markerat. Produktresursen visar en bild av produkten enligt definitionen i modulen Handel. Avmarkera kryssrutan om du inte vill visa produktresursen.
 
-* **[!UICONTROL Show Product Price]** - Som standard är det här värdet valt. Produktpriset visar priset för artikeln enligt definitionen i modulen Handel. Avmarkera kryssrutan om du inte vill visa produktpriset.
+* **[!UICONTROL Show Product Price]** - Som standard är det här värdet markerat. Produktpriset visar priset för artikeln enligt definitionen i modulen Handel. Avmarkera kryssrutan om du inte vill visa produktpriset.
 
 * **[!UICONTROL Show Product Form]** - Som standard är det här värdet inte markerat. Produktformuläret innehåller alla produktvarianter som storlek och färg. Avmarkera kryssrutan om du inte vill visa produktvarianterna.
 
 ### Komponent: Panoramabilder {#panoramic-media-component}
 
-Komponenten för panoramamedia är avsedd för resurser som är sfäriska panoramabilder. Sådana bilder ger en 360-gradig visningsupplevelse av ett rum, en egenskap, en plats eller ett landskap. För att en bild ska kvalificeras som ett sfäriskt panorama måste den ha antingen ett ELLER båda av följande:
+Komponenten för panoramamedia är avsedd för resurser som är sfäriska panoramabilder. Sådana bilder ger en 360-gradig visningsupplevelse av ett rum, en egenskap, plats eller liggande. För att en bild ska kvalificeras som ett sfäriskt panorama måste den ha antingen ett ELLER båda av följande:
 
 * Proportionerna 2:1.
 * Taggad med nyckelorden `equirectangular` eller (`spherical` + `panorama`) eller (`spherical` + `panoramic`). Se [Använda taggar](/help/sites-cloud/authoring/features/tags.md).
@@ -317,7 +317,7 @@ Kriterierna för proportioner och nyckelord gäller även för panoramaresurser 
 >
 >Om din webbsida har följande:
 >
->* Flera instanser av **[!UICONTROL Panoramic Media]** som används på samma sida.
+>* Flera instanser av **[!UICONTROL Panoramic Media]** -komponenten som används på samma sida.
 >* Varje instans använder samma resurstyp.
 >
 >Tilldela olika visningsprogramförinställningar till varje **[!UICONTROL Panoramic Media]** på den sidan stöds inte.
@@ -336,7 +336,7 @@ Om den visningsförinställning du söker efter inte visas kontrollerar du att d
 
 Använd **[!UICONTROL Video 360 Media]** för att återge ekvirektangulär video på webbsidan. På så sätt får du en engagerande tittarupplevelse av ett rum, en egendom, en plats, ett landskap eller en medicinsk procedur.
 
-Vid uppspelning på en platt skärm har användaren kontroll över betraktningsvinkeln. för uppspelning på mobila enheter används vanligtvis de inbyggda gyroskopiska kontrollerna.
+Vid uppspelning på en platt skärm har användaren kontroll över visningsvinkeln. Vid uppspelning på mobila enheter används vanligtvis de inbyggda gyroskopkontrollerna.
 
 Visningsprogrammet har inbyggt stöd för leverans av 360 videomaterial. Som standard krävs ingen ytterligare konfiguration för visning eller uppspelning. Du levererar 360-video med standardvideotillägg som .mp4, .mkv och .mov. Den vanligaste kodeken är H.264.
 
