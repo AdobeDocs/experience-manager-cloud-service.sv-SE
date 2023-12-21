@@ -2,10 +2,10 @@
 title: Publicera sidor
 description: Lär dig hur du publicerar och avpublicerar sidor med olika mekanismer i AEM.
 exl-id: 89f2363c-7922-4ca5-92cb-cbee6a393ee3
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 410c585dbe9eddaab4e424eb70ce060447db1990
 workflow-type: tm+mt
-source-wordcount: '1805'
-ht-degree: 5%
+source-wordcount: '1847'
+ht-degree: 4%
 
 ---
 
@@ -49,6 +49,12 @@ Beroende på din plats kan du publicera:
 >* Ett arbetsflöde aktiveras för att meddela lämplig person om din begäran om publicering.
 >* Det här arbetsflödet kan ha anpassats av ditt utvecklingsteam.
 >* Ett meddelande visas kort för att meddela dig att arbetsflödet har utlösts.
+
+>[!NOTE]
+>
+>Om du vill bevara sidordningen måste du publicera den överordnade sidan när du publicerar underordnade sidor.
+>
+>Sidordningen garanteras inte om endast underordnade sidor har valts för publicering (eftersom ordningsinformationen finns på den överordnade sidan).
 
 >[!NOTE]
 >
