@@ -2,9 +2,9 @@
 title: Local AEM Development with the Universal Editor
 description: Läs om hur den universella redigeraren stöder redigering i lokala AEM för utvecklingsändamål.
 exl-id: ba1bf015-7768-4129-8372-adfb86e5a120
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 0546f3cee8df3d7134021e32670b40030d56cd84
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '576'
 ht-degree: 0%
 
 ---
@@ -88,8 +88,8 @@ Den universella redigeraren vet vilken Universal Editor-tjänst som ska använda
 
 För att en sida ska kunna redigeras med din lokala Universal Editor-tjänst måste följande meta-tagg anges:
 
-```
-<meta name="urn:adobe:aem:editor:endpoint" content="https://localhost:8000">
+```html
+<meta name="urn:adobe:aue:config:service" content="https://localhost:8000">
 ```
 
 När du väl har angett det ska du se varje anrop till innehållsuppdatering gå till `https://localhost:8000` i stället för standardtjänsten Universal Editor.

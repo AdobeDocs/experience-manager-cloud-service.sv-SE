@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: c54ef4f80703497e9f26847be2fe99867b74c094
+source-git-commit: 4968921cadcee7eb023d5761abfa0373a24c5ed2
 workflow-type: tm+mt
-source-wordcount: '4556'
+source-wordcount: '4560'
 ht-degree: 4%
 
 ---
@@ -724,7 +724,7 @@ ht-degree: 4%
    + Commerce Journeys {#journeys}
       + Innehållsförfattarresa {#author}
          + [AEM Content and Commerce Content Author Journey](/help/commerce-cloud/commerce-journeys/aem-commerce-content-author/overview.md)
-         + [Komma igång med CIF-redigering](/help/commerce-cloud/commerce-journeys/aem-commerce-content-author/getting-started.md)
+         + [Komma igång med CIF](/help/commerce-cloud/commerce-journeys/aem-commerce-content-author/getting-started.md)
          + [Hantera sidor och mallar för produktkataloger](/help/commerce-cloud/commerce-journeys/aem-commerce-content-author/catalog-templates.md)
          + [Bygger testversioner av produktkataloger](/help/commerce-cloud/commerce-journeys/aem-commerce-content-author/staged-catalog.md)
          + [Bygga produktupplevelser](/help/commerce-cloud/commerce-journeys/aem-commerce-content-author/product-experience-management.md)
@@ -750,9 +750,9 @@ ht-degree: 4%
          + [Anpassade HTTP-huvuden](/help/commerce-cloud/configuring/custom-http-headers.md)
       + Utveckling {#developing}
          + [Utveckla med AEM Cloud Service SDK](/help/commerce-cloud/develop.md)
-         + [Formatera CIF-komponenter](/help/commerce-cloud/customizing/style-cif-component.md)
-         + [Anpassa CIF-komponenter](/help/commerce-cloud/customizing/customize-cif-components.md)
-         + [Använda CIF-katalogväljare](/help/commerce-cloud/customizing/use-cif-pickers.md)
+         + [CIF](/help/commerce-cloud/customizing/style-cif-component.md)
+         + [Anpassa CIF](/help/commerce-cloud/customizing/customize-cif-components.md)
+         + [Använda CIF katalogväljare](/help/commerce-cloud/customizing/use-cif-pickers.md)
    + [Adobe Commerce PWA Studio](/help/commerce-cloud/pwa-studio/getting-started.md)
    + [Migrering](/help/commerce-cloud/migration.md)
    + [Vanliga frågor](/help/commerce-cloud/faq.md)
@@ -1109,6 +1109,7 @@ ht-degree: 4%
    + [Skapa innehåll med den universella redigeraren](/help/implementing/universal-editor/authoring.md)
    + [Publicera innehåll med den universella redigeraren](/help/implementing/universal-editor/publishing.md)
    + [Komma igång med Universal Editor i AEM](/help/implementing/universal-editor/getting-started.md)
+   + [Universal Editor Developer Overview](/help/implementing/universal-editor/developer-overview.md)
    + [Universal Editor Architecture](/help/implementing/universal-editor/architecture.md)
    + [Attribut och typer](/help/implementing/universal-editor/attributes-types.md)
    + [Autentisering av universell redigerare](/help/implementing/universal-editor/authentication.md)
