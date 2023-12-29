@@ -2,10 +2,11 @@
 title: Hur laddar man ned och installerar Forms Designer för att skapa dokumentmallar?
 description: Använd Forms Designer för att skapa XDP- och PDF-blankettmallar som fungerar som mall för ett arkivdokument.
 keywords: Installera Designer, installera Forms Designer, krav för installation av Forms Designer
+feature: Forms Designer
 exl-id: d6f1cb21-c48b-406d-8d47-482d7a1b4cc3
-source-git-commit: 397e7d4f23202b8ae7419b0ad5436a6a10e2efb8
+source-git-commit: b2769134c2e744f41cbb7e8a3cf08c622cdc07ca
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '404'
 ht-degree: 1%
 
 ---
