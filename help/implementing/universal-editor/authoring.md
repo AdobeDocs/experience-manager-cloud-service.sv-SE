@@ -2,9 +2,9 @@
 title: Skapa innehåll med den universella redigeraren
 description: Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
 exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: e33cdaf9147fc0276920fad974984d5703dba530
 workflow-type: tm+mt
-source-wordcount: '2387'
+source-wordcount: '2179'
 ht-degree: 0%
 
 ---
@@ -44,11 +44,10 @@ När du har loggat in anger du URL-adressen till sidan som du vill redigera i di
 
 ## Förstå användargränssnittet {#ui}
 
-Gränssnittet är uppdelat i fem huvudområden.
+Gränssnittet är indelat i dessa huvudområden.
 
 * [Rubriken Experience Cloud](#experience-cloud-header)
-* [The Universal Editor header](#universal-editor-header)
-* [Skrivskenan](#mode-rail)
+* [Verktygsfältet för den universella redigeraren](#universal-editor-toolbar)
 * [Redigeraren](#editor)
 * [Egenskapsfältet](#properties-rail)
 
@@ -96,11 +95,11 @@ Välj den ikon som representerar användaren för att få åtkomst till dina anv
 
 ![Användaregenskaper](assets/user-properties.png)
 
-### The Universal Editor Header {#universal-editor-header}
+### Verktygsfältet för den universella redigeraren {#universal-editor-toolbar}
 
-Rubriken Universal Editor visas alltid längst upp på skärmen precis nedanför [Experience Cloud.](#experience-cloud-header) Du får snabb åtkomst för att navigera till en annan sida för att redigera och publicera den aktuella sidan.
+Verktygsfältet för den universella redigeraren visas alltid längst upp på skärmen precis nedanför [Experience Cloud.](#experience-cloud-header) Du får snabb åtkomst för att navigera till en annan sida för att redigera och publicera den aktuella sidan.
 
-![The Universal Editor header](assets/universal-editor-header.png)
+![Verktygsfältet för den universella redigeraren](assets/universal-editor-toolbar.png)
 
 #### Hemknappen {#home-button}
 
@@ -132,7 +131,7 @@ Platsfältet visar adressen till sidan som du redigerar. Välj det här alternat
 
 #### Inställningar för autentiseringshuvud {#authentication-settings}
 
-Välj ikonen med inställningar för autentiseringshuvudet om du behöver ange en autentiseringshemlighet.
+Välj ikonen med inställningar för autentiseringshuvudet om du behöver [ange en anpassad autentiseringshuvud för lokal utveckling.](/help/implementing/universal-editor/developer-overview.md#auth-header)
 
 ![Inställningsknapp för autentiseringsrubriker](assets/authentication-header-settings.png)
 
@@ -154,6 +153,16 @@ Du kan också välja att emulera en mobil enhet och i Universell redigerare:
 * Definiera bredd och höjd
 * Ändra orientering
 
+#### Förhandsgranskningsläge {#preview-mode}
+
+I förhandsgranskningsläget återges sidan i redigeraren som den skulle se ut i din publicerade tjänst. Det gör att innehållsförfattaren kan navigera i innehållet genom att klicka på länkar och så vidare.
+
+![Förhandsgranskningsläge](assets/preview-mode.png)
+
+>[!TIP]
+>
+>Använda snabbtangenten `P` för att växla till och från förhandsgranskningsläge.
+
 #### Öppna programförhandsgranskning {#open-app-preview}
 
 Välj ikonen för förhandsgranskning av öppna program om du vill öppna sidan som du redigerar på en egen webbläsarflik, utan redigeraren, för att förhandsgranska innehållet.
@@ -174,47 +183,13 @@ Välj publiceringsknappen så att du kan publicera ändringarna i innehållet li
 >
 >Se dokumentet [Publicera innehåll med den universella redigeraren](publishing.md) för mer information om publicering med Universal Editor.
 
-### Mode Rail {#rail}
-
-Lägesfältet ligger precis under hemknappen och finns alltid till vänster i redigeraren. Det gör det enkelt att växla mellan olika användningslägen i redigeraren.
-
-![Skrivskenan](assets/mode-rail.png)
-
-#### Förhandsgranskningsläge {#preview-mode}
-
-I förhandsgranskningsläget återges sidan i redigeraren som den skulle se ut i din publicerade tjänst. Det gör att innehållsförfattaren kan navigera i innehållet genom att klicka på länkar och så vidare.
-
-![Förhandsgranskningsläge](assets/preview-mode.png)
-
->[!TIP]
->
->Använda snabbtangenten `P` för att växla till förhandsvisningsläge.
-
-#### Komponentläge {#component-mode}
-
-I komponentläget kan innehållsförfattaren välja komponenter som ska redigeras:
-
-* [Redigera oformaterad text](#editing-content) på plats.
-* [Redigera RTF](#editing-rich-text) på plats med ytterligare formateringsalternativ som visas i egenskapsfältet.
-* [Redigera medieinnehåll](#editing-media)
-* [Redigera innehållsfragment](#edit-content-fragment)
-
-![Komponentläge](assets/component-mode.png)
-
-När du markerar en komponent visas information om dess innehåll i [Egenskaper.](#properties-rail) Beroende på innehållstypen kan du redigera antingen på plats eller i egenskapsfältet.
-
->[!TIP]
->
->Använda snabbtangenten `C` för att växla till komponentläge.
-
 ### Redigeraren {#editor}
 
 Redigeraren tar upp större delen av fönstret och är där sidan som anges i [platsfältet](#location-bar) återges.
 
-* Om redigeraren är i [komponentläge,](#component-mode) innehållet kan redigeras, men du kan inte följa länkar.
-* Om redigeraren är i [förhandsgranskningsläge,](#preview-mode) innehållet kommer att kunna navigeras och du kan följa länkar, men du kan inte redigera innehållet.
-
 ![Redigerare](assets/editor.png)
+
+Om redigeraren är i [förhandsgranskningsläge,](#preview-mode) innehållet kommer att kunna navigeras och du kan följa länkar, men du kan inte redigera innehållet.
 
 ### Properties Rail {#properties-rail}
 
@@ -254,7 +229,7 @@ När du väljer ett objekt i innehållsträdet rullar redigeraren till det inneh
 
 ##### Redigera {#edit}
 
-När [komponentläge,](#component-mode) Redigeringsalternativen för den markerade komponenten visas i egenskapsfältet. I egenskapsfältet kan du redigera den markerade komponenten. Om den markerade komponenten är ett innehållsfragment kan du även välja redigeringsknappen.
+När du redigerar visas alternativen för den markerade komponenten i egenskapsfältet, där du kan redigera den markerade komponenten. Om den markerade komponenten är ett innehållsfragment kan du även välja redigeringsknappen.
 
 ![Ikonen Redigera](assets/edit.png)
 
@@ -294,19 +269,19 @@ Tryck eller klicka på knappen Ta bort [tar bort komponenten.](#deleting-compone
 
 ## Redigera innehåll {#editing-content}
 
-Det är enkelt och intuitivt att redigera innehåll. I [komponentläge](#component-mode)när du för musen över innehåll i redigeraren markeras redigerbart innehåll med en blå ruta.
+Det är enkelt och intuitivt att redigera innehåll. När du för musen över innehåll i redigeraren markeras redigerbart innehåll med en blå ruta.
 
 ![Redigerbart innehåll markeras med en blå ruta](assets/editable-content.png)
 
 >[!TIP]
 >
->Om du trycker eller klickar på innehåll i komponentläget markeras det för redigering. Om du vill navigera i innehållet genom att följa länkar växlar du till [förhandsgranskningsläge.](#preview-mode)
+>Som standard markeras det för redigering när du trycker eller klickar på ett innehåll. Om du vill navigera i innehållet genom att följa länkar växlar du till [förhandsgranskningsläge.](#preview-mode)
 
 Beroende på vilket innehåll du väljer kan du ha olika redigeringsalternativ på plats och du kan få ytterligare information och alternativ för innehållet i [Egenskaper.](#properties-rail)
 
 ### Redigera oformaterad text {#edit-plain-text}
 
-Om du är [komponentläge](#component-mode) och markerar en oformaterad textkomponent kan du redigera texten på plats genom att dubbelklicka eller dubbelklicka på komponenten.
+Du kan redigera texten på plats genom att dubbelklicka eller dubbeltrycka på komponenten.
 
 ![Redigera innehåll](assets/editing-content.png)
 
@@ -320,7 +295,7 @@ Dessutom finns information om texten i egenskapsfältet. Ändringarna sparas aut
 
 ### Redigera RTF {#edit-rich-text}
 
-Om du är [komponentläge](#component-mode) och markerar en RTF-komponent kan du redigera texten på plats genom att dubbelklicka eller dubbelklicka på komponenten.
+Du kan redigera texten på plats genom att dubbelklicka eller dubbeltrycka på komponenten.
 
 Tryck på Enter eller välj utanför textrutan för att spara ändringarna.
 
@@ -330,25 +305,20 @@ Dessutom finns formateringsalternativ och information om texten i egenskapsfält
 
 ### Redigera media {#edit-media}
 
-Om du är [komponentläge](#component-mode) och du väljer en bild kan du visa informationen om den i egenskapsfältet.
+Du kan visa informationen i egenskapsfältet.
 
 ![Redigera media](assets/ue-edit-media.png)
 
-Välj **Ersätt** under förhandsgranskningen av den markerade bilden i egenskapsfältet för att ersätta bilden med en annan bild från ditt resursbibliotek.
-
+1. Tryck eller klicka på förhandsvisningen av den markerade bilden i egenskapsfältet.
 1. The [resursväljare](/help/assets/asset-selector.md#using-asset-selector) öppnas så att du kan välja en resurs.
 1. Välj för att välja en ny resurs.
 1. Välj **Välj** för att gå tillbaka till egenskapsfältet där tillgången ersattes.
 
 Ändringarna sparas automatiskt i innehållet.
 
->[!TIP]
->
->Använda snabbtangenten `R` om du vill öppna resursväljaren och ersätta den markerade bilden.
-
 ### Redigera innehållsfragment {#edit-content-fragment}
 
-Om du är [komponentläge](#component-mode) och du väljer [Innehållsfragment,](/help/sites-cloud/administering/content-fragments/overview.md) Du kan redigera informationen i egenskapsfältet.
+Om du väljer en [Innehållsfragment,](/help/sites-cloud/administering/content-fragments/overview.md) Du kan redigera informationen i egenskapsfältet.
 
 ![Redigera ett innehållsfragment](assets/ue-edit-cf.png)
 
@@ -407,7 +377,7 @@ Komponenterna ordnas om i både innehållsträdet och i redigeraren
 
 När du är klar med redigeringen av innehållet vill du ofta navigera i det och se hur det ser ut i innehållet på andra sidor. I [förhandsgranskningsläge](#preview-mode) Du kan klicka på länkar för att navigera i innehållet som en läsare skulle kunna. Innehållet återges i redigeraren på samma sätt som det publiceras.
 
-I förhandsgranskningsläget fungerar knapptryckning eller klickning på innehåll på samma sätt som för en läsare av innehållet. Om du vill markera innehållet för redigering växlar du till [komponentläge.](#component-mode)
+I förhandsgranskningsläget fungerar knapptryckning eller klickning på innehåll på samma sätt som för en läsare av innehållet. Om du vill markera innehållet för redigering växlar du bort från [förhandsgranskningsläge.](#preview-mode)
 
 ## Ytterligare resurser {#additional-resources}
 
