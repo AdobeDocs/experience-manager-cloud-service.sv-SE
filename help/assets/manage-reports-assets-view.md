@@ -4,7 +4,7 @@ description: Få tillgång till data i rapportavsnittet i resursvyn för att utv
 exl-id: c7155459-05d9-4a95-a91f-a1fa6ae9d9a4
 source-git-commit: e6ff21ee705a1164fdf163ce4f49064d83f149d8
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '800'
 ht-degree: 1%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="assets_reports"
 >title="Rapporter"
->abstract="Resursrapportering ger administratörer insyn i aktiviteten i visningsmiljön för Adobe Experience Manager Resurser. Dessa data ger användbar information om hur användarna interagerar med innehållet och produkten. Alla användare som har tilldelats administratörens produktprofil kan komma åt Insikter-instrumentpanelen eller skapa användardefinierade rapporter."
+>abstract="Resursrapportering ger administratörer insyn i Adobe Experience Manager Assets visningsmiljö. Dessa data ger användbar information om hur användarna interagerar med innehållet och produkten. Alla användare som har tilldelats administratörens produktprofil kan komma åt Insikter-instrumentpanelen eller skapa användardefinierade rapporter."
 
-Resursrapportering ger administratörer insyn i aktiviteten i visningsmiljön för Adobe Experience Manager Resurser. Dessa data ger användbar information om hur användarna interagerar med innehållet och produkten.
+Resursrapportering ger administratörer insyn i Adobe Experience Manager Assets visningsmiljö. Dessa data ger användbar information om hur användarna interagerar med innehållet och produkten.
 
 ## Åtkomstrapporter {#access-reports}
 
