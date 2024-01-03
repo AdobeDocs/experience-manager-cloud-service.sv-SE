@@ -4,7 +4,7 @@ description: Lär dig mer om metadata och de effektivaste strategierna för att 
 role: User, Admin
 hide: true
 hidefromtoc: true
-source-git-commit: 8434cb580ba8afc018a5a4357a4d249a06c566c2
+source-git-commit: cb8eb56d07163f46aec252c70a3ec3b0273d97cf
 workflow-type: tm+mt
 source-wordcount: '1273'
 ht-degree: 0%
@@ -97,25 +97,25 @@ Styrningsstrategin kan omfatta följande:
 
 Bestäm var informationen kommer från och granska detaljerna i metadatastrategin, inklusive egenskaperna och deras källor. Den kan skalas upp beroende på hur komplicerad strategin är. I större företag finns det ett system för hantering av metadata i master-stacken som övervakar flera system.
 
-<br>
-
 >[!NOTE]
 >
 >Lär dig hur [hantera metadata för era digitala resurser](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/metadata.html).
 
 ### Var konsekvent med metadatastrategin
 
-En konsekvent metadatastrategi säkerställer effektiv organisation och hämtning av digitala resurser. Använd en strategisk strategi för att hämta in och implementera metadatavärden, vilket ger flexibilitet att utveckla utan onödiga ändringar. <br>
-Vid namngivning och referering av resurser är det viktigt med konsekvent hantering av metadata i hela företaget. Om du till exempel hanterar flera resurser samtidigt bör du överväga att lägga till massmetadata. <br>
+En konsekvent metadatastrategi säkerställer effektiv organisation och hämtning av digitala resurser. Använd en strategisk strategi för att hämta in och implementera metadatavärden, vilket ger flexibilitet att utveckla utan onödiga ändringar.
+
+Vid namngivning och referering av resurser är det viktigt med konsekvent hantering av metadata i hela företaget. Om du till exempel hanterar flera resurser samtidigt bör du överväga att lägga till massmetadata.
+
 Här är några av de bästa sätten att följa:
 
-* **Undvik dubblettvärden:** Om du har en samling bilder från en marknadsföringskampanj bör du använda konsekventa namn och undvika dubbletter.<br>
+* **Undvik dubblettvärden:** Om du har en samling bilder från en marknadsföringskampanj bör du använda konsekventa namn och undvika dubbletter.
 I stället för att använda dubblettnamn som *campaign_image_001* och *campaign_image_002* implementera en systematisk namnkonvention som *product_launch_001* och *product_launch_002*, vilket ger en tydlig och ordnad identifiering.
 
-* **Använd kontrollerade vokabulärer effektivt:** Implementera kontrollerade vokabulärer med standardiserade termer för taggar. <br>
+* **Använd kontrollerade vokabulärer effektivt:** Implementera kontrollerade vokabulärer med standardiserade termer för taggar.
 Använd till exempel termer som *product_launch* eller *event_Promotion* när du taggar bilder med teman för att bibehålla en systematisk sekvens.
 
-* **Bevara korrekthet och fullständighet:** För att hålla metadata konsekventa är det viktigt med precision, fullständighet och anpassning mellan olika källor.<br>
+* **Bevara korrekthet och fullständighet:** För att hålla metadata konsekventa är det viktigt med precision, fullständighet och anpassning mellan olika källor.
 Om du till exempel lägger till metadata i ett PDF-dokument bör du kontrollera att information som författarnamn och nyckelord är korrekta och fullständiga.
 
 #### Video: Lägga till massmetadata i resurser
@@ -124,7 +124,8 @@ Om du till exempel lägger till metadata i ett PDF-dokument bör du kontrollera 
 
 ### Utvärdera och förbättra sökbarheten för metadata
 
-Utvärdera er metadatastrategi för att förbättra sökbarheten för metadata. Förenkla arbetsflödena och förbättra sökfunktionerna för effektiv återanvändning. Undvik att hantera metadata som saknar ett tydligt syfte.<br>
+Utvärdera er metadatastrategi för att förbättra sökbarheten för metadata. Förenkla arbetsflödena och förbättra sökfunktionerna för effektiv återanvändning. Undvik att hantera metadata som saknar ett tydligt syfte.
+
 Du kan använda följande metodtips för att optimera sökbarheten för metadata:
 
 * **Optimering av nyckelord:** Förbättra sökbarheten för metadata genom att optimera nyckelord som är kopplade till resurser. Du kan förbättra nyckelordens relevans för vissa resurser i Resurshanteraren genom att följa dessa steg:
@@ -132,9 +133,9 @@ Du kan använda följande metodtips för att optimera sökbarheten för metadata
    1. Gå till **[!UICONTROL Assets]** > **[!UICONTROL File]** > **[!UICONTROL [Asset folder]]**.
    1. Markera resursen som du vill uppdatera metadata för och klicka sedan på **[!UICONTROL Properties]**.
    1. Navigera till **[!UICONTROL Advanced]** och sedan klicka på **[!UICONTROL Add]** under **[!UICONTROL Elevate for search keywords]**.
-   1. Ange nyckelordet som du vill utöka sökningen för och klicka sedan på **[!UICONTROL Add]**.<br>
+   1. Ange nyckelordet som du vill utöka sökningen för och klicka sedan på **[!UICONTROL Add]**.
 Du kan lägga till flera nyckelord och ordna dem efter din prioritet.
-   1. Klicka på **[!UICONTROL Save & Close]**.<br>
+   1. Klicka **[!UICONTROL Save & Close]**.
 Sök efter resursen med de nyckelord du har lagt till. Resursen visas bland de översta sökresultaten.
 
   Lär dig hur [öka sökningen i Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html).
@@ -151,7 +152,7 @@ Sök efter resursen med de nyckelord du har lagt till. Resursen visas bland de �
 
 ### Enkelt och lättbegripligt att använda metadata
 
-Förenkla metadata för bättre styrning och ökad användning av användarna. Se till att informationen är enkel och lättbegriplig och uppmuntrar användarna att lägga till viktig information. <br>
+Förenkla metadata för bättre styrning och ökad användning av användarna. Se till att informationen är enkel och lättbegriplig och uppmuntrar användarna att lägga till viktig information.
 Prova följande metodtips för att förenkla metadata:
 
 * **Optimera egenskapsalternativ:** Fokusera på att markera viktiga egenskaper utan att belasta användarna med för många metadatafält för att fylla i dem. När du till exempel lägger till metadata för en bild ska du bara ta med nyckelfält som titel, beskrivning och taggar för effektiv kategorisering.

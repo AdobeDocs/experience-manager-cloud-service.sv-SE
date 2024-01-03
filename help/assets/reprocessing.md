@@ -2,9 +2,9 @@
 title: Bearbetar digitala resurser
 description: Läs om olika metoder för att bearbeta digitalt material
 contentOwner: KK
-source-git-commit: 3fb72e0768c44506b0f20f99a48cea837d722387
+source-git-commit: cb8eb56d07163f46aec252c70a3ec3b0273d97cf
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
@@ -33,21 +33,21 @@ Om du väljer en mapp:
 
    ![Alternativ för återbearbetning av resurser](assets/reprocessing-assets-options.png)
 
-* **[!UICONTROL Full Process]:** Välj det här alternativet om du vill köra den övergripande processen inklusive standardprofil, anpassad profil, dynamisk bearbetning (om den är konfigurerad) och arbetsflöden för efterbearbetning.
-* **[!UICONTROL Advanced]:** Välj det här alternativet om du vill välja avancerad ombearbetning.
+   * **[!UICONTROL Full Process]:** Välj det här alternativet om du vill köra den övergripande processen inklusive standardprofil, anpassad profil, dynamisk bearbetning (om den är konfigurerad) och arbetsflöden för efterbearbetning.
+   * **[!UICONTROL Advanced]:** Välj det här alternativet om du vill välja avancerad ombearbetning.
 
-  ![Alternativ för avancerad återbearbetning av resurser](assets/reprocessing-assets-options-advanced.png)
+     ![Alternativ för avancerad återbearbetning av resurser](assets/reprocessing-assets-options-advanced.png)
 
-Välj bland följande avancerade alternativ:
+     Välj bland följande avancerade alternativ:
 
-* **[!UICONTROL Default Preview Renditions]:** Välj det här alternativet om du vill bearbeta återgivningarna som förhandsvisas som standard.
+      * **[!UICONTROL Default Preview Renditions]:** Välj det här alternativet om du vill bearbeta återgivningarna som förhandsvisas som standard.
 
-* **[!UICONTROL Metadata]:** Välj det här alternativet när du vill extrahera metadatainformation och smarta taggar för de valda resurserna.
+      * **[!UICONTROL Metadata]:** Välj det här alternativet när du vill extrahera metadatainformation och smarta taggar för de valda resurserna.
 
-* **[!UICONTROL Processing Profiles]:** Välj det här alternativet när du vill bearbeta om en markerad profil. Du kan **[!UICONTROL Full Process]** om du vill ta med standardbearbetningen och den anpassade profilen som tilldelats på mappnivå.
-  <!--When assets are uploaded to a folder, [!DNL Experience Manager] checks the containing folder's properties for a processing profile. If none is applied, a parent folder in the hierarchy is checked for a processing profile to apply.-->
+      * **[!UICONTROL Processing Profiles]:** Välj det här alternativet när du vill bearbeta om en markerad profil. Du kan **[!UICONTROL Full Process]** om du vill ta med standardbearbetningen och den anpassade profilen som tilldelats på mappnivå.
+        <!--When assets are uploaded to a folder, [!DNL Experience Manager] checks the containing folder's properties for a processing profile. If none is applied, a parent folder in the hierarchy is checked for a processing profile to apply.-->
 
-* **[!UICONTROL Post-processing Workflow]:** Välj det här alternativet där ytterligare bearbetning av resurser krävs som inte kan utföras med bearbetningsprofilerna. Ytterligare arbetsflöden för efterbearbetning kan läggas till i konfigurationen. Med efterbearbetning kan du lägga till helt anpassad bearbetning utöver den konfigurerbara bearbetningen med hjälp av objektmikrotjänster.
+      * **[!UICONTROL Post-processing Workflow]:** Välj det här alternativet där ytterligare bearbetning av resurser krävs som inte kan utföras med bearbetningsprofilerna. Ytterligare arbetsflöden för efterbearbetning kan läggas till i konfigurationen. Med efterbearbetning kan du lägga till helt anpassad bearbetning utöver den konfigurerbara bearbetningen med hjälp av objektmikrotjänster.
 
 Se [använda mikrotjänster och bearbetningsprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use.html?lang=en) om du vill veta mer om hur du hanterar profiler och arbetsflöden för efterbearbetning.
 
