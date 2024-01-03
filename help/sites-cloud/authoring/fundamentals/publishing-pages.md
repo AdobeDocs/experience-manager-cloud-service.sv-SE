@@ -2,9 +2,9 @@
 title: Publicera sidor
 description: Lär dig hur du publicerar och avpublicerar sidor med olika mekanismer i AEM.
 exl-id: 89f2363c-7922-4ca5-92cb-cbee6a393ee3
-source-git-commit: 410c585dbe9eddaab4e424eb70ce060447db1990
+source-git-commit: c05cf17749f63e713e4fb3fbf2a840a9f82877b3
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1925'
 ht-degree: 4%
 
 ---
@@ -52,9 +52,11 @@ Beroende på din plats kan du publicera:
 
 >[!NOTE]
 >
->Om du vill bevara sidordningen måste du publicera den överordnade sidan när du publicerar underordnade sidor.
+>Om du vill bevara den sidordning som du har använt [Hantera publikation](#manage-publication) om du vill publicera den överordnade sidan tillsammans med eventuella underordnade sidor i en enda åtgärd.
 >
->Sidordningen garanteras inte om endast underordnade sidor har valts för publicering (eftersom ordningsinformationen finns på den överordnade sidan).
+>Sidordningen garanteras inte:
+>* om endast underordnade sidor har valts för publicering (som orderinformationen finns på den överordnade sidan)
+>* om de överordnade och underordnade sidorna publiceras i separata åtgärder
 
 >[!NOTE]
 >
@@ -123,6 +125,14 @@ Så här publicerar du en sida med Snabbpublicering:
 #### Hantera publikation {#manage-publication}
 
 **Hantera publikation** erbjuder fler alternativ än **Snabbpublicering**, vilket gör det möjligt att inkludera underordnade sidor, anpassa referenserna och starta eventuella arbetsflöden och erbjuda möjlighet att publicera vid ett senare datum.
+
+>[!NOTE]
+>
+>Om du vill bevara den sidordning som du har använt **Hantera publikation** om du vill publicera den överordnade sidan tillsammans med eventuella underordnade sidor i en enda åtgärd.
+>
+>Sidordningen garanteras inte:
+>* om endast underordnade sidor har valts för publicering (som orderinformationen finns på den överordnade sidan)
+>* om de överordnade och underordnade sidorna publiceras i separata åtgärder
 
 Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
