@@ -2,9 +2,9 @@
 title: Publicera sidor
 description: Lär dig hur du publicerar och avpublicerar sidor med olika mekanismer i AEM.
 exl-id: 89f2363c-7922-4ca5-92cb-cbee6a393ee3
-source-git-commit: c05cf17749f63e713e4fb3fbf2a840a9f82877b3
+source-git-commit: 00520bff0f3b0d36610d8601077198856c8b71dd
 workflow-type: tm+mt
-source-wordcount: '1925'
+source-wordcount: '1927'
 ht-degree: 4%
 
 ---
@@ -52,7 +52,7 @@ Beroende på din plats kan du publicera:
 
 >[!NOTE]
 >
->Om du vill bevara den sidordning som du har använt [Hantera publikation](#manage-publication) om du vill publicera den överordnade sidan tillsammans med eventuella underordnade sidor i en enda åtgärd.
+>Om du vill bevara sidordningen måste du använda [Hantera publikation](#manage-publication) om du vill publicera den överordnade sidan tillsammans med eventuella underordnade sidor i en enda åtgärd.
 >
 >Sidordningen garanteras inte:
 >* om endast underordnade sidor har valts för publicering (som orderinformationen finns på den överordnade sidan)
@@ -128,7 +128,7 @@ Så här publicerar du en sida med Snabbpublicering:
 
 >[!NOTE]
 >
->Om du vill bevara den sidordning som du har använt **Hantera publikation** om du vill publicera den överordnade sidan tillsammans med eventuella underordnade sidor i en enda åtgärd.
+>Om du vill bevara sidordningen måste du använda **Hantera publikation** om du vill publicera den överordnade sidan tillsammans med eventuella underordnade sidor i en enda åtgärd.
 >
 >Sidordningen garanteras inte:
 >* om endast underordnade sidor har valts för publicering (som orderinformationen finns på den överordnade sidan)
