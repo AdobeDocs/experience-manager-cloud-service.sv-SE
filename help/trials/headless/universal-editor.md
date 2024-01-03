@@ -4,9 +4,9 @@ description: Upptäck hur du kan använda den universella redigeraren för att r
 hidefromtoc: true
 index: false
 exl-id: a4854a56-9434-4d15-a56a-f1798f27263a
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 46456903ee947c61d63508dc86cc5f72dc50ed82
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,7 @@ Redigering på plats och i sitt sammanhang kan ofta vara fördelaktigt jämfört
 
 Med den universella redigeraren kan du smidigt redigera text både i sitt sammanhang och på plats, vilket gör det enkelt och intuitivt att skapa innehåll.
 
-1. Redigeraren bör läsas in som standard i **Komponenter** läge. Om inte väljer du **Komponenter** i fältet mode till vänster om redigeraren.
-
-1. Dubbelmarkera titeln på den senaste artikeln för att redigera den.
+1. Dubbelklicka för att markera titeln på den senaste artikeln för att redigera den.
 
    ![Universell redigerare](assets/do-not-localize/ue-component-mode.png)
 
@@ -49,7 +47,7 @@ Med den universella redigeraren kan du smidigt redigera text både i sitt samman
 
    ![Redigera text i den universella redigeraren](assets/do-not-localize/ue-edit-text-2.png)
 
-1. Tryck på Enter eller markera utanför textkomponenten så sparas ändringarna automatiskt.
+1. Markera utanför textkomponenten så sparas ändringarna automatiskt.
 
 Den universella redigeraren sparar ändringarna automatiskt i redigeringsmiljön. Du måste fortfarande publicera dem så att läsarna kan se dem, vilket vi gör i ett senare steg.
 
@@ -57,7 +55,7 @@ Den universella redigeraren sparar ändringarna automatiskt i redigeringsmiljön
 
 Du kan också byta ut bilder samtidigt som du behåller innehållet genom att använda den universella redigeraren.
 
-1. Återstår i **Komponenter** markerar du surfarens bild för att markera den.
+1. Markera surfarens bild för att markera den.
 
 1. I komponentspåret kan du se detaljerna för resursen. Välj **Aktuell bild** miniatyrbild.
 
@@ -75,7 +73,7 @@ Bilden ersätts med den bild du har markerat.
 
 Med den universella redigeraren kan du interagera med ditt innehåll i dess sammanhang och se innehållet så som det levereras till användarnas enheter.
 
-1. Som standard återger redigeraren skrivbordsversionen av ditt innehåll. Välj emulatorknappen längst upp till höger i redigeraren för att ändra målenheten.
+1. Som standard återger redigeraren skrivbordsversionen av ditt innehåll. Välj emulatorknappen i det övre högra hörnet av verktygsfältet i Universell redigerare om du vill ändra målenheten.
 
    ![Emulatormenyalternativet](assets/do-not-localize/ue-emulator-1.png)
 
@@ -91,9 +89,9 @@ Du kan också ange exakta dimensioner för emulatorn och rotera den emulerade en
 
 ## Förhandsgranska och publicera {#preview}
 
-Eftersom du måste markera innehållet i redigeraren kan du inte följa länkar eller interagera med innehållet genom att trycka eller klicka när det är i redigeringsläge. I förhandsgranskningsläget kan du följa länkarna i ditt innehåll och uppleva det som användarna gör innan de publicerar det.
+Eftersom du måste markera innehållet för att kunna ändra det i redigeraren kan du inte följa länkar eller interagera med innehållet genom att trycka eller klicka. I förhandsgranskningsläget kan du följa länkarna i ditt innehåll och uppleva det som användarna gör innan de publicerar det.
 
-1. I fältet mode till vänster om redigeraren väljer du **Förhandsgranska**.
+1. Välj **Förhandsgranska**.
 
 1. Välj **Läs mer** för huvudartikeln.
 
@@ -113,9 +111,11 @@ Ditt innehåll publiceras.
 
 För att snabba upp redigeringen av innehåll när strukturerad redigering av headless-innehåll är mer fördelaktig än redigering på plats, ger den universella redigeraren snabb åtkomst även till Content Fragment-redigeraren.
 
-1. Bläddra längre ned på sidan till sidan **Annonser** -avsnitt.
+1. Stäng av förhandsgranskningsläget genom att trycka på knappen **Förhandsgranska** i verktygsfältet för Universal Editor.
 
-1. I fältet mode till vänster om redigeraren väljer du **Komponenter**. På så sätt kan du välja sidkomponenter i redigeraren.
+   ![Inaktivera förhandsvisningsläget](assets/do-not-localize/ue-toggle-off-preview.png)
+
+1. Bläddra längre ned på sidan till sidan **Annonser** -avsnitt.
 
 1. Välj något av äventyren som **Bali Surf Camp** för att markera den.
 
