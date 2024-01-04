@@ -1,7 +1,7 @@
 ---
 title: Universal Editor Overview for AEM Developers
 description: Om du är en AEM utvecklare som är intresserad av hur den universella redigeraren fungerar och hur du använder den i ditt projekt ger det här dokumentet dig en introduktion genom att leda dig genom att instrumentera WKND-projektet så att det fungerar tillsammans med den universella redigeraren.
-source-git-commit: 4219ce35ed353bef0592bc088c0b5df8c6c9cc6f
+source-git-commit: 16f2922a3745f9eb72f7070c30134e5149eb78ce
 workflow-type: tm+mt
 source-wordcount: '3082'
 ht-degree: 0%
@@ -12,6 +12,8 @@ ht-degree: 0%
 # Universal Editor Overview for AEM Developers {#developer-overview}
 
 Om du är en AEM utvecklare som är intresserad av hur den universella redigeraren fungerar och hur du använder den i ditt projekt ger det här dokumentet dig en introduktion genom att leda dig genom att instrumentera WKND-projektet så att det fungerar tillsammans med den universella redigeraren.
+
+{{universal-editor-status}}
 
 ## Syfte {#purpose}
 

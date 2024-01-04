@@ -2,7 +2,7 @@
 title: Local AEM Development with the Universal Editor
 description: Läs om hur den universella redigeraren stöder redigering i lokala AEM för utvecklingsändamål.
 exl-id: ba1bf015-7768-4129-8372-adfb86e5a120
-source-git-commit: 0546f3cee8df3d7134021e32670b40030d56cd84
+source-git-commit: 16f2922a3745f9eb72f7070c30134e5149eb78ce
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 0%
@@ -13,6 +13,10 @@ ht-degree: 0%
 # Local AEM Development with the Universal Editor {#local-dev-ue}
 
 Läs om hur den universella redigeraren stöder redigering i lokala AEM för utvecklingsändamål.
+
+{{universal-editor-status}}
+
+## Ökning {#overview}
 
 Det här dokumentet förklarar hur du kör AEM i HTTPS tillsammans med en lokal kopia av Universal Editor-tjänsten så att du kan utveckla lokalt på AEM med Universal Editor.
 

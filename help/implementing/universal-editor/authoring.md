@@ -2,9 +2,9 @@
 title: Skapa innehåll med den universella redigeraren
 description: Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
 exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
-source-git-commit: e33cdaf9147fc0276920fad974984d5703dba530
+source-git-commit: 16f2922a3745f9eb72f7070c30134e5149eb78ce
 workflow-type: tm+mt
-source-wordcount: '2179'
+source-wordcount: '2165'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,8 @@ ht-degree: 0%
 # Skapa innehåll med den universella redigeraren {#authoring}
 
 Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
+
+{{universal-editor-status}}
 
 ## Introduktion {#introduction}
 
@@ -23,10 +25,6 @@ För att göra detta har den universella redigeraren ett intuitivt användargrä
 >[!TIP]
 >
 >En mer detaljerad introduktion till Universal Editor finns i dokumentet [Introduktion till Universal Editor.](introduction.md)
-
->[!NOTE]
->
->Den universella redigeraren är fortfarande under utveckling. Det kan för närvarande inte redigera alla innehållstyper.
 
 ## Förbered appen {#prepare-app}
 

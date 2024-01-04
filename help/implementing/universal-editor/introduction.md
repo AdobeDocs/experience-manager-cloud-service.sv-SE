@@ -2,7 +2,7 @@
 title: Introduktion till Universal Editor
 description: Se hur den universella redigeraren möjliggör WYSIWYG-redigering av headless och headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
 exl-id: d4fc2384-a0f5-4a6f-9572-62749786be4c
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 16f2922a3745f9eb72f7070c30134e5149eb78ce
 workflow-type: tm+mt
 source-wordcount: '925'
 ht-degree: 0%
@@ -13,6 +13,8 @@ ht-degree: 0%
 # Introduktion till Universal Editor {#introduction}
 
 Se hur den universella redigeraren möjliggör WYSIWYG-redigering av headless och headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
+
+{{universal-editor-status}}
 
 ## Bakgrund {#background}
 

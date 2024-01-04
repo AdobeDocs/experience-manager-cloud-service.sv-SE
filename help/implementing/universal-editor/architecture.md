@@ -2,7 +2,7 @@
 title: Universal Editor Architecture
 description: Läs mer om arkitekturen i den universella redigeraren och hur data flödar mellan tjänster och lager.
 exl-id: e6f40743-0f21-4fb6-bf23-76426ee174be
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 16f2922a3745f9eb72f7070c30134e5149eb78ce
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 0%
@@ -13,6 +13,8 @@ ht-degree: 0%
 # Universal Editor Architecture {#architecture}
 
 Läs mer om arkitekturen i den universella redigeraren och hur data flödar mellan tjänster och lager.
+
+{{universal-editor-status}}
 
 ## Byggblock för arkitektur {#building-blocks}
 

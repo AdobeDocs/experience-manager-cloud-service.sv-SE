@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 4968921cadcee7eb023d5761abfa0373a24c5ed2
+source-git-commit: cfae48067df75dae54822dc0c6f868cca75887d4
 workflow-type: tm+mt
-source-wordcount: '4560'
+source-wordcount: '4565'
 ht-degree: 4%
 
 ---
@@ -1106,11 +1106,14 @@ ht-degree: 4%
       + [En snabbguide till WCAG 2.1](/help/compliance/accessibility/quick-guide-wcag.md)
 + Universal Editor {#universal-editor}
    + [Introduktion till Universal Editor](/help/implementing/universal-editor/introduction.md)
-   + [Skapa innehåll med den universella redigeraren](/help/implementing/universal-editor/authoring.md)
-   + [Publicera innehåll med den universella redigeraren](/help/implementing/universal-editor/publishing.md)
-   + [Komma igång med Universal Editor i AEM](/help/implementing/universal-editor/getting-started.md)
-   + [Universal Editor Developer Overview](/help/implementing/universal-editor/developer-overview.md)
    + [Universal Editor Architecture](/help/implementing/universal-editor/architecture.md)
-   + [Attribut och typer](/help/implementing/universal-editor/attributes-types.md)
-   + [Autentisering av universell redigerare](/help/implementing/universal-editor/authentication.md)
-   + [Local AEM Development with the Universal Editor](/help/implementing/universal-editor/local-dev.md)
+   + Redigering {#developing}
+      + [Skapa innehåll med den universella redigeraren](/help/implementing/universal-editor/authoring.md)
+      + [Publicera innehåll med den universella redigeraren](/help/implementing/universal-editor/publishing.md)
+   + Utveckling {#developing}
+      + [Komma igång med Universal Editor i AEM](/help/implementing/universal-editor/getting-started.md)
+      + [Universal Editor Developer Overview](/help/implementing/universal-editor/developer-overview.md)
+      + [Attribut och typer](/help/implementing/universal-editor/attributes-types.md)
+      + [Autentisering av universell redigerare](/help/implementing/universal-editor/authentication.md)
+      + [Local AEM Development with the Universal Editor](/help/implementing/universal-editor/local-dev.md)
+      + [Universella redigeringsanrop](/help/implementing/universal-editor/calls.md)

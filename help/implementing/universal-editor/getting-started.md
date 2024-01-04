@@ -2,9 +2,9 @@
 title: Komma igång med Universal Editor i AEM
 description: Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 16f2922a3745f9eb72f7070c30134e5149eb78ce
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '900'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,8 @@ Lär dig hur du får tillgång till den universella redigeraren och hur du börj
 >[!TIP]
 >
 >Om du hellre vill dyka rakt in i ett exempel kan du läsa [Universal Editor Sample App på GitHub.](https://github.com/adobe/universal-editor-sample-editable-app)
+
+{{universal-editor-status}}
 
 ## Inledande steg {#onboarding}
 

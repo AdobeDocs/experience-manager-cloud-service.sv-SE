@@ -2,7 +2,7 @@
 title: Publicera innehåll med den universella redigeraren
 description: Lär dig hur den universella redigeraren publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
 exl-id: aee34469-37c2-4571-806b-06c439a7524a
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 16f2922a3745f9eb72f7070c30134e5149eb78ce
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 0%
@@ -13,6 +13,8 @@ ht-degree: 0%
 # Publicera innehåll med den universella redigeraren {#publishing}
 
 Lär dig hur den universella redigeraren publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
+
+{{universal-editor-status}}
 
 ## Likheter med AEM {#similarities}
 
