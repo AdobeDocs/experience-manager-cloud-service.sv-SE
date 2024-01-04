@@ -1,12 +1,12 @@
 ---
 title: Modeller för innehållsfragment
-description: Lär dig hur Content Fragment Models fungerar som grund för dina Content Fragments i AEM. Med dessa fragment kan du skapa strukturerat innehåll som ska användas för rubrikfri leverans eller sidredigering.
+description: Lär dig hur Content Fragment Models fungerar som en grund för dina innehållsfragment i AEM, vilket gör att du kan skapa strukturerat innehåll som kan användas för rubrikfri leverans eller sidredigering.
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: 8ab5b15f-cefc-45bf-a388-928e8cc8c603
-source-git-commit: 3f934add7521586caf728c4bfa37f2d1a82b144a
+source-git-commit: 19685cb952a890731bd7d75a2adf3cfd841a465f
 workflow-type: tm+mt
-source-wordcount: '3121'
+source-wordcount: '3125'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ Så här använder du modeller för innehållsfragment:
    >
    >Om [användning av modeller för innehållsfragment inte har aktiverats](/help/sites-cloud/administering/content-fragments/setup.md), **Skapa** kommer inte att vara tillgängligt.
 
-1. Ange **modelltitel**.
+1. Ange **Modelltitel**.
 Du kan också definiera olika egenskaper, till exempel lägga till **Taggar**, a **Beskrivning**, markera **Aktivera modell** till [aktivera modellen](#enabling-disabling-a-content-fragment-model) om det behövs och definiera
    **URL-mönster för standardförhandsvisning**.
 
@@ -154,7 +154,7 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
   >
   >Det här formatet kan inte ändras från [Innehållsfragmentsredigerare](/help/sites-cloud/administering/content-fragments/authoring.md), men bara från modellen.
 
-* **Siffra**
+* **Nummer**
    * Lägg till ett eller flera numeriska fält
 * **Boolean**
    * Lägg till en boolesk kryssruta
@@ -250,7 +250,7 @@ Olika datatyper kan nu definiera valideringskrav för när innehåll anges i det
 
 * **Enkelradig text**
    * Jämför med ett fördefinierat regex.
-* **Siffra**
+* **Nummer**
    * Sök efter specifika värden.
 * **Innehållsreferens**
    * Testa om det finns specifika typer av innehåll.

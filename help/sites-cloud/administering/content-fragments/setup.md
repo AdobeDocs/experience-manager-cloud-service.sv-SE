@@ -1,15 +1,15 @@
 ---
 title: Content Fragments - Setup
-description: Lär dig hur du aktiverar Content Fragment- och GraphQL-funktionalitet för att använda AEM headless-leveransfunktioner.
+description: Lär dig hur du aktiverar Content Fragment- och GraphQL-funktioner som kan användas med AEM headless-funktioner och sidredigering.
 feature: Content Fragments
 role: Developer, Architect
-source-git-commit: 676173813b6ea4defeafe25c95be9668d32aac38
+exl-id: 3974d698-1e7d-4a5f-a6d5-cbf8d96b4095
+source-git-commit: 19685cb952a890731bd7d75a2adf3cfd841a465f
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '392'
 ht-degree: 3%
 
 ---
-
 
 # Content Fragments - Setup {#content-fragments-setup}
 

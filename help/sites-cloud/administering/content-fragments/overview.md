@@ -1,15 +1,15 @@
 ---
 title: En översikt över hur du arbetar med innehållsfragment
-description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service gör att du kan designa, skapa, strukturera och använda sidoberoende innehåll, idealiskt för rubrikfri leverans och sidredigering.
+description: Lär dig hur innehållsfragment i AEM as a Cloud Service gör att du kan skapa och använda innehåll, idealiskt för rubrikfri leverans och sidredigering.
 feature: Content Fragments
 role: User, Developer, Architect
-source-git-commit: 3d20f4bca566edcdb5f13eab581c33b7f3cf286d
+exl-id: ce9cb811-57d2-4a57-a360-f56e07df1b1a
+source-git-commit: 19685cb952a890731bd7d75a2adf3cfd841a465f
 workflow-type: tm+mt
-source-wordcount: '1823'
+source-wordcount: '1792'
 ht-degree: 1%
 
 ---
-
 
 # En översikt över hur du arbetar med innehållsfragment {#overview-working-with-content-fragments}
 
