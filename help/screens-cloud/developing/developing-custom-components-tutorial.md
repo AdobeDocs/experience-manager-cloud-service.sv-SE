@@ -2,9 +2,9 @@
 title: Utveckla en anpassad komponent för skärmar as a Cloud Service
 description: I följande självstudiekurs går du igenom stegen för att skapa en anpassad komponent för AEM Screens. AEM Screens återanvänder många befintliga designmönster och tekniker från andra AEM produkter. I självstudiekursen beskrivs skillnader och speciella överväganden när du utvecklar för AEM Screens.
 exl-id: fe8e7bf2-6828-4a5a-b650-fb3d9c172b97
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
-source-wordcount: '2107'
+source-wordcount: '2042'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 I följande självstudiekurs går du igenom stegen för att skapa en anpassad komponent för AEM Screens. AEM Screens återanvänder många befintliga designmönster och tekniker från andra AEM produkter. I självstudiekursen beskrivs skillnader och speciella överväganden när du utvecklar för AEM Screens.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Den här självstudiekursen är avsedd för utvecklare som inte har använt AEM Screens tidigare. I den här självstudiekursen är en enkel Hello World-komponent byggd för en Sequence-kanal i AEM Screens. I en dialogruta kan författare uppdatera den text som visas.
 
@@ -28,12 +28,12 @@ Du behöver följande för att kunna slutföra den här självstudiekursen:
 
 1. Lokal utvecklingsmiljö
 
-Självstudiestegen och skärmbilderna utförs med **CRXDE Lite**. IDE kan också användas för att slutföra självstudiekursen. Mer information om hur du använder en utvecklingsmiljö [AEM finns här.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=en)
+Självstudiestegen och skärmbilderna utförs med **CRXDE Lite**. IDE kan också användas för att slutföra självstudiekursen. Mer information om hur du använder en utvecklingsmiljö [AEM finns här.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html)
 
 
 ## Projektinställningar {#project-setup}
 
-Källkoden för ett skärmsprojekt hanteras vanligtvis som ett Maven-projekt med flera moduler. För att underlätta självstudiekursen har ett projekt förskapats med [AEM Project Archetype 13](https://github.com/adobe/aem-project-archetype). Mer information om [skapa ett projekt med Maven AEM Project Archetype finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=en).
+Källkoden för ett skärmsprojekt hanteras vanligtvis som ett Maven-projekt med flera moduler. För att underlätta självstudiekursen har ett projekt förskapats med [AEM Project Archetype 13](https://github.com/adobe/aem-project-archetype). Mer information om [skapa ett projekt med Maven AEM Project Archetype finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html).
 
 1. Hämta och installera följande paket med [CRX Package Manager](http://localhost:4502/crx/packmgr/index.jsp):
 
@@ -129,7 +129,7 @@ AEM Screens har intressanta begränsningar som inte nödvändigtvis är sanna f�
    <sly data-sly-test="${!production}" data-sly-include="edit.html" />
    ```
 
-   Skärmkomponenter kräver två olika återgivningar beroende på vilken [redigeringsläge](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/authoring/author-environment-tools.html?lang=en#page-modes) används:
+   Skärmkomponenter kräver två olika återgivningar beroende på vilken [redigeringsläge](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/authoring/author-environment-tools.html#page-modes) används:
 
    1. **Produktion**: Förhandsgranska eller publicera (wcmmode=disabled)
    1. **Redigera**: används för alla andra redigeringslägen, d.v.s. redigering, design, ställningar, utvecklare...
@@ -376,7 +376,7 @@ En tredje klientbibliotekskategori: `cq.screens.components.edit` kan användas f
 
 ## Skapa en designsida {#design-page}
 
-AEM Screens använder [statiska sidmallar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-static.html?lang=en) och [Designkonfigurationer](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/siteandpage/default-components-designmode.html?lang=en) för globala ändringar. Designkonfigurationer används ofta för att konfigurera tillåtna komponenter för parsys i en kanal. Ett tips är att lagra dessa konfigurationer på ett appspecifikt sätt.
+AEM Screens använder [statiska sidmallar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-static.html) och [Designkonfigurationer](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/siteandpage/default-components-designmode.html) för globala ändringar. Designkonfigurationer används ofta för att konfigurera tillåtna komponenter för parsys i en kanal. Ett tips är att lagra dessa konfigurationer på ett appspecifikt sätt.
 
 En sida för att köra webb.butik skapas nedan som lagrar alla konfigurationer som är specifika för Web.Retail Run-projektet.
 

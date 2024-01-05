@@ -2,9 +2,9 @@
 title: Versionsinformation för 2021.9.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2021.9.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 8c12ff09-fbc8-42dd-87c0-46e509604f36
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1519'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ CQ-4328183 was not reported on CS so not documented here.
 
 * **Analytics för Adaptive Forms** - Nu kan du fånga in och spåra slutanvändarbeteende med hjälp av Adobe Analytics for Adaptive Forms för att samla in slutanvändarinsikter. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra slutanvändarens upplevelse.
 
-* **Anslut enkelt Adobe Experience Manager (AEM) Forms med Microsoft® Dynamics och Salesforce** - Tjänsten tillhandahåller färdig datakällkonfiguration och datamodeller för Microsoft® Dynamics och Salesforce. Det här gör det [snabbare och enklare för utvecklare att konfigurera Microsoft® Dynamics och Salesforce som datakällor för ett adaptivt formulär](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-msdynamics-salesforce.html?lang=en).
+* **Anslut enkelt Adobe Experience Manager (AEM) Forms med Microsoft® Dynamics och Salesforce** - Tjänsten tillhandahåller färdig datakällkonfiguration och datamodeller för Microsoft® Dynamics och Salesforce. Det här gör det [snabbare och enklare för utvecklare att konfigurera Microsoft® Dynamics och Salesforce som datakällor för ett adaptivt formulär](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-msdynamics-salesforce.html).
 
 * **E-signera ett anpassat formulär med DocuSign** - Du kan använda DocuSign för att e-signera ett anpassat formulär. Tjänsten tillhandahåller en anpassad skickaåtgärd för att använda DocuSign med ett adaptivt formulär. Du kan installera det paket som är tillgängligt på Programvarudistribution för att importera sändningsåtgärden.
 
@@ -112,7 +112,7 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betapr
 ### Nyheter {#what-is-new-screens}
 
 * As a Cloud Service skärmar har nu stöd för grundläggande uppspelningsövervakning. Spelaren rapporterar nu olika uppspelningsmått för varje ping (standardvärdet är 30 sekunder). Baserat på mätvärden kan programmet identifiera olika kantfall (fastnålade upplevelser, tom skärm, schemaläggningsproblem osv.). Med den här funktionen kan teamet fjärrövervaka om en spelare spelar upp innehåll på rätt sätt. Det förbättrar reaktiviteten till tomma skärmar eller trasiga upplevelser på fältet och minskar risken för att användaren får en trasig upplevelse.
-Se [Grundläggande uppspelningsövervakning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/manage-player-registration/installing-screens-cloud-player.html?lang=en#playback-monitoring) för mer information.
+Se [Grundläggande uppspelningsövervakning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/manage-player-registration/installing-screens-cloud-player.html#playback-monitoring) för mer information.
 
 * Miniatyrbildsstöd för videor i stöds nu i as a Cloud Service skärmar. Innehållsförfattaren kan definiera en miniatyrbild för videoklipp så att bilden används som platshållare och testar uppspelning och målgruppsanpassning av innehållet medan videon färdigställs av rätt team. Bilden kan också användas om videouppspelningen misslyckas.
 Se [Stöd för miniatyrbilder för videor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/core-product-features/thumbnail-support-videos.html) för mer information.
@@ -182,9 +182,9 @@ Releasedatum för Cloud Acceleration Manager är 4 oktober 2021.
 
 ### Nyheter {#what-is-new-cam}
 
-* Med Cloud Acceleration Manager kan användarna nu visa BPA-rapporter i en förhandsgranskning som kan skrivas ut, vilket gör det enkelt att skriva ut eller skriva ut till PDF för att det ska vara enkelt att dela. Se steg 6 och 7 i [Använda analyskortet för metodtips](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html?lang=en#best-practices-analysis).
+* Med Cloud Acceleration Manager kan användarna nu visa BPA-rapporter i en förhandsgranskning som kan skrivas ut, vilket gör det enkelt att skriva ut eller skriva ut till PDF för att det ska vara enkelt att dela. Se steg 6 och 7 i [Använda analyskortet för metodtips](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html#best-practices-analysis).
 
-## Content Transfer Tool {#content-transfer-tool}
+## Verktyget Innehållsöverföring {#content-transfer-tool}
 
 ### Releasedatum {#release-date-ctt-latest}
 
@@ -192,7 +192,7 @@ Releasedatum för innehållsöverföringsverktyget v1.6.0 är 4 oktober 2021.
 
 ### Nyheter {#what-is-new-ctt}
 
-* Förbättrad användarmappning med en förenklad användarupplevelse, inklusive följande funktioner som listas nedan. Mer information finns i [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/using-user-mapping-tool-legacy.html?lang=en#using-user-mapping-tool).
+* Förbättrad användarmappning med en förenklad användarupplevelse, inklusive följande funktioner som listas nedan. Mer information finns i [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/using-user-mapping-tool-legacy.html#using-user-mapping-tool).
    * Testa anslutningen till API:t för användarhantering innan du kör användarmappningen
    * Hoppa över fel utan problem och fortsätt med aktiviteten Användarmappning
    * Användarmappning misslyckas inte längre om åtkomsttoken upphör att gälla (efter 24 timmar). Användarmappning kan köras igen från den plats där den senast stoppades.

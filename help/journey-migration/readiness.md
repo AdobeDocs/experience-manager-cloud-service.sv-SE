@@ -2,10 +2,10 @@
 title: Beredskapsfas
 description: Lär dig mer om de steg du måste ta så att du kan vara säker på att AEM är redo att flyttas till molnet.
 exl-id: 3bc8c037-d82a-4455-bce6-3c80c359a4ae
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
-source-wordcount: '2066'
-ht-degree: 2%
+source-wordcount: '1900'
+ht-degree: 1%
 
 ---
 
@@ -89,12 +89,12 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
   </tr>
   <tr>
     <td>Växla till asynkrona åtgärder</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/asynchronous-jobs.html?lang=en#configuring-asynchronous-msm-operations">Konfigurera asynkrona åtgärder</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/asynchronous-jobs.html#configuring-asynchronous-msm-operations">Konfigurera asynkrona åtgärder</a></td>
     <td>För att förbättra övergripande prestanda i dina miljöer körs vissa åtgärder i asynkront läge. De asynkrona jobben köas och körs när systemresurser är tillgängliga.</td>
   </tr>
   <tr>
     <td>Tokenbaserad autentisering och integreringsstrategier</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=en#the-server-to-server-flow">Genererar åtkomsttoken för API:er på serversidan</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=en#authentication">Token-based Authentication Tutorial</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#the-server-to-server-flow">Genererar åtkomsttoken för API:er på serversidan</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html#authentication">Token-based Authentication Tutorial</a></td>
     <td>Det är vanligt att system utanför AEM försöker utföra HTTP-åtgärder inom AEM.<br>Vi rekommenderar att du implementerar de strategier som beskrivs här i stället för att förlita dig på att du skapar lokala användarnamn med lösenord i AEM.</td>
   </tr>
   <tr>
@@ -109,13 +109,13 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
   </tr>
   <tr>
     <td>Metoder för överföring av tillgångar och arbetsflödessteg som stöds i AEM as a Cloud Service</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/developer-reference-material-apis.html?lang=en#post-processing-workflows-steps">Överför API-jämförelser och WF-processsteg som stöds</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/developer-reference-material-apis.html#post-processing-workflows-steps">Överför API-jämförelser och WF-processsteg som stöds</a></td>
     <td>På AEM as a Cloud Service strömmas resursen direkt in i eller ut ur binär lagring, antingen under överföring eller hämtning av en resurs. <br>Alla arbetsflödesprocessteg stöds inte i AEMaaCS.</td>
   </tr>
   <tr>
     <td>Arbetsflödeskörare</td>
     <td></td>
-    <td>Ta bort alla arbetsflödeskörare som utlöser ett körklart eller anpassat arbetsflöde för DAM Update Asset från koden. <br>Alla resurser som överförs till AEM as a Cloud Service kommer att bearbetas av tjänsten för tillgångsbearbetning. Anvisningar om anpassade steg finns i <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use.html?lang=en#post-processing-workflows"> Arbetsflöden för efterbearbetning</a> om hur du konfigurerar och konfigurerar arbetsflöden för efterbearbetning.</td>
+    <td>Ta bort alla arbetsflödeskörare som utlöser ett körklart eller anpassat arbetsflöde för DAM Update Asset från koden. <br>Alla resurser som överförs till AEM as a Cloud Service kommer att bearbetas av tjänsten för tillgångsbearbetning. Anvisningar om anpassade steg finns i <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use.html#post-processing-workflows"> Arbetsflöden för efterbearbetning</a> om hur du konfigurerar och konfigurerar arbetsflöden för efterbearbetning.</td>
   </tr>
   <tr>
     <td>Anpassade återgivningssteg</td>
@@ -139,7 +139,7 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
   </tr>
   <tr>
     <td>Dispatcher Configurations and Caching</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html?lang=en">Dispatcher i molnet</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=en#other-content">Cachehantering<br></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html?lang=en">Dispatcher i molnet</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#other-content">Cachehantering<br></td>
     <td>Dispatcher-konfigurationerna måste följa en specifik struktur.<br>Konfigurationerna måste hanteras som en del av koden och distribueras via molnhanterarens pipeline.</td>
   </tr>
   <tr>
@@ -155,7 +155,7 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
 </tbody>
 </table>
 
-## Borttagna funktioner {#deprecated-features}
+## Föråldrade funktioner {#deprecated-features}
 
 Adobe utvärderar ständigt produktfunktioner för att så småningom förnya eller ersätta äldre funktioner med modernare alternativ för att förbättra det totala kundvärdet, alltid med noggrant övervägande av bakåtkompatibilitet.
 
@@ -171,7 +171,7 @@ I följande bild visas de viktigaste stegen under granskningsfasen:
 
 Därefter tittar vi närmare på vad varje steg innebär.
 
-### Utvärderar beredskap för Cloud Service {#assess-cloud-readiness}
+### Utvärderar Cloud Servicens beredskap {#assess-cloud-readiness}
 
 Det första steget är att utvärdera om du är redo att gå över från den befintliga AEM till Cloud Service och avgöra vilka områden som behöver omfaktorisering för att vara kompatibel med AEM as a Cloud Service.
 

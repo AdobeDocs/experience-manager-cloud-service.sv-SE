@@ -3,9 +3,9 @@ title: Validera och felsöka med Dispatcher Tools
 description: Lär dig mer om lokal validering, felsökning, filstrukturen i flexibelt läge och hur du migrerar från äldre läge till flexibelt läge.
 feature: Dispatcher
 exl-id: 9e8cff20-f897-4901-8638-b1dbd85f44bf
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
-source-wordcount: '2990'
+source-wordcount: '2971'
 ht-degree: 0%
 
 ---
@@ -611,7 +611,7 @@ $ docker exec d75fbd23b29 httpd-test
 
 ## Migrera från äldre läge till flexibelt läge {#migrating}
 
-Med Cloud Manager 2021.7.0 genererar nya Cloud Manager-program maven-projektstrukturer med [AEM 28](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=en) eller högre, som innehåller filen **opt-in/USE_SOURCES_DIRECTLY**. Det tar bort tidigare begränsningar i [äldre läge](/help/implementing/dispatcher/validation-debug-legacy.md) runt antalet och storleken på filer, vilket även gör att SDK och runtime-modulen validerar och distribuerar konfigurationen på ett förbättrat sätt. Om Dispatcher-konfigurationen inte har den här filen rekommenderar vi att du migrerar. Följ de här stegen för att säkerställa en säker övergång:
+Med Cloud Manager 2021.7.0 genererar nya Cloud Manager-program maven-projektstrukturer med [AEM 28](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) eller högre, som innehåller filen **opt-in/USE_SOURCES_DIRECTLY**. Det tar bort tidigare begränsningar i [äldre läge](/help/implementing/dispatcher/validation-debug-legacy.md) runt antalet och storleken på filer, vilket även gör att SDK och runtime-modulen validerar och distribuerar konfigurationen på ett förbättrat sätt. Om Dispatcher-konfigurationen inte har den här filen rekommenderar vi att du migrerar. Följ de här stegen för att säkerställa en säker övergång:
 
 1. **Lokal testning.** Lägg till mappen och filen med hjälp av SDK:t för de senaste Dispatcher-verktygen `opt-in/USE_SOURCES_DIRECTLY`. Följ instruktionerna för lokal validering i den här artikeln så att du kan testa att Dispatcher fungerar lokalt.
 1. **Molnutvecklingstestning:**

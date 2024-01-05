@@ -2,9 +2,9 @@
 title: Komma igång med Cloud Acceleration Manager
 description: Den här sidan innehåller en översikt över hur du använder och kommer igång med Cloud Acceleration Manager.
 exl-id: e2fad21c-3de6-4186-97c6-ebc84780b2e8
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '514'
 ht-degree: 1%
 
 ---
@@ -97,4 +97,4 @@ Följ stegen nedan för att ta bort ditt projekt:
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du loggar in i Cloud Acceleration Manager och hur du skapar ett projekt är du redo att gå igenom nästa steg i [Beredskapsfas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html?lang=en).
+När du har lärt dig hur du loggar in i Cloud Acceleration Manager och hur du skapar ett projekt är du redo att gå igenom nästa steg i [Beredskapsfas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html).

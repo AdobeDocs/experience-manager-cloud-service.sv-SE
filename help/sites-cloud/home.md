@@ -3,10 +3,10 @@ title: Supportresurser för as a Cloud Service webbplatser i Experience Manager
 description: Få en fullständig lista över alla våra supportresurser för AEM Cloud Services. Hitta svar på dina frågor om AEM Sites as a Cloud Service.
 landing-page-description: Förstå hur du redigerar och administrerar AEM Sites as a Cloud Service.
 exl-id: 0fedbd4b-9d6b-40d9-88b7-e7469db420fc
-source-git-commit: ce841a83d46dc1c4fa2edc858e4a0be0af3ac170
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
-source-wordcount: '417'
-ht-degree: 50%
+source-wordcount: '383'
+ht-degree: 39%
 
 ---
 
@@ -14,21 +14,21 @@ ht-degree: 50%
 
 På den här sidan finns en fullständig lista över alla Adobe AEM Cloud Service som stöder resurser. Få svar på din fråga om [!DNL AEM Sites as a Cloud Service].
 
-## Viktiga artiklar om Sites {#key-articles}
+## Viktiga webbplatsartiklar {#key-articles}
 
-* [Viktiga ändringar i AEM Sites as a Cloud Service](sites-cloud-changes.md)
-* [Snabbstartguide för redigering](authoring/getting-started/quick-start.md)
+* [Betydande förändringar av AEM Sites as a Cloud Service](sites-cloud-changes.md)
+* [Startguide för redigeringssnabbstart](authoring/getting-started/quick-start.md)
 * [Publicera sidor](authoring/fundamentals/publishing-pages.md)
 * [Skapa med Edge Delivery Services](/help/edge/overview.md)
-* [Redigera responsiva layouter](authoring/features/responsive-layout.md)
-* [Redigera mallar](authoring/features/templates.md)
-* [Använda Experience Fragments](authoring/fundamentals/experience-fragments.md)
-* [Använda Launches](authoring/launches/overview.md)
+* [Redigeringsresponsiv layout](authoring/features/responsive-layout.md)
+* [Designmallar](authoring/features/templates.md)
+* [Använda upplevelsefragment](authoring/fundamentals/experience-fragments.md)
+* [Använda Launes](authoring/launches/overview.md)
 * [Anpassa innehåll med ContextHub](authoring/personalization/contexthub.md)
 * [Integrera med Adobe Analytics](integrating/integrating-adobe-analytics.md)
 * [Integrera med Adobe Target](integrating/integrating-adobe-target.md)
 
-## Handböcker om Experience Manager as a Cloud Service {#aem-guides}
+## as a Cloud Service stödlinjer för Experience Manager {#aem-guides}
 
 | Användarhandbok | Beskrivning |
 |---|---|
@@ -42,16 +42,16 @@ På den här sidan finns en fullständig lista över alla Adobe AEM Cloud Servic
 | [Headless Developer Journey](/help/journey-headless/developer/overview.md) | Utforska den här guidade resan genom de kraftfulla och flexibla headless-funktionerna i AEM så att du kan förbereda dig för ditt första headless-projekt. |
 | [Användarhandbok för anslutningar](/help/connectors/home.md) | Läs om hur ni integrerar anslutningar i Experience Manager as a Cloud Service. |
 | [Användarhandbok för åtgärder](/help/operations/home.md) | Läs om backend-funktionerna i Experience Manager as a Cloud Service, till exempel indexerings- och underhållsåtgärder. |
-| [Handbok för Commerce](/help/commerce-cloud/home.md) | Läs mer om Commerce Integration Framework på AEM as a Cloud Service. |
+| [Handbok för Commerce](/help/commerce-cloud/home.md) | Läs om Commerce integration framework på AEM as a Cloud Service. |
 
-## Andra Experience Manager-resurser {#other-resources}
+## Andra resurser i Experience Manager {#other-resources}
 
-* [Senaste dokumentationsuppdateringarna](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=en)
-* [Dispatcher-dokumentation](/help/implementing/dispatcher/overview.md)
+* [Senaste dokumentationsuppdateringarna](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html)
+* [Dispatcher Documentation](/help/implementing/dispatcher/overview.md)
 * [HTML-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 * [Dokumentation om viktiga komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](/help/onboarding/cloud-manager-introduction.md)
-* [GDPR-efterlevnad](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md)
+* [GDPR-beredskap](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md)
 * [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
 * [Experience League](https://experienceleague.adobe.com/?promoid=K42KVXHD&amp;mv=other)
 * [AEM-communityforum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)

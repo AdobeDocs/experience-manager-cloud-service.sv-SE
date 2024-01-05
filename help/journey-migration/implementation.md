@@ -2,9 +2,9 @@
 title: Implementeringsfas
 description: Kontrollera att koden och innehållet är klara för migrering till molnet
 exl-id: d124f9a5-a754-4ed0-a839-f2968c7c8faa
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
-source-wordcount: '2339'
+source-wordcount: '2282'
 ht-degree: 8%
 
 ---
@@ -61,7 +61,7 @@ Innehållsmigrering är en flerstegsprocess som kräver planering, spårning och
 
 En fullständig beskrivning av hur verktyget fungerar och hur Adobe rekommenderar att du använder det finns i [Dokumentation för verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md).
 
-## Omstrukturering av kod {#code-refactor}
+## Kodomfaktorisering {#code-refactor}
 
 ### Konfigurera för utveckling {#set-up-for-development}
 
@@ -71,8 +71,8 @@ Börja med att titta på dokumentationen som beskriver de grundläggande verktyg
 
 
 * Under planeringen är det en god idé att ha en lista över områden som måste omarbetas för att vara kompatibla med AEM as a Cloud Service. Du kan granska [Utvecklingsriktlinjer](/help/implementing/developing/introduction/development-guidelines.md) om du vill ha mer information om hur du kan omforma och optimera kod för Cloud Service.
-* Läs mer om [Hantera konfigurationer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/configurations.html?lang=en#what-is-a-configuration) på AEM as a Cloud Service.
-* Lär dig hur du konfigurerar en lokal utvecklingsmiljö genom att hämta [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en)
+* Läs mer om [Hantera konfigurationer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/configurations.html#what-is-a-configuration) på AEM as a Cloud Service.
+* Lär dig hur du konfigurerar en lokal utvecklingsmiljö genom att hämta [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html)
 * Äntligen bekanta dig med [AEM as a Cloud Service Java API](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/index.html).
 
 Du kan också:
@@ -104,8 +104,8 @@ I Adobe finns flera verktyg som hjälper dig att snabba upp vissa av dina åtgä
 
 * [Migrering av arbetsflöde för tillgångar](/help/journey-migration/moving-to-aem-assets/asset-workflow-migration-tool.md), ett verktyg som används för att automatiskt migrera arbetsflöden för bearbetning av resurser
 * [Dispatcher Converter](/help/journey-migration/refactoring-tools/dispatcher-transformation-utility-tools.md), ett verktyg som konverterar dina befintliga Dispatcher-konfigurationer till ett format som är klart för AEM as a Cloud Service.
-* [Databasmodernisering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/moving/refactoring-tools/repo-modernizer.html?lang=en), ett verktyg som tar ett AEM flerlägesprojekt som indata och konverterar det till ett AEM as a Cloud Service
-* [Indexkonverterare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/moving/refactoring-tools/index-converter.html?lang=en), ett verktyg som konverterar index till ett formulär som är kompatibelt med AEM as a Cloud Service
+* [Databasmodernisering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/moving/refactoring-tools/repo-modernizer.html), ett verktyg som tar ett AEM flerlägesprojekt som indata och konverterar det till ett AEM as a Cloud Service
+* [Indexkonverterare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/moving/refactoring-tools/index-converter.html), ett verktyg som konverterar index till ett formulär som är kompatibelt med AEM as a Cloud Service
 * [Moderniseringsverktyg](/help/journey-migration/refactoring-tools/aem-modernization-tools.md), en svit med verktyg som kan användas för att konvertera äldre AEM till de moderna och stödda funktionerna i AEM as a Cloud Service.
 
 När du väl har konfigurerat den lokala utvecklingsmiljön kan du bekanta dig med den AEM as a Cloud Service SDK:n genom att kontakta [dokumentation](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md).

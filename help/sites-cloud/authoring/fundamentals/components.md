@@ -2,9 +2,9 @@
 title: Komponenter
 description: Komponenter är den grundläggande byggstenen för innehållssidor i AEM
 exl-id: a8118329-1330-49b0-a3f8-a27774f1c5df
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '335'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ The [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manage
 
 De bygger med AEM bästa praxis och utgör grunden för den AEM redigeringsupplevelsen. Kärnkomponenterna kan enkelt byggas ut av utvecklare för att uppfylla specifika projektbehov.
 
-Tillsammans med WCM Core Components kan du också använda [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en#features). Dessa kärnkomponenter har en standard och enklare metoder för att [skapa eller lägga till formulär på en AEM Sites-sida](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md).
+Tillsammans med WCM Core Components kan du också använda [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html#features). Dessa kärnkomponenter har en standard och enklare metoder för att [skapa eller lägga till formulär på en AEM Sites-sida](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md).
 
 ### Konfigurera mallar {#configuring-templates}
 

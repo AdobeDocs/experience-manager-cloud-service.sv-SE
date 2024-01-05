@@ -2,9 +2,9 @@
 title: Versionsinformation om 2020.11.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.11.0."
 exl-id: 8066c0fb-c2f5-4625-9448-b0c74ff4e192
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1213'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Följande version (2020.12.0) kommer att vara den 17 december 2020
 
 * **Massintag av resurser**: Förse kunderna med en skalbar, molnbaserad importfunktion som använder [!DNL Experience Manager] as a Cloud Service arkitektur inklusive tillgångsmikrotjänster. Exempel på viktiga användningsområden är inhämtning i stor skala med övervakning, rapportering och schemaläggning, samtidigt som resurser kan överföras till molndatalager med hjälp av vanliga verktyg för molnöverföring. Se [verktyg för massinhämtning av resurser](/help/assets/add-assets.md#asset-bulk-ingestor).
 
-  Det här verktyget är avsett för systemadministratörer, konsulter eller implementeringspartners. Den här funktionen tillåter storskaligt intag och används helst vid första intag eller vid enstaka stora intag. Använd [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html?lang=en) eller [ladda upp med Assets-användargränssnittet](/help/assets/add-assets.md#upload-assets).
+  Det här verktyget är avsett för systemadministratörer, konsulter eller implementeringspartners. Den här funktionen tillåter storskaligt intag och används helst vid första intag eller vid enstaka stora intag. Använd [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html) eller [ladda upp med Assets-användargränssnittet](/help/assets/add-assets.md#upload-assets).
 
   ![Konfiguration av bulkimporterare](/help/assets/assets/bulk-import-config-low-res.png)
 
@@ -73,9 +73,9 @@ Följande version (2020.12.0) kommer att vara den 17 december 2020
 
 ### Nyheter {#what-is-new-commerce}
 
-* Lanserade CIF Venia Reference Site - 2020.11.05 som innehåller den senaste CIF Core Components version v1.5.0. Se [CIF Venias referenswebbplats](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2020.10.27) för mer information.
+* Lanserade CIF Venia Reference Site - 2020.11.05 som innehåller den senaste CIF Core Components version v1.5.0. Se [CIF Venia Reference Site](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2020.10.27) för mer information.
 
-* Frisläppta CIF kärnkomponenter v1.5.0. Se [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.5.0) för mer information.
+* Frisläppta CIF kärnkomponenter v1.5.0. Se [CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.5.0) för mer information.
 
 ### Felkorrigeringar {#bug-fixes-commerce}
 
@@ -113,13 +113,13 @@ Se [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md#lo
 
 ### SDK Build Analyzers {#analyzers}
 
-Den AEM as a Cloud Service SDK Build Analyzer Maven Plugin identifierar problem i ett maven-projekt, inklusive saknade beroenden. Det ger utvecklare möjlighet att upptäcka problem under den lokala utvecklingen, långt före distributionen till molnmiljöer med Cloud Manager. Mer information finns i dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html?lang=en#developing) och [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en#building-for-the-sdk).
+Den AEM as a Cloud Service SDK Build Analyzer Maven Plugin identifierar problem i ett maven-projekt, inklusive saknade beroenden. Det ger utvecklare möjlighet att upptäcka problem under den lokala utvecklingen, långt före distributionen till molnmiljöer med Cloud Manager. Mer information finns i dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html#developing) och [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html#building-for-the-sdk).
 
 ### Övriga {#others-foundation}
 
 Nytt [&quot;httpd -t&quot; syntax](/help/implementing/dispatcher/disp-overview.md#local-validation) kontrollera om det finns cache- och dispatcherkonfigurationer som körs under Cloud Manager-bygget, som också kan köras med AEM as a Cloud Service SDK:s Dispatcher Tools.
 
-## Content Transfer Tool {#content-transfer-tool}
+## Verktyget Innehållsöverföring {#content-transfer-tool}
 
 Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för [Verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html) Version v1.1.12.
 

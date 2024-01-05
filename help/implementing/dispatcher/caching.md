@@ -1,11 +1,11 @@
 ---
-title: Cache i AEM as a Cloud Service
+title: Cachelagring i AEM as a Cloud Service
 description: Lär dig grunderna i cachning på AEM as a Cloud Service
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2775'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Den här metoden är till exempel användbar när din affärslogik kräver finju
   ```
 
   >[!NOTE]
-  >Rubriken Surrogate-Control gäller för CDN som hanteras av Adobe. Om du använder [kundhanterad CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=en#point-to-point-CDN), kan det krävas en annan rubrik beroende på din CDN-leverantör.
+  >Rubriken Surrogate-Control gäller för CDN som hanteras av Adobe. Om du använder [kundhanterad CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html#point-to-point-CDN), kan det krävas en annan rubrik beroende på din CDN-leverantör.
 
   Var försiktig när du anger rubriker för global cachekontroll eller liknande cacherubriker som matchar ett brett register så att de inte tillämpas på innehåll som du måste behålla privat. Överväg att använda flera direktiv för att säkerställa att reglerna tillämpas på ett detaljerat sätt. AEM as a Cloud Service tar därför bort cachehuvudet om det upptäcker att det har tillämpats på det som Dispatcher identifierar som otillgängligt, vilket beskrivs i Dispatcher-dokumentationen. Om du vill tvinga AEM att alltid använda cachelagringshuvuden kan du lägga till **`always`** enligt följande:
 
@@ -240,7 +240,7 @@ För miljöer som skapats i oktober 2023 eller senare kommer CDN att ta bort van
 
 Skicka en supportanmälan om du vill att det här beteendet ska inaktiveras.
 
-För miljöer som skapats före oktober 2023 bör du konfigurera Dispatcher-konfigurationens `ignoreUrlParams` egenskap som [dokumenteras här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#ignoring-url-parameters).
+För miljöer som skapats före oktober 2023 bör du konfigurera Dispatcher-konfigurationens `ignoreUrlParams` egenskap som [dokumenteras här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#ignoring-url-parameters).
 
 
 ## Invalidering av Dispatcher-cache {#disp}

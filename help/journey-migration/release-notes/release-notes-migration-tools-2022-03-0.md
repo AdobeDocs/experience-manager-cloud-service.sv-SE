@@ -3,9 +3,9 @@ title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service versi
 description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.3.0
 feature: Release Information
 exl-id: ab43605d-d46e-43de-b71f-fab610609550
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '349'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Releasedatum för Best Practices Analyzer v2.1.26 är 16 mars 2022.
 * BPA rapporterade fynd relaterade till WRK-mönstret som MAJOR i stället för CRITICAL.
 * BPA rapporterade felaktigt resultat relaterade till Oak-indexdefinitioner i ui.apps som CRITICAL.
 
-## Content Transfer Tool {#ctt-release}
+## Verktyget Innehållsöverföring {#ctt-release}
 
 ### Releasedatum {#release-date-ctt}
 
@@ -41,4 +41,4 @@ Releasedatum för Content Transfer Tool v1.9.0 är 28 februari 2022.
 
 ### Nyheter {#what-is-new-ctt}
 
-* Kontrollera storleksordrar - Funktionen Kontrollera storlek för verktyget Innehållsöverföring hjälper till att minska misslyckade innehållsöverföringar. Med funktionen Kontrollera storlek kan användarna avgöra om de har tillräckligt med diskutrymme i `crx-quickstart` underkatalog före extrahering. De kan också beräkna storleken på migreringsuppsättningen och kontrollera om den stöds. Om en eller båda dessa kontroller överträds visas varningar i CTT-användargränssnittet. Med den här skyddsguiden kan du undvika innehållsöverföringsfel och proaktivt diskutera migreringsalternativ med Adobe kundtjänst. Se [Bestämma migreringsuppsättningens storlek och diskutrymme](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=en#migration-set-size) för mer information.
+* Kontrollera storleksordrar - Funktionen Kontrollera storlek för verktyget Innehållsöverföring hjälper till att minska misslyckade innehållsöverföringar. Med funktionen Kontrollera storlek kan användarna avgöra om de har tillräckligt med diskutrymme i `crx-quickstart` underkatalog före extrahering. De kan också beräkna storleken på migreringsuppsättningen och kontrollera om den stöds. Om en eller båda dessa kontroller överträds visas varningar i CTT-användargränssnittet. Med den här skyddsguiden kan du undvika innehållsöverföringsfel och proaktivt diskutera migreringsalternativ med Adobe kundtjänst. Se [Bestämma migreringsuppsättningens storlek och diskutrymme](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#migration-set-size) för mer information.

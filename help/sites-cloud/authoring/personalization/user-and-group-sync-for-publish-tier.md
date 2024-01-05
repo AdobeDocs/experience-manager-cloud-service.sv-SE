@@ -2,7 +2,7 @@
 title: Registrering, inloggning och användarprofil
 description: Läs mer om registrering, inloggning, användardata och gruppsynkronisering för AEM as a Cloud Service
 exl-id: a991e710-a974-419f-8709-ad86c333dbf8
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 0%
@@ -94,7 +94,7 @@ Det finns olika sätt att se på beständiga data, beroende på vilken typ av da
 Information om användarprofiler kan skrivas och läsas på två sätt:
 
 * Användning på serversidan med `com.adobe.granite.security.user` Gränssnittet UserPropertiesManager som placerar data under användarens nod i `/home/users`. Se till att sidor som är unika per användare inte cachelagras.
-* Klientsidan som använder ContextHub, enligt beskrivningen i [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/personalization/contexthub.html?lang=en#personalization).
+* Klientsidan som använder ContextHub, enligt beskrivningen i [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/personalization/contexthub.html#personalization).
 
 ### Datalager från tredje part {#third-party-data-stores}
 
@@ -104,7 +104,7 @@ Det är möjligt att få åtkomst i realtid till tredjepartstjänster för att h
 
 ## Behörigheter (stängda användargrupper) {#permissions-closed-user-groups}
 
-Åtkomstprinciper på publiceringsnivå, som även kallas stängda användargrupper, definieras i AEM författare som [beskrivs här](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html?lang=en#applying-your-closed-user-group-to-content-pages). Om du vill begränsa vissa avsnitt eller sidor på en webbplats för vissa användare, tillämpar du de CUG-grupper som behövs med hjälp av AEM författare, enligt beskrivningen här, och replikerar dem till publiceringsnivån.
+Åtkomstprinciper på publiceringsnivå, som även kallas stängda användargrupper, definieras i AEM författare som [beskrivs här](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html#applying-your-closed-user-group-to-content-pages). Om du vill begränsa vissa avsnitt eller sidor på en webbplats för vissa användare, tillämpar du de CUG-grupper som behövs med hjälp av AEM författare, enligt beskrivningen här, och replikerar dem till publiceringsnivån.
 
 * Om användare loggar in genom att autentisera med en identitetsleverantör (IdP) med SAML, identifierar autentiseringshanteraren användarens gruppmedlemskap (som ska matcha användargrupperna på publiceringsnivån) och behåller kopplingen mellan användaren och gruppen via en databaspost
 * Om inloggning sker utan IdP-integrering kan anpassad kod använda samma databasstrukturrelationer.

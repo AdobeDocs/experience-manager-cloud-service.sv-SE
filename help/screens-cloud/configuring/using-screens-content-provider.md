@@ -2,9 +2,9 @@
 title: Använda providern för skärminnehåll
 description: Den här sidan beskriver hur du använder Screens Content Provider för att skapa innehåll.
 exl-id: ed7de2c0-13cf-4ce0-8794-aef918cf8e71
-source-git-commit: 900cdc53475446b9d93cb071f281da5dbe043888
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 ## Syfte {#objective}
 
-I följande avsnitt beskrivs hur du använder Screens Content Provider när du har konfigurerat [Tjänsteleverantör för skärmar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html?lang=en).
+I följande avsnitt beskrivs hur du använder Screens Content Provider när du har konfigurerat [Tjänsteleverantör för skärmar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html).
 
 ## Använda leverantör av skärminnehåll {#screens-content-provider}
 
 >[!NOTE]
 >**Förutsättning**
->Innan du börjar läsa det här avsnittet finns mer information i [Konfigurerar providern för skärmtjänster](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html?lang=en) om du vill lära dig hur du navigerar till det här användargränssnittet från Screens Services Provider.
+>Innan du börjar läsa det här avsnittet, se [Konfigurerar providern för skärmtjänster](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html) om du vill lära dig hur du navigerar till det här användargränssnittet från Screens Services Provider.
 
 Logga in på Screens Content Provider genom att följa stegen nedan:
 
@@ -35,14 +35,14 @@ Logga in på Screens Content Provider genom att följa stegen nedan:
 1. Klicka **Starta** från Cloud Manager-kortet. När du har loggat in på [!UICONTROL Cloud Manager]är du redo att använda användargränssnittet.
    ![Fyra områden i Cloud Manager - Brand Portal, Cloud Manager, Cloud Acceleration Manager och Programvarudistribution - där var och en har sin egen Launch-knapp.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/landing-page2.png)
 
-1. Markera programmet för skärmar as a Cloud Service och klicka på ikonen så som visas nedan för att öppna Cloud Managers **Översikt** sida för det specifika programmet.
+1. Markera programmet för skärmar as a Cloud Service och klicka på ikonen, så som visas nedan, för att öppna Cloud Managers **Ökning** sida för det specifika programmet.
 
    ![Ikonen för översiktssidan för Cloud Manager visas längst till vänster i ett verktygsfält.](/help/screens-cloud/assets/configure/screens-cp-1.png)
 
    >[!NOTE]
-   >Om du inte har skapat något program kan du läsa [Första gången du loggar in på skärmar as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/onboarding-screens-cloud/first-time-login-screens-cloud.html?lang=en). I avsnittet får du hjälp med att lägga till ett program för skärmar as a Cloud Service i Cloud Manager.
+   >Om du inte har skapat något program kan du läsa [Första gången du loggar in på skärmar as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/onboarding-screens-cloud/first-time-login-screens-cloud.html). I avsnittet får du hjälp med att lägga till ett program för skärmar as a Cloud Service i Cloud Manager.
 
-1. Markera länken i **Miljö** så att du kan komma åt leverantören av skärminnehåll.
+1. Markera länken på menyn **Miljö** så att du kan komma åt leverantören av skärminnehåll.
 
    ![Länken är markerad från miljökortet som gör att du kan komma åt leverantören av skärminnehåll.](/help/screens-cloud/assets/configure/screens-cp-2.png)
 
@@ -56,4 +56,4 @@ Logga in på Screens Content Provider genom att följa stegen nedan:
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har lärt dig navigera till Screens Content Provider kan du fortsätta din as a Cloud Service skärmresa genom att granska dokumentet, [Skapa och hantera ett projekt på skärmar as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/create-content/creating-projects-screens-cloud.html?lang=en).
+Nu när du har lärt dig navigera till Screens Content Provider kan du fortsätta din as a Cloud Service skärmresa genom att granska dokumentet, [Skapa och hantera ett projekt på skärmar as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/create-content/creating-projects-screens-cloud.html).

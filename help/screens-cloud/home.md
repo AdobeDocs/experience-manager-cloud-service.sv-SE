@@ -3,10 +3,10 @@ title: AEM Screens as a Cloud Service
 description: Lär dig mer om AEM Screens och hur den här digitala signeringslösningen fungerar.
 landing-page-description: Förstå AEM Screens as a Cloud Service.
 exl-id: 5acb8e90-f268-4b99-9b6f-e05ba0f3a482
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 50%
+source-wordcount: '346'
+ht-degree: 52%
 
 ---
 
@@ -15,18 +15,18 @@ ht-degree: 50%
 På den här sidan får du hjälp att förstå mer om AEM Screens och hur den här digitala signeringslösningen fungerar. Få självhjälp och lär dig mer om nyheter.
 
 >[!NOTE]
->För AEM Screens med AEM 6.5, se [AEM Screens Användarhandbok](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=en).
+>För AEM Screens med AEM 6.5, se [AEM Screens Användarhandbok](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html).
 
 
 ## Viktiga artiklar och AEM Screens as a Cloud Service artiklar {#key-articles}
 
-* [Introduktion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/overview/introduction.html?lang=en)
-* [Onboarding](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/onboarding-screens-cloud/first-time-login-screens-cloud.html?lang=en)
-* [Konfigurera skärmtjänster och innehållsleverantör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html?lang=en)
-* [Skapa ett projekt på skärmar as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/creating-projects-screens-cloud.html?lang=en)
-* [Installera skärmuppspelaren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/manage-player-registration/installing-screens-cloud-player.html?lang=en)
+* [Introduktion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/overview/introduction.html)
+* [Onboarding](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/onboarding-screens-cloud/first-time-login-screens-cloud.html)
+* [Konfigurera skärmtjänster och innehållsleverantör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html)
+* [Skapa ett projekt på skärmar as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/creating-projects-screens-cloud.html)
+* [Installera skärmuppspelaren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/manage-player-registration/installing-screens-cloud-player.html)
 
-## Handböcker om Experience Manager as a Cloud Service {#aem-guides}
+## as a Cloud Service stödlinjer för Experience Manager {#aem-guides}
 
 | Användarhandbok | Beskrivning |
 |---|---|
@@ -41,13 +41,13 @@ På den här sidan får du hjälp att förstå mer om AEM Screens och hur den h�
 | [Användarhandbok för anslutningar](/help/connectors/home.md) | Läs om hur ni integrerar lösningar i Experience Manager as a Cloud Service. |
 | [Användarhandbok för åtgärder](/help/operations/home.md) | Läs om backend-funktionerna i Experience Manager as a Cloud Service, till exempel indexerings- och underhållsåtgärder. |
 
-## Andra Experience Manager-resurser {#other-resources}
+## Andra resurser i Experience Manager {#other-resources}
 
-* [Dispatcher-dokumentation](/help/implementing/dispatcher/overview.md)
+* [Dispatcher Documentation](/help/implementing/dispatcher/overview.md)
 * [HTML-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html)
 * [Dokumentation om viktiga komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [Cloud Manager](/help/onboarding/cloud-manager-introduction.md)
-* [GDPR-efterlevnad](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md)
+* [GDPR-beredskap](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md)
 * [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
 * [Experience League](https://guided.adobe.com/?promoid=K42KVXHD&amp;mv=other#solutions/experience-manager)
 * [AEM-communityforum](https://forums.adobe.com/community/experience-cloud/marketing-cloud/experience-manager)

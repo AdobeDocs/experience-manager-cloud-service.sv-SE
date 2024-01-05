@@ -1,15 +1,15 @@
 ---
-title: Skicka en AEM-anslutning
+title: Skicka en AEM
 description: Lär dig hur du refererar och distribuerar anslutningar på rätt sätt i Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: 9be1f00e-3666-411c-9001-c047e90b6ee5
-source-git-commit: 78ead5f15c2613d9c3bed3025b43423a66805c59
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 2%
+source-wordcount: '296'
+ht-degree: 0%
 
 ---
 
-# Skicka en AEM-anslutning
+# Skicka en AEM
 
 Nedan finns användbar information om hur du skickar Adobe Experience Manager (AEM) Connectors. Informationen ska läsas med artiklar om [implementera](implement.md) och  [underhålla](maintain.md) kontakter.
 
@@ -20,7 +20,7 @@ I tidigare AEM lösningar [Pakethanteraren](/help/implementing/developing/tools/
 Det finns olika alternativ för hur paketen kan inkluderas i ett projekt:
 
 1. Partnerns offentliga arkiv - en partner skulle vara värd för innehållspaketet i ett offentligt tillgängligt arkiv
-1. Partnerns lösenordsskyddade arkiv - en partner lagrar innehållspaketet i en lösenordsskyddad maven-databas. Se [lösenordsskyddade maven-databaser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html?lang=en#password-protected-maven-repositories) för instruktioner.
+1. Partnerns lösenordsskyddade arkiv - en partner lagrar innehållspaketet i en lösenordsskyddad maven-databas. Se [lösenordsskyddade maven-databaser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html#password-protected-maven-repositories) för instruktioner.
 1. Paket med sammankopplade artefakter - i det här fallet inkluderas kopplingspaketet lokalt i kundens maven-projekt.
 
 Oavsett var de finns måste paket refereras som beroenden i pom.xml, vilket tillhandahålls av leverantören.

@@ -2,9 +2,9 @@
 title: Versionsinformation för 2023.8.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2023.8.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a0ffa6cf-64ae-468c-93f4-ac6805ef907e
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
-source-wordcount: '1687'
+source-wordcount: '1691'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Titta på videon Versionsöversikt från augusti 2023 om du vill se en sammanfat
 
 ### Nya funktioner i [!DNL Experience Manager Sites] {#sites-features}
 
-* The [Konsol för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=en) Nu kan användare visa taggar och söka efter taggar som används som metadata i innehållsfragment. Användarna behöver inte längre växla till Assets UI för den här funktionen, vilket minskar behovet av sammanhangsväxling och förbättrar effektiviteten.
+* The [Konsol för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) Nu kan användare visa taggar och söka efter taggar som används som metadata i innehållsfragment. Användarna behöver inte längre växla till Assets UI för den här funktionen, vilket minskar behovet av sammanhangsväxling och förbättrar effektiviteten.
 
   ![Tagga i konsolen för innehållsfragment](/help/assets/content-fragments-console-tags.png)
 * Den nya redigeraren för innehållsfragment är nu tillgänglig på AEM as a Cloud Service. Det ger innehållsförfattarna möjlighet att bli produktivare genom att effektivisera sina redigeringsuppgifter och minska behovet av att växla mellan olika program samtidigt som de redigerar innehåll.

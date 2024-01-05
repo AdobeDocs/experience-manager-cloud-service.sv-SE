@@ -2,16 +2,16 @@
 title: AEM as a Cloud Service on Unified Shell
 description: Läs om fördelarna med AEM as a Cloud Service i Unified Shell
 exl-id: ea739307-dc99-4621-a239-dbe60ab6b52e
-source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 2%
+source-wordcount: '390'
+ht-degree: 1%
 
 ---
 
 # AEM as a Cloud Service on Unified Shell {#aem-as-a-cloud-service-on-unified-shell}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 AEM as a Cloud Service (Author Service) är integrerat med Unified Shell för att förbättra användarupplevelsen och kombinera den med alla andra Experience Cloud-program. Effekten av den här integreringen visas i programmets övre huvud enligt nedan.
 
@@ -32,7 +32,7 @@ AEM as a Cloud Service har ett enhetligt skal aktiverat. Om den övre rubriken h
 >[!NOTE]
 >Enhetligt gränssnitt kan endast inaktiveras av ett konto med administratörsbehörighet.
 
-1. Klicka **Verktyg > Cloud Services**.
+1. Klicka **Verktyg > Cloud Service**.
 
    En administratörsanvändare ser det enhetliga gränssnittskonfigurationskortet enligt nedan:
 
@@ -54,7 +54,7 @@ Om du vill ändra till det mörka temat klickar du på din profilikon. Den här 
 
 ## Identifiera den AEM as a Cloud Service miljön {#identify-aemaacs-environment}
 
-AEM as a Cloud Service innehåller tre typer av miljöer: produktion, scen och utveckling. Se [Miljötyper](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en) för mer information. I och med den här integreringen med Unified Shell visas den typ av miljö som användaren är inloggad på tjänsten Författare i det övre huvudet via en etikett som visas nedan.
+AEM as a Cloud Service innehåller tre typer av miljöer: produktion, scen och utveckling. Se [Miljötyper](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html) för mer information. I och med den här integreringen med Unified Shell visas den typ av miljö som användaren är inloggad på tjänsten Författare i det övre huvudet via en etikett som visas nedan.
 
 ![bild](/help/overview/assets/unifiedshell_header_label.png)
 

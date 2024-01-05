@@ -2,9 +2,9 @@
 title: Replikering
 description: Lär dig mer om distribution och felsökning av replikering på AEM as a Cloud Service.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
-source-wordcount: '1341'
+source-wordcount: '1312'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Du kan aktivera en trädreplikering genom att välja **Verktyg - Arbetsflöde - 
 
 Anropa inte den ursprungliga modellen. Kontrollera i stället att först kopiera modellen och anropa kopian.
 
-Precis som med alla arbetsflöden kan den också anropas via API. Mer information finns i [Interagera med arbetsflöden programmatiskt](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-program-interaction.html?lang=en#extending-aem).
+Precis som med alla arbetsflöden kan den också anropas via API. Mer information finns i [Interagera med arbetsflöden programmatiskt](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-program-interaction.html#extending-aem).
 
 Du kan också skapa en arbetsflödesmodell som använder `Publish Content Tree` processteg:
 
@@ -94,7 +94,7 @@ Du kan också skapa en arbetsflödesmodell som använder `Publish Content Tree` 
 * `filters` (strängvärde, standard betyder att alla sökvägar aktiveras). Tillgängliga värden är:
    * `onlyActivated` - aktivera endast sidor som har (redan) aktiverats. Fungerar som en form av omaktivering.
    * `onlyModified` - aktivera endast sökvägar som redan är aktiverade och som har ett ändringsdatum efter aktiveringsdatumet.
-   * Ovanstående kan vara ORed med vertikalstreck (|). Till exempel, `onlyActivated|onlyModified`.
+   * Ovanstående kan vara ORed med vertikalstreck (|). Till exempel: `onlyActivated|onlyModified`.
 
 **Loggning**
 

@@ -2,7 +2,7 @@
 title: Trafikfilterregler inklusive WAF-regler
 description: Konfigurera trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF)
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
 source-wordcount: '3357'
 ht-degree: 0%
@@ -53,7 +53,7 @@ Som standard vidtar Adobe åtgärder för att förhindra prestandaförsämringar
 
 Kunderna kan vidta förebyggande åtgärder för att mildra attacker i programlager (lager 7) genom att konfigurera regler i olika lager i innehållsleveransflödet.
 
-På exempelvis lagret Apache kan man konfigurera antingen [avsändarmodul](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-access-to-content-filter) eller [ModSecurity](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection.html?lang=en) för att begränsa åtkomsten till visst innehåll.
+På exempelvis lagret Apache kan man konfigurera antingen [avsändarmodul](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-access-to-content-filter) eller [ModSecurity](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection.html) för att begränsa åtkomsten till visst innehåll.
 
 Som beskrivs i den här artikeln kan trafikfilterregler distribueras till det hanterade CDN-nätverket i Adobe med hjälp av Cloud Managers konfigurationsflöde. Utöver trafikfilterregler som baseras på egenskaper som IP-adress, sökväg och rubriker, eller regler som baseras på att hastighetsgränser anges, kan kunder även licensiera en kraftfull underkategori av trafikfilterregler som kallas WAF-regler.
 

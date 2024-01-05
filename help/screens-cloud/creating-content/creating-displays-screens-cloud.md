@@ -2,9 +2,9 @@
 title: Skapa och hantera skärmar på as a Cloud Service
 description: På den här sidan beskrivs hur du skapar och hanterar skärmar på as a Cloud Service.
 exl-id: 0f9faa4b-b50e-40f8-a8ed-280f8bd0a9b8
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '649'
 ht-degree: 2%
 
 ---
@@ -133,4 +133,4 @@ Alla mappåtgärder är tillgängliga via markeringsåtgärdsfältet i lagervyn.
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har lärt dig att skapa och hantera displayer för ditt projekt bör du fortsätta din as a Cloud Service resa för skärmar genom att nästa gång du granskar dokumentet [Tilldela kanal till en skärm på skärmar as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/assigning-channels-to-display.html?lang=en).
+Nu när du har lärt dig att skapa och hantera displayer för ditt projekt bör du fortsätta din as a Cloud Service resa för skärmar genom att nästa gång du granskar dokumentet [Tilldela kanal till en skärm på skärmar as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/assigning-channels-to-display.html).

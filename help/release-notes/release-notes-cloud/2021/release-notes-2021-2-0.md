@@ -2,9 +2,9 @@
 title: Versionsinformation för 2021.2.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2021.2.0."
 exl-id: 88dac54b-cc12-44a0-b429-6e691221f806
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1179'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Följande version (2021.3.0) kommer att vara den 25 mars 2021.
 
 ### Headless Content Management {#headless}
 
-* **[GraphQL API för leverans av innehållsfragment](/help/headless/graphql-api/content-fragments.md)**: Möjlighet att söka efter innehållsfragment med GraphQL-syntax och scheman baserade på Content Fragment-modeller för JSON-format.
+* **[GraphQL API för leverans av innehållsfragment](/help/headless/graphql-api/content-fragments.md)**: Möjlighet att fråga innehållsfragment med GraphQL-syntax och scheman baserade på Content Fragment-modeller för JSON-format.
 
 * **[Autentiseringsstöd för GraphQL API-begäranden](/help/headless/security/authentication.md)**: Möjlighet att autentisera GraphQL API-begäranden med åtkomsttoken för API:er på serversidan.
 
@@ -55,7 +55,7 @@ Följande version (2021.3.0) kommer att vara den 25 mars 2021.
 
 * Resurser kan hämtas med [!DNL Experience Manager Assets Brand Portal]. Det hjälper er att skaffa resurser från byråanvändarna för nya marknadsföringskampanjer, fotografier och projekt.
 
-* [!DNL Experience Manager Assets] som [!DNL Cloud Service] har rätt att ha en förkonfigurerad [!DNL Brand Portal] -instans. The [!DNL Cloud Manager] användare kan aktivera [!DNL Brand Portal] på [!DNL Experience Manager Assets] som [!DNL Cloud Service]. Se [aktivera Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/brand-portal/configure-aem-assets-with-brand-portal.html?lang=en).
+* [!DNL Experience Manager Assets] som [!DNL Cloud Service] har rätt att ha en förkonfigurerad [!DNL Brand Portal] -instans. The [!DNL Cloud Manager] användare kan aktivera [!DNL Brand Portal] på [!DNL Experience Manager Assets] som [!DNL Cloud Service]. Se [aktivera Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/brand-portal/configure-aem-assets-with-brand-portal.html).
 
 * Företag kan nu skaffa resurser med [!DNL Brand Portal]. Funktionen för resurskälla använder [!DNL Brand Portal] för att hjälpa kunderna att interagera med byråanvändare för att skaffa resurser för nya marknadsföringskampanjer, fotografier och projekt. Se [resurskälla i [!DNL Brand Portal]](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html).
 
@@ -72,15 +72,15 @@ Följande version (2021.3.0) kommer att vara den 25 mars 2021.
 
 ## Adobe Experience Manager Commerce as a Cloud Service {#cloud-services-commerce}
 
-### Vad är nytt? {#what-is-new-commerce}
+### Nyheter {#what-is-new-commerce}
 
 * Product Experience Management: Berika katalogsidorna individuellt med Experience Fragments.
 
 * Utökade egenskaper för produktkonsolen för att visa länkade resurser och upplevelsefragment, inklusive åtgärder för att snabbt navigera till det associerade innehållet.
 
-* Lanserade CIF Venia Reference Site - 2021.02.24 som innehåller den senaste CIF Core Components version v1.8.0. Se [CIF Venias referenswebbplats](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.02.24) för mer information.
+* Lanserade CIF Venia Reference Site - 2021.02.24 som innehåller den senaste CIF Core Components version v1.8.0. Se [CIF Venia Reference Site](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.02.24) för mer information.
 
-* Frisläppta CIF-kärnkomponenter v1.8.0. Se [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.8.0) för mer information.
+* Frisläppta CIF kärnkomponenter v1.8.0. Se [CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.8.0) för mer information.
 
 ## Cloud Manager {#cloud-manager}
 
@@ -88,7 +88,7 @@ Följande version (2021.3.0) kommer att vara den 25 mars 2021.
 
 Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.2.0 är 11 februari 2021.
 
-### Vad är nytt? {#what-is-new-cloud-manager}
+### Nyheter {#what-is-new-cloud-manager}
 
 
 * Resurskunder kan nu välja när och var de ska distribuera sin Brand Portal-instans på ett självbetjäningssätt via användargränssnittet i Cloud Manager. För ett vanligt (icke-sandlådeprogram) program med Assets-lösning kan Brand Portal nu etableras i produktionsmiljön. Etableringen kan bara göras en gång i produktionsmiljön.
@@ -99,7 +99,7 @@ Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.2.0 är 11 februar
 
 * SonarQube-profilen för Cloud Manager har uppdaterats för att ta bort Sonar-regelbläckfisk:S2142. Detta kommer inte längre att orsaka en konflikt med kontrollerna för trådavbrott.
 
-* Molnhanterarens användargränssnitt informerar användaren som kanske inte kan lägga till/uppdatera domännamn för tillfället eftersom den associerade miljön antingen har en pågående pipeline kopplad till sig eller väntar på godkännandesteget.
+* Molnhanterarens användargränssnitt informerar användaren som kanske inte kan lägga till/uppdatera domännamn för tillfället eftersom den associerade miljön antingen har en pågående pipeline kopplad till sig eller som väntar på godkännande.
 
 * Egenskaper angivna i kunden `pom.xml` filer som har prefixats med sonar tas nu bort dynamiskt för att undvika fel i skapande och kvalitet vid skanning.
 
@@ -119,7 +119,7 @@ Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.2.0 är 11 februar
 
 * En del pipeline-fel rapporterades felaktigt som pipeline-fel.
 
-## Content Transfer Tool {#content-transfer-tool}
+## Verktyget Innehållsöverföring {#content-transfer-tool}
 
 ### Releasedatum {#release-date-ctt}
 
@@ -149,17 +149,17 @@ Releasedatum för Best Practices Analyzer v2.1.2 är 18 februari 2021.
 ### Nyheter i Best Practices Analyzer {#what-is-new-bpa}
 
 * Möjlighet att upptäcka användning av AEM Forms och AEM Forms och ange områden som är relevanta för migrering till AEM Forms as a Cloud Service.
-* Möjlighet att upptäcka och rapportera användning och antal anpassade komponenter och mallar.
+* Möjlighet att upptäcka och rapportera om användning och antal anpassade komponenter och mallar.
 * Möjlighet att identifiera vilken typ av nodarkiv och datalager som används.
 * Möjlighet att upptäcka användningen av Dynamic Media.
 * Möjlighet att identifiera den Java-version som används.
 
-## Verktyg för omstrukturering av kod {#code-refactoring-tools}
+## Kodomfaktoriseringsverktyg {#code-refactoring-tools}
 
 ### Nyheter i verktygen för kodkorrigering {#what-is-new-crt}
 
 * Ny version av AIO-CLI-plugin släppt. Den senaste versionen av det här plugin-programmet innehåller flera felkorrigeringar för Repository Modernizer.
-Se [Enhetlig upplevelse](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/unified-experience.html?lang=en#benefits) om du vill veta mer om det här plugin-programmet.
+Se [Enhetlig upplevelse](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/unified-experience.html#benefits) om du vill veta mer om plugin-programmet.
 
 ### Felkorrigeringar {#bug-fixes-crt}
 

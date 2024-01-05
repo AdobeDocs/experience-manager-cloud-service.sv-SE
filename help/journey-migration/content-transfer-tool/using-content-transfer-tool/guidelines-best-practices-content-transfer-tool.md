@@ -2,9 +2,9 @@
 title: Riktlinjer och bästa praxis för användning av verktyget Innehållsöverföring
 description: Lär dig riktlinjerna och de bästa sätten att använda verktyget Innehållsöverföring.
 exl-id: d1975c34-85d4-42e0-bb1a-968bdb3bf85d
-source-git-commit: 5f805122fb52d7f5268075bd7a6a0232e7e8d2ff
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1401'
 ht-degree: 11%
 
 ---
@@ -35,7 +35,7 @@ Versioner som är tidigare än 2.0.0 stöds inte och du bör använda den senast
 
 Följande riktlinjer och bästa praxis gäller för den nya versionen av verktyget Innehållsöverföring:
 
-* Kör [Revision Cleanup](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html) och [konsekvenskontroll för datalager](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16550.html?lang=en) på **källa** databas så att du kan identifiera potentiella problem och minska storleken på databasen.
+* Kör [Revision Cleanup](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html) och [konsekvenskontroll för datalager](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16550.html) på **källa** databas så att du kan identifiera potentiella problem och minska storleken på databasen.
 
 * I matningsfasen rekommenderar Adobe att du använder *svepa* läge aktiveras där den befintliga databasen (författare eller publicerad) i målmiljön för Adobe Experience Manager-Cloud Service (AEM) tas bort. Uppdatera sedan med data för migreringsuppsättningen. Det här läget är snabbare än icke-svepningsläget, där migreringsuppsättningen används ovanpå det aktuella innehållet.
 

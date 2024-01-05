@@ -2,9 +2,9 @@
 title: Lägga till skärmar i ett nytt program i Cloud Manager
 description: Lär dig hur du lägger till ett skärmstillägg i ett nytt program i Cloud Manager för skärmar as a Cloud Service.
 exl-id: 36d1e1e9-5272-4138-9e0d-8476edc729f0
-source-git-commit: c31f43986e44099a3a36cc6c9c2f1a7251499ffb
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '288'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 I det här avsnittet beskrivs hur du lägger till skärmar som ett tillägg till ett nytt program i Cloud Manager.
 
 >[!NOTE]
->Se [Program och programtyper](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/program-types.html?lang=en) om du vill veta mer om Cloud Manager-program.
+>Se [Program och programtyper](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/program-types.html) om du vill veta mer om Cloud Manager-program.
 
 ## Syfte {#objective}
 
@@ -27,7 +27,7 @@ Följ stegen nedan för att lägga till skärmar som tillägg till ett nytt prog
 1. Navigera till [Cloud Manager](https://my.cloudmanager.adobe.com/).
 
    >[!NOTE]
-   >Se [Introduktion till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager.html?lang=en) om du vill veta mer om Cloud Manager.
+   >Se [Introduktion till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager.html) om du vill veta mer om Cloud Manager.
 
 1. Klicka **Lägg till program** från landningssidan för Cloud Manager.
 

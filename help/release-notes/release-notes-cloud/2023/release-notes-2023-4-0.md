@@ -2,9 +2,9 @@
 title: Versionsinformation för 2023.4.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2023.4.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: c34aedee-e45a-4e2a-ae7f-930bc0cc026f
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1122'
 ht-degree: 0%
 
 ---
@@ -42,9 +42,9 @@ Titta på videon med versionsöversikten för april 2023 om du vill se en samman
 
 ### Nya funktioner i [!DNL Experience Manager Sites] prerelease {#prerelease-sites}
 
-* Innehållsfragment och deras referenser kan nu publiceras i [Tjänsten AEM Preview](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#access-preview-service) med [Konsol för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=en), vilket gör att användarna kan förhandsgranska slutresultatet i ett fristående förhandsvisningsprogram innan de publicerar.
-* Bilderna kan nu optimeras dynamiskt för webbleverans i headless-scenarier med AEM GraphQL. [Frågevariabler](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/images.html?lang=en#query-variables) kan definieras i GraphQL-frågor för att tillåta att fristående klientprogram begär optimerade bilder från AEM.
-* Taggar på [Variationer för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-variations.html?lang=en) kan nu skrivas ut till JSON med AEM GraphQL Content Delivery API.
+* Innehållsfragment och deras referenser kan nu publiceras i [Tjänsten AEM Preview](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html#access-preview-service) med [Konsol för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html), vilket gör att användarna kan förhandsgranska slutresultatet i ett fristående förhandsvisningsprogram innan de publicerar.
+* Bilderna kan nu optimeras dynamiskt för webbleverans i headless-scenarier med AEM GraphQL. [Frågevariabler](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/images.html#query-variables) kan definieras i GraphQL-frågor för att tillåta att fristående klientprogram begär optimerade bilder från AEM.
+* Taggar på [Variationer för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-variations.html) kan nu skrivas ut till JSON med AEM GraphQL Content Delivery API.
 
 ## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
 
@@ -71,7 +71,7 @@ Titta på videon med versionsöversikten för april 2023 om du vill se en samman
 
 ### Funktion i [!DNL Assets] prerelease {#prerelease-feature-assets}
 
-* Dynamic Media - Användargränssnittet för vissa Smart Crop-relaterade fält i en bildprofil har nu uppdaterats för att återspegla de aktuella riktlinjerna för att definiera en smart beskärning. Se [Beskärningsalternativ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/image-profiles.html?lang=en#crop-options).
+* Dynamic Media - Användargränssnittet för vissa Smart Crop-relaterade fält i en bildprofil har nu uppdaterats för att återspegla de aktuella riktlinjerna för att definiera en smart beskärning. Se [Beskärningsalternativ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/image-profiles.html#crop-options).
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
 

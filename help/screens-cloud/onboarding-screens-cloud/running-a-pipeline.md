@@ -2,10 +2,10 @@
 title: Köra en pipeline
 description: På den här sidan beskrivs hur du kör en pipeline för skärmar som ett Cloud Service-projekt i Cloud Manager.
 exl-id: 3203cff7-5668-4f50-a2c5-80ae474b439d
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 1%
+source-wordcount: '271'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 I det här avsnittet beskrivs hur du kör pipeline och distribuerar koden för ditt program i Cloud Manager.
 
 >[!NOTE]
->Se [Konfigurera CI-CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?lang=en) och [Distribuera koden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html?lang=en) om du vill veta hur du kan köra pipeline för ditt program i Cloud Manager.
+>Se [Konfigurera CI-CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html) och [Distribuera koden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html) om du vill veta hur du kan köra pipeline för ditt program i Cloud Manager.
 
 ## Syfte {#objective}
 
@@ -35,14 +35,14 @@ I följande avsnitt beskrivs hur du konfigurerar CI/CD-flödet och distribuerar 
 1. Välj alternativ på **Konfigurera pipeline** guide. Klicka **Spara**.
 
    >[!NOTE]
-   >Mer information om alternativen i guiden Konfigurera pipeline finns i [Konfigurera pipeline-inställningar från Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?lang=en) för mer information.
+   >Mer information om alternativen i guiden Konfigurera pipeline finns i [Konfigurera pipeline-inställningar från Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html) för mer information.
 
    ![bild](/help/screens-cloud/assets/onboarding/run-pipeline2-a.png)
 
 1. När installationen är klar uppdateras åtgärdskortet.
 
    >[!NOTE]
-   >Mer information om distributionsfaserna i Cloud Manager finns i [Distribuera koden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html?lang=en) för mer information.
+   >Mer information om distributionsfaserna i Cloud Manager finns i [Distribuera koden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html) för mer information.
 
    ![bild](/help/screens-cloud/assets/onboarding/run-pipeline3.png)
 

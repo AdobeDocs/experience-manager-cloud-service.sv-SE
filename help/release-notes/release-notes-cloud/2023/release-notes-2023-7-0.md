@@ -2,7 +2,7 @@
 title: Versionsinformation för 2023.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2023.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 7866d94c-e54c-4bb2-aaa6-66c019e46336
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
 source-wordcount: '896'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Titta på videon med versionsöversikten för juli 2023 om du vill se en sammanf
 
 ### Nya funktioner i [!DNL Experience Manager Sites] prerelease {#prerelease-sites}
 
-* The [Konsol för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=en) Nu kan användare visa taggar och söka efter taggar som används som metadata i innehållsfragment. Användarna behöver inte längre växla till Assets UI för den här funktionen, vilket minskar behovet av sammanhangsväxling och förbättrar effektiviteten.
+* The [Konsol för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) Nu kan användare visa taggar och söka efter taggar som används som metadata i innehållsfragment. Användarna behöver inte längre växla till Assets UI för den här funktionen, vilket minskar behovet av sammanhangsväxling och förbättrar effektiviteten.
 
 ![Tagga i konsolen för innehållsfragment](/help/assets/content-fragments-console-tags.png)
 

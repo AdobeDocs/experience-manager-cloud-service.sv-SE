@@ -2,9 +2,9 @@
 title: Fördelar med att använda Cloud Acceleration Manager
 description: På den här sidan beskrivs de viktigaste fördelarna med att använda Cloud Acceleration Manager.
 exl-id: d7a6c4f6-0f50-4f44-8a62-4a5769c76bd5
-source-git-commit: fac037b59753ba1de960df47311c1febc2059d27
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
@@ -39,4 +39,4 @@ De viktigaste fördelarna med att använda Cloud Acceleration Manager är:
 
 ## What’s Next {#whats-next}
 
-När du har lärt dig vad som är Cloud Acceleration Manager är du nu redo att använda och [Kom igång med Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html?lang=en).
+När du har lärt dig vad som är Cloud Acceleration Manager är du nu redo att använda och [Kom igång med Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html).

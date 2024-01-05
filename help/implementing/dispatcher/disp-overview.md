@@ -3,10 +3,10 @@ title: Dispatcher i molnet
 description: Lär dig mer om Dispatcher-verktygen, vilka Apache-moduler som stöds samt äldre och flexibla lägen.
 feature: Dispatcher
 exl-id: 6d78026b-687e-434e-b59d-9d101349a707
-source-git-commit: 127b79d766a4dfc33a2ed6016e191e771206d791
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 1%
+source-wordcount: '716'
+ht-degree: 0%
 
 ---
 
@@ -50,7 +50,7 @@ Uncompressing aem-sdk-dispatcher-tools-<version>-unix.sh 100%
 
 Dispatcher-verktygen används för att validera och felsöka projektets Dispatcher-konfiguration. Lär dig mer om hur du använder dessa verktyg på de sidor som refereras nedan, baserat på om projektets Dispatcher-konfiguration är strukturerad i flexibelt läge eller äldre läge:
 
-* **Flexibelt läge** - det rekommenderade läget och standardvärdet för [AEM 28](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=en) och senare, som också används av Cloud Manager för nya miljöer som skapats efter Cloud Manager 2021.7.0. Kunder kan aktivera det här läget genom att lägga till mappen och filen `opt-in/USE_SOURCES_DIRECTLY`. Om du använder det här mer flexibla läget finns det inga begränsningar i filstrukturen i mappen för omskrivning som i det äldre läget krävde en enda `rewrite.rules` -fil. Det finns heller ingen begränsning för hur många regler du kan lägga till. Mer information om mappstruktur och lokal validering finns i [Validera och felsöka med Dispatcher Tools](/help/implementing/dispatcher/validation-debug.md).
+* **Flexibelt läge** - det rekommenderade läget och standardvärdet för [AEM 28](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) och senare, som också används av Cloud Manager för nya miljöer som skapats efter Cloud Manager 2021.7.0. Kunder kan aktivera det här läget genom att lägga till mappen och filen `opt-in/USE_SOURCES_DIRECTLY`. Om du använder det här mer flexibla läget finns det inga begränsningar i filstrukturen i mappen för omskrivning som i det äldre läget krävde en enda `rewrite.rules` -fil. Det finns heller ingen begränsning för hur många regler du kan lägga till. Mer information om mappstruktur och lokal validering finns i [Validera och felsöka med Dispatcher Tools](/help/implementing/dispatcher/validation-debug.md).
 
 * **Äldre läge** - mer information om mappstrukturen och lokal validering för äldre Dispatcher-konfigurationsläge finns i [Validera och felsöka med Dispatcher Tools (äldre)](/help/implementing/dispatcher/validation-debug-legacy.md)
 

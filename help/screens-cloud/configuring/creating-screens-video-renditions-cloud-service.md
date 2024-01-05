@@ -2,9 +2,9 @@
 title: Skapa videoåtergivningar på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du skapar videoåtergivningar på skärmar as a Cloud Service.
 exl-id: a9c46036-cd29-47fa-81d9-c865cf22c98a
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '360'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Följ stegen nedan för att skapa videoåtergivningar på skärmar som är as a 
 1. Navigera till kanalen i Screens Content Provider.
 
    >[!NOTE]
-   >Se [Använda leverantör av skärminnehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html?lang=en#screens-content-provider) för mer information.
+   >Se [Använda leverantör av skärminnehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html#screens-content-provider) för mer information.
 
 1. Klicka på avsnittet Verktyg i det vänstra navigeringsfältet och klicka på **Resurser** och sedan klicka **Bearbetar profiler**.
 

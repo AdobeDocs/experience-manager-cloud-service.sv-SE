@@ -4,7 +4,7 @@ description: Använda verktyget för användarmappning (äldre)
 exl-id: dcb750c4-0f81-4d11-ac6c-0592162b683d
 hide: true
 hidefromtoc: true
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 1%
@@ -94,7 +94,7 @@ Verktyget för användarmappning är integrerat i verktyget Innehållsöverföri
 
    >[!IMPORTANT]
    >
-   >* När användarmappningen är klar kan du gå tillbaka till sidan Innehållsmigrering med hjälp av den synliga sökvägen. Kortet för användarmappning visar status och tidsstämpel. Klicka **Innehållsöverföring** så att du kan skapa en migreringsuppsättning för att köra extraheringen. Se [Använda verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=en#running-tool) för mer information.
+   >* När användarmappningen är klar kan du gå tillbaka till sidan Innehållsmigrering med hjälp av den synliga sökvägen. Kortet för användarmappning visar status och tidsstämpel. Klicka **Innehållsöverföring** så att du kan skapa en migreringsuppsättning för att köra extraheringen. Se [Använda verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#running-tool) för mer information.
 
 ### Återuppta användarmappningsprocessen {#resume-user-mapping-process}
 

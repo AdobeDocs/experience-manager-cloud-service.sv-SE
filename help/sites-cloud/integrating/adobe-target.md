@@ -2,10 +2,10 @@
 title: Integrera med Adobe Target
 description: Integrera med Adobe Target
 exl-id: 2b4cf35e-2b75-4303-8d09-f6644ad99274
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 1%
+source-wordcount: '615'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +33,7 @@ Utför följande uppgifter för att integrera med Target:
 
    * [Integrering med Adobe Target med Adobe I/O](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/integration-target-ims.html)
    * [Integrera Launch by Adobe](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
-   * [Integrera AEM med Adobe Launch via Adobe I/O](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html?lang=en)
+   * [Integrera AEM med Adobe Launch via Adobe I/O](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
    * [Förstå AEM integrering med Launch by Adobe, analys och mål](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
 
 >[!NOTE]
@@ -64,7 +64,7 @@ När integreringen är klar kan du [skapa riktat innehåll](https://experiencele
 
 >[!NOTE]
 >
->När du riktar in dig på en komponent i AEM författare gör komponenten ett antal serveranrop till Adobe Target för att registrera kampanjen, konfigurera erbjudanden och hämta Adobe Target-segment (om de är konfigurerade). Inga serversamtal görs från AEM publicera till Adobe Target.
+>När du riktar in dig på en komponent i AEM författare gör komponenten ett antal serveranrop till Adobe Target för att registrera kampanjen, konfigurera erbjudanden och hämta Adobe Target-segment (om de är konfigurerade). Inga anrop på serversidan görs från AEM publicera till Adobe Target.
 
 ## Källor för bakgrundsinformation {#background-information-sources}
 

@@ -2,9 +2,9 @@
 title: Versionsinformation för 2023.2.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2023.2.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 671056e6-84cc-4c2c-bca3-fde68d5cc835
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Titta på videon med versionsöversikten från februari 2023 om du vill se en sa
 
 ### Nya funktioner i [!DNL Forms] {#new-features-available-in-channel}
 
-* **[Använd kärnkomponenterna för datainhämtning för att bygga adaptiva Forms](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en)**: [Använda adaptiv Forms-redigerare](/help/forms/creating-adaptive-form-core-components.md) för att skapa formulär baserade på standardiserade datainhämtningskomponenter (kärnkomponenter). Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser.
+* **[Använd kärnkomponenterna för datainhämtning för att bygga adaptiva Forms](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)**: [Använda adaptiv Forms-redigerare](/help/forms/creating-adaptive-form-core-components.md) för att skapa formulär baserade på standardiserade datainhämtningskomponenter (kärnkomponenter). Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser.
 
 * **[Stöd för Frontend-pipeline för styling core Component-baserad Adaptive Forms](/help/forms/using-themes-in-core-components.md)**: Använd standardiserade BEM-baserade teman för Core Components-baserade Adaptive Forms genom att använda dem med Frontend Deployment Pipeline för att förbättra utseendet och känslan i era formulär och anpassa dem efter företagets varumärkesgodkända riktlinjer.
 

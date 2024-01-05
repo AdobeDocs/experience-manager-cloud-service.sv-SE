@@ -2,10 +2,10 @@
 title: Skapa ett projekt på skärmar as a Cloud Service
 description: Lär dig hur du skapar ett projekt på skärmar as a Cloud Service.
 exl-id: 89e3ac28-7537-413d-b63b-abd2bbae6cb7
-source-git-commit: 900cdc53475446b9d93cb071f281da5dbe043888
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
-source-wordcount: '335'
-ht-degree: 1%
+source-wordcount: '326'
+ht-degree: 0%
 
 ---
 
@@ -24,13 +24,13 @@ Följ stegen nedan för att skapa ett projekt på skärmar as a Cloud Service:
 1. Navigera till Screens Content Provider.
 
    >[!NOTE]
-   >Se [Använda leverantör av skärminnehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html?lang=en) om du vill veta hur du får åtkomst till Screens Content Provider för att skapa ditt projekt.
+   >Se [Använda leverantör av skärminnehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html) om du vill veta hur du får åtkomst till Screens Content Provider för att skapa ditt projekt.
 
 1. Klicka på i åtgärdsfältets övre högra hörn **Skapa skärmsprojekt**.
 
    ![create-screens-project1](/help/screens-cloud/assets/create-content/create-screens-project1.png)
 
-1. Ange **Titel** av ditt projekt i **Skapa skärmsprojekt** -dialogrutan. Till exempel: *FirstDigitalExperience*.
+1. Ange **Titel** av projektet i **Skapa skärmsprojekt** -dialogrutan. Till exempel: *FirstDigitalExperience*.
 
    ![create-screens-project2](/help/screens-cloud/assets/create-content/create-screens-project2.png)
 

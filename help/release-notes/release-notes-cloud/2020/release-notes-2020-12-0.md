@@ -2,9 +2,9 @@
 title: Versionsinformation om 2020.12.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2020.12.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 16875180-1f23-477d-9d4d-e220998c4983
-source-git-commit: c31f43986e44099a3a36cc6c9c2f1a7251499ffb
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '650'
 ht-degree: 0%
 
 ---
@@ -36,9 +36,9 @@ Följande version (2021.1.0) är 28 januari 2021.
 
 ### Nyheter {#what-is-new-commerce}
 
-* Lanserade CIF Venia Reference Site - 2020.12.01 som innehåller den senaste CIF Core Components version v1.6.0. Se [CIF Venias referenswebbplats](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2020.12.01) för mer information.
+* Lanserade CIF Venia Reference Site - 2020.12.01 som innehåller den senaste CIF Core Components version v1.6.0. Se [CIF Venia Reference Site](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2020.12.01) för mer information.
 
-* Frisläppta CIF kärnkomponenter v1.6.0. Se [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.6.0) för mer information.
+* Frisläppta CIF kärnkomponenter v1.6.0. Se [CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.6.0) för mer information.
 
 ## Cloud Manager {#cloud-manager}
 
@@ -60,11 +60,11 @@ Releasedatum för Cloud Manager i Adobe Experience Manager (AEM) as a Cloud Serv
 
 * Miljökortet visade inte enhetligt **Lägg till** -knappen.
 
-## Verktyg för omstrukturering av kod {#code-refactoring-tools}
+## Kodomfaktoriseringsverktyg {#code-refactoring-tools}
 
 ### Nyheter i [!DNL Code Refactoring Tools] {#what-is-new-crt}
 
-* Ny version av AIO-CLI-plugin släppt. Den senaste versionen av denna plugin innehåller felkorrigeringar för AEM Dispatcher Converter och Repository Modernizer och har även stöd för ett nytt verktyg - Index Converter. Se [Enhetlig upplevelse](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/unified-experience.html?lang=en#benefits) där du kan lära dig mer om det här plugin-programmet.
+* Ny version av AIO-CLI-plugin släppt. Den senaste versionen av denna plugin innehåller felkorrigeringar för AEM Dispatcher Converter och Repository Modernizer och har även stöd för ett nytt verktyg - Index Converter. Se [Enhetlig upplevelse](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/unified-experience.html#benefits) där du kan lära dig mer om det här plugin-programmet.
 
 * Indexkonverteraren är ett verktyg som kan användas för att omvandla en kunds anpassade indexdefinitioner för eknos till AEM as a Cloud Service kompatibla indexdefinitioner för ekindex. Se [Indexkonverterare](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/index-converter) för mer information.
 

@@ -3,9 +3,10 @@ title: Administrera arbetsflödesinstanser
 description: Lär dig administrera arbetsflödesinstanser med arbetsflödeskonsolen
 feature: Administering
 role: Admin
-source-git-commit: d1da8559da856e028a5dcad1d0c0b2c00176af0c
+exl-id: d2adb5e8-3f0e-4a3b-b7d0-dbbc5450e45f
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
-source-wordcount: '1288'
+source-wordcount: '1286'
 ht-degree: 0%
 
 ---
@@ -46,7 +47,7 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 
    >[!NOTE]
    >
-   > Om du vill att arbetsflödesinstansen ska vara felfri följer du god praxis på [regelbunden rensning av arbetsflödesinstanser](#regular-purging-of-workflow-instances) eller [arbetsflöden](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html?lang=en).
+   > Om du vill att arbetsflödesinstansen ska vara felfri följer du god praxis på [regelbunden rensning av arbetsflödesinstanser](#regular-purging-of-workflow-instances) eller [arbetsflöden](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html).
 
 ## Sök efter arbetsflödesinstanser {#search-workflow-instances}
 
@@ -264,5 +265,3 @@ public interface UserMetaDataPersistenceProvider {
  
 } 
 ```
-
-

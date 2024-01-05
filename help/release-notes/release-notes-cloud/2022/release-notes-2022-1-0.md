@@ -2,10 +2,10 @@
 title: Versionsinformation för 2022.1.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.1.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 1c40ab67-8fd7-4f29-b8c9-dd98b6d5b490
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
-source-wordcount: '1069'
-ht-degree: 1%
+source-wordcount: '1065'
+ht-degree: 0%
 
 ---
 
@@ -115,7 +115,7 @@ Releasedatum för Cloud Manager i AEM as a Cloud Service 2022.01.0 är 20 januar
 * Steget för att skapa bilder markeras inte längre som FEL för rörledningar som i vissa sällsynta fall använde det schemalagda steget.
 * För program med endast en databas visas databasens namn på körningsskärmen för pipeline.
 
-## Content Transfer Tool {#ctt-release}
+## Verktyget Innehållsöverföring {#ctt-release}
 
 ### Releasedatum {#release-date-ctt}
 
@@ -123,7 +123,7 @@ Releasedatum för Content Transfer Tool v1.8.6 är 3 februari 2022.
 
 ### Nyheter {#what-is-new-ctt}
 
-* Innehållsvalidering - Användarna kan på ett tillförlitligt sätt avgöra om allt innehåll som extraherats av verktyget Innehållsöverföring har importerats till målinstansen. Om du vill använda den här funktionen aktiverar du den i `System Console` i AEM. Se [Verifierar innehållsöverföringar - Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/validating-content-transfers.html?lang=en#getting-started) för mer information.
+* Innehållsvalidering - Användarna kan på ett tillförlitligt sätt avgöra om allt innehåll som extraherats av verktyget Innehållsöverföring har importerats till målinstansen. Om du vill använda den här funktionen aktiverar du den i `System Console` i AEM. Se [Verifierar innehållsöverföringar - Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/validating-content-transfers.html#getting-started) för mer information.
 
 ### Felkorrigeringar {#bug-fixes-ctt}
 

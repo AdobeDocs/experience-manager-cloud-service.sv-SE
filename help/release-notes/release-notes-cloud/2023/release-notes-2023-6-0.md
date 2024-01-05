@@ -1,13 +1,13 @@
 ---
 title: Versionsinformation om 2023.6.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2023.6.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
-source-git-commit: 7d09cafc4f8518fee185d3f9efc76c33ec20f9a3
+exl-id: 29cf9548-e413-4e4f-b233-d6bb04918b22
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1357'
 ht-degree: 0%
 
 ---
-
 
 # Versionsinformation 2023.6.0 för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
@@ -41,8 +41,8 @@ Titta på videon om versionsöversikten för juni 2023 om du vill se en sammanfa
 
 ![Förhandsgranska i konsolen för innehållsfragment](/help/assets/content-fragments-console-preview.png)
 
-* Bilderna kan nu optimeras dynamiskt för webbleverans i headless-scenarier med AEM GraphQL. [Frågevariabler](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/images.html?lang=en#query-variables) kan definieras i GraphQL-frågor för att tillåta att fristående klientprogram begär optimerade bilder från AEM.
-* Taggar på [Variationer för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-variations.html?lang=en) kan nu skrivas ut till JSON med AEM GraphQL Content Delivery API.
+* Bilderna kan nu optimeras dynamiskt för webbleverans i headless-scenarier med AEM GraphQL. [Frågevariabler](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/images.html#query-variables) kan definieras i GraphQL-frågor för att tillåta att fristående klientprogram begär optimerade bilder från AEM.
+* Taggar på [Variationer för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-variations.html) kan nu skrivas ut till JSON med AEM GraphQL Content Delivery API.
 
 ## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
 
@@ -74,7 +74,7 @@ En ny förbättrad användarupplevelse för [skapa länkresurser](/help/assets/s
 
 **Dynamic Media: Uppdaterade fält relaterade till smart beskärning i bildprofilen**
 
-Användargränssnittet för vissa Smart Crop-relaterade fält i en bildprofil har nu uppdaterats för att återspegla de aktuella riktlinjerna för att definiera en smart beskärning. Se [Beskärningsalternativ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/image-profiles.html?lang=en#crop-options).
+Användargränssnittet för vissa Smart Crop-relaterade fält i en bildprofil har nu uppdaterats för att återspegla de aktuella riktlinjerna för att definiera en smart beskärning. Se [Beskärningsalternativ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/image-profiles.html#crop-options).
 
 ### Nya funktioner i resursvyn {#assets-view-features}
 

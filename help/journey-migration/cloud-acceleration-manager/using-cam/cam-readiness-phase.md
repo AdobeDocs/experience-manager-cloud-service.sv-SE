@@ -2,10 +2,10 @@
 title: Beredningsfas i molnaccelerationshanteraren
 description: Den här sidan innehåller en översikt över beredskapsfasen i Cloud Acceleration Manager.
 exl-id: 2583985b-0358-433c-9d31-38e2c60dc3dc
-source-git-commit: 78ead5f15c2613d9c3bed3025b43423a66805c59
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 5%
+source-wordcount: '944'
+ht-degree: 3%
 
 ---
 
@@ -40,12 +40,12 @@ Följ stegen nedan för att navigera till beredskapsfasen:
 1. Hämta BPA (Best Practices Analyzer).
 
    >[!NOTE]
-   >För att undvika att affärskritiska instanser påverkas rekommenderar Adobe att du kör BPA i en redigeringsmiljö. Miljön bör vara så nära produktionsmiljön som möjligt när det gäller anpassningar, konfigurationer, innehåll och användarapplikationer. Alternativt kan det köras på en klon av författarmiljön i produktion.
+   >För att undvika att affärskritiska instanser påverkas rekommenderar Adobe att du kör BPA i en redigeringsmiljö. Miljön bör vara så nära produktionsmiljön som möjligt när det gäller anpassningar, konfigurationer, innehåll och användarapplikationer. Alternativt kan det köras på en klon av produktionsredigeringsmiljön.
 
    1. Navigera till [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) portalen och hämta Best Practices Analyzer som en zip-fil.
 
       >[!NOTE]
-      >Granska [Använda Best Practices Analyzer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/using-best-practices-analyzer.html?lang=en#imp-considerations) om du vill lära dig hur du kör BPA.
+      >Granska [Använda Best Practices Analyzer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/using-best-practices-analyzer.html#imp-considerations) om du vill lära dig hur du kör BPA.
 
    1. Exportera rapporten i CSV-format
 
@@ -97,7 +97,7 @@ Följ stegen nedan för att visa rapporter från trendlinjealternativet:
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view1a.png)
 
-1. Klicka på **...**.
+1. Klicka **...**.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view1.png)
 
@@ -159,7 +159,7 @@ Du kan filtrera rapporten baserat på prioritet, undertyp eller antal.
 ![bild](/help/journey-migration/cloud-acceleration-manager/assets/report-overview3.png)
 
 >[!NOTE]
->Se [Tolka rapporten Best Practices Analyzer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/using-best-practices-analyzer.html?lang=en) för att lära sig mer om forskningskategorier och prioritetsnivåer.
+>Se [Tolka rapporten Best Practices Analyzer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/using-best-practices-analyzer.html) för att lära sig mer om forskningskategorier och prioritetsnivåer.
 
 #### Utvärdering av bästa praxis {#best-practices-assessment}
 
@@ -169,7 +169,7 @@ Alternativet Best Practices Assessment (Utvärdering av bästa praxis) ger en be
 * Anpassade komponenter och mallar
 * Ytterligare resultat
 * Långsamma frågor
-* Underhållsåtgärder
+* Underhållsaktiviteter
 
 #### Utvärdering av migreringskomplexitet {#migration-complexity-assessment}
 
@@ -202,7 +202,7 @@ Du kan granska följande information på den här fliken:
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view1a.png)
 
-1. Klicka på **...**.
+1. Klicka **...**.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view1.png)
 
@@ -220,4 +220,4 @@ Du kan granska följande information på den här fliken:
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du loggar in i Cloud Acceleration Manager och hur du skapar ett projekt är du nu redo att gå vidare till nästa steg i [Implementeringsfas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-implementation-phase.html?lang=en).
+När du har lärt dig hur du loggar in i Cloud Acceleration Manager och hur du skapar ett projekt är du nu redo att gå vidare till nästa steg i [Implementeringsfas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-implementation-phase.html).

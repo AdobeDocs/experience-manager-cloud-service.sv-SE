@@ -2,9 +2,9 @@
 title: Introduktion till AEM Screens as a Cloud Service
 description: Den här sidan är en introduktion till Adobe Experience Manager Screens as a Cloud Service.
 exl-id: b1cc0a63-ecd3-4d89-ac49-f384cc610cdc
-source-git-commit: 97a6a7865f696f4d61a1fb4e25619caac7b68b51
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '373'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ AEM Screens as a Cloud Service är en digital signeringslösning som gör det m�
 
 As a Cloud Service raster har två huvudkomponenter:
 
-* **[Innehållsleverantör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html?lang=en)**, vilket är tillägget Skärmar som körs på AEM Cloud Service eller på Adobe Managed Services (AMS). Med Screens Content Provider kan innehållsförfattaren skapa och hantera kanaler. Innehållsförfattarna kan lägga till nytt innehåll, redigera innehållet utan att behöva bekymra sig om hur de skapar displayer eller registrering. Innehållsleverantören tillhandahåller en sammanfattning av de underliggande detaljerna för utveckling av innehåll, skärmar eller spelarregistrering.
+* **[Innehållsleverantör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html)**, vilket är tillägget Skärmar som körs på AEM Cloud Service eller på Adobe Managed Services (AMS). Med Screens Content Provider kan innehållsförfattaren skapa och hantera kanaler. Innehållsförfattarna kan lägga till nytt innehåll, redigera innehållet utan att behöva bekymra sig om hur de skapar displayer eller registrering. Innehållsleverantören tillhandahåller en sammanfattning av de underliggande detaljerna för utveckling av innehåll, skärmar eller spelarregistrering.
 
-* **[Tjänsteleverantör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html?lang=en)**, som är den digitala signeringshanteringstjänsten som körs på Adobe I/O Runtime. Med Screens Services Provider kan skribenter, utvecklare och administratörer hantera skärmar och spelare för uppspelning av innehåll när innehållet har lagts till i kanalerna. Screens Services Provider informerar även koordinatorn om var och när innehållet ska spelas upp på en hög nivå.
+* **[Tjänsteleverantör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html)**, som är den digitala signeringshanteringstjänsten som körs på Adobe I/O Runtime. Med Screens Services Provider kan skribenter, utvecklare och administratörer hantera skärmar och spelare för uppspelning av innehåll när innehållet har lagts till i kanalerna. Screens Services Provider informerar även koordinatorn om var och när innehållet ska spelas upp på en hög nivå.
 
 
 ## Arkitektöversikt {#architectural-overview}

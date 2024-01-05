@@ -2,7 +2,7 @@
 title: Få åtkomst till ditt innehåll via AEM-API:er
 description: I den här delen av AEM Headless Developer Journey kan du lära dig hur du använder GraphQL-frågor för att komma åt ditt innehåll i Content Fragments.
 exl-id: 1adecc69-5f92-4007-8a2a-65bf1e960645
-source-git-commit: 0d0b91551582040c39d57b29c8f2141c2ff6d553
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
 source-wordcount: '1344'
 ht-degree: 0%
@@ -374,7 +374,7 @@ Nu när du har lärt dig hur du får åtkomst till och frågar efter headless-in
 * [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)
    * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
    * [JSON-utdata](/help/assets/content-fragments/content-fragments-json-preview.md)
-* [CORS (Cross-Origin Resource Sharing)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=en#understand-cross-origin-resource-sharing-(cors))
+* [CORS (Cross-Origin Resource Sharing)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html#understand-cross-origin-resource-sharing-(cors))
 * [GraphQL Persistent Queries - aktivera cachelagring i Dispatcher](/help/headless/deployment/dispatcher-caching.md)
 * [Genererar åtkomsttoken för API:er på serversidan](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md)
 * [Komma igång med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - En kort videosjälvstudiekurs med en översikt över hur du använder AEM headless-funktioner, inklusive innehållsmodellering och GraphQL.

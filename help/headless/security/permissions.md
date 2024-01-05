@@ -3,9 +3,9 @@ title: Behörighetsaspekter för headless-innehåll
 description: Läs om olika behörigheter och ACL-överväganden för en headless-implementering med Adobe Experience Manager. Förstå de olika personifieringsnivåer och behörighetsnivåer som krävs för både författarmiljön och publiceringsmiljön.
 feature: Content Fragments,GraphQL API
 exl-id: 3fbee755-2fa4-471b-83fc-3f4bf056267a
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ I författartjänsten kan interna användare skapa, hantera och publicera inneh�
 
 Som en god praxis bör behörigheter anges för grupper i AEM. Dessa grupper kallas även lokala grupper och kan hanteras i AEM redigeringsmiljö.
 
-Det enklaste sättet att hantera gruppmedlemskap är att använda Adobe Identity Management System-grupper (IMS) och tilldela [IMS-grupper till lokala AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=en#managing-permissions-in-aem).
+Det enklaste sättet att hantera gruppmedlemskap är att använda Adobe Identity Management System-grupper (IMS) och tilldela [IMS-grupper till lokala AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html#managing-permissions-in-aem).
 
 ![Administratörskonsolens behörighetsflöde](assets/admin-console-aem-group-permissions.png)
 

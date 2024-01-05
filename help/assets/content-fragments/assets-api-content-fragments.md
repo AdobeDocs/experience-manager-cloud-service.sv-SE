@@ -3,7 +3,7 @@ title: Stöd för Adobe Experience Manager as a Cloud Service Content Fragments 
 description: Läs om stödet för innehållsfragment i Assets HTTP API, en viktig del av Adobe Experience Manager headless-leveransfunktion.
 feature: Content Fragments,Assets HTTP API
 exl-id: d72cc0c0-0641-4fd6-9f87-745af5f2c232
-source-git-commit: 62ede258711d0cb8d0b72479559c37221509e23f
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
 source-wordcount: '1749'
 ht-degree: 0%
@@ -153,8 +153,8 @@ Om REST API:t för Resurser används i en miljö utan särskilda autentiseringsk
 >
 >Mer information finns i:
 >
->* [CORS/AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=en)
->* [Video - Utveckla för CORS med AEM (04:06)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html?lang=en)
+>* [CORS/AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)
+>* [Video - Utveckla för CORS med AEM (04:06)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html)
 >
 
 I miljöer med specifika autentiseringskrav rekommenderas OAuth.
@@ -358,4 +358,4 @@ Här finns detaljerade API-referenser:
 Mer information finns i:
 
 * [Resurser för HTTP API-dokumentation](/help/assets/mac-api-assets.md)
-* [AEM Gem-session: OAuth](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2014/aem-oauth-server-functionality-in-aem.html?lang=en)
+* [AEM Gem-session: OAuth](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2014/aem-oauth-server-functionality-in-aem.html)

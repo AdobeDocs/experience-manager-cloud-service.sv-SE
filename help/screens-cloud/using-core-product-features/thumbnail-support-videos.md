@@ -3,14 +3,14 @@ title: Stöd för miniatyrbilder för videoklipp på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du lägger till stöd för miniatyrbilder för videoklipp på skärmar as a Cloud Service.
 index: true
 exl-id: 7b15d7cc-f089-4008-9039-5f48343a0f20
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
 
-# Stöd för miniatyrbilder för videoklipp {#thumbnail-support-videos}
+# Stöd för miniatyrbilder för videor {#thumbnail-support-videos}
 
 ## Introduktion {#introduction}
 
@@ -38,7 +38,7 @@ Följ stegen nedan för att använda miniatyrbilden i videoklipp:
 1. Navigera till en befintlig skärmkanal eller skapa en kanal.
 
    >[!NOTE]
-   >Mer information om hur du skapar en kanal och lägger till innehåll i en kanal finns i [Skapa och hantera en kanal på skärmar as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/create-content/creating-channels-screens-cloud.html?lang=en).
+   >Mer information om hur du skapar en kanal och lägger till innehåll i en kanal finns i [Skapa och hantera en kanal på skärmar as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/create-content/creating-channels-screens-cloud.html).
 
 1. Markera kanalen. Klicka på i åtgärdsfältet **Redigera** för att öppna redigeraren.
 
@@ -71,7 +71,7 @@ Följ stegen nedan för att använda miniatyrbilden i videoklipp:
 
 Miniatyrbilder i videoklipp har stöd för följande användningsområden:
 
-* En videokomponent utan inställningar hoppas över.
+* En videokomponent utan några inställningar hoppas över.
 
 * En videokomponent med bara miniatyrbildsuppsättningen spelar upp miniatyrbilden.
 
