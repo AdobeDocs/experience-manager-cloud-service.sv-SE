@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: cfae48067df75dae54822dc0c6f868cca75887d4
+source-git-commit: c04b9391059e66b343fe2ecab90e26179b2172ac
 workflow-type: tm+mt
-source-wordcount: '4565'
+source-wordcount: '4567'
 ht-degree: 4%
 
 ---
@@ -781,6 +781,7 @@ ht-degree: 4%
       + [Platshållare](/help/edge/docs/placeholders.md)
       + [Webbplatskarta](/help/edge/developer/sitemap.md)
       + [SharePoint Setup](/help/edge/docs/setup-customer-sharepoint.md)
+      + [Slack Bot](/help/edge/docs/slack.md)
    + Startar program för Edge Delivery {#launch}
       + [Go Live Checklist](/help/edge/docs/go-live-checklist.md)
       + [Push-invalidering](/help/edge/docs/setup-byo-cdn-push-invalidation.md)
