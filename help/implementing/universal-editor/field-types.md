@@ -1,29 +1,29 @@
 ---
-title: Fälttyper för den universella redigeraren
-description: Lär dig mer om de olika typer av fält som den universella redigeraren stöder och vad du kan göra för dina egna program.
-source-git-commit: 16f2922a3745f9eb72f7070c30134e5149eb78ce
+title: Fälttyper
+description: Lär dig mer om de olika typer av fält som den universella redigeraren kan redigera i komponentfältet med exempel på hur du kan mäta din egen app.
+source-git-commit: b1a188d01371665b4375087847625d89e47d8927
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
 
 
-# Fälttyper för den universella redigeraren {#field-types}
+# Fälttyper {#field-types}
 
-Lär dig mer om de olika typer av fält som den universella redigeraren stöder och vad du kan göra för dina egna program.
+Lär dig mer om de olika typer av fält som den universella redigeraren kan redigera i komponentfältet med exempel på hur du kan mäta din egen app.
 
 {{universal-editor-status}}
 
 ## Ökning {#overview}
 
-När du anpassar dina egna program för användning med den universella redigeraren måste du mäta komponenterna och definiera vilka datatyper de kan hantera i redigeraren.
+När du anpassar dina egna program för användning med den universella redigeraren måste du mäta komponenterna och definiera vilka datatyper som de kan hantera i redigerarens komponentspår.
 
-Det här dokumentet innehåller en översikt över de fälttyper som är tillgängliga i redigeraren.
+Det här dokumentet innehåller en översikt över de fälttyper som är tillgängliga för dig tillsammans med exempelkonfigurationer.
 
 >[!TIP]
 >
->Om du inte känner till hur du kan mäta din app för den universella redigeraren kan du läsa dokumentet [Universell redigeringsöversikt för AEM.](help/implementing/universal-editor/developer-overview.md)
+>Om du inte känner till hur du kan mäta din app för den universella redigeraren kan du läsa dokumentet [Universell redigeringsöversikt för AEM.](/help/implementing/universal-editor/developer-overview.md)
 
 ## Boolean {#boolean}
 

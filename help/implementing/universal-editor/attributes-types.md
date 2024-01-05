@@ -1,10 +1,10 @@
 ---
-title: Attribut och typer
-description: Läs mer om de dataattribut och datatyper som krävs för den universella redigeraren.
+title: Attribut och objekttyper
+description: Läs mer om de dataattribut och objekttyper som krävs för den universella redigeraren.
 exl-id: 02795a31-244a-42b4-8297-2649125d7777
-source-git-commit: 16f2922a3745f9eb72f7070c30134e5149eb78ce
+source-git-commit: 7550491de94f1e2cbb28b07f8abbdaded5aa04ea
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '686'
 ht-degree: 0%
 
 ---
@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # Attribut och typer {#attributes-types}
 
-Läs mer om de dataattribut och datatyper som krävs för den universella redigeraren.
+Läs mer om de dataattribut och objekttyper som krävs för den universella redigeraren.
 
 {{universal-editor-status}}
 
 ## Introduktion {#introduction}
 
-För att ett program ska kunna redigeras av den universella redigeraren måste det vara ordentligt instrumenterat. Detta inkluderar rätt metadata så att redigeraren kan redigera innehållet i programmet. Det här dokumentet innehåller information om attributen och typerna för dessa metadata.
+För att ett program ska kunna redigeras av den universella redigeraren måste det vara ordentligt instrumenterat. Detta inkluderar rätt metadata så att redigeraren kan redigera innehållet i programmet. Det här dokumentet innehåller information om attributen och objekttyperna för dessa metadata.
 
 >[!NOTE]
 >
