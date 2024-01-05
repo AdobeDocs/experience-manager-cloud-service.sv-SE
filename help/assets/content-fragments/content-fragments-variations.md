@@ -1,17 +1,17 @@
 ---
 title: Variationer - innehåll i redigeringsfragment (resurser - innehållsfragment)
-description: Förstå hur variationer kan göra ert headless-innehåll i AEM ännu mer flexibelt genom att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte.
+description: Förstå hur varianter av innehållsfragment gör att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte, vilket ökar flexibiliteten.
 exl-id: af05aae6-d535-4007-ba81-7f41213ff152
-source-git-commit: 3f934add7521586caf728c4bfa37f2d1a82b144a
+source-git-commit: 62ede258711d0cb8d0b72479559c37221509e23f
 workflow-type: tm+mt
-source-wordcount: '2546'
+source-wordcount: '2474'
 ht-degree: 4%
 
 ---
 
-# Variationer – redigera innehållsfragment{#variations-authoring-fragment-content}
+# Variationer - innehåll för redigeringsfragment{#variations-authoring-fragment-content}
 
-[Variationer](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) är en viktig egenskap i AEM innehållsfragment. Anledningen är att de gör det möjligt att skapa och redigera kopior av huvudinnehållet för användning i specifika kanaler och scenarier, vilket gör innehållsleveransen ännu mer flexibel.
+[Variationer](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) är en viktig egenskap i Content Fragments i Adobe Experience Manager (AEM) as a Cloud Service. Det beror på att du kan skapa och redigera kopior av **Master** innehåll som ska användas i specifika kanaler och scenarier. Detta gör i synnerhet innehållsleverans utan motstycke ännu flexiblare.
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ Vilka alternativ du kan använda för att redigera text med flera rader beror p�
 
 * [RTF](#rich-text)
 * [Oformaterad text](#plain-text)
-* [Markdown](#markdown)
+* [Markering](#markdown)
 
 Formatet kan väljas när helskärmsredigeraren används.
 
@@ -137,7 +137,7 @@ Med textredigering kan du formatera:
 * Styckeformat: Stycke, Rubrik 1/2/3
 * [Infoga resurs](#inserting-assets-into-your-fragment)
 * Öppna helskärmsredigeraren, där följande formateringsalternativ är tillgängliga:
-   * Sökning
+   * Sök
    * Sök/ersätt
    * Stavningskontroll
    * [Anteckningar](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
@@ -153,7 +153,7 @@ Med oformaterad text kan du snabbt lägga in innehåll utan formaterings- eller 
 >
 >Om du väljer **Oformaterad text** kan du förlora formatering, markeringar eller resurser som du har infogat i antingen **RTF** eller **Markering**.
 
-### Markdown {#markdown}
+### Markering {#markdown}
 
 >[!NOTE]
 >

@@ -1,17 +1,17 @@
 ---
 title: Hantera innehållsfragment (resurser - innehållsfragment)
-description: Lär dig hur du använder Resurskonsolen för att hantera AEM innehållsfragment, som utgör grunden för ditt headless-innehåll.
+description: Lär dig hur du använder Assets-konsolen för att hantera AEM innehållsfragment, antingen som grund för det headless-innehåll eller för att skapa sidor.
 exl-id: 333ad877-db2f-454a-a3e5-59a936455932
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 62ede258711d0cb8d0b72479559c37221509e23f
 workflow-type: tm+mt
-source-wordcount: '1873'
-ht-degree: 5%
+source-wordcount: '1885'
+ht-degree: 4%
 
 ---
 
 # Hantera innehållsfragment {#managing-content-fragments}
 
-Lär dig hur du använder Resurskonsolen för att hantera AEM innehållsfragment, som utgör grunden för ditt headless-innehåll.
+Lär dig hur du använder Assets-konsolen för att hantera AEM innehållsfragment, antingen som grund för det headless-innehåll eller för att skapa sidor.
 
 När du har definierat [Modeller för innehållsfragment](#creating-a-content-model) kan du använda dessa för [skapa dina innehållsfragment](#creating-a-content-fragment).
 

@@ -1,10 +1,10 @@
 ---
 title: Modeller för innehållsfragment (resurser - innehållsfragment)
-description: Lär dig hur Content Fragment Models fungerar som grund för ditt headless-innehåll i AEM och hur du skapar innehållsfragment med strukturerat innehåll.
+description: Läs om hur Content Fragment Models fungerar som en grund för ditt headless-innehåll i AEM, så att du kan skapa Content Fragments med strukturerat innehåll.
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
-source-git-commit: 3f934add7521586caf728c4bfa37f2d1a82b144a
+source-git-commit: 62ede258711d0cb8d0b72479559c37221509e23f
 workflow-type: tm+mt
-source-wordcount: '3005'
+source-wordcount: '3011'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Så här använder du modeller för innehållsfragment:
    >
    >Om [användning av innehållsfragmentmodeller inte har aktiverats](/help/assets/content-fragments/content-fragments-configuration-browser.md), **Skapa** kommer inte att vara tillgängligt.
 
-1. Ange **modelltitel**.
+1. Ange **Modelltitel**.
 Du kan också definiera olika egenskaper, till exempel lägga till **Taggar**, a **Beskrivning** och markera **Aktivera modell** till [aktivera modellen](#enabling-disabling-a-content-fragment-model) vid behov.
 
    >[!NOTE]
@@ -106,7 +106,7 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
    * Lägg till ett eller flera fält med en enda textrad. Den maximala längden kan definieras
 * **Flerradstext**
    * Ett textområde som kan vara RTF, Oformaterad text eller Markering
-* **Siffra**
+* **Nummer**
    * Lägg till ett eller flera numeriska fält
 * **Boolean**
    * Lägg till en boolesk kryssruta
@@ -204,7 +204,7 @@ Olika datatyper kan nu definiera valideringskrav för när innehåll anges i det
 
 * **Enkelradig text**
    * Jämför med ett fördefinierat regex.
-* **Siffra**
+* **Nummer**
    * Sök efter specifika värden.
 * **Innehållsreferens**
    * Testa om det finns specifika typer av innehåll.

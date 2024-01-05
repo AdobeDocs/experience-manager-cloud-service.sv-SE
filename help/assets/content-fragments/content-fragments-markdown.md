@@ -4,16 +4,16 @@ description: Förstå hur Content Fragment Editor använder markeringssyntax fö
 feature: Content Fragments
 role: User
 exl-id: 7a6d4a63-faf8-4e1c-95da-90db2027a2dd
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 62ede258711d0cb8d0b72479559c37221509e23f
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '586'
 ht-degree: 2%
 
 ---
 
-# Markdown {#markdown}
+# Markering {#markdown}
 
-När du är [redigering](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)använder innehållsfragmentredigeraren *markering* så att du enkelt kan skriva headless-innehåll:
+När du är [redigering](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)använder innehållsfragmentredigeraren *markering* så att du enkelt kan skriva innehåll för rubrikfri leverans eller sidredigering:
 
 >[!NOTE]
 >

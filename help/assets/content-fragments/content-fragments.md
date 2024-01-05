@@ -2,9 +2,9 @@
 title: Arbeta med innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur du med Content Fragments in Adobe Experience Manager (AEM) as a Cloud Service kan utforma, skapa, strukturera och använda sidoberoende innehåll, idealiskt för sidredigering och rubrikfri leverans. Hur de kan användas tillsammans med MSM.
 exl-id: db17eff1-4252-48d5-bb67-5e476e93ef7e
-source-git-commit: cc752e540fd08c2db5145316f57071c991d264b3
+source-git-commit: 62ede258711d0cb8d0b72479559c37221509e23f
 workflow-type: tm+mt
-source-wordcount: '2229'
+source-wordcount: '2222'
 ht-degree: 2%
 
 ---
@@ -212,7 +212,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 
      >[!NOTE]
      >
-     >Resurser kan också läggas till som [extra (mellanliggande) innehåll](/help/sites-cloud/authoring/fundamentals/content-fragments.md#using-associated-content) när du använder ett fragment på en sida, med antingen Associerat innehåll eller resurser från Assets-webbläsaren.
+     >Resurser kan också läggas till som extra (mellanliggande) innehåll när ett fragment används på en sida, med antingen [Associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) eller resurser från Assets-webbläsaren.
 
 * **Associerat innehåll**
 
