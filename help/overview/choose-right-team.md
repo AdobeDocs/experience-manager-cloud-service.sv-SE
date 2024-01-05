@@ -2,9 +2,9 @@
 title: Rätt personer, rätt roller
 description: Lär dig välja rätt personer och tilldela dem till rätt roller för ditt projekt.
 exl-id: 9106ccf5-dc90-4ccb-95bd-7dd5392cd174
-source-git-commit: 31e6ec8e9977c8787e14481ee3a94df767262aec
+source-git-commit: aa032af2ed7ff877b4c9f9cb6d427c84e71c3874
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '832'
 ht-degree: 0%
 
 ---
@@ -15,8 +15,8 @@ ht-degree: 0%
 >id="aemcloud_chooseteam"
 >title="Välj rätt team"
 >abstract="Rätt personer i rätt jobb för att hjälpa er driftsättning av Adobe Experience Manager att lyckas."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/aligning-kpis.html?lang=en" text="Justera KPI:er"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/assessing-kpis.html?lang=en" text="Utvärderar nyckeltal"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/aligning-kpis.html" text="Justera KPI:er"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/assessing-kpis.html" text="Utvärderar nyckeltal"
 
 Det finns en chans att olika avdelningar inom organisationen har olika aspekter av den digitala upplevelsen. Utan styre är steget klart för en oändlig debatt, konflikter och förvirring.
 
@@ -54,7 +54,7 @@ Nu när du vet vilka roller som krävs kan du titta på tabellen nedan för att 
 
 Från Architect till ScrumMaster är alla roller i teamet oumbärliga - inklusive DAM-biblioteket.
 
-Du kanske redan har de flesta personer som behövs för att köra en lyckad implementering av Adobe Experience Manager Assets. Listan liknar den för Adobe Experience Manager Sites, med ett viktigt tillägg: du behöver en bibliotekarie för att se till att dina digitala resurser är ordnade och märkta på ett sätt som gör dem enkla att hitta.
+Du kanske redan har de flesta personer som behövs för att köra en lyckad Adobe Experience Manager Assets-implementering. Listan liknar den för Adobe Experience Manager Sites, med ett viktigt tillägg: du behöver en bibliotekarie för att se till att dina digitala resurser är ordnade och märkta på ett sätt som gör dem enkla att hitta.
 
 | Roll | Kompetens | Kapacitetsnivå | Kvaliteter |
 |--- |--- |--- |--- |

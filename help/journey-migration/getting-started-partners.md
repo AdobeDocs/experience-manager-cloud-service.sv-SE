@@ -2,7 +2,7 @@
 title: Migreringshandbok till Experience Manager as a Cloud Service for Partners
 description: Migreringshandbok till Experience Manager as a Cloud Service for Partners
 exl-id: 9d5a72b8-06af-4b82-ab20-e65aea7903b3
-source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
+source-git-commit: aa032af2ed7ff877b4c9f9cb6d427c84e71c3874
 workflow-type: tm+mt
 source-wordcount: '1464'
 ht-degree: 4%
@@ -127,7 +127,7 @@ Innan du påbörjar en övergångsresa till Cloud Service bör du bekanta dig me
 <table>
 <tr>
 <td>Projektidentifiering och utvärdering</td>
-<td><ul><li>Se <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/aem-cloud-changes.html?lang=en">Betydande ändringar av Experience Manager as a Cloud Service</a> för att förstå de viktiga skillnaderna mellan Adobe Experience Manager as a Cloud Service och Experience Manager 6.x.</li><li>Se <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features.html?lang=en">Föråldrade funktioner</a> om du vill veta mer om funktioner som har markerats som föråldrade.</li><li>[Endast för Cloud Service-migreringar] Utvärderar Cloud Servicens beredskap: Kör <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html?lang=en">Best Practices Analyzer (BPA)</a> i källmiljö </li><li>Gör en bedömning mot märkbara förändringar och borttagna funktioner i Experience Manager CS</li></ul></td>
+<td><ul><li>Se <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/aem-cloud-changes.html">Betydande ändringar av Experience Manager as a Cloud Service</a> för att förstå de viktiga skillnaderna mellan Adobe Experience Manager as a Cloud Service och Experience Manager 6.x.</li><li>Se <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features.html">Föråldrade funktioner</a> om du vill veta mer om funktioner som har markerats som föråldrade.</li><li>[Endast för Cloud Service-migreringar] Utvärderar Cloud Servicens beredskap: Kör <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html">Best Practices Analyzer (BPA)</a> i källmiljö </li><li>Gör en bedömning mot märkbara förändringar och borttagna funktioner i Experience Manager CS</li></ul></td>
 </tr>
 <tr>
 <td>Granska</td>

@@ -2,9 +2,9 @@
 title: Åtkomst till KPI:er
 description: Lär dig hur du får tillgång till nyckeltal och definierar rapporteringsprocessen
 exl-id: 8556e0e3-a557-4fd6-9b82-09cb1decff0a
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: aa032af2ed7ff877b4c9f9cb6d427c84e71c3874
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
@@ -15,8 +15,8 @@ ht-degree: 0%
 >id="aemcloud_assesskpis"
 >title="Utvärderar nyckeltal"
 >abstract="Innan du börjar lansera Adobe Experience Manager bör alla som deltar i projektet veta vilka de tre viktigaste nyckeltalen är och varför de spelar någon roll."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/aligning-kpis.html?lang=en" text="Justera KPI:er"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/choose-right-team.html?lang=en" text="Välja rätt team"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/aligning-kpis.html" text="Justera KPI:er"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/choose-right-team.html" text="Välja rätt team"
 
 Innan du börjar lansera Adobe Experience Manager bör alla som deltar i projektet veta vilka de tre viktigaste nyckeltalen är och varför de spelar någon roll.
 

@@ -2,7 +2,7 @@
 title: Beredskapsfas
 description: Lär dig mer om de steg du måste ta så att du kan vara säker på att AEM är redo att flyttas till molnet.
 exl-id: 3bc8c037-d82a-4455-bce6-3c80c359a4ae
-source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
+source-git-commit: aa032af2ed7ff877b4c9f9cb6d427c84e71c3874
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 1%
@@ -49,7 +49,7 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
 <tbody>
   <tr>
     <td>Separera muterbara och oföränderliga filter i motsvarande paket</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/aem-cloud-changes.html?lang=en">AEM as a Cloud Service förändringar</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html#mutable-vs-immutable">AEM projektstruktur för AEM as a Cloud Service</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/aem-cloud-changes.html">AEM as a Cloud Service förändringar</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html#mutable-vs-immutable">AEM projektstruktur för AEM as a Cloud Service</a></td>
     <td>Ett enskilt paket som kan distribueras till AEM as a Cloud Service kan ha underpaket, främst för att innehålla ändringsbart och oföränderligt innehåll som separeras till sina egna paket.</td>
   </tr>
   <tr>
@@ -104,7 +104,7 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
   </tr>
   <tr>
     <td>DAM - uppdatera resursarbetsflöde</td>
-    <td><a href="https://experienceleague.adobe.com/docs/asset-compute/using/introduction.html?lang=en">Tjänsten Asset compute</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/asset-compute/using/introduction.html">Tjänsten Asset compute</a></td>
     <td>Mediebearbetningsstegen som ingår i arbetsflödet för DAM-uppdateringsresurser ersätts nu av tjänsten Asset compute</td>
   </tr>
   <tr>
@@ -119,17 +119,17 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
   </tr>
   <tr>
     <td>Anpassade återgivningssteg</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use.html?lang=en">Bearbetar profiler</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use.html">Bearbetar profiler</a></td>
     <td>Alla anpassade återgivningsgenereringar, bildkonverteringar och videokodningar måste avlastas till resurshanteringstjänsten genom att motsvarande bearbetningsprofiler skapas.</td>
   </tr>
   <tr>
     <td>Innehållssökning och indexering</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=en">Innehållssökning och indexeringsändringar</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html">Innehållssökning och indexeringsändringar</a></td>
     <td>Den underliggande bearbetningen av index förändras avsevärt och när den börjar spelas in.<br>Fullständig förståelse för och omfaktorisera ekindexen innan de hanteras i koden som du distribuerar.</td>
   </tr>
   <tr>
     <td>Alla underhållsaktiviteter är inte konfigurerbara</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/maintenance.html?lang=en">AEM as a Cloud Service underhållsaktiviteter</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/maintenance.html">AEM as a Cloud Service underhållsaktiviteter</a></td>
     <td>Du kan bara konfigurera vissa underhållsåtgärder med AEM as a Cloud Service.</td>
   </tr>
   <tr>
@@ -139,17 +139,17 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
   </tr>
   <tr>
     <td>Dispatcher Configurations and Caching</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html?lang=en">Dispatcher i molnet</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#other-content">Cachehantering<br></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html">Dispatcher i molnet</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#other-content">Cachehantering<br></td>
     <td>Dispatcher-konfigurationerna måste följa en specifik struktur.<br>Konfigurationerna måste hanteras som en del av koden och distribueras via molnhanterarens pipeline.</td>
   </tr>
   <tr>
     <td>Säkerhetskopiera och återställa</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/backup.html?lang=en">AEM as a Cloud Service säkerhetskopiering och återställning</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/backup.html">AEM as a Cloud Service säkerhetskopiering och återställning</a></td>
     <td></td>
   </tr>
   <tr>
     <td>Ändringar i autentisering</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=en">IMS-stöd för AEM as a Cloud Service</td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html">IMS-stöd för AEM as a Cloud Service</td>
     <td>Om du tidigare har använt SAML 2.0-integrering på både författare och publicering innan du går till Cloud Service är den största förändringen att AEM as a Cloud Service Author bara kan integreras med Adobe IMS. AEM as a Cloud Service Publish-nivå kan dock fortfarande använda SAML eller andra autentiseringsintegreringar. AEM as a Cloud Service har endast stöd för IMS-autentisering för författare, administratörer och utvecklare. IMS-autentiseringen ger inte stöd för externa slutanvändare på kundsajter som webbplatsbesökare.</td>
   </tr>
 </tbody>

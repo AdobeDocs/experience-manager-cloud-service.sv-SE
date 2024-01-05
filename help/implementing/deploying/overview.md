@@ -3,7 +3,7 @@ title: Distribuera till AEM as a Cloud Service
 description: Läs mer om grunderna och de bästa sätten att distribuera till AEM as a Cloud Service
 feature: Deploying
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: aa032af2ed7ff877b4c9f9cb6d427c84e71c3874
 workflow-type: tm+mt
 source-wordcount: '3429'
 ht-degree: 0%
@@ -175,7 +175,7 @@ above appears to be internal, to confirm with Brian -->
 >id="aemcloud_packagemanager"
 >title="Pakethanteraren - migrerar paket med ändringsbart innehåll"
 >abstract="Utforska användningen av Package Manager för de användningsområden där ett innehållspaket ska installeras som en av. I installationen ingår att importera specifikt innehåll från produktion till testning för att felsöka ett produktionsproblem, överföra ett litet innehållspaket från en lokal miljö till AEM Cloud-miljöer, med mera."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=en" text="Verktyget Innehållsöverföring"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html" text="Verktyget Innehållsöverföring"
 
 I vissa fall bör ett innehållspaket installeras som en&quot;engångspaket&quot;. Om du till exempel importerar visst innehåll från produktion till mellanlagring felsöker du ett produktionsproblem. För dessa scenarier [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) kan användas i miljöer på AEM as a Cloud Service.
 

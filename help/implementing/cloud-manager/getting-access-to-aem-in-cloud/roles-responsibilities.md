@@ -1,10 +1,10 @@
 ---
 title: Roller och ansvarsområden
 description: Roller och ansvarsområden
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: aa032af2ed7ff877b4c9f9cb6d427c84e71c3874
 workflow-type: tm+mt
-source-wordcount: '500'
-ht-degree: 2%
+source-wordcount: '484'
+ht-degree: 0%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 2%
 >id="aemcloud_raci"
 >title="Roller och ansvar"
 >abstract="Adobe tillhandahåller en uppsättning tjänster för tillhandahållande, utveckling, staging och produktion av Experience Manager as a Cloud Service. För att utvecklingen och driftsättningen av lösningen ska kunna fortsätta så effektivt som möjligt är det viktigt att kunden och anpassaren förstår och uppfyller sina roller, vilket beskrivs här."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/choose-right-team.html?lang=en" text="Välj rätt personer, rätt roller"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/aligning-kpis.html?lang=en" text="Justera KPI:er"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/choose-right-team.html" text="Välj rätt personer, rätt roller"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/aligning-kpis.html" text="Justera KPI:er"
 
 <br></br>
 Adobe tillhandahåller en uppsättning tjänster för tillhandahållande, utveckling, staging och produktion av Experience Manager as a Cloud Service. För att utvecklingen och driftsättningen av lösningen ska kunna fortsätta så effektivt som möjligt är det viktigt att kunden och anpassaren förstår och uppfyller sina roller enligt beskrivningen nedan.

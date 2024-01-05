@@ -2,7 +2,7 @@
 title: Använda Best Practices Analyzer
 description: Lär dig hur du använder Best Practices Analyzer för att förstå uppgraderingsberedskapen.
 exl-id: e8498e17-f55a-4600-87d7-60584d947897
-source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
+source-git-commit: aa032af2ed7ff877b4c9f9cb6d427c84e71c3874
 workflow-type: tm+mt
 source-wordcount: '2418'
 ht-degree: 35%
@@ -127,7 +127,7 @@ For Adobe Experience Manager 6.1, the tool is not functional and only the HTTP i
 >title="Tolka rapporten Best Practices Analyzer"
 >abstract="Det finns två alternativ för att visa BPA-rapportutdata: UI och CSV. När verktyget Best Practices Analyzer körs i AEM visas UI-rapporten som resultat i verktygsfönstret. CSV-formatet för rapporten innehåller information som genereras från utdata för Mönsteravkännare, sorterat och organiserat efter kategorityp, undertyp och prioritetsnivå."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/cam-readiness-phase.html#analysis-report" text="Analysrapport om metodtips för granskning"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html?lang=en" text="Om rapportkategorier i Best Practices Analyzer"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html" text="Om rapportkategorier i Best Practices Analyzer"
 
 När verktyget Best Practices Analyzer körs i AEM visas rapporten som resultat i verktygsfönstret.
 
