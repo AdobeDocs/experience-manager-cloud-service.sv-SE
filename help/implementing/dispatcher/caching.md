@@ -3,9 +3,9 @@ title: Cachelagring i AEM as a Cloud Service
 description: Lär dig grunderna i cachning på AEM as a Cloud Service
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
+source-git-commit: 8351e5e60c7ec823a399cbbdc0f08d2704f12ccf
 workflow-type: tm+mt
-source-wordcount: '2775'
+source-wordcount: '2865'
 ht-degree: 0%
 
 ---
@@ -241,6 +241,28 @@ För miljöer som skapats i oktober 2023 eller senare kommer CDN att ta bort van
 Skicka en supportanmälan om du vill att det här beteendet ska inaktiveras.
 
 För miljöer som skapats före oktober 2023 bör du konfigurera Dispatcher-konfigurationens `ignoreUrlParams` egenskap som [dokumenteras här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#ignoring-url-parameters).
+
+Det finns två möjligheter att ignorera marknadsföringsparametrar. (Där den första är att föredra att ignorera cachebusting via frågeparametrar):
+
+1. Ignorera alla parametrar och tillåt selektivt parametrar som används.
+Endast i följande exempel `page` och `product` parametrar ignoreras inte och förfrågningarna vidarebefordras till utgivaren.
+
+```
+/ignoreUrlParams {
+   /0001 { /glob "*" /type "allow" }
+   /0002 { /glob "page" /type "deny" }
+   /0003 { /glob "product" /type "deny" }
+}
+```
+
+1. Tillåt alla parametrar utom marknadsföringsparametrarna. Filen [marketing_query_parameters.any](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.dispatcher.d/cache/marketing_query_parameters.any) definierar en lista med vanliga marknadsföringsparametrar som kommer att ignoreras. Adobe kommer inte att uppdatera den här filen. Den kan utökas av användare beroende på vilka marknadsföringsleverantörer de har.
+
+```
+/ignoreUrlParams {
+   /0001 { /glob "*" /type "deny" }
+   $include "../cache/marketing_query_parameters.any"
+}
+```
 
 
 ## Invalidering av Dispatcher-cache {#disp}
