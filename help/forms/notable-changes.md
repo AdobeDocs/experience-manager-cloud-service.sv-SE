@@ -3,9 +3,9 @@ title: Vilka är skillnaderna mellan AEM 6.5 Forms och AEM Cloud Service?
 description: Jämför AEM 6.5 Forms och AEM Cloud Services och lär dig de viktigaste förändringarna innan du uppgraderar eller migrerar till Cloud Service.
 exl-id: 46fcc1b4-8fd5-40e1-b0fc-d2bc9df3802e
 contentOwner: khsingh
-source-git-commit: 397e7d4f23202b8ae7419b0ad5436a6a10e2efb8
+source-git-commit: 0acaea02ad4ba647373eedecb444e9a7911d108d
 workflow-type: tm+mt
-source-wordcount: '1348'
+source-wordcount: '1317'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,9 @@ Adobe Experience Manager Forms as a Cloud Service förändrar de befintliga funk
 
   The [migreringsverktyg](/help/forms/migrate-to-forms-as-a-cloud-service.md) hjälper dig att migrera formulär som har anpassade regler (skapade i kodredigeraren). Verktyget konverterar sådana regler till anpassade funktioner som stöds på Forms as a Cloud Service. Du kan använda de återanvändbara funktionerna med Regelredigeraren för att fortsätta att hämta resultat från regelskript. The `onSubmitError` eller `onSubmitSuccess` funktioner är nu tillgängliga som åtgärder i regelredigeraren.
 
-* **Förifyllningstjänst:** Som standard sammanfogar förifyllningstjänsten data med ett adaptivt formulär på klienten i stället för att sammanfoga data på servern i AEM 6.5 Forms. Funktionen hjälper till att ge snabbare förifyllnad av ett adaptivt formulär. Du kan alltid konfigurera så att kopplingsåtgärden körs på Adobe Experience Manager Forms Server.
+<!--* **Prefill Service:** By default, the prefill service merges data with an Adaptive Form at client as opposed to merging data on Server in AEM 6.5 Forms. The feature helps improve the time required to prefill an Adaptive Form. You can always configure to run the merge action on the Adobe Experience Manager Forms Server.-->
+
+* **Förifyllningstjänst:** I förifyllningstjänsten hämtas data från servern och sammanfogas för att förifylla din adaptiva Forms på klientsidan. Den här funktionen hjälper till att ge snabbare ifyllnad av ett adaptivt formulär. Du kan alltid konfigurera [förifyllning](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/prefill-service-adaptive-forms-article-use.html) för att köra kopplingsåtgärden på Adobe Experience Manager Forms Server.
 
 * **Skicka-åtgärder:** The **E-post** Skicka-åtgärd innehåller alternativ för att skicka bilagor och bifoga DoR-dokument (Document of Record) med e-post. Du kan använda den istället för **E-posta som PDF** i AEM 6.5 Forms.
 
