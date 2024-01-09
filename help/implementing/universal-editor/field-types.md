@@ -1,9 +1,9 @@
 ---
 title: Fälttyper
 description: Lär dig mer om de olika typer av fält som den universella redigeraren kan redigera i komponentfältet med exempel på hur du kan mäta din egen app.
-source-git-commit: b1a188d01371665b4375087847625d89e47d8927
+source-git-commit: 44073e27ce7eb35bc0d71cb963c1bd0f14183f00
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '358'
 ht-degree: 0%
 
 ---
@@ -281,3 +281,58 @@ En textinmatning tillåter en enda rad med textinmatning.
 }
 ```
 
+## Tabb {#tab}
+
+På en flik kan du gruppera andra inmatningsfält på flera flikar för att förbättra layoutordningen för författarna.
+
+A `tab` kan betraktas som en avgränsare i arrayen med `fields`. Allt som kommer efter en `tab` placeras på den fliken tills en ny `tab` påträffas, där följande objekt placeras på den nya fliken.
+
+Om du vill att objekt ska visas ovanför alla flikar måste de definieras före alla tabbar.
+
+### Exempel {#sample-tab}
+
+```json
+{
+  "id": "title",
+  "fields": [
+    {
+      "component": "tab",
+      "label": "Tab",
+      "name": "tab1"
+    },
+    {
+      "component": "text-input",
+      "name": "tab-response",
+      "value": "",
+      "placeholder": "Tab? I can't give you a tab unless you order something.",
+      "label": "Lou",
+      "valueType": "string"
+    },
+    {
+      "component": "tab",
+      "label": "Pepsi Free",
+      "name": "tab2"
+    },
+    {
+      "component": "text-input",
+      "name": "pepsi-free-response",
+      "value": "",
+      "placeholder": "You want a Pepsi, pal, you're gonna pay for it.",
+      "label": "Mr. Carruthers",
+      "valueType": "string"
+    },
+    {
+      "component": "select",
+      "name": "without-sugar",
+      "value": "coffee",
+      "label": "Something without sugar",
+      "valueType": "string",
+      "options": [
+        { "name": "Coffee", "value": "coffee" },
+        { "name": "Hot Coffee", "value": "hot-coffee" },
+        { "name": "Hotter Coffee", "value": "hotter-coffee" }
+      ]
+    }
+  ]
+}
+```
