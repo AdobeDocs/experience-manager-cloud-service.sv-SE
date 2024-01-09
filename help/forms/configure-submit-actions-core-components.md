@@ -4,9 +4,9 @@ description: Ett anpassat formulär innehåller flera överföringsåtgärder. E
 keywords: hur du väljer en inskickningsåtgärd för ett tilläggsformulär, kopplar ett adaptivt formulär till SharePoint-listan, kopplar ett adaptivt formulär till SharePoint-dokumentbiblioteket, kopplar ett adaptivt formulär till formulärdatamodellen
 feature: Adaptive Forms, Core Components
 exl-id: 495948e8-30a7-4e7c-952f-c71de15520f0
-source-git-commit: c2bf362a9949b3d6d427a28821056a0cc9edfa85
+source-git-commit: 3cd10760fa48f4aa1810877f79476be744f048d1
 workflow-type: tm+mt
-source-wordcount: '3892'
+source-wordcount: '3880'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,8 @@ ht-degree: 0%
 | -------- | ---------------------------- |
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html) |
 | AEM as a Cloud Service | Den här artikeln |
-| Gäller för | ✅ adaptiva grundkomponenter, ❎ [Komponenter i adaptiv Form Foundation](/help/forms/configuring-submit-actions.md) |
+
+<!--| Applies to     | ✅ Adaptive Form Core Components, ❎ [Adaptive Form Foundation Components](/help/forms/configuring-submit-actions.md)          |-->
 
 
 Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett anpassat formulär. Den aktiveras när en användare klickar på **[!UICONTROL Submit]** på ett adaptivt formulär. Forms as a Cloud Service, för Adaptive Forms baserat på kärnkomponenter, erbjuder en mängd färdiga Submit-åtgärder. Dessa färdiga sändningsåtgärder ger dig möjlighet att:
