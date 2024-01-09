@@ -3,12 +3,13 @@ title: Arbeta med dina egna GitHub-databaser i Cloud Manager
 description: Lär dig hur du konfigurerar Cloud Manager så att det fungerar med dina egna GitHub-databaser.
 feature: Release Information
 exl-id: 15178de8-8a8a-4300-8510-88875ad0fc8c
-source-git-commit: 237b4a8e01af74dbaac0ba1715b5fa95c931be7c
+source-git-commit: ce9d65179d9cc1f02f786516554e07c95a89484d
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 0%
 
 ---
+
 
 # Arbeta med dina egna GitHub-databaser i Cloud Manager {#byo-github}
 
@@ -54,7 +55,7 @@ Cloud Manager känner nu till din GitHub-databas, men den behöver fortfarande �
    ![Validering av privat databasägande](/help/implementing/cloud-manager/assets/repos/private-repo-validate.png)
 
 1. Cloud Manager använder en GitHub-app för att interagera säkert med din databas.
-   * En ägare till din GitHub-organisation måste installera appen som finns på `https://github.com/apps/cloud-manager-for-aem-stage` och ge åtkomst till databasen.
+   * En ägare till din GitHub-organisation måste installera appen som finns på `https://github.com/apps/cloud-manager-for-aem` och ge åtkomst till databasen.
    * Mer information om hur du gör detta finns i dokumentationen för GitHub.
 
 1. För att förbättra säkerheten måste du skapa en hemlig fil i databasens standardgren. Välj **Generera**.
