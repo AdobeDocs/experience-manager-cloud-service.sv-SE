@@ -2,9 +2,9 @@
 title: Loggning för AEM as a Cloud Service
 description: Lär dig hur du använder loggning för AEM as a Cloud Service för att konfigurera globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+source-git-commit: 3d53f81bfe9b180f19590a70d72b6bf62a7ab732
 workflow-type: tm+mt
-source-wordcount: '2720'
+source-wordcount: '2755'
 ht-degree: 0%
 
 ---
@@ -397,7 +397,7 @@ Fri Jul 17 02:29:34.517189 2020 [mpm_worker:notice] [pid 1:tid 140293638175624] 
 
 Loggnivåerna mod_rewrite definieras av variabeln REWRITE_LOG_LEVEL i filen `conf.d/variables/global.var`.
 
-Den kan ställas in på error, warn, info, debug och trace1 - trace8, med standardvärdet warn. Om du vill felsöka RewriteRules rekommenderar vi att du höjer loggnivån till trace2.
+Den kan ställas in på error, warn, info, debug och trace1 - trace8, med standardvärdet warn. Om du vill felsöka RewriteRules rekommenderar vi att du höjer loggnivån till trace2. Vi rekommenderar att du felsöker omskrivningsregler med [Dispatcher SDK](../../dispatcher/validation-debug.md). Högsta loggnivå för AEM as a Cloud Service är `debug`. Därför är det för närvarande inte möjligt att felsöka omskrivningsregler i molnet.
 
 Se [mod_rewrite-moduldokumentation](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#logging) för mer information.
 
