@@ -11,9 +11,9 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: f3472006-d5ae-4f70-af3e-44e73aee85cc
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+source-git-commit: 20c12efb963bc1defd16f5b42b5efa5d4067e266
 workflow-type: tm+mt
-source-wordcount: '3682'
+source-wordcount: '3671'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ När du läser vidare kommer du att lära dig mer om varför konceptet&quot;en p
 
 När du är redo att publicera med en bildresurs eller en videoresurs stöds den av Dynamic Media ryggrad som består av ett kraftfullt leveransnätverk i toppskiktet. Nätverket betjänar hundratals klienter runt om i världen varje dag. Resurserna distribueras via Content Delivery Network - eller CDN - som Akamai är värd för. CDN är ett system med datortjänster som fungerar ihop och som på ett öppet sätt samarbetar för att leverera innehåll, särskilt omfattande mediematerial, till slutanvändarna.
 
-I CDN-systemet lagras webbinnehåll i webbcacheminnen över Internet. Sedan levereras den från webbcachen till slutanvändarna för snabbare leverans. Så första gången någon hämtar en webbsida levereras de resurser som visas till ett CDN-cache. De lagras på servern så att samma cacheinnehåll levereras snabbare nästa gång någon i samma område öppnar webbsidan. Innehållet levereras snabbare eftersom det ligger närmare användaren. Ett CDN ger snabbare visning av webbsidor och ändå minskar behovet av bandbredd på den centrala servern eftersom innehållet levereras från ett cachenätverk, inte från en central server i varje instans. Detta optimerade flöde innebär en bättre användarupplevelse, vilket leder till ökad försäljning.
+I CDN-systemet lagras webbinnehåll i webbcacheminnen över Internet. Sedan levereras den från webbcachen till slutanvändarna för snabbare leverans. Så första gången någon hämtar en webbsida levereras de resurser som visas till ett CDN-cache. De lagras på servern så att nästa gång någon i samma område öppnar webbsidan, levereras samma cachelagrade innehåll snabbare. Innehållet levereras snabbare eftersom det ligger närmare användaren. Ett CDN ger snabbare visning av webbsidor och ändå minskar behovet av bandbredd på den centrala servern eftersom innehållet levereras från ett cachenätverk, inte från en central server i varje instans. Detta optimerade flöde innebär en bättre användarupplevelse, vilket leder till ökad försäljning.
 
 <!-- USE AN IMAGE HERE? ![Content delivery network](/help/assets/assets-dm/cdn.png) -->
 
@@ -117,12 +117,11 @@ Smart bildbehandling är inte aktiverat som standard eftersom det kräver en sam
 
 ### Adaptiva videouppsättningar
 
-När det finns en video på en sida, eller en huvudsida, tenderar kunderna att interagera med innehållet längre och stanna kvar längre på sidan, vilket vanligtvis är bra. Detta beteende har visats genom analyser som Adobe har gjort. Men video kan vara komplicerad. För det första har du ofta en stor primär fil. Det är komplicerat att avgöra hur stor videon ska vara och hur den ska levereras för att säkerställa att upplevelsen fungerar smidigt oavsett vilken enhet den visas på och oavsett bandbredd.
+När det finns en video på en sida, eller en huvudsida, tenderar kunderna att interagera med innehållet längre och stanna kvar längre på sidan, vilket vanligtvis är bra. Detta beteende visas genom analyser som Adobe har gjort. Men video kan vara komplicerad. För det första har du ofta en stor primär fil. Det är komplicerat att avgöra hur stor videon ska vara och hur den ska levereras för att säkerställa att upplevelsen fungerar smidigt oavsett vilken enhet den visas på och oavsett bandbredd.
 
 För att lösa detta problem ger Dynamic Media dig möjlighet att skapa _Adaptiva videouppsättningar_.
 
-![Adaptiv videouppsättning](/help/assets/dynamic-media/assets/dm-smart-imaging.png)
-_En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format._
+En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format.
 
 Du börjar med den ursprungliga primära videon som du överför till systemet. Dynamic Media storleksändras automatiskt, eller _transcodes_, videon till flera videor. När filmen levereras avgör den sedan på ett smart sätt vilken videoskärm, vilken kvalitet och vilket format som ska användas och skickar den till telefonen, surfplattan eller datorn.
 
@@ -134,11 +133,11 @@ Med adaptiva videouppsättningar får du en jämn, högkvalitativ uppspelning f�
 
 ## Användningsexempel för Dynamic Media {#dm-journey-b}
 
-Nedan följer några vanliga användningsexempel och lösningar som Dynamic Media kan hjälpa er med att skapa ett positivt kundengagemang, lojalitet, konvertering och ökad avkastning.
+Nedan följer några vanliga användningsproblem och lösningar som Dynamic Media kan hjälpa er med att skapa ett positivt kundengagemang, lojalitet, konvertering och ökad avkastning.
 
 ### Användningsfall: Primär filhantering
 
-Ett av de viktigaste användningsområdena för Dynamic Media är också ett av de mest uppenbara. Det vill säga att minska vikten på sidor och upplevelser och storleken på innehållet, oavsett om det är en bild eller en video, som levereras.
+Ett av de viktigaste användningsområdena för Dynamic Media är också ett av de mest uppenbara. Det vill säga att minska vikten på sidor och upplevelser och storleken på innehållet, oavsett om det är en bild eller en video som levereras.
 
 Nedan visas en typisk upplevelse eller webbsida. Cirka 90 % av en sida består av multimedia, till exempel bilder och videor, som oftast är mycket tyngre filer.
 
@@ -182,7 +181,7 @@ Ett annat användningsfall som Dynamic Media löser är video. Video är komplex
 
 Kunder kommer till Dynamic Media med följande problem som de hoppas kunna lösa:
 
-&quot;_Mitt företag har videon, och vår avdelning spenderade mycket pengar på att skapa den, men slet bort från att placera den på sidor eller leverera den. Anledningen var att videons kvalitet inte kunde garanteras av våra tester, eller ens om den faktiskt skulle spelas upp. Och i slutändan påverkar det våra varumärken och kanske vår roll till och med konverteringsgraden._&quot;
+&quot;_Mitt företag har videon och avdelningen spenderade mycket pengar på att skapa den, men slet bort från att lägga ut den på webbsidor eller leverera den. Orsaken var att videons kvalitet inte kunde garanteras genom testning, eller ens om den faktiskt skulle spelas upp. Och i slutändan påverkar det företagets varumärke och eventuellt dess roll för konvertering._&quot;
 
 Dynamic Media lösning är att ta den här primära videofilen och låta Dynamic Media göra alla storlekar genom sin transkodningsprocess. Koppla sedan ihop det med Dynamic Media intelligenta videospelare. Detta arbetsflöde garanterar att videon, oavsett om du använder den på landningssidan eller på en kategori- eller produktinformationssida, är konsekvent hela tiden och levereras med hög kvalitet.
 
@@ -265,7 +264,7 @@ _Förhandsgranska en resurs baserat på den valda visningsförinställningen &qu
 
 ## Valfritt - Läs mer
 
-Del I av resan gick igenom grunderna för en rad olika Dynamic Media-ämnen. Om du vill veta mer om vad du just läste kan du använda materialet nedan för att utforska koncept i detalj. Annars kan du fortsätta med del II av resan. Se [What&#39;s next in this Dynamic Media Journey](#whats-next).
+Del I av denna resa gällde grunderna i olika Dynamic Media-frågor. Om du vill veta mer om vad du läser kan du använda materialet nedan för att utforska koncept i detalj. Annars kan du fortsätta med del II av resan. Se [What&#39;s next in this Dynamic Media Journey](#whats-next).
 
 _Hjälpavsnitt för Dynamic Media_
 
@@ -291,7 +290,7 @@ _Dynamic Media-visningsprogram_
 
 ## What&#39;s next in this Dynamic Media Journey {#whats-next}
 
-I del II på den här resan undersöker du Dynamic Media URL:er lite närmare för att bättre förstå vad som händer när en mediefil levereras. Du kan också lära dig mer om grunderna bakom hur du skapar bildförinställningar för att återge resurser, och om bilduppsättningar, snurra uppsättningar och blandade medieuppsättningar samt hur de skapas.
+I del II på den här resan undersöker du Dynamic Media URL:er närmare för att få en bättre förståelse för vad som händer när en mediefil levereras. Du kan också lära dig mer om grunderna bakom hur du skapar bildförinställningar för att återge resurser, och om bilduppsättningar, snurra uppsättningar och blandade medieuppsättningar samt hur de skapas.
 
 Ta mig till [Dynamic Media Journey: The Basics, Part II](/help/assets/dynamic-media/dm-journey-part2.md#dm-journey-d).
 
