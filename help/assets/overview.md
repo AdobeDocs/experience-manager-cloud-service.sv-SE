@@ -1,16 +1,17 @@
 ---
 title: Introduktion till Assets som [!DNL Cloud Service]
-description: Läs om nyheterna och fördelarna med Experience Manager Assets som [!DNL Cloud Service]. En molnbaserad, PaaS-lösning för företag.
+description: Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service.
 contentOwner: AK
 feature: Asset Management
 role: User,Leader,Architect
 exl-id: 4437f214-d058-4975-8b8f-869a12c8103b
-source-git-commit: a4601d95076d37ed5df79b7c9dabb8beab8353d0
+source-git-commit: 07db10c4ee9cced7b6a697fe4f41c99eaba6a39f
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '820'
 ht-degree: 1%
 
 ---
+
 
 # Introduktion av resurser som [!DNL Cloud Service] {#assets-cloud-service-introduction}
 
@@ -39,7 +40,7 @@ Nedan beskrivs de viktigaste fördelarna med Assets som [!DNL Cloud Service]. Me
 
 ## Tillgängliga personbaserade upplevelser {#persona-based-experiences}
 
-Adobe erbjuder robusta DAM-lösningar (Digital Asset Management) så att ni får ut mesta möjliga av era digitala resurser. Adobe Experience Manager Assets har två separata upplevelser som använder samma Cloud Service:
+Adobe erbjuder robusta DAM-lösningar (Digital Asset Management) så att ni får ut mesta möjliga av era digitala resurser. Adobe Experience Manager Assets har två olika upplevelser som använder samma Cloud Service:
 
 * **Administratörsvy**: Det befintliga as a Cloud Service användargränssnittet för Assets. Använd administrationsvyn för alla avancerade funktioner för resurshantering, inklusive integreringar, arbetsflöden, innehållsautomatisering, publicering med mera.
 
@@ -69,14 +70,14 @@ De viktiga nya funktionerna är:
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)

@@ -2,7 +2,7 @@
 title: Hantera miljöer
 description: Lär dig mer om de typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: efca024511b5d79553864fbcefda3649ab7af7b6
+source-git-commit: 1a49bcd5b76e6a3b0d5a3168cef445101dc8d149
 workflow-type: tm+mt
 source-wordcount: '2607'
 ht-degree: 0%
@@ -26,10 +26,10 @@ En användare med nödvändig behörighet kan skapa följande miljötyper (inom 
 
 De enskilda miljöernas kapacitet beror på vilka lösningar som finns i [program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md) av miljön.
 
-* [Sites](/help/sites-cloud/home.md)
-* [Assets](/help/assets/home.md)
+* [Sites](/help/overview/introduction.md)
+* [Assets](/help/assets/overview.md)
 * [Forms](/help/forms/home.md)
-* [Skärmar](/help/screens-cloud/home.md)
+* [Skärmar](/help/screens-cloud/introduction/introduction.md)
 
 >[!NOTE]
 >

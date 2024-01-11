@@ -6,17 +6,16 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 65893c0c0dee37bed8ecfbb06a12e7c093c4397c
+source-git-commit: 1a49bcd5b76e6a3b0d5a3168cef445101dc8d149
 workflow-type: tm+mt
-source-wordcount: '4573'
-ht-degree: 4%
+source-wordcount: '4538'
+ht-degree: 3%
 
 ---
 
 
 # Hjälp om Experience Manager as a Cloud Service {#content}
 
-+ [AEMaaCS Home](/help/overview/home.md)
 + Översikt {#overview}
    + [Introduktion till AEM as a Cloud Service](/help/overview/introduction.md)
    + [Vad är nytt och vad är annorlunda?](/help/overview/what-is-new-and-different.md)
@@ -169,9 +168,8 @@ ht-degree: 4%
    + [Föråldrade API:er](/help/release-notes/deprecated-apis.md)
    + [Förhandsversion - kanal](/help/release-notes/prerelease.md)
 + Dokumentskydd {#security}
-   + [Säkerhet för AEM as a Cloud Service](/help/security/home.md)
-   + [Konfigurera avancerat nätverk för AEM as a Cloud Service](/help/security/configuring-advanced-networking.md)
    + [Säkerhetsöversikt för AEM as a Cloud Service](/help/security/cloud-service-security-overview.md)
+   + [Konfigurera avancerat nätverk för AEM as a Cloud Service](/help/security/configuring-advanced-networking.md)
    + [IMS-stöd för AEM as a Cloud Service](/help/security/ims-support.md)
    + [Stöd för samma webbplats-cookie AEM as a Cloud Service](/help/security/same-site-cookie-support.md)
    + [OAuth2-stöd för e-posttjänsten](/help/security/oauth2-support-for-mail-service.md)
@@ -261,7 +259,6 @@ ht-degree: 4%
       + [AEM Dispatcher Converter](/help/journey-migration/refactoring-tools/dispatcher-transformation-utility-tools.md)
       + [AEM Modernization Tools](/help/journey-migration/refactoring-tools/aem-modernization-tools.md)
 + Sites {#sites}
-   + [AEM Sites as a Cloud Service](/help/sites-cloud/home.md)
    + [Betydande förändringar av AEM Sites i AEM Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
    + Redigering {#authoring}
       + Komma igång {#getting-started}
@@ -396,7 +393,6 @@ ht-degree: 4%
       + [Exportera Experience Fragments till Adobe Target](/help/sites-cloud/integrating/experience-fragments-target.md)
       + [Integrera med Adobe Campaign](/help/sites-cloud/integrating/campaign.md)
 + Assets {#assets}
-   + [[!DNL Assets] som [!DNL Cloud Service]](/help/assets/home.md)
    + [Översikt och nyheter](/help/assets/overview.md)
    + [Betydande ändringar i [!DNL Assets] som [!DNL Cloud Service]](/help/assets/assets-cloud-changes.md)
    + [[!DNL Assets] arkitektur](/help/assets/architecture.md)
@@ -681,7 +677,6 @@ ht-degree: 4%
       + [Installation och konfiguration](/help/forms/troubleshooting-installation-and-configuration.md)
       + [Dispatcher och CDN-cachning](/help/forms/troubleshooting-caching-performance.md)
 + Skärmar {#screens-as-cloud-service}
-   + [AEM Screens as a Cloud Service](/help/screens-cloud/home.md)
    + Översikt till as a Cloud Service skärmar {#overview}
       + [Introduktion](/help/screens-cloud/introduction/introduction.md)
       + [Om rolldefinitioner](/help/screens-cloud/introduction/personas-screens-cloud.md)
@@ -718,9 +713,8 @@ ht-degree: 4%
       + [Utveckla en anpassad komponent för skärmar as a Cloud Service](/help/screens-cloud/developing/developing-custom-components-tutorial.md)
    + [Vanliga frågor och svar om skärmar](/help/screens-cloud/screens-cloud-faqs.md)
 + Innehåll och handel {#content-and-commerce}
-   + [AEM Content and Commerce](/help/commerce-cloud/home.md)
-   + [Betydande förändringar AEM innehåll och handel as a Cloud Service](/help/commerce-cloud/changes.md)
    + [Introduktion och översikt](/help/commerce-cloud/introduction.md)
+   + [Betydande förändringar AEM innehåll och handel as a Cloud Service](/help/commerce-cloud/changes.md)
    + Commerce Journeys {#journeys}
       + Innehållsförfattarresa {#author}
          + [AEM Content and Commerce Content Author Journey](/help/commerce-cloud/commerce-journeys/aem-commerce-content-author/overview.md)
@@ -1079,7 +1073,6 @@ ht-degree: 4%
       + [CDN på AEM as a Cloud Service](/help/implementing/dispatcher/cdn.md)
       + [Cachelagring i AEM as a Cloud Service](/help/implementing/dispatcher/caching.md)
 + Anslutningar {#connectors}
-   + [Implementera kopplingar för AEM as a Cloud Service](/help/connectors/home.md)
    + [Implementera en AEM Connector](/help/connectors/implement.md)
    + [Skicka en AEM](/help/connectors/submit.md)
    + [Underhålla en AEM](/help/connectors/maintain.md)

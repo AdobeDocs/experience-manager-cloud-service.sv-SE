@@ -1,11 +1,11 @@
 ---
 title: Introduktion till Adobe Experience Manager as a Cloud Service
-description: Introduktion till Adobe Experience Manager (AEM) as a Cloud Service.
+description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 exl-id: d81b85bb-a69d-49a4-9e75-76f1c6bbcd67
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 07db10c4ee9cced7b6a697fe4f41c99eaba6a39f
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 49%
+source-wordcount: '631'
+ht-degree: 40%
 
 ---
 
@@ -46,7 +46,7 @@ Med AEM as a Cloud Service
 >[!NOTE]
 >Se [Terminologi](terminology.md) för några av de nya termer som har introducerats med AEM as a Cloud Service.
 
-## Mervärde med en molntjänst {#value-added-as-a-cloud-service}
+## As a Cloud Service värdeökning {#value-added-as-a-cloud-service}
 
 AEM uppnår dessa mål genom att utnyttja de viktigaste egenskaperna hos moderna Cloud Services:
 
@@ -66,18 +66,18 @@ AEM uppnår dessa mål genom att utnyttja de viktigaste egenskaperna hos moderna
 
    * AEM as a Cloud Service utvecklas dagligen baserat på de projekt som våra kunder implementerar. Innehåll, kod och konfigurationer granskas kontinuerligt och kontrolleras mot bästa praxis, vilket gör att vi kan vägleda dig när det gäller att uppnå dina affärsmål.
 
-## Lär känna Adobe Experience Manager as a Cloud Service {#getting-to-know-aem-as-cloud-service}
+## Bekanta dig med Adobe Experience Manager as a Cloud Service {#getting-to-know-aem-as-cloud-service}
 
 * [Nyheter och skillnader](/help/overview/what-is-new-and-different.md) i Adobe Experience Manager as a Cloud Service och tidigare versioner
 * [Arkitekturen](/help/overview/architecture.md) i Adobe Experience Manager as a Cloud Service
-* [Viktiga ändringar i AEM as a Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
-* [Viktiga ändringar i AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
-* [Viktiga ändringar i AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
-* [Nu kommer Assets as a Cloud Service](/help/assets/overview.md)
+* [Betydande ändringar i AEM as a Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
+* [Betydande förändringar av AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
+* [Betydande förändringar av AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
+* [Introduktion till as a Cloud Service resurser](/help/assets/overview.md)
 * [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
 
 >[!TIP]
 >
->När du har en översikt över AEM as a Cloud Service kan du snabbt komma igång genom att granska [Onboarding Journey](/help/journey-onboarding/overview.md).
+>När du har en översikt över AEM as a Cloud Service kan du snabbt komma igång genom att granska [Onboardresa](/help/journey-onboarding/overview.md).
 >
->Är du redan upptagen eller redo att dyka upp i testning AEM funktioner? Installera [AEM Reference Demos Add-on](/help/journey-sites/demos-add-on/overview.md) att utforska AEM kraftfulla funktioner med hjälp av avancerade exempel.
+>Är du redan upptagen eller redo att dyka upp i testning AEM funktioner? Installera [AEM Reference Demos Add-on](/help/journey-sites/demos-add-on/overview.md) för att utforska AEM kraftfulla funktioner med hjälp av avancerade exempel.

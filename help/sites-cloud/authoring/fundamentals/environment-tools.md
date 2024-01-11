@@ -2,7 +2,7 @@
 title: Redigeringsmiljö och -verktyg
 description: I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll
 exl-id: cc3bd4cf-93bd-429d-9a2a-4a02a7b42f7c
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 1a49bcd5b76e6a3b0d5a3168cef445101dc8d149
 workflow-type: tm+mt
 source-wordcount: '2161'
 ht-degree: 8%
@@ -102,7 +102,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
 ## Resursläsaren {#assets-browser}
 
-Resursläsaren visar alla [resurser](/help/assets/home.md) som är tillgängliga för direkt användning på den aktuella sidan.
+Resursläsaren visar alla [resurser](/help/assets/overview.md) som är tillgängliga för direkt användning på den aktuella sidan.
 
 Resursläsaren är en flik i sidopanelen tillsammans med [komponentläsaren](#components-browser) och [innehållsträdet](#content-tree). Om du vill öppna eller stänga sidopanelen använder du ikonen längst upp till vänster i verktygsfältet:
 
