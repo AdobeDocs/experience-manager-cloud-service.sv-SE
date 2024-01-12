@@ -4,9 +4,9 @@ description: Konfigurera [!DNL Workfront for Experience Manager enhanced connect
 role: Admin
 feature: Integrations
 exl-id: d4e1247a-342c-4bc4-83bf-4e4902468fb3
-source-git-commit: e49d536dc918861604f3e5d19608eb69d038c49a
+source-git-commit: 4bda798113d85b800cb088d150f8c9d453c9ec3e
 workflow-type: tm+mt
-source-wordcount: '1644'
+source-wordcount: '1651'
 ht-degree: 0%
 
 ---
@@ -69,6 +69,7 @@ Så här prenumererar du på händelserna:
 1. Projektstatus: Välj den status som projektet måste ställas in för för att skapa den länkade mappen.
 1. Skapa en länkad mapp i projekt med portfölj: Lista med Portfolio som projektet måste tillhöra så att du kan skapa den länkade mappen. Lämna listan tom om du vill skapa den länkade mappen för alla projektportföljer.
 1. Skapa en länkad mapp i projekt med anpassat formulärfält: Anpassat formulärfält och motsvarande värde som projektet måste ha för att du ska kunna skapa den länkade mappen. Den här konfigurationen ignoreras om den lämnas tom. Välj `CUSTOM FORMS: Create DAM Linked Folder` för fält och indata `Yes` för värdet.
+1. Konfigurera behörighet: Konfigurera dessa behörigheter, `jcr:all permissions for /conf/workfront-tools/settings/cloudconfigs` för `wf-workfront-users group`.
 1. Klicka på Aktivera automatiskt skapande av länkade mappar. Om du går tillbaka till fliken Händelseabonnemang ser du att det nu finns en händelse för att skapa.
 
 ![länkad mappkonfiguration](/help/assets/assets/wf-linked-folder-config.png)
