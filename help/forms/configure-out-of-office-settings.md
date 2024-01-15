@@ -2,7 +2,9 @@
 title: Hur konfigurerar jag frånvaroinställningar i AEM Forms?
 description: Delegera uppgifter när du är ledig eller inte på kontoret för smidig körning av arbetsflöden.
 exl-id: c7e436f1-8e1c-4334-b3dc-ab9800695301
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+feature: Adaptive Forms, Workflow
+role: Admin, User
+source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
 workflow-type: tm+mt
 source-wordcount: '817'
 ht-degree: 0%

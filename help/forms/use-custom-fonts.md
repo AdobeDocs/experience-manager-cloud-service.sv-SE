@@ -2,9 +2,11 @@
 title: Hur kan vi använda anpassade teckensnitt i AEM Forms?
 description: Lär dig hur du lägger till anpassade teckensnitt i en as a Cloud Service Forms-miljö.
 exl-id: 88214d36-fb97-4d46-a9fe-71dbc7826eb1
-source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
+feature: Adaptive Forms
+role: Admin, User
+source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---

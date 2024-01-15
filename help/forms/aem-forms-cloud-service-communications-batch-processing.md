@@ -1,10 +1,12 @@
 ---
 title: Skapa PDF i batch utan ansträngning - Lär dig mer om konsten med batchbearbetning - Självhjälp för att generera miljontals PDF-dokument!
 description: Hur skapar man varumärkesorienterad och personaliserad kommunikation?
+feature: Adaptive Forms, APIs
+role: Admin, Developer, User
 exl-id: 542c8480-c1a7-492e-9265-11cb0288ce98
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 975f767e75a268a1638227ae20a533f82724c80a
 workflow-type: tm+mt
-source-wordcount: '1735'
+source-wordcount: '1706'
 ht-degree: 0%
 
 ---
@@ -127,11 +129,11 @@ Om du vill använda ett batch-API skapar du en batchkonfiguration och kör en k�
 
 Använd kommandot `POST /config` API. Inkludera följande obligatoriska egenskaper i HTTP-begärans innehåll:
 
-* **configName**: Ange gruppnamnet. Till exempel, `wknd-job`
+* **configName**: Ange gruppnamnet. Exempel: `wknd-job`
 * **dataSourceConfigUri**: Ange plats för konfigurationen för batchdatalagret. Den kan vara en relativ eller absolut sökväg till konfigurationen. Till exempel: `/conf/global/settings/forms/usc/batch/wknd-batch`
 * **outputTypes**: Ange utdataformat: PDF och PRINT. Om du använder utdatatypen PRINT, `printedOutputOptionsList` anger du minst ett utskriftsalternativ. Utskriftsalternativen identifieras av sin renderingstyp, så för närvarande tillåts inte flera utskriftsalternativ med samma renderingstyp. De format som stöds är PS, PCL, DPL, IPL och ZPL.
 
-* **mall**: Ange en absolut eller relativ sökväg för mallen. Till exempel, `crx:///content/dam/formsanddocuments/wknd/statements.xdp`
+* **mall**: Ange en absolut eller relativ sökväg för mallen. Exempel: `crx:///content/dam/formsanddocuments/wknd/statements.xdp`
 
 Om du anger en relativ sökväg anger du även en innehållsrot. Mer information om innehållsroten finns i API-dokumentationen.
 

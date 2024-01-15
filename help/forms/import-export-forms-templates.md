@@ -2,8 +2,9 @@
 title: Hur importerar, exporterar och organiserar man Adaptive Forms eller PDF forms i en AEM Forms-instans?
 description: Lär dig att migrera adaptiva Forms, PDF forms, teman och andra stödresurser till och från en AEM.
 topic-tags: forms-manager
-exl-id: f5105fb7-b8c0-4656-8095-b21d392746c0
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+role: Admin, User
+feature: Adaptive Forms
+source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
 workflow-type: tm+mt
 source-wordcount: '1127'
 ht-degree: 0%

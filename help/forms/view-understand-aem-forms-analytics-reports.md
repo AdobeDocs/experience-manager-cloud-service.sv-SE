@@ -4,15 +4,15 @@ description: Adaptiv Forms integreras smidigt med Adobe Analytics för att hämt
 keywords: Visa och förstå adaptiva Forms-analysrapporter, analysrapport för Adobe, Forms Analytics-rapport
 topic-tags: develop
 feature: Adaptive Forms
-role: User
+role: Admin, User
 level: Intermediate
-source-git-commit: 7c197be7819d6fcbf028237401d05236f90734d1
+exl-id: 756dee1f-4685-4783-961d-b172a5bd0692
+source-git-commit: 975f767e75a268a1638227ae20a533f82724c80a
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '972'
 ht-degree: 0%
 
 ---
-
 
 # Visa och förstå analysrapporter för adaptiva Forms {#viewing-and-understanding-aem-forms-analytics-reports}
 

@@ -2,10 +2,12 @@
 title: Hur bäddar jag in anpassningsbara formulär på en extern webbsida?
 description: Lär dig bädda in en adaptiv Forms på en webbplats.
 topic-tags: author
+role: Admin, Developer, User
 feature: Adaptive Forms
-source-git-commit: 2d4a81aa0d6755270d4d6efb8649782f4bde4537
+exl-id: 00b8cd79-bf2d-4001-b2d6-1b020c868008
+source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---

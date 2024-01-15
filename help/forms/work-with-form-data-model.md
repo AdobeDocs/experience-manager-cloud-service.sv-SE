@@ -1,11 +1,11 @@
 ---
 title: Hur fungerar en formulärdatamodell i AEM Forms?
 description: Lägg till datamodellsobjekt, tjänster, skapa datamodellsobjekt och underordnade egenskaper, konfigurera tjänster, arbeta med navigeringsegenskaper för OData-tjänster.
-feature: Form Data Model
-role: User
+feature: Adaptive Forms, Form Data Model
+role: Admin, User
 level: Beginner, Intermediate
 exl-id: c17c0443-d4dc-41f8-9315-6cc49e6c471f
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
 workflow-type: tm+mt
 source-wordcount: '3934'
 ht-degree: 0%

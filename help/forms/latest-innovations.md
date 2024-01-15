@@ -1,10 +1,12 @@
 ---
 title: Vilka är de senaste innovationerna i Adobe Experience Manager Forms as a Cloud Service?
 description: Upptäck de senaste funktionerna i [!DNL AEM Forms] as a Cloud Service att skapa, hantera och publicera blanketter och affärsprocesser i enterpriseklass.
+role: Admin, Developer, User
+feature: Adaptive Forms
 exl-id: 3a90b0aa-369a-4350-9904-79ef656b0f9a
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1081'
 ht-degree: 0%
 
 ---

@@ -3,13 +3,15 @@ title: Integrering av Adobe Workfront Fusion med AEM Forms Submission
 description: Med Adobe Workfront Fusion kan du fokusera på nya uppgifter istället för att fokusera på repetitiva uppgifter. Du kan ansluta Adobe Workfront Fusion till ett adaptivt formulär genom att skicka formulär.
 keywords: Skicka in ett adaptivt formulär till Adobe Workfront Fusion, Integration of Adobe Workfront Fusion with AEM Forms Submission, Adobe Workfront Fusion with AEM Forms, Workfront Fusion with AEM Forms, Connect Workfront Fusion to AEM Forms, AEM Forms and Workfront Fusion, How to connect Workfront Fusion with AEM Forms?, Connect Workfront Fusion to a Form
 topic-tags: author, developer
-source-git-commit: 68314ca09594d3c4c5639363326117b89b733a4d
+feature: Adaptive Forms
+role: Admin, User
+exl-id: d3efb450-a879-40ae-8958-0040f99bdafc
+source-git-commit: 975f767e75a268a1638227ae20a533f82724c80a
 workflow-type: tm+mt
 source-wordcount: '1154'
 ht-degree: 0%
 
 ---
-
 
 # Skicka ett anpassat formulär till Adobe Workfront Fusion
 
@@ -189,5 +191,3 @@ Så här konfigurerar du skickaåtgärden för det befintliga adaptiva formulär
 - Ett scenario kan ha flera webkroklänkar, men vid en tidpunkt är bara en webkrok aktiv. Vi rekommenderar att du tar bort den olänkade webkroken så att den inte visas i listrutan AEM Forms Skicka-åtgärd.
 
 <!-- During testing or development of Workfront, add the Author URL to the instance URL. However, when deploying Workfront Fusion in a production environment, it is recommended to replicate the scenario URLs for the Publish instance. -->
-
-

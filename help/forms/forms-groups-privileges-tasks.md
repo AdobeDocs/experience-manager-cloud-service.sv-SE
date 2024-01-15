@@ -1,11 +1,12 @@
 ---
 title: Vilka användargrupper finns tillgängliga direkt i AEM Forms as a Cloud Service?
 description: Lista över användargrupper som inte ingår i rutan och behörigheter som tilldelats varje grupp
-exl-id: bd66ce92-14d9-47fe-b5d3-022e3e468d25
-source-git-commit: a942e87a33775851631a1fe123fa3e8d2686bb30
+role: Admin, Developer, User
+feature: Adaptive Forms
+source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 4%
+source-wordcount: '167'
+ht-degree: 3%
 
 ---
 

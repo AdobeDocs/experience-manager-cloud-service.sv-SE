@@ -1,10 +1,12 @@
 ---
 title: Ansluta en databas till [!DNL AEM Forms] as a Cloud Service?
 description: Hämta och spara data till RESTful web services, SOAP-based web services och OData services från ett adaptivt formulär eller ett AEM arbetsflöde.
+feature: Adaptive Forms, Form Data Model
+role: Admin, User
 exl-id: 9d146275-de0a-4861-b060-d205ed6305f3
-source-git-commit: 596cd08a98b1d9d47825438e1d64b6db3f847271
+source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---

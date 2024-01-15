@@ -2,10 +2,12 @@
 title: Introduktion till [!DNL AEM Forms] as a Cloud Service
 description: Upptäck AEM Forms för att ta fram företagsklara formulär, skapa arbetsflöden för företagsprocesser och använda dokumenttjänster för att ta fram och skydda dokument.
 landing-page-description: Lär dig hur du använder formulär i AEM as a Cloud Service.
+role: Admin, Developer, User
+feature: Adaptive Forms
 exl-id: aa5ef10c-ba78-4a9d-8b2b-a72a7a306888
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '972'
 ht-degree: 3%
 
 ---

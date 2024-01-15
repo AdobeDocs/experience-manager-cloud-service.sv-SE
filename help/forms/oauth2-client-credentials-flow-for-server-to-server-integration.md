@@ -2,11 +2,13 @@
 title: Hur integrerar man Salesforce med OAuth 2.0-klientautentiseringsflödet med AEM Forms?
 description: Lär dig integrera Salesforce med AEM Forms med OAuth 2.0-klientautentiseringsflödet.
 Keywords: Integration of Salesforce using OAuth 2.0 client credential flow, salesforce integration with oauth2 using client credential flow, salesforce and client credential integration
+feature: Adaptive Forms, Form Data Model
+role: User, Developer
 exl-id: 2c2029ab-6fb4-41a6-846c-175c3a79d921
-source-git-commit: f70e18b1c21fd530587694f91c3969e831cfc640
+source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 2%
+source-wordcount: '370'
+ht-degree: 1%
 
 ---
 

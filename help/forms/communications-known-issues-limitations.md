@@ -2,9 +2,11 @@
 title: Vad är överväganden, kända problem och bästa praxis i AEM Forms?
 description: Kända fel och metodtips för AEM Forms Communication API:er är viktiga.
 exl-id: e95615dd-e494-40cd-9cdf-6e9761ca3b3e
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+feature: Adaptive Forms
+role: Admin, Developer, User
+source-git-commit: 975f767e75a268a1638227ae20a533f82724c80a
 workflow-type: tm+mt
-source-wordcount: '1749'
+source-wordcount: '1733'
 ht-degree: 0%
 
 ---
@@ -165,7 +167,7 @@ I följande tabell anges XCI-alternativ.
 
 * För asynkrona API:er (gruppbearbetning) är standardpostnivån 2. Du kan använda en anpassad XCI för att ändra postnivå till 1.
 
-* När standard-XCI är konfigurerad inkluderas sökväg till ursprunglig återgivning. Till exempel, `/content/dam/formsanddocuments/default.xci/jcr:content/renditions/original`
+* När standard-XCI är konfigurerad inkluderas sökväg till ursprunglig återgivning. Exempel: `/content/dam/formsanddocuments/default.xci/jcr:content/renditions/original`
 
 
 
@@ -173,7 +175,7 @@ I följande tabell anges XCI-alternativ.
 
 * Adobe rekommenderar att du har blobbbehållararkivet för datafiler i molnregionen som används av AEM Cloud Service.
 
-## Vanliga frågor {#faq}
+## Frågor och svar {#faq}
 
 **Kan jag använda en bevakad mapp eller andra lagringsmekanismer för att lagra indata och utdata?**
 

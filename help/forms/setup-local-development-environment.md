@@ -1,8 +1,9 @@
 ---
 title: Hur konfigurerar jag en lokal utvecklingsmiljö för AEM Forms?
 description: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
-exl-id: 12877a77-094f-492a-af58-cffafecf79ae
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+role: Admin, Developer, User
+feature: Adaptive Forms
+source-git-commit: 58325cccf218eb2176868879842a795d1c91d8a6
 workflow-type: tm+mt
 source-wordcount: '2676'
 ht-degree: 0%

@@ -1,11 +1,11 @@
 ---
 title: Hur konfigurerar jag datakällor?
 description: Lär dig konfigurera RESTful-webbtjänster, SOAP-baserade webbtjänster och OData-tjänster som datakällor för en formulärdatamodell.
-feature: Form Data Model
+feature: Adaptive Forms, Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb77a840-d705-4406-a94d-c85a6efc8f5d
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
 workflow-type: tm+mt
 source-wordcount: '1950'
 ht-degree: 0%
