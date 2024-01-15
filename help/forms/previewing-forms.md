@@ -1,12 +1,12 @@
 ---
 title: Hur förhandsgranskar man ett anpassat formulär?
-description: Användarna kan förhandsgranska blanketterna innan de publiceras eller aktiveras för att säkerställa att de motsvarar förväntningarna. Alternativen för förhandsgranskning kan variera mellan olika formulärtyper som stöds.
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
+description: Användarna kan förhandsgranska blanketten innan den publiceras eller aktiveras för att säkerställa att den motsvarar förväntningarna. Alternativen för förhandsgranskning kan variera mellan olika formulärtyper som stöds.
 topic-tags: author
-discoiquuid: 377d804d-4a75-4c93-8125-d2660cf56418
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+role: Admin, Developer, User
+feature: Adaptive Forms
+source-git-commit: 6511c4273ca3d394d98a61e8acb4d3cb03c243d5
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '336'
 ht-degree: 0%
 
 ---
@@ -28,10 +28,10 @@ I följande tabell visas de förhandsvisningsalternativ som är tillgängliga f�
    <td><strong>Tillgångstyp</strong><br /> </td>
    <td><strong>Tillgängliga alternativ för förhandsgranskning</strong><br /> </td>
   </tr>
-  <tr>
-   <td>Dokument</td>
+  <!--<tr>
+   <td>Document</td>
    <td>PDF preview</td>
-  </tr>
+  </tr>-->
   <tr>
    <td>PDF Form</td>
    <td>Förhandsgranska och förhandsgranska PDF med data<br /> </td>
@@ -40,10 +40,10 @@ I följande tabell visas de förhandsvisningsalternativ som är tillgängliga f�
    <td>Adaptiv form</td>
    <td>Förhandsgranska HTML och HTML med data</td>
   </tr>
-  <tr>
-   <td>Formulärmall</td>
-   <td>förhandsgranskning av PDF, förhandsvisning av PDF med data, förhandsgranskning av HTML, förhandsvisning av HTML med data<br /> </td>
-  </tr>
+  <!--<tr>
+   <td>Form Template</td>
+   <td>PDF preview, PDF preview with Data, HTML preview, HTML preview with Data<br /> </td>
+  </tr>-->
  </tbody>
 </table>
 
@@ -61,7 +61,7 @@ I följande tabell visas de förhandsvisningsalternativ som är tillgängliga f�
 
    * Förhandsgranska som HTML
    * Förhandsgranska med data
-   * Förhandsgranska som PDF (tillgängligt för formulärmallar)
+     <!--* Preview as PDF (available for form templates)-->
 
 ## Förhandsgranska med data {#preview-with-data}
 
