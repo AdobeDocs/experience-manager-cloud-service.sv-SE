@@ -2,9 +2,9 @@
 title: Versionsinformation för 2021.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2021.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 3f9d7339-7e37-4702-821e-f2b03cd7e224
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 720430af374636878b42ce346ca9c61ab089709b
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1355'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Följande version (2021.6.0) kommer att vara den 28 juni 2021.
 
 * [Förhandsversion - kanal](/help/release-notes/prerelease.md): Förgranska kommande funktioner under en hel månad innan de publiceras i produktion!
 
-* [API-borttagning](/help/release-notes/deprecated-apis.md): en lista över de senaste inaktuella API:erna för AEM as a Cloud Service finns tillgänglig.
+* [API-borttagning](/help/release-notes/deprecated-removed-features.md): en lista över de senaste inaktuella API:erna för AEM as a Cloud Service finns tillgänglig.
 
 * [AEM as a Cloud Service SDK Build Analyzer Maven Plugin](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html): Uppdatera dina maven-projekt till den senaste versionen, som innehåller en inaktuell Java API-kontroll och andra förbättringar.
 
@@ -138,7 +138,7 @@ Nästa version är planerad till 3 juni 2021.
 
 * När projektet med exempelkoden har skapats visas Hantera Git som en länk från hjältekortet på sidan Översikt när sandlådeprogrammet har konfigurerats.
 
-## Content Transfer Tool {#content-transfer-tool}
+## Verktyget Innehållsöverföring {#content-transfer-tool}
 
 ### Releasedatum {#release-date-ctt-latest}
 
