@@ -2,9 +2,9 @@
 title: Använda och inte använda IP-Tillåtelselista
 description: Lär dig hur du använder och tar bort användningen av IP-tillåtelselista i miljöer.
 exl-id: 7158496c-b0c4-4228-a306-71dc51003c57
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 90250c13c5074422e24186baf78f84c56c9e3c4f
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,9 @@ När du använder en IP-tillåtelselista kopplas alla IP-intervall som ingår i 
 
 En användare i **Företagsägare** eller **Distributionshanteraren** kan följa de här stegen för att använda en IP-tillåtelselista.
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
+
+1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du programmet.
 1. Navigera till **Miljö** från **Ökning** sida.
 1. Navigera till den specifika miljöinformationssidan på sidan **Miljö** och navigera till **IP TILLÅTELSELISTA** tabell.
 1. Använd inmatningsfälten högst upp i tabellen så att du kan välja IP tillåtelselista och författaren eller publiceringstjänsten som du vill använda den på.

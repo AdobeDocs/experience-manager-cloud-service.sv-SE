@@ -2,9 +2,9 @@
 title: Lägga till ett SSL-certifikat
 description: Lär dig hur du lägger till ett eget SSL-certifikat med hjälp av självbetjäningsverktygen i Cloud Manager.
 exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 90250c13c5074422e24186baf78f84c56c9e3c4f
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,9 @@ Granska avsnittet **Certifikatkrav** av dokumentet [Introduktion till hantering 
 
 Följ de här stegen för att lägga till ett certifikat med hjälp av Cloud Manager.
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation
+
+1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du programmet.
 
 1. Navigera till **Miljö** från **Ökning** sida.
 

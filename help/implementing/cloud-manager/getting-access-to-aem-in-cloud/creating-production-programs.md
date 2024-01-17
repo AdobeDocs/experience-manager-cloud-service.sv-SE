@@ -2,9 +2,9 @@
 title: Skapa produktionsprogram
 description: Lär dig hur du använder Cloud Manager för att skapa ett eget produktionsprogram för livstrafik.
 exl-id: 4ccefb80-de77-4998-8a9d-e68d29772bb4
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 79d3ec7f5ede84fd989b7d5440739ec9560a547f
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Följ de här stegen för att skapa ett produktionsprogram.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. Klicka **Lägg till program** från skärmens övre högra hörn.
+1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** skärm, tryck eller klicka **Lägg till program** i skärmens övre högra hörn.
 
    ![Startsida för molnhanterare](assets/log-in.png)
 
@@ -37,8 +37,6 @@ Följ de här stegen för att skapa ett produktionsprogram.
    * HIPAA kan inte aktiveras eller inaktiveras efter att programmet har skapats.
       * [Läs mer](https://www.adobe.com/go/hipaa-ready) om implementering av Adobe HIPAA-klar lösning.
    * När det är aktiverat kan WAF-DDOS-skyddet sedan konfigureras genom att konfigurera en [icke-produktionsrörledning.](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md)
-
-   {{waf-limited-release}}
 
    ![Säkerhetsalternativ](assets/create-production-program-security.png)
 
@@ -60,7 +58,7 @@ Följ de här stegen för att skapa ett produktionsprogram.
    ![Definiera planerat publiceringsdatum](assets/setup-go-live.png)
 
    * Det här datumet kan redigeras när som helst.
-   * Detta datum är endast avsett som information och aktiverar Go Live-widgeten på programöversiktssidan för att tillhandahålla länkar till AEM as a Cloud Service best practice-dokumentation i rätt tid för att anpassa sig till den resa som leder till en lyckad och smidig Go Live-upplevelse.
+   * Detta datum är endast avsett som information och aktiverar Go Live-widgeten på [**Programöversikt** page](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#program-overview) att tillhandahålla länkar till AEM as a Cloud Service best practice-dokumentation i rätt tid för att passa in i den resa som leder till en lyckad och smidig Go Live-upplevelse.
 
 1. Klicka **Skapa**.
 

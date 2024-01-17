@@ -2,9 +2,9 @@
 title: Skapa sandlådeprogram
 description: Lär dig hur du använder Cloud Manager för att skapa ett eget sandlådeprogram för utbildning, demo, POC eller andra icke-produktionssyften.
 exl-id: 10011392-3059-4bb0-88db-0af1d390742e
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 90250c13c5074422e24186baf78f84c56c9e3c4f
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '443'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Läs mer om programtyper i dokumentet [Program- och programtyper.](program-types
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. Klicka på på Cloud Managers startsida i skärmens övre högra hörn **Lägg till program**.
+1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** skärm, tryck eller klicka **Lägg till program** i skärmens övre högra hörn.
 
    ![Startsida för Cloud Manager](assets/cloud-manager-my-programs.png)
 

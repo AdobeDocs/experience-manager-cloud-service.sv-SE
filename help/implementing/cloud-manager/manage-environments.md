@@ -2,9 +2,9 @@
 title: Hantera miljöer
 description: Lär dig mer om de typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: 1a49bcd5b76e6a3b0d5a3168cef445101dc8d149
+source-git-commit: 90250c13c5074422e24186baf78f84c56c9e3c4f
 workflow-type: tm+mt
-source-wordcount: '2607'
+source-wordcount: '2614'
 ht-degree: 0%
 
 ---
@@ -41,9 +41,9 @@ Om du vill lägga till eller redigera en miljö måste användaren vara medlem i
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. Klicka på det program som du vill lägga till en miljö för.
+1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** ska du trycka eller klicka på det program du vill lägga till en miljö för.
 
-1. Från **Programöversikt** sida, klicka **Lägg till miljö** på **Miljö** för att lägga till en miljö.
+1. Från **[Programöversikt](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#program-overview)** sida, klicka **Lägg till miljö** på **Miljö** för att lägga till en miljö.
 
    ![Miljökort](assets/no-environments.png)
 

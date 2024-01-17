@@ -2,9 +2,9 @@
 title: Miljövariabler för Cloud Manager
 description: Standardmiljövariabler kan konfigureras och hanteras via Cloud Manager och tillhandahållas i körningsmiljön, som används i OSGi-konfigurationen.
 exl-id: 5cdd5532-11fe-47a3-beb2-21967b0e43c6
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 90250c13c5074422e24186baf78f84c56c9e3c4f
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Standardmiljövariabler kan konfigureras och hanteras via Cloud Manager. De tillhandahålls körtidsmiljön och kan användas i OSGi-konfigurationer. Miljövariabler kan vara antingen miljöspecifika värden eller miljöhemligheter, baserat på vad som ändras.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Miljövariabler ger en mängd fördelar för användare av AEM as a Cloud Service:
 
@@ -37,7 +37,7 @@ Exempel på vanliga användningsområden är:
 >Du måste vara medlem i [**Distributionshanteraren** roll](/help/onboarding/cloud-manager-introduction.md#role-based-premissions) för att lägga till eller ändra miljövariabler.
 
 1. Logga in på Adobe Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/).
-1. Cloud Manager visar de olika tillgängliga programmen. Markera den du vill hantera.
+1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du den som du vill hantera.
 1. Välj **Miljö** väljer du sedan den miljö som du vill skapa en miljövariabel för i den vänstra navigeringspanelen.
 1. I detalj om miljön väljer du **Konfiguration** välj **Lägg till** för att öppna **Miljökonfiguration** -dialogrutan.
    * Om du lägger till en miljövariabel för första gången kan du se **Lägg till konfiguration** i mitten av sidan. Du kan använda den här knappen **Lägg till** för att öppna **Miljökonfiguration** -dialogrutan.

@@ -2,9 +2,9 @@
 title: Lägga till ett anpassat domännamn
 description: Lär dig hur du lägger till ett anpassat domännamn med hjälp av Cloud Manager.
 exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: 90250c13c5074422e24186baf78f84c56c9e3c4f
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,9 @@ När du lägger till ett anpassat domännamn hanteras domänen med det mest spec
 
 Följ de här stegen för att lägga till ett eget domännamn från **Domäninställningar** sida. De här stegen baseras på Snabb. Om du använder ett annat CDN måste du konfigurera din domän med det CDN som du har valt att använda.
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
+
+1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du programmet.
 
 1. Navigera till **Miljö** från **Ökning** sida.
 

@@ -2,9 +2,9 @@
 title: Distribuera koden
 description: Lär dig hur du distribuerar din kod med hjälp av Cloud Manager-pipelines AEM as a Cloud Service.
 exl-id: 2c698d38-6ddc-4203-b499-22027fe8e7c4
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 90250c13c5074422e24186baf78f84c56c9e3c4f
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1197'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ När du har [har konfigurerat produktionsförloppet](/help/implementing/cloud-ma
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. Klicka på det program som du vill distribuera kod för.
+1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** ska du trycka eller klicka på det program som du vill distribuera kod för.
 
 1. Klicka **Distribuera** från uppmaning till åtgärd på **Ökning** för att starta distributionsprocessen.
 

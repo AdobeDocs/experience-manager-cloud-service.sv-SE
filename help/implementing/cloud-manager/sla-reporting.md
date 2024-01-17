@@ -2,9 +2,9 @@
 title: SLA-rapportering
 description: Lär dig hur du kan se hur din AEM fungerar i förhållande till det avtalade serviceavtalet (SLA).
 exl-id: 03932415-a029-4703-b44a-f86a87edb328
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 90250c13c5074422e24186baf78f84c56c9e3c4f
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,9 @@ Lär dig hur du kan se hur din AEM fungerar i förhållande till det avtalade se
 
 SLA-rapporteringsdata är tillgängliga för alla produktionsprogram via **Rapporter** -fliken. Följ de här stegen för att komma åt.
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
+
+1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du programmet.
 
 1. Navigera till **Rapporter** -fliken från **Ökning** sida.
 

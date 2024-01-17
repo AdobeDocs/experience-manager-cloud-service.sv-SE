@@ -1,16 +1,16 @@
 ---
-title: Komma åt och hantera loggar
+title: Åtkomst till och hantering av loggar
 description: Lär dig hur du får åtkomst till och hanterar loggar som hjälp i utvecklingsprocessen på AEM as a Cloud Service.
 exl-id: f17274ce-acf5-4e7d-b875-75d4938806cd
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 90250c13c5074422e24186baf78f84c56c9e3c4f
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 2%
+source-wordcount: '330'
+ht-degree: 0%
 
 ---
 
 
-# Komma åt och hantera loggar {#manage-logs}
+# Åtkomst till och hantering av loggar {#manage-logs}
 
 Lär dig hur du får åtkomst till och hanterar loggar som hjälp i utvecklingsprocessen på AEM as a Cloud Service.
 
@@ -20,7 +20,9 @@ Du kan komma åt en lista över tillgängliga loggfiler för den valda miljön m
 
 Så här hämtar du loggar:
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
+
+1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du programmet.
 
 1. Navigera till **Miljö** från **Ökning** sida.
 

@@ -2,9 +2,9 @@
 title: Lägger till IP-Tillåtelselista
 description: Lär dig hur du lägger till egna IP-tillåtelselista med hjälp av Cloud Manager.
 exl-id: 769be71f-5c11-4f98-8906-7a5667a25aee
-source-git-commit: 97a6a7865f696f4d61a1fb4e25619caac7b68b51
+source-git-commit: 90250c13c5074422e24186baf78f84c56c9e3c4f
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '198'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,9 @@ Lär dig hur du lägger till egna IP-tillåtelselista med hjälp av Cloud Manage
 
 En användare i **Företagsägare** eller **Distributionshanteraren** kan följa de här stegen för att lägga till ett IP-tillåtelselista.
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
+
+1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du programmet.
 
 1. Från **Ökning** sida, navigera till **Miljö** skärm.
 

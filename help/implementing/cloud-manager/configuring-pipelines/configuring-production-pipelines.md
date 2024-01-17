@@ -3,9 +3,9 @@ title: Konfigurera produktionsförlopp
 description: Lär dig hur du konfigurerar produktionspipelines för att skapa och distribuera kod till produktionsmiljöer.
 index: true
 exl-id: 67edca16-159e-469f-815e-d55cf9063aa4
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 90250c13c5074422e24186baf78f84c56c9e3c4f
 workflow-type: tm+mt
-source-wordcount: '1408'
+source-wordcount: '1414'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,9 @@ När du har konfigurerat programmet och har minst en miljö som använder [!UICO
 >
 >Innan du konfigurerar en frontendpipeline ska du läsa [AEM för att skapa webbplatser snabbt](/help/journey-sites/quick-site/overview.md) för att få en komplett guide med hjälp av det lättanvända AEM snabbverktyget för att skapa webbplatser. Den här resan hjälper dig att effektivisera utvecklingen av AEM sajt, så att du snabbt kan anpassa din sajt utan någon AEM bakomliggande kunskap.
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation
+
+1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du programmet.
 
 1. Navigera till **Pipelines** från **Programöversikt** sida och klicka **Lägg till** för att markera **Lägg till produktionspipeline**.
 
