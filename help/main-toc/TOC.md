@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 3bc71fe59e0b0c257e6747f93b3d76bc801a39b4
+source-git-commit: a00eb97859f679ade3a4a6d89a427735451ebd70
 workflow-type: tm+mt
-source-wordcount: '4549'
+source-wordcount: '4554'
 ht-degree: 3%
 
 ---
@@ -89,6 +89,7 @@ ht-degree: 3%
    + Versionsinformation för Cloud Manager {#cloud-manager}
       + [Aktuell versionsinformation](/help/implementing/cloud-manager/release-notes/current.md)
       + 2023 {#2023}
+         + [Versionsinformation för 2023.12.0](/help/implementing/cloud-manager/release-notes/2023/2023-12-0.md)
          + [Versionsinformation för 2023.11.0](/help/implementing/cloud-manager/release-notes/2023/2023-11-0.md)
          + [Versionsinformation för 2023.10.0](/help/implementing/cloud-manager/release-notes/2023/2023-10-0.md)
          + [Versionsinformation för 2023.9.0](/help/implementing/cloud-manager/release-notes/2023/2023-9-0.md)
