@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 104dfd255185816983674026a84337624a851d9a
+source-git-commit: cb817f2ce94a1618fd8dd73834f663e8aaed2b7f
 workflow-type: tm+mt
-source-wordcount: '4551'
+source-wordcount: '4600'
 ht-degree: 3%
 
 ---
@@ -609,6 +609,12 @@ ht-degree: 3%
             + [Konfigurera omdirigeringssida eller tackmeddelande](/help/forms/configure-redirect-page-or-thank-you-message.md)
             + [Skapa formulär med repeterbara avsnitt](/help/forms/create-forms-repeatable-sections.md)
             + [Konfigurera åtgärden Skicka för ett anpassat formulär](/help/forms/configure-submit-actions-core-components.md)
+            + [Skicka ett anpassat formulär till Azure Blob Storage](/help/forms/configure-submit-action-azure-blob-storage.md)
+            + [Skicka ett anpassat formulär till Microsoft® OneDrive](/help/forms/configure-submit-action-onedrive.md)
+            + [Konfigurera SharePoint-lagring för ett adaptivt formulär](/help/forms/configure-submit-action-sharepoint.md)
+            + [Integrera AEM anpassat formulär med AEM arbetsflöde](/help/forms/configure-submit-action-workflow.md)
+            + [Konfigurera Skicka till REST-slutpunktsåtgärd för adaptiv Forms](/help/forms/configure-submit-action-restpoint.md)
+            + [Konfigurera åtgärden Skicka e-post för ett anpassat formulär](/help/forms/configure-submit-action-send-email.md)
             + [Använd Google reCAPTCHA i anpassad form](/help/forms/captcha-adaptive-forms-core-components.md)
             + [Lägga till en anpassad felhanterare i ett adaptivt formulär](/help/forms/add-custom-error-handler-adaptive-forms-core-components.md)
             + [Lägg till en språkinställning för adaptiv Forms baserat på kärnkomponenter](/help/forms/supporting-new-language-localization-core-components.md)

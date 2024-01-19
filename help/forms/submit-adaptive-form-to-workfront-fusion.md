@@ -6,9 +6,9 @@ topic-tags: author, developer
 feature: Adaptive Forms
 role: Admin, User
 exl-id: d3efb450-a879-40ae-8958-0040f99bdafc
-source-git-commit: 975f767e75a268a1638227ae20a533f82724c80a
+source-git-commit: 7cf7883e133d58145b5b3e1bb6ba8eb21ebad5d9
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1187'
 ht-degree: 0%
 
 ---
@@ -21,21 +21,23 @@ ht-degree: 0%
 
 Med Workfront Fusion kan du till exempel skapa ett scenario där du samlar in data med adaptiv form, bearbetar data och skickar data till ett datalager för arkivering. När ett scenario har konfigurerats utför Workfront Fusion automatiskt uppgifterna när en användare fyller i ett formulär och uppdaterar datalagret sömlöst.
 
+AEM as a Cloud Service erbjuder olika åtgärder för att skicka in formulär. Du kan läsa mer om de här alternativen i [Inlämningsåtgärd för anpassat formulär](/help/forms/configure-submit-actions-core-components.md)  artikel.
+
 ## Fördelar med att använda Adobe Workfront Fusion{#advatages-of-workfront-fusion}
 
 Några av fördelarna med att använda Adobe Workfront Fusion med AEM Forms:
 
-- Skicka data som samlats in med Adaptive Forms till ett Workfront Fusion-scenario
-- Automatisera uppgifter som är mindre benägna att innehålla fel.
-- Anpassa specifika krav för en organisation som inte direkt ingår i Workfront.
-- Hantera enkla logiska frågor och enkla beslut, till exempel if/then-satser.
+* Skicka data som samlats in med Adaptive Forms till ett Workfront Fusion-scenario
+* Automatisera uppgifter som är mindre benägna att innehålla fel.
+* Anpassa specifika krav för en organisation som inte direkt ingår i Workfront.
+* Hantera enkla logiska frågor och enkla beslut, till exempel if/then-satser.
 
 ## Krav för att integrera AEM Forms med Adobe Workfront Fusion {#prerequisites}
 
 Förutsättningar för att ansluta Workfront Fusion till AEM Forms är:
 
-- Ett giltigt [Workfront Fusion-licens](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-fusion/get-started-with-workfront-fusion/license-automation-vs-integration.html).
-- En AEM användare med behörighet att komma åt [Dev Console](https://my.cloudmanager.adobe.com/) till [hämta inloggningsuppgifterna för tjänsten](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html).
+* Ett giltigt [Workfront Fusion-licens](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-fusion/get-started-with-workfront-fusion/license-automation-vs-integration.html).
+* En AEM användare med behörighet att komma åt [Dev Console](https://my.cloudmanager.adobe.com/) till [hämta inloggningsuppgifterna för tjänsten](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html).
 
 ## Integrera AEM Forms med Adobe Workfront Fusion
 
@@ -100,16 +102,16 @@ Så här lägger du till en anslutning:
    > Behåll `https://` i **IMS-slutpunkt** textrutan när du lägger till `imsEndpoint` URL.
 
 1. Ange följande värden i dialogrutan **[!UICONTROL Create a Connection]** dialogruta:
-   - Ange **Klient-ID** med värdet för **clientId** från inloggningsuppgifterna för tjänsten i Developer Console.
-   - Ange **Klienthemlighet** med värdet för **clientSecret** från inloggningsuppgifterna för tjänsten i Developer Console.
-   - Ange **Tekniskt konto-ID**  med värdet för **id** från inloggningsuppgifterna för tjänsten i Developer Console.
-   - Ange **Organisations-ID**  med värdet för **org** från inloggningsuppgifterna för tjänsten i Developer Console.
-   - **Meta-omfång**  med värdet för **metasskop** från inloggningsuppgifterna för tjänsten i Developer Console.
-   - **Privata nycklar**  med värdet för **privateKey** från inloggningsuppgifterna för tjänsten i Developer Console.
+   * Ange **Klient-ID** med värdet för **clientId** från inloggningsuppgifterna för tjänsten i Developer Console.
+   * Ange **Klienthemlighet** med värdet för **clientSecret** från inloggningsuppgifterna för tjänsten i Developer Console.
+   * Ange **Tekniskt konto-ID**  med värdet för **id** från inloggningsuppgifterna för tjänsten i Developer Console.
+   * Ange **Organisations-ID**  med värdet för **org** från inloggningsuppgifterna för tjänsten i Developer Console.
+   * **Meta-omfång**  med värdet för **metasskop** från inloggningsuppgifterna för tjänsten i Developer Console.
+   * **Privata nycklar**  med värdet för **privateKey** från inloggningsuppgifterna för tjänsten i Developer Console.
 
    >[!NOTE]
    >
-   >- För **Privat nyckel**, ta bort `\r\n` från värdet.
+   >* För **Privat nyckel**, ta bort `\r\n` från värdet.
    >  Om värdet för den privata nyckeln till exempel är:
    >`\r\nIJAVO8GDYAOZ9jMA0GCSqGSIb3DQEBCwUAMDAxL\r\nMy1lMTUxODMxLWNtc3RnLWludGVncmF0aW9uLTAw`efter att du tagit bort `\r\n` från den privata nyckeln ser nyckeln ut så här, med båda värdena på en separat rad:
    >
@@ -117,7 +119,7 @@ Så här lägger du till en anslutning:
    >
    >   `My1lMTUxODMxLWNtc3RnLWludGVncmF0aW9uLTAw`
    > 
-   >- Du kan också hämta en privat nyckel eller ett certifikat från filen genom att välja **Extract** -knappen.
+   >* Du kan också hämta en privat nyckel eller ett certifikat från filen genom att välja **Extract** -knappen.
 
 1. Klicka **Fortsätt**.
 
@@ -144,8 +146,8 @@ När du klickar på växlingsknappen visas Workfront-scenariot i **[!UICONTROL A
 ### 2. Konfigurera en åtgärd för att skicka ett adaptivt formulär för Workfront Fusion
 
 Du kan konfigurera åtgärden skicka för Workfont Fusion för:
-- [Ny adaptiv Forms](#new-af-submit-action)
-- [Befintliga adaptiva formulär](#existing-af-submit-action)
+* [Ny adaptiv Forms](#new-af-submit-action)
+* [Befintliga adaptiva formulär](#existing-af-submit-action)
 
 #### Konfigurera åtgärden skicka för det nya adaptiva formuläret för Workfront Fusion {#new-af-submit-action}
 
@@ -187,7 +189,11 @@ Så här konfigurerar du skickaåtgärden för det befintliga adaptiva formulär
 
 ## Bästa praxis {#best-practices}
 
-- Vi rekommenderar att du noga väljer webbhollänsnamn eftersom det inte finns något sätt att hämta scenarionamnet vid AEM. Om du ändrar webkroknamnet i framtiden återspeglas det inte i listrutan för AEM Forms-åtgärden Skicka.
-- Ett scenario kan ha flera webkroklänkar, men vid en tidpunkt är bara en webkrok aktiv. Vi rekommenderar att du tar bort den olänkade webkroken så att den inte visas i listrutan AEM Forms Skicka-åtgärd.
+* Vi rekommenderar att du noga väljer webbhollänsnamn eftersom det inte finns något sätt att hämta scenarionamnet vid AEM. Om du ändrar webkroknamnet i framtiden återspeglas det inte i listrutan för AEM Forms-åtgärden Skicka.
+* Ett scenario kan ha flera webkroklänkar, men vid en tidpunkt är bara en webkrok aktiv. Vi rekommenderar att du tar bort den olänkade webkroken så att den inte visas i listrutan AEM Forms Skicka-åtgärd.
 
 <!-- During testing or development of Workfront, add the Author URL to the instance URL. However, when deploying Workfront Fusion in a production environment, it is recommended to replicate the scenario URLs for the Publish instance. -->
+
+## Relaterade artiklar
+
+{{af-submit-action}}

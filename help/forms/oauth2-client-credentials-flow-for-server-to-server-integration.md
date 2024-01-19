@@ -5,9 +5,9 @@ Keywords: Integration of Salesforce using OAuth 2.0 client credential flow, sale
 feature: Adaptive Forms, Form Data Model
 role: User, Developer
 exl-id: 2c2029ab-6fb4-41a6-846c-175c3a79d921
-source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
+source-git-commit: 6e01a5bfc4e8bf7cc9537c9c03af08cd253a1ade
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '442'
 ht-degree: 1%
 
 ---
@@ -24,6 +24,8 @@ Du kan använda klientautentiseringsuppgifter för OAuth 2.0 för att integrera 
 ![Arbetsflöde vid inställning av kommunikation mellan AEM Forms och Salesforce-program](/help/forms/assets/salesforce-workflow.png)
 
 AEM Forms utbyter klientautentiseringsuppgifterna (konsumentnyckel och hemlighet), som definieras i det Salesforce-anslutna programmet, för att få en åtkomsttoken.
+
+AEM as a Cloud Service erbjuder olika åtgärder för att skicka in formulär. Du kan läsa mer om de här alternativen i [Inlämningsåtgärd för anpassat formulär](/help/forms/configure-submit-actions-core-components.md) artikel.
 
 Det finns många fördelar med att använda OAuth 2.0-klientautentiseringsuppgifter för autentisering över autentisering av Authorization Code Flow:
 
@@ -69,6 +71,9 @@ Så här ansluter du adaptivt formulär till Salesforce-programmet med autentise
 1. Klicka på **[!UICONTROL Test Connection]**.
 1. Om anslutningen lyckas klickar du på **[!UICONTROL Create]** -knappen.
 
-Nu kan du [skapa formulärdatamodellen](/help/forms/create-form-data-models.md) för att skicka anpassat formulär till Salesforce-programmet.
+
+När du har konfigurerat Salesforce-programmet kan du använda konfigurationen när du skapar formulärdatamodeller. Mer information finns i [Skapa formulärdatamodell](create-form-data-models.md). [Konfigurera åtgärden Skicka formulärdatamodell](/help/forms/using-form-data-model.md) för ett adaptivt formulär som skickar data till Salesforce-program.
+
+Mer information om hur du skapar och använder formulärdatamodell i affärsarbetsflöden finns i [Dataintegrering](data-integration.md).
 
 

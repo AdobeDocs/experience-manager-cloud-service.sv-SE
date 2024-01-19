@@ -1,7 +1,7 @@
 ---
-source-git-commit: 79d3ec7f5ede84fd989b7d5440739ec9560a547f
+source-git-commit: 2f567d45a6ba2dfb4dd3346e8510bcb04113eefb
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
@@ -43,5 +43,16 @@ ht-degree: 0%
 * [Skicka anpassade formulärdata till AEM arbetsflöde](/help/forms/configure-submit-actions-core-components.md#invoke-an-aem-workflow)
 * [Använd Forms Portal för att lista AEM Adaptive Forms på en AEM webbplats](/help/forms/configure-forms-portal.md)
 
+## Inlämningsåtgärder för anpassningsbara formulär {#af-submit-action}
 
-
+* [Skicka e-post](/help/forms/configure-submit-action-send-email.md)
+* [Skicka till SharePoint](/help/forms/configure-submit-action-sharepoint.md)
+* [Skicka med formulärdatamodell](/help/forms/using-form-data-model.md#write-submitted-adaptive-form-data-into-data-sources-write-af)
+* [Skicka till Azure Blob Storage](/help/forms/configure-submit-action-azure-blob-storage.md)
+* [Skicka till REST-slutpunkt](/help/forms/configure-submit-action-restpoint.md)
+* [Skicka till OneDrive](/help/forms/configure-submit-action-onedrive.md)
+* [Anropa ett AEM](/help/forms/configure-submit-action-workflow.md)
+* [Skicka till Power Automate](/help/forms/forms-microsoft-power-automate-integration.md)
+* [Skicka till Workfront Fusion](/help/forms/submit-adaptive-form-to-workfront-fusion.md)
+* [Ansluta anpassat formulär till Salesforce-program](/help/forms/oauth2-client-credentials-flow-for-server-to-server-integration.md)
+* [Ansluta ett anpassat formulär till Microsoft® Dynamics OData](/help/forms/ms-dynamics-odata-configuration.md)

@@ -4,12 +4,13 @@ description: Ett anpassat formulär innehåller flera överföringsåtgärder. E
 keywords: hur du väljer en inskickningsåtgärd för ett tilläggsformulär, kopplar ett adaptivt formulär till SharePoint-listan, kopplar ett adaptivt formulär till SharePoint-dokumentbiblioteket, kopplar ett adaptivt formulär till formulärdatamodellen
 feature: Adaptive Forms, Core Components
 exl-id: 495948e8-30a7-4e7c-952f-c71de15520f0
-source-git-commit: 3cd10760fa48f4aa1810877f79476be744f048d1
+source-git-commit: 2f567d45a6ba2dfb4dd3346e8510bcb04113eefb
 workflow-type: tm+mt
-source-wordcount: '3880'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
+
 
 # Inlämningsåtgärd för anpassat formulär {#configuring-the-submit-action}
 
@@ -21,18 +22,22 @@ ht-degree: 0%
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
-<!--| Applies to     | ✅ Adaptive Form Core Components, ❎ [Adaptive Form Foundation Components](/help/forms/configuring-submit-actions.md)          |-->
-
-
 Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett anpassat formulär. Den aktiveras när en användare klickar på **[!UICONTROL Submit]** på ett adaptivt formulär. Forms as a Cloud Service, för Adaptive Forms baserat på kärnkomponenter, erbjuder en mängd färdiga Submit-åtgärder. Dessa färdiga sändningsåtgärder ger dig möjlighet att:
 
 * Skicka enkelt formulärdata via e-post.
-* Initiera Microsoft Power Automate-flöden eller AEM arbetsflöden när data skickas.
-* Skicka formulärdata direkt till Microsoft SharePoint Server, Microsoft Azure Blob Storage eller Microsoft OneDrive.
+* Initiera Microsoft® Power Automate-flöden eller AEM arbetsflöden när data skickas.
+* Skicka formulärdata direkt till Microsoft® SharePoint Server, Microsoft® Azure Blob Storage eller Microsoft® OneDrive.
 * Skicka smidigt data till en konfigurerad datakälla med hjälp av formulärdatamodellen.
 * Skicka enkelt data till en REST-slutpunkt.
 
-Du kan också [utöka standardåtgärderna för att skicka](custom-submit-action-form.md) för att skapa en egen skickningsåtgärd.
+Du kan [utöka standardåtgärderna för att skicka](custom-submit-action-form.md). Du kan också anpassa Skicka-åtgärder för organisationsspecifika krav.
+
+Om du vill definiera en Skicka-åtgärd för en anpassad version använder du dialogrutan Konfigurera för en **Adaptiv formulärbehållare** -komponenten. Dialogrutan Konfigurera för **Adaptiv formulärbehållare** ingår:
+* Fliken Grundläggande
+* Fliken Formulärdatamodell
+* Fliken Skicka
+
+Du kan definiera egenskaperna för formulärbehållaren i dialogrutan Konfigurera. Mer information om dialogrutan Konfigurera för en formulärbehållarkomponent finns i [klicka här.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/form-container.html)
 
 ## Välj och konfigurera en Skicka-åtgärd för ett anpassat formulär {#select-and-configure-submit-action}
 
@@ -45,56 +50,47 @@ Så här väljer och konfigurerar du en Skicka-åtgärd för formuläret:
 
    ![Klicka på skiftningsikonen för att öppna dialogrutan Adaptiv formulärbehållare och konfigurera en sändningsåtgärd](/help/forms/assets/adaptive-forms-submit-message.png)
 
-1. Välj och konfigurera en **[!UICONTROL Submit action]**, baserat på era behov. Mer information om den valda åtgärden Skicka finns i:
+1. Välj och konfigurera en **[!UICONTROL Submit action]**, baserat på era behov.
 
-   * [Skicka e-post](#send-email)
-   * [Skicka till SharePoint](#submit-to-sharedrive)
-   * [Skicka med formulärdatamodell](#submit-using-form-data-model)
-   * [Skicka till Azure Blob Storage](#azure-blob-storage)
-   * [Skicka till REST-slutpunkt](#submit-to-rest-endpoint)
-   * [Skicka till OneDrive](#submit-to-onedrive)
-   * [Anropa ett AEM](#invoke-an-aem-workflow)
-   * [Skicka till Power Automate](#microsoft-power-automate)
-   * [Skicka till Workfront Fusion](#workfront-fusion)
+Du kan också konfigurera olika åtgärder för att skicka in anpassade formulär.
+* **Omdirigerings-URL/sökväg** - Med det här alternativet kan användaren konfigurera en sida för varje formulär som formuläranvändarna omdirigeras till efter att ha skickat in ett adaptivt formulär.
+* **Visa meddelande** - Med det här alternativet kan användare lägga till ett meddelande som visas när det adaptiva formuläret har skickats. Den fördefinierade texten tas med i dialogrutan och kan ändras av användaren.
 
-## Skicka e-post {#send-email}
+Mer information om följande Skicka-åtgärder finns i:
 
-Om du vill skicka ett e-postmeddelande till en eller flera mottagare när formuläret har skickats kan du använda **[!UICONTROL Send Email]** Skicka åtgärd. Med den här åtgärden kan du skapa ett e-postmeddelande som innehåller formulärdata i ett fördefinierat format. Ta till exempel följande mall där kundnamn, leveransadress, delstatsnamn och postnummer hämtas från skickade formulärdata:
+* [Skicka e-post](/help/forms/configure-submit-action-send-email.md)
+* [Anropa ett Power Automate-flöde](/help/forms/forms-microsoft-power-automate-integration.md)
+* [Skicka till SharePoint](/help/forms/configure-submit-action-sharepoint.md)
+* [Anropa en Workfront Fusion](/help/forms/submit-adaptive-form-to-workfront-fusion.md)
+* [Skicka med formulärdatamodell](/help/forms/using-form-data-model.md)
+* [Skicka till Azure Blob Storage](/help/forms/configure-submit-action-azure-blob-storage.md)
+* [Skicka till REST-slutpunkt](/help/forms/configure-submit-action-restpoint.md)
+* [Skicka till OneDrive](/help/forms/configure-submit-action-onedrive.md)
+* [Anropa ett AEM](/help/forms/configure-submit-action-workflow.md)
 
-    &quot;
-    
-    Hej ${customer_Name},
-    
-    Följande anges som standardleveransadress:
-    ${customer_Name},
-    ${customer_Shipping_Address},
-    ${customer_State},
-    ${customer_ZIPCode}
-    
-    Med vänlig hälsning
-    WKND
-    
-    &quot;
+Du kan även skicka ett adaptivt formulär till andra lagringskonfigurationer:
 
->[!NOTE]
->
-> * Det är viktigt att alla formulärfält har unika elementnamn, även om de placeras på olika paneler i ett adaptivt formulär.
-> * När du använder AEM as a Cloud Service måste du kryptera utgående e-post. Som standard är funktionen för utgående e-post inaktiverad. Om du vill aktivera det skickar du en supportanmälan till [Begär åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email).
+* [Ansluta anpassat formulär till Salesforce-program](/help/forms/oauth2-client-credentials-flow-for-server-to-server-integration.md)
+* [Ansluta ett anpassat formulär till Microsoft® Dynamics OData](/help/forms/ms-dynamics-odata-configuration.md)
 
-Dessutom har **[!UICONTROL Send Email]** Skicka-åtgärd ger möjlighet att inkludera bilagor och ett DoR-dokument (Document of Record) tillsammans med e-postmeddelandet.
+Du kan [anpassa standardåtgärderna för att skicka](custom-submit-action-form.md). Dessutom kan du anpassa Skicka-åtgärder så att de passar specifika organisatoriska krav.
 
-Aktivera [!UICONTROL Attach Document of Record] finns i dokumentationen om [konfigurera det adaptiva formuläret för att generera ett dokument för registrering (DoR)](generate-document-of-record-core-components.md). Du kan aktivera det här alternativet från egenskaperna för adaptiva formulär.
 
-<!-- [!NOTE]
+<!--
+## Send Email {#send-email}
+
+To send an email to one or more recipients upon successful submission of the form, you can use the **[!UICONTROL Send Email]** Submit Action. 
+
+Refer to [configure the send email submit action for an Adaptive Form](/help/forms/configure-submit-action-send-email.md) to learn how to set up an Adaptive Form to send an email upon successful submission.
+[!NOTE]
 >
 >Send PDF via Email Submit Action is applicable only to Adaptive Forms that use XFA template as form model. 
 
 >[!NOTE]
 >
 >Ensure that the [AEM_Installation_Directory]\crx-quickstart\temp\datamanager\ASM folder
->exists. The directory is required to temporarily store attachments. If the directory does not exist, create it. -->
+>exists. The directory is required to temporarily store attachments. If the directory does not exist, create it.
 
-<!--
 
 >[!CAUTION]
 >
@@ -104,390 +100,113 @@ Aktivera [!UICONTROL Attach Document of Record] finns i dokumentationen om [konf
 >
 >If you [prefill](prepopulate-adaptive-form-fields.md) a form template, a Form Data Model or schema based Adaptive Form with XML or JSON data complaint to a schema (XML schema, JSON schema, or form data model) that does not contain &lt;afData&gt;, &lt;afBoundData&gt;, and &lt;/afUnboundData&gt; tags, then the data of unbounded fields (Unbounded fields are Adaptive Form fields without [bindref](prepopulate-adaptive-form-fields.md) property) of the Adaptive Form is lost.
 
--->
+## Submit to Microsoft® SharePoint {#submit-to-sharedrive}
 
-## Skicka till SharePoint {#submit-to-sharedrive}
+The **[!UICONTROL Submit to SharePoint]** Submit Action connects an Adaptive Form with a Microsoft&reg; SharePoint Storage. You can submit the form data files, attachments, or Document of Record to the connected Microsoft&reg; Sharepoint Storage. 
 
-The **[!UICONTROL Submit to SharePoint]** Skicka åtgärd kopplar ett adaptivt formulär till en Microsoft® SharePoint-lagring. Du kan skicka formulärdatafilen, bifogade filer eller arkivdokument till den anslutna Microsoft® Sharepoint-lagringsplatsen.
+Integration of AEM Adaptive Form with Microsoft® SharePoint enables the submission, retrieval, or storage of data, files, and other relevant information within the SharePoint storage. To learn how to configure submit to SharePoint submit action for an Adaptive Form, [click here.](/help/forms/configure-submit-action-sharepoint.md) 
 
-Med Skicka till SharePoint kan du
-* [Ansluta ett anpassat formulär till SharePoint Document Library](#connect-af-sharepoint-doc-library)
-* [Ansluta ett anpassat formulär till SharePoint List](#connect-af-sharepoint-list)
+## Submit using Form Data Model {#submit-using-form-data-model}
 
-### Ansluta ett anpassat formulär till SharePoint Document Library {#connect-af-sharepoint-doc-library}
+The **[!UICONTROL Submit using Form Data Model]** Submit Action writes submitted Adaptive Form data for the specified data model object in a Form Data Model to its data source. When configuring the Submit Action, you can choose a data model object whose submitted data you want to write back to its data source.
 
-Använd **[!UICONTROL Submit to SharePoint Document Library]** Skicka åtgärd i anpassad form:
+When a user submits a form based on a form data model, you can [configure the form to write the submitted data to the data sources associated with the data model object.](/help/forms/using-form-data-model.md#write-submitted-adaptive-form-data-into-data-sources-write-af)
 
-1. [Skapa en SharePoint Document Library-konfiguration](#create-a-sharepoint-configuration-create-sharepoint-configuration): Den ansluter AEM Forms till din Microsoft® Sharepoint-lagring.
-2. [Använda Skicka till SharePoint-åtgärden i ett anpassat formulär](#use-sharepoint-configuartion-in-af): Det kopplar ditt adaptiva formulär till konfigurerade Microsoft® SharePoint.
+## Submit to REST endpoint {#submit-to-rest-endpoint}
 
-#### Skapa en SharePoint Document Library-konfiguration {#create-sharepoint-configuration}
+The **[!UICONTROL Submit to REST Endpoint]** submit action sends the submitted data to a REST URL. This URL can be either an internal server (the server where the form is displayed) or an external server. The data of an Adaptive Form is submitted to a REST URL using the **[!UICONTROL Submit to REST endpoint]** Submit Action.
 
-Så här ansluter du AEM Forms till Microsoft® Sharepoint Document Library:
+For a comprehensive guide on the detailed steps to post or submit data to a REST URL, refer to [configure submit to REST Endpoint submit action for Adaptive Forms.](/help/forms/configure-submit-action-restpoint.md)
 
-1. Gå till **AEM Forms Author** instans > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** >  **[!UICONTROL Microsoft® SharePoint]**.
-1. När du valt **[!UICONTROL Microsoft® SharePoint]** omdirigeras du till **[!UICONTROL SharePoint Browser]**.
-1. Välj en **Konfigurationsbehållare**. Konfigurationen lagras i den valda konfigurationsbehållaren.
-1. Klicka **[!UICONTROL Create]** > **[!UICONTROL SharePoint Document Library]** i listrutan. Konfigurationsguiden för SharePoint visas.
+## Invoke an AEM Workflow {#invoke-an-aem-workflow}
 
-![SharePoint-konfiguration](/help/forms/assets/sharepoint_configuration.png)
-1. Ange **[!UICONTROL Title]**, **[!UICONTROL Client ID]**, **[!UICONTROL Client Secret]** och **[!UICONTROL OAuth URL]**. Mer information om hur du hämtar klient-ID, klienthemlighet, klient-ID för OAuth-URL finns i [Microsoft® Documentation](https://learn.microsoft.com/en-us/graph/auth-register-app-v2).
-   * Du kan hämta `Client ID` och `Client Secret` från Microsoft® Azure-portalen.
-   * Lägg till omdirigerings-URI som i Microsoft® Azure-portalen som `https://[author-instance]/libs/cq/sharepoint/content/configurations/wizard.html`. Ersätt `[author-instance]` med webbadressen till din Author-instans.
-   * Lägg till API-behörigheter `offline_access` och `Sites.Manage.All` för att ge läs- och skrivbehörigheter.
-   * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` från Microsoft® Azure-portalen.
+The **[!UICONTROL Invoke an AEM Workflow]** Submit Action integrates an Adaptive Form with an [AEM Workflow](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=en#extending-aem). When a form is submitted, the selected workflow starts automatically. 
 
-   >[!NOTE]
-   >
-   > The **klienthemlighet** fältet är obligatoriskt eller valfritt beroende på din Azure Active Directory-programkonfiguration. Om ditt program är konfigurerat att använda en klienthemlighet är det obligatoriskt att ange klienthemligheten.
+ [Integrate AEM Adaptive Form with AEM Workflow: Streamlining Business Processes](/help/forms/configure-submit-action-workflow.md) provides step-by-step instructions to seamlessly integrate AEM Workflow with Adaptive Forms, optimizing business processes and enhancing workflow automation.
 
-1. Klicka på **[!UICONTROL Connect]**. Vid en lyckad anslutning `Connection Successful` visas.
+## Submit to OneDrive {#submit-to-onedrive}
 
-1. Välj nu **SharePoint Site** > **Dokumentbibliotek** > **SharePoint-mapp**, för att spara data.
+The **[!UICONTROL Submit to OneDrive]** Submit Action connects an Adaptive Form with a Microsoft&reg; OneDrive. You can submit the form data, files, attachments, or Document of Record to the connected Microsoft&reg; OneDrive Storage. 
 
-   >[!NOTE]
-   >
-   >* Som standard `forms-ootb-storage-adaptive-forms-submission` finns på den valda SharePoint-webbplatsen.
-   >* Skapa en mapp som `forms-ootb-storage-adaptive-forms-submission`, om de inte redan finns i `Documents` bibliotek för den valda SharePoint-webbplatsen genom att klicka på **Skapa mapp**.
+AEM Forms Cloud Service with Microsoft® OneDrive helps in optimize data submission. Explore the steps of [integrating OneDrive with AEM Forms](/help/forms/configure-submit-action-onedrive.md) for streamlined and secure storage.
 
-Nu kan du använda den här SharePoint Sites-konfigurationen för att skicka-åtgärden i ett adaptivt formulär.
+## Submit to Azure Blob Storage {#submit-to-azure-blob-storage}
 
-#### Använda SharePoint Document Library Configuration i ett adaptivt formulär {#use-sharepoint-configuartion-in-af}
+The **[!UICONTROL Submit to Azure Blob Storage]** Submit Action connects an Adaptive Form with a Microsoft® Azure portal and allows you to submit various elements such as form data, files, attachments, or Document of Record to the associated Azure Storage containers.
 
-Du kan använda den skapade SharePoint Document Library-konfigurationen i ett adaptivt formulär för att spara data eller generera Document of Record i en SharePoint-mapp. Utför följande steg för att använda lagringskonfigurationen för SharePoint Document Library i ett adaptivt formulär som:
+AEM as a Cloud Service allows submitting data to Azure Storage from AEM Adaptive Forms. Learn how to [create and use Azure Blob Storage configuration in AEM Forms](/help/forms/configure-submit-action-azure-blob-storage.md) for efficient data storage. 
 
-1. Skapa en [Adaptiv form](/help/forms/creating-adaptive-form-core-components.md).
+To set values of a configuration, [Generate OSGi Configurations using the AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart), and [deploy the configuration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) to your Cloud Service instance.
 
-   >[!NOTE]
-   >
-   > * Välj samma [!UICONTROL Configuration Container] för ett adaptivt formulär där du har skapat ditt SharePoint Document Library-lagringsutrymme.
-   > * Om nej [!UICONTROL Configuration Container] markeras och sedan den globala [!UICONTROL Storage Configuration] visas i egenskapsfönstret för Skicka åtgärd.
+## Submit to Power Automate {#microsoft-power-automate}
 
-1. Välj **Skicka åtgärd** as **[!UICONTROL Submit to SharePoint]**.
-   ![SharePoint GIF](/help/forms/assets/sharedrive-video.gif)
-1. Välj **[!UICONTROL Storage Configuration]**, där du vill spara dina data.
-1. Klicka **[!UICONTROL Save]** för att spara Skicka-inställningarna.
+You can configure an Adaptive Form to run a Microsoft&reg; Power Automate Cloud Flow on submission. The configured Adaptive Form sends captured data, attachments, and Document Of Record to Power Automate Cloud Flow for processing. It helps you build custom data capture experience while harnessing the power of Microsoft&reg; Power Automate to build business logics around captured data and automate customer workflows. 
+Adaptive Forms editor provides the **Invoke a Microsoft&reg; Power Automate flow** submit action to send adaptive forms data, attachments, and Document Of Record to Power Automate Cloud Flow. To use the Submit action to send captured data to Microsoft&reg; Power Automate, [Connect your Forms as a Cloud Service instance with Microsoft&reg; Power Automate](forms-microsoft-power-automate-integration.md)  
 
-När du skickar formuläret sparas data i den angivna Microsoft® Sharepoint-dokumentbibliotekslagringen.
-Mappstrukturen som data ska sparas i är `/folder_name/form_name/year/month/date/submission_id/data`.
+After a successful configuration, use the [Invoke a Microsoft&reg; Power Automate flow](forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action) submit action to send data to a Power Automate Flow.  
 
-### Ansluta ett anpassat formulär till Microsoft® SharePoint List {#connect-af-sharepoint-list}
+## Submit to Workfront Fusion {#workfront-fusion}
 
->[!VIDEO](https://video.tv.adobe.com/v/3424820/connect-aem-adaptive-form-to-sharepointlist/?quality=12&learn=on)
+You can configure an Adaptive Form to submit data to Workfront Fusion on submission. Workfront Fusion allows automation of processes so that user can concentrate on new tasks rather than repeating the same tasks again and again. It automates both simple and complex tasks, saving time and ensuring consistent process execution.
 
-Använd [!UICONTROL Submit to SharePoint List] Skicka åtgärd i anpassad form:
+The Adaptive Forms editor provides the **Invoke a WorkFront Fusion Scenario** submit action to send Adaptive Forms data or attachments to a Workfront Fusion scenario. To use the submit action for sending captured data to a Workfront Fusion scenario, refer to [Submit an Adaptive Form to Adobe Workfront Fusion](/help/forms/submit-adaptive-form-to-workfront-fusion.md).
 
-1. [Skapa en listkonfiguration för SharePoint](#create-sharepoint-list-configuration): Den ansluter AEM Forms till Microsoft® Sharepoint List Storage.
-1. [Använda Skicka med formulärdatamodellen i ett anpassat formulär](#use-submit-using-fdm): Det kopplar ditt adaptiva formulär till konfigurerade Microsoft® SharePoint.
-
-#### Skapa en listkonfiguration för SharePoint {#create-sharepoint-list-configuration}
-
-Så här ansluter du AEM Forms till din Microsoft® Sharepoint-lista:
-
-1. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** >  **[!UICONTROL Microsoft® SharePoint]**.
-1. Välj en **Konfigurationsbehållare**. Konfigurationen lagras i den valda konfigurationsbehållaren.
-1. Klicka **[!UICONTROL Create]** > **[!UICONTROL SharePoint List]** i listrutan. Konfigurationsguiden för SharePoint visas.
-1. Ange **[!UICONTROL Title]**, **[!UICONTROL Client ID]**, **[!UICONTROL Client Secret]** och **[!UICONTROL OAuth URL]**. Mer information om hur du hämtar klient-ID, klienthemlighet, klient-ID för OAuth-URL finns i [Microsoft® Documentation](https://learn.microsoft.com/en-us/graph/auth-register-app-v2).
-   * Du kan hämta `Client ID` och `Client Secret` från Microsoft® Azure-portalen.
-   * Lägg till omdirigerings-URI som i Microsoft® Azure-portalen som `https://[author-instance]/libs/cq/sharepointlist/content/configurations/wizard.html`. Ersätt `[author-instance]` med webbadressen till din Author-instans.
-   * Lägg till API-behörigheter `offline_access` och `Sites.Manage.All` i **Microsoft® Graph** för att ange läs-/skrivbehörigheter. Lägg till `AllSites.Manage` behörighet i **Sharepoint** för att fjärrinteragera med data från SharePoint.
-   * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` från Microsoft® Azure-portalen.
-
-     >[!NOTE]
-     >
-     > The **klienthemlighet** fältet är obligatoriskt eller valfritt beroende på din Azure Active Directory-programkonfiguration. Om ditt program är konfigurerat att använda en klienthemlighet är det obligatoriskt att ange klienthemligheten.
-
-1. Klicka på **[!UICONTROL Connect]**. Vid en lyckad anslutning `Connection Successful` visas.
-1. Välj **[!UICONTROL SharePoint Site]** och **[!UICONTROL SharePoint List]** i listrutan.
-1. Välj **[!UICONTROL Create]** för att skapa molnkonfigurationen för Microsoft® SharePointList.
-
-
-#### Använda Skicka med formulärdatamodellen i ett anpassat formulär {#use-submit-using-fdm}
-
-Du kan använda den skapade SharePoint List-konfigurationen i ett adaptivt formulär för att spara data eller skapa ett postdokument i en SharePoint List. Så här använder du en SharePoint List i ett adaptivt format:
-
-1. [Skapa en formulärdatamodell med Microsoft](/help/forms/create-form-data-models.md)
-1. [Konfigurera formulärdatamodellen för att hämta och skicka data](/help/forms/work-with-form-data-model.md#configure-services)
-1. [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form-core-components.md)
-1. [Konfigurera åtgärden Skicka med en formulärdatamodell](/help/forms/configuring-submit-actions.md#submit-using-form-data-model)
-
-När du skickar formuläret sparas data i det angivna lagringsutrymmet för Microsoft® Sharepoint-listan.
-
->[!NOTE]
->
-> I Microsoft® SharePoint List stöds inte följande kolumntyper:
-* bildkolumn
-* metadatakolumn
-* personkolumn
-* extern datakolumn
-
-## Skicka med formulärdatamodell {#submit-using-form-data-model}
-
-The **[!UICONTROL Submit using Form Data Model]** Skicka åtgärd skriver skickade adaptiva formulärdata för det angivna datamodellsobjektet i en formulärdatamodell till datakällan. När du konfigurerar åtgärden Skicka kan du välja ett datamodellsobjekt vars skickade data du vill skriva tillbaka till dess datakälla.
-
-Du kan ansluta ett adaptivt formulär till en Microsoft SharePoint-lista med hjälp av åtgärden Skicka formulärdatamodell.
-
-Dessutom kan du skicka en bifogad fil med en formulärdatamodell och en DoR-fil (Document of Record) till datakällan. Mer information om formulärdatamodell finns i [[!DNL AEM Forms] Dataintegrering](data-integration.md).
-
-## Skicka till REST-slutpunkt {#submit-to-rest-endpoint}
-
-Använd **[!UICONTROL Submit to REST Endpoint]** åtgärd för att skicka skickade data till en rest-URL. URL:en kan vara en intern (servern som formuläret återges på) eller en extern server.
-
-Om du vill skicka data till en intern server anger du sökvägen till resursen. Data bokförs som resurssökväg. Till exempel /content/restEndPoint. För sådana efterfrågningar används autentiseringsinformationen i förfrågan.
-
-Ange en URL om du vill skicka data till en extern server. URL-formatet är `https://host:port/path_to_rest_end_point`. Se till att du konfigurerar sökvägen så att den hanterar POSTENS begäran anonymt.
-
-![Mappning för fältvärden skickas som Tack-sidan-parametrar](assets/post-enabled-actionconfig.png)
-
-I exemplet ovan har användaren angett information i `textbox` hämtas med parameter `param1`. Syntax för att bokföra data som samlats in med `param1` är:
-
-`String data=request.getParameter("param1");`
-
-På samma sätt är parametrar som du använder för att bokföra XML-data och bifogade filer `dataXml` och `attachments`.
-
-Du kan till exempel använda de här två parametrarna i skriptet för att tolka data till en slutpunkt. Du använder följande syntax för att lagra och analysera data:
-
-`String data=request.getParameter("dataXml");`
-`String att=request.getParameter("attachments");`
-
-I detta exempel `data` lagrar XML-data, och `att` lagrar data för bifogade filer.
-
-The **[!UICONTROL Submit to REST endpoint]** Skicka åtgärd skickar data som är ifyllda i formuläret till en konfigurerad bekräftelsesida som en del av HTTP GET-begäran. Du kan lägga till namnet på fälten som ska begäras. Begäran har följande format:
-
-`{fieldName}={request parameter name}`
-
-Som visas i bilden nedan, `param1` och `param2` skickas som parametrar med värden som kopierats från **textruta** och **numerisk** fält för nästa åtgärd.
-
-![Konfigurerar åtgärden Skicka för resterande slutpunkt](assets/action-config.png)
-
-Du kan också **[!UICONTROL Enable POST request]** och ange en URL för att skicka begäran. Om du vill skicka data till den AEM servern som är värd för formuläret använder du en relativ sökväg som motsvarar rotsökvägen för AEM. Till exempel: `/content/forms/af/SampleForm.html`. Om du vill skicka data till en annan server använder du den absoluta sökvägen.
-
->[!NOTE]
->
-Om du vill skicka fälten som parametrar i en REST-URL måste alla fält ha olika elementnamn, även om fälten placeras på olika paneler.
-
-<!-- ## Send PDF via Email {#send-pdf-via-email}
+## Send PDF via Email {#send-pdf-via-email}
 
 The **Send PDF via Email** Submit Action sends an email with a PDF containing form data, to one or more recipients on successful submission of the form.
 
 >[!NOTE]
 >
->This Submit Action is available for XFA-based Adaptive Forms and XSD-based adaption forms that have the Document of Record template. -->
-
-<!-- ## Invoke a forms workflow {#invoke-a-forms-workflow}
+>This Submit Action is available for XFA-based Adaptive Forms and XSD-based adaption forms that have the Document of Record template. 
+## Invoke a forms workflow {#invoke-a-forms-workflow}
 
 The **Submit to Forms workflow** submit option sends a data xml and file attachments (if any) to an existing Adobe LiveCycle or [!DNL AEM Forms] on JEE process.
 
-For information about how to configure the Submit to forms workflow Submit Action, see [Submitting and processing your form data using forms workflows](submit-form-data-livecycle-process.md). -->
-
-
-
-<!--
+For information about how to configure the Submit to forms workflow Submit Action, see [Submitting and processing your form data using forms workflows](submit-form-data-livecycle-process.md). 
 ## Forms Portal Submit Action {#forms-portal-submit-action}
 
 The **Forms Portal Submit Action** option makes form data available through an [!DNL AEM Forms] portal.
 
-For more information about the Forms Portal and Submit Action, see [Drafts and submissions component](draft-submission-component.md). -->
+For more information about the Forms Portal and Submit Action, see [Drafts and submissions component](draft-submission-component.md). 
 
-## Anropa ett AEM {#invoke-an-aem-workflow}
+## Use synchronous or asynchronous submission {#use-synchronous-or-asynchronous-submission}
 
-The **[!UICONTROL Invoke an AEM Workflow]** Åtgärden Skicka associerar ett anpassat formulär med ett [AEM](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=en#extending-aem). När ett formulär skickas startar det associerade arbetsflödet automatiskt på författarinstansen. Du kan spara datafilen, bifogade filer och postdokument på arbetsflödets nyttolastplats eller i en variabel. Om arbetsflödet är markerat för extern datalagring och konfigurerat för en extern datalagring är endast variabelalternativet tillgängligt. Du kan välja i listan över variabler som är tillgängliga för arbetsflödesmodellen. Om arbetsflödet markeras för extern datalagring i ett senare skede och inte när arbetsflödet skapas, kontrollerar du att de variabelkonfigurationer som krävs finns på plats.
+A Submit Action can use synchronous or asynchronous submission.
 
-Åtgärden Skicka placerar följande på arbetsflödets nyttolastplats, eller variabeln om arbetsflödet har markerats för extern datalagring:
+**Synchronous submission**: Traditionally, web forms are configured to submit synchronously. In a synchronous submission, when users submit a form, they are redirected to an acknowledgment page, a thank you page, or if there is submission failure, an error page. You can select the **[!UICONTROL Use asynchronous submission]** option to redirect the users to a webpage or show a message on submission.  
 
-* **Datafil**: Den innehåller data som skickats till den adaptiva formen. Du kan använda **[!UICONTROL Data File Path]** om du vill ange filens namn och sökväg i förhållande till nyttolasten. Till exempel `/addresschange/data.xml` sökväg skapar en mapp med namnet `addresschange` och placerar den i förhållande till nyttolasten. Du kan också bara ange `data.xml` om du bara vill skicka skickade data utan att skapa en mapphierarki. Om arbetsflödet är markerat för extern datalagring använder du variabelalternativet och väljer variabeln i listan med variabler som är tillgängliga för arbetsflödesmodellen.
+![Configure Submit Action](assets/thank-you-setting.png)
 
-* **Bifogade filer**: Du kan använda **[!UICONTROL Attachment Path]** om du vill ange mappnamnet för lagring av de bilagor som överförts till det adaptiva formuläret. Mappen skapas i förhållande till nyttolasten. Om arbetsflödet är markerat för extern datalagring använder du variabelalternativet och väljer variabeln i listan med variabler som är tillgängliga för arbetsflödesmodellen.
+**Asynchronous submission**: Modern web experiences like single page applications are gaining popularity where the web page remains static while client-server interaction happens in the background. You can now provide this experience with Adaptive Forms by [configuring asynchronous submission](asynchronous-submissions-adaptive-forms.md).
 
-* **Dokument för registrering**: Det innehåller det dokument som genererats för det adaptiva formuläret. Du kan använda **[!UICONTROL Document of Record Path]** om du vill ange namnet på filen Dokument för post och sökvägen till filen i förhållande till nyttolasten. Till exempel `/addresschange/DoR.pdf` sökväg skapar en mapp med namnet `addresschange` i förhållande till nyttolasten och placerar `DoR.pdf` i förhållande till nyttolast. Du kan också bara ange `DoR.pdf` om du bara vill spara postdokument utan att skapa en mapphierarki. Om arbetsflödet är markerat för extern datalagring använder du variabelalternativet och väljer variabeln i listan med variabler som är tillgängliga för arbetsflödesmodellen.
+## Server-Side Revalidation in Adaptive Form {#server-side-revalidation-in-adaptive-form}
 
-Innan du använder **[!UICONTROL Invoke an AEM Workflow]** Skicka åtgärd konfigurera följande för **[!UICONTROL AEM DS settings service]** konfiguration:
+Typically, in any online data capture system, developers place someJavaScript validations on client side to enforce a few business rules. But in modern browsers, end users have way to bypass those validations and manually do submissions using various techniques, Such as Web Browser DevTools Console. Such techniques are also valid for Adaptive Forms. A forms developer can create various validation logics, but technically, end users can bypass those validation logics and submit invalid data to the server. Invalid data would break the business rules that a form author has enforced.
 
-* **[!UICONTROL Processing Server URL]**: Bearbetningsservern är den server där Forms- eller AEM-arbetsflödet aktiveras. Detta kan vara samma som URL:en för AEM författarinstans eller en annan server.
+The server-side revalidation feature provides the ability to run the validations that an Adaptive Forms author has provided while designing an Adaptive Form on the server. It prevents any possible compromise of data submissions and business rules violations represented in terms of form validations.
 
-* **[!UICONTROL Processing Server User Name]**: Användarnamn för arbetsflöde
+### What to validate on Server? {#what-to-validate-on-server-br}
 
-* **[!UICONTROL Processing Server Password]**: Lösenord för arbetsflödesanvändare
+All out of the box (OOTB) field validations of an Adaptive Form that are rerun at the server are:
 
+* Required
+* Validation Picture Clause
+* Validation Expression
 
+### Enabling Server-side Validation {#enabling-server-side-validation-br}
 
-## Skicka till OneDrive {#submit-to-onedrive}
+Use the **[!UICONTROL Revalidate on server]** under Adaptive Form Container in the sidebar to enable or disable server-side validation for the current form.
 
-The **[!UICONTROL Submit to OneDrive]** Skicka åtgärd kopplar ett anpassat formulär till en Microsoft® OneDrive. Du kan skicka formulärdata, filer, bilagor eller arkivdokument till den anslutna Microsoft® OneDrive-lagringsplatsen.
+![Enabling Server-Side Validation](assets/revalidate-on-server.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/3424864/connect-aem-adaptive-form-to-onedrive/?quality=12&learn=on)
+Enabling Server-Side Validation
 
-Använd [!UICONTROL Submit to OneDrive] Skicka åtgärd i anpassad form:
-
-1. [Skapa en OneDrive-konfiguration](#create-a-onedrive-configuration-create-onedrive-configuration): Den ansluter AEM Forms till din Microsoft® OneDrive-lagring.
-2. [Använd Skicka till OneDrive-åtgärden i ett anpassat formulär](#use-onedrive-configuration-in-an-adaptive-form-use-onedrive-configuartion-in-af): Det kopplar ditt adaptiva formulär till konfigurerade Microsoft® OneDrive.
-
-### Skapa en OneDrive-konfiguration {#create-onedrice-configuration}
-
-Så här ansluter du AEM Forms till din Microsoft® OneDrive-lagring:
-
-1. Gå till **AEM Forms Author** instans > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** >  **[!UICONTROL Microsoft® OneDrive]**.
-1. När du valt **[!UICONTROL Microsoft® OneDrive]** omdirigeras du till **[!UICONTROL OneDrive Browser]**.
-1. Välj en **Konfigurationsbehållare**. Konfigurationen lagras i den valda konfigurationsbehållaren.
-1. Klicka på **[!UICONTROL Create]**. Konfigurationsguiden för OneDrive visas.
-
-   ![Konfigurationsskärm för OneDrive](/help/forms/assets/onedrive-configuration.png)
-
-1. Ange **[!UICONTROL Title]**, **[!UICONTROL Client ID]**, **[!UICONTROL Client Secret]** och **[!UICONTROL OAuth URL]**. Mer information om hur du hämtar klient-ID, klienthemlighet, klient-ID för OAuth-URL finns i [Microsoft® Documentation](https://learn.microsoft.com/en-us/graph/auth-register-app-v2).
-   * Du kan hämta `Client ID` och `Client Secret` från Microsoft® Azure-portalen.
-   * Lägg till omdirigerings-URI som i Microsoft® Azure-portalen som `https://[author-instance]/libs/cq/onedrive/content/configurations/wizard.html`. Ersätt `[author-instance]` med webbadressen till din Author-instans.
-   * Lägg till API-behörigheter `offline_access` och `Files.ReadWrite.All` för att ge läs- och skrivbehörigheter.
-   * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` från Microsoft® Azure-portalen.
-
-   >[!NOTE]
-   >
-   The **klienthemlighet** fältet är obligatoriskt eller valfritt beroende på din Azure Active Directory-programkonfiguration. Om ditt program är konfigurerat att använda en klienthemlighet är det obligatoriskt att ange klienthemligheten.
-
-1. Klicka på **[!UICONTROL Connect]**. Vid en lyckad anslutning `Connection Successful` visas.
-
-1. Välj nu **[!UICONTROL OneDrive Container]** > **[OneDrive-mapp]**  för att spara data.
-
-   >[!NOTE]
-   >
-   * Som standard `forms-ootb-storage-adaptive-forms-submission` finns i OneDrive-behållaren.
-   * Skapa en mapp som `forms-ootb-storage-adaptive-forms-submission`, om den inte redan finns genom att klicka **Skapa mapp**.
-
-Nu kan du använda den här lagringskonfigurationen för OneDrive för att skicka-åtgärden i ett adaptivt formulär.
-
-### Använd OneDrive-konfiguration i ett adaptivt formulär {#use-onedrive-configuartion-in-af}
-
-Du kan använda den skapade OneDrive-lagringskonfigurationen i ett adaptivt formulär för att spara data eller skapa ett postdokument i en OneDrive-mapp. Utför följande steg för att använda OneDrive-lagringskonfigurationen i ett adaptivt formulär som:
-1. Skapa en [Adaptiv form](/help/forms/creating-adaptive-form.md).
-
-   >[!NOTE]
-   >
-   * Välj samma [!UICONTROL Configuration Container] för ett adaptivt formulär, där du har skapat din OneDrive-lagring.
-   * Om nej [!UICONTROL Configuration Container] markeras och sedan den globala [!UICONTROL Storage Configuration] visas i egenskapsfönstret för Skicka åtgärd.
-
-1. Välj **Skicka åtgärd** as **[!UICONTROL Submit to OneDrive]**.
-   ![OneDrive GIF](/help/forms/assets/onedrive-video.gif)
-1. Välj **[!UICONTROL Storage Configuration]**, där du vill spara dina data.
-1. Klicka **[!UICONTROL Save]** för att spara Skicka-inställningarna.
-
-När du skickar formuläret sparas data i den angivna Microsoft® OneDrive-lagringsplatsen.
-Mappstrukturen som data ska sparas i är `/folder_name/form_name/year/month/date/submission_id/data`.
-
-## Skicka till Azure Blob Storage {#submit-to-azure-blob-storage}
-
-The **[!UICONTROL Submit to Azure Blob Storage]**  Skicka åtgärd kopplar ett anpassat formulär till en Microsoft® Azure-portal. Du kan skicka formulärdata, filer, bilagor eller arkivdokument till de anslutna Azure Storage-behållarna. Så här använder du åtgärden Skicka för Azure Blob Storage:
-
-1. [Skapa en Azure Blob Storage-behållare](#create-a-azure-blob-storage-container-create-azure-configuration): Den ansluter AEM Forms till Azure Storage-behållare.
-2. [Använd Azure Storage-konfigurationen i ett adaptivt formulär](#use-azure-storage-configuration-in-an-adaptive-form-use-azure-storage-configuartion-in-af): Det kopplar ditt adaptiva formulär till konfigurerade Azure-lagringsbehållare.
-
-### Skapa en Azure Blob Storage-behållare {#create-azure-configuration}
-
-Så här ansluter du AEM Forms till dina Azure-lagringsbehållare:
-1. Gå till **AEM Forms Author** instans > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** >  **[!UICONTROL Azure Storage]**.
-1. När du valt **[!UICONTROL Azure Storage]** omdirigeras du till **[!UICONTROL Azure Storage Browser]**.
-1. Välj en **Konfigurationsbehållare**. Konfigurationen lagras i den valda konfigurationsbehållaren.
-1. Klicka på **[!UICONTROL Create]**. Guiden Skapa Azure Storage Configuration visas.
-
-   ![Azure Storage-konfiguration](/help/forms/assets/azure-storage-configuration.png)
-
-1. Ange **[!UICONTROL Title]**, **[!UICONTROL Azure Storage Account]** och **[!UICONTROL Azure Access key]**.
-
-   * Du kan hämta `Azure Storage Account` namn och `Azure Access key` från lagringskonton i Microsoft® Azure-portalen.
-
-1. Klicka på **[!UICONTROL Save]**.
-
-Nu kan du använda den här Azure Storage-behållarkonfigurationen för överföringsåtgärden i ett adaptivt formulär.
-
-### Använd Azure Storage-konfigurationen i ett adaptivt formulär {#use-azure-storage-configuartion-in-af}
-
-Du kan använda den skapade Azure Storage-behållarkonfigurationen i ett adaptivt formulär för att spara data eller skapa ett dokument av posten i Azure Storage-behållaren. Utför följande steg för att använda konfigurationen av Azure Storage-behållaren i ett adaptivt formulär som:
-1. Skapa en [Adaptiv form](/help/forms/creating-adaptive-form-core-components.md).
-
-   >[!NOTE]
-   >
-   * Välj samma [!UICONTROL Configuration Container] för ett adaptivt formulär, där du har skapat din OneDrive-lagring.
-   * Om nej [!UICONTROL Configuration Container] markeras och sedan den globala [!UICONTROL Storage Configuration] visas i egenskapsfönstret för Skicka åtgärd.
-
-1. Välj **Skicka åtgärd** as **[!UICONTROL Submit to Azure Blob Storage]**.
-   ![Azure Blob Storage GIF](/help/forms/assets/azure-submit-video.gif)
-
-1. Välj **[!UICONTROL Storage Configuration]**, där du vill spara dina data.
-1. Klicka **[!UICONTROL Save]** för att spara Skicka-inställningarna.
-
-När du skickar formuläret sparas data i den angivna Azure Storage-behållarkonfigurationen.
-Mappstrukturen som data ska sparas i är `/configuration_container/form_name/year/month/date/submission_id/data`.
-
-Så här anger du värden för en konfiguration: [Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart)och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service.
-
-
-
-
-## Skicka till Power Automate {#microsoft-power-automate}
-
-Du kan konfigurera ett adaptivt formulär så att det kör ett Microsoft® Power Automate Cloud-flöde när du skickar in det. Den konfigurerade adaptiva formen skickar inhämtade data, bilagor och arkivdokument till Power Automate Cloud Flow för bearbetning. Det hjälper er att bygga upp en anpassad datainhämtningsupplevelse och samtidigt utnyttja kraften i Microsoft® Power Automate för att skapa affärslogik kring insamlade data och automatisera kundarbetsflöden. Här är några exempel på vad du kan göra efter att ha integrerat ett adaptivt formulär med Microsoft® Power Automate:
-
-* Använd adaptiva Forms-data i en Power Automate-affärsprocess
-* Använd Power Automate för att skicka inhämtade data till fler än 500 datakällor eller till något offentligt tillgängligt API
-* Utför komplexa beräkningar på inhämtade data
-* Spara adaptiva Forms-data i lagringssystemen enligt ett fördefinierat schema
-
-Adaptive Forms editor har **Anropa ett Microsoft® Power Automate-flöde** skicka en åtgärd för att skicka adaptiva formulärdata, bilagor och arkivdokument till Power Automate Cloud Flow. Om du vill skicka inhämtade data till Microsoft® Power Automate med åtgärden Skicka [Koppla samman din as a Cloud Service Forms-instans med Microsoft® Power Automate](forms-microsoft-power-automate-integration.md)
-
-När konfigurationen är klar använder du [Anropa ett Microsoft® Power Automate-flöde](forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action) skicka-åtgärd för att skicka data till ett Power Automate-flöde.
-
-## Skicka till Workfront Fusion {#workfront-fusion}
-
-Du kan konfigurera ett adaptivt formulär så att data skickas till Workfront Fusion när de skickas. Med Workfront Fusion kan man automatisera processer så att man kan koncentrera sig på nya uppgifter istället för att upprepa samma uppgifter om och om igen. Den automatiserar både enkla och komplexa uppgifter, sparar tid och säkerställer ett konsekvent processutförande.
-
-Adaptive Forms editor innehåller **Anropa ett Workfront Fusion-scenario** skicka en åtgärd för att skicka data eller bilagor till adaptiva Forms till ett Workfront Fusion-scenario. Om du vill använda åtgärden Skicka för att skicka inhämtade data till ett Workfront Fusion-scenario, se [Skicka ett anpassat formulär till Adobe Workfront Fusion](/help/forms/submit-adaptive-form-to-workfront-fusion.md).
-
-
-## Använd synkron eller asynkron sändning {#use-synchronous-or-asynchronous-submission}
-
-En Skicka-åtgärd kan använda synkron eller asynkron sändning.
-
-**Synkron överföring**: Traditionellt är webbformulär konfigurerade att skicka synkront. När användare skickar ett formulär omdirigeras de i en synkron sändning till en bekräftelsesida, en tacksida eller en felsida om det uppstår ett överföringsfel. Du kan välja **[!UICONTROL Use asynchronous submission]** för att dirigera om användarna till en webbsida eller visa ett meddelande när de skickas.
-
-![Konfigurera Skicka-åtgärd](assets/thank-you-setting.png)
-
-**Asynkron överföring**: Moderna webbupplevelser som single page-applikationer blir allt populärare där webbsidan förblir statisk medan klient-server-interaktion sker i bakgrunden. Nu kan du använda Adaptive Forms via [konfigurera asynkron överföring](asynchronous-submissions-adaptive-forms.md).
-
-## Förtroende på serversidan i adaptiv form {#server-side-revalidation-in-adaptive-form}
-
-I alla onlinesystem för datainhämtning lägger utvecklare vanligtvis in JavaScript-valideringar på klientsidan för att tillämpa några få affärsregler. Men i moderna webbläsare kan slutanvändarna kringgå valideringarna och skicka in dokument manuellt med hjälp av olika tekniker, till exempel DevTools Console för webbläsare. Sådana tekniker gäller även för Adaptive Forms. En formulärutvecklare kan skapa olika valideringslogik, men tekniskt sett kan slutanvändarna kringgå dessa valideringslogik och skicka ogiltiga data till servern. Ogiltiga data skulle bryta mot de affärsregler som en formulärförfattare har infört.
-
-Med funktionen för omvalidering på serversidan kan du även köra de valideringar som en adaptiv Forms-författare har tillhandahållit när han eller hon utformar ett adaptivt formulär på servern. Det förhindrar att inskickade data äventyras och affärsregelöverträdelser som representeras i form av formulärvalidering.
-
-### Vad ska valideras på servern? {#what-to-validate-on-server-br}
-
-Alla valideringar av ett adaptivt formulär som körs på servern i fältet OOTB (OOTB) är:
-
-* Obligatoriskt
-* Valideringsbildsats
-* Valideringsuttryck
-
-### Aktivera validering på serversidan {#enabling-server-side-validation-br}
-
-Använd **[!UICONTROL Revalidate on server]** under Adaptiv formulärbehållare i sidofältet för att aktivera eller inaktivera validering på serversidan för det aktuella formuläret.
-
-![Aktivera validering på serversidan](assets/revalidate-on-server.png)
-
-Aktivera validering på serversidan
-
-Om slutanvändaren åsidosätter dessa valideringar och skickar formulären utför servern valideringen igen. Om valideringen misslyckas vid serverslutet stoppas skicka-transaktionen. Användaren får det ursprungliga formuläret igen. Insamlade data och skickade data visas för användaren som ett fel.
+If end-user bypass those validations and submit the forms, the server again performs the validation. If the validation fails at server end, then the submit transaction is stopped. The user is presented with the original form again. The captured data and submitted data are presented to the user as an error.
 
 >[!NOTE]
 >
-Validering på serversidan validerar formulärmodellen. Du rekommenderas att skapa ett separat klientbibliotek för validering och inte blanda det med andra saker som formatering av HTML och DOM-manipulering i samma klientbibliotek.
-
-### Stöd för anpassade funktioner i valideringsuttryck {#supporting-custom-functions-in-validation-expressions-br}
-
-Ibland, om det finns **komplexa valideringsregler**, finns det exakta valideringsskriptet i anpassade funktioner och författaren anropar dessa anpassade funktioner från fältvalideringsuttryck. Om du vill att det här anpassade funktionsbiblioteket ska vara känt och tillgängligt vid validering på serversidan kan formulärförfattaren konfigurera namnet på AEM klientbibliotek under **[!UICONTROL Basic]** fliken med egenskaper för adaptiv formulärbehållare så som visas nedan.
-
-![Stöd för anpassade funktioner i valideringsuttryck](assets/clientlib-cat.png)
-
-Stöd för anpassade funktioner i valideringsuttryck
-
-Författaren kan konfigurera customJavaScript-bibliotek per adaptiv form. I biblioteket behåller du bara återanvändbara funktioner som är beroende av jquery- och underscore.js-bibliotek från tredje part.
+>Server-side validation validates the form model. You are recommended to create a separate client library for validations and not mix it with other things like HTML styling and DOM manipulation in the same client library.
+-->
 
 ## Felhantering vid Skicka-åtgärd {#error-handling-on-submit-action}
 

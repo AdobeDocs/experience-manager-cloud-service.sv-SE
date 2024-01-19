@@ -5,9 +5,9 @@ feature: Adaptive Forms, Form Data Model
 role: Admin, User
 level: Beginner, Intermediate
 exl-id: 827ce457-6585-46fb-8e28-1d970a40d949
-source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
+source-git-commit: 6e01a5bfc4e8bf7cc9537c9c03af08cd253a1ade
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1209'
 ht-degree: 0%
 
 ---
@@ -120,11 +120,25 @@ Edit Properties dialog for an interactive communication-->
 
 När en användare skickar ett formulär baserat på en formulärdatamodell kan du konfigurera formuläret så att det skriver skickade data för ett datamodellsobjekt till sina datakällor. För att uppnå detta [!DNL Experience Manager Forms] tillhandahålla [Skicka åtgärd för formulärdatamodell](configuring-submit-actions.md), finns endast i körklart läge för Adaptive Forms baserat på en formulärdatamodell. Den skriver skickade data för ett datamodellsobjekt i sin datakälla.
 
-Om du vill konfigurera åtgärden Skicka formulärdatamodell öppnar du egenskaper för adaptiv formulärbehållare och väljer **[!UICONTROL Submit using Form Data Model]** från listrutan Skicka åtgärd under dragspelsfliken. Bläddra och välj sedan ett datamodellsobjekt på **[!UICONTROL Name of the data model object to submit]** nedrullningsbar meny. Spara egenskaperna.
+Så här konfigurerar du åtgärden Skicka i formulärdatamodell:
 
-När formuläret skickas skrivs data för det konfigurerade datamodellobjektet till respektive datakälla.
+1. Öppna innehållsläsaren och välj **[!UICONTROL Guide Container]** som ingår i det adaptiva formuläret.
+1. Klicka på egenskaperna för stödlinjebehållaren ![Stödlinjeegenskaper](/help/forms/assets/configure-icon.svg) -ikon. Dialogrutan Adaptiv formulärbehållare öppnas.
+1. Klicka på  **[!UICONTROL Submission]** -fliken.
+1. I listrutan **[!UICONTROL Submit Action]** väljer du **[!UICONTROL Submit using Form Data Model]**.
+
+   ![Åtgärdskonfiguration](/help/forms/assets/configure-submit-action-invoke-fdm.png)
+
+1. Ange **[!UICONTROL Data model to submit]**.
+1. Klicka **[!UICONTROL Done]**
+
+När formuläret skickas skrivs data för det konfigurerade datamodellobjektet till respektive datakälla. Dessutom kan du skicka en bifogad fil med en formulärdatamodell och en DoR-fil (Document of Record) till datakällan. Mer information om formulärdatamodell finns i [[!DNL AEM Forms] Dataintegrering](data-integration.md).
 
 <!--![data-submission](assets/data-submission.png)-->
+
+>[!NOTE]
+>
+> AEM as a Cloud Service erbjuder olika åtgärder för att skicka in formulär. Du kan läsa mer om de här alternativen i [Inlämningsåtgärd för anpassat formulär](/help/forms/configure-submit-actions-core-components.md)  artikel.
 
 Du kan också skicka formulärbilagor till en datakälla med hjälp av objektegenskapen för binär datamodell. Gör följande för att skicka bilagor till en JDBC-datakälla:
 

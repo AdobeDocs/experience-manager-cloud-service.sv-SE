@@ -5,9 +5,9 @@ feature: Adaptive Forms, Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb7b41f0-fd4f-4ba6-9f45-792a66ba6368
-source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
+source-git-commit: 6e01a5bfc4e8bf7cc9537c9c03af08cd253a1ade
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '954'
 ht-degree: 1%
 
 ---
@@ -35,6 +35,9 @@ ht-degree: 1%
 <!--* Form Data Model with preconfigured [!DNL Microsoft Dynamics] entities and services.-->
 
 <!-- Preconfigured [!DNL Microsoft Dynamics] entities and services in a Form Data Model are available on your [!DNL Experience Manager Forms] instance only if the run mode for the [!DNL Experience Manager] instance is set as `samplecontent` (default). -->  MS Dynamics OData-Cloud Servicen (OData-tjänsten) är tillgänglig med alla körningslägen. Mer information om hur du konfigurerar körningslägen för en [!DNL Experience Manager] -instans, se [Körningslägen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#runmodes).
+
+AEM as a Cloud Service erbjuder olika åtgärder för att skicka in formulär. Du kan läsa mer om de här alternativen i [Inlämningsåtgärd för anpassat formulär](/help/forms/configure-submit-actions-core-components.md)  artikel.
+
 
 ## Förutsättningar {#prerequisites}
 
@@ -70,7 +73,7 @@ Gör följande för att ange svars-URL för registrerad [!DNL Microsoft Dynamics
 
 >[!NOTE]
 >
->Använd bara den här proceduren när du integrerar [!DNL Experience Manager Forms] med lokal [!DNL Microsoft Dynamics] server.
+> Använd bara den här proceduren när du integrerar [!DNL Experience Manager Forms] med lokal [!DNL Microsoft Dynamics] server.
 
 1. Konfigurera [!DNL Microsoft Dynamics] lokal instans av IFD enligt beskrivningen i [Konfigurera IFD för [!DNL Microsoft Dynamics]](https://technet.microsoft.com/en-us/library/dn609803.aspx).
 1. Kör följande kommandon med Windows PowerShell för att konfigurera anspråksinställningar för IFD-aktiverad [!DNL Microsoft Dynamics]:
@@ -158,14 +161,16 @@ To review the form data model, go to **[!UICONTROL Form Data Model egrations]**.
  Form Data Model 
 ![default-fdm-1](assets/default-fdm-1.png)-->
 
-När du har konfigurerat molntjänsten MS Dynamics OData Cloud Ser Form Data Model ce) kan du använda tjänsten när du skapar formulärdatamodeller. Mer information finns i [Skapa formulärdatamodell](create-form-data-models.md).
+När du har konfigurerat molntjänsten MS Dynamics OData kan du använda tjänsten när du skapar formulärdatamodeller. Mer information finns i [Skapa formulärdatamodell](create-form-data-models.md).
 
-Därefter kan du skapa ett adaptivt formulär baserat på formulärdatamodellen och använda det i olika användningsområden för adaptiva formulär, till exempel:
+Därefter kan du skapa en adaptiv formulärbaserad datamodell och använda den i olika fall av användning av adaptiva formulär, till exempel:
 
 * Förifyll anpassat formulär genom att fråga efter information från [!DNL Microsoft Dynamics] enheter och tjänster
 * Anropa [!DNL Microsoft Dynamics] serveråtgärder som definieras i en formulärdatamodell med hjälp av adaptiva formulärregler
 * Skriv skickade formulärdata till [!DNL Microsoft Dynamics] enheter
 
 <!--It is recommended to create a copy of the Form Data Model provided with the [!DNL Experience Manager Forms] package and configure data models and services to suit your requirements. It will ensure that any future updates to the package do not override your form data model.-->
+
+Du kan [konfigurera åtgärden Skicka formulärdatamodell](/help/forms/using-form-data-model.md) för ett adaptivt formulär som skickar data till Microsoft Dynamics OData.
 
 Mer information om hur du skapar och använder formulärdatamodell i affärsarbetsflöden finns i [Dataintegrering](data-integration.md).
