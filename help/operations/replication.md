@@ -2,7 +2,7 @@
 title: Replikering
 description: Lär dig mer om distribution och felsökning av replikering på AEM as a Cloud Service.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
+source-git-commit: 3249f17e6ecb341880597577e1f2a48653a7a88a
 workflow-type: tm+mt
 source-wordcount: '1312'
 ht-degree: 0%
@@ -89,7 +89,7 @@ Du kan också skapa en arbetsflödesmodell som använder `Publish Content Tree` 
 
 * `includeChildren` (booleskt värde, standard: `false`). Värdet `false` innebär att det endast är banan som offentliggörs, `true` innebär att även barn publiceras.
 * `replicateAsParticipant` (booleskt värde, standard: `false`). Om konfigurerad som `true`används `userid` av huvudmannen som utförde deltagarsteget.
-* `enableVersion` (booleskt värde, standard: `true`). Den här parametern avgör om en ny version skapas vid replikering.
+* `enableVersion` (booleskt värde, standard: `false`). Den här parametern avgör om en ny version skapas vid replikering.
 * `agentId` (strängvärde, standard betyder att endast agenter för publicering används). Vi rekommenderar att du anger agentens ID explicit, till exempel anger värdet: publish. Ange att agenten ska `preview` publicerar till förhandsgranskningstjänsten.
 * `filters` (strängvärde, standard betyder att alla sökvägar aktiveras). Tillgängliga värden är:
    * `onlyActivated` - aktivera endast sidor som har (redan) aktiverats. Fungerar som en form av omaktivering.
