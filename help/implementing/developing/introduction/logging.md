@@ -2,9 +2,9 @@
 title: Loggning för AEM as a Cloud Service
 description: Lär dig hur du använder loggning för AEM as a Cloud Service för att konfigurera globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
-source-git-commit: 3d53f81bfe9b180f19590a70d72b6bf62a7ab732
+source-git-commit: 35959a1cd47e9ea1b93aeddc3eb72cf03c44eda8
 workflow-type: tm+mt
-source-wordcount: '2755'
+source-wordcount: '2776'
 ht-degree: 0%
 
 ---
@@ -611,7 +611,7 @@ Kunder som har Splunk-konton kan via kundsupportbiljetten begära att deras AEM 
 
 Nätverksbandbredden som är kopplad till loggar som skickas till Splunk räknas som en del av kundens I/O-användning i nätverket.
 
-Splunk-vidarebefordran stöder ännu inte CDN-loggar.
+CDN-loggar vidarebefordras till Splunk för nya supportförfrågningar. Kunder som redan har aktiverat Splunk forward kan lägga till CDN-loggar i framtiden.
 
 ### Aktivera vidarebefordran av segment {#enabling-splunk-forwarding}
 
