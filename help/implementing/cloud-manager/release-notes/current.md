@@ -3,9 +3,9 @@ title: Versionsinformation om Cloud Manager 2024.1.0 i Adobe Experience Manager 
 description: Detta är versionsinformationen för Cloud Manager 2024.1.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: a00eb97859f679ade3a4a6d89a427735451ebd70
+source-git-commit: 06f534e6541bd04e005f3acf1edbb3e372c1cd0d
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,12 @@ Den här sidan dokumenterar versionsinformationen för Cloud Manager version 202
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager version 2024.1.0 i AEM as a Cloud Service är 18 januari 2024.
+Releasedatum för Cloud Manager version 2024.1.0 i AEM as a Cloud Service är 18 januari 2024. Nästa version är planerad till den 16 februari 2024.
+
+## Nyheter {#what-is-new}
+
+* Molnhanteraren validerar nu förfallodatumen inte bara för huvudsidan [certifikat,](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md) men även för mellanliggande certifikat.
+* CDN [loggar](/help/implementing/cloud-manager/manage-logs.md) returneras nu i ett komprimerat format.
 
 ## Tidig användning {#early-adoption}
 
@@ -61,3 +66,8 @@ Om du vill testa den här nya funktionen och dela med dig av dina synpunkter ski
 Kontrollpanelen använder Google Lightroom, ett automatiserat verktyg med öppen källkod som förbättrar kvaliteten på dina webbprogram. Du kan köra det mot alla webbsidor, offentliga webbplatser eller autentiseringar. Den har granskningar av prestanda, tillgänglighet, progressiva webbprogram, SEO med mera.
 
 Är du intresserad av att testa den nya instrumentpanelen? Skicka ett e-postmeddelande till `aem-lighthouse-pilot@adobe.com` via e-post som är kopplad till din Adobe ID.
+
+## Felkorrigeringar {#bug-fixes}
+
+* Ett fel korrigerades där konfigurationsförloppet skulle misslyckas vid byggsteget med ett oklart felmeddelande om platsen för konfigurationsfilerna inte var korrekt inställd. Felmeddelandet är nu klart och anger att användaren bör kontrollera att platsen för konfigurationsfilerna är korrekt.
+* När ett byggsteg avslutas med status `FAILED` på grund av `BUILD_MAVEN_TRANSFER_ARTIFACT_ERROR`, beskrivs det nu korrekt som ett fel på grund av sammanslagningskonflikter med målgrenen.
