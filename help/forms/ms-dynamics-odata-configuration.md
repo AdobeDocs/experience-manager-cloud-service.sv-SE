@@ -5,9 +5,9 @@ feature: Adaptive Forms, Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb7b41f0-fd4f-4ba6-9f45-792a66ba6368
-source-git-commit: 6e01a5bfc4e8bf7cc9537c9c03af08cd253a1ade
+source-git-commit: 39d788854c086b7f4c45d77bfea42fa687e08769
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '956'
 ht-degree: 1%
 
 ---
@@ -174,3 +174,7 @@ Därefter kan du skapa en adaptiv formulärbaserad datamodell och använda den i
 Du kan [konfigurera åtgärden Skicka formulärdatamodell](/help/forms/using-form-data-model.md) för ett adaptivt formulär som skickar data till Microsoft Dynamics OData.
 
 Mer information om hur du skapar och använder formulärdatamodell i affärsarbetsflöden finns i [Dataintegrering](data-integration.md).
+
+## Relaterade artiklar
+
+{{af-submit-action}}

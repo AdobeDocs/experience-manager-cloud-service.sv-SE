@@ -5,9 +5,9 @@ Keywords: Integration of Salesforce using OAuth 2.0 client credential flow, sale
 feature: Adaptive Forms, Form Data Model
 role: User, Developer
 exl-id: 2c2029ab-6fb4-41a6-846c-175c3a79d921
-source-git-commit: 6e01a5bfc4e8bf7cc9537c9c03af08cd253a1ade
+source-git-commit: 39d788854c086b7f4c45d77bfea42fa687e08769
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '444'
 ht-degree: 1%
 
 ---
@@ -75,5 +75,9 @@ Så här ansluter du adaptivt formulär till Salesforce-programmet med autentise
 När du har konfigurerat Salesforce-programmet kan du använda konfigurationen när du skapar formulärdatamodeller. Mer information finns i [Skapa formulärdatamodell](create-form-data-models.md). [Konfigurera åtgärden Skicka formulärdatamodell](/help/forms/using-form-data-model.md) för ett adaptivt formulär som skickar data till Salesforce-program.
 
 Mer information om hur du skapar och använder formulärdatamodell i affärsarbetsflöden finns i [Dataintegrering](data-integration.md).
+
+## Relaterade artiklar
+
+{{af-submit-action}}
 
 
