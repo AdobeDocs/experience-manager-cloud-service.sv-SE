@@ -2,9 +2,9 @@
 title: Komma igång med Universal Editor i AEM
 description: Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
-source-git-commit: 16f2922a3745f9eb72f7070c30134e5149eb78ce
+source-git-commit: febaec244b4400b8d7fc5a5d8a4f75b4f4505d6f
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '903'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Det här dokumentet vägleder dig genom de här stegen.
 
 ## Begär åtkomst till den universella redigeraren {#request-access}
 
-Du måste först begära åtkomst till Universal Editor. Se [https://experience.adobe.com/#/aem/editor](https://experience.adobe.com/#/aem/editor), logga in och validera om du har tillgång till Universell redigerare.
+Du måste först begära åtkomst till Universal Editor. Öppna [`https://experience.adobe.com/#/aem/editor&quot;](https://experience.adobe.com/#/aem/editor), logga in och validera om du har tillgång till Universell redigerare.
 
 Om du inte har åtkomst kan du begära det via ett formulär som är länkat på samma sida.
 
@@ -59,7 +59,7 @@ import "@adobe/universal-editor-cors";
 
 ### Alternativ för appar som inte kan reagera {#alternative}
 
-Om du inte implementerar ett React-program och/eller kräver serveråtergivning är en alternativ metod att inkludera följande i dokumentets brödtext.
+Om du inte implementerar ett React-program och/eller kräver återgivning på serversidan, kan du lägga till följande i dokumentets brödtext.
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/adobe/universal-editor-cors/dist/universal-editor-embedded.js" async></script>
@@ -124,10 +124,10 @@ Anslutningar som används i appen lagras som `<meta>` taggar på sidans `<head>`
 
 Identifierare `urn:adobe:aue:system` representerar anslutningen för Adobe Universal Editor.
 
-`itemid`s använder `urn` för att förkorta identifieraren.
+`data-aue-resource`s använder `urn` för att förkorta identifieraren.
 
 ```html
-itemid="urn:<referenceName>:<resource>"
+data-aue-resource="urn:<referenceName>:<resource>"
 ```
 
 * `<referenceName>` - Detta är den namngivna referens som omnämns i `<meta>` -tagg. T.ex. `aemconnection`

@@ -1,9 +1,10 @@
 ---
 title: Universal Editor Overview for AEM Developers
 description: Om du är en AEM utvecklare som är intresserad av hur den universella redigeraren fungerar och hur du använder den i ditt projekt ger det här dokumentet dig en introduktion genom att leda dig genom att instrumentera WKND-projektet så att det fungerar tillsammans med den universella redigeraren.
-source-git-commit: 16f2922a3745f9eb72f7070c30134e5149eb78ce
+exl-id: d6f9ed78-f63f-445a-b354-f10ea37b0e9b
+source-git-commit: d7154fcec9cf6e3cb00ce8e434e38544294df165
 workflow-type: tm+mt
-source-wordcount: '3082'
+source-wordcount: '3112'
 ht-degree: 0%
 
 ---
@@ -36,6 +37,7 @@ Du behöver följande för att kunna följa med i den här översikten.
    * [WKND-demowebbplatsen måste vara installerad.](https://github.com/adobe/aem-guides-wknd)
 * [Åtkomst till den universella redigeraren](/help/implementing/universal-editor/getting-started.md#onboarding)
 * [En lokal universell redigeringstjänst](/help/implementing/universal-editor/local-dev.md) som körs för utvecklingsändamål
+   * Se till att du dirigerar webbläsaren till [acceptera det självsignerade certifikatet för lokala tjänster.](/help/implementing/universal-editor/local-dev.md#editing)
 
 Förutom att man är allmänt bekant med webbutveckling utgår man i det här dokumentet från att man är van vid AEM. Om du inte är van vid AEM kan du överväga att [WKND-självstudiekursen innan du fortsätter.](/help/implementing/developing/introduction/develop-wknd-tutorial.md)
 
@@ -164,7 +166,7 @@ Sidan läses nu in med rätt JavaScript-bibliotek så att den universella redige
 
 WKND-sidan läses nu in korrekt i Universell redigerare och JavaScript-biblioteket läses in för att ansluta redigeraren till din app.
 
-Men du märkte troligen snabbt att du inte kan interagera med sidan i Universal Editor. Universal Editor kan inte redigera sidan. För att den universella redigeraren ska kunna redigera innehållet måste du definiera en anslutning så att den vet var innehållet ska skrivas. För lokal utveckling måste du skriva tillbaka till den lokala AEM-utvecklingsinstansen på `https://localhost:8443`.
+Du har dock troligen lagt märke till att du inte kan interagera med sidan i Universalläsaren. Universal Editor kan inte redigera sidan. För att den universella redigeraren ska kunna redigera innehållet måste du definiera en anslutning så att den vet var innehållet ska skrivas. För lokal utveckling måste du skriva tillbaka till den lokala AEM-utvecklingsinstansen på `https://localhost:8443`.
 
 1. Öppna CRXDE Lite.
 
@@ -227,10 +229,9 @@ Komponenterna måste också vara instrumenterade för att kunna redigeras med de
 1. I slutet av den första `div` på ungefär rad 26 lägger du till instrumenteringsinformation för komponenten.
 
    ```text
-   itemscope
-   itemid="urn:aem:${resource.path}"
-   itemtype="component"
-   data-editor-itemlabel="Teaser"
+   data-aue-resource="urn:aem:${resource.path}"
+   data-aue-type="component"
+   data-aue-label="Teaser"
    ```
 
 1. Klicka **Spara alla** i verktygsfältet och läsa in den universella redigeraren igen.
@@ -262,9 +263,9 @@ Nu kan du markera suddgummit, men fortfarande inte redigera det. Detta beror på
 1. Infoga följande egenskaper i slutet av `h2` -tagg (nära rad 17).
 
    ```text
-   itemprop="jcr:title"
-   itemtype="text"
-   data-editor-itemlabel="Title"
+   data-aue-prop="jcr:title"
+   data-aue-type="text"
+   data-aue-label="Title"
    ```
 
 1. Klicka **Spara alla** i verktygsfältet och läsa in den universella redigeraren igen.
@@ -281,15 +282,14 @@ Nu när du kan redigera teaser titel ska vi titta på vad du har gjort och hur.
 
 Du har identifierat teaser-komponenten för Universal Editor genom att instrumentera den.
 
-* `itemscope` identifierar det som ett objekt för Universal Editor.
-* `itemid` identifierar resursen i AEM som redigeras.
-* `itemtype` definierar att objekten ska behandlas som en sidkomponent (till skillnad från en behållare).
-* `data-editor-itemlabel` visar en användarvänlig etikett i användargränssnittet för det valda lagret.
+* `data-aue-resource` identifierar resursen i AEM som redigeras.
+* `data-aue-type` definierar att objekten ska behandlas som en sidkomponent (till skillnad från en behållare).
+* `data-aue-label` visar en användarvänlig etikett i användargränssnittet för det valda lagret.
 
 Du har även instrumenterat titelkomponenten i teaserkomponenten.
 
-* `itemprop` är JCR-attributet som är skrivet.
-* `itemtype` är hur attributet ska redigeras. I det här fallet med textredigeraren eftersom det är en titel (till skillnad från RTF-redigeraren).
+* `data-aue-prop` är JCR-attributet som är skrivet.
+* `data-aue-type` är hur attributet ska redigeras. I det här fallet med textredigeraren eftersom det är en titel (till skillnad från RTF-redigeraren).
 
 ## Definiera autentiseringsrubriker {#auth-header}
 
@@ -299,13 +299,13 @@ Nu kan du redigera titeln på teaser in-line och ändringarna sparas i webbläsa
 
 Om du läser in webbläsaren igen läses den tidigare titeln in igen. Detta beror på att även om den universella redigeraren kan ansluta till din AEM kan redigeraren ännu inte autentisera till din AEM för att skriva tillbaka ändringar i JCR.
 
-Om du visar nätverksfliken för webbläsarutvecklarverktygen och söker efter `update`ser du att 500-fel uppstår när du försöker redigera titeln.
+Om du visar nätverksfliken för webbläsarutvecklarverktygen och söker efter `update`ser du att 401-fel uppstår när du försöker redigera titeln.
 
 ![Fel vid försök att redigera titeln](assets/dev-edit-error.png)
 
 När du använder Universal Editor för att redigera AEM produktionsinnehåll används samma IMS-token som du använde för att logga in på redigeraren för att autentisera AEM för att underlätta återskrivningen till JCR.
 
-När du utvecklar lokalt kan du inte använda AEM identitetsleverantör, så du måste ange ett sätt att autentisera manuellt genom att explicit ange en autentiseringshuvud.
+När du utvecklar lokalt kan du inte använda AEM identitetsleverantör eftersom IMS-tokens bara skickas till domäner som ägs av Adobe. Du måste manuellt ange ett sätt att autentisera genom att explicit ange en autentiseringshuvud.
 
 1. Klicka på knappen **Autentiseringsrubriker** i verktygsfältet.
 
@@ -323,22 +323,24 @@ Om du undersöker trafiken i webbläsarens utvecklingsverktyg och letar efter `u
 
 ```json
 {
-  "op": "patch",
-  "connections": {
-    "aem": "aem:https://localhost:8443"
-  },
-  "path": {
-    "itemid": "urn:aem:/content/wknd/language-masters/en/jcr:content/root/container/carousel/item_1571954853062",
-    "itemtype": "text",
-    "itemprop": "jcr:title"
+  "connections": [
+    {
+      "name": "aem",
+      "protocol": "aem",
+      "uri": "https://localhost:8443"
+    }
+  ],
+  "target": {
+    "resource": "urn:aem:/content/wknd/language-masters/en/jcr:content/root/container/carousel/item_1571954853062",
+    "type": "text",
+    "prop": "jcr:title"
   },
   "value": "Tiny Toon Adventures"
 }
 ```
 
-* `op` är åtgärden, som i det här fallet är en korrigering av det befintliga innehållet i det redigerade fältet.
 * `connections` är anslutningen till din lokala AEM
-* `path` är den exakta noden och egenskaperna som uppdateras i JCR-uttrycket
+* `target` är den exakta noden och egenskaperna som uppdateras i JCR-uttrycket
 * `value` är den uppdatering du har gjort.
 
 Du kan se ändringen som finns kvar i JCR.
@@ -357,7 +359,7 @@ Du har nu ett program som är instrumenterat för att kunna redigeras med Univer
 
 Redigeringen är för närvarande begränsad till redigering av teaserns titel. Det finns dock tillfällen när redigering på plats inte räcker. Text som t.ex. teaserns titel kan redigeras där den finns med tangentbordsinmatning. Men mer komplicerade objekt måste kunna visas och tillåta redigering av strukturerade data som skiljer sig från hur de återges i webbläsaren. Det här är egenskaperna som är avsedda för.
 
-Uppdatera nu appen så att egenskapsfältet används för redigering. Då återgår du till sidhuvudfilen för sidkomponenten i programmet, där du redan har upprättat anslutningarna till den lokala AEM utvecklingsinstansen och den lokala Universal Editor-tjänsten. Här måste du definiera de komponenter som är redigerbara i programmet och deras datamodeller.
+Om du vill uppdatera appen så att den använder egenskapsfältet för redigering går du tillbaka till sidhuvudsfilen för sidkomponenten i appen. Här har du redan upprättat anslutningarna till den lokala AEM-utvecklingsinstansen och den lokala universella redigeringstjänsten. Här måste du definiera de komponenter som är redigerbara i programmet och deras datamodeller.
 
 1. Öppna CRXDE Lite.
 
@@ -369,10 +371,10 @@ Uppdatera nu appen så att egenskapsfältet används för redigering. Då återg
 
    ![Redigera filen customheaderlibs.html](assets/dev-instrument-properties-rail.png)
 
-1. Lägg till det nödvändiga skriptet för att mappa fälten till slutet av filen.
+1. Till slutet av filen lägger du till det skript som behövs för att definiera komponenterna.
 
    ```html
-   <script type="application/vnd.adobe.aem.editor.component-definition+json">
+   <script type="application/vnd.adobe.aue.component+json">
    {
      "groups": [
        {
@@ -388,29 +390,69 @@ Uppdatera nu appen så att egenskapsfältet används för redigering. Då återg
                    "resourceType": "wknd/components/teaser"
                  }
                }
-             },
-             "model": {
-               "id": "teaser",
-               "fields": [
-                 {
-                   "component": "text-input",
-                   "name": "jcr:title",
-                   "label": "Title",
-                   "valueType": "string"
-                 },
-                 {
-                   "component": "text-area",
-                   "name": "jcr:description",
-                   "label": "Description",
-                   "valueType": "string"
+             }
+           },
+           {
+             "title": "Title",
+             "id": "title",
+             "plugins": {
+               "aem": {
+                 "page": {
+                   "resourceType": "wknd/components/title"
                  }
-               ]
+               }
              }
            }
          ]
        }
      ]
    }
+   </script>
+   ```
+
+1. Under det lägger du till det skript som behövs för att definiera modellen i slutet av filen.
+
+   ```html
+   <script type="application/vnd.adobe.aue.model+json">
+   [
+     {
+       "id": "teaser",
+       "fields": [
+         {
+           "component": "text-input",
+           "name": "jcr:title",
+           "label": "Title",
+           "valueType": "string"
+         },
+         {
+           "component": "text-area",
+           "name": "jcr:description",
+           "label": "Description",
+           "valueType": "string"
+         }
+       ]
+     },
+     {
+       "id": "title",
+       "fields": [
+         {
+           "component": "select",
+           "name": "type",
+           "value": "h1",
+           "label": "Type",
+           "valueType": "string",
+           "options": [
+             { "name": "h1", "value": "h1" },
+             { "name": "h2", "value": "h2" },
+             { "name": "h3", "value": "h3" },
+             { "name": "h4", "value": "h4" },
+             { "name": "h5", "value": "h5" },
+             { "name": "h6", "value": "h6" }
+           ]
+         }
+       ]
+     }
+   ]
    </script>
    ```
 
@@ -457,15 +499,17 @@ Du måste också definiera på komponentnivå vilken modell komponenten ska anv�
 
    ![Redigera filen teaser.html](assets/dev-edit-teaser.png)
 
-1. I slutet av den första `div` på ungefär rad 32, efter `itemscope` egenskaper som du har lagt till tidigare lägger du till instrumenteringsinformation för den modell som den teaser-komponenten ska använda.
+1. I slutet av den första `div` på ungefär rad 32, efter de egenskaper du lade till tidigare, lägger du till instrumenteringsinformation för modellen som den teaser-komponenten ska använda.
 
    ```text
-   data-editor-itemmodel="teaser"
+   data-aue-model="teaser"
    ```
 
 1. Klicka **Spara alla** i verktygsfältet och läsa in den universella redigeraren igen.
 
-1. Klicka en gång till på teaserns titel för att redigera den.
+Nu är du redo att testa egenskaperna för den räl som är instrumenterad för komponenten.
+
+1. Klicka en gång till på teaser i Universal Editor för att redigera den.
 
 1. Klicka på egenskapsfältet för att visa egenskapsfliken och visa fälten som du just instrumenterat.
 
@@ -489,7 +533,7 @@ Du kan till exempel lägga till ett fält för att justera komponentens format.
 
    ![Redigera filen customheaderlibs.html](assets/dev-instrument-styles.png)
 
-1. Lägg till ytterligare ett objekt i `fields` -matris för formatfältet. Kom ihåg att lägga till ett kommatecken efter det sista fältet innan du infogar det nya.
+1. Lägg till ytterligare ett objekt i modelldefinitionsskriptet `fields` -matris för formatfältet. Kom ihåg att lägga till ett kommatecken efter det sista fältet innan du infogar det nya.
 
    ```json
    {

@@ -2,7 +2,7 @@
 title: Attribut och objekttyper
 description: Läs mer om de dataattribut och objekttyper som krävs för den universella redigeraren.
 exl-id: 02795a31-244a-42b4-8297-2649125d7777
-source-git-commit: 7550491de94f1e2cbb28b07f8abbdaded5aa04ea
+source-git-commit: febaec244b4400b8d7fc5a5d8a4f75b4f4505d6f
 workflow-type: tm+mt
 source-wordcount: '686'
 ht-degree: 0%
@@ -28,13 +28,13 @@ För att ett program ska kunna redigeras av den universella redigeraren måste d
 
 | Dataegenskap | Beskrivning |
 |---|---|
-| `itemid` | URN to the resource, see the section [Instrument the Page of the document Getting Started with the Universal Editor in AEM](getting-started.md#instrument-thepage) |
-| `itemprop` | Resursens attribut, se avsnittet [Instrument the Page of the document Getting Started with the Universal Editor in AEM](getting-started.md#instrument-thepage) |
-| `itemtype` | Typ av redigerbart objekt (till exempel text, bild och referens) |
-| `data-editor-itemfilter` | Definierar vilka referenser som kan användas |
-| `data-editor-itemlabel` | Definierar en anpassad etikett för ett markeringsbart objekt som visas i redigeraren <br>Om `itemmodel` är inställd hämtas etiketten med hjälp av modellen |
-| `data-editor-itemmodel` | Definierar en modell som används för formulärbaserad redigering i egenskapsfältet |
-| `data-editor-behavior` | Definierar beteendet för en instrumentering, t.ex. fristående text eller bild, kan också efterlikna en komponent så att den kan flyttas eller tas bort |
+| `data-aue-resource` | URN to the resource, see the section [Instrument the Page of the document Getting Started with the Universal Editor in AEM](getting-started.md#instrument-thepage) |
+| `data-aue-prop` | Resursens attribut, se avsnittet [Instrument the Page of the document Getting Started with the Universal Editor in AEM](getting-started.md#instrument-thepage) |
+| `data-aue-type` | Typ av redigerbart objekt (till exempel text, bild och referens) |
+| `data-aue-filter` | Definierar vilka referenser som kan användas |
+| `data-aue-label` | Definierar en anpassad etikett för ett markeringsbart objekt som visas i redigeraren <br>Om `itemmodel` är inställd hämtas etiketten med hjälp av modellen |
+| `data-aue-model` | Definierar en modell som används för formulärbaserad redigering i egenskapsfältet |
+| `data-aue-behavior` | Definierar beteendet för en instrumentering, t.ex. fristående text eller bild, kan också efterlikna en komponent så att den kan flyttas eller tas bort |
 
 ## Objekttyper {#item-types}
 
@@ -47,14 +47,14 @@ För att ett program ska kunna redigeras av den universella redigeraren måste d
 | `component` | Det redigerbara är en komponent. Det lägger inte till ytterligare funktioner. Det är obligatoriskt att ange flyttbara/borttagbara delar av DOM och att öppna egenskapsspåret och dess fält | Obligatoriskt | n/a | n/a | Valfritt | Valfritt | n/a |
 | `reference` | Det redigerbara är en referens, till exempel Innehållsfragment, Upplevelsefragment eller Produkt | Beroende <br>se nedan | Beroende <br>se nedan | Valfritt<br>lista med villkor för innehållsfragment, produkt eller Experience Fragment-filter som skickas vidare till referensväljaren | Valfritt | Valfritt | n/a |
 
-Beroende på användningsfallet `itemprop` eller `itemid` kan vara nödvändigt eller inte. Till exempel:
+Beroende på användningsfallet `data-aue-prop` eller `data-aue-resource` kan vara nödvändigt eller inte. Till exempel:
 
-* `itemid` är obligatoriskt om du skickar frågor till innehållsfragment via GraphQL och vill göra listan redigerbar i sitt sammanhang.
-* `itemprop` krävs om du har en komponent som återger innehållet i ett refererat innehållsfragment och du vill uppdatera referensen i komponenten.
+* `data-aue-resource` är obligatoriskt om du skickar frågor till innehållsfragment via GraphQL och vill göra listan redigerbar i sitt sammanhang.
+* `data-aue-prop` krävs om du har en komponent som återger innehållet i ett refererat innehållsfragment och du vill uppdatera referensen i komponenten.
 
 ## Beteenden {#behaviors}
 
-| `data-editor-behavior` | Beskrivning |
+| `data-aue-behavior` | Beskrivning |
 |---|---|
 | `component` | Används för att tillåta fristående text, fullödig text och mediemimiska komponenter så att de också kan flyttas och tas bort på sidan |
 | `container` | Används för att tillåta att behållare behandlas som sina egna komponenter så att de kan flyttas och tas bort på sidan |
