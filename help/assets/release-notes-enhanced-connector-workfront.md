@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 description: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
-source-git-commit: 16aa0241dd954b7f66523d746827d81b956578bd
+source-git-commit: b1c5df329e45128704ae82f49673c6a755a61a73
 workflow-type: tm+mt
-source-wordcount: '1324'
+source-wordcount: '1516'
 ht-degree: 0%
 
 ---
@@ -15,14 +15,27 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Work
 
 ## Releasedatum {#release-date}
 
-Releasedatum för den senaste versionen, 1.9.15 av [!DNL Workfront for Experience Manager enhanced connector] är 17 november 2023.
+Releasedatum för den senaste versionen, 1.9.16 av [!DNL Workfront for Experience Manager enhanced connector] är 19 januari 2024.
 
 ## Frigör högdagrar {#release-highlights}
 
 Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connector] innehåller följande felkorrigeringar:
 
-* När du visar listan med AEM mappar tar det mer än en minut att läsa in dialogrutan.
-* Auktoriserad [!DNL Workfront] -användare får upprepade gånger felloggar för autentiseringsfel.
+* The [!DNL Workfront] konfiguration i [!DNL CRX DE] lagrar för närvarande inte `project ID`, vilket orsakar fel när skrivskyddad behörighet används. Läs mer om hur [konfigurera behörigheter](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/integrations/workfront-connector-configure.html#linked-folders).
+
+* Det finns ingen offentlig dokumentation om hur du lägger till anpassade egenskaper i indexdefinitionen utanför rutan. Läs mer om [lägga till anpassad egenskap](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/integrations/workfront-connector-configure.html#metadata-schema-mapping).
+
+* Om du tar bort anslutningskonfigurationer på den utökade kopplingen påverkas händelsprenumerationer och andra sparade konfigurationer avsevärt, vilket gör att de pekar på en gammal URL.
+
+* När du installerar tilläggspaketet för formulär installeras inte **[!UICONTROL Toggle Router]**, vilket leder till att [!DNL WFEC AMS environment Toggle] -funktion.
+
+* Om du aktiverar händelseprenumerationer på EWC-konfiguration uppstår upprepade API-anrop som inte fungerar med `HTTP 400` fel vid konfiguration [!DNL Workfront] för första gången.
+
+* Om du tar bort kommentarer om länkade mappresurser på Workfront går det inte att hitta den länkade mappsökvägen på AEM.
+
+* Otillräckligt stöd för stora filresurser i AEM orsakar ett problem med 4 byte-storlek.
+
+* Ingen begärandetidsbearbetning för kritiska flöden i länkad mapp, dokumentuppdatering och anteckningsuppdatering.
 
 >[!NOTE]
 >
@@ -31,7 +44,7 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 >[!IMPORTANT]
 >
->Adobe rekommenderar dig [uppgradera till den senaste 1.9.15-versionen](/help/assets/workfront-connector-install.md) i [!DNL Workfront for Experience Manager enhanced connector].
+>Adobe rekommenderar dig [uppgradera till den senaste 1.9.16-versionen](/help/assets/workfront-connector-install.md) i [!DNL Workfront for Experience Manager enhanced connector].
 
 ## Kända fel {#known-issues}
 
@@ -40,6 +53,11 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 * När du använder den klassiska Workfront-upplevelsen är **[!UICONTROL Send to]** som finns i **[!UICONTROL More]** I den nedrullningsbara listan kan du inte välja måldestinationen i Experience Manager. The **[!UICONTROL Send to]** fungerar korrekt med **[!UICONTROL Document Actions]** listruta. The **[!UICONTROL Send to]** alternativet fungerar korrekt för **[!UICONTROL More]** nedrullningsbar lista och **[!UICONTROL Document Actions]** nedrullningsbar lista som finns i nya Workfront.
 
 ## Tidigare versioner {#previous-releases}
+
+### November 2023-utgåvan {#november-2023-release}
+
+* När du visar listan med AEM mappar tar det mer än en minut att läsa in dialogrutan.
+* Auktoriserad [!DNL Workfront] -användare får upprepade gånger felloggar för autentiseringsfel.
 
 ### Oktober 2023-versionen {#october-2023-release}
 
