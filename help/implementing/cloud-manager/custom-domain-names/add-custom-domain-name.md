@@ -2,12 +2,13 @@
 title: Lägga till ett anpassat domännamn
 description: Lär dig hur du lägger till ett anpassat domännamn med hjälp av Cloud Manager.
 exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
-source-git-commit: 90250c13c5074422e24186baf78f84c56c9e3c4f
+source-git-commit: 52466e091cf6e0ab1ac620e15568c04881a3b63a
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
+
 
 # Lägga till ett anpassat domännamn {#adding-cdn}
 
@@ -60,15 +61,19 @@ CDN-distributionen kräver ett giltigt SSL-certifikat och lyckad TXT-verifiering
 
 Se [Kontrollerar status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) om du vill veta mer om olika statusar och hur du åtgärdar potentiella problem.
 
+>[!TIP]
+>
+>Läs följande artikel om behovet av [Lägg till en CNAME eller en post nästa](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md) för att undvika dubbelarbete när du lägger till DNS-poster i din anpassade domän. TXT-posten och CNAME- eller A-posten kan anges samtidigt på den styrande DNS-servern.
+
+>[!TIP]
+>
+>Se [Lägga till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md) om du vill veta mer om TXT-poster.
+
 >[!NOTE]
 >
 >DNS-verifiering kan ta några timmar att behandla på grund av fördröjd DNS-spridning.
 >
 >Cloud Manager kontrollerar ägarskap och uppdaterar statusen som visas i tabellen Domäninställningar. Se [Kontrollerar status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) för mer information.
-
->[!TIP]
->
->Se [Lägga till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md) om du vill veta mer om TXT-poster.
 
 ## Lägga till ett anpassat domännamn från miljösidan {#adding-cdn-environments}
 

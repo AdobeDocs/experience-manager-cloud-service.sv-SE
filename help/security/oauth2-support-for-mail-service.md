@@ -2,12 +2,13 @@
 title: OAuth2-stöd för e-posttjänsten
 description: Oauth2-stöd för e-posttjänsten i Adobe Experience Manager as a Cloud Service
 exl-id: 93e7db8b-a8bf-4cc7-b7f0-cda481916ae9
-source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
+source-git-commit: a230efaa58cb00e8a0c0e2b23f0cc07462cc658b
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
+
 
 # OAuth2-stöd för e-posttjänsten {#oauth2-support-for-the-mail-service}
 
@@ -165,7 +166,7 @@ under `/apps/<my-project>/osgiconfig/config` med syntaxen nedan. The `smtp.host`
    ```
 
 1. För Outlook gäller följande: `smtp.host` konfigurationsvärdet är `smtp.office365.com`
-1. Vid körning skickas `refreshToken values` och `clientSecret` hemligheter med Cloud Manager-variablernas API enligt beskrivningen [här](/help/implementing/deploying/configuring-osgi.md#setting-values-via-api). Variabelvärdena `SECRET_SMTP_OAUTH_REFRESH_TOKEN`  och `SECRET_SMTP_OAUTH_CLIENT_SECRET` ska definieras.
+1. Vid körning skickas `refreshToken values` och `clientSecret` hemligheter med Cloud Manager-variablernas API enligt beskrivningen [här](/help/implementing/deploying/configuring-osgi.md#setting-values-via-api) eller genom att använda [Cloud Manager för att lägga till variabler.](/help/implementing/cloud-manager/environment-variables.md) Variabelvärdena `SECRET_SMTP_OAUTH_REFRESH_TOKEN`  och `SECRET_SMTP_OAUTH_CLIENT_SECRET` ska definieras.
 
 ### Felsökning {#troubleshooting}
 
