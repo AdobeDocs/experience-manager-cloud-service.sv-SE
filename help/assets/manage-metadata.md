@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Asset Management,Metadata
 role: User,Architect,Admin
 exl-id: 73a82bc2-1dda-4090-b7ee-29d1a632ba25
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: fa57e0438a7570551785375c4e5a57fa38fd2f6f
 workflow-type: tm+mt
-source-wordcount: '1987'
+source-wordcount: '1940'
 ht-degree: 3%
 
 ---
@@ -60,18 +60,53 @@ Av dessa skäl [!DNL Assets] ger dig rätt sätt att skapa, hantera och utbyta m
 
 ## Typer av metadata {#types-of-metadata}
 
-De två grundläggande metadatatyperna är tekniska metadata och beskrivande metadata.
+Metadata klassificeras som tekniska, informativa och administrativa metadata.
 
-Tekniska metadata är användbara för program som hanterar digitala resurser och bör inte underhållas manuellt. [!DNL Experience Manager Assets] och andra program bestämmer automatiskt tekniska metadata och metadata kan ändras när resursen ändras. Vilka tekniska metadata som är tillgängliga för en mediefil beror till stor del på filtypen för resursen. Några exempel på tekniska metadata är:
+### Tekniska metadata
 
-* Storlek på en fil.
-* Dimensioner (höjd och bredd) för en bild.
-* Bithastighet för en ljud- eller videofil.
-* Bildens upplösning (detaljnivå).
+Tekniska metadata fokuserar på de tekniska aspekterna av digitala resurser och ger viktig information om:
 
-Beskrivande metadata är metadata som rör programdomänen, till exempel det företag som en resurs kommer från. Beskrivande metadata kan inte bestämmas automatiskt. Den skapas manuellt eller halvautomatiskt. En GPS-aktiverad kamera kan till exempel automatiskt spåra latitud och longitud och lägga till geotagga bilden.
+* Filstorlek
+* Format
+* Upplösning
+* Dimensioner
+* Färgläge
 
-Kostnaden för att manuellt skapa beskrivande metadatainformation är hög. Därför har standarder upprättats för att underlätta utbyte av metadata mellan olika programsystem och organisationer. [!DNL Experience Manager Assets] stöder alla relevanta standarder för metadatahantering.
+Den här typen av metadata hjälper användarna att förstå och använda digitala resurser på ett effektivt sätt.
+
+### Informativa metadata
+
+Med hjälp av informationsmetadata får du beskrivande information som underlättar förståelsen av innehållet och gör det lättare att hitta och söka i innehållet. Den innehåller nyckelord, bildtexter och beskrivningar. <br>Om du till exempel hanterar en video i Experience Manager Assets kan vi inkludera följande informationsmetadata:
+
+* **Nyckelord**: Marknadsföring, Produktlansering, Promo
+* **Bildtext**: Vi presenterar vår senaste produkt med spännande funktioner
+* **Beskrivning**: En detaljerad översikt över videoinnehållet.
+
+### Administrativa metadata
+
+Administrativa metadata hanterar de administrativa aspekterna av digitala resurser. Det säkerställer åtkomstkontroll, regelefterlevnad och hantering av den övergripande livscykeln för resurser inom det digitala resurshanteringssystemet. Den innehåller information om
+
+* Tillgångsägare
+* Användningsrättigheter
+* Behörigheter
+* Annan administrativ information
+
+Denna metadatatyp säkerställer effektiv filhantering, åtkomstkontroll och regelefterlevnad.
+
+<!-- Learn more about [metadata best practices](metadata-best-practices.md) to manage your digital assets effectively. -->
+
+<!-- The two basic types of metadata are technical metadata and descriptive metadata.
+
+Technical metadata is useful for software applications that are dealing with digital assets and should not be maintained manually. [!DNL Experience Manager Assets] and other software automatically determine technical metadata and the metadata may change when the asset is modified. The available technical metadata of an asset depends largely on the file type of the asset. Some examples of technical metadata are:
+
+* Size of a file.
+* Dimensions (height and width) of an image.
+* Bit rate of an audio or video file.
+* Resolution (level of detail) of an image.
+
+Descriptive metadata is metadata concerned with the application domain, for example, the business that an asset is coming from. Descriptive metadata cannot be determined automatically. It is created manually or semi-automatically. For example, a GPS-enabled camera can automatically track the latitude and longitude and add geotag the image.
+
+The cost of manually creating descriptive metadata information is high. So, standards are established to ease the exchange of metadata across software systems and organizations. [!DNL Experience Manager Assets] supports all relevant standards for metadata management. -->
 
 ## Metadata och senaste ändring {#last-modification}
 
@@ -250,14 +285,14 @@ Genom att skapa metadatadrivna arbetsflöden kan du automatisera vissa processer
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
 
