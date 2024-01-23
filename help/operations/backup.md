@@ -2,9 +2,9 @@
 title: Säkerhetskopiera och återställ i AEM as a Cloud Service
 description: Läs mer om säkerhetskopiering och återställning på AEM as a Cloud Service
 exl-id: 469fb1a1-7426-4379-9fe3-f5b0ebf64d74
-source-git-commit: 83b5d9a3ff0e9a3c69e36a97a3f733b05f827d3b
+source-git-commit: b77ee0697e8f6f4aeaa6651336588f1c5321abd1
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ Om en kunds distribution, dvs. den distribuerade programkoden antingen är trasi
 
 >[!CAUTION]
 >
->Den här funktionen bör endast användas när det finns allvarliga problem med kod eller innehåll. De senaste data som finns mellan tidpunkten för den återställda säkerhetskopieringen och den aktuella säkerhetskopian går förlorade. Mellanlagring återställs också till den gamla versionen.
+>Den här funktionen bör endast användas när det finns allvarliga problem med kod eller innehåll. De senaste data som finns mellan tidpunkten för den återställda säkerhetskopieringen och den aktuella säkerhetskopian går förlorade. Mellanlagring återställs också till den gamla versionen. Om nyligen använda data behålls måste de exporteras via ett innehållspaket innan de återställs och installeras om på en återställd databas.
 
-## Användning {#how-to-use}
+## Använda {#how-to-use}
 
 Kunderna ska lämna in en supportanmälan som beskriver det problem som uppstår. Supportbiljetten leder vanligtvis till en utredning av supporten från Adobe som sedan kan avgöra om en återställning är nödvändig.
 
