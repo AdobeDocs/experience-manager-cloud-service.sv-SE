@@ -11,18 +11,19 @@ level: Beginner
 kt: 10834
 thumbnail: 346811.jpeg
 exl-id: 30bb9b2c-5f00-488e-ad5c-9af7cd2c4735
-source-git-commit: d9d4ed55722920a8528056defbc0d8a411dd6807
+source-git-commit: f7967c5374dd34315b2577cc9fd7606db3ef4cc7
 workflow-type: tm+mt
 source-wordcount: '1866'
 ht-degree: 0%
 
 ---
 
+
 # AEM-CIF kärnkomponenter och integrering med Adobe Experience Platform {#aem-cif-aep-integration}
 
 The [Commerce integration framework (CIF)](https://github.com/adobe/aem-core-cif-components) grundkomponenterna ger smidig integration med [Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-overview.html?lang=en) att vidarebefordra butikshändelser och deras data från interaktioner på klientsidan som __lägg till i kundvagn__.
 
-The [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) project innehåller ett JavaScript-bibliotek som kallas [Adobe Experience Platform Connector for Adobe Commerce](https://github.com/adobe/aem-core-cif-components/tree/master/extensions/experience-platform-connector) för att samla in händelsedata från din Commerce Store. Dessa händelsedata skickas till Experience Platform där de används i andra Adobe Experience Cloud-produkter, som Adobe Analytics och Adobe Target, för att skapa en helhetsprofil som täcker en kundresa. Genom att ansluta Commerce-data till andra produkter i Adobe Experience Cloud kan ni utföra uppgifter som att analysera användarbeteenden på er webbplats, utföra AB-tester och skapa personaliserade kampanjer.
+The [AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components) project innehåller ett JavaScript-bibliotek som kallas [Adobe Experience Platform Connector for Adobe Commerce](https://github.com/adobe/aem-core-cif-components/tree/master/extensions/experience-platform-connector) för att samla in händelsedata från din Commerce Store. Dessa händelsedata skickas till Experience Platform där de används i andra Adobe Experience Cloud-produkter, som Adobe Analytics och Adobe Target, för att skapa en helhetsprofil som täcker en kundresa. Genom att ansluta Commerce-data till andra produkter i Adobe Experience Cloud kan ni utföra uppgifter som att analysera användarbeteenden på er webbplats, utföra AB-tester och skapa personaliserade kampanjer.
 
 Läs mer om [Experience Platform datainsamling](https://experienceleague.adobe.com/docs/experience-platform/collection/home.html) en serie teknologier som gör att ni kan samla in kundupplevelsedata från källor på kundsidan.
 
@@ -216,7 +217,7 @@ Om du vill initiera den Reaktionsbaserade Premiere och CIF kärnkomponenter skap
        },
        eventsCollector: {
            eventForwarding: {
-               commerce: true,
+               acds: true,
                aep: false,
            }
        }
@@ -225,7 +226,7 @@ Om du vill initiera den Reaktionsbaserade Premiere och CIF kärnkomponenter skap
 
    >[!IMPORTANT]
    >
-   >Även om du kanske redan är bekant med [`config.js`](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.frontend/src/main/components/App/config.js) fil från __AEM - CIF Venia Project__ måste du göra några ändringar i den här filen. Börja med att granska alla __GÖRA__ kommentarer. Sedan, i `eventsCollector` -egenskap, hitta `eventsCollector > aed` -objektet och uppdatera `orgId` och `datastreamId` till rätt värden. [Läs mer](./aep.md#add-aep-values-to-aem).
+   >Även om du kanske redan är bekant med [`config.js`](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.frontend/src/main/components/App/config.js) fil från __AEM - CIF Venia Project__ måste du göra några ändringar i den här filen. Börja med att granska alla __GÖRA__ kommentarer. Sedan, i `eventsCollector` -egenskap, hitta `eventsCollector > aep` -objektet och uppdatera `orgId` och `datastreamId` till rätt värden. [Läs mer](./aep.md#add-aep-values-to-aem).
 
 1. Skapa en `App.js` -fil med följande innehåll. Den här filen liknar en vanlig React-startpunktsfil och innehåller React- och anpassade kopplingar samt React Context-användning som underlättar integreringen mellan Experience Platform.
 
