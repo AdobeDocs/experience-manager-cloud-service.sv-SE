@@ -8,10 +8,10 @@ geptopics: SG_SCENESEVENONDEMAND_PK/categories/ecatalogs
 feature: Dynamic Media Classic,Asset Management,Image Sets,Spin Sets,eCatalog
 role: User
 exl-id: fb63e2d4-2c8c-48dd-a0dc-fdfbbfb57b30
-source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
+source-git-commit: 973cec704b5e8f34e3b2c448fc10e09226ffa933
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 2%
+source-wordcount: '308'
+ht-degree: 1%
 
 ---
 
@@ -33,7 +33,7 @@ När du skapar en snurra uppsättning eller en bilduppsättning, eller överför
 | **Bild** - Antal smarta beskärningar per bild | 5 | 100 |
 | **Alla uppsättningar** - Antal dubblettresurser per uppsättning | Inga dubbletter | 20 |
 | **Alla uppsättningar** - Maximalt antal resurser per uppsättning | 5-10 bilder per uppsättning | 1000 |
-| **Snurra uppsättning** - Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 |
+| **Rotation** - Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 |
 | **PDF** - Maximalt antal sidor för PDF som ska användas för extrahering |  | 100 (för alla PDF) |
 
 <!-- See also [Dynamic Media limitations](/help/assets/limitations.md). -->
@@ -52,27 +52,28 @@ Dynamic Media stöder inte följande kombinationer av webbläsare och operativsy
 * Safari 8 + iOS 8.4
 * Safari 8 + OS X 10.10 Yosemite
 
-<!-- ## End of support for TLS 1.0 and 1.1 {#tls}
+## Stöd för Secure Socket Layer 2.0 och 3.0 samt Transport Layer Security 1.0 och 1.1 har upphört {#tls}
 
-CQDOC-19433 (original ticket)
-and CQDOC-19792 (removed as per this ticket December 5, 2022)
+<!-- CQDOC-19433 (original ticket)
+and CQDOC-19792 (removed as per this ticket December 5, 2022) -->
 
-Effective September 30, 2022, Adobe Dynamic Media will end support for the following:
+Från och med den 30 april 2024 upphör Adobe Dynamic Media med stödet för följande:
 
-* TLS (Transport Layer Security) 1.0 and 1.1
-* The following weak ciphers in TLS 1.2:
-  * `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384`
-  * `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA`
-  * `TLS_RSA_WITH_AES_256_GCM_SHA384`
-  * `TLS_RSA_WITH_AES_256_CBC_SHA256`
-  * `TLS_RSA_WITH_AES_256_CBC_SHA`
-  * `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256`
-  * `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA`
-  * `TLS_RSA_WITH_AES_128_GCM_SHA256`
-  * `TLS_RSA_WITH_AES_128_CBC_SHA256`
-  * `TLS_RSA_WITH_AES_128_CBC_SHA`
-  * `TLS_RSA_WITH_CAMELLIA_256_CBC_SHA`
-  * `TLS_RSA_WITH_CAMELLIA_128_CBC_SHA`
-  * `TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA`
-  * `TLS_RSA_WITH_SDES_EDE_CBC_SHA` -->
-
+* SSL (Secure Socket Layer) 2.0
+* SSL 3.0
+* TLS (Transport Layer Security) 1.0 och 1.1
+* Följande svaga lärare i TLS 1.2:
+   * `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384`
+   * `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA`
+   * `TLS_RSA_WITH_AES_256_GCM_SHA384`
+   * `TLS_RSA_WITH_AES_256_CBC_SHA256`
+   * `TLS_RSA_WITH_AES_256_CBC_SHA`
+   * `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256`
+   * `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA`
+   * `TLS_RSA_WITH_AES_128_GCM_SHA256`
+   * `TLS_RSA_WITH_AES_128_CBC_SHA256`
+   * `TLS_RSA_WITH_AES_128_CBC_SHA`
+   * `TLS_RSA_WITH_CAMELLIA_256_CBC_SHA`
+   * `TLS_RSA_WITH_CAMELLIA_128_CBC_SHA`
+   * `TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA`
+   * `TLS_RSA_WITH_SDES_EDE_CBC_SHA`
