@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management,Publishing,Collaboration,Video
 role: User
 exl-id: 91edce4a-dfa0-4eca-aba7-d41ac907b81e
-source-git-commit: fd1c3d1e524e5882ae04ca784b618ddba123bdd6
+source-git-commit: 4b05e8f8ae554e7c0881134ef24ca8ce35e3e2bf
 workflow-type: tm+mt
-source-wordcount: '4635'
+source-wordcount: '4636'
 ht-degree: 5%
 
 ---
@@ -41,7 +41,7 @@ Läs mer om [överföra resurser](manage-digital-assets.md#uploading-assets) in 
 
 ### Förhandsgranska videomaterial
 
-Du kan förhandsgranska MP4-återgivningarna i [!DNL Assets] användargränssnitt. Så här förhandsgranskar du en videoresurs:
+Du kan förhandsgranska videoklipp i återgivningar som stöds i [!DNL Assets] användargränssnitt. Så här förhandsgranskar du en videoresurs:
 
 1. Överför en videoresurs i ett format som stöds till [!DNL Experience Manager Assets]. Läs mer om [videoformat](file-format-support.md#video-formats). <br>När videomaterialet har överförts bearbetas det och en förhandsvisningsåtergivning genereras.
 1. Klicka på resursen och välj ![Detaljer, alternativ](assets/do-not-localize/details_icon.svg) **[!UICONTROL Details]**  i det övre verktygsfältet. Videoresursen öppnas i videovisningsprogrammet.
