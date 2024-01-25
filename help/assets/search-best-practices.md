@@ -3,10 +3,10 @@ title: Sök efter bästa praxis för [!DNL Adobe Experience Manager] som [!DNL C
 description: Metodtips om hur du söker efter, hittar och hämtar metadata för resurser i programmet.
 contentOwner: KK
 exl-id: 446692de-5cea-4dbd-a98e-ec5177c7017e
-source-git-commit: 47003c9aa0faefc01a9935c53a5a78938c37cf66
+source-git-commit: 6397a300de13c5e4f6ee5828de1ba76a1677c227
 workflow-type: tm+mt
-source-wordcount: '2432'
-ht-degree: 1%
+source-wordcount: '2437'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 [!DNL Adobe Experience Manager Assets] har robusta metoder för resurssökning som hjälper dig att få högre innehållshastighet. Ibland kan det vara besvärligt och tidskrävande att hitta rätt mediefil. Därför kan du söka efter resurser i [!DNL Adobe Experience Manager Assets] är en central del i användningen av ett digitalt resurshanteringssystem - vare sig det är till för kreativa användare eller företagsanvändare och marknadsförare, eller för administration av DAM-administratörer.
 
-Det här hjälpdokumentet innehåller bästa praxis för AEM sökning med hjälp av olika scenarier som hjälper AEM att utföra grundläggande till avancerad sökning.
+Det här hjälpdokumentet innehåller AEM bästa praxis för sökning med hjälp av olika scenarier för att hjälpa AEM att utföra grundläggande till avancerad sökning.
 
 ## Åtkomst till Experience Manager Search {#access-experience-manager-search}
 
@@ -169,7 +169,7 @@ Utför följande steg i **[!UICONTROL Admin view]**:
 Utför följande steg i **[!UICONTROL Assets view]**:
 
 1. Typ `classic car` i sökfältet.
-1. Gå till Filter. Under [!UICONTROL MIME Type] väljer du [!UICONTROL PDF].
+1. Gå till Filter. Under [!UICONTROL MIME Type], markera [!UICONTROL PDF].
 1. Gå till [!UICONTROL Asset Status], markera [!UICONTROL All] för att inkludera alla publicerade och opublicerade resurser.
 
 **Scenario 5: Sök efter alla bilder utom PNG**
@@ -255,7 +255,11 @@ eller välj resursen > navigera till ellipsen längst upp till höger > välj [!
 
 1. Lägg märke till sökfältet. Miniatyrbilden för den valda resursen visas i sökfältet som anger ditt sökkrav. Resultatet blir att resurser med liknande smarta taggar returneras.
 
-**[!UICONTROL Assets view]** stöder inte [!UICONTROL Find Similar] alternativ.
+Utför följande steg i **[!UICONTROL Assets view]**:
+
+1. Sök efter resursen efter dina behov.
+1. Välj bilden > navigera till [!UICONTROL Find Similar Image] i navigeringsfältet högst upp.
+Det tar dig till samlingen med resurser med liknande färg och metadata.
 
 ## Anpassade sökfaktorer {#custom-search-facets}
 
@@ -415,11 +419,6 @@ The newly added assets are not indexed.
             <li> Innehållsfragmentmodell
             </ul> 
         </td>
-        <td> Stöds inte </td>
-    </tr>
-     <tr>
-        <td> Sök liknande </td>
-        <td> Stöds </td>
         <td> Stöds inte </td>
     </tr>
 </table>
