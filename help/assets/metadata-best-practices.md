@@ -2,15 +2,13 @@
 title: Metadatahantering och bästa praxis
 description: Lär dig mer om metadata och de effektivaste strategierna för att hantera digitala resurser.
 role: User, Admin
-hide: true
-hidefromtoc: true
-source-git-commit: cb8eb56d07163f46aec252c70a3ec3b0273d97cf
+exl-id: d90519df-55a6-4e23-81ad-ff2365d71c0d
+source-git-commit: 2526bc491f079d0dfafaa7aad0d240ff64109591
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1368'
 ht-degree: 0%
 
 ---
-
 
 <!-- Keywords to focus on:
 metadata best practices
@@ -19,7 +17,7 @@ experience manager metadata-->
 
 # Metadatahantering och bästa praxis {#metadata-best-practices}
 
-För att få ert företag att sticka ut och engagera fler kunder är det avgörande att ni använder högkvalitativa bilder, videor och andra digitala resurser. För att uppnå detta behöver ni en process där ni kan lägga till metadata i alla digitala resurser, så att de blir enkelt sökbara. Metadata är de data som innehåller viktig information om digitala resurser, inklusive resursens namn, typ, ändringshistorik, plats i en databas och tillhörande taggar. Metadata effektiviserar resurshanteringen och förbättrar sökbarheten och tillgängligheten samt säkerställer effektiv versionskontroll.
+För att få ert företag att sticka ut och engagera fler kunder är det avgörande att ni använder högkvalitativa bilder, videor och andra digitala resurser. För att uppnå detta behöver ni en process där ni kan lägga till metadata i alla digitala resurser, så att de blir enkelt sökbara. Metadata är de data som innehåller viktig information om digitala resurser, inklusive resursens namn, typ, plats i en databas, ändringsdatum och associerade taggar. Metadata effektiviserar resurshanteringen, förbättrar sökbarheten och tillgängligheten samt säkerställer effektiv versionskontroll.
 
 Lär dig använda metadata i DAM-systemet (Digital Asset Management) för att effektivt [hantera metadata för era digitala resurser](manage-metadata.md).
 
@@ -50,7 +48,6 @@ Om du till exempel hanterar en video i Experience Manager Assets kan vi inkluder
 
 Användare som söker efter marknadsrelaterat innehåll kan enkelt hitta och förstå betydelsen av videon ovan.
 
-
 ### Administrativa metadata
 
 Administrativa metadata hanterar de administrativa aspekterna av digitala resurser. Det säkerställer åtkomstkontroll, regelefterlevnad och hantering av den övergripande livscykeln för resurser inom det digitala resurshanteringssystemet. Den innehåller information om
@@ -68,7 +65,7 @@ Administrativa metadata säkerställer korrekt resurshantering, kontroll av åtk
 
 Metadatahantering börjar med att definiera en metadatastrategi som ger en grund att bedöma det långsiktiga värdet.
 
-Det är viktigt att du skapar ett anpassat metadatamatchema utifrån dina behov när du planerar en metadatastrategi. Ett väldesignat schema ger ett strukturerat ramverk för kategorisering och sortering av resurser inom Adobe Experience Manager.
+Det är viktigt att du skapar ett anpassat metadatamatchema utifrån dina behov när du planerar en metadatastrategi. Ett väldesignat schema ger ett strukturerat ramverk för att kategorisera och organisera resurser i Experience Manager.
 
 #### Video: Lägg till anpassade fält i metadatarammet
 
@@ -78,13 +75,13 @@ Din metadatastrategi kan innehålla följande:
 
 * **Mål:** Beskriv tydligt målen och de förväntade resultaten av metadata. Identifiera vad du vill uppnå genom att lägga till metadata.
 
-* **Syfte:** Definiera varför du hämtar metadata. Ange det värde som läggs till dina processer, system eller organisationer.
+* **Syfte:** Definiera varför du hämtar metadata. Ange det värde som läggs till i processerna, systemen eller organisationen.
 
 * **Tillgänglighetsplan:** Skapa en plan för att göra metadata lättillgängliga och upptäckbara. Förklara vem som kommer att använda den och vilka verktyg och metoder som ska användas.
 
 * **Metadataegenskaper:** Identifiera och definiera varje metadataegenskap noggrant. Se till att varje egenskap har en tydlig anledning att inkluderas, som är kopplad till målen och syftet.
 
-Planera strategin noggrant för att säkerställa enhetliga resultat i hela databasen.
+Planera strategin noggrant för att säkerställa enhetliga resultat i hela databasen. Läs mer om [metadatamodeller](metadata-schemas.md).
 
 ### Skapa en metadatastyrningsplan
 
@@ -103,16 +100,16 @@ Bestäm var informationen kommer från och granska detaljerna i metadatastrategi
 
 ### Var konsekvent med metadatastrategin
 
-En konsekvent metadatastrategi säkerställer effektiv organisation och hämtning av digitala resurser. Använd en strategisk strategi för att hämta in och implementera metadatavärden, vilket ger flexibilitet att utveckla utan onödiga ändringar.
+En konsekvent metadatastrategi säkerställer effektiv organisation och hämtning av digitala resurser. Använd en strategisk strategi för att hämta in och implementera metadatavärden, vilket ger flexibilitet att utveckla utan onödiga ändringar. <br>
 
-Vid namngivning och referering av resurser är det viktigt med konsekvent hantering av metadata i hela företaget. Om du till exempel hanterar flera resurser samtidigt bör du överväga att lägga till massmetadata.
+Vid namngivning och referering av resurser är det viktigt med konsekvent hantering av metadata i hela företaget. Om du till exempel hanterar flera resurser samtidigt bör du&quot;överväga att lägga till flera metadata samtidigt. <br>
 
 Här är några av de bästa sätten att följa:
 
-* **Undvik dubblettvärden:** Om du har en samling bilder från en marknadsföringskampanj bör du använda konsekventa namn och undvika dubbletter.
-I stället för att använda dubblettnamn som *campaign_image_001* och *campaign_image_002* implementera en systematisk namnkonvention som *product_launch_001* och *product_launch_002*, vilket ger en tydlig och ordnad identifiering.
+* **Undvik dubblettvärden:** Om du har en samling bilder från en marknadsföringskampanj bör du använda konsekventa namn och undvika dubbletter.<br>
+I stället för att använda dubblettnamn som *campaign_image_001* och *campaign_image_002* implementera en systematisk namnkonvention som *event_Promotion* och *product_launch*, vilket ger en tydlig och ordnad identifiering.
 
-* **Använd kontrollerade vokabulärer effektivt:** Implementera kontrollerade vokabulärer med standardiserade termer för taggar.
+* **Använd kontrollerade vokabulärer effektivt:** Implementera kontrollerade vokabulärer med standardiserade termer för taggar. Lär dig implementera [AEM Taggningsramverk](/help/implementing/developing/introduction/tagging-framework.md) effektivt.  <br>
 Använd till exempel termer som *product_launch* eller *event_Promotion* när du taggar bilder med teman för att bibehålla en systematisk sekvens.
 
 * **Bevara korrekthet och fullständighet:** För att hålla metadata konsekventa är det viktigt med precision, fullständighet och anpassning mellan olika källor.
@@ -128,21 +125,22 @@ Utvärdera er metadatastrategi för att förbättra sökbarheten för metadata. 
 
 Du kan använda följande metodtips för att optimera sökbarheten för metadata:
 
-* **Optimering av nyckelord:** Förbättra sökbarheten för metadata genom att optimera nyckelord som är kopplade till resurser. Du kan förbättra nyckelordens relevans för vissa resurser i Resurshanteraren genom att följa dessa steg:
+* **Optimering av nyckelord:** Förbättra sökbarheten för metadata genom att optimera nyckelord som är kopplade till resurser. Du kan förbättra nyckelordens relevans för vissa resurser i [!UICONTROL Assets Manager] genom att följa dessa steg:
 
    1. Gå till **[!UICONTROL Assets]** > **[!UICONTROL File]** > **[!UICONTROL [Asset folder]]**.
    1. Markera resursen som du vill uppdatera metadata för och klicka sedan på **[!UICONTROL Properties]**.
-   1. Navigera till **[!UICONTROL Advanced]** och sedan klicka på **[!UICONTROL Add]** under **[!UICONTROL Elevate for search keywords]**.
-   1. Ange nyckelordet som du vill utöka sökningen för och klicka sedan på **[!UICONTROL Add]**.
+   1. Navigera till **[!UICONTROL Advanced]** och sedan klicka på **[!UICONTROL Add]** under **[!UICONTROL Elevate for search keywords]**. <br>Du måste använda standardmetadataschemat för att höja nivån på söknyckelorden.
+   1. Ange nyckelordet som du vill utöka sökningen för och klicka sedan på **[!UICONTROL Add]**.<br>
 Du kan lägga till flera nyckelord och ordna dem efter din prioritet.
    1. Klicka **[!UICONTROL Save & Close]**.
 Sök efter resursen med de nyckelord du har lagt till. Resursen visas bland de översta sökresultaten.
 
-  Lär dig hur [öka sökningen i Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html).
+  Lär dig hur [öka sökningen i Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html).
 
-* **Anpassade metadatafält:** Anpassa metadatafälten för att hämta ytterligare information om resurser. Du kan till exempel lägga till specifika fält för projektinformation, copyrightinformation eller andra relevanta data som förbättrar sökfunktionerna.
+* **Anpassade metadatafält:** Anpassa metadatafälten för att hämta ytterligare information om resurser. Du kan till exempel lägga till specifika fält för projektinformation, copyrightinformation eller andra relevanta data som förbättrar sökfunktionerna. Läs [hur du redigerar eller lägger till anpassade metadata](meta-edit.md) i Experience Manager Assets.
 
-* **Validering av metadata:** Implementera valideringskontroller för metadataposter för att säkerställa konsekvens och exakthet. Detta kan innebära att du ställer in riktlinjer för vissa metadataegenskaper för att undvika tvetydig eller inkonsekvent information.
+
+* **Validering av metadata:** Implementera valideringskontroller för metadataposter för att säkerställa konsekvens och exakthet. Genom att använda kontrollerade vokabulärer blir valideringsprocessen smidigare och minskar risken för otydliga eller inkonsekventa poster. Detta kan innebära att du ställer in riktlinjer för vissa metadataegenskaper för att undvika tvetydig eller inkonsekvent information.
 
 * **Användning:** Utvärdera relevansen och användningen av olika metadataegenskaper över tid. Identifiera och prioritera ofta använda metadata eller bidra avsevärt till söknings- och hämtningsprocesser.
 
@@ -157,13 +155,13 @@ Prova följande metodtips för att förenkla metadata:
 
 * **Optimera egenskapsalternativ:** Fokusera på att markera viktiga egenskaper utan att belasta användarna med för många metadatafält för att fylla i dem. När du till exempel lägger till metadata för en bild ska du bara ta med nyckelfält som titel, beskrivning och taggar för effektiv kategorisering.
 
-* **Eliminera onödiga standardegenskaper:** Förenkla metadataformuläret genom att eliminera färdiga standardegenskaper som inte är relevanta för ditt användningssätt. Ta bort ovanliga standardegenskaper för ett renare gränssnitt och en renare upplevelse.
+* **Eliminera onödiga standardegenskaper:** Förenkla metadataformuläret genom att eliminera färdiga standardegenskaper som inte är relevanta för ditt användningssätt. Ta bort sällan använda standardegenskaper för ett renare gränssnitt och en renare upplevelse.
 
 * **Granska och uppdatera metadata regelbundet:** Uppdatera regelbundet metadata och anpassa dem till förändrade behov och tekniker för att säkerställa att användarna tillhandahåller värdefull information över tid.
 
 ### Analysera innehållsresan
 
-Undersök innehållsförsörjningskedjan för att hitta metadatakällor och engagera alla intressenter, från början till slut, för att få en grundlig strategi för bästa praxis. Involvera olika medarbetare för att säkerställa fullständigt stöd i hela organisationen. Lägg in metadata i olika faser för att dela ansvaret för att lämna information om mediefiler under överföringen.
+Undersök innehållsförsörjningskedjan för att hitta metadatakällor och engagera alla intressenter, från början till slut, för att få en grundlig strategi för bästa praxis. Involvera olika medarbetare för att säkerställa fullständigt stöd i hela organisationen. <br>Lägg in metadata i olika faser för att dela ansvaret för att lämna information om mediefiler under överföringen. Integrera till exempel [!DNL Experience Manager Assets] och [!DNL Workfront] ger avsevärda fördelar när det gäller metadatahantering, ökad effektivitet och samarbete när det gäller att skapa och hantera innehåll. Den här integreringen säkerställer effektiv synkronisering av metadata för länkade resurser, och uppdaterar automatiskt projektinformationen när ändringar görs i [!DNL Workfront].
 
 informera om mål, framsteg, milstolpar och utmaningar tidigt för att få synpunkter och samarbete från alla intressenter. Uppmuntra samarbete i hela organisationen för att skapa effektiva processer och värdefulla metadata.
 
