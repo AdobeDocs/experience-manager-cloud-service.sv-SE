@@ -2,9 +2,9 @@
 title: Hantera och redigera program
 description: Lär dig hur du redigerar produktions- och sandlådeprogram för att justera deras alternativ efter att du har skapat dem.
 exl-id: 819e4a6e-f77a-4594-a402-a300dcbdf510
-source-git-commit: 0d60c19638707262dab7f290f84fa873b694bc22
+source-git-commit: 2dfae31e32d375c82c4f690624e48f7f09feb4df
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '773'
 ht-degree: 0%
 
 ---
@@ -99,38 +99,21 @@ The **Prestanda** kortet ger en översikt över **[CDN Dashboard.](/help/impleme
 
    ![Redigera programalternativ](assets/edit-program-overview.png)
 
-1. The **Redigera program** sidan öppnas. På **Allmänt** redigerar du programnamnet och beskrivningen.
-
-   * Minst en lösning måste väljas för ett program.
+1. The **Redigera program** sidan öppnas för **Allmänt** -fliken.
 
    ![fliken Allmänt](assets/edit-program-prod1.png)
 
-1. På **Lösningar och tillägg** ändrar du lösningarna för programmet.
-
-   ![Välj lösningar](assets/edit-prg.png)
-
-1. Klicka på nedtryckningen före lösningsnamnet för att visa valfria tillägg, som att välja **Handel** tilläggsalternativ under **Webbplatser**.
-
-   ![Redigera tillägg](assets/edit-program-add-on.png)
-
-1. På **Go live settings** ändrar du det planerade publiceringsdatumet för programmet.
-
-   ![Redigera inställningar för publicering](assets/edit-program-go-live.png)
-
-   * Detta datum är endast avsett som information. Den aktiverar Go Live-widgeten på programöversiktssidan. Det innehåller i sin tur länkar till Adobe Experience Manager (AEM) as a Cloud Service best practice-dokumentation för att passa in i kundresan, vilket leder till en lyckad Go Live-upplevelse.
-   * Den här fliken är inte tillgänglig för sandlådeprogram.
-
-1. Om de begärda berättigandena finns tillgängliga för programmet, **Säkerhet** visas var du kan ändra säkerhetsalternativen för programmet.
-
-   ![Redigera säkerhetsinställningar](assets/edit-program-security.png)
-
-   * HIPAA kan inte aktiveras eller inaktiveras efter [skapa program.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md)
-      * [Läs mer](https://www.adobe.com/go/hipaa-ready) om implementering av Adobe HIPAA-klar lösning.
-   * När det är aktiverat kan WAF-DDOS-skyddet sedan konfigureras genom att konfigurera en [icke-produktionsrörledning.](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md)
+1. De alternativ som är tillgängliga för redigering av programmet är desamma som när du skapar programmet.
+   * Se dokumenten [Skapa produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md) och [Skapa sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-sandbox-programs.md) om du vill ha information om de enskilda alternativen.
+   * [Ytterligare alternativ](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md#options) kan finnas för ditt produktionsprogram beroende på organisationens rättigheter.
 
 1. Klicka **Uppdatera** för att spara ändringarna i programmet.
 
-Varje gång ett program redigeras, som att lägga till eller ta bort en lösning eller ett tillägg, börjar ändringarna gälla efter nästa distribution.
+Ändringarna sparas.
+
+>[!NOTE]
+>
+>Varje gång ett program redigeras, som att lägga till eller ta bort en lösning eller ett tillägg, börjar ändringarna gälla efter nästa distribution.
 
 ## Tar bort sandlådeprogram {#delete-sandbox-program}
 
