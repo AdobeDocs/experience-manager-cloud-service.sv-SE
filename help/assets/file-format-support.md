@@ -5,14 +5,14 @@ contentOwner: AG
 feature: Asset Management,Renditions
 role: User,Admin
 exl-id: e848aa77-7829-4adc-8b88-0279791a4525
-source-git-commit: d00e1f49438ad36339a09f8914496faeda3d4de6
+source-git-commit: 4c1525fd51956d3d788a91f58978a9c885e6daa5
 workflow-type: tm+mt
-source-wordcount: '1019'
-ht-degree: 4%
+source-wordcount: '1398'
+ht-degree: 0%
 
 ---
 
-# [!DNL Assets] filformat som stöds {#supported-file-formats}
+# [!DNL Assets] filformat {#supported-file-formats}
 
 [!DNL Adobe Experience Manager] som [!DNL Cloud Service] har stöd för grundläggande funktioner för innehållshantering - lagring, hantering av metadata online, versionshantering, överföring och hämtning med mera - för alla binära filer, oavsett format. [!DNL Adobe Experience Manager Assets] har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika format.
 
@@ -24,7 +24,7 @@ Några av de viktigaste funktionerna för resurskonvertering är följande:
 * Nyckel [bildfilformat](#image-formats).
 * [Camera Raw filformat](#camera-raw-formats) för ett stort antal kameror, inklusive Canon, Nikon, Fujifilm, Olympus och andra tillverkare (med Adobe Camera Raw som bas).
 * Vanliga [dokumentformat](#document-formats), inklusive Microsoft® Office och Open Document-format.
-* Ett stort antal [video](#video-formats)- och [ljud](#audio-formats)-format.
+* Stort urval av [video](#video-formats) och [ljud](#audio-formats) format.
 
 I följande förklaring beskrivs stödnivån för varje format.
 
@@ -36,7 +36,7 @@ I följande förklaring beskrivs stödnivån för varje format.
 
 ## Adobe-format {#adobe-formats}
 
-| Filformat | Generering av miniatyrbilder | Extrahering av fulltext | Extrahering av metadata | Bredd/höjd |
+| Filformat | Skapa miniatyrbilder | Extrahering av fulltext | Extrahering av metadata | Bredd/höjd |
 | ----------- | -------------------- | ------------------- | ------------------- | ------------ |
 | AI | ✓ | - | ✓ | ✓ |
 | COLLAGE | - | - | ✓ | - |
@@ -51,11 +51,11 @@ I följande förklaring beskrivs stödnivån för varje format.
 | PSD | ✓ | - | ✓ | ✓ |
 | XD | ✓ | - | ✓ | ✓ |
 
-\* för [!DNL Adobe InDesign] filer (INDD) bestäms storleken på återgivningarna av den förhandsvisning som är inbäddad i INDD-filen. Konfigurera inställningarna i [!DNL InDesign] (**[!UICONTROL Preferences > File Handling > Always Save Preview Images with Documents, Preview Size]**) så att du kan bädda in större återgivningar.
+\* för [!DNL Adobe InDesign] filer (INDD) bestäms storleken på återgivningarna av den förhandsgranskning som är inbäddad i INDD-filen. Konfigurera inställningarna i [!DNL InDesign] (**[!UICONTROL Preferences > File Handling > Always Save Preview Images with Documents, Preview Size]**) så att du kan bädda in större återgivningar.
 
 ## Bildformat {#image-formats}
 
-| Filformat | Generering av miniatyrbilder | Extrahering av metadata | Bredd/höjd | Beskär |
+| Filformat | Skapa miniatyrbilder | Extrahering av metadata | Bredd/höjd | Beskär |
 | ----------- | -------------------- | ------------------- | ------------ | -------- |
 | BMP | ✓ | - | ✓ | ✓ |
 | EPS | ✓ | ✓ | - | - |
@@ -75,7 +75,7 @@ Följande 3D-format stöds.
 
 Se även [Arbeta med 3D-resurser i Dynamic Media](/help/assets/dynamic-media/assets-3d.md).
 
-| Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Förhandsvisning av miniatyrbilder | Förhandsgranska 3D | Leverans till Dynamic Media |
+| Format | Lagring | Versioner | Arbetsflöde | Publicering | Åtkomstkontroll | Förhandsvisning av miniatyrbilder | Förhandsgranska 3D | Leverans till Dynamic Media |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | DN | ✓ | ✓ | ✓ | - | ✓ | ✓ | - | - |
 | gLB | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -89,7 +89,7 @@ Se även [Arbeta med 3D-resurser i Dynamic Media](/help/assets/dynamic-media/ass
 
 ## [!DNL Camera Raw] format {#camera-raw-formats}
 
-| Filformat | Generering av miniatyrbilder | Extrahering av metadata | Bredd/höjd |
+| Filformat | Skapa miniatyrbilder | Extrahering av metadata | Bredd/höjd |
 | ----------- | -------------------- | ------------------- | ------------ |
 | 3FR | ✓ | ✓ | ✓ |
 | ARW | ✓ | ✓ | ✓ |
@@ -123,11 +123,11 @@ Se även [Arbeta med 3D-resurser i Dynamic Media](/help/assets/dynamic-media/ass
 
 Följande dokumentformat stöds för filhanteringsfunktioner.
 
-| Filformat | Generering av miniatyrbilder | Extrahering av fulltext | Bredd/höjd | Metadatahantering | [Anslutna resurser](use-assets-across-connected-assets-instances.md) | Fullständig förhandsgranskning av dokument |
+| Filformat | Skapa miniatyrbilder | Extrahering av fulltext | Bredd/höjd | Metadatahantering | [Anslutna resurser](use-assets-across-connected-assets-instances.md) | Fullständig förhandsgranskning av dokument |
 | ----------- | -------------------- | ------------------- | ------------ | ------------------- | ---------------- |--------|
 | DOC | - | - | - | ✓ | ✓ | ✓ |
 | DOCX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| ePub | - | ✓ | - | - | - | - |
+| EPUB | - | ✓ | - | - | - | - |
 | HTML | - | ✓ | - | ✓ | ✓ | - |
 | ODF | ✓ | ✓ | ✓ | - | - | - |
 | ODM | ✓ | ✓ | ✓ | - | - | - |
@@ -142,36 +142,36 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 | RTF | - | ✓ | - | ✓ | ✓ | ✓ |
 | TXT | ✓ | ✓ | - | ✓ | ✓ | ✓ |
 | XLS | - | - | - | ✓ | ✓ | ✓ |
-| XLSX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| XSX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | XML | - | ✓ | - | - | - | - |
 
 ## Videoformat {#video-formats}
 
-| Filformat | Generering av miniatyrbilder | Extrahering av metadata | Bredd/höjd |
-| ----------- | -------------------- | ------------------- | ------------ |
-| 3G2 | - | ✓ | - |
-| 3GP | - | ✓ | - |
-| AVI | ✓ | ✓ | ✓ |
-| DIVX | ✓ | - | ✓ |
-| F4V | ✓ | ✓ | ✓ |
-| FLV | ✓ | ✓ | ✓ |
-| M2T | ✓ | - | ✓ |
-| M2TS | ✓ | - | ✓ |
-| M2V | ✓ | - | ✓ |
-| M4V | ✓ | ✓ | ✓ |
-| MKV | ✓ | - | ✓ |
-| MOV | ✓ | ✓ | ✓ |
-| MP4 | ✓ | ✓ | ✓ |
-| MPEG | ✓ | ✓ | ✓ |
-| MPG | ✓ | ✓ | ✓ |
-| MTS | ✓ | - | ✓ |
-| MXF | ✓ | - | ✓ |
-| OGV | ✓ | - | ✓ |
-| QT | ✓ | - | ✓ |
-| R3D | - | ✓ | ✓ |
-| SWF | ✓ | - | ✓ |
-| WebM | ✓ | - | ✓ |
-| WMV | ✓ | ✓ | ✓ |
+| Filformat | Skapa miniatyrbilder | Extrahering av metadata | Bredd/höjd | Förhandsgranska |
+| ----------- | -------------------- | ------------------- | ------------ | ------- |
+| 3G2 | - | ✓ | - | - |
+| 3GP | - | ✓ | - | - |
+| AVI | ✓ | ✓ | ✓ | ✓ |
+| DIVX | ✓ | - | ✓ | ✓ |
+| F4V | ✓ | ✓ | ✓ | ✓ |
+| FLV | ✓ | ✓ | ✓ | ✓ |
+| M2T | ✓ | - | ✓ | ✓ |
+| M2TS | ✓ | - | ✓ | ✓ |
+| M2V | ✓ | - | ✓ | ✓ |
+| M4V | ✓ | ✓ | ✓ | ✓ |
+| MKV | ✓ | - | ✓ | ✓ |
+| MOV | ✓ | ✓ | ✓ | ✓ |
+| MP4 | ✓ | ✓ | ✓ | ✓ |
+| MPEG | ✓ | ✓ | ✓ | ✓ |
+| MPG | ✓ | ✓ | ✓ | ✓ |
+| MTS | ✓ | - | ✓ | ✓ |
+| MXF | ✓ | - | ✓ | ✓ |
+| OGV | ✓ | - | ✓ | ✓ |
+| QT | ✓ | - | ✓ | ✓ |
+| R3D | - | ✓ | ✓ | ✓ |
+| SWF | ✓ | - | ✓ | ✓ |
+| WebM | ✓ | - | ✓ | ✓ |
+| WMV | ✓ | ✓ | ✓ | ✓ |
 
 ## Ljudformat {#audio-formats}
 
@@ -198,16 +198,16 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 
 | Videofiltillägg | Behållare | Rekommenderade videokodekar | Videokodekar som inte stöds |
 | --- | --- | --- | --- |
-| AVI | A/V-sammanflätning | XVID, DIVX, HDV, MiniDV (DV25), Techsmith Camtasia, Huffyuv, Fraps, Panasonic DVCPro | Indeo3 (IV30), MJPEG, Microsoft® Video 1 (MS-CRAM) |
+| AVI | A/V Interleave | XVID, DIVX, HDV, MiniDV (DV25), Techsmith Camtasia, Huffyuv, Fraps, Panasonic DVCPro | Indeo3 (IV30), MJPEG, Microsoft® Video 1 (MS-CRAM) |
 | FLV, F4V | Adobe Flash | H264/AVC, Flix VP6, H263, Sorenson | SWF (vektoranimeringsfiler) |
-| M4V | Apple iTunes | H264/AVC | − |
-| MKV | Matroska | H264/AVC | − |
+| M4V | Apple iTunes | H264/AVC | - |
+| MKV | Matroska | H264/AVC | - |
 | MOV, QT | Apple QuickTime | H264/AVC, Apple ProRes422 &amp; HQ, Sony XDCAM, Sony DVCAM, HDV, Panasonic DVCPro, Apple DV (DV25), Apple PhotoJPEG, Sorenson, Avid DNxHD, Avid AVR | Apple Intermediate, Apple Animation |
-| MP4 | MPEG-4 | H264/AVC (alla profiler) | − |
-| MPG, VOB, M2V, MP2 | MPEG-2 | MPEG-2 | − |
-| MXF ‡ | MXF | Sony XDCAM, MPEG-2, MPEG-4, Panasonic DVCPro | − |
-| OGV, OGG | OGG | Theora, VP3, Dirac | − |
-| WebM | WebM | Google VP8 | − |
+| MP4 | MPEG-4 | H264/AVC (alla profiler) | - |
+| MPG, VOB, M2V, MP2 | MPEG-2 | MPEG-2 | - |
+| MXF ‡ | MXF | Sony XDCAM, MPEG-2, MPEG-4, Panasonic DVCPro | - |
+| OGV, OGG | OGG | Theora, VP3, Dirac | - |
+| WebM | WebM | Google VP8 | - |
 | WMV | Windows Media 9 | WMV3 (v9), WMV2 (v8), WMV1 (v7), GoToMeeting (G2M2, G2M3, G2M4) | Microsoft® Screen (MSS2), Microsoft® Photo Story (WVP2) |
 
 ‡ Det här videoformatet stöds ännu inte för interaktiva videoklipp i Dynamic Media eller för användning med anteckningar i Experience Manager Assets.
@@ -218,7 +218,7 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 | ------ | --------------------- | ----------------------------------- | ------------------------- | ------------------------- | -------------------------- |
 | AI | ✓ | - | - | - | - |
 | INDD | ✓ | - | - | - | - |
-| PDF (se anm. nedan) | ✓ | ✓ | ✓ | ✓ | ✓ |
+| PDF (se anmärkning nedan) | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 >[!NOTE]
 >
@@ -244,8 +244,8 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 Följande undertyper av rasterbildfilformat som *not* stöds i [!DNL Dynamic Media]:
 
 * PNG-filer som har en IDAT-segmentstorlek som är större än 100 MB.
-* PSB-filer.
-* PSD-filer med en annan färgmodell än CMYK, RGB, Gråskala eller Bitmapp stöds inte. Färgrymderna DuoTone, Lab och Indexed stöds inte.
+* PSB-filer
+* PSD-filer med en annan färgrymd än CMYK, RGB, Gråskala eller Bitmapp stöds inte. Färgrymderna DuoTone, Lab och Indexed stöds inte.
 * PSD-filer med ett bitdjup som är större än 16.
 * TIFF-filer med flyttalsdata.
 * TIFF-filer med Lab-färgrymd.
@@ -258,20 +258,20 @@ Se även [Stöd för 3D-format](/help/assets/file-format-support.md#support-3d-f
 |---|---|---|---|
 | GLB | Binär GL-överföring | model/gltf-binary | Materialen och texturerna inkluderas som en enda resurs. |
 | OBJ | WaveFront 3D-objektfil | application/x-tgif | |
-| STL | Stereolitografi | application/vnd.ms-pki.stl | |
-| USDZ | Zip-arkiv för universell scenbeskrivning | model/vnd.usdz+zip | *Stöd för intag och generering av miniatyrbilder. 3D-förhandsvisningar stöds inte ännu.* USDZ är ett 3D-format som kan visas direkt av Safari eller iOS. |
+| STL | Stereolithografi | application/vnd.ms-pki.stl | |
+| USDZ | Zip-arkiv för universell scenbeskrivning | model/vnd.usdz+zip | *Stöd för inmatning och generering av miniatyrbilder. 3D-förhandsvisningar stöds inte ännu.* USDZ är ett 3D-format som kan visas direkt av Safari eller iOS. |
 
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
-* [Söka efter resurser](search-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
 

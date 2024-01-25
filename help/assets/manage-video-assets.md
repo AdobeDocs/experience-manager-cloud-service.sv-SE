@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management,Publishing,Collaboration,Video
 role: User
 exl-id: 91edce4a-dfa0-4eca-aba7-d41ac907b81e
-source-git-commit: 517412d3f9d79a35bd1c25bd0eb09c0dee63c9af
+source-git-commit: fd1c3d1e524e5882ae04ca784b618ddba123bdd6
 workflow-type: tm+mt
-source-wordcount: '4562'
+source-wordcount: '4635'
 ht-degree: 5%
 
 ---
@@ -25,12 +25,34 @@ Lär dig hantera och redigera videomaterialet i [!DNL Adobe Experience Manager A
 
 ## Överföra och förhandsgranska videomaterial {#upload-and-preview-video-assets}
 
-[!DNL Adobe Experience Manager Assets] skapar förhandsvisningar för videoresurser med filnamnstillägget MP4. Du kan förhandsgranska återgivningarna i dialogrutan [!DNL Assets] användargränssnitt.
+Du kan överföra och förhandsgranska videomaterial i ett format som stöds till [!DNL Experience Manager Assets].
+<!-- It generates previews for video assets with the extension MP4. -->
 
-1. Navigera till den plats där du vill lägga till digitala resurser i mappen eller undermapparna för digitala resurser.
-1. Om du vill överföra resursen klickar du på **[!UICONTROL Create]** i verktygsfältet och välj **[!UICONTROL Files]**. Du kan också dra en fil till användargränssnittet. Se [överföra resurser](manage-digital-assets.md#uploading-assets) för mer information.
-1. Om du vill förhandsgranska en video i kortvyn klickar du på **[!UICONTROL Play]** ![uppspelningsalternativ](assets/do-not-localize/play.png) på videoresursen. Du kan bara pausa eller spela upp video i kortvyn. The [!UICONTROL Play] och [!UICONTROL Pause] alternativen är inte tillgängliga i listvyn.
-1. Om du vill förhandsgranska videon på sidan med resursinformation väljer du **[!UICONTROL Edit]** på kortet. Videon spelas upp i webbläsarens inbyggda videospelare. Du kan spela upp, pausa, styra volymen och zooma videon till helskärm.
+### Ladda upp videomaterial
+
+Så här överför du en videoresurs:
+
+1. I mappen eller undermapparna för digitala resurser går du till den plats där du behöver lägga till resursen.
+1. Klicka **[!UICONTROL Create]** i verktygsfältet och välj **[!UICONTROL Files]**. <br>Du kan också dra en fil till användargränssnittet.
+Läs mer om [överföra resurser](manage-digital-assets.md#uploading-assets) in [!DNL Experience Manager Assets].
+
+<!-- 1. To preview a video in the card view, click the **[!UICONTROL Play]** ![play option](assets/do-not-localize/play.png) option on the video asset. You can pause or play video in the card view only. The [!UICONTROL Play] and [!UICONTROL Pause] options are not available in the list view.
+1. To preview the video in the asset details page, select **[!UICONTROL Edit]** on the card. The video plays in the native video player of the browser. You can play, pause, control the volume, and zoom the video to full screen. -->
+
+### Förhandsgranska videomaterial
+
+Du kan förhandsgranska MP4-återgivningarna i [!DNL Assets] användargränssnitt. Så här förhandsgranskar du en videoresurs:
+
+1. Överför en videoresurs i ett format som stöds till [!DNL Experience Manager Assets]. Läs mer om [videoformat](file-format-support.md#video-formats). <br>När videomaterialet har överförts bearbetas det och en förhandsvisningsåtergivning genereras.
+1. Klicka på resursen och välj ![Detaljer, alternativ](assets/do-not-localize/details_icon.svg) **[!UICONTROL Details]**  i det övre verktygsfältet. Videoresursen öppnas i videovisningsprogrammet.
+1. Klicka på ![uppspelningsalternativ](assets/do-not-localize/play.png) -ikonen på videominiatyrbilden. <br>Du kan spela upp, pausa, styra volymen och zooma videon till helskärm.
+
+För befintliga videoresurser i [!DNL Experience Manager Assets]måste du **[!UICONTROL Reprocess]** tillgångarna i [!DNL Experience Manager] för att aktivera funktionen för förhandsgranskning av video. Lär dig hur [bearbeta digitalt material](reprocessing.md) in [!DNL Experience Manager].
+
+### Begränsningar för förhandsgranskning av video
+
+* MXF-filer visar inte videoförhandsvisningar trots att återgivningen genereras.
+* WebM-filer genererar inte förhandsvisningsåtergivningar eftersom de kan spelas upp i webbläsare.
 
 ## Publicera videomaterial {#publish-video-assets}
 
