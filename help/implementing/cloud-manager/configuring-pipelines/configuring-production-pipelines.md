@@ -3,9 +3,9 @@ title: Konfigurera produktionsförlopp
 description: Lär dig hur du konfigurerar produktionspipelines för att skapa och distribuera kod till produktionsmiljöer.
 index: true
 exl-id: 67edca16-159e-469f-815e-d55cf9063aa4
-source-git-commit: 90250c13c5074422e24186baf78f84c56c9e3c4f
+source-git-commit: 04c65018734f95e8245a6922d5a05c5486a4ffa4
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -123,18 +123,17 @@ Pipelinen har sparats och du kan nu [hantera dina rörledningar](managing-pipeli
 
 En riktad distribution distribuerar bara kod för utvalda delar av AEM. I en sådan distribution kan du välja **Inkludera** någon av följande typer av kod:
 
-* **[Konfig](#config)** - Konfigurera inställningar för din AEM, underhållsuppgifter, CDN-regler med mera.
+* **Konfig** - Konfigurera inställningar för trafikfilterregler i AEM.
    * Se dokumentet [Trafikfilterregler inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md) om du vill lära dig hur du hanterar konfigurationerna i din databas så att de distribueras på rätt sätt.
-* **[Front End-kod](#front-end-code)** - Konfigurera JavaScript och CSS för den främre delen av AEM.
+   * När en riktad distributionsprocess körs, [WAF-konfigurationer](/help/security/traffic-filter-rules-including-waf.md) distribueras, förutsatt att de sparas i den miljö, databas och gren som du definierade i pipeline.
+   * Det kan bara finnas en konfigurationspipeline per miljö.
+* **Front End-kod** - Konfigurera JavaScript och CSS för den främre delen av AEM.
    * Med rörledningar kan utvecklarna bli mer självständiga och utvecklingsprocessen kan accelereras.
    * Se dokumentet [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) om hur den här processen fungerar tillsammans med vissa överväganden för att vara medveten om att utnyttja hela potentialen i den här processen.
-* **[Webbnivåkonfiguration](#web-tier-config)** - Konfigurera dispatcheregenskaper för att lagra, bearbeta och leverera webbsidor till klienten.
-
->[!NOTE]
->
->* Om det finns en kodrapport på webbnivå för den valda miljön är det här valet inaktiverat.
->* Om du har en befintlig pipeline som distribueras i en hel hög till en miljö, kommer den befintliga konfigurationen på hela stacken att ignoreras om du skapar en konfigurationspipeline för en webbskikt för samma miljö.
-> * Det kan bara finnas en konfigurationspipeline per miljö.
+* **Webbnivåkonfiguration** - Konfigurera dispatcheregenskaper för att lagra, bearbeta och leverera webbsidor till klienten.
+   * Se dokumentet [CI/CD-rör](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#web-tier-config-pipelines) för mer information.
+   * Om det finns en kodrapport på webbnivå för den valda miljön är det här valet inaktiverat.
+   * Om du har en befintlig pipeline som distribueras i en hel hög till en miljö, kommer den befintliga konfigurationen på hela stacken att ignoreras om du skapar en konfigurationspipeline för en webbskikt för samma miljö.
 
 Stegen för att slutföra skapandet av din produktion är riktade distributionsflöden desamma när du väljer en distributionstyp.
 
@@ -165,8 +164,6 @@ Stegen för att slutföra skapandet av din produktion är riktade distributionsf
 1. Klicka **Spara**.
 
 Pipelinen har sparats och du kan nu [hantera dina rörledningar](managing-pipelines.md) på **Pipelines** på **Programöversikt** sida.
-
-När en riktad distributionsprocess körs, konfigurationer [såsom WAF-konfigurationer](/help/security/traffic-filter-rules-including-waf.md) distribueras, förutsatt att de sparas i den miljö, databas och gren som du definierade i pipeline.
 
 ## Hoppa över Dispatcher-paket {#skip-dispatcher-packages}
 
