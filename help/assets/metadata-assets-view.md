@@ -4,9 +4,9 @@ description: Lär dig hur du hanterar metadata i resursvyn. Bättre metadatahant
 role: User,Leader,Admin,Architect,Developer
 contentOwner: AG
 exl-id: cfc105d1-41fc-4418-9905-b2a28a348682
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: ef2a883e99823b1109eba598e89ea25a661e389b
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1621'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Av dessa anledningar ger Assets dig rätt sätt att skapa, hantera och utbyta me
 
 Om du vill visa metadata för en resurs bläddrar du till resursen eller söker efter resursen, markerar resursen och klickar på **[!UICONTROL Details]** i verktygsfältet.
 
-![Visa metadata för en resurs](assets/metadata-view1.png)
+![Visa metadata för en resurs](assets/metadata-view.png)
 
 *Bild: Om du vill visa en resurs och dess metadata klickar du på&#x200B;**[!UICONTROL Details]**i verktygsfältet eller dubbelklicka på resursen.*
 
@@ -71,14 +71,15 @@ Taggar kan också kapslas i en hierarki för att stödja relationer som kategori
 Resursvyn innehåller många standardmetadatafält som standard. Organisationer har ytterligare metadatabehov och behöver fler metadatafält för att kunna lägga till företagsspecifika metadata. Med metadataformulär kan företag lägga till anpassade metadatafält i en resurs [!UICONTROL Details] sida. De företagsspecifika metadata förbättrar styrningen och identifieringen av dess resurser. Du kan skapa formulär från grunden eller återanvända ett befintligt formulär.
 
 Du kan konfigurera metadataformulär för olika typer av resurser (olika MIME-typer). Använd samma formulärnamn som filens MIME-typ. Resursvyn matchar automatiskt den överförda resursens MIME-typ med namnet på formuläret och uppdaterar metadata för de överförda resurserna baserat på formulärfälten.
-
-Om ett metadataformulär till exempel har namnet `PDF` eller `pdf` finns, innehåller de överförda PDF-dokumenten metadatafält som definierats i formuläret.
-
+<!--
+For example, if a metadata form by the name `PDF` or `pdf` exists, then the uploaded PDF documents contain metadata fields as defined in the form.
+-->
 Resursvyn använder följande sekvens för att söka efter befintliga metadataformulärnamn för att tillämpa metadatafälten på de överförda resurserna av en viss typ:
 
 MIME-undertyp > MIME-typ > `default` form > Out-of-box form
 
 Om ett metadataformulär till exempel har namnet `PDF` eller `pdf` finns, innehåller de överförda PDF-dokumenten metadatafält som definierats i formuläret. Om ett metadataformulär har namnet `PDF` eller `pdf` finns inte, resursvyn matchar om det finns ett metadataformulär med namnet `application`. Om det finns ett metadataformulär med namnet `application`innehåller de överförda PDF-dokumenten metadatafält som definierats i formuläret. Om resursvyn fortfarande inte hittar något matchande metadataformulär söker den efter `default` metadataformulär för att använda metadatafält som definieras i formuläret på de överförda PDF-dokumenten. Om inget av dessa steg fungerar, används metadatafält som är definierade i det färdiga formuläret i resursvyn för alla överförda PDF-dokument.
+Om du vill tilldela ett metadataformulär till en mapp [se](#assign-metadata-form-folder).
 
 >[!IMPORTANT]
 >
@@ -111,9 +112,9 @@ I den här videon visas stegsekvensen:
 
 När ett formulär har skapats används det automatiskt när användare överför en resurs av den matchande MIME-typen.
 
-Om du vill återanvända ett befintligt formulär för att skapa ett formulär markerar du ett metadataformulär, klickar på **[!UICONTROL Copy]** ange ett namn i verktygsfältet och klicka på **[!UICONTROL Confirm]**. Du kan redigera ett metadataformulär om du vill ändra det. När du ändrar ett formulär används det för resurser som överförts efter ändringen. De befintliga resurserna ändras inte.
+Om du vill återanvända ett befintligt formulär och skapa ett nytt, markerar du ett metadataformulär, klickar på **[!UICONTROL Copy]** ange ett namn i verktygsfältet och klicka på **[!UICONTROL Confirm]**. Du kan redigera ett metadataformulär om du vill ändra det. När du ändrar ett formulär används det för resurser som överförts efter ändringen. De befintliga resurserna ändras inte.
 
-## Egenskapskomponenter {#property-components}
+### Egenskapskomponenter {#property-components}
 
 Du kan anpassa metadataformuläret med någon av följande egenskapskomponenter. Dra och släpp komponenttypen i formuläret där du vill ha den och ändra komponentinställningarna.
 Nedan visas en översikt över varje egenskapstyp och hur de lagras.
@@ -124,7 +125,7 @@ Nedan visas en översikt över varje egenskapstyp och hur de lagras.
 | Enkelradig text | Lägg till en enkelradig textegenskap. |
 | Flerradstext | Lägg till flera textrader eller ett stycke. Den utökas som en användartyp och innehåller allt innehåll. |
 | Text med flera värden | Lägg till en textegenskap med flera värden. |
-| Siffra | Lägg till en sifferkomponent. |
+| Nummer | Lägg till en sifferkomponent. |
 | Kryssruta | Lägg till ett booleskt värde. Lagras som TRUE eller FALSE när ett värde har sparats. |
 | Datum | Lägg till en datumkomponent. |
 | Nedrullningsbar meny | Lägg till en listruta. |
@@ -133,6 +134,24 @@ Nedan visas en översikt över varje egenskapstyp och hur de lagras.
 | Taggar | Lägg till en tagg från värden som lagras i taxonomihantering (mappas till xcm:tags). |
 | Nyckelord | Lägg till nyckelord med valfri form (mappas till dc:subject). |
 | Smarta taggar | Förbättra sökfunktionerna genom att automatiskt lägga till metadatataggar. |
+
+### Tilldela metadataformulär till en mapp {#assign-metadata-form-folder}
+
+Du kan också tilldela ett metadataformulär till en mapp i resursvydistributionen. Metadataformuläret som tilldelats en mapp enligt MIME-typen skrivs över när du tillämpar ett metadataformulär manuellt på en mapp. Alla resurser i mappen, inklusive resurser i undermapparna, visar sedan egenskaper som definierats i metadataformuläret.
+
+Så här tilldelar du ett metadataformulär till en mapp:
+
+1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL Metadata Forms]** och välj ett metadataformulär.
+
+2. Klicka på **[!UICONTROL Assign to Folder]**.
+
+3. Markera mappen och klicka på **[!UICONTROL Assign]**.
+
+   ![tilldela metadataformulär till en mapp](assets/assign-to-folder.png)
+
+   Du kan också navigera till mappinformationssidan och välja ett metadataformulär från mappegenskaperna som är tillgängliga i den högra rutan för att tilldela metadataformuläret till mappen.
+
+   ![Metadataformulär från mappegenskaper](assets/metadata-from-folder-props.png)
 
 ## Nästa steg {#next-steps}
 

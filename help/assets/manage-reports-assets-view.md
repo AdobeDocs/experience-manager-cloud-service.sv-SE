@@ -2,25 +2,34 @@
 title: Hantera rapporter i resursvyn
 description: Få tillgång till data i rapportavsnittet i resursvyn för att utvärdera produkt- och funktionsanvändning och få insikter om viktiga framgångsmått.
 exl-id: c7155459-05d9-4a95-a91f-a1fa6ae9d9a4
-source-git-commit: e6ff21ee705a1164fdf163ce4f49064d83f149d8
+source-git-commit: c9ec348d7e65f4bb69b93a39b9ad7192485d8db4
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '779'
 ht-degree: 1%
 
 ---
 
 # Hantera rapporter {#manage-reports}
 
->[!CONTEXTUALHELP]
->id="assets_reports"
->title="Rapporter"
->abstract="Resursrapportering ger administratörer insyn i Adobe Experience Manager Assets visningsmiljö. Dessa data ger användbar information om hur användarna interagerar med innehållet och produkten. Alla användare som har tilldelats administratörens produktprofil kan komma åt Insikter-instrumentpanelen eller skapa användardefinierade rapporter."
-
-Resursrapportering ger administratörer insyn i Adobe Experience Manager Assets visningsmiljö. Dessa data ger användbar information om hur användarna interagerar med innehållet och produkten.
+Resursrapportering ger administratörer insyn i Adobe Experience Manager Assets visningsmiljö. Dessa data ger användbar information om hur användarna interagerar med innehållet och produkten. Alla användare har tillgång till Insikter-kontrollpanelen och de som har tilldelats administratörens produktprofil kan skapa användardefinierade rapporter.
 
 ## Åtkomstrapporter {#access-reports}
 
 Alla användare som är tilldelade till resursvyn: Administratörens produktprofil kan komma åt instrumentpanelen för insikter eller skapa användardefinierade rapporter i resursvyn.
+
+Om du vill få åtkomst till rapporter går du till **[!UICONTROL Reports]** under **[!UICONTROL Settings]**.
+
+![Rapporter](assets/reports.png)
+<!--
+In the **[!UICONTROL Reports]** screen, various components are shown in the tabular format which includes the following:
+
+* **Title**: Title of the report
+* **Type**: Determines whether the report is uploaded or downloaded to the repository
+* **Description**: Provide details of the report that was given during uploading/downloading the report
+* **Status**: Determines whether the report is completed, under progress, or deleted.
+* **Author**: Provides email of the author who has uploaded/downloaded the report.
+* **Created**: Gives information of the date when the report was generated.
+-->
 
 ## Visa insikter {#view-live-statistics}
 
@@ -32,9 +41,9 @@ Klicka **[!UICONTROL Insights]** som finns i det vänstra navigeringsfönstret f
 
 ![Insikter](assets/insights.png)
 
-* **Nedladdningar**: Antalet resurser som hämtats från resursvyn under de senaste 30 dagarna eller 12 månaderna representeras av ett linjediagram.
+* **Nedladdningar**: Antalet resurser som hämtats från resursvyn under de senaste 30 dagarna eller 12 månaderna representeras med hjälp av ett linjediagram.
 
-* **Överföringar**: Antalet resurser som har överförts till resursvymiljön under de senaste 30 dagarna eller 12 månaderna visas i ett linjediagram.
+* **Överföringar**: Antalet resurser som har överförts till resursvymiljön under de senaste 30 dagarna eller 12 månaderna representeras av ett linjediagram.
 
 <!--* **Asset Count by Size**: The division of count of assets based on their range of various sizes from 0 MB to 100 GB.-->
 
@@ -46,11 +55,10 @@ Klicka **[!UICONTROL Insights]** som finns i det vänstra navigeringsfönstret f
 
 * **Vanliga sökningar**: Visa de mest sökbara termerna tillsammans med det antal gånger som de har sökts igenom i resursvyn under de senaste 30 dagarna eller 12 månaderna i tabellformat.
 
-<!--
-
-* **Storage usage**: The storage usage, in gigabytes (GB), for the Assets view environment, for the last 30 days or 12 months represented using a bar chart.
-
--->
+  <!--
+   ![Insights](assets/insights1.png)
+   ![Insights](assets/insights2.png)
+   -->
 
 ## Skapa en nedladdningsrapport {#create-download-report}
 

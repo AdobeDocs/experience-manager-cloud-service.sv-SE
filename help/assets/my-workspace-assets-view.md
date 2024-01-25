@@ -2,9 +2,9 @@
 title: Min arbetsyta för resursvy
 description: Min arbetsyta är en sida med anpassningsbara visuella moduler som ger smidig åtkomst till viktiga delar av Assets-användargränssnittet och information som är mest relevant för användaren.
 exl-id: 402dd3a6-44e5-4d13-97d8-1d7fa26a99e4
-source-git-commit: 701a7610780553731a6ac4c85fe3221ee3d98ae2
+source-git-commit: 2500322c5565314e84ee7989399b9130f5cd6f74
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '709'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Så här fäster du en resurs, en mapp eller en samling:
 
 1. Markera objektet och klicka på **[!UICONTROL Pin to Quick Access]**.
 
-1. Välj om du behöver fästa objektet bara för dig, för hela organisationen eller för valda grupper. Om du väljer **[!UICONTROL For groups]** definierar du gruppnamnen i **[!UICONTROL Pin for groups]** fält.
+1. Välj om du behöver fästa objektet bara för dig, för hela organisationen eller för valda grupper. Om du väljer **[!UICONTROL For groups]** väljer du ett befintligt gruppnamn i **[!UICONTROL Pin for groups]** fält.
 
    ![Fäst objekt för grupper](assets/pin-items-for-groups.png)
 1. Klicka på **[!UICONTROL Pin]**.
@@ -62,7 +62,7 @@ Du kan också visa de mest sökbara termerna tillsammans med det antal gånger s
 
 **Uppgifter**
 
-Visar en lista över uppgifter som för närvarande är tilldelade dig i **[!UICONTROL My Tasks]** -fliken, som du har skapat i **[!UICONTROL Assigned tasks]** och de uppgifter som du redan har slutfört i **[!UICONTROL Completed]** -fliken. Du kan välja en uppgift och klicka på **[!UICONTROL Complete Task]** för att godkänna eller avvisa en uppgift. Du kan också välja en uppgift och klicka på **[!UICONTROL Open Task Details]** om du vill visa uppgiften och godkänna, avvisa, redigera eller ta bort den.
+Visar en lista över uppgifter som för närvarande är tilldelade dig i **[!UICONTROL My Tasks]** -fliken, som du har skapat i **[!UICONTROL Assigned tasks]** och de uppgifter som du redan har slutfört i **[!UICONTROL Completed tasks]** -fliken. Du kan välja en uppgift och klicka på **[!UICONTROL Complete ask]** för att godkänna eller avvisa en uppgift. Du kan också välja en uppgift och klicka på **[!UICONTROL Open Task Details]** om du vill visa uppgiften och godkänna, avvisa, redigera eller ta bort den.
 
 ![Uppgifter på arbetsytan](assets/tasks-workspace.png)
 
