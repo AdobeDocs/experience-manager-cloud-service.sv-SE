@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-source-git-commit: 055d510f8bd3a227c2c51d7f0dea561f06f9b4fd
+source-git-commit: fd0f0fdfc0aaf02d631b9bf909fcb1e1431f5401
 workflow-type: tm+mt
-source-wordcount: '4924'
+source-wordcount: '4994'
 ht-degree: 0%
 
 ---
@@ -715,7 +715,7 @@ query {
 
 Med webboptimerad bildleverans kan du använda en Graphql-fråga för att:
 
-* Begär en URL till en AEM resursbild
+* Begär en URL-adress till en DAM-resursbild (refereras av en **Innehållsreferens**)
 
 * Skicka parametrar med frågan så att en viss återgivning av bilden genereras och returneras automatiskt
 
@@ -735,9 +735,19 @@ På så sätt kan du dynamiskt skapa bildåtergivningar för JSON-leverans, vilk
 
 Lösningen i GraphQL innebär att man kan
 
-* use `_dynamicUrl` på `ImageRef` referens
+* Begär en URL: använd `_dynamicUrl` på `ImageRef` referens
 
-* lägg till `_assetTransform` till listrubriken där filtren har definierats
+* Godkänd parametrar: lägg till `_assetTransform` till listrubriken där filtren har definierats
+
+<!-- 
+>[!NOTE]
+>
+>A **Content Reference** can be used for both DAM assets and Dynamic Media assets. Retrieving the appropriate URL uses different parameters:
+>* `_dynamicUrl` : a DAM asset
+>* `_dmS7Url` : a Dynamic Media asset
+> 
+>If the image referenced is a DAM asset then the value for `_dmS7Url` will be `null`. See [Dynamic Media asset delivery by URL in GraphQL queries](#dynamic-media-asset-delivery-by-url).
+-->
 
 ### Omformningsbegärans struktur {#structure-transformation-request}
 
@@ -902,7 +912,7 @@ Om du till exempel vill köra de tidigare exemplen direkt (sparade som beständi
      >
      >Efterföljande `;`är obligatoriskt för att avsluta parameterlistan på ett rent sätt.
 
-### Begränsningar för bildleverans {#image-delivery-limitations}
+### Begränsningar för webboptimerad bildleverans {#web-optimized-image-delivery-limitations}
 
 Följande begränsningar finns:
 
@@ -912,6 +922,58 @@ Följande begränsningar finns:
 
    * Ingen cachelagring av författare
    * Cachelagring vid publicering - max 10 minuters ålder (kan inte ändras av klienten)
+
+<!--
+## Dynamic Media asset delivery by URL in GraphQL queries{#dynamic-media-asset-delivery-by-url}
+
+GraphQL for AEM Content Fragments allows you to request a URL to an AEM Dynamic Media (Scene7) asset (referenced by a **Content Reference**).
+
+The solution in GraphQL means you can:
+
+* use `_dmS7Url` on the `ImageRef` reference
+
+>[!NOTE]
+>
+>For this you need to have a [Dynamic Media Cloud Configuration](/help/assets/dynamic-media/config-dm.md). 
+>
+>This adds the `dam:scene7File` and `dam:scene7Domain` attributes on the asset's metadata when it is created.
+
+>[!NOTE]
+>
+>A **Content Reference** can be used for both DAM assets and Dynamic Media assets. Retrieving the appropriate URL uses different parameters:
+>
+>* `_dmS7Url` : a Dynamic Media asset
+>* `_dynamicUrl` : a DAM asset
+> 
+>If the image referenced is a Dynamic Media asset then the value for `_dynamicURL` will be `null`. See [web-optimized image delivery in GraphQL queries](#web-optimized-image-delivery-in-graphql-queries).
+
+### Sample query for Dynamic Media asset delivery by URL {#sample-query-dynamic-media-asset-delivery-by-url}
+
+The following is a sample query:
+* for multiple Content Fragments of type `team` and `person`
+
+```graphql
+query allTeams {
+  teamList {
+    items {
+      _path
+      title
+      teamMembers {
+        fullName
+        profilePicture {
+          __typename
+          ... on ImageRef{
+            _dmS7Url
+            height
+            width
+          }
+        }
+      }
+    }
+  }
+} 
+```
+-->
 
 ## GraphQL for AEM - i korthet {#graphql-extensions}
 
@@ -985,19 +1047,28 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
 
          * Se [Exempelfråga - Alla städer med en namngiven variant](/help/headless/graphql-api/sample-queries.md#sample-cities-named-variation)
 
-   * För [bildleverans](#image-delivery):
+   * För bildleverans:
 
-      * `_dynamicUrl`: på `ImageRef` referens
+      * `_authorURL`: den fullständiga URL:en till bildresursen AEM författaren
+      * `_publishURL`: den fullständiga URL:en till bildresursen vid AEM
 
-      * `_assetTransform`: i listhuvudet där dina filter definieras
+      * För [webboptimerad bildleverans](#web-optimized-image-delivery-in-graphql-queries) (av DAM-resurser):
 
-      * Se:
+         * `_dynamicUrl`: den fullständiga URL:en till den webboptimerade DAM-resursen på `ImageRef` referens
 
-         * [Exempelfråga för bildleverans med fullständiga parametrar](#image-delivery-full-parameters)
+           >[!NOTE]
+           >
+           >`_dynamicUrl` är den URL som ska användas för webboptimerade DAM-resurser och bör ersätta användningen av `_path`, `_authorUrl`och `_publishUrl` om möjligt.
 
-         * [Exempelfråga för bildleverans med en enda angiven parameter](#image-delivery-single-specified-parameter)
+         * `_assetTransform`: för att skicka parametrar i listhuvudet där dina filter definieras
 
-   * `_tags` : för att visa ID:n för innehållsfragment eller variationer som innehåller taggar; detta är en array med `cq:tags` identifierare.
+         * Se:
+
+            * [Exempelfråga för webboptimerad bildleverans med fullständiga parametrar](#web-optimized-image-delivery-full-parameters)
+
+            * [Exempelfråga för webboptimerad bildleverans med en enda angiven parameter](#web-optimized-image-delivery-single-query-variable)
+
+   * `_tags`: för att visa ID:n för innehållsfragment eller variationer som innehåller taggar; detta är en array med `cq:tags` identifierare.
 
       * Se [Exempelfråga - namn på alla städer som taggats som stadbrytningar](/help/headless/graphql-api/sample-queries.md#sample-names-all-cities-tagged-city-breaks)
       * Se [Exempelfråga för innehållsfragmentvariationer för en viss modell som har en specifik tagg bifogad](/help/headless/graphql-api/sample-queries.md#sample-wknd-fragment-variations-given-model-specific-tag)
@@ -1028,6 +1099,13 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
 * Reservation vid fråga om kapslade fragment:
 
    * Om en viss variant inte finns i ett kapslat fragment, kommer **Master** variationen skulle returneras.
+
+<!-- between dynamicURL and tags -->
+<!--
+    * `_dmS7Url`: on the `ImageRef` reference for the delivery of the URL to a [Dynamic Media asset](#dynamic-media-asset-delivery-by-url)
+
+      * See [Sample query for Dynamic Media asset delivery by URL](#sample-query-dynamic-media-asset-delivery-by-url)
+-->
 
 ## Fråga GraphQL-slutpunkten från en extern webbplats {#query-graphql-endpoint-from-external-website}
 

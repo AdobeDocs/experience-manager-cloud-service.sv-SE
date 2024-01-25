@@ -2,9 +2,9 @@
 title: Snabba utvecklingsmiljöer
 description: Lär dig hur du använder miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
 exl-id: 1e9824f2-d28a-46de-b7b3-9fe2789d9c68
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 43f76a3f1e0bb52ca9d44982b2bb2b37064edf9f
 workflow-type: tm+mt
-source-wordcount: '3304'
+source-wordcount: '3414'
 ht-degree: 0%
 
 ---
@@ -310,6 +310,56 @@ The analyser found the following errors for publish :
 
 Kodexemplet ovan visar beteendet om ett paket inte löses. I så fall&quot;mellanlagras&quot; den och installeras endast om dess krav (i detta fall&quot;import som saknas&quot;) uppfylls genom installation av annan kod.
 
+<u>Distribuera frontkod baserat på webbplatsteman och webbplatsmallar</u>
+
+>[!NOTE]
+>
+>Den här funktionen är ännu inte GA, men kan användas av tidiga användare. Kontakta **aemcs-rde-support@adobe.com** för att testa och ge feedback.
+
+De lokala lagringsenheterna stöder kod som baseras på [webbplatsteman](/help/sites-cloud/administering/site-creation/site-themes.md) och [webbplatsmallar](/help/sites-cloud/administering/site-creation/site-templates.md). Med RDE:er görs detta med hjälp av ett kommandoradsdirektiv för att distribuera frontendpaket, i stället för med Cloud Manager [Front-End Pipeline](/help/sites-cloud/administering/site-creation/enable-front-end-pipeline.md) används för andra miljötyper.
+
+Som vanligt kan du bygga ditt front end-paket med npm:
+
+`npm run build`
+
+Den ska generera en `dist/` mappen, så den översta paketmappen bör innehålla en `package.json` och `dist` mapp:
+
+```
+ls ./path-to-frontend-pkg-folder/
+...
+dist
+package.json
+```
+Nu kan du distribuera paketet till den lokala utvecklingsmiljön genom att peka på paketmappen i serverdelen:
+
+```
+aio aem:rde:install -t frontend ./path-to-frontend-pkg-folder/
+...
+#1: deploy completed for frontend frontend-pipeline.zip on author,publish - done by ... at 2024-01-18T15:33:22.898Z
+Logs:
+> Deployed artifact wknd-1.0.0-1705592008-26e7ec1a
+> with workspace hash 692021864642a20d6d298044a927d66c0d9cf2adf42d4cca0c800a378ac3f8d3
+```
+
+Du kan även komprimera `package.json` och `dist` och distribuera zip-filen:
+
+`zip -r frontend-pkg.zip ./path-to-frontend-pkg-folder/dist ./path-to-frontend-pkg-folder/package.json`
+
+```
+aio aem:rde:install -t frontend frontend-pkg.zip
+...
+#1: deploy completed for frontend frontend-pipeline.zip on author,publish - done by ... at 2024-01-18T15:33:22.898Z
+Logs:
+> Deployed artifact wknd-1.0.0-1705592008-26e7ec1a
+> with workspace hash 692021864642a20d6d298044a927d66c0d9cf2adf42d4cca0c800a378ac3f8d3
+```
+
+>[!NOTE]
+>
+>Namngivningen av filerna i paketet längst fram måste följa följande namnkonventioner:
+> * &quot;dist&quot;-mapp, för npm-paketets utdatamapp
+> * filen &quot;package.json&quot;, för npm-beroendepaketet
+
 ### Kontrollera statusen för den lokala lagringsplatsen {#checking-rde-status}
 
 Du kan använda RDE CLI för att kontrollera om miljön är klar att distribueras till, som vilka distributioner som har gjorts via RDE-pluginen.
@@ -470,8 +520,9 @@ Därför rekommenderar vi att du distribuerar koden till en Cloud Development En
 Observera även följande:
 
 * De lokala redigeringssystemen innehåller inte någon förhandsgranskningsnivå
-* De lokala lagringsenheterna har för närvarande inte stöd för visning och felsökning av frontkod som distribuerats med molnhanteraren Front-End Pipeline.
 * De lokala redigeringssystemen stöder för närvarande inte prerelease-kanalen.
+* Medan RDE-stödet för visning och felsökning av frontkod bygger på [webbplatsteman](/help/sites-cloud/administering/site-creation/site-themes.md) och [webbplatsmallar](/help/sites-cloud/administering/site-creation/site-templates.md) är inte redo för GA än, den kan användas av tidiga användare. Kontakta **aemcs-rde-support@adobe.com** för att testa och ge feedback.
+
 
 
 ## Hur många skrivbord behöver jag? {#how-many-rds-do-i-need}

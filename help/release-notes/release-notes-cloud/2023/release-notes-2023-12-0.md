@@ -1,18 +1,17 @@
 ---
-title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
-mini-toc-levels: 1
-exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: fa106c2e3fec70971e2c54572199e35c24db0aa7
+title: Versionsinformation om 2023.12.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation om 2023.12.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
+source-git-commit: 348c6d29001c532c1eb7a3e534517efb2ba73151
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '835'
 ht-degree: 0%
 
 ---
 
-# Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
-I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) versionen av [!DNL Experience Manager] as a Cloud Service.
+# Versionsinformation 2023.12.0 för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
+
+I följande avsnitt beskrivs versionsinformationen för 2023.12.0-versionen av [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -26,7 +25,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 
 ## Releasedatum {#release-date}
 
-Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2024.1.0) är 25 januari 2024. Nästa funktionsversion (2024.2.0) är planerad till den 29 februari 2024.
+Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2023.12.0) är 14 december 2023. Nästa funktionsversion (2024.1.0) är planerad till 25 januari 2023.
 
 ## Versionsinformation om underhåll {#maintenance}
 
@@ -44,41 +43,45 @@ Have a look at the December 2023 Release Overview video for a summary of the fea
 
 ## [!DNL Experience Manager Sites] som [!DNL Cloud Service] {#sites}
 
-### EXTENSION MANAGER i AEM SITES {#sites-extension-manager}
+### Tidiga Adobe-program {#sites-early-adopter}
 
-**Utforska nya [EXTENSION MANAGER i AEM SITES](https://developer.adobe.com/uix/docs/extension-manager/)** för att anpassa AEM genom att konfigurera gränssnittstillägg.
+**Du kan använda [Real User Monitoring (RUM) Data Service](/help/implementing/cloud-manager/content-requests.md#real-user-monitoring-for-aem-as-a-cloud-service)** för att aktivera klientsidessamling för AEM as a Cloud Service.
 
-![EXTENSION MANAGER i AEM SITES](/help/assets/sites/extension-manager/homepage.png)
+Real User Monitoring (RUM) Data Service ger en mer exakt återgivning av användarinteraktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det är en utmärkt möjlighet att få avancerade insikter om hur sidan fungerar. Detta är fördelaktigt för kunder som använder antingen Adobe-hanterat CDN eller icke-Adobe-hanterat CDN. För kunder som använder ett icke-Adobe-hanterat CDN kan nu dessutom automatiserad trafikrapportering aktiveras för dem, vilket eliminerar behovet av att dela trafikrapporter med Adobe.
 
-Extension Manager i AEM Sites gör det möjligt för utvecklare och yrkesverksamma att få tillgång till, hantera och anpassa gränssnittstillägg som har byggts för att förbättra funktionaliteten i AEM Sites.
-Med Extension Manager kan man
+Om du vill testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `aemcs-rum-adopter@adobe.com`, tillsammans med ditt domännamn för produktions-, scen- och utvecklingsmiljön från din e-postadress som är kopplad till din Adobe ID. Adobe produktteam aktiverar sedan datatjänsten Real User Monitoring (RUM) åt dig.
 
-* Aktivera eller inaktivera tillägg per instans.
-* Konfigurera tilläggsparametrar;
-* Förhandsgranska tillägg och generera en delbar förhandsgranskningslänk.
-* Upptäck funktioner för användargränssnittets utbyggbarhet via interaktiva demos.
-* Få tillgång till Adobe experimentella funktioner via förstahandstillägg.
-
-Vi söker aktivt efter feedback och nya användningsexempel för UI-tillägg. Om du vill ansluta skickar du ett e-postmeddelande till `uix@adobe.com`.
 
 ## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
 
-### Förhandsversionsfunktioner i administratörsvyn {#admin-view-prerelease}
+### Nya funktioner i resursvyn {#assets-view-features}
 
-**Förhandsgranska återgivningar för alla videotyper som stöds**
+**Skapa GenAI-bilder med Adobe Firefly**
 
-Experience Manager Assets genererar nu förhandsgranskningsåtergivningar av alla videotyper som stöds som standard utan att en bearbetningsprofilskonfiguration krävs
+Skapa nya bilder baserat på sökfrågor med en integrerad Adobe Firefly text-till-bild-funktion (kräver licens för Adobe Firefly).
 
-### Resursvy {#assets-view-features}
+![Integrering av Assets Firefly](/help/assets/assets/assets-firefly-integration.png)
 
-**Smarta taggar blocklist**
+**Sök efter liknande bilder**
 
-Med Assets Essentials kan du nu definiera blockeringslista som innehåller ord som inte ska läggas till som smarta taggar för resurser när de överförs till databasen. Med den här funktionen kan ni upprätthålla varumärkets efterlevnad och minska arbetet med att moderera smarta taggar.
+Nu kan du enkelt hitta innehåll genom att välja en bild och visa liknande bilder i Experience Manager Assets-databasen.
 
-![Smarta taggar blocklist](/help/assets/assets/block-tags.png)
+<!--
 
+* **Smart tags blocklist**: Experience Manager Assets now enables you to define a list of blocked tags. These tags are automatically removed from the auto-generated smart tags when you upload assets to the repository. This capability performs tags governance and saves a lot of time as you can add a tag to the block list and AEM Assets automatically excludes it from the list of tags for any of the assets that are added to the repository.
+
+  ![storage usage insights](/help/assets/assets/block-tags.png)
+
+
+**Video Preview**: AEM Assets now generates preview renditions of all supported video formats by default, without the need to configure a processing profile.
+
+-->
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
+
+### Nya funktioner i [!DNL Experience Manager Forms] {#forms-features}
+
+* **[Ansluta en adaptiv Forms med Microsoft® SharePoint List](/help/forms/configure-submit-actions-core-components.md#submit-to-sharepoint)**: AEM Forms erbjuder en OOTB-integrering för att skicka formulärdata direkt till SharePoint List, så att du kan använda funktionerna i SharePoint Lists. Du kan konfigurera Microsoft SharePoint List som en datakälla för en formulärdatamodell och använda **Skicka med formulärdatamodell** skicka-åtgärd för att ansluta ett adaptivt formulär till SharePoint List.
 
 <!-- 
 
@@ -100,13 +103,18 @@ Med Assets Essentials kan du nu definiera blockeringslista som innehåller ord s
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
 
-### Stöd för Dynatrace {#dynatrace}
+### CDN-konfiguration Tidigt program {#cdn-config-early-adopter}
 
-Dynatracskunder kan övervaka sin AEM. [Läs om](/help/implementing/cloud-manager/dynatrace.md) för att begära anslutning till din Dynatrace-miljö för övervakning av programprestanda. Observera att New Relic APM, som är tillgängligt för alla kunder, kommer att sluta samla in data om Dynatrace är aktiverat.
+Förutom den nyligen släppta [Trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md), som innehåller reglerna för valfri brandvägg för webbprogram (WAF), finns en möjlighet att använda Configuration Pipeline för att deklarera och distribuera andra typer av CDN-konfigurationer. Vi vill gärna veta mer om dina användningsexempel, bland annat:
+* 301/302 klientomdirigeringar
+* förbluffande förfrågningar vid kanten till godtyckliga ursprung
+* URL-omformningar
+* ange eller ändra begärande- eller svarshuvuden
+* anpassade felsidor när CDN inte kan nå AEM
+* autentisering med användarnamn/lösenord
+* andra användbara CDN-konfigurationer
 
-### RDE-stöd för Front-End-kod med webbplatsteman och webbplatsmallar: Tidigt Adobe-program {#rde-frontend-early-adopter}
-
-[Rapid Development Environment (RDE)](/help/implementing/developing/introduction/rapid-development-environments.md) nu stöder kod som bygger på [webbplatsteman](/help/sites-cloud/administering/site-creation/site-themes.md) och [webbplatsmallar](/help/sites-cloud/administering/site-creation/site-templates.md), för tidiga användare. Med de lokala redigeringssystemen görs detta med hjälp av ett kommandoradsdirektiv i stället för ett [rörledning för frontend](/help/sites-cloud/administering/site-creation/enable-front-end-pipeline.md). Kontakta **aemcs-rde-support@adobe.com** för att testa och ge feedback.
+Skicka e-post till **aemcs-cdn-config-adopter@adobe.com** från ditt officiella e-post-ID med din feedback.
 
 ## Cloud Manager {#cloud-manager}
 
