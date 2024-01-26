@@ -2,9 +2,9 @@
 title: Infoga innehåll i Cloud Service
 description: Lär dig hur du använder Cloud Acceleration Manager för att importera innehåll från din migreringsuppsättning till en instans av en Cloud Service.
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: 4c8565d60ddcd9d0675822f37e77e70dd42c0c36
+source-git-commit: 281523183cecf1e74c33f58ca9ad038bba1a6363
 workflow-type: tm+mt
-source-wordcount: '2407'
+source-wordcount: '2410'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ Följ stegen nedan för att importera din migreringsuppsättning med Cloud Accel
    > Om extraheringen körs visas en dialogruta. När extraheringen har slutförts startas intaget automatiskt. Om extraheringen misslyckas eller stoppas kommer intagningsjobbet att avbrytas.
 
    * **Mål:** Välj målmiljö. I den här miljön importeras migreringsuppsättningens innehåll.
-      * Inställningarna har inte stöd för en Rapid Development Environment-destination (RDE) och de visas inte som ett möjligt målval, även om användaren har åtkomst till den.
+      * Inställningarna stöder inte mål av typen Rapid Development Environment (RDE) eller Preview, och de visas inte som ett möjligt målval, även om användaren har tillgång till det.
       * En migreringsuppsättning kan importeras till flera destinationer samtidigt, men målet kan vara att bara ha ett som kör eller väntar på inmatning åt gången.
 
    * **Nivå:** Välj nivån. (Författare/Publicera).
