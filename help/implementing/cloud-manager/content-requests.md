@@ -2,9 +2,9 @@
 title: Förstå begäranden om Cloud Service innehåll
 description: Om du har köpt innehållsförfrågningslicenser från Adobe kan du ta reda på vilka typer av innehållsförfrågningar som Adobe Experience Cloud som en tjänst mäter och varianterna med en organisations analysrapporteringsverktyg.
 exl-id: 3666328a-79a7-4dd7-b952-38bb60f0967d
-source-git-commit: e31b05f0cef6c5ca3a1c00b757eac013aa43bb90
+source-git-commit: 6212ad20cb427d6b2ccd4c467d571832f923ed2a
 workflow-type: tm+mt
-source-wordcount: '2690'
+source-wordcount: '2683'
 ht-degree: 0%
 
 ---
@@ -96,9 +96,13 @@ Real User Monitoring (RUM, Real User Monitoring) ger djupgående insikter i nyck
 
 ### Vem kan utnyttja RUM Data Monitoring Service? {#who-can-benefit-from-rum-data-monitoring-service}
 
-RUM Data Service är fördelaktigt för dem som använder Adobe CDN, eftersom det ger en mer exakt återgivning av användarinteraktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget genom att återspegla antalet sidvisningar på klientsidan som kan jämföras med befintliga CDN-loggsidor på serversidan. Dessutom kan Adobe nu effektivisera den automatiska trafikrapporteringen för kunder som använder sitt eget CDN, vilket innebär att de inte behöver dela någon trafikrapport med Adobe.
+RUM Data Service är fördelaktigt för alla kunder oavsett om de använder Adobe eller ett eget CDN. Det ger en mer exakt återgivning av användarinteraktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget genom att återspegla antalet sidvisningar på klientsidan.
 
-Det är också en bra möjlighet att få avancerade insikter om hur sidorna fungerar för både kunder som använder Adobe CDN och kunder som använder sitt eget CDN.
+För Adobe CDN-användare spåras användarinteraktioner korrekt, vilket ger en direkt jämförelse mellan sidvisningar på klientsidan och CDN-loggar på serversidan.
+
+För kunder som använder sitt eget CDN kan de dra nytta av förenklad trafikrapportering, eftersom Adobe nu direkt integrerar dessa sidvyer och eliminerar behovet av separata rapporter.
+
+Dessutom får alla kunder djupgående insikter i hur sidorna fungerar för att optimera sina digitala upplevelser effektivt.
 
 ### Förstå hur datatjänsten för övervakning av verkliga användare (RUM) fungerar {#understand-how-the-rum-data-service-works}
 
