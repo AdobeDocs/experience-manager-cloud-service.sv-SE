@@ -2,9 +2,9 @@
 title: Komma igång med Universal Editor i AEM
 description: Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
-source-git-commit: 453cbaeabd28223cac5e732a551aa71f5a425839
+source-git-commit: f9d584d7b117c24224079f581802f5f126890304
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '871'
 ht-degree: 0%
 
 ---
@@ -104,8 +104,6 @@ Den här egenskapen måste anges i `org.apache.sling.engine.impl.SlingMainServle
 ## Instrument för sidan {#instrument-page}
 
 Tjänsten Universal Editor kräver en [enhetligt resursnamn (URN)](https://en.wikipedia.org/wiki/Uniform_Resource_Name) för att identifiera och använda rätt serverdelssystem för innehållet i den app som redigeras. Därför krävs ett URN-schema för att mappa tillbaka innehåll till innehållsresurser.
-
-De instrumentattribut som läggs till på sidan består huvudsakligen av [HTML Microdata,](https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata) en branschstandard som också kan användas för att göra HTML mer semantiskt, göra HTML-dokument indexerbara och så vidare.
 
 ### Skapa anslutningar {#connections}
 
