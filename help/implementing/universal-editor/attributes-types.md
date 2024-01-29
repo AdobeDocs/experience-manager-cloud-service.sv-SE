@@ -2,7 +2,7 @@
 title: Attribut och objekttyper
 description: Läs mer om de dataattribut och objekttyper som krävs för den universella redigeraren.
 exl-id: 02795a31-244a-42b4-8297-2649125d7777
-source-git-commit: febaec244b4400b8d7fc5a5d8a4f75b4f4505d6f
+source-git-commit: 453cbaeabd28223cac5e732a551aa71f5a425839
 workflow-type: tm+mt
 source-wordcount: '686'
 ht-degree: 0%
@@ -38,7 +38,7 @@ För att ett program ska kunna redigeras av den universella redigeraren måste d
 
 ## Objekttyper {#item-types}
 
-| `itemtype` | Beskrivning | `itemid` | `itemprop` | `data-editor-itemfilter` | `data-editor-itemlabel` | `data-editor-itemmodel` | `data-editor-behvior` |
+| `data-aue-type` | Beskrivning | `data-aue-resource` | `data-aue-prop` | `data-aue-filter` | `data-aue-label` | `data-aue-model` | `data-aue-behavior` |
 |---|---|---|---|---|---|---|---|
 | `text` | Texten kan redigeras i HTML-taggarna, men bara i ett enkelt textformat, ingen formatering, det här används ofta för rubrikkomponenter, till exempel | Valfritt | Obligatoriskt | n/a | Valfritt | n/a | Valfritt |
 | `richtext` | Texten kan redigeras med omfattande textfunktioner. RTE visas på den högra panelen | Valfritt | Obligatoriskt | n/a | Valfritt | n/a | Valfritt |
