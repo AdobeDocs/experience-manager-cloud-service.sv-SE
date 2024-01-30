@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 8c33426c38b087c83b945572374089ad9cb44daf
+source-git-commit: 77d38f03f18eb6b0fdc2f2eec5b2dc4b608b8057
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Titta på videon med versionsöversikten från januari 2024 om du vill se en sam
 
 ![EXTENSION MANAGER i AEM SITES](/help/assets/sites/extension-manager/homepage.png)
 
-Extension Manager i AEM Sites gör det möjligt för utvecklare och yrkesverksamma att få tillgång till, hantera och anpassa gränssnittstillägg som har byggts för att förbättra funktionaliteten i AEM Sites.
+Extension Manager i AEM Sites gör det möjligt för utvecklare och yrkesverksamma att få tillgång till, hantera och anpassa [Gränssnittstillägg](https://developer.adobe.com/uix/docs/) inbyggd med [Adobe App Builder](https://developer.adobe.com/app-builder/) för att förbättra AEM Sites funktionalitet.
 Med Extension Manager kan man
 
 * Aktivera eller inaktivera tillägg per instans.
