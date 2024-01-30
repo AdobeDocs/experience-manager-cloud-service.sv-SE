@@ -2,9 +2,9 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
+source-git-commit: dfeeaca8341abec5d4fd518957baf6936a21aea3
 workflow-type: tm+mt
-source-wordcount: '3526'
+source-wordcount: '3540'
 ht-degree: 0%
 
 ---
@@ -350,6 +350,7 @@ De flesta VPN-enheter med IPSec-teknik stöds. Läs listan över enheter på [de
 
 * Stödet är begränsat till en VPN-anslutning
 * Splunk-vidarebefordran är inte möjlig via en VPN-anslutning.
+* DNS-lösare måste listas i gateway-adressutrymmet för att lösa privata värdnamn.
 
 ### Skapande {#vpn-creation}
 

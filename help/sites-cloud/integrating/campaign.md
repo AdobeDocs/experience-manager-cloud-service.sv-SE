@@ -4,17 +4,17 @@ description: Läs om AEM as a Cloud Service stöd för integrering med Adobe Cam
 feature: Administering
 role: Admin
 exl-id: 23874955-bdf3-41be-8a06-53d2afdd7f2b
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: c4daf04d5520da1e646f35ba72c9f53cb1d97d36
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 1%
+source-wordcount: '159'
+ht-degree: 0%
 
 ---
 
 
 # Integrera AEM as a Cloud Service med Adobe Campaign {#integrating-campaign}
 
-Läs om AEM as a Cloud Service stöd för integrering med Adobe Campaign.
+Läs mer om AEM as a Cloud Service stöd för integrering med Adobe Campaign.
 
 >[!NOTE]
 >
