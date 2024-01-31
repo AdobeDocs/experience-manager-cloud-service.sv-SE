@@ -2,9 +2,9 @@
 title: Guiden Komma igång för utvecklare för AEM med Edge Delivery Services
 description: Den här guiden hjälper dig att komma igång med en ny Adobe Experience Manager-webbplats med hjälp av Edge Delivery Services och den universella redigeraren för innehållsutveckling
 feature: Edge Delivery Services
-source-git-commit: eae751441435949296eb76a7e9b4103393860a8d
+source-git-commit: 5967bd78b9c23cf3451ac3b0ec2118da5200ddc1
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---
@@ -48,8 +48,6 @@ Först måste du skapa ett nytt projekt på GitHub, baserat på mallen Adobe.
    ![Kopiera databasprojekt](assets/edge-dev-getting-started/use-template-project.png)
 
 1. Som standard tilldelas databasen till dig. Ändra vid behov, ange ett databasnamn och en beskrivning och klicka på **Skapa databas**.
-
-   * Databasen bör vara **Offentlig**.
 
    ![Skapa databasen](assets/edge-dev-getting-started/create-repo.png)
 
