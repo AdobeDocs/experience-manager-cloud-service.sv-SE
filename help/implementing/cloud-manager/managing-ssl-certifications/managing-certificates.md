@@ -2,7 +2,7 @@
 title: Hantera SSL-certifikat
 description: Lär dig hur du använder Cloud Manager för att kontrollera statusen för dina SSL-certifikat och hur du redigerar, ersätter, uppdaterar och tar bort dem.
 exl-id: ad6170f4-93bd-4bac-9c54-63c35a0d4f06
-source-git-commit: 90250c13c5074422e24186baf78f84c56c9e3c4f
+source-git-commit: 7143ea8d36e26aa1674608ff7bd8ba22e2030b3c
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 0%
@@ -18,9 +18,9 @@ Lär dig hur du använder Cloud Manager för att kontrollera statusen för dina 
 
 Statusen för dina SSL-certifikat kan snabbt förstås från SSL-certifikatsidan.
 
-* **Grön** - Den här statusen anger att ditt certifikat är giltigt i minst 60 dagar från dagens datum.
+* **Grön** - Den här statusen anger att ditt certifikat är giltigt i minst 14 dagar från dagens datum.
 
-* **Orange** - Den här statusen anger att ditt certifikat upphör att gälla om mindre än 60 dagar.
+* **Orange** - Den här statusen anger att ditt certifikat upphör att gälla om mindre än 14 dagar.
    * Det är dags att se till att du har en plan för att förnya certifikatet och ersätta det med användargränssnittet i Cloud Manager för att undvika eventuell webbplatsåtkomst eller avbrott.
    * Cloud Manager skickar regelbundna meddelanden i användargränssnittet för att informera dig om att certifikatet snart upphör att gälla.
 
