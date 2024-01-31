@@ -1,18 +1,18 @@
 ---
-title: Importera och exportera resursers metadata gruppvis
+title: Importera och exportera metadata för resurser i grupp
 description: I den här artikeln beskrivs hur du importerar och exporterar flera metadata samtidigt.
 contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: fb70a068-3ba3-4459-952d-79155d286c42
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 52a6cb359bfe0d76bdceb3f517e92d78994872c8
 workflow-type: tm+mt
-source-wordcount: '664'
-ht-degree: 9%
+source-wordcount: '710'
+ht-degree: 4%
 
 ---
 
-# Importera och exportera resursers metadata gruppvis {#import-and-export-asset-metadata-in-bulk}
+# Importera och exportera metadata för resurser i grupp {#import-and-export-asset-metadata-in-bulk}
 
 Med Adobe Experience Manager Assets kan du importera resursmetadata i grupp med hjälp av en CSV-fil. Du kan göra satsvisa uppdateringar för de nyligen överförda resurserna eller för befintliga resurser genom att importera en CSV-fil. Du kan också importera resursmetadata i grupp från tredjepartssystem i CSV-format.
 
@@ -61,6 +61,10 @@ Några exempel på användningsområden för att exportera flera metadata samtid
 * Testa eller granska metadata för att se om de är kompatibla.
 * Gör metadata externt för separat lokalisering.
 
+>[!NOTE]
+>
+>Export av metadata är begränsad till 1 048 575 resurser, vilket motsvarar den maximala storleken på kalkylbladet i Microsoft Excel. Om en exporterad hierarki innehåller fler än detta antal resurser inkluderas endast metadata för de första 1 048 575 resurserna i CSV-filen.
+
 1. Välj den resursmapp som innehåller resurser som du vill exportera metadata för. Välj **[!UICONTROL Export metadata]** i verktygsfältet.
 1. Ange ett namn för CSV-filen i dialogrutan Exportera metadata. Om du vill exportera metadata för resurser i undermappar väljer du **[!UICONTROL Include assets in subfolders]**.
 
@@ -80,15 +84,15 @@ Några exempel på användningsområden för att exportera flera metadata samtid
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 
 >[!MORELIKETHIS]
