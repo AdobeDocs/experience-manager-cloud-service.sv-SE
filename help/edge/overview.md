@@ -3,9 +3,9 @@ title: AEM och Edge Delivery Services
 description: Lär dig hur AEM as a Cloud Service kan dra nytta av de prestanda och den perfekta poängsättningen i Lighthouse som Edge Delivery Services erbjuder.
 feature: Edge Delivery Services
 exl-id: 03a1aa93-d2e6-4175-9cf3-c7ae25c0d24e
-source-git-commit: 9d26a4835dc331f2ff8b741a4c14847ead611874
+source-git-commit: 7d28a3a8304d79ecc3143bdc9373134d312af49d
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '868'
 ht-degree: 2%
 
 ---
@@ -42,6 +42,8 @@ Läs mer i Edge Delivery Servicens dokumentation:
 ## Edge Delivery Services och andra Adobe Experience Cloud-produkter {#edge-other-products}
 
 Edge Delivery Services är en del av Adobe Experience Manager och som sådana Edge Delivery Services och AEM kan finnas samtidigt i samma domän. Detta är ett vanligt användningsexempel för större webbplatser. Dessutom kan innehåll från Edge Delivery Services enkelt användas på AEM Sites-sidor och omvänt.
+
+Se [Guiden Komma igång för utvecklare för AEM med Edge Delivery Services](/help/edge/edge-dev-getting-started.md) om du vill lära dig hur du påbörjar ett eget projekt att skapa med AEM och Edge Delivery Services.
 
 Du kan också använda Edge Delivery Services med Adobe Target, Analytics och Launch.
 

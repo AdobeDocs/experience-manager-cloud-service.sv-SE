@@ -1,7 +1,7 @@
 ---
-source-git-commit: 2f567d45a6ba2dfb4dd3346e8510bcb04113eefb
+source-git-commit: 45b263651f6139b1c7f83ff3485186b272ba1a4f
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '302'
 ht-degree: 0%
 
 ---
@@ -56,3 +56,7 @@ ht-degree: 0%
 * [Skicka till Workfront Fusion](/help/forms/submit-adaptive-form-to-workfront-fusion.md)
 * [Ansluta anpassat formulär till Salesforce-program](/help/forms/oauth2-client-credentials-flow-for-server-to-server-integration.md)
 * [Ansluta ett anpassat formulär till Microsoft® Dynamics OData](/help/forms/ms-dynamics-odata-configuration.md)
+
+## AEM med tidig åtkomst till Edge Delivery Services {#aem-authoring-edge-early-access}
+
+[!BADGE TEKNIK MED TIDIG ÅTKOMST - Fråga oss om den här funktionen från AEM Sites labb i din Slack-kanal!]{type=Informative url="/help/edge/docs/slack.md" tooltip="AEM med Edge Delivery Services är en teknik med tidig åtkomst."}

@@ -2,13 +2,13 @@
 title: Skapa innehåll för Edge Delivery Services
 description: Lär dig hur innehållsredigering fungerar med Edge Delivery Services och hur du redigerar AEM innehåll med Edge Delivery Services.
 feature: Edge Delivery Services
-source-git-commit: 22a791311c618fcbd61f321b8efa79c3a52ec65d
+exl-id: 963ff71a-8176-4d9d-8240-dc429405d139
+source-git-commit: 7d28a3a8304d79ecc3143bdc9373134d312af49d
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
-
 
 # Skapa innehåll för Edge Delivery Services {#authoring-edge}
 
@@ -53,6 +53,8 @@ Information om blocken kan sedan konfigureras i egenskapsfältet.
 ![Konfigurera blockegenskaper](assets/block-properties.png)
 
 Mer information om hur du redigerar i Universal Editor finns i dokumentet [Skapa innehåll med den universella redigeraren.](/help/implementing/universal-editor/authoring.md)
+
+Se [Guiden Komma igång för utvecklare för AEM med Edge Delivery Services](/help/edge/edge-dev-getting-started.md) om du vill lära dig hur du påbörjar ett eget projekt att skapa med AEM och Edge Delivery Services.
 
 ## Så här kommer du igång {#how-to-get-started}
 
