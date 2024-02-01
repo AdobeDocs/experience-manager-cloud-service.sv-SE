@@ -2,10 +2,10 @@
 title: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service
 description: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service.
 exl-id: 3fe856b7-a0fc-48fd-9c03-d64c31a51c5d
-source-git-commit: 3e40832ee4351c92ffc4eb22540223e331323821
+source-git-commit: 25af074bcb32e47732b27bacf10c8d3435299440
 workflow-type: tm+mt
-source-wordcount: '2696'
-ht-degree: 8%
+source-wordcount: '2713'
+ht-degree: 7%
 
 ---
 
@@ -225,10 +225,14 @@ Den senaste arkitekturen för AEM as a Cloud Service medför vissa grundläggand
 
 ## Ytterligare information {#further-information}
 
-Se även:
-
+* Programinställningar
+   * [Onboardresa](/help/journey-onboarding/overview.md)
+   * [Program och programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md)
+* Utvecklingsarkitektur
+   * [Cloud Manager-databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md)
+   * [CI/CD-pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md)
+   * [Testning av kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md)
 * Edge Delivery Services:
-
    * [AEM as a Cloud Service Overview - med Edge Delivery Services](/help/edge/overview.md)
    * [Använda Edge Delivery Services](/help/edge/using.md)
    * [Utforska den underliggande arkitekturen och viktiga delar av AEM as a Cloud Service med Edge Delivery Services](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html)

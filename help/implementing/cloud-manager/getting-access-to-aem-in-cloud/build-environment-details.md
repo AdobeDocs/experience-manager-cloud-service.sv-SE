@@ -2,9 +2,9 @@
 title: Bygg miljö
 description: Lär dig mer om Cloud Managers byggmiljö och hur den bygger och testar din kod.
 exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
-source-git-commit: f59959bc10e502d85d3f4797dcf4ad0490d233f4
+source-git-commit: 30f2eaf4d2edba13e875cd1bfe767e83a2b7f1a5
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1166'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,6 @@ Cloud Manager bygger och testar koden med en specialiserad byggmiljö.
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
 * Maven konfigureras på systemnivå med en `settings.xml` -fil, som automatiskt inkluderar den offentliga Adobe-artefaktdatabasen med en profil med namnet `adobe-public`. (Se [Adobe Public Maven Repository](https://repo1.maven.org/) för mer information).
-* Node.js 18 finns för [rörledningar för framände och högstackar.](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md)
 
 >[!NOTE]
 >

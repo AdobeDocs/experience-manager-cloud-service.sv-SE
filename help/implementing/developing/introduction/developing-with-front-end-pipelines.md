@@ -2,9 +2,9 @@
 title: Developing Sites with the Front-End Pipeline
 description: Med den integrerade utvecklingsmiljön får utvecklarna större oberoende och utvecklingsprocessen kan bli betydligt snabbare. I det här dokumentet beskrivs några särskilda aspekter av den inledande konstruktionsprocessen som bör anges.
 exl-id: 996fb39d-1bb1-4dda-a418-77cdf8b307c5
-source-git-commit: de2d4355894d166d47f49a22af773b9e2c19e67b
+source-git-commit: 74e4c4cc57dbdc78b6c93efe78c856bdafbae477
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1169'
 ht-degree: 0%
 
 ---
@@ -20,17 +20,22 @@ ht-degree: 0%
 
 ## Front-End Build Contract {#front-end-build-contract}
 
-Liknar [byggmiljö i full hög,](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md) den främre rörledningen har en egen miljö. Utvecklarna har viss flexibilitet i den här pipeline så länge som följande frontavtal gäller.
+Liknar [byggmiljö i full hög,](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md) den främre rörledningen har en egen miljö. Utvecklarna har viss flexibilitet när det gäller att använda denna pipeline så länge som följande avtal för front-end-bygge följs.
 
-För frontendpipeline krävs att front-end-Node.js-projektet använder `build` skriptdirektiv för att generera det bygge som distribueras av frontendpipeline. I.e.e. Cloud Manager använder kommandot `npm run build` för att generera ett driftsättningsbart projekt till `dist` mapp.
+För frontendpipeline krävs att front-end-Node.js-projektet använder `build` skriptdirektiv för att generera det bygge som det distribuerar. Detta beror på att kommandot används i molnhanteraren `npm run build` för att generera det driftsättningsbara projektet för front-end-bygget.
 
-Innehållet i `dist` är den mapp som distribueras till AEM as a Cloud Service från molnhanterarens pipeline.
+Det resulterande innehållet i `dist` är den mapp som slutligen distribueras av Cloud Manager, som fungerar som statiska filer. Dessa filer lagras externt hos AEM, men är tillgängliga via en `/content/...` URL för den distribuerade miljön.
 
-### Nodversioner {#node-versions}
+## Nodversioner {#node-versions}
 
-Som standard används nod 14 i den främre pipelinen, men 12, 16 och 18 är också tillgängliga.
+Front-end-miljön har stöd för följande Node.js-versioner.
 
-Du kan använda `NODE_VERSION` systemvariabel för att ange önskad version.
+* 12
+* 14 (standard)
+* 16
+* 18
+
+Du kan använda `NODE_VERSION` [miljövariabel](/help/implementing/cloud-manager/environment-variables.md) för att ange önskad version.
 
 ## En källa för sanning {#single-source-of-truth}
 
