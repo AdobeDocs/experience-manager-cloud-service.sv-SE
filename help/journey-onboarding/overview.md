@@ -2,9 +2,10 @@
 title: Introduktion till as a Cloud Service onboarding-resa
 description: Börja här för en översikt över den guidade resan genom introduktionsprocessen till AEM as a Cloud Service.
 exl-id: 892577db-05dc-49ff-bb2c-203efdb89c8c
-source-git-commit: bba8310b9ba560ab9b6c2f9bea3e5c3cbec9228b
+recommendations: noDisplay
+source-git-commit: 98618765b405316b18110182c221ddd968c70e96
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1290'
 ht-degree: 2%
 
 ---
@@ -98,11 +99,8 @@ Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe 
 
 Om du vill veta vad Adobe rekommenderar om hur du ska få ditt team att komma in i ditt nya AEM as a Cloud Service program kan du börja här!
 
-<!-- ERROR: Not Found (HTTP error 404)
-## Additional Resources {#additional-resources}
+## Ytterligare resurser {#additional-resources}
 
-The following are additional, optional resources if you would like to go beyond the content of the onboarding journey.
+Här följer ytterligare, valfria resurser om du vill gå längre än vad som ingår i introduktionsresan.
 
-* [AEM Champion Tips and Tricks - Cloud Manager Onboarding Playbook](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/aem-champions/onboarding-playbook.md) - Watch this video to learn Cloud Manager onboarding tips and trick from an AEM champion. -->
-
-
+* [Onboarding to AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/onboarding.html) - Den här korta videon ger en översikt över Cloud Servicens introduktionsprocess för AEM.
