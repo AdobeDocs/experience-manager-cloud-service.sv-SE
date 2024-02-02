@@ -2,9 +2,9 @@
 title: Skapa innehåll med den universella redigeraren
 description: Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
 exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
-source-git-commit: 16f2922a3745f9eb72f7070c30134e5149eb78ce
+source-git-commit: a616b27c5212b00d3b51778402ed52a68028fdaf
 workflow-type: tm+mt
-source-wordcount: '2165'
+source-wordcount: '2189'
 ht-degree: 0%
 
 ---
@@ -295,11 +295,14 @@ Dessutom finns information om texten i egenskapsfältet. Ändringarna sparas aut
 
 Du kan redigera texten på plats genom att dubbelklicka eller dubbeltrycka på komponenten.
 
-Tryck på Enter eller välj utanför textrutan för att spara ändringarna.
-
 ![Redigera en RTF-komponent](assets/rich-text-editing.png)
 
-Dessutom finns formateringsalternativ och information om texten i egenskapsfältet. Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet i egenskapsfältet.
+Formateringsalternativen och informationen på texten finns på två ställen.
+
+* The **snabbmeny** öppnas ovanför det formaterade textblocket och innehåller grundläggande formateringsalternativ. På grund av utrymmesbegränsningar kan vissa alternativ vara dolda bakom ellipsknappen.
+* The **egenskapspanel** visar alla tillgängliga formateringsalternativ tillsammans med texten.
+
+Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet.
 
 ### Redigera media {#edit-media}
 
