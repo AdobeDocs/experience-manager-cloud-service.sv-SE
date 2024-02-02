@@ -6,10 +6,10 @@ mini-toc-levels: 1
 role: User, Admin, Architect
 feature: Asset Management,Multi Site Manager
 exl-id: a71aebdf-8e46-4c2d-8960-d188b14aaae9
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 9e0aefa096a493df22860d0194a0a76f3eaf2390
 workflow-type: tm+mt
-source-wordcount: '3290'
-ht-degree: 10%
+source-wordcount: '3287'
+ht-degree: 9%
 
 ---
 
@@ -248,8 +248,8 @@ Om du vill se status och information om en synkroniseringsåtgärd läser du [In
 Du kan avbryta Live Copy-arvet för en:
 
 * metadatafält
-* Variation i innehållsfragment
-* Datafält för innehållsfragment
+* [Variation i innehållsfragment](/help/assets/content-fragments/content-fragments-variations.md#inheritance)
+* [Datafält för innehållsfragment](/help/assets/content-fragments/content-fragments-variations.md#inheritance)
 
 Det innebär att objektet inte längre är synkroniserat med källkomponenten. Du kan aktivera arv vid ett senare tillfälle om det behövs.
 
@@ -319,7 +319,7 @@ Om du har flera resurser i en live-kopieringsmapp kan initieringsåtgärder för
 
 1. Välj en källmapp. Klicka på **[!UICONTROL Properties]** i verktygsfältet. Du kan även använda kortkommandot `p`.
 1. Klicka på **[!UICONTROL Live Copy Source]**. Klicka på **[!UICONTROL Live Copy Overview]** för att öppna konsolen.
-1. På den här kontrollpanelen väljer du en live-resurs från en live-mapp. Klicka på önskade åtgärder i verktygsfältet. De tillgängliga åtgärderna är **[!UICONTROL Synchronize]**, **[!UICONTROL Reset]**, **[!UICONTROL Suspend]** och **[!UICONTROL Detach]**. Du kan snabbt initiera dessa åtgärder för alla resurser i valfritt antal kopiamappar som finns i en direktrelation med den valda källmappen.
+1. På den här kontrollpanelen väljer du en live-resurs från en live-mapp. Klicka på önskade åtgärder i verktygsfältet. Tillgängliga åtgärder är **[!UICONTROL Synchronize]**, **[!UICONTROL Reset]**, **[!UICONTROL Suspend]** och **[!UICONTROL Detach]**. Du kan snabbt initiera dessa åtgärder för alla resurser i valfritt antal kopiamappar som finns i en direktrelation med den valda källmappen.
 
    ![Uppdatera enkelt många resurser i kopiemappar från Live Copy Overview-konsolen](assets/livecopyconsole_update_many_assets.png)
 
@@ -374,15 +374,15 @@ Följande begränsningar gäller för MSM för [!DNL Assets].
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
 * [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md)
