@@ -2,7 +2,7 @@
 title: Attribut och objekttyper
 description: Läs mer om de dataattribut och objekttyper som krävs för den universella redigeraren.
 exl-id: 02795a31-244a-42b4-8297-2649125d7777
-source-git-commit: 453cbaeabd28223cac5e732a551aa71f5a425839
+source-git-commit: ff8a832d61e42ac17ca37e5a3c41e39119879af6
 workflow-type: tm+mt
 source-wordcount: '686'
 ht-degree: 0%
@@ -30,11 +30,11 @@ För att ett program ska kunna redigeras av den universella redigeraren måste d
 |---|---|
 | `data-aue-resource` | URN to the resource, see the section [Instrument the Page of the document Getting Started with the Universal Editor in AEM](getting-started.md#instrument-thepage) |
 | `data-aue-prop` | Resursens attribut, se avsnittet [Instrument the Page of the document Getting Started with the Universal Editor in AEM](getting-started.md#instrument-thepage) |
-| `data-aue-type` | Typ av redigerbart objekt (till exempel text, bild och referens) |
+| `data-aue-type` | [Typ av redigerbart objekt](#item-types) (till exempel text, bild och referens) |
 | `data-aue-filter` | Definierar vilka referenser som kan användas |
 | `data-aue-label` | Definierar en anpassad etikett för ett markeringsbart objekt som visas i redigeraren <br>Om `itemmodel` är inställd hämtas etiketten med hjälp av modellen |
 | `data-aue-model` | Definierar en modell som används för formulärbaserad redigering i egenskapsfältet |
-| `data-aue-behavior` | Definierar beteendet för en instrumentering, t.ex. fristående text eller bild, kan också efterlikna en komponent så att den kan flyttas eller tas bort |
+| `data-aue-behavior` | Definierar [instrumentens beteende,](#behaviors) fristående text eller bild kan också efterlikna en komponent så att den kan flyttas eller tas bort |
 
 ## Objekttyper {#item-types}
 
