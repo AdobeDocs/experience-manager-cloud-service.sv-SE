@@ -6,7 +6,7 @@ topic-tags: author, developer
 feature: Adaptive Forms
 role: Admin, User
 exl-id: d3efb450-a879-40ae-8958-0040f99bdafc
-source-git-commit: 7cf7883e133d58145b5b3e1bb6ba8eb21ebad5d9
+source-git-commit: 52e1f57b82aec25ad61024f357016dbb5498ca1b
 workflow-type: tm+mt
 source-wordcount: '1187'
 ht-degree: 0%
@@ -22,6 +22,7 @@ ht-degree: 0%
 Med Workfront Fusion kan du till exempel skapa ett scenario där du samlar in data med adaptiv form, bearbetar data och skickar data till ett datalager för arkivering. När ett scenario har konfigurerats utför Workfront Fusion automatiskt uppgifterna när en användare fyller i ett formulär och uppdaterar datalagret sömlöst.
 
 AEM as a Cloud Service erbjuder olika åtgärder för att skicka in formulär. Du kan läsa mer om de här alternativen i [Inlämningsåtgärd för anpassat formulär](/help/forms/configure-submit-actions-core-components.md)  artikel.
+
 
 ## Fördelar med att använda Adobe Workfront Fusion{#advatages-of-workfront-fusion}
 
