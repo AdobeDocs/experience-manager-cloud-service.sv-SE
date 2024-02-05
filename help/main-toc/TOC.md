@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: a1a87a27d73d7472ec02de37621123bbdd3876b4
+source-git-commit: d2090fd8bee3ec3d25eb3a00925a61404d2f8b8d
 workflow-type: tm+mt
-source-wordcount: '4635'
+source-wordcount: '4630'
 ht-degree: 3%
 
 ---
@@ -1056,7 +1056,6 @@ ht-degree: 3%
       + [Utöka upplevelsefragment](/help/implementing/developing/extending/experience-fragments.md)
       + [Anpassa och utöka innehållsfragment](/help/implementing/developing/extending/content-fragments-customizing.md)
       + [Innehållsfragment Konfigurera komponenter för återgivning](/help/implementing/developing/extending/content-fragments-configuring-components-rendering.md)
-      + [Anpassa konsolen för innehållsfragment](/help/implementing/developing/extending/content-fragment-console-customizing.md)
       + [Anpassa konsolen och redigeraren för innehållsfragment](/help/implementing/developing/extending/content-fragments-console-and-editor.md)
       + Hantera sökning i Forms {#manage-search-forms}
          + [Konfigurera Sök i Forms](/help/implementing/developing/extending/search-forms.md)
