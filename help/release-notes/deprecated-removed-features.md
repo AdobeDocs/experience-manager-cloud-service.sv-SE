@@ -2,7 +2,7 @@
 title: Föråldrade och borttagna funktioner
 description: Versionsinformation om borttagna och borttagna funktioner i [!DNL Adobe Experience Manager] som [!DNL Cloud Service].
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
-source-git-commit: cb2c883fbadc5347dbe5fc50337abc41d4f5cec3
+source-git-commit: 1da8d9395df3dd2efee7f6a57197aa3f2b27b1a4
 workflow-type: tm+mt
 source-wordcount: '2068'
 ht-degree: 0%
@@ -58,149 +58,6 @@ I det här avsnittet visas funktioner som har tagits bort från [!DNL Experience
 | [!DNL Foundation] | Stöd för JST-skriptmallar (OSGi bundle org.apache.sling.scripting.jst) | Ej tillämpligt | Borttagen |
 | [!DNL Foundation] | Stöd för Apache Felix Http Whiteboard | OSGi Http Whiteboard | Mars 2022 |
 | [!DNL Foundation] | Stöd för com.adobe.granite.oauth.server | Integrering med Adobe IMS | Mars 2023 |
-
-## OSGI-konfiguration {#osgi-configuration}
-
-De två listorna nedan återspeglar den AEM as a Cloud Service OSGi-konfigurationsytan och beskriver vad kunderna kan konfigurera.
-
-1. En lista med OSGi-konfigurationer som inte får konfigureras av kundkoden
-1. En lista över OSGi-konfigurationer vars egenskaper kan konfigureras, men måste följa de angivna verifieringsreglerna. Dessa regler omfattar huruvida deklarationen av egenskapen är obligatorisk, dess typ och i vissa fall dess tillåtna värdeintervall.
-
-Om en OSGI-konfiguration inte anges kan den konfigureras med kundkod.
-
-Dessa regler valideras under Cloud Managers byggprocess. Ytterligare regler kan läggas till över tid och det förväntade datumet för verkställighet anges i tabellen. Kunderna förväntas följa dessa regler senast vid måldatumet. Om reglerna inte följs efter borttagningsdatumet genereras fel i Cloud Manager-byggprocessen. Maven-projekten bör omfatta [AEM as a Cloud Service SDK Build Analyzer Maven Plugin](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html) för att flagga OSGI-konfigurationsfel under lokal SDK-utveckling.
-
-Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/help/implementing/deploying/configuring-osgi.md).
-
-+++OSGi-konfigurationer som inte kan ändras.
-* **`org.apache.felix.webconsole.internal.servlet.OsgiManager`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
-* **`com.day.cq.auth.impl.cug.CugSupportImpl`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
-* **`com.day.cq.jcrclustersupport.ClusterStartLevelController`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
-* **`org.apache.felix.http (Factory)`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
-* **`org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet`** (Tillkännagivande: 2021-08-25, Kräftelsedatum: 2021-08-26)
-+++
-
-+++OSGi-konfigurationer som omfattas av build-valideringsregler.
-* **`org.apache.felix.eventadmin.impl.EventAdmin`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
-* `org.apache.felix.eventadmin.ThreadPoolSize`
-   * Typ: heltal
-   * Obligatoriskt intervall: 2-100
-* `org.apache.felix.eventadmin.AsyncToSyncThreadRatio`
-   * Typ: dubbel
-* `org.apache.felix.eventadmin.Timeout`
-   * Typ: heltal
-* `org.apache.felix.eventadmin.RequireTopic`
-   * Typ: boolesk
-* `org.apache.felix.eventadmin.IgnoreTimeout`
-   * Obligatoriskt
-   * Typ: strängmatris
-   * Obligatoriskt intervall: Måste innehålla minst alla `org.apache.felix*`, `org.apache.sling*`, `come.day*`, `com.adobe*`
-* `org.apache.felix.eventadmin.IgnoreTopic`
-   * Typ: strängmatris
-* **`org.apache.felix.http`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
-   * `org.apache.felix.http.timeout`
-      * Typ: heltal
-   * `org.apache.felix.http.session.timeout`
-      * Typ: heltal
-   * `org.apache.felix.http.jetty.threadpool.max`
-      * Typ: heltal
-   * `org.apache.felix.http.jetty.headerBufferSize`
-      * Typ: heltal
-   * `org.apache.felix.http.jetty.requestBufferSize`
-      * Typ: heltal
-   * `org.apache.felix.http.jetty.responseBufferSize`
-      * Typ: heltal
-   * `org.apache.felix.http.jetty.maxFormSize`
-      * Typ: heltal
-   * `org.apache.felix.https.jetty.session.cookie.httpOnly`
-      * Typ: boolesk
-   * `org.apache.felix.https.jetty.session.cookie.secure`
-      * Typ: boolesk
-   * `org.eclipse.jetty.servlet.SessionIdPathParameterName`
-      * Typ: sträng
-   * `org.eclipse.jetty.servlet.CheckingRemoteSessionIdEncoding`
-      * Typ: boolesk
-   * `org.eclipse.jetty.servlet.SessionCookie`
-      * Typ: sträng
-   * `org.eclipse.jetty.servlet.SessionDomain`
-      * Typ: sträng
-   * `org.eclipse.jetty.servlet.SessionPath`
-      * Typ: sträng
-   * `org.eclipse.jetty.servlet.MaxAge`
-      * Typ: heltal
-   * `org.eclipse.jetty.servlet.SessionScavengingInterval`
-      * Typ: heltal
-   * `org.apache.felix.jetty.gziphandler.enable`
-      * Typ: boolesk
-   * `org.apache.felix.jetty.gzip.minGzipSize`
-      * Typ: heltal
-   * `org.apache.felix.jetty.gzip.compressionLevel`
-      * Typ: heltal
-   * `org.apache.felix.jetty.gzip.inflateBufferSize`
-      * Typ: heltal
-   * `org.apache.felix.jetty.gzip.syncFlush`
-      * Typ: boolesk
-   * `org.apache.felix.jetty.gzip.excludedUserAgents`
-      * Typ: sträng
-   * `org.apache.felix.jetty.gzip.includedMethods`
-      * Typ: strängmatris
-   * `org.apache.felix.jetty.gzip.excludedMethods`
-      * Typ: strängmatris
-   * `org.apache.felix.jetty.gzip.includedPaths`
-      * Typ: strängmatris
-   * `org.apache.felix.jetty.gzip.excludedPaths`
-      * Typ: strängmatris
-   * `org.apache.felix.jetty.gzip.includedMimeTypes`
-      * Typ: strängmatris
-   * `org.apache.felix.jetty.gzip.excludedMimeTypes`
-      * Typ: strängmatris
-   * `org.apache.felix.http.session.invalidate`
-      * Typ: boolesk
-   * `org.apache.felix.http.session.container.attribute`
-      * Typ: strängmatris
-   * `org.apache.felix.http.session.uniqueid`
-      * Typ: boolesk
-* **`org.apache.sling.scripting.cache`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
-   * `org.apache.sling.scripting.cache.size`
-      * Typ: heltal
-      * Obligatoriskt intervall: >= 2048
-   * `org.apache.sling.scripting.cache.additional_extensions`
-      * Obligatoriskt
-      * Typ: strängmatris
-      * Obligatoriskt intervall: måste innehålla js
-* **`com.day.cq.mailer.DefaultMailService`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
-   * `smtp.host`
-      * Typ: sträng
-   * `smtp.port`
-      * Typ: heltal
-      * Obligatoriskt intervall: 465, 587 eller 25
-   * `smtp.user`
-      * Typ: sträng
-   * `smtp.password`
-      * Typ: sträng
-   * `from.address`
-      * Typ: sträng
-   * `smtp.ssl`
-      * Typ: sträng
-   * `smtp.starttls`
-      * Typ: boolesk
-   * `smtp.requiretls`
-      * Typ: boolesk
-   * `debug.email`
-      * Typ: boolesk
-   * `oauth.flow`
-      * Typ: boolesk
-* **`org.apache.sling.commons.log.LogManager.factory.config`** (Tillkännagivande: 21-16-11, Datum för verkställighet: 2-16-21)
-   * `org.apache.sling.commons.log.level`
-      * Typ: uppräkning
-      * Obligatoriskt intervall: INFO, DEBUG eller TRACE
-   * `org.apache.sling.commons.log.names`
-      * Typ: sträng
-   * `org.apache.sling.commons.log.file`
-      * Typ: sträng
-   * `org.apache.sling.commons.log.additiv`
-      * Typ: boolesk
-+++
 
 ## AEM API:er {#aem-apis}
 
@@ -413,3 +270,147 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
 </tbody>
 </table>
 </details>
+
+## OSGI-konfiguration {#osgi-configuration}
+
+De två listorna nedan återspeglar den AEM as a Cloud Service OSGi-konfigurationsytan och beskriver vad kunderna kan konfigurera.
+
+1. En lista med OSGi-konfigurationer som inte får konfigureras av kundkoden
+1. En lista över OSGi-konfigurationer vars egenskaper kan konfigureras, men måste följa de angivna verifieringsreglerna. Dessa regler omfattar huruvida deklarationen av egenskapen är obligatorisk, dess typ och i vissa fall dess tillåtna värdeintervall.
+
+Om en OSGI-konfiguration inte anges kan den konfigureras med kundkod.
+
+Dessa regler valideras under Cloud Managers byggprocess. Ytterligare regler kan läggas till över tid och det förväntade datumet för verkställighet anges i tabellen. Kunderna förväntas följa dessa regler senast vid måldatumet. Om reglerna inte följs efter borttagningsdatumet genereras fel i Cloud Manager-byggprocessen. Maven-projekten bör omfatta [AEM as a Cloud Service SDK Build Analyzer Maven Plugin](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html) för att flagga OSGI-konfigurationsfel under lokal SDK-utveckling.
+
+Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/help/implementing/deploying/configuring-osgi.md).
+
++++OSGi-konfigurationer som inte kan ändras.
+* **`org.apache.felix.webconsole.internal.servlet.OsgiManager`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
+* **`com.day.cq.auth.impl.cug.CugSupportImpl`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
+* **`com.day.cq.jcrclustersupport.ClusterStartLevelController`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
+* **`org.apache.felix.http (Factory)`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
+* **`org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet`** (Tillkännagivande: 2021-08-25, Kräftelsedatum: 2021-08-26)
++++
+
++++OSGi-konfigurationer som omfattas av build-valideringsregler.
+* **`org.apache.felix.eventadmin.impl.EventAdmin`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
+* `org.apache.felix.eventadmin.ThreadPoolSize`
+   * Typ: heltal
+   * Obligatoriskt intervall: 2-100
+* `org.apache.felix.eventadmin.AsyncToSyncThreadRatio`
+   * Typ: dubbel
+* `org.apache.felix.eventadmin.Timeout`
+   * Typ: heltal
+* `org.apache.felix.eventadmin.RequireTopic`
+   * Typ: boolesk
+* `org.apache.felix.eventadmin.IgnoreTimeout`
+   * Obligatoriskt
+   * Typ: strängmatris
+   * Obligatoriskt intervall: Måste innehålla minst alla `org.apache.felix*`, `org.apache.sling*`, `come.day*`, `com.adobe*`
+* `org.apache.felix.eventadmin.IgnoreTopic`
+   * Typ: strängmatris
+* **`org.apache.felix.http`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
+   * `org.apache.felix.http.timeout`
+      * Typ: heltal
+   * `org.apache.felix.http.session.timeout`
+      * Typ: heltal
+   * `org.apache.felix.http.jetty.threadpool.max`
+      * Typ: heltal
+   * `org.apache.felix.http.jetty.headerBufferSize`
+      * Typ: heltal
+   * `org.apache.felix.http.jetty.requestBufferSize`
+      * Typ: heltal
+   * `org.apache.felix.http.jetty.responseBufferSize`
+      * Typ: heltal
+   * `org.apache.felix.http.jetty.maxFormSize`
+      * Typ: heltal
+   * `org.apache.felix.https.jetty.session.cookie.httpOnly`
+      * Typ: boolesk
+   * `org.apache.felix.https.jetty.session.cookie.secure`
+      * Typ: boolesk
+   * `org.eclipse.jetty.servlet.SessionIdPathParameterName`
+      * Typ: sträng
+   * `org.eclipse.jetty.servlet.CheckingRemoteSessionIdEncoding`
+      * Typ: boolesk
+   * `org.eclipse.jetty.servlet.SessionCookie`
+      * Typ: sträng
+   * `org.eclipse.jetty.servlet.SessionDomain`
+      * Typ: sträng
+   * `org.eclipse.jetty.servlet.SessionPath`
+      * Typ: sträng
+   * `org.eclipse.jetty.servlet.MaxAge`
+      * Typ: heltal
+   * `org.eclipse.jetty.servlet.SessionScavengingInterval`
+      * Typ: heltal
+   * `org.apache.felix.jetty.gziphandler.enable`
+      * Typ: boolesk
+   * `org.apache.felix.jetty.gzip.minGzipSize`
+      * Typ: heltal
+   * `org.apache.felix.jetty.gzip.compressionLevel`
+      * Typ: heltal
+   * `org.apache.felix.jetty.gzip.inflateBufferSize`
+      * Typ: heltal
+   * `org.apache.felix.jetty.gzip.syncFlush`
+      * Typ: boolesk
+   * `org.apache.felix.jetty.gzip.excludedUserAgents`
+      * Typ: sträng
+   * `org.apache.felix.jetty.gzip.includedMethods`
+      * Typ: strängmatris
+   * `org.apache.felix.jetty.gzip.excludedMethods`
+      * Typ: strängmatris
+   * `org.apache.felix.jetty.gzip.includedPaths`
+      * Typ: strängmatris
+   * `org.apache.felix.jetty.gzip.excludedPaths`
+      * Typ: strängmatris
+   * `org.apache.felix.jetty.gzip.includedMimeTypes`
+      * Typ: strängmatris
+   * `org.apache.felix.jetty.gzip.excludedMimeTypes`
+      * Typ: strängmatris
+   * `org.apache.felix.http.session.invalidate`
+      * Typ: boolesk
+   * `org.apache.felix.http.session.container.attribute`
+      * Typ: strängmatris
+   * `org.apache.felix.http.session.uniqueid`
+      * Typ: boolesk
+* **`org.apache.sling.scripting.cache`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
+   * `org.apache.sling.scripting.cache.size`
+      * Typ: heltal
+      * Obligatoriskt intervall: >= 2048
+   * `org.apache.sling.scripting.cache.additional_extensions`
+      * Obligatoriskt
+      * Typ: strängmatris
+      * Obligatoriskt intervall: måste innehålla js
+* **`com.day.cq.mailer.DefaultMailService`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
+   * `smtp.host`
+      * Typ: sträng
+   * `smtp.port`
+      * Typ: heltal
+      * Obligatoriskt intervall: 465, 587 eller 25
+   * `smtp.user`
+      * Typ: sträng
+   * `smtp.password`
+      * Typ: sträng
+   * `from.address`
+      * Typ: sträng
+   * `smtp.ssl`
+      * Typ: sträng
+   * `smtp.starttls`
+      * Typ: boolesk
+   * `smtp.requiretls`
+      * Typ: boolesk
+   * `debug.email`
+      * Typ: boolesk
+   * `oauth.flow`
+      * Typ: boolesk
+* **`org.apache.sling.commons.log.LogManager.factory.config`** (Tillkännagivande: 21-16-11, Datum för verkställighet: 2-16-21)
+   * `org.apache.sling.commons.log.level`
+      * Typ: uppräkning
+      * Obligatoriskt intervall: INFO, DEBUG eller TRACE
+   * `org.apache.sling.commons.log.names`
+      * Typ: sträng
+   * `org.apache.sling.commons.log.file`
+      * Typ: sträng
+   * `org.apache.sling.commons.log.additiv`
+      * Typ: boolesk
++++
+
