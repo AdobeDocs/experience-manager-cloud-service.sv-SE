@@ -2,9 +2,9 @@
 title: Dynatrace
 description: Lär dig använda Dynatrace med AEM as a Cloud Service
 exl-id: b58c8b82-a098-4d81-bc36-664e890c8f66
-source-git-commit: a234f2a00c51bcb23b0c52feac9971259d26b8c3
+source-git-commit: fec3aa6debec49014406ab241c3ce0338ec5a1d2
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,13 @@ Nedan beskrivs mer ingående information om anslutningsbegäranden:
 
 | **Fält** | **Beskrivning** |
 |---|---|
-| URL för Dynatrace Environment | Din URL för Dynatracemiljö.<br><br>För Dynatrace SaaS-kunder är formatet `https://<your-environment-id>.live.dynatrace.com`.<br><br>För kunder som är hanterade med Dynatrace är formatet `https://<your-managed-url>/e/<environmentId>` |
-| Dynatrace Environment ID | Ditt ID för Dynatracemiljö. Se [Hämta information om Dynatrace-miljön](#get-dynatrace-env-info) för hur man får det här. |
-| Dynatrace Environment-token | Din miljötoken för Dynatracing. Se [Hämta information om Dynatrace-miljön](#get-dynatrace-env-info) för hur man får det här.<br><br>Detta bör betraktas som en hemlighet, så använd lämpliga säkerhetsrutiner. Lösenordsskydda den till exempel på en webbplats **zerobin.net** som kundsupportbiljetten kan referera till tillsammans med lösenordet. |
-| Åtkomsttoken för Dynatrace API | API-åtkomsttoken för din Dynatrace-miljö.  Se [Skapa en åtkomsttoken för Dynatrace API](#create-dynatrace-access-token) för hur du skapar det här.<br><br>Detta bör betraktas som en hemlighet, så använd lämpliga säkerhetsrutiner. Lösenordsskydda den till exempel på en webbplats **zerobin.net** som kundsupportbiljetten kan referera till tillsammans med lösenordet.<br><br>Obs! Detta är endast nödvändigt för Dynatracehantering. |
-| Dynatrace ActiveGate-port | Din ActiveGate-port för Dynatrace som den AEM integreringen ska ansluta till.<br><br>Obs! Detta är endast nödvändigt för Dynatracehantering. |
-| Dynatrace ActiveGate Network Zone | Dina [ActiveGate-nätverkszonen för Dynatracus](https://docs.dynatrace.com/docs/manage/network-zones) för att AEM övervaka data effektivt över datacenter och nätverksregioner.<br><br>Obs! En ActiveGate-nätverkszon för Dynatrace är valfri. |
-| AEM miljö-ID:n | AEM miljö-ID:n för Dynatracs bildskärm. |
+| [!DNL Dynatrace Environment URL] | Din URL för Dynatracemiljö.<br><br>För Dynatrace SaaS-kunder är formatet `https://<your-environment-id>.live.dynatrace.com`.<br><br>För kunder som är hanterade med Dynatrace är formatet `https://<your-managed-url>/e/<environmentId>` |
+| [!DNL Dynatrace Environment ID] | Ditt ID för Dynatracemiljö. Se [Hämta information om Dynatrace-miljön](#get-dynatrace-env-info) för hur man får det här. |
+| [!DNL Dynatrace Environment Token] | Din miljötoken för Dynatracing. Se [Hämta information om Dynatrace-miljön](#get-dynatrace-env-info) för hur man får det här.<br><br>Detta bör betraktas som en hemlighet, så använd lämpliga säkerhetsrutiner. Lösenordsskydda den till exempel på en webbplats **zerobin.net** som kundsupportbiljetten kan referera till tillsammans med lösenordet. |
+| [!DNL Dynatrace API access token] | API-åtkomsttoken för din Dynatrace-miljö.  Se [Skapa en åtkomsttoken för Dynatrace API](#create-dynatrace-access-token) för hur du skapar det här.<br><br>Detta bör betraktas som en hemlighet, så använd lämpliga säkerhetsrutiner. Lösenordsskydda den till exempel på en webbplats **zerobin.net** som kundsupportbiljetten kan referera till tillsammans med lösenordet.<br><br>Obs! Detta är endast nödvändigt för Dynatracehantering. |
+| [!DNL Dynatrace ActiveGate Port] | Din ActiveGate-port för Dynatrace som den AEM integreringen ska ansluta till.<br><br>Obs! Detta är endast nödvändigt för Dynatracehantering. |
+| [!DNL Dynatrace ActiveGate Network Zone] | Dina [ActiveGate-nätverkszonen för Dynatracus](https://docs.dynatrace.com/docs/manage/network-zones) för att AEM övervaka data effektivt över datacenter och nätverksregioner.<br><br>Obs! En ActiveGate-nätverkszon för Dynatrace är valfri. |
+| [!DNL AEM Environment ID(s)] | AEM miljö-ID:n för Dynatracs bildskärm. |
 
 >[!NOTE]
 >
@@ -43,13 +43,13 @@ Nedan beskrivs mer ingående information om anslutningsbegäranden:
 ## Skapa en åtkomsttoken för Dynatrace API {#create-dynatrace-access-token}
 
 1. Logga in i din Dynatracermiljö.
-1. Gå till Hantera > Åtkomsttoken på menyn Dynatracetyp.
-1. Välj Generera ny token.
-1. Definiera ett tokennamn.
+1. I [!DNL Dynatrace] meny, gå till [!DNL Manage] > [!DNL Access tokens].
+1. Välj [!DNL Generate new token].
+1. Definiera en [!DNL token name].
 
-1. Valfritt: Ange ett förfallodatum. Generera en ny token innan den upphör att gälla.
-1. Ange tokenomfånget till PaaS-integrering - hämtning av installationsprogram
-1. Välj Generera token.
+1. Valfritt: Ange en [!DNL expiration date]. Generera en ny token innan den upphör att gälla.
+1. Ange [!DNL token scope] till [!DNL PaaS integration - Installer download]
+1. Välj [!DNL Generate token].
 1. Kopiera den genererade åtkomsttoken och lagra den på en säker plats.
 
 
