@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: f04ab32093371ff425c4e196872738867d9ed528
+source-git-commit: 3d5901e6543b0b5d3214e69c5119367eeb71bf07
 workflow-type: tm+mt
-source-wordcount: '4631'
+source-wordcount: '4633'
 ht-degree: 3%
 
 ---
@@ -766,11 +766,12 @@ ht-degree: 3%
 + Edge Delivery Services {#edge-delivery}
    + [AEM och Edge Delivery Services](/help/edge/overview.md)
    + [Använda Edge Delivery](/help/edge/using.md)
+   + [Starthandbok för utvecklare](/help/edge/edge-dev-getting-started.md)
    + [Skapa innehåll för Edge Delivery](/help/edge/authoring.md)
    + [Publicera innehåll för Edge Delivery](/help/edge/publishing.md)
    + [Developing for Edge Delivery](/help/edge/developing.md)
+   + [Innehållsmodellering](/help/edge/content-modeling.md)
    + [Befintliga projekt och Edge Delivery](/help/edge/existing-projects.md)
-   + [Starthandbok för utvecklare](/help/edge/edge-dev-getting-started.md)
    + Bygger Edge Delivery Applications {#build}
       + [Komma igång - självstudiekurs för utvecklare](/help/edge/developer/tutorial.md)
       + [Anatomi i ett projekt](/help/edge/developer/anatomy-of-a-franklin-project.md)

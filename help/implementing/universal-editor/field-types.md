@@ -2,9 +2,9 @@
 title: Modelldefinitioner, fält och komponenttyper
 description: Lär dig mer om fält och de komponenttyper som den universella redigeraren kan redigera i egenskapsfältet med exempel. Lär dig hur du kan mäta din egen app genom att skapa en modelldefinition och länka till komponenten.
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
-source-git-commit: c721e2f5f14e9d1c069e1dd0a00609980db6bd9d
+source-git-commit: 550d26cde3d6b7be419bc9df70db8894851361c6
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1004'
 ht-degree: 1%
 
 ---
@@ -81,7 +81,7 @@ Ett fältobjekt har följande typdefinition.
 | `required` | `boolean` | Är fältet obligatoriskt | Nej |
 | `readOnly` | `boolean` | Är fältet skrivskyddat | Nej |
 | `hidden` | `boolean` | Är fältet dolt som standard | Nej |
-| `condition` | `RulesLogic` | Regel som visar eller döljer fältet | Nej |
+| `condition` | `RulesLogic` | Regel som visar eller döljer fältet baserat på en [villkor](/help/implementing/universal-editor/customizing.md#conditionally-hide) | Nej |
 | `multi` | `boolean` | Är fältet ett flerfält | Nej |
 | `validation` | `ValidationType` | Valideringsregel eller -regler för fältet | Nej |
 | `raw` | `unknown` | Raw-data som kan användas av komponenten | Nej |
