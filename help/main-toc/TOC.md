@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 3d5901e6543b0b5d3214e69c5119367eeb71bf07
+source-git-commit: c986f817b2dc81e03b9c6f725d8754f017a585dd
 workflow-type: tm+mt
 source-wordcount: '4633'
 ht-degree: 3%
@@ -78,15 +78,15 @@ ht-degree: 3%
    + Versionsinformation om underhåll av AEMaaCS {#maintenance}
       + [Versionsinformation om aktuellt underhåll](/help/release-notes/maintenance/latest.md)
       + 2023 {#2023}
-         + [Underhållsinformation för 2023.11.0](/help/release-notes/maintenance/2023/2023.11.0.md)
-         + [Underhållsinformation för 2023.10.0](/help/release-notes/maintenance/2023/2023.10.0.md)
-         + [Underhållsinformation för 2023.9.0](/help/release-notes/maintenance/2023/2023.9.0.md)
-         + [Underhållsinformation för 2023.8.0](/help/release-notes/maintenance/2023/2023.8.0.md)
-         + [Underhållsinformation för 2023.7.0](/help/release-notes/maintenance/2023/2023.7.0.md)
-         + [Underhållsinformation för 2023.6.0](/help/release-notes/maintenance/2023/2023.6.0.md)
-         + [Underhållsinformation för 2023.4.0](/help/release-notes/maintenance/2023/2023.4.0.md)
-         + [Underhållsinformation för 2023.2.0](/help/release-notes/maintenance/2023/2023.2.0.md)
-         + [Underhållsinformation för 2023.1.0](/help/release-notes/maintenance/2023/2023.1.0.md)
+         + [Underhållsinformation för 2023.11.0](/help/release-notes/maintenance/2023/2023-11-0.md)
+         + [Underhållsinformation för 2023.10.0](/help/release-notes/maintenance/2023/2023-10-0.md)
+         + [Underhållsinformation för 2023.9.0](/help/release-notes/maintenance/2023/2023-9-0.md)
+         + [Underhållsinformation för 2023.8.0](/help/release-notes/maintenance/2023/2023-8-0.md)
+         + [Underhållsinformation för 2023.7.0](/help/release-notes/maintenance/2023/2023-7-0.md)
+         + [Underhållsinformation för 2023.6.0](/help/release-notes/maintenance/2023/2023-6-0.md)
+         + [Underhållsinformation för 2023.4.0](/help/release-notes/maintenance/2023/2023-4-0.md)
+         + [Underhållsinformation för 2023.2.0](/help/release-notes/maintenance/2023/2023-2-0.md)
+         + [Underhållsinformation för 2023.1.0](/help/release-notes/maintenance/2023/2023-1-0.md)
    + Versionsinformation för Cloud Manager {#cloud-manager}
       + [Aktuell versionsinformation](/help/implementing/cloud-manager/release-notes/current.md)
       + 2023 {#2023}
