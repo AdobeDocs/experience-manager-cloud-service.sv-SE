@@ -4,8 +4,8 @@ description: Lär dig hur du konverterar befintliga konfigurationer AEM Dispatch
 exl-id: 2e95ff7b-cc94-477d-99ab-816a58998287
 source-git-commit: f7ffe727ecc7f1331c1c72229a5d7f940070c011
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 18%
+source-wordcount: '330'
+ht-degree: 13%
 
 ---
 
@@ -37,7 +37,7 @@ Se [Dispatcher i molnet](https://experienceleague.adobe.com/docs/experience-mana
 
 AEM Dispatcher Converter kan omfaktorisera befintliga konfigurationer för Managed Services Dispatcher på plats eller Adobe till AEM as a Cloud Service kompatibla Dispatcher-konfigurationer.
 
-## Använda AEM Dispatcher Converter   {#using-dispatcher-converter}
+## Använda AEM Dispatcher Converter {#using-dispatcher-converter}
 
 * Som Adobe Developer CLI: Adobe rekommenderar vi att du använder AEM Dispatcher Converter via `aio-cli-plugin-aem-cloud-service-migration` (AEM plugin-program för omfaktorisering av as a Cloud Service kod för Adobe Developer CLI).
 
