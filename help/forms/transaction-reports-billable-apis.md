@@ -4,9 +4,9 @@ description: Lista över alla API:er som räknas som transaktioner
 feature: Adaptive Forms, Foundation Components
 hide: true
 hidefromtoc: true
-source-git-commit: a1a87a27d73d7472ec02de37621123bbdd3876b4
+source-git-commit: 7318c5e65fc03bfebbf5fb43e4edc30ffbb53909
 workflow-type: tm+mt
-source-wordcount: '1334'
+source-wordcount: '1598'
 ht-degree: 0%
 
 ---
@@ -31,44 +31,42 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
 >[!CONTEXTUALHELP]
 >id="aemforms_cs_transaction_reporting_submission_graph_en"
 >title="Spårare för formuläröverföringar"
->abstract="Spåra enkelt inskickade blanketter i en samlad vy för totalt antal eller fördjupa er i instansspecifik information. Använd det intuitiva stapeldiagrammet för att identifiera trender, jämföra instanser och fatta välgrundade beslut snabbt."
+>abstract="Övervaka enkelt formulärinskickat material i AEM Forms Publish-instansen med vår intuitiva kontrollpanel. Diagrammet innehåller data som är specifika för den aktuella instansen, vilket gör att du snabbt kan analysera trender och fatta välgrundade beslut. Om du vill skicka data från andra instanser behöver du bara öppna kontrollpanelen för respektive instans."
 
 >[!CONTEXTUALHELP]
 >id="aemforms_cs_transaction_reporting_conversions_graph_en"
 >title="Spårare för formulärkonverteringar"
->abstract="Håll koll på formulärkonverteringarna smidigt genom en sammanfattning av det totala antalet eller utforska information för varje instans av AEM Forms. Det lättlästa stapeldiagrammet hjälper dig att identifiera trender, jämföra instanser och fatta snabba, välgrundade beslut."
+>abstract="Håll dig informerad om konverteringen av blanketter med en sammanfattning av det totala antalet konverteringar. Diagrammet innehåller data som är specifika för den aktuella AEM Forms Publish-instansen, vilket gör att du snabbt kan analysera trender och fatta välgrundade beslut. Om du vill visa konverteringsdata för andra instanser öppnar du respektive instans kontrollpanel."
 
 >[!CONTEXTUALHELP]
 >id="aemforms_cs_transaction_reporting_formCreationAvgDuration_graph_en"
 >title="Genomsnittlig varaktighet för formulärgenerering"
->abstract="Diagrammet visar den genomsnittliga tiden det tar att skapa ett formulär. Varje stapel i diagrammet representerar ett specifikt formulär och stolpens höjd anger den genomsnittliga tid det tar att skapa formuläret under den tidsramen. Genom att analysera det här diagrammet blir det lättare för användarna att förstå hur effektivt och snabbt det är att skapa formulär under olika perioder eller i olika sammanhang, vilket ger insikter om möjliga förbättringar."
+>abstract="Diagrammet visar den genomsnittliga tiden det tar att skapa ett formulär. Varje stapel i diagrammet representerar ett specifikt formulär och stolpens höjd anger den genomsnittliga tid det tar att skapa formuläret under den tidsramen. Genom att analysera det här diagrammet blir det lättare för användarna att förstå hur effektivt och snabbt det är att skapa formulär under olika perioder eller i olika sammanhang, vilket ger insikter om möjliga förbättringar. Diagrammet innehåller data som är specifika för den aktuella AEM Forms Author-instansen. Om du vill visa data från andra instanser öppnar du respektive instans kontrollpanel."
 
 >[!CONTEXTUALHELP]
 >id="aemforms_cs_transaction_reporting_formPublishAvgDuration_en"
 >title="Genomsnittlig varaktighet för att skapa formulär"
->abstract="Diagrammet visar den genomsnittliga tiden det tar att skapa och publicera ett formulär, mätt från den första dagen som formuläret öppnades för redigering. Varje stapel motsvarar en viss tidsram för ett formulär, där stapelhöjden anger den genomsnittliga tiden från början av formulärutvecklingen till dess slutförande och publicering."
+>abstract="Diagrammet visar den genomsnittliga tiden det tar att skapa och publicera ett formulär, mätt från den första dagen som formuläret öppnades för redigering. Varje stapel motsvarar en viss tidsram för ett formulär, där stapelhöjden anger den genomsnittliga tiden från början av formulärutvecklingen till dess slutförande och publicering. Diagrammet innehåller data som är specifika för den aktuella AEM Forms Author-instansen. Om du vill visa data från andra instanser öppnar du respektive instans kontrollpanel."
 
 >[!CONTEXTUALHELP]
 >id="aemforms_cs_transaction_reporting_newForms_graph_en"
 >title="Ny Forms Tracker"
->abstract="Diagrammet innehåller information om antalet eller frekvensen av nyskapade formulär under specifika tidsperioder. Varje stapel i diagrammet representerar en separat måttenhet, till exempel dagar, veckor eller månader. Höjden på varje stapel anger antalet eller frekvensen för nya formulär som skapas under det aktuella intervallet."
+>abstract="Diagrammet innehåller information om antalet eller frekvensen av nyskapade formulär under specifika tidsperioder. Varje stapel i diagrammet representerar en separat måttenhet, till exempel dagar, veckor eller månader. Höjden på varje stapel anger antalet eller frekvensen för nya formulär som skapas under det aktuella intervallet. Diagrammet innehåller data som är specifika för den aktuella AEM Forms Author-instansen. Om du vill visa data från andra instanser öppnar du respektive instans kontrollpanel."
 
 >[!CONTEXTUALHELP]
 >id="aemforms_cs_transaction_reporting_publishedForms_graph_en"
 >title="Publicerad Forms Tracker"
->abstract="Diagrammet ger information om antalet eller frekvensen av formulär som har publicerats under specifika tidsperioder. På så sätt kan ni förstå trender, mönster eller variationer i publiceringen av formulär över tiden, vilket underlättar övervakning av produktivitet, identifiering av perioder med hög publiceringstid eller utvärdering av hur väl ändringarna i publiceringsprocessen har lyckats."
+>abstract="Diagrammet ger information om antalet eller frekvensen av formulär som har publicerats under specifika tidsperioder. På så sätt kan ni förstå trender, mönster eller variationer i publiceringen av formulär över tiden, vilket underlättar övervakning av produktivitet, identifiering av perioder med hög publiceringstid eller utvärdering av hur väl ändringarna i publiceringsprocessen har lyckats. Diagrammet innehåller data som är specifika för den aktuella AEM Forms Publish-instansen. Om du vill visa konverteringsdata för andra instanser öppnar du respektive instans kontrollpanel."
 
-<!-- 
 >[!CONTEXTUALHELP]
 >id="aemforms_cs_transaction_reporting_formFragments_graph_en"
->title="Form Fragments Tracker"
->abstract="This graph helps you see how many form fragments people use in their forms. It gives you a sense of how popular or common these reusable parts are in form building."
+>title="Publicerad Forms Tracker"
+>abstract="I det här diagrammet kan du se hur många formulärfragment som används i formulären. Det ger en uppfattning om hur populära eller vanliga dessa återanvändbara delar är i formulärbygget. Diagrammet innehåller data som är specifika för den aktuella AEM Forms Publish-instansen. Om du vill visa konverteringsdata för andra instanser öppnar du respektive instans kontrollpanel."
 
 >[!CONTEXTUALHELP]
 >id="aemforms_cs_transaction_reporting_avgFormPerFragments_graph_en"
->title="Average Duration for Form Fragments Creation"
->abstract= "The graph displays the average time taken to create a form fragment, measured from the initial day the form fragment was opened for editing. Each bar corresponds to a specific time frame for a form fragment, with the bar height indicating the average time taken from the start of form fragment development to its finalization and publication."
-
+>title="Publicerad Forms Tracker"
+>abstract="Diagrammet visar den genomsnittliga tiden det tar att skapa ett formulärfragment, mätt från den första dagen som formulärfragmentet öppnades för redigering. Varje stapel motsvarar en viss tidsram för ett formulärfragment, där stapelhöjden anger den genomsnittliga tiden från början av formulärfragmentets utveckling till dess slutförande och publicering. Diagrammet innehåller data som är specifika för den aktuella AEM Forms Publish-instansen. Om du vill visa konverteringsdata för andra instanser öppnar du respektive instans kontrollpanel."
 
 <!-- 
 
