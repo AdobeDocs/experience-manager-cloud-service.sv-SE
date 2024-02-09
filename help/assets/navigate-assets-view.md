@@ -3,9 +3,9 @@ title: "[!DNL Assets view] användargränssnitt"
 description: Förstå användargränssnittet för och navigering i [!DNL Assets view].
 role: User
 exl-id: 534a8084-88f7-410e-b872-719e47e62b10
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 2f701c527b5aac9d604cbfe857df90c3e8bf6054
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '905'
 ht-degree: 0%
 
 ---
@@ -44,10 +44,10 @@ Du kan bläddra bland mapparna från huvudanvändargränssnittet eller från vä
 * [Uppgifter](/help/assets/my-workspace-assets-view.md): Du kan visa de uppgifter som du har tilldelats under **Mina uppgifter** -fliken. De uppgifter som du har skapat kan visas under **Tilldelade uppgifter** -fliken. De uppgifter du slutför finns under **Slutförda uppgifter** -fliken.
 * [Resurser](/help/assets/manage-organize-assets-view.md): Lista över alla mappar i en trädvy som du har åtkomst till.
 * **Nyligen visade**: Lista med resurser som du nyligen förhandsvisade. [!DNL Assets view] visar bara de resurser som du förhandsgranskar. Det visar inte de resurser som du bläddrar förbi när du bläddrar bland databasfilerna eller databasmapparna.
-* [Samlingar](/help/assets/manage-collections-assets-view.md): En samling är en uppsättning resurser, mappar eller andra samlingar i vyn Adobe Experience Manager Resurser. Använd samlingar för att dela resurser mellan användare. Till skillnad från mappar kan en samling innehålla resurser från olika platser. Du kan dela flera samlingar med en användare. Varje samling innehåller referenser till resurser. Resursernas referensintegritet bevaras i alla samlingar.
+* [Samlingar](/help/assets/manage-collections-assets-view.md): En samling är en uppsättning resurser, mappar eller andra samlingar i vyn Adobe Experience Manager Assets. Använd samlingar för att dela resurser mellan användare. Till skillnad från mappar kan en samling innehålla resurser från olika platser. Du kan dela flera samlingar med en användare. Varje samling innehåller referenser till resurser. Resursernas referensintegritet bevaras i alla samlingar.
 
 * [Insikter](/help/assets/manage-reports-assets-view.md#view-live-statistics): I [!DNL Assets view]kan du visa realtidsinsikter på din instrumentpanel. I resursvyn kan du visa realtidsdata för din resursvymiljö med Insikter-instrumentpanelen. Du kan visa händelsemått i realtid under de senaste 30 dagarna eller under de senaste 12 månaderna.
-* **Papperskorgen**: Lista de resurser som tagits bort från roten **[!UICONTROL Assets]** mapp. Du kan markera en resurs i papperskorgen och antingen återställa den till den ursprungliga platsen eller ta bort den permanent. Du kan också ange ett nyckelord eller använda standardfilter eller anpassade filter för att söka efter lämpliga resurser i papperskorgen. Mer information om hur du använder standardfilter och anpassade filter finns i [Söka efter resurser i resursvyn](/help/assets/search-assets-view.md).
+* **Papperskorgen**: Lista de resurser som tagits bort från roten **[!UICONTROL Assets]** mapp. Du kan markera en resurs i papperskorgen om du vill återställa den till dess ursprungliga plats eller ta bort den permanent. Du kan ange ett nyckelord eller använda filter som resursstatus, filtyp, MIME-typ, bildstorlek, datum när resursen skapades, ändrades och förfallodatum samt filtrera efter resurser som kasserats av den aktuella användaren. Du kan också använda anpassade filter för att söka efter lämpliga resurser i papperskorgen. Mer information om hur du använder standardfilter och anpassade filter finns i [söka efter resurser i resursvyn](/help/assets/search-assets-view.md).
 * **Inställningar**: Du kan konfigurera olika alternativ för resursvyn med **Inställningar**, t.ex. Metadataformulär, rapporter och taxonomihantering.
 
 <!-- TBD: Not sure if we want to publish these right now. CC Libs are beta as per Greg.
