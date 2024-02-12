@@ -2,13 +2,13 @@
 title: Publicera innehåll för Edge Delivery Services
 description: Lär dig hur innehållspublicering fungerar med Edge Delivery Services och hur du publicerar AEM innehåll med Edge Delivery Services.
 feature: Edge Delivery Services
-source-git-commit: 166525b6987215a64521d1ff63a222187376ba65
+exl-id: 32fbb144-9175-47a9-bb5a-ca15f3fcd2d8
+source-git-commit: daad30dd74d389c631131a77655c9fabf4ff2967
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
-
 
 # Publicera innehåll för Edge Delivery Services {#publishing-edge}
 
@@ -22,6 +22,10 @@ Med Edge Delivery Services är det smidigt att publicera innehåll oavsett inneh
 När du använder den universella redigeraren för att skapa AEM innehåll är det bara att klicka på **Publicera** i Universal Editor. Se dokumentet [Publicera innehåll med den universella redigeraren.](/help/implementing/universal-editor/publishing.md)
 
 Informationsflödet vid publicering är följande. När författaren börjar publicera är det här ett automatiskt flöde som illustreras här i informationssyfte.
+
+>[!NOTE]
+>
+>Upp till 5 000 sökvägar som publiceras från redigeringsgränssnittet eller arbetsflöden tillåts per dag. Integrationer som skapar arbetsbelastningar för masspublicering stöds inte.
 
 ![Informationsflödet vid publicering från AEM till Edge Delivery Services](assets/publishing-flow.png)
 
