@@ -5,9 +5,9 @@ keywords: Lägg till en anpassad funktion, använd en anpassad funktion, skapa e
 contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
-source-git-commit: 94a290964a92f8c6ed353d9c77f3dd3b8a5598a4
+source-git-commit: 28020b05e4aaaa3f066943e0504f05e307c7020b
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '759'
 ht-degree: 0%
 
 ---
@@ -64,11 +64,11 @@ Du kan skapa en anpassad funktion med eller utan jsdoc-kommentarer.
             // code to be executed
         }
 ```
+<!--
 
-* **Pilfunktion med obligatorisk jsdoc-kommentar**
+* **Arrow function with mandatory jsdoc comment**
 
-Några exempel på hur du skapar pilfunktioner är:
-
+Some of the examples to create Arrow functions are:
 ```javascript
     /**
     * test function
@@ -82,7 +82,6 @@ Några exempel på hur du skapar pilfunktioner är:
     };
 ```
 
-<!-- 
     * @param {string=} b another parameter description
       /** */
     testFunction1=(a) => (return a)
