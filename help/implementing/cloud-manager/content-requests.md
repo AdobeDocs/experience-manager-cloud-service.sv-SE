@@ -2,9 +2,9 @@
 title: Förstå begäranden om Cloud Service innehåll
 description: Om du har köpt innehållsförfrågningslicenser från Adobe kan du ta reda på vilka typer av innehållsförfrågningar som Adobe Experience Cloud som en tjänst mäter och varianterna med en organisations analysrapporteringsverktyg.
 exl-id: 3666328a-79a7-4dd7-b952-38bb60f0967d
-source-git-commit: 13a2aad1fc8080fb0d5060fcc31c9b71f1a833ca
+source-git-commit: 9033820fa0dc8eee181e3f581675f45cf11e694a
 workflow-type: tm+mt
-source-wordcount: '2682'
+source-wordcount: '2688'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 0%
 Cloud Servicens innehållsbegäranden mäts via datainsamling på serversidan. Samlingen aktiveras via CDN-logganalys.
 
 >[!NOTE]
->För ett begränsat antal [Kunder som är tidiga](/help/release-notes/release-notes-cloud/release-notes-current.md#sites-early-adopter), aktiveras även klientsidans samling via RUM-mätning (Real User Monitoring). Du kan läsa mer i dokumentationen i [den här artikeln](#real-user-monitoring-for-aem-as-a-cloud-service).
+>För ett begränsat antal [Kunder som är tidiga](/help/release-notes/release-notes-cloud/release-notes-current.md#sites-early-adopter), aktiveras även klientsidans samling via mätning av tjänst för övervakning av verkliga användare. Du kan läsa mer i dokumentationen i [den här artikeln](#real-user-monitoring-for-aem-as-a-cloud-service).
 
 ## Förstå begäranden om Cloud Service innehåll {#understaing-cloud-service-content-requests}
 
 Innehållsförfrågningar samlas automatiskt in på serversidan vid Adobe Experience Manager as a Cloud Service kant via automatisk analys av loggfiler som kommer från AEM as a Cloud Service CDN. Detta görs genom att isolera de förfrågningar som returnerar HTML `(text/html)` eller JSON `(application /Json)` Innehåll från CDN, baserat på flera av de regler för inkludering och uteslutning som anges nedan. En innehållsbegäran görs oberoende av det returnerade innehåll som opereras från CDN-cachen eller det innehåll som skickas tillbaka till CDN-källan (AEM).
 
-Tjänsten Real User Monitoring (RUM) Data Service, klientsidans samling, ger en mer exakt återgivning av användarinteraktioner och säkerställer ett tillförlitligt mått på webbplatsens engagemang. Detta ger kunderna avancerade insikter om deras sidtrafik och prestanda. Detta är fördelaktigt för både kunder som använder antingen det CDN som hanteras av Adobe eller ett CDN som inte hanteras av Adobe. Dessutom kan automatisk trafikrapportering nu aktiveras för kunder som använder ett CDN som inte hanteras av Adobe, vilket eliminerar behovet av att dela trafikrapporter med Adobe.
+Real User Monitoring Service, klientsamlingen, ger en mer exakt återgivning av användarinteraktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Detta ger kunderna avancerade insikter om deras sidtrafik och prestanda. Detta är fördelaktigt för både kunder som använder antingen det CDN som hanteras av Adobe eller ett CDN som inte hanteras av Adobe. Dessutom kan automatisk trafikrapportering nu aktiveras för kunder som använder ett CDN som inte hanteras av Adobe, vilket eliminerar behovet av att dela trafikrapporter med Adobe.
 
 För kunder som lägger sitt eget CDN ovanpå AEM as a Cloud Service resulterar rapportering på serversidan i siffror som inte kan användas för att jämföra med förfrågningar om licensierat innehåll. Dessa siffror måste mätas av kunden i kanten av det yttre nätverket för CDN. För dessa kunder, rapportering på klientsidan och tillhörande prestanda, [Adobe RUM Data Service](#real-user-monitoring-for-aem-as-a-cloud-service) är det rekommenderade alternativet Adobe. Se [versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md#sites-early-adopter) om du vill ha information om hur du anmäler dig.
 
@@ -90,9 +90,9 @@ Se även [Licensieringspanel](/help/implementing/cloud-manager/license-dashboard
 
 ### Ökning {#overview}
 
-Real User Monitoring (RUM) är en typ av teknik för prestandaövervakning som samlar in och analyserar de digitala användarupplevelserna på en webbplats eller i en applikation i realtid. Den ger synlighet i ett webbprograms realtidsprestanda och ger korrekta insikter i slutanvändarens upplevelse.
+Tjänsten för övervakning av verkliga användare är en typ av teknik för prestandaövervakning som samlar in och analyserar de digitala användarupplevelserna för en webbplats eller tillämpning i realtid. Den ger synlighet i ett webbprograms realtidsprestanda och ger korrekta insikter i slutanvändarens upplevelse.
 
-Real User Monitoring (RUM, Real User Monitoring) ger djupgående insikter i nyckeltal från det att URL:en startas tills begäran skickas tillbaka till webbläsaren. Tillsammans hjälper utvecklarna att förbättra applikationen så att den blir enkel att använda för slutanvändarna.
+Real User Monitoring Service ger djupgående insikter i nyckeltal från det att URL:en initieras tills begäran skickas tillbaka till webbläsaren, som alla hjälper utvecklarna att förbättra programmet så att det blir enkelt att använda för slutanvändarna.
 
 ### Vem kan utnyttja Real User Monitoring Service? {#who-can-benefit-from-rum-service}
 
@@ -110,19 +110,19 @@ Adobe Experience Manager använder Real User Monitoring (RUM) för att hjälpa k
 
 ### Övervakningstjänst och integritet för verkliga användare {#rum-service-and-privacy}
 
-Real User Monitoring i Adobe Experience Manager är utformat för att bevara besökarnas integritet och minimera datainsamlingen. Som besökare innebär detta att ingen personlig information samlas in av den webbplats du besöker eller görs tillgänglig för Adobe.
+Tjänsten för övervakning av verkliga användare i Adobe Experience Manager har utformats för att skydda besökarnas integritet och minimera datainsamlingen. Som besökare innebär detta att ingen personlig information samlas in av den webbplats du besöker eller görs tillgänglig för Adobe.
 
 Som webbplatsoperatör innebär detta att inget ytterligare deltagande krävs för att aktivera övervakning via den här funktionen. Det innebär att det inte finns något extra popup-fönster där slutanvändarna kan godkänna aktivering av RUM-övervakning.
 
 ### Datainsamling för övervakning av verkliga användare {#rum-service-data-sampling}
 
-Traditionella webbanalyslösningar försöker samla in data om varje enskild besökare. Adobe Experience Manager Real User Monitoring hämtar bara information från en liten del av sidvyerna. Real User Monitoring (RUM) är avsett att samplas och anonymiseras i stället för att ersättas för analyser. Som standard har sidorna 1:100 samplingsförhållande. Webbplatsoperatorer kan inte konfigurera det här talet för att öka eller minska samplingsfrekvensen från och med i dag. För att uppskatta den totala trafiken korrekt samlar vi in detaljerade data från en sida för varje 100 sidvy, vilket ger en tillförlitlig uppskattning av den totala trafiken.&quot;
+Traditionella webbanalyslösningar försöker samla in data om varje enskild besökare. Adobe Experience Manager tjänst för övervakning av verkliga användare hämtar endast information från en liten del av sidvyerna. Data från tjänsten för övervakning av verkliga användare ska samplas och anonymiseras i stället för att ersättas för analyser. Som standard har sidorna 1:100 samplingsförhållande. Webbplatsoperatorer kan inte konfigurera det här talet för att öka eller minska samplingsfrekvensen från och med i dag. För att uppskatta den totala trafiken korrekt samlar vi in detaljerade data från en sida för varje 100 sidvy, vilket ger en tillförlitlig uppskattning av den totala trafiken.&quot;
 
 När man bestämmer sig för om uppgifterna ska samlas in sida för sida blir det praktiskt taget omöjligt att spåra interaktionen mellan flera sidor. RUM har inget koncept för besök, besökare eller sessioner, bara för sidvisningar. Det här är designat.
 
 ### Vilka data samlas in {#what-data-is-being-collected}
 
-Real User Monitoring (RUM) är avsett att förhindra insamling av personligt identifierbar information. Den fullständiga uppsättningen information som kan samlas in av Adobe Experience Manager Real User Monitoring (Reell användarövervakning) visas nedan:
+Tjänsten för övervakning av verkliga användare är utformad för att förhindra insamling av personligt identifierbar information. Den fullständiga uppsättningen information som kan samlas in av Adobe Experience Manager tjänst för övervakning av verkliga användare visas nedan:
 
 * Värdnamnet för den webbplats som besöktes, till exempel: `experienceleague.adobe.com`
 * Den breda användaragenttyp som används för att visa sidan, till exempel: dator eller mobil
@@ -140,7 +140,7 @@ Real User Monitoring (RUM) är avsett att förhindra insamling av personligt ide
 
 * Om du vill delta i vårt program för tidig Adobe-användare skickar du ett mejl till `aemcs-rum-adopter@adobe.com`, tillsammans med ditt domännamn för produktions-, scen- och utvecklingsmiljön från din e-postadress som är kopplad till din Adobe ID. Adobe produktteam aktiverar sedan datatjänsten Real User Monitoring (RUM) åt dig.
 * När detta är klart skapar Adobe produktteam en kanal för kundsamarbete.
-* Adobe produktgrupp kommer att kontakta dig för att ge dig en URL för domännyckeln och datapanelen där du kan visa sidvyer och [Core Web Vitals (CWV)](https://web.dev/vitals/) Mätvärden som samlats in av samlingen Real User Monitoring (RUM) på klientsidan.
+* Adobe produktgrupp kommer att kontakta dig för att ge dig en URL för domännyckeln och datapanelen där du kan visa sidvyer och [Core Web Vitals (CWV)](https://web.dev/vitals/) Mätvärden som samlats in av tjänsten Real User Monitoring på klientsidan.
 * Därefter får du vägledning om hur du använder domännyckeln för att få åtkomst till instrumentpanelens URL och visa mätvärdena.
 
 ### Hur data från Real User Monitoring Service används {#how-rum-service-data-is-being-used}
@@ -157,11 +157,11 @@ Eftersom du kommer att analysera dessa data kan det finnas eller inte finnas avv
 
 1. **Spårarblockerare**
 
-   * Slutanvändare som använder blockerare för spårning eller tillägg för sekretess kan hindra datainsamlingen i Real User Monitoring (RUM) eftersom dessa verktyg begränsar körningen av spårningsskript. Begränsningen kan leda till underrapporterade sidvisningar och användarinteraktioner, vilket skapar en diskrepans mellan faktisk webbplatsaktivitet och data som hämtas av RUM.
+   * Slutanvändare som använder blockerare för spårning eller tillägg för sekretess kan hindra datainsamlingen i tjänsten Real User Monitoring, eftersom dessa verktyg begränsar körningen av spårningsskript. Begränsningen kan leda till underrapporterade sidvisningar och användarinteraktioner, vilket skapar en diskrepans mellan faktisk webbplatsaktivitet och data som hämtas av RUM.
 
 1. **Begränsningar i hämtning av API-/JSON-anrop**
 
-   * RUM-datatjänsten fokuserar på klientupplevelsen och fångar inte upp backend-API:t eller JSON-anrop just nu. Om dessa anrop utelämnas från data från Real User Monitoring (RUM) skapas avvikelser från de innehållsförfrågningar som mäts i CDN Analytics.
+   * RUM-datatjänsten fokuserar på klientupplevelsen och fångar inte upp backend-API:t eller JSON-anrop just nu. Om dessa anrop utelämnas från Real User Monitoring Service-data skapas avvikelser från innehållsförfrågningar som mäts med CDN Analytics.
 
 ### Vanliga frågor {#faq}
 
