@@ -1,13 +1,13 @@
 ---
 title: Skapa och lägga till anpassade funktioner i ett adaptivt formulär
-description: AEM Forms har stöd för anpassade funktioner som gör att användare kan skapa och använda sina egna funktioner i regelredigeraren.
+description: AEM Forms stöder anpassade funktioner som gör att användare kan skapa och använda sina egna funktioner i regelredigeraren.
 keywords: Lägg till en anpassad funktion, använd en anpassad funktion, skapa en anpassad funktion, använd anpassad funktion i regelredigeraren.
 contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
-source-git-commit: 28020b05e4aaaa3f066943e0504f05e307c7020b
+source-git-commit: 1fb7fece71eec28219ce36c72d628867a222b618
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ Some of the examples to create Arrow functions are:
 
 * **Funktionsuttryck med obligatorisk jsdoc-kommentar**
 
-Skapa anpassade funktioner i följande format för att lista dem i regelredigeraren i ett adaptivt formulär. Till exempel:
+Om du vill visa anpassade funktioner i regelredigeraren för ett adaptivt formulär skapar du anpassade funktioner i följande format:
 
 ```javascript
     /**
@@ -118,7 +118,7 @@ The functions that are not supported in the custom function list are:
 
 >[!NOTE]
 >
-> Du kan kontrollera `error.log` -filen om fel som anpassade funktioner inte finns med i regelredigeraren.
+> Du kan kontrollera `error.log` om det finns fel i filen, t.ex. om anpassade funktioner inte visas i regelredigeraren.
 
 <!--The `error.log` file also displays the methods and parameters that are not supported for custom functions. -->
 
@@ -136,13 +136,13 @@ Steg för att skapa anpassade funktioner är:
 Du kan lägga till anpassade funktioner genom att lägga till klientbibliotek. Så här skapar du ett klientbibliotek:
 
 1. [Klona din AEM Forms as a Cloud Service databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#accessing-git).
-1. Skapa en mapp under `[AEM Forms as a Cloud Service repository folder]/apps/` mapp. Skapa till exempel en mapp med namnet som `experience-league`
-1. Navigera till `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/experience-league/` och skapa `ClientLibraryFolder` as `es6clientlibs`.
-1. Lägg till en egenskap `categories`med strängtypsvärde som `es6customfunctions` till `es6clientlibs` mapp.
+1. Skapa en mapp under `[AEM Forms as a Cloud Service repository folder]/apps/` mapp. Skapa till exempel en mapp med namnet som `experience-league`.
+1. Navigera till `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/experience-league/` och skapa `ClientLibraryFolder`. Skapa till exempel en biblioteksmapp för klient som `es6clientlibs`.
+1. Lägg till en egenskap `categories` med strängtypsvärde. Tilldela till exempel värdet `es6customfunctions` till `categories` -egenskapen för `es6clientlibs` mapp.
 
    >[!NOTE]
    >
-   >`es6customfunctions`är en exempelkategori. Du kan välja vilket namn som helst för kategorin.
+   > Du kan välja valfritt namn för `client library folder` och `categories` -egenskap.
 
 1. Skapa en mapp med namnet `js`.
 1. Navigera till `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/es6clientlibs/js` mapp.
@@ -150,7 +150,7 @@ Du kan lägga till anpassade funktioner genom att lägga till klientbibliotek. S
 
    >[!NOTE]
    >
-   >* Om JavaScript-filen som innehåller kod för anpassade funktioner har ett fel, visas inte de anpassade funktionerna i regelredigeraren i ett anpassat formulär. Du kan även kontrollera `error.log` fil för felet.
+   > Om JavaScript-filen som innehåller kod för anpassade funktioner har ett fel, visas inte de anpassade funktionerna i regelredigeraren i ett anpassat formulär. Du kan även kontrollera `error.log` fil för felet.
 
    <!-- 
     >* AEM Adaptive Form supports the caching of custom functions. If the JavaScript is modified, the caching becomes invalidated, and it is parsed. You can see a message as `Fetched following custom functions list from cache` in the `error.log` file.  -->
@@ -179,18 +179,22 @@ När pipeline har körts blir den anpassade funktionen som lagts till i klientbi
 
 ### Lägga till klientbibliotek i ett adaptivt formulär{#use-custom-function}
 
-När du har lagt till ditt klientbibliotek kan du använda det i ditt adaptiva formulär. Du kan använda [anpassad funktion som regel i formuläret](/help/forms/rule-editor.md#custom-functions). Så här lägger du till klientbiblioteket i ditt adaptiva formulär:
+När du har distribuerat klientbiblioteket till Forms CS-miljön kan du använda funktionerna i ditt adaptiva formulär. Lägga till klientbiblioteket i ditt adaptiva formulär
 
-1. Öppna formuläret i redigeringsläge.
-Om du vill öppna ett formulär i redigeringsläge markerar du ett formulär och väljer **[!UICONTROL Open]**.
-1. Markera en komponent i redigeringsläget och välj sedan ![fältnivå](assets/select_parent_icon.svg) > **[!UICONTROL Adaptive Form Container]** och sedan markera ![cmppr](assets/configure-icon.svg).
-1. Lägg till ditt klientbibliotek i sidofältet under Klientbibliotekets namn. ( `es6customfunctions` i exemplet.)
+1. Öppna formuläret i redigeringsläge. Om du vill öppna ett formulär i redigeringsläge markerar du ett formulär och väljer **[!UICONTROL Edit]**.
+1. Öppna innehållsläsaren och välj **[!UICONTROL Guide Container]** som ingår i det adaptiva formuläret.
+1. Klicka på egenskaperna för stödlinjebehållaren ![Stödlinjeegenskaper](/help/forms/assets/configure-icon.svg) -ikon. Dialogrutan Adaptiv formulärbehållare öppnas.
+1. Öppna **[!UICONTROL Basic]** och välj namnet på **[!UICONTROL client library category]** från listrutan (i det här fallet väljer `es6customfunctions`).
 
    ![Lägga till klientbiblioteket för anpassade funktioner](/help/forms/assets/clientlib-custom-function.png)
 
-Skapa en regel som ska använda en anpassad funktion i regelredigeraren.
+1. Klicka **[!UICONTROL Done]** .
+
+Nu kan du skapa en regel som använder anpassade funktioner i regelredigeraren.
 
 <!--
+
+Create a rule to use custom function in the rule editor. 
 
 ### Support for the optional parameters in custom functions{#support-for-optional-parameter}
 
