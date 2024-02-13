@@ -2,9 +2,9 @@
 title: Komma igång med Universal Editor i AEM
 description: Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
-source-git-commit: f9d584d7b117c24224079f581802f5f126890304
+source-git-commit: 3dff6fa71c29da70daba80176d2fe51ef1e05200
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '921'
 ht-degree: 0%
 
 ---
@@ -62,8 +62,15 @@ import "@adobe/universal-editor-cors";
 Om du inte implementerar ett React-program och/eller kräver återgivning på serversidan, kan du lägga till följande i dokumentets brödtext.
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/adobe/universal-editor-cors/dist/universal-editor-embedded.js" async></script>
+<script src="https://universal-editor-service.experiencecloud.live/corslib/LATEST" async></script>
 ```
+
+Den senaste versionen rekommenderas alltid, men det går att referera till tidigare versioner av tjänsten om ändringarna bryts.
+
+* `https://universal-editor-service.experiencecloud.live/corslib/LATEST` - det allra senaste EU CORS lib
+* `https://universal-editor-service.experiencecloud.live/corslib/2/LATEST` - senaste UE CORS lib under version 2.x
+* `https://universal-editor-service.experiencecloud.live/corslib/2.1/LATEST` - det senaste UE CORS-klippet under version 2.1.x
+* `https://universal-editor-service.experiencecloud.live/corslib/2.1.1`- Exakt UE CORS lib version 2.1.1
 
 ## Lägg till nödvändiga OSGi-konfigurationer {#osgi-configurations}
 

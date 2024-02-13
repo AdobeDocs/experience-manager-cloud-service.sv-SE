@@ -2,9 +2,9 @@
 title: Universal Editor Overview for AEM Developers
 description: Om du är en AEM utvecklare som är intresserad av hur den universella redigeraren fungerar och hur du använder den i ditt projekt ger det här dokumentet dig en introduktion genom att leda dig genom att instrumentera WKND-projektet så att det fungerar tillsammans med den universella redigeraren.
 exl-id: d6f9ed78-f63f-445a-b354-f10ea37b0e9b
-source-git-commit: d7154fcec9cf6e3cb00ce8e434e38544294df165
+source-git-commit: 3dff6fa71c29da70daba80176d2fe51ef1e05200
 workflow-type: tm+mt
-source-wordcount: '3112'
+source-wordcount: '3139'
 ht-degree: 0%
 
 ---
@@ -150,7 +150,7 @@ Du måste lägga till det nödvändiga JavaScript-biblioteket till sidkomponente
 1. Lägg till JavaScript-biblioteket i slutet av filen.
 
    ```html
-   <script src="https://cdn.jsdelivr.net/gh/adobe/universal-editor-cors/dist/universal-editor-embedded.js"></script>
+   <script src="https://universal-editor-service.experiencecloud.live/corslib/LATEST"></script>
    ```
 
 1. Klicka **Spara alla** och sedan läsa in Universal Editor igen.
@@ -183,6 +183,8 @@ Du har dock troligen lagt märke till att du inte kan interagera med sidan i Uni
    ```html
    <meta name="urn:adobe:aue:system:aem" content="aem:https://localhost:8443">
    ```
+
+   * Den senaste versionen av biblioteket rekommenderas alltid. Om du behöver en tidigare version, se dokumentet [Getting Started with the Universal Editor in AEM.](/help/implementing/universal-editor/getting-started.md#alternative)
 
 1. Lägg till de metadata som behövs för anslutningen till den lokala Universal Editor-tjänsten i slutet av filen.
 
