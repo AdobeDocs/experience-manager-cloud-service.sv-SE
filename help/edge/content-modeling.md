@@ -1,9 +1,9 @@
 ---
 title: Innehållsmodellering för AEM med Edge Delivery Services Projects
 description: Lär dig hur innehållsmodellering fungerar AEM redigering med projekt för Edge Delivery Services och hur du modellerar eget innehåll.
-source-git-commit: 8f3c7524ae8ee642a9aee5989e03e6584a664eba
+source-git-commit: e9c882926baee001170bad2265a1085e03cdbedf
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '2097'
 ht-degree: 0%
 
 ---
@@ -109,16 +109,19 @@ För varje block gäller följande:
 
 * Måste använda `core/franklin/components/block/v1/block` resurstyp, den allmänna implementeringen av blocklogiken i AEM.
 * Blocknamnet måste definieras, som ska återges i blockets tabellrubrik.
+   * Blocknamnet används för att hämta rätt format och skript för att dekorera blocket.
 * Kan definiera en [modell-ID.](/help/implementing/universal-editor/field-types.md#model-structure)
+   * Modell-ID är en referens till komponentens modell, som definierar de fält som är tillgängliga för författaren i egenskapsfältet.
 * Kan definiera en [filter-ID.](/help/implementing/universal-editor/customizing.md#filtering-components)
+   * Filter-ID är en referens till komponentens filter, som gör att du kan ändra redigeringsbeteendet, till exempel genom att begränsa vilka underordnade som kan läggas till i blocket eller avsnittet eller vilka RTE-funktioner som är aktiverade.
 
-All den här informationen lagras i AEM när ett block läggs till på en sida.
+All den här informationen lagras i AEM när ett block läggs till på en sida. Om resurstypen eller blocknamnet saknas återges inte blocket på sidan.
 
 >[!WARNING]
 >
->Det är inte nödvändigt att implementera anpassade AEM. Komponenterna för Edge Delivery Services som tillhandahålls av AEM är tillräckliga och erbjuder vissa skyddsräcken för att underlätta utvecklingen.
+>Det är inte nödvändigt eller rekommenderat att implementera anpassade AEM. Komponenterna för Edge Delivery Services som tillhandahålls av AEM är tillräckliga och erbjuder vissa skyddsräcken för att underlätta utvecklingen.
 >
->Därför rekommenderar Adobe inte att du använder anpassade AEM-resurstyper.
+>Komponenterna i AEM återger en kod som kan användas av [helix-html2md](https://github.com/adobe/helix-html2md) vid publicering till Edge Delivery Services och [aem.js](https://github.com/adobe/aem-boilerplate/blob/main/scripts/aem.js) när du läser in en sida i Universal Editor. Markeringen är det stabila kontraktet mellan AEM och andra delar av systemet och tillåter inte anpassningar. Därför får projekt inte ändra komponenterna och inte använda anpassade komponenter.
 
 ### Blockstruktur {#block-structure}
 
@@ -130,7 +133,9 @@ I den enklaste formen återger ett block varje egenskap i en enda rad/kolumn i d
 
 I följande exempel definieras bilden först i modellen och sedan i textsekunden. De återges alltså med bilden först och sedan med texten sekund.
 
-##### Data {#data-simple}
+>[!BEGINTABS]
+
+>[!TAB Data]
 
 ```json
 {
@@ -142,7 +147,7 @@ I följande exempel definieras bilden först i modellen och sedan i textsekunden
 }
 ```
 
-##### Markering {#markup-simple}
+>[!TAB Markering]
 
 ```html
 <div class="hero">
@@ -161,6 +166,20 @@ I följande exempel definieras bilden först i modellen och sedan i textsekunden
 </div>
 ```
 
+>[!TAB Tabell]
+
+```text
++---------------------------------------------+
+| Hero                                        |
++=============================================+
+| ![Helix - a shape like a corkscrew][image0] |
++---------------------------------------------+
+| # Welcome to AEM                            |
++---------------------------------------------+
+```
+
+>[!ENDTABS]
+
 Du kan lägga märke till att vissa typer av värden tillåter semikolonisering i markeringen, och egenskaper kombineras i enskilda celler. Detta beteende beskrivs i avsnittet [Texthärledning.](#type-inference)
 
 #### Nyckelvärdesblock {#key-value}
@@ -171,7 +190,9 @@ I andra fall läses dock blocket som en konfiguration som påminner om nyckelvä
 
 Ett exempel på detta är [metadata för avsnitt.](/help/edge/developer/markup-sections-blocks.md#sections) I det här fallet kan blocket konfigureras att återges som nyckelvärdepar-tabell. Se avsnittet [Avsnittsmetadata](#sections-metadata) för mer information.
 
-##### Data {#data-key-value}
+>[!BEGINTABS]
+
+>[!TAB Data]
 
 ```json
 {
@@ -184,7 +205,7 @@ Ett exempel på detta är [metadata för avsnitt.](/help/edge/developer/markup-s
 }
 ```
 
-##### Markering {#markup-key-value}
+>[!TAB Markering]
 
 ```html
 <div class="featured-articles">
@@ -203,13 +224,31 @@ Ett exempel på detta är [metadata för avsnitt.](/help/edge/developer/markup-s
 </div>
 ```
 
+>[!TAB Tabell]
+
+```text
++-----------------------------------------------------------------------+
+| Featured Articles                                                     |
++=======================================================================+
+| source   | [/content/site/articles.json](/content/site/articles.json) |
++-----------------------------------------------------------------------+
+| keywords | Developer,Courses                                          |
++-----------------------------------------------------------------------+
+| limit    | 4                                                          |
++-----------------------------------------------------------------------+
+```
+
+>[!ENDTABS]
+
 #### Behållarblock {#container}
 
 Båda de tidigare strukturerna har en enda dimension: listan med egenskaper. Behållarblock gör att du kan lägga till underordnade (vanligtvis av samma typ eller modell) och därför är tvådimensionella. Dessa block har fortfarande stöd för sina egna egenskaper som återges som rader med en enda kolumn först. Men de tillåter också att du lägger till underordnade objekt, för vilka varje objekt återges som rad och varje egenskap som kolumn i den raden.
 
 I följande exempel accepterar ett block en lista med länkade ikoner som underordnade, där varje länkad ikon har en bild och en länk. Lägg märke till [filter-ID](/help/implementing/universal-editor/customizing.md#filtering-components) anges i blockets data för att referera till filterkonfigurationen.
 
-##### Data {#data-container}
+>[!BEGINTABS]
+
+>[!TAB Data]
 
 ```json
 {
@@ -232,7 +271,7 @@ I följande exempel accepterar ett block en lista med länkade ikoner som undero
 }
 ```
 
-##### Markering {#markup-container}
+>[!TAB Markering]
 
 ```html
 <div class="our-partners">
@@ -263,6 +302,22 @@ I följande exempel accepterar ett block en lista med länkade ikoner som undero
   </div>
 </div>
 ```
+
+>[!TAB Tabell]
+
+```text
++------------------------------------------------------------ +
+| Our Partners                                                |
++=============================================================+
+| Our community of partners is ...                            |
++-------------------------------------------------------------+
+| ![Icon of Foo][image0] | [https://foo.com](https://foo.com) |
++-------------------------------------------------------------+
+| ![Icon of Bar][image1] | [https://bar.com](https://bar.com) |
++-------------------------------------------------------------+
+```
+
+>[!ENDTABS]
 
 ### Skapa semantiska innehållsmodeller för block {#creating-content-models}
 
@@ -300,7 +355,9 @@ Fältkomprimering är den mekanism som används för att kombinera flera fältv�
 
 ##### Bilder {#image-collapse}
 
-###### Data {#data-image}
+>[!BEGINTABS]
+
+>[!TAB Data]
 
 ```json
 {
@@ -309,7 +366,7 @@ Fältkomprimering är den mekanism som används för att kombinera flera fältv�
 }
 ```
 
-###### Markering {#markup-image}
+>[!TAB Markering]
 
 ```html
 <picture>
@@ -317,9 +374,19 @@ Fältkomprimering är den mekanism som används för att kombinera flera fältv�
 </picture>
 ```
 
+>[!TAB Tabell]
+
+```text
+![A red car on a road][image0]
+```
+
+>[!ENDTABS]
+
 ##### Länkar och knappar {#links-buttons-collapse}
 
-###### Data {#data-links-buttons}
+>[!BEGINTABS]
+
+>[!TAB Data]
 
 ```json
 {
@@ -330,7 +397,7 @@ Fältkomprimering är den mekanism som används för att kombinera flera fältv�
 }
 ```
 
-###### Markering {#markup-links-buttons}
+>[!TAB Markering]
 
 Nej `linkType`, eller `linkType=default`
 
@@ -354,9 +421,21 @@ Nej `linkType`, eller `linkType=default`
 </em>
 ```
 
+>[!TAB Tabell]
+
+```text
+[adobe.com](https://www.adobe.com "Navigate to adobe.com")
+**[adobe.com](https://www.adobe.com "Navigate to adobe.com")**
+_[adobe.com](https://www.adobe.com "Navigate to adobe.com")_
+```
+
+>[!ENDTABS]
+
 ##### Rubriker {#headings-collapse}
 
-###### Data {#data-headings}
+>[!BEGINTABS]
+
+>[!TAB Data]
 
 ```json
 {
@@ -365,19 +444,31 @@ Nej `linkType`, eller `linkType=default`
 }
 ```
 
-###### Markering {#markup-headings}
+>[!TAB Markering]
 
 ```html
 <h2>Getting started</h2>
 ```
 
+>[!TAB Tabell]
+
+```text
+## Getting started
+```
+
+>[!ENDTABS]
+
 #### Elementgruppering {#element-grouping}
 
 while [fältkomprimering](#field-collapse) Om du vill kombinera flera egenskaper till ett enda semantiskt element, handlar elementgruppering om att sammanfoga flera semantiska element till en enda cell. Detta är särskilt användbart när det gäller användningsfall där författaren bör begränsas i den typ och det antal element som de kan skapa.
 
-Författaren bör till exempel bara skapa en underrubrik, rubrik och en enda styckebeskrivning kombinerat med högst två knappar för att ringa in. När du grupperar dessa element tillsammans skapas en semantisk kod som kan formateras utan ytterligare åtgärd.
+En teaser-komponent kan t.ex. tillåta författaren att endast skapa en underrubrik, rubrik och en enda styckebeskrivning kombinerat med högst två knappar för att anropa till åtgärd. När du grupperar dessa element tillsammans skapas en semantisk kod som kan formateras utan ytterligare åtgärd.
 
-##### Data {#data-grouping}
+Elementgruppering använder en namnkonvention där gruppnamnet separeras från varje egenskap i gruppen med ett understreck. Fältkomprimering av egenskaperna i en grupp fungerar som tidigare beskrivits.
+
+>[!BEGINTABS]
+
+>[!TAB Data]
 
 ```json
 {
@@ -397,7 +488,7 @@ Författaren bör till exempel bara skapa en underrubrik, rubrik och en enda sty
 }
 ```
 
-##### Markering {#markup-grouping}
+>[!TAB Markering]
 
 ```html
 <div class="teaser">
@@ -419,6 +510,24 @@ Författaren bör till exempel bara skapa en underrubrik, rubrik och en enda sty
   </div>
 </div>
 ```
+
+>[!TAB Tabell]
+
+```text
++-------------------------------------------------+
+| Teaser                                          |
++=================================================+
+| ![A group of people sitting on a stage][image0] |
++-------------------------------------------------+
+| Adobe Experience Cloud                          |
+| ## Welcome to AEM                               |
+| Join us in this ask me everything session ...   |
+| [More Details](https://link.to/more-details)    |
+| [RSVP](https://link.to/sign-up)                 |
++-------------------------------------------------+
+```
+
+>[!ENDTABS]
 
 ## Avsnittsmetadata {#sections-metadata}
 
@@ -500,18 +609,17 @@ Det går att definiera metadata per bana eller per bana på ett tabellliknande s
 
 Om du vill skapa en sådan tabell skapar du en sida och använder metadatamallen i webbplatskonsolen.
 
->[!NOTE]
->
->När du redigerar metadatakalkylbladet ska du se till att växla till **Förhandsgranska** eftersom redigeringen görs på själva sidan, inte i redigeraren.
-
-I kalkylbladets sidegenskaper definierar du de metadatafält som du behöver tillsammans med URL:en. Lägg sedan till metadata per sidsökväg eller sidsökvägsmönster, där URL-fältet relaterar till mappade, offentliga sökvägar och inte innehållssökvägen i AEM.
+I kalkylbladets sidegenskaper definierar du de metadatafält som du behöver tillsammans med URL:en. Lägg sedan till metadata per sidbana eller sidsökvägsmönster.
 
 Kontrollera att kalkylbladet läggs till i sökvägsmappningen innan du publicerar det.
 
-```text
-mappings:
-  - /content/site/:/
-  - /content/site/metadata:/metadata.json
+```json
+{
+  "mappings": [
+    "/content/site/:/",
+    "/content/site/metadata:/metadata.json"
+  ]
+}
 ```
 
 ### Sidegenskaper {#page-properties}
