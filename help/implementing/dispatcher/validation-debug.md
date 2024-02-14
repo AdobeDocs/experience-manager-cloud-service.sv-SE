@@ -3,9 +3,9 @@ title: Validera och felsöka med Dispatcher Tools
 description: Lär dig mer om lokal validering, felsökning, filstrukturen i flexibelt läge och hur du migrerar från äldre läge till flexibelt läge.
 feature: Dispatcher
 exl-id: 9e8cff20-f897-4901-8638-b1dbd85f44bf
-source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
+source-git-commit: 2cb57347856568da979b34832ce12cce295841dd
 workflow-type: tm+mt
-source-wordcount: '2971'
+source-wordcount: '3028'
 ht-degree: 0%
 
 ---
@@ -300,7 +300,7 @@ Under en driftsättning av Cloud Manager `httpd -t` syntaxkontrollen körs ocks�
 
 >[!NOTE]
 >
-Se [Automatisk omladdning och validering](#automatic-loading) för ett effektivt alternativ till att köra `validate.sh` efter varje konfigurationsändring.
+>Se [Automatisk omladdning och validering](#automatic-loading) för ett effektivt alternativ till att köra `validate.sh` efter varje konfigurationsändring.
 
 ### Fas 1 {#first-phase}
 
@@ -440,8 +440,8 @@ Den här fasen kontrollerar Apache-syntaxen genom att starta Apache HTTPD i en d
 
 >[!NOTE]
 >
-Windows-användare måste använda Windows 10 Professional eller andra distributioner som stöder Docker. Detta krav är ett krav för att köra och felsöka Dispatcher på en lokal dator.
-För både Windows och macOS rekommenderar Adobe att du använder Docker Desktop.
+>Windows-användare måste använda Windows 10 Professional eller andra distributioner som stöder Docker. Detta krav är ett krav för att köra och felsöka Dispatcher på en lokal dator.
+>För både Windows och macOS rekommenderar Adobe att du använder Docker Desktop.
 
 Denna fas kan också köras oberoende av varandra `bin/docker_run.sh src/dispatcher host.docker.internal:4503 8080`.
 
@@ -510,13 +510,13 @@ Loggar för molnmiljöer visas via loggningstjänsten i Cloud Manager.
 
 >[!NOTE]
 >
-För miljöer på AEM as a Cloud Service är felsökningen den högsta nivån för vertikal intensitet. Spårningsloggsnivån stöds inte, så du bör undvika att ange den när du arbetar i molnmiljöer.
+>För miljöer på AEM as a Cloud Service är felsökningen den högsta nivån för vertikal intensitet. Spårningsloggsnivån stöds inte, så du bör undvika att ange den när du arbetar i molnmiljöer.
 
 ### Automatisk omladdning och validering {#automatic-reloading}
 
 >[!NOTE]
 >
-På grund av en Windows-begränsning är den här funktionen bara tillgänglig för macOS- och Linux®-användare.
+>På grund av en Windows-begränsning är den här funktionen bara tillgänglig för macOS- och Linux®-användare.
 
 Istället för att köra lokal validering (`validate.sh`) och starta dockningsbehållaren (`docker_run.sh`) varje gång konfigurationen ändras kan du köra `docker_run_hot_reload.sh` skript. Skriptet söker efter ändringar i konfigurationen och läser automatiskt in den igen och kör valideringen igen. Genom att använda det här alternativet kan du spara mycket tid vid felsökning.
 
@@ -546,6 +546,25 @@ Cloud manager validator 2.0.43
 2022/07/04 09:53:55 No issues found
 INFO Mon Jul  4 09:53:55 UTC 2022: Testing with fresh base configuration files.
 INFO Mon Jul  4 09:53:55 UTC 2022: Apache httpd informationServer version: Apache/2.4.54 (Unix)
+```
+
+### Infoga anpassade miljövariabler {#environment-variables}
+
+Du kan använda anpassade miljövariabler med SDK:n för dispatcher genom att ange dem i en separat fil och referera till dem i `ENV_FILE` systemvariabel innan den lokala dispatchern startas.
+
+En fil med anpassade miljövariabler skulle se ut så här:
+
+```
+COMMERCE_ENDPOINT=commerce-host
+AEM_HTTP_PROXY_HOST=host.docker.internal
+AEM_HTTP_PROXY_PORT=8000
+```
+
+Och den kan användas i den lokala SDK:n för dispatcher med följande kommandon:
+
+```
+export ENV_FILE=custom.env
+./bin/docker_run.sh src/dispatcher docker.for.mac.localhost:4503 8080
 ```
 
 ## Olika Dispatcher-konfigurationer per miljö {#different-dispatcher-configurations-per-environment}
@@ -621,7 +640,7 @@ Med Cloud Manager 2021.7.0 genererar nya Cloud Manager-program maven-projektstru
 
    >[!NOTE]
    >
-   I det flexibla läget bör du använda relativa sökvägar i stället för absoluta sökvägar.
+   >I det flexibla läget bör du använda relativa sökvägar i stället för absoluta sökvägar.
 1. **Distribuera till produktion:**
    * Verkställ filen `opt-in/USE_SOURCES_DIRECTLY` till en Git-gren som distribueras via produktionsflödet till molnscenen och produktionsmiljöerna.
    * Använd Cloud Manager för att distribuera till testmiljöer.
