@@ -2,9 +2,9 @@
 title: Bygg miljö
 description: Lär dig mer om Cloud Managers byggmiljö och hur den bygger och testar din kod.
 exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
-source-git-commit: 30f2eaf4d2edba13e875cd1bfe767e83a2b7f1a5
+source-git-commit: cb4c9711fc9c57546244b5b362027c255e5abc35
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1023'
 ht-degree: 0%
 
 ---
@@ -19,10 +19,10 @@ Lär dig mer om Cloud Managers byggmiljö och hur den bygger och testar din kod.
 Cloud Manager bygger och testar koden med en specialiserad byggmiljö.
 
 * Byggmiljön är Linux-baserad och kommer från Ubuntu 2.04.
-* Apache Maven 3.8.8 är installerad.
+* Apache Maven 3.9.4 är installerad.
    * Adobe rekommenderar användare [uppdatera sina Maven-databaser så att HTTPS används i stället för HTTP.](#https-maven)
-* Java-versionerna är Oracle JDK 8u371 och Oracle JDK 11.0.20.
-* Som standard är `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk1.8.0_371` som innehåller Oraclet JDK 8u371. Se [Alternate Maven Execution JDK Version](#alternate-maven-jdk-version) för mer information.
+* Java-versionerna är Oracle JDK 8u401 och Oracle JDK 11.0.22.
+* Som standard är `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk1.8.0_401` som innehåller Oraclet JDK 8u401. Se [Alternate Maven Execution JDK Version](#alternate-maven-jdk-version) för mer information.
 * Det finns ytterligare systempaket installerade som är nödvändiga.
    * `bzip2`
    * `unzip`
@@ -120,7 +120,7 @@ Tabellen hänvisar till produktversionsnummer. Java-build-nummer eller installat
 
 Du kan också välja Java 8 eller Java 11 som JDK för hela Maven-exekveringen. Till skillnad från alternativen för verktygskedjor ändras det JDK som används för alla plugin-program, såvida inte konfigurationen för verktygskedjor också anges. I så fall tillämpas fortfarande konfigurationen för verktygskedjor för Maven-plugin-program som är medvetna om verktygskedjor. Resultatet blir att du kontrollerar och använder Java-versionen med [Apache Maven Enforcer Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) kommer att fungera.
 
-Det gör du genom att skapa en fil med namnet `.cloudmanager/java-version` i Git-databasgrenen som används av pipeline. Den här filen kan ha antingen innehållet 11 eller 8. Alla andra värden ignoreras. Om 11 anges används Oracle 11 och `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk-11.0.2`. Om 8 anges används Oracle 8 och `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk1.8.0_202`.
+Det gör du genom att skapa en fil med namnet `.cloudmanager/java-version` i Git-databasgrenen som används av pipeline. Den här filen kan ha antingen innehållet 11 eller 8. Alla andra värden ignoreras. Om 11 anges används Oracle 11 och `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk-11.0.22`. Om 8 anges används Oracle 8 och `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk1.8.0_401`.
 
 ## Miljövariabler {#environment-variables}
 
@@ -147,44 +147,7 @@ Som stöd för detta läggs dessa standardmiljövariabler till i byggbehållaren
 
 Din byggprocess kan vara beroende av specifika konfigurationsvariabler som skulle vara olämpliga att placera i Git-databasen, eller så måste du variera dem mellan pipeline-körningar som använder samma gren.
 
-Med Cloud Manager kan dessa variabler konfigureras via Cloud Manager API eller Cloud Manager CLI per pipeline. Variabler kan lagras som antingen oformaterad text eller krypteras i vila. I båda fallen görs variablerna tillgängliga i byggmiljön som en miljövariabel som sedan kan refereras inifrån `pom.xml` eller andra byggskript.
-
-Det här CLI-kommandot ställer in en variabel.
-
-```shell
-$ aio cloudmanager:set-pipeline-variables PIPELINEID --variable MY_CUSTOM_VARIABLE test
-```
-
-Det här kommandot listar variabler.
-
-```shell
-$ aio cloudmanager:list-pipeline-variables PIPELINEID
-```
-
-Variabelnamn måste följa följande konventioner.
-
-* Variabler får endast innehålla alfanumeriska tecken och understreck (`_`).
-* Namnen ska vara versaler.
-* Det finns en gräns på 200 variabler per pipeline.
-* Varje namn får innehålla högst 100 tecken.
-* Varje `string` variabelvärdet måste vara mindre än 2 048 tecken.
-* Varje `secretString` variabelvärdet type får vara högst 500 tecken.
-
-Vid användning i en Maven `pom.xml` är det praktiskt att mappa dessa variabler till Maven-egenskaper med en syntax som liknar den här.
-
-```xml
-        <profile>
-            <id>cmBuild</id>
-            <activation>
-                <property>
-                    <name>env.CM_BUILD</name>
-                </property>
-            </activation>
-            <properties>
-                <my.custom.property>${env.MY_CUSTOM_VARIABLE}</my.custom.property> 
-            </properties>
-        </profile>
-```
+Se dokumentet [Konfigurera pipeline-variabler](/help/implementing/cloud-manager/configuring-pipelines/pipeline-variables.md) för mer information
 
 ## Installera ytterligare systempaket {#installing-additional-system-packages}
 

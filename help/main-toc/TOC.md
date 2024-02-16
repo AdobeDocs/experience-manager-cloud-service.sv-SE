@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 6966486b9bf919fecb8d625ddb92ce1bb1a98291
+source-git-commit: d76273ddcbcf5013713e515e39dde8f42bbbf425
 workflow-type: tm+mt
-source-wordcount: '4640'
+source-wordcount: '4648'
 ht-degree: 3%
 
 ---
@@ -89,6 +89,8 @@ ht-degree: 3%
          + [Underhållsinformation för 2023.1.0](/help/release-notes/maintenance/2023/2023-1-0.md)
    + Versionsinformation för Cloud Manager {#cloud-manager}
       + [Aktuell versionsinformation](/help/implementing/cloud-manager/release-notes/current.md)
+      + 2024 {#2024}
+         + [Versionsinformation för 2024.1.0](/help/implementing/cloud-manager/release-notes/2024/2024-1-0.md)
       + 2023 {#2023}
          + [Versionsinformation för 2023.12.0](/help/implementing/cloud-manager/release-notes/2023/2023-12-0.md)
          + [Versionsinformation för 2023.11.0](/help/implementing/cloud-manager/release-notes/2023/2023-11-0.md)
@@ -915,6 +917,7 @@ ht-degree: 3%
          + [Konfigurera en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md)
          + [Konfigurera en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md)
          + [Hantera pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md)
+         + [Rörledningsvariabler](/help/implementing/cloud-manager/configuring-pipelines/pipeline-variables.md)
       + [Distribuera koden](/help/implementing/cloud-manager/deploy-code.md)
       + Förstå testresultaten {#test-results}
          + [Ökning](/help/implementing/cloud-manager/overview-test-results.md)
