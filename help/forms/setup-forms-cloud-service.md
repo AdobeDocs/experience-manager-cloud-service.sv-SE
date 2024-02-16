@@ -3,9 +3,10 @@ title: Hur skapar jag en [!DNL AEM Forms] som en molntjänstmiljö?
 description: Lär dig konfigurera och konfigurera [!DNL AEM Forms] as a Cloud Service miljö.
 role: Admin, Developer, User
 feature: Adaptive Forms
-source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
+exl-id: 42f53662-fbcf-4676-9859-bf187ee9e4af
+source-git-commit: 7fe779602f52081dc785074bdc0f374665b908e6
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '605'
 ht-degree: 1%
 
 ---
@@ -46,21 +47,24 @@ ht-degree: 1%
 
 * (Endast för sandlådor) Efter introduktionen av tjänsten [skapa](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html?lang=en) och [run](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html) både rörledningar för produktion och icke-produktion. Det aktiverar och innehåller de senaste funktionerna i [!DNL AEM Forms] as a Cloud Service för din miljö.
 
-Du kan använda Forms as a Cloud Service för att skapa ett anpassningsbart formulär (digital registrering) eller generera en kundkommunikation. Efter slutförande [Onboarding](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html) till [!DNL Adobe Experience Manager] as a Cloud Service kan du utföra någon av följande åtgärder för att aktivera funktioner för digital registrering eller kundkommunikation. Du kan även aktivera båda funktionerna:
+Du kan använda Forms as a Cloud Service för att skapa ett anpassningsbart formulär (digital registrering) eller generera en kundkommunikation. Efter slutförande [Onboarding](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html) till [!DNL Adobe Experience Manager] as a Cloud Service utför du följande åtgärder för att aktivera funktionerna Forms - Digital registrering eller Kundkommunikation. <!--You can also enable both the features-->:
 
 1. Logga in på Cloud Manager och öppna din as a Cloud Service AEM Forms-instans.
+1. Öppna alternativet Redigera program, gå till fliken Lösningar och tillägg:
 
-1. Öppna alternativet Redigera program, gå till fliken Lösningar och tillägg och välj **[!UICONTROL Forms - Communications]** alternativ.
+   * Om du har en produktionsmiljö väljer du **[!UICONTROL Forms - Communications]** för att aktivera Forms - Digital registrering och Forms - Communications Add-On.
 
-   ![Kommunikation](assets/communications.png)
+     ![Kommunikation](assets/communications.png)
 
-   Om du redan har aktiverat **[!UICONTROL Forms - Digital Enrollment]** väljer du **[!UICONTROL Forms - Communications Add-On]** alternativ.
+   <!-- If you have already enabled the **[!UICONTROL Forms - Digital Enrollment]** option, then select the **[!UICONTROL Forms - Communications Add-On]** option. ![Addon](assets/add-on.png) -->
 
-   ![Addon](assets/add-on.png)
+   * Om du har en sandlådemiljö väljer du **[!UICONTROL Forms]** för att aktivera Forms - Digital registrering och Forms - Communications Add-On.
+
+     ![Val av formulärdigital registrering](assets/forms-digital-enrollment1.png)
+
 
 1. Klicka på **[!UICONTROL Update]**.
-
-1. Kör byggprocessen. När byggprocessen är klar aktiveras API:er för kommunikation för din miljö.
+1. Kör byggprocessen. När byggprocessen är klar aktiveras den valda lösningen för din miljö.
 
 >[!NOTE]
 >
