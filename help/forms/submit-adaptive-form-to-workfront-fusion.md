@@ -6,9 +6,9 @@ topic-tags: author, developer
 feature: Adaptive Forms
 role: Admin, User
 exl-id: d3efb450-a879-40ae-8958-0040f99bdafc
-source-git-commit: 52e1f57b82aec25ad61024f357016dbb5498ca1b
+source-git-commit: 8546e6286bea5f603b1e011a76c206b178337ab7
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1157'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,8 @@ Förutsättningar för att ansluta Workfront Fusion till AEM Forms är:
 * En AEM användare med behörighet att komma åt [Dev Console](https://my.cloudmanager.adobe.com/) till [hämta inloggningsuppgifterna för tjänsten](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html).
 
 ## Integrera AEM Forms med Adobe Workfront Fusion
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427145/adaptive-forms-adobe-workfront-af-workfront-workfront-aem-forms/?quality=12&learn=on)
 
 Ansluta [Workfront fusion](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-fusion/get-started-with-workfront-fusion/workfront-fusion-overview.html) Gör så här för att skapa ett formulär:
 
@@ -129,16 +131,7 @@ Så här lägger du till en anslutning:
 1. Välj den skapade anslutningen **[!UICONTROL Connection]** i listrutan.
 1. Klicka på **[!UICONTROL Save]**.
 1. Klicka **[!UICONTROL OK]** och spara ändringarna för scenariot.
-
-#### 1.3 Aktivera Workfront {#activate-scenario}
-
-Så här aktiverar du scenariot:
-
-1. Klicka **[!UICONTROL Scenarios]** ![Delningsikon](/help/forms/assets/Smock_ShareAndroid_18_N.svg) till vänster.
-1. Klicka på **[!UICONTROL Inactive Scenario]** -fliken.
-1. Klicka på **PÅ/AV** växlingsknapp för ditt AEM Forms-scenario.
-
-När du klickar på växlingsknappen visas Workfront-scenariot i **[!UICONTROL Active Scenario]** -fliken.
+1. Aktivera scenariot genom att klicka på knappen PÅ/AV i scenarieredigeraren.
 
 >[!NOTE]
 >
