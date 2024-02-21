@@ -4,9 +4,9 @@ description: Läs om AEM as a Cloud Service stöd för integrering med Adobe Cam
 feature: Administering
 role: Admin
 exl-id: 23874955-bdf3-41be-8a06-53d2afdd7f2b
-source-git-commit: c4daf04d5520da1e646f35ba72c9f53cb1d97d36
+source-git-commit: a9296bba5d1ad3f6eb2190de9c15a1083f2ac6d5
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
@@ -22,17 +22,16 @@ Läs mer om AEM as a Cloud Service stöd för integrering med Adobe Campaign.
 >
 >Mer information om hur du integrerar Adobe Campaign med AEM 6.5, AEM på plats eller AMS-värd, finns i [visa det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/campaign.html).
 
-## Integrera med Adobe Campaign Classic {#acc}
+## Integrera med Adobe Campaign v7/v8 {#acc}
 
-Det finns flera Adobe Campaign Classic-versioner (ACC). Stödet för integrering med AEM as a Cloud Service beror på vilken ACC-version du har implementerat.
+Stödet för integrering med AEM as a Cloud Service beror på vilken Campaign-version du har implementerat.
 
-| ACC-version | Integrering med AEMaaCS |
+| Kampanjversion | Integrering med AEMaaCS |
 |---|---|
-| [v7](https://experienceleague.adobe.com/docs/campaign-classic.html) | Stöds inte |
-| [v8](https://experienceleague.adobe.com/docs/campaign-v8.html) | Stöds inte |
-| Webbgränssnitt* | Stöds |
+| [Campaign Classic v7](https://experienceleague.adobe.com/docs/campaign-classic.html) | Stöds inte |
+| [Campaign v8 (klientkonsol)](https://experienceleague.adobe.com/docs/campaign-v8.html) | Stöds inte |
+| Webbanvändargränssnitt för kampanj | Stöds. [Läs mer](https://experienceleague.adobe.com/docs/campaign-web/v8/integrations/aem-assets.html) |
 
-*Webbgränssnittet för Adobe Campaign Classic förväntas vara klart i slutet av 2023.
 
 ## Integrera med Adobe Campaign Standard {#acs}
 
