@@ -4,9 +4,9 @@ description: AEM Forms Edge Delivery Service har tagits fram för bästa prestan
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: b94bd6cd70af541444fda1d03f502b4588fd879b
+source-git-commit: 34ba430ae9b40fc3bc675af20bbee2534c44a0c3
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '389'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ AEM Forms Edge Delivery Service hjälper dig att:
 
 * **Förenkla framtagning och inlämning**: Skapa formulär med välbekanta verktyg som Microsoft Excel eller Google Sheets i stället för med de traditionella redigeringsmiljöerna. Skicka blanketter direkt till Microsoft Excel- eller Google-ark och använd deras ekosystem för att enkelt bearbeta inlämnade data.
 
-## Kom igång med AEM Forms Edge Delivery Service
+## Börja med grunderna
 
 <div>
 

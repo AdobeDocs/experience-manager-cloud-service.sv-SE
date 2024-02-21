@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 0604838311bb9ab195789fad755b0910e09519fd
+source-git-commit: 34ba430ae9b40fc3bc675af20bbee2534c44a0c3
 workflow-type: tm+mt
-source-wordcount: '4711'
+source-wordcount: '4692'
 ht-degree: 3%
 
 ---
@@ -804,19 +804,19 @@ ht-degree: 3%
       + [Omdirigeringar](/help/edge/docs/redirects.md)
    + Building Edge Delivery Forms {#build-forms}
       + [Ökning](/help/edge/docs/forms/overview.md)
-      + Komma igång {#getting-started-eds-forms}
+      + Kom igång {#getting-started-eds-forms}
          + [Skapa och förhandsgranska ett formulär](/help/edge/docs/forms/create-forms.md)
          + [Aktivera formulär för att skicka data](/help/edge/docs/forms/submit-forms.md)
          + [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-eds-forms.md)
          + [Lägga till valideringar i formulärfält](/help/edge/docs/forms/validate-forms.md)
          + [Ändra teman och format för formulär](/help/edge/docs/forms/style-theme-forms.md)
-      + Avancerade funktioner {#advanced-features-eds-forms}
-         + [Skapa och lägga till formulärfragment i ett formulär](/help/edge/docs/forms/form-fragments.md)
-         + [Översätta ett formulär](/help/edge/docs/forms/translate-forms.md)
-         + [Lägga till repeterbara avsnitt i ett formulär](/help/edge/docs/forms/repeatable-forms.md)
-         + [Använd reCAPTCHA på ett formulär](/help/edge/docs/forms/recaptacha-forms.md)
-         + [Skapa anpassade komponenter](/help/edge/docs/forms/custom-components-forms.md)
-         + [Lägg till tacksida](/help/edge/docs/forms/thank-you-page-form.md)
+      + Funktioner {#advanced-features-eds-forms}
+         + [Formulärfragment](/help/edge/docs/forms/form-fragments.md)
+         + [Upprepningsbara avsnitt](/help/edge/docs/forms/repeatable-forms.md)
+         + [Översättning](/help/edge/docs/forms/translate-forms.md)
+         + [reCAPTCHA](/help/edge/docs/forms/recaptacha-forms.md)
+         + [Tack](/help/edge/docs/forms/thank-you-page-form.md)
+         + [Anpassade komponenter](/help/edge/docs/forms/custom-components-forms.md)
    + Resurser för Edge Delivery {#resources}
       + Sidekick {#sidekick}
          + [Använda Sidekick](/help/edge/docs/sidekick.md)

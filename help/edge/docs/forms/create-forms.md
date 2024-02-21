@@ -4,9 +4,9 @@ description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery, doku
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: b94bd6cd70af541444fda1d03f502b4588fd879b
+source-git-commit: 34ba430ae9b40fc3bc675af20bbee2534c44a0c3
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,8 @@ Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets
 
 ![Getting Started with Edge Delivery Forms](/help/edge/assets/getting-started-with-eds-forms.png)
 
-## Lägg till formulärblocket i Edge Delivery Service-projektet (EDS) {#add-forms-block-to-an-eds-project}
+
+## Steg 1: Lägg till formulärblocket i Edge Delivery Service-projektet (EDS) {#add-forms-block-to-an-eds-project}
 
 AEM Forms Edge Delivery innehåller ett formulärblock som hjälper dig att enkelt skapa formulär för att hämta in och lagra inhämtade data. Så här inkluderar du formulärblocket i ditt Edge Delivery Service-projekt:
 
@@ -81,7 +82,7 @@ AEM Forms Edge Delivery innehåller ett formulärblock som hjälper dig att enke
    > * Om du får felmeddelandet&quot;Det går inte att matcha sökvägen till modulen &quot;&#39;../../scripts/lib-franklin.js&#39;&quot; öppnar du `[EDS Project]/blocks/forms/form.js` -fil. Ersätt `franklin-lib.js` filen med `aem.js` -fil.
    > * Om du råkar ut för några lintingfel kan du ignorera dem. Öppna `[EDS Project]\package.json` och uppdatera lint-skriptet från `"lint": "npm run lint:js && npm run lint:css"` till `"lint": "echo 'skipping linting for now'"`. Spara filen och implementera den i ditt GitHub-projekt.
 
-## Skapa ett formulär med Microsoft Excel eller Google Sheet {#create-a-form-for-an-eds-project}
+## Steg 2: Skapa ett formulär med Microsoft Excel eller Google Sheet
 
 I stället för komplexa processer kan du enkelt skapa ett formulär med hjälp av ett kalkylblad. Du kan börja med att lägga till rader och kolumnrubriker i ett kalkylblad, där varje rad definierar ett formulärfält och varje kolumnrubrik definierar egenskaperna för motsvarande formulärfält.
 
@@ -123,7 +124,7 @@ Så här skapar du ett formulär:
 
 
 
-## Förhandsgranska formuläret på EDS-sidan (Edge Delivery Service) {#add-a-form-to-your-eds-page}
+## Steg 3: Förhandsgranska formuläret på EDS-sidan (Edge Delivery Service)
 
 Fram tills nu har du aktiverat formulärblocket för ditt EDS-projekt och förberett formulärets struktur. Nu kan du förhandsgranska formuläret:
 
@@ -153,8 +154,9 @@ Fram tills nu har du aktiverat formulärblocket för ditt EDS-projekt och förbe
 
    ![fel vid inlämning av formulär](/help/edge/assets/form-error.png)
 
+## Nästa steg
 
-   Nästa steg är att [förbereda kalkylbladet för att ta emot data](/help/edge/docs/forms/submit-forms.md).
+Nästa steg är att [förbereda kalkylbladet för att ta emot data](/help/edge/docs/forms/submit-forms.md).
 
 
 
