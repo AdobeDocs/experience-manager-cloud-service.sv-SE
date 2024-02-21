@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: d76273ddcbcf5013713e515e39dde8f42bbbf425
+source-git-commit: 0604838311bb9ab195789fad755b0910e09519fd
 workflow-type: tm+mt
-source-wordcount: '4648'
+source-wordcount: '4711'
 ht-degree: 3%
 
 ---
@@ -614,8 +614,8 @@ ht-degree: 3%
             + [Skapa formulär med repeterbara avsnitt](/help/forms/create-forms-repeatable-sections.md)
             + [Konfigurera åtgärden Skicka för ett anpassat formulär](/help/forms/configure-submit-actions-core-components.md)
             + [Skicka ett anpassat formulär till Azure Blob Storage](/help/forms/configure-submit-action-azure-blob-storage.md)
-            + [Skicka ett anpassat formulär till Microsoft® OneDrive](/help/forms/configure-submit-action-onedrive.md)
-            + [Konfigurera SharePoint-lagring för ett adaptivt formulär](/help/forms/configure-submit-action-sharepoint.md)
+            + [Skicka ett anpassat formulär till Microsoft](/help/forms/configure-submit-action-onedrive.md)
+            + [Ansluta ett adaptivt formulär till Microsoft](/help/forms/configure-submit-action-sharepoint.md)
             + [Integrera AEM anpassat formulär med AEM arbetsflöde](/help/forms/configure-submit-action-workflow.md)
             + [Konfigurera Skicka till REST-slutpunktsåtgärd för adaptiv Forms](/help/forms/configure-submit-action-restpoint.md)
             + [Konfigurera åtgärden Skicka e-post för ett anpassat formulär](/help/forms/configure-submit-action-send-email.md)
@@ -802,6 +802,21 @@ ht-degree: 3%
       + [Akamai-inställningar](/help/edge/docs/byo-cdn-akamai-setup.md)
       + [Snabbinstallation](/help/edge/docs/byo-cdn-fastly-setup.md)
       + [Omdirigeringar](/help/edge/docs/redirects.md)
+   + Building Edge Delivery Forms {#build-forms}
+      + [Ökning](/help/edge/docs/forms/overview.md)
+      + Komma igång {#getting-started-eds-forms}
+         + [Skapa och förhandsgranska ett formulär](/help/edge/docs/forms/create-forms.md)
+         + [Aktivera formulär för att skicka data](/help/edge/docs/forms/submit-forms.md)
+         + [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-eds-forms.md)
+         + [Lägga till valideringar i formulärfält](/help/edge/docs/forms/validate-forms.md)
+         + [Ändra teman och format för formulär](/help/edge/docs/forms/style-theme-forms.md)
+      + Avancerade funktioner {#advanced-features-eds-forms}
+         + [Skapa och lägga till formulärfragment i ett formulär](/help/edge/docs/forms/form-fragments.md)
+         + [Översätta ett formulär](/help/edge/docs/forms/translate-forms.md)
+         + [Lägga till repeterbara avsnitt i ett formulär](/help/edge/docs/forms/repeatable-forms.md)
+         + [Använd reCAPTCHA på ett formulär](/help/edge/docs/forms/recaptacha-forms.md)
+         + [Skapa anpassade komponenter](/help/edge/docs/forms/custom-components-forms.md)
+         + [Lägg till tacksida](/help/edge/docs/forms/thank-you-page-form.md)
    + Resurser för Edge Delivery {#resources}
       + Sidekick {#sidekick}
          + [Använda Sidekick](/help/edge/docs/sidekick.md)

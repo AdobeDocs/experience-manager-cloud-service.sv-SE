@@ -6,9 +6,9 @@ topic-tags: author, developer
 feature: Adaptive Forms
 role: Admin, User
 exl-id: d3efb450-a879-40ae-8958-0040f99bdafc
-source-git-commit: 94519d3c7d2f927f046628d9ce057209556e847d
+source-git-commit: 8923bfbb0e46961485ff360c0135ebdde6d8cab3
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1174'
 ht-degree: 0%
 
 ---
@@ -40,11 +40,17 @@ För att upprätta en anslutning mellan Workfront Fusion och AEM Forms krävs f�
 
 ## Integrera AEM Forms med Adobe Workfront Fusion
 
-Ansluta [Workfront fusion](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-fusion/get-started-with-workfront-fusion/workfront-fusion-overview.html) Gör så här för att skapa ett formulär:
-
 ### 1. Skapa ett Workfront-scenario {#workflow-scenario}
 
 Så här skapar du ett Workfront-scenario:
+
+1. [Skapa ett scenario](#create-scenario)
+1. [Lägga till en webbkrok i ett scenario](#add-webhook)
+1. [Lägga till en anslutning till en webkrok](#add-connection)
+
+#### Skapa ett scenario {#create-scenario}
+
+Så här skapar du ett scenario:
 1. Logga in på [Workfront Fusion Account](https://app-qa.workfrontfusion.com/).
 1. Klicka **[!UICONTROL Scenarios]** ![Delningsikon](/help/forms/assets/Smock_ShareAndroid_18_N.svg) till vänster.
 1. Klicka **[!UICONTROL Create a new scenario]** i det övre högra hörnet på sidan. En sida för att skapa ett nytt scenario visas på skärmen.
@@ -61,7 +67,7 @@ Så här skapar du ett Workfront-scenario:
 
 1. Välj **[!UICONTROL Watch for Form Events]** visas en dialogruta och ett fönster där du kan lägga till en webkrok.
 
-#### 1.1 Lägg till en webkrok {#add-webhook}
+#### Lägg till en webkrok {#add-webhook}
 
 ![Lägg till en webkrok](/help/forms/assets/workfront-add-webhook.png)
 
@@ -76,7 +82,7 @@ Så här lägger du till en webkrok:
 
 1. Klicka **[!UICONTROL Add]** för att lägga till en ny anslutning. The **[!UICONTROL Create a Connection]** visas.
 
-#### 1.2 Lägga till en anslutning till en webkrok {#add-connection}
+#### Lägga till en anslutning till en webkrok {#add-connection}
 
 ![Lägg till en anslutning](/help/forms/assets/workfront-add-connection.png)
 

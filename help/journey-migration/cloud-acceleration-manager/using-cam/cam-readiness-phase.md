@@ -2,9 +2,9 @@
 title: Beredningsfas i molnaccelerationshanteraren
 description: Den här sidan innehåller en översikt över beredskapsfasen i Cloud Acceleration Manager.
 exl-id: 2583985b-0358-433c-9d31-38e2c60dc3dc
-source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
+source-git-commit: f99395870d076d47ef53b01c9fc6579a9f8788a2
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '984'
 ht-degree: 3%
 
 ---
@@ -60,10 +60,13 @@ Följ stegen nedan för att navigera till beredskapsfasen:
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-bpareport.png)
 
+   >[!NOTE]
+   >Om flera rapporter överförs är rapporten som visas i detalj alltid den som har det senaste skapandedatumet (inte överföringsdatumet).
+
 1. Granska och utforska kontrollpanelen Best Practices Analysis i CAM. Se [Analysrapport om metodtips för granskning](#analysis-report) för mer information.
 
    >[!NOTE]
-   >När du överför en ny rapport återställs alla bedömningar.
+   >När du överför en ny rapport återställs alla bedömningar om den är nyare än den tidigare inlästa rapporten.
 
 ### Använda Förhandsgranska {#print-preview-cam}
 
@@ -86,12 +89,12 @@ Följ stegen nedan:
 
 ### Använda Visa trendlinje {#trendline-view-cam}
 
-När du överför mer än en BPA-rapport (Best Practices Analyzer) i ett projekt kan du välja **Visa trendlinje** möjlighet att visa och jämföra resultat från historiska BPA-rapporter.
+När du överför mer än en separat BPA-rapport (Best Practices Analyzer) i ett projekt kan du välja **Visa trendlinje** möjlighet att visa och jämföra resultat från historiska BPA-rapporter.
 
 Följ stegen nedan för att visa rapporter från trendlinjealternativet:
 
 >[!NOTE]
->När du överför mer än en BPA-rapport i ett projekt visas **...** -ikon.
+>När du överför mer än en distinkt BPA-rapport i ett projekt visas **...** -ikon. Rapporterna betraktas som samma (inte distinkta) om deras värdtid och skapandetid är desamma.
 
 1. Navigera till projektet och klicka **Granska** från **Best Practices Analysis** i **Beredskap** fas.
 
@@ -100,9 +103,6 @@ Följ stegen nedan för att visa rapporter från trendlinjealternativet:
 1. Klicka **...**.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view1.png)
-
-   >[!IMPORTANT]
-   >Rapporten som visas är alltid den rapport som har det senaste rapportdatumet.
 
 1. I listrutan klickar du på **Visa trendlinje**, vilket visas i figuren nedan.
 

@@ -3,9 +3,9 @@ Title: How to submit data from an Adaptive Form to Microsoft® OneDrive?
 Description: Explore the streamlined process of connecting AEM Forms with Microsoft® OneDrive using the Submit to OneDrive Submit Action. Learn the step-by-step guide to configure OneDrive and set up submission actions for efficient data storage and retrieval
 keywords: AEM Forms OneDrive-integrering, Anslut till Microsoft OneDrive, Konfigurationsinställningar för OneDrive med AEM formulär
 feature: Adaptive Forms, Core Components
-source-git-commit: 95af49839d206f67ac02116730229f5b0531c5bb
+source-git-commit: 20458e710502e445cf5c8f582a1d183bdac75c8d
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Några av fördelarna med smidig integrering av AEM Forms och Microsoft® OneDri
 * Enhetsövergripande åtkomst till OneDrive säkerställer att lagrade formulärdata är tillgängliga på olika plattformar. Användarna kan komma åt inskickade data, bilagor och dokument från stationära datorer, bärbara datorer, surfplattor och mobila enheter, vilket förbättrar tillgängligheten och flexibiliteten.
 * OneDrive-integrering med AEM ger en tillförlitlig och skalbar lösning för effektiv datalagring. Alla inskickade anpassade formulär, som filer, bilagor och arkivdokument, kan enkelt sparas i OneDrive för att säkerställa att alla data är välorganiserade och tillgängliga.
 
-## Ansluta OneDrive till en adaptiv
+## Anslut OneDrive till ett anpassat formulär
 
 >[!VIDEO](https://video.tv.adobe.com/v/3424864/connect-aem-adaptive-form-to-onedrive/?quality=12&learn=on)
 
