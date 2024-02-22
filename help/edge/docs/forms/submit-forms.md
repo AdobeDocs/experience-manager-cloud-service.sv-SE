@@ -4,9 +4,9 @@ description: Skapa kraftfulla formulär snabbare med kalkylblad och formulärblo
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 0604838311bb9ab195789fad755b0910e09519fd
+source-git-commit: c1a01dd256d39531c6091410e38a744688e71aaa
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '989'
 ht-degree: 0%
 
 ---
@@ -14,65 +14,72 @@ ht-degree: 0%
 
 # Aktivera formuläret för att skicka data
 
-När du har skapat och förhandsgranskat formuläret aktiverar du motsvarande blad för att ta emot data. Om du vill börja ta emot data ska du ställa in kalkylbladet så att det innehåller de rubriker som matchar de data som du vill samla in. Alla rubriker som läggs till i bladet &quot;shared-default&quot; bör också finnas i bladet &quot;inkommande&quot; under en tabell.
+En gång har du [skapade och förhandsvisade formuläret](/help/edge/docs/forms/create-forms.md)är det dags att aktivera motsvarande kalkylblad så att det kan börja ta emot data.
 
-I följande exempel visas fält för ett kontaktformulär:
+>[!VIDEO](https://video.tv.adobe.com/v/3427489?quality=12&learn=on)
 
-![Fält för ett kontaktformulär](/help/edge/assets/contact-us-form-excel-sheet-fields.png)
+Aktivera kalkylbladet:
 
-
-När konfigurationen är klar kan du godkänna inskickade data i formuläret. Du kan använda någon av följande metoder för att tillåta att kalkylbladet tar emot data:
-
-* [Konfigurera ett kalkylblad manuellt för att ta emot data](#manually-configure-a-spreadsheet-to-receive-data)
-
-* [Använd admin-API:er för att aktivera ett kalkylblad som accepterar data](#use-admin-apis-to-enable-a-spreadsheet-to-receive-data-use-admin-apis-to-enable-a-spreadsheet-to-recieve-data)
-
-## Konfigurera ett kalkylblad manuellt för att ta emot data
-
-Så här konfigurerar du ett kalkylblad manuellt för att ta emot data:
-
-
-1. Öppna arbetsboken som du har skapat och ändra namnet på standardbladet till &quot;inkommande&quot;.
+1. Öppna kalkylbladet som innehåller formuläret och lägg till ett blad i det och ändra namnet på det till `incoming`.
 
    >[!WARNING]
    >
-   > Om det inkommande bladet inte finns kommer AEM inte att skicka några data till den här arbetsboken.
+   > Om `incoming` bladet finns inte, AEM skickar inga data till arbetsboken.
 
-1. Förbered bladet genom att lägga till rubriker som matchar de data du skickar in. I följande exempel visas fält för ett kontaktformulär:
+1. I `incoming` blad, spegla alla kolumnrubriker till `Name` kolumn (formulärfältsnamn) i `shared-default` blad.
+
+   I följande exempel visas rubriker för ett kontaktformulär:
 
    ![Fält för ett kontaktformulär](/help/edge/assets/contact-us-form-excel-sheet-fields.png)
 
-1. Förhandsgranska bladet i sidosparken.
+1. Förhandsgranska bladet med hjälp av en sidospark.
 
    >[!NOTE]
    >
-   >Även om du har förhandsgranskat bladet tidigare måste du förhandsgranska det igen när du har skapat det inkommande bladet för första gången.
+   >Även om du har förhandsgranskat bladet tidigare måste du förhandsgranska det igen när du har skapat `incoming` första gången.
 
 
-## Använd admin-API:er för att aktivera ett kalkylblad som accepterar data
+När fältnamnen har lagts till i `incoming` kan du godkänna att ditt formulär skickas vidare. Du kan förhandsgranska formuläret och skicka data till bladet med hjälp av det.
 
-Du kan initiera en begäran om POST till formulärflödet i AEM Admin-tjänsten. När administratörstjänsten tar emot data från POSTEN analyserar den och skapar automatiskt de huvuden, tabeller och ark som behövs för datainmatning, vilket optimerar funktionaliteten i blanketttjänsten.
+Du kan även se följande ändringar i kalkylbladet:
+
+Ett blad med namnet &quot;Slack&quot; läggs till i Excel-arbetsboken eller Google-bladet. I det här bladet kan du konfigurera automatiska meddelanden för en angiven Slack-kanal när nya data hämtas till kalkylbladet. För närvarande stöder AEM endast meddelanden till AEM Engineering Slack och Adobe Enterprise Support.
+
+1. Om du vill konfigurera Slack-meddelanden anger du teamId för arbetsytan i Slack och kanalnamnet eller ID:t. Du kan också fråga en robot (med felsökningskommandot) för teamId och channel ID. Det är bättre att använda kanal-ID i stället för kanalnamn eftersom kanalens namn bevaras.
+
+   >[!NOTE]
+   >
+   > Äldre formulär hade inte kolumnen teamId. &quot;teamId&quot; inkluderades i kanalkolumnen, avgränsad med &quot;#&quot; eller &quot;/&quot;.
+
+1. Ange en titel som du vill ha och skriv under fält namnen på de fält som du vill se i Slack-meddelandet. Varje rubrik ska avgränsas med kommatecken (till exempel namn, e-post).
+
+   >[!WARNING]
+   >
+   >  De ska aldrig innehålla någon personligt identifierbar information eller känsliga data som du inte känner till om de är tillgängliga för allmänheten.
+
+
+## (Valfritt) Använd admin-API:er för att aktivera ett kalkylblad som accepterar data
+
+Du kan också skicka en begäran om POST till formuläret så att det kan ta emot data och konfigurera rubriker för `incoming` blad. När tjänsten tar emot en begäran om POST analyserar tjänsten innehållet i begäran och skapar automatiskt de huvuden och ark som behövs för datainhämtning.
 
 Så här använder du Admin API:er för att aktivera ett kalkylblad för att ta emot data:
 
 
-1. Öppna arbetsboken som du har skapat och ändra namnet på standardbladet till &quot;inkommande&quot;.
+1. Öppna arbetsboken som du har skapat och ändra namnet på standardbladet till `incoming`.
 
    >[!WARNING]
    >
-   > Om det inkommande bladet inte finns kommer AEM inte att skicka några data till den här arbetsboken.
+   > Om `incoming` bladet finns inte, AEM skickar inga data till arbetsboken.
 
 1. Förhandsgranska bladet i sidosparken.
 
    >[!NOTE]
    >
-   >Även om du har förhandsgranskat bladet tidigare måste du förhandsgranska det igen när du har skapat det inkommande bladet för första gången.
+   >Även om du har förhandsgranskat bladet tidigare måste du förhandsgranska det igen när du har skapat `incoming` första gången.
 
-1. Förbered bladet genom att lägga till rubriker som matchar de data du skickar in.
+1. Skicka begäran om POST för att generera lämpliga rubriker i `incoming` och lägg till `shared-default` om det inte redan finns.
 
-   Du kan göra detta genom att skicka en begäran om POST till formulärflödet i AEM Admin-tjänsten. Administrationstjänsten undersöker informationen i POSTEN och genererar de rubriker, tabeller och blad som behövs för att effektivt kunna importera data och få ut det mesta av Forms-tjänsten.
-
-   Om du vill veta hur du formaterar POSTEN för att konfigurera bladet kan du läsa [Dokumentation för Admin API](https://www.hlx.live/docs/admin.html#tag/form). Titta också på exemplet nedan:
+   Om du vill veta hur du formaterar POSTEN för att konfigurera bladet kan du läsa [Dokumentation för Admin API](https://www.hlx.live/docs/admin.html#tag/form). Du kan titta på exemplet nedan:
 
    **Begäran**
 
@@ -135,27 +142,26 @@ Så här använder du Admin API:er för att aktivera ett kalkylblad för att ta 
    }'
    ```
 
-   I den tidigare nämnda POSTEN finns exempeldata, inklusive både formulärfält och deras respektive exempelvärden. Dessa data används av administrationstjänsten för att konfigurera formuläret.
+   Ovannämnda POST innehåller exempeldata, inklusive både formulärfält och deras respektive exempelvärden. Dessa data används av administrationstjänsten för att konfigurera formuläret.
 
-   När du skickar en begäran om POST till administratörstjänsten kan du se följande ändringar i arbetsboken:
+   Formuläret är nu aktiverat för att ta emot data. Du kan även se följande ändringar i kalkylbladet:
 
-* Ett nytt blad med namnet&quot;shared-default&quot; läggs till i Excel-arbetsboken eller Google-bladet. Data som finns i bladet&quot;shared-default&quot; hämtas när en GET begärs till bladet. Det här bladet är en optimal plats att använda kalkylbladsformler för att sammanfatta inkommande data, vilket gör det lättare att använda i andra sammanhang.
+Ett blad med namnet &quot;Slack&quot; läggs till i Excel-arbetsboken eller Google-bladet. I det här bladet kan du konfigurera automatiska meddelanden för en angiven Slack-kanal när nya data hämtas till kalkylbladet. För närvarande stöder AEM endast meddelanden till AEM Engineering Slack och Adobe Enterprise Support.
 
-  De ska aldrig innehålla någon personligt identifierbar information eller känsliga data som du inte känner till om de är tillgängliga för allmänheten.
+1. Om du vill konfigurera Slack-meddelanden anger du teamId för arbetsytan i Slack och kanalnamnet eller ID:t. Du kan också fråga en robot (med felsökningskommandot) för teamId och channel ID. Det är bättre att använda kanal-ID i stället för kanalnamn eftersom kanalens namn bevaras.
 
-* Ett blad med namnet &quot;Slack&quot; läggs till i Excel-arbetsboken eller Google-bladet. I det här bladet kan du konfigurera automatiska meddelanden för en angiven Slack-kanal när nya data hämtas till kalkylbladet. För närvarande stöder AEM endast meddelanden till AEM Engineering Slack och Adobe Enterprise Support.
+   >[!NOTE]
+   >
+   > Äldre formulär hade inte kolumnen teamId. &quot;teamId&quot; inkluderades i kanalkolumnen, avgränsad med &quot;#&quot; eller &quot;/&quot;.
 
-   1. Om du vill konfigurera Slack-meddelanden anger du teamId för arbetsytan i Slack och kanalnamnet eller ID:t. Du kan också fråga en robot (med felsökningskommandot) för teamId och channel ID. Det är bättre att använda kanal-ID i stället för kanalnamn eftersom kanalens namn bevaras.
+1. Ange en titel som du vill ha och skriv under fält namnen på de fält som du vill se i Slack-meddelandet. Varje rubrik ska avgränsas med kommatecken (till exempel namn, e-post).
 
-      >[!NOTE]
-      >
-      > Äldre formulär hade inte kolumnen teamId. &quot;teamId&quot; inkluderades i kanalkolumnen, avgränsad med &quot;#&quot; eller &quot;/&quot;.
-
-   1. Ange en titel som du vill ha och skriv under fält namnen på de fält som du vill se i Slack-meddelandet. Varje rubrik ska avgränsas med kommatecken (till exempel namn, e-post).
 
 Blanketten är nu konfigurerad för att ta emot data, du kan [förhandsgranska formuläret med hjälp av formulärblock](/help/edge/docs/forms/create-forms.md#preview-the-form-using-your-edge-delivery-service-eds-page) eller [använd POST-förfrågningar](#use-admin-apis-to-send-data-to-your-sheet) för att börja skicka data till bladet.
 
-
+>[!WARNING]
+>
+>  De ska aldrig innehålla någon personligt identifierbar information eller känsliga data som du inte känner till om de är tillgängliga för allmänheten.
 
 ## Skicka data till bladet {#send-data-to-your-sheet}
 
@@ -271,7 +277,7 @@ Det finns olika sätt att formatera formulärdata i POSTENS brödtext. Du kan an
     https://main--portal--wkndforms.hlx.live/contact-us
   ```
 
-Sedan kan du anpassa meddelandet som du vill skicka, [konfigurera en tacksida](/help/edge/docs/forms/thank-you-page-form.md), eller [ange omdirigeringar](/help/edge/docs/forms/thank-you-page-form.md).
+Sedan kan du anpassa tackmeddelandet, [konfigurera en tacksida](/help/edge/docs/forms/thank-you-page-form.md), eller [ange omdirigeringar](/help/edge/docs/forms/thank-you-page-form.md).
 
 ## Se mer
 

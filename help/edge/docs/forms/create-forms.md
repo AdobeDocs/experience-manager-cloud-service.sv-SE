@@ -4,9 +4,9 @@ description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery, doku
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 7b497791c70fd588b7e8c9a94caa218189d3153a
+source-git-commit: c1a01dd256d39531c6091410e38a744688e71aaa
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '889'
 ht-degree: 0%
 
 ---
@@ -18,33 +18,31 @@ I dagens digitala samhälle är det viktigt för alla företag att skapa använd
 
 Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft Sharepoint för att enkelt bearbeta inskickade data eller starta ett befintligt arbetsflöde.
 
+![Getting Started with Edge Delivery Forms](/help/edge/assets/getting-started-with-eds-forms.png)
+
+
 ## Förutsättningar
 
-* Du har ett GitHub-konto.
-* Du har tillgång till Google Sheets eller Microsoft SharePoint.
-* Du förstår grunderna i Git, HTML, CSS och JavaScript.
-* Du har installerat Node och NPM för lokal utveckling.
-
-## Innan du börjar
+Kontrollera att du har utfört följande steg innan du börjar:
 
 * Konfigurera och klona EDS-projektet (Edge Delivery Service). Se [självstudiekurs för utvecklare](https://www.aem.live/developer/tutorial) för mer information.
-* Klona [Forms Block-arkiv](https://github.com/adobe/afb).
-
-  ![Getting Started with Edge Delivery Forms](/help/edge/assets/getting-started-with-eds-forms.png)
+* Klona [Forms Block-arkiv](https://github.com/adobe/afb). Den innehåller koden som återger formuläret på en EDS-platssida.
+* Se till att du har tillgång till Google Sheets eller Microsoft SharePoint.
 
 
 ## Skapa ett formulär
-
 
 +++ Steg 1: Lägg till formulärblocket i Edge Delivery Service-projektet (EDS).
 
 AEM Forms Edge Delivery innehåller ett formulärblock som hjälper dig att enkelt skapa formulär för att hämta in och lagra inhämtade data. Så här inkluderar du formulärblocket i ditt Edge Delivery Service-projekt:
 
-1. Navigera till `[cloned Forms Block repository folder]`/block/.
+1. Navigera till `[cloned Forms Block repository folder]/blocks/`.
 
-1. Kopiera `forms` mapp till `[Cloned EDS Project repository folder]\blocks` mapp.
+1. Kopiera `forms` mapp till `[Cloned EDS Project repository folder]/blocks` mapp.
 
-1. Checka in mappen &#39;form&#39; och underliggande filer i ditt Edge Delivery Service-projekt på GitHub.
+   >[!VIDEO](https://video.tv.adobe.com/v/3427487?quality=12&learn=on)
+
+1. Checka in `form` mapp och underliggande filer till Edge Delivery Service-projektet på GitHub.
 
    ```Shell
    cd ..
@@ -112,7 +110,7 @@ Fram tills nu har du aktiverat formulärblocket för ditt EDS-projekt och förbe
 
 1. Gå till ditt Microsoft SharePoint- eller Google Drive-konto och öppna AEM Edge Delivery-projektkatalog.
 
-1. Öppna en dokumentfil för att bädda in formuläret i den. Öppna till exempel indexfilen. Du kan också skapa en ny fil.
+1. Öppna en dokumentfil för att bädda in formuläret i den. Öppna till exempel indexfilen. Du kan också skapa en ny dokumentfil.
 
 1. Navigera till önskad plats i dokumentet där du vill lägga till formuläret.
 
