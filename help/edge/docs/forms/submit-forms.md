@@ -1,18 +1,18 @@
 ---
-title: Från kalkylblad till Forms - Mastering Form Block Field Validations
-description: Skapa kraftfulla formulär snabbare med kalkylblad och formulärblocksfält! Den här guiden hjälper dig att skapa anpassade valideringar för EDS Forms Block-fält.
+title: Förbered kalkylbladet för att ta emot data
+description: Skapa kraftfulla formulär snabbare med kalkylblad och formulärblocksfält!
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: c1a01dd256d39531c6091410e38a744688e71aaa
+source-git-commit: bd8c4fbfd7f740baa6abd7a91fb8d1dcdaff6c28
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '994'
 ht-degree: 0%
 
 ---
 
 
-# Aktivera formuläret för att skicka data
+# Förbered kalkylbladet för att ta emot data
 
 En gång har du [skapade och förhandsvisade formuläret](/help/edge/docs/forms/create-forms.md)är det dags att aktivera motsvarande kalkylblad så att det kan börja ta emot data.
 
@@ -20,15 +20,15 @@ En gång har du [skapade och förhandsvisade formuläret](/help/edge/docs/forms/
 
 Aktivera kalkylbladet:
 
-1. Öppna kalkylbladet som innehåller formuläret och lägg till ett blad i det och ändra namnet på det till `incoming`.
+1. Öppna kalkylbladet som innehåller formuläret och lägg till ett nytt blad och ge det ett nytt namn `incoming`.
 
    >[!WARNING]
    >
-   > Om `incoming` bladet finns inte, AEM skickar inga data till arbetsboken.
+   > Om `incoming` bladet finns inte, AEM skickar inga data till kalkylbladet.
 
-1. I `incoming` blad, spegla alla kolumnrubriker till `Name` kolumn (formulärfältsnamn) i `shared-default` blad.
+1. Spegla formulärfältsnamnen, värden för `Name` kolumn i`shared-default` kalkylblad, till rubrikerna i `incoming` blad.
 
-   I följande exempel visas rubriker för ett kontaktformulär:
+   Varje värde i `Name` kolumn i `shared-default` kalkylbladet, med undantag för skicka-knappen, fungerar som en rubrik i `incoming` blad. Titta på följande bild som illustrerar rubriker för ett&quot;kontaktformulär&quot;:
 
    ![Fält för ett kontaktformulär](/help/edge/assets/contact-us-form-excel-sheet-fields.png)
 
@@ -77,9 +77,9 @@ Så här använder du Admin API:er för att aktivera ett kalkylblad för att ta 
    >
    >Även om du har förhandsgranskat bladet tidigare måste du förhandsgranska det igen när du har skapat `incoming` första gången.
 
-1. Skicka begäran om POST för att generera lämpliga rubriker i `incoming` och lägg till `shared-default` om det inte redan finns.
+1. Skicka begäran om POST för att generera lämpliga rubriker i `incoming` och lägg till `shared-default` till uppslagsbladet, om det inte redan finns.
 
-   Om du vill veta hur du formaterar POSTEN för att konfigurera bladet kan du läsa [Dokumentation för Admin API](https://www.hlx.live/docs/admin.html#tag/form). Du kan titta på exemplet nedan:
+   Om du vill veta hur du formaterar POSTEN för att konfigurera bladet kan du läsa [Dokumentation för Admin API](https://www.aem.live/docs/admin.html#tag/authentication/operation/profile). Du kan titta på exemplet nedan:
 
    **Begäran**
 

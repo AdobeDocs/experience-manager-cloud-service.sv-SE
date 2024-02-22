@@ -4,9 +4,9 @@ description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery, doku
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: c1a01dd256d39531c6091410e38a744688e71aaa
+source-git-commit: bd8c4fbfd7f740baa6abd7a91fb8d1dcdaff6c28
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '910'
 ht-degree: 0%
 
 ---
@@ -18,15 +18,13 @@ I dagens digitala samhälle är det viktigt för alla företag att skapa använd
 
 Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft Sharepoint för att enkelt bearbeta inskickade data eller starta ett befintligt arbetsflöde.
 
-![Getting Started with Edge Delivery Forms](/help/edge/assets/getting-started-with-eds-forms.png)
-
 
 ## Förutsättningar
 
 Kontrollera att du har utfört följande steg innan du börjar:
 
-* Konfigurera och klona EDS-projektet (Edge Delivery Service). Se [självstudiekurs för utvecklare](https://www.aem.live/developer/tutorial) för mer information.
-* Klona [Forms Block-arkiv](https://github.com/adobe/afb). Den innehåller koden som återger formuläret på en EDS-platssida.
+* Konfigurera och klona EDS-projektet (Edge Delivery Service). Se [självstudiekurs för utvecklare](https://www.aem.live/developer/tutorial) för mer information. Den lokala mappen i Edge Delivery Service-projektet (EDS) refereras som `[EDS Project repository]` i det här dokumentet.
+* Klona [Forms Block-arkiv](https://github.com/adobe/afb). Den innehåller koden som återger formuläret på en EDS-webbsida. Den lokala mappen i Forms Block-databasen refereras som `[Forms Block repository]` i det här dokumentet.
 * Se till att du har tillgång till Google Sheets eller Microsoft SharePoint.
 
 
@@ -36,32 +34,25 @@ Kontrollera att du har utfört följande steg innan du börjar:
 
 AEM Forms Edge Delivery innehåller ett formulärblock som hjälper dig att enkelt skapa formulär för att hämta in och lagra inhämtade data. Så här inkluderar du formulärblocket i ditt Edge Delivery Service-projekt:
 
-1. Navigera till `[cloned Forms Block repository folder]/blocks/`.
+1. Navigera till `[Forms Block repository]/blocks` och kopiera `forms` mapp.
 
-1. Kopiera `forms` mapp till `[Cloned EDS Project repository folder]/blocks` mapp.
+1. Navigera till `[EDS Project repository]/blocks/` och klistra in `forms` mapp.
 
    >[!VIDEO](https://video.tv.adobe.com/v/3427487?quality=12&learn=on)
 
 1. Checka in `form` mapp och underliggande filer till Edge Delivery Service-projektet på GitHub.
 
-   ```Shell
-   cd ..
-   git add .
-   git commit -m "Added form block"
-   git push origin
-   ```
+   Formulärblocket läggs till i din EDS-projektdatabas på Github. Kontrollera att Github-bygget inte misslyckas:
 
-   Formulärblocket läggs till i ditt EDS-projekt. Nu kan du skapa ett formulär och lägga till det på webbplatsen.
+   * Om du får felmeddelandet&quot;Det går inte att matcha sökvägen till modulen &quot;&#39;../../scripts/lib-franklin.js&#39;&quot; öppnar du `[EDS Project]/blocks/forms/form.js` -fil. Ersätt `lib-franklin.js` filen med `aem.js` -fil.
 
-   >[!NOTE]
-   >
-   > * Om du får felmeddelandet&quot;Det går inte att matcha sökvägen till modulen &quot;&#39;../../scripts/lib-franklin.js&#39;&quot; öppnar du `[EDS Project]/blocks/forms/form.js` -fil. Ersätt `lib-franklin.js` filen med `aem.js` -fil.
-   > * Om du råkar ut för några lintingfel kan du ignorera dem. Öppna `[EDS Project]\package.json` och uppdatera lint-skriptet från `"lint": "npm run lint:js && npm run lint:css"` till `"lint": "echo 'skipping linting for now'"`. Spara filen och implementera den i ditt GitHub-projekt.
+   * Om du råkar ut för några lintingfel kan du ignorera dem. Öppna `[EDS Project]\package.json` och uppdatera lint-skriptet från `"lint": "npm run lint:js && npm run lint:css"` till `"lint": "echo 'skipping linting for now'"`. Spara filen och implementera den i ditt GitHub-projekt.
+
+Nu kan du skapa ett formulär och lägga till det på webbplatsen.
 
 +++
 
-+++ Steg 2: Skapa ett formulär med Microsoft Excel eller Google Sheet
-
++++ Steg 2: Skapa ett formulär med Microsoft Excel eller Google Sheet.
 
 I stället för komplexa processer kan du enkelt skapa ett formulär med hjälp av ett kalkylblad. Du kan börja med att lägga till rader och kolumnrubriker i ett kalkylblad, där varje rad definierar ett formulärfält och varje kolumnrubrik definierar egenskaperna för motsvarande formulärfält.
 
@@ -103,10 +94,10 @@ Så här skapar du ett formulär:
 
 +++
 
-+++ Steg 3: Förhandsgranska formuläret på EDS-sidan (Edge Delivery Service)
++++ Steg 3: Förhandsgranska formuläret på EDS-sidan (Edge Delivery Service).
 
 
-Fram tills nu har du aktiverat formulärblocket för ditt EDS-projekt och förberett formulärets struktur. Nu kan du förhandsgranska formuläret:
+Fram tills nu har du lagt till formulärblocket i EDS-projektet och förberett formulärets struktur. Nu kan du förhandsgranska formuläret:
 
 1. Gå till ditt Microsoft SharePoint- eller Google Drive-konto och öppna AEM Edge Delivery-projektkatalog.
 
@@ -118,14 +109,17 @@ Fram tills nu har du aktiverat formulärblocket för ditt EDS-projekt och förbe
 
    ![](/help/edge/assets/form-block-in-sites-page-example.png)
 
-   På den andra raden tar du med den URL som du märkte i föregående avsnitt som en hyperlänk. Du kan använda URL:en för förhandsgranskning (.page URL) eller publicera URL:en (.live). Du kan använda URL:en för förhandsgranskning när du skapar eller testar formuläret och publicerar URL:en för produktion.
+   På den andra raden tar du med den URL som du registrerade i föregående avsnitt som hyperlänk. Använd URL:en för förhandsgranskning (.page URL) för utvecklings- eller teständamål, eller publicerings-URL:en (.live) för produktion.
 
    >[!IMPORTANT]
    >
    >
-   > Kontrollera att URL-adressen inte anges som oformaterad text. Den ska läggas till som en hyperlänk.
+   > Kontrollera att URL-adressen är hyperlänkad i stället för att visas som oformaterad text.
 
-1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska sidan. Formuläret visas nu på sidan. Här är till exempel formuläret baserat på [kontakta oss, kalkylblad](https://docs.google.com/spreadsheets/d/12jvYjo1a3GOV30IqPY6_7YaCQtUmzWpFhoiOHDcjB28/edit?usp=drive_link):
+
+1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska sidan. Formuläret visas nu på sidan.
+
+   Här är till exempel formuläret baserat på [kontakta oss, kalkylblad](https://docs.google.com/spreadsheets/d/12jvYjo1a3GOV30IqPY6_7YaCQtUmzWpFhoiOHDcjB28/edit?usp=drive_link):
 
 
    ![Ett exempel på ett EDS-formulär](/help/edge/assets/eds-form.png)
@@ -139,7 +133,7 @@ Fram tills nu har du aktiverat formulärblocket för ditt EDS-projekt och förbe
 
 ## Nästa steg
 
-Nästa steg är att [förbereda kalkylbladet för att ta emot data](/help/edge/docs/forms/submit-forms.md).
+[Förbered kalkylbladet](/help/edge/docs/forms/submit-forms.md) för att börja ta emot data när formulär skickas in.
 
 
 

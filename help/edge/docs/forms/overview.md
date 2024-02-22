@@ -4,9 +4,9 @@ description: AEM Forms Edge Delivery Service har tagits fram för bästa prestan
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 34ba430ae9b40fc3bc675af20bbee2534c44a0c3
+source-git-commit: bd8c4fbfd7f740baa6abd7a91fb8d1dcdaff6c28
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,25 @@ ht-degree: 0%
 
 # AEM Forms Edge Delivery Service {#aem-forms-edge-delivery-service-overview}
 
-AEM Forms Edge Delivery Service är en sammansättningsbar tjänst från Adobe som gör att du kan skapa och leverera effektiva webbformulär. Den här sammanställningsbara tjänsten är sömlöst integrerad med Adobe Experience Manager (AEM) för att du ska kunna utforma, bygga och driftsätta slagkraftiga, blixtsnabba webbformulär med ett intuitivt och effektivt arbetsflöde.
-
-AEM Forms Edge Delivery Service hjälper dig att:
+AEM Forms Edge Delivery Service är en sammansättningsbar tjänst från Adobe som gör att du kan skapa och leverera effektiva webbformulär. Du kan använda tjänsten för att:
 
 * **Skapa visuellt slagkraftiga formulär**: Gör intryck på den bleka, kakformsdesignen och fånga upp användarna med dynamiska, moderna former som speglar er varumärkesidentitet. Utnyttja färdiga komponenter eller skapa egna komponenter för att förverkliga din vision snabbt och enkelt.
 
 * **Skapa formulär med perfekt fyr**: Bygg formulär som läses in och återges snabbt, även på långsamma internetanslutningar. Snabbare inläsningstider och optimerad användarupplevelse bidrar till snabbare ifyllnad av formulär och förbättrad konverteringsgrad.
 
 * **Förenkla framtagning och inlämning**: Skapa formulär med välbekanta verktyg som Microsoft Excel eller Google Sheets i stället för med de traditionella redigeringsmiljöerna. Skicka blanketter direkt till Microsoft Excel- eller Google-ark och använd deras ekosystem för att enkelt bearbeta inlämnade data.
+
+
+Den här sammansatta tjänsten är fristående från innehållskällan och ger flexibilitet när det gäller att skapa innehåll genom att användarna kan använda de redigeringsverktyg de föredrar.
+
+![Utvecklingsverktyg för Edge Delivery-formulär](/help/edge/assets/edge-delivery-forms-authoring-tools.png)
+
+De som skapar innehåll kan utnyttja de verktyg de känner sig hemma med, som Microsoft Excel eller Google Sheets (dokumentbaserad redigering), JSON-redigerare eller AEM Forms Adaptive Forms-redigerare för WYSIWYG-redigering (AEM Forms-projekt), för att utforma och skapa sina formulär.
+
+>[!NOTE]
+>
+>
+> WYSIWYG-redigeringsfunktionen och Cross Walk-områden är tillgängliga i tidiga adopter-program. Du kan skriva till aem-forms-early-adopter-program@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen.
 
 ## Börja med grunderna
 
@@ -47,7 +57,7 @@ AEM Forms Edge Delivery Service hjälper dig att:
     <div class="card-container">
         <a href="/help/edge/docs/forms/create-forms.md">
             <img src="/help/edge/assets/smock_devices_18_n.svg" alt="Skapa ett formulär med hjälp av eds-formulär" style="border-radius: 5px;"> </b>
-            <br><b style="margin-top: 5px;">Skapa ett formulär</b>
+            <br><b style="margin-top: 5px;">Skapa ett formulär med Google eller Microsoft Excel</b>
         </a>
         <p>Skapa formulär som läses in och återges snabbt och automatiskt flödar om på mobila enheter.</p>
     </div>
