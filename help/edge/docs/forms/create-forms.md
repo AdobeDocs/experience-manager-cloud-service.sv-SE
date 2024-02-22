@@ -4,9 +4,9 @@ description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery, doku
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 34ba430ae9b40fc3bc675af20bbee2534c44a0c3
+source-git-commit: 7b497791c70fd588b7e8c9a94caa218189d3153a
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '891'
 ht-degree: 0%
 
 ---
@@ -28,43 +28,21 @@ Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets
 ## Innan du börjar
 
 * Konfigurera och klona EDS-projektet (Edge Delivery Service). Se [självstudiekurs för utvecklare](https://www.aem.live/developer/tutorial) för mer information.
-* Klona [Forms Block-arkiv](https://github.com/adobe/afb). Den innehåller det formulärblock som behövs för att återge formuläret.
+* Klona [Forms Block-arkiv](https://github.com/adobe/afb).
 
-![Getting Started with Edge Delivery Forms](/help/edge/assets/getting-started-with-eds-forms.png)
+  ![Getting Started with Edge Delivery Forms](/help/edge/assets/getting-started-with-eds-forms.png)
 
 
-## Steg 1: Lägg till formulärblocket i Edge Delivery Service-projektet (EDS) {#add-forms-block-to-an-eds-project}
+## Skapa ett formulär
+
+
++++ Steg 1: Lägg till formulärblocket i Edge Delivery Service-projektet (EDS).
 
 AEM Forms Edge Delivery innehåller ett formulärblock som hjälper dig att enkelt skapa formulär för att hämta in och lagra inhämtade data. Så här inkluderar du formulärblocket i ditt Edge Delivery Service-projekt:
 
-1. Navigera till `blocks` i projektmappen Edge Delivery Service (EDS) i den lokala utvecklingsmiljön.
+1. Navigera till `[cloned Forms Block repository folder]`/block/.
 
-
-   ```Shell
-   cd [EDS Project folder]/blocks
-   ```
-
-1. Skapa en mapp med namnet `form` under `blocks` katalog. Till exempel, under katalogen för EDS-projektet med namnet `Portal`, skapa en mapp med namnet `form`.
-
-   ```Shell
-   mkdir form
-   ```
-
-
-1. Lägg till [Forms Block](https://github.com/adobe/afb/tree/main/blocks/form) till mappen &#39;form&#39;.
-
-   ```shell
-   cp -R <source:path of the form block> <destination: path of the form folder created in the previous step>
-   ```
-
-   **Till exempel:**
-
-
-   ```shell
-   cp -R ../../afb/blocks/form ../../fantastic-computing-machine/blocks 
-   ```
-
-
+1. Kopiera `forms` mapp till `[Cloned EDS Project repository folder]\blocks` mapp.
 
 1. Checka in mappen &#39;form&#39; och underliggande filer i ditt Edge Delivery Service-projekt på GitHub.
 
@@ -79,10 +57,13 @@ AEM Forms Edge Delivery innehåller ett formulärblock som hjälper dig att enke
 
    >[!NOTE]
    >
-   > * Om du får felmeddelandet&quot;Det går inte att matcha sökvägen till modulen &quot;&#39;../../scripts/lib-franklin.js&#39;&quot; öppnar du `[EDS Project]/blocks/forms/form.js` -fil. Ersätt `franklin-lib.js` filen med `aem.js` -fil.
+   > * Om du får felmeddelandet&quot;Det går inte att matcha sökvägen till modulen &quot;&#39;../../scripts/lib-franklin.js&#39;&quot; öppnar du `[EDS Project]/blocks/forms/form.js` -fil. Ersätt `lib-franklin.js` filen med `aem.js` -fil.
    > * Om du råkar ut för några lintingfel kan du ignorera dem. Öppna `[EDS Project]\package.json` och uppdatera lint-skriptet från `"lint": "npm run lint:js && npm run lint:css"` till `"lint": "echo 'skipping linting for now'"`. Spara filen och implementera den i ditt GitHub-projekt.
 
-## Steg 2: Skapa ett formulär med Microsoft Excel eller Google Sheet
++++
+
++++ Steg 2: Skapa ett formulär med Microsoft Excel eller Google Sheet
+
 
 I stället för komplexa processer kan du enkelt skapa ett formulär med hjälp av ett kalkylblad. Du kan börja med att lägga till rader och kolumnrubriker i ett kalkylblad, där varje rad definierar ett formulärfält och varje kolumnrubrik definierar egenskaperna för motsvarande formulärfält.
 
@@ -122,15 +103,16 @@ Så här skapar du ett formulär:
    For example, https://main--portal--wkndforms.hlx.live/contact-us.json
    ```
 
++++
 
++++ Steg 3: Förhandsgranska formuläret på EDS-sidan (Edge Delivery Service)
 
-## Steg 3: Förhandsgranska formuläret på EDS-sidan (Edge Delivery Service)
 
 Fram tills nu har du aktiverat formulärblocket för ditt EDS-projekt och förberett formulärets struktur. Nu kan du förhandsgranska formuläret:
 
-1. Gå till projektkatalogen AEM Edge Delivery på Microsoft SharePoint eller Google Drive.
+1. Gå till ditt Microsoft SharePoint- eller Google Drive-konto och öppna AEM Edge Delivery-projektkatalog.
 
-1. Skapa eller öppna en dokumentfil som är värd för formuläret. Öppna till exempel indexfilen.
+1. Öppna en dokumentfil för att bädda in formuläret i den. Öppna till exempel indexfilen. Du kan också skapa en ny fil.
 
 1. Navigera till önskad plats i dokumentet där du vill lägga till formuläret.
 
@@ -153,6 +135,9 @@ Fram tills nu har du aktiverat formulärblocket för ditt EDS-projekt och förbe
    Fyll i formuläret och klicka på skicka-knappen. Ett fel visas, ungefär som följande, eftersom kalkylbladet inte är inställt på att acceptera data än.
 
    ![fel vid inlämning av formulär](/help/edge/assets/form-error.png)
+
++++
+
 
 ## Nästa steg
 
