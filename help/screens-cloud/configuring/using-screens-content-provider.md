@@ -2,9 +2,9 @@
 title: Använda providern för skärminnehåll
 description: Den här sidan beskriver hur du använder Screens Content Provider för att skapa innehåll.
 exl-id: ed7de2c0-13cf-4ce0-8794-aef918cf8e71
-source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
+source-git-commit: f7ed7c63fd141c6a9817e4718edb31425b14a761
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Syfte {#objective}
 
-I följande avsnitt beskrivs hur du använder Screens Content Provider när du har konfigurerat [Tjänsteleverantör för skärmar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html).
+I följande avsnitt beskrivs hur du skapar kanaler i Screens Content Provider när du har konfigurerat [Tjänsteleverantör för skärmar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html?lang=en).
 
 ## Använda leverantör av skärminnehåll {#screens-content-provider}
 
@@ -46,7 +46,7 @@ Logga in på Screens Content Provider genom att följa stegen nedan:
 
    ![Länken är markerad från miljökortet som gör att du kan komma åt leverantören av skärminnehåll.](/help/screens-cloud/assets/configure/screens-cp-2.png)
 
-   När du har loggat in på Screens Content Provider kan du nu skapa innehåll i uppspelning av innehåll.
+   När du har loggat in på Screens Content Provider går du till Skärmar > Innehållsleverantör. Nu kan du skapa ditt innehåll för uppspelning av innehåll.
 
    Använd rasterinnehållsleverantör för att skapa och hantera följande:
 

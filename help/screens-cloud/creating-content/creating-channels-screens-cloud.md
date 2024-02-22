@@ -2,9 +2,9 @@
 title: Skapa och hantera kanaler på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du skapar och hanterar kanaler på skärmar as a Cloud Service.
 exl-id: 3b0bae7a-4a45-485a-ab04-604510ff6578
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: f7ed7c63fd141c6a9817e4718edb31425b14a761
 workflow-type: tm+mt
-source-wordcount: '1086'
+source-wordcount: '1103'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Det här dokumentet hjälper dig att förstå hur du skapar och hanterar kanaler
 
 * förstå hur du skapar kanaler för leverantörer av skärminnehåll
 * hantera och redigera innehåll i era kanaler
-* aktiveringsschema för era kanaler
+* hantera tilldelnings- och aktiveringsschemat för era kanaler i [Tjänsteleverantör för skärmar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html?lang=en)
 
 ## Steg för att skapa en ny sekvenskanal på skärmar-as a Cloud Service {#create-new-channel}
 
@@ -59,7 +59,7 @@ Du kan redigera, visa egenskaper och kontrollpanel, kopiera, förhandsgranska oc
 
 Navigera till kanalen från ditt projekt och markera kanalen enligt bilden nedan. Nu kan du välja alternativ som att redigera kanalen, visa egenskaper, förhandsgranska innehåll, hantera publicering eller ta bort kanalen från åtgärdsfältet.
 
-![channelprop1](/help/screens-cloud/assets/create-content/channelprop1.png)
+![kanelprop1](/help/screens-cloud/assets/create-content/channelprop1.png)
 
 ### Lägga till innehåll i en kanal {#add-content}
 
@@ -93,6 +93,8 @@ Följande mallar är tillgängliga när du använder **Skapa** kanalguide:
 
 Med den här funktionen kan du definiera ett standardaktiveringsschema för en kanal och använda det som standard för varje tilldelning för en visning. Detta innehåller en metod så att den krångliga schemadefinitionen inte behöver upprepas.
 
+1. Navigera till Screens Services Provider från [här](https://experience.adobe.com/screens).
+
 ### Skapa standardtilldelningsinformation för en kanal {#create-default}
 
 1. Navigera till informationssidan för kanalen som du vill konfigurera.
@@ -119,7 +121,7 @@ Den här rutan visar följande information:
 Kanaler som har standardtilldelningsinformation kan tilldelas till visar på samma sätt som vanliga kanaler, med alternativet att lägga till som standardtilldelningsinformation i stället för att manuellt definiera anpassade kanaler varje gång.
 
 1. Navigera till sidan med visningsinformation som du vill tilldela kanalen till och klicka på **Tilldela kanal**.
-Du kan också välja önskad visning i lagervyn och klicka på **Tilldela kanal**.
+Du kan också välja önskad visning i [lager](https://experience.adobe.com/screens/displays) visa och klicka på **Tilldela kanal**.
 1. Dialogrutan för kanaltilldelning öppnas.
 
    ![bild](/help/screens-cloud/assets/display/Assignments4.png)
