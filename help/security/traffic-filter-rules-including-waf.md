@@ -2,9 +2,9 @@
 title: Trafikfilterregler inklusive WAF-regler
 description: Konfigurera trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF)
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: 46e48b6bb8d2b926b55330024e145d608fcf3609
+source-git-commit: 86a7815a1055b8ffaf57b802f3232f2c03ec06dc
 workflow-type: tm+mt
-source-wordcount: '3350'
+source-wordcount: '3376'
 ht-degree: 0%
 
 ---
@@ -252,6 +252,7 @@ The `wafFlags` egenskapen, som kan användas i de licensbara reglerna för WAF-t
 | USERAGENT | Attackverktyg | Attack Tooling är användning av automatiserad programvara för att identifiera säkerhetsproblem eller för att försöka utnyttja en upptäckt säkerhetslucka. |
 | LOG4J-JNDI | Log4J JNDI | Log4J JNDI-attacker försöker utnyttja [Log4Shell-sårbarhet](https://en.wikipedia.org/wiki/Log4Shell) finns i Log4J-versioner tidigare än 2.16.0 |
 | BHH | Felaktiga Hop-huvuden | Felaktiga Hop-huvuden anger ett försök till HTTP-smuggling via en felformaterad Transfer-Encoding (TE) eller Content-Length (CL)-rubrik, eller en korrekt formaterad TE- och CL-rubrik |
+| KODEINJEKTION | Kodinmatning | Kodinjektion är ett försök att få kontroll över eller skada ett målsystem genom godtyckliga programkodkommandon med hjälp av användarindata. |
 | ABNORMALPATH | Onormal bana | Onormal bana anger att den ursprungliga banan skiljer sig från den normaliserade banan (till exempel `/foo/./bar` normaliseras till `/foo/bar`) |
 | DUBBELKODNING | Dubbel kodning | Dubbel kodning används för att kontrollera om HTML-tecken med dubbel kodning kan användas |
 | NOTUTF8 | Ogiltig kodning | Ogiltig kodning kan göra att servern översätter skadliga tecken från en begäran till ett svar, vilket kan orsaka denial of service eller XSS |
