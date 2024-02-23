@@ -4,7 +4,7 @@ description: Lär dig hur du skapar och hanterar både maskinöversättning och 
 feature: Language Copy
 role: Admin
 exl-id: dc2f3958-72b5-4ae3-a224-93d8b258bc80
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
 source-wordcount: '3960'
 ht-degree: 0%
@@ -196,7 +196,7 @@ Uppdateringarna av översättningsminnet kan fångas upp och skickas till en anp
 
 En egenskap kan väljas i listvyn i webbplatskonsolen som visar om en sida har översatts, är i översättning eller ännu inte har översatts.
 
-1. I platskonsolen växlar du till [listvy](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources).
+1. I platskonsolen växlar du till [listvy](/help/sites-cloud/authoring/basic-handling.md#viewing-and-selecting-resources).
 1. Välj, **Visa inställningar** i listrutan.
 1. I dialogrutan markerar du **Översatt** egenskap och välj **Uppdatera**.
 
@@ -437,18 +437,18 @@ När innehåll översätts för en befintlig språkkopia granskar du översättn
 Så här jämför du språkkopior med språkinställningen:
 
 1. Gå till den språkkopia som du vill jämföra i webbplatskonsolen.
-1. Öppna [Referensspår](/help/sites-cloud/authoring/getting-started/basic-handling.md#references).
+1. Öppna [Referensspår](/help/sites-cloud/authoring/basic-handling.md#references).
 1. Under **Kopior** rubrikmarkera **Språkkopior.**
 1. Välj en språkversion och sedan kan du antingen klicka **Jämför med mallsida** eller **Jämför med föregående** om tillämpligt.
 
    ![Jämför språkkopior](../assets/language-copy-compare.png)
 
 1. De två sidorna (start och källa) öppnas sida vid sida.
-   * Mer information om hur du använder den här funktionen finns i [Sidskillnader](/help/sites-cloud/authoring/features/page-diff.md).
+   * Mer information om hur du använder den här funktionen finns i [Sidskillnader](/help/sites-cloud/authoring/sites-console/page-diff.md).
 
 ## Flytta eller byta namn på en källsida {#move-source}
 
-Om en redan översatt källsida måste [ändrat namn eller flyttat](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#moving-or-renaming-a-page), översätter sidan igen efter flytten, skapar en språkkopia baserad på det nya sidnamnet/den nya sidplatsen. Den gamla språkkopian som baseras på föregående namn/plats kommer fortfarande att finnas där.
+Om en redan översatt källsida måste [ändrat namn eller flyttat](/help/sites-cloud/authoring/sites-console/managing-pages.md#moving-or-renaming-a-page), översätter sidan igen efter flytten, skapar en språkkopia baserad på det nya sidnamnet/den nya sidplatsen. Den gamla språkkopian som baseras på föregående namn/plats kommer fortfarande att finnas där.
 
 Det bästa sättet i detta scenario är att följa denna procedur:
 

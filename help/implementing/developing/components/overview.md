@@ -2,16 +2,16 @@
 title: Komponenter - översikt
 description: Komponenter är modulära enheter som har vissa funktioner för att presentera ditt innehåll på din webbplats
 exl-id: 0fdc99e7-2103-448d-8217-d5d52c94acea
-source-git-commit: 78ead5f15c2613d9c3bed3025b43423a66805c59
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
 
 # Komponenter - översikt {#components-overview}
 
-På den här sidan finns en översikt över Adobe Experience Manager (AEM) komponenter som [används för att skapa sidor](/help/sites-cloud/authoring/fundamentals/components.md).
+På den här sidan finns en översikt över Adobe Experience Manager (AEM) komponenter som [används för att skapa sidor](/help/sites-cloud/authoring/page-editor/components.md).
 
 ## Vad är komponenter? {#what-are-components}
 
@@ -48,7 +48,7 @@ Kärnkomponenterna finns med AEM as a Cloud Service och [WKND - självstudiekurs
 
 ### Visa tillgängliga komponenter {#viewing-available-components}
 
-Om du vill se en översikt över alla tillgängliga komponenter i AEM ska du använda [Komponentkonsol](/help/sites-cloud/authoring/features/components-console.md).
+Om du vill se en översikt över alla tillgängliga komponenter i AEM ska du använda [Komponentkonsol](/help/sites-cloud/authoring/components-console.md).
 
 Du kan också använda CRXDE Lite för att få en lista över alla komponenter som är tillgängliga i databasen.
 

@@ -2,18 +2,18 @@
 title: Översikt över Experience Fragments
 description: Bygg ut Adobe Experience Manager as a Cloud Service Experience Fragments.
 exl-id: bd4ea763-d17c-40a6-9a86-a24d7600229e
-source-git-commit: 29d8d08899bb60b2bf3027ed32dbcdca3a73e671
+source-git-commit: 89f23a590338561b4cfeb10b54a260a135ec2f08
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1642'
 ht-degree: 0%
 
 ---
 
-# Experience Fragments{#experience-fragments}
+# Upplevelsefragment{#experience-fragments}
 
 ## Grunderna {#the-basics}
 
-An [Experience Fragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md) är en grupp med en eller flera komponenter, inklusive innehåll och layout, som kan refereras till på sidor.
+An [Experience Fragment](/help/sites-cloud/authoring/fragments/content-fragments.md) är en grupp med en eller flera komponenter, inklusive innehåll och layout, som kan refereras till på sidor.
 
 En Experience Fragment Master, eller Variant, eller båda, använder:
 
@@ -89,7 +89,7 @@ Skapa en Experience Fragment-mall som identifieras av **Skapa upplevelsefragment
       `experience-fragments`
 Med det här mönstret kan användare skapa upplevelsefragment i /content/experience-fragments som `cq:allowedTemplates` -egenskapen i den här mappen innehåller alla mallar som har namn som börjar med `experience-fragment`. Kunder kan uppdatera den här egenskapen så att den omfattar sina egna namngivningsscheman eller mallplatser.
 
-1. [Tillåtna mallar](/help/sites-cloud/authoring/fundamentals/experience-fragments.md#configure-allowed-templates-folder) kan konfigureras i Experience Fragments-konsolen.
+1. [Tillåtna mallar](/help/sites-cloud/authoring/fragments/content-fragments.md#configure-allowed-templates-folder) kan konfigureras i Experience Fragments-konsolen.
 
 <!--
 1. Add the template details manually in `cq:allowedTemplates` on the `/content/experience-fragment` node.
@@ -204,7 +204,7 @@ Om du vill använda gränssnittet måste du först skapa ett paket som innehåll
 
 Den här tjänsten används för att ansluta till Experience Fragment Export till Target-omskrivning så att den kan komma åt de olika länkarna.
 
-Till exempel, `ComponentService`:
+Till exempel: `ComponentService`:
 
 ```java
 import com.adobe.cq.xf.ExperienceFragmentLinkRewriterProvider;

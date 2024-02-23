@@ -5,7 +5,7 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: 1e5e739a-1fbd-49cf-b529-335696d7e2f4
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
@@ -62,5 +62,5 @@ Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sit
 
 Vi rekommenderar att du går vidare till nästa del av webbplatsöversättningsresan genom att granska dokumentet [Kom igång med AEM Sites translation,](getting-started.md) Nedan följer ytterligare, valfria resurser som fördjupar sig i några koncept som nämns i det här dokumentet, men som inte behöver fortsätta på resan.
 
-* [Snabbstartsguide till framtagning av sidor](/help/sites-cloud/authoring/getting-started/quick-start.md) - En snabb översikt av de viktigaste begreppen för att skapa innehåll med AEM Sites
+* [Snabbstartsguide till framtagning av sidor](/help/sites-cloud/authoring/quick-start.md) - En snabb översikt av de viktigaste begreppen för att skapa innehåll med AEM Sites
 * [MSM och översättning](/help/sites-cloud/administering/msm-and-translation.md) - Information om AEM Multi-Site Manager och hur det fungerar med översättningsverktygen

@@ -1,25 +1,26 @@
 ---
-title: Använda webbplatsservern för att hantera ditt webbplatstema
-description: Lär dig de kraftfulla funktionerna i webbplatsspåret för att enkelt anpassa och hantera webbplatstemat.
+title: Hantera platstemat med hjälp av platspanelen
+description: Lär dig de kraftfulla funktionerna i panelen Webbplats så att du enkelt kan anpassa och hantera ditt webbplatstema.
 feature: Administering
 role: Admin
 exl-id: 45785e5a-4fa2-4cf2-a300-f1865f6f5807
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
 workflow-type: tm+mt
 source-wordcount: '583'
 ht-degree: 0%
 
 ---
 
-# Använda webbplatsservern för att hantera ditt webbplatstema {#site-rail}
 
-Lär dig de kraftfulla funktionerna i webbplatsspåret för att enkelt anpassa och hantera webbplatstemat.
+# Hantera ditt webbplatstema med hjälp av platspanelen {#site-panel}
 
-## Översikt {#overview}
+Lär dig de kraftfulla funktionerna i panelen Webbplats så att du enkelt kan anpassa och hantera ditt webbplatstema.
 
-Med hjälp av webbplatsspåret kan du hantera temat och mallresurserna för din webbplats. [Som andra skenor](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector) som t.ex. innehållsträd, referenser eller tidslinje, visas platsspåret som panelen längst till vänster i platskonsolen och visar information om det markerade objektet. Till skillnad från andra spår gäller Site-spåret endast platsrötter.
+## Ökning {#overview}
 
-Webbplatsfältet används för att hantera tema- och mallrelaterad information för din webbplats, inklusive:
+På platspanelen kan du hantera teman och mallresurser för din webbplats. [Precis som andra paneler](/help/sites-cloud/authoring/sites-console/console-side-panel.md) som panelen Innehållsträd, Referenser eller Tidslinje visas platspanelen som den vänstra panelen i platskonsolen och visar information om det markerade objektet. Till skillnad från andra paneler gäller platspanelen endast platsrötter.
+
+Panelen Plats används för att hantera tema- och mallrelaterad information för din webbplats, inklusive:
 
 * [Hämtar temakällor](#downloading-theme-sources)
 * [Hämtar mallresurser som trådramar](#downloading-template-resources)
@@ -32,9 +33,9 @@ Webbplatsfältet används för att hantera tema- och mallrelaterad information f
 
 ## Hämtar temakällor {#downloading-theme-sources}
 
-När du skapar en plats i AEM baserad på en [webbplatsmall,](site-templates.md) du kan ladda ned [webbplatstema](site-themes.md) med hjälp av platsspåret.
+När du skapar en plats i AEM baserad på en [webbplatsmall,](site-templates.md) du kan ladda ned [webbplatstema](site-themes.md) med panelen Plats.
 
-Markera platsens rot för att visa temainformation om platsen när webbplatsspåret visas i platskonsolen.
+När platspanelen visas i platskonsolen markerar du platsens rot för att visa temainformation om platsen.
 
 ![Hämta temakällor](/help/sites-cloud/administering/assets/download-theme-wireframe.png)
 
@@ -44,7 +45,7 @@ Välj **Hämta temakällor** för att ladda ned en lokal kopia av webbplatstemat
 
 [Webbplatsmallar](site-templates.md) kan innehålla information utöver webbplatsens innehållsstruktur och [webbplatstema.](site-themes.md) Platsmallar kan till exempel innehålla trådramsdesign eller andra platsrelaterade filer.
 
-Om webbplatsen är baserad på en webbplatsmall, där webbplatsspåret visas i platskonsolen, markerar du platsens rot för att visa temainformation om webbplatsen, inklusive ytterligare webbplatsresurser.
+Om webbplatsen är baserad på en platsmall, där platspanelen visas i platskonsolen, markerar du platsens rot för att visa temainformation om platsen, inklusive ytterligare webbplatsresurser.
 
 ![Hämta temakällor](/help/sites-cloud/administering/assets/download-theme-wireframe.png)
 
@@ -52,11 +53,11 @@ Markera knappen eller knapparna under rubriken **Hämta ytterligare mallresurser
 
 ## Visa och ändra temaversioner {#them-versions}
 
-Om din webbplats är baserad på en webbplatsmall är det möjligt att temat redan har anpassats av din frontendutvecklare. Med hjälp av webbplatsspåret kan du visa vilken version av webbplatstemat som är distribuerad och växla till tidigare versioner.
+Om din webbplats är baserad på en webbplatsmall är det möjligt att temat redan har anpassats av din frontendutvecklare. Med hjälp av panelen Plats kan du visa vilken version av webbplatstemat som är distribuerad och växla till tidigare versioner.
 
-Markera platsens rot för att visa temainformation om platsen när webbplatsspåret visas i platskonsolen.
+När platspanelen visas i platskonsolen markerar du platsens rot för att visa temainformation om platsen.
 
-![Webbplatsversioner i rälsen](/help/sites-cloud/administering/assets/theme-versions.png)
+![Webbplatsversioner i panelen](/help/sites-cloud/administering/assets/theme-versions.png)
 
 Den aktuella versionen av temat visas med sin implementeringshash tillsammans med tidsstämpeln för den senaste uppdateringen.
 
@@ -76,9 +77,9 @@ Du kan använda **Välj version** för att uppdatera till den nya temaversionen.
 
 Om webbplatsen inte har skapats med en webbplatsmall går det inte att använda frontendpipeline för att anpassa och distribuera temat.
 
-Du kan emellertid aktivera frontendspipelinen för din webbplats med hjälp av platsspåret.
+Du kan emellertid aktivera frontendpipeline för webbplatsen med hjälp av platspanelen.
 
-Markera platsens rot för att visa temainformation om webbplatsen och välj sedan **Aktivera frontdelspipeline**.
+När platspanelen visas i platskonsolen markerar du platsens rot för att visa temainformation om platsen och väljer sedan **Aktivera frontdelspipeline**.
 
 ![Aktivera frontendpipeline](/help/sites-cloud/administering/assets/enable-fep.png)
 

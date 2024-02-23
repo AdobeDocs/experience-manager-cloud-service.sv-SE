@@ -2,7 +2,7 @@
 title: Redigeringsövningar
 description: När du har skapat en startsida för sidan (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna.
 exl-id: d3cd3383-e0a0-4019-9f97-8baa3be99e6e
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 17%
@@ -48,15 +48,15 @@ Se [Ändra innehåll i Live Copy](/help/sites-cloud/administering/msm/creating-l
 
 Om du vill spåra de ändringar du har gjort kan du visa startsidan i **Referenser** och jämföra startsidan med dess källsida:
 
-1. I **Webbplatser** konsol, [navigera till startsidornas källsidor och välj en](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources).
-1. Öppna **[Referenser](/help/sites-cloud/authoring/getting-started/basic-handling.md#references)** panel och markera **Startar**.
+1. I **Webbplatser** konsol, [navigera till startsidornas källsidor och välj en](/help/sites-cloud/authoring/basic-handling.md#viewing-and-selecting-resources).
+1. Öppna **[Referenser](/help/sites-cloud/authoring/basic-handling.md#references)** panel och markera **Startar**.
 1. Välj en specifik start och sedan **Jämför med källa**:
 
    ![Jämför start med källa](/help/sites-cloud/authoring/assets/launches-compare.png)
 
 1. De två sidorna (start och källa) öppnas sida vid sida.
 
-   Mer information om hur du använder den här funktionen finns i [Sidskillnader](/help/sites-cloud/authoring/features/page-diff.md).
+   Mer information om hur du använder den här funktionen finns i [Sidskillnader](/help/sites-cloud/authoring/sites-console/page-diff.md).
 
 ## Ändra använda källsidor {#changing-the-source-pages-used}
 

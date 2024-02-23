@@ -4,7 +4,7 @@ description: Lär dig hur innehållsfragment i AEM as a Cloud Service gör att d
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: ce9cb811-57d2-4a57-a360-f56e07df1b1a
-source-git-commit: 19685cb952a890731bd7d75a2adf3cfd841a465f
+source-git-commit: 89f23a590338561b4cfeb10b54a260a135ec2f08
 workflow-type: tm+mt
 source-wordcount: '1792'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # En översikt över hur du arbetar med innehållsfragment {#overview-working-with-content-fragments}
 
-Med Adobe Experience Manager (AEM) as a Cloud Service kan du skapa, redigera och [publicera sidoberoende innehåll](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Med dem kan du förbereda innehåll som är klart för användning på flera platser, och över flera kanaler, idealiskt för headless leverans, och skapa sidor.
+Med Adobe Experience Manager (AEM) as a Cloud Service kan du skapa, redigera och [publicera sidoberoende innehåll](/help/sites-cloud/authoring/fragments/content-fragments.md). Med dem kan du förbereda innehåll som är klart för användning på flera platser, och över flera kanaler, idealiskt för headless leverans, och skapa sidor.
 
 >[!IMPORTANT]
 >
@@ -27,7 +27,7 @@ Med Adobe Experience Manager (AEM) as a Cloud Service kan du skapa, redigera och
 >
 >* användning av **Resurser** konsol för [hantera innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md)
 >* användning av [*original* Innehållsfragmentsredigerare](/help/assets/content-fragments/content-fragments-variations.md),
->* använda [Content Fragments for page-authoring](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
+>* använda [Content Fragments for page-authoring](/help/sites-cloud/authoring/fragments/content-fragments.md).
 
 
 Innehållsfragment innehåller strukturerat innehåll:
@@ -74,7 +74,7 @@ Dessa innehållsfragment kan sedan monteras för att ge upplevelser över flera 
 
 >[!NOTE]
 >
->**Innehållsfragment** och **[Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md)** har olika funktioner i AEM:
+>**Innehållsfragment** och **[Upplevelsefragment](/help/sites-cloud/authoring/fragments/content-fragments.md)** har olika funktioner i AEM:
 >* **Innehållsfragment** är redaktionellt innehåll, med definition och struktur, men utan ytterligare visuell design och/eller layout. De kan användas för att komma åt strukturerade data, bland annat texter, siffror och datum.
 >* **Upplevelsefragment** är helt utformat för innehåll, ett fragment av en webbsida.
 >
@@ -94,7 +94,7 @@ När fragmenten har skapats kan du:
 * [Använda redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) - redigera, publicera (för att förhandsgranska eller producera) och referera till dina fragment
 * [Analysera](/help/sites-cloud/administering/content-fragments/analysis.md)  strukturen för ditt innehållsfragment med hjälp av redigeraren
 * [Få tillgång till dina fragment med GraphQL, för headlessleverans till dina applikationer](/help/sites-cloud/administering/content-fragments/content-delivery-with-graphql.md).
-* [Eller använd fragmenten för att skapa sidor](/help/sites-cloud/authoring/fundamentals/content-fragments.md)
+* [Eller använd fragmenten för att skapa sidor](/help/sites-cloud/authoring/fragments/content-fragments.md)
 
 >[!NOTE]
 >
@@ -104,7 +104,7 @@ När fragmenten har skapats kan du:
 >* [Content Fragments – konfigurera komponenter för återgivning](/help/implementing/developing/extending/content-fragments-configuring-components-rendering.md)
 >* [Stöd för Content Fragments i AEM Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md)
 >* [AEM GraphQL API för användning med innehållsfragment](/help/headless/graphql-api/content-fragments.md)
->* [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
+>* [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md).
 
 ## Huvud och variationer {#main-and-variations}
 
@@ -172,7 +172,7 @@ Innehållsfragmenten är:
 
 * Tillgängligt för leverans av innehåll med [AEM GRAPHQL API](/help/headless/graphql-api/content-fragments.md).
 
-* Finns i [sidredigeraren med komponenten Content Fragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md) (refererande komponent):
+* Finns i [sidredigeraren med komponenten Content Fragment](/help/sites-cloud/authoring/fragments/content-fragments.md) (refererande komponent):
 
    * The [Kärnkomponent för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html) är tillgängligt för sidförfattare. De kan referera till, och leverera, önskat innehållsfragment i antingen HTML- eller JSON-format.
 
@@ -257,7 +257,7 @@ Om du vill använda dina innehållsfragment för att skapa sidor behöver du ock
 * A **Innehållsfragmentkomponent**
 
    * Instrumentellt för att leverera fragmentet i HTML- och/eller JSON-format.
-   * Krävs för [referera till fragmentet på en sida](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
+   * Krävs för [referera till fragmentet på en sida](/help/sites-cloud/authoring/fragments/content-fragments.md).
    * Ansvarig för layout och leverans av ett fragment, t.ex. kanaler.
    * Fragment behöver en eller flera dedikerade komponenter för att definiera layout och leverera vissa eller alla element/varianter och tillhörande innehåll.
    * Om du drar ett fragment till en sida när du redigerar kopplas den nödvändiga komponenten automatiskt till.

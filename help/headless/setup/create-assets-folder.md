@@ -2,7 +2,7 @@
 title: Skapa en resursmapp - Headless-konfiguration
 description: Använd AEM Content Fragment Models för att definiera strukturen för Content Fragments, som är grunden för ditt headless-innehåll.
 exl-id: 9a156a17-8403-40fc-9bd0-dd82fb7b2235
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 0%
@@ -34,7 +34,7 @@ En administratör behöver bara skapa mappar då och då för att ordna innehål
       * Den kan vid behov justeras.
 
    ![Skapa mapp](../assets/assets-folder-create.png)
-1. Markera mappen som du skapade genom att hålla markeringen nedtryckt och trycka på den. Välj sedan **Egenskaper** i verktygsfältet (eller använd `p` [kortkommando](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md)).
+1. Markera mappen som du skapade genom att hålla markeringen nedtryckt och trycka på den. Välj sedan **Egenskaper** i verktygsfältet (eller använd `p` [kortkommando](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md)).
 1. I **Egenskaper** väljer du **Cloud Service** -fliken.
 1. För **Molnkonfiguration** Välj [konfiguration som du skapade tidigare.](create-configuration.md)
    ![Konfigurera resursmapp](../assets/assets-folder-configure.png)

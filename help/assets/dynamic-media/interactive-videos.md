@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Interactive Videos
 role: User
 exl-id: e4859223-91de-47a1-a789-c2a9447e5f71
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+source-git-commit: 89f23a590338561b4cfeb10b54a260a135ec2f08
 workflow-type: tm+mt
 source-wordcount: '5816'
 ht-degree: 2%
@@ -102,7 +102,7 @@ Om du använder en WCM-fil (Web Content Manager) från tredje part måste du int
 >* Du vill lägga till interaktivitet i videon genom att aktivera snabbvyer.
 >* Er implementering av Experience Manager gör *not* använda ett ramverk för e-handelsintegrering för att hämta produktdata till Experience Manager från alla e-handelslösningar som IBM® WebSphere® Commerce, Elastic Path, SAP Hybris eller Intershop. <!-- See [eCommerce concepts in Experience Manager Assets](/help/sites-administering/concepts.md).-->
 >
-Om din implementering av Experience Manager använder e-handel kan du hoppa över den här uppgiften och fortsätta med nästa uppgift.
+>Om din implementering av Experience Manager använder e-handel kan du hoppa över den här uppgiften och fortsätta med nästa uppgift.
 
 Börja med att identifiera dynamiska variabler som används i den befintliga QuickView-implementeringen, så att du kan mappa produktminiatyrbilder till deras motsvarande produkt i QuickView när du skapar interaktiva videofilmer.
 
@@ -243,7 +243,7 @@ Om du redan har laddat upp videoklipp och miniatyrbilder går du vidare till [L�
 
 >[!NOTE]
 >
-MXF-videoformatet stöds ännu inte för interaktiva videoklipp i Dynamic Media.
+>MXF-videoformatet stöds ännu inte för interaktiva videoklipp i Dynamic Media.
 
 Om du har överfört fel videoklipp eller bilder, eller om du vill ta bort överförda videoklipp eller bilder som du inte längre behöver, se [Ta bort resurser](/help/assets/manage-digital-assets.md#delete-assets).
 
@@ -262,15 +262,15 @@ Du lägger till tidslinjesegment i en video med den visuella redigeraren på sid
 
 När du har lagt till tidslinjesegment lägger du till miniatyrbilder i varje segment. För varje miniatyrbild som du lägger till tillämpar du en åtgärd på den. Du kan t.ex. använda en snabbvy för miniatyrbilden eller tilldela en hyperlänk till den eller ett Experience Fragment.
 
-Se [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md).
+Se [Upplevelsefragment](/help/sites-cloud/authoring/fragments/content-fragments.md).
 
 >[!NOTE]
 >
-Delningsverktyg för sociala medier i interaktiv video stöds inte när du bäddar in visningsprogrammet i ett Experience Fragment. I stället kan du använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
+>Delningsverktyg för sociala medier i interaktiv video stöds inte när du bäddar in visningsprogrammet i ett Experience Fragment. I stället kan du använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
 
 >[!NOTE]
 >
-Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager Sites-sidor.
+>Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager Sites-sidor.
 
 Alternativen Ångra och Gör om, nära det övre högra hörnet på sidan, stöds under den aktuella skaps-/redigeringssessionen.
 
@@ -432,7 +432,7 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
       <td>Associera den markerade miniatyrbilden med ett Experience Fragment</td> 
       <td><p>Under Åtgärdstyp väljer du <strong>Experience Fragment</strong>gör du följande:<p> 
        <ul> 
-       <li>Om du är Experience Manager Sites-kund väljer du sökikonen (förstoringsglas) för att öppna sidan Experience Fragment. Välj det Experience Fragment som du vill använda och välj sedan <strong>Om du vill gå tillbaka till åtgärdspanelen på föregående sida väljer du </strong>i det övre högra hörnet på sidan.<br /> Se <a href="/help/sites-cloud/authoring/fundamentals/experience-fragments.md">Upplevelsefragment</a>.</li> 
+       <li>Om du är Experience Manager Sites-kund väljer du sökikonen (förstoringsglas) för att öppna sidan Experience Fragment. Välj det Experience Fragment som du vill använda och välj sedan <strong>Om du vill gå tillbaka till åtgärdspanelen på föregående sida väljer du </strong>i det övre högra hörnet på sidan.<br /> Se <a href="/help/sites-cloud/authoring/fragments/content-fragments.md">Upplevelsefragment</a>.</li> 
       </ul> 
        <ul> 
        <li>Ange bredd och höjd för Experience Fragment så som det visas på videon.</li>
@@ -493,7 +493,7 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
    >[!NOTE]
    >
-   När du sparar den interaktiva videon sparas en associerad `.vtt`-fil automatiskt med den. The `.vtt` filen sparas i `_VTT` mapp i roten av **[!UICONTROL Assets]**. Filen och mappen är nödvändiga för att den interaktiva videon ska kunna spelas upp korrekt på webbplatsen. Därför ska du inte flytta, redigera eller ta bort mappen `_VTT` eller dess innehåll.
+   >När du sparar den interaktiva videon sparas en associerad `.vtt`-fil automatiskt med den. The `.vtt` filen sparas i `_VTT` mapp i roten av **[!UICONTROL Assets]**. Filen och mappen är nödvändiga för att den interaktiva videon ska kunna spelas upp korrekt på webbplatsen. Därför ska du inte flytta, redigera eller ta bort mappen `_VTT` eller dess innehåll.
 
 1. Publicera den interaktiva videon. Publicering skapar den inbäddningskod eller URL som du så småningom kopierar och klistrar in på webbplatsupplevelserna.
 
@@ -503,7 +503,7 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
    >[!NOTE]
    >
-   Om du vill publicera en videoklipp som kan köpas med snabbvyer måste du även publicera videons relaterade bildresurser separat från din e-handelsplats.
+   >Om du vill publicera en videoklipp som kan köpas med snabbvyer måste du även publicera videons relaterade bildresurser separat från din e-handelsplats.
 
    När du har lagt till tidslinjesegment och publicerat den interaktiva videon kan du lägga till den på din befintliga startsida för webbplatsen. Se [Integrera en interaktiv video med webbplatsen](#integrating-an-interactive-video-with-your-website).
 
@@ -529,9 +529,9 @@ Den kopierade inbäddningskoden ställs in för en responsiv miljö så att den 
 
 >[!NOTE]
 >
-Nu är du klar om du har lagt till interaktivitet med endast hyperlänkade webbsidor.
+>Nu är du klar om du har lagt till interaktivitet med endast hyperlänkade webbsidor.
 >
-Om du däremot har lagt till någon interaktivitet som utlöser en snabbvy visas endast miniatyrbilderna bredvid den interaktiva videon. De är ännu inte integrerade med dina befintliga snabbvyer. I så fall måste du integrera den interaktiva videon med befintliga snabbvyer på webbplatsen.
+>Om du däremot har lagt till någon interaktivitet som utlöser en snabbvy visas endast miniatyrbilderna bredvid den interaktiva videon. De är ännu inte integrerade med dina befintliga snabbvyer. I så fall måste du integrera den interaktiva videon med befintliga snabbvyer på webbplatsen.
 
 **Exempel**
 
@@ -574,7 +574,7 @@ Integrationen är lika enkel som att ta bort inbäddningskoden för video och er
 
 >[!NOTE]
 >
-Detta gäller endast om du är en fristående Experience Manager Assets-kund.
+>Detta gäller endast om du är en fristående Experience Manager Assets-kund.
 
 Det sista steget i den här processen är att integrera din interaktiva video med en befintlig QuickView-implementering som används på din webbplats. Det finns ingen lösning på integreringen som fungerar i alla fall. Alla QuickView-implementeringar är unika. Därför behövs ett specifikt tillvägagångssätt som innebär att IT-personal på frontend får hjälp.
 

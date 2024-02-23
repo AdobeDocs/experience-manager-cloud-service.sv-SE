@@ -4,9 +4,9 @@ description: När systemadministratören har konfigurerat de molnresurser som be
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: 86700cce-139f-451e-9c21-b38b6332f773
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '576'
 ht-degree: 0%
 
 ---
@@ -83,5 +83,5 @@ Om du är intresserad av hur utvecklare och distributionsansvariga skapar och ha
 
 Här följer ytterligare, valfria resurser om du vill gå längre än vad som ingår i introduktionsresan.
 
-[Snabbstartsguide till framtagning av sidor](/help/sites-cloud/authoring/getting-started/quick-start.md) - Börja här för att få en snabb översikt över grunderna i AEM.
+[Snabbstartsguide till framtagning av sidor](/help/sites-cloud/authoring/quick-start.md) - Börja här för att få en snabb översikt över grunderna i AEM.
 [Headless Authoring Journey](/help/journey-headless/author/overview.md) - Följ den här introduktionen om du vill skapa rubrikfritt innehåll.

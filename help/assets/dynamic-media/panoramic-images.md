@@ -1,34 +1,33 @@
 ---
-title: Panoramabilder
-description: Lär dig hur du arbetar med panoramabilder i Dynamic Media.
+title: Panorambilder
+description: Lär dig arbeta med panoramabilder i Dynamic Media.
 contentOwner: Rick Brough
 feature: Panoramic Images
 role: User
 exl-id: bdc5d00e-fa92-4db5-a3b2-4dd5885eec0b
-source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
+source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 15%
+source-wordcount: '149'
+ht-degree: 13%
 
 ---
 
-# Panoramabilder{#panoramic-images}
+# Panorambilder{#panoramic-images}
 
 I det här avsnittet beskrivs hur du arbetar med visningsprogrammet för panoramabilder för att återge sfäriska panoramabilder så att du får en totalupplevelse på 360° i ett rum, en egenskap, en plats eller ett landskap.
 
 Se även [Hantera förinställningar för visningsprogram](/help/assets/dynamic-media/managing-viewer-presets.md).
 
-![panoramic-image2](assets/panoramic-image2.png)
+![panoramabild2](assets/panoramic-image2.png)
 
 ## Överför resurser som ska användas med panoramabildsvisningsprogrammet {#uploading-assets-for-use-with-the-panoramic-image-viewer}
 
 För att en överförd resurs ska kvalificeras som en sfärisk panoramabild som du tänker använda med panoramabildsvisningsprogrammet måste resursen ha antingen ett eller båda av följande:
 
 * Proportionerna 2.
-
 <!--  You can override the default aspect ratio setting of 2 in CRXDE Lite at the following:
   `/conf/global/settings/cloudconfigs/dmscene7/jcr:content` -->
-* Taggad med nyckelorden `equirectangular`, eller `spherical`och `panorama`, eller `spherical` och `panoramic`. Se [Använd taggar](/help/sites-cloud/authoring/features/tags.md).
+* Taggad med nyckelorden `equirectangular`, eller `spherical`och `panorama`, eller `spherical` och `panoramic`. Se [Använd taggar](/help/sites-cloud/authoring/sites-console/tags.md).
 
 Kriterierna för proportioner och nyckelord gäller även för panoramaresurser på sidan med resursinformation och för komponenten `Panoramic Media` i innehållshanteringssystemet.
 
@@ -81,6 +80,6 @@ If you dropped an image into the Panoramic Media component in your WCM and the c
 
 Se [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md).
 
-## Publicera panoramabilder {#publishing-panoramic-images}
+## Publicera panorambilder {#publishing-panoramic-images}
 
 Se [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).

@@ -1,19 +1,19 @@
 ---
-title: Anpassa och utöka Content Fragments
+title: Anpassa och utöka innehållsfragment
 description: Ett innehållsfragment utökar en standardresurs. Lär dig hur du kan anpassa dem.
 exl-id: 58152d6e-21b6-4f45-a45c-0f46ee58825e
-source-git-commit: 78ead5f15c2613d9c3bed3025b43423a66805c59
+source-git-commit: 89f23a590338561b4cfeb10b54a260a135ec2f08
 workflow-type: tm+mt
-source-wordcount: '1782'
-ht-degree: 1%
+source-wordcount: '1689'
+ht-degree: 0%
 
 ---
 
-# Anpassa och utöka Content Fragments{#customizing-and-extending-content-fragments}
+# Anpassa och utöka innehållsfragment{#customizing-and-extending-content-fragments}
 
 I Adobe Experience Manager as a Cloud Service utökar ett innehållsfragment en standardresurs; se:
 
-* [Skapa och hantera innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) och [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md) för mer information om innehållsfragment.
+* [Skapa och hantera innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) och [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md) för mer information om innehållsfragment.
 
 * [Hantera resurser](/help/assets/manage-digital-assets.md) för mer information om standardtillgångar.
 
@@ -96,7 +96,7 @@ Integrera med Assets Core:
 >
 >The [Content Fragment-komponenten är en del av Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html). Se [Utveckla kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html) för mer information.
 
-Innehållsfragment kan refereras från AEM sidor, precis som andra resurstyper. AEM tillhandahåller **[Kärnkomponent för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)** - en [som gör att du kan ta med innehållsfragment på sidorna](/help/sites-cloud/authoring/fundamentals/content-fragments.md#adding-a-content-fragment-to-your-page). Du kan även utöka den här **[Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html)** kärnkomponent.
+Innehållsfragment kan refereras från AEM sidor, precis som andra resurstyper. AEM tillhandahåller **[Kärnkomponent för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)** - en [som gör att du kan ta med innehållsfragment på sidorna](/help/sites-cloud/authoring/fragments/content-fragments.md#adding-a-content-fragment-to-your-page). Du kan även utöka den här **[Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html)** kärnkomponent.
 
 * Komponenten använder `fragmentPath` -egenskap som refererar till det faktiska innehållsfragmentet. The `fragmentPath` -egenskapen hanteras på samma sätt som liknande egenskaper för andra resurstyper, till exempel när innehållsfragmentet flyttas till en annan plats.
 

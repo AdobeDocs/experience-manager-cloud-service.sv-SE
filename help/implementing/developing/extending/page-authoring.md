@@ -2,7 +2,7 @@
 title: Anpassa sidredigering
 description: Lär dig mer om de mekanismer som AEM as a Cloud Service har för att anpassa sidredigeringsfunktionerna.
 exl-id: 98d3c7ab-46d2-4e8d-b0da-5c8a7b398135
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
 workflow-type: tm+mt
 source-wordcount: '937'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Mer information om övertäckningar finns i [Övertäckningar för Adobe Experie
 
 ## Lägg till nytt lager (läge) {#add-new-layer-mode}
 
-När du redigerar en sida finns det olika [lägen](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes) tillgängliga. Dessa lägen implementeras med [lager](/help/implementing/developing/introduction/ui-structure.md#layer). Dessa ger åtkomst till olika typer av funktioner för samma sidinnehåll. Standardlägen AEM bland annat Redigera, Layout, Utvecklare, Timewarp, Live-kopieringsstatus och Målinriktning.
+När du redigerar en sida finns det olika [lägen](/help/sites-cloud/authoring/page-editor/introduction.md#page-modes) tillgängliga. Dessa lägen implementeras med [lager](/help/implementing/developing/introduction/ui-structure.md#layer). Dessa ger åtkomst till olika typer av funktioner för samma sidinnehåll. Standardlägen AEM bland annat Redigera, Layout, Utvecklare, Timewarp, Live-kopieringsstatus och Målinriktning.
 
 ### Exempel på lager: Live Copy-status {#layer-example-live-copy-status}
 

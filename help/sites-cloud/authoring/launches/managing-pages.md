@@ -2,7 +2,7 @@
 title: Hantera sidor i Launch
 description: Du kan skapa nya sidor i Launch. Du kan också ta bort oönskade sidor.
 exl-id: 214c8c2f-d09a-4ce9-b474-9505b76084f7
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: d2352e66b380f5a3654e2fc99ce4204b32066683
 workflow-type: tm+mt
 source-wordcount: '288'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Så här lägger du till nya sidor i startprogrammet:
 
 1. [Navigera till önskad plats vid start](#navigate-structure-of-launch).
 
-1. Välj **Skapa** till [skapa en sida](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#creating-a-new-page) som vanligt.
+1. Välj **Skapa** till [skapa en sida](/help/sites-cloud/authoring/sites-console/creating-pages.md#creating-a-new-page) som vanligt.
 
 ## Ta bort sidor från startsidan {#remove-pages-from-launch}
 
@@ -66,4 +66,4 @@ Så här tar du bort sidor från starten:
 
 1. [Navigera till önskad plats vid start](#navigate-structure-of-launch).
 
-1. Välj **Ta bort** till [ta bort en sida](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#deleting-a-page) som vanligt.
+1. Välj **Ta bort** till [ta bort en sida](/help/sites-cloud/authoring/sites-console/managing-pages.md#deleting-a-page) som vanligt.

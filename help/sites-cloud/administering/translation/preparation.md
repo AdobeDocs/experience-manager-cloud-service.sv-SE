@@ -4,7 +4,7 @@ description: Lär dig hur du förbereder innehåll för översättning när du u
 feature: Language Copy
 role: Admin
 exl-id: afc577a2-2791-481a-ac77-468011e4302e
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -92,7 +92,7 @@ AEM tillhandahåller en **Referenser** som visar en lista med språkrötter som 
 
 ![Språkrötter](../assets/language-roots.png)
 
-Använd följande procedur för att visa språkkopiorna för en sida med [järnvägsväljare](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector).
+Använd följande procedur för att visa språkkopiorna för en sida med [järnvägsväljare](/help/sites-cloud/authoring/basic-handling.md#rail-selector).
 
 1. På webbplatskonsolen markerar du en sida på platsen och väljer sedan **Referenser**.
 

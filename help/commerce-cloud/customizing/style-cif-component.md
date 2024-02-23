@@ -11,16 +11,16 @@ feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 exl-id: 521c1bb8-7326-4ee8-aba3-f386727e2b34
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: a868bf4d4acf4fbae7ccaf55b03319ba0617f9a4
 workflow-type: tm+mt
-source-wordcount: '2535'
+source-wordcount: '2342'
 ht-degree: 0%
 
 ---
 
 # Stil AEM CIF kärnkomponenter {#style-aem-cif-core-components}
 
-The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en referenskodbas för att använda [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components). I den här självstudiekursen inspekterar du Venias referensprojekt och förstår hur CSS och JavaScript som används AEM kärnkomponenterna är ordnade. Du kan också skapa ett format med hjälp av CSS för att uppdatera standardformatet för **Product Teaser** -komponenten.
+The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en referenskodbas för att använda [CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components). I den här självstudiekursen inspekterar du Venias referensprojekt och förstår hur CSS och JavaScript som används AEM kärnkomponenterna är ordnade. Du kan också skapa ett format med hjälp av CSS för att uppdatera standardformatet för **Product Teaser** -komponenten.
 
 >[!TIP]
 >
@@ -180,9 +180,9 @@ Gör sedan en liten ändring av Teaser-stilen för att se hur `ui.frontend` modu
 
    **clientlib-base** - Ett tomt klientbibliotek som helt enkelt bäddar in nödvändiga beroenden från [AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html). Kategorin är `venia.base`.
 
-   **klientlib-cif** - Ett tomt klientbibliotek som helt enkelt bäddar in nödvändiga beroenden från [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components). Kategorin är `venia.cif`.
+   **klientlib-cif** - Ett tomt klientbibliotek som helt enkelt bäddar in nödvändiga beroenden från [AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components). Kategorin är `venia.cif`.
 
-   **clientlib-grid** - Innehåller CSS för att aktivera funktionen AEM responsivt stödraster. Med AEM stödraster aktiveras [Layoutläge](/help/sites-cloud/authoring/features/responsive-layout.md) i AEM Editor och ger innehållsförfattare möjlighet att ändra storlek på komponenter. Kategorin är `venia.grid` och är inbäddad i `venia.base` bibliotek.
+   **clientlib-grid** - Innehåller CSS för att aktivera funktionen AEM responsivt stödraster. Med AEM stödraster aktiveras [Layoutläge](/help/sites-cloud/authoring/page-editor/responsive-layout.md) i AEM Editor och ger innehållsförfattare möjlighet att ändra storlek på komponenter. Kategorin är `venia.grid` och är inbäddad i `venia.base` bibliotek.
 
 1. Inspect filerna `customheaderlibs.html` och `customfooterlibs.html` under `ui.apps/src/main/content/jcr_root/apps/venia/components/page`:
 
@@ -473,14 +473,14 @@ Du har utformat din första AEM CIF Core Component och du använde en webbpaketd
 
 ## Bonus Challenge {#bonus-challenge}
 
-Använd [AEM](/help/sites-cloud/authoring/features/style-system.md) om du vill skapa två format som kan aktiveras och avaktiveras av en innehållsförfattare. [Utveckla med Style System](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/style-system.html) innehåller detaljerade steg och information om hur du utför den här uppgiften.
+Använd [AEM](/help/sites-cloud/authoring/page-editor/style-system.md) om du vill skapa två format som kan aktiveras och avaktiveras av en innehållsförfattare. [Utveckla med Style System](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/style-system.html) innehåller detaljerade steg och information om hur du utför den här uppgiften.
 
 ![Bonus Challenge - system av olika slag](../assets/style-cif-component/bonus-challenge.png)
 
 ## Ytterligare resurser {#additional-resources}
 
 * [AEM Project Archettype](https://github.com/adobe/aem-project-archetype)
-* [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components)
+* [AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components)
 * [Konfigurera en lokal AEM utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
 * [Bibliotek på klientsidan](/help/implementing/developing/introduction/clientlibs.md)
 * [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)

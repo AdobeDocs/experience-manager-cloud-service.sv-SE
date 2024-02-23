@@ -4,9 +4,9 @@ description: Få en introduktion till att återanvända innehåll med AEM kraftf
 feature: Multi Site Manager
 role: Admin
 exl-id: 22b4041f-1df9-4189-8a09-cbc0c89fbf2e
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
-source-wordcount: '2698'
+source-wordcount: '2702'
 ht-degree: 0%
 
 ---
@@ -132,7 +132,7 @@ MSM är direkt tillgängligt i användargränssnittet med hjälp av olika altern
 
 * **Referenser** (**Webbplatser**)
 
-   * The [Referenser](/help/sites-cloud/authoring/getting-started/basic-handling.md#references) järnvägen ger information om **Live-kopior** tillsammans med tillgång till lämpliga åtgärder.
+   * The [Referenser](/help/sites-cloud/authoring/basic-handling.md#references) järnvägen ger information om **Live-kopior** tillsammans med tillgång till lämpliga åtgärder.
 
 * **Live Copy - översikt** (**Webbplatser**)
 

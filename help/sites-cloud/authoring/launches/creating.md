@@ -1,19 +1,19 @@
 ---
-title: Skapa Launches
+title: Skapa startprogram
 description: Du kan skapa en startsida som gör det möjligt att uppdatera en ny version av befintliga webbsidor för framtida aktivering.
 exl-id: 216ccb7a-1409-4f55-8be2-2b088f91a430
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
 source-wordcount: '1042'
-ht-degree: 12%
+ht-degree: 11%
 
 ---
 
-# Skapa Launches {#creating-launches}
+# Skapa startprogram {#creating-launches}
 
 Skapa en startsida för att möjliggöra uppdatering av en ny version av befintliga webbsidor för framtida aktivering. När du skapar en Launch anger du en titel och källsidan:
 
-* Titeln visas i [Referenser](/help/sites-cloud/authoring/fundamentals/environment-tools.md#references) på webben, där författarna kan arbeta med dem.
+* Titeln visas i [Referenser](/help/sites-cloud/authoring/sites-console/console-side-panel.md#references) på webben, där författarna kan arbeta med dem.
 * Källsidans underordnade sidor inkluderas som standard i starten. Du kan bara använda källsidan om du vill.
 * Som standard [Live Copy](/help/sites-cloud/administering/msm/overview.md) uppdaterar startsidorna automatiskt när källsidorna ändras. Du kan ange att en statisk kopia ska skapas för att förhindra automatiska ändringar.
 
@@ -40,15 +40,15 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
    >När du använder **Webbplatser** konsol är det vanligt att navigera till källsidans plats, men det är inte obligatoriskt eftersom du kan navigera när du väljer **Startkälla** i guiden.
 
 1. Beroende på vilken konsol du använder:
-   * **Launches**:
+   * **Startar**:
       1. Välj **Skapa start** Öppna guiden i verktygsfältet.
-   * **Sites**:
+   * **Webbplatser**:
       1. Välj **Skapa** i verktygsfältet för att öppna markeringsrutan.
       1. Välj **Skapa start** för att öppna guiden.
 
    >[!NOTE]
    >
-   >I **Sites**-konsolen kan du även använda [markeringsläget](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources) för att välja en sida innan du väljer **Skapa**.
+   >I **Sites**-konsolen kan du även använda [markeringsläget](/help/sites-cloud/authoring/basic-handling.md#viewing-and-selecting-resources) för att välja en sida innan du väljer **Skapa**.
    >
    >Då används den valda sidan som den ursprungliga källsidan.
 
@@ -114,7 +114,7 @@ Om du väljer det här alternativet kommer det att:
 >
 >När en annan mall används är den nya sidan tom. På grund av den annorlunda sidstrukturen kopieras inget innehåll.
 >
->Den här funktionen kan användas för att ändra mallen för en [befintlig sida](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#creating-a-new-page) - även om innehållsförlusten måste beaktas.
+>Den här funktionen kan användas för att ändra mallen för en [befintlig sida](/help/sites-cloud/authoring/sites-console/creating-pages.md#creating-a-new-page) - även om innehållsförlusten måste beaktas.
 
 ### Skapa en kapslad start {#creating-a-nested-launch}
 

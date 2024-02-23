@@ -4,7 +4,7 @@ description: Lär dig hur Content Fragment Models fungerar som en grund för din
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: 8ab5b15f-cefc-45bf-a388-928e8cc8c603
-source-git-commit: 19685cb952a890731bd7d75a2adf3cfd841a465f
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
 source-wordcount: '3125'
 ht-degree: 1%
@@ -119,9 +119,9 @@ Content Fragment Model definierar effektivt strukturen för de resulterande inne
 
         >[!CAUTION]
         >
-        >När egenskapen uppdateras manuellt **Egenskapsnamn** för en datatyp måste namnen innehålla *endast* A-Z, a-z, 0-9 och understreck &quot;_&quot; som specialtecken.
+        När egenskapen uppdateras manuellt **Egenskapsnamn** för en datatyp måste namnen innehålla *endast* A-Z, a-z, 0-9 och understreck &quot;_&quot; som specialtecken.
         >
-        >Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
+        Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
 
      Till exempel:
 
@@ -150,9 +150,9 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
 
   >[!NOTE]
   >
-  >Om textområdet är RTF, Oformaterad text eller Markering definieras i modellen av egenskapen **Standardtyp**.
+  Om textområdet är RTF, Oformaterad text eller Markering definieras i modellen av egenskapen **Standardtyp**.
   >
-  >Det här formatet kan inte ändras från [Innehållsfragmentsredigerare](/help/sites-cloud/administering/content-fragments/authoring.md), men bara från modellen.
+  Det här formatet kan inte ändras från [Innehållsfragmentsredigerare](/help/sites-cloud/administering/content-fragments/authoring.md), men bara från modellen.
 
 * **Nummer**
    * Lägg till ett eller flera numeriska fält
@@ -184,7 +184,7 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
 
      >[!NOTE]
      >
-     >Den här datatypen används endast för formatering, den ignoreras av AEM GraphQL-schema.
+     Den här datatypen används endast för formatering, den ignoreras av AEM GraphQL-schema.
 
 ## Egenskaper {#properties}
 
@@ -196,7 +196,7 @@ Många egenskaper är självförklarande, för vissa egenskaper finns ytterligar
 
   >[!CAUTION]
   >
-  >Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
+  Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
 
 * **Återge som**
 
@@ -227,11 +227,11 @@ Innehållet (för det specifika fältet) måste vara unikt för alla innehållsf
 
   >[!NOTE]
   >
-  >Unikitet säkerställs per språkrot.
+  Unikitet säkerställs per språkrot.
 
   >[!NOTE]
   >
-  >Variationer kan ha samma *unik* som variationer av samma fragment, men inte samma värde som används i andra variationer av fragment.
+  Variationer kan ha samma *unik* som variationer av samma fragment, men inte samma värde som används i andra variationer av fragment.
 
 * Se **[Innehållsreferens](#content-reference)** om du vill ha mer information om den specifika datatypen och dess egenskaper.
 
@@ -280,18 +280,16 @@ Innehållsfragment kan skapa kapslat innehåll med någon av följande datatyper
    * Gör att du kan ta med/hämta strukturerade data.
      >[!NOTE]
      >
-     >Den här metoden är särskilt intressant när du använder [Headless Content Delivery using Content Fragments with GraphQL](/help/sites-cloud/administering/content-fragments/content-delivery-with-graphql.md).
+     Den här metoden är särskilt intressant när du använder [Headless Content Delivery using Content Fragments with GraphQL](/help/sites-cloud/administering/content-fragments/content-delivery-with-graphql.md).
    * Kan konfigureras för en eller flera referenser (i det resulterande fragmentet).
 
 >[!NOTE]
 >
->AEM har upprepningsskydd för:
+AEM har upprepningsskydd för:
 >
->* Innehållsreferenser
->  Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet och kan leda till en tom dialogruta för fragmentreferensväljaren.
+* Innehållsreferenser Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet och kan leda till en tom dialogruta för fragmentreferensväljaren.
 >
->* Fragmentreferenser i GraphQL
->  Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
+* Fragmentreferenser i GraphQL Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
 
 ### Innehållsreferens {#content-reference}
 
@@ -302,16 +300,16 @@ Förutom standardegenskaper kan du ange:
 * The **Rotsökväg**, som anger var allt refererat innehåll ska lagras
   >[!NOTE]
   >
-  >Detta är obligatoriskt om du vill överföra och referera till bilder direkt i det här fältet när du använder redigeraren för innehållsfragment.
+  Detta är obligatoriskt om du vill överföra och referera till bilder direkt i det här fältet när du använder redigeraren för innehållsfragment.
   >
-  >Se [Referensbilder](/help/sites-cloud/administering/content-fragments/authoring.md#reference-images) för mer information.
+  Se [Referensbilder](/help/sites-cloud/administering/content-fragments/authoring.md#reference-images) för mer information.
 
 * De innehållstyper som kan refereras
   >[!NOTE]
   >
-  >Dessa måste innehålla **Bild** om du vill överföra och referera till bilder direkt i det här fältet när du använder redigeraren för innehållsfragment.
+  Dessa måste innehålla **Bild** om du vill överföra och referera till bilder direkt i det här fältet när du använder redigeraren för innehållsfragment.
   >
-  >Se [Referensbilder](/help/sites-cloud/administering/content-fragments/authoring.md#reference-images) för mer information.
+  Se [Referensbilder](/help/sites-cloud/administering/content-fragments/authoring.md#reference-images) för mer information.
 
 * Begränsningar för filstorlekar
 * Om en bild refereras:
@@ -345,7 +343,7 @@ type CompanyModel {
 
 >[!NOTE]
 >
->Fragmentreferenser är av särskilt intresse för [Headless Content Delivery using Content Fragments with GraphQL](/help/sites-cloud/administering/content-fragments/content-delivery-with-graphql.md).
+Fragmentreferenser är av särskilt intresse för [Headless Content Delivery using Content Fragments with GraphQL](/help/sites-cloud/administering/content-fragments/content-delivery-with-graphql.md).
 
 Förutom standardegenskaper kan du definiera:
 
@@ -371,9 +369,9 @@ Detta anger en rotsökväg för alla fragment som refereras.
 
 >[!NOTE]
 >
->Det finns en mekanism för upprepningsskydd. Det förhindrar användaren från att markera det aktuella innehållsfragmentet i fragmentreferensen och kan leda till en tom dialogruta för fragmentreferensväljaren.
+Det finns en mekanism för upprepningsskydd. Det förhindrar användaren från att markera det aktuella innehållsfragmentet i fragmentreferensen och kan leda till en tom dialogruta för fragmentreferensväljaren.
 >
->Det finns också upprepningsskydd för fragmentreferenser i GraphQL. Om du skapar en djup fråga i två innehållsfragment som refererar till varandra returneras null.
+Det finns också upprepningsskydd för fragmentreferenser i GraphQL. Om du skapar en djup fråga i två innehållsfragment som refererar till varandra returneras null.
 
 ## Aktivera eller inaktivera en innehållsfragmentmodell {#enabling-disabling-a-content-fragment-model}
 
@@ -422,7 +420,7 @@ Om du vill implementera innehållsstyrning kan du konfigurera **Profiler** i res
 
 >[!NOTE]
 >
->Mekanismen liknar [tillåta sidmallar](/help/sites-cloud/authoring/features/templates.md#allowing-a-template-author) för en sida och dess underordnade sidor i avancerade egenskaper för en sida.
+Mekanismen liknar [tillåta sidmallar](/help/sites-cloud/authoring/sites-console/templates.md#allowing-a-template-author) för en sida och dess underordnade sidor i avancerade egenskaper för en sida.
 
 Konfigurera **Profiler** for **Tillåtna modeller för innehållsfragment**:
 
@@ -456,7 +454,7 @@ De Content Fragment-modeller som tillåts för en mapp löses enligt följande:
 
 >[!CAUTION]
 >
->Om du tar bort en modell för innehållsfragment kan det påverka beroende fragment.
+Om du tar bort en modell för innehållsfragment kan det påverka beroende fragment.
 
 Så här tar du bort en innehållsfragmentmodell:
 
@@ -467,7 +465,7 @@ Så här tar du bort en innehållsfragmentmodell:
 
    >[!NOTE]
    >
-   >Om det finns referenser till modellen visas en varning så att du kan vidta lämpliga åtgärder.
+   Om det finns referenser till modellen visas en varning så att du kan vidta lämpliga åtgärder.
 
 ## Publicera en innehållsfragmentmodell {#publishing-a-content-fragment-model}
 
@@ -483,7 +481,7 @@ Publiceringsstatusen visas i konsolen.
 
    >[!NOTE]
    >
-   >Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
+   Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
 
 ## Avpublicera en innehållsfragmentmodell {#unpublishing-a-content-fragment-model}
 
@@ -501,7 +499,7 @@ Om du försöker avpublicera en modell som för närvarande används av ett elle
 
 ![Felmeddelande för innehållsfragmentmodell när en modell som används avpubliceras](assets/cf-cfmodels-unpublish-error.png)
 
-Meddelandet föreslår att du kontrollerar [Referenser](/help/sites-cloud/authoring/getting-started/basic-handling.md#references) panel för vidare utredning:
+Meddelandet föreslår att du kontrollerar [Referenser](/help/sites-cloud/authoring/basic-handling.md#references) panel för vidare utredning:
 
 ![Content Fragment Model in References](assets/cf-cfmodels-references.png)
 
@@ -571,6 +569,6 @@ Du kan hantera **Låst** modeller från antingen konsolen eller modellredigerare
 
      >[!NOTE]
      >
-     >Det kan fortfarande finnas en varning överst, men det är när modellen redan används av befintliga innehållsfragment.
+     Det kan fortfarande finnas en varning överst, men det är när modellen redan används av befintliga innehållsfragment.
 
    * **Avbryt** går tillbaka till konsolen.

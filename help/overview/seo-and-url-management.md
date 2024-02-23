@@ -2,7 +2,7 @@
 title: Bästa metoder för SEO- och URL-hantering för Adobe Experience Manager as a Cloud Service
 description: Bästa metoder för SEO- och URL-hantering för Adobe Experience Manager as a Cloud Service
 exl-id: abe3f088-95ff-4093-95a1-cfc610d4b9e9
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
 workflow-type: tm+mt
 source-wordcount: '3539'
 ht-degree: 52%
@@ -210,7 +210,7 @@ Samtidigt som slutanvändarna kan visa sidnamnen på olika språk.
 
 >[!NOTE]
 >
->Egenskapen `sling:alias` kan anges med [aliasegenskapen vid redigering av sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md#advanced).
+>Egenskapen `sling:alias` kan anges med [aliasegenskapen vid redigering av sidegenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md#advanced).
 
 #### /etc/map {#etc-map}
 

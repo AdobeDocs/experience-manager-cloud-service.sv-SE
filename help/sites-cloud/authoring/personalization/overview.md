@@ -2,7 +2,7 @@
 title: Personalisering och målgruppsanpassning av innehåll
 description: Lär dig hur du kan skapa personaliserat, riktat innehåll med AEM
 exl-id: b9b5dbf6-d491-48a6-99b1-19bc1b651b8c
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+source-git-commit: 89f23a590338561b4cfeb10b54a260a135ec2f08
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 0%
@@ -88,7 +88,7 @@ Du kan [Skapa riktat innehåll](/help/sites-cloud/authoring/personalization/targ
 
 En grupperad uppsättning komponenter som utgör en upplevelse.
 
-[Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md#personalization-experience-fragment) är gjorda av innehåll och information (till exempel formatering) för att skapa en upplevelse. De kan användas direkt vid redigering av sidor. De kan ses som en delmängd av en AEM. De gör det möjligt för innehållsförfattare att återanvända innehåll i olika kanaler, inklusive webbplatser och tredjepartssystem.
+[Upplevelsefragment](/help/sites-cloud/authoring/fragments/content-fragments.md#personalization-experience-fragment) är gjorda av innehåll och information (till exempel formatering) för att skapa en upplevelse. De kan användas direkt vid redigering av sidor. De kan ses som en delmängd av en AEM. De gör det möjligt för innehållsförfattare att återanvända innehåll i olika kanaler, inklusive webbplatser och tredjepartssystem.
 
 För ett personaliseringsexempel kan du kombinera en titel, bild, beskrivning och knappen Anropa till åtgärd för att skapa en suddig upplevelse. Att använda Experience Fragments är en viktig del i att använda Adobe Target personalisering.
 

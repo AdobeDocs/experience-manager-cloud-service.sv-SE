@@ -2,10 +2,10 @@
 title: Aktivera JSON-export för en komponent
 description: Komponenter kan anpassas för att generera JSON-export av deras innehåll baserat på ett modellramverk.
 exl-id: e9be5c0c-618e-4b56-a365-fcdd185ae808
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 89f23a590338561b4cfeb10b54a260a135ec2f08
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 1%
+source-wordcount: '421'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Komponenter kan anpassas för att generera JSON-export av deras innehåll baserat på ett modellramverk.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 JSON-exporten baseras på [Sling Models](https://sling.apache.org/documentation/bundles/models.html)och på [Export av försäljningsmodell](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130) som i sig förlitar sig på [Jackson annotations](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)).
 
@@ -78,5 +78,5 @@ Ett exempel finns i Sling Model-implementeringen av Image Core-komponenten och d
 
 * [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)
 * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
-* [Skapa med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md)
+* [Skapa med innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md)
 * [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)

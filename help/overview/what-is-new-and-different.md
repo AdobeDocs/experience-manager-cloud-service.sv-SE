@@ -2,7 +2,7 @@
 title: Nyheter och skillnader – Adobe Experience Manager as a Cloud Service
 description: Nyheter och skillnader – Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: d1ce126e-960c-4367-b741-af709dd81010
-source-git-commit: d4502c7558fca7ecee89b2ce9429fd1c749d8e92
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
 source-wordcount: '1883'
 ht-degree: 66%
@@ -240,7 +240,7 @@ Det kombinerar fördelarna med:
 
 >[!NOTE]
 >
->Mer information finns i [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) är en bra utgångspunkt.
+>Mer information finns i [Grundläggande hantering](/help/sites-cloud/authoring/basic-handling.md) är en bra utgångspunkt.
 
 De grundläggande principerna i redigeringsgränssnittet för Sites och Assets är välbekanta för alla som har använt AEM tidigare.
 

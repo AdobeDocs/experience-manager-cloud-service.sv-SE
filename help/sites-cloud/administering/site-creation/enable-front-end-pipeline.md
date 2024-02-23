@@ -4,9 +4,9 @@ description: Lär dig hur du kan aktivera frontend-flödet för befintliga webbp
 feature: Administering
 role: Admin
 exl-id: 55d54d72-f87b-47c9-955f-67ec5244dd6e
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Lär dig hur du kan aktivera frontend-flödet för befintliga webbplatser så att du kan använda webbplatsteman för att anpassa webbplatsen snabbare.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Det är en mekanism som snabbt kan driftsätta endast koden på era webbplatser baserat på [webbplatsteman](site-themes.md) och [webbplatsmallar.](site-templates.md)
 
@@ -51,7 +51,7 @@ Du aktiverar din plats från webbplatskonsolen med hjälp av [Platsjärnvägar.]
 
 1. Logga in AEM och navigera till webbplatsen via **Global navigering** > **Webbplatser**.
 1. Välj din plats i konsolen. Markera platsens rot och inte underordnade sidor.
-1. När webbplatsen är markerad öppnar du [järnvägsväljare](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector) till vänster och välj **Plats**.
+1. När webbplatsen är markerad öppnar du [järnvägsväljare](/help/sites-cloud/authoring/basic-handling.md#rail-selector) till vänster och välj **Plats**.
 1. I **Plats** klicka på knappen **Aktivera frontdelspipeline**.
 
    ![Aktivera frontendpipeline](/help/sites-cloud/administering/assets/enable-front-end-pipeline.png)

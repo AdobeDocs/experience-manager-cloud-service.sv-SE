@@ -2,7 +2,7 @@
 title: Administrera taggar
 description: Lär dig hur du administrerar taggar i AEM för att ordna ditt innehåll.
 exl-id: 42480699-b7a7-4678-a763-569a9b7573e2
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
 source-wordcount: '2200'
 ht-degree: 0%
@@ -16,7 +16,7 @@ Taggar är ett intuitivt sätt att klassificera innehåll. De kan ses som nyckel
 I Adobe Experience Manager (AEM) kan en -tagg vara en egenskap för:
 
 * En innehållsnod för en sida
-   * Se dokumentet [Använda taggar](/help/sites-cloud/authoring/features/tags.md) för mer information.
+   * Se dokumentet [Använda taggar](/help/sites-cloud/authoring/sites-console/tags.md) för mer information.
 * En metadatanod för en resurs
    * Se dokumentet [Hantera metadata för digitala resurser](/help/assets/manage-metadata.md) för mer information.
 
@@ -183,7 +183,7 @@ Du kan visa mer information om taggen, inklusive vem som senast publicerade den 
 
    ![Visa taggegenskaper](assets/tag-properties.png)
 
-Mer information om hur du väljer visningslägen och skenor finns i [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector).
+Mer information om hur du väljer visningslägen och skenor finns i [Grundläggande hantering](/help/sites-cloud/authoring/basic-handling.md#rail-selector).
 
 ### Redigera taggar {#editing-tags}
 
@@ -245,7 +245,7 @@ Det kan vara praktiskt att se vilket innehåll en viss tagg används på. Du kan
 
 Hovra musen eller markera ett referensinnehåll i listan för att visa hela sökvägen för innehållet.
 
-Mer information om hur du väljer visningslägen och skenor finns i [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector).
+Mer information om hur du väljer visningslägen och skenor finns i [Grundläggande hantering](/help/sites-cloud/authoring/basic-handling.md#rail-selector).
 
 ### Flytta taggar {#moving-tags}
 

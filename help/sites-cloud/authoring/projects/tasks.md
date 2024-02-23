@@ -2,10 +2,10 @@
 title: Arbeta med uppgifter
 description: Uppgifter representerar arbetsuppgifter som ska utföras på innehåll och används i projekt för att fastställa slutförandenivån för aktuella uppgifter
 exl-id: 66f95a1f-34d0-4e2e-aa8c-addc2029a1d9
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 1a4c5e618adaef99d82a00e1118d1a0f8536fc14
 workflow-type: tm+mt
 source-wordcount: '573'
-ht-degree: 10%
+ht-degree: 8%
 
 ---
 
@@ -76,6 +76,6 @@ Ett annat sätt att komma åt uppgifter är via Inkorgen. I inkorgen kan du öpp
 
 ![Uppgifter i inkorgen](/help/sites-cloud/authoring/assets/projects-task-inbox.png)
 
-Om du vill slutföra en uppgift markerar du uppgiften och klickar på **Complete**. Lägg till information till uppgiften och klicka sedan på **Klar**. Se [Din inkorg](/help/sites-cloud/authoring/getting-started/inbox.md) för mer information.
+Om du vill slutföra en uppgift markerar du uppgiften och klickar på **Complete**. Lägg till information till uppgiften och klicka sedan på **Klar**. Se [Din inkorg](/help/sites-cloud/authoring/inbox.md) för mer information.
 
 ![Uppgiftsmeddelanden](/help/sites-cloud/authoring/assets/projects-task-notifications.png)

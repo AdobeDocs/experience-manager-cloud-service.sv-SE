@@ -2,18 +2,18 @@
 title: Använda Dölj villkor
 description: Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte.
 exl-id: 2a96f246-fb0f-4298-899e-ebbf9fc1c96f
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
 
 # Använda Dölj villkor {#using-hide-conditions}
 
-Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte. Ett exempel på detta är när en mallskapare konfigurerar kärnkomponenten [listkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/list.html) i [mallredigerare](/help/sites-cloud/authoring/features/templates.md) och bestämmer sig för att inaktivera alternativen för att skapa listan baserat på underordnade sidor. Om du inaktiverar det här alternativet i designdialogrutan anges en egenskap så att när listkomponenten återges utvärderas dolda villkor och alternativet att visa underordnade sidor inte visas.
+Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte. Ett exempel på detta är när en mallskapare konfigurerar kärnkomponenten [listkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/list.html) i [mallredigerare](/help/sites-cloud/authoring/sites-console/templates.md) och bestämmer sig för att inaktivera alternativen för att skapa listan baserat på underordnade sidor. Om du inaktiverar det här alternativet i designdialogrutan anges en egenskap så att när listkomponenten återges utvärderas dolda villkor och alternativet att visa underordnade sidor inte visas.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Dialogrutor kan bli mycket komplexa med många alternativ för användaren, som kanske bara använder en del av de alternativ som finns till sitt förfogande. Detta kan leda till en överväldigande upplevelse av användargränssnittet.
 
@@ -51,7 +51,7 @@ När du definierar ditt dolda uttryck ska du tänka på:
 
 Exempel på dolda villkor finns i hela AEM och [kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) särskilt. Tänk dig till exempel [listkärnkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/list.html) som implementerats i [WKND, genomgång](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
 
-[Använda mallredigeraren](/help/sites-cloud/authoring/features/templates.md)kan mallskaparen i designdialogrutan definiera vilka alternativ för listkomponenten som är tillgängliga för sidförfattaren. Du kan till exempel välja om listan ska vara en statisk lista, en lista med underordnade sidor, en lista med taggade sidor och så vidare, eller om den ska aktiveras eller inaktiveras.
+[Använda mallredigeraren](/help/sites-cloud/authoring/sites-console/templates.md)kan mallskaparen i designdialogrutan definiera vilka alternativ för listkomponenten som är tillgängliga för sidförfattaren. Du kan till exempel välja om listan ska vara en statisk lista, en lista med underordnade sidor, en lista med taggade sidor och så vidare, eller om den ska aktiveras eller inaktiveras.
 
 Om en mallskapare väljer att inaktivera alternativet med underordnade sidor, ställs en designegenskap in och ett dolt villkor utvärderas mot den, vilket gör att alternativet inte återges för sidförfattaren.
 

@@ -2,7 +2,7 @@
 title: Hantera innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur du använder Assets-konsolen för att hantera AEM innehållsfragment, antingen som grund för det headless-innehåll eller för att skapa sidor.
 exl-id: 333ad877-db2f-454a-a3e5-59a936455932
-source-git-commit: 62ede258711d0cb8d0b72479559c37221509e23f
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
 source-wordcount: '1885'
 ht-degree: 4%
@@ -29,7 +29,7 @@ The [Innehållsfragmentsredigerare](#opening-the-fragment-editor) innehåller ol
 >
 >Innehållsfragment kan användas:
 >
->* när du redigerar sidor, se [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
+>* när du redigerar sidor, se [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md).
 >* for [Headless Content Delivery using Content Fragments with GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
 
 >[!NOTE]
@@ -94,7 +94,7 @@ Metoden för att skapa ett innehållsfragment är:
 I **Resurser** konsol en rad åtgärder är tillgängliga för dina innehållsfragment, antingen:
 
 * Från verktygsfältet: när du har valt fragmentet är alla lämpliga åtgärder tillgängliga.
-* Som [snabbåtgärder](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions); en delmängd av åtgärder som är tillgängliga för de enskilda fragmentkorten.
+* Som [snabbåtgärder](/help/sites-cloud/authoring/basic-handling.md#quick-actions); en delmängd av åtgärder som är tillgängliga för de enskilda fragmentkorten.
 
 ![Åtgärder i verktygsfältet](assets/cfm-managing-02.png)
 
@@ -299,16 +299,16 @@ Förutom standardalternativen [Tidslinje](/help/assets/manage-digital-assets.md#
 
 >[!NOTE]
 >
-Kommentarerna är:
+>Kommentarerna är:
 >
-* Standardfunktionalitet för alla resurser
-* Skapat i tidslinjen
-* Relaterat till fragmentresursen
+>* Standardfunktionalitet för alla resurser
+>* Skapat i tidslinjen
+>* Relaterat till fragmentresursen
 >
-Anteckningar (för innehållsfragment) är:
+>Anteckningar (för innehållsfragment) är:
 >
-* Anges i fragmentredigeraren
-* Specifik för ett markerat textsegment i fragmentet
+>* Anges i fragmentredigeraren
+>* Specifik för ett markerat textsegment i fragmentet
 >
 
 Till exempel:
@@ -339,7 +339,7 @@ De visas sida vid sida, där:
 
 >[!NOTE]
 >
-Du kan inte redigera fragmentinnehållet när du jämför fragment.
+>Du kan inte redigera fragmentinnehållet när du jämför fragment.
 
 ![Jämföra variationer](assets/cfm-managing-06.png)
 
@@ -357,9 +357,9 @@ Du kan återgå till en viss version av fragmentet:
 
 >[!CAUTION]
 >
-Om fragmentet är baserat på en modell bör du se till att [modellen har publicerats](/help/assets/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model).
+>Om fragmentet är baserat på en modell bör du se till att [modellen har publicerats](/help/assets/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model).
 >
-Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
+>Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
 
 Innehållsfragment måste publiceras för användning i publiceringsmiljön. Detta görs med standardfunktionaliteten Resurser:
 
@@ -371,11 +371,11 @@ Du kan få åtkomst till detta:
 * efter skapande; använda [åtgärder som är tillgängliga i resurskonsolen](#actions-for-a-content-fragment-assets-console).
 * Från [Innehållsfragmentsredigerare](#toolbar-actions-in-the-content-fragment-editor).
 
-Dessutom när du [publicera en sida som använder fragmentet](/help/sites-cloud/authoring/fundamentals/content-fragments.md#publishing); fragmentet visas i sidreferenserna.
+Dessutom när du [publicera en sida som använder fragmentet](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing); fragmentet visas i sidreferenserna.
 
 >[!CAUTION]
 >
-När ett fragment har publicerats och/eller refererats visar AEM en varning när en författare öppnar fragmentet för redigering igen. Detta är för att varna för att ändringar i fragmentet även påverkar de refererade sidorna.
+>När ett fragment har publicerats och/eller refererats visar AEM en varning när en författare öppnar fragmentet för redigering igen. Detta är för att varna för att ändringar i fragmentet även påverkar de refererade sidorna.
 
 ## Ta bort ett fragment {#deleting-a-fragment}
 
@@ -386,11 +386,11 @@ Ta bort ett fragment:
 
    >[!NOTE]
    >
-   The **Ta bort** åtgärden är inte tillgänglig som en snabbåtgärd.
+   >The **Ta bort** åtgärden är inte tillgänglig som en snabbåtgärd.
 
 3. Välj **Ta bort** i verktygsfältet.
 4. Bekräfta **Ta bort** åtgärd.
 
    >[!CAUTION]
    >
-   Om fragmentet redan finns på en sida visas ett varningsmeddelande och du måste bekräfta att du vill fortsätta med **Tvinga borttagning**. Fragmentet, tillsammans med dess innehållskomponent fragment, tas bort från alla innehållssidor.
+   >Om fragmentet redan finns på en sida visas ett varningsmeddelande och du måste bekräfta att du vill fortsätta med **Tvinga borttagning**. Fragmentet, tillsammans med dess innehållskomponent fragment, tas bort från alla innehållssidor.

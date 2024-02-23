@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar TLF (Translation Integration Framework
 feature: Language Copy
 role: Admin
 exl-id: 6e74cdee-7965-4087-a733-e9d81c4aa7c2
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1465'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ När du har konfigurerat ett ramverk för översättningsintegrering kan du [ass
 
 En enda konfiguration av ramverket styr hur sidinnehåll och resurser översätts. Så här skapar du en översättningskonfiguration:
 
-1. I [global navigeringsmeny,](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) välj **Verktyg > Cloud Service och översättningsCloud Service**.
+1. I [global navigeringsmeny,](/help/sites-cloud/authoring/basic-handling.md#global-navigation) välj **Verktyg > Cloud Service och översättningsCloud Service**.
 1. Navigera till den plats där du vill skapa konfigurationen i innehållsstrukturen. Detta baseras ofta på en viss webbplats eller kan vara globalt.
 1. Ange följande information i fälten och välj sedan **Skapa**.:
    1. Välj **Konfigurationstyp** i listrutan.

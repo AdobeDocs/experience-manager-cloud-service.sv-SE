@@ -2,9 +2,9 @@
 title: Exportera innehållsfragment till Adobe Target
 description: Lär dig hur du exporterar innehållsfragment till Adobe Target för att testa och personalisera upplevelser.
 exl-id: 760e0a39-0805-498e-a2c9-038fd1e1058d
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
-source-wordcount: '2223'
+source-wordcount: '2159'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >* AEM innehållsfragment exporteras till standardarbetsytan i Adobe Target.
 >* AEM måste integreras med Adobe Target enligt instruktionerna i [Integrera med Adobe Target](/help/sites-cloud/integrating/integrating-adobe-target.md).
 
-Du kan exportera [Innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md)som har skapats i Adobe Experience Manager as a Cloud Service (AEM) till Adobe Target (Target). De kan sedan användas som erbjudanden i Target-aktiviteter för att testa och personalisera upplevelser i stor skala.
+Du kan exportera [Innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md)som har skapats i Adobe Experience Manager as a Cloud Service (AEM) till Adobe Target (Target). De kan sedan användas som erbjudanden i Target-aktiviteter för att testa och personalisera upplevelser i stor skala.
 
 Det finns ett alternativ för att exportera ett innehållsfragment till Adobe Target:
 
@@ -286,7 +286,7 @@ After you create a Target framework in AEM, associate your web pages with the fr
 When you associate a page with the framework, the child pages inherit the association.
 
 1. In the **Sites** console, navigate to the site that you want to configure.
-1. Using either [quick actions](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions) or [selection mode](/help/sites-cloud/authoring/getting-started/basic-handling.md#selecting-resources), select **View Properties.**
+1. Using either [quick actions](/help/sites-cloud/authoring/basic-handling.md#quick-actions) or [selection mode](/help/sites-cloud/authoring/basic-handling.md#selecting-resources), select **View Properties.**
 1. Select the **Cloud Services** tab.
 1. Select **Edit**.
 1. Select **Add Configuration** under **Cloud Service Configurations** and select **Adobe Target**.
@@ -300,7 +300,7 @@ When you associate a page with the framework, the child pages inherit the associ
    >Make sure that you select the specific **framework** that you created and not the Target cloud configuration under which it was created.
 
 1. Select **Done**.
-1. Activate the root page of the website to replicate it to the publish server. (See [How To Publish Pages](/help/sites-cloud/authoring/fundamentals/publishing-pages.md).)
+1. Activate the root page of the website to replicate it to the publish server. (See [How To Publish Pages](/help/sites-cloud/authoring/sites-console/publishing-pages.md).)
 
    >[!NOTE]
    >
@@ -352,7 +352,7 @@ Så här exporterar du ett innehållsfragment från AEM till mål (efter att du 
 
    >[!NOTE]
    >
-   >[Olika detaljer](/help/sites-cloud/authoring/fundamentals/content-fragments.md#details-of-your-content-fragment) av exporten visas i **Listvy** av konsolen och **Egenskaper**.
+   >[Olika detaljer](/help/sites-cloud/authoring/fragments/content-fragments.md#details-of-your-content-fragment) av exporten visas i **Listvy** av konsolen och **Egenskaper**.
 
    >[!NOTE]
    >
@@ -360,7 +360,7 @@ Så här exporterar du ett innehållsfragment från AEM till mål (efter att du 
 
 >[!NOTE]
 >
->Du kan också exportera från sidredigeraren med jämförbara kommandon i [Sidinformation](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-information) -menyn.
+>Du kan också exportera från sidredigeraren med jämförbara kommandon i [Sidinformation](/help/sites-cloud/authoring/page-editor/introduction.md#page-information) -menyn.
 
 ## Använda dina innehållsfragment i Adobe Target {#using-your-content-fragments-in-adobe-target}
 

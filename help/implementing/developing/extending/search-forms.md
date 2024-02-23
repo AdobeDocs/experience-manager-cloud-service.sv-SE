@@ -1,17 +1,17 @@
 ---
-title: Konfigurera sökformulär
+title: Konfigurera Sök i Forms
 description: Konfigurera Sök i Forms för Adobe Experience Manager as a Cloud Service.
 exl-id: b06649c4-cc91-44e3-8699-00e90140b90d
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 1a4c5e618adaef99d82a00e1118d1a0f8536fc14
 workflow-type: tm+mt
-source-wordcount: '2033'
-ht-degree: 2%
+source-wordcount: '2036'
+ht-degree: 1%
 
 ---
 
-# Konfigurera sökformulär {#configuring-search-forms}
+# Konfigurera Sök i Forms {#configuring-search-forms}
 
-Adobe Experience Manager as a Cloud Service har en kraftfull [Sök](/help/sites-cloud/authoring/getting-started/search.md) mekanism.
+Adobe Experience Manager as a Cloud Service har en kraftfull [Sök](/help/sites-cloud/authoring/search.md) mekanism.
 
 I kombination med detta finns det också en uppsättning fördefinierade alternativ som hjälper dig att filtrera innehållet. Dessa innehåller fördefinierade egenskaper som **Ändringsdatum**, **Publiceringsstatus**, eller **LiveCopy-status** så att du snabbt kan hitta de resurser du behöver.
 
@@ -19,9 +19,9 @@ I kombination med detta finns det också en uppsättning fördefinierade alterna
 
 Tillsammans hjälper vi er att snabbt och enkelt hitta ert innehåll:
 
-* [Sök och filtrera](/help/sites-cloud/authoring/getting-started/search.md#search-and-filter)
-* [Järnvägsväljare](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector)
-* den [Resursläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#assets-browser) (när sidor redigeras)
+* [Sök och filtrera](/help/sites-cloud/authoring/search.md#search-and-filter)
+* [Järnvägsväljare](/help/sites-cloud/authoring/basic-handling.md#rail-selector)
+* den [Resursläsaren](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#assets-browser) (när sidor redigeras)
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ The **Sök i Forms** gör att du kan välja [predikat](#predicates-and-their-set
 
 * **verktyg**
    * **Allmänt**
-      * **Sökformulär**
+      * **Sök i Forms**
 
 ## Forms som standard {#default-forms}
 

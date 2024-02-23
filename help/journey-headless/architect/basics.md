@@ -2,10 +2,10 @@
 title: Lär dig grunderna i innehållsmodellering
 description: Lär dig grunderna i att modellera innehåll för headless CMS med hjälp av innehållsfragment.
 exl-id: dc460490-dfc8-4a46-a468-3d03e593447d
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 1a4c5e618adaef99d82a00e1118d1a0f8536fc14
 workflow-type: tm+mt
 source-wordcount: '900'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -79,7 +79,7 @@ AEM innehåller följande datatyper som du kan använda för att modellera ditt 
 
 * Enkelradig text
 * Flerradstext
-* Siffra
+* Nummer
 * Boolean
 * Datum och tid
 * Uppräkning
@@ -153,8 +153,8 @@ Nu när du har lärt dig grunderna är nästa steg att [Läs om hur du skapar mo
 
    * [Modeller för innehållsfragment - datatyper](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types)
 
-* [Redigeringsbegrepp](/help/sites-cloud/authoring/getting-started/concepts.md)
+* [Authoring Concepts](/help/sites-cloud/authoring/author-publish.md)
 
-* [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) - den här sidan är huvudsakligen baserad på **Webbplatser** konsol, men många/de flesta funktioner är också relevanta för redigering **Innehållsfragment** under **Resurser** konsol.
+* [Grundläggande hantering](/help/sites-cloud/authoring/basic-handling.md) - den här sidan är huvudsakligen baserad på **Webbplatser** konsol, men många/de flesta funktioner är också relevanta för redigering **Innehållsfragment** under **Resurser** konsol.
 
 * [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)

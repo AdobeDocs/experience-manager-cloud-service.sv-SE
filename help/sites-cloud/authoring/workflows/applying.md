@@ -2,10 +2,10 @@
 title: Använda arbetsflöden på sidor
 description: När du redigerar kan du anropa arbetsflöden för att agera på sidorna. Det går också att använda mer än ett arbetsflöde.
 exl-id: 86e71f0e-e53e-40bc-901d-2a1ab347bd0a
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
 source-wordcount: '654'
-ht-degree: 11%
+ht-degree: 9%
 
 ---
 
@@ -70,7 +70,7 @@ Du kan starta ett arbetsflöde från verktygsfältet i **Webbplatser** konsol:
 
 Från **Tidslinje** du kan starta ett arbetsflöde som ska användas för den valda resursen.
 
-1. [Välj resurs](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources) och öppna [Tidslinje](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline) (eller öppna tidslinjen och välj sedan resursen).
+1. [Välj resurs](/help/sites-cloud/authoring/basic-handling.md#viewing-and-selecting-resources) och öppna [Tidslinje](/help/sites-cloud/authoring/basic-handling.md#timeline) (eller öppna tidslinjen och välj sedan resursen).
 1. Pilen i kommentarfältet kan användas för att visa **Starta arbetsflöde**:
 
    ![Skapa arbetsflöde från tidslinjen](/help/sites-cloud/authoring/assets/workflows-create-from-timeline.png)
@@ -116,7 +116,7 @@ Du kan ange information:
 
 1. I **Omfång** steg du kan välja:
 
-   * **Lägg till innehåll** för att öppna [sökvägsläsare](/help/sites-cloud/authoring/fundamentals/environment-tools.md#path-browser) och välj ytterligare resurser. När du är i webbläsaren väljer du **Välj** för att lägga till innehållet i arbetsflödesinstansen.
+   * **Lägg till innehåll** för att öppna [sökvägsläsare](/help/sites-cloud/authoring/path-selection.md) och välj ytterligare resurser. När du är i webbläsaren väljer du **Välj** för att lägga till innehållet i arbetsflödesinstansen.
 
    * En befintlig resurs som visar ytterligare åtgärder:
 

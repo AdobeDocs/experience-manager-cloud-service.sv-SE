@@ -4,7 +4,7 @@ description: Olika kortkommandon finns tillgängliga i hela AEM, inklusive en ma
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: 24eefa31-4081-4b4a-af98-c6299b213cea
-source-git-commit: 19685cb952a890731bd7d75a2adf3cfd841a465f
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Det finns ett urval kortkommandon som kan användas i konsolen Innehållsfragment.
 
-Olika kortkommandon finns i hela AEM. Vissa gäller när [redigera sidor](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md), andra till [allmän användning av konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md).
+Olika kortkommandon finns i hela AEM. Vissa gäller när [redigera sidor](/help/sites-cloud/authoring/page-editor/keyboard-shortcuts.md), andra till [allmän användning av konsoler](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md).
 
 >[!NOTE]
 >
@@ -38,11 +38,11 @@ Olika kortkommandon finns i hela AEM. Vissa gäller när [redigera sidor](/help/
 | Markera ett eller flera innehållsfragment | `u` | Öppna dialogrutan Avpublicera nu |
 | Alla öppna dialogrutor | `esc` | Dialogrutan stängs |
 
-Du kan även använda olika kortkommandon för skrivbordsanvändare. Vissa gäller när [redigera sidor](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md), andra till allmänheten [användning av konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md).
+Du kan även använda olika kortkommandon för skrivbordsanvändare. Vissa gäller när [redigera sidor](/help/sites-cloud/authoring/page-editor/keyboard-shortcuts.md), andra till allmänheten [användning av konsoler](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md).
 
 >[!NOTE]
 >
->Kortkommandon för redigeraren är alltid aktiva oavsett om [konsolgenvägar har inaktiverats](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md#deactivating-keyboard-shortcuts).
+>Kortkommandon för redigeraren är alltid aktiva oavsett om [konsolgenvägar har inaktiverats](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md#deactivating-keyboard-shortcuts).
 
 ## Operativspecifika modifieringstangenter {#os-specific-modifier-keys}
 

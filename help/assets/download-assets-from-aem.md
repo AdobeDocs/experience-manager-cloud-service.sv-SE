@@ -5,7 +5,7 @@ contentOwner: Vishabh Gupta
 feature: Asset Management
 role: User
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+source-git-commit: 1a4c5e618adaef99d82a00e1118d1a0f8536fc14
 workflow-type: tm+mt
 source-wordcount: '1300'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Du kan hämta resurser från Experience Manager på följande sätt:
 
 Experience Manager optimerar nedladdningen baserat på resurskvantitet och storlek. Mindre filer hämtas från användargränssnittet i realtid. [!DNL Experience Manager] hämtar direkt enskilda resursbegäranden för originalfilen i stället för att bifoga enskilda resurser i ett ZIP-arkiv för snabbare nedladdningar. Experience Manager stöder stora nedladdningar med asynkrona begäranden. Hämtningsbegäranden som är större än 100 GB delas upp i flera ZIP-arkiv med en maximal storlek på 100 MB vardera.
 
-Som standard [!DNL Experience Manager] utlöser ett meddelande i [[!DNL Experience Manager] Inkorg](/help/sites-cloud/authoring/getting-started/inbox.md) när ett nedladdningsarkiv skapas.
+Som standard [!DNL Experience Manager] utlöser ett meddelande i [[!DNL Experience Manager] Inkorg](/help/sites-cloud/authoring/inbox.md) när ett nedladdningsarkiv skapas.
 
 ![Inkorgsmeddelande](assets/inbox-notification-for-large-downloads.png)
 

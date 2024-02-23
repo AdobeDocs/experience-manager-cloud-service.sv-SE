@@ -2,10 +2,10 @@
 title: Versionsinformation om 2020.8.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.8.0."
 exl-id: 83413130-ae90-4419-bcf7-42fdc740452b
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
 workflow-type: tm+mt
-source-wordcount: '1030'
-ht-degree: 1%
+source-wordcount: '1025'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +18,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för Experience
 
 ### Nyheter i [!DNL Sites] {#what-is-new-sites}
 
-* Möjlighet att [återställa sidor och undersidor (sidträd) till en tidigare version](/help/sites-cloud/authoring/features/page-versions.md#reinstating-versions).
+* Möjlighet att [återställa sidor och undersidor (sidträd) till en tidigare version](/help/sites-cloud/authoring/sites-console/page-versions.md#reinstating-versions).
 
 * Möjlighet att [skapa startprogram](/help/sites-cloud/authoring/launches/overview.md) i AEM [SPA](/help/implementing/developing/hybrid/introduction.md).
 
@@ -118,7 +118,7 @@ Releasedatum för [!UICONTROL Cloud Manager] Version 2020.8.0 är 6 augusti 2020
 
 * Om du vill aktivera steget för innehållsgranskning måste användarna redigera pipeline och, om så önskas, lägga till sidor. Om inga sidor läggs till granskas hemsidan.
 
-## Content Transfer Tool {#content-transfer-tool}
+## Verktyget Innehållsöverföring {#content-transfer-tool}
 
 Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Content Transfer Tool Release v1.0.4.
 
@@ -132,7 +132,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * Tidigare version av användargränssnittet kunde ibland extraheras trots att loggen visade fel.
 
-## Verktyg för omstrukturering av kod {#code-refactoring-tools}
+## Kodomfaktoriseringsverktyg {#code-refactoring-tools}
 
 Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för verktygen för kodkorrigering.
 

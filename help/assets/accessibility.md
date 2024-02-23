@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Accessibility,Asset Management
 role: User,Architect,Leader
 exl-id: a6d24ba6-3cb1-42cb-9942-f78572c93358
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
-source-wordcount: '1924'
-ht-degree: 1%
+source-wordcount: '1897'
+ht-degree: 0%
 
 ---
 
@@ -80,7 +80,7 @@ Många element i användargränssnittet som är klickbara eller kan användas me
 
 ### Kortkommandon i [!DNL Assets] {#keyboard-shortcuts}
 
-Följande åtgärder i [!DNL Assets] arbeta med de kortkommandon som visas. De flesta kortkommandon som gäller för [!DNL Experience Manager] Konsoler gäller även för [!DNL Assets]. Se [kortkommandon för konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md). Se hur man [aktivera eller inaktivera kortkommandon](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md).
+Följande åtgärder i [!DNL Assets] arbeta med de kortkommandon som visas. De flesta kortkommandon som gäller för [!DNL Experience Manager] Konsoler gäller även för [!DNL Assets]. Se [kortkommandon för konsoler](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md). Se hur man [aktivera eller inaktivera kortkommandon](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md).
 
 | Användargränssnitt eller scenario | Kortkommando | Åtgärd |
 |---|---|---|
@@ -220,15 +220,15 @@ Följande funktioner förbättrar tillgängligheten när du delar resurser:
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
 

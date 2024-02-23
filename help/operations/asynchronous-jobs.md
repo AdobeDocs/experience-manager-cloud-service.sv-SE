@@ -2,10 +2,10 @@
 title: Asynkrona jobb
 description: Adobe Experience Manager optimerar prestanda genom att asynkront slutföra vissa resurskrävande uppgifter som bakgrundsåtgärder.
 exl-id: 9c5c4604-1290-4dea-a14d-08f3ab3ef829
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 1a4c5e618adaef99d82a00e1118d1a0f8536fc14
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 66%
+source-wordcount: '799'
+ht-degree: 65%
 
 ---
 
@@ -31,7 +31,7 @@ Du kan visa status för asynkrona jobb från **[!UICONTROL Background Operations
 
 ## Övervaka status för asynkrona åtgärder {#monitor-the-status-of-asynchronous-operations}
 
-När AEM bearbetar en åtgärd asynkront får du ett meddelande i din [inkorg](/help/sites-cloud/authoring/getting-started/inbox.md) och via e-post (om den är aktiverad).
+När AEM bearbetar en åtgärd asynkront får du ett meddelande i din [inkorg](/help/sites-cloud/authoring/inbox.md) och via e-post (om den är aktiverad).
 
 Gå till sidan **[!UICONTROL Background Operations]** för att se detaljerad status gällande asynkrona åtgärder.
 
@@ -136,6 +136,6 @@ Om antalet resurser/mappar eller referenser som ska flyttas överstiger gränsv�
 
 >[!MORELIKETHIS]
 >
->* [Skapa och ordna sidor](/help/sites-cloud/authoring/fundamentals/organizing-pages.md)
+>* [Hantera sidor](/help/sites-cloud/authoring/sites-console/managing-pages.md)
 >* [Importera och exportera resursers metadata gruppvis](/help/assets/metadata-import-export.md).
 >* [Använd länkade resurser för att dela DAM-resurser från fjärrdistributioner](/help/assets/use-assets-across-connected-assets-instances.md).

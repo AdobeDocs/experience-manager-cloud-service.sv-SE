@@ -2,7 +2,7 @@
 title: Läs om hur du skapar modeller för innehållsfragment i AEM
 description: Lär dig mer om koncept och mekanismer för att modellera innehåll för Headless CMS med Content Fragments Models.
 exl-id: fdfa79d3-fbed-4467-a898-c1b2678fc0cb
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+source-git-commit: 1a4c5e618adaef99d82a00e1118d1a0f8536fc14
 workflow-type: tm+mt
 source-wordcount: '686'
 ht-degree: 0%
@@ -108,9 +108,9 @@ Nu när du har lärt dig grunderna är nästa steg att börja skapa egna modelle
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Authoring Concepts](/help/sites-cloud/authoring/getting-started/concepts.md)
+* [Authoring Concepts](/help/sites-cloud/authoring/author-publish.md)
 
-* [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) - den här sidan är huvudsakligen baserad på **Webbplatser** konsol, men många/de flesta funktioner är också relevanta för navigering till och åtgärder på, **Modeller för innehållsfragment** under **Allmänt** konsol.
+* [Grundläggande hantering](/help/sites-cloud/authoring/basic-handling.md) - den här sidan är huvudsakligen baserad på **Webbplatser** konsol, men många/de flesta funktioner är också relevanta för navigering till och åtgärder på, **Modeller för innehållsfragment** under **Allmänt** konsol.
 
 * [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)
 

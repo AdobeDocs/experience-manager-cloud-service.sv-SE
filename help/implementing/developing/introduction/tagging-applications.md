@@ -2,9 +2,9 @@
 title: Bygga in märkord i AEM
 description: Arbeta med taggar eller utöka taggar i ett anpassat AEM
 exl-id: a106dce1-5d51-406a-a563-4dea83987343
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '717'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ som interagerar med
 
 Mer information om taggning:
 
-* Se [Använda taggar](/help/sites-cloud/authoring/features/tags.md) om du vill ha information om hur du taggar innehåll som innehållsförfattare.
+* Se [Använda taggar](/help/sites-cloud/authoring/sites-console/tags.md) om du vill ha information om hur du taggar innehåll som innehållsförfattare.
 * Se Administrera taggar för administratörens perspektiv om hur du skapar och hanterar taggar, och i vilka innehållstaggar har tillämpats.
 
 ## Översikt över taggnings-API {#overview-of-the-tagging-api}

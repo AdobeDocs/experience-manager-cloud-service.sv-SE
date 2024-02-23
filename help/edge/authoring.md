@@ -3,7 +3,7 @@ title: Skapa innehåll för Edge Delivery Services
 description: Lär dig hur innehållsredigering fungerar med Edge Delivery Services och hur du redigerar AEM innehåll med Edge Delivery Services.
 feature: Edge Delivery Services
 exl-id: 963ff71a-8176-4d9d-8240-dc429405d139
-source-git-commit: 7d28a3a8304d79ecc3143bdc9373134d312af49d
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
@@ -29,7 +29,7 @@ När du använder Edge Delivery Services med AEM as a Cloud Service är det mest
 
 ![Hur AEM fungerar med Edge Delivery Services](assets/how-aem-edge-works.png)
 
-1. [AEM redigeringsmiljö](/help/sites-cloud/authoring/getting-started/quick-start.md) används för innehållshantering som att skapa nya sidor, upplevelsefragment, innehållsfragment osv.
+1. [AEM redigeringsmiljö](/help/sites-cloud/authoring/quick-start.md) används för innehållshantering som att skapa nya sidor, upplevelsefragment, innehållsfragment osv.
    * Alla funktioner i AEM är tillgängliga, t.ex. arbetsflöden, MSM, översättning, startprogram.
 1. [Universell redigerare](/help/implementing/universal-editor/authoring.md) används för att skapa innehåll som hanteras i AEM.
    * Universal Editor har ett nytt och modernt gränssnitt för framtagning av material.

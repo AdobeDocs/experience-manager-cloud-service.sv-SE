@@ -5,7 +5,7 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: 9bfc3995-ac8e-488e-b68f-9e1b5b4a3176
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
 source-wordcount: '1391'
 ht-degree: 0%
@@ -47,7 +47,7 @@ Det finns flera krav innan du börjar översätta AEM innehåll.
 
 >[!TIP]
 >
->Om du inte är van vid att använda ett stort CMS-system som AEM kan du titta i [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) dokumentation innan du fortsätter. Dokumentationen för grundläggande hantering ingår inte i resan. Gå tillbaka till den här sidan när du är klar.
+>Om du inte är van vid att använda ett stort CMS-system som AEM kan du titta i [Grundläggande hantering](/help/sites-cloud/authoring/basic-handling.md) dokumentation innan du fortsätter. Dokumentationen för grundläggande hantering ingår inte i resan. Gå tillbaka till den här sidan när du är klar.
 
 ### verktyg {#tools}
 
@@ -207,7 +207,7 @@ Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sit
 
 Vi rekommenderar att du går vidare till nästa del av översättningsresan genom att granska dokumentet [Konfigurera översättningskopplingen](configure-connector.md) Nedan följer ytterligare, valfria resurser som fördjupar sig i några koncept som nämns i det här dokumentet, men som inte behöver fortsätta på resan.
 
-* [AEM grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) - Lär dig grunderna i det AEM användargränssnittet så att du enkelt kan navigera och utföra viktiga uppgifter som att hitta ditt innehåll.
+* [AEM grundläggande hantering](/help/sites-cloud/authoring/basic-handling.md) - Lär dig grunderna i det AEM användargränssnittet så att du enkelt kan navigera och utföra viktiga uppgifter som att hitta ditt innehåll.
 * [Identifiera innehåll som ska översättas](/help/sites-cloud/administering/translation/rules.md) - Lär dig hur översättningsregler identifierar innehåll som behöver översättas.
 * [Konfigurera översättningsintegreringsramverket](/help/sites-cloud/administering/translation/integration-framework.md) - Lär dig hur du konfigurerar TLF (Translation Integration Framework) för integrering med översättningstjänster från tredje part.
 * [Hantera översättningsprojekt](/help/sites-cloud/administering/translation/managing-projects.md) - Lär dig att skapa och hantera både maskinöversättning och mänsklig översättning i AEM.

@@ -1,7 +1,7 @@
 ---
 title: Konfigurera layoutbehållaren och layoutläget
 description: Lär dig hur du konfigurerar layoutbehållare och layoutläge för att aktivera responsiva layouter för innehållsförfattare.
-source-git-commit: 4ae0ae4fbf8f6a97434628f5f6049720c6c43118
+source-git-commit: a868bf4d4acf4fbae7ccaf55b03319ba0617f9a4
 workflow-type: tm+mt
 source-wordcount: '1250'
 ht-degree: 0%
@@ -11,11 +11,11 @@ ht-degree: 0%
 
 # Konfigurera layoutbehållaren och layoutläget {#configuring-layout-container-and-layout-mode}
 
-[Responsiv layout](/help/sites-cloud/authoring/features/responsive-layout.md) är en mekanism för att förverkliga [responsiv webbdesign](https://en.wikipedia.org/wiki/Responsive_web_design) Detta gör att innehållsförfattaren kan skapa webbsidor som har en layout och dimensioner som är beroende av vilka enheter som användarna använder.
+[Responsiv layout](/help/sites-cloud/authoring/page-editor/responsive-layout.md) är en mekanism för att förverkliga [responsiv webbdesign](https://en.wikipedia.org/wiki/Responsive_web_design) Detta gör att innehållsförfattaren kan skapa webbsidor som har en layout och dimensioner som är beroende av vilka enheter som användarna använder.
 
 AEM realiserar responsiv layout för dina sidor med en kombination av mekanismer:
 
-* **[Layoutbehållare](/help/sites-cloud/authoring/features/responsive-layout.md#adding-a-layout-container-and-its-content-edit-mode)** - Den här komponenten innehåller ett rutnätsstyckesystem där du kan lägga till och placera komponenter i ett responsivt rutnät.
+* **[Layoutbehållare](/help/sites-cloud/authoring/page-editor/responsive-layout.md#adding-a-layout-container-and-its-content-edit-mode)** - Den här komponenten innehåller ett rutnätsstyckesystem där du kan lägga till och placera komponenter i ett responsivt rutnät.
    * Den kan användas som standardparsyta för sidan och/eller göras tillgänglig för författare i komponentwebbläsaren.
    * Standardvärdet **Layoutbehållare** -komponenten definieras under `/libs/wcm/foundation/components/responsivegrid`.
    * Du kan definiera layoutbehållare:
@@ -23,8 +23,8 @@ AEM realiserar responsiv layout för dina sidor med en kombination av mekanismer
       * Som standardparsys för sidan.
       * Som både en komponent och standardparsys.
          * Du kan ha layoutbehållaren som standard för sidan, samtidigt som användaren kan lägga till fler layoutbehållare i den, till exempel för att uppnå kolumnkontroll.
-* **[Layoutläge](/help/sites-cloud/authoring/fundamentals/environment-tools.md)** - När layoutbehållaren är placerad på sidan kan du använda **Layout** läge för att placera innehåll i det responsiva rutnätet.
-* **[Emulator](/help/sites-cloud/authoring/features/responsive-layout.md#selecting-a-device-to-emulate)** - På så sätt kan du skapa och redigera responsiva webbplatser som ändrar layouten efter enhetens/fönstrets storlek genom att ändra komponenternas storlek interaktivt. Användaren kan sedan se hur innehållet återges med emulatorn.
+* **[Layoutläge](/help/sites-cloud/authoring/page-editor/introduction.md#mode-selector)** - När layoutbehållaren är placerad på sidan kan du använda **Layout** läge för att placera innehåll i det responsiva rutnätet.
+* **[Emulator](/help/sites-cloud/authoring/page-editor/responsive-layout.md#selecting-a-device-to-emulate)** - På så sätt kan du skapa och redigera responsiva webbplatser som ändrar layouten efter enhetens/fönstrets storlek genom att ändra komponenternas storlek interaktivt. Användaren kan sedan se hur innehållet återges med emulatorn.
 
 Med dessa responsiva rutnätsmekanismer kan du:
 
@@ -220,9 +220,9 @@ För effektiv responsiv layout måste innehållsförfattaren kunna dra instanser
 
 Om du vill att författare ska kunna lägga till fler responsiva rutnät på innehållssidorna måste du aktivera layoutbehållarkomponenten för sidan. Du kan göra detta med:
 
-* **Via redigeringsmiljön** - [Redigera sidmallar](/help/sites-cloud/authoring/features/templates.md) om du vill aktivera layoutbehållaren för en sida.
+* **Via redigeringsmiljön** - [Redigera sidmallar](/help/sites-cloud/authoring/sites-console/templates.md) om du vill aktivera layoutbehållaren för en sida.
 * **Komponentdefinition** - Användning `allowedComponent` eller en statisk include när komponenten definieras.
 
 ### Konfigurera stödrastret för layoutbehållaren {#configure-the-grid-of-the-layout-container}
 
-Du kan konfigurera antalet kolumner som är tillgängliga för varje instans av layoutbehållaren [genom att redigera sidmallarna.](/help/sites-cloud/authoring/features/templates.md)
+Du kan konfigurera antalet kolumner som är tillgängliga för varje instans av layoutbehållaren [genom att redigera sidmallarna.](/help/sites-cloud/authoring/sites-console/templates.md)

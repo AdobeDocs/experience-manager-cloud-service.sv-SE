@@ -4,7 +4,7 @@ description: Lär dig administrera arbetsflödesinstanser med arbetsflödeskonso
 feature: Administering
 role: Admin
 exl-id: d2adb5e8-3f0e-4a3b-b7d0-dbbc5450e45f
-source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Arbetsflödeskonsolen innehåller flera verktyg för att administrera arbetsflödesinstanser för att säkerställa att de körs som förväntat.
 
-Det finns en rad konsoler som du kan använda för att administrera dina arbetsflöden. Använd [global navigering](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) för att öppna **verktyg** välj **Arbetsflöde**:
+Det finns en rad konsoler som du kan använda för att administrera dina arbetsflöden. Använd [global navigering](/help/sites-cloud/authoring/basic-handling.md#global-navigation) för att öppna **verktyg** välj **Arbetsflöde**:
 
 * **Models**: Hantera arbetsflödesdefinitioner
 * **Instanser**: Visa och hantera pågående arbetsflödesinstanser

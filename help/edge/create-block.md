@@ -1,7 +1,7 @@
 ---
 title: Skapa block som är instrumenterade för användning med den universella redigeraren
 description: Lär dig hur du skapar block som är instrumenterade för användning med den universella redigeraren AEM redigering med Edge Delivery Services.
-source-git-commit: 40e404c743102f1de8b3d959597836f04f0c0fef
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
 source-wordcount: '1205'
 ht-degree: 0%
@@ -130,7 +130,7 @@ Följande exempel på offertblock följer den här metoden.
 
 Nu när det grundläggande offertblocket är definierat och implementerat i exempelprojektet kan du lägga till ett offertblock på en befintlig sida.
 
-1. Logga in AEM as a Cloud Service i en webbläsare. [Med Sites-konsolen](/help/sites-cloud/authoring/getting-started/basic-handling.md) navigera till webbplatsen som du skapade i [Guiden Komma igång för utvecklare för AEM med Edge Delivery Services](/help/edge/edge-dev-getting-started.md) och markera en sida.
+1. Logga in AEM as a Cloud Service i en webbläsare. [Med Sites-konsolen](/help/sites-cloud/authoring/basic-handling.md) navigera till webbplatsen som du skapade i [Guiden Komma igång för utvecklare för AEM med Edge Delivery Services](/help/edge/edge-dev-getting-started.md) och markera en sida.
 
    * I detta fall `index` används för illustrativa ändamål.
 

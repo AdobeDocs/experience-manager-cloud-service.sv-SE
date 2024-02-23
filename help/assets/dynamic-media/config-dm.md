@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar Dynamic Media i Adobe Experience Manag
 contentOwner: Rick Brough
 role: Admin,User
 exl-id: 8e07bc85-ef26-4df4-8e64-3c69eae91e11
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 1a4c5e618adaef99d82a00e1118d1a0f8536fc14
 workflow-type: tm+mt
 source-wordcount: '3575'
 ht-degree: 1%
@@ -115,7 +115,7 @@ To migrate any custom viewer presets and configurations that you have created fr
    >När den nya Dynamic Media-konfigurationen är klar får du ett statusmeddelande i Inkorgen för Experience Manager as a Cloud Service.
    >
    >Det här inkorgsmeddelandet informerar dig om konfigurationen lyckades eller inte.
-   > Se [Felsöka en ny Dynamic Media-konfiguration](#troubleshoot-dm-config) och [Din inkorg](/help/sites-cloud/authoring/getting-started/inbox.md) för mer information.
+   > Se [Felsöka en ny Dynamic Media-konfiguration](#troubleshoot-dm-config) och [Din inkorg](/help/sites-cloud/authoring/inbox.md) för mer information.
 
 1. För att på ett säkert sätt förhandsgranska Dynamic Media-innehåll innan det publiceras använder Experience Manager as a Cloud Service tokenbaserad validering och Experience Manager Author förhandsgranskar därmed Dynamic Media-innehåll som standard. Du kan dock *tillåtelselista* fler IP-adresser för att ge användarna tillgång till säkert förhandsgranskningsmaterial. Information om hur du konfigurerar den här åtgärden på Experience Manager as a Cloud Service finns i [Konfigurera Dynamic Media Publish Setup för Image Server - fliken Säkerhet](/help/assets/dynamic-media/dm-publish-settings.md#security-tab). <!-- To securely preview Dynamic Media content before it gets published, you must "allowlist" the Experience Manager as a Cloud Service author instance to connect to Dynamic Media. To set up this action, do the following: -->
 
@@ -139,7 +139,7 @@ När konfigurationen av en ny Dynamic Media-konfiguration är klar får du ett s
 
 ![Inkorgsfel för Experience Manager](/help/assets/dynamic-media/assets/dmconfig-inbox-failure.png)
 
-Se även [Din inkorg](/help/sites-cloud/authoring/getting-started/inbox.md).
+Se även [Din inkorg](/help/sites-cloud/authoring/inbox.md).
 
 **Så här felsöker du en ny Dynamic Media-konfiguration:**
 

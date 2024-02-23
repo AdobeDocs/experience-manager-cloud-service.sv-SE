@@ -4,9 +4,9 @@ description: Lär dig hur du använder AEM för att skapa en webbplats med hjäl
 feature: Administering
 role: Admin
 exl-id: 9c71c167-2934-4210-abd9-ab085b36593b
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Lär dig hur du använder AEM skapa en webbplats med hjälp av webbplatsmallar för att definiera webbplatsens format och struktur.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Innan innehållsförfattare kan skapa sidor med innehåll måste webbplatsen först skapas. Detta utförs vanligtvis av en AEM som definierar platsens ursprungliga struktur. Med hjälp av webbplatsmallar kan du snabbt och flexibelt skapa webbplatser.
 
@@ -75,7 +75,7 @@ Det är enkelt att använda en mall för att skapa en plats.
 
    * Platsens titel visas i webbläsarens namnlist.
    * Webbplatsnamnet blir en del av webbadressen.
-   * Platsnamnet måste uppfylla [AEM sidnamnkonventioner](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#page-name-restrictions-and-best-practices).
+   * Platsnamnet måste uppfylla [AEM sidnamnkonventioner](/help/sites-cloud/authoring/sites-console/organizing-pages.md#page-name-restrictions-and-best-practices).
 
 1. Välj **Skapa** och webbplatsen skapas från webbplatsmallen.
 

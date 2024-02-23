@@ -4,7 +4,7 @@ description: Lär dig hur du hanterar AEM innehållsfragment från konsolen och 
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
-source-git-commit: 19685cb952a890731bd7d75a2adf3cfd841a465f
+source-git-commit: 89f23a590338561b4cfeb10b54a260a135ec2f08
 workflow-type: tm+mt
 source-wordcount: '2620'
 ht-degree: 0%
@@ -32,7 +32,7 @@ När du har definierat [Modeller för innehållsfragment](#creating-a-content-mo
 >Innehållsfragment kan användas:
 >
 >* for [Headless Content Delivery using Content Fragments with GraphQL](/help/sites-cloud/administering/content-fragments/content-delivery-with-graphql.md),
->* när du redigerar sidor, se [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
+>* när du redigerar sidor, se [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md).
 
 >[!NOTE]
 >
@@ -339,7 +339,7 @@ Efter publiceringen uppdateras fragmentets status och visas i redigeraren och ko
 
 >[!NOTE]
 >
->Dessutom när du [publicera en sida som använder fragmentet](/help/sites-cloud/authoring/fundamentals/content-fragments.md#publishing); fragmentet kommer att listas i sidreferenserna.
+>Dessutom när du [publicera en sida som använder fragmentet](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing); fragmentet kommer att listas i sidreferenserna.
 
 ## Avpublicera ett fragment {#unpublishing-a-fragment}
 

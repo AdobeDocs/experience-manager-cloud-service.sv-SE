@@ -1,18 +1,18 @@
 ---
-title: Karusellbanner
+title: Carousel Banners
 description: Lär dig arbeta med Carousel Banners i Dynamic Media.
 contentOwner: Rick Brough
 feature: Carousel Banners
 role: User
 exl-id: 34541302-6610-4f5e-af93-c95328dda910
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 89f23a590338561b4cfeb10b54a260a135ec2f08
 workflow-type: tm+mt
-source-wordcount: '4448'
+source-wordcount: '4406'
 ht-degree: 1%
 
 ---
 
-# Karusellbanner{#carousel-banners}
+# Carousel Banners{#carousel-banners}
 
 Carousel-banners gör det möjligt för marknadsförare att öka konverteringsgraden genom att enkelt skapa interaktivt roterande marknadsföringsmaterial och leverera det till alla skärmar.
 
@@ -241,7 +241,7 @@ Du kan lägga till aktiveringspunkter eller bildscheman i en banderoll med hjäl
 
 När du lägger till aktiveringspunkter eller bildscheman kan du definiera dem som en snabbvypopup-visning, som en hyperlänk eller som en upplevelsefragment.
 
-Se [Experience Fragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md).
+Se [Experience Fragment](/help/sites-cloud/authoring/fragments/content-fragments.md).
 
 >[!NOTE]
 >
@@ -259,11 +259,11 @@ Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-
 >
 >När du lägger till aktiveringspunkter i en bildbanderoll lagras aktiveringspunktsinformationen på samma metadataplats i förhållande till bildens plats. Denna punkt gäller oavsett om det är en interaktiv bild eller en Carousel-banderoll. Den här funktionen innebär att du enkelt kan återanvända samma bild tillsammans med dess definierade hotspot-data i båda visningsprogrammen.
 >
-Observera dock att Carousel Banners stöder bildscheman på bilder som även kan innehålla hotspot-områden, vilket en interaktiv bild inte gör. Tänk på detta om du tänker skapa en interaktiv bild eller Carousel Banner som använder samma bild. Överväg att skapa interaktiva bilder och Carousel Banners med separata kopior av samma bild istället.
+>Observera dock att Carousel Banners stöder bildscheman på bilder som även kan innehålla hotspot-områden, vilket en interaktiv bild inte gör. Tänk på detta om du tänker skapa en interaktiv bild eller Carousel Banner som använder samma bild. Överväg att skapa interaktiva bilder och Carousel Banners med separata kopior av samma bild istället.
 
 >[!NOTE]
 >
-Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas dina aktiveringspunkter bort.
+>Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas dina aktiveringspunkter bort.
 
 <!-- See also [Adding Image Maps](/help/assets/image-maps.md). -->
 
@@ -302,7 +302,7 @@ Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas
 
         >[!NOTE]
         >
-        Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager Sites-sidor.
+        >Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager Sites-sidor.
 
       * Om du är en fristående kund anger du den fullständiga URL-sökvägen till en länkad webbsida i href-textfältet.
 
@@ -313,15 +313,15 @@ Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas
    * Välj **[!UICONTROL Experience Fragment]**.
 
       * Om du är Experience Manager Sites-kund väljer du sökikonen (förstoringsglas) för att öppna sidan Experience Fragment. Om du vill gå tillbaka till sidan för hantering av aktiveringspunkter väljer du den upplevelsefragment du vill använda och sedan väljer du den i det övre högra hörnet på sidan **[!UICONTROL Select]**.
-Se [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md).
+Se [Upplevelsefragment](/help/sites-cloud/authoring/fragments/content-fragments.md).
 
       * Ange bredd och höjd för Experience Fragment så som det visas på banderollen.
 
         >[!NOTE]
         >
-        Delningsverktygen för sociala medier i Carousel Banner stöds inte när du bäddar in visningsprogrammet i en Experience Fragment.
+        >Delningsverktygen för sociala medier i Carousel Banner stöds inte när du bäddar in visningsprogrammet i en Experience Fragment.
         >
-        Om du vill kringgå den här punkten kan du använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
+        >Om du vill kringgå den här punkten kan du använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
 
    ![experience_fragment-carouselbanner](assets/experience_fragment-carouselbanner.png)
 
@@ -338,7 +338,7 @@ Se [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-frag
 
 >[!NOTE]
 >
-Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]** för att kunna skapa eller redigera karusellbanners. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL dam-users]** grupp.
+>Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]** för att kunna skapa eller redigera karusellbanners. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL dam-users]** grupp.
 
 Du kan utföra olika redigeringsåtgärder på Carousel Sets, till exempel:
 
@@ -371,7 +371,7 @@ Du kan utföra olika redigeringsåtgärder på Carousel Sets, till exempel:
 
    >[!NOTE]
    >
-   Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas dina aktiveringspunkter bort.
+   >Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas dina aktiveringspunkter bort.
 
 ## (Valfritt) Förhandsgranska Carousel Banners {#optional-previewing-carousel-banners}
 
@@ -408,9 +408,9 @@ Om du vill använda karusellen måste du publicera den. När du publicerar en Ca
 
 >[!NOTE]
 >
-Om du använder en befintlig interaktiv bild med aktiveringspunkter för din Carousel-banderoll måste du publicera den interaktiva bilden separat när du har publicerat karusellbanderollen.
+>Om du använder en befintlig interaktiv bild med aktiveringspunkter för din Carousel-banderoll måste du publicera den interaktiva bilden separat när du har publicerat karusellbanderollen.
 >
-Om du ändrar en befintlig publicerad interaktiv bild som du använder i en karusellbanderoll publicerar du den interaktiva bilden så att ändringarna återspeglas i karusellbanderollen.
+>Om du ändrar en befintlig publicerad interaktiv bild som du använder i en karusellbanderoll publicerar du den interaktiva bilden så att ändringarna återspeglas i karusellbanderollen.
 
 Se [Publicera Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md) om du vill ha information om hur du publicerar Carousel-banners.
 
@@ -420,7 +420,7 @@ När du har överfört banderollbilder för att skapa en karusell, tillagda hots
 
 >[!NOTE]
 >
-Om du är kund hos Experience Manager Sites kan du lägga till karusellbanderollen direkt på din sida genom att dra Interactive Media-komponenten till din sida. Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
+>Om du är kund hos Experience Manager Sites kan du lägga till karusellbanderollen direkt på din sida genom att dra Interactive Media-komponenten till din sida. Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
 
 Om du är en fristående Experience Manager Assets-kund kan du dock lägga till karusellbanderollen manuellt på webbplatsens landningssida.
 

@@ -2,9 +2,9 @@
 title: Referenshandbok för komponenter
 description: En referenshandbok för utvecklare som beskriver komponenterna och deras struktur
 exl-id: 45e5265b-39d6-4a5c-be1a-e66bb7ea387d
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 1a4c5e618adaef99d82a00e1118d1a0f8536fc14
 workflow-type: tm+mt
-source-wordcount: '3642'
+source-wordcount: '3481'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Komponenterna utgör kärnan i AEM. The [Kärnkomponenter](https://experiencelea
 
 Eftersom WKND-självstudiekursen täcker de flesta användningsfall är det här dokumentet endast avsett som komplement till dessa resurser. Den innehåller detaljerade tekniska detaljer om hur komponenterna är strukturerade och konfigurerade i AEM och är inte avsedd som en guide för att komma igång.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 I det här avsnittet beskrivs viktiga koncept och problem som en introduktion till den information som behövs när du utvecklar egna komponenter.
 
@@ -103,7 +103,7 @@ Definitionen av en komponent kan delas upp enligt följande:
 * **Rotnod**:
    * `<mycomponent> (cq:Component)` - Komponentens hierarkiska nod.
 * **Viktiga egenskaper**:
-   * `jcr:title` - Komponenttitel, som till exempel används som etikett när komponenten finns i listan [Komponentbläddraren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser) och [Komponentkonsol](/help/sites-cloud/authoring/features/components-console.md)
+   * `jcr:title` - Komponenttitel, som till exempel används som etikett när komponenten finns i listan [Komponentbläddraren](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#components-browser) och [Komponentkonsol](/help/sites-cloud/authoring/components-console.md)
    * `jcr:description` - Beskrivning av komponenten, används som muspekningstecken i komponentwebbläsaren och komponentkonsolen
    * Se avsnittet [Komponentikon](#component-icon) för mer information
 * **Vitala underordnade noder**:
@@ -141,7 +141,7 @@ Om ingen av ovanstående egenskaper (`cq:icon`, `abbreviation`, `cq:icon.png` el
 
 Om du vill avbryta arvet av ikoner från superkomponenter anger du ett tomt värde `abbreviation` -egenskapen för komponenten återställs till standardbeteendet.
 
-The [Komponentkonsol](/help/sites-cloud/authoring/features/components-console.md#component-details) visar hur ikonen för en viss komponent definieras.
+The [Komponentkonsol](/help/sites-cloud/authoring/components-console.md#component-details) visar hur ikonen för en viss komponent definieras.
 
 #### Exempel på SVG-ikon {#svg-icon-example}
 
@@ -166,7 +166,7 @@ En komponent är en nod av typen `cq:Component` och har följande egenskaper och
 | Namn | Typ | Beskrivning |
 |---|---|---|
 | `.` | `cq:Component` | Detta representerar den aktuella komponenten. En komponent är av nodtyp `cq:Component`. |
-| `componentGroup` | `String` | Detta representerar den grupp som komponenten kan markeras under i [Komponentbläddraren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser). Ett värde som börjar med `.` används för komponenter som inte är tillgängliga för val från gränssnittet, till exempel baskomponenter som andra komponenter ärver från. |
+| `componentGroup` | `String` | Detta representerar den grupp som komponenten kan markeras under i [Komponentbläddraren](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#components-browser). Ett värde som börjar med `.` används för komponenter som inte är tillgängliga för val från gränssnittet, till exempel baskomponenter som andra komponenter ärver från. |
 | `cq:isContainer` | `Boolean` | Detta anger om komponenten är en behållarkomponent och kan därför innehålla andra komponenter, till exempel ett styckesystem. |
 | `cq:dialog` | `nt:unstructured` | Detta är definitionen av komponentens redigeringsdialogruta. |
 | `cq:design_dialog` | `nt:unstructured` | Detta är definitionen av komponentens designdialogruta. |
@@ -199,7 +199,7 @@ Underordnade noder av särskilt intresse är:
 
 ### Dialogrutor {#dialogs}
 
-Dialogrutor är ett nyckelelement i komponenten eftersom de tillhandahåller ett gränssnitt där författare kan konfigurera komponenten på en innehållssida och ange indata för den komponenten. Se [redigeringsdokumentation](/help/sites-cloud/authoring/fundamentals/editing-content.md) om du vill ha mer information om hur innehållsförfattare interagerar med komponenter.
+Dialogrutor är ett nyckelelement i komponenten eftersom de tillhandahåller ett gränssnitt där författare kan konfigurera komponenten på en innehållssida och ange indata för den komponenten. Se [redigeringsdokumentation](/help/sites-cloud/authoring/page-editor/edit-content.md) om du vill ha mer information om hur innehållsförfattare interagerar med komponenter.
 
 Beroende på komponentens komplexitet kan din dialogruta behöva en eller flera flikar.
 
@@ -221,9 +221,9 @@ I dialogrutan definieras enskilda fält:
 
 ### Designdialogrutor {#design-dialogs}
 
-Designdialogrutor liknar dialogrutorna som används för att redigera och konfigurera innehåll, men de ger mallskaparna ett gränssnitt där de kan konfigurera och tillhandahålla designinformation för den komponenten på en sidmall. Sidmallar används sedan av innehållsförfattarna för att skapa innehållssidor. Se [malldokumentation](/help/sites-cloud/authoring/features/templates.md) om du vill ha mer information om hur mallar skapas.
+Designdialogrutor liknar dialogrutorna som används för att redigera och konfigurera innehåll, men de ger mallskaparna ett gränssnitt där de kan konfigurera och tillhandahålla designinformation för den komponenten på en sidmall. Sidmallar används sedan av innehållsförfattarna för att skapa innehållssidor. Se [malldokumentation](/help/sites-cloud/authoring/sites-console/templates.md) om du vill ha mer information om hur mallar skapas.
 
-[Designdialogrutor används när du redigerar en sidmall](/help/sites-cloud/authoring/features/templates.md)trots att de inte behövs för alla komponenter. Till exempel **Titel** och **Bildkomponenter** båda har designdialogrutor, medan **Delningskomponent för sociala medier** inte.
+[Designdialogrutor används när du redigerar en sidmall](/help/sites-cloud/authoring/sites-console/templates.md)trots att de inte behövs för alla komponenter. Till exempel **Titel** och **Bildkomponenter** båda har designdialogrutor, medan **Delningskomponent för sociala medier** inte.
 
 ### Gränssnittet för korall och GRENITE {#coral-and-granite}
 
@@ -278,7 +278,7 @@ När du har skapat en komponent måste du aktivera den för att kunna använda d
 
 När en komponent har definierats måste den göras tillgänglig för användning. Om du vill göra en komponent tillgänglig för användning i en mall måste du aktivera komponenten i principen för mallens layoutbehållare.
 
-Se [malldokumentation](/help/sites-cloud/authoring/features/templates.md) om du vill ha mer information om hur mallar skapas.
+Se [malldokumentation](/help/sites-cloud/authoring/sites-console/templates.md) om du vill ha mer information om hur mallar skapas.
 
 ### Komponenter och det innehåll de skapar {#components-and-the-content-they-create}
 
@@ -469,7 +469,7 @@ Allt du behöver göra är att placera en `README.md` i komponentstrukturen.
 
 ![README.md in component structure](assets/components-documentation.png)
 
-Den här markeringen visas i dialogrutan [Komponentkonsol](/help/sites-cloud/authoring/features/components-console.md).
+Den här markeringen visas i dialogrutan [Komponentkonsol](/help/sites-cloud/authoring/components-console.md).
 
 ![README.md visible in the Components Console](assets/components-documentation-console.png)
 

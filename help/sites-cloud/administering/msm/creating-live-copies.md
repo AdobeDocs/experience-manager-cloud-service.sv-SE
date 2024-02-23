@@ -4,7 +4,7 @@ description: Lär dig hur du skapar och synkroniserar Live-kopior för att åter
 feature: Multi Site Manager
 role: Admin
 exl-id: 53ed574d-e20d-4e73-aaa2-27168b9d05fe
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
 source-wordcount: '4270'
 ht-degree: 0%
@@ -53,7 +53,7 @@ Följande steg är bara tillgängliga för en administratör på en lokal utveck
 
 Så här skapar du en ritningskonfiguration:
 
-1. [Navigera](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) till **verktyg** väljer du **Webbplatser** -menyn.
+1. [Navigera](/help/sites-cloud/authoring/basic-handling.md#global-navigation) till **verktyg** väljer du **Webbplatser** -menyn.
 1. Välj **Blueprints** för att öppna **Skapa utkast** konsol:
 
    ![Skapa utkast](../assets/blueprint-configurations.png)
@@ -72,7 +72,7 @@ Så här skapar du en ritningskonfiguration:
 
 Du kan redigera eller ta bort en befintlig ritningskonfiguration:
 
-1. [Navigera](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) till **verktyg** väljer du **Webbplatser** -menyn.
+1. [Navigera](/help/sites-cloud/authoring/basic-handling.md#global-navigation) till **verktyg** väljer du **Webbplatser** -menyn.
 1. Välj **Blueprints** för att öppna **Skapa utkast** konsol:
 
    ![Skapa utkast](../assets/blueprint-configurations.png)
@@ -211,7 +211,7 @@ Så här visar du egenskaperna:
 
 ### Visa Live-kopior av en blå sida {#seeing-the-live-copies-of-a-blueprint-page}
 
-Du får en lista över de Live Copy-sidor som använder den aktuella (utkast) sidan som källa för utkast (som refereras i en designkonfiguration). Använd den här listan för att hålla reda på Live-kopior. Listan visas på **Blueprint** -fliken i [sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md).
+Du får en lista över de Live Copy-sidor som använder den aktuella (utkast) sidan som källa för utkast (som refereras i en designkonfiguration). Använd den här listan för att hålla reda på Live-kopior. Listan visas på **Blueprint** -fliken i [sidegenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md).
 
 ![fliken Utskrift för sidegenskaper](../assets/live-copy-blueprint-tab.png)
 
@@ -249,7 +249,7 @@ Utrullningar bearbetas som asynkrona jobb och kan kontrolleras på [***Status f�
 
 #### Rulla ut en skiss från referensspåret {#roll-out-a-blueprint-from-the-reference-rail}
 
-1. I **Webbplatser** markerar du sidan i live-kopian och öppnar **[Referenser](/help/sites-cloud/authoring/getting-started/basic-handling.md#references)** (från verktygsfältet).
+1. I **Webbplatser** markerar du sidan i live-kopian och öppnar **[Referenser](/help/sites-cloud/authoring/basic-handling.md#references)** (från verktygsfältet).
 1. Välj **Blueprint** i listan för att visa de utkast som är kopplade till den här sidan.
 1. Välj önskad rityta i listan.
 1. Välj **Utrullning**.
@@ -575,8 +575,8 @@ The [**Återställ** finns även tillgängligt från Live Copy Overview](live-co
 
 Om du vill spåra de ändringar du har gjort kan du visa planeringsidan i **Referenser** och jämför med sin Live Copy-sida:
 
-1. I **Webbplatser** konsol, [navigera till en ritning eller en Live Copy-sida och markera den](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources).
-1. Öppna **[Referenser](/help/sites-cloud/authoring/getting-started/basic-handling.md#references)** och beroende på sammanhanget väljer du antingen:
+1. I **Webbplatser** konsol, [navigera till en ritning eller en Live Copy-sida och markera den](/help/sites-cloud/authoring/basic-handling.md#viewing-and-selecting-resources).
+1. Öppna **[Referenser](/help/sites-cloud/authoring/basic-handling.md#references)** och beroende på sammanhanget väljer du antingen:
 
    * **Blueprint**
    * **Live-kopior**
@@ -592,7 +592,7 @@ Om du vill spåra de ändringar du har gjort kan du visa planeringsidan i **Refe
 
 1. Live Copy- och designsidorna öppnas sida vid sida.
 
-   Mer information om hur du använder jämförelsefunktionen finns i [Sidskillnader](/help/sites-cloud/authoring/features/page-diff.md).
+   Mer information om hur du använder jämförelsefunktionen finns i [Sidskillnader](/help/sites-cloud/authoring/sites-console/page-diff.md).
 
 ## Koppla loss en Live-kopia {#detaching-a-live-copy}
 

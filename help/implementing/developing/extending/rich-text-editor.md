@@ -3,28 +3,28 @@ title: Konfigurera RTF-redigeraren för att skapa innehåll i [!DNL Adobe Experi
 description: Konfigurera RTF-redigeraren för att skapa innehåll i [!DNL Adobe Experience Manager] as a Cloud Service.
 contentOwner: AG
 exl-id: 1f0ff800-5e95-429a-97f2-221db0668170
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a868bf4d4acf4fbae7ccaf55b03319ba0617f9a4
 workflow-type: tm+mt
-source-wordcount: '1876'
+source-wordcount: '1858'
 ht-degree: 0%
 
 ---
 
 # Konfigurera RTF-redigeraren {#configure-the-rich-text-editor}
 
-Med RTF-redigeraren får författarna ett stort antal funktioner för att redigera textinnehåll. Ikoner, markeringsrutor, verktygsfält och menyer finns för WYSIWYG-textredigering. Administratörer konfigurerar RTE för att aktivera, inaktivera och utöka de funktioner som är tillgängliga i redigeringskomponenterna. Se hur författare [använd RTE för redigering](/help/sites-cloud/authoring/fundamentals/rich-text-editor.md) webbinnehåll.
+Med RTF-redigeraren får författarna ett stort antal funktioner för att redigera textinnehåll. Ikoner, markeringsrutor, verktygsfält och menyer finns för WYSIWYG-textredigering. Administratörer konfigurerar RTE för att aktivera, inaktivera och utöka de funktioner som är tillgängliga i redigeringskomponenterna. Se hur författare [använd RTE för redigering](/help/sites-cloud/authoring/page-editor/rich-text-editor.md) webbinnehåll.
 
 De RTE-begrepp och -steg som krävs för att konfigurera den listas nedan.
 
-| Förstå RTE-begrepp | Aktivera nödvändiga funktioner | Konfigurera enskilda funktioner |
+| Förstå RTE-koncept | Aktivera nödvändiga funktioner | Konfigurera enskilda funktioner |
 |---|---|---|
 | [Förstå gränssnittet](#understand-rte-ui) | [Förstå och ange konfigurationsplatser](#understand-the-configuration-paths-and-locations) | [Konfigurera plugin-program](#enable-rte-functionalities-by-activating-plug-ins) |
 | [Olika typer av redigeringslägen](#editingmodes) | [Aktivera plugin-program](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#activateplugin) | [Ange funktionsegenskaper](#aboutplugins) |
-| [Om plugin-program](#aboutplugins) | [Konfigurera RTE-verktygsfält](#dialogfullscreen) | [Konfigurera inklistringslägen](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#textstyles) |
+| [Om plugin-program](#aboutplugins) | [Konfigurera RTE-verktygsfält](#dialogfullscreen) | [Konfigurera inklistringslägena](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#textstyles) |
 
 ## Förstå användargränssnittet som är tillgängligt för författare {#understand-rte-ui}
 
-RTE-gränssnittet erbjuder en [responsiv design](/help/sites-cloud/authoring/features/responsive-layout.md) för redigeringsmiljön. Gränssnittet är utformat för att användas på enheter med pekskärm och stationära datorer.
+RTE-gränssnittet erbjuder en [responsiv design](/help/sites-cloud/authoring/page-editor/responsive-layout.md) för redigeringsmiljön. Gränssnittet är utformat för att användas på enheter med pekskärm och stationära datorer.
 
 ![Verktygsfältet för textredigeraren](assets/rte-toolbar-full-screen-mode.png)
 
@@ -38,20 +38,20 @@ Författare kan skapa och redigera textinnehåll i [!DNL Experience Manager] med
 
 | Redigeringsläge | Redigeringsområde | Rekommenderade funktioner som ska aktiveras |
 |--- |--- |--- |
-| Textbunden | On-place editing for quick, minor edits; Formatera utan att öppna en dialogruta. | Minimala RTE-funktioner. |
-| RTE i helskärmsläge | Täcker hela sidan. | Alla nödvändiga RTE-funktioner. |
+| Textbunden | Redigera på plats för snabba smärre redigeringar. Formatera utan att öppna en dialogruta. | Minimala RTE-funktioner. |
+| RTE helskärm | Täcker hela sidan. | Alla nödvändiga RTE-funktioner. |
 | Dialog | Dialogrutan visas ovanpå sidinnehållet men täcker inte hela sidan. | Aktivera funktioner i jakt. |
-| Dialogruta i helskärmsläge | Samma som helskärmsläge, innehåller fält i dialogrutan vid sidan om RTE. | Alla nödvändiga RTE-funktioner. |
+| Dialogruta i helskärmsläge | Samma som helskärmsläge; innehåller fält i dialogrutan tillsammans med RTE. | Alla nödvändiga RTE-funktioner. |
 
 >[!NOTE]
 >
 >Funktionen för källredigering är inte tillgänglig i infogat redigeringsläge. Du kan inte dra bilder i helskärmsläge. Alla andra funktioner fungerar i alla lägen.
 
-### Inline-redigering {#inline-editing}
+### Redigering direkt {#inline-editing}
 
 Om du vill redigera innehållet på en sida öppnar du innehållet med ett långsamt dubbelklick . Ett kompakt verktygsfält med grundläggande alternativ visas.
 
-![Inline-redigering med grundläggande alternativ i verktygsfältet](assets/inline-editing-mode-basic-options.png)
+![Direktredigering med grundläggande alternativ i verktygsfältet](assets/inline-editing-mode-basic-options.png)
 
 *Bild: Inline-redigering med grundläggande alternativ i verktygsfältet.*
 
@@ -97,7 +97,7 @@ I följande tabell visas de aktuella plugin-programmen:
 | redigera | `cut`, `copy`, `paste-default`, `paste-plaintext`, `paste-wordhtml` | [Klipp ut, kopiera och, de tre inklistringslägena](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#textstyles). |
 | findreplace | `find`, `replace` | Sök och ersätt. |
 | format | `bold`, `italic`, `underline` | [Grundläggande textformatering](configure-rich-text-editor-plug-ins.md#textstyles). |
-| bild | `image` | Grundläggande bildstöd (dra från innehåll eller Innehållssökning). Beroende på webbläsaren har stödet olika beteenden för författare |
+| image | `image` | Grundläggande bildstöd (dra från innehåll eller Innehållssökning). Beroende på webbläsaren har stödet olika beteenden för författare |
 | tangenter | - | Information om hur du definierar det här värdet finns i [tabbstorlek](configure-rich-text-editor-plug-ins.md#tabsize). |
 | justera | `justifyleft`, `justifycenter`, `justifyright` | Styckejustering. |
 | länkar | `modifylink`, `unlink`, `anchor` | [Hyperlänkar och ankarpunkter](configure-rich-text-editor-plug-ins.md#linkstyles). |
@@ -118,7 +118,7 @@ I följande tabell visas de aktuella plugin-programmen:
 
 The [RTE-redigeringsläge och gränssnitt](#editingmodes) som du anger för författarna bestämmer var konfigurationsinformationen ska placeras när du är [aktivera RTE-plugin-program](configure-rich-text-editor-plug-ins.md#activateplugin). Platserna är:
 
-* Textbundet läge: `cq:editConfig/cq:inplaceEditing`.
+* Textbunden: `cq:editConfig/cq:inplaceEditing`.
 * Helskärmsläge: `cq:editConfig/cq:inplaceEditing`.
 * Dialogruteläge: `cq:dialog`.
 * Dialogruteläge för helskärm: `cq:dialog`.
@@ -131,13 +131,13 @@ The [RTE-redigeringsläge och gränssnitt](#editingmodes) som du anger för för
 >* **Typ**: `String`
 >* **Värde**: sökväg till noden som innehåller den faktiska konfigurationen
 >
->Namnge inte RTE-konfigurationsnoden som `config`. I annat fall gäller RTE-konfigurationerna bara för administratörerna och inte för användarna i gruppen `content-author`.
+>Ge inte RTE-konfigurationsnoden namnet `config`. I annat fall gäller RTE-konfigurationerna bara för administratörerna och inte för användarna i gruppen `content-author`.
 
 Konfigurera följande egenskaper som gäller i redigeringsläget för dialogrutor:
 
-* `useFixedInlineToolbar`: Du kan ange att verktygsfältet RTE ska vara fast i stället för flytande. Ange den här booleska egenskapen som är definierad på RTE-noden med sling:resourceType= `cq/gui/components/authoring/dialog/richtext` till `True`. När den här egenskapen är inställd på `True`, är textredigeringen startad på `foundation-contentloaded` -händelse. Du kan förhindra detta genom att ange egenskapen `customStart` till `True` och aktivera `rte-start` -händelse för att starta RTE-redigering. När den här egenskapen är `true`, RTE startar inte vid klickning och detta är standardbeteendet.
+* `useFixedInlineToolbar`: Du kan göra så att verktygsfältet RTE är fast i stället för flytande. Ange den här booleska egenskapen som är definierad på RTE-noden med sling:resourceType= `cq/gui/components/authoring/dialog/richtext` till `True`. När den här egenskapen är inställd på `True`, är textredigeringen startad på `foundation-contentloaded` -händelse. Du kan förhindra detta genom att ange egenskapen `customStart` till `True` och aktivera `rte-start` -händelse för att starta RTE-redigering. När den här egenskapen `true`, RTE startar inte vid klickning och detta är standardbeteendet.
 
-* `customStart`: Ställ in den här booleska egenskapen som definierats på RTE-noden på `True`för att styra när RTE ska startas genom att händelsen utlöses `rte-start`.
+* `customStart`: Ange den här booleska egenskapen som definieras på RTE-noden till `True`för att styra när RTE ska startas genom att händelsen utlöses `rte-start`.
 
 * `rte-start`: Utlös den här händelsen på `contenteditable-div` av RTE, när redigering av RTE ska börja. Fungerar bara om `customStart` har angetts till `true`.
 
@@ -147,12 +147,12 @@ När textredigeraren används i dialogrutan med pekfunktioner anger du egenskape
 
 RTE-funktioner är tillgängliga via en serie plugin-program, var och en med features-egenskaper. Du kan konfigurera egenskapen features för att aktivera eller inaktivera de olika funktionerna i varje plugin-program.
 
-Detaljerade konfigurationer av RTE-plugin-program finns i [hur du aktiverar och konfigurerar RTE-plugin-program](configure-rich-text-editor-plug-ins.md).
+Detaljerade konfigurationer av RTE-plugin-program finns i [aktivera och konfigurera RTE-plugin-program](configure-rich-text-editor-plug-ins.md).
 
 <!-- TBD ENGREVIEW: To confirm if the sample works in CS or not?
 **Sample**: Download [this sample configuration](/help/sites-administering/assets/rte-sample-all-features-enabled-10.zip) that illustrates how to configure RTE. In this package all the features are enabled. -->
 
-The [Textkomponent för kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor) I kan mallredigerare konfigurera många RTE-plugin-program med användargränssnittet som innehållsprinciper, vilket eliminerar behovet av teknisk konfiguration. Innehållsprinciper kan fungera med gränssnittskonfigurationer för textredigering enligt beskrivningen i det här dokumentet. Mer information finns i [skapa sidmallar](/help/sites-cloud/authoring/features/templates.md) och [Dokumentation för grundkomponentutvecklare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html).
+The [Textkomponent för kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor) I kan mallredigerare konfigurera många RTE-plugin-program med användargränssnittet som innehållsprinciper, vilket eliminerar behovet av teknisk konfiguration. Innehållsprinciper kan fungera med gränssnittskonfigurationer för textredigering enligt beskrivningen i det här dokumentet. Mer information finns i [skapa sidmallar](/help/sites-cloud/authoring/sites-console/templates.md) och [Dokumentation för grundkomponentutvecklare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html).
 
 >I referenssyfte finns textstandardkomponenterna (levereras som en del av en standardinstallation) på:
 >
@@ -208,9 +208,9 @@ Konfigurera verktygsfältet för `dialogFullScreen`använder du följande exempe
 
 Olika gränssnittsinställningar används för infogat läge och helskärmsläge. Egenskapen toolbar anger verktygsfältets alternativ.
 
-Om till exempel själva alternativet är en funktion (till exempel `Bold`), anges som `PluginName#FeatureName` (t.ex. `links#modifylink`).
+Om till exempel själva alternativet är en funktion (till exempel `Bold`), anges som `PluginName#FeatureName` (till exempel `links#modifylink`).
 
-Om alternativet är ett popup-fönster (som innehåller vissa funktioner i ett plugin-program) anges det som `#PluginName` (t.ex. `#format`).
+Om alternativet är ett popup-fönster (som innehåller vissa funktioner i ett plugin-program) anges det som `#PluginName` (till exempel `#format`).
 
 Avgränsare (`|`) mellan en grupp alternativ kan anges med `-`.
 
@@ -218,7 +218,7 @@ Popup-noden under infogat läge eller helskärmsläge innehåller en lista över
 
 ## RTE-inställningar (User Interface Settings) och innehållsprinciper {#rtecontentpolicies}
 
-Administratörer kan styra textredigeringsalternativen med hjälp av innehållsprinciper, till exempel i stället för att göra konfigurationen enligt beskrivningen ovan. Innehållsprofiler definierar designegenskaperna för en komponent när de används som en del av en [redigerbar mall](/help/sites-cloud/authoring/features/templates.md). Om en textkomponent som använder textredigeraren till exempel används med en redigerbar mall kan innehållsprincipen definiera att det feta alternativet är tillgängligt och att några styckeformateringsalternativ är tillgängliga. Innehållsprofilerna kan återanvändas och kan tillämpas på flera mallar.
+Administratörer kan styra textredigeringsalternativen med hjälp av innehållsprinciper, till exempel i stället för att göra konfigurationen enligt beskrivningen ovan. Innehållsprofiler definierar designegenskaperna för en komponent när de används som en del av en [redigerbar mall](/help/sites-cloud/authoring/sites-console/templates.md). Om en textkomponent som använder textredigeraren till exempel används med en redigerbar mall kan innehållsprincipen definiera att det feta alternativet är tillgängligt och att några styckeformateringsalternativ är tillgängliga. Innehållsprofilerna kan återanvändas och kan tillämpas på flera mallar.
 
 De tillgängliga alternativen i textredigeraren flödar nedåt från användargränssnittskonfigurationerna till innehållsprinciperna.
 
@@ -273,12 +273,12 @@ Nedan finns ett exempelfragment som mappar kommandot `Bold` till korallikonen me
 
 ## God praxis och tips {#best-practices-and-tips}
 
-* Aktivera bara plugin-program utan popup-dialogruta för en flytande dialogruta. Plugin-program utan popup-fönster är mindre och lämpar sig bäst för en flytande dialogruta.
+* Aktivera bara plugin-program utan dialogruta för en flytande dialogruta. Plugin-program utan popup-fönster är mindre och lämpar sig bäst för en flytande dialogruta.
 * Aktivera plugin-programmen med större popup-fönster, till exempel `Paste` plugin-program, endast i helskärmsläge eller helskärmsläge. Plugin-program med stor popup-meny behöver mer utrymme på skärmen för att kunna skapa på ett bra sätt.
 * Om du använder anpassade plugin-program för CoralUI3 RTE ska du använda `rte.coralui3` bibliotek.
 
 >[!MORELIKETHIS]
 >
 >* [Konfigurera RTE-plugin-program](configure-rich-text-editor-plug-ins.md)
->* [Använd RTF-redigerare för att skapa](/help/sites-cloud/authoring/fundamentals/rich-text-editor.md)
+>* [Använd RTF-redigerare för att skapa](/help/sites-cloud/authoring/page-editor/rich-text-editor.md)
 >* [Konfigurera RTE för hjälpmedelsanpassade webbplatser](rte-accessible-content.md)

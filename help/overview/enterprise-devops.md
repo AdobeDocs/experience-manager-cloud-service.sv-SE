@@ -2,16 +2,16 @@
 title: Enterprise DevOps
 description: Läs om de processer, metoder och den kommunikation som krävs för att underlätta driftsättningen och samarbetet.
 exl-id: c8da1fd7-fe3e-4c7b-8fe7-1f7faf02769c
-source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
+source-git-commit: 1a4c5e618adaef99d82a00e1118d1a0f8536fc14
 workflow-type: tm+mt
 source-wordcount: '1009'
-ht-degree: 48%
+ht-degree: 46%
 
 ---
 
 # Enterprise DevOps{#enterprise-devops}
 
-DevOps omfattar de processer, metoder och den kommunikation som krävs för att
+DevOps omfattar processer, metoder och kommunikation som krävs för att
 
 * Underlätta driftsättningen av programvaran i olika miljöer.
 * Förenkla samarbetet mellan utvecklings-, testnings- och driftsättningsteamen.
@@ -22,7 +22,7 @@ DevOps vill undvika problem som:
 * Glömda element: till exempel filer och konfigurationsinformation.
 * Avvikelser: till exempel mellan en utvecklares lokala miljö och andra miljöer.
 
-## Miljöer {#environments}
+## Miljö {#environments}
 
 Adobe Experience Manager (AEM) as a Cloud Service består vanligtvis av flera miljöer som används för olika syften på olika nivåer:
 
@@ -64,9 +64,9 @@ Mellanlagringsmiljön bör vara en spegling av produktionsmiljön - konfiguratio
 * Den kan användas för sluttester (design, funktionalitet och gränssnitt) innan den distribueras till produktionsmiljöerna.
 * Även om det inte alltid är möjligt att ha samma mellanlagringsmiljö som produktionsmiljön bör den vara så lik som möjligt för att möjliggöra prestanda- och lasttestning.
 
-### Produktion – Author och Publish {#production-author-and-publish}
+### Produktion - Skapa och publicera {#production-author-and-publish}
 
-Produktionsmiljön består av miljöer som [skapa och publicera](/help/sites-cloud/authoring/getting-started/concepts.md) implementeringen.
+Produktionsmiljön består av miljöer som [skapa och publicera](/help/sites-cloud/authoring/author-publish.md) implementeringen.
 
 En produktionsmiljö består av minst en författarinstans och en publiceringsinstans:
 
@@ -77,7 +77,7 @@ Beroende på projektets omfattning består den ofta av flera författare, utgiva
 
 #### Författare {#author}
 
-Vanligtvis ligger författarinstanser bakom den interna brandväggen. Denna interna brandvägg är den miljö där du, och dina kollegor, utför redigeringsuppgifter som:
+Vanligtvis ligger författarinstanser bakom den interna brandväggen. Den interna brandväggen är den miljö där du, och dina kollegor, utför redigeringsuppgifter som följande:
 
 * administrera hela systemet
 * mata in innehåll
@@ -113,7 +113,7 @@ Vanligtvis överförs koden (till exempel anpassade webbprogramfunktioner och de
 Projekt på AEM as a Cloud Service utlöser ofta koddistribution:
 
 * Automatiskt: för överföring till utvecklings- och QA-miljöer.
-* Manuellt: driftsättning till stagnings- och produktionsmiljöerna sker på ett mer kontrollerat sätt, ofta manuellt, Automatisering är dock möjlig, om det behövs.
+* Manuellt: distributioner till staging- och produktionsmiljöerna görs på ett mer kontrollerat sätt, ofta manuellt, men det går att automatisera vid behov.
 
 ![Kodförflyttning](assets/code-movement.png)
 
@@ -127,7 +127,7 @@ Produktionsinnehållet bör flyttas från produktionsmiljön till mellanlagrings
 
 >[!NOTE]
 >
->Denna metod innebär inte att mellanlagringsinnehållet måste synkroniseras kontinuerligt med produktionen. regelbundna uppdateringar är tillräckliga, men framför allt innan du testar en ny kodupprepning. Innehåll i QA- och utvecklingsmiljöer behöver inte uppdateras lika ofta. Det måste bara vara en bra representation av produktionsinnehållet.
+>Den här metoden innebär inte att mellanlagringsinnehållet måste synkroniseras kontinuerligt med produktionen. Det räcker med regelbundna uppdateringar, men framför allt innan du testar en ny kodupprepning. Innehåll i QA- och utvecklingsmiljöer behöver inte uppdateras lika ofta. Det måste bara vara en bra representation av produktionsinnehållet.
 
 Innehåll kan överföras:
 

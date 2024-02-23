@@ -2,7 +2,7 @@
 title: Versionsinformation för 2021.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2021.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 3f9d7339-7e37-4702-821e-f2b03cd7e224
-source-git-commit: 720430af374636878b42ce346ca9c61ab089709b
+source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
 workflow-type: tm+mt
 source-wordcount: '1355'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Följande version (2021.6.0) kommer att vara den 28 juni 2021.
 
 ### Nyheter i [!DNL Sites] {#what-is-new-sites}
 
-* Du kommer snart att kunna verifiera innehåll på en ny [Förhandsgranskningsnivå](/help/sites-cloud/authoring/fundamentals/previewing-content.md) för att simulera det slutliga utseendet och känslan på samma sätt som i publiceringsskiktet. Detta aktiveras av guiden AEM Sites Managed Publication, som nu låter dig välja ett publiceringsmål mellan Publicera eller Förhandsgranska. Du kommer sedan åt upplevelser på förhandsgranskning via en dedikerad URL. Efter validering i förhandsgranskning kan innehåll publiceras från författare till publicering som vanligt. Om du aktiverar förhandsgranskningstjänsten i AEM as a Cloud Service miljöer kommer den gradvis att lanseras under de närmaste veckorna.
+* Du kommer snart att kunna verifiera innehåll på en ny [Förhandsgranskningsnivå](/help/sites-cloud/authoring/sites-console/previewing-content.md) för att simulera det slutliga utseendet och känslan på samma sätt som i publiceringsskiktet. Detta aktiveras av guiden AEM Sites Managed Publication, som nu låter dig välja ett publiceringsmål mellan Publicera eller Förhandsgranska. Du kommer sedan åt upplevelser på förhandsgranskning via en dedikerad URL. Efter validering i förhandsgranskning kan innehåll publiceras från författare till publicering som vanligt. Om du aktiverar förhandsgranskningstjänsten i AEM as a Cloud Service miljöer kommer den gradvis att lanseras under de närmaste veckorna.
 
 ## [!DNL Adobe Experience Manager Assets] som [!DNL Cloud Service] {#assets}
 

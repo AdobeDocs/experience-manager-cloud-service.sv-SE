@@ -4,7 +4,7 @@ description: Lär dig grunderna i Live Copy Overview Console för att snabbt fö
 feature: Multi Site Manager
 role: Admin
 exl-id: 3ef7fbce-10a1-4b21-8486-d3c3706e537c
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 0%
@@ -32,8 +32,8 @@ Du kan öppna Live-kopieringsöversikt från:
 
 The **Live Copy - översikt** kan öppnas från **Referenser** sidpanelen på **Webbplatser** konsol:
 
-1. I **Webbplatser** konsol, [navigera till din ritningssida och markera den](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources).
-1. Öppna **[Referenser](/help/sites-cloud/authoring/getting-started/basic-handling.md#references)** markera **Live-kopior**.
+1. I **Webbplatser** konsol, [navigera till din ritningssida och markera den](/help/sites-cloud/authoring/basic-handling.md#viewing-and-selecting-resources).
+1. Öppna **[Referenser](/help/sites-cloud/authoring/basic-handling.md#references)** markera **Live-kopior**.
 
    ![Live Copy from references rail](../assets/live-copy-references.png)
 

@@ -2,7 +2,7 @@
 title: Versionsinformation för 2021.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2021.3.0."
 exl-id: 0c07364c-ba25-4081-8e35-3c1c84ed556f
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
 workflow-type: tm+mt
 source-wordcount: '1271'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Följande version (2021.4.0) kommer att vara den 29 april 2021.
 
 ## [!DNL Adobe Experience Manager Sites] as a Cloud Service {#sites}
 
-* [En progressiv webbprogramversion (PWA) av en webbplats](/help/sites-cloud/authoring/features/enable-pwa.md) kan nu aktiveras på projektnivå via enkel konfiguration.
+* [En progressiv webbprogramversion (PWA) av en webbplats](/help/sites-cloud/authoring/sites-console/enable-pwa.md) kan nu aktiveras på projektnivå via enkel konfiguration.
 * Modelltillägg för innehållsfragment - nu möjligt att definiera datatyper med flera rader som flerfältslista.
 * Förbättringar i gränssnittet för innehållsfragmentredigeraren - kapslade underordnade fragment visas nu i vägbeskrivningar och förbättrad vy för åtgärder för publicering, spara och spara och avsluta
 
@@ -74,9 +74,9 @@ Du kan kontakta din Adobe-representant för att få en demo eller anmäla dig ti
 
 * Produktdetaljkomponenten kan nu användas och konfigureras på alla innehållssidor
 
-* Lanserade CIF Venia Reference Site - 2021.03.25 som innehåller den senaste CIF Core Components version v1.9.0. Se [CIF Venias referenswebbplats](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.03.25) för mer information.
+* Lanserade CIF Venia Reference Site - 2021.03.25 som innehåller den senaste CIF Core Components version v1.9.0. Se [CIF Venia Reference Site](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.03.25) för mer information.
 
-* Frisläppta CIF kärnkomponenter v1.9.0. Se [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.9.0) för mer information.
+* Frisläppta CIF kärnkomponenter v1.9.0. Se [CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.9.0) för mer information.
 
 
 ## Cloud Manager {#cloud-manager}

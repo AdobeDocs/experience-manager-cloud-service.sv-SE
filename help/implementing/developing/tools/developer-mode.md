@@ -4,7 +4,7 @@ seo-title: Developer Mode
 description: I utvecklarläget öppnas en sidopanel med flera flikar som ger utvecklaren information om den aktuella sidan
 seo-description: Developer mode opens a side panel with several tabs that provide a developer with information about the current page
 exl-id: fbf11c0f-dc6e-43f3-bcf2-080eacc6ba99
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 1a4c5e618adaef99d82a00e1118d1a0f8536fc14
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Utvecklarläge {#developer-mode}
 
-När du redigerar sidor i AEM [lägen](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes) är tillgängliga, inklusive läget Utvecklare. I utvecklarläget öppnas en sidopanel med flera flikar som ger utvecklaren teknisk information om den aktuella sidan.
+När du redigerar sidor i AEM [lägen](/help/sites-cloud/authoring/sites-console/introduction.md#page-modes) är tillgängliga, inklusive läget Utvecklare. I utvecklarläget öppnas en sidopanel med flera flikar som ger utvecklaren teknisk information om den aktuella sidan.
 
 Det finns två flikar:
 
@@ -41,7 +41,7 @@ Utvecklarläget implementeras som en sidopanel i sidredigeraren. Om du vill öpp
 
 Panelen är uppdelad i två flikar:
 
-* **[Komponenter](#components)** - Detta visar ett komponentträd, som liknar [innehållsträd](/help/sites-cloud/authoring/fundamentals/environment-tools.md#content-tree) för författare
+* **[Komponenter](#components)** - Detta visar ett komponentträd, som liknar [innehållsträd](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#content-tree) för författare
 * **[Fel](#errors)** - När problem uppstår visas information för varje komponent.
 
 ### Fliken Komponenter {#components}
@@ -55,7 +55,7 @@ Detta visar ett komponentträd som:
 * Gör att du kan expandera trädet och välja specifika komponenter i trädet. Markeringen ger åtkomst till komponentinformation, till exempel:
    * Databassökväg
    * Länkar till skript (används i CRXDE Lite)
-   * Komponentdetaljer enligt [Komponentkonsol](/help/sites-cloud/authoring/features/components-console.md)
+   * Komponentdetaljer enligt [Komponentkonsol](/help/sites-cloud/authoring/components-console.md)
 * Komponenter som är markerade i trädet markeras med en blå kant i redigeraren.
 
 På fliken Komponenter kan du
@@ -76,7 +76,7 @@ Varje komponentpost kan ha följande alternativ:
 
 * **Redigera skript:** En länk som öppnar komponentskriptet i CRXDE Lite.
 
-* **Visa komponentinformation:** Öppnar informationen om komponenten i [Komponentkonsol](/help/sites-cloud/authoring/features/components-console.md).
+* **Visa komponentinformation:** Öppnar informationen om komponenten i [Komponentkonsol](/help/sites-cloud/authoring/components-console.md).
 
 Om du expanderar en komponentpost genom att trycka eller klicka på gruppen kan du även visa:
 

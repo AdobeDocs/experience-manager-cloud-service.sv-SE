@@ -2,9 +2,9 @@
 title: Sammansatta komponenter i SPA
 description: Lär dig hur du skapar egna sammansatta komponenter, komponenter som består av andra komponenter, som fungerar med AEM Single-Page Application (SPA) Editor.
 exl-id: fa1ab1dd-9e8e-4e2c-aa9a-5b46ed8a02cb
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '782'
 ht-degree: 0%
 
 ---
@@ -156,7 +156,7 @@ Sedan kan du lägga till den i SPA och hämta dess innehåll.
     itemPath='root/responsivegrid' />
    ```
 
-1. Lägg till skapade `wknd-spa/components/imagecard` till de tillåtna komponenterna för behållarkomponenten [i sidmallen](/help/sites-cloud/authoring/features/templates.md).
+1. Lägg till skapade `wknd-spa/components/imagecard` till de tillåtna komponenterna för behållarkomponenten [i sidmallen](/help/sites-cloud/authoring/sites-console/templates.md).
 
 Nu `imagecard` kan läggas till direkt i behållaren i AEM.
 

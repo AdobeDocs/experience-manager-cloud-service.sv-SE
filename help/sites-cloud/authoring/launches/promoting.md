@@ -1,15 +1,15 @@
 ---
-title: Marknadsföra Launches
+title: Befordra lanseringar
 description: Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar.
 exl-id: 5f5ed17c-43db-4ef6-ab79-c491326fa01c
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
 workflow-type: tm+mt
-source-wordcount: '811'
-ht-degree: 1%
+source-wordcount: '812'
+ht-degree: 0%
 
 ---
 
-# Marknadsföra Launches {#promoting-launches}
+# Befordra lanseringar {#promoting-launches}
 
 Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar. När en startsida befordras ersätts motsvarande sida på källsidorna med innehållet på den befordrade sidan. Följande alternativ är tillgängliga när du befordrar en startsida:
 
@@ -44,12 +44,12 @@ Du kan befordra starter från **Webbplatser** konsolen eller **Startar** konsol:
 
 1. Öppna:
    * The **Webbplatser** konsol vid navigering på källsidor:
-      1. Öppna [referenser, räl](/help/sites-cloud/authoring/fundamentals/environment-tools.md#references) och välj en källsida med [markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md) (eller markera och öppna referenslinjen är ordningen inte viktig). Alla referenser visas.
+      1. Öppna [referenser, räl](/help/sites-cloud/authoring/sites-console/console-side-panel.md#references) och välj en källsida med [markeringsläge](/help/sites-cloud/authoring/basic-handling.md) (eller markera och öppna referenslinjen är ordningen inte viktig). Alla referenser visas.
       1. Välj **Startar** (t.ex. Launches (1)) för att visa en lista över specifika starter.
       1. Välj den specifika starten för att visa tillgängliga åtgärder.
       1. Välj **Befordra lansering** för att öppna guiden.
    * The **Webbplatser** konsol vid navigering på startsidor:
-      1. Välj startsida med [markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md).
+      1. Välj startsida med [markeringsläge](/help/sites-cloud/authoring/basic-handling.md).
       1. The **Befordra** finns i verktygsfältet.
    * The **Startar** konsol:
       1. Välj start (välj miniatyrbild).
@@ -122,7 +122,7 @@ När du har skapat en kapslad programstart kan du befordra den tillbaka till nå
 
    ![Startar konsolen](/help/sites-cloud/authoring/assets/launches-console.png)
 
-## Bearbeta befordrade sidor med AEM Workflow {#processing-promoted-pages-using-aem-workflow}
+## Bearbeta befordrade sidor med AEM arbetsflöde {#processing-promoted-pages-using-aem-workflow}
 
 Använd arbetsflödesmodeller för att utföra massbearbetning av befordrade startsidor:
 

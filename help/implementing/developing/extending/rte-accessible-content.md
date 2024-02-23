@@ -3,10 +3,10 @@ title: Konfigurera RTE för att skapa tillgängliga webbsidor och webbplatser.
 description: Lär dig konfigurera RTF-redigeraren för att skapa tillgängliga webbplatser i [!DNL Adobe Experience Manager].
 contentOwner: AG
 exl-id: 54050fc9-0348-4033-8e2b-b3897588cb62
-source-git-commit: e9c1ec6807f86ab00f89ef292a89a0c8efdf802b
+source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 1%
+source-wordcount: '509'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +26,7 @@ För `Text` komponent i [!DNL Experience Manager]visas textredigeraren med ett s
 
 ## Konfigurera plug-in-funktionerna {#configuring-the-plugin-features}
 
-Anvisningar om hur du konfigurerar RTE finns i [konfigurera RTF-redigeraren](rich-text-editor.md) sida. Artikeln omfattar
+Anvisningar om hur du konfigurerar RTE finns i [konfigurera RTF-redigeraren](rich-text-editor.md) sida. Artikeln omfattar:
 
 * [Plugin-program och deras funktioner](rich-text-editor.md#aboutplugins)
 * [Konfigurationsplatser](rich-text-editor.md#understand-the-configuration-paths-and-locations)
@@ -46,11 +46,11 @@ Nya semantiska blockformat är tillgängliga för markering.
 1. [Ange de format som du vill ha i styckemarkeringsfältet](rich-text-editor.md).
 1. Styckeformaten är sedan tillgängliga för innehållsförfattaren från markeringsfälten i textredigeraren.
 
-Med strukturella element tillgängliga i textredigeraren via styckeformatalternativen, [!DNL Experience Manager] utgör en bra grund för utveckling av tillgängligt innehåll. Innehållsförfattare kan inte använda textredigeraren för att formatera teckenstorlek, färger eller andra relaterade attribut, vilket förhindrar att textbunden formatering skapas. I stället kan författarna välja lämpliga strukturella element, t.ex. rubriker, och använda globala format som valts med alternativet Format för att säkerställa ren markering och fler alternativ för användare som bläddrar med egna formatmallar och korrekt strukturerat innehåll.
+Med strukturella element tillgängliga i textredigeraren via styckeformatalternativen, [!DNL Experience Manager] utgör en bra grund för utveckling av hjälpmedelsanpassat innehåll. Innehållsförfattare kan inte använda textredigeraren för att formatera teckenstorlek, färger eller andra relaterade attribut, vilket förhindrar att textbunden formatering skapas. I stället kan författarna välja lämpliga strukturella element, t.ex. rubriker, och använda globala format som valts med alternativet Format för att säkerställa ren markering och fler alternativ för användare som bläddrar med egna formatmallar och korrekt strukturerat innehåll.
 
-## Användning av funktionen Källredigering {#use-of-the-source-edit-feature}
+## Användning av funktionen för källredigering {#use-of-the-source-edit-feature}
 
-I vissa fall måste innehållsförfattare granska och justera HTML källkoden som skapats med RTE. En del innehåll som skapats i en textredigerare kan till exempel kräva mer kod för att säkerställa överensstämmelse med WCAG 2.0. Detta kan du göra med [källredigering](rich-text-editor.md#aboutplugins) RTE-alternativ. Du kan ange [`sourceedit` på `misctools` plugin-program](rich-text-editor.md#aboutplugins).
+I vissa fall måste innehållsförfattare granska och justera HTML källkoden som skapats med RTE. En del innehåll som skapats i en textredigerare kan till exempel kräva mer kod för att säkerställa överensstämmelse med WCAG 2.0. Detta kan du göra med [källredigering](rich-text-editor.md#aboutplugins) RTE-alternativ. Du kan ange [`sourceedit` funktionen på `misctools` plugin-program](rich-text-editor.md#aboutplugins).
 
 >[!CAUTION]
 >
@@ -148,5 +148,4 @@ In a `Table`, set the attribute to the DOM element or or remove it from the DOM 
 >[!MORELIKETHIS]
 >
 >* [En snabbguide till WCAG-standarder](/help/compliance/accessibility/quick-guide-wcag.md)
->* [Skapa tillgängligt innehåll i Experience Manager](/help/sites-cloud/authoring/fundamentals/accessible-content.md)
-
+>* [Skapa tillgängligt innehåll i Experience Manager](/help/sites-cloud/authoring/page-editor/accessible-content.md)

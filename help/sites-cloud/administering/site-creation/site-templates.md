@@ -4,9 +4,9 @@ description: Lär dig hur AEM webbplatsmallar kan användas för att fördefinie
 feature: Administering
 role: Admin
 exl-id: 42eec922-b02e-4f2c-8107-7336192919c7
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Lär dig hur AEM webbplatsmallar kan användas för att fördefiniera webbplatsstrukturen och det ursprungliga innehållet så att du snabbt kan skapa webbplatser.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Det är bekvämt att ha fördefinierade strukturer tillgängliga för att snabbt kunna driftsätta en ny webbplats baserat på en uppsättning befintliga standarder. Webbplatsmallar är ett sätt att kombinera grundläggande webbplatsinnehåll i ett bekvämt och återanvändbart paket.
 
@@ -25,7 +25,7 @@ Mallarna är kraftfulla eftersom de kan återanvändas och anpassas. Och efterso
 
 >[!NOTE]
 >
->AEM webbplatsmallar ska inte blandas ihop med [sidmallar](/help/sites-cloud/authoring/features/templates.md). Platsmallar definierar den övergripande strukturen för en plats. En sidmall definierar strukturen och det ursprungliga innehållet för en enskild sida.
+>AEM webbplatsmallar ska inte blandas ihop med [sidmallar](/help/sites-cloud/authoring/sites-console/templates.md). Platsmallar definierar den övergripande strukturen för en plats. En sidmall definierar strukturen och det ursprungliga innehållet för en enskild sida.
 >
 >AEM webbplatsmallar ska inte blandas ihop med [AEM teman](site-themes.md). AEM webbplatsteman innehåller bara formatinformation för en AEM. AEM webbplatsmallar definierar webbplatsens struktur och innehåll samt innehåller ett AEM webbplatstema för [skapa webbplatser snabbt](create-site.md).
 

@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 34ba430ae9b40fc3bc675af20bbee2534c44a0c3
+source-git-commit: 3896dd657acdfc9feca1d3f624512dc23da084d4
 workflow-type: tm+mt
-source-wordcount: '4692'
+source-wordcount: '4713'
 ht-degree: 3%
 
 ---
@@ -264,42 +264,50 @@ ht-degree: 3%
 + Sites {#sites}
    + [Betydande förändringar av AEM Sites i AEM Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
    + Redigering {#authoring}
-      + Komma igång {#getting-started}
-         + [Snabbstartsguide till framtagning av sidor](/help/sites-cloud/authoring/getting-started/quick-start.md)
-         + [Authoring Concepts](/help/sites-cloud/authoring/getting-started/concepts.md)
-         + [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md)
-         + [Sök](/help/sites-cloud/authoring/getting-started/search.md)
-         + [Konfigurerar din kontomiljö](/help/sites-cloud/authoring/getting-started/account-environment.md)
-         + [Din inkorg](/help/sites-cloud/authoring/getting-started/inbox.md)
-         + [Kortkommandon](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md)
-      + [Headless Content Author Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/author/overview.html)
-      + Grundläggande om redigering {#fundamentals}
-         + [Miljö och verktyg](/help/sites-cloud/authoring/fundamentals/environment-tools.md)
-         + [Lägga till sidanteckningar](/help/sites-cloud/authoring/fundamentals/annotations.md)
-         + [Skapa en ny plats](/help/sites-cloud/authoring/fundamentals/create-site.md)
-         + [Skapa och ordna sidor](/help/sites-cloud/authoring/fundamentals/organizing-pages.md)
-         + [Redigera sidinnehåll](/help/sites-cloud/authoring/fundamentals/editing-content.md)
-         + [RTF-redigeraren](/help/sites-cloud/authoring/fundamentals/rich-text-editor.md)
-         + [Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md)
-         + [Förhandsgranska innehåll](/help/sites-cloud/authoring/fundamentals/previewing-content.md)
-         + [Publicera sidor](/help/sites-cloud/authoring/fundamentals/publishing-pages.md)
-         + [Innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md)
-         + [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md)
-         + [Exportera till CSV](/help/sites-cloud/authoring/fundamentals/csv-export.md)
-         + [Komponenter](/help/sites-cloud/authoring/fundamentals/components.md)
-         + [Skapa för mobila enheter](/help/sites-cloud/authoring/fundamentals/mobile.md)
-         + [Skapa hjälpmedelsanpassat innehåll (WCAG 2.1-överensstämmelse)](/help/sites-cloud/authoring/fundamentals/accessible-content.md)
-         + [Felsökning](/help/sites-cloud/authoring/fundamentals/troubleshooting.md)
-         + [Kortkommandon](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md)
-      + Redigeringsfunktioner {#features}
-         + [Sidmallar](/help/sites-cloud/authoring/features/templates.md)
-         + [Formatsystem](/help/sites-cloud/authoring/features/style-system.md)
-         + [Sidversioner](/help/sites-cloud/authoring/features/page-versions.md)
-         + [Sidskillnader](/help/sites-cloud/authoring/features/page-diff.md)
-         + [Komponentkonsol](/help/sites-cloud/authoring/features/components-console.md)
-         + [Responsiv layout](/help/sites-cloud/authoring/features/responsive-layout.md)
-         + [Använda taggar](/help/sites-cloud/authoring/features/tags.md)
-         + [Aktivera progressiva webbprogramfunktioner](/help/sites-cloud/authoring/features/enable-pwa.md)
+      + [Snabbstartsguide till framtagning av sidor](/help/sites-cloud/authoring/quick-start.md)
+      + [Grundläggande hantering](/help/sites-cloud/authoring/basic-handling.md)
+      + [Redigering och publicering](/help/sites-cloud/authoring/author-publish.md)
+      + [Redigeringsmetoder](/help/sites-cloud/authoring/authoring-methods.md)
+      + [Sök](/help/sites-cloud/authoring/search.md)
+      + [Konfigurerar din kontomiljö](/help/sites-cloud/authoring/account-environment.md)
+      + [Din inkorg](/help/sites-cloud/authoring/inbox.md)
+      + [Komponentkonsol](/help/sites-cloud/authoring/components-console.md)
+      + [Banmarkering](/help/sites-cloud/authoring/path-selection.md)
+      + [Felsökning](/help/sites-cloud/authoring/troubleshooting.md)
+      + Webbplatskonsol {#sites-console}
+         + [Webbplatskonsolen](/help/sites-cloud/authoring/sites-console/introduction.md)
+         + [Panelen Konsolsida](/help/sites-cloud/authoring/sites-console/console-side-panel.md)
+         + [Skapa en ny plats](/help/sites-cloud/authoring/sites-console/create-site.md)
+         + [Ordna sidor](/help/sites-cloud/authoring/sites-console/organizing-pages.md)
+         + [Skapa sidor](/help/sites-cloud/authoring/sites-console/creating-pages.md)
+         + [Hantera sidor](/help/sites-cloud/authoring/sites-console/managing-pages.md)
+         + [Sidegenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md)
+         + [Förhandsgranska sidor](/help/sites-cloud/authoring/sites-console/previewing-content.md)
+         + [Publicera sidor](/help/sites-cloud/authoring/sites-console/publishing-pages.md)
+         + [Sidmallar](/help/sites-cloud/authoring/sites-console/templates.md)
+         + [Sidversioner](/help/sites-cloud/authoring/sites-console/page-versions.md)
+         + [Sidskillnader](/help/sites-cloud/authoring/sites-console/page-diff.md)
+         + [Använda taggar](/help/sites-cloud/authoring/sites-console/tags.md)
+         + [Aktivera progressiva webbprogramfunktioner](/help/sites-cloud/authoring/sites-console/enable-pwa.md)
+         + [Kortkommandon](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md)
+         + [Exportera till CSV](/help/sites-cloud/authoring/sites-console/csv-export.md)
+      + Page Editor {#page-editor}
+         + [Sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md)
+         + [Panelen Redigeraren](/help/sites-cloud/authoring/page-editor/editor-side-panel.md)
+         + [Redigera sidor](/help/sites-cloud/authoring/page-editor/edit-content.md)
+         + [Lägga till sidanteckningar](/help/sites-cloud/authoring/page-editor/annotations.md)
+         + [RTF-redigeraren](/help/sites-cloud/authoring/page-editor/rich-text-editor.md)
+         + [Responsiv layout](/help/sites-cloud/authoring/page-editor/responsive-layout.md)
+         + [Komponenter](/help/sites-cloud/authoring/page-editor/components.md)
+         + [Skapa för mobila enheter](/help/sites-cloud/authoring/page-editor/mobile.md)
+         + [Skapa hjälpmedelsanpassat innehåll (WCAG 2.1-överensstämmelse)](/help/sites-cloud/authoring/page-editor/accessible-content.md)
+         + [Kortkommandon](/help/sites-cloud/authoring/page-editor/keyboard-shortcuts.md)
+         + [Formatsystem](/help/sites-cloud/authoring/page-editor/style-system.md)
+         + [Ångra Gör om begränsningar](/help/sites-cloud/authoring/page-editor/undo-redo.md)
+      + Fragment {#fragments}
+         + [Innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md)
+         + [Upplevelsefragment](/help/sites-cloud/authoring/fragments/experience-fragments.md)
+         + [Headless Content Author Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/author/overview.html)
       + Projekt {#projects}
          + [Arbeta med projekt](/help/sites-cloud/authoring/projects/overview.md)
          + [Hantera projekt](/help/sites-cloud/authoring/projects/managing.md)
@@ -345,6 +353,7 @@ ht-degree: 3%
          + [Aktivera frontpipeline](/help/sites-cloud/administering/site-creation/enable-front-end-pipeline.md)
          + [Använda webbplatsens tåg](/help/sites-cloud/administering/site-creation/site-rail.md)
          + [Webbplatsmallar](/help/sites-cloud/administering/site-creation/site-templates.md)
+         + [Responsiv layout](/help/sites-cloud/administering/responsive-layout.md)
          + [Webbplatsteman](/help/sites-cloud/administering/site-creation/site-themes.md)
          + AEM för att skapa webbplatser snabbt {#quick-site}
             + [Förstå AEM snabbskapande av webbplatser](/help/journey-sites/quick-site/overview.md)
@@ -998,6 +1007,7 @@ ht-degree: 3%
          + [Sidskillnader](/help/implementing/developing/introduction/page-diff.md)
          + [Begränsningar för redigerare](/help/implementing/developing/introduction/editor-limitations.md)
          + [Namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md)
+         + [Responsiv design](/help/implementing/developing/introduction/responsive-design.md)
          + Komponenter och mallar {#components-templates}
             + [Komponenter - översikt](/help/implementing/developing/components/overview.md)
             + [Mallar](/help/implementing/developing/components/templates.md)

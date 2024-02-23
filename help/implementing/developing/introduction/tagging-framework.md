@@ -2,7 +2,7 @@
 title: AEM Taggningsramverk
 description: Tagga innehåll och använd infrastrukturen för AEM taggar för att kategorisera och organisera det.
 exl-id: 25418d44-aace-4e73-be1a-4b1902f40403
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
 workflow-type: tm+mt
 source-wordcount: '1562'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Taggning gör att innehållet kan kategoriseras och struktureras. Taggar kan klassificeras med ett namnutrymme och en taxonomi. Mer information om hur du använder taggar:
 
-* Se [Använda taggar](/help/sites-cloud/authoring/features/tags.md) om du vill ha information om hur du taggar innehåll som innehållsförfattare.
+* Se [Använda taggar](/help/sites-cloud/authoring/sites-console/tags.md) om du vill ha information om hur du taggar innehåll som innehållsförfattare.
 * Se Administrera taggar för administratörens perspektiv om hur du skapar och hanterar taggar, och i vilka innehållstaggar har tillämpats.
 
 Den här artikeln fokuserar på det underliggande ramverket som stöder taggning i AEM och hur det används som utvecklare.

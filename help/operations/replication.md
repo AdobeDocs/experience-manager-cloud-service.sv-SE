@@ -2,7 +2,7 @@
 title: Replikering
 description: Lär dig mer om distribution och felsökning av replikering på AEM as a Cloud Service.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: 3249f17e6ecb341880597577e1f2a48653a7a88a
+source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
 workflow-type: tm+mt
 source-wordcount: '1312'
 ht-degree: 0%
@@ -31,11 +31,11 @@ Adobe Experience Manager as a Cloud Service använder [Distribution av säljinne
 
 Med den här funktionen kan du publicera de valda sidorna direkt, utan de ytterligare alternativ som är möjliga via Hantera publikation.
 
-Mer information finns i [Hantera publikation](/help/sites-cloud/authoring/fundamentals/publishing-pages.md#manage-publication).
+Mer information finns i [Hantera publikation](/help/sites-cloud/authoring/sites-console/publishing-pages.md#manage-publication).
 
 ### På- och avaktiveringstider - utlösarkonfiguration {#on-and-off-times-trigger-configuration}
 
-Ytterligare möjligheter för **I tid** och **Fråntid** är tillgängliga från [Fliken Grundläggande i Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md#basic).
+Ytterligare möjligheter för **I tid** och **Fråntid** är tillgängliga från [Fliken Grundläggande i Sidegenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md#basic).
 
 Aktivera om du vill genomföra den automatiska replikeringen för den här funktionen **Automatisk replikering** i [OSGi-konfiguration](/help/implementing/deploying/configuring-osgi.md) **Konfiguration av utlösare vid avstängning**:
 
@@ -47,7 +47,7 @@ Med Hantera publikation får du fler alternativ än Snabbpublicering, så att du
 
 Om du tar med en mapps underordnade objekt för alternativet Publicera senare, anropas arbetsflödet Publicera innehållsträd, som beskrivs i den här artikeln.
 
-Mer information om Hantera publikation finns i [Dokumentation för Publishing Fundamentals](/help/sites-cloud/authoring/fundamentals/publishing-pages.md#manage-publication).
+Mer information om Hantera publikation finns i [Dokumentation för Publishing Fundamentals](/help/sites-cloud/authoring/sites-console/publishing-pages.md#manage-publication).
 
 ### Publicera arbetsflöde för innehållsträd {#publish-content-tree-workflow}
 

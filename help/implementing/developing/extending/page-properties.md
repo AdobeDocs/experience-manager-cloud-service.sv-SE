@@ -2,16 +2,16 @@
 title: Anpassa vyer av Sidegenskaper
 description: Lär dig hur du visar och redigerar sidegenskaper av författare.
 exl-id: 363b3c2d-f965-485f-bdae-2ea5b4cecb83
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: d2352e66b380f5a3654e2fc99ce4204b32066683
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '352'
 ht-degree: 0%
 
 ---
 
 # Anpassa vyer av Sidegenskaper{#customizing-views-of-page-properties}
 
-Varje sida har en uppsättning [egenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md) som kan visas och redigeras av användare. En del krävs när du skapar sidan (skapar vy), andra kan visas och redigeras (redigeringsvy) i ett senare skede. Dessa sidegenskaper definieras och görs tillgängliga i dialogrutan (`cq:dialog`) för rätt sidkomponent.
+Varje sida har en uppsättning [egenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md) som kan visas och redigeras av användare. En del krävs när du skapar sidan (skapar vy), andra kan visas och redigeras (redigeringsvy) i ett senare skede. Dessa sidegenskaper definieras och görs tillgängliga i dialogrutan (`cq:dialog`) för rätt sidkomponent.
 
 Standardläget för varje sidegenskap är:
 
@@ -39,7 +39,7 @@ Fälten måste vara specifikt konfigurerade om någon ändring krävs. Detta gö
 
 Du kan också konfigurera fälten som är tillgängliga genom att konfigurera dialogrutan för sidkomponenten och använda lämpliga nodegenskaper.
 
-Som standard är [**Skapa sida** guide](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#creating-a-new-page) visar fält grupperade under **Fler rubriker och beskrivning**. Så här döljer du dessa konfigurationer:
+Som standard är [**Skapa sida** guide](/help/sites-cloud/authoring/sites-console/creating-pages.md#creating-a-new-page) visar fält grupperade under **Fler rubriker och beskrivning**. Så här döljer du dessa konfigurationer:
 
 1. Skapa sidkomponenten under `/apps`.
 1. Skapa en åsidosättning (med *dialogruta* tillhandahålls av [Samla resurser](/help/implementing/developing/introduction/sling-resource-merger.md)) för `basic` del av sidkomponenten, till exempel:

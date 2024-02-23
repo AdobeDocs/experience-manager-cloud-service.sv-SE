@@ -2,7 +2,7 @@
 title: Delta i arbetsflöden
 description: Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en aktivitet på en sida eller en resurs.
 exl-id: 62192da9-0b5b-4997-9c2b-d1aee04b01f9
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 1a4c5e618adaef99d82a00e1118d1a0f8536fc14
 workflow-type: tm+mt
 source-wordcount: '1507'
 ht-degree: 1%
@@ -24,11 +24,11 @@ Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en akti
 
 När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas olika varningar och/eller meddelanden:
 
-* Dina [meddelande](/help/sites-cloud/authoring/getting-started/inbox.md) indikatorn (verktygsfältet) ökas:
+* Dina [meddelande](/help/sites-cloud/authoring/inbox.md) indikatorn (verktygsfältet) ökas:
 
   ![Verktygsfältet Meddelande](/help/sites-cloud/authoring/assets/workflows-notifications.png)
 
-* Objektet visas i meddelandet [Inkorg](/help/sites-cloud/authoring/getting-started/inbox.md):
+* Objektet visas i meddelandet [Inkorg](/help/sites-cloud/authoring/inbox.md):
 
   ![Meddelanden i inkorgen](/help/sites-cloud/authoring/assets/workflows-inbox.png)
 
@@ -72,7 +72,7 @@ Du kan slutföra ett deltagarsteg från:
 
 Gör så här för att slutföra arbetsuppgiften:
 
-1. Öppna **[AEM](/help/sites-cloud/authoring/getting-started/inbox.md)**.
+1. Öppna **[AEM](/help/sites-cloud/authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill arbeta med (markera miniatyrbilden).
 1. Välj **Complete** i verktygsfältet.
 1. The **Slutför arbetsuppgift** öppnas. Välj **Nästa steg** i listrutan och lägg till en **Kommentar** vid behov.
@@ -82,7 +82,7 @@ Gör så här för att slutföra arbetsuppgiften:
 
 Gör så här för att slutföra arbetsuppgiften:
 
-1. Öppna [sida för redigering](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#opening-a-page-for-editing).
+1. Öppna [sida för redigering](/help/sites-cloud/authoring/sites-console/managing-pages.md#opening-a-page-for-editing).
 1. Välj **Complete** i statusfältet högst upp.
 1. The **Slutför arbetsuppgift** öppnas. Välj **Nästa steg** i listrutan och lägg till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
@@ -131,7 +131,7 @@ Du kan delegera ett deltagarsteg från antingen:
 
 Använd följande procedur för att delegera en arbetsuppgift:
 
-1. Öppna **[AEM](/help/sites-cloud/authoring/getting-started/inbox.md)**.
+1. Öppna **[AEM](/help/sites-cloud/authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill arbeta med (markera miniatyrbilden).
 1. Välj **Delegera** i verktygsfältet.
 1. Dialogrutan öppnas. Ange **Användare** i den nedrullningsbara väljaren (detta kan också vara en grupp) och lägga till en **Kommentar** vid behov.
@@ -141,7 +141,7 @@ Använd följande procedur för att delegera en arbetsuppgift:
 
 Använd följande procedur för att delegera en arbetsuppgift:
 
-1. Öppna [sida för redigering](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#opening-a-page-for-editing).
+1. Öppna [sida för redigering](/help/sites-cloud/authoring/sites-console/managing-pages.md#opening-a-page-for-editing).
 1. Välj **Delegera** i statusfältet högst upp.
 1. Dialogrutan öppnas. Ange **Användare** i den nedrullningsbara väljaren (detta kan också vara en grupp) och lägga till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
@@ -181,7 +181,7 @@ Du kan utföra steg tillbaka för ett deltagarsteg från antingen:
 
 Använd följande procedur för att stega bakåt:
 
-1. Öppna **[AEM](/help/sites-cloud/authoring/getting-started/inbox.md)**.
+1. Öppna **[AEM](/help/sites-cloud/authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill arbeta med (markera miniatyrbilden).
 1. Välj **Gå bakåt** för att öppna dialogrutan.
 1. Ange **Tidigare steg** och lägga till en **Kommentar** vid behov.
@@ -191,7 +191,7 @@ Använd följande procedur för att stega bakåt:
 
 Använd följande procedur för att stega bakåt:
 
-1. Öppna [sida för redigering](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#opening-a-page-for-editing).
+1. Öppna [sida för redigering](/help/sites-cloud/authoring/sites-console/managing-pages.md#opening-a-page-for-editing).
 1. Välj **Gå bakåt** i statusfältet högst upp.
 1. Ange **Tidigare steg** och lägga till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
@@ -242,7 +242,7 @@ Du kan öppna information om arbetsobjekt från:
 
 Så här öppnar du ett arbetsflödesobjekt och visar information:
 
-1. Öppna **[AEM](/help/sites-cloud/authoring/getting-started/inbox.md)**.
+1. Öppna **[AEM](/help/sites-cloud/authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill arbeta med (markera miniatyrbilden).
 1. Välj **Öppna** för att öppna informationsflikarna.
 1. Välj vid behov lämplig åtgärd, ange eventuella detaljer och bekräfta med **OK** (eller **Avbryt**).
@@ -252,7 +252,7 @@ Så här öppnar du ett arbetsflödesobjekt och visar information:
 
 Så här öppnar du ett arbetsflödesobjekt och visar information:
 
-1. Öppna [sida för redigering](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#opening-a-page-for-editing).
+1. Öppna [sida för redigering](/help/sites-cloud/authoring/sites-console/managing-pages.md#opening-a-page-for-editing).
 1. Välj **Visa detaljer** i statusfältet för att öppna informationsflikarna.
 1. Välj vid behov lämplig åtgärd, ange eventuella detaljer och bekräfta med **OK** (eller **Avbryt**).
 1. Använd **Spara** eller **Avbryt** för att avsluta.
@@ -263,7 +263,7 @@ Du kan visa information om nyttolasten som är kopplad till arbetsflödesinstans
 
 Så här visar du arbetsflödesinstansens nyttolast och resurser:
 
-1. Öppna **[AEM](/help/sites-cloud/authoring/getting-started/inbox.md)**.
+1. Öppna **[AEM](/help/sites-cloud/authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill arbeta med (markera miniatyrbilden).
 1. Välj **Visa nyttolast** i verktygsfältet för att öppna dialogrutan.
    * Eftersom ett arbetsflödespaket är en samling pekare till sökvägar i databasen, kan du lägga till/ta bort/ändra posterna här för att justera vad som refereras av arbetsflödespaketet. Använd **Resursdefinition** för att lägga till nya poster.

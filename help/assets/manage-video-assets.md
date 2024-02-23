@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Management,Publishing,Collaboration,Video
 role: User
 exl-id: 91edce4a-dfa0-4eca-aba7-d41ac907b81e
-source-git-commit: 4b05e8f8ae554e7c0881134ef24ca8ce35e3e2bf
+source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
 workflow-type: tm+mt
 source-wordcount: '4636'
 ht-degree: 5%
@@ -197,7 +197,7 @@ Du måste ha en eller flera kanaler för att kunna publicera videofilmer på You
 
 ### Lägga till taggar för publicering {#adding-tags-for-publishing}
 
-Om du vill publicera till dina videofilmer på YouTube associerar Experience Manager taggar till en eller flera YouTube-kanaler. Information om hur du lägger till taggar för publicering finns i [Administrera taggar](/help/sites-cloud/authoring/features/tags.md).
+Om du vill publicera till dina videofilmer på YouTube associerar Experience Manager taggar till en eller flera YouTube-kanaler. Information om hur du lägger till taggar för publicering finns i [Administrera taggar](/help/sites-cloud/authoring/sites-console/tags.md).
 
 Om du tänker använda standardtaggarna i Experience Manager kan du hoppa över den här uppgiften och gå till [Konfigurera YouTube i Experience Manager](#setting-up-youtube-in-aem).
 
@@ -390,11 +390,11 @@ Nu kopplar du taggarna som du lade till tidigare till videoresurser. På så sä
 
 >[!NOTE]
 >
-Experience Manager använder **[!UICONTROL Publish to YouTube]** arbetsflöde, som gör att du kan övervaka förloppet och visa felinformation.
+>Experience Manager använder **[!UICONTROL Publish to YouTube]** arbetsflöde, som gör att du kan övervaka förloppet och visa felinformation.
 >
-Se [Övervaka videokodning och YouTube publiceringsförlopp](#monitoring-video-encoding-and-youtube-publishing-progress).
+>Se [Övervaka videokodning och YouTube publiceringsförlopp](#monitoring-video-encoding-and-youtube-publishing-progress).
 >
-Mer detaljerad förloppsinformation finns i YouTube-loggen som replikeras. Tänk dock på att sådan övervakning kräver administratörsåtkomst.
+>Mer detaljerad förloppsinformation finns i YouTube-loggen som replikeras. Tänk dock på att sådan övervakning kräver administratörsåtkomst.
 
 **Så här publicerar du videor i din YouTube-kanal:**
 
@@ -430,7 +430,7 @@ Du kan hämta en YouTube URL-sträng som genereras av Dynamic Media när du har 
 
 >[!NOTE]
 >
-YouTube-URL:en kan inte kopieras förrän du har publicerat videoresursen till YouTube.
+>YouTube-URL:en kan inte kopieras förrän du har publicerat videoresursen till YouTube.
 
 Så här länkar du YouTube URL:er till ditt webbprogram:
 
@@ -448,13 +448,13 @@ När du avpublicerar en videoresurs i Experience Manager tas videon bort från Y
 
 >[!CAUTION]
 >
-Om du tar bort en video direkt från YouTube är Experience Manager inte medveten om det och fortsätter att bete sig som om videon fortfarande publiceras till YouTube. Avpublicera alltid en videoresurs från YouTube via Experience Manager.
+>Om du tar bort en video direkt från YouTube är Experience Manager inte medveten om det och fortsätter att bete sig som om videon fortfarande publiceras till YouTube. Avpublicera alltid en videoresurs från YouTube via Experience Manager.
 
 >[!NOTE]
 >
-Experience Manager använder **[!UICONTROL Unpublish from YouTube]** arbetsflöde, som gör att du kan övervaka förloppet och visa felinformation.
+>Experience Manager använder **[!UICONTROL Unpublish from YouTube]** arbetsflöde, som gör att du kan övervaka förloppet och visa felinformation.
 >
-Se [Övervaka videokodning och YouTube publiceringsförlopp](#monitoring-video-encoding-and-youtube-publishing-progress).
+>Se [Övervaka videokodning och YouTube publiceringsförlopp](#monitoring-video-encoding-and-youtube-publishing-progress).
 
 **Så här avpublicerar du videoklipp för att ta bort dem från YouTube:**
 
@@ -495,19 +495,19 @@ Du kan övervaka förloppet, inklusive misslyckad kodning/YouTube-publicering.
 
    >[!NOTE]
    >
-   Det kan ta lång tid innan felmeddelanden/felmeddelanden slutligen registreras på grund av flera arbetsflödeskonfigurationer på **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** från [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr), till exempel:
+   >Det kan ta lång tid innan felmeddelanden/felmeddelanden slutligen registreras på grund av flera arbetsflödeskonfigurationer på **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** från [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr), till exempel:
    >
-   * Konfiguration av Apache Sling-jobbkö
-   * Adobe Granite Workflow External Process Job Handler
-   * Timeoutkö för Granite-arbetsflöde
+   >* Konfiguration av Apache Sling-jobbkö
+   >* Adobe Granite Workflow External Process Job Handler
+   >* Timeoutkö för Granite-arbetsflöde
    >
-   Du kan justera **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** egenskaper i dessa konfigurationer.
+   >Du kan justera **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** egenskaper i dessa konfigurationer.
 
 1. Information om pågående arbetsflöden finns i Arbetsflödesinstanser som är tillgängliga i **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Instances]**.
 
    >[!NOTE]
    >
-   Du behöver administratörsbehörighet för att få åtkomst till **[!UICONTROL Tools]** -menyn.
+   >Du behöver administratörsbehörighet för att få åtkomst till **[!UICONTROL Tools]** -menyn.
 
    ![chlimage_1-433](/help/assets/dynamic-media/assets/chlimage_1-433.png)
 
@@ -521,25 +521,25 @@ Du kan övervaka förloppet, inklusive misslyckad kodning/YouTube-publicering.
 
    >[!NOTE]
    >
-   Du behöver administratörsbehörighet för att få åtkomst till **[!UICONTROL Tools]** -menyn.
+   >Du behöver administratörsbehörighet för att få åtkomst till **[!UICONTROL Tools]** -menyn.
 
    ![chlimage_1-435](/help/assets/dynamic-media/assets/chlimage_1-435.png)
 
    >[!NOTE]
    >
-   Det kan ta lång tid innan felmeddelandet slutligen spelas in på grund av flera arbetsflödeskonfigurationer på **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** från [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr), till exempel:
+   >Det kan ta lång tid innan felmeddelandet slutligen spelas in på grund av flera arbetsflödeskonfigurationer på **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** från [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr), till exempel:
    >
-   * Konfiguration av Apache Sling-jobbkö
-   * Adobe Granite Workflow External Process Job Handler
-   * Timeoutkö för Granite-arbetsflöde
+   >* Konfiguration av Apache Sling-jobbkö
+   >* Adobe Granite Workflow External Process Job Handler
+   >* Timeoutkö för Granite-arbetsflöde
    >
-   Du kan justera **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** egenskaper i dessa konfigurationer.
+   >Du kan justera **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** egenskaper i dessa konfigurationer.
 
 1. Information om slutförda arbetsflöden finns i Arbetsflödesarkiv som är tillgängligt från **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Archive]**. **[!UICONTROL Workflow Archive]** visar alla slutförda arbetsflödesaktiviteter.
 
    >[!NOTE]
    >
-   Du behöver administratörsbehörighet för att få åtkomst till **[!UICONTROL Tools]** -menyn.
+   >Du behöver administratörsbehörighet för att få åtkomst till **[!UICONTROL Tools]** -menyn.
 
    ![chlimage_1-436](/help/assets/dynamic-media/assets/chlimage_1-436.png)
 
@@ -609,7 +609,7 @@ Du kan lägga till anteckningar i videoresurser. När du kommenterar videoklipp 
 
 >[!NOTE]
 >
-MXF-videoformatet stöds ännu inte med videoresursanteckningar.
+>MXF-videoformatet stöds ännu inte med videoresursanteckningar.
 
 1. Från [!DNL Assets] konsol, välj **[!UICONTROL Edit]** på tillgångskortet för att visa sidan med tillgångsinformation.
 1. Om du vill spela upp videon klickar du på **[!UICONTROL Preview]**.
@@ -649,5 +649,5 @@ MXF-videoformatet stöds ännu inte med videoresursanteckningar.
 
 >[!MORELIKETHIS]
 >
-* [Dynamic Media videodokumentation](/help/assets/dynamic-media/video.md).
-* [Läs mer om användning, typer och konfiguration av bearbetningsprofiler](/help/assets/asset-microservices-configure-and-use.md).
+>* [Dynamic Media videodokumentation](/help/assets/dynamic-media/video.md).
+>* [Läs mer om användning, typer och konfiguration av bearbetningsprofiler](/help/assets/asset-microservices-configure-and-use.md).

@@ -2,10 +2,10 @@
 title: Läs om hur du definierar metadata och taggar för innehållsfragment
 description: Läs om hur du definierar metadata och taggar för innehållsfragment
 exl-id: daa5b284-8264-48c3-826c-7909cff4d1a0
-source-git-commit: d6b98559e7cbe5fc5bd05d9cf37225e960e668e7
+source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
 workflow-type: tm+mt
 source-wordcount: '191'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
@@ -36,8 +36,8 @@ Nu kan du använda och börja skapa innehållsfragment för ditt projekt.
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Metadata – fragmentegenskaper](/help/sites-cloud/administering/content-fragments/authoring.md#view-properties-tags)
+* [Metadata - Fragmentegenskaper](/help/sites-cloud/administering/content-fragments/authoring.md#view-properties-tags)
 
-* [Använda taggar](/help/sites-cloud/authoring/features/tags.md)
+* [Använda taggar](/help/sites-cloud/authoring/sites-console/tags.md)
 
 * [Modeller för innehållsfragment - Tillåt modeller för innehållsfragment i resursmappen](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#allowing-content-fragment-models-assets-folder)

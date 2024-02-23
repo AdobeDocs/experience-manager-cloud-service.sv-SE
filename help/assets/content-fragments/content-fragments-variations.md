@@ -2,7 +2,7 @@
 title: Variationer - innehåll i redigeringsfragment (resurser - innehållsfragment)
 description: Förstå hur varianter av innehållsfragment gör att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte, vilket ökar flexibiliteten.
 exl-id: af05aae6-d535-4007-ba81-7f41213ff152
-source-git-commit: 62ede258711d0cb8d0b72479559c37221509e23f
+source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
 workflow-type: tm+mt
 source-wordcount: '2474'
 ht-degree: 4%
@@ -64,7 +64,7 @@ Du kan:
 
 * Tilldela **Taggar** till den aktuella varianten. Du kan lägga till, uppdatera och ta bort taggarna.
 
-   * [Taggar](/help/sites-cloud/authoring/features/tags.md) är kraftfulla när du organiserar dina fragment eftersom de kan användas för innehållsklassificering och taxonomi. Taggar kan användas för att söka efter innehåll (efter taggar) och tillämpa gruppåtgärder.
+   * [Taggar](/help/sites-cloud/authoring/sites-console/tags.md) är kraftfulla när du organiserar dina fragment eftersom de kan användas för innehållsklassificering och taxonomi. Taggar kan användas för att söka efter innehåll (efter taggar) och tillämpa gruppåtgärder.
 
       * Sökningar efter en tagg returnerar fragmentet, med taggvariationen markerad.
       * Variationstaggar kan också användas för att gruppera variationer för en viss CDN-profil (Content Delivery Network) (för CDN-cache) i stället för att använda variantnamnet.
@@ -242,14 +242,14 @@ Att sammanfatta text är utformat för att hjälpa användare att minska längde
 
 >[!CAUTION]
 >
-Engelska finns i körklart skick.
+>Engelska finns i körklart skick.
 >
-Andra språk är tillgängliga som språkmodellpaket från programvarudistribution:
+>Andra språk är tillgängliga som språkmodellpaket från programvarudistribution:
 >
-* [Franska (fr)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
-* [German (de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
-* [Italienska (it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
-* [Spanska (es)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+>* [Franska (fr)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
+>* [German (de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
+>* [Italienska (it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
+>* [Spanska (es)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
 >
 
 1. Välj **Master** eller den variation som krävs.
@@ -318,7 +318,7 @@ Anteckningar:
 
   >[!NOTE]
   >
-  En nedrullningsbar väljare tillhandahålls om flera anteckningar har tillämpats på ett textstycke.
+  >En nedrullningsbar väljare tillhandahålls om flera anteckningar har tillämpats på ett textstycke.
 
 * När du tar bort hela texten som kommentaren användes på tas även anteckningen bort.
 
@@ -332,17 +332,17 @@ Anteckningar:
 
 Om du vill skapa innehållsfragment enklare kan du lägga till [Resurser](/help/assets/manage-digital-assets.md) (bilder) direkt till fragmentet.
 
-De läggs till i fragmentets styckesekvens utan formatering. Formateringen kan göras när [fragment används/refereras på en sida](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
+De läggs till i fragmentets styckesekvens utan formatering. Formateringen kan göras när [fragment används/refereras på en sida](/help/sites-cloud/authoring/fragments/content-fragments.md).
 
 >[!CAUTION]
 >
-Dessa resurser kan inte flyttas eller tas bort på en referenssida. Detta måste göras i fragmentredigeraren.
+>Dessa resurser kan inte flyttas eller tas bort på en referenssida. Detta måste göras i fragmentredigeraren.
 >
-Formatering av resursen (till exempel storlek) måste dock göras i [sidredigerare](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Representationen av resursen i fragmentredigeraren är endast avsedd för redigering av innehållsflödet.
+>Formatering av resursen (till exempel storlek) måste dock göras i [sidredigerare](/help/sites-cloud/authoring/fragments/content-fragments.md). Representationen av resursen i fragmentredigeraren är endast avsedd för redigering av innehållsflödet.
 
 >[!NOTE]
 >
-Det finns olika metoder att lägga till [bilder](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
+>Det finns olika metoder att lägga till [bilder](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
 
 1. Placera markören där du vill lägga till bilden.
 1. Använd ikonen **Infoga resurs** för att öppna sökdialogrutan.
@@ -357,10 +357,10 @@ Det finns olika metoder att lägga till [bilder](/help/assets/content-fragments/
 
    >[!CAUTION]
    >
-   När du har lagt till en resurs, om du ändrar formatet till:
+   >När du har lagt till en resurs, om du ändrar formatet till:
    >
-   * **Oformaterad text**: resursen förloras från fragmentet.
-   * **Markering**: resursen är inte synlig, men finns fortfarande kvar när du återgår till **RTF**.
+   >* **Oformaterad text**: resursen förloras från fragmentet.
+   >* **Markering**: resursen är inte synlig, men finns fortfarande kvar när du återgår till **RTF**.
 
 ### Infoga ett innehållsfragment i fragmentet {#inserting-content-fragment-into-your-fragment}
 
@@ -370,17 +370,17 @@ De läggs till som en referens på den aktuella platsen i fragmentet.
 
 >[!NOTE]
 >
-Det här alternativet är tillgängligt när **Flerradstext** är konfigurerad med **Tillåt fragmentreferens**.
+>Det här alternativet är tillgängligt när **Flerradstext** är konfigurerad med **Tillåt fragmentreferens**.
 
 >[!CAUTION]
 >
-Dessa resurser kan inte flyttas eller tas bort på en referenssida. Detta måste göras i fragmentredigeraren.
+>Dessa resurser kan inte flyttas eller tas bort på en referenssida. Detta måste göras i fragmentredigeraren.
 >
-Formatering av resursen (till exempel storlek) måste dock göras i [sidredigerare](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Representationen av resursen i fragmentredigeraren är endast avsedd för redigering av innehållsflödet.
+>Formatering av resursen (till exempel storlek) måste dock göras i [sidredigerare](/help/sites-cloud/authoring/fragments/content-fragments.md). Representationen av resursen i fragmentredigeraren är endast avsedd för redigering av innehållsflödet.
 
 >[!NOTE]
 >
-Det finns olika metoder att lägga till [bilder](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
+>Det finns olika metoder att lägga till [bilder](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
 
 1. Placera markören där du vill lägga till fragmentet.
 1. Använd **Infoga innehållsfragment** -ikonen för att öppna sökdialogrutan.
@@ -395,10 +395,10 @@ Det finns olika metoder att lägga till [bilder](/help/assets/content-fragments/
 
    >[!CAUTION]
    >
-   När du har lagt till en referens till ett annat fragment kan du ändra formatet till:
+   >När du har lagt till en referens till ett annat fragment kan du ändra formatet till:
    >
-   * **Oformaterad text**: referensen tas bort från fragmentet.
-   * **Markering**: referensen kvarstår.
+   >* **Oformaterad text**: referensen tas bort från fragmentet.
+   >* **Markering**: referensen kvarstår.
 
 ## Arv {#inheritance}
 
@@ -440,11 +440,11 @@ Med variationer kan du ta **Master** innehåll och variera det beroende på syft
 
    >[!NOTE]
    >
-   När du skapar en variant är det alltid **Master** som kopieras, inte varianten som är öppen.
+   >När du skapar en variant är det alltid **Master** som kopieras, inte varianten som är öppen.
 
    >[!NOTE]
    >
-   När du skapar en variant, alla **Taggar** som för närvarande är tilldelad **Master** ändras till din nya variant.
+   >När du skapar en variant, alla **Taggar** som för närvarande är tilldelad **Master** ändras till din nya variant.
 
 ### Redigera en variant {#editing-a-variation}
 
@@ -467,7 +467,7 @@ Du kan ändra variantinnehållet efter antingen:
 
 >[!NOTE]
 >
-Detta påverkar bara variationen **Titel**.
+>Detta påverkar bara variationen **Titel**.
 
 ### Ta bort en variant {#deleting-a-variation}
 
@@ -479,7 +479,7 @@ Detta påverkar bara variationen **Titel**.
 
 >[!NOTE]
 >
-Du kan inte ta bort **Master**.
+>Du kan inte ta bort **Master**.
 
 ### Synkroniserar med mallsida {#synchronizing-with-master}
 
@@ -489,13 +489,13 @@ När du redigerar en variant har du tillgång till åtgärden för att synkronis
 
 >[!CAUTION]
 >
-Synkronisering är bara tillgängligt för att kopiera ändringar *från **mastern**till varianten*.
+>Synkronisering är bara tillgängligt för att kopiera ändringar *från **mastern**till varianten*.
 >
-Endast varianternas aktuella element synkroniseras.
+>Endast varianternas aktuella element synkroniseras.
 >
-Synkronisering fungerar bara på **Flerradstext** datatyp.
+>Synkronisering fungerar bara på **Flerradstext** datatyp.
 >
-Du kan inte överföra ändringar *från en variant till **mastern***.
+>Du kan inte överföra ändringar *från en variant till **mastern***.
 
 1. Öppna ditt innehållsfragment i fragmentredigeraren. Se till att **Master** har redigerats.
 

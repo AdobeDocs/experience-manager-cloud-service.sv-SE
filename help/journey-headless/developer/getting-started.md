@@ -2,7 +2,7 @@
 title: Komma igång med AEM Headless as a Cloud Service
 description: I den här delen av AEM Headless Developer Journey kan du läsa om AEM Headless-krav.
 exl-id: 9661e17b-fa9f-4689-900c-412b068e942c
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 1a4c5e618adaef99d82a00e1118d1a0f8536fc14
 workflow-type: tm+mt
 source-wordcount: '3057'
 ht-degree: 0%
@@ -286,8 +286,8 @@ Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsr
 * [AEM Headless Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - Använd dessa praktiska självstudiekurser för att utforska hur du kan använda de olika alternativen för att leverera innehåll till headless-slutpunkter med AEM och välja vad som passar dig bäst.
 * [Headless Content Management Using GraphQL APIs](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens&amp;launch=ExperienceManager-D-1-2020.1.headless#courses) - Följ den här kursen för att få en översikt över GraphQL API som implementerats i AEM. Autentisering via AdobeID krävs.
 * [AEM Guides WKND - GraphQL](https://github.com/adobe/aem-guides-wknd-graphql) - Det här GitHub-projektet innehåller exempelprogram AEM GraphQL API:er.
-* [Authoring Concepts](/help/sites-cloud/authoring/getting-started/concepts.md) - Teknisk dokumentation för redigeringsmiljön i AEM inklusive information om författarpubliceringskonfigurationen
-* [Publicera sidor](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) - Teknisk dokumentation för publicering av AEM
+* [Authoring Concepts](/help/sites-cloud/authoring/author-publish.md) - Teknisk dokumentation för redigeringsmiljön i AEM inklusive information om författarpubliceringskonfigurationen
+* [Publicera sidor](/help/sites-cloud/authoring/sites-console/publishing-pages.md) - Teknisk dokumentation för publicering av AEM
 * [Namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md) - Teknisk dokumentation om namngivningsbegränsningar för AEM
 * [Hanterare och översättning av flera webbplatser](/help/sites-cloud/administering/msm-and-translation.md) - Teknisk dokumentation om AEM kraftfulla översättningsfunktioner
 * [AEM arbetsflöden](/help/sites-cloud/authoring/workflows/overview.md) - Teknisk dokumentation om hur man automatiserar arbetsflöden i AEM

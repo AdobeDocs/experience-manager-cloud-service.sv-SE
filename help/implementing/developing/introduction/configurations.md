@@ -2,9 +2,9 @@
 title: Konfigurationer och Configuration Browser
 description: Förstå Adobe Experience Manager (AEM)-konfigurationer och hur de hanterar arbetsyteinställningar i AEM.
 exl-id: 0ade04df-03a9-4976-a4b7-c01b4748474d
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
 workflow-type: tm+mt
-source-wordcount: '1487'
+source-wordcount: '1482'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Du kan skapa konfigurationer för många olika funktioner i AEM.
 
 * [Kontextnavsegment](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
 * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
-* [Redigerbara mallar](/help/sites-cloud/authoring/features/templates.md)
+* [Redigerbara mallar](/help/sites-cloud/authoring/sites-console/templates.md)
 * olika molnkonfigurationer
 
 ### Exempel {#administrator-example}
@@ -72,7 +72,7 @@ Det är enkelt att skapa en konfiguration i AEM med hjälp av Configuration Brow
 1. Välj **Skapa**.
 1. Ange en **Titel** och **Namn** för din konfiguration.
 
-   ![Skapa en konfiguration](assets/configuration-create.png)
+   ![Skapa konfiguration](assets/configuration-create.png)
 
    * The **Titel** ska vara beskrivande.
    * The **Namn** blir nodnamnet i databasen.
@@ -81,7 +81,7 @@ Det är enkelt att skapa en konfiguration i AEM med hjälp av Configuration Brow
 1. Kontrollera vilken typ av konfigurationer du vill tillåta.
    * [Kontextnavsegment](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
    * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
-   * [Redigerbara mallar](/help/sites-cloud/authoring/features/templates.md)
+   * [Redigerbara mallar](/help/sites-cloud/authoring/sites-console/templates.md)
    * olika molnkonfigurationer
 1. Välj **Skapa**.
 
