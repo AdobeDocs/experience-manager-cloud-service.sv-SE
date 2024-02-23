@@ -4,9 +4,9 @@ description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery, doku
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: bd8c4fbfd7f740baa6abd7a91fb8d1dcdaff6c28
+source-git-commit: 87ed5f0aed5554f56e28f317d1399429245a2d06
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,8 @@ Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets
 
 Kontrollera att du har utfört följande steg innan du börjar:
 
-* Konfigurera och klona EDS-projektet (Edge Delivery Service). Se [självstudiekurs för utvecklare](https://www.aem.live/developer/tutorial) för mer information. Den lokala mappen i Edge Delivery Service-projektet (EDS) refereras som `[EDS Project repository]` i det här dokumentet.
-* Klona [Forms Block-arkiv](https://github.com/adobe/afb). Den innehåller koden som återger formuläret på en EDS-webbsida. Den lokala mappen i Forms Block-databasen refereras som `[Forms Block repository]` i det här dokumentet.
+* Konfigurera och klona EDS-projektet (Edge Delivery Service). Se [självstudiekurs för utvecklare](https://www.aem.live/developer/tutorial) för mer information. I det här dokumentet kallas den lokala mappen i Edge Delivery Service-projektet (EDS) `[EDS Project repository]` .
+* Klona [Forms Block-arkiv](https://github.com/adobe/afb). Den innehåller koden som återger formuläret på en EDS-webbsida. I det här dokumentet kallas den lokala mappen i din Forms-blockdatabas för `[Forms Block repository]` i det här dokumentet.
 * Se till att du har tillgång till Google Sheets eller Microsoft SharePoint.
 
 
@@ -42,7 +42,7 @@ AEM Forms Edge Delivery innehåller ett formulärblock som hjälper dig att enke
 
 1. Checka in `form` mapp och underliggande filer till Edge Delivery Service-projektet på GitHub.
 
-   Formulärblocket läggs till i din EDS-projektdatabas på Github. Kontrollera att Github-bygget inte misslyckas:
+   Formulärblocket läggs till i din EDS-projektdatabas på GitHub. Kontrollera att GitHub-bygget inte misslyckas:
 
    * Om du får felmeddelandet&quot;Det går inte att matcha sökvägen till modulen &quot;&#39;../../scripts/lib-franklin.js&#39;&quot; öppnar du `[EDS Project]/blocks/forms/form.js` -fil. Ersätt `lib-franklin.js` filen med `aem.js` -fil.
 

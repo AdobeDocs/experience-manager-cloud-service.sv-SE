@@ -4,9 +4,9 @@ description: AEM Forms Edge Delivery Service har tagits fram för bästa prestan
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: bd8c4fbfd7f740baa6abd7a91fb8d1dcdaff6c28
+source-git-commit: 87ed5f0aed5554f56e28f317d1399429245a2d06
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '463'
 ht-degree: 0%
 
 ---
@@ -27,12 +27,12 @@ Den här sammansatta tjänsten är fristående från innehållskällan och ger f
 
 ![Utvecklingsverktyg för Edge Delivery-formulär](/help/edge/assets/edge-delivery-forms-authoring-tools.png)
 
-De som skapar innehåll kan utnyttja de verktyg de känner sig hemma med, som Microsoft Excel eller Google Sheets (dokumentbaserad redigering), JSON-redigerare eller AEM Forms Adaptive Forms-redigerare för WYSIWYG-redigering (AEM Forms-projekt), för att utforma och skapa sina formulär.
+De som skapar innehåll kan utnyttja de verktyg de känner sig hemma med, som Microsoft Excel eller Google Sheets (dokumentbaserad redigering), JSON-filer (Headless authoring) eller AEM Forms Adaptive Forms editor (WYSIWYG-redigering), när de utformar och skapar sina formulär.
 
 >[!NOTE]
 >
 >
-> WYSIWYG-redigeringsfunktionen och Cross Walk-områden är tillgängliga i tidiga adopter-program. Du kan skriva till aem-forms-early-adopter-program@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen.
+> WYSIWYG-redigeringsfunktionerna är tillgängliga i ett program för tidig användning. Du kan skriva till aem-forms-early-adopter-program@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen.
 
 ## Börja med grunderna
 
@@ -67,13 +67,12 @@ De som skapar innehåll kan utnyttja de verktyg de känner sig hemma med, som Mi
             <br><b style="margin-top: 5px;">Använd fältvalideringar</b>
         </a>
         <p>Minska antalet fel och frustration genom att kontrollera indata i blanketterna för korrekt formatering.</p>
-    </div>
-    <div class="card-container">
-        <a href="/help/edge/docs/forms/form-fragments.md">
-            <img src="/help/edge/assets/smock_documentfragment_18_n.svg" alt="Använd formulärfragment i ett EDS-formulär" style="border-radius: 5px;"> </b>
-            <br><b style="margin-top: 5px;">Skapa formulärfragment</b>
+    </div>    <div class="card-container">
+        <a href="/help/edge/docs/forms/style-theme-forms.md">
+            <img src="/help/edge/assets/smock_imageautomode_18_N.svg" alt="Använda format eller teman i ett formulär" style="border-radius: 5px;"> </b>
+            <br><b style="margin-top: 5px;">Anpassa ett tema</b>
         </a>
-        <p>Återanvänd förkonfigurerade fragment i flera formulär.</p>
+        <p>Skapa en enhetlig varumärkesbild genom att använda samma tema i alla formulär.</p>
     </div>
     <div class="card-container">
         <a href="/help/edge/docs/forms/translate-forms.md">  
@@ -83,11 +82,11 @@ De som skapar innehåll kan utnyttja de verktyg de känner sig hemma med, som Mi
         <p>Nå ut bättre med formulären och håll kostnaderna i schack.</p>
     </div>
     <div class="card-container">
-        <a href="/help/edge/docs/forms/style-theme-forms.md">
-            <img src="/help/edge/assets/smock_imageautomode_18_N.svg" alt="Använda format eller teman i ett formulär" style="border-radius: 5px;"> </b>
-            <br><b style="margin-top: 5px;">Anpassa ett tema</b>
+        <a href="/help/edge/docs/forms/form-fragments.md">
+            <img src="/help/edge/assets/smock_documentfragment_18_n.svg" alt="Använd formulärfragment i ett EDS-formulär" style="border-radius: 5px;"> </b>
+            <br><b style="margin-top: 5px;">Skapa formulärfragment</b>
         </a>
-        <p>Skapa en enhetlig varumärkesbild genom att använda samma tema i alla formulär.</p>
+        <p>Återanvänd förkonfigurerade fragment i flera formulär.</p>
     </div>
     <div class="card-container">
         <a href="/help/edge/docs/forms/repeatable-forms.md">  
