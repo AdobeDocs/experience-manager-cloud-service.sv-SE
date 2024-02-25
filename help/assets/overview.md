@@ -5,9 +5,9 @@ contentOwner: AK
 feature: Asset Management
 role: User,Leader,Architect
 exl-id: 4437f214-d058-4975-8b8f-869a12c8103b
-source-git-commit: 07db10c4ee9cced7b6a697fe4f41c99eaba6a39f
+source-git-commit: b3bfc841f0609e1e529c97dd1f11d16de561701c
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '892'
 ht-degree: 1%
 
 ---
@@ -59,6 +59,10 @@ Mer information om hur du kommer åt resursvyn och vissa av de förenklingar som
 Med Edge Delivery kan ni skapa snabba, engagerande webbplatser där författare snabbt kan uppdatera och publicera innehåll och nya webbplatser snabbt kan lanseras.
 
 Integrera AEM Assets med dokumentbaserad redigering för Edge Delivery Services för att göra det möjligt för webbredaktörer att använda bilder som finns i AEM Assets-arkiv när de skriver dokument i Microsoft Word eller Google Docs. Mer information finns i [Integrera AEM Assets med dokumentbaserad framtagning](/help/edge/using.md#integrate-assets-edge).
+
+## Integrering med Adobe Journey Optimizer {#integration-with-ajo}
+
+[Adobe Journey Optimizer](https://business.adobe.com/products/journey-optimizer/adobe-journey-optimizer.html) förenklar hanteringen av kundresan och ger kunderna möjlighet att skapa flerkanalskampanjer med smarta beslut och insikter. När du utformar meddelanden med Journey Optimizer kan du komma åt Assets as a Cloud Service-databasen direkt från Journey Optimizer-gränssnittet. Användare får åtkomst till resurser via det inbäddade användargränssnittet i Experience Manager Assets. Mer information finns i [Skapa och hantera mediefiler med Experience Manager Assets](https://experienceleague.adobe.com/docs/journey-optimizer/using/content-management/assets-images/assets.html).
 
 ## Nya resurser {#whats-new-assets}
 
