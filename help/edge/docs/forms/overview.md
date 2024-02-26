@@ -4,9 +4,9 @@ description: AEM Forms Edge Delivery Service har tagits fram för bästa prestan
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 87ed5f0aed5554f56e28f317d1399429245a2d06
+source-git-commit: 4a3ebcf7985253ebca24e90ab57ae7eaf3e924e9
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '422'
 ht-degree: 0%
 
 ---
@@ -20,19 +20,14 @@ AEM Forms Edge Delivery Service är en sammansättningsbar tjänst från Adobe s
 
 * **Skapa formulär med perfekt fyr**: Bygg formulär som läses in och återges snabbt, även på långsamma internetanslutningar. Snabbare inläsningstider och optimerad användarupplevelse bidrar till snabbare ifyllnad av formulär och förbättrad konverteringsgrad.
 
-* **Förenkla framtagning och inlämning**: Skapa formulär med välbekanta verktyg som Microsoft Excel eller Google Sheets i stället för med de traditionella redigeringsmiljöerna. Skicka blanketter direkt till Microsoft Excel- eller Google-ark och använd deras ekosystem för att enkelt bearbeta inlämnade data.
+* **Förenkla framtagning och inlämning**: Utnyttja de redigeringsverktyg du är van vid, t.ex. Microsoft Excel eller Google Sheets (dokumentbaserad redigering), JSON-filer (Headless authoring) eller Adaptive Forms editor (WYSIWYG), när du utformar och skapar formulären. Tjänsten är fristående från innehållskällan och ger flexibilitet när det gäller att skapa innehåll genom att du kan använda de redigeringsverktyg du föredrar.
 
+  ![Utvecklingsverktyg för Edge Delivery-formulär](/help/edge/assets/edge-delivery-forms-authoring-tools.png)
 
-Den här sammansatta tjänsten är fristående från innehållskällan och ger flexibilitet när det gäller att skapa innehåll genom att användarna kan använda de redigeringsverktyg de föredrar.
-
-![Utvecklingsverktyg för Edge Delivery-formulär](/help/edge/assets/edge-delivery-forms-authoring-tools.png)
-
-De som skapar innehåll kan utnyttja de verktyg de känner sig hemma med, som Microsoft Excel eller Google Sheets (dokumentbaserad redigering), JSON-filer (Headless authoring) eller AEM Forms Adaptive Forms editor (WYSIWYG-redigering), när de utformar och skapar sina formulär.
-
->[!NOTE]
->
->
-> WYSIWYG-redigeringsfunktionerna är tillgängliga i ett program för tidig användning. Du kan skriva till aem-forms-early-adopter-program@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen.
+  >[!NOTE]
+  >
+  >
+  > WYSIWYG-redigeringsfunktionerna är tillgängliga i ett program för tidig användning. Du kan skriva till aem-forms-early-adopter-program@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen.
 
 ## Börja med grunderna
 
