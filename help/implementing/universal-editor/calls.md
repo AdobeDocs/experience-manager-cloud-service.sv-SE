@@ -2,9 +2,9 @@
 title: Universella redigeringsanrop
 description: Lär dig mer om de olika typer av samtal som görs till appen av den universella redigeraren som kan hjälpa dig vid felsökning.
 exl-id: 00d66e59-e445-4b5c-a5b1-c0a9f032ebd9
-source-git-commit: 7ef3efa6e074778b7b3e3a8159056200b2663b30
+source-git-commit: 1fc53e726f3a15c9ac7d772b4c181a7877e417af
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,8 @@ För utvecklaren kan det dock vara värdefullt att förstå dessa anrop och vad 
 * The **Nyttolast** av samtalet innehåller information om vad som uppdateras av redigeraren, bland annat information om vad som ska uppdateras och hur det ska uppdateras.
 * The **Svar** innehåller information om exakt vad som uppdaterades av redigeringstjänsten. Detta är för att underlätta uppdatering av innehållet i redigeraren. I vissa fall, som `move` måste hela sidan uppdateras.
 
+När ett samtal har slutförts aktiveras händelser som innehåller nyttolasten för begäran och svaret, som kan anpassas för din egen app. Se dokumentet [Universella redigeringshändelser](/help/implementing/universal-editor/events.md) för mer information.
+
 Nedan följer en lista över de typer av anrop som den universella redigeraren gör till ditt program tillsammans med exempel på nyttolaster och svar.
 
 ## Uppdatera {#update}
@@ -40,7 +42,9 @@ Nyttolasten innehåller information om vad som ska skrivas tillbaka till JCR.
 * `type`: JCR-värdetypen för egenskapen som uppdateras
 * `value`: Uppdaterade data
 
-### Exempel på nyttolast {#update-payload}
+>[!BEGINTABS]
+
+>[!TAB Exempel på nyttolast]
 
 ```json
 {
@@ -60,7 +64,7 @@ Nyttolasten innehåller information om vad som ska skrivas tillbaka till JCR.
 }
 ```
 
-### Exempelsvar {#update-response}
+>[!TAB Exempelsvar]
 
 ```json
 {
@@ -74,6 +78,8 @@ Nyttolasten innehåller information om vad som ska skrivas tillbaka till JCR.
 }
 ```
 
+>[!ENDTABS]
+
 ## Information {#details}
 
 A `details` anropet inträffar när appen läses in i Universal Editor för att hämta appens innehåll.
@@ -83,7 +89,9 @@ Dess nyttolast innehåller de data som ska återges samt detaljer om vad data re
 * För en komponent hämtar Universal Editor endast en `data` -objektet, eftersom dataschemat definieras i programmet.
 * För innehållsfragment hämtar den universella redigeraren även en `schema` eftersom innehållsfragmentmodellen är definierad i JCR.
 
-### Exempel på nyttolast {#details-payload}
+>[!BEGINTABS]
+
+>[!TAB Exempel på nyttolast]
 
 ```json
 {
@@ -102,7 +110,7 @@ Dess nyttolast innehåller de data som ska återges samt detaljer om vad data re
 }
 ```
 
-### Exempelsvar {#details-response}
+>[!TAB Exempelsvar]
 
 ```json
 {
@@ -134,6 +142,8 @@ Dess nyttolast innehåller de data som ska återges samt detaljer om vad data re
 }
 ```
 
+>[!ENDTABS]
+
 ## Lägg till {#add}
 
 An `add` anropet inträffar när du placerar en ny komponent i programmet med den universella redigeraren.
@@ -142,7 +152,9 @@ Nyttolasten innehåller en `path` objekt som innehåller var innehållet ska lä
 
 Den innehåller även `content` objekt med ytterligare objekt för slutpunktsspecifik information om innehållet som ska lagras [för varje plugin.](/help/implementing/universal-editor/architecture.md) Om din app till exempel baseras på innehåll från AEM och Magento, innehåller nyttolasten ett dataobjekt för varje system.
 
-### Exempel på nyttolast {#add-payload}
+>[!BEGINTABS]
+
+>[!TAB Exempel på nyttolast]
 
 ```json
 {
@@ -174,7 +186,7 @@ Den innehåller även `content` objekt med ytterligare objekt för slutpunktsspe
 }
 ```
 
-### Exempelsvar {#add-response}
+>[!TAB Exempelsvar]
 
 ```json
 {
@@ -188,13 +200,17 @@ Den innehåller även `content` objekt med ytterligare objekt för slutpunktsspe
 }
 ```
 
+>[!ENDTABS]
+
 ## Flytta {#move}
 
 A `move` anropet inträffar när du flyttar en komponent i programmet med den universella redigeraren.
 
 Nyttolasten innehåller en `from` objekt som definierar var komponenten fanns och en `to` objekt som definierar var det flyttades.
 
-### Exempel på nyttolast {#move-payload}
+>[!BEGINTABS]
+
+>[!TAB Exempel på nyttolast]
 
 ```json
 {
@@ -227,7 +243,7 @@ Nyttolasten innehåller en `from` objekt som definierar var komponenten fanns oc
 }
 ```
 
-### Exempelsvar {#move-response}
+>[!TAB Exempelsvar]
 
 ```json
 {
@@ -240,13 +256,17 @@ Nyttolasten innehåller en `from` objekt som definierar var komponenten fanns oc
 }
 ```
 
+>[!ENDTABS]
+
 ## Ta bort {#remove}
 
 A `remove` anropet inträffar när du tar bort en komponent i programmet med den universella redigeraren.
 
 Dess nyttolast inkluderar sökvägen till objektet som tas bort.
 
-### Exempel på nyttolast {#remove-payload}
+>[!BEGINTABS]
+
+>[!TAB Exempel på nyttolast]
 
 ```json
 {
@@ -272,7 +292,7 @@ Dess nyttolast inkluderar sökvägen till objektet som tas bort.
 }
 ```
 
-### Exempelsvar {#remove-response}
+>[!TAB Exempelsvar]
 
 ```json
 {
@@ -286,13 +306,17 @@ Dess nyttolast inkluderar sökvägen till objektet som tas bort.
 }
 ```
 
+>[!ENDTABS]
+
 ## Publicera {#publish}
 
 A `publish` anropet inträffar när du klickar på **Publicera** om du vill publicera det redigerade innehållet i Universal Editor.
 
 Den universella redigeraren itererar över innehållet och skapar en lista med referenser som också måste publiceras.
 
-### Exempel på nyttolast {#publish-payload}
+>[!BEGINTABS]
+
+>[!TAB Exempel på nyttolast]
 
 ```json
 {
@@ -332,7 +356,7 @@ Den universella redigeraren itererar över innehållet och skapar en lista med r
 }
 ```
 
-### Exempelsvar {#publish-response}
+>[!TAB Exempelsvar]
 
 ```json
 {
@@ -355,3 +379,9 @@ Den universella redigeraren itererar över innehållet och skapar en lista med r
   ]
 }
 ```
+
+>[!ENDTABS]
+
+## Ytterligare resurser {#additional-resources}
+
+* [Universella redigeringshändelser](/help/implementing/universal-editor/events.md)
