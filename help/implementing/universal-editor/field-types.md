@@ -2,9 +2,9 @@
 title: Modelldefinitioner, fält och komponenttyper
 description: Lär dig mer om fält och de komponenttyper som den universella redigeraren kan redigera i egenskapsfältet med exempel. Lär dig hur du kan mäta din egen app genom att skapa en modelldefinition och länka till komponenten.
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
-source-git-commit: bbe02f66b5bce3b919be4abd3b2de482a235b6ee
+source-git-commit: fcdba895510b0c428a4274092c8b314fd36f5c7d
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1144'
 ht-degree: 1%
 
 ---
@@ -89,6 +89,23 @@ Ett fältobjekt har följande typdefinition.
 ### Komponenttyper {#component-types}
 
 Följande komponenttyper kan användas för återgivningsfält.
+
+| Beskrivning | Komponenttyp |
+|---|---|
+| [AEM](#aem-tag) | `aem-tag` |
+| [AEM](#aem-content) | `aem-content` |
+| [Boolean](#boolean) | `boolean` |
+| [Kryssrutegrupp](#checkbox-group) | `checkbox-group` |
+| [Behållare](#container) | `container` |
+| [Datum och tid](#date-time) | `date-time` |
+| [Multimarkering](#multiselect) | `multiselect` |
+| [Nummer](#number) | `number` |
+| [Alternativgrupp](#radio-group) | `radio-group` |
+| [Referens](#reference) | `reference` |
+| [RTF](#rich-text) | `rich-text` |
+| [Välj](#select) | `select` |
+| [Tabb](#tab) | `tab` |
+| [Text](#text) | `text` |
 
 #### AEM {#aem-tag}
 
@@ -624,6 +641,59 @@ En referenskomponenttyp tillåter en referens till ett annat dataobjekt från de
 
 >[!ENDTABS]
 
+#### RTF {#rich-text}
+
+RTF ger möjlighet till RTF-inmatning med flera rader. Det erbjuder ytterligare valideringstyper.
+
+| Valideringstyp | Värdetyp | Beskrivning | Obligatoriskt |
+|---|---|---|---|
+| `maxSize` | `number` | Högsta tillåtna antal tecken | Nej |
+| `customErrorMsg` | `string` | Meddelande som visas om `maxSize` har överskridits | Nej |
+
+>[!BEGINTABS]
+
+>[!TAB Exempel 1]
+
+```json
+{
+  "id": "richtext",
+  "fields": [
+    {
+      "component": "richtext",
+      "name": "rte",
+      "label": "Rich Text",
+      "valueType": "string"
+    }
+  ]
+}
+```
+
+>[!TAB Exempel 2]
+
+```json
+{
+  "id": "another-richtext",
+  "fields": [
+    {
+      "component": "richtext",
+      "name": "rte",
+      "label": "Rich Text",
+      "valueType": "string",
+      "validation": {
+        "maxSize": 1000,
+        "customErrorMsg": "That's about as funny as a screen door on a battleship."
+      }
+    }
+  ]
+}
+```
+
+>[!TAB Skärmbild]
+
+![Skärmbild av komponenttyp för textområde](assets/component-types/richtext.png)
+
+>[!ENDTABS]
+
 #### Välj {#select}
 
 En select-komponenttyp gör att du kan välja ett enstaka alternativ i en lista med fördefinierade alternativ i en nedrullningsbar meny.
@@ -704,62 +774,9 @@ Om du vill att objekt ska visas ovanför alla flikar måste de definieras före 
 
 >[!ENDTABS]
 
-#### Textområde {#text-area}
+#### Text {#text}
 
-I ett textområde kan du skriva text på flera rader. Det erbjuder ytterligare valideringstyper.
-
-| Valideringstyp | Värdetyp | Beskrivning | Obligatoriskt |
-|---|---|---|---|
-| `maxSize` | `number` | Högsta tillåtna antal tecken | Nej |
-| `customErrorMsg` | `string` | Meddelande som visas om `maxSize` har överskridits | Nej |
-
->[!BEGINTABS]
-
->[!TAB Exempel 1]
-
-```json
-{
-  "id": "richtext",
-  "fields": [
-    {
-      "component": "text-area",
-      "name": "rte",
-      "label": "Rich Text",
-      "valueType": "string"
-    }
-  ]
-}
-```
-
->[!TAB Exempel 2]
-
-```json
-{
-  "id": "another-richtext",
-  "fields": [
-    {
-      "component": "text-area",
-      "name": "rte",
-      "label": "Rich Text",
-      "valueType": "string",
-      "validation": {
-        "maxSize": 1000,
-        "customErrorMsg": "That's about as funny as a screen door on a battleship."
-      }
-    }
-  ]
-}
-```
-
->[!TAB Skärmbild]
-
-![Skärmbild av komponenttyp för textområde](assets/component-types/richtext.png)
-
->[!ENDTABS]
-
-#### Textindata {#text-input}
-
-En textinmatning tillåter en enda rad med textinmatning.  Det innehåller ytterligare valideringstyper.
+Text tillåter en enda rad med textinmatning.  Det innehåller ytterligare valideringstyper.
 
 | Valideringstyp | Värdetyp | Beskrivning | Obligatoriskt |
 |---|---|---|---|
@@ -777,7 +794,7 @@ En textinmatning tillåter en enda rad med textinmatning.  Det innehåller ytter
   "id": "simpletext",
   "fields": [
     {
-      "component": "text-input",
+      "component": "text",
       "name": "text",
       "label": "Simple Text",
       "valueType": "string"
@@ -793,7 +810,7 @@ En textinmatning tillåter en enda rad med textinmatning.  Det innehåller ytter
   "id": "another simpletext",
   "fields": [
     {
-      "component": "text-input",
+      "component": "text",
       "name": "text",
       "label": "Simple Text",
       "valueType": "string",
@@ -812,6 +829,6 @@ En textinmatning tillåter en enda rad med textinmatning.  Det innehåller ytter
 
 >[!TAB Skärmbild]
 
-![Skärmbild av textindatakomponenttyp](assets/component-types/simpletext.png)
+![Skärmbild av textkomponenttyp](assets/component-types/simpletext.png)
 
 >[!ENDTABS]
