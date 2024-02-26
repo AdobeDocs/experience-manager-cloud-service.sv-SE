@@ -2,9 +2,9 @@
 title: Modelldefinitioner, fält och komponenttyper
 description: Lär dig mer om fält och de komponenttyper som den universella redigeraren kan redigera i egenskapsfältet med exempel. Lär dig hur du kan mäta din egen app genom att skapa en modelldefinition och länka till komponenten.
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
-source-git-commit: 550d26cde3d6b7be419bc9df70db8894851361c6
+source-git-commit: bbe02f66b5bce3b919be4abd3b2de482a235b6ee
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '1126'
 ht-degree: 1%
 
 ---
@@ -94,7 +94,9 @@ Följande komponenttyper kan användas för återgivningsfält.
 
 En AEM taggkomponenttyp aktiverar en AEM taggväljare som kan användas för att bifoga taggar till komponenten.
 
-##### Exempel {#sample-aem-tag}
+>[!BEGINTABS]
+
+>[!TAB Exempel]
 
 ```json
 {
@@ -110,15 +112,19 @@ En AEM taggkomponenttyp aktiverar en AEM taggväljare som kan användas för att
 }
 ```
 
-##### Skärmbild {#screenshot-aem-tag}
+>[!TAB Skärmbild]
 
 ![Skärmbild AEM taggkomponenttypen](assets/component-types/aem-tag-picker.png)
+
+>[!ENDTABS]
 
 #### AEM {#aem-content}
 
 En AEM innehållskomponenttyp aktiverar en AEM innehållsväljare som kan användas för att ange innehållsreferenser.
 
-##### Exempel {#sample-aem-content}
+>[!BEGINTABS]
+
+>[!TAB Exempel]
 
 ```json
 {
@@ -135,9 +141,11 @@ En AEM innehållskomponenttyp aktiverar en AEM innehållsväljare som kan använ
 }
 ```
 
-##### Skärmbild {#screenshot-aem-content}
+>[!TAB Skärmbild]
 
 ![Skärmbild AEM innehållskomponenttyp](assets/component-types/aem-content-picker.png)
+
+>[!ENDTABS]
 
 #### Boolean {#boolean}
 
@@ -147,7 +155,9 @@ En boolesk komponenttyp lagrar ett enkelt true/false-värde som återges som en 
 |---|---|---|---|
 | `customErrorMsg` | `string` | Meddelande som visas om det angivna värdet inte är ett booleskt värde | Nej |
 
-##### Exempel {#sample-boolean}
+>[!BEGINTABS]
+
+>[!TAB Exempel 1]
 
 ```json
 {
@@ -162,6 +172,8 @@ En boolesk komponenttyp lagrar ett enkelt true/false-värde som återges som en 
   ]
 }
 ```
+
+>[!TAB Exempel 2]
 
 ```json
 {
@@ -180,15 +192,19 @@ En boolesk komponenttyp lagrar ett enkelt true/false-värde som återges som en 
 }
 ```
 
-##### Skärmbild {#screenshot-boolean}
+>[!TAB Skärmbild]
 
 ![Skärmbild av boolesk komponenttyp](assets/component-types/boolean.png)
+
+>[!ENDTABS]
 
 #### Kryssrutegrupp {#checkbox-group}
 
 På samma sätt som för ett booleskt värde kan en kryssrutegruppskomponenttyp användas för att välja flera sant/falskt-objekt, som återges som flera kryssrutor.
 
-##### Exempel {#sample-checkbox-group}
+>[!BEGINTABS]
+
+>[!TAB Exempel]
 
 ```json
 {
@@ -208,9 +224,11 @@ På samma sätt som för ett booleskt värde kan en kryssrutegruppskomponenttyp 
 }
 ```
 
-#### Skärmbild {#screenshot-checkbox-group}
+>[!TAB Skärmbild]
 
 ![Skärmbild av kryssrutegruppskomponenttyp](assets/component-types/checkbox-group.png)
+
+>[!ENDTABS]
 
 #### Behållare {#container}
 
@@ -220,7 +238,9 @@ En behållarkomponenttyp tillåter gruppering av komponenter. Den erbjuder en ex
 |---|---|---|---|
 | `collapsible` | `boolean` | Är behållaren komprimerbar | Nej |
 
-##### Exempel {#sample-container}
+>[!BEGINTABS]
+
+>[!TAB Exempel]
 
 ```json
  {
@@ -251,9 +271,44 @@ En behållarkomponenttyp tillåter gruppering av komponenter. Den erbjuder en ex
 }
 ```
 
-##### Skärmbild {#screenshot-container}
+>[!TAB Skärmbild]
 
 ![Skärmbild av behållarkomponenttyp](assets/component-types/container.png)
+
+#### Innehållsfragment {#content-fragment}
+
+Du kan använda väljaren för innehållsfragment för att välja en [Innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md) och dess variationer (om det behövs). Den erbjuder en extra konfiguration.
+
+| Konfiguration | Värdetyp | Beskrivning | Obligatoriskt |
+|---|---|---|---|
+| `variationName` | `string` | Variabelnamn för att lagra den valda varianten. Om värdet är odefinierat visas ingen variantväljare | Nej |
+
+>[!BEGINTABS]
+
+>[!TAB Exempel 1]
+
+```json
+[
+  {
+    "id": "aem-content-fragment",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "picker",
+        "label": "Content Fragment Picker",
+        "valueType": "string",
+        "variationName": "contentFragmentVariation"
+      }
+    ]
+  }
+]
+```
+
+>[!TAB Skärmbild]
+
+![Skärmbild av väljaren för innehållsfragment](assets/component-types/aem-content-fragment.png)
+
+>[!ENDTABS]
 
 #### Datum och tid {#date-time}
 
@@ -270,7 +325,9 @@ Den erbjuder även en ytterligare valideringstyp.
 |---|---|---|---|
 | `customErrorMsg` | `string` | Meddelande som visas om `valueFormat` är inte uppfyllt | Nej |
 
-##### Exempel {#sample-date-time}
+>[!BEGINTABS]
+
+>[!TAB Exempel 1]
 
 ```json
 {
@@ -285,6 +342,8 @@ Den erbjuder även en ytterligare valideringstyp.
   ]
 }
 ```
+
+>[!TAB Exempel 2]
 
 ```json
 {
@@ -336,15 +395,55 @@ Den erbjuder även en ytterligare valideringstyp.
 }
 ```
 
-##### Skärmbild {#screenshot-date-time}
+>[!TAB Skärmbild]
 
 ![Skärmbild av datumtidskomponenttyp](assets/component-types/date-time.png)
+
+>[!ENDTABS]
+
+#### Experience Fragment {#experience-fragment}
+
+Experience Fragment-väljaren kan användas för att välja en [Experience Fragment](/help/sites-cloud/authoring/fragments/experience-fragments.md) och dess variationer (om det behövs). Den erbjuder en extra konfiguration.
+
+| Konfiguration | Värdetyp | Beskrivning | Obligatoriskt |
+|---|---|---|---|
+| `variationName` | `string` | Variabelnamn för att lagra den valda varianten. Om värdet är odefinierat visas ingen variantväljare | Nej |
+
+>[!BEGINTABS]
+
+>[!TAB Exempel 1]
+
+```json
+[
+  {
+    "id": "aem-experience-fragment",
+    "fields": [
+      {
+        "component": "aem-experience-fragment",
+        "name": "picker",
+        "label": "Experience Fragment Picker",
+        "valueType": "string",
+        "variationName": "experienceFragmentVariation"
+      }
+    ]
+  }
+]
+```
+
+>[!TAB Skärmbild]
+
+![Skärmbild av Experience Fragment-väljaren](assets/component-types/aem-experience-fragment.png)
+
+>[!ENDTABS]
+
 
 #### Multimarkering {#multiselect}
 
 En komponenttyp för flerval visar flera objekt för markering i en listruta, inklusive möjligheten att gruppera de element som kan markeras.
 
-##### Exempel {#sample-multiselect}
+>[!BEGINTABS]
+
+>[!TAB Exempel 1]
 
 ```json
 {
@@ -363,6 +462,8 @@ En komponenttyp för flerval visar flera objekt för markering i en listruta, in
   ]
 }
 ```
+
+>[!TAB Exempel 2]
 
 ```json
 {
@@ -397,10 +498,12 @@ En komponenttyp för flerval visar flera objekt för markering i en listruta, in
 }
 ```
 
-##### Skärmbilder {#screenshot-multiselect}
+>[!TAB Skärmbilder]
 
 ![Skärmbild av flervalskomponenttyp](assets/component-types/multiselect.png)
 ![Skärmbild av flervalskomponenttyp med gruppering](assets/component-types/multiselect-group.png)
+
+>[!ENDTABS]
 
 #### Nummer {#number}
 
@@ -412,7 +515,9 @@ En talkomponenttyp tillåter indata för ett tal. Det erbjuder ytterligare valid
 | `numberMax` | `number` | Högsta tillåtna antal | Nej |
 | `customErrorMsg` | `string` | Meddelande som visas om `numberMin` eller `numberMax` är inte uppfyllt | Nej |
 
-##### Exempel {#sample-number}
+>[!BEGINTABS]
+
+>[!TAB Exempel 1]
 
 ```json
 {
@@ -428,6 +533,8 @@ En talkomponenttyp tillåter indata för ett tal. Det erbjuder ytterligare valid
   ]
 }
 ```
+
+>[!TAB Exempel 2]
 
 ```json
 {
@@ -451,15 +558,19 @@ En talkomponenttyp tillåter indata för ett tal. Det erbjuder ytterligare valid
 }
 ```
 
-##### Skärmbild {#screenshot-number}
+>[!TAB Skärmbild]
 
 ![Skärmbild av talkomponenttyp](assets/component-types/number.png)
+
+>[!ENDTABS]
 
 #### Alternativgrupp {#radio-group}
 
 En alternativgruppskomponenttyp tillåter en ömsesidigt uteslutande markering av flera alternativ som återges som en grupp som liknar en kryssrutegrupp.
 
-##### Exempel {#sample-radio-group}
+>[!BEGINTABS]
+
+>[!TAB Exempel]
 
 ```json
 {
@@ -479,15 +590,19 @@ En alternativgruppskomponenttyp tillåter en ömsesidigt uteslutande markering a
 }
 ```
 
-##### Skärmbild {#screenshot-radio-group}
+>[!TAB Skärmbild]
 
 ![Skärmbild av komponenttypen alternativgruppskomponent](assets/component-types/radio.png)
+
+>[!ENDTABS]
 
 #### Referens {#reference}
 
 En referenskomponenttyp tillåter en referens till ett annat dataobjekt från det aktuella objektet.
 
-##### Exempel {#sample-reference}
+>[!BEGINTABS]
+
+>[!TAB Exempel]
 
 ```json
 {
@@ -503,15 +618,19 @@ En referenskomponenttyp tillåter en referens till ett annat dataobjekt från de
 }
 ```
 
-##### Skärmbild {#screenshot-reference}
+>[!TAB Skärmbild]
 
 ![Skärmbild av referenskomponenttyp](assets/component-types/reference.png)
+
+>[!ENDTABS]
 
 #### Välj {#select}
 
 En select-komponenttyp gör att du kan välja ett enstaka alternativ i en lista med fördefinierade alternativ i en nedrullningsbar meny.
 
-##### Exempel {#sample-select}
+>[!BEGINTABS]
+
+>[!TAB Exempel]
 
 ```json
 {
@@ -531,9 +650,11 @@ En select-komponenttyp gör att du kan välja ett enstaka alternativ i en lista 
 }
 ```
 
-##### Skärmbild {#screenshot-select}
+>[!TAB Skärmbild]
 
 ![Skärmbild av vald komponenttyp](assets/component-types/select.png)
+
+>[!ENDTABS]
 
 #### Tabb {#tab}
 
@@ -543,7 +664,9 @@ A `tab` kan betraktas som en avgränsare i arrayen med `fields`. Allt som kommer
 
 Om du vill att objekt ska visas ovanför alla flikar måste de definieras före alla tabbar.
 
-##### Exempel {#sample-tab}
+>[!BEGINTABS]
+
+>[!TAB Exempel]
 
 ```json
 {
@@ -575,9 +698,11 @@ Om du vill att objekt ska visas ovanför alla flikar måste de definieras före 
 }
 ```
 
-##### Skärmbild {#screenshot-tab}
+>[!TAB Skärmbild]
 
 ![Skärmbild av flikkomponenttyp](assets/component-types/tab.png)
+
+>[!ENDTABS]
 
 #### Textområde {#text-area}
 
@@ -588,7 +713,9 @@ I ett textområde kan du skriva text på flera rader. Det erbjuder ytterligare v
 | `maxSize` | `number` | Högsta tillåtna antal tecken | Nej |
 | `customErrorMsg` | `string` | Meddelande som visas om `maxSize` har överskridits | Nej |
 
-##### Exempel {#sample-text-area}
+>[!BEGINTABS]
+
+>[!TAB Exempel 1]
 
 ```json
 {
@@ -603,6 +730,8 @@ I ett textområde kan du skriva text på flera rader. Det erbjuder ytterligare v
   ]
 }
 ```
+
+>[!TAB Exempel 2]
 
 ```json
 {
@@ -622,9 +751,11 @@ I ett textområde kan du skriva text på flera rader. Det erbjuder ytterligare v
 }
 ```
 
-##### Skärmbild {#screenshot-text-area}
+>[!TAB Skärmbild]
 
 ![Skärmbild av komponenttyp för textområde](assets/component-types/richtext.png)
+
+>[!ENDTABS]
 
 #### Textindata {#text-input}
 
@@ -637,7 +768,9 @@ En textinmatning tillåter en enda rad med textinmatning.  Det innehåller ytter
 | `regExp` | `string` | Reguljärt uttryck som indatatexten måste matcha | Nej |
 | `customErrorMsg` | `string` | Meddelande som visas om `minLength`, `maxLength`och/eller `regExp` har överträtts | Nej |
 
-##### Exempel {#sample-text-input}
+>[!BEGINTABS]
+
+>[!TAB Exempel 1]
 
 ```json
 {
@@ -652,6 +785,8 @@ En textinmatning tillåter en enda rad med textinmatning.  Det innehåller ytter
   ]
 }
 ```
+
+>[!TAB Exempel 2]
 
 ```json
 {
@@ -675,6 +810,8 @@ En textinmatning tillåter en enda rad med textinmatning.  Det innehåller ytter
 }
 ```
 
-##### Skärmbild {#screenshot-text-input}
+>[!TAB Skärmbild]
 
 ![Skärmbild av textindatakomponenttyp](assets/component-types/simpletext.png)
+
+>[!ENDTABS]
