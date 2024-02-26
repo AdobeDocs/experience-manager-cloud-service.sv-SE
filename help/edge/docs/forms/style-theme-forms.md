@@ -4,9 +4,9 @@ description: Anpassa tema och stil för ett AEM Forms Edge Delivery Service-form
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 4a3ebcf7985253ebca24e90ab57ae7eaf3e924e9
+source-git-commit: 59ed012f10a20939c846c8fff088534c5638f3db
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1268'
 ht-degree: 0%
 
 ---
@@ -87,7 +87,7 @@ Alla formulärfält, utom listrutor, alternativgrupper och kryssrutegrupper, har
 * Indata: `input` -element definierar vilken typ av data som ska anges. Till exempel text, tal, e-post.
 * Beskrivning (valfritt): `div` med klass `field-description` innehåller ytterligare information eller instruktioner för användaren.
 
-**Exempel**
+**Exempel på HTML struktur**
 
 ```HTML
 <div class="form-text-wrapper form-first-name field-wrapper" data-required="true">
@@ -99,7 +99,7 @@ Alla formulärfält, utom listrutor, alternativgrupper och kryssrutegrupper, har
 </div>
 ```
 
-#### CSS-väljare för allmänna komponenter
+**CSS-väljare för allmänna komponenter**
 
 ```CSS
 .form-{Type}-wrapper input {
@@ -121,7 +121,7 @@ Alla formulärfält, utom listrutor, alternativgrupper och kryssrutegrupper, har
 * `.form-{Type}-wrapper`: Målar det yttre `div` -element baserat på fälttypen. Till exempel: `.form-text-wrapper` anger alla textinmatningsfält som mål.
 * `.form-{Name}`: Markerar elementet ytterligare baserat på det specifika fältnamnet. Till exempel: `.form-first-name` anger textfältet&quot;Förnamn&quot; som mål.
 
-**Exempel:**
+**Exempel på CSS-väljare för allmänna komponenter**
 
 ```CSS
 /*Target all text input fields */
@@ -159,7 +159,7 @@ I listrutor visas `select` -element används i stället för ett `input` element
 </div>
 ```
 
-**Exempel**
+**Exempel på HTML-struktur**
 
 ```HTML
     <div class="form-drop-down-wrapper form-country field-wrapper" data-required="true">
@@ -173,7 +173,7 @@ I listrutor visas `select` -element används i stället för ett `input` element
    </div>
 ```
 
-#### CSS-väljare för nedrullningskomponent
+#### Exempel på CSS-väljare för nedrullningskomponent
 
 ```CSS
 /* Target the outer wrapper */
@@ -265,98 +265,95 @@ Precis som för komponenter i listrutor har alternativknappar och kryssrutegrupp
 </div>
 ```
 
-#### CSS-väljare för alternativknappar och kryssrutegrupper
+**Exempel på CSS-väljare för alternativknappar och kryssrutegrupper**
 
-**Inriktning mot ytterhöljet**
-
-
-```CSS
-   /* Targets all radio group wrappers */
-.form-radio-group-wrapper {
-  margin-bottom: 20px; /* Adds space between radio groups */
-}
-
-/* Targets all checkbox group wrappers */
-.form-checkbox-group-wrapper {
-  margin-bottom: 20px; /* Adds space between checkbox groups */
-}
-```
-
-Dessa väljare är avsedda för de yttre behållarna för grupper med både alternativknappar och kryssrutor, vilket gör att du kan använda allmänna format för hela gruppstrukturen. Det här är användbart när du vill ange avstånd, justering eller andra layoutrelaterade egenskaper.
-
-**Målgruppsetiketter**
-
-```CSS
-.form-radio-group-wrapper .field-label,
-.form-checkbox-group-wrapper .field-label {
- font-weight: bold; /* Makes the group label bold */
-}
-```
-
-Den här väljaren anger målet för `.field-label` -element i gruppomslutningar för både alternativknappar och kryssrutor. På så sätt kan du formatera etiketterna specifikt för dessa grupper, vilket kan få dem att sticka ut mer.
-
-**Målinrikta enskilda indata och etiketter**
-
-```CSS
-/* Styling radio buttons */
-.form-radio-group-wrapper input[type="radio"] {
-  margin-right: 5px; /* Adds space between the input and its label */
-} 
-
-/* Styling radio button labels */
-.form-radio-group-wrapper label {
-  font-size: 15px; /* Changes the label font size */
-}
-
-/* Styling checkboxes */
-.form-checkbox-group-wrapper input[type="checkbox"] {
-  margin-right: 5px;  /* Adds space between the input and its label */ 
-}
-
-/* Styling checkbox labels */
-.form-checkbox-group-wrapper label {
-  font-size: 15px; /* Changes the label font size */
-}
-```
-
-Dessa väljare ger mer exakt kontroll över enskilda alternativknappar, kryssrutor och tillhörande etiketter. Du kan använda dessa för att justera storlek, avstånd eller använda mer distinkta visuella format.
+* Inriktning för ytteromslutningen: Dessa väljare är avsedda för de yttre behållarna för både alternativknappar och kryssrutegrupper, vilket gör att du kan använda allmänna format för hela gruppstrukturen. Det här är användbart när du vill ange avstånd, justering eller andra layoutrelaterade egenskaper.
 
 
-**Anpassa utseende på alternativknappar och kryssrutor**
-
-```CSS
-/* Hide the default radio button or checkbox */
-.form-radio-group-wrapper input[type="radio"],
-.form-checkbox-group-wrapper input[type="checkbox"] {
-  opacity: 0; 
-  position: absolute; 
-}
-
-/* Create a custom radio button */
-.form-radio-group-wrapper input[type="radio"] + label::before { 
-  content: "";
-  display: inline-block;
-  width: 16px; 
-  height: 16px; 
-  border: 2px solid #ccc; 
-  border-radius: 50%;
-  margin-right: 5px;
-}
-
-.form-radio-group-wrapper input[type="radio"]:checked + label::before {
-  background-color: #007bff; 
-}
-
-/* Create a custom checkbox */
-/* Similar styling as above, with adjustments for a square shape */
-```
-
-Den här tekniken döljer standardindata och använder :before och :after-pseudoelement för att skapa anpassade bilder som ändrar utseende baserat på läget &#39;checked&#39;.
+  ```CSS
+     /* Targets all radio group wrappers */
+  .form-radio-group-wrapper {
+    margin-bottom: 20px; /* Adds space between radio groups */
+  }
+  
+  /* Targets all checkbox group wrappers */
+  .form-checkbox-group-wrapper {
+    margin-bottom: 20px; /* Adds space between checkbox groups */
+  }
+  ```
 
 
-## Formateringsfält
+* Målgruppsetiketter: Den här väljaren har som mål `.field-label` -element i gruppomslutningar för både alternativknappar och kryssrutor. På så sätt kan du formatera etiketterna specifikt för dessa grupper, vilket kan få dem att sticka ut mer.
 
-Förutom de allmänna formateringstekniker som beskrivs ovan kan du även formatera formulärfält baserat på deras specifika typ eller enskilda namn. På så sätt får du bättre kontroll över och anpassning av formulärets utseende.
+  ```CSS
+  .form-radio-group-wrapper .field-label,
+  .form-checkbox-group-wrapper .field-label {
+   font-weight: bold; /* Makes the group label bold */
+  }
+  ```
+
+
+
+* Indata och etiketter för enskilda användare: Dessa väljare ger mer exakt kontroll över enskilda alternativknappar, kryssrutor och tillhörande etiketter. Du kan använda dessa för att justera storlek, avstånd eller använda mer distinkta visuella format.
+
+  ```CSS
+  /* Styling radio buttons */
+  .form-radio-group-wrapper input[type="radio"] {
+    margin-right: 5px; /* Adds space between the input and its   label */
+  } 
+  
+  /* Styling radio button labels */
+  .form-radio-group-wrapper label {
+    font-size: 15px; /* Changes the label font size */
+  }
+  
+  /* Styling checkboxes */
+  .form-checkbox-group-wrapper input[type="checkbox"] {
+    margin-right: 5px;  /* Adds space between the input and its  label */ 
+  }
+  
+  /* Styling checkbox labels */
+  .form-checkbox-group-wrapper label {
+    font-size: 15px; /* Changes the label font size */
+  }
+  ```
+
+
+
+
+* Anpassa utseendet på alternativknappar och kryssrutor: Den här tekniken döljer standardindata och använder pseudoelementen :before och :after för att skapa anpassade visuella element som ändrar utseendet baserat på statusen &#39;checked&#39;.
+
+  ```CSS
+  /* Hide the default radio button or checkbox */
+  .form-radio-group-wrapper input[type="radio"],
+  .form-checkbox-group-wrapper input[type="checkbox"] {
+    opacity: 0; 
+    position: absolute; 
+  }
+  
+  /* Create a custom radio button */
+  .form-radio-group-wrapper input[type="radio"] + label::before { 
+    content: "";
+    display: inline-block;
+    width: 16px; 
+    height: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  .form-radio-group-wrapper input[type="radio"]:checked +  label::before {
+    background-color: #007bff; 
+  }
+  
+  /* Create a custom checkbox */
+  /* Similar styling as above, with adjustments for a square shape  */
+  ```
+
+
+## Formatkomponenter
+
+Du kan också formatera formulärfält baserat på deras specifika typ eller enskilda namn. På så sätt får du bättre kontroll över och anpassning av formulärets utseende.
 
 ### Formatering baserad på fälttyp
 
@@ -388,7 +385,7 @@ Du kan använda CSS-väljare för att ange specifika fälttyper och använda for
 * The `data-required` anger om fältet är obligatoriskt eller valfritt.
 * Varje fält har en motsvarande etikett, indataelement och eventuella ytterligare element som platshållare och beskrivningar.
 
-Till exempel:
+**Exempel på CSS-väljare**
 
 ```CSS
 /* Target all text input fields */
@@ -403,7 +400,7 @@ Till exempel:
 }
 ```
 
-### Formatera specifika fälttyper
+### Formatering baserad på fältnamn
 
 Du kan också ange enskilda fält som mål efter namn för att använda unika format.
 
@@ -416,7 +413,7 @@ Du kan också ange enskilda fält som mål efter namn för att använda unika fo
 </div>
 ```
 
-**CSS-väljare**
+**Exempel på CSS-väljare**
 
 ```CSS
 .form-otp input {
@@ -424,6 +421,6 @@ Du kan också ange enskilda fält som mål efter namn för att använda unika fo
 }
 ```
 
-* Väljare: Den här CSS-koden riktar in alla indataelement som finns i ett element som har klassen `form-otp`. Din HTML-struktur följer konventionerna för formulärblocket, vilket innebär att det finns en behållare som är markerad med klassen &quot;form-otp&quot; som innehåller fältet med namnet &quot;otp&quot;.
+Den här CSS-koden riktar in alla indataelement som finns i ett element som har klassen `form-otp`. Formulärets HTML-struktur följer konventionerna för formulärblocket, vilket innebär att det finns en behållare som är markerad med klassen &quot;form-out&quot; som innehåller fältet med namnet &quot;otp&quot;.
 
-* Egenskap och värde: koden gäller `letter-spacing: 2px`. Den här CSS-egenskapen styr mellanrummet mellan enskilda bokstäver i textinnehållet i inmatningsfältet.
+
