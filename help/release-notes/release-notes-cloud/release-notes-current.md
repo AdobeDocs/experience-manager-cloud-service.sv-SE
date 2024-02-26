@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: e2c1d30c035fc1f664efbd15fee977f5488dc5f8
+source-git-commit: 3a86639d9203fff3c72e63baa8d1499b18a4539f
 workflow-type: tm+mt
 source-wordcount: '937'
 ht-degree: 0%
@@ -26,7 +26,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 
 ## Releasedatum {#release-date}
 
-Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2024.1.0) är 25 januari 2024. Nästa version (2024.3.0) är planerad till 28 mars 2024.
+Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2024.1.0) är 25 januari 2024. Nästa funktionsversion (2024.3.0) är planerad till 4 april 2024.
 
 ## Versionsinformation om underhåll {#maintenance}
 
@@ -103,7 +103,7 @@ Real User Monitoring (RUM) Data Service ger en mer exakt återgivning av använd
 
 ### Stöd för Dynatrace {#dynatrace}
 
-Dynatracskunder kan övervaka sin AEM. [Läs om](/help/implementing/cloud-manager/dynatrace.md) för att begära anslutning till din Dynatrace-miljö för övervakning av programprestanda. Observera att New Relic APM, som är tillgängligt för alla kunder, kommer att sluta samla in data om Dynatrace är aktiverat.
+Dynatrace-kunder kan övervaka AEM. [Läs om](/help/implementing/cloud-manager/dynatrace.md) för att begära anslutning till din Dynatrace-miljö för övervakning av programprestanda. Observera att New Relic APM, som är tillgängligt för alla kunder, kommer att sluta samla in data om Dynatrace är aktiverat.
 
 ### RDE-stöd för Front-End-kod med webbplatsteman och webbplatsmallar: Tidigt Adobe-program {#rde-frontend-early-adopter}
 
