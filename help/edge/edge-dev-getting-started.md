@@ -2,7 +2,7 @@
 title: Guiden Komma igång för utvecklare för AEM med Edge Delivery Services
 description: Den här guiden hjälper dig att komma igång med en ny Adobe Experience Manager-webbplats med hjälp av Edge Delivery Services och den universella redigeraren för innehållsutveckling
 feature: Edge Delivery Services
-source-git-commit: 224cfe9853e8974c33b0e53e961a02d54f875a35
+source-git-commit: 58d85886ef04b548c09e3ef9308fe596dd3eda38
 workflow-type: tm+mt
 source-wordcount: '989'
 ht-degree: 0%
@@ -141,7 +141,7 @@ Nu när du har ett GitHub-projekt måste du skapa en ny AEM som projektet kan an
 
    ![Universal Editor](assets/edge-dev-getting-started/universal-editor.png)
 
-Nu kan du redigera webbplatsen med Universal Editor. Se [Dokumentation för Universal Editor](/help/implementing/universal-editor/authoring.md) för mer information.
+Nu kan du redigera webbplatsen med Universal Editor. Se [Dokumentation för Universal Editor](/help/sites-cloud/authoring/universal-editor/authoring.md) för mer information.
 
 ### Publicera din nya webbplats {#publishing}
 

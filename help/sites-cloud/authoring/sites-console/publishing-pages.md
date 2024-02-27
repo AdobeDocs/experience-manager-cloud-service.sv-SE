@@ -2,9 +2,9 @@
 title: Publicera sidor
 description: Lär dig hur du publicerar och avpublicerar sidor med olika mekanismer i AEM.
 exl-id: 89f2363c-7922-4ca5-92cb-cbee6a393ee3
-source-git-commit: 1a4c5e618adaef99d82a00e1118d1a0f8536fc14
+source-git-commit: faac7c803a5145f4207154bfb3c9aa06274bbb86
 workflow-type: tm+mt
-source-wordcount: '1927'
+source-wordcount: '1936'
 ht-degree: 4%
 
 ---
@@ -39,8 +39,9 @@ Du kan stöta på olika termer om publicering när du arbetar med Adobe Experien
 
 Beroende på din plats kan du publicera:
 
-* [Från sidredigeraren](#publishing-from-the-editor)
-* [Från webbplatskonsolen](#publishing-from-the-console)
+* [Från sidredigeraren](#publishing-from-the-page-editor)
+* [Från ](#publishing-from-the-sites-console)
+* [Från den universella redigeraren](/help/sites-cloud/authoring/universal-editor/publishing.md)
 
 >[!NOTE]
 >
@@ -62,9 +63,9 @@ Beroende på din plats kan du publicera:
 >
 > Fler möjligheter finns på **I tid** och **Fråntid** i [Fliken Grundläggande i Sidegenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md#basic)
 
-### Publicera från Redigeraren {#publishing-from-the-editor}
+### Publicera från sidredigeraren {#publishing-from-the-page-editor}
 
-Om du redigerar en sida kan den publiceras direkt från redigeraren.
+Om du redigerar en sida i [sidredigerare,](/help/sites-cloud/authoring/page-editor/introduction.md) kan publiceras direkt från redigeraren.
 
 1. Välj **Sidinformation** -ikonen för att öppna menyn och sedan **Publicera sida** alternativ.
 
@@ -89,15 +90,15 @@ Om du redigerar en sida kan den publiceras direkt från redigeraren.
 
 >[!NOTE]
 >
->Publicering från redigeraren är en ytlig publicering, d.v.s. bara den eller de markerade sidorna publiceras och eventuella underordnade sidor publiceras/publiceras inte.
+>Publicering från sidredigeraren är en ytlig publicering, d.v.s. endast den valda sidan/de markerade sidorna publiceras och eventuella underordnade sidor publiceras/inte.
 
 >[!NOTE]
 >
 >Sidor som används av [alias](/help/sites-cloud/authoring/sites-console/page-properties.md#advanced) i redigeraren kan inte publiceras. Publiceringsalternativen i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
 
-### Publicera från konsolen {#publishing-from-the-console}
+### Publicera från Site Console {#publishing-from-the-sites-console}
 
-I platskonsolen finns det två alternativ för publicering:
+I **Webbplatser** konsol: det finns två alternativ för publicering:
 
 * [Snabbpublicering](#quick-publish)
 * [Hantera publikation](#manage-publication)

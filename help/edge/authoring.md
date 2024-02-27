@@ -3,7 +3,7 @@ title: Skapa innehåll för Edge Delivery Services
 description: Lär dig hur innehållsredigering fungerar med Edge Delivery Services och hur du redigerar AEM innehåll med Edge Delivery Services.
 feature: Edge Delivery Services
 exl-id: 963ff71a-8176-4d9d-8240-dc429405d139
-source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
+source-git-commit: 58d85886ef04b548c09e3ef9308fe596dd3eda38
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
@@ -31,7 +31,7 @@ När du använder Edge Delivery Services med AEM as a Cloud Service är det mest
 
 1. [AEM redigeringsmiljö](/help/sites-cloud/authoring/quick-start.md) används för innehållshantering som att skapa nya sidor, upplevelsefragment, innehållsfragment osv.
    * Alla funktioner i AEM är tillgängliga, t.ex. arbetsflöden, MSM, översättning, startprogram.
-1. [Universell redigerare](/help/implementing/universal-editor/authoring.md) används för att skapa innehåll som hanteras i AEM.
+1. [Universell redigerare](/help/sites-cloud/authoring/universal-editor/authoring.md) används för att skapa innehåll som hanteras i AEM.
    * Universal Editor har ett nytt och modernt gränssnitt för framtagning av material.
    * För redigering återges HTML i AEM men skript, format, ikoner och andra resurser från Edge Delivery Services tas med.
    * Även om Universell redigerare används sparas alla ändringar i AEM.
@@ -52,7 +52,7 @@ Information om blocken kan sedan konfigureras i egenskapsfältet.
 
 ![Konfigurera blockegenskaper](assets/block-properties.png)
 
-Mer information om hur du redigerar i Universal Editor finns i dokumentet [Skapa innehåll med den universella redigeraren.](/help/implementing/universal-editor/authoring.md)
+Mer information om hur du redigerar i Universal Editor finns i dokumentet [Skapa innehåll med den universella redigeraren.](/help/sites-cloud/authoring/universal-editor/authoring.md)
 
 Se [Guiden Komma igång för utvecklare för AEM med Edge Delivery Services](/help/edge/edge-dev-getting-started.md) om du vill lära dig hur du påbörjar ett eget projekt att skapa med AEM och Edge Delivery Services.
 

@@ -2,7 +2,7 @@
 title: Metoder för att skapa innehåll i AEM
 description: Lär dig olika sätt att skapa innehåll i AEM och hur de skiljer sig åt.
 feature: Authoring
-source-git-commit: 85b99fc0b0eb20b24f27d06159a52d4339a3c962
+source-git-commit: faac7c803a5145f4207154bfb3c9aa06274bbb86
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
@@ -49,7 +49,7 @@ Mer information om AEM Content Fragment Editor finns i dokumenten [Hantera inneh
 
 >[!NOTE]
 >
->The *new* Redigeraren som markeras i det här avsnittet är endast tillgänglig på Adobe Experience Manager-as a Cloud Service (AEM) online.
+>The *new* Den redigerare som markeras i det här avsnittet är inte tillgänglig vid lokal utveckling för AEM as a Cloud Service.
 >
 >The [*original* Innehållsfragmentsredigerare](/help/assets/content-fragments/content-fragments-variations.md) är också tillgängligt.
 
@@ -61,11 +61,11 @@ Universal Editor är ett modernt användargränssnitt där du kan skapa AEM på 
 
 Den universella redigeraren nås via Sites-konsolen i AEM, men har den kraft och innehållsmedvetna flexibilitet som krävs för att skapa inte bara ditt AEM utan även korrekt instrumenterat externt innehåll.
 
-Läs mer om Universal Editor i dokumentet [Skapa innehåll med den universella redigeraren.](/help/implementing/universal-editor/authoring.md)
+Läs mer om Universal Editor i dokumentet [Skapa innehåll med den universella redigeraren.](/help/sites-cloud/authoring/universal-editor/authoring.md)
 
 ## Dokumentbaserad redigering {#document-based}
 
-Om du använder Edge Delivery-tjänster kan du välja att redigera ditt innehåll som vanliga dokument som Microsoft Word eller Google Docs helt utanför AEM konsol.
+Om du använder Edge Delivery-tjänsterna kan du välja att redigera ditt innehåll som vanliga dokument som Microsoft Word eller Google Docs helt utanför [AEM **Webbplatser** konsol.](/help/sites-cloud/authoring/sites-console/introduction.md)
 
 ![Redigera dokumentbaserat innehåll](assets/authoring-methods-document.jpg)
 

@@ -1,9 +1,9 @@
 ---
 title: AEM sidredigeraren
 description: Den AEM sidredigeraren är ett kraftfullt verktyg för att skapa innehåll.
-source-git-commit: f11635b799a9154ff3fcaac5faca429a12f7a62b
+source-git-commit: 91ce6a0c880436327f4dd333a2eb3d36a4e89a4d
 workflow-type: tm+mt
-source-wordcount: '1400'
+source-wordcount: '1431'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,11 @@ ht-degree: 0%
 
 # AEM sidredigeraren {#editing-page-content}
 
-När sidan har skapats i **Webbplatser** konsolen kan du redigera innehållet på sidan med AEM sidredigerare, ett kraftfullt verktyg för att skapa innehåll.
+När sidan har skapats i [**Webbplatser** konsol,](/help/sites-cloud/authoring/sites-console/introduction.md) Du kan redigera innehållet på sidan med AEM sidredigeraren, ett kraftfullt verktyg för att skapa innehåll.
+
+>[!NOTE]
+>
+>När du redigerar en sida i [**Webbplatser** konsol,](/help/sites-cloud/authoring/sites-console/introduction.md) konsolen öppnar den redigerare som passar sidans [mall:](/help/sites-cloud/authoring/sites-console/templates.md) antingen sidredigeraren som beskrivs i det här dokumentet, eller [Universal Editor.](/help/sites-cloud/authoring/universal-editor/authoring.md)
 
 >[!NOTE]
 >

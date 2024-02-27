@@ -1,9 +1,9 @@
 ---
 title: Skapa sidor
 description: Lär dig hur du skapar nya sidor för din webbplats med hjälp av webbplatskonsolen.
-source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
+source-git-commit: 0ba8faaa14d09d09fce5846bfff77287bfbd94c7
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Lär dig hur du skapar nya sidor för din webbplats med **Webbplatser** konsol.
 
 Ditt konto behöver rätt behörighet för att skapa sidor.
 
-Om du råkar ut för problem rekommenderar vi att du kontaktar systemadministratören.
+Kontakta systemadministratören om du råkar ut för problem.
 
 ## Skapa en ny sida {#creating-a-new-page}
 
@@ -33,7 +33,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
    ![Skapa en sida](/help/sites-cloud/authoring/assets/organizing-create-page.png)
 
-1. Från det första steget i guiden kan du antingen:
+1. I det första steget i guiden kan du antingen:
 
    * Välj den mall som du vill använda för att skapa den nya sidan och välj sedan **Nästa** för att fortsätta.
 
@@ -67,18 +67,22 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
    ![Ange sidrubrik](/help/sites-cloud/authoring/assets/organizing-create-page-title.png)
 
-1. Använd **Skapa** för att slutföra processen och skapa en ny sida. Bekräftelsedialogrutan frågar om du vill **Öppna** sidan omedelbart eller återgå till konsolen (**Klar**):
+1. Tryck eller klicka **Skapa** för att slutföra processen och skapa en ny sida. Bekräftelsedialogrutan frågar om du vill **Öppna** sidan omedelbart eller återgå till konsolen (**Klar**). Välj ett alternativ för att avsluta processen med att skapa sidan.
 
    ![Sidskapandet lyckades](/help/sites-cloud/authoring/assets/organizing-create-page-success.png)
 
-   >[!NOTE]
-   >
-   >Om du skapar en sida med ett namn som redan finns på den platsen, genereras automatiskt en variant av namnet genom att en siffra läggs till. Om `beach` finns redan, en ny sida blir `beach1`.
+   * Om du väljer **Öppna**, **Webbplatser** konsolen öppnar rätt redigerare baserat på den nya sidans mall, antingen:
+      * [Sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md)
+      * [Universell redigerare](/help/sites-cloud/authoring/universal-editor/authoring.md)
 
-1. Om du återgår till konsolen kan du se din nya sida:
+Om du återgår till konsolen kan du se din nya sida:
 
-   ![Resultat av ny sida](/help/sites-cloud/authoring/assets/organizing-create-page-result.png)
+![Resultat av ny sida](/help/sites-cloud/authoring/assets/organizing-create-page-result.png)
+
+>[!NOTE]
+>
+>Om du skapar en sida med ett namn som redan finns på samma plats, skapar AEM sidan med en variant av det namn som anges genom att lägga till en siffra. Om `beach` finns redan, blir den nya sidan `beach1`.
 
 >[!CAUTION]
 >
->När en sida har skapats kan dess mall inte ändras - såvida du inte [skapa en startsida med en ny mall](/help/sites-cloud/authoring/launches/creating.md#create-launch-with-new-template)men befintligt innehåll går förlorat.
+>När en sida har skapats kan dess mall inte ändras såvida du inte [skapa en startsida med en ny mall](/help/sites-cloud/authoring/launches/creating.md#create-launch-with-new-template)men befintligt innehåll går förlorat.

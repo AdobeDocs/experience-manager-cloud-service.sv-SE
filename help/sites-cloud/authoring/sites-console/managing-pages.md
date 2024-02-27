@@ -1,9 +1,9 @@
 ---
 title: Hantera sidor
 description: Lär dig hur du hanterar webbplatsens sidor i AEM, inklusive flyttning, kopiering och borttagning.
-source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
+source-git-commit: faac7c803a5145f4207154bfb3c9aa06274bbb86
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1271'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,9 @@ Efter [skapa en sida](/help/sites-cloud/authoring/sites-console/creating-pages.m
 
    ![Knappen Redigera](/help/sites-cloud/authoring/assets/edit.png)
 
-1. Sidan öppnas och du kan [redigera sidan](/help/sites-cloud/authoring/page-editor/edit-content.md) efter behov.
+1. Sidan öppnas och du kan redigera sidan efter behov. Beroende på hur den valda sidan skapades visas **Redigera** öppnas rätt redigerare.
+   * [Page Editor](/help/sites-cloud/authoring/page-editor/introduction.md) - För sidor som skapats med AEM sidredigeraren
+   * [Universal Editor](/help/sites-cloud/authoring/universal-editor/authoring.md) - För sidor som skapats med den universella redigeraren
 
 ## Kopiera och klistra in en sida {#copying-and-pasting-a-page}
 

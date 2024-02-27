@@ -1,9 +1,9 @@
 ---
 title: Webbplatskonsolen
 description: Lär dig hur du använder webbplatskonsolen för att hantera och ordna dina AEM sidor.
-source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
+source-git-commit: 91ce6a0c880436327f4dd333a2eb3d36a4e89a4d
 workflow-type: tm+mt
-source-wordcount: '1596'
+source-wordcount: '1628'
 ht-degree: 3%
 
 ---
@@ -231,16 +231,18 @@ När en resurs har valts kan du utföra olika åtgärder för det valda objektet
 
 Verktygsfältet Åtgärder visas bara när en resurs har valts i konsolen. Den åtgärd som är tillgänglig i verktygsfältet Åtgärder ändras så att den återspeglar de åtgärder du kan vidta för de valda objekten. De vanligaste åtgärderna är:
 
-* [Skapa](#create-action) - Skapa nytt innehåll eller innehållsrelaterade åtgärder
-* [Redigera](/help/sites-cloud/authoring/page-editor/introduction.md) - Redigera sidan
-* [Egenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md) - Öppnar fönstret för sidegenskaper
-* [Lås](/help/sites-cloud/authoring/sites-console/managing-pages.md#locking-a-page) - Lås en sida för att förhindra att andra ändrar den
-* [Kopiera](/help/sites-cloud/authoring/sites-console/managing-pages.md#copying-and-pasting-a-page) - Kopiera en sida
-* [Flytta](/help/sites-cloud/authoring/sites-console/managing-pages.md#moving-or-renaming-a-page) - Flytta eller byta namn på en sida
-* [Snabbpublicering](/help/sites-cloud/authoring/sites-console/publishing-pages.md#quick-publish) - Publicera en eller flera sidor direkt
-* [Hantera publikation](/help/sites-cloud/authoring/sites-console/publishing-pages.md#manage-publication) - Schemalägg en eller flera sidor för publicering
-* [Återställ](/help/sites-cloud/authoring/sites-console/page-versions.md#restore-version) - Återställa en version av en sida eller ett sidträd
-* [Ta bort](/help/sites-cloud/authoring/sites-console/managing-pages.md#deleting-a-page) - Ta bort en eller flera sidor
+* [**Skapa**](#create-action) - Skapa nytt innehåll eller innehållsrelaterade åtgärder
+* **Redigera** - Beroende på hur den valda sidan skapades kan **Redigera** öppnas rätt redigerare.
+   * [Page Editor](/help/sites-cloud/authoring/page-editor/introduction.md) - För sidor som skapats med AEM sidredigeraren
+   * [Universal Editor](/help/sites-cloud/authoring/universal-editor/authoring.md) - För sidor som skapats med den universella redigeraren
+* [**Egenskaper**](/help/sites-cloud/authoring/sites-console/page-properties.md) - Öppnar fönstret för sidegenskaper
+* [**Lås**](/help/sites-cloud/authoring/sites-console/managing-pages.md#locking-a-page) - Lås en sida för att förhindra att andra ändrar den
+* [**Kopiera**](/help/sites-cloud/authoring/sites-console/managing-pages.md#copying-and-pasting-a-page) - Kopiera en sida
+* [**Flytta**](/help/sites-cloud/authoring/sites-console/managing-pages.md#moving-or-renaming-a-page) - Flytta eller byta namn på en sida
+* [**Snabbpublicering**](/help/sites-cloud/authoring/sites-console/publishing-pages.md#quick-publish) - Publicera en eller flera sidor direkt
+* [**Hantera publikation**](/help/sites-cloud/authoring/sites-console/publishing-pages.md#manage-publication) - Schemalägg en eller flera sidor för publicering
+* [**Återställ**](/help/sites-cloud/authoring/sites-console/page-versions.md#restore-version) - Återställa en version av en sida eller ett sidträd
+* [**Ta bort**](/help/sites-cloud/authoring/sites-console/managing-pages.md#deleting-a-page) - Ta bort en eller flera sidor
 
 På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt bli längre än det tillgängliga utrymmet. När detta inträffar visas ytterligare alternativ. Klicka eller peka på ellipsen (de tre punkterna eller **...**) öppnar en nedrullningsbar väljare med alla återstående åtgärder.
 
@@ -248,13 +250,13 @@ På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt 
 
 ### Skapa åtgärd {#create-action}
 
-Åtgärden Skapa har liknande alternativ som knappen Skapa verktygsfält för att skapa nya sidor och liknande objekt.
+Skapa-åtgärden har liknande alternativ som [**Skapa** verktygsfältsknapp](#create-button) för att skapa nya sidor och liknande objekt.
 
 Dessutom kan man skapa sidrelaterade åtgärder.
 
-* [Arbetsflöde](/help/sites-cloud/authoring/workflows/overview.md) - Tillämpa ett arbetsflöde på en sida
-* [Version](/help/sites-cloud/authoring/sites-console/page-versions.md) - Skapa en sidversion
+* [**Arbetsflöde**](/help/sites-cloud/authoring/workflows/overview.md) - Tillämpa ett arbetsflöde på en sida
+* [**Version**](/help/sites-cloud/authoring/sites-console/page-versions.md) - Skapa en sidversion
 
 ## Mallar
 
-Du kan enkelt se vilken mall sidan baseras på när du markerar sidan i [kolumnvyn](/help/sites-cloud/authoring/basic-handling.md#column-view) eller [listvyn](/help/sites-cloud/authoring/basic-handling.md#list-view).
+Du kan enkelt se vilken mall sidan baseras på när du markerar sidan i [**kolumnvyn**](/help/sites-cloud/authoring/basic-handling.md#column-view) eller [**listvyn**](/help/sites-cloud/authoring/basic-handling.md#list-view).

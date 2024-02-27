@@ -2,7 +2,7 @@
 title: Komma igång med Universal Editor i AEM
 description: Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
-source-git-commit: 3dff6fa71c29da70daba80176d2fe51ef1e05200
+source-git-commit: 799ca20f8787afffd783c93a2480e096fffb1566
 workflow-type: tm+mt
 source-wordcount: '921'
 ht-degree: 0%
@@ -200,15 +200,15 @@ Om du bara vill aktivera vissa tillägg för en sida kan du ange detta i en meta
 
 Din app är nu instrumenterad för att använda den universella redigeraren!
 
-Se [Skapa innehåll med den universella redigeraren](authoring.md) om du vill lära dig hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
+Se [Skapa innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md) om du vill lära dig hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
 
 ## Ytterligare resurser {#additional-resources}
 
 Mer information om Universal Editor finns i de här dokumenten.
 
 * [Introduktion till Universal Editor](introduction.md) - Lär dig hur den universella redigeraren möjliggör redigering av alla aspekter av innehåll i alla implementeringar, så att du kan leverera enastående upplevelser, öka innehållets hastighet och skapa en toppmodern utvecklarupplevelse.
-* [Skapa innehåll med den universella redigeraren](authoring.md) - Lär dig hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
-* [Publicera innehåll med den universella redigeraren](publishing.md) - Lär dig hur den universella redigeraren publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
+* [Skapa innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md) - Lär dig hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
+* [Publicera innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/publishing.md) - Lär dig hur den universella redigeraren publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
 * [Universal Editor Architecture](architecture.md) - Lär dig mer om arkitekturen i den universella redigeraren och hur data flödar mellan tjänster och lager.
 * [Attribut och typer](attributes-types.md) - Läs mer om de dataattribut och datatyper som krävs för den universella redigeraren.
 * [Autentisering av universell redigerare](authentication.md) - Lär dig hur den universella redigeraren autentiseras.
