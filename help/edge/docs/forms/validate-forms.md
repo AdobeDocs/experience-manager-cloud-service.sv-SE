@@ -4,15 +4,29 @@ description: Skapa kraftfulla formulär snabbare med kalkylblad och formulärblo
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 0604838311bb9ab195789fad755b0910e09519fd
+source-git-commit: 78d40574e6fea8dde22414e43fd77215b9e7d2a1
 workflow-type: tm+mt
-source-wordcount: '70'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---
 
 
-# Mastering Form Block Field Validings for AEM Forms Edge Delivery Service
+# Lägga till valideringar i formulärfält
+
+Formulärblocket har inbyggda valideringsfunktioner. Dessa valideringar används automatiskt i moderna webbläsare baserat på den valda fälttypen och de ytterligare egenskaper du anger.
+
+## Fälttyper och validering
+
+Formulärblocket har stöd för en mängd olika [Indatatyper för HTML-5](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types), inklusive text, e-post, nummer, datum med mera. Den rymmer också [textområde](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea), urval och fältuppsättning tillsammans med omfattande indatavalideringsfunktioner som är inbyggda i HTML-5.
+
+använder fälttyper i HTML för att definiera vilken typ av data som en användare kan ange. Olika fälttyper har olika inbyggda valideringsregler:
+
+E-post: Den här fälttypen validerar automatiskt användarindata mot ett vanligt e-postadressformat. Användare som anger en ogiltig e-postadress får ett felmeddelande.
+Nummer: Den här fälttypen tillåter endast numeriska indata. Användare som skriver icke-numeriska tecken får ett fel.
+Datum: Den här fälttypen validerar användarindata mot ett standarddatumformat. Datum utanför ett rimligt intervall kan också markeras som ogiltiga.
+URL: Den här fälttypen validerar användarindata mot ett giltigt URL-format. Användare som anger en ogiltig URL får ett felmeddelande.
+Tel: Den här fälttypen är särskilt utformad för telefonnummer och kan utlösa validering baserad på specifika landformat (stöds inte överallt).
 
 
 ## Se mer

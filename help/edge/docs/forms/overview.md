@@ -4,9 +4,9 @@ description: AEM Forms Edge Delivery Service har tagits fram för bästa prestan
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 4a3ebcf7985253ebca24e90ab57ae7eaf3e924e9
+source-git-commit: 78d40574e6fea8dde22414e43fd77215b9e7d2a1
 workflow-type: tm+mt
-source-wordcount: '422'
+source-wordcount: '413'
 ht-degree: 0%
 
 ---
@@ -16,18 +16,30 @@ ht-degree: 0%
 
 AEM Forms Edge Delivery Service är en sammansättningsbar tjänst från Adobe som gör att du kan skapa och leverera effektiva webbformulär. Du kan använda tjänsten för att:
 
-* **Skapa visuellt slagkraftiga formulär**: Gör intryck på den bleka, kakformsdesignen och fånga upp användarna med dynamiska, moderna former som speglar er varumärkesidentitet. Utnyttja färdiga komponenter eller skapa egna komponenter för att förverkliga din vision snabbt och enkelt.
+* **Captivate-användare med enastående formulär**: Skapa enkelt komplexa och engagerande formulär med ett bibliotek med färdiga komponenter. Integrera enkelt reCAPTCHA, skicka formulär direkt till e-post och möjliggör smidiga filöverföringar för säkra lagringslösningar som Sharepoint, Azure Storage och Amazon S3. Du kan till och med skapa egna skräddarsydda blankettkomponenter för att förverkliga din unika vision.
+
+  ![Registreringsformulär](/help/edge/assets/enrollment-form.png)
 
 * **Skapa formulär med perfekt fyr**: Bygg formulär som läses in och återges snabbt, även på långsamma internetanslutningar. Snabbare inläsningstider och optimerad användarupplevelse bidrar till snabbare ifyllnad av formulär och förbättrad konverteringsgrad.
 
-* **Förenkla framtagning och inlämning**: Utnyttja de redigeringsverktyg du är van vid, t.ex. Microsoft Excel eller Google Sheets (dokumentbaserad redigering), JSON-filer (Headless authoring) eller Adaptive Forms editor (WYSIWYG), när du utformar och skapar formulären. Tjänsten är fristående från innehållskällan och ger flexibilitet när det gäller att skapa innehåll genom att du kan använda de redigeringsverktyg du föredrar.
+  ![perfekt fyr för dina formulär](/help/edge/assets/lighthouse-forms.png)
+
+* **Skapa digitala registreringsupplevelser med valfria verktyg**: Öka redigeringseffektiviteten genom att frikoppla innehållskällor. När du är klar kan du använda både AEM och dokumentbaserad redigering. Det innebär att du kan arbeta med flera innehållskällor på samma webbplats och använda de redigeringsverktyg du föredrar, till exempel Microsoft Excel, Google Sheets eller AEM Editors.
 
   ![Utvecklingsverktyg för Edge Delivery-formulär](/help/edge/assets/edge-delivery-forms-authoring-tools.png)
 
-  >[!NOTE]
-  >
-  >
-  > WYSIWYG-redigeringsfunktionerna är tillgängliga i ett program för tidig användning. Du kan skriva till aem-forms-early-adopter-program@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen.
+<!--
+* **Measure customer impact and deliver effective forms**: Use our RUM dashboards to visualize form performance and identify areas for improvement. Experiment with different versions and continuously optimize your forms for maximum effectiveness, ensuring you capture the data you need and drive better business outcomes.
+
+* **Use Integrated services:** Use integrated services to streamline and empowers your users with a one-stop shop for managing their digital enrollment journeys. Use e-signatures, automated workflows, document of record (DoR), and seamless data integration, simplify the entire digital enrollment process, accelerate approvals, and optimizes your business workflows. 
+
+    
+>[!NOTE]
+    >
+    >
+    > WYSIWYG authoring capability, integrated services, and customer impact measuring features are available under early adopter program. You can write to aem-forms-early-adopter-program@adobe.com from your official email id to join the early adopter program and request access to the capability.
+
+    -->
 
 ## Börja med grunderna
 
@@ -57,18 +69,26 @@ AEM Forms Edge Delivery Service är en sammansättningsbar tjänst från Adobe s
         <p>Skapa formulär som läses in och återges snabbt och automatiskt flödar om på mobila enheter.</p>
     </div>
     <div class="card-container">
-        <a href="/help/edge/docs/forms/validate-forms.md">
-            <img src="/help/edge/assets/smock_condition_18_n.svg" alt="Lägga till valideringar i formulärfält" style="border-radius: 5px;"> </b>
-            <br><b style="margin-top: 5px;">Använd fältvalideringar</b>
+        <a href="/help/edge/docs/forms/create-forms.md#manually-configure-a-spreadsheet-to-accept-data">   
+            <img src="/help/edge/assets/smock_platformdatamapping_18_n.svg" alt="Skicka formulär" alt="Använd formulärfragment i ett EDS-formulär" style="border-radius: 5px;"> </b>
+            <br><b style="margin-top: 5px;">Skicka formulär till kalkylblad</b>
         </a>
-        <p>Minska antalet fel och frustration genom att kontrollera indata i blanketterna för korrekt formatering.</p>
-    </div>    <div class="card-container">
+        <p>Skicka formulär direkt till Microsoft Excel- eller Google-ark.</p>
+    </div>
+     <div class="card-container">
         <a href="/help/edge/docs/forms/style-theme-forms.md">
             <img src="/help/edge/assets/smock_imageautomode_18_N.svg" alt="Använda format eller teman i ett formulär" style="border-radius: 5px;"> </b>
             <br><b style="margin-top: 5px;">Anpassa ett tema</b>
         </a>
         <p>Skapa en enhetlig varumärkesbild genom att använda samma tema i alla formulär.</p>
     </div>
+      <div class="card-container">
+        <a href="/help/edge/docs/forms/validate-forms.md">
+            <img src="/help/edge/assets/smock_condition_18_n.svg" alt="Lägga till valideringar i formulärfält" style="border-radius: 5px;"> </b>
+            <br><b style="margin-top: 5px;">Använd fältvalideringar</b>
+        </a>
+        <p>Minska antalet fel och frustration genom att kontrollera indata i blanketterna för korrekt formatering.</p>
+    </div> 
     <div class="card-container">
         <a href="/help/edge/docs/forms/translate-forms.md">  
             <img src="/help/edge/assets/smock_abc_18_n.svg" alt="Översätta ett EDS-formulär" style="border-radius: 5px;"> </b>
@@ -104,13 +124,7 @@ AEM Forms Edge Delivery Service är en sammansättningsbar tjänst från Adobe s
         </a>
         <p>Använd OTB reCAPTCHA-integrering för robust skydd för skräppost och robotar.</p>
     </div>
-    <div class="card-container">
-        <a href="/help/edge/docs/forms/create-forms.md#manually-configure-a-spreadsheet-to-accept-data">   
-            <img src="/help/edge/assets/smock_platformdatamapping_18_n.svg" alt="Skicka formulär" alt="Använd formulärfragment i ett EDS-formulär" style="border-radius: 5px;"> </b>
-            <br><b style="margin-top: 5px;">Skicka formulär till kalkylblad</b>
-        </a>
-        <p>Skicka formulär direkt till Microsoft Excel- eller Google-ark.</p>
-    </div>
+
 </div>
 
 

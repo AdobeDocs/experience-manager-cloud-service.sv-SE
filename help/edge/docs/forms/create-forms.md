@@ -4,9 +4,9 @@ description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery, doku
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 4a3ebcf7985253ebca24e90ab57ae7eaf3e924e9
+source-git-commit: 78d40574e6fea8dde22414e43fd77215b9e7d2a1
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '994'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,8 @@ Kontrollera att du har utfört följande steg innan du börjar:
 
 * Konfigurera Edge Delivery Service (EDS) Github-projekt med hjälp AEM boilerplate och klona motsvarande Github-databas på den lokala datorn. Se [självstudiekurs för utvecklare](https://www.aem.live/developer/tutorial) för mer information. I det här dokumentet kallas den lokala mappen i Edge Delivery Service-projektet (EDS) `[EDS Project repository]` .
 * Klona [Forms Block-arkiv](https://github.com/adobe/afb) på din lokala dator. Den innehåller koden som återger formuläret på en EDS-webbsida. I det här dokumentet kallas den lokala mappen i din Forms-blockdatabas för `[Forms Block repository]`.
-* Se till att du har tillgång till Google Sheets eller Microsoft SharePoint.
+* Se till att du har tillgång till Google Sheets eller Microsoft SharePoint. Information om hur du konfigurerar Microsoft SharePoint som innehållskälla finns i [Så här använder du Sharepoint](https://www.aem.live/docs/setup-customer-sharepoint)
+
 
 
 ## Skapa ett formulär
