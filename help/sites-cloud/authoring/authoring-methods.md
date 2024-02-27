@@ -2,9 +2,9 @@
 title: Metoder för att skapa innehåll i AEM
 description: Lär dig olika sätt att skapa innehåll i AEM och hur de skiljer sig åt.
 feature: Authoring
-source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
+source-git-commit: 85b99fc0b0eb20b24f27d06159a52d4339a3c962
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,13 @@ AEM Content Fragment Editor är den självklara redigeraren för att skapa rubri
 
 AEM Content Fragment Editor har ett tydligt gränssnitt för att skapa och hantera strukturerat innehåll, idealiskt för headless-leverans.
 
-Mer information om AEM Content Fragment Editor finns i dokumentet [Hantera innehållsfragment.](/help/assets/content-fragments/content-fragments-managing.md)
+Mer information om AEM Content Fragment Editor finns i dokumenten [Hantera innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md) och [Skapa innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md).
+
+>[!NOTE]
+>
+>The *new* Redigeraren som markeras i det här avsnittet är endast tillgänglig på Adobe Experience Manager-as a Cloud Service (AEM) online.
+>
+>The [*original* Innehållsfragmentsredigerare](/help/assets/content-fragments/content-fragments-variations.md) är också tillgängligt.
 
 ## Universal Editor {#universal-editor}
 
