@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: b8d729ca384c4ebd7a74f2b6e7280bf6cff2e404
+source-git-commit: 5786283b75f28d594aea923a6d3490a9582a73a9
 workflow-type: tm+mt
-source-wordcount: '4714'
+source-wordcount: '4721'
 ht-degree: 3%
 
 ---
@@ -178,6 +178,7 @@ ht-degree: 3%
    + [OAuth2-stöd för e-posttjänsten](/help/security/oauth2-support-for-mail-service.md)
    + [Trafikfilterregler inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md)
    + [AEM as a Cloud Service säkerhetsfrågor](/help/security/security-considerations.md)
+   + [Borttagning av JWT-autentiseringsuppgifter i Adobe Developer Console](/help/security/jwt-credentials-deprecation-in-adobe-developer-console.md)
 + Introduktion till {#onboarding}
    + [Börja här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html)
    + Onboardresa {#journey}
