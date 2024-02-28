@@ -1,13 +1,17 @@
 ---
-description: Den här självstudiekursen innehåller all information om komponenter i EDS.
-title: Formulärkomponenter som stöds i formulärblock - självstudiekurs för utvecklare
+title: AEM Forms Edge Delivery Service Form Components
+description: AEM Forms Edge Delivery Service har tagits fram för bästa prestanda och ger er möjlighet att förutse framtiden för smidig datainsamling och användarengagemang. I artikeln listas alla formulärkomponenter som är tillgängliga i rutan för EDD-formulär.
 feature: Edge Delivery Services
-source-git-commit: 78d40574e6fea8dde22414e43fd77215b9e7d2a1
+hide: true
+hidefromtoc: true
+source-git-commit: 1dc4915f0b149ef67dfa22c8d4c6be7538170d38
 workflow-type: tm+mt
-source-wordcount: '845'
+source-wordcount: '871'
 ht-degree: 0%
 
 ---
+
+
 
 
 # HTML-komponenter som stöds i Form Block Edge Delivery
