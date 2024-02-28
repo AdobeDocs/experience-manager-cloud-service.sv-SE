@@ -3,9 +3,10 @@ title: Hur konfigurerar jag en lokal utvecklingsmiljö för AEM Forms?
 description: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
 role: Admin, Developer, User
 feature: Adaptive Forms
-source-git-commit: 58325cccf218eb2176868879842a795d1c91d8a6
+exl-id: 12877a77-094f-492a-af58-cffafecf79ae
+source-git-commit: 1ec17aebe4eb003b24f5036288a8836aabddb77a
 workflow-type: tm+mt
-source-wordcount: '2676'
+source-wordcount: '2718'
 ht-degree: 0%
 
 ---
@@ -129,7 +130,12 @@ Adobe Experience Manager Forms as a Cloud Service funktionsarkiv innehåller ver
 
 1. Navigera till katalogen crx-quickstart/install. Om mappen inte finns skapar du den.
 
-1. Stoppa AEM-instansen genom att placera [!DNL AEM Forms] tilläggsarkiv, `aem-forms-addon-<version>.far`, i installationsmappen och starta om instansen.
+1. Stoppa AEM-instansen genom att placera [!DNL AEM Forms] tilläggsarkiv, `aem-forms-addon-<version>.far`, i installationsmappen.
+1. Gå till det aktiva kommandofönstret och tryck på `Ctrl + C` för att starta om SDK.
+
+   >[!NOTE]
+   >
+   > Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
 
 ### Konfigurera användare och behörigheter {#configure-users-and-permissions}
 
@@ -242,7 +248,7 @@ Använd det här projektet för att skapa Adaptiv Forms, distribuera konfigurati
 >[!NOTE]
 >
 > Installera AEM Archetype version 30 eller senare för att hämta och använda Microsoft® Dynamics 365 och Salesforce Form Data Models med AEM Forms as a Cloud Service.
-Konfigurera AEM Archetype version 32 eller senare för att få tillgång till och använda temana Tranquil, Urbane och Ultramarine med AEM Forms as a Cloud Service.
+> Konfigurera AEM Archetype version 32 eller senare för att få tillgång till och använda temana Tranquil, Urbane och Ultramarine med AEM Forms as a Cloud Service.
 
 Så här ställer du in projektet:
 
@@ -269,7 +275,7 @@ After the repository is cloned, [integrate your Git repo with Cloud Manager](htt
 
      >[!WARNING]
      >
-     * När du skapar ett Arketype-projekt med version 45 är [AEM Archetype-projektmapp]/pom.xml ställer först in versionen för formulärets kärnkomponenter till 2.0.64. Innan du bygger eller driftsätter Archetype-projektet ska du uppdatera formulärkärnkomponentens version till 2.0.62.
+     >* När du skapar ett Arketype-projekt med version 45 är [AEM Archetype-projektmapp]/pom.xml ställer först in versionen för formulärets kärnkomponenter till 2.0.64. Innan du bygger eller driftsätter Archetype-projektet ska du uppdatera formulärkärnkomponentens version till 2.0.62.
 
 1. Distribuera projektet till din lokala utvecklingsmiljö. Du kan använda följande kommando för att distribuera till den lokala utvecklingsmiljön
 
