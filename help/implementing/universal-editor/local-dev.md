@@ -2,9 +2,9 @@
 title: Local AEM Development with the Universal Editor
 description: Läs om hur den universella redigeraren stöder redigering i lokala AEM för utvecklingsändamål.
 exl-id: ba1bf015-7768-4129-8372-adfb86e5a120
-source-git-commit: 16f2922a3745f9eb72f7070c30134e5149eb78ce
+source-git-commit: bbb7e7d9023f8326980196923bfab77c3968ead4
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '699'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,13 @@ Läs om hur den universella redigeraren stöder redigering i lokala AEM för utv
 
 ## Ökning {#overview}
 
-Det här dokumentet förklarar hur du kör AEM i HTTPS tillsammans med en lokal kopia av Universal Editor-tjänsten så att du kan utveckla lokalt på AEM med Universal Editor.
+Universal Editor-tjänsten är den som binder Universal Editor och serverdelssystemet. Om du vill kunna utveckla lokalt för den universella redigeraren måste du köra en lokal kopia av den universella redigeringstjänsten. Detta beror på:
+
+* Adobe officiella universell redigeringstjänst finns på en global värdserver och din lokala AEM måste vara exponerad för Internet.
+* När du utvecklar med en lokal AEM SDK går det inte att komma åt Adobe universella redigeringstjänst från Internet.
+* Om din AEM har IP-begränsningar och Adobe Universal Editor-tjänsten inte har ett definierat IP-intervall kan du själv vara värd för den.
+
+I det här dokumentet förklaras hur du kör AEM i HTTPS tillsammans med en lokal kopia av Universal Editor-tjänsten så att du kan utveckla lokalt på AEM för användning med Universal Editor.
 
 ## Konfigurera AEM som ska köras på HTTPS {#aem-https}
 
@@ -26,13 +32,13 @@ I en yttre ram som skyddas med HTTPS går det inte att läsa in en osäker HTTP-
 
 För att göra detta måste du konfigurera AEM för att köra HTTPS. I utvecklingssyfte kan du använda självsignerade certifikat.
 
-Se det här dokumentet om hur du konfigurerar AEM som körs på HTTPS med ett självsignerat certifikat som du kan använda.
+[Se det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html) om hur du konfigurerar AEM som körs på HTTPS med ett självsignerat certifikat som du kan använda.
 
 ## Installera Universal Editor-tjänsten {#install-ue-service}
 
-Universal Editor-tjänsten är den som binder Universal Editor och serverdelssystemet. Eftersom den officiella universella redigeringstjänsten finns på en global värd måste den lokala AEM exponeras för Internet. Du kan undvika detta genom att köra en lokal kopia av Universal Editor-tjänsten.
+Den universella redigeringstjänsten är inte en fullständig kopia av den universella redigeraren, utan bara en delmängd av dess funktioner för att säkerställa att samtal från den lokala AEM inte dirigeras över Internet, utan från en definierad slutpunkt som du kontrollerar.
 
-[NodeJS version 16](https://nodejs.org/en/download/releases) krävs för att köra en lokal kopia av Universal Editor-tjänsten
+[NodeJS version 16](https://nodejs.org/en/download/releases) krävs för att köra en lokal kopia av Universal Editor-tjänsten.
 
 Tjänsten Universal Editor distribueras direkt av AEM Engineering. Kontakta teknikern i VIP program för en lokal kopia.
 
@@ -98,6 +104,12 @@ För att en sida ska kunna redigeras med din lokala Universal Editor-tjänst må
 
 När du väl har angett det ska du se varje anrop till innehållsuppdatering gå till `https://localhost:8000` i stället för standardtjänsten Universal Editor.
 
+>[!NOTE]
+>
+>Försöker få direktåtkomst `https://localhost:8000` resulterar i `404` fel. Detta är förväntat beteende.
+>
+>Om du vill testa åtkomsten till den lokala Universal Editor-tjänsten använder du `https://localhost:8000/corslib/LATEST`. Se [nästa avsnitt](#editing) för mer information.
+
 >[!TIP]
 >
 >Mer information om hur sidorna är instrumenterade för att använda den globala redigeringstjänsten finns i dokumentet [Komma igång med Universal Editor i AEM](/help/implementing/universal-editor/getting-started.md#instrument-page)
@@ -106,6 +118,6 @@ När du väl har angett det ska du se varje anrop till innehållsuppdatering gå
 
 Med [Universell redigeringstjänst som körs lokalt](#running-ue) och [Innehållssida som är instrumenterad för att använda den lokala tjänsten.](#using-loca-ue) du kan nu starta redigeraren.
 
-1. Öppna webbläsaren för att `https://localhost:8000/`.
+1. Öppna webbläsaren för att `https://localhost:8000/corslib/LATEST`.
 1. Be webbläsaren godkänna [ditt självsignerade certifikat.](#ue-https)
 1. När det självsignerade certifikatet är betrott kan du redigera sidan med din lokala Universal Editor-tjänst.
