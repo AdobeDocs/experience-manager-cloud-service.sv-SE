@@ -2,12 +2,13 @@
 title: Åtkomst till databaser
 description: Lär dig hur du får åtkomst till och hanterar din Git-databas med hjälp av Git-kontohantering för självbetjäning från Cloud Manager.
 exl-id: 0c0671a3-e400-46f3-ad86-166a6cfdd44b
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: 1b24fa084577f2ba0dc718ee35d12e42ac9d609c
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
+
 
 # Åtkomst till databaser {#accessing-repos}
 
@@ -40,3 +41,9 @@ The **Åtkomst till svarsinformation** finns även på **Icke-produktion** flike
 >[!NOTE]
 >
 >The **Åtkomst till svarsinformation** alternativet är synligt för användare med **Utvecklare** eller **Distributionshanteraren** roller.
+
+## Återkalla ett åtkomstlösenord {#revoke-password}
+
+Du kan återkalla ett lösenord när som helst. Gör så här: [skapa en supportbiljett för den här förfrågan.](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;support-tab=home#support)
+
+Biljetten kommer att behandlas med hög prioritet och bör återkallas inom en dag.
