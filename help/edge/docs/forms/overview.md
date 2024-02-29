@@ -4,7 +4,7 @@ description: AEM Forms Edge Delivery Service har tagits fram för bästa prestan
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: e21b681b12e90110436c7319797809c8d6b75eea
+source-git-commit: 39bb45b285fcd938d44b9748aa8559b89a3636b2
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 0%
@@ -16,8 +16,6 @@ ht-degree: 0%
 
 Effektivisera framtagningen av blanketter och få snabbare ifyllnad med Adobe AEM Forms Edge Delivery Service. Med denna kraftfulla, samverkande tjänst kan ni skapa formulär i företagsklass med enastående prestanda och visuella tilltalande funktioner. AEM prioriterar både användarupplevelsen och affärsmålen, vilket ger blixtsnabba laddningstider och fler slutförda formulär.
 
-![EDS Forms Key features](/help/edge/assets/eds-forms-key-features.png){width="70%"}
-
 Du kan använda tjänsten för att:
 
 * **Captivate-användare med enastående formulär**: Skapa enkelt komplexa och engagerande formulär med ett bibliotek med färdiga komponenter. Integrera enkelt reCAPTCHA, skicka formulär direkt till e-post och möjliggör smidiga filöverföringar för säkra lagringslösningar som Sharepoint, Azure Storage och Amazon S3. Du kan till och med skapa egna skräddarsydda blankettkomponenter för att förverkliga din unika vision.
@@ -26,6 +24,7 @@ Du kan använda tjänsten för att:
 
 * **Bygg formulär med perfekt Lightroom-poäng**: Bygg formulär som läses in och återges snabbt, även på långsamma internetanslutningar. Snabbare inläsningstider och optimerad användarupplevelse bidrar till snabbare ifyllnad av formulär och förbättrad konverteringsgrad.
 
+  <img src="/help/edge/assets/eds-forms-key-features.png" alt="EDS Forms Key features" style = "width=`80%`; align=`center`; border: 1px solid;padding: 15px;">
 
 <!-- >
 * **Captivate users with stunning forms**: 

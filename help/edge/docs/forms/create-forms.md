@@ -4,9 +4,9 @@ description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery, doku
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 3b24d0cd4099e0b8eb48c977f460b25c168af220
+source-git-commit: 39bb45b285fcd938d44b9748aa8559b89a3636b2
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1120'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Så här fortsätter du med att skapa formulär:
 
    ![ändra namn på standardblad till &quot;shared-default&quot;](/help/edge/assets/rename-sheet-to-shared-default.png)
 
-1. Om du vill lägga till formulärfälten infogar du rader och kolumnrubriker i bladet&quot;shared-default&quot;. Varje rad ska representera ett formulärfält med kolumnrubriker som definierar motsvarande fält [egenskaper](/help/edge/docs/forms/eds-form-field-properties).
+1. Om du vill lägga till formulärfälten infogar du rader och kolumnrubriker i bladet&quot;shared-default&quot;. Varje rad ska representera en [formulärfält](/help/edge/docs/forms/form-components.md), med kolumnrubriker som definierar motsvarande fält [egenskaper](/help/edge/docs/forms/eds-form-field-properties).
 
    För att komma igång snabbt bör du överväga att kopiera innehållet i [Kalkylblad för förfrågan](https://docs.google.com/spreadsheets/d/196lukD028RDK_evBelkOonPxC7w0l_IiJ-Yx3DvMfNk/edit#gid=0) i kalkylbladet. När du har kopierat innehållet sparar du kalkylbladet.
 
@@ -153,6 +153,7 @@ Fram tills nu har du lagt till formulärblocket i EDS-projektet och förberett f
 
 ## Se mer
 
+* [Formulärkomponenter](/help/edge/docs/forms/form-components.md)
 * [Egenskaper för formulärfält](/help/edge/docs/forms/eds-form-field-properties)
 * [Skapa och förhandsgranska ett formulär](/help/edge/docs/forms/create-forms.md)
 * [Aktivera formulär för att skicka data](/help/edge/docs/forms/submit-forms.md)
