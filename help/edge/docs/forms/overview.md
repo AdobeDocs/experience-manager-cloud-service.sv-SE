@@ -4,7 +4,7 @@ description: AEM Forms Edge Delivery Service har tagits fram för bästa prestan
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 1dc4915f0b149ef67dfa22c8d4c6be7538170d38
+source-git-commit: 3b24d0cd4099e0b8eb48c977f460b25c168af220
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
@@ -15,26 +15,28 @@ ht-degree: 0%
 # AEM Forms Edge Delivery Service {#aem-forms-edge-delivery-service-overview}
 
 
-<div>
-&lt;style="font-family: Arial, sans-serif; margin: 0; padding: 0;"&gt;
-    <main class="content">
-      <section class="content-section">
-        <p style="line-height: 1.5;">AEM Forms Edge Delivery Service är en sammansättningsbar tjänst från Adobe som gör att du kan skapa och leverera effektiva webbformulär. Du kan använda tjänsten för att:</p>
-        </section> <section class="content-section">
-        <h2 style="font-size: 20px; margin-bottom: 10px;">Captivate-användare med enastående formulär</h2>
-        <img src="/help/edge/assets/enrollment-form.png" alt="Registreringsformulär" style="float: left; margin: 0 20px 20px 0; width: 150px;">
-        <p style="line-height: 1.5;">Skapa enkelt komplexa och engagerande formulär med ett bibliotek med färdiga komponenter. Integrera enkelt reCAPTCHA, skicka formulär direkt till e-post och möjliggör smidiga filöverföringar för säkra lagringslösningar som Sharepoint, Azure Storage och Amazon S3. Du kan till och med skapa egna skräddarsydda blankettkomponenter för att förverkliga din unika vision.</p>
-        </section> <section class="content-section">
-        <h2 style="font-size: 20px; margin-bottom: 10px;">Skapa formulär med perfekt fyr</h2>
-        <img src="/help/edge/assets/lighthouse-forms.png" alt="perfekt fyr för dina formulär" style="float: right; margin: 20px 0 0 20px; width: 150px;">
-        <p style="line-height: 1.5;"> Skapa formulär som läses in och återges snabbt, även på långsamma internetanslutningar. Snabbare inläsningstider och optimerad användarupplevelse bidrar till snabbare ifyllnad av formulär och förbättrad konverteringsgrad.</p>
-        </section>
-        <section class="content-section">
-        <h2 style="font-size: 20px; margin-bottom: 10px;">Skapa digitala registreringsupplevelser med valfria verktyg</h2>
-        <img src="/help/edge/assets/edge-delivery-forms-authoring-tools.png" alt="Registreringsformulär" style="float: left; margin: 0 20px 20px 0; width: 150px;">
-        <p style="line-height: 1.5;">Öka redigeringseffektiviteten genom att frikoppla innehållskällor. När du är klar kan du använda både AEM och dokumentbaserad redigering. Det innebär att du kan arbeta med flera innehållskällor på samma webbplats och använda de redigeringsverktyg du föredrar, till exempel Microsoft Excel, Google Sheets eller AEM Editors.</p>
-        </section>
-</div>
+<div style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+        <main class="content">
+            <section class="content-section">
+                <p style="line-height: 1.5;">AEM Forms Edge Delivery Service är en sammansättningsbar tjänst från Adobe som gör att du kan skapa och leverera effektiva webbformulär. Du kan använda tjänsten för att:</p>
+            </section>
+            <section class="content-section"></br>
+                <h2 style="font-size: 20px; margin-bottom: 10px;">Captivate-användare med enastående formulär</h2>
+                <img src="/help/edge/assets/enrollment-form.png" alt="Registreringsformulär" style="float: left; margin: 0 20px 20px 0; width: 30%;">
+                <p style="line-height: 1.5;">Skapa enkelt komplexa och engagerande formulär med ett bibliotek med färdiga komponenter. Integrera enkelt reCAPTCHA, skicka formulär direkt till e-post och möjliggör smidiga filöverföringar för säkra lagringslösningar som Sharepoint, Azure Storage och Amazon S3. Du kan till och med skapa egna skräddarsydda blankettkomponenter för att förverkliga din unika vision.</p>
+            </section>
+            <section class="content-section"></br>
+                <h2 style="font-size: 20px; margin-bottom: 10px;">Skapa formulär med perfekt fyr</h2>
+                <img src="/help/edge/assets/lighthouse-forms.png" alt="perfekt fyr för dina formulär" style="float: right; margin: 20px 0 0 20px; width: 30%;">
+                <p style="line-height: 1.5;"> Skapa formulär som läses in och återges snabbt, även på långsamma internetanslutningar. Snabbare inläsningstider och optimerad användarupplevelse bidrar till snabbare ifyllnad av formulär och förbättrad konverteringsgrad.</p>
+            </section>
+            <section class="content-section"></br>
+                <h2 style="font-size: 20px; margin-bottom: 10px;">Skapa digitala registreringsupplevelser med valfria verktyg</h2>
+                <img src="/help/edge/assets/edge-delivery-forms-authoring-tools.png" alt="Registreringsformulär" style="float: left; margin: 0 20px 20px 0; width: 30%;">
+                <p style="line-height: 1.5;">Öka redigeringseffektiviteten genom att frikoppla innehållskällor. När du är klar kan du använda både AEM och dokumentbaserad redigering. Det innebär att du kan arbeta med flera innehållskällor på samma webbplats och använda de redigeringsverktyg du föredrar, till exempel Microsoft Excel, Google Sheets eller AEM Editors.</p>
+            </section>
+        </main>
+    </div>
 
 
 <!-- >
@@ -112,19 +114,19 @@ Build complex and engaging forms with ease using a library of pre-built componen
         </a>
         <p>Minska antalet fel och frustration genom att kontrollera indata i blanketterna för korrekt formatering.</p>
     </div> 
+            <div class="card-container">
+        <a href="/help/edge/docs/forms/rules-forms.md">
+            <img src="/help/edge/assets/smock_documentfragment_18_n.svg" alt="Använd regler för att lägga till dynamiskt beteende i ett formulär" style="border-radius: 5px;"> </b>
+            <br><b style="margin-top: 5px;">Använd regler för att lägga till dynamiskt beteende i ett formulär</b>
+        </a>
+        <p>Återanvänd förkonfigurerade fragment i flera formulär.</p>
+    </div>
     <div class="card-container">
         <a href="/help/edge/docs/forms/translate-forms.md">  
             <img src="/help/edge/assets/smock_abc_18_n.svg" alt="Översätta ett EDS-formulär" style="border-radius: 5px;"> </b>
             <br><b style="margin-top: 5px;">Översätta ett formulär</b>
         </a>
         <p>Nå ut bättre med formulären och håll kostnaderna i schack.</p>
-    </div>
-    <div class="card-container">
-        <a href="/help/edge/docs/forms/form-fragments.md">
-            <img src="/help/edge/assets/smock_documentfragment_18_n.svg" alt="Använd formulärfragment i ett EDS-formulär" style="border-radius: 5px;"> </b>
-            <br><b style="margin-top: 5px;">Skapa formulärfragment</b>
-        </a>
-        <p>Återanvänd förkonfigurerade fragment i flera formulär.</p>
     </div>
     <div class="card-container">
         <a href="/help/edge/docs/forms/repeatable-forms.md">  
@@ -147,6 +149,7 @@ Build complex and engaging forms with ease using a library of pre-built componen
         </a>
         <p>Använd OTB reCAPTCHA-integrering för robust skydd för skräppost och robotar.</p>
     </div>
+
 
 </div>
 

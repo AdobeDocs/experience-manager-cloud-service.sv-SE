@@ -1,18 +1,18 @@
 ---
-title: Komma igång med AEM Forms Edge Delivery Service
+title: Komma igång med AEM Forms Edge Delivery Service. Skapa ett formulär.
 description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery, dokumentbaserad framtagning = blixtsnabb och SEO-anpassade formulär för nöjdare användare och sökmotorer.
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 78d40574e6fea8dde22414e43fd77215b9e7d2a1
+source-git-commit: 3b24d0cd4099e0b8eb48c977f460b25c168af220
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '1118'
 ht-degree: 0%
 
 ---
 
 
-# Skapa ett formulär för AEM Forms Edge Delivery Service
+# Skapa ett formulär för en EDS-webbplats (Edge Delivery Service)
 
 I dagens digitala samhälle är det viktigt för alla företag att skapa användarvänliga formulär. Med AEM Forms Edge Delivery kan du skapa formulär med välbekanta verktyg som Word eller Google Docs.
 
@@ -25,7 +25,7 @@ AEM Forms Edge Delivery har ett formulärblock som hjälper dig att enkelt skapa
 
 Kontrollera att du har utfört följande steg innan du börjar:
 
-* Konfigurera Edge Delivery Service (EDS) Github-projekt med hjälp AEM boilerplate och klona motsvarande Github-databas på den lokala datorn. Se [självstudiekurs för utvecklare](https://www.aem.live/developer/tutorial) för mer information. I det här dokumentet kallas den lokala mappen i Edge Delivery Service-projektet (EDS) `[EDS Project repository]` .
+* Konfigurera Edge Delivery Service (EDS) GitHub-projekt med hjälp AEM boilerplate och klona motsvarande GitHub-databas på den lokala datorn. Se [självstudiekurs för utvecklare](https://www.aem.live/developer/tutorial) för mer information. I det här dokumentet kallas den lokala mappen i Edge Delivery Service-projektet (EDS) `[EDS Project repository]` .
 * Klona [Forms Block-arkiv](https://github.com/adobe/afb) på din lokala dator. Den innehåller koden som återger formuläret på en EDS-webbsida. I det här dokumentet kallas den lokala mappen i din Forms-blockdatabas för `[Forms Block repository]`.
 * Se till att du har tillgång till Google Sheets eller Microsoft SharePoint. Information om hur du konfigurerar Microsoft SharePoint som innehållskälla finns i [Så här använder du Sharepoint](https://www.aem.live/docs/setup-customer-sharepoint)
 
@@ -35,63 +35,76 @@ Kontrollera att du har utfört följande steg innan du börjar:
 
 +++ Steg 1: Lägg till formulärblocket i Edge Delivery Service-projektet (EDS).
 
-The `Form block` innehåller funktioner för att lägga till ett formulär på en EDS-plats. Blocket ingår inte i ett projekt som skapats med AEM. Så här inkluderar du formulärblocket i ditt Edge Delivery Service-projekt:
+Formulärblocket gör det möjligt för användare att skapa formulär för en Edge Delivery Service Site. Det här blocket ingår dock inte i standardmallen AEM (används för att skapa ett Edge Delivery Service-projekt). Så här integrerar du formulärblocket i ditt Edge Delivery Service-projekt:
 
-1. Navigera till `[Forms Block repository]/blocks` mappen på din lokala dator och kopiera `form` mapp.
+1. **Leta reda på formulärblocksarkivet:** Öppna [Forms Block-arkiv]/blocks mapp på den lokala datorn och kopiera `form` mapp.
+1. **Klistra in formulärblocket i EDS-projektet:**
+Navigera till [EDS-projektdatabas]/blocks/ mapp på den lokala datorn och klistra in formulärmappen.
+1. **Verkställ ändringar i GitHub:** Checka in formulärmappen och dess underliggande filer i Edge Delivery Service-projektet på GitHub.
 
-1. Navigera till `[EDS Project repository]/blocks/` mappen på din lokala dator och klistra in `form` mapp.
+När du är klar med dessa steg har formulärblocket integrerats i projektdatabasen för Edge Delivery Service (EDS) på GitHub.
 
-1. Checka in `form` mapp och underliggande filer till Edge Delivery Service-projektet på GitHub.
 
-   Formulärblocket läggs till i din EDS-projektdatabas på GitHub. Kontrollera att GitHub-bygget inte misslyckas:
+**Felsökning av byggproblem med GitHub**
 
-   * Om du får felmeddelandet&quot;Det går inte att matcha sökvägen till modulen &quot;&#39;../../scripts/lib-franklin.js&#39;&quot; öppnar du `[EDS Project]/blocks/forms/form.js` -fil. Ersätt `lib-franklin.js` filen med `aem.js` -fil.
+Se till att GitHub-byggprocessen blir smidig genom att åtgärda potentiella problem:
 
-   * Om du råkar ut för några lintingfel kan du ignorera dem. Öppna `[EDS Project]\package.json` och uppdatera lint-skriptet från `"lint": "npm run lint:js && npm run lint:css"` till `"lint": "echo 'skipping linting for now'"`. Spara filen och implementera den i ditt GitHub-projekt.
+* **Lösning av modulsökvägsfel:**
+Om du får felmeddelandet&quot;Det går inte att matcha sökvägen till modulen &quot;&#39;../../scripts/lib-franklin.js&#39;&quot; går du till [EDS-projekt]/blocks/forms/form.js fil. Uppdatera importsatsen genom att ersätta filen lib-franklin.js med filen aem.js.
 
-Nu kan du skapa ett formulär och lägga till det på webbplatsen.
+* **Hantera lintingfel:**
+Om du skulle stöta på ett lintingfel kan du kringgå dem. Öppna [EDS-projekt]/package.json och ändra &quot;lint&quot;-skriptet från &quot;lint&quot;: &quot;npm run lint:js &amp;&amp; npm run lint:css&quot; till &quot;lint&quot;: &quot;echo &#39;skipping linting for now&#39;&quot;. Spara filen och implementera ändringarna i GitHub-projektet.
+
+
 
 +++
 
 +++ Steg 2: Skapa ett formulär med Microsoft Excel eller Google Sheet.
 
-I stället för komplexa processer kan du enkelt skapa ett formulär med hjälp av ett kalkylblad. Du kan börja med att lägga till rader och kolumnrubriker i ett kalkylblad, där varje rad definierar ett formulärfält och varje kolumnrubrik definierar egenskaperna för motsvarande formulärfält.
+Istället för att navigera i komplexa processer kan du enkelt skapa ett formulär med hjälp av ett kalkylblad. Du kan börja med att lägga till rader och kolumnrubriker i ett kalkylblad, där varje rad representerar ett formulärfält, medan varje kolumnrubrik definierar egenskaperna för motsvarande fält.
 
-I följande kalkylblad definierar t.ex. rader fälten för `contact us` form- och kolumnrubriken definierar egenskaperna för motsvarande fält.
+Ta till exempel följande kalkylblad, där rader ger konturfält för ett `enquiry` formulär- och kolumnrubriker definierar deras egenskaper:
 
-![kontakta oss, kalkylblad](/help/edge/assets/contact-us-form-spreadsheet.png)
+![Kalkylblad för förfrågan](/help/edge/assets/enquiry-form-spreadsheet.png)
 
-Så här skapar du ett formulär:
+Så här fortsätter du med att skapa formulär:
 
-1. Öppna projektmappen AEM Edge Delivery i Microsoft SharePoint eller Google Drive.
+1. Gå till projektmappen AEM Edge Delivery på Microsoft SharePoint eller Google Drive.
 
-1. Skapa en Microsoft Excel-arbetsbok eller ett Google-blad var som helst i projektkatalogen AEM Edge Delivery. Skapa till exempel ett kalkylblad med namnet `contact-us` på AEM Edge Delivery-projektkatalog på Google Drive.
+1. Skapa en Microsoft Excel-arbetsbok eller ett Google-blad var som helst i AEM Edge Delivery-projektkatalog. Skapa till exempel ett kalkylblad med namnet `enquiry` på AEM Edge Delivery-projektkatalog på Google Drive.
 
-1. Se till att bladet delas med AEM användare (till exempel `helix@adobe.com`) [konfigurerad för ditt projekt](https://www.aem.live/docs/setup-customer-sharepoint) och användaren har redigeringsbehörighet för bladet.
+1. Se till att bladet delas med rätt AEM (till exempel `helix@adobe.com`) [enligt de konfigurationer som har angetts för ditt projekt](https://www.aem.live/docs/setup-customer-sharepoint). Ge användaren redigeringsbehörighet för bladet.
 
-1. Öppna det kalkylblad som du har skapat och ändra namnet på standardbladet till &quot;shared-default&quot;.
+1. Öppna det skapade kalkylbladet och ändra standardbladets namn till &quot;shared-default&quot;.
 
    ![ändra namn på standardblad till &quot;shared-default&quot;](/help/edge/assets/rename-sheet-to-shared-default.png)
 
-1. Om du vill lägga till fälten i formuläret lägger du till raderna och kolumnrubrikerna i `shared-default` blad, där varje rad definierar ett formulärfält och varje kolumnrubrik definierar [egenskaper](/help/edge/docs/forms/eds-form-field-properties)) för motsvarande formulärfält.
+1. Om du vill lägga till formulärfälten infogar du rader och kolumnrubriker i bladet&quot;shared-default&quot;. Varje rad ska representera ett formulärfält med kolumnrubriker som definierar motsvarande fält [egenskaper](/help/edge/docs/forms/eds-form-field-properties).
 
-   Om du snabbt vill börja kopierar du innehållet i [kontakta oss, kalkylblad](https://docs.google.com/spreadsheets/d/12jvYjo1a3GOV30IqPY6_7YaCQtUmzWpFhoiOHDcjB28/edit?usp=drive_link) i kalkylbladet.
+   För att komma igång snabbt bör du överväga att kopiera innehållet i [Kalkylblad för förfrågan](https://docs.google.com/spreadsheets/d/196lukD028RDK_evBelkOonPxC7w0l_IiJ-Yx3DvMfNk/edit#gid=0) i kalkylbladet. När du har kopierat innehållet sparar du kalkylbladet.
 
    >[!VIDEO](https://video.tv.adobe.com/v/3427468?quality=12&learn=on)
 
-1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska och publicera bladet.
 
-   ![Använd AEM Sidekick för att förhandsgranska och publicera bladet](/help/edge/assets/preview-form.png)
+1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) om du vill förhandsgranska bladet.
 
-   Vid förhandsgranskning och publicering öppnas nya flikar i webbläsaren som visar bladets innehåll i JSON-format. Observera att live-URL:en är nödvändig för att återge formuläret senare.
+   ![Använd AEM Sidekick för att förhandsgranska bladet](/help/edge/assets/preview-form.png)
 
-   URL-formatet är:
+   När du förhandsgranskar och publicerar visas bladets innehåll på nya webbläsarflikar i JSON-format. Se till att du hämtar URL:en för förhandsgranskning, eftersom detta krävs för att återge formuläret i nästa avsnitt. URL-formatet är följande:
+
 
    ```JSON
-   https://<branch>--<repository>--<owner>.hlx.live/<form>.json
-   
-   For example, https://main--portal--wkndforms.hlx.live/contact-us.json
+       https://<branch>--<repository>--<owner>.hlx.live/<form>.json
    ```
+
+   * `<branch>` refererar till grenen i din GitHub-databas.
+   * `<repository>` anger din GitHub-databas.
+   * `<owner>` refererar till användarnamnet för ditt GitHub-konto som är värd för din GitHub-databas.
+
+   Om projektets databas till exempel heter &quot;portal&quot;, finns den under kontot &quot;wkndforms&quot; och du använder huvudgrenen, ser URL:en ut så här:
+
+   `https://main--portal--wkndforms.hlx.page/enquiry.json`
+
 
 +++
 
@@ -100,30 +113,30 @@ Så här skapar du ett formulär:
 
 Fram tills nu har du lagt till formulärblocket i EDS-projektet och förberett formulärets struktur. Nu kan du förhandsgranska formuläret:
 
-1. Gå till ditt Microsoft SharePoint- eller Google Drive-konto och öppna AEM Edge Delivery-projektkatalog.
+1. **Åtkomst till din projektkatalog:** Öppna ditt Microsoft SharePoint- eller Google Drive-konto och gå till AEM Edge Delivery-projektkatalog.
 
-1. Öppna en dokumentfil för att bädda in formuläret i den. Öppna till exempel indexfilen. Du kan också skapa en ny dokumentfil.
+1. **Bädda in formuläret i ett dokument:** Öppna en dokumentfil (t.ex. en indexfil) om du vill bädda in formuläret. Du kan också skapa ett nytt dokument.
 
-1. Navigera till önskad plats i dokumentet där du vill lägga till formuläret.
+1. **Navigera till önskad plats:** Gå till önskad plats i dokumentet där du vill lägga till formuläret.
 
-1. Lägg till ett block med namnet &#39;Form&#39; i filen, liknande det som visas nedan.
+1. **Lägg till formulärblocket:** Infoga ett block med namnet &#39;Formulär&#39; i filen, enligt bilden nedan:
 
-   ![](/help/edge/assets/form-block-in-sites-page-example.png)
+   | Formulär |
+   |---|
+   | [https://main—portal—wkndforms.hlx.live/inquiry.json](https://main--portal--wkndforms.hlx.live/enquiry.json) |
 
-   På den andra raden tar du med den URL som du registrerade i föregående avsnitt som hyperlänk. Använd URL:en för förhandsgranskning (.page URL) för utvecklings- eller teständamål, eller publicerings-URL:en (.live) för produktion.
+   Det här blocket fungerar som en platshållare där formuläret är inbäddat. Lägg till förhandsgransknings-URL:en på blockets andra rad `<form>.json` som en hyperlänk.
 
    >[!IMPORTANT]
    >
    >
-   > Kontrollera att URL-adressen är hyperlänkad i stället för att visas som oformaterad text.
+   > Kontrollera att URL-adressen är formaterad som en hyperlänk i stället för att visas som oformaterad text.
 
 
-1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska sidan. Formuläret visas nu på sidan.
-
-   Här är till exempel formuläret baserat på [kontakta oss, kalkylblad](https://docs.google.com/spreadsheets/d/12jvYjo1a3GOV30IqPY6_7YaCQtUmzWpFhoiOHDcjB28/edit?usp=drive_link):
+1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) om du vill förhandsgranska dokumentet. Formuläret visas nu på sidan. Här är till exempel formuläret baserat på [frågekalkylblad](https://docs.google.com/spreadsheets/d/196lukD028RDK_evBelkOonPxC7w0l_IiJ-Yx3DvMfNk/edit#gid=0):
 
 
-   ![Ett exempel på ett EDS-formulär](/help/edge/assets/eds-form.png)
+   [![Ett exempel på ett EDS-formulär](/help/edge/assets/eds-form.png)](https://main--portal--wkndforms.hlx.live/)
 
    Fyll i formuläret och klicka på skicka-knappen. Ett fel visas, ungefär som följande, eftersom kalkylbladet inte är inställt på att acceptera data än.
 

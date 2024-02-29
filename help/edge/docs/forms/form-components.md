@@ -4,9 +4,9 @@ description: AEM Forms Edge Delivery Service har tagits fram för bästa prestan
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 1dc4915f0b149ef67dfa22c8d4c6be7538170d38
+source-git-commit: 3b24d0cd4099e0b8eb48c977f460b25c168af220
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
@@ -57,8 +57,8 @@ Följande egenskaper stöds för formulärkomponenter i formulärblocket:
    </td>
   </tr>
       <tr>
-   <td>Platshållare</td>
-   <td>Text, sökning, URL, telefon, e-post, lösenord och nummer</td>
+   <td>Beskrivning</td>
+   <td>Gäller för alla fält</td>
    <td> Platshållarattributet ger användaren ett kort tips om vilken typ av information som förväntas i fältet.
    </td>
   </tr>

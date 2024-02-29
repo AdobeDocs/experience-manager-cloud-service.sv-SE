@@ -4,9 +4,9 @@ description: AEM Forms Edge Delivery Service har tagits fram för bästa prestan
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 1dc4915f0b149ef67dfa22c8d4c6be7538170d38
+source-git-commit: 3b24d0cd4099e0b8eb48c977f460b25c168af220
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '872'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 AEM Forms Edge Delivery innehåller ett formulärblock. Med formulärblocket kan du enkelt skapa formulär för att hämta in och lagra inhämtade data.
 
-Formulärblocket har stöd för HTML-5-komponenter som text, e-post, nummer, datum och många fler. Det har också stöd för textområdes-, markerings- och fältuppsättningselement, och innehåller indatavalideringsfunktioner som är inbyggda i HTML-5. Formulärblocket skapar en enhetlig HTML-struktur för alla fälttyper och behållare som säkerställer enhetlighet. Du också [formatera fälttyperna](https://adobe-rnd.github.io/form-block/customization/styling_form) med `form.css` -fil.
+Formulärblocket har stöd för OTB HTML-5-komponenter som text, e-post, nummer, datum och många fler. Det har också stöd för textområdes-, markerings- och fältuppsättningselement, och innehåller indatavalideringsfunktioner som är inbyggda i HTML-5. Formulärblocket skapar en enhetlig HTML-struktur för alla fälttyper och behållare som säkerställer enhetlighet. Du också [formatera fälttyperna](https://adobe-rnd.github.io/form-block/customization/styling_form) med `form.css` -fil.
 
 ## Indatatyper som stöds i HTML 5 i formulärblocket
 
