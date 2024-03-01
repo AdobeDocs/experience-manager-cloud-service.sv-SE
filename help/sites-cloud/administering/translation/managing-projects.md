@@ -4,9 +4,9 @@ description: Lär dig hur du skapar och hanterar både maskinöversättning och 
 feature: Language Copy
 role: Admin
 exl-id: dc2f3958-72b5-4ae3-a224-93d8b258bc80
-source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
+source-git-commit: ae500923bac34689a28b9ff0bc78586f725829de
 workflow-type: tm+mt
-source-wordcount: '3960'
+source-wordcount: '4011'
 ht-degree: 0%
 
 ---
@@ -448,14 +448,26 @@ Så här jämför du språkkopior med språkinställningen:
 
 ## Flytta eller byta namn på en källsida {#move-source}
 
-Om en redan översatt källsida måste [ändrat namn eller flyttat](/help/sites-cloud/authoring/sites-console/managing-pages.md#moving-or-renaming-a-page), översätter sidan igen efter flytten, skapar en språkkopia baserad på det nya sidnamnet/den nya sidplatsen. Den gamla språkkopian som baseras på föregående namn/plats kommer fortfarande att finnas där.
+Om en redan översatt källsida måste [ändrat namn eller flyttat](/help/sites-cloud/authoring/sites-console/managing-pages.md#moving-or-renaming-a-page)när du översätter sidan igen efter flytten skapas en språkkopia baserad på det nya sidnamnet/den nya sidplatsen. Den gamla språkkopian som baseras på föregående namn/plats finns fortfarande kvar. Du kan förhindra detta genom att använda funktionen för att kopiera uppdateringsspråk efter flytten:
 
-Det bästa sättet i detta scenario är att följa denna procedur:
+1. Flytta en sida som har en språkkopia.
+1. Välj språkkopieringsroten.
+1. Öppna **Referenser** -panelen.
+1. Välj **Språk Kopior**.
+1. Välj de målspråk som du vill uppdatera.
+1. Välj **Uppdatera språkkopior**.
 
-1. Avpublicera de språkkopior som är associerade med den källsida som du vill flytta.
-1. Ta bort dem.
-1. Skapa nya språkkopior från den nyligen flyttade källsidan.
-1. Publicera de skapade språkkopiorna.
+   ![update-language-copies](../assets/translation-move-to.png)
+
+1. Klicka **Uppdatera**. A [Starta](/help/sites-cloud/authoring/launches/promoting.md) skapas.
+1. Navigera till den önskade språkroten och markera den.
+1. Använda **Referenser** panel, markera **Startar**.
+
+   ![Promot-launch-translation](../assets/promote-launch-translation.png)
+
+1. Klicka på Launch som skapades och klicka på **Befordra lansering**.
+
+Nu har källsidan flyttats och tillhörande språkkopia.
 
 ## Importera och exportera översättningsjobb {#import-export}
 
