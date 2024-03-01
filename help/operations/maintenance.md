@@ -2,9 +2,9 @@
 title: Underhållsaktiviteter på AEM as a Cloud Service
 description: Lär dig mer om underhållsåtgärder på AEM as a Cloud Service och hur du konfigurerar dem.
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
-source-git-commit: 4b6f1233b8b21c511b9495151d812e4ededfce11
+source-git-commit: af690ee4c1c0c13bffa179c68423993361385a45
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1123'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Underhållsåtgärder är processer som körs enligt ett schema för att optimer
 
 ## Konfigurera underhållsåtgärder {#maintenance-tasks-configuring}
 
-I tidigare versioner av AEM kunde du konfigurera underhållsåtgärder med underhållskortet (Verktyg > Åtgärder > Underhåll). Underhållskortet är inte längre tillgängligt för AEM as a Cloud Service, så konfigurationer bör implementeras för källkontroll och driftsättas med hjälp av Cloud Manager. Adobe hanterar underhållsuppgifter som har inställningar som inte kan konfigureras av kunder (t.ex. Datastore Skräpsamling, Rensa granskningslogg, Rensa version). Andra underhållsuppgifter kan konfigureras av kunder, vilket beskrivs i tabellen nedan.
+I tidigare versioner av AEM kunde du konfigurera underhållsåtgärder med underhållskortet (Verktyg > Åtgärder > Underhåll). Underhållskortet är inte längre tillgängligt för AEM as a Cloud Service, så konfigurationer bör implementeras för källkontroll och driftsättas med hjälp av Cloud Manager. Adobe hanterar de underhållsåtgärder som har inställningar som inte kan konfigureras av kunder (till exempel Datastore Garbage Collection). Andra underhållsuppgifter kan konfigureras av kunder, vilket beskrivs i tabellen nedan.
 
 >[!CAUTION]
 >
