@@ -4,9 +4,9 @@ description: AEM Forms Edge Delivery Service har tagits fram för bästa prestan
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 39bb45b285fcd938d44b9748aa8559b89a3636b2
+source-git-commit: 1c6e44fd6652d93ba73bc2eb3604cd08eae7a33c
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
@@ -24,22 +24,36 @@ Du kan använda tjänsten för att:
 
 * **Bygg formulär med perfekt Lightroom-poäng**: Bygg formulär som läses in och återges snabbt, även på långsamma internetanslutningar. Snabbare inläsningstider och optimerad användarupplevelse bidrar till snabbare ifyllnad av formulär och förbättrad konverteringsgrad.
 
-  <img src="/help/edge/assets/eds-forms-key-features.png" alt="EDS Forms Key features" style = "width=`80%`; align=`center`; border: 1px solid;padding: 15px;">
+  <div>
+    <style>
+    .image-container {
+    width: 80%;
+    text-align: center; 
+    }
+    .image-container img {
+        width: 70%; /* Set image width to 70% of the container */
+        border: .5px solid; /* Maintain the border style */
+        padding: 15px; /* Maintain the padding */
+    }
+</style>
+    <div class="image-container">
+    <img src="/help/edge/assets/eds-forms-key-features.png" alt="EDS Forms Key features">
+    </div>
 
-<!-- >
-* **Captivate users with stunning forms**: 
-Build complex and engaging forms with ease using a library of pre-built components. Easily integrate reCAPTCHA, submit forms directly to email, and allow seamless file uploads to secure storage solutions like Sharepoint, Azure Storage, and Amazon S3. Even create your own custom forms components to bring your unique vision to life. 
 
-    ![Enrollment forms](/help/edge/assets/enrollment-form.png)
+</div>
+&lt;!— &gt; **Captivate-användare med enastående formulär**: Skapa enkelt komplexa och engagerande formulär med ett bibliotek med färdiga komponenter. Integrera enkelt reCAPTCHA, skicka formulär direkt till e-post och möjliggör smidiga filöverföringar för säkra lagringslösningar som Sharepoint, Azure Storage och Amazon S3. Du kan till och med skapa egna skräddarsydda blankettkomponenter för att förverkliga din unika vision.
 
-* **Build forms with perfect lighthouse score**: Build forms that load and render quickly, even on slow internet connections. Faster loading times and optimized user experience contribute to higher form completion rates and improved conversion rates.
+    ![Registreringsformulär](/help/edge/assets/enrollment-form.png)
 
-    ![perfect lighthouse score for your forms](/help/edge/assets/lighthouse-forms.png)
+* **Skapa formulär med perfekt fyr**: Bygg formulär som läses in och återges snabbt, även på långsamma internetanslutningar. Snabbare inläsningstider och optimerad användarupplevelse bidrar till snabbare ifyllnad av formulär och förbättrad konverteringsgrad.
 
-* **Create digital enrollment experiences with tools of your choice**: Increase authoring efficiency by decoupling content sources. Out of the box you can use both AEM authoring and document-based authoring. As such, you can work with multiple content sources on the same website and use your preferred authoring tools, such as Microsoft Excel, Google Sheets, or AEM Editors.
+  ![perfekt fyr för dina formulär](/help/edge/assets/lighthouse-forms.png)
 
-    ![Edge Delivery forms authoring tools](/help/edge/assets/edge-delivery-forms-authoring-tools.png)
-    
+* **Skapa digitala registreringsupplevelser med valfria verktyg**: Öka redigeringseffektiviteten genom att frikoppla innehållskällor. När du är klar kan du använda både AEM och dokumentbaserad redigering. Det innebär att du kan arbeta med flera innehållskällor på samma webbplats och använda de redigeringsverktyg du föredrar, till exempel Microsoft Excel, Google Sheets eller AEM Editors.
+
+  ![Utvecklingsverktyg för Edge Delivery-formulär](/help/edge/assets/edge-delivery-forms-authoring-tools.png)
+
 <!--
 * **Measure customer impact and deliver effective forms**: Use our RUM dashboards to visualize form performance and identify areas for improvement. Experiment with different versions and continuously optimize your forms for maximum effectiveness, ensuring you capture the data you need and drive better business outcomes.
 
