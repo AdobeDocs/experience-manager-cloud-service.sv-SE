@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar TLF (Translation Integration Framework
 feature: Language Copy
 role: Admin
 exl-id: 6e74cdee-7965-4087-a733-e9d81c4aa7c2
-source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
+source-git-commit: 05e4adb0d7ada0f7cea98858229484bf8cca0d16
 workflow-type: tm+mt
-source-wordcount: '1465'
+source-wordcount: '1466'
 ht-degree: 0%
 
 ---
@@ -27,11 +27,11 @@ En översikt över funktionerna för innehållsöversättning i AEM finns på [�
 
 ## Ansluta till en översättningstjänstleverantör {#connecting-to-a-translation-service-provider}
 
-Skapa en molnkonfiguration som ansluter AEM till översättningstjänstleverantören. AEM kan [ansluta till Microsoft Translator](connect-ms-translator.md) som standard.
+Skapa en molnkonfiguration som ansluter AEM till översättningstjänstleverantören. AEM kan [ansluta till Microsoft® Translator](connect-ms-translator.md) som standard.
 
 Följande översättningsleverantörer tillhandahåller en implementering av AEM API för översättningsprojekt.
 
-* [Microsoft Translator](connect-ms-translator.md)
+* [Microsoft](connect-ms-translator.md)
 * [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html) (Adobe Exchange Premier Partner)
 * [Lera Tablet Technologies](https://exchange.adobe.com/experiencecloud.details.90064.clay-tablet-translation-for-experience-manager.html)
 * [Lionbridge](https://exchange.adobe.com/experiencecloud.details.100064.lionbridge-connector-for-experience-manager-63.html)
@@ -39,11 +39,11 @@ Följande översättningsleverantörer tillhandahåller en implementering av AEM
 * [Molnord](https://exchange.adobe.com/experiencecloud.details.90019.html)
 * [XTM Cloud](https://exchange.adobe.com/experiencecloud.details.105037.xtm-connect-for-adobe-experience-manager.html)
 * [Lingotek](https://exchange.adobe.com/experiencecloud.details.90088.lingotek-collaborative-translation-platform.html)
-* [RWS](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108277.html)
+<!-- THIS URL IS 404 * [RWS](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108277.html) -->
 * [Smartling](https://www.smartling.com/software/integrations/adobe-experience-manager/)
 * [Systran](https://exchange.adobe.com/experiencecloud.details.90233.systran-for-adobe-experience-manager.html)
 
-När du har installerat ett kopplingspaket kan du skapa en molnkonfiguration för anslutningen. Vanligtvis måste du ange dina autentiseringsuppgifter för autentisering med översättningstjänsten. Mer information om hur du lägger till en molnkonfiguration för Microsoft Translator-anslutningen finns i [Integrera med Microsoft Translator](connect-ms-translator.md).
+När du har installerat ett kopplingspaket kan du skapa en molnkonfiguration för anslutningen. Vanligtvis måste du ange dina autentiseringsuppgifter för autentisering med översättningstjänsten. Mer information om hur du lägger till en molnkonfiguration för Microsoft® Translator-anslutningen finns i [Integrera med Microsoft® Translator](connect-ms-translator.md).
 
 Du kan skapa flera molnkonfigurationer för samma anslutning om det behövs. Skapa till exempel en konfiguration för varje konto eller projekt som du har med samma leverantör.
 
@@ -51,7 +51,7 @@ När du har konfigurerat en anslutning kan du skapa den konfiguration av övers�
 
 ## Skapa en konfiguration för översättningsintegrering {#creating-a-translation-integration-configuration}
 
-Skapa en konfiguration för ramverk för översättningsintegrering som anger hur ditt innehåll ska översättas. Konfigurationen innehåller följande information:
+Skapa en ramverkskonfiguration för översättningsintegrering så att du kan ange hur innehållet ska översättas. Konfigurationen innehåller följande information:
 
 * Vilken översättningstjänstleverantör som ska användas
 * Om översättning till människa eller dator ska utföras
@@ -105,9 +105,9 @@ Resursegenskaperna styr hur resurser konfigureras. Mer information om översätt
 | Översättningsprovider | This property define the translation provider to perform the translation. En provider visas i listan när dess motsvarande koppling är installerad. |
 | Innehållskategori | (Endast maskinöversättning) Den här egenskapen beskriver innehållet som du översätter. Kategorin kan påverka valet av terminologi och fraser när innehåll översätts. |
 | Översätt resurser | Aktivera den här egenskapen för att inkludera resurser i översättningsprojektet. |
-| Översätt metadata | Aktivera den här egenskapen för att översätta metadata för resurser. |
-| Översätt taggar | Aktivera den här egenskapen för att översätta taggar som är kopplade till resursen. |
-| Automatisk översättning | Välj den här egenskapen om du vill köra översättningsjobb automatiskt efter att översättningsprojekt har skapats. Du har inte möjlighet att granska eller omsluta översättningsjobbet när du väljer det här alternativet. |
+| Översätt metadata | Aktivera den här egenskapen så att du kan översätta metadata för resursen. |
+| Översätt taggar | Aktivera den här egenskapen så att du kan översätta taggar som är kopplade till resursen. |
+| Automatisk översättning | Välj den här egenskapen så att du kan köra översättningsjobb automatiskt efter att översättningsprojekt har skapats. Du har inte möjlighet att granska eller omsluta översättningsjobbet när du väljer det här alternativet. |
 | Inaktivera översättning med endast uppdatering | När det här alternativet är markerat skickas alla översättningsbara fält för översättning när översättningsprojektet uppdateras, inte bara de som ändrats sedan den senaste översättningen. |
 | Aktivera fält för innehållsmodell för översättning | Om du aktiverar det här alternativet används **Översättningsbar** fält på [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#properties) för att avgöra om fältet är översatt och automatiskt skapar [översättningsregler](rules.md) i enlighet med detta. Det här alternativet ersätter eventuella översättningsregler som du har skapat. |
 
@@ -120,9 +120,9 @@ Om du vill konfigurera översättning av källsidor till andra språk associerar
 
 Konfigurationen av översättningsintegreringsramverket i molnet identifierar den molnkonfiguration som ska användas för att ansluta till tjänstleverantören. När du associerar en källsida med en ramverkets molnkonfiguration måste sidan associeras med tjänstleverantörens molnkonfiguration som används i ramverkets molnkonfiguration.
 
-När du associerar en sida med en molnkonfiguration ärver de underordnade sidorna kopplingen. Om du till exempel associerar `/content/wknd/language-masters/en/magazine` sida med ett Translation Integration Framework, `magazine` sidor och underordnade sidor under den översätts enligt ramverket.
+När du associerar en sida med en molnkonfiguration ärver de underordnade sidorna kopplingen. Om du till exempel har associerat `/content/wknd/language-masters/en/magazine` sida med ett Translation Integration Framework, `magazine` sidor och underordnade sidor under den översätts enligt ramverket.
 
-Vid behov kan du åsidosätta associationen på en underordnad sida. Innehållet på en webbplats handlar till exempel mest om resor och livsstil. En av sidorna beskriver dock företaget. I så fall kan webbplatsens rotsida vara kopplad till ett Translation Integration Framework som anger maskinöversättning med kategorin Livsstil, medan den gren som beskriver företaget använder ett ramverk som utför maskinöversättning med kategorin Allmänt.
+Vid behov kan du åsidosätta associationen på en underordnad sida. Innehållet på en webbplats handlar till exempel mest om resor och livsstil. En av sidorna beskriver dock företaget. I så fall kan platsens rotsida vara kopplad till ett Translation Integration Framework som anger maskinöversättning med kategorin Livsstil. Den gren som beskriver företaget använder ett ramverk som utför maskinöversättning med kategorin Allmänt.
 
 ### Koppla en sida till en översättningsleverantör {#associating-a-page-with-a-translation-provider}
 

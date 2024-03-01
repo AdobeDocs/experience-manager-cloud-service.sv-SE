@@ -11,16 +11,16 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 4933fc37-5890-47f5-aa09-425c999f0c91
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 05e4adb0d7ada0f7cea98858229484bf8cca0d16
 workflow-type: tm+mt
-source-wordcount: '2559'
+source-wordcount: '2298'
 ht-degree: 0%
 
 ---
 
-# Anpassa AEM CIF kärnkomponenter {#customize-cif-components}
+# Anpassa kärnkomponenterna i AEM CIF {#customize-cif-components}
 
-The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en referenskodbas för att använda [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components). I den här självstudiekursen utökar du [Product Teaser](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser) om du vill visa ett anpassat attribut från Adobe Commerce. Du kan även läsa mer om GraphQL integrering mellan AEM och Adobe Commerce och de tilläggskopplingar som finns i CIF Core Components.
+The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en referenskodbas för att använda [CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components). I den här självstudiekursen utökar du [Product Teaser](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser) om du vill visa ett anpassat attribut från Adobe Commerce. Du kan även läsa mer om GraphQL integrering mellan AEM och Adobe Commerce och de tilläggskopplingar som finns i CIF Core Components.
 
 >[!TIP]
 >
@@ -36,7 +36,7 @@ Varumärket Venia började nyligen tillverka vissa produkter med hjälp av håll
 
 Det krävs en lokal utvecklingsmiljö för att slutföra den här självstudiekursen. Den här miljön innehåller en instans av AEM som körs och som är konfigurerad och ansluten till en Adobe Commerce-instans. Granska kraven och stegen för [konfigurera en lokal utveckling med AEM as a Cloud Service SDK](../develop.md). Om du vill följa självstudiekursen fullständigt måste du ha behörighet att lägga till [Attribut till en produkt](https://docs.magento.com/user-guide/catalog/product-attributes-add.html) i Adobe Commerce.
 
-Du behöver också GraphQL IDE som [GraphiQL](https://github.com/graphql/graphiql) eller ett webbläsartillägg för att köra kodexempel och självstudiekurser. Om du installerar ett webbläsartillägg måste du se till att det kan ställa in begäranrubriker. På Google Chrome [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja) är ett tillägg som kan utföra jobbet.
+Du behöver också GraphQL IDE som [GraphiQL](https://github.com/graphql/graphiql) eller ett webbläsartillägg för att köra kodexempel och självstudiekurser. Om du installerar ett webbläsartillägg måste du se till att det kan ställa in begäranrubriker. På Google Chrome _Altair GraphQL Client_ är ett tillägg som kan utföra jobbet.
 
 ## Klona Veniaprojektet {#clone-venia-project}
 
@@ -77,7 +77,7 @@ Product Teaser Component utökas genom hela kursen. Som ett första steg lägger
 
    ![Insert Product Teaser](../assets/customize-cif-components/product-teaser-add-component.png)
 
-3. Expandera sidopanelen (om den inte redan är aktiverad) och växla till listrutan för att söka efter resurser **Produkter**. Den här listan bör visa en lista över tillgängliga produkter från en ansluten Adobe Commerce-instans. Välj en produkt och **dra och släpp** den på **Product Teaser** på sidan.
+3. Expandera sidopanelen (om den inte redan är aktiverad) och växla till listrutan för att söka efter resurser **Produkter**. Den här listan ska visa en lista över tillgängliga produkter från en ansluten Adobe Commerce-instans. Välj en produkt och **dra och släpp** den på **Product Teaser** på sidan.
 
    ![Dra och släpp Product Teaser](../assets/customize-cif-components/drag-drop-product-teaser.png)
 
@@ -139,7 +139,7 @@ De produkter och produktdata som visas i AEM lagras i Adobe Commerce. Lägg seda
 
 Innan du hoppar in i AEM kod är det praktiskt att utforska [GraphQL - översikt](https://devdocs.magento.com/guides/v2.4/graphql/) med en GraphQL IDE. Adobe Commerce integrering med AEM görs huvudsakligen via en serie GraphQL-frågor. Att förstå och ändra GraphQL-frågor är ett av de viktigaste sätten att utöka CIF kärnkomponenter.
 
-Använd sedan en GraphQL-utvecklingsmiljö för att verifiera att `eco_friendly` har lagts till i produktattributuppsättningen. Skärmbilder i den här självstudiekursen använder [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja).
+Använd sedan en GraphQL-utvecklingsmiljö för att verifiera att `eco_friendly` har lagts till i produktattributuppsättningen. Skärmbilder i den här självstudiekursen använder _Altair GraphQL Client_ Google Chrome-tillägg.
 
 1. Öppna GraphQL IDE och ange URL:en `http://<commerce-server>/graphql` i URL-fältet för den utvecklingsmiljö eller det tillägg du använder.
 2. Lägg till följande [produktfråga](https://devdocs.magento.com/guides/v2.4/graphql/queries/products.html) där `YOUR_SKU` är **SKU** av den produkt som använts i föregående undersökning:
@@ -186,7 +186,7 @@ Använd sedan en GraphQL-utvecklingsmiljö för att verifiera att `eco_friendly`
 
 ## Uppdatera produktundervisningsmodellen {#updating-sling-model-product-teaser}
 
-Därefter utökar du affärslogiken i Product Teaser genom att implementera en Sling Model. [Sling Models](https://sling.apache.org/documentation/bundles/models.html), är anteckningsdrivna &quot;POJOs&quot; (Plain Old Java™ Objects) som implementerar affärslogik som behövs för komponenten. Sling-modeller används med HTML-skript som en del av komponenten. Följ [Delegeringsmönster för delningsmodeller](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) så att du kan utöka delar av den befintliga Product Teaser-modellen.
+Därefter utökar du affärslogiken i Product Teaser genom att implementera en Sling Model. [Sling Models](https://sling.apache.org/documentation/bundles/models.html) är anteckningsdrivna &quot;POJOs&quot; (Plain Old Java™ Objects) som implementerar affärslogik som behövs för komponenten. Sling-modeller används med HTML-skript som en del av komponenten. Följ [Delegeringsmönster för delningsmodeller](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) så att du kan utöka delar av den befintliga Product Teaser-modellen.
 
 Sling Models implementeras som Java™ och finns i **kärna** för det genererade projektet.
 
@@ -285,7 +285,7 @@ Använd [den utvecklingsmiljö du vill](https://experienceleague.adobe.com/docs/
 
    Lägga till i `extendProductQueryWith` är ett kraftfullt sätt att säkerställa att ytterligare produktattribut är tillgängliga för resten av modellen. Det minimerar även antalet frågor som körs.
 
-   I ovanstående kod visas`addCustomSimpleField` används för att hämta `eco_friendly` -attribut. Det här attributet visar hur du kan söka efter anpassade attribut som ingår i Adobe Commerce-schemat.
+   I ovanstående kod visas`addCustomSimpleField` används för att hämta `eco_friendly` -attribut. Det här attributet visar hur du kan fråga efter anpassade attribut som ingår i Adobe Commerce-schemat.
 
    >[!NOTE]
    >
@@ -497,7 +497,7 @@ Granska funktionaliteten i **Nytt** emblem som redan har implementerats i Produc
 ## Ytterligare resurser {#additional-resources}
 
 - [AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
-- [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components)
+- [AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components)
 - [Anpassa AEM CIF kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/developing/customize-cif-components.html)
 - [Anpassa kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html)
 - [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
