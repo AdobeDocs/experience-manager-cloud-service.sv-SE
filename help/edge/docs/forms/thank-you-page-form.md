@@ -1,12 +1,12 @@
 ---
-title: Konfigurera tacksida för EDS Forms
-description: Lär dig konfigurera tacksidor och omdirigering för EDS Forms för att optimera användarupplevelsen och effektivisera användarresorna.
+title: Konfigurera tacksidan eller omdirigeringsformuläret efter att du skickat det
+description: Lär dig konfigurera tacksidor och omdirigering för Forms Block för att optimera användarupplevelsen och effektivisera användarresorna.
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: cadeccd916884ca2437e2b2684771c181cc8281e
+source-git-commit: d6b1048c44022da47a9d7443f564a2ff9d1802cf
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '608'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ När en användare har skickat in ett formulär är det viktigt att kunna erbjud
 I det adaptiva Forms-blocket är standardbeteendet att visa en tacksida. Du kan dock anpassa den här upplevelsen efter dina specifika behov. Alternativen är:
 
 * [Konfigurera tacksidan och meddelandet för att passa ert varumärke och era kommunikationsmål](#configuring-the-thank-you-page-and-message)
-* [Dirigera om användare till en annan sida efter att de skickats in](#redirect-users-to-another-page-post-submission), förbättra sin resa ytterligare
+* [Dirigera om användare till en annan sida efter att de skickats in för ytterligare åtgärder](#redirect-users-to-another-page-post-submission)
 
 ## Konfigurera tacksidan och meddelandet
 
@@ -43,10 +43,10 @@ Ditt adaptiva Forms-block visar&quot;thankyou&quot;-sidan när du skickar in for
 
 Som standard dirigerar Adaptive Forms-blocket om användarna till&quot;thankyou&quot;-sidan. Om du vill dirigera om användare till en annan sida än standardsidan&quot;Tack&quot; har du två alternativ:
 
-* ersätta den befintliga&quot;thankyou&quot;-sidan med en annan sida, eller
-* omdirigera&quot;thankyou&quot;-sidan till en annan sida som du väljer.
+* [Ersätt&quot;Tack&quot;-sidan med en annan sida](#replace-the-existing-thankyou-page)
+* [Använd omdirigeringar av webbplatser för sidomdirigering&quot;tack&quot;](#use-website-redirects-for-thankyou-page-redirection)
 
-### Ersätt den befintliga&quot;tack&quot;-sidan
+### Ersätt&quot;thankyou&quot;-sidan
 
 1. Öppna &quot;[EDS-projekt]/blocks/form/form.js&quot; för redigering.
 1. Ändra `thankyou` sida på följande rad till valfri sida:
@@ -70,9 +70,15 @@ Som standard dirigerar Adaptive Forms-blocket om användarna till&quot;thankyou&
 1. Kontrollera att sidan finns i EDS-projektmappen och publicera den.
 
 
-### Använda omdirigeringar
+### Använd omdirigeringar av webbplatser för sidomdirigering&quot;tack&quot;
 
-Konfigurera en omdirigering av en webbplats som dirigerar&quot;Tack&quot;-sidan till en annan sida. Se [Omdirigerar dokumentation](https://www.aem.live/docs/redirects) för detaljerade anvisningar.
+Att dirigera om en användare till en annan sida efter att formuläret har skickats in kan förbättra användarupplevelsen genom att tillhandahålla relevant information, bekräfta åtgärder och vägleda användarna mot önskat resultat. Exempel:
+
+* när en användare har slutfört ett inköpsformulär omdirigeras de till en betalningssida för att slutföra transaktionen på ett säkert sätt.
+* När man skickar in ett registreringsformulär för en händelse eller webbinarium dirigeras man om till en bekräftelsesida med händelseinformation som datum, tid och plats.
+
+Om du vill dirigera om&quot;Tack&quot;-sidan till en annan sida använder du [omdirigeringar av webbplatser](https://www.aem.live/docs/redirects) kalkylblad.
+
 
 ## Se mer
 
