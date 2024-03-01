@@ -4,21 +4,21 @@ description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery, doku
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 39bb45b285fcd938d44b9748aa8559b89a3636b2
+source-git-commit: e2970c7a141025222c6b119787142e7c39d453af
 workflow-type: tm+mt
-source-wordcount: '1120'
+source-wordcount: '1147'
 ht-degree: 0%
 
 ---
 
 
-# Skapa ett formulär för en EDS-webbplats (Edge Delivery Service)
+# Skapa ett formulär med adaptivt formulärblock
 
 I dagens digitala samhälle är det viktigt för alla företag att skapa användarvänliga formulär. Med AEM Forms Edge Delivery kan du skapa formulär med välbekanta verktyg som Word eller Google Docs.
 
 Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft Sharepoint för att enkelt bearbeta inskickade data eller starta ett befintligt arbetsflöde.
 
-AEM Forms Edge Delivery har ett formulärblock som hjälper dig att enkelt skapa formulär för att hämta in och lagra inhämtade data. Du kan inkludera formulärblocket i ditt AEM EDS-projekt för att börja skapa ett formulär. Låt oss börja:
+AEM Forms Edge Delivery innehåller ett block, som kallas adaptivt formulärblock, som hjälper dig att enkelt skapa formulär för att hämta in och lagra inhämtade data. Du kan inkludera det adaptiva formulärblocket i ditt AEM EDS-projekt för att börja skapa ett formulär. Låt oss börja:
 
 
 ## Förutsättningar
@@ -26,23 +26,23 @@ AEM Forms Edge Delivery har ett formulärblock som hjälper dig att enkelt skapa
 Kontrollera att du har utfört följande steg innan du börjar:
 
 * Konfigurera Edge Delivery Service (EDS) GitHub-projekt med hjälp AEM boilerplate och klona motsvarande GitHub-databas på den lokala datorn. Se [självstudiekurs för utvecklare](https://www.aem.live/developer/tutorial) för mer information. I det här dokumentet kallas den lokala mappen i Edge Delivery Service-projektet (EDS) `[EDS Project repository]` .
-* Klona [Forms Block-arkiv](https://github.com/adobe/afb) på din lokala dator. Den innehåller koden som återger formuläret på en EDS-webbsida. I det här dokumentet kallas den lokala mappen i din Forms-blockdatabas för `[Forms Block repository]`.
 * Se till att du har tillgång till Google Sheets eller Microsoft SharePoint. Information om hur du konfigurerar Microsoft SharePoint som innehållskälla finns i [Så här använder du Sharepoint](https://www.aem.live/docs/setup-customer-sharepoint)
 
 
 
 ## Skapa ett formulär
 
-+++ Steg 1: Lägg till formulärblocket i Edge Delivery Service-projektet (EDS).
++++ Steg 1: Lägg till det adaptiva formulärblocket i Edge Delivery Service-projektet (EDS).
 
-Formulärblocket gör det möjligt för användare att skapa formulär för en Edge Delivery Service Site. Det här blocket ingår dock inte i standardmallen AEM (används för att skapa ett Edge Delivery Service-projekt). Så här integrerar du formulärblocket i ditt Edge Delivery Service-projekt:
+Adaptiv ger användarna möjlighet att skapa formulär för en Edge Delivery Service Site. Det här blocket ingår dock inte i standardmallen AEM (används för att skapa ett Edge Delivery Service-projekt). Så här integrerar du det adaptiva formulärblocket i ditt Edge Delivery Service-projekt:
 
-1. **Leta reda på formulärblocksarkivet:** Öppna [Forms Block-arkiv]/blocks mapp på den lokala datorn och kopiera `form` mapp.
-1. **Klistra in formulärblocket i EDS-projektet:**
+1. **Klona databasen för adaptiva formulärblock**: Klona [Databas för adaptiva formulärblock](https://github.com/adobe/afb) på din lokala dator. Den innehåller koden som återger formuläret på en EDS-webbsida. I det här dokumentet kallas den lokala mappen i din Forms-blockdatabas för `[Adaptive Form block repository]`.
+1. **Leta reda på databasen för adaptiva formulärblock:** Öppna [Databas för adaptiva formulärblock]/blocks mapp på den lokala datorn och kopiera `form` mapp.
+1. **Klistra in det adaptiva formulärblocket i EDS-projektet:**
 Navigera till [EDS-projektdatabas]/blocks/ mapp på den lokala datorn och klistra in formulärmappen.
 1. **Verkställ ändringar i GitHub:** Checka in formulärmappen och dess underliggande filer i Edge Delivery Service-projektet på GitHub.
 
-När du är klar med dessa steg har formulärblocket integrerats i projektdatabasen för Edge Delivery Service (EDS) på GitHub.
+När du har utfört de här stegen läggs det adaptiva formulärblocket till i projektdatabasen för Edge Delivery Service (EDS) på GitHub. Nu kan du skapa och lägga till formulär på en EDS-sida.
 
 
 **Felsökning av byggproblem med GitHub**
@@ -90,7 +90,7 @@ Så här fortsätter du med att skapa formulär:
 
    ![Använd AEM Sidekick för att förhandsgranska bladet](/help/edge/assets/preview-form.png)
 
-   När du förhandsgranskar och publicerar visas bladets innehåll på nya webbläsarflikar i JSON-format. Se till att du hämtar URL:en för förhandsgranskning, eftersom detta krävs för att återge formuläret i nästa avsnitt. URL-formatet är följande:
+   När du förhandsgranskar visas bladets innehåll i JSON-format på nya webbläsarflikar. Se till att du hämtar förhandsgransknings-URL:en eftersom detta krävs för att återge formuläret i nästa avsnitt. URL-formatet är följande:
 
 
    ```JSON
@@ -111,7 +111,7 @@ Så här fortsätter du med att skapa formulär:
 +++ Steg 3: Förhandsgranska formuläret på EDS-sidan (Edge Delivery Service).
 
 
-Fram tills nu har du lagt till formulärblocket i EDS-projektet och förberett formulärets struktur. Nu kan du förhandsgranska formuläret:
+Fram tills nu har du lagt till det adaptiva formulärblocket i ditt EDS-projekt och förberett formulärets struktur. Nu kan du förhandsgranska formuläret:
 
 1. **Åtkomst till din projektkatalog:** Öppna ditt Microsoft SharePoint- eller Google Drive-konto och gå till AEM Edge Delivery-projektkatalog.
 
@@ -119,7 +119,7 @@ Fram tills nu har du lagt till formulärblocket i EDS-projektet och förberett f
 
 1. **Navigera till önskad plats:** Gå till önskad plats i dokumentet där du vill lägga till formuläret.
 
-1. **Lägg till formulärblocket:** Infoga ett block med namnet &#39;Formulär&#39; i filen, enligt bilden nedan:
+1. **Lägg till det adaptiva formulärblocket:** Infoga ett block med namnet &#39;Formulär&#39; i filen, enligt bilden nedan:
 
    | Formulär |
    |---|

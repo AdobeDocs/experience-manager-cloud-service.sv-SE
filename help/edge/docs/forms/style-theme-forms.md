@@ -4,9 +4,9 @@ description: Anpassa tema och stil för ett AEM Forms Edge Delivery Service-form
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 78d40574e6fea8dde22414e43fd77215b9e7d2a1
+source-git-commit: e2970c7a141025222c6b119787142e7c39d453af
 workflow-type: tm+mt
-source-wordcount: '1268'
+source-wordcount: '1271'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Formatera formulärfält
 
-Forms är avgörande för användarinteraktion på webbplatser, så att de kan mata in data. Den här handboken behandlar grunderna i hur du formaterar olika formulärfält i dialogrutan [Formulärblock](/help/edge/docs/forms/create-forms.md)som hjälper dig att skapa visuellt tilltalande och användarvänliga formulär.
+Forms är avgörande för användarinteraktion på webbplatser, så att de kan mata in data. Den här handboken behandlar grunderna i hur du formaterar olika formulärfält i dialogrutan [Adaptivt formulärblock](/help/edge/docs/forms/create-forms.md)som hjälper dig att skapa visuellt tilltalande och användarvänliga formulär.
 
 ## Förstå formulärfältstyper
 
-Innan vi börjar använda en formatmall ska vi granska de vanliga formulärfälttyperna som stöds av formulärblocket:
+Innan vi börjar använda en formatmall ska vi granska de vanliga formulärfälttyperna som stöds av det adaptiva formulärblocket:
 
 * Indatafält: Dessa innehåller textinmatningar, e-postinmatningar, lösenordsinmatningar med mera.
 * Kryssrutegrupper: Används för att välja flera alternativ.
@@ -35,7 +35,7 @@ Att förstå grundläggande CSS-koncept är avgörande innan du formaterar speci
 * Rutmodell: CSS-rutmodellen beskriver strukturen för element i HTML som ett innehållsområde omgivet av utfyllnad, kanter och marginaler.
 * Flexbox/Grid: CSS Flexbox och stödrasterlayouter är kraftfulla verktyg för att skapa responsiv och flexibel design.
 
-## Formatera ett formulär för formulärblock
+## Formatera ett formulär för block med adaptiva formulär
 
 Formulärblocket har en standardiserad HTML-struktur som förenklar processen att markera och formatera formulärkomponenter:
 

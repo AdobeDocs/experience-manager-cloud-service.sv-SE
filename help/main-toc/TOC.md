@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: b7b9dbfa7f939828d66a785daecf84c917923c37
+source-git-commit: e2970c7a141025222c6b119787142e7c39d453af
 workflow-type: tm+mt
 source-wordcount: '4751'
 ht-degree: 3%
@@ -826,12 +826,12 @@ ht-degree: 3%
          + [Lägga till valideringar i formulärfält](/help/edge/docs/forms/validate-forms.md)
          + [Ändra teman och format för formulär](/help/edge/docs/forms/style-theme-forms.md)
          + [Använd regler för att lägga till dynamiskt beteende i ett formulär](/help/edge/docs/forms/rules-forms.md)
+         + [Tack](/help/edge/docs/forms/thank-you-page-form.md)
       + Funktioner {#advanced-features-eds-forms}
          + [Formulärfragment](/help/edge/docs/forms/form-fragments.md)
          + [Upprepningsbara avsnitt](/help/edge/docs/forms/repeatable-forms.md)
          + [Översättning](/help/edge/docs/forms/translate-forms.md)
          + [reCAPTCHA](/help/edge/docs/forms/recaptacha-forms.md)
-         + [Tack](/help/edge/docs/forms/thank-you-page-form.md)
          + [Anpassade komponenter](/help/edge/docs/forms/custom-components-forms.md)
       + Referenser {#forms-references}
          + [Lista över komponenter för formulärblock](/help/edge/docs/forms/form-components.md)
