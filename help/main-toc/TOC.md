@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 974650c0f268de8ecff7fdb693cdd1e32efb2e1c
+source-git-commit: b7b9dbfa7f939828d66a785daecf84c917923c37
 workflow-type: tm+mt
-source-wordcount: '4748'
+source-wordcount: '4751'
 ht-degree: 3%
 
 ---
@@ -781,8 +781,8 @@ ht-degree: 3%
    + [Adobe Commerce PWA Studio](/help/commerce-cloud/pwa-studio/getting-started.md)
    + [Migrering](/help/commerce-cloud/migration.md)
    + [Vanliga frågor](/help/commerce-cloud/faq.md)
-+ Edge Delivery Services {#edge-delivery}
-   + [AEM och Edge Delivery Services](/help/edge/overview.md)
++ AEM med Edge Delivery Services {#edge-delivery}
+   + [Komma igång med Edge Delivery Services](/help/edge/overview.md)
    + [Använda Edge Delivery](/help/edge/using.md)
    + [Starthandbok för utvecklare](/help/edge/edge-dev-getting-started.md)
    + [Skapa innehåll för Edge Delivery](/help/edge/authoring.md)
