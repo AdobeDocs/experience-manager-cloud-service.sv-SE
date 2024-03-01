@@ -2,7 +2,7 @@
 title: Variationer - innehåll i redigeringsfragment (resurser - innehållsfragment)
 description: Förstå hur varianter av innehållsfragment gör att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte, vilket ökar flexibiliteten.
 exl-id: af05aae6-d535-4007-ba81-7f41213ff152
-source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
+source-git-commit: a213d94b6c5bd4eaaf78b8384b96e1d99104874d
 workflow-type: tm+mt
 source-wordcount: '2474'
 ht-degree: 4%
@@ -402,7 +402,7 @@ De läggs till som en referens på den aktuella platsen i fragmentet.
 
 ## Arv {#inheritance}
 
-Arv är den mekanism där innehåll automatiskt kan överföras från ett fragment till ett annat. Ärvda fält, och variationer, kan vara produkten av [Hantering av flera webbplatser](/help/assets/content-fragments/content-fragments.md#reusing-content-fragments-with-msm-assets).
+Arv är den mekanism där innehåll automatiskt kan överföras från ett fragment till ett annat. Ärvda fält, och variationer, kan vara produkten av [Hantering av flera webbplatser](/help/assets/content-fragments/content-fragments-msm.md).
 
 Du kan avbryta (och sedan återaktivera) arvet. Beroende på sammanhanget kan detta vara tillgängligt för en variation, eller ett enskilt fält, om fragmentet är en del av en live-kopia.
 
