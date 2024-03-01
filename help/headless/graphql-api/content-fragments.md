@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-source-git-commit: fd0f0fdfc0aaf02d631b9bf909fcb1e1431f5401
+source-git-commit: a8fbf0a9a1f7e12b6a668544b1a67d8551abf1b7
 workflow-type: tm+mt
-source-wordcount: '4994'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -1125,6 +1125,31 @@ För att skydda dig mot potentiella problem finns det standardbegränsningar fö
 * Frågan får inte innehålla fler än 1M (1024 * 1024) tecken
 * Frågan får inte innehålla fler än 15000 token
 * Frågan får inte innehålla fler än 200000 blankstegstoken
+
+Du måste också vara medveten om:
+
+* Ett fältkonfliktsfel returneras när din GraphQL-fråga innehåller fält med samma namn i två (eller flera) modeller:
+
+   * Så här:
+
+      * Två (eller flera modeller) används som möjliga referenser, när de definieras som tillåtna **Modelltyp** i Content Fragment-referensen.
+
+     och:
+
+      * Dessa två modeller har fält med ett gemensamt namn, vilket betyder att samma namn används i båda modellerna.
+
+     och
+
+      * Dessa fält har olika datatyper.
+
+   * Till exempel:
+
+      * När två (eller flera) fragment med olika modeller (till exempel `M1`, `M2`) används som möjliga referenser (Innehållsreferens eller Fragmentreferens) från ett annat fragment, till exempel `Fragment1` `MultiField/List`
+      * Och dessa två fragment med olika modeller (`M1`, `M2`) har fält med samma namn, men olika typer.
+Så här illustrerar du:
+         * `M1.Title` as `Text`
+         * `M2.Title` as `Text/MultiField`
+      * Ett fältkonfliktsfel uppstår om GraphQL-frågan innehåller `Title` fält.
 
 ## Vanliga frågor {#faqs}
 

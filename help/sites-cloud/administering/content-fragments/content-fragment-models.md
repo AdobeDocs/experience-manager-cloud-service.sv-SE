@@ -4,10 +4,10 @@ description: Lär dig hur Content Fragment Models fungerar som en grund för din
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: 8ab5b15f-cefc-45bf-a388-928e8cc8c603
-source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
+source-git-commit: e5a48cfd042c0e8d7448007854e1f73bded8cf7f
 workflow-type: tm+mt
-source-wordcount: '3125'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -43,6 +43,12 @@ Du kan också definiera olika egenskaper, till exempel lägga till **Taggar**, a
    ![Titel och beskrivning](assets/cf-cfmodels-create.png)
 
 1. Använd **Skapa** för att spara den tomma modellen. Ett meddelande visar att åtgärden lyckades. Du kan välja **Öppna** för att omedelbart redigera modellen, eller **Klar** för att återgå till konsolen.
+
+>[!CAUTION]
+>
+>Om du ska fråga mot flera refererade fragment rekommenderar vi inte att de olika fragmentmodellerna har fältnamn med samma namn, utan olika typer.
+>
+>Mer information finns i [AEM GraphQL API för användning med innehållsfragment - begränsningar](/help/headless/graphql-api/content-fragments.md#limitations)
 
 ### Content Fragment Model - egenskaper {#content-fragment-model-properties}
 
@@ -290,6 +296,12 @@ AEM har upprepningsskydd för:
 * Innehållsreferenser Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet och kan leda till en tom dialogruta för fragmentreferensväljaren.
 >
 * Fragmentreferenser i GraphQL Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
+
+>[!CAUTION]
+>
+Om du ska fråga mot flera refererade fragment rekommenderar vi inte att de olika fragmentmodellerna har fältnamn med samma namn, utan olika typer.
+>
+Mer information finns i [AEM GraphQL API för användning med innehållsfragment - begränsningar](/help/headless/graphql-api/content-fragments.md#limitations)
 
 ### Innehållsreferens {#content-reference}
 
