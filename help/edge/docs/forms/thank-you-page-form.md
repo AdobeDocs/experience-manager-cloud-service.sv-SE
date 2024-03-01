@@ -4,35 +4,46 @@ description: Lär dig konfigurera tacksidor och omdirigering för EDS Forms för
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: e2970c7a141025222c6b119787142e7c39d453af
+source-git-commit: cadeccd916884ca2437e2b2684771c181cc8281e
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
 
 
-# Konfigurera Tack-sidor och omdirigering i adaptiva Forms-block
+# Visa tacksidan eller omdirigeringsformuläret efter att du skickat in det
 
-Tack för att du skickar sidor och omdirigering är viktiga aspekter av förbättringar av användarupplevelsen, vilket ger användarna en bekräftelse, tydlig kommunikation och smidig navigering efter att formuläret har skickats in.
+När en användare har skickat in ett formulär är det viktigt att kunna erbjuda en smidig upplevelse via en tacksida eller en omdirigering. Dessa element bekräftar inte bara att de har lämnats in utan även att de ger nöjdare användare och leder dem vidare på kundresan.
 
-## Konfigurera tacksidor
+* **Tack**: En tacksida är hörnstenen i användarupplevelsen och ger trygghet och förmedlar viktig information samtidigt som varumärkesidentiteten förstärks. Det fungerar som ett direkt erkännande av användarens åtgärder och ger en känsla av komplettering och tillfredsställelse.
 
-Tack! Sidorna är ett tryggt erkännande till användarna och gör det möjligt för organisationer att förmedla viktig information samtidigt som varumärkesidentiteten förstärks. Följ de här stegen för att konfigurera en tacksida för EDS Forms:
+* **Omdirigering**: En omdirigering spelar en avgörande roll för att styra användarna mot relevanta destinationer, optimera engagemanget och i slutändan öka konverteringsgraden. En omdirigering ger en smidig navigeringsupplevelse genom att användaren smidigt vägleds till nästa steg i kundresan. Du kan till exempel dirigera om användare till betalningssidan efter att du har samlat in initiala uppgifter.
+
+I det adaptiva Forms-blocket är standardbeteendet att visa en tacksida. Du kan dock anpassa den här upplevelsen efter dina specifika behov. Alternativen är:
+
+* [Konfigurera tacksidan och meddelandet för att passa ert varumärke och era kommunikationsmål](#configuring-the-thank-you-page-and-message)
+* [Dirigera om användare till en annan sida efter att de skickats in](#redirect-users-to-another-page-post-submission), förbättra sin resa ytterligare
+
+## Konfigurera tacksidan och meddelandet
+
+Standardbeteendet för Adaptive Forms-block är att visa&quot;thankyou&quot;-sidan när det skickas. Följ de här stegen för att konfigurera&quot;thankyou&quot;-sidan för ditt adaptiva Forms-block:
 
 1. Gå till projektmappen AEM Edge Delivery på Microsoft SharePoint eller Google Workspace.
 1. Skapa en Microsoft Word- eller Google Docs-fil med namnet&quot;thankyou&quot; i projektkatalogen.
-1. Lägg till ditt tackmeddelande i&quot;thankyou&quot;-filen.
+1. Lägg till ditt tackmeddelande i&quot;thankyou&quot;-filen. </br>
+
    ![Exempel på tacksida](/help/edge/assets/sample-thankyou-page.png)
-1. Använd AEM Sidekick för att förhandsgranska och publicera&quot;thankyou&quot;-filen.
 
-## Omdirigera användare efter överföring
+1. Använd AEM Sidekick för att förhandsgranska och publicera&quot;Tack&quot;-filen.
 
-Omdirigering underlättar smidiga användarresor genom att vägleda användarna till relevanta destinationer, optimera engagemanget och öka konverteringsgraden.
+Ditt adaptiva Forms-block visar&quot;thankyou&quot;-sidan när du skickar in formulär.
+
+## Dirigera om användare till en annan sida efter att de skickats in
 
 Som standard dirigerar Adaptive Forms-blocket om användarna till&quot;thankyou&quot;-sidan. Om du vill dirigera om användare till en annan sida än standardsidan&quot;Tack&quot; har du två alternativ:
 
-* ersätta den befintliga&quot;tack&quot;-sidan med en annan sida, eller
+* ersätta den befintliga&quot;thankyou&quot;-sidan med en annan sida, eller
 * omdirigera&quot;thankyou&quot;-sidan till en annan sida som du väljer.
 
 ### Ersätt den befintliga&quot;tack&quot;-sidan
@@ -59,8 +70,16 @@ Som standard dirigerar Adaptive Forms-blocket om användarna till&quot;thankyou&
 1. Kontrollera att sidan finns i EDS-projektmappen och publicera den.
 
 
-### Använd omdirigeringar av webbplatser
+### Använda omdirigeringar
 
 Konfigurera en omdirigering av en webbplats som dirigerar&quot;Tack&quot;-sidan till en annan sida. Se [Omdirigerar dokumentation](https://www.aem.live/docs/redirects) för detaljerade anvisningar.
 
+## Se mer
 
+* [Formulärkomponenter](/help/edge/docs/forms/form-components.md)
+* [Egenskaper för formulärfält](/help/edge/docs/forms/eds-form-field-properties)
+* [Skapa och förhandsgranska ett formulär](/help/edge/docs/forms/create-forms.md)
+* [Aktivera formulär för att skicka data](/help/edge/docs/forms/submit-forms.md)
+* [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-eds-forms.md)
+* [Lägga till valideringar i formulärfält](/help/edge/docs/forms/validate-forms.md)
+* [Ändra teman och format för formulär](/help/edge/docs/forms/style-theme-forms.md)
