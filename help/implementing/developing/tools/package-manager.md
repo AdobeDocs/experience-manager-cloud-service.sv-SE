@@ -4,9 +4,9 @@ description: Lär dig grunderna i AE; pakethantering med Package Manager.
 feature: Administering
 role: Admin
 exl-id: b5fef273-912d-41f6-a698-0231eedb2b92
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 422b4d98e2665e332ff65a3638a02282064b2bea
 workflow-type: tm+mt
-source-wordcount: '3774'
+source-wordcount: '3769'
 ht-degree: 0%
 
 ---
@@ -612,4 +612,4 @@ AEM kan användas för att skapa och dela innehåll i AEMaaCS-miljöer.
 
 [Programvarudistribution](https://downloads.experiencecloud.adobe.com) innehåller AEM paket som kan användas på den lokala utvecklingen AEM SDK. AEM som tillhandahålls vid programvarudistribution får inte installeras i AEMaaCS-molnmiljöer om inte Adobe Support uttryckligen har godkänt detta.
 
-Mer information finns i [Dokumentation om programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
+Mer information finns i [Dokumentation om programvarudistribution.](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)

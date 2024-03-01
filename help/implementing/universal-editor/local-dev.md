@@ -2,9 +2,9 @@
 title: Local AEM Development with the Universal Editor
 description: Läs om hur den universella redigeraren stöder redigering i lokala AEM för utvecklingsändamål.
 exl-id: ba1bf015-7768-4129-8372-adfb86e5a120
-source-git-commit: bbb7e7d9023f8326980196923bfab77c3968ead4
+source-git-commit: 422b4d98e2665e332ff65a3638a02282064b2bea
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
@@ -40,9 +40,9 @@ Den universella redigeringstjänsten är inte en fullständig kopia av den unive
 
 [NodeJS version 16](https://nodejs.org/en/download/releases) krävs för att köra en lokal kopia av Universal Editor-tjänsten.
 
-Tjänsten Universal Editor distribueras direkt av AEM Engineering. Kontakta teknikern i VIP program för en lokal kopia.
+Tjänsten Universal Editor är tillgänglig via Software Distribution. Se [Dokumentation om programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html) om du vill ha information om hur du får tillgång till den.
 
-Teknikern ger dig en `universal-editor-service.cjs` -fil. Spara detta i den lokala utvecklingsmiljön.
+Spara `universal-editor-service.cjs` från Software Distribution till din lokala utvecklingsmiljö.
 
 ## Skapa ett certifikat som kör den universella redigeringstjänsten med HTTPS {#ue-https}
 
