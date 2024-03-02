@@ -4,9 +4,9 @@ description: AEM Forms Edge Delivery Service har tagits fram för bästa prestan
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 1c6e44fd6652d93ba73bc2eb3604cd08eae7a33c
+source-git-commit: e8fbe3efae7368c940cc2ed99cc9a352bbafbc22
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '866'
 ht-degree: 0%
 
 ---
@@ -66,6 +66,21 @@ Du kan använda tjänsten för att:
     > WYSIWYG authoring capability, integrated services, and customer impact measuring features are available under early adopter program. You can write to aem-forms-early-adopter-program@adobe.com from your official email id to join the early adopter program and request access to the capability.
 
     -->
+
+## Viktiga funktioner
+
+* **HTML5-baserade formulärfältskomponenter**: Med AEM Forms Edge Delivery Service kan du skapa användarvänliga och interaktiva formulär med formulärfält som baseras på giltiga HTML5 [indatatyper](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types), <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textområde</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">välj</a>och <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fältuppsättning</a>  -komponenter. Dessa komponenter klarar olika typer av datainsamling och kan enkelt anpassas efter dina specifika behov.
+
+* **Tillgänglighet**: Fälten i formulärblocket är tillgängliga. Varje etikett länkas med respektive indataelement och ID:n genereras automatiskt för länkning. Beskrivningar som är associerade med fält länkas via attributet aria-describedby. Tangentbordsnavigering med standardtangenterna Tabb/Skift + Tabb stöds.
+
+* **Formulärregler**: Skapa logik som justerar fältets synlighet, validering och beteende baserat på användarindata eller fördefinierade villkor. Regler är ett flexibelt och intuitivt sätt att lägga till intelligens i formulären, vilket säkerställer att de smidigt kan anpassas utifrån användarens indata.
+
+* **Filöverföringar**: Förbättra formulären med smidiga funktioner för bilagor. Vare sig du behöver samla in dokument, bilder eller andra filer från användarna kan du med det adaptiva formulärblocket enkelt integrera filöverföringsfunktioner. Med anpassade hanteringsalternativ tillgängliga kan du anpassa filöverföringsprocessen så att den passar dina specifika behov.
+
+* **Formulärvalidering**: Innan formuläret skickas valideras det och ogiltiga fält markeras med felmeddelanden som visas för användaren. Det finns olika mönster för att visa dessa fel.
+
+* **Formatera Forms**: Varje formulärfält har en fast HTML-struktur som kan dekoreras ytterligare med anpassade CSS- eller JavaScript-filer. Väljare för målfält i CSS/JS tillhandahålls baserat på typ och namn.
+
 
 ## Börja skapa formulär
 

@@ -4,9 +4,9 @@ description: Anpassa tema och stil för ett AEM Forms Edge Delivery Service-form
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: e2970c7a141025222c6b119787142e7c39d453af
+source-git-commit: e8fbe3efae7368c940cc2ed99cc9a352bbafbc22
 workflow-type: tm+mt
-source-wordcount: '1271'
+source-wordcount: '1275'
 ht-degree: 0%
 
 ---
@@ -37,9 +37,9 @@ Att förstå grundläggande CSS-koncept är avgörande innan du formaterar speci
 
 ## Formatera ett formulär för block med adaptiva formulär
 
-Formulärblocket har en standardiserad HTML-struktur som förenklar processen att markera och formatera formulärkomponenter:
+Det adaptiva formulärblocket har en standardiserad HTML-struktur som förenklar processen att markera och formatera formulärkomponenter:
 
-* **Uppdatera standardformat**: Du kan ändra standardformaten för ett formulär genom att redigera `/blocks/form/form.css file`. Den här filen innehåller omfattande formatering för ett formulär med stöd för guideformulär i flera steg. Det är viktigt att du använder anpassade CSS-variabler för enkel anpassning, underhåll och enhetlig formatering i olika formulär. Instruktioner om hur du lägger till formulärblocket i projektet finns i [skapa ett formulär](/help/edge/docs/forms/create-forms.md).
+* **Uppdatera standardformat**: Du kan ändra standardformaten för ett formulär genom att redigera `/blocks/form/form.css file`. Den här filen innehåller omfattande formatering för ett formulär med stöd för guideformulär i flera steg. Det är viktigt att du använder anpassade CSS-variabler för enkel anpassning, underhåll och enhetlig formatering i olika formulär. Instruktioner om hur du lägger till det adaptiva formulärblocket i ditt projekt finns i [skapa ett formulär](/help/edge/docs/forms/create-forms.md).
 
 * **Anpassning**: Använd standardvärdet `forms.css` som en bas och anpassa den för att ändra utseendet och känslan hos dina formulärkomponenter, vilket gör den visuellt tilltalande och användarvänlig. Filens struktur uppmuntrar organisationen och bevarar format för formulär, vilket ger en enhetlig design på hela webbplatsen.
 
@@ -60,7 +60,7 @@ Formulärblocket har en standardiserad HTML-struktur som förenklar processen at
 
 ## Komponentstruktur
 
-Formulärblocket har en enhetlig HTML-struktur för olika formulärelement, vilket gör det enklare att formatera och hantera. Du kan ändra komponenterna med CSS i formateringssyfte.
+Det adaptiva formulärblocket har en enhetlig HTML-struktur för olika formulärelement, vilket gör det enklare att formatera och hantera. Du kan ändra komponenterna med CSS i formateringssyfte.
 
 ### Allmänna komponenter (utom listrutor, alternativknappar och kryssrutegrupper):
 
@@ -421,6 +421,6 @@ Du kan också ange enskilda fält som mål efter namn för att använda unika fo
 }
 ```
 
-Den här CSS-koden riktar in alla indataelement som finns i ett element som har klassen `form-otp`. Formulärets HTML-struktur följer konventionerna för formulärblocket, vilket innebär att det finns en behållare som är markerad med klassen &quot;form-out&quot; som innehåller fältet med namnet &quot;otp&quot;.
+Den här CSS-koden riktar in alla indataelement som finns i ett element som har klassen `form-otp`. Formulärets HTML-struktur följer konventionerna i det adaptiva formulärblocket, vilket innebär att det finns en behållare som är markerad med klassen &quot;form-top&quot; som innehåller fältet med namnet &quot;otp&quot;.
 
 

@@ -4,7 +4,7 @@ description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery, doku
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 68b60d33e6ccfe27452cfea76603e4d7d29f0c6e
+source-git-commit: e8fbe3efae7368c940cc2ed99cc9a352bbafbc22
 workflow-type: tm+mt
 source-wordcount: '1150'
 ht-degree: 0%
@@ -18,7 +18,7 @@ I dagens digitala samhälle är det viktigt för alla företag att skapa använd
 
 Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft Sharepoint för att enkelt bearbeta inskickade data eller starta ett befintligt arbetsflöde.
 
-![Dokumentbaserat redigeringssystem](/help/edge/assets/document-based-authoring.png)
+![Dokumentbaserat redigeringssystem](/help/edge/assets/document-based-authoring-workflow.png)
 
 AEM Forms Edge Delivery innehåller ett block, som kallas adaptivt formulärblock, som hjälper dig att enkelt skapa formulär för att hämta in och lagra inhämtade data. Du kan inkludera det adaptiva formulärblocket i ditt AEM EDS-projekt för att börja skapa ett formulär. Låt oss börja:
 
@@ -38,9 +38,9 @@ Kontrollera att du har utfört följande steg innan du börjar:
 
 Adaptiv ger användarna möjlighet att skapa formulär för en Edge Delivery Service Site. Det här blocket ingår dock inte i standardmallen AEM (används för att skapa ett Edge Delivery Service-projekt). Så här integrerar du det adaptiva formulärblocket i ditt Edge Delivery Service-projekt:
 
-1. **Klona databasen för adaptiva formulärblock**: Klona [Databas för adaptiva formulärblock](https://github.com/adobe/afb) på din lokala dator. Den innehåller koden som återger formuläret på en EDS-webbsida. I det här dokumentet kallas den lokala mappen i din Forms-blockdatabas för `[Adaptive Form block repository]`.
+1. **Klona databasen för adaptiva formulärblock**: Klona [Databas för adaptiva formulärblock](https://github.com/adobe/afb) på din lokala dator. Den innehåller koden som återger formuläret på en EDS-webbsida. I det här dokumentet kallas den lokala mappen i din Forms-blockdatabas för `[Adaptive Form Block repository]`.
 1. **Leta reda på databasen för adaptiva formulärblock:** Öppna [Databas för adaptiva formulärblock]/blocks mapp på den lokala datorn och kopiera `form` mapp.
-1. **Klistra in det adaptiva formulärblocket i EDS-projektet:**
+1. **Klistra in det adaptiva formulärblocket i ditt EDS-projekt:**
 Navigera till [EDS-projektdatabas]/blocks/ mapp på den lokala datorn och klistra in formulärmappen.
 1. **Verkställ ändringar i GitHub:** Checka in formulärmappen och dess underliggande filer i Edge Delivery Service-projektet på GitHub.
 

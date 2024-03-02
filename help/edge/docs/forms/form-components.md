@@ -1,77 +1,74 @@
 ---
-title: AEM Forms Edge Delivery Service
-description: AEM Forms Edge Delivery Service har tagits fram för bästa prestanda och ger er möjlighet att förutse framtiden för smidig datainsamling och användarengagemang. I artikeln listas alla formulärkomponenter som är tillgängliga i rutan för EDD-formulär.
+title: Formulärkomponenter och -egenskaper
+description: Det här dokumentet innehåller en översikt över de formulärkomponenter och deras egenskaper som är tillgängliga i AEM Forms Edge Delivery Service.
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 3b24d0cd4099e0b8eb48c977f460b25c168af220
+source-git-commit: e8fbe3efae7368c940cc2ed99cc9a352bbafbc22
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '865'
 ht-degree: 0%
 
 ---
 
 
-
-
 # Formulärkomponenter
 
-Med formulärblocket kan du enkelt skapa formulär för att hämta in och lagra inhämtade data. Den har stöd för komponenter som baseras på HTML5 [indatatyper](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types) som text, e-post, nummer, datum och många andra. Den har även stöd för [textområde](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea), [välj](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)och [fältuppsättning](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset) och innehåller indatavalideringsfunktioner som är inbyggda i HTML5.
+Med AEM Forms Edge Delivery Service kan du skapa användarvänliga och interaktiva formulär med hjälp av olika komponenter. Dessa komponenter klarar olika typer av datainsamling och kan enkelt anpassas efter dina specifika behov.
 
-Formulärblocket genererar en enhetlig HTML-struktur för alla fälttyper och behållare (paneler) för att säkerställa konsekvens. Denna enhetliga struktur gör det enklare att [formatera ett formulär](/help/edge/docs/forms/style-theme-forms.md).
+Det adaptiva formulärblocket genererar en [struktur för enhetlig HTML](/help/edge/docs/forms/style-theme-forms.md) för alla fälttyper och behållare (paneler) för att säkerställa konsekvens. Denna enhetliga struktur gör det enklare att [formatera ett formulär](/help/edge/docs/forms/style-theme-forms.md).
+
+
+## Tillgängliga komponenter
+
+Här är en översikt över de tillgängliga komponenterna:
+
+### Indatafält
+
+- Alla giltiga HTML5 [indatatyper](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types) och [textområde](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea). Till exempel knapp, kryssruta, färg, datum, datum/tid-lokal, e-post, fil, dold, bild, månad, nummer, lösenord, radio, intervall, återställning, skicka, tel, text, tid, url och vecka.
+
+### Markeringskontroller
+
+- [Kryssrutegrupper](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox): För att välja flera alternativ.
+- [Radiogrupper](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio): För att välja ett alternativ från en grupp.
+- [Listrutor](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select): Om du vill visa en meny med alternativ. Till exempel listruta.
+
+### Behållare
+
+- Paneler/behållare: Om du vill gruppera relaterade formulärelement tillsammans blir det enklare att organisera. Det är en kombination av [fältuppsättning](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset) och [teckenförklaring](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend).
 
 
 ## Komponentegenskaper
 
-Följande egenskaper stöds för formulärkomponenter i formulärblocket:
+Varje formulärkomponent har olika egenskaper som gör att du kan styra dess beteende och utseende. Här är de egenskaper som stöds av komponenter för adaptiva formulärblock:
 
-<table>
- <tbody>
-  <tr>
-   <td><b>Egenskap</b> </td>
-   <td><b>Formulärkomponenter (indatatyp)</b> </td>
-   <td><b>Information</b></td>
-  </tr>
-  <tr>
-   <td>Namn</td>
-   <td>Alla komponenter</td>
-   <td> En sträng som anger ett namn för komponenten. Komponentens data skickas mot det här namnet.
-   </td>
-  </tr>
-  <tr>
-   <td>Etikett</td>
-   <td>Alla komponenter</td>
-   <td> Etiketten fungerar som bildtext för fältet.
-   </td>
-  </tr>
-  <tr>
-   <td>Värde</td>
-   <td>Alla komponenter</td>
-   <td> Kontrollens startvärde. För alternativknappar och kryssrutekomponenter är detta det värde/de data som skickas när de väljs. Attributet value är alltid valfritt, men det bör vara obligatoriskt för kryssrutor och alternativknappar.
-   </td>
-  </tr>
-    <tr>
-   <td>Platshållare</td>
-   <td>Text, sökning, URL, telefon, e-post, lösenord och nummer</td>
-   <td> Platshållarattributet ger användaren ett kort tips om vilken typ av information som förväntas i fältet.
-   </td>
-  </tr>
-      <tr>
-   <td>Beskrivning</td>
-   <td>Gäller för alla fält</td>
-   <td> Platshållarattributet ger användaren ett kort tips om vilken typ av information som förväntas i fältet.
-   </td>
-  </tr>
-  </tbody>
-</table>
 
-<!-- 
-## Supported HTML 5 input types in Form Block
+| Egenskap | Tillämpliga komponenter | Information |
+|--------------|------------------------------|----------------------------------------------------------------------|
+| Typ | Alla | Anger komponentens typ. Den här egenskapen avgör inmatningsfältets beteende och utseende. För textinmatningar kan till exempel typen vara &quot;text&quot;, &quot;email&quot; för e-postinmatningar och &quot;password&quot; för lösenordsinmatningar. Adaptivt formulärblock har stöd för alla giltiga HTML5 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types">indatatyper</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textområde</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">välj</a>och <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fältuppsättning</a> som typ. |
+| Namn | Alla | Identifierar komponenten för att skicka formulär. Attributet name används när formulärdata skickas till servern och associerar användarindata med ett specifikt fält. |
+| Etikett | Alla | Ger kontextuell information till användare. Etiketten är den text som visas bredvid komponenten och ger användarna vägledning om vilken information som ska anges. |
+| Värde | Text, Lösenord, E-post, Nummer, Intervall, Datum och dess varianter (datetime-local, month, week, time), Kryssruta, Radio, Hidden, Submit, Button | Anger komponentens startvärde. För textinmatningar, textområden och markerade element visas detta som standardtext eller standardalternativ. För alternativknappar och kryssrutekomponenter är detta det värde/de data som skickas när de markeras. Attributet value är valfritt men ska betraktas som obligatoriskt för kryssrutor och alternativinmatningar. |
+| Platshållare | Text, Tel, Email, Password, Date (och dess varianter som month, week, time, datetime-local), Number, Range | Visar tips för förväntade indata. Platshållarattributet ger ett kort tips som beskriver det förväntade värdet för indatafältet. Det försvinner när användaren börjar skriva. |
+| Beskrivning | Alla | Ger ytterligare information om komponenten och fungerar som hjälptext. Beskrivningsfältet innehåller mer information om syftet eller instruktionerna för att fylla i komponenten. Det underlättar för användarna att förstå inmatningsfältets kontext. |
+| Synlig | Alla | Styr inledande synlighet. Attributet visible är en boolesk egenskap som avgör om komponenten från början är synlig eller dold när formuläret läses in. Om värdet är true visas fältet, annars döljs det. |
+| Obligatoriskt | Text, Tel, E-post, Lösenord, Datum och dess varianter (datetime-local, month, week, time), Number, Checkbox, Radio, File, Select (dropdown), TextArea | Anger om fältet måste fyllas i innan det skickas. Det obligatoriska attributet är en boolesk egenskap som används för att ange om användaren måste ange indata för fältet innan formuläret skickas. |
+| Min | Datum (och dess varianter som månad, vecka, tid, datetime-local), Number, intervall | Anger det minsta tillåtna värdet. Min-attributet anger det lägsta värde som användaren kan ange i fältet. För talinmatningar definieras t.ex. det lägsta godtagbara talet. |
+| Max | Datum (och dess varianter som månad, vecka, tid, datetime-local), Number, intervall | Anger högsta tillåtna värde. Attributet max anger det maximala värde som användaren kan ange i fältet. För datumindata definieras till exempel det högsta godtagbara datumet. |
+| Acceptera | Fil | Definierar tillåtna filtyper. Attributet accept är en kommaavgränsad lista med unika filtypsspecifikationer som begränsar de filtyper som användare kan välja i ett filindatafält. |
+| Flera | Fil | Tillåter flera markeringar. Attributet multiple är en boolesk egenskap som används med filinmatningsfält. Om värdet är true kan användarna välja mer än en fil. |
+| Alternativ | Listruta | Anger alternativ för rullgardinsmenyer. Egenskapen options är en kommaavgränsad lista med alternativ för listrutor, som definierar de alternativ som kan markeras och visas för användaren. |
+| Markerad | Kryssruta, radio | Anger om fältet är markerat som standard. Attributet checked är en boolesk egenskap som används med kryssrutor och alternativinmatningar. Om värdet är true innebär det att fältet är markerat som standard när formuläret läses in. |
+| Fieldset | Alla | Grupperar fält för att skapa visuellt distinkta avsnitt i ett formulär. Fältelementet grupperar relaterade fält i ett formulär och skiljer dem visuellt för att förbättra organisationen och användarupplevelsen. </br> Om du vill ordna en uppsättning fält i en fältuppsättning använder du `fieldset` och ange namnattributet. I exemplet nedan visar vi hur alternativknappar är inkapslade i en enda fältuppsättning för bättre sortering. ![Exempel på fältuppsättning](/help/edge/assets/fieldset-example.png) |
 
-The Form Block supports a range of HTML 5 input types, and it also seamlessly renders forms created with AEM core components.
 
+
+<!--
+
+## Supported HTML 5 input types in Adaptive Form Block
+
+The Adaptive Form Block supports a range of HTML 5 input types, and it also seamlessly renders forms created with AEM core components.
 Here is the table which outlines how core components correspond to their HTML-5 input types in Edge Delivery:
-
 <table>
  <tbody>
   <tr>
@@ -172,26 +169,26 @@ Here is the table which outlines how core components correspond to their HTML-5 
   </tr>
   <tr>
    <td><a href = "https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion.html">Accordion<a></td>
-   <td><i>Not yet supported in Form Block</i></td>
+   <td><i>Not yet supported in Adaptive Form Block</i></td>
    <td> Allows user to create expandable and collapsible sections in a form. </td>
   </tr>
   <tr>
    <td><a href ="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs.html">Horizontal tabs</a></td>
-   <td><i>Not yet supported in Form Block</i></td>
+   <td><i>Not yet supported in Adaptive Form Block</i></td>
    <td>Organizes multiple sections of a form into separate tabs which are displayed horizontally.</td>
   </tr>
   <tr>
    <td><a href = "https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/image.html">Image</a></td>
-   <td><i>Not yet supported in Form Block</i></td>
+   <td><i>Not yet supported in Adaptive Form Block</i></td>
    <td> Allows user to include images in a form.</td>
   </tr><tr>
    <td><a href ="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/title.html">Title</a></td>
-   <td><i>Not yet supported in Form Block</i></td>
+   <td><i>Not yet supported in Adaptive Form Block</i></td>
    <td> Refers to the text that appears at the top of the form. </td>
   </tr>
   <tr>
    <td><a href = "https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/submit-button.html">Switch</td>
-   <td><i>Not yet supported in Form Block</i></td>
+   <td><i>Not yet supported in Adaptive Form Block</i></td>
    <td> A two-state toggle that allows user to select between two states such as enabling or disabling a feature, setting, or functionality.</td>
   </tr>
  </tbody>

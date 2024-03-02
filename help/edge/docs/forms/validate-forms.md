@@ -1,12 +1,12 @@
 ---
-title: Från kalkylblad till Forms - Mastering Form Block Field Validations
-description: Skapa kraftfulla formulär snabbare med kalkylblad och formulärblocksfält! Den här guiden hjälper dig att skapa anpassade valideringar för EDS Forms Block-fält.
+title: Från kalkylblad till Forms - Mastering Adaptive Form Block - fältverifieringar
+description: Skapa kraftfulla formulär snabbare med kalkylblad och anpassade formulärblocksfält! Den här guiden hjälper dig att skapa anpassade valideringar för EDS Forms Block-fält.
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 78d40574e6fea8dde22414e43fd77215b9e7d2a1
+source-git-commit: e8fbe3efae7368c940cc2ed99cc9a352bbafbc22
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '266'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Lägga till valideringar i formulärfält
 
-Formulärblocket har inbyggda valideringsfunktioner. Dessa valideringar används automatiskt i moderna webbläsare baserat på den valda fälttypen och de ytterligare egenskaper du anger.
+Adaptivt formulärblock har inbyggda valideringsfunktioner. Dessa valideringar används automatiskt i moderna webbläsare baserat på den valda fälttypen och de ytterligare egenskaper du anger.
 
 ## Fälttyper och validering
 
-Formulärblocket har stöd för en mängd olika [Indatatyper för HTML-5](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types), inklusive text, e-post, nummer, datum med mera. Den rymmer också [textområde](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea), urval och fältuppsättning tillsammans med omfattande indatavalideringsfunktioner som är inbyggda i HTML-5.
+Det adaptiva formulärblocket har stöd för en mängd olika [Indatatyper för HTML-5](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types), inklusive text, e-post, nummer, datum med mera. Den rymmer också [textområde](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea), urval och fältuppsättning tillsammans med omfattande indatavalideringsfunktioner som är inbyggda i HTML-5.
 
 använder fälttyper i HTML för att definiera vilken typ av data som en användare kan ange. Olika fälttyper har olika inbyggda valideringsregler:
 
