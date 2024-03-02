@@ -4,20 +4,21 @@ description: Det här dokumentet innehåller en översikt över de formulärkomp
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: e8fbe3efae7368c940cc2ed99cc9a352bbafbc22
+source-git-commit: d0c4f2f880ef7c11b11144502d30430336ac682e
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
 
 
-# Formulärkomponenter
+# A Developer&#39;s Guide to Form Components and Properties: AEM Forms Edge Delivery Service
 
 Med AEM Forms Edge Delivery Service kan du skapa användarvänliga och interaktiva formulär med hjälp av olika komponenter. Dessa komponenter klarar olika typer av datainsamling och kan enkelt anpassas efter dina specifika behov.
 
-Det adaptiva formulärblocket genererar en [struktur för enhetlig HTML](/help/edge/docs/forms/style-theme-forms.md) för alla fälttyper och behållare (paneler) för att säkerställa konsekvens. Denna enhetliga struktur gör det enklare att [formatera ett formulär](/help/edge/docs/forms/style-theme-forms.md).
+![Ett exempelkalkylblad med vissa komponenter och egenskaper](/help/edge/assets/sample-form-in-spreadsheet.png)
 
+Det adaptiva formulärblocket genererar en [struktur för enhetlig HTML](/help/edge/docs/forms/style-theme-forms.md) för alla fälttyper och behållare (paneler) för att säkerställa konsekvens. Denna enhetliga struktur gör det enklare att [formatera ett formulär](/help/edge/docs/forms/style-theme-forms.md).
 
 ## Tillgängliga komponenter
 
@@ -38,6 +39,8 @@ Här är en översikt över de tillgängliga komponenterna:
 - Paneler/behållare: Om du vill gruppera relaterade formulärelement tillsammans blir det enklare att organisera. Det är en kombination av [fältuppsättning](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset) och [teckenförklaring](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend).
 
 
+
+
 ## Komponentegenskaper
 
 Varje formulärkomponent har olika egenskaper som gör att du kan styra dess beteende och utseende. Här är de egenskaper som stöds av komponenter för adaptiva formulärblock:
@@ -45,7 +48,7 @@ Varje formulärkomponent har olika egenskaper som gör att du kan styra dess bet
 
 | Egenskap | Tillämpliga komponenter | Information |
 |--------------|------------------------------|----------------------------------------------------------------------|
-| Typ | Alla | Anger komponentens typ. Den här egenskapen avgör inmatningsfältets beteende och utseende. För textinmatningar kan till exempel typen vara &quot;text&quot;, &quot;email&quot; för e-postinmatningar och &quot;password&quot; för lösenordsinmatningar. Adaptivt formulärblock har stöd för alla giltiga HTML5 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types">indatatyper</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textområde</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">välj</a>och <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fältuppsättning</a> som typ. |
+| Typ | Alla | Anger komponentens typ. Den här egenskapen avgör inmatningsfältets beteende och utseende. För textinmatningar kan till exempel typen vara &quot;text&quot;, &quot;email&quot; för e-postinmatningar och &quot;password&quot; för lösenordsinmatningar. Adaptiv form-block har stöd för  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types">alla giltiga indatatyper för HTML5</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textområde</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">välj</a>och <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fältuppsättning</a> som typ. |
 | Namn | Alla | Identifierar komponenten för att skicka formulär. Attributet name används när formulärdata skickas till servern och associerar användarindata med ett specifikt fält. |
 | Etikett | Alla | Ger kontextuell information till användare. Etiketten är den text som visas bredvid komponenten och ger användarna vägledning om vilken information som ska anges. |
 | Värde | Text, Lösenord, E-post, Nummer, Intervall, Datum och dess varianter (datetime-local, month, week, time), Kryssruta, Radio, Hidden, Submit, Button | Anger komponentens startvärde. För textinmatningar, textområden och markerade element visas detta som standardtext eller standardalternativ. För alternativknappar och kryssrutekomponenter är detta det värde/de data som skickas när de markeras. Attributet value är valfritt men ska betraktas som obligatoriskt för kryssrutor och alternativinmatningar. |
@@ -192,4 +195,12 @@ Here is the table which outlines how core components correspond to their HTML-5 
    <td> A two-state toggle that allows user to select between two states such as enabling or disabling a feature, setting, or functionality.</td>
   </tr>
  </tbody>
-</table>
+</table> -->
+
+## Se mer
+
+- [Skapa och förhandsgranska ett formulär](/help/edge/docs/forms/create-forms.md)
+- [Aktivera formulär för att skicka data](/help/edge/docs/forms/submit-forms.md)
+- [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-eds-forms.md)
+- [Lägga till valideringar i formulärfält](/help/edge/docs/forms/validate-forms.md)
+- [Ändra teman och format för formulär](/help/edge/docs/forms/style-theme-forms.md)

@@ -4,7 +4,7 @@ description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery, doku
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: e8fbe3efae7368c940cc2ed99cc9a352bbafbc22
+source-git-commit: d0c4f2f880ef7c11b11144502d30430336ac682e
 workflow-type: tm+mt
 source-wordcount: '1150'
 ht-degree: 0%
@@ -18,7 +18,7 @@ I dagens digitala samhälle är det viktigt för alla företag att skapa använd
 
 Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft Sharepoint för att enkelt bearbeta inskickade data eller starta ett befintligt arbetsflöde.
 
-![Dokumentbaserat redigeringssystem](/help/edge/assets/document-based-authoring-workflow.png)
+![Dokumentbaserat redigeringssystem](/help/edge/assets/document-based-authoring-workflow-create-form.png)
 
 AEM Forms Edge Delivery innehåller ett block, som kallas adaptivt formulärblock, som hjälper dig att enkelt skapa formulär för att hämta in och lagra inhämtade data. Du kan inkludera det adaptiva formulärblocket i ditt AEM EDS-projekt för att börja skapa ett formulär. Låt oss börja:
 

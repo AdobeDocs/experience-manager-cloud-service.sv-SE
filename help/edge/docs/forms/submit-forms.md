@@ -4,9 +4,9 @@ description: Skapa kraftfulla formulär snabbare med kalkylblad och anpassade fo
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: e8fbe3efae7368c940cc2ed99cc9a352bbafbc22
+source-git-commit: d0c4f2f880ef7c11b11144502d30430336ac682e
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1000'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,10 @@ ht-degree: 0%
 
 # Förbered kalkylbladet för att ta emot data
 
+![Dokumentbaserat redigeringssystem](/help/edge/assets/document-based-authoring-workflow-enable-sheet-to-accept-data.png)
+
 En gång har du [skapade och förhandsvisade formuläret](/help/edge/docs/forms/create-forms.md)är det dags att aktivera motsvarande kalkylblad så att det kan börja ta emot data.
+
 
 <!-- 
 >[!VIDEO](https://video.tv.adobe.com/v/3427489?quality=12&learn=on)
@@ -43,6 +46,7 @@ Aktivera kalkylbladet:
 
 
 När fältnamnen har lagts till i `incoming` kan du godkänna att ditt formulär skickas vidare. Du kan förhandsgranska formuläret och skicka data till bladet med hjälp av det.
+
 
 Du kan även se följande ändringar i kalkylbladet:
 

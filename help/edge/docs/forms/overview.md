@@ -4,9 +4,9 @@ description: AEM Forms Edge Delivery Service har tagits fram för bästa prestan
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: e8fbe3efae7368c940cc2ed99cc9a352bbafbc22
+source-git-commit: d0c4f2f880ef7c11b11144502d30430336ac682e
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '705'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Du kan använda tjänsten för att:
     text-align: center; 
     }
     .image-container img {
-        width: 70%; /* Set image width to 70% of the container */
+        width: 100%; /* Set image width to 100% of the container */
         border: .5px solid; /* Maintain the border style */
         padding: 15px; /* Maintain the padding */
     }
@@ -42,25 +42,26 @@ Du kan använda tjänsten för att:
 
 
 </div>
-&lt;!— &gt; **Captivate-användare med enastående formulär**: Skapa enkelt komplexa och engagerande formulär med ett bibliotek med färdiga komponenter. Integrera enkelt reCAPTCHA, skicka formulär direkt till e-post och möjliggör smidiga filöverföringar för säkra lagringslösningar som Sharepoint, Azure Storage och Amazon S3. Du kan till och med skapa egna skräddarsydda blankettkomponenter för att förverkliga din unika vision.
 
-    ![Registreringsformulär](/help/edge/assets/enrollment-form.png)
+<!--
 
-* **Skapa formulär med perfekt fyr**: Bygg formulär som läses in och återges snabbt, även på långsamma internetanslutningar. Snabbare inläsningstider och optimerad användarupplevelse bidrar till snabbare ifyllnad av formulär och förbättrad konverteringsgrad.
+    ![Enrollment forms](/help/edge/assets/enrollment-form.png)
 
-  ![perfekt fyr för dina formulär](/help/edge/assets/lighthouse-forms.png)
+* **Build forms with perfect lighthouse score**: Build forms that load and render quickly, even on slow internet connections. Faster loading times and optimized user experience contribute to higher form completion rates and improved conversion rates.
 
-* **Skapa digitala registreringsupplevelser med valfria verktyg**: Öka redigeringseffektiviteten genom att frikoppla innehållskällor. När du är klar kan du använda både AEM och dokumentbaserad redigering. Det innebär att du kan arbeta med flera innehållskällor på samma webbplats och använda de redigeringsverktyg du föredrar, till exempel Microsoft Excel, Google Sheets eller AEM Editors.
+    ![perfect lighthouse score for your forms](/help/edge/assets/lighthouse-forms.png)
 
-  ![Utvecklingsverktyg för Edge Delivery-formulär](/help/edge/assets/edge-delivery-forms-authoring-tools.png)
+* **Create digital enrollment experiences with tools of your choice**: Increase authoring efficiency by decoupling content sources. Out of the box you can use both AEM authoring and document-based authoring. As such, you can work with multiple content sources on the same website and use your preferred authoring tools, such as Microsoft Excel, Google Sheets, or AEM Editors.
 
+    ![Edge Delivery forms authoring tools](/help/edge/assets/edge-delivery-forms-authoring-tools.png)
+    
 <!--
 * **Measure customer impact and deliver effective forms**: Use our RUM dashboards to visualize form performance and identify areas for improvement. Experiment with different versions and continuously optimize your forms for maximum effectiveness, ensuring you capture the data you need and drive better business outcomes.
 
 * **Use Integrated services:** Use integrated services to streamline and empowers your users with a one-stop shop for managing their digital enrollment journeys. Use e-signatures, automated workflows, document of record (DoR), and seamless data integration, simplify the entire digital enrollment process, accelerate approvals, and optimizes your business workflows. 
 
     
->[!NOTE]
+    >[!NOTE]
     >
     >
     > WYSIWYG authoring capability, integrated services, and customer impact measuring features are available under early adopter program. You can write to aem-forms-early-adopter-program@adobe.com from your official email id to join the early adopter program and request access to the capability.
@@ -81,6 +82,9 @@ Du kan använda tjänsten för att:
 
 * **Formatera Forms**: Varje formulärfält har en fast HTML-struktur som kan dekoreras ytterligare med anpassade CSS- eller JavaScript-filer. Väljare för målfält i CSS/JS tillhandahålls baserat på typ och namn.
 
+## Arbetsflöde
+
+![Dokumentbaserat redigeringssystem](/help/edge/assets/document-based-authoring-workflow.png)
 
 ## Börja skapa formulär
 

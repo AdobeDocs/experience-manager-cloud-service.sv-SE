@@ -4,9 +4,9 @@ description: Publicera ett AEM Forms-formulär för Edge Delivery Services
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: e8fbe3efae7368c940cc2ed99cc9a352bbafbc22
+source-git-commit: d0c4f2f880ef7c11b11144502d30430336ac682e
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,8 @@ ht-degree: 0%
 # Publicera formuläret
 
 När du är redo att dela formuläret med dina kunder för datainsamling eller insändning kan du helt enkelt publicera det, så att formuläret blir lätt tillgängligt för kunderna.
+
+![Dokumentbaserat redigeringssystem](/help/edge/assets/document-based-authoring-workflow-publish-form.png)
 
 ## Krav
 
