@@ -4,9 +4,9 @@ description: Skapa kraftfulla formulär snabbare med kalkylblad och anpassade fo
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: d0c4f2f880ef7c11b11144502d30430336ac682e
+source-git-commit: fd2e5df72e965ea6f9ad09b37983f815954f915c
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,7 @@ ht-degree: 0%
 
 En gång har du [skapade och förhandsvisade formuläret](/help/edge/docs/forms/create-forms.md)är det dags att aktivera motsvarande kalkylblad så att det kan börja ta emot data.
 
+![Dokumentbaserat redigeringssystem](/help/edge/assets/document-based-authoring-workflow-enable-sheet-to-accept-data.png)
 
 <!-- 
 >[!VIDEO](https://video.tv.adobe.com/v/3427489?quality=12&learn=on)
@@ -46,6 +47,7 @@ Aktivera kalkylbladet:
 
 
 När fältnamnen har lagts till i `incoming` kan du godkänna att ditt formulär skickas vidare. Du kan förhandsgranska formuläret och skicka data till bladet med hjälp av det.
+
 
 
 Du kan även se följande ändringar i kalkylbladet:
@@ -290,6 +292,6 @@ Sedan kan du anpassa tackmeddelandet, [konfigurera en tacksida](/help/edge/docs/
 
 * [Skapa och förhandsgranska ett formulär](/help/edge/docs/forms/create-forms.md)
 * [Aktivera formulär för att skicka data](/help/edge/docs/forms/submit-forms.md)
-* [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-eds-forms.md)
+* [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-forms.md)
 * [Lägga till valideringar i formulärfält](/help/edge/docs/forms/validate-forms.md)
 * [Ändra teman och format för formulär](/help/edge/docs/forms/style-theme-forms.md)

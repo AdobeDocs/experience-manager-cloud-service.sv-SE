@@ -4,7 +4,7 @@ description: Lär dig konfigurera tacksidor och omdirigering för Forms Block f�
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: d6b1048c44022da47a9d7443f564a2ff9d1802cf
+source-git-commit: fd2e5df72e965ea6f9ad09b37983f815954f915c
 workflow-type: tm+mt
 source-wordcount: '608'
 ht-degree: 0%
@@ -86,6 +86,6 @@ Om du vill dirigera om&quot;Tack&quot;-sidan till en annan sida använder du [om
 * [Egenskaper för formulärfält](/help/edge/docs/forms/eds-form-field-properties)
 * [Skapa och förhandsgranska ett formulär](/help/edge/docs/forms/create-forms.md)
 * [Aktivera formulär för att skicka data](/help/edge/docs/forms/submit-forms.md)
-* [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-eds-forms.md)
+* [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-forms.md)
 * [Lägga till valideringar i formulärfält](/help/edge/docs/forms/validate-forms.md)
 * [Ändra teman och format för formulär](/help/edge/docs/forms/style-theme-forms.md)

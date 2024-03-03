@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: e2970c7a141025222c6b119787142e7c39d453af
+source-git-commit: fd2e5df72e965ea6f9ad09b37983f815954f915c
 workflow-type: tm+mt
 source-wordcount: '4751'
 ht-degree: 3%
@@ -822,7 +822,7 @@ ht-degree: 3%
       + Kom igång {#getting-started-eds-forms}
          + [Skapa och förhandsgranska ett formulär](/help/edge/docs/forms/create-forms.md)
          + [Aktivera formulär för att skicka data](/help/edge/docs/forms/submit-forms.md)
-         + [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-eds-forms.md)
+         + [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-forms.md)
          + [Lägga till valideringar i formulärfält](/help/edge/docs/forms/validate-forms.md)
          + [Ändra teman och format för formulär](/help/edge/docs/forms/style-theme-forms.md)
          + [Använd regler för att lägga till dynamiskt beteende i ett formulär](/help/edge/docs/forms/rules-forms.md)

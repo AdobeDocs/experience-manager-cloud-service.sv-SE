@@ -2,9 +2,9 @@
 description: Den här självstudiekursen innehåller anvisningar om hur du gör ett avsnitt i ett formulär upprepningsbart
 title: Upprepningsbara avsnitt i Edge Delivery Services
 feature: Edge Delivery Services
-source-git-commit: 3b24d0cd4099e0b8eb48c977f460b25c168af220
+source-git-commit: fd2e5df72e965ea6f9ad09b37983f815954f915c
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Ta till exempel ett formulär som används för att samla in information från a
 
 ## Förutsättningar
 
-Konfigurera Edge Delivery Service (EDS) Github-projekt med hjälp AEM boilerplate och klona motsvarande Github-databas på den lokala datorn. Se [självstudiekurs för utvecklare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial.html) för mer information.
+Konfigurera Edge Delivery Service (EDS) GitHub-projekt med hjälp AEM boilerplate och klona motsvarande GitHub-databas på den lokala datorn. Se [självstudiekurs för utvecklare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/build/tutorial.html) för mer information.
 
 ## Upprepningsbara avsnitt i Edge Delivery
 
@@ -56,7 +56,7 @@ I det här exemplet använder vi ett Excel-blad med namnet `loan-application.xls
 1. Öppna eller skapa en ny dokumentfil i en Microsoft SharePoint-webbplats om du vill bädda in Excel-bladet i den med en `Form Block`. Öppna till exempel `index` och lägga till en `Form Block`.
 2. Öppna kommandotolken, navigera till AEM Edge Delivery-projektkatalog på den lokala datorn och kör kommandot som `aem up`.
 
-Formuläret är tillgängligt på `https://localhost:3000`, där du klickar på `Add` knappen lägger till ett nytt upprepningsbart avsnitt där information om medsökande kan anges. Du kan också ta bort det repeterbara avsnittet genom att klicka på `Delete` -knappen.
+Formuläret är tillgängligt på `https://localhost:3000`, där du klickar på `Add` knappen lägger till ett nytt upprepningsbart avsnitt där information om medsökande kan anges. Du kan även ta bort det repeterbara avsnittet genom att klicka på `Delete` -knappen.
 
 >[!NOTE]
 >

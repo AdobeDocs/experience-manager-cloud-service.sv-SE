@@ -4,7 +4,7 @@ description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery, doku
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: d0c4f2f880ef7c11b11144502d30430336ac682e
+source-git-commit: fd2e5df72e965ea6f9ad09b37983f815954f915c
 workflow-type: tm+mt
 source-wordcount: '1150'
 ht-degree: 0%
@@ -81,7 +81,7 @@ Så här fortsätter du med att skapa formulär:
 
    ![ändra namn på standardblad till &quot;shared-default&quot;](/help/edge/assets/rename-sheet-to-shared-default.png)
 
-1. Om du vill lägga till formulärfälten infogar du rader och kolumnrubriker i bladet&quot;shared-default&quot;. Varje rad ska representera en [formulärfält](/help/edge/docs/forms/form-components.md), med kolumnrubriker som definierar motsvarande fält [egenskaper](/help/edge/docs/forms/eds-form-field-properties).
+1. Om du vill lägga till formulärfälten infogar du rader och kolumnrubriker i bladet&quot;shared-default&quot;. Varje rad ska representera en [formulärfält](/help/edge/docs/forms/form-components.md#available-components), med kolumnrubriker som definierar motsvarande fält [egenskaper](/help/edge/docs/forms/form-components.md#components-properties).
 
    För att komma igång snabbt bör du överväga att kopiera innehållet i [Kalkylblad för förfrågan](https://docs.google.com/spreadsheets/d/196lukD028RDK_evBelkOonPxC7w0l_IiJ-Yx3DvMfNk/edit#gid=0) i kalkylbladet. När du har kopierat innehållet sparar du kalkylbladet.
 
@@ -159,6 +159,6 @@ Fram tills nu har du lagt till det adaptiva formulärblocket i ditt EDS-projekt 
 * [Egenskaper för formulärfält](/help/edge/docs/forms/eds-form-field-properties)
 * [Skapa och förhandsgranska ett formulär](/help/edge/docs/forms/create-forms.md)
 * [Aktivera formulär för att skicka data](/help/edge/docs/forms/submit-forms.md)
-* [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-eds-forms.md)
+* [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-forms.md)
 * [Lägga till valideringar i formulärfält](/help/edge/docs/forms/validate-forms.md)
 * [Ändra teman och format för formulär](/help/edge/docs/forms/style-theme-forms.md)

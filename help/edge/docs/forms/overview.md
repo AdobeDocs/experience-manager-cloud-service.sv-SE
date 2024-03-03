@@ -4,9 +4,9 @@ description: AEM Forms Edge Delivery Service har tagits fram för bästa prestan
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: d0c4f2f880ef7c11b11144502d30430336ac682e
+source-git-commit: fd2e5df72e965ea6f9ad09b37983f815954f915c
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '814'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,10 @@ Du kan använda tjänsten för att:
   <div>
     <style>
     .image-container {
-    width: 80%;
     text-align: center; 
     }
     .image-container img {
-        width: 100%; /* Set image width to 100% of the container */
-        border: .5px solid; /* Maintain the border style */
-        padding: 15px; /* Maintain the padding */
+        width: 100%; /* Set image width to 100% of the container 
     }
 </style>
     <div class="image-container">
@@ -42,6 +39,8 @@ Du kan använda tjänsten för att:
 
 
 </div>
+
+<!--
 
 <!--
 
@@ -62,6 +61,7 @@ Du kan använda tjänsten för att:
 
     
     >[!NOTE]
+    >[!NOTE]
     >
     >
     > WYSIWYG authoring capability, integrated services, and customer impact measuring features are available under early adopter program. You can write to aem-forms-early-adopter-program@adobe.com from your official email id to join the early adopter program and request access to the capability.
@@ -70,17 +70,24 @@ Du kan använda tjänsten för att:
 
 ## Viktiga funktioner
 
-* **HTML5-baserade formulärfältskomponenter**: Med AEM Forms Edge Delivery Service kan du skapa användarvänliga och interaktiva formulär med formulärfält som baseras på giltiga HTML5 [indatatyper](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types), <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textområde</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">välj</a>och <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fältuppsättning</a>  -komponenter. Dessa komponenter klarar olika typer av datainsamling och kan enkelt anpassas efter dina specifika behov.
+* **HTML5-baserade formulärfältskomponenter**: Med AEM Forms Edge Delivery Service kan du skapa användarvänliga och interaktiva formulär med hjälp av formulärkomponenter baserade på HTML5 [indatatyper](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types), <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textområde</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">välj</a>och <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fältuppsättning</a>  -element. Dessa komponenter klarar olika typer av datainsamling och kan enkelt anpassas efter dina specifika behov.
 
 * **Tillgänglighet**: Fälten i formulärblocket är tillgängliga. Varje etikett länkas med respektive indataelement och ID:n genereras automatiskt för länkning. Beskrivningar som är associerade med fält länkas via attributet aria-describedby. Tangentbordsnavigering med standardtangenterna Tabb/Skift + Tabb stöds.
 
-* **Formulärregler**: Skapa logik som justerar fältets synlighet, validering och beteende baserat på användarindata eller fördefinierade villkor. Regler är ett flexibelt och intuitivt sätt att lägga till intelligens i formulären, vilket säkerställer att de smidigt kan anpassas utifrån användarens indata.
+* **Stilar**: Varje formulärfält har en fast HTML-struktur som enkelt kan dekoreras med anpassade CSS- eller JavaScript-filer. Väljare för målfält i CSS och JS tillhandahålls baserat på typ och namn. Du kan enkelt skapa nya väljare på grund av den standardiserade strukturen.
 
-* **Filöverföringar**: Förbättra formulären med smidiga funktioner för bilagor. Vare sig du behöver samla in dokument, bilder eller andra filer från användarna kan du med det adaptiva formulärblocket enkelt integrera filöverföringsfunktioner. Med anpassade hanteringsalternativ tillgängliga kan du anpassa filöverföringsprocessen så att den passar dina specifika behov.
+* **Regler**: Skapa enkelt logik som justerar fältets synlighet, validering och beteende baserat på användarindata eller fördefinierade villkor. Regler är ett flexibelt och intuitivt sätt att lägga till intelligens i formulären, vilket säkerställer att de smidigt kan anpassas utifrån användarens indata.
 
-* **Formulärvalidering**: Innan formuläret skickas valideras det och ogiltiga fält markeras med felmeddelanden som visas för användaren. Det finns olika mönster för att visa dessa fel.
+* **Valideringar**: Innan formuläret skickas valideras det och ogiltiga fält markeras med felmeddelanden som visas för användaren. Det finns olika mönster för att visa dessa fel.
 
-* **Formatera Forms**: Varje formulärfält har en fast HTML-struktur som kan dekoreras ytterligare med anpassade CSS- eller JavaScript-filer. Väljare för målfält i CSS/JS tillhandahålls baserat på typ och namn.
+Det finns några avancerade funktioner som är tillgängliga på begäran:
+
+* **Filöverföringar**: Du kan lägga till funktioner för bifogade filer i formulären. Oavsett om du behöver samla in dokument, bilder eller andra filer från användarna så är filöverföringen enkel. Med anpassade hanteringsalternativ tillgängliga kan du anpassa filöverföringsprocessen så att den passar dina specifika behov.
+
+* **reCAPTCHA**: Dra nytta av den smidiga integreringen av Google reCAPTCHA i formulären med vårt OTB-stöd. Skydda era formulär mot bedrägliga aktiviteter, skräppost och missbruk, samtidigt som ni bibehåller en smidig och oavbruten användarupplevelse.
+
+* **Skicka e-postmeddelanden när formulär skickas**: Eliminera krånglet med manuella uppföljningar och säkerställ snabb kommunikation med vår inbyggda e-postautomatisering för att skicka in formulär. Med den här integrerade lösningen kan ni enkelt meddela berörda parter, inklusive att skicka formulärdata, när någon fyller i ett formulär på webbplatsen. Inget behov av komplexa konfigurationer eller andra verktyg - det är klart att användas direkt.
+
 
 ## Arbetsflöde
 

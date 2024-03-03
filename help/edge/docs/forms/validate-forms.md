@@ -4,7 +4,7 @@ description: Skapa kraftfulla formulär snabbare med kalkylblad och anpassade fo
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: e8fbe3efae7368c940cc2ed99cc9a352bbafbc22
+source-git-commit: fd2e5df72e965ea6f9ad09b37983f815954f915c
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 0%
@@ -33,6 +33,6 @@ Tel: Den här fälttypen är särskilt utformad för telefonnummer och kan utlö
 
 * [Skapa och förhandsgranska ett formulär](/help/edge/docs/forms/create-forms.md)
 * [Aktivera formulär för att skicka data](/help/edge/docs/forms/submit-forms.md)
-* [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-eds-forms.md)
+* [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-forms.md)
 * [Lägga till valideringar i formulärfält](/help/edge/docs/forms/validate-forms.md)
 * [Ändra teman och format för formulär](/help/edge/docs/forms/style-theme-forms.md)

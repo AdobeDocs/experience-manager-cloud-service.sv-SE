@@ -4,17 +4,18 @@ description: Det här dokumentet innehåller en översikt över de formulärkomp
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: d0c4f2f880ef7c11b11144502d30430336ac682e
+source-git-commit: fd2e5df72e965ea6f9ad09b37983f815954f915c
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '965'
 ht-degree: 0%
 
 ---
 
 
-# A Developer&#39;s Guide to Form Components and Properties: AEM Forms Edge Delivery Service
+# Komponenter och egenskaper i formulär: AEM Forms Edge Delivery Service
 
 Med AEM Forms Edge Delivery Service kan du skapa användarvänliga och interaktiva formulär med hjälp av olika komponenter. Dessa komponenter klarar olika typer av datainsamling och kan enkelt anpassas efter dina specifika behov.
+
 
 ![Ett exempelkalkylblad med vissa komponenter och egenskaper](/help/edge/assets/sample-form-in-spreadsheet.png)
 
@@ -41,6 +42,8 @@ Här är en översikt över de tillgängliga komponenterna:
 
 
 
+
+
 ## Komponentegenskaper
 
 Varje formulärkomponent har olika egenskaper som gör att du kan styra dess beteende och utseende. Här är de egenskaper som stöds av komponenter för adaptiva formulärblock:
@@ -48,6 +51,7 @@ Varje formulärkomponent har olika egenskaper som gör att du kan styra dess bet
 
 | Egenskap | Tillämpliga komponenter | Information |
 |--------------|------------------------------|----------------------------------------------------------------------|
+| Typ | Alla | Anger komponentens typ. Den här egenskapen avgör inmatningsfältets beteende och utseende. För textinmatningar kan till exempel typen vara &quot;text&quot;, &quot;email&quot; för e-postinmatningar och &quot;password&quot; för lösenordsinmatningar. Adaptiv form-block har stöd för  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types">alla giltiga indatatyper för HTML5</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textområde</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">välj</a>och <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fältuppsättning</a> som typ. |
 | Typ | Alla | Anger komponentens typ. Den här egenskapen avgör inmatningsfältets beteende och utseende. För textinmatningar kan till exempel typen vara &quot;text&quot;, &quot;email&quot; för e-postinmatningar och &quot;password&quot; för lösenordsinmatningar. Adaptiv form-block har stöd för  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types">alla giltiga indatatyper för HTML5</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textområde</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">välj</a>och <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fältuppsättning</a> som typ. |
 | Namn | Alla | Identifierar komponenten för att skicka formulär. Attributet name används när formulärdata skickas till servern och associerar användarindata med ett specifikt fält. |
 | Etikett | Alla | Ger kontextuell information till användare. Etiketten är den text som visas bredvid komponenten och ger användarna vägledning om vilken information som ska anges. |
@@ -201,6 +205,6 @@ Here is the table which outlines how core components correspond to their HTML-5 
 
 - [Skapa och förhandsgranska ett formulär](/help/edge/docs/forms/create-forms.md)
 - [Aktivera formulär för att skicka data](/help/edge/docs/forms/submit-forms.md)
-- [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-eds-forms.md)
+- [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-forms.md)
 - [Lägga till valideringar i formulärfält](/help/edge/docs/forms/validate-forms.md)
 - [Ändra teman och format för formulär](/help/edge/docs/forms/style-theme-forms.md)
