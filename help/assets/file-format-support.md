@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management,Renditions
 role: User,Admin
 exl-id: e848aa77-7829-4adc-8b88-0279791a4525
-source-git-commit: 4c1525fd51956d3d788a91f58978a9c885e6daa5
+source-git-commit: ea61a794788ee2a59e05727fa3c4fd4fc1ca9956
 workflow-type: tm+mt
-source-wordcount: '1398'
+source-wordcount: '1416'
 ht-degree: 0%
 
 ---
@@ -227,15 +227,19 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 ## Dynamic Media - Rasterbildformat som stöds {#image-support-dynamic-media}
 
 | Format | Överför (indataformat) | Skapa bildförinställning (utdataformat) | Förhandsgranska dynamisk återgivning | Leverera dynamisk återgivning | Hämta dynamisk återgivning | Ange typer som stöder det här formatet |
-| ------- | --------------------- | ----------------------------------- | ------------------------- | ------------------------- | -------------------------- | ---------------------------------- |
+|---|:---:|:---:|:---:|:---:|:---:| --- |
+| AVIF | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | BMP | ✓ | - | - | - | - | [Bild](/help/assets/dynamic-media/image-sets.md), [Blandade media](/help/assets/dynamic-media/mixed-media-sets.md)och [Snurra](/help/assets/dynamic-media/spin-sets.md) |
-| EPS | ✓ | ✓ | ✓ | ✓ | ✓ | - |
+| [EPS](/help/assets/dynamic-media/managing-image-presets.md#adobe-illustrator-ai-postscript&reg;-eps-and-pdf-file-formats-adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | - |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ | - |
+| HEIC | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 | JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | [Bild](/help/assets/dynamic-media/image-sets.md), [Blandade media](/help/assets/dynamic-media/mixed-media-sets.md)och [Snurra](/help/assets/dynamic-media/spin-sets.md) |
 | PICT | ✓ | - | - | - | - | - |
 | PNG | ✓ | ✓ | ✓ | ✓ | ✓ | [Bild](/help/assets/dynamic-media/image-sets.md), [Blandade media](/help/assets/dynamic-media/mixed-media-sets.md)och [Snurra](/help/assets/dynamic-media/spin-sets.md) |
 | PSD ‡ | ✓ | - | - | - | - | - |
 | TIFF | ✓ | ✓ | ✓ | ✓ | ✓ | [Bild](/help/assets/dynamic-media/image-sets.md), [Blandade media](/help/assets/dynamic-media/mixed-media-sets.md)och [Snurra](/help/assets/dynamic-media/spin-sets.md) |
+| WEBP | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+<!-- AVIF, HEIC, and WebP added to table above on March 4, 2024 based on CQDOC-21294 -->
 
 ‡ Den sammanfogade bilden extraheras från filen PSD. Det är en bild som genereras av [!DNL Adobe Photoshop] och ingår i filen PSD. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
 

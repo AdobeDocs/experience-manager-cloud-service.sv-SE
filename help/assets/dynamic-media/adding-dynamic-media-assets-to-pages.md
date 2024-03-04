@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Asset Management
 role: User
 exl-id: 2f2fd6cb-8b53-4167-a7e3-453f27549109
-source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
+source-git-commit: 74254387de1761f25127180787453e681181d97a
 workflow-type: tm+mt
 source-wordcount: '3000'
 ht-degree: 5%
@@ -149,7 +149,7 @@ Du kan redigera följande Dynamic Media-inställningar genom att välja **[!UICO
 
 * **[!UICONTROL Viewer modifiers]** - Visningsmodifierare har formen av namn=värde-par med en &amp;-avgränsare och du kan ändra visningsprogram enligt riktlinjerna i referenshandboken för visningsprogrammen. Ett exempel på en visningsmodifierare är `posterimage=img.jpg&caption=text.vtt,1` som anger en annan bild för videominiatyrbilden och associerar en undertextningsfil med videon.
 
-* **[!UICONTROL Image preset]** - Välj en befintlig bildförinställning i listrutan. Om den bildförinställning du söker inte syns måste du göra den synlig. Se Hantera bildförinställningar. Du kan inte välja en visningsförinställning om du använder en bildförinställning och omvänt.
+* **[!UICONTROL Image preset]** - Välj en befintlig bildförinställning i listrutan. Om den bildförinställning du söker inte syns måste du göra den synlig. Se [Hantera bildförinställningar](/help/assets/dynamic-media/managing-image-presets.md). Du kan inte välja en visningsförinställning om du använder en bildförinställning och omvänt.
 
   Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
