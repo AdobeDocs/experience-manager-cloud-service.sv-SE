@@ -1,11 +1,10 @@
 ---
 title: Hantera samlingar
 description: En samling är en uppsättning resurser i vyn Experience Manager Assets. Använd samlingar för att dela resurser mellan användare.
-exl-id: 33c889f5-c989-4772-9591-db62f50e5c80
-source-git-commit: d198b3f0c7d8469a376ba7a3e95e57c84f835dbb
+source-git-commit: c3076ce35128c147ce2056d11d9305d9a9456636
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 1%
+source-wordcount: '736'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 1%
 >title="Hantera samlingar"
 >abstract="En samling är en uppsättning resurser, mappar eller andra samlingar i resursvyn. Använd samlingar för att dela resurser mellan användare. Till skillnad från mappar kan en samling innehålla resurser från olika platser. Du kan dela flera samlingar med en användare. Varje samling innehåller referenser till resurser. Resursernas referensintegritet bevaras i alla samlingar."
 
-En samling är en uppsättning resurser, mappar eller andra samlingar i vyn Adobe Experience Manager Resurser. Använd samlingar för att dela resurser mellan användare.
+En samling är en uppsättning resurser, mappar eller andra samlingar i vyn Adobe Experience Manager Assets. Använd samlingar för att dela resurser mellan användare.
 
 Till skillnad från mappar kan en samling innehålla resurser från olika platser.
 

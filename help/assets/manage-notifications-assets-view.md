@@ -1,8 +1,7 @@
 ---
 title: Hantera meddelanden
 description: Övervaka åtgärderna som utförs på de resurser eller mappar som är tillgängliga i databasen med meddelanden i resursvyn.
-exl-id: 5c0039a2-caa2-4b55-b963-0e7e9e542c47
-source-git-commit: bdbe47a8f06d2ec1cd75103905677fcd3955632d
+source-git-commit: c3076ce35128c147ce2056d11d9305d9a9456636
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 0%
@@ -73,7 +72,7 @@ Så här prenumererar du på meddelandekategorierna:
 1. Klicka **[!UICONTROL Customize]** för att visa meddelandekategorierna.
    ![Meddelanden i resursvyn](assets/enable-notification-categories.png)
 
-1. Välj de meddelandekategorier för vilka du måste meddelas.
+1. Välj de meddelandekategorier för vilka du måste få meddelanden.
 
 ## Titta på och ta bort bevakade mappar, resurser och samlingar {#watch-unwatch-assets}
 
@@ -86,7 +85,7 @@ Efter [prenumerera på meddelandekategorierna](#subscribe-to-notification-catego
 
 Om du vill prenumerera på innehållet väljer du den mapp, resurs eller samling som du vill prenumerera på och klickar på **[!UICONTROL Watch]**.
 
-Resursvyn visar ett meddelande om att åtgärden lyckades. Du kan klicka **[!UICONTROL Go to notification preferences]** finns i meddelandet om att åtgärden lyckades redigera [prenumeration på meddelandekategorier](#subscribe-to-notification-categories).
+Resursvyn visar ett meddelande om att åtgärden lyckades. Klicka **[!UICONTROL Go to notification preferences]** finns i meddelandet om att åtgärden lyckades redigera [prenumeration på meddelandekategorier](#subscribe-to-notification-categories).
 
 ![Meddelanden i resursvyn](assets/watch-assets.png)
 

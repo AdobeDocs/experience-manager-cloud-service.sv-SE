@@ -2,8 +2,7 @@
 title: "[!DNL Assets view] användargränssnitt"
 description: Förstå användargränssnittet för och navigering i [!DNL Assets view].
 role: User
-exl-id: 534a8084-88f7-410e-b872-719e47e62b10
-source-git-commit: 39166f59eb773a149ba28be2b34d0c1aa6c831b4
+source-git-commit: c3076ce35128c147ce2056d11d9305d9a9456636
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 title: Överför resurser till databasen
 description: Överför resurser till [!DNL Assets view], visa överföringsstatus och åtgärda överföringsproblem.
 role: User
-exl-id: a85a4455-4456-48af-aee9-f05300677605
-source-git-commit: df82681338f8ca1a34df6118cbddc6642aa8d4b5
+source-git-commit: c3076ce35128c147ce2056d11d9305d9a9456636
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -22,7 +21,7 @@ Du kan använda följande metoder för att överföra en eller flera resurser el
 <!-- TBD: Update this GIF
 ![Asset and nested folder upload demo](assets/do-not-localize/upload-assets.gif) -->
 
-Du kan använda någon av dessa metoder för att överföra resurser när du har skapat en mapp. Om du vill skapa en tom mapp klickar du på **[!UICONTROL Create Folder]** i verktygsfältet. while [!DNL Assets view] har en kraftfull fulltextsökningsfunktion som du kan använda för att ordna dina resurser bättre med hjälp av mappar.
+Du kan använda någon av dessa metoder för att överföra resurser när du har skapat en mapp. Klicka på om du vill skapa en tom mapp **[!UICONTROL Create Folder]** i verktygsfältet. while [!DNL Assets view] har en kraftfull fulltextsökningsfunktion som du kan använda för att ordna dina resurser bättre med hjälp av mappar.
 
 När du har markerat filerna visas en bekräftelsedialogruta där du kan lägga till fler filer eller ta bort redan markerade filer. Om du vill lägga till fler filer i en markering klickar du på **[!UICONTROL Browse]** och väljer **[!UICONTROL Browse files]** eller **[!UICONTROL Browse folders]**. Lägg till fler filer eller mappar från samma mapp eller från en annan mapp.
 
@@ -40,19 +39,19 @@ När alla filer är i kö klickar du på **[!UICONTROL Upload]**.
 
 När du överför många resurser eller kapslade mappar till [!DNL Assets view]kan vissa resurser inte överföras av olika anledningar, till exempel duplicerade resurser och nätverksproblem.
 
-Om du vill spåra överföringsförloppet klickar du på **[!UICONTROL Upload Progress]** i verktygsfältet. En panel visar överföringsförloppet för alla resurser.
+Om du vill spåra överföringsförloppet klickar du **[!UICONTROL Upload Progress]** i verktygsfältet. På en panel visas överföringsförloppet för alla resurser.
 
 Om du vill visa en delmängd av resurser baserat på överföringsförloppet eller överföringsstatusen använder du filtret i **[!UICONTROL Upload Progress]** sidofält. De olika filtren är att visa alla resurser, slutförda överföringar, pågående överföringar, köade resurser som ska överföras, pausade överföringar, duplicerade resurser och resurser som inte kunde överföras.
 
 ![Filtrera överföringsförloppet baserat på överföringsstatus](assets/filter-upload-progress.png)
 
-*Bild: Filtrera de resurser som du försökte överföra baserat på deras överföringsstatus eller överföringsförlopp.*
+*Bild: Filtrera de resurser som du försökte överföra baserat på överföringsstatus eller överföringsförlopp.*
 
 Omedelbart efter att resurserna har överförts [!DNL Assets view] bearbetar resurserna för att generera miniatyrbilder och bearbeta metadata. För många resurser tar bearbetningen tid. Om ingen miniatyrbild visas och du ser ett bearbetningsmeddelande på platshållarminiatyrbilden kontrollerar du mappen igen efter några minuter. Under bearbetningen, bland annat, [!DNL Assets view] skapar återgivningarna, lägger till smarta taggar och indexerar resursinformationen för sökning.
 
 ![Resurser är processer vid överföring och bearbetningen visas i plattan](assets/upload-processing.png)
 
-*Bild: Överförda resurser visar bearbetningen på plattan som de bearbetas.*
+*Bild: Överförda resurser visar bearbetning på plattan som de bearbetas.*
 
 ## Resursåtergivningar {#renditions}
 
@@ -60,7 +59,7 @@ Omedelbart efter att resurserna har överförts [!DNL Assets view] bearbetar res
 
 ![Återgivningar](assets/renditions-view-download.png)
 
-*Bild: Visa och ladda ned renderingarna.*
+*Bild: Visa och hämta renderingarna.*
 
 ## Hantera misslyckade överföringar {#resolve-upload-fails}
 
@@ -78,7 +77,7 @@ Om du försöker överföra duplicerade resurser överförs inte resurserna för
 
 ![Hantera alla misslyckade överföringar gruppvis](assets/upload-progress-manage-failed-uploads.png)
 
-*Bild: Lös problem för alla resurser på en gång för duplicerade resurser som inte kan överföras som standard.*
+*Bild: Lös problem för alla resurser samtidigt för duplicerade resurser som inte kan överföras som standard.*
 
 >[!TIP]
 >
@@ -89,13 +88,13 @@ See how [[!DNL Assets view] integrates with [!DNL Adobe Asset Link]](/help/asset
 
 ## Ta bort resurser eller mappar {#delete-assets}
 
-Användare kan ta bort enskilda resurser eller mappar som inte längre behövs. Gör något av följande om du vill ta bort en resurs eller en mapp:
+Användare kan ta bort enskilda resurser eller mappar som inte längre behövs. Så här tar du bort en resurs eller en mapp:
 
 * Använd alternativet som är tillgängligt på en resurs eller en mapps miniatyrbild.
 
   ![Alternativ på miniatyrbild av resurs för att hantera en resurs](assets/options-on-thumbnail.png)
 
-  *Bild: Åtgärder för filer och mappar är tillgängliga på resurs- eller mapppanelen.*
+  *Bild: Åtgärder för filer och mappar är tillgängliga på resursen eller mapppanelen.*
 
 * Välj en resurs eller en mapp och klicka på **[!UICONTROL Delete]** ![ta bort ikon](assets/do-not-localize/delete-icon.png) i verktygsfältet.
 
