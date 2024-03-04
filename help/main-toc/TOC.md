@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: fd2e5df72e965ea6f9ad09b37983f815954f915c
+source-git-commit: 2359f66c961d7678d07af12aa8173ad9169dff9c
 workflow-type: tm+mt
-source-wordcount: '4751'
+source-wordcount: '4761'
 ht-degree: 3%
 
 ---
@@ -636,6 +636,7 @@ ht-degree: 3%
             + [Lägga till en anpassad felhanterare i ett adaptivt formulär](/help/forms/add-custom-error-handler-adaptive-forms-core-components.md)
             + [Lägg till en språkinställning för adaptiv Forms baserat på kärnkomponenter](/help/forms/supporting-new-language-localization-core-components.md)
             + [Skapa och använda anpassade funktioner](/help/forms/create-and-use-custom-functions.md)
+            + [Lägga till regler i ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components.md)
       + Foundation Components {#authoring-adaptive-forms-foundation-components}
          + Konvertera PDF forms till Adaptiv Forms {#afcs}
             + [Introduktion till den automatiserade konverteringstjänsten för formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html)

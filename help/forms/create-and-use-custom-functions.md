@@ -5,9 +5,9 @@ keywords: Lägg till en anpassad funktion, använd en anpassad funktion, skapa e
 contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
-source-git-commit: 1fb7fece71eec28219ce36c72d628867a222b618
+source-git-commit: 46fbed98a806f62dd1882eb0085d4338c5cd51a7
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '1100'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 ## Introduktion
 
 AEM Forms har stöd för anpassade funktioner, vilket gör det möjligt för användare att definiera JavaScript-funktioner för implementering av komplexa affärsregler. Dessa anpassade funktioner gör att man kan förbättra blanketternas funktioner genom att underlätta hantering och bearbetning av inmatade data för att uppfylla specifika krav. De möjliggör också dynamisk ändring av formulärbeteende baserat på fördefinierade kriterier.
-I Adaptiv Forms kan du använda anpassade funktioner i [regelredigerare för ett anpassat formulär](/help/forms/rule-editor.md#custom-functions) för att skapa specifika valideringsregler för formulärfält.
+I Adaptiv Forms kan du använda anpassade funktioner i [regelredigerare för ett anpassat formulär](/help/forms/rule-editor-core-components.md) för att skapa specifika valideringsregler för formulärfält.
 
 Låt oss förstå hur den anpassade funktionen används där användare anger e-postadressen och du vill se till att den angivna e-postadressen har ett visst format (den innehåller symbolen&quot;@&quot; och ett domännamn). Skapa en anpassad funktion som&quot;ValidateEmail&quot;, som tar e-postadressen som indata och returnerar true om den är giltig och i annat fall false.
 
@@ -49,6 +49,73 @@ Fördelarna med att använda anpassade funktioner i Adaptive Forms är:
 * **Validering av data**: Med anpassade funktioner kan du utföra anpassade kontroller av formulärindata och tillhandahålla angivna felmeddelanden.
 * **Dynamiskt beteende**: Med anpassade funktioner kan du styra formulärens dynamiska beteende baserat på specifika villkor. Du kan till exempel visa/dölja fält, ändra fältvärden eller justera formulärlogiken dynamiskt.
 * **Integrering**: Du kan använda anpassade funktioner för att integrera med externa API:er eller tjänster. Det hjälper till att hämta data från externa källor, skicka data till externa Rest-slutpunkter eller utföra anpassade åtgärder baserade på externa händelser.
+
+## JS-anteckningar som stöds
+
+Se till att den anpassade funktionen som du skriver åtföljs av `jsdoc` ovanför den.
+
+Stöds `jsdoc` taggar:
+
+* **Privat**
+Syntax: `@private`
+En privat funktion ingår inte som en anpassad funktion.
+
+* **Namn**
+Syntax: `@name funcName <Function Name>`
+Alternativt `,` du kan använda: `@function funcName <Function Name>` **eller** `@func` `funcName <Function Name>`.
+  `funcName` är namnet på funktionen (inga blanksteg tillåts).
+  `<Function Name>` är funktionens visningsnamn.
+
+* **Parameter**
+Syntax: `@param {type} name <Parameter Description>`
+Du kan också använda: `@argument` `{type} name <Parameter Description>` **eller** `@arg` `{type}` `name <Parameter Description>`.
+Visar parametrar som används av funktionen. En funktion kan ha flera parametertaggar, en tagg för varje parameter i ordningen för förekomst.
+  `{type}` representerar parametertyp. Tillåtna parametertyper är:
+
+   1. string
+   2. tal
+   3. boolesk
+   4. omfång
+   5. string[]
+   6. tal[]
+   7. boolesk[]
+   8. datum
+   9. datum[]
+   10. array
+   11. object
+
+  `scope` refererar till ett särskilt globalt objekt som tillhandahålls av formulärkörningen. Det måste vara den sista parametern och ska inte vara synligt för användaren i regelredigeraren. Du kan använda omfång för att komma åt läsbara formulär- och fältobjekt för att läsa egenskaper, händelser som utlöste regeln och en uppsättning funktioner för att hantera formuläret.
+
+  `object` type används för att skicka ett läsbart fältobjekt i parametern till en anpassad funktion i stället för att skicka värdet.
+
+  Alla parametertyper kategoriseras under något av ovanstående. Ingen stöds inte. Välj en av typerna ovan. Typer är inte skiftlägeskänsliga. Blanksteg tillåts inte i parameternamnet.  Parameterbeskrivningen kan innehålla flera ord.
+
+* **Valfri parameter**
+Syntax: `@param {type=} name <Parameter Description>`
+Du kan också använda: `@param {type} [name] <Parameter Description>`
+Som standard är alla parametrar obligatoriska. Du kan markera en parameter som valfri genom att lägga till `=` i parameterns typ eller genom att ange parameternamn inom hakparenteser.
+Låt oss till exempel deklarera `Input1` som valfri parameter:
+   * `@param {type=} Input1`
+   * `@param {type} [Input1]`
+
+* **Returtyp**
+Syntax: `@return {type}`
+Du kan också använda `@returns {type}`.
+Lägger till information om funktionen, till exempel dess mål.
+{type} representerar funktionens returtyp. Följande returtyper tillåts:
+
+   1. string
+   2. tal
+   3. boolesk
+   4. string[]
+   5. tal[]
+   6. boolesk[]
+   7. datum
+   8. datum[]
+   9. array
+   10. object
+
+Alla andra returtyper kategoriseras under en av ovanstående. Ingen stöds inte. Välj en av typerna ovan. Returtyperna är inte skiftlägeskänsliga.
 
 ## Att tänka på när du skapar anpassade funktioner {#considerations}
 
@@ -137,15 +204,15 @@ Du kan lägga till anpassade funktioner genom att lägga till klientbibliotek. S
 
 1. [Klona din AEM Forms as a Cloud Service databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#accessing-git).
 1. Skapa en mapp under `[AEM Forms as a Cloud Service repository folder]/apps/` mapp. Skapa till exempel en mapp med namnet som `experience-league`.
-1. Navigera till `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/experience-league/` och skapa `ClientLibraryFolder`. Skapa till exempel en biblioteksmapp för klient som `es6clientlibs`.
-1. Lägg till en egenskap `categories` med strängtypsvärde. Tilldela till exempel värdet `es6customfunctions` till `categories` -egenskapen för `es6clientlibs` mapp.
+1. Navigera till `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/experience-league/` och skapa `ClientLibraryFolder`. Skapa till exempel en biblioteksmapp för klient som `customclientlibs`.
+1. Lägg till en egenskap `categories` med strängtypsvärde. Tilldela till exempel värdet `customfunctionscategory` till `categories` -egenskapen för `customclientlibs` mapp.
 
    >[!NOTE]
    >
    > Du kan välja valfritt namn för `client library folder` och `categories` -egenskap.
 
 1. Skapa en mapp med namnet `js`.
-1. Navigera till `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/es6clientlibs/js` mapp.
+1. Navigera till `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/customclientlibs/js` mapp.
 1. Lägg till en JavaScript-fil, till exempel `function.js`. Filen innehåller koden för den anpassade funktionen.
 
    >[!NOTE]
@@ -156,7 +223,7 @@ Du kan lägga till anpassade funktioner genom att lägga till klientbibliotek. S
     >* AEM Adaptive Form supports the caching of custom functions. If the JavaScript is modified, the caching becomes invalidated, and it is parsed. You can see a message as `Fetched following custom functions list from cache` in the `error.log` file.  -->
 
 1. Spara `function.js` -fil.
-1. Navigera till `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/es6clientlibs/js` mapp.
+1. Navigera till `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/customclientlibs/js` mapp.
 1. Lägg till en textfil som `js.txt`. Filen innehåller:
 
    ```javascript
@@ -175,7 +242,7 @@ Du kan lägga till anpassade funktioner genom att lägga till klientbibliotek. S
 
 1. [Kör pipelinen.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline)
 
-När pipeline har körts blir den anpassade funktionen som lagts till i klientbiblioteket tillgänglig i din [Regelredigerare för anpassat formulär](/help/forms/rule-editor.md).
+När pipeline har körts blir den anpassade funktionen som lagts till i klientbiblioteket tillgänglig i din [Regelredigerare för anpassat formulär](/help/forms/rule-editor-core-components.md).
 
 ### Lägga till klientbibliotek i ett adaptivt formulär{#use-custom-function}
 
@@ -184,7 +251,7 @@ När du har distribuerat klientbiblioteket till Forms CS-miljön kan du använda
 1. Öppna formuläret i redigeringsläge. Om du vill öppna ett formulär i redigeringsläge markerar du ett formulär och väljer **[!UICONTROL Edit]**.
 1. Öppna innehållsläsaren och välj **[!UICONTROL Guide Container]** som ingår i det adaptiva formuläret.
 1. Klicka på egenskaperna för stödlinjebehållaren ![Stödlinjeegenskaper](/help/forms/assets/configure-icon.svg) -ikon. Dialogrutan Adaptiv formulärbehållare öppnas.
-1. Öppna **[!UICONTROL Basic]** och välj namnet på **[!UICONTROL client library category]** från listrutan (i det här fallet väljer `es6customfunctions`).
+1. Öppna **[!UICONTROL Basic]** och välj namnet på **[!UICONTROL client library category]** från listrutan (i det här fallet väljer `customfunctionscategory`).
 
    ![Lägga till klientbiblioteket för anpassade funktioner](/help/forms/assets/clientlib-custom-function.png)
 
