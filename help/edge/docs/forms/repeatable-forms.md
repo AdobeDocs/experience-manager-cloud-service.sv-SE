@@ -4,9 +4,9 @@ description: Lägga till repeterbara avsnitt i ett EDS-formulär
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: fd2e5df72e965ea6f9ad09b37983f815954f915c
+source-git-commit: d63d0f1152d0a23623c197924a44bc6b1e69fb42
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,7 @@ ht-degree: 0%
 
 # Lägga till repeterbara avsnitt i ett formulär
 
-Med adaptiva formulärblock kan du lägga till eller göra ett avsnitt eller en komponent i ett formulär upprepningsbart.
-
-Ett upprepningsbart avsnitt är en komponent i ett formulär som dupliceras eller replikeras flera gånger för att samla in information om flera förekomster av liknande data.
+Med adaptiva formulärblock kan du lägga till eller göra ett avsnitt eller en komponent i ett formulär upprepningsbart. På så sätt kan användare ange information flera gånger för samma typ av data, vilket gör det enklare att samla in information som arbetserfarenhet eller utbildningsbakgrund.
 
 Ta till exempel ett formulär som används för att samla in information om en persons arbetsupplevelse. Du kan ha ett upprepningsbart avsnitt där du kan hämta information om varje föregående jobb. Det repeterbara avsnittet innehåller vanligtvis fält som företagsnamn, befattning, anställningsdatum och ansvarsområden. Användaren kan lägga till flera instanser av det repeterbara avsnittet för att ange information om varje jobb som han/hon har utfört.
 
@@ -27,46 +25,51 @@ I slutet av den här artikeln lär du dig att:
 * [Skapa ett upprepningsbart avsnitt i ett formulär](#add-repeatable-sections-to-a-form)
 * [Ange minsta eller högsta antal upprepningar i ett formulär](#set-minimum-or-maximum-number-of-repetitions-for-a-repeatable-section)
 
-## Skapa ett upprepningsbart avsnitt i ett formulär
+## Skapa ett upprepningsbart avsnitt
 
 Genom att skapa ett upprepningsbart avsnitt i ett formulär kan användarna ange flera instanser av samma datauppsättning, vilket gör det möjligt att effektivt samla in upprepad information. Så här skapar du ett upprepningsbart avsnitt i ett formulär:
 
-1. Gå till projektmappen Edge Deliver på Microsoft SharePoint eller Google Workspace och öppna kalkylbladet. Öppna t.ex. ett kalkylblad med namnet `job-application.xlsx`.
+1. Gå till projektmappen Edge Deliver på Microsoft SharePoint eller Google Workspace och öppna kalkylbladet.
 
-1. Lägg till ett formulärfält med `type` egenskap inställd på `fieldset` och aktivera repeterbarhet genom att ställa in `repeatable` till `true`. Ange dessutom en beskrivning `label` för fältet, eftersom det fungerar som rubrik för det repeterbara avsnittet.
+1. Lägg till ett formulärfält med `type` egenskap inställd på `fieldset`
+1. Ange `Name` av fältet. Egenskapen name används för att skapa ett upprepningsbart avsnitt.
+1. Aktivera repeterbarhet genom att ange `repeatable` till `true`.
+1. Ange en beskrivning `label` för fältet. Det fungerar som rubrik för det repeterbara avsnittet.
 
    Se bilden nedan för en illustration av en anställningshistorik i ett ansökningsformulär.
 
    ![](/help/edge/assets/repeatable-section-example-job-application-form.png)
 
-1. I `Fieldset` egenskapen för alla fält som ska inkluderas i ett upprepningsbart avsnitt, ange `Name` för motsvarande fältuppsättning.
+1. För varje fält som du vill ta med i avsnittet anger du dess `Fieldset` till samma namn som du valde i steg 3.
 
    Ange till exempel `experience` i fältegenskapen för alla relevanta fält som ska inkluderas i `employment history` -avsnitt.
 
-   ![](/help/edge/assets/repeatable-section--mention-fieldset-name-example-job-application-form.png)
+   ![exempel på ett upprepningsbart avsnittsfält och dess egenskaper](/help/edge/assets/repeatable-section--mention-fieldset-name-example-job-application-form.png)
 
 1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska och publicera bladet. Det repeterbara avsnittet läggs till i formuläret.
 
    Under den repeterbara delen hittar användarna en intuitiv **Lägg till** och gör det enklare att lägga till flera avsnitt.
 
-   ![upprepningsbart avsnitt, hitta ett intuitivt **Lägg till** knapp, lägga till flera avsnitt ](/help/edge/assets/repeatable-section-example.png)
+   ![upprepningsbart avsnitt, knappen Lägg till, om du vill lägga till flera avsnitt ](/help/edge/assets/repeatable-section-example.png)
 
 
-## Ange minsta eller högsta antal upprepningar för ett upprepningsbart avsnitt
+## Ange minsta och högsta antal upprepningar
 
 I formulärdesignen är det bra att ange minsta och högsta repetitioner för repeterbara avsnitt. På så sätt får ni kontroll och enhetlighet samtidigt som ni vägleder användarna effektivt. Så här anger du minsta eller högsta antal upprepningar:
 
 1. Gå till projektmappen Edge Deliver på Microsoft SharePoint eller Google Workspace och öppna kalkylbladet.
 
-1. Ange `min` för att ange det minsta antal gånger som avsnittet kan upprepas.
+1. För ett fält `type` `fieldset` och `repeatable` egenskap inställd på `true`:
+
+   * ange `min` för att ange det minsta antal gånger som avsnittet kan upprepas.
+
+   * ange `max` för att ange det maximala antal gånger som avsnittet kan upprepas.
 
    ![Ange egenskapen min och max för att ange hur många gånger avsnittet kan upprepas](/help/edge/assets/repeatable-section-set-min-max.png)
 
-1. Ange `max` för att ange det maximala antal gånger som avsnittet kan upprepas.
-
 1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska och publicera bladet.
 
-   När man lägger till upprepningsbara avsnitt ser man nu en intuitiv **Ta bort** -ikonen, vilket förenklar processen att ta bort repeterbara avsnitt. När du väl har lagt till de här avsnitten kan de inte minskas till färre instanser än vad som anges i `min` -egenskap. Detta garanterar att minimikraven för ifyllande av formuläret uppfylls.
+   När du lägger till ett upprepningsbart avsnitt hittar användarna en intuitiv **Ta bort** -ikonen, vilket gör det enklare att ta bort repeterbara avsnitt. När du väl har lagt till de här avsnitten kan de inte minskas till färre instanser än vad som anges i `min` -egenskap. Detta garanterar att minimikraven för ifyllande av formuläret uppfylls.
 
 <!--
 

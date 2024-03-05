@@ -4,9 +4,9 @@ description: AEM Forms Edge Delivery Service har tagits fram för bästa prestan
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: fd2e5df72e965ea6f9ad09b37983f815954f915c
+source-git-commit: d63d0f1152d0a23623c197924a44bc6b1e69fb42
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '1120'
 ht-degree: 0%
 
 ---
@@ -89,9 +89,36 @@ Det finns några avancerade funktioner som är tillgängliga på begäran:
 * **Skicka e-postmeddelanden när formulär skickas**: Eliminera krånglet med manuella uppföljningar och säkerställ snabb kommunikation med vår inbyggda e-postautomatisering för att skicka in formulär. Med den här integrerade lösningen kan ni enkelt meddela berörda parter, inklusive att skicka formulärdata, när någon fyller i ett formulär på webbplatsen. Inget behov av komplexa konfigurationer eller andra verktyg - det är klart att användas direkt.
 
 
-## Arbetsflöde
+## Tillgängliga Forms-block
 
-![Dokumentbaserat redigeringssystem](/help/edge/assets/document-based-authoring-workflow.png)
+AEM Forms Edge Delivery Service erbjuder två typer av formulärblock som tillgodoser olika behov:
+
+* **Grundläggande Forms Block**: Det här är ett mångsidigt alternativ som passar för att skapa enkla formulär med grundläggande funktioner. Det gör att du kan integrera olika indatatyper som textfält, listrutor och alternativknappar, vilket gör att du kan samla in användardata effektivt.
+
+* **Adaptivt Forms-block**: Det här avancerade blocket frigör ytterligare funktioner utöver det grundläggande Forms-blocket så att du kan skapa mer komplexa och interaktiva formulär. Här följer en beskrivning av de viktigaste funktionerna:
+
+   * Regler: Definiera logikbaserade åtgärder i formulären. Du kan använda regler för att villkorligt visa eller dölja formuläravsnitt, fylla i fält i förväg baserat på användarindata och utföra olika valideringar för att säkerställa dataintegriteten.
+
+   * Utbyggbarhet på serversidan: Utöka funktionaliteten i formulären genom att integrera dem med logik på serversidan. På så sätt kan du utföra komplexa beräkningar, interagera med externa system och automatisera specifika uppgifter baserat på användaråtgärder i formuläret.
+
+   * Korspromenad: Effektivisera arbetsflöden och datahantering: Utnyttja kraften i AEM för att:
+
+      * Utforma användarvänliga formulär med AEM redigerare.
+
+      * Generera ett&quot;arkiveringsdokument&quot; för säker och manipuleringssäker arkivering av inskickade data.
+
+      * Underlätta e-signering med Adobe Sign för en smidig och säker signeringsprocess.
+
+      * Automatisera affärsprocesserna genom AEM arbetsflöden, aktivera åtgärder som bygger på inskickade formulär.
+
+      * Integrera enkelt med olika datakällor, vilket möjliggör smidigt dataflöde och datautbyte.
+
+  För att använda Adaptive Forms Block krävs ytterligare en licens.
+
+### Välja rätt Forms-block
+
+Vilken typ av Forms Basic-block du väljer beror på dina specifika behov. Om du behöver en enkel lösning för att samla in grundläggande användarinformation är det grundläggande Forms-blocket perfekt. Men om formulären kräver invecklad logik, datahantering, integration med externa system eller smidiga arbetsflöden med AEM funktioner och **du har den licens som krävs** ger Adaptive Forms Block den kraft och flexibilitet som krävs för att uppnå era mål.
+
 
 ## Börja skapa formulär
 
