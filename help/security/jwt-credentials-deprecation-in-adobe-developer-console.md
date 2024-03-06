@@ -1,9 +1,9 @@
 ---
 title: Borttagning av JWT-autentiseringsuppgifter i Adobe Developer Console
 description: Läs om hur borttagning av JWT-autentiseringsuppgifter påverkar AEM i Adobe Developer Console
-source-git-commit: a354786f1ddfe50b01def85d3c83da09c6a35d2f
+source-git-commit: b684d39d53b1895b8e20e5c6aca084033cfcf4b9
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '555'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->AEM som molntjänst ska kunderna referera till [den här artikeln](https://experienceleague.adobe.com/docs/experience-manager-65/content/security/jwt-credentials-deprecation-in-adobe-developer-console.html) för mer information.
+>AEM 6.5 bör referera till [den här artikeln](https://experienceleague.adobe.com/docs/experience-manager-65/content/security/jwt-credentials-deprecation-in-adobe-developer-console.html) för mer information.
 
 Adobe-kunder använder [Adobe Developer Console](https://developer.adobe.com/console) för att generera autentiseringsuppgifter som möjliggör åtkomst till olika API:er. Kunderna väljer mellan olika typer av autentiseringsuppgifter, från OAuth Server-to-Server till Single-Page App. En av dessa autentiseringstyper, JWT-autentiseringsuppgifter (Service Account), har ersatts med autentiseringsuppgifterna för OAuth Server-till-Server. Det går inte att skapa nya JWT-autentiseringsuppgifter den 1 maj 2024 eller senare, och befintliga JWT-autentiseringsuppgifter fungerar inte den 1 januari 2025 eller senare. Du kan [läs om borttagningen](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
 
