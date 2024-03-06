@@ -3,9 +3,9 @@ title: Hur skapar man urkunder för Adaptive Forms?
 description: Lär dig att generera en mall för ett dokument för inspelning (Document of Record, DoR) för adaptiva Forms Core-komponenter.
 feature: Adaptive Forms, Core Components
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
-source-git-commit: eaab351460363b83c7d3667e048235506cc71c41
+source-git-commit: 54fa7ae32fa2882d844fd1c0eb0962b6b01885a5
 workflow-type: tm+mt
-source-wordcount: '3006'
+source-wordcount: '3029'
 ht-degree: 0%
 
 ---
@@ -327,6 +327,10 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
       * **Mall**: Om du vill välja en anpassad mall bläddrar du och väljer en XDP-fil på din [!DNL AEM Forms] server. Om du vill använda en mall som inte är tillgänglig på din [!DNL AEM Forms] ska du först överföra XDP-filen till din [!DNL AEM Forms] server.
       * **Dekorfärg**: Den färg i vilken rubriktext och avgränsningslinjer återges i postdokumentet PDF.
       * **Font Family**: Teckensnittsfamilj för texten i PDF på dokumentationssidan.
+
+        >[!NOTE]
+        >
+        > AEM Forms har en mängd inbyggda teckensnitt som är helt integrerade med PDF filer. Om du vill se en lista över teckensnitt som stöds [klicka här](/help/forms/supported-out-of-the-box-fonts.md).
 
       * **Inkludera formulärobjekt som inte är bundna till datamodell**: Att ställa in egenskapen inkluderar obundna fält från schemabaserade adaptiva formulär i postdokumentet.
 

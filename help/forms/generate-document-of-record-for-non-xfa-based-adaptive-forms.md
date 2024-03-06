@@ -3,9 +3,9 @@ title: Hur skapar man ett urkunder för AEM Forms?
 description: Lär dig att generera en mall för ett dokument för inspelning (DoR) för Adaptiv Forms.
 feature: Adaptive Forms, Foundation Components
 exl-id: 16d07932-3308-4b62-8fa4-88c4e42ca7b6
-source-git-commit: eaab351460363b83c7d3667e048235506cc71c41
+source-git-commit: 51d72edcde18503e9e4d83eaf51e28658d9ee5e6
 workflow-type: tm+mt
-source-wordcount: '3984'
+source-wordcount: '4030'
 ht-degree: 0%
 
 ---
@@ -345,13 +345,18 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
       * **Mall**: Om du väljer en egen mall bläddrar du till en XDP-fil på din [!DNL AEM Forms] server. Om du vill använda en mall som inte redan finns i [!DNL AEM Forms] ska du först överföra XDP-filen till din [!DNL AEM Forms] server.
       * **Dekorfärg**: Den färg i vilken rubriktext och avgränsningslinjer återges i dokumentet eller posten PDF.
       * **Font Family**: Teckensnittsfamilj för texten i PDF på dokumentationssidan.
+
+        >[!NOTE]
+        >
+        > AEM Forms har en mängd inbyggda teckensnitt som är helt integrerade med PDF filer. Om du vill se en lista över teckensnitt som stöds [klicka här](/help/forms/supported-out-of-the-box-fonts.md).
+
       * **Inkludera formulärobjekt som inte är bundna till datamodell**: Att ställa in egenskapen inkluderar obundna fält från schemabaserade adaptiva formulär i postdokumentet.
       * **Uteslut dolda fält från postdokumentet**: Om du ställer in egenskapen identifieras dolda fält för uteslutning från postdokumentet.
       * **Dölj beskrivning av paneler**: Om du anger egenskapen utesluts beskrivningen av panelen/tabellen från Postdokument. Gäller för panel och tabell.
 
       ![Grundläggande egenskaper](/help/forms/assets/basicpropertiesdor.png)
 
-   1. **Egenskaper för formulärfält**:
+   2. **Egenskaper för formulärfält**:
       * **Visa endast de valda värdena för komponenterna Kryssruta och Alternativknapp**: Om du ställer in egenskapen visas endast markerade värden för kryssrutor och alternativknappar i [!UICONTROL Document of Record].
       * **Avgränsare för flera värden**: Du kan välja valfri avgränsare, t.ex. komma eller radbrytning, om du vill visa flera värden.
       * **Justering**: Du kan välja önskad justering (Vågrät, Lodrät, Samma som adaptiv form) för att ange justeringen för fält som kryssruta eller alternativknapp som ska visas på [!UICONTROL Document of Record]. Som standard är den lodräta justeringen inställd för fälten i [!UICONTROL Document of Record]. Ställa in egenskaperna från [!UICONTROL Form Field Properties] av DoR skriver över egenskaperna som anges i [!UICONTROL Item Alignment] för fälten i ett adaptivt formulär. Om du vill välja [!UICONTROL Same as Aaptive form] -alternativet används justeringen som den har konfigurerats i en instans av adaptiv formulärförfattare för [!UICONTROL Document of Record] fält.
@@ -359,7 +364,7 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
 
       ![Egenskaper för formulärfält](/help/forms/assets/formfieldpropertiesdor.png)
 
-   1. **Egenskaper för mallsida**:
+   3. **Egenskaper för mallsida**:
       * **Logotypbild**: Du kan antingen välja att använda logotypbilden från det adaptiva formuläret, välja en från DAM eller överföra en från datorn.
       * **Formulärtitel**: Titel på DoR.
       * **Sidhuvudstext**: Text som visas i rubrikavsnittet i postdokumentet.
@@ -476,6 +481,11 @@ En XCI-fil hjälper dig att ange olika egenskaper för ett dokument. Forms as a 
 | config/present/pdf/pdfa/conformance | Anger överensstämmelsenivå med PDF/A-specifikationen. |
 | config/present/pdf/version | Anger vilken version av PDF-dokumentet som ska genereras |
 | config/present/pdf/version/map | Anger dokumentets reservteckensnitt |
+
+>[!NOTE]
+>
+> AEM Forms har en mängd inbyggda teckensnitt som är helt integrerade med PDF filer. Om du vill se en lista över teckensnitt som stöds [klicka här](/help/forms/supported-out-of-the-box-fonts.md).
+
 
 ### Använda en anpassad XCI-fil i Forms as a Cloud Service miljö
 

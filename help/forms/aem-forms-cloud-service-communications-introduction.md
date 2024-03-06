@@ -5,9 +5,9 @@ Keywords: How to generate document?, Generate PDF document, Manipulation PDF doc
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
 feature: Adaptive Forms, APIs
 role: Admin, Developer, User
-source-git-commit: 975f767e75a268a1638227ae20a533f82724c80a
+source-git-commit: 54fa7ae32fa2882d844fd1c0eb0962b6b01885a5
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1443'
 ht-degree: 1%
 
 ---
@@ -134,6 +134,10 @@ Bild: Dela upp ett källdokument baserat på bokmärken i flera dokument
 ### Konvertera till och validera dokument som följer PDF/A
 
 Du kan använda API:erna för dokumentbearbetning för att konvertera ett PDF-dokument till ett PDF/A-kompatibelt dokument och för att avgöra om ett PDF-dokument är PDF/A-kompatibelt. PDF/A är ett arkiveringsformat som är avsett för långtidsarkivering av dokumentets innehåll. Teckensnitten bäddas in i dokumentet och filen är okomprimerad. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Ett PDF/A-dokument innehåller inte heller ljud- och videoinnehåll.
+
+>[!NOTE]
+>
+> AEM Forms har en mängd inbyggda teckensnitt som är helt integrerade med PDF filer. Om du vill se en lista över teckensnitt som stöds [klicka här](/help/forms/supported-out-of-the-box-fonts.md).
 
 <!-- 
 
