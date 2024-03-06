@@ -1,10 +1,10 @@
 ---
-title: Java&trade; Funktionstester
+title: Java&trade; funktionstester
 description: Lär dig skriva Java&trade; funktionstester för AEM as a Cloud Service
-exl-id: e449a62a-c8ad-4d39-a170-abacdda3f1b1
-source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
+exl-id: e014b8ad-ac9f-446c-bee8-adf05a6b4d70
+source-git-commit: e463979df1f705283f29d954f9869d85f0a96465
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '877'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ När en ny koddatabas skapas i Cloud Manager kan `it.tests` mappen skapas automa
 >
 >Om din databas skapades innan Cloud Manager skapades automatiskt `it.tests` kan du även generera den senaste versionen med [AEM Project Archetype.](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/it.tests)
 
-När du har fått innehållet i `it.tests` kan du använda den som bas för dina egna tester och sedan:
+När innehållet i `it.tests` kan du använda den som bas för dina egna tester och sedan:
 
 1. [Utveckla testfall.](#writing-functional-tests)
 1. [Kör testerna lokalt.](#local-test-execution)
@@ -37,7 +37,7 @@ Testerna körs på testinfrastruktur som underhålls av Adobe, inklusive minst t
 
 ### Struktur för funktionstester {#functional-tests-structure}
 
-Anpassade funktionstester måste paketeras som en separat JAR-fil som skapas av samma Maven-bygge som de artefakter som ska distribueras till AEM. I allmänhet är detta bygge en separat Maven-modul. Den resulterande JAR-filen måste innehålla alla nödvändiga beroenden och skulle vanligtvis skapas med `maven-assembly-plugin` med `jar-with-dependencies` beskrivning.
+Anpassade funktionstester måste paketeras som en separat JAR-fil som skapas av samma Maven-bygge som de artefakter som ska distribueras till AEM. I allmänhet är detta bygge en separat Maven-modul. Den resulterande JAR-filen måste innehålla alla nödvändiga beroenden och skulle vanligtvis skapas med `maven-assembly-plugin` med `jar-with-dependencies` beskrivare.
 
 Dessutom måste JAR ha `Cloud-Manager-TestType` manifest header inställd på `integration-test`.
 
@@ -77,7 +77,7 @@ Här följer ett exempel på konfiguration för `maven-assembly-plugin`.
 
 I den här JAR-filen måste klassnamnen för de faktiska tester som ska köras sluta med `IT`.
 
-En klass med namnet `com.myco.tests.aem.it.ExampleIT` skulle köras, men en klass med namnet `com.myco.tests.aem.it.ExampleTest` skulle inte göra det.
+En klass med namnet `com.myco.tests.aem.it.ExampleIT` skulle köras, men en klass med namnet `com.myco.tests.aem.it.ExampleTest` skulle inte.
 
 Om du vill utesluta testkoden från disponeringskontrollen för kodskanningen måste testkoden dessutom finnas under ett paket med namnet `it` (filtret för uteslutning av täckning är `**/it/**/*.java`).
 
@@ -102,7 +102,7 @@ Se [`aem-testing-clients` GitHub-repo](https://github.com/adobe/aem-testing-clie
 
 | Typ | Värde | Beskrivning |
 |----------------------|-------|--------------------------------------------------------------------|
-| CPU | 0.5 | Den CPU-tid som reserverats per testkörning |
+| CPU | 0,5 | Den processortid som reserverats per testkörning |
 | Minne | 0,5 Gi | Mängd minne som tilldelats testet, värde i gibibyte |
 | Timeout | 30 m | Den varaktighet efter vilken testet avslutas. |
 | Rekommenderad varaktighet | 15 m | Adobe rekommenderar att testet inte tar längre tid än så här. |
@@ -111,6 +111,25 @@ Se [`aem-testing-clients` GitHub-repo](https://github.com/adobe/aem-testing-clie
 >
 > Om du behöver mer resurser kan du skapa ett kundvårdsärende och beskriva ditt användningsfall. Adobe teamet granskar din begäran och ger lämplig hjälp.
 
+#### Beroenden
+
+* aem-cloud-testing-clients:
+
+Kommande förändringar i den inneslutna infrastruktur som används för att utföra funktionstester kommer att kräva biblioteket [aem-cloud-testing-clients](https://github.com/adobe/aem-testing-clients) som används i ditt anpassade funktionstest för att uppdateras till åtminstone en version **1.2.1**
+Se till att ditt beroende `it.tests/pom.xml` har uppdaterats.
+
+```
+<dependency>
+   <groupId>com.adobe.cq</groupId>
+   <artifactId>aem-cloud-testing-clients</artifactId>
+   <version>1.2.1</version>
+</dependency>
+```
+
+>[!NOTE]
+>
+>Denna ändring kommer att krävas efter den 6 april 2024.
+>Om du inte uppdaterar beroendebiblioteket kommer det att uppstå ett pipeline-fel i steget&quot;Custom Functional Testing&quot;.
 
 ### Lokal testkörning {#local-test-execution}
 
@@ -153,3 +172,4 @@ mvn verify -Plocal \
     -Dit.publish.user=<user> \
     -Dit.publish.password=<password>
 ```
+
