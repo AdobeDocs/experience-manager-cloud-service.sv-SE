@@ -2,9 +2,9 @@
 title: GoLive
 description: Lär dig hur du utför migreringen när koden och innehållet är molnklara
 exl-id: 10ec0b04-6836-4e26-9d4c-306cf743224e
-source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
+source-git-commit: 8baea95d57ce1e92e0e7083c161c9fee395fcb8e
 workflow-type: tm+mt
-source-wordcount: '1721'
+source-wordcount: '1771'
 ht-degree: 0%
 
 ---
@@ -156,6 +156,9 @@ Granska den här listan över aktiviteter för att säkerställa att du utför e
    * Utvecklingsmiljöer har inte samma storlek som fas och produktion.
 * Klipp ut och se till att den faktiska publiceringen utförs utan någon ny driftsättning eller uppdatering av innehållet.
 * Skapa meddelandeprofiler för Admin Console. Se [Meddelandeprofiler](/help/journey-onboarding/notification-profiles.md)
+* Överväg att konfigurera trafikfilterregler för att styra vilken trafik som inte ska tillåtas på webbplatsen.
+   * Trafikfilterregler för hastighetsbegränsning kan vara ett effektivt verktyg mot DDoS-attacker. En särskild kategori av trafikfilterregler, som kallas WAF-regler, kräver en separat licens.
+   * Se dokumentationen för några [föreslagna startregler](/help/security/traffic-filter-rules-including-waf.md#recommended-starter-rules).
 
 Du kan alltid referera till listan om du behöver kalibrera om dina uppgifter när du utför migreringen.
 
