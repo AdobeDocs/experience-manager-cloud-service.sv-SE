@@ -3,9 +3,9 @@ title: Migrera Dispatcher-konfigurationen från AMS till AEM as a Cloud Service
 description: Migrera Dispatcher-konfigurationen från AMS till AEM as a Cloud Service
 feature: Dispatcher
 exl-id: ff7397dd-b6e1-4d08-8e2d-d613af6b81b3
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 6023a13eb4ea0533ba2f6cd00fb9f824b08a3f4a
 workflow-type: tm+mt
-source-wordcount: '1459'
+source-wordcount: '1499'
 ht-degree: 4%
 
 ---
@@ -19,6 +19,7 @@ Konfigurationen av Apache och Dispatcher i AEM as a Cloud Service liknar den i A
 * I AEM as a Cloud Service kanske vissa Apache-direktiv inte används (till exempel `Listen` eller `LogLevel`)
 * På AEM as a Cloud Service kan endast vissa delar av Dispatcher-konfigurationen placeras i inkluderingsfiler och deras namn är viktigt. Du måste till exempel lägga in filterregler som du vill återanvända på olika värdar i en fil som kallas `filters/filters.any`. Mer information finns på referenssidan.
 * På AEM as a Cloud Service finns det extra validering för att inte tillåta filterregler skrivna med `/glob` för att förhindra säkerhetsproblem. För `deny *` används i stället för `allow *` (som inte kan användas) har kunderna nytta av att köra Dispatcher lokalt och göra en testversion och ett fel. Loggarna visar exakt vilka vägar Dispatcher-filtren blockerar för att de ska kunna läggas till.
+* På AEM as a Cloud Service rekommenderas [välja att använda det flexibla källäget för dispatcher-konfigurationen](/help/implementing/dispatcher/disp-overview.md#validation-debug) t.ex. för att använda konfigurationspipelines på webbnivå eller ha större flexibilitet vad gäller antal och struktur för konfigurationsfiler.
 
 ## Riktlinjer för migrering av dispatcher-konfiguration från AMS till AEM as a Cloud Service
 
