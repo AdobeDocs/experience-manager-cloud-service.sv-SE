@@ -2,9 +2,9 @@
 title: Attribut och objekttyper
 description: Läs mer om de dataattribut och objekttyper som krävs för den universella redigeraren.
 exl-id: 02795a31-244a-42b4-8297-2649125d7777
-source-git-commit: 9d88d9b6d3315f34ca6819820b4b4306ba901390
+source-git-commit: 5ddd4bbcce10c5cda97e3ea3f6750b209b5743f0
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ För att ett program ska kunna redigeras av den universella redigeraren måste d
 | `data-aue-prop` | Resursens attribut, se avsnittet [Instrument the Page of the document Getting Started with the Universal Editor in AEM](getting-started.md#instrument-thepage) |
 | `data-aue-type` | [Typ av redigerbart objekt](#item-types) (till exempel text, bild och referens) |
 | `data-aue-filter` | Definierar vilka referenser som kan användas |
-| `data-aue-label` | Definierar en anpassad etikett för ett markeringsbart objekt som visas i redigeraren <br>Om `itemmodel` är inställd hämtas etiketten med hjälp av modellen |
+| `data-aue-label` | Definierar en anpassad etikett för ett markeringsbart objekt som visas i redigeraren <br>Om `data-aue-model` är inställd hämtas etiketten med hjälp av modellen |
 | `data-aue-model` | Definierar en modell som används för formulärbaserad redigering i egenskapsfältet |
 | `data-aue-behavior` | Definierar [instrumentens beteende,](#behaviors) fristående text eller bild kan också efterlikna en komponent så att den kan flyttas eller tas bort |
 
