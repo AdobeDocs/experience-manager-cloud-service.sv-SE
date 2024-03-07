@@ -5,9 +5,9 @@ feature: Adaptive Forms, Foundation Components
 role: User
 level: Intermediate
 exl-id: 77131cc2-9cb1-4a00-bbc4-65b1a66e76f5
-source-git-commit: f419883d0e83b5d711e0f594a8e14a8f2133f4b1
+source-git-commit: ddf9632c0aad1fd5a3c2fb02fe1c9673ae4eb029
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
 När du bifogar filer till det adaptiva formuläret validerar servern de bifogade filerna efter att det adaptiva formuläret skickats in och returnerar ett felmeddelande om:
 
-* Bifogade filer innehåller ett filnamn som börjar med (.) tecken, innehåller \ / : * ? &quot; &lt; > |; % $-tecken, eller innehåller speciella filnamn som är reserverade för Windows operativsystem som t.ex. `nul`, `prn`, `con`, `lpt`, eller `com`.
+* Bifogade filer innehåller ett filnamn som börjar med (.) tecken, innehåller \ / : * ? &quot; &lt; > | ; % $-tecken, eller innehåller speciella filnamn som är reserverade för operativsystemet Windows, till exempel `nul`, `prn`, `con`, `lpt`, eller `com`.
 
 * Storleken på den bifogade filen är 0 byte.
 
@@ -97,7 +97,7 @@ En Skicka-åtgärd är en sling:Mapp som innehåller följande:
 
 * **addfields.jsp**: Det här skriptet innehåller de åtgärdsfält som läggs till i filen HTML under återgivningen. Använd det här skriptet för att lägga till dolda indataparametrar som krävs vid överföring i skriptet post.POST.jsp.
 * **dialog.xml**: Det här skriptet liknar CQ Component dialog. Det innehåller konfigurationsinformation som författaren anpassar. Fälten visas på fliken Skicka åtgärder i dialogrutan Redigera anpassat formulär när du väljer åtgärden Skicka.
-* **post.POST.jsp**: Sändningsservern anropar det här skriptet med de data som du skickar och de ytterligare data som finns i föregående avsnitt. Om du kör en åtgärd på den här sidan måste du köra skriptet post.POST.jsp. Om du vill registrera åtgärden Skicka med den adaptiva Forms som ska visas i dialogrutan Redigera anpassat formulär lägger du till dessa egenskaper i slingan:Folder:
+* **post.POST.jsp**: Sändningsservern anropar det här skriptet med de data som du skickar och de ytterligare data som finns i föregående avsnitt. Om du kör en åtgärd på den här sidan måste du köra skriptet post.POST.jsp. Om du vill registrera åtgärden Skicka med den adaptiva Forms som ska visas i dialogrutan Redigera anpassat formulär lägger du till dessa egenskaper i dialogrutan `sling:Folder`:
 
    * **guideComponentType** av typen String och value **fd/af/components/guidepittype**
    * **guideDataModel** av typen String som anger vilken typ av adaptiv form som åtgärden Skicka gäller för. <!--**xfa** is supported for XFA-based Adaptive Forms while -->**xsd** stöds för XSD-baserad Adaptive Forms. **grundläggande** stöds för Adaptive Forms som inte använder XDP eller XSD. Om du vill visa åtgärden för flera typer av Adaptiv Forms lägger du till motsvarande strängar. Avgränsa varje sträng med kommatecken. Gör till exempel en åtgärd synlig på <!--XFA- and -->XSD-baserad Adaptiv Forms, ange värdet som <!--**xfa** and--> **xsd**.
