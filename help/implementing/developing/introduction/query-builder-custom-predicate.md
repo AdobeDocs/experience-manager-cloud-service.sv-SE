@@ -2,9 +2,9 @@
 title: Implementera en anpassad predikatutvärderare för Query Builder
 description: AEM i Query Builder är ett enkelt och anpassningsbart sätt att fråga innehållsdatabasen
 exl-id: 8c2f8c22-1851-4313-a1c9-10d6d9b65824
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 I det här dokumentet beskrivs hur du utökar [Frågebyggaren](query-builder-api.md) genom att implementera en anpassad predikatutvärderare.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 The [Frågebyggaren](query-builder-api.md) erbjuder ett enkelt sätt att fråga innehållsdatabasen. AEM kommer med [en uppsättning prediktiva utvärderare](#query-builder-predicates.md) som hjälper dig att fråga efter data.
 
@@ -216,7 +216,7 @@ public class ReplicationPredicateEvaluator extends AbstractPredicateEvaluator {
     static final String PREDICATE_SINCE_OP = " >= ";
     static final String PREDICATE_ACTION = "action";
 
-    Logger log = LoggerFactory.getLogger(getClass());
+    Logger log = LoggerFactory.getLogger(getClass ());
 
     /**
      * Returns a XPath expression filtering by replication metadata.

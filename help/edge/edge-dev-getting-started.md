@@ -2,13 +2,13 @@
 title: Guiden Komma igång för utvecklare för AEM med Edge Delivery Services
 description: Den här guiden hjälper dig att komma igång med en ny Adobe Experience Manager-webbplats med hjälp av Edge Delivery Services och den universella redigeraren för innehållsutveckling
 feature: Edge Delivery Services
-source-git-commit: 58d85886ef04b548c09e3ef9308fe596dd3eda38
+exl-id: a71184a7-c954-442e-b276-99edc6d2acd8
+source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '988'
 ht-degree: 0%
 
 ---
-
 
 # AEM med Edge Delivery Services {#edge-dev-getting-started}
 
@@ -20,7 +20,7 @@ Den här guiden hjälper dig att komma igång med en ny Adobe Experience Manager
 
 Innan du börjar den här guiden bör du känna till grunderna i och ha tillgång till Edge Delivery Services som:
 
-* Du har slutfört [Självstudiekurs om Edge Delivery Service.](/help/edge/developer/tutorial.md)
+* Du har slutfört [Edge Delivery Service - självstudiekurs.](/help/edge/developer/tutorial.md)
 * Du har tillgång till en [AEM Cloud Service sandlåda.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md)
 * Du har [har aktiverat den universella redigeraren i samma sandlådemiljö.](/help/implementing/universal-editor/getting-started.md)
 

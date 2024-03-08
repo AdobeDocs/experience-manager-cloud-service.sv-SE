@@ -4,17 +4,17 @@ description: Det här dokumentet innehåller en översikt över de formulärkomp
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: fd2e5df72e965ea6f9ad09b37983f815954f915c
+exl-id: 7d087d41-9313-482a-a905-8955b0999781
+source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
 
-
 # Komponenter och egenskaper i formulär: AEM Forms Edge Delivery Service
 
-Med AEM Forms Edge Delivery Service kan du skapa användarvänliga och interaktiva formulär med hjälp av olika komponenter. Dessa komponenter klarar olika typer av datainsamling och kan enkelt anpassas efter dina specifika behov.
+Med AEM Forms Edge Delivery Services kan du skapa användarvänliga och interaktiva formulär med hjälp av olika komponenter. Dessa komponenter klarar olika typer av datainsamling och kan enkelt anpassas efter dina specifika behov.
 
 
 ![Ett exempelkalkylblad med vissa komponenter och egenskaper](/help/edge/assets/sample-form-in-spreadsheet.png)

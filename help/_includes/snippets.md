@@ -1,7 +1,7 @@
 ---
-source-git-commit: 45b263651f6139b1c7f83ff3485186b272ba1a4f
+source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '331'
 ht-degree: 0%
 
 ---
@@ -55,8 +55,17 @@ ht-degree: 0%
 * [Skicka till Power Automate](/help/forms/forms-microsoft-power-automate-integration.md)
 * [Skicka till Workfront Fusion](/help/forms/submit-adaptive-form-to-workfront-fusion.md)
 * [Ansluta anpassat formulär till Salesforce-program](/help/forms/oauth2-client-credentials-flow-for-server-to-server-integration.md)
-* [Ansluta ett anpassat formulär till Microsoft® Dynamics OData](/help/forms/ms-dynamics-odata-configuration.md)
+* [Ansluta ett adaptivt formulär till Microsoft](/help/forms/ms-dynamics-odata-configuration.md)
 
 ## AEM med tidig åtkomst till Edge Delivery Services {#aem-authoring-edge-early-access}
 
 [!BADGE TEKNIK MED TIDIG ÅTKOMST - Fråga oss om den här funktionen från AEM Sites labb i din Slack-kanal!]{type=Informative url="/help/edge/docs/slack.md" tooltip="AEM med Edge Delivery Services är en teknik med tidig åtkomst."}
+
+## Se även {#see-also-forms-eds}
+
+* [Formulärkomponenter](/help/edge/docs/forms/form-components.md)
+* [Skapa och förhandsgranska ett formulär](/help/edge/docs/forms/create-forms.md)
+* [Aktivera formulär för att skicka data](/help/edge/docs/forms/submit-forms.md)
+* [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-forms.md)
+* [Lägga till valideringar i formulärfält](/help/edge/docs/forms/validate-forms.md)
+* [Ändra teman och format för formulär](/help/edge/docs/forms/style-theme-forms.md)

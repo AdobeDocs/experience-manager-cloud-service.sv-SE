@@ -2,7 +2,7 @@
 title: ContextHub JavaScript API-referens
 description: ContextHub JavaScript API är tillgängligt för skript när ContextHub-komponenten har lagts till på sidan
 exl-id: ec35bef5-610c-4e85-a43a-d4201b5eb03e
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
 workflow-type: tm+mt
 source-wordcount: '4602'
 ht-degree: 0%
@@ -68,7 +68,7 @@ ContextHub-objektet ger åtkomst till alla arkiv.
 
 ### Funktioner (ContextHub) {#functions-contexthub}
 
-#### getAllStores() {#getallstores}
+#### getAllStores () {#getallstores}
 
 Returnerar alla registrerade ContextHub-butiker.
 
@@ -83,7 +83,7 @@ Ett objekt som innehåller alla ContextHub-arkiv. Varje butik är ett objekt som
 I följande exempel hämtas alla butiker och sedan hämtas geopositioneringsarkivet:
 
 ```javascript
-var allStores = ContextHub.getAllStores();
+var allStores = ContextHub.getAllStores ();
 var geoloc = allStores.geolocation
 ```
 
@@ -127,7 +127,7 @@ Ger åtkomst till ContextHub-segment.
 
 ### Funktioner (ContextHub.SegmentEngine.SegmentManager) {#functions-contexthub-segmentengine-segmentmanager}
 
-#### getResolvedSegments() {#getresolvedsegments}
+#### getResolvedSegments () {#getresolvedsegments}
 
 Returnerar de segment som matchas i den aktuella kontexten. Den här funktionen har inga parametrar.
 
@@ -155,7 +155,7 @@ A `ContextHub.Utils.Persistence` -objekt. Mer information om standardvärde och 
 
 ### Funktioner (ContextHub.Store.Core) {#functions-contexthub-store-core}
 
-#### addAllItems(träd, alternativ) {#addallitems-tree-options}
+#### addAllItems (träd, alternativ) {#addallitems-tree-options}
 
 Sammanfogar ett dataobjekt eller en array med lagringsdata. Varje nyckel/värde-par i objektet eller arrayen läggs till i arkivet (via `setItem` function):
 
@@ -193,7 +193,7 @@ A `boolean` värde:
 * Värdet för `true` anger att referensen har lagts till.
 * Värdet för `false` anger att ingen referens har lagts till.
 
-#### announReadiness() {#announcereadiness}
+#### announReadiness () {#announcereadiness}
 
 Utlöser `ready` -händelse för den här butiken. Den här funktionen har inga parametrar och returnerar inget värde.
 
@@ -213,7 +213,7 @@ Returnerar värdet som är associerat med en nyckel.
 
 Ett objekt som representerar värdet för nyckeln.
 
-#### getKeys(includeInternals) {#getkeys-includeinternals}
+#### getKeys (includeInternals) {#getkeys-includeinternals}
 
 Hämtar nycklarna från butiken. Du kan också hämta nycklar som används internt av ContextHub-ramverket.
 
@@ -225,7 +225,7 @@ Hämtar nycklarna från butiken. Du kan också hämta nycklar som används inter
 
 En array med nyckelnamn ( `string` värden).
 
-#### getReferences() {#getreferences}
+#### getReferences () {#getreferences}
 
 Hämtar referenserna från butiken.
 
@@ -401,7 +401,7 @@ Returnerar det obearbetade svar som har cachelagrats sedan det senaste anropet t
 
 Ett objekt som representerar råsvaret.
 
-#### getServiceDetails() {#getservicedetails}
+#### getServiceDetails () {#getservicedetails}
 
 Hämtar tjänstobjektet för det här ContextHub.Store.JSONPStore-objektet. Tjänsteobjektet innehåller den information som krävs för att skapa tjänst-URL:en.
 
@@ -521,7 +521,7 @@ En verktygsklass för interaktion med cookies.
 
 ### Funktioner (ContextHub.Utils.Cookie) {#functions-contexthub-utils-cookie}
 
-#### exists(key) {#exists-key}
+#### exists (key) {#exists-key}
 
 Avgör om det finns en cookie.
 
@@ -536,12 +536,12 @@ A `boolean` värdet true anger att cookien finns.
 ##### Exempel {#example-exists}
 
 ```javascript
-if (ContextHub.Utils.Cookie.exists("name")) {
+if (ContextHub.Utils.Cookie.exists ("name")) {
    // conditionally-executed code
 }
 ```
 
-#### getAllItems(filter) {#getallitems-filter}
+#### getAllItems (filter) {#getallitems-filter}
 
 Returnerar alla cookies som har nycklar som matchar ett filter.
 
@@ -560,7 +560,7 @@ Ett objekt med cookies. Objektegenskaper är cookie-nycklar och nyckelvärden ä
 ##### Exempel {#example-getallitems}
 
 ```javascript
-ContextHub.Utils.Cookie.getAllItems([/^cq-authoring/, /^cq-editor/])
+ContextHub.Utils.Cookie.getAllItems ([/^cq-authoring/, /^cq-editor/])
 ```
 
 #### getItem(key) {#getitem-key-1}
@@ -581,7 +581,7 @@ cookie-värdet, eller `null` om ingen cookie hittades för nyckeln.
 ContextHub.Utils.Cookie.getItem("name");
 ```
 
-#### getKeys(filter) {#getkeys-filter}
+#### getKeys (filter) {#getkeys-filter}
 
 Returnerar en array med nycklarna för befintliga cookies som matchar ett filter.
 
@@ -600,7 +600,7 @@ En array med strängar där varje sträng är nyckeln till en cookie som matchar
 ##### Exempel {#example-getkeys-1}
 
 ```javascript
-ContextHub.Utils.Cookie.getKeys([/^cq-authoring/, /^cq-editor/])
+ContextHub.Utils.Cookie.getKeys ([/^cq-authoring/, /^cq-editor/])
 ```
 
 #### removeItem(key, options) {#removeitem-key-options-1}
@@ -829,7 +829,7 @@ Den här klassen underlättar manipuleringen av dataobjekt som ska lagras eller 
 
 ### Funktioner (ContextHub.Utils.JSON.tree) {#functions-contexthub-utils-json-tree}
 
-#### addAllItems() {#addallitems}
+#### addAllItems () {#addallitems}
 
 Skapar en kopia av ett dataobjekt och lägger till dataträdet från ett andra objekt. Funktionen returnerar kopian och ändrar inte något av de ursprungliga objekten. När dataträden för de två objekten innehåller identiska nycklar skriver värdet för det andra objektet över värdet för det första objektet.
 
@@ -911,7 +911,7 @@ Object {
 }
 ```
 
-#### getKeys() {#getkeys}
+#### getKeys () {#getkeys}
 
 Hämtar alla nycklar från ett objekts dataträd. Om du vill kan du bara hämta nycklarna för de underordnade nycklarna för en viss nyckel. Du kan också ange en sorteringsordning för de hämtade nycklarna.
 
@@ -946,7 +946,7 @@ myObject {
 }
 ```
 
-The `ContextHub.Utils.JSON.tree.getKeys(myObject);` skriptet returnerar följande array:
+The `ContextHub.Utils.JSON.tree.getKeys (myObject);` skriptet returnerar följande array:
 
 ```javascript
 ["/location", "/location/city", "/location/country", "/location/latitude", "/location/longitude", "/location/weather", "/location/weather/humidity", "/location/weather/precipitation", "/location/weather/temperature", "/location/weather/wind"]
@@ -1072,7 +1072,7 @@ Här kan du registrera butikskandidater och få registrerade butikskandidater.
 
 ### Funktioner (ContextHub.Utils.storeCandidates) {#functions-contexthub-utils-storecandidates}
 
-#### getRegisteredCandidates(storeType) {#getregisteredcandidates-storetype}
+#### getRegisteredCandidates (storeType) {#getregisteredcandidates-storetype}
 
 Returnerar de butikstyper som är registrerade som butikskandidater. Hämta antingen registrerade anbudssökande för en viss butikstyp eller alla butikstyper.
 
@@ -1084,7 +1084,7 @@ Returnerar de butikstyper som är registrerade som butikskandidater. Hämta anti
 
 Ett objekt av lagringstyper. Objektegenskaperna är lagringstypsnamnen och egenskapsvärdena är en array med registrerade lagringskandidater.
 
-#### getStoreFromCandidates(storeType) {#getstorefromcandidates-storetype}
+#### getStoreFromCandidates (storeType) {#getstorefromcandidates-storetype}
 
 Returnerar en butikstyp från de registrerade anbudssökande. Om fler än en lagringstyp med samma namn är registrerad returnerar funktionen den lagringstyp som har högst prioritet.
 
@@ -1096,7 +1096,7 @@ Returnerar en butikstyp från de registrerade anbudssökande. Om fler än en lag
 
 Ett objekt som representerar den registrerade butikskandidaten. Om den begärda lagringstypen inte har registrerats genereras ett fel.
 
-#### getSupportedStoreTypes() {#getsupportedstoretypes}
+#### getSupportedStoreTypes () {#getsupportedstoretypes}
 
 Returnerar namnen på de butikstyper som är registrerade som butikskandidater. Den här funktionen kräver inga parametrar.
 

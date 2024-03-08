@@ -2,7 +2,7 @@
 title: Generisk borttagning av Lucene-index
 description: Lär dig mer om den planerade borttagningen av generiska Lucene-index och hur du kan påverkas.
 exl-id: 3b966d4f-6897-406d-ad6e-cd5cda020076
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
 workflow-type: tm+mt
 source-wordcount: '1345'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Adobe avser att ta bort det generiska Lucene-indexet (`/oak:index/lucene-*`) fr�
 
 I AEM används följande funktioner för fulltextfrågor:
 
-* `jcr:contains()` i JCR XPATH
+* `jcr:contains ()` i JCR XPATH
 * `CONTAINS` i JCR-SQL2
 
 Sådana frågor kan inte returnera resultat utan att använda ett index. Till skillnad från en fråga som bara innehåller sökvägs- eller egenskapsbegränsningar returnerar alltid en fråga som innehåller en fullständig textbegränsning som det inte går att hitta något index för (och som därmed utför en genomgång) noll resultat.
@@ -27,7 +27,7 @@ Det generiska Lucene-indexet (`/oak:index/lucene-*`) har funnits sedan AEM 6.0/a
 I AEM 6.5 markerades det generiska Lucene-indexet som inaktuellt, vilket tyder på att det skulle tas bort i framtida versioner. Sedan dess har en WARN loggats när indexet har använts, vilket visas i följande loggutdrag:
 
 ```text
-org.apache.jackrabbit.oak.plugins.index.lucene.LucenePropertyIndex This index is deprecated: /oak:index/lucene-2; it is used for query Filter(query=select [jcr:path], [jcr:score], * from [nt:base] as a where contains(*, 'search term') and isdescendantnode(a, '/content/mysite') /* xpath: /jcr:root/content/mysite//*[jcr:contains(.,"search term")] */ fullText="search" "term", path=/content/mysite//*). Change the query or the index definitions.
+org.apache.jackrabbit.oak.plugins.index.lucene.LucenePropertyIndex This index is deprecated: /oak:index/lucene-2; it is used for query Filter(query=select [jcr:path], [jcr:score], * from [nt:base] as a where contains (*, 'search term') and isdescendantnode(a, '/content/mysite') /* xpath: /jcr:root/content/mysite//*[jcr:contains (.,"search term")] */ fullText="search" "term", path=/content/mysite//*). Change the query or the index definitions.
 ```
 
 I de senaste AEM versionerna har det generiska Lucene-indexet använts för att stödja ett mycket litet antal funktioner. Dessa omarbetas för att använda andra index eller ändras på annat sätt för att ta bort beroendet av detta index.
@@ -35,7 +35,7 @@ I de senaste AEM versionerna har det generiska Lucene-indexet använts för att 
 Referenssökningsfrågor, till exempel i följande exempel, bör nu använda indexvärdet vid `/oak:index/pathreference`, som endast indexerar `String` egenskapsvärden som matchar ett reguljärt uttryck som söker efter JCR-sökvägar.
 
 ```text
-//*[jcr:contains(., '"/content/dam/mysite"')]
+//*[jcr:contains (., '"/content/dam/mysite"')]
 ```
 
 För att ge stöd åt större kunddatavolymer skapar Adobe inte längre det generiska Lucene-indexet i nya AEM as a Cloud Service miljöer. Dessutom tar Adobe bort indexet från befintliga databaser. [Se tidslinjen](#timeline) i slutet av det här dokumentet om du vill ha mer information.
@@ -49,7 +49,7 @@ Kundprogram som använder frågor som fortfarande är beroende av detta index b�
 Det generiska Lucene-indexet används för närvarande som reserv om inget annat fulltextindex kan hantera en fråga. När detta inaktuella index används loggas ett meddelande som liknar följande på WARN-nivå:
 
 ```text
-org.apache.jackrabbit.oak.plugins.index.lucene.LucenePropertyIndex This index is deprecated: /oak:index/lucene-2; it is used for query Filter(query=select [jcr:path], [jcr:score], * from [nt:base] as a where contains(*, 'test') /* xpath: //*[jcr:contains(.,"test")] */ fullText="test", path=*). Change the query or the index definitions.
+org.apache.jackrabbit.oak.plugins.index.lucene.LucenePropertyIndex This index is deprecated: /oak:index/lucene-2; it is used for query Filter(query=select [jcr:path], [jcr:score], * from [nt:base] as a where contains (*, 'test') /* xpath: //*[jcr:contains (.,"test")] */ fullText="test", path=*). Change the query or the index definitions.
 ```
 
 I vissa fall kan Oak försöka använda ett annat fullständigt textindex (som `/oak:index/pathreference`) för att ge stöd åt den fullständiga textfrågan, men om frågesträngen inte matchar det reguljära uttrycket i indexdefinitionen, loggas ett meddelande på WARN-nivå och frågan kommer troligen inte att returnera några resultat.
@@ -61,7 +61,7 @@ org.apache.jackrabbit.oak.query.QueryImpl Potentially improper use of index /oak
 När det generiska Lucene-indexet har tagits bort loggas ett meddelande som visas nedan på WARN-nivå om en fullständig textfråga inte kan hitta någon lämplig indexdefinition:
 
 ```text
-org.apache.jackrabbit.oak.query.QueryImpl Fulltext query without index for filter Filter(query=select [jcr:path], [jcr:score], * from [nt:base] as a where contains(*, 'test') /* xpath: //*[jcr:contains(.,"test")] */ fullText="test", path=*); no results are returned
+org.apache.jackrabbit.oak.query.QueryImpl Fulltext query without index for filter Filter(query=select [jcr:path], [jcr:score], * from [nt:base] as a where contains (*, 'test') /* xpath: //*[jcr:contains (.,"test")] */ fullText="test", path=*); no results are returned
 ```
 
 >[!IMPORTANT]
@@ -85,8 +85,8 @@ Den vanligaste källan med frågor som använder det generiska Lucene-indexet f�
 I de enklaste fallen kan det vara frågor som saknar nodtyp och som därmed betyder `nt:base` eller `nt:base` uttryckligen anges, till exempel:
 
 ```text
-/jcr:root/content/mysite//*[jcr:contains(., 'search term')]
-/jcr:root/content/mysite//element(*, nt:base)[jcr:contains(., 'search term')]
+/jcr:root/content/mysite//*[jcr:contains (., 'search term')]
+/jcr:root/content/mysite//element(*, nt:base)[jcr:contains (., 'search term')]
 ```
 
 >[!IMPORTANT]
@@ -98,13 +98,13 @@ I de enklaste fallen kan det vara frågor som saknar nodtyp och som därmed bety
 Frågorna kan till exempel ändras så att de returnerar matchande sidor eller någon av de aggregat som finns under `cq:Page node`. Frågan kan alltså bli:
 
 ```text
-/jcr:root/content/mysite//element(*, cq:Page)[jcr:contains(., 'search term')]
+/jcr:root/content/mysite//element(*, cq:Page)[jcr:contains (., 'search term')]
 ```
 
 I andra fall kan en fråga ange en nodtyp men innehålla en fullständig textbegränsning som inte kan hanteras av ett annat fullständigt textindex, till exempel:
 
 ```text
-/jcr:root/content/dam//element(*, dam:Asset)[jcr:contains(jcr:content/metadata/@cq:tags, 'NewsTopics:cateogries/domestic'))]
+/jcr:root/content/dam//element(*, dam:Asset)[jcr:contains (jcr:content/metadata/@cq:tags, 'NewsTopics:cateogries/domestic'))]
 ```
 
 I det här fallet har frågan `dam:Asset` nodtyp, men innehåller en fullständig textbegränsning för den relativa `jcr:content/metadata/@cq:tags` -egenskap.
@@ -136,7 +136,7 @@ Nodtyperna som sökningen ska göras mot kan anges med `nodeTypes` -egenskap.
 För närvarande, om inte `nodeTypes` egenskapen finns, den underliggande sökfrågan använder `nt:base` nodtyp, och därför sannolikt kommer att använda det generiska Lucene-indexet, som vanligtvis loggar WARN-meddelanden som liknar följande.
 
 ```text
-20.01.2022 18:56:06.412 *WARN* [127.0.0.1 [1642704966377] POST /mnt/overlay/granite/ui/content/coral/foundation/form/pathfield/picker.result.single.html HTTP/1.1] org.apache.jackrabbit.oak.plugins.index.lucene.LucenePropertyIndex This index is deprecated: /oak:index/lucene-2; it is used for query Filter(query=select [jcr:path], [jcr:score], * from [nt:base] as a where contains(*, 'test') and isdescendantnode(a, '/content') /* xpath: /jcr:root/content//element(*, nt:base)[(jcr:contains(., 'test'))] order by @jcr:score descending */ fullText="test", path=/content//*). Change the query or the index definitions.
+20.01.2022 18:56:06.412 *WARN* [127.0.0.1 [1642704966377] POST /mnt/overlay/granite/ui/content/coral/foundation/form/pathfield/picker.result.single.html HTTP/1.1] org.apache.jackrabbit.oak.plugins.index.lucene.LucenePropertyIndex This index is deprecated: /oak:index/lucene-2; it is used for query Filter(query=select [jcr:path], [jcr:score], * from [nt:base] as a where contains (*, 'test') and isdescendantnode(a, '/content') /* xpath: /jcr:root/content//element(*, nt:base)[(jcr:contains (., 'test'))] order by @jcr:score descending */ fullText="test", path=/content//*). Change the query or the index definitions.
 ```
 
 Innan det generiska Lucene-indexet tas bort ska `pathfield` -komponenten uppdateras så att sökrutan döljs för komponenter som använder standardväljaren, som inte har någon `nodeTypes` -egenskap.

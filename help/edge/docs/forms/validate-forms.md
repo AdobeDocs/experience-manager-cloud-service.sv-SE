@@ -4,13 +4,13 @@ description: Skapa kraftfulla formulär snabbare med kalkylblad och anpassade fo
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: fd2e5df72e965ea6f9ad09b37983f815954f915c
+exl-id: 16e1d42a-42d0-4335-ba81-feedea7ed7d7
+source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
-
 
 # Lägga till valideringar i formulärfält
 
@@ -29,10 +29,4 @@ URL: Den här fälttypen validerar användarindata mot ett giltigt URL-format. A
 Tel: Den här fälttypen är särskilt utformad för telefonnummer och kan utlösa validering baserad på specifika landformat (stöds inte överallt).
 
 
-## Se mer
 
-* [Skapa och förhandsgranska ett formulär](/help/edge/docs/forms/create-forms.md)
-* [Aktivera formulär för att skicka data](/help/edge/docs/forms/submit-forms.md)
-* [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-forms.md)
-* [Lägga till valideringar i formulärfält](/help/edge/docs/forms/validate-forms.md)
-* [Ändra teman och format för formulär](/help/edge/docs/forms/style-theme-forms.md)

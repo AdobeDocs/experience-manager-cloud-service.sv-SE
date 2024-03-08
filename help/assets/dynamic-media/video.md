@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Video Profiles
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 0d5f95cc2e7378f09c8f6c4bc3858e7b42c07924
+source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
 workflow-type: tm+mt
 source-wordcount: '9230'
 ht-degree: 0%
@@ -717,7 +717,7 @@ Alla överförda ljudspårsfiler kan dock anges som standardljud som spelas upp 
 >Uppspelningen av standardljud kan också bero på vad som är inställt i följande webbläsare:
 >
 >* Chrome - Det standardljud som ställs in i videon spelas upp.
-* Safari - Om standardspråket är inställt i Safari spelas ljudet upp med det angivna standardspråket, om tillgängligt med videons manifest. I annat fall spelas det standardljud som är inställt som en del av en videos egenskaper upp.
+>* Safari - Om standardspråket är inställt i Safari spelas ljudet upp med det angivna standardspråket, om tillgängligt med videons manifest. I annat fall spelas det standardljud som är inställt som en del av en videos egenskaper upp.
 
 **Så här anger du standardljud för en video som har flera ljudspår:**
 
@@ -746,7 +746,7 @@ Se [Lägga till Dynamic Media Assets på sidor](/help/assets/dynamic-media/addin
 
 >[!NOTE]
 >
-På standardfliken för förhandsgranskning i Experience Manager visas inte flera undertext- och ljudspår. Orsaken är att dessa spår är kopplade till Dynamic Media och bara kan visas med förhandsvisningen i Dynamic Media Viewer.
+>På standardfliken för förhandsgranskning i Experience Manager visas inte flera undertext- och ljudspår. Orsaken är att dessa spår är kopplade till Dynamic Media och bara kan visas med förhandsvisningen i Dynamic Media Viewer.
 
 **Så här förhandsgranskar du en video som har flera undertexter och ljudspår:**
 
@@ -825,7 +825,7 @@ Det går inte att hämta det ursprungliga ljudspåret som har extraherats från 
 
 >[!IMPORTANT]
 >
-Adobe rekommenderar att du [möjliggör funktioner för flera undertexter och flerljudspår](#enable-dash) på ditt Dynamic Media-konto. På så sätt kan du dra nytta av den senaste Dynamic Media backend-arkitekturen och ett förenklat arbetsflöde för att lägga till bildtexter, undertexter och ljudspår i videoklipp.
+>Adobe rekommenderar att du [möjliggör funktioner för flera undertexter och flerljudspår](#enable-dash) på ditt Dynamic Media-konto. På så sätt kan du dra nytta av den senaste Dynamic Media backend-arkitekturen och ett förenklat arbetsflöde för att lägga till bildtexter, undertexter och ljudspår i videoklipp.
 
 Du kan utöka räckvidden för dina videor till globala marknader genom att lägga till undertexter till enskilda videor eller till adaptiva videouppsättningar. Genom att lägga till undertextning slipper du att duplicera ljudet eller att du behöver använda inbyggda högtalare för att spela in ljudet igen för varje språk. Videon spelas upp på det språk den spelades in på. Undertexter på främmande språk visas så att personer på olika språk fortfarande kan förstå ljuddelen.
 
@@ -833,7 +833,7 @@ Undertexter ger också bättre tillgänglighet för personer som är döva eller
 
 >[!NOTE]
 >
-Den videospelare som du använder måste ha stöd för visning av undertexter.
+>Den videospelare som du använder måste ha stöd för visning av undertexter.
 
 Se även [Tillgänglighet i Dynamic Media](/help/assets/dynamic-media/accessibility-dm.md).
 
@@ -861,7 +861,7 @@ Följ instruktionerna på skärmen för att skapa och spara WebVTT-filen. När d
 
 >[!NOTE]
 >
-För globalt stöd för videoundertexter på flera språk kräver WebVTT-standarden att du skapar separata .vtt-filer och anropar varje språk som du vill ha stöd för.
+>För globalt stöd för videoundertexter på flera språk kräver WebVTT-standarden att du skapar separata .vtt-filer och anropar varje språk som du vill ha stöd för.
 
 Vanligtvis vill du ge bildtexten VTT ett namn som är detsamma som videofilen och bifoga den med språkinställningen -EN, -FR eller -DE. Genom att göra det kan det hjälpa dig att automatisera genereringen av video-URL:er med ditt befintliga system för hantering av webbinnehåll.
 
@@ -892,7 +892,7 @@ Du kan göra dina videoklipp i långa format enklare att titta på och navigera 
 
 >[!NOTE]
 >
-Den videospelare som används måste ha stöd för kapitelmarkörer. Dynamic Media videospelare har stöd för kapitelmarkörer, men det är inte säkert att tredjepartsvideospelare används.
+>Den videospelare som används måste ha stöd för kapitelmarkörer. Dynamic Media videospelare har stöd för kapitelmarkörer, men det är inte säkert att tredjepartsvideospelare används.
 
 <!-- OBSOLETE CONTENT OBSOLETE CONTENT If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading "Customizing Behavior Using Modifiers" under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
@@ -1238,7 +1238,7 @@ public class ManifestServlet extends HttpServlet {
     private void error(String errorMessage, HttpServletResponse response) throws IOException { 
         ManifestUrl errorManifest = new ManifestUrl(null); 
         errorManifest.setErrorMessage(errorMessage); 
-        response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR); 
+        response.setStatus (HttpServletResponse.SC_INTERNAL_SERVER_ERROR); 
         objectMapper.writeValue(response.getWriter(), errorManifest); 
     } 
 } 
@@ -1283,7 +1283,7 @@ public abstract class VideoResponse {
 ```java
 public final class Constants { 
 
-     private Constants() { 
+     private Constants () { 
      } 
 
      public static final String VIDEO_API_PREFIX = "/dynamicmedia/video"; 
@@ -1345,7 +1345,7 @@ public class DMSampleApiHttpContext extends ServletContextHelper {
   */ 
  public static String getRealContextPath(HttpServletRequest req) { 
      final String path = req.getContextPath(); 
-     if (path.equals(CONTEXT_PATH)) { 
+     if (path.equals (CONTEXT_PATH)) { 
          return ""; 
      } 
      return path.substring(CONTEXT_PATH.length()); 

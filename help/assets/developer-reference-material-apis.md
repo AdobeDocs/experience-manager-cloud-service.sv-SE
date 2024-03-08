@@ -5,7 +5,7 @@ contentOwner: AG
 feature: APIs,Assets HTTP API
 role: Developer,Architect,Admin
 exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
-source-git-commit: 5acbd7a56f18ee4c3d8b8f04ab17ad44fe6f0647
+source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
 workflow-type: tm+mt
 source-wordcount: '1926'
 ht-degree: 0%
@@ -76,7 +76,7 @@ I [!DNL Experience Manager] som [!DNL Cloud Service]kan du överföra resurserna
 
 >[!IMPORTANT]
 >
-Utför ovanstående steg i ett externt program och inte i [!DNL Experience Manager] JVM.
+>Utför ovanstående steg i ett externt program och inte i [!DNL Experience Manager] JVM.
 
 Metoden ger en skalbar och mer effektiv hantering av överföringar av resurser. Skillnaderna jämfört med [!DNL Experience Manager] 6.5 är:
 
@@ -85,11 +85,11 @@ Metoden ger en skalbar och mer effektiv hantering av överföringar av resurser.
 
 >[!NOTE]
 >
-Se klientkoden för att implementera den här metoden i öppen källkod [aem-upload library](https://github.com/adobe/aem-upload).
+>Se klientkoden för att implementera den här metoden i öppen källkod [aem-upload library](https://github.com/adobe/aem-upload).
 >
-[!IMPORTANT]
+>[!IMPORTANT]
 >
-Under vissa omständigheter är det inte säkert att ändringarna till fullo kan spridas mellan begäranden till Experience Manager på grund av att lagringsutrymmet i Cloud Service så småningom är konsekvent. Detta leder till 404 svar på initiering eller slutförande av överföringsanrop på grund av att de nödvändiga mappprojekten inte sprids. Kunderna bör förvänta sig 404 svar och hantera dem genom att implementera ett nytt försök med en strategi för backoff-hantering.
+>Under vissa omständigheter är det inte säkert att ändringarna till fullo kan spridas mellan begäranden till Experience Manager på grund av att lagringsutrymmet i Cloud Service så småningom är konsekvent. Detta leder till 404 svar på initiering eller slutförande av överföringsanrop på grund av att de nödvändiga mappprojekten inte sprids. Kunderna bör förvänta sig 404 svar och hantera dem genom att implementera ett nytt försök med en strategi för backoff-hantering.
 
 ### Initiera överföring {#initiate-upload}
 
@@ -159,7 +159,7 @@ Om överföringen lyckas svarar servern på varje begäran med en `201` statusko
 
 >[!NOTE]
 >
-Mer information om överföringsalgoritmen finns i [officiell funktionsdokumentation](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html#Upload) och [API-dokumentation](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html) i projektet Apache Jackrabbit Oak.
+>Mer information om överföringsalgoritmen finns i [officiell funktionsdokumentation](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html#Upload) och [API-dokumentation](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html) i projektet Apache Jackrabbit Oak.
 
 ### fullständig överföring {#complete-upload}
 
@@ -179,7 +179,7 @@ När alla delar av en binär fil har överförts skickar du en begäran om HTTP-
 
 >[!NOTE]
 >
-Om tillgången finns och ingendera `createVersion` eller `replace` anges, sedan [!DNL Experience Manager] uppdaterar resursens aktuella version med den nya binärfilen.
+>Om tillgången finns och ingendera `createVersion` eller `replace` anges, sedan [!DNL Experience Manager] uppdaterar resursens aktuella version med den nya binärfilen.
 
 Precis som initieringsprocessen kan fullständiga data för begäran innehålla information för mer än en fil.
 
@@ -215,7 +215,7 @@ function debug() {
 }
 
 # Function to check if a file exists
-function file_exists() {
+function file_exists () {
     [ -e "$1" ]
 }
 
@@ -431,7 +431,7 @@ Om du vill veta mer om överföringsalgoritmerna eller skapa egna överföringss
 
 >[!NOTE]
 >
-Både aem-upload-biblioteket och kommandoradsverktyget använder [node-httptransfer library](https://github.com/adobe/node-httptransfer/)
+>Både aem-upload-biblioteket och kommandoradsverktyget använder [node-httptransfer library](https://github.com/adobe/node-httptransfer/)
 
 ### Inaktuella API:er för överföring av resurser {#deprecated-asset-upload-api}
 
@@ -444,9 +444,9 @@ Den nya överföringsmetoden stöds endast för [!DNL Adobe Experience Manager] 
 
 >[!MORELIKETHIS]
 >
-* [Open-source aem-upload library](https://github.com/adobe/aem-upload).
-* [Kommandoradsverktyg med öppen källkod](https://github.com/adobe/aio-cli-plugin-aem).
-* [Apache Jackrabbit Oak-dokumentation för direkt överföring](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html#Upload).
+>* [Open-source aem-upload library](https://github.com/adobe/aem-upload).
+>* [Kommandoradsverktyg med öppen källkod](https://github.com/adobe/aio-cli-plugin-aem).
+>* [Apache Jackrabbit Oak-dokumentation för direkt överföring](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html#Upload).
 
 ## Tillgångshantering och efterbearbetning av arbetsflöden {#post-processing-workflows}
 
@@ -551,4 +551,4 @@ https://adobe-my.sharepoint.com/personal/gklebus_adobe_com/_layouts/15/guestacce
 
 >[!MORELIKETHIS]
 >
-* [[!DNL Experience Cloud] som [!DNL Cloud Service] SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md).
+>* [[!DNL Experience Cloud] som [!DNL Cloud Service] SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md).

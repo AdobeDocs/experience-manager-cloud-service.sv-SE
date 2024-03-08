@@ -4,13 +4,13 @@ description: Lägga till repeterbara avsnitt i ett EDS-formulär
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: d63d0f1152d0a23623c197924a44bc6b1e69fb42
+exl-id: 062d5a88-48ca-421f-bf0d-1483e3cfee28
+source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
 
 ---
-
 
 # Lägga till repeterbara avsnitt i ett formulär
 
@@ -81,7 +81,7 @@ The form allows users to provide personal information, including details of the 
 
 ## Prerequisites
 
-The [Adaptive Form block is enabled](/help/edge/docs/forms/create-forms.md) for your Edge Delivery Service project. 
+The [Adaptive Form block is enabled](/help/edge/docs/forms/create-forms.md) for your Edge Delivery Services project. 
 
 ## Add a repeatable section to a form 
 

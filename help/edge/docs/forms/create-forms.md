@@ -4,13 +4,13 @@ description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery, doku
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: fd2e5df72e965ea6f9ad09b37983f815954f915c
+exl-id: 0cf881a2-3784-45eb-afe8-3435e5e95cf4
+source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
-
 
 # Skapa ett formulär med adaptivt formulärblock
 
@@ -27,24 +27,26 @@ AEM Forms Edge Delivery innehåller ett block, som kallas adaptivt formulärbloc
 
 Kontrollera att du har utfört följande steg innan du börjar:
 
-* Konfigurera Edge Delivery Service (EDS) GitHub-projekt med hjälp AEM boilerplate och klona motsvarande GitHub-databas på den lokala datorn. Se [självstudiekurs för utvecklare](https://www.aem.live/developer/tutorial) för mer information. I det här dokumentet kallas den lokala mappen i Edge Delivery Service-projektet (EDS) `[EDS Project repository]` .
+* Konfigurera Edge Delivery Services (EDS) i GitHub-projekt med hjälp AEM standardmall och klona motsvarande GitHub-databas på den lokala datorn. Se [självstudiekurs för utvecklare](https://www.aem.live/developer/tutorial) för mer information. I det här dokumentet kallas den lokala mappen i ditt Edge Delivery Services-projekt (EDS) `[EDS Project repository]` .
 * Se till att du har tillgång till Google Sheets eller Microsoft SharePoint. Information om hur du konfigurerar Microsoft SharePoint som innehållskälla finns i [Så här använder du Sharepoint](https://www.aem.live/docs/setup-customer-sharepoint)
 
 
 
 ## Skapa ett formulär
 
-+++ Steg 1: Lägg till det adaptiva formulärblocket i Edge Delivery Service-projektet (EDS).
++++ Steg 1: Lägg till det adaptiva formulärblocket i Edge Delivery Services-projektet.
 
-Adaptiv ger användarna möjlighet att skapa formulär för en Edge Delivery Service Site. Det här blocket ingår dock inte i standardmallen AEM (används för att skapa ett Edge Delivery Service-projekt). Så här integrerar du det adaptiva formulärblocket i ditt Edge Delivery Service-projekt:
+Adaptiv ger användarna möjlighet att skapa formulär för en Edge Delivery ServicesSite. Det här blocket ingår dock inte i AEM standardmallsida (används för att skapa ett projekt för Edge Delivery Services). Så här integrerar du det adaptiva formulärblocket i ditt Edge Delivery Services-projekt:
 
-1. **Klona databasen för adaptiva formulärblock**: Klona [Databas för adaptiva formulärblock](https://github.com/adobe/afb) på din lokala dator. Den innehåller koden som återger formuläret på en EDS-webbsida. I det här dokumentet kallas den lokala mappen i din Forms-blockdatabas för `[Adaptive Form Block repository]`.
-1. **Leta reda på databasen för adaptiva formulärblock:** Öppna [Databas för adaptiva formulärblock]/blocks mapp på den lokala datorn och kopiera `form` mapp.
-1. **Klistra in det adaptiva formulärblocket i ditt EDS-projekt:**
-Navigera till [EDS-projektdatabas]/blocks/ mapp på den lokala datorn och klistra in formulärmappen.
-1. **Verkställ ändringar i GitHub:** Checka in formulärmappen och dess underliggande filer i Edge Delivery Service-projektet på GitHub.
+1. **Klona databasen för adaptiva formulärblock**: Klona [Databas för adaptiva formulärblock](https://github.com/adobe-rnd/form-block) på din lokala dator. Den innehåller koden som återger formuläret på en EDS-webbsida. I det här dokumentet kallas den lokala mappen i din Forms-blockdatabas för `[Adaptive Form Block repository]`.
+1. **Leta reda på databasen för adaptiva formulärblock:** Öppna [Databas för adaptiva formulärblock]/blocks/src-mapp och kopiera dess innehåll.
 
-När du har utfört de här stegen läggs det adaptiva formulärblocket till i projektdatabasen för Edge Delivery Service (EDS) på GitHub. Nu kan du skapa och lägga till formulär på en EDS-sida.
+1. på din lokala dator och kopiera `form` mapp.
+1. **Klistra in koden för det adaptiva formulärblocket i ditt EDS-projekt:**
+Navigera till [EDS-projektdatabas]/blocks/ mapp på den lokala datorn och skapa en &#39;form&#39;-mapp. Klistra in `[Adaptive Form Block repository]/blocks/src content`, kopierat i föregående steg till `[EDS Project repository]/blocks/form` mapp.
+1. **Verkställ ändringar i GitHub:** Checka in `[EDS Project repository]/blocks/form` -mappen och dess underliggande filer till ditt Edge Delivery Services-projekt på GitHub.
+
+När du har utfört de här stegen läggs det adaptiva formulärblocket till i projektdatabasen för Edge Delivery Services (EDS) på GitHub. Nu kan du skapa och lägga till formulär på en EDS-sida.
 
 
 **Felsökning av byggproblem med GitHub**
@@ -57,13 +59,11 @@ Om du får felmeddelandet&quot;Det går inte att matcha sökvägen till modulen 
 * **Hantera lintingfel:**
 Om du skulle stöta på ett lintingfel kan du kringgå dem. Öppna [EDS-projekt]/package.json och ändra &quot;lint&quot;-skriptet från &quot;lint&quot;: &quot;npm run lint:js &amp;&amp; npm run lint:css&quot; till &quot;lint&quot;: &quot;echo &#39;skipping linting for now&#39;&quot;. Spara filen och implementera ändringarna i GitHub-projektet.
 
-
-
 +++
 
 +++ Steg 2: Skapa ett formulär med Microsoft Excel eller Google Sheet.
 
-Istället för att navigera i komplexa processer kan du enkelt skapa ett formulär med hjälp av ett kalkylblad. Du kan börja med att lägga till rader och kolumnrubriker i ett kalkylblad, där varje rad representerar ett formulärfält, medan varje kolumnrubrik definierar egenskaperna för motsvarande fält.
+Istället för att navigera i komplexa processer kan du enkelt skapa ett formulär med hjälp av ett kalkylblad. Du kan definiera de rader och kolumner som ska utgöra formulärstrukturen. Varje rad representerar en individ [formulärfält](/help/edge/docs/forms/form-components.md#available-components) och kolumnrubrikerna definierar motsvarande [fältegenskaper](/help/edge/docs/forms/form-components.md#components-properties).
 
 Ta till exempel följande kalkylblad, där rader ger konturfält för ett `enquiry` formulär- och kolumnrubriker definierar deras egenskaper:
 
@@ -96,7 +96,7 @@ Så här fortsätter du med att skapa formulär:
 
 
    ```JSON
-       https://<branch>--<repository>--<owner>.hlx.live/<form>.json
+       https://<branch>--<repository>--<owner>.hlx.live/<form-path>/<form-file-name>.json
    ```
 
    * `<branch>` refererar till grenen i din GitHub-databas.
@@ -110,7 +110,7 @@ Så här fortsätter du med att skapa formulär:
 
 +++
 
-+++ Steg 3: Förhandsgranska formuläret på EDS-sidan (Edge Delivery Service).
++++ Steg 3: Förhandsgranska formuläret på EDS-sidan (Edge Delivery Services).
 
 
 Fram tills nu har du lagt till det adaptiva formulärblocket i ditt EDS-projekt och förberett formulärets struktur. Nu kan du förhandsgranska formuläret:
@@ -121,7 +121,7 @@ Fram tills nu har du lagt till det adaptiva formulärblocket i ditt EDS-projekt 
 
 1. **Navigera till önskad plats:** Gå till önskad plats i dokumentet där du vill lägga till formuläret.
 
-1. **Lägg till det adaptiva formulärblocket:** Infoga ett block med namnet &#39;Formulär&#39; i filen, enligt bilden nedan:
+1. **Lägg till det adaptiva formulärblocket:** Skapa ett formulärblock som återger formuläret. Välj Infoga > Tabell och skapa en kolumn, en tabell med två rader. Ge tabellen namnet &quot;Formulär&quot; och klistra in URL:en för förhandsgranskning på den andra raden. Kontrollera att URL-adressen är formaterad som en hyperlänk, inte som oformaterad text, enligt bilden nedan:
 
    | Formulär |
    |---|
@@ -153,12 +153,4 @@ Fram tills nu har du lagt till det adaptiva formulärblocket i ditt EDS-projekt 
 
 
 
-## Se mer
 
-* [Formulärkomponenter](/help/edge/docs/forms/form-components.md)
-* [Egenskaper för formulärfält](/help/edge/docs/forms/eds-form-field-properties)
-* [Skapa och förhandsgranska ett formulär](/help/edge/docs/forms/create-forms.md)
-* [Aktivera formulär för att skicka data](/help/edge/docs/forms/submit-forms.md)
-* [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-forms.md)
-* [Lägga till valideringar i formulärfält](/help/edge/docs/forms/validate-forms.md)
-* [Ändra teman och format för formulär](/help/edge/docs/forms/style-theme-forms.md)

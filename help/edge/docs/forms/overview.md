@@ -1,123 +1,78 @@
 ---
-title: AEM Forms Edge Delivery Service - översikt
-description: AEM Forms Edge Delivery Service har tagits fram för bästa prestanda och ger er möjlighet att förutse framtiden för smidig datainsamling och användarengagemang.
+title: Översikt över AEM Forms-Edge Delivery Services
+description: AEM Forms Edge Delivery Services som tagits fram för bästa prestanda och som gör det möjligt att förutse framtiden för smidig datainsamling och användarengagemang.
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: d63d0f1152d0a23623c197924a44bc6b1e69fb42
+exl-id: ecea1e05-d36b-4d63-af9d-c69dafd2f94f
+source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
 workflow-type: tm+mt
-source-wordcount: '1120'
+source-wordcount: '1124'
 ht-degree: 0%
 
 ---
 
+# AEM Forms-Edge Delivery Services
 
-# AEM Forms Edge Delivery Service
-
-Effektivisera framtagningen av blanketter och få snabbare ifyllnad med Adobe AEM Forms Edge Delivery Service. Med denna kraftfulla, samverkande tjänst kan ni skapa formulär i företagsklass med enastående prestanda och visuella tilltalande funktioner. AEM prioriterar både användarupplevelsen och affärsmålen, vilket ger blixtsnabba laddningstider och fler slutförda formulär.
+Effektivisera framtagningen av blanketter och få snabbare ifyllnad med Adobe AEM Forms-Edge Delivery Services. Dessa kraftfulla, sammanställbara tjänster gör att du kan skapa formulär i enterpriseklass med enastående prestanda och visuella fördelar. AEM prioriterar både användarupplevelsen och affärsmålen, vilket ger blixtsnabba laddningstider och ökad konvertering av formulär.
 
 Du kan använda tjänsten för att:
 
-* **Captivate-användare med enastående formulär**: Skapa enkelt komplexa och engagerande formulär med ett bibliotek med färdiga komponenter. Integrera enkelt reCAPTCHA, skicka formulär direkt till e-post och möjliggör smidiga filöverföringar för säkra lagringslösningar som Sharepoint, Azure Storage och Amazon S3. Du kan till och med skapa egna skräddarsydda blankettkomponenter för att förverkliga din unika vision.
+* **Skapa enastående registreringsupplevelser**: Skapa registreringsupplevelser som läses in och återges snabbt, även på långsamma internetanslutningar. Snabbare inläsningstider och optimerad användarupplevelse bidrar till snabbare ifyllnad av formulär och förbättrad konverteringsgrad.
 
-* **Skapa digitala registreringsupplevelser med valfria verktyg**: Öka redigeringseffektiviteten genom att frikoppla innehållskällor. Nu kan du använda både dokumentbaserad redigering (Microsoft 365 och Google Workspace) och AEM (AEM Editors). Det innebär att du kan arbeta med flera innehållskällor på samma webbplats och använda de redigeringsverktyg du föredrar, till exempel Microsoft Excel, Google Sheets eller Adaptiv Forms Editor.
+* **Skapa registreringsupplevelser med valfria verktyg**: Öka redigeringseffektiviteten genom att frikoppla innehållskällor. Använd båda **dokumentbaserad redigering** (Microsoft SharePoint eller Google Drive) och **AEM** (AEM). Det innebär att du kan arbeta med flera innehållskällor i samma formulär och använda de redigeringsverktyg du föredrar, till exempel Microsoft Excel, Google Sheets eller Adaptiv Forms Editor.
 
-* **Bygg formulär med perfekt Lightroom-poäng**: Bygg formulär som läses in och återges snabbt, även på långsamma internetanslutningar. Snabbare inläsningstider och optimerad användarupplevelse bidrar till snabbare ifyllnad av formulär och förbättrad konverteringsgrad.
-
-  <div>
-    <style>
-    .image-container {
-    text-align: center; 
-    }
-    .image-container img {
-        width: 100%; /* Set image width to 100% of the container 
-    }
-</style>
-    <div class="image-container">
-    <img src="/help/edge/assets/eds-forms-key-features.png" alt="EDS Forms Key features">
-    </div>
+* **Använd utvecklarvänliga verktyg:** AEM Forms använder HTML, modern CSS och vanilj JavaScript för att skapa exceptionella upplevelser utan den vanliga overheadkostnaden. Utvecklare med grundläggande kunskaper i HTML, CSS och JS bör kunna bygga egna komponenter och behöver inte lära sig något specifikt språk eller ramverk. Du behöver inte vänta på en pipeline, checka in koden i Github och ändringarna är aktuella. Dessutom behövs ingen pipeline eller väntan, checka in koden i Github och ändringarna är live.
 
 
-</div>
+## Skapa en digital registreringsupplevelse
 
-<!--
+AEM Forms erbjuder båda **dokumentbaserad redigering** (Microsoft SharePoint eller Google Drive) och **AEM** (AEM). Du kan använda [Adaptivt Forms-block](/help/edge/docs/forms/create-forms.md) för att lägga till ett formulär på din Edge Delivery Services webbplats.
 
-<!--
 
-    ![Enrollment forms](/help/edge/assets/enrollment-form.png)
+>[!BEGINTABS]
 
-* **Build forms with perfect lighthouse score**: Build forms that load and render quickly, even on slow internet connections. Faster loading times and optimized user experience contribute to higher form completion rates and improved conversion rates.
+>[!TAB Dokumentbaserad redigering]
 
-    ![perfect lighthouse score for your forms](/help/edge/assets/lighthouse-forms.png)
+Dokumentbaserad redigering är ett mångsidigt alternativ som passar bra för att skapa enkla formulär med grundläggande funktioner. Det gör att du kan integrera olika indatatyper som textfält, listrutor och alternativknappar, vilket gör att du kan samla in användardata effektivt. Det innehåller en grundläggande version av regler för att lägga till dynamiskt beteende i formulär. De viktigaste funktionerna för dokumentbaserad redigering är:
 
-* **Create digital enrollment experiences with tools of your choice**: Increase authoring efficiency by decoupling content sources. Out of the box you can use both AEM authoring and document-based authoring. As such, you can work with multiple content sources on the same website and use your preferred authoring tools, such as Microsoft Excel, Google Sheets, or AEM Editors.
-
-    ![Edge Delivery forms authoring tools](/help/edge/assets/edge-delivery-forms-authoring-tools.png)
-    
-<!--
-* **Measure customer impact and deliver effective forms**: Use our RUM dashboards to visualize form performance and identify areas for improvement. Experiment with different versions and continuously optimize your forms for maximum effectiveness, ensuring you capture the data you need and drive better business outcomes.
-
-* **Use Integrated services:** Use integrated services to streamline and empowers your users with a one-stop shop for managing their digital enrollment journeys. Use e-signatures, automated workflows, document of record (DoR), and seamless data integration, simplify the entire digital enrollment process, accelerate approvals, and optimizes your business workflows. 
-
-    
-    >[!NOTE]
-    >[!NOTE]
-    >
-    >
-    > WYSIWYG authoring capability, integrated services, and customer impact measuring features are available under early adopter program. You can write to aem-forms-early-adopter-program@adobe.com from your official email id to join the early adopter program and request access to the capability.
-
-    -->
-
-## Viktiga funktioner
-
-* **HTML5-baserade formulärfältskomponenter**: Med AEM Forms Edge Delivery Service kan du skapa användarvänliga och interaktiva formulär med hjälp av formulärkomponenter baserade på HTML5 [indatatyper](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types), <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textområde</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">välj</a>och <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fältuppsättning</a>  -element. Dessa komponenter klarar olika typer av datainsamling och kan enkelt anpassas efter dina specifika behov.
+* **[HTML5-baserade formulärfältskomponenter](/help/edge/docs/forms/form-components.md)**: Med AEM Forms Edge Delivery Services kan du skapa användarvänliga och interaktiva formulär med hjälp av formulärkomponenter baserade på HTML5 [indatatyper](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types), <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textområde</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">välj</a>och <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fältuppsättning</a>  -element. Dessa komponenter klarar olika typer av datainsamling och kan enkelt anpassas efter dina specifika behov.
 
 * **Tillgänglighet**: Fälten i formulärblocket är tillgängliga. Varje etikett länkas med respektive indataelement och ID:n genereras automatiskt för länkning. Beskrivningar som är associerade med fält länkas via attributet aria-describedby. Tangentbordsnavigering med standardtangenterna Tabb/Skift + Tabb stöds.
 
-* **Stilar**: Varje formulärfält har en fast HTML-struktur som enkelt kan dekoreras med anpassade CSS- eller JavaScript-filer. Väljare för målfält i CSS och JS tillhandahålls baserat på typ och namn. Du kan enkelt skapa nya väljare på grund av den standardiserade strukturen.
+* **[Stilar](/help/edge/docs/forms/style-theme-forms.md)**: Varje formulärfält har en fast HTML-struktur som enkelt kan dekoreras med anpassade CSS- eller JavaScript-filer. Väljare för målfält i CSS och JS tillhandahålls baserat på typ och namn. Du kan enkelt skapa nya väljare på grund av den standardiserade strukturen och stilen på formuläret.
 
-* **Regler**: Skapa enkelt logik som justerar fältets synlighet, validering och beteende baserat på användarindata eller fördefinierade villkor. Regler är ett flexibelt och intuitivt sätt att lägga till intelligens i formulären, vilket säkerställer att de smidigt kan anpassas utifrån användarens indata.
+* **Grundregler**: Skapa enkelt logik som justerar fältets synlighet, validering och beteende baserat på användarindata eller fördefinierade villkor. Regler är ett flexibelt och intuitivt sätt att lägga till intelligens i formulären, vilket säkerställer att de smidigt kan anpassas utifrån användarens indata.
 
-* **Valideringar**: Innan formuläret skickas valideras det och ogiltiga fält markeras med felmeddelanden som visas för användaren. Det finns olika mönster för att visa dessa fel.
-
-Det finns några avancerade funktioner som är tillgängliga på begäran:
+* **Valideringar**: Innan formuläret skickas valideras det och ogiltiga fält markeras med felmeddelanden som visas för användaren. Adaptiva Forms-block har stöd för all formulärvalidering i HTML, som stöds av moderna webbläsare, och erbjuder ytterligare valideringsfunktioner som valideringsskript, filstorlek, filtyp, total filstorlek med mera.
 
 * **Filöverföringar**: Du kan lägga till funktioner för bifogade filer i formulären. Oavsett om du behöver samla in dokument, bilder eller andra filer från användarna så är filöverföringen enkel. Med anpassade hanteringsalternativ tillgängliga kan du anpassa filöverföringsprocessen så att den passar dina specifika behov.
 
-* **reCAPTCHA**: Dra nytta av den smidiga integreringen av Google reCAPTCHA i formulären med vårt OTB-stöd. Skydda era formulär mot bedrägliga aktiviteter, skräppost och missbruk, samtidigt som ni bibehåller en smidig och oavbruten användarupplevelse.
+* **reCAPTCHA**: Dra nytta av den smidiga integreringen av Google reCAPTCHA i formulären med vårt OTB-stöd. Skydda era formulär mot bedrägliga aktiviteter, skräppost och missbruk, samtidigt som ni bibehåller en smidig och oavbruten användarupplevelse. Adaptivt Forms-block har stöd för reCaptcha V3 och reCaptcha Enterprise.
 
 * **Skicka e-postmeddelanden när formulär skickas**: Eliminera krånglet med manuella uppföljningar och säkerställ snabb kommunikation med vår inbyggda e-postautomatisering för att skicka in formulär. Med den här integrerade lösningen kan ni enkelt meddela berörda parter, inklusive att skicka formulärdata, när någon fyller i ett formulär på webbplatsen. Inget behov av komplexa konfigurationer eller andra verktyg - det är klart att användas direkt.
 
+>[!TAB AEM]
 
-## Tillgängliga Forms-block
+Med AEM kan du skapa mer komplexa och interaktiva formulär. Förutom funktionerna för dokumentbaserad redigering har AEM följande extrafunktioner:
 
-AEM Forms Edge Delivery Service erbjuder två typer av formulärblock som tillgodoser olika behov:
+* Avancerade regler: Definiera logiska åtgärder i formulären. Du kan använda regler för att villkorligt visa eller dölja formuläravsnitt, fylla i fält i förväg baserat på användarindata och utföra olika valideringar för att säkerställa dataintegriteten.
 
-* **Grundläggande Forms Block**: Det här är ett mångsidigt alternativ som passar för att skapa enkla formulär med grundläggande funktioner. Det gör att du kan integrera olika indatatyper som textfält, listrutor och alternativknappar, vilket gör att du kan samla in användardata effektivt.
+* Utbyggbarhet på serversidan: Utöka funktionaliteten i formulären genom att integrera dem med logik på serversidan. På så sätt kan du utföra komplexa beräkningar, interagera med externa system och automatisera specifika uppgifter baserat på användaråtgärder i formuläret.
+* Effektivisera arbetsflöden och datahantering: Utnyttja kraften i AEM för att:
+   * Utforma användarvänliga formulär med AEM redigerare.
+   * Generera ett&quot;arkiveringsdokument&quot; för säker och manipuleringssäker arkivering av inskickade data.
+   * Underlätta e-signering med Adobe Sign för en smidig och säker signeringsprocess.
+   * Automatisera affärsprocesserna genom AEM arbetsflöden, aktivera åtgärder som bygger på inskickade formulär.
+   * Integrera enkelt med olika datakällor, vilket möjliggör smidigt dataflöde och datautbyte.
 
-* **Adaptivt Forms-block**: Det här avancerade blocket frigör ytterligare funktioner utöver det grundläggande Forms-blocket så att du kan skapa mer komplexa och interaktiva formulär. Här följer en beskrivning av de viktigaste funktionerna:
+>[!ENDTABS]
 
-   * Regler: Definiera logikbaserade åtgärder i formulären. Du kan använda regler för att villkorligt visa eller dölja formuläravsnitt, fylla i fält i förväg baserat på användarindata och utföra olika valideringar för att säkerställa dataintegriteten.
 
-   * Utbyggbarhet på serversidan: Utöka funktionaliteten i formulären genom att integrera dem med logik på serversidan. På så sätt kan du utföra komplexa beräkningar, interagera med externa system och automatisera specifika uppgifter baserat på användaråtgärder i formuläret.
 
-   * Korspromenad: Effektivisera arbetsflöden och datahantering: Utnyttja kraften i AEM för att:
 
-      * Utforma användarvänliga formulär med AEM redigerare.
 
-      * Generera ett&quot;arkiveringsdokument&quot; för säker och manipuleringssäker arkivering av inskickade data.
 
-      * Underlätta e-signering med Adobe Sign för en smidig och säker signeringsprocess.
-
-      * Automatisera affärsprocesserna genom AEM arbetsflöden, aktivera åtgärder som bygger på inskickade formulär.
-
-      * Integrera enkelt med olika datakällor, vilket möjliggör smidigt dataflöde och datautbyte.
-
-  För att använda Adaptive Forms Block krävs ytterligare en licens.
-
-### Välja rätt Forms-block
-
-Vilken typ av Forms Basic-block du väljer beror på dina specifika behov. Om du behöver en enkel lösning för att samla in grundläggande användarinformation är det grundläggande Forms-blocket perfekt. Men om formulären kräver invecklad logik, datahantering, integration med externa system eller smidiga arbetsflöden med AEM funktioner och **du har den licens som krävs** ger Adaptive Forms Block den kraft och flexibilitet som krävs för att uppnå era mål.
 
 
 ## Börja skapa formulär
@@ -209,12 +164,3 @@ Vilken typ av Forms Basic-block du väljer beror på dina specifika behov. Om du
 
 
 </br>
-
-
-
-
-
-
-
-
-

@@ -2,7 +2,7 @@
 title: Bygga in märkord i AEM
 description: Arbeta med taggar eller utöka taggar i ett anpassat AEM
 exl-id: a106dce1-5d51-406a-a563-4dea83987343
-source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
+source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 0%
@@ -80,10 +80,10 @@ Resource node = tag.adaptTo(Resource.class);
 
 ```java
 // Getting the tags of a Resource:
-Tag[] tags = tagManager.getTags(resource);
+Tag[] tags = tagManager.getTags (resource);
 
 // Setting tags to a Resource:
-tagManager.setTags(resource, tags);
+tagManager.setTags (resource, tags);
 ```
 
 ### Söker efter taggar {#searching-for-tags}
@@ -144,8 +144,8 @@ API:t på serversidan har lokaliserats `title`-relaterade metoder:
 
 * [`com.day.cq.tagging.Tag`](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/tagging/Tag.html)
    * `getLocalizedTitle(Locale locale)`
-   * `getLocalizedTitlePaths()`
-   * `getLocalizedTitles()`
+   * `getLocalizedTitlePaths ()`
+   * `getLocalizedTitles ()`
    * `getTitle(Locale locale)`
    * `getTitlePath(Locale locale)`
 * [`com.day.cq.tagging.TagManager`](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/tagging/TagManager.html)

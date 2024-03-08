@@ -4,13 +4,13 @@ description: Lär dig konfigurera tacksidor och omdirigering för Forms Block f�
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: fd2e5df72e965ea6f9ad09b37983f815954f915c
+exl-id: e6c66b22-dc52-49e3-a920-059adb5be22f
+source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
 workflow-type: tm+mt
 source-wordcount: '608'
 ht-degree: 0%
 
 ---
-
 
 # Visa tacksidan eller omdirigeringsformuläret efter att du skickat in det
 
@@ -63,9 +63,9 @@ Som standard dirigerar Adaptive Forms-blocket om användarna till&quot;thankyou&
 
    >[!NOTE]
    >
-   > Kontrollera att det finns en sida med samma namn i projektmappen Edge Delivery Service på antingen Microsoft SharePoint eller Google Workspace. Om sidan inte finns fortsätter du med att skapa och publicera den.
+   > Kontrollera att det finns en sida med samma namn i projektmappen Edge Delivery Services på Microsoft SharePoint eller Google Workspace. Om sidan inte finns fortsätter du med att skapa och publicera den.
 
-1. Fortsätt med att checka in den uppdaterade &#39;form.js&#39;-mappen och dess underliggande filer i Edge Delivery Service-projektet på GitHub. Denna uppdatering säkerställer att formuläret nu dirigeras om till den uppdaterade sidan enligt specifikationen.
+1. Fortsätt med att checka in den uppdaterade &#39;form.js&#39;-mappen och dess underliggande filer i ditt Edge Delivery Services-projekt på GitHub. Denna uppdatering säkerställer att formuläret nu dirigeras om till den uppdaterade sidan enligt specifikationen.
 
 1. Kontrollera att sidan finns i EDS-projektmappen och publicera den.
 

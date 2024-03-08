@@ -2,10 +2,10 @@
 title: Uppdatera dina innehållsfragment för optimerad GraphQL-filtrering
 description: Lär dig hur du uppdaterar innehållsfragment för optimerad GraphQL-filtrering i Adobe Experience Manager as a Cloud Service för leverans av headless-innehåll.
 exl-id: 211f079e-d129-4905-a56a-4fddc11551cc
-source-git-commit: 97a6a7865f696f4d61a1fb4e25619caac7b68b51
+source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 2%
+source-wordcount: '886'
+ht-degree: 0%
 
 ---
 
@@ -52,18 +52,18 @@ Det finns krav för den här uppgiften:
    <tr>
       <td>1</td>
       <td>"CF_MIGRATION_ENABLED" </td>
-      <td>`1` </td>
-      <td>`0` </td>
+      <td>"1" </td>
+      <td>"0" </td>
       <td>Alla </td>
       <td> </td>
       <td>Variabel </td>
-      <td>Enables(!=0) eller inaktiverar(0) som utlöser migreringsjobb för innehållsfragment. </td>
+      <td>Aktiverar (!=0) eller inaktiverar (0) utlösning av migreringsjobb för innehållsfragment. </td>
      </tr>
      <tr>
       <td>2</td>
       <td>`CF_MIGRATION_ENFORCE` </td>
-      <td>`1` </td>
-      <td>`0` </td>
+      <td>"1" </td>
+      <td>"0" </td>
       <td>Alla </td>
       <td> </td>
       <td>Variabel </td>
@@ -72,8 +72,8 @@ Det finns krav för den här uppgiften:
      <tr>
       <td>3</td>
       <td>"CF_MIGRATION_BATCH" </td>
-      <td>`50` </td>
-      <td>`50` </td>
+      <td>"50" </td>
+      <td>"50" </td>
       <td>Alla </td>
       <td> </td>
       <td>Variabel </td>
@@ -82,8 +82,8 @@ Det finns krav för den här uppgiften:
      <tr>
       <td>4</td>
       <td>"CF_MIGRATION_LIMIT" </td>
-      <td>`1000` </td>
-      <td>`1000` </td>
+      <td>"1000" </td>
+      <td>"1000" </td>
       <td>Alla </td>
       <td> </td>
       <td>Variabel </td>
@@ -92,8 +92,8 @@ Det finns krav för den här uppgiften:
      <tr>
       <td>5</td>
       <td>"CF_MIGRATION_INTERVAL" </td>
-      <td>`60` </td>
-      <td>`600` </td>
+      <td>"60" </td>
+      <td>"600" </td>
       <td>Alla </td>
       <td> </td>
       <td>Variabel </td>
@@ -206,12 +206,12 @@ Det finns krav för den här uppgiften:
      <tr>
       <td></td>
       <td>"CF_MIGRATION_ENABLED" </td>
-      <td>`0` </td>
-      <td>`0` </td>
+      <td>"0" </td>
+      <td>"0" </td>
       <td>Alla </td>
       <td> </td>
       <td>Variabel </td>
-      <td>Inaktiverar(0) (eller Enables(!)=0)) utlöser migreringsjobb för innehållsfragment. </td>
+      <td>Inaktiverar (0) (eller Aktiverar (!)=0)) utlöser migreringsjobb för innehållsfragment. </td>
      </tr>
     </tbody>
    </table>

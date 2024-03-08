@@ -2,7 +2,7 @@
 title: Registrering, inloggning och användarprofil
 description: Läs mer om registrering, inloggning, användardata och gruppsynkronisering för AEM as a Cloud Service
 exl-id: a991e710-a974-419f-8709-ad86c333dbf8
-source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
+source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Du kan skriva en egen registreringskod som innehåller användarens användarnam
 
 1. Visa en anpassad AEM som samlar in registreringsinformation
 1. Vid inlämningen används en korrekt etablerad tjänstanvändare för
-   1. Verifiera att en befintlig användare inte redan finns, med en av API:erna för UserManager `findAuthorizables()` metoder
+   1. Verifiera att en befintlig användare inte redan finns, med en av API:erna för UserManager `findAuthorizables ()` metoder
    1. Skapa en användarpost med någon av API:erna för UserManager `createUser()` metoder
    1. Bevara alla profildata som samlats in med det redigerbara gränssnittets `setProperty()` metoder
 1. Valfria flöden, som att kräva att användaren validerar sin e-post.

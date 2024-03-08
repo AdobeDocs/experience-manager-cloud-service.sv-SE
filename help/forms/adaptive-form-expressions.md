@@ -1,7 +1,7 @@
 ---
 title: Vad är adaptiva formuläruttryck?
 description: Använd adaptiva Forms-uttryck för att lägga till automatisk validering, beräkning och aktivera eller inaktivera synlighet för ett avsnitt.
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
 workflow-type: tm+mt
 source-wordcount: '2683'
 ht-degree: 0%
@@ -215,7 +215,7 @@ GuideBridge är en samling API:er som kan användas för att interagera med Adap
 
 * Om du vill återställa formulärfält kan du aktivera `guideBridge.reset()` API på klickuttrycket för en knapp. Det finns också ett API för att skicka som kan anropas som ett klickuttryck `guideBridge.submit()`**.**
 
-* Du kan använda `setFocus()` API för att ange fokus i olika fält eller paneler (för panelfokus ställs det första fältet automatiskt in). `setFocus()`innehåller ett stort antal alternativ för navigering, t.ex. navigering över paneler, föregående/nästa genomgång, inställning av fokus till ett visst fält och många andra alternativ. Om du till exempel vill gå till nästa panel kan du använda: `guideBridge.setFocus(this.panel.somExpression, 'nextItem').`
+* Du kan använda `setFocus ()` API för att ange fokus i olika fält eller paneler (för panelfokus ställs det första fältet automatiskt in). `setFocus ()`innehåller ett stort antal alternativ för navigering, t.ex. navigering över paneler, föregående/nästa genomgång, inställning av fokus till ett visst fält och många andra alternativ. Om du till exempel vill gå till nästa panel kan du använda: `guideBridge.setFocus (this.panel.somExpression, 'nextItem').`
 
 * Validera ett adaptivt formulär eller dess specifika paneler med `guideBridge.validate(errorList, somExpression).`
 

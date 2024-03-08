@@ -1,16 +1,16 @@
 ---
-title: Anpassa tema och stil för ett AEM Forms Edge Delivery Service-formulär
-description: Anpassa tema och stil för ett AEM Forms Edge Delivery Service-formulär
+title: Anpassa tema och stil för ett AEM Forms Edge Delivery ServicesFormulär
+description: Anpassa tema och stil för ett AEM Forms Edge Delivery ServicesFormulär
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: e8fbe3efae7368c940cc2ed99cc9a352bbafbc22
+exl-id: c214711c-979b-4833-9541-8e35b2aa8e09
+source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1767'
 ht-degree: 0%
 
 ---
-
 
 # Formatera formulärfält
 
@@ -90,7 +90,7 @@ Alla formulärfält, utom listrutor, alternativgrupper och kryssrutegrupper, har
 **Exempel på HTML struktur**
 
 ```HTML
-<div class="form-text-wrapper form-first-name field-wrapper" data-required="true">
+<div class="text-wrapper field-first-name field-wrapper" data-required="true">
   <label for="firstName" class="field-label">First Name</label>
   <input type="text" placeholder="Enter your first name" maxlength="50" id="firstName" name="firstName" aria-describedby="firstName-description">
   <div class="field-description" aria-live="polite" id="firstName-description">
@@ -102,24 +102,33 @@ Alla formulärfält, utom listrutor, alternativgrupper och kryssrutegrupper, har
 **CSS-väljare för allmänna komponenter**
 
 ```CSS
-.form-{Type}-wrapper input {
+/* Target all input fields within any .{Type}-wrapper  */
+.{Type}-wrapper  {
   /* Add your styles here */
   border: 1px solid #ccc;
   padding: 8px;
   border-radius: 4px;
 }
 
-
-.form-{Name} input {
+/* Target all input fields within any .{Type}-wrapper  */
+.{Type}-wrapper input {
   /* Add your styles here */
   border: 1px solid #ccc;
   padding: 8px;
   border-radius: 4px;
+}
+
+/* Target any element with the class field-{Name}  */
+.field-{Name} {
+  /* Add your styles here */
+  /* This could be used for styles specific to all elements with field-{Name} class, not just inputs */
 }
 ```
 
-* `.form-{Type}-wrapper`: Målar det yttre `div` -element baserat på fälttypen. Till exempel: `.form-text-wrapper` anger alla textinmatningsfält som mål.
-* `.form-{Name}`: Markerar elementet ytterligare baserat på det specifika fältnamnet. Till exempel: `.form-first-name` anger textfältet&quot;Förnamn&quot; som mål.
+* `.{Type}-wrapper`: Målar det yttre `div` -element baserat på fälttypen. Till exempel: `.text-wrapper` anger alla textfält som mål.
+* `.field-{Name}`: Markerar elementet ytterligare baserat på det specifika fältnamnet. Till exempel: `.field-first-name` anger textfältet&quot;Förnamn&quot; som mål. Den här väljaren kan användas för att rikta element med fältet-{Name} klass, det är viktigt att vara försiktig. I det här specifika fallet skulle det inte vara särskilt användbart för formatinmatningsfält eftersom det skulle vara avsett inte bara för själva inmatningen utan även för etikett- och beskrivningselementen. Vi rekommenderar i allmänhet att du använder mer specifika väljare, som de du har för textinmatningsfält (.text-wrapper input).
+
+
 
 **Exempel på CSS-väljare för allmänna komponenter**
 
@@ -150,34 +159,36 @@ I listrutor visas `select` -element används i stället för ett `input` element
 #### HTML struktur
 
 ```HTML
-<div class="form-drop-down-wrapper form-{Name} field-wrapper" data-required={required}>
-  <label for="{FieldId}" class="field-label">First Name</label>
-  <select id="{FieldId}" name="{Name}"><option></option><option></option></select>
-  <div class="field-description" aria-live="polite" id="{FieldId}-description">
+<div class="{Type}-wrapper field-{Name} field-wrapper" data-required={required}>
+   <label for="{FieldId}" class="field-label">First Name</label>
+   <select id="{FieldId}" name="{Name}"><option></option><option></option></select>
+   <div class="field-description" aria-live="polite" id="{FieldId}-description">
     Hint - First name should be minimum 3 characters and a maximum of 10 characters.
-  </div>
+   </div>
 </div>
 ```
 
 **Exempel på HTML-struktur**
 
 ```HTML
-    <div class="form-drop-down-wrapper form-country field-wrapper" data-required="true">
-      <label for="country" class="field-label">Country</label>
-      <select id="country" name="country">
-         <option value="">Select Country</option>
-         <option value="US">United States</option>
-         <option value="CA">Canada</option>
-    </select>
-   <div class="field-description" aria-live="polite" id="country-description">Please select your country of residence.</div>
-   </div>
+<div class="drop-down-wrapper field-country field-wrapper" data-required="true">
+  <label for="country" class="field-label">Country</label>
+  <select id="country" name="country">
+    <option value="">Select Country</option>
+    <option value="US">United States</option>
+    <option value="CA">Canada</option>
+  </select>
+  <div class="field-description" aria-live="polite" id="country-description">
+    Please select your country of residence.
+  </div>
+</div>
 ```
 
 #### Exempel på CSS-väljare för nedrullningskomponent
 
 ```CSS
 /* Target the outer wrapper */
-.form-drop-down-wrapper {
+.drop-down-wrapper {
   /* Add your styles here */
   display: flex;
   flex-direction: column;
@@ -185,13 +196,13 @@ I listrutor visas `select` -element används i stället för ett `input` element
 }
 
 /* Style the label */
-.form-drop-down-wrapper .field-label {
+.drop-down-wrapper .field-label {
   margin-bottom: 5px;
   font-weight: bold;
 }
 
 /* Style the dropdown itself */
-.form-drop-down-wrapper select {
+.drop-down-wrapper select {
   border: 1px solid #ccc;
   padding: 8px;
   border-radius: 4px;
@@ -203,11 +214,11 @@ I listrutor visas `select` -element används i stället för ett `input` element
 }
 
 /* Optional: Style the dropdown arrow */
-.form-drop-down-wrapper select::-ms-expand {
+.drop-down-wrapper select::-ms-expand {
   display: none; /* Hide the default arrow for IE11 */
 }
 
-.form-drop-down-wrapper select::after {
+.drop-down-wrapper select::after {
   content: "\25BC";
   font-size: 12px;
   color: #ccc;
@@ -219,7 +230,7 @@ I listrutor visas `select` -element används i stället för ett `input` element
 }
 ```
 
-* Ange som mål för wrapper: Den första väljaren (`.form-drop-down-wrapper`) anger det yttre wrapper-elementet som mål, vilket säkerställer att formaten tillämpas på hela den nedrullningsbara komponenten.
+* Ange som mål för wrapper: Den första väljaren (`.drop-down-wrapper`) anger det yttre wrapper-elementet som mål, vilket säkerställer att formaten tillämpas på hela den nedrullningsbara komponenten.
 * Flexbox Layout: Flexbox ordnar etiketten, listrutan och beskrivningen lodrätt för en ren layout.
 * Etikettformatering: Etiketten sticker ut med en större teckensnittsvikt och en liten marginal.
 * Formatering i listruta: Det markerade elementet får en kantlinje, utfyllnad och rundade hörn för en elegant look.
@@ -271,25 +282,25 @@ Precis som för komponenter i listrutor har alternativknappar och kryssrutegrupp
 
 
   ```CSS
-     /* Targets all radio group wrappers */
-  .form-radio-group-wrapper {
-    margin-bottom: 20px; /* Adds space between radio groups */
-  }
+     /* Targets radio group wrappers */
+       .radio-group-wrapper {
+       margin-bottom: 20px; /* Adds space between radio groups */  
+     }
   
-  /* Targets all checkbox group wrappers */
-  .form-checkbox-group-wrapper {
-    margin-bottom: 20px; /* Adds space between checkbox groups */
-  }
+     /* Targets checkbox group wrappers */
+     .checkbox-group-wrapper {
+     margin-bottom: 20px; /* Adds space between checkbox groups */
+     }
   ```
 
 
 * Målgruppsetiketter: Den här väljaren har som mål `.field-label` -element i gruppomslutningar för både alternativknappar och kryssrutor. På så sätt kan du formatera etiketterna specifikt för dessa grupper, vilket kan få dem att sticka ut mer.
 
   ```CSS
-  .form-radio-group-wrapper .field-label,
-  .form-checkbox-group-wrapper .field-label {
-   font-weight: bold; /* Makes the group label bold */
-  }
+   .radio-group-wrapper legend,
+   .checkbox-group-wrapper legend {
+     font-weight: bold; /* Makes the group label bold */
+   }
   ```
 
 
@@ -298,24 +309,24 @@ Precis som för komponenter i listrutor har alternativknappar och kryssrutegrupp
 
   ```CSS
   /* Styling radio buttons */
-  .form-radio-group-wrapper input[type="radio"] {
-    margin-right: 5px; /* Adds space between the input and its   label */
-  } 
+   .radio-group-wrapper input[type="radio"] {
+     margin-right: 5px; /* Adds space between the input and its label */
+   }
   
-  /* Styling radio button labels */
-  .form-radio-group-wrapper label {
-    font-size: 15px; /* Changes the label font size */
-  }
+   /* Styling radio button labels */
+   .radio-group-wrapper label {
+     font-size: 15px; /* Changes the label font size */
+   }
   
   /* Styling checkboxes */
-  .form-checkbox-group-wrapper input[type="checkbox"] {
-    margin-right: 5px;  /* Adds space between the input and its  label */ 
-  }
+   .checkbox-group-wrapper input[type="checkbox"] {
+     margin-right: 5px; /* Adds space between the input and its label */
+   }
   
-  /* Styling checkbox labels */
-  .form-checkbox-group-wrapper label {
-    font-size: 15px; /* Changes the label font size */
-  }
+   /* Styling checkbox labels */
+   .checkbox-group-wrapper label {
+     font-size: 15px; /* Changes the label font size */
+   }
   ```
 
 
@@ -325,30 +336,352 @@ Precis som för komponenter i listrutor har alternativknappar och kryssrutegrupp
 
   ```CSS
   /* Hide the default radio button or checkbox */
-  .form-radio-group-wrapper input[type="radio"],
-  .form-checkbox-group-wrapper input[type="checkbox"] {
-    opacity: 0; 
-    position: absolute; 
-  }
+     .radio-group-wrapper input[type="radio"],
+     .checkbox-group-wrapper input[type="checkbox"] {
+       opacity: 0;
+       position: absolute;
+     }
   
-  /* Create a custom radio button */
-  .form-radio-group-wrapper input[type="radio"] + label::before { 
-    content: "";
-    display: inline-block;
-    width: 16px; 
-    height: 16px; 
-    border: 2px solid #ccc; 
-    border-radius: 50%;
-    margin-right: 5px;
-  }
+     /* Create a custom radio button */
+     .radio-group-wrapper input[type="radio"] + label::before {
+       /* ... styles for custom radio button ... */
+     }
   
-  .form-radio-group-wrapper input[type="radio"]:checked +  label::before {
-    background-color: #007bff; 
-  }
+     .radio-group-wrapper input[type="radio"]:checked + label::before {
+       /* ... styles for checked radio button ... */
+     }
   
-  /* Create a custom checkbox */
-  /* Similar styling as above, with adjustments for a square shape  */
+     /* Create a custom checkbox */
+     /* Similar styling as above, with adjustments for a square shape  */
+     .checkbox-group-wrapper input[type="checkbox"] + label::before {
+       /* ... styles for custom checkbox ... */
+     }
+  
+     .checkbox-group-wrapper input[type="checkbox"]:checked + label::before {
+       /* ... styles for checked checkbox ... */
+     }
   ```
+
+### Panel-/behållarkomponenter
+
+#### HTML struktur
+
+```HTML
+<fieldset class="panel-wrapper field-{PanelName} field-wrapper">
+  <legend for="{id}" class="field-label" data-visible="false">bannerComponent</legend>
+  <div class="{Type}-wrapper field-{Name} field-wrapper">
+    <label for="{FieldId}" class="field-label">First Name</label>
+    <input type="{Type}" placeholder="{Placeholder}" maxlength="{Max}" id={FieldId}" name="{Name}">
+    <div class="field-description" aria-live="polite" id="{FieldId}-description">
+      Hint - First name should be minimum 3 characters and a maximum of 10 characters.
+    </div>
+  </div>
+</fieldset>
+```
+
+**Exempel på HTML-struktur**
+
+```HTML
+<fieldset class="panel-wrapper field-login field-wrapper">
+  <legend for="login" class="field-label" data-visible="false">Login Information</legend>
+  <div class="text-wrapper field-username field-wrapper">
+    <label for="username" class="field-label">Username</label>
+    <input type="text" placeholder="Enter your username" maxlength="50" id="username" name="username">
+    <div class="field-description" aria-live="polite" id="username-description">
+      Please enter your username or email address.
+    </div>
+  </div>
+  <div class="password-wrapper field-password field-wrapper">
+    <label for="password" class="field-label">Password</label>
+    <input type="password" placeholder="Enter your password" maxlength="20" id="password" name="password">
+    <div class="field-description" aria-live="polite" id="password-description">
+      Your password must be at least 8 characters long.
+    </div>
+  </div>
+</fieldset>
+```
+
+* Fältuppsättningselementet fungerar som panelbehållare med klassens panelwrapper och ytterligare klasser för formatering baserat på panelnamnet (fältinloggning).
+* Förklaringselementet (<legend>) fungerar som panelrubrik med texten&quot;Inloggningsinformation&quot; och klassens fältetikett. Attributet data-visible=&quot;false&quot; kan användas med JavaScript för att styra visningen av titeln.
+* I fältuppsättningen, multipel .{Type}-wrapper-element (.text-wrapper och .password-wrapper i det här fallet) representerar enskilda formulärfält på panelen.
+* Varje wrapper innehåller en etikett, ett inmatningsfält och en beskrivning, som liknar de föregående exemplen.
+
+#### CSS-väljare och exempel
+
+1. Panelen:
+
+```CSS
+  /* Target the entire panel container */
+  .panel-wrapper {
+    /* Add your styles here (e.g., border, padding, background color) */
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+ }
+```
+
+* The `.panel-wrapper` väljaren formaterar alla element med klassens panelwrapper, vilket ger ett konsekvent utseende för alla paneler.
+
+1. Ange paneltiteln som mål:
+
+```CSS
+  /* Target the legend element (panel title) */
+  .panel-wrapper legend {
+    /* Add your styles here (e.g., font-weight, font-size) */
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd; /* Optional: create a separation line */
+  }
+```
+
+* The `.panel-wrapper legend` -väljaren formaterar förklaringselementet på panelen så att titeln sticker ut visuellt.
+
+
+1. Ange enskilda fält som mål på panelen:
+
+```CSS
+/* Target all form field wrappers within a panel */
+.panel-wrapper .{Type}-wrapper {
+  /* Add your styles here (e.g., margin) */
+  margin-bottom: 10px;
+}
+```
+
+* The `.panel-wrapper .{Type}-wrapper` -väljaren är avsedd för alla omslag med `.{Type}-wrapper` -klassen på panelen, så att du kan formatera mellanrummet mellan formulärfält.
+
+1. Målspecifika fält (valfritt):
+
+```CSS
+  /* Target the username field wrapper */
+  .panel-wrapper .text-wrapper.field-username {
+    /* Add your styles here (specific to username field) */
+  }
+
+  /* Target the password field wrapper */
+  .panel-wrapper .password-wrapper.field-password {
+    /* Add your styles here (specific to password field) */
+  }
+```
+
+* Dessa väljare gör att du kan rikta in dig på specifika fältbrytningar på panelen för unik formatering, t.ex. markera användarnamnsfältet.
+
+### Repeterbar panel
+
+#### HTML struktur
+
+```HTML
+<fieldset class="panel-wrapper field-{PanelName} field-wrapper">
+  <legend for="{id}" class="field-label" data-visible="false">bannerComponent</legend>
+  <div class="{Type}-wrapper field-{Name} field-wrapper">
+    <label for="{FieldId}" class="field-label">First Name</label>
+    <input type="{Type}" placeholder="{Placeholder}" maxlength="{Max}" id={FieldId}" name="{Name}">
+    <div class="field-description" aria-live="polite" id="{FieldId}-description">
+      Hint - First name should be minimum 3 characters and a maximum of 10 characters.
+    </div>
+</fieldset>
+```
+
+**Exempel på HTML-struktur**
+
+```HTML
+<fieldset class="panel-wrapper field-contact field-wrapper" data-repeatable="true">
+  <legend for="contact-1" class="field-label" data-visible="false">Contact Information</legend>
+  <div class="text-wrapper field-name field-wrapper">
+    <label for="name-1" class="field-label">Name</label>
+    <input type="text" placeholder="Enter your name" maxlength="50" id="name-1" name="contacts[0].name">
+    <div class="field-description" aria-live="polite" id="name-1-description">
+      Please enter your full name.
+    </div>
+  </div>
+  <div class="email-wrapper field-email field-wrapper">
+    <label for="email-1" class="field-label">Email</label>
+    <input type="email" placeholder="Enter your email address" maxlength="100" id="email-1" name="contacts[0].email">
+    <div class="field-description" aria-live="polite" id="email-1-description">
+      Please enter a valid email address.
+    </div>
+  </div>
+</fieldset>
+
+<fieldset class="panel-wrapper field-contact field-wrapper" data-repeatable="true">
+  <legend for="contact-2" class="field-label" data-visible="false">Contact Information</legend>
+  <div class="text-wrapper field-name field-wrapper">
+    <label for="name-2" class="field-label">Name</label>
+    <input type="text" placeholder="Enter your name" maxlength="50" id="name-2" name="contacts[1].name">
+    <div class="field-description" aria-live="polite" id="name-2-description">
+      Please enter your full name.
+    </div>
+  </div>
+  <div class="email-wrapper field-email field-wrapper">
+    <label for="email-2" class="field-label">Email</label>
+    <input type="email" placeholder="Enter your email address" maxlength="100" id="email-2" name="contacts[1].email">
+    <div class="field-description" aria-live="polite" id="email-2-description">
+      Please enter a valid email address.
+    </div>
+  </div>
+</fieldset>
+```
+
+Varje panel har samma struktur som exemplet med en panel, med ytterligare attribut:
+
+* data-repetable=&quot;true&quot;: Det här attributet anger att panelen kan upprepas dynamiskt med JavaScript eller ett ramverk.
+
+* Unika ID:n och namn: Varje element i panelen har ett unikt ID (t.ex. name-1, email-1) och name-attribut baserat på panelens indexvärde (t.ex. name=&quot;contact[0].name&quot;). Detta gör att data kan samlas in korrekt när flera paneler skickas.
+
+
+
+#### CSS-väljare och exempel
+
+* Alla upprepningsbara paneler som mål:
+
+```CSS
+  /* Target all panels with the repeatable attribute */
+  .panel-wrapper[data-repeatable="true"] {
+    /* Add your styles here (e.g., border, margin) */
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+```
+
+Väljaren formaterar alla paneler som kan upprepas, vilket ger ett konsekvent utseende och känsla.
+
+
+* Ange enskilda fält som mål på en panel:
+
+```CSS
+/* Target all form field wrappers within a repeatable panel */
+.panel-wrapper[data-repeatable="true"] .{Type}-wrapper {
+  /* Add your styles here (e.g., margin) */
+  margin-bottom: 10px;
+}
+```
+Den här väljaren formaterar alla fältomslutningar på en repeterbar panel, vilket ger ett konsekvent avstånd mellan fälten.
+
+* Ange specifika fält som mål (inom en panel):
+
+```CSS
+/* Target the name field wrapper within the first panel */
+.panel-wrapper[data-repeatable="true"][data-index="0"] .text-wrapper.field-name {
+  /* Add your styles here (specific to first name field) */
+}
+
+/* Target all
+```
+
+### Bifogad fil
+
+
+```HTML
+<div class="file-wrapper field-{FileName} field-wrapper">
+  <legend for="{id}" class="field-label" data-visible="false"> File Attachment </legend>
+  <div class="file-drag-area">
+    <div class="file-dragIcon"></div>
+    <div class="file-dragText">Drag and Drop To Upload</div>
+    <button class="file-attachButton" type="button">Attach</button>
+    <input type="file" accept="audio/*, video/*, image/*, text/*, application/pdf" id="{id}" name="{FileName}" autocomplete="off" multiple="" required="required">
+  </div>
+  <div class="files-list">
+    <div data-index="0" class="file-description">
+      <span class="file-description-name">ClaimForm.pdf</span>
+      <span class="file-description-size">26 kb</span>
+      <button class="file-description-remove" type="button"></button>
+    </div>
+  </div>
+</div>
+```
+
+**Exempel på HTML-struktur**
+
+
+```HTML
+<div class="file-wrapper field-claim_form field-wrapper">
+  <legend for="claim_form" class="field-label" data-visible="false">File Attachment</legend>
+  <div class="file-drag-area">
+    <div class="file-dragIcon"></div>
+    <div class="file-dragText">Drag and Drop To Upload</div>
+    <button class="file-attachButton" type="button">Attach</button>
+  </div>
+  <input type="file" accept="audio/*, video/*, image/*, text/*, application/pdf" id="claim_form"
+         name="claim_form" autocomplete="off" multiple="" required="required" data-max-file-size="2MB">
+  <div class="files-list">
+    </div>
+</div>
+```
+
+* Klassattributet använder det angivna namnet för den bifogade filen (claim_form).
+* Attributen id och name för indataelementet matchar namnet på den bifogade filen (claim_form).
+* Avsnittet med fillistan är inledningsvis tomt. Den fylls i dynamiskt med JavaScript när filer överförs.
+
+
+**CSS-väljare och exempel:**
+
+* Målkomponenten för hela den bifogade filen:
+
+```CSS
+/* Target the entire file attachment component */
+.file-wrapper {
+  /* Add your styles here (e.g., border, padding) */
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+```
+
+Den här väljaren formaterar hela den bifogade filkomponenten, inklusive teckenförklaringen, dragningsområdet, inmatningsfältet och listan.
+
+* Målinriktade specifika element:
+
+```CSS
+/* Target the drag and drop area */
+.file-wrapper .file-drag-area {
+  /* Add your styles here (e.g., background color, border) */
+  background-color: #f0f0f0;
+  border: 1px dashed #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Target the file input element */
+.file-wrapper input[type="file"] {
+  /* Add your styles here (e.g., hide the default input) */
+  display: none;
+}
+
+/* Target individual file descriptions within the list (populated dynamically) */
+.file-wrapper .files-list .file-description {
+  /* Add your styles here (e.g., margin, display) */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+/* Target the file name within the description */
+.file-wrapper .files-list .file-description .file-description-name {
+  /* Add your styles here (e.g., font-weight) */
+  font-weight: bold;
+}
+
+/* Target the file size within the description */
+.file-wrapper .files-list .file-description .file-description-size {
+  /* Add your styles here (e.g., font-size) */
+  font-size: 0.8em;
+}
+
+/* Target the remove button within the description */
+.file-wrapper .files-list .file-description .file-description-remove {
+  /* Add your styles here (e.g., background color, hover effect) */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+```
+
+Dessa väljare gör att du kan formatera olika delar av den bifogade filkomponenten individuellt. Du kan justera formaten så att de matchar dina designinställningar.
 
 
 ## Formatkomponenter
@@ -362,25 +695,25 @@ Du kan använda CSS-väljare för att ange specifika fälttyper och använda for
 **Exempel på HTML-struktur**
 
 ```HTML
-<div class="form-text-wrapper form-name field-wrapper" data-required="true">
+<div class="text-wrapper field-name field-wrapper" data-required="true">
   <label for="name" class="field-label">Name</label>
   <input type="text" placeholder="Enter your name" maxlength="50" id="name" name="name">
 </div>
 
-<div class="form-number-wrapper form-age field-wrapper" data-required="true">
+<div class="number-wrapper field-age field-wrapper" data-required="true">
   <label for="age" class="field-label">Age</label>
   <input type="number" placeholder="Enter your age" id="age" name="age">
 </div>
 
-<div class="form-email-wrapper form-email field-wrapper" data-required="true">
+<div class="email-wrapper field-email field-wrapper" data-required="true">
   <label for="email" class="field-label">Email Address</label>
   <input type="email" placeholder="Enter your email" id="email" name="email">
 </div>
 ```
 
 * Varje fält radbryts i en `div` element med flera klasser:
-   * `form-{Type}-wrapper`: Identifierar fälttypen. Till exempel: `form-text-wrapper`, `form-number-wrapper`, `form-email-wrapper`.
-   * `form-{Name}`: Identifierar fältet med dess namn. Till exempel `form-name`, `form-age`, `form-email`.
+   * `{Type}-wrapper`: Identifierar fälttypen. Till exempel: `form-text-wrapper`, `form-number-wrapper`, `form-email-wrapper`.
+   * `field-{Name}`: Identifierar fältet med dess namn. Till exempel `form-name`, `form-age`, `form-email`.
    * `field-wrapper`: En generisk klass för alla fältbrytare.
 * The `data-required` anger om fältet är obligatoriskt eller valfritt.
 * Varje fält har en motsvarande etikett, indataelement och eventuella ytterligare element som platshållare och beskrivningar.
@@ -389,12 +722,12 @@ Du kan använda CSS-väljare för att ange specifika fälttyper och använda for
 
 ```CSS
 /* Target all text input fields */
-.form-text-wrapper input {
+.text-wrapper input {
   /* Add your styles here */
 }
 
 /* Target all number input fields */
-.form-number-wrapper input {
+.number-wrapper input {
   /* Add your styles here */
   letter-spacing: 2px; /* Example for adding letter spacing to all number fields */
 }
@@ -407,7 +740,7 @@ Du kan också ange enskilda fält som mål efter namn för att använda unika fo
 **Exempel på HTML-struktur**
 
 ```HTML
-<div class="form-number-wrapper form-otp field-wrapper" data-required="true">
+<div class="number-wrapper field-otp field-wrapper" data-required="true">
   <label for="otp" class="field-label">OTP</label>
   <input type="number" placeholder="Enter your OTP" maxlength="6" id="otp" name="otp">
 </div>
@@ -416,11 +749,10 @@ Du kan också ange enskilda fält som mål efter namn för att använda unika fo
 **Exempel på CSS-väljare**
 
 ```CSS
-.form-otp input {
+.field-otp input {
    letter-spacing: 2px
 }
 ```
 
-Den här CSS-koden riktar in alla indataelement som finns i ett element som har klassen `form-otp`. Formulärets HTML-struktur följer konventionerna i det adaptiva formulärblocket, vilket innebär att det finns en behållare som är markerad med klassen &quot;form-top&quot; som innehåller fältet med namnet &quot;otp&quot;.
-
+Den här CSS-koden riktar in alla indataelement som finns i ett element som har klassen `field-otp`. Formulärets HTML-struktur följer konventionerna i det adaptiva formulärblocket, vilket innebär att det finns en behållare som är markerad med klassen&quot;field-out&quot; som innehåller fältet med namnet&quot;otp&quot;.
 

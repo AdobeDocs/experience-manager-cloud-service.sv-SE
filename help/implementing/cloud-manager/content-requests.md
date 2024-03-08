@@ -2,7 +2,7 @@
 title: Förstå begäranden om Cloud Service innehåll
 description: Om du har köpt innehållsförfrågningslicenser från Adobe kan du ta reda på vilka typer av innehållsförfrågningar som Adobe Experience Cloud som en tjänst mäter och varianterna med en organisations analysrapporteringsverktyg.
 exl-id: 3666328a-79a7-4dd7-b952-38bb60f0967d
-source-git-commit: 9033820fa0dc8eee181e3f581675f45cf11e694a
+source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
 workflow-type: tm+mt
 source-wordcount: '2688'
 ht-degree: 0%
