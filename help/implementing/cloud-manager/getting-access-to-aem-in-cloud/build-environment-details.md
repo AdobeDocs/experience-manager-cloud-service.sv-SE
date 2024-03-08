@@ -2,9 +2,9 @@
 title: Bygg miljö
 description: Lär dig mer om Cloud Managers byggmiljö och hur den bygger och testar din kod.
 exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
-source-git-commit: cb4c9711fc9c57546244b5b362027c255e5abc35
+source-git-commit: 54135244d7b33ba3682633b455a5538474d3146e
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
@@ -21,8 +21,8 @@ Cloud Manager bygger och testar koden med en specialiserad byggmiljö.
 * Byggmiljön är Linux-baserad och kommer från Ubuntu 2.04.
 * Apache Maven 3.9.4 är installerad.
    * Adobe rekommenderar användare [uppdatera sina Maven-databaser så att HTTPS används i stället för HTTP.](#https-maven)
-* Java-versionerna är Oracle JDK 8u401 och Oracle JDK 11.0.22.
-* Som standard är `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk1.8.0_401` som innehåller Oraclet JDK 8u401. Se [Alternate Maven Execution JDK Version](#alternate-maven-jdk-version) för mer information.
+* De Java-versioner som är installerade är Oracle JDK 11.0.22 och Oracle JDK 8u401.
+* **VIKTIGT**: Som standard är `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk1.8.0_401` som innehåller Oraclet JDK 8u401. *_Den här standardinställningen bör åsidosättas för AEM Cloud Projects som ska använda JDK 11_*. Se [Setting the Maven JDK Version](#alternate-maven-jdk-version) för mer information.
 * Det finns ytterligare systempaket installerade som är nödvändiga.
    * `bzip2`
    * `unzip`
@@ -51,76 +51,13 @@ För att få en smidig upplevelse med den uppdaterade versionen rekommenderar Ad
 
 ### Använda en specifik Java-version {#using-java-support}
 
-Som standard byggs projekt av Cloud Managers byggprocess med Oracle 8 JDK. Kunder som vill använda en alternativ JDK har två alternativ.
+Som standard byggs projekt av Cloud Managers byggprocess med Oracle 8 JDK, men AEM Cloud Service-kunder rekommenderas att ställa in JDK-versionen som används för att köra Maven på `11`.
 
-* [Använd Maven Toolchains.](#maven-toolchains)
-* [Välj en alternativ JDK-version för hela körningsprocessen för Maven.](#alternate-maven-jdk-version)
+#### Setting the Maven JDK Version {#alternate-maven-jdk-version}
 
-#### Maven Toolchains {#maven-toolchains}
+Vi rekommenderar att du ställer in JDK-versionen för hela Maven-körningen på `11` i en `.cloudmanager/java-version` -fil.
 
-The [Maven Toolchains Plugin](https://maven.apache.org/plugins/maven-toolchains-plugin/) gör det möjligt för projekt att välja en viss JDK (eller verktygskedja) som ska användas i samband med verktygsfältsmedvetna Maven-plugin-program. Detta görs i projektets `pom.xml` genom att ange leverantör och versionsvärde.
-
-Detta plug-in-program för verktygskedjan kan läggas till som en del av en profil enligt nedan.
-
-```xml
-<profile>
-    <id>cm-java-11</id>
-    <activation>
-        <property>
-            <name>env.CM_BUILD</name>
-        </property>
-    </activation>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-toolchains-plugin</artifactId>
-                <version>1.1</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>toolchain</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <toolchains>
-                        <jdk>
-                            <version>11</version>
-                            <vendor>oracle</vendor>
-                        </jdk>
-                    </toolchains>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-</profile>
-```
-
-Detta gör att alla verktygskedjedåliga Maven-plugin-program använder Oraclet JDK, version 11.
-
-När du använder den här metoden körs Maven fortfarande med JDK-standardinställningen (Oracle 8) och `JAVA_HOME`  miljövariabeln har inte ändrats. Kontroll eller genomförande av Java-versionen via plugin-program som Apache Maven Enforcer Plugin fungerar därför inte och sådana plugin-program får inte användas.
-
-De aktuella kombinationerna av leverantör/version är:
-
-| Leverantör | Version |
-|---|---|
-| `oracle` | `8` |
-| `oracle` | `11` |
-| `sun` | `8` |
-| `sun` | `11` |
-
-Tabellen hänvisar till produktversionsnummer. Java-build-nummer eller installationssökvägar kan återspegla gamla Java-versionskonventioner som 1.8 för Java 8.
-
->[!NOTE]
->
->Från och med april 2022 blir Oracle-JDK standard för utveckling och drift av AEM program. Molnhanterarens byggprocess växlar automatiskt till att använda Oracle-JDK, även om ett alternativ uttryckligen har valts i verktygskedjan Maven. Se versionsinformationen för april 2022.
-
-#### Alternate Maven Execution JDK Version {#alternate-maven-jdk-version}
-
-Du kan också välja Java 8 eller Java 11 som JDK för hela Maven-exekveringen. Till skillnad från alternativen för verktygskedjor ändras det JDK som används för alla plugin-program, såvida inte konfigurationen för verktygskedjor också anges. I så fall tillämpas fortfarande konfigurationen för verktygskedjor för Maven-plugin-program som är medvetna om verktygskedjor. Resultatet blir att du kontrollerar och använder Java-versionen med [Apache Maven Enforcer Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) kommer att fungera.
-
-Det gör du genom att skapa en fil med namnet `.cloudmanager/java-version` i Git-databasgrenen som används av pipeline. Den här filen kan ha antingen innehållet 11 eller 8. Alla andra värden ignoreras. Om 11 anges används Oracle 11 och `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk-11.0.22`. Om 8 anges används Oracle 8 och `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk1.8.0_401`.
+Det gör du genom att skapa en fil med namnet `.cloudmanager/java-version` i Git-databasgrenen som används av pipeline. Redigera filen så att den bara innehåller texten, `11`. Cloud Manager accepterar även värdet `8`, stöds den här versionen inte längre för AEM Cloud Service-projekt. Alla andra värden ignoreras. När `11` anges används Oracle 11 och `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk-11.0.22`.
 
 ## Miljövariabler {#environment-variables}
 
