@@ -5,9 +5,9 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: c214711c-979b-4833-9541-8e35b2aa8e09
-source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
+source-git-commit: 2b64cc8d2afb7d6064d1f60ba023448171862236
 workflow-type: tm+mt
-source-wordcount: '1767'
+source-wordcount: '1819'
 ht-degree: 0%
 
 ---
@@ -69,18 +69,18 @@ Alla formulärfält, utom listrutor, alternativgrupper och kryssrutegrupper, har
 #### HTML struktur
 
 ```HTML
-<div class="form-{Type}-wrapper form-{Name} field-wrapper" data-required={Required}>
-  <label for="{FieldId}" class="field-label">Field Label</label>
-  <input type="{Type}" placeholder="{Placeholder}" maxlength="{Max}" id="{FieldId}" name="{Name}" aria-describedby="{FieldId}-description">
-  <div class="field-description" aria-live="polite" id="{FieldId}-description">
-    Hint - Description of the field.
-  </div>
+<div class="{Type}-wrapper field-{Name} field-wrapper" data-required={Required}>
+   <label for="{FieldId}" class="field-label">First Name</label>
+   <input type="{Type}" placeholder="{Placeholder}" maxlength="{Max}" id={FieldId}" name="{Name}" aria-describedby="{FieldId}-description">
+   <div class="field-description" aria-live="polite" id="{FieldId}-description">
+    Hint - First name should be minimum 3 characters and a maximum of 10 characters.
+   </div>
 </div>
 ```
 
-* Klasser: div-elementet har flera klasser för att rikta specifika element och format. Du behöver `form-{Type}-wrapper` eller `form-{Name}` klasser för att utveckla en CSS-väljare för att formatera ett formulärfält:
-   * {Type}: Identifierar komponenten efter fälttyp. Exempel: text (form-text-wrapper), tal (form-number-wrapper), datum (form-date-wrapper).
-   * {Name}: Identifierar komponenten efter namn. Fältets namn kan bara innehålla alfanumeriska tecken. De flera på varandra följande strecken i namnet ersätts med ett enda streck `(-)`och inledande och avslutande streck i ett fältnamn tas bort. Förnamn (form-first-name field-wrapper).
+* Klasser: div-elementet har flera klasser för att rikta specifika element och format. Du behöver `{Type}-wrapper` eller `field-{Name}` klasser för att utveckla en CSS-väljare för att formatera ett formulärfält:
+   * {Type}: Identifierar komponenten efter fälttyp. Exempel: text (text-wrapper), tal (number-wrapper), datum (date-wrapper).
+   * {Name}: Identifierar komponenten efter namn. Fältets namn kan bara innehålla alfanumeriska tecken. De flera på varandra följande strecken i namnet ersätts med ett enda streck `(-)`och inledande och avslutande streck i ett fältnamn tas bort. Förnamn (field-first-name field-wrapper).
    * {FieldId}: Det är en unik identifierare för fältet, som genereras automatiskt.
    * {Required}: Det är ett booleskt värde som anger om fältet är obligatoriskt.
 * Etikett: `label` -elementet innehåller en beskrivande text för fältet och associerar det med indataelementet med `for` -attribut.
@@ -135,7 +135,7 @@ Alla formulärfält, utom listrutor, alternativgrupper och kryssrutegrupper, har
 ```CSS
 /*Target all text input fields */
 
-.form-text-wrapper input {
+text-wrapper input {
   border: 1px solid #ccc;
   padding: 8px;
   border-radius: 4px;
@@ -143,7 +143,7 @@ Alla formulärfält, utom listrutor, alternativgrupper och kryssrutegrupper, har
 
 /*Target all fields with name first-name*/
 
-.form-first-name input {
+first-name input {
   border: 1px solid #ccc;
   padding: 8px;
   border-radius: 4px;
@@ -237,43 +237,110 @@ I listrutor visas `select` -element används i stället för ett `input` element
 * Bakgrundsfärg: En konsekvent bakgrundsfärg ställs in för visuell harmoni.
 * Anpassning av pilar: Valfria format döljer den nedrullningsbara standardpilen och skapar en anpassad pil med Unicode-tecken och placering.
 
-### Grupper av alternativknappar och kryssrutor
+### Alternativgrupper
 
-Precis som för komponenter i listrutor har alternativknappar och kryssrutegrupper sin egen HTML-struktur och CSS-överväganden:
+Ungdomsgrupper har en egen HTML-struktur och CSS-struktur, ungefär som i listrutekomponenter:
 
 #### Struktur för Radio Group HTML
 
 ```HTML
-<div class="form-checkbox-group-wrapper form-{Name} field-wrapper" data-required={required}>
-  <label class="field-label">{Label Text}</label>
-  <div class="checkbox-group">
-    <input type="checkbox" id="{FieldId}-1" name="{Name}" value="{Value1}">
-    <label for="{FieldId}-1">{Option 1 Text}</label>
-    <input type="checkbox" id="{FieldId}-2" name="{Name}" value="{Value2}">
-    <label for="{FieldId}-2">{Option 2 Text}</label>
-    </div>
-  <div class="field-description" aria-live="polite" id="{FieldId}-description">
-    Hint - Select multiple options (if applicable).
-  </div>
-</div>
+<fieldset class="radio-group-wrapper field-{Name} field-wrapper" id="{FieldId}" name="{Name}" data-required="{Required}">
+   <legend for="{FieldId}" class="field-label">....</legend>
+   <% for each radio in Group %>
+   <div class="radio-wrapper field-{Name}">
+      <input type="radio" value="" id="{UniqueId}" data-field-type="radio-group" name="{FieldId}">
+      <label for="{UniqueId}" class="field-label">...</label>
+   </div>
+   <% end for %>
+</fieldset>
 ```
 
+#### Exempel på HTML-struktur
+
+```HTML
+<fieldset class="radio-group-wrapper field-color field-wrapper" id="color_preference" name="color_preference" data-required="true">
+  <legend for="color_preference" class="field-label">Favorite Color:</legend>
+  <% for each radio in Group %>
+    <div class="radio-wrapper field-color">
+      <input type="radio" value="red" id="color_red" data-field-type="radio-group" name="color_preference">
+      <label for="color_red" class="field-label">Red</label>
+    </div>
+    <div class="radio-wrapper field-color">
+      <input type="radio" value="green" id="color_green" data-field-type="radio-group" name="color_preference">
+      <label for="color_green" class="field-label">Green</label>
+    </div>
+    <div class="radio-wrapper field-color">
+      <input type="radio" value="blue" id="color_blue" data-field-type="radio-group" name="color_preference">
+      <label for="color_blue" class="field-label">Blue</label>
+    </div>
+  <% end for %>
+</fieldset>
+```
+
+#### Exempel på CSS-väljare för nedrullningskomponent
+
+* Ange fältuppsättningen
+
+```CSS
+  .radio-group-wrapper {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+```
+
+Den här väljaren anger alla fältuppsättningar med klassen Radio-Group-wrapper som mål. Det är användbart om du vill använda allmänna format på hela alternativgruppen.
+
+* Egenskaper för alternativknappar
+
+```CSS
+.radio-wrapper label {
+    font-weight: normal;
+    margin-right: 10px;
+  }
+```
+
+* Ange alla alternativknappsetiketter för ett specifikt fält baserat på dess namn
+
+```CSS
+.field-color .radio-wrapper label {
+  /* Your styles here */
+}
+```
+
+### Kryssrutegrupper
 
 #### Struktur för kryssrutegrupp HTML
 
 ```HTML
-<div class="form-checkbox-group-wrapper form-{Name} field-wrapper" data-required={required}>
-  <label class="field-label">{Label Text}</label>
-  <div class="checkbox-group">
-    <input type="checkbox" id="{FieldId}-1" name="{Name}" value="{Value1}">
-    <label for="{FieldId}-1">{Option 1 Text}</label>
-    <input type="checkbox" id="{FieldId}-2" name="{Name}" value="{Value2}">
-    <label for="{FieldId}-2">{Option 2 Text}</label>
-    </div>
-  <div class="field-description" aria-live="polite" id="{FieldId}-description">
-    Hint - Select multiple options (if applicable).
+<fieldset class="checkbox-group-wrapper field-{Name} field-wrapper" id="{FieldId}" name="{Name}" data-required="{Required}">
+   <legend for="{FieldId}" class="field-label">....</legend>
+   <% for each radio in Group %>
+   <div class="radio-wrapper field-{Name}">
+      <input type="checkbox" value="" id="{UniqueId}" data-field-type="checkbox-group" name="{FieldId}">
+      <label for="{UniqueId}" class="field-label">...</label>
+   </div>
+   <% end for %>
+</fieldset>
+```
+
+#### Exempel på HTML-struktur
+
+```HTML
+<fieldset class="checkbox-group-wrapper field-topping field-wrapper" id="topping_preference" name="topping_preference" data-required="false">
+  <legend for="topping_preference" class="field-label">Pizza Toppings:</legend>
+  <div class="checkbox-wrapper field-topping">
+    <input type="checkbox" value="pepperoni" id="topping_pepperoni" data-field-type="checkbox-group" name="topping_preference">
+    <label for="topping_pepperoni" class="field-label">Pepperoni</label>
   </div>
-</div>
+  <div class="checkbox-wrapper field-topping">
+    <input type="checkbox" value="mushrooms" id="topping_mushrooms" data-field-type="checkbox-group" name="topping_preference">
+    <label for="topping_mushrooms" class="field-label">Mushrooms</label>
+  </div>
+  <div class="checkbox-wrapper field-topping">
+    <input type="checkbox" value="onions" id="topping_onions" data-field-type="checkbox-group" name="topping_preference">
+    <label for="topping_onions" class="field-label">Onions</label>
+  </div>
+</fieldset>
 ```
 
 **Exempel på CSS-väljare för alternativknappar och kryssrutegrupper**

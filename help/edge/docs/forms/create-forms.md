@@ -5,9 +5,9 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: 0cf881a2-3784-45eb-afe8-3435e5e95cf4
-source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
+source-git-commit: 2b64cc8d2afb7d6064d1f60ba023448171862236
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '845'
 ht-degree: 0%
 
 ---
@@ -27,41 +27,46 @@ AEM Forms Edge Delivery innehåller ett block, som kallas adaptivt formulärbloc
 
 Kontrollera att du har utfört följande steg innan du börjar:
 
-* Konfigurera Edge Delivery Services (EDS) i GitHub-projekt med hjälp AEM standardmall och klona motsvarande GitHub-databas på den lokala datorn. Se [självstudiekurs för utvecklare](https://www.aem.live/developer/tutorial) för mer information. I det här dokumentet kallas den lokala mappen i ditt Edge Delivery Services-projekt (EDS) `[EDS Project repository]` .
+* Konfigurera en [AEM projekt med AEM Forms standardmall](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-equipped-with-adaptive-forms-block) eller [lägga till adaptiva formulärblock i det befintliga AEM Project](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project) och klona motsvarande GitHub-databas på din lokala dator.
+I det här dokumentet kallas den lokala mappen i ditt Edge Delivery Services-projekt (EDS) `[EDS Project repository]` .
 * Se till att du har tillgång till Google Sheets eller Microsoft SharePoint. Information om hur du konfigurerar Microsoft SharePoint som innehållskälla finns i [Så här använder du Sharepoint](https://www.aem.live/docs/setup-customer-sharepoint)
 
 
 
 ## Skapa ett formulär
 
-+++ Steg 1: Lägg till det adaptiva formulärblocket i Edge Delivery Services-projektet.
+<!-- 
 
-Adaptiv ger användarna möjlighet att skapa formulär för en Edge Delivery ServicesSite. Det här blocket ingår dock inte i AEM standardmallsida (används för att skapa ett projekt för Edge Delivery Services). Så här integrerar du det adaptiva formulärblocket i ditt Edge Delivery Services-projekt:
++++ Step 1: Add the Adaptive Form Block to your Edge Delivery Services (EDS) project.
 
-1. **Klona databasen för adaptiva formulärblock**: Klona [Databas för adaptiva formulärblock](https://github.com/adobe-rnd/form-block) på din lokala dator. Den innehåller koden som återger formuläret på en EDS-webbsida. I det här dokumentet kallas den lokala mappen i din Forms-blockdatabas för `[Adaptive Form Block repository]`.
-1. **Leta reda på databasen för adaptiva formulärblock:** Öppna [Databas för adaptiva formulärblock]/blocks/src-mapp och kopiera dess innehåll.
+The Adaptive  empowers users to create forms for an Edge Delivery ServicesSite. However, this block isn't included in the default AEM boilerplate (used to create an Edge Delivery Services project). To seamlessly integrate the Adaptive Form Block into your Edge Delivery Services project:
 
-1. på din lokala dator och kopiera `form` mapp.
-1. **Klistra in koden för det adaptiva formulärblocket i ditt EDS-projekt:**
-Navigera till [EDS-projektdatabas]/blocks/ mapp på den lokala datorn och skapa en &#39;form&#39;-mapp. Klistra in `[Adaptive Form Block repository]/blocks/src content`, kopierat i föregående steg till `[EDS Project repository]/blocks/form` mapp.
-1. **Verkställ ändringar i GitHub:** Checka in `[EDS Project repository]/blocks/form` -mappen och dess underliggande filer till ditt Edge Delivery Services-projekt på GitHub.
+1. **Clone the Adaptive Form Block repository**: Clone the [Adaptive Form Block repository](https://github.com/adobe-rnd/form-block) on your local machine. It contains the code to render the form on an EDS webpage. In this document, the local folder of your Forms Block repository is referred as `[Adaptive Form Block repository]`.
+1. **Locate the Adaptive Form Block Repository:** Access the [Adaptive Form Block repository]/blocks/src folder and copy its content. 
 
-När du har utfört de här stegen läggs det adaptiva formulärblocket till i projektdatabasen för Edge Delivery Services (EDS) på GitHub. Nu kan du skapa och lägga till formulär på en EDS-sida.
+1. on your local machine and copy the `form` folder. 
+1. **Paste the Adaptive Form Block's code into your EDS Project:**
+Navigate to the [EDS Project repository]/blocks/ folder on your local machine and create a 'form' folder. Paste the `[Adaptive Form Block repository]/blocks/src content`, copied in perevious step to the `[EDS Project repository]/blocks/form` folder.
+1. **Commit Changes to GitHub:** Check in the `[EDS Project repository]/blocks/form` folder and its underlying files to your Edge Delivery Services project on GitHub.
 
+After completing these steps, the Adaptive Form Block is successfully added to your Edge Delivery Services (EDS) project repository on GitHub. You can now create and add forms to a EDS Sites page.
+ 
 
-**Felsökning av byggproblem med GitHub**
+**Troubleshooting GitHub build issues**
 
-Se till att GitHub-byggprocessen blir smidig genom att åtgärda potentiella problem:
+Ensure a smooth GitHub build process by addressing potential issues:
 
-* **Lösning av modulsökvägsfel:**
-Om du får felmeddelandet&quot;Det går inte att matcha sökvägen till modulen &quot;&#39;../../scripts/lib-franklin.js&#39;&quot; går du till [EDS-projekt]/blocks/forms/form.js fil. Uppdatera importsatsen genom att ersätta filen lib-franklin.js med filen aem.js.
+* **Resolve Module Path Error:**
+    If you encounter the error "Unable to resolve path to module "'../../scripts/lib-franklin.js'", navigate to the [EDS Project]/blocks/forms/form.js file. Update the import statement by replacing the lib-franklin.js file with the aem.js file.
 
-* **Hantera lintingfel:**
-Om du skulle stöta på ett lintingfel kan du kringgå dem. Öppna [EDS-projekt]/package.json och ändra &quot;lint&quot;-skriptet från &quot;lint&quot;: &quot;npm run lint:js &amp;&amp; npm run lint:css&quot; till &quot;lint&quot;: &quot;echo &#39;skipping linting for now&#39;&quot;. Spara filen och implementera ändringarna i GitHub-projektet.
+* **Handle Linting Errors:**
+    Should you come across any linting errors, you can bypass them. Open the [EDS Project]/package.json file and modify the "lint" script from "lint": "npm run lint:js && npm run lint:css" to "lint": "echo 'skipping linting for now'". Save the file and commit the changes to your GitHub project.
 
 +++
 
-+++ Steg 2: Skapa ett formulär med Microsoft Excel eller Google Sheet.
+-->
+
++++ Steg 1: Skapa ett formulär med Microsoft Excel eller Google Sheet.
 
 Istället för att navigera i komplexa processer kan du enkelt skapa ett formulär med hjälp av ett kalkylblad. Du kan definiera de rader och kolumner som ska utgöra formulärstrukturen. Varje rad representerar en individ [formulärfält](/help/edge/docs/forms/form-components.md#available-components) och kolumnrubrikerna definierar motsvarande [fältegenskaper](/help/edge/docs/forms/form-components.md#components-properties).
 
@@ -110,7 +115,7 @@ Så här fortsätter du med att skapa formulär:
 
 +++
 
-+++ Steg 3: Förhandsgranska formuläret på EDS-sidan (Edge Delivery Services).
++++ Steg 2: Förhandsgranska formuläret på EDS-sidan (Edge Delivery Services).
 
 
 Fram tills nu har du lagt till det adaptiva formulärblocket i ditt EDS-projekt och förberett formulärets struktur. Nu kan du förhandsgranska formuläret:
@@ -150,7 +155,6 @@ Fram tills nu har du lagt till det adaptiva formulärblocket i ditt EDS-projekt 
 ## Nästa steg
 
 [Förbered kalkylbladet](/help/edge/docs/forms/submit-forms.md) för att börja ta emot data när formulär skickas in.
-
 
 
 
