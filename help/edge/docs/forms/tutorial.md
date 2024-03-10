@@ -4,9 +4,9 @@ description: Den här självstudiekursen hjälper dig att komma igång med ett n
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 2aa70e78764616f41fe64e324c017873cfba1d5b
+source-git-commit: 30dfe0cfd7f845ba7a27699db22f8c4e61a0f7ed
 workflow-type: tm+mt
-source-wordcount: '1770'
+source-wordcount: '1803'
 ht-degree: 0%
 
 ---
@@ -198,31 +198,29 @@ Så här förhandsgranskar du opublicerat innehåll:
 
    [https://main—weFinance—wkndforms.hlx.page](https://main--wefinance--wkndforms.hlx.page).
 
-### Uppdatera formuläret
+### Skapa ett formulär
 
-1. Gå till din Microsoft SharePoint- eller Google Drive-mapp.
+Exempelinnehållet innehåller ett frågeblad som fungerar som mall för frågeformuläret. Varje rad i bladet representerar en [formulärfält](/help/edge/docs/forms/form-components.md#available-components)och kolumnrubrikerna definierar [fältegenskaper](/help/edge/docs/forms/form-components.md#available-components). Det här exempelformuläret ger dig ett försprång när du skapar formuläret.
 
-1. Öppna `enquiry.xlsx` för redigering.
+![Formulär för förfrågan](/help/edge/assets/enquiry-form-microsoft-sharepoint.png)
 
-   ![Formulär för förfrågan](/help/edge/assets/enquiry-form-microsoft-sharepoint.png)
+Låt oss börja med att uppdatera en fältetikett. Öppna förfrågningsbladet för redigering, ändra etiketten för skicka-knappen till `Let's Chat`och publicera med hjälp av sidespark.
 
-1. Ändra Skicka-knappens etikett till `Let's Chat`.
+![Formulär för förfrågan](/help/edge/assets/enquiry-form-preview-publish.png)
 
-   ![Formulär för förfrågan](/help/edge/assets/enquiry-form-microsoft-sharepoint.png)
-
-1. Använd AEM Sidekick för att förhandsgranska och publicera `enquiry.xlsx` -fil.
-
-   ![Formulär för förfrågan](/help/edge/assets/enquiry-form-preview-publish.png)
-
-1. Om du vill förhandsgranska frågeformuläret går du till följande URL:
+Om du vill förhandsgranska det uppdaterade frågeformuläret går du till följande URL:
 
 
-   ```HTML
-   https://<branch>--<repository>--<owner>.hlx.page/enquiry
-   ```
+```HTML
+    https://<branch>--<repository>--<owner>.hlx.page/enquiry
+       
+```
 
-   Etiketten för skicka-knappen uppdateras. Fyll i formuläret och klicka på skicka-knappen. Ett fel inträffar som liknar följande, eftersom kalkylbladet inte är [har angetts för att godkänna data ännu](/help/edge/docs/forms/submit-forms.md).
+Etiketten på skicka-knappen uppdateras till `Let's Chat`.
 
+![Formulär för förfrågan](/help/edge/assets/updated-form.png)
+
+Mer information om hur du skapar och publicerar ett nytt formulär finns på [skapa ett formulär](/help/edge/docs/forms/create-forms.md) guide.
 
 ### Börja utveckla format och funktionalitet
 
