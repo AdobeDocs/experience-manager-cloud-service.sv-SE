@@ -5,7 +5,7 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: dcb16da1-dcc2-4529-8859-0716e727b54d
-source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
+source-git-commit: 2aa70e78764616f41fe64e324c017873cfba1d5b
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 0%
@@ -20,7 +20,7 @@ När du är redo att dela formuläret med dina kunder för datainsamling eller i
 
 ## Krav
 
-* The [Adaptivt formulärblock är aktiverat för ditt EDS-projekt på GitHub](/help/edge/docs/forms/create-forms.md).
+* The [Adaptivt Forms-block är aktiverat för ditt EDS-projekt på GitHub](/help/edge/docs/forms/create-forms.md).
 * Formuläret är fullständigt testat och klart att användas.
 * Dina [kalkylbladet har konfigurerats](/help/edge/docs/forms/submit-forms.md) för att ta emot data.
 

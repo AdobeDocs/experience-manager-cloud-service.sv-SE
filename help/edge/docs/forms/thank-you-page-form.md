@@ -5,7 +5,7 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: e6c66b22-dc52-49e3-a920-059adb5be22f
-source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
+source-git-commit: 2aa70e78764616f41fe64e324c017873cfba1d5b
 workflow-type: tm+mt
 source-wordcount: '608'
 ht-degree: 0%
@@ -27,7 +27,7 @@ I det adaptiva Forms-blocket är standardbeteendet att visa en tacksida. Du kan 
 
 ## Konfigurera tacksidan och meddelandet
 
-Standardbeteendet för Adaptive Forms-block är att visa&quot;thankyou&quot;-sidan när det skickas. Följ de här stegen för att konfigurera&quot;thankyou&quot;-sidan för ditt adaptiva Forms-block:
+Standardbeteendet för Adaptive Forms Block är att visa&quot;thankyou&quot;-sidan när det skickas. Följ de här stegen för att konfigurera&quot;thankyou&quot;-sidan för ditt adaptiva Forms-block:
 
 1. Gå till projektmappen AEM Edge Delivery på Microsoft SharePoint eller Google Workspace.
 1. Skapa en Microsoft Word- eller Google Docs-fil med namnet&quot;thankyou&quot; i projektkatalogen.
@@ -41,7 +41,7 @@ Ditt adaptiva Forms-block visar&quot;thankyou&quot;-sidan när du skickar in for
 
 ## Dirigera om användare till en annan sida efter att de skickats in
 
-Som standard dirigerar Adaptive Forms-blocket om användarna till&quot;thankyou&quot;-sidan. Om du vill dirigera om användare till en annan sida än standardsidan&quot;Tack&quot; har du två alternativ:
+Som standard dirigerar Adaptive Forms Block om användarna till&quot;thankyou&quot;-sidan. Om du vill dirigera om användare till en annan sida än standardsidan&quot;Tack&quot; har du två alternativ:
 
 * [Ersätt&quot;Tack&quot;-sidan med en annan sida](#replace-the-existing-thankyou-page)
 * [Använd omdirigeringar av webbplatser för sidomdirigering&quot;tack&quot;](#use-website-redirects-for-thankyou-page-redirection)

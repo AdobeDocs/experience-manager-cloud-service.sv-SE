@@ -5,7 +5,7 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: 7d087d41-9313-482a-a905-8955b0999781
-source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
+source-git-commit: 2aa70e78764616f41fe64e324c017873cfba1d5b
 workflow-type: tm+mt
 source-wordcount: '964'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Med AEM Forms Edge Delivery Services kan du skapa användarvänliga och interakt
 
 ![Ett exempelkalkylblad med vissa komponenter och egenskaper](/help/edge/assets/sample-form-in-spreadsheet.png)
 
-Det adaptiva formulärblocket genererar en [struktur för enhetlig HTML](/help/edge/docs/forms/style-theme-forms.md) för alla fälttyper och behållare (paneler) för att säkerställa konsekvens. Denna enhetliga struktur gör det enklare att [formatera ett formulär](/help/edge/docs/forms/style-theme-forms.md).
+The Adaptive Forms Block genererar en [struktur för enhetlig HTML](/help/edge/docs/forms/style-theme-forms.md) för alla fälttyper och behållare (paneler) för att säkerställa konsekvens. Denna enhetliga struktur gör det enklare att [formatera ett formulär](/help/edge/docs/forms/style-theme-forms.md).
 
 ## Tillgängliga komponenter
 
@@ -46,13 +46,13 @@ Här är en översikt över de tillgängliga komponenterna:
 
 ## Komponentegenskaper
 
-Varje formulärkomponent har olika egenskaper som gör att du kan styra dess beteende och utseende. Här är de egenskaper som stöds av komponenter för adaptiva formulärblock:
+Varje formulärkomponent har olika egenskaper som gör att du kan styra dess beteende och utseende. Här är de egenskaper som stöds av adaptiva Forms Block-komponenter:
 
 
 | Egenskap | Tillämpliga komponenter | Information |
 |--------------|------------------------------|----------------------------------------------------------------------|
-| Typ | Alla | Anger komponentens typ. Den här egenskapen avgör inmatningsfältets beteende och utseende. För textinmatningar kan till exempel typen vara &quot;text&quot;, &quot;email&quot; för e-postinmatningar och &quot;password&quot; för lösenordsinmatningar. Adaptiv form-block har stöd för  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types">alla giltiga indatatyper för HTML5</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textområde</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">välj</a>och <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fältuppsättning</a> som typ. |
-| Typ | Alla | Anger komponentens typ. Den här egenskapen avgör inmatningsfältets beteende och utseende. För textinmatningar kan till exempel typen vara &quot;text&quot;, &quot;email&quot; för e-postinmatningar och &quot;password&quot; för lösenordsinmatningar. Adaptiv form-block har stöd för  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types">alla giltiga indatatyper för HTML5</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textområde</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">välj</a>och <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fältuppsättning</a> som typ. |
+| Typ | Alla | Anger komponentens typ. Den här egenskapen avgör inmatningsfältets beteende och utseende. För textinmatningar kan till exempel typen vara &quot;text&quot;, &quot;email&quot; för e-postinmatningar och &quot;password&quot; för lösenordsinmatningar. Adaptive Forms Block har stöd  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types">alla giltiga indatatyper för HTML5</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textområde</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">välj</a>och <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fältuppsättning</a> som typ. |
+| Typ | Alla | Anger komponentens typ. Den här egenskapen avgör inmatningsfältets beteende och utseende. För textinmatningar kan till exempel typen vara &quot;text&quot;, &quot;email&quot; för e-postinmatningar och &quot;password&quot; för lösenordsinmatningar. Adaptive Forms Block har stöd  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types">alla giltiga indatatyper för HTML5</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textområde</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">välj</a>och <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fältuppsättning</a> som typ. |
 | Namn | Alla | Identifierar komponenten för att skicka formulär. Attributet name används när formulärdata skickas till servern och associerar användarindata med ett specifikt fält. |
 | Etikett | Alla | Ger kontextuell information till användare. Etiketten är den text som visas bredvid komponenten och ger användarna vägledning om vilken information som ska anges. |
 | Värde | Text, Lösenord, E-post, Nummer, Intervall, Datum och dess varianter (datetime-local, month, week, time), Kryssruta, Radio, Hidden, Submit, Button | Anger komponentens startvärde. För textinmatningar, textområden och markerade element visas detta som standardtext eller standardalternativ. För alternativknappar och kryssrutekomponenter är detta det värde/de data som skickas när de markeras. Attributet value är valfritt men ska betraktas som obligatoriskt för kryssrutor och alternativinmatningar. |
@@ -72,9 +72,9 @@ Varje formulärkomponent har olika egenskaper som gör att du kan styra dess bet
 
 <!--
 
-## Supported HTML 5 input types in Adaptive Form Block
+## Supported HTML 5 input types in Adaptive Forms Block
 
-The Adaptive Form Block supports a range of HTML 5 input types, and it also seamlessly renders forms created with AEM core components.
+The Adaptive Forms Block supports a range of HTML 5 input types, and it also seamlessly renders forms created with AEM core components.
 Here is the table which outlines how core components correspond to their HTML-5 input types in Edge Delivery:
 <table>
  <tbody>
@@ -176,26 +176,26 @@ Here is the table which outlines how core components correspond to their HTML-5 
   </tr>
   <tr>
    <td><a href = "https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion.html">Accordion<a></td>
-   <td><i>Not yet supported in Adaptive Form Block</i></td>
+   <td><i>Not yet supported in Adaptive Forms Block</i></td>
    <td> Allows user to create expandable and collapsible sections in a form. </td>
   </tr>
   <tr>
    <td><a href ="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs.html">Horizontal tabs</a></td>
-   <td><i>Not yet supported in Adaptive Form Block</i></td>
+   <td><i>Not yet supported in Adaptive Forms Block</i></td>
    <td>Organizes multiple sections of a form into separate tabs which are displayed horizontally.</td>
   </tr>
   <tr>
    <td><a href = "https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/image.html">Image</a></td>
-   <td><i>Not yet supported in Adaptive Form Block</i></td>
+   <td><i>Not yet supported in Adaptive Forms Block</i></td>
    <td> Allows user to include images in a form.</td>
   </tr><tr>
    <td><a href ="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/title.html">Title</a></td>
-   <td><i>Not yet supported in Adaptive Form Block</i></td>
+   <td><i>Not yet supported in Adaptive Forms Block</i></td>
    <td> Refers to the text that appears at the top of the form. </td>
   </tr>
   <tr>
    <td><a href = "https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/submit-button.html">Switch</td>
-   <td><i>Not yet supported in Adaptive Form Block</i></td>
+   <td><i>Not yet supported in Adaptive Forms Block</i></td>
    <td> A two-state toggle that allows user to select between two states such as enabling or disabling a feature, setting, or functionality.</td>
   </tr>
  </tbody>

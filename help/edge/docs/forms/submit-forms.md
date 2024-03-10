@@ -1,11 +1,11 @@
 ---
 title: Förbered kalkylbladet för att ta emot data
-description: Skapa kraftfulla formulär snabbare med kalkylblad och anpassade formulärblocksfält!
+description: Skapa kraftfulla formulär snabbare med kalkylblad och anpassade Forms-blockfält!
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: 0643aee5-3a7f-449f-b086-ed637ae53b5a
-source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
+source-git-commit: 2aa70e78764616f41fe64e324c017873cfba1d5b
 workflow-type: tm+mt
 source-wordcount: '971'
 ht-degree: 0%
@@ -55,7 +55,7 @@ Aktivera kalkylbladet:
 
 När fältnamnen har lagts till i `incoming` kan du godkänna att ditt formulär skickas vidare. Du kan förhandsgranska formuläret och skicka data till bladet med hjälp av det.
 
-När bladet har konfigurerats för att ta emot data kan du [förhandsgranska formuläret med adaptivt formulärblock](/help/edge/docs/forms/create-forms.md#preview-the-form-using-your-edge-delivery-service-eds-page) eller [använd POST-förfrågningar](#use-admin-apis-to-send-data-to-your-sheet) för att börja skicka data till bladet.
+När bladet har konfigurerats för att ta emot data kan du [förhandsgranska formuläret med Adaptiv Forms Block](/help/edge/docs/forms/create-forms.md#preview-the-form-using-your-edge-delivery-service-eds-page) eller [använd POST-förfrågningar](#use-admin-apis-to-send-data-to-your-sheet) för att börja skicka data till bladet.
 
 >[!WARNING]
 >
@@ -172,7 +172,7 @@ Ett blad med namnet &quot;Slack&quot; läggs till i Excel-arbetsboken eller Goog
 
 ## Skicka data till bladet {#send-data-to-your-sheet}
 
-När bladet är inställt på att ta emot data kan du [förhandsgranska formuläret med adaptivt formulärblock](/help/edge/docs/forms/create-forms.md#preview-the-form-using-your-edge-delivery-service-eds-page) eller [använd admin-API:er](#use-admin-apis-to-send-data-to-your-sheet) för att börja skicka data till bladet.
+När bladet är inställt på att ta emot data kan du [förhandsgranska formuläret med Adaptiv Forms Block](/help/edge/docs/forms/create-forms.md#preview-the-form-using-your-edge-delivery-service-eds-page) eller [använd admin-API:er](#use-admin-apis-to-send-data-to-your-sheet) för att börja skicka data till bladet.
 
 ### Använd admin-API:er för att skicka data till bladet
 

@@ -5,7 +5,7 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: 062d5a88-48ca-421f-bf0d-1483e3cfee28
-source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
+source-git-commit: 2aa70e78764616f41fe64e324c017873cfba1d5b
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Lägga till repeterbara avsnitt i ett formulär
 
-Med adaptiva formulärblock kan du lägga till eller göra ett avsnitt eller en komponent i ett formulär upprepningsbart. På så sätt kan användare ange information flera gånger för samma typ av data, vilket gör det enklare att samla in information som arbetserfarenhet eller utbildningsbakgrund.
+Med adaptiva Forms-block kan du lägga till eller göra ett avsnitt eller en komponent i ett formulär upprepningsbart. På så sätt kan användare ange information flera gånger för samma typ av data, vilket gör det enklare att samla in information som arbetserfarenhet eller utbildningsbakgrund.
 
 Ta till exempel ett formulär som används för att samla in information om en persons arbetsupplevelse. Du kan ha ett upprepningsbart avsnitt där du kan hämta information om varje föregående jobb. Det repeterbara avsnittet innehåller vanligtvis fält som företagsnamn, befattning, anställningsdatum och ansvarsområden. Användaren kan lägga till flera instanser av det repeterbara avsnittet för att ange information om varje jobb som han/hon har utfört.
 
@@ -81,7 +81,7 @@ The form allows users to provide personal information, including details of the 
 
 ## Prerequisites
 
-The [Adaptive Form block is enabled](/help/edge/docs/forms/create-forms.md) for your Edge Delivery Services project. 
+The [Adaptive Forms Block is enabled](/help/edge/docs/forms/create-forms.md) for your Edge Delivery Services project. 
 
 ## Add a repeatable section to a form 
 

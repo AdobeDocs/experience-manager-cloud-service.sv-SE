@@ -5,7 +5,7 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: c214711c-979b-4833-9541-8e35b2aa8e09
-source-git-commit: 2b64cc8d2afb7d6064d1f60ba023448171862236
+source-git-commit: 2aa70e78764616f41fe64e324c017873cfba1d5b
 workflow-type: tm+mt
 source-wordcount: '1819'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Formatera formulärfält
 
-Forms är avgörande för användarinteraktion på webbplatser, så att de kan mata in data. Den här handboken behandlar grunderna i hur du formaterar olika formulärfält i dialogrutan [Adaptivt formulärblock](/help/edge/docs/forms/create-forms.md)som hjälper dig att skapa visuellt tilltalande och användarvänliga formulär.
+Forms är avgörande för användarinteraktion på webbplatser, så att de kan mata in data. Den här handboken behandlar grunderna i hur du formaterar olika formulärfält i dialogrutan [Adaptivt Forms-block](/help/edge/docs/forms/create-forms.md)som hjälper dig att skapa visuellt tilltalande och användarvänliga formulär.
 
 ## Förstå formulärfältstyper
 
-Innan vi börjar använda en formatmall ska vi granska de vanliga formulärfälttyperna som stöds av det adaptiva formulärblocket:
+Innan vi börjar använda en formatmall ska vi titta på de vanliga formulärfälttyperna som stöds av det adaptiva Forms-blocket:
 
 * Indatafält: Dessa innehåller textinmatningar, e-postinmatningar, lösenordsinmatningar med mera.
 * Kryssrutegrupper: Används för att välja flera alternativ.
@@ -35,11 +35,11 @@ Att förstå grundläggande CSS-koncept är avgörande innan du formaterar speci
 * Rutmodell: CSS-rutmodellen beskriver strukturen för element i HTML som ett innehållsområde omgivet av utfyllnad, kanter och marginaler.
 * Flexbox/Grid: CSS Flexbox och stödrasterlayouter är kraftfulla verktyg för att skapa responsiv och flexibel design.
 
-## Formatera ett formulär för block med adaptiva formulär
+## Formatera ett formulär för Adaptive Forms Block
 
-Det adaptiva formulärblocket har en standardiserad HTML-struktur som förenklar processen att markera och formatera formulärkomponenter:
+Det adaptiva Forms-blocket har en standardiserad HTML-struktur som förenklar processen att markera och formatera formulärkomponenter:
 
-* **Uppdatera standardformat**: Du kan ändra standardformaten för ett formulär genom att redigera `/blocks/form/form.css file`. Den här filen innehåller omfattande formatering för ett formulär med stöd för guideformulär i flera steg. Det är viktigt att du använder anpassade CSS-variabler för enkel anpassning, underhåll och enhetlig formatering i olika formulär. Instruktioner om hur du lägger till det adaptiva formulärblocket i ditt projekt finns i [skapa ett formulär](/help/edge/docs/forms/create-forms.md).
+* **Uppdatera standardformat**: Du kan ändra standardformaten för ett formulär genom att redigera `/blocks/form/form.css file`. Den här filen innehåller omfattande formatering för ett formulär med stöd för guideformulär i flera steg. Det är viktigt att du använder anpassade CSS-variabler för enkel anpassning, underhåll och enhetlig formatering i olika formulär. Instruktioner om hur du lägger till det adaptiva Forms-blocket i ditt projekt finns i [skapa ett formulär](/help/edge/docs/forms/create-forms.md).
 
 * **Anpassning**: Använd standardvärdet `forms.css` som en bas och anpassa den för att ändra utseendet och känslan hos dina formulärkomponenter, vilket gör den visuellt tilltalande och användarvänlig. Filens struktur uppmuntrar organisationen och bevarar format för formulär, vilket ger en enhetlig design på hela webbplatsen.
 
@@ -60,7 +60,7 @@ Det adaptiva formulärblocket har en standardiserad HTML-struktur som förenklar
 
 ## Komponentstruktur
 
-Det adaptiva formulärblocket har en enhetlig HTML-struktur för olika formulärelement, vilket gör det enklare att formatera och hantera. Du kan ändra komponenterna med CSS i formateringssyfte.
+Det adaptiva Forms-blocket har en enhetlig HTML-struktur för olika formulärelement, vilket gör det enklare att formatera och hantera. Du kan ändra komponenterna med CSS i formateringssyfte.
 
 ### Allmänna komponenter (utom listrutor, alternativknappar och kryssrutegrupper):
 
@@ -821,5 +821,5 @@ Du kan också ange enskilda fält som mål efter namn för att använda unika fo
 }
 ```
 
-Den här CSS-koden riktar in alla indataelement som finns i ett element som har klassen `field-otp`. Formulärets HTML-struktur följer konventionerna i det adaptiva formulärblocket, vilket innebär att det finns en behållare som är markerad med klassen&quot;field-out&quot; som innehåller fältet med namnet&quot;otp&quot;.
+Den här CSS-koden riktar in alla indataelement som finns i ett element som har klassen `field-otp`. Formulärets HTML-struktur följer konventionerna i det adaptiva Forms-blocket, vilket innebär att det finns en behållare som är markerad med klassen&quot;field-out&quot; som innehåller fältet med namnet&quot;otp&quot;.
 
