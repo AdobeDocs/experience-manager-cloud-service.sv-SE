@@ -5,9 +5,9 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: ecea1e05-d36b-4d63-af9d-c69dafd2f94f
-source-git-commit: 2aa70e78764616f41fe64e324c017873cfba1d5b
+source-git-commit: 610f9ba3f342b37d0d20a91c337323bffe95d58d
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Följande diagram visar hur du kan redigera innehåll i Microsoft Excel eller Go
 
 ![Edge Delivery Architecture](/help/edge/assets/AEM-forms-with-EDS-publishing.png)
 
-Edge Delivery Services är en sammansatt uppsättning tjänster som ger stor flexibilitet när det gäller hur du skapar innehåll på din webbplats. Som tidigare nämnts kan du använda båda [AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/concepts.html) med [AEM](/help/implementing/universal-editor/introduction.md) och [dokumentbaserad redigering](https://www.aem.live/docs/authoring)
+Edge Delivery Services är en sammansatt uppsättning tjänster som ger stor flexibilitet när det gäller hur du skapar innehåll på din webbplats. Du kan använda både AEM och innehållshantering med [AEM](/help/forms/creating-adaptive-form-core-components.md) och [dokumentbaserad redigering](/help/edge/docs/forms/create-forms.md)
 
 Du kan till exempel använda innehåll direkt från Microsoft Excel eller Google Sheets. Det innebär att innehåll från dessa källor kan bli formulär på din webbplats. Det nya innehållet läggs till omedelbart utan någon omgenereringsprocess.
 

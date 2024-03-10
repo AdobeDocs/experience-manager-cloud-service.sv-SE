@@ -4,9 +4,9 @@ description: Den här självstudiekursen hjälper dig att komma igång med ett n
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 30dfe0cfd7f845ba7a27699db22f8c4e61a0f7ed
+source-git-commit: 610f9ba3f342b37d0d20a91c337323bffe95d58d
 workflow-type: tm+mt
-source-wordcount: '1803'
+source-wordcount: '1786'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Med AEM Forms-mallen för mallar kommer du snabbt igång med ett AEM projekt som
 
 ### Kom igång med AEM Forms mall för standarddatabas
 
-1. Skapa en Github-databas för ditt AEM projekt. Så här skapar du databas:
+1. Skapa en GitHub-databas för ditt AEM. Så här skapar du databas:
    1. Gå till [https://github.com/adobe-rnd/aem-boilerplate-forms](https://github.com/adobe-rnd/aem-boilerplate-forms).
 
       ![AEM Forms Boilerplate](/help/edge/assets/aem-forms-boilerplate.png)
@@ -65,7 +65,7 @@ Med AEM Forms-mallen för mallar kommer du snabbt igång med ett AEM projekt som
    >[!NOTE]
    >
    >
-   > Om du använder Github Enterprise med IP-filtrering kan du lägga till följande IP-adress i tillåtelselista: 3.227.118.73
+   > Om du använder GitHub Enterprise med IP-filtrering kan du lägga till följande IP-adress i tillåtelselista: 3.227.118.73
 
    Grattis! Du har en ny webbplats på `https://<branch>--<repo>--<owner>.hlx.page/`.
 
@@ -79,11 +79,11 @@ Med AEM Forms-mallen för mallar kommer du snabbt igång med ett AEM projekt som
 
 ### Länka din egen innehållskälla
 
-Din nya Github-databas pekar på [exempelinnehåll som lagras i en Google Drive-mapp](https://drive.google.com/drive/folders/17LSiMZC77N8tCJRW45TnHHGcG8V3SLG_). Det här skrivskyddade innehållet är en bra utgångspunkt för dina formulär. Du kan kopiera det till din egen Google Drive och anpassa det efter dina behov.
+Din nya GitHub-databas pekar på [exempelinnehåll som lagras i en Google Drive-mapp](https://drive.google.com/drive/folders/17LSiMZC77N8tCJRW45TnHHGcG8V3SLG_). Det här skrivskyddade innehållet är en bra utgångspunkt för dina formulär. Du kan kopiera det till din egen Google Drive och anpassa det efter dina behov.
 
 ![Exempelinnehåll på Google Drive](/help/edge/assets/folder-with-sample-content.png)
 
-Så här kopierar du exempelinnehållet till din egen innehållsmapp och pekar på din Github-databas till din egen innehållsmapp:
+Så här kopierar du exempelinnehållet till din egen innehållsmapp och placerar din GitHub-databas i din egen innehållsmapp:
 
 1. Skapa en ny mapp specifikt för ditt AEM innehåll i Google Drive eller Microsoft SharePoint. I det här dokumentet används en mapp som har skapats i Microsoft SharePoint.
 
@@ -168,7 +168,7 @@ Så här förhandsgranskar du opublicerat innehåll:
 
    ![AEM Sidekick - Lägg till ett projekt](/help/edge/assets/aem-sidekick-add-a-project.png)
 
-   När tillägget har installerats och ditt projekt har lagts till kan du förhandsgranska och publicera ditt innehåll från Google Drive.
+   När tillägget är installerat och ditt projekt har lagts till kan du förhandsgranska och publicera ditt innehåll från Google Drive.
 
 1. Markera alla dokument i Microsoft SharePoint- eller Google Drive-mappen. Du kan välja flera dokument genom att hålla ned Ctrl-tangenten (Windows/Linux) eller Cmd-tangenten (Mac) medan du klickar.
 
@@ -204,7 +204,7 @@ Exempelinnehållet innehåller ett frågeblad som fungerar som mall för frågef
 
 ![Formulär för förfrågan](/help/edge/assets/enquiry-form-microsoft-sharepoint.png)
 
-Låt oss börja med att uppdatera en fältetikett. Öppna förfrågningsbladet för redigering, ändra etiketten för skicka-knappen till `Let's Chat`och publicera med hjälp av sidespark.
+Vi börjar med att uppdatera en fältetikett. Öppna förfrågningsbladet för redigering, ändra etiketten för skicka-knappen till `Let's Chat`och publicera med hjälp av sidespark.
 
 ![Formulär för förfrågan](/help/edge/assets/enquiry-form-preview-publish.png)
 
@@ -233,7 +233,7 @@ För att komma igång med en lokal AEM utvecklingsmiljö på nolltid:
        npm install -g @adobe/aem-cli
    ```
 
-1. Klona ditt Github-projekt: Klona din projektdatabas från GitHub med följande kommando och ersätt <owner> med databasägaren och <repo> med databasnamnet:
+1. Klona ditt GitHub-projekt: Klona din projektdatabas från GitHub med följande kommando och ersätt <owner> med databasägaren och <repo> med databasnamnet:
 
    ```
    git clone https://github.com/<owner>/<repo>
@@ -281,7 +281,7 @@ Se till att GitHub-byggprocessen blir smidig genom att åtgärda potentiella pro
 Om du får felmeddelandet&quot;Det går inte att matcha sökvägen till modulen &quot;&#39;../../scripts/lib-franklin.js&#39;&quot; går du till [EDS-projekt]/blocks/forms/form.js fil. Uppdatera importsatsen genom att ersätta filen lib-franklin.js med filen aem.js.
 
 * **Hantera lintingfel:**
-Om du skulle stöta på ett lintingfel kan du kringgå dem. Öppna [EDS-projekt]/package.json och ändra &quot;lint&quot;-skriptet från &quot;lint&quot;: &quot;npm run lint:js &amp;&amp; npm run lint:css&quot; till &quot;lint&quot;: &quot;echo &#39;skipping linting for now&#39;&quot;. Spara filen och implementera ändringarna i GitHub-projektet.
+Om du skulle stöta på ett lintingfel kan du kringgå dem. Öppna [EDS-projekt]/package.json fil och ändra&quot;lint&quot;-skriptet från `"lint": "npm run lint:js && npm run lint:css"` till `"lint": "echo 'skipping linting for now'"`. Spara filen och implementera ändringarna i GitHub-projektet.
 
 
 ## Se även
@@ -289,9 +289,4 @@ Om du skulle stöta på ett lintingfel kan du kringgå dem. Öppna [EDS-projekt]
 * [Skapa ett formulär med Google eller Microsoft Excel](/help/edge/docs/forms/create-forms.md)
 * [Skicka formulär direkt till Microsoft Excel- eller Google-blad](/help/edge/docs/forms/submit-forms.md)
 * [Ändra utseende på formulär](/help/edge/docs/forms/style-theme-forms.md)
-
-
-
-
-
 
