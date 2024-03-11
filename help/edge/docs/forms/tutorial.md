@@ -4,9 +4,9 @@ description: Den här självstudiekursen hjälper dig att komma igång med ett n
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: d91254b52c257a3758da200a2c74b736ca457884
+source-git-commit: 4144f9704aaf17ea684be147395adc3aa31641f2
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '1854'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 I dagens digitala samhälle är det viktigt för alla företag att skapa användarvänliga formulär. Med AEM Forms Edge Delivery Services (EDS) kan du skapa formulär med välbekanta verktyg som Google Docs och Microsoft Office.
 
-Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft Sharepoint för att enkelt bearbeta inskickade data eller starta ett befintligt arbetsflöde.
+Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft SharePoint för att enkelt bearbeta inlämnade data eller starta ett befintligt arbetsflöde.
 
 AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa formulär för att hämta in och lagra inhämtade data. Du kan skapa ett nytt AEM projekt förkonfigurerat med Adaptivt Forms-block eller lägga till det adaptiva Forms-blocket i ett befintligt AEM.
 
@@ -127,16 +127,16 @@ Så här kopierar du exempelinnehållet till din egen innehållsmapp och placera
       Om du använder Microsoft SharePoint har mappsökvägen följande format:
 
       ```HTML
-      https://<tenant>.sharepoint.com/sites/  <sp-site>/Shared%20Documents/<folder-name>
+      https://<tenant>.SharePoint.com/sites/  <sp-site>/Shared%20Documents/<folder-name>
       ```
 
       Exempel:
 
       ```HTML
-      https://adobe.sharepoint.com/sites/wkndforms/Shared%20Documents/wefinance
+      https://adobe.SharePoint.com/sites/wkndforms/Shared%20Documents/wefinance
       ```
 
-      Mer information om hur du hanterar filer i Microsoft SharePoint finns i [Så här använder du Adobe Sharepoint](https://www.aem.live/docs/setup-customer-sharepoint).
+      Mer information om hur du hanterar filer i Microsoft SharePoint finns i [Så här använder du Adobe SharePoint](https://www.aem.live/docs/setup-customer-SharePoint).
 
 
 
@@ -299,7 +299,5 @@ Om du skulle stöta på ett lintingfel kan du kringgå dem. Öppna [EDS-projekt]
 
 ## Se även
 
-* [Skapa ett formulär med Google eller Microsoft Excel](/help/edge/docs/forms/create-forms.md)
-* [Skicka formulär direkt till Microsoft Excel- eller Google-blad](/help/edge/docs/forms/submit-forms.md)
-* [Ändra utseende på formulär](/help/edge/docs/forms/style-theme-forms.md)
+{{see-more-forms-eds}}
 

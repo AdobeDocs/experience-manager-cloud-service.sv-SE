@@ -1,5 +1,5 @@
 ---
-source-git-commit: 5cf8abe43987d145b302228877a38615f21ffd27
+source-git-commit: 4144f9704aaf17ea684be147395adc3aa31641f2
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -61,7 +61,7 @@ ht-degree: 0%
 
 [!BADGE TEKNIK MED TIDIG ÅTKOMST - Fråga oss om den här funktionen från AEM Sites labb i din Slack-kanal!]{type=Informative url="/help/edge/docs/slack.md" tooltip="AEM med Edge Delivery Services är en teknik med tidig åtkomst."}
 
-## Se mer {#see-more-forms-eds}
+## Se även {#see-more-forms-eds}
 
 * [Kom igång med AEM Forms Edge Delivery Services](/help/edge/docs/forms/tutorial.md)
 * [Skapa ett formulär med Google eller Microsoft Excel](/help/edge/docs/forms/create-forms.md)

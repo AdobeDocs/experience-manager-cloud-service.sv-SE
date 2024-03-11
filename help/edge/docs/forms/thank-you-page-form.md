@@ -5,9 +5,9 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: e6c66b22-dc52-49e3-a920-059adb5be22f
-source-git-commit: 2aa70e78764616f41fe64e324c017873cfba1d5b
+source-git-commit: 4144f9704aaf17ea684be147395adc3aa31641f2
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '576'
 ht-degree: 0%
 
 ---
@@ -80,12 +80,6 @@ Att dirigera om en användare till en annan sida efter att formuläret har skick
 Om du vill dirigera om&quot;Tack&quot;-sidan till en annan sida använder du [omdirigeringar av webbplatser](https://www.aem.live/docs/redirects) kalkylblad.
 
 
-## Se mer
+## Se även
 
-* [Formulärkomponenter](/help/edge/docs/forms/form-components.md)
-* [Egenskaper för formulärfält](/help/edge/docs/forms/eds-form-field-properties)
-* [Skapa och förhandsgranska ett formulär](/help/edge/docs/forms/create-forms.md)
-* [Aktivera formulär för att skicka data](/help/edge/docs/forms/submit-forms.md)
-* [Publicera ett formulär på webbplatssidan](/help/edge/docs/forms/publish-forms.md)
-* [Lägga till valideringar i formulärfält](/help/edge/docs/forms/validate-forms.md)
-* [Ändra teman och format för formulär](/help/edge/docs/forms/style-theme-forms.md)
+{{see-more-forms-eds}}
