@@ -5,9 +5,9 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: 0cf881a2-3784-45eb-afe8-3435e5e95cf4
-source-git-commit: 2aa70e78764616f41fe64e324c017873cfba1d5b
+source-git-commit: 5cf8abe43987d145b302228877a38615f21ffd27
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '803'
 ht-degree: 0%
 
 ---
@@ -28,8 +28,8 @@ Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets
 Kontrollera att du har utfört följande steg innan du börjar:
 
 * Konfigurera en [AEM projekt med AEM Forms standardmall](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-equipped-with-adaptive-forms-block) eller [har lagt till adaptivt Forms-block i ditt befintliga AEM](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project) och klona motsvarande GitHub-databas på din lokala dator.
-I det här dokumentet kallas den lokala mappen i ditt Edge Delivery Services-projekt (EDS) `[EDS Project repository]` .
-* Se till att du har tillgång till Google Sheets eller Microsoft SharePoint. Information om hur du konfigurerar Microsoft SharePoint som innehållskälla finns i [Så här använder du Sharepoint](https://www.aem.live/docs/setup-customer-sharepoint)
+I det här dokumentet kallas den lokala mappen i ditt Edge Delivery Services-projekt (EDS) `[EDS Project repository]`.
+* Se till att du har tillgång till Google Sheets eller Microsoft SharePoint. Information om hur du konfigurerar Microsoft SharePoint som innehållskälla finns i [Så här använder du Sharepoint](https://www.aem.live/docs/setup-customer-sharepoint).
 
 
 
@@ -80,6 +80,8 @@ Så här fortsätter du med att skapa formulär:
 
 1. Skapa en Microsoft Excel-arbetsbok eller ett Google-blad var som helst i AEM Edge Delivery-projektkatalog. Skapa till exempel ett kalkylblad med namnet `enquiry` på AEM Edge Delivery-projektkatalog på Google Drive.
 
+   ![Exempelinnehåll på Google Drive](/help/edge/assets/upload-sample-files-to-your-content-folder.png)
+
 1. Se till att bladet delas med rätt AEM (till exempel `helix@adobe.com`) [enligt de konfigurationer som har angetts för ditt projekt](https://www.aem.live/docs/setup-customer-sharepoint). Ge användaren redigeringsbehörighet för bladet.
 
 1. Öppna det skapade kalkylbladet och ändra standardbladets namn till &quot;shared-default&quot;.
@@ -87,6 +89,7 @@ Så här fortsätter du med att skapa formulär:
    ![ändra namn på standardblad till &quot;shared-default&quot;](/help/edge/assets/rename-sheet-to-shared-default.png)
 
 1. Om du vill lägga till formulärfälten infogar du rader och kolumnrubriker i bladet&quot;shared-default&quot;. Varje rad ska representera en [formulärfält](/help/edge/docs/forms/form-components.md#available-components), med kolumnrubriker som definierar motsvarande fält [egenskaper](/help/edge/docs/forms/form-components.md#components-properties).
+
 
    För att komma igång snabbt bör du överväga att kopiera innehållet i [Kalkylblad för förfrågan](https://docs.google.com/spreadsheets/d/196lukD028RDK_evBelkOonPxC7w0l_IiJ-Yx3DvMfNk/edit#gid=0) i kalkylbladet. När du har kopierat innehållet sparar du kalkylbladet.
 
@@ -118,19 +121,24 @@ Så här fortsätter du med att skapa formulär:
 +++ Steg 2: Förhandsgranska formuläret på EDS-sidan (Edge Delivery Services).
 
 
-Fram tills nu har du lagt till Adaptive Forms Block i ditt EDS-projekt och förberett formulärets struktur. Nu kan du förhandsgranska formuläret:
+Till nu har du förberett formulärets struktur. Nu kan du förhandsgranska formuläret:
 
-1. **Åtkomst till din projektkatalog:** Öppna ditt Microsoft SharePoint- eller Google Drive-konto och gå till AEM Edge Delivery-projektkatalog.
+1. Öppna ditt Microsoft SharePoint- eller Google Drive-konto och gå till AEM Edge Delivery-projektkatalog.
 
-1. **Bädda in formuläret i ett dokument:** Öppna en dokumentfil (t.ex. en indexfil) om du vill bädda in formuläret. Du kan också skapa ett nytt dokument.
 
-1. **Navigera till önskad plats:** Gå till önskad plats i dokumentet där du vill lägga till formuläret.
 
-1. **Lägg till Adaptive Forms Block:** Skapa ett formulärblock som återger formuläret. Välj Infoga > Tabell och skapa en kolumn, en tabell med två rader. Ge tabellen namnet &quot;Formulär&quot; och klistra in URL:en för förhandsgranskning på den andra raden. Kontrollera att URL-adressen är formaterad som en hyperlänk, inte som oformaterad text, enligt bilden nedan:
+1. Öppna en dokumentfil (t.ex. en indexfil) om du vill bädda in formuläret. Du kan också skapa ett nytt dokument.
+
+1. Gå till önskad plats i dokumentet där du vill lägga till formuläret.
+
+1. Skapa ett formulärblock som återger formuläret. Välj Infoga > Tabell och skapa en kolumn, en tabell med två rader. Ge tabellen namnet &quot;Formulär&quot; och klistra in URL:en för förhandsgranskning på den andra raden. Kontrollera att URL-adressen är formaterad som en hyperlänk, inte som oformaterad text, enligt bilden nedan:
 
    | Formulär |
    |---|
-   | [https://main—portal—wkndforms.hlx.live/inquiry.json](https://main--portal--wkndforms.hlx.live/enquiry.json) |
+   | [https://main—weFinance—wkndforms.hlx.live/inquiry.json](https://main--wefinance--wkndforms.hlx.live/enquiry.json) |
+
+
+   ![Lägg till adaptivt Forms-block på din webbsida](/help/edge/assets/add-adaptive-forms-block.png)
 
    Det här blocket fungerar som en platshållare där formuläret är inbäddat. Lägg till förhandsgransknings-URL:en på blockets andra rad `<form>.json` som en hyperlänk.
 
