@@ -5,9 +5,9 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: ecea1e05-d36b-4d63-af9d-c69dafd2f94f
-source-git-commit: 5cf8abe43987d145b302228877a38615f21ffd27
+source-git-commit: 67d9eaaf18725403f6a152b04e022cdca6902de0
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,13 @@ Edge Delivery Services använder GitHub så att kunder kan hantera och driftsät
 ![Installera AEM Sidekick](/help/edge/assets/install-aem-sidekick.png)
 
 AEM Forms Edge Delivery Services innehåller ett blankettblock som kallas [Adaptivt Forms-block](/help/edge/docs/forms/create-forms.md) för att lägga till ett formulär på din Edge Delivery Services webbplats.
+
+Välj mellan [dokumentbaserad redigering](#document-based-authoring-features) och [AEM](#aem-authoring-features) beroende på dina specifika krav.
+
+För enkla formulär som bara samlar in grundläggande information som namn och e-post (antyda att vi kontaktar oss formulär, formulär för leadgenerering eller formulär för serviceförfrågningar) och där du bara behöver data för att komma till ett kalkylblad, [Dokumentbaserad redigering](/help/edge/docs/forms/create-forms.md) passar perfekt. Du kan skapa dessa formulär på samma sätt som du skapar dokument i Google Docs.
+
+Om formulären blir mer komplexa, som att kräva flera paneler, komplexa regler och logiska funktioner, datamanipulering, integrering med externa system eller smidiga arbetsflöden med AEM funktioner, kan du [AEM](/help/forms/creating-adaptive-form-core-components.md) är ett bättre alternativ.
+
 
 ### Viktiga funktioner för dokumentbaserad redigering och AEM
 
@@ -119,6 +126,13 @@ AEM Authoring (med Adaptive Forms Editor) har ett WYSIWYG-gränssnitt för att s
 * Möjlighet att konfigurera flera skicka-åtgärder för hantering av formulärinskick, inklusive överföring av data till Microsoft SharePoint, Microsoft OneDrive, Adobe Workfront Fusion, Salesforce, Microsoft Dynamics, många fler datakällor.
 
 AEM bygger i själva verket på grundvalen för dokumentbaserad redigering, vilket ger en mer avancerad verktygslåda för att skapa och hantera komplexa formulär.
+
+### Redigeringsarbetsflöde
+
+![Dokumentbaserad redigering](/help/edge/assets/document-based-authoring-workflow.png)
+
+![AEM](/help/edge/assets/aem-authoring-workflow.png)
+
 
 ## Börja skapa formulär
 
