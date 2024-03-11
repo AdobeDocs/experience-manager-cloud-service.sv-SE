@@ -4,9 +4,9 @@ description: Den här självstudiekursen hjälper dig att komma igång med ett n
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 610f9ba3f342b37d0d20a91c337323bffe95d58d
+source-git-commit: 14171647dce7d2f6ce985616035eefa62c6955db
 workflow-type: tm+mt
-source-wordcount: '1786'
+source-wordcount: '1878'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,7 @@ Så här kopierar du exempelinnehållet till din egen innehållsmapp och placera
 
       ![Hämta exempelinnehåll](/help/edge/assets/download-sample-content.png)
 
-      The `index`, `nav`och `footer` -filer definierar den grundläggande layouten för sidorna och ändras sällan i ett projekt. De har också en särskild struktur som skiljer sig från de flesta andra innehållsfiler. Genom att undersöka dessa filer får du en känsla för hur innehållet är organiserat i AEM projekt.
+      The `nav` och `footer` -filer definierar den grundläggande layouten för sidorna och ändras sällan i ett projekt. De har också en särskild struktur som skiljer sig från de flesta andra innehållsfiler. Genom att undersöka dessa filer får du en känsla för hur innehållet är organiserat i AEM projekt.
 
 
    1. Överför dessa filer till Microsoft SharePoint eller Google Drive-mappen.
@@ -148,7 +148,7 @@ Så här kopierar du exempelinnehållet till din egen innehållsmapp och placera
 
       Detta kopplar innehållsmappen till webbplatsen. När du har uppdaterat referensen kan felet&quot;404 Hittades inte&quot; uppstå från början. Det beror på att ditt innehåll inte har förhandsvisats än. I nästa avsnitt beskrivs hur du börjar redigera och förhandsgranska ditt innehåll.
 
-      ![Bekräfta uppdaterad fsatab.yaml-fil](/help/edge/assets/aem-forms-project-folder-error.png)
+
 
 ### Förhandsgranska och publicera ditt innehåll
 
@@ -204,9 +204,22 @@ Exempelinnehållet innehåller ett frågeblad som fungerar som mall för frågef
 
 ![Formulär för förfrågan](/help/edge/assets/enquiry-form-microsoft-sharepoint.png)
 
-Vi börjar med att uppdatera en fältetikett. Öppna förfrågningsbladet för redigering, ändra etiketten för skicka-knappen till `Let's Chat`och publicera med hjälp av sidespark.
+Vi börjar med att uppdatera en fältetikett. Öppna förfrågningsbladet för redigering, ändra etiketten för skicka-knappen till `Let's Chat` och använd AEM Sidekick för att förhandsgranska och publicera filen.
 
 ![Formulär för förfrågan](/help/edge/assets/enquiry-form-preview-publish.png)
+
+När du förhandsgranskar eller publicerar filen visas en JSON-version av filen på en ny flik. Kopiera förhandsgransknings- (.hlx.page) eller publicerings-URL:en (.hlx.live) för filen.
+
+![JSON i formulärkalkylbladet](/help/edge/assets//preview-and-publish-enquiry-form.png)
+
+Öppna `enquiry` och ersätt URL:en i formulärblocket med URL:en för filen som kopierades i föregående steg. Kontrollera att URL:en är en hyperlänk.
+
+![Förfrågningsfil med URL:en .json för kalkylbladets URL](/help/edge/assets/enquiry-doc-to-embed-form.png)
+
+Använd AEM Sidekick för att förhandsgranska och publicera förfrågningsdokumentet.
+
+![Förfrågningsfil med URL:en .json för kalkylbladets URL](/help/edge/assets/preview-and-publish-enquiry-document.png)
+
 
 Om du vill förhandsgranska det uppdaterade frågeformuläret går du till följande URL:
 
