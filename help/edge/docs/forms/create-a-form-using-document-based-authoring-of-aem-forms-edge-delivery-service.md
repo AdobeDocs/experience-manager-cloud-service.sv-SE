@@ -4,7 +4,7 @@ description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery + doc
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: f2752673dcaa0762bb55719cee23765aa8ecde96
+source-git-commit: d91254b52c257a3758da200a2c74b736ca457884
 workflow-type: tm+mt
 source-wordcount: '889'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Skapa ett formulär med dokumentbaserad redigering för AEM Forms Edge Delivery Service
 
-I dagens digitala samhälle är det viktigt för alla företag att skapa användarvänliga formulär. Med dokumentbaserad redigering i AEM Forms Edge Delivery kan du skapa formulär med välbekanta verktyg som Word eller Google Docs. Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft Sharepoint för att enkelt bearbeta inlämnade data eller för att initiera ett befintligt arbetsflöde.
+I dagens digitala samhälle är det viktigt för alla företag att skapa användarvänliga formulär. Med dokumentbaserad redigering i AEM Forms Edge Delivery kan du skapa formulär med välbekanta verktyg som Word eller Google Docs. Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft Sharepoint för att enkelt bearbeta inlämnade data eller för att starta ett befintligt arbetsflöde.
 
 Den här guiden leder dig igenom:
 

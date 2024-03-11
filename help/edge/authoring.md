@@ -3,7 +3,7 @@ title: Skapa innehåll för Edge Delivery Services
 description: Lär dig hur innehållsredigering fungerar med Edge Delivery Services och hur du redigerar AEM innehåll med Edge Delivery Services.
 feature: Edge Delivery Services
 exl-id: 963ff71a-8176-4d9d-8240-dc429405d139
-source-git-commit: 58d85886ef04b548c09e3ef9308fe596dd3eda38
+source-git-commit: d91254b52c257a3758da200a2c74b736ca457884
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
@@ -17,9 +17,9 @@ Med Edge Delivery Services är det enkelt, snabbt och flexibelt att skapa. Du ka
 * [Dokumentbaserad redigering](#document-based) - t.ex. Microsoft Word eller Google Docs
 * [Universal Editor](#universal-editor) - Ett modernt användargränssnitt för att skapa innehåll i AEM
 
-## Dokumentbaserad redigering {#document-based}
+## Dokumentbaserad redigering  {#document-based}
 
-Vid dokumentbaserad redigering kan du arbeta med olika källor som Microsoft Word och Google Docs. Dokument från dessa källor blir sidor på din webbplats. Rubriker, listor, bilder, teckensnittselement och videor kan alla överföras från den ursprungliga källan till webbplatsen. Du kan lägga till metadata för SEO-syften eller använda block för att arbeta med strukturerat innehåll och lägga till funktioner.
+När det gäller dokumentbaserad redigering kan du arbeta med olika källor som Microsoft Word och Google Docs. Dokument från dessa källor blir sidor på din webbplats. Rubriker, listor, bilder, teckensnittselement och videor kan alla överföras från den ursprungliga källan till webbplatsen. Du kan lägga till metadata för SEO-syften eller använda block för att arbeta med strukturerat innehåll och lägga till funktioner.
 
 Mer information om dokumentbaserad redigering finns i [det här dokumentet i dokumentationen för Edge Delivery Services.](/help/edge/docs/authoring.md)
 

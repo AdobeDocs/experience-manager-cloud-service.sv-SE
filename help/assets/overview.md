@@ -5,7 +5,7 @@ contentOwner: AK
 feature: Asset Management
 role: User,Leader,Architect
 exl-id: 4437f214-d058-4975-8b8f-869a12c8103b
-source-git-commit: b3bfc841f0609e1e529c97dd1f11d16de561701c
+source-git-commit: d91254b52c257a3758da200a2c74b736ca457884
 workflow-type: tm+mt
 source-wordcount: '892'
 ht-degree: 1%
@@ -54,11 +54,11 @@ DAM-bibliotek, utvecklare och superanvändare kan fortsätta att använda admini
 
 Mer information om hur du kommer åt resursvyn och vissa av de förenklingar som den erbjuder via administratörsvyn finns i [Introduktion till resursvyn](/help/assets/assets-view-introduction.md).
 
-## Integrering med dokumentbaserad framtagning för Edge Delivery Services {#integrate-doc-authoring-edge-and-assets}
+## Integrering med dokumentbaserad redigering för Edge Delivery Services {#integrate-doc-authoring-edge-and-assets}
 
 Med Edge Delivery kan ni skapa snabba, engagerande webbplatser där författare snabbt kan uppdatera och publicera innehåll och nya webbplatser snabbt kan lanseras.
 
-Integrera AEM Assets med dokumentbaserad redigering för Edge Delivery Services för att göra det möjligt för webbredaktörer att använda bilder som finns i AEM Assets-arkiv när de skriver dokument i Microsoft Word eller Google Docs. Mer information finns i [Integrera AEM Assets med dokumentbaserad framtagning](/help/edge/using.md#integrate-assets-edge).
+Integrera AEM Assets med dokumentbaserad redigering för Edge Delivery Services för att göra det möjligt för webbplatsförfattare att använda bilder som finns i AEM Assets-arkiv när de skriver dokument i Microsoft Word eller Google Docs. Mer information finns i [Integrera AEM Assets med dokumentbaserad redigering](/help/edge/using.md#integrate-assets-edge).
 
 ## Integrering med Adobe Journey Optimizer {#integration-with-ajo}
 

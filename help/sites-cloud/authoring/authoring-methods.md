@@ -2,13 +2,13 @@
 title: Metoder för att skapa innehåll i AEM
 description: Lär dig olika sätt att skapa innehåll i AEM och hur de skiljer sig åt.
 feature: Authoring
-source-git-commit: faac7c803a5145f4207154bfb3c9aa06274bbb86
+exl-id: ef482843-451b-474e-a8d0-d0bfcc17221b
+source-git-commit: d91254b52c257a3758da200a2c74b736ca457884
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
 
 ---
-
 
 # Metoder för att skapa innehåll i AEM {#authoring-methods}
 
@@ -63,12 +63,12 @@ Den universella redigeraren nås via Sites-konsolen i AEM, men har den kraft och
 
 Läs mer om Universal Editor i dokumentet [Skapa innehåll med den universella redigeraren.](/help/sites-cloud/authoring/universal-editor/authoring.md)
 
-## Dokumentbaserad redigering {#document-based}
+## Dokumentbaserad redigering  {#document-based}
 
 Om du använder Edge Delivery-tjänsterna kan du välja att redigera ditt innehåll som vanliga dokument som Microsoft Word eller Google Docs helt utanför [AEM **Webbplatser** konsol.](/help/sites-cloud/authoring/sites-console/introduction.md)
 
 ![Redigera dokumentbaserat innehåll](assets/authoring-methods-document.jpg)
 
-Med dokumentbaserad redigering kan man använda de verktyg man redan känner till och ändå dra nytta av hur snabbt och effektivt AEM Edge Delivery Services kan publicera sitt material. Dokumentbaserad redigering kräver ingen användning av AEM.
+Med dokumentbaserad redigering kan författare använda de verktyg de redan känner till och ändå dra nytta av hur snabbt och effektivt AEM Edge Delivery Services kan publicera sitt innehåll. Dokumentbaserad redigering kräver ingen användning av AEM.
 
 Mer information om dokumentbaserad redigering finns i dokumentet [Skapa innehåll för Edge Delivery Services.](/help/edge/authoring.md)

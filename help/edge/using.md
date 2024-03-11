@@ -3,7 +3,7 @@ title: Använda Edge Delivery Services
 description: Lär dig hur AEM as a Cloud Service kan användas med Edge Delivery Services.
 feature: Edge Delivery Services
 exl-id: 41999302-b4c9-4f5a-b659-6e7398a3c4f4
-source-git-commit: 5b24b984ea738096ef67b72a3d96e9b5931d2200
+source-git-commit: d91254b52c257a3758da200a2c74b736ca457884
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%

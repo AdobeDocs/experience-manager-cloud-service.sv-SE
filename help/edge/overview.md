@@ -3,7 +3,7 @@ title: Komma igång med AEM och Edge Delivery Services
 description: Lär dig hur AEM as a Cloud Service kan dra nytta av de prestanda och den perfekta poängsättningen i Lighthouse som Edge Delivery Services erbjuder.
 feature: Edge Delivery Services
 exl-id: 03a1aa93-d2e6-4175-9cf3-c7ae25c0d24e
-source-git-commit: b7b9dbfa7f939828d66a785daecf84c917923c37
+source-git-commit: d91254b52c257a3758da200a2c74b736ca457884
 workflow-type: tm+mt
 source-wordcount: '874'
 ht-degree: 2%
@@ -27,7 +27,7 @@ Följande diagram visar hur du kan redigera innehåll i Microsoft Word (dokument
 
 ![Edge Delivery Architecture](assets/AEM-with-EDS-publishing-simple2.png)
 
-Edge Delivery Services är en sammansatt uppsättning tjänster som ger stor flexibilitet när det gäller hur du skapar innehåll på din webbplats. Som tidigare nämnts kan du använda båda [AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/concepts.html) med [Redigering i Universal Editor](/help/implementing/universal-editor/introduction.md) och [dokumentbaserad redigering.](https://www.aem.live/docs/authoring)
+Edge Delivery Services är en sammansatt uppsättning tjänster som ger stor flexibilitet när det gäller hur du skapar innehåll på din webbplats. Som tidigare nämnts kan du använda båda [AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/concepts.html) med [Redigering i Universal Editor](/help/implementing/universal-editor/introduction.md) och [Dokumentbaserad redigering.](https://www.aem.live/docs/authoring)
 
 Du kan till exempel använda innehåll direkt från Microsoft Word eller Google Docs. Det innebär att dokument från dessa källor kan bli sidor på din webbplats. Dessutom kan rubriker, listor, bilder och teckensnittselement överföras från den ursprungliga källan till webbplatsen. Det nya innehållet läggs till omedelbart utan någon omgenereringsprocess.
 

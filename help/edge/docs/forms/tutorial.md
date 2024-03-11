@@ -4,7 +4,7 @@ description: Den här självstudiekursen hjälper dig att komma igång med ett n
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 14171647dce7d2f6ce985616035eefa62c6955db
+source-git-commit: d91254b52c257a3758da200a2c74b736ca457884
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 0%
@@ -18,11 +18,11 @@ I dagens digitala samhälle är det viktigt för alla företag att skapa använd
 
 Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft Sharepoint för att enkelt bearbeta inskickade data eller starta ett befintligt arbetsflöde.
 
-AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa formulär för att hämta in och lagra inhämtade data. Du kan skapa ett nytt AEM projekt förutrustat med Adaptiv Forms Block eller lägga till Adaptiv Forms Block i ett befintligt AEM.
+AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa formulär för att hämta in och lagra inhämtade data. Du kan skapa ett nytt AEM projekt förkonfigurerat med Adaptivt Forms-block eller lägga till det adaptiva Forms-blocket i ett befintligt AEM.
 
 Den här AEM Forms-självstudiekursen guidar dig genom att skapa, förhandsgranska och publicera egna anpassade formulär med ett nytt Adobe Experience Manager (AEM) Forms-projekt. Du får också lära dig att lägga till adaptiva Forms-block i ett befintligt AEM.
 
-* **[Skapa ett nytt AEM projekt förutrustat med Adaptive Forms Block](#create-a-new-eds-project-pre-equipped-with-adaptive-forms-block)**
+* **[Skapa ett nytt AEM projekt förkonfigurerat med Adaptive Forms Block](#create-a-new-eds-project-pre-configured-with-adaptive-forms-block)**
 * **[Lägg till adaptivt Forms-block i ett befintligt AEM](#add-adaptive-forms-block-to-an-existing-eds-project)**
 
 
@@ -37,7 +37,7 @@ Den här AEM Forms-självstudiekursen guidar dig genom att skapa, förhandsgrans
 **Skärp dig!** I den här självstudien används macOS, Chrome och Visual Studio Code. Stegen kan anpassas för andra inställningar, men skärmbilderna och specifika gränssnittselement kan skilja sig åt beroende på vilket operativsystem, vilken webbläsare och vilken kodredigerare du har valt.
 
 
-## Skapa ett nytt AEM projekt förutrustat med Adaptive Forms Block
+## Skapa ett nytt AEM projekt förkonfigurerat med Adaptive Forms Block
 
 Med AEM Forms-mallen för mallar kommer du snabbt igång med ett AEM projekt som är förkonfigurerat med det adaptiva Forms-blocket. Det är det snabbaste och enklaste sättet att följa AEM bästa praxis och börja skapa formulär.
 

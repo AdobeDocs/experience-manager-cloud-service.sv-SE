@@ -2,13 +2,13 @@
 title: Utveckla för Edge Delivery Services
 description: Lär dig hur du utvecklar block och anpassar AEM projekt så att du kan arbeta med Edge Delivery Services.
 feature: Edge Delivery Services
-source-git-commit: 22a791311c618fcbd61f321b8efa79c3a52ec65d
+exl-id: c356c03c-af43-43a1-a14e-45f94ccb3970
+source-git-commit: d91254b52c257a3758da200a2c74b736ca457884
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
 
 ---
-
 
 # Utveckla för Edge Delivery Services {#developing-edge}
 
@@ -26,7 +26,7 @@ Se [Byggavsnitt](/help/edge/developer/block-collection.md) av dokumentationen ti
 
 Edge Delivery utnyttjar GitHub så att du kan hantera och driftsätta kod direkt från din GitHub-databas.
 
-Dina författare kan skapa innehåll antingen med dokumentbaserad redigering eller innehåll i AEM med den universella redigeraren. Utvecklare kan anpassa webbplatsens funktionalitet med hjälp av CSS och JavaScript i GitHub, oavsett hur författarna skapar sitt innehåll.
+Dina författare kan skapa innehåll med antingen dokumentbaserad redigering eller innehåll i AEM med den universella redigeraren. Utvecklare kan anpassa webbplatsens funktionalitet med hjälp av CSS och JavaScript i GitHub, oavsett hur författarna skapar sitt innehåll.
 
 Webbplatser skapas automatiskt för var och en av dina grenar, från förhandsgranskning av innehåll till produktion. Alla resurser du lägger in i GitHub-databasen är tillgängliga på din webbplats utan någon byggprocess.
 

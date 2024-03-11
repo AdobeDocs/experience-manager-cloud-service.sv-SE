@@ -5,22 +5,21 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: ecea1e05-d36b-4d63-af9d-c69dafd2f94f
-source-git-commit: 67d9eaaf18725403f6a152b04e022cdca6902de0
+source-git-commit: d91254b52c257a3758da200a2c74b736ca457884
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '937'
 ht-degree: 0%
 
 ---
 
 # AEM Forms-Edge Delivery Services
 
-AEM Forms Edge Delivery Services är en sammanslagen uppsättning tjänster som möjliggör en snabb utvecklingsmiljö där skribenterna snabbt kan uppdatera och publicera och där nya formulär snabbt lanseras.
+AEM Forms Edge Delivery Services är en sammanslagen uppsättning tjänster som möjliggör en snabb utvecklingsmiljö där författare snabbt kan uppdatera, publicera och öppna nya formulär. Dessa tjänster levererar enastående och effektiva formulärupplevelser som skapar engagemang och konverteringar. Dessa blankettupplevelser är enkla att skapa och utveckla.
 
-AEM Forms Edge Delivery Services levererar enastående formulärupplevelser som skapar engagemang och konverteringar och möjliggör slagkraftiga upplevelser som är enkla att skapa och utveckla.
 
 Med de här tjänsterna kan du:
 
-* **Skapa registreringsupplevelser med valfria verktyg:** Öka redigeringseffektiviteten genom att frikoppla innehållskällor. Nu kan du använda både dokumentbaserad redigering (Microsoft SharePoint eller Google Drive) och AEM (Adaptiv Forms Editor). Det innebär att du kan arbeta med flera innehållskällor i samma formulär och använda de redigeringsverktyg du föredrar, till exempel Microsoft Excel, Google Sheets eller Adaptiv Forms Editor.
+* **Skapa registreringsupplevelser med valfria verktyg:** Öka redigeringseffektiviteten genom att frikoppla innehållskällor. Nu kan du använda både dokumentbaserad redigering (Microsoft SharePoint eller Google Drive) och AEM (Adaptiv Forms Editor). Du kan arbeta med flera innehållskällor på samma formulärwebbplats och använda redigeringsverktyg som Microsoft Excel, Google Sheets eller Adaptiv Forms Editor.
 
 * **Leverera enastående digitala registreringsupplevelser:** Leverera digitala registreringsupplevelser som läses in och återges snabbt. Snabbare inläsningstider och optimerad användarupplevelse bidrar till att fler formulär fylls i och konverteras.
 
@@ -28,38 +27,40 @@ Med de här tjänsterna kan du:
 
 ## Översikt över AEM Forms-Edge Delivery Services {#edge-overview}
 
-Följande diagram visar hur du kan redigera formulär i Microsoft Excel eller Google Sheets (dokumentbaserad redigering) och publicera på Edge Delivery Services. Den visar också den AEM publiceringsmetoden med Adaptiv Forms Editor.
+Följande diagram visar hur du kan redigera formulär i Microsoft Excel eller Google Sheets (dokumentbaserad redigering) och publicera på Edge Delivery Services. Den visar också den AEM publiceringsmetoden med Adaptive Forms Editor (AEM Authoring).
 
 ![Edge Delivery Architecture](/help/edge/assets/AEM-forms-with-EDS-publishing.png)
 
-AEM Forms Edge Delivery Services är en sammansättningsbar uppsättning tjänster som ger stor flexibilitet när det gäller hur du skapar formulär på din webbplats. Du kan använda både AEM och innehållshantering med [AEM](/help/forms/creating-adaptive-form-core-components.md) och [dokumentbaserad redigering](/help/edge/docs/forms/create-forms.md).
+AEM Forms Edge Delivery Services är en sammansättningsbar uppsättning tjänster som ger stor flexibilitet när det gäller hur du skapar formulär på din webbplats. Du kan använda både AEM och innehållshantering med [AEM](/help/forms/creating-adaptive-form-core-components.md) och [Dokumentbaserad redigering](/help/edge/docs/forms/create-forms.md).
 
-Du kan till exempel skapa formulär direkt i Microsoft Excel eller Google Sheets och dessa kalkylblad omvandlas till formulär för webbplatsen. Allt nytt formulärinnehåll, t.ex. ett nytt formulärfält, är omedelbart tillgängligt på webbplatsen utan att något nytt behöver göras.
+Du kan till exempel skapa formulär direkt i Microsoft Excel eller Google Sheets och dessa kalkylblad omvandlas till formulär för webbplatsen. Alla nya formulär- och formulärinnehåll, till exempel ett nytt formulärfält, är omedelbart tillgängliga på webbplatsen utan att något nytt behöver göras.
 
-Edge Delivery Services använder GitHub så att kunder kan hantera och driftsätta kod direkt från sina GitHub-databaser. Du kan till exempel skriva formulär i antingen [Google Sheets eller Microsoft Excel](/help/edge/docs/forms/create-forms.md) och formulärkomponenterna kan utvecklas med CSS och JavaScript i GitHub. När du är klar kan du använda [AEM Sidekick](/help/edge/docs/forms/tutorial.md#preview-and-publish-your-content) webbläsartillägg för att förhandsgranska och publicera innehållsuppdateringar.
+AEM Forms-Edge Delivery Services använder GitHub så att kunder kan hantera och driftsätta kod direkt från sina GitHub-databaser. Du kan till exempel skriva formulär i antingen [Google Sheets eller Microsoft Excel](/help/edge/docs/forms/create-forms.md) och formulärkomponenterna kan utvecklas med CSS och JavaScript i GitHub.
+
+När du är klar kan du använda [AEM Sidekick](/help/edge/docs/forms/tutorial.md#preview-and-publish-your-content), ett Chrome-tillägg för att förhandsgranska och publicera innehållsuppdateringar.
 
 ![Installera AEM Sidekick](/help/edge/assets/install-aem-sidekick.png)
 
 AEM Forms Edge Delivery Services innehåller ett blankettblock som kallas [Adaptivt Forms-block](/help/edge/docs/forms/create-forms.md) för att lägga till ett formulär på din Edge Delivery Services webbplats.
 
-Välj mellan [dokumentbaserad redigering](#document-based-authoring-features) och [AEM](#aem-authoring-features) beroende på dina specifika krav.
+Välj mellan [Dokumentbaserad redigering](#document-based-authoring-features) och [AEM](#aem-authoring-features) beroende på dina specifika krav.
 
-För enkla formulär som bara samlar in grundläggande information som namn och e-post (antyda att vi kontaktar oss formulär, formulär för leadgenerering eller formulär för serviceförfrågningar) och där du bara behöver data för att komma till ett kalkylblad, [Dokumentbaserad redigering](/help/edge/docs/forms/create-forms.md) passar perfekt. Du kan skapa dessa formulär på samma sätt som du skapar dokument i Google Docs.
+För enkla formulär som bara samlar in grundläggande information som namn och e-post (antyda att vi kontaktar oss formulär, formulär för leadgenerering eller formulär för serviceförfrågningar) och där du bara behöver data för att komma till ett kalkylblad, [Dokumentbaserad redigering](/help/edge/docs/forms/create-forms.md) passar perfekt. Du kan skapa dessa formulär på samma sätt som du skapar dokument i Google Sheets eller Microsoft Excel.
 
 Om formulären blir mer komplexa, som att kräva flera paneler, komplexa regler och logiska funktioner, datamanipulering, integrering med externa system eller smidiga arbetsflöden med AEM funktioner, kan du [AEM](/help/forms/creating-adaptive-form-core-components.md) är ett bättre alternativ.
 
 
 ### Viktiga funktioner för dokumentbaserad redigering och AEM
 
-Dokumentbaserad redigering har en grundläggande uppsättning funktioner och AEM kan frigöra ytterligare funktioner utöver dokumentbaserad redigering, vilket gör att du kan skapa mer komplexa och interaktiva formulär. De viktigaste funktionerna för både dokumentbaserad redigering och AEM:
+Dokumentbaserad redigering har en grundläggande uppsättning funktioner och AEM redigering ger möjlighet att skapa mer komplexa och interaktiva blanketter. De viktigaste funktionerna för både dokumentbaserad redigering och AEM:
 
 <!-- 
 
 >[!BEGINTABS]
 
->[!TAB Document-based authoring]
+>[!TAB Document-based Authoring ]
 
-Document-based authoring is a versatile option suitable for creating simple forms with essential functionalities. It allows you to integrate various input types like text fields, dropdown menus, and radio buttons, enabling you to collect user data effectively. It offers a basic version of rules to add dynamic behaviour to forms. Key features of Document-based authoring are: 
+Document-based Authoring  is a versatile option suitable for creating simple forms with essential functionalities. It allows you to integrate various input types like text fields, dropdown menus, and radio buttons, enabling you to collect user data effectively. It offers a basic version of rules to add dynamic behaviour to forms. Key features of Document-based Authoring  are: 
 
 * **[HTML5-based Form Field components](/help/edge/docs/forms/form-components.md)**: AEM Forms Edge Delivery Services allow you to create user-friendly and interactive forms using form components based on HTML5 [input types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types), <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldset</a>  elements. These components cater to different types of data collection and can be easily customized to fit your specific needs.  
 
@@ -79,7 +80,7 @@ Document-based authoring is a versatile option suitable for creating simple form
 
 >[!TAB AEM Authoring]
 
-AEM Authoring unlocks additional capabilities beyond the document-based authoring, empowering you to build more complex and interactive forms. In additon to the features of Document-based authoring, AEM authoring offers the following additional features:  
+AEM Authoring unlocks additional capabilities beyond the Document-based Authoring , empowering you to build more complex and interactive forms. In additon to the features of Document-based Authoring , AEM authoring offers the following additional features:  
 
 * Advanced Rules: Define logic-based actions within your forms. You can use rules to conditionally show or hide form sections, pre-populate fields based on user input, and perform various validations to ensure data integrity.
 
@@ -113,7 +114,7 @@ Med dokumentbaserad redigering kan du skapa formulär med välbekanta verktyg so
 
 #### AEM
 
-AEM Authoring (med Adaptive Forms Editor) har ett WYSIWYG-gränssnitt för att skapa formulär och har alla funktioner som finns i dokumentbaserad redigering, plus en mängd andra funktioner:
+AEM Authoring har ett WYSIWYG-gränssnitt (Adaptive Forms Editor) för att skapa formulär och har alla funktioner som finns i dokumentbaserad redigering, plus en mängd andra funktioner:
 
 * Avancerad regelredigerare för avancerad logik.
 * Utbyggbarhet på serversidan för anpassade funktioner.
@@ -129,7 +130,7 @@ AEM bygger i själva verket på grundvalen för dokumentbaserad redigering, vilk
 
 ### Redigeringsarbetsflöde
 
-![Dokumentbaserad redigering](/help/edge/assets/document-based-authoring-workflow.png)
+![Dokumentbaserad redigering ](/help/edge/assets/document-based-authoring-workflow.png)
 
 ![AEM](/help/edge/assets/aem-authoring-workflow.png)
 

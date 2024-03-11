@@ -5,7 +5,7 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: 0cf881a2-3784-45eb-afe8-3435e5e95cf4
-source-git-commit: 5cf8abe43987d145b302228877a38615f21ffd27
+source-git-commit: d91254b52c257a3758da200a2c74b736ca457884
 workflow-type: tm+mt
 source-wordcount: '803'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Skapa ett formulär med Adaptiv Forms Block
 
-AEM Forms Edge Delivery innehåller ett block, Adaptive Forms Block, som gör det enkelt att skapa formulär för inhämtning och lagring av inhämtade data. Du kan [skapa ett nytt AEM projekt förutrustat med Adaptive Forms Block](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-equipped-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project).
+AEM Forms Edge Delivery innehåller ett block, Adaptive Forms Block, som gör det enkelt att skapa formulär för inhämtning och lagring av inhämtade data. Du kan [skapa ett nytt AEM projekt förkonfigurerat med Adaptive Forms Block](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project).
 
 Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft Sharepoint för att enkelt bearbeta inskickade data eller starta ett befintligt arbetsflöde.
 
@@ -27,7 +27,7 @@ Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets
 
 Kontrollera att du har utfört följande steg innan du börjar:
 
-* Konfigurera en [AEM projekt med AEM Forms standardmall](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-equipped-with-adaptive-forms-block) eller [har lagt till adaptivt Forms-block i ditt befintliga AEM](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project) och klona motsvarande GitHub-databas på din lokala dator.
+* Konfigurera en [AEM projekt med AEM Forms standardmall](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [har lagt till adaptivt Forms-block i ditt befintliga AEM](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project) och klona motsvarande GitHub-databas på din lokala dator.
 I det här dokumentet kallas den lokala mappen i ditt Edge Delivery Services-projekt (EDS) `[EDS Project repository]`.
 * Se till att du har tillgång till Google Sheets eller Microsoft SharePoint. Information om hur du konfigurerar Microsoft SharePoint som innehållskälla finns i [Så här använder du Sharepoint](https://www.aem.live/docs/setup-customer-sharepoint).
 

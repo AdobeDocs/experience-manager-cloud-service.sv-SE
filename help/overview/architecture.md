@@ -2,7 +2,7 @@
 title: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service
 description: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service.
 exl-id: 3fe856b7-a0fc-48fd-9c03-d64c31a51c5d
-source-git-commit: 25af074bcb32e47732b27bacf10c8d3435299440
+source-git-commit: d91254b52c257a3758da200a2c74b736ca457884
 workflow-type: tm+mt
 source-wordcount: '2713'
 ht-degree: 7%
@@ -81,7 +81,7 @@ För innehållshantering finns det två huvuduppsättningar tjänster för utvec
 * AEM på författarnivå: Tillhandahåller ett webbaserat gränssnitt (med associerade API:er) för hantering av webbinnehåll. Detta gäller båda inriktningarna:
    * Headful - via Page editor and the Universal Editor
    * Headless - via Content Fragment editor
-* Den dokumentbaserade redigeringsnivån: Gör att du kan skapa innehåll med standardprogram som:
+* Dokumentbaserad redigeringsnivå: Gör att du kan skapa innehåll med hjälp av standardprogram, som:
    * Microsoft Word och Excel - via SharePoint
    * Google Docs and Sheets - via Google Drive
 
@@ -91,7 +91,7 @@ När det gäller upplevelseleverans finns det också två huvuduppsättningar tj
    * Kör en grupp med AEM förlag och utgivare, som möjliggör dynamisk återgivning av webbsidor och API-innehåll (t.ex. GraphQL) sammanställt med publicerat innehåll.
    * Bygger huvudsakligen på programlogik på serversidan.
 * The Edge Delivery Publish tier:
-   * Möjliggör dynamisk återgivning av webbsidor och API-innehåll från olika innehållskällor, till exempel AEM författarnivå eller dokumentbaserad redigeringsnivå.
+   * Möjliggör dynamisk återgivning av webbsidor och API-innehåll från olika innehållskällor, till exempel AEM Author-nivån eller dokumentbaserad redigeringsnivå.
    * Baseras på applikationslogik på klientsidan och är utformad för maximala prestanda.
 
 Där finns också de viktigaste närliggande tjänsterna:
@@ -158,7 +158,7 @@ AEM förhandsgranskningsnivå består av en enda AEM. Detta används för kvalit
 
 Edge Delivery Servicens ligger ovanpå ett CDN och serverlös infrastruktur för att sammanställa sidorna på det mest prestandaoptimerade sättet. När en resurs begärs ansvarar den serverlösa infrastrukturen för att konvertera det publicerade innehållet till semantiskt HTML och fungerar som ursprung för CDN.
 
-Konverteringen till semantisk HTML sker från det publicerade innehåll som hanteras från AEM eller dokumentbaserade redigeringsmiljön.
+Konverteringen till semantisk HTML görs från det publicerade innehåll som hanteras från AEM eller dokumentbaserad redigeringsmiljö.
 
 Följande diagram visar hur du kan redigera webbplatsinnehåll i Microsoft Word (dokumentbaserad redigering) och publicera på Edge Delivery. Det visar också den traditionella AEM publiceringsmetoden med olika redigerare.
 
