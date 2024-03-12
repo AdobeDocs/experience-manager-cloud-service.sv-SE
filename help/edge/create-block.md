@@ -2,9 +2,9 @@
 title: Skapa block som är instrumenterade för användning med den universella redigeraren
 description: Lär dig hur du skapar block som är instrumenterade för användning med den universella redigeraren AEM redigering med Edge Delivery Services.
 exl-id: 65a5600a-8d16-4943-b3cd-fe2eee1b4abf
-source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
+source-git-commit: bae9a5178c025b3bafa8ac2da75a1203206c16e1
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1205'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Den här handboken innehåller stegvisa instruktioner för hur du skapar block s
 
 Den här guiden kräver kunskaper om AEM med Edge Delivery Services och den universella redigeraren. Innan du börjar den här guiden bör du ha tillgång till Edge Delivery Services och känna till grunderna i den:
 
-* Du har slutfört [Edge Delivery Service - självstudiekurs.](/help/edge/developer/tutorial.md)
+Du har slutfört [Självstudiekurs om Edge Delivery Service.](/help/edge/developer/tutorial.md)
 * Du har tillgång till en [AEM Cloud Service sandlåda.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md)
 * Du har [har aktiverat den universella redigeraren i samma sandlådemiljö.](/help/implementing/universal-editor/getting-started.md)
 * Du har slutfört [Guiden Komma igång för utvecklare för AEM med Edge Delivery Services](/help/edge/edge-dev-getting-started.md) guide.

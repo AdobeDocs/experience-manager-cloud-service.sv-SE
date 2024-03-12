@@ -2,7 +2,7 @@
 title: Dataskydd och dataintegritet - beredskap för Adobe Experience Manager as a Cloud Service webbplatser
 description: Läs om Adobe Experience Manager as a Cloud Service Sites support for the various Data Protection and Data Privacy Regulations, including the EU General Data Protection Regulation (GDPR), the California Consumer Privacy Act and how to compliance when implementation a new AEM as a Cloud Service project.
 exl-id: fdcad111-0cdd-46cc-964c-3f8669ca2030
-source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
+source-git-commit: bae9a5178c025b3bafa8ac2da75a1203206c16e1
 workflow-type: tm+mt
 source-wordcount: '1001'
 ht-degree: 0%
@@ -223,10 +223,10 @@ Så här rensar du ContextHub-beständighet:
   ContextHub.Utils.Cookie.removeItem('cq-opt-out');
   
   // following call asks all currently loaded stores to clear their data
-  ContextHub.cleanAllStores ();
+  ContextHub.cleanAllStores();
   
   // following call asks all currently loaded stores to set back default values (provided in their configs)
-  ContextHub.resetAllStores ();
+  ContextHub.resetAllStores();
   ```
 
 * Så här rensar du ett visst beständigt lager, till exempel sessionStorage:

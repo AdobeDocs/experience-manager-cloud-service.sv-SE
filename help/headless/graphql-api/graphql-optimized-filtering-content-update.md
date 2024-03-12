@@ -2,7 +2,7 @@
 title: Uppdatera dina innehållsfragment för optimerad GraphQL-filtrering
 description: Lär dig hur du uppdaterar innehållsfragment för optimerad GraphQL-filtrering i Adobe Experience Manager as a Cloud Service för leverans av headless-innehåll.
 exl-id: 211f079e-d129-4905-a56a-4fddc11551cc
-source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
+source-git-commit: bae9a5178c025b3bafa8ac2da75a1203206c16e1
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Det finns krav för den här uppgiften:
       <td>Alla </td>
       <td> </td>
       <td>Variabel </td>
-      <td>Aktiverar (!=0) eller inaktiverar (0) utlösning av migreringsjobb för innehållsfragment. </td>
+      <td>Enables(!=0) eller inaktiverar(0) som utlöser migreringsjobb för innehållsfragment. </td>
      </tr>
      <tr>
       <td>2</td>
@@ -211,7 +211,7 @@ Det finns krav för den här uppgiften:
       <td>Alla </td>
       <td> </td>
       <td>Variabel </td>
-      <td>Inaktiverar (0) (eller Aktiverar (!)=0)) utlöser migreringsjobb för innehållsfragment. </td>
+      <td>Inaktiverar(0) (eller Enables(!)=0)) utlöser migreringsjobb för innehållsfragment. </td>
      </tr>
     </tbody>
    </table>

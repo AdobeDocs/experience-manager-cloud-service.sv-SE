@@ -5,9 +5,9 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: ecea1e05-d36b-4d63-af9d-c69dafd2f94f
-source-git-commit: 8ff0363fbb97aac85733fc9444819fa4d6f12805
+source-git-commit: bae9a5178c025b3bafa8ac2da75a1203206c16e1
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '989'
 ht-degree: 0%
 
 ---
@@ -79,16 +79,20 @@ AEM Authoring har ett WYSIWYG-gränssnitt (Adaptive Forms Editor) för att skapa
 
 I praktiken [AEM](/help/forms/creating-adaptive-form-core-components.md) bygger på grunden för [Dokumentbaserad redigering](/help/edge/docs/forms/create-forms.md), med en mer avancerad verktygslåda för att skapa och hantera komplexa formulär.
 
+>[!NOTE]
+>
+>
+> Funktionen AEM kan användas i ett program som är tidigt för att antas. Om du är intresserad kan du skicka ett snabbt e-postmeddelande från din arbetsadress till aem-forms-ea@adobe.com och begära åtkomst till funktionen.
+
 ### AEM Forms-Edge Delivery Services: Redigering. Publicering och inlämning av Forms
 
 I följande diagram illustreras hur man skapar, publicerar och skickar in blanketter med dokumentbaserad redigering och AEM.
 
-
-
-
 ![Dokumentbaserad redigering ](/help/edge/assets/document-based-authoring-workflow.png)
 
 ![AEM](/help/edge/assets/aem-authoring-workflow.png)
+
+
 
 
 ## Börja skapa formulär
@@ -101,6 +105,17 @@ I följande diagram illustreras hur man skapar, publicerar och skickar in blanke
 * [Lägga till repeterbara avsnitt i ett &#x200B;](/help/edge/docs/forms/repeatable-forms.md)
 * [Visa ett anpassat tackmeddelande efter att formuläret har skickats &#x200B;](/help/edge/docs/forms/thank-you-page-form.md)
 * [Komponenter för adaptiva formulärblock och deras egenskaper](/help/edge/docs/forms/form-components.md)
+
+
+
+
+
+
+
+
+
+
+
 
 
 

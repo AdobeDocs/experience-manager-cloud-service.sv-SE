@@ -5,7 +5,7 @@ feature: Adaptive Forms, Foundation Components
 role: User
 level: Intermediate
 exl-id: 0cd38edb-2201-4ca6-8b84-6b5b7f76bd90
-source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
+source-git-commit: bae9a5178c025b3bafa8ac2da75a1203206c16e1
 workflow-type: tm+mt
 source-wordcount: '1048'
 ht-degree: 0%
@@ -89,7 +89,7 @@ Viktiga punkter att tänka på när du utvecklar skript för lazy loading-panele
 * Använd den globalt tillgängliga egenskapen för fält för att göra värden för fält som finns i en lat inläsningspanel tillgängliga för alla andra paneler i ett formulär.
 * Vidarebefordra inte referensvärdet för ett fält i en lat panel oavsett om fältet markeras globalt över fragment eller inte.
 * Använd panelåterställningsfunktionen för att återställa allt som visas på panelen med följande klickuttryck.\
-  guideBridge.resolveNode(guideBridge.getFocus ({&quot;focusOption&quot;: &quot;navigablePanel&quot;})).resetData()
+  guideBridge.resolveNode(guideBridge.getFocus({&quot;focusOption&quot;: &quot;navigablePanel&quot;})).resetData()
 
 
 ## Se även {#see-also}

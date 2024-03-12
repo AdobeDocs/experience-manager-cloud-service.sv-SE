@@ -4,9 +4,9 @@ description: Den här självstudiekursen hjälper dig att komma igång med ett n
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: 4144f9704aaf17ea684be147395adc3aa31641f2
+source-git-commit: bae9a5178c025b3bafa8ac2da75a1203206c16e1
 workflow-type: tm+mt
-source-wordcount: '1854'
+source-wordcount: '1850'
 ht-degree: 0%
 
 ---
@@ -18,12 +18,9 @@ I dagens digitala samhälle är det viktigt för alla företag att skapa använd
 
 Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft SharePoint för att enkelt bearbeta inlämnade data eller starta ett befintligt arbetsflöde.
 
-AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa formulär för att hämta in och lagra inhämtade data. Du kan skapa ett nytt AEM projekt förkonfigurerat med Adaptivt Forms-block eller lägga till det adaptiva Forms-blocket i ett befintligt AEM.
+AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa formulär för att hämta in och lagra inhämtade data. Du kan [skapa ett nytt AEM projekt förkonfigurerat med Adaptive Forms Block](#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM](#add-adaptive-forms-block-to-your-existing-aem-project).
 
-Den här AEM Forms-självstudiekursen guidar dig genom att skapa, förhandsgranska och publicera egna anpassade formulär med ett nytt Adobe Experience Manager (AEM) Forms-projekt. Du får också lära dig att lägga till adaptiva Forms-block i ett befintligt AEM.
-
-* **[Skapa ett nytt AEM projekt förkonfigurerat med Adaptive Forms Block](#create-a-new-eds-project-pre-configured-with-adaptive-forms-block)**
-* **[Lägg till adaptivt Forms-block i ett befintligt AEM](#add-adaptive-forms-block-to-an-existing-eds-project)**
+Den här AEM Forms-självstudiekursen guidar dig genom att skapa, förhandsgranska och publicera egna anpassade formulär med ett nytt Adobe Experience Manager (AEM) Forms-projekt.
 
 
 
@@ -79,11 +76,11 @@ Med AEM Forms-mallen för mallar kommer du snabbt igång med ett AEM projekt som
 
 ### Länka din egen innehållskälla
 
-Din nya GitHub-databas pekar på [exempelinnehåll som lagras i en Google Drive-mapp](https://drive.google.com/drive/folders/17LSiMZC77N8tCJRW45TnHHGcG8V3SLG_). Det här skrivskyddade innehållet är en bra utgångspunkt för dina formulär. Du kan kopiera det till din egen Google Drive och anpassa det efter dina behov.
+Din nya GitHub-databas pekar på [exempelinnehåll som lagras i en Google Drive-mapp](https://drive.google.com/drive/folders/1bvjfi6TqpYA7DvbX6kKc-m7FgHuJ4RUQ). Det här skrivskyddade innehållet är en bra utgångspunkt för dina formulär. Du kan kopiera det till din egen Google Drive och anpassa det efter dina behov.
 
 ![Exempelinnehåll på Google Drive](/help/edge/assets/folder-with-sample-content.png)
 
-Så här kopierar du exempelinnehållet till din egen innehållsmapp och placerar din GitHub-databas i din egen innehållsmapp:
+Så här kopierar du exempelinnehållet till din egen innehållsmapp och pekar din GitHub-databas mot din egen innehållsmapp:
 
 1. Skapa en ny mapp specifikt för ditt AEM innehåll i Google Drive eller Microsoft SharePoint. I det här dokumentet används en mapp som har skapats i Microsoft SharePoint.
 
@@ -194,8 +191,6 @@ Så här förhandsgranskar du opublicerat innehåll:
 
    Om projektdatabasen till exempel heter&quot;weFinance&quot; finns den under kontoägaren&quot;wkndforms&quot; (wkndforms)&quot; (wkndforms) och du använder huvudgrenen är URL:en:
 
-
-
    [https://main—weFinance—wkndforms.hlx.page](https://main--wefinance--wkndforms.hlx.page).
 
 ### Skapa ett formulär
@@ -274,9 +269,16 @@ Grattis! Du har konfigurerat den lokala utvecklingsmiljön och distribuerat änd
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427789)
 
-Om du har ett befintligt AEM kan du integrera det adaptiva Forms-blocket i ditt aktuella projekt för att komma igång med att skapa formulär. Integrera:
+Om du har ett befintligt AEM kan du integrera det adaptiva Forms-blocket i ditt aktuella projekt för att komma igång med att skapa formulär.
 
-1. Klona det adaptiva Forms-blockarkivet: https://github.com/adobe-rnd/aem-boilerplate-forms till din dator.
+>
+>
+>
+> Det här steget gäller projekt som byggts med [AEM](https://github.com/adobe/aem-boilerplate). Om du skapade AEM med [AEM Forms Boilerplate](https://github.com/adobe-rnd/aem-boilerplate-forms)kan du hoppa över det här steget.
+
+Integrera:
+
+1. Clone the Adaptive Forms Block: [https://github.com/adobe-rnd/aem-boilerplate-forms](https://github.com/adobe-rnd/aem-boilerplate-forms) till datorn.
 
 1. I den hämtade mappen finns `blocks/form` mapp. Kopiera mappen. Gå nu till AEM `blocks` och klistra in den kopierade formulärmappen här.
 

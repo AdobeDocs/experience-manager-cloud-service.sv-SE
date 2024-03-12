@@ -2,7 +2,7 @@
 title: Utveckla en anpassad komponent för skärmar as a Cloud Service
 description: I följande självstudiekurs går du igenom stegen för att skapa en anpassad komponent för AEM Screens. AEM Screens återanvänder många befintliga designmönster och tekniker från andra AEM produkter. I självstudiekursen beskrivs skillnader och speciella överväganden när du utvecklar för AEM Screens.
 exl-id: fe8e7bf2-6828-4a5a-b650-fb3d9c172b97
-source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
+source-git-commit: bae9a5178c025b3bafa8ac2da75a1203206c16e1
 workflow-type: tm+mt
 source-wordcount: '2042'
 ht-degree: 0%
@@ -478,7 +478,7 @@ public class MyCustomHandler extends AbstractResourceHandler {
   */
  @Nonnull
  @Override
- public String[] getSupportedResourceTypes () {
+ public String[] getSupportedResourceTypes() {
      return new String[] { … };
  }
 

@@ -2,7 +2,7 @@
 title: Översikt över Experience Fragments
 description: Bygg ut Adobe Experience Manager as a Cloud Service Experience Fragments.
 exl-id: bd4ea763-d17c-40a6-9a86-a24d7600229e
-source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
+source-git-commit: bae9a5178c025b3bafa8ac2da75a1203206c16e1
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 0%
@@ -254,7 +254,7 @@ Till exempel:
 ```java
 @Override
 public boolean shouldRewrite(ExperienceFragmentVariation experienceFragment) {
-    return experienceFragment.getPath().equals ("/content/experience-fragment/master");
+    return experienceFragment.getPath().equals("/content/experience-fragment/master");
 }
 ```
 

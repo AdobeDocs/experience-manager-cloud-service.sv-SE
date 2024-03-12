@@ -2,7 +2,7 @@
 title: Testning av kodkvalitet
 description: Lär dig hur kodkvalitetstestning av rörledningar fungerar och hur det kan förbättra kvaliteten på dina distributioner.
 exl-id: e2981be9-fb14-451c-ad1e-97c487e6dc46
-source-git-commit: 53a66eac5ca49183221a1d61b825401d4645859e
+source-git-commit: bae9a5178c025b3bafa8ac2da75a1203206c16e1
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 0%
@@ -87,7 +87,7 @@ private static final String PROP_SERVICE_PASSWORD = "password";
 SonarQube utlöser då en sårbarhet som kan leda till blockering. Men när du har granskat koden inser du att detta inte är någon sårbarhet och kan kommentera koden med rätt regel-ID.
 
 ```java
-@SuppressWarnings ("squid:S2068")
+@SuppressWarnings("squid:S2068")
 @Property(label = "Service Password")
 private static final String PROP_SERVICE_PASSWORD = "password";
 ```
