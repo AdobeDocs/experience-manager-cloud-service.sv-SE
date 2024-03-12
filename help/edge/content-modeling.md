@@ -1,13 +1,13 @@
 ---
 title: Innehållsmodellering för AEM med Edge Delivery Services Projects
 description: Lär dig hur innehållsmodellering fungerar AEM redigering med projekt för Edge Delivery Services och hur du modellerar eget innehåll.
-source-git-commit: e9c882926baee001170bad2265a1085e03cdbedf
+exl-id: e68b09c5-4778-4932-8c40-84693db892fd
+source-git-commit: 22a631d394de1c0fb934d9703e966c8287aef391
 workflow-type: tm+mt
-source-wordcount: '2097'
+source-wordcount: '2095'
 ht-degree: 0%
 
 ---
-
 
 # Innehållsmodellering för AEM med Edge Delivery Services Projects {#content-modeling}
 
@@ -351,7 +351,7 @@ Allt annat återges som oformaterad text.
 
 #### Dölj fält {#field-collapse}
 
-Fältkomprimering är den mekanism som används för att kombinera flera fältvärden till ett enda semantiskt element baserat på en namnkonvention med suffix `Title`, `Type`, `Alt`och `Text` (alla skiftlägeskänsliga). Egenskaper som slutar med något av dessa suffix betraktas inte som ett värde, utan som ett attribut för en annan egenskap.
+Fältkomprimering är den mekanism som används för att kombinera flera fältvärden till ett enda semantiskt element baserat på en namnkonvention med suffix `Title`, `Type`, `MimeType`, `Alt`och `Text` (alla skiftlägeskänsliga). Egenskaper som slutar med något av dessa suffix betraktas inte som ett värde, utan som ett attribut för en annan egenskap.
 
 ##### Bilder {#image-collapse}
 
@@ -624,7 +624,13 @@ Kontrollera att kalkylbladet läggs till i sökvägsmappningen innan du publicer
 
 ### Sidegenskaper {#page-properties}
 
-Du kan också definiera en komponentmodell för sidmetadata, som kommer att vara tillgänglig för författaren som en flik i dialogrutan AEM Sites sidegenskaper.
+Många av de standardsidegenskaper som är tillgängliga i AEM mappas till respektive sidmetadata i ett dokument. Till exempel `title`, `description`, `robots`, `canonical url` eller `keywords`. Vissa AEM-specifika egenskaper är också tillgängliga:
+
+* `cq:lastModified` as `modified-time` i ISO8601-format
+* Den tidpunkt då dokumentet senast publicerades som `published-time` i ISO8601-format
+* `cq:tags` as `cq-tags` som kommaseparerad lista med tagg-ID:n.
+
+Det går också att definiera en komponentmodell för anpassade sidmetadata, som kommer att göras tillgänglig för författaren som en flik i dialogrutan AEM Sites sidegenskaper.
 
 Om du vill göra det skapar du en komponentmodell med ID:t `page-metadata`.
 
@@ -633,15 +639,10 @@ Om du vill göra det skapar du en komponentmodell med ID:t `page-metadata`.
   "id": "page-metadata",
   "fields": [
     {
-      "component": "text-input",
+      "component": "text",
       "name": "theme",
       "label": "Theme"
     }
   ]
 }
 ```
-
-Det finns ett fåtal fältnamn som har en speciell betydelse och som kommer att hoppas över när redigeringsgränssnittet visas:
-
-* **`cq:tags`** - Som standard `cq:tags` läggs inte till i metadata. Lägga till dem i `page-metadata` modellen lägger till tagg-ID:n som en kommaseparerad lista som en `tags` meta-tagg till huvudet.
-* **`cq:lastModified`** - `cq:lastModified` lägger till data som `last-modified` till huvudet.
