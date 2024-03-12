@@ -1,18 +1,18 @@
 ---
-title: Konfigurera tacksidan eller omdirigeringsformuläret efter att du skickat det
+title: Visa ett anpassat tackmeddelande efter att formuläret har skickats
 description: Lär dig konfigurera tacksidor och omdirigering för Forms Block för att optimera användarupplevelsen och effektivisera användarresorna.
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: e6c66b22-dc52-49e3-a920-059adb5be22f
-source-git-commit: bae9a5178c025b3bafa8ac2da75a1203206c16e1
+source-git-commit: 6d4b194d17cc27a6a8596825401dc723bebe7b27
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '195'
 ht-degree: 2%
 
 ---
 
-# Visa tacksidan eller omdirigeringsformuläret efter att du skickat in det
+# Visa ett anpassat tackmeddelande efter att formuläret har skickats
 
 När en användare har skickat in ett formulär är det viktigt att kunna erbjuda en smidig upplevelse genom ett tackmeddelande. Detta bekräftar inte bara att ansökan har lämnats in utan även att det ger nöjdare användare och ytterligare vägledning under kundresan.
 

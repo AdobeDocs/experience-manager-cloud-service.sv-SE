@@ -5,9 +5,9 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: dcb16da1-dcc2-4529-8859-0716e727b54d
-source-git-commit: 4144f9704aaf17ea684be147395adc3aa31641f2
+source-git-commit: 6d4b194d17cc27a6a8596825401dc723bebe7b27
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,10 @@ När du är redo att dela formuläret med dina kunder för datainsamling eller i
 
 ## Krav
 
-* The [Adaptivt Forms-block är aktiverat för ditt EDS-projekt på GitHub](/help/edge/docs/forms/create-forms.md).
+* Du har ett AEM projekt baserat på [AEM Forms boilerplate](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [har lagt till Adaptive Forms Block i ditt befintliga AEM](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project)
 * Formuläret är fullständigt testat och klart att användas.
 * Dina [kalkylbladet har konfigurerats](/help/edge/docs/forms/submit-forms.md) för att ta emot data.
+
 
 ## Publicera formuläret
 
@@ -74,7 +75,9 @@ Så här lägger du till formuläret på din webbsida:
 
    | Formulär |
    |---|
-   | [https://main—portal—wkndforms.hlx.live/inquiry.json](https://main--portal--wkndforms.hlx.live/enquiry.json) |
+   | [https://main—weFinance—wkndforms.hlx.live/inquiry.json](https://main--wefinance--wkndforms.hlx.live/enquiry.json) |
+
+   ![Lägg till ett block med namnet &#39;Formulär&#39; i filen](/help/edge/assets/enquiry-doc-to-embed-form.png)
 
    Det här blocket fungerar som en platshållare där formuläret är inbäddat. Lägg till URL:en för `<form>.json` som en hyperlänk.
 
@@ -86,16 +89,16 @@ Så här lägger du till formuläret på din webbsida:
    Använd URL:en för förhandsgranskning (.page URL) för utvecklings- eller teständamål, eller publicerings-URL:en (.live) för produktion. Här är några exempel på förhandsgransknings- och publicerings-URL:
 
    **Förhandsgranska URL**
-| Formulär | |—| | [https://main—portal—wkndforms.hlx.page/inquiry.json](https://main--portal--wkndforms.hlx.page/enquiry.json)  |
+| Formulär | |—| | [https://main—weFinance—wkndforms.hlx.page/inquiry.json](https://main--wefinance--wkndforms.hlx.page/enquiry.json)  |
 
 
    **Publicera URL**
-| Formulär | |—| | [https://main—portal—wkndforms.hlx.live/inquiry.json](https://main--portal--wkndforms.hlx.live/enquiry.json)  |
+| Formulär | |—| | [https://main—weFinance—wkndforms.hlx.live/inquiry.json](https://main--wefinance--wkndforms.hlx.live/enquiry.json)  |
 
 1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska webbsidan. Formuläret visas nu på sidan. Här är till exempel formuläret baserat på [frågekalkylblad](https://docs.google.com/spreadsheets/d/196lukD028RDK_evBelkOonPxC7w0l_IiJ-Yx3DvMfNk/edit#gid=0):
 
 
-   [![Ett exempel på ett EDS-formulär](/help/edge/assets/eds-form.png)](https://main--portal--wkndforms.hlx.live/)
+   ![Ett exempel på ett EDS-formulär](/help/edge/assets/eds-form.png)
 
 1. Använd AEM Sidekick för att publicera formuläret. Nu kan kunderna fylla i formuläret och skicka in det.
 

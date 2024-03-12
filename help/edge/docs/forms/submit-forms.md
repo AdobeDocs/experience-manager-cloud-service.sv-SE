@@ -5,9 +5,9 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: 0643aee5-3a7f-449f-b086-ed637ae53b5a
-source-git-commit: 4144f9704aaf17ea684be147395adc3aa31641f2
+source-git-commit: 6d4b194d17cc27a6a8596825401dc723bebe7b27
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '994'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 # Förbered kalkylbladet för att ta emot data
 
 
-En gång har du [skapade och förhandsvisade formuläret](/help/edge/docs/forms/create-forms.md)är det dags att aktivera motsvarande kalkylblad så att det kan börja ta emot data.
+En gång har du [skapade och förhandsvisade formuläret](/help/edge/docs/forms/create-forms.md)är det dags att aktivera motsvarande kalkylblad så att det kan börja ta emot data. Du kan manuellt aktivera kalkylbladet för att ta emot data eller använda admin-API:er för att aktivera ett kalkylblad för att ta emot data.
 
 ![Dokumentbaserat redigeringssystem](/help/edge/assets/document-based-authoring-workflow-enable-sheet-to-accept-data.png)
 
@@ -24,7 +24,10 @@ En gång har du [skapade och förhandsvisade formuläret](/help/edge/docs/forms/
 
 -->
 
-Aktivera kalkylbladet:
+
+## Aktivera kalkylbladet manuellt för att ta emot data
+
+Aktivera att kalkylbladet accepterar data
 
 1. Öppna kalkylbladet som innehåller formuläret och lägg till ett nytt blad och ge det ett nytt namn `incoming`.
 
@@ -61,8 +64,7 @@ När bladet har konfigurerats för att ta emot data kan du [förhandsgranska for
 >
 >  De ska aldrig innehålla någon personligt identifierbar information eller känsliga data som du inte känner till om de är tillgängliga för allmänheten.
 
-
-## (Valfritt) Använd admin-API:er för att aktivera ett kalkylblad som accepterar data
+### Använd admin-API:er för att aktivera ett kalkylblad som accepterar data
 
 Du kan också skicka en begäran om POST till formuläret så att det kan ta emot data och konfigurera rubriker för `incoming` blad. När tjänsten tar emot en begäran om POST analyserar tjänsten innehållet i begäran och skapar automatiskt de huvuden och ark som behövs för datainhämtning.
 
@@ -151,7 +153,6 @@ Så här använder du Admin API:er för att aktivera ett kalkylblad för att ta 
    Formuläret är nu aktiverat för att ta emot data. Du kan även se följande ändringar i kalkylbladet:
 
 ## Automatiska ändringar i bladet när det har aktiverats för att ta emot data.
-
 
 När kalkylbladet är inställt på att ta emot data kan du se följande ändringar i kalkylbladet:
 
@@ -284,7 +285,7 @@ Det finns olika sätt att formatera formulärdata i POSTENS brödtext. Du kan an
     https://main--portal--wkndforms.hlx.live/contact-us
   ```
 
-Sedan kan du anpassa tackmeddelandet, [konfigurera en tacksida](/help/edge/docs/forms/thank-you-page-form.md), eller [ange omdirigeringar](/help/edge/docs/forms/thank-you-page-form.md).
+Nu kan du [anpassa tackmeddelandet](/help/edge/docs/forms/thank-you-page-form.md).
 
 ## Se även
 
