@@ -4,7 +4,7 @@ description: Den här självstudiekursen hjälper dig att komma igång med ett n
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
-source-git-commit: bae9a5178c025b3bafa8ac2da75a1203206c16e1
+source-git-commit: d0298f3c15264bfa7421ccf0cde752f164829c02
 workflow-type: tm+mt
 source-wordcount: '1850'
 ht-degree: 0%
@@ -124,7 +124,7 @@ Så här kopierar du exempelinnehållet till din egen innehållsmapp och pekar d
       Om du använder Microsoft SharePoint har mappsökvägen följande format:
 
       ```HTML
-      https://<tenant>.SharePoint.com/sites/  <sp-site>/Shared%20Documents/<folder-name>
+      https://<tenant>.SharePoint.com/sites/<sp-site>/Shared%20Documents/<folder-name>
       ```
 
       Exempel:
@@ -271,7 +271,7 @@ Grattis! Du har konfigurerat den lokala utvecklingsmiljön och distribuerat änd
 
 Om du har ett befintligt AEM kan du integrera det adaptiva Forms-blocket i ditt aktuella projekt för att komma igång med att skapa formulär.
 
->
+>[!NOTE]
 >
 >
 > Det här steget gäller projekt som byggts med [AEM](https://github.com/adobe/aem-boilerplate). Om du skapade AEM med [AEM Forms Boilerplate](https://github.com/adobe-rnd/aem-boilerplate-forms)kan du hoppa över det här steget.

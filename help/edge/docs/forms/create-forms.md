@@ -5,9 +5,9 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: 0cf881a2-3784-45eb-afe8-3435e5e95cf4
-source-git-commit: 6d4b194d17cc27a6a8596825401dc723bebe7b27
+source-git-commit: d0298f3c15264bfa7421ccf0cde752f164829c02
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '806'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,8 @@ Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets
 
 ![Dokumentbaserat redigeringssystem](/help/edge/assets/document-based-authoring-workflow-create-form.png)
 
+
+![VIDEO](https://video.tv.adobe.com/v/3427881?quality=12&learn=on)
 
 
 
