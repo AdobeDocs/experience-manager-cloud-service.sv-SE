@@ -2,10 +2,8 @@
 title: Lägga till repeterbara avsnitt i ett formulär
 description: Lägga till repeterbara avsnitt i ett EDS-formulär
 feature: Edge Delivery Services
-hide: true
-hidefromtoc: true
 exl-id: 062d5a88-48ca-421f-bf0d-1483e3cfee28
-source-git-commit: 4144f9704aaf17ea684be147395adc3aa31641f2
+source-git-commit: b32e04dec83992ebfcea7874932a5ab77a1eaa70
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 0%
@@ -17,8 +15,6 @@ ht-degree: 0%
 Med adaptiva Forms-block kan du lägga till eller göra ett avsnitt eller en komponent i ett formulär upprepningsbart. På så sätt kan användare ange information flera gånger för samma typ av data, vilket gör det enklare att samla in information som arbetserfarenhet eller utbildningsbakgrund.
 
 Ta till exempel ett formulär som används för att samla in information om en persons arbetsupplevelse. Du kan ha ett upprepningsbart avsnitt där du kan hämta information om varje föregående jobb. Det repeterbara avsnittet innehåller vanligtvis fält som företagsnamn, befattning, anställningsdatum och ansvarsområden. Användaren kan lägga till flera instanser av det repeterbara avsnittet för att ange information om varje jobb som han/hon har utfört.
-
-
 
 I slutet av den här artikeln lär du dig att:
 

@@ -2,12 +2,10 @@
 title: Översikt över AEM Forms-Edge Delivery Services
 description: AEM Forms Edge Delivery Services som tagits fram för bästa prestanda och som gör det möjligt att förutse framtiden för smidig datainsamling och användarengagemang.
 feature: Edge Delivery Services
-hide: true
-hidefromtoc: true
 exl-id: ecea1e05-d36b-4d63-af9d-c69dafd2f94f
-source-git-commit: f4cf79e2cd71a390741987cfcf034e6eed02432d
+source-git-commit: b32e04dec83992ebfcea7874932a5ab77a1eaa70
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
@@ -20,7 +18,7 @@ Med de här tjänsterna kan du:
 
 * **Skapa registreringsupplevelser med valfria verktyg:** Öka redigeringseffektiviteten genom att frikoppla innehållskällor. Nu kan du använda både dokumentbaserad redigering (Microsoft SharePoint eller Google Drive) och AEM (Adaptiv Forms Editor). Du kan arbeta med flera innehållskällor på samma formulärwebbplats och använda redigeringsverktyg som Microsoft Excel, Google Sheets eller Adaptiv Forms Editor.
 
-* **Leverera enastående digitala registreringsupplevelser:** Leverera digitala registreringsupplevelser som läses in och återges snabbt. Snabbare inläsningstider och optimerad användarupplevelse bidrar till att fler formulär fylls i och konverteras.
+* **Leverera enastående digitala registreringsupplevelser:** Leverera digitala registreringsupplevelser som läser in och renderar snabbt och kontinuerligt med övervakning av formulärens prestanda med hjälp av RUM (Real User Monitoring). Snabbare inläsningstider och optimerad användarupplevelse bidrar till att fler formulär fylls i och konverteras.
 
 * **Använd utvecklarvänliga verktyg:** AEM Forms Edge Delivery Services använder oformaterad HTML, modern CSS och vanilj-JavaScript för att skapa exceptionella upplevelser och undvika den branta inlärningskurvan i ett specifikt ramverk. En utvecklare med grundläggande webbutvecklingskunskaper kan anpassa och enkelt bygga formulärkomponenter och upplevelser. Du behöver inte vänta på att en pipeline ska köras, du behöver bara checka in koden i GitHub så att ändringarna blir aktuella.
 
@@ -62,6 +60,7 @@ Med dokumentbaserad redigering kan du skapa formulär med välbekanta verktyg so
 * Integrering med Google reCAPTCHA för skräppostskydd.
 * Möjlighet att skapa anpassade blankettkomponenter för specifika behov.
 * Skicka formulärdata direkt till Microsoft Excel- eller Google-blad eller e-postadresser.
+* Övervaka formulärens prestanda med hjälp av övervakning av användare (RUM)
 
 #### AEM
 
@@ -92,9 +91,6 @@ I följande diagram illustreras hur man skapar, publicerar och skickar in blanke
 
 ![AEM](/help/edge/assets/aem-authoring-workflow.png)
 
-
-
-
 ## Börja skapa formulär
 
 * [Kom igång med AEM Forms Edge Delivery Services](/help/edge/docs/forms/tutorial.md)
@@ -105,20 +101,7 @@ I följande diagram illustreras hur man skapar, publicerar och skickar in blanke
 * [Lägga till repeterbara avsnitt i ett &#x200B;](/help/edge/docs/forms/repeatable-forms.md)
 * [Visa ett anpassat tackmeddelande efter att formuläret har skickats &#x200B;](/help/edge/docs/forms/thank-you-page-form.md)
 * [Komponenter för adaptiva formulärblock och deras egenskaper](/help/edge/docs/forms/form-components.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* [Användarövervakning i realtid](https://www.aem.live/developer/rum#authentication)
 
 <!-- 
 
