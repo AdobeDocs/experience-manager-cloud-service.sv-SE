@@ -4,9 +4,9 @@ description: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manage
 role: Admin, Developer, User
 feature: Adaptive Forms
 exl-id: 12877a77-094f-492a-af58-cffafecf79ae
-source-git-commit: 1ec17aebe4eb003b24f5036288a8836aabddb77a
+source-git-commit: e84d3ad2d7b549092ab7c616bead2f14f59be8c9
 workflow-type: tm+mt
-source-wordcount: '2718'
+source-wordcount: '2717'
 ht-degree: 0%
 
 ---
@@ -220,10 +220,21 @@ AEM Forms som Cloud Service har en dockningsbaserad SDK-miljö för enklare utve
 
 1. Öppna kommandotolken och navigera till `aem-forms-addon-native-<version>` mapp.
 
-1. Kontrollera att den lokala AEM Author-instansen körs. Kör följande kommando för att starta SDK:
+1. Kontrollera att den lokala AEM Author-instansen körs. Kör följande kommandon för att starta SDK:
 
-   * (i Microsoft® Windows) `sdk.bat start`
-   * (i Linux® eller Apple macOS) `AEM_HOME=[local AEM Author installation] ./sdk.sh start`
+   * På Microsoft® Windows
+
+     ```shell
+     sdk.bat start
+     ```
+
+
+   * Linux® eller Apple macOS
+
+   ```Shell
+       export AEM_HOME=[local AEM Author installation]
+       ./sdk.sh start
+   ```
 
    >[!NOTE]
    >
