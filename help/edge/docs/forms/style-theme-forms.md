@@ -3,14 +3,15 @@ title: Anpassa tema och stil för ett AEM Forms Edge Delivery ServicesFormulär
 description: Anpassa tema och stil för ett AEM Forms Edge Delivery ServicesFormulär
 feature: Edge Delivery Services
 exl-id: c214711c-979b-4833-9541-8e35b2aa8e09
-source-git-commit: b32e04dec83992ebfcea7874932a5ab77a1eaa70
+source-git-commit: 5eee563a9a425ef187afed69a8159d8b1298dad7
 workflow-type: tm+mt
-source-wordcount: '2012'
+source-wordcount: '2014'
 ht-degree: 0%
 
 ---
 
-# Formatera formulärfält
+
+# Anpassa utseendet på formulären
 
 Forms är avgörande för användarinteraktion på webbplatser, så att de kan mata in data. Du kan använda CSS (Cascading Style Sheets) för att formatera fält i ett formulär, förbättra den visuella presentationen av formulären och förbättra användarupplevelsen.
 
@@ -262,7 +263,7 @@ Följande CSS visar några exempel på CSS-väljare för nedrullningsbara kompon
 
 Ungdomsgrupper har en egen HTML-struktur och CSS-struktur, ungefär som i listrutekomponenter:
 
-+++ Struktur för Radio Group HTML
++++ Radiogruppens struktur i HTML
 
 ```HTML
 <fieldset class="radio-group-wrapper field-{Name} field-wrapper" id="{FieldId}" name="{Name}" data-required="{Required}">
@@ -300,7 +301,7 @@ Ungdomsgrupper har en egen HTML-struktur och CSS-struktur, ungefär som i listru
 
 +++
 
-+++ CSS-väljare för nedrullningskomponent
++++ CSS-väljare för alternativknappar
 
 * Ange fältuppsättningen
 
@@ -334,7 +335,7 @@ Den här väljaren anger alla fältuppsättningar med klassen Radio-Group-wrappe
 
 ### Kryssrutegrupper
 
-+++ Struktur för kryssrutegrupp HTML
++++ HTML Struktur för kryssrutegrupp
 
 ```HTML
 <fieldset class="checkbox-group-wrapper field-{Name} field-wrapper" id="{FieldId}" name="{Name}" data-required="{Required}">
@@ -370,7 +371,7 @@ Den här väljaren anger alla fältuppsättningar med klassen Radio-Group-wrappe
 
 +++
 
-+++ Exempel på CSS-väljare för alternativknappar och kryssrutegrupper**
++++ CSS-väljare för kryssrutegrupper
 
 * Inriktning för ytteromslutningen: Dessa väljare är avsedda för de yttre behållarna för både alternativknappar och kryssrutegrupper, vilket gör att du kan använda allmänna format för hela gruppstrukturen. Det här är användbart när du vill ange avstånd, justering eller andra layoutrelaterade egenskaper.
 
@@ -798,7 +799,7 @@ Du kan formatera formulärfält baserat på deras specifika typ (`{Type}-wrapper
 
 Du kan använda CSS-väljare för att ange specifika fälttyper och använda format på ett konsekvent sätt.
 
-**HTML struktur**
++++ HTML struktur
 
 ```HTML
 <div class="{Type}-wrapper field-{Name} field-wrapper" data-required={Required}>
@@ -837,8 +838,10 @@ Du kan använda CSS-väljare för att ange specifika fälttyper och använda for
 * Varje fält har en motsvarande etikett, indataelement och eventuella ytterligare element som platshållare och beskrivningar.
 
 
++++
 
-**Exempel på CSS-väljare**
+
++++ Exempel på CSS-väljare
 
 ```CSS
 /* Target all text input fields */
@@ -853,13 +856,13 @@ Du kan använda CSS-väljare för att ange specifika fälttyper och använda for
 }
 ```
 
-
++++
 
 ### Formatering baserad på fältnamn
 
 Du kan också ange enskilda fält som mål efter namn för att använda unika format.
 
-**HTML struktur**
++++ HTML struktur
 
 ```HTML
 <div class="{Type}-wrapper field-{Name} field-wrapper" data-required={Required}>
@@ -883,7 +886,9 @@ Du kan också ange enskilda fält som mål efter namn för att använda unika fo
 </div>
 ```
 
-**Exempel på CSS-väljare**
++++
+
++++ Exempel på CSS-väljare
 
 ```CSS
 .field-otp input {
@@ -891,7 +896,11 @@ Du kan också ange enskilda fält som mål efter namn för att använda unika fo
 }
 ```
 
+
+
 Den här CSS-koden riktar in alla indataelement som finns i ett element som har klassen `field-otp`. Formulärets HTML-struktur följer konventionerna i det adaptiva Forms-blocket, vilket innebär att det finns en behållare som är markerad med klassen&quot;field-out&quot; som innehåller fältet med namnet&quot;otp&quot;.
+
++++
 
 ## Se även
 

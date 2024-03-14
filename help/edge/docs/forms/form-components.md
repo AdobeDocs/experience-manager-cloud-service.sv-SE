@@ -1,16 +1,16 @@
 ---
-title: Formulärkomponenter och -egenskaper
+title: Komponenter för adaptiva formulärblock och deras egenskaper
 description: Det här dokumentet innehåller en översikt över de formulärkomponenter och deras egenskaper som är tillgängliga i AEM Forms Edge Delivery Service.
 feature: Edge Delivery Services
 exl-id: 7d087d41-9313-482a-a905-8955b0999781
-source-git-commit: b32e04dec83992ebfcea7874932a5ab77a1eaa70
+source-git-commit: 5eee563a9a425ef187afed69a8159d8b1298dad7
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
 
-# Komponenter och egenskaper i formulär: AEM Forms Edge Delivery Service
+# Komponenter för adaptiva formulärblock och deras egenskaper
 
 Med AEM Forms Edge Delivery Services kan du skapa användarvänliga och interaktiva formulär med hjälp av olika komponenter. Dessa komponenter klarar olika typer av datainsamling och kan enkelt anpassas efter dina specifika behov.
 
