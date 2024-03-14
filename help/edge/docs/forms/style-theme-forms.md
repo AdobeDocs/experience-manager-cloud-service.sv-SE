@@ -5,20 +5,31 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: c214711c-979b-4833-9541-8e35b2aa8e09
-source-git-commit: 4144f9704aaf17ea684be147395adc3aa31641f2
+source-git-commit: f4cf79e2cd71a390741987cfcf034e6eed02432d
 workflow-type: tm+mt
-source-wordcount: '1821'
+source-wordcount: '2012'
 ht-degree: 0%
 
 ---
 
 # Formatera formulärfält
 
-Forms är avgörande för användarinteraktion på webbplatser, så att de kan mata in data. Den här handboken behandlar grunderna i hur du formaterar olika formulärfält i dialogrutan [Adaptivt Forms-block](/help/edge/docs/forms/create-forms.md)som hjälper dig att skapa visuellt tilltalande och användarvänliga formulär.
+Forms är avgörande för användarinteraktion på webbplatser, så att de kan mata in data. Du kan använda CSS (Cascading Style Sheets) för att formatera fält i ett formulär, förbättra den visuella presentationen av formulären och förbättra användarupplevelsen.
+
+Det adaptiva Forms-blocket ger en konsekvent struktur för alla formulärfält. Den konsekventa strukturen gör det enklare att utveckla CSS-väljare för att markera och formatera formulärfält baserat på fälttyp och fältnamn.
+
+I det här dokumentet beskrivs HTML-strukturen för olika formulärkomponenter, så att du kan skapa en förståelse för hur du skapar CSS-väljare för olika formulärfält för att formatera formulärfält i ett adaptivt Forms-block.
+
+I slutet av artikeln:
+
+* Du bygger upp en förståelse för strukturen i standardfilen för CSS som ingår i det adaptiva Forms-blocket.
+* Du bygger upp en förståelse för HTML-strukturen för formulärkomponenter som tillhandahålls av det adaptiva Forms-blocket, inklusive allmänna komponenter och specifika komponenter som listrutor, alternativgrupper och kryssrutegrupper.
+* Du lär dig att formatera formulärfält baserat på fälttyp och fältnamn med hjälp av CSS-väljare, vilket ger en konsekvent eller unik formatering baserat på krav.
+
 
 ## Förstå formulärfältstyper
 
-Innan vi börjar använda en formatmall ska vi titta på de vanliga formulärfälttyperna som stöds av det adaptiva Forms-blocket:
+Innan vi går in i en stil ska vi titta på den gemensamma formen [fälttyper](/help/edge/docs/forms/form-components.md) stöds av Adaptive Forms Block:
 
 * Indatafält: Dessa innehåller textinmatningar, e-postinmatningar, lösenordsinmatningar med mera.
 * Kryssrutegrupper: Används för att välja flera alternativ.
@@ -28,12 +39,12 @@ Innan vi börjar använda en formatmall ska vi titta på de vanliga formulärfä
 
 ## Grundläggande formatprinciper
 
-Att förstå grundläggande CSS-koncept är avgörande innan du formaterar specifika formulärfält:
+Förstå [grundläggande CSS-begrepp](https://www.w3schools.com/css/css_intro.asp) är avgörande innan du formaterar specifika formulärfält:
 
-* Väljare: Med CSS-väljare kan du ange specifika HTML-element för formatering som mål. Du kan använda elementväljare, klassväljare eller ID-väljare.
-* Egenskaper: CSS-egenskaper definierar elementens visuella utseende. Vanliga egenskaper för formatformulärfält är bland annat färg, bakgrundsfärg, kant, utfyllnad, marginal.
-* Rutmodell: CSS-rutmodellen beskriver strukturen för element i HTML som ett innehållsområde omgivet av utfyllnad, kanter och marginaler.
-* Flexbox/Grid: CSS Flexbox och stödrasterlayouter är kraftfulla verktyg för att skapa responsiv och flexibel design.
+* [Väljare](https://www.w3schools.com/css/css_selectors.asp): Med CSS-väljare kan du ange specifika HTML-element för formatering. Du kan använda elementväljare, klassväljare eller ID-väljare.
+* [Egenskaper](https://www.w3schools.com/css/css_syntax.asp): CSS-egenskaper definierar elementens visuella utseende. Vanliga egenskaper för formatformulärfält är bland annat färg, bakgrundsfärg, kant, utfyllnad, marginal.
+* [Box-modell](https://www.w3schools.com/css/css_boxmodel.asp): CSS-rutmodellen beskriver strukturen för element i HTML som ett innehållsområde omgivet av utfyllnad, kanter och marginaler.
+* Flexbox/Grid: CSS [Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) och [Stödrasterlayouter](https://www.w3schools.com/css/css_grid.asp) är kraftfulla verktyg för att skapa responsiv och flexibel design.
 
 ## Formatera ett formulär för Adaptive Forms Block
 
@@ -45,7 +56,7 @@ Det adaptiva Forms-blocket har en standardiserad HTML-struktur som förenklar pr
 
 ## Uppdelning av forms.css struktur
 
-* **Globala variabler:** Definieras på `:root` level, dessa variabler (`--variable-name`) lagra värden som används i hela formatmallen för att underlätta konsekvensen och uppdateringarna. Dessa variabler definierar färger, teckenstorlekar, utfyllnad och andra egenskaper. Du kan deklarera dina egna globala variabler eller ändra befintliga variabler för att ändra formulärets format.
+* **Globala variabler:** Definieras på `:root` level, dessa variabler (`--variable-name`) lagra värden som används i hela formatmallen för att underlätta enhetliga uppdateringar. Dessa variabler definierar färger, teckenstorlekar, utfyllnad och andra egenskaper. Du kan deklarera dina egna globala variabler eller ändra befintliga variabler för att ändra formulärets format.
 
 * **Universella väljarformat:** The `*` väljaren matchar alla element i formuläret, vilket säkerställer att format används på alla komponenter som standard, inklusive inställning av `box-sizing` egenskap till `border-box`.
 
@@ -66,7 +77,7 @@ Det adaptiva Forms-blocket har en enhetlig HTML-struktur för olika formulärele
 
 Alla formulärfält, utom listrutor, alternativgrupper och kryssrutegrupper, har följande HTML-struktur:
 
-#### HTML struktur
++++ HTML Struktur för allmänna komponenter
 
 ```HTML
 <div class="{Type}-wrapper field-{Name} field-wrapper" data-required={Required}>
@@ -99,34 +110,39 @@ Alla formulärfält, utom listrutor, alternativgrupper och kryssrutegrupper, har
 </div>
 ```
 
-**CSS-väljare för allmänna komponenter**
++++
+
++++ CSS-väljare för allmänna komponenter
 
 ```CSS
-/* Target all input fields within any .{Type}-wrapper  */
-.{Type}-wrapper  {
-  /* Add your styles here */
-  border: 1px solid #ccc;
-  padding: 8px;
-  border-radius: 4px;
-}
-
-/* Target all input fields within any .{Type}-wrapper  */
-.{Type}-wrapper input {
-  /* Add your styles here */
-  border: 1px solid #ccc;
-  padding: 8px;
-  border-radius: 4px;
-}
-
-/* Target any element with the class field-{Name}  */
-.field-{Name} {
-  /* Add your styles here */
-  /* This could be used for styles specific to all elements with field-{Name} class, not just inputs */
-}
+  
+  /* Target all input fields within any .{Type}-wrapper  */
+  .{Type}-wrapper  {
+    /* Add your styles here */
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  /* Target all input fields within any .{Type}-wrapper  */
+  .{Type}-wrapper input {
+    /* Add your styles here */
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  /* Target any element with the class field-{Name}  */
+  .field-{Name} {
+    /* Add your styles here */
+    /* This could be used for styles specific to all elements with   field-{Name} class, not just inputs */
+  }
+  
+  
 ```
 
 * `.{Type}-wrapper`: Målar det yttre `div` -element baserat på fälttypen. Till exempel: `.text-wrapper` anger alla textfält som mål.
-* `.field-{Name}`: Markerar elementet ytterligare baserat på det specifika fältnamnet. Till exempel: `.field-first-name` anger textfältet&quot;Förnamn&quot; som mål. Den här väljaren kan användas för att rikta element med fältet-{Name} klass, det är viktigt att vara försiktig. I det här specifika fallet skulle det inte vara särskilt användbart för formatinmatningsfält eftersom det skulle vara avsett inte bara för själva inmatningen utan även för etikett- och beskrivningselementen. Vi rekommenderar i allmänhet att du använder mer specifika väljare, som de du har för textinmatningsfält (.text-wrapper input).
+* `.field-{Name}`: Markerar elementet ytterligare baserat på det specifika fältnamnet. Till exempel: `.field-first-name` anger textfältet&quot;Förnamn&quot; som mål. Den här väljaren kan användas för att rikta element med fältet-{Name} klass, det är viktigt att vara försiktig. I det här specifika fallet skulle det inte vara användbart för formaterade inmatningsfält eftersom det skulle vara avsett inte bara för själva inmatningen utan även för etikett- och beskrivningselementen. Vi rekommenderar att du använder mer specifika väljare, som de du har för textinmatningsfält (.text-wrapper input).
 
 
 
@@ -149,14 +165,15 @@ first-name input {
   border-radius: 4px;
 }
 ```
-
++++
 
 ### Listrutekomponent
 
 I listrutor visas `select` -element används i stället för ett `input` element:
 
 
-#### HTML struktur
+
++++ HTML Struktur för den nedrullningsbara komponenten
 
 ```HTML
 <div class="{Type}-wrapper field-{Name} field-wrapper" data-required={required}>
@@ -184,7 +201,11 @@ I listrutor visas `select` -element används i stället för ett `input` element
 </div>
 ```
 
-#### Exempel på CSS-väljare för nedrullningskomponent
++++
+
++++ CSS-väljare för nedrullningskomponent
+
+Följande CSS visar några exempel på CSS-väljare för nedrullningsbara komponenter.
 
 ```CSS
 /* Target the outer wrapper */
@@ -233,15 +254,17 @@ I listrutor visas `select` -element används i stället för ett `input` element
 * Ange som mål för wrapper: Den första väljaren (`.drop-down-wrapper`) anger det yttre wrapper-elementet som mål, vilket säkerställer att formaten tillämpas på hela den nedrullningsbara komponenten.
 * Flexbox Layout: Flexbox ordnar etiketten, listrutan och beskrivningen lodrätt för en ren layout.
 * Etikettformatering: Etiketten sticker ut med en större teckensnittsvikt och en liten marginal.
-* Formatering i listruta: Det markerade elementet får en kantlinje, utfyllnad och rundade hörn för en elegant look.
+* Format för listrutor: `select` -elementet får en kantlinje, utfyllnad och rundade hörn för en heldragen look.
 * Bakgrundsfärg: En konsekvent bakgrundsfärg ställs in för visuell harmoni.
 * Anpassning av pilar: Valfria format döljer den nedrullningsbara standardpilen och skapar en anpassad pil med Unicode-tecken och placering.
+
++++
 
 ### Alternativgrupper
 
 Ungdomsgrupper har en egen HTML-struktur och CSS-struktur, ungefär som i listrutekomponenter:
 
-#### Struktur för Radio Group HTML
++++ Struktur för Radio Group HTML
 
 ```HTML
 <fieldset class="radio-group-wrapper field-{Name} field-wrapper" id="{FieldId}" name="{Name}" data-required="{Required}">
@@ -277,7 +300,9 @@ Ungdomsgrupper har en egen HTML-struktur och CSS-struktur, ungefär som i listru
 </fieldset>
 ```
 
-#### Exempel på CSS-väljare för nedrullningskomponent
++++
+
++++ CSS-väljare för nedrullningskomponent
 
 * Ange fältuppsättningen
 
@@ -307,9 +332,11 @@ Den här väljaren anger alla fältuppsättningar med klassen Radio-Group-wrappe
 }
 ```
 
++++
+
 ### Kryssrutegrupper
 
-#### Struktur för kryssrutegrupp HTML
++++ Struktur för kryssrutegrupp HTML
 
 ```HTML
 <fieldset class="checkbox-group-wrapper field-{Name} field-wrapper" id="{FieldId}" name="{Name}" data-required="{Required}">
@@ -343,7 +370,9 @@ Den här väljaren anger alla fältuppsättningar med klassen Radio-Group-wrappe
 </fieldset>
 ```
 
-**Exempel på CSS-väljare för alternativknappar och kryssrutegrupper**
++++
+
++++ Exempel på CSS-väljare för alternativknappar och kryssrutegrupper**
 
 * Inriktning för ytteromslutningen: Dessa väljare är avsedda för de yttre behållarna för både alternativknappar och kryssrutegrupper, vilket gör att du kan använda allmänna format för hela gruppstrukturen. Det här är användbart när du vill ange avstånd, justering eller andra layoutrelaterade egenskaper.
 
@@ -399,7 +428,7 @@ Den här väljaren anger alla fältuppsättningar med klassen Radio-Group-wrappe
 
 
 
-* Anpassa utseendet på alternativknappar och kryssrutor: Den här tekniken döljer standardindata och använder pseudoelementen :before och :after för att skapa anpassade visuella element som ändrar utseendet baserat på statusen &#39;checked&#39;.
+* Anpassa utseende på alternativknappar och kryssrutor: Den här tekniken döljer standardindata och använder `:before` och `:after` pseudoelement för att skapa anpassade bilder som ändrar utseendet baserat på läget &#39;checked&#39;.
 
   ```CSS
   /* Hide the default radio button or checkbox */
@@ -429,9 +458,11 @@ Den här väljaren anger alla fältuppsättningar med klassen Radio-Group-wrappe
      }
   ```
 
++++
+
 ### Panel-/behållarkomponenter
 
-#### HTML struktur
++++ HTML Struktur för paneler/behållarkomponenter
 
 ```HTML
 <fieldset class="panel-wrapper field-{PanelName} field-wrapper">
@@ -473,7 +504,9 @@ Den här väljaren anger alla fältuppsättningar med klassen Radio-Group-wrappe
 * I fältuppsättningen, multipel .{Type}-wrapper-element (.text-wrapper och .password-wrapper i det här fallet) representerar enskilda formulärfält på panelen.
 * Varje wrapper innehåller en etikett, ett inmatningsfält och en beskrivning, som liknar de föregående exemplen.
 
-#### CSS-väljare och exempel
++++
+
++++ Exempel på CSS-väljare för panel-/behållarkomponenter
 
 1. Panelen:
 
@@ -535,9 +568,11 @@ Den här väljaren anger alla fältuppsättningar med klassen Radio-Group-wrappe
 
 * Dessa väljare gör att du kan rikta in dig på specifika fältbrytningar på panelen för unik formatering, t.ex. markera användarnamnsfältet.
 
++++
+
 ### Repeterbar panel
 
-#### HTML struktur
++++ HTML Struktur för en upprepningsbar panel
 
 ```HTML
 <fieldset class="panel-wrapper field-{PanelName} field-wrapper">
@@ -595,11 +630,11 @@ Varje panel har samma struktur som exemplet med en panel, med ytterligare attrib
 
 * data-repetable=&quot;true&quot;: Det här attributet anger att panelen kan upprepas dynamiskt med JavaScript eller ett ramverk.
 
-* Unika ID:n och namn: Varje element i panelen har ett unikt ID (t.ex. name-1, email-1) och name-attribut baserat på panelens indexvärde (t.ex. name=&quot;contact[0].name&quot;). Detta gör att data kan samlas in korrekt när flera paneler skickas.
+* Unika ID:n och namn: Varje element i panelen har ett unikt ID (till exempel name-1, email-1) och name-attribut baserat på panelens indexvärde (till exempel name=&quot;contact[0].name&quot;). Detta gör att data kan samlas in korrekt när flera paneler skickas.
 
++++
 
-
-#### CSS-väljare och exempel
++++ CSS-väljare för en upprepningsbar panel
 
 * Alla upprepningsbara paneler som mål:
 
@@ -639,8 +674,11 @@ Den här väljaren formaterar alla fältomslutningar på en repeterbar panel, vi
 /* Target all
 ```
 
++++
+
 ### Bifogad fil
 
++++ HTML Struktur för bifogad fil
 
 ```HTML
 <div class="file-wrapper field-{FileName} field-wrapper">
@@ -683,8 +721,9 @@ Den här väljaren formaterar alla fältomslutningar på en repeterbar panel, vi
 * Attributen id och name för indataelementet matchar namnet på den bifogade filen (claim_form).
 * Avsnittet med fillistan är inledningsvis tomt. Den fylls i dynamiskt med JavaScript när filer överförs.
 
++++
 
-**CSS-väljare och exempel:**
++++ CSS-väljare för komponenten Bifogad fil
 
 * Målkomponenten för hela den bifogade filen:
 
@@ -750,14 +789,28 @@ Den här väljaren formaterar hela den bifogade filkomponenten, inklusive tecken
 
 Dessa väljare gör att du kan formatera olika delar av den bifogade filkomponenten individuellt. Du kan justera formaten så att de matchar dina designinställningar.
 
++++
+
 
 ## Formatkomponenter
 
-Du kan också formatera formulärfält baserat på deras specifika typ eller enskilda namn. På så sätt får du bättre kontroll över och anpassning av formulärets utseende.
+Du kan formatera formulärfält baserat på deras specifika typ (`{Type}-wrapper`) eller enskilda namn (`field-{Name}`). På så sätt får du bättre kontroll över och anpassning av formulärets utseende.
 
 ### Formatering baserad på fälttyp
 
 Du kan använda CSS-väljare för att ange specifika fälttyper och använda format på ett konsekvent sätt.
+
+**HTML struktur**
+
+```HTML
+<div class="{Type}-wrapper field-{Name} field-wrapper" data-required={Required}>
+   <label for="{FieldId}" class="field-label">First Name</label>
+   <input type="{Type}" placeholder="{Placeholder}" maxlength="{Max}" id={FieldId}" name="{Name}" aria-describedby="{FieldId}-description">
+   <div class="field-description" aria-live="polite" id="{FieldId}-description">
+    Hint - First name should be minimum 3 characters and a maximum of 10 characters.
+   </div>
+</div>
+```
 
 **Exempel på HTML-struktur**
 
@@ -785,6 +838,8 @@ Du kan använda CSS-väljare för att ange specifika fälttyper och använda for
 * The `data-required` anger om fältet är obligatoriskt eller valfritt.
 * Varje fält har en motsvarande etikett, indataelement och eventuella ytterligare element som platshållare och beskrivningar.
 
+
+
 **Exempel på CSS-väljare**
 
 ```CSS
@@ -800,16 +855,33 @@ Du kan använda CSS-väljare för att ange specifika fälttyper och använda for
 }
 ```
 
+
+
 ### Formatering baserad på fältnamn
 
 Du kan också ange enskilda fält som mål efter namn för att använda unika format.
+
+**HTML struktur**
+
+```HTML
+<div class="{Type}-wrapper field-{Name} field-wrapper" data-required={Required}>
+   <label for="{FieldId}" class="field-label">First Name</label>
+   <input type="{Type}" placeholder="{Placeholder}" maxlength="{Max}" id="{FieldId}" name="{Name}" aria-describedby="{FieldId}-description">
+   <div class="field-description" aria-live="polite" id="{FieldId}-description">
+    Hint - Enter the 6 digit number sent to your mobile number.
+   </div>
+</div>
+```
 
 **Exempel på HTML-struktur**
 
 ```HTML
 <div class="number-wrapper field-otp field-wrapper" data-required="true">
   <label for="otp" class="field-label">OTP</label>
-  <input type="number" placeholder="Enter your OTP" maxlength="6" id="otp" name="otp">
+  <input type="number" placeholder="Enter your OTP" maxlength="6" id="otp" name="otp" aria-describedby="otp-description">
+  <div class="field-description" aria-live="polite" id="otp-description">
+    Hint - Enter the 6 digit number sent to your mobile number.
+   </div>
 </div>
 ```
 
