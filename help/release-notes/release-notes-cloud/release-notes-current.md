@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 3a86639d9203fff3c72e63baa8d1499b18a4539f
+source-git-commit: 4fdca70b3a711f747e44ac2a6c1d117ac990d49b
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '1020'
 ht-degree: 0%
 
 ---
@@ -108,6 +108,15 @@ Dynatrace-kunder kan övervaka AEM. [Läs om](/help/implementing/cloud-manager/d
 ### RDE-stöd för Front-End-kod med webbplatsteman och webbplatsmallar: Tidigt Adobe-program {#rde-frontend-early-adopter}
 
 [Rapid Development Environment (RDE)](/help/implementing/developing/introduction/rapid-development-environments.md) nu stöder kod som bygger på [webbplatsteman](/help/sites-cloud/administering/site-creation/site-themes.md) och [webbplatsmallar](/help/sites-cloud/administering/site-creation/site-templates.md), för tidiga användare. Med de lokala redigeringssystemen görs detta med hjälp av ett kommandoradsdirektiv i stället för ett [rörledning för frontend](/help/sites-cloud/administering/site-creation/enable-front-end-pipeline.md). Kontakta **aemcs-rde-support@adobe.com** för att testa och ge feedback.
+
+### CDN-konfiguration Tidigt program {#cdn-config-early-adopter}
+
+Förutom den nyligen släppta [Trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md), som innehåller reglerna för valfri brandvägg för webbprogram (WAF), finns en möjlighet att använda Configuration Pipeline för att deklarera och distribuera andra typer av CDN-konfigurationer. Delta i det tidiga adopterprogrammet genom att skicka e-post **aemcs-cdn-config-adopter@adobe.com** för att få åtkomst till:
+* 301/302 klientomdirigeringar
+* förbluffande förfrågningar vid kanten till godtyckliga ursprung
+* URL-omformningar
+* ange eller ändra begärande- eller svarshuvuden
+* anpassade felsidor när CDN inte kan nå AEM
 
 ## Cloud Manager {#cloud-manager}
 
