@@ -3,9 +3,9 @@ title: Konfigurera icke-produktionsförlopp
 description: Lär dig hur du konfigurerar icke-produktionsrörledningar för att testa kodens kvalitet innan du distribuerar den till produktionsmiljöer.
 index: true
 exl-id: eba608eb-a19e-4bff-82ff-05860ceabe6e
-source-git-commit: 04c65018734f95e8245a6922d5a05c5486a4ffa4
+source-git-commit: 3ba5184275e539027728ed134c47f66fa4746d9a
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1371'
 ht-degree: 0%
 
 ---
@@ -145,10 +145,16 @@ Stegen för att slutföra skapandet av din icke-produktion, målinriktade distri
    * **Git-gren** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
       * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet. Här hittas de matchande grenar som du kan välja.
    * **Kodplats** - Det här alternativet definierar den sökväg i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
+   * **Pipeline** - För rörledningar som inte är avsedda för produktion på framsidan har du möjlighet att aktivera **[Experience Audit.](/help/implementing/cloud-manager/experience-audit-testing.md)**
 
-   ![Konfigurera pipeline](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-config-deployment.png)
+   ![Konfigurera pipeline](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-config-deployment-experience-audit.png)
 
-1. Klicka **Spara**.
+1. Om du aktiverade Experience Audit (Experience Audit) trycker du eller klickar **Fortsätt** för att gå vidare till **Experience Audit** där du kan definiera sökvägar som alltid ska inkluderas i Experience Audit.
+
+   * Om du har aktiverat **Experience Audit**, se dokumentet [Experience Audit](/help/implementing/cloud-manager/experience-audit-testing.md#configuration) om du vill ha mer information om hur du konfigurerar.
+   * Om du inte gjorde det hoppar du över det här steget.
+
+1. Tryck eller klicka **Spara** för att spara rörledningen.
 
 Pipelinen har sparats och du kan nu [hantera dina rörledningar](managing-pipelines.md) på **Pipelines** på **Programöversikt** sida.
 

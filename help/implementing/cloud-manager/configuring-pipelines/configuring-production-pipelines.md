@@ -3,9 +3,9 @@ title: Konfigurera produktionsförlopp
 description: Lär dig hur du konfigurerar produktionspipelines för att skapa och distribuera kod till produktionsmiljöer.
 index: true
 exl-id: 67edca16-159e-469f-815e-d55cf9063aa4
-source-git-commit: 04c65018734f95e8245a6922d5a05c5486a4ffa4
+source-git-commit: 3ba5184275e539027728ed134c47f66fa4746d9a
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1334'
 ht-degree: 0%
 
 ---
@@ -93,25 +93,13 @@ Följ de här stegen för att slutföra konfigurationen av produktionsflödet f�
 
    ![Fullständig stackkod](/help/implementing/cloud-manager/assets/configure-pipeline/production-pipeline-fullstack.png)
 
-1. Klicka **Fortsätt** för att gå vidare till **Experience Audit** där du kan definiera sökvägar som alltid ska inkluderas i Experience Audit.
+1. Tryck eller klicka **Fortsätt** för att gå vidare till **Experience Audit** där du kan definiera sökvägar som alltid ska inkluderas i Experience Audit.
 
    ![Lägg till Experience Audit](/help/implementing/cloud-manager/assets/configure-pipeline/add-prod-audit.png)
 
-1. Ange en sökväg som ska inkluderas i Experience Audit.
+1. Ange sökvägar som ska inkluderas i Experience Audit.
 
-   * Sidsökvägar måste börja med `/`.
-   * Om du till exempel vill inkludera `https://wknd.site/us/en/about-us.html` Ange sökvägen i Experience Audit `/us/en/about-us.html`.
-
-   ![Definiera en sökväg för Experience Audit](/help/implementing/cloud-manager/assets/configure-pipeline/add-prod-audit3.png)
-
-1. Klicka **Lägg till sida** och sökvägen fylls i automatiskt med adressen till din miljö och läggs till i sökvägstabellen.
-
-   ![Spara bana till tabellen](/help/implementing/cloud-manager/assets/configure-pipeline/add-prod-audit4.png)
-
-1. Fortsätt att lägga till banor efter behov genom att upprepa de två föregående stegen.
-
-   * Du kan lägga till högst 25 banor.
-   * Om du inte definierar några sökvägar inkluderas webbplatsens hemsida som standard i Experience Audit.
+   * Se dokumentet [Testning av Experience Audit](/help/implementing/cloud-manager/experience-audit-testing.md#configuration) för mer information.
 
 1. Klicka **Spara** för att spara på rörledningen.
 
