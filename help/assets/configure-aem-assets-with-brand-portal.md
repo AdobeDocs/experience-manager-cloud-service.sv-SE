@@ -5,10 +5,10 @@ contentOwner: AK
 feature: Brand Portal,Asset Distribution,Configuration
 role: Admin
 exl-id: 078e522f-bcd8-4734-95db-ddc8772de785
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 0411da1113c6bddfa1adcc583b4e53c5daa9bd41
 workflow-type: tm+mt
-source-wordcount: '2442'
-ht-degree: 10%
+source-wordcount: '2426'
+ht-degree: 8%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 10%
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/brandportal/configure-aem-assets-with-brand-portal.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
-Om du konfigurerar Adobe Experience Manager Assets Brand Portal kan du publicera godkända varumärkesresurser från Adobe Experience Manager Assets som en [!DNL Cloud Service] till Brand Portal och distribuera dem till Brand Portal-användare.
+Med Konfigurera Adobe Experience Manager Assets Brand Portal kan du publicera godkända varumärkesresurser från Adobe Experience Manager Assets som en [!DNL Cloud Service] till Brand Portal och distribuera dem till Brand Portal-användare.
 
 ## Aktivera Brand Portal med Cloud Manager {#activate-brand-portal}
 
@@ -210,18 +210,18 @@ Du behöver följande för att konfigurera Experience Manager Assets med Brand P
 
 * En Experience Manager Assets som körs som [!DNL Cloud Service] instance
 * En Brand Portal tenant-URL
-* En användare med systemadministratörsbehörighet på IMS-organisationen för varumärkesportalens klient
+* En användare med systemadministratörsbehörighet för IMS-organisationen för Brand Portal-klienten
 
-## Skapa en konfiguration {#create-new-configuration}
+## Skapa konfiguration {#create-new-configuration}
 
 Utför följande steg i den angivna sekvensen för att konfigurera Experience Manager Assets med Brand Portal.
 
-1. [Hämta ett offentligt certifikat](#public-certificate)
+1. [Hämta offentligt certifikat](#public-certificate)
 1. [Skapa JWT-anslutning (Service Account)](#createnewintegration)
 1. [Konfigurera IMS-konto](#create-ims-account-configuration)
-1. [Konfigurera molntjänsten](#configure-the-cloud-service)
+1. [Konfigurera molntjänst](#configure-the-cloud-service)
 
-### Skapa IMS-konfigurationen {#create-ims-configuration}
+### Skapa IMS-konfiguration {#create-ims-configuration}
 
 IMS-konfigurationen autentiserar din Experience Manager Assets som en [!DNL Cloud Service] -instans med Brand Portal-klienten.
 
@@ -230,7 +230,7 @@ IMS-konfigurationen har två steg:
 * [Hämta ett offentligt certifikat](#public-certificate)
 * [Konfigurera IMS-konto](#create-ims-account-configuration)
 
-### Hämta ett offentligt certifikat {#public-certificate}
+### Hämta offentligt certifikat {#public-certificate}
 
 Den offentliga nyckeln (certifikatet) autentiserar din profil på Adobe Developer Console.
 
@@ -294,7 +294,8 @@ Utför följande steg för att generera autentiseringsuppgifter för tjänstkont
 
    >[!NOTE]
    >
-   >Du kan visa autentiseringsuppgifterna och utföra åtgärder som att generera JWT-tokens, kopiera autentiseringsuppgifter, hämta klienthemlighet osv.
+   >* Du kan visa autentiseringsuppgifterna och utföra åtgärder som att generera JWT-tokens, kopiera autentiseringsuppgifter, hämta klienthemlighet osv.
+   >* För närvarande stöds endast autentiseringstypen JWT (Adobe Developer Console Service Account). Använd inte autentiseringstypen OAuth Server-to-Server förrän den stöds i mitten av april. Läs mer på [Borttagning av JWT-autentiseringsuppgifter i Adobe Developer Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console.html).
 
 1. Från **[!UICONTROL Client Credentials]** -fliken, kopiera **[!UICONTROL client ID]**.
 
@@ -347,7 +348,7 @@ Du kan nu använda klient-ID (API-nyckel), klienthemlighet och JWT-nyttolast fö
 
 Kontrollera att du har utfört följande steg:
 
-* [Hämta ett offentligt certifikat](#public-certificate)
+* [Hämta offentligt certifikat](#public-certificate)
 * [Skapa JWT-anslutning (Service Account)](#createnewintegration)
 
 Utför följande steg för att konfigurera IMS-kontot.
@@ -379,7 +380,7 @@ Utför följande steg för att konfigurera IMS-kontot.
 >
 >Kontrollera att IMS-konfigurationen klarar hälsokontrollen. Om konfigurationen inte godkänns i hälsokontrollen är den ogiltig. Du måste ta bort den och skapa en annan giltig konfiguration.
 
-### Konfigurera molntjänsten {#configure-the-cloud-service}
+### Konfigurera molntjänst {#configure-the-cloud-service}
 
 Så här konfigurerar du molntjänsten i Brand Portal:
 
@@ -397,7 +398,7 @@ Så här konfigurerar du molntjänsten i Brand Portal:
 
    ![Dialogrutan Brand Portal Configuration.](assets/create-cloud-service.png)
 
-1. Klicka på **[!UICONTROL Save & Close]**. Molnkonfigurationen har skapats.
+1. Klicka på **[!UICONTROL Save & Close]**. Molnkonfigurationen skapas.
 
    Din Experience Manager Assets som [!DNL Cloud Service] -instansen har nu konfigurerats med Brand Portal-klientorganisationen.
 
@@ -410,7 +411,7 @@ IP-adresserna för utgångar är följande:
 | **Län** | **IP-adress för ägg** |
 |--- |--- |
 | NA | 130.248.160.68, 20.94.203.130 |
-| EMEA | 51.132.146.75, 130.248.244.202, 130.248.244.203, 130.248.244.204, 130.248.244.210, 130.248.244.211, 130.248.244.212 |
+| EMEA | 51.132.146.75, 130.248.244.202, 130.248.244.203, 130.248.244.204, 130.2 48.244.210, 130.248.244.211, 130.248.244.212 |
 | APAC | 63.140.44.54 |
 
 <!--
@@ -533,14 +534,14 @@ Go to `/system/console/slingmetrics` for statistics related to the distributed c
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
