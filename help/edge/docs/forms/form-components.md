@@ -3,9 +3,9 @@ title: Komponenter för adaptiva formulärblock och deras egenskaper
 description: Det här dokumentet innehåller en översikt över de formulärkomponenter och deras egenskaper som är tillgängliga i AEM Forms Edge Delivery Service.
 feature: Edge Delivery Services
 exl-id: 7d087d41-9313-482a-a905-8955b0999781
-source-git-commit: 5eee563a9a425ef187afed69a8159d8b1298dad7
+source-git-commit: 703a48903c44678f6fe311de740b7c767c886ba5
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,6 @@ Varje formulärkomponent har olika egenskaper som gör att du kan styra dess bet
 | Egenskap | Tillämpliga komponenter | Information |
 |--------------|------------------------------|----------------------------------------------------------------------|
 | Typ | Alla | Anger komponentens typ. Den här egenskapen avgör inmatningsfältets beteende och utseende. För textinmatningar kan till exempel typen vara &quot;text&quot;, &quot;email&quot; för e-postinmatningar och &quot;password&quot; för lösenordsinmatningar. Adaptive Forms Block har stöd  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types">alla giltiga indatatyper för HTML5</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textområde</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">välj</a>och <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fältuppsättning</a> som typ. |
-| Typ | Alla | Anger komponentens typ. Den här egenskapen avgör inmatningsfältets beteende och utseende. För textinmatningar kan till exempel typen vara &quot;text&quot;, &quot;email&quot; för e-postinmatningar och &quot;password&quot; för lösenordsinmatningar. Adaptive Forms Block har stöd  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types">alla giltiga indatatyper för HTML5</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textområde</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">välj</a>och <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fältuppsättning</a> som typ. |
 | Namn | Alla | Identifierar komponenten för att skicka formulär. Attributet name används när formulärdata skickas till servern och associerar användarindata med ett specifikt fält. |
 | Etikett | Alla | Ger kontextuell information till användare. Etiketten är den text som visas bredvid komponenten och ger användarna vägledning om vilken information som ska anges. |
 | Värde | Text, Lösenord, E-post, Nummer, Intervall, Datum och dess varianter (datetime-local, month, week, time), Kryssruta, Radio, Hidden, Submit, Button | Anger komponentens startvärde. För textinmatningar, textområden och markerade element visas detta som standardtext eller standardalternativ. För alternativknappar och kryssrutekomponenter är detta det värde/de data som skickas när de markeras. Attributet value är valfritt men ska betraktas som obligatoriskt för kryssrutor och alternativinmatningar. |
@@ -61,6 +60,10 @@ Varje formulärkomponent har olika egenskaper som gör att du kan styra dess bet
 | Alternativ | Listruta | Anger alternativ för rullgardinsmenyer. Egenskapen options är en kommaavgränsad lista med alternativ för listrutor, som definierar de alternativ som kan markeras och visas för användaren. |
 | Markerad | Kryssruta, radio | Anger om fältet är markerat som standard. Attributet checked är en boolesk egenskap som används med kryssrutor och alternativinmatningar. Om värdet är true innebär det att fältet är markerat som standard när formuläret läses in. |
 | Fieldset | Alla | Grupperar fält för att skapa visuellt distinkta avsnitt i ett formulär. Fältelementet grupperar relaterade fält i ett formulär och skiljer dem visuellt för att förbättra organisationen och användarupplevelsen. </br> Om du vill ordna en uppsättning fält i en fältuppsättning använder du `fieldset` och ange namnattributet. I exemplet nedan visar vi hur alternativknappar är inkapslade i en enda fältuppsättning för bättre sortering. ![Exempel på fältuppsättning](/help/edge/assets/fieldset-example.png) |
+| Upprepningsbar | Alla | En boolesk egenskap för `fieldset` som anger att en viss fältuppsättning kan upprepas för angivna `Min` och `Max` antal gånger. The `Min` egenskapen ska vara 1 eller större, ange inte `Min` till 0. |
+| Synligt uttryck | Alla | Ett synligt uttryck refererar till en kalkylbladsformel, som betecknas med taggen &#39;=&#39;, som används för att styra synligheten för ett fält. I den här formeln kan bara egenskapen value i andra fält användas, vilket gör att synlighet i fält kan hanteras enkelt i systemet. |
+| Värdeuttryck | Alla | Ett värdeuttryck refererar till en kalkylbladsformel, som betecknas med taggen &#39;=&#39;, som används för att kontrollera värdet i ett fält. I den här formeln kan bara värdeegenskapen i andra fält användas, vilket gör det enkelt att hantera fältvärdet i systemet. |
+
 
 ## Se även
 
