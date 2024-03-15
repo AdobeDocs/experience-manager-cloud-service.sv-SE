@@ -2,9 +2,9 @@
 title: Trafikfilterregler inklusive WAF-regler
 description: Konfigurera trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF)
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: 86a7815a1055b8ffaf57b802f3232f2c03ec06dc
+source-git-commit: 043c87330bca37529c0cc614596599bea1e41def
 workflow-type: tm+mt
-source-wordcount: '3376'
+source-wordcount: '3382'
 ht-degree: 0%
 
 ---
@@ -286,7 +286,7 @@ Vissa regelexempel följer. Se [rabattgränssektion](#rules-with-rate-limits) n�
 
 **Exempel 1**
 
-Den här regeln blockerar begäranden från IP 192.168.1.1:
+Den här regeln blockerar förfrågningar som kommer från **IP 192.168.1.1**:
 
 ```
 kind: "CDN"
@@ -425,7 +425,7 @@ Kursen beräknas per CDN POP. Anta till exempel att POP i Montreal, Miami och Du
 
 **Exempel 1**
 
-Den här regeln blockerar en klient i 5 m när den överskrider 100 req/sek (per CDN POP) under de senaste 60 sektionerna:
+Den här regeln blockerar en klient i 5 m när den överskrider ett genomsnitt på 60 req/sek (per CDN POP) under de senaste 10 sektionerna:
 
 ```
 kind: "CDN"
@@ -450,7 +450,7 @@ data:
 
 **Exempel 2**
 
-Blockera förfrågningar för 60-tal på sökvägen/kritisk/resurs när den överskrider 100 req/sek (per CDN POP) under de senaste 60 sektionerna:
+Blockera begäranden på sökvägen/critical/resource i 60-tal när den överskrider ett genomsnitt på 100 req/sek (per CDN POP) under de senaste 60 sekerna:
 
 ```
 kind: "CDN"
