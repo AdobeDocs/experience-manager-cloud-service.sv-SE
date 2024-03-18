@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: d16d908d39df3c7d72dc48ac877c1543d2442416
+source-git-commit: b0198fee3fb8c2f02f50819bea5757e5b8373ac1
 workflow-type: tm+mt
-source-wordcount: '1240'
+source-wordcount: '1241'
 ht-degree: 0%
 
 ---
@@ -131,7 +131,7 @@ Se till att ditt beroende `it.tests/pom.xml` har uppdaterats.
 </dependency>
 ```
 
-Denna ändring kommer att krävas efter den 6 april 2024.
+Denna ändring måste utföras före 6 april 2024.
 
 Om du inte uppdaterar beroendebiblioteket kommer det att uppstå ett pipeline-fel i steget&quot;Custom Functional Testing&quot;.
 
