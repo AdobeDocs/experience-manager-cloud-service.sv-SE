@@ -2,9 +2,9 @@
 title: Trafikfilterregler inklusive WAF-regler
 description: Konfigurera trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF)
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: 043c87330bca37529c0cc614596599bea1e41def
+source-git-commit: 9a535f7fa0a1e7b6f508e887787dd421bfffe8df
 workflow-type: tm+mt
-source-wordcount: '3382'
+source-wordcount: '3634'
 ht-degree: 0%
 
 ---
@@ -234,9 +234,9 @@ An `action` kan antingen vara en sträng som anger åtgärden (tillåt, blockera
 
 | **Namn** | **Tillåtna egenskaper** | **Betydelse** |
 |---|---|---|
-| **tillåt** | `wafFlags` (valfritt) | om wafFlags inte finns avbryter ytterligare regelbearbetning och fortsätter att ge svar. Om det finns wafFlags inaktiverar den angivna WAF-skyddet och fortsätter till ytterligare regelbearbetning. |
-| **block** | `status, wafFlags` (valfritt och ömsesidigt uteslutande) | Om wafFlags inte finns returnerar HTTP-fel utan att alla andra egenskaper skickas, definieras felkoden av statusegenskapen eller så är standardvärdet 406. Om det finns wafFlags aktiverar det angivna WAF-skyddet och fortsätter till ytterligare regelbearbetning. |
-| **logg** | `wafFlags` (valfritt) | loggar det faktum att regeln utlöstes, annars påverkas inte bearbetningen. wafFlags har ingen effekt |
+| **tillåt** | `wafFlags` (valfritt), `alert` (valfritt, ännu inte släppt) | om wafFlags inte finns avbryter ytterligare regelbearbetning och fortsätter att ge svar. Om det finns wafFlags inaktiverar den angivna WAF-skyddet och fortsätter till ytterligare regelbearbetning. <br>Om du anger en varning skickas ett meddelande från Åtgärdscenter om regeln aktiveras 10 gånger i ett fönster på 5 minuter. Den här funktionen har inte släppts ännu. Se [Varningar om trafikfilterregler](#traffic-filter-rules-alerts) om du vill ha information om hur du går med i programmet för tidiga användare. |
+| **block** | `status, wafFlags` (frivilligt och ömsesidigt uteslutande), `alert` (valfritt, ännu inte släppt) | Om wafFlags inte finns returnerar HTTP-fel utan att alla andra egenskaper skickas, definieras felkoden av statusegenskapen eller så är standardvärdet 406. Om det finns wafFlags aktiverar det angivna WAF-skyddet och fortsätter till ytterligare regelbearbetning. <br>Om du anger en varning skickas ett meddelande från Åtgärdscenter om regeln aktiveras 10 gånger i ett fönster på 5 minuter. Den här funktionen har inte släppts ännu. Se [Varningar om trafikfilterregler](#traffic-filter-rules-alerts) om du vill ha information om hur du går med i programmet för tidiga användare. |
+| **logg** | `wafFlags` (valfritt), `alert` (valfritt, ännu inte släppt) | loggar det faktum att regeln utlöstes, annars påverkas inte bearbetningen. wafFlags har ingen effekt. <br>Om du anger en varning skickas ett meddelande från Åtgärdscenter om regeln aktiveras 10 gånger i ett fönster på 5 minuter. Den här funktionen har inte släppts ännu. Se [Varningar om trafikfilterregler](#traffic-filter-rules-alerts) om du vill ha information om hur du går med i programmet för tidiga användare. |
 
 ### WAF-flagglista {#waf-flags-list}
 
@@ -465,6 +465,34 @@ data:
         action:
           type: block
         rateLimit: { limit: 100, window: 60, penalty: 60 }
+```
+
+## Varningar om trafikfilterregler {#traffic-filter-rules-alerts}
+
+>[!NOTE]
+>
+>Den här funktionen har inte släppts ännu. För att få tillgång till informationen via e-post **aemcs-waf-adopter@adobe.com**.
+
+En regel kan konfigureras att skicka ett meddelande från Åtgärdscenter om det aktiveras 10 gånger inom ett 5-minutersfönster, vilket varnar dig när vissa trafikmönster inträffar så att du kan vidta nödvändiga åtgärder. Läs mer om [Actions Center](/help/operations/actions-center.md), inklusive hur du konfigurerar de meddelandeprofiler som krävs för att ta emot e-postmeddelanden.
+
+![Meddelande från Åtgärdscenter](/help/security/assets/traffic-filter-rules-actions-center-alert.png)
+
+
+Varningsegenskapen (som för närvarande är prefix med *experimentell* eftersom funktionen ännu inte har släppts kan användas på åtgärdsnoden för alla åtgärdstyper (allow, block, log).
+
+```
+kind: "CDN"
+version: "1"
+metadata:
+  envTypes: ["dev"]
+data:
+  trafficFilters:
+    rules:
+      - name: "path-rule"
+        when: { reqProperty: path, equals: /block-me }
+        action:
+          type: block
+          experimental_alert: true
 ```
 
 ## CDN-loggar {#cdn-logs}
