@@ -3,10 +3,10 @@ title: CDN på AEM as a Cloud Service
 description: Lär dig hur du använder det AEM-hanterade CDN och hur du pekar ditt eget CDN mot det AEM-hanterade CDN.
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
-source-git-commit: 127b79d766a4dfc33a2ed6016e191e771206d791
+source-git-commit: 43fdf17ab09fd7a974c32cfd716f65072b678726
 workflow-type: tm+mt
-source-wordcount: '1031'
-ht-degree: 6%
+source-wordcount: '1118'
+ht-degree: 5%
 
 ---
 
@@ -39,6 +39,14 @@ Se [Hantera IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists
 >[!CAUTION]
 >
 >Endast begäranden från tillåtna IP-adresser hanteras av AEM hanterat CDN. Om du pekar ditt eget CDN mot det AEM CDN-nätverket kontrollerar du att IP-adresserna för ditt CDN är med i tillåtelselista.
+
+### Konfigurera trafik vid leveransnätverket {#cdn-configuring-cloud}
+
+Regler för att konfigurera CDN-trafik och filter kan deklareras i en konfigurationsfil och distribueras till CDN med hjälp av [Konfigurationspipeline för Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline). Mer information finns i [Konfigurera trafik vid leveransnätverket](/help/implementing/dispatcher/cdn-configuring-traffic.md) och [Trafikfilterregler inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md).
+
+### Konfigurera CDN-felsidor {#cdn-error-pages}
+
+En CDN-felsida kan konfigureras så att den åsidosätter den standardsida utan varumärke som skickas till webbläsaren i den sällsynta händelse som AEM inte kan nås. Mer information finns i [Konfigurera CDN-felsidor](/help/implementing/dispatcher/cdn-error-pages.md).
 
 ## Customer CDN pekar på AEM CDN {#point-to-point-CDN}
 

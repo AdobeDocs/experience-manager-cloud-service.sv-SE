@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 5eee563a9a425ef187afed69a8159d8b1298dad7
+source-git-commit: 43fdf17ab09fd7a974c32cfd716f65072b678726
 workflow-type: tm+mt
-source-wordcount: '4813'
+source-wordcount: '4822'
 ht-degree: 3%
 
 ---
@@ -1144,6 +1144,8 @@ ht-degree: 3%
       + [Migrera Dispatcher-konfigurationen från AMS till AEM as a Cloud Service](/help/implementing/dispatcher/ams-aem.md)
       + [Validera och felsöka med Dispatcher Tools Legacy](/help/implementing/dispatcher/validation-debug-legacy.md)
       + [CDN på AEM as a Cloud Service](/help/implementing/dispatcher/cdn.md)
+      + [Konfigurera trafik vid leveransnätverket](/help/implementing/dispatcher/cdn-configuring-traffic.md)
+      + [Konfigurera CDN-felsidor](/help/implementing/dispatcher/cdn-error-pages.md)
       + [Cachelagring i AEM as a Cloud Service](/help/implementing/dispatcher/caching.md)
 + Anslutningar {#connectors}
    + [Implementera en AEM Connector](/help/connectors/implement.md)
