@@ -2,9 +2,9 @@
 title: Hantera tabelldata med kalkylblad
 description: Lär dig hur du använder kalkylblad för att hantera tabelldata för olika värden, som metadata och omdirigeringar för AEM med Edge Delivery Services.
 feature: Edge Delivery Services
-source-git-commit: 0fa88453a7d7c58a3ccb2a4baf7d2b143acf7ad5
+source-git-commit: f872ab4eb891ab4aa634e88c76eedeb0f13cb285
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '958'
 ht-degree: 0%
 
 ---
@@ -81,25 +81,9 @@ I det här exemplet skapar du ett kalkylblad för att hantera omdirigeringar fö
    * Redigeraren lägger till nya rader i kalkylbladet efter behov.
    * Om du vill ta bort eller flytta en rad använder du **Ta bort** ikonen i slutet av varje rad och draghandtagen i början av varje rad.
 
-1. När du har definierat omdirigeringarna stänger du fliken och går tillbaka till **Webbplatser** konsol.
+## Publicera ett kalkylbladssökvägar.json {#paths-json}
 
-1. Tryck eller klicka för att välja det omdirigerade kalkylblad som du skapade i konsolen och tryck eller klicka sedan på **Snabbpublicering** i åtgärdsfältet för att publicera kalkylbladet.
-
-   ![Markera kalkylbladet i webbplatskonsolen](assets/tabular-data/tabular-data-select-publish.png)
-
-1. I **Snabbpublicering** dialogruta, trycka eller klicka **Publicera**.
-
-   ![Bekräfta publicering](assets/tabular-data/tabular-data-quick-publish.png)
-
-1. En banderoll bekräftar publikationen.
-
-   ![Banderollens bekräftelse på publicering](assets/tabular-data/tabular-data-publish-banner.png)
-
-Kalkylbladet för omdirigering är nu publicerat och tillgängligt för alla.
-
-## Uppdatera paths.json {#paths-json}
-
-För att AEM ska kunna använda data i ditt kalkylblad måste du dessutom uppdatera `paths.json` projektfil.
+För att AEM ska kunna publicera data i ditt kalkylblad måste du dessutom uppdatera `paths.json` projektfil.
 
 1. Öppna projektets rot i GitHub.
 
@@ -122,7 +106,21 @@ För att AEM ska kunna använda data i ditt kalkylblad måste du dessutom uppdat
 
    * Genomför `main` eller skapa en pull-begäran enligt din process.
 
-När ändringarna är `paths.json` om de sammanfogas, omdirigeringarna är aktiva för din webbplats.
+1. När du har definierat omdirigeringarna och uppdaterat sökvägsmappningen går du tillbaka till **Webbplatser** konsol.
+
+1. Tryck eller klicka för att välja det omdirigerade kalkylblad som du skapade i konsolen och tryck eller klicka sedan på **Snabbpublicering** i åtgärdsfältet för att publicera kalkylbladet.
+
+   ![Markera kalkylbladet i webbplatskonsolen](assets/tabular-data/tabular-data-select-publish.png)
+
+1. I **Snabbpublicering** dialogruta, trycka eller klicka **Publicera**.
+
+   ![Bekräfta publicering](assets/tabular-data/tabular-data-quick-publish.png)
+
+1. En banderoll bekräftar publikationen.
+
+   ![Banderollens bekräftelse på publicering](assets/tabular-data/tabular-data-publish-banner.png)
+
+Kalkylbladet för omdirigering är nu publicerat och tillgängligt för alla.
 
 ## Andra kalkylbladstyper {#other}
 
@@ -134,6 +132,12 @@ Nu när du vet hur man skapar omdirigerade kalkylblad kan du skapa vilken annan 
 * Konfiguration
 
 Följ bara samma steg i avsnitten [Skapa kalkylblad](#spreadsheet) och [Uppdatera paths.json](#paths-json) och välja lämplig mall och uppdatera `paths.json` filen korrekt.
+
+För [Konfiguration](https://www.aem.live/docs/configuration), [Sidhuvuden](https://www.aem.live/docs/custom-headers) och [Metadata](https://www.aem.live/docs/bulk-metadata) Se till att lägga till en mappning för att publicera dem på deras standardplatser:
+
+* Konfiguration: `/.helix/config.json`
+* Sidhuvuden: `/.helix/headers.json`
+* Metadata `/metadata.json`
 
 Dessutom kan du [skapa ett eget kalkylblad](#own-spreadsheet) med godtyckliga kolumner för egen användning.
 
