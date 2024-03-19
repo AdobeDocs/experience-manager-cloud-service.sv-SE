@@ -5,9 +5,9 @@ contentOwner: AK
 feature: Brand Portal,Asset Distribution,Configuration
 role: Admin
 exl-id: 078e522f-bcd8-4734-95db-ddc8772de785
-source-git-commit: 0411da1113c6bddfa1adcc583b4e53c5daa9bd41
+source-git-commit: 2cb630203b818ae338fe6b7c2ff341c76e3a3958
 workflow-type: tm+mt
-source-wordcount: '2426'
+source-wordcount: '2424'
 ht-degree: 8%
 
 ---
@@ -295,7 +295,7 @@ Utför följande steg för att generera autentiseringsuppgifter för tjänstkont
    >[!NOTE]
    >
    >* Du kan visa autentiseringsuppgifterna och utföra åtgärder som att generera JWT-tokens, kopiera autentiseringsuppgifter, hämta klienthemlighet osv.
-   >* För närvarande stöds endast autentiseringstypen JWT (Adobe Developer Console Service Account). Använd inte autentiseringstypen OAuth Server-to-Server förrän den stöds i mitten av april. Läs mer på [Borttagning av JWT-autentiseringsuppgifter i Adobe Developer Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console.html).
+   >* För närvarande stöds endast autentiseringstypen JWT (Adobe Developer Console Service Account). Använd inte `OAuth Server-to-Server` autentiseringstypen tills den stöds i mitten av april. Läs mer på [Borttagning av JWT-autentiseringsuppgifter i Adobe Developer Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console.html).
 
 1. Från **[!UICONTROL Client Credentials]** -fliken, kopiera **[!UICONTROL client ID]**.
 
