@@ -2,9 +2,9 @@
 title: Grundläggande hantering
 description: Bekanta dig med navigering i AEM och dess grundläggande användning
 exl-id: ae87a63a-c6d3-4220-ab3d-07a20b21b93b
-source-git-commit: 1a4c5e618adaef99d82a00e1118d1a0f8536fc14
+source-git-commit: 7e0ca5dad5cd53c2304e2eba48a5131d587967ef
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '926'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ För att få en bättre förståelse för AEM basanvändning är det här dokume
 
 När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudie. Ta en minut att välja igenom och få en bra översikt över den grundläggande hanteringen av AEM.
 
-![Navigering, genomgång](assets/tutorial.png)
+![Navigering, genomgång](assets/basic-handling-tutorial.png)
 
 Välj **Nästa** för att gå vidare till nästa sida i översikten. Välj **Stäng** eller välj utanför den översiktsdialogruta som du vill stänga.
 
@@ -48,7 +48,7 @@ Du kan navigera mellan konsolerna med den globala navigeringspanelen. Detta akti
 
 Du kan stänga den globala navigeringspanelen genom att klicka eller trycka på **Stäng** för att återgå till din tidigare plats.
 
-![Navigeringspanelens övre fält](assets/basic-handling-navigation-bar.png)
+![Navigeringspanelens övre fält](assets/basic-handling-navigation-options.png)
 
 Global navigering har två paneler, som representeras av ikoner i skärmens vänstra marginal:
 
@@ -86,31 +86,37 @@ I **verktyg** Panelen har en sidopanel som innehåller ett urval kategorier, som
 
 Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet är desamma oavsett var du befinner dig i systemet, men vissa är sammanhangsspecifika.
 
-![Navigeringsrubrik](/help/sites-cloud/authoring/assets/navigation-bar.png)
+![Navigeringsrubrik](/help/sites-cloud/authoring/assets/basic-handling-navigation-bar.png)
 
 * [Global navigering](#global-navigation) - Välj **Adobe Experience Manager** för att navigera mellan konsoler.
 
-  ![Global navigering](/help/sites-cloud/authoring/assets/global-navigation.png)
+  ![Global navigering](/help/sites-cloud/authoring/assets/basic-handling-global-navigation.png)
 
-* [Sök](/help/sites-cloud/authoring/search.md) - Du kan även använda [kortkommando](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md) `/` (snedstreck) för att starta sökning från en konsol.
+* Feedback
 
-  ![Ikonen Sök](/help/sites-cloud/authoring/assets/search-icon.png)
+  ![Feedback-knapp](/help/sites-cloud/authoring/assets/basic-handling-feedback.png)
+
+* Din IMS-organisation - välj att ändra om det behövs.
 
 * [Lösningar](https://www.adobe.com/experience-cloud.html) - Välj detta för att få tillgång till dina andra Adobe-lösningar.
 
-  ![Knappen Lösningar](/help/sites-cloud/authoring/assets/solutions.png)
+  ![Knappen Lösningar](/help/sites-cloud/authoring/assets/basic-handling-solutions.png)
+
+* [Sök](/help/sites-cloud/authoring/search.md) - Du kan även använda [kortkommando](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md) `/` (snedstreck) för att starta sökning från en konsol.
+
+  ![Ikonen Sök](/help/sites-cloud/authoring/assets/basic-handling-search-icon.png)
 
 * [Hjälp](#accessing-help)
 
-  ![Hjälp-knapp](/help/sites-cloud/authoring/assets/help.png)
+  ![Hjälp-knapp](/help/sites-cloud/authoring/assets/basic-handling-help-icon.png)
 
 * [Meddelanden](/help/sites-cloud/authoring/inbox.md) - Den här ikonen är märkt med antalet för närvarande tilldelade ofullständiga meddelanden.
 
-  ![Knappen Meddelanden](/help/sites-cloud/authoring/assets/notifications.png)
+  ![Knappen Meddelanden](/help/sites-cloud/authoring/assets/basic-handling-notifications.png)
 
 * [Användaregenskaper](/help/sites-cloud/authoring/account-environment.md) - Välj det här om du vill ändra dina användarinställningar.
 
-  ![Knappen Användaregenskaper](/help/sites-cloud/authoring/assets/user-properties.png)
+  ![Knappen Användaregenskaper](/help/sites-cloud/authoring/assets/basic-handling-user-properties.png)
 
 ## Få hjälp {#accessing-help}
 
