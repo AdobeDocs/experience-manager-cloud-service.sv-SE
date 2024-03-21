@@ -2,9 +2,9 @@
 title: Föråldrade och borttagna funktioner
 description: Versionsinformation om borttagna och borttagna funktioner i [!DNL Adobe Experience Manager] som [!DNL Cloud Service].
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
-source-git-commit: 1da8d9395df3dd2efee7f6a57197aa3f2b27b1a4
+source-git-commit: b675ff42eeaeb124e8789480a51684d359429d15
 workflow-type: tm+mt
-source-wordcount: '2068'
+source-wordcount: '2146'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 | [!DNL Assets] | Konvertera videofilmer till mpeg. | Använd för att skapa miniatyrbilder av FFmpeg [Resursmikrotjänster](/help/assets/asset-microservices-overview.md). För MPEG-omkodning använder du [Dynamic Media](/help/assets/manage-video-assets.md). |
 | [!DNL Foundation] | Gränssnitt för trädreplikering på fliken Distribuera i replikeringsagenten (borttagning efter 30 september 2021) | [Hantera publikation](/help/operations/replication.md#manage-publication) eller [arbetsflöde för publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) metoder |
 | [!DNL Foundation] | Varken fliken Distribuera på administrationsskärmen för replikeringsagenten eller replikerings-API:t kan användas för att replikera innehållspaket över 10 MB. Använd antingen [Hantera publikation](/help/operations/replication.md#manage-publication) eller [arbetsflöde för publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) |
+| [!DNL Foundation] | Integrering med hjälp av autentiseringsuppgifter som genererats från Adobe Developer Console-projekt kommer gradvis att förlora stöd för JWT-autentiseringsuppgifter (Service Account). Det går inte att skapa nya JWT-autentiseringsuppgifter (Service Account) i Adobe Developer Console den 1 maj 2024 eller senare, även om befintliga JWT-autentiseringsuppgifter fortfarande kan användas för redan konfigurerade integreringar fram till 1 januari 2025, då befintliga JWT-autentiseringsuppgifter inte längre fungerar och kunderna måste migrera till OAuth Server-till-server-autentiseringsuppgifter. [Läs mer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console). | [Migrera](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#migration-overview) till autentiseringsuppgifter för OAuth Server-till-Server. |
 
 ## Borttagna funktioner {#removed-features}
 
