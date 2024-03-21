@@ -2,9 +2,9 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: a284c0139b45e618749866385cdcc81d1ceb61e7
+source-git-commit: 01b55f2ff06d3886724dbb2c25d0c109a5ab6aec
 workflow-type: tm+mt
-source-wordcount: '5145'
+source-wordcount: '5142'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ När avancerade nätverksfunktioner konfigureras gäller följande begränsninga
 För avancerade nätverksfunktioner krävs två steg:
 
 1. Konfiguration av det avancerade nätverksalternativet, oavsett om [Flexibel hamnutgång.](#flexible-port-egress) [IP-adress för dedikerad egress,](#dedicated-egress-ip-address) eller [VPN,](#vpn) måste först göras på programnivå.
-1. För att kunna användas måste det avancerade nätverksalternativet aktiveras på miljönivå.
+1. För att kunna användas måste det avancerade nätverksalternativet sedan användas [på miljönivå.](#enabling)
 
 Båda stegen kan utföras antingen med användargränssnittet i molnhanteraren eller med API:t för molnhanteraren.
 
@@ -212,7 +212,7 @@ ProxyPassReverse "/somepath" "https://example.com:8443"
 
 ## IP-adress för dedikerad utpressning {#dedicated-egress-ip-address}
 
-En dedikerad IP-adress kan förbättra säkerheten vid integrering med SaaS-leverantörer (som en CRM-leverantör) eller andra integreringar utanför AEM as a Cloud Service som erbjuder en tillåtelselista av IP-adresser. Genom att lägga till den dedikerade IP-adressen till tillåtelselista säkerställer det att endast trafik från kundens AEM Cloud Service tillåts att flöda in i den externa tjänsten. Detta är utöver trafik från andra IP-adresser som tillåts.
+En dedikerad IP-adress kan förbättra säkerheten vid integrering med SaaS-leverantörer (som en CRM-leverantör) eller andra integreringar utanför AEM as a Cloud Service som erbjuder en tillåtelselista av IP-adresser. Genom att lägga till den dedikerade IP-adressen till tillåtelselista säkerställer det att endast trafik från din AEM Cloud Service tillåts att flöda in i den externa tjänsten. Detta är utöver trafik från andra IP-adresser som tillåts.
 
 Samma dedikerade IP-adress används för alla program i organisationen Adobe och för alla miljöer i alla program. Det gäller både författare och publiceringstjänster.
 
@@ -425,7 +425,7 @@ De flesta VPN-enheter med IPSec-teknik stöds. Läs informationen i **RouteBased
 1. I **Lägg till nätverksinfrastruktur** guide som startar, välj **Virtuellt privat nätverk** och tillhandahålla nödvändig information innan man knackar eller klickar **Fortsätt**.
 
    * **Län** - Detta är den region där infrastruktur bör skapas.
-   * **Adressutrymme** - Adressutrymmet kan bara vara en/26 CIDR (64 IP-adresser) eller ett större IP-intervall i kundutrymmet.
+   * **Adressutrymme** - Adressutrymmet kan bara vara en/26 CIDR (64 IP-adresser) eller ett större IP-intervall på ditt eget space.
       * Det här värdet kan inte ändras senare.
    * **DNS-information** - Det här är en lista över fjärr-DNS-matchare.
       * Tryck `Enter` efter att en DNS-serveradress har angetts för att lägga till en annan.
@@ -462,7 +462,7 @@ En ny post visas under **Nätverksinfrastruktur** på sidopanelen med uppgifter 
 
 ### API-konfiguration {#configuring-vpn-api}
 
-POSTEN `/program/<programId>/networkInfrastructures` slutpunkten anropas och skickar en nyttolast med konfigurationsinformation, inklusive: värdet för **vpn** för `kind` parameter, region, adressutrymme (lista med CIDR - observera att detta inte kan ändras senare), DNS-matchare (för att matcha namn i kundens nätverk) och VPN-anslutningsinformation som gatewaykonfiguration, delad VPN-nyckel och IP-säkerhetsprincipen. Slutpunkten svarar med `network_id`och annan information, inklusive status.
+POSTEN `/program/<programId>/networkInfrastructures` slutpunkten anropas och skickar en nyttolast med konfigurationsinformation, inklusive: värdet för **vpn** för `kind` parameter, region, adressutrymme (lista med CIDR - observera att detta inte kan ändras senare), DNS-matchare (för att matcha namn i nätverket) och VPN-anslutningsinformation som gatewaykonfiguration, delad VPN-nyckel och IP-säkerhetsprincipen. Slutpunkten svarar med `network_id`och annan information, inklusive status.
 
 När det anropas tar det normalt mellan 45 och 60 minuter innan nätverksinfrastrukturen etableras. API:ts GET-metod kan anropas för att returnera den aktuella statusen, som så småningom kommer att ändras `creating` till `ready`. Läs API-dokumentationen för alla lägen.
 
@@ -582,12 +582,12 @@ Bilden nedan visar en visuell representation av en uppsättning domäner och ass
   <tr>
     <td><code>p{PROGRAM_ID}.{REGION}-gateway.external.adobeaemcloud.com</code></td>
     <td>Ej tillämpligt</td>
-    <td>VPN-gatewayens IP på AEM. En kunds nätverksteam kan använda detta för att endast tillåta VPN-anslutningar till sin VPN-gateway från en viss IP-adress. </td>
+    <td>VPN-gatewayens IP på AEM. Nätverksteknikteamet kan använda detta för att endast tillåta VPN-anslutningar till din VPN-gateway från en viss IP-adress. </td>
   </tr>
   <tr>
     <td><code>p{PROGRAM_ID}.{REGION}.inner.adobeaemcloud.net</code></td>
-    <td>IP-adressen för trafik från VPN:s AEM till kundsidan. Detta kan tillåtslista i kundens konfiguration för att säkerställa att anslutningar bara kan göras från AEM.</td>
-    <td>Om kunden vill tillåta VPN-åtkomst till AEM bör de konfigurera DNS-poster för CNAME så att de mappar sin anpassade domän och/eller <code>author-p{PROGRAM_ID}-e{ENVIRONMENT_ID}.adobeaemcloud.com</code> och/eller <code>publish-p{PROGRAM_ID}-e{ENVIRONMENT_ID}.adobeaemcloud.com</code> till detta.</td>
+    <td>IP-adressen för trafiken från den AEM sidan av VPN till din sida. Detta kan tillåtslista i konfigurationen för att säkerställa att anslutningar endast kan göras från AEM.</td>
+    <td>Om du vill tillåta VPN-åtkomst till AEM bör du konfigurera DNS-poster för CNAME så att de mappar din anpassade domän och/eller <code>author-p{PROGRAM_ID}-e{ENVIRONMENT_ID}.adobeaemcloud.com</code> och/eller <code>publish-p{PROGRAM_ID}-e{ENVIRONMENT_ID}.adobeaemcloud.com</code> till detta.</td>
   </tr>
 </tbody>
 </table>
@@ -616,7 +616,7 @@ När du aktiverar en avancerad nätverkskonfiguration för en miljö kan du akti
 * **Portvidarebefordran** - regler för portvidarebefordran ska deklareras för alla andra destinationsportar än 80/443, men bara om inte http- eller https-protokoll används.
    * Regler för portvidarebefordran definieras genom att ange uppsättningen målvärdar (namn eller IP och portar).
    * Klientanslutningen som använder port 80/443 över http/https måste fortfarande använda proxyinställningar i anslutningen för att egenskaperna för avancerade nätverk ska tillämpas på anslutningen.
-   * För varje målvärd måste kunderna mappa den avsedda destinationsporten till en port från 30000 till 30999.
+   * För varje målvärd måste du mappa den avsedda målporten till en port från 30000 till 30999.
    * Reglerna för portvidarebefordran är tillgängliga för alla avancerade nätverkstyper.
 
 * **Icke-proxyvärdar** - Med icke-proxyvärdar kan du deklarera en uppsättning värdar som ska dirigeras via ett delat IP-adressintervall i stället för den dedikerade IP-adressen.
