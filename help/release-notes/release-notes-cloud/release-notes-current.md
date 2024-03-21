@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 5f780f5e8fa9289b35eefbbd4c3a71d37a7f465a
+source-git-commit: 8a64e2ca1dc3987558c36346422ee43d202d9ecc
 workflow-type: tm+mt
 source-wordcount: '1020'
 ht-degree: 0%
@@ -111,7 +111,7 @@ Dynatrace-kunder kan övervaka AEM. [Läs om](/help/implementing/cloud-manager/d
 
 ### CDN-konfiguration Tidigt program {#cdn-config-early-adopter}
 
-Förutom den nyligen släppta [Trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md), som innehåller reglerna för valfri brandvägg för webbprogram (WAF), finns en möjlighet att använda Configuration Pipeline för att deklarera och distribuera andra typer av CDN-konfigurationer. Delta i det tidiga adopterprogrammet genom att skicka e-post **aemcs-cdn-config-adopter@adobe.com** för att få åtkomst till:
+Förutom den nyligen släppta [Trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md), som innehåller WAF-regler (Web Application Firewall) (som kan köpas), finns en möjlighet att använda Configuration Pipeline för att deklarera och distribuera [andra typer av CDN-konfiguration](/help/implementing/dispatcher/cdn-configuring-traffic.md). Delta i det tidiga adopterprogrammet genom att skicka e-post **aemcs-cdn-config-adopter@adobe.com** för att få åtkomst till:
 * 301/302 klientomdirigeringar
 * förbluffande förfrågningar vid kanten till godtyckliga ursprung
 * URL-omformningar
