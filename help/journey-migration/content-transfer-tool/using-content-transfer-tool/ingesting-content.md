@@ -2,9 +2,9 @@
 title: Infoga innehåll i Cloud Service
 description: Lär dig hur du använder Cloud Acceleration Manager för att importera innehåll från din migreringsuppsättning till en instans av en Cloud Service.
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: 281523183cecf1e74c33f58ca9ad038bba1a6363
+source-git-commit: 8795d9d2078d9f49699ffa77b1661dbe5451a4a2
 workflow-type: tm+mt
-source-wordcount: '2410'
+source-wordcount: '2534'
 ht-degree: 1%
 
 ---
@@ -155,6 +155,12 @@ Om&quot;AEM versionsuppdateringar&quot; är aktiv (d.v.s. uppdateringar körs el
 
 ### Inmatningsfel i toppklass på grund av Unikhetsbegränsningsöverträdelse {#top-up-ingestion-failure-due-to-uniqueness-constraint-violation}
 
+>[!CONTEXTUALHELP]
+>id="aemcloud_cam_ingestion_troubleshooting_uuid"
+>title="Felaktigt begränsningsfel"
+>abstract="En vanlig orsak till ett icke-rensningsfel är en konflikt i nod-ID:n. Det får bara finnas en av de noder som står i konflikt."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content.html#top-up-ingestion-process" text="Inmatning uppifrån"
+
 En vanlig orsak till [Inmatning uppifrån](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#top-up-ingestion-process) fel är en konflikt i nod-ID:n. Identifiera felet genom att hämta matningsloggen med användargränssnittet i Cloud Acceleration Manager och leta efter en post som följande:
 
 >java.lang.RuntimeException: org.apache.jackrabbit.oak.api.CommitFailedException: OakConstraint0030: Unikhetsvillkoret bröt egenskap [jcr:uuid] med värdet a1a1a1a1-b2b2-c3c3-d4d4-e5e5e5e5e5e5: /some/path/jcr:content, /some/other/path/jcr:content
@@ -169,6 +175,12 @@ Den här konflikten måste lösas manuellt. Någon som är bekant med innehålle
 
 ### Inmatningsfel högst upp på grund av att det inte går att ta bort referensnod {#top-up-ingestion-failure-due-to-unable-to-delete-referenced-node}
 
+>[!CONTEXTUALHELP]
+>id="aemcloud_cam_ingestion_troubleshooting_referenced_node"
+>title="Det går inte att ta bort referensnod"
+>abstract="En vanlig orsak till ett icke-rensningsfel är en versionskonflikt för en viss nod i målinstansen. Versionerna för noden måste repareras."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content.html#top-up-ingestion-process" text="Inmatning uppifrån"
+
 En annan vanlig orsak till [Inmatning uppifrån](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#top-up-ingestion-process) fel är en versionskonflikt för en viss nod i målinstansen. Identifiera felet genom att hämta matningsloggen med användargränssnittet i Cloud Acceleration Manager och leta efter en post som följande:
 
 >java.lang.RuntimeException: org.apache.jackrabbit.oak.api.CommitFailedException: OakIntegrity001: Det går inte att ta bort refererad nod: 8a2289f4-b904-4bd0-8410-15e41e 0976a8
@@ -181,11 +193,22 @@ Bästa tillvägagångssätt visar att om en **Ej svep** Tillförsel måste utfö
 
 ### Inmatningsfel på grund av stora nodegenskapsvärden {#ingestion-failure-due-to-large-node-property-values}
 
+>[!CONTEXTUALHELP]
+>id="aemcloud_cam_ingestion_troubleshooting_bson"
+>title="Stor nodegenskap"
+>abstract="En vanlig orsak till att ett fel uppstår i en förtäring är att den maximala storleken för egenskapsvärden för noden har överskridits. Följ dokumentationen, inklusive de som rör BPA-rapporten, för att åtgärda detta."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html" text="Krav för migrering"
+
 Nodegenskapsvärden som lagras i MongoDB får inte överskrida 16 MB. Om ett nodvärde överskrider den storlek som stöds misslyckas importen och loggen innehåller en `BSONObjectTooLarge` fel och ange vilken nod som överskrider maxgränsen. Detta är en MongoDB-begränsning.
 
 Se `Node property value in MongoDB` anteckning i [Krav för verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/prerequisites-content-transfer-tool.md) om du vill ha mer information och en länk till ett ekverktyg som kan hjälpa dig att hitta alla stora noder. När alla noder med stora storlekar har åtgärdats kör du extraheringen och intaget igen.
 
 ### Inmatningen har avbrutits {#ingestion-rescinded}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_cam_ingestion_troubleshooting_rescinded"
+>title="Inmatningen har avbrutits"
+>abstract="Extraheringen som intaget väntade på slutfördes inte. Tillträdet avbröts eftersom det inte kunde verkställas."
 
 Ett intag som skapades med en pågående extrahering när dess källmigreringsuppsättning väntar tålt tills extraheringen lyckas och börjar då normalt. Om extraheringen misslyckas eller stoppas börjar inte intaget och indexeringsjobbet utan avbryts. I det här fallet kontrollerar du extraheringen för att fastställa varför den misslyckades, åtgärdar problemet och börjar extrahera igen. När den fasta extraheringen körs kan ett nytt intag schemaläggas.
 
