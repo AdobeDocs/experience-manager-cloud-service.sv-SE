@@ -2,7 +2,7 @@
 title: Versionsinformation om 2023.10.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2023.10.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 81a6cbd2-7101-429b-8572-2650c5bea963
-source-git-commit: 811a8f4d83a1034737c23b1707a24b52742fef55
+source-git-commit: b323fbe3a09de220c61c9b409d8754e43fe0a8d3
 workflow-type: tm+mt
 source-wordcount: '918'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Titta på videon med versionsöversikten för oktober 2023 om du vill se en samm
 
 ### Nya funktioner {#assets-features}
 
-**AEM Assets-tillägg för Adobe Express**: Experience Manager Assets har nu en [tillägg för Adobe Express](/help/assets/addon-adobe-express.md). Tillägget ger dig direktåtkomst till resurser som lagras i Experience Manager Assets inifrån användargränssnittet för Adobe Expressen. Du kan placera innehåll som hanteras i AEM Assets på arbetsytan Express och sedan spara nytt eller redigerat innehåll i en AEM Assets-databas. Tillägget ger följande fördelar:
+**AEM Assets-tillägg för Adobe Express**: Experience Manager Assets har nu ett tillägg för Adobe Express. Tillägget ger dig direktåtkomst till resurser som lagras i Experience Manager Assets inifrån användargränssnittet för Adobe Expressen. Du kan placera innehåll som hanteras i AEM Assets på arbetsytan Express och sedan spara nytt eller redigerat innehåll i en AEM Assets-databas. Tillägget ger följande fördelar:
 
 * Ökat återanvändning av innehåll genom att redigera och spara nya resurser i AEM
 
