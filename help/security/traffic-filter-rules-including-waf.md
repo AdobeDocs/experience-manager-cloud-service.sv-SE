@@ -2,7 +2,7 @@
 title: Trafikfilterregler inklusive WAF-regler
 description: Konfigurera trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF)
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: 9f23b91df3139115ca442de03457bb50a1e1cb71
+source-git-commit: 38a16251372ee6ba77687f524e5057e00f16f58e
 workflow-type: tm+mt
 source-wordcount: '3669'
 ht-degree: 0%
@@ -24,7 +24,7 @@ En underkategori av trafikfilterregler kräver antingen en förbättrad säkerhe
 
 Trafikfilterregler kan distribueras via Cloud Managers konfigurationspipelines för att dev, stage och produktionsmiljötyper i produktionsprogram (icke-sandlådeprogram). Stöd för de regionala utvecklingsföretagen kommer i framtiden.
 
-[Följ igenom en självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview.html) för att snabbt bygga upp konkreta expertkunskaper om den här funktionen.
+[Följ igenom en självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview) för att snabbt bygga upp konkreta expertkunskaper om den här funktionen.
 
 >[!NOTE]
 >Är du intresserad av andra alternativ för att konfigurera trafik vid leveransnätverket, bland annat att ändra begäran/svar, deklarera omdirigeringar och proxera till ett icke-AEM ursprung? [Lär dig hur man gör](/help/implementing/dispatcher/cdn-configuring-traffic.md) genom att gå med i det tidiga adopterprogrammet.
