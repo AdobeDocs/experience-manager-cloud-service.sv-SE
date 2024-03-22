@@ -2,9 +2,9 @@
 title: Infoga innehåll i Cloud Service
 description: Lär dig hur du använder Cloud Acceleration Manager för att importera innehåll från din migreringsuppsättning till en instans av en Cloud Service.
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: 8795d9d2078d9f49699ffa77b1661dbe5451a4a2
+source-git-commit: de05abac3620b254343196a283cef198f434cfca
 workflow-type: tm+mt
-source-wordcount: '2534'
+source-wordcount: '2752'
 ht-degree: 1%
 
 ---
@@ -211,6 +211,14 @@ Se `Node property value in MongoDB` anteckning i [Krav för verktyget Innehålls
 >abstract="Extraheringen som intaget väntade på slutfördes inte. Tillträdet avbröts eftersom det inte kunde verkställas."
 
 Ett intag som skapades med en pågående extrahering när dess källmigreringsuppsättning väntar tålt tills extraheringen lyckas och börjar då normalt. Om extraheringen misslyckas eller stoppas börjar inte intaget och indexeringsjobbet utan avbryts. I det här fallet kontrollerar du extraheringen för att fastställa varför den misslyckades, åtgärdar problemet och börjar extrahera igen. När den fasta extraheringen körs kan ett nytt intag schemaläggas.
+
+### Borttagen resurs finns inte efter upprepat förtäring
+
+I allmänhet rekommenderas inte att du ändrar molnmiljödata mellan de olika förslagen.
+
+När en resurs tas bort från målplatsen med hjälp av Resurser Touch-gränssnittet tas noddata bort, men resursens blob med Cloud Servicen tas inte bort omedelbart. Den är markerad för borttagning så att den inte längre visas i användargränssnittet. Den finns dock kvar i datalagret tills skräpinsamlingen sker och blobben tas bort.
+
+Om en tidigare migrerad resurs tas bort och nästa inmatning körs innan skräpinsamlaren har slutfört borttagningen av resursen, återställs inte den borttagna resursen om samma migreringsuppsättning används. När intaget kontrolleras i molnmiljön för resursen finns det inga noddata. Inmatningen kopierar därför noddata till molnmiljön. När den kontrollerar blobbutiken ser den dock att blobben finns och hoppar över kopieringen av blobben. Det är därför som metadata förekommer när du tittar på resursen från Touch-gränssnittet, men bilden är inte det. Kom ihåg att migreringsuppsättningar och innehåll inte har utformats för att hantera det här fallet. De vill lägga till nytt innehåll i molnmiljön och inte återställa tidigare migrerat innehåll.
 
 ## What&#39;s Next {#whats-next}
 
