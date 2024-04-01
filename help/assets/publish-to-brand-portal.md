@@ -1,18 +1,18 @@
 ---
 title: Publicera resurser, mappar och samlingar på varumärkesportalen
 description: Publicera resurser, mappar och samlingar på varumärkesportalen.
-contentOwner: Vishabh Gupta
+contentOwner: Adobe
 feature: Brand Portal,Asset Distribution,Configuration
 role: User
 exl-id: 1cc438bc-8cad-4421-af03-c1f6d750e0a8
-source-git-commit: 7f806c457f7bef1c5309bbc6f69d3989af1b06d3
+source-git-commit: 56a1c18f4ad700305d3b32f1b24d87ec6321325f
 workflow-type: tm+mt
-source-wordcount: '1168'
-ht-degree: 86%
+source-wordcount: '1147'
+ht-degree: 80%
 
 ---
 
-# Publicera resurser på varumärkesportalen {#publish-assets-to-brand-portal}
+# Publicera material i Brand Portal {#publish-assets-to-brand-portal}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -25,9 +25,9 @@ Du måste dock först konfigurera AEM Assets med varumärkesportalen. Mer inform
 
 Om du senare gör ändringar i den ursprungliga resursen, mappen eller samlingen i AEM Assets återspeglas inte ändringarna i varumärkesportalen förrän du publicerar resursen, mappen eller samlingen på nytt från AEM Assets. Funktionen säkerställer att pågående ändringar inte finns i varumärkesportalen. Endast godkända ändringar som publiceras av en administratör finns i varumärkesportalen.
 
-* [Publicera resurser på varumärkesportalen](#publish-assets-to-bp)
-* [Publicera mappar på varumärkesportalen](#publish-folders-to-brand-portal)
-* [Publicera samlingar på varumärkesportalen](#publish-collections-to-brand-portal)
+* [Publicera material i Brand Portal](#publish-assets-to-bp)
+* [Publicera mappar i Brand Portal](#publish-folders-to-brand-portal)
+* [Publicera samlingar på Brand Portal](#publish-collections-to-brand-portal)
 
 >[!NOTE]
 >
@@ -35,7 +35,7 @@ Om du senare gör ändringar i den ursprungliga resursen, mappen eller samlingen
 >Resurser ska publiceras gruppvis. Rekommendationen för batchstorlek är 15 kB.
 > För [!DNL Experience Manager Assets] som [!DNL Cloud Service], är den överföringshastighet som observeras under labbförhållanden 1000 tillgångar per timme. Frekvensen observeras med en genomsnittlig storlek på 10 MB för resurserna.
 
-## Publicera resurser på varumärkesportalen {#publish-assets-to-bp}
+## Publicera material i Brand Portal {#publish-assets-to-bp}
 
 Så här publicerar du resurser från AEM Assets till varumärkesportalen:
 
@@ -75,7 +75,9 @@ Gör så här för att schemalägga publicering av resurser på varumärkesporta
 
    Välj **[!UICONTROL Later]** från **[!UICONTROL Scheduling]**.
 
-   ![publishlaterbp-1](assets/publishlaterbp-1.png)
+   <!--![publishlaterbp-1](assets/publishlaterbp-1.png)-->
+
+   ![publicera senare](assets/publish-later.png)
 
 1. Markera en **[!UICONTROL Activation date]** och ange en tid. Klicka på **[!UICONTROL Next]**.
 
@@ -83,28 +85,26 @@ Gör så här för att schemalägga publicering av resurser på varumärkesporta
 
 1. Ange en **[!UICONTROL Workflow title]** i **[!UICONTROL Workflows]**. Klicka på **[!UICONTROL Publish Later]**.
 
-   ![publishworkflow](assets/publishworkflow.png)
+   <!--![publishworkflow](assets/publishworkflow.png)-->
 
-Logga in på gränssnittet för varumärkesportalen för att visa de publicerade resurserna (beroende på schemalagt datum eller tid).
-
-![bp_landingpage](assets/bp_landingpage.png)
+   ![publicera arbetsflöde](assets/publish-workflow.png)
 
 >[!NOTE]
 >
 > * De befintliga användarna i gruppen DAM-Users har läsåtkomst på sökvägen &quot;/conf/global/settings/cloudconfigs/mediaportal&quot;
->* Nya användare (eller icke-adminanvändare) behöver följande rättigheter för att publicera på varumärkesportalen.
+> * Nya användare (eller icke-adminanvändare) behöver följande rättigheter för att publicera på varumärkesportalen.
 > Banor:
-> &quot;/conf/global/settings/cloudconfigs/mediaportal&quot; : jcr:read
->/libs : jcr:read
->/conf : jcr:read
->/content : jcr:read, crx:replikate
->/content/dam/ : jcr:read,modify, crx:replicate
+> `"/conf/global/settings/cloudconfigs/mediaportal" : jcr:read `
+>`/libs : jcr:read`
+>`/conf : jcr:read`
+>`/content : jcr:read, crx:replicate`
+>`/content/dam/ : jcr:read,modify, crx:replicate`
 
-## Publicera mappar på varumärkesportalen {#publish-folders-to-brand-portal}
+## Publicera mappar i Brand Portal {#publish-folders-to-brand-portal}
 
 Du kan publicera eller avpublicera resursmappar direkt eller schemalägga åtgärden till ett senare datum eller en senare tid.
 
-### Publicera mappar på varumärkesportalen {#publish-folders-to-bp}
+### Publicera mappar i Brand Portal {#publish-folders-to-bp}
 
 1. Markera mapparna som du vill publicera från Assets-konsolen och klicka på **[!UICONTROL Quick Publish]**-alternativet i verktygsfältet.
 
@@ -131,8 +131,7 @@ Du kan publicera eller avpublicera resursmappar direkt eller schemalägga åtgä
    Ett meddelande visas som anger att mappen har placerats i kö för publicering på varumärkesportalen. Logga in på gränssnittet för varumärkesportalen för att visa den publicerade resursen.
 
 1. **Publicera mappar senare**
-
-   Gör så här för att schemalägga publicering av resursmappar till ett senare datum eller en senare tid:
+Så här schemalägger du publiceringen av resursmapparna till ett senare datum eller en senare tidpunkt:
 
    1. Välj de mappar som du vill schemalägga för publicering och välj sedan **[!UICONTROL Manage Publication]** i verktygsfältet högst upp.
    1. Välj **[!UICONTROL Publish to Brand Portal]** från **[!UICONTROL Action]**.
@@ -141,15 +140,31 @@ Du kan publicera eller avpublicera resursmappar direkt eller schemalägga åtgä
 
    1. Markera en **[!UICONTROL Activation date]** och ange en tid. Klicka på **[!UICONTROL Next]**.
 
-      ![publishlaterbp](assets/publishlaterbp.png)
+      <!--![publishlaterbp](assets/publishlaterbp.png)-->
+
+   ![publicera senare mapp](assets/publish-later-folder.png)
 
    1. Bekräfta ditt val i **[!UICONTROL Scope]**. Klicka på **[!UICONTROL Next]**.
 
    1. Ange en arbetsflödestitel under **[!UICONTROL Workflows]**. Klicka på **[!UICONTROL Publish Later]**.
 
-      ![manageschedulepub](assets/manageschedulepub.png)
+      <!--![manageschedulepub](assets/manageschedulepub.png)-->
 
-### Avpublicera mappar från varumärkesportalen {#unpublish-folders-from-brand-portal}
+   ![publicera arbetsflöde](assets/publish-workflow.png)
+
+### Visa publicerad fil eller mapp i Brand Portal {#view-published-file-folder}
+
+1. Logga in på gränssnittet för varumärkesportalen för att visa de publicerade resurserna (beroende på schemalagt datum eller tid).
+
+   ![bp_landingpage](assets/bp_landingpage.png)
+
+1. Växla till listvyn ![Listvy](assets/list-view.svg) om du vill visa resursens aktuella publiceringsstatus.
+
+<!--2. On the [Asset Reports page](#https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/asset-reports), you can see the current state of the report job, for example, Success, Failed, Queued, or Scheduled.-->
+
+![genererad rapportstatus](assets/report-status.JPG)
+
+### Avpublicera mappar från Brand Portal {#unpublish-folders-from-brand-portal}
 
 Du kan ta bort alla resursmappar som publicerats på varumärkesportalen genom att avpublicera dem från instansen av AEM Assets. När du har avpublicerat originalmappen har varumärkesportalens användare har inte längre tillgång till kopian.
 
@@ -195,7 +210,7 @@ Gör så här för att avpublicerar resursmappar från varumärkesportalen:
 
       ![unpublishworkflows](assets/unpublishworkflows.png)
 
-## Publicera samlingar på varumärkesportalen {#publish-collections-to-brand-portal}
+## Publicera samlingar på Brand Portal {#publish-collections-to-brand-portal}
 
 Du kan publicera eller avpublicera samlingar från molninstansen AEM Assets.
 
@@ -265,14 +280,14 @@ Mer information finns i [dokumentationen till varumärkesportalen](https://exper
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
