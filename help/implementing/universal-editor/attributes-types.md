@@ -2,9 +2,9 @@
 title: Attribut och objekttyper
 description: Läs mer om de dataattribut och objekttyper som krävs för den universella redigeraren.
 exl-id: 02795a31-244a-42b4-8297-2649125d7777
-source-git-commit: 5ddd4bbcce10c5cda97e3ea3f6750b209b5743f0
+source-git-commit: 0bb649b91c42f43b852d7fdd54b367c0c5df2c99
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '686'
 ht-degree: 0%
 
 ---
@@ -13,8 +13,6 @@ ht-degree: 0%
 # Attribut och typer {#attributes-types}
 
 Läs mer om de dataattribut och objekttyper som krävs för den universella redigeraren.
-
-{{universal-editor-status}}
 
 ## Introduktion {#introduction}
 

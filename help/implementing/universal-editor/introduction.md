@@ -2,9 +2,9 @@
 title: Introduktion till Universal Editor
 description: Se hur den universella redigeraren möjliggör WYSIWYG-redigering av headless och headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
 exl-id: d4fc2384-a0f5-4a6f-9572-62749786be4c
-source-git-commit: 9d88d9b6d3315f34ca6819820b4b4306ba901390
+source-git-commit: b6548d39ce02006d91f1953c878e08a1c0903563
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '868'
 ht-degree: 0%
 
 ---
@@ -13,8 +13,6 @@ ht-degree: 0%
 # Introduktion till Universal Editor {#introduction}
 
 Se hur den universella redigeraren möjliggör WYSIWYG-redigering av headless och headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
-
-{{universal-editor-status}}
 
 ## Bakgrund {#background}
 
@@ -79,12 +77,6 @@ En marknadsförare vill skapa innehåll utan att behöva bry sig om layouten, s�
 En marknadsförare vill skapa innehåll som är skräddarsytt efter layouten i ett visst sammanhang för att leverera en exceptionell upplevelse.
 
 * Det underliggande jobbet är att på ett övertygande sätt få kontakt med läsarna.
-
-## Vägkarta {#road-map}
-
-Det är viktigt att komma ihåg att den universella redigeraren är ett pågående arbete och en del av funktionerna som beskrivs i det här dokumentet är en vision för den slutliga redigeraren och inte nödvändigtvis en representation av dess nuvarande funktioner.
-
-Tala med din Adobe-kontakt för mer information om kommande funktioner som planeras för den universella redigeraren.
 
 ## Ytterligare resurser {#additional-resources}
 

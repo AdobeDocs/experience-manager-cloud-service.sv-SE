@@ -2,7 +2,7 @@
 title: Autentisering av universell redigerare
 description: Läs om hur den universella redigeraren använder Adobe Identity Management System (IMS) för autentisering.
 exl-id: fb86c510-3c41-4511-81b7-1bdf2f5e7dd3
-source-git-commit: 9d88d9b6d3315f34ca6819820b4b4306ba901390
+source-git-commit: 0bb649b91c42f43b852d7fdd54b367c0c5df2c99
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%
@@ -13,8 +13,6 @@ ht-degree: 0%
 # Autentisering av universell redigerare {#authentication}
 
 Lär dig hur den universella redigeraren autentiseras.
-
-{{universal-editor-status}}
 
 ## Alternativ {#options}
 

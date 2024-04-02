@@ -2,7 +2,7 @@
 title: Skapa innehåll med den universella redigeraren
 description: Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
 exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
-source-git-commit: 799ca20f8787afffd783c93a2480e096fffb1566
+source-git-commit: 0bb649b91c42f43b852d7fdd54b367c0c5df2c99
 workflow-type: tm+mt
 source-wordcount: '2313'
 ht-degree: 0%
@@ -13,8 +13,6 @@ ht-degree: 0%
 # Skapa innehåll med den universella redigeraren {#authoring}
 
 Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
-
-{{universal-editor-status}}
 
 ## Introduktion {#introduction}
 

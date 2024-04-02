@@ -1,7 +1,7 @@
 ---
-source-git-commit: 4144f9704aaf17ea684be147395adc3aa31641f2
+source-git-commit: 0bb649b91c42f43b852d7fdd54b367c0c5df2c99
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
@@ -14,12 +14,6 @@ ht-degree: 0%
 ## Redigering av Edge Delivery Services {#edge-delivery-authoring}
 
 [!BADGE Klicka här om du vill skapa AEM innehåll för Edge Delivery Services.]{type=Positive url="/help/edge/overview.md" tooltip="Skapa AEM innehåll för Edge Delivery Services"}
-
-## Universal Editor-status {#universal-editor-status}
-
->[!NOTE]
->
->Den universella redigeraren är fortfarande under utveckling och kan komma att ändras och skilja sig från vad som beskrivs i det här dokumentet.
 
 ## Se även {#see-also}
 
