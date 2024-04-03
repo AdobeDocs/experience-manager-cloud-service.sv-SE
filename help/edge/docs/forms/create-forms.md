@@ -3,7 +3,7 @@ title: Komma igång med AEM Forms Edge Delivery Service. Skapa ett formulär.
 description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery, dokumentbaserad framtagning = blixtsnabb och SEO-anpassade formulär för nöjdare användare och sökmotorer.
 feature: Edge Delivery Services
 exl-id: 0cf881a2-3784-45eb-afe8-3435e5e95cf4
-source-git-commit: b32e04dec83992ebfcea7874932a5ab77a1eaa70
+source-git-commit: 984ead39ef8c20f06ac63c88380323e403a08712
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Kontrollera att du har utfört följande steg innan du börjar:
 
 * Konfigurera en [AEM projekt med AEM Forms standardmall](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [har lagt till Adaptive Forms Block i ditt befintliga AEM](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project) och klona motsvarande GitHub-databas på din lokala dator.
 I det här dokumentet kallas den lokala mappen i ditt Edge Delivery Services-projekt (EDS) `[EDS Project repository]`.
-* Se till att du har tillgång till Google Sheets eller Microsoft SharePoint. Information om hur du konfigurerar Microsoft SharePoint som innehållskälla finns i [Så här använder du SharePoint](https://www.aem.live/docs/setup-customer-SharePoint).
+* Se till att du har tillgång till Google Sheets eller Microsoft SharePoint. Information om hur du konfigurerar Microsoft SharePoint som innehållskälla finns i [Så här använder du SharePoint](https://www.aem.live/docs/setup-customer-sharepoint).
 
 
 
@@ -80,7 +80,7 @@ Så här fortsätter du med att skapa formulär:
 
    ![Exempelinnehåll på Google Drive](/help/edge/assets/upload-sample-files-to-your-content-folder.png)
 
-1. Se till att bladet delas med rätt AEM (till exempel `helix@adobe.com`) [enligt de konfigurationer som har angetts för ditt projekt](https://www.aem.live/docs/setup-customer-SharePoint). Ge användaren redigeringsbehörighet för bladet.
+1. Se till att bladet delas med rätt AEM (till exempel `helix@adobe.com`) [enligt de konfigurationer som har angetts för ditt projekt](https://www.aem.live/docs/setup-customer-sharepoint). Ge användaren redigeringsbehörighet för bladet.
 
 1. Öppna det skapade kalkylbladet och ändra standardbladets namn till &quot;shared-default&quot;.
 

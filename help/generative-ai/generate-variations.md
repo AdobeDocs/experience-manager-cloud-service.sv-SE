@@ -1,13 +1,13 @@
 ---
 title: Generera variationer
 description: Lär dig mer om Generera variationer, som du kommer åt Sidekick i Edge Delivery Services
-source-git-commit: 88d0b0a6dc2dacdf907ab46c804087772ab2e030
+exl-id: 9114037f-37b9-4b2f-a714-10933f69b2c3
+source-git-commit: 984ead39ef8c20f06ac63c88380323e403a08712
 workflow-type: tm+mt
 source-wordcount: '3338'
 ht-degree: 0%
 
 ---
-
 
 # Generera variationer {#generate-variations}
 
@@ -343,7 +343,7 @@ Markera en **Adobe Target** i manuset gör det möjligt att personalisera inneh�
 
    >[!NOTE]
    >
-   >Så här använder du **Adobe Target** målgrupp som beskrivningsfältet måste fyllas i. Annars visas målgruppen i listrutan som otillgänglig. Om du vill lägga till en beskrivning går du till Mål och [lägga till en publikbeskrivning](https://experienceleague.adobe.com/docs/target-learn/tutorials/audiences/create-audiences).
+   >Så här använder du **Adobe Target** målgrupp som beskrivningsfältet måste fyllas i. Annars visas målgruppen i listrutan som otillgänglig. Om du vill lägga till en beskrivning går du till Mål och [lägga till en publikbeskrivning](https://experienceleague.adobe.com/en/docs/target-learn/tutorials/audiences/create-audiences).
 
    ![Generera variationer - målgruppskälla - Adobe Target](assets/generate-variations-audiences-adobe-target.png)
 

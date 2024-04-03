@@ -2,13 +2,13 @@
 title: Komma igång med AEM Forms-Edge Delivery Services - självstudiekurs för utvecklare
 description: Den här självstudiekursen hjälper dig att komma igång med ett nytt Adobe Experience Manager Forms-projekt (AEM). Om tio till tjugo minuter har du skapat egna formulär.
 feature: Edge Delivery Services
-source-git-commit: b32e04dec83992ebfcea7874932a5ab77a1eaa70
+exl-id: bb7e93ee-0575-44e1-9c5e-023284c19490
+source-git-commit: 984ead39ef8c20f06ac63c88380323e403a08712
 workflow-type: tm+mt
-source-wordcount: '1850'
+source-wordcount: '1848'
 ht-degree: 0%
 
 ---
-
 
 # Komma igång - självstudiekurs för utvecklare
 
@@ -19,8 +19,6 @@ Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets
 AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa formulär för att hämta in och lagra inhämtade data. Du kan [skapa ett nytt AEM projekt förkonfigurerat med Adaptive Forms Block](#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM](#add-adaptive-forms-block-to-your-existing-aem-project).
 
 Den här AEM Forms-självstudiekursen guidar dig genom att skapa, förhandsgranska och publicera egna anpassade formulär med ett nytt Adobe Experience Manager (AEM) Forms-projekt.
-
-
 
 ## Förutsättningar
 
@@ -131,8 +129,7 @@ Så här kopierar du exempelinnehållet till din egen innehållsmapp och pekar d
       https://adobe.SharePoint.com/sites/wkndforms/Shared%20Documents/wefinance
       ```
 
-      Mer information om hur du hanterar filer i Microsoft SharePoint finns i [Så här använder du Adobe SharePoint](https://www.aem.live/docs/setup-customer-SharePoint).
-
+      Mer information om hur du hanterar filer med Microsoft SharePoint finns i [Så här använder du Adobe SharePoint](https://www.aem.live/docs/setup-customer-sharepoint).
 
 
    1. Genomför den uppdaterade `fsatb.yaml` när du har uppdaterat referensen ser allt bra ut. Om du stöter på några byggproblem kan du läsa [Felsökning av byggproblem med GitHub](#troubleshooting-github-build-issues).
@@ -300,4 +297,3 @@ Om du skulle stöta på ett lintingfel kan du kringgå dem. Öppna [EDS-projekt]
 ## Se även
 
 {{see-more-forms-eds}}
-

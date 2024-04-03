@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Asset Management,Metadata
 role: User,Architect,Admin
 exl-id: 73a82bc2-1dda-4090-b7ee-29d1a632ba25
-source-git-commit: fa57e0438a7570551785375c4e5a57fa38fd2f6f
+source-git-commit: 984ead39ef8c20f06ac63c88380323e403a08712
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1924'
 ht-degree: 3%
 
 ---
@@ -250,7 +250,7 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 * CC - [!DNL Creative Commons].
 * [!DNL XMPRights].
 * PLUS - [Picture Licensing Universal System](https://www.useplus.com).
-* PRISM - [Publiceringskrav för branschstandardmetadata](https://www.idealliance.org/prism-metadata).
+<!--THIS LINK IS 404 WITH NO SUITABLE REPLACEMENT * PRISM - [Publishing Requirements for Industry Standard Metadata](https://www.idealliance.org/prism-metadata). -->
 * PRL - PRISM Rights Language.
 * PUR - PRISM-användningsrättigheter.
 * `xmpPlus` - Integration av PLUS med XMP.
@@ -265,7 +265,7 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 ### Utskriftsspecifika metadata {#print-specific-metadata}
 
 * PDF och PDF/X - Adobe PDF och tredjepartsprogram.
-* PRISM - [Publiceringskrav för branschstandardmetadata](https://www.idealliance.org/prism-metadata).
+<!--THIS LINK IS 404 WITH NO SUITABLE REPLACEMENT * PRISM - [Publishing Requirements for Industry Standard Metadata](https://www.idealliance.org/prism-metadata). -->
 * XMP - [!DNL Extensible Metadata Platform].
 * `xmpPG` - XMP metadata för sidindelad text.
 
