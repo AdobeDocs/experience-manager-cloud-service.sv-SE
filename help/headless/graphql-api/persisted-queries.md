@@ -3,9 +3,9 @@ title: Beständiga GraphQL-frågor
 description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager as a Cloud Service för att optimera prestandan. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
 feature: Content Fragments,GraphQL API
 exl-id: 080c0838-8504-47a9-a2a2-d12eadfea4c0
-source-git-commit: 2fa76dbe93bcf31901ec0422470b05dadfe4f43f
+source-git-commit: 8b03da83c7f669d9295f7c8a82ce5c97fafe67c8
 workflow-type: tm+mt
-source-wordcount: '1870'
+source-wordcount: '1869'
 ht-degree: 0%
 
 ---
@@ -262,22 +262,28 @@ UTF-8-kodning `%3B` är för `;` och `%3D` är kodningen för `=`. Frågevariabl
 När du använder variabler i dina frågor finns det några metodtips som du bör följa:
 
 * Kodning I allmänhet rekommenderas alltid att alla specialtecken kodas, till exempel `;`, `=`, `?`, `&`, bland annat.
+
 * Semikolonbeständiga frågor som använder flera variabler (som avgränsas med semikolon) måste ha antingen:
-   * de semikolon som är kodade (`%3B`); och om du kodar URL:en kommer detta också att ske
+   * de semikolon som är kodade (`%3B`); om du kodar URL:en så blir det också möjligt
    * eller ett avslutande semikolon som lagts till i slutet av frågan
+
 * `CACHE_GRAPHQL_PERSISTED_QUERIES`
 När `CACHE_GRAPHQL_PERSISTED_QUERIES` är aktiverat för Dispatcher och sedan parametrar som innehåller `/` eller `\` i deras värde kodas två gånger på Dispatcher-nivån.
 För att undvika denna situation:
+
    * Aktivera `DispatcherNoCanonURL` på Dispatcher.
 Detta instruerar Dispatcher att vidarebefordra den ursprungliga URL:en till AEM, så att dubblerade kodningar förhindras.
 Den här inställningen fungerar för närvarande bara på `vhost` nivå, så om du redan har Dispatcher-konfigurationer för att skriva om URL:er (t.ex. när du använder förkortade URL:er) kan du behöva en separat `vhost` för beständiga fråge-URL:er.
+
    * Skicka `/` eller `\` okodade tecken.
 När du anropar den beständiga fråge-URL:en ser du till att alla `/` eller `\` tecken förblir okodade i värdet för beständiga frågevariabler.
      >[!NOTE]
      >
      >Det här alternativet rekommenderas endast när `DispatcherNoCanonURL` -lösningen kan inte implementeras av någon anledning.
+
 * `CACHE_GRAPHQL_PERSISTED_QUERIES`
-När `CACHE_GRAPHQL_PERSISTED_QUERIES` är aktiverat för Dispatcher, och sedan `;` kan inte användas i variabelvärdet.
+
+  När `CACHE_GRAPHQL_PERSISTED_QUERIES` är aktiverat för Dispatcher, och sedan `;` kan inte användas i variabelvärdet.
 
 ## Cachelagra beständiga frågor {#caching-persisted-queries}
 
