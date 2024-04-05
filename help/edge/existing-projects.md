@@ -2,13 +2,13 @@
 title: Använda Edge Delivery Services med befintliga AEM
 description: Lär dig utnyttja fördelarna med Edge Delivery Services i dina befintliga AEM projekt
 feature: Edge Delivery Services
-source-git-commit: 22a791311c618fcbd61f321b8efa79c3a52ec65d
+exl-id: f54aac3a-1d0c-4be0-9aa6-616217e0e458
+source-git-commit: becba7698afe4aa0629bf54fa0d0d26156784b5f
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '315'
 ht-degree: 0%
 
 ---
-
 
 # Använda Edge Delivery Services med befintliga AEM {#existing-projects}
 
@@ -27,7 +27,7 @@ AEM sidredigeraren fungerar bara med [AEM](/help/implementing/developing/compone
 
 I fas ett kan du fortsätta att använda din befintliga AEM platsstruktur, komponenter och redigeringsverktyg. Webbplatsåtergivningen byggs om med hjälp av block med JavaScript och CSS, och den levereras via Edge Delivery Services.
 
-Se [Byggavsnitt](/help/edge/developer/block-collection.md) av dokumentationen till Edge Delivery Servicens för mer information om block och hur du utvecklar för Edge Delivery-tjänster.
+<!--Please see the [Build section](/help/edge/developer/block-collection.md) of the Edge Delivery Services documentation for more details on blocks and how to develop for Edge Delivery services.-->
 
 En konverterare i App Builder krävs för att konvertera den AEM renderade HTML-utdata och skicka den till Edge Delivery Services.
 

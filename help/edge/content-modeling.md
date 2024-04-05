@@ -2,9 +2,9 @@
 title: Innehållsmodellering för AEM med Edge Delivery Services Projects
 description: Lär dig hur innehållsmodellering fungerar AEM redigering med projekt för Edge Delivery Services och hur du modellerar eget innehåll.
 exl-id: e68b09c5-4778-4932-8c40-84693db892fd
-source-git-commit: 22a631d394de1c0fb934d9703e966c8287aef391
+source-git-commit: becba7698afe4aa0629bf54fa0d0d26156784b5f
 workflow-type: tm+mt
-source-wordcount: '2095'
+source-wordcount: '2072'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Innan du börjar modellera innehåll för projektet bör du först läsa följan
 
 * [Komma igång - självstudiekurs för utvecklare](/help/edge/developer/tutorial.md)
 * [Markeringar, avsnitt, block och automatisk blockering](/help/edge/developer/markup-sections-blocks.md)
-* [Blockera samling](/help/edge/developer/block-collection.md)
+  <!--* [Block Collection](/help/edge/developer/block-collection.md)-->
 
 Det är viktigt att förstå dessa koncept för att komma fram till en övertygande innehållsmodell som fungerar på ett innehållskällagnostikt sätt. Det här dokumentet innehåller information om de mekanismer som implementerats specifikt för AEM.
 
@@ -323,7 +323,7 @@ I följande exempel accepterar ett block en lista med länkade ikoner som undero
 
 Med [Förklaring av blockstrukturens mekanik.](#block-structure) Det går att skapa en innehållsmodell som mappar innehåll som bevaras i AEM en till en till leveransnivån.
 
-Tidigt i varje projekt måste man tänka på en innehållsmodell för varje block. Den måste vara agnostisk mot innehållskällan och redigeringsmiljön för att författare ska kunna växla eller kombinera dem när blockimplementeringar och format återanvänds. Mer information och allmänna riktlinjer finns i [David&#39;s Model (ta 2).](https://www.aem.live/docs/davidsmodel) Mer specifikt finns i [blocksamling](/help/edge/developer/block-collection.md) innehåller en omfattande uppsättning innehållsmodeller för specifika användningsområden för vanliga användargränssnittsmönster.
+Tidigt i varje projekt måste man tänka på en innehållsmodell för varje block. Den måste vara agnostisk mot innehållskällan och redigeringsmiljön för att författare ska kunna växla eller kombinera dem när blockimplementeringar och format återanvänds. Mer information och allmänna riktlinjer finns i [David&#39;s Model (ta 2).](https://www.aem.live/docs/davidsmodel) <!--More specifically, the [block collection](/help/edge/developer/block-collection.md) contains a extensive set of content models for specific use cases of common user interface patterns.-->
 
 När AEM skapar med Edge Delivery Services ställer det här en fråga om hur en övertygande semantisk innehållsmodell ska användas när informationen skrivs med formulär som består av flera fält istället för att man redigerar semantiska markeringar i sitt sammanhang som RTF.
 
