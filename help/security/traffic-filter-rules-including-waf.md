@@ -2,7 +2,7 @@
 title: Trafikfilterregler inklusive WAF-regler
 description: Konfigurera trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF)
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: 38a16251372ee6ba77687f524e5057e00f16f58e
+source-git-commit: 3a79de1cccdec1de4902b234dac3120efefdbce8
 workflow-type: tm+mt
 source-wordcount: '3669'
 ht-degree: 0%
@@ -695,7 +695,7 @@ data:
           - reqProperty: path
             matches: "^/bin/.*"
       action:
-        type: log
+        type: allow
         wafFlags:
           - CMDEXE
 ```
