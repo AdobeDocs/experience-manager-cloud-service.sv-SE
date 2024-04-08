@@ -2,7 +2,7 @@
 title: Universella redigeringsanrop
 description: Lär dig mer om de olika typer av samtal som görs till appen av den universella redigeraren som kan hjälpa dig vid felsökning.
 exl-id: 00d66e59-e445-4b5c-a5b1-c0a9f032ebd9
-source-git-commit: 0bb649b91c42f43b852d7fdd54b367c0c5df2c99
+source-git-commit: 11a244b7dd4810fbfec92b3effc362102e7322dc
 workflow-type: tm+mt
 source-wordcount: '615'
 ht-degree: 0%
@@ -383,3 +383,4 @@ Den universella redigeraren itererar över innehållet och skapar en lista med r
 ## Ytterligare resurser {#additional-resources}
 
 * [Universella redigeringshändelser](/help/implementing/universal-editor/events.md)
+

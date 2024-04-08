@@ -2,7 +2,7 @@
 title: Anpassa redigeringsmiljön
 description: Lär dig mer om de olika tilläggspunkterna och andra funktioner som gör att du kan anpassa gränssnittet i den universella redigeraren så att det passar de behov som finns hos de som skapar innehållet.
 exl-id: 8d6523c8-b266-4341-b301-316d5ec224d7
-source-git-commit: f04ab32093371ff425c4e196872738867d9ed528
+source-git-commit: 11a244b7dd4810fbfec92b3effc362102e7322dc
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 0%
@@ -96,3 +96,4 @@ Villkoren kan definieras med [JsonLogic-schema.](https://jsonlogic.com/) Om vill
 #### True för villkor {#true}
 
 ![Visat textfält](assets/shown.png)
+

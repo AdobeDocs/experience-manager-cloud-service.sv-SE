@@ -2,7 +2,7 @@
 title: Local AEM Development with the Universal Editor
 description: Läs om hur den universella redigeraren stöder redigering i lokala AEM för utvecklingsändamål.
 exl-id: ba1bf015-7768-4129-8372-adfb86e5a120
-source-git-commit: 0bb649b91c42f43b852d7fdd54b367c0c5df2c99
+source-git-commit: 11a244b7dd4810fbfec92b3effc362102e7322dc
 workflow-type: tm+mt
 source-wordcount: '698'
 ht-degree: 0%
@@ -119,3 +119,4 @@ Med [Universell redigeringstjänst som körs lokalt](#running-ue) och [Innehåll
 1. Öppna webbläsaren för att `https://localhost:8000/corslib/LATEST`.
 1. Be webbläsaren godkänna [ditt självsignerade certifikat.](#ue-https)
 1. När det självsignerade certifikatet är betrott kan du redigera sidan med din lokala Universal Editor-tjänst.
+
