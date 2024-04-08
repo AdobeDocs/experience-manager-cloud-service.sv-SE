@@ -2,7 +2,7 @@
 title: Replikering
 description: Lär dig mer om distribution och felsökning av replikering på AEM as a Cloud Service.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: bae9a5178c025b3bafa8ac2da75a1203206c16e1
+source-git-commit: 9ab6ac5588b6ca5135e3635cc886ec51207e89d7
 workflow-type: tm+mt
 source-wordcount: '1312'
 ht-degree: 0%
@@ -196,14 +196,17 @@ Storleken på innehållet som skickas per replikeringsanrop får inte överskrid
 
 Om du vill felsöka replikering går du till replikeringsköerna i webbgränssnittet för AEM författartjänst:
 
-1. Navigera AEM Start-menyn till **Verktyg > Distribution > Distribution**
-2. Välj kort **publicera**
+1. Navigera AEM Start-menyn till **verktyg** > **Distribution** > **Distribution**
+1. Välj kort **publicera**
+
    ![Status](assets/publish-status.png "Status")
-3. Kontrollera köstatusen som ska vara grön
-4. Du kan testa anslutningen till replikeringstjänsten
-5. Välj **Loggar** som visar historiken för innehållspublikationer
+
+1. Kontrollera köstatusen som ska vara grön
+1. Du kan testa anslutningen till replikeringstjänsten
+1. Välj **Loggar** som visar historiken för innehållspublikationer
 
 ![Loggar](assets/publish-logs.png "Loggar")
 
 Om innehållet inte kunde publiceras återställs hela publikationen från AEM Publiceringstjänst.
+
 I så fall visar den huvudsakliga, redigerbara kön en röd status och bör granskas för att identifiera vilka objekt som gjorde att publiceringen avbröts. Genom att klicka på den kön visas de väntande objekten, från vilka ett eller alla objekt kan rensas vid behov.
