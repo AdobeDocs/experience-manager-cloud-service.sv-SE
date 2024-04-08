@@ -2,7 +2,7 @@
 title: Komma igång med AEM Headless as a Cloud Service
 description: I den här delen av AEM Headless Developer Journey kan du läsa om AEM Headless-krav.
 exl-id: 9661e17b-fa9f-4689-900c-412b068e942c
-source-git-commit: 1a4c5e618adaef99d82a00e1118d1a0f8536fc14
+source-git-commit: 998651bf0529d6a8aab0cd340a1c171974c405f6
 workflow-type: tm+mt
 source-wordcount: '3057'
 ht-degree: 0%
@@ -95,7 +95,7 @@ För att du ska få en förståelse för headless-koncept fokuserar den här AEM
 
 Du bör dock vara medveten om de extra hybridmöjligheterna som är öppna för dig när du väl förstår AEM headless-funktioner. Dessa fall beskrivs nedan för att du ska vara medveten om dem. I slutet av resan introduceras dessa koncept i detalj om en sådan flexibilitet krävs för ditt projekt.
 
-### Du har redan en extern förbrukning av headless-innehåll som ett program på en sida (SPA). {#already-have-a-spa}
+### Du har redan en extern förbrukning av headless-innehåll som ett program med en enda sida (SPA). {#already-have-a-spa}
 
 Låt oss anta att ditt grundläggande krav är åtminstone att leverera innehåll från AEM till en befintlig, extern tjänst.
 
