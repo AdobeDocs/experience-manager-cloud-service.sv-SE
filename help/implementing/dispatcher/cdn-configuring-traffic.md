@@ -2,13 +2,13 @@
 title: Konfigurera trafik vid leveransnätverket
 description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler och filter i en konfigurationsfil och distribuera dem till CDN med hjälp av Cloud Manager Configuration Pipeline.
 feature: Dispatcher
-source-git-commit: 0a0c9aa68b192e8e2a612f50a58ba5f9057c862d
+exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
+source-git-commit: 1e2d147aec53fc0f5be53571078ccebdda63c819
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '1109'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera trafik vid leveransnätverket {#cdn-configuring-cloud}
 
@@ -47,6 +47,16 @@ config/
 
 * För det andra `cdn.yaml` konfigurationsfilen ska innehålla både metadata och reglerna som beskrivs i exemplen nedan.
 
+## Syntax {#configuration-syntax}
+
+Regeltyperna i avsnitten nedan har en gemensam syntax.
+
+En regel refereras av ett namn, en villkorlig&quot;when-sats&quot; och åtgärder.
+
+När-satsen avgör om en regel ska utvärderas, baserat på egenskaper som domän, sökväg, frågesträngar, rubriker och cookies. Syntaxen är densamma för alla regeltyper. Mer information finns i [Villkorsstrukturavsnitt](/help/security/traffic-filter-rules-including-waf.md#condition-structure) i artikeln Traffic Filter Rules.
+
+Detaljerna för åtgärdsnoden skiljer sig åt mellan olika regeltyper och beskrivs i de enskilda avsnitten nedan.
+
 ## Begär omformningar {#request-transformations}
 
 Regler för omformning av begäranden gör att du kan ändra inkommande begäranden. Reglerna har stöd för att ställa in, ta bort och ändra sökvägar, frågeparametrar och rubriker (inklusive cookies) baserat på olika matchningsvillkor, inklusive reguljära uttryck. Du kan också ange variabler som du senare kan referera till i utvärderingssekvensen.
@@ -61,7 +71,7 @@ Konfigurationsexempel:
 kind: "CDN"
 version: "1"
 metadata:
-  envTypes: ["prod", "dev"]
+  envTypes: ["dev", "stage", "prod"]
 data:  
   experimental_requestTransformations:
     removeMarketingParams: true
@@ -74,7 +84,7 @@ data:
           - type: set
             reqHeader: x-some-header
             value: some value
- 
+            
       - name: unset-header-rule
         when:
           reqProperty: path
@@ -82,24 +92,7 @@ data:
         actions:
           - type: unset
             reqHeader: x-some-header
- 
-      - name: set-query-param-rule
-        when:
-          reqProperty: path
-          equals: /set-query-param
-        actions:
-          - type: set
-            queryParam: someParam
-            value: someValue
- 
-      - name: unset-query-param-rule
-        when:
-          reqProperty: path
-          equals: /unset-query-param
-        actions:
-          - type: unset
-            queryParam: someParam
- 
+            
       - name: unset-matching-query-params-rule
         when:
           reqProperty: path
@@ -107,7 +100,7 @@ data:
         actions:
           - type: unset
             queryParamMatch: ^removeMe_.*$
- 
+            
       - name: unset-all-query-params-except-exact-two-rule
         when:
           reqProperty: path
@@ -115,61 +108,7 @@ data:
         actions:
           - type: unset
             queryParamMatch: ^(?!leaveMe$|leaveMeToo$).*$
- 
-      - name: set-req-cookie-rule
-        when:
-          reqProperty: path
-          equals: /set-req-cookie
-        actions:
-          - type: set
-            reqCookie: someParam
-            value: someValue
- 
-      - name: unset-req-cookie-rule
-        when:
-          reqProperty: path
-          equals: /unset-req-cookie
-        actions:
-          - type: unset
-            reqCookie: someParam
- 
-      - name: set-variable-rule
-        when:
-          reqProperty: path
-          equals: /set-variable
-        actions:
-          - type: set
-            var: some_var_name
-            value: some value
- 
-      - name: unset-variable-rule
-        when:
-          reqProperty: path
-          equals: /unset-variable
-        actions:
-          - type: unset
-            var: some_var_name
- 
-      - name: replace-segment
-        when:
-          reqProperty: path
-          like: /replace-segment/*
-        actions:
-          - type: replace
-            reqProperty: path
-            match: /replace-segment/
-            value: /segment-was-replaced/
- 
-      - name: replace-extension
-        when:
-          reqProperty: path
-          like: /replace-extension/*.html
-        actions:
-          - type: replace
-            reqProperty: path
-            match: \.html
-            value: ''
- 
+            
       - name: multi-action
         when:
           reqProperty: path
@@ -181,6 +120,17 @@ data:
           - type: set
             reqHeader: x-header2
             value: '201'
+            
+      - name: replace-html
+        when:
+          reqProperty: path
+          like: /mypath
+        actions:
+          - type: transform
+           reqProperty: path
+           op: replace
+           match: \.html$
+           replacement: ""
 ```
 
 **Åtgärder**
@@ -189,16 +139,27 @@ I tabellen nedan beskrivs de tillgängliga åtgärderna.
 
 | Namn | Egenskaper | Betydelse |
 |-----------|--------------------------|-------------|
-| **set** | reqHeader, värde | Ställer in en angiven rubrik på ett givet värde. |
-|     | queryParam, värde | Ställer in en angiven frågeparameter på ett givet värde. |
-|     | reqCookie, värde | Anger en angiven cookie till ett angivet värde. |
-|     | var, värde | Ställer in en angiven variabel på ett givet värde. |
-| **unset** | reqHeader | Tar bort ett angivet huvud. |
-|         | queryParam | Tar bort en angiven frågeparameter. |
-|         | reqCookie | Tar bort en angiven cookie. |
+| **set** | (reqProperty eller reqHeader eller queryParam eller reqCookie), värde | Anger en angiven begärandeparameter (endast egenskapen path stöds), eller begäranhuvud, frågeparameter eller cookie, till ett givet värde. |
+|     | var, värde | Ställer in en angiven request-egenskap på ett givet värde. |
+| **unset** | reqProperty | Tar bort en angiven begärandeparameter (endast egenskapen path stöds), eller begäranhuvud, frågeparameter eller cookie, till ett givet värde. |
 |         | var | Tar bort en angiven variabel. |
 |         | queryParamMatch | Tar bort alla frågeparametrar som matchar ett angivet reguljärt uttryck. |
-| **ersätt** | reqProperty, match, value | Ersätter en del av egenskapen request med ett nytt värde. För närvarande stöds bara egenskapen &quot;path&quot;. |
+| **omforma** | op:replace, (reqProperty eller reqHeader eller queryParam eller reqCookie), match, replace | Ersätter en del av parametern request (endast egenskapen path stöds), eller request header, query parameter eller cookie med ett nytt värde. |
+|              | op:tolower, (reqProperty eller reqHeader eller queryParam eller reqCookie) | Ställer in parametern request (endast egenskapen path stöds), huvudet request, parametern query eller cookie till dess gemener. |
+
+Åtgärder kan knytas ihop. Till exempel:
+
+```
+actions:
+    - type: transform
+      reqProperty: path
+      op: replace
+      match: \.html$
+      replacement: ""
+    - type: transform
+      reqProperty: path
+      op: tolower
+```
 
 ### Variabel {#variables}
 
