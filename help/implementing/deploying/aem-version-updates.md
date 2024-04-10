@@ -3,9 +3,9 @@ title: Uppdateringar av AEM
 description: Läs om hur Adobe Experience Manager (AEM) as a Cloud Service använder kontinuerlig integrering och leverans (CI/CD) för att hålla dina projekt uppdaterade.
 feature: Deploying
 exl-id: 36989913-69db-4f4d-8302-57c60f387d3d
-source-git-commit: 9bfea65c07da5da044df8f698e409eab5c4320fb
+source-git-commit: 72fc611e006f80fdda672f08b0b795432f5899e2
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,24 @@ Läs om hur Adobe Experience Manager (AEM) as a Cloud Service använder kontinue
 
 AEM as a Cloud Service använder kontinuerlig integrering och kontinuerlig leverans (CI/CD) för att säkerställa att dina projekt finns i den senaste AEM versionen. Den här processen uppdaterar dina produktions-, staging- och utvecklingsinstanser utan att störa användarna.
 
-Innan instanserna uppdateras automatiskt kommer en ny AEM att publiceras 3-5 dagar i förväg. Under den här perioden kan du [aktivera manuella uppdateringar för dina utvecklingsinstanser](/help/implementing/cloud-manager/manage-environments.md#updating-dev-environment). Efter den här tiden används versionsuppdateringar automatiskt i dina utvecklingsmiljöer först. Om uppdateringen lyckas fortsätter den till din scen och dina produktionsinstanser. Utvecklings- och staging-instanserna fungerar som en automatiserad kvalitetsport, där dina anpassade tester körs innan uppdateringen tillämpas i produktionsmiljön.
+>[!NOTE]
+> Eftersom utvecklingsinstanser redan uppdateras automatiskt kanske de manuella uppdateringarna för utvecklingsinstanser inte är tillgängliga för _några_ av dina program. Den här funktionen går över till automatiska uppdateringar.
+
+Innan instanserna uppdateras automatiskt kommer en ny AEM att publiceras 3-5 dagar i förväg. Under den här perioden kan din utvecklingsinstans uppdateras automatiskt eller om den är tillgänglig kan du välja att göra det [aktivera uppdateringen för dina utvecklingsinstanser](/help/implementing/cloud-manager/manage-environments.md#updating-dev-environment). Versionsuppdateringar tillämpas automatiskt i dina utvecklingsmiljöer först. Om uppdateringen lyckas fortsätter den till din scen och dina produktionsinstanser. Utvecklings- och staging-instanserna fungerar som en automatiserad kvalitetsport, där dina anpassade tester körs innan uppdateringen tillämpas i produktionsmiljön.
+
+### NIMU (Non-Intrusive Maintenance Updates) {#nimu}
+
+Icke-påträngande underhållsuppdateringar är automatiska uppdateringar som tillämpas utan att kundens rörledningar används.
+Med NIMU kan kunden använda pipeline när som helst, även om en AEM version är planerad eller pågår och underhållsuppdateringar inte längre visas i kundens pipeline-körningshistorik, vilket gör det enklare att följa historiken för koddistributioner.
+
+#### Uppdatera aktiviteter
+
+Den aktuella AEM-versionen kan fortfarande kontrolleras för varje miljö, som tidigare, med hjälp av miljöpanelen i användargränssnittet i Cloud Manager. Samma kvalitetsgater som används i pipeline används av icke-intrångsrelaterade underhållsuppdateringar, inklusive kundens skriftliga tester.
+Ett meddelande om användargränssnittet i molnhanteraren skickas när en icke-intrångsrelaterad underhållsuppdatering tillämpas i programmets miljöer. Du kan konfigurera det så att det även skickas till ditt e-postmeddelande.
 
 >[!NOTE]
 >
-> Obs! De automatiska uppdateringarna för utvecklingsmiljöer aktiveras successivt för alla kunder under 2023. Om utvecklingsmiljöerna inte uppdateras automatiskt kan du använda manuella uppdateringar för att synkronisera dem med scen- och produktionsmiljöerna.
+> Obs! Icke-påträngande underhållsuppdateringar kommer att aktiveras successivt för alla kunder under 2024.
 
 
 ## Typ av uppdateringar {#update-types}
@@ -35,7 +48,7 @@ Det finns två typer AEM versionsuppdateringar:
    * De är främst avsedda för underhåll, inklusive de senaste felkorrigeringarna och säkerhetsuppdateringarna.
    * Den har minimal inverkan eftersom ändringarna tillämpas regelbundet.
 
-* [**Uppdateringar av nya funktioner**](/help/release-notes/release-notes-cloud/release-notes-current.md)
+* [**AEM aktivering**](/help/release-notes/release-notes-cloud/release-notes-current.md)
 
    * De släpps enligt ett förutsägbart månadsschema.
 

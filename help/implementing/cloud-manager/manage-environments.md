@@ -2,9 +2,9 @@
 title: Hantera miljöer
 description: Lär dig mer om de typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
+source-git-commit: 8f7ddeea27df8e765a7c83c74af25961748ee26d
 workflow-type: tm+mt
-source-wordcount: '2614'
+source-wordcount: '2660'
 ht-degree: 0%
 
 ---
@@ -209,9 +209,9 @@ Under alla omständigheter [trafiken dirigeras alltid till den närmaste regione
 
 ## Uppdaterar miljöer {#updating-dev-environment}
 
-Som molnbaserad tjänst hanteras uppdateringar av dina staging- och produktionsmiljöer i produktionsprogrammen automatiskt av Adobe.
+Som molnbaserad tjänst hanteras uppdateringar av din utvecklings-, staging- och produktionsmiljö i produktionsprogrammen automatiskt av Adobe.
 
-Uppdateringar av utvecklingsmiljöer och miljöer i sandlådeprogram hanteras dock i programmen. När en sådan miljö inte kör den senaste allmänt tillgängliga AEM-versionen, anges statusen på **Miljö** på **Ökning** skärm för programmen **Uppdatering tillgänglig**.
+Uppdateringar av miljöer i sandlådeprogram hanteras dock i programmen. När en sådan miljö inte kör den senaste allmänt tillgängliga AEM-versionen, anges statusen på **Miljö** på **Ökning** skärm för programmen **Uppdatering tillgänglig**.
 
 ![Status för miljöuppdatering](assets/environ-update.png)
 
@@ -228,7 +228,10 @@ Uppdateringsprocessen är därför en tvåstegsprocess:
 
 ### Uppdatera dina miljöer {#updating-your-environments}
 
-The **Uppdatera** är tillgängligt från **Miljö** för utvecklingsmiljöer och miljöer i sandlådeprogram genom att klicka på knappen Ellips i miljön.
+>[!NOTE]
+> 2024 uppdateras redan utvecklingsinstanser och vissa sandlådeprogram automatiskt, så det finns inget behov av att hantera uppdateringar manuellt. Som ett resultat av den här övergången kanske alternativet att uppdatera miljön manuellt för utvecklingsinstanser inte är tillgängligt för _några_ av dina program.
+
+The **Uppdatera** är tillgängligt från **Miljö** för vissa utvecklingsmiljöer och miljöer i sandlådeprogram genom att klicka på knappen Ellips i miljön.
 
 ![Uppdateringsalternativ från miljökort](assets/environ-update2.png)
 
@@ -246,7 +249,7 @@ The **Uppdatera** Alternativets beteende varierar beroende på programmets konfi
 
 * Om pipeline redan har uppdaterats **Uppdatera** uppmanar användaren att köra pipelinen.
 * Om pipelinen redan uppdateras visas **Uppdatera** informerar användaren om att en uppdatering redan körs.
-* Om en lämplig pipeline inte finns, **Uppdatera** uppmanar användaren att skapa en.
+* Om det inte finns någon lämplig pipeline **Uppdatera** uppmanar användaren att skapa en.
 
 ## Tar bort utvecklingsmiljöer {#deleting-environment}
 
