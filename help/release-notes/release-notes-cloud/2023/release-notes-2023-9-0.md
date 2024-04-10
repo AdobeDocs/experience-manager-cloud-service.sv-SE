@@ -2,7 +2,7 @@
 title: Versionsinformation för 2023.9.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2023.9.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: d747f58b-8d6c-418d-9d2b-ec3ae4b6dc03
-source-git-commit: d91254b52c257a3758da200a2c74b736ca457884
+source-git-commit: 559b4afa975dcd2204cd06c95f19ed38da00033e
 workflow-type: tm+mt
 source-wordcount: '1440'
 ht-degree: 0%
@@ -101,7 +101,7 @@ Nu kan du tilldela metadataformulär till en viss mapp i distributionen. Alla re
 
 * **[Protect dina dokument med DocAssurance API:er (del av kommunikations-API:er)](/help/forms/aem-forms-cloud-service-communications-introduction.md#document-assurance-doc-assurance)**: Med API:erna för DocAssurance kan du skydda känslig information genom att signera och kryptera dokumenten. Genom kryptering omvandlas innehållet i ett dokument till ett oläsligt format så att bara behöriga användare kan få åtkomst till det. Detta förstärkta skydd skyddar inte bara värdefulla data från obehöriga ögon, utan ger även sinnesro. Med signatur-API:erna kan din organisation skydda säkerheten och sekretessen för Adobe PDF-dokument som den distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att endast avsedda mottagare kan ändra dokument.
 
-  Du kan skriva till `aem-forms-early-adopter-program@adobe.com` från ditt officiella e-post-id för att gå med i programmet för tidiga användare och begära åtkomst till funktionen.
+  Du kan skriva till `aem-forms-ea@adobe.com` från ditt officiella e-post-id för att gå med i programmet för tidiga användare och begära åtkomst till funktionen.
 
 * **[Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html)**: Använd Headless Adaptive Forms för att ge utvecklarna möjlighet att skapa, publicera och hantera interaktiva formulär som kan öppnas och interagera med via API:er, i stället för via ett traditionellt grafiskt användargränssnitt. Headless adaptive forms help you:
 

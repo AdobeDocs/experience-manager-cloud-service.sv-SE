@@ -6,7 +6,7 @@ topic-tags: author, developer
 feature: Adaptive Forms
 role: Admin, User
 exl-id: d3efb450-a879-40ae-8958-0040f99bdafc
-source-git-commit: 8923bfbb0e46961485ff360c0135ebdde6d8cab3
+source-git-commit: 559b4afa975dcd2204cd06c95f19ed38da00033e
 workflow-type: tm+mt
 source-wordcount: '1174'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Skicka ett anpassat formulär till Adobe Workfront Fusion
 
-<span class="preview"> Funktionen är tillgänglig i ett program för tidig användning. Du kan skriva till aem-forms-early-adopter-program@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
+<span class="preview"> Funktionen är tillgänglig i ett program för tidig användning. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
 [Adobe Workfront Fusion](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-fusion/get-started-with-workfront-fusion/workfront-fusion-overview.html) automatiserar processen för att upprepa samma uppgifter, som dokumentgodkännandearbetsflöden, e-postfiltrering och sortering, så att du kan fokusera på nya uppgifter istället för på återkommande. Adobe Workfront Fusion innehåller flera scenarier. Ett scenario består av en serie moduler som utför dataöverföring mellan program och webbtjänster. I ett scenario lägger du till olika steg (moduler) för att automatisera en uppgift.
 

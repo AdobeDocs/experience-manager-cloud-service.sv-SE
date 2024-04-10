@@ -1,13 +1,13 @@
 ---
 title: Versionsinformation om 2023.12.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2023.12.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
-source-git-commit: 348c6d29001c532c1eb7a3e534517efb2ba73151
+exl-id: b36add58-a2ba-4299-94be-e0026e9c553c
+source-git-commit: 559b4afa975dcd2204cd06c95f19ed38da00033e
 workflow-type: tm+mt
 source-wordcount: '835'
 ht-degree: 0%
 
 ---
-
 
 # Versionsinformation 2023.12.0 för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
@@ -99,7 +99,7 @@ Nu kan du enkelt hitta innehåll genom att välja en bild och visa liknande bild
 
 * **[Protect dina dokument med DocAssurance API:er (del av kommunikations-API:er)](/help/forms/aem-forms-cloud-service-communications-introduction.md#document-assurance-doc-assurance)**: Med API:erna för DocAssurance kan du skydda känslig information genom att signera och kryptera dokumenten. Genom kryptering omvandlas innehållet i ett dokument till ett oläsligt format så att bara behöriga användare kan få åtkomst till det. Detta förstärkta skydd skyddar inte bara värdefulla data från obehöriga ögon, utan ger även sinnesro. Med signatur-API:erna kan din organisation skydda säkerheten och sekretessen för Adobe PDF-dokument som den distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att endast avsedda mottagare kan ändra dokument.
 
-  Du kan skriva till `aem-forms-early-adopter-program@adobe.com` från ditt officiella e-post-id för att gå med i programmet för tidiga användare och begära åtkomst till funktionen.
+  Du kan skriva till `aem-forms-ea@adobe.com` från ditt officiella e-post-id för att gå med i programmet för tidiga användare och begära åtkomst till funktionen.
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
 
