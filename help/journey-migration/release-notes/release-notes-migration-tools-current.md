@@ -1,29 +1,26 @@
 ---
-title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.11.0
-description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.11.0
+title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2024.01.0
+description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2024.01.0
 feature: Release Information
-exl-id: 52709511-eab2-47a7-8bea-1b707cd568a1
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 0c2dca09a1d0070765e89de833fdd1c7607010c6
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 1%
+source-wordcount: '98'
+ht-degree: 2%
 
 ---
 
-# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.11.0 {#release-notes}
+# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2024.01.0 {#release-notes}
 
-Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2023.11.0.
+Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2024.01.0.
 
 ## Verktyget Innehållsöverföring {#ctt-release}
 
 ### Releasedatum {#release-date-ctt}
 
-Releasedatum för Content Transfer Tool v3.0.6 är 21 november 2023.
+Releasedatum för innehållsöverföringsverktyget v3.0.10 är 15 januari 2024.
 
 ### Nyheter {#what-is-new-ctt}
 
-* CAM (Cloud Acceleration Manager) har uppdaterats för att automatiskt starta ett intag när extraheringen av en migreringsuppsättning har slutförts. Användaren behöver inte längre vänta tills extraheringen är klar för att manuellt starta upp ett intag. Mer information om innehållsförslag i CAM finns i [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content.html#ingestion-process).
+* Verktyget Innehållsöverföring har nu stöd för att migrera samlingar. Användarna kan välja samlingsmappen med sökvägsväljaren och utföra extraheringen.
 
-### Felkorrigeringar {#bug-fixes-ctt}
 
-* Användarna kunde inte generera någon valideringsrapport i CAM. Den här har åtgärdats.
