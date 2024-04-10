@@ -2,9 +2,9 @@
 title: Introduktion till Universal Editor
 description: Se hur den universella redigeraren möjliggör WYSIWYG-redigering av headless och headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
 exl-id: d4fc2384-a0f5-4a6f-9572-62749786be4c
-source-git-commit: 11a244b7dd4810fbfec92b3effc362102e7322dc
+source-git-commit: 24496f81313bd58f60aa6d251c46f11fb24d1dbd
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '983'
 ht-degree: 0%
 
 ---
@@ -12,13 +12,15 @@ ht-degree: 0%
 
 # Introduktion till Universal Editor {#introduction}
 
-Se hur den universella redigeraren möjliggör WYSIWYG-redigering av headless och headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
+Universal Editor är en mångsidig visuell editor som ingår i Adobe Experience Manager Sites. Det gör det möjligt för skribenter att göra WYSIWYG-redigering (what-you-see-is-what-you-get) av headless eller headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser och hur det erbjuder oöverträffad frihet för utvecklare.
 
 ## Bakgrund {#background}
 
-Det kraftfullaste verktyget för den som skapar AEM innehåll är sidredigeraren. Sidredigeraren är en intuitiv, visuell, sammanhangsberoende WYSIWYG-redigeringsfunktion som kräver minimal utbildning och som visar författarna exakt hur innehållet kommer att se ut.
+Universell redigerare ger en effektiv och intuitiv kontextredigeringsfunktion som kräver minimal utbildning. Med det kan författare hantera sitt innehåll direkt i webbupplevelsen, precis så som det kommer att se ut för besökarna. Eftersom den är en riktig redigerare som en tjänst och generellt sett mer flexibel kommer den att ersätta sidredigeraren.
 
-Men sidredigeraren kan bara redigera AEM sidinnehåll, struktur och de komponenter som ingår i den. Dagens innehåll hämtas dock sällan från ett och samma ställe. Den universella redigeraren erbjuder samma redigeringsupplevelse på plats som sidredigeraren, men för alla delar av innehållet i alla implementeringar.
+Den universella redigeraren har stor flexibilitet eftersom den har stöd för samma visuella redigering för alla typer av AEM: redigering på plats och layoutdisposition är möjlig både för innehållsfragment och sidkomponenter. De två typerna av innehåll kan till och med redigeras när de visas sida vid sida i en webbupplevelse, utan att författarna behöver ändra sitt sammanhang. Detta är en enorm förbättring jämfört med tidigare redigerare i AEM som bara stöder en viss typ av innehåll.
+
+Utvecklarna drar nytta av universella redigerares mångsidighet eftersom den även stöder en sann frikoppling av implementeringen. Det gör att utvecklare kan använda praktiskt taget vilket ramverk eller vilken arkitektur de vill, utan att införa några begränsningar för SDK eller teknik. Den här flexibiliteten gör det även enkelt att instrumentera befintliga webbprogram för den universella redigeraren utan att behöva arkitekturera om dem.
 
 ## Helt universell {#universal}
 
