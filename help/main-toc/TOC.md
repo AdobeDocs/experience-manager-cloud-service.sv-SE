@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: becba7698afe4aa0629bf54fa0d0d26156784b5f
+source-git-commit: 89f2cd02e8318bd5900bffca752ffab4421c7fdc
 workflow-type: tm+mt
-source-wordcount: '4842'
+source-wordcount: '4855'
 ht-degree: 3%
 
 ---
@@ -833,6 +833,7 @@ ht-degree: 3%
          + [Konfigurera dina Google-blad eller Microsoft Excel-filer så att du kan börja ta emot &#x200B;](/help/edge/docs/forms/submit-forms.md)
          + [Publicera formuläret och börja samla in data](/help/edge/docs/forms/publish-forms.md)
          + [Lägga till valideringar i formulärfält](/help/edge/docs/forms/validate-forms.md)
+         + [Läsa in alternativ från URL till ett formulär](/help/edge/docs/forms/load-options-from-url.md)
          + [Anpassa utseendet på &#x200B;](/help/edge/docs/forms/style-theme-forms.md)
          + [Använd regler för att lägga till dynamiskt beteende i ett formulär](/help/edge/docs/forms/rules-forms.md)
          + [Visa ett anpassat tackmeddelande efter att formuläret har skickats](/help/edge/docs/forms/thank-you-page-form.md)
@@ -842,6 +843,7 @@ ht-degree: 3%
          + [Översättning](/help/edge/docs/forms/translate-forms.md)
          + [reCAPTCHA](/help/edge/docs/forms/recaptacha-forms.md)
          + [Anpassade komponenter](/help/edge/docs/forms/custom-components-forms.md)
+         + [Användarövervakning i realtid för formulär](/help/edge/docs/forms/real-time-user-monitoring-for-forms.md)
       + Referenser {#forms-references}
          + [Komponenter för adaptiva formulärblock och deras egenskaper](/help/edge/docs/forms/form-components.md)
    + Resurser för Edge Delivery {#resources}
