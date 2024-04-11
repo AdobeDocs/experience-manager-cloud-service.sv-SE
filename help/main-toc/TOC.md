@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: aaae2986d0b807b34055a48c810c32167d3715d0
+source-git-commit: b940877abff45e2a9ee046aec74af067007f41c3
 workflow-type: tm+mt
-source-wordcount: '4862'
+source-wordcount: '4850'
 ht-degree: 3%
 
 ---
@@ -790,18 +790,25 @@ ht-degree: 3%
    + [Adobe Commerce PWA Studio](/help/commerce-cloud/pwa-studio/getting-started.md)
    + [Migrering](/help/commerce-cloud/migration.md)
    + [Vanliga frågor](/help/commerce-cloud/faq.md)
-+ AEM med Edge Delivery Services {#edge-delivery}
-   + [Komma igång med Edge Delivery Services](/help/edge/overview.md)
-   + [Använda Edge Delivery](/help/edge/using.md)
-   + [Starthandbok för utvecklare](/help/edge/edge-dev-getting-started.md)
-   + [Skapa innehåll för Edge Delivery](/help/edge/authoring.md)
-   + [Publicera innehåll för Edge Delivery](/help/edge/publishing.md)
-   + [Developing for Edge Delivery](/help/edge/developing.md)
-   + [Innehållsmodellering](/help/edge/content-modeling.md)
-   + [Skapar block](/help/edge/create-block.md)
-   + [Tabelldata och kalkylblad](/help/edge/tabular-data.md)
-   + [Befintliga projekt och Edge Delivery](/help/edge/existing-projects.md)
-   + Bygger Edge Delivery Applications {#build}
++ Edge Delivery Services {#edge-delivery}
+   + [Översikt över Edge Delivery Services](/help/edge/overview.md)
+   + [Använda Edge Delivery Services med AEM](/help/edge/using.md)
+   + AEM {#aem-authoring}
+      + [Skapa innehåll för Edge Delivery](/help/edge/aem-authoring/authoring.md)
+      + [Publicera innehåll för Edge Delivery](/help/edge/aem-authoring/publishing.md)
+      + [Starthandbok för utvecklare](/help/edge/aem-authoring/edge-dev-getting-started.md)
+      + [Skapar block](/help/edge/aem-authoring/create-block.md)
+      + [Innehållsmodellering](/help/edge/aem-authoring/content-modeling.md)
+      + [Tabelldata och kalkylblad](/help/edge/aem-authoring/tabular-data.md)
+      + [Befintliga projekt och Edge Delivery](/help/edge/aem-authoring/existing-projects.md)
+   + Dokumentbaserad redigering {#document-authoring}
+      + [Redigering](/help/edge/docs/authoring.md)
+      + [Massmetadata](/help/edge/docs/bulk-metadata.md)
+      + [Platshållare](/help/edge/docs/placeholders.md)
+      + [Webbplatskarta](/help/edge/developer/sitemap.md)
+      + [SharePoint Setup](/help/edge/docs/setup-customer-sharepoint.md)
+      + [Slack Bot](/help/edge/docs/slack.md)
+   + Bygger program {#build}
       + [Komma igång - självstudiekurs för utvecklare](/help/edge/developer/tutorial.md)
       + [Anatomi i ett projekt](/help/edge/developer/anatomy-of-a-franklin-project.md)
       + [Blockera samling](/help/edge/developer/block-collection.md)
@@ -813,21 +820,14 @@ ht-degree: 3%
       + [Favicon](/help/edge/developer/favicon.md)
       + [Anpassade rubriker](/help/edge/docs/custom-headers.md)
       + [Bästa praxis för utvecklare](/help/edge/docs/dev-collab-and-good-practices.md)
-   + Publishing Edge Delivery Applications {#publish}
-      + [Redigering](/help/edge/docs/authoring.md)
-      + [Massmetadata](/help/edge/docs/bulk-metadata.md)
-      + [Platshållare](/help/edge/docs/placeholders.md)
-      + [Webbplatskarta](/help/edge/developer/sitemap.md)
-      + [SharePoint Setup](/help/edge/docs/setup-customer-sharepoint.md)
-      + [Slack Bot](/help/edge/docs/slack.md)
-   + Startar program för Edge Delivery {#launch}
+   + Startar program {#launch}
       + [Go Live Checklist](/help/edge/docs/go-live-checklist.md)
       + [Push-invalidering](/help/edge/docs/setup-byo-cdn-push-invalidation.md)
       + [Installation av CloudFlare Worker](/help/edge/docs/byo-cdn-cloudflare-worker-setup.md)
       + [Akamai-inställningar](/help/edge/docs/byo-cdn-akamai-setup.md)
       + [Snabbinstallation](/help/edge/docs/byo-cdn-fastly-setup.md)
       + [Omdirigeringar](/help/edge/docs/redirects.md)
-   + Building Edge Delivery Forms {#build-forms}
+   + Building Forms {#build-forms}
       + [Ökning](/help/edge/docs/forms/overview.md)
       + Kom igång {#getting-started-eds-forms}
          + [Komma igång](/help/edge/docs/forms/tutorial.md)
@@ -848,7 +848,7 @@ ht-degree: 3%
          + [Användarövervakning i realtid för formulär](/help/edge/docs/forms/real-time-user-monitoring-for-forms.md)
       + Referenser {#forms-references}
          + [Komponenter för adaptiva formulärblock och deras egenskaper](/help/edge/docs/forms/form-components.md)
-   + Resurser för Edge Delivery {#resources}
+   + Kantleveransresurser {#resources}
       + Sidekick {#sidekick}
          + [Använda Sidekick](/help/edge/docs/sidekick.md)
          + [Installerar tillägg](/help/edge/docs/sidekick-extension.md)

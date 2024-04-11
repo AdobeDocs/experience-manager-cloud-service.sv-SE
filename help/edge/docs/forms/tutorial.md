@@ -3,7 +3,7 @@ title: Komma igång med AEM Forms-Edge Delivery Services - självstudiekurs för
 description: Den här självstudiekursen hjälper dig att komma igång med ett nytt Adobe Experience Manager Forms-projekt (AEM). Om tio till tjugo minuter har du skapat egna formulär.
 feature: Edge Delivery Services
 exl-id: bb7e93ee-0575-44e1-9c5e-023284c19490
-source-git-commit: 984ead39ef8c20f06ac63c88380323e403a08712
+source-git-commit: 74e3bc79a734bd2c686e28cdcbbda96a58268c77
 workflow-type: tm+mt
 source-wordcount: '1848'
 ht-degree: 0%
@@ -192,7 +192,7 @@ Så här förhandsgranskar du opublicerat innehåll:
 
 Exempelinnehållet innehåller ett frågeblad som fungerar som mall för frågeformuläret. Varje rad i bladet representerar en [formulärfält](/help/edge/docs/forms/form-components.md#available-components)och kolumnrubrikerna definierar [fältegenskaper](/help/edge/docs/forms/form-components.md#available-components). Det här exempelformuläret ger dig ett försprång när du skapar formuläret.
 
-![Formulär för förfrågan](/help/edge/assets/enquiry-form-microsoft-sharepoint.png)
+![Formulär för förfrågan](/help/edge/docs/forms/assets/enquiry-form-microsoft-sharepoint.png)
 
 Vi börjar med att uppdatera en fältetikett. Öppna förfrågningsbladet för redigering, ändra etiketten för skicka-knappen till `Let's Chat` och använd AEM Sidekick för att förhandsgranska och publicera filen.
 
