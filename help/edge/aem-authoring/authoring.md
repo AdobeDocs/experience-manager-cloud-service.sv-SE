@@ -3,7 +3,7 @@ title: Skapa innehåll för Edge Delivery Services
 description: Lär dig hur innehållsredigering fungerar med Edge Delivery Services och hur du redigerar AEM innehåll med Edge Delivery Services.
 feature: Edge Delivery Services
 exl-id: 963ff71a-8176-4d9d-8240-dc429405d139
-source-git-commit: b940877abff45e2a9ee046aec74af067007f41c3
+source-git-commit: 11f721b4a617c99e30329d7196f42d7b48067f1b
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 0%
@@ -56,3 +56,4 @@ Se [Guiden Komma igång för utvecklare för AEM med Edge Delivery Services](/he
 När du använder dokumentbaserad redigering kan du arbeta med olika källor som Microsoft Word- och Google Docs-dokument. Dokument från dessa källor blir sidor på din webbplats. Rubriker, listor, bilder, teckensnittselement och videor kan alla överföras från den ursprungliga källan till webbplatsen. Du kan lägga till metadata för SEO-syften eller använda block för att arbeta med strukturerat innehåll och lägga till funktioner.
 
 Mer information om dokumentbaserad redigering finns i [det här dokumentet i dokumentationen för Edge Delivery Services.](/help/edge/docs/authoring.md)
+

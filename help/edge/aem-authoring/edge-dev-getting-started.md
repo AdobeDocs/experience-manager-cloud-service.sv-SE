@@ -3,7 +3,7 @@ title: Guiden Komma igång för utvecklare för AEM med Edge Delivery Services
 description: Den här guiden hjälper dig att komma igång med en ny Adobe Experience Manager-webbplats med hjälp av Edge Delivery Services och den universella redigeraren för framtagning av innehåll.
 feature: Edge Delivery Services
 exl-id: a71184a7-c954-442e-b276-99edc6d2acd8
-source-git-commit: 61d65c37d263edef641db42589fc0f28a8eb9078
+source-git-commit: 11f721b4a617c99e30329d7196f42d7b48067f1b
 workflow-type: tm+mt
 source-wordcount: '1284'
 ht-degree: 0%
@@ -197,3 +197,4 @@ Se guiden [Skapa block som är instrumenterade för användning med den universe
 >[!TIP]
 >
 >Om du vill få en genomgång av hur du skapar ett nytt projekt för Edge Delivery Services som är aktiverat för AEM med AEM as a Cloud Service som innehållskälla kan du titta på [det här AEM GEMs webbinarium.](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery)
+

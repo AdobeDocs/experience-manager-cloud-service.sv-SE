@@ -2,7 +2,7 @@
 title: Innehållsmodellering för AEM med Edge Delivery Services Projects
 description: Lär dig hur innehållsmodellering fungerar AEM redigering med projekt för Edge Delivery Services och hur du modellerar eget innehåll.
 exl-id: e68b09c5-4778-4932-8c40-84693db892fd
-source-git-commit: bf6d0ff2f4aebb6620be46704072743578b096d2
+source-git-commit: 11f721b4a617c99e30329d7196f42d7b48067f1b
 workflow-type: tm+mt
 source-wordcount: '2233'
 ht-degree: 0%
@@ -657,3 +657,4 @@ Om du redan är bekant med att skapa block kan du läsa dokumentet [Guiden Komma
 >[!TIP]
 >
 >Om du vill få en genomgång av hur du skapar ett nytt projekt för Edge Delivery Services som är aktiverat för AEM med AEM as a Cloud Service som innehållskälla kan du titta på [det här AEM GEMs webbinarium.](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery)
+

@@ -3,7 +3,7 @@ title: Publicera innehåll för Edge Delivery Services
 description: Lär dig hur innehållspublicering fungerar med Edge Delivery Services och hur du publicerar AEM innehåll med Edge Delivery Services.
 feature: Edge Delivery Services
 exl-id: 32fbb144-9175-47a9-bb5a-ca15f3fcd2d8
-source-git-commit: b940877abff45e2a9ee046aec74af067007f41c3
+source-git-commit: 11f721b4a617c99e30329d7196f42d7b48067f1b
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
@@ -39,3 +39,4 @@ Informationsflödet vid publicering är följande. När författaren börjar pub
 >[!NOTE]
 >
 >Som standard är Edge Delivery Servicens administratörs-API inte skyddat och kan användas för att publicera eller avpublicera dokument utan autentisering. För att konfigurera autentisering för admin-API:t enligt [Konfigurerar autentisering för författare](https://www.aem.live/docs/authentication-setup-authoring), måste projektet etableras med en API_KEY som ger åtkomst till publiceringstjänsten. [Kontakta Adobe-teamet på Slack](/help/edge/docs/slack.md) för vägledning.
+

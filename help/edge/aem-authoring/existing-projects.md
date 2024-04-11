@@ -3,7 +3,7 @@ title: Använda Edge Delivery Services med befintliga AEM
 description: Lär dig utnyttja fördelarna med Edge Delivery Services i dina befintliga AEM projekt
 feature: Edge Delivery Services
 exl-id: f54aac3a-1d0c-4be0-9aa6-616217e0e458
-source-git-commit: b940877abff45e2a9ee046aec74af067007f41c3
+source-git-commit: 11f721b4a617c99e30329d7196f42d7b48067f1b
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
@@ -39,3 +39,4 @@ Fas två slutför processen genom att eliminera den tekniska överlappningen: AE
 ## Fas 2 - Byt till Universal Editor {#switch-ue}
 
 I den här fasen ersätts AEM Page Editor med Universal Editor. Eftersom den universella redigeraren kan arbeta direkt med block behövs inte längre AEM Core Components and converter.
+
