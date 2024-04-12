@@ -2,9 +2,9 @@
 title: Infoga innehåll i Cloud Service
 description: Lär dig hur du använder Cloud Acceleration Manager för att importera innehåll från din migreringsuppsättning till en instans av en Cloud Service.
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: de05abac3620b254343196a283cef198f434cfca
+source-git-commit: 727fbc49657de752ac6daeb38b5a9d7aba331a5c
 workflow-type: tm+mt
-source-wordcount: '2752'
+source-wordcount: '2876'
 ht-degree: 1%
 
 ---
@@ -60,6 +60,19 @@ Följ stegen nedan för att importera din migreringsuppsättning med Cloud Accel
 
    >[!IMPORTANT]
    > Du kan bara initiera ett intag till målmiljön om du tillhör den lokala **AEM administratörer** på Cloud Servicens författartjänst. Om du inte kan påbörja ett intag, se [Det går inte att starta matning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#unable-to-start-ingestion) för mer information.
+
+1. När du har valt alternativ för intag visas en uppskattning av dess varaktighet. Detta är en uppskattning av bästa möjliga insats baserad på historiska data om liknande inmatningar.
+
+   * Den här uppskattningen beräknas och visas endast om värdena för Kontrollera storlek för extraheringen har samlats in och är tillgängliga.
+   * Detta värde är en uppskattning och bör inte betraktas som exakt, även om det beräknas på ett intelligent sätt. Olika faktorer kan ändra den faktiska varaktigheten.
+   * Det här värdet är även tillgängligt i dialogrutan Varaktighet som du kommer åt via &quot;**Visa varaktighet**&quot; ingreppets verkan.
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_cam_ingestion_estimate"
+>title="Uppskattning av varaktighet för inmatning"
+>abstract="En ungefärlig varaktighet för ett visst intag kan visas för att ge en allmän uppfattning om hur lång tid det kommer att ta. Det finns begränsningar för dess exakthet."
+
+![bild](/help/journey-migration/content-transfer-tool/assets/estimate.png)
 
 1. Klicka **Ingest**.
 
