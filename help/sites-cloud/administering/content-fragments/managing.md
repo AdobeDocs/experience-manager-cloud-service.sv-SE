@@ -4,9 +4,9 @@ description: Lär dig hur du hanterar AEM innehållsfragment från konsolen och 
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
-source-git-commit: 3c550a08983ce198a6718d0c2120f1f5001fb28d
+source-git-commit: 404eb317562f974f72820c6e3aa019fbe043d7f7
 workflow-type: tm+mt
-source-wordcount: '2629'
+source-wordcount: '2643'
 ht-degree: 0%
 
 ---
@@ -448,6 +448,7 @@ På panelen Filter finns:
 * Ett urval av prediater.
    * inklusive innehållsfragmentmodeller, lokalisering, taggar, statusfält med flera
    * ett eller flera predikat kan markeras och kombineras för att skapa filtret
+* **Uteslut undermappsobjekt**, vilket ger dig möjlighet att utesluta innehållsfragment som lagras i undermappar
 * möjlighet att **Spara** din konfiguration
 * alternativet att hämta ett sparat sökfilter för återanvändning
 

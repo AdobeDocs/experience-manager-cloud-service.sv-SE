@@ -4,9 +4,9 @@ description: Lär dig hur du skapar innehåll för dina innehållsfragment och s
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
-source-git-commit: 19685cb952a890731bd7d75a2adf3cfd841a465f
+source-git-commit: 6353bd50c1df43d9ce11616f71a69d8bfb5ab338
 workflow-type: tm+mt
-source-wordcount: '2266'
+source-wordcount: '2381'
 ht-degree: 0%
 
 ---
@@ -370,6 +370,27 @@ I **Versionshantering** på den högra panelens flik visas information om aktuel
 >En ny version skapas när innehållsfragmentet publiceras.
 
 ![Content Fragment Editor - översikt över versionshistorik](assets/cf-authoring-version-history-overview.png)
+
+### Jämför version {#compare-version}
+
+För ett innehållsfragment kan du jämföra en tidigare version med den aktuella versionen.
+
+Så här jämför du en tidigare version med den aktuella:
+
+1. Välj ikonen med tre punkter bredvid versionen.
+
+1. Välj **Jämför**.
+
+![Content Fragment Editor - Jämför versionshistorik](assets/cf-authoring-version-history-compare.png)
+
+Då öppnas en vy som visar skillnader mellan den aktuella versionen av innehållet och den valda tidigare versionen av innehållsfragmentet. Från **Variationer med ändringar** I den här listrutan kan du välja att se skillnader från huvudinnehållet och/eller innehållet från en variation.
+
+Skillnader anges med färg:
+
+* Grön: anger innehåll som har lagts till (i den aktuella versionen)
+* Röd: anger att innehåll har tagits bort (från den aktuella versionen)
+
+![Content Fragment Editor - versionshistorik Jämför versioner](assets/cf-authoring-version-history-compare-versions.png)
 
 ### Återgå till en version {#revert-version}
 
