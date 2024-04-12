@@ -2,9 +2,9 @@
 title: Skapa en API-begäran - Headless-konfiguration
 description: Lär dig hur du använder GraphQL API för headless-leverans av Content Fragment-innehåll och AEM Assets REST API för att hantera innehållsfragment.
 exl-id: 2b72f222-2ba5-4a21-86e4-40c763679c32
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+source-git-commit: 674db680f46a4fd4772cb10fe7cb396652354dfe
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '674'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,10 @@ Lär dig hur du använder GraphQL API för headless-leverans av Content Fragment
 * [GRAPHQL API](/help/headless/graphql-api/content-fragments.md) Med kan du skapa förfrågningar om åtkomst och leverans av innehållsfragment. API:t erbjuder den mest robusta uppsättningen funktioner för att fråga efter och konsumera innehåll i innehållsfragment.
    * Om du vill använda API:t [definiera och aktivera slutpunkter i AEM](/help/headless/graphql-api/graphql-endpoint.md)och, om det behövs, [GraphiQL-gränssnittet är installerat](/help/headless/graphql-api/graphiql-ide.md).
 * [Resursens REST API](/help/assets/content-fragments/assets-api-content-fragments.md) I kan du skapa och ändra innehållsfragment (och andra resurser).
+
+>[!NOTE]
+>
+>The [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) finns också.
 
 Resten av guiden fokuserar på GraphQL åtkomst och leverans av innehållsfragment.
 
@@ -99,3 +103,7 @@ Så ja! Ni har nu en grundläggande förståelse för innehållshantering utan p
 * **[Innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md)** - Mer information om hur du skapar och hanterar innehållsfragment
 * **[Stöd för innehållsfragment i AEM Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md)** - Mer information om hur du får åtkomst till AEM direkt via HTTP API, via CRUD-åtgärder (Create, Read, Update, Delete)
 * **[GRAPHQL API](/help/headless/graphql-api/content-fragments.md)** - Mer information om hur du levererar innehållsfragment utan problem
+
+>[!NOTE]
+>
+>The [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) finns också.

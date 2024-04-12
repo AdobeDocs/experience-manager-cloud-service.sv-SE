@@ -2,9 +2,9 @@
 title: Upplevelsefragment
 description: Använd Adobe Experience Manager as a Cloud Service Experience Fragments för att göra upplevelserna återanvändbara och flexibla.
 exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
-source-git-commit: 1a4c5e618adaef99d82a00e1118d1a0f8536fc14
+source-git-commit: 0784bfc2928b218a566fdd252fee045ca5ae6b9c
 workflow-type: tm+mt
-source-wordcount: '2035'
+source-wordcount: '2083'
 ht-degree: 2%
 
 ---
@@ -38,6 +38,7 @@ Utan Experience Fragments måste författaren kopiera och klistra in det fragmen
 Upplevelsefragment eliminerar behovet av att kopiera/klistra in.
 * För att stödja headless CMS-fall.
 Författare vill bara använda AEM för att skapa, men inte för att leverera till kunden. Ett system/kontaktyta från tredje part skulle förbruka upplevelsen och sedan leverera till användaren.
+* Med [Hantering av flera webbplatser (MSM)](/help/sites-cloud/administering/msm/overview.md); som ett Experience Fragment är en del av en sida. Detta gäller både de enskilda fragmenten och de mappar de finns i.
 
 >[!NOTE]
 >
@@ -236,6 +237,10 @@ Ni kan skapa olika upplevelsefragment beroende på era behov:
 
    * **Variant**
    * **Variation som live-copy**.
+
+     >[!NOTE]
+     >
+     >Om du skapar en ursprunglig variant som Live-kopia ärvs titeln med Live-kopians källa som huvudvariant.
 
 1. Definiera de nödvändiga egenskaperna:
 

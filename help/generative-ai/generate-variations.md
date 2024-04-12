@@ -1,13 +1,14 @@
 ---
 title: Generera variationer
-description: Lär dig mer om Generera variationer, som du kommer åt Sidekick i Edge Delivery Services
+description: Lär dig mer om Generera variationer, som du kommer åt AEM as a Cloud Service och Sidekick i Edge Delivery Services
 exl-id: 9114037f-37b9-4b2f-a714-10933f69b2c3
-source-git-commit: 984ead39ef8c20f06ac63c88380323e403a08712
+source-git-commit: 58a91e0e5d6267caac8210f001f6f963870eb7dd
 workflow-type: tm+mt
-source-wordcount: '3338'
+source-wordcount: '3257'
 ht-degree: 0%
 
 ---
+
 
 # Generera variationer {#generate-variations}
 
@@ -15,11 +16,12 @@ Om du letar efter ett sätt att optimera de digitala kanalerna och snabba upp in
 
 Du kan [få åtkomst till Generera variationer](#access-generate-variations) från:
 
-<!-- 
-* [within Adobe Experience Manager (AEM) as a Cloud Service](#access-aemaacs)
--->
-
+* [inom Adobe Experience Manager (AEM) as a Cloud Service](#access-aemaacs)
 * [SIDEKICK i AEM EDGE DELIVERY SERVICES](#access-aem-sidekick)
+
+>[!NOTE]
+>
+>Om du vill använda Generera variationer måste du alltid se till att [åtkomstkrav](#access-prerequisites) är uppfyllda.
 
 Då kan du:
 
@@ -245,18 +247,19 @@ Lägga till ett nytt textfält med namnet **Ton av röst** använder du följand
 
 ![Generera variationer - fråga redigerad med röstton](assets/generate-variations-prompt-edited.png)
 
-#### Exempel: Lägg till nytt listrutefält - sidtyp {#example-add-new-dropdown-field-page-type}
+<!--
+#### Example: Add new dropdown field - Page Type {#example-add-new-dropdown-field-page-type}
 
-Så här skapar du ett inmatningsfält: Sidtyp som innehåller en listruta:
+To create an input field Page Type providing a dropdown selection:
 
-1. Skapa ett kalkylblad med namnet `pagetype.xls` i den översta katalogen i mappstrukturen.
-1. Redigera kalkylblad:
+1. Create a spreadsheet named `pagetype.xls` in the top-level directory of your folder structure.
+1. Edit the spreadsheet:
 
-   1. Skapa två kolumner: **Nyckel** och **Värde**.
-   1. I **Nyckel** anger du etiketter som ska visas i listrutan.
-   1. I **Värde** -kolumnen, beskriv nyckelvärdet så att den generativa AI-filen har kontext.
+   1. Create two columns: **Key** and **Value**.
+   1. In the **Key** column, enter labels that will appear in the dropdown.
+   1. In the **Value** column, describe the key value so the generative AI has context.
 
-1. När du uppmanas till detta hänvisar du till rubriken på kalkylbladet tillsammans med lämplig typ.
+1. In your prompt, refer to the title of the spreadsheet along with the appropriate type. 
 
    ```prompt
    {{@page_type, 
@@ -265,6 +268,7 @@ Så här skapar du ett inmatningsfält: Sidtyp som innehåller en listruta:
      spreadsheet=pagetype
    }}
    ```
+-->
 
 ## Skapa en fråga {#create-prompt}
 
@@ -390,6 +394,95 @@ Så här lägger du till en målgrupp från en fil på Google Drive:
 
    ![Generera variationer - lägg till CSV-målgruppsfil](assets/generate-variations-audiences-csv-save.png)
 
+## Generativ åtgärdsanvändning {#generative-action-usage}
+
+Användningshanteringen beror på vilken åtgärd som vidtas:
+
+* Generera variationer
+
+  En generation av en kopieringsvariant motsvarar en generativ åtgärd. Som kund har ni ett visst antal generativa åtgärder som följer med er AEM licens. När basberättigandet har förbrukats kan du köpa ytterligare åtgärder.
+
+  >[!NOTE]
+  >
+  >Se [Adobe Experience Manager: Cloud Service | Produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/aem-cloud-service.html) om du vill ha mer information om basberättiganden och kontakta ditt kontoteam om du vill köpa mer generativa åtgärder.
+
+* Adobe Express
+
+  Bildgenereringsanvändningen hanteras via Adobe Expresser och [kreativa krediter](https://helpx.adobe.com/firefly/using/generative-credits-faq.html).
+
+## Få åtkomst till Generera variationer {#access-generate-variations}
+
+När du har uppfyllt kraven kan du få åtkomst till Generera variationer från AEM as a Cloud Service eller Sidekick i Edge Delivery Servicens.
+
+### Åtkomstkrav {#access-prerequisites}
+
+Om du vill använda Generera variationer måste du se till att villkoren är uppfyllda:
+
+* [Åtkomst till Experience Manager as a Cloud Service med Edge Delivery Services](#access-to-aemaacs-with-edge-delivery-services)
+
+#### Åtkomst till Experience Manager as a Cloud Service med Edge Delivery Services{#access-to-aemaacs-with-edge-delivery-services}
+
+Användare som behöver åtkomst till Generate Variations måste ha rätt till en as a Cloud Service miljö för Experience Manager med Edge Delivery Services.
+
+>[!NOTE]
+>
+>Om ditt avtal för AEM Sites as a Cloud Service inte innehåller några Edge Delivery Services måste du signera ett nytt kontrakt för att få åtkomst.
+>
+>Kontakta er kontogrupp för att diskutera hur ni kan gå över till AEM Sites as a Cloud Service med Edge Delivery Services.
+
+Om du vill ge vissa användare åtkomst tilldelar du deras användarkonto till respektive produktprofil. Se [Tilldela AEM produktprofiler för mer information](/help/journey-onboarding/assign-profiles-cloud-manager.md).
+
+### Åtkomst från AEM as a Cloud Service {#access-aemaacs}
+
+Generera variationer kan nås via [Navigeringspanel](/help/sites-cloud/authoring/basic-handling.md#navigation-panel) av AEM as a Cloud Service:
+
+![Navigeringspanelen](/help/sites-cloud/authoring/assets/basic-handling-navigation.png)
+
+### Åtkomst från AEM Sidekick {#access-aem-sidekick}
+
+En del konfiguration krävs innan du kan komma åt Generera variationer från Sidekick (i Edge Delivery Services).
+
+1. Se dokumentet [Installera AEM Sidekick](https://www.aem.live/docs/sidekick-extension) för hur du installerar och konfigurerar Sidekick.
+
+1. Om du vill använda Generera variationer i Sidekick (av Edge Delivery Services) inkluderar du följande konfiguration i dina Edge Delivery Services under:
+
+   * `tools/sidekick/config.json`
+
+   Detta måste sammanfogas med din befintliga konfiguration och sedan distribueras.
+
+   Till exempel:
+
+   ```prompt
+   {
+     // ...
+     "plugins": [
+       // ...
+       {
+         "id": "generate-variations",
+         "title": "Generate Variations",
+         "url": "https://experience.adobe.com/aem/generate-variations",
+         "passConfig": true,
+         "environments": ["preview","live", "edit"],
+         "includePaths": ["**.docx**"]
+       }
+       // ...
+     ]
+   }
+   ```
+
+1. Du kan då behöva se till att användarna har [Åtkomst till Experience Manager as a Cloud Service med Edge Delivery Services](#access-to-aemaacs-with-edge-delivery-services).
+
+1. Du kan sedan komma åt funktionen genom att välja **Generera variationer** från verktygsfältet i Sidekick:
+
+   ![Generera variationer - åtkomst från AEM Sidekicj](assets/generate-variations-sidekick-toolbar.png)
+
+## Ytterligare information {#further-information}
+
+Du kan även läsa mer om:
+
+* [GenAI Generate Variations on GitHub](https://github.com/adobe/aem-genai-assistant#setting-up-aem-genai-assistant)
+* [Experimentera med Edge Delivery Services](https://www.aem.live/docs/experimentation)
+
 ## Vanliga frågor {#faqs}
 
 ### Formaterade utdata {#formatted-outpu}
@@ -452,106 +545,7 @@ Till exempel https://experience.adobe.com/#/aem/generate-variations
 
 Om du går över till version 2.0.0 bryts de anpassade promptmallarna så att de inte är tillgängliga.
 
-Se [versionsinformation för v2.0.0 för instruktioner om hur du hämtar dem](#release-notes-2-0-0-retrieve-prompt-templates).
-
-## Generativ åtgärdsanvändning {#generative-action-usage}
-
-Användningshantering beror på vilken åtgärd som vidtas:
-
-* Generera variationer
-
-  En generation av en kopieringsvariant motsvarar en generativ åtgärd. Som kund har ni ett visst antal generativa åtgärder som följer med er AEM licens. När basberättigandet har förbrukats kan du köpa ytterligare åtgärder.
-
-  >[!NOTE]
-  >
-  >Se [Adobe Experience Manager: Cloud Service | Produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/aem-cloud-service.html) om du vill ha mer information om basberättiganden och kontakta ditt kontoteam om du vill köpa mer generativa åtgärder.
-
-* Adobe Express
-
-  Bildgenereringsanvändningen hanteras via Adobe Expresser och [kreativa krediter](https://helpx.adobe.com/firefly/using/generative-credits-faq.html).
-
-## Få åtkomst till Generera variationer {#access-generate-variations}
-
-<!--
-### Access from AEM as a Cloud Service {#access-aemaacs}
-
-Generate Variations can be accessed from the [Navigation Panel](/help/sites-cloud/authoring/basic-handling.md#navigation-panel) of AEM as a Cloud Service:
-
-![Navigation panel](/help/sites-cloud/authoring/assets/basic-handling-navigation.png)
--->
-
-### Åtkomst från AEM Sidekick {#access-aem-sidekick}
-
-En del konfiguration krävs innan du kan komma åt Generera variationer från Sidekick (i Edge Delivery Services).
-
-1. Se dokumentet [Installera AEM Sidekick](https://www.aem.live/docs/sidekick-extension) för hur du installerar och konfigurerar Sidekick.
-
-1. Om du vill använda Generera variationer i Sidekick (av Edge Delivery Services) inkluderar du följande konfiguration i dina Edge Delivery Services under:
-
-   * `tools/sidekick/config.json`
-
-   Detta måste sammanfogas med din befintliga konfiguration och sedan distribueras.
-
-   Till exempel:
-
-   ```prompt
-   {
-     // ...
-     "plugins": [
-       // ...
-       {
-         "id": "generate-variations",
-         "title": "Generate Variations",
-         "url": "https://experience.adobe.com/aem/generate-variations",
-         "passConfig": true,
-         "environments": ["preview","live", "edit"],
-         "includePaths": ["**.docx**"]
-       }
-       // ...
-     ]
-   }
-   ```
-
-1. Du kan då behöva se till att användarna har [Åtkomst till Experience Manager as a Cloud Service med Edge Delivery Services](#access-to-aemaacs-with-edge-delivery-services).
-
-1. Du kan sedan komma åt funktionen genom att välja **Generera variationer** från verktygsfältet i Sidekick:
-
-   ![Generera variationer - åtkomst från AEM Sidekicj](assets/generate-variations-sidekick-toolbar.png)
-
-## Åtkomst till Experience Manager as a Cloud Service med Edge Delivery Services{#access-to-aemaacs-with-edge-delivery-services}
-
-Användare som behöver åtkomst till Generate Variations måste ha rätt till en as a Cloud Service miljö för Experience Manager med Edge Delivery Services.
-
->[!NOTE]
->
->Om ditt avtal för AEM Sites as a Cloud Service inte innehåller några Edge Delivery Services måste du signera ett nytt kontrakt för att få åtkomst.
->
->Kontakta er kontogrupp för att diskutera hur ni kan gå över till AEM Sites as a Cloud Service med Edge Delivery Services.
-
-Om du vill ge vissa användare åtkomst tilldelar du deras användarkonto till respektive produktprofil. Se [Tilldela AEM produktprofiler för mer information](/help/journey-onboarding/assign-profiles-cloud-manager.md).
-
-## Ytterligare läsning {#further-reading}
-
-Läs även:
-
-* [GenAI Generate Variations on GitHub](https://github.com/adobe/aem-genai-assistant#setting-up-aem-genai-assistant)
-* [Experimentera med Edge Delivery Services](https://www.aem.live/docs/experimentation)
-
-## Versionsinformation {#release-notes}
-
-### 2.0.0  {#release-notes-2-0-0}
-
-* Introducerad universell beständig lagring för mallar för uppmaningar.
-* Ny funktionalitet för målgrupper
-   * Målgrupper kan läsas direkt från Adobe Target
-   * Uppdaterade metoder för att lägga till CSV-filer
-* Dialogruta med alternativ för Spara fråga
-* När du genererar bilder är uppmaningen i Adobe Expressen ifylld i förväg
-* Frågekort (på startsidan) innehåller extra information och kan tas bort
-
-#### 2.0.0 - Hur man hämtar egna mallar {#release-notes-2-0-0-retrieve-prompt-templates}
-
-Om du går till version 2.0.0 bryts de anpassade promptmallarna så att de inte är tillgängliga. Så här hämtar du dem:
+Så här hämtar du dem:
 
 1. Gå till promptmallsmappen i Sharepoint.
 1. Kopiera uppmaningen.
@@ -561,20 +555,6 @@ Om du går till version 2.0.0 bryts de anpassade promptmallarna så att de inte 
 1. Kontrollera att uppmaningen fungerar.
 1. Spara frågan.
 
-### 1.0.5 {#release-notes-1-0-5}
+## Versionshistorik {#release-history}
 
-* Integrering med Adobe Express
-* Flytta redigeringsprompten till sidospåret
-
-### 1.0.4 {#release-notes-1-0-4}
-
-* Interna förbättringar
-
-### 1.0.3 {#release-notes-1-0-3}
-
-* Utöka eller dölja den vänstra navigeringspanelen
-* Små förbättringar
-
-### 1.0.0 - 1.0.2 {#release-notes-1-0-0-1-0-2}
-
-* Interna förbättringar
+Mer information om aktuella och tidigare versioner finns i [Versionsinformation för Generera variationer](/help/generative-ai/release-notes-generate-variations.md)

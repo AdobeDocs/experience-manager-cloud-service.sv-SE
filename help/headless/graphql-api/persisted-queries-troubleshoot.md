@@ -2,13 +2,13 @@
 title: Felsöka beständiga GraphQL-frågor
 description: Lär dig felsöka problem med beständiga GraphQL-frågor i Adobe Experience Manager as a Cloud Service.
 feature: Content Fragments,GraphQL API
-source-git-commit: c8ea9846600d1773e6f269973635f5338f31906f
+exl-id: 71bd1f68-ca96-4c78-a936-abed250ecec1
+source-git-commit: 220e86f18e4a61304764753d8daecb68503e9fd0
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
-
 
 # Felsöka beständiga GraphQL-frågor {#troubleshoot-persisted-graphql-queries}
 
@@ -34,13 +34,13 @@ För att åtgärda detta:
 
 ## GraphQL-slutpunkten är inte konfigurerad {#graphql-endpoint-not-configured}
 
-Vid beständiga frågor returnerar du `400` eller `500` felkod, tillsammans med informationen `No suitable endpoint found`innebär det att ingen GraphQL-slutpunkt har konfigurerats i AEM.
+Vid beständiga frågor returnerar du `404` felkod, tillsammans med informationen `No suitable endpoint found`innebär det att ingen GraphQL-slutpunkt har konfigurerats i AEM.
 
 För att korrigera detta följer du stegen för att aktivera och publicera slutpunkten från [Hantera GraphQL-slutpunkter i AEM](/help/headless/graphql-api/graphql-endpoint.md).
 
 ## Sökväg saknas i GraphQL beständiga fråge-URL {#missing-path-query-url}
 
-Om beständiga frågor returneras `400` eller `500` felkod med informationen `Suffix: '/' does not contain a path`, anropas GraphQL-servern utan ett sökvägssuffix.
+Om beständiga frågor returneras `400` felkod med informationen `Suffix: '/' does not contain a path`, anropas GraphQL-servern utan ett sökvägssuffix.
 
 Mönstret ska vara `/graphql/execute.json/thePath`.
 

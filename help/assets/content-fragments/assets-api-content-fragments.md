@@ -3,9 +3,9 @@ title: Stöd för Adobe Experience Manager as a Cloud Service Content Fragments 
 description: Läs om stödet för innehållsfragment i Assets HTTP API, en viktig del av Adobe Experience Manager headless-leveransfunktion.
 feature: Content Fragments,Assets HTTP API
 exl-id: d72cc0c0-0641-4fd6-9f87-745af5f2c232
-source-git-commit: 47666e87b1cb87577291304336e0219481b7b4e2
+source-git-commit: 674db680f46a4fd4772cb10fe7cb396652354dfe
 workflow-type: tm+mt
-source-wordcount: '1749'
+source-wordcount: '1804'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,10 @@ ht-degree: 0%
 | AEM as a Cloud Service | Den här artikeln |
 
 Läs mer om stöd för innehållsfragment i Assets HTTP API, en viktig del av Adobe Experience Manager (AEM) headless delivery feature.
+
+>[!NOTE]
+>
+>The [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) finns också.
 
 >[!NOTE]
 >
@@ -91,6 +95,10 @@ HTTP-metoden avgör vilken åtgärd som ska utföras:
 >Parametrarna för begärandeinnehåll och/eller URL kan användas för att konfigurera vissa av dessa åtgärder. Du kan till exempel definiera att en mapp eller en resurs ska skapas av en **POST** begäran.
 
 Det exakta formatet för begäranden som stöds definieras i [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference) dokumentation.
+
+>[!NOTE]
+>
+>The [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) finns också.
 
 ### Transaktionsbeteende {#transactional-behavior}
 
@@ -167,6 +175,10 @@ Mer information om funktioner som är tillgängliga via API finns i:
 
 * The [Resurser REST API](/help/assets/mac-api-assets.md)
 * [Enhetstyper](/help/assets/content-fragments/assets-api-content-fragments.md#entity-types), där de funktioner som är specifika för varje typ som stöds (som är relevant för innehållsfragment) förklaras
+
+>[!NOTE]
+>
+>The [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) finns också.
 
 ### Sidindelning {#paging}
 
@@ -262,6 +274,8 @@ Användningen kan variera beroende på om du använder en AEM författar- eller 
 >[!NOTE]
 >
 >Se [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference). Särskilt gäller följande: [Adobe Experience Manager Assets API - innehållsfragment](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/assets-api-content-fragments/index.html).
+>
+>The [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) finns också.
 
 ## Begränsningar {#limitations}
 
@@ -352,6 +366,8 @@ Här finns detaljerade API-referenser:
 * [Resurser för HTTP API](/help/assets/mac-api-assets.md)
 
    * [Tillgängliga funktioner](/help/assets/mac-api-assets.md#available-features)
+
+* The [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) finns också.
 
 ## Ytterligare resurser {#additional-resources}
 

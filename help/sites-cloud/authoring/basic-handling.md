@@ -2,9 +2,9 @@
 title: Grundläggande hantering
 description: Bekanta dig med navigering i AEM och dess grundläggande användning
 exl-id: ae87a63a-c6d3-4220-ab3d-07a20b21b93b
-source-git-commit: 7e0ca5dad5cd53c2304e2eba48a5131d587967ef
+source-git-commit: 40759b8c07833b0927fa374b906d4202bf258249
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
@@ -75,10 +75,11 @@ Följande konsoler finns i Navigation:
 | Assets | Med Resurskonsolen kan du importera och hantera [digitalt material som bilder, videoklipp, dokument och ljudfiler](/help/assets/overview.md). Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM. Du kan också skapa och hantera [Innehållsfragment](/help/assets/content-fragments/content-fragments.md) från Assets-konsolen. |
 | Personalisering | Den här konsolen innehåller ett ramverk med verktyg för [skapa riktat innehåll och presentera personaliserade upplevelser](/help/sites-cloud/authoring/personalization/overview.md). |
 | Innehållsfragment | [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) Med kan du utforma, skapa, strukturera och publicera sidoberoende innehåll. De gör att du kan ta fram strukturerat innehåll som är klart för användning på flera platser/i flera kanaler, och som är idealiskt för både sidutveckling och headless-leverans. |
+| Generera variationer | [Generera variationer](/help/generative-ai/generate-variations.md) använder generativ artificiell intelligens (AI) för att skapa innehållsvariationer baserat på uppmaningar. Dessa uppmaningar tillhandahålls antingen av Adobe eller skapas, och hanteras av användare. |
 
 ## Panelen Verktyg {#tools-panel}
 
-I **verktyg** Panelen har en sidopanel som innehåller ett urval kategorier, som grupperar liknande konsoler. The **verktyg** -konsoler ger tillgång till flera specialiserade verktyg och konsoler som hjälper dig att administrera dina webbplatser, digitala resurser och andra aspekter av innehållsdatabasen. <!--The [Tools consoles](/help/sites-administering/tools-consoles.md) provide access to several specialized tools and consoles that help you administer your websites, digital assets, and other aspects of your content repository.-->
+The **verktyg** Panelen har en sidopanel som innehåller ett urval kategorier, som grupperar liknande konsoler. The **verktyg** -konsoler ger tillgång till flera specialiserade verktyg och konsoler som hjälper dig att administrera dina webbplatser, digitala resurser och andra aspekter av innehållsdatabasen.
 
 ![Verktygspanelen](assets/basic-handling-tools.png)
 

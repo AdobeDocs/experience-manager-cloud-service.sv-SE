@@ -2,9 +2,9 @@
 title: Komma igång med AEM Headless as a Cloud Service
 description: I den här delen av AEM Headless Developer Journey kan du läsa om AEM Headless-krav.
 exl-id: 9661e17b-fa9f-4689-900c-412b068e942c
-source-git-commit: 998651bf0529d6a8aab0cd340a1c171974c405f6
+source-git-commit: 58a91e0e5d6267caac8210f001f6f963870eb7dd
 workflow-type: tm+mt
-source-wordcount: '3057'
+source-wordcount: '3068'
 ht-degree: 0%
 
 ---
@@ -298,3 +298,4 @@ Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsr
 * [Resurser REST API](/help/assets/content-fragments/assets-api-content-fragments.md) - Teknisk dokumentation som förklarar hur du skapar och ändrar innehållsfragment (och andra resurser)
 * [Beständiga frågor](/help/headless/graphql-api/persisted-queries.md) - Teknisk dokumentation om beständiga frågor i AEM
 * [Headless and Headless in AEM](/help/implementing/developing/headful-headless.md) - En fullständig beskrivning av den headless integration som finns i AEM
+* The [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) finns också.

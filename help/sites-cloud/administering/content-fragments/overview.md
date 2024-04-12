@@ -4,9 +4,9 @@ description: Lär dig hur innehållsfragment i AEM as a Cloud Service gör att d
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: ce9cb811-57d2-4a57-a360-f56e07df1b1a
-source-git-commit: 89f23a590338561b4cfeb10b54a260a135ec2f08
+source-git-commit: 46a6f5ace7aa3def8021dd16ea394b780afce2e6
 workflow-type: tm+mt
-source-wordcount: '1792'
+source-wordcount: '1803'
 ht-degree: 1%
 
 ---
@@ -105,6 +105,8 @@ När fragmenten har skapats kan du:
 >* [Stöd för Content Fragments i AEM Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md)
 >* [AEM GraphQL API för användning med innehållsfragment](/help/headless/graphql-api/content-fragments.md)
 >* [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md).
+>* The [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) finns också.
+
 
 ## Huvud och variationer {#main-and-variations}
 

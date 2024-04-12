@@ -2,9 +2,9 @@
 title: Så här uppdaterar du innehåll via AEM Assets API:er
 description: I den här delen av den AEM Headless Developer Journey kan du lära dig hur du använder REST API för att komma åt och uppdatera innehållet i dina innehållsfragment.
 exl-id: 84120856-fd1d-40f7-8df4-73d4cdfcc43b
-source-git-commit: 31b0eecd01ee319aaf700505293530fec129b00f
+source-git-commit: 674db680f46a4fd4772cb10fe7cb396652354dfe
 workflow-type: tm+mt
-source-wordcount: '1061'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
@@ -255,6 +255,8 @@ Användningen kan variera beroende på om du använder en AEM författare eller 
 >[!NOTE]
 >
 >Se API-referensen [Adobe Experience Manager Assets API - innehållsfragment](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/assets-api-content-fragments/index.html).
+>
+>The [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) finns också.
 
 ### Läsning/leverans {#read-delivery}
 
@@ -333,3 +335,4 @@ Du bör fortsätta den AEM resan utan trassel genom att nästa gång du granskar
 * [Introduktion till AEM som headless CMS](/help/headless/introduction.md)
 * [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
 * [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+* The [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) finns också.

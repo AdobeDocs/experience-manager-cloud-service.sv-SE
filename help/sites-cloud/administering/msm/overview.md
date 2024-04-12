@@ -4,9 +4,9 @@ description: Få en introduktion till att återanvända innehåll med AEM kraftf
 feature: Multi Site Manager
 role: Admin
 exl-id: 22b4041f-1df9-4189-8a09-cbc0c89fbf2e
-source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
+source-git-commit: 0a4f9edba00e65439a306024c604e6935c8bac47
 workflow-type: tm+mt
-source-wordcount: '2702'
+source-wordcount: '2721'
 ht-degree: 0%
 
 ---
@@ -141,6 +141,10 @@ MSM är direkt tillgängligt i användargränssnittet med hjälp av olika altern
 * **Blueprints** (**verktyg** - **Webbplatser**)
 
    * Med den här konsolen kan du [skapa och hantera dina ritningskonfigurationer.](creating-live-copies.md#creating-a-blueprint-configuration)
+
+>[!NOTE]
+>
+>MSM kan användas med både sidor och [Upplevelsefragment](/help/sites-cloud/authoring/fragments/experience-fragments.md) eftersom dessa fragment ingår i en upplevelse (sida).
 
 >[!NOTE]
 >

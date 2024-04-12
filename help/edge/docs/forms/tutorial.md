@@ -3,7 +3,7 @@ title: Komma igång med AEM Forms-Edge Delivery Services - självstudiekurs för
 description: Den här självstudiekursen hjälper dig att komma igång med ett nytt Adobe Experience Manager Forms-projekt (AEM). Om tio till tjugo minuter har du skapat egna formulär.
 feature: Edge Delivery Services
 exl-id: bb7e93ee-0575-44e1-9c5e-023284c19490
-source-git-commit: 74e3bc79a734bd2c686e28cdcbbda96a58268c77
+source-git-commit: ff8d04878da521b55121c9460a9d4b159ec617a4
 workflow-type: tm+mt
 source-wordcount: '1848'
 ht-degree: 0%
@@ -255,6 +255,7 @@ The Adaptive Forms Block `blocks/form` är din lekplats för format och kod för
 
 Förhandsgranska: `https://<branch>--<repo>--<owner>.hlx.page/`
 Produktion: `https://<branch>--<repo>--<owner>.hlx.live/`
+
 Grattis! Du har konfigurerat den lokala utvecklingsmiljön och distribuerat ändringarna.
 
 

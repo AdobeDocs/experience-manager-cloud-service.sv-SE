@@ -4,9 +4,9 @@ description: Lär dig hur du hanterar AEM innehållsfragment från konsolen och 
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
-source-git-commit: 89f23a590338561b4cfeb10b54a260a135ec2f08
+source-git-commit: 3c550a08983ce198a6718d0c2120f1f5001fb28d
 workflow-type: tm+mt
-source-wordcount: '2620'
+source-wordcount: '2629'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,8 @@ Mer information finns i:
 
 Markera **Innehållsfragment** öppnar konsolen på en ny flik.
 
+<!-- CQDOC-21349: screenshot -->
+
 ![Konsol för innehållsfragment - översikt](assets/cf-managing-console-overview.png)
 
 Här ser du att det finns tre huvudområden:
@@ -84,6 +86,7 @@ Här ser du att det finns tre huvudområden:
    * Här kan du dölja eller visa mappträdet
    * Du kan välja en viss gren av trädet
    * Storleken kan ändras så att kapslade mappar visas
+   * Du kan välja mellan att visa innehållsfragment eller [Resurser](/help/sites-cloud/administering/content-fragments/assets-content-fragments-console.md)
 * Den högra panelen - härifrån kan du:
    * Se listan med alla innehållsfragment i den markerade grenen i trädet:
       * Innehållsfragment från den markerade mappen och alla underordnade mappar visas:
@@ -131,6 +134,8 @@ Vissa åtgärder är tillgängliga från konsolen - utan att du behöver välja 
 #### Åtgärder för ett (markerat) innehållsfragment {#actions-selected-content-fragment}
 
 Om du markerar ett visst fragment öppnas ett verktygsfält som fokuserar på de åtgärder som är tillgängliga för det fragmentet. Du kan också markera flera fragment. Markeringen av funktionsmakron justeras därefter.
+
+<!-- CQDOC-21349: screenshot -->
 
 ![Konsol för innehållsfragment - verktygsfält för ett valt fragment](assets/cf-managing-console-fragment-toolbar.png)
 
@@ -367,6 +372,8 @@ När dialogrutan öppnas kan du välja rätt tjänst:
 
 ## Sök och ersätt {#find-and-replace}
 
+<!-- CQDOC-21349: screenshot -->
+
 The **Ersätt** (i det övre verktygsfältet) för att söka efter och ersätta angiven text i de valda innehållsfragmenten.
 
 ![Sök och ersätt](assets/cf-managing-find-replace.png)
@@ -379,8 +386,9 @@ Innan du ersätter en produkt kontrolleras valideringskriterierna och du informe
 >
 >Om du markerar fler än 20 innehållsfragment visas meddelandet **Det går inte att hitta och ersätta**.
 
-![Bekräfta ersättning](assets/cf-managing-confirm-replace.png)
+<!-- CQDOC-21349: screenshot -->
 
+![Bekräfta ersättning](assets/cf-managing-confirm-replace.png)
 
 ## Ta bort ett fragment {#deleting-a-fragment}
 
@@ -445,6 +453,8 @@ På panelen Filter finns:
 
 När du har valt **Filtrera med** visas (under sökrutan). De kan avmarkeras därifrån. Till exempel:
 
+<!-- CQDOC-21349: screenshot -->
+
 ![Konsol för innehållsfragment - filtrering](assets/cf-managing-console-filter.png)
 
 ### Snabb filtrering {#fast-filtering}
@@ -467,9 +477,13 @@ När du har valt det här alternativet visas det som ett filterpredikat och list
 
 I sökrutan går det att söka i heltext. Ange dina söktermer i sökrutan:
 
+<!-- CQDOC-21349: screenshot -->
+
 ![Konsolen Innehållsfragment - Sökning](assets/cf-managing-console-search-specification.png)
 
 Ger de valda resultaten:
+
+<!-- CQDOC-21349: screenshot -->
 
 ![Konsol för innehållsfragment - sökresultat](assets/cf-managing-console-search-results.png)
 

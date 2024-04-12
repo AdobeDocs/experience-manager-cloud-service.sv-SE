@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: b940877abff45e2a9ee046aec74af067007f41c3
+source-git-commit: ff8d04878da521b55121c9460a9d4b159ec617a4
 workflow-type: tm+mt
-source-wordcount: '4850'
+source-wordcount: '4881'
 ht-degree: 3%
 
 ---
@@ -31,6 +31,8 @@ ht-degree: 3%
    + [Versionsinformation](/help/release-notes/home.md)
    + Versionsinformation om AEMaaCS-funktioner {#release-notes}
       + [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md)
+      + 2024 {#2024}
+         + [Versionsinformation för 2024.1.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-1-0.md)
       + 2023 {#2023}
          + [Versionsinformation för 2023.12.0](/help/release-notes/release-notes-cloud/2023/release-notes-2023-12-0.md)
          + [Versionsinformation för 2023.11.0](/help/release-notes/release-notes-cloud/2023/release-notes-2023-11-0.md)
@@ -171,6 +173,8 @@ ht-degree: 3%
          + [Versionsinformation för 2021.10.0](/help/journey-migration/release-notes/release-notes-migration-tools-2021-10-0.md)
    + Versionsinformation för Workfront för Experience Manager förbättrad anslutning{#workfront}
       + [Aktuell versionsinformation för Workfront för Experience Manager förbättrad anslutning](/help/assets/release-notes-enhanced-connector-workfront.md)
+   + Versionsinformation för Generera variationer {#generate-variations}
+      + [Aktuell versionsinformation för Generera variationer](/help/generative-ai/release-notes-generate-variations.md)
    + [Vad är Nytt?](/help/release-notes/what-is-new.md)
    + [Betydande förändringar i AEM Cloud Service](/help/release-notes/aem-cloud-changes.md)
    + [Föråldrade och borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md)
@@ -356,6 +360,7 @@ ht-degree: 3%
          + [Markering](/help/sites-cloud/administering/content-fragments/markdown.md)
          + [Ta bort överväganden](/help/sites-cloud/administering/content-fragments/delete-considerations.md)
          + [Analyserar struktur](/help/sites-cloud/administering/content-fragments/analysis.md)
+         + [Resurser i konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/assets-content-fragments-console.md)
          + [Kortkommandon](/help/sites-cloud/administering/content-fragments/keyboard-shortcuts.md)
       + Skapa webbplats {#site-creation}
          + [Skapa en ny plats](/help/sites-cloud/administering/site-creation/create-site.md)
@@ -891,7 +896,8 @@ ht-degree: 3%
       + [Uppdatera dina innehållsfragment för optimerad GraphQL-filtrering](/help/headless/graphql-api/graphql-optimized-filtering-content-update.md)
       + [Exempel på GraphQL-frågor](/help/headless/graphql-api/sample-queries.md)
       + [Felsöka GraphQL-frågor](/help/headless/graphql-api/persisted-queries-troubleshoot.md)
-   + [Innehållsfragment REST API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/assets-api-content-fragments.html)
+   + [Content Fragments and Models OpenAPIs](/help/headless/content-fragment-openapis.md)
+   + [Content Fragments support in Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/assets-api-content-fragments.html)
    + Dokumentskydd {#security}
       + [Behörigheter](/help/headless/security/permissions.md)
       + [Autentisering](/help/headless/security/authentication.md)

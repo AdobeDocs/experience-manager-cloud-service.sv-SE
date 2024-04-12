@@ -2,9 +2,9 @@
 title: Arbeta med innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur du med Content Fragments in Adobe Experience Manager (AEM) as a Cloud Service kan utforma, skapa, strukturera och använda sidoberoende innehåll, idealiskt för sidredigering och rubrikfri leverans. Hur de kan användas tillsammans med MSM.
 exl-id: db17eff1-4252-48d5-bb67-5e476e93ef7e
-source-git-commit: 02b96c27f985492396cfbd262b9fec450ec8d2c8
+source-git-commit: 930eca968807eaa9b322010d582973d431b9fa01
 workflow-type: tm+mt
-source-wordcount: '2222'
+source-wordcount: '2230'
 ht-degree: 2%
 
 ---
@@ -61,6 +61,7 @@ På den här och följande sidor beskrivs hur du skapar, konfigurerar, underhål
 >* [Content Fragments – konfigurera komponenter för återgivning](/help/implementing/developing/extending/content-fragments-configuring-components-rendering.md)
 >* [Stöd för Content Fragments i AEM Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md)
 >* [AEM GraphQL API för användning med innehållsfragment](/help/headless/graphql-api/content-fragments.md)
+>* The [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md)
 
 Antalet kommunikationskanaler ökar årligen. Kanalerna avser vanligen leveransmekanismen, antingen som:
 

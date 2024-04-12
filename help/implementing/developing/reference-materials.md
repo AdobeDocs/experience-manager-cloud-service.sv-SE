@@ -2,9 +2,9 @@
 title: API-referensmaterial
 description: AEM har omfattande och kraftfulla API:er som du kan använda för ditt digitala upplevelseprojekt.
 exl-id: d4ef3040-5a0a-4149-9e99-09eda9605038
-source-git-commit: 3434d51c9b0bad02b0c3f0836341f671c9405182
+source-git-commit: 674db680f46a4fd4772cb10fe7cb396652354dfe
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '608'
 ht-degree: 1%
 
 ---
@@ -72,6 +72,7 @@ AEM erbjuder anpassningsbara komponenter och alternativ för innehållsleverans.
 | [HTTP API för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md) | Få åtkomst till innehåll i innehållsfragment direkt via HTTP API via CRUD-åtgärder |
 | [GraphQL API för innehållsfragment](/help/headless/graphql-api/content-fragments.md) | Möjliggör effektiv leverans av innehållsfragment till JavaScript-klienter i headless CMS-implementationer |
 | [Content Fragments Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html) | Exakt format för HTTP-resursbegäranden som stöds |
+| [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) | OpenAPI:er för innehållsfragment och innehållsfragmentmodell |
 
 ## SPA-specifika API:er {#spa-apis}
 

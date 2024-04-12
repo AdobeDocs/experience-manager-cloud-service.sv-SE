@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Assets HTTP API,APIs
 role: Developer,Architect,Admin
 exl-id: a3b7374d-f24b-4d6f-b6db-b9c9c962bb8d
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 674db680f46a4fd4772cb10fe7cb396652354dfe
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1625'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,10 @@ ht-degree: 0%
 ## Ökning {#overview}
 
 The [!DNL Assets] HTTP-API:t gör det möjligt att skapa, läsa, uppdatera och ta bort (CRUD) på digitala resurser, inklusive metadata, återgivningar och kommentarer, samt strukturerat innehåll med [!DNL Experience Manager] Innehållsfragment. Den exponeras vid `/api/assets` och implementeras som REST API. Den innehåller [stöd för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md).
+
+>[!NOTE]
+>
+>The [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) finns också.
 
 Så här kommer du åt API:
 
@@ -40,9 +44,17 @@ A [Innehållsfragment](/help/assets/content-fragments/content-fragments.md) är 
 
 Mer information finns i [Stöd för innehållsfragment i [!DNL Experience Manager Assets] HTTP-API](/help/assets/content-fragments/assets-api-content-fragments.md).
 
+>[!NOTE]
+>
+>The [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) finns också.
+
 ## Datamodell {#data-model}
 
 The [!DNL Assets] HTTP API visar två huvudelement, mappar och resurser (för standardresurser). Dessutom visas mer detaljerade element för anpassade datamodeller som beskriver strukturerat innehåll i innehållsfragment. Se [Datamodeller för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md#content-models-and-content-fragments) för ytterligare information.
+
+>[!NOTE]
+>
+>The [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) finns också.
 
 ### Mappar {#folders}
 
@@ -75,6 +87,10 @@ I [!DNL Experience Manager] en resurs innehåller följande element:
 * Valfria kommentarer.
 
 Mer information om element i innehållsfragment finns i [Stöd för innehållsfragment i Experience Manager Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md).
+
+>[!NOTE]
+>
+>The [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) finns också.
 
 I [!DNL Experience Manager] en mapp har följande komponenter:
 

@@ -3,10 +3,10 @@ title: Beständiga GraphQL-frågor
 description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager as a Cloud Service för att optimera prestandan. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
 feature: Content Fragments,GraphQL API
 exl-id: 080c0838-8504-47a9-a2a2-d12eadfea4c0
-source-git-commit: 8b03da83c7f669d9295f7c8a82ce5c97fafe67c8
+source-git-commit: 58a91e0e5d6267caac8210f001f6f963870eb7dd
 workflow-type: tm+mt
-source-wordcount: '1869'
-ht-degree: 0%
+source-wordcount: '1952'
+ht-degree: 1%
 
 ---
 
@@ -406,7 +406,7 @@ Standardkonfigurationen för OSGi för publiceringsinstanser:
 
 Som standard är `PersistedQueryServlet` skickar en `200` svar när den kör en fråga, oavsett det faktiska resultatet.
 
-Du kan [konfigurera OSGi-inställningarna](/help/implementing/deploying/configuring-osgi.md) för **Konfiguration av beständig frågetjänst** för att kontrollera vilken statuskod som returneras av `/execute.json/persisted-query` slutpunkten, om det finns ett fel i den beständiga frågan.
+Du kan [konfigurera OSGi-inställningarna](/help/implementing/deploying/configuring-osgi.md) för **Konfiguration av beständig frågetjänst** för att kontrollera om mer detaljerade statuskoder returneras av `/execute.json/persisted-query` slutpunkten, om det finns ett fel i den beständiga frågan.
 
 >[!NOTE]
 >
@@ -414,13 +414,20 @@ Du kan [konfigurera OSGi-inställningarna](/help/implementing/deploying/configur
 
 Fältet `Respond with application/graphql-response+json` (`responseContentTypeGraphQLResponseJson`) kan definieras enligt behov:
 
-* `false` (standardvärde): Det spelar ingen roll om den beständiga frågan lyckas eller inte. The `/execute.json/persisted-query` returnerar statuskoden `200` och `Content-Type` header returned is `application/json`.
+* `false` (standardvärde): Det spelar ingen roll om den beständiga frågan lyckas eller inte. The `Content-Type` header returned is `application/json`och `/execute.json/persisted-query` *alltid* returnerar statuskoden `200`.
 
-* `true`: Slutpunkten returneras `400` eller `500` om det finns någon form av fel när den beständiga frågan körs. Dessutom returneras `Content-Type` är `application/graphql-response+json`.
+* `true`: Den returnerade `Content-Type` är `application/graphql-response+json`och slutpunkten returnerar rätt svarskod när det finns någon form av fel när den beständiga frågan körs:
+
+  | Code | Beskrivning |
+  |--- |--- |
+  | 200 | Slutfört svar |
+  | 400 | Anger att det saknas rubriker eller ett problem med den beständiga frågesökvägen. Konfigurationsnamnet har till exempel inte angetts, suffixet har inte angetts och andra har inte angetts.<br>Se [Felsökning - GraphQL-slutpunkt har inte konfigurerats](/help/headless/graphql-api/persisted-queries-troubleshoot.md#missing-path-query-url). |
+  | 404 | Det går inte att hitta den begärda resursen. Graphql-slutpunkten är till exempel inte tillgänglig på servern.<br>Se [Felsökning - Sökväg saknas i GraphQL beständiga fråge-URL](/help/headless/graphql-api/persisted-queries-troubleshoot.md#graphql-endpoint-not-configured). |
+  | 500 | Internt serverfel. Exempel: valideringsfel, beständighetsfel med mera. |
 
   >[!NOTE]
   >
-  >Se https://graphql.github.io/graphql-over-http/draft/#sec-Status-Codes
+  >Se även https://graphql.github.io/graphql-over-http/draft/#sec-Status-Codes
 
 ## Kodning av fråge-URL för användning av ett program {#encoding-query-url}
 
