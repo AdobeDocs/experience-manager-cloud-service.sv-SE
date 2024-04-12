@@ -5,10 +5,10 @@ contentOwner: Vishabh Gupta
 feature: Asset Management, Collaboration, Asset Distribution
 role: User, Admin
 exl-id: 14e897cc-75c2-42bd-8563-1f5dd23642a0
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 0ccca6194cfcd6e834b2e63337230f83cba96dcd
 workflow-type: tm+mt
-source-wordcount: '1249'
-ht-degree: 1%
+source-wordcount: '1583'
+ht-degree: 0%
 
 ---
 
@@ -21,11 +21,39 @@ ht-degree: 1%
 
 [!DNL Adobe Experience Manager Assets] Med kan du dela resurser, mappar och samlingar med medlemmar i din organisation och externa enheter, inklusive partners och leverantörer. Använd följande metoder för att dela resurser från [!DNL Experience Manager Assets] som [!DNL Cloud Service]:
 
-* [Dela som länk](#sharelink)
+* [Dela som länk](#sharelink).
 * [Hämta resurser](/help/assets/download-assets-from-aem.md) och dela separat.
 * Dela med [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html).
 * Dela med [[!DNL Adobe Asset Link]](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html).
 * Dela med [[!DNL Brand Portal]](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html).
+
+## Förutsättningar {#prerequisites}
+
+Du behöver administratörsbehörighet för att [konfigurera inställningar för delning av resurser som en länk](#config-link-share-settings).
+
+## Konfigurera inställningar för länkdelning {#config-link-share-settings}
+
+[!DNL Experience Manager Assets] I kan du konfigurera standardinställningar för länkdelning.
+
+1. Klicka på [!DNL Experience Manager] logotyp och navigera sedan till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Assets Configuration]** > **[!UICONTROL Link Share]**.
+1. Inledande inställningar:
+
+   * **Inkludera original:**
+
+      * Välj `Select Include Originals` för att välja `Include Originals` som standard i dialogrutan för länkdelning.
+      * Välj hur `Include Originals` visas i dialogrutan Länkdelning. [!UICONTROL Editable] gör att användaren kan ändra inställningarna som definieras här i Inledande inställningar. Med `Read-only` inställningen visas men kan inte ändras. `Hidden` döljer inställningen och använder det värde som konfigurerats här i de ursprungliga inställningarna.
+   * **Inkludera återgivningar:**
+      * Välj `Select Include Renditions` för att välja `Include Renditions` som standard i dialogrutan för länkdelning.
+      * Välj hur `Include Renditions` visas i dialogrutan Länkdelning. [!UICONTROL Editable] gör att användaren kan ändra inställningarna som definieras här i Inledande inställningar. Med `Read-only` inställningen visas men kan inte ändras. `Hidden` döljer inställningen och använder det värde som konfigurerats här i de ursprungliga inställningarna.
+
+1. Ange standardgiltighetsperioden för länken i `Validity Period` fältet i `Expiration date` -avsnitt.
+
+1. **[!UICONTROL Link share]** i åtgärdsfältet:
+   * Alla användare med `jcr:modifyAccessControl` behörigheter kan visa [!UICONTROL Link share] alternativ. Den är synlig som standard för alla administratörer. The [!UICONTROL Link share] -knappen är som standard synlig för alla. Du kan konfigurera så att det här alternativet endast visas för de definierade grupperna eller så kan du även neka det här alternativet från specifika grupper. Välj `Allow only for groups` om du vill att specifika grupper ska kunna visa `Share Link` alternativ. Välj `Deny from groups` för att neka `Share Link` från specifika grupper. När du har valt något av dessa alternativ anger du gruppnamnen med `Select Groups` om du vill lägga till gruppnamn som du vill tillåta eller neka.
+
+Information om inställningar för e-postkonfiguration finns på [Dokumentation för e-posttjänst](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/email-service.html)
+
+![Konfigurera e-posttjänst](/help/assets/assets/config-email-service.png)
 
 ## Dela resurser som en länk {#sharelink}
 
@@ -42,11 +70,12 @@ Users with administrator privileges or with read permissions at `/var/dam/share`
 
 Det finns två sätt att dela resurserna med hjälp av länkdelningsfunktionen:
 
-1. Skapa en delad länk, [kopiera och dela resurslänken](#copy-and-share-assets-link) med andra användare. Länkens standardförfallotid är en dag. Du kan inte ändra förfallotiden när du delar den kopierade länken med andra användare.
+1. Skapa en delad länk, [kopiera och dela resurslänken](#copy-and-share-assets-link) med andra användare.
+1. Generera en delad länk och [dela resurslänken via e-post](#share-assets-link-through-email). Du kan ändra standardvärdena, till exempel förfallodatum och förfallotid, och tillåta hämtning av originalresurserna och dess återgivningar. Du kan skicka e-post till flera användare genom att lägga till deras e-postadresser.
 
-1. Generera en delad länk och [dela resurslänken via e-post](#share-assets-link-through-email). I det här fallet kan du ändra standardvärdena, t.ex. utgångsdatum och -tid, och tillåta hämtning av originalresurserna och dess återgivningar. Du kan skicka e-post till flera användare genom att lägga till deras e-postadresser.
+   ![Dialogrutan Länkdelning](assets/share-link.png)
 
-   ![Dialogrutan Länkdelning](assets/link-sharing-dialog.png)
+I båda fallen kan du ändra standardvärdena, t.ex. utgångsdatum och -tid, och tillåta hämtning av de ursprungliga resurserna och dess återgivningar.
 
 ### Kopiera och dela resurslänken{#copy-and-share-asset-link}
 
@@ -55,6 +84,9 @@ Så här delar du resurser som en offentlig URL:
 1. Logga in på [!DNL Experience Manager Assets] och navigera till **[!UICONTROL Files]**.
 1. Markera de resurser eller den mapp som innehåller resurser. Klicka på **[!UICONTROL Share Link]** i verktygsfältet.
 1. The **[!UICONTROL Link Sharing]** som innehåller en autogenererad resurslänk i dialogrutan **[!UICONTROL Share Link]** fält.
+1. Ange förfallodatumet för den delade länken efter behov.
+1. Under **[!UICONTROL Link Settings]**, markera eller avmarkera `Include Originals` eller `Include Renditions` om du vill inkludera eller exkludera någon av de två. Du måste välja minst ett alternativ.
+1. Namnen på de valda resurserna visas i den högra kolumnen i [!DNL Share Link] -dialogrutan.
 1. Kopiera resurslänken och dela den med användarna.
 
 ### Dela resurslänk via e-postmeddelande {#share-assets-link-through-email}
@@ -64,7 +96,7 @@ Så här delar du resurser via e-post:
 1. Markera de resurser eller den mapp som innehåller resurser. Klicka på **[!UICONTROL Share Link]** i verktygsfältet.
 1. The **[!UICONTROL Link Sharing]** som innehåller en autogenererad resurslänk i dialogrutan **[!UICONTROL Share Link]** fält.
 
-   * I rutan E-postadress skriver du e-post-ID för den användare som du vill dela länken med. Du kan dela länken med flera användare. Om användaren är medlem i din organisation väljer du användarens e-post-ID bland förslagen som visas i listrutan. Om användaren är extern skriver du det fullständiga e-post-ID:t och trycker på **[!UICONTROL Enter]**; e-post-ID:t läggs till i listan över användare.
+   * Skriv e-postadressen till den användare som du vill dela länken med i rutan E-postadress. Du kan dela länken med flera användare. Om användaren är medlem i din organisation väljer du dennes e-postadress bland de förslag som visas i listrutan. I textfältet för e-postadresser skriver du e-postadressen till den användare som du vill dela länken med och klickar på [!UICONTROL Enter]. Du kan dela länken med flera användare.
 
    * I **[!UICONTROL Subject]** anger du ett ämne för att ange syftet med de delade resurserna.
    * I **[!UICONTROL Message]** skriver du ett meddelande om det behövs.
@@ -115,7 +147,7 @@ To generate the URL for assets you want to share with users, use the Link Sharin
 >* Before you share a link with users, ensure that Day CQ Mail Service is configured. Otherwise, an error occurs.
 
 1. In the Assets user interface, select the asset to share as a link.
-1. From the toolbar, select the **[!UICONTROL Share Link]**.
+1. From the toolbar, click/tap the **[!UICONTROL Share Link]**.
 
    An asset link is auto-created in the **[!UICONTROL Share Link]** field. Copy this link and share it with the users. The default expiration time for the link is one day.
 
@@ -153,20 +185,20 @@ To generate the URL for assets you want to share with users, use the Link Sharin
    >By default, users can only download the renditions of the asset that you share as a link.
 
 1. Click **[!UICONTROL Share]**. A message confirms that the link is shared with the users through an email.
-1. To view the shared asset, select the link in the email that is sent to the user. The shared asset is displayed in the **[!UICONTROL Adobe Marketing Cloud]** page.
+1. To view the shared asset, click/tap the link in the email that is sent to the user. The shared asset is displayed in the **[!UICONTROL Adobe Marketing Cloud]** page.
 
-   To toggle to the list view, select the layout icon in the toolbar.
+   To toggle to the list view, click/tap the layout icon in the toolbar.
 
-1. To generate a preview of the asset, select the shared asset. To close the preview and return to the **[!UICONTROL Marketing Cloud]** page, select **[!UICONTROL Back]** in the toolbar. If you have shared a folder, select **[!UICONTROL Parent Folder]** to return to the parent folder.
+1. To generate a preview of the asset, click/tap the shared asset. To close the preview and return to the **[!UICONTROL Marketing Cloud]** page, click/tap **[!UICONTROL Back]** in the toolbar. If you have shared a folder, click/tap **[!UICONTROL Parent Folder]** to return to the parent folder.
 
    >[!NOTE]
    >
    >Experience Manager supports generating the preview of assets of these MIME types: JPG, PNG, GIF, BMP, INDD, PDF, and PPT. You can only download the assets of the other MIME types.
 
-1. To download the shared asset, select **[!UICONTROL Select]** from the toolbar, select the asset, and then select **[!UICONTROL Download]** from the toolbar.
-1. To view the assets you shared as links, go to the Assets user interface and select the GlobalNav icon. Choose **[!UICONTROL Navigation]** from the list to display the Navigation pane.
+1. To download the shared asset, click/tap **[!UICONTROL Select]** from the toolbar, click/tap the asset, and then click/tap **[!UICONTROL Download]** from the toolbar.
+1. To view the assets you shared as links, go to the Assets user interface and click/tap the GlobalNav icon. Choose **[!UICONTROL Navigation]** from the list to display the Navigation pane.
 1. From the Navigation pane, choose **[!UICONTROL Shared Links]** to display a list of shared assets.
-1. To un-share an asset, select it and select **[!UICONTROL Unshare]** from the toolbar.
+1. To un-share an asset, select it and tap/click **[!UICONTROL Unshare]** from the toolbar.
 
 A message confirms that you unshared the asset. In addition, the entry for the asset is removed from the list.
 -->
@@ -202,20 +234,13 @@ Använd dialogrutan Länkdelning för att generera URL:en för resurser som du v
 >* `[aem_server]:[port]/linkexpired.html`
 
 <!--
-## Configure Day CQ mail service {#configmailservice}
-
-Before you can share assets as links, configure the email service.
-
-1. Select the Experience Manager logo, and then navigate to **[!UICONTROL Tools]** &gt; **[!UICONTROL Operations]** &gt; **[!UICONTROL Web Console]**.
 1. From the list of services, locate **[!UICONTROL Day CQ Mail Service]**.
-1. Click the **[!UICONTROL Edit]** icon beside the service, and configure the following parameters for **Day CQ Mail Service]** with the details mentioned against their names:
+1. Click the **[!UICONTROL Edit]** icon beside the service, and configure the following parameters for **Day CQ Mail Service** with the details mentioned against their names:
 
     * SMTP server host name: email server host name
     * SMTP server port: email server port
     * SMTP user: email server user name
     * SMTP password: email server password
-
-1. Select **[!UICONTROL Save]**.
 -->
 
 <!-- TBD: Commenting as Web Console is not available. Document the appropriate OSGi config method if available in CS.
@@ -223,14 +248,14 @@ Before you can share assets as links, configure the email service.
 
 When you download assets from the link shared using the Link Sharing feature, Experience Manager compresses the asset hierarchy from the repository and then returns the asset in a ZIP file. However, in the absence of limits to the amount of data that can be compressed in a ZIP file, huge amounts of data is subjected to compression, which causes out of memory errors in JVM. To secure the system from a potential denial of service attack due to this situation, you can configure the maximum size of the downloaded files. If uncompressed size of the asset exceeds the configured value, asset download requests are rejected. The default value is 100 MB.
 
-1. Select the Experience Manager logo and then go to **[!UICONTROL Tools]** &gt; **[!UICONTROL Operations]** &gt; **[!UICONTROL Web Console]**.
+1. Click/Tap the Experience Manager logo and then go to **[!UICONTROL Tools]** &gt; **[!UICONTROL Operations]** &gt; **[!UICONTROL Web Console]**.
 1. From the web console, locate the **[!UICONTROL Day CQ DAM Adhoc Asset Share Proxy Servlet]** configuration.
 1. Open the configuration in edit mode, and modify the value of the **[!UICONTROL Max Content Size (uncompressed)]** parameter.
 1. Save the changes.
 -->
 
 <!--
-Add content or link about how to configure sharing by way of BP, DA, AAL, and so on.
+Add content or link about how to configure sharing via BP, DA, AAL, etc.
 -->
 
 ### Aktivera skrivbordsåtgärder som ska användas med skrivbordsappen {#desktop-actions}
