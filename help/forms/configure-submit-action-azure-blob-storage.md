@@ -3,7 +3,7 @@ Title: How to connect AEM Adaptive Forms with Azure Blob Storage?
 Description: Learn how to create an Azure Blob Storage Configuration in AEM Forms and use it within your Adaptive Forms for efficient data storage.
 keywords: Azure Blob Storage-integrering med AEM Forms, skicka data till Azure Storage, skapa Azure Storage-konfiguration i AEM Forms, använda Azure Blob Storage i adaptiv Forms Submit Action
 feature: Adaptive Forms, Core Components
-source-git-commit: 8784c0bcd05eeae41a472faa5ecad03cbdd8a9b6
+source-git-commit: a22ecddf7c97c5894cb03eb44296e0562ac46ddb
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 0%
@@ -44,6 +44,15 @@ Så här ansluter du AEM Forms till dina Azure-lagringsbehållare:
 1. Ange **[!UICONTROL Title]**, **[!UICONTROL Azure Storage Account]** och **[!UICONTROL Azure Access key]**.
 
    * Du kan hämta `Azure Storage Account` namn och `Azure Access key` från lagringskonton i Microsoft® Azure-portalen.
+<!--
+
+    >[!NOTE]
+    >
+    > The URL for **[!UICONTROL Azure Blob Endpoint]** is automatically appended to the textbox when a value is entered for **[!UICONTROL Azure Storage Account]**. You can update the Azure Blob End Point URL with your custom domain. Steps to update URL for **[!UICONTROL Azure Blob End Point]**:
+    > 1. [Enable the AEM Advance Networking VPN support](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/advanced-networking.html)
+    > 1. [Enable dedicated egress IP link](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/advanced-networking.html)
+    > 1. [Map custom domain to azure blob storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-custom-domain-name?tabs=azure-portal)
+-->
 
 1. Klicka på **[!UICONTROL Save]**.
 

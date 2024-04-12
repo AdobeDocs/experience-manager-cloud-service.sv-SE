@@ -5,9 +5,9 @@ Keywords: How to generate document?, Generate PDF document, Manipulation PDF doc
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
 feature: Adaptive Forms, APIs
 role: Admin, Developer, User
-source-git-commit: 54fa7ae32fa2882d844fd1c0eb0962b6b01885a5
+source-git-commit: a22ecddf7c97c5894cb03eb44296e0562ac46ddb
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '1400'
 ht-degree: 1%
 
 ---
@@ -171,21 +171,22 @@ Tjänsten DocAssurance innehåller API:erna för signatur och kryptering:
 
 ### Signatur-API:er
 
-Med signatur-API:erna kan din organisation skydda säkerheten och sekretessen för Adobe PDF-dokument som den distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att endast avsedda mottagare kan ändra dokument. Eftersom säkerhetsfunktionerna tillämpas på själva dokumentet förblir dokumentet säkert och styrs under hela sin livscykel. Ett dokument förblir säkert även utanför brandväggen när det laddas ned offline och när det skickas tillbaka till organisationen. Du kan utföra följande uppgifter med signatur-API:erna:
+Med signatur-API:erna kan din organisation skydda säkerheten och sekretessen för Adobe PDF-dokument som den distribuerar och tar emot. <!--This service uses digital signatures and certification to ensure that only intended recipients can alter documents. --> Dokumentets säkerhetsfunktioner används i själva dokumentet, och dokumentet förblir säkert och styrs under hela sin livscykel. Dokumentet förblir säkert även utanför brandväggen när det laddas ned offline och när det skickas tillbaka till organisationen. Du kan utföra följande uppgifter med signatur-API:erna:
 
-* Lägg till ett signaturfält i ett PDF-dokument.
+* Lägg till ett synligt signaturfält i ett PDF-dokument.
+* Lägg till ett osynligt signaturfält i ett PDF-dokument.
 * Signera det angivna signaturfältet i ett PDF-dokument.
 * Certifiera ett PDF-dokument
 
 ### Krypterings-API:er
 
-Med krypterings-API:erna kan du kryptera och dekryptera dokument. När ett dokument är krypterat blir innehållet oläsligt. En behörig användare kan dekryptera dokumentet för att få åtkomst till innehållet. Om ett PDF-dokument är krypterat med ett lösenord måste användaren ange det öppna lösenordet innan dokumentet kan visas i Adobe Reader eller Adobe Acrobat. Om ett PDF-dokument är krypterat med ett certifikat måste användaren dekryptera PDF-dokumentet med den offentliga nyckel som motsvarar det certifikat (privat nyckel) som användes för att kryptera PDF-dokumentet.
+Med krypterings-API:erna kan du kryptera och dekryptera dokument. När ett dokument är krypterat blir innehållet oläsligt. En behörig användare kan dekryptera dokumentet för att få åtkomst till innehållet. Om ett PDF-dokument är krypterat med ett lösenord måste användaren ange det öppna lösenordet innan dokumentet kan visas i Adobe Reader eller Adobe Acrobat. <!-- Likewise, if a PDF document is encrypted with a certificate, the user must decrypt the PDF document with the public key that corresponds to the certificate (private key) that was used to encrypt the PDF document.-->
 
 Du kan utföra följande uppgifter med krypterings-API:erna:
 
 * Kryptera ett PDF-dokument med ett lösenord.
 * Ta bort lösenordsbaserad kryptering från ett PDF-dokument.
-* Hämta den typ av skydd som används för ett PDF-dokument.
+* Returnera säkerhetstypen som används för ett PDF-dokument.
 
 Både signatur-API:er och krypterings-API:er [Synkrona API:er](#types-of-communications-apis-types).
 

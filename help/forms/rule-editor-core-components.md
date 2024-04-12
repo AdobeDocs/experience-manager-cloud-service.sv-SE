@@ -4,12 +4,20 @@ description: Med den anpassningsbara regelredigeraren i Forms kan du lägga till
 feature: Adaptive Forms, Core Components
 role: User
 level: Beginner, Intermediate
-source-git-commit: 78b3b11caf143ed147079ef2b3b3ebe5c1beafd7
+exl-id: 1292f729-c6eb-4e1b-b84c-c66c89dc53ae
+source-git-commit: a22ecddf7c97c5894cb03eb44296e0562ac46ddb
 workflow-type: tm+mt
-source-wordcount: '5557'
+source-wordcount: '5246'
 ht-degree: 0%
 
 ---
+
+
+<span class="preview"> Den här artikeln innehåller innehåll för vissa förhandsversionsfunktioner. De här förhandsversionsfunktionerna är bara tillgängliga via [kanal för förhandsversion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). Funktionerna i förhandsversionen är:
+* Stöd för implementering av kapslade villkor med&quot;När då-else-funktionen&quot;
+* Validera eller återställ paneler och formulär, inklusive fält
+* Stöd för moderna JavaScript-funktioner som att låta- och pilfunktioner (ES10-stöd) finns i anpassade funktioner.
+</span>
 
 # Lägga till regler i ett adaptivt formulär (kärnkomponenter) {#adaptive-forms-rule-editor}
 
@@ -59,13 +67,13 @@ Mer information om vilka regeltyper som finns i regelredigeraren finns i [Tillg�
 
   Om du skriver en regel i fält B (det objekt som du utvärderar ett villkor för) ska du därför använda konstruktorn condition-action eller regeltypen When. Använd på samma sätt konstruktionen action-condition eller Visa eller Dölj regel i fält A.
 
-* Ibland måste du utföra flera åtgärder baserat på ett villkor. I sådana fall bör du använda konstruktorn condition-action. I den här konstruktionen kan du utvärdera ett villkor en gång och ange flera åtgärdssatser.
+* Ibland måste du utföra flera åtgärder baserat på ett villkor. I sådana fall rekommenderar vi att du använder villkorsåtgärdskonstruktionen. I den här konstruktionen kan du utvärdera ett villkor en gång och ange flera åtgärdsinstruktioner.
 
-  Om du till exempel vill dölja fält B, C och D baserat på villkoret som kontrollerar värdet som användaren anger i fält A, skriver du en regel med villkorsstyrd konstruktion eller Regeltyp för När i fält A och anger åtgärder som styr synligheten för fält B, C och D. I annat fall behöver du tre separata regler för fälten B, C och D, där varje regel kontrollerar villkoret och visar eller döljer respektive fält. I det här exemplet är det effektivare att skriva Regeltypen När för ett objekt i stället för att visa eller dölja regeltypen för tre objekt.
+  Om du till exempel vill dölja fälten B, C och D baserat på villkoret som söker efter det värde som en användare anger i fält A, skriver du en regel med villkorsåtgärdskonstruktion eller När-regeltyp i fält A och anger åtgärder för att styra synligheten för fält B, C och D. Annars behöver du tre separata regler för fält B,  C och D, där varje regel kontrollerar villkoret och visar eller döljer respektive fält. I det här exemplet är det mer effektivt att skriva regeltypen När på ett objekt i stället för att visa eller dölja regeltypen på tre objekt.
 
-* Om du vill aktivera en åtgärd baserat på flera villkor bör du använda konstruktorn action-condition. Om du till exempel vill visa och dölja fält A genom att utvärdera villkor i fält B, C och D, använder du Visa eller Dölj regeltyp i fält A.
+* Om du vill utlösa en åtgärd baserat på flera villkor rekommenderar vi att du använder åtgärdsvillkorskonstruktion. Om du till exempel vill visa och dölja fält A genom att utvärdera villkor i fält B, C och D använder du Visa eller dölj regeltyp i fält A.
 * Använd villkorskonstruktion för villkorsåtgärd eller åtgärd om regeln innehåller en åtgärd för ett villkor.
-* Om en regel söker efter ett villkor och utför en åtgärd omedelbart när ett värde anges i ett fält eller när ett fält avslutas, rekommenderar vi att du skriver en regel med villkorsstyrd åtgärd eller med regeltypen När i fältet som villkoret utvärderas i.
+* Om en regel söker efter ett villkor och utför en åtgärd omedelbart efter att ha angett ett värde i ett fält eller lämnat ett fält, rekommenderar vi att du skriver en regel med villkorsåtgärdskonstruktion eller regeltypen När i fältet där villkoret utvärderas.
 * Villkoret i regeln När utvärderas när en användare ändrar värdet på objektet som regeln När används på. Men om du vill att åtgärden ska utlösas när värdet ändras på serversidan, till exempel för förifyllning av värdet, rekommenderar vi att du skriver en When-regel som utlöser åtgärden när fältet initieras.
 * När du skriver regler för nedrullningsbara listor, alternativknappar eller kryssruteobjekt fylls alternativen eller värdena för dessa formulärobjekt i förväg i regelredigeraren.
 
@@ -93,7 +101,7 @@ Regelredigeraren innehåller följande logiska operatorer och händelser som du 
 
 ## Tillgängliga regeltyper i regelredigeraren {#available-rule-types-in-rule-editor}
 
-Regelredigeraren innehåller en uppsättning fördefinierade regeltyper som du kan använda för att skriva regler. Vi tittar närmare på varje regeltyp. Mer information om hur du skriver regler i regelredigeraren finns i [Skriva regler](rule-editor.md#p-write-rules-p).
+Regelredigeraren innehåller en uppsättning fördefinierade regeltyper som du kan använda för att skriva regler. Vi tittar närmare på varje regeltyp. Mer information om hur du skriver regler i regelredigeraren finns i [Skriv regler](rule-editor.md#p-write-rules-p).
 
 ### [!UICONTROL When] {#whenruletype}
 
@@ -109,9 +117,7 @@ Med enkla ord är en vanlig When-regel strukturerad enligt följande:
 
 `Then, do the following:`
 
-Åtgärd 2 om mål B.
-OCH
-Åtgärd 3 om mål C.
+Åtgärd 2 på objekt B och åtgärd 3 på objekt C.
 
 `Else, do the following:`
 
@@ -195,7 +201,7 @@ I följande bild visas ett exempel på hur du aktiverar kryssrutan dynamiskt bas
 
 **[!UICONTROL Function Output]** Definierar en regel baserat på fördefinierade funktioner eller anpassade funktioner.
 
-**[!UICONTROL Navigate to]** Navigerar till andra <!--Interactive Communications,--> adaptiva Forms, andra resurser som bilder eller dokumentfragment eller en extern URL. <!-- For more information, see [Add button to the Interactive Communication](create-interactive-communication.md#addbuttontothewebchannel). -->
+**[!UICONTROL Navigate to]** Navigerar till andra <!--Interactive Communications,--> Adaptiv Forms, andra resurser som bilder eller dokumentfragment eller en extern URL. <!-- For more information, see [Add button to the Interactive Communication](create-interactive-communication.md#addbuttontothewebchannel). -->
 
 **[!UICONTROL Dispatch Event]** Startar specifika åtgärder eller beteenden baserat på fördefinierade villkor eller händelser.
 
@@ -218,7 +224,7 @@ När (valfritt):
 
 (Villkor 1 OCH Villkor 2 OCH Villkor 3) är SANT;
 
-I följande exempel väljs värdet för `Question2` as `True` och anger värdet för `Result` as `correct`.
+I följande exempel väljs värdet för `Question2` as `True` och värdet för `Result` as `correct`.
 
 ![Ange värde-webbtjänst](assets/set-value-web-service.png)
 
@@ -377,7 +383,7 @@ När användaren knackar på knappen växlar knappen formulärobjekt och funktio
 
 Visuell regelredigerare är det område i det visuella redigeringsläget i regelredigerarens användargränssnitt där du skriver regler. Här kan du välja en regeltyp och definiera villkor och åtgärder. När du definierar villkor och åtgärder i en regel kan du dra och släppa formulärobjekt och funktioner från rutan Formulärobjekt och funktioner.
 
-Mer information om hur du använder redigeraren för visuella regler finns i [Skriva regler](rule-editor.md#p-write-rules-p).
+Mer information om hur du använder den visuella regelredigeraren finns i [Skriv regler](rule-editor.md#p-write-rules-p).
 <!-- 
 ### E. Visual-code editors switcher {#e-visual-code-editors-switcher}
 
@@ -396,9 +402,9 @@ Users in the forms-power-users group can access code editor. For other users, co
 
 The **[!UICONTROL Done]** -knappen används för att spara en regel. Du kan spara en ofullständig regel. Ofullständiga är dock ogiltiga och kan inte köras. Sparade regler för ett formulärobjekt visas nästa gång du startar regelredigeraren från samma formulärobjekt. Du kan hantera befintliga regler i den vyn. Mer information finns i [Hantera regler](rule-editor.md#p-manage-rules-p).
 
-Knappen **[!UICONTROL Cancel]** ignorerar alla ändringar som du har gjort i en regel och stänger regelredigeraren.
+The **[!UICONTROL Cancel]** ignorerar alla ändringar du har gjort i en regel och stänger regelredigeraren.
 
-## Skriva regler {#write-rules}
+## Skriv regler {#write-rules}
 
 Du kan skriva regler med hjälp av den visuella regelredigeraren <!-- or the code editor. When you launch the rule editor the first time, it opens in the visual editor mode. You can switch to the code editor mode and write rules. However, if you write or modify a rule in code editor, you cannot switch to the visual editor for that rule unless you clear the code editor. When you launch the rule editor next time, it opens in the mode that you used last to create rule. -->
 
@@ -504,7 +510,7 @@ Så här skriver du regler:
 
 1. Välj sedan i det markerade området runt uttrycksfältet och välj **[!UICONTROL Extend Expression]**.
 
-   ![skriva- regler-visual-editor-13](assets/write-rules-visual-editor-13-cc.png)
+   ![write-rules-visual-editor-13](assets/write-rules-visual-editor-13-cc.png)
 
    I fältet för utökat uttryck väljer du **[!UICONTROL divided by]** från **[!UICONTROL Select Operator]** fält och **[!UICONTROL Number]** från **[!UICONTROL Select Option]** fält. Ange sedan **[!UICONTROL 2]** i nummerfältet.
 
@@ -568,83 +574,83 @@ While writing JavaScript code in the rule editor, the following visual cues help
 
 #### Anpassade funktioner i regelredigeraren {#custom-functions}
 
-Du kan också använda anpassade funktioner i regelredigeraren. Instruktioner om hur du skapar anpassade funktioner finns i artikeln [Anpassade funktioner i Adaptive Forms](/help/forms/create-and-use-custom-functions.md).
-
-Förutom färdiga funktioner som *Summa av* som listas under Funktioner Output kan du skriva egna funktioner som du ofta behöver. Kontrollera att funktionen du skriver åtföljs av `jsdoc` ovanför den.
-
-Medföljande `jsdoc` krävs:
-
-* Om du vill ha anpassad konfiguration och beskrivning
-* Eftersom det finns flera sätt att deklarera en funktion i `JavaScript,` och kommentarer gör att du kan hålla reda på funktionerna.
-
-Regelredigeraren stöder JavaScript ES2015-syntax för skript och anpassade funktioner.
-Mer information finns i [jsdoc.app](https://jsdoc.app/).
-
-Stöds `jsdoc` taggar:
-
-* **Privat**
-Syntax: `@private`
-En privat funktion ingår inte som en anpassad funktion.
-
-* **Namn**
-Syntax: `@name funcName <Function Name>`
-Alternativt `,` du kan använda: `@function funcName <Function Name>` **eller** `@func` `funcName <Function Name>`.
-  `funcName` är namnet på funktionen (inga blanksteg tillåts).
-  `<Function Name>` är funktionens visningsnamn.
-
-* **Parameter**
-Syntax: `@param {type} name <Parameter Description>`
-Du kan också använda: `@argument` `{type} name <Parameter Description>` **eller** `@arg` `{type}` `name <Parameter Description>`.
-Visar parametrar som används av funktionen. En funktion kan ha flera parametertaggar, en tagg för varje parameter i ordningen för förekomst.
-  `{type}` representerar parametertyp. Tillåtna parametertyper är:
-
-   1. string
-   1. tal
-   1. boolesk
-   1. omfång
-   1. string[]
-   1. tal[]
-   1. boolesk[]
-   1. datum
-   1. datum[]
-   1. array
-   1. object
-
-  `scope` refererar till ett särskilt globalt objekt som tillhandahålls av formulärkörningen. Det måste vara den sista parametern och ska inte vara synligt för användaren i regelredigeraren. Du kan använda omfång för att komma åt läsbara formulär- och fältobjekt för att läsa egenskaper, händelser som utlöste regeln och en uppsättning funktioner för att hantera formuläret.
-
-  `object` type används för att skicka ett läsbart fältobjekt i parametern till en anpassad funktion i stället för att skicka värdet.
-
-  Alla parametertyper kategoriseras under något av ovanstående. Ingen stöds inte. Välj en av typerna ovan. Typer är inte skiftlägeskänsliga. Blanksteg tillåts inte i parameternamnet.  Parameterbeskrivningen kan innehålla flera ord.
-
-* **Valfri parameter**
-Syntax: `@param {type=} name <Parameter Description>`
-Du kan också använda: `@param {type} [name] <Parameter Description>`
-Som standard är alla parametrar obligatoriska. Du kan markera en parameter som valfri genom att lägga till `=` i parameterns typ eller genom att ange parameternamn inom hakparenteser.
-
-  Låt oss till exempel deklarera `Input1` som valfri parameter:
-   * `@param {type=} Input1`
-   * `@param {type} [Input1]`
-
-* **Returtyp**
-Syntax: `@return {type}`
-Du kan också använda `@returns {type}`.
-Lägger till information om funktionen, till exempel dess mål.
-{type} representerar funktionens returtyp. Följande returtyper tillåts:
-
-   1. string
-   2. tal
-   3. boolesk
-   4. string[]
-   5. tal[]
-   6. boolesk[]
-   7. datum
-   8. datum[]
-   9. array
-   10. object
-
-  Alla andra returtyper kategoriseras under en av ovanstående. Ingen stöds inte. Välj en av typerna ovan. Returtyperna är inte skiftlägeskänsliga.
+Förutom färdiga funktioner som *Summa av* som anges under **Utdata för funktioner** kan du också använda anpassade funktioner i regelredigeraren. Regelredigeraren stöder JavaScript ECMAScript 2019-syntax för skript och anpassade funktioner. Instruktioner om hur du skapar anpassade funktioner finns i artikeln [Anpassade funktioner i Adaptive Forms](/help/forms/create-and-use-custom-functions.md).
 
 <!--
+
+Ensure that the function you write is accompanied by the `jsdoc` above it. Adaptive Form supports the various [JavaScript annotations for custom functions](/help/forms/create-and-use-custom-functions.md#js-annotations).
+
+For more information, see [jsdoc.app](https://jsdoc.app/).
+
+Accompanying `jsdoc` is required:
+
+* If you want custom configuration and description
+* Because there are multiple ways to declare a function in `JavaScript,` and comments let you keep a track of the functions.
+
+Supported `jsdoc` tags:
+
+* **Private**
+  Syntax: `@private`
+  A private function is not included as a custom function.
+
+* **Name**
+  Syntax: `@name funcName <Function Name>`
+  Alternatively `,` you can use: `@function funcName <Function Name>` **or** `@func` `funcName <Function Name>`.
+  `funcName` is the name of the function (no spaces allowed).
+  `<Function Name>` is the display name of the function.
+
+* **Parameter**
+  Syntax: `@param {type} name <Parameter Description>`
+  Alternatively, you can use: `@argument` `{type} name <Parameter Description>` **or** `@arg` `{type}` `name <Parameter Description>`.
+  Shows parameters used by the function. A function can have multiple parameter tags, one tag for each parameter in the order of occurrence.
+  `{type}` represents parameter type. Allowed parameter types are:
+
+    1. string
+    2. number
+    3. boolean
+    4. scope
+    5. string[]
+    6. number[]
+    7. boolean[]
+    8. date
+    9. date[]
+    10. array
+    11. object
+
+   `scope` refers to a special globals object which is provided by forms runtime. It must be the last parameter and is not be visible to the user in the rule editor. You can use scope to access readable form and field proxy object to read properties, event which triggered the rule and a set of functions to manipulate the form.
+
+   `object` type is used to pass readable field object in parameter to a custom function instead of passing the value.
+
+   All parameter types are categorized under one of the above. None is not supported. Ensure that you select one of the types above. Types are not case-sensitive. Spaces are not allowed in the parameter name.  Parameter description can have multiple words.
+
+* **Optional Parameter**
+Syntax: `@param {type=} name <Parameter Description>` 
+Alternatively, you can use: `@param {type} [name] <Parameter Description>`
+By default all parameters are mandatory. You can mark a parameter optional by adding `=` in type of the parameter or by putting param name in square brackets.
+   
+   For example, let us declare `Input1` as optional parameter:
+    * `@param {type=} Input1`
+    * `@param {type} [Input1]`
+
+* **Return Type**
+  Syntax: `@return {type}`
+  Alternatively, you can use `@returns {type}`.
+  Adds information about the function, such as its objective.
+  {type} represents the return type of the function. Allowed return types are:
+
+    1. string
+    2. number
+    3. boolean
+    4. string[]
+    5. number[]
+    6. boolean[]
+    7. date
+    8. date[]
+    9. array
+    10. object
+
+  All other return types are categorized under one of the above. None is not supported. Ensure that you select one of the types above. Return types are not case-sensitive.
+
 **Adding a custom function**
 
 For example, you want to add a custom function which calculates area of a square. Side length is the user input to the custom function, which is accepted using a numeric box in your form. The calculated output is displayed in another numeric box in your form. To add a custom function, you have to first create a client library, and then add it to the CRX repository.
@@ -652,7 +658,7 @@ For example, you want to add a custom function which calculates area of a square
 To create a client library and add it in the CRX repository, perform the following steps:
 
 1. Create a client library. For more information, see [Using Client-Side Libraries](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/clientlibs.html#developing).
-1. In CRXDE, add a property `categories`with string type value as `customfunction` to the `clientlib` folder.
+2. In CRXDE, add a property `categories`with string type value as `customfunction` to the `clientlib` folder.
 
    >[!NOTE]
    >
