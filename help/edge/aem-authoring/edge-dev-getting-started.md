@@ -3,9 +3,9 @@ title: Guiden Komma igång för utvecklare för AEM med Edge Delivery Services
 description: Den här guiden hjälper dig att komma igång med en ny Adobe Experience Manager-webbplats med hjälp av Edge Delivery Services och den universella redigeraren för framtagning av innehåll.
 feature: Edge Delivery Services
 exl-id: a71184a7-c954-442e-b276-99edc6d2acd8
-source-git-commit: 7cd19f674d3eae2bcbe2b40402e135d4db6e3035
+source-git-commit: 8bdca5357666841c4471170ab3b97476b6be63b6
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1296'
 ht-degree: 0%
 
 ---
@@ -130,7 +130,7 @@ Nu när du har ett GitHub-projekt måste du skapa en ny AEM som projektet kan an
 >
 >Om du vill redigera webbplatsen med Universal Editor måste du använda en Chromium-baserad webbläsare.
 
-1. Hämta den senaste AEM Authoring with Edge Delivery Services site template från GitHub på [`https://github.com/adobe-rnd/aem-boilerplate-xwalk`](https://github.com/adobe-rnd/aem-boilerplate-xwalk).
+1. Hämta den senaste AEM Authoring with Edge Delivery Services site template från GitHub på [`https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases`](https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases).
 
 1. Logga in på din AEM as a Cloud Service redigeringsinstans och navigera till webbplatskonsolen och tryck eller klicka **Skapa** -> **Plats från mall**.
 
@@ -140,7 +140,7 @@ Nu när du har ett GitHub-projekt måste du skapa en ny AEM som projektet kan an
 
    ![Importera mallar](assets/edge-dev-getting-started/site-templates.png)
 
-1. Ladda upp webbplatsmallen AEM redigering med Edge Delivery Services som du får från Adobe Engineering.
+1. Ladda upp webbplatsmallen AEM redigering med Edge Delivery Services som du hämtade från GitHub.
 
    * Mallen får bara överföras en gång. När den har överförts kan den återanvändas för att skapa ytterligare webbplatser.
 
