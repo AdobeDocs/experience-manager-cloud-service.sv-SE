@@ -6,9 +6,9 @@ contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
 exl-id: 24607dd1-2d65-480b-a831-9071e20c473d
-source-git-commit: a22ecddf7c97c5894cb03eb44296e0562ac46ddb
+source-git-commit: e71e247f5b6de806b36c5c759b29e7273511f94e
 workflow-type: tm+mt
-source-wordcount: '3028'
+source-wordcount: '3097'
 ht-degree: 0%
 
 ---
@@ -42,102 +42,112 @@ Anpassade funktioner är i huvudsak klientbibliotek som läggs till i JavaScript
 
 JavaScript-anteckningar används för att tillhandahålla metadata för JavaScript-kod. Det innehåller kommentarer som börjar med specifika symboler, till exempel /** och @. Anteckningarna innehåller viktig information om funktioner, variabler och andra element i koden. Adaptiv form stöder följande JavaScript-anteckningar för anpassade funktioner:
 
-* **Namn**
+#### Namn
+
 Namnet används för att identifiera den anpassade funktionen i regelredigeraren för ett adaptivt formulär. Följande syntaxer används för att namnge en anpassad funktion:
-   * `@name [functionName] <Function Name>`
-   * `@function [functionName] <Function Name>`
-   * `@func [functionName] <Function Name>`.
-     `functionName` är funktionens namn. Blanksteg är inte tillåtna.
-     `<Function Name>` är visningsnamnet för funktionen i regelredigeraren för ett adaptivt formulär.
+
+* `@name [functionName] <Function Name>`
+* `@function [functionName] <Function Name>`
+* `@func [functionName] <Function Name>`.
+  `functionName` är funktionens namn. Blanksteg är inte tillåtna.
+  `<Function Name>` är visningsnamnet för funktionen i regelredigeraren för ett adaptivt formulär.
 Om funktionsnamnet är identiskt med namnet på själva funktionen kan du utelämna det `[functionName]` från syntaxen. <!-- For example,  in the `calculateAge` custom function, the name is defined as:
 `* @name calculateAge` -->
 
-* **Parameter**
+#### Parameter
+
 Parametern är en lista med argument som används av anpassade funktioner. En funktion kan ha stöd för flera parametrar. Följande syntaxer används för att definiera en parameter i en anpassad funktion:
-   * `@param {type} name <Parameter Description>`
-   * `@argument` `{type} name <Parameter Description>`
-   * `@arg` `{type}` `name <Parameter Description>`.
-     `{type}` representerar parametertypen.  Tillåtna parametertyper är:
-      * string: Representerar ett enda strängvärde.
-      * number: Representerar ett numeriskt värde.
-      * booleskt: Representerar ett enskilt booleskt värde (true eller false).
-      * string[]: Representerar en array med strängvärden.
-      * tal[]: Representerar en array med numeriska värden.
-      * boolesk[]: Representerar en array med booleska värden.
-      * date: Representerar ett enda datumvärde.
-      * datum[]: Representerar en array med datumvärden.
-      * array: Representerar en generisk array som innehåller värden av olika typer.
-      * object: Representerar formulärobjektet som skickas till en anpassad funktion i stället för att skicka dess värde direkt.
-      * omfång: Representerar globalt objekt som används av anpassade funktioner vid körning. Den deklareras som den sista parametern i JavaScript-anteckningar och visas inte i regelredigeraren i ett adaptivt formulär. Omfångsparametern har åtkomst till formulärets eller komponentens objekt för att utlösa den regel eller händelse som krävs för formulärbearbetning.
 
-  Parametertypen är inte skiftlägeskänslig och blanksteg tillåts inte i parameternamnet.
+* `@param {type} name <Parameter Description>`
+* `@argument` `{type} name <Parameter Description>`
+* `@arg` `{type}` `name <Parameter Description>`.
+  `{type}` representerar parametertypen.  Tillåtna parametertyper är:
+   * string: Representerar ett enda strängvärde.
+   * number: Representerar ett numeriskt värde.
+   * booleskt: Representerar ett enskilt booleskt värde (true eller false).
+   * string[]: Representerar en array med strängvärden.
+   * tal[]: Representerar en array med numeriska värden.
+   * boolesk[]: Representerar en array med booleska värden.
+   * date: Representerar ett enda datumvärde.
+   * datum[]: Representerar en array med datumvärden.
+   * array: Representerar en generisk array som innehåller värden av olika typer.
+   * object: Representerar formulärobjektet som skickas till en anpassad funktion i stället för att skicka dess värde direkt.
+   * omfång: Representerar globalt objekt som används av anpassade funktioner vid körning. Den deklareras som den sista parametern i JavaScript-anteckningar och visas inte i regelredigeraren i ett adaptivt formulär. Omfångsparametern har åtkomst till formulärets eller komponentens objekt för att utlösa den regel eller händelse som krävs för formulärbearbetning.
 
-  `<Parameter Description>` innehåller information om parameterns syfte. Det kan innehålla flera ord.
+    Parametertypen är inte skiftlägeskänslig och blanksteg tillåts inte i parameternamnet.
+    
+    `&lt;parameter description=&quot;&quot;>` innehåller information om parameterns syfte. Det kan innehålla flera ord.
+    
+    Som standard är alla parametrar obligatoriska. Du kan definiera en parameter som valfri genom att antingen lägga till `=&quot; efter parametertypen eller genom att omsluta parameternamnet i `[]`. Parametrar som definieras som valfria i JavaScript-anteckningar visas som valfria i regelredigeraren.
+    Om du vill definiera en variabel som en valfri parameter kan du använda någon av följande syntaxer:
+    
+    * `@param {type=} Indata1`
+    
+    I ovanstående kodrad är Input1 en valfri parameter utan något standardvärde. Så här deklarerar du valfri parameter med standardvärdet:
+    `@param {string=&lt;value>} input1`
+    
+    &quot;input1&quot; som en valfri parameter med standardvärdet inställt på &quot;value&quot;.
+    
+    * `@param {type} [Indata1]`
+    
+    I ovanstående kodrad är Input1 en valfri parameter utan något standardvärde. Så här deklarerar du valfri parameter med standardvärdet:
+    `@param {array} [input1=&lt;value>]`
+    &quot;input1&quot; är en valfri parameter av arraytyp med standardvärdet inställt på &quot;value&quot;.
+    Kontrollera att parametertypen omges av klammerparenteser {} och parameternamnet omges av hakparenteser [].
+    
+    Titta på följande kodfragment, där input2 definieras som en valfri parameter:
+    
+    &quot;javascript
+    
+    /**
+    * valfri parameterfunktion
+    * @name OptionalParameterFunction
+    * @param {string} input1
+    * @param {string=} input2
+    * @return {string}
+    */
+    function OptionalParameterFunction(input1, input2) {
+    let result = &quot;Result: &quot;;
+    result += input1;
+    if (input2 !== null) {
+    result += &quot; &quot; + input2;
+    }
+    returresultat,
+    }
+    &quot;
+    
+    Följande bild visas med den anpassade funktionen &quot;OptionalParameterFunction&quot; i regelredigeraren:
+    
+    &lt;!>— ![Valfria eller obligatoriska parametrar ](/help/forms/assets/optional-default-params.png) —>
+    
+    Du kan spara regeln utan att ange ett värde för obligatoriska parametrar, men regeln körs inte och ett varningsmeddelande visas som:
+    
+    &lt;!>— ![ofullständig regelvarning](/help/forms/assets/incomplete-rule.png) —>
+    
+    När användaren lämnar den valfria parametern tom, skickas värdet &quot;Odefinierad&quot; till den anpassade funktionen för den valfria parametern.
 
-  Som standard är alla parametrar obligatoriska. Du kan definiera en parameter som valfri genom att lägga till `=` efter parametertypen eller omslutningen av parameternamnet i  `[]`. Parametrar som definieras som valfria i JavaScript-anteckningar visas som valfria i regelredigeraren.
-Om du vill definiera en variabel som en valfri parameter kan du använda någon av följande syntaxer:
+#### Returtyp
 
-   * `@param {type=} Input1`
-I ovanstående kodrad `Input1` är en valfri parameter utan något standardvärde. Så här deklarerar du valfri parameter med standardvärdet:
-     `@param {string=<value>} input1`
-
-     `input1` som en valfri parameter med standardvärdet inställt på `value`.
-
-   * `@param {type} [Input1]`
-I ovanstående kodrad `Input1` är en valfri parameter utan något standardvärde. Så här deklarerar du valfri parameter med standardvärdet:
-     `@param {array} [input1=<value>]`
-     `input1` är en valfri parameter av arraytyp med standardvärdet inställt på `value`.
-Kontrollera att parametertypen omges av klammerparenteser {} och parameternamnet omges av hakparenteser [].
-
-     Titta på följande kodfragment, där input2 definieras som en valfri parameter:
-
-     ```javascript
-          /**
-          * optional parameter function
-          * @name OptionalParameterFunction
-          * @param {string} input1 
-          * @param {string=} input2 
-          * @return {string}
-         */
-         function OptionalParameterFunction(input1, input2) {
-         let result = "Result: ";
-         result += input1;
-         if (input2 !== null) {
-             result += " " + input2;
-         }
-         return result;
-         }
-     ```
-
-     Följande bild visas med `OptionalParameterFunction` anpassad funktion i regelredigeraren:
-
-     ![Valfria eller obligatoriska parametrar](/help/forms/assets/optional-default-params.png)
-
-     Du kan spara regeln utan att ange ett värde för obligatoriska parametrar, men regeln körs inte och ett varningsmeddelande visas som:
-
-     ![varningsmeddelande om ofullständig regel](/help/forms/assets/incomplete-rule.png)
-
-     När användaren lämnar den valfria parametern tom, skickas värdet &quot;Odefinierad&quot; till den anpassade funktionen för den valfria parametern.
-
-* **Returtyp**
 Returtypen anger vilken typ av värde som den anpassade funktionen returnerar efter körningen. Följande syntaxer används för att definiera en returtyp i en anpassad funktion:
-   * `@return {type}`
-   * `@returns {type}`
-     `{type}` representerar funktionens returtyp. Följande returtyper tillåts:
-      * string: Representerar ett enda strängvärde.
-      * number: Representerar ett numeriskt värde.
-      * booleskt: Representerar ett enskilt booleskt värde (true eller false).
-      * string[]: Representerar en array med strängvärden.
-      * tal[]: Representerar en array med numeriska värden.
-      * boolesk[]: Representerar en array med booleska värden.
-      * date: Representerar ett enda datumvärde.
-      * datum[]: Representerar en array med datumvärden.
-      * array: Representerar en generisk array som innehåller värden av olika typer.
-      * objekt: Representerar formulärobjektet i stället för dess värde direkt.
 
-     Returtypen är inte skiftlägeskänslig.
+* `@return {type}`
+* `@returns {type}`
+  `{type}` representerar funktionens returtyp. Följande returtyper tillåts:
+   * string: Representerar ett enda strängvärde.
+   * number: Representerar ett numeriskt värde.
+   * booleskt: Representerar ett enskilt booleskt värde (true eller false).
+   * string[]: Representerar en array med strängvärden.
+   * tal[]: Representerar en array med numeriska värden.
+   * boolesk[]: Representerar en array med booleska värden.
+   * date: Representerar ett enda datumvärde.
+   * datum[]: Representerar en array med datumvärden.
+   * array: Representerar en generisk array som innehåller värden av olika typer.
+   * objekt: Representerar formulärobjektet i stället för dess värde direkt.
 
-* **Privat**
+  Returtypen är inte skiftlägeskänslig.
+
+#### Privat
+
 Den anpassade funktionen, som deklarerats som private, visas inte i listan över anpassade funktioner i regelredigeraren för ett adaptivt formulär. Som standard är anpassade funktioner public. Syntaxen för att deklarera den anpassade funktionen som private är `@private`.
 
 Mer information om hur du definierar valfria parametrar i JSDocs finns i [klicka här](https://jsdoc.app/tags-param).
@@ -390,7 +400,7 @@ Lägg till följande kod i den anpassade funktionen enligt anvisningarna i [crea
 
 ```javascript
     
-	/**
+    /**
     * enablePanel
     * @name enablePanel
     * @param {object} field1

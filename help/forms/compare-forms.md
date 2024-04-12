@@ -4,9 +4,10 @@ description: Jämför två olika formulär baserade på fält, innehåll och for
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Adaptive Forms, Core Components
 hidefromtoc: true
-source-git-commit: 4e60d7315fe7a92d608f0858a7108f7590e9aefa
+exl-id: ce4ad231-a766-4ab0-8649-20cf16bf54ce
+source-git-commit: e71e247f5b6de806b36c5c759b29e7273511f94e
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
@@ -21,6 +22,11 @@ När formulärförfattare behöver jämföra två olika formulär baserat på f�
 
    ![Jämför adaptiva formulär](compare-two-forms.png)
 
-1. När användaren klickar kan han eller hon se två formulär i förhandsgranskningsläget, vilket visas i bilden.
+1. När du klickar visas två formulär i förhandsgranskningsläget. Det väljer det första formuläret som grundformulär att jämföra med det andra formuläret och jämför innehållet mellan de två formulären, som är lika och differentierade. Det differentierade innehållet i det första formuläret markeras som grönt, vilket visas i bilden.
 
    ![Jämförda formulär](compared-forms.png)
+
+## Se även {#see-also}
+
+{{see-also}}
+

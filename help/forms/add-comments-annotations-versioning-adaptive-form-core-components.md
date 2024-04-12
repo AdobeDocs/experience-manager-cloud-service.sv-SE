@@ -4,9 +4,9 @@ description: Använd adaptiva formulärkärnkomponenter för att lägga till kom
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Adaptive Forms, Core Components
 hidefromtoc: true
-source-git-commit: 4e60d7315fe7a92d608f0858a7108f7590e9aefa
+source-git-commit: e71e247f5b6de806b36c5c759b29e7273511f94e
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '576'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Med anpassad formulärversionshantering kan du lägga till versioner i ett formu
 Så här skapar du en version av ett formulär:
 
 1. Skapa ett formulär eller använd ett befintligt formulär.
-1. Navigera till AEM **[!UICONTROL Form]**>>**[!UICONTROL Forms & Documents]** och väljer **Formulär**.
+1. I AEM går du till **[!UICONTROL Form]**>>**[!UICONTROL Forms & Documents]** och väljer **Formulär**.
 1. I listrutan till vänster väljer du **[!UICONTROL Versions]**.
    ![Markera ett formulär](select-a-form.png)
 1. Klicka på **tre punkter** i den nedre panelen till vänster klickar du på **[!UICONTROL Save as Version]**.
@@ -77,22 +77,15 @@ I många fall måste formulärgruppsanvändare lägga till kommentarer i ett for
 1. Klicka på **lägg till ikon** som finns på den övre högra listen enligt bilden.
    ![Anteckning](annotation.png)
 
-1. Klicka på **lägg till ikon** som finns på den övre vänstra listen så som den anges i bilden för att lägga till syntaxen.
+1. Klicka på **lägg till ikon** som finns i den övre vänstra listen så som den anges i bilden för att lägga till anteckningen.
    ![Lägg till anteckning](add-annotation.png)
 
 1. Nu kan du lägga till kommentarer, rita skisser med flera färger i formulärkomponenterna.
 
-1. Om du vill se alla dina tillagda anteckningar i ett formulär markerar du formuläret så ser du de tillagda anteckningarna på den vänstra panelen, som i bilden.
+1. Om du vill se alla dina tillagda anteckningar i ett formulär, markerar du formuläret så visas de tillagda anteckningarna på den vänstra panelen, som visas i bilden.
 
    ![Se tillagda anteckningar](see-annotations.png)
 
+## Se även {#see-also}
 
-
-
-
-
-
-
-
-
-
+{{see-also}}

@@ -5,9 +5,9 @@ Keywords: How to generate document?, Generate PDF document, Manipulation PDF doc
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
 feature: Adaptive Forms, APIs
 role: Admin, Developer, User
-source-git-commit: a22ecddf7c97c5894cb03eb44296e0562ac46ddb
+source-git-commit: e71e247f5b6de806b36c5c759b29e7273511f94e
 workflow-type: tm+mt
-source-wordcount: '1400'
+source-wordcount: '1955'
 ht-degree: 1%
 
 ---
@@ -186,10 +186,63 @@ Du kan utföra följande uppgifter med krypterings-API:erna:
 
 * Kryptera ett PDF-dokument med ett lösenord.
 * Ta bort lösenordsbaserad kryptering från ett PDF-dokument.
+* Hämta den typ av skydd som används för ett PDF-dokument.
 * Returnera säkerhetstypen som används för ett PDF-dokument.
 
 Både signatur-API:er och krypterings-API:er [Synkrona API:er](#types-of-communications-apis-types).
 
+### Tilläggstjänsten Reader
+
+<span class="preview"> Funktionen Reader Extension Service ingår i programmet Early Adobe. Du kan skriva till `aem-forms-ea@adobe.com` från ditt officiella e-post-id för att gå med i programmet för tidiga användare och begära åtkomst till funktionen. </span>
+
+Med Reader Extensions Service kan man enkelt utbyta interaktiva PDF-dokument genom att utöka funktionaliteten i Adobe Reader med ytterligare användarrättigheter. Tjänsten Reader Extensions fungerar tillsammans med Adobe Reader. Tjänsten lägger till användarrättigheter i ett PDF-dokument. Den här åtgärden aktiverar funktioner som normalt inte är tillgängliga när ett PDF-dokument öppnas med Adobe Reader, till exempel för att lägga till kommentarer i ett dokument, fylla i formulär och spara dokumentet.
+
+
+När PDF-dokument har rätt användarbehörighet kan mottagarna göra följande i Adobe Reader:
+
+* Fyll i PDF-dokument och -formulär online eller offline, så att mottagarna kan spara kopior lokalt för att spara dem och ändå behålla informationen intakt.
+* Spara PDF-dokument på en lokal hårddisk om du vill behålla originaldokumentet och eventuella ytterligare kommentarer, data eller bilagor.
+* Bifoga filer och medieklipp i PDF-dokument.
+* Signera, certifiera och autentisera PDF-dokument genom att använda digitala signaturer med PKI-teknik (public key infrastructure) som är branschstandard.
+* Skicka in ifyllda eller kommenterade PDF-dokument elektroniskt.
+* Använd PDF-dokument och -formulär som en intuitiv utvecklingsmiljö för interna databaser och webbtjänster.
+* Utbyt PDF-dokument med andra så att granskarna kan lägga in kommentarer med de intuitiva kommentarverktygen. Bland dessa verktyg finns elektroniska notisar, stämplar, högdagrar och textöverstrykning. Samma funktioner är tillgängliga i Acrobat.
+* Stöd för avkodning av streckkodade formulär.
+
+Dessa specialfunktioner aktiveras automatiskt när ett PDF-dokument med aktiverade rättigheter öppnas i Adobe Reader. När användaren är klar med ett rättighetsaktiverat dokument inaktiveras dessa funktioner igen i Adobe Reader. De är inaktiverade tills användaren får ett annat rättighetsaktiverat PDF-dokument.
+
+De olika funktionerna för användarrättigheter i Reader Extension Services är:
+
+* **Streckkodsavkodning**: Om du vill avkoda streckkoder i PDF-dokumentet.
+
+* **Kommentar**: Om du vill kommentera offline i PDF-dokumentet.
+
+* **Kommentarer online**: Att kommentera online i PDF-dokumentet.
+
+* **Digital signatur**: Lägga till digitala signaturer i ett PDF-dokument.
+
+* **Dynamiska formulärfält**: Lägga till formulärfält i ett PDF-dokument.
+
+* **Dynamiska formulärsidor**: Lägga till formulärsidor i ett PDF-dokument.
+
+* **Inbäddade filer**: Att bädda in filer i ett PDF-dokument.
+
+* **Import av formulärdata**: Så här importerar du formulärdata till ett PDF-dokument.
+
+* **Export av formulärdata**: Så här importerar du formulärdata till ett PDF-dokument.
+
+* **Formulärfyllning**: Fylla i formulärfält i ett PDF-dokument.
+
+* **Online Forms**: Så här får du åtkomst till en webbtjänst eller databas från ett PDF-dokument.
+
+* **Skicka fristående**: Att skicka formulärdata offline från ett PDF-dokument.
+
+**Andra funktioner i Reader Extension Services**
+
+* **Meddelande**: Meddelandet som visas i Adobe Acrobat Reader när ett PDF-dokument öppnas med en eller flera användningsrättigheter.
+* **Lås upp lösenord**: Lösenordet som krävs för att öppna ett krypterat PDF-dokument. Det här är vanligtvis lösenordet för dokumentöppning, men om PDF-dokumentet dessutom skyddas av ett behörighetslösenord kan det användas för att öppna det.
+
+The [API-referensdokumentation](https://adobe-aem-document-experimental.redoc.ly/) innehåller detaljerad information om alla parametrar, autentiseringsmetoder och olika tjänster som tillhandahålls av API:er. API-referensdokumentationen finns också i .yaml-format. Du kan hämta .yaml-filen och överföra den till postman för att kontrollera API:ernas funktioner.
 
 ## Typer av API:er för kommunikation {#types}
 

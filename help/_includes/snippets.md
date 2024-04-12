@@ -1,7 +1,7 @@
 ---
-source-git-commit: 61d65c37d263edef641db42589fc0f28a8eb9078
+source-git-commit: e71e247f5b6de806b36c5c759b29e7273511f94e
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,9 @@ ht-degree: 0%
 * [Skicka data för anpassat formulär till en REST-slutpunkt](/help/forms/configure-submit-actions-core-components.md#submit-to-rest-endpoint)
 * [Skicka anpassade formulärdata till AEM arbetsflöde](/help/forms/configure-submit-actions-core-components.md#invoke-an-aem-workflow)
 * [Använd Forms Portal för att lista AEM Adaptive Forms på en AEM webbplats](/help/forms/configure-forms-portal.md)
+* [Lägga till versioner, kommentarer och anteckningar i ett adaptivt formulär](/help/forms/add-comments-annotations-versioning-adaptive-form-core-components.md)
+* [Jämför adaptiv Forms](/help/forms/compare-forms.md)
+
 
 ## Inlämningsåtgärder för anpassningsbara formulär {#af-submit-action}
 
