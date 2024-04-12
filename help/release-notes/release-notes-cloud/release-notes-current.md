@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: ff8d04878da521b55121c9460a9d4b159ec617a4
+source-git-commit: 0ef1e1915f2fdbe44cff209851eb43cc9d69958e
 workflow-type: tm+mt
-source-wordcount: '2285'
+source-wordcount: '2261'
 ht-degree: 0%
 
 ---
@@ -32,11 +32,13 @@ Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktue
 
 Du kan hitta den senaste underhållsreleasenumerationen [här](/help/release-notes/maintenance/latest.md).
 
-## Släpp video {#release-video}
+<!-- ## Release Video {#release-video}
 
-Titta på videon med versionsöversikten för mars 2024 om du vill se en sammanfattning av funktioner som lagts till i version 2024.3.0:
+Have a look at the March 2024 Release Overview video for a summary of the features added in the 2024.3.0 release:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425864?quality=12)
+
+-->
 
 ## [!DNL Experience Manager Sites] som [!DNL Cloud Service] {#sites}
 
@@ -170,8 +172,6 @@ Med de här tjänsterna kan du:
    * När en signatur skrivs kan skärmläsaranvändare höra texten som användes för att skapa signaturen.
 
 Denna uppdatering ger en mer heltäckande upplevelse för användare med funktionshinder genom att förbättra navigering, klarhet och feedback för komponenten Klottsignatur.
-
-
 
 ### Tidiga Adobe-program {#forms-early-adopter}
 
