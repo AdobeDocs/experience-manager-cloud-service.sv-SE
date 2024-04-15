@@ -6,7 +6,7 @@ contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
 exl-id: 24607dd1-2d65-480b-a831-9071e20c473d
-source-git-commit: 3ed500d0c7a9a445e3417043da3d52632760ccdb
+source-git-commit: 593a2b2930093d29a22f6c1ff391c11db9bda7dc
 workflow-type: tm+mt
 source-wordcount: '3093'
 ht-degree: 0%
@@ -30,7 +30,6 @@ AEM Forms har stöd för anpassade funktioner, vilket gör att användare kan de
 ### Användning av anpassade funktioner {#uses-of-custom-function}
 
 Fördelarna med att använda anpassade funktioner i Adaptive Forms är:
-
 * **Databehandling**: Anpassade funktioner hjälper till att bearbeta data som anges i formulärfälten.
 * **Validering av data**: Med anpassade funktioner kan du utföra anpassade kontroller av formulärindata och tillhandahålla angivna felmeddelanden.
 * **Dynamiskt beteende**: Med anpassade funktioner kan du styra formulärens dynamiska beteende baserat på specifika villkor. Du kan till exempel visa/dölja fält, ändra fältvärden eller justera formulärlogiken dynamiskt.
