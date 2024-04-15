@@ -6,7 +6,7 @@ contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
 exl-id: 24607dd1-2d65-480b-a831-9071e20c473d
-source-git-commit: 9582cd8c7777544fde5d13fcd79cfec318e3f780
+source-git-commit: bc040f29a8912c5901ddb71bd32ee2d2a97d3eec
 workflow-type: tm+mt
 source-wordcount: '3093'
 ht-degree: 0%
@@ -155,7 +155,7 @@ Den anpassade funktionen, som deklarerats som private, visas inte i listan över
 
 Om du vill visa en lista över anpassade funktioner i regelredigeraren kan du använda något av följande format:
 
-* **Funktionssats med eller utan jsdoc-kommentarer**
+### **Funktionssats med eller utan jsdoc-kommentarer**
 
 Du kan skapa en anpassad funktion med eller utan jsdoc-kommentarer.
 
@@ -167,7 +167,7 @@ Du kan skapa en anpassad funktion med eller utan jsdoc-kommentarer.
 ```
 Om användaren inte lägger till några JavaScript-anteckningar i den anpassade funktionen visas den i regelredigeraren med sitt funktionsnamn. Vi rekommenderar dock att du inkluderar JavaScript-anteckningar för förbättrad läsbarhet av anpassade funktioner.
 
-* **Pilfunktion med obligatoriska JavaScript-anteckningar eller -kommentarer**
+### **Pilfunktion med obligatoriska JavaScript-anteckningar eller -kommentarer**
 
 Du kan skapa en anpassad funktion med en pilfunktionssyntax:
 
@@ -191,7 +191,7 @@ Du kan skapa en anpassad funktion med en pilfunktionssyntax:
 
 Om användaren inte lägger till några JavaScript-anteckningar i den anpassade funktionen visas inte den anpassade funktionen i regelredigeraren för ett anpassat formulär.
 
-* **Funktionsuttryck med obligatoriska JavaScript-anteckningar eller -kommentarer**
+### **Funktionsuttryck med obligatoriska JavaScript-anteckningar eller -kommentarer**
 
 Om du vill visa anpassade funktioner i regelredigeraren för ett adaptivt formulär skapar du anpassade funktioner i följande format:
 
