@@ -3,9 +3,10 @@ title: Hantera era digitala resurser
 description: Flytta, ta bort, kopiera, byta namn på, uppdatera och version av dina resurser i [!DNL Assets view].
 role: User,Leader
 contentOwner: AG
-source-git-commit: c3076ce35128c147ce2056d11d9305d9a9456636
+exl-id: 2459d482-828b-4410-810c-ac55ef0a2119
+source-git-commit: e2a0e93a4ff01d9a180fcf1ad097ccbfb354fc0f
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1034'
 ht-degree: 0%
 
 ---
@@ -28,6 +29,7 @@ Använd [!DNL Assets view] för att utföra följande resurshanteringsåtgärder
 * ![kopieringsikon](assets/do-not-localize/copy-icon.png) Kopiera den markerade filen eller mappen.
 * ![flytta ikon](assets/do-not-localize/move-icon.png) Flytta den markerade resursen eller mappen till en annan plats i databashierarkin.
 * ![ikonen Byt namn](assets/do-not-localize/rename-icon.png) Byt namn på den markerade resursen eller mappen. Använd ett unikt namn, annars misslyckas namnbytet med en varning. Försök igen med ett nytt namn.
+Du kan också klicka på titeln för en resurs eller en mapp för att byta namn på den. Ange den nya texten i dialogrutan **Byt namn på resurs** textruta och klicka **Spara**. Den här funktionen är tillgänglig i stödraster-, galleri-, vattenfalls- och listvyerna. <!--in-place rename-->
 * ![tilldelningsikon](assets/do-not-localize/review-delegate-icon.png) Tilldela uppgifter till andra användare för att samarbeta med en resurs.
 
 Du kan visa samma alternativ för miniatyrbilder av resurser.
