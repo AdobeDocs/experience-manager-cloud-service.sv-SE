@@ -6,9 +6,9 @@ contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
 exl-id: 24607dd1-2d65-480b-a831-9071e20c473d
-source-git-commit: e71e247f5b6de806b36c5c759b29e7273511f94e
+source-git-commit: 3ed500d0c7a9a445e3417043da3d52632760ccdb
 workflow-type: tm+mt
-source-wordcount: '3097'
+source-wordcount: '3093'
 ht-degree: 0%
 
 ---
@@ -72,59 +72,61 @@ Parametern är en lista med argument som används av anpassade funktioner. En fu
    * datum[]: Representerar en array med datumvärden.
    * array: Representerar en generisk array som innehåller värden av olika typer.
    * object: Representerar formulärobjektet som skickas till en anpassad funktion i stället för att skicka dess värde direkt.
-   * omfång: Representerar globalt objekt som används av anpassade funktioner vid körning. Den deklareras som den sista parametern i JavaScript-anteckningar och visas inte i regelredigeraren i ett adaptivt formulär. Omfångsparametern har åtkomst till formulärets eller komponentens objekt för att utlösa den regel eller händelse som krävs för formulärbearbetning.
+   * omfång: Representerar det globala objektet, som innehåller skrivskyddade variabler som formulärinstanser, målfältsinstanser och metoder för att utföra formulärändringar i anpassade funktioner. Den deklareras som den sista parametern i JavaScript-anteckningar och visas inte i regelredigeraren i ett adaptivt formulär. Omfångsparametern har åtkomst till formulärets eller komponentens objekt för att utlösa den regel eller händelse som krävs för formulärbearbetning. Mer information om Global-objektet och hur du använder det finns i [klicka här](/help/forms/create-and-use-custom-functions.md#support-field-and-global-objects).
 
-    Parametertypen är inte skiftlägeskänslig och blanksteg tillåts inte i parameternamnet.
-    
-    `&lt;parameter description=&quot;&quot;>` innehåller information om parameterns syfte. Det kan innehålla flera ord.
-    
-    Som standard är alla parametrar obligatoriska. Du kan definiera en parameter som valfri genom att antingen lägga till `=&quot; efter parametertypen eller genom att omsluta parameternamnet i `[]`. Parametrar som definieras som valfria i JavaScript-anteckningar visas som valfria i regelredigeraren.
-    Om du vill definiera en variabel som en valfri parameter kan du använda någon av följande syntaxer:
-    
-    * `@param {type=} Indata1`
-    
-    I ovanstående kodrad är Input1 en valfri parameter utan något standardvärde. Så här deklarerar du valfri parameter med standardvärdet:
-    `@param {string=&lt;value>} input1`
-    
-    &quot;input1&quot; som en valfri parameter med standardvärdet inställt på &quot;value&quot;.
-    
-    * `@param {type} [Indata1]`
-    
-    I ovanstående kodrad är Input1 en valfri parameter utan något standardvärde. Så här deklarerar du valfri parameter med standardvärdet:
-    `@param {array} [input1=&lt;value>]`
-    &quot;input1&quot; är en valfri parameter av arraytyp med standardvärdet inställt på &quot;value&quot;.
-    Kontrollera att parametertypen omges av klammerparenteser {} och parameternamnet omges av hakparenteser [].
-    
-    Titta på följande kodfragment, där input2 definieras som en valfri parameter:
-    
-    &quot;javascript
-    
-    /**
-    * valfri parameterfunktion
-    * @name OptionalParameterFunction
-    * @param {string} input1
-    * @param {string=} input2
-    * @return {string}
-    */
-    function OptionalParameterFunction(input1, input2) {
-    let result = &quot;Result: &quot;;
-    result += input1;
-    if (input2 !== null) {
-    result += &quot; &quot; + input2;
-    }
-    returresultat,
-    }
-    &quot;
-    
-    Följande bild visas med den anpassade funktionen &quot;OptionalParameterFunction&quot; i regelredigeraren:
-    
-    &lt;!>— ![Valfria eller obligatoriska parametrar ](/help/forms/assets/optional-default-params.png) —>
-    
-    Du kan spara regeln utan att ange ett värde för obligatoriska parametrar, men regeln körs inte och ett varningsmeddelande visas som:
-    
-    &lt;!>— ![ofullständig regelvarning](/help/forms/assets/incomplete-rule.png) —>
-    
-    När användaren lämnar den valfria parametern tom, skickas värdet &quot;Odefinierad&quot; till den anpassade funktionen för den valfria parametern.
+Parametertypen är inte skiftlägeskänslig och blanksteg tillåts inte i parameternamnet.
+
+`<Parameter Description>` innehåller information om parameterns syfte. Det kan innehålla flera ord.
+
+**Valfria parametrar**
+Som standard är alla parametrar obligatoriska. Du kan definiera en parameter som valfri genom att lägga till `=` efter parametertypen eller omslutningen av parameternamnet i  `[]`. Parametrar som definieras som valfria i JavaScript-anteckningar visas som valfria i regelredigeraren.
+Om du vill definiera en variabel som en valfri parameter kan du använda någon av följande syntaxer:
+
+* `@param {type=} Input1`
+
+I ovanstående kodrad `Input1` är en valfri parameter utan något standardvärde. Så här deklarerar du valfri parameter med standardvärdet:
+`@param {string=<value>} input1`
+
+`input1` som en valfri parameter med standardvärdet inställt på `value`.
+
+* `@param {type} [Input1]`
+
+I ovanstående kodrad `Input1` är en valfri parameter utan något standardvärde. Så här deklarerar du valfri parameter med standardvärdet:
+`@param {array} [input1=<value>]`
+`input1` är en valfri parameter av arraytyp med standardvärdet inställt på `value`.
+Kontrollera att parametertypen omges av klammerparenteser {} och parameternamnet omges av hakparenteser [].
+
+Titta på följande kodfragment, där input2 definieras som en valfri parameter:
+
+```javascript
+        /**
+         * optional parameter function
+         * @name OptionalParameterFunction
+         * @param {string} input1 
+         * @param {string=} input2 
+         * @return {string}
+        */
+        function OptionalParameterFunction(input1, input2) {
+        let result = "Result: ";
+        result += input1;
+        if (input2 !== null) {
+            result += " " + input2;
+        }
+        return result;
+        }
+```
+
+Följande bild visas med `OptionalParameterFunction` anpassad funktion i regelredigeraren:
+
+![Valfria eller obligatoriska parametrar ](/help/forms/assets/optional-default-params.png)
+
+Du kan spara regeln utan att ange ett värde för obligatoriska parametrar, men regeln körs inte och ett varningsmeddelande visas som:
+
+![varning om ofullständig regel](/help/forms/assets/incomplete-rule.png)
+
+När användaren lämnar den valfria parametern tom, skickas värdet &quot;Odefinierad&quot; till den anpassade funktionen för den valfria parametern.
+
+Mer information om hur du definierar valfria parametrar i JSDocs finns i [klicka här](https://jsdoc.app/tags-param).
 
 #### Returtyp
 
@@ -150,7 +152,6 @@ Returtypen anger vilken typ av värde som den anpassade funktionen returnerar ef
 
 Den anpassade funktionen, som deklarerats som private, visas inte i listan över anpassade funktioner i regelredigeraren för ett adaptivt formulär. Som standard är anpassade funktioner public. Syntaxen för att deklarera den anpassade funktionen som private är `@private`.
 
-Mer information om hur du definierar valfria parametrar i JSDocs finns i [klicka här](https://jsdoc.app/tags-param).
 
 ## Riktlinjer när du skapar anpassade funktioner {#considerations}
 
@@ -190,6 +191,8 @@ Du kan skapa en anpassad funktion med en pilfunktionssyntax:
     
 ```
 
+Om användaren inte lägger till några JavaScript-anteckningar i den anpassade funktionen visas inte den anpassade funktionen i regelredigeraren för ett anpassat formulär.
+
 * **Funktionsuttryck med obligatoriska JavaScript-anteckningar eller -kommentarer**
 
 Om du vill visa anpassade funktioner i regelredigeraren för ett adaptivt formulär skapar du anpassade funktioner i följande format:
@@ -207,6 +210,8 @@ Om du vill visa anpassade funktioner i regelredigeraren för ett adaptivt formul
             // code to be executed
         }
 ```
+
+Om användaren inte lägger till några JavaScript-anteckningar i den anpassade funktionen visas inte den anpassade funktionen i regelredigeraren för ett anpassat formulär.
 
 ## Skapa en anpassad funktion {#create-custom-function}
 
@@ -365,30 +370,33 @@ Du kan använda anpassade funktioner för att lägga till anpassade funktioner i
 
 ### Fält- och globala omfångsobjekt i anpassade funktioner {#support-field-and-global-objects}
 
-Fältobjekt refererar till enskilda komponenter eller element i ett formulär, t.ex. textfält och kryssrutor. Globala omfångsobjekt refererar till globala variabler eller inställningar som är tillgängliga i hela formuläret. Vi ska titta på följande kodfragment:
+Fältobjekt refererar till enskilda komponenter eller element i ett formulär, t.ex. textfält och kryssrutor. Globals-objektet innehåller skrivskyddade variabler som formulärinstans, målfältsinstans och metoder för att göra formulärändringar i anpassade funktioner.
+
+>[!NOTE]
+>
+> The `param {scope} globals` måste vara den sista parametern och den visas inte i regelredigeraren för ett adaptivt formulär.
+
+<!-- Let us look at the following code snippet:
 
 ```JavaScript
+   
     /**
     * updateDateTime
     * @name updateDateTime
     * @param {object} field
-    * @param {scope} globals 
+    * @param {scope} globals
     */
     function updateDateTime(field, globals) {
     // Accessing the Date object from the global scope
     var currentDate = new Date();
     // Formatting the date and time
     var formattedDateTime = currentDate.toLocaleString();
-    // Updating the field value with the formatted date and time
-    field.value = formattedDateTime;
+    // Updating the field value with the formatted date and time using setProperty.
+    globals.functions.setProperty(field, {value: formattedDateTime});
     }
 ```
 
->[!NOTE]
->
-> The `param {scope} globals` måste vara den sista parametern och den visas inte i regelredigeraren för ett adaptivt formulär.
-
-I ovanstående kodfragment finns en anpassad funktion med namnet `updateDateTime` tar parametrar som fältobjekt och globala objekt. Objekten date och time nås med det globala omfånget. Fältet representerar textruteobjektet där det formaterade datum- och tidsvärdet visas i formuläret.
+In the above code snippet, a custom function named `updateDateTime` takes parameters such as a field object and a global object. The field represents the textbox object where the formatted date and time value is displayed within the form. -->
 
 Låt oss lära oss hur anpassade funktioner använder fält och globala objekt med hjälp av en `Contact Us` formulär med olika användningsområden.
 
@@ -419,7 +427,8 @@ Lägg till följande kod i den anpassade funktionen enligt anvisningarna i [crea
 
 >[!NOTE]
 >
-> Du kan konfigurera fältegenskaperna med hjälp av de tillgängliga egenskaperna i `[form-path]/jcr:content/guideContainer.model.json`.
+> * Du kan konfigurera fältegenskaperna med hjälp av de tillgängliga egenskaperna i `[form-path]/jcr:content/guideContainer.model.json`.
+> * Ändringar som gjorts i formuläret med `setProperty` metoden för Globals-objektet är asynkron till sin natur och återspeglas inte under körningen av den anpassade funktionen.
 
 I det här exemplet valideras `personaldetails` när du klickar på knappen. Om inga fel upptäcks på panelen visas en annan panel, `feedback` visas när du klickar på knappen.
 
@@ -554,7 +563,7 @@ Följande kodrad:
 `globals.functions.submitForm(globals.functions.exportData(), false);` används för att skicka formulärdata efter manipulering.
 * Det första argumentet är de data som ska skickas.
 * Det andra argumentet anger om formuläret ska valideras innan det skickas in. Det är `optional` och ange som `true` som standard.
-* Det tredje argumentet är `contentType` av inlämningen, som också `optional` med standardvärdet som `multipart/form-data`.
+* Det tredje argumentet är `contentType` av inlämningen, som också är valfri med standardvärdet som `multipart/form-data`. De andra värdena kan `application/json` och `application/x-www-form-urlencoded`.
 
 Lägg till följande kod i den anpassade funktionen enligt anvisningarna i [create-custom-function](#create-custom-function) för att skicka manipulerade data till servern:
 
@@ -565,7 +574,6 @@ Lägg till följande kod i den anpassade funktionen enligt anvisningarna i [crea
     * @param {object} field
     * @param {scope} globals 
     */
-
     function submitData(globals)
     {
     
