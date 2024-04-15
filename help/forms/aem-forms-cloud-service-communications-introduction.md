@@ -2,12 +2,11 @@
 title: Vad är Forms API:er för as a Cloud Service Communication?
 description: Använd kommunikations-API:er för att signera, certifiera eller skydda dina dokument, för att automatisera PDF-genereringsprocesser och för att konvertera PDF-dokument till ett annat format.
 Keywords: How to generate document?, Generate PDF document, Manipulation PDF documents, Assembling PDF documents, Validating PDF document, APIs used in encrypting or decrypting PDFs
-exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
 feature: Adaptive Forms, APIs
 role: Admin, Developer, User
-source-git-commit: e71e247f5b6de806b36c5c759b29e7273511f94e
+source-git-commit: 31896ce21aa8a6e63657cd3099900803c98657b2
 workflow-type: tm+mt
-source-wordcount: '1955'
+source-wordcount: '1973'
 ht-degree: 1%
 
 ---
@@ -193,10 +192,12 @@ Både signatur-API:er och krypterings-API:er [Synkrona API:er](#types-of-communi
 
 ### Tilläggstjänsten Reader
 
-<span class="preview"> Funktionen Reader Extension Service ingår i programmet Early Adobe. Du kan skriva till `aem-forms-ea@adobe.com` från ditt officiella e-post-id för att gå med i programmet för tidiga användare och begära åtkomst till funktionen. </span>
+<span class="preview"> Funktionen Reader Extension Service ingår i programmet Early Adobe. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
-Med Reader Extensions Service kan man enkelt utbyta interaktiva PDF-dokument genom att utöka funktionaliteten i Adobe Reader med ytterligare användarrättigheter. Tjänsten Reader Extensions fungerar tillsammans med Adobe Reader. Tjänsten lägger till användarrättigheter i ett PDF-dokument. Den här åtgärden aktiverar funktioner som normalt inte är tillgängliga när ett PDF-dokument öppnas med Adobe Reader, till exempel för att lägga till kommentarer i ett dokument, fylla i formulär och spara dokumentet.
+Med Reader Extensions Service kan man enkelt utbyta interaktiva PDF-dokument genom att utöka funktionaliteten i Adobe Reader med ytterligare användarrättigheter. Tjänsten Reader Extensions fungerar med Adobe Reader 7.0 eller senare. Tjänsten lägger till användarrättigheter i ett PDF-dokument. Den här åtgärden aktiverar funktioner som normalt inte är tillgängliga när ett PDF-dokument öppnas med Adobe Reader, till exempel för att lägga till kommentarer i ett dokument, fylla i formulär och spara dokumentet.
 
+>[!NOTE]
+>Tredjepartsanvändare behöver inte ytterligare programvara eller plugin-program för att kunna arbeta med upphovsrättsaktiverade dokument.
 
 När PDF-dokument har rätt användarbehörighet kan mottagarna göra följande i Adobe Reader:
 
@@ -242,7 +243,7 @@ De olika funktionerna för användarrättigheter i Reader Extension Services är
 * **Meddelande**: Meddelandet som visas i Adobe Acrobat Reader när ett PDF-dokument öppnas med en eller flera användningsrättigheter.
 * **Lås upp lösenord**: Lösenordet som krävs för att öppna ett krypterat PDF-dokument. Det här är vanligtvis lösenordet för dokumentöppning, men om PDF-dokumentet dessutom skyddas av ett behörighetslösenord kan det användas för att öppna det.
 
-The [API-referensdokumentation](https://adobe-aem-document-experimental.redoc.ly/) innehåller detaljerad information om alla parametrar, autentiseringsmetoder och olika tjänster som tillhandahålls av API:er. API-referensdokumentationen finns också i .yaml-format. Du kan hämta .yaml-filen och överföra den till postman för att kontrollera API:ernas funktioner.
+The [API-referensdokumentation](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) innehåller detaljerad information om alla parametrar, autentiseringsmetoder och olika tjänster som tillhandahålls av API:er. API-referensdokumentationen finns också i .yaml-format. Du kan hämta .yaml-filen och överföra den till postman för att kontrollera API:ernas funktioner.
 
 ## Typer av API:er för kommunikation {#types}
 
