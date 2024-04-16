@@ -4,9 +4,9 @@ description: Flytta, ta bort, kopiera, byta namn på, uppdatera och version av d
 role: User,Leader
 contentOwner: AG
 exl-id: 2459d482-828b-4410-810c-ac55ef0a2119
-source-git-commit: f7d3e356e4e43d5838a6319f5ead750c149a9b3b
+source-git-commit: 3912f52112b3d9dcb568e477c33d3f4b28064b66
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1147'
 ht-degree: 0%
 
 ---
@@ -22,15 +22,39 @@ Använd [!DNL Assets view] för att utföra följande resurshanteringsåtgärder
 *Bild: Alternativ i verktygsfältet för en markerad bild.*
 
 * ![avmarkera ikon](assets/do-not-localize/close-icon.png) Avmarkera markeringen.
+
+* ![sök liknande ikon](assets/do-not-localize/find-similar.svg) Hitta liknande bildresurser i resursgränssnittet baserat på metadata och smarta taggar.
+
 * ![informationsikon](assets/do-not-localize/edit-in-icon.png) Klicka för att förhandsgranska en resurs och visa detaljerade metadata. När du förhandsgranskar kan du visa versionerna och redigera en bild.
+
 * ![hämtningsikon](assets/do-not-localize/download-icon.png) Hämta den valda resursen till ditt lokala filsystem.
+
+* ![lägg till samlingsikon](assets/do-not-localize/add-collection.svg) Lägg till den valda resursen i en samling.
+
+* ![Fäst resurser, ikon](assets/do-not-localize/pin-quick-access.svg) Fäst en resurs för snabbare åtkomst när du behöver den senare. Alla fästa objekt visas i **Snabb åtkomst** i Min arbetsyta.
+
+* ![redigera med Express-ikon](assets/do-not-localize/edit-e.svg) Redigera en bild i den integrerade Adobe Expressen i Adobe Experience Manager Assets.
+
+* ![redigera resursikon](assets/do-not-localize/edit-e.svg) Redigera bilden med Adobe Express.
+
+* ![dela resurslänkikon](assets/do-not-localize/share-link.svg) för en resurs med andra användare så att de kan komma åt och hämta den.
+
 * ![ta bort ikon](assets/do-not-localize/delete-icon.png) Ta bort den markerade resursen eller mappen.
-* ![utcheckningsikon](assets/do-not-localize/checkout-icon.png) Checka ut den valda resursen.
+
 * ![kopieringsikon](assets/do-not-localize/copy-icon.png) Kopiera den markerade filen eller mappen.
+
 * ![flytta ikon](assets/do-not-localize/move-icon.png) Flytta den markerade resursen eller mappen till en annan plats i databashierarkin.
+
 * ![ikonen Byt namn](assets/do-not-localize/rename-icon.png) Byt namn på den markerade resursen eller mappen. Använd ett unikt namn, annars misslyckas namnbytet med en varning. Försök igen med ett nytt namn.
-Du kan också klicka på titeln för en resurs eller en mapp för att byta namn på den. Ange den nya texten i dialogrutan **Byt namn på resurs** textruta och klicka **Spara**. Den här funktionen är tillgänglig i stödraster-, galleri-, vattenfalls- och listvyerna. <!--in-place rename-->
+Du kan också klicka på titeln för en resurs eller en mapp för att byta namn på den. Ange den nya texten i dialogrutan **Byt namn på resurs** textruta och klicka **Spara**. Den här funktionen är tillgänglig i stödraster-, galleri-, vattenfalls- och listvyerna.
+
+* ![ikon för vattenfallsvy](assets/do-not-localize/waterfall-view.png) [!UICONTROL Waterfall View].
+
+* ![kopiera biblioteksikon](assets/do-not-localize/copy-icon.png) Lägg till en resurs i biblioteket.
+
 * ![tilldelningsikon](assets/do-not-localize/review-delegate-icon.png) Tilldela uppgifter till andra användare för att samarbeta med en resurs.
+
+* ![tilldelningsikon](assets/do-not-localize/watch-asset.svg) Övervaka åtgärder som utförs på en resurs.
 
 Du kan visa samma alternativ för miniatyrbilder av resurser.
 
