@@ -2,9 +2,9 @@
 title: Lägga till ett SSL-certifikat
 description: Lär dig hur du lägger till ett eget SSL-certifikat med hjälp av självbetjäningsverktygen i Cloud Manager.
 exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
-source-git-commit: 90250c13c5074422e24186baf78f84c56c9e3c4f
+source-git-commit: 65aaa732d08cee541153f1b2fb4ea7b44f1f3029
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '612'
 ht-degree: 0%
 
 ---
@@ -40,6 +40,7 @@ Följ de här stegen för att lägga till ett certifikat med hjälp av Cloud Man
    * Ange ett namn för ditt certifikat i **Certifikatnamn**.
       * Detta är endast avsett som information och kan vara vilket namn som helst som gör det enkelt att referera till ditt certifikat.
    * Klistra in **Certifikat**, **Privat nyckel** och **Certifikatkedja** värden i sina respektive fält. Alla tre fälten är obligatoriska.
+   * I vissa fall kan slutanvändarcertifikatet inkluderas i kedjan och måste tas bort innan kedjan klistras in i fältet.
 
    ![Dialogrutan Lägg till SSL-certifikat](/help/implementing/cloud-manager/assets/ssl/ssl-cert-02.png)
 
@@ -56,6 +57,10 @@ När certifikatet har sparats visas det som en ny rad i tabellen.
 >[!NOTE]
 >
 >En användare måste vara medlem i **Företagsägare** eller **Distributionshanteraren** roll för att installera ett SSL-certifikat i Cloud Manager.
+
+>[!NOTE]
+>
+>Om du får ett fel som liknar `The Subject of an intermediate certificate must match the issuer in the previous certificate. The SKI of an intermediate certificate must match the AKI of the previous certificate.`har du antagligen tagit med klientcertifikatet i certifikatkedjan. Kontrollera att kedjan inte innehåller klientcertifikatet och försök igen.
 
 ## Certifikatfel {#certificate-errors}
 
