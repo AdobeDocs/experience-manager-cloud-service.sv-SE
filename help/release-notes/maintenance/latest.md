@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 5e216e45a1400299efcc418007ddbe93f0c571a1
+source-git-commit: 36fefbf74a288d60a9529f0c7273dd6b0557177b
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: '424'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 159
 * GRANITE-49638: Korrigera felaktig innehållstypskonfiguration för RUM-transformatorfabriken.
 * GRANITE-50141: IMSProviderImpl spammar loggen.
 * SITES-20949: ComponentsIT.testEmbed failed after Youtube added reference=&quot;strict-origin-when-cross-origin&quot;.
-* SITES-21233: Core Components update - Fix Accordion for GS1 US after upgrade to 15860.
+* SITES-21233: Core Components update - Fix Accordion after upgrade to 15860.
 * SKYOPS-74819: Kompatibiliteten för dubblettnycklar i Apache Commons har brutits bakåt.
 * SKYOPS-67087: Clientlib-aggregering fungerar inte i vissa fall.
 * CQ-4355415: AEM meddelandelänkar fungerar inte i 6.5 SP18.
