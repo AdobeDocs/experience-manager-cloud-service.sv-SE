@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: f3d3bc92eb47bf5008167f660f26dfede2700540
+source-git-commit: 18f07bab308b707952b8df6b980dd3a6a9e024e9
 workflow-type: tm+mt
-source-wordcount: '2285'
+source-wordcount: '2321'
 ht-degree: 0%
 
 ---
@@ -97,6 +97,12 @@ AEM Assets kan integreras direkt med Adobe Express, vilket gör att du kan komma
 **Förhandsgranska återgivningar för alla videotyper som stöds**
 
 Experience Manager Assets genererar nu förhandsgranskningsåtergivningar av alla videotyper som stöds som standard utan att en bearbetningsprofilskonfiguration krävs.
+
+**Länkresurskonfiguration**
+
+En ny förbättrad användarupplevelse för [skapa länkresurser](/help/assets/share-assets.md) tillsammans med en helt ny uppsättning konfigurationer som gör att administratörer kan anpassa standardbeteendet för den här funktionen för dina användare.
+
+![Konfigurera e-posttjänst](/help/assets/assets/config-email-service.png)
 
 ### Nya funktioner i resursvyn {#assets-view}
 
