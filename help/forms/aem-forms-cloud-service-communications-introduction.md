@@ -1,12 +1,13 @@
 ---
 title: Vad är Forms API:er för as a Cloud Service Communication?
 description: Använd kommunikations-API:er för att signera, certifiera eller skydda dina dokument, för att automatisera PDF-genereringsprocesser och för att konvertera PDF-dokument till ett annat format.
-Keywords: How to generate document?, Generate PDF document, Manipulation PDF documents, Assembling PDF documents, Validating PDF document, APIs used in encrypting or decrypting PDFs
+Keywords: How to generate document?, Generate PDF document, Manipulation PDF documents, Assembling PDF documents, Validating PDF document, APIs used in encrypting or decrypting PDFs.
 feature: Adaptive Forms, APIs
 role: Admin, Developer, User
-source-git-commit: 31896ce21aa8a6e63657cd3099900803c98657b2
+exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
+source-git-commit: 126af719cfd2c9361d0e7768b3b65e1149b6a989
 workflow-type: tm+mt
-source-wordcount: '1973'
+source-wordcount: '1979'
 ht-degree: 1%
 
 ---
@@ -190,14 +191,11 @@ Du kan utföra följande uppgifter med krypterings-API:erna:
 
 Både signatur-API:er och krypterings-API:er [Synkrona API:er](#types-of-communications-apis-types).
 
-### Tilläggstjänsten Reader
+### API:er för användningsrättigheter
 
-<span class="preview"> Funktionen Reader Extension Service ingår i programmet Early Adobe. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
+<span class="preview"> Funktionen Användningsrättigheter finns under Tidiga Adobe-program. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
-Med Reader Extensions Service kan man enkelt utbyta interaktiva PDF-dokument genom att utöka funktionaliteten i Adobe Reader med ytterligare användarrättigheter. Tjänsten Reader Extensions fungerar med Adobe Reader 7.0 eller senare. Tjänsten lägger till användarrättigheter i ett PDF-dokument. Den här åtgärden aktiverar funktioner som normalt inte är tillgängliga när ett PDF-dokument öppnas med Adobe Reader, till exempel för att lägga till kommentarer i ett dokument, fylla i formulär och spara dokumentet.
-
->[!NOTE]
->Tredjepartsanvändare behöver inte ytterligare programvara eller plugin-program för att kunna arbeta med upphovsrättsaktiverade dokument.
+Med funktionen Användningsrättigheter kan man enkelt utbyta interaktiva PDF-dokument genom att utöka funktionaliteten i Adobe Reader med ytterligare användarrättigheter. Tjänsten fungerar med Adobe Reader 7.0 eller senare och lägger till användarrättigheter i ett PDF-dokument. Den här åtgärden aktiverar funktioner som normalt inte är tillgängliga när ett PDF-dokument öppnas med Adobe Reader, till exempel för att lägga till kommentarer i ett dokument, fylla i formulär och spara dokumentet.
 
 När PDF-dokument har rätt användarbehörighet kan mottagarna göra följande i Adobe Reader:
 
@@ -208,11 +206,13 @@ När PDF-dokument har rätt användarbehörighet kan mottagarna göra följande 
 * Skicka in ifyllda eller kommenterade PDF-dokument elektroniskt.
 * Använd PDF-dokument och -formulär som en intuitiv utvecklingsmiljö för interna databaser och webbtjänster.
 * Utbyt PDF-dokument med andra så att granskarna kan lägga in kommentarer med de intuitiva kommentarverktygen. Bland dessa verktyg finns elektroniska notisar, stämplar, högdagrar och textöverstrykning. Samma funktioner är tillgängliga i Acrobat.
-* Stöd för avkodning av streckkodade formulär.
+* Support Barcoded Forms decoding.
 
 Dessa specialfunktioner aktiveras automatiskt när ett PDF-dokument med aktiverade rättigheter öppnas i Adobe Reader. När användaren är klar med ett rättighetsaktiverat dokument inaktiveras dessa funktioner igen i Adobe Reader. De är inaktiverade tills användaren får ett annat rättighetsaktiverat PDF-dokument.
 
-De olika funktionerna för användarrättigheter i Reader Extension Services är:
+#### Aktivera eller inaktivera användningsrättigheter
+
+De olika funktionerna för användarrättigheter för utökning av PDF Reader är följande:
 
 * **Streckkodsavkodning**: Om du vill avkoda streckkoder i PDF-dokumentet.
 
@@ -238,7 +238,11 @@ De olika funktionerna för användarrättigheter i Reader Extension Services är
 
 * **Skicka fristående**: Att skicka formulärdata offline från ett PDF-dokument.
 
-**Andra funktioner i Reader Extension Services**
+#### Extrahera användningsrättigheter
+
+Det hjälper till att hämta användarrättigheter som är aktiverade eller inaktiverade för ett PDF-dokument för Adobe Acrobat Reader-utbyggbarhet.
+
+#### Andra funktioner
 
 * **Meddelande**: Meddelandet som visas i Adobe Acrobat Reader när ett PDF-dokument öppnas med en eller flera användningsrättigheter.
 * **Lås upp lösenord**: Lösenordet som krävs för att öppna ett krypterat PDF-dokument. Det här är vanligtvis lösenordet för dokumentöppning, men om PDF-dokumentet dessutom skyddas av ett behörighetslösenord kan det användas för att öppna det.
