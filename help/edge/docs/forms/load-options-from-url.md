@@ -2,11 +2,9 @@
 title: Läs in alternativ för listrutor från URL
 description: Alternativen i listrutan ingår i ett visst kalkylblad och importeras sedan till det primära kalkylbladet via den angivna URL:en.
 feature: Edge Delivery Services
-hide: true
-hidefromtoc: true
-source-git-commit: eadfc3d448bd2fadce08864ab65da273103a6212
+source-git-commit: 2affe155b285986128487043fcc4f2938fc15842
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -14,14 +12,19 @@ ht-degree: 0%
 
 # Alternativ för listrutelistan Läs in från URL
 
-I Edge Delivery Services kan användare välja ett värde bland en fördefinierad uppsättning med alternativ. Formulärförfattare använder `select` -element, som innehåller en lista med alternativ.
-Till exempel `enquiry` -formuläret har en nedrullningsbar meny där du kan välja länder och där du kan välja bland ett antal fördefinierade länder. Den här listan innehåller en lång lista med länder avgränsade med kommatecken.
+Forms innehåller ofta listrutor där användarna kan välja bland fördefinierade alternativ. Dessa alternativ definieras vanligtvis i själva formuläret, men det kan vara besvärligt att hantera långa listor. I den här handboken beskrivs hur du kan förbättra formulärutvecklingen genom att läsa in listrutealternativ från ett separat kalkylblad via en URL.
+
+
+Fördelarna med att läsa in en listruta från ett separat kalkylblad är:
+
+* Förenklad hantering: Bibehåll listrutealternativen centralt för enklare uppdateringar och tillägg.
+* Förbättrad effektivitet: Eliminera behovet av att lägga till långa alternativlistor manuellt i formulärdefinitionen.
+
+
+
 
 ![Alternativ för nedrullningsbara listor](/help/forms/assets/drop-down-options.png)
 
-Det kan vara besvärligt att hantera långa listor med alternativ för rullgardinsmenyer när de läggs till direkt i det blad som innehåller formulärdefinitionen. Om du skapar ett separat blad där du kan lagra de här alternativen kan du förenkla och effektivisera processen. Det här bladet fungerar som en central lagringsplats för alla alternativ i listrutan, ordnade i ett strukturerat format. Varje alternativ listas på sin egen rad, vilket underlättar hantering och uppdatering.
-
-Låt oss utforska hur formulärutvecklingen kan förbättras genom att läsa in alternativlistan från ett annat kalkylblad via en URL.
 
 I slutet av den här artikeln lär du dig att:
 
@@ -30,24 +33,26 @@ I slutet av den här artikeln lär du dig att:
 
 ## Definiera alternativ i ett separat blad {#define-options}
 
-Skapa ett blad med två kolumner:`Option` och `Value`, för att definiera alternativen:
+Definiera alternativ i ett separat kalkylblad
 
-1. Gå till AEM projektmapp i Microsoft® SharePoint- eller Google Drive-mappen.
-2. Lägg till ett blad med namnet `shared-country` i Microsoft® SharePoint Site eller i din Google Drive-mapp och lägg till följande:
-
-   * **Alternativ**: Representerar visningsvärdena för alternativen i listrutan.
-   * **Värde**: Representerar det skickade värdet när en användare väljer alternativet.
+1. Skapa ett kalkylblad:
+   1. Leta reda på AEM projektmapp i Microsoft® SharePoint eller Google Drive.
+   1. Lägg till ett nytt blad. Exempel:&quot;shared-country&quot;.
+1. Definiera alternativkolumner: Lägg till två kolumner: &quot;Alternativ&quot; och &quot;Värde&quot;.
+   * &quot;Option&quot; definierar den text som visas i listrutan.
+   * &quot;Värde&quot; definierar det skickade värdet när en användare väljer alternativet.
 
    >[!NOTE]
    >
-   > Om värdet och alternativet för ett nedrullningsbart alternativ är desamma, kan kalkylbladet bara innehålla **Alternativ** kolumn.
+   >Om både alternativ och värde är identiska krävs bara kolumnen&quot;Alternativ&quot;.
 
-   Vi lägger till ett nytt blad, [delat land](/help/forms/assets/enquiry-options.xlsx) för alternativen som visas i `Destination` nedrullningsbar lista i `enquiry` formulär.
+1. Fyll i kalkylbladet: Ange dina landsalternativ i kolumnen&quot;Alternativ&quot; (och&quot;Värde&quot; om det behövs).
 
-   Se bilden nedan som visar `shared-country` kalkylblad:
+   Se exemplet nedan för strukturen.
 
    ![Listruta för land](/help/forms/assets/drop-down-country-options.png)
-3. Förhandsgranska och publicera `shared-country` kalkylblad med [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content).
+
+1. Förhandsgranska och publicera `shared-country` kalkylblad med [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content).
 
    Se webbadressen som visar `shared-country` sheet: https://main—weFinance—wkndforms.hlx.live/inquiry.json?sheet=country
 

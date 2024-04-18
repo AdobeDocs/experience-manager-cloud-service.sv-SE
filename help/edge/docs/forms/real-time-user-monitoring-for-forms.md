@@ -2,14 +2,14 @@
 title: Användarövervakning i realtid för Edge Delivery Services Forms
 description: Användarövervakning i realtid för Edge Delivery Services Forms innefattar kontinuerlig uppföljning och analys av användarinteraktioner med formulär.
 feature: Edge Delivery Services
-hide: true
-hidefromtoc: true
-source-git-commit: eadfc3d448bd2fadce08864ab65da273103a6212
+exl-id: 184fc7dc-d583-4a63-9e30-80d324ec9d7e
+source-git-commit: 2affe155b285986128487043fcc4f2938fc15842
 workflow-type: tm+mt
 source-wordcount: '701'
 ht-degree: 0%
 
 ---
+
 
 # Användarövervakning i realtid för Edge Delivery Services Forms
 
@@ -62,4 +62,3 @@ Du kan bedöma besökarnas interaktion med Adobe Experience Manager-drivna webbp
    * **Bra**: Om längden mellan användaråtgärder är 200 millisekunder (ms) eller mindre.
    * **Okej**: Om längden är mer än 200 ms men mindre än 500 ms.
    * **Felaktig**: Om längden överstiger 500 ms.
-
