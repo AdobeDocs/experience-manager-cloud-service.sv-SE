@@ -3,9 +3,9 @@ title: Hur skapar och använder vi teman i Adaptive Forms?
 description: Du kan använda teman för att utforma och ge en visuell identitet till ett adaptivt formulär med hjälp av kärnkomponenterna. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
 feature: Adaptive Forms, Core Components
 exl-id: 11c52b66-dbb1-4c47-a94d-322950cbdac1
-source-git-commit: a868bf4d4acf4fbae7ccaf55b03319ba0617f9a4
+source-git-commit: 159407dfaa5d17caddca2953a5732f0e91eb474c
 workflow-type: tm+mt
-source-wordcount: '2564'
+source-wordcount: '2708'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,7 @@ Så här klonar du ett tema:
 1. Kör följande kommando:
 
    ```
-         code .
+      code .
    ```
 
    ![Öppna temamappen i en vanlig textredigerare](/help/forms/assets/aem-forms-theme-folder-in-vs-code.png)
@@ -137,14 +137,31 @@ Så här klonar du ett tema:
 
 1. Öppna `package.json` fil för redigering.
 
-1. Ange värden för `name` och `description` attribut.
+1. Ange värden för `name` och `version` attribut.
 
-   Namnattributet används för att unikt identifiera temat, t.ex.&quot;aem-forms-wknd-theme&quot;, och visas i **Stil** flik för **Guiden Skapa formulär**. Attributet description ger ytterligare information om temat, inklusive dess syfte och de scenarier det är avsett för. Du kan också ange version, beskrivning och licens för temat.
+   ![Byt bild på temanamn på arbetsytan](/help/forms/assets/changename_canvastheme.png)
 
-1. Spara och stäng filen.
+   >[!NOTE]
+   >
+   > * Attributet name används för att unikt identifiera temat och det angivna namnet visas i **Stil** -fliken i **Guiden Skapa formulär**.
+   > * Du kan till exempel välja ett namn för temat efter ditt val `mytheme` eller `customtheme`. I det här fallet har vi dock angett namnet som `aem-forms-wknd-theme`.
 
-![Byt bild på temanamn på arbetsytan](/help/forms/assets/changename_canvastheme.png)
+1. Öppna `package-lock.json` fil för redigering.
+1. Ange värden för `name` och `version` attribut. Se till att värdena för `name` och `version` attribut i `Package-lock`.json-filen matchar den i `Package.json` -fil.
 
+   ![Byt bild på temanamn på arbetsytan](/help/forms/assets/changename_canvastheme-package-lock.png)
+
+1. (Valfritt) Öppna `ReadMe` fil för redigering och uppdatering av temats namn.
+
+   ![Byt bild på temanamn på arbetsytan](/help/forms/assets/changename_canvastheme-readme-file.png)
+
+1. Spara och stäng filerna.
+
+**Att tänka på när du anger temats namn**
+
+* Det är obligatoriskt att ta bort `@aemforms` från temanamnet i `Package.json` och `Package-lock.json` -fil. Om du inte tar bort `@aemforms` från ditt anpassade temanamn resulterar det i att frontpipeline inte fungerar under temats distribution.
+* Du rekommenderas att uppdatera temat `version` in `Package.json` och `Package-lock.json` så att ändringar och förbättringar av temat återspeglas korrekt.
+* Om du vill ha viktig information om användning, installationsinstruktioner och annan relevant information bör du uppdatera namnet på temat i `ReadMe` -fil.
 
 #### 3. Anpassa ett tema {#customize-the-theme}
 
