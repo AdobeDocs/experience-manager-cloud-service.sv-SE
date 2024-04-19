@@ -3,9 +3,10 @@ title: Hur hanterar jag metadata i resursvyn?
 description: Lär dig hur du hanterar metadata i resursvyn. Bättre metadatahantering gör materialet mer tillgängligt, enklare att hantera och komplett.
 role: User,Leader,Admin,Architect,Developer
 contentOwner: AG
-source-git-commit: c3076ce35128c147ce2056d11d9305d9a9456636
+exl-id: 7264e8d1-fc8f-4eb3-93a9-a6066ca3f851
+source-git-commit: 9823bd8af9fce93c8f21495f720673d8b41595ed
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1723'
 ht-degree: 0%
 
 ---
@@ -144,13 +145,27 @@ Så här tilldelar du ett metadataformulär till en mapp:
 
 2. Klicka på **[!UICONTROL Assign to Folder]**.
 
-3. Markera mappen och klicka på **[!UICONTROL Assign]**.
+3. Markera mappen och klicka på **[!UICONTROL Assign]**. Du kan markera mapparna genom att klicka på mappnamnen.
 
    ![tilldela metadataformulär till en mapp](assets/assign-to-folder.png)
 
    Du kan också navigera till mappinformationssidan och välja ett metadataformulär från mappegenskaperna som är tillgängliga i den högra rutan för att tilldela metadataformuläret till mappen.
 
    ![Metadataformulär från mappegenskaper](assets/metadata-from-folder-props.png)
+
+### Ta bort metadataformulär från mappar {#remove-metadata-form-folder}
+
+När du har tilldelat ett metadataformulär till en eller flera mappar kan du även ta bort metadataformulär från de markerade mapparna i Experience Manager Assets.
+
+Så här tar du bort ett metadataformulär från en mapp:
+
+1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL Metadata Forms]** och välj ett metadataformulär.
+
+1. Klicka på **[!UICONTROL Remove from Folder(s)]**. Listan med tilldelade mappar för metadataformulärvisningen.
+
+1. Markera mappen och klicka på **[!UICONTROL Remove]**. Du kan också välja flera mappar i listan.
+
+Du kan även navigera till sidan med mappinformation och välja **[!UICONTROL System mapped Metadata Form]** från **[!UICONTROL Metadata Forms]** fält för att ta bort det tilldelade metadataformuläret från en mapp.
 
 ## Nästa steg {#next-steps}
 
