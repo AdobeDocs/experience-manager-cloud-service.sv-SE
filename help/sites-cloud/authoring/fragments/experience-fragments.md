@@ -2,9 +2,9 @@
 title: Upplevelsefragment
 description: Använd Adobe Experience Manager as a Cloud Service Experience Fragments för att göra upplevelserna återanvändbara och flexibla.
 exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
-source-git-commit: 0784bfc2928b218a566fdd252fee045ca5ae6b9c
+source-git-commit: e9b9ab2dfd5e1a5b204cbec70ec0a46ebb46f9e9
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '2098'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ Inom Adobe Experience Manager as a Cloud Service, en Experience Fragment:
 An Experience Fragment:
 
 * Är en del av en upplevelse (sida).
-* Kan användas på flera sidor.
+* Kan användas på flera sidor (som baseras på redigerbara mallar).
 * Är baserad på en mall (endast redigerbar) för att definiera struktur och komponenter.
 * Den här mallen används för att skapa *rotsida* av Experience Fragment.
 * Består av en eller flera komponenter med layout i ett styckesystem.
@@ -262,6 +262,10 @@ Ni kan skapa olika upplevelsefragment beroende på era behov:
 Nu kan du använda din Experience Fragment när du redigerar dina sidor:
 
 1. Öppna en sida för redigering.
+
+   >[!NOTE]
+   >
+   >Sidan måste baseras på en redigerbar mall.
 
 1. Skapa en instans av Experience Fragment-komponenten i sidstyckesystemet:
 
