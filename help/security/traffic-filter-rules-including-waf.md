@@ -2,9 +2,9 @@
 title: Trafikfilterregler inklusive WAF-regler
 description: Konfigurera trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF)
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: 3a79de1cccdec1de4902b234dac3120efefdbce8
+source-git-commit: d210fed56667b307a7a816fcc4e52781dc3a792d
 workflow-type: tm+mt
-source-wordcount: '3669'
+source-wordcount: '3788'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ En underkategori av trafikfilterregler kräver antingen en förbättrad säkerhe
 
 Trafikfilterregler kan distribueras via Cloud Managers konfigurationspipelines för att dev, stage och produktionsmiljötyper i produktionsprogram (icke-sandlådeprogram). Stöd för de regionala utvecklingsföretagen kommer i framtiden.
 
-[Följ igenom en självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview) för att snabbt bygga upp konkreta expertkunskaper om den här funktionen.
+[Följ igenom en självstudiekurs](#tutorial) för att snabbt bygga upp konkreta expertkunskaper om den här funktionen.
 
 >[!NOTE]
 >Är du intresserad av andra alternativ för att konfigurera trafik vid leveransnätverket, bland annat att ändra begäran/svar, deklarera omdirigeringar och proxera till ett icke-AEM ursprung? [Lär dig hur man gör](/help/implementing/dispatcher/cdn-configuring-traffic.md) genom att gå med i det tidiga adopterprogrammet.
@@ -415,6 +415,8 @@ Regler för hastighetsbegränsning kan inte referera till WAF-flaggor. De är ti
 
 Kursen beräknas per CDN POP. Anta till exempel att POP i Montreal, Miami och Dublin får trafikfrekvenserna 80, 90 respektive 120 förfrågningar per sekund och att hastighetsbegränsningsregeln har satts till en gräns på 100. I så fall skulle endast trafiken till Dublin begränsas.
 
+Hastighetsgränserna utvärderas baserat på antingen trafik som faller på kanten, trafik som faller på kanten eller antalet fel.
+
 ### rateLimit-struktur {#ratelimit-structure}
 
 | **Egenskap** | **Typ** | **Standard** | **MENING** |
@@ -422,6 +424,7 @@ Kursen beräknas per CDN POP. Anta till exempel att POP i Montreal, Miami och Du
 | limit | heltal mellan 10 och 10000 | obligatoriskt | Begärandefrekvens (per CDN POP) i begäranden per sekund som regeln aktiveras för. |
 | window | heltal: 1, 10 eller 60 | 10 | Provningsfönstret i sekunder för vilket begärandehastigheten beräknas. Räknarnas noggrannhet beror på fönstrets storlek (större fönsternoggrannhet). Du kan till exempel förvänta dig 50 % noggrannhet för det sekundära fönstret och 90 % noggrannhet för det sekundära fönstret. |
 | påföljd | heltal mellan 60 och 3600 | 300 (5 minuter) | En period i sekunder för vilken matchande begäranden blockeras (avrundat till närmaste minut). |
+| antal | all, hämta, fel | alla | utvärderas baserat på edge-trafik (all), ursprungstrafik (hämtning) eller antalet fel. |
 | groupBy | array[Getter] | ingen | Räknaren för hastighetsbegränsning sammanställs av en uppsättning egenskaper för begäran (till exempel clientIp). |
 
 
@@ -447,6 +450,7 @@ data:
         limit: 60
         window: 10
         penalty: 300
+        count: all
         groupBy:
           - reqProperty: clientIp
       action: block
@@ -468,7 +472,7 @@ data:
         when: { reqProperty: path, equals: /critical/resource }
         action:
           type: block
-        rateLimit: { limit: 100, window: 60, penalty: 60 }
+        rateLimit: { limit: 100, window: 60, penalty: 60, count: all }
 ```
 
 ## Varningar om trafikfilterregler {#traffic-filter-rules-alerts}
@@ -615,7 +619,7 @@ Adobe tillhandahåller en mekanism för att hämta instrumentpanelsverktyg till 
 
 Kontrollpanelsverktygen kan klonas direkt från [AEMCS-CDN-Log-Analysis-ELK-Tool](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) Github-arkiv.
 
-[Se självstudiekursen](#tutorial) om du vill ha konkreta anvisningar om hur du använder kontrollpanelsverktygen.
+[Tutorials](#tutorial) finns för konkreta instruktioner om hur du använder instrumentpanelsverktygen.
 
 ## Rekommenderade startregler {#recommended-starter-rules}
 
@@ -700,9 +704,13 @@ data:
           - CMDEXE
 ```
 
-## Självstudiekurs {#tutorial}
+## Självstudiekurser {#tutorial}
 
-[Arbeta med en självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview.html) för att få praktiska kunskaper och erfarenheter om trafikfilterregler.
+Det finns två självstudiekurser.
+
+### Skydda webbplatser med trafikfilterregler (inklusive WAF-regler)
+
+[Arbeta med en självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview.html) för att få allmän, praktisk kunskap och erfarenhet om trafikfilterregler, inklusive WAF-regler.
 
 Självstudiekursen leder dig igenom:
 
@@ -711,3 +719,16 @@ Självstudiekursen leder dig igenom:
 * Deklarera trafikfilterregler, inklusive WAF-regler
 * Analysera resultat med kontrollpanelsverktyg
 * God praxis
+
+### Blockera DoS- och DDoS-attacker med trafikfilterregler
+
+[Djupdykning i hur man blockerar](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/blocking-dos-attack-using-traffic-filter-rules) Denial of Service-attacker (DoS) och DoS-attacker (Distributed Denial of Service) som använder trafikfilterregler för hastighetsbegränsning och andra strategier.
+
+Självstudiekursen leder dig igenom:
+
+* skydd
+* få meddelanden när hastighetsgränserna överskrids
+* analysera trafikmönster med kontrollpanelsverktyg för att konfigurera tröskelvärden för trafikfilterregler för hastighetsbegränsning
+
+
+
