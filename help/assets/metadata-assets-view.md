@@ -4,7 +4,7 @@ description: Lär dig hur du hanterar metadata i resursvyn. Bättre metadatahant
 role: User,Leader,Admin,Architect,Developer
 contentOwner: AG
 exl-id: 7264e8d1-fc8f-4eb3-93a9-a6066ca3f851
-source-git-commit: 9823bd8af9fce93c8f21495f720673d8b41595ed
+source-git-commit: ed5303bab864e21100cf6e52e130b4bd17bfcb45
 workflow-type: tm+mt
 source-wordcount: '1723'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Metadata innebär data eller beskrivning av data. Dina bilder som en resurs kan 
 
 Metadata hjälper er att kategorisera resurser ytterligare och är till hjälp när mängden digital information växer. Det går att hantera några hundra filer baserat på bara filnamn, miniatyrbilder och minne. Den här metoden är dock inte skalbar. Den blir kort när antalet inblandade personer och antalet hanterade resurser ökar.
 
-Med hjälp av metadata ökar värdet på en digital resurs eftersom resursen blir
+Med hjälp av metadata ökar värdet på en digital resurs eftersom resursen blir:
 
 * Mer åtkomligt - system och användare hittar det enkelt.
 * Enklare att hantera - du kan hitta resurser med samma uppsättning egenskaper enklare och använda ändringarna på dem.

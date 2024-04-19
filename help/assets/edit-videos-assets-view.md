@@ -2,9 +2,9 @@
 title: Redigera videoklipp
 description: Redigera videoklipp med [!DNL Adobe Express] och spara uppdaterade videor som versioner.
 role: User
-source-git-commit: dd67ce6fd8d0626db5518a39dd5ed472ddfeff93
+source-git-commit: ed5303bab864e21100cf6e52e130b4bd17bfcb45
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
@@ -14,8 +14,6 @@ ht-degree: 0%
 Det är enkelt att omvandla en video till en perfekt storlek med inbäddad [!DNL Adobe Express] snabba åtgärder. Snabbåtgärder i [!DNL Assets Essentials] som drivs av [!DNL Adobe Express] innehåller användarvänliga videoredigeringsalternativ som beskära video, ändra storlek på video, klippa bort video och konvertera video till GIF.
 
 När du har redigerat en video kan du spara den nya videon som en ny version. Versionshantering hjälper dig att vid behov återställa den ursprungliga resursen senare. Om du vill redigera en video går du till informationen i videon och klickar på **[!UICONTROL Edit Video]**. Du kan också markera resursen och klicka på detaljer och sedan klicka på ![sax](assets/do-not-localize/cut.svg) -ikonen i den högra rutan.
-
-Läs mer om [förhandsgranskningsgränssnitt](navigate-assets-view.md).
 
 ## Förutsättningar {#prerequisites}
 
