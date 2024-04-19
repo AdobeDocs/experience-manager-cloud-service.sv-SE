@@ -1,7 +1,8 @@
 ---
 title: Visa och hantera renderingar i Experience Manager Assets
 description: Läs om hur AEM Assets och Dynamic Media förenklar effektiv bildhantering med statiska och dynamiska bildåtergivningar.
-source-git-commit: 5c1e2d5388b94243f668f07b1f338f035f00de85
+exl-id: 006dc493-c400-4d0f-b314-c1978582b7fb
+source-git-commit: 4627eb00ba910d1ad2920db15a87761bd7e4a0c0
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 0%
@@ -13,7 +14,8 @@ ht-degree: 0%
 Återgivningar i Adobe Experience Manager (AEM) är anpassade versioner av digitalt material, till exempel bilder, som utformats för olika enheter och plattformar för att ge optimala prestanda. AEM gör det enklare att skapa och hantera dessa renderingar, vilket förbättrar användarupplevelsen. Du kan skapa miniatyrbilder, optimera bilder för webben eller mobiler, lägga till vattenstämplar, visa och hämta dynamiska renderingar eller smarta beskärningsrenderingar och mycket annat.
 
 Dynamic Media bildförinställningar och renderingar av Smart Crop främjar systematisk bildhantering som är anpassad efter varumärkesstandarder och maximerar varumärkets sammanhållning. Detta gör det enklare att snabbt hitta och använda dynamiska bildåtergivningar utan administratörsåtkomst.
-<br>Återgivningar klassificeras som statiska och dynamiska, och varje typ innehåller unika funktioner som beskrivs närmare.
+
+Återgivningar klassificeras som statiska och dynamiska, och varje typ innehåller unika funktioner som beskrivs närmare.
 
 ## Statiska återgivningar {#static-renditions}
 
