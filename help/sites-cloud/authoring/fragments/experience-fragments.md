@@ -1,10 +1,10 @@
 ---
 title: Upplevelsefragment
-description: Använd Adobe Experience Manager as a Cloud Service Experience Fragments för att göra upplevelserna återanvändbara och flexibla.
+description: Använd Experience Fragments i Adobe Experience Manager as a Cloud Service för att göra upplevelserna återanvändbara och flexibla.
 exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
-source-git-commit: e9b9ab2dfd5e1a5b204cbec70ec0a46ebb46f9e9
+source-git-commit: 2fff51075dd1cd2c7e93f61c02615075ae0ffac2
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '2099'
 ht-degree: 2%
 
 ---
