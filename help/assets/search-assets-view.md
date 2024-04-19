@@ -2,9 +2,10 @@
 title: Lär dig hur du söker efter och identifierar resurser i [!DNL Assets view]?
 description: Läs om hur du söker efter och identifierar resurser i AEM Assets-vyn. Med de kraftfulla sökfunktionerna kan du snabbt hitta rätt resurs och hjälpa dig att förbättra innehållets hastighet.
 role: User
-source-git-commit: c3076ce35128c147ce2056d11d9305d9a9456636
+exl-id: abfe6a91-1699-436f-8bf4-0d0bf2369f46
+source-git-commit: bd3835980fcada20fbfe2551a5c15cc7c69a5c37
 workflow-type: tm+mt
-source-wordcount: '1477'
+source-wordcount: '1827'
 ht-degree: 0%
 
 ---
@@ -238,6 +239,91 @@ Du kan förhandsgranska om du vill kontrollera layout och formatering för den f
 1. Klicka **[!UICONTROL Close]** för att stänga förhandsvisningsskärmen.
 
    ![Förhandsgranska den första startsidan](assets/search-first-preview.gif)
+
+## Sammanhangsbaserad sökning {#contextual-search}
+
+Du kan också söka efter resurser som är tillgängliga i databasen genom att definiera textmeddelanden. Experience Manager Assets omvandlar automatiskt dessa textmeddelanden till sökfilter och visar sökresultaten. Du kan visa och ändra automatiska filter med hjälp av filterpanelen för att begränsa sökresultaten ytterligare.
+
+### Åtkomst till sammanhangsbaserad sökning {#access-contextual-search}
+
+Så här kommer du åt sammanhangsbaserad sökning i Experience Manager Assets:
+
+1. Klicka **[!UICONTROL Search]** i den vänstra rutan.
+
+   ![Sammanhangsbaserad sökning](assets/access-contextual-search.png)
+
+1. Definiera textprompten i söktextrutan och klicka på **[!UICONTROL Contextual Search]**.
+
+   ![Sammanhangsberoende textfråga för sökning](assets/contextual-search-text-prompt.png)
+
+   [!DNL Experience Manager Assets] visar sökresultaten.
+
+
+### Filter som stöds {#supported-filters}
+
+Sammanhangsbaserad sökning stöder följande färdiga filter. Basera dina textmeddelanden på dessa filter för att se rätt sökresultat.
+
+* Bildhöjd
+
+* Bildbredd
+
+* Filtyp: bild, dokument, video eller mapp.
+
+* MIME-typ: JPG, PNG, TIFF, GIF, MP4, PDF, PPTX, DOCX eller XLSX
+
+* Skapad den
+
+* Ändrat den
+
+* Utgångsdatum
+
+* Resursstatus: Godkänd, Avvisad eller alla
+
+* Utgångna resurser
+
+### Exempel på textmeddelanden {#text-prompts-examples}
+
+**Exempel 1**
+
+**Textfråga**: Bilder som skapas den här månaden.
+
+[!DNL Experience Manager Assets] använder följande filter automatiskt och visar sökresultaten:
+
+![Sammanhangsberoende sökning, exempel 1](assets/contextual-search-example1.png)
+
+**Exempel 2**
+
+**Textfråga**: Bilderna är minst 200 px höga och 100 px breda med strand och klar himmel.
+
+[!DNL Experience Manager Assets] använder följande filter automatiskt och visar sökresultaten:
+
+![Sammanhangsbaserad sökning - exempel 2](assets/contextual-search-example2.png)
+
+**Exempel 3**
+
+**Textfråga**: Jag behöver bilder med blå himmel som är 1 500 och 2 500 pixlar höga och som skapats den senaste månaden och som inte har gått ut och godkänts.
+
+[!DNL Experience Manager Assets] använder följande filter automatiskt och visar sökresultaten:
+
+![Sammanhangsbaserad sökning Exempel 3](assets/contextual-search-example3.png)
+
+I följande video visas hela processen, från att komma åt det kontextuella sökanvändargränssnittet till att definiera textmeddelanden och visa sökresultaten.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3428407)
+
+### Inaktivera sammanhangsbaserad sökning {#disable-contextual-search}
+
+Administratörer kan även inaktivera sammanhangsbaserad sökning för användare i din organisation. Gör så här:
+
+1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL General Settings]**.
+
+1. I [!UICONTROL Contextual Search] -avsnittet, stänga av **[!UICONTROL Enable Contextual Search for your organization]** om du vill inaktivera funktionen för sammanhangsbaserad sökning för alla användare i organisationen.
+
+### Sammanhangsbaserad sökfeedback {#contextual-search-feedback}
+
+Om du behöver lämna feedback om funktionen Sammanhangsbaserad sökning klickar du på ![Sammanhangsbaserad sökning, ikon](assets/do-not-localize/contextual-search-icon.png)  och klicka på ikonen Feedback. Välj typ av feedback, ange ämne och beskrivning och klicka på **[!UICONTROL Submit]**.
+
+![Sammanhangsbaserad sökfeedback](assets/contextual-search-feedback.png)
 
 ## Nästa steg {#next-steps}
 
