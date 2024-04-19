@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 20feb199add4b493c029f8af6ea2b58b97ba5aa3
+source-git-commit: 5e7a1ec21cc99963e95e4b0655055b8f38703101
 workflow-type: tm+mt
-source-wordcount: '4891'
+source-wordcount: '4893'
 ht-degree: 3%
 
 ---
@@ -561,6 +561,7 @@ ht-degree: 3%
       + [Söka efter och identifiera resurser](/help/assets/search-assets-view.md)
       + [Resurshanteringsaktiviteter](/help/assets/manage-organize-assets-view.md)
       + [Redigera bilder](/help/assets/edit-images-assets-view.md)
+      + [Redigera videoklipp](/help/assets/edit-videos-assets-view.md)
       + [Visa och hantera återgivningar](/help/assets/renditions.md)
       + [Hantera metadata för resurser](/help/assets/metadata-assets-view.md)
       + [Dela resurser](/help/assets/share-links-for-assets-view.md)
