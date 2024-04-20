@@ -2,18 +2,19 @@
 title: Redigera videoklipp
 description: Redigera videoklipp med [!DNL Adobe Express] och spara uppdaterade videor som versioner.
 role: User
-source-git-commit: ed5303bab864e21100cf6e52e130b4bd17bfcb45
+exl-id: 42b25935-e2ff-444f-97c8-b4ed56f3ef9e
+source-git-commit: 6eb9cfbb463fc976c9101acb434b3b39131c8067
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
 
 # Redigera videoklipp i [!DNL Assets Essentials] {#edit-videos}
 
-Det är enkelt att omvandla en video till en perfekt storlek med inbäddad [!DNL Adobe Express] snabba åtgärder. Snabbåtgärder i [!DNL Assets Essentials] som drivs av [!DNL Adobe Express] innehåller användarvänliga videoredigeringsalternativ som beskära video, ändra storlek på video, klippa bort video och konvertera video till GIF.
+Det är enkelt för Assets-användare att skapa variationer av videoinnehåll med den inbäddade [!DNL Adobe Express] snabbåtgärder för video. Snabbåtgärder i [!DNL Assets Essentials] som drivs av [!DNL Adobe Express] innehåller användarvänliga videoredigeringsalternativ som beskära video, ändra storlek på video, klippa bort video och konvertera video till GIF.
 
-När du har redigerat en video kan du spara den nya videon som en ny version. Versionshantering hjälper dig att vid behov återställa den ursprungliga resursen senare. Om du vill redigera en video går du till informationen i videon och klickar på **[!UICONTROL Edit Video]**. Du kan också markera resursen och klicka på detaljer och sedan klicka på ![sax](assets/do-not-localize/cut.svg) -ikonen i den högra rutan.
+Om du vill redigera en video går du till informationen i videon och klickar på [!UICONTROL Edit Video]. Du kan också markera resursen och klicka på detaljer och sedan klicka på ![sax](assets/do-not-localize/cut.svg) -ikonen i den högra rutan. När du har redigerat en video kan du spara den nya videon som en ny version eller som en ny resurs.
 
 ## Förutsättningar {#prerequisites}
 
@@ -38,7 +39,7 @@ Du kan ta bort oönskade delar från videon med hjälp av inbäddade [!DNL Adobe
 
 ### Ändra storlek på video {#resize-video-using-express}
 
-Att ändra storlek på en video till en viss storlek är ett vanligt användningsexempel. [!DNL Assets Essentials] Med kan du snabbt ändra storlek på video så att den passar de gemensamma måtten genom att tillhandahålla förberäknade nya upplösningar för specifika storlekar. Ändra storlek på videon med [!DNL Assets Essentials]följer du stegen nedan:
+Slutligt videoinnehåll i DAM behöver ofta storleksändras för distribution till specifika kanaler. [!DNL Assets Essentials] Med kan du enkelt ändra storlek på video så att den passar de dimensioner som vanliga sociala kanaler kräver, och du kan även ändra storlek till anpassade upplösningar. Ändra storlek på videon med [!DNL Assets Essentials]utför du stegen nedan:
 
 1. Markera en video och klicka på **[!UICONTROL Edit]**.
 2. Klicka **[!UICONTROL Resize Video]** från de snabbåtgärder som är tillgängliga i den vänstra rutan.
@@ -52,7 +53,7 @@ Den storleksändrade videon kan laddas ned. Du kan antingen spara den redigerade
 
 ### Trimma video {#trim-video-using-express}
 
-En snabb videoklipp i [!DNL Assets Essentials] som drivs av [!DNL Adobe Express] gör att du enkelt kan trimma video. Utför stegen nedan:
+Om du behöver använda ett klipp av en större video kan du använda **[!UICONTROL Trim Video]** för att markera och trimma ett avsnitt i videon. Utför stegen nedan:
 
 1. Markera en video och klicka på **[!UICONTROL Edit]**.
 2. Klicka **[!UICONTROL Trim Video]** från de snabbåtgärder som är tillgängliga i den vänstra rutan.
@@ -80,11 +81,11 @@ Din video finns i GIF-format för nedladdning. Du kan antingen spara den rediger
 
 ## Begränsningar {#limitations-video-adobe-express}
 
-* Endast MP4-videotypen stöds.
+* Det går bara att redigera videoklipp i MP4-format.
 
-* Största filstorlek som stöds: 200 MB
+* Den maximala källfilsstorlek som stöds är 200 MB.
 
-* Videons minsta och största mått är 46 pixlar respektive 3 840 pixlar.
+* Videor som stöds är större än 46 pixlar och mindre än 3 840 pixlar på alla sidor.
 
 * De webbläsare som stöds är Google Chrome, Firefox, Safari och Edge.
 
