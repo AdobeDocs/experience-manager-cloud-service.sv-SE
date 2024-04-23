@@ -2,9 +2,9 @@
 title: Trafikfilterregler inklusive WAF-regler
 description: Konfigurera trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF)
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: d210fed56667b307a7a816fcc4e52781dc3a792d
+source-git-commit: d118cd57370a472dfe752c6ce7e332338606b898
 workflow-type: tm+mt
-source-wordcount: '3788'
+source-wordcount: '3817'
 ht-degree: 0%
 
 ---
@@ -142,7 +142,10 @@ data:
   trafficFilters:
     rules:
       - name: "path-rule"
-        when: { reqProperty: path, equals: /block-me }
+        when:
+          allOf:
+            - { reqProperty: path, equals: /block-me }
+            - { reqProperty: tier, equals: publish }
         action:
           type: block
       - name: "Enable-SQL-Injection-and-XSS-waf-rules-globally"
@@ -251,6 +254,7 @@ The `wafFlags` egenskapen, som kan användas i de licensbara reglerna för WAF-t
 | SQLI | SQL-inmatning | SQL Injection är ett försök att få åtkomst till ett program eller få privilegierad information genom att köra godtyckliga databasfrågor. |
 | BAKDOOR | Bakdörr | En bakdörrssignal är en begäran som försöker avgöra om det finns en gemensam bakdörrsfil i systemet. |
 | CMDEXE | Kommandokörning | Kommandokörning är ett försök att få kontroll över eller skada ett målsystem genom godtyckliga systemkommandon med hjälp av användarindata. |
+| CMDEXE-NO-BIN | Kommandokörning utom på `/bin/` | Tillhandahåll samma skyddsnivå som `CMDEXE` när false-positiv inaktiverades på `/bin` på grund av AEM. |
 | XSS | Skript för flera webbplatser | Korsskriptning mellan webbplatser är ett försök att kapa en användares konto eller webbläsarsession via skadlig JavaScript-kod. |
 | TRAVERSAL | Kataloggenomgång | Directory Traversal är ett försök att navigera i behöriga mappar i ett system för att kunna hämta känslig information. |
 | USERAGENT | Attackverktyg | Attack Tooling är användning av automatiserad programvara för att identifiera säkerhetsproblem eller för att försöka utnyttja en upptäckt säkerhetslucka. |
@@ -330,7 +334,7 @@ data:
 
 **Exempel 3**
 
-Den här regeln blockerar begäranden som innehåller frågeparametern `foo`, men tillåter alla förfrågningar från IP 192.168.1.1:
+Den här regeln blockerar begäranden vid publicering som innehåller frågeparametern `foo`, men tillåter alla förfrågningar från IP 192.168.1.1:
 
 ```
 kind: "CDN"
@@ -341,7 +345,10 @@ data:
   trafficFilters:
     rules:
       - name: "block-request-that-contains-query-parameter-foo"
-        when: { queryParam: url-param, equals: foo }
+        when:
+          allOf:
+            - { queryParam: url-param, equals: foo }
+            - { reqProperty: tier, equals: publish }
         action:
           type: block
       - name: "allow-all-requests-from-ip"
@@ -352,7 +359,7 @@ data:
 
 **Exempel 4**
 
-Den här regeln blockerar begäranden till sökväg `/block-me`och blockerar alla förfrågningar som matchar `SQLI` eller `XSS` mönster. I det här exemplet finns det en regel för WAF-trafikfilter som refererar till `SQLI` och `XSS` [WAF-flaggor](#waf-flags-list)och därför krävs en separat licens.
+Den här regeln blockerar begäranden till sökväg `/block-me` vid publicering och blockerar alla förfrågningar som matchar `SQLI` eller `XSS` mönster. I det här exemplet finns det en regel för WAF-trafikfilter som refererar till `SQLI` och `XSS` [WAF-flaggor](#waf-flags-list)och därför krävs en separat licens.
 
 ```
 kind: "CDN"
@@ -363,7 +370,10 @@ data:
   trafficFilters:
     rules:
       - name: "path-rule"
-        when: { reqProperty: path, equals: /block-me }
+        when:
+          allOf:
+            - { reqProperty: path, equals: /block-me }
+            - { reqProperty: tier, equals: publish }
         action:
           type: block
       - name: "Enable-SQL-Injection-and-XSS-waf-rules-globally"
@@ -415,7 +425,7 @@ Regler för hastighetsbegränsning kan inte referera till WAF-flaggor. De är ti
 
 Kursen beräknas per CDN POP. Anta till exempel att POP i Montreal, Miami och Dublin får trafikfrekvenserna 80, 90 respektive 120 förfrågningar per sekund och att hastighetsbegränsningsregeln har satts till en gräns på 100. I så fall skulle endast trafiken till Dublin begränsas.
 
-Hastighetsgränserna utvärderas baserat på antingen trafik som faller på kanten, trafik som faller på kanten eller antalet fel.
+Hastighetsgränserna utvärderas baserat på antingen trafik som faller i kanten, trafik som faller i origo eller antalet fel.
 
 ### rateLimit-struktur {#ratelimit-structure}
 
@@ -424,7 +434,7 @@ Hastighetsgränserna utvärderas baserat på antingen trafik som faller på kant
 | limit | heltal mellan 10 och 10000 | obligatoriskt | Begärandefrekvens (per CDN POP) i begäranden per sekund som regeln aktiveras för. |
 | window | heltal: 1, 10 eller 60 | 10 | Provningsfönstret i sekunder för vilket begärandehastigheten beräknas. Räknarnas noggrannhet beror på fönstrets storlek (större fönsternoggrannhet). Du kan till exempel förvänta dig 50 % noggrannhet för det sekundära fönstret och 90 % noggrannhet för det sekundära fönstret. |
 | påföljd | heltal mellan 60 och 3600 | 300 (5 minuter) | En period i sekunder för vilken matchande begäranden blockeras (avrundat till närmaste minut). |
-| antal | all, hämta, fel | alla | utvärderas baserat på edge-trafik (all), ursprungstrafik (hämtning) eller antalet fel. |
+| antal | alla, hämtningar, fel | alla | utvärderas baserat på edge-trafik (all), ursprungstrafik (hämtningar) eller antalet fel (fel). |
 | groupBy | array[Getter] | ingen | Räknaren för hastighetsbegränsning sammanställs av en uppsättning egenskaper för begäran (till exempel clientIp). |
 
 
@@ -458,7 +468,7 @@ data:
 
 **Exempel 2**
 
-Blockera begäranden på sökvägen/critical/resource i 60-tal när den överskrider ett genomsnitt på 100 req/sek (per CDN POP) under de senaste 60 sekerna:
+Blockera begäranden på sökvägen/critical/resource i 60-tal när den överskrider ett genomsnitt på 100 begäranden till ursprungsläget per sekund (per CDN POP) i ett tidsfönster på 10 sekunder:
 
 ```
 kind: "CDN"
@@ -469,10 +479,13 @@ data:
   trafficFilters:
     rules:
       - name: rate-limit-example
-        when: { reqProperty: path, equals: /critical/resource }
+        when:
+          allOf:
+            - { reqProperty: path, equals: /critical/resource }
+            - { reqProperty: tier, equals: publish }
         action:
           type: block
-        rateLimit: { limit: 100, window: 60, penalty: 60, count: all }
+        rateLimit: { limit: 100, window: 10, penalty: 60, count: fetches }
 ```
 
 ## Varningar om trafikfilterregler {#traffic-filter-rules-alerts}
@@ -497,7 +510,10 @@ data:
   trafficFilters:
     rules:
       - name: "path-rule"
-        when: { reqProperty: path, equals: /block-me }
+        when:
+          allOf:
+            - { reqProperty: path, equals: /block-me }
+            - { reqProperty: tier, equals: publish }
         action:
           type: block
           experimental_alert: true
@@ -633,14 +649,28 @@ metadata:
 data:
   trafficFilters:
     rules:
-    #  Block client for 5m when it exceeds 100 req/sec on a time window of 1sec
-    - name: limit-requests-client-ip
+    #  Block client for 5m when it exceeds an average of 100 req/sec to origin on a time window of 10sec
+    - name: limit-origin-requests-client-ip
       when:
-        reqProperty: path
-        like: '*'
+        reqProperty: tier
+        equals: 'publish'
       rateLimit:
         limit: 100
-        window: 1
+        window: 10
+        count: fetches
+        penalty: 300
+        groupBy:
+          - reqProperty: clientIp
+      action: log
+    #  Block client for 5m when it exceeds an average of 500 req/sec on a time window of 10sec
+    - name: limit-requests-client-ip
+      when:
+        reqProperty: tier
+        equals: 'publish'
+      rateLimit:
+        limit: 500
+        window: 10
+        count: all
         penalty: 300
         groupBy:
           - reqProperty: clientIp
@@ -649,7 +679,7 @@ data:
     - name: block-ofac-countries
       when:
         allOf:
-          - { reqProperty: tier, equals: publish }
+          - { reqProperty: tier, in: ["author", "publish"] }
           - reqProperty: clientCountry
             in:
               - SY
@@ -669,39 +699,23 @@ data:
     - name: block-waf-flags-globally
       when:
         reqProperty: tier
-        matches: "author|publish"
+        in: ["author", "publish"]
       action:
         type: log
         wafFlags:
+          - TRAVERSAL
+          - CMDEXE-NO-BIN
+          - XSS
+          - LOG4J-JNDI
+          - BACKDOOR
+          - USERAGENT
+          - SQLI
           - SANS
           - TORNODE
           - NOUA
           - SCANNER
-          - USERAGENT
           - PRIVATEFILE
-          - ABNORMALPATH
-          - TRAVERSAL
           - NULLBYTE
-          - BACKDOOR
-          - LOG4J-JNDI
-          - SQLI
-          - XSS
-          - CODEINJECTION
-          - CMDEXE
-          - NO-CONTENT-TYPE
-          - UTF8
-    # Disable protection against CMDEXE on /bin (only works if WAF is licensed enabled for your environment)
-    - name: allow-cdmexe-on-root-bin
-      when:
-        allOf:
-          - reqProperty: tier
-            matches: "author|publish"
-          - reqProperty: path
-            matches: "^/bin/.*"
-      action:
-        type: allow
-        wafFlags:
-          - CMDEXE
 ```
 
 ## Självstudiekurser {#tutorial}
