@@ -1,19 +1,19 @@
 ---
-title: Introduktion till Assets som [!DNL Cloud Service]
-description: Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service.
+title: Adobe Digital Asset Management (DAM) med AEM
+description: Lär dig hur du använder och administrerar Adobe Digital Asset Management (DAM) med Experience Manager Assets as a Cloud Service.
 contentOwner: AK
 feature: Asset Management
 role: User,Leader,Architect
 exl-id: 4437f214-d058-4975-8b8f-869a12c8103b
-source-git-commit: d91254b52c257a3758da200a2c74b736ca457884
+source-git-commit: d66d645dd039189b34e6e3c4d937b82a14b8b801
 workflow-type: tm+mt
-source-wordcount: '892'
-ht-degree: 1%
+source-wordcount: '920'
+ht-degree: 0%
 
 ---
 
 
-# Introduktion av resurser som [!DNL Cloud Service] {#assets-cloud-service-introduction}
+# Introduktion av resurser som [!DNL Cloud Service] för hantering av digitala resurser i AEM {#assets-cloud-service-introduction}
 
 <!-- Need review information from gklebus -->
 
@@ -23,13 +23,13 @@ Samtidig förtäring av många resurser eller komplexa resurser är en resurskr�
 
 Företag behöver stöd för en mängd olika filformat och innehållsupplösningar för användning på flera enheter, i olika geografiska områden och på flera språk. Resurshanterings- och lagringskrav kräver resurser och funktioner som kan överbelasta en traditionell lösning. Ibland ger inte tekniska begränsningar av behandlingen av tillgångar de resultat man önskar och i andra fall är kostnaden för lagring ett hinder för vinstmarginalerna.
 
-Börja med att förstå [fördelarna med ett molnbaserat erbjudande](#solution-benefits). Se vad som är viktigt [ändringar av Experience Manager som [!DNL Cloud Service]](/help/release-notes/aem-cloud-changes.md) som också påverkade Experience Manager Assets och som följde upp [ändringar i tillgångar](/help/assets/assets-cloud-changes.md).
+Börja med att förstå [fördelarna med ett molnbaserat erbjudande](#solution-benefits) för hantering av digitala resurser. Se vad som är viktigt [ändringar av Experience Manager som [!DNL Cloud Service]](/help/release-notes/aem-cloud-changes.md) som också påverkade Experience Manager Assets och som följde upp [ändringar i tillgångar](/help/assets/assets-cloud-changes.md).
 
 Läs vidare för att lära dig mer om [information om de nya Assets-funktionerna](#whats-new-assets) och [kända problem](/help/release-notes/maintenance/latest.md). Se en lista med [borttagna eller inaktuella funktioner](/help/release-notes/deprecated-removed-features.md) om du vill veta vad som tas bort i den här versionen. Slutligen, förstå Experience Manager villkoren med hjälp av detta [ordlista](/help/overview/terminology.md).
 
 ## Lösningsfördelar {#solution-benefits}
 
-Nedan beskrivs de viktigaste fördelarna med Assets som [!DNL Cloud Service]. Mer information finns på [översikt över Experience Manager som [!DNL Cloud Service]](/help/overview/introduction.md).
+Nedan beskrivs de viktigaste fördelarna med Assets som [!DNL Cloud Service] för hantering av digitala resurser. Mer information finns på [översikt över Experience Manager som [!DNL Cloud Service]](/help/overview/introduction.md).
 
 * **Moderna molntjänster för bearbetning av resurser**: De nya mikrotjänsterna är molnbaserade, skalbara, tillförlitliga och problemfria tjänster för filhantering.
 * **Mycket skalbar**: Elastisk skalbarhet för alla typer av driftsättningar. Praktiskt taget obegränsade resurser som finns tillgängliga on-demand, vid behov. Sparar kostnaden för överdesign jämfört med ett traditionellt system.
@@ -38,13 +38,13 @@ Nedan beskrivs de viktigaste fördelarna med Assets som [!DNL Cloud Service]. Me
 * **Konstantövervakning**: Övervakningen av systemet är automatiserade och inbyggda kontroller och utlösare som hjälper till att upprätthålla prestanda, tillgänglighet och övergripande tillförlitlighet.
 * **Smidig driftsättning**: Experience Manager i molnåtgärderna är helt automatiserade och kräver ingen manuell åtgärd. För automatiserad driftsättning automatiserar komponenten Cloud Manager (CM) byggandet av driftsättningsbara Docker-bilder som innehåller din anpassade kod.
 
-## Tillgängliga personbaserade upplevelser {#persona-based-experiences}
+## Tillgängliga personbaserade upplevelser för hantering av digitala resurser {#persona-based-experiences}
 
 Adobe erbjuder robusta DAM-lösningar (Digital Asset Management) så att ni får ut mesta möjliga av era digitala resurser. Adobe Experience Manager Assets har två olika upplevelser som använder samma Cloud Service:
 
-* **Administratörsvy**: Det befintliga as a Cloud Service användargränssnittet för Assets. Använd administrationsvyn för alla avancerade funktioner för resurshantering, inklusive integreringar, arbetsflöden, innehållsautomatisering, publicering med mera.
+* **Administratörsvy**: Det befintliga as a Cloud Service användargränssnittet för Assets. Använd administrationsvyn för alla avancerade funktioner för hantering av digitala resurser, inklusive integreringar, arbetsflöden, innehållsautomatisering, publicering med mera.
 
-* **Resursvy**: Adobe lättweight asset management experience to store, manage, discover, and use digital assets. Effektivt användargränssnitt med funktioner för resurshantering. Utformad för enklare DAM-användare med fokus på överföring, metadatahantering, sökning, hämtning och delning.
+* **Resursvy**: Adobe lättweight asset management experience to store, manage, discover, and use digital assets. Effektivt användargränssnitt med viktiga funktioner för hantering av digitala resurser. Utformad för enklare DAM-användare med fokus på överföring, metadatahantering, sökning, hämtning och delning.
 
 Användare som har åtkomst till administrationsvyn kan även komma åt resursvyn. Resursvyn har ett förenklat användargränssnitt som gör det enkelt att hantera, identifiera och distribuera digitala resurser. Ett stort antal användare från olika funktioner, inklusive kreatörer, marknadsförare och branschgrupper, kan samarbeta om resurser och få tillgång till rätt, godkänt material när och var de behöver det. Många tillfälliga DAM-användare föredrar resursvyn eftersom den bara innehåller en delmängd av funktioner. Upplevelsen riktar sig till kreatörer, skrivskyddade mediekonsumenter och användare med mindre vikt-DAM.
 
