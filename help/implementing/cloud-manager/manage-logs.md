@@ -2,9 +2,9 @@
 title: Åtkomst till och hantering av loggar
 description: Lär dig hur du får åtkomst till och hanterar loggar som hjälp i utvecklingsprocessen på AEM as a Cloud Service.
 exl-id: f17274ce-acf5-4e7d-b875-75d4938806cd
-source-git-commit: 178af74512e74ff401588b68c73fa4661acec704
+source-git-commit: fa28d2fa83fb35fe80692c5f94661fa4c32a02a9
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '352'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,8 @@ ht-degree: 0%
 Lär dig hur du får åtkomst till och hanterar loggar som hjälp i utvecklingsprocessen på AEM as a Cloud Service.
 
 Du kan komma åt en lista över tillgängliga loggfiler för den valda miljön med **Miljö** från **Ökning** sida eller miljöinformationssida.
+
+Loggar sparas i sju dagar.
 
 ## Laddar ned loggar {#download-logs}
 
