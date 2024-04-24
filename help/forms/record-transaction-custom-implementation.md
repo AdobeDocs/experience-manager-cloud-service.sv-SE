@@ -2,16 +2,20 @@
 title: Registrera en transaktion för anpassade implementeringar
 description: Använd TransactionRecorder-API:t för att registrera åtgärder som inte räknas som transaktioner automatiskt
 feature: Adaptive Forms, Foundation Components
-hide: true
-hidefromtoc: true
-source-git-commit: a1a87a27d73d7472ec02de37621123bbdd3876b4
+exl-id: cb584f78-30af-4a58-be99-843352e8249c
+source-git-commit: 539f4bf86f0e32057b2228dc44c86120d6e8457b
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 0%
+source-wordcount: '193'
+ht-degree: 2%
 
 ---
 
 # Registrera en transaktion för anpassade implementeringar {#record-a-transaction-for-custom-implementations}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/transaction-reports/transaction-reports-osgi/record-transaction-custom-implementation) |
+| AEM as a Cloud Service | Den här artikeln |
 
 Använd TransactionRecorder-API:t för att registrera åtgärder som inte räknas som transaktioner automatiskt.
 
@@ -88,4 +92,3 @@ $.ajax({
 ## Relaterade artiklar {#related-articles}
 
 * [Fakturerbara API:er för transaktionsrapporter](/help/forms/transaction-reports-billable-apis.md)
-
