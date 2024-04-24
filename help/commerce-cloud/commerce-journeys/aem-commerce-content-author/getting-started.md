@@ -1,10 +1,10 @@
 ---
-title: Komma igång med CIF-redigering
+title: Komma igång med CIF
 description: Komma igång med CIF.
 exl-id: 0bef4d8c-0ad3-4ec8-ab08-8c83203b3b68
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 6f27c968c347e6b2be8c9bfcf9bb69e531d10ff9
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
@@ -15,21 +15,21 @@ Lär dig mer om Adobe Experience Manager (AEM) CIF Authoring.
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om denna AEM- och handelsresa [Läs om AEM innehåll och handel](/help/commerce-cloud/introduction.md)har du lärt dig grunderna i och begreppen headless CMS och AEM Content and Commerce.
+I det föregående dokumentet om denna AEM och Commerce resa [Läs om AEM och Commerce](/help/commerce-cloud/introduction.md)har du lärt dig grunderna i och begreppen headless CMS och AEM Content och Commerce.
 
 Den här artikeln bygger på dessa grunder.
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur du använder CIF för innehåll- och handelsspecifik redigering. När du har läst bör du:
+Det här dokumentet hjälper dig att förstå hur du använder CIF för innehåll och Commerce-specifik redigering. När du har läst bör du:
 
-* Förstå begreppen för CIF med Universal Editor
+* Förstå begreppen för CIF med Page Editor i AEM
 * Få åtkomst till produktkatalogdata i AEM med produkt- och kategoriväljare
 * Åtkomst till innehåll och e-handelsdata via produktcockpit och AEM Omnisearch
 
-## CIF i den universella redigeraren {#cif-authoring}
+## CIF i AEM Page Editor {#cif-authoring}
 
-CIF ger den universella redigeraren möjlighet att komma åt realtidsdata utan att lämna sammanhanget:
+CIF utökar sidredigeraren i AEM med funktioner för att komma åt realtidsdata utan att lämna sammanhanget:
 
 Öppna sidopanelen och välj Produkter i listrutan.
 ![Välj produkttyp](assets/asset-finder-overview.png)
@@ -95,7 +95,7 @@ Omnisearch kör en fulltextsökning i e-handelsservern för att hitta alla relat
 
 Nu när du är klar med den här delen av resan bör du:
 
-* Förstå begreppen för CIF med Universal Editor
+* Förstå begreppen för CIF med Page Editor
 * Så här kommer du åt produktkatalogen i AEM med produkt- och kategoriväljare
 * Åtkomst till innehåll och e-handelsdata via produktcockpit och AEM Omnisearch
 

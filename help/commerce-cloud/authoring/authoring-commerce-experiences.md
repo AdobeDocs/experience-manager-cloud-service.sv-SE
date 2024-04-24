@@ -1,17 +1,17 @@
 ---
-title: Redigering av handelsupplevelser
+title: Skapa Commerce Experience
 description: Lär dig skapa och bygga e-handelsrelaterade upplevelser effektivt genom att få tillgång till produktdata och innehåll utan att lämna sammanhanget.
 exl-id: 45d697b7-ec96-4c26-be2a-3395b731d52d
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 77350822c261371e6eda1fd10d02dcd905a5dd6e
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
 
-# Redigering av handelsupplevelser {#authoring-commerce-experiences}
+# Skapa Commerce Experience {#authoring-commerce-experiences}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 CIF utökar AEM med e-handelsspecifika funktioner. På så sätt kan författare skapa och hantera e-handelsrelaterade upplevelser effektivt genom att få tillgång till produktdata och innehåll utan att lämna sammanhanget.
 
@@ -51,9 +51,9 @@ Konfigurationsdialogrutan för den här komponenten kräver 1: n kategorier. CIF
 
 ![Carousel-komponent med markering](../assets/authoring/carousel_component_with_selection.png)
 
-## Universal Editor {#universal-editor}
+## Page Editor {#page-editor}
 
-Den universella redigeraren har utökat med funktioner för att komma åt realtidsdata och tillhörande produktinnehåll.
+Sidredigeraren i AEM har utökas med funktioner för att komma åt realtidsproduktdata och tillhörande produktinnehåll.
 
 ### Åtkomst till produktdata {#access-product-data}
 
@@ -77,7 +77,7 @@ Då skapas en platshållarlänk som ersätts med en riktig länk när sidan åte
 
 ### Åtkomst till associerat produktinnehåll {#associated-content}
 
-Om 1:n-produkterna identifieras på en sida visas fliken &quot;Associerat Commerce Content&quot; automatiskt på sidopanelen. På den här fliken kan författare snabbt komma åt AEM som taggats med produkten (se [förbättra produktdata med tillhörande AEM](./enrich-product-associated-content.md) för mer information). På den här fliken finns listrutor som du kan använda för att filtrera efter innehållstyp och specifika produkter om det finns flera produkter på sidan. Att använda innehållet fungerar på samma sätt som att använda innehåll från fliken Resurser.
+Om redigeraren känner igen 1:n-produkter på en sida visar sidopanelen automatiskt fliken&quot;Associerat Commerce-innehåll&quot;. På den här fliken kan författare snabbt komma åt AEM som taggats med produkten (se [förbättra produktdata med tillhörande AEM](./enrich-product-associated-content.md) för mer information). På den här fliken finns listrutor som du kan använda för att filtrera efter innehållstyp och specifika produkter om det finns flera produkter på sidan. Att använda innehållet fungerar på samma sätt som att använda innehåll från fliken Resurser.
 
 ![Sidopanel för produktdata](../assets/authoring/associated-commerce-content-tab.png)
 
