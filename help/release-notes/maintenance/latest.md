@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 61a3d334e7187dcbf047d1b464d918ddf2cf9444
+source-git-commit: b7e7bc7546b836667fff9db0ea5419e751f492cb
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '269'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,8 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 159
 
 ### Kända fel {#known-issues-15977}
 
-* **(Endast för AEM Forms)** Efter installationen av underhållsutgåvan AEM Cloud Foundation 15977 återges fält med adaptiva formulär i fel ordning vid formulärutveckling och för publicerade formulär. Om du använder AEM Forms rekommenderar vi att du inte uppgraderar till den här versionen förrän problemet är löst i den kommande underhållsversionen.
+* **(Endast för AEM Forms)** Efter installationen av underhållsutgåvan AEM Cloud Foundation 15977 återges fält med adaptiva formulär i fel ordning vid formulärutveckling och för publicerade formulär. Om du använder AEM Forms bör du inte uppgradera till version 15977 förrän problemet är löst i den kommande underhållsversionen, för att undvika eventuella besvär.
+
 
 ### Föråldrade funktioner och API:er {#deprecated-15977}
 
