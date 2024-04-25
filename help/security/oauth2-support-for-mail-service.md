@@ -1,10 +1,10 @@
 ---
 title: OAuth2-stöd för e-posttjänsten
-description: Oauth2-stöd för e-posttjänsten i Adobe Experience Manager as a Cloud Service
+description: OAuth2-stöd för e-posttjänsten i Adobe Experience Manager som en molntjänst.
 exl-id: 93e7db8b-a8bf-4cc7-b7f0-cda481916ae9
-source-git-commit: a230efaa58cb00e8a0c0e2b23f0cc07462cc658b
+source-git-commit: 678e81eb22cc1d7c239ac7a2594b39a3a60c51e2
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '679'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Mer information om AEM as a Cloud Service Mail Service finns i [Skickar e-post](
 
    >[!NOTE]
    >
-   >Behörighetskonfigurationen kan förändras över tid. Arbeta med Microsoft om dessa inte fungerar som förväntat.
+   >Behörighetskonfigurationen kan förändras över tid. Arbeta med Microsoft® om dessa inte fungerar som förväntat.
 
    * `https://outlook.office.com/SMTP.Send`
    * `openid`
@@ -111,7 +111,7 @@ Innan du fortsätter att konfigurera OAuth på AEM-sidan måste du verifiera bå
 
 >[!NOTE]
 >
-> Du kan hämta Postman API-samlingen från [den här platsen](https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow).
+> Du kan hämta Postman API-samlingen från [den här platsen](https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-auth-code-flow).
 >
 > Se MSFT OAuth-dokumentationen [här](https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth) för mer information.
 
@@ -140,7 +140,7 @@ Innan du fortsätter att konfigurera OAuth på AEM-sidan måste du verifiera bå
 
    >[!NOTE]
    >
-   >Omfattningar kan utvecklas över tid. Arbeta med Microsoft om dessa inte fungerar som förväntat.
+   >Omfattningar kan utvecklas över tid. Arbeta med Microsoft® om dessa inte fungerar som förväntat.
 
    * `https://outlook.office.com/SMTP.Send`
    * `openid`
@@ -148,7 +148,7 @@ Innan du fortsätter att konfigurera OAuth på AEM-sidan måste du verifiera bå
    * `email`
    * `profile`
 1. Skapa en OSGI-egenskapsfil `called com.day.cq.mailer.DefaultMailService.cfg.json`
-under `/apps/<my-project>/osgiconfig/config` med syntaxen nedan. The `smtp.host` och `smtp.port` värdena visar avancerad nätverkskonfiguration, vilket beskrivs i [Självstudiekurs om e-posttjänst](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/email-service.html).
+under `/apps/<my-project>/osgiconfig/config` med syntaxen nedan. The `smtp.host` och `smtp.port` värdena visar avancerad nätverkskonfiguration, vilket beskrivs i [Självstudiekurs om e-posttjänst](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/networking/examples/email-service).
 
    ```
    {

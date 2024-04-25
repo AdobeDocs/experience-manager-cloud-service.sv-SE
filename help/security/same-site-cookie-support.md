@@ -1,27 +1,27 @@
 ---
 title: Stöd för samma webbplats-cookie för Adobe Experience Manager as a Cloud Service
-description: Stöd för samma webbplats-cookie för Adobe Experience Manager as a Cloud Service
+description: Stöd för samma webbplats-cookie för Adobe Experience Manager as a Cloud Service.
 exl-id: 2cec7202-4450-456f-8e62-b7ed3791505c
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 678e81eb22cc1d7c239ac7a2594b39a3a60c51e2
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
 
 # Stöd för samma webbplats-cookie för Adobe Experience Manager as a Cloud Service {#same-site-cookie-support-for-adobe-experience-manager-as-a-cloud-service}
 
-Sedan version 80 har Chrome och senare Safari introducerat en ny modell för cookie-säkerhet. Det här läget är utformat för att införa säkerhetskontroller för tillgänglighet av cookies för tredjepartswebbplatser via en inställning som kallas `SameSite`. Mer detaljerad information finns i [artikel](https://web.dev/samesite-cookies-explained/).
+Sedan version 80 har Chrome och senare Safari introducerat en ny modell för cookie-säkerhet. Det här läget är utformat för att införa säkerhetskontroller för tillgänglighet av cookies för tredjepartswebbplatser via en inställning som kallas `SameSite`. Mer detaljerad information finns i [artikel](https://web.dev/articles/samesite-cookies-explained).
 
-Standardvärdet för den här inställningen (`SameSite=Lax`) kan leda till att autentisering mellan AEM instanser eller tjänster inte fungerar. Detta beror på att domänerna eller URL-strukturerna för dessa tjänster kanske inte omfattas av begränsningarna i den här cookie-principen.
+Standardvärdet för inställningen (`SameSite=Lax`) kan leda till att autentisering mellan AEM instanser eller tjänster inte fungerar. Detta beror på att domänerna eller URL-strukturerna för dessa tjänster kanske inte omfattas av begränsningarna i den här cookie-principen.
 
-För att komma runt detta måste du ange attributet SameSite cookie till `None` för inloggningstoken.
+Du kan undvika detta genom att ange cookie-attributet SameSite till `None` för inloggningstoken.
 
 >[!CAUTION]
 >
 >The `SameSite=None` inställningen används bara om protokollet är säkert (HTTPS).
 >
->Om protokollet inte är säkert (HTTP) ignoreras inställningen och det här WARN-meddelandet visas på servern:
+>Om protokollet inte är säkert (HTTP) ignoreras inställningen och det här varningsmeddelandet visas på servern:
 >
 >`WARN com.day.crx.security.token.TokenCookie Skip 'SameSite=None'`
 

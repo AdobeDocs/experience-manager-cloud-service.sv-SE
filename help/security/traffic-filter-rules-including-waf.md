@@ -1,10 +1,10 @@
 ---
 title: Trafikfilterregler inklusive WAF-regler
-description: Konfigurera trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF)
+description: Konfigurerar trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF).
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: d118cd57370a472dfe752c6ce7e332338606b898
+source-git-commit: b52da0a604d2c320d046136f5e526e2b244fa6cb
 workflow-type: tm+mt
-source-wordcount: '3817'
+source-wordcount: '3790'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 Trafikfilterregler kan användas för att blockera eller tillåta förfrågningar i CDN-lagret, vilket kan vara användbart i scenarier som:
 
 * Begränsa åtkomsten till specifika domäner till intern företagstrafik innan en ny webbplats publiceras
-* Fastställande av hastighetsgränser så att de blir mindre mottagliga för volymetriska DoS-attacker
+* Fastställande av hastighetsgränser som är mindre mottagliga för volymetriska DoS-attacker
 * Förhindra att IP-adresser som du vet är skadliga riktas mot dina sidor
 
 De flesta av dessa trafikfilterregler är tillgängliga för alla AEM as a Cloud Service webbplatser och Forms-kunder. De arbetar huvudsakligen med egenskaper för begäran och begäranrubriker, inklusive IP, värdnamn, sökväg och användaragent.
@@ -27,7 +27,7 @@ Trafikfilterregler kan distribueras via Cloud Managers konfigurationspipelines f
 [Följ igenom en självstudiekurs](#tutorial) för att snabbt bygga upp konkreta expertkunskaper om den här funktionen.
 
 >[!NOTE]
->Är du intresserad av andra alternativ för att konfigurera trafik vid leveransnätverket, bland annat att ändra begäran/svar, deklarera omdirigeringar och proxera till ett icke-AEM ursprung? [Lär dig hur man gör](/help/implementing/dispatcher/cdn-configuring-traffic.md) genom att gå med i det tidiga adopterprogrammet.
+>Intresserad av andra alternativ för att konfigurera trafik vid leveransnätverket, inklusive redigering av begäran/svar, deklarering av omdirigeringar och proxing till ett icke-AEM ursprung? [Lär dig hur man gör](/help/implementing/dispatcher/cdn-configuring-traffic.md) genom att gå med i det tidiga adopterprogrammet.
 
 
 ## Hur den här artikeln ordnas {#how-organized}
@@ -45,21 +45,21 @@ Den här artikeln är indelad i följande avsnitt:
 * **Rekommenderade startregler:** En uppsättning regler att komma igång med.
 * **Självstudiekurs:** Praktisk kunskap om funktionen, inklusive hur du använder kontrollpanelsverktyg för att deklarera rätt regler.
 
-Vi erbjuder dig att ge feedback eller ställa frågor om trafikfilterregler genom att skicka e-post **aemcs-waf-adopter@adobe.com**.
+Adobe inbjuder dig att ge feedback eller ställa frågor om trafikfilterregler genom att skicka e-post **aemcs-waf-adopter@adobe.com**.
 
 ## Trafikskydd - översikt {#traffic-protection-overview}
 
-I det digitala landskapet är skadlig trafik ett hot som aldrig tidigare förekommit. Vi inser hur allvarlig risken är och erbjuder flera strategier för att skydda kundens tillämpningar och mildra attacker när de inträffar.
+I det digitala landskapet är skadlig trafik ett hot som aldrig tidigare förekommit. Adobe inser hur allvarlig risken är och erbjuder flera strategier för att skydda kundtillämpningar och mildra attacker när de inträffar.
 
 Vid kanten absorberar det hanterade CDN-nätverket DoS-attacker i nätverkslagret (lager 3 och 4), inklusive översvämnings- och reflektions-/amplifieringsattacker.
 
-Som standard vidtar Adobe åtgärder för att förhindra prestandaförsämringar på grund av oväntat höga trafikökningar över ett visst tröskelvärde. I händelse av en DoS-attack som påverkar webbplatsens tillgänglighet, varnas Adobe ledningsgrupper och vidtar åtgärder för att minska risken.
+Som standard vidtar Adobe åtgärder för att förhindra prestandaförsämringar på grund av oväntat höga trafikökningar över ett visst tröskelvärde. Om det inträffar en DoS-attack som påverkar webbplatsens tillgänglighet larmas Adobe ledningsgrupper och vidtar åtgärder för att minska risken.
 
 Kunderna kan vidta förebyggande åtgärder för att mildra attacker i programlager (lager 7) genom att konfigurera regler i olika lager i innehållsleveransflödet.
 
-På exempelvis lagret Apache kan man konfigurera antingen [avsändarmodul](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-access-to-content-filter) eller [ModSecurity](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection.html) för att begränsa åtkomsten till visst innehåll.
+På exempelvis lagret Apache kan man konfigurera antingen [Dispatcher-modul](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration#configuring-access-to-content-filter) eller [ModSecurity](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection) för att begränsa åtkomsten till visst innehåll.
 
-Som beskrivs i den här artikeln kan trafikfilterregler distribueras till det hanterade CDN-nätverket i Adobe med hjälp av Cloud Managers konfigurationsflöde. Utöver trafikfilterregler som baseras på egenskaper som IP-adress, sökväg och rubriker, eller regler som baseras på att hastighetsgränser anges, kan kunder även licensiera en kraftfull underkategori av trafikfilterregler som kallas WAF-regler.
+Som beskrivs i den här artikeln kan trafikfilterregler distribueras till hanterat CDN i Adobe med hjälp av Cloud Managers konfigurationsflöde. Utöver trafikfilterregler som baseras på egenskaper som IP-adress, sökväg och rubriker, eller regler som baseras på att hastighetsgränser anges, kan kunder även licensiera en kraftfull underkategori av trafikfilterregler som kallas WAF-regler.
 
 ## Föreslagen process {#suggested-process}
 
@@ -71,7 +71,7 @@ Nedan följer en högnivårekommenderad process från början till slut för att
 1. Kopiera de rekommenderade startreglerna till `cdn.yaml` och distribuera konfigurationen till produktionsmiljön i loggläge.
 1. Analysera resultatet efter att ha samlat in viss trafik med [kontrollpanelsverktyg](#dashboard-tooling) för att se om det fanns några träffar. Leta upp felaktiga positiva inställningar och gör eventuella nödvändiga justeringar för att aktivera startreglerna i blockläge.
 1. Lägg till anpassade regler baserat på analys av CDN-loggarna, först testning med simulerad trafik i utvecklingsmiljöer innan driftsättning i scen- och produktionsmiljöer i loggläge, sedan blockläge.
-1. Övervaka trafiken kontinuerligt och ändra reglerna allt eftersom hotelandskapet utvecklas.
+1. Övervaka trafiken kontinuerligt och ändra reglerna allteftersom hotbilden utvecklas.
 
 ## Inställningar {#setup}
 
@@ -103,7 +103,7 @@ Nedan följer en högnivårekommenderad process från början till slut för att
          action: block
    ```
 
-The `kind` parametern ska anges till `CDN` och versionen bör anges till schemaversionen, som för närvarande är `1`. Se exemplen längre fram.
+The `kind` parametern ska anges till `CDN` och versionen ska anges till schemaversionen, som är `1`. Se följande exempel.
 
 
 <!-- Two properties -- `envType` and `envId` -- may be included to limit the scope of the rules. The envType property may have values "dev", "stage", or "prod", while the envId property is the environment (for example, "53245"). This approach is useful if it is desired to have a single configuration pipeline, even if some environments have different rules. However, a different approach could be to have multiple configuration pipelines, each pointing to different repositories or git branches. -->
@@ -119,7 +119,7 @@ The `kind` parametern ska anges till `CDN` och versionen bör anges till schemav
    * [Se konfigurera produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md).
    * [Se konfigurera icke-produktionspipelinor](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md).
 
-Kommandoraden kommer att användas för RDE, men RDE stöds inte för närvarande.
+För RDE används kommandoraden, men RDE stöds inte för närvarande.
 
 **Anteckningar**
 
@@ -198,7 +198,7 @@ En grupp villkor består av flera enkla och/eller gruppvillkor.
 
 | **Egenskap** | **Typ** | **Beskrivning** |
 |---|---|---|
-| reqProperty | `string` | Request-egenskap.<br><br>En av:<br><ul><li>`path`: Returnerar den fullständiga sökvägen till en URL utan frågeparametrarna.</li><li>`queryString`: Returnerar frågedelen av en URL</li><li>`method`: Returnerar HTTP-metoden som används i begäran.</li><li>`tier`: Returnerar ett av `author`, `preview` eller `publish`.</li><li>`domain`: Returnerar egenskapen domain (enligt definitionen i `Host` sidhuvud) i gemener</li><li>`clientIp`: Returnerar klient-IP.</li><li>`clientCountry`: Returnerar en kod med två bokstäver ([https://en.wikipedia.org/wiki/Regional_indicator_symbol](https://en.wikipedia.org/wiki/Regional_indicator_symbol) som anger i vilket land kunden befinner sig.</li></ul> |
+| reqProperty | `string` | Request-egenskap.<br><br>En av:<br><ul><li>`path`: Returnerar den fullständiga sökvägen till en URL utan frågeparametrarna.</li><li>`queryString`: Returnerar frågedelen av en URL</li><li>`method`: Returnerar HTTP-metoden som används i begäran.</li><li>`tier`: Returnerar ett av `author`, `preview`, eller `publish`.</li><li>`domain`: Returnerar egenskapen domain (enligt definitionen i `Host` sidhuvud) i gemener</li><li>`clientIp`: Returnerar klient-IP.</li><li>`clientCountry`: Returnerar en kod med två bokstäver ([Regional indikatorsymbol](https://en.wikipedia.org/wiki/Regional_indicator_symbol)) som anger i vilket land kunden befinner sig.</li></ul> |
 | reqHeader | `string` | Returnerar begärandehuvud med angivet namn |
 | queryParam | `string` | Returnerar frågeparameter med angivet namn |
 | reqCookie | `string` | Returnerar cookie med angivet namn |
@@ -228,7 +228,7 @@ when:
   in: [ "192.168.0.0/24" ]
 ```
 
-* Vi rekommenderar användning av [regex101](https://regex101.com/) och [Snabb vänteläge](https://fiddle.fastly.dev/) när du arbetar med regex. Du kan även läsa mer om hur Fastly hanterar regex i detta [artikel](https://developer.fastly.com/reference/vcl/regex/#best-practices-and-common-mistakes).
+* Adobe rekommenderar att man använder [regex101](https://regex101.com/) och [Snabb vänteläge](https://fiddle.fastly.dev/) när du arbetar med regex. Du kan även läsa mer om hur Fastly hanterar regex i detta [artikel](https://www.fastly.com/documentation/reference/vcl/regex/#best-practices-and-common-mistakes).
 
 
 ### Åtgärdsstruktur {#action-structure}
@@ -241,9 +241,9 @@ An `action` kan antingen vara en sträng som anger åtgärden (tillåt, blockera
 
 | **Namn** | **Tillåtna egenskaper** | **Betydelse** |
 |---|---|---|
-| **tillåt** | `wafFlags` (valfritt), `alert` (valfritt, ännu inte släppt) | om wafFlags inte finns avbryter ytterligare regelbearbetning och fortsätter att ge svar. Om det finns wafFlags inaktiverar den angivna WAF-skyddet och fortsätter till ytterligare regelbearbetning. <br>Om du anger en varning skickas ett meddelande från Åtgärdscenter om regeln aktiveras 10 gånger i ett fönster på 5 minuter. Den här funktionen har inte släppts ännu. Se [Varningar om trafikfilterregler](#traffic-filter-rules-alerts) om du vill ha information om hur du går med i programmet för tidiga användare. |
-| **block** | `status, wafFlags` (frivilligt och ömsesidigt uteslutande), `alert` (valfritt, ännu inte släppt) | Om wafFlags inte finns returnerar HTTP-fel utan att alla andra egenskaper skickas, definieras felkoden av statusegenskapen eller så är standardvärdet 406. Om det finns wafFlags aktiverar det angivna WAF-skyddet och fortsätter till ytterligare regelbearbetning. <br>Om du anger en varning skickas ett meddelande från Åtgärdscenter om regeln aktiveras 10 gånger i ett fönster på 5 minuter. Den här funktionen har inte släppts ännu. Se [Varningar om trafikfilterregler](#traffic-filter-rules-alerts) om du vill ha information om hur du går med i programmet för tidiga användare. |
-| **logg** | `wafFlags` (valfritt), `alert` (valfritt, ännu inte släppt) | loggar det faktum att regeln utlöstes, annars påverkas inte bearbetningen. wafFlags har ingen effekt. <br>Om du anger en varning skickas ett meddelande från Åtgärdscenter om regeln aktiveras 10 gånger i ett fönster på 5 minuter. Den här funktionen har inte släppts ännu. Se [Varningar om trafikfilterregler](#traffic-filter-rules-alerts) om du vill ha information om hur du går med i programmet för tidiga användare. |
+| **tillåt** | `wafFlags` (valfritt), `alert` (valfritt, ännu inte släppt) | om wafFlags inte finns avbryter ytterligare regelbearbetning och fortsätter att ge svar. Om det finns wafFlags inaktiverar den angivna WAF-skyddet och fortsätter till ytterligare regelbearbetning. <br>Om en varning anges skickas ett meddelande från Åtgärdscenter om regeln aktiveras 10 gånger i ett 5 minuter långt fönster. Den här funktionen har inte släppts ännu. Se [Varningar om trafikfilterregler](#traffic-filter-rules-alerts) om du vill ha information om hur du går med i programmet för tidiga användare. |
+| **block** | `status, wafFlags` (frivilligt och ömsesidigt uteslutande), `alert` (valfritt, ännu inte släppt) | Om wafFlags inte finns returnerar HTTP-fel utan att alla andra egenskaper skickas, definieras felkoden av statusegenskapen eller så är standardvärdet 406. Om det finns wafFlags aktiverar det angivna WAF-skyddet och fortsätter till ytterligare regelbearbetning. <br>Om en varning anges skickas ett meddelande från Åtgärdscenter om regeln aktiveras 10 gånger i ett 5 minuter långt fönster. Den här funktionen har inte släppts ännu. Se [Varningar om trafikfilterregler](#traffic-filter-rules-alerts) om du vill ha information om hur du går med i programmet för tidiga användare. |
+| **logg** | `wafFlags` (valfritt), `alert` (valfritt, ännu inte släppt) | loggar det faktum att regeln utlöstes, annars påverkas inte bearbetningen. wafFlags har ingen effekt. <br>Om en varning anges skickas ett meddelande från Åtgärdscenter om regeln aktiveras 10 gånger i ett 5 minuter långt fönster. Den här funktionen har inte släppts ännu. Se [Varningar om trafikfilterregler](#traffic-filter-rules-alerts) om du vill ha information om hur du går med i programmet för tidiga användare. |
 
 ### WAF-flagglista {#waf-flags-list}
 
@@ -260,31 +260,31 @@ The `wafFlags` egenskapen, som kan användas i de licensbara reglerna för WAF-t
 | USERAGENT | Attackverktyg | Attack Tooling är användning av automatiserad programvara för att identifiera säkerhetsproblem eller för att försöka utnyttja en upptäckt säkerhetslucka. |
 | LOG4J-JNDI | Log4J JNDI | Log4J JNDI-attacker försöker utnyttja [Log4Shell-sårbarhet](https://en.wikipedia.org/wiki/Log4Shell) finns i Log4J-versioner tidigare än 2.16.0 |
 | BHH | Felaktiga Hop-huvuden | Felaktiga Hop-huvuden anger ett försök till HTTP-smuggling via en felformaterad Transfer-Encoding (TE) eller Content-Length (CL)-rubrik, eller en korrekt formaterad TE- och CL-rubrik |
-| KODEINJEKTION | Kodinmatning | Kodinjektion är ett försök att få kontroll över eller skada ett målsystem genom godtyckliga programkodkommandon med hjälp av användarindata. |
+| KODEINJEKTION | Kodinmatning | Kodinjektion är ett försök att få kontroll över eller skada ett målsystem genom godtyckliga programkodkommandon som användaren anger. |
 | ABNORMALPATH | Onormal bana | Onormal bana anger att den ursprungliga banan skiljer sig från den normaliserade banan (till exempel `/foo/./bar` normaliseras till `/foo/bar`) |
 | DUBBELKODNING | Dubbel kodning | Dubbel kodning används för att kontrollera om HTML-tecken med dubbel kodning kan användas |
 | NOTUTF8 | Ogiltig kodning | Ogiltig kodning kan göra att servern översätter skadliga tecken från en begäran till ett svar, vilket kan orsaka denial of service eller XSS |
 | JSON-ERROR | JSON-kodningsfel | En begärandetext för POST, PUT eller PATCH som har angetts som innehåller JSON i begärandehuvudet för Content-Type men som innehåller JSON-tolkningsfel. Detta beror ofta på ett programmeringsfel eller en automatiserad eller skadlig begäran. |
 | MALFORMED-DATA | Felformaterade data i begärandetexten | En begärandetext för POST, PUT eller PATCH som har fel format enligt begärandehuvudet Content-Type. Om en begäranderubrik av typen&quot;Content-Type: application/x-www-form-urlencoded&quot; anges och innehåller en POST som är json. Detta är ofta ett programmeringsfel, en automatiserad eller skadlig begäran. Kräver agent 3.2 eller högre. |
-| SANS | Skadlig IP-trafik | [SANS Internet Storm Center](https://isc.sans.edu/) lista över IP-adresser som har rapporterats ha varit inblandade i skadlig aktivitet |
+| SANS | Skadlig IP-trafik | [SANS Internet Storm Center](https://isc.sans.edu/) lista över rapporterade IP-adresser som deltar i skadlig aktivitet. |
 | INNEHÅLLSTYP | Begäranhuvudet Content-Type saknas | En POST-, PUT- eller PATCH-begäran som inte har någon Content-Type-begäranderubrik. Som standard ska programservrar anta&quot;Content-Type: text/plain; charset=us-ascii&quot; i det här fallet. Många automatiska och skadliga förfrågningar kanske saknar&quot;Innehållstyp&quot;. |
 | NOUA | Ingen användaragent | Många automatiserade och skadliga förfrågningar använder falska eller saknade användaragenter för att göra det svårt att identifiera vilken typ av enhet som framställningarna görs på. |
 | TORNODE | Tor Traffic | Tor är programvara som döljer en användares identitet. En spik i Tor-trafiken kan indikera en angripare som försöker maskera sin plats. |
 | NULLBYTE | Null byte | Null-byte visas normalt inte i en begäran och anger att begäran är felformaterad och potentiellt skadlig. |
-| PRIVATEFILE | Privata filer | Privata filer är vanligtvis konfidentiella, till exempel Apache `.htaccess` eller en konfigurationsfil som kan läcka känslig information |
+| PRIVATEFILE | Privata filer | Privata filer är konfidentiella, till exempel Apache `.htaccess` eller en konfigurationsfil som kan läcka känslig information |
 | SKANNER | Skanner | Identifierar vanliga skanningstjänster och verktyg |
 | RESPONSESPLIST | HTTP-svarsdelning | Identifierar när CRLF-tecken skickas som indata till programmet för att mata in rubriker i HTTP-svaret |
 | XML-FEL | XML-kodningsfel | En begärandetext för POST, PUT eller PATCH som har angetts som innehållande XML i begärandehuvudet för Content-Type men som innehåller XML-tolkningsfel. Detta beror ofta på ett programmeringsfel eller en automatiserad eller skadlig begäran. |
 
 ## Överväganden {#considerations}
 
-* När två motstridiga regler skapas har alltid reglerna Tillåt företräde framför blockreglerna. Om du till exempel skapar en regel som blockerar en viss sökväg och en regel som tillåter en viss IP-adress, tillåts förfrågningar från den IP-adressen på den blockerade sökvägen.
+* När två konfliktskapande regler skapas har alltid de tillåtna reglerna företräde framför blockreglerna. Om du till exempel skapar en regel som blockerar en viss sökväg och en regel som tillåter en viss IP-adress, tillåts förfrågningar från den IP-adressen på den blockerade sökvägen.
 
 * Om en regel matchas och blockeras svarar CDN med en `406` returkod.
 
 * Konfigurationsfilerna bör inte innehålla hemligheter eftersom de skulle kunna läsas av alla som har åtkomst till Git-databasen.
 
-* IP-Tillåtelselista som definieras i Cloud Manager har högre prioritet än trafikfilterreglerna.
+* IP-tillåtelselista som definieras i Cloud Manager har företräde framför trafikfilterregler.
 
 * WAF-regelmatchningar visas bara i CDN-loggar för CDN-missar och -pass, inte träffar.
 
@@ -312,7 +312,7 @@ data:
 
 **Exempel 2**
 
-Den här regeln blockerar begäranden på sökvägen `/helloworld` vid publicering med en användaragent som innehåller Chrome:
+Den här regeln blockerar begäran på sökvägen `/helloworld` vid publicering med en användaragent som innehåller Chrome:
 
 ```
 kind: "CDN"
@@ -417,13 +417,13 @@ data:
         action: block
 ```
 
-## Regler för hastighetsbegränsning {#rate-limits-rules}
+## Regler för hastighetsbegränsning
 
-Ibland är det önskvärt att blockera trafiken om den överskrider en viss frekvens av inkommande förfrågningar, kanske baserat på ett visst villkor. Ange ett värde för `rateLimit` Egenskapen begränsar hastigheten för de begäranden som matchar regelvillkoret.
+Ibland är det önskvärt att blockera trafik om den överskrider en viss frekvens av inkommande begäranden, baserat på ett visst villkor. Ange ett värde för `rateLimit` Egenskapen begränsar hastigheten för de begäranden som matchar regelvillkoret.
 
 Regler för hastighetsbegränsning kan inte referera till WAF-flaggor. De är tillgängliga för alla Sites- och Forms-kunder.
 
-Kursen beräknas per CDN POP. Anta till exempel att POP i Montreal, Miami och Dublin får trafikfrekvenserna 80, 90 respektive 120 förfrågningar per sekund och att hastighetsbegränsningsregeln har satts till en gräns på 100. I så fall skulle endast trafiken till Dublin begränsas.
+Kursen beräknas per CDN POP. Anta till exempel att POP i Montreal, Miami och Dublin har en trafikfrekvens på 80, 90 respektive 120 förfrågningar per sekund. Regeln för hastighetsbegränsning är satt till en gräns på 100. I så fall skulle endast trafiken till Dublin begränsas.
 
 Hastighetsgränserna utvärderas baserat på antingen trafik som faller i kanten, trafik som faller i origo eller antalet fel.
 
@@ -432,17 +432,16 @@ Hastighetsgränserna utvärderas baserat på antingen trafik som faller i kanten
 | **Egenskap** | **Typ** | **Standard** | **MENING** |
 |---|---|---|---|
 | limit | heltal mellan 10 och 10000 | obligatoriskt | Begärandefrekvens (per CDN POP) i begäranden per sekund som regeln aktiveras för. |
-| window | heltal: 1, 10 eller 60 | 10 | Provningsfönstret i sekunder för vilket begärandehastigheten beräknas. Räknarnas noggrannhet beror på fönstrets storlek (större fönsternoggrannhet). Du kan till exempel förvänta dig 50 % noggrannhet för det sekundära fönstret och 90 % noggrannhet för det sekundära fönstret. |
+| window | heltal: 1, 10 eller 60 | 10 | Provningsfönstret i sekunder för vilket begärandehastigheten beräknas. Räknarnas noggrannhet beror på fönstrets storlek (större fönsternoggrannhet). Du kan till exempel förvänta dig 50 % noggrannhet för det sekundära fönstret och 90 % noggrannhet för det 60-sekundersfönstret. |
 | påföljd | heltal mellan 60 och 3600 | 300 (5 minuter) | En period i sekunder för vilken matchande begäranden blockeras (avrundat till närmaste minut). |
 | antal | alla, hämtningar, fel | alla | utvärderas baserat på edge-trafik (all), ursprungstrafik (hämtningar) eller antalet fel (fel). |
 | groupBy | array[Getter] | ingen | Räknaren för hastighetsbegränsning sammanställs av en uppsättning egenskaper för begäran (till exempel clientIp). |
-
 
 ### Exempel {#ratelimiting-examples}
 
 **Exempel 1**
 
-Den här regeln blockerar en klient i 5 m när den överskrider ett genomsnitt på 60 req/sek (per CDN POP) under de senaste 10 sektionerna:
+Den här regeln blockerar en klient i 5 millisekunder när den överskrider ett genomsnitt på 60 req/sek (per CDN-POP) under de senaste 10 sektionerna:
 
 ```
 kind: "CDN"
@@ -468,7 +467,7 @@ data:
 
 **Exempel 2**
 
-Blockera begäranden på sökvägen/critical/resource i 60-tal när den överskrider ett genomsnitt på 100 begäranden till ursprungsläget per sekund (per CDN POP) i ett tidsfönster på 10 sekunder:
+Blockera begäranden på sökvägen/critical/resource i 60 sekunder när det överskrider ett genomsnitt på 100 begäranden till ursprungsläget per sekund (per CDN POP) i ett tidsfönster på tio sekunder:
 
 ```
 kind: "CDN"
@@ -494,7 +493,7 @@ data:
 >
 >Den här funktionen har inte släppts ännu. För att få tillgång till informationen via e-post **aemcs-waf-adopter@adobe.com**.
 
-En regel kan konfigureras att skicka ett meddelande från Åtgärdscenter om det aktiveras 10 gånger inom ett 5-minutersfönster, vilket varnar dig när vissa trafikmönster inträffar så att du kan vidta nödvändiga åtgärder. Läs mer om [Actions Center](/help/operations/actions-center.md), inklusive hur du konfigurerar de meddelandeprofiler som krävs för att ta emot e-postmeddelanden.
+En regel kan konfigureras att skicka ett meddelande från Åtgärdscenter om det aktiveras tio gånger inom ett 5 minuter långt fönster. En sådan regel varnar dig när vissa trafikmönster förekommer så att du kan vidta nödvändiga åtgärder. Läs mer om [Actions Center](/help/operations/actions-center.md), inklusive hur du konfigurerar de meddelandeprofiler som krävs för att ta emot e-postmeddelanden.
 
 ![Meddelande från Åtgärdscenter](/help/security/assets/traffic-filter-rules-actions-center-alert.png)
 
@@ -540,9 +539,9 @@ Till exempel:
 Reglerna fungerar på följande sätt:
 
 * Alla matchande regelnamn som har deklarerats av kunden listas i `match` -attribut.
-* The `action` -attribut avgör om reglerna har effekten av att blockera, tillåta eller logga.
-* Om WAF är licensierat och aktiverat visas `waf` Alla WAF-flaggor (till exempel SQLI) som har identifierats listas, oavsett om WAF-flaggorna finns listade i några regler. Detta är för att ge insikter i eventuella nya regler att deklarera.
-* Om inga kunddeklarerade regler matchar och inga SWF-regler matchar `rules` egenskapen kommer att vara tom.
+* The `action` -attribut avgör om reglerna blockerar, tillåter eller loggar.
+* Om WAF är licensierat och aktiverat visas `waf` attribut visar alla WAF-flaggor (till exempel SQLI) som har identifierats. Detta gäller oavsett om WAF-flaggorna har listats i några regler eller inte. Detta är för att ge insikter i eventuella nya regler att deklarera.
+* Om inga kunddeklarerade regler matchar och inga SWF-regler matchar `rules` egenskapen är tom.
 
 Som tidigare nämnts visas matchningar av WAF-regler endast i CDN-loggar för CDN-missar och -pass, inte träffar.
 
@@ -633,7 +632,7 @@ Nedan finns en lista med de fältnamn som används i CDN-loggar, tillsammans med
 
 Adobe tillhandahåller en mekanism för att hämta instrumentpanelsverktyg till din dator för att importera CDN-loggar som hämtats via Cloud Manager. Med den här verktygen kan du analysera trafiken för att hitta rätt trafikfilterregler som ska deklareras, inklusive WAF-regler.
 
-Kontrollpanelsverktygen kan klonas direkt från [AEMCS-CDN-Log-Analysis-ELK-Tool](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) Github-arkiv.
+Kontrollpanelsverktygen kan klonas direkt från [AEMCS-CDN-Log-Analysis-ELK-Tool](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) GitHub-databas.
 
 [Tutorials](#tutorial) finns för konkreta instruktioner om hur du använder instrumentpanelsverktygen.
 
@@ -724,7 +723,7 @@ Det finns två självstudiekurser.
 
 ### Skydda webbplatser med trafikfilterregler (inklusive WAF-regler)
 
-[Arbeta med en självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview.html) för att få allmän, praktisk kunskap och erfarenhet om trafikfilterregler, inklusive WAF-regler.
+[Arbeta med en självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview) för att få allmän, praktisk kunskap och erfarenhet om trafikfilterregler, inklusive WAF-regler.
 
 Självstudiekursen leder dig igenom:
 

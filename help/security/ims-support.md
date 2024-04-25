@@ -1,11 +1,11 @@
 ---
 title: IMS-stöd för Adobe Experience Manager as a Cloud Service
-description: Stöd för Image Management System i Adobe Experience Manager as a Cloud Service
+description: Image Management System-stöd för Adobe Experience Manager as a Cloud Service.
 exl-id: fb563dbd-a761-4d83-9da1-58f8e462b383
-source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
+source-git-commit: 678e81eb22cc1d7c239ac7a2594b39a3a60c51e2
 workflow-type: tm+mt
-source-wordcount: '1917'
-ht-degree: 32%
+source-wordcount: '1922'
+ht-degree: 29%
 
 ---
 
@@ -46,13 +46,13 @@ Kunden måste registreras för Adobe Admin Console för att kunna använda Adobe
 
 Som ett första steg måste kunderna ha en organisation som är etablerad i Adobe IMS. Adobe Enterprise-kunder representeras som IMS-organisationer i [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html). Det här området är den portal som Adobe-kunder använder för att hantera sina produkträttigheter för användare och grupper.
 
-AEM kunder bör redan ha en organisation etablerad, och som en del av IMS-etableringen är kundinstanserna tillgängliga i Admin Console för hantering av användarrättigheter och åtkomst.
+AEM bör redan ha en organisation som är etablerad, och som en del av IMS-etableringen är kundinstanserna tillgängliga i Admin Console för hantering av användarrättigheter och åtkomst.
 
 När en kund finns som IMS-organisation måste han/hon konfigurera sitt system enligt följande:
 
 ![IMS-integrering](/help/security/assets/ims2.png)
 
-1. Den utsedda systemadministratören får en inbjudan att logga in på Cloud Manager. Efter inloggning på Cloud Manager kan systemadministratörerna välja att etablera AEM-program och -miljöer eller navigera till Admin Console för administrativa uppgifter.
+1. Den utsedda systemadministratören får en inbjudan om att logga in i Cloud Manager. När du har loggat in på Cloud Manager kan systemadministratörerna välja att tillhandahålla AEM program och miljöer eller navigera till Admin Console för administrativa uppgifter.
 1. Systemadministratören gör anspråk på en domän för att bekräfta ägarskapet för respektive domän (till exempel acme.com)
 1. Systemadministratören ställer in användarkataloger.
 1. Systemadministratören gör IDP-konfiguration i Admin Console för att konfigurera enkel inloggning.
@@ -60,7 +60,7 @@ När en kund finns som IMS-organisation måste han/hon konfigurera sitt system e
 
 Grunderna om Adobe Identity Management, inklusive IDP-konfiguration, beskrivs [här](https://helpx.adobe.com/enterprise/using/set-up-identity.html).
 
-Användning av Enterprise Administration och Admin Console beskrivs [här](https://helpx.adobe.com/enterprise/admin-guide.html).
+Företagsadministration och användning i Admin Console omfattas [här](https://helpx.adobe.com/enterprise/admin-guide.html).
 
 ### Onboarding-användare i Admin Console {#onboarding-users-in-admin-console}
 
@@ -210,10 +210,10 @@ Som visas nedan är gruppen **AEM-GRP_008** ärver behörigheter och behörighet
 
 För att kunna komma åt Cloud Manager eller miljöer på AEM as a Cloud Service måste du tilldelas Profiler för Cloud Manager-produkten.
 
-Mer information om roller för användare som styr tillgängligheten av specifika funktioner i Cloud Manager finns i Rolldefinitioner.
+Se Rolldefinitioner om du vill veta mer om roller för användare som styr tillgängligheten av specifika funktioner i Cloud Manager.
 
 >[!NOTE]
->Cloud Manager har förkonfigurerade roller med lämpliga behörigheter. Om du vill veta mer om de roller som har specifika behörigheter, förkonfigurerade uppgifter eller behörigheter som är kopplade till varje roll kan du läsa [Rollbaserade behörigheter](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/role-based-permissions.html).
+>Cloud Manager har förkonfigurerade roller med lämpliga behörigheter. Om du vill veta mer om de roller som har specifika behörigheter, förkonfigurerade uppgifter eller behörigheter som är kopplade till varje roll kan du läsa [Rollbaserade behörigheter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/role-based-permissions).
 
 **Steg för att lägga till en användare**
 

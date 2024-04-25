@@ -1,10 +1,10 @@
 ---
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
-description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
+description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service.
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: 01b55f2ff06d3886724dbb2c25d0c109a5ab6aec
+source-git-commit: 678e81eb22cc1d7c239ac7a2594b39a3a60c51e2
 workflow-type: tm+mt
-source-wordcount: '5142'
+source-wordcount: '5093'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ I den här artikeln beskrivs de olika avancerade nätverksfunktionerna i AEM as 
 
 >[!TIP]
 >
->Förutom den här dokumentationen finns det även en serie självstudiekurser som hjälper dig igenom de olika avancerade nätverksalternativen i den här [plats.](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/advanced-networking.html)
+>Förutom den här dokumentationen finns det även en serie självstudiekurser som hjälper dig igenom de olika avancerade nätverksalternativen i den här [plats.](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/networking/advanced-networking)
 
 ## Ökning {#overview}
 
@@ -26,11 +26,11 @@ AEM as a Cloud Service har följande avancerade nätverksalternativ:
 * [Dedikerad IP-adress för utgångar](#dedicated-egress-ip-address) - Konfigurera trafik från AEM as a Cloud Service för att komma från en unik IP-adress.
 * [VPN (Virtual Private Network)](#vpn) - Säker trafik mellan din infrastruktur och AEM as a Cloud Service, om du har ett VPN.
 
-I den här artikeln beskrivs först de här alternativen i detalj och varför du kan använda dem, innan du beskriver hur de konfigureras med hjälp av användargränssnittet i molnhanteraren och med hjälp av API:t, och slutligen med några avancerade användningsfall.
+I den här artikeln beskrivs dessa alternativ i detalj och varför du kan använda dem, innan du beskriver hur de konfigureras med användargränssnittet i molnhanteraren och med API:t. Artikeln avslutas med några exempel på avancerad användning.
 
 >[!CAUTION]
 >
->Om du redan har en äldre dedikerad utgångsteknik och vill konfigurera något av dessa avancerade nätverksalternativ, [kontakta först Adobe Client Care.](https://experienceleague.adobe.com/?support-solution=Experience+Manager#home)
+>Om du redan har en äldre dedikerad utgångsteknik och vill konfigurera något av dessa avancerade nätverksalternativ, [kontakta Adobe Client Care](https://experienceleague.adobe.com/?support-solution=Experience+Manager#home).
 >
 >Om du försöker konfigurera avancerade nätverk med äldre teknik kan det påverka webbplatsanslutningen.
 
@@ -43,7 +43,7 @@ När avancerade nätverksfunktioner konfigureras gäller följande begränsninga
 * En användare i måste ha **Administratör** roll för att lägga till och konfigurera nätverksinfrastruktur i ditt program.
 * Produktionsmiljön måste skapas innan nätverksinfrastrukturen kan läggas till i programmet.
 * Nätverksinfrastrukturen måste finnas i samma region som produktionsmiljöns primära region.
-   * Om produktionsmiljön har [ytterligare publiceringsregioner,](/help/implementing/cloud-manager/manage-environments.md#multiple-regions) kan du skapa ytterligare nätverksinfrastruktur som speglar varje ytterligare region.
+   * Om produktionsmiljön har [extra publiceringsregioner](/help/implementing/cloud-manager/manage-environments.md#multiple-regions)kan du skapa en annan nätverksinfrastruktur som speglar varje ytterligare region.
    * Du får inte skapa fler nätverksinfrastrukturer än det maximala antalet regioner som är konfigurerade i din produktionsmiljö.
    * Du kan definiera så många nätverksinfrastrukturer som tillgängliga regioner i din produktionsmiljö, men ny infrastruktur måste vara av samma typ som den tidigare skapade infrastrukturen.
    * När du skapar flera infrastrukturer får du bara välja bland de områden där avancerad nätverksinfrastruktur inte har skapats.
@@ -59,7 +59,7 @@ Båda stegen kan utföras antingen med användargränssnittet i molnhanteraren e
 
 * När du använder användargränssnittet i Cloud Manager innebär det att du skapar avancerade nätverkskonfigurationer med en guide på programnivå och sedan redigerar varje miljö där du vill aktivera konfigurationen.
 
-* När du använder Cloud Manager-API:t `/networkInfrastructures` API-slutpunkten anropas på programnivå för att deklarera önskad typ av avancerat nätverk, följt av ett anrop till `/advancedNetworking` slutpunkt för varje miljö för att aktivera infrastrukturen och konfigurera miljöspecifika parametrar.
+* När du använder Cloud Manager-API:t `/networkInfrastructures` API-slutpunkten anropas på programnivå för att deklarera önskad typ av avancerat nätverk. Därefter ringer vi `/advancedNetworking` slutpunkt för varje miljö för att aktivera infrastrukturen och konfigurera miljöspecifika parametrar.
 
 ## Flexibla portägg {#flexible-port-egress}
 
@@ -67,11 +67,11 @@ Med den här avancerade nätverksfunktionen kan du konfigurera AEM as a Cloud Se
 
 >[!TIP]
 >
->När du ska välja mellan flexibel portutgång och dedikerad IP-adress för utgångar bör du välja flexibel portutgång om en viss IP-adress inte krävs, eftersom Adobe kan optimera prestanda för flexibel portbelastningstrafik.
+>När du ska välja mellan flexibel portutgång och dedikerad IP-adress för utgångar bör du välja flexibel portutgång om en viss IP-adress inte krävs. Orsaken är att Adobe kan optimera prestanda för flexibel hamnutresetrafik.
 
 >[!NOTE]
 >
->Flexibla infrastrukturtyper för portutgångar kan inte redigeras när de har skapats. Det enda sättet att ändra konfigurationsvärden är att ta bort och återskapa dem.
+>Efter det att du skapat en portutgångsinfrastruktur kan du inte redigera den. Det enda sättet att ändra konfigurationsvärden är att ta bort och återskapa dem.
 
 ### UI-konfiguration {#configuring-flexible-port-egress-provision-ui}
 
@@ -83,11 +83,11 @@ Med den här avancerade nätverksfunktionen kan du konfigurera AEM as a Cloud Se
 
    ![Lägger till nätverksinfrastruktur](assets/advanced-networking-ui-network-infrastructure.png)
 
-1. I **Lägg till nätverksinfrastruktur** guide som startar, välj **Flexibel portutgång** och regionen där den ska skapas från **Län** nedrullningsbar meny och tryck eller klicka **Fortsätt**.
+1. I **Lägg till nätverksinfrastruktur** guide, välj **Flexibel portutgång** och regionen där den ska skapas från **Län** nedrullningsbar meny och klicka **Fortsätt**.
 
    ![Konfigurerar flexibel portutgång](assets/advanced-networking-ui-flexible-port-egress.png)
 
-1. The **Bekräftelse** sammanfattar markeringen och nästa steg. Tryck eller klicka **Spara** för att skapa infrastrukturen.
+1. The **Bekräftelse** sammanfattar markeringen och nästa steg. Klicka **Spara** för att skapa infrastrukturen.
 
    ![Bekräfta konfiguration av flexibel portutgång](assets/advanced-networking-ui-flexible-port-egress-confirmation.png)
 
@@ -130,7 +130,7 @@ HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).build();
 HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
 ```
 
-Om du använder Java-nätverksbibliotek som inte är standard ska du konfigurera proxies med egenskaperna ovan för all trafik.
+Om du använder Java™-nätverksbibliotek som inte är standard ska du konfigurera proxies med egenskaperna ovan för all trafik.
 
 Ej http/s-trafik med destinationer via portar som deklarerats i `portForwards` parametern ska referera till en egenskap som kallas `AEM_PROXY_HOST`, tillsammans med den mappade porten. Till exempel:
 
@@ -212,9 +212,9 @@ ProxyPassReverse "/somepath" "https://example.com:8443"
 
 ## IP-adress för dedikerad utpressning {#dedicated-egress-ip-address}
 
-En dedikerad IP-adress kan förbättra säkerheten vid integrering med SaaS-leverantörer (som en CRM-leverantör) eller andra integreringar utanför AEM as a Cloud Service som erbjuder en tillåtelselista av IP-adresser. Genom att lägga till den dedikerade IP-adressen till tillåtelselista säkerställer det att endast trafik från din AEM Cloud Service tillåts att flöda in i den externa tjänsten. Detta är utöver trafik från andra IP-adresser som tillåts.
+En dedikerad IP-adress kan förbättra säkerheten vid integrering med SaaS-leverantörer (som en CRM-leverantör) eller andra integreringar utanför AEM as a Cloud Service som erbjuder en tillåtelselista av IP-adresser. Genom att lägga till den dedikerade IP-adressen till tillåtelselista säkerställer det att endast trafik från AEM Cloud Service tillåts att flöda in i den externa tjänsten. Detta är utöver trafik från andra IP-adresser som tillåts.
 
-Samma dedikerade IP-adress används för alla program i organisationen Adobe och för alla miljöer i alla program. Det gäller både författare och publiceringstjänster.
+Samma dedikerade IP-adress används för alla program i organisationen Adobe och för alla miljöer i alla program. Det gäller både författartjänster och publiceringstjänster.
 
 Utan den dedikerade IP-adressfunktionen aktiverad flödar trafik från AEM as a Cloud Service genom en uppsättning IP-adresser som delas med andra AEM as a Cloud Service kunder.
 
@@ -222,11 +222,11 @@ Konfigurationen av IP-adressen för den dedikerade IP-adressen liknar den [flexi
 
 >[!TIP]
 >
->När du ska välja mellan flexibel portutgång och dedikerad IP-adress för utgångar bör du välja flexibel portutgång om en viss IP-adress inte krävs, eftersom Adobe kan optimera prestanda för flexibel portbelastningstrafik.
+>När du ska välja mellan flexibel portutgång och dedikerad IP-adress för utgångar väljer du flexibel portutgång om en specifik IP-adress inte krävs. Orsaken är att Adobe kan optimera prestanda för flexibel hamnutresetrafik.
 
 >[!NOTE]
 >
->Om du har fått en dedikerad IP-adress för utgångar före 2021.09.30 (dvs. före versionen från september 2021) har din dedikerade IP-funktion bara stöd för HTTP- och HTTPS-portar.
+>Om du har fått en dedikerad IP-adress för utgångar före 2021.09.30 (d.v.s. före versionen från september 2021) har din dedikerade IP-funktion bara stöd för HTTP- och HTTPS-portar.
 >
 >Detta inkluderar HTTP/1.1 och HTTP/2 vid kryptering. Dessutom kan en dedikerad slutpunkt bara kommunicera med vilket mål som helst via HTTP/HTTPS på port 80/443.
 
@@ -248,11 +248,11 @@ Konfigurationen av IP-adressen för den dedikerade IP-adressen liknar den [flexi
 
    ![Lägger till nätverksinfrastruktur](assets/advanced-networking-ui-network-infrastructure.png)
 
-1. I **Lägg till nätverksinfrastruktur** guide som startar, välj **Dedikerad IP-adress för utgångar** och regionen där den ska skapas från **Län** nedrullningsbar meny och tryck eller klicka **Fortsätt**.
+1. I **Lägg till nätverksinfrastruktur** guide som startar, välj **Dedikerad IP-adress för utgångar** och regionen där den ska skapas från **Län** nedrullningsbar meny och klicka **Fortsätt**.
 
    ![Konfigurerar IP-adress för dedikerad egress](assets/advanced-networking-ui-dedicated-egress.png)
 
-1. The **Bekräftelse** sammanfattar markeringen och nästa steg. Tryck eller klicka **Spara** för att skapa infrastrukturen.
+1. The **Bekräftelse** sammanfattar markeringen och nästa steg. Klicka **Spara** för att skapa infrastrukturen.
 
    ![Bekräfta konfiguration av flexibel portutgång](assets/advanced-networking-ui-dedicated-egress-confirmation.png)
 
@@ -276,7 +276,7 @@ När nätverksinfrastrukturen väl har anropats tar det oftast ca 15 minuter inn
 
 ### Trafikroutning {#dedicated-egress-ip-traffic-routing}
 
-Http- och https-trafik går genom en förkonfigurerad proxy, förutsatt att de använder Java-standardegenskaper för proxykonfigurationer.
+Http- och https-trafik går genom en förkonfigurerad proxy, förutsatt att de använder Java™-standardegenskaper för proxykonfigurationer.
 
 Ej http/s-trafik med destinationer via portar som deklarerats i `portForwards` parametern ska referera till en egenskap som kallas `AEM_PROXY_HOST`, tillsammans med den mappade porten. Till exempel:
 
@@ -318,21 +318,21 @@ DriverManager.getConnection("jdbc:mysql://" + System.getenv("AEM_PROXY_HOST") + 
   </tr>
   <tr>
     <td></td>
-    <td>Via http-proxykonfiguration, konfigurerad som standard för http/s-trafik med Java HTTP-klientbibliotek</td>
+    <td>Via http-proxykonfiguration, konfigurerad som standard för http/s-trafik med Java™ HTTP-klientbibliotek</td>
     <td>Alla</td>
     <td>Genom den dedikerade IP-adressen för utgångar</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
-    <td>Ignorerar http-proxykonfiguration (t.ex. om den uttryckligen tagits bort från standard-Java HTTP-klientbiblioteket eller om ett Java-bibliotek som ignorerar standardproxykonfigurationen används)</td>
+    <td>Ignorerar http-proxykonfiguration (t.ex. om den uttryckligen tagits bort från standard-Java™ HTTP-klientbiblioteket eller om ett Java™-bibliotek som ignorerar standardproxykonfigurationen används)</td>
     <td>80 eller 443</td>
     <td>Genom de delade kluster-IP:n</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
-    <td>Ignorerar http-proxykonfiguration (t.ex. om den uttryckligen tagits bort från standard-Java HTTP-klientbiblioteket eller om ett Java-bibliotek som ignorerar standardproxykonfigurationen används)</td>
+    <td>Ignorerar http-proxykonfiguration (t.ex. om den uttryckligen tagits bort från standard-Java™ HTTP-klientbiblioteket eller om ett Java™-bibliotek som ignorerar standardproxykonfigurationen används)</td>
     <td>Portar utanför 80 eller 443</td>
     <td>Blockerad</td>
     <td></td>
@@ -356,7 +356,7 @@ DriverManager.getConnection("jdbc:mysql://" + System.getenv("AEM_PROXY_HOST") + 
 
 ### Funktionsanvändning {#feature-usage}
 
-Funktionen är kompatibel med Java-kod eller bibliotek som resulterar i utgående trafik, förutsatt att de använder Java-standardegenskaper för proxykonfigurationer. I praktiken bör detta omfatta de vanligaste biblioteken.
+Funktionen är kompatibel med Java™-kod eller bibliotek som resulterar i utgående trafik, förutsatt att de använder Java™-standardegenskaper för proxykonfigurationer. I praktiken bör detta omfatta de vanligaste biblioteken.
 
 Nedan visas ett kodexempel:
 
@@ -374,9 +374,9 @@ public JSONObject getJsonObject(String relativePath, String queryString) throws 
 }
 ```
 
-Vissa bibliotek kräver explicit konfiguration för att använda Java-standardegenskaper för proxykonfigurationer.
+Vissa bibliotek kräver explicit konfiguration för att använda Java™-standardegenskaper för proxykonfigurationer.
 
-Ett exempel med Apache HttpClient, som kräver explicita anrop till
+Ett exempel med Apache HttpClient som kräver explicita anrop till
 [`HttpClientBuilder.useSystemProperties()`](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html) eller använda
 [`HttpClients.createSystem()`](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClients.html#createSystem()):
 
@@ -396,17 +396,17 @@ public JSONObject getJsonObject(String relativePath, String queryString) throws 
 
 ### Felsökningsöverväganden {#debugging-considerations}
 
-Kontrollera loggarna i måltjänsten om de är tillgängliga för att verifiera att trafiken faktiskt är utgående från den förväntade dedikerade IP-adressen. I annat fall kan det vara praktiskt att ringa ut till en felsökningstjänst som [https://ifconfig.me/IP](https://ifconfig.me/IP), som returnerar den anropande IP-adressen.
+Kontrollera loggarna i måltjänsten om de är tillgängliga för att verifiera att trafiken faktiskt är utgående från den förväntade dedikerade IP-adressen. I annat fall kan det vara praktiskt att ringa ut till en felsökningstjänst som [http://ifconfig.me/ip](http://ifconfig.me/ip), som returnerar den anropande IP-adressen.
 
 ## VPN (Virtual Private Network) {#vpn}
 
 Med ett VPN kan du ansluta till en lokal infrastruktur eller ett datacenter från författaren, publiceringen eller förhandsgranskningsinstanserna. Detta kan till exempel vara användbart för att skydda åtkomsten till en databas. Det gör det även möjligt att ansluta till SaaS-leverantörer, t.ex. en CRM-leverantör som stöder VPN eller ansluter från ett företagsnätverk till AEM as a Cloud Service författare, förhandsgranskning eller publiceringsinstans.
 
-De flesta VPN-enheter med IPSec-teknik stöds. Läs informationen i **RouteBased configuration instructions** kolumn i [den här listan över enheter.](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices#devicetable) Konfigurera enheten enligt beskrivningen i tabellen.
+De flesta VPN-enheter med IPSec-teknik stöds. Läs informationen i **RouteBased configuration instructions** kolumn i [den här listan över enheter.](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices#devicetable) Konfigurera enheten enligt beskrivningen i tabellen.
 
 >[!NOTE]
 >
->Observera följande begränsningar för VPN-infrastrukturen:
+>Följande begränsningar gäller för en VPN-infrastruktur:
 >
 >* Stödet är begränsat till en VPN-anslutning
 >* Splunk-vidarebefordran är inte möjlig via en VPN-anslutning.
@@ -422,39 +422,39 @@ De flesta VPN-enheter med IPSec-teknik stöds. Läs informationen i **RouteBased
 
    ![Lägger till nätverksinfrastruktur](assets/advanced-networking-ui-network-infrastructure.png)
 
-1. I **Lägg till nätverksinfrastruktur** guide som startar, välj **Virtuellt privat nätverk** och tillhandahålla nödvändig information innan man knackar eller klickar **Fortsätt**.
+1. I **Lägg till nätverksinfrastruktur** guide som startar, välj **Virtuellt privat nätverk** och ange nödvändig information innan du klickar **Fortsätt**.
 
    * **Län** - Detta är den region där infrastruktur bör skapas.
-   * **Adressutrymme** - Adressutrymmet kan bara vara en/26 CIDR (64 IP-adresser) eller ett större IP-intervall på ditt eget space.
+   * **Adressutrymme** - Adressutrymmet kan bara vara en/26 CIDR (64 IP-adresser) eller ett större IP-intervall i ditt eget utrymme.
       * Det här värdet kan inte ändras senare.
    * **DNS-information** - Det här är en lista över fjärr-DNS-matchare.
       * Tryck `Enter` efter att en DNS-serveradress har angetts för att lägga till en annan.
-      * Tryck eller klicka på `X` efter en adress att ta bort.
+      * Klicka på `X` efter en adress att ta bort.
    * **Delad nyckel** - Det här är din i förväg delade VPN-nyckel.
-      * Välj **Visa delad nyckel** för att visa nyckeln för att dubbelkontrollera dess värde.
+      * Välj **Visa delad nyckel** för att visa nyckeln så att du kan dubbelkontrollera dess värde.
 
    ![Konfigurerar vpn](assets/advanced-networking-ui-vpn.png)
 
-1. På **Anslutningar** -fliken i guiden, ange en **Anslutningsnamn** för att identifiera din VPN-anslutning och trycka eller klicka **Lägg till anslutning**.
+1. På **Anslutningar** -fliken i guiden, ange en **Anslutningsnamn** för att identifiera din VPN-anslutning och klicka **Lägg till anslutning**.
 
    ![Lägg till anslutning](assets/advanced-networking-ui-vpn-add-connection.png)
 
-1. I **Lägg till anslutning** definierar du din VPN-anslutning och trycker eller klickar på **Spara**.
+1. I **Lägg till anslutning** definierar du din VPN-anslutning och klickar sedan på **Spara**.
 
    * **Anslutningsnamn** - Detta är ett beskrivande namn på VPN-anslutningen, som du angav i föregående steg och som kan uppdateras här.
    * **Adress** - Detta är VPN-enhetens IP-adress.
    * **Adressutrymme** - Detta är IP-adressintervallen som ska dirigeras via VPN.
       * Tryck `Enter` när du har angett ett intervall för att lägga till ett annat.
-      * Tryck eller klicka på `X` efter ett intervall för att ta bort det.
+      * Klicka på `X` efter ett intervall för att ta bort det.
    * **IP-säkerhetsprincip** - Justera från standardvärdena efter behov
 
    ![Lägga till en VPN-anslutning](assets/advanced-networking-ui-vpn-adding-connection.png)
 
-1. Dialogrutan stängs och du återgår till **Anslutningar** i guiden. Tryck eller klicka **Fortsätt**.
+1. Dialogrutan stängs och du återgår till **Anslutningar** i guiden. Klicka **Fortsätt**.
 
    ![En VPN-anslutning läggs till](assets/advanced-networking-ui-vpn-connection-added.png)
 
-1. The **Bekräftelse** sammanfattar markeringen och nästa steg. Tryck eller klicka **Spara** för att skapa infrastrukturen.
+1. The **Bekräftelse** sammanfattar markeringen och nästa steg. Klicka **Spara** för att skapa infrastrukturen.
 
    ![Bekräfta konfiguration av flexibel portutgång](assets/advanced-networking-ui-vpn-confirm.png)
 
@@ -462,9 +462,9 @@ En ny post visas under **Nätverksinfrastruktur** på sidopanelen med uppgifter 
 
 ### API-konfiguration {#configuring-vpn-api}
 
-POSTEN `/program/<programId>/networkInfrastructures` slutpunkten anropas och skickar en nyttolast med konfigurationsinformation, inklusive: värdet för **vpn** för `kind` parameter, region, adressutrymme (lista med CIDR - observera att detta inte kan ändras senare), DNS-matchare (för att matcha namn i nätverket) och VPN-anslutningsinformation som gatewaykonfiguration, delad VPN-nyckel och IP-säkerhetsprincipen. Slutpunkten svarar med `network_id`och annan information, inklusive status.
+POSTEN `/program/<programId>/networkInfrastructures` slutpunkten anropas. Den skickar en nyttolast med konfigurationsinformation. Denna information innehåller värdet av **vpn** för `kind` parameter, region, adressutrymme (lista med CIDR - observera att detta inte kan ändras senare), DNS-matchare (för att matcha namn i nätverket). Den innehåller även VPN-anslutningsinformation som gatewaykonfiguration, delad VPN-nyckel och IP-säkerhetsprincipen. Slutpunkten svarar med `network_id`och annan information, inklusive status.
 
-När det anropas tar det normalt mellan 45 och 60 minuter innan nätverksinfrastrukturen etableras. API:ts GET-metod kan anropas för att returnera den aktuella statusen, som så småningom kommer att ändras `creating` till `ready`. Läs API-dokumentationen för alla lägen.
+När den anropats tar det oftast från 45 till 60 minuter innan nätverksinfrastrukturen etableras. GET-metoden i API kan anropas för att returnera statusen, som så småningom kommer från `creating` till `ready`. Läs API-dokumentationen för alla lägen.
 
 >[!TIP]
 >
@@ -508,21 +508,21 @@ Tabellen nedan beskriver trafikdirigering.
   </tr>
   <tr>
     <td></td>
-    <td>Om IP-värdet faller inom <i>VPN-gateway-adress</i> utrymme och genom http-proxykonfiguration (konfigurerad som standard för http/s-trafik med Java HTTP-klientbibliotek som standard)</td>
+    <td>Om IP-värdet faller inom <i>VPN-gateway-adress</i> utrymme och genom http-proxykonfiguration (konfigurerad som standard för http/s-trafik med Java™ HTTP-klientbibliotek som standard)</td>
     <td>Alla</td>
     <td>Via VPN</td>
     <td><code>10.0.0.1:443</code><br>Det kan också vara ett värdnamn.</td>
   </tr>
   <tr>
     <td></td>
-    <td>Om IP-adressen inte faller inom <i>Adressutrymme för VPN-gateway</i> och via http-proxykonfiguration (konfigurerad som standard för http/s-trafik med Java HTTP-klientbibliotek som standard)</td>
+    <td>Om IP-adressen inte faller inom <i>Adressutrymme för VPN-gateway</i> och via http-proxykonfiguration (konfigurerad som standard för http/s-trafik med Java™ HTTP-klientbibliotek som standard)</td>
     <td>Alla</td>
     <td>Genom den dedikerade IP-adressen för utgångar</td>
     <td></td>
   </tr>
   <tr>
     <td></td>
-    <td>Ignorerar http-proxykonfiguration (t.ex. om den uttryckligen tagits bort från standard-Java HTTP-klientbiblioteket eller om Java-biblioteket som ignorerar standardproxykonfigurationen används)
+    <td>Ignorerar http-proxykonfiguration (t.ex. om den uttryckligen tagits bort från standard-Java™ HTTP-klientbiblioteket eller om Java™-biblioteket som ignorerar standardproxykonfigurationen används)
 </td>
     <td>80 eller 443</td>
     <td>Genom de delade kluster-IP:n</td>
@@ -530,7 +530,7 @@ Tabellen nedan beskriver trafikdirigering.
   </tr>
   <tr>
     <td></td>
-    <td>Ignorerar http-proxykonfiguration (t.ex. om den uttryckligen tagits bort från standard-Java HTTP-klientbiblioteket eller om Java-biblioteket som ignorerar standardproxykonfigurationen används)</td>
+    <td>Ignorerar http-proxykonfiguration (t.ex. om den uttryckligen tagits bort från standard-Java™ HTTP-klientbiblioteket eller om Java™-biblioteket som ignorerar standardproxykonfigurationen används)</td>
     <td>Portar utanför 80 eller 443</td>
     <td>Blockerad</td>
     <td></td>
@@ -586,7 +586,7 @@ Bilden nedan visar en visuell representation av en uppsättning domäner och ass
   </tr>
   <tr>
     <td><code>p{PROGRAM_ID}.{REGION}.inner.adobeaemcloud.net</code></td>
-    <td>IP-adressen för trafiken från den AEM sidan av VPN till din sida. Detta kan tillåtslista i konfigurationen för att säkerställa att anslutningar endast kan göras från AEM.</td>
+    <td>IP-adressen för trafiken från den AEM sidan av VPN till din sida. Detta kan tillåtslista i konfigurationen för att säkerställa att anslutningarna bara görs från AEM.</td>
     <td>Om du vill tillåta VPN-åtkomst till AEM bör du konfigurera DNS-poster för CNAME så att de mappar din anpassade domän och/eller <code>author-p{PROGRAM_ID}-e{ENVIRONMENT_ID}.adobeaemcloud.com</code> och/eller <code>publish-p{PROGRAM_ID}-e{ENVIRONMENT_ID}.adobeaemcloud.com</code> till detta.</td>
   </tr>
 </tbody>
@@ -596,7 +596,7 @@ Bilden nedan visar en visuell representation av en uppsättning domäner och ass
 
 Om du bara vill tillåta VPN-åtkomst till AEM kan tillåtelselista konfigureras i Cloud Manager så att endast IP-adressen som definieras av `p{PROGRAM_ID}.external.adobeaemcloud.com` får tala med miljön. Detta kan göras på samma sätt som andra IP-baserade tillåtelselista i Cloud Manager.
 
-Om reglerna måste vara sökvägsbaserade använder du http-standarddirektiv på dispatchernivå för att neka eller tillåta vissa IP-adresser. De bör se till att de önskade sökvägarna inte heller är tillgängliga vid CDN så att begäran alltid kommer till ursprungsläget.
+Om reglerna måste vara sökvägsbaserade kan du använda http-standarddirektiv på Dispatcher-nivå för att neka eller tillåta vissa IP-adresser. De bör se till att de önskade sökvägarna inte heller är tillgängliga vid CDN så att begäran alltid kommer till ursprungsläget.
 
 #### Exempel på Httpd-konfiguration {#httpd-example}
 
@@ -609,9 +609,9 @@ Header always set Cache-Control private
 
 ## Aktivera avancerade nätverkskonfigurationer i miljöer {#enabling}
 
-När du har konfigurerat ett avancerat nätverksalternativ för ett program, oavsett om [Flexibel hamnutgång.](#flexible-port-egress) [IP-adress för dedikerad egress,](#dedicated-egress-ip-address) eller [VPN,](#vpn) för att kunna använda den måste du aktivera den på miljönivå.
+När du har konfigurerat ett avancerat nätverksalternativ för ett program, oavsett om [flexibel portutgång](#flexible-port-egress), [dedikerad IP-adress för egress](#dedicated-egress-ip-address), eller [VPN](#vpn)måste du aktivera den på miljönivå för att kunna använda den.
 
-När du aktiverar en avancerad nätverkskonfiguration för en miljö kan du aktivera valfri portvidarebefordran och icke-proxyvärdar. Parametrar kan konfigureras per miljö för att ge flexibilitet.
+När du aktiverar en avancerad nätverkskonfiguration för en miljö kan du även aktivera valfri portvidarebefordring och icke-proxyvärdar. Parametrar kan konfigureras per miljö för att ge flexibilitet.
 
 * **Portvidarebefordran** - regler för portvidarebefordran ska deklareras för alla andra destinationsportar än 80/443, men bara om inte http- eller https-protokoll används.
    * Regler för portvidarebefordran definieras genom att ange uppsättningen målvärdar (namn eller IP och portar).
@@ -621,7 +621,7 @@ När du aktiverar en avancerad nätverkskonfiguration för en miljö kan du akti
 
 * **Icke-proxyvärdar** - Med icke-proxyvärdar kan du deklarera en uppsättning värdar som ska dirigeras via ett delat IP-adressintervall i stället för den dedikerade IP-adressen.
    * Detta kan vara användbart eftersom trafikutjämning via delade IP-adresser kan optimeras ytterligare.
-   * Värdar som inte är proxyvärdar är bara tillgängliga för dedikerad IP-adress och avancerade VPN-nätverkstyper.
+   * Värdar som inte är proxyservrar är bara tillgängliga för dedikerade IP-adresser och avancerade VPN-nätverkstyper.
 
 >[!NOTE]
 >
@@ -633,30 +633,30 @@ När du aktiverar en avancerad nätverkskonfiguration för en miljö kan du akti
 
 1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du programmet.
 
-1. Från **Programöversikt** sida, navigera till **Miljö** och välj den miljö där du vill aktivera den avancerade nätverkskonfigurationen under **Miljö** i den vänstra panelen. Välj sedan **Avancerad nätverkskonfiguration** -fliken i den valda miljön och tryck eller klicka **Aktivera nätverksinfrastruktur**.
+1. Från **Programöversikt** sida, navigera till **Miljö** och välj den miljö där du vill aktivera den avancerade nätverkskonfigurationen under **Miljö** i den vänstra panelen. Välj sedan **Avancerad nätverkskonfiguration** fliken för den valda miljön och klicka på **Aktivera nätverksinfrastruktur**.
 
-   ![Välja miljö för att aktivera avancerat nätverk](assets/advanced-networking-ui-enable-environments.png)
+   ![Välja miljö så att du kan aktivera avancerade nätverk](assets/advanced-networking-ui-enable-environments.png)
 
 1. The **Konfigurera avancerat nätverk** öppnas.
 
-1. På **Icke-proxyvärdar** för dedikerade IP-adresser för utgångar och VPN-adresser kan du välja att definiera en uppsättning värdar som ska dirigeras via ett delat IP-adressintervall i stället för den dedikerade IP-adressen genom att ange värdnamnet i **Icke-proxyvärd** fält och knacka eller klicka **Lägg till**.
+1. På **Värdar som inte är proxyservrar** för dedikerade IP-adresser för utgångar och VPN:er kan du välja att definiera en uppsättning värdar. Dessa definierade värdar ska dirigeras via ett delat IP-adressintervall i stället för den dedikerade IP-adressen, genom att ange värdnamnet i **Värd som inte är proxyvärd** fält och klicka **Lägg till**.
 
    * Värden läggs till i listan över värdar på fliken.
    * Upprepa det här steget om du vill lägga till flera värdar.
-   * Tryck eller klicka på X till höger om raden för att ta bort en värd.
+   * Klicka på X till höger om raden om du vill ta bort en värd.
    * Den här fliken är inte tillgänglig för flexibla portutgångskonfigurationer.
 
    ![Lägga till värdar som inte är proxyservrar](assets/advanced-networking-ui-enable-non-proxy-hosts.png)
 
-1. På **Portvidarebefordran** kan du även definiera regler för portvidarebefordran för andra destinationsportar än 80/443 om du inte använder HTTP eller HTTPS. Ange en **Namn**, **Portutrustning** och **Portmål** och trycka eller klicka **Lägg till**.
+1. På **Portvidarebefordran** kan du även definiera regler för portvidarebefordran för andra destinationsportar än 80/443 om du inte använder HTTP eller HTTPS. Ange en **Namn**, **Portutrustning** och **Portmål** och klicka **Lägg till**.
 
    * Regeln läggs till i listan med regler på fliken.
    * Upprepa det här steget om du vill lägga till flera regler.
-   * Tryck eller klicka på X till höger om raden för att ta bort en regel.
+   * Klicka på X till höger om raden om du vill ta bort en regel.
 
    ![Definiera valfri port framåt](assets/advanced-networking-ui-port-forwards.png)
 
-1. Tryck eller klicka **Spara** i dialogrutan för att tillämpa konfigurationen på miljön.
+1. Klicka **Spara** i dialogrutan så att du kan använda konfigurationen i miljön.
 
 Den avancerade nätverkskonfigurationen används i den valda miljön. Tillbaka till **Miljö** kan du se information om konfigurationen som används i den valda miljön och deras status.
 
@@ -666,7 +666,7 @@ Den avancerade nätverkskonfigurationen används i den valda miljön. Tillbaka t
 
 Om du vill aktivera en avancerad nätverkskonfiguration för en miljö `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` slutpunkten måste anropas per miljö.
 
-API:t bör svara på bara några sekunder, vilket anger statusen `updating` och efter cirka 10 minuter visar ett anrop till Cloud Managers miljöslutpunkt statusen för GET `ready`, vilket anger att uppdateringen av miljön har tillämpats.
+API:t bör svara på bara några sekunder, vilket anger statusen `updating`. Efter cirka 10 minuter visas statusen för ett anrop till Cloud Managers GET-slutpunkt `ready`, vilket anger att uppdateringen av miljön tillämpas.
 
 Portvidarebefordringsregler per miljö kan uppdateras genom att anropa `PUT /program/{programId}/environment/{environmentId}/advancedNetworking` slutpunkt och inkludera hela uppsättningen konfigurationsparametrar i stället för en delmängd.
 
@@ -680,7 +680,7 @@ Dedikerad IP-adress för utgångar och avancerade VPN-nätverkstyper stöder en 
 
 ## Redigera och ta bort avancerade nätverkskonfigurationer i miljöer {#editing-deleting-environments}
 
-Efter [möjliggör avancerad nätverkskonfiguration för miljöer,](#enabling) du kan uppdatera informationen om dessa konfigurationer eller ta bort dem.
+Efter [möjliggör avancerade nätverkskonfigurationer för miljöer,](#enabling) du kan uppdatera informationen om dessa konfigurationer eller ta bort dem.
 
 >[!NOTE]
 >
@@ -692,16 +692,16 @@ Efter [möjliggör avancerad nätverkskonfiguration för miljöer,](#enabling) d
 
 1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du programmet.
 
-1. Från **Programöversikt** sida, navigera till **Miljö** och välj den miljö där du vill aktivera den avancerade nätverkskonfigurationen under **Miljö** i den vänstra panelen. Välj sedan **Avancerad nätverkskonfiguration** i den valda miljön och tryck eller klicka på ellipsknappen.
+1. Från **Programöversikt** sida, navigera till **Miljö** och välj den miljö där du vill aktivera den avancerade nätverkskonfigurationen under **Miljö** i den vänstra panelen. Välj sedan **Avancerad nätverkskonfiguration** -fliken i den valda miljön och klicka på ellipsknappen.
 
    ![Välja redigering eller borttagning av avancerade nätverk på programnivå](assets/advanced-networking-ui-edit-delete.png)
 
-1. I ellipsmenyn väljer du antingen **Redigera** eller **Ta bort**.
+1. På ellipsmenyn väljer du antingen **Redigera** eller **Ta bort**.
 
-   * Om du väljer **Redigera**, uppdatera informationen enligt stegen i föregående avsnitt, [Aktivera användning av användargränssnittet,](#enabling-ui) och trycka eller klicka **Spara**.
+   * Om du väljer **Redigera**, uppdatera informationen enligt stegen i föregående avsnitt, [Aktivera användning av användargränssnittet,](#enabling-ui) och klicka **Spara**.
    * Om du väljer **Ta bort**, bekräfta borttagningen i dialogrutan **Ta bort nätverkskonfiguration** dialogruta med **Ta bort** eller avbryta med **Avbryt**.
 
-Ändringarna kommer att återspeglas på **Miljö** -fliken.
+Ändringarna återspeglas på **Miljö** -fliken.
 
 ### Redigera eller ta bort med API:t {#editing-api}
 
@@ -717,9 +717,9 @@ När nätverksinfrastrukturen har skapats för ett program kan endast begränsad
 
 >[!NOTE]
 >
->Observera följande begränsningar för redigering och borttagning av nätverksinfrastruktur:
+>Följande begränsningar gäller redigering och borttagning av nätverksinfrastruktur:
 >
->* Borttagningen tar bara bort infrastrukturen om alla miljöer har sina avancerade nätverk inaktiverade.
+>* Ta bort tar bara bort infrastrukturen om alla miljöer har sina avancerade nätverk inaktiverade.
 >* Du kan inte redigera nätverksinfrastrukturen om den har statusen **Skapar**, **Uppdaterar**, eller **Tar bort**.
 >* Endast VPN-infrastrukturen för avancerad nätverksinfrastruktur kan redigeras när den har skapats och sedan endast begränsade fält.
 >* Av säkerhetsskäl är **Delad nyckel** måste alltid anges när du redigerar en avancerad VPN-nätverksinfrastruktur, även om du inte redigerar själva nyckeln.
@@ -730,17 +730,17 @@ När nätverksinfrastrukturen har skapats för ett program kan endast begränsad
 
 1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du programmet.
 
-1. Från **Programöversikt** sida, navigera till **Miljö** och markera **Nätverksinfrastruktur** i den vänstra panelen. Tryck eller klicka sedan på ellipsknappen bredvid den infrastruktur du vill ta bort.
+1. Från **Programöversikt** sida, navigera till **Miljö** och markera **Nätverksinfrastruktur** i den vänstra panelen. Klicka sedan på ellipsknappen bredvid den infrastruktur som du vill ta bort.
 
    ![Välja redigering eller borttagning av avancerade nätverk på programnivå](assets/advanced-networking-ui-delete-infrastructure.png)
 
-1. I ellipsmenyn väljer du antingen **Redigera** eller **Ta bort**.
+1. På ellipsmenyn väljer du antingen **Redigera** eller **Ta bort**.
 
 1. Om du väljer **Redigera**, **Redigera nätverksinfrastruktur** öppnas. Redigera efter behov och följ stegen som beskrivs när du skapar infrastrukturen.
 
 1. Om du väljer **Ta bort**, bekräfta borttagningen i dialogrutan **Ta bort nätverkskonfiguration** dialogruta med **Ta bort** eller avbryta med **Avbryt**.
 
-Ändringarna kommer att återspeglas på **Miljö** -fliken.
+Ändringarna återspeglas på **Miljö** -fliken.
 
 ### Redigera och ta bort med API:t {#delete-api}
 
@@ -748,9 +748,9 @@ Till **delete** nätverksinfrastrukturen för ett program, anropa `DELETE /progr
 
 ## Ändra ett programs avancerade nätverksinfrastrukturtyp {#changing-program}
 
-Det är bara möjligt att ha en typ av avancerad nätverksinfrastruktur konfigurerad för ett program åt gången, antingen flexibel portutgång, dedikerad IP-adress för utgångar eller VPN.
+Det är bara möjligt att ha en typ av avancerad nätverksinfrastruktur konfigurerad för ett program åt gången. Den avancerade nätverksinfrastrukturen måste antingen ha flexibel portutgång, dedikerad IP-adress för utgångar eller VPN.
 
-Om du anser att du behöver en annan avancerad nätverksinfrastrukturtyp än den du redan har konfigurerat måste du ta bort den befintliga och skapa en ny. Följ den här proceduren:
+Om du bestämmer dig för att du behöver en annan avancerad nätverksinfrastrukturtyp än den du redan har konfigurerat, tar du bort den befintliga och skapar en annan. Gör följande:
 
 1. [Ta bort avancerade nätverk i alla miljöer.](#editing-deleting-environments)
 1. [Ta bort den avancerade nätverksinfrastrukturen.](#editing-deleting-program)
@@ -759,16 +759,16 @@ Om du anser att du behöver en annan avancerad nätverksinfrastrukturtyp än den
 
 >[!WARNING]
 >
-> Den här proceduren kommer att resultera i en driftstopp för avancerade nätverkstjänster mellan borttagning och återskapande
+> Den här proceduren resulterar i att avancerade nätverkstjänster kraschar mellan borttagning och återskapande.
 > Om driftsavbrott skulle få allvarliga konsekvenser för verksamheten kontaktar du kundsupport för att få hjälp med att beskriva vad som redan har skapats och orsaken till ändringen.
 
-## Avancerad nätverkskonfiguration för ytterligare publiceringsregioner {#advanced-networking-configuration-for-additional-publish-regions}
+## Avancerad nätverkskonfiguration för andra publiceringsregioner {#advanced-networking-configuration-for-additional-publish-regions}
 
-När ytterligare en region läggs till i en miljö som redan har avancerade nätverk konfigurerade, dirigeras trafik från den extra publiceringsregionen som matchar de avancerade nätverksreglerna som standard via den primära regionen. Om den primära regionen blir otillgänglig tas emellertid den avancerade nätverkstrafiken bort om avancerade nätverk inte har aktiverats i den extra regionen. Om du vill optimera fördröjningen och öka tillgängligheten om någon av regionerna skulle råka ut för ett driftstopp är det nödvändigt att aktivera avancerade nätverk för ytterligare publiceringsregioner. Två olika scenarier beskrivs i följande avsnitt.
+När ytterligare en region läggs till i en miljö som redan har avancerade nätverk konfigurerade, dirigeras trafik från den extra publiceringsregionen som matchar de avancerade nätverksreglerna genom den primära regionen som standard. Om den primära regionen blir otillgänglig tas emellertid den avancerade nätverkstrafiken bort om avancerade nätverk inte har aktiverats i den extra regionen. Om du vill optimera fördröjningen och öka tillgängligheten om någon av regionerna skulle råka ut för ett driftstopp är det nödvändigt att aktivera avancerade nätverk för de ytterligare publiceringsregionerna. Två olika scenarier beskrivs i följande avsnitt.
 
 >[!NOTE]
 >
->Alla regioner har samma [konfiguration för avancerat nätverk](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Environment-Advanced-Networking-Configuration)så det är inte möjligt att dirigera trafik till olika destinationer baserat på den region där trafiken försvinner.
+>Alla regioner delar [konfiguration för avancerat nätverk](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Environment-Advanced-Networking-Configuration)så det är inte möjligt att dirigera trafik till olika destinationer baserat på den region där trafiken försvinner.
 
 ### Dedikerade IP-adresser för Egress {#additional-publish-regions-dedicated-egress}
 
@@ -776,7 +776,7 @@ När ytterligare en region läggs till i en miljö som redan har avancerade nät
 
 Om en avancerad nätverkskonfiguration redan är aktiverad i den primära regionen gör du så här:
 
-1. Om du har låst din infrastruktur så att den dedikerade IP-adressen för AEM är tillåten, bör du tillfälligt inaktivera eventuella spärrregler i den infrastrukturen. Om detta inte görs finns det en kort period då förfrågningar från den nya regionens IP-adresser nekas av din egen infrastruktur. Detta är inte nödvändigt om du har låst din infrastruktur med ett FQDN (FullyQualified Domain Name), (`p1234.external.adobeaemcloud.com`, till exempel) eftersom alla AEM regioner utlöser avancerad nätverkstrafik från samma FQDN
+1. Om du har låst din infrastruktur så att den dedikerade AEM IP-adressen är tillåtslista kan du tillfälligt inaktivera eventuella spärrregler i den infrastrukturen. Om detta inte görs finns det en kort period då förfrågningar från den nya regionens IP-adresser nekas av din egen infrastruktur. Detta är inte nödvändigt om du har låst din infrastruktur med ett FQDN (FullyQualified Domain Name), (`p1234.external.adobeaemcloud.com`, till exempel) eftersom alla AEM regioner utlöser avancerad nätverkstrafik från samma FQDN
 1. Skapa en nätverksinfrastruktur som omfattar programmet för den sekundära regionen genom ett POST-anrop till API:t för att skapa nätverksinfrastruktur i Cloud Manager, vilket beskrivs i avancerad nätverksdokumentation. Den enda skillnaden i nyttolastens JSON-konfiguration i förhållande till den primära regionen är egenskapen region
 1. Om din infrastruktur måste låsas av IP för att tillåta AEM trafik lägger du till IP-adresser som matchar `p1234.external.adobeaemcloud.com`. Det ska finnas en per region.
 
@@ -791,4 +791,4 @@ Proceduren liknar oftast de föregående instruktionerna. Om produktionsmiljön 
 
 #### VPN {#vpn-regions}
 
-Proceduren är nästan identisk med de dedikerade IP-adressinstruktionerna för utgångar. Den enda skillnaden är att förutom att egenskapen region konfigureras på ett annat sätt än den primära regionen är `connections.gateway` -fältet kan konfigureras för att dirigera till en annan VPN-slutpunkt som hanteras av organisationen, kanske geografiskt närmare den nya regionen.
+Proceduren är nästan identisk med de dedikerade IP-adressinstruktionerna för utgångar. Den enda skillnaden är att förutom att egenskapen region konfigureras på ett annat sätt än den primära regionen är `connections.gateway` -fältet kan konfigureras om så önskas. Konfigurationen kan dirigera till en annan VPN-slutpunkt som hanteras av din organisation, geografiskt närmare den nya regionen.
