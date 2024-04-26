@@ -2,7 +2,7 @@
 title: Modelldefinitioner, fält och komponenttyper
 description: Lär dig mer om fält och de komponenttyper som den universella redigeraren kan redigera i egenskapsfältet med exempel. Lär dig hur du kan mäta din egen app genom att skapa en modelldefinition och länka till komponenten.
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
-source-git-commit: 11a244b7dd4810fbfec92b3effc362102e7322dc
+source-git-commit: 9f0a3bf5c8d839fa2ab6744c6fa7f97cc5fe8684
 workflow-type: tm+mt
 source-wordcount: '1144'
 ht-degree: 1%
@@ -830,4 +830,3 @@ Text tillåter en enda rad med textinmatning.  Det innehåller ytterligare valid
 ![Skärmbild av textkomponenttyp](assets/component-types/simpletext.png)
 
 >[!ENDTABS]
-

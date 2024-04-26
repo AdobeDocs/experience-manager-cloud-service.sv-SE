@@ -2,9 +2,9 @@
 title: Introduktion till Universal Editor
 description: Se hur den universella redigeraren möjliggör WYSIWYG-redigering av headless och headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
 exl-id: d4fc2384-a0f5-4a6f-9572-62749786be4c
-source-git-commit: bbcf44c585e98f75c558d06edc3c1c030adad2cf
+source-git-commit: 2ad5920d0b3d8a3ad780a2cb0f28b7e6f9e596ab
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '1066'
 ht-degree: 0%
 
 ---
@@ -79,6 +79,16 @@ En marknadsförare vill skapa innehåll utan att behöva bry sig om layouten, s�
 En marknadsförare vill skapa innehåll som är skräddarsytt efter layouten i ett visst sammanhang för att leverera en exceptionell upplevelse.
 
 * Det underliggande jobbet är att på ett övertygande sätt få kontakt med läsarna.
+
+## Begränsningar {#limitations}
+
+När du utforskar den universella redigeraren och fortsätter implementera den i dina egna projekt bör du tänka på följande begränsningar.
+
+* Högst 25 AEM (innehållsfragment, sidor, upplevelsefragment, resurser osv.) ska vara referenser som instrumentering på en enda sida.
+* AEM as a Cloud Service är den enda AEM som stöds.
+* AEM as a Cloud Service release `2023.8.13099` eller högre krävs.
+* Innehållsförfattare måste ha sina egna Experience Cloud-konton.
+* Chrome och Edge stöds av webbläsarna
 
 ## Ytterligare resurser {#additional-resources}
 
