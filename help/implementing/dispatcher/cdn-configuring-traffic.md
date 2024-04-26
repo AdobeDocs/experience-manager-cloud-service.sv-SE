@@ -3,30 +3,27 @@ title: Konfigurera trafik vid leveransnätverket
 description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler och filter i en konfigurationsfil och distribuera dem till CDN med hjälp av Cloud Manager Configuration Pipeline.
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
-source-git-commit: 1e2d147aec53fc0f5be53571078ccebdda63c819
+source-git-commit: f9eeafbf128b4581c983e19bcd5ad2294a5e3a9a
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1199'
 ht-degree: 0%
 
 ---
 
 # Konfigurera trafik vid leveransnätverket {#cdn-configuring-cloud}
 
->[!NOTE]
->Den här funktionen är ännu inte allmänt tillgänglig. Om du vill gå med i programmet för tidig adopter skickar du e-post `aemcs-cdn-config-adopter@adobe.com` och beskriva hur ni använder er.
-
 AEM as a Cloud Service har en samling funktioner som kan konfigureras på [CDN som hanteras av Adobe](/help/implementing/dispatcher/cdn.md#aem-managed-cdn) lager som ändrar typen av inkommande eller utgående svar. Följande regler, som beskrivs i detalj på den här sidan, kan deklareras för att uppnå följande beteende:
 
 * [Begär omformningar](#request-transformations) - ändra aspekter av inkommande begäranden, inklusive rubriker, sökvägar och parametrar.
 * [Svarsomvandlingar](#response-transformations) - ändra rubriker som är på väg tillbaka till klienten (till exempel en webbläsare).
-* [Redirectors på klientsidan](#client-side-redirectors) - utlöser en omdirigering till webbläsaren.
+* [Omdirigeringar på klientsidan](#client-side-redirectors) - utlöser en omdirigering till webbläsaren. Den här funktionen är ännu inte tillgänglig för GA, men för tidiga användare.
 * [Väljare för ursprung](#origin-selectors) - proxy till en annan bakgrund.
 
 CDN kan även konfigurera trafikfilterregler (inklusive WAF), som styr vilken trafik som tillåts eller nekas av CDN. Den här funktionen har redan släppts och du kan läsa mer om den i [Trafikfilterregler inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md) sida.
 
 Om CDN inte kan kontakta sitt ursprung kan du dessutom skriva en regel som refererar till en egen felsida (som sedan återges). Läs mer om detta i [Konfigurera CDN-felsidor](/help/implementing/dispatcher/cdn-error-pages.md) artikel.
 
-Alla dessa regler, som deklareras i en konfigurationsfil i källkontrollen, distribueras med [Konfigurationspipeline för Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline). Tänk på att den sammanlagda storleken på konfigurationsfilen inte får överstiga 100 kB.
+Alla dessa regler, som deklareras i en konfigurationsfil i källkontrollen, distribueras med [Konfigurationspipeline för Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline). Tänk på att den kumulativa storleken på konfigurationsfilen, inklusive trafikfilterregler, inte får överstiga 100 kB.
 
 ## Utvärderingsordning {#order-of-evaluation}
 
@@ -38,14 +35,21 @@ De olika funktioner som nämns ovan utvärderas i följande sekvens:
 
 Innan du kan konfigurera trafik på leveransnätverket måste du göra följande:
 
-* Skapa först den här mapp- och filstrukturen i den översta mappen i Git-projektet:
+* Skapa den här mappen och filstrukturen i den översta mappen i Git-projektet:
 
 ```
 config/
      cdn.yaml
 ```
 
-* För det andra `cdn.yaml` konfigurationsfilen ska innehålla både metadata och reglerna som beskrivs i exemplen nedan.
+* The `cdn.yaml` konfigurationsfilen ska innehålla både metadata och reglerna som beskrivs i exemplen nedan. The `kind` parametern ska anges till `CDN` och versionen bör anges till schemaversionen, som för närvarande är `1`.
+
+* Skapa en riktad distributionskonfigurationspipeline i Cloud Manager. Se [konfigurera produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) och [konfigurera icke-produktionsrörledningar](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md).
+
+**Anteckningar**
+
+* De lokala lagringsplatserna stöder för närvarande inte konfigurationsflödet.
+* Du kan använda `yq` för att lokalt validera YAML-formateringen i konfigurationsfilen (till exempel `yq cdn.yaml`).
 
 ## Syntax {#configuration-syntax}
 
@@ -73,7 +77,7 @@ version: "1"
 metadata:
   envTypes: ["dev", "stage", "prod"]
 data:  
-  experimental_requestTransformations:
+  requestTransformations:
     removeMarketingParams: true
     rules:
       - name: set-header-rule
@@ -173,7 +177,7 @@ version: "1"
 metadata:
   envTypes: ["prod", "dev"]
 data:   
-  experimental_requestTransformations:
+  requestTransformations:
     rules:
       - name: set-variable-rule
         when:
@@ -184,7 +188,7 @@ data:
             var: some_var_name
             value: some_value
  
-  experimental_responseTransformations:
+  responseTransformations:
     rules:
       - name: set-response-header-while-variable
         when:
@@ -208,7 +212,7 @@ version: "1"
 metadata:
   envTypes: ["prod", "dev"]
 data:
-  experimental_responseTransformations:
+  responseTransformations:
     rules:
       - name: set-response-header-rule
         when:
@@ -262,7 +266,7 @@ version: "1"
 metadata:
   envTypes: ["dev"]
 data:
-  experimental_originSelectors:
+  originSelectors:
     rules:
       - name: example-com
         when: { reqProperty: path, like: /proxy-me* }
@@ -303,11 +307,16 @@ Anslutningar till originalen är endast SSL och använder port 443.
 | **forwardAuthorization** (valfritt, standardvärdet är false) | Om värdet är true skickas auktoriseringshuvudet från klientbegäran till serverdelen, annars tas auktoriseringshuvudet bort. |
 | **timeout** (valfritt, i sekunder är standardvärdet 60) | Antal sekunder som CDN ska vänta på att en backend-server ska leverera den första byten av en HTTP-svarstext. Det här värdet används också som en tidsgräns mellan byte till serverdelsservern. |
 
-## Redirectors på klientsidan {#client-side-redirectors}
+## Omdirigeringar på klientsidan {#client-side-redirectors}
+
+>[!NOTE]
+>Den här funktionen är ännu inte allmänt tillgänglig. Om du vill gå med i programmet för tidig adopter skickar du e-post `aemcs-cdn-config-adopter@adobe.com` och beskriva hur ni använder er.
 
 Du kan använda omdirigeringsregler på klientsidan för 301, 302 och liknande omdirigeringar på klientsidan. Om en regel matchar svarar CDN med en statusrad som innehåller statuskoden och meddelandet (till exempel HTTP/1.1 301 Flyttad permanent), samt platshuvuduppsättningen.
 
 Både absoluta och relativa platser med fasta värden tillåts.
+
+Tänk på att den kumulativa storleken på konfigurationsfilen, inklusive trafikfilterregler, inte får överstiga 100 kB.
 
 Konfigurationsexempel:
 

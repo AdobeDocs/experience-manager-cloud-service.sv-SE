@@ -1,46 +1,74 @@
 ---
-title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
-mini-toc-levels: 1
-exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 5817cc38aab00380256537c9d4a6fe3d431c7591
+title: Versionsinformation för 2024.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation för 2024.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
+source-git-commit: 5b7ae48ad9f11bb43ab32569dd3e5243f2abfb8e
 workflow-type: tm+mt
-source-wordcount: '1989'
+source-wordcount: '2268'
 ht-degree: 0%
 
 ---
 
-# Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
+# Versionsinformation 2024.3.0 för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
-I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) versionen av [!DNL Experience Manager] as a Cloud Service.
+I följande avsnitt beskrivs versionsinformationen för 2024.3.0-versionen av [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2021 eller 2022.
 >
->Ta en titt på [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om de kommande funktionsaktiviteterna för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) om de kommande funktionsaktiviteterna för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
->Se [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates) för information om dokumentationsuppdateringar som inte är direkt relaterade till en release.
+>Se [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html) för information om dokumentationsuppdateringar som inte är direkt relaterade till en release.
 
 ## Releasedatum {#release-date}
 
-Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2024.4.0) är 25 april 2024. Nästa version (2024.5.0) är planerad till 30 maj 2024.
+Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2024.3.0) är 11 april 2024. Nästa funktionsversion (2024.4.0) är planerad till 25 april 2024.
 
 ## Versionsinformation om underhåll {#maintenance}
 
 Du kan hitta den senaste underhållsreleasenumerationen [här](/help/release-notes/maintenance/latest.md).
 
-&lt;— ## Släpp video {#release-video}
+<!-- ## Release Video {#release-video}
 
-Titta på videon med versionsöversikten för april 2024 om du vill se en sammanfattning av funktioner som lagts till i version 2024.4.0:
+Have a look at the March 2024 Release Overview video for a summary of the features added in the 2024.3.0 release:
 
->[!VIDEO](https://video.tv.adobe.com/v/3428342?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3425864?quality=12)
 
-—>
+-->
 
 ## [!DNL Experience Manager Sites] som [!DNL Cloud Service] {#sites}
+
+### Nya funktioner i [!DNL Experience Manager Sites] {#sites-features}
+
+**AEM för Edge Delivery Services**
+
+AEM Sites kan nu användas som innehållskälla för Edge Delivery Services. Författarna hanterar sina webbplatser i AEM med den nya universella redigeraren med sammanhangsberoende webbverktyg. På så sätt kan företag bygga högpresterande webbsidor med Edge Delivery Services och samtidigt utnyttja AEM kraftfulla funktioner för innehållshantering.
+
+![AEM](/help/edge/assets/universal_editor_edge_delivery_services.png)
+
+Mer information finns i [dokumentation](/help/edge/overview.md) och se [AEM Gems - Komma igång med AEM och Edge Delivery Services](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/aem-gems-getting-started-with-aem-authoring-and-edge-delivery/m-p/652694#M43905)
+
+**Universell redigerare för Headless-implementeringar**
+
+Med Universell redigerare kan även fristående webbprogram använda samma intuitiva WYSIWYG-redigering som tidigare bara fanns på traditionella webbplatser. Innehållsskapare kan nu visuellt komponera layouter med Content Fragments på samma sätt som komponenter på sidor.
+
+Det som skiljer den universella redigeraren åt är dess förmåga att anpassa sig till olika webbarkitekturer, anpassa sig till både server- och klientåtergivning, bibehålla ramverksagnostiken och eliminera behovet av AEM. Det är enkelt att integrera befintliga webbprogram med den universella redigeringsfunktionen för redigering av innehåll, vilket i första hand kräver att utvecklarna lägger in specifika dataattribut i sina markeringar.
+
+Med den funktionen får den universella redigeraren en konsekvent redigeringsupplevelse, oavsett innehållsstruktur eller underliggande teknologi. Mer information finns i [Introduktion till Universal Editor](/help/implementing/universal-editor/introduction.md).
+
+**OpenAPI:er för innehållshantering för innehållsfragment och modeller**
+
+Utvecklare kan nu programmässigt interagera med innehållsfragment och Content Fragment-modeller och utföra CruD-åtgärder på dem med Content Management OpenAPI:er. Mer information finns i [API-dokumentation](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/)
+
+**Stöd för hantering av flera webbplatser för Experience Fragments**
+
+Stödet för hantering av flera webbplatser har utökats för mappstrukturer som lagrar upplevelsefragment, vilket gör det möjligt för användare att lansera en komplett innehållsstruktur med upplevelsefragment.
+
+**Jämför innehållsfragmentversioner**
+
+Med den nya Content Fragment Editor kan innehållsförfattare jämföra och visa skillnader mellan den aktuella versionen av ett innehållsfragment och en tidigare version.
 
 ### Tidiga Adobe-program {#sites-early-adopter}
 
@@ -58,35 +86,23 @@ Innehållsförfattare kan nu bläddra bland, visa och vidta åtgärder för bild
 
 ## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
 
-### Nya funktioner i resursvyn {#assets-view-new-features}
+### Nya funktioner i administrationsvyn {#admin-view}
 
+**Inbyggd integrering med Adobe Express**
 
-**Sammanhangsbaserad sökning**
+AEM Assets kan integreras direkt med Adobe Express, vilket gör att du kan komma åt material som lagras i AEM Assets direkt inifrån användargränssnittet i Adobe Expressen. Du kan placera innehåll som hanteras i AEM Assets på arbetsytan Express och sedan spara nytt eller redigerat innehåll i en AEM Assets-databas.
 
-Nu kan du också [sökresurser som är tillgängliga i databasen genom att definiera textmeddelanden](/help/assets/search-assets-view.md#contextual-search). Experience Manager Assets omvandlar automatiskt dessa textmeddelanden till sökfilter och visar sökresultaten. Du kan visa och ändra automatiska filter med hjälp av filterpanelen för att begränsa sökresultaten ytterligare.
+![Inkludera resurser från resurstillägg](/help/assets/assets/adobe-express-native-integration.png)
 
-![Sammanhangsbaserad sökning](/help/assets/assets/contextual-search-text-prompt1.png)
+**Förhandsgranska återgivningar för alla videotyper som stöds**
 
-**Snabba videoåtgärder**
+Experience Manager Assets genererar nu förhandsgranskningsåtergivningar av alla videotyper som stöds som standard utan att en bearbetningsprofilskonfiguration krävs.
 
-Experience Manager Assets innehåller nu [enkla och intuitiva videoredigeringsverktyg som bygger på Adobe Express](/help/assets/edit-videos-assets-view.md) för att öka återanvändning av innehåll och snabba upp innehållets hastighet. Redigeringsalternativen omfattar trimning, beskärning, storleksändring av en video och även konvertering av en MP4-fil till en GIF-fil.
+### Nya funktioner i resursvyn {#assets-view}
 
-![beskära video med Adobe Express](/help/assets/assets/adobe-express-crop-video.png)
+**Hantera behörigheter för samlingar**
 
-**Dynamiska renderingar**
-
-Nu kan du [visa och hämta dynamiska återgivningar (inklusive smarta beskärningar)](/help/assets/renditions.md) i Experience Manager Assets. Dynamiska återgivningar är anpassade versioner av bildresurser som skapats i realtid för att uppfylla specifika behov, som att ändra storlek på bilder baserat på enhetsupplösning eller beskära för att passa olika proportioner. Med dessa renderingar kan organisationer leverera personaliserade och optimerade upplevelser till olika målgruppsbehov.
-
-![Dynamiska renderingar](/help/assets/assets/preset_smart_crop.png)
-
-**Byt namn på plats för resurser och mappar**
-
-Experience Manager Assets erbjuder nu en förenklad användarupplevelse genom att tillhandahålla [möjlighet att byta namn på en resurs eller mapp med ett enda klick](/help/assets/manage-organize-assets-view.md).
-
-**Tilldela eller ta bort metadataformulär till flera mappar**
-
-Nu kan du [tilldela eller ta bort metadataformulär till flera mappar](/help/assets/metadata-assets-view.md#assign-metadata-form-to-a-folder).
-
+Med Assets Essentials kan administratörer hantera åtkomstnivåer för privata samlingar som är tillgängliga i databasen. Som administratör kan du skapa användargrupper och tilldela behörigheter till dessa grupper för att hantera åtkomstnivåer. Du kan även delegera behörighetshanteringsprivilegier till användargrupper.
 
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
@@ -97,28 +113,41 @@ Nu kan du [tilldela eller ta bort metadataformulär till flera mappar](/help/ass
 
 -->
 
+### Nya funktioner för AEM Forms {#forms-new-features}
+
+* **[Adobe Experience Manager Forms-Edge Delivery Services](/help/edge/docs/forms/overview.md)**: AEM Forms Edge Delivery Services är en sammansatt uppsättning tjänster som möjliggör en snabb utvecklingsmiljö där författare snabbt kan uppdatera, publicera och öppna nya formulär. Dessa tjänster ger enastående och slagkraftiga formulärupplevelser som skapar engagemang och konverteringar. Dessa blankettupplevelser är enkla att skapa och utveckla.
+
+  ![EDS Forms Features](/help/edge/assets/eds-forms-features.png)
+
+Med de här tjänsterna kan du:
+
+* Arbeta med flera innehållskällor på samma formulärwebbplats och använd de redigeringsverktyg du föredrar, som Microsoft Excel, Google Sheets eller Adaptiv Forms Editor.
+* Leverera digitala registreringsupplevelser som läser in och renderar snabbt och kontinuerligt formulärens prestanda med hjälp av effektiv användarövervakning (RUM).
+* Använd vanlig HTML, modern CSS och vanilj-JavaScript för att skapa exceptionella upplevelser och undvika den branta inlärningskurvan i ett specifikt ramverk.
+
+
 ### Nya funktioner i förhandsversionen för AEM Forms {#forms-pre-release}
 
 * **Förbättrad Visual Rule Editor för Core Component Based Adaptive Forms**: Den här versionen innebär en betydande uppgradering av den visuella regelredigeraren för adaptiva formulär baserade på kärnkomponenter. Den här versionen innebär en betydande uppgradering av den visuella regelredigeraren för adaptiva formulär baserade på kärnkomponenter. Uppdateringen fokuserar på att effektivisera interaktionen med anpassade funktioner, så att du kan skapa mer robusta och effektiva formulär.
 
   Nu kan du effektivisera anpassade funktionsinteraktioner genom att:
 
-   * [Använd nya kommentarer för att få tydligare funktionsdefinitioner](/help/forms/create-and-use-custom-functions.md#supported-javascript-annotations-for-custom-function).
-   * [Använda cachningsmekanismer för anpassade funktioner, vilket ger snabbare formulärprestanda](/help/forms/create-and-use-custom-functions.md#caching-support-for-custom-function).
-   * [Arbeta smidigt med globala objekt i anpassade funktioner](/help/forms/create-and-use-custom-functions.md#field-and-global-scope-objects-in-custom-functions).
-   * [Definiera och använda valfria parametrar i anpassade funktioner](/help/forms/create-and-use-custom-functions.md#parameter).
+   * Använd nya kommentarer för att få tydligare funktionsdefinitioner.
+   * Använd cachningsmekanismer för anpassade funktioner, vilket ger snabbare formulärprestanda.
+   * Arbeta smidigt med globala objekt i anpassade funktioner.
+   * Definiera och använda valfria parametrar i anpassade funktioner.
 
   Uppdateringen innehåller även följande förbättringar av regelredigeringsfunktionen. Du kan:
 
-   * Implementera kraftfulla [&quot;when-then-else&quot;](/help/forms/rule-editor-core-components.md#when) logik för villkorlig körning.
+   * Implementera kraftfull&quot;when-then-else&quot;-logik för villkorlig exekvering.
    * Utnyttja moderna JavaScript-funktioner som låt- och pilfunktioner (ES10-stöd).
    * Validera eller återställ inte bara fält, utan även hela paneler och formulär, vilket ger bättre kontroll över användarinteraktioner.
 
   Dessa förbättringar ger en mer intuitiv och kraftfull upplevelse när man skapar regler och anpassade funktioner i den visuella regelredigeraren.
 
-* **[Skapa flera versioner av ett adaptivt formulär](/help/forms/add-comments-annotations-versioning-adaptive-form-core-components.md)**: Nu kan du enkelt hantera varianter av befintliga formulär. Detta förenklar versionskontrollen och underlättar jämförelse för formuläroptimering, allt i ett enda smidigt arbetsflöde.
+* **Skapa flera versioner av ett adaptivt formulär**: Nu kan du enkelt hantera varianter av befintliga formulär. Detta förenklar versionskontrollen och underlättar jämförelse för formuläroptimering, allt i ett enda smidigt arbetsflöde.
 
-* **[Jämför adaptiv form](/help/forms/compare-forms.md)**: Du kan nu enkelt jämföra två formulär för att identifiera skillnader mellan två formulär. Det underlättar smidigt samarbete genom att teammedlemmarna kan jämföra revisioner och diskutera ändringar effektivt.
+* **Jämför adaptiv form**: Du kan nu enkelt jämföra två formulär för att identifiera skillnader mellan två formulär. Det underlättar smidigt samarbete genom att teammedlemmarna kan jämföra revisioner och diskutera ändringar effektivt.
 
 * **Hjälpmedelsförbättringar för komponent för flexibel signatur**: Den här uppdateringen förbättrar tillgängligheten avsevärt för komponenten Scribble Signature:
 
@@ -148,7 +177,7 @@ Denna uppdatering ger en mer heltäckande upplevelse för användare med funktio
 
   <br/> ![Adobe Workfront](/help/forms/assets/adobe-workfront.png) <br/> Med Adobe Workfront Fusion Connector kan du utforma arbetsflöden som aktiveras automatiskt när ett adaptivt formulär skickas in. Du kan till exempel förutse ett scenario där ett arbetsflöde initieras för att tilldela en viss person uppgiften att granska inskickade data, vilket gör det möjligt att godkänna eller avvisa en ansökan baserat på den information som hämtas via det anpassade formuläret. Denna smidiga integrering ökar effektiviteten och ger en ny nivå av automatisering i arbetsflödesprocesserna.|
 
-* **[Tilläggstjänsten Reader](/help/forms/aem-forms-cloud-service-communications-introduction.md#reader-extension-service)**: AEM Forms Communication API:er har Reader Extension Service där du kan lägga till funktioner som ifyllnad av formulär och kommentarer i vanliga PDF, vilket gör dem interaktiva för användare med kostnadsfria Adobe Reader.
+* **Tilläggstjänsten Reader**: AEM Forms Communication API:er har Reader Extension Service där du kan lägga till funktioner som ifyllnad av formulär och kommentarer i vanliga PDF, vilket gör dem interaktiva för användare med kostnadsfria Adobe Reader.
 
 * [Stöd för språk från höger till vänster](/help/forms/supporting-new-language-localization-core-components.md): Adaptiv Forms som bygger på kärnkomponenter kan nu presenteras på höger-till-vänster-språk (RTL) som arabiska, persiska och urdu. RTL-språken talas av över 2 miljarder människor globalt. Genom att använda ett formulär på RTL-språk kan ni utöka räckvidden för era adaptiva formulär så att de kan anpassas till dessa olika målgrupper och väljas ut på RTL-marknader. I vissa regioner är det också ett juridiskt mandat att tillhandahålla formulär på det lokala språket. Genom att ta hand om lokala språk kan ni inte bara öppna dörrar för en bredare publik utan också säkerställa att relevanta lagar och bestämmelser följs.
 
@@ -163,31 +192,23 @@ Real User Monitoring (RUM) Data Service ger en mer exakt återgivning av använd
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
 
-### CDN-konfiguration {#cdn-config}
-
-Konfigurera trafiken på CDN i Adobe på följande sätt:
-
-* [Begär omformningar](/help/implementing/dispatcher/cdn-configuring-traffic.md#request-transformations) - ändra aspekter av inkommande begäranden, inklusive sökvägar, frågeparametrar och HTTP-huvuden innan de dirigeras till AEM.
-* [Svarsomvandlingar](/help/implementing/dispatcher/cdn-configuring-traffic.md#response-transformations) - ändra HTTP-huvuden för utgående svar innan de skickas till webbläsaren.
-* [Väljare för ursprung](/help/implementing/dispatcher/cdn-configuring-traffic.md#response-transformations#origin-selectors) - dirigera trafik genom CDN till externa webbplatser och tillämpningar AEM.
-
-När dessa regler har deklarerats i Git (Source Control) kan du distribuera dem till CDN med hjälp av Cloud Manager Configuration Pipeline. Se även funktionen för omdirigering på klientsidan i avsnittet för tidig användare nedan.
-
-### Anpassade CDN-felsidor {#cdn-error-pages}
-
-Om det osannolika skulle inträffa att leveransnätverket inte kan dirigera trafik till AEM ursprung, kan en anpassad felsida deklareras och ersätta den generiska versionen. [Läs mer](/help/implementing/dispatcher/cdn-error-pages.md) om hur du hanterar varumärkesanpassade felsidor.
-
 ### Tidiga Adobe-program {#foundation-early-adopter}
-
-#### Omdirigeringar på klientsidan (tidig Adobe-program) {#client-side-redirects-early-adopter}
-
-Konfigurera 301/302 klientomdirigeringar i källkontroll och distribuera till CDN. [Läs mer](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors) och gå med i det tidiga adopterprogrammet genom att mejla **<aemcs-cdn-config-adopter@adobe.com>**.
 
 #### Varningar om trafikfilterregler (tidig Adobe-program) {#traffic-filter-rules-alerts-early-adopter}
 
 Nyligen släppt [Trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md), som innehåller de valfria reglerna för brandvägg för webbprogram (WAF), låter dig konfigurera vilken trafik som ska tillåtas eller nekas.
 
 Nu kan du mejla **<aemcs-cdn-config-adopter@adobe.com>** om du vill gå med i det tidiga adopterprogrammet så att du kan varnas när trafikfilterreglerna aktiveras. E-postmeddelanden från Åtgärdscenter håller dig informerad när vissa trafikförhållanden inträffar så att du kan vidta lämpliga åtgärder.
+
+#### CDN-konfiguration (Tidigt Adobe-program) {#cdn-config-early-adopter}
+
+Förutom den nyligen släppta [Trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md), som inkluderar de valfria reglerna för brandväggen för webbprogram (WAF), finns en möjlighet att använda Configuration Pipeline för att deklarera och distribuera andra typer av CDN-konfigurationer. [Läs mer](/help/implementing/dispatcher/cdn-configuring-traffic.md) och gå med i det tidiga adopterprogrammet genom att mejla **<aemcs-cdn-config-adopter@adobe.com>** för att få åtkomst till:
+
+* 301/302 klientomdirigeringar
+* skicka förfrågningar till godtyckliga ursprung (t.ex. program som inte är AEM)
+* URL-omformningar
+* ange eller ändra begärande- eller svarshuvuden
+* anpassade felsidor när CDN inte kan nå AEM
 
 #### Apache/Dispatcher Runtime Ing of Rewrite Maps (Early Adobe Program) {#apache-rewritemaps-early-adopter}
 
