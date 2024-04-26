@@ -2,9 +2,9 @@
 title: Hantera miljöer
 description: Lär dig mer om de typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: 8f7ddeea27df8e765a7c83c74af25961748ee26d
+source-git-commit: a0f80a363cb47be9e3d8f7fa96ea3068eb077d42
 workflow-type: tm+mt
-source-wordcount: '2660'
+source-wordcount: '2365'
 ht-degree: 0%
 
 ---
@@ -41,9 +41,9 @@ Om du vill lägga till eller redigera en miljö måste användaren vara medlem i
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** ska du trycka eller klicka på det program du vill lägga till en miljö för.
+1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** konsol, tryck eller klicka på programmet som du vill lägga till en miljö för.
 
-1. Från **[Programöversikt](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#program-overview)** sida, klicka **Lägg till miljö** på **Miljö** för att lägga till en miljö.
+1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** konsol, klicka **Lägg till miljö** på **Miljö** för att lägga till en miljö.
 
    ![Miljökort](assets/no-environments.png)
 
@@ -123,9 +123,9 @@ Om du vill etablera [avancerat nätverk](/help/security/configuring-advanced-net
 
 ## Miljöinformation {#viewing-environment}
 
-Du kan använda **Miljö** på översiktssidan för att få åtkomst till detaljerna i en miljö på två sätt.
+Från **Ökning** på en sida kan du komma åt detaljerna i en miljö på två sätt.
 
-1. Från **Ökning** klickar du på **Miljö** överst på skärmen.
+1. Från **Ökning** klickar du på **Miljö** i sidnavigeringspanelen.
 
    ![Fliken Miljö](assets/environments-tab2.png)
 
@@ -135,9 +135,9 @@ Du kan använda **Miljö** på översiktssidan för att få åtkomst till detalj
 
 1. The **Miljö** öppnar och visar alla miljöer för programmet.
 
-   ![Fliken Miljöer](assets/environment-view-2.png)
+   ![Fliken Miljöer](assets/environments-tab2.png)
 
-1. Klicka på en miljö i listan så att du kan visa informationen om den.
+1. Tryck eller klicka på en miljö i listan så att du kan visa informationen om den.
 
    ![Miljöinformation](assets/environ-preview1.png)
 
@@ -302,24 +302,11 @@ Du kan även logga in lokalt från **Miljö** -fliken i **Ökning** sida.
 
 ## Hantera anpassade domännamn {#manage-cdn}
 
-Anpassade domännamn stöds i Cloud Manager för Sites-program för både publicerings- och förhandsgranskningstjänster. Varje Cloud Manager-miljö har plats för upp till 250 anpassade domäner.
+Anpassade domännamn stöds i Cloud Manager för Sites-program för både publicerings- och förhandsgranskningstjänster.
 
-Om du vill konfigurera egna domännamn går du till **Miljö** och klicka på en miljö för att visa miljöinformation.
-
-En användare måste ha **Företagsägare** eller **Distributionshanteraren** roll för att lägga till ett anpassat domännamn i Cloud Manager
-
-![Miljöinformation](assets/domain-names.png)
-
-Följande åtgärder kan utföras på publiceringstjänsten för din miljö.
-
-* [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
-
-* [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md)
-
-* [Kontrollerar status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md#pre-existing-cdn) eller en [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md#pre-existing-cdn).
-
-* [Hantera IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/managing-ip-allow-lists.md#pre-existing-cdn)
-
+>[!TIP]
+>
+>Mer information finns i dokumentet [Introduktion till anpassade domännamn.](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
 
 ## Hantera IP-Tillåtelselista {#manage-ip-allow-lists}
 
@@ -329,23 +316,8 @@ Om du vill hantera IP-tillåtelselista går du till **Miljö** -fliken i **Ökni
 
 ### Använda IP Tillåtelselista {#apply-ip-allow-list}
 
-När du använder en IP-tillåtelselista kopplas alla IP-intervall som ingår i definitionen av tillåtelselista till en författare eller publiceringstjänst i en miljö. En användare i **Företagsägare** eller **Distributionshanteraren** roll måste vara inloggad för att kunna tillämpa en IP-tillåtelselista.
+När du använder en IP-tillåtelselista kopplas alla IP-intervall som ingår i definitionen av tillåtelselista till en författare eller publiceringstjänst i en miljö.
 
-IP-tillåtelselista måste finnas i Cloud Manager för att det ska kunna användas i en miljö. Mer information om IP-tillåtelselista i Cloud Manager finns i [Introduktion till IP-Tillåtelselista i Cloud Manager](/help/implementing/cloud-manager/ip-allow-lists/introduction.md).
-
-**Så här använder du ett IP-tillåtelselista:**
-
-1. Navigera till den specifika miljön från **Miljö** fliken för programmet **Ökning** och navigera till **IP-Tillåtelselista** tabell.
-1. Använd inmatningsfälten högst upp i tabellen IP tillåtelselista så att du kan välja IP-tillåtelselista och den författare eller publiceringstjänst som du vill använda den på.
-1. Klicka **Använd** och bekräfta ditt bidrag.
-
-### Ta bort en IP-tillåtelselista {#unapply-ip-allow-list}
-
-Om du tar bort en IP-tillåtelselista kopplas alla IP-intervall som ingår i definitionen av tillåtelselista bort från en författare eller en utgivartjänst i en miljö. En användare i **Företagsägare** eller **Distributionshanteraren** roll måste vara inloggad för att kunna ta bort en IP-tillåtelselista.
-
-**Så här tar du bort ett IP-tillåtelselista:**
-
-1. Navigera till den specifika miljön från **Miljö** fliken för programmet **Ökning** och navigera till **IP-Tillåtelselista** tabell.
-1. Identifiera raden där regeln för IP-tillåtelselista som du vill ta bort är listad.
-1. Markera ellipsknappen i slutet av raden.
-1. Välj **Oanvänd** och bekräfta ditt bidrag.
+>[!TIP]
+>
+>Mer information finns i dokumentet [Introduktion till IP Tillåtelselista.](/help/implementing/cloud-manager/ip-allow-lists/introduction.md)

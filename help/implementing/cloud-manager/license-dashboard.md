@@ -2,7 +2,7 @@
 title: Licensieringspanel
 description: Med Cloud Manager får du en kontrollpanel där du enkelt kan se vilka AEMaaCS-produkträttigheter som är tillgängliga för din organisation eller klientorganisation.
 exl-id: bf0f54a9-fe86-4bfb-9fa6-03cf0fd5f404
-source-git-commit: 90250c13c5074422e24186baf78f84c56c9e3c4f
+source-git-commit: d1b2226a1deec2e71056c43c84672cb4a358bc8c
 workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Följ de här stegen för att få åtkomst till din kontrollpanel för licenser.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** skärm, växla till **Licens** -fliken.
+1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** konsol, växla till **Licens** -fliken.
 
 ![Licensieringspanel](assets/license-dashboard.png)
 

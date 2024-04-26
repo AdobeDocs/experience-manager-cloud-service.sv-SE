@@ -2,7 +2,7 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service.
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: 678e81eb22cc1d7c239ac7a2594b39a3a60c51e2
+source-git-commit: 3c0185c1a108f16ce3230aa8e949de3cf436d427
 workflow-type: tm+mt
 source-wordcount: '5093'
 ht-degree: 0%
@@ -77,7 +77,7 @@ Med den här avancerade nätverksfunktionen kan du konfigurera AEM as a Cloud Se
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du programmet.
+1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** väljer du programmet.
 
 1. Från **Programöversikt** sida, navigera till **Miljö** och markera **Nätverksinfrastruktur** till vänster.
 
@@ -242,7 +242,7 @@ Konfigurationen av IP-adressen för den dedikerade IP-adressen liknar den [flexi
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du programmet.
+1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** väljer du programmet.
 
 1. Från **Programöversikt** sida, navigera till **Miljö** och markera **Nätverksinfrastruktur** till vänster.
 
@@ -416,7 +416,7 @@ De flesta VPN-enheter med IPSec-teknik stöds. Läs informationen i **RouteBased
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du programmet.
+1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** väljer du programmet.
 
 1. Från **Programöversikt** sida, navigera till **Miljö** och markera **Nätverksinfrastruktur** till vänster.
 
@@ -631,7 +631,7 @@ När du aktiverar en avancerad nätverkskonfiguration för en miljö kan du äve
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du programmet.
+1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** väljer du programmet.
 
 1. Från **Programöversikt** sida, navigera till **Miljö** och välj den miljö där du vill aktivera den avancerade nätverkskonfigurationen under **Miljö** i den vänstra panelen. Välj sedan **Avancerad nätverkskonfiguration** fliken för den valda miljön och klicka på **Aktivera nätverksinfrastruktur**.
 
@@ -690,7 +690,7 @@ Efter [möjliggör avancerade nätverkskonfigurationer för miljöer,](#enabling
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du programmet.
+1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** väljer du programmet.
 
 1. Från **Programöversikt** sida, navigera till **Miljö** och välj den miljö där du vill aktivera den avancerade nätverkskonfigurationen under **Miljö** i den vänstra panelen. Välj sedan **Avancerad nätverkskonfiguration** -fliken i den valda miljön och klicka på ellipsknappen.
 
@@ -728,7 +728,7 @@ När nätverksinfrastrukturen har skapats för ett program kan endast begränsad
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation
 
-1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du programmet.
+1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** väljer du programmet.
 
 1. Från **Programöversikt** sida, navigera till **Miljö** och markera **Nätverksinfrastruktur** i den vänstra panelen. Klicka sedan på ellipsknappen bredvid den infrastruktur som du vill ta bort.
 

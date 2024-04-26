@@ -3,7 +3,7 @@ title: Konfigurera produktionsförlopp
 description: Lär dig hur du konfigurerar produktionspipelines för att skapa och distribuera kod till produktionsmiljöer.
 index: true
 exl-id: 67edca16-159e-469f-815e-d55cf9063aa4
-source-git-commit: 3ba5184275e539027728ed134c47f66fa4746d9a
+source-git-commit: d1b2226a1deec2e71056c43c84672cb4a358bc8c
 workflow-type: tm+mt
 source-wordcount: '1334'
 ht-degree: 0%
@@ -37,7 +37,7 @@ När du har konfigurerat programmet och har minst en miljö som använder [!UICO
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation
 
-1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du programmet.
+1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** väljer du programmet.
 
 1. Navigera till **Pipelines** från **Programöversikt** sida och klicka **Lägg till** för att markera **Lägg till produktionspipeline**.
 

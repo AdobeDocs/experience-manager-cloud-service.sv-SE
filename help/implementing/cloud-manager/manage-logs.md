@@ -2,7 +2,7 @@
 title: Åtkomst till och hantering av loggar
 description: Lär dig hur du får åtkomst till och hanterar loggar som hjälp i utvecklingsprocessen på AEM as a Cloud Service.
 exl-id: f17274ce-acf5-4e7d-b875-75d4938806cd
-source-git-commit: fa28d2fa83fb35fe80692c5f94661fa4c32a02a9
+source-git-commit: d1b2226a1deec2e71056c43c84672cb4a358bc8c
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Så här hämtar du loggar:
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du programmet.
+1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** väljer du programmet.
 
 1. Navigera till **Miljö** från **Ökning** sida.
 

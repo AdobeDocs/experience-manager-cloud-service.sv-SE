@@ -3,9 +3,9 @@ title: Hantera pipelines
 description: Lär dig hur du hanterar dina befintliga rörledningar, inklusive redigering, körning och borttagning av dem.
 index: true
 exl-id: 4aff5a84-134a-43fa-8de8-8d564f4edd16
-source-git-commit: 90250c13c5074422e24186baf78f84c56c9e3c4f
+source-git-commit: 71ece3b084c3a262cacc62019396138a88a340b9
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '1018'
 ht-degree: 0%
 
 ---
@@ -41,21 +41,25 @@ The **Pipelines** visas en fullständig lista över alla pipelines för det vald
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** väljer du programmet.
+1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** väljer du programmet.
 
 1. Från **Programöversikt** väljer du **Pipelines** för att växla till **Pipelines** -fönstret.
 
 1. Här visas en lista med alla pipelines för programmet och hur du startar och stoppar pipelinekörningen som i **Förloppskort**.
 
-Om en pipeline körs håller du pekaren över den **Status** -kolumnen visar information om körningen.
+Om en pipeline körs trycker du på informationsikonen i **Status** -kolumnen visar information om körningen.
 
 ![Information om pipeline-körning](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-status.png)
 
 Tryck eller klicka **Visa detaljer** tar dig till [information om pipelinekörningen.](#view-details)
 
+Du kan också trycka på eller klicka på ellipsknappen i pipelinen för att vidta ytterligare åtgärder som är lämpliga för pipelineläget, till exempel [redigera](#editing-pipelines) eller [avbryter körning.](#cancel)
+
+![Pipeline-åtgärder](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-actions.png)
+
 ## Aktivitetsfönster {#activity}
 
-The **Verksamhet** visas en fullständig lista över alla pipelines-körningar för det valda programmet.
+The **Aktivitet** visas en fullständig lista över alla pipelines-körningar för det valda programmet samt andra viktiga programhändelser.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
@@ -63,11 +67,15 @@ The **Verksamhet** visas en fullständig lista över alla pipelines-körningar f
 
 1. Här visas en lista över alla pipeline-körningar för programmet, inklusive aktuella och historiska körningar.
 
-Om en pipeline körs håller du pekaren över den **Status** -kolumnen visar information om körningen.
+Om en pipeline körs trycker du på informationsikonen i **Status** -kolumnen visar information om körningen.
 
 ![Information om pipeline-körning](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-activity.png)
 
-Tryck eller klicka **Visa detaljer** tar dig till [information om pipelinekörningen.](#view-details)
+Om du trycker eller klickar på raden som representerar pipelinekörningen kommer du till [information om pipelinekörningen.](#view-details)
+
+Du kan också trycka på eller klicka på ellipsknappen för att vidta ytterligare åtgärder för pipelinekörningen, till exempel visa information eller hämta loggen, som tar dig till [informationssida för pipeline.](#view-details)
+
+![Körningsåtgärder för pipeline](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-execution-actions.png)
 
 ## Löpande rörledningar {#running-pipelines}
 

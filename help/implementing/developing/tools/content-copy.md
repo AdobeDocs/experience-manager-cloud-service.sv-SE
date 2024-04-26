@@ -2,9 +2,9 @@
 title: Verktyget Innehållskopia
 description: Med innehållskopieringsverktyget kan man kopiera muterbart innehåll on demand från produktionsmiljön i AEM as a Cloud Service till lägre miljöer i testsyfte.
 exl-id: 5883e4bc-9861-498e-bd35-32ff03d901cc
-source-git-commit: 8bc20c66aad7bf4befdd28db2c628a1535ae375b
+source-git-commit: a0f80a363cb47be9e3d8f7fa96ea3068eb077d42
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1286'
 ht-degree: 0%
 
 ---
@@ -49,9 +49,7 @@ Innan något innehåll kan kopieras måste en innehållsuppsättning definieras.
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Navigera till **Miljö** från **Ökning** sida.
-
-1. Navigera till **Innehållsuppsättningar** sidan från **Miljö** skärm.
+1. Navigera till navigeringspanelen på sidan **Innehållsuppsättningar** -fliken från **Ökning** sida.
 
 1. Klicka på längst upp till höger på skärmen **Lägg till innehållsuppsättning**.
 

@@ -1,18 +1,18 @@
 ---
-title: Hantera och redigera program
+title: Redigeringsprogram
 description: Lär dig hur du redigerar produktions- och sandlådeprogram för att justera deras alternativ efter att du har skapat dem.
 exl-id: 819e4a6e-f77a-4594-a402-a300dcbdf510
-source-git-commit: 2dfae31e32d375c82c4f690624e48f7f09feb4df
+source-git-commit: 401f853b197e67a6c54e4bf168081dc8165bd505
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
 
 
-# Hantera och redigera program {#editing-programs}
+# Redigeringsprogram {#editing-programs}
 
-The **Mina program** sidan innehåller en översikt över alla program som du har tillgång till. När du väljer ett enskilt program visas **Programöversikt** på sidan hittar du snabbt information om programmet.
+Om du vill hantera och redigera program börjar du på [**Mina program** konsol.](/help/implementing/cloud-manager/navigation.md) The **Mina program** sidan innehåller en översikt över alla program som du har tillgång till. När du väljer ett enskilt program visas **Programöversikt** på sidan hittar du snabbt information om programmet.
 
 Från **Programöversikt** kan användare med nödvändig behörighet redigera [produktionsprogram som har skapats i din organisation](creating-production-programs.md) och [sandlådeprogram som har skapats i din organisation.](creating-sandbox-programs.md) Genom att redigera ett program kan du
 
@@ -24,70 +24,6 @@ Från **Programöversikt** kan användare med nödvändig behörighet redigera [
 ## Behörigheter {#permissions}
 
 Du måste vara medlem i **Företagsägare** roll för att redigera program eller ta bort sandlådeprogram samt för att få tillgång till License Dashboard.
-
-## Mina program {#my-programs}
-
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
-
-1. The **Mina program** visas en lista med alla program som du har åtkomst till som paneler.
-
-![Sidan Mina program](/help/implementing/cloud-manager/assets/my-programs.png)
-
-### Call-to-Action {#cta}
-
-Överst på sidan finns en uppmaning till åtgärd som är relevant för organisationens status. Om du till exempel har konfigurerat dina program kan statistik över dina aktiviteter under de senaste 90 dagarna visa, inklusive:
-
-* Antal [distributioner](/help/implementing/cloud-manager/deploy-code.md)
-* Antal [problem med kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md) identifierad
-* Antal byggen
-
-Eller om du just har börjat konfigurera organisationen kan det finnas tips om nästa steg eller dokumentationsresurser.
-
-### Fliken Program {#programs-tab}
-
-The **Program** I visas kort som representerar de program du har åtkomst till. Tryck eller klicka på ett kort för att komma åt **Programöversikt** sidan med programmet för att få information om programmet.
-
-Använd sorteringsalternativen för att bättre hitta det program du behöver.
-
-![Sorteringsalternativ](/help/implementing/cloud-manager/assets/my-programs-sorting.png)
-
-* Sortera efter
-   * Skapad den (standard)
-   * Programnamn
-   * Status
-* Stigande (standard) / Fallande
-* Stödrastervisning (standard)
-* Listvy
-
-### Fliken Licens {#license-tab}
-
-The **Licens** -fliken ger dig snabb åtkomst till [License Dashboard.](/help/implementing/cloud-manager/license-dashboard.md)
-
-## Programöversikt {#program-overview}
-
-När du har valt ett program i **[Mina program](#my-programs)** öppnar Cloud Manager **Programöversikt** sida för det valda programmet.
-
-![Sidan Programöversikt](/help/implementing/cloud-manager/assets/program-overview.png)
-
-Tryck eller klicka på programnamnet längst upp till vänster på sidan för att snabbt växla till ett annat program eller tillbaka till **[Mina program](#my-programs)** sida. Du kan också [redigera det valda programmet](#editing) eller [lägga till ett program.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md)
-
-![Programväljare](/help/implementing/cloud-manager/assets/program-switcher.png)
-
-Uppmaningen överst ger dig användbar information beroende på programmets status. För ett nytt program kan du se nästa steg som erbjuds samt en påminnelse om ett publiceringsdatum, [anges när programmet skapas.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md)
-
-![Call-to-action för ett nytt program](/help/implementing/cloud-manager/assets/info-banner-new-program.png)
-
-För ett live-program, status för den senaste distributionen med länkar för information och start av en ny distribution.
-
-![Call-to-action](/help/implementing/cloud-manager/assets/info-banner.png)
-
-**Miljö** och **Pipelines** kort ger en snabb översikt över båda delarna i det valda programmet.
-
-![Kort](/help/implementing/cloud-manager/assets/environments-pipelines.png)
-
-The **Prestanda** kortet ger en översikt över **[CDN Dashboard.](/help/implementing/cloud-manager/cdn-performance.md)**
-
-![Prestandakort](/help/implementing/cloud-manager/assets/cdn-performance-dashboard.png)
 
 ## Redigera ett program {#editing}
 

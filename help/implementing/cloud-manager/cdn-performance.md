@@ -1,13 +1,13 @@
 ---
 title: Kontrollpanel för CDN-prestanda
 description: Förstå hur Cloud Manager utvärderar prestanda för leveransnätverk (CDN) och vad du kan lära dig från kontrollpanelen.
-source-git-commit: 0d60c19638707262dab7f290f84fa873b694bc22
+exl-id: ecd8c1ca-873f-4e73-ad73-b5f7561eb109
+source-git-commit: d1b2226a1deec2e71056c43c84672cb4a358bc8c
 workflow-type: tm+mt
 source-wordcount: '383'
 ht-degree: 0%
 
 ---
-
 
 # Kontrollpanel för CDN-prestanda {#cdn-performance}
 
@@ -25,7 +25,7 @@ CDN-kontrollpanelen finns på översiktssidan för alla program.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** trycker eller klickar du på det program vars CDN-kontrollpanel du vill visa.
+1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** genom att trycka eller klicka på det program vars CDN-kontrollpanel du vill visa.
 
    ![Sidan Mina program](assets/my-programs.png)
 

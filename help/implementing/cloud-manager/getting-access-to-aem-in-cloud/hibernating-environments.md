@@ -2,7 +2,7 @@
 title: Viloläge och avvänjningsmiljöer för sandlådor
 description: Lär dig hur miljöer i ett sandlådeprogram automatiskt övergår i viloläge och hur du kan avviloläge.
 exl-id: c0771078-ea68-4d0d-8d41-2d9be86408a4
-source-git-commit: 90250c13c5074422e24186baf78f84c56c9e3c4f
+source-git-commit: d1b2226a1deec2e71056c43c84672cb4a358bc8c
 workflow-type: tm+mt
 source-wordcount: '695'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Följ de här stegen för att manuellt placera sandlådeprogrammiljöer i vilol�
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** visas information om det program du vill använda i viloläge genom att trycka eller klicka på det.
+1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** genom att trycka eller klicka på det program som du vill ska visas i viloläge.
 
 1. På **Miljö** klickar du på ellipsknappen och väljer **Developer Console**.
 
@@ -65,7 +65,7 @@ Du kan manuellt förvara ditt sandlådeprogram från utvecklarkonsolen.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** visas information om det program du vill avaktivera genom att trycka eller klicka på det.
+1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** genom att trycka eller klicka på det program som du vill avaktivera för att visa information om det.
 
 1. På **Miljö** klickar du på ellipsknappen och väljer **Developer Console**.
 

@@ -2,9 +2,9 @@
 title: Skapa sandlådeprogram
 description: Lär dig hur du använder Cloud Manager för att skapa ett eget sandlådeprogram för utbildning, demo, POC eller andra icke-produktionssyften.
 exl-id: 10011392-3059-4bb0-88db-0af1d390742e
-source-git-commit: 90250c13c5074422e24186baf78f84c56c9e3c4f
+source-git-commit: 558b46f58491dbd6845003827dcf2a0ae1b1d074
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ Läs mer om programtyper i dokumentet [Program- och programtyper.](program-types
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** skärm, tryck eller klicka **Lägg till program** i skärmens övre högra hörn.
+1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** konsol, tryck eller klicka **Lägg till program** i skärmens övre högra hörn.
 
-   ![Startsida för Cloud Manager](assets/cloud-manager-my-programs.png)
+   ![Startsida för Cloud Manager](assets/log-in.png)
 
 1. Välj **Konfigurera en sandlåda** och ange ett programnamn.
 
@@ -63,12 +63,12 @@ Du kan visa detaljerna i sandlådekonfigurationen och få tillgång till miljön
 
 1. När utvecklingsmiljön har skapats kan du använda **AEM** för att logga in AEM.
 
-   ![AEM](assets/create-program-5.png)
+   ![AEM](assets/create-program5.png)
 
-1. När icke-produktionsflödet som distribueras till utvecklingsfasen är klart vägleder guiden dig att antingen få åtkomst till AEM utvecklingsmiljö eller att distribuera kod till utvecklingsmiljön.
+1. När den icke-produktionsprocess som distribueras till utvecklingsfasen är klar vägleder guiden i anropet dig till att antingen få åtkomst till AEM utvecklingsmiljö eller att distribuera kod till utvecklingsmiljön.
 
    ![Distribuera sandlåda](assets/create-program-setup-deploy.png)
 
-Om du måste växla till ett annat program, eller gå tillbaka till översiktssidan för att skapa ett annat program, klickar du på programnamnet längst upp till vänster på skärmen för att visa **Navigera till** alternativ.
-
-![Navigera till](assets/create-program-a1.png)
+>[!TIP]
+>
+>Se dokumentet [Navigera i användargränssnittet för Cloud Manager](/help/implementing/cloud-manager/navigation.md) om du vill ha mer information om hur du navigerar i Cloud Manager och förstå **Mina program** konsol.

@@ -2,9 +2,9 @@
 title: Skapa produktionsprogram
 description: Lär dig hur du använder Cloud Manager för att skapa ett eget produktionsprogram för livstrafik.
 exl-id: 4ccefb80-de77-4998-8a9d-e68d29772bb4
-source-git-commit: a25f1c674534792353cb9b34d4f88a5e32230bc1
+source-git-commit: 418aff3f8519bba4bf5e2459175983633eb664b8
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1031'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Följ de här stegen för att skapa ett produktionsprogram. Observera att beroen
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. På **[Mina program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#my-programs)** skärm, tryck eller klicka **Lägg till program** i skärmens övre högra hörn.
+1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** konsol, tryck eller klicka **Lägg till program** i skärmens övre högra hörn.
 
    ![Startsida för molnhanterare](assets/log-in.png)
 
@@ -48,7 +48,7 @@ Följ de här stegen för att skapa ett produktionsprogram. Observera att beroen
 
 1. På **GoLive-datum** Ange det datum då du planerar att publicera ditt produktionsprogram.
 
-   ![Definiera planerat publiceringsdatum](assets/setup-go-live.png)
+   ![Definiera planerat publiceringsdatum](assets/set-up-go-live.png)
 
    * Det här datumet kan redigeras när som helst.
    * Detta datum är endast avsett som information och aktiverar Go Live-widgeten på [**Programöversikt** page](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#program-overview) att tillhandahålla länkar till AEM as a Cloud Service best practice-dokumentation i rätt tid för att passa in i den resa som leder till en lyckad och smidig Go Live-upplevelse.
@@ -117,9 +117,9 @@ Utöver de obligatoriska rättigheterna har 99,99 % SLA ytterligare krav för an
 
    ![Programöversikt](assets/set-up-prod5.png)
 
-Om du behöver växla till ett annat program eller gå tillbaka till översiktssidan för att skapa ett annat program klickar du på programnamnet längst upp till vänster på skärmen för att visa **Navigera till** alternativ.
-
-![Navigera till](assets/create-program-a1.png)
+>[!TIP]
+>
+>Se dokumentet [Navigera i användargränssnittet för Cloud Manager](/help/implementing/cloud-manager/navigation.md) om du vill ha mer information om hur du navigerar i Cloud Manager och förstå **Mina program** konsol.
 
 >[!NOTE]
 >

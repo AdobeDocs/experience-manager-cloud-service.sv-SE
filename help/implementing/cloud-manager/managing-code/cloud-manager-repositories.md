@@ -2,9 +2,9 @@
 title: Cloud Manager-databaser
 description: Lär dig hur du skapar, visar och tar bort Git-databaser i Cloud Manager.
 exl-id: 6e1cf636-78f5-4270-9a21-38b4d5e5a0b0
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 4bf1d961705ce07c5ae5d33a546a276192f10178
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '575'
 ht-degree: 0%
 
 ---
@@ -61,8 +61,6 @@ Följ dessa för att ta bort en databas i Cloud Manager.
 1. Från **Programöversikt** klickar du på **Databaser** och navigera till **Databaser** sida.
 
 1. Markera databasen och klicka på ellipsknappen och välj **Ta bort** för att ta bort databasen.
-
-   ![Ta bort databas](/help/implementing/cloud-manager/assets/repos/delete-repo.png)
 
 ## Stöd för Git-undermodul {#git-submodule-support}
 
