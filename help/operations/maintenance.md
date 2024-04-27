@@ -2,9 +2,9 @@
 title: Underhållsaktiviteter på AEM as a Cloud Service
 description: Lär dig mer om underhållsåtgärder på AEM as a Cloud Service och hur du konfigurerar dem.
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
-source-git-commit: 4ac5ec2a2b8da90820734e4fc06c084c810c0724
+source-git-commit: 07676903a0270bfee5bfcffa2617e08e0a4ebbaf
 workflow-type: tm+mt
-source-wordcount: '1129'
+source-wordcount: '1144'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ I följande tabell visas underhållsåtgärder som är tillgängliga när AEM as
   <tr>
     <td>Rensa version</td>
     <td>Adobe</td>
-    <td>För befintliga miljöer (de som skapats före 15 april 2024) är rensning inaktiverat och kommer att aktiveras i framtiden med standardvärdet 7 år. Kunderna kan konfigurera det med lägre, anpassade värden (till exempel 30 dagar).<br><br> <!--Alexandru: leave the two line breaks in place, otherwise spacing won't render properly-->Nya miljöer (de som skapats från och med 15 april 2024) har rensning aktiverat som standard med värdena nedan, och kunderna kan konfigurera med anpassade värden.
+    <td>För befintliga miljöer (de som skapats före ett datum som ännu inte är fastställt 2024) är rensning inaktiverat och kommer att aktiveras i framtiden med standardvärdet 7 år. Kunderna kan konfigurera det med lägre, anpassade värden (till exempel 30 dagar).<br><br> <!--Alexandru: leave the two line breaks in place, otherwise spacing won't render properly-->Nya miljöer (de som skapats med början vid ett datum som ännu inte är fastställt 2024) har rensning aktiverat som standard med värdena nedan, och kunderna kan konfigurera med anpassade värden.
      <ol>
        <li>Versioner som är äldre än 30 dagar tas bort</li>
        <li>De senaste 5 versionerna de senaste 30 dagarna sparas</li>
@@ -56,7 +56,7 @@ I följande tabell visas underhållsåtgärder som är tillgängliga när AEM as
   <tr>
     <td>Rensa granskningslogg</td>
     <td>Adobe</td>
-    <td>För befintliga miljöer (de som skapats före 15 april 2024) är rensning inaktiverat och kommer att aktiveras i framtiden med standardvärdet 7 år. Kunderna kan konfigurera det med lägre, anpassade värden (till exempel 30 dagar).<br><br> <!-- See above for the two line breaks -->I nya miljöer (de som skapas från och med april 2024) är rensning aktiverat som standard under <code>/content</code> databasens nod enligt följande:
+    <td>För befintliga miljöer (de som skapats före ett datum som ännu inte är fastställt 2024) är rensning inaktiverat och kommer att aktiveras i framtiden med standardvärdet 7 år. Kunderna kan konfigurera det med lägre, anpassade värden (till exempel 30 dagar).<br><br> <!-- See above for the two line breaks -->I nya miljöer (de som skapats med början av ett datum som ännu inte är fastställt 2024) kommer rensning att vara aktiverat som standard under <code>/content</code> databasens nod enligt följande:
      <ol>
        <li>Granskningsloggar som är äldre än 3 dagar tas bort för replikeringsgranskning</li>
        <li>För DAM-granskning (Assets) tas granskningsloggar som är äldre än 30 dagar bort</li>
