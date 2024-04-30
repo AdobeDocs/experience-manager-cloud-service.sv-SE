@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 3c0185c1a108f16ce3230aa8e949de3cf436d427
+source-git-commit: a5fc1f7e42edc8d41cac687a348dad7fc98742c1
 workflow-type: tm+mt
-source-wordcount: '4901'
+source-wordcount: '4892'
 ht-degree: 3%
 
 ---
@@ -1156,8 +1156,6 @@ ht-degree: 3%
    + Författarnivå {#author-tier}
       + [Åtkomst till författarnivån](/help/implementing/author-tier/accessing-the-author-tier.md)
       + [Skydda författarnivån](/help/implementing/author-tier/securing-the-author-tier.md)
-   + Förhandsgranskningsnivå {#preview-tier}
-      + [Konfigurera OSGi-inställningar för förhandsgranskningsnivån](/help/implementing/preview-tier/preview-tier-configuring-osgi.md)
    + Översikt över innehållsleverans {#content-delivery}
       + [Leveransflöde](/help/implementing/dispatcher/overview.md)
       + [Dispatcher i molnet](/help/implementing/dispatcher/disp-overview.md)
