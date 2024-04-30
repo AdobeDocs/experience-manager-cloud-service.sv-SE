@@ -2,9 +2,9 @@
 title: Borttagning av JWT-autentiseringsuppgifter i Adobe Developer Console
 description: Lär dig hur borttagning av JWT-autentiseringsuppgifter påverkar AEM i Adobe Developer Console.
 exl-id: 7c811081-484c-41f7-a289-4e9a10a837b3
-source-git-commit: b52da0a604d2c320d046136f5e526e2b244fa6cb
+source-git-commit: 802e29017d3f1e59ee1676b4172292cb3453648a
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ Adobe-kunder använder [Adobe Developer Console](https://developer.adobe.com/con
 
 I den här artikeln finns ytterligare information om hur AEM as a Cloud Service ska hantera borttagningen.
 
-För närvarande är huvuduppgiften att AEM funktioner ännu inte har stöd för de nya autentiseringsuppgifterna för OAuth Server-till-Server. Support kommer snart - i mitten av april 2024 via en AEM för AEM as a Cloud Service. Du kan ha fått ett e-postmeddelande med instruktioner om hur du migrerar JWT-inloggningsuppgifterna, men du kan vara säker på att du kan och bör hålla kvar när du migrerar autentiseringsuppgifterna tills AEM har stöd för den nya autentiseringstypen OAuth Server-till-Server.
+För närvarande är huvuduppgiften att AEM funktioner ännu inte har stöd för de nya autentiseringsuppgifterna för OAuth Server-till-Server. Support kommer snart - i mitten av maj 2024 via en AEM för AEM as a Cloud Service. Du kan ha fått ett e-postmeddelande med instruktioner om hur du migrerar JWT-inloggningsuppgifterna, men du kan vara säker på att du kan och bör hålla kvar när du migrerar autentiseringsuppgifterna tills AEM har stöd för den nya autentiseringstypen OAuth Server-till-Server.
 
-I avsnitten nedan listas de scenarier där kunderna måste (eller ibland inte måste) ersätta sina JWT-uppgifter (Service Account) med OAuth Server-to-Server-autentiseringsuppgifter, när AEM har stöd för dem i mitten av april. [Läs om](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#migration-overview) för att ersätta inloggningsuppgifterna i framtiden.
+I avsnitten nedan listas de scenarier där kunderna måste (eller ibland inte måste) ersätta sina JWT-referenser (Service Account) med OAuth Server-to-Server-autentiseringsuppgifter, när AEM har stöd för dem i mitten av maj. [Läs om](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#migration-overview) för att ersätta inloggningsuppgifterna i framtiden.
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ I avsnitten nedan listas de scenarier där kunderna måste (eller ibland inte m�
 
 ## Integrera AEM med andra Adobe-lösningar {#integrating-aem-with-other-adobe-solutions}
 
-**Åtgärd**: Vänta tills efter slutet av april 2024 när AEM stöder det (den här artikeln uppdateras vid den tidpunkten)
+**Åtgärd**: Vänta tills efter mitten av maj 2024, när AEM stöder det (den här artikeln uppdateras vid den tidpunkten)
 
 **Relevanta AEM**: AEM AS A CLOUD SERVICE
 
@@ -38,15 +38,15 @@ AEM använder användargränssnittet AEM Author för att konfigurera integrering
 
 ![Integrera AEM med andra lösningar](/help/security/assets/jwt-deprecation.png)
 
-Här är några exempel [instruktionerna](https://docs.mktossl.com/docs/experience-manager-cloud-service/content/sites/integrations/integration-adobe-target-ims.html?lang=en) för att konfigurera integrationen med Adobe Target. API-nyckeln i [Slutför IMS-konfigurationen i AEM](https://docs.mktossl.com/docs/experience-manager-cloud-service/content/sites/integrations/integration-adobe-target-ims.html#completing-the-ims-configuration-in-aem) -avsnittet ska migreras till autentiseringstypen OAuth Server-to-Server, när AEM har stöd för dessa autentiseringsuppgifter i mitten av april. Dessa instruktioner kommer att uppdateras i mitten av april så att du lättare kan tillämpa de nya autentiseringsuppgifterna för OAuth Server-to-Server.
+Här är några exempel [instruktionerna](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/integrations/integration-adobe-target-ims) för att konfigurera integrationen med Adobe Target. API-nyckeln i [Slutför IMS-konfigurationen i AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/integrations/integration-adobe-target-ims#completing-the-ims-configuration-in-aem) -avsnittet ska migreras till autentiseringstypen OAuth Server-to-Server, när AEM har stöd för dessa autentiseringsuppgifter i mitten av maj. Dessa instruktioner kommer att uppdateras i mitten av maj för att hjälpa dig att tillämpa de nya autentiseringsuppgifterna för OAuth Server-to-Server.
 
 ## API:er för Cloud Manager {#cloud-manager-apis}
 
-**Åtgärd**: Vänta tills efter slutet av april 2024 när AEM stöder det (den här artikeln uppdateras vid den tidpunkten).
+**Åtgärd**: Migrera till OAuth-autentiseringsuppgifter för server-till-server.
 
 **Relevanta AEM**: AEM AS A CLOUD SERVICE
 
-Kunder skapar Adobe Developer Console-projekt så att de kan starta [API:er för Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/). Autentiseringsuppgifterna i Adobe Developer-projektet ska migreras till autentiseringstypen OAuth Server-to-Server när AEM och Cloud Manager har stöd för det.
+Kunder skapar Adobe Developer Console-projekt så att de kan starta [API:er för Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/). Autentiseringsuppgifterna i Adobe Developer-projektet ska migreras till autentiseringstypen OAuth Server-to-Server innan de inaktuella JWT-autentiseringsuppgifterna går ut i januari 2025.
 
 ## Automatiskt genererade projekt {#autogen-projects}
 
