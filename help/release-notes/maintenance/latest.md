@@ -2,10 +2,10 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 60952db4172b882b71a0b230fc8f4c27154e9cc0
+source-git-commit: 79dcf8a4e9834beeb466ed9270a3f5c6aa67aa9a
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 1%
+source-wordcount: '723'
+ht-degree: 0%
 
 ---
 
@@ -13,26 +13,69 @@ ht-degree: 1%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsutgåvan av Experience Manager as a Cloud Service.
 
-## Utgåva 15977 {#release-15977}
+## Version 16145 {#release-16145}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 15977, som offentliggjordes den 19 april 2024. Den tidigare underhållsutgåvan släpptes 15939.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 16145, som offentliggjordes den 1 maj 2024. Den tidigare underhållsversionen var version 15977.
 
 2024.4.0 Feature Activation (Aktivering av funktioner) innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) för mer information.
 
-### Förbättringar {#enhancements-15977}
+### Förbättringar {#enhancements-16145}
 
-* GRANITE-51335: Optimera AEM hälsokontroll för att öka instansstabiliteten.
+* ASSETS-23489: Förbättringar av databasinsikter.
+* ASSETS-26926: Förbättrad överföring av Dynamic Media.
+* ASSETS-30351: Dialogrutan för hämtning ska läsa in Dynamic Media-återgivningsstorlekar asynkront.
+* ASSETS-30379: Förbättra upplösningen för DRM-licenser vid nedladdning.
+* ASSETS-31058: Surface smart beskärningsrenderingar i gränssnittet AEM resurser på fliken renderingar och genererar smarta beskurna bilder när användaren klickar på dessa renderingar.
+* ASSETS-31218: Lägg till stöd för namngiven smart beskärning i tillgångsleverans-API.
+* ASSETS-31979: Lägg till visuell indikator och inaktivera gränssnittsfunktioner under Async Assets-åtgärder.
+* ASSETS-32735: Förbättringar av uppdateringshändelse för metadata för resurser.
+* ASSETS-34661: API för DM Preview och/eller Delivery URLs från AEMaaCS Publish.
+* ASSETS-37259: XMP parsningsförbättringar.
+* ASSETS-37263: Tillåt annullering av misslyckade asynkrona Assets-jobb.
+* CNTBF-114: Förbättrat innehållsomflöde.
+* CNTBF-148: Förbättrat innehållsomflöde.
+* CQ-4356992: Senaste AEM och Granite-översättningar.
+* SITES-19326: Uppdatera länkarna i Assets UI så att CF öppnas i den nya CF Editor.
+* SITES-20686: GraphQL - Visa Dynamic Media URL via _dmS7Url (för resurser som inte är bilder).
+* SKYOPS-68091: Uppdatera till Java 11.0.20.
 
-### Åtgärdade problem {#fixed-issues-15977}
+### Åtgärdade problem {#fixed-issues-16145}
 
-* CQ-4357226: Korrigera regression i IMS-konfigurationer som stöder OAuth-autentiseringsuppgifter.
-* GRANITE-51335: Ratelimit upgrade to 5.0.4 Fixed Felix Health Check registrations.
+* ASSETS-32321: Arbetsflödets upplösning efter bearbetning misslyckas om den överordnade mappen saknar undernoden jcr:content.
+* ASSETS-33856: JPEG Image Preset hämtar filen som TXT.
+* ASSETS-34096: Korrigera Touch-gränssnittsvyn för asynkron nedladdningsrapport.
+* ASSETS-34493: Det gick inte att läsa in dialogrutan för hämtning när funktionen för flera företag aktiverades.
+* ASSETS-34824: Kopiera-URL:en är tom för mappar som inte är DM.
+* ASSETS-35226: Efterbehandlingsarbetsflödet har inte matchats om det anges i DAM-roten.
+* ASSETS-35559: Minska DM-loggen för batchöverföringsfel till WARN.
+* ASSETS-35860: Felaktig konvertering av tidszon i AEM Assets kolumnvy.
+* ASSETS-35935: Felaktig mappnavigering när nyttolastgranskningen har stängts.
+* ASSETS-35961: Knappen Lägg till beskärning fungerar inte under bildprofilen.
+* ASSETS-36227: Inaktivera tjänsten FolderPreviewUpdaterImpl vid publicering.
+* ASSETS-36943: Saknar justerade kolumner när CF-objekt och andra icke-CF-objekt finns i en mapp i listvyn.
+* ASSETS-36990: Exporterade metadatajobb som misslyckades/tar lång tid med ett stort antal egenskaper.
+* ASSETS-37113: Jobbet Återbearbeta resurser avslutas omedelbart om frågan endast returnerar CF-resultat.
+* ASSETS-37260: Export av metadata i AEM kan ge ogiltig CSV.
+* ASSETS-37261: PPTx och PDF Annotation Issue på AEM Assets.
+* ASSETS-37282: Potentiellt långsam begäran som öppnar en stor mapp.
+* ASSETS-37330: Om du importerar satsvis från OneDrive skapas en felaktig mappstruktur AEM mappstrukturen.
+* ASSETS-37609: Ta bort konf-sökning för äldre scen7.
+* ASSETS-38016: Vissa metadatauppdateringar spåras inte korrekt i händelser.
+* CQ-4357161: AEM Inbox Nyttolastskärm returnerar 404.
+* GRANITE-50041: Lägg till återgivning fungerar inte när upplösningen är högre än 1 440 px bredd när endast alternativet Lägg till återgivning finns i listrutan.
+* GRANITE-50279: Oordnade veckonamn i Coral Datepicker-komponenten.
+* SCRNS-3949: Tiden för hämtning av skärmkanal är för lång.
+* SCRNS-3981: [Sekvenskanal] Den svarta skärmen visas när sekvensen av elementets load/unload-händelser förvrängs.
+* SCRNS-4180: [Sekvenskanal] Sekvensstoppen med en tom skärm för kanaler med videoklipp med längden -1 vid återställning från en miniatyrbild i reserv.
+* SCRNS-4245: [Sekvenskanal] Begränsad varaktighet för tom skärm när en video läses in och växlas från reservminiatyrbild.
+* SITES-16055: Korrigera länkarna Live Copy och Live Copy Source på respektive egenskapssida.
+* SCRNS-4243: Knappar saknas i innehållsprovidern för användare som inte är administratörer.
 
-### Kända fel {#known-issues-15977}
+### Kända fel {#known-issues-16145}
 
-* **(Endast för AEM Forms)** Efter installationen av underhållsutgåvan AEM Cloud Foundation 15977 återges fält med adaptiva formulär i fel ordning vid formulärutveckling och för publicerade formulär. Om du använder AEM Forms rekommenderar Adobe att du inte uppgraderar till version 15977 förrän problemet är löst i den kommande underhållsversionen. Om du gör det kan du undvika besvär.
+Ingen.
 
-### Föråldrade funktioner och API:er {#deprecated-15977}
+### Föråldrade funktioner och API:er {#deprecated-16145}
 
 * [Borttagning av JWT-autentiseringsuppgifter i Adobe Developer Console](/help/security/jwt-credentials-deprecation-in-adobe-developer-console.md)
 
@@ -60,7 +103,7 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 159
 
 Om du vill veta vad som är föråldrat eller borttaget i AEM as a Cloud Service kan du läsa [Föråldrade och borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
 
-### Inbäddade tekniker {#embedded-tech-15977}
+### Inbäddade tekniker {#embedded-tech-16145}
 
 | Teknik | Version | Länk |
 |---|---|---|
