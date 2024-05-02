@@ -3,9 +3,9 @@ title: Konfigurera CDN-felsidor
 description: Lär dig hur du åsidosätter standardfelsidan genom att lagra statiska filer i värdbaserat lagringsutrymme som Amazon S3 eller Azure Blob Storage, och referera till dem i en konfigurationsfil som distribueras med Cloud Manager Configuration Pipeline.
 feature: Dispatcher
 exl-id: 1ecc374c-b8ee-41f5-a565-5b36445d3c7c
-source-git-commit: 8489b40f45e6cbeb98288969bc9f6bd42815e2a6
+source-git-commit: 69ffcccae150a5e49c6344973890733f3e5b74ae
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -18,14 +18,21 @@ Om det osannolika skulle inträffa [CDN som hanteras av Adobe](/help/implementin
 
 Innan du kan åsidosätta standardfelsidan måste du göra följande:
 
-* Skapa först den här mapp- och filstrukturen i den översta mappen i Git-projektet:
+* Skapa den här mappen och filstrukturen i den översta mappen i Git-projektet:
 
 ```
 config/
      cdn.yaml
 ```
 
-* För det andra `cdn.yaml` konfigurationsfilen ska innehålla metadata och felsidans referenser, enligt beskrivningen nedan.
+* The `cdn.yaml` konfigurationsfilen ska innehålla både metadata och reglerna som beskrivs i exemplen nedan. The `kind` parametern ska anges till `CDN` och versionen bör anges till schemaversionen, som för närvarande är `1`.
+
+* Skapa en riktad distributionskonfigurationspipeline i Cloud Manager. Se [konfigurera produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) och [konfigurera icke-produktionsrörledningar](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md).
+
+**Anteckningar**
+
+* De lokala lagringsplatserna stöder för närvarande inte konfigurationsflödet.
+* Du kan använda `yq` för att lokalt validera YAML-formateringen i konfigurationsfilen (till exempel `yq cdn.yaml`).
 
 ### Konfiguration {#configuration}
 
