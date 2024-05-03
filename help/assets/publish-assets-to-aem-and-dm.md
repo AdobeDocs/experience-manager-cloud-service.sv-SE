@@ -1,9 +1,9 @@
 ---
 title: Snabbpublicering till AEM och Dynamic Media
-description: Snabbpublicering är en funktion i det nya användargränssnittet eller resursvyn. Den här funktionen ger flexibilitet för användare att antingen snabbt publicera till AEM och dynamiska medier samtidigt eller individuellt. Det innebär att när du har valt resurser och mappar kan användarna välja att publicera till Dynamic Media eller Publicera till AEM. Med funktionen Snabb publicering kan det nya användargränssnittet publicera resurser och mappar till Dynamic Media och AEM.
-source-git-commit: f3b600fc3d9c519158b6b90bd9a9f881724934de
+description: Med snabbpublicering i resursvyn kan du publicera resurser till AEM och dynamiska medier samtidigt eller separat. Du kan välja resurser och mappar och välja att publicera till Dynamic Media eller AEM.
+source-git-commit: d80d794d739a476a937a8e71d114b1e255103b67
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1179'
 ht-degree: 0%
 
 ---
