@@ -2,10 +2,12 @@
 title: Övervakning av faktisk användning för Edge Delivery Services för AEM Forms as a Cloud Service
 description: Övervakning av faktisk användning för Edge Delivery Services för AEM Forms as a Cloud Service innefattar kontinuerlig spårning och analys av användarinteraktioner med formulär.
 feature: Edge Delivery Services
+hide: true
+hidefromtoc: true
 exl-id: 184fc7dc-d583-4a63-9e30-80d324ec9d7e
-source-git-commit: 71e3a268c5033f0a7f0d054a9f4c1fe599cd6b83
+source-git-commit: 6f78b43e857ca496465c315e8812bb67aff8c627
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -30,15 +32,13 @@ Om du vill logga in på kontrollpanelen för Edge Delivery Services för AEM For
 
 * **URL**: URL:en är specifik för användarwebbplatsen eller domänen. Användarna kan filtrera webbplatsen eller domänen för att visa instrumentpanelen efter deras behov.
 
-* **Domännyckel**: Användaren genererar domännyckeln manuellt.
-
-Mer information om hur du använder domännycklarna finns i [Autentisering](https://www.aem.live/developer/rum#authentication) dokumentation.
+* **Domännyckel**: Användaren genererar domännyckeln manuellt. Kontakta din Adobe-representant om du vill få domännycklar för dina formulär.
 
 ### Kontrollpanelen för Edge Delivery Services för AEM Forms as a Cloud Service
 
 När du har angett URL- och domännycklarna på inloggningsskärmen får du tillgång till kontrollpanelen för Edge Delivery Services för AEM Forms as a Cloud Service.
 
-Bilden nedan visar RUM-kontrollpanelen för Edge Delivery Services för AEM Forms as a Cloud Service:
+Bilden nedan visar kontrollpanelen för Edge Delivery Services för AEM Forms as a Cloud Service:
 
 ![RUM Forms Dashboard](/help/edge/assets/rum-forms-dashboard.png)
 
