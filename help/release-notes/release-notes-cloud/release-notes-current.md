@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 00d91be618cd7ce1fb9e78115fbe3d431b20cd34
+source-git-commit: ee16d3a0fe1fc93c215d31f7dea0e9c21e051350
 workflow-type: tm+mt
-source-wordcount: '1965'
+source-wordcount: '1963'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,7 @@ Nu kan du [tilldela eller ta bort metadataformulär till flera mappar](/help/ass
 
 -->
 
-### Nya funktioner i förhandsversionen för AEM Forms {#forms-pre-release}
+### Nya funktioner i AEM Forms {#forms-new-features}
 
 * **Förbättrad Visual Rule Editor för Core Component Based Adaptive Forms**: Den här versionen innebär en betydande uppgradering av den visuella regelredigeraren för adaptiva formulär baserade på kärnkomponenter. Den här versionen innebär en betydande uppgradering av den visuella regelredigeraren för adaptiva formulär baserade på kärnkomponenter. Uppdateringen fokuserar på att effektivisera interaktionen med anpassade funktioner, så att du kan skapa mer robusta och effektiva formulär.
 
