@@ -1,19 +1,19 @@
 ---
-title: Övervakning av faktisk användning för Edge Delivery Services för AEM Forms as a Cloud Service
-description: Övervakning av faktisk användning för Edge Delivery Services för AEM Forms as a Cloud Service innefattar kontinuerlig spårning och analys av användarinteraktioner med formulär.
+title: Real Use Monitoring (RUM) för Edge Delivery Services för AEM Forms as a Cloud Service
+description: Real Use Monitoring (RUM) för Edge Delivery Services för AEM Forms as a Cloud Service innefattar kontinuerlig spårning och analys av användarinteraktioner med formulär.
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: 184fc7dc-d583-4a63-9e30-80d324ec9d7e
-source-git-commit: 6f78b43e857ca496465c315e8812bb67aff8c627
+source-git-commit: 6c56f753d2a32de6fe11fd47843cee5bcb8cac4e
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
 
 
-# Övervakning av faktisk användning för Edge Delivery Services för AEM Forms as a Cloud Service
+# Real Use Monitoring (RUM) för Edge Delivery Services för AEM Forms as a Cloud Service
 
 Med funktionen för övervakning av faktisk användning (RUM) får ni verkliga insikter om hur besökarna interagerar med era Adobe Experience Manager (AEM) webbplatser. Detta inbyggda verktyg ger värdefull information för att förstå användarbeteenden, diagnostisera prestandaproblem och mäta effektiviteten i webbplatsexperiment. RUM går bortom syntetisk testning genom att fånga in Real Use-interaktioner, vilket ger en mer korrekt bild av webbplatsens prestanda.
 
@@ -75,3 +75,7 @@ Genom att analysera dessa mätvärden kan ni identifiera möjligheter att:
 * Åtgärda tekniska problem som gör det långsammare att läsa in formulär.
 
 Genom att fokusera på dessa områden kan ni skapa formulär som är enklare att använda och uppmuntra besökarna att fylla i dem, vilket i slutänden leder till högre konverteringsgrader.
+
+## Se även
+
+{{see-more-forms-eds}}

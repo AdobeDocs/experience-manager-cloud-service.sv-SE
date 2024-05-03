@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 6f78b43e857ca496465c315e8812bb67aff8c627
+source-git-commit: 6c56f753d2a32de6fe11fd47843cee5bcb8cac4e
 workflow-type: tm+mt
-source-wordcount: '4907'
+source-wordcount: '4915'
 ht-degree: 3%
 
 ---
@@ -851,12 +851,12 @@ ht-degree: 3%
          + [Använd regler för att lägga till dynamiskt beteende i ett formulär](/help/edge/docs/forms/rules-forms.md)
          + [Visa ett anpassat tackmeddelande efter att formuläret har skickats](/help/edge/docs/forms/thank-you-page-form.md)
       + Funktioner {#advanced-features-edge-delivery-services-forms}
-         + [Formulärfragment](/help/edge/docs/forms/form-fragments.md)
+         + [Använd formulärfragment](/help/edge/docs/forms/form-fragments.md)
          + [Lägga till repeterbara avsnitt i ett &#x200B;](/help/edge/docs/forms/repeatable-forms.md)
-         + [Översättning](/help/edge/docs/forms/translate-forms.md)
-         + [reCAPTCHA](/help/edge/docs/forms/recaptacha-forms.md)
+         + [Översätt formuläret](/help/edge/docs/forms/translate-forms.md)
+         + [Använd reCAPTCHA för att skydda dina formulär](/help/edge/docs/forms/recaptacha-forms.md)
          + [Anpassade komponenter](/help/edge/docs/forms/custom-components-forms.md)
-         + [Reell användning av blanketter](/help/edge/docs/forms/real-use-monitoring-for-forms.md)
+         + [Övervakning av faktisk användning för formulär](/help/edge/docs/forms/real-use-monitoring-for-forms.md)
       + Referenser {#forms-references}
          + [Komponenter för adaptiva formulärblock och deras egenskaper](/help/edge/docs/forms/form-components.md)
    + Kantleveransresurser {#resources}
