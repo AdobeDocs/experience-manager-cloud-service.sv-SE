@@ -2,9 +2,9 @@
 title: Introduktion till Cloud Manager
 description: Läs om hur Cloud Manager stöder ditt AEM genom program, miljöer och rörledningar.
 exl-id: b743f126-b34e-4f48-a3f0-5dbd4e1ac34e
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: 6181b066742357169b67f605ac3970685537bb5e
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
@@ -58,6 +58,10 @@ Du kan även navigera till Cloud Managers program- och produktsida från Adobe E
 >[!NOTE]
 >
 >En användare kan tilldelas flera roller. Du kan till exempel tilldela båda **Företagsägare** och **Distributionshanteraren** roller till en användare ger användaren summan av dessa behörigheter.
+
+>[!TIP]
+>
+>Anpassade behörighetsprofiler med konfigurerbara behörigheter är också tillgängliga. Se dokumentet [Anpassade behörigheter](/help/implementing/cloud-manager/custom-permissions.md) för mer information.
 
 ## Cloud Manager-program {#cloud-manager-programs}
 
