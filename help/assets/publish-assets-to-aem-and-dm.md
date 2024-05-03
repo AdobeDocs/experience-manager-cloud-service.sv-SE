@@ -1,13 +1,13 @@
 ---
 title: Snabbpublicering till AEM och Dynamic Media
 description: Med snabbpublicering i resursvyn kan du publicera resurser till AEM och dynamiska medier samtidigt eller separat. Du kan välja resurser och mappar och välja att publicera till Dynamic Media eller AEM.
-source-git-commit: d80d794d739a476a937a8e71d114b1e255103b67
+exl-id: 147c1c35-0d81-4458-b4ed-7541d2b0dd54
+source-git-commit: 0891d58e10e8be746c0be5f55d554174567fcd64
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1185'
 ht-degree: 0%
 
 ---
-
 
 # Publicera resurser till AEM och Dynamic Media{#Publish-Assets-to-AEM-and-Dynamic-Media}
 
@@ -124,4 +124,5 @@ Följande funktioner är inte tillgängliga för tillfället när du publicerar 
 * Möjlighet att kopiera eller klistra in Dynamic Media URL på resursnivå (om resurserna publiceras till Dynamic Media).
 * Möjlighet att publicera referenser (resurser, taggar och så vidare) när du publicerar till AEM.
 * Möjlighet att skriva över Dynamic Media synkroniseringsstatus på mappnivå.
-* Möjlighet att skriva över publiceringsläget för Dynamic Media på mappnivå.
+* Möjlighet att skriva över Dynamic Media Publish-läget på mappnivå
+* Hantera publikation stöds inte ännu.
