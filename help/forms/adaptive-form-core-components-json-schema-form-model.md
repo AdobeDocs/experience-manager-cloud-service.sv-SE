@@ -1,51 +1,43 @@
 ---
-title: Hur utformar man JSON-schema för ett adaptivt formulär?
-description: Lär dig att skapa ett JSON-schema för ett adaptivt formulär och skapa ett adaptivt formulär baserat på schemat för att skapa schemaklagomål.
-feature: Adaptive Forms, Foundation Components
+title: Hur utformar man JSON Schema för komponenter i adaptiva Form Core?
+description: Lär dig att skapa ett JSON-schema för en adaptiv Form-kärna och skapa en adaptiv form (kärnkomponenter) baserad på schemat för att skapa schemalagda data.
+feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
-exl-id: 8eeb9c5e-6866-4bfe-b922-1f028728ef0d
 source-git-commit: 10389af2bce06f95d4d841371b7111340d40edaa
 workflow-type: tm+mt
-source-wordcount: '1331'
+source-wordcount: '1289'
 ht-degree: 0%
 
 ---
 
-# Utforma JSON-schema för ett adaptivt formulär {#creating-adaptive-forms-using-json-schema}
+# Utforma JSON-schema för en adaptiv form (kärnkomponenter){#creating-adaptive-forms-using-json-schema}
 
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| Kärnkomponenter | [Klicka här](/help/forms/adaptive-form-core-components-json-schema-form-model.md) |
-| Foundation | Den här artikeln |
-
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
-
-| Version | Artikellänk |
-| -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adaptive-form-json-schema-form-model.html) |
-| AEM as a Cloud Service | Den här artikeln |
+| Foundation | [Klicka här](/help/forms/adaptive-form-json-schema-form-model.md) |
+| Kärnkomponenter | Den här artikeln |
 
 
 ## Förutsättningar {#prerequisites}
 
-Att skapa ett adaptivt formulär med ett JSON-schema som formulärmodell kräver grundläggande kunskaper i JSON-schemat. Du bör läsa igenom följande innehåll före den här artikeln.
+Att skapa ett adaptivt formulär baserat på kärnkomponenter med ett JSON-schema som formulärmodell kräver grundläggande kunskaper i JSON-schema. Du bör läsa igenom följande innehåll före den här artikeln.
 
-* [Skapa ett adaptivt formulär](creating-adaptive-form.md)
+* [Skapa ett adaptivt formulär baserat på kärnkomponenter](/help/forms/creating-adaptive-form-core-components.md)
 * [JSON-schema](https://json-schema.org/)
 
 ## Använda ett JSON-schema som formulärmodell  {#using-a-json-schema-as-form-model}
 
-Adobe Experience Manager Forms har stöd för att skapa ett adaptivt formulär genom att använda ett befintligt JSON-schema som formulärmodell. Detta JSON-schema representerar strukturen i vilken data produceras eller används av det bakomliggande systemet i din organisation. Det JSON-schema som du använder ska vara kompatibelt med [v4-specifikationer](https://json-schema.org/draft-04/schema).
+Adobe Experience Manager Forms har stöd för att skapa ett adaptivt formulär baserat på kärnkomponenter genom att använda ett befintligt JSON-schema som formulärmodell. Detta JSON-schema representerar strukturen i vilken data produceras eller används av det bakomliggande systemet i din organisation. Det JSON-schema som du använder ska vara kompatibelt med [v4-specifikationer](https://json-schema.org/draft-04/schema).
 
 De viktigaste funktionerna i ett JSON-schema är:
 
-* Strukturen för JSON visas som ett träd på fliken Innehållssökning i redigeringsläget för ett adaptivt formulär. Du kan dra och lägga till element från JSON-hierarkin i det adaptiva formuläret.
+* Strukturen för JSON visas som ett träd på fliken Innehållssökning i redigeringsläget för ett adaptivt formulär. Du kan dra och lägga till element från JSON-hierarkin till den adaptiva formen baserat på kärnkomponenterna.
 * Du kan fylla i formuläret i förväg med JSON som är kompatibel med det associerade schemat.
 * När data skickas skickas skickas de som anges av användaren som JSON som är anpassad efter det associerade schemat.
 
-Ett JSON-schema består av enkla och komplexa elementtyper. Elementen har attribut som lägger till regler i elementet. När dessa element och attribut dras till ett adaptivt formulär mappas de automatiskt till motsvarande adaptiv formulärkomponent.
+Ett JSON-schema består av enkla och komplexa elementtyper. Elementen har attribut som lägger till regler i elementet. När dessa element och attribut dras till ett adaptivt formulär mappas de automatiskt till motsvarande adaptiva formulärkomponenter.
 
 Den här mappningen av JSON-element med adaptiva formulärkomponenter är följande:
 
@@ -59,12 +51,6 @@ Den här mappningen av JSON-element med adaptiva formulärkomponenter är följa
                 "Date of Birth"
               ],
               "description": "Date of birth in DD MMMM, YYYY",
-              "aem:afProperties": {
-                "displayPictureClause": "date{DD MMMM, YYYY}",
-                "displayPatternType": "date{DD MMMM, YYYY}",
-                "validationPatternType": "date{DD MMMM, YYYY}",
-                "validatePictureClause": "date{DD MMMM, YYYY}",
-                "validatePictureClauseMessage": "Date must be in DD MMMM, YYYY format."
               }
 ```
 
@@ -246,11 +232,7 @@ Här är ett exempel på ett JSON-schema.
      "type": "boolean"
     },
     "phone": {
-     "type": "number",
-     "aem:afProperties": {
-      "sling:resourceType": "/libs/fd/af/components/guidetelephone",
-      "guideNodeClass": "guideTelephone"
-     }
+     "type": "number"
     },
     "address": {
      "type": "string"
@@ -346,9 +328,10 @@ Definitionsnycklar används för att identifiera återanvändbara scheman. Åter
 
 Exemplet ovan definierar en kundpost där varje kund har både en leveransadress och en faktureringsadress. Adressernas struktur är densamma - adresserna har en gatuadress, ort och delstat - så det är en bra idé att inte duplicera adresserna. Det gör det också enkelt att lägga till och ta bort fält för framtida ändringar.
 
-## Förkonfigurerar fält i JSON-schemadefinition {#pre-configuring-fields-in-json-schema-definition}
+<!--
+## Pre-Configuring fields in JSON Schema Definition {#pre-configuring-fields-in-json-schema-definition}
 
-Du kan använda **aem:afProperties** för att förkonfigurera JSON-schemafältet för mappning till en anpassad adaptiv formulärkomponent. Ett exempel visas nedan:
+You can use the **aem:afProperties** property to preconfigure JSON Schema field to map to a custom Adaptive Form component. An example is listed below:
 
 ```json
 {
@@ -356,16 +339,13 @@ Du kan använda **aem:afProperties** för att förkonfigurera JSON-schemafältet
         "sizeInMB": {
             "type": "integer",
             "minimum": 16,
-            "maximum": 512,
-            "aem:afProperties" : {
-                 "sling:resourceType" : "/apps/fd/af/components/guideTextBox",
-                 "guideNodeClass" : "guideTextBox"
-             }
+            "maximum": 512
         }
     },
     "required": [ "sizeInMB" ],
     "additionalProperties": false
 }
+
 ```
 
 <!--- ## Configure scripts or expressions for form objects  {#configure-scripts-or-expressions-for-form-objects}
@@ -641,7 +621,7 @@ Here is the sample JSON code for previously mentioned examples.
 
 ## Begränsa tillåtna värden för en adaptiv formulärkomponent {#limit-acceptable-values-for-an-adaptive-form-component}
 
-Du kan lägga till följande begränsningar i JSON-schemaelement för att begränsa vilka värden som tillåts för en adaptiv formulärkomponent:
+Du kan lägga till följande begränsningar i JSON-schemaelement för att begränsa vilka värden som tillåts i en Adaptiv Form-kärnkomponent:
 
 <table>
  <tbody>
@@ -776,6 +756,10 @@ Du har två alternativ:
 **Vad ska tillägget för JSON-schemafilen vara?**
 
 Tillägget för JSON-schemafilen måste vara .schema.json. Till exempel: &lt;filename>.schema.json.
+
+**Är `aem:afProperties` stöds som en del av JSON-schemat i Adaptive Forms baserat på kärnkomponenter?**
+
+Nej, `aem:afProperties` stöds inte för kärnkomponenter. Den här egenskapen stöds bara för grundkomponenter.
 
 ## Se även {#see-also}
 

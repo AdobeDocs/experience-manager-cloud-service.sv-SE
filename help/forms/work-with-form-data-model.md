@@ -1,18 +1,18 @@
 ---
-title: Hur fungerar en formulärdatamodell i AEM Forms?
+title: Hur fungerar en formulärdatamodell (FDM) i AEM Forms?
 description: Lägg till datamodellsobjekt, tjänster, skapa datamodellsobjekt och underordnade egenskaper, konfigurera tjänster, arbeta med navigeringsegenskaper för OData-tjänster.
 feature: Adaptive Forms, Form Data Model
 role: Admin, User
 level: Beginner, Intermediate
 exl-id: c17c0443-d4dc-41f8-9315-6cc49e6c471f
-source-git-commit: bae9a5178c025b3bafa8ac2da75a1203206c16e1
+source-git-commit: 7b31a2ea016567979288c7a8e55ed5bf8dfc181d
 workflow-type: tm+mt
-source-wordcount: '3934'
+source-wordcount: '3993'
 ht-degree: 0%
 
 ---
 
-# Arbeta med formulärdatamodell {#work-with-form-data-model}
+# Arbeta med FDM (Form Data Model) {#work-with-form-data-model}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -22,37 +22,37 @@ ht-degree: 0%
 
 ![dataintegrering](do-not-localize/data-integeration.png)
 
-Formulärdatamodellredigeraren har ett intuitivt användargränssnitt och verktyg för att redigera och konfigurera en formulärdatamodell. Med redigeraren kan du lägga till och konfigurera datamodellsobjekt, egenskaper och tjänster från associerade datakällor i formulärdatamodellen. Dessutom kan du skapa datamodellsobjekt och -egenskaper utan datakällor och binda dem till respektive datamodellsobjekt och egenskaper senare. Du kan också generera och redigera exempeldata för datamodellsobjektegenskaper som du kan använda för att fylla i adaptiv Forms <!--and interactive communications--> vid förhandsgranskning. Du kan testa datamodellsobjekt och tjänster som konfigurerats i en formulärdatamodell för att se till att den är korrekt integrerad med datakällor.
+Redigeraren för formulärdatamodell (FDM) har ett intuitivt användargränssnitt och verktyg för redigering och konfigurering av en formulärdatamodell (FDM). Med redigeraren kan du lägga till och konfigurera datamodellsobjekt, egenskaper och tjänster från associerade datakällor i formulärdatamodellen (FDM). Dessutom kan du skapa datamodellsobjekt och -egenskaper utan datakällor och binda dem till respektive datamodellsobjekt och egenskaper senare. Du kan också generera och redigera exempeldata för datamodellsobjektegenskaper som du kan använda för att fylla i adaptiv Forms <!--and interactive communications--> vid förhandsgranskning. Du kan testa datamodellsobjekt och tjänster som konfigurerats i en formulärdatamodell (FDM) för att se till att den är korrekt integrerad med datakällor.
 
-Om du inte har använt dataintegrering med Forms tidigare och inte har konfigurerat någon datakälla eller skapat en formulärdatamodell kan du läsa följande avsnitt:
+Om du inte har använt Forms dataintegrering tidigare och inte har konfigurerat någon datakälla eller skapat en formulärdatamodell (FDM), se följande avsnitt:
 
 * [[!DNL Experience Manager Forms] Dataintegrering](data-integration.md)
 * [Konfigurera datakällor](configure-data-sources.md)
-* [Skapa formulärdatamodell](create-form-data-models.md)
+* [Skapa formulärdatamodell (FDM)](create-form-data-models.md)
 
 Läs vidare om du vill ha mer information om olika åtgärder och konfigurationer som du kan utföra med formulärdatamodellredigeraren.
 
 >[!NOTE]
 >
->Du måste vara medlem i båda **fdm-author** och **formuläranvändare** grupper för att kunna skapa och arbeta med formulärdatamodell. Kontakta [!DNL Experience Manager] administratör för att bli medlem i grupperna.
+>Du måste vara medlem i båda **fdm-author** och **formuläranvändare** grupper för att kunna skapa och arbeta med formulärdatamodell (FDM). Kontakta [!DNL Experience Manager] administratör för att bli medlem i grupperna.
 
 ## Lägga till datamodellsobjekt och -tjänster {#add-data-model-objects-and-services}
 
-Om du har skapat en formulärdatamodell med datakällor kan du använda redigeraren för formulärdatamodellen för att lägga till datamodellsobjekt och -tjänster, konfigurera deras egenskaper, skapa associationer mellan datamodellsobjekt och testa formulärdatamodellen och -tjänsterna.
+Om du har skapat en formulärdatamodell (FDM) med datakällor kan du använda redigeraren för formulärdatamodellen för att lägga till datamodellsobjekt och -tjänster, konfigurera deras egenskaper, skapa associationer mellan datamodellsobjekt och testa formulärdatamodellen (FDM) och -tjänsterna.
 
-Du kan lägga till datamodellsobjekt och datatjänster från tillgängliga datakällor i formulärdatamodellen. När nya datamodellsobjekt visas på fliken Modell visas tillagda tjänster på fliken Tjänster.
+Du kan lägga till datamodellsobjekt och -tjänster från tillgängliga datakällor i formulärdatamodellen (FDM). När nya datamodellsobjekt visas på fliken Modell visas tillagda tjänster på fliken Tjänster.
 
 Så här lägger du till datamodellsobjekt och -tjänster:
 
-1. Logga in på [!DNL Experience Manager] författarinstans, navigera till **[!UICONTROL Forms > Data Integrations]** och öppna den formulärdatamodell i vilken du vill lägga till datamodellsobjekt.
+1. Logga in på [!DNL Experience Manager] författarinstans, navigera till **[!UICONTROL Forms > Data Integrations]** och öppna den formulärdatamodell där du vill lägga till datamodellsobjekt.
 1. Expandera datakällor i rutan Datakällor för att visa tillgängliga datamodellsobjekt och tjänster.
-1. Markera datamodellsobjekt och tjänster som du vill lägga till i formulärdatamodellen och välj **[!UICONTROL Add Selected]**.
+1. Markera datamodellsobjekt och -tjänster som du vill lägga till i formulärdatamodellen (FDM) och välj **[!UICONTROL Add Selected]**.
 
    ![selected-objects](assets/selected-objects.png)
 
    Markerade datamodellsobjekt och datatjänster
 
-   The **[!UICONTROL Model]** I visas en grafisk representation av alla datamodellsobjekt och deras egenskaper som har lagts till i formulärdatamodellen. Varje datamodellobjekt representeras av en ruta i formulärdatamodellen.
+   The **[!UICONTROL Model]** I visas en grafisk representation av alla datamodellsobjekt och deras egenskaper som har lagts till i formulärdatamodellen (FDM). Varje datamodellobjekt representeras av en ruta i formulärdatamodellen (FDM).
 
    ![model-tab](assets/model-tab.png)
 
@@ -60,7 +60,7 @@ Så här lägger du till datamodellsobjekt och -tjänster:
 
    >[!NOTE]
    >
-   >Du kan hålla kvar och dra runt datamodellsobjektrutor för att ordna dem i innehållsområdet. Alla datamodellsobjekt som läggs till i formulärdatamodellen är nedtonade i rutan Datakällor.
+   >Du kan hålla kvar och dra runt datamodellsobjektrutor för att ordna dem i innehållsområdet. Alla datamodellsobjekt som läggs till i formulärdatamodellen (FDM) är nedtonade i rutan Datakällor.
 
    The **[!UICONTROL Services]** -flikar visar tillagda tjänster.
 
@@ -76,19 +76,19 @@ Så här lägger du till datamodellsobjekt och -tjänster:
 
    >[!NOTE]
    >
-   >Du kan anropa tjänster som du har konfigurerat på fliken Tjänster i en formulärdatamodell med hjälp av reglerna för adaptiva formulär. De konfigurerade tjänsterna är tillgängliga i åtgärden Anropa tjänster i regelredigeraren Mer information om hur du använder dessa tjänster i regler för adaptiva formulär finns i Anropa tjänster och Ange värdet för regler i [regelredigerare](rule-editor.md).
+   >Du kan anropa tjänster som du har konfigurerat på fliken Tjänster i en formulärdatamodell (FDM) med hjälp av reglerna för adaptiva formulär. De konfigurerade tjänsterna är tillgängliga i åtgärden Anropa tjänster i regelredigeraren Mer information om hur du använder dessa tjänster i regler för adaptiva formulär finns i Anropa tjänster och Ange värdet för regler i [regelredigerare](rule-editor.md).
 
 ## Skapa datamodellsobjekt och underordnade egenskaper {#create-data-model-objects-and-child-properties}
 
 ### Skapa datamodellsobjekt {#create-data-model-objects}
 
-Du kan lägga till datamodellsobjekt från konfigurerade datakällor, men du kan även skapa datamodellsobjekt eller -enheter utan datakällor. Det är särskilt användbart om du inte har konfigurerat datakällor i formulärdatamodellen.
+Du kan lägga till datamodellsobjekt från konfigurerade datakällor, men du kan även skapa datamodellsobjekt eller -enheter utan datakällor. Det är särskilt användbart om du inte har konfigurerat datakällor i formulärdatamodellen (FDM).
 
 Så här skapar du ett datamodellsobjekt utan datakällor:
 
-1. Logga in på [!DNL Experience Manager] författarinstans, navigera till **[!UICONTROL Forms > Data Integrations]** och öppna den formulärdatamodell i vilken du vill skapa ett datamodellsobjekt eller en datamodell.
+1. Logga in på [!DNL Experience Manager] författarinstans, navigera till **[!UICONTROL Forms > Data Integrations]** och öppna den formulärdatamodell (FDM) i vilken du vill skapa ett datamodellsobjekt eller en datamodell.
 1. Välj **[!UICONTROL Create Entity]**.
-1. I [!UICONTROL Create data Model] anger du ett namn för datamodellobjektet och väljer **[!UICONTROL Add]**. Ett datamodellsobjekt läggs till i formulärdatamodellen. Det nya datamodellsobjektet är inte bundet till en datakälla och har inga egenskaper som visas i följande bild.
+1. I [!UICONTROL Create data Model] anger du ett namn för datamodellobjektet och väljer **[!UICONTROL Add]**. Ett datamodellsobjekt läggs till i formulärdatamodellen (FDM). Det nya datamodellsobjektet är inte bundet till en datakälla och har inga egenskaper som visas i följande bild.
 
    ![new-entity](assets/new-entity.png)
 
@@ -107,13 +107,13 @@ Så här skapar du en underordnad egenskap:
 
    Om du vill binda en underordnad egenskap manuellt med en datamodellsobjektegenskap väljer du bläddringsikonen bredvid **[!UICONTROL Bind Reference]** fält. The **[!UICONTROL Select Object]** visas alla egenskaper från det överordnade datamodellobjektet. Välj en egenskap som du vill binda med och markera kryssruteikonen. Du kan bara välja en egenskap av samma datatyp som den underordnade egenskapen.
 
-1. Välj **[!UICONTROL Done]** för att spara den underordnade egenskapen och markera **[!UICONTROL Save]** för att spara formulärdatamodellen.. Egenskapen child läggs nu till i datamodellsobjektet.
+1. Välj **[!UICONTROL Done]** för att spara den underordnade egenskapen och markera **[!UICONTROL Save]** för att spara formulärdatamodellen (FDM). Egenskapen child läggs nu till i datamodellsobjektet.
 
-När du har skapat datamodellsobjekt och -egenskaper kan du fortsätta skapa Adaptiv Forms <!--and interactive communications--> baserat på formulärdatamodellen. När du har datakällor tillgängliga och konfigurerade kan du senare binda formulärdatamodellen till datakällor. Bindningen uppdateras automatiskt i tillhörande adaptiva Forms <!--and interactive communications-->. Mer information om hur du skapar Adaptive Forms <!--and interactive communications--> använda formulärdatamodell, se [Använd formulärdatamodell](using-form-data-model.md).
+När du har skapat datamodellsobjekt och -egenskaper kan du fortsätta skapa Adaptiv Forms <!--and interactive communications--> baserat på formulärdatamodellen (FDM). När du har datakällor tillgängliga och konfigurerade kan du senare binda formulärdatamodellen (FDM) till datakällor. Bindningen uppdateras automatiskt i tillhörande adaptiva Forms <!--and interactive communications-->. Mer information om hur du skapar Adaptive Forms <!--and interactive communications--> använda formulärdatamodell (FDM), se [Använd formulärdatamodell](using-form-data-model.md).
 
 ### Binda datamodellsobjekt och egenskaper {#bind-data-model-objects-and-properties}
 
-När datakällorna som du vill integrera med formulärdatamodellen är tillgängliga kan du lägga till dem i formulärdatamodellen enligt beskrivningen i [Uppdatera datakällor](create-form-data-models.md#update). Gör sedan följande för att binda obundna datamodellsobjekt och egenskaper:
+När datakällorna som du vill integrera med formulärdatamodellen (FDM) är tillgängliga kan du lägga till dem i formulärdatamodellen (FDM) enligt beskrivningen i [Uppdatera datakällor](create-form-data-models.md#update). Gör sedan följande för att binda obundna datamodellsobjekt och egenskaper:
 
 1. Välj den obundna datakälla som du vill binda till en datakälla i formulärdatamodellen.
 1. Välj **[!UICONTROL Edit Properties]**.
@@ -144,14 +144,14 @@ Så här konfigurerar du läs- och skrivtjänster för att läsa och skriva data
 
    >[!NOTE]
    >
-   >Förutom datamodellsobjekt och -tjänster innehåller OData-tjänstens metadatadokument navigeringsegenskaper som definierar associationen mellan två datamodellsobjekt. När du lägger till en OData-tjänstdatakälla i en formulärdatamodell finns det en tjänst tillgänglig i formulärdatamodellen för alla navigeringsegenskaper i ett datamodellsobjekt. Du kan använda den här tjänsten för att läsa navigeringsegenskaperna för motsvarande datamodellsobjekt.
+   >Förutom datamodellsobjekt och -tjänster innehåller OData-tjänstens metadatadokument navigeringsegenskaper som definierar associationen mellan två datamodellsobjekt. När du lägger till en OData-tjänstdatakälla i en formulärdatamodell (FDM) finns det en tjänst tillgänglig i formulärdatamodellen (FDM) för alla navigeringsegenskaper i ett datamodellsobjekt. Du kan använda den här tjänsten för att läsa navigeringsegenskaperna för motsvarande datamodellsobjekt.
    >
    >
    >Mer information om hur du använder tjänsten finns i [Arbeta med navigeringsegenskaper för OData-tjänster](#work-with-navigation-properties-of-odata-services).
 
 1. Växla **[!UICONTROL Top Level Object]** för att ange om datamodellobjektet är ett modellobjekt på den översta nivån.
 
-   Datamodellsobjekt som konfigurerats i en formulärdatamodell är tillgängliga för användning på fliken Datamodellsobjekt i innehållsläsaren för ett adaptivt formulär baserat på formulärdatamodellen. När du lägger till en association mellan två datamodellsobjekt kapslas datamodellobjektet som du associerar med under datamodellsobjektet som du associerar från i **[!UICONTROL Data Model Objects]** -fliken. Om den kapslade datamodellen är ett objekt på den översta nivån visas den också separat i **[!UICONTROL Data Model Objects]** -fliken. Därför ser du två poster i den, en inuti och en utanför den kapslade hierarkin, vilket kan förvirra formulärförfattarna. Om du vill att det associerade datamodellsobjektet bara ska visas i den kapslade hierarkin inaktiverar du egenskapen Objekt på översta nivån.
+   Datamodellsobjekt som konfigurerats i en formulärdatamodell (FDM) är tillgängliga för användning på fliken Datamodellsobjekt i innehållsläsaren för ett anpassat formulär baserat på formulärdatamodellen (FDM). När du lägger till en association mellan två datamodellsobjekt kapslas datamodellobjektet som du associerar med under datamodellsobjektet som du associerar från i **[!UICONTROL Data Model Objects]** -fliken. Om den kapslade datamodellen är ett objekt på den översta nivån visas den också separat i **[!UICONTROL Data Model Objects]** -fliken. Därför ser du två poster i den, en inuti och en utanför den kapslade hierarkin, vilket kan förvirra formulärförfattarna. Om du vill att det associerade datamodellsobjektet bara ska visas i den kapslade hierarkin inaktiverar du egenskapen Objekt på översta nivån.
 
 1. Välj Läs- och skrivtjänster för de markerade datamodellsobjekten. Argumenten för tjänsterna visas.
 
@@ -160,7 +160,7 @@ Så här konfigurerar du läs- och skrivtjänster för att läsa och skriva data
    Läs- och skrivtjänster har konfigurerats för personaldatakälla
 
 1. Välj ![aem_6_3_edit](assets/edit.svg) för lästjänstargumentet till [binda argumentet till ett användarprofilattribut, begärandeattribut eller litteralvärde](#bindargument) och ange bindningsvärdet.
-1. Välj **[!UICONTROL Done]** för att spara argumentet, **[!UICONTROL Done]** för att spara egenskaperna och sedan **[!UICONTROL Save]** för att spara formulärdatamodellen.
+1. Välj **[!UICONTROL Done]** för att spara argumentet, **[!UICONTROL Done]** för att spara egenskaperna och sedan **[!UICONTROL Save]** för att spara formulärdatamodellen (FDM).
 
 ### Bind Läs tjänsteargument {#bindargument}
 
@@ -230,11 +230,11 @@ Ange till exempel attribut som `petid=100` i begäran hämtar egenskaper som är
 
 Vanligtvis finns det kopplingar mellan datamodellsobjekt i en datakälla. Associationen kan vara en-till-en eller en-till-många. Det kan till exempel finnas flera beroenden som är kopplade till en medarbetare. Det kallas en-till-många-association och framställs av `1:n` på den linje som förbinder associerade datamodellsobjekt. Om en association returnerar ett unikt medarbetarnamn för ett givet medarbetar-ID kallas den en-till-en-association.
 
-När du lägger till associerade datamodellobjekt i en datakälla i en formulärdatamodell behålls deras associationer och visas som kopplade med pilrader. Du kan lägga till associationer mellan datamodellsobjekt över olika datakällor i en formulärdatamodell.
+När du lägger till associerade datamodellobjekt i en datakälla i en formulärdatamodell (FDM) behålls deras associationer och visas som kopplade med pilrader. Du kan lägga till associationer mellan datamodellsobjekt över olika datakällor i en formulärdatamodell (FDM).
 
 >[!NOTE]
 >
->Fördefinierade associationer i en JDBC-datakälla sparas inte i formulärdatamodellen. Du måste skapa dem manuellt.
+>Fördefinierade associationer i en JDBC-datakälla sparas inte i formulärdatamodellen (FDM). Du måste skapa dem manuellt.
 
 Så här lägger du till en association:
 
@@ -244,7 +244,7 @@ Så här lägger du till en association:
 
    >[!NOTE]
    >
-   >Förutom datamodellsobjekt och -tjänster innehåller OData-tjänstens metadatadokument navigeringsegenskaper som definierar associationen mellan två datamodellsobjekt. Du kan använda de här navigeringsegenskaperna när du lägger till associationer i formulärdatamodellen. Mer information finns i [Arbeta med navigeringsegenskaper för OData-tjänster](#work-with-navigation-properties-of-odata-services).
+   >Förutom datamodellsobjekt och -tjänster innehåller OData-tjänstens metadatadokument navigeringsegenskaper som definierar associationen mellan två datamodellsobjekt. Du kan använda de här navigeringsegenskaperna när du lägger till associationer i formulärdatamodellen (FDM). Mer information finns i [Arbeta med navigeringsegenskaper för OData-tjänster](#work-with-navigation-properties-of-odata-services).
 
    The [!UICONTROL Add Association] öppnas.
 
@@ -273,7 +273,7 @@ Så här lägger du till en association:
 
    Välj **[!UICONTROL Done]** för att spara argumentet.
 
-1. Välj **[!UICONTROL Done]** för att spara associationen och sedan **[!UICONTROL Save]** för att spara formulärdatamodellen.
+1. Välj **[!UICONTROL Done]** för att spara associationen och sedan **[!UICONTROL Save]** för att spara formulärdatamodellen (FDM).
 1. Upprepa stegen för att skapa fler associationer efter behov.
 
 >[!NOTE]
@@ -286,11 +286,11 @@ Så här lägger du till en association:
 
 ## Redigera egenskaper {#properties}
 
-Du kan redigera egenskaper för datamodellsobjekt, deras egenskaper och tjänster som lagts till i formulärdatamodellen.
+Du kan redigera egenskaper för datamodellsobjekt, deras egenskaper och tjänster som lagts till i formulärdatamodellen (FDM).
 
 Så här redigerar du egenskaper:
 
-1. Markera kryssrutan bredvid ett datamodellsobjekt, en egenskap eller en tjänst i formulärdatamodellen.
+1. Markera kryssrutan bredvid ett datamodellsobjekt, en egenskap eller en tjänst i formulärdatamodellen (FDM).
 1. Välj **[!UICONTROL Edit Properties]**. The **[!UICONTROL Edit Properties]** för det valda modellobjektet, egenskapen eller tjänsten öppnas.
 
    * **[!UICONTROL Data model object]**: Ange läs- och skrivtjänster och redigeringsargument.
@@ -301,11 +301,11 @@ Så här redigerar du egenskaper:
 
    Dialogrutan Redigera egenskaper för en get-tjänst
 
-1. Välj **[!UICONTROL Done]** för att spara egenskaper och sedan **[!UICONTROL Save]** för att spara formulärdatamodellen.
+1. Välj **[!UICONTROL Done]** för att spara egenskaper och sedan **[!UICONTROL Save]** för att spara formulärdatamodellen (FDM).
 
 ### Skapa beräknade egenskaper {#computed}
 
-En beräknad egenskap är den vars värde beräknas baserat på en regel eller ett uttryck. Med hjälp av en regel kan du ange värdet för en beräknad egenskap till en litteral sträng, ett tal, resultatet av ett matematiskt uttryck eller värdet för en annan egenskap i formulärdatamodellen.
+En beräknad egenskap är den vars värde beräknas baserat på en regel eller ett uttryck. Med hjälp av en regel kan du ange värdet för en beräknad egenskap till en litteral sträng, ett tal, resultatet av ett matematiskt uttryck eller värdet för en annan egenskap i formulärdatamodellen (FDM).
 
 Du kan till exempel skapa en beräknad egenskap **FullName** vars värde är ett resultat av sammanfogning av den befintliga **FirstName** och **LastName** egenskaper. Så här gör du:
 
@@ -329,7 +329,7 @@ Du kan till exempel skapa en beräknad egenskap **FullName** vars värde är ett
 
    ![regel](assets/rule.png)
 
-1. Välj **[!UICONTROL Save]**. Den beräknade egenskapen är konfigurerad.
+1. Välj formulärdatamodellen (FDM) **[!UICONTROL Save]**. Den beräknade egenskapen är konfigurerad.
 
 ## Arbeta med navigeringsegenskaper för OData-tjänster {#work-with-navigation-properties-of-odata-services}
 
@@ -363,13 +363,13 @@ Mer information om navigeringsegenskaper finns i [OData-dokumentation](https://d
 </EntityType>
 ```
 
-När du konfigurerar en OData-tjänst i en formulärdatamodell blir alla navigeringsegenskaper i en entitetsbehållare tillgängliga via en tjänst i formulärdatamodellen. I det här exemplet på tjänsten TripPin OData finns tre navigeringsegenskaper i `Person` enhetsbehållaren kan läsas med en `GET LINK` i formulärdatamodellen.
+När du konfigurerar en OData-tjänst i en formulärdatamodell (FDM) blir alla navigeringsegenskaper i en enhetsbehållare tillgängliga via en tjänst i FDM (Form Data Model). I det här exemplet på tjänsten TripPin OData finns tre navigeringsegenskaper i `Person` enhetsbehållaren kan läsas med en `GET LINK` i Form Data Model (FDM).
 
-Följande visar `GET LINK of Person /People` i formulärdatamodellen, som är en kombinerad tjänst för de tre navigeringsegenskaperna i `Person` enhet för TripPin OData-tjänsten.
+Följande visar `GET LINK of Person /People` i Form Data Model (FDM), som är en kombinerad tjänst för de tre navigeringsegenskaperna i `Person` enhet för TripPin OData-tjänsten.
 
 ![nav-prop-service](assets/nav-prop-service.png)
 
-När du har lagt till `GET LINK` på fliken Tjänster i formulärdatamodellen kan du redigera egenskaperna för att välja utdatamodellsobjektet och navigeringsegenskapen som ska användas i tjänsten. Till exempel följande `GET LINK of Person /People` i följande exempel används Trip som utdatamodell och navigeringsegenskapen som Trips.
+När du har lagt till `GET LINK` på fliken Tjänster i FDM (Form Data Model) kan du redigera egenskaperna för att välja utdatamodellsobjektet och navigeringsegenskapen som ska användas i tjänsten. Till exempel följande `GET LINK of Person /People` i följande exempel används Trip som utdatamodell och navigeringsegenskapen som Trips.
 
 ![edit-prop-nav-prop](assets/edit-prop-nav-prop.png)
 
@@ -381,17 +381,17 @@ I det här exemplet kan du även välja utdatamodellsobjektet som Person och nav
 
 ![edit-prop-nav-prop2](assets/edit-prop-nav-prop2.png)
 
-På samma sätt kan du välja en `GET LINK` och konfigurera navigeringsegenskaperna när du lägger till associationer i formulärdatamodellen. För att kunna välja en navigeringsegenskap måste du dock se till att **[!UICONTROL Binding To field]** är inställd på **[!UICONTROL Literal]**.
+På samma sätt kan du välja en `GET LINK` och konfigurera navigeringsegenskaperna när du lägger till associationer i formulärdatamodellen (FDM). För att kunna välja en navigeringsegenskap måste du dock se till att **[!UICONTROL Binding To field]** är inställd på **[!UICONTROL Literal]**.
 
 ![add-association-nav-prop](assets/add-association-nav-prop.png)
 
 ## Generera och redigera exempeldata {#sample}
 
-Med formulärdatamodellsredigeraren kan du generera exempeldata för alla datamodellsobjektsegenskaper, inklusive beräknade egenskaper, i en formulärdatamodell. Det är en uppsättning slumpmässiga värden som överensstämmer med den datatyp som konfigurerats för varje egenskap. Du kan också redigera och spara data, som behålls även om du genererar om exempeldata.
+Med formulärdatamodellens redigerare (FDM) kan du generera exempeldata för alla objektegenskaper för datamodell, inklusive beräknade egenskaper, i en formulärdatamodell (FDM). Det är en uppsättning slumpmässiga värden som överensstämmer med den datatyp som konfigurerats för varje egenskap. Du kan också redigera och spara data, som behålls även om du genererar om exempeldata.
 
 Så här genererar och redigerar du exempeldata:
 
-1. Öppna en formulärdatamodell och välj **[!UICONTROL Edit Sample Data]**. Den genererar och visar exempeldata i fönstret Redigera exempeldata.
+1. Öppna en formulärdatamodell (FDM) och välj **[!UICONTROL Edit Sample Data]**. Den genererar och visar exempeldata i fönstret Redigera exempeldata.
 
    ![Generera exempeldata](assets/form_data_model_generate_sample_data_new.png)
 
@@ -401,9 +401,9 @@ Så här genererar och redigerar du exempeldata:
 
 ## Testa datamodellsobjekt och -tjänster {#test-data-model-objects-and-services}
 
-Din formulärdatamodell är konfigurerad, men innan den används kanske du vill testa om de konfigurerade datamodellsobjekten och -tjänsterna fungerar som förväntat. Så här testar du datamodellsobjekt och -tjänster:
+Din formulärdatamodell (FDM) är konfigurerad, men innan den används kanske du vill testa om de konfigurerade datamodellsobjekten och -tjänsterna fungerar som förväntat. Så här testar du datamodellsobjekt och -tjänster:
 
-1. Markera ett datamodellsobjekt eller en tjänst i formulärdatamodellen och välj **[!UICONTROL Test Model Object]** eller **[!UICONTROL Test Service]**, respektive
+1. Markera ett datamodellsobjekt eller en tjänst i FDM (Form Data Model) och välj **[!UICONTROL Test Model Object]** eller **[!UICONTROL Test Service]**, respektive
 
    Fönstret Testa formulärdatamodell öppnas.
 
@@ -415,11 +415,11 @@ Din formulärdatamodell är konfigurerad, men innan den används kanske du vill 
 
    ![Testresultat](assets/test_results_form_data_model_new.png)
 
-På samma sätt kan du testa andra datamodellsobjekt och -tjänster i formulärdatamodellen.
+På samma sätt kan du testa andra datamodellsobjekt och -tjänster i formulärdatamodellen (FDM).
 
 ## Automatisk validering av indata {#automated-validation-of-input-data}
 
-Formulärdatamodellen validerar data som tas emot som indata när DermisBridge API anropas (baserat på de valideringskriterier som finns i formulärdatamodellen). Valideringen baseras på `ValidationOptions` flaggan som angetts i frågeobjektet som används för att anropa API:t.
+Formulärdatamodellen (FDM) validerar data som tas emot som indata när DermisBridge API anropas (baserat på de valideringskriterier som finns i formulärdatamodellen). Valideringen baseras på `ValidationOptions` flaggan som angetts i frågeobjektet som används för att anropa API:t.
 
 Flaggan kan anges med något av följande värden:
 
@@ -440,7 +440,7 @@ operationOptions.setValidationOptions(ValidationOptions.FULL);
 >Värdet som du anger för ett attribut i indata måste matcha datatypen som är definierad för attributet i metadatadokumentet.\
 >Om värdet inte överensstämmer med den datatyp som är definierad för attributet visar DermisBridge-API:t ett undantag oavsett värdet på `ValidationOptions` flagga. Om loggnivån är inställd på Felsökning loggas ett fel på **error.log** -fil.
 
-Formulärdatamodellen validerar indata baserat på en lista över datatypsbegränsningar. Listan med begränsningar för indata kan variera beroende på datakällan.
+Formulärdatamodellen (FDM) validerar indata baserat på en lista med datatypsbegränsningar. Listan med begränsningar för indata kan variera beroende på datakällan.
 
 I följande tabell visas begränsningarna för indata baserat på datakällan:
 
@@ -549,4 +549,4 @@ Ett undantag visas om indata inte uppfyller valideringskriterierna. Om loggnivå
 
 ## Nästa steg {#next-steps}
 
-Du har en fungerande formulärdatamodell som nu kan användas i Adaptiv Forms <!--and interactive communications--> arbetsflöden. Mer information finns i [Använd formulärdatamodell](using-form-data-model.md).
+Du har en fungerande formulärdatamodell (FDM) som nu kan användas i Adaptiv Forms <!--and interactive communications--> arbetsflöden. Mer information finns i [Använd formulärdatamodell (FDM)](using-form-data-model.md).

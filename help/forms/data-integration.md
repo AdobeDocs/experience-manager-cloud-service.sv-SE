@@ -4,9 +4,9 @@ description: Hämta och spara data till RESTful web services, SOAP-based web ser
 feature: Adaptive Forms, Form Data Model
 role: Admin, User
 exl-id: 9d146275-de0a-4861-b060-d205ed6305f3
-source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
+source-git-commit: 7b31a2ea016567979288c7a8e55ed5bf8dfc181d
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
@@ -32,32 +32,32 @@ Ett distribuerat modulärt system har sina fördelar, men utmaningen består i a
 
 ![aem-forms-data-integeration](assets/aem-forms-data-integeration.png)
 
-[!DNL AEM Forms] Med dataintegrering kan du konfigurera och ansluta olika datakällor med [!DNL AEM Forms]. Det ger ett intuitivt användargränssnitt för att skapa ett enhetligt datarepresentationsschema för affärsenheter och tjänster över anslutna datakällor. Den enhetliga representationen kallas för en formulärdatamodell, ett tillägg till JSON-schema. Enheterna i en formulärdatamodell kallas datamodellsobjekt. Med en formulärdatamodell kan du:
+[!DNL AEM Forms] Med dataintegrering kan du konfigurera och ansluta olika datakällor med [!DNL AEM Forms]. Det ger ett intuitivt användargränssnitt för att skapa ett enhetligt datarepresentationsschema för affärsenheter och tjänster över anslutna datakällor. Den enhetliga representationen kallas för en formulärdatamodell (FDM), ett tillägg till JSON-schemat. Enheterna i en formulärdatamodell kallas datamodellsobjekt. Med en formulärdatamodell (FDM) kan du
 
 * Få åtkomst till datamodellsobjekt, egenskaper och tjänster från anslutna datakällor.
 * Skapa anpassade datamodellsobjekt och egenskaper
 * Bygg kopplingar mellan datamodellsobjekt inom och mellan datakällor.
 * Anropa datamodellsobjekttjänster för att fråga efter eller skriva data till och från datakällor.
 
-När du har skapat en formulärdatamodell kan du använda den för att:
+När du har skapat en formulärdatamodell (FDM) kan du använda den för att:
 
-* Skapa adaptiv Forms baserad på en formulärdatamodell
+* Skapa adaptiv Forms baserat på en formulärdatamodell (FDM)
 * Förifyll anpassad Forms från konfigurerade datakällor
 * Anropa datakälltjänster/åtgärder med hjälp av regler för anpassat formulär
 * Skriv data för anpassat formulär till datakällor
 
 ## Kom igång med dataintegrering {#get-started-with-data-integration}
 
-Det första steget för att implementera dataintegrering för att skicka adaptiva formulär till en databas är att identifiera och konfigurera datakällor som lagrar information som du vill använda i adaptiva Forms. Därefter skapar du en formulärdatamodell som använder datamodellsobjekt, egenskaper och tjänster från en eller flera datakällor. Du kan skapa adaptiv Forms baserat på en formulärdatamodell där fält för adaptiv form är bundna till respektive egenskaper för datakälla.
+Det första steget för att implementera dataintegrering för att skicka adaptiva formulär till en databas är att identifiera och konfigurera datakällor som lagrar information som du vill använda i adaptiva Forms. Därefter skapar du en FDM (Form Data Model) som använder datamodellsobjekt, egenskaper och tjänster från en eller flera datakällor. Du kan skapa adaptiv Forms baserat på en formulärdatamodell (FDM) där fält för adaptiva formulär är bundna till respektive datakällegenskaper.
 
-[!DNL AEM Forms] I kan du även skapa en formulärdatamodell som är oberoende av datakällor och associera eller binda datamodellsobjekt och egenskaper i formulärdatamodellen med datakällan senare. Det eliminerar eventuella beroenden till datakällor när du arbetar med en formulärdatamodell.
+[!DNL AEM Forms] I kan du också skapa en formulärdatamodell (FDM) som är oberoende av datakällor och associera eller binda datamodellsobjekt och egenskaper i formulärdatamodellen (FDM) med datakällan senare. Det eliminerar eventuella beroenden till datakällor när du arbetar med en formulärdatamodell (FDM).
 
 Läs följande för att komma igång, förstå och implementera dataintegrering:
 
 * [Konfigurera datakällor](configure-data-sources.md)
-* [Skapa formulärdatamodell](create-form-data-models.md)
-* [Arbeta med formulärdatamodell](work-with-form-data-model.md)
-* [Använd formulärdatamodell](using-form-data-model.md)
+* [Skapa formulärdatamodell (FDM)](create-form-data-models.md)
+* [Arbeta med formulärdatamodell (FDM)](work-with-form-data-model.md)
+* [Använd formulärdatamodell (FDM)](using-form-data-model.md)
 
 >[!NOTE]
 >

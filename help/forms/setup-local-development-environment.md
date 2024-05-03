@@ -4,9 +4,9 @@ description: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manage
 role: Admin, Developer, User
 feature: Adaptive Forms
 exl-id: 12877a77-094f-492a-af58-cffafecf79ae
-source-git-commit: a86e68f9dd195512a689943b303225a48b5f8a23
+source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
 workflow-type: tm+mt
-source-wordcount: '2717'
+source-wordcount: '2720'
 ht-degree: 0%
 
 ---
@@ -249,7 +249,7 @@ Du kan nu använda den lokala utvecklingsmiljön för att återge arkivhandlinga
 
 Använd det här projektet för att skapa Adaptiv Forms, distribuera konfigurationsuppdateringar, överlägg, skapa anpassade adaptiva formulärkomponenter, testa och anpassa kod på lokala [!DNL Experience Manager Forms] SDK. När du har testat lokalt kan du distribuera projektet till  [!DNL Experience Manager Forms] as a Cloud Service produktion och icke-produktionsmiljöer. När du distribuerar projektet distribueras även följande AEM Forms-resurser:
 
-| Teman | Mallar | Formulärdatamodeller |
+| Teman | Mallar | FDM (Form Data Model) |
 ---------|----------|---------
 | Arbetsyta 3.0 | Grundläggande | Microsoft® Dynamics 365 |
 | Tranquil | Tom | Salesforce |
@@ -259,7 +259,7 @@ Använd det här projektet för att skapa Adaptiv Forms, distribuera konfigurati
 
 >[!NOTE]
 >
-> Installera AEM Archetype version 30 eller senare för att hämta och använda Microsoft® Dynamics 365 och Salesforce Form Data Models med AEM Forms as a Cloud Service.
+> Installera AEM Archetype version 30 eller senare för att hämta och använda Microsoft® Dynamics 365 och Salesforce Form Data Model (FDM) med AEM Forms as a Cloud Service.
 > Konfigurera AEM Archetype version 32 eller senare för att få tillgång till och använda temana Tranquil, Urbane och Ultramarine med AEM Forms as a Cloud Service.
 
 Så här ställer du in projektet:
@@ -399,7 +399,7 @@ Så här säkerhetskopierar och flyttar du resurser från en befintlig SDK till 
 
 ### Skapa en säkerhetskopia av befintligt innehåll {#create-backup-of-your-existing-content}
 
-Säkerhetskopiera dina adaptiva Forms, mallar, formulärdatamodell, tema, konfigurationer och anpassad kod. Du kan utföra följande åtgärd för att skapa en säkerhetskopia:
+Säkerhetskopiera adaptiva Forms, mallar, formulärdatamodell (FDM), tema, konfigurationer och anpassad kod. Du kan utföra följande åtgärd för att skapa en säkerhetskopia:
 
 1. [Ladda ned](import-export-forms-templates.md#manage-forms-and-related-assets) Adaptiv Forms, teman och PDF forms.
 1. Exportera adaptiva formulärmallar.

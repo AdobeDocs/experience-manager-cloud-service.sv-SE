@@ -1,13 +1,13 @@
 ---
 title: Hur ansluter AEM anpassat formulär till Microsoft&reg; SharePoint List?
-description: Koppla ett anpassat formulär till Microsoft&reg; SharePoint List. Lär dig hur du konfigurerar listan Microsoft&reg; SharePoint och skapar en formulärdatamodell med hjälp av konfigurationen. Dessutom får du lära dig hur du integrerar FDM med ditt adaptiva formulär.
+description: Koppla ett anpassat formulär till Microsoft&reg; SharePoint List. Lär dig hur du konfigurerar listan Microsoft&reg; SharePoint och skapar en FDM (Form Data Model) med hjälp av konfigurationen. Dessutom får du lära dig hur du integrerar FDM med ditt adaptiva formulär.
 role: User, Developer
 keywords: ansluta AEM adaptiva blanketter till Microsoft SharePoint List, ansluta adaptiva blanketter till Microsoft SharePoint List, integrera AEM adaptiva blanketter i Microsoft SharePoint List, integrera adaptiva blanketter till Microsoft SharePoint List, skicka data från ett adaptivt formulär till SharePoint List, skicka AEM arbetsflöde till SharePoint List.
 hide: true
 hidefromToC: true
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
@@ -31,8 +31,8 @@ Instruktioner om hur du integrerar en **Microsoft® SharePoint Document Library*
 Utför följande steg innan du ansluter ett adaptivt formulär till Microsoft® SharePoint List:
 
 1. [Konfigurera Microsoft](/help/forms/configure-data-sources.md#configure-microsoft-sharepoint-list)
-1. [Skapa en formulärdatamodell med Microsoft](/help/forms/create-form-data-models.md)
-1. [Konfigurera formulärdatamodellen för att hämta och skicka data](/help/forms/work-with-form-data-model.md#configure-services)
+1. [Skapa en formulärdatamodell (FDM) med Microsoft](/help/forms/create-form-data-models.md)
+1. [Konfigurera FDM (Form Data Model) för att hämta och skicka data](/help/forms/work-with-form-data-model.md#configure-services)
 1. [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form-core-components.md)
 
 Nu kan du:
@@ -42,18 +42,18 @@ Nu kan du:
 
 ## Ansluta ett anpassat formulär till Microsoft® SharePoint List {#connect-af-sharepoint-list}
 
-Integrera Microsoft® SharePoint List med ditt adaptiva formulär [konfigurera ett adaptivt formulär att använda en formulärdatamodell](/help/forms/creating-adaptive-form-core-components.md#configure-a-schema-or-form-data-model-for-an-adaptive-formconfigure-schema-or-data-model-for-form)
+Integrera Microsoft® SharePoint List med ditt adaptiva formulär [konfigurera ett adaptivt formulär att använda en FDM (Form Data Model)](/help/forms/creating-adaptive-form-core-components.md#configure-a-schema-or-form-data-model-for-an-adaptive-formconfigure-schema-or-data-model-for-form)
 
-När du har konfigurerat ett adaptivt formulär att använda en formulärdatamodell kan du:
+När du har konfigurerat ett adaptivt formulär att använda en formulärdatamodell (FDM) kan du:
 
-* [Konfigurera åtgärden Skicka med en formulärdatamodell](/help/forms/configuring-submit-actions.md#submit-using-form-data-model)
-* [Konfigurera regelredigeraren för att anropa en formulärdatamodell](/help/forms/rule-editor.md#invoke-form-data-model-service-invoke)
+* [Konfigurera åtgärden Skicka med en formulärdatamodell (FDM)](/help/forms/configuring-submit-actions.md#submit-using-form-data-model)
+* [Konfigurera regelredigeraren för att anropa en FDM (Form Data Model)](/help/forms/rule-editor.md#invoke-form-data-model-service-invoke)
 
 ## Koppla Microsoft® SharePoint List till ett AEM arbetsflöde {#connect-sharepoint-list-workflow}
 
 Så här integrerar du Microsoft® SharePoint List i ett AEM arbetsflöde:
 
-1. [Skapa ett arbetsflöde för att anropa en formulärdatamodell](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html)
+1. [Skapa ett arbetsflöde för att anropa en formulärdatamodell (FDM)](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html)
 
    <!--
     To create a workflow with the editor:
@@ -84,7 +84,7 @@ Lär dig hur [använd AEM](https://experienceleague.adobe.com/docs/experience-ma
 
 * [Skapa ett Core-Component-baserat adaptivt formulär](/help/forms/creating-adaptive-form-core-components.md)
 * [Konfigurera datakällor](/help/forms/configuring-submit-actions.md)
-* [Skapa formulärdatamodell](/help/forms/create-form-data-models.md)
+* [Skapa formulärdatamodell (FDM)](/help/forms/create-form-data-models.md)
 * [Använd Forms-centrerade AEM - stegvis referens för att automatisera affärsprocesser](/help/forms/aem-forms-workflow-step-reference.md)
 * [Skapa en anpassad inskickningsåtgärd för Adaptiv Forms](/help/forms/custom-submit-action-form.md)
 * [Skapa eller lägga till ett adaptivt formulär på en AEM Sites-sida](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)

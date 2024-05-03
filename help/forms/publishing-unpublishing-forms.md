@@ -5,9 +5,9 @@ content-type: reference
 topic-tags: publish
 discoiquuid: 32a7a50c-74f4-49bc-a0bd-a9ec142527cb
 docset: aem65s
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '1300'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ När du markerar ett formulär och publicerar det publiceras även dess relatera
 Din adaptiva Forms kan använda vissa konfigurationer, inställningar och anpassningar som inte publiceras automatiskt. Vi rekommenderar att du publicerar eller aktiverar dessa resurser innan du publicerar ett adaptivt formulär.
 
 * Redigerbara adaptiva formulärmallar
-* Cloud Service för Adobe Sign, Typekit, reCAPTCHA och Form Data Models
+* Cloud Service för Adobe Sign, Typekit, reCAPTCHA och Form Data Model (FDM)
 * Andra konfigurationer av molntjänster aktiveras bara om användaren har administratörsbehörighet.
 * Anpassningar. Dessa omfattar, men är inte begränsade till:
 

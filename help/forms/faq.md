@@ -5,9 +5,10 @@ contentOwner: khsingh
 role: User
 feature: Adaptive Forms, FAQ
 index: false
-source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
+exl-id: 0b14b680-7da5-4e0b-bd6a-c379d148f9d7
+source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
@@ -75,15 +76,15 @@ Nej, det går inte att verifiera [!DNL Forms] as a Cloud Service. Ta bort verifi
 * **Kan jag lägga till diagram i ett adaptivt formulär?**
 Ja, du kan lägga till diagram i Adaptiv Forms. Adaptiv Forms tillhandahåller en diagramkomponent. Du kan använda den för att lägga till diagram i ett adaptivt formulär.
 
-* **Kan jag ansluta en formulärdatamodell till en relationsdatabasmodell?**
-Du kan ansluta en formulärdatamodell till [!DNL RESTful web services], [!DNL SOAP-based web services], [!DNL OData services]och användarprofilen Experience Manager som datakällor. Det finns inte stöd för att ansluta en formulärdatamodell till en relationsdatabas.
+* **Kan jag ansluta en FDM (Form Data Model) till en relationsdatabasmodell?**
+Du kan ansluta en formulärdatamodell (FDM) till [!DNL RESTful web services], [!DNL SOAP-based web services], [!DNL OData services]och användarprofilen Experience Manager som datakällor. Det finns inte stöd för att ansluta en FDM (Form Data Model) till en relationsdatabas.
 
-* **Kan jag använda anpassade certifikat med formulärdatamodell för autentisering?**
-Formulärdatamodellen innehåller ingen metod för att använda anpassade certifikat för autentisering. Därför stöds inte anpassade certifikat som x509 och tvåvägsSSL.
+* **Kan jag använda anpassade certifikat med formulärdatamodell (FDM) för autentisering?**
+Formulärdatamodellen (FDM) har ingen metod för att använda anpassade certifikat för autentisering. Därför stöds inte anpassade certifikat som x509 och tvåvägsSSL.
 
 * **Kan jag använda Forms Portal-åtgärden Adaptiv Forms?**
 
-  Du kan ändra din befintliga adaptiva Forms så att du kan använda den [Skicka till REST-slutpunkt](configuring-submit-actions.md#submit-to-rest-endpoint), [Skicka e-post](configuring-submit-actions.md#send-email), [Skicka med formulärdatamodell](configuring-submit-actions.md#submit-using-form-data-model)och [Anropa ett AEM](configuring-submit-actions.md#invoke-an-aem-workflow) Skicka åtgärder. Forms Portal och Forms Portal har ännu inte släppts. Håll ett öga på månadsversionsinformationen om vilka funktioner som är tillgängliga.
+  Du kan ändra din befintliga adaptiva Forms så att du kan använda den [Skicka till REST-slutpunkt](configuring-submit-actions.md#submit-to-rest-endpoint), [Skicka e-post](configuring-submit-actions.md#send-email), [Skicka med hjälp av formulärdatamodell (FDM)](configuring-submit-actions.md#submit-using-form-data-model)och [Anropa ett AEM](configuring-submit-actions.md#invoke-an-aem-workflow) Skicka åtgärder. Forms Portal och Forms Portal har ännu inte släppts. Håll ett öga på månadsversionsinformationen om vilka funktioner som är tillgängliga.
 
 * **Kan jag använda [!DNL AEM Forms] app med [!DNL AEM Forms] as a Cloud Service?**
 
@@ -123,5 +124,3 @@ Skapa det adaptiva formuläret baserat på JSON-schemat i Forms-miljön Experien
     A sample Service Credential JSON file fields mapped to Adobe Experience Manager connector for Microsoft Power Automate.
 
     -->
-
-

@@ -1,13 +1,13 @@
 ---
 title: Hur konfigurerar jag datakällor?
-description: Lär dig konfigurera RESTful-webbtjänster, SOAP-baserade webbtjänster och OData-tjänster som datakällor för en formulärdatamodell.
+description: Lär dig konfigurera RESTful-webbtjänster, SOAP-baserade webbtjänster och OData-tjänster som datakällor för en formulärdatamodell (FDM).
 feature: Adaptive Forms, Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb77a840-d705-4406-a94d-c85a6efc8f5d
-source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
+source-git-commit: 7b31a2ea016567979288c7a8e55ed5bf8dfc181d
 workflow-type: tm+mt
-source-wordcount: '1950'
+source-wordcount: '1958'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ Du kan konfigurera relationsdatabaser med [!DNL Experience Manager] Konfiguratio
 
 1. Välj **[!UICONTROL Save]** för att spara konfigurationen.
 
-Nu kan du använda den konfigurerade relationsdatabasen med din formulärdatamodell.
+Nu kan du använda den konfigurerade relationsdatabasen med din formulärdatamodell (FDM).
 
 <!-- ## Configure [!DNL Experience Manager] user profile {#configure-aem-user-profile}
 
@@ -84,7 +84,7 @@ You can configure [!DNL Experience Manager] user profile using User Profile Conn
 
 1. Go to [!DNL Experience Manager] web console at `https://[server]:[port]/system/console/configMgr`.
 1. Look for **[!UICONTROL AEM Forms Data Integrations - User Profile Connector Configuration]** and select to open the configuration in edit mode.
-1. In the User Profile Connector Configuration dialog, you can add, remove, or update user profile properties. The specified properties are available for use in form data model. Use the following format to specify user profile properties:
+1. In the User Profile Connector Configuration dialog, you can add, remove, or update user profile properties. The specified properties are available for use in form data model (FDM). Use the following format to specify user profile properties:
 
    `name=[property_name_with_location_in_user_profile],type=[property_type]`
 
@@ -95,7 +95,7 @@ You can configure [!DNL Experience Manager] user profile using User Profile Conn
 
    >[!NOTE]
    >
-   >The **&#42;** in the above example denotes all nodes under the `profile/empLocation/` node in [!DNL Experience Manager] user profile in CRXDE structure. It means that the Form Data Model can access the `city` property of type `string` present in any node under the `profile/empLocation/` node. However, the nodes that contain the specified property must follow a consistent structure.
+   >The **&#42;** in the above example denotes all nodes under the `profile/empLocation/` node in [!DNL Experience Manager] user profile in CRXDE structure. It means that the Form Data Model (FDM) can access the `city` property of type `string` present in any node under the `profile/empLocation/` node. However, the nodes that contain the specified property must follow a consistent structure.
 
 1. Select **[!UICONTROL Save]** to save the configuration. -->
 
@@ -178,13 +178,13 @@ En del åtgärder som inte stöds av RESTful services Open API Specification ver
 
 Se [OpenAPI 3.0-specifikation](https://swagger.io/specification/v3/) för detaljerad information.
 
-### HTTP-klientkonfiguration för formulärdatamodell för optimering av prestanda {#fdm-http-client-configuration}
+### HTTP-klientkonfiguration för formulärdatamodell (FDM) för optimering av prestanda {#fdm-http-client-configuration}
 
 [!DNL Experience Manager Forms] utgör en datamodell när den integreras med RESTful-webbtjänster eftersom datakällan innehåller HTTP-klientkonfigurationer för prestandaoptimering.
 
 Ange följande egenskaper för **[!UICONTROL Form Data Model HTTP Client Configuration for REST data source]** konfiguration som anger det reguljära uttrycket:
 
-* Använd `http.connection.max.per.route` -egenskap för att ange maximalt antal tillåtna anslutningar mellan formulärdatamodell och RESTful-webbtjänster. Standardvärdet är 20 anslutningar.
+* Använd `http.connection.max.per.route` egenskapen för att ange maximalt antal tillåtna anslutningar mellan formulärdatamodellen (FDM) och RESTful-webbtjänster. Standardvärdet är 20 anslutningar.
 
 * Använd `http.connection.max` egenskapen för att ange maximalt antal tillåtna anslutningar för varje flöde. Standardvärdet är 40 anslutningar.
 
@@ -212,7 +212,7 @@ I följande JSON-fil visas ett exempel:
 
 1. I [!UICONTROL Form Data Model HTTP Client Configuration for REST data source] dialog:
 
-   * Ange maximalt antal tillåtna anslutningar mellan formulärdatamodellen och RESTful-webbtjänster i dialogrutan **[!UICONTROL Connection limit in total]** fält. Standardvärdet är 20 anslutningar.
+   * Ange maximalt antal tillåtna anslutningar mellan formulärdatamodellen (FDM) och RESTful-webbtjänster i **[!UICONTROL Connection limit in total]** fält. Standardvärdet är 20 anslutningar.
 
    * Ange maximalt antal tillåtna anslutningar för varje flöde i dialogrutan **[!UICONTROL Connection limit on per route basis]** fält. Standardvärdet är två anslutningar.
 
@@ -266,7 +266,7 @@ En OData-tjänst identifieras av tjänstens rot-URL. Konfigurera en OData-tjäns
 
 >[!NOTE]
 >
-> Formulärdatamodellen stöder [OData version 4](https://www.odata.org/documentation/).
+> Formulärdatamodellen (FDM) stöder [OData version 4](https://www.odata.org/documentation/).
 >En steg-för-steg-guide för att konfigurera [!DNL Microsoft®® Dynamics 365], online eller lokalt, se [[!DNL Microsoft® Dynamics] OData-konfiguration](ms-dynamics-odata-configuration.md).
 
 1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Välj den mapp där du vill skapa en molnkonfiguration.
@@ -283,7 +283,7 @@ En OData-tjänst identifieras av tjänstens rot-URL. Konfigurera en OData-tjäns
 
    >[!NOTE]
    >
-   Välj autentiseringstypen OAuth 2.0 att ansluta till [!DNL Microsoft®® Dynamics] tjänster som använder OData-slutpunkten som tjänstrot.
+   >Välj autentiseringstypen OAuth 2.0 att ansluta till [!DNL Microsoft®® Dynamics] tjänster som använder OData-slutpunkten som tjänstrot.
 
 1. Välj **[!UICONTROL Create]** för att skapa molnkonfigurationen för OData-tjänsten.
 
@@ -315,7 +315,7 @@ To save data in a tabular form use, Microsoft® SharePoint List. To configure a 
 
 <!--## Certificate-based mutual authentication for RESTful and SOAP web services {#mutual-authentication}
 
-When you enable mutual authentication for form data model, both the data source and [!DNL Experience Manager] Server running Form Data Model authenticate each other's identity before sharing any data. You can use mutual authentication for REST and SOAP-based connections (data sources). To configure mutual authentication for a Form Data Model on your [!DNL Experience Manager Forms] environment:
+When you enable mutual authentication for form data model (FDM), both the data source and [!DNL Experience Manager] Server running Form Data Model (FDM) authenticate each other's identity before sharing any data. You can use mutual authentication for REST and SOAP-based connections (data sources). To configure mutual authentication for a Form Data Model (FDM) on your [!DNL Experience Manager Forms] environment:
 
 1. Upload the private key (certificate) to [!DNL Experience Manager Forms] server. To upload the private key:
    1. Log in to your [!DNL Experience Manager Forms] server as an administrator.
@@ -328,7 +328,7 @@ When you enable mutual authentication for form data model, both the data source 
 
 ## Nästa steg {#next-steps}
 
-Du har konfigurerat datakällorna. Därefter kan du skapa en formulärdatamodell eller, om du redan har skapat en formulärdatamodell utan en datakälla, associera den med de datakällor du konfigurerade. Se [Skapa formulärdatamodell](create-form-data-models.md) för mer information.
+Du har konfigurerat datakällorna. Därefter kan du skapa en formulärdatamodell (FDM) eller, om du redan har skapat en formulärdatamodell (FDM) utan en datakälla, associera den med de datakällor du konfigurerade. Se [Skapa formulärdatamodell](create-form-data-models.md) för mer information.
 
 
 <!--

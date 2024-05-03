@@ -1,5 +1,5 @@
 ---
-source-git-commit: e71e247f5b6de806b36c5c759b29e7273511f94e
+source-git-commit: 8c60b02c1759fc4d0cf66d6c8f1c2edf294fc1ce
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -29,7 +29,7 @@ ht-degree: 0%
 * [Ansluta anpassat formulär till Microsoft Power Automate](/help/forms/configure-submit-actions-core-components.md#microsoft-power-automate)
 * [Ansluta anpassat formulär till Microsoft OneDrive](/help/forms/configure-submit-actions-core-components.md#create-a-onedrive-configuration)
 * [Ansluta anpassat formulär till Microsoft Azure Blob Storage](/help/forms/configure-submit-actions-core-components.md#azure-blob-storage)
-* [Ansluta anpassat formulär till Salesforce](/help/forms/oauth2-client-credentials-flow-for-server-to-server-integration.md)
+* [Ansluta anpassat formulär till Salesforce](/help/forms/aem-forms-salesforce-integration.md)
 * [Använda Adobe Sign i en AEM anpassad form](/help/forms/working-with-adobe-sign.md)
 * [Lägga till en ny språkinställning för ett adaptivt formulär](/help/forms/supporting-new-language-localization-core-components.md)
 * [Skicka adaptiva formulärdata till en databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/data-integration.html)
@@ -51,7 +51,7 @@ ht-degree: 0%
 * [Anropa ett AEM](/help/forms/configure-submit-action-workflow.md)
 * [Skicka till Power Automate](/help/forms/forms-microsoft-power-automate-integration.md)
 * [Skicka till Workfront Fusion](/help/forms/submit-adaptive-form-to-workfront-fusion.md)
-* [Ansluta anpassat formulär till Salesforce-program](/help/forms/oauth2-client-credentials-flow-for-server-to-server-integration.md)
+* [Ansluta anpassat formulär till Salesforce-program](/help/forms/aem-forms-salesforce-integration.md)
 * [Ansluta ett adaptivt formulär till Microsoft](/help/forms/ms-dynamics-odata-configuration.md)
 
 ## Se även {#see-more-forms-eds}

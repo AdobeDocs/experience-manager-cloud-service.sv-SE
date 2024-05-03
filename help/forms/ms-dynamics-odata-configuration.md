@@ -1,13 +1,13 @@
 ---
 title: Hur konfigurerar jag [!DNL Microsoft Dynamics] OData för AEM Forms?
-description: Lär dig skapa formulärdatamodell baserat på de entiteter, attribut och tjänster som definieras i [!DNL Microsoft Dynamics] service.
+description: Lär dig skapa en FDM (Form Data Model) baserat på de enheter, attribut och tjänster som definieras i [!DNL Microsoft Dynamics] service.
 feature: Adaptive Forms, Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb7b41f0-fd4f-4ba6-9f45-792a66ba6368
-source-git-commit: 39d788854c086b7f4c45d77bfea42fa687e08769
+source-git-commit: 7b31a2ea016567979288c7a8e55ed5bf8dfc181d
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '966'
 ht-degree: 1%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 1%
 
 ![dataintegrering](assets/data-integeration.png)
 
-[!DNL Microsoft Dynamics] är ett CRM- och ERP-program (Enterprise Resource Planning) som innehåller företagslösningar för att skapa och hantera kundkonton, kontakter, leads, möjligheter och ärenden. [[!DNL Experience Manager Forms] Dataintegrering](data-integration.md) erbjuder en OData-molntjänstkonfiguration som integrerar Forms med både online och lokalt [!DNL Microsoft Dynamics] server. Det gör att du kan skapa formulärdatamodell baserat på de enheter, attribut och tjänster som definieras i [!DNL Microsoft Dynamics] service. Formulärdatamodellen kan användas för att skapa adaptiv Forms som interagerar med [!DNL Microsoft Dynamics] server för att möjliggöra arbetsflöden. Till exempel:
+[!DNL Microsoft Dynamics] är ett CRM- och ERP-program (Enterprise Resource Planning) som innehåller företagslösningar för att skapa och hantera kundkonton, kontakter, leads, möjligheter och ärenden. [[!DNL Experience Manager Forms] Dataintegrering](data-integration.md) erbjuder en OData-molntjänstkonfiguration som integrerar Forms med både online och lokalt [!DNL Microsoft Dynamics] server. Det gör att du kan skapa en formulärdatamodell (FDM) baserat på de enheter, attribut och tjänster som definieras i [!DNL Microsoft Dynamics] service. Formulärdatamodellen (FDM) kan användas för att skapa adaptiv Forms som interagerar med [!DNL Microsoft Dynamics] server för att möjliggöra arbetsflöden. Till exempel:
 
 * Fråga [!DNL Microsoft Dynamics] server för data och förifylla Adaptive Forms
 * Skriv data i [!DNL Microsoft Dynamics] om inlämning av anpassade formulär
-* Skriv data i [!DNL Microsoft Dynamics] via anpassade entiteter som definierats i formulärdatamodellen och omvänt
+* Skriv data i [!DNL Microsoft Dynamics] via anpassade entiteter som definierats i formulärdatamodellen (FDM) och omvänt
 
 <!--[!DNL Experience Manager Forms] add-on package also includes reference OData configuration that you can use to quickly integrate [!DNL Microsoft Dynamics] with [!DNL Experience Manager Forms].-->
 
@@ -141,15 +141,15 @@ I **[!UICONTROL Authentication Settings]** tab:
    1. Ange **[!UICONTROL openid]** i **[!UICONTROL Authorization Scope]** fält för auktoriseringsprocess på [!DNL Microsoft Dynamics].
 
       ![Autentiseringsinställningar](assets/dynamics_authentication_settings_new.png)
-Formulärdatamodell
+FDM (Form Data Model)
 1. Klicka på **[!UICONTROL Connect to OAuth]**. Du omdirigeras till [!DNL Microsoft Dynamics] inloggningssida.
-1. Logga in med [!DNL Microsoft Dynamics] autentiseringsuppgifter och acceptera för att tillåta molntjänstkonfigurationen att ansluta till [!DNL Microsoft Dynamics] service. Det är en engångsuppgift att skapa en formulärdatamodell mellan molntjänsten och tjänsten.
+1. Logga in med [!DNL Microsoft Dynamics] autentiseringsuppgifter och acceptera för att tillåta molntjänstkonfigurationen att ansluta till [!DNL Microsoft Dynamics] service. Det är en engångsuppgift att skapa en FDM (Form Data Model) för molntjänsten och tjänsten.
 
    Du är formulärdatamodellen på konfigurationssidan för molntjänsten, som visar ett meddelande om att OData-konfigurationen har sparats.
 
-Molntjänsten MS Dynamics OData Cloud Service (OData Service) är konfigurerad och ansluten till Dynamics-tjänsten. Formulärdatamodell för formulärdata
+Molntjänsten MS Dynamics OData Cloud Service (OData Service) är konfigurerad och ansluten till Dynamics-tjänsten. FDM (Form Data Model)
 
-## Skapa formulärdatamodell {#create-form-data-model}
+## Skapa formulärdatamodell (FDM) {#create-form-data-model}
 
 <!--When you install the [!DNL Experience Manager Forms] package, a form data model, **[!DNL Microsoft Dynamics] FDM**, is deployed on your [!DNL Experience Manager] instance. By default, the Form Data Model uses [!DNL Microsoft Dynamics] service configured in the MS Dynamics OData Cloud Service (OData Service) as its data source.
 
@@ -161,19 +161,19 @@ To review the form data model, go to **[!UICONTROL Form Data Model egrations]**.
  Form Data Model 
 ![default-fdm-1](assets/default-fdm-1.png)-->
 
-När du har konfigurerat molntjänsten MS Dynamics OData kan du använda tjänsten när du skapar formulärdatamodeller. Mer information finns i [Skapa formulärdatamodell](create-form-data-models.md).
+När du har konfigurerat molntjänsten MS Dynamics OData kan du använda tjänsten när du skapar formulärdatamodell (FDM). Mer information finns i [Skapa formulärdatamodell (FDM)](create-form-data-models.md).
 
-Därefter kan du skapa en adaptiv formulärbaserad datamodell och använda den i olika fall av användning av adaptiva formulär, till exempel:
+Därefter kan du skapa en FDM (Adaptive Form Data Model) och använda den i olika användningsområden för adaptiva formulär, till exempel:
 
 * Förifyll anpassat formulär genom att fråga efter information från [!DNL Microsoft Dynamics] enheter och tjänster
-* Anropa [!DNL Microsoft Dynamics] serveråtgärder som definieras i en formulärdatamodell med hjälp av adaptiva formulärregler
+* Anropa [!DNL Microsoft Dynamics] serveråtgärder som definieras i en formulärdatamodell (FDM) med hjälp av regler för adaptiva formulär
 * Skriv skickade formulärdata till [!DNL Microsoft Dynamics] enheter
 
 <!--It is recommended to create a copy of the Form Data Model provided with the [!DNL Experience Manager Forms] package and configure data models and services to suit your requirements. It will ensure that any future updates to the package do not override your form data model.-->
 
 Du kan [konfigurera åtgärden Skicka formulärdatamodell](/help/forms/using-form-data-model.md) för ett adaptivt formulär som skickar data till Microsoft Dynamics OData.
 
-Mer information om hur du skapar och använder formulärdatamodell i affärsarbetsflöden finns i [Dataintegrering](data-integration.md).
+Mer information om hur du skapar och använder FDM (Form Data Model) i affärsarbetsflöden finns i [Dataintegrering](data-integration.md).
 
 ## Relaterade artiklar
 

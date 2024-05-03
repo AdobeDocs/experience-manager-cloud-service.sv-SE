@@ -4,9 +4,9 @@ description: Lär dig konfigurera och konfigurera [!DNL AEM Forms] as a Cloud Se
 role: Admin, Developer, User
 feature: Adaptive Forms
 exl-id: 42f53662-fbcf-4676-9859-bf187ee9e4af
-source-git-commit: 7fe779602f52081dc785074bdc0f374665b908e6
+source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '606'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 * **UX-designer (User Experience)**: En UX-designer (User Experience) definierar stil, layout och varumärke för [!DNL AEM Forms] resurser.
 
-* **Forms-läkare**: En Forms-användare skapar adaptiva Forms, teman och mallar utifrån den stil, layout och det varumärke som UX Designer ger. Användaren skapar också och integrerar adaptiva formulär med en formulärdatamodell och AEM arbetsflöden. En Forms-deltagare utför vanligtvis kundrelaterade uppgifter.
+* **Forms-läkare**: En Forms-användare skapar adaptiva Forms, teman och mallar utifrån den stil, layout och det varumärke som UX Designer ger. Användaren skapar också och integrerar adaptiva formulär med en formulärdatamodell (FDM) och AEM arbetsflöden. En Forms-deltagare utför vanligtvis kundrelaterade uppgifter.
 
 * **Forms-utvecklare**: En Forms-utvecklare utvecklar en skräddarsydd blankettlösning. En Forms-utvecklare utför vanligtvis backend-utveckling som utveckling av anpassade komponenter, AEM arbetsflöden, förifyllda tjänster med mera.
 

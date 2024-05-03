@@ -6,9 +6,9 @@ feature: Adaptive Forms, Foundation Components
 role: User
 level: Intermediate
 exl-id: cde9523e-5409-4edd-af0f-2c2575cc22ea
-source-git-commit: e81da7414335e00411942adeb41978d39f172b52
+source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
 workflow-type: tm+mt
-source-wordcount: '3070'
+source-wordcount: '3071'
 ht-degree: 0%
 
 ---
@@ -184,7 +184,7 @@ Så här väljer du en Cloud Service och signeringsordning:
 
    >[!NOTE]
    >
-   > Om ett anpassat formulär skapas med en formulärdatamodell visas fältet Avtals-ID i dialogrutan.
+   > Om ett anpassat formulär skapas med en formulärdatamodell (FDM) visas fältet Avtals-ID i dialogrutan.
 
 1. [Lägga till mottagare i ett anpassat formulär](working-with-adobe-sign.md#addsignerstoanadaptiveform) och väljer Klar ![Spara](assets/save_icon.svg) om du vill spara ändringarna.
 

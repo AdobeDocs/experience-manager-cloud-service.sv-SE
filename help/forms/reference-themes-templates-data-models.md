@@ -3,9 +3,9 @@ title: Hur skaffar man referensteman och mallar för AEM?
 description: AEM Forms innehåller exempel på adaptiva formulärteman, mallar och formulärdatamodeller som hjälper dig att snabbt skapa formulär.
 feature: Adaptive Forms, Foundation Components
 exl-id: 81588759-22da-4123-92fe-5ca97e97f1e4
-source-git-commit: 6821856bd9f1a87a66ba296b3e315c0a4e78cea8
+source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '778'
 ht-degree: 0%
 
 ---
@@ -20,12 +20,12 @@ ht-degree: 0%
 
 <span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
-AEM Forms as a Cloud Service innehåller flera referensteman, mallar och formulärdatamodeller som hjälper dig att snabbt komma igång med att skapa Adaptiv Forms. Du kan ladda ned [referera till innehållspaket från programdistributionsportalen](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-forms-reference-content.ui.content-2.1.0.zip) och använder [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) för att installera [referensinnehållspaket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-forms-reference-content.ui.content-2.1.0.zip) i din produktions-, utvecklings- eller lokala utvecklingsmiljö för att få dessa referensresurser till din miljö.
+AEM Forms as a Cloud Service innehåller flera referensteman, mallar och formulärdatamodell (FDM) som hjälper dig att snabbt komma igång med att skapa Adaptiv Forms. Du kan ladda ned [referera till innehållspaket från programdistributionsportalen](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-forms-reference-content.ui.content-2.1.0.zip) och använder [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) för att installera [referensinnehållspaket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-forms-reference-content.ui.content-2.1.0.zip) i din produktions-, utvecklings- eller lokala utvecklingsmiljö för att få dessa referensresurser till din miljö.
 
-De teman, mallar och formulärdatamodeller som ingår i referensinnehållspaketet är:
+De teman, mallar och formulärdatamodell (FDM) som ingår i referensinnehållspaketet är:
 
 
-| Teman | Mallar | Formulärdatamodeller |
+| Teman | Mallar | FDM (Form Data Model) |
 ---------|----------|---------
 | Arbetsyta 3.0 | Grundläggande | Microsoft Dynamics 365 |
 | Tranquil | Tom | Salesforce |
@@ -112,16 +112,16 @@ FSI-temat betonar ett minimalistiskt och funktionellt utseende på ditt formulä
 Med den grundläggande mallen kan du snabbt skapa ett registreringsformulär. Du kan också använda den för att förhandsgranska funktionaliteten i adaptiva Forms Foundation-komponenter. Den innehåller en guidelayout för avsnitt-för-avsnitt-presentation av data. Använd mallen Tom för att börja skapa ett adaptivt formulär från en tom arbetsyta.
 
 
-## Referensformulärdatamodeller {#reference-models}
+## FDM (Reference Form Data Model) {#reference-models}
 
 Den adaptiva Forms kan sedan interagera med Microsoft Dynamics 365- och Salesforce-servrar för att möjliggöra affärsarbetsflöden. Till exempel:
 
 * Skriv in data i Microsoft Dynamics 365 och Salesforce när ni skickar adaptiva formulär.
-* Skriv data i Microsoft Dynamics 365 och Salesforce via anpassade entiteter som definierats i formulärdatamodellen och omvänt.
+* Skriv data i Microsoft Dynamics 365 och Salesforce via anpassade entiteter som definierats i formulärdatamodellen (FDM) och omvänt.
 * Fråga Microsoft Dynamics 365- och Salesforce-servern efter data och fyll i adaptiva Forms i förväg.
 * Läs data från Microsoft Dynamics 365- och Salesforce-servern.
 
-Du kan hämta följande formulärdatamodeller genom att installera [Referensinnehållspaket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-forms-reference-content.ui.content-2.1.0.zip):
+Du kan hämta följande FDM (Form Data Model) genom att installera [Referensinnehållspaket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-forms-reference-content.ui.content-2.1.0.zip):
 
 * Microsoft® Dynamics 365
 * Salesforce

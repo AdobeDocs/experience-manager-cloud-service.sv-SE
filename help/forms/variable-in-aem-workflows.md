@@ -4,9 +4,9 @@ description: Lär dig skapa en variabel, ange ett värde för variabeln och anv�
 exl-id: d9139ea9-2f86-476c-8767-b36766790f2c
 feature: Adaptive Forms, Workflow
 role: Admin, User
-source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
+source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
 workflow-type: tm+mt
-source-wordcount: '1914'
+source-wordcount: '1916'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Skapa en variabel:
 
    * Primitiv datatyp - Ange ett valfritt standardvärde för variabeln.
    * JSON eller XML - Ange en JSON- eller XML-schemasökväg (tillval). Systemet validerar schemasökvägen när egenskaper som är tillgängliga i schemat mappas och lagras till en annan variabel.
-   * Formulärdatamodell - Ange en formulärdatamodell.
+   * Formulärdatamodell (FDM) - Ange en sökväg till en formulärdatamodell.
    * ArrayList - Ange en undertyp för samlingen.
 
 1. Ange en valfri beskrivning av variabeln och välj ![ready_icon](assets/Smock_Checkmark_18_N.svg) för att spara ändringarna. Variabeln visas i listan som är tillgänglig i den vänstra rutan.
@@ -198,7 +198,7 @@ Använd följande API:er i ECMA-skriptet för att hämta värden för befintliga
 | Primitiv (long, Double, Boolean, Date och String) | workItem.getWorkflowData().getMetaDataMap().get(variableName, type) |
 | Dokument | Packages.com.adobe.aemfd.docmanager.Document doc = workItem.getWorkflowData().getMetaDataMap(&quot;docVar&quot;, Packages.com.adobe.aemfd.docmanager.Document.class); |
 | XML | Packages.org.w3c.dom.Document xmlObject = workItem.getWorkflowData().getMetaDataMap().get(variableName, Packages.org.w3c.dom.Document.class); |
-| Formulärdatamodell | Packages.com.adobe.aem.dermis.api.FormDataModelInstance fdmObject = workItem.getWorkflowData().getMetaDataMap().get(variableName, Packages.com.adobe.aem.dermis.api.FormDataModelInstance.class); |
+| FDM (Form Data Model) | Packages.com.adobe.aem.dermis.api.FormDataModelInstance fdmObject = workItem.getWorkflowData().getMetaDataMap().get(variableName, Packages.com.adobe.aem.dermis.api.FormDataModelInstance.class); |
 | JSON | Packages.com.google.gson.JsonObject jsonObject = workItem.getWorkflowData().getMetaDataMap().get(variableName, Packages.com.google.gson.JsonObject.class); |
 
 

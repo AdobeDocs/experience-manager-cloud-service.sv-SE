@@ -6,9 +6,10 @@ topic-tags: author, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Adaptive Forms, Foundation Components
 docset: aem65
-source-git-commit: eaab351460363b83c7d3667e048235506cc71c41
+exl-id: 16f86dae-86fb-481b-8978-b8898705ed7e
+source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
 workflow-type: tm+mt
-source-wordcount: '2450'
+source-wordcount: '2453'
 ht-degree: 0%
 
 ---
@@ -26,8 +27,8 @@ ht-degree: 0%
 
 Med adaptiva Forms kan du skapa engagerande, responsiva, dynamiska och anpassningsbara formulär. [!DNL AEM Forms] har ett intuitivt användargränssnitt och färdiga komponenter för att skapa och arbeta med Adaptive Forms. Du kan välja att skapa ett adaptivt formulär baserat på en formulärmodell eller ett schema eller utan en formulärmodell. Det är viktigt att du noga väljer den formulärmodell som inte bara passar dina behov, utan som utökar dina befintliga infrastrukturinvesteringar och resurser. Du kan välja mellan följande alternativ för att skapa ett adaptivt formulär:
 
-* **Använda en formulärdatamodell**
-  [Dataintegrering](data-integration.md) Med kan du integrera enheter och tjänster från olika datakällor i en formulärdatamodell som du kan använda för att skapa adaptiv Forms. Välj Formulärdatamodell om det adaptiva formulär du skapar inbegriper hämtning och skrivning av data från och till flera datakällor.
+* **Använda en formulärdatamodell (FDM)**
+  [Dataintegrering](data-integration.md) Med kan du integrera enheter och tjänster från olika datakällor i en formulärdatamodell (FDM) som du kan använda för att skapa adaptiv Forms. Välj FDM (Form Data Model) om det adaptiva formulär du skapar inbegriper att hämta och skriva data från och till flera datakällor.
 
 * **Använda en XDP-formulärmall**
 Det är en idealisk formulärmodell om du har investeringar i XFA- eller XDP-formulär. Det är ett direkt sätt att konvertera XFA-baserade formulär till Adaptive Forms. Alla befintliga XFA-regler behålls i tillhörande Adaptive Forms. Det adaptiva Forms-formatet stöder XFA-konstruktioner, t.ex. valideringar, händelser, egenskaper och mönster.

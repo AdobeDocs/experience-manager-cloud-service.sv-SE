@@ -3,9 +3,9 @@ title: Hur hanterar vi metadata för AEM Forms?
 description: Metadata gör det enklare att kategorisera och ordna resurser och hjälper användare som letar efter en viss resurs.
 feature: Adaptive Forms, Foundation Components
 exl-id: 8527246a-37f0-4d43-a49e-1c76c265514e
-source-git-commit: 6821856bd9f1a87a66ba296b3e315c0a4e78cea8
+source-git-commit: 7b31a2ea016567979288c7a8e55ed5bf8dfc181d
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1717'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Nedan följer en omfattande lista över metadataegenskaper som stöds i [!DNL AE
      <li>formulär PDF, formulär PDF (Acrobat) eller formulär PDF (signerat)</li> 
      <li>Dokument, dokument (signerat)</li> 
      <li>Adaptiv form</li> 
-     <li>Formulärdatamodell</li>
+     <li>FDM (Form Data Model)</li>
      <li>Resurs</li> 
     </ul> </td> 
   </tr> 
@@ -162,7 +162,7 @@ Nedan följer en omfattande lista över metadataegenskaper som stöds i [!DNL AE
    <td>Adaptiv form</td> 
    <td><p>Anger vilken formulärmodell som används när det adaptiva formuläret skapas. Den här egenskapen kan ha följande värden:</p> 
     <ul> 
-      <li>Formulärdatamodell </li>
+      <li>FDM (Form Data Model)</li>
       <li>Schema: En XML-kod för JSON-schema</li>
      <!-- <li>Form template: A form template is selected from the ones existing in the repository. This value can be updated.</li> 
      <li>XML schema: An XSD file is uploaded. This value can be updated.</li> -->

@@ -6,9 +6,9 @@ contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
 exl-id: 4496c4cc-a5d7-4f34-91f9-13eded77b362
-source-git-commit: d75d448d631da7af3a37192f0890a38c760ab09b
+source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
 workflow-type: tm+mt
-source-wordcount: '2303'
+source-wordcount: '2304'
 ht-degree: 0%
 
 ---
@@ -180,7 +180,7 @@ Använda [Regelredigerarens anropstjänst](https://experienceleague.adobe.com/do
 
 >[!NOTE]
 >
-> * Konfigurera Adaptiv Forms med en formulärdatamodell om du vill använda felhanterare med åtgärden Invoke i regelredigeraren.
+> * Om du vill använda felhanterare med regelredigerarens Invoke-tjänståtgärd konfigurerar du Adaptive Forms med en formulärdatamodell (FDM).
 > * En standardfelhanterare tillhandahålls för att visa felmeddelanden i fält om felsvaret finns i standardschemat. Du kan också anropa standardfelhanteraren från den anpassade felhanterarfunktionen.
 
 Med regelredigeraren kan du:

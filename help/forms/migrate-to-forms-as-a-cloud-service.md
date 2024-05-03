@@ -9,9 +9,9 @@ role: User, Developer
 level: Intermediate
 topic: Migration
 exl-id: 090e77ff-62ec-40cb-8263-58720f3b7558
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
 workflow-type: tm+mt
-source-wordcount: '1357'
+source-wordcount: '1360'
 ht-degree: 0%
 
 ---
@@ -128,14 +128,14 @@ Utför följande steg för att göra [!DNL AEM Forms] resurser som är kompatibl
 
    <!-- 1. Install the latest [Compatibility Package](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?#cloud-migration) to your cloned [!DNL AEM Forms] environment. -->
 
-1. Kör [Verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?#cloud-migration). När du anger parametrar på **[!UICONTROL Create Migration Set]** ska du ange sökvägen till Adaptive Forms, teman, mallar, formulärdatamodeller, Cloud Service, anpassade komponenter och andra AEM Forms-specifika resurser till **[!UICONTROL Paths to be included]** alternativ. Den lägger till angivna [!DNL AEM Forms] resurser till migreringsuppsättning.
+1. Kör [Verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?#cloud-migration). När du anger parametrar på **[!UICONTROL Create Migration Set]** anger du sökvägen till Adaptive Forms, teman, mallar, FDM (Form Data Model), Cloud Service, anpassade komponenter och andra AEM Forms-specifika resurser till **[!UICONTROL Paths to be included]** alternativ. Den lägger till angivna [!DNL AEM Forms] resurser till migreringsuppsättning.
 
 ## Sökvägar för olika AEM Forms-specifika resurser
 
 När du migrerar från AEM Forms 6.5 till molntjänsten kan du hitta de AEM Forms-specifika resurserna på:
 
 * **Adaptiv Forms**: Du kan hitta adaptiva formulär på `/content/dam/formsanddocuments/`och `/content/forms/af`. För ett adaptivt formulär med namnet WKND Registration kan du till exempel lägga till banor `/content/dam/formsanddocuments/wknd-registration` och `/content/forms/af/wknd-registration`.
-* **Formulärdatamodell**: Du hittar alla formulärdatamodeller på `/content/dam/formsanddocuments-fdm`. Till exempel: `/content/dam/formsanddocuments-fdm/ms-dynamics-fdm`.
+* **Formulärdatamodell**: Du hittar alla formulärdatamodeller (FDM) på `/content/dam/formsanddocuments-fdm`. Till exempel: `/content/dam/formsanddocuments-fdm/ms-dynamics-fdm`.
 
 * **Klientbibliotek**: Standardsökvägen för klientbibliotek är `/etc/clientlibs/fd/theme`.
 
@@ -143,7 +143,7 @@ När du migrerar från AEM Forms 6.5 till molntjänsten kan du hitta de AEM Form
 
 * **Adaptiva formulärteman och klientbibliotek**: Standardsökvägen för teman är ` /content/dam/formsanddocuments-themes/` och standardsökvägen för klientbibliotek är `/etc/clientlibs/fd/theme`. Exempel: för en mall med namnet WKND-tema lägger du till sökväg ` /content/dam/formsanddocuments-themes/wkndtheme` och klientbibliotek för temat på `/etc/clientlibs/reference-themes/wkndtheme-3-0`. Du kan också ha teman och klientbibliotek på andra anpassade sökvägar.
 
-* **Molnkonfigurationer**: Du hittar molnkonfigurationer på `/conf/`. Molnkonfigurationen för formulärdatamodellen finns till exempel på `/conf/global/settings/cloudconfigs/fdm`.
+* **Molnkonfigurationer**: Du hittar molnkonfigurationer på `/conf/`. Molnkonfigurationen för formulärdatamodell (FDM) finns till exempel på `/conf/global/settings/cloudconfigs/fdm`.
 
 * **Arbetsflödesmodell**: Du kan hitta AEM arbetsflödesmodeller på `/conf/global/settings/workflow/models/`. Exempel: för en arbetsflödesmodell med namnet WKND Registration, lägg till sökväg `/conf/global/settings/workflow/models/wknd-registration`
 

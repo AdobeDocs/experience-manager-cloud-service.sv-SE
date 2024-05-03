@@ -3,9 +3,9 @@ title: Hur konfigurerar man en Skicka-åtgärd för ett anpassat formulär?
 description: Ett anpassat formulär innehåller flera överföringsåtgärder. En Skicka-åtgärd definierar hur ett anpassat formulär ska bearbetas när det har skickats in. Du kan använda inbyggda Skicka-åtgärder eller skapa egna.
 feature: Adaptive Forms, Foundation Components
 exl-id: a4ebedeb-920a-4ed4-98b3-2c4aad8e5f78
-source-git-commit: 8923bfbb0e46961485ff360c0135ebdde6d8cab3
+source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
 workflow-type: tm+mt
-source-wordcount: '3697'
+source-wordcount: '3710'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ En Skicka-åtgärd aktiveras när en användare klickar på **[!UICONTROL Submit
 
 * [Skicka till REST-slutpunkt](#submit-to-rest-endpoint)
 * [Skicka e-post](#send-email)
-* [Skicka med formulärdatamodell](#submit-using-form-data-model)
+* [Skicka med FDM (Form Data Mode)](#submit-using-form-data-model)
 * [Anropa ett AEM](#invoke-an-aem-workflow)
 * [Skicka till SharePoint](#submit-to-sharedrive)
 * [Skicka till OneDrive](#submit-to-onedrive)
@@ -137,11 +137,11 @@ The **Submit to Forms workflow** submit option sends a data xml and file attachm
 
 For information about how to configure the Submit to forms workflow Submit Action, see [Submitting and processing your form data using forms workflows](submit-form-data-livecycle-process.md). -->
 
-## Skicka med formulärdatamodell {#submit-using-form-data-model}
+## Skicka med hjälp av formulärdatamodell (FDM) {#submit-using-form-data-model}
 
-The **[!UICONTROL Submit using Form Data Model]** Skicka åtgärd skriver skickade adaptiva formulärdata för det angivna datamodellsobjektet i en formulärdatamodell till datakällan. När du konfigurerar åtgärden Skicka kan du välja ett datamodellsobjekt vars skickade data du vill skriva tillbaka till dess datakälla.
+The **[!UICONTROL Submit using Form Data Model]** Skicka åtgärd skriver skickade adaptiva formulärdata för det angivna datamodellobjektet i en formulärdatamodell (FDM) till datakällan. När du konfigurerar åtgärden Skicka kan du välja ett datamodellsobjekt vars skickade data du vill skriva tillbaka till dess datakälla.
 
-Dessutom kan du skicka en bifogad fil med en formulärdatamodell och en DoR-fil (Document of Record) till datakällan. Mer information om formulärdatamodell finns i [[!DNL AEM Forms] Dataintegrering](data-integration.md).
+Dessutom kan du skicka en bifogad fil med en FDM (Form Data Model) och ett DoR-dokument (Document of Record) till datakällan. Mer information om formulärdatamodell (FDM) finns i [[!DNL AEM Forms] Dataintegrering](data-integration.md).
 
 <!--
 ## Forms Portal Submit Action {#forms-portal-submit-action}
@@ -243,7 +243,7 @@ Mappstrukturen som data ska sparas i är `/folder_name/form_name/year/month/date
 Använd [!UICONTROL Submit to SharePoint List] Skicka åtgärd i anpassad form:
 
 1. [Skapa en listkonfiguration för SharePoint](#create-sharepoint-list-configuration): Den ansluter AEM Forms till Microsoft® Sharepoint List Storage.
-1. [Använda Skicka med formulärdatamodellen i ett anpassat formulär](#use-submit-using-fdm): Det kopplar ditt adaptiva formulär till konfigurerade Microsoft® SharePoint.
+1. [Använda Skicka med hjälp av formulärdatamodell (FDM) i ett anpassat formulär](#use-submit-using-fdm): Det kopplar ditt adaptiva formulär till konfigurerade Microsoft® SharePoint.
 
 #### Skapa en listkonfiguration för SharePoint {#create-sharepoint-list-configuration}
 
@@ -267,14 +267,14 @@ Så här ansluter du AEM Forms till din Microsoft® Sharepoint-lista:
 1. Välj **[!UICONTROL Create]** för att skapa molnkonfigurationen för Microsoft® SharePointList.
 
 
-#### Använda Skicka med formulärdatamodellen i ett anpassat formulär {#use-submit-using-fdm}
+#### Använda Skicka med hjälp av formulärdatamodell (FDM) i ett anpassat formulär {#use-submit-using-fdm}
 
 Du kan använda den skapade SharePoint List-konfigurationen i ett adaptivt formulär för att spara data eller skapa ett postdokument i en SharePoint List. Utför följande steg om du vill använda en lagringskonfiguration i SharePoint List i en anpassad form:
 
-1. [Skapa en formulärdatamodell med Microsoft® SharePoint List-konfiguration](/help/forms/create-form-data-models.md)
-1. [Konfigurera formulärdatamodellen för att hämta och skicka data](/help/forms/work-with-form-data-model.md#configure-services)
+1. [Skapa en formulärdatamodell (FDM) med Microsoft® SharePoint List configuration](/help/forms/create-form-data-models.md)
+1. [Konfigurera FDM (Form Data Model) för att hämta och skicka data](/help/forms/work-with-form-data-model.md#configure-services)
 1. [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form.md)
-1. [Konfigurera åtgärden Skicka med en formulärdatamodell](/help/forms/configuring-submit-actions.md#submit-using-form-data-model)
+1. [Konfigurera åtgärden Skicka med en formulärdatamodell (FDM)](/help/forms/configuring-submit-actions.md#submit-using-form-data-model)
 
 När du skickar formuläret sparas data i det angivna lagringsutrymmet för Microsoft® Sharepoint-listan.
 
@@ -462,7 +462,7 @@ Författaren kan konfigurera customJavaScript-bibliotek per adaptiv form. I bibl
 
 Som en del av AEM riktlinjer för säkerhet och skärpa konfigurerar du anpassade felsidor som 400.jsp, 404.jsp och 500.jsp. Dessa hanterare anropas när ett formulär 400-, 404- eller 500-fel skickas. Hanterarna anropas också när dessa felkoder aktiveras på noden Publicera. Du kan också skapa JSP-sidor för andra HTTP-felkoder.
 
-När du förifyller en formulärdatamodell eller ett schemabaserat adaptivt formulär med XML- eller JSON-data klagar till ett schema som inte innehåller data `<afData>`, `<afBoundData>`och `</afUnboundData>` -taggar, försvinner data i obegränsade fält i det adaptiva formuläret. Schemat kan vara ett XML-schema, JSON-schema eller en formulärdatamodell. Obegränsade fält är adaptiva formulärfält utan `bindref` -egenskap.
+När du förifyller en formulärdatamodell (FDM), eller schemabaserad adaptiv form med XML- eller JSON-data, till ett schema som inte innehåller data `<afData>`, `<afBoundData>`och `</afUnboundData>` -taggar, försvinner data i obegränsade fält i det adaptiva formuläret. Schemat kan vara ett XML-schema, ett JSON-schema eller en FDM (Form Data Model). Obegränsade fält är adaptiva formulärfält utan `bindref` -egenskap.
 
 <!-- For more information, see [Customizing Pages shown by the Error Handler](/help/sites-developing/customizing-errorhandler-pages.md). -->
 

@@ -3,16 +3,16 @@ title: Hur får man referensteman för adaptiva formulär som bygger på grundko
 description: Använd de adaptiva formulärteman, mallar och formulärdatamodeller som finns som referens för att komma igång snabbt.
 discoiquuid: a1229970-5a5a-4f76-a880-278f972587cc
 exl-id: 03305b4a-d82d-4b8d-8804-249b10bdd358
-source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
+source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
 
 # Referensresurser för Forms as a Cloud Service {#reference-themes}
 
-Du kan hämta referensteman, mallar och formulärdatamodeller genom att installera [Referensresurspaket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-forms-reference-content.ui.content-2.0.0.zip). Det hjälper dig att snabbt komma igång och snabba upp utvecklingen av adaptiva Forms. Du kan använda [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager.html) för att distribuera det här paketet till din AEM Forms as a Cloud Service miljö.
+Du kan hämta referensteman, mallar och formulärdatamodellen (FDM) genom att installera [Referensresurspaket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-forms-reference-content.ui.content-2.0.0.zip). Det hjälper dig att snabbt komma igång och snabba upp utvecklingen av adaptiva Forms. Du kan använda [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager.html) för att distribuera det här paketet till din AEM Forms as a Cloud Service miljö.
 
 Referenstillgångarna i paketet är:
 
@@ -115,7 +115,7 @@ Med den grundläggande mallen kan du snabbt skapa ett registreringsformulär.
 
 Grundmallen innehåller en tom arbetsyta som du kan använda för att skapa en inledande struktur för adaptiva formulär för din organisation.
 
-## Formulärdatamodeller
+## FDM (Form Data Model)
 
 ### Microsoft® Dynamics 365
 

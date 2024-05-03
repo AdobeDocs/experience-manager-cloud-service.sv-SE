@@ -3,13 +3,13 @@ Title: How to send data to a SharePoint storage on submission of an Adaptive For
 Description: Learn how to send data from your Adaptive Form to a SharePoint storage like a SharePoint list or Document library when you submit the form.
 keywords: Hur ansluter man SharePoint lista till ett tilläggsformulär?, Hur man ansluter SharePoint dokumentbibliotek till ett tilläggsformulär, Skicka till SharePoint, Skapa en konfiguration för SharePoint dokumentbibliotek, Använd åtgärden Skicka till SharePoint i ett adaptivt formulär, Ansluta ett adaptivt formulär till Microsoft&reg; SharePoint List.
 feature: Adaptive Forms, Core Components
-source-git-commit: 8784c0bcd05eeae41a472faa5ecad03cbdd8a9b6
+exl-id: e925a750-5fb5-4950-afd3-78551eec985d
+source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '973'
 ht-degree: 0%
 
 ---
-
 
 # Ansluta ett adaptivt formulär till Microsoft® SharePoint
 
@@ -93,7 +93,7 @@ Mappstrukturen som data ska sparas i är `/folder_name/form_name/year/month/date
 Använd [!UICONTROL Submit to SharePoint List] Skicka åtgärd i anpassad form:
 
 1. [Skapa en listkonfiguration för SharePoint](#create-sharepoint-list-configuration): Den ansluter AEM Forms till Microsoft® Sharepoint List Storage.
-1. [Använda Skicka med formulärdatamodellen i ett anpassat formulär](#use-submit-using-fdm): Det kopplar ditt adaptiva formulär till konfigurerade Microsoft® SharePoint.
+1. [Använda Skicka med hjälp av formulärdatamodell (FDM) i ett anpassat formulär](#use-submit-using-fdm): Det kopplar ditt adaptiva formulär till konfigurerade Microsoft® SharePoint.
 
 ### Skapa en listkonfiguration för SharePoint {#create-sharepoint-list-configuration}
 
@@ -117,24 +117,24 @@ Så här ansluter du AEM Forms till din Microsoft® Sharepoint-lista:
 1. Välj **[!UICONTROL Create]** för att skapa molnkonfigurationen för Microsoft® SharePointList.
 
 
-### Använda Skicka med formulärdatamodellen i ett anpassat formulär {#use-submit-using-fdm}
+### Använda Skicka med hjälp av formulärdatamodell (FDM) i ett anpassat formulär {#use-submit-using-fdm}
 
 Du kan använda den skapade SharePoint List-konfigurationen i ett adaptivt formulär för att spara data eller skapa ett postdokument i en SharePoint List. Så här använder du en SharePoint List i ett adaptivt format:
 
-1. [Skapa en formulärdatamodell med Microsoft](/help/forms/create-form-data-models.md)
-1. [Konfigurera formulärdatamodellen för att hämta och skicka data](/help/forms/work-with-form-data-model.md#configure-services)
+1. [Skapa en formulärdatamodell (FDM) med Microsoft](/help/forms/create-form-data-models.md)
+1. [Konfigurera FDM (Form Data Model) för att hämta och skicka data](/help/forms/work-with-form-data-model.md#configure-services)
 1. [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form-core-components.md)
-1. [Konfigurera åtgärden Skicka med en formulärdatamodell](/help/forms/using-form-data-model.md)
+1. [Konfigurera åtgärden Skicka med en formulärdatamodell (FDM)](/help/forms/using-form-data-model.md)
 
 När du skickar formuläret sparas data i det angivna lagringsutrymmet för Microsoft® Sharepoint-listan.
 
 >[!NOTE]
 >
 > I Microsoft® SharePoint List stöds inte följande kolumntyper:
-* bildkolumn
-* metadatakolumn
-* personkolumn
-* extern datakolumn
+> * bildkolumn
+> * metadatakolumn
+> * personkolumn
+> * extern datakolumn
 
 ## Relaterade artiklar
 

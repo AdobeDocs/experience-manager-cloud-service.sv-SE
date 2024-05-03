@@ -4,9 +4,9 @@ description: Lär dig hur du integrerar Microsoft Dynamics 365 och Salesforce me
 feature: Adaptive Forms, Form Data Model
 role: User, Developer
 exl-id: 2a43b2db-2dfb-4c79-88be-ea770b44dac1
-source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
+source-git-commit: 7b31a2ea016567979288c7a8e55ed5bf8dfc181d
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '896'
 ht-degree: 1%
 
 ---
@@ -18,18 +18,18 @@ ht-degree: 1%
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/oauth2-client-credentials-flow-for-server-to-server-integration.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
-[[!DNL Experience Manager Forms] Dataintegrering](data-integration.md) innehåller [!DNL Microsoft® Dynamics 365] och [!DNL Salesforce] molntjänster för att integrera adaptiva formulär med formulärdatamodeller. Den adaptiva Forms kan sedan interagera med [!DNL Microsoft® Dynamics 365] och [!DNL Salesforce] servrar för att möjliggöra arbetsflöden. Till exempel:
+[[!DNL Experience Manager Forms] Dataintegrering](data-integration.md) innehåller [!DNL Microsoft® Dynamics 365] och [!DNL Salesforce] molntjänster för att integrera adaptiva formulär med hjälp av FDM (Form Data Model). Den adaptiva Forms kan sedan interagera med [!DNL Microsoft® Dynamics 365] och [!DNL Salesforce] servrar för att möjliggöra arbetsflöden. Till exempel:
 
 * Skriv data i [!DNL Microsoft® Dynamics 365] och [!DNL Salesforce] om inlämning av anpassade blanketter.
-* Skriv data i [!DNL Microsoft® Dynamics 365] och [!DNL Salesforce] via anpassade entiteter som definierats i formulärdatamodellen och omvänt.
+* Skriv data i [!DNL Microsoft® Dynamics 365] och [!DNL Salesforce] via anpassade entiteter som definierats i formulärdatamodellen (FDM) och omvänt.
 * Fråga [!DNL Microsoft® Dynamics 365] och [!DNL Salesforce] för data och förifylla Adaptive Forms.
 * Läs data från [!DNL Microsoft® Dynamics 365] och [!DNL Salesforce] server.
 
-[!DNL Microsoft® Dynamics 365] och [!DNL Salesforce] molntjänster och formulärdatamodeller är tillgängliga direkt i [!DNL AEM Forms] Server efter [skapa ett utvecklingsprojekt för Forms baserat på Experience Manager-arkitypen](setup-local-development-environment.md#forms-cloud-service-local-development-environment).
+[!DNL Microsoft® Dynamics 365] och [!DNL Salesforce] molntjänster och FDM (Form Data Model) är tillgängliga direkt i [!DNL AEM Forms] Server efter [skapa ett utvecklingsprojekt för Forms baserat på Experience Manager-arkitypen](setup-local-development-environment.md#forms-cloud-service-local-development-environment).
 
 >[!NOTE]
 >
->Microsoft® Dynamics 365 och [!DNL Salesforce] molntjänster och formulärdatamodeller är bara tillgängliga när du konfigurerar en [!DNL Experience Manager Forms] som [!DNL Cloud Service] projekt baserat på [AEM 30](https://github.com/adobe/aem-project-archetype/releases/tag/aem-project-archetype-30) eller senare.
+>Microsoft® Dynamics 365 och [!DNL Salesforce] molntjänster och FDM (Form Data Model) är bara tillgängliga direkt om du konfigurerar en [!DNL Experience Manager Forms] som [!DNL Cloud Service] projekt baserat på [AEM 30](https://github.com/adobe/aem-project-archetype/releases/tag/aem-project-archetype-30) eller senare.
 
 ## Konfigurera [!DNL Salesforce] molntjänst {#configure-salesforce-cloud-service}
 
@@ -59,11 +59,11 @@ Utför följande steg för att konfigurera [!DNL Salesforce] molntjänst:
    1. Logga in med [!DNL Salesforce] autentiseringsuppgifter och acceptera för att tillåta molntjänstkonfigurationen att ansluta till [!DNL Salesforce] service. Om anslutningen lyckas omdirigeras du till [!DNL Salesforce] konfigurationssida för molntjänster, som visar ett meddelande om att molntjänsten lyckades.
 1. Välj **[!UICONTROL Save & Close]** för att slutföra konfigurationsinställningen.
 
-### Åtkomst direkt [!DNL Salesforce] Formulärdatamodell
+### Åtkomst direkt [!DNL Salesforce] FDM (Form Data Model)
 
-A [!DNL Salesforce] Formulärdatamodellen är tillgänglig direkt i dialogrutan [!DNL AEM Forms] Server efter [skapa ett utvecklingsprojekt för Forms baserat på Experience Manager-arkitypen](setup-local-development-environment.md#forms-cloud-service-local-development-environment).
+A [!DNL Salesforce] FDM (Form Data Model) är tillgängligt direkt på [!DNL AEM Forms] Server efter [skapa ett utvecklingsprojekt för Forms baserat på Experience Manager-arkitypen](setup-local-development-environment.md#forms-cloud-service-local-development-environment).
 
-Om du vill komma åt formulärdatamodellen går du till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**. Listan med tillgängliga mappar innehåller en mapp med den titel som angetts för `DappTitle`  while [generera AEM arkivtypprojekt](setup-local-development-environment.md#forms-cloud-service-local-development-environment). Markera mappnamnet och välj **[!UICONTROL Salesforce Data Model]** och väljer Redigera ![Redigera](assets/edit.png) om du vill visa formulärdatamodellen.
+Om du vill komma åt formulärdatamodellen (FDM) går du till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**. Listan med tillgängliga mappar innehåller en mapp med den titel som angetts för `DappTitle`  while [generera AEM arkivtypprojekt](setup-local-development-environment.md#forms-cloud-service-local-development-environment). Markera mappnamnet och välj **[!UICONTROL Salesforce Data Model]** och väljer Redigera ![Redigera](assets/edit.png) -ikonen för att visa formulärdatamodellen (FDM).
 
 När du har konfigurerat [[!DNL Salesforce] Konfigurationstjänst för molnet](#configure-salesforce-cloud-service)kan du integrera adaptiva formulär direkt [!DNL Salesforce] Datamodell.
 
@@ -89,22 +89,22 @@ Utför följande steg för att konfigurera [!DNL Microsoft® Dynamics 365] molnt
    1. Ange värdet för **[!UICONTROL Service Root]** fält. Gå till Dynamics-instansen och navigera till [Resurser för utvecklare](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/view-download-developer-resources) om du vill visa värdet för fältet Tjänstrot. Exempel: `https://<tenant-name>.dynamics.com/api/data/v9.1/`
    1. Ange klient-ID (kallas program-ID) och klienthemlighet för det anslutna programmet.
    1. Ersätt `{tenant}` med ett klient-ID i **[!UICONTROL OAuth URL]**, **[!UICONTROL Refresh Token URL]** och **[!UICONTROL Access Token URL]** fält.
-   1. Ange URL för dynamicinstansen i **[!UICONTROL Resource]** fält att konfigurera [!UICONTROL Microsoft® Dynamics] med en formulärdatamodell. Använd tjänstens rot-URL för att härleda Dynamics-instansens URL. Till exempel: `https://<tenant-name>.dynamics.com`.
+   1. Ange URL för dynamicinstansen i **[!UICONTROL Resource]** fält att konfigurera [!UICONTROL Microsoft® Dynamics] med en FDM (Form Data Model). Använd tjänstens rot-URL för att härleda Dynamics-instansens URL. Till exempel: `https://<tenant-name>.dynamics.com`.
 
    1. Ange `openid` i **[!UICONTROL Authorization Scope]** fält för auktoriseringsprocess på [!DNL Microsoft® Dynamics 365].
    1. Logga in med [!DNL Microsoft® Dynamics 365] autentiseringsuppgifter och acceptera för att tillåta molntjänstkonfigurationen att ansluta till [!DNL Microsoft® Dynamics 365] service. Om anslutningen lyckas omdirigeras du till [!DNL Microsoft® Dynamics 365] konfigurationssida för molntjänster, som visar ett meddelande om att molntjänsten lyckades.
 1. Välj **[!UICONTROL Save & Close]** för att slutföra konfigurationsinställningen.
 
-### Åtkomst direkt [!DNL Microsoft® Dynamics 365] Formulärdatamodell
+### Åtkomst direkt [!DNL Microsoft® Dynamics 365] FDM (Form Data Model)
 
-A [!DNL Microsoft® Dynamics 365] Formulärdatamodellen är tillgänglig direkt i dialogrutan [!DNL AEM Forms] Server efter [skapa ett utvecklingsprojekt för Forms baserat på Experience Manager-arkitypen](setup-local-development-environment.md##forms-cloud-service-local-development-environment).
+A [!DNL Microsoft® Dynamics 365] FDM (Form Data Model) är tillgängligt direkt på [!DNL AEM Forms] Server efter [skapa ett utvecklingsprojekt för Forms baserat på Experience Manager-arkitypen](setup-local-development-environment.md##forms-cloud-service-local-development-environment).
 
-Om du vill komma åt formulärdatamodellen går du till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**. Listan med tillgängliga mappar innehåller en mapp med den titel som angetts för `DappTitle`  while [generera AEM arkivtypprojekt](setup-local-development-environment.md#forms-cloud-service-local-development-environment). Markera mappnamnet och välj **[!UICONTROL Microsoft® Dynamics 365 Data Model]** och väljer Redigera ![Redigera](assets/edit.png) om du vill visa formulärdatamodellen.
+Om du vill komma åt formulärdatamodellen (FDM) går du till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**. Listan med tillgängliga mappar innehåller en mapp med den titel som angetts för `DappTitle`  while [generera AEM arkivtypprojekt](setup-local-development-environment.md#forms-cloud-service-local-development-environment). Markera mappnamnet och välj **[!UICONTROL Microsoft® Dynamics 365 Data Model]** och väljer Redigera ![Redigera](assets/edit.png) -ikonen för att visa formulärdatamodellen (FDM).
 
 När du har konfigurerat [[!DNL Microsoft® Dynamics 365] Konfigurationstjänst för molnet](#configure-dynamics-cloud-service)kan du integrera adaptiva formulär direkt [!DNL Microsoft® Dynamics 365] Datamodell.
 
 >[!MORELIKETHIS]
 >
-* [Konfigurera datakällor för AEM Forms](/help/forms/configure-data-sources.md)
-* [Konfigurera Azure-lagring för AEM Forms](/help/forms/configure-azure-storage.md)
-[Lägg till Forms Portal på en AEM Sites-sida](/help/forms/configure-forms-portal.md)
+>* [Konfigurera datakällor för AEM Forms](/help/forms/configure-data-sources.md)
+>* [Konfigurera Azure-lagring för AEM Forms](/help/forms/configure-azure-storage.md)
+>  [Lägg till Forms Portal på en AEM Sites-sida](/help/forms/configure-forms-portal.md)

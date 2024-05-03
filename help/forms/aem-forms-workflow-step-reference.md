@@ -6,9 +6,9 @@ google-site-verification: A1dSvxshSAiaZvk0yHu7-S3hJBb1THj0CZ2Uh8N_ck4
 keywords: Använd AEM arbetsflöden, tilldela uppgiftssteg, konvertera till PDF/A-steg, generera dokument för inspelat steg, använda arbetsflöden, signera dokumentsteg, generera utskrivet steg, generera icke-interaktiva utdata från PDF
 feature: Adaptive Forms, Workflow
 role: Admin, User
-source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
+source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
 workflow-type: tm+mt
-source-wordcount: '6718'
+source-wordcount: '6730'
 ht-degree: 0%
 
 ---
@@ -85,12 +85,12 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 * **[!UICONTROL For completed task, render the Adaptive Form as]**: När en åtgärd har markerats som slutförd kan du återge det adaptiva formuläret som ett skrivskyddat anpassat formulär eller ett PDF-dokument. Du måste ha alternativet Dokument för post aktiverat eller formulärmallsbaserad Adaptiv Forms för att kunna återge det adaptiva formuläret som Dokument för post.
 * **[!UICONTROL Pre-populated]**: Följande fält i listan nedan fungerar som indata för uppgiften:
 
-   * **[!UICONTROL Select input data file using]**: Sökväg till indatafil (.json, .xml, .doc eller formulärdatamodell). Du kan hämta indatafilen med en sökväg som är relativ till nyttolasten eller hämta filen som lagras i en variabel av datatypen Document, XML eller JSON. Filen innehåller till exempel de data som har skickats för formuläret via ett AEM Inkorgsprogram. En exempelsökväg är [Payload_Directory]/workflow/data.
+   * **[!UICONTROL Select input data file using]**: Sökväg till indatafil (.json, .xml, .doc eller formulärdatamodell (FDM)). Du kan hämta indatafilen med en sökväg som är relativ till nyttolasten eller hämta filen som lagras i en variabel av datatypen Document, XML eller JSON. Filen innehåller till exempel de data som har skickats för formuläret via ett AEM Inkorgsprogram. En exempelsökväg är [Payload_Directory]/workflow/data.
    * **[!UICONTROL Select input attachments using]**: Bifogade filer på platsen bifogas till formuläret som är kopplat till uppgiften. Sökvägen kan vara relativ till nyttolasten eller hämta den bifogade filen som lagras i en variabel i ett dokument. En exempelsökväg är [Payload_Directory]/attachments/. Du kan ange bifogade filer som placeras i förhållande till nyttolasten eller använda en dokumenttypsvariabel (Array list > Document) för att ange en bifogad indatafil för det adaptiva formuläret.
 
   <!-- 
     
-    * **[!UICONTROL Choose input JSON]**: Select an input JSON file using a path that is relative to payload or stored in a variable of Document, JSON, or Form Data Model data type. This option is available if you select Interactive Communication Agent UI or Interactive Communication Web Channel Document from the Type drop-down list.
+    * **[!UICONTROL Choose input JSON]**: Select an input JSON file using a path that is relative to payload or stored in a variable of Document, JSON, or Form Data Model (FDM) data type. This option is available if you select Interactive Communication Agent UI or Interactive Communication Web Channel Document from the Type drop-down list.
 
     * **[!UICONTROL Choose a custom prefill service]**: Select the prefill service to retrieve the data and prefill the Interactive Communication Web channel document or the Agent UI.  
     
@@ -108,13 +108,13 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 
 * **[!UICONTROL Submitted information]**: Följande fält i listan nedan fungerar som utdataplatser för uppgiften:
 
-   * **[!UICONTROL Save output data file using]**: Spara datafilen (.json, .xml, .doc eller formulärdatamodell). Datafilen innehåller information som skickas via det associerade formuläret. Du kan spara utdatafilen med en sökväg som är relativ till nyttolasten eller lagra den i en variabel av datatypen Document, XML eller JSON. Till exempel: [Payload_Directory]/Arbetsflöde/data, där data är en fil.
+   * **[!UICONTROL Save output data file using]**: Spara datafilen (.json, .xml, .doc eller formulärdatamodell (FDM)). Datafilen innehåller information som skickas via det associerade formuläret. Du kan spara utdatafilen med en sökväg som är relativ till nyttolasten eller lagra den i en variabel av datatypen Document, XML eller JSON. Till exempel: [Payload_Directory]/Arbetsflöde/data, där data är en fil.
    * **[!UICONTROL Save attachments using]**: Spara de bifogade formulären i en uppgift. Du kan spara de bifogade filerna med en sökväg som är relativ till nyttolasten eller lagra den i en variabel i arraylistan med dokumentdatatypen.
    * **[!UICONTROL Save Document of Record using]**: Sökväg att spara en postdokumentfil. Till exempel: [Payload_Directory]/DocumentofRecord/credit-card.pdf. Du kan spara postdokumentet med en sökväg som är relativ till nyttolasten eller lagra det i en variabel av dokumentdatatypen. Om du väljer **[!UICONTROL Relative to Payload]** om sökvägsfältet lämnas tomt, genereras inte dokumentdokumentet. Det här alternativet är bara tillgängligt om du väljer Adaptivt formulär i listrutan Typ.
 
   <!-- 
     
-    * **[!UICONTROL Save Web Channel data using]**: Save the Web Channel data file using a path that is relative to the payload or store it in a variable of Document, JSON, or Form Data Model data type. This option is available only if you select Interactive Communication Agent UI from the Type drop-down list. c
+    * **[!UICONTROL Save Web Channel data using]**: Save the Web Channel data file using a path that is relative to the payload or store it in a variable of Document, JSON, or Form Data Model (FDM) data type. This option is available only if you select Interactive Communication Agent UI from the Type drop-down list. c
     * **[!UICONTROL Save PDF document using]**: Save the PDF document using a path that is relative to the payload or store it in a variable of Document data type. This option is available only if you select Interactive Communication Agent UI from the Type drop-down list.
     <!-- * **[!UICONTROL Save layout template using]**: Save the layout template using a path that is relative to the payload or store it in a variable of Document data type. The [layout template](layout-design-details.md) refers to an XDP file that you create using Forms Designer. This option is available only if you select Interactive Communication Agent UI from the Type drop-down list. 
     
@@ -273,9 +273,9 @@ Anropa DDX-steget har följande egenskaper:
 * **[!UICONTROL Save Output in Payload]**: Sparar utdatadokument under nyttolastmappen, eller skriver över nyttolasten om nyttolasten är en fil.
 * **[!UICONTROL Output Document's Map]**: Anger platsen där varje dokumentfil ska sparas explicit genom att en post per dokument läggs till. Varje post representerar dokumentet och platsen där det ska sparas. Om det finns flera utdatadokument används det här alternativet.
 
-## Anropa tjänststeg för formulärdatamodell {#invoke-form-data-model-service-step}
+## Anropa tjänststeget i FDM (Form Data Model) {#invoke-form-data-model-service-step}
 
-Du kan använda [[!DNL AEM Forms] Dataintegrering](data-integration.md) för att konfigurera och ansluta till olika datakällor. Dessa datakällor kan vara en webbtjänst, REST-tjänst, OData-tjänst och CRM-lösning. [!DNL AEM Forms] Med dataintegrering kan du skapa en formulärdatamodell som omfattar olika tjänster för att utföra datahämtnings-, additions- och uppdateringsåtgärder för den konfigurerade databasen. Du kan använda **[!UICONTROL Invoke Data Model Service step]** för att välja en formulärdatamodell (FDM) och använda FDM-tjänsterna för att hämta, uppdatera eller lägga till data till olika datakällor.
+Du kan använda [[!DNL AEM Forms] Dataintegrering](data-integration.md) för att konfigurera och ansluta till olika datakällor. Dessa datakällor kan vara en webbtjänst, REST-tjänst, OData-tjänst och CRM-lösning. [!DNL AEM Forms] Med dataintegrering kan du skapa en formulärdatamodell (FDM) som omfattar olika tjänster för att utföra datahämtnings-, additions- och uppdateringsåtgärder för den konfigurerade databasen. Du kan använda **[!UICONTROL Invoke Data Model Service step]** för att välja en formulärdatamodell (FDM) och använda FDM-tjänsterna för att hämta, uppdatera eller lägga till data till olika datakällor.
 
 Följande databastabell och JSON-filen används som exempel för att förklara indata för stegfält:
 
@@ -330,14 +330,14 @@ Följande databastabell och JSON-filen används som exempel för att förklara i
   }
 ```
 
-I steget Anropa formulärdatamodelltjänst visas följande fält för att underlätta formulärdatamodellåtgärder:
+FDM-tjänststeget (Invoke Form Data Model) innehåller följande listade fält som underlättar FDM-åtgärder (Form Data Model):
 
 * **[!UICONTROL Title]**: Stegets namn. Det hjälper till att identifiera stegen i arbetsflödesredigeraren.
 * **[!UICONTROL Description]**: Förklaring är användbar för andra processutvecklare när du arbetar i en delad utvecklingsmiljö.
 
-* **[!UICONTROL Form Data Model Path]**: Bläddra och välj en formulärdatamodell som finns på servern.
+* **[!UICONTROL Form Data Model Path]**: Bläddra och välj en FDM (Form Data Model) som finns på servern.
 
-* **[!UICONTROL Errors and Validations]**: Med det här alternativet kan du samla in felmeddelanden och ange valideringsalternativ för data som hämtas och skickas till datakällor. Med de här ändringarna kan du se till att data som skickas till steget Anropa datamodell följer de databegränsningar som definieras av datakällan. Mer information finns i [Automatisk validering av indata](work-with-form-data-model.md#automated-validation-of-input-data)
+* **[!UICONTROL Errors and Validations]**: Med det här alternativet kan du samla in felmeddelanden och ange valideringsalternativ för data som hämtas och skickas till datakällor. Med dessa ändringar kan du se till att data som skickas till FDM-tjänststeget (Invoke Form Data Model) följer de databegränsningar som definieras av datakällan. Mer information finns i [Automatisk validering av indata](work-with-form-data-model.md#automated-validation-of-input-data)
 
 * **[!UICONTROL Validation level]**: Det finns tre valideringskategorier: Basic, Full och OFF:
 
@@ -353,7 +353,7 @@ I steget Anropa formulärdatamodelltjänst visas följande fält för att underl
 
 * **[!UICONTROL Store Error Details in Variable]**: Du kan lagra en felinformation i en [JSON-typvariabel](variable-in-aem-workflows.md).
 
-* **[!UICONTROL Service]**: Lista över de tjänster som den valda formulärdatamodellen tillhandahåller.
+* **[!UICONTROL Service]**: Lista över de tjänster som den valda formulärdatamodellen (FDM) tillhandahåller.
 * **[!UICONTROL Input for services]** > **[!UICONTROL Provide input data using literal, variable, or workflow metadata, and a JSON file]**: En tjänst kan ha flera argument. Välj alternativet för att hämta värdet för tjänstargumenten från en metadataegenskap för arbetsflöde, ett JSON-objekt, en variabel eller ange värdet direkt i textrutan:
 
    * **[!UICONTROL Literal]**: Använd alternativet när du vet exakt vilket värde du ska ange. Exempel: srose@we.info.
@@ -365,16 +365,16 @@ I steget Anropa formulärdatamodelltjänst visas följande fält för att underl
      Om mappen Relativt till nyttolast i CRX-databasen till exempel innehåller en bifogad fil på `attachment\attachment-folder` plats, ange `attachment\attachment-folder` i textrutan efter att du har valt **[!UICONTROL Relative to Payload]** alternativ.
 
    * **[!UICONTROL JSON Dot Notation]**: Använd alternativet när värdet som ska användas finns i en JSON-fil. Till exempel försäkring.customerDetails.emailAddress. Alternativet JSON-punktnotation är bara tillgängligt om du har valt kartinmatningsfält från alternativet JSON för inmatning.
-   * **[!UICONTROL Map input fields from input JSON]**: Ange sökvägen till en JSON-fil för att hämta indatavärdet för vissa tjänstargument från JSON-filen. JSON-filens sökväg kan vara relativ till nyttolasten, en absolut sökväg eller så kan du välja ett JSON-indata-dokument med hjälp av en variabel av typen JSON eller Form Data Model.
+   * **[!UICONTROL Map input fields from input JSON]**: Ange sökvägen till en JSON-fil för att hämta indatavärdet för vissa tjänstargument från JSON-filen. Sökvägen till JSON-filen kan vara relativ till nyttolasten, en absolut sökväg eller så kan du välja ett JSON-inmatningsdokument med variabeln JSON eller Form Data Model (FDM).
 
 * **[!UICONTROL Input for services]** > **[!UICONTROL Provide input data using variable or a JSON file]**: Välj alternativet om du vill hämta värden för alla argument från en JSON-fil som har sparats med en absolut sökväg, med en sökväg som är relativ till nyttolasten eller i en variabel.
-* **[!UICONTROL Select Input JSON document using]**: JSON-filen innehåller värden för alla tjänstargument. JSON-filens sökväg kan vara **[!UICONTROL relative to the payload]** eller en **[!UICONTROL absolute path]**. Du kan även hämta JSON-indata-dokumentet med hjälp av en variabel av datatypen JSON eller Form Data Model.
+* **[!UICONTROL Select Input JSON document using]**: JSON-filen innehåller värden för alla tjänstargument. JSON-filens sökväg kan vara **[!UICONTROL relative to the payload]** eller en **[!UICONTROL absolute path]**. Du kan också hämta JSON-indata med hjälp av en variabel av datatypen JSON eller Form Data Model (FDM).
 
 * **[!UICONTROL JSON Dot Notation]**: Lämna fältet tomt om du vill använda alla objekt i den angivna JSON-filen som indata för tjänstargument. Om du vill läsa ett specifikt JSON-objekt från den angivna JSON-filen som indata för serviceargument anger du punktnotation för JSON-objektet, till exempel, om du har en JSON som liknar den som anges i början av avsnittet, anger du försäkring.customerDetails för att ge all information om en kund som indata till tjänsten.
 * **[!UICONTROL Output of service]** > **[!UICONTROL Map and write output values to variable or metadata]**: Välj alternativet att spara utdatavärdena som egenskaper för arbetsflödesinstansens metadatanod i crx-databasen. Ange namnet på metadataegenskapen och välj det motsvarande tjänstutdataattribut som ska mappas med metadataegenskapen, till exempel mappa det telefonnummer som returneras av utdatatjänsten med egenskapen phone_number för arbetsflödets metadata. På samma sätt kan du lagra utdata i en variabel med datatypen Long. När du väljer en egenskap för **[!UICONTROL Service output attribute to be mapped]** , fylls endast variabler som kan lagra data för den valda egenskapen i för **[!UICONTROL Save the output to]** alternativ.
 
 * **[!UICONTROL Output of service]** > **[!UICONTROL Save output to variable or a JSON file]**: Välj alternativet att spara utdatavärdena i en JSON-fil med en absolut sökväg, med en sökväg som är relativ till nyttolasten eller i en variabel.
-* **[!UICONTROL Save Output JSON document using below options]**: Spara JSON-utdatafilen. Sökvägen till JSON-utdatafilen kan vara relativ till nyttolasten eller en absolut sökväg. Du kan också spara JSON-utdatafilen med en variabel av datatypen JSON eller Form Data Model.
+* **[!UICONTROL Save Output JSON document using below options]**: Spara JSON-utdatafilen. Sökvägen till JSON-utdatafilen kan vara relativ till nyttolasten eller en absolut sökväg. Du kan också spara JSON-utdatafilen med en variabel av datatypen JSON eller Form Data Model (FDM).
 
 
 

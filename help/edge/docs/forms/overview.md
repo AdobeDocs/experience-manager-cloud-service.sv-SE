@@ -3,9 +3,9 @@ title: Översikt över AEM Forms-Edge Delivery Services
 description: AEM Forms Edge Delivery Services som tagits fram för bästa prestanda och som gör det möjligt att förutse framtiden för smidig datainsamling och användarengagemang.
 feature: Edge Delivery Services
 exl-id: ecea1e05-d36b-4d63-af9d-c69dafd2f94f
-source-git-commit: b32e04dec83992ebfcea7874932a5ab77a1eaa70
+source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1018'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ AEM Authoring har ett WYSIWYG-gränssnitt (Adaptive Forms Editor) för att skapa
 * Integrering med Adobe Sign för elektroniska signaturer.
 * Integrering med Adobe Workfront Fusion för att aktivera Adobe Workfront Fusion-scenarier när formulär skickas in.
 * Integrering med olika datakällor för förifyllande av formulär och inlämning av data.
-* Formulärdatamodell för definition av datastruktur och interaktion med olika datakällor.
+* Form Data Model (FDM) för att definiera datastrukturen och interaktionen med olika datakällor.
 * Möjlighet att välja bland flera olika åtgärder för att skicka in formulär, inklusive att skicka data till Microsoft SharePoint, Microsoft OneDrive, Adobe Workfront Fusion, Salesforce, Microsoft Dynamics, många fler datakällor.
 
 I praktiken [AEM](/help/forms/creating-adaptive-form-core-components.md) bygger på grunden för [Dokumentbaserad redigering](/help/edge/docs/forms/create-forms.md), med en mer avancerad verktygslåda för att skapa och hantera komplexa formulär.

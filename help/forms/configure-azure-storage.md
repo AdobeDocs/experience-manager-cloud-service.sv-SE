@@ -4,9 +4,9 @@ description: Lär dig hur du integrerar formulär med Azure-lagringsservern.
 feature: Adaptive Forms, Form Data Model
 role: User, Developer
 exl-id: 606383b3-293c-43d2-9ba0-5843c4e0caa8
-source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
+source-git-commit: 7b31a2ea016567979288c7a8e55ed5bf8dfc181d
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '559'
 ht-degree: 0%
 
 ---
@@ -16,10 +16,10 @@ ht-degree: 0%
 
 ![dataintegrering](assets/data-integeration.png)
 
-[[!DNL Experience Manager Forms] Dataintegrering](data-integration.md) ger en [!DNL Azure] lagringskonfiguration för att integrera formulär med [!DNL Azure] lagringstjänster. Formulärdatamodellen kan användas för att skapa adaptiv Forms som interagerar med [!DNL Azure] server för att möjliggöra arbetsflöden. Till exempel:
+[[!DNL Experience Manager Forms] Dataintegrering](data-integration.md) ger en [!DNL Azure] lagringskonfiguration för att integrera formulär med [!DNL Azure] lagringstjänster. Formulärdatamodellen (FDM) kan användas för att skapa adaptiv Forms som interagerar med [!DNL Azure] server för att möjliggöra arbetsflöden. Till exempel:
 
 * Skriv data i [!DNL Azure] om inlämning av anpassade blanketter.
-* Skriv data i [!DNL Azure] via anpassade entiteter som definierats i formulärdatamodellen och omvänt.
+* Skriv data i [!DNL Azure] via anpassade entiteter som definierats i formulärdatamodellen (FDM) och omvänt.
 * Fråga [!DNL Azure] för data och förifylla Adaptive Forms.
 * Läs data från [!DNL Azure] server.
 
@@ -35,21 +35,21 @@ Innan du utför dessa steg måste du se till att du har en [!DNL Azure] lagrings
 
 ## Skapa formulärdatamodell {#create-azure-form-data-model}
 
-När du har skapat [!DNL Azure] lagringskonfiguration kan du [skapa formulärdatamodellen](create-form-data-models.md). Ange den mapp som innehåller [!DNL Azure] i **[!UICONTROL Data Source Configuration]** när formulärdatamodellen skapades. Du kan sedan välja konfigurationen från listan med konfigurationer som finns i det angivna mappnamnet.
+När du har skapat [!DNL Azure] lagringskonfiguration kan du [skapa formulärdatamodellen](create-form-data-models.md). Ange den mapp som innehåller [!DNL Azure] i **[!UICONTROL Data Source Configuration]** när formulärdatamodellen (FDM) skapas. Du kan sedan välja konfigurationen från listan med konfigurationer som finns i det angivna mappnamnet.
 
 ### Lägg till [!DNL Azure] tjänster till formulärdatamodellen {#add-azure-services}
 
-När du har skapat objekten för formulärdatamodell och datamodell kan du lägga till [!DNL Azure] tjänster till formulärdatamodellen.
+När du har skapat objekten för formulärdatamodell (FDM) och datamodell kan du lägga till [!DNL Azure] till FDM (Form Data Model).
 
 Lägg till [!DNL Azure] tjänster:
 
-1. I redigeringsläget väljer du tjänsterna i **[!UICONTROL Services]** i den vänstra rutan och väljer **[!UICONTROL Add Selected]**. De valda tjänsterna visas i **[!UICONTROL Services]** i formulärdatamodellen.
+1. I redigeringsläget väljer du tjänsterna i **[!UICONTROL Services]** i den vänstra rutan och väljer **[!UICONTROL Add Selected]**. De valda tjänsterna visas i **[!UICONTROL Services]** FDM-fliken (Form Data Model).
 
    ![Lägg till markerade tjänster](assets/select-services.png)
 
 1. I **[!UICONTROL Services]** väljer du tjänsten och **[!UICONTROL Edit Properties]**. Definiera tjänstens in- eller utdatamodellsobjekt baserat på tjänsten.
 
-1. Välj **[!UICONTROL Save]** för att spara formulärdatamodellen.
+1. Välj **[!UICONTROL Save]** för att spara formulärdatamodellen (FDM).
 
    Följande tabell beskriver tillgängliga [!DNL Azure] tjänster:
 
@@ -96,7 +96,7 @@ Så här definierar du en objektegenskap för datamodell som en söknyckel:
 
 1. I **[!UICONTROL Model]** väljer du datamodellens objektegenskap och väljer **[!UICONTROL Edit Properties]**.
 1. Byt **[!UICONTROL Search Key]** växla till ON-läge. Det här alternativet är bara tillgängligt för primära datatyper.
-1. Välj **[!UICONTROL Done]** och sedan **[!UICONTROL Save]** för att spara formulärdatamodellen.
+1. Välj **[!UICONTROL Done]** och sedan **[!UICONTROL Save]** för att spara formulärdatamodellen (FDM).
 
 När du har definierat egenskaper för datamodellsobjekt som söknycklar lagras hash-värdena i Azure-indextaggar och Base64-kodade värden lagras i Azure-metadata.
 

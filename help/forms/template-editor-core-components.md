@@ -4,9 +4,9 @@ description: Skapa adaptiva formulärmallar baserade på kärnkomponenten för a
 feature: Adaptive Forms, Core Components
 Keywords: create adaptive form template, create adaptive form template based on core components, Use template to create adpative form.
 exl-id: c1c050d3-953e-4e56-a96b-d84f2ec05e5e
-source-git-commit: eaab351460363b83c7d3667e048235506cc71c41
+source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
 workflow-type: tm+mt
-source-wordcount: '1883'
+source-wordcount: '1884'
 ht-degree: 0%
 
 ---
@@ -164,7 +164,7 @@ Författare kan associera en [!UICONTROL Form Data Model Schema] till en adaptiv
 1. Välj **[!UICONTROL Content Browser]** till vänster.
 1. Gå till formulärbehållaren **[!UICONTROL Setting]**.
 1. Välj **[!UICONTROL Data Model]**.
-1. Välj formulärdatamodell genom att **[!UICONTROL Select Form Data Model]** och spara konfigurationen.
+1. Välj formulärdatamodell (FDM) genom att **[!UICONTROL Select Form Data Model]** och spara konfigurationen.
 
 ![Form-Data-Model-Association-in-Forms](/help/forms/assets/select-form-data-model-img-core-component.png)
 

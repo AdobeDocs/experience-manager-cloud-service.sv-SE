@@ -1,22 +1,22 @@
 ---
-title: Hur anropar jag tjänsten Form Data Model från Adaptive Forms med API:er?
+title: Hur anropar man FDM-tjänsten (Form Data Model) från Adaptive Forms med API:er?
 description: Beskriver det invokeWebServices-API som du kan använda för att anropa webbtjänster som skrivits i WSDL från ett adaptivt formulärfält.
 uuid: 40561086-e69d-4e6a-9543-1eb2f54cd836
 topic-tags: develop
 discoiquuid: aa3e50f1-8f5a-489d-a42e-a928e437ab79
-source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
+source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
 
 
-# API för att anropa tjänsten Form Data Model från Adaptive Forms {#api-to-invoke-form-data-model-service-from-adaptive-forms}
+# API för att anropa FDM-tjänsten (Form Data Model) från Adaptive Forms {#api-to-invoke-form-data-model-service-from-adaptive-forms}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
-[!DNL AEM Forms] gör det möjligt för formulärförfattare att ytterligare förenkla och förbättra formulärifyllningen genom att anropa tjänster som konfigurerats i en formulärdatamodell inifrån ett adaptivt formulärfält. Om du vill anropa en datamodelltjänst kan du antingen skapa en regel i den visuella redigeraren eller ange ett JavaScript med `guidelib.dataIntegrationUtils.executeOperation` API i kodredigeraren för [regelredigerare](rule-editor.md).
+[!DNL AEM Forms] gör det möjligt för formulärförfattare att ytterligare förenkla och förbättra formulärifyllningen genom att anropa tjänster som konfigurerats i en formulärdatamodell (FDM) inifrån ett adaptivt formulärfält. Om du vill anropa en datamodelltjänst kan du antingen skapa en regel i den visuella redigeraren eller ange ett JavaScript med `guidelib.dataIntegrationUtils.executeOperation` API i kodredigeraren för [regelredigerare](rule-editor.md).
 
 Det här dokumentet fokuserar på att skriva ett JavaScript med `guidelib.dataIntegrationUtils.executeOperation` API för att anropa en tjänst.
 
@@ -60,7 +60,7 @@ API-strukturen anger följande information om tjänståtgärden.
   </tr>
   <tr>
    <td><code>formDataModelId</code></td>
-   <td>Anger databassökvägen till formulärdatamodellen inklusive dess namn</td>
+   <td>Anger databassökvägen till FDM (Form Data Model) inklusive dess namn</td>
   </tr>
   <tr>
    <td><code>operationName</code></td>
@@ -87,7 +87,7 @@ API-strukturen anger följande information om tjänståtgärden.
 
 ## Exempelskript för att anropa en tjänst {#sample-script-to-invoke-a-service}
 
-Följande exempelskript använder `guidelib.dataIntegrationUtils.executeOperation` API för att anropa `getAccountById` tjänståtgärd konfigurerad i `employeeAccount` formulärdatamodell.
+Följande exempelskript använder `guidelib.dataIntegrationUtils.executeOperation` API för att anropa `getAccountById` tjänståtgärd konfigurerad i `employeeAccount` FDM (Form Data Model).
 
 The `getAccountById` operationen tar värdet i `employeeID` formulärfält som indata för `empId` argument och returnerar medarbetarens namn, kontonummer och kontosaldo för motsvarande medarbetare. Utdatavärdena fylls i i de angivna formulärfälten. Värdet i `name` argumentet har fyllts i i `fullName` formulärelement och värde för `accountNumber` argument i `account` formulärelement.
 
@@ -119,7 +119,7 @@ guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, c
 
 ### Exempelskript med återanropsfunktioner för lyckade och misslyckade åtgärder {#callback-function-success-failure}
 
-Följande exempelskript använder `guidelib.dataIntegrationUtils.executeOperation` API för att anropa `GETOrder` tjänståtgärd konfigurerad i `employeeOrder` formulärdatamodell.
+Följande exempelskript använder `guidelib.dataIntegrationUtils.executeOperation` API för att anropa `GETOrder` tjänståtgärd konfigurerad i `employeeOrder` FDM (Form Data Model).
 
 The `GETOrder` operationen tar värdet i `Order ID` formulärfält som indata för `orderId` argument och returnerar orderkvantitetsvärdet i `success` callback-funktion.  Om `success` callback-funktionen returnerar inte orderkvantiteten, `failure` callback-funktionen visar `Error occured` meddelande.
 

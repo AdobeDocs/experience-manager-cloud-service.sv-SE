@@ -4,16 +4,17 @@ description: Lär dig att migrera adaptiva Forms, PDF forms, teman och andra st�
 topic-tags: forms-manager
 role: Admin, User
 feature: Adaptive Forms
-source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
+exl-id: f5105fb7-b8c0-4656-8095-b21d392746c0
+source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1129'
 ht-degree: 0%
 
 ---
 
 # Importera eller exportera anpassningsbara Forms- och AEM Forms-resurser {#importing-and-exporting-assets-to-aem-forms}
 
-Du kan flytta adaptiva Forms och relaterade resurser som adaptiva formulärteman, formulärdatamodeller, adaptiva formulärmallar, dokumentfragment och PDF forms mellan [!DNL AEM Forms] -instanser. Du kan importera och exportera resurser i CRX-paket eller binära filformat.
+Du kan flytta adaptiva Forms och relaterade resurser som adaptiva formulärteman, formulärdatamodell (FDM), adaptiva formulärmallar, dokumentfragment och PDF forms mellan [!DNL AEM Forms] -instanser. Du kan importera och exportera resurser i CRX-paket eller binära filformat.
 
 När du exporterar ett anpassat formulär exporteras inte innehållsprinciperna och mallarna. Använd [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=en#how-rolling-deployments-work) för att exportera sådana resurser.
 
@@ -26,7 +27,7 @@ Så här hämtar du formulär eller relaterade resurser:
 1. Markera resurserna och välj **[!UICONTROL Download]** -ikon.
 1. Välj något av följande alternativ i Hämta resurser och välj sedan **[!UICONTROL Download]**.
 
-   * **Hämta som CRX-paket:** Använd alternativet för att hämta och flytta alla markerade resurser och relaterade beroenden från en [!DNL AEM Forms] till en annan instans. Den hämtar alla resurser och mappar som ett CRX-paket, inklusive formulär som skapats i AEM (adaptiva Forms och adaptiva formulärfragment), formuläruppsättningar, formulärdatamodell, formulärmallar, PDF-dokument och refererade resurser (XSD-filer och bilder).
+   * **Hämta som CRX-paket:** Använd alternativet för att hämta och flytta alla markerade resurser och relaterade beroenden från en [!DNL AEM Forms] till en annan instans. Den hämtar alla resurser och mappar som ett CRX-paket, inklusive de formulär som skapats i AEM (Adaptive Forms och Adaptive Form Fragments), formuläruppsättningar, formulärdatamodell (FDM), formulärmallar, PDF-dokument och refererade resurser (XSD och bilder).
 Fördelen med att hämta resurser som ett paket är att det även hämtar refererade resurser. Om du till exempel har ett adaptivt formulär som använder en formulärmall, XSD och en bild. När du väljer det här adaptiva formuläret och hämtar det som ett paket innehåller det hämtade paketet även formulärmallen, XSD och bilden. Alla metadataegenskaper (inklusive anpassade egenskaper) som är kopplade till resursen hämtas också.
 
    * **Hämta resurser som binära filer:** Använd alternativet om du bara vill hämta formulärmallar (XDP), PDF forms (PDF), dokument (PDF) och resurser (bilder, scheman, formatmallar). Du kan redigera dessa resurser med externa program. Det hämtar resurser som har binära filer, t.ex. bilder, PDF och andra format som stöds som en ZIP-fil.
