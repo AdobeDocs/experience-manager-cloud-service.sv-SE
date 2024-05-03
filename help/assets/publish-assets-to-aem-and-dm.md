@@ -1,9 +1,9 @@
 ---
 title: Snabbpublicering till AEM och Dynamic Media
 description: Snabbpublicering är en funktion i det nya användargränssnittet eller resursvyn. Den här funktionen ger flexibilitet för användare att antingen snabbt publicera till AEM och dynamiska medier samtidigt eller individuellt. Det innebär att när du har valt resurser och mappar kan användarna välja att publicera till Dynamic Media eller Publicera till AEM. Med funktionen Snabb publicering kan det nya användargränssnittet publicera resurser och mappar till Dynamic Media och AEM.
-source-git-commit: a1069ec278143665c1e17ea1a482589763dd153f
+source-git-commit: f3b600fc3d9c519158b6b90bd9a9f881724934de
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1213'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Publicera resurser till AEM och Dynamic Media{#Publish-Assets-to-AEM-and-Dynamic-Media}
 
-Med Experience Manager Assets kan du snabbt publicera resurser på Experience Manager och Dynamic Media med hjälp av resursvyn. Detta garanterar att du hanterar dina resurser och sedan publicerar dem med [Resursvyn utan att växla till administrationsvyn](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/overview#persona-based-experiences).
+Med Experience Manager Assets kan du snabbt publicera resurser på Experience Manager och Dynamic Media med hjälp av resursvyn. Detta garanterar att du hanterar dina resurser och sedan publicerar dem med [Resursvyn utan att växla till administrationsvyn](/help/assets/overview.md##persona-based-experiences).
 
 I Experience Manager Assets-vyn kan du publicera resurser till AEM eller Dynamic Media, eller till båda samtidigt. Du kan publicera resurser när du överför, bläddrar bland och söker efter resurser. Alla dessa alternativ för att publicera resurser förklaras i den här artikeln i detalj.
 
@@ -21,8 +21,8 @@ Konfigurera de här inställningarna för att visa publiceringsalternativen för
 
 * Om du vill visa publiceringsalternativen för Dynamic Media konfigurerar du följande inställningar i administrationsvyn:
 
-   * [Skapa en molnkonfiguration för Dynamic Media](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/dynamicmedia/config-dm#configuring-dynamic-media-cloud-services).
-   * Ange publiceringsläget för Dynamic Media på mappnivå. Du kan konfigurera de här inställningarna när du skapar Dynamic Media molnkonfiguration. Mer information om hur du skriver över inställningarna på mappnivå finns i [Konfigurera selektiv publicering på mappnivå i Dynamic Media](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/dynamicmedia/selective-publishing).
+   * [Skapa en molnkonfiguration för Dynamic Media](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services).
+   * Ange publiceringsläget för Dynamic Media på mappnivå. Du kan konfigurera de här inställningarna när du skapar Dynamic Media molnkonfiguration. Mer information om hur du skriver över inställningarna på mappnivå finns i [Konfigurera selektiv publicering på mappnivå i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md).
 
 * Om du vill visa publiceringsalternativen för AEM måste du konfigurera AEM publiceringsslutpunkt för miljön.
 
@@ -99,7 +99,7 @@ Alternativet att publicera till Dynamic Media på sökresultatsidan beror på vi
 
 Så här kontrollerar du publiceringsstatusen för en resurs eller mapp:
 
-1. Klicka **Resurser** i **Resurshantering** som finns i den vänstra rutan.
+1. Klicka **[!UICONTROL Assets]** i **[!UICONTROL Assets Management]** som finns i den vänstra rutan.
 2. Växla till listvyn med Visa väljare. Du kan visa resursegenskaper som AEM, Dynamic Media Publish, titel, storlek, dimensioner och så vidare.\
    Om en resurs eller mapp inte har publicerats är statusen för **AEM Publish** och **Dynamic Media Publish** kolumner visas som **Ej tillämpligt.**
    ![kontrollera publiceringsstatus1](/help/assets/assets/check-publish-status1.png)
