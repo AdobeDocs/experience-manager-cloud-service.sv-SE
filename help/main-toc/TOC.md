@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 695389430e3be4cef107aefad44fd7453cc9d36d
+source-git-commit: 4a534f4335376673c362ef91a877e67a523be560
 workflow-type: tm+mt
 source-wordcount: '4908'
 ht-degree: 3%
@@ -840,7 +840,7 @@ ht-degree: 3%
       + [Omdirigeringar](/help/edge/docs/redirects.md)
    + Building Forms {#build-forms}
       + [Ökning](/help/edge/docs/forms/overview.md)
-      + Kom igång {#getting-started-eds-forms}
+      + Kom igång {#getting-started-edge-delivery-services-forms}
          + [Komma igång](/help/edge/docs/forms/tutorial.md)
          + [Skapa ett formulär med Google eller Microsoft Excel](/help/edge/docs/forms/create-forms.md)
          + [Konfigurera dina Google-blad eller Microsoft Excel-filer så att du kan börja ta emot &#x200B;](/help/edge/docs/forms/submit-forms.md)
@@ -850,13 +850,13 @@ ht-degree: 3%
          + [Anpassa utseendet på &#x200B;](/help/edge/docs/forms/style-theme-forms.md)
          + [Använd regler för att lägga till dynamiskt beteende i ett formulär](/help/edge/docs/forms/rules-forms.md)
          + [Visa ett anpassat tackmeddelande efter att formuläret har skickats](/help/edge/docs/forms/thank-you-page-form.md)
-      + Funktioner {#advanced-features-eds-forms}
+      + Funktioner {#advanced-features-edge-delivery-services-forms}
          + [Formulärfragment](/help/edge/docs/forms/form-fragments.md)
          + [Lägga till repeterbara avsnitt i ett &#x200B;](/help/edge/docs/forms/repeatable-forms.md)
          + [Översättning](/help/edge/docs/forms/translate-forms.md)
          + [reCAPTCHA](/help/edge/docs/forms/recaptacha-forms.md)
          + [Anpassade komponenter](/help/edge/docs/forms/custom-components-forms.md)
-         + [Användarövervakning i realtid för formulär](/help/edge/docs/forms/real-time-user-monitoring-for-forms.md)
+         + [Användarövervakning i realtid för formulär](/help/edge/docs/forms/real-user-monitoring-for-forms.md)
       + Referenser {#forms-references}
          + [Komponenter för adaptiva formulärblock och deras egenskaper](/help/edge/docs/forms/form-components.md)
    + Kantleveransresurser {#resources}
