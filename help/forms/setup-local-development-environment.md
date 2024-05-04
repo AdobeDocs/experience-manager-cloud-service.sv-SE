@@ -4,9 +4,9 @@ description: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manage
 role: Admin, Developer, User
 feature: Adaptive Forms
 exl-id: 12877a77-094f-492a-af58-cffafecf79ae
-source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
+source-git-commit: a070e945f23641cfdfd71511366e5b2c16ec22e8
 workflow-type: tm+mt
-source-wordcount: '2720'
+source-wordcount: '2756'
 ht-degree: 0%
 
 ---
@@ -91,6 +91,11 @@ Om du vill hämta den senaste versionen av Adobe Experience Manager as a Cloud S
 1. Navigera till fliken **[!UICONTROL AEM as a Cloud Service]**.
 1. Sortera efter publicerat datum i fallande ordning.
 1. Klicka på den senaste versionen av Adobe Experience Manager as a Cloud Service SDK, Experience Manager Forms feature archive (AEM Forms-tillägg), formulärreferensmaterial eller Forms Designer.
+
+   >[!NOTE]
+   >
+   > Vi rekommenderar att du hämtar den senaste versionen av Experience Manager Forms-funktionsarkiv (AEM Forms-tillägg), formulärreferensmaterial eller Forms Designer för att få en sömlös kompatibilitet med Adobe Experience Manager as a Cloud Service SDK.
+
 1. Granska och godkänn slutanvändaravtalet. Välj **[!UICONTROL Download]** -knappen.
 
 ## Ställ in utvecklingsverktyg för AEM projekt {#setup-development-tools-for-AEM-projects}
@@ -136,6 +141,13 @@ Adobe Experience Manager Forms as a Cloud Service funktionsarkiv innehåller ver
    >[!NOTE]
    >
    > Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
+
+<!--**Q**: I've set up a Aem as a Cloud Service environment and added the Forms Add-On for a project. After the .far file addition, the bundles are not in the active state and are in installed state only due to the missing dependencies. How to make the bundles in the active state?
+**A**: To resolve the issue:
+1. Start the AEM and wait for it to start completely (all bundles up)
+1. Stop aem (ctrl + c). Place the forms far in the install folder.
+1. Restart AEM.-->
+
 
 ### Konfigurera användare och behörigheter {#configure-users-and-permissions}
 

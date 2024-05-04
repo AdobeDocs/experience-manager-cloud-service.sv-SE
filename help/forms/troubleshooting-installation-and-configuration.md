@@ -5,9 +5,9 @@ contentOwner: khsingh
 feature: Adaptive Forms, Troubleshooting
 role: User
 exl-id: 249ec8f2-4176-428a-bfcf-80b381ec7263
-source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
+source-git-commit: a19a3d81652cb17fcd6b11e6047d2ea697bf3041
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
@@ -53,3 +53,13 @@ If the profile exists and issues still persist, contact Adobe Support. -->
 Användarna kan inte köra byggpipeline. Pipelinen fungerar inte när den har körts ett tag.
 
 Du löser problemet genom att öppna Cloud Manager och välja **[!UICONTROL Update]** för din miljö och kör pipeline.
+
+
+## Paketen är inte i aktivt läge {#bundles-inactive-state}
+
+Så här löser du problemet:
+
+1. Starta AEM och vänta tills alla paket är klara.
+1. Stoppa AEM (Ctrl + C).
+1. Placera Forms `.far` i installationsmappen.
+1. Starta om AEM.

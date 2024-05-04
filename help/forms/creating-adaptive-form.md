@@ -5,9 +5,9 @@ feature: Adaptive Forms, Foundation Components
 role: User, Developer
 level: Beginner
 exl-id: 38ca5eea-793b-420b-ae60-3a0bd83caf00
-source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
+source-git-commit: 619cf91e3d1cc5504d8de0e70eb88e9ae7285af9
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1517'
 ht-degree: 0%
 
 ---
@@ -205,6 +205,16 @@ Du kan också ändra formulärmodellens egenskaper i den adaptiva formulärredig
 >
 > Du kan också spara ett tilläggsformulär som en mall. Mer information finns i [Skapa en mall med ett adaptivt formulär](/help/forms/template-editor.md#saving-an-adaptive-form-as-template-saving-adaptive-form-as-template).
 
+## Hur byter jag namn på ett AEM anpassat formulär? {#rename-an-AEM-Adaptive-Form}
+
+Så här byter du namn på ett anpassat formulär:
+
+1. Välj ett anpassningsbart formulär i AEM Forms användargränssnitt.
+1. Klicka på **Egenskaper** på den övre rälen.
+1. Ändra namnet på formuläret i dialogrutan **Titel** enligt bilden nedan.
+1. Klicka **Spara och stäng**.
+
+![Byta namn på ett AEM anpassat formulär](/help/forms/assets/change-af-name.png)
 
 ## Se även {#see-also}
 
