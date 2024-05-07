@@ -2,7 +2,7 @@
 title: Funktionstestning
 description: Lär dig mer om de tre olika typerna av funktionstestning som är inbyggda i den AEM as a Cloud Service driftsättningsprocessen för att säkerställa att koden är tillförlitlig och av hög kvalitet.
 exl-id: 7eb50225-e638-4c05-a755-4647a00d8357
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+source-git-commit: b85d43a05c8bb8a6438ab44bd184b7624456ab6a
 workflow-type: tm+mt
 source-wordcount: '1354'
 ht-degree: 0%
@@ -45,9 +45,9 @@ Följande diagram ger en detaljerad bild av tillgängliga kvalitetsgater och hur
 
 |                               | Enhetstester | Egen<br/> Funktionstester | Egen<br/> UI-tester | Kund<br/> Valideringar | Manuell<br/> Testning |
 |:------------------------------|:---------------------:|:-----------------------------------:|:-----------------------------------:|:-------------------------:|:-------------------:|
-| **Produktionspipeline** | Ja<br/>Blockera<br/> | Ja<br/>Blockera<br/>60 m timeout | Ja<br/>Blockera<br/>60 m timeout | Nej | Nej |
-| **Icke-produktionsförlopp** | Ja<br/>Blockera<br/> | Anmäl dig<br/>Blockera<br/>60 m timeout | Anmäl dig<br/>Blockera<br/>60 m timeout | Nej | Nej |
-| **Adobe Internal Validation** | Ja<br/>Blockera<br/> | Ja<br/>Blockera<br/>60 m timeout | Ja<br/>Blockera<br/>60 m timeout | Nej | Nej |
+| **Produktionspipeline** | Ja<br/>Blockera<br/> | Ja<br/>Blockera<br/>60 m timeout | Ja<br/>Blockera<br/>30 m timeout | Nej | Nej |
+| **Icke-produktionsförlopp** | Ja<br/>Blockera<br/> | Anmäl dig<br/>Blockera<br/>60 m timeout | Anmäl dig<br/>Blockera<br/>30 m timeout | Nej | Nej |
+| **Adobe Internal Validation** | Ja<br/>Blockera<br/> | Ja<br/>Blockera<br/>60 m timeout | Ja<br/>Blockera<br/>30 m timeout | Nej | Nej |
 | **Kundens CI/CD** | Ja | Ja | Ja | Ja | Ja |
 | **Lokal utvecklare** | Ja | Ja | Ja | Ja | Ja |
 
