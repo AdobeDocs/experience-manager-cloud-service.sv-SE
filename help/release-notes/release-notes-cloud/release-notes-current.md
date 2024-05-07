@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: ee16d3a0fe1fc93c215d31f7dea0e9c21e051350
+source-git-commit: 1a01a18008316c4d02553316020ec0c2a3f3cd57
 workflow-type: tm+mt
-source-wordcount: '1963'
+source-wordcount: '2655'
 ht-degree: 0%
 
 ---
@@ -210,6 +210,80 @@ När du felsöker kod i en [Rapid Development Environment (RDE)](/help/implement
 * strömma flera loggar parallellt
 
 Kontakta **<aemcs-rde-support@adobe.com>** för att testa och ge feedback.
+
+
+## [!DNL Experience Manager] Stödlinjer {#guides}
+
+
+### Möjlighet att översätta innehåll till flera språk med förkonfigurerade språkgrupper
+
+Nu kan du skapa språkgrupper och enkelt översätta innehåll till flera språk med hjälp av guiderna i Experience Manager. Med den här funktionen kan du ordna och hantera översättningar efter organisationens behov.
+
+Om du till exempel behöver översätta innehåll för vissa länder i Europa kan du skapa en språkgrupp för europeiska språk som engelska (EN), franska (FR), tyska (DE), spanska (ES) och italienska (IT).
+
+![översättningspanel](../assets/guides/translation-languages-2404.png)
+
+*Välj de språkgrupper eller språk som du vill översätta dina dokument.*
+
+>[!NOTE]
+>
+>Om målmappen för ett språk saknas eller målspråket är samma som källan, är den nedtonad och visar ett varningstecken.
+
+Som administratör kan du skapa språkgrupper och konfigurera dem till flera mappprofiler. Som författare kan du visa språkgrupperna som är konfigurerade för din mappprofil.
+
+
+Generellt sett förbättrar möjligheten att skapa språkgrupper effektiviteten och produktiviteten i översättningsprojekt, vilket i slutänden förbättrar lokaliseringsprocessen för flera språk.
+
+
+Lär dig hur [översätta dokument från webbredigeraren](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/user-guide/author-content/create-preview-topics/author-content-aem-guides/work-with-web-editor/translate-documents-web-editor)
+
+### Förbättrad upplevelse för att söka efter och filtrera filer i databasvyn
+
+Nu får du en bättre upplevelse när du filtrerar filer. Den förbättrade funktionen för att filtrera filer är ett bättre sätt att enkelt söka efter och navigera bland filer.
+
+![sökfiler i databasvyn](../assets/guides/repository-filter-search-2404.png)
+
+*Sök efter filerna som innehåller texten`general purpose.`*
+
+Få snabbare åtkomst till relevanta filer och ett mer intuitivt användargränssnitt, vilket gör sökningen smidigare och effektivare.
+
+![snabbsökningsfilter ](../assets/guides/repository-filter-search-quick.png)
+
+*Använd snabbfiltren för att söka efter DITA- och icke-DITA-filer.*
+
+Läs mer om **Filtersökning** i [Vänster panel](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/user-guide/author-content/create-preview-topics/author-content-aem-guides/work-with-web-editor/web-editor-features#id2051EA0M0HS) -avsnitt.
+
+### Förbättringar i datakällkopplingen
+
+Följande förbättringar har gjorts i datakällanslutningarna för version 2024.4.0:
+
+#### Anslut till datakällor för Salsify, Akeneo och Microsoft Azure DevOps Boards (ADO)
+
+Förutom de befintliga färdiga anslutningarna har Experience Manager Guides även kopplingar för datakällorna Salsify, Akeneo och Microsoft Azure DevOps Boards (ADO). Som administratör kan du hämta och installera dessa anslutningar. Konfigurera sedan de installerade anslutningarna.
+
+#### Kopiera och klistra in exempelfrågan för att skapa ett innehållsutdrag eller ämne
+
+Du kan enkelt kopiera och klistra in en exempeldatafråga i generatorn för att skapa ett innehållsavdrag eller ämne. Med den här funktionen behöver du inte komma ihåg syntaxen eller skapa en fråga manuellt. I stället för att skriva frågan manuellt kan du kopiera och klistra in en exempelfråga, redigera den och använda den för att hämta data efter dina behov.
+
+![Infoga innehållsfragment, dialogruta](../assets/guides/insert-content-snippet.png)
+
+*Kopiera och redigera en exempelfråga för att skapa innehållsfragmentet.*
+
+#### Anslut till JSON-datafiler med en filkoppling
+
+
+Som administratör kan du nu konfigurera en JSON-filkoppling så att JSON-datafiler används som datakälla. Använd anslutningen för att importera JSON-filerna från datorn eller Adobe Experience Manager Assets. Som författare kan du sedan skapa innehållsfragment eller ämnen med hjälp av generatorerna.
+
+Den här funktionen hjälper dig att använda data som lagras i dina JSON-filer och återanvända dem i olika fragment. Innehållet uppdateras också dynamiskt när du uppdaterar JSON-filerna.
+
+#### Konfigurera flera resurs-URL:er för en koppling för att skapa innehållskodfragment eller ämnen
+
+Som administratör kan du konfigurera flera resurs-URL:er för vissa anslutningar som Generic REST Client, Salsify, Akeneo och Microsoft Azure DevOps Boards (ADO).
+Som författare kan du sedan ansluta till datakällorna för att skapa innehållsfragment eller ämnen med generatorerna. Den här funktionen är användbar eftersom du inte behöver skapa en datakälla för varje URL. Det hjälper dig att snabbt hämta data från någon av resurserna för en viss datakälla i ett enda innehållskuvert eller ämne. Visa mer information om datakällanslutningar och hur [konfigurera en datakällanslutning från användargränssnittet](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/install-guide/cs-ig/web-editor-configs-cs/conf-data-source-connector-tools). Lär dig hur [använda data från datakällan](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/user-guide/author-content/create-preview-topics/author-content-aem-guides/work-with-web-editor/web-editor-content-snippet).
+
+Mer information om de nya funktionerna och förbättringarna finns i [Nyheter i version 2024.04.0](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/release-notes/cloud-release-notes/2024-releases/2404-release/whats-new-2024-04-0).
+
+En lista över problem som har åtgärdats i den här versionen finns på [Åtgärdade problem i version 2024.4.0](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/release-notes/cloud-release-notes/2024-releases/2404-release/fixed-issues-2024-04-0).
 
 ## Cloud Manager {#cloud-manager}
 
