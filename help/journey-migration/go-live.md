@@ -2,9 +2,9 @@
 title: GoLive
 description: Lär dig hur du utför migreringen när koden och innehållet är molnklara
 exl-id: 10ec0b04-6836-4e26-9d4c-306cf743224e
-source-git-commit: 8baea95d57ce1e92e0e7083c161c9fee395fcb8e
+source-git-commit: 4a03e2fe3519fd9e0d8d646526ea6c9cc6637f52
 workflow-type: tm+mt
-source-wordcount: '1771'
+source-wordcount: '1239'
 ht-degree: 0%
 
 ---
@@ -113,54 +113,7 @@ Båda ovanstående poster identifieras och rapporteras i [Best Practice Analyzer
 
 ## GoLive Checklist {#Go-Live-Checklist}
 
-Granska den här listan över aktiviteter för att säkerställa att du utför en smidig och lyckad migrering.
-
-* Köra en produktionsprocess från början till slut med funktions- och gränssnittstestning för att säkerställa en **alltid aktuell** AEM produktupplevelse. Se följande resurser.
-   * [Uppdateringar av AEM](/help/implementing/deploying/aem-version-updates.md)
-   * [Anpassad funktionstestning](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing)
-   * [UI-testning](/help/implementing/cloud-manager/ui-testing.md)
-* Migrera innehåll till produktion och se till att det finns en relevant delmängd tillgänglig på testningen.
-   * DevOps bästa praxis för AEM innebär att koden går från utveckling till produktionsmiljö medan innehållet rör sig från produktionsmiljöer.
-* Schemalägg en frysperiod för kod och innehåll.
-   * Se även avsnittet [Tidslinjer för Kod- och Content Freeze för migrering](#code-content-freeze)
-* Utför den slutliga innehållsuppsättningen.
-* Validera dispatcherkonfigurationer.
-   * Använd en lokal dispatchervaliderare som gör det lättare att konfigurera, validera och simulera avsändaren lokalt
-      * [Konfigurera de lokala dispatcherverktygen.](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html#prerequisites)
-   * Granska konfigurationen av det virtuella värdsystemet noggrant.
-      * Den enklaste (och standardlösningen) är att inkludera `ServerAlias *` i din virtuella värdfil i `/dispatcher/src/conf.d/available_vhostsfolder`.
-         * Detta gör att värdaliasen som används av produktfunktionstester, invalidering av dispatchercache och kloner kan fungera.
-      * Om `ServerAlias *` är inte acceptabelt, åtminstone följande `ServerAlias` poster måste tillåtas utöver dina anpassade domäner:
-         * `localhost`
-         * `*.local`
-         * `publish*.adobeaemcloud.net`
-         * `publish*.adobeaemcloud.com`
-* Konfigurera CDN, SSL och DNS.
-   * Om du använder ditt eget CDN anger du en supportanmälan för att konfigurera lämplig routning.
-      * Se avsnittet [Customer CDN points to AEM Managed CDN](/help/implementing/dispatcher/cdn.md#point-to-point-cdn) i CDN-dokumentationen för mer information.
-      * Konfigurera SSL och DNS enligt dokumentationen från CDN-leverantören.
-   * Om du inte använder ytterligare ett CDN hanterar du SSL och DNS enligt följande dokumentation:
-      * Hantera SSL-certifikat
-         * [Introduktion till hantering av SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
-         * [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md)
-      * Hantera anpassade domännamn (DNS)
-         * För att vara säker på att DNS-rensningen inte kommer att orsaka oväntade problem är det bäst att skapa en testunderdomän för att ansluta din produktionsinstans till innan du publicerar och göra en omgång av UAT-testning. Om din domän är example.com kan du skapa en underdomän test.example.com och använda den i produktionen. Under UAT-testningen av domänen ska du söka efter saker som rätt länkomdirigering, cachelagring och dispatcherkonfigurationer.
-         * [Introduktion till anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
-         * [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
-         * [Hantera eget domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md)
-   * Kom ihåg att validera TTL-inställningen för din DNS-post.
-      * TTL är den tid som en DNS-post finns kvar i ett cacheminne innan servern tillfrågas om en uppdatering.
-      * Om du har en mycket hög TTL tar det längre tid att sprida uppdateringar till DNS-posten.
-* Kör prestanda- och säkerhetstester som uppfyller dina affärskrav och mål.
-   * Utför tester på scenmiljön.  Den har samma storlek som produktionen.
-   * Utvecklingsmiljöer har inte samma storlek som fas och produktion.
-* Klipp ut och se till att den faktiska publiceringen utförs utan någon ny driftsättning eller uppdatering av innehållet.
-* Skapa meddelandeprofiler för Admin Console. Se [Meddelandeprofiler](/help/journey-onboarding/notification-profiles.md)
-* Överväg att konfigurera trafikfilterregler för att styra vilken trafik som inte ska tillåtas på webbplatsen.
-   * Trafikfilterregler för hastighetsbegränsning kan vara ett effektivt verktyg mot DDoS-attacker. En särskild kategori av trafikfilterregler, som kallas WAF-regler, kräver en separat licens.
-   * Se dokumentationen för några [föreslagna startregler](/help/security/traffic-filter-rules-including-waf.md#recommended-starter-rules).
-
-Du kan alltid referera till listan om du behöver kalibrera om dina uppgifter när du utför migreringen.
+Mer information finns i [GoLive Checklist](/help/journey-onboarding/go-live-checklist.md) dokumentation.
 
 ## What&#39;s Next {#what-is-next}
 
