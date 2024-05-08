@@ -3,7 +3,7 @@ title: Konfigurera CDN-felsidor
 description: Lär dig hur du åsidosätter standardfelsidan genom att lagra statiska filer i värdbaserat lagringsutrymme som Amazon S3 eller Azure Blob Storage, och referera till dem i en konfigurationsfil som distribueras med Cloud Manager Configuration Pipeline.
 feature: Dispatcher
 exl-id: 1ecc374c-b8ee-41f5-a565-5b36445d3c7c
-source-git-commit: 69ffcccae150a5e49c6344973890733f3e5b74ae
+source-git-commit: 395e2faa6cd2a3430ce00208a4d904fe8e0c2333
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 0%
@@ -46,7 +46,7 @@ version: "1"
 metadata:
   envTypes: ["dev"]
 data:
-  experimental_errorPages:
+  errorPages:
     spa:
       title: the error page
       icoUrl: https://www.example.com/error.ico
