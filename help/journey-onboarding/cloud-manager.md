@@ -3,9 +3,9 @@ title: Access Cloud Manager
 description: Lär dig hur du får åtkomst till Cloud Manager så att du kan konfigurera dina projektresurser.
 role: Admin, User, Developer
 exl-id: c9476ac9-8318-493e-a48d-94ff5a6433a7
-source-git-commit: 5c9dbaa25f0142afdae8b09dc18d1e1aaaf4c1fb
+source-git-commit: 0e0337f6e14aa2f5b616ebc0a4b3c95089637369
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1040'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ När du har läst det här dokumentet bör du förstå följande:
 
 ## Cloud Manager {#cloud-manager}
 
-Cloud Manager är en viktig komponent i AEM as a Cloud Service och fungerar som en enda startpunkt för ditt team. Den stöder kunder med företagsutvecklingsmiljöer med specialbyggda CI/CD-ledningar, som är utrustade för att säkerställa grundlig testning och högsta kodkvalitet för att leverera enastående upplevelser. Cloud Manager innehåller allt som krävs för att komma igång på ett självbetjäningssätt, inklusive möjligheten att skapa molnresurser och miljöer.
+Cloud Manager är en viktig komponent i AEM as a Cloud Service och fungerar som en enda startpunkt för ditt team. Den stöder kunder med företagsutvecklingsmiljöer med specialbyggda CI/CD-ledningar som är utrustade för grundlig testning och högsta kodkvalitet för att leverera enastående upplevelser. Cloud Manager innehåller allt som krävs för att komma igång på ett självbetjäningssätt, inklusive möjligheten att skapa molnresurser och miljöer.
 
 Vanligtvis är en teammedlem tilldelad till **Företagsägare** produktprofilen ansvarar för att lägga till molnresurser som program och miljöer. Den här personen förstår affärsbehoven och vem som slutför den ursprungliga installationen av Cloud Manager.
 
@@ -39,11 +39,11 @@ Före de gruppmedlemmar som du tilldelade **Företagsägare** kan komma åt moln
 
 1. Se till att du som systemadministratör har **Företagsägare** tilldelad roll.
 
-   * Återgå till föregående steg på denna resa. [Tilldela teammedlemmar till Cloud Manager-produktprofiler,](assign-profiles-cloud-manager.md) för mer information om hur du tilldelar **Företagsägare** till systemadministratören.
+   * Återgå till föregående steg på denna resa. [Tilldela teammedlemmar till Cloud Manager-produktprofiler,](assign-profiles-cloud-manager.md) om du vill ha mer information om hur du tilldelar **Företagsägare** till systemadministratören.
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och presenteras med den normala landningssidan.
 
-Genom att logga in som systemadministratör med **Företagsägare** roll, du initierar Cloud Manager för användning av andra användare med **Företagsägare** roll. Du får ingen bekräftelse eller något meddelande. Det räcker att bara logga in.
+Genom att logga in som systemadministratör med **Företagsägare** du initiera Cloud Manager för användning av andra användare med **Företagsägare** roll. Du får ingen bekräftelse eller något meddelande. Det räcker att bara logga in.
 
 Tills du loggar in på Cloud Manager som systemadministratör med **Företagsägare** roll, andra användare med **Företagsägare** kan inte skapa program i Cloud Manager. Den här regeln gäller även om de har tilldelats rätt roller.
 
@@ -51,8 +51,8 @@ Tills du loggar in på Cloud Manager som systemadministratör med **Företagsäg
 
 Användare med **Företagsägare** rollen får ett välkomstmeddelande med en länk för att komma igång. Följ stegen nedan för att navigera till Cloud Manager med det här välkomstmeddelandet.
 
-1. Klicka på **Kom igång**, vilket visas i figuren nedan.
-   ![E-postexempel](/help/journey-onboarding/assets/get-started-email.png)
+1. I ditt välkomstmeddelande klickar du på **Kom igång**, vilket visas i figuren nedan.
+   ![Exempel på e-post](/help/journey-onboarding/assets/get-started-email.png)
 
 1. Navigera till Cloud Managers **Program och produkter** sida.
 
@@ -109,8 +109,6 @@ Om det finns program i organisationen och du är systemadministratör visas land
 När du har loggat in i Cloud Manager kan du verifiera att du har tilldelats **Företagsägare** produktprofil.
 
 1. Välj din profil längst upp till höger i fönstret.
-
-   ![Användarprofil](/help/journey-onboarding/assets/setup-resources5.png)
 
 1. Om du vill visa rollerna som tilldelats din användare väljer du **Användarroller**.
 
