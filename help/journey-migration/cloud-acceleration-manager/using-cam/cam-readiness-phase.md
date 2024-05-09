@@ -2,16 +2,16 @@
 title: Beredningsfas i molnaccelerationshanteraren
 description: Den här sidan innehåller en översikt över beredskapsfasen i Cloud Acceleration Manager.
 exl-id: 2583985b-0358-433c-9d31-38e2c60dc3dc
-source-git-commit: f99395870d076d47ef53b01c9fc6579a9f8788a2
+source-git-commit: 0c56cfdd2c18d3bc77edafdbda3f99fbc43f12cf
 workflow-type: tm+mt
-source-wordcount: '984'
-ht-degree: 3%
+source-wordcount: '1045'
+ht-degree: 2%
 
 ---
 
 # Beredningsfas i molnaccelerationshanteraren {#readiness-phase-cam}
 
-När du har skapat ett projekt i Cloud Acceleration Manager kan du nu starta utvärderingen av din nuvarande Adobe Experience Manager-implementering (AEM) i beredskapsfasen.
+När du har skapat ett projekt i Cloud Acceleration Manager (CAM) kan du nu starta utvärderingen av din nuvarande Adobe Experience Manager-implementering (AEM) i beredskapsfasen.
 
 Beredskapsfasen omfattar:
 
@@ -33,6 +33,12 @@ Följ stegen nedan för att navigera till beredskapsfasen:
 
 ## Använda analyskort för metodtips {#best-practices-analysis}
 
+>[!CONTEXTUALHELP]
+>id="aemcloud_cam_bpa"
+>title="Analysrapport för bästa praxis"
+>abstract="BPA-rapporten kan laddas upp till CAM för att ge en analys av den med avseende på migrering till AEM as a Cloud Service."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/using-best-practices-analyzer" text="Använda Best Practices Analyzer"
+
 1. Klicka **Granska** från **Best Practices Analysis** kort.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/readiness-2.png)
@@ -42,26 +48,24 @@ Följ stegen nedan för att navigera till beredskapsfasen:
    >[!NOTE]
    >För att undvika att affärskritiska instanser påverkas rekommenderar Adobe att du kör BPA i en redigeringsmiljö. Miljön bör vara så nära produktionsmiljön som möjligt när det gäller anpassningar, konfigurationer, innehåll och användarapplikationer. Alternativt kan det köras på en klon av produktionsredigeringsmiljön.
 
-   1. Navigera till [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) portalen och hämta Best Practices Analyzer som en zip-fil.
+   1. Navigera till [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=best*) portalen och hämta Best Practices Analyzer som en zip-fil.
 
       >[!NOTE]
       >Granska [Använda Best Practices Analyzer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/using-best-practices-analyzer.html#imp-considerations) om du vill lära dig hur du kör BPA.
 
-   1. Exportera rapporten i CSV-format
+1. Klicka på **Hämta överföringsnyckel** så att du kan hämta nyckeln som används för att konfigurera systemet så att BPA-rapporter automatiskt överförs direkt till CAM.
 
-1. Klicka **Överför ny rapport** så att du kan överföra BPA-rapport i CAM.
-
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/readiness-3.png)
+   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/readiness-3b.png)
 
    >[!IMPORTANT]
-   >Rapporten kan inte överföras om du är i webbläsarens Incognito-läge.
+   >Rapporten kan fortfarande överföras manuellt, men med Överföringsnyckel effektiviseras åtgärden. Observera att rapporten inte kan överföras manuellt om du är i webbläsarens Incognito-läge.
 
-1. När du har överfört en ny rapport kan du se rapporten Best Practices Analysis.
+1. När en ny rapport har överförts kan du se rapporten Best Practices Analysis i CAM.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-bpareport.png)
 
    >[!NOTE]
-   >Om flera rapporter överförs är rapporten som visas i detalj alltid den som har det senaste skapandedatumet (inte överföringsdatumet).
+   >Om flera olika rapporter överförs är rapporten som visas i detalj alltid den som har det senaste skapandedatumet (inte överföringsdatumet).
 
 1. Granska och utforska kontrollpanelen Best Practices Analysis i CAM. Se [Analysrapport om metodtips för granskning](#analysis-report) för mer information.
 
@@ -74,9 +78,9 @@ Du kan välja alternativet för förhandsgranskning i Cloud Acceleration Manager
 
 Följ stegen nedan:
 
-1. Klicka på **Förhandsgranska utskrift** -ikon.
+1. Klicka på **Förhandsgranska utskrift** åtgärd.
 
-   ![bild](/help/journey-migration/best-practices-analyzer/assets/bpa-printpreview1.png)
+   ![bild](/help/journey-migration/best-practices-analyzer/assets/bpa-printpreview1b.png)
 
 1. Klicka på den nya fliken med rapporten i en förhandsgranskning som kan skrivas ut **Skriv ut** för att skriva ut rapporten till PDF.
 
@@ -100,15 +104,11 @@ Följ stegen nedan för att visa rapporter från trendlinjealternativet:
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view1a.png)
 
-1. Klicka **...**.
+1. Från **Visa** listruta, klicka **Trendlinjerapport**, vilket visas i figuren nedan.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view1.png)
+   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view1b.png)
 
-1. I listrutan klickar du på **Visa trendlinje**, vilket visas i figuren nedan.
-
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view2.png)
-
-1. Klicka **Visa trendlinje** öppnar rapportens trendlinjevy.
+1. Klicka **Trendlinjerapport** öppnar rapportens trendlinjevy.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view3a.png)
 
@@ -208,7 +208,7 @@ Du kan granska följande information på den här fliken:
 
 1. Klicka på i listrutan **Visa trendlinje**, vilket visas i figuren nedan.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view2.png)
+   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view1b.png)
 
 1. Klicka på ikonen Ta bort på **Trendlinjerapport** skärm.
 

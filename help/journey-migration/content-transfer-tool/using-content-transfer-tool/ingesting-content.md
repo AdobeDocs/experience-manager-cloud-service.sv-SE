@@ -2,9 +2,9 @@
 title: Infoga innehåll i Cloud Service
 description: Lär dig hur du använder Cloud Acceleration Manager för att importera innehåll från din migreringsuppsättning till en instans av en Cloud Service.
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: 727fbc49657de752ac6daeb38b5a9d7aba331a5c
+source-git-commit: 6372277adfac0700d80a3e6c013f419892822e55
 workflow-type: tm+mt
-source-wordcount: '2876'
+source-wordcount: '2905'
 ht-degree: 1%
 
 ---
@@ -215,6 +215,8 @@ Bästa tillvägagångssätt visar att om en **Ej svep** Tillförsel måste utfö
 Nodegenskapsvärden som lagras i MongoDB får inte överskrida 16 MB. Om ett nodvärde överskrider den storlek som stöds misslyckas importen och loggen innehåller en `BSONObjectTooLarge` fel och ange vilken nod som överskrider maxgränsen. Detta är en MongoDB-begränsning.
 
 Se `Node property value in MongoDB` anteckning i [Krav för verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/prerequisites-content-transfer-tool.md) om du vill ha mer information och en länk till ett ekverktyg som kan hjälpa dig att hitta alla stora noder. När alla noder med stora storlekar har åtgärdats kör du extraheringen och intaget igen.
+
+Du kan undvika den här begränsningen genom att köra [Best Practices Analyzer](/help/journey-migration/best-practices-analyzer/using-best-practices-analyzer.md) AEM källinstansen och granska resultaten, särskilt [&quot;Databasstruktur som inte stöds&quot; (URS)](https://experienceleague.adobe.com/en/docs/experience-manager-pattern-detection/table-of-contents/urs) mönster.
 
 ### Inmatningen har avbrutits {#ingestion-rescinded}
 
