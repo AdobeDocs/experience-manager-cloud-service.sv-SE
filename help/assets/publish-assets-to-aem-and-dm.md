@@ -2,7 +2,7 @@
 title: Snabbpublicering till AEM och Dynamic Media
 description: Med snabbpublicering i resursvyn kan du publicera resurser till AEM och dynamiska medier samtidigt eller separat. Du kan välja resurser och mappar och välja att publicera till Dynamic Media eller AEM.
 exl-id: 147c1c35-0d81-4458-b4ed-7541d2b0dd54
-source-git-commit: 0891d58e10e8be746c0be5f55d554174567fcd64
+source-git-commit: a9a94e948ad7d038f28a046c950f2158871ddbb3
 workflow-type: tm+mt
 source-wordcount: '1185'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Du kan publicera resurser till AEM och Dynamic Media medan du överför resurser
 Så här publicerar du resurser under överföring till en mapp med publiceringsläget för Dynamic Media inställt på **Vid aktivering**:
 
 1. Klicka **Lägg till resurser** > **Bläddra** > **Bläddra bland filer** för att navigera till rätt mapp för att överföra resurser. The **Publiceringsalternativ** visas **DM-publiceringsläge** as **Vid aktivering**.
-   ![Överför bild vid aktivering](/help/assets/assets/upload-upon-activation.png)
+   ![Överför bild vid aktivering](/help/assets/assets/upload-upon-activation1.png)
 2. Välj **Publicera till AEM och Dynamic Media** och klicka **Överför**. Materialet publiceras samtidigt till AEM och Dynamic Media. Information om den uppdaterade publiceringsstatusen för dessa resurser finns i [Kontrollera publiceringsstatus](#check-publish-status).
 
 ### Dynamic Media publiceringsläge inställt på Omedelbar {#dynamic-media-publish-mode-set-to-immediate}
