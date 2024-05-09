@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: User, Admin, Architect
 feature: Asset Management,Multi Site Manager
 exl-id: a71aebdf-8e46-4c2d-8960-d188b14aaae9
-source-git-commit: 9e0aefa096a493df22860d0194a0a76f3eaf2390
+source-git-commit: f7f60036088a2332644ce87f4a1be9bae3af1c5e
 workflow-type: tm+mt
-source-wordcount: '3287'
+source-wordcount: '3294'
 ht-degree: 9%
 
 ---
@@ -386,3 +386,4 @@ Följande begränsningar gäller för MSM för [!DNL Assets].
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
 * [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md)
+* [Publicera resurser till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)

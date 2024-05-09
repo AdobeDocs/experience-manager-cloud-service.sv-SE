@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Asset Insights,Asset Reports
 role: User,Leader
 exl-id: e268453b-e7c0-4aa4-bd29-2686edb5f99a
-source-git-commit: 80ac947976bab2b0bfedb4ff9d5dd4634de6b4fc
+source-git-commit: f7f60036088a2332644ce87f4a1be9bae3af1c5e
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 4%
+source-wordcount: '846'
+ht-degree: 3%
 
 ---
 
@@ -45,10 +45,10 @@ Du kan visa bakgrundsmusik för resursinsikter från metadatasidan.
 
 1. Granska **[!UICONTROL Usage Statistics]** för att ta reda på vilka enheter resursen ingick i och vilka kreativa lösningar som nyligen använde den. Ju högre användning, desto större chans att resursen är populär bland användarna. Användningsdata visas under följande rubriker:
 
-   * **[!UICONTROL Asset]**: Antalet gånger som tillgången ingick i en samling eller sammansatt tillgång.
-   * **[!UICONTROL Web & Mobile]**: Antalet gånger som resursen ingick i webbplatser och appar.
-   * **[!UICONTROL Social]**: Antalet gånger som tillgången användes i andra lösningar, t.ex. en [!DNL Adobe Campaign].
-   * **[!UICONTROL Email]**: Antalet gånger som resursen användes i e-postkampanjer.
+   * **[!UICONTROL Asset]**: Antal gånger som tillgången ingick i en samling eller sammansatt tillgång.
+   * **[!UICONTROL Web & Mobile]**: Antal gånger som resursen ingick i webbplatser och appar.
+   * **[!UICONTROL Social]**: Antal gånger som resursen användes i andra lösningar, till exempel en [!DNL Adobe Campaign].
+   * **[!UICONTROL Email]**: Antal gånger som resursen användes i e-postkampanjer.
 
    ![användningsstatistik](assets/usage_statistics.png)
 
@@ -104,15 +104,15 @@ Assets Insights fetches usage data for assets from Adobe Analytics report suites
 
 1. Klicka på **[!UICONTROL Insights Configuration]** kort.
 
-1. Om du vill ha åtkomstinformation för webbtjänsten Analytics går du till **[!UICONTROL Analytics]** > **[!UICONTROL Admin]** > **[!UICONTROL Admin Tools]** > **[!UICONTROL Company Settings]** > **[!UICONTROL Web Services]** och kopiera **[!UICONTROL Shared Secret]** nyckel.
+1. Om du vill ha åtkomstinformation för webbtjänsten Analytics går du till **[!UICONTROL Analytics]** > **[!UICONTROL Admin]** > **[!UICONTROL Admin Tools]** > **[!UICONTROL Company Settings]** > **[!UICONTROL Web Services]** och kopiera **[!UICONTROL Shared Secret]** -tangenten.
 
-   I guiden väljer du **[!UICONTROL Data Center]** och ange visningsnamnet för **[!UICONTROL Company]**, webbtjänster **[!UICONTROL Username]** och klistra in **[!UICONTROL Shared Secret]** nyckel.
+   I guiden väljer du **[!UICONTROL Data Center]** och ange visningsnamnet för **[!UICONTROL Company]**, webbtjänster **[!UICONTROL Username]** och klistra in **[!UICONTROL Shared Secret]** -tangenten.
 
    Klicka på **[!UICONTROL Authenticate]**.
 
    ![Konfigurera Adobe Analytics for Assets Insights i [!DNL Experience Manager]](assets/analytics-insight-config.png)
 
-   *Bild: Konfigurera Adobe Analytics for Assets Insights i[!DNL Experience Manager]*
+   *Bild: Konfigurera Adobe Analytics för Assets Insights i[!DNL Experience Manager]*
 
 1. När autentiseringen är klar visas rapportsviterna i listrutan. Välj Adobe Analytics **[!UICONTROL Report Suite]** där ni vill att Assets Insights ska hämta data. Klicka på **[!UICONTROL Add]**.
 
@@ -122,7 +122,7 @@ Mer information finns i [Adobe Analytics Web Services](https://experienceleague.
 
 ### Sidspårare {#page-tracker}
 
-När du har konfigurerat ditt Adobe Analytics-konto genereras sidspårningskoden åt dig. Aktivera resursinsikter för att spåra [!DNL Experience Manager] resurser som används på tredjepartswebbplatser, inkluderar sidspårningskoden i webbplatskoden. Använd verktyget Sidspårare i Assets för att generera sidspårningskod. <!--  For more information on how to include your Page Tracker code in third-party web pages, see [Using Page Tracker and Embed code in web pages](/help/assets/use-page-tracker.md). -->
+När du har konfigurerat ditt Adobe Analytics-konto genereras sidspårningskoden åt dig. Så här aktiverar du Assets Insights för att spåra [!DNL Experience Manager] resurser som används på tredjepartswebbplatser, inkluderar sidspårningskoden i webbplatskoden. Använd verktyget Sidspårare i Assets för att generera sidspårningskod. <!--  For more information on how to include your Page Tracker code in third-party web pages, see [Using Page Tracker and Embed code in web pages](/help/assets/use-page-tracker.md). -->
 
 1. I [!DNL Experience Manager], klicka **[!UICONTROL Tools]** > **[!UICONTROL Assets]**.
 
@@ -184,14 +184,15 @@ Using the demo package, you can enable Adobe Assets Insights to capture data fro
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
+* [Publicera resurser till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)

@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Upload,Asset Processing,Publishing,Asset Compute Microservices,Workflow
 role: User,Admin
 exl-id: 4cff355e-d12c-44c7-b519-4cc37f49e396
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: f7f60036088a2332644ce87f4a1be9bae3af1c5e
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 2%
+source-wordcount: '735'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Tilläggsprogram för innehållsautomatisering integrerar [!DNL Adobe Experience Manager Assets] som [!DNL Cloud Service] och [!DNL Adobe Creative Cloud] API:er för kreativ bearbetning av resurser i stor skala. [!DNL Experience Manager] använder molnbaserad [tillgångsmikrotjänster](/help/assets/asset-microservices-overview.md) för att använda [!DNL Adobe Creative Cloud] funktioner och automatisera skapandet av resurser och mediehantering.
 
-Så här redigerar du resurser i [!DNL Adobe Photoshop] och [!DNL Adobe Lightroom]behöver du inte hämta resurser från [!DNL Experience Manager Assets], redigera och ladda upp dem igen. Du skapar och konfigurerar en bearbetningsprofil i [!DNL Experience Manager]använder du profilen för en mapp och överför resurserna till mappen. Dina överförda resurser bearbetas om baserat på bearbetningsprofilerna och du får variationer av dessa resurser. Den enhetliga och smidiga gruppbearbetningen sparar tid och ökar innehållets hastighet utan att man behöver ha superb kreativ kompetens. Utvecklarna och partnerna kan också utöka sina tillgångsmikrotjänster med direkt åtkomst till dessa API:er och inkludera anpassad logik.
+Redigera resurser i [!DNL Adobe Photoshop] och [!DNL Adobe Lightroom]behöver du inte hämta resurser från [!DNL Experience Manager Assets], redigera och ladda upp dem igen. Du skapar och konfigurerar en bearbetningsprofil i [!DNL Experience Manager]använder du profilen för en mapp och överför resurserna till mappen. Dina överförda resurser bearbetas om baserat på bearbetningsprofilerna och du får variationer av dessa resurser. Den enhetliga och smidiga gruppbearbetningen sparar tid och ökar innehållets hastighet utan att man behöver ha superb kreativ kompetens. Utvecklarna och partnerna kan också utöka sina tillgångsmikrotjänster med direkt åtkomst till dessa API:er och inkludera anpassad logik.
 
 Användare kan skapa bearbetningsprofiler för att automatisera följande kreativa åtgärder för sina resurser:
 
@@ -24,31 +24,31 @@ Användare kan skapa bearbetningsprofiler för att automatisera följande kreati
 
 * **Autoupprätt**: Använder artificiell intelligens för att analysera innehållet i bilden och korrigera skevade perspektiv i bilder. Om du till exempel vill skapa nivåhorisonter.
 
-   ![automatisk ton](/help/assets/assets/content-automation-autotone.png)
+  ![automatisk ton](/help/assets/assets/content-automation-autotone.png)
 
-   *Bild: Automatisk toning och automatisk upprätning kan hjälpa till att förbättra skevade bilder.*
+  *Bild: Automatisk toning och automatisk upprätning kan hjälpa till att förbättra skevade bilder.*
 
 * **Lightroom-förinställningar**: Använder ett användardefinierat utseende på bilder för att få ett konsekvent utseende med anpassade förinställningar.
 
-   ![Lightroom-förinställning](/help/assets/assets/content-automation-lrpresets.png)
+  ![Lightroom-förinställning](/help/assets/assets/content-automation-lrpresets.png)
 
-   *Bild: Adobe Lightroom förinställning för att förbättra bildkvaliteten på ett konsekvent sätt för många bilder.*
+  *Bild: Adobe Lightroom förinställning förbättrar bildkvaliteten på ett konsekvent sätt för många bilder.*
 
 * **Bildurklipp**: Använder artificiell intelligens för att skapa markering runt utjämnade objekt och ta bort bakgrund med ett enda kommando.
 
-   ![Ta bort bakgrund och klippa ut en bild från ett foto](/help/assets/assets/content-automation-backgroundremove.png)
+  ![Ta bort bakgrund och klippa ut en bild från ett foto](/help/assets/assets/content-automation-backgroundremove.png)
 
-* **Bildmask**: Använder artificiell intelligens för att skapa en mask runt salivobjekt med ett enda kommando.
+* **Bildmask**: Använder artificiell intelligens för att skapa en mask runt utjämnade objekt med ett enda kommando.
 
-   ![Maskera en bild med hjälp av AI](/help/assets/assets/content-automation-mask.png)
+  ![Maskera en bild med hjälp av AI](/help/assets/assets/content-automation-mask.png)
 
-* **Photoshop Actions**: Använder en serie [!DNL Adobe Photoshop] uppgifter till en fil eller en grupp med filer.
+* **Photoshop Actions**: En serie [!DNL Adobe Photoshop] uppgifter till en fil eller en grupp med filer.
 
-   ![Photoshop-åtgärder](/help/assets/assets/content-automation-psactions.png)
+  ![Photoshop-åtgärder](/help/assets/assets/content-automation-psactions.png)
 
-* **Smart objektersättning**: Gör personalisering i stor skala genom att låta dig växla bilder samtidigt som du behåller alla effekter och justeringar som används i en PSD-fil.
+* **Smart objektersättning**: Utför personalisering i stor skala genom att du kan växla bilder samtidigt som du behåller alla effekter och justeringar som används i en PSD-fil.
 
-   ![Ersätta objekt smart](/help/assets/assets/content-automation-objectreplace.png)
+  ![Ersätta objekt smart](/help/assets/assets/content-automation-objectreplace.png)
 
 ## Aktivera innehållsautomatisering för AEM as a Cloud Service program {#enable-content-automation}
 
@@ -64,9 +64,9 @@ Så här aktiverar du tillägget för innehållsautomatisering för AEM as a Clo
 
 Om du behöver lägga till tillägget för innehållsautomatisering i ett befintligt AEM as a Cloud Service program i Cloud Manager:
 
-1. Klicka ... på programkortet.
+1. Klicka på ... på programkortet.
 
-1. Välj **[!UICONTROL Edit Program]** och sedan markera **[!UICONTROL Solutions & Add-ons]** -fliken.
+1. Välj **[!UICONTROL Edit Program]** och sedan **[!UICONTROL Solutions & Add-ons]** -fliken.
 
 1. Expandera **[!UICONTROL Assets]** och markera **[!UICONTROL Content Automation]**.
 1. Klicka på **[!UICONTROL Update]**.
@@ -78,7 +78,7 @@ Så här använder du bearbetningsprofiler för att automatiskt skapa variatione
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]**.
 
-1. Välj **[!UICONTROL Create]** och ange **[!UICONTROL Name]**.
+1. Välj **[!UICONTROL Create]** och ange en **[!UICONTROL Name]**.
 
 1. Välj **[!UICONTROL Creative]** anger du utdatamapp, väljer **[!UICONTROL Add New]** för att lägga till en kreativ konfiguration.
 
@@ -104,21 +104,21 @@ Om du vill bearbeta befintliga resurser markerar du resurserna och väljer **[!U
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
+* [Publicera resurser till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 >[!MORELIKETHIS]
 >
 >* [Konfigurera och använda tillgångsmikrotjänster via bearbetningsprofiler](/help/assets/asset-microservices-configure-and-use.md).
 >* [Integrera [!DNL Experience Manager] med [!DNL Creative Cloud]](/help/assets/aem-cc-integration-best-practices.md).
->* [Tillgångsinmatning och bearbetning med tillgångsmikrotjänster: En översikt](/help/assets/asset-microservices-overview.md).
-
+>* [Tillgångshantering och -hantering med tillgångsmikrotjänster: En översikt](/help/assets/asset-microservices-overview.md).

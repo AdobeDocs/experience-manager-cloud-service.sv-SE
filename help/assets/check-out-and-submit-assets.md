@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Asset Management
 role: User
 exl-id: adb94a31-d949-4f4a-89bc-44f1b4f67e14
-source-git-commit: 80ac947976bab2b0bfedb4ff9d5dd4634de6b4fc
+source-git-commit: f7f60036088a2332644ce87f4a1be9bae3af1c5e
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 5%
+source-wordcount: '462'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +29,7 @@ Den här funktionen förhindrar att andra användare åsidosätter ändringar so
 
 1. Från [!DNL Assets] väljer du den resurs du vill checka ut i användargränssnittet. Du kan också välja flera resurser att checka ut.
 
-1. Klicka på **[!UICONTROL Checkout]** i verktygsfältet. The **[!UICONTROL Checkout]** alternativ växlar till **[!UICONTROL Checkin]**.
+1. I verktygsfältet klickar du på **[!UICONTROL Checkout]**. The **[!UICONTROL Checkout]** alternativ växlar till **[!UICONTROL Checkin]**.
 Logga in som en annan användare om du vill kontrollera om andra användare kan redigera den utcheckade resursen. Ikonen ![låsikon för utcheckning](assets/do-not-localize/checkout_lock.png) visas på miniatyrbilden för den resurs som du har checkat ut.
 
    ![utcheckningsikon i kortvyn](assets/checkout-icon-card-view.png)
@@ -55,29 +55,29 @@ Administratörer kan checka in resurser som är utcheckade av andra användare.
 
    ![chlimage_1-476](assets/chlimage_1-476.png)
 
-1. Klicka på **[!UICONTROL Release Lock]** i verktygsfältet. Resursen checkas in igen och är tillgänglig för redigering för andra användare.
+1. I verktygsfältet klickar du på **[!UICONTROL Release Lock]**. Resursen checkas in igen och är tillgänglig för redigering för andra användare.
 
-## God praxis och begränsningar {#tips-limitations}
+## Bästa praxis och begränsningar {#tips-limitations}
 
 * Du kan ta bort en *mapp* som innehåller utcheckade resursfiler. Innan du tar bort en mapp kontrollerar du att inga digitala resurser är utcheckade av användarna.
 
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
+* [Publicera resurser till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 >[!MORELIKETHIS]
 >
 >* [Förstå in- och utcheckning [!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#how-app-works2)
->* [Videosjälvstudiekurs för att förstå hur du checkar in och checkar ut [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/collaboration/check-in-and-check-out.html)
-
+>* [Videosjälvstudiekurs för att förstå incheckning och utcheckning [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/collaboration/check-in-and-check-out.html)

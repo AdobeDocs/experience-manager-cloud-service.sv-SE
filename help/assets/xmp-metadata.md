@@ -1,18 +1,18 @@
 ---
-title: XMP-metadata
+title: XMP metadata
 description: Läs mer om metadatastandarden XMP (Extensible Metadata Platform) för metadatahantering. Det används av Experience Manager som ett standardiserat format för att skapa, bearbeta och utbyta metadata.
 contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: fd9af408-d2a3-4c7a-9423-c4b69166f873
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: f7f60036088a2332644ce87f4a1be9bae3af1c5e
 workflow-type: tm+mt
-source-wordcount: '1039'
-ht-degree: 17%
+source-wordcount: '1011'
+ht-degree: 13%
 
 ---
 
-# XMP-metadata {#xmp-metadata}
+# XMP metadata {#xmp-metadata}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -148,14 +148,15 @@ The metadata changes are propagated to the renditions renditions thumbnail.140.1
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
+* [Publicera resurser till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)

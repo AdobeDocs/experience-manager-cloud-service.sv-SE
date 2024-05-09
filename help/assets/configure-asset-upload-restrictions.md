@@ -2,16 +2,16 @@
 title: Konfigurera överföringsbegränsningar för resurser
 description: Konfigurera Adobe Experience Manager Assets för att begränsa vilken typ av resurser som användare kan överföra baserat på MIME-typen. Det förhindrar oavsiktliga överföringar av oönskade format och skadliga filer.
 exl-id: 094c31f3-f2e9-4b44-9995-c76fb78ca458
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: f7f60036088a2332644ce87f4a1be9bae3af1c5e
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 4%
+source-wordcount: '363'
+ht-degree: 0%
 
 ---
 
 # Konfigurera överföringsbegränsningar för resurser {#configure-asset-upload-restrictions}
 
-Du kan konfigurera Adobe Experience Manager Assets för att begränsa vilken typ av resurser som användare kan överföra baserat på MIME-typen.
+Du kan konfigurera Adobe Experience Manager Assets att begränsa vilken typ av resurser som användare kan överföra baserat på MIME-typen.
 
 >[!IMPORTANT]
 >
@@ -31,13 +31,13 @@ Konfigurera [!DNL Experience Manager] för att begränsa användare till att öv
 
 1. Klicka **[!UICONTROL Add]** för att definiera tillåtna MIME-typer.
 
-1. Ange MIME-typen i textrutan. Du kan klicka **[!UICONTROL Add]** igen för att ange fler tillåtna MIME-typer. Du kan också klicka ![ta bort ikon](assets/delete-icon.svg) om du vill ta bort en MIME-typ från listan.
+1. Ange MIME-typen i textrutan. Klicka **[!UICONTROL Add]** igen för att ange fler tillåtna MIME-typer. Du kan också klicka ![ta bort ikon](assets/delete-icon.svg) om du vill ta bort en MIME-typ från listan.
 
 1. Klicka på **[!UICONTROL Save]**.
 
 **Exempel 1: Tillåt överföring av alla bilder och PDF-filer till Experience Manager Assets**
 
-Om du vill tillåta överföring av bilder i alla format och PDF till Experience Manager Assets gör du följande inställningar:
+Om du vill tillåta överföring av bilder i alla format och PDF-filer till Experience Manager Assets gör du följande inställningar:
 
 ![Begränsningar för överföring av tillgångar](assets/asset-upload-restrictions.png)
 
@@ -60,14 +60,15 @@ Baserat på de inställningar som avbildas i bilden kan du överföra bilder i f
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
+* [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
+* [Publicera resurser till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)

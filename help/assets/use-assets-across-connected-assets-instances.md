@@ -1,20 +1,20 @@
 ---
-title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
+title: Använd anslutna resurser för att dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en fjärrdator [!DNL Adobe Experience Manager Assets] distribution när du skapar webbsidor på en annan [!DNL Adobe Experience Manager Sites] distribution.
 contentOwner: AK
 mini-toc-levels: 2
 feature: Asset Management,Connected Assets,Asset Distribution,User and Groups
 role: Admin,User,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: f7f60036088a2332644ce87f4a1be9bae3af1c5e
 workflow-type: tm+mt
-source-wordcount: '3756'
-ht-degree: 14%
+source-wordcount: '3729'
+ht-degree: 12%
 
 ---
 
 
-# Använd Connected Assets när du vill dela DAM-resurser i [!DNL Experience Manager Sites] {#use-connected-assets-to-share-dam-assets-in-aem-sites}
+# Använd anslutna resurser för att dela DAM-resurser i [!DNL Experience Manager Sites] {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -29,13 +29,13 @@ Funktionen för anslutna resurser har stöd för ovanstående användningsfall g
 >
 >Konfigurera bara anslutna resurser när du behöver använda de resurser som är tillgängliga på en fjärrdistribution av DAM på en separat webbplatsdistribution för att skapa webbsidor.
 
-## Översikt över Connected Assets {#overview-of-connected-assets}
+## Översikt över anslutna resurser {#overview-of-connected-assets}
 
 Vid redigering av sidor i [!UICONTROL Page Editor] som målmål kan författarna söka, bläddra bland och bädda in resurser från ett annat [!DNL Assets] driftsättning som fungerar som en källa till resurser. Administratörerna skapar en engångsintegrering av en distribution av [!DNL Experience Manager] med [!DNL Sites] med en annan driftsättning av [!DNL Experience Manager] med [!DNL Assets] funktioner. Du kan också använda Dynamic Media-bilder på webbplatsens webbsidor med hjälp av Anslutna resurser och Dynamic Media-funktioner, som smarta beskärnings- och bildförinställningar.
 
 För [!DNL Sites] författare är fjärrresurserna tillgängliga som skrivskyddade lokala resurser. Funktionen stöder smidig sökning och åtkomst till fjärrresurser i Site Editor. För andra användningsområden där det kan krävas att hela resursen är tillgänglig på platser bör du överväga att migrera resurserna satsvis i stället för att använda anslutna resurser.
 
-### Förutsättningar och distributioner som stöds {#prerequisites}
+### Förutsättningar och driftsättningar som stöds {#prerequisites}
 
 Innan du använder eller konfigurerar den här funktionen bör du kontrollera följande:
 
@@ -55,7 +55,7 @@ Författare söker efter bilder och följande typer av dokument i Content Finder
 * **Bildformat**: De format som [Bildkomponent](file-format-support.md#image-formats) stöder.
 * **Dokumentformat**: Se [dokumentformat som stöds](file-format-support.md#document-formats).
 
-### Användare och grupper som krävs {#users-and-groups-involved}
+### Användare och grupper {#users-and-groups-involved}
 
 De olika roller som är involverade i konfigureringen och funktionen och deras motsvarande användargrupper beskrivs nedan. Lokalt omfång används för de fall där en författare skapar en webbsida. Fjärromfång används för DAM-distributionen som är värd för de nödvändiga resurserna. The [!DNL Sites] författaren hämtar dessa fjärrresurser.
 
@@ -65,7 +65,7 @@ De olika roller som är involverade i konfigureringen och funktionen och deras m
 | DAM-användare | Lokalt | `Authors` | Används för att visa och duplicera de hämtade resurserna i `/content/DAM/connectedassets/`. |
 | [!DNL Sites] författare | Lokalt | <ul><li>`Authors` (med läsåtkomst på fjärr-DAM och författaråtkomst på lokal [!DNL Sites]) </li> <li>`dam-users` på lokal [!DNL Sites]</li></ul> | Slutanvändarna är [!DNL Sites] författare som använder den här integreringen för att förbättra innehållets hastighet. Författare kan söka efter och bläddra bland resurser i fjärr-DAM med [!UICONTROL Content Finder] och använda de bilder som behövs på lokala webbsidor. |
 | [!DNL Assets] administratör | Fjärr | [!DNL Experience Manager] `administrators` | Konfigurerar CORS (Cross-Origin Resource Sharing). |
-| DAM-användare | Fjärr | `Authors` | Författare roll på fjärrkontrollen [!DNL Experience Manager] distribution. Söker efter och bläddrar bland resurser i Connected Assets med hjälp av [!UICONTROL Content Finder]. |
+| DAM-användare | Fjärr | `Authors` | Författarroll på fjärrkontrollen [!DNL Experience Manager] distribution. Sök efter och bläddra bland resurser i anslutna resurser med hjälp av [!UICONTROL Content Finder]. |
 | DAM-distributör (teknisk användare) | Fjärr | <ul> <li> [!DNL Sites] `Authors`</li> <li> `connectedassets-assets-techaccts` </li> </ul> | Den här användaren som finns på fjärrdistributionen används av [!DNL Experience Manager] lokal server (inte [!DNL Sites] författarroll) för att hämta fjärrresurserna, för [!DNL Sites] författare. |
 | [!DNL Sites] teknisk användare | Lokalt | `connectedassets-sites-techaccts` | Tillåter [!DNL Assets] distribution för att söka efter referenser till resurser i [!DNL Sites] webbsidor. |
 
@@ -100,7 +100,7 @@ Konfigurera anslutna resurser och lokala [!DNL Sites] anslutning, följ dessa st
    1. A **[!UICONTROL Title]** av konfigurationen.
    1. **[!UICONTROL Remote DAM URL]** är URL:en för [!DNL Assets] plats i formatet `https://[assets_servername]:[port]`.
    1. Autentiseringsuppgifter för en DAM-distributör (teknisk användare).
-   1. I **[!UICONTROL Mount Point]** anger du lokala [!DNL Experience Manager] sökväg där [!DNL Experience Manager] hämtar resurserna. Till exempel, mappen `connectedassets`. Resurserna som hämtas från DAM lagras i den här mappen på [!DNL Sites] distribution.
+   1. I **[!UICONTROL Mount Point]** anger du lokala [!DNL Experience Manager] sökväg där [!DNL Experience Manager] hämtar resurserna. Till exempel: `connectedassets` mapp. Resurserna som hämtas från DAM lagras i den här mappen på [!DNL Sites] distribution.
    1. **[!UICONTROL Local Sites URL]** är platsen för [!DNL Sites] distribution. [!DNL Assets] för distribution används det här värdet för att behålla referenser till de digitala resurserna som hämtas av det här [!DNL Sites] distribution.
    1. Autentiseringsuppgifter [!DNL Sites] teknisk användare.
    1. Värdet för **[!UICONTROL Original Binary transfer optimization Threshold]** -fältet anger om de ursprungliga resurserna (inklusive återgivningarna) överförs synkront eller inte. Resurser med mindre filstorlek kan enkelt hämtas medan resurser med relativt större filstorlek är bäst synkroniserade asynkront. Värdet beror på dina nätverksfunktioner.
@@ -171,7 +171,7 @@ Konfigurera [!DNL Dynamic Media] på [!DNL Assets] och [!DNL Sites] distribution
 
 1. Aktivera [[!DNL Dynamic Media] stöd i Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html#dynamic-media). Den här funktionen aktiverar standardinställningen [Bildkomponent](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html) att visa [!DNL Dynamic Media] bilder när [!DNL Dynamic Media] bilder används av författare på webbsidor på lokala [!DNL Sites] distribution.
 
-## Använda fjärresurser {#use-remote-assets}
+## Använd fjärrresurser {#use-remote-assets}
 
 Webbplatsens författare använder Content Finder för att ansluta till DAM-distributionen. Författarna kan bläddra bland, söka efter och dra fjärresurserna till en komponent. Om du vill autentisera till fjärr-DAM ska du se till att de autentiseringsuppgifter som administratören har angett är tillgängliga.
 
@@ -201,7 +201,7 @@ Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur
 
    ![Alternativ för att filtrera dokumenttyper och bilder vid sökning efter resurser på DAM-fjärrdistribution](assets/filetypes_filter_connected_assets.png)
 
-   *Bild: Alternativ för att filtrera dokumenttyper och bilder vid sökning efter resurser på DAM-fjärrdistribution.*
+   *Bild: Alternativ för att filtrera dokumenttyper och bilder när du söker efter resurser på fjärr-DAM.*
 
 1. En webbplatsförfattare får ett meddelande om en resurs original hämtas asynkront och om någon hämtningsåtgärd misslyckas. Under utvecklingen eller till och med efter redigeringen kan författarna se detaljerad information om hämtningsuppgifter och fel i [asynkrona jobb](/help/operations/asynchronous-jobs.md) användargränssnitt.
 
@@ -343,7 +343,7 @@ Du kan lägga till resurser i [!DNL Sites] distribution, men dessa resurser kan 
 
 * Användare kan söka efter fjärrresurser och dra dem på den lokala sidan när de redigerar. Inga andra funktioner stöds.
 * Tidsgränsen för hämtning är 5 sekunder. Författare kan ha problem med att hämta resurser, till exempel om det råder nätverksproblem. Författare kan försöka igen genom att dra fjärrresursen från [!UICONTROL Content Finder] till [!UICONTROL Page Editor].
-* Enkla redigeringar som är icke-destruktiva och redigering som stöds via `Image`-komponenten kan tillämpas på hämtade resurser. Resurserna är skrivskyddade.
+* Enkla redigeringar som inte är förstörande och redigeringen stöds via `Image` -komponent, kan utföras på hämtade resurser. Resurserna är skrivskyddade.
 * Det enda sättet att hämta resursen på nytt är att dra den till en sida. Det finns inget API-stöd eller andra metoder för att hämta om en resurs för att uppdatera den.
 * Om tillgångarna tas ur bruk från DAM används de fortfarande [!DNL Sites] sidor.
 * Fjärrreferensposterna för en resurs hämtas asynkront. Referenserna och det totala antalet är inte i realtid och det kan finnas vissa skillnader om en [!DNL Sites] författaren använder resursen medan en DAM-användare visar referensen. DAM-användare kan uppdatera sidan och försöka igen om några minuter för att få fram det totala antalet.
@@ -367,13 +367,14 @@ Följ de här stegen för att felsöka vanliga fel:
 **Se även**
 
 * [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser för HTTP API](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
-* [Materialrapporter](asset-reports.md)
+* [Sök resurser](search-assets.md)
+* [Resursrapporter](asset-reports.md)
 * [Metadata-scheman](metadata-schemas.md)
 * [Hämta resurser](download-assets-from-aem.md)
 * [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
+* [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
+* [Publicera resurser till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)

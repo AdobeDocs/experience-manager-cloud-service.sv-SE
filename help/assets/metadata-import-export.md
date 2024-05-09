@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: fb70a068-3ba3-4459-952d-79155d286c42
-source-git-commit: 52a6cb359bfe0d76bdceb3f517e92d78994872c8
+source-git-commit: f7f60036088a2332644ce87f4a1be9bae3af1c5e
 workflow-type: tm+mt
-source-wordcount: '710'
+source-wordcount: '717'
 ht-degree: 4%
 
 ---
@@ -94,6 +94,7 @@ Några exempel på användningsområden för att exportera flera metadata samtid
 * [Hantera metadata](manage-metadata.md)
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
+* [Publicera resurser till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 >[!MORELIKETHIS]
 >
