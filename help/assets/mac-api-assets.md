@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Assets HTTP API,APIs
 role: Developer,Architect,Admin
 exl-id: a3b7374d-f24b-4d6f-b6db-b9c9c962bb8d
-source-git-commit: 674db680f46a4fd4772cb10fe7cb396652354dfe
+source-git-commit: 835aab546896195c3a2a3355b35b81f2cd385676
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ The [!DNL Assets] HTTP-API:t gör det möjligt att skapa, läsa, uppdatera och t
 
 >[!NOTE]
 >
->The [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) finns också.
+> Det finns en moderniserad OpenAPI-implementering av innehållets fragment Management API. Fullständig dokumentation finns på [API för hantering av innehållsfragment](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/). Vi rekommenderar att du använder den nya OpenAPI-implementeringen. Den befintliga användningen av Assets HTTP API för innehållsfragment bör migreras till det nya OpenAPI:t för hantering av innehållsfragment.
 
 Så här kommer du åt API:
 
