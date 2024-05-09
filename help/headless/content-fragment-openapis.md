@@ -1,15 +1,16 @@
 ---
 title: Content Fragments och Content Fragment Models OpenAPIs
 description: Lär dig mer om OpenAPI:er för Content Fragments och Content Fragment Models.
-source-git-commit: a9e6df69c3753677053a3ecde6b5f04794f748dd
+exl-id: 077eed73-a066-4273-b2f5-da4bf5cd900c
+source-git-commit: 2921667598201b6087fab3ca5c1ef5b57c1fa18f
 workflow-type: tm+mt
-source-wordcount: '75'
+source-wordcount: '98'
 ht-degree: 0%
 
 ---
 
 # Content Fragments och Content Fragment Models OpenAPIs {#content-fragments-and-content-fragment-models-openapis}
 
-Med Content Fragments och Content Fragment Models OpenAPI:er kan utvecklare programmässigt interagera med innehållsfragment och Content Fragment Models som lagras i AEM och utföra CRUD-åtgärder (Create, Read, Update, Delete) på dem.
+Med den moderniserade OpenAPI-implementeringen av API:t för hantering av innehållsfragment kan utvecklare programmässigt skapa, läsa, uppdatera och ta bort åtgärder på AEM författare för att hantera innehållsfragmentsmodeller och innehållsfragment som lagras i AEM. Dessa API:er har stöd för ett antal användningsfall.
 
-API:erna har stöd för ett antal användningsfall. Mer information finns i [Content Fragments och Contest Fragment Models OpenAPIs](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/).
+Befintlig användning av [Resurser för HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) för innehållsfragment ska migreras till det nya OpenAPI:t för hantering av innehållsfragment. Fullständig dokumentation finns på [API för hantering av innehållsfragment](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/).
