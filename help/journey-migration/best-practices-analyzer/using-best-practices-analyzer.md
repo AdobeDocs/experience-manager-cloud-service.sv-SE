@@ -2,9 +2,9 @@
 title: Använda Best Practices Analyzer
 description: Lär dig hur du använder Best Practices Analyzer för att förstå uppgraderingsberedskapen.
 exl-id: e8498e17-f55a-4600-87d7-60584d947897
-source-git-commit: 077be031da7a610810d398b163676a98fc036f30
+source-git-commit: 0c7e38d1973458ef3212e816ced867423bd62e86
 workflow-type: tm+mt
-source-wordcount: '2661'
+source-wordcount: '2686'
 ht-degree: 31%
 
 ---
@@ -61,6 +61,11 @@ Källinstansen AEM kanske köras bakom en brandvägg där den bara kan nå vissa
 ## Visa rapporten Best Practices Analyzer {#viewing-report}
 
 ### Adobe Experience Manager 6.3.0 och senare {#aem-later-versions}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_cam_bpa_upload_setup"
+>title="Överför automatiskt analysrapport om bästa praxis till CAM"
+>abstract="Ange BPA-överföringsnyckeln för att automatiskt överföra den genererade BPA-rapporten till Cloud Acceleration Manager (CAM)."
 
 Följ det här avsnittet för att lära dig hur du visar rapporten Best Practices Analyzer:
 
