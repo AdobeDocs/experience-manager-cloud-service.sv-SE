@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: bf7afba2376b12b8d4f513db07c178209447e343
+source-git-commit: 3eb2a7ce311f9e738a95ea5fcf6876f4df1fa648
 workflow-type: tm+mt
-source-wordcount: '4917'
+source-wordcount: '4930'
 ht-degree: 3%
 
 ---
@@ -605,6 +605,9 @@ ht-degree: 3%
       + [Migrera från [!DNL AEM 6.5 Forms] eller tidigare till [!DNL AEM Forms] as a Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
       + [Grupper och behörigheter](/help/forms/forms-groups-privileges-tasks.md)
       + [Importera, exportera och ordna anpassningsbara Forms-, PDF forms- och andra resurser](/help/forms/import-export-forms-templates.md)
+   + Komma igång {#getting-started-forms}
+      + [Användningsmiljö och installationsutvecklingsmiljö](/help/forms/create-adaptive-form-tutorial-getting-started.md)
+      + [Skapa låneansökningsformuläret](/help/forms/create-adaptive-form-tutorial.md)
    + Integrera {#integrate}
       + Tjänster {#services}
          + [Integrera AEM Forms as a Cloud Service med Adobe Sign](/help/forms/adobe-sign-integration-adaptive-forms.md)
