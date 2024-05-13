@@ -2,9 +2,9 @@
 title: Modelldefinitioner, fält och komponenttyper
 description: Lär dig mer om fält och de komponenttyper som den universella redigeraren kan redigera i egenskapsfältet med exempel. Lär dig hur du kan mäta din egen app genom att skapa en modelldefinition och länka till komponenten.
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
-source-git-commit: c2dd0ed800739c2194ab20267f72b85461f3c5b8
+source-git-commit: 111ce0c692432d1d0c25f416282bf2dbd655679b
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1146'
 ht-degree: 1%
 
 ---
@@ -95,6 +95,7 @@ Följande komponenttyper kan användas för återgivningsfält.
 | [Boolean](#boolean) | `boolean` |
 | [Kryssrutegrupp](#checkbox-group) | `checkbox-group` |
 | [Behållare](#container) | `container` |
+| [Innehållsfragment](#content-fragment) | `aem-content-fragment` |
 | [Datum och tid](#date-time) | `date-time` |
 | [Multimarkering](#multiselect) | `multiselect` |
 | [Nummer](#number) | `number` |
