@@ -7,9 +7,9 @@ role: User, Developer
 level: Beginner
 hide: true
 hidefromtoc: true
-source-git-commit: 3eb2a7ce311f9e738a95ea5fcf6876f4df1fa648
+source-git-commit: e6c58c835798b16158ab4aca26e381ab8f36afd3
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '918'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ I slutet av självstudiekursen kan du:
 
 AEM Forms tillhandahåller Foundation Components och Core Components för att skapa formulärupplevelser. Kärnkomponenterna är det moderna och rekommenderade sättet att skapa nya formulärupplevelser. Varför använda kärnkomponenter? De här komponenterna är enkla, med öppen källkod (finns för github), har bra Google Lighthuse- och webbinarier, är kompatibla med hjälpmedel och har alla de välbekanta funktionerna i AEM Sites (som versionshantering och lokalisering). Dessutom är de här komponenterna enklare att formatera och du kan enkelt anpassa deras utseende enligt företagets riktlinjer för varumärkesanpassning. Dessa har inga beroenden från tredje part, och utvecklare med kunskap om JavaScript och CSS kan enkelt anpassa dessa komponenter.
 
-![Varför skapa Core Components-baserade Adaptive Forms? Komponenterna är lätta, enklare att formatera, har hög ljusstyrka, stöder tillgänglighetsstandarder, är enkla att anpassa, har öppen källkod, finns på github, är inte beroende av bibliotek från tredje part och har nästan ingen inlärningskurva för AEM utvecklare och AEM författare Förutom AEM Forms Core Components har de alla funktioner som finns i AEM WCM Core Components.](/help/forms/assets/cc-core-components-benefits.png)
+![Varför skapa Core Components-baserade Adaptive Forms? Komponenterna är lätta, enklare att formatera, har hög ljusstyrka, stöder tillgänglighetsstandarder, är enkla att anpassa, har öppen källkod, finns på github, är inte beroende av bibliotek från tredje part och har nästan ingen inlärningskurva för AEM utvecklare och AEM författare Förutom AEM Forms Core Components har de alla funktioner som finns i AEM WCM Core Components.](/help/forms/assets/cc-core-components-benefits.png){width="50%"}
 
 ## Användningsfall: Effektiv förkvalificering av bostadslån med adaptiv Forms
 
@@ -55,7 +55,7 @@ När du är klar med självstudiekursen ser ditt formulär ut och fungerar så h
 
 ![Lägg till ett arbetsformulär här](/help/forms/assets/cc-tutorial-final-form.png)
 
-## Konfigurera en utvecklingsmiljö
+## Konfigurera utvecklingsmiljö
 
 Du kan skapa och testa det adaptiva formuläret direkt på den lokala datorn innan du distribuerar det till en Cloud Service-miljö. Adobe tillhandahåller en AEM SDK för lokal utveckling som du kan använda
 
@@ -79,10 +79,14 @@ Lokal utveckling med AEM SDK sparar tid och förenklar utvecklingsprocessen
 1. [Lägg till AEM Forms Add-on](/help/forms/setup-local-development-environment.md#add-forms-archive-to-local-author-and-publish-instances-and-configure-forms-specific-users): Hämta och installera AEM Forms-tillägget som matchar din AEM SDK från [Programvarudistribution](https://experience.adobe.com/#/downloads) Portal.
    ![install-aem-forms-add-on](/help/forms/assets/install-aem-forms-add-on.png)
 
-   +++Installera AEM Forms Add-on
+   +++Installera AEM Forms Add-on:
 
-       Installera AEM Forms Add-on genom att stoppa AEM SDK, lägga till AEM Forms add-on (.far) i mappen AEM SDK/crx-quickstart/install och starta om AEM SDK.
-   
+   Installera AEM Forms Add-on:
+
+   1. Stoppa AEM SDK.
+   1. Lägg till AEM Forms-tilläggsfilen (.far) i dialogrutan `AEM SDK/crx-quickstart/install` mapp,
+   1. Starta om AEM SDK.
+
 +++
 
 1. [Konfigurera användarbehörigheter](/help/forms/setup-local-development-environment.md#configure-users-and-permissions): Skapa användare med utvecklings-, redigerings- och andra behörigheter och lägg till dessa användare i fördefinierade formulärgrupper.
@@ -90,7 +94,9 @@ Lokal utveckling med AEM SDK sparar tid och förenklar utvecklingsprocessen
 
 1. [Lägg till adaptiva Forms-mallar](/help/forms/setup-local-development-environment.md#set-up-a-development-project-for-forms-based-on-experience-manager-archetype): Använd AEM 48 eller senare för att skapa ett nytt AEM och distribuera det till din AEM SDK. Projektet lägger till adaptiva Forms-mallar i AEM SDK.
 
-   +++Lägg till adaptiva Forms-mallar
+   ![Adaptiva formulärmallar](/help/forms/assets/adaptive-forms-templates.png)
+
+   +++Lägg till adaptiva Forms-mallar i AEM SDK:
 
    1. Kör kommandot nedan för att skapa ett AEM projekt.
 
@@ -108,13 +114,12 @@ Lokal utveckling med AEM SDK sparar tid och förenklar utvecklingsprocessen
       mvn -PautoInstallPackage clean install
       ```
 
-+++
-
    När du har distribuerat AEM kan du se adaptiva Forms-mallar i din miljö.
 
-   ![Adaptiva formulärmallar](/help/forms/assets/adaptive-forms-templates.png)
++++
 
-En stegvis guide om hur du konfigurerar din lokala AEM Forms-utvecklingsmiljö finns i [Konfigurera lokal utvecklingsmiljö för AEM Forms](/help/forms/setup-local-development-environment.md)
+
+Detaljerade instruktioner och stegvisa anvisningar om hur du konfigurerar din lokala AEM Forms-utvecklingsmiljö finns i [Konfigurera lokal utvecklingsmiljö för AEM Forms](/help/forms/setup-local-development-environment.md) artikel.
 
 
 
