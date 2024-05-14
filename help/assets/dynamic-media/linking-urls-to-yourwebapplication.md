@@ -2,12 +2,13 @@
 title: Länka URL:er till ditt webbprogram
 description: Lär dig hur du länkar URL-adresser till webbprogram i Dynamic Media.
 contentOwner: Rick Brough
+feature: Publishing,Upload,Viewer Presets,Image Presets,Video
 role: User
 exl-id: 3cd3f4d5-ebf0-4318-9a0d-1ea69453d57b
-source-git-commit: 2009e549eadd97d4d2bfcccd728ece17ecfeede5
+source-git-commit: 26afff3a39a2a80c1f730287b99f3fb33bff0673
 workflow-type: tm+mt
-source-wordcount: '1212'
-ht-degree: 5%
+source-wordcount: '1217'
+ht-degree: 3%
 
 ---
 
@@ -59,23 +60,23 @@ Du kan hämta en URL-sträng på flera olika sätt. Stegen nedan visar dock bara
 
    Se [Publicera bildförinställningar](managing-image-presets.md#publishing-image-presets).
 
-1. Gör något av följande beroende på vilken resurs du valt:
+1. Gör något av följande beroende på vilken resurs du har valt:
 
    * Om du har markerat en bild väljer du **[!UICONTROL Renditions]**.
 
-      Under **[!UICONTROL Dynamic]** väljer du ett förinställningsnamn för att visa återgivningen i den högra bildrutan. Om det behövs bläddrar du i listan Återgivningar för att se den dynamiska rubriken.
+     Under **[!UICONTROL Dynamic]** väljer du ett förinställningsnamn för att visa återgivningen i den högra bildrutan. Om det behövs bläddrar du i listan Återgivningar för att se den dynamiska rubriken.
 
-      Längst ned i den vänstra listen väljer du **[!UICONTROL URL]**.
+     Längst ned i den vänstra listen väljer du **[!UICONTROL URL]**.
 
-      ![chlimage_1-270](assets/chlimage_1-270.png)
+     ![chlimage_1-270](assets/chlimage_1-270.png)
 
    * Om du valde en snurra, en bilduppsättning, en Carousel-uppsättning eller en video väljer du **[!UICONTROL Viewers]**.
 
-      Välj ett namn på visningsförinställningen i den vänstra listen. En förhandsgranskning av uppsättningen eller videon öppnas på en separat sida.
+     Välj ett namn på visningsförinställningen i den vänstra listen. En förhandsgranskning av uppsättningen eller videon öppnas på en separat sida.
 
-      I den vänstra listen längst ned väljer du **[!UICONTROL URL]**.
+     I den vänstra listen längst ned väljer du **[!UICONTROL URL]**.
 
-      ![chlimage_1-271](assets/chlimage_1-271.png)
+     ![chlimage_1-271](assets/chlimage_1-271.png)
 
 1. Om du vill förhandsgranska resursen eller lägga till den på webbinnehållssidan markerar och kopierar du texten till webbläsaren.
 
@@ -109,11 +110,11 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 
       * `https://*<server_name>*/is/content/*<company_name>*/*<static_asset_filename>*.*<extension>*`
 
-         Till exempel, `https://aem.com/is/content/adobe/image.gif`.
+        Till exempel: `https://aem.com/is/content/adobe/image.gif`.
+
    * Välj **[!UICONTROL Asset]** > **[!UICONTROL Dynamic Renditions]** väljer du sedan en dynamisk återgivning av den statiska resursen och kopierar URL:en.
 
-      Ändra den kopierade URL-adressen som ska användas `is/content` i banan i stället för `is/image/`.
-
+     Ändra den kopierade URL-adressen som ska användas `is/content` i banan i stället för `is/image/`.
 
 ## Hämta en video-URL för en publicerad videoåtergivning {#obtaining-a-video-url-for-a-published-video-rendition}
 
@@ -127,11 +128,11 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 
    `https://s7athens.macromedia.com:9090/DMGateway/`
 
-   (Den ovan angivna banan är endast avsedd som förklaring. det är inte den faktiska sökvägen som du kopierar.)
+   (Sökvägen ovan är bara till för att förklara. Det är inte den verkliga sökvägen som du kopierar.)
 
 1. Under **[!UICONTROL Registration ID]** kopierar du det kundnamn som finns i den sista delen av ID:t.
 
-   Om registrerings-ID till exempel var `87654321|MyCompany`, blir kundens namn `MyCompany`.
+   Om registrerings-ID till exempel var `87654321|MyCompany`, skulle kundens namn vara `MyCompany`.
 
 1. I närheten av sidans övre vänstra hörn väljer du **[!UICONTROL Cloud Services]**, markera ikonen Experience Manager och navigera till **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 1. Kopiera ned hela videouppdateringssökvägen från JCR (Java™ Content Repository).
@@ -140,7 +141,7 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 
    `/_renditions_/0bd/0bd28743-a616-4fe6-92aa-6eae7c2112f/avs/Momentum_1080-0x720-2600k.mp4`
 
-   (Den ovan angivna banan är endast avsedd som förklaring. det är inte den faktiska sökvägen som du kopierar.)
+   (Sökvägen ovan är bara till för att förklara. Det är inte den verkliga sökvägen som du kopierar.)
 
 1. Om du vill skapa en fullständig URL-sökväg ordnar du den kopierade informationen i följande ordning:
 
@@ -163,12 +164,11 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 
    `https://gateway-na.assetsadobe.com/DMGateway/`
 
-   (Den ovan angivna banan är endast avsedd som förklaring. det är inte den faktiska sökvägen som du kopierar.)
+   (Sökvägen ovan är bara till för att förklara. Det är inte den verkliga sökvägen som du kopierar.)
 
-   * Under **[!UICONTROL Registration ID]** kopierar du det kundnamn som finns i den sista delen av ID:t. Du behöver det kopierade kundnamnet senare i dessa steg.
+   * Under **[!UICONTROL Registration ID]**, kopierar kundnamnet som finns i den sista delen av ID:t. Du behöver det kopierade kundnamnet senare i dessa steg.
 
-      Om registrerings-ID till exempel var `87654321|demoCo`, det kundnamn du kopierar är `demoCo`.
-
+     Om registrerings-ID till exempel var `87654321|demoCo`, det kundnamn du kopierar är `demoCo`.
 
 1. Kopiera respektive protokollväljare baserat på vilket videoleveransprotokoll du använder. Du behöver den kopierade protokollväljaren senare i dessa steg.
 
@@ -203,7 +203,7 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 
    `https://gateway-na.assetsadobe.com/DMGateway/public-ssl/demoCo/content/dam/marketing/MyVideo.mp4`
 
-1. Fyll i URL:en genom att lägga till `.m3u8` till strängens slut. Lägg till exempel `.m3u8` till strängen från det föregående steget visas den fullständiga URL-sökvägen enligt följande:
+1. Fyll i URL:en genom att lägga till `.m3u8` till slutet av strängen. Lägg till exempel `.m3u8` till strängen från det föregående steget visas den fullständiga URL-sökvägen enligt följande:
 
    `https://gateway-na.assetsadobe.com/DMGateway/public-ssl/demoCo/content/dam/marketing/MyVideo.mp4.m3u8`
 

@@ -2,11 +2,12 @@
 title: Konfigurera Dynamic Media
 description: Om du vill konfigurera Dynamic Media måste du konfigurera Dynamic Media och hantera bild- och visningsförinställningar.
 contentOwner: Rick Brough
+feature: Configuration,Viewer Presets,Image Presets,Dynamic Media
 role: Admin,User
 exl-id: 83b70b17-7ee3-41cb-be90-c92ca161660e
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: 26afff3a39a2a80c1f730287b99f3fb33bff0673
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '172'
 ht-degree: 0%
 
 ---
@@ -42,4 +43,3 @@ Se även följande avsnitt:
 >**Om du uppgraderar:**
 >
 >* Efter att du har Adobe [!DNL Experience Manager] alla resurser som du överför har Dynamic Media automatiskt aktiverat (om de inte uttryckligen inaktiverats av systemadministratören). Om du är på en uppgraderad instans av [!DNL Experience Manager] och som är nya i Dynamic Media måste du troligtvis bearbeta dina resurser på nytt för att göra dem Dynamic Media-aktiverade. Se [Bearbeta resurser igen i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
-

@@ -2,11 +2,12 @@
 title: Använd smart bildbehandling med enhetspixelproportioner på klientsidan
 description: Lär dig hur du använder pixelproportioner för enheter på klientsidan med Smart Imaging i Adobe Experience Manager as a Cloud Service med Dynamic Media.
 contentOwner: Rick Brough
+feature: Device Pixel Ratio,Smart Imaging
 role: Admin,User
 exl-id: 556710c7-133c-487a-8cd9-009a5912e94c
-source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
+source-git-commit: 26afff3a39a2a80c1f730287b99f3fb33bff0673
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '322'
 ht-degree: 0%
 
 ---
@@ -48,7 +49,7 @@ DPR på klientsidan ger helt korrekta värden och fungerar för alla enheter, oa
 
 **Återgivna appar på klientsidan**
 
-1. Inkludera följande DPR-skript i sidhuvudsavsnittet på HTML-sidan:
+1. Inkludera följande DPR-skript i sidhuvudet på HTML-sidan:
 
    ```javascript
    <script type="text/javascript" src="srvinit.js"></script>
@@ -60,7 +61,7 @@ DPR på klientsidan ger helt korrekta värden och fungerar för alla enheter, oa
    Adobe rekommenderar att du läser in dessa skript _före_ alla andra skript på HTML-sidan.
 Adobe rekommenderar också att du Bootstrap under taggen diff HTML i stället för ett body-element i appen. Orsaken är att `dprImageInjection.js` infogar dynamiskt bildtaggen högst upp i brödavsnittet på HTML-sidan.
 
-## Nedladdning av JavaScript-filer {#client-side-dpr-script}
+## Hämta JavaScript-filer {#client-side-dpr-script}
 
 Följande JavaScript-filer i nedladdningen finns endast som exempelreferens. Om du tänker använda de här filerna på HTML-sidor måste du redigera varje fils kod så att den passar dina egna behov.
 
@@ -68,9 +69,8 @@ Följande JavaScript-filer i nedladdningen finns endast som exempelreferens. Om 
 * `srvinit.js`
 * `srvwrk.js`
 
-[Nedladdning av JavaScript-filer](/help/assets/dynamic-media/assets/aem-dynamicmedia-smartimaging-dpr.zip)
+[Hämta JavaScript-filer](/help/assets/dynamic-media/assets/aem-dynamicmedia-smartimaging-dpr.zip)
 
 >[!MORELIKETHIS]
 >
 >* [Smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md)
-

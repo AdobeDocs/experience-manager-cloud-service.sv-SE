@@ -1,17 +1,18 @@
 ---
-title: Vanliga frågor om leverans av innehåll med HTTP2
+title: HTTP2 Delivery of Content FAQ
 description: Läs om hur HTTP2-innehåll levereras och hur kommunikationen mellan webbläsare och servrar förbättras för snabbare informationsöverföring.
 contentOwner: Rick Brough
+feature: Dynamic Media,Configuration,FAQ
 role: Admin,User
 exl-id: 0a8a5fd8-a341-4e7f-84a5-409e2de97efe
-source-git-commit: 0e452bd94d75609ecc3c20ab6b56ded968ed0a70
+source-git-commit: 26afff3a39a2a80c1f730287b99f3fb33bff0673
 workflow-type: tm+mt
-source-wordcount: '782'
-ht-degree: 1%
+source-wordcount: '772'
+ht-degree: 0%
 
 ---
 
-# Vanliga frågor om leverans av innehåll med HTTP2{#http-delivery-of-content-faq}
+# HTTP2 Delivery of Content FAQ{#http-delivery-of-content-faq}
 
 Adobe är glada över att kunna meddela att HTTP/2-leverans av innehåll är tillgänglig. När du använder HTTP/2 ökar prestanda totalt.
 
@@ -91,4 +92,4 @@ Det icke-cachelagrade innehållet träffar direkt på Adobe-servrar tills cachen
 
 ## Hur kan du verifiera om en URL eller webbplats är aktiverad med HTTP/2? {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 
-Ladda ned ett tillägg som du kan använda med webbläsaren. För Firefox och Chrome finns ett tillägg som heter **[!UICONTROL HTTP/2 and SPDY Indicator]**. Webbläsare stöder bara säkert HTTP/2, så det är nödvändigt att anropa en URL med HTTPS för att verifiera. Om HTTP/2 stöds anges det av tillägget i form av en blå Flash-symbol och rubriken &quot;X-Firefox-Spdy&quot; : &quot;h2&quot;.
+Ladda ned ett tillägg som du kan använda med webbläsaren. För Firefox och Chrome finns ett tillägg som heter **[!UICONTROL HTTP/2 and SPDY Indicator]**. Webbläsare stöder bara säkert HTTP/2, så det är nödvändigt att anropa en URL med HTTPS för att verifiera. Om HTTP/2 stöds anges det av tillägget i form av en blå Flash-symbol och rubriken&quot;X-Firefox-Spdy&quot; :&quot;h2&quot;.

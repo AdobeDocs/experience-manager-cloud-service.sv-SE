@@ -2,12 +2,13 @@
 title: Arbeta med väljare
 description: Lär dig mer om metoder du kan använda för att välja resurser för interaktiva bilder, interaktiva videor och karusellbanderoller i Dynamic Media.
 contentOwner: Rick Brough
+feature: Selectors,Interactive Images,Interactive Videos,Carousel Banners
 role: User
 exl-id: a6f366ab-41b8-4909-b815-e6c4b938bf77
-source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
+source-git-commit: 26afff3a39a2a80c1f730287b99f3fb33bff0673
 workflow-type: tm+mt
-source-wordcount: '689'
-ht-degree: 3%
+source-wordcount: '706'
+ht-degree: 5%
 
 ---
 
@@ -19,7 +20,7 @@ Det här avsnittet handlar om hur du använder väljarna Produkt, Plats och Resu
 
 Du kommer åt väljarna när du skapar karuselluppsättningar, lägger till aktiveringspunkter och bildscheman, skapar interaktiva videor och bilder.
 
-I den här Carousel-banderollen använder du produktväljaren om du länkar en hotspot eller bildschema till en QuickView-sida. Använd webbplatsväljaren om du länkar en hotspot eller ett bildschema till en hyperlänk. använder du resursväljaren när du skapar en bildruta.
+I den här Carousel-banderollen använder du produktväljaren om du länkar en hotspot eller bildschema till en QuickView-sida. Använd platsväljaren om du länkar en aktiveringspunkt eller ett bildschema till en hyperlänk. Använd resursväljaren när du skapar en bildruta.
 
 ![chlimage_1-520](assets/chlimage_1-520.png)
 
@@ -111,4 +112,4 @@ Se även [Resursväljaren](/help/assets/search-assets.md#asset-selector) för me
 1. Markera resursen om du vill markera den. Resursen visas.
 
    ![chlimage_1-536](assets/chlimage_1-536.png)
--->
+—>

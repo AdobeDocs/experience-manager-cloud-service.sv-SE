@@ -2,11 +2,12 @@
 title: Felsöka Dynamic Media
 description: Lär dig mer om felsökningstips du kan testa när du arbetar med bilder, uppsättningar och visningsprogram i Dynamic Media.
 contentOwner: Rick Brough
+feature: Troubleshooting,Image Sets,Viewers
 role: Admin,User
 exl-id: 3e8a085f-57eb-4009-a5e8-1080b4835ae2
-source-git-commit: 0e452bd94d75609ecc3c20ab6b56ded968ed0a70
+source-git-commit: 26afff3a39a2a80c1f730287b99f3fb33bff0673
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1135'
 ht-degree: 0%
 
 ---
@@ -215,7 +216,7 @@ Om exempelmaterialet eller den förinställda teckningen i visningsprogrammet in
 1. Navigera till CRX Package Manager: `https://localhost:4502/crx/packmgr/`.
 1. Sök efter visningsprogrampaket i listan. Det börjar med `cq-dam-scene7-viewers-content`.
 1. Välj **Installera om**.
-1. Gå till konfigurationssidan för Dynamic Media under Cloud Services och öppna sedan konfigurationsdialogrutan för din Dynamic Media - S7-konfiguration.
+1. Gå till konfigurationssidan för Dynamic Media under Cloud Service och öppna sedan konfigurationsdialogrutan för din Dynamic Media - S7-konfiguration.
 1. Gör inga ändringar, markera **Spara**.
 Denna sparåtgärd aktiverar logiken igen för att skapa och synkronisera exempelresurserna, CSS-förinställningen för visningsprogrammet och teckningen.
 
