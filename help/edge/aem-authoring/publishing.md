@@ -3,9 +3,9 @@ title: Publicera innehåll för Edge Delivery Services
 description: Lär dig hur innehållspublicering fungerar med Edge Delivery Services och hur du publicerar AEM innehåll med Edge Delivery Services.
 feature: Edge Delivery Services
 exl-id: 32fbb144-9175-47a9-bb5a-ca15f3fcd2d8
-source-git-commit: 11f721b4a617c99e30329d7196f42d7b48067f1b
+source-git-commit: c85a82161a7594588290793c89ecbe1f0f60a56d
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '294'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Informationsflödet vid publicering är följande. När författaren börjar pub
 
 >[!NOTE]
 >
->Upp till 5 000 sökvägar som publiceras från redigeringsgränssnittet eller arbetsflöden tillåts per dag. Integrationer som skapar arbetsbelastningar för masspublicering stöds inte.
+>Upp till 5 000 sökvägar som publiceras från redigeringsgränssnittet eller arbetsflöden tillåts per dag. Integrationer som skapar arbetsbelastningar för masspublicering stöds inte. Om ditt projekt kräver högre kapacitet kan du föreslå det för [VIP](https://www.aem.live/vip/intake).
 
 ![Informationsflödet vid publicering från AEM till Edge Delivery Services](assets/publishing-flow.png)
 
