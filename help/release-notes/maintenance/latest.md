@@ -2,7 +2,7 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 79dcf8a4e9834beeb466ed9270a3f5c6aa67aa9a
+source-git-commit: 3be366e5fa0a7625203a052426be6a2fd2412cf6
 workflow-type: tm+mt
 source-wordcount: '723'
 ht-degree: 0%
@@ -17,7 +17,7 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 16145, som offentliggjordes den 1 maj 2024. Den tidigare underhållsversionen var version 15977.
 
-2024.4.0 Feature Activation (Aktivering av funktioner) innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) för mer information.
+2024.5.0 Funktionsaktivering innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) för mer information.
 
 ### Förbättringar {#enhancements-16145}
 
