@@ -3,7 +3,7 @@ title: Publicera ett AEM Forms-formulär för Edge Delivery Services
 description: Publicera ett AEM Forms-formulär för Edge Delivery Services
 feature: Edge Delivery Services
 exl-id: dcb16da1-dcc2-4529-8859-0716e727b54d
-source-git-commit: 5eee563a9a425ef187afed69a8159d8b1298dad7
+source-git-commit: 708b63aca6b1613dbedf193edd07aadc510ff859
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 0%
@@ -87,11 +87,17 @@ Så här lägger du till formuläret på din webbsida:
    Använd URL:en för förhandsgranskning (.page URL) för utvecklings- eller teständamål, eller publicerings-URL:en (.live) för produktion. Här är några exempel på förhandsgransknings- och publicerings-URL:
 
    **Förhandsgranska URL**
-| Formulär | |—| | [https://main—weFinance—wkndforms.hlx.page/inquiry.json](https://main--wefinance--wkndforms.hlx.page/enquiry.json)  |
+
+   | Formulär |
+   |---|
+   | [https://main—weFinance—wkndforms.hlx.page/inquiry.json](https://main--wefinance--wkndforms.hlx.page/enquiry.json) |
 
 
    **Publicera URL**
-| Formulär | |—| | [https://main—weFinance—wkndforms.hlx.live/inquiry.json](https://main--wefinance--wkndforms.hlx.live/enquiry.json)  |
+
+   | Formulär |
+   |---|
+   | [https://main—weFinance—wkndforms.hlx.live/inquiry.json](https://main--wefinance--wkndforms.hlx.live/enquiry.json) |
 
 1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska webbsidan. Formuläret visas nu på sidan. Här är till exempel formuläret baserat på [frågekalkylblad](https://docs.google.com/spreadsheets/d/196lukD028RDK_evBelkOonPxC7w0l_IiJ-Yx3DvMfNk/edit#gid=0):
 
