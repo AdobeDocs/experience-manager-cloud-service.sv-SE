@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: c8b78ec6f1c7ff43950778fdd429a0aefff9856e
+source-git-commit: 39697467c5d06c5a82d701ecc2e05702535efd6c
 workflow-type: tm+mt
-source-wordcount: '2696'
+source-wordcount: '2720'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,11 @@ Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktue
 
 Du kan hitta den senaste underhållsreleasenumerationen [här](/help/release-notes/maintenance/latest.md).
 
-<!-- ## Release Video {#release-video}
+## Släpp video {#release-video}
 
-Have a look at the April 2024 Release Overview video for a summary of the features added in the 2024.4.0 release:
+Titta på videon med versionsöversikten för april 2024 om du vill se en sammanfattning av funktioner som lagts till i version 2024.4.0:
 
->[!VIDEO](https://video.tv.adobe.com/v/3428342?quality=12)
-
--->
+>[!VIDEO](https://video.tv.adobe.com/v/3429111?quality=12)
 
 ## [!DNL Experience Manager Sites] som [!DNL Cloud Service] {#sites}
 
