@@ -1,20 +1,33 @@
 ---
-title: Anpassa redigeringsmiljön
+title: Anpassa och utöka den universella redigeraren
 description: Lär dig mer om de olika tilläggspunkterna och andra funktioner som gör att du kan anpassa gränssnittet i den universella redigeraren så att det passar de behov som finns hos de som skapar innehållet.
 exl-id: 8d6523c8-b266-4341-b301-316d5ec224d7
-source-git-commit: 11a244b7dd4810fbfec92b3effc362102e7322dc
+source-git-commit: bdd67fb383bf20399eacaf9b9c086ea8468ea742
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
 
 
-# Anpassa redigeringsmiljön {#customizing-ue}
+# Anpassa och utöka den universella redigeraren {#customizing-extending}
 
 Lär dig mer om de olika tilläggspunkterna och andra funktioner som gör att du kan anpassa redigeringsmiljön i den universella redigeraren så att den passar de behov som finns hos skribenterna.
 
-## Inaktiverar publicering {#disable-publish}
+## Ökning {#overview}
+
+Med Universell redigerare kan du anpassa två typer av projekt efter dina behov.
+
+* [Anpassa den universella redigeraren](#customizing) - Standardfunktionaliteten i Universal Editor kan anpassas via flera olika anpassningskonfigurationer.
+* [Utöka gränssnittet för Universal Editor](#extending) - Gränssnittet i den universella redigeraren kan också utökas med App Builder för att uppfylla dina projektbehov.
+
+Båda typerna beskrivs i följande avsnitt.
+
+## Anpassa den universella redigeraren {#customizing}
+
+Den universella redigeraren har flera inbyggda alternativ för att anpassa funktionaliteten.
+
+### Inaktiverar publicering {#disable-publish}
 
 Vissa redigeringsarbetsflöden kräver att innehållet granskas innan det publiceras. I sådana fall bör alternativet att publicera inte vara tillgängligt för någon författare.
 
@@ -24,7 +37,7 @@ The **Publicera** kan därför undertryckas helt i en app genom att följande me
 <meta name="urn:adobe:aue:config:disable" content="publish"/>
 ```
 
-## Filtrera komponenter {#filtering-components}
+### Filtrera komponenter {#filtering-components}
 
 När du använder Universal Editor kan du begränsa vilka komponenter som tillåts per behållarkomponent. För att göra detta måste du infoga ytterligare en script-tagg som pekar på filterdefinitionen.
 
@@ -60,13 +73,15 @@ Ange `components` attribut i en filterdefinition till `null` tillåter alla komp
 ]
 ```
 
-## Visa och dölj komponenter i egenskapsfältet {#conditionally-hide}
+### Visa och dölj komponenter i egenskapsfältet {#conditionally-hide}
 
 Även om en eller flera komponenter i allmänhet är tillgängliga för författarna, kan det finnas situationer där det inte passar. I så fall kan du dölja komponenter i egenskapsfältet genom att lägga till en `condition` attributet till [-fält i komponentmodellen.](/help/implementing/universal-editor/field-types.md#fields)
 
 Villkoren kan definieras med [JsonLogic-schema.](https://jsonlogic.com/) Om villkoret är true visas fältet. Om villkoret är falskt döljs fältet.
 
-### Exempelmodell {#sample-model}
+>[!BEGINTABS]
+
+>[!TAB Exempelmodell]
 
 ```json
  {
@@ -89,11 +104,30 @@ Villkoren kan definieras med [JsonLogic-schema.](https://jsonlogic.com/) Om vill
  }
 ```
 
-#### Villkorsfel {#false}
+>[!TAB Villkorsfel]
 
 ![Dolt textfält](assets/hidden.png)
 
-#### True för villkor {#true}
+>[!TAB True för villkor]
 
 ![Visat textfält](assets/shown.png)
 
+>[!ENDTABS]
+
+## Utöka gränssnittet för Universal Editor {#extending}
+
+Som Adobe Experience Cloud-tjänst kan du utöka UI för den universella redigeraren med hjälp av App Builder och Experience Manager.
+
+Gränssnittstillägg är JavaScript-program som skapats med Adobe App Builder och som kan bäddas in i UI-program som körs med Adobe Experience Cloud enhetliga gränssnitt, till exempel Universal Editor. Du kan lägga till egna knappar och åtgärder i rubrikraden och egenskapsfältet samt skapa egna händelser för den universella redigeraren.
+
+Om du vill utforska de här möjligheterna kan du läsa följande resurser:
+
+1. [Utbyggbarhet för användargränssnitt](https://developer.adobe.com/uix/docs/) - Det här är utvecklardokumentationen för UI-tillägget.
+1. [Handböcker för användargränssnittets utökningsmöjligheter](https://developer.adobe.com/uix/docs/guides/) - Stegvisa instruktioner om hur du utvecklar ett tillägg
+1. [Universella redigeringstillägg](https://developer.adobe.com/uix/docs/services/aem-universal-editor/) - Universell redigeringsspecifik tilläggspunktsdokumentation
+
+>[!TIP]
+>
+>Om du föredrar att lära dig mer finns mer information i [AEM självstudiekurs om utbyggbarhet i användargränssnittet.](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/ui/overview) Även om den fokuserar på att utöka konsolen för innehållsfragment är begreppen för att implementera ett UI-tillägg i den universella redigeraren desamma.
+
+[Med Extension Manager i AEM Sites](https://developer.adobe.com/uix/docs/extension-manager/) Du kan aktivera eller inaktivera tillägg per instans, få åtkomst till tillägg från första Adobe, inklusive tillägg för Universal Editor och mycket annat.
