@@ -3,14 +3,13 @@ title: Resursväljare för [!DNL Adobe Experience Manager] som [!DNL Cloud Servi
 description: Använd resursväljaren för att söka efter, hitta och hämta resursers metadata och återgivningar i programmet.
 contentOwner: KK
 role: Admin,User
-exl-id: b968f63d-99df-4ec6-a9c9-ddb77610e258
-source-git-commit: b9fe6f4c2f74d5725575f225f8d9eb2e5fbfceb7
+exl-id: 5f962162-ad6f-4888-8b39-bf5632f4f298
+source-git-commit: 2ce64892cd5bf414d328a9112c47092b762d3668
 workflow-type: tm+mt
 source-wordcount: '3896'
 ht-degree: 0%
 
 ---
-
 
 # Mikrofrontsväljare för mediefiler {#Overview}
 
@@ -599,7 +598,7 @@ interface SelectedAsset {
     'repo:state': string;
     computedMetadata: Record<string, any>;
     _links: {
-        'http://ns.adobe.com/adobecloud/rel/rendition': Array<{
+        'https://ns.adobe.com/adobecloud/rel/rendition': Array<{
             href: string;
             type: string;
             'repo:size': number;
@@ -632,12 +631,12 @@ I följande tabell beskrivs några av de viktiga egenskaperna för det valda res
 | *tiff:imageLength* | tal | En tillgångs höjd. |
 | *computedMetadata* | `Record<string, any>` | Ett objekt som representerar en bucket för alla resursens metadata av alla slag (databas, program eller inbäddade metadata). |
 | *länkar* | `Record<string, any>` | Hypermedialänkar för den associerade resursen. Innehåller länkar för resurser som metadata och återgivningar. |
-| *_länkar.<http://ns.adobe.com/adobecloud/rel/rendition>* | `Array<Object>` | En array med objekt som innehåller information om återgivningar av resursen. |
-| *_länkar.<http://ns.adobe.com/adobecloud/rel/rendition[].href>* | string | URI:n till återgivningen. |
-| *_länkar.<http://ns.adobe.com/adobecloud/rel/rendition[].type>* | string | Återgivningens MIME-typ. |
-| *_länkar.<http://ns.adobe.com/adobecloud/rel/rendition[].'repo:size>&#39;* | tal | Återgivningens storlek i byte. |
-| *_länkar.<http://ns.adobe.com/adobecloud/rel/rendition[].width>* | tal | Återgivningens bredd. |
-| *_länkar.<http://ns.adobe.com/adobecloud/rel/rendition[].height>* | tal | Återgivningens höjd. |
+| *_länkar.<https://ns.adobe.com/adobecloud/rel/rendition>* | `Array<Object>` | En array med objekt som innehåller information om återgivningar av resursen. |
+| *_länkar.<https://ns.adobe.com/adobecloud/rel/rendition[].href>* | string | URI:n till återgivningen. |
+| *_länkar.<https://ns.adobe.com/adobecloud/rel/rendition[].type>* | string | Återgivningens MIME-typ. |
+| *_länkar.<https://ns.adobe.com/adobecloud/rel/rendition[].'repo:size>&#39;* | tal | Återgivningens storlek i byte. |
+| *_länkar.<https://ns.adobe.com/adobecloud/rel/rendition[].width>* | tal | Återgivningens bredd. |
+| *_länkar.<https://ns.adobe.com/adobecloud/rel/rendition[].height>* | tal | Återgivningens höjd. |
 
 En fullständig lista över egenskaper och detaljerade exempel finns på [Exempel på resursväljarkod](https://github.com/adobe/aem-assets-selectors-mfe-examples).
 
