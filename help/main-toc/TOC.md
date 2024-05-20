@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 300bbbf0af0f0d896bf39f2a4e1fe4ed3d41f09a
+source-git-commit: 02388518f10d5c4bd34ad7d20a24877b468bff72
 workflow-type: tm+mt
-source-wordcount: '4946'
+source-wordcount: '4964'
 ht-degree: 3%
 
 ---
@@ -654,6 +654,8 @@ ht-degree: 3%
             + [Konfigurera Skicka till REST-slutpunktsåtgärd för adaptiv Forms](/help/forms/configure-submit-action-restpoint.md)
             + [Konfigurera åtgärden Skicka e-post för ett anpassat formulär](/help/forms/configure-submit-action-send-email.md)
             + [Använd Google reCAPTCHA i anpassad form](/help/forms/captcha-adaptive-forms-core-components.md)
+            + [Använd hCAPTCHA i anpassad form](/help/forms/integrate-adaptive-forms-hcaptcha-core-components.md)
+            + [Använd Turnstile i anpassad form](/help/forms/integrate-adaptive-forms-turnstile-core-components.md)
             + [Lägga till en anpassad felhanterare i ett adaptivt formulär](/help/forms/add-custom-error-handler-adaptive-forms-core-components.md)
             + [Lägg till en språkinställning för adaptiv Forms baserat på kärnkomponenter](/help/forms/supporting-new-language-localization-core-components.md)
             + [Skapa och använda anpassade funktioner](/help/forms/create-and-use-custom-functions.md)
@@ -676,6 +678,7 @@ ht-degree: 3%
             + [Förbättra prestanda för stora formulär med lat inläsningsverktyg](/help/forms/lazy-loading-adaptive-forms.md)
          + Lägga till komponenter i ett adaptivt formulär {#add-components-to-an-adaptive-form}
             + [Använd CAPTCHA i anpassad form](/help/forms/captcha-adaptive-forms.md)
+            + [Använd Captcha i anpassad form](/help/forms/integrate-adaptive-forms-hcaptcha.md)
             + [Använd kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
             + [Använd klottrar signatur](/help/forms/signing-forms-using-scribble.md)
             + [Lägga till en tabell i ett anpassat formulär](/help/forms/adaptive-forms-tables.md)
