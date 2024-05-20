@@ -2,9 +2,12 @@
 title: IMS-konfiguration som ska användas vid integrering med Adobe Target
 description: Läs mer om IMS-konfiguration för användning vid integrering med Adobe Target
 exl-id: b5474b70-bedc-4cc9-ad47-89dcb2415e3a
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+hide: true
+hidefromtoc: true
+index: false
+source-git-commit: 43c820996af947fab2bacdec7646211f4104ae4d
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -12,6 +15,14 @@ ht-degree: 0%
 # IMS-konfiguration som ska användas vid integrering med Adobe Target{#ims-configuration-for-integration-with-adobe-target}
 
 Integreringen av AEM med Adobe Target via Target Standard API kräver att Adobe IMS (Identity Management System) konfigureras. Konfigurationen genomförs med Adobe Developer Console.
+
+>[!CAUTION]
+>
+>Den konfiguration som beskrivs på den här sidan kan inte längre användas för nya eller uppdaterade integreringar.
+>
+>[IMS-integreringar har nu konfigurerats med S2S OAuth](/help/security/setting-up-ims-integrations-for-aem-as-a-cloud-service.md).
+>
+>Tidigare konfigurationer, enligt beskrivningen på den här sidan, gjordes med [JWT-autentiseringsuppgifter som nu är borttagna i Adobe Developer Console](/help/security/jwt-credentials-deprecation-in-adobe-developer-console.md).
 
 >[!NOTE]
 >
