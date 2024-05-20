@@ -1,14 +1,14 @@
 ---
-title: Hur använder man Captcha® i AEM Adaptiv form?
-description: Förbättra säkerheten med tjänsten Captcha® utan problem. Stegvisa anvisningar inifrån!
+title: Hur man använder Captcha&reg; i en AEM adaptiv form?
+description: Förbättra formulärsäkerheten med Captcha&reg; utan problem. Stegvisa anvisningar inifrån!
 topic-tags: Adaptive Forms, author
-keywords: hCaptcha®-tjänst, Adaptive Forms, CAPTCHA-utmaning, Boot Prevention, säkerhet för inskickning av formulär, skydd mot skräppost i formulär
+keywords: Captcha&reg; service, Adaptive Forms, CAPTCHA enge, Bot prevent, Form submit security, Form spam prevent
 feature: Adaptive Forms, Foundation Components
 hide: true
 hidefromtoc: true
-source-git-commit: a8a31bae0f937aa8941d258af648d6be030a9fac
+source-git-commit: d2c6514eb1f38b06dfa58daa03b781920b8928f6
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
@@ -18,11 +18,21 @@ ht-degree: 0%
 
 <span class="preview"> Den här funktionen är under Tidigt Adobe-program. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
+CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) är ett program som ofta används vid onlinetransaktioner för att skilja mellan människor och automatiserade program eller organ. Det utgör en utmaning och utvärderar användarens svar för att avgöra om det är en människa eller en robot som interagerar med webbplatsen. Det förhindrar användaren att fortsätta om testet misslyckas och gör onlinetransaktionerna säkra genom att förhindra att skräppost eller skadliga syften publiceras.
+
+AEM Forms as a Cloud Service stöder följande CAPTCHA-lösningar:
+
+* [hCaptcha](#integrate-aem-forms-environment-with-hcaptcha-captcha)
+* [Molnformad vändning](/help/forms/integrate-adaptive-forms-turnstile.md)
+* [Google reCAPTCHA](/help/forms/captcha-adaptive-forms.md)
+
+## Integrera AEM Forms-miljön med Captcha Captcha
+
 Med tjänsten Captcha® kan du skydda dina formulär från stötar, skräppost och automatiskt missbruk. Det utgör en utmaning för kryssrutewidgeten och utvärderar användarens svar för att avgöra om det är en människa eller en robot som interagerar med formuläret. Det förhindrar användaren att fortsätta om testet misslyckas och gör onlinetransaktionerna säkra genom att förhindra att skräppost eller skadliga aktiviteter publiceras.
 
-<!-- ![hCaptcha®](assets/hCaptcha®-challenge.png)-->
+AEM Forms as a Cloud Service har stöd för hCaptcha® i adaptiva Forms Core-komponenter. Du kan använda den för att visa en kryssrutewidget när formulär skickas.
 
-AEM Forms as a Cloud Service stöder Captcha® i Adaptive Forms. Du kan använda den för att visa en kryssrutewidget för användaren när formuläret skickas.
+<!-- ![hCaptcha&reg;](assets/hCaptcha&reg;-challenge.png)-->
 
 ## Förutsättningar för att integrera AEM Forms-miljön med Captcha® {#prerequisite}
 

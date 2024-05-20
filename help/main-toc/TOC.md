@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 30b9d71890f5d3a1a13e0b570c370a148eb19db6
+source-git-commit: d2c6514eb1f38b06dfa58daa03b781920b8928f6
 workflow-type: tm+mt
-source-wordcount: '4956'
+source-wordcount: '4962'
 ht-degree: 3%
 
 ---
@@ -678,6 +678,7 @@ ht-degree: 3%
          + Lägga till komponenter i ett adaptivt formulär {#add-components-to-an-adaptive-form}
             + [Använd CAPTCHA i anpassad form](/help/forms/captcha-adaptive-forms.md)
             + [Använd Captcha i anpassad form](/help/forms/integrate-adaptive-forms-hcaptcha.md)
+            + [Använd Turnstile i anpassad form](/help/forms/integrate-adaptive-forms-turnstile.md)
             + [Använd kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
             + [Använd klottrar signatur](/help/forms/signing-forms-using-scribble.md)
             + [Lägga till en tabell i ett anpassat formulär](/help/forms/adaptive-forms-tables.md)

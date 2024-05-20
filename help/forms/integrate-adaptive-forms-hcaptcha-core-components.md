@@ -1,14 +1,14 @@
 ---
-title: Hur använder man hCaptcha® i AEM adaptiva Form Core Components?
-description: Förbättra säkerheten med tjänsten Captcha® utan problem. Stegvisa anvisningar inifrån!
+title: Hur använder man hCaptcha&reg; i en AEM adaptiv Form Core Components?
+description: Förbättra formulärsäkerheten med Captcha&reg; utan problem. Stegvisa anvisningar inifrån!
 topic-tags: Adaptive Forms, author
-keywords: hCaptcha®-tjänst, Adaptive Forms, CAPTCHA-utmaning, Boot Prevention, Core Components, säkerhet för att skicka formulär, skydd mot skräppost i formulär
+keywords: Captcha&reg; service, Adaptive Forms, CAPTCHA enge, Bot prevent, Core Components, Form submit security, Form spam prevent
 feature: Adaptive Forms, Core Components
 hide: true
 hidefromtoc: true
-source-git-commit: a8a31bae0f937aa8941d258af648d6be030a9fac
+source-git-commit: d2c6514eb1f38b06dfa58daa03b781920b8928f6
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '910'
 ht-degree: 0%
 
 ---
@@ -17,18 +17,28 @@ ht-degree: 0%
 
 <span class="preview"> Den här funktionen är under Tidigt Adobe-program. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
+CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) är ett program som ofta används vid onlinetransaktioner för att skilja mellan människor och automatiserade program eller organ. Det utgör en utmaning och utvärderar användarens svar för att avgöra om det är en människa eller en robot som interagerar med webbplatsen. Det förhindrar användaren att fortsätta om testet misslyckas och gör onlinetransaktionerna säkra genom att förhindra att skräppost eller skadliga syften publiceras.
+
+AEM Forms as a Cloud Service stöder följande CAPTCHA-lösningar:
+
+* [Google reCAPTCHA](/help/forms/captcha-adaptive-forms-core-components.md)
+* [Molnformad vändning](/help/forms/integrate-adaptive-forms-turnstile-core-components.md)
+* [hCaptcha](/help/forms/integrate-adaptive-forms-hcaptcha-core-components.md)
+
+## Integrera AEM Forms-miljön med Captcha Captcha
+
 Med tjänsten Captcha® kan du skydda dina formulär från stötar, skräppost och automatiskt missbruk. Det utgör en utmaning för kryssrutewidgeten och utvärderar användarens svar för att avgöra om det är en människa eller en robot som interagerar med formuläret. Det förhindrar användaren att fortsätta om testet misslyckas och gör onlinetransaktionerna säkra genom att förhindra att skräppost eller skadliga aktiviteter publiceras.
 
 AEM Forms as a Cloud Service har stöd för hCaptcha® i adaptiva Forms Core-komponenter. Du kan använda den för att visa en kryssrutewidget när formulär skickas.
 
-<!-- ![hCaptcha®](assets/hCaptcha®-challenge.png)-->
+<!-- ![hCaptcha&reg;](assets/hCaptcha&reg;-challenge.png)-->
 
 
-## Förutsättningar för att integrera AEM Forms-miljön med Captcha® {#prerequisite}
+### Förutsättningar för att integrera AEM Forms-miljön med Captcha® {#prerequisite}
 
 Om du vill konfigurera hCaptcha® med AEM Forms måste du skaffa [Kaptcha® sitekey och hemlig nyckel](https://docs.hcaptcha.com/switch/#get-your-hcaptcha-sitekey-and-secret-key) från Captcha®-webbplatsen.
 
-## Steg för att konfigurera hCaptcha® {#steps-to-configure-hcaptcha}
+### Konfigurera hCaptcha® {#steps-to-configure-hcaptcha}
 
 Så här integrerar du AEM Forms med tjänsten Captcha®:
 
@@ -79,7 +89,7 @@ Så här integrerar du AEM Forms med tjänsten Captcha®:
    * **[!UICONTROL Name]:** Ange namnet på Captcha-komponenten. Du kan enkelt identifiera en formulärkomponent med dess unika namn både i formuläret och i regelredigeraren.
    * **[!UICONTROL Title]:** Ange namnet på Captcha-komponenten.
    * **[!UICONTROL Configuration Settings]:** Välj en molnkonfiguration som har konfigurerats för Captcha®.
-   * **Storlek:** Du kan välja visningsstorlek för Chatt®-utmaningsdialogrutan. Använd **[!UICONTROL Compact]** för att visa en liten storlek och **[!UICONTROL Normal]** för att visa en relativt stor hCaptcha®-utmaningsdialogruta.<!-- or **[!UICONTROL Invisible]** to validate hCaptcha® without explicitly rendering the checkbox widget on the user interface. -->
+   * **Storlek:** Du kan välja visningsstorlek för Chatt®-utmaningsdialogrutan. Använd **[!UICONTROL Compact]** för att visa en liten storlek och **[!UICONTROL Normal]** för att visa en relativt stor hCaptcha®-utmaningsdialogruta.<!-- or **[!UICONTROL Invisible]** to validate hCaptcha&reg; without explicitly rendering the checkbox widget on the user interface. -->
    * **[!UICONTROL Validation Message]:** Ange ett valideringsmeddelande för din Captcha-validering när formulär skickas.
    * **[!UICONTROL Script Validation Message]** - Med det här alternativet kan du ange ett meddelande som ska visas om skriptvalideringen misslyckas.
      >[!NOTE]
