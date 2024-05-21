@@ -2,7 +2,7 @@
 title: Generera variationer
 description: Lär dig mer om Generera variationer, som du kommer åt AEM as a Cloud Service och Sidekick i Edge Delivery Services
 exl-id: 9114037f-37b9-4b2f-a714-10933f69b2c3
-source-git-commit: 1d4c6512a3414db901d289557f9704699c8b6222
+source-git-commit: d682ee77e79d013de305816449781a8b1f9af8d2
 workflow-type: tm+mt
 source-wordcount: '3262'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Du kan [få åtkomst till Generera variationer](#access-generate-variations) fr�
 
 * [inom Adobe Experience Manager (AEM) as a Cloud Service](#access-aemaacs)
 * [SIDEKICK i AEM EDGE DELIVERY SERVICES](#access-aem-sidekick)
-* [i Content Fragments Editor](#authoring-content-fragments)
+* [i Content Fragments Editor](#https://experienceleague.corp.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/authoring.html#generate-variations-ai)
 
 >[!NOTE]
 >

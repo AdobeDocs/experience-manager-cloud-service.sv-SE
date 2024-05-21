@@ -4,9 +4,9 @@ description: Lär dig hur du skapar innehåll för dina innehållsfragment och s
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
-source-git-commit: 36fa580b017ab10097512165a35a9198a6d331d3
+source-git-commit: fc97a51bb20bbf0d438d0f27a2246467a480eb71
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2669'
 ht-degree: 0%
 
 ---
@@ -167,7 +167,7 @@ Så här använder du de generativa variationerna i redigeraren för innehållsf
 
 1. Öppna Content Fragment Editor. I rubriken hittar du startpunkten till Generera variationer:
 
-![Generera variationer i Content Fragment Editor](assets/cfm-generate-variations1.png)
+   ![Generera variationer i Content Fragment Editor](assets/cfm-generate-variations1.png)
 
 1. Generera varianter öppnas på en ny flik. I den vänstra listen kan du se AEM Cloud-instansen och det innehållsfragment som du skapar innehåll för. Välj den fråga du vill använda eller skapa en ny fråga.
 
@@ -175,7 +175,7 @@ Så här använder du de generativa variationerna i redigeraren för innehållsf
    >
    >De tillgängliga mallarna för uppmaningsmeddelanden för Adobe är nu begränsade, men fler kommer att läggas till i framtida versioner.
 
-![Exportera för att generera variationer i innehållsfragment](assets/cfm-generate-variations2.png)
+   ![Exportera för att generera variationer i innehållsfragment](assets/cfm-generate-variations2.png)
 
 1. Generera innehåll genom att fylla i uppmaningarna. Innehållsmodellen från fragmentet används automatiskt för att generera innehåll med GenAI.
 
@@ -183,20 +183,20 @@ Så här använder du de generativa variationerna i redigeraren för innehållsf
    >
    >Vi stöder för närvarande bara textfält.
 
-![Exportera för att generera variationer i innehållsfragment](assets/cfm-generate-variations3.png)
+   ![Exportera för att generera variationer i innehållsfragment](assets/cfm-generate-variations3.png)
 
 1. Välj den variant som du vill ha och välj &quot;exportvariant&quot;. Bekräfta namnet på varianten av innehållsfragmentet och välj antingen:
 
    * **Exportera**: exportera varianter till innehållsfragment och stanna i programmet Generera variationer.
    * **Exportera och öppna**: exportera varianter till innehållsfragment och öppna en ny flik som visar innehållsfragmentet med den nya varianten från GenAI.
 
-   ![Exportera för att generera variationer i innehållsfragment](assets/cfm-generate-variations4.png)
+     ![Exportera för att generera variationer i innehållsfragment](assets/cfm-generate-variations4.png)
 
 1. Variationer som genereras visas i redigeraren för huvudinnehållsfragment.
 
    ![Visa Generera variationer i innehållsfragment](assets/cfm-generate-variations5.png)
 
-Du kan läsa mer om Generera variationer [här]{generative-ai/generate-variations.md}.
+Du kan läsa mer om Generera variationer [här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/generative-ai/generate-variations).
 
 ### Ta bort en variant {#delete-variation}
 
