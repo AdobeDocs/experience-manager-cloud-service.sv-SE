@@ -2,9 +2,9 @@
 title: UI-testning
 description: Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa och automatiskt köra gränssnittstester för dina anpassade program
 exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 305098c7ebcb6145129b146d60538b5177b4f26d
 workflow-type: tm+mt
-source-wordcount: '2385'
+source-wordcount: '2610'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa och automatiskt köra gränssnittstester för dina program.
 
-## Översikt {#custom-ui-testing}
+## Ökning {#custom-ui-testing}
 
 AEM innehåller en integrerad svit med [Kvalitetsportar för Cloud Manager](/help/implementing/cloud-manager/custom-code-quality-rules.md) för smidiga uppdateringar av anpassade program. I synnerhet har IT-testportar redan stöd för att skapa och automatisera anpassade tester med AEM API:er.
 
@@ -45,7 +45,7 @@ I det här avsnittet beskrivs stegen som krävs för att konfigurera gränssnitt
 
    * För Cypress använder du exempelkoden från [AEM Test Samples](https://github.com/adobe/aem-test-samples/tree/aem-cloud/ui-cypress).
 
-   * För JavaScript och WDIO använder du exempelkoden som automatiskt genereras i `ui.tests` i din Cloud Manager-databas.
+   * För JavaScript och WDIO använder du den exempelkod som automatiskt genereras i `ui.tests` i din Cloud Manager-databas.
 
      >[!NOTE]
      >
@@ -210,7 +210,7 @@ I det här avsnittet beskrivs de konventioner som Docker-bilden som innehåller 
 Följande miljövariabler skickas till din Docker-bild vid körning, beroende på ditt ramverk.
 
 | Variabel | Exempel | Beskrivning | Testramverk |
-|---|---|---|---|
+|----------------------------|----------------------------------|---------------------------------------------------------------------------------------------------|---------------------|
 | `SELENIUM_BASE_URL` | `http://my-ip:4444` | URL för Selenium-servern | Endast selen |
 | `SELENIUM_BROWSER` | `chrome` | Webbläsarimplementeringen som används av Selenium Server | Endast selen |
 | `AEM_AUTHOR_URL` | `http://my-ip:4502/context-path` | URL:en för AEM författarinstans | Alla |
@@ -221,12 +221,19 @@ Följande miljövariabler skickas till din Docker-bild vid körning, beroende p�
 | `AEM_PUBLISH_PASSWORD` | `admin` | Lösenordet för att logga in på AEM publiceringsinstans | Alla |
 | `REPORTS_PATH` | `/usr/src/app/reports` | Sökvägen där XML-rapporten för testresultaten måste sparas | Alla |
 | `UPLOAD_URL` | `http://upload-host:9090/upload` | Den URL till vilken filen måste överföras för att göra den tillgänglig för testramverket | Alla |
+| `PROXY_HOST` | `proxy-host` | Värdnamnet för den interna HTTP-proxy som ska användas av testramverket | Alla utom selen |
+| `PROXY_HTTPS_PORT` | `8071` | Proxyserverns lyssnarport för HTTPS-anslutningar (kan vara tom) | Alla utom selen |
+| `PROXY_HTTP_PORT` | `8070` | Proxyserverns lyssnarport för HTTP-anslutningar (kan vara tom) | Alla utom selen |
+| `PROXY_CA_PATH` | `/path/to/root_ca.pem` | Sökvägen till certifikatutfärdarcertifikatet som ska användas av testramverket | Alla utom selen |
+| `PROXY_OBSERVABILITY_PORT` | `8081` | HTTP-hälsokontrollporten för proxyservern | Alla utom selen |
+| `PROXY_RETRY_ATTEMPTS` | `12` | Föreslaget antal nya försök i väntan på att proxyservern ska vara klar | Alla utom selen |
+| `PROXY_RETRY_DELAY` | `5` | Föreslagen fördröjning mellan nya försök i väntan på proxyserverberedskap | Alla utom selen |
 
 Provexemplen från Adobe ger hjälpfunktioner för att komma åt konfigurationsparametrarna:
 
 * Cypress: använd standardfunktionen `Cypress.env('VARIABLE_NAME')`
-* JavaScript: Se [lib/config.js](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/ui.tests/test-module/lib/config.js) modul
-* Java: Se [Konfig](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-selenium-webdriver/test-module/src/main/java/com/adobe/cq/cloud/testing/ui/java/ui/tests/lib/Config.java) class
+* JavaScript: Se [`lib/config.js`](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/ui.tests.wdio/test-module/lib/config.js) modul
+* Java: Se [`Config`](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-selenium-webdriver/test-module/src/main/java/com/adobe/cq/cloud/testing/ui/java/ui/tests/lib/Config.java) class
 
 ### Generera testrapporter {#generate-test-reports}
 
@@ -239,6 +246,8 @@ Om Docker-bilden implementeras med andra programmeringsspråk eller testkörare 
 >Resultatet av UI-teststeget utvärderas endast baserat på testrapporter. Se till att du genererar rapporten i enlighet med din testkörning.
 >
 >Använd kontroller i stället för att bara logga ett fel till STDERR eller returnera en avslutningskod som inte är noll, annars kan distributionsflödet fortsätta normalt.
+>
+>Om en HTTP-proxy användes under testkörningen kommer resultatet att innehålla en `request.log` -fil.
 
 ### Förutsättningar {#prerequisites}
 
@@ -252,10 +261,10 @@ Om Docker-bilden implementeras med andra programmeringsspråk eller testkörare 
 
 | Typ | Värde | Beskrivning |
 |----------------------|-------|-----------------------------------------------------------------------|
-| CPU | 2.0 | Den processortid som reserverats per testkörning |
-| Minne | 1Gi | Mängd minne som tilldelats testet, värde i gibibyte |
-| Timeout | 30m | Den varaktighet efter vilken provningen avslutas. |
-| Rekommenderad varaktighet | 15m | Adobe rekommenderar att testet inte tar längre tid än så här. |
+| CPU | 2,0 | Den processortid som reserverats per testkörning |
+| Minne | 1 Gi | Mängd minne som tilldelats testet, värde i gibibyte |
+| Timeout | 30 m | Den varaktighet efter vilken provningen avslutas. |
+| Rekommenderad varaktighet | 15 m | Adobe rekommenderar att testet inte tar längre tid än så här. |
 
 >[!NOTE]
 >
@@ -306,6 +315,113 @@ Testerna ibland måste överföra filer till det program som testas. För att dr
 1. Om överföringen lyckas returnerar begäran en `200 OK` typsvar `text/plain`.
    * Svarets innehåll är ett ogenomskinligt filhandtag.
    * Du kan använda det här handtaget i stället för en filsökväg i en `<input>` -element för att testa filöverföringar i programmet.
+
+## Cypressspecifik information
+
+>[!NOTE]
+>
+>Detta avsnitt gäller endast när Cypress är den valda testinfrastrukturen.
+
+### Konfigurera HTTP-proxy
+
+Docker-behållarens ingångspunkt måste kontrollera värdet för `PROXY_HOST` miljövariabel.
+
+Om det här värdet är tomt behövs inga ytterligare steg och testerna ska köras utan HTTP-proxy.
+
+Om det inte är tomt måste entrypoint-skriptet:
+
+1. Konfigurera en HTTP-proxyanslutning för att köra UI-tester. Detta kan du göra genom att exportera `HTTP_PROXY` systemvariabel som har skapats med följande värden:
+   * Proxyvärd, som tillhandahålls av `PROXY_HOST` variabel
+   * Proxyport, som tillhandahålls av `PROXY_HTTPS_PORT` eller `PROXY_HTTP_PORT` variabel (variabeln med ett icke-tomt värde används)
+2. Ange det certifikatutfärdarcertifikat som ska användas vid anslutning till HTTP-proxyn. Platsen anges av `PROXY_CA_PATH` variabel.
+   * Detta kan uppnås genom export `NODE_EXTRA_CA_CERTS` miljövariabel.
+3. Vänta tills HTTP-proxyn är klar.
+   * Miljövariablerna används för att kontrollera beredskapen `PROXY_HOST`, `PROXY_OBSERVABILITY_PORT`, `PROXY_RETRY_ATTEMPTS` och `PROXY_RETRY_DELAY` kan användas.
+   * Du kan kontrollera med en cURL-begäran och se till att installera cURL i `Dockerfile`.
+
+Ett exempel på implementering finns i Cypress Sample Test Module Entrypoint on [GitHub.](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-cypress/test-module/run.sh)
+
+## Uppspelningsspecifik information
+
+>[!NOTE]
+>
+> Det här avsnittet gäller bara när Playwright är den valda testinfrastrukturen.
+
+### Konfigurera HTTP-proxy
+
+>[!NOTE]
+>
+> I de exempel som presenteras antar vi att Chrome används som en projektwebbläsare.
+
+På liknande sätt som för Cypress måste tester använda HTTP-proxy om en icke-tom `PROXY_HOST` systemvariabel anges.
+
+För att göra detta måste följande ändringar göras.
+
+#### Dockerfile
+
+Installera cURL och `libnss3-tools`, som innehåller `certutil.`
+
+```dockerfile
+RUN apt -y update \
+    && apt -y --no-install-recommends install curl libnss3-tools \
+    && rm -rf /var/lib/apt/lists/*
+```
+
+#### Skript för ingångspunkt
+
+Inkludera ett basskript som, om så är fallet `PROXY_HOST` systemvariabel anges, gör följande:
+
+1. Exportera proxyrelaterade variabler som `HTTP_PROXY` och `NODE_EXTRA_CA_CERTS`
+2. Använd `certutil` för att installera proxy-CA-certifikat för kromium
+3. Vänta tills HTTP-proxyn är klar (eller avsluta vid fel).
+
+Exempel på implementering:
+
+```bash
+# setup proxy environment variables and CA certificate
+if [ -n "${PROXY_HOST:-}" ]; then
+  if [ -n "${PROXY_HTTPS_PORT:-}" ]; then
+    export HTTP_PROXY="https://${PROXY_HOST}:${PROXY_HTTPS_PORT}"
+  elif [ -n "${PROXY_HTTP_PORT:-}" ]; then
+    export HTTP_PROXY="http://${PROXY_HOST}:${PROXY_HTTP_PORT}"
+  fi
+  if [ -n "${PROXY_CA_PATH:-}" ]; then
+    echo "installing certificate"
+    mkdir -p $HOME/.pki/nssdb
+    certutil -d sql:$HOME/.pki/nssdb -A -t "CT,c,c" -n "EaaS Client Proxy Root" -i $PROXY_CA_PATH
+    export NODE_EXTRA_CA_CERTS=${PROXY_CA_PATH}
+  fi
+  if [ -n "${PROXY_OBSERVABILITY_PORT:-}" ] && [ -n "${HTTP_PROXY:-}" ]; then
+    echo "waiting for proxy"
+    curl --silent  --retry ${PROXY_RETRY_ATTEMPTS:-3} --retry-connrefused --retry-delay ${PROXY_RETRY_DELAY:-10} \
+      --proxy ${HTTP_PROXY} --proxy-cacert ${PROXY_CA_PATH:-""} \
+      ${PROXY_HOST}:${PROXY_OBSERVABILITY_PORT}
+    if [ $? -ne 0 ]; then
+      echo "proxy is not ready"
+      exit 1
+    fi
+  fi
+fi
+```
+
+#### Playright configuration
+
+Ändra konfigurationen för uppspelningshöger (till exempel i `playwright.config.js`) om du vill använda en proxy om `HTTP_PROXY` systemvariabel har angetts.
+
+Exempel på implementering:
+
+```javascript
+const proxyServer = process.env.HTTP_PROXY || ''
+```
+
+```javascript
+// enable proxy if set
+if (proxyServer !== '') {
+ cfg.use.proxy = {
+  server: proxyServer,
+ }
+}
+```
 
 ## Köra gränssnittstester lokalt {#run-ui-tests-locally}
 

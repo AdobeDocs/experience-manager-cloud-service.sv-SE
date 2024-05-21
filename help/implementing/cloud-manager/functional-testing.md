@@ -2,9 +2,9 @@
 title: Funktionstestning
 description: Lär dig mer om de tre olika typerna av funktionstestning som är inbyggda i den AEM as a Cloud Service driftsättningsprocessen för att säkerställa att koden är tillförlitlig och av hög kvalitet.
 exl-id: 7eb50225-e638-4c05-a755-4647a00d8357
-source-git-commit: b85d43a05c8bb8a6438ab44bd184b7624456ab6a
+source-git-commit: 305098c7ebcb6145129b146d60538b5177b4f26d
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1373'
 ht-degree: 0%
 
 ---
@@ -92,6 +92,8 @@ Testerna är förpackade i en Docker-bild som är utformad för att vara så bes
 >[!NOTE]
 >
 >Anpassade användargränssnittstester utförs i pipelines för produktion och icke-produktion (opt-in) som används av AEM program ändrar driftsättningar och AEM push-uppdateringar av produkter och är därför ett viktigt bidrag för att säkerställa att programmet fungerar korrekt och öka säkerheten för releaser. Kundens användargränssnittstester utförs också i interna verifieringsövningar före lanseringen för varje kund, vilket bidrar till att ge tidig feedback.
+>
+>Icke-selenbehållare bör köra tester med hjälp av en HTTP-proxy som baseras på miljövariablerna i [UI-testavsnitt.](/help/implementing/cloud-manager/ui-testing.md#custom-ui-testing)
 
 Vi rekommenderar att du fokuserar på viktiga funktioner och de viktigaste interaktionsflödena för att få en effektiv hantering av pipeline. Fullständiga testsviter för användargränssnitt som inte får plats i den här kundporten rekommenderas att utföras som en del av allmänna kundvalideringsflöden under kundens utvecklingsflöde.
 
