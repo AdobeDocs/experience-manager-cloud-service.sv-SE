@@ -2,7 +2,7 @@
 title: Versionsinformation om 2023.10.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2023.10.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 81a6cbd2-7101-429b-8572-2650c5bea963
-source-git-commit: 559b4afa975dcd2204cd06c95f19ed38da00033e
+source-git-commit: 02ad83eb9fa9ed3bf06cf7fe0ef10fd9577f66a9
 workflow-type: tm+mt
 source-wordcount: '918'
 ht-degree: 0%
@@ -59,9 +59,9 @@ Titta på videon med versionsöversikten för oktober 2023 om du vill se en samm
 
 ### Förhandsversioner av funktioner som finns i [!DNL Experience Manager Assets] {#prerelease-features-assets}
 
-* **Dynamic Media**: [Stöd för flera undertexter och flerljudspår för videor i Dynamic Media](/help/assets/dynamic-media/video.md#about-msma)—Nu kan du enkelt lägga till flera undertexter och flera ljudspår i en primär video. Detta innebär att videoklippen är tillgängliga för alla mottagare världen över. Du kan anpassa en enda publicerad primär video till en global publik på flera språk och följa riktlinjer för tillgänglighet för olika geografiska regioner. Författare kan också hantera undertexter och ljudspår från en enda flik i användargränssnittet.
+* **Dynamic Media**: [Stöd för flera bildtexter och flerljudspår för videofilmer i Dynamic Media](/help/assets/dynamic-media/video.md#about-msma)—Nu kan du enkelt lägga till flera bildtexter och flera ljudspår i en primär video. Detta innebär att videoklippen är tillgängliga för alla mottagare världen över. Du kan anpassa en enda publicerad primär video till en global publik på flera språk och följa riktlinjer för tillgänglighet för olika geografiska regioner. Författare kan också hantera beskrivningar och ljudspår från en enda flik i användargränssnittet.
 
-  ![Fliken Undertexter och Ljudspår på sidan Egenskaper för en vald videoresurs.](/help/release-notes/assets/msma-aem-cs.png)*Fliken Undertexter och Ljudspår på sidan Egenskaper för en vald videoresurs.*
+  ![Fliken Bildtexter och ljudspår på egenskapssidan för en vald videoresurs.](/help/release-notes/assets/msma-aem-cs.png)*Fliken Bildtexter och ljudspår på egenskapssidan för en vald videoresurs.*
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
 

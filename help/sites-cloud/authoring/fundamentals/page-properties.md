@@ -2,7 +2,7 @@
 title: Redigera sidegenskaper
 description: Lär dig hur du definierar de egenskaper som krävs för att hantera en sida i AEM.
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
-source-git-commit: 0ad9f349c997c35862e4f571b4741ed4c0c947e2
+source-git-commit: 02ad83eb9fa9ed3bf06cf7fe0ef10fd9577f66a9
 workflow-type: tm+mt
 source-wordcount: '2268'
 ht-degree: 2%
@@ -52,7 +52,7 @@ Egenskaperna fördelas på flera flikar.
 
    * **Sidrubrik** - En rubrik som ska användas på sidan. Används vanligtvis av titelkomponenter. Om den är tom visas **Titel** används.
    * **Navigeringsrubrik** - Du kan ange en separat rubrik som ska användas i navigeringen (om du till exempel vill ha något mer koncist). Om den är tom visas **Titel** används.
-   * **Underrubrik** - En underrubrik som ska användas på sidan.
+   * **Bildtext** - En underrubrik som ska användas på sidan.
    * **Beskrivning** - Din beskrivning av sidan, dess syfte eller annan information som du vill lägga till.
 
 * **På/av-tid**

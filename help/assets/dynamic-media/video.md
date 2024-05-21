@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Video Profiles
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: bae9a5178c025b3bafa8ac2da75a1203206c16e1
+source-git-commit: 02ad83eb9fa9ed3bf06cf7fe0ef10fd9577f66a9
 workflow-type: tm+mt
-source-wordcount: '9230'
+source-wordcount: '9220'
 ht-degree: 0%
 
 ---
@@ -521,7 +521,7 @@ See [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8
 
 
 
-## Aktivera stöd för DASH, multi-subtitle och multi-audio-spår på ditt Dynamic Media-konto {#enable-dash}
+## Aktivera stöd för DASH, multi-caption och multi-audio-spår på ditt Dynamic Media-konto {#enable-dash}
 
 **Aktivera DASH-stöd för ditt konto**
 DASH (Digital Adaptive Streaming over HTTP) är den internationella standarden för direktuppspelad video och används i stor utsträckning av olika videovisningsprogram. När DASH är aktiverat för ditt konto kan du välja mellan DASH eller HLS för adaptiv videoströmning. Eller så kan du välja båda med automatisk växling mellan spelare när **[!UICONTROL auto]** är valt som uppspelningstyp i visningsförinställningen.
@@ -537,15 +537,15 @@ Några viktiga fördelar med att aktivera DASH på ditt konto är följande:
 
 Du aktiverar DASH-support för ditt konto via ett Adobe-kundsupportärende som du skapar och skickar in.
 
-**Aktivera stöd för flera undertexter och flerljudspår på ditt konto**
+**Aktivera stöd för flera bildtexter och flerljudspår på ditt konto**
 
-Samtidigt som du skapar ett Adobe-supportärende där DASH är aktiverat på ditt konto kan du också dra nytta av att stödet för multi-subtitle och multi-audio-spår är automatiskt aktiverat. När du har aktiverat bearbetas alla efterföljande videor som du överför med en ny serverdelsarkitektur som har stöd för att lägga till spår med flera undertexter och flera ljud i videoklipp.
+Samtidigt som du skapar ett Adobe-supportärende där DASH är aktiverat på ditt konto kan du också dra nytta av att stödet för multibildtext och flerljudspår är automatiskt aktiverat. När du har aktiverat bearbetas alla efterföljande videor som du överför med en ny backend-arkitektur som har stöd för att lägga till multi-caption- och multi-audio-spår i videoklipp.
 
 >[!IMPORTANT]
 >
->Alla videofilmer som du har överfört *före* stöd för flera undertexter och flerljudspår på ditt Dynamic Media-konto, [måste bearbetas på nytt](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets). Det här steget för videoombearbetning är nödvändigt för att de ska kunna använda spår med flera undertexter och flera ljud. Video-URL:erna fortsätter att fungera och spelas upp som vanligt efter ombearbetningen.
+>Alla videofilmer som du har överfört *före* stöd för flera bildtexter och flerljudspår på ditt Dynamic Media-konto, [måste bearbetas på nytt](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets). Det här steget för videoombearbetning är nödvändigt för att de ska kunna använda spår med flera bildtexter och multiljud. Video-URL:erna fortsätter att fungera och spelas upp som vanligt efter ombearbetningen.
 
-**Så här aktiverar du stöd för DASH, multi-subtitle och multi-audio-spår på ditt Dynamic Media-konto:**
+**Så här aktiverar du stöd för DASH, multi-caption och multi-audio-spår på ditt Dynamic Media-konto:**
 
 1. [Använd Admin Console för att börja skapa ett nytt supportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 1. Om du vill skapa ett supportärende följer du instruktionerna och ser till att du anger följande information:
@@ -554,7 +554,7 @@ Samtidigt som du skapar ett Adobe-supportärende där DASH är aktiverat på dit
    * Din Cloud Service-miljö (program-ID och miljö-ID).
    * Dynamic Media företagskontonamn.
    * Din Dynamic Media-region: Nordamerika (NA), Asien-Stillahavsområdet (APAC) eller Europa-Mellanöstern-Asien (EMEA).
-   * Ange att stöd för DASH, multi-subtitle och multi-audio-spår ska aktiveras på ditt Dynamic Media-konto på Experience Manager 6.5.
+   * Ange att stöd för DASH, multibildtext och flerljudspår ska aktiveras på ditt Dynamic Media-konto på Experience Manager 6.5.
 
 1. Adobe kundsupport lägger till dig i kundens väntelista baserat på i vilken ordning förfrågningarna skickas.
 1. När Adobe är redo att hantera din begäran kontaktar kundsupporten dig för att koordinera och ange ett måldatum för aktiveringen.
@@ -562,75 +562,75 @@ Samtidigt som du skapar ett Adobe-supportärende där DASH är aktiverat på dit
 1. Nu kan du göra något av följande:
 
    * Skapa [videovisningsförinställning](/help/assets/dynamic-media/managing-viewer-presets.md#creating-a-new-viewer-preset) som vanligt.
-   * [Lägga till flera undertexter och flerljudspår](#add-msma) till videon.
+   * [Lägga till multibildtexter och flerljudspår](#add-msma) till videon.
 
 
-## Stöd för flerrubriks- och flerljudspår för videofilmer i Dynamic Media{#about-msma}
+## Stöd för multibildtext och flerljudspår för videofilmer i Dynamic Media{#about-msma}
 
-Med funktioner för multi-subtitle och multi-audio track i Dynamic Media kan du enkelt lägga till flera undertexter och ljudspår i en primär video. Detta innebär att videoklippen är tillgängliga för alla mottagare världen över. Du kan anpassa en enda publicerad primär video till en global publik på flera språk och följa riktlinjer för tillgänglighet för olika geografiska regioner. Författare kan också hantera undertexter och ljudspår från en enda flik i användargränssnittet.
+Med funktioner för multi-caption och multi-audio track i Dynamic Media kan du enkelt lägga till flera bildtexter och ljudspår i en primär video. Detta innebär att videoklippen är tillgängliga för alla mottagare världen över. Du kan anpassa en enda publicerad primär video till en global publik på flera språk och följa riktlinjer för tillgänglighet för olika geografiska regioner. Författare kan också hantera beskrivningar och ljudspår från en enda flik i användargränssnittet.
 
-![Undertexter och ljudspår i Dynamic Media tillsammans med en tabell som visar överförda VTT-undertextfiler och överförda MP3-ljudspårfiler för en video.](/help/assets/dynamic-media/assets/msma-subtitle-audiotracks-tab.png)
+![Fliken Bildtexter och ljudspår i Dynamic Media tillsammans med en tabell som visar överförda VTT-bildtextfiler och överförda MP3-ljudspårfiler för en video.](/help/assets/dynamic-media/assets/msma-subtitle-audiotracks-tab.png)
 
-Några av användningsområdena för att lägga till multiundertexter och flerljudspår i den primära videon är bland annat följande:
+Några av användningsområdena för att lägga till multibildtexter och flerljudspår i den primära videon är bland annat följande:
 
 | Typ | Använd skiftläge |
 |--- |--- |
-| **Undertexter** | Stöd för flera språk |
+| **Bildtexter** | Stöd för flera språk |
 |  | Beskrivande text för tillgänglighet |
 | **Ljudspår** | Stöd för flera språk |
 |  | Kommentarspår |
 |  | Beskrivande ljud |
 
-Alla [videoformat som stöds i Dynamic Media](/help/assets/file-format-support.md) och alla videovisningsprogram från Dynamic Media - förutom Dynamic Media *Video_360* visningsprogram - kan användas med multiundertexter och flerljudspår.
+Alla [videoformat som stöds i Dynamic Media](/help/assets/file-format-support.md) och alla videovisningsprogram från Dynamic Media - förutom Dynamic Media *Video_360* visningsprogram - stöds för användning med multibildtexter och flerljudspår.
 
-Funktioner för flera undertexter och flerljudspår är tillgängliga för ditt Dynamic Media-konto via en funktion som måste aktiveras (aktiveras) av Adobe kundsupport.
+Funktioner för flera bildtexter och ljudspår är tillgängliga för ditt Dynamic Media-konto via en funktion som måste aktiveras (aktiveras) av Adobe kundsupport.
 
-### Lägga till flera undertexter och flera ljudspår i videon {#add-msma}
+### Lägga till multibildtexter och flerljudspår i videon {#add-msma}
 
-Innan du lägger till spår med flera undertexter och flera ljud i videon måste du kontrollera att du redan har följande på plats:
+Innan du lägger till spår för flera bildtexter och ljud i videon måste du kontrollera att du redan har följande på plats:
 
 * Dynamic Media är konfigurerat i en AEM miljö.
 * A [Dynamic Media videoprofil används på den mapp där videoklippen har importerats](/help/assets/dynamic-media/video-profiles.md#applying-a-video-profile-to-folders).
-* [Spår för flera undertexter och flera ljud är aktiverat på ditt Dynamic Media-konto](#enable-dash).
+* [Flerbildnings- och flerljudspår är aktiverade på ditt Dynamic Media-konto](#enable-dash).
 
-Undertexter och bildtexter som lagts till stöds i formaten WebVTT och Adobe VTT. Dessutom stöds tillagda ljudspårsfiler med MP3-format.
+Nya bildtexter och bildtexter stöds med formaten WebVTT och Adobe VTT. Dessutom stöds tillagda ljudspårsfiler med MP3-format.
 
 >[!IMPORTANT]
 >
->Alla videofilmer som du har överfört *före* stöd för flera undertexter och flerljudspår på ditt Dynamic Media-konto, [måste bearbetas på nytt](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets). Det här steget för videoombearbetning är nödvändigt för att de ska kunna använda spår med flera undertexter och flera ljud. Video-URL:erna fortsätter att fungera och spelas upp som vanligt efter ombearbetningen.
+>Alla videofilmer som du har överfört *före* stöd för flera bildtexter och flerljudspår på ditt Dynamic Media-konto, [måste bearbetas på nytt](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets). Det här steget för videoombearbetning är nödvändigt för att de ska kunna använda spår med flera bildtexter och multiljud. Video-URL:erna fortsätter att fungera och spelas upp som vanligt efter ombearbetningen.
 
-**Så här lägger du till multiundertexter och flerljudspår i videon:**
+**Så här lägger du till multibildtexter och flerljudspår i videon:**
 
 1. [Överför din primära video till en mapp](/help/assets/manage-video-assets.md#upload-and-preview-video-assets) som redan har tilldelats en videoprofil.
-1. Navigera till den överförda videoresursen som du vill lägga till spår med flera undertexter och flera ljud.
+1. Navigera till den överförda videoresursen som du vill lägga till spår för flera bildtexter och flera ljud.
 1. Välj videoresurs i resursurvalsläget, antingen från listvyn eller kortvyn.
 1. I verktygsfältet väljer du ikonen Egenskaper (en cirkel med &quot;i&quot;).
    ![Markerad videoresurs med bockmarkering över videominiatyrbild och Visa egenskaper markerade i verktygsfältet.](/help/assets/dynamic-media/assets/msma-selectedasset-propertiesbutton.png)*Markerad videoresurs i kortvyn.*
-1. På videons egenskapssida väljer du **[!UICONTROL Subtitles & Audio Tracks]** -fliken.
+1. På videons egenskapssida väljer du **[!UICONTROL Captions & Audio Tracks]** -fliken.
 
    >[!TIP]
-   >Om du inte ser **[!UICONTROL Subtitles & Audio Tracks]** betyder det något av två:
+   >Om du inte ser **[!UICONTROL Captions & Audio Tracks]** betyder det något av två:
    >
    >* Mappen där den valda videon finns har ingen tilldelad videoprofil. I så fall, se [Använda en videoprofil på mappen](/help/assets/dynamic-media/video-profiles.md#applying-video-profiles-to-specific-folders)
    >* Eller så måste videon bearbetas på nytt av Dynamic Media. I så fall, se [Bearbeta Dynamic Media-resurser igen i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
    >
    >När du har slutfört någon av ovanstående åtgärder går du tillbaka till dessa steg.
 
-   ![Undertexter och ljudspår på egenskapssidan.](/help/assets/dynamic-media/assets/msma-audiotracks.png)*Underrubriker och fliken Ljudspår på videons egenskapssida.*
+   ![Fliken Bildtexter och Ljudspår på sidan Egenskaper.](/help/assets/dynamic-media/assets/msma-audiotracks.png)*Fliken Bildtexter och Ljudspår på videons egenskapssida.*
 
-1. (Valfritt) Gör så här om du vill lägga till en eller flera undertextningsfiler i en video:
-   * Välj **[!UICONTROL Upload Subtitles]**.
+1. (Valfritt) Gör så här om du vill lägga till en eller flera bildtextfiler i en video:
+   * Välj **[!UICONTROL Upload Captions]**.
    * Navigera till och markera en eller flera VTT-filer (Video Text Tracks) och öppna dem.
-   * För att underrubriker ska vara synliga i mediespelaren *måste* lägg till nödvändig information (metadata) om *var* undertextfil som du överförde. Välj pennikonen till höger om namnet på en undertextfil. I **Redigera underrubrik** anger du följande obligatoriska information om filen och väljer **[!UICONTROL Save]**. Upprepa den här processen för varje undertitelfil som du överförde:
+   * För att bildtexter ska vara synliga i mediespelaren *måste* lägg till nödvändig information (metadata) om *var* bildtextfil som du överförde. Välj pennikonen till höger om namnet på en bildtextfil. I **Redigera beskrivning** anger du följande obligatoriska information om filen och väljer **[!UICONTROL Save]**. Upprepa den här processen för varje bildtextfil som du överförde:
 
-     | Underrubriksmetadata | Beskrivning |
+     | Bildtextmetadata | Beskrivning |
      |--- |--- |
-     | Filnamn | Standardfilnamnet härleds från det ursprungliga filnamnet. Filnamnet kan bara ändras under överföring och kan inte ändras senare. Teckenkraven för filnamn är desamma som för AEM Assets.<br>Samma filnamn kan inte användas för ytterligare undertextningsfiler och ljudspårsfiler. |
-     | Språk | Välj språk för underrubriken. |
-     | Typ | Välj den typ av underrubrik som du använder.<br>**Underrubrik** - Undertexten som visas med videon som översätter eller transkriberar dialogrutan.<br>**Bildtext** - Bildtexten innehåller även bakgrundsljud, talardifferentiering och annan relevant information, tillsammans med översättningen eller transkriberingen av dialogen, som gör innehållet mer tillgängligt för personer som är döva eller hörselskadade. |
-     | Etikett | Den text som visas för undertextens namn i **[!UICONTROL Select audio or caption]** popup-lista i mediespelaren. Etiketten är det som kunden ser och som motsvarar ett underrubrik- eller bildtextspår. Till exempel: `English (CC)`. |
+     | Filnamn | Standardfilnamnet härleds från det ursprungliga filnamnet. Filnamnet kan bara ändras under överföring och kan inte ändras senare. Teckenkraven för filnamn är desamma som för AEM Assets.<br>Samma filnamn kan inte användas för ytterligare bildtextfiler och ljudspårsfiler. |
+     | Språk | Välj språk för bildtexten. |
+     | Typ | Välj den typ av bildtext som du använder.<br>**Bildtext** - Bildtexten som visas med videon som översätter eller transkriberar dialogrutan.<br>**Bildtext** - Bildtexten innehåller även bakgrundsljud, talardifferentiering och annan relevant information, tillsammans med översättningen eller transkriberingen av dialogen, som gör innehållet mer tillgängligt för personer som är döva eller hörselskadade. |
+     | Etikett | Texten som visas som bildtextens namn i **[!UICONTROL Select audio or caption]** popup-lista i mediespelaren. Etiketten är vad kunden ser och motsvarar ett bildtextspår. Till exempel: `English (CC)`. |
 
-     Om det behövs kan du ändra eller redigera metadata för underrubriken senare. När videon publiceras återspeglas dessa uppgifter på offentliga URL:er i publicerade videor.
+     Om det behövs kan du ändra eller redigera bildtextens metadata senare. När videon publiceras återspeglas dessa uppgifter på offentliga URL:er i publicerade videor.
 
 1. (Valfritt) Gör följande om du vill lägga till ett eller flera ljudspår i en video:
    * Välj **[!UICONTROL Upload Audio Tracks]**.
@@ -639,7 +639,7 @@ Undertexter och bildtexter som lagts till stöds i formaten WebVTT och Adobe VTT
 
      | Metadata för ljudspår | Beskrivning |
      |--- |--- |
-     | Filnamn | Standardfilnamnet härleds från det ursprungliga filnamnet. Filnamnet kan bara ändras under överföring och kan inte ändras senare. Teckenkraven för filnamn är desamma som för AEM Assets.<br>Samma filnamn kan inte användas för ytterligare ljudspårfiler eller undertextfiler. |
+     | Filnamn | Standardfilnamnet härleds från det ursprungliga filnamnet. Filnamnet kan bara ändras under överföring och kan inte ändras senare. Teckenkraven för filnamn är desamma som för AEM Assets.<br>Samma filnamn kan inte användas för ytterligare ljudspårsfiler eller bildtextfiler. |
      | Språk | Välj språk för ljudspåret. |
      | Typ | Välj vilken typ av ljudspår du använder.<br>**Original** - Ljudspåret som ursprungligen var kopplat till videon och representeras som `[Original]` i etiketten med `English` som är valt som standard. while **[!UICONTROL Label]** och **[!UICONTROL Language]** kan ändras i **[!UICONTROL Edit Audio Track]** används de ursprungliga värdena om den primära videon bearbetas om.<br>**Standard** - Ett tilläggsljudspår för ett annat språk än originalspråket.<br>**Ljudbeskrivning** - Ett ljudspår som även innehåller en beskrivande berättarröst för icke-verbala händelser och gester i videon, vilket gör innehållet mer tillgängligt för personer med nedsatt syn. |
      | Etikett | Texten som visas som ljudspårets namn i **[!UICONTROL Select audio or caption]** popup-lista i mediespelaren. Etiketten är det kunden ser och motsvarar ett ljudspår. Till exempel: `English [Original]`. Etiketten för ljud som är kopplat till en video är inställd på `[Original|` som standard. |
@@ -652,25 +652,25 @@ Undertexter och bildtexter som lagts till stöds i formaten WebVTT och Adobe VTT
    >
    >Beroende på inställningarna för cachning för instansen kan metadatabearbetningen ta flera minuter innan den visas i förhandsgranskningen och i publicerade URL:er.
 
-1. (Valfritt) Om du har valt **[!UICONTROL Save & Close]** i föregående steg, i stället för att markera **[!UICONTROL Save]** kan du fortfarande visa de överförda filernas bearbetningsstatus. Se [Visa livscykelstatus för överförda undertitel- och ljudspårfiler](#lifecycle-status-video).
-1. (Valfritt) Förhandsgranska videon före publicering för att kontrollera att undertexterna och ljudet fungerar som förväntat. Se [Förhandsgranska en video med flera undertexter och ljudspår](#preview-video-audio-subtitle)
+1. (Valfritt) Om du har valt **[!UICONTROL Save & Close]** i föregående steg, i stället för att markera **[!UICONTROL Save]** kan du fortfarande visa de överförda filernas bearbetningsstatus. Se [Visa livscykelstatus för överförda beskrivnings- och ljudspårsfiler](#lifecycle-status-video).
+1. (Valfritt) Förhandsgranska videon innan du publicerar för att kontrollera att beskrivningarna och ljudet fungerar som förväntat. Se [Förhandsgranska en video med flera bildtexter och ljudspår](#preview-video-audio-subtitle)
 1. Publicera videon. Se [Publicera resurser](publishing-dynamicmedia-assets.md).
 
-#### Lägga till undertitel- och ljudspårfiler i en video som redan är publicerad
+#### Lägga till beskrivnings- och ljudspårsfiler i en video som redan är publicerad
 
-När du överför ytterligare undertextningsfiler eller ljudspårsfiler till en video som redan är publicerad innebär det att dessa filer har en `Processed` status efter att de har förberetts, efter överföring. Då kan du förhandsgranska videon i Dynamic Media för att se eller höra de nyligen överförda filerna.
+När du överför ytterligare bildtextfiler eller ljudspårsfiler till en video som redan är publicerad innebär det att dessa filer har en `Processed` status efter att de har förberetts, efter överföring. Då kan du förhandsgranska videon i Dynamic Media för att se eller höra de nyligen överförda filerna.
 
-Efter förhandsgranskning måste du dock *publicera* videon igen för att de nya undertitel- eller ljudspårsfilerna också ska publiceras. Efter publiceringen blir undertexterna eller ljudet tillgängliga med den offentliga Dynamic Media-URL:en.
+Efter förhandsgranskning måste du dock *publicera* videon igen så att även de nya bildtextfilerna eller ljudspårsfilerna kan publiceras. Efter publiceringen blir bildtexterna eller ljudet tillgängliga med den offentliga Dynamic Media-URL:en.
 
 >[!NOTE]
 >
 >Baserat på cachelagringsinställningarna för din instans kan metadatauppdateringar ta flera minuter innan de visas i förhandsgranskningen och i publicerade URL:er.
 
-Om du har konfigurerat Dynamic Media för omedelbar publicering kommer överföringen av ytterligare undertitel- eller ljudfiler omedelbart att starta en publicering av videon efter överföringen av undertitel- eller ljudfiler.
+Om du har konfigurerat Dynamic Media för omedelbar publicering kommer överföringen av ytterligare beskrivnings- eller ljudfiler omedelbart att utlösa en publicering av videon efter överföringen av beskrivnings- eller ljudfiler.
 
 >[!CAUTION]
 >
->När du överför undertextningsfiler eller ljudfiler till en video som antingen är publicerad eller opublicerad tas filerna bort om du [*ombearbeta*](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets) videon. Endast videons ursprungliga ljud förblir intakt. I så fall måste du ladda upp undertextningsfilerna och ljudspårsfilerna till videon igen.
+>När du överför bildtextfiler eller ljudfiler till en video som antingen är publicerad eller opublicerad tas filerna bort om du [*ombearbeta*](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets) videon. Endast videons ursprungliga ljud förblir intakt. I så fall måste du ladda upp bildtextfilerna och ljudspårsfilerna till videon igen.
 
 #### Lägga till flera bildtexter i en video som har en befintlig URL med bildtextmodifierare
 
@@ -681,36 +681,36 @@ Dynamic Media har stöd för att lägga till en enda bildtext med video via en U
 **Så här lägger du till flera bildtexter i en video som har en befintlig URL med bildtextmodifierare:**
 
 1. Överför bildtextfilen som redan har lagts till som modifierare till videon, så att du kan hantera filen explicit.
-1. Överför eventuella ytterligare undertitel-/bildtextfiler.
+1. Överför eventuella ytterligare bildtextfiler.
 1. Publicera videon som vanligt.
 Den befintliga URL:en med bildtextmodifieraren kan nu läsa in flera bildtexter.
 
-### Visa livscykelstatus för överförda undertitel- och ljudspårfiler{#lifecycle-status-video}
+### Visa livscykelstatus för överförda beskrivnings- och ljudspårsfiler{#lifecycle-status-video}
 
-Du kan följa livscykelstatusen för alla undertexter eller ljudspårsfiler som överförts till den primära videon från **Undertexter och ljudspår** flik för **Egenskaper**.
+Du kan följa livscykelstatusen för alla beskrivnings- eller ljudspårsfiler som överförts till den primära videon från **Bildtexter och ljudspår** flik för **Egenskaper**.
 
 **Så här visar du livscykelstatusen för en video:**
 
 1. Navigera till den videoresurs vars livscykelstatus du vill visa.
 1. Välj videoresurs i resursurvalsläget, antingen från listvyn eller kortvyn.
 1. I verktygsfältet väljer du ikonen Egenskaper (en cirkel med &quot;i&quot;).
-1. På sidan Egenskaper väljer du **[!UICONTROL Subtitles & Audio Tracks]** -fliken. Observera status för varje underrubrik eller ljudfil i kolumnen Status.
+1. På sidan Egenskaper väljer du **[!UICONTROL Captions & Audio Tracks]** -fliken. Observera status för varje bildtext eller ljudfil i kolumnen Status.
 
-| Status för underrubrik eller ljudspår | Beskrivning |
+| Status för beskrivning eller ljudspår | Beskrivning |
 | --- | --- |
-| Bearbetar | När en ny undertitel- eller ljudspårsfil läggs till och sparas, försätts den i tillståndet&quot;Bearbetar&quot;. Dynamic Media bearbetar filen genom att bifoga det direktuppspelade manifestet till den primära videon. |
-| Behandlad | När bearbetningen är klar visas undertextnings- eller ljudspårsfilen, eller det ursprungliga ljudspåret som är associerat med den primära videon, i läget Behandlad. Du kan förhandsgranska undertitel- och ljudspårsfiler som visas som &quot;Behandlad&quot; *före* publicerar du videon live. |
+| Bearbetar | När en ny beskrivnings- eller ljudspårsfil läggs till och sparas, försätts den i tillståndet&quot;Bearbetar&quot;. Dynamic Media bearbetar filen genom att bifoga det direktuppspelade manifestet till den primära videon. |
+| Behandlad | När bearbetningen är klar visas beskrivnings- eller ljudspårsfilen, eller det ursprungliga ljudspåret som är associerat med den primära videon, i läget Behandlad. Du kan förhandsgranska beskrivnings- och ljudspårsfiler som visas som &quot;Behandlad&quot; *före* publicerar du videon live. |
 | Publicerad | Ett publicerat läge representerar ett läge som liknar publicerat för en primär video. Resurser publiceras när den primära videon publiceras och är tillgängliga på den offentliga Dynamic Media-URL:en. |
-| Misslyckades | Ett &quot;Misslyckat&quot;-läge innebär att bearbetningen av en undertitel- eller ljudspårsfil inte slutfördes. Ta bort undertitel- eller ljudspårsfilen och överför igen. |
-| Opublicerad | När en publicerad primär video avpubliceras explicit avpubliceras även eventuella undertitel- eller ljudspårsfiler som du har lagt till i videon. |
+| Misslyckades | Ett &quot;Misslyckat&quot;-läge betyder att bearbetningen av en beskrivnings- eller ljudspårsfil inte slutfördes. Ta bort beskrivnings- eller ljudspårsfilen och överför igen. |
+| Opublicerad | När en publicerad primär video avpubliceras explicit avpubliceras även eventuella beskrivnings- eller ljudspårsfiler som du har lagt till i videon. |
 
-![Statuskolumnen är markerad för fälten Undertexter och Ljudspår.](/help/assets/dynamic-media/assets/msma-lifecycle-status.png)*Livscykelstatus för varje överförd undertitel- och ljudspårfil.*
+![Statuskolumnen är markerad för bildtexter och ljudspår.](/help/assets/dynamic-media/assets/msma-lifecycle-status.png)*Livscykelstatus för varje överförd bildtext och ljudspårfil.*
 
 ### Ange standardljud för en video som har flera ljudspår
 
 Som standard anges videons ursprungliga ljud som standardljud som ska spelas upp.
 
-Alla överförda ljudspårsfiler kan dock anges som standardljud som spelas upp när en video har lästs in i visningsprogrammet. I användargränssnittet för Egenskaper, under **Undertexter och ljudspår** -fliken, `Default` -etiketten används till höger om ljudspårsfilen för videouppspelning.
+Alla överförda ljudspårsfiler kan dock anges som standardljud som spelas upp när en video har lästs in i visningsprogrammet. I användargränssnittet för Egenskaper, under **Bildtexter och ljudspår** -fliken, `Default` -etiketten används till höger om ljudspårsfilen för videouppspelning.
 
 >[!NOTE]
 >
@@ -724,7 +724,7 @@ Alla överförda ljudspårsfiler kan dock anges som standardljud som spelas upp 
 1. Navigera till den videoresurs vars standardljudspår du vill ställa in.
 1. Välj videoresurs i resursurvalsläget, antingen från listvyn eller kortvyn.
 1. I verktygsfältet väljer du ikonen Egenskaper (en cirkel med &quot;i&quot;).
-1. På sidan Egenskaper väljer du **[!UICONTROL Subtitles & Audio Tracks]** -fliken.
+1. På sidan Egenskaper väljer du **[!UICONTROL Captions & Audio Tracks]** -fliken.
 1. Under **Ljudspår** väljer du ljudspårsfilen som du vill ange som videostandardfil.
 1. Välj **[!UICONTROL Set as default]**.
 I **Ange som standard** väljer **[!UICONTROL Replace]**.
@@ -734,9 +734,9 @@ I **Ange som standard** väljer **[!UICONTROL Replace]**.
 1. I det övre högra hörnet väljer du **[!UICONTROL Save & Close]**.
 1. Publicera videon. Se [Publicera resurser](publishing-dynamicmedia-assets.md).
 
-### Förhandsgranska en video med flera undertexter och ljudspår{#preview-video-audio-subtitle}
+### Förhandsgranska en video med flera bildtexter och ljudspår{#preview-video-audio-subtitle}
 
-När du har överfört undertextningsfiler och ljudspårsfiler till en video och bearbetat dem kan du använda Dynamic Media videovisningsprogram för att förhandsgranska alla olika spår. Om du gör det blir det lättare att se hur videon ser ut och låter som den är för kunderna, och du kan vara säker på att den beter sig som förväntat.
+När bildtextfiler och ljudspårsfiler har överförts till en video och bearbetats kan du använda Dynamic Media videovisningsprogram för att förhandsgranska alla olika spår. Om du gör det blir det lättare att se hur videon ser ut och låter som den är för kunderna, och du kan vara säker på att den beter sig som förväntat.
 
 När du är nöjd med videon kan du [publicera](publishing-dynamicmedia-assets.md) med någon av följande metoder.
 
@@ -746,11 +746,11 @@ Se [Lägga till Dynamic Media Assets på sidor](/help/assets/dynamic-media/addin
 
 >[!NOTE]
 >
->På standardfliken för förhandsgranskning i Experience Manager visas inte flera undertext- och ljudspår. Orsaken är att dessa spår är kopplade till Dynamic Media och bara kan visas med förhandsvisningen i Dynamic Media Viewer.
+>På standardfliken för förhandsgranskning i Experience Manager visas inte flera bildtexter och ljudspår. Orsaken är att dessa spår är kopplade till Dynamic Media och bara kan visas med förhandsvisningen i Dynamic Media Viewer.
 
-**Så här förhandsgranskar du en video som har flera undertexter och ljudspår:**
+**Så här förhandsgranskar du en video som har flera bildtexter och ljudspår:**
 
-1. I **[!UICONTROL Assets]** navigera till en befintlig video som du har lagt till flera undertexter och ljudspår.
+1. I **[!UICONTROL Assets]** navigera till en befintlig video som du har lagt till flera bildtexter och ljudspår.
 1. Klicka på videoresursen så att du kan öppna den i förhandsgranskningsläge.
 1. Markera listrutan på förhandsvisningssidan, i det övre vänstra hörnet på sidan, och välj sedan **[!UICONTROL Viewers]**.
 
@@ -760,49 +760,49 @@ Se [Lägga till Dynamic Media Assets på sidor](/help/assets/dynamic-media/addin
 
    ![Välj Video Viewer i listrutan Viewer.](/help/assets/dynamic-media/assets/msma-dmviewerselected.png)
 
-1. I närheten av det nedre högra hörnet, till vänster om volymikonen, väljer du ikonen för pratbubblan och sedan det ljud eller den underrubrik som du vill höra eller se eller båda. Om du vill kan du under Underrubriker välja **[!UICONTROL Off]** om du inte vill visa några undertexter eller bildtexter.
+1. I närheten av det nedre högra hörnet, till vänster om volymikonen, väljer du ikonen för talbubblan och sedan det ljud eller den bildtext som du vill höra eller se eller båda. Om du vill kan du under Bildtexter välja **[!UICONTROL Off]** så att inga bildtexter eller bildtexter visas.
 
-   ![Popup-listan Ljud och underrubriker i Video Viewer.](/help/assets/dynamic-media/assets/msma-selectaudiosubtitle.png)*Simulering av en användare som väljer ljud och undertext för videouppspelning.*
+   ![Popup-listan Ljud och beskrivningar i videoredigeraren.](/help/assets/dynamic-media/assets/msma-selectaudiosubtitle.png)*Simulering av en användare som väljer ljud och bildtext för videouppspelning.*
 
 1. För att börja spela upp väljer du videons **[!UICONTROL Play]** -knappen.
 Anteckna **[!UICONTROL URL]** och **[!UICONTROL Embed]** i det nedre vänstra hörnet. Använd de här knapparna för att [länka videons URL till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md) eller till [bädda in videon på en webbsida](/help/assets/dynamic-media/embed-code.md), respektive
 1. I det övre högra hörnet av förhandsvisningssidan väljer du **[!UICONTROL Close]**.
 
-### Ta bort undertitel- eller ljudspårsfiler från en video
+### Ta bort beskrivnings- eller ljudspårsfiler från en video
 
-Du kan ta bort undertitel- eller ljudspårsfiler från en video. Borttagning av publicerade undertitel- eller ljudspårsfiler återspeglas automatiskt i videons publicerade URL.
+Du kan ta bort beskrivnings- eller ljudspårfiler från en video. Borttagning av publicerade bildtexter eller ljudspårsfiler återspeglas automatiskt i videons publicerade URL.
 
 Det går inte att ta bort det ursprungliga ljudspåret som har extraherats från en primär video.
 
-**Så här tar du bort undertitel- eller ljudspårfiler från en video:**
+**Så här tar du bort beskrivnings- eller ljudspårfiler från en video:**
 
 1. Navigera till den videoresurs vars standardljudspår du vill ställa in.
 1. Välj videoresurs i resursurvalsläget, antingen från listvyn eller kortvyn.
 1. I verktygsfältet väljer du ikonen Egenskaper (en cirkel med &quot;i&quot;).
-1. På sidan Egenskaper väljer du **[!UICONTROL Subtitles & Audio Tracks]** -fliken.
+1. På sidan Egenskaper väljer du **[!UICONTROL Captions & Audio Tracks]** -fliken.
 1. Gör något av följande:
 
-   * Undertexter - under **Undertexter** rubrik, markera en eller flera underrubriksfiler som du vill ta bort från videon och välj sedan **[!UICONTROL Delete]**.
+   * Bildtexter - under **Bildtexter** rubrik, markera en eller flera bildtextfiler som du vill ta bort från videon och markera sedan **[!UICONTROL Delete]**.
    * Ljudspår - under **Ljudspår** rubrik, markera en eller flera ljudspårsfiler som du vill ta bort från videon och välj sedan **[!UICONTROL Delete]**.
 
 1. I dialogrutan Ta bort väljer du **[!UICONTROL OK]**.
 1. Publicera videon.
 
-### Hämta undertitel- eller ljudspårsfiler som överförts till en video
+### Hämta beskrivnings- eller ljudspårsfiler som har överförts till en video
 
-Du kan hämta en eller flera undertitel- eller ljudspårsfiler som du har överfört för användning med en video. Du kan antingen hämta alla markerade filer som en ZIP-fil eller skapa en separat hämtningsmapp för varje fil.
+Du kan hämta en eller flera beskrivnings- eller ljudspårsfiler som du har överfört för användning med en video. Du kan antingen hämta alla markerade filer som en ZIP-fil eller skapa en separat hämtningsmapp för varje fil.
 
 Det går inte att hämta det ursprungliga ljudspåret som har extraherats från en primär fil.
 
-**Så här hämtar du undertitel- eller ljudspårfiler från en video:**
+**Så här hämtar du beskrivnings- eller ljudspårsfiler från en video:**
 
 1. Navigera till den videoresurs vars standardljudspår du vill ställa in.
 1. Välj videoresurs i resursurvalsläget, antingen från listvyn eller kortvyn.
 1. I verktygsfältet väljer du ikonen Egenskaper (en cirkel med &quot;i&quot;).
-1. På sidan Egenskaper väljer du **[!UICONTROL Subtitles & Audio Tracks]** -fliken.
+1. På sidan Egenskaper väljer du **[!UICONTROL Captions & Audio Tracks]** -fliken.
 1. Gör något av följande:
 
-   * Undertexter - under **Undertexter** rubrik, välj en eller flera undertextningsfiler som du vill hämta från videon och välj sedan **[!UICONTROL Download]**.
+   * Bildtexter - under **Bildtexter** rubrik, välj en eller flera bildtextfiler som du vill hämta från videon och välj sedan **[!UICONTROL Download]**.
    * Ljudspår - under **Ljudspår** välj en eller flera ljudspårsfiler som du vill hämta från videon och välj sedan **[!UICONTROL Download]**.
 
 1. Ange följande alternativ i dialogrutan Hämta:
@@ -810,7 +810,7 @@ Det går inte att hämta det ursprungliga ljudspåret som har extraherats från 
    | Alternativ | Beskrivning |
    |--- |--- |
    | Spara som | Använd standardfilnamnet som anges i textfältet Spara som eller ange ett eget namn. |
-   | Skapa en separat mapp för varje resurs | Skapa en mapp för varje undertextfil eller ljudspårsfil som du valde för hämtning. |
+   | Skapa en separat mapp för varje resurs | Skapa en mapp för varje bildtextfil eller ljudspårsfil som du valde för hämtning. |
    | E-post | Använd ditt standardprogram för e-post för att skicka ZIP-filen till en angiven e-postadress. |
    | Assets | Anger antalet filer som du hämtar och den sammanlagda storleken för alla markerade filer. Om du avmarkerar det här alternativet tonas (inaktiveras) **[!UICONTROL Download]** så att du inte kan hämta filer. |
 1. Välj **[!UICONTROL Download]**.
@@ -825,7 +825,7 @@ Det går inte att hämta det ursprungliga ljudspåret som har extraherats från 
 
 >[!IMPORTANT]
 >
->Adobe rekommenderar att du [möjliggör funktioner för flera undertexter och flerljudspår](#enable-dash) på ditt Dynamic Media-konto. På så sätt kan du dra nytta av den senaste Dynamic Media backend-arkitekturen och ett förenklat arbetsflöde för att lägga till bildtexter, undertexter och ljudspår i videoklipp.
+>Adobe rekommenderar att du [möjliggör funktioner för flera bildtexter och flera ljudspår](#enable-dash) på ditt Dynamic Media-konto. På så sätt kan du dra nytta av den senaste Dynamic Media backend-arkitekturen och ett förenklat arbetsflöde för att lägga till bildtexter, bildtexter och ljudspår i videoklipp.
 
 Du kan utöka räckvidden för dina videor till globala marknader genom att lägga till undertexter till enskilda videor eller till adaptiva videouppsättningar. Genom att lägga till undertextning slipper du att duplicera ljudet eller att du behöver använda inbyggda högtalare för att spela in ljudet igen för varje språk. Videon spelas upp på det språk den spelades in på. Undertexter på främmande språk visas så att personer på olika språk fortfarande kan förstå ljuddelen.
 
@@ -841,15 +841,15 @@ Dynamic Media kan konvertera bildtextfiler till JSON-format (JavaScript Object N
 
 Se [Hantera statiskt innehåll (inte bildinnehåll)](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api) om du vill ha mer information om hur du använder JSON-funktionen i en URL.
 
-**Så här lägger du till bildtexter eller undertexter till video:**
+**Så här lägger du till bildtexter i videon:**
 
-1. Använd ett program eller en tjänst från tredje part för att skapa en undertextningsfil för video.
+1. Använd ett program eller en tjänst från tredje part för att skapa videobeskrivningsfilen.
 
    Kontrollera att filen du skapar följer standarden WebVTT (Web Video Text Tracks). Bildtextens filnamnstillägg är .VTT. Du kan läsa mer om bildtextstandarden WebVTT.
 
    Se [WebVTT: Textspår för webbvideo](https://w3c.github.io/webvtt/).
 
-   Det finns många webbplatser som innehåller både kostnadsfria och premiumverktyg och tjänster som du kan använda för att skapa WebVTT-bildtexter/undertexter utanför Dynamic Media. <!-- THE FOLLOWING LINK IS NO LONGER LIVE. CHECKED DECEMBER 13, 2023 For example, to create a simple video caption file with no styling, you can use the following free online caption authoring and editing tool: -->
+   Det finns många webbplatser som innehåller både kostnadsfria och premiumverktyg och tjänster som du kan använda för att skapa WebVTT-bildtextfiler utanför Dynamic Media. <!-- THE FOLLOWING LINK IS NO LONGER LIVE. CHECKED DECEMBER 13, 2023 For example, to create a simple video caption file with no styling, you can use the following free online caption authoring and editing tool: -->
 
    <!-- [WebVTT Caption Maker](https://testdrive-archive.azurewebsites.net/Graphics/CaptionMaker/Default.html)
 
@@ -861,7 +861,7 @@ Följ instruktionerna på skärmen för att skapa och spara WebVTT-filen. När d
 
 >[!NOTE]
 >
->För globalt stöd för videoundertexter på flera språk kräver WebVTT-standarden att du skapar separata .vtt-filer och anropar varje språk som du vill ha stöd för.
+>För globalt stöd för videobeskrivningar på flera språk kräver WebVTT-standarden att du skapar separata VTT-filer och anropar varje språk som du vill ha stöd för.
 
 Vanligtvis vill du ge bildtexten VTT ett namn som är detsamma som videofilen och bifoga den med språkinställningen -EN, -FR eller -DE. Genom att göra det kan det hjälpa dig att automatisera genereringen av video-URL:er med ditt befintliga system för hantering av webbinnehåll.
 
