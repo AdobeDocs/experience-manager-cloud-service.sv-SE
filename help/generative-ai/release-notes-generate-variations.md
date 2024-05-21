@@ -1,10 +1,11 @@
 ---
 title: Versionsinformation för Generera variationer
 description: Versionsinformation för Generera variationer, tillgänglig AEM as a Cloud Service och Sidekick i Edge Delivery Services
-source-git-commit: 8067da7fb65bee6c147f306712eb312323244357
+exl-id: caf85bae-3cce-4083-ab6e-e2637ff5afce
+source-git-commit: 28df3ace2933d0fc00742ced9496645fc3dc15da
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 1%
+source-wordcount: '225'
+ht-degree: 0%
 
 ---
 
@@ -17,6 +18,15 @@ På den här sidan visas versionsinformationen för Generera variationer, som du
 >Se [den här sidan](/help/release-notes/release-notes-cloud/release-notes-current.md) för den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service.
 
 ## Viktiga versionsmarkeringar {#release-highlights}
+
+Den aktuella versionen är version 2.2.0.
+
+### 2.2.0 {#release-notes-2-2-0}
+
+* Implementerat stöd för innehållsfragment
+* Introducerade möjligheten att hämta resultat som CSV-filer från Favoriter
+* Förbättrade listan Senaste med tidsgrupperingar
+* Lokaliseringsstöd har lagts till för flera språk
 
 Den aktuella versionen är version 2.0.0.
 
