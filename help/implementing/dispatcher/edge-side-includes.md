@@ -2,9 +2,9 @@
 title: Kantsidan innehåller
 description: Hanterad CDN i Adobe har nu stöd för Edge Side Includes (ESI), ett markeringsspråk för dynamisk sammanställning av webbinnehåll på edge-nivå.
 feature: Dispatcher
-source-git-commit: 3aab5d3beb7bedf7a61bc557be349f2aa5ed8a7b
+source-git-commit: fb7c793a975fd725ef1cebcab545e057de78fa9d
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '543'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ESI-syntaxen är följande om en överordnad sida `/content/page.html` innehåll
 
 Se [ESI-specifikation](https://www.w3.org/TR/esi-lang/) för mer information.
 
-### Överväganden (#esi-syntax-Considerations}
+### Överväganden {#esi-syntax-considerations}
 
 * Följande ESI-taggar stöds: include, comment, remove.
 * ESI-taggar bearbetas sekventiellt i CDN i stället för samtidigt, så många ESI-taggar på en sida med låga TTL-värden kan öka fördröjningen för slutanvändarens upplevelse.
