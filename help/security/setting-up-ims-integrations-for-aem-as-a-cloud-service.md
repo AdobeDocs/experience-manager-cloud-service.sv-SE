@@ -1,15 +1,19 @@
 ---
 title: Konfigurera IMS-integreringar för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar IMS-integreringar för AEM as a Cloud Service
-source-git-commit: e6749b9a5e97634a4706db5656b1e11dba4442c9
+source-git-commit: 6945980cac24d4413a84343b035a8380b04e7444
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '386'
 ht-degree: 1%
 
 ---
 
 
 # Konfigurera IMS-integreringar för AEM as a Cloud Service {#setting-up-ims-integrations-for-aemaacs}
+
+>[!NOTE]
+>
+>Automatiskt allokerade JWT-konfigurationer bör inte migreras manuellt eftersom de hanteras automatiskt av Adobe.
 
 Adobe Experience Manager (AEM) as a Cloud Service kan integreras med många andra Adobe-lösningar. Exempel: Adobe Target, Adobe Analytics med flera.
 
