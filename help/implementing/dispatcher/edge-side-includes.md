@@ -2,9 +2,9 @@
 title: Kantsidan innehåller
 description: Hanterad CDN i Adobe har nu stöd för Edge Side Includes (ESI), ett markeringsspråk för dynamisk sammanställning av webbinnehåll på edge-nivå.
 feature: Dispatcher
-source-git-commit: 4523efa659ea2aef28e16d5df39f9793cd35d969
+source-git-commit: 8f9173e45dd802ecced21531dfa161890e4a8af1
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '541'
 ht-degree: 0%
 
 ---
@@ -81,9 +81,8 @@ De konfigurerade egenskaperna har följande beteende:
 |-----------|--------------------------|
 | **no-gzip** | Om värdet är 1 överförs HTML-sidan från cache till CDN-okomprimerad. Detta är nödvändigt för ESI eftersom innehållet måste skickas till CDN okomprimerat så att CDN kan se och utvärdera ESI-taggarna.<br/><br/>Både den överordnade sidan och de inkluderade fragmenten ska ange no-gzip till 1.<br/><br/>Den här inställningen åsidosätter den komprimeringsinställning som Apache annars kan ha använt, baserat på begäran `Accept-Encoding` värden. |
 | **x-aem-esi** | Om värdet är &quot;on&quot; utvärderas den överordnade HTML-sidans ESI-taggar.  Som standard är rubriken inte inställd. |
-| **x-aem-compress** | Om inställningen är &quot;på&quot; komprimeras innehållet från CDN till webbläsaren. Eftersom överföringen av den överordnade sidan från apache till CDN måste vara okomprimerad för att ESI ska fungera (no-gzip inställt på 1) kan detta minska fördröjningen.<br/><br/>Om den här rubriken inte är inställd, när CDN hämtar innehåll från det ursprungliga okomprimerade innehållet, skickas även innehåll till klienten okomprimerat. Det är därför nödvändigt att ange det här huvudet om no-gzip är inställt på 1 (krävs för ESI) och det är önskvärt att skicka innehåll som komprimerats från CDN till webbläsaren. |
+| **x-aem-compress** | Om inställningen är &quot;på&quot; komprimeras innehållet från CDN till webbläsaren. Eftersom överföringen av den överordnade sidan från apache till CDN måste vara okomprimerad för att ESI ska fungera (`no-gzip` inställd på 1) kan detta minska fördröjningen.<br/><br/>Om den här rubriken inte är inställd, när CDN hämtar innehåll från det ursprungliga okomprimerade innehållet, skickas även innehåll till klienten okomprimerat. Det är därför nödvändigt att ange denna rubrik om `no-gzip` är inställt på 1 (krävs för ESI) och du vill att innehåll som komprimeras från CDN ska skickas till webbläsaren. |
 
 ## Sling Dynamic Include {#esi-sdi}
 
 Utan krav [Sling Dynamic Include](https://sling.apache.org/documentation/bundles/dynamic-includes.html) (SDI) kan användas för att generera ESI-fragment som tolkas vid CDN.
-
