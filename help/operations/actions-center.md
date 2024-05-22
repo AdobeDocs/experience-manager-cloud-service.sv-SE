@@ -2,9 +2,9 @@
 title: Actions Center
 description: Utnyttja åtgärdscentret för att enkelt hantera incidenter och annan viktig information
 exl-id: d5a95ac4-aa88-44d5-ba02-7c9702050208
-source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
+source-git-commit: ddf94262c047ea0210b0759176f51d1220ac9c67
 workflow-type: tm+mt
-source-wordcount: '734'
+source-wordcount: '783'
 ht-degree: 0%
 
 ---
@@ -74,3 +74,4 @@ I följande tabell visas de meddelandetyper som för närvarande stöds i Åtgä
 | Blockerad replikeringskö | Incident | Avblockera kön genom att följa instruktionerna i [Replikeringsdokumentation](/help/operations/replication.md#troubleshooting) |
 | Ogiltig beständig GraphQL-fråga | Incident | Åtgärda den ogiltiga GraphQL-frågan genom att referera till [Beständiga GraphQL-frågor felsökningsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries-troubleshoot.html) |
 | S2S-certifikatet förfaller | Proaktiv | Lär dig hur du uppdaterar en autentiseringsuppgift i dialogrutan [Genererar Access-token för dokumentation för API:er på serversidan](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md#refresh-credentials) |
+| Trafikrydda vid ursprung | Incident | Protect ditt ursprung genom att konfigurera regler för hastighetsbegränsning för trafikfilter som utlöser vid lägre tröskelvärden än standardtrafikspiken vid ursprungsvarningen.  Se [Blockera DoS- och DDoS-attacker med trafikregler](/help/security/traffic-filter-rules-including-waf.md#blocking-dos-and-ddos-attacks-using-traffic-filter-rules) i dokumentationen för trafikfilterregler, som refererar till en självstudiekurs. |

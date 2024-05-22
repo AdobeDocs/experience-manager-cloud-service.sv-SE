@@ -2,9 +2,9 @@
 title: Trafikfilterregler inklusive WAF-regler
 description: Konfigurerar trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF).
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: b52da0a604d2c320d046136f5e526e2b244fa6cb
+source-git-commit: c914ae4a0ad3486feb54cbcf91f6659afa1372b8
 workflow-type: tm+mt
-source-wordcount: '3790'
+source-wordcount: '3947'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Trafikfilterregler kan distribueras via Cloud Managers konfigurationspipelines f
 [Följ igenom en självstudiekurs](#tutorial) för att snabbt bygga upp konkreta expertkunskaper om den här funktionen.
 
 >[!NOTE]
->Intresserad av andra alternativ för att konfigurera trafik vid leveransnätverket, inklusive redigering av begäran/svar, deklarering av omdirigeringar och proxing till ett icke-AEM ursprung? [Lär dig hur man gör](/help/implementing/dispatcher/cdn-configuring-traffic.md) genom att gå med i det tidiga adopterprogrammet.
+>Ytterligare alternativ för att konfigurera trafik på leveransnätverket, inklusive att redigera begäran/svar, deklarera omdirigeringar och proxera till ett icke-AEM ursprung, finns i [Konfigurera trafik vid leveransnätverket](/help/implementing/dispatcher/cdn-configuring-traffic.md) artikel.
 
 
 ## Hur den här artikeln ordnas {#how-organized}
@@ -40,6 +40,8 @@ Den här artikeln är indelad i följande avsnitt:
 * **Regelsyntax:** Läs om hur du deklarerar trafikfilterregler i `cdn.yaml` konfigurationsfil. Detta omfattar både trafikfilterreglerna som är tillgängliga för alla Sites- och Forms-kunder och underkategorin med WAF-regler för dem som licensierar den funktionen.
 * **Exempel på regler:** Se exempel på deklarerade regler som hjälper dig att komma igång.
 * **Regler för hastighetsbegränsning:** Lär dig hur du använder hastighetsbegränsande regler för att skydda din webbplats från attacker med stora volymer.
+* **Varningar om trafikfilterregler** Konfigurera aviseringar som ska meddelas när reglerna aktiveras.
+* **Standardtrafikspik vid ursprungsvarning** Få meddelanden när trafiken ökar på grund av DDoS-attacker.
 * **CDN-loggar:** Se vilka regler och WAF-flaggor som matchar er trafik.
 * **Kontrollpanelsverktyg:** Analysera dina CDN-loggar och hitta nya trafikfilterregler.
 * **Rekommenderade startregler:** En uppsättning regler att komma igång med.
@@ -290,7 +292,7 @@ The `wafFlags` egenskapen, som kan användas i de licensbara reglerna för WAF-t
 
 ## Exempel på regler {#examples}
 
-Vissa regelexempel följer. Se [rabattgränssektion](#rules-with-rate-limits) närmare anges om det finns exempel på regler för avgiftsgränser.
+Vissa regelexempel följer. Se [rabattgränssektion](#rate-limit-rules) närmare anges om det finns exempel på regler för avgiftsgränser.
 
 **Exempel 1**
 
@@ -518,6 +520,28 @@ data:
           experimental_alert: true
 ```
 
+## Standardtrafikspik vid ursprungsvarning {#traffic-spike-at-origin-alert}
+
+>[!NOTE]
+>
+>Den här funktionen introduceras gradvis.
+
+An [Actions Center](/help/operations/actions-center.md) e-postmeddelanden skickas när det finns en betydande mängd trafik som skickas till ursprungsläget, där ett högt tröskelvärde för begäranden kommer från samma IP-adress, vilket tyder på en DDoS-attack.
+
+Om detta undantag uppfylls blockerar Adobe trafiken från den IP-adressen, men vi rekommenderar att du vidtar ytterligare åtgärder för att skydda ditt ursprung, inklusive att konfigurera trafikfilterregler för hastighetsbegränsning så att trafiktoppar vid lägre tröskelvärden blockeras. Se [Blockera DoS- och DDoS-attacker med hjälp av trafikregelsjälvstudiekurs](#tutorial-blocking-DDoS-with-rules) för en guidad genomgång
+
+Den här varningen är aktiverad som standard, men kan inaktiveras med *enable_dos_warnings* -egenskap, inställd på false.
+
+```
+kind: "CDN"
+version: "1"
+metadata:
+  envTypes: ["dev"]
+data:
+  trafficFilters:
+    enable_ddos_alerts: false
+```
+
 ## CDN-loggar {#cdn-logs}
 
 AEM as a Cloud Service ger åtkomst till CDN-loggar, som är användbara för fall som till exempel optimering av träffkvoten och konfigurering av trafikfilterregler. CDN-loggar visas i Cloud Manager **Hämta loggar** när du väljer Författare eller Publiceringstjänst.
@@ -632,7 +656,7 @@ Nedan finns en lista med de fältnamn som används i CDN-loggar, tillsammans med
 
 Adobe tillhandahåller en mekanism för att hämta instrumentpanelsverktyg till din dator för att importera CDN-loggar som hämtats via Cloud Manager. Med den här verktygen kan du analysera trafiken för att hitta rätt trafikfilterregler som ska deklareras, inklusive WAF-regler.
 
-Kontrollpanelsverktygen kan klonas direkt från [AEMCS-CDN-Log-Analysis-ELK-Tool](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) GitHub-databas.
+Kontrollpanelsverktygen kan klonas direkt från [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub-databas.
 
 [Tutorials](#tutorial) finns för konkreta instruktioner om hur du använder instrumentpanelsverktygen.
 
@@ -721,7 +745,7 @@ data:
 
 Det finns två självstudiekurser.
 
-### Skydda webbplatser med trafikfilterregler (inklusive WAF-regler)
+### Skydda webbplatser med trafikfilterregler (inklusive WAF-regler) {#tutorial-protecting-websites}
 
 [Arbeta med en självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview) för att få allmän, praktisk kunskap och erfarenhet om trafikfilterregler, inklusive WAF-regler.
 
@@ -733,7 +757,7 @@ Självstudiekursen leder dig igenom:
 * Analysera resultat med kontrollpanelsverktyg
 * God praxis
 
-### Blockera DoS- och DDoS-attacker med trafikfilterregler
+### Blockera DoS- och DDoS-attacker med trafikfilterregler {#tutorial-blocking-DDoS-with-rules}
 
 [Djupdykning i hur man blockerar](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/blocking-dos-attack-using-traffic-filter-rules) Denial of Service-attacker (DoS) och DoS-attacker (Distributed Denial of Service) som använder trafikfilterregler för hastighetsbegränsning och andra strategier.
 
