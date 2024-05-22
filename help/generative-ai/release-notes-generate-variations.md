@@ -2,9 +2,9 @@
 title: Versionsinformation för Generera variationer
 description: Versionsinformation för Generera variationer, tillgänglig AEM as a Cloud Service och Sidekick i Edge Delivery Services
 exl-id: caf85bae-3cce-4083-ab6e-e2637ff5afce
-source-git-commit: 28df3ace2933d0fc00742ced9496645fc3dc15da
+source-git-commit: 92b11666a0e5a52f633416090b2bb51bf059c70b
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -27,8 +27,6 @@ Den aktuella versionen är version 2.2.0.
 * Introducerade möjligheten att hämta resultat som CSV-filer från Favoriter
 * Förbättrade listan Senaste med tidsgrupperingar
 * Lokaliseringsstöd har lagts till för flera språk
-
-Den aktuella versionen är version 2.0.0.
 
 ### 2.0.0 {#release-notes-2-0-0}
 
