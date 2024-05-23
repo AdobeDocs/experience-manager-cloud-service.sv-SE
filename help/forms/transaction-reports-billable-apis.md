@@ -3,10 +3,10 @@ title: Fakturerbara API:er för transaktionsrapporter
 description: Lista över alla API:er som räknas som transaktioner
 feature: Adaptive Forms, Foundation Components
 exl-id: 6dfcac3e-5654-4b4f-9134-0cd8be24332e
-source-git-commit: 539f4bf86f0e32057b2228dc44c86120d6e8457b
+source-git-commit: 543e9b78b4bdc11c49f79c6baec79615c5f7f91b
 workflow-type: tm+mt
-source-wordcount: '1411'
-ht-degree: 0%
+source-wordcount: '1033'
+ht-degree: 1%
 
 ---
 
@@ -34,45 +34,7 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
 
 * **Återgivna dokument:** Generering av ett dokument genom att kombinera en mall och data, digitalt signera eller certifiera ett dokument, använda ett fakturerbart dokument-API:er för dokumenttjänster eller konvertering av ett dokument från ett format till ett annat, räknas som dokument som återges.
 
->[!CONTEXTUALHELP]
->id="aemforms_cs_transaction_reporting_submission_graph_en"
->title="Spårare för formuläröverföringar"
->abstract="Övervaka enkelt formulärinskickat material i AEM Forms Publish-instansen med vår intuitiva kontrollpanel. Diagrammet innehåller data som är specifika för den aktuella instansen, vilket gör att du snabbt kan analysera trender och fatta välgrundade beslut. Om du vill skicka data från andra instanser behöver du bara öppna kontrollpanelen för respektive instans."
 
->[!CONTEXTUALHELP]
->id="aemforms_cs_transaction_reporting_conversions_graph_en"
->title="Spårare för formulärkonverteringar"
->abstract="Håll dig informerad om konverteringen av blanketter med en sammanfattning av det totala antalet konverteringar. Diagrammet innehåller data som är specifika för den aktuella AEM Forms Publish-instansen, vilket gör att du snabbt kan analysera trender och fatta välgrundade beslut. Om du vill visa konverteringsdata för andra instanser öppnar du respektive instans kontrollpanel."
-
->[!CONTEXTUALHELP]
->id="aemforms_cs_transaction_reporting_formCreationAvgDuration_graph_en"
->title="Genomsnittlig varaktighet för formulärgenerering"
->abstract="Diagrammet visar den genomsnittliga tiden det tar att skapa ett formulär. Varje stapel i diagrammet representerar ett specifikt formulär och stolpens höjd anger den genomsnittliga tid det tar att skapa formuläret under den tidsramen."
-
->[!CONTEXTUALHELP]
->id="aemforms_cs_transaction_reporting_formPublishAvgDuration_en"
->title="Genomsnittlig varaktighet för att skapa formulär"
->abstract="Diagrammet visar den genomsnittliga tiden det tar att skapa och publicera ett formulär, mätt från den första dagen som formuläret öppnades för redigering. Diagrammet innehåller data som är specifika för den aktuella AEM Forms Author-instansen. Om du vill visa data från andra instanser öppnar du respektive instans kontrollpanel."
-
->[!CONTEXTUALHELP]
->id="aemforms_cs_transaction_reporting_newForms_graph_en"
->title="Ny Forms Tracker"
->abstract="Diagrammet innehåller information om antalet eller frekvensen av nyskapade formulär under specifika tidsperioder. Diagrammet innehåller data som är specifika för den aktuella AEM Forms Author-instansen. Om du vill visa data från andra instanser öppnar du respektive instans kontrollpanel."
-
->[!CONTEXTUALHELP]
->id="aemforms_cs_transaction_reporting_publishedForms_graph_en"
->title="Publicerad Forms Tracker"
->abstract="Diagrammet ger information om antalet eller frekvensen av formulär som har publicerats under specifika tidsperioder. Diagrammet innehåller data som är specifika för den aktuella AEM Forms Publish-instansen. Om du vill visa konverteringsdata för andra instanser öppnar du respektive instans kontrollpanel."
-
->[!CONTEXTUALHELP]
->id="aemforms_cs_transaction_reporting_formFragments_graph_en"
->title="Publicerad Forms Tracker"
->abstract="I det här diagrammet kan du se hur många formulärfragment som används i formulären. Diagrammet innehåller data som är specifika för den aktuella AEM Forms Publish-instansen. Om du vill visa konverteringsdata för andra instanser öppnar du respektive instans kontrollpanel."
-
->[!CONTEXTUALHELP]
->id="aemforms_cs_transaction_reporting_avgFormPerFragments_graph_en"
->title="Publicerad Forms Tracker"
->abstract="Diagrammet visar den genomsnittliga tiden det tar att skapa ett formulärfragment, mätt från den första dagen som formulärfragmentet öppnades för redigering. Diagrammet innehåller data som är specifika för den aktuella AEM Forms Publish-instansen. Om du vill visa konverteringsdata för andra instanser öppnar du respektive instans kontrollpanel."
 
 <!-- 
 
