@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: b6fe2a58bb16c70cef48426ec49dda474195c023
+source-git-commit: d107f40c4bc43837db9d8fab3d06627d9e930620
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1574'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,6 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 163
 * 20238: [RTC] Pfizer MVP - Lägg till CF API för att matcha CF-sökvägar till ID:n och vice versa.
 * SITES-2043: [CF][launches] Prestandaförbättringar för Cloud Service på sidoport.
 * SITES-2044: [CF][launches] Asynkron redigering av nyttolastsimplementering till Cloud Service på sidoporten.
-* FORMS-9606: Tidigare kunde bara fältvärden mappas till svaret från en anropstjänst i den adaptiva Forms-redigeraren. Nu kan författare mappa valfri egenskap i fältet till anropssvaret.
 * FORMS-7483: AEM Forms JSON Schema Parser har nu stöd för JSON-schema (2020-12).
 * FORMS-13209: En hanterare ingår för att åsidosätta adaptiva Forms standardhanterare för skickning av lyckade och misslyckade överföringar. Du kan konfigurera de här hanterarna via Adaptiv Forms regelredigerare.
 * FORMS-13612: Skärmläsare läser nu felmeddelanden, korta beskrivningar och långa beskrivningar för fält i viktiga komponentbaserade adaptiva Forms. Dessutom har stöd lagts till för att göra anpassade formulärindata ogiltiga när formuläret innehåller fel och inte är giltigt för att skickas.
