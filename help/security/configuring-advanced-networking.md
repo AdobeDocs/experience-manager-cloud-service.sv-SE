@@ -2,9 +2,9 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service.
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: 2ce64892cd5bf414d328a9112c47092b762d3668
+source-git-commit: 0cd4a720874c9d4138665f0bfdecbd29468f01e5
 workflow-type: tm+mt
-source-wordcount: '5093'
+source-wordcount: '5388'
 ht-degree: 0%
 
 ---
@@ -792,3 +792,17 @@ Proceduren liknar oftast de föregående instruktionerna. Om produktionsmiljön 
 #### VPN {#vpn-regions}
 
 Proceduren är nästan identisk med de dedikerade IP-adressinstruktionerna för utgångar. Den enda skillnaden är att förutom att egenskapen region konfigureras på ett annat sätt än den primära regionen är `connections.gateway` -fältet kan konfigureras om så önskas. Konfigurationen kan dirigera till en annan VPN-slutpunkt som hanteras av din organisation, geografiskt närmare den nya regionen.
+
+## Felsökning
+
+Observera att följande punkter är informativa riktlinjer och innehåller bästa praxis för felsökning. Dessa rekommendationer är avsedda att bidra till att effektivt diagnostisera och lösa problem.
+
+### Anslutningspoolning {#connection-pooling-advanced-networking}
+
+Anslutningspoolning är en teknik som är anpassad för att skapa och underhålla en databas med anslutningar som är redo för omedelbar användning av alla trådar som kan behöva dem. Många sammanfogningstekniker finns på olika onlineplattformar och resurser, var och en med sina unika fördelar och överväganden. Vi uppmuntrar våra kunder att undersöka dessa metoder för att identifiera den som är mest kompatibel med deras systemarkitektur.
+
+Att införa en lämplig strategi för sammanfogning av anslutningar är en proaktiv åtgärd för att korrigera en vanlig tillsyn i systemkonfigurationen, vilket ofta leder till sämre prestanda. Genom att upprätta en anslutningspool på rätt sätt kan Adobe Experience Manager (AEM) effektivisera externa samtal. Detta minskar inte bara resursförbrukningen utan minskar också risken för tjänstavbrott och minskar sannolikheten för att stöta på misslyckade begäranden vid kommunikation med servrar i föregående ström.
+
+Mot bakgrund av den här informationen rekommenderar vi dig att göra en ny bedömning av din nuvarande AEM och överväga en avsiktlig integrering av anslutningspoolning i kombination med avancerade nätverksinställningar. Genom att vidta dessa åtgärder har lösningen utformats för att förhindra att utkast blir överbelastade, vilket minskar sannolikheten för att förfrågningar inte når externa slutpunkter.
+
+Mot bakgrund av den här informationen rekommenderar vi dig att göra en ny bedömning av din nuvarande AEM och överväga en avsiktlig integrering av anslutningspoolning i kombination med avancerade nätverksinställningar. Genom att hantera antalet parallella anslutningar och minimera förekomsten av eventuella inaktuella anslutningar, leder dessa åtgärder till en minskning av risken för att proxyservrar når sina anslutningsgränser. Denna strategiska implementering är därför avsedd att minska sannolikheten för att begäranden inte når externa slutpunkter.
