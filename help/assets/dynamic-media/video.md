@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Video Profiles
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: ea2e82f02e9b5ee1ef64d186516c786d8c264c52
+source-git-commit: 7a80f68f71475b2bdb6b5559354d7248208a3819
 workflow-type: tm+mt
 source-wordcount: '9237'
 ht-degree: 0%
@@ -642,7 +642,7 @@ Nya bildtexter och bildtexter stöds med formaten WebVTT och Adobe VTT. Dessutom
      | Filnamn | Standardfilnamnet härleds från det ursprungliga filnamnet. Filnamnet kan bara ändras under överföring och kan inte ändras senare. Teckenkraven för filnamn är desamma som för AEM Assets.<br>Samma filnamn kan inte användas för ytterligare ljudspårsfiler eller bildtextfiler. |
      | Språk | Välj språk för ljudspåret. |
      | Typ | Välj vilken typ av ljudspår du använder.<br>**Original** - Ljudspåret som ursprungligen var kopplat till videon och representeras som `[Original]` i etiketten med `English` som är valt som standard. while **[!UICONTROL Label]** och **[!UICONTROL Language]** kan ändras i **[!UICONTROL Edit Audio Track]** används de ursprungliga värdena om den primära videon bearbetas om.<br>**Standard** - Ett tilläggsljudspår för ett annat språk än originalspråket.<br>**Ljudbeskrivning** - Ett ljudspår som även innehåller en beskrivande berättarröst för icke-verbala händelser och gester i videon, vilket gör innehållet mer tillgängligt för personer med nedsatt syn. |
-     | Etikett | Texten som visas som ljudspårets namn i **[!UICONTROL Select audio or caption]** popup-lista i mediespelaren. Etiketten är det kunden ser och motsvarar ett ljudspår. Till exempel: `English [Original]`. Etiketten för ljud som är kopplat till en video är inställd på `[Original|` som standard. |
+     | Etikett | Texten som visas som ljudspårets namn i **[!UICONTROL Select audio or caption]** popup-lista i mediespelaren. Etiketten är det kunden ser och motsvarar ett ljudspår. Till exempel: `English [Original]`. Etiketten för ljud som är kopplat till en video är inställd på `[Original]` som standard. |
 
      Om det behövs kan du ändra eller redigera metadata för ljudspåret senare. När videon publiceras återspeglas dessa uppgifter på offentliga URL:er i publicerade videor.
 
@@ -815,8 +815,6 @@ Det går inte att hämta det ursprungliga ljudspåret som har extraherats från 
    | Assets | Anger antalet filer som du hämtar och den sammanlagda storleken för alla markerade filer. Om du avmarkerar det här alternativet tonas (inaktiveras) **[!UICONTROL Download]** så att du inte kan hämta filer. |
 1. Välj **[!UICONTROL Download]**.
 1. Publicera videon. Se [Publicera resurser](publishing-dynamicmedia-assets.md).
-
-
 
 
 
