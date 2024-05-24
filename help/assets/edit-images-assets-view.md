@@ -3,7 +3,7 @@ title: Redigera bilder
 description: Redigera bilder med [!DNL Adobe Express] och spara uppdaterade bilder som versioner.
 role: User
 exl-id: cfc4c7b7-da8c-4902-9935-0e3d4388b975
-source-git-commit: 2c32c94cbc99a91e93b394f315eb134a55b6cd9c
+source-git-commit: 42d3751a4a29149f3b31dbc28555b81aa7ed43cc
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
@@ -84,9 +84,9 @@ Du kan snabbt konvertera en PNG-bild till ett JPEG-format med Adobe Express. Utf
 
 ### Begränsningar {#limitations-adobe-express}
 
-* Bildupplösning som stöds: Minimal - 50 pixlar, Maximal - 6 000 pixlar per dimension
+* Bildupplösning som stöds: Minimal - 50 pixlar, Maximal - 6 000 pixlar per dimension.
 
-* Största filstorlek som stöds: 17 MB
+* Största filstorlek som stöds: 17 MB.
 
 ## Redigera bilder med Adobe Expressens inbäddade redigerare {#edit-using-embedded-editor}
 
