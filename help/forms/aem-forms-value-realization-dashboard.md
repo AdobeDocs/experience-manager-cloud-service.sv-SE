@@ -5,9 +5,9 @@ feature: Adaptive Forms, Foundation Components, Core Components
 role: Admin, Developer, Leader, User
 hide: true
 hidefromtoc: true
-source-git-commit: 543e9b78b4bdc11c49f79c6baec79615c5f7f91b
+source-git-commit: 613adeee805069155881b1a26b247c3dec3eb593
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '867'
 ht-degree: 0%
 
 ---
@@ -21,14 +21,14 @@ Välkommen till er heltidsbutik för att förstå vilket värde era formulär ge
 
 Den här instrumentpanelen är ditt fönster mot hur formuläret används. Här följer en beskrivning av de viktigaste avsnitten:
 
-### Formuläraktivitet över tid (linjediagram):
+### Formuläraktivitet över tid:
 
 * **Skicka formulär**: Se trender för hur ofta formulären fylls i.
 * **Dokumentåtergivningar**: Spåra antalet dokument som återges över tid.
 * **Forms skapad och publicerad**: Övervaka hastigheten med vilken nya formulär skapas och distribueras.
 * **Skapande av formulär och publiceringstider**: Analysera genomsnittliga tider för att skapa och publicera formulär för att identifiera områden som kan förbättras.
 
-### Fragmentanvändning (stolpdiagram):
+### Fragmentanvändning:
 
 * **Antal formulärfragment som används**: Se hur många återanvändbara formuläravsnitt som för närvarande är inbyggda i aktiva formulär.
 * **Antal återanvända formulärfragment**: Mät hur ofta dessa fragment används i olika former.
@@ -42,6 +42,26 @@ Med denna kontrollpanel kan ni fatta datadrivna beslut om era formulär. Så hä
 * **Optimera blankettgenereringen**: Minska tiden för skapande genom att identifiera flaskhalsar. Utforska färdiga mallar eller effektiva arbetsflöden.
 * **Öka återanvändning av fragment**: Uppmuntra samarbete och upptäckt av återanvändbara fragment. Välorganiserade fragmentbibliotek kan öka effektiviteten avsevärt.
 
+>[!CONTEXTUALHELP]
+>id="aemforms_cs_transaction_reporting_submission_graph_en"
+>title="Spårare för formuläröverföringar"
+>abstract="Det här diagrammet visar antalet inskickade adaptiva formulär under specifika tidsperioder. Ökningen av antalet inskickade data kan tyda på att formuläret blir mer populärt eller att det finns ett behov av att samla in mer data från användarna. **Obs!** Diagrammet innehåller data som är specifika för den aktuella instansen, vilket gör att du snabbt kan analysera trender och fatta välgrundade beslut. Om du vill skicka data från andra instanser behöver du bara öppna kontrollpanelen för respektive instans."
+
+>[!CONTEXTUALHELP]
+>id="aemforms_cs_transaction_reporting_conversions_graph_en"
+>title="Dokumentåtergivningsspåraren"
+>abstract="Det här diagrammet visar antalet dokumentåtergivningar under specifika tidsperioder. **Obs!** Diagrammet innehåller data som är specifika för den aktuella instansen, vilket gör att du snabbt kan analysera trender och fatta välgrundade beslut. Om du vill skicka data från andra instanser behöver du bara öppna kontrollpanelen för respektive instans."
+
+>[!CONTEXTUALHELP]
+>id="aemforms_cs_transaction_reporting_newForms_graph_en"
+>title="Ny Forms Tracker"
+>abstract="Diagrammet innehåller information om antalet nya formulär som skapas under specifika tidsperioder. **Obs!** Diagrammet innehåller data som är specifika för den aktuella AEM Forms Author-instansen. Om du vill visa data från andra instanser öppnar du respektive instans kontrollpanel."
+
+>[!CONTEXTUALHELP]
+>id="aemforms_cs_transaction_reporting_publishedForms_graph_en"
+>title="Publicerad Forms Tracker"
+>abstract="Diagrammet innehåller information om antalet formulär som har publicerats under specifika tidsperioder. **Obs!** Diagrammet innehåller data som är specifika för den aktuella AEM Forms Publish-instansen. Om du vill visa konverteringsdata för andra instanser öppnar du respektive instans kontrollpanel."
+
 
 ## Förvandla insikter till handling {#turning-insights-into-actions}
 
@@ -53,26 +73,6 @@ Låt oss omvandla dessa upptäckter till konkreta åtgärder!
 
 Genom att analysera dessa trender kan ni skapa bättre formulär, spara tid på att skapa och utnyttja återanvändbara komponenter. Detta innebär ett smidigare arbetsflöde, nöjdare användare och i slutändan en större avkastning på er investering.
 
-
-## Ytterligare tips {#additional-tips}
-
-* **Ange mål:** Bestäm vad du vill uppnå med formulären. Ökad datainsamling, snabbare leadgenerering eller nöjdare kunder? Om du vet vilka mål du har kommer det att bli lättare för dig att analysera kontrollpanelen.
-* **Regelbunden granskning:** Schemalägg regelbundna incheckningar med kontrollpanelen för att följa upp utvecklingen och identifiera nya områden som kan förbättras.
-* **Experimentera och förfina:** Var inte rädd för att experimentera med olika formulärdesigner och fragmentanvändning. Kontrollpanelen hjälper dig att mäta effekten av dina ändringar.
-
-Kom ihåg att den här instrumentpanelen är din allierade! Genom att använda det effektivt kan ni omvandla era formulär från enkla datainsamlingsverktyg till strategiska resurser som leder till framgång för er och ert företag.
-
-
->[!CONTEXTUALHELP]
->id="aemforms_cs_transaction_reporting_submission_graph_en"
->title="Spårare för formuläröverföringar"
->abstract="I det här diagrammet visas antalet inskickade adaptiva formulär under en period. Ökningen av antalet inskickade data kan tyda på att formuläret blir mer populärt eller att det finns ett behov av att samla in mer data från användarna. Diagrammet innehåller data som är specifika för den aktuella instansen, vilket gör att du snabbt kan analysera trender och fatta välgrundade beslut. Om du vill skicka data från andra instanser behöver du bara öppna kontrollpanelen för respektive instans."
-
->[!CONTEXTUALHELP]
->id="aemforms_cs_transaction_reporting_conversions_graph_en"
->title="Dokumentåtergivningsspåraren"
->abstract="Det här diagrammet visar antalet dokumentåtergivningar under en period. Ökningen av antalet inskickade data kan tyda på att formuläret blir mer populärt eller att det finns ett behov av att samla in mer data från användarna. Diagrammet innehåller data som är specifika för den aktuella instansen, vilket gör att du snabbt kan analysera trender och fatta välgrundade beslut. Om du vill skicka data från andra instanser behöver du bara öppna kontrollpanelen för respektive instans."
-
 >[!CONTEXTUALHELP]
 >id="aemforms_cs_transaction_reporting_formCreationAvgDuration_graph_en"
 >title="Genomsnittlig varaktighet för formulärgenerering"
@@ -81,24 +81,24 @@ Kom ihåg att den här instrumentpanelen är din allierade! Genom att använda d
 >[!CONTEXTUALHELP]
 >id="aemforms_cs_transaction_reporting_formPublishAvgDuration_en"
 >title="Genomsnittlig varaktighet för att skapa formulär"
->abstract="Diagrammet visar den genomsnittliga tiden det tar att skapa och publicera ett formulär, mätt från den första dagen som formuläret öppnades för redigering. Diagrammet innehåller data som är specifika för den aktuella AEM Forms Author-instansen. Om du vill visa data från andra instanser öppnar du respektive instans kontrollpanel."
+>abstract="Diagrammet visar den genomsnittliga tiden det tar att skapa och publicera ett formulär, mätt från den första dagen som formuläret öppnades för redigering. **Obs!** Diagrammet innehåller data som är specifika för den aktuella AEM Forms Author-instansen. Om du vill visa data från andra instanser öppnar du respektive instans kontrollpanel."
 
->[!CONTEXTUALHELP]
->id="aemforms_cs_transaction_reporting_newForms_graph_en"
->title="Ny Forms Tracker"
->abstract="Diagrammet innehåller information om antalet eller frekvensen av nyskapade formulär under specifika tidsperioder. Diagrammet innehåller data som är specifika för den aktuella AEM Forms Author-instansen. Om du vill visa data från andra instanser öppnar du respektive instans kontrollpanel."
-
->[!CONTEXTUALHELP]
->id="aemforms_cs_transaction_reporting_publishedForms_graph_en"
->title="Publicerad Forms Tracker"
->abstract="Diagrammet ger information om antalet eller frekvensen av formulär som har publicerats under specifika tidsperioder. Diagrammet innehåller data som är specifika för den aktuella AEM Forms Publish-instansen. Om du vill visa konverteringsdata för andra instanser öppnar du respektive instans kontrollpanel."
 
 >[!CONTEXTUALHELP]
 >id="aemforms_cs_transaction_reporting_formFragments_graph_en"
 >title="Forms Fragments Tracker"
->abstract="I det här diagrammet kan du se hur många formulärfragment som används i formulären. Diagrammet innehåller data som är specifika för den aktuella AEM Forms Publish-instansen. Om du vill visa konverteringsdata för andra instanser öppnar du respektive instans kontrollpanel."
+>abstract="I det här diagrammet kan du se hur många formulärfragment du använder i dina formulär. **Obs!** Diagrammet innehåller data som är specifika för den aktuella AEM Forms Publish-instansen. Om du vill visa konverteringsdata för andra instanser öppnar du respektive instans kontrollpanel."
 
 >[!CONTEXTUALHELP]
 >id="aemforms_cs_transaction_reporting_avgFormPerFragments_graph_en"
 >title="Genomsnittlig tidsspårning för formulärfragment"
->abstract="Diagrammet visar den genomsnittliga tiden det tar att skapa ett formulärfragment, mätt från den första dagen som formulärfragmentet öppnades för redigering. Diagrammet innehåller data som är specifika för den aktuella AEM Forms Publish-instansen. Om du vill visa konverteringsdata för andra instanser öppnar du respektive instans kontrollpanel."
+>abstract="Diagrammet visar den genomsnittliga tiden det tar att skapa ett formulärfragment, mätt från den första dagen som formulärfragmentet öppnades för redigering. **Obs!** Diagrammet innehåller data som är specifika för den aktuella AEM Forms Publish-instansen. Om du vill visa konverteringsdata för andra instanser öppnar du respektive instans kontrollpanel."
+
+
+## Ytterligare tips {#additional-tips}
+
+* **Ange mål:** Bestäm vad du vill uppnå med formulären. Ökad datainsamling, snabbare leadgenerering eller nöjdare kunder? Om du vet vilka mål du har kommer det att bli lättare för dig att analysera kontrollpanelen.
+* **Regelbunden granskning:** Schemalägg regelbundna incheckningar med kontrollpanelen för att följa upp utvecklingen och identifiera nya områden som kan förbättras.
+* **Experimentera och förfina:** Var inte rädd för att experimentera med olika formulärdesigner och fragmentanvändning. Kontrollpanelen hjälper dig att mäta effekten av dina ändringar.
+
+Kom ihåg att den här instrumentpanelen är din allierade! Genom att använda det effektivt kan ni omvandla era formulär från enkla datainsamlingsverktyg till strategiska resurser som leder till framgång för er och ert företag.
