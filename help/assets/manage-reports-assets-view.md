@@ -1,16 +1,17 @@
 ---
 title: Hantera rapporter i resursvyn
 description: Få tillgång till data i rapportavsnittet i resursvyn för att utvärdera produkt- och funktionsanvändning och få insikter om viktiga framgångsmått.
-source-git-commit: c3076ce35128c147ce2056d11d9305d9a9456636
+exl-id: 26d0289e-445a-4b8e-a5a1-b02beedbc3f1
+source-git-commit: 6dc6b3e4ec9d6a816d92152cb535cd9a5d56a3b0
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '849'
 ht-degree: 1%
 
 ---
 
 # Hantera rapporter {#manage-reports}
 
-Resursrapportering ger administratörer insyn i Adobe Experience Manager Assets visningsmiljö. Dessa data ger användbar information om hur användarna interagerar med innehållet och produkten. Alla användare har tillgång till Insikter-kontrollpanelen och de som har tilldelats administratörens produktprofil kan skapa användardefinierade rapporter.
+Med tillgångsrapportering kan administratörer se vilka aktiviteter Adobe Experience Manager Assets View-miljön har. Dessa data ger användbar information om hur användarna interagerar med innehållet och produkten. Alla användare har tillgång till Insikter-kontrollpanelen och de som har tilldelats administratörens produktprofil kan skapa användardefinierade rapporter.
 
 ## Åtkomstrapporter {#access-reports}
 
@@ -38,26 +39,30 @@ I resursvyn kan du visa realtidsdata för din resursvymiljö med Insikter-instru
 
 Klicka **[!UICONTROL Insights]** som finns i det vänstra navigeringsfönstret för att visa följande automatiskt genererade diagram:
 
-![Insikter](assets/insights.png)
-
 * **Nedladdningar**: Antalet resurser som hämtats från resursvyn under de senaste 30 dagarna eller 12 månaderna representeras med hjälp av ett linjediagram.
+  ![insights-downloads](/help/assets/assets/insights-downloads2341.svg)
 
 * **Överföringar**: Antalet resurser som har överförts till resursvymiljön under de senaste 30 dagarna eller 12 månaderna representeras av ett linjediagram.
-
-<!--* **Asset Count by Size**: The division of count of assets based on their range of various sizes from 0 MB to 100 GB.-->
+  ![insights-uploads](/help/assets/assets/insights-uplods2.svg)
+  <!--* **Asset Count by Size**: The division of count of assets based on their range of various sizes from 0 MB to 100 GB.-->
 
 * **Lagringsanvändning**: Lagringsanvändningen, i byte, för resursvymiljön som representeras med ett stapeldiagram.
-
-<!--* **Delivery**: The graph depicts the count of assets as the delivery dates.-->
+  ![insights-uploads](/help/assets/assets/insights-storage-usage1.svg)
+  <!--* **Delivery**: The graph depicts the count of assets as the delivery dates.-->
 
 <!--* **Asset Count by Asset Type**: Represents count of various MIME types of the available assets. For example, application/zip, image/png, video/mp4, application/postscripte.-->
 
 * **Vanliga sökningar**: Visa de mest sökbara termerna tillsammans med det antal gånger som de har sökts igenom i resursvyn under de senaste 30 dagarna eller 12 månaderna i tabellformat.
-
+  ![insights-uploads](/help/assets/assets/insights-top-search.svg)
   <!--
    ![Insights](assets/insights1.png)
    ![Insights](assets/insights2.png)
    -->
+
+* **Antal tillgångar efter storlek:** Segmenterar det totala antalet mediefiler i resursvymiljön i olika storleksintervall, vilket markerar antalet och procentandelen av mediefiler i varje storleksintervall, som representeras med ett mundiagram.
+  ![insights-assets-count-by-size](/help/assets/assets/insights-assets-count-by-size.svg)
+* **Antal tillgångar efter tillgångstyp:** Segmenterar det totala antalet mediefiler i resursvymiljön, och markerar antalet och procentandelen resurser baserat på deras filtyper, som representeras av bottendiagram.
+  ![insights-assets-count-by-size](/help/assets/assets/insights-assest-count-by-asset-type1.svg)
 
 ## Skapa en nedladdningsrapport {#create-download-report}
 
