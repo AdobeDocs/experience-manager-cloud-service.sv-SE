@@ -1,18 +1,18 @@
 ---
 title: Redigera bilder
-description: Redigera bilder med [!DNL Adobe Photoshop Express] och spara uppdaterade bilder som versioner.
+description: Redigera bilder med [!DNL Adobe Express] och spara uppdaterade bilder som versioner.
 role: User
 exl-id: cfc4c7b7-da8c-4902-9935-0e3d4388b975
-source-git-commit: 1147fa8069fc065aed01c75db686cfefee269319
+source-git-commit: 2c32c94cbc99a91e93b394f315eb134a55b6cd9c
 workflow-type: tm+mt
-source-wordcount: '1108'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
 
 # Redigera bilder i [!DNL Assets view] {#edit-images}
 
-[!DNL Assets view] innehåller användarvänliga redigeringsalternativ som bygger på [!DNL Adobe Express] och [!DNL Adobe Photoshop Express]. De redigeringsåtgärder som är tillgängliga med [!DNL Adobe Express] är Ändra storlek på bild, Ta bort bakgrund, Beskär bild och Konvertera JPEG till PNG eller vice versa.
+[!DNL Assets view] innehåller användarvänliga redigeringsalternativ som bygger på [!DNL Adobe Express]. De redigeringsåtgärder som är tillgängliga med [!DNL Adobe Express] är Ändra storlek på bild, Ta bort bakgrund, Beskär bild och Konvertera JPEG till PNG eller vice versa.
 
 När du har redigerat en bild kan du spara den nya bilden som en ny version. Versionshantering hjälper dig att vid behov återställa den ursprungliga resursen senare. Dessutom är versionshantering endast tillgänglig för PNG-filtyperna, vilket innebär att JPG konverteras automatiskt till PNG när du försöker ta bort bakgrund från en JPG-filtyp. Om du vill redigera en bild [öppna förhandsgranskningen](navigate-assets-view.md) och klicka **[!UICONTROL Edit Image]**.
 
@@ -118,8 +118,8 @@ Redigera bilder med [!DNL Adobe Express] följer du stegen nedan:
 >* Resursens storlek måste vara mindre än 17 MB.
 >* Du kan spara en bild i `PDF`, `JPEG`, eller `PNG` format. Om det finns flera sidor kan du spara dem som `PDF`.
 
-
-## Redigera bilder med [!DNL Adobe Photoshop Express] {#edit-using-photoshop-express}
+<!--
+## Edit images using [!DNL Adobe Photoshop Express] {#edit-using-photoshop-express}
 
 <!--
 After editing an image, you can save the new image as a new version. Versioning helps you to revert to the original asset later, if needed. To edit an image, [open its preview](navigate-assets-view.md#preview-assets) and click **[!UICONTROL Edit Image]** ![edit icon](assets/do-not-localize/edit-icon.png) from the rail on the right.
@@ -128,49 +128,49 @@ After editing an image, you can save the new image as a new version. Versioning 
 
 *Figure: The options to edit images are powered by [!DNL Adobe Photoshop Express].*
 -->
+<!--
+### Touch up images {#spot-heal-images-using-photoshop-express}
 
-### Retuschera bilder {#spot-heal-images-using-photoshop-express}
+If there are minor spots or small objects on an image, you can edit and remove the spots using the spot healing feature provided by Adobe Photoshop.
 
-Om det finns små fläckar eller små objekt på en bild kan du redigera och ta bort fläckar med hjälp av funktionen för punktlagning i Adobe Photoshop.
+The brush samples the retouched area and makes the repaired pixels blend seamlessly into the rest of the image. Use a brush size that is only slightly larger than the spot you want to fix.
 
-Penseln samplar det retuscherade området och gör så att de reparerade pixlarna blandas smidigt i resten av bilden. Använd en penselstorlek som bara är något större än den punkt du vill korrigera.
-
-![Redigeringsalternativ för punktlagning](assets/edit-spot-healing.png)
+![Spot healing edit option](assets/edit-spot-healing.png)
 
 <!-- 
 TBD: See if we should give backlinks to PS docs for these concepts.
 For more information about how Spot Healing works in Photoshop, see [retouching and repairing photos](https://helpx.adobe.com/photoshop/using/retouching-repairing-images.html). 
 -->
+<!-- 
+### Crop and straighten images {#crop-straighten-images-using-photoshop-express}
 
-### Beskära och räta upp bilder {#crop-straighten-images-using-photoshop-express}
+Using the crop and straighten option that you can do basic cropping, rotate image, flip it horizontally or vertically, and crop it to dimensions suitable for popular social media websites.
 
-Med alternativet Beskär och räta upp kan du göra grundläggande beskärning, rotera bilden, vända den vågrätt eller lodrätt och beskära den till dimensioner som passar populära webbplatser för sociala medier.
+To save your edits, click **[!UICONTROL Crop Image]**. After editing, you can save the new image as a version.
 
-Klicka på **[!UICONTROL Crop Image]**. När du har redigerat kan du spara den nya bilden som en version.
+![Option to crop and straighten](assets/edit-crop-straighten.png)
 
-![Möjlighet att beskära och räta upp](assets/edit-crop-straighten.png)
+Many default options let you crop your image to the best proportions that fit various social media profiles and posts.
 
-Med många standardalternativ kan du beskära bilden till de bästa proportioner som passar olika profiler och inlägg på sociala medier.
+### Resize image {#resize-image-using-photoshop-express}
 
-### Ändra bildstorlek {#resize-image-using-photoshop-express}
+You can view the common photo sizes in centimeters or inches to know the dimensions. By default, the resizing method retains the aspect ratio. To manually override the aspect ratio, click ![](assets/do-not-localize/lock-closed-icon.png).
 
-Du kan visa de vanliga fotostorlekarna i centimeter eller tum för att ta reda på måtten. Som standard behåller metoden för storleksändring proportionerna. Om du vill åsidosätta proportionerna manuellt klickar du på ![](assets/do-not-localize/lock-closed-icon.png).
+Enter the dimensions and click **[!UICONTROL Resize Image]** to resize the image. Before you save the changes as a version, you can either undo all the changes done before saving by clicking [!UICONTROL Undo] or you can change the specific step in the editing process by clicking [!UICONTROL Revert].
 
-Ange måtten och klicka på **[!UICONTROL Resize Image]** för att ändra storlek på bilden. Innan du sparar ändringarna som en version kan du antingen ångra alla ändringar som gjorts innan du sparar genom att klicka på [!UICONTROL Undo] Du kan också ändra det specifika steget i redigeringsprocessen genom att klicka på [!UICONTROL Revert].
+![Options when resizing an image](assets/resize-image.png)
 
-![Alternativ vid storleksändring av en bild](assets/resize-image.png)
+### Adjust image {#adjust-image-using-photoshop-express}
 
-### Justera bild {#adjust-image-using-photoshop-express}
+[!DNL Assets view] lets you adjust the color, tone, contrast, and more, with just a few clicks. Click **[!UICONTROL Adjust image]** in the edit window. The following options are available in the right sidebar:
 
-[!DNL Assets view] Med kan du justera färg, ton, kontrast med mera med bara några klick. Klicka **[!UICONTROL Adjust image]** i redigeringsfönstret. Följande alternativ är tillgängliga på den högra sidopanelen:
+* **Popular**: [!UICONTROL High Contrast & Detail], [!UICONTROL Desaturated Contrast], [!UICONTROL Aged Photo], [!UICONTROL B&W Soft], and [!UICONTROL B&W Sepia Tone].
+* **Color**: [!UICONTROL Natural], [!UICONTROL Bright], [!UICONTROL High Contrast], [!UICONTROL High Contrast & Detail], [!UICONTROL Vivid], and [!UICONTROL Matte].
+* **Creative**: [!UICONTROL Desaturated Contrast], [!UICONTROL Cool Light], [!UICONTROL Turquoise & Red], [!UICONTROL Soft Mist], [!UICONTROL Vintage Instant], [!UICONTROL Warm Contrast], [!UICONTROL Flat & Green], [!UICONTROL Red Lift Matte], [!UICONTROL Warm Shadows], and [!UICONTROL Aged Photo].
+* **B&W**: [!UICONTROL B&W Landscape], [!UICONTROL B&W High Contrast], [!UICONTROL B&W Punch], [!UICONTROL B&W Low Contrast], [!UICONTROL B&W Flat], [!UICONTROL B&W Soft], [!UICONTROL B&W Infrared], [!UICONTROL B&W Selenium Tone], [!UICONTROL B&W Sepia Tone], and [!UICONTROL B&W Split Tone].
+* **Vignetting**: [!UICONTROL None], [!UICONTROL Light], [!UICONTROL Medium], and [!UICONTROL Heavy].
 
-* **Populärt**: [!UICONTROL High Contrast & Detail], [!UICONTROL Desaturated Contrast], [!UICONTROL Aged Photo], [!UICONTROL B&W Soft]och [!UICONTROL B&W Sepia Tone].
-* **Färg**: [!UICONTROL Natural], [!UICONTROL Bright], [!UICONTROL High Contrast], [!UICONTROL High Contrast & Detail], [!UICONTROL Vivid]och [!UICONTROL Matte].
-* **Kreativ**: [!UICONTROL Desaturated Contrast], [!UICONTROL Cool Light], [!UICONTROL Turquoise & Red], [!UICONTROL Soft Mist], [!UICONTROL Vintage Instant], [!UICONTROL Warm Contrast], [!UICONTROL Flat & Green], [!UICONTROL Red Lift Matte], [!UICONTROL Warm Shadows]och [!UICONTROL Aged Photo].
-* **Svartvitt**: [!UICONTROL B&W Landscape], [!UICONTROL B&W High Contrast], [!UICONTROL B&W Punch], [!UICONTROL B&W Low Contrast], [!UICONTROL B&W Flat], [!UICONTROL B&W Soft], [!UICONTROL B&W Infrared], [!UICONTROL B&W Selenium Tone], [!UICONTROL B&W Sepia Tone]och [!UICONTROL B&W Split Tone].
-* **Vinjettering**: [!UICONTROL None], [!UICONTROL Light], [!UICONTROL Medium]och [!UICONTROL Heavy].
-
-![Justera bild genom att redigera](assets/adjust-image.png)
+![Adjust image by editing](assets/adjust-image.png)
 
 <!--
 TBD: Insert a video of the available social media options.
