@@ -4,9 +4,9 @@ description: Lär dig hur du lägger till nya språkområden i ett adaptivt form
 feature: Adaptive Forms, Core Components
 Role: Developer, Author
 exl-id: bc06542b-84c8-4c6a-a305-effbd16d5630
-source-git-commit: 2658d844036d8ac5759d819f9d19c4528cc4df61
+source-git-commit: 9cb3b52d0cf172c16777eadbc4d78b267c3db513
 workflow-type: tm+mt
-source-wordcount: '2152'
+source-wordcount: '2028'
 ht-degree: 0%
 
 ---
@@ -270,7 +270,7 @@ Nu ska vi lägga in `clientlib-it-custom-locale` bibliotek till din AEM as a Clo
 
 
 
-### 5. Lägg till språkstöd i ordlistan
+### Lägg till språkstöd i ordlistan
 
 Det här steget gäller endast för andra språk än de som stöds vanligtvis: engelska (en), tyska (de), spanska (es), franska (fr), italienska (it), brasiliansk portugisiska (pt-br), kinesiska (förenklad - zh_cn), kinesiska (traditionell - zh_tw), japanska (ja) och koreanska (ko_kr).
 
@@ -350,7 +350,7 @@ Nu kan du börja använda det nya språkområdet med din adaptiva Forms. Du kan
 
       Utlösa en distribution av koden via [befintlig pipeline i full hög](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline). Detta skapar och distribuerar automatiskt den uppdaterade koden med det nya språkstödet.
 
-      Om du inte redan har konfigurerat en pipeline kan du läsa guiden på [hur man lägger upp en pipeline för AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline)..
+      Om du inte redan har konfigurerat en pipeline kan du läsa guiden på [hur man lägger upp en pipeline för AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline).
 
 
 ## Förhandsgranska ett anpassat formulär med nyligen tillagda språk
@@ -358,8 +358,6 @@ Nu kan du börja använda det nya språkområdet med din adaptiva Forms. Du kan
 Med de här stegen får du hjälp att förhandsgranska ett adaptivt formulär med den nya språkinställningen:
 
 1. Logga in på din as a Cloud Service AEM Forms-instans.
-
-1. Gå till&quot;Forms&quot; och gå till&quot;Forms and Documents&quot;.
 1. Gå till **Forms** >  **Forms och dokument**.
 1. Välj ett anpassat formulär och klicka på **Lägg till ordlista** och **Lägg till ordlista i översättningsprojekt** visas.
 1. Ange **Projektets titel** och väljer **Målspråk** i listrutan i **Lägg till ordlista i översättningsprojekt** guide.
@@ -367,20 +365,6 @@ Med de här stegen får du hjälp att förhandsgranska ett adaptivt formulär me
 1. Gå till **Forms** >  **Forms och dokument**.
 1. Markera det adaptiva formuläret och välj **Förhandsgranska som HTML** alternativ.
 1. Lägg till `&afAcceptLang=<locale-name>` till förhandsgransknings-URL:en och tryck på returtangenten. Ersätt `<locale-name>` med den faktiska språkkoden. Det anpassningsbara formuläret visas på det angivna språket.
-
-
-## Förhandsgranska ett anpassat formulär med nyligen tillagda språk {#use-added-locale-in-af}
-
-Utför följande steg för att förhandsgranska en anpassad version med nyligen tillagda nationella inställningar:
-
-1. Logga in på din as a Cloud Service AEM Forms-instans.
-1. Gå till **Forms** >  **Forms och dokument**.
-1. Välj ett anpassat formulär och klicka på **Lägg till ordlista** och **Lägg till ordlista i översättningsprojekt** visas.
-1. Ange **Projektets titel** och väljer **Målspråk** i listrutan i **Lägg till ordlista i översättningsprojekt** guide.
-1. Klicka **Klar** och kör det skapade översättningsprojektet.
-1. Välj ett anpassat formulär och klicka på **Förhandsgranska som HTML**.
-1. Lägg till `&afAcceptLang=<locale-name>` i URL:en för ett adaptivt formulär.
-1. Uppdatera sidan och Adaptiv form renderas i en angiven språkinställning.
 
 ## De bästa sätten att stödja ny lokalisering {#best-practices}
 
@@ -393,12 +377,11 @@ Utför följande steg för att förhandsgranska en anpassad version med nyligen 
 
    * **Översättning av människor**: För mänskliga översättningsarbetsflöden exporterar du ordboken med användargränssnittet på `[AEM Forms Server]/libs/cq/i18n/gui/translator.html`. Uppdatera ordlistan för de nya fälten och överför den reviderade versionen.
 
-## Se mer
-
-* [Generera urkunder för Adaptive Forms](/help/forms/generate-document-of-record-core-components.md)
-* [Lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
-
 
 ## Se även {#see-also}
 
 {{see-also}}
+
+* [Generera urkunder för Adaptive Forms](/help/forms/generate-document-of-record-core-components.md)
+* [Lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+
