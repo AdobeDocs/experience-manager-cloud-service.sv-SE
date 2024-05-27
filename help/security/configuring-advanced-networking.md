@@ -2,9 +2,9 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service.
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: 0cd4a720874c9d4138665f0bfdecbd29468f01e5
+source-git-commit: 3e8a1a8a48fc5ec6bff71062ff740acf98d743d2
 workflow-type: tm+mt
-source-wordcount: '5388'
+source-wordcount: '5332'
 ht-degree: 0%
 
 ---
@@ -803,6 +803,4 @@ Anslutningspoolning är en teknik som är anpassad för att skapa och underhåll
 
 Att införa en lämplig strategi för sammanfogning av anslutningar är en proaktiv åtgärd för att korrigera en vanlig tillsyn i systemkonfigurationen, vilket ofta leder till sämre prestanda. Genom att upprätta en anslutningspool på rätt sätt kan Adobe Experience Manager (AEM) effektivisera externa samtal. Detta minskar inte bara resursförbrukningen utan minskar också risken för tjänstavbrott och minskar sannolikheten för att stöta på misslyckade begäranden vid kommunikation med servrar i föregående ström.
 
-Mot bakgrund av den här informationen rekommenderar vi dig att göra en ny bedömning av din nuvarande AEM och överväga en avsiktlig integrering av anslutningspoolning i kombination med avancerade nätverksinställningar. Genom att vidta dessa åtgärder har lösningen utformats för att förhindra att utkast blir överbelastade, vilket minskar sannolikheten för att förfrågningar inte når externa slutpunkter.
-
-Mot bakgrund av den här informationen rekommenderar vi dig att göra en ny bedömning av din nuvarande AEM och överväga en avsiktlig integrering av anslutningspoolning i kombination med avancerade nätverksinställningar. Genom att hantera antalet parallella anslutningar och minimera förekomsten av eventuella inaktuella anslutningar, leder dessa åtgärder till en minskning av risken för att proxyservrar når sina anslutningsgränser. Denna strategiska implementering är därför avsedd att minska sannolikheten för att begäranden inte når externa slutpunkter.
+Mot bakgrund av dessa uppgifter rekommenderar Adobe att du gör en ny bedömning av din nuvarande AEM och överväger att avsiktligt införliva sammanfogning av anslutningar i samband med avancerade nätverksinställningar. Genom att hantera antalet parallella anslutningar och minimera risken för inaktuella anslutningar, leder dessa åtgärder till en minskning av risken för att proxyservrar når sina anslutningsgränser. Denna strategiska implementering är därför avsedd att minska sannolikheten för att begäranden inte når externa slutpunkter.
