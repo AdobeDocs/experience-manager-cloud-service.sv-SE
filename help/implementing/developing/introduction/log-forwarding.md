@@ -1,11 +1,9 @@
 ---
 title: Loggvidarebefordran för AEM as a Cloud Service
 description: Läs mer om vidarebefordran av loggar till Splunk och andra loggningsleverantörer på AEM as a Cloud Service
-hide: true
-hidefromtoc: true
-source-git-commit: d41390696383f8e430bb31bd8d56a5e8843f1257
+source-git-commit: 13696ffde99114e5265e5c2818cb3257dd09ee8c
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '718'
 ht-degree: 0%
 
 ---
@@ -64,11 +62,47 @@ Den här artikeln är organiserad på följande sätt:
          index: "AEMaaCS"
    ```
 
-   Standardnoden måste inkluderas av framtida kompatibilitetsskäl.
+   The **sort** parametern ska anges till LogForwarding. Versionen ska anges till schemaversionen, som är 1.
 
-   Parametern kind ska anges till LogForwarding. Versionen ska anges till schemaversionen, som är 1.
+   Token i konfigurationen (t.ex. `${{SPLUNK_TOKEN}}`) representerar hemligheter, som inte bör lagras i Git. Deklarera dem som Cloud Manager i stället  [Miljövariabler](/help/implementing/cloud-manager/environment-variables.md) av typen **hemlig**. Se till att markera **Alla** som listvärde för fältet Service Applied, så att loggarna kan vidarebefordras till författare, publicering och förhandsgranskning.
 
-   Token i konfigurationen (t.ex. `${{SPLUNK_TOKEN}}`) representerar hemligheter, som inte bör lagras i Git. Deklarera dem som Cloud Manager i stället  [Miljövariabler](/help/implementing/cloud-manager/environment-variables.md) av typen &quot;hemlighet&quot;. Se till att markera **Alla** som listvärde för fältet Service Applied, så att loggarna kan vidarebefordras till författare, publicering och förhandsgranskning.
+   Det går att ange olika värden mellan cdn-loggarna och allt annat (AEM- och apache-loggar) genom att inkludera ytterligare **cdn** och/eller **aem** -block efter **standard** block, där egenskaper kan åsidosätta de som definieras i **standard** block; endast egenskapen enabled krävs. Ett möjligt användningsexempel kan vara att använda ett annat Splunk-index för CDN-loggar, vilket visas i exemplet nedan.
+
+   ```
+      kind: "LogForwarding"
+      version: "1"
+      metadata:
+        envTypes: ["dev"]
+      data:
+        splunk:
+          default:
+            enabled: true
+            host: "splunk-host.example.com"
+            token: "${{SPLUNK_TOKEN}}"
+            index: "AEMaaCS"
+          cdn:
+            enabled: true
+            token: "${{SPLUNK_TOKEN_CDN}}"
+            index: "AEMaaCS_CDN"   
+   ```
+
+   Ett annat scenario är att inaktivera vidarebefordran av CDN-loggarna eller allt annat (AEM- och apache-loggar). Om du till exempel bara vill vidarebefordra CDN-loggarna kan du konfigurera följande:
+
+   ```
+      kind: "LogForwarding"
+      version: "1"
+      metadata:
+        envTypes: ["dev"]
+      data:
+        splunk:
+          default:
+            enabled: true
+            host: "splunk-host.example.com"
+            token: "${{SPLUNK_TOKEN}}"
+            index: "AEMaaCS"
+          aem:
+            enabled: false
+   ```
 
 1. För andra miljötyper än RDE (som för närvarande inte stöds) skapar du en riktad distributionskonfigurationspipeline i Cloud Manager.
 
@@ -96,10 +130,17 @@ data:
       
 ```
 
-Att tänka på:
+En SAS-token bör användas för autentisering. Den ska skapas från signatursidan för delad åtkomst, i stället för på tokensidan för delad åtkomst, och ska konfigureras med följande inställningar:
 
-* Autentisera med SAS-token, som ska ha en minimilängd för validering.
-* SAS-token ska skapas på kontosidan, inte på behållarsidan.
+* Tillåtna tjänster: Blobb måste väljas
+* Tillåtna resurser: Objektet måste markeras
+* Tillåtna behörigheter: Skriv, Lägg till, Skapa måste vara markerat
+* Ett giltigt start- och förfallodatum/-tid.
+
+Här följer en skärmbild av en exempelkonfiguration för SAS-token:
+
+![Konfiguration av Azure Blob SAS-token](/help/implementing/developing/introduction/assets/azureblob-sas-token-config.png)
+
 
 ### Datadog {#datadog}
 
