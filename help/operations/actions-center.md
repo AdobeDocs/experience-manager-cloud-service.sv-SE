@@ -2,9 +2,9 @@
 title: Actions Center
 description: Utnyttja åtgärdscentret för att enkelt hantera incidenter och annan viktig information
 exl-id: d5a95ac4-aa88-44d5-ba02-7c9702050208
-source-git-commit: df10d8d210877e166312f66d5c4e74dbe771446a
+source-git-commit: 383d56ccd1e523082c21e58252a7c03a9807c582
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '829'
 ht-degree: 0%
 
 ---
@@ -60,18 +60,19 @@ Precis som alla supportärenden visas de i [Fliken Adobe Admin Console Supportä
 AEM as a Cloud Service har flera typer av meddelanden, men bara en delmängd visas i Åtgärdscenter, vilket framgår av tabellen nedan.
 
 | Meddelandetyp | Beskrivning | Konfigurera | Visas i Åtgärdscenter |
-|---|---|---|---|
+|---------------------------------|-----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
 | Driftincidenter | Kritiska incidenter som kräver omedelbara åtgärder | Användare tilldelad produktprofilen&quot;Incident Notification - Cloud Service&quot; | X |
 | Förebyggande rekommendationer | Optimeringar som ska planeras | Användare tilldelad produktprofilen &quot;Proaktivt meddelande - Cloud Service&quot; | X |
-| Molnhanterarens pipeline-status | Information om tillståndet för dina rörledningar | Användare med Business Owner, Program Manager eller Deployment Manager-roller, kryssrutan Övrigt markerad i [Inställningar för Experience Cloud](https://experience.adobe.com/preferences), som [beskrivs här](/help/implementing/cloud-manager/notifications.md). |   |
+| Molnhanterarens pipeline-status | Information om tillståndet för dina rörledningar | Användare med Business Owner, Program Manager eller Deployment Manager-roller, kryssrutan Övrigt markerad i [Inställningar för Experience Cloud](https://experience.adobe.com/preferences), som [beskrivs här](/help/implementing/cloud-manager/notifications.md). |                           |
 
 ## Meddelandetyper som stöds {#supported-notification-types}
 
 I följande tabell visas de meddelandetyper som för närvarande stöds i Åtgärdscenter. Meddelanden är för närvarande begränsade till produktionsmiljöer.
 
 | Meddelandetyp | Relaterad produktprofil | Korrigeringsåtgärd |
-|---------------------------------|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|---------------------------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Blockerad replikeringskö | Incident | Avblockera kön genom att följa instruktionerna i [Replikeringsdokumentation](/help/operations/replication.md#troubleshooting) |
 | Ogiltig beständig GraphQL-fråga | Incident | Åtgärda den ogiltiga GraphQL-frågan genom att referera till [Beständiga GraphQL-frågor felsökningsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries-troubleshoot.html) |
-| S2S-certifikatet förfaller | Proaktiv | Lär dig hur du uppdaterar en autentiseringsuppgift i dialogrutan [Genererar Access-token för dokumentation för API:er på serversidan](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md#refresh-credentials) | Högt antal anslutningar | Proaktiv | Läs mer om anslutningspooler i [Anslutningspoolning tillsammans med avancerad nätverksdokumentation](/help/security/configuring-advanced-networking.md#connection-pooling-advanced-networking) |
 | Trafikrydda vid ursprung | Incident | Protect ditt ursprung genom att konfigurera regler för hastighetsbegränsning för trafikfilter som utlöser vid lägre tröskelvärden än standardtrafikspiken vid ursprungsvarningen.  Se [Blockera DoS- och DDoS-attacker med trafikregler](/help/security/traffic-filter-rules-including-waf.md#blocking-dos-and-ddos-attacks-using-traffic-filter-rules) i dokumentationen för trafikfilterregler, som refererar till en självstudiekurs. |
+| S2S-certifikatet förfaller | Proaktiv | Lär dig hur du uppdaterar en autentiseringsuppgift i dialogrutan [Genererar Access-token för dokumentation för API:er på serversidan](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md#refresh-credentials) | Högt antal anslutningar | Proaktiv | Läs mer om anslutningspooler i [Anslutningspoolning tillsammans med avancerad nätverksdokumentation](/help/security/configuring-advanced-networking.md#connection-pooling-advanced-networking) |
+| Mappning av tjänstanvändare har tagits bort | Proaktiv | Lär dig hur du använder det nyare användarmappningsformatet för Sling-tjänsten, vilket visas i [Bästa praxis för användarmappning av delningstjänst och användardefinition av tjänst](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/best-practices-for-sling-service-user-mapping-and-service-user-definition) |
