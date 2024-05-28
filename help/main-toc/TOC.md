@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 4c2f0a230c259f5d5af08158707ebea016c431e6
+source-git-commit: 2b035e9597518ff64a2b4ce8c18ae31e5deef6f3
 workflow-type: tm+mt
 source-wordcount: '4961'
 ht-degree: 3%

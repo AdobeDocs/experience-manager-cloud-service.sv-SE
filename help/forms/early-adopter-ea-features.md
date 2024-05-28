@@ -3,15 +3,14 @@ title: Aktuella funktioner för tidig användning av [!DNL Adobe Experience Mana
 description: Aktuella funktioner för tidig användning av [!DNL Adobe Experience Manager Forms] as a Cloud Service.
 Feature: Introduction
 Role: developer, user
-source-git-commit: 9d1594e61a3ec79c0e773cac5753885684ac8a21
+source-git-commit: 2b035e9597518ff64a2b4ce8c18ae31e5deef6f3
 workflow-type: tm+mt
-source-wordcount: '1600'
+source-wordcount: '1599'
 ht-degree: 0%
 
 ---
 
 # AEM Forms Early Adobe Program
-
 
 AEM Forms Early Adobe Program ger dig en unik möjlighet att få exklusiv tillgång till de senaste funktionerna för alla andra och hjälper dig att utveckla dem. Programmet ger dig möjlighet att
 
@@ -21,7 +20,7 @@ AEM Forms Early Adobe Program ger dig en unik möjlighet att få exklusiv tillg�
 
 ## Hur går jag med i programmet Early Adobe?
 
-Om du är intresserad av att delta i vårt tidiga Adobe-program för tidiga utvecklare skickar du ett mejl från din officiella adress till aem-forms-ea@adobe.com. Du kan begära åtkomst till alla eller alla specifika innovationer.
+Om du är intresserad av att delta i vårt tidiga Adobe-program för tidiga utvecklare skickar du ett mejl från din officiella adress till `aem-forms-ea@adobe.com` för att begära åtkomst. Du kan begära åtkomst till alla eller alla specifika innovationer.
 
 
 ## Innovationer för tidiga Adobe-program
