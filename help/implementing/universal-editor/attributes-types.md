@@ -2,10 +2,10 @@
 title: Attribut och objekttyper
 description: Läs mer om de dataattribut och objekttyper som krävs för den universella redigeraren.
 exl-id: 02795a31-244a-42b4-8297-2649125d7777
-source-git-commit: 36be262a7949bc66f97f5483ff463d755f5f78e5
+source-git-commit: b42390dcecb546853380d64808bcf009680c89a3
 workflow-type: tm+mt
-source-wordcount: '686'
-ht-degree: 0%
+source-wordcount: '538'
+ht-degree: 1%
 
 ---
 
@@ -56,14 +56,3 @@ Beroende på användningsfallet `data-aue-prop` eller `data-aue-resource` kan va
 |---|---|
 | `component` | Används för att tillåta fristående text, fullödig text och mediemimiska komponenter så att de också kan flyttas och tas bort på sidan |
 | `container` | Används för att tillåta att behållare behandlas som sina egna komponenter så att de kan flyttas och tas bort på sidan |
-
-## Ytterligare resurser {#additional-resources}
-
-Mer information om Universal Editor finns i de här dokumenten.
-
-* [Introduktion till Universal Editor](introduction.md) - Lär dig hur den universella redigeraren möjliggör redigering av alla aspekter av innehåll i alla implementeringar, så att du kan leverera enastående upplevelser, öka innehållets hastighet och skapa en toppmodern utvecklarupplevelse.
-* [Skapa innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md) - Lär dig hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
-* [Publicera innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/publishing.md) - Lär dig hur den universella redigeraren publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
-* [Komma igång med Universal Editor i AEM](getting-started.md) - Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
-* [Universal Editor Architecture](architecture.md) - Lär dig mer om arkitekturen i den universella redigeraren och hur data flödar mellan tjänster och lager.
-* [Autentisering av universell redigerare](authentication.md) - Lär dig hur den universella redigeraren autentiseras.

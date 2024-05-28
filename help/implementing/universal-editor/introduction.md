@@ -2,9 +2,9 @@
 title: Introduktion till Universal Editor
 description: Se hur den universella redigeraren möjliggör WYSIWYG-redigering av headless och headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
 exl-id: d4fc2384-a0f5-4a6f-9572-62749786be4c
-source-git-commit: 2ad5920d0b3d8a3ad780a2cb0f28b7e6f9e596ab
+source-git-commit: b42390dcecb546853380d64808bcf009680c89a3
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '973'
 ht-degree: 0%
 
 ---
@@ -90,13 +90,6 @@ När du utforskar den universella redigeraren och fortsätter implementera den i
 * Innehållsförfattare måste ha sina egna Experience Cloud-konton.
 * Chrome och Edge stöds av webbläsarna
 
-## Ytterligare resurser {#additional-resources}
+## Nästa steg {#next-steps}
 
-Mer information om Universal Editor finns i de här dokumenten.
-
-* [Skapa innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md) - Lär dig hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
-* [Publicera innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/publishing.md) - Lär dig hur den universella redigeraren publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
-* [Komma igång med Universal Editor i AEM](getting-started.md) - Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
-* [Universal Editor Architecture](architecture.md) - Lär dig mer om arkitekturen i den universella redigeraren och hur data flödar mellan tjänster och lager.
-* [Attribut och typer](attributes-types.md) - Läs mer om de dataattribut och datatyper som krävs för den universella redigeraren.
-* [Autentisering av universell redigerare](authentication.md) - Lär dig hur den universella redigeraren autentiseras.
+Se dokumentet [Användningsexempel och inlärningssökvägar i Universal Editor](/help/implementing/universal-editor/use-cases.md) om du vill veta mer om vanliga användningsområden för den universella redigeraren och hitta rätt dokumentationsresurser som kan hjälpa dig i ditt projekt.

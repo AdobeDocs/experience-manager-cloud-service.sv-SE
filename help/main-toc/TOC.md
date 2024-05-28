@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 9d1594e61a3ec79c0e773cac5753885684ac8a21
+source-git-commit: 4c2f0a230c259f5d5af08158707ebea016c431e6
 workflow-type: tm+mt
-source-wordcount: '4982'
+source-wordcount: '4961'
 ht-degree: 3%
 
 ---
@@ -1079,18 +1079,19 @@ ht-degree: 3%
          + [Anpassade felsidor](/help/implementing/developing/introduction/custom-error-page.md)
          + [AEM nodtyper](/help/implementing/developing/introduction/node-types.md)
       + Universal Editor {#universal-editor}
-         + [Introduktion till Universal Editor](/help/implementing/universal-editor/introduction.md)
-         + [Universal Editor Architecture](/help/implementing/universal-editor/architecture.md)
-         + [SecurBank-exempelapp](/help/implementing/universal-editor/securbank.md)
-         + [Komma igång med Universal Editor i AEM](/help/implementing/universal-editor/getting-started.md)
-         + [Universal Editor Developer Overview](/help/implementing/universal-editor/developer-overview.md)
+         + [Introduktion](/help/implementing/universal-editor/introduction.md)
+         + [Användningsexempel](/help/implementing/universal-editor/use-cases.md)
          + [Attribut och objekttyper](/help/implementing/universal-editor/attributes-types.md)
          + [Modelldefinitioner, fält och komponenttyper](/help/implementing/universal-editor/field-types.md)
-         + [Autentisering av universell redigerare](/help/implementing/universal-editor/authentication.md)
-         + [Local AEM Development with the Universal Editor](/help/implementing/universal-editor/local-dev.md)
-         + [Universella redigeringsanrop](/help/implementing/universal-editor/calls.md)
+         + [SecurBank-exempelapp](/help/implementing/universal-editor/securbank.md)
          + [Händelser](/help/implementing/universal-editor/events.md)
-         + [Anpassa den universella redigeraren](/help/implementing/universal-editor/customizing.md)
+         + [Anpassa](/help/implementing/universal-editor/customizing.md)
+         + [Arkitektur](/help/implementing/universal-editor/architecture.md)
+         + [Autentisering](/help/implementing/universal-editor/authentication.md)
+         + [Komma igång](/help/implementing/universal-editor/getting-started.md)
+         + [Utvecklaröversikt](/help/implementing/universal-editor/developer-overview.md)
+         + [Lokal AEM](/help/implementing/universal-editor/local-dev.md)
+         + [Samtal](/help/implementing/universal-editor/calls.md)
       + [Headless Experience Management](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/introduction.html)
       + Hybrid- och SPA {#hybrid}
          + [Hybrid och SPA med AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
