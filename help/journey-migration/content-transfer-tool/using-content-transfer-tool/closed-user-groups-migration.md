@@ -4,9 +4,9 @@ description: Läs mer om de speciella överväganden som krävs för att aktiver
 hide: true
 hidefromtoc: true
 exl-id: f62ed751-d5e2-4a01-8910-c844afab5733
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 29ffb48d23b4a2fe4973b005c98c5720b4196367
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -23,27 +23,22 @@ För närvarande behöver stängda användargrupper (CUG) några ytterligare ste
 
 ## Migrering av grupper
 
-Huvudposter (inklusive grupper) inkluderas automatiskt i en migrering till Adobe Experience Manager as a Cloud Service om de är kopplade till det migrerade innehållet via det innehållets åtkomstkontrollista.
+Objekt (inklusive grupper) inkluderas automatiskt i en migrering till Adobe Experience Manager as a Cloud Service om de är kopplade till det migrerade innehållet via det innehållets åtkomstkontrollista, och de inkluderas också om de refereras till i en CUG-princip för det innehållet.
 
 ## Stängda användargrupper under migrering
 
-För närvarande, associerade grupper *endast* med en CUG-princip (Closed User Group) *not* ingår automatiskt i intaget. Som nämnts ovan migreras de om de är kopplade till något innehåll via en ACL. Verifiering av gruppen och dess medlemmar ska göras innan publicering inleds. Huvudrapporten, som hämtas via förslagsjobbvyn, kan användas för att se om den aktuella gruppen inkluderades eller inte var eftersom den inte fanns i en åtkomstkontrollista. Om gruppen inte finns bör den skapas i Author-instansen, inklusive tillägg av lämpliga medlemmar, och aktiveras så att den finns i Publish-instansen. Detta kan göras med paket som skapats på källan.
+Verifiering av gruppen och dess medlemmar ska göras innan publicering inleds. Huvudrapporten, som hämtas via förslagsjobbsvyn, kan användas för att se om gruppen i fråga ingick eller inte eftersom den inte fanns i en ACL- eller CUG-princip.
 
-Slutligen måste processerna aktiveras och egenskaper anges för att aktivera CUG-grupper. Det gör du genom att publicera om alla sidor som är kopplade till en CUG-princip. Detta kalibrerar Publish-instansen för att spåra profilerna.
+Därefter måste processerna aktiveras och egenskaperna anges för att aktivera CUG-grupper. Det gör du genom att publicera om alla sidor som är kopplade till en CUG-princip. Detta kalibrerar Publish-instansen för att spåra profilerna.
 
 Detta aktiverar CUG-profiler vid publicering, och innehållet är bara tillgängligt för autentiserade användare som är medlemmar i gruppen som är kopplad till profilerna.
-
-## Aktiv utveckling
-
-Migreringsteamet arbetar med att få CUG-policyer att migreras och fungera automatiskt, utan några ytterligare steg efter att innehållet har importerats.
-Inkludera CUG-funktioner i testprocesser innan du försöker publicera.
 
 ## Sammanfattning
 
 Sammanfattningsvis är det här stegen för att aktivera CUG efter en migrering:
 
 1. Kontrollera att varje grupp som används i CUG-principer finns vid publicering efter migreringen.
-   - Det kan finnas en grupp om den ingår i det migrerade innehållets åtkomstkontrollista.
+   - Det kan finnas en grupp om den ingår i ett migrerat innehålls CUG-princip eller i innehållets ACL.
    - Om den inte gör det kan du använda Paket för att installera den på målinstansen (eller skapa den manuellt där) och aktivera den och dess medlemmar. Kontrollera sedan att den finns vid publicering.
 1. Publicera om alla sidor som är kopplade till en CUG-princip och kontrollera att den publiceras, till exempel genom att redigera sidan först. Det är viktigt att publicera om alla.
    - När alla sidor har publicerats om kontrollerar du att de fungerar för varje CUG-skyddad sida.
