@@ -2,9 +2,9 @@
 title: Snabba utvecklingsmiljöer
 description: Lär dig hur du använder miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
 exl-id: 1e9824f2-d28a-46de-b7b3-9fe2789d9c68
-source-git-commit: cd74240f59cb3139e425f568828ba9ab1b59147f
+source-git-commit: 4a5b7c671a149d61c60fc86f93a41d52fb4b5468
 workflow-type: tm+mt
-source-wordcount: '4345'
+source-wordcount: '4294'
 ht-degree: 0%
 
 ---
@@ -408,11 +408,12 @@ The analyser found the following errors for publish :
 
 Kodexemplet ovan visar beteendet om ett paket inte löses. I så fall&quot;mellanlagras&quot; den och installeras endast om dess krav (i detta fall&quot;import som saknas&quot;) uppfylls genom installation av annan kod.
 
-<u>Distribuera frontkod baserat på webbplatsteman och webbplatsmallar</u>
+### Distribuera startkod baserat på webbplatsteman och webbplatsmallar {#deploying-themes-to-rde}
 
 >[!NOTE]
 >
->Den här funktionen är ännu inte GA, men kan användas av tidiga användare. Kontakta **aemcs-rde-support@adobe.com** för att testa och ge feedback.
+> Den här funktionen är inte tillgänglig än. Den kommer att lanseras någon gång i juni.
+>
 
 De lokala lagringsenheterna stöder kod som baseras på [webbplatsteman](/help/sites-cloud/administering/site-creation/site-themes.md) och [webbplatsmallar](/help/sites-cloud/administering/site-creation/site-templates.md). Med RDE:er görs detta med hjälp av ett kommandoradsdirektiv för att distribuera frontendpaket, i stället för med Cloud Manager [Front-End Pipeline](/help/sites-cloud/administering/site-creation/enable-front-end-pipeline.md) används för andra miljötyper.
 
@@ -1011,8 +1012,6 @@ Observera även följande:
 
 * De lokala redigeringssystemen innehåller inte någon förhandsgranskningsnivå
 * De lokala redigeringssystemen stöder för närvarande inte prerelease-kanalen.
-* Medan RDE-stödet för visning och felsökning av frontkod bygger på [webbplatsteman](/help/sites-cloud/administering/site-creation/site-themes.md) och [webbplatsmallar](/help/sites-cloud/administering/site-creation/site-templates.md) är inte redo för GA än, den kan användas av tidiga användare. Kontakta **aemcs-rde-support@adobe.com** för att testa och ge feedback.
-
 
 
 ## Hur många skrivbord behöver jag? {#how-many-rds-do-i-need}
