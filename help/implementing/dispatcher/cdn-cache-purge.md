@@ -2,9 +2,9 @@
 title: Rensa CDN-cachen
 description: Lär dig hur du tar bort cachelagrade objekt från CDN-cachen i Adobe genom att konfigurera rensnings-API-token som sedan kan användas i API-anrop.
 feature: Dispatcher
-source-git-commit: 7224db99c29c90fb5e93ac07d7d501e2e9aaf74e
+source-git-commit: 114098a75d84a3da4cc582288ffa162cd960a0e6
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 >Den här funktionen är ännu inte allmänt tillgänglig. Om du vill gå med i programmet för tidig adopter skickar du e-post `aemcs-cdn-config-adopter@adobe.com`.
 
 När du rensar bort ett objekt från CDN-cachen i Adobe tas det bort, vilket resulterar i framtida förfrågningar som fortsätter till ursprungsläget som en cache-fil som inte kan hanteras från cachen.
-Med AEM as a Cloud Service kan du konfigurera en rensnings-API-token, som sedan kan användas i API-anrop. Läs <!--[Configuring CDN Credentials and Authentication article](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token)--> om du vill lära dig hur du konfigurerar den här token med hjälp av autentiseringsdirektiven för Configuration Pipeline i Cloud Manager.
+Med AEM as a Cloud Service kan du konfigurera en rensnings-API-token, som sedan kan användas i API-anrop. Läs [Konfigurera CDN-autentiseringsuppgifter och autentiseringsartikel](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token) om du vill lära dig hur du konfigurerar den här token med hjälp av autentiseringsdirektiven för Configuration Pipeline i Cloud Manager.
 
 Det finns tre rensningsvariationer som stöds:
 
