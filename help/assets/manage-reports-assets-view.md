@@ -2,9 +2,9 @@
 title: Hantera rapporter i resursvyn
 description: Få tillgång till data i rapportavsnittet i resursvyn för att utvärdera produkt- och funktionsanvändning och få insikter om viktiga framgångsmått.
 exl-id: 26d0289e-445a-4b8e-a5a1-b02beedbc3f1
-source-git-commit: 0eea9b83d437c7e91daae08c33d94a83ba1db3f9
+source-git-commit: 7e8d4487ec545b5625d6401513df00d5c6240ee2
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '782'
 ht-degree: 1%
 
 ---
@@ -58,11 +58,6 @@ Klicka **[!UICONTROL Insights]** som finns i det vänstra navigeringsfönstret f
    ![Insights](assets/insights1.png)
    ![Insights](assets/insights2.png)
    -->
-* **Antal tillgångar efter storlek:** Segmenterar det totala antalet resurser i resursvymiljön i olika storleksintervall, vilket markerar antalet och procentandelen resurser i varje storleksintervall, som representeras av ett bottendiagram.
-  ![insights-assets-count-by-size](/help/assets/assets/insights-assets-count-by-size.svg)
-* **Antal tillgångar efter tillgångstyp:** Segmenterar det totala antalet mediefiler i resursvymiljön, och markerar antalet och procentandelen resurser baserat på deras filtyper, som representeras av bottendiagram.
-  ![insights-assets-count-by-size](/help/assets/assets/insights-assest-count-by-asset-type1.svg)
-
 
 ## Skapa en nedladdningsrapport {#create-download-report}
 
