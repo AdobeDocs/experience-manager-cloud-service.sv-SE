@@ -1,7 +1,7 @@
 ---
-source-git-commit: 8c60b02c1759fc4d0cf66d6c8f1c2edf294fc1ce
+source-git-commit: 494e90bd5822495f0619e8ebf55f373a26a3ffe6
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -64,4 +64,56 @@ ht-degree: 0%
 * [Lägga till repeterbara avsnitt i ett &#x200B;](/help/edge/docs/forms/repeatable-forms.md)
 * [Visa ett anpassat tackmeddelande efter att formuläret har skickats &#x200B;](/help/edge/docs/forms/thank-you-page-form.md)
 * [Komponenter för adaptiva formulärblock och deras egenskaper](/help/edge/docs/forms/form-components.md)
+
+
+## Skillnad mellan regelredigerare i kärnkomponenter och Regelredigerare i Foundation Components  {#rule-editor-diff}
+
+I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i regelredigerarens kärnkomponenter och grundkomponenterna i regelredigeraren:
+
+<table>
+  <tbody>
+  <tr>
+    <td><strong>Funktioner</strong></td>
+    <td><strong>Komponenter i Form Foundation</strong></td>
+    <td><strong>Komponenter i adaptiva Form Core</strong></td>   
+    </tr>
+  </tr>
+  <tr>
+    <td>Ange alternativ för listrutor </td>
+    <td>Alternativen i listrutan anges med regelredigerarens <b>Ange alternativ för</b> -egenskap.</td>
+    <td>Alternativen i listrutan ställs in med de anpassade funktionerna. 
+   </td>
+   </tr>
+     </tr>
+   <tr>
+    <td>Utför matematiska operationer på det repeterbara panelfältet </td>
+    <td>OTB-matematiska funktioner kan användas på repeterbara panelfält för att utföra funktioner som summa, medel. </td>
+    <td>Matematiska åtgärder i det repeterbara panelfältet kan utföras med de anpassade funktionerna.
+   </td>
+   </tr>
+      <tr>
+    <td>Validera/återställ fält/panel/formulärregel i"Sedan" </td>
+    <td>Funktionerna Validera och Återställ har bara stöd för formulärobjekt i regelredigeraren. 
+   </td>
+    <td>Funktionerna Validera och Återställ stöder formulär-/panel-/fältobjekt i regelredigeraren. 
+   </td>
+   </tr>
+   <tr>
+    <td>ES10-support </td>
+    <td>ES10 stöds inte ännu. </td>
+    <td>Stöd för moderna JavaScript-funktioner som att låta- och pilfunktioner (ES10-stöd) finns i anpassade funktioner. 
+   </td>
+   </tr>
+   </tr>
+   <tr>
+   <td>Egenskapen Tjänstutdata</td>
+   <td> Egenskapen Service output stöds i <b>Ange värdet för</b> i regelredigeraren. </td>
+   <td>The <b>Ange värdet för</b> alternativet stöder inte <b>Tjänstutdata</b> för att anropa API:er i regelredigeraren.
+   </td>
+   </tr>
+   </tr>
+   </tr>
+  </tbody>
+  <table>
+  </tbody>
 

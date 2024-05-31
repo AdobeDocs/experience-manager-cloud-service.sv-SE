@@ -1,25 +1,20 @@
 ---
 title: Skapa och lägga till anpassade funktioner i ett adaptivt formulär
-description: AEM Forms stöder anpassade funktioner som gör att användare kan skapa och använda sina egna funktioner i regelredigeraren.
+description: AEM Forms har stöd för anpassade funktioner, som gör att användare kan skapa och använda sina egna funktioner i regelredigeraren.
 keywords: Lägg till en anpassad funktion, använd en anpassad funktion, skapa en anpassad funktion, använd anpassad funktion i regelredigeraren.
 contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
 exl-id: 24607dd1-2d65-480b-a831-9071e20c473d
-source-git-commit: c1c170e1cae148c53662cd49850e2a33754fbafc
+source-git-commit: 494e90bd5822495f0619e8ebf55f373a26a3ffe6
 workflow-type: tm+mt
-source-wordcount: '3108'
+source-wordcount: '3510'
 ht-degree: 0%
 
 ---
 
 
-<span class="preview"> Den här artikeln innehåller innehåll för vissa förhandsversionsfunktioner. De här förhandsversionsfunktionerna är bara tillgängliga via [kanal för förhandsversion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). Funktionerna i förhandsversionen är:
-* Stöd för valfria parametrar i anpassade funktioner
-* Cachelagringsfunktion för anpassade funktioner
-* Global omfångsobjekt och fältobjekt har stöd för anpassade funktioner
-* Stöd för moderna JavaScript-funktioner som låt- och pilfunktioner (ES10-stöd).
-Se till att [kärnkomponenten är inställd på version 3.0.8](https://github.com/adobe/aem-core-forms-components) om du vill använda förhandsversionsfunktioner i en anpassad funktion. </span>
+<span class="preview"> Den här artikeln innehåller `Override form submission success and error handlers` som en förhandsversion. Förhandsversionen är bara tillgänglig via vår [kanal för förhandsversion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features).
 
 # Anpassade funktioner i Adaptive Forms (Core Components)
 
@@ -31,6 +26,10 @@ Se till att [kärnkomponenten är inställd på version 3.0.8](https://github.co
 ## Introduktion
 
 AEM Forms har stöd för anpassade funktioner, vilket gör att användare kan definiera JavaScript-funktioner för implementering av komplexa affärsregler. Dessa anpassade funktioner gör att man kan förbättra blanketternas funktioner genom att underlätta hantering och bearbetning av inmatade data för att uppfylla specifika krav. De möjliggör också dynamisk ändring av formulärbeteende baserat på fördefinierade kriterier.
+
+>[!NOTE]
+>
+> Se till att [kärnkomponent](https://github.com/adobe/aem-core-forms-components) är inställt på den senaste versionen för att använda de senaste funktionerna.
 
 ### Användning av anpassade funktioner {#uses-of-custom-function}
 
@@ -124,7 +123,7 @@ Följande bild visas med `OptionalParameterFunction` anpassad funktion i regelre
 
 ![Valfria eller obligatoriska parametrar ](/help/forms/assets/optional-default-params.png)
 
-Du kan spara regeln utan att ange ett värde för obligatoriska parametrar, men regeln körs inte och ett varningsmeddelande visas som:
+Du kan spara regeln utan att ange ett värde för de obligatoriska parametrarna, men regeln körs inte och ett varningsmeddelande visas som:
 
 ![varning om ofullständig regel](/help/forms/assets/incomplete-rule.png)
 
@@ -154,10 +153,10 @@ Returtypen anger vilken typ av värde som den anpassade funktionen returnerar ef
 
 #### Privat
 
-Den anpassade funktionen, som deklarerats som private, visas inte i listan över anpassade funktioner i regelredigeraren för ett adaptivt formulär. Som standard är anpassade funktioner public. Syntaxen för att deklarera den anpassade funktionen som private är `@private`.
+Den anpassade funktionen som deklarerats som private visas inte i listan över anpassade funktioner i regelredigeraren för ett adaptivt formulär. Som standard är anpassade funktioner public. Syntaxen för att deklarera den anpassade funktionen som private är `@private`.
 
 
-## Riktlinjer när du skapar anpassade funktioner {#considerations}
+## Riktlinjer när du skapar anpassade funktioner
 
 Om du vill visa en lista över anpassade funktioner i regelredigeraren kan du använda något av följande format:
 
@@ -227,7 +226,7 @@ Steg för att skapa anpassade funktioner är:
 
 ### Skapa ett klientbibliotek {#create-client-library}
 
-Du kan lägga till anpassade funktioner genom att lägga till klientbibliotek. Så här skapar du ett klientbibliotek:
+Du kan lägga till anpassade funktioner genom att lägga till ett klientbibliotek. Så här skapar du ett klientbibliotek:
 
 1. [Klona din AEM Forms as a Cloud Service databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#accessing-git).
 1. Skapa en mapp under `[AEM Forms as a Cloud Service repository folder]/apps/` mapp. Skapa till exempel en mapp med namnet som `experience-league`.
@@ -280,7 +279,7 @@ När du har distribuerat klientbiblioteket till Forms CS-miljön kan du använda
 
 1. Klicka på **[!UICONTROL Done]**.
 
-Du kan använda den anpassade funktionen i [regelredigerare för ett anpassat formulär](/help/forms/rule-editor-core-components.md) med [Javascript-anteckningar](##js-annotations).
+Du kan använda den anpassade funktionen i [regelredigerare för ett anpassat formulär](/help/forms/rule-editor-core-components.md) med [JavaScript-anteckningar](##js-annotations).
 
 ## Använda en anpassad funktion i ett adaptivt formulär
 
@@ -319,7 +318,44 @@ Låt oss förhandsgranska formuläret för att se hur de anpassade funktionerna 
 
 >[!NOTE]
 >
-> Du kan se följande [anpassad funktion](/help/forms/assets//customfunctions.zip) mapp. Hämta och installera den här mappen i AEM med [Pakethanterare](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager).
+> Du kan se följande [anpassad funktion](/help/forms/assets//customfunctions.zip) mapp. Hämta och installera den här mappen i AEM med [Pakethanteraren](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager).
+
+
+### Ange alternativ för listrutor med anpassade funktioner
+
+Regelredigeraren i kärnkomponenterna stöder inte **Ange alternativ för** för att ange alternativ för listrutor vid körning. Du kan dock ange alternativ för listrutor med anpassade funktioner.
+
+Titta på koden nedan för att se hur vi kan ange alternativ för listrutor med anpassade funktioner:
+
+```javascript
+    /**
+    * @name setEnums
+    * @returns {string[]}
+    **/
+    function setEnums() {
+    return ["0","1","2","3","4","5","6"];   
+    }
+
+    /**
+    * @name setEnumNames
+    * @returns {string[]}
+    **/
+    function setEnumNames() {
+    return ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    }
+```
+
+I ovanstående kod `setEnums` används för att ange `enum` egenskap och `setEnumNames` används för att ange `enumNames` egenskapen för listruta.
+
+Låt oss skapa en regel för `Next` som anger värdet för alternativet i listrutan när användaren klickar på `Next` knapp:
+
+![Alternativ för nedrullningsbara listor](/help/forms/assets/drop-down-list-options.png)
+
+Se bilden nedan för att visa var alternativen i listrutan ställs in när du klickar på knappen Visa:
+
+![Listrutealternativ i regelredigeraren](/help/forms/assets/drop-down-option-rule-editor.png)
+
+
 
 ### Stöd för asynkrona funktioner i anpassade funktioner {#support-of-async-functions}
 
@@ -362,7 +398,7 @@ För att se hur den fungerar kan vi lägga till en knapp och skapa en regel för
 
 ![skapa regel för asynkron funktion](/help/forms/assets/rule-for-async-funct.png)
 
-Se bilden på konsolfönstret nedan för att visa att när användaren klickar på `Fetch` knapp, den anpassade funktionen `callAsyncFunction` anropas, vilket i sin tur anropar en asynkron funktion `asyncFunction`. Inspect i konsolfönstret för att visa svaret när knappen klickar:
+Se bilden på konsolfönstret nedan för att visa att när användaren klickar på `Fetch` knapp, den anpassade funktionen `callAsyncFunction` anropas, vilket i sin tur anropar en asynkron funktion `asyncFunction`. Inspect i konsolfönstret för att visa svaret på knappen:
 
 ![Konsolfönstret](/help/forms/assets/async-custom-funct-console.png)
 
@@ -374,7 +410,7 @@ Du kan använda anpassade funktioner för att lägga till anpassade funktioner i
 
 ### Fält- och globala omfångsobjekt i anpassade funktioner {#support-field-and-global-objects}
 
-Fältobjekt refererar till enskilda komponenter eller element i ett formulär, t.ex. textfält och kryssrutor. Globals-objektet innehåller skrivskyddade variabler som formulärinstans, målfältsinstans och metoder för att göra formulärändringar i anpassade funktioner.
+Fältobjekt refererar till de enskilda komponenterna eller elementen i ett formulär, t.ex. textfält och kryssrutor. Globals-objektet innehåller skrivskyddade variabler som formulärinstans, målfältsinstans och metoder för att göra formulärändringar i anpassade funktioner.
 
 >[!NOTE]
 >
@@ -406,7 +442,7 @@ Låt oss lära oss hur anpassade funktioner använder fält och globala objekt m
 
 ![Kontakta oss](/help/forms/assets/contact-us-form.png)
 
-#### **Användningsfall**: Visa en panel med `SetProperty` regel
++++ **Användningsfall**: Visa en panel med `SetProperty` regel
 
 Lägg till följande kod i den anpassade funktionen enligt anvisningarna i [create-custom-function](#create-custom-function) för att ange formulärfältet som `Required`.
 
@@ -448,7 +484,9 @@ Om det finns fel i fälten i `personaldetails` visas de på fältnivå när du k
 
 ![Ange förhandsgranskning av egenskapsformulär](/help/forms/assets/set-property-panel.png)
 
-#### **Användningsfall**: Verifiera fältet.
++++
+
++++ **Användningsfall**: Verifiera fältet.
 
 Lägg till följande kod i den anpassade funktionen enligt anvisningarna i [create-custom-function](#create-custom-function) för att validera fältet.
 
@@ -487,7 +525,9 @@ Om användaren anger ett giltigt telefonnummer och alla fält i dialogrutan `per
 
 ![Mönster för e-postadressvalidering](/help/forms/assets/validate-form-preview-form.png)
 
-#### **Användningsfall**: Återställ en panel
++++
+
++++ **Användningsfall**: Återställ en panel
 
 Lägg till följande kod i den anpassade funktionen enligt anvisningarna i [create-custom-function](#create-custom-function) för att återställa panelen.
 
@@ -519,16 +559,18 @@ Se bilden nedan för att visa att om användaren klickar på `clear` -knappen `p
 
 ![Återställ formulär](/help/forms/assets/custom-function-reset-form.png)
 
-#### **Användningsfall**: Om du vill visa ett anpassat meddelande på fältnivå och markera fältet som ogiltigt
++++
+
++++ **Användningsfall**: Om du vill visa ett anpassat meddelande på fältnivå och markera fältet som ogiltigt
 
 Du kan använda `markFieldAsInvalid()` för att definiera ett fält som ogiltigt och ange ett anpassat felmeddelande på fältnivå. The `fieldIdentifier` värdet kan `fieldId`, eller `field qualifiedName`, eller `field dataRef`. Värdet för objektet med namnet `option` kan `{useId: true}`, `{useQualifiedName: true}`, eller `{useDataRef: true}`.
-Syntaxerna som används för att markera fält som ogiltiga och ange anpassade meddelanden är:
+Syntaxerna som används för att markera ett fält som ogiltigt och ange ett anpassat meddelande är:
 
 * `globals.functions.markFieldAsInvalid(field.$id,"[custom message]",{useId: true});`
 * `globals.functions.markFieldAsInvalid(field.$qualifiedName, "[custom message]", {useQualifiedName: true});`
 * `globals.functions.markFieldAsInvalid(field.$dataRef, "[custom message]", {useDataRef: true});`
 
-Lägg till följande kod i den anpassade funktionen enligt anvisningarna i [create-custom-function](#create-custom-function) för att aktivera anpassade meddelanden på fältnivå.
+Lägg till följande kod i den anpassade funktionen enligt anvisningarna i [create-custom-function](#create-custom-function) för att aktivera ett anpassat meddelande på fältnivå.
 
 ```javascript
     /**
@@ -560,8 +602,9 @@ Om användaren skriver in mer än 15 tecken i textrutan för kommentarer valider
 
 ![Markera fältet som ett giltigt förhandsgranskningsformulär](/help/forms/assets/custom-function-validfield-form.png)
 
++++
 
-#### **Användningsfall**: Skicka ändrade data till servern
++++ **Användningsfall**: Skicka ändrade data till servern
 
 Följande kodrad:
 `globals.functions.submitForm(globals.functions.exportData(), false);` används för att skicka formulärdata efter manipulering.
@@ -604,6 +647,262 @@ Du kan även kontrollera konsolfönstret för att visa data som skickats till se
 
 ![Inspect data i konsolfönstret](/help/forms/assets/custom-function-submit-data-console-data.png)
 
++++
+
++++ **Användningsfall**: Åsidosätt formulärskickning och felhantering
+
+Lägg till följande kodrad enligt anvisningarna i [create-custom-function](#create-custom-function) för att anpassa inlämnings- eller felmeddelandet för formulärinskickning och visa formulärinskickningsmeddelandena i en modal ruta:
+
+```javascript
+/**
+ * Handles the success response after a form submission.
+ *
+ * @param {scope} globals - This object contains a read-only form instance, target field instance, triggered event, and methods for performing form modifications within custom functions.
+ * @returns {void}
+ */
+function customSubmitSuccessHandler(globals) {
+    var event = globals.event;
+    var submitSuccessResponse = event.payload.body;
+    var form = globals.form;
+
+    if (submitSuccessResponse) {
+        if (submitSuccessResponse.redirectUrl) {
+            window.location.href = encodeURI(submitSuccessResponse.redirectUrl);
+        } else if (submitSuccessResponse.thankYouMessage) {
+            showModal("success", submitSuccessResponse.thankYouMessage);
+        }
+    }
+}
+
+/**
+ * Handles the error response after a form submission.
+ *
+ * @param {string} customSubmitErrorMessage - The custom error message.
+ * @param {scope} globals - This object contains a read-only form instance, target field instance, triggered event, and methods for performing form modifications within custom functions.
+ * @returns {void}
+ */
+function customSubmitErrorHandler(customSubmitErrorMessage, globals) {
+    showModal("error", customSubmitErrorMessage);
+}
+function showModal(type, message) {
+    // Remove any existing modals
+    var existingModal = document.getElementById("modal");
+    if (existingModal) {
+        existingModal.remove();
+    }
+
+    // Create the modal dialog
+    var modal = document.createElement("div");
+    modal.setAttribute("id", "modal");
+    modal.setAttribute("class", "modal");
+
+    // Create the modal content
+    var modalContent = document.createElement("div");
+    modalContent.setAttribute("class", "modal-content");
+
+    // Create the modal header
+    var modalHeader = document.createElement("div");
+    modalHeader.setAttribute("class", "modal-header");
+    modalHeader.innerHTML = "<h2>" + (type === "success" ? "Thank You" : "Error") + "</h2>";
+
+    // Create the modal body
+    var modalBody = document.createElement("div");
+    modalBody.setAttribute("class", "modal-body");
+    modalBody.innerHTML = "<p class='" + type + "-message'>" + message + "</p>";
+
+    // Create the modal footer
+    var modalFooter = document.createElement("div");
+    modalFooter.setAttribute("class", "modal-footer");
+
+    // Create the close button
+    var closeButton = document.createElement("button");
+    closeButton.setAttribute("class", "close-button");
+    closeButton.innerHTML = "Close";
+    closeButton.onclick = function() {
+        modal.remove();
+    };
+
+    // Append the elements to the modal content
+    modalFooter.appendChild(closeButton);
+    modalContent.appendChild(modalHeader);
+    modalContent.appendChild(modalBody);
+    modalContent.appendChild(modalFooter);
+
+    // Append the modal content to the modal
+    modal.appendChild(modalContent);
+
+    // Append the modal to the document body
+    document.body.appendChild(modal);
+}
+```
+
+I det här exemplet använder användaren `customSubmitSuccessHandler` och `customSubmitErrorHandler` anpassade funktioner visas meddelanden om lyckade och misslyckade åtgärder i ett modalt format. JavaScript-funktionen `showModal(type, message)` används för att dynamiskt skapa och visa en modal dialogruta på en skärm.
+
+Skapa nu en regel för att skicka in formulär:
+
+![Formuläröverföringen lyckades](/help/forms/assets/form-submission-success.png)
+
+Se bilden nedan för att visa att när formuläret har skickats visas meddelandet om att det lyckades visas i ett modalt format:
+
+![Meddelande om att formuläret har skickats in](/help/forms/assets/form-submission-success-message.png)
+
+På samma sätt kan vi skapa en regel för misslyckade formulärinskickade formulär:
+
+![Formuläröverföringen misslyckades](/help/forms/assets/form-submission-fail.png)
+
+Se bilden nedan för att visa att felmeddelandet visas i ett modalt format när formuläröverföringen misslyckas:
+
+![Meddelande om att formuläret har skickats in](/help/forms/assets/form-submission-fail-message.png)
+
+Om du vill visa om formuläret har skickats in eller misslyckats på ett standardsätt, `Default submit Form Success Handler` och `Default submit Form Error Handler` funktioner är tillgängliga direkt.
+
+Om den anpassade överföringshanteraren inte fungerar som förväntat i befintliga AEM projekt eller formulär, se [felsökning](#troubleshooting) -avsnitt.
+
+<!--
+
++++
+
++++ **Use Case**:  Perform actions in a specific instance of the repeatable panel 
+
+Rules created using the visual rule editor on a repeatable panel apply to the last instance of the repeatable panel. To write a rule for a specific instance of the repeatable panel, we can use a custom function.
+
+Let's create a form to collect information about travelers heading to a destination. A traveler panel is added as a repeatable panel, where the user can add details for 5 travelers using the Add button.
+
+Add the following line of code as explained in the [create-custom-function](#create-custom-function) section, to perform actions in a specific instance of the repeatable panel, other than the last one:
+
+```javascript
+
+/**
+* @name hidePanelInRepeatablePanel
+* @param {scope} globals
+*/
+function hidePanelInRepeatablePanel(globals)
+{    
+    var repeatablePanel = globals.form.travelerinfo;
+    // hides a panel inside second instance of repeatable panel
+    globals.functions.setProperty(repeatablePanel[1].traveler, {visible : false});
+}  
+
+```
+ 
+In this example, the `hidePanelInRepeatablePanel` custom function performs action in a specific instance of the repeatable panel. In the above code, `travelerinfo` represents the repeatable panel. The `repeatablePanel[1].traveler, {visible: false}` code hides the panel in the second instance of the repeatable panel. 
+Let us add a button labeled `Hide` to add a rule to hide a specific panel.
+
+![Hide Panel rule](/help/forms/assets/custom-function-hidepanel-rule.png)
+
+Refer to the video below to demonstrate that when the `Hide` is clicked, the panel in the second repeatable instance hides:
+
+
++++
+
++++ **Usecase**: Pre-fill the field with a value when the form loads
+
+Add the following line of code, as explained in the [create-custom-function](#create-custom-function) section, to load the pre-filled value in a field when the form is initialized:
+
+```javascript
+/**
+ * @name importData
+ * @param {scope} globals
+ */
+function importData(globals)
+{
+    globals.functions.importData(Object.fromEntries([['amount',200000]]));
+} 
+```
+
+In the aforementioned code, the `importData` function updates the value in the `amount` textbox field when the form loads.
+
+Let us create a rule for the `Submit` button, where the value in the `amount` textbox field changes to specified value when the form loads:
+
+![Import Data Rule](/help/forms/assets/custom-function-import-data.png)
+
+Refer to the screenshot below, which demonstrates that when the form loads, the value in the amount textbox is pre-filled with a specified value:
+
+![Import Data Rule](/help/forms/assets/cg)
+
++++
+
++++ **Usecase**: Set focus on the specific field
+
+Add the following line of code, as explained in the [create-custom-function](#create-custom-function) section, to set focus on the specified field when the `Submit` button is clicked.:
+
+```javascript
+/**
+ * @name setFocus
+ * @param {object} field
+ * @param {scope} globals
+ */
+function setFocus(field, globals)
+{
+    globals.functions.setFocus(field);
+}
+```
+
+Let us add a rule to the `Submit` button to set focus on the `email` field when it is clicked:
+
+![Set Focus Rule](/help/forms/assets/custom-function-set-focus.png)
+
+Refer to the screenshot below, which demonstrates that when the `Submit` button is clicked, the focus is set on the `email` field:
+
+![Set Focus Rule](/help/forms/assets/custom-function-set-focus-form.png)
+
+>[!NOTE]
+>
+> You can use the optional `$focusOption` parameter, if you want to focus on the next or previous field relative to the `email` field.
+
++++
+
++++ **Usecase**: Add or delete repeatable panel using the `dispatchEvent` property
+
+Add the following line of code, as explained in the [create-custom-function](#create-custom-function) section, to add a panel when the `Add Traveler` button is clicked using the `dispatchEvent` property:
+
+```javascript
+/**
+ 
+ * @name addInstance
+ * @param {scope} globals
+ */
+function addInstance(globals)
+{
+    var repeatablePanel = globals.form.traveler;
+    globals.functions.dispatchEvent(repeatablePanel, 'addInstance');
+} 
+
+```
+
+Let us add a rule to the `Add Traveler` button to add the repeatable panel when it is clicked:
+
+![Add Panel Rule](/help/forms/assets/custom-function-add-panel.png)
+
+Refer to the screenshot below, which demonstrates that when the `Add Traveler` button is clicked, the traveler panel is added using the `dispatchEvent` property:
+
+![Add Panel](/help/forms/assets/customg)
+
+Similarly, add a button labeled `Delete Traveler` to delete a panel. Add the following line of code, as explained in the [create-custom-function](#create-custom-function) section, to delete a panel when the `Delete Traveler` button is clicked using the `dispatchEvent` property:
+
+```javascript
+
+/**
+ 
+ * @name removeInstance
+ * @param {scope} globals
+ */
+function removeInstance(globals)
+{
+    var repeatablePanel = globals.form.traveler;
+    globals.functions.dispatchEvent(repeatablePanel, 'removeInstance');
+} 
+
+```
+Let us add a rule to the `Delete Traveler` button to delete the repeatable panel when it is clicked:
+
+![Delete Panel Rule](/help/forms/assets/custom-function-delete-panel.png)
+
+Refer to the screenshot below, which demonstrates that when the `Delete Traveler` button is clicked, the traveler panel is deleted using the `dispatchEvent` property:
+
+![Delete Panel](/help/forms/assets/customg)
+-->
+
 ## Cachelagringsstöd för anpassad funktion
 
 Adaptiv Forms implementerar cachning för anpassade funktioner för att förbättra svarstiden samtidigt som den anpassade funktionslistan hämtas i regelredigeraren. Ett meddelande som `Fetched following custom functions list from cache` visas i `error.log` -fil.
@@ -612,15 +911,23 @@ Adaptiv Forms implementerar cachning för anpassade funktioner för att förbät
 
 Om de anpassade funktionerna ändras blir cachningen ogiltig och den tolkas.
 
-## Felsökning
+## Felsökning {#troubleshooting}
 
-Om JavaScript-filen som innehåller kod för anpassade funktioner har ett fel, visas inte de anpassade funktionerna i regelredigeraren i ett anpassat formulär. Om du vill kontrollera listan med anpassade funktioner kan du navigera till `error.log` fil för felet. Om ett fel uppstår visas listan med anpassade funktioner tom:
+* Utför följande steg om den anpassade överföringshanteraren inte fungerar som förväntat i befintliga AEM projekt eller formulär:
+   * Se till att [kärnkomponentversionen uppdateras till 3.0.18 och senare](https://github.com/adobe/aem-core-forms-components). För befintliga AEM och formulär finns det dock ytterligare steg att utföra:
 
-![felloggfil](/help/forms/assets/custom-function-list-error-file.png)
+   * För AEM ska användaren ersätta alla instanser av `submitForm('custom:submitSuccess', 'custom:submitError')` med `submitForm()` och driftsätta projektet via molnhanterarens pipeline.
 
-Om inget fel uppstår hämtas den anpassade funktionen och visas i `error.log` -fil. Ett meddelande som `Fetched following custom functions list` visas i `error.log` fil:
+   * Om de anpassade överföringshanterarna inte fungerar som de ska i befintliga formulär måste användaren öppna och spara formuläret `submitForm` regel på **Skicka** med Regelredigeraren. Den här åtgärden ersätter den befintliga regeln från `submitForm('custom:submitSuccess', 'custom:submitError')` med `submitForm()` i formuläret.
 
-![felloggfil med korrekt anpassad funktion](/help/forms/assets/custom-function-list-fetched-in-error.png)
+
+* Om JavaScript-filen som innehåller kod för anpassade funktioner har ett fel, visas inte de anpassade funktionerna i regelredigeraren i ett anpassat formulär. Om du vill kontrollera listan med anpassade funktioner kan du navigera till `error.log` fil för felet. Om ett fel uppstår visas listan med anpassade funktioner tom:
+
+  ![felloggfil](/help/forms/assets/custom-function-list-error-file.png)
+
+  Om inget fel uppstår hämtas den anpassade funktionen och visas i `error.log` -fil. Ett meddelande som `Fetched following custom functions list` visas i `error.log` fil:
+
+  ![felloggfil med korrekt anpassad funktion](/help/forms/assets/custom-function-list-fetched-in-error.png)
 
 ## Överväganden
 

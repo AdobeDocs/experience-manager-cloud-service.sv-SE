@@ -2,7 +2,7 @@
 title: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud Service.
 description: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: 05b9e51f-467e-4c8e-baea-b1cf832597cd
-source-git-commit: 994a152f2e0acd4b92724994f9a187fe0f6f6d95
+source-git-commit: 0d1fb5d03d7633340c07543cb686ea2f9021abbb
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 6%
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 | Produkt | Adobe Experience Manager as a Cloud Service |
 |---|---|
-| Version | 2024.4.0 |
+| Version | 2024.5.0 |
 | Typ | Kontinuerliga uppdateringar |
 | Tillgänglighetsdatum | Kontinuerlig uppdatering |
 

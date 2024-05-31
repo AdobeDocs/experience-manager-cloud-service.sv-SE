@@ -2,9 +2,9 @@
 title: Använda bibliotek på klientsidan på AEM as a Cloud Service
 description: AEM innehåller biblioteksmappar på klientsidan, som gör att du kan lagra klientsidans kod (klientlibs) i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
 exl-id: 370db625-09bf-43fb-919d-4699edaac7c8
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+source-git-commit: 494e90bd5822495f0619e8ebf55f373a26a3ffe6
 workflow-type: tm+mt
-source-wordcount: '2551'
+source-wordcount: '2497'
 ht-degree: 0%
 
 ---
@@ -345,7 +345,7 @@ Mer information om GCC-alternativ finns i [GCC-dokumentation](https://developers
 
 YUI anges som standardminifierare i AEM. Följ de här stegen för att ändra detta till GCC.
 
-1. Gå till Apache Felix Config Manager på (`http://<host>:<portY/system/console/configMgr`)
+1. Gå till Apache Felix Config Manager på (`http://<host>:<port/system/console/configMgr`)
 1. Sök och redigera **Bibliotekshanteraren Adobe Granite HTML**.
 1. Aktivera **Minify** (om inte redan aktiverat).
 1. Ange värdet **Standardkonfigurationer för JS-processor** till `min:gcc`.

@@ -3,9 +3,9 @@ title: Aktuella funktioner för tidig användning av [!DNL Adobe Experience Mana
 description: Aktuella funktioner för tidig användning av [!DNL Adobe Experience Manager Forms] as a Cloud Service.
 Feature: Introduction
 Role: developer, user
-source-git-commit: 2b035e9597518ff64a2b4ce8c18ae31e5deef6f3
+source-git-commit: e6ceb53ee821a1fde5e79c687a4445d6c18faf54
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1731'
 ht-degree: 0%
 
 ---
@@ -20,8 +20,7 @@ AEM Forms Early Adobe Program ger dig en unik möjlighet att få exklusiv tillg�
 
 ## Hur går jag med i programmet Early Adobe?
 
-Om du är intresserad av att delta i vårt tidiga Adobe-program för tidiga utvecklare skickar du ett mejl från din officiella adress till `aem-forms-ea@adobe.com` för att begära åtkomst. Du kan begära åtkomst till alla eller alla specifika innovationer.
-
+Om du är intresserad av att delta i vårt tidiga Adobe-program för tidiga utvecklare skickar du ett mejl från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com)  för att begära åtkomst. Du kan begära åtkomst till alla eller alla specifika innovationer.
 
 ## Innovationer för tidiga Adobe-program
 
@@ -154,6 +153,15 @@ Här följer en beskrivning av vad Doc Assurance API:er kan göra:
 Övergripande, [Doc Assurance-API:er](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/references/docassurance/) hjälper dig att förbättra dokumentsäkerheten och regelefterlevnaden genom att lägga till ett extra kontrolllager.
 
 
+### Forms Service API:er
+
+Forms-tjänsten genererar interaktiv PDF forms för datainhämtning. Den kan också användas för att importera/exportera data till/från ett befintligt interaktivt PDF-formulär och validera skickade data. Här är en beskrivning av funktionaliteten:
+
+* **Återger Forms**: Generera ett interaktivt PDF-formulär från en mall som skapats med AEM Forms Designer och, eventuellt, XML-data. Detta skapar i stort sett ett ifyllbart PDF-formulär som kan fyllas i med data.
+
+* **Extrahering och import av data**: Importera data till ett befintligt PDF-formulär och extrahera data från ett ifyllt PDF-formulär. Både XDP- och XML-dataformat stöds, och import till icke-XFA PDF forms (kallas även AcroForms) stöder dessutom FDF- och XFDF-data.
+
+* **Dataverifiering**: : Validera skickade data i XDP- eller XML-format mot en mall som skapats med AEM Forms Designer.
 
 ## Se även
 

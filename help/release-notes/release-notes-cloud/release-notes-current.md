@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 39697467c5d06c5a82d701ecc2e05702535efd6c
+source-git-commit: 146d1adeebc756d24003b418ad5f66bdf3e4e06c
 workflow-type: tm+mt
-source-wordcount: '2720'
+source-wordcount: '1847'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 
 ## Releasedatum {#release-date}
 
-Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2024.4.0) är 25 april 2024. Nästa version (2024.5.0) är planerad till 30 maj 2024.
+Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2024.4.0) är 30 maj 2024. Nästa version (2024.5.0) är planerad till 27 juni 2024.
 
 ## Versionsinformation om underhåll {#maintenance}
 
@@ -34,11 +34,17 @@ Du kan hitta den senaste underhållsreleasenumerationen [här](/help/release-not
 
 ## Släpp video {#release-video}
 
-Titta på videon med versionsöversikten för april 2024 om du vill se en sammanfattning av funktioner som lagts till i version 2024.4.0:
+Titta på videon om versionsöversikten från maj 2024 om du vill se en sammanfattning av funktioner som lagts till i version 2024.5.0:
 
->[!VIDEO](https://video.tv.adobe.com/v/3429111?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3429503?quality=12)
 
 ## [!DNL Experience Manager Sites] som [!DNL Cloud Service] {#sites}
+
+### Nya funktioner på webbplatser {#sites-new-features}
+
+**AEM för Edge Delivery Services**
+
+Förbättrad stabilitet och olika förbättringar för en bättre redigeringsupplevelse.
 
 ### Tidiga Adobe-program {#sites-early-adopter}
 
@@ -56,43 +62,18 @@ Innehållsförfattare kan nu bläddra bland, visa och vidta åtgärder för bild
 
 ## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
 
-### Nya funktioner i resursvyn {#assets-view-new-features}
-
-
-**Sammanhangsbaserad sökning**
-
-Nu kan du också [sökresurser som är tillgängliga i databasen genom att definiera textmeddelanden](/help/assets/search-assets-view.md#contextual-search). Experience Manager Assets omvandlar automatiskt dessa textmeddelanden till sökfilter och visar sökresultaten. Du kan visa och ändra automatiska filter med hjälp av filterpanelen för att begränsa sökresultaten ytterligare.
-
-![Sammanhangsbaserad sökning](/help/assets/assets/contextual-search-text-prompt1.png)
-
-**Snabba videoåtgärder**
-
-Experience Manager Assets innehåller nu [enkla och intuitiva videoredigeringsverktyg som bygger på Adobe Express](/help/assets/edit-videos-assets-view.md) för att öka återanvändning av innehåll och snabba upp innehållets hastighet. Redigeringsalternativen omfattar trimning, beskärning, storleksändring av en video och även konvertering av en MP4-fil till en GIF-fil.
-
-![beskära video med Adobe Express](/help/assets/assets/adobe-express-crop-video.png)
-
-**Dynamiska renderingar**
-
-Nu kan du [visa och hämta dynamiska återgivningar (inklusive smarta beskärningar)](/help/assets/renditions.md) i Experience Manager Assets. Dynamiska återgivningar är anpassade versioner av bildresurser som skapats i realtid för att uppfylla specifika behov, som att ändra storlek på bilder baserat på enhetsupplösning eller beskära för att passa olika proportioner. Med dessa renderingar kan organisationer leverera personaliserade och optimerade upplevelser till olika målgruppsbehov.
-
-![Dynamiska renderingar](/help/assets/assets/preset_smart_crop.png)
-
-**Byt namn på plats för resurser och mappar**
-
-Experience Manager Assets erbjuder nu en förenklad användarupplevelse genom att tillhandahålla [möjlighet att byta namn på en resurs eller mapp med ett enda klick](/help/assets/manage-organize-assets-view.md).
-
-**Tilldela eller ta bort metadataformulär till flera mappar**
-
-Nu kan du [tilldela eller ta bort metadataformulär till flera mappar](/help/assets/metadata-assets-view.md#assign-metadata-form-to-a-folder).
-
 ### Nya funktioner i administrationsvyn {#admin-view-new-features}
 
-**Länkresurskonfiguration**
+* WebM är nu en utdatafil som stöds i bearbetningsprofilen för video.
+* MP4 stöds nu i den inbyggda integrationen av AEM i Express (import och export).
 
-En ny förbättrad användarupplevelse för [skapa länkresurser](/help/assets/share-assets.md) tillsammans med en helt ny uppsättning konfigurationer som gör att administratörer kan anpassa standardbeteendet för den här funktionen för dina användare.
+### Nya funktioner i resursvyn {#assets-view-new-features}
 
-![Länkresurskonfiguration](/help/assets/assets/config-email-service.png)
+**Publicera material till AEM och Dynamic Media**
 
+Med Experience Manager Assets kan du nu snabbt [publicera resurser på Experience Manager och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md) använda resursvyn utan att växla till administrationsvyn. Du kan publicera resurser när du överför, bläddrar bland och söker efter resurser.
+
+![kontrollera publiceringsstatus1](/help/assets/assets/check-publish-status1.png)
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
 
@@ -102,193 +83,144 @@ En ny förbättrad användarupplevelse för [skapa länkresurser](/help/assets/s
 
 -->
 
-### Nya funktioner i AEM Forms {#forms-new-features}
+### Nya funktioner i förhandsversionen av AEM Forms {#forms-new-prerelease-features}
 
-* **Förbättrad Visual Rule Editor för Core Component Based Adaptive Forms**: Den här versionen innebär en betydande uppgradering av den visuella regelredigeraren för adaptiva formulär baserade på kärnkomponenter. Den här versionen innebär en betydande uppgradering av den visuella regelredigeraren för adaptiva formulär baserade på kärnkomponenter. Uppdateringen fokuserar på att effektivisera interaktionen med anpassade funktioner, så att du kan skapa mer robusta och effektiva formulär.
+#### Förbättrad Visual Rule Editor för Core Component Based Adaptive Forms
 
-  Nu kan du effektivisera anpassade funktionsinteraktioner genom att:
+Den här versionen innebär en betydande uppgradering av den visuella regelredigeraren för adaptiva formulär baserade på kärnkomponenter. Du kan nu:
 
-   * [Använd nya kommentarer för att få tydligare funktionsdefinitioner](/help/forms/create-and-use-custom-functions.md#supported-javascript-annotations-for-custom-function).
-   * [Använda cachningsmekanismer för anpassade funktioner, vilket ger snabbare formulärprestanda](/help/forms/create-and-use-custom-functions.md#caching-support-for-custom-function).
-   * [Arbeta smidigt med globala objekt i anpassade funktioner](/help/forms/create-and-use-custom-functions.md#field-and-global-scope-objects-in-custom-functions).
-   * [Definiera och använda valfria parametrar i anpassade funktioner](/help/forms/create-and-use-custom-functions.md#parameter).
+* Skapa regler i Visual Rule Editor för att [åsidosätta standardhanterare för att skicka/underkänna formulär](/help/forms/create-and-use-custom-functions.md#field-and-global-scope-objects-in-custom-functions).
 
-  Uppdateringen innehåller även följande förbättringar av regelredigeringsfunktionen. Du kan:
+* I den adaptiva Forms-regelredigeraren har du lagt till möjligheten att [välja olika typer av fält för WHEN-åtgärden](/help/forms/rule-editor-core-components.md#allowed-multiple-fields-in-when).
 
-   * Implementera kraftfulla [&quot;when-then-else&quot;](/help/forms/rule-editor-core-components.md#when) logik för villkorlig körning.
-   * Utnyttja moderna JavaScript-funktioner som låt- och pilfunktioner (ES10-stöd).
-   * Validera eller återställ inte bara fält, utan även hela paneler och formulär, vilket ger bättre kontroll över användarinteraktioner.
+* En formulärförfattare kan nu använda anpassade funktioner på [bearbeta data innan de skickas](/help/forms/create-and-use-custom-functions.md#field-and-global-scope-objects-in-custom-functions).
 
-  Dessa förbättringar ger en mer intuitiv och kraftfull upplevelse när man skapar regler och anpassade funktioner i den visuella regelredigeraren.
+* Använd [**Spara som utkast**](/help/forms/save-core-component-based-form-as-draft.md) funktioner för att spara delvis ifyllda formulär för senare inskickning. Detta är användbart i scenarier där användare måste avbryta ifyllandet av ett formulär och komma tillbaka till det senare.
 
-* **[Skapa flera versioner av ett adaptivt formulär](/help/forms/add-comments-annotations-versioning-adaptive-form-core-components.md)**: Nu kan du enkelt hantera varianter av befintliga formulär. Detta förenklar versionskontrollen och underlättar jämförelse för formuläroptimering, allt i ett enda smidigt arbetsflöde.
 
-* **[Jämför adaptiv form](/help/forms/compare-forms.md)**: Du kan nu enkelt jämföra två formulär för att identifiera skillnader mellan två formulär. Det underlättar smidigt samarbete genom att teammedlemmarna kan jämföra revisioner och diskutera ändringar effektivt.
 
-* **Hjälpmedelsförbättringar för komponent för flexibel signatur**: Den här uppdateringen förbättrar tillgängligheten avsevärt för komponenten Scribble Signature:
+### Tidiga Adobe-funktioner i AEM Forms {#forms-new-early-adopter-features}
 
-  **Förbättrad navigering:**
-   * Genom att trycka på Tabb kan användarna navigera bland alla interaktiva element i signaturdialogrutan.
-   * Om du signerar med en pensel eller ett tangentbord och trycker på Retur stängs dialogrutan.
-   * Fokuset ligger kvar på signaturkontrollen när du har signerat och klickat på OK.
+AEM Forms Early Adobe Program ger dig unika möjligheter att få exklusiv tillgång till de senaste innovationerna åt alla andra och hjälper dig att utveckla dem.
+Programmet ger tillgång till flera innovationer.
 
-  **Rensa signaturfunktioner:**
+I den här versionsinformationen listas de innovationer som levererats i den aktuella versionen. En fullständig lista över de innovationer som finns inom programmet för tidig användning finns på [Dokumentation om AEM Forms Early Adobe-program](/help/forms/early-adopter-ea-features.md).
 
-   * En tydlig kryssikon för att radera signaturen är tillgänglig via tabbtangenten.
-   * Dialogrutan&quot;Bekräfta signatur&quot; är också tillgänglig via tabbnavigering.
+#### Förbättrade skyddsmetoder för robotar
 
-  **Förbättrade etiketter och kontroller:**
-   * Etiketten för tangentbordssignaturknappen är nu tydligare och använder&quot;aria-label&quot; för att meddela funktioner (till exempel&quot;aria-label=&#39;Signera med tangentbord&#39;&quot;).
-   * Förbättrad kontrast gör att alla kontroller i den klotbaserade signaturen är lätta att urskilja.
-   * Knappen OK/bock visar nu när den är inaktiv.
+AEM Forms har förbättrat sina säkerhetsfunktioner genom att lägga till stöd för två populära CAPTCHA-lösningar: Cloudflare Turnstile och hCaptcha. Detta lägger till Google reCAPTCHA, som ger användarna större valfrihet och flexibilitet när det gäller att skydda sina formulär mot inskickade bidrag från skräppost.
 
-  **Signaturfeedback för Screen Reader:**
-   * När en signatur skrivs kan skärmläsaranvändare höra texten som användes för att skapa signaturen.
+* **Molnformad vändning**: Denna friktionslösa CAPTCHA verifierar användarna genom en enkel utmaning som inte kräver någon explicit interaktion. De kan integreras smidigt i formulären och förbättrar användarupplevelsen.
+* **hCaptcha**: Denna sekretessinriktade CAPTCHA erbjuder ett användarvänligt alternativ med fokus på datasekretess. Syftet är att skapa en balans mellan säkerhet och användarupplevelse.
+* **Google reCAPTCHA**: AEM Forms fortsätter att stödja både reCAPTCHA v2 och reCAPTCHA Enterprise, som är en tillförlitlig och väletablerad lösning.
 
-Denna uppdatering ger en mer heltäckande upplevelse för användare med funktionshinder genom att förbättra navigering, klarhet och feedback för komponenten Klottsignatur.
+Genom att erbjuda flera CAPTCHA-alternativ har AEM Forms gett dig möjlighet att välja den lösning som bäst passar just dina behov.
 
-### Tidiga Adobe-program {#forms-early-adopter}
+Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I vår dokumentation finns detaljerade anvisningar för varje: [Molnformad vändning](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components)och [Google reCAPTCHA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
 
-* **[Skicka ett anpassat formulär till Adobe Workfront Fusion Scenario](/help/forms/submit-adaptive-form-to-workfront-fusion.md)**: Forms as a Cloud Service har ett körklart alternativ för att enkelt ansluta ett adaptivt formulär till Adobe Workfront. Detta förenklar processen att skicka in ett adaptivt formulär till ett Adobe Workfront-scenario, vilket gör att du kan utlösa ett Workfront Fusion-scenario när ett adaptivt formulär skickas in.
 
-  <br/> ![Adobe Workfront](/help/forms/assets/adobe-workfront.png) <br/> Med Adobe Workfront Fusion Connector kan du utforma arbetsflöden som aktiveras automatiskt när ett adaptivt formulär skickas in. Du kan till exempel förutse ett scenario där ett arbetsflöde initieras för att tilldela en viss person uppgiften att granska inskickade data, vilket gör det möjligt att godkänna eller avvisa en ansökan baserat på den information som hämtas via det anpassade formuläret. Denna smidiga integrering ökar effektiviteten och ger en ny nivå av automatisering i arbetsflödesprocesserna.|
+### Forms Service
 
-* **[Tilläggstjänsten Reader](/help/forms/aem-forms-cloud-service-communications-introduction.md#reader-extension-service)**: AEM Forms Communication API:er har Reader Extension Service där du kan lägga till funktioner som ifyllnad av formulär och kommentarer i vanliga PDF, vilket gör dem interaktiva för användare med kostnadsfria Adobe Reader.
+Forms-tjänsten genererar interaktiv PDF forms för datainhämtning. Den kan också användas för att importera exportdata till och från ett befintligt interaktivt PDF-formulär och validera skickade data. Här är en beskrivning av funktionaliteten:
 
-* [Stöd för språk från höger till vänster](/help/forms/supporting-new-language-localization-core-components.md): Adaptiv Forms som bygger på kärnkomponenter kan nu presenteras på höger-till-vänster-språk (RTL) som arabiska, persiska och urdu. RTL-språken talas av över 2 miljarder människor globalt. Genom att använda ett formulär på RTL-språk kan ni utöka räckvidden för era adaptiva formulär så att de kan anpassas till dessa olika målgrupper och väljas ut på RTL-marknader. I vissa regioner är det också ett juridiskt mandat att tillhandahålla formulär på det lokala språket. Genom att ta hand om lokala språk kan ni inte bara öppna dörrar för en bredare publik utan också säkerställa att relevanta lagar och bestämmelser följs.
+* **Återger Forms**: Generera ett interaktivt PDF-formulär från en mall som skapats med AEM Forms Designer och, eventuellt, XML-data. Detta skapar i stort sett ett ifyllbart PDF-formulär som kan fyllas i med data.
+* **Extrahering och import av data**: Importera data till ett befintligt PDF-formulär och extrahera data från ett ifyllt PDF-formulär. Både XDP- och XML-dataformat stöds, och import till icke-XFA PDF forms (kallas även AcroForms) stöder dessutom FDF- och XFDF-data.
+* **Dataverifiering**: : Validera skickade data i XDP- eller XML-format mot en mall som skapats med AEM Forms Designer.
 
-* **[Protect dina dokument med DocAssurance API:er (del av kommunikations-API:er)](/help/forms/aem-forms-cloud-service-communications-introduction.md#document-assurance-doc-assurance)**: Med API:erna för DocAssurance kan du skydda känslig information genom att signera och kryptera dokumenten. Genom kryptering omvandlas innehållet i ett dokument till ett oläsligt format så att bara behöriga användare kan få åtkomst till det. Detta förstärkta skydd skyddar inte bara värdefulla data från obehöriga ögon, utan ger även sinnesro. Med signatur-API:erna kan din organisation skydda säkerheten och sekretessen för Adobe PDF-dokument som den distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att endast avsedda mottagare kan ändra dokument.
+>[!IMPORTANT]
+>
+> Om du är intresserad av att delta i vårt tidiga Adobe-program för tidiga utvecklare skickar du ett mejl från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) för att begära åtkomst. Du kan begära åtkomst till alla eller alla specifika innovationer.
 
-  Du kan skriva till `aem-forms-ea@adobe.com` från ditt officiella e-post-id för att gå med i programmet för tidiga användare och begära åtkomst till funktionen.
+
+## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
+
+### OAuth Server-till-Server-autentiseringsuppgifter för integrering AEM andra Adobe-lösningar {#S2S-OAuth-credentials}
+
+Adobe Developer Console används för att generera autentiseringsuppgifter för olika API:er. En av autentiseringstyperna, JWT (Service Account), har ersatts med autentiseringsuppgifter för OAuth Server-till-Server, som AEM Cloud Service nu stöder för integrering med andra Adobe-lösningar som Adobe Analytics och Adobe Target.
+
+[Läs om borttagningen](/help/security/jwt-credentials-deprecation-in-adobe-developer-console.md) och [lära dig hur du använder gränssnittet för AEM författare](/help/security/setting-up-ims-integrations-for-aem-as-a-cloud-service.md) för att konfigurera integreringar med andra Adobe-lösningar.
+
+### Trafikrasch vid ursprungsvarningar {#traffic-spike-origin}
+
+[Ta emot proaktiva meddelanden](/help/security/traffic-filter-rules-including-waf.md#traffic-spike-at-origin-alert) via Åtgärdscenter när trafikmönster på ursprungsplatsen tyder på en DDoS-attack, vilket gör att du kan undersöka och konfigurera trafikfilterregler.
+
+### Nya funktioner för RDE {#RDE-new-features}
+
+[Rapid Development Environment (RDE)](/help/implementing/developing/introduction/rapid-development-environments.md) gör att utvecklare snabbt kan driftsätta, granska och testa ändringar i molnet. Flera nya funktioner kommer att lanseras under juni-månaden. Vi bjuder också in dig direkt till Adobe Engineering på [RDE-indragskanal](https://discord.com/channels/1131492224371277874/1245304281184079872).
+
+
+#### RDE-stöd för frontkod med hjälp av webbplatsteman och webbplatsmallar {#rde-frontend}
+
+[De lokala lagringsenheterna har nu stöd för slutkod](/help/implementing/developing/introduction/rapid-development-environments.md#deploying-themes-to-rde) baserat på [webbplatsteman](/help/sites-cloud/administering/site-creation/site-themes.md) och [webbplatsmallar](/help/sites-cloud/administering/site-creation/site-templates.md), för tidiga användare. Med de lokala redigeringssystemen görs detta med hjälp av ett kommandoradsdirektiv i stället för ett [rörledning för frontend](/help/sites-cloud/administering/site-creation/enable-front-end-pipeline.md).
+
+#### Förbättrad loggning för RDE {#rde-logging}
+
+När du felsöker kod i en RDE kan utvecklare nu [konfigurera och strömma loggar mer produktivt](/help/implementing/developing/introduction/rapid-development-environments.md#rde-logging), med kommandoraden och utan att ändra OSGI-egenskaper i versionskontrollen. Funktioner:
+
+* deklarera loggnivåer per paket eller klassnivå
+* anpassa loggutdataformatet
+* strömma flera loggar parallellt
+
+#### Förbättringar av RDE CLI {#rde-cli-enhancements}
+
+Gränssnittet för RDE-kommandoraden har några nya funktioner som förbättrar utvecklarupplevelsen:
+
+* [kommandot setup är interaktivt](/help/implementing/developing/introduction/rapid-development-environments.md#installing-the-rde-command-line-tools-interactive), vilket gör det enklare att välja mellan organisationer, program och miljöer. Nu går det även att åsidosätta dessa värden på kommandoraden.
+* [tyst läge](/help/implementing/developing/introduction/rapid-development-environments.md#global-flags) för en mindre detaljerad utskrift.
+* [json-läge](/help/implementing/developing/introduction/rapid-development-environments.md#global-flags) för användbara utdata när de anropas via programmering.
+
+### Nya meddelanden från Åtgärdscenter {#actions-center-notifications}
+
+[Actions Center](/help/operations/actions-center.md) skickar e-postmeddelanden när viktiga incidenter inträffar eller om vi märker något om din kod eller konfiguration där du bör vidta proaktiva åtgärder. Det finns tre nya typer av meddelanden:
+
+* för många utgående anslutningar via avancerad nätverksinfrastruktur
+* användning av ett föråldrat tjänstanvändarmappningsformat
+* en potentiell DDoS-attack pågår
+
+### Tidiga Adobe-program {#foundation-early-adopter}
+
+E-post **<aemcs-cdn-config-adopter@adobe.com>**, vilket av de tidiga adopterprogrammen nedan du är intresserad av.
+
+#### Rensa innehåll på CDN med en självbetjäningsnyckel (Early Adobe Program) {#purge-cdn}
+
+Registrera en CDN-rensnings-API-nyckel på ett självbetjäningssätt och använd den för att göra innehållet ogiltigt på CDN, antingen globalt eller för en eller flera resurser. [Läs mer](/help/implementing/dispatcher/cdn-cache-purge.md).
+
+<!-- Email **<aemcs-cdn-config-adopter@adobe.com>** with a request to be an early adopter. -->
+
+#### Självbetjäningsskapande av X-AEM-Edge-Key för kundhanterad CDN (BYOCDN) (Early Adopter Program) {#byocdn-keys}
+
+Tidigare krävdes en supportanmälan för att generera den X-AEM-Edge-Key som krävs för att konfigurera ett kundhanterat CDN. Detta kan nu göras på ett självbetjäningssätt genom en konfigurationsfil som distribueras med Configuration Pipeline, vilket tar bort eventuella förseningar när det gäller att komma igång med en ny miljö. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md#CDN-HTTP-value).
+
+<!-- Email **<aemcs-cdn-config-adopter@adobe.com>** with a request to be an early adopter. -->
+
+#### Omdirigeringar på klientsidan (tidig Adobe-program) {#client-side-redirects-early-adopter}
+
+Konfigurera 301/302 klientomdirigeringar i källkontroll och distribuera till CDN. [Läs mer](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors).<!-- and join the early adopter program by emailing **<aemcs-cdn-config-adopter@adobe.com>**. --> Observera att det redan finns flera andra funktioner för [CDN-konfiguration](/help/implementing/dispatcher/cdn-configuring-traffic.md), inklusive begäran- och svarsomvandlingar och dirigering av trafik till externa webbplatser.
+
+#### Varningar om trafikfilterregler (tidig Adobe-program) {#traffic-filter-rules-alerts-early-adopter}
+
+Nyligen släppt [Trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md), som innehåller de valfria reglerna för brandvägg för webbprogram (WAF), låter dig konfigurera vilken trafik som ska tillåtas eller nekas.
+
+Gå med i det tidiga adopterprogrammet så att du kan få varningar när trafikfilterreglerna aktiveras. E-postmeddelanden från Åtgärdscenter håller dig informerad när vissa trafikförhållanden inträffar så att du kan vidta lämpliga åtgärder.
+
+#### Affärsanvändare kan deklarera omdirigeringar utanför Git (Early Adobe Program) {#apache-rewritemaps-early-adopter}
+
+Ungefär som AEM 6.5, kommer Apache/dispatcher att importera omskrivningskartor som placerats på en viss plats i publiceringsdatabasen och läsa in dem, utan att någon pipeline-körning för webbnivån krävs. Detta öppnar möjligheter för en affärsanvändare att deklarera omdirigeringar med antingen ett kalkylblad eller ett användargränssnitt, som det som erbjuds av ACS Commons Redirect Map Manager eller som skapas som en del av ett kundprogram. <!-- Please reach out to **<aemcs-cdn-config-adopter@adobe.com>** for more information. -->
+
+#### Edge Side Includes (ESI) för inläsning av dynamiskt innehåll (tidig Adobe-program) {#esi-early-adopter}
+
+Hanterad CDN i Adobe har nu stöd för [Edge Side Includes (ESI)](/help/implementing/dispatcher/edge-side-includes.md), ett markeringsspråk för sammanställning av dynamiskt webbinnehåll på kantnivå. Genom att ta med ESI-fragment kan du cachelagra hela HTML-sidan vid CDN med högre TTL-värden, medan du oftare hämtar mindre avsnitt från ursprungsläget som kräver högre uppdateringsintervall (nedre TTL-värden). <!--Please reach out to **<aemcs-cdn-config-adopter@adobe.com>** for more information.-->
+
+#### Real User Monitoring (RUM) Data Service (Early Adopter Program)
 
 * **[Du kan använda datatjänsten för övervakning av verkliga användare (RUM)](/help/implementing/cloud-manager/content-requests.md#real-user-monitoring-for-aem-as-a-cloud-service)** för att aktivera klientsidessamling för AEM as a Cloud Service.
 Real User Monitoring (RUM) Data Service ger en mer exakt återgivning av användarinteraktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det är en utmärkt möjlighet att få avancerade insikter om hur sidan fungerar. Detta är fördelaktigt för kunder som använder antingen Adobe-hanterat CDN eller icke-Adobe-hanterat CDN. För kunder som använder ett icke-Adobe-hanterat CDN kan nu dessutom automatiserad trafikrapportering aktiveras för dem, vilket eliminerar behovet av att dela trafikrapporter med Adobe.
 
   Om du vill testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `aemcs-rum-adopter@adobe.com`, tillsammans med ditt domännamn för varje miljö som du vill aktivera RUM för från din e-postadress som är kopplad till din Adobe ID. Adobe produktteam aktiverar sedan datatjänsten Real User Monitoring (RUM) åt dig.
 
-## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
-
-### CDN-konfiguration {#cdn-config}
-
-Konfigurera trafiken på CDN i Adobe på följande sätt:
-
-* [Begär omformningar](/help/implementing/dispatcher/cdn-configuring-traffic.md#request-transformations) - ändra aspekter av inkommande begäranden, inklusive sökvägar, frågeparametrar och HTTP-huvuden innan de dirigeras till AEM.
-* [Svarsomvandlingar](/help/implementing/dispatcher/cdn-configuring-traffic.md#response-transformations) - ändra HTTP-huvuden för utgående svar innan de skickas till webbläsaren.
-* [Väljare för ursprung](/help/implementing/dispatcher/cdn-configuring-traffic.md#response-transformations#origin-selectors) - dirigera trafik genom CDN till externa webbplatser och tillämpningar AEM.
-
-När dessa regler har deklarerats i Git (Source Control) kan du distribuera dem till CDN med hjälp av Cloud Manager Configuration Pipeline. Se även funktionen för omdirigering på klientsidan i avsnittet för tidig användare nedan.
-
-### Anpassade CDN-felsidor {#cdn-error-pages}
-
-Om det osannolika skulle inträffa att leveransnätverket inte kan dirigera trafik till AEM ursprung, kan en anpassad felsida deklareras och ersätta den generiska versionen. [Läs mer](/help/implementing/dispatcher/cdn-error-pages.md) om hur du hanterar varumärkesanpassade felsidor.
-
-### Tidiga Adobe-program {#foundation-early-adopter}
-
-#### Omdirigeringar på klientsidan (tidig Adobe-program) {#client-side-redirects-early-adopter}
-
-Konfigurera 301/302 klientomdirigeringar i källkontroll och distribuera till CDN. [Läs mer](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors) och gå med i det tidiga adopterprogrammet genom att mejla **<aemcs-cdn-config-adopter@adobe.com>**.
-
-#### Varningar om trafikfilterregler (tidig Adobe-program) {#traffic-filter-rules-alerts-early-adopter}
-
-Nyligen släppt [Trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md), som innehåller de valfria reglerna för brandvägg för webbprogram (WAF), låter dig konfigurera vilken trafik som ska tillåtas eller nekas.
-
-Nu kan du mejla **<aemcs-cdn-config-adopter@adobe.com>** om du vill gå med i det tidiga adopterprogrammet så att du kan varnas när trafikfilterreglerna aktiveras. E-postmeddelanden från Åtgärdscenter håller dig informerad när vissa trafikförhållanden inträffar så att du kan vidta lämpliga åtgärder.
-
-#### Apache/Dispatcher Runtime Ing of Rewrite Maps (Early Adobe Program) {#apache-rewritemaps-early-adopter}
-
-Ungefär som AEM 6.5, kommer Apache/dispatcher att importera omskrivningskartor som placerats på en viss plats i publiceringsdatabasen och läsa in dem, utan att någon pipeline-körning för webbnivån krävs. Detta öppnar möjligheter för en affärsanvändare att deklarera omdirigeringar med ett användargränssnitt, som det som finns i ACS Commons Redirect Map Manager. Kontakta **<aemcs-cdn-config-adopter@adobe.com>** för mer information.
-
-#### Edge Side Includes (ESI) för inläsning av dynamiskt innehåll (tidig Adobe-program) {#esi-early-adopter}
-
-Hanterad CDN i Adobe har nu stöd för Edge Side Includes (ESI), ett markeringsspråk för dynamisk sammanställning av webbinnehåll på edge-nivå. Genom att ta med ESI-fragment kan du cachelagra hela HTML-sidan vid CDN med högre TTL-värden, medan du oftare hämtar mindre avsnitt från ursprungsläget som kräver högre uppdateringsintervall (nedre TTL-värden). Kontakta **<aemcs-cdn-config-adopter@adobe.com>** för mer information.
-
-#### RDE-stöd för Front-End-kod med hjälp av Site Themes och Site Templates (Early Adopter Program) {#rde-frontend-early-adopter}
-
-[Rapid Development Environment (RDE)](/help/implementing/developing/introduction/rapid-development-environments.md) nu stöder kod som bygger på [webbplatsteman](/help/sites-cloud/administering/site-creation/site-themes.md) och [webbplatsmallar](/help/sites-cloud/administering/site-creation/site-templates.md), för tidiga användare. Med de lokala redigeringssystemen görs detta med hjälp av ett kommandoradsdirektiv i stället för ett [rörledning för frontend](/help/sites-cloud/administering/site-creation/enable-front-end-pipeline.md). Kontakta **<aemcs-rde-support@adobe.com>** för att testa och ge feedback.
-
-#### Förbättrad loggning för RDE (Early Adobe Program) {#rde-logging-early-adopter}
-
-När du felsöker kod i en [Rapid Development Environment (RDE)](/help/implementing/developing/introduction/rapid-development-environments.md)kan utvecklare nu konfigurera och strömma loggar effektivare med kommandoraden utan att ändra OSGI-egenskaperna i versionskontrollen. Funktioner:
-
-* deklarera loggnivåer per paket eller klassnivå
-* anpassa loggutdataformatet
-* strömma flera loggar parallellt
-
-Kontakta **<aemcs-rde-support@adobe.com>** för att testa och ge feedback.
-
-
 ## [!DNL Experience Manager] Stödlinjer {#guides}
 
-
-### Möjlighet att översätta innehåll till flera språk med förkonfigurerade språkgrupper
-
-Nu kan du skapa språkgrupper och enkelt översätta innehåll till flera språk med hjälp av guiderna i Experience Manager. Med den här funktionen kan du ordna och hantera översättningar efter organisationens behov.
-
-Om du till exempel behöver översätta innehåll för vissa länder i Europa kan du skapa en språkgrupp för europeiska språk som engelska (EN), franska (FR), tyska (DE), spanska (ES) och italienska (IT).
-
-![översättningspanel](../assets/guides/translation-languages-2404.png)
-
-*Välj de språkgrupper eller språk som du vill översätta dina dokument.*
-
->[!NOTE]
->
->Om målmappen för ett språk saknas eller målspråket är samma som källan, är den nedtonad och visar ett varningstecken.
-
-Som administratör kan du skapa språkgrupper och konfigurera dem till flera mappprofiler. Som författare kan du visa språkgrupperna som är konfigurerade för din mappprofil.
-
-
-Generellt sett förbättrar möjligheten att skapa språkgrupper effektiviteten och produktiviteten i översättningsprojekt, vilket i slutänden förbättrar lokaliseringsprocessen för flera språk.
-
-
-Lär dig hur [översätta dokument från webbredigeraren](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/user-guide/author-content/create-preview-topics/author-content-aem-guides/work-with-web-editor/translate-documents-web-editor)
-
-### Förbättrad upplevelse för att söka efter och filtrera filer i databasvyn
-
-Nu får du en bättre upplevelse när du filtrerar filer. Den förbättrade funktionen för att filtrera filer är ett bättre sätt att enkelt söka efter och navigera bland filer.
-
-![sökfiler i databasvyn](../assets/guides/repository-filter-search-2404.png)
-
-*Sök efter filerna som innehåller texten`general purpose.`*
-
-Få snabbare åtkomst till relevanta filer och ett mer intuitivt användargränssnitt, vilket gör sökningen smidigare och effektivare.
-
-![snabbsökningsfilter ](../assets/guides/repository-filter-search-quick.png)
-
-*Använd snabbfiltren för att söka efter DITA- och icke-DITA-filer.*
-
-Läs mer om **Filtersökning** i [Vänster panel](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/user-guide/author-content/create-preview-topics/author-content-aem-guides/work-with-web-editor/web-editor-features#id2051EA0M0HS) -avsnitt.
-
-### Förbättringar i datakällkopplingen
-
-Följande förbättringar har gjorts i datakällanslutningarna för version 2024.4.0:
-
-#### Anslut till datakällor för Salsify, Akeneo och Microsoft Azure DevOps Boards (ADO)
-
-Förutom de befintliga färdiga anslutningarna har Experience Manager Guides även kopplingar för datakällorna Salsify, Akeneo och Microsoft Azure DevOps Boards (ADO). Som administratör kan du hämta och installera dessa anslutningar. Konfigurera sedan de installerade anslutningarna.
-
-#### Kopiera och klistra in exempelfrågan för att skapa ett innehållsutdrag eller ämne
-
-Du kan enkelt kopiera och klistra in en exempeldatafråga i generatorn för att skapa ett innehållsavdrag eller ämne. Med den här funktionen behöver du inte komma ihåg syntaxen eller skapa en fråga manuellt. I stället för att skriva frågan manuellt kan du kopiera och klistra in en exempelfråga, redigera den och använda den för att hämta data efter dina behov.
-
-![Infoga innehållsfragment, dialogruta](../assets/guides/insert-content-snippet.png)
-
-*Kopiera och redigera en exempelfråga för att skapa innehållsfragmentet.*
-
-#### Anslut till JSON-datafiler med en filkoppling
-
-
-Som administratör kan du nu konfigurera en JSON-filkoppling så att JSON-datafiler används som datakälla. Använd anslutningen för att importera JSON-filerna från datorn eller Adobe Experience Manager Assets. Som författare kan du sedan skapa innehållsfragment eller ämnen med hjälp av generatorerna.
-
-Den här funktionen hjälper dig att använda data som lagras i dina JSON-filer och återanvända dem i olika fragment. Innehållet uppdateras också dynamiskt när du uppdaterar JSON-filerna.
-
-#### Konfigurera flera resurs-URL:er för en koppling för att skapa innehållskodfragment eller ämnen
-
-Som administratör kan du konfigurera flera resurs-URL:er för vissa anslutningar som Generic REST Client, Salsify, Akeneo och Microsoft Azure DevOps Boards (ADO).
-Som författare kan du sedan ansluta till datakällorna för att skapa innehållsfragment eller ämnen med generatorerna. Den här funktionen är användbar eftersom du inte behöver skapa en datakälla för varje URL. Det hjälper dig att snabbt hämta data från någon av resurserna för en viss datakälla i ett enda innehållskuvert eller ämne. Visa mer information om datakällanslutningar och hur [konfigurera en datakällanslutning från användargränssnittet](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/install-guide/cs-ig/web-editor-configs-cs/conf-data-source-connector-tools). Lär dig hur [använda data från datakällan](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/user-guide/author-content/create-preview-topics/author-content-aem-guides/work-with-web-editor/web-editor-content-snippet).
-
-Mer information om de nya funktionerna och förbättringarna finns i [Nyheter i version 2024.04.0](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/release-notes/cloud-release-notes/2024-releases/2404-release/whats-new-2024-04-0).
-
-En lista över problem som har åtgärdats i den här versionen finns på [Åtgärdade problem i version 2024.4.0](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/release-notes/cloud-release-notes/2024-releases/2404-release/fixed-issues-2024-04-0).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste versionen av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/release-notes/cloud-release-notes/2024-releases/2404-release/whats-new-2024-04-0).
 
 ## Cloud Manager {#cloud-manager}
 

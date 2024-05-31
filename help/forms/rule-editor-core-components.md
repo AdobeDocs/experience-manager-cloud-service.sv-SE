@@ -5,25 +5,24 @@ feature: Adaptive Forms, Core Components
 role: User
 level: Beginner, Intermediate
 exl-id: 1292f729-c6eb-4e1b-b84c-c66c89dc53ae
-source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
+source-git-commit: 494e90bd5822495f0619e8ebf55f373a26a3ffe6
 workflow-type: tm+mt
-source-wordcount: '5255'
+source-wordcount: '5411'
 ht-degree: 0%
 
 ---
 
 
-<span class="preview"> Den här artikeln innehåller innehåll för vissa förhandsversionsfunktioner. De här förhandsversionsfunktionerna är bara tillgängliga via [kanal för förhandsversion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). Funktionerna i förhandsversionen är:
-* Stöd för implementering av kapslade villkor med&quot;När då-else-funktionen&quot;
-* Validera eller återställ paneler och formulär, inklusive fält
-* Stöd för moderna JavaScript-funktioner som att låta- och pilfunktioner (ES10-stöd) finns i anpassade funktioner.
-</span>
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| Foundation Components | [Klicka här](/help/forms/rule-editor.md) |
+| Kärnkomponenter | Den här artikeln |
 
 # Lägga till regler i ett adaptivt formulär (kärnkomponenter) {#adaptive-forms-rule-editor}
 
 Regelredigerarfunktionen ger formuläranvändare och utvecklare möjlighet att skriva regler på adaptiva formulärobjekt. Dessa regler definierar åtgärder som ska utlösas av formulärobjekt baserat på förinställda villkor, användarindata och användaråtgärder i formuläret. Det effektiviserar formulärifyllningen ytterligare och ger större precision och snabbhet.
 
-Regelredigeraren har ett intuitivt och förenklat användargränssnitt för att skriva regler. Regelredigeraren erbjuder en visuell redigerare för alla användare.<!-- In addition, only for forms power users, rule editor provides a code editor to write rules and scripts. --> Några av de viktigaste åtgärderna som du kan utföra på adaptiva formulärobjekt med hjälp av regler är:
+Regelredigeraren har ett intuitivt och förenklat användargränssnitt för att skriva regler. Regelredigeraren erbjuder en visuell redigerare för alla användare.<!-- In addition, only for forms power users, rule editor provides a code editor to write rules and scripts. --> Några av de nyckelåtgärder du kan utföra på adaptiva formulärobjekt med hjälp av regler är:
 
 * Visa eller dölja ett objekt
 * Aktivera eller inaktivera ett objekt
@@ -36,6 +35,14 @@ Regelredigeraren har ett intuitivt och förenklat användargränssnitt för att 
 <!-- Rule editor replaces the scripting capabilities in [!DNL Experience Manager 6.1 Forms] and earlier releases. However, your existing scripts are preserved in the new rule editor. For more information about working with existing scripts in the rule editor, see [Impact of rule editor on existing scripts](rule-editor.md#p-impact-of-rule-editor-on-existing-scripts-p). -->
 
 Användare som läggs till i användargruppen för formulär kan skapa skript och redigera befintliga. Användare i [!DNL forms-users] kan använda skript men inte skapa eller redigera skript.
+
+## Skillnad mellan regelredigerare i kärnkomponenter och Regelredigerare i Foundation Components
+
+{{rule-editor-diff}}
+
+>[!NOTE]
+>
+> Mer information om hur du skapar och använder anpassade funktioner finns i [Anpassade funktioner i Adaptive Forms (Core Components)](/help/forms/create-and-use-custom-functions.md) artikel.
 
 ## Förstå en regel {#understanding-a-rule}
 
@@ -67,13 +74,13 @@ Mer information om vilka regeltyper som finns i regelredigeraren finns i [Tillg�
 
   Om du skriver en regel i fält B (det objekt som du utvärderar ett villkor för) ska du därför använda konstruktorn condition-action eller regeltypen When. Använd på samma sätt konstruktionen action-condition eller Visa eller Dölj regel i fält A.
 
-* Ibland måste du utföra flera åtgärder baserat på ett villkor. I sådana fall rekommenderar vi att du använder villkorsåtgärdskonstruktionen. I den här konstruktionen kan du utvärdera ett villkor en gång och ange flera åtgärdsinstruktioner.
+* Ibland måste du utföra flera åtgärder baserat på ett villkor. I sådana fall bör du använda konstruktorn condition-action. I den här konstruktionen kan du utvärdera ett villkor en gång och ange flera åtgärdssatser.
 
-  Om du till exempel vill dölja fälten B, C och D baserat på villkoret som söker efter det värde som en användare anger i fält A, skriver du en regel med villkorsåtgärdskonstruktion eller När-regeltyp i fält A och anger åtgärder för att styra synligheten för fält B, C och D. Annars behöver du tre separata regler för fält B,  C och D, där varje regel kontrollerar villkoret och visar eller döljer respektive fält. I det här exemplet är det mer effektivt att skriva regeltypen När på ett objekt i stället för att visa eller dölja regeltypen på tre objekt.
+  Om du till exempel vill dölja fält B, C och D baserat på villkoret som kontrollerar värdet som användaren anger i fält A, skriver du en regel med villkorsstyrd konstruktion eller Regeltyp för När i fält A och anger åtgärder som styr synligheten för fält B, C och D. I annat fall behöver du tre separata regler för fälten B, C och D, där varje regel kontrollerar villkoret och visar eller döljer respektive fält. I det här exemplet är det effektivare att skriva Regeltypen När för ett objekt i stället för att visa eller dölja regeltypen för tre objekt.
 
-* Om du vill utlösa en åtgärd baserat på flera villkor rekommenderar vi att du använder åtgärdsvillkorskonstruktion. Om du till exempel vill visa och dölja fält A genom att utvärdera villkor i fält B, C och D använder du Visa eller dölj regeltyp i fält A.
+* Om du vill aktivera en åtgärd baserat på flera villkor bör du använda konstruktorn action-condition. Om du till exempel vill visa och dölja fält A genom att utvärdera villkor i fält B, C och D, använder du Visa eller Dölj regeltyp i fält A.
 * Använd villkorskonstruktion för villkorsåtgärd eller åtgärd om regeln innehåller en åtgärd för ett villkor.
-* Om en regel söker efter ett villkor och utför en åtgärd omedelbart efter att ha angett ett värde i ett fält eller lämnat ett fält, rekommenderar vi att du skriver en regel med villkorsåtgärdskonstruktion eller regeltypen När i fältet där villkoret utvärderas.
+* Om en regel söker efter ett villkor och utför en åtgärd omedelbart när ett värde anges i ett fält eller när ett fält avslutas, rekommenderar vi att du skriver en regel med villkorsstyrd åtgärd eller med regeltypen När i fältet som villkoret utvärderas i.
 * Villkoret i regeln När utvärderas när en användare ändrar värdet på objektet som regeln När används på. Men om du vill att åtgärden ska utlösas när värdet ändras på serversidan, till exempel för förifyllning av värdet, rekommenderar vi att du skriver en When-regel som utlöser åtgärden när fältet initieras.
 * När du skriver regler för nedrullningsbara listor, alternativknappar eller kryssruteobjekt fylls alternativen eller värdena för dessa formulärobjekt i förväg i regelredigeraren.
 
@@ -117,14 +124,16 @@ Med enkla ord är en vanlig When-regel strukturerad enligt följande:
 
 `Then, do the following:`
 
-Åtgärd 2 på objekt B och åtgärd 3 på objekt C.
+`Action 2 on Object B;`
+`AND`
+`Åtgärd 3 på objekt C;
 
 `Else, do the following:`
 
-Åtgärd 2 om mål C.
+`Action 2 on Object C;`
 _
 
-När du har en komponent med flera värden, till exempel alternativknappar eller lista, hämtas alternativen automatiskt när du skapar en regel för den komponenten och görs tillgängliga för regelskaparen. Du behöver inte ange alternativvärdena igen.
+När du har en komponent med flera värden, till exempel alternativknappar eller listor, hämtas alternativen automatiskt och görs tillgängliga för regelskaparen när du skapar en regel för den komponenten. Du behöver inte ange alternativvärdena igen.
 
 En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När regeln skapas hämtas alternativen (alternativknappar) automatiskt och görs tillgängliga för regelskaparen enligt följande:
 
@@ -137,6 +146,58 @@ När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Med åtg
 >[!NOTE]
 >
 > När regeltypen bara har stöd för enkla then-else-satser.
+
+#### Tillåtna flera fält i [!UICONTROL When] {#allowed-multiple-fields}
+
+I **När** villkor kan du lägga till andra fält förutom det fält som regeln ska tillämpas på.
+
+Med regeltypen När kan du till exempel utvärdera ett villkor för olika formulärobjekt och utföra åtgärden:
+
+När:
+
+(Objekt A Villkor 1)
+
+OCH/ELLER
+
+(Objekt B, villkor 2)
+
+Gör sedan följande:
+
+Åtgärd 1 på objekt A
+
+_
+
+![Tillåtna flera fält i](/help/forms/assets/allowed-multiple-field-when.png)
+
+##### Att tänka på när du använder Tillåtna flera fält i villkorsfunktionen
+
+* Se till att [kärnkomponenten är inställd på version 3.0.14 eller senare](https://github.com/adobe/aem-core-forms-components) om du vill använda funktionen i regelredigeraren.
+* Om regler tillämpas på olika fält i villkoret När utlöses regeln även om endast ett av dessa fält ändras.
+
+
+<!--
+* It is not possible to add multiple fields in the When condition while applying rules to a button.
+
+##### To enable Allowed Multiple fields in When condition feature
+
+Allowed Multiple fields in When condition feature is disabled by default. To enable this feature, add a custom property at the template policy:
+
+1. Open the corresponding template associated with an Adaptive Form in the template editor.
+1. Select the existing policy as **formcontainer-policy**.
+1. Navigate to the **[!UICONTROL Structure]**  view and, from the **[!UICONTROL Allowed Components]** list, open the **[!UICONTROL Adaptive Forms Container]** policy.
+1. Go to the **[!UICONTROL Custom Properties]** tab and to add a custom property, click **[!UICONTROL Add]**.
+1. Specify the **Group Name** of your choice. For example, in our case, we added the group name as **allowedfeature**.
+1. Add the **key** and **value** pair as follows:
+   * key: fd:changeEventBehaviour
+   * value: deps
+1. Click **[!UICONTROL Done]**. -->
+
+Om det uppstår problem i de tillåtna fälten i villkorsfunktionen följer du felsökningsstegen enligt följande:
+
+1. Öppna formuläret i redigeringsläge.
+1. Öppna innehållsläsaren och välj **[!UICONTROL Guide Container]** som ingår i det adaptiva formuläret.
+1. Klicka på egenskaperna för stödlinjebehållaren ![Stödlinjeegenskaper](/help/forms/assets/configure-icon.svg) -ikon. Dialogrutan Adaptiv formulärbehållare öppnas.
+1. Klicka på Klar och spara dialogrutan igen.
 
 **[!UICONTROL Hide]** Döljer det angivna objektet.
 
@@ -224,7 +285,7 @@ När (valfritt):
 
 (Villkor 1 OCH Villkor 2 OCH Villkor 3) är SANT;
 
-I följande exempel väljs värdet för `Question2` as `True` och värdet för `Result` as `correct`.
+I följande exempel väljs värdet för `Question2` as `True` och anger värdet för `Result` as `correct`.
 
 ![Ange värde-webbtjänst](assets/set-value-web-service.png)
 
@@ -373,7 +434,7 @@ En del av listan med funktioner visas i figuren:
 >
 >Du kan utföra textsökning på objekt och funktionsnamn och titlar på flikarna Forms Objekt och Funktioner.
 
-I det vänstra trädet för formulärobjekten kan du markera de formulärobjekt som ska visa de regler som tillämpas på vart och ett av objekten. Du kan inte bara navigera bland reglerna för de olika formulärobjekten, du kan även kopiera och klistra in regler mellan formulärobjekten. Mer information finns i [Kopiera och klistra in regler](rule-editor.md#p-copy-paste-rules-p).
+I det vänstra trädet för formulärobjekten kan du markera formulärobjekten för att visa de regler som tillämpas på vart och ett av objekten. Du kan inte bara navigera genom reglerna för de olika formulärobjekten, du kan också kopiera och klistra in regler mellan formulärobjekten. Mer information finns i [Kopiera och klistra in regler](rule-editor.md#p-copy-paste-rules-p).
 
 ### C. Växla mellan formulärobjekt och funktioner {#c-form-objects-and-functions-toggle-br}
 
@@ -402,15 +463,15 @@ Users in the forms-power-users group can access code editor. For other users, co
 
 The **[!UICONTROL Done]** -knappen används för att spara en regel. Du kan spara en ofullständig regel. Ofullständiga är dock ogiltiga och kan inte köras. Sparade regler för ett formulärobjekt visas nästa gång du startar regelredigeraren från samma formulärobjekt. Du kan hantera befintliga regler i den vyn. Mer information finns i [Hantera regler](rule-editor.md#p-manage-rules-p).
 
-The **[!UICONTROL Cancel]** ignorerar alla ändringar du har gjort i en regel och stänger regelredigeraren.
+Knappen **[!UICONTROL Cancel]** ignorerar alla ändringar som du har gjort i en regel och stänger regelredigeraren.
 
-## Skriv regler {#write-rules}
+## Skriva regler {#write-rules}
 
 Du kan skriva regler med hjälp av den visuella regelredigeraren <!-- or the code editor. When you launch the rule editor the first time, it opens in the visual editor mode. You can switch to the code editor mode and write rules. However, if you write or modify a rule in code editor, you cannot switch to the visual editor for that rule unless you clear the code editor. When you launch the rule editor next time, it opens in the mode that you used last to create rule. -->
 
 Låt oss först titta på hur man skriver regler med hjälp av VisualEditor.
 
-### Använda VisualEditor {#using-visual-editor}
+### Använda den visuella redigeraren {#using-visual-editor}
 
 Låt oss förstå hur du skapar en regel i den visuella redigeraren med hjälp av följande exempelformulär.
 
@@ -494,9 +555,9 @@ Så här skriver du regler:
 
    ![write-rules-visual-editor-10](assets/write-rules-visual-editor-10-cc.png)
 
-1. Välj **[!UICONTROL Select Option]** och markera **[!UICONTROL Mathematical Expression]**. Ett fält som skriver matematiskt uttryck öppnas.
+1. Välj **[!UICONTROL Select Option]** och välj **[!UICONTROL Mathematical Expression]**. Ett fält som skriver matematiskt uttryck öppnas.
 
-   ![write-rules-visual-editor-11](assets/write-rules-visual-editor-11-cc.png)
+   ![skriva- regler-visual-editor-11](assets/write-rules-visual-editor-11-cc.png)
 
 1. I uttrycksfältet:
 
@@ -520,15 +581,15 @@ Så här skriver du regler:
    >
    >Du kan skapa komplexa uttryck med hjälp av komponenter, funktioner, matematiska uttryck och egenskapsvärden i fältet Välj alternativ.
 
-   Skapa sedan ett villkor som körs när true returneras.
+   Skapa sedan ett villkor som när det returnerar True körs uttrycket.
 
-1. Välj **[!UICONTROL Add Condition]** om du vill lägga till en When-programsats.
+1. Välj **[!UICONTROL Add Condition]** det här alternativet om du vill lägga till en When-instruktion.
 
-   ![write-rules-visual-editor-15](assets/write-rules-visual-editor-15-cc.png)
+   ![skriva-regler-visual-editor-15](assets/write-rules-visual-editor-15-cc.png)
 
-   I programsatsen When:
+   I When-instruktionen:
 
-   * Markera eller dra-och-släpp på fliken Forms-objekt på fliken **[!UICONTROL Marital Status]** fält i det första **[!UICONTROL Drop object or select here]** fält.
+   * Markera eller dra och släpp fältet i det första **[!UICONTROL Drop object or select here]** fältet på fliken **[!UICONTROL Marital Status]** Forms-objekt.
 
    * Välj **[!UICONTROL is equal to]** från **[!UICONTROL Select Operator]** fält.
 
@@ -789,9 +850,9 @@ Så här kopierar och klistrar du in regler:
 
    >[!NOTE]
    >
-   >Du kan bara klistra in en regel i ett annat formulärobjekt om det formulärobjektet har stöd för den kopierade regelns händelse. En knapp stöder till exempel händelsen click. Du kan klistra in en regel med en klickningshändelse på en knapp, men inte i en kryssruta.
+   >Du kan bara klistra in en regel i ett annat formulärobjekt om det formulärobjektet har stöd för den kopierade regelns händelse. En knapp har till exempel stöd för klickhändelsen. Du kan klistra in en regel med en klickningshändelse på en knapp, men inte i en kryssruta.
 
-1. Välj **[!UICONTROL Done]** för att spara regeln.
+1. Välj **[!UICONTROL Done]** det här alternativet om du vill spara regeln.
 
 ## Kapslade uttryck {#nestedexpressions}
 
@@ -809,13 +870,13 @@ Du kan också redigera genom att dra och släppa villkor i en regel. Markera och
 
 Med regelredigeraren kan du använda datumjämförelser för att skapa villkor.
 
-Följande är ett exempelvillkor som visar ett statiskt textobjekt om inteckningen på huset redan har tagits, vilket användaren anger genom att fylla i datumfältet.
+Följande är ett exempelvillkor som visar ett statiskt textobjekt om inteckningen på huset redan är tagen, vilket användaren anger genom att fylla i datumfältet.
 
-När datumet för inteckningen av egendomen som fyllts i av användaren har inträffat visas en anteckning om inkomstberäkningen i det adaptiva formuläret. I följande regel jämförs det datum som användaren fyller i med det aktuella datumet och om det datum som användaren fyller i är tidigare än det aktuella datumet visas textmeddelandet (Inkommande) i formuläret.
+När datumet för inteckning av fastigheten som fyllts i av användaren har passerat, visar det adaptiva formuläret en anteckning om inkomstberäkningen. Följande regel jämför det datum som fyllts i av användaren med det aktuella datumet och om det datum som fyllts i av användaren är tidigare än det aktuella datumet visas textmeddelandet (med namnet Inkomst) i formuläret.
 
 ![Villkor för datumuttryck](assets/dateexpressioncondition.png)
 
-När det ifyllda datumet infaller tidigare än det aktuella datumet visas textmeddelandet (intäkt) enligt följande:
+När det ifyllda datumet är tidigare än det aktuella datumet visas textmeddelandet (Inkomst) i formuläret enligt följande:
 
 ![Datumuttrycksvillkor uppfyllt](assets/dateexpressionconditionmet.png)
 
@@ -902,8 +963,6 @@ Rule in the code editor -->
 I inköpsorderformuläret som förklaras i föregående exempel vill du hindra användare från att beställa mer än en kvantitet av en produkt till ett pris som överstiger 10000. Du kan skriva en valideringsregel enligt nedan.
 
 ![Example-validate](assets/example-validate.png)
-
-Regel i den visuella redigeraren
 
 <!-- The rule appears as follows in the code editor.
 
