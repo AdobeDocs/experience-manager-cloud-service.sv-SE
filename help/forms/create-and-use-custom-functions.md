@@ -7,9 +7,9 @@ content-type: reference
 feature: Adaptive Forms, Core Components
 mini-toc-levels: 4
 exl-id: 24607dd1-2d65-480b-a831-9071e20c473d
-source-git-commit: 4cd7924e99809146e111f6b3309db0a8292e61b1
+source-git-commit: 6f50bdf2a826654e0d5b35de5bd50e66981fb56a
 workflow-type: tm+mt
-source-wordcount: '3499'
+source-wordcount: '3502'
 ht-degree: 0%
 
 ---
@@ -649,7 +649,7 @@ Du kan även kontrollera konsolfönstret för att visa data som skickats till se
 
 
 
-#### Åsidosätt formulärskickning och felmeddelanden
+#### Åsidosätt lyckade inskickade data och felmeddelanden för ditt anpassade formulär
 
 Lägg till följande kodrad enligt anvisningarna i [create-custom-function](#create-custom-function) för att anpassa inlämnings- eller felmeddelandet för formulärinskickning och visa formulärinskickningsmeddelandena i en modal ruta:
 
