@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 32d8477f85edf7fc33a0558e886c5fbb4854f8e5
+source-git-commit: b6061690fa278ccb883656cefd065d06ab924499
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1767'
 ht-degree: 0%
 
 ---
@@ -89,11 +89,11 @@ Med Experience Manager Assets kan du nu snabbt [publicera resurser på Experienc
 
 Den här versionen innebär en betydande uppgradering av den visuella regelredigeraren för adaptiva formulär baserade på kärnkomponenter. Du kan nu:
 
-* Skapa regler i Visual Rule Editor för att [åsidosätta standardhanterare för att skicka/underkänna formulär](/help/forms/create-and-use-custom-functions.md#field-and-global-scope-objects-in-custom-functions).
+* Skapa regler i Visual Rule Editor för att [åsidosätta standardmeddelanden om att formuläret har skickats in eller misslyckats](/help/forms/create-and-use-custom-functions.md#use-case-override-form-submission-success-and-error-handlers).
 
 * I den adaptiva Forms-regelredigeraren har du lagt till möjligheten att [välja olika typer av fält för WHEN-åtgärden](/help/forms/rule-editor-core-components.md#allowed-multiple-fields-in-when).
 
-* En formulärförfattare kan nu använda anpassade funktioner på [bearbeta data innan de skickas](/help/forms/create-and-use-custom-functions.md#field-and-global-scope-objects-in-custom-functions).
+* En formulärförfattare kan nu använda anpassade funktioner på [bearbeta data innan de skickas](/help/forms/create-and-use-custom-functions.md#use-case-submit-altered-data-to-the-server).
 
 * Använd [**Spara som utkast**](/help/forms/save-core-component-based-form-as-draft.md) funktioner för att spara delvis ifyllda formulär för senare inskickning. Detta är användbart i scenarier där användare måste avbryta ifyllandet av ett formulär och komma tillbaka till det senare.
 
@@ -211,12 +211,10 @@ Ungefär som AEM 6.5, kommer Apache/dispatcher att importera omskrivningskartor 
 
 Hanterad CDN i Adobe har nu stöd för [Edge Side Includes (ESI)](/help/implementing/dispatcher/edge-side-includes.md), ett markeringsspråk för sammanställning av dynamiskt webbinnehåll på kantnivå. Genom att ta med ESI-fragment kan du cachelagra hela HTML-sidan vid CDN med högre TTL-värden, medan du oftare hämtar mindre avsnitt från ursprungsläget som kräver högre uppdateringsintervall (nedre TTL-värden). <!--Please reach out to **<aemcs-cdn-config-adopter@adobe.com>** for more information.-->
 
-#### Real User Monitoring (RUM) Data Service (Early Adopter Program)
+#### Real Use Monitoring (RUM) Data Service (Early Adopter Program)
 
-* **[Du kan använda datatjänsten för övervakning av verkliga användare (RUM)](/help/implementing/cloud-manager/content-requests.md#real-user-monitoring-for-aem-as-a-cloud-service)** för att aktivera klientsidessamling för AEM as a Cloud Service.
-Real User Monitoring (RUM) Data Service ger en mer exakt återgivning av användarinteraktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det är en utmärkt möjlighet att få avancerade insikter om hur sidan fungerar. Detta är fördelaktigt för kunder som använder antingen Adobe-hanterat CDN eller icke-Adobe-hanterat CDN. För kunder som använder ett icke-Adobe-hanterat CDN kan nu dessutom automatiserad trafikrapportering aktiveras för dem, vilket eliminerar behovet av att dela trafikrapporter med Adobe.
-
-  Om du vill testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `aemcs-rum-adopter@adobe.com`, tillsammans med ditt domännamn för varje miljö som du vill aktivera RUM för från din e-postadress som är kopplad till din Adobe ID. Adobe produktteam aktiverar sedan datatjänsten Real User Monitoring (RUM) åt dig.
+* **RUM-datatjänsten (Real Use Monitoring) är nu GA(/help/implementing/cloud-manager/content-requests.md#real-use-monitoring-for-aem-as-a-cloud-service)** möjliggör datainsamling på klientsidan för AEM as a Cloud Service.
+Tjänsten Real Use Monitoring, kundsidessamlingen, ger en mer exakt återgivning av interaktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det ger kunder med avancerade insikter om sidtrafik och prestanda. Det är en utmärkt möjlighet att lära sig mer om hur sidan fungerar och få insikter för att förbättra den.
 
 ## [!DNL Experience Manager] Stödlinjer {#guides}
 

@@ -6,7 +6,7 @@ contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
 exl-id: 24607dd1-2d65-480b-a831-9071e20c473d
-source-git-commit: 494e90bd5822495f0619e8ebf55f373a26a3ffe6
+source-git-commit: b6061690fa278ccb883656cefd065d06ab924499
 workflow-type: tm+mt
 source-wordcount: '3510'
 ht-degree: 0%
@@ -442,7 +442,7 @@ Låt oss lära oss hur anpassade funktioner använder fält och globala objekt m
 
 ![Kontakta oss](/help/forms/assets/contact-us-form.png)
 
-+++ **Användningsfall**: Visa en panel med `SetProperty` regel
++++ Använd skiftläge: Visa en panel med `SetProperty` regel
 
 Lägg till följande kod i den anpassade funktionen enligt anvisningarna i [create-custom-function](#create-custom-function) för att ange formulärfältet som `Required`.
 
@@ -484,9 +484,8 @@ Om det finns fel i fälten i `personaldetails` visas de på fältnivå när du k
 
 ![Ange förhandsgranskning av egenskapsformulär](/help/forms/assets/set-property-panel.png)
 
-+++
 
-+++ **Användningsfall**: Verifiera fältet.
+#### Använd skiftläge: Validera fältet.
 
 Lägg till följande kod i den anpassade funktionen enligt anvisningarna i [create-custom-function](#create-custom-function) för att validera fältet.
 
@@ -525,9 +524,9 @@ Om användaren anger ett giltigt telefonnummer och alla fält i dialogrutan `per
 
 ![Mönster för e-postadressvalidering](/help/forms/assets/validate-form-preview-form.png)
 
-+++
 
-+++ **Användningsfall**: Återställ en panel
+
+#### Använd skiftläge: Återställ en panel
 
 Lägg till följande kod i den anpassade funktionen enligt anvisningarna i [create-custom-function](#create-custom-function) för att återställa panelen.
 
@@ -559,9 +558,9 @@ Se bilden nedan för att visa att om användaren klickar på `clear` -knappen `p
 
 ![Återställ formulär](/help/forms/assets/custom-function-reset-form.png)
 
-+++
 
-+++ **Användningsfall**: Om du vill visa ett anpassat meddelande på fältnivå och markera fältet som ogiltigt
+
+#### Använd skiftläge: Om du vill visa ett anpassat meddelande på fältnivå och markera fältet som ogiltigt
 
 Du kan använda `markFieldAsInvalid()` för att definiera ett fält som ogiltigt och ange ett anpassat felmeddelande på fältnivå. The `fieldIdentifier` värdet kan `fieldId`, eller `field qualifiedName`, eller `field dataRef`. Värdet för objektet med namnet `option` kan `{useId: true}`, `{useQualifiedName: true}`, eller `{useDataRef: true}`.
 Syntaxerna som används för att markera ett fält som ogiltigt och ange ett anpassat meddelande är:
@@ -602,9 +601,9 @@ Om användaren skriver in mer än 15 tecken i textrutan för kommentarer valider
 
 ![Markera fältet som ett giltigt förhandsgranskningsformulär](/help/forms/assets/custom-function-validfield-form.png)
 
-+++
 
-+++ **Användningsfall**: Skicka ändrade data till servern
+
+#### Användningsfall: Skicka ändrade data till servern
 
 Följande kodrad:
 `globals.functions.submitForm(globals.functions.exportData(), false);` används för att skicka formulärdata efter manipulering.
@@ -647,9 +646,9 @@ Du kan även kontrollera konsolfönstret för att visa data som skickats till se
 
 ![Inspect data i konsolfönstret](/help/forms/assets/custom-function-submit-data-console-data.png)
 
-+++
 
-+++ **Användningsfall**: Åsidosätt formulärskickning och felhantering
+
+#### Användningsfall: Åsidosätt formulärskickning och felhantering
 
 Lägg till följande kodrad enligt anvisningarna i [create-custom-function](#create-custom-function) för att anpassa inlämnings- eller felmeddelandet för formulärinskickning och visa formulärinskickningsmeddelandena i en modal ruta:
 
@@ -760,9 +759,8 @@ Om den anpassade överföringshanteraren inte fungerar som förväntat i befintl
 
 <!--
 
-+++
 
-+++ **Use Case**:  Perform actions in a specific instance of the repeatable panel 
+#### Use Case:  Perform actions in a specific instance of the repeatable panel 
 
 Rules created using the visual rule editor on a repeatable panel apply to the last instance of the repeatable panel. To write a rule for a specific instance of the repeatable panel, we can use a custom function.
 
@@ -793,9 +791,9 @@ Let us add a button labeled `Hide` to add a rule to hide a specific panel.
 Refer to the video below to demonstrate that when the `Hide` is clicked, the panel in the second repeatable instance hides:
 
 
-+++
 
-+++ **Usecase**: Pre-fill the field with a value when the form loads
+
+#### **Usecase**: Pre-fill the field with a value when the form loads
 
 Add the following line of code, as explained in the [create-custom-function](#create-custom-function) section, to load the pre-filled value in a field when the form is initialized:
 
@@ -820,9 +818,9 @@ Refer to the screenshot below, which demonstrates that when the form loads, the 
 
 ![Import Data Rule](/help/forms/assets/cg)
 
-+++
 
-+++ **Usecase**: Set focus on the specific field
+
+#### **Usecase**: Set focus on the specific field
 
 Add the following line of code, as explained in the [create-custom-function](#create-custom-function) section, to set focus on the specified field when the `Submit` button is clicked.:
 
