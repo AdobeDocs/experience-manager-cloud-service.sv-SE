@@ -2,9 +2,9 @@
 title: AEM Assets inbyggda integrering med Adobe Express
 description: Tack vare AEM Assets inbyggda integrering med Adobe Express får du direkt åtkomst till resurser som lagras i AEM Assets inifrån användargränssnittet för Adobe Expressen.
 exl-id: d43e4451-da2a-444d-9aa4-4282130ee44f
-source-git-commit: 8bbf9a2ba8f708a5a03d11bc0388d39b32d4c7b3
+source-git-commit: 69d890eaae30468db89b9aff975a2a421f53fcff
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,15 @@ Så här börjar du använda AEM Assets i redigeraren:
 
 1. Öppna Adobe Expressens webbprogram.
 
-1. Öppna en ny tom arbetsyta genom att läsa in en ny mall eller ett projekt, eller genom att skapa en resurs.
+2. Öppna en ny tom arbetsyta genom att läsa in en ny mall eller ett projekt, eller genom att skapa en resurs.
 
-1. Klicka **[!UICONTROL Assets]** finns i den vänstra navigeringsrutan. Adobe Express visar en lista över databaser som du har behörighet att komma åt tillsammans med en lista över resurser och mappar som är tillgängliga på rotnivå.
+3. Klicka **[!UICONTROL Assets]** finns i den vänstra navigeringsrutan. Adobe Express visar en lista över databaser som du har behörighet att komma åt tillsammans med en lista över resurser och mappar som är tillgängliga på rotnivå.
 
-1. Bläddra bland eller sök resurser i databasen för att dra och släppa dem på arbetsytan. Du kan filtrera resurser med hjälp av olika tillgängliga filter, till exempel filtyp, MIME-typ och dimensioner.
+4. Bläddra bland eller sök resurser i databasen för att dra och släppa dem på arbetsytan. Du kan filtrera resurser med hjälp av olika tillgängliga filter, till exempel filtyp, MIME-typ och dimensioner.
+
+   >[!NOTE]
+   >
+   >Filtrera efter dimension gäller inte videoklipp.
 
    ![Inkludera resurser från resurstillägg](assets/adobe-express-native-integration.png)
 
@@ -45,23 +49,38 @@ När du har infogat lämpliga ändringar på arbetsytan Express kan du spara den
 
    ![Spara resurser i AEM](assets/adobe-express-share.png)
 
-1. Välj **[!UICONTROL AEM Assets]** från **[!UICONTROL Storage]** som finns i den högra rutan. Adobe Expressen visar dialogrutan för överföring.
-1. Ange ett namn och format för resursen. Du kan spara innehållet på arbetsytan i PNG- eller JPEG-format.
+2. I avsnittet Lagring i den högra rutan väljer du **AEM Assets**. Adobe Expressen visar dialogrutan för överföring.
+3. Ange ett namn och format för resursen. Du kan spara arbetsytans innehåll i PNG-, JPEG, PDF, MP4-, MP4+PNG- eller MP4+JPEG-format. Formatet justeras automatiskt baserat på tillgången/tillgångarna.
 
-1. Klicka på mappikonen intill **[!UICONTROL Location]** navigera till den plats där du behöver spara resursen och klicka på **[!UICONTROL Select]**. Namnet på mappen visas i **[!UICONTROL Location]** fält.
+   >[!NOTE]
+   >
+   >Om du väljer &quot;Aktuell sida&quot; sparas filen i målmappen. Om du väljer Alla sidor skapas en ny mapp på målplatsen för alla filer som inte är PDF och de sparas där medan PDF-filer sparas som en enda fil i målmappen.
 
-   ![Spara resurser i AEM](assets/adobe-express-upload.png)
+4. Klicka på textområdet under **Målmapp** för att välja en plats och spara resursen/resurserna.
 
-1. Valfritt: Du kan lägga till kampanjmetadata för överföringen med **[!UICONTROL Project or campaign name]** fält. Du kan använda ett befintligt namn eller skapa ett nytt. Du kan definiera flera projekt- eller kampanjnamn för överföringen. När du skriver ett namn kan du antingen klicka någon annanstans i dialogrutan eller trycka på `,` (Komma) för att registrera namnet.
+   ![Spara resurser i AEM](/help/assets/assets/page-selection-and-destination-folder.png)
 
-   Som en god praxis rekommenderar Adobe att du anger värden i resten av fälten, liksom att du får en förbättrad sökupplevelse för dina överförda resurser.
-1. Definiera på liknande sätt värden för **[!UICONTROL Keywords]** och **[!UICONTROL Channels]** fält.
+5. Valfritt: Du kan lägga till kampanjmetadata för överföringen med **Projekt- eller kampanjnamn** fält. Du kan använda ett befintligt namn eller skapa ett nytt. Du kan definiera flera projekt- eller kampanjnamn för överföringen. Registrera namnet genom att skriva namnet och trycka på Retur.
+Som en god praxis rekommenderar Adobe att du anger värden i resten av fälten, liksom att du får en förbättrad sökupplevelse för dina överförda resurser.
 
-1. Klicka **[!UICONTROL Upload]** för att överföra resursen till AEM Assets.
+6. Definiera på liknande sätt värden för **[!UICONTROL Keywords]** och **[!UICONTROL Channels]** fält.
+
+7. Klicka **[!UICONTROL Upload]** för att överföra resursen till AEM Assets.
 
 
 
 
 ## Begränsningar {#limitations}
 
-Det finns ett känt fel som vissa användare upplever när de sparar ett dokument med resurser från flera databaser.
+1. För import och export är den videofiltyp som stöds MP4.
+
+2. För MP4-videoimport:
+
+   a) Den maximala filstorlek som stöds är 200 MB. Om gränsen överskrids visas ett varningsmeddelande.
+b) Den maximala upplösning som stöds är 3 840 × 3 840 pixlar.
+c) Videor med genomskinliga bakgrunder (alfakanal) stöds inte.
+
+3. För MP4-videoexport:
+
+   a) Den maximala filstorlek som stöds är 200 MB. Om den här gränsen överskrids visas ett varningsmeddelande med en problemlösning enligt bilden nedan
+   ![varning med tillfällig lösning](/help/assets/assets/alert-with-workaround.png).
