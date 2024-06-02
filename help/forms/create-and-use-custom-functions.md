@@ -6,9 +6,9 @@ contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
 exl-id: 24607dd1-2d65-480b-a831-9071e20c473d
-source-git-commit: b6061690fa278ccb883656cefd065d06ab924499
+source-git-commit: 05b149c60cb8d05489668b13f63ed5b0e1d0bbfb
 workflow-type: tm+mt
-source-wordcount: '3510'
+source-wordcount: '3511'
 ht-degree: 0%
 
 ---
@@ -442,7 +442,7 @@ Låt oss lära oss hur anpassade funktioner använder fält och globala objekt m
 
 ![Kontakta oss](/help/forms/assets/contact-us-form.png)
 
-+++ Använd skiftläge: Visa en panel med `SetProperty` regel
+#### Använd skiftläge: Visa en panel med regeln SetProperty
 
 Lägg till följande kod i den anpassade funktionen enligt anvisningarna i [create-custom-function](#create-custom-function) för att ange formulärfältet som `Required`.
 
