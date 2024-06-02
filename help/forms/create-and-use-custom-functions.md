@@ -7,9 +7,9 @@ content-type: reference
 feature: Adaptive Forms, Core Components
 mini-toc-levels: 4
 exl-id: 24607dd1-2d65-480b-a831-9071e20c473d
-source-git-commit: 8f33174ac6b699af34ca8af14387eaca5cae969c
+source-git-commit: 4cd7924e99809146e111f6b3309db0a8292e61b1
 workflow-type: tm+mt
-source-wordcount: '3511'
+source-wordcount: '3499'
 ht-degree: 0%
 
 ---
@@ -443,7 +443,7 @@ Låt oss lära oss hur anpassade funktioner använder fält och globala objekt m
 
 ![Kontakta oss](/help/forms/assets/contact-us-form.png)
 
-#### Använd skiftläge: Visa en panel med regeln SetProperty
+#### Visa en panel med regeln SetProperty
 
 Lägg till följande kod i den anpassade funktionen enligt anvisningarna i [create-custom-function](#create-custom-function) för att ange formulärfältet som `Required`.
 
@@ -486,7 +486,7 @@ Om det finns fel i fälten i `personaldetails` visas de på fältnivå när du k
 ![Ange förhandsgranskning av egenskapsformulär](/help/forms/assets/set-property-panel.png)
 
 
-#### Använd skiftläge: Validera fältet.
+#### Validera ett fält.
 
 Lägg till följande kod i den anpassade funktionen enligt anvisningarna i [create-custom-function](#create-custom-function) för att validera fältet.
 
@@ -527,7 +527,7 @@ Om användaren anger ett giltigt telefonnummer och alla fält i dialogrutan `per
 
 
 
-#### Använd skiftläge: Återställ en panel
+#### Återställ en panel
 
 Lägg till följande kod i den anpassade funktionen enligt anvisningarna i [create-custom-function](#create-custom-function) för att återställa panelen.
 
@@ -561,7 +561,7 @@ Se bilden nedan för att visa att om användaren klickar på `clear` -knappen `p
 
 
 
-#### Använd skiftläge: Om du vill visa ett anpassat meddelande på fältnivå och markera fältet som ogiltigt
+#### Visa ett anpassat meddelande på fältnivå och markera fältet som ogiltigt
 
 Du kan använda `markFieldAsInvalid()` för att definiera ett fält som ogiltigt och ange ett anpassat felmeddelande på fältnivå. The `fieldIdentifier` värdet kan `fieldId`, eller `field qualifiedName`, eller `field dataRef`. Värdet för objektet med namnet `option` kan `{useId: true}`, `{useQualifiedName: true}`, eller `{useDataRef: true}`.
 Syntaxerna som används för att markera ett fält som ogiltigt och ange ett anpassat meddelande är:
@@ -604,7 +604,7 @@ Om användaren skriver in mer än 15 tecken i textrutan för kommentarer valider
 
 
 
-#### Användningsfall: Skicka ändrade data till servern
+#### Ändra inhämtade data innan de skickas
 
 Följande kodrad:
 `globals.functions.submitForm(globals.functions.exportData(), false);` används för att skicka formulärdata efter manipulering.
@@ -649,7 +649,7 @@ Du kan även kontrollera konsolfönstret för att visa data som skickats till se
 
 
 
-#### Användningsfall: Åsidosätt formulärskickning och felhantering
+#### Åsidosätt formulärskickning och felmeddelanden
 
 Lägg till följande kodrad enligt anvisningarna i [create-custom-function](#create-custom-function) för att anpassa inlämnings- eller felmeddelandet för formulärinskickning och visa formulärinskickningsmeddelandena i en modal ruta:
 
