@@ -2,9 +2,9 @@
 title: AEM Assets inbyggda integrering med Adobe Express
 description: Tack vare AEM Assets inbyggda integrering med Adobe Express får du direkt åtkomst till resurser som lagras i AEM Assets inifrån användargränssnittet för Adobe Expressen.
 exl-id: d43e4451-da2a-444d-9aa4-4282130ee44f
-source-git-commit: c6cde0a3f5a1513f8158c654167ec0332e4c42a7
+source-git-commit: 4e33782dd8db0c1185b9a7733e7bcccfbcf3c3ba
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
@@ -43,32 +43,25 @@ Så här börjar du använda AEM Assets i redigeraren:
 
 ## Spara Adobe Expresser i AEM Assets {#save-express-projects-in-assets}
 
-När du har infogat lämpliga ändringar på arbetsytan Express kan du spara den i AEM Assets-databasen.
+När du har infogat lämpliga ändringar på arbetsytan Express kan du spara dem i AEM Assets-databasen.
 
 1. Klicka **[!UICONTROL Share]** för att öppna **[!UICONTROL Share]** -dialogrutan.
 
    ![Spara resurser i AEM](assets/adobe-express-share.png)
 
 2. I avsnittet Lagring i den högra rutan väljer du **AEM Assets**. Adobe Expressen visar dialogrutan för överföring.
-3. Ange ett namn och format för resursen. Du kan spara arbetsytans innehåll i PNG-, JPEG, PDF, MP4-, MP4+PNG- eller MP4+JPEG-format. Formatet justeras automatiskt baserat på tillgången/tillgångarna.
-
-   >[!NOTE]
-   >
-   >Om du väljer &quot;Aktuell sida&quot; sparas filen i målmappen. Om du väljer Alla sidor skapas en ny mapp på målplatsen för alla filer som inte är PDF och de sparas där medan PDF-filer sparas som en enda fil i målmappen.
-
-4. Klicka på textområdet under **Målmapp** för att välja en plats och spara resursen/resurserna.
+3. Välj antingen **Aktuell sida** eller **Alla sidor** sparalternativ. Markera **Aktuell sida** sparar filen i målmappen, men väljer **Alla sidor** skapar en ny mapp i målmappen för alla filer som inte är PDF och sparar dem som separata filer medan PDF-filer sparas som en enda fil i målmappen.
+4. Ange ett namn och format för resursen. Du kan spara arbetsytans innehåll i PNG-, JPEG, PDF, MP4-, MP4+PNG- eller MP4+JPEG-format. Formatet justeras automatiskt baserat på tillgången/tillgångarna.
+5. Klicka på mappikonen under **Målmapp** för att välja en plats och spara resursen/resurserna.
 
    ![Spara resurser i AEM](/help/assets/assets/page-selection-and-destination-folder.svg)
 
-5. Valfritt: Du kan lägga till kampanjmetadata för överföringen med **Projekt- eller kampanjnamn** fält. Du kan använda ett befintligt namn eller skapa ett nytt. Du kan definiera flera projekt- eller kampanjnamn för överföringen. Registrera namnet genom att skriva namnet och trycka på Retur.
-Som en god praxis rekommenderar Adobe att du anger värden i resten av fälten, liksom att du får en förbättrad sökupplevelse för dina överförda resurser.
+6. Valfritt: Du kan lägga till kampanjmetadata för överföringen med **Projekt- eller kampanjnamn** fält. Du kan använda ett befintligt namn eller skapa ett nytt. Du kan definiera flera projekt- eller kampanjnamn för överföringen. Registrera namnet genom att skriva namnet och trycka på Retur.
+Som en god praxis rekommenderar Adobe att du anger värden i resten av fälten samt skapar en förbättrad sökupplevelse för dina överförda resurser.
 
-6. Definiera på liknande sätt värden för **[!UICONTROL Keywords]** och **[!UICONTROL Channels]** fält.
+7. Definiera på liknande sätt värden för **[!UICONTROL Keywords]** och **[!UICONTROL Channels]** fält.
 
-7. Klicka **[!UICONTROL Upload]** om du vill överföra resurserna till AEM Assets.
-
-
-
+8. Klicka **[!UICONTROL Upload]** om du vill överföra resurserna till AEM Assets.
 
 ## Begränsningar {#limitations}
 
@@ -76,11 +69,13 @@ Som en god praxis rekommenderar Adobe att du anger värden i resten av fälten, 
 
 2. För MP4-videoimport:
 
-   a) Den maximala filstorlek som stöds är 200 MB. Om gränsen överskrids visas ett varningsmeddelande.
-b) Den maximala upplösning som stöds är 3 840 × 3 840 pixlar.
-c) Videor med genomskinliga bakgrunder (alfakanal) stöds inte.
+   1. Den största filstorlek som stöds är 200 MB. Om gränsen överskrids visas ett varningsmeddelande.
+   2. Den högsta upplösningen som stöds är 3 840 × 3 840 pixlar.
+   3. Videor med genomskinliga bakgrunder (alfakanal) stöds inte.
 
 3. För MP4-videoexport:
 
-   a) Den maximala filstorlek som stöds är 200 MB. Om den här gränsen överskrids visas ett varningsmeddelande med ett förslag till åtgärder runt problemet, vilket visas i bilden nedan.
-   ![varning med tillfällig lösning](/help/assets/assets/alert-with-workaround.png)
+   1. Den största filstorlek som stöds är 200 MB. Om gränsen överskrids föreslår en varning att videon trimmas till 200 MB eller mindre, eller att den överförs manuellt till AEM Assets målmapp när den har laddats ned.
+
+
+
