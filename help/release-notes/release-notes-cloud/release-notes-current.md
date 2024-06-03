@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: f8fc51051393ef154e02391843fe1e73e6194e6f
+source-git-commit: 5247a06f15a3edd34a419f9d64aa0590b43c1612
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1763'
 ht-degree: 0%
 
 ---
@@ -213,10 +213,8 @@ Hanterad CDN i Adobe har nu stöd för [Edge Side Includes (ESI)](/help/implemen
 
 #### Real User Monitoring (RUM) Data Service (Early Adopter Program)
 
-* **[Du kan använda datatjänsten för övervakning av verkliga användare (RUM)](/help/implementing/cloud-manager/content-requests.md#real-user-monitoring-for-aem-as-a-cloud-service)** för att aktivera klientsidessamling för AEM as a Cloud Service.
-Real User Monitoring (RUM) Data Service ger en mer exakt återgivning av användarinteraktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det är en utmärkt möjlighet att få avancerade insikter om hur sidan fungerar. Detta är fördelaktigt för kunder som använder antingen Adobe-hanterat CDN eller icke-Adobe-hanterat CDN. För kunder som använder ett icke-Adobe-hanterat CDN kan nu dessutom automatiserad trafikrapportering aktiveras för dem, vilket eliminerar behovet av att dela trafikrapporter med Adobe.
-
-  Om du vill testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `aemcs-rum-adopter@adobe.com`, tillsammans med ditt domännamn för varje miljö som du vill aktivera RUM för från din e-postadress som är kopplad till din Adobe ID. Adobe produktteam aktiverar sedan datatjänsten Real User Monitoring (RUM) åt dig.
+* **[RUM-datatjänsten (Real Use Monitoring) är nu GA](/help/implementing/cloud-manager/content-requests.md#real-user-monitoring-for-aem-as-a-cloud-service)** möjliggör datainsamling på klientsidan för AEM as a Cloud Service.
+Tjänsten Real Use Monitoring, kundsidessamlingen, ger en mer exakt återgivning av interaktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det ger kunder med avancerade insikter om sidtrafik och prestanda. Det är en utmärkt möjlighet att lära sig mer om hur sidan fungerar och få insikter för att förbättra den.
 
 ## [!DNL Experience Manager] Stödlinjer {#guides}
 
