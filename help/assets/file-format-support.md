@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management,Renditions
 role: User,Admin
 exl-id: e848aa77-7829-4adc-8b88-0279791a4525
-source-git-commit: f7f60036088a2332644ce87f4a1be9bae3af1c5e
+source-git-commit: 64704592c663c0287505d3a8a8e92781d1702497
 workflow-type: tm+mt
-source-wordcount: '1411'
+source-wordcount: '1414'
 ht-degree: 0%
 
 ---
@@ -147,31 +147,31 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 
 ## Videoformat {#video-formats}
 
-| Filformat | Skapa miniatyrbilder | Extrahering av metadata | Bredd/höjd | Förhandsgranska |
-| ----------- | -------------------- | ------------------- | ------------ | ------- |
-| 3G2 | - | ✓ | - | - |
-| 3GP | - | ✓ | - | - |
-| AVI | ✓ | ✓ | ✓ | ✓ |
-| DIVX | ✓ | - | ✓ | ✓ |
-| F4V | ✓ | ✓ | ✓ | ✓ |
-| FLV | ✓ | ✓ | ✓ | ✓ |
-| M2T | ✓ | - | ✓ | ✓ |
-| M2TS | ✓ | - | ✓ | ✓ |
-| M2V | ✓ | - | ✓ | ✓ |
-| M4V | ✓ | ✓ | ✓ | ✓ |
-| MKV | ✓ | - | ✓ | ✓ |
-| MOV | ✓ | ✓ | ✓ | ✓ |
-| MP4 | ✓ | ✓ | ✓ | ✓ |
-| MPEG | ✓ | ✓ | ✓ | ✓ |
-| MPG | ✓ | ✓ | ✓ | ✓ |
-| MTS | ✓ | - | ✓ | ✓ |
-| MXF | ✓ | - | ✓ | ✓ |
-| OGV | ✓ | - | ✓ | ✓ |
-| QT | ✓ | - | ✓ | ✓ |
-| R3D | - | ✓ | ✓ | ✓ |
-| SWF | ✓ | - | ✓ | ✓ |
-| WebM | ✓ | - | ✓ | ✓ |
-| WMV | ✓ | ✓ | ✓ | ✓ |
+| Filformat | Skapa miniatyrbilder | Extrahering av metadata | Bredd/höjd | Förhandsgranska | Utdata |
+| ----------- | -------------------- | ------------------- | ------------ | ------- | ------- |
+| 3G2 | - | ✓ | - | - | - |
+| 3GP | - | ✓ | - | - | - |
+| AVI | ✓ | ✓ | ✓ | ✓ | - |
+| DIVX | ✓ | - | ✓ | ✓ | - |
+| F4V | ✓ | ✓ | ✓ | ✓ | - |
+| FLV | ✓ | ✓ | ✓ | ✓ | - |
+| M2T | ✓ | - | ✓ | ✓ | - |
+| M2TS | ✓ | - | ✓ | ✓ | - |
+| M2V | ✓ | - | ✓ | ✓ | - |
+| M4V | ✓ | ✓ | ✓ | ✓ | - |
+| MKV | ✓ | - | ✓ | ✓ | - |
+| MOV | ✓ | ✓ | ✓ | ✓ | - |
+| MP4 | ✓ | ✓ | ✓ | ✓ | ✓ |
+| MPEG | ✓ | ✓ | ✓ | ✓ | - |
+| MPG | ✓ | ✓ | ✓ | ✓ | - |
+| MTS | ✓ | - | ✓ | ✓ | - |
+| MXF | ✓ | - | ✓ | ✓ | - |
+| OGV | ✓ | - | ✓ | ✓ | - |
+| QT | ✓ | - | ✓ | ✓ | - |
+| R3D | - | ✓ | ✓ | ✓ | - |
+| SWF | ✓ | - | ✓ | ✓ | - |
+| WebM | ✓ | - | ✓ | ✓ | ✓ |
+| WMV | ✓ | ✓ | ✓ | ✓ | - |
 
 ## Ljudformat {#audio-formats}
 
@@ -282,5 +282,5 @@ Se även [Stöd för 3D-format](/help/assets/file-format-support.md#support-3d-f
 
 >[!MORELIKETHIS]
 >
->* [Behandling av tillgångar med hjälp av mikrotjänster](asset-microservices-overview.md)
+>* [Behandling av tillgångar med hjälp av mikrotjänster](asset-microservices-overview.md).
 >* [Filformat som stöds för smart taggning av textbaserade resurser](/help/assets/smart-tags.md#smart-tags-supported-file-formats)
