@@ -2,9 +2,9 @@
 title: AEM Assets inbyggda integrering med Adobe Express
 description: Tack vare AEM Assets inbyggda integrering med Adobe Express får du direkt åtkomst till resurser som lagras i AEM Assets inifrån användargränssnittet för Adobe Expressen.
 exl-id: d43e4451-da2a-444d-9aa4-4282130ee44f
-source-git-commit: 69d890eaae30468db89b9aff975a2a421f53fcff
+source-git-commit: 9044d5cefe7064a015c18c988e29b8c2e8088bae
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '592'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Som en god praxis rekommenderar Adobe att du anger värden i resten av fälten, 
 
 6. Definiera på liknande sätt värden för **[!UICONTROL Keywords]** och **[!UICONTROL Channels]** fält.
 
-7. Klicka **[!UICONTROL Upload]** för att överföra resursen till AEM Assets.
+7. Klicka **[!UICONTROL Upload]** om du vill överföra resurserna till AEM Assets.
 
 
 
