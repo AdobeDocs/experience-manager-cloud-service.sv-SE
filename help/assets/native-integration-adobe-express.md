@@ -2,7 +2,7 @@
 title: AEM Assets inbyggda integrering med Adobe Express
 description: Tack vare AEM Assets inbyggda integrering med Adobe Express får du direkt åtkomst till resurser som lagras i AEM Assets inifrån användargränssnittet för Adobe Expressen.
 exl-id: d43e4451-da2a-444d-9aa4-4282130ee44f
-source-git-commit: 9044d5cefe7064a015c18c988e29b8c2e8088bae
+source-git-commit: c6cde0a3f5a1513f8158c654167ec0332e4c42a7
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 0%
@@ -58,7 +58,7 @@ När du har infogat lämpliga ändringar på arbetsytan Express kan du spara den
 
 4. Klicka på textområdet under **Målmapp** för att välja en plats och spara resursen/resurserna.
 
-   ![Spara resurser i AEM](/help/assets/assets/page-selection-and-destination-folder.png)
+   ![Spara resurser i AEM](/help/assets/assets/page-selection-and-destination-folder.svg)
 
 5. Valfritt: Du kan lägga till kampanjmetadata för överföringen med **Projekt- eller kampanjnamn** fält. Du kan använda ett befintligt namn eller skapa ett nytt. Du kan definiera flera projekt- eller kampanjnamn för överföringen. Registrera namnet genom att skriva namnet och trycka på Retur.
 Som en god praxis rekommenderar Adobe att du anger värden i resten av fälten, liksom att du får en förbättrad sökupplevelse för dina överförda resurser.
@@ -82,5 +82,5 @@ c) Videor med genomskinliga bakgrunder (alfakanal) stöds inte.
 
 3. För MP4-videoexport:
 
-   a) Den maximala filstorlek som stöds är 200 MB. Om den här gränsen överskrids visas ett varningsmeddelande med en problemlösning enligt bilden nedan
-   ![varning med tillfällig lösning](/help/assets/assets/alert-with-workaround.png).
+   a) Den maximala filstorlek som stöds är 200 MB. Om den här gränsen överskrids visas ett varningsmeddelande med ett förslag till åtgärder runt problemet, vilket visas i bilden nedan.
+   ![varning med tillfällig lösning](/help/assets/assets/alert-with-workaround.png)
