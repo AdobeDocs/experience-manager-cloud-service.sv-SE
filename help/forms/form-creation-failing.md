@@ -3,14 +3,14 @@ title: Hur felsöker man fel vid formulärframtagning?
 description: Felsöka fel när formulär skapas i AEM Forms as a Cloud Service miljö.
 feature: Adaptive Forms, Troubleshooting
 role: User
-source-git-commit: 5e7cd7015d68cc634fcf6a99dd552289abbaedcf
+source-git-commit: 23491130b44147753c5b98f316be5a9e5937afea
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
 
-# Problem {#form-creation-fails}
+# Problem vid publicering av formulär{#form-creation-fails}
 
 Efter uppdatering till AEM Forms as a Cloud Service `2024.5.16461`:
 
