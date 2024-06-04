@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 5247a06f15a3edd34a419f9d64aa0590b43c1612
+source-git-commit: fae92c9a41d866fd89ffb6fa10191fae4033037c
 workflow-type: tm+mt
-source-wordcount: '1763'
+source-wordcount: '1865'
 ht-degree: 0%
 
 ---
@@ -218,7 +218,12 @@ Tjänsten Real Use Monitoring, kundsidessamlingen, ger en mer exakt återgivning
 
 ## [!DNL Experience Manager] Stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste versionen av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/release-notes/cloud-release-notes/2024-releases/2404-release/whats-new-2024-04-0).
+* **Publicera ett ämne eller dess element till ett Experience Fragment**
+Nu kan du publicera ett ämne eller dess element i ett Experience Fragment med hjälp av Experience Manager Guides. En Experience Fragment är en modulär innehållsenhet som integrerar både innehåll och layout.  Experience Fragments är avgörande och kan hjälpa er att skapa enhetliga och engagerande upplevelser.
+* **Möjlighet att skicka metadata för ämnesresursen till utdata från Native PDF**
+Du kan lägga till metadata för ämnesresursen när du genererar utdata för Native PDF. Med den här funktionen kan du lägga till specifika metadata för olika ämnen, som ämnesrubrik och författare, i avsnittets sidhuvuden och sidfötter.
+
+Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Frigör färdplan för Experience Manager Guides](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
