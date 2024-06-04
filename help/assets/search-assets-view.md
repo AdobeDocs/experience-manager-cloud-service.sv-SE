@@ -3,7 +3,7 @@ title: Lär dig hur du söker efter och identifierar resurser i [!DNL Assets vie
 description: Läs om hur du söker efter och identifierar resurser i AEM Assets-vyn. Med de kraftfulla sökfunktionerna kan du snabbt hitta rätt resurs och hjälpa dig att förbättra innehållets hastighet.
 role: User
 exl-id: abfe6a91-1699-436f-8bf4-0d0bf2369f46
-source-git-commit: 4313f2bdfe78457204e26069f3af4bda3f5902e7
+source-git-commit: f476088e13466e1c41368112fb161bcbeee2c5cd
 workflow-type: tm+mt
 source-wordcount: '1827'
 ht-degree: 0%
@@ -331,6 +331,6 @@ Om du behöver lämna feedback om funktionen Sammanhangsbaserad sökning klickar
 
 * Ge produktfeedback med [!UICONTROL Feedback] alternativ som finns i användargränssnittet i resursvyn
 
-* Ge feedback på dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som finns till höger
+* Ge feedback på dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som finns till höger.
 
 * Kontakt [Kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)
