@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 558babc0124a8ee8c1337b91c5ef016ed238c935
+source-git-commit: 624ba716cb2ec2a45b0ed70516d0b2ad1db94912
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '353'
 ht-degree: 1%
 
 ---
@@ -31,11 +31,13 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 165
 
 ### Åtgärdade problem {#fixed-issues-16544}
 
-* DXML-17171: AEM stödlinjer: Kopiering och inklistring av ämnen som överstiger 15 kB misslyckas med ett oväntat fel.
-* DXML-17088: AEM stödlinjer: Funktionen som används för att ändra dokumentstatus från **Filegenskaper** panelen fungerar inte som den ska och ändringar i *Utkast* tillstånd.
-* DXML-16931: AEM stödlinjer: Länkade bilder från ämnen visas inte i baslinjen när versionerna har skapats.
-* DXML-16896: AEM stödlinjer: Återanvändbara innehållspaneler listar inte element när **Användarinställningar** är inställda på att visa filer efter **Filnamn**.
 * GRANITE-51375: idp-sync returnerar NPE om ingen mellanliggande sökväg anges.
+* GUIDES-17171: Kopiering och inklistring av ämnen som överstiger 15 kB misslyckas med ett oväntat fel.
+* GUIDES-17088: Funktionen för att ändra dokumentstatus från **Filegenskaper** panelen fungerar inte som den ska och ändringar i *Utkast* tillstånd.
+* GUIDES-16931: Länkade bilder från ämnena visas inte i baslinjen när versionen har skapats.
+* GUIDES-16896: Paneler med återanvändbart innehåll listar inte element när **Användarinställningar** är inställda på att visa filer efter **Filnamn**.
+
+Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i guiderna för Experience Manager finns i [Frigör färdplan för Experience Manager Guides](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ### Kända fel {#known-issues-16544}
 
