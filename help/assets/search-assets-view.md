@@ -3,9 +3,9 @@ title: Lär dig hur du söker efter och identifierar resurser i [!DNL Assets vie
 description: Läs om hur du söker efter och identifierar resurser i AEM Assets-vyn. Med de kraftfulla sökfunktionerna kan du snabbt hitta rätt resurs och hjälpa dig att förbättra innehållets hastighet.
 role: User
 exl-id: abfe6a91-1699-436f-8bf4-0d0bf2369f46
-source-git-commit: e706ee7228aeb08c99567f607a3435d9f687ef34
+source-git-commit: 4313f2bdfe78457204e26069f3af4bda3f5902e7
 workflow-type: tm+mt
-source-wordcount: '1782'
+source-wordcount: '1827'
 ht-degree: 0%
 
 ---
@@ -311,15 +311,13 @@ I följande video visas hela processen, från att komma åt det kontextuella sö
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428407)
 
-<!--
-### Disable Contextual Search {#disable-contextual-search}
+### Inaktivera sammanhangsbaserad sökning {#disable-contextual-search}
 
-Administrators also have the option to disable Contextual Search for users in your organization. To do so, execute the following steps:
+Administratörer kan även inaktivera sammanhangsbaserad sökning för användare i din organisation. Gör så här:
 
-1. Navigate to **[!UICONTROL Settings]** > **[!UICONTROL General Settings]**.
+1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL General Settings]**.
 
-1. In the [!UICONTROL Contextual Search] section, turn off the **[!UICONTROL Enable Contextual Search for your organization]** toggle to disable the Contextual Search feature for all users in your organization.  
--->
+1. I [!UICONTROL Contextual Search] -avsnittet, stänga av **[!UICONTROL Enable Contextual Search for your organization]** om du vill inaktivera funktionen för sammanhangsbaserad sökning för alla användare i organisationen.
 
 ### Sammanhangsbaserad sökfeedback {#contextual-search-feedback}
 
