@@ -1,13 +1,16 @@
 ---
 title: Konfigurera layoutbehållaren och layoutläget
 description: Lär dig hur du konfigurerar layoutbehållare och layoutläge för att aktivera responsiva layouter för innehållsförfattare.
-source-git-commit: a868bf4d4acf4fbae7ccaf55b03319ba0617f9a4
+exl-id: 469e8151-8231-4ccc-b7f6-855545f87440
+solution: Experience Manager Sites
+feature: Administering
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '1250'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera layoutbehållaren och layoutläget {#configuring-layout-container-and-layout-mode}
 

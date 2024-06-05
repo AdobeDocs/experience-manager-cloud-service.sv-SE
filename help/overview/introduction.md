@@ -2,7 +2,9 @@
 title: Introduktion till Adobe Experience Manager as a Cloud Service
 description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 exl-id: d81b85bb-a69d-49a4-9e75-76f1c6bbcd67
-source-git-commit: 07db10c4ee9cced7b6a697fe4f41c99eaba6a39f
+feature: Release Information
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '631'
 ht-degree: 40%

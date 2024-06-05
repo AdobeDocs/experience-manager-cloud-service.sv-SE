@@ -2,7 +2,10 @@
 title: Dynatrace
 description: Lär dig använda Dynatrace med AEM as a Cloud Service
 exl-id: b58c8b82-a098-4d81-bc36-664e890c8f66
-source-git-commit: 4fe8ed9c3f7b6589878da3317d15fede819bad54
+solution: Experience Manager
+feature: Cloud Manager, Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -31,7 +34,7 @@ Nedan beskrivs mer ingående information om anslutningsbegäranden:
 | [!DNL Dynatrace Environment ID] | Ditt Dynatrace-miljö-ID. Se [Hur får jag information om min Dynatrace-anslutning?](#how-do-i-get-my-dynatrace-connection-details) för hur man får det här. |
 | [!DNL Dynatrace Environment Token] | Din Dynatrace-miljötoken. Se [Hur får jag information om min Dynatrace-anslutning?](#how-do-i-get-my-dynatrace-connection-details) för hur man får det här.<br><br>Detta bör betraktas som en hemlighet, så använd lämpliga säkerhetsrutiner. Lösenordsskydda den till exempel på en webbplats **zerobin.net** som kundsupportbiljetten kan referera till tillsammans med lösenordet. |
 | [!DNL Dynatrace API access token] | API-åtkomsttoken för din Dynatrace-miljö.  Se [Skapa en API-åtkomsttoken för Dynatrace](#create-dynatrace-access-token) för hur du skapar det här.<br><br>Detta bör betraktas som en hemlighet, så använd lämpliga säkerhetsrutiner. Lösenordsskydda den till exempel på en webbplats **zerobin.net** som kundsupportbiljetten kan referera till tillsammans med lösenordet.<br><br>Obs! Detta krävs endast för Dynatrace Managed. |
-| [!DNL Dynatrace ActiveGate Port] | Din ActiveGate-port för Dynatrace som den AEM integreringen ska ansluta till.<br><br>Obs! Detta krävs endast för Dynatrace Managed. |
+| [!DNL Dynatrace ActiveGate Port] | Den Dynatrace ActiveGate-port som AEM ska ansluta till.<br><br>Obs! Detta krävs endast för Dynatrace Managed. |
 | [!DNL Dynatrace ActiveGate Network Zone] | Dina [Dynatrace ActiveGate-nätverkszon](https://docs.dynatrace.com/docs/manage/network-zones) för att AEM övervaka data effektivt över datacenter och nätverksregioner.<br><br>Obs! En Dynatrace ActiveGate-nätverkszon är valfri. |
 | [!DNL AEM Environment ID(s)] | AEM för Dynatrace att övervaka. |
 

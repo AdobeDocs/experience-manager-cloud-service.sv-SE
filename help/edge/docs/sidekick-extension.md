@@ -1,10 +1,12 @@
 ---
-description: "​​Tthe AEM sidekick förser innehållsförfattarna med ett verktygsfält med sammanhangsberoende alternativ så att de kan redigera, förhandsgranska och publicera sitt innehåll direkt från webbplatsens sidor."
+description: ​ ​ Sidbrytaren ger innehållsförfattarna ett verktygsfält med sammanhangsberoende alternativ så att de kan redigera, förhandsgranska och publicera sitt innehåll direkt från webbplatsens sidor.
 title: Installera AEM Sidekick
 feature: Edge Delivery Services
-source-git-commit: 80d974c23cb3dd7c0844b4d2cec2b608ff813438
+exl-id: ec72939d-feb9-446e-9020-0b988ca96f54
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '38'
+source-wordcount: '37'
 ht-degree: 0%
 
 ---

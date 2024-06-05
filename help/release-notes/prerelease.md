@@ -2,9 +2,11 @@
 title: Adobe Experience Manager as a Cloud Service Prerelease Channel
 description: Lär dig hur du använder betaversionskanalen för att få en förhandsvisning av kommande funktioner som AEM as a Cloud Service.
 exl-id: cfc91699-0087-40fa-a76c-0e5e1e03a5bd
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+feature: Release Information
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1264'
 ht-degree: 0%
 
 ---
@@ -26,7 +28,7 @@ Listan över förhandsversionsfunktioner för en viss funktionsrelease finns i [
 
 AEM as a Cloud Service har två typer av releaser.
 
-* **Funktionsreleaser** lägga till funktioner och funktioner AEM as a Cloud Service, vid aktivering
+* **Funktioner** lägga till funktioner AEM as a Cloud Service när det aktiveras
 * **Underhållsreleaser** lägga till säkerhetsuppdateringar, prestandaförbättringar och felkorrigeringar och tillämpas regelbundet och ofta.
 
 Det här mönstret säkerställer kontinuerliga releaser utan avbrott i tjänsten.
@@ -56,7 +58,7 @@ Notera releasedatumen så att du kan planera tiden för granskning och test av k
 
 När du har markerat releasedatum i kalendern ska du kontrollera [Adobe Experience League](/help/release-notes/release-notes-cloud/release-notes-current.md) webbplatsen på dagen för releasen av den senaste versionsinformationen.
 
-Varje release åtföljs av en versionsinformation som visar att det inte bara är det som är nytt i den versionen, utan även de funktioner som är tillgängliga för förhandsversionsutvärdering. Lär känna dig i förväg och planera för att utnyttja de senaste funktionerna i AEMaaCS!
+Varje release åtföljs av en versionsinformation som visar att det inte bara är det som är nytt i den versionen, utan även de funktioner som är tillgängliga för förhandsversionsutvärdering. Lär känna dig i förväg och planera för att dra nytta av de senaste funktionerna i AEMaaCS!
 
 Du kan också [kontrollera kända fel](/help/release-notes/maintenance/latest.md) som publiceras tillsammans med varje release så att du också kan vara medveten om tekniska problem som kan utgöra en utmaning för din utvärdering eller ett eventuellt antagande av nya funktioner.
 
@@ -132,7 +134,7 @@ Javadocs publiceras i Maven Central.
 
 #### Bygg mot prerelease SDK {#build-sdk}
 
-1. Ändra maven-projektets `pom.xml` för att hänvisa till en separat förhandsversion av SDK API jar som publiceras i Maven Central. Den innehåller alla nya Java API:er för prerelease-funktionerna och är beroende av SDK API jar. Den har samma version.
+1. Ändra maven-projektets `pom.xml` för att hänvisa till en separat betaversion av SDK API jar, som publiceras i Maven Central. Den innehåller alla nya Java API:er för prerelease-funktionerna och är beroende av SDK API jar. Den har samma version.
 
    Här är ett exempel på ett utdrag från det överordnade elevens beroendehanteringsavsnitt som refererar till den vanliga API-behållaren:
 
@@ -194,8 +196,8 @@ När du har testat de nya funktionerna i betaversionskanalen och har bestämt di
 Adobe Experience League erbjuder massor av resurser för att lära sig AEMaaCS.
 
 * [AEMaaCS-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html)
-* [Självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-tutorials/overview.html)
-* [Översikt över månadsreleasen](/help/release-notes/release-notes-cloud/release-notes-current.md#release-video) i versionsinformationen
+* [Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-tutorials/overview.html)
+* [Översiktsvideo över månadsreleaser](/help/release-notes/release-notes-cloud/release-notes-current.md#release-video) i versionsinformationen
 
 ## Överväganden {#considerations}
 

@@ -2,7 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 624ba716cb2ec2a45b0ed70516d0b2ad1db94912
+feature: Release Information
+role: Admin
+source-git-commit: b7e8fd902bb2fe98e183b7d987b87fee69e48337
 workflow-type: tm+mt
 source-wordcount: '353'
 ht-degree: 1%

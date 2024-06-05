@@ -3,7 +3,8 @@ title: Versionsinformation om Cloud Manager 2024.5.0 i Adobe Experience Manager 
 description: Detta är versionsinformationen för Cloud Manager 2024.5.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: 3bab3e77dcc8ffbc3e8891557cbe09de707d64c5
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 0%

@@ -2,7 +2,10 @@
 title: Administrera taggar
 description: Lär dig hur du administrerar taggar i AEM för att ordna ditt innehåll.
 exl-id: 42480699-b7a7-4678-a763-569a9b7573e2
-source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
+solution: Experience Manager Sites
+feature: Workflow
+role: Admin
+source-git-commit: d46678e999889934631bd0c678de5b060bc38f44
 workflow-type: tm+mt
 source-wordcount: '2200'
 ht-degree: 0%

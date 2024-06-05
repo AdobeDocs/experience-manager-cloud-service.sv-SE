@@ -2,9 +2,11 @@
 title: SPA referensmaterial
 description: En översikt över enkelsidiga API-referenser och källkodsdatabaser
 exl-id: c1cc2bd8-8ff1-406c-a0ce-0af001d66b53
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
@@ -20,7 +22,7 @@ Nedan följer de tillgängliga JavaScript API-referenserna för NPM-modulerna f�
 * [Reagera på redigerbara komponenter](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
 * [Redigerbara komponenter för angular](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
-## GitHub-databaser med öppen källkod {#github-repositories}
+## Öppna källdatabaser för GitHub {#github-repositories}
 
 Nedan följer databaserna med öppen källkod i GitHub för SPA bibliotek.
 
@@ -32,4 +34,4 @@ Nedan följer databaserna med öppen källkod i GitHub för SPA bibliotek.
 
 >[!TIP]
 >
->Läs i dokumentet om API-referensmaterial om du vill ha alla AEM-relaterade API:er.
+>Läs dokumentet med API-referensmaterial om du vill ha alla AEM API:er.

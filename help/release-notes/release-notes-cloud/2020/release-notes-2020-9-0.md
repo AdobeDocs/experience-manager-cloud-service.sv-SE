@@ -2,10 +2,12 @@
 title: Versionsinformation om 2020.9.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.9.0."
 exl-id: 2332512f-8c52-4569-a006-faa36a7670a1
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+feature: Release Information
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 1%
+source-wordcount: '709'
+ht-degree: 0%
 
 ---
 
@@ -48,11 +50,11 @@ TBD: list of Assets aaCS bugs that are fixed.
 
 ## Adobe Experience Manager Commerce as a Cloud Service {#cloud-services-commerce}
 
-### Vad är nytt? {#what-is-new-commerce}
+### Nyheter {#what-is-new-commerce}
 
-* Frisläppta CIF-kärnkomponenter v1.3.0. Se [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.3.0) för mer information.
+* Frisläppta CIF kärnkomponenter v1.3.0. Se [CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.3.0) för mer information.
 
-* Nu finns funktioner för förhandsgranskning med produkt-/kategorimallar för produkt- och kategorimallar. På så sätt kan företagsanvändare/marknadsförare i AEM visa produkt-/kategorimallarna med riktiga data.
+* Förhandsgranskning med produkt-/kategorimallar är nu tillgänglig. På så sätt kan företagsanvändare/marknadsförare i AEM visa produkt-/kategorimallarna med riktiga data.
 
 * Sidan Egenskaper har lagts till i produkter och kategorier så att företagsanvändare kan visa information som är kopplad till produkt-SKU/kategori-ID.
 
@@ -84,7 +86,7 @@ Releasedatum för [!UICONTROL Cloud Manager] Version 2020.9.0 är 3 september 20
 
 Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Cloud Readiness Analyzer version 1.1.0.
 
-### Vad är nytt? {#what-is-new-cra}
+### Nyheter {#what-is-new-cra}
 
 * Cloud Readiness Analyzer (CRA) har en startstatuskonsol som visar en explicit **Generera rapport** för användaren att klicka för att köra CRA.
 
@@ -94,13 +96,13 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 ### Felkorrigeringar {#cra-bug-fixes}
 
-* I vissa fall uppdaterades inte CRA-rapporten efter en uppdatering. Detta har åtgärdats i den här versionen.
+* I vissa fall uppdaterades inte CRA-rapporten efter en uppdatering. Den här versionen har åtgärdats.
 
-## Content Transfer Tool {#content-transfer-tool}
+## Verktyget Innehållsöverföring {#content-transfer-tool}
 
 Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Content Transfer Tool Release v1.1.10.
 
-### Vad är nytt? {#what-is-new-ctt}
+### Nyheter {#what-is-new-ctt}
 
 * Innehållsöverföringsverktyget (CTT) stöder Azure Blob Store-datalagret.
 
@@ -110,11 +112,11 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * Beskrivande valideringsmeddelande har lagts till för *URL* och *Migreringsuppsättningsnamn*.
 
-## Verktyg för omstrukturering av kod {#code-refactoring}
+## Kodomfaktoriseringsverktyg {#code-refactoring}
 
 Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för verktygen för kodkorrigering.
 
-### Vad är nytt? {#what-is-new-refactoring}
+### Nyheter {#what-is-new-refactoring}
 
 * AIO-CLI-plugin-programmet har stöd för Repository Modernizer och gör att användare kan köra verktyget med plugin-programmet.
 
@@ -122,4 +124,4 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * Verktyget Databasmodernisering kan användas för att strukturera om befintliga projektpaket till paket som är kompatibla med den projektstruktur som har definierats för AEM as a Cloud Service.
 
-  Se [Git-resurs: Databasmodernisering](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer) för mer information.
+  Se [Git-resurs: Databasmoderering](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer) för mer information.

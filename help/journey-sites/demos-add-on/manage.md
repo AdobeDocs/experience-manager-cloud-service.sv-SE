@@ -2,7 +2,9 @@
 title: Hantera dina demowebbplatser
 description: Lär dig mer om de verktyg du kan använda för att hantera demowebbplatser och hur du tar bort dem.
 exl-id: 988c6e09-c43e-415f-8d61-998c294c5a11
-source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
+feature: Onboarding
+role: Admin, User, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 0%

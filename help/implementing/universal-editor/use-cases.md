@@ -1,13 +1,15 @@
 ---
 title: Användningsexempel och inlärningssökvägar i Universal Editor
 description: Lär dig mer om de viktigaste användningsexemplen i Universal Editor och hur du bäst lär dig mer om hur det används och hur du implementerar det i dina egna projekt.
-source-git-commit: 45418e5fd431980b48eda83811d5544154027d84
+exl-id: 398ad0e2-c299-4c49-9784-05c84c67bec2
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 0%
 
 ---
-
 
 # Användningsexempel och inlärningssökvägar i Universal Editor {#use-cases-learning-paths}
 

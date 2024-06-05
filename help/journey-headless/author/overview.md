@@ -2,10 +2,13 @@
 title: AEM Headless Content Author Trney
 description: Börja här för en guidad resa med de kraftfulla och flexibla headlessfunktionerna i AEM, deras funktioner och hur du skapar innehåll för ditt projekt.
 exl-id: fe124c6b-932a-44fc-a87b-12691aefea56
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+solution: Experience Manager
+feature: Headless
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '873'
-ht-degree: 1%
+source-wordcount: '860'
+ht-degree: 0%
 
 ---
 

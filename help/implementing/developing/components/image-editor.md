@@ -2,7 +2,9 @@
 title: Bildredigeraren
 description: Bildredigeraren är AEM och kan användas av komponenter för att underlätta redigering av bilder av innehållsförfattare.
 exl-id: c8ae4f59-75b1-49b4-8dd4-957d2e33000b
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 0%
@@ -19,7 +21,7 @@ Bildredigeraren behåller bildschemaområden som både absoluta och relativa enh
 
 ### imageMap, egenskap {#imagemap-property}
 
-Koordinaterna för bildschemat bevaras till JCR som en `imageMap` av bildredigeraren. Den har följande format.
+Koordinaterna för bildschemat bevaras till JCR som `imageMap` av bildredigeraren. Den har följande format.
 
 Egenskapen lagrar kartområden enligt följande:
 
@@ -42,7 +44,7 @@ Skalbar vektorgrafik (SVG) stöds av bildredigeraren.
 
 ## Aktivera plugin-program efter MIME-typ {#enabling-plugins-by-mime-type}
 
-I vissa situationer måste redigeringsåtgärderna begränsas för vissa MIME-typer, eftersom det inte finns stöd för bearbetning på serversidan. Det är till exempel inte tillåtet att redigera bilder i SVG.
+I vissa situationer måste redigeringsåtgärderna begränsas för vissa MIME-typer på grund av att det inte finns stöd för bearbetning på serversidan. Det är till exempel inte tillåtet att redigera bilder i SVG.
 
 Insticksprogram i bildredigeraren kan aktiveras selektivt av MIME-typ genom att en `supportedMimeTypes` på den enskilda plugin-programmets konfigurationsnod.
 

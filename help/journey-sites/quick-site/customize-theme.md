@@ -2,9 +2,12 @@
 title: Anpassa webbplatstemat
 description: Lär dig hur webbplatstemat byggs, hur du anpassar och hur du testar med AEM.
 exl-id: b561bee0-3a64-4dd3-acb8-996f0ca5bfab
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+solution: Experience Manager Sites
+feature: Developing
+role: Admin, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---

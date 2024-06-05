@@ -2,14 +2,16 @@
 title: Översikt över Best Practices Analyzer
 description: Lär dig hur du använder Best Practices Analyzer för att bedöma om AEM följer rekommenderade metoder
 exl-id: 46c567f8-91e2-4d85-98bd-61d183b887d5
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+feature: Migration
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 27%
 
 ---
 
-# Översikt {#overview-best-practices-analyzer}
+# Ökning {#overview-best-practices-analyzer}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_bpa_overview"

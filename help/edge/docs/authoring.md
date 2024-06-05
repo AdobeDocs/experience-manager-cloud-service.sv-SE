@@ -3,7 +3,8 @@ description: Om du använder Microsoft Word eller Google Docs vet du redan hur m
 title: Skapa och publicera innehåll
 feature: Edge Delivery Services
 exl-id: 3fd37d7d-e8ce-48c7-8c2d-a564b24e2f4f
-source-git-commit: 11f721b4a617c99e30329d7196f42d7b48067f1b
+role: User
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '24'
 ht-degree: 0%

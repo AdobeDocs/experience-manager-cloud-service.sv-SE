@@ -2,10 +2,12 @@
 title: Använda Sling Resource Merger i Adobe Experience Manager as a Cloud Service
 description: Med Sling Resource Merger får du tillgång till och kan sammanfoga resurser
 exl-id: 5b6e5cb5-4c6c-4246-ba67-6b9f752867f5
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '1157'
-ht-degree: 1%
+source-wordcount: '1158'
+ht-degree: 0%
 
 ---
 

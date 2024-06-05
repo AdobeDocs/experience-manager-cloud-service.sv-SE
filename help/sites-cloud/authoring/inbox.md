@@ -2,7 +2,10 @@
 title: Din inkorg
 description: Lär dig hur du använder meddelanden som kommer in i din Inkorg för att hantera dina uppgifter.
 exl-id: 37d0cf43-192f-4a50-b174-42d7dced3b63
-source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
+solution: Experience Manager Sites
+feature: Authoring
+role: User
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 13%

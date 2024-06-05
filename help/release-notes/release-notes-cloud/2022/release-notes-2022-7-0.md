@@ -2,9 +2,11 @@
 title: Versionsinformation för 2022.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: b339ab48-e836-4589-a573-9c50917b9280
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+feature: Release Information
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '935'
 ht-degree: 0%
 
 ---
@@ -116,7 +118,7 @@ Nu kan du konfigurera Adobe Experience Manager Assets till [begränsa vilken typ
 
 ## Adobe Learning Manager Connectors {#learn-manage}
 
-* Nya Adobe Learning Manager har kopplingar till Adobe Experience Manager Sites, Marketo Engage och Adobe Commerce. Mer information finns i: [Användarhandbok för Adobe Learning Manager](https://helpx.adobe.com/learning-manager/user-guide.html).
+* Nya Adobe Learning Manager har kontakter till Adobe Experience Manager Sites, Marketo Engage och Adobe Commerce. Mer information finns i: [Adobe Learning Manager Användarhandbok](https://helpx.adobe.com/learning-manager/user-guide.html).
 
 ## Cloud Manager {#cloud-manager}
 

@@ -2,7 +2,9 @@
 title: Indexering efter migrering av innehåll
 description: Lär dig hur migreringsprocessen indexerar det inkapslade Cloud Servicen i målinstansen.
 exl-id: a13d5df4-b351-410a-9336-1b34a8af21b6
-source-git-commit: 58195fcb10312c89042f555665d4c8b3642f82ba
+feature: Migration
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%

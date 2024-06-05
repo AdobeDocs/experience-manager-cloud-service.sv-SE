@@ -2,7 +2,9 @@
 title: Exempel på ContextHub Store-kandidater
 description: ContextHub innehåller flera exempel på arkivkandidater som du kan använda i dina lösningar
 exl-id: 9493d91e-0b23-4dc4-a014-d8d13687efad
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 1%

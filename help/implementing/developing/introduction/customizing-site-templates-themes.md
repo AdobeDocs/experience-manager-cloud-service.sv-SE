@@ -1,13 +1,13 @@
 ---
 title: Anpassa webbplatsmallar och teman
 description: Lär dig hur AEM webbplatsmallar kan användas för att fördefiniera webbplatsstrukturen och det ursprungliga innehållet och hur teman används för att definiera webbplatsformat så att du snabbt kan skapa webbplatser.
-feature: Administering
+feature: Administering, Developing
 role: Admin
 exl-id: dc20f26c-59f0-4244-9797-926f25ed4da3
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '285'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Lär dig hur AEM webbplatsmallar kan användas för att fördefiniera webbplatsstrukturen och det ursprungliga innehållet och hur teman används för att definiera webbplatsformat så att du snabbt kan skapa webbplatser.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 För att AEM snabbt ska kunna skapa webbplatser som är anpassade till företagets behov kan AEM skapa nya webbplatser med hjälp av webbplatsmallar och webbplatsteman.
 
@@ -24,7 +24,7 @@ För att AEM snabbt ska kunna skapa webbplatser som är anpassade till företage
 
 ## Ytterligare resurser {#additional-resources}
 
-För [webbplatsskapande](/help/sites-cloud/administering/site-creation/create-site.md) är vanligtvis AEM administratörens ansvar. Mer information om hur du anpassar webbplatsmallar och teman finns i administrationsdokumentationen.
+För [webbplatsgenerering](/help/sites-cloud/administering/site-creation/create-site.md) är vanligtvis AEM administratörens ansvar. Mer information om hur du anpassar webbplatsmallar och -teman finns i administrationsdokumentationen.
 
 * [Webbplatsmallar](/help/sites-cloud/administering/site-creation/site-templates.md) - Lär dig hur AEM webbplatsmallar kan användas för att fördefiniera webbplatsstrukturen och det ursprungliga innehållet så att du snabbt kan skapa nya webbplatser.
 * [Webbplatsteman](/help/sites-cloud/administering/site-creation/site-themes.md) - Lär dig hur AEM teman kan användas för att anpassa webbplatsens stil och design.

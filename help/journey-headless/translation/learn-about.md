@@ -2,9 +2,12 @@
 title: Lär dig mer om Headless-innehåll och översättning i AEM
 description: Lär dig headless-koncept, hur de AEM och teorin om AEM översättning.
 exl-id: 72bb6646-e573-4576-8d17-49787d8c8c7f
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+solution: Experience Manager
+feature: Headless
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---

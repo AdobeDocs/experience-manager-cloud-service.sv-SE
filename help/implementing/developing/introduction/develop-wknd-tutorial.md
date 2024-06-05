@@ -1,17 +1,19 @@
 ---
-title: Komma igång med utveckling i AEM Sites – WKND-självstudiekurs
+title: Getting Started Developing AEM Sites - WKND Tutorial
 description: Är du inte van vid att utveckla AEM? Behöver du en uppdatering av bästa praxis? Här börjar du! Målet med den här självstudiekursen är att lära en utvecklare som är ny att AEM hur man implementerar en webbplats i AEM med de senaste standarderna och teknikerna.
 exl-id: 3110e492-95bd-4571-a347-198aa8d9bbb3
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 7%
+source-wordcount: '202'
+ht-degree: 0%
 
 ---
 
-# Komma igång med utveckling i AEM Sites – WKND-självstudiekurs{#getting-started-developing-aem-sites-wknd-tutorial}
+# Getting Started Developing AEM Sites - WKND Tutorial{#getting-started-developing-aem-sites-wknd-tutorial}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Har du inte använt Adobe Experience Manager as a Cloud Service tidigare? Vill du ha en uppdatering av de senaste metoderna? Här börjar du!
 
@@ -23,7 +25,7 @@ Målet med den här självstudiekursen är att lära en utvecklare som är ny at
 
 [WKND Developer Tutorial finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) och vägleder dig genom att skapa ett AEM projekt med hjälp av den senaste tekniken och de bästa metoderna.
 
-## Viktiga begrepp {#core-concepts}
+## Kärnbegrepp {#core-concepts}
 
 I självstudiekursen används många kraftfulla funktioner i AEM. Webbplatsen implementeras med:
 

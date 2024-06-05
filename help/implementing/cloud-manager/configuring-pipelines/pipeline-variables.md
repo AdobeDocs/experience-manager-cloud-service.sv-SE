@@ -1,13 +1,16 @@
 ---
 title: Konfigurera pipeline-variabler
 description: Lär dig hur du kan använda pipeline-variabler i Cloud Manager för att hantera specifika konfigurationsvariabler för ditt bygge.
-source-git-commit: 7b98883d16893534387fa10665f5fa432d74470f
+exl-id: cfcef2e2-0590-457d-a0f9-6092a6d9e0e8
+solution: Experience Manager
+feature: Cloud Manager, Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera pipeline-variabler {#configuring-pipeline-variables}
 

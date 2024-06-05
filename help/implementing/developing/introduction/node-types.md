@@ -1,15 +1,17 @@
 ---
-title: AEM
+title: AEM nodtyper
 description: AEM baseras på Sling och använder en JCR-databas med nodtyper som erbjuds av båda, men AEM tillhandahåller också ett urval av sina egna nodtyper.
 exl-id: 82cc28ca-37e2-4ca3-b3e4-cc03bbc5bdf5
-source-git-commit: 08559417c8047c592f2db54321afe68836b75bd1
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '98'
 ht-degree: 0%
 
 ---
 
-# AEM {#aem-node-types}
+# AEM nodtyper {#aem-node-types}
 
 Eftersom AEM baseras på Sling och använder en JCR-databas är de nodtyper som erbjuds av båda dessa standarder tillgängliga för användning i AEM:
 

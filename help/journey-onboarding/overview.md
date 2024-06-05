@@ -3,7 +3,9 @@ title: Introduktion till as a Cloud Service onboarding-resa
 description: Börja här för en översikt över den guidade resan genom introduktionsprocessen till AEM as a Cloud Service.
 exl-id: 892577db-05dc-49ff-bb2c-203efdb89c8c
 recommendations: noDisplay
-source-git-commit: 98618765b405316b18110182c221ddd968c70e96
+feature: Onboarding
+role: Admin, User, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '1290'
 ht-degree: 2%

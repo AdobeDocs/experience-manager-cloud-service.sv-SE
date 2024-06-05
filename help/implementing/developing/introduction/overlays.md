@@ -2,14 +2,16 @@
 title: Övertäckningar för Adobe Experience Manager as a Cloud Service
 description: AEM as a Cloud Service använder principen om övertäckningar för att du ska kunna utöka och anpassa konsoler och andra funktioner
 exl-id: 24bdb1a9-6d77-43c7-a75e-28e6e0fd7608
-source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '404'
-ht-degree: 1%
+source-wordcount: '384'
+ht-degree: 0%
 
 ---
 
-# Överlagring i AEM as a Cloud Service {#overlays-in-aem}
+# Övertäckningar i AEM as a Cloud Service {#overlays-in-aem}
 
 Adobe Experience Manager as a Cloud Service använder principen för övertäckningar för att du ska kunna utöka och anpassa konsoler och andra funktioner (till exempel för att skapa sidor).
 
@@ -17,7 +19,7 @@ Adobe Experience Manager as a Cloud Service använder principen för övertäckn
 
 I en standardinstans finns de fördefinierade funktionerna under `/libs` och vi rekommenderar att du definierar övertäckningen (anpassningarna) under `/apps` förgrening (med [söksökväg](#search-paths) för att lösa resurserna).
 
-* Det beröringskänsliga användargränssnittet använder [Granit](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)-relaterade övertäckningar:
+* Användargränssnittet med pekfunktioner använder [Granit](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)-relaterade övertäckningar:
 
    * Metod
 
@@ -45,6 +47,6 @@ Alla ändringar du gör kan gå förlorade eftersom den här grenen kan ändras 
 
 ## Sökvägar {#search-paths}
 
-AEM använder en söksökväg för att hitta en resurs och söker först - som standard - efter `/apps` förgrening och sedan `/libs` förgrening. Den här funktionen innebär att överlägget `/apps` (och de anpassningar som definieras där) har prioritet.
+AEM använder en söksökväg för att hitta en resurs och söker först - som standard - efter `/apps` förgrening och sedan `/libs` gren. Den här funktionen innebär att överlägget `/apps` (och de anpassningar som definieras där) har prioritet.
 
 För övertäckningar är den levererade resursen en sammanställning av resurser och egenskaper som hämtats, beroende på sökvägar som definierats i OSGi-konfigurationen.

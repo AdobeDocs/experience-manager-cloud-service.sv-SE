@@ -2,7 +2,10 @@
 title: Upplevelsefragment
 description: Använd Experience Fragments i Adobe Experience Manager as a Cloud Service för att göra upplevelserna återanvändbara och flexibla.
 exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
-source-git-commit: 2fff51075dd1cd2c7e93f61c02615075ae0ffac2
+solution: Experience Manager Sites
+feature: Authoring
+role: User
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '2099'
 ht-degree: 2%
@@ -70,7 +73,7 @@ Experience Fragments ska användas:
 * Om du har en upplevelse med olika variationer eller renderingar.
    * Kanal- eller kontextspecifika varianter.
    * Upplevelser som är bra att gruppera, till exempel en kampanj med olika upplevelser i olika kanaler.
-* När ni använder Omnichannel Commerce.
+* När du använder Omnichannel Commerce.
    * Göra kontaktytor transaktionella.
 
 ## Organisera dina upplevelsefragment {#organizing-your-experience-fragments}

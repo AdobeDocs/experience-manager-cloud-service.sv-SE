@@ -2,9 +2,11 @@
 title: Versionsinformation om 2021.11.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2021.11.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 86f8ddd1-af51-4874-9111-0935b5a162c1
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+feature: Release Information
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
-source-wordcount: '1053'
+source-wordcount: '1058'
 ht-degree: 0%
 
 ---
@@ -61,15 +63,15 @@ Ta en titt på [Versionsöversikt december 2021](https://video.tv.adobe.com/v/33
 
 * **Forms Portal**: Du kan använda [Forms Portal](/help/forms/configure-forms-portal.md) för att lista dina publicerade adaptiva formulär på en AEM Sites-sida. Det hjälper en besökare att hitta alla tillgängliga formulär. Dessutom kan besökaren använda formulärportalen för att spara och komma åt utkast av ett adaptivt formulär och titta på PDF-versionen av ett skickat adaptivt formulär.
 
-## CIF-tillägg {#cloud-services-cif}
+## CIF {#cloud-services-cif}
 
 ### Nyheter {#what-is-new-cif}
 
-* Utökade myAccount-komponenter som baseras på Commerce:s utökningsbara Premiere-komponenter
+* Utökade myAccount-komponenter som baseras på Commerce utbyggbara Premiere-komponenter
 
 ![Utökade komponenter för myAccount](/help/assets/CIF/extended-myAccount-components.png)
 
-* Författare kan skapa ad hoc-Commerce Product Recommendations med hjälp av ytterligare rekommendationstyper
+* Författare kan skapa ad hoc-produkter för Commerce Recommendations med hjälp av ytterligare rekommendationstyper
 
 * Stöd för presentkort i AEM Storefront
 

@@ -2,14 +2,16 @@
 title: Översikt över innehållstransformeraren
 description: Lär dig hur du identifierar och åtgärdar innehållsrelaterade problem som rapporteras av BPA med hjälp av Content Transformer.
 exl-id: aa3397ff-3dd6-4c67-9064-cb9b19bf1c73
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+feature: Migration
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '383'
 ht-degree: 0%
 
 ---
 
-# Översikt {#overview-ct}
+# Ökning {#overview-ct}
 
 CT (Content Transformer) är ett verktyg som utvecklats av Adobe och som kan användas för att automatiskt upptäcka och åtgärda innehållsrelaterade problem som rapporterats av [Best Practices Analyzer (BPA)](/help/journey-migration/best-practices-analyzer/overview-best-practices-analyzer.md) innan du migrerar innehåll från den aktuella AEM-implementeringen (lokal eller Managed Services) till AEM as a Cloud Service.
 

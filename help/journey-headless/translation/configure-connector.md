@@ -2,7 +2,10 @@
 title: Konfigurera översättningsintegrering för Headless-innehåll
 description: Lär dig hur du ansluter AEM till en översättningstjänst.
 exl-id: c91b2701-7ede-4d0b-93dd-3636c6638be2
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+solution: Experience Manager
+feature: Headless
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '1216'
 ht-degree: 0%

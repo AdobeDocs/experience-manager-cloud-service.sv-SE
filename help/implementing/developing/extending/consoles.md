@@ -2,7 +2,9 @@
 title: Anpassa konsoler
 description: Lär dig mer om de olika alternativ som AEM har för att anpassa konsolerna i din redigeringsförekomst.
 exl-id: 832f9a86-07c4-4229-a0dc-8ad50a8195b0
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 0%

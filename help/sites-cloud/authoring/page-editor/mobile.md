@@ -2,7 +2,10 @@
 title: Skapa en sida för mobila enheter
 description: När du skapar för mobilen kan du växla mellan flera emulatorer för att se vad slutanvändaren ser
 exl-id: fabd4468-3304-402f-9522-342da3bbae94
-source-git-commit: a868bf4d4acf4fbae7ccaf55b03319ba0617f9a4
+solution: Experience Manager Sites
+feature: Authoring
+role: User
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%

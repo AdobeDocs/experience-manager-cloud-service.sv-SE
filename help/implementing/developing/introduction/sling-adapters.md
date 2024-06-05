@@ -1,15 +1,17 @@
 ---
-title: Använda Sling-adaptrar
+title: Använda delningsadaptrar
 description: Sling erbjuder ett adaptermönster för att enkelt översätta objekt som implementerar gränssnittet Adaptable
 exl-id: 8ffe3bbd-01fe-44c2-bf60-7a4d25a6ba2b
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '2213'
+source-wordcount: '1324'
 ht-degree: 0%
 
 ---
 
-# Använda Sling-adaptrar {#using-sling-adapters}
+# Använda delningsadaptrar {#using-sling-adapters}
 
 [Sling](https://sling.apache.org) erbjuder [Adaptermönster](https://sling.apache.org/documentation/the-sling-engine/adapters.html) att enkelt översätta objekt som implementerar [Adaptiv](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29) gränssnitt. Det här gränssnittet innehåller en allmän [customiTo()](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29) metod som översätter objektet till den klasstyp som skickas som argument.
 

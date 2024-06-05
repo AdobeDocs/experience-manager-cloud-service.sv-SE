@@ -2,7 +2,9 @@
 title: Versionsinformation om 2021.6.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2021.6.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 2c72973b-5a51-4744-bf88-50da0013ba31
-source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
+feature: Release Information
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '1430'
 ht-degree: 0%
@@ -168,9 +170,9 @@ Releasedatum för AEM Screens as a Cloud Service är 24 juni 2021.
 ### Nyheter {#what-is-new-cif}
 
 * Nya CIF för produkt- och kategorireferensdatatyper för innehållsfragment (Inkl. användargränssnitt för produkt-/kategoriväljare)
-* Ny kärnkomponent för Commerce Content Fragment
+* Ny kärnkomponent i Commerce Content Fragment
 * Heltextbaserad e-handelssökning stöds i AEM
-* Commerce Core Components stöder datainsamling i Adobe Commerce Sensei Recs
+* Commerce Core Components har stöd för Adobe Commerce Sensei Recs datainsamling
 * Förbättrade SEO-vänliga URL:er för kategorisidor
 * Stöd för anpassade HTTP-huvuden per plats/konfiguration
 

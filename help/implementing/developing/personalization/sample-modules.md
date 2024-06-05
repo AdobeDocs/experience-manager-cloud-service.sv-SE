@@ -2,9 +2,11 @@
 title: Exempeltyper för ContextHub-gränssnittsmodul
 description: ContextHub innehåller flera exempelmoduler för användargränssnitt som du kan använda i dina lösningar
 exl-id: 31ff4444-8d96-4817-9676-ea5ad36dcda5
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1114'
 ht-degree: 0%
 
 ---

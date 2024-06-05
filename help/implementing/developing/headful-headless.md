@@ -2,9 +2,11 @@
 title: Headless and Headless in AEM
 description: AEM kan implementeras i en headful och headless-modell, men valet är inte binärt. AEM erbjuder flexibiliteten att utnyttja fördelarna med båda modellerna i ett och samma projekt.
 exl-id: 709850ca-7757-47ab-9625-f411121cde2c
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1024'
 ht-degree: 0%
 
 ---
@@ -13,7 +15,7 @@ ht-degree: 0%
 
 Adobe Experience Manager-projekt kan implementeras i både headful och headless-modeller, men valet är inte binärt. AEM erbjuder flexibiliteten att utnyttja fördelarna med båda modellerna i ett och samma projekt. Det här dokumentet innehåller en översikt över de olika modellerna och beskriver SPA integrationsnivåer.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 AEM har kraftfulla verktyg för att hantera både framtagning av innehåll och distribution av det på en och samma plattform. Detta är en traditionell&quot;headful&quot; modell för innehållshantering, där innehållsförfattare och utvecklare arbetar på samma plattform för att leverera upplevelserna till innehållskunderna.
 

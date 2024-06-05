@@ -4,7 +4,9 @@ description: Viktigt att tänka på för verktyget för användarmappning (äldr
 exl-id: 0d39a5be-93e1-4b00-ac92-c2593c02b740
 hide: true
 hidefromtoc: true
-source-git-commit: 7260649eaab303ba5bab55ccbe02395dc8159949
+feature: Migration
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '593'
 ht-degree: 0%
@@ -21,7 +23,7 @@ ht-degree: 0%
 
 Följande specialfall loggas:
 
-1. Om en användare inte har någon e-postadress i `profile/email` fält *jcr* -noden migreras användaren eller gruppen i fråga men mappas inte. Detta gäller även om e-postadressen används som användarnamn för inloggning.
+1. Om en användare inte har någon e-postadress `profile/email` fält för *jcr* -noden migreras användaren eller gruppen i fråga men mappas inte. Detta gäller även om e-postadressen används som användarnamn för inloggning.
 
 1. Om det inte går att hitta något e-postmeddelande i IMS-systemet (Adobe Identity Management System) för det organisations-ID som används (eller, om IMS-ID:t inte kan hämtas), migreras användaren eller gruppen men inte mappas.
 

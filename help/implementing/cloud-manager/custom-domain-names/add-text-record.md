@@ -2,10 +2,13 @@
 title: Lägga till en TXT-post
 description: Lär dig hur du lägger till en TXT-post för att lägga till ett eget domännamn i Cloud Manager.
 exl-id: d441de29-af41-4d3e-9155-531af9702841
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+solution: Experience Manager
+feature: Cloud Manager, Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 1%
+source-wordcount: '323'
+ht-degree: 0%
 
 ---
 

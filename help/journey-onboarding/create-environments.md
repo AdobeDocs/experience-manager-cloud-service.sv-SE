@@ -3,9 +3,10 @@ title: Skapa miljöer
 description: Lär dig hur du använder Cloud Manager för att skapa dina första miljöer.
 role: Admin, User, Developer
 exl-id: 31940e1e-fe27-4c5f-b67f-41affebea63a
-source-git-commit: 98eff568686c72c626d2bf77d82e8c3f224eda42
+feature: Onboarding
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '725'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ Efter att ha läst det föregående dokumentet under den här introduktionsresan
 När du har läst det här dokumentet kommer du att:
 
 * Förstå vad en miljö är.
-* Se skillnaden mellan de olika miljöerna.
+* Se skillnaden mellan olika miljöer.
 * Skapa en egen miljö.
 
 ## Vad är en miljö? {#environments}
@@ -32,7 +33,7 @@ Om du kommer ihåg exemplet med de teoretiska WKND Travel and Adventure Enterpri
 
 Det finns fyra olika typer av miljöer:
 
-* **Produktion och fas** - Produktions- och testmiljöer finns som par och används för produktions- respektive testningsändamål.
+* **Produktion och scen** - Produktions- och stagningsmiljöerna finns som par och används för produktions- respektive testningsändamål.
 * **Utveckling** - En utvecklingsmiljö kan skapas för utvecklings- och testningsändamål och kan endast kopplas till icke-produktionsrörledningar.
 * **Snabb utveckling** - Med en snabb utvecklingsmiljö (RDE) kan utvecklare snabbt driftsätta och granska ändringar och minimera tiden för att testa funktioner som är beprövade i en lokal utvecklingsmiljö.
 
@@ -44,13 +45,13 @@ För att komma igång med en minimal introduktionsresa skapar du en utvecklingsm
 
 1. Välj det program som du vill lägga till en miljö för.
 
-1. Om du vill lägga till en miljö går du till **Programöversikt** sida, på **Miljö** kort, välj **Lägg till miljö**.
+1. Om du vill lägga till en miljö från **Programöversikt** sida, på **Miljö** kort, välj **Lägg till miljö**.
 
    ![Miljökort](/help/implementing/cloud-manager/assets/no-environments.png)
 
    * The **Lägg till miljö** finns även på **Miljö** -fliken.
 
-      ![Fliken Miljö](/help/implementing/cloud-manager/assets/environments-tab.png)
+     ![Fliken Miljö](/help/implementing/cloud-manager/assets/environments-tab.png)
 
    * The **Lägg till miljö** kan vara inaktiverat på grund av bristande behörighet eller beroende på vilka licensierade resurser som används.
 
@@ -73,7 +74,7 @@ När miljön är tillgänglig tilldelas medlemmar i organisationen **Utvecklare*
 Nu när du har läst den här delen av introduktionsresan bör du:
 
 * Förstå vad en miljö är.
-* Se skillnaden mellan de olika miljöerna.
+* Se skillnaden mellan olika miljöer.
 * Skapa en egen miljö.
 
 Dina molnresurser har skapats och är tillgängliga för ditt team. Som systemadministratör måste du först tilldela teammedlemmar till produktprofiler på AEM as a Cloud Service från Adobe Admin Console så att de kan komma åt dessa resurser.
@@ -87,6 +88,5 @@ Här följer ytterligare, valfria resurser om du vill gå längre än vad som in
 * [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md) - Lär dig mer om vilka typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt
 * [Använda Adobe Cloud Manager - miljöer](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html) - Cloud Manager-miljöer består av AEM för att skapa, publicera och skicka. Lär dig hur olika miljöer stöder roller och kan användas med olika CI/CD-pipeline.
 * [Snabba utvecklingsmiljöer](/help/implementing/developing/introduction/rapid-development-environments.md) - Läs den här dokumentationen för mer information om hur du använder en RDE
-
 <!-- ERROR: Not Found (HTTP error 404) * [AEM Champion Tips and Tricks - Cloud Manager Environment Types](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/aem-champions/environment-types.md) - Watch this video for an overview of Cloud Manager environment types from an AEM champion. -->
 

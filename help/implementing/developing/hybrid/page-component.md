@@ -1,21 +1,23 @@
 ---
-title: SPA
+title: SPA sidkomponent
 description: I en SPA tillhandahåller inte sidkomponenten elementen HTML i de underordnade komponenterna, utan delegerar i stället detta till det SPA ramverket. Det här dokumentet förklarar hur det gör sidkomponenten i ett SPA unik.
 exl-id: 41b56a60-ebb8-499d-a0ab-a2e920f26227
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '602'
 ht-degree: 0%
 
 ---
 
-# SPA {#spa-page-component}
+# SPA sidkomponent {#spa-page-component}
 
-Sidkomponenten för en SPA tillhandahåller inte elementen HTML i dess underordnade komponenter via en JSP- eller HTML-fil och resursobjekt. Den här åtgärden har delegerats till SPA ramverk. Representationen av underordnade komponenter hämtas som en JSON-datastruktur (d.v.s. modellen). De SPA komponenterna läggs sedan till på sidan enligt den angivna JSON-modellen. Det innebär att sidkomponentens ursprungliga brödkomposition skiljer sig från de förrenderade motsvarigheterna i HTML.
+Sidkomponenten för en SPA tillhandahåller inte HTML-elementen för dess underordnade komponenter via en JSP- eller HTL-fil och resursobjekt. Den här åtgärden har delegerats till SPA ramverk. Representationen av underordnade komponenter hämtas som en JSON-datastruktur (d.v.s. modellen). De SPA komponenterna läggs sedan till på sidan enligt den angivna JSON-modellen. Det innebär att sidkomponentens ursprungliga brödkomposition skiljer sig från de förrenderade motsvarigheterna i HTML.
 
 ## Sidmodellshantering {#page-model-management}
 
-Lösning och hantering av sidmodellen delegeras till en angiven [`PageModelManager`](blueprint.md#pagemodelmanager) -modul. SPA måste interagera med `PageModelManager` när det initieras för att hämta den första sidmodellen och registrera sig för modelluppdateringar - oftast när författaren redigerar sidan via sidredigeraren. The `PageModelManager` kan nås av SPA som ett npm-paket. Som tolk mellan AEM och SPA `PageModelManager` är avsedd att medfölja SPA.
+Lösning och hantering av sidmodellen delegeras till en angiven [`PageModelManager`](blueprint.md#pagemodelmanager) -modul. SPA måste interagera med `PageModelManager` när det initieras för att hämta den första sidmodellen och registrera sig för modelluppdateringar - oftast när författaren redigerar sidan via sidredigeraren. The `PageModelManager` kan nås av SPA som ett npm-paket. Som tolk mellan AEM och SPA, `PageModelManager` är avsedd att medfölja SPA.
 
 Om du vill tillåta att sidan kan redigeras, ett klientbibliotek med namnet `cq.authoring.pagemodel.messaging` måste läggas till för att en kommunikationskanal ska kunna skapas mellan SPA och sidredigeraren. Om den SPA sidkomponenten ärver från sidans wcm/core-komponent finns det följande alternativ för att skapa `cq.authoring.pagemodel.messaging` tillgänglig klientbibliotekskategori:
 
@@ -65,10 +67,10 @@ Meta-resursegenskaperna som beskriver SPA innehåll:
 
 ## Metaegenskaper {#meta-properties}
 
-* `cq:wcmmode`: Redigerarnas WCM-läge (till exempel sida, mall)
+* `cq:wcmmode`: WCM-läge för redigerare (till exempel sida, mall)
 * `cq:pagemodel_root_url`: URL för appens rotmodell. Viktigt vid direkt åtkomst till en underordnad sida eftersom den underordnade sidmodellen är ett fragment av appens rotmodell. The `PageModelManager` disponerar sedan systematiskt om den inledande programmodellen när den anger programmet från dess rotstartpunkt.
 * `cq:pagemodel_router`: Aktivera eller inaktivera [`ModelRouter`](routing.md) i `PageModelManager` bibliotek
-* `cq:pagemodel_route_filters`: Kommaseparerad lista eller reguljära uttryck som tillhandahåller vägar i [`ModelRouter`](routing.md) måste ignorera.
+* `cq:pagemodel_route_filters`: Kommaseparerad lista eller reguljära uttryck som tillhandahåller vägar för [`ModelRouter`](routing.md) måste ignorera.
 
 ## Synkronisering av sidredigeringsövertäckning {#page-editor-overlay-synchronization}
 
@@ -79,4 +81,4 @@ Synkroniseringen av övertäckningarna garanteras av samma Mutation-server som t
 När routningsfunktionerna är aktiverade antas att JSON-exporten av SPA innehåller olika vägar för programmet tack vare JSON-exporten av den AEM navigeringskomponenten. JSON-utdata för den AEM navigeringskomponenten kan konfigureras i innehållsprincipen för SPA genom följande två egenskaper:
 
 * `structureDepth`: Nummer som motsvarar djupet i det exporterade trädet
-* `structurePatterns`: Regex för en matris med regexter som motsvarar den sida som ska exporteras
+* `structurePatterns`: Regex för en matris av regexter som motsvarar den sida som ska exporteras

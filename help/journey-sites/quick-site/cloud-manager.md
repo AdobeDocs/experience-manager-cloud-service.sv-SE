@@ -2,9 +2,12 @@
 title: Förstå Cloud Manager och arbetsflödet för att skapa snabbwebbplatser
 description: Lär dig mer om Cloud Manager och hur det knyter ihop den nya processen för att skapa snabbwebbplatser.
 exl-id: 5d264078-e552-48ca-8d82-294a646e6b1f
-source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
+solution: Experience Manager Sites
+feature: Developing
+role: Admin, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1113'
 ht-degree: 0%
 
 ---

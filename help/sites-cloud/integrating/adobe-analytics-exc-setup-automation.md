@@ -1,10 +1,11 @@
 ---
 title: Integrera Adobe Analytics med Experience Cloud Setup Automation
 description: Experience Cloud Setup Automation är ett enkelt och automatiserat sätt att integrera och instrumentera Experience Manager Sites med Experience Platform Tags och Adobe Analytics med ett enkelt gränssnitt. Lär dig hur du använder den automatiska konfigurationen med din egen webbplats.
-feature: Administering
+feature: Integration
 role: Admin
 exl-id: 351ead2c-7b0d-4bd9-a020-47516948d467
-source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
+solution: Experience Manager Sites
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '719'
 ht-degree: 0%

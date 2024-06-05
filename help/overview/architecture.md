@@ -2,7 +2,9 @@
 title: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service
 description: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service.
 exl-id: 3fe856b7-a0fc-48fd-9c03-d64c31a51c5d
-source-git-commit: d91254b52c257a3758da200a2c74b736ca457884
+feature: Release Information
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '2713'
 ht-degree: 7%
@@ -35,7 +37,7 @@ Som kund identifieras du vanligtvis av Adobe som **tenant**, som också kallas *
 >
 >AEM Edge Delivery Services exponeras som en toppnivålösning i Cloud Manager, och är en del av de andra huvudlösningarna ur licenssynpunkt. Exempel: AEM Sites med Edge Delivery Services.
 
-Ett program kan konfigureras med valfri kombination av högnivålösningar och varje lösning kan stödja från ett-till-många-tillägg. Exempel: Commerce eller Screens för AEM Sites, Dynamic Media eller Brand Portal för AEM Assets.
+Ett program kan konfigureras med valfri kombination av högnivålösningar och varje lösning kan stödja från ett-till-många-tillägg. Exempel: Commerce eller Skärmar för AEM Sites, Dynamic Media eller Brand Portal för AEM Assets.
 
 ![AEM as a Cloud Service - Program](assets/architecture-aem-edge-programs.png "AEM as a Cloud Service - driftsättningsarkitektur")
 

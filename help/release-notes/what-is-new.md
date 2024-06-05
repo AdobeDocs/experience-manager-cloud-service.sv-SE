@@ -2,10 +2,12 @@
 title: Vad är nytt?
 description: Nyheter i Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: f854aaf8-e84d-4904-832f-f72433590920
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+feature: Release Information
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 15%
+ht-degree: 0%
 
 ---
 
@@ -26,6 +28,6 @@ En översikt över resurser finns i [Introduktion till Assets as a Cloud Service
 
 Om du känner till tidigare versioner av AEM kan du läsa följande för att få en översikt över de betydande ändringarna i AEM as a Cloud Service:
 
-* [Viktiga ändringar i AEM as a Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
-* [Viktiga ändringar i AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
-* [Viktiga ändringar i AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
+* [Betydande ändringar i AEM as a Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
+* [Betydande förändringar av AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
+* [Betydande förändringar av AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)

@@ -2,7 +2,9 @@
 title: Versionsinformation om 2021.10.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2021.10.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: ab584923-5f06-4b54-941b-e00bc1158b81
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+feature: Release Information
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '1436'
 ht-degree: 0%
@@ -83,7 +85,7 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betapr
 
 * Befintlig snabbkundvagn och utcheckning har ersatts med dedikerade AEM- och utcheckningssidor. Komponenterna på dessa sidor byggs med Adobe Commerce utökningsbara Premiere-komponenter
 
-* Handlare kan dölja vissa produktkatalogkategorier i navigeringen med Commerce-serverdelen. Den CIF kärnkomponenten för navigering respekterar e-handelsserverdelens konfiguration &quot;include in menu&quot; för att visa/dölja kategorier i navigering
+* Marknadsförare kan dölja vissa produktkatalogkategorier i navigeringen med hjälp av Commerce serverdel. Den CIF kärnkomponenten för navigering respekterar e-handelsserverdelens konfiguration &quot;include in menu&quot; för att visa/dölja kategorier i navigering
 
 * AEM Storefront Venia returnerar HTTP 404-fel om kategori eller produktsida inte hittas
 

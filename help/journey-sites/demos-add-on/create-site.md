@@ -2,7 +2,9 @@
 title: Skapa demowebbplats
 description: Skapa en demowebbplats i AEM baserat på ett bibliotek med förkonfigurerade mallar.
 exl-id: e76fd283-12b2-4139-9e71-2e145b9620b1
-source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
+feature: Onboarding
+role: Admin, User, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '809'
 ht-degree: 0%

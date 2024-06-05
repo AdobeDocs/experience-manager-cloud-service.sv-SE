@@ -2,7 +2,9 @@
 title: Verktyget Innehållskopia
 description: Med innehållskopieringsverktyget kan man kopiera muterbart innehåll on demand från produktionsmiljön i AEM as a Cloud Service till lägre miljöer i testsyfte.
 exl-id: 5883e4bc-9861-498e-bd35-32ff03d901cc
-source-git-commit: a0f80a363cb47be9e3d8f7fa96ea3068eb077d42
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 0%

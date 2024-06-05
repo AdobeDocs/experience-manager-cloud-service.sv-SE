@@ -2,7 +2,9 @@
 title: Skapa block som är instrumenterade för användning med den universella redigeraren
 description: Lär dig hur du skapar block som är instrumenterade för användning med den universella redigeraren AEM redigering med Edge Delivery Services.
 exl-id: 65a5600a-8d16-4943-b3cd-fe2eee1b4abf
-source-git-commit: 11f721b4a617c99e30329d7196f42d7b48067f1b
+feature: Edge Delivery Services
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '1297'
 ht-degree: 0%

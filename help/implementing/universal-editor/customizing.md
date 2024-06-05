@@ -2,7 +2,9 @@
 title: Anpassa och utöka den universella redigeraren
 description: Lär dig mer om de olika tilläggspunkterna och andra funktioner som gör att du kan anpassa gränssnittet i den universella redigeraren så att det passar de behov som finns hos de som skapar innehållet.
 exl-id: 8d6523c8-b266-4341-b301-316d5ec224d7
-source-git-commit: bdd67fb383bf20399eacaf9b9c086ea8468ea742
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%

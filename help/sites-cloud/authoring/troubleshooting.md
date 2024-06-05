@@ -2,7 +2,10 @@
 title: Felsöka AEM vid redigering
 description: Vissa problem som kan uppstå när du använder AEM
 exl-id: b9c0584d-255e-486d-b829-09e07499ecd2
-source-git-commit: 89f23a590338561b4cfeb10b54a260a135ec2f08
+solution: Experience Manager Sites
+feature: Authoring
+role: User
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%

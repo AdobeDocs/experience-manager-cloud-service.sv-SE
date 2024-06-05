@@ -1,13 +1,16 @@
 ---
 title: Sidredigeraren, sidopanel
 description: Lär dig hur du använder sidopanelen i AEM webbplatsredigeraren för att lägga till komponenter och resurser på sidan.
-source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
+exl-id: 5f025828-f2ca-4cbb-9cdf-a199e9e90cc7
+solution: Experience Manager Sites
+feature: Authoring
+role: User
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '1122'
 ht-degree: 0%
 
 ---
-
 
 # Sidredigeraren, sidopanel {#side-panel}
 

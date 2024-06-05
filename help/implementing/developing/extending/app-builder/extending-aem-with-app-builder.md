@@ -2,9 +2,11 @@
 title: Utöka [!DNL Adobe Experience Manager] as a Cloud Service med Adobe Developer App Builder.
 description: Utöka [!DNL Adobe Experience Manager] as a Cloud Service med Adobe Developer App Builder.
 exl-id: 50d82745-5deb-4bfa-961b-714842403601
-source-git-commit: 7260649eaab303ba5bab55ccbe02395dc8159949
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
@@ -15,7 +17,7 @@ ht-degree: 0%
 
 Nya Adobe Developer App Builder är ett utbyggbart ramverk för utvecklare som enkelt kan utöka funktioner på AEM as a Cloud Service.
 
-App Builder erbjuder ett enhetligt ramverk för utbyggbarhet från tredje part för att integrera och skapa anpassade upplevelser som utökar Adobe Experience Manager. Med detta kompletta ramverk för utbyggbarhet, som bygger på Adobe infrastruktur, kan utvecklare skapa anpassade mikrotjänster, utöka och integrera Adobe Experience Manager över Adobe-lösningar och hela IT-stacken.
+App Builder erbjuder ett enhetligt ramverk för utbyggbarhet från tredje part för att integrera och skapa anpassade upplevelser som utökar Adobe Experience Manager. Med detta kompletta ramverk för utbyggbarhet, som bygger på Adobe infrastruktur, kan utvecklare skapa anpassade mikrotjänster, utöka och integrera Adobe Experience Manager över Adobe och hela IT-stacken.
 
 Med App Builder kan kunderna enkelt utöka Adobe Experience Manager i olika fall:
 
@@ -23,7 +25,7 @@ Med App Builder kan kunderna enkelt utöka Adobe Experience Manager i olika fall
 * Utbyggbarhet för bastjänster - Utöka de centrala programfunktionerna genom att utöka standardbeteendet med anpassade funktioner och affärslogik.
 * Utbyggbarhet för användarupplevelse - Utöka kärnupplevelsen för att uppfylla verksamhetskrav eller bygga kundspecifika digitala resurser, butiker och back-office-appar.
 
-App Builder har varit tillgängligt för företagskunder och partners via Adobe Developer Preview sedan sommaren 2020. Den allmänna tillgängligheten (GA) för App Builder är planerad till december 2021. Adobe välkomnar utvecklare att testa App Builder via [testprogram](https://developer.adobe.com/app-builder/trial/).
+App Builder har varit tillgängligt för företagskunder och partners via Adobe Developer Preview sedan sommaren 2020. Den allmänna tillgängligheten (GA) för App Builder planeras till december 2021. Adobe välkomnar att utvecklare kan testa App Builder via [testprogram](https://developer.adobe.com/app-builder/trial/).
 
 >[!NOTE]
 >

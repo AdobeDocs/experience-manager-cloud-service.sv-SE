@@ -1,13 +1,15 @@
 ---
 title: Konfigurera IMS-integreringar för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar IMS-integreringar för AEM as a Cloud Service
-source-git-commit: 6945980cac24d4413a84343b035a8380b04e7444
+exl-id: 72fb1ea1-355c-4faa-a733-77bc7de75ed5
+feature: Security
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 1%
 
 ---
-
 
 # Konfigurera IMS-integreringar för AEM as a Cloud Service {#setting-up-ims-integrations-for-aemaacs}
 

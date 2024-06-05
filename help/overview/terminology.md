@@ -2,14 +2,16 @@
 title: Introduktion till Adobe Experience Manager as a Cloud Service – terminologi
 description: Introduktion till Adobe Experience Manager as a Cloud Service – terminologi.
 exl-id: a76f68f1-4f84-4844-a099-0952707cd96d
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+feature: Release Information
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '364'
-ht-degree: 86%
+ht-degree: 82%
 
 ---
 
-# Adobe Experience Manager as a Cloud Service – terminologi {#adobe-experience-manager-as-a-cloud-service-terminology}
+# Adobe Experience Manager as a Cloud Service - Terminologi {#adobe-experience-manager-as-a-cloud-service-terminology}
 
 Följande termer används i samband med Adobe Experience Manager (AEM) as a Cloud Service:
 
@@ -21,7 +23,7 @@ Följande termer används i samband med Adobe Experience Manager (AEM) as a Clou
 | AEM Assets as a Cloud Service | DAM-funktioner (Digital Asset Management) som molnbaserad, skalbar lösning för import, bearbetning och hantering av digitala resurser, samtidigt som de integreras med det bredare ekosystemet i Adobe Experience Cloud och Adobe Creative Cloud. |
 | AEM Sites as a Cloud Service | En instans av AEM as a Cloud Service med programmet AEM Sites. |
 
-## Instanser och pipelines {#instances-and-pipelines}
+## Instanser och rörledningar {#instances-and-pipelines}
 
 | Instans | Beskrivning |
 |---|---|

@@ -2,7 +2,9 @@
 title: AEM as a Cloud Service team- och produktprofiler
 description: Lär dig hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomst till era licensierade Adobe-lösningar.
 exl-id: 7b1474c9-aca0-4354-8798-1abdcda2f6dd
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+feature: Onboarding
+role: Admin, User, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '847'
 ht-degree: 0%
@@ -55,16 +57,16 @@ Cloud Manager har förkonfigurerade produktprofiler som kan ses som rollbaserade
 
 Var och en av produktprofilerna har särskilda behörigheter kopplade till sig.
 
-* **Business Owner**
+* **Företagsägare**
    * I den här rollen har du behörighet att lägga till ett nytt program eller redigera ett program, lägga till eller uppdatera en miljö, distribuera kod AEM miljön eller utföra kodkvalitetskontroller.
    * Den här användaren ansvarar för att definiera KPI:er, godkänna produktionsdistributioner och åsidosätta viktiga 3-nivåfel vid behov.
-* **Deployment Manager**
+* **Distributionshanteraren**
    * I den här rollen har du behörighet att lägga till eller uppdatera en miljö, köra valfri pipeline och distribuera kod till AEM eller utföra kodkvalitetskontroller.
    * Den här användaren hanterar distributionsåtgärder och använder Cloud Manager för att utföra mellanlagrings-/produktionsdistributioner, redigera CI/CD-pipelines, godkänna viktiga 3-skiktsfel vid behov och har åtkomst till Git-databasen.
-* **Developer**
+* **Utvecklare**
    * I den här rollen har du behörighet att skapa personliga åtkomsttoken för åtkomst till Git.
    * Den här användaren utvecklar och testar anpassad programkod och använder i första hand Cloud Manager för att visa distributionsstatus och få åtkomst till Git-databasen för kodimplementeringar.
-* **Program Manager**
+* **Programhanteraren**
    * I den här rollen har du behörighet att schemalägga pipelines, åsidosätta de tre skiktens kvalitetsgates och tillhandahålla produktionsgodkännande.
    * Den här användaren använder Cloud Manager för att utföra teamkonfiguration, granska status, visa KPI:er och kan godkänna viktiga 3-nivåfel när det behövs.
 

@@ -3,7 +3,9 @@ title: Genererar åtkomsttoken för serversides-API:er (äldre)
 description: Lär dig att underlätta kommunikationen mellan en tredjepartsserver och AEM as a Cloud Service genom att generera en säker JWT-token
 hidefromtoc: true
 exl-id: 6561870c-cbfe-40ef-9efc-ea75c88c4ed7
-source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '1359'
 ht-degree: 0%
@@ -123,7 +125,7 @@ Se [Dokumentation till Developer Guidelines](/help/implementing/developing/intro
 
 >[!NOTE]
 >
-Åtkomsttoken för lokal utveckling är giltig i högst 24 timmar. Därefter måste den genereras om med samma metod.
+>Åtkomsttoken för lokal utveckling är giltig i högst 24 timmar. Därefter måste den genereras om med samma metod.
 
 Utvecklare kan använda denna token för att ringa anrop från andra testprogram än AEM till en AEM as a Cloud Service miljö. I vanliga fall använder utvecklaren denna token tillsammans med programmet som inte är AEM på sin egen bärbara dator. AEM som moln är vanligtvis en icke-produktionsmiljö.
 
@@ -152,7 +154,7 @@ När du har tryckt på knappen genereras en ny uppsättning med autentiseringsup
 
 >[!NOTE]
 >
-När du klickat på **Uppdatera autentiseringsuppgifter för tjänsten** de gamla inloggningsuppgifterna är fortfarande registrerade tills de upphör att gälla, men endast den senaste uppsättningen är tillgänglig att se från Developer Console vid ett och samma tillfälle.
+> När du klickat på **Uppdatera autentiseringsuppgifter för tjänsten** de gamla inloggningsuppgifterna är fortfarande registrerade tills de upphör att gälla, men endast den senaste uppsättningen är tillgänglig att se från Developer Console vid ett och samma tillfälle.
 
 ## Återkallande av tjänstautentiseringsuppgifter {#service-credentials-revocation}
 

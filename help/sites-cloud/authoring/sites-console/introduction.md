@@ -1,13 +1,16 @@
 ---
 title: Webbplatskonsolen
 description: Lär dig hur du använder webbplatskonsolen för att hantera och ordna dina AEM sidor.
-source-git-commit: 91ce6a0c880436327f4dd333a2eb3d36a4e89a4d
+exl-id: b666e62a-c3dc-4be3-8932-d5fe67b178d6
+solution: Experience Manager Sites
+feature: Authoring
+role: User
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '1628'
 ht-degree: 3%
 
 ---
-
 
 # Webbplatskonsolen {#sites-console}
 

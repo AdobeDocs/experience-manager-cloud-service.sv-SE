@@ -2,18 +2,20 @@
 title: Översikt över Content Transfer Tool
 description: Lär dig hur du använder verktyget Innehållsöverföring för att överföra innehåll från en lokal AEM till AEM as a Cloud Service
 exl-id: cfc0366a-2139-4d9d-b5bc-0b65bef4013c
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+feature: Migration
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
-source-wordcount: '662'
-ht-degree: 31%
+source-wordcount: '655'
+ht-degree: 28%
 
 ---
 
-# Översikt {#overview-content-transfer-tool}
+# Ökning {#overview-content-transfer-tool}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_overview"
->title="Översikt"
+>title="Ökning"
 >abstract="Verktyget Innehållsöverföring är ett verktyg som utvecklats av Adobe och som kan användas för att initiera migreringen av befintligt innehåll från en AEM (lokalt eller AMS) till AEM Cloud Service-målinstansen. Med det här verktyget överförs även huvudkonton (användare eller grupper) automatiskt."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html" text="Riktlinjer och bästa praxis"
 

@@ -1,13 +1,15 @@
 ---
 title: Bästa praxis för användarmappning av delningstjänst och användardefinition av tjänst
 description: Läs mer om de bästa sätten att sälja användarmappning för tjänster och användardefinition för tjänster
-source-git-commit: b6f7b6996b377ecfa372742ce1ad22139547ebdd
+exl-id: 72f0dcbf-b4e6-4a73-8232-3574a212ac19
+feature: Security
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '1884'
 ht-degree: 0%
 
 ---
-
 
 # Bästa praxis för användarmappning av delningstjänst och användardefinition av tjänst {#best-practices-for-sling-service-user-mapping-and-service-user-definition}
 
@@ -274,8 +276,3 @@ delete service my-feature-service
 Det är viktigt att skriva tester på serversidan för tjänstanvändare och deras behörighetsinställningar. Detta verifierar inte bara att konfigurationen fungerar, utan hjälper dig även att upptäcka regressioner och oavsiktliga misstag när du ändrar innehåll för åtkomstkontroll eller tjänstanvändare.
 
 The `com.adobe.granite.testing.clients` biblioteket innehåller många verktyg som gör det enkelt att skriva SST-filer för tjänstanvändare.
-
-
-
-
-

@@ -2,9 +2,11 @@
 title: Versionsinformation om Adobe Experience Manager as a Cloud Service 2020.6.0
 description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.6.0."
 exl-id: fd6ebe2b-6d98-498c-a45d-b9a9c34e6be7
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+feature: Release Information
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
-source-wordcount: '1908'
+source-wordcount: '1915'
 ht-degree: 0%
 
 ---

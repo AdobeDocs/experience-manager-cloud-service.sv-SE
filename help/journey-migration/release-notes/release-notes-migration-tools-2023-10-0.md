@@ -2,10 +2,12 @@
 title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.10.0
 description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.10.0
 feature: Release Information
-source-git-commit: 219eb2544dbac8ac5104be4ef8eb1bae996d95f0
+exl-id: e5250b5b-a56c-4bf0-8510-2334a12e36b6
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 3%
+source-wordcount: '143'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +15,7 @@ ht-degree: 3%
 
 Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2023.10.0.
 
-## Content Transfer Tool {#ctt-release}
+## Verktyget Innehållsöverföring {#ctt-release}
 
 ### Releasedatum {#release-date-ctt}
 

@@ -2,9 +2,11 @@
 title: Versionsinformation om 2022.6.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2022.6.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: cf2133dc-56cd-4a07-ab11-72e16f015ff5
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+feature: Release Information
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '633'
 ht-degree: 0%
 
 ---
@@ -84,7 +86,7 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner hittills [skilja 
 
 ### Nyheter {#what-is-new-demos}
 
-* Ny WKND Content &amp; Commerce-mall som utökar WKND med en E2E-shoppingupplevelse med produktkatalog, kundvagn, utcheckning och mitt konto. I den här mallen används CIF och dess CIF kärnkomponenter, och du måste därför även installera det CIF tillägget. Information finns i CIF blogg [här](https://medium.com/adobetech/learn-how-to-create-a-shoppable-experience-with-the-new-wknd-reference-site-and-cif-b3b2c161f67e).
+* Ny WKND Content &amp; Commerce-mall som omfattar WKND och en E2E-shoppingupplevelse med produktkatalog, kundvagn, utcheckning och mitt konto. I den här mallen används CIF och dess CIF kärnkomponenter, och du måste därför även installera det CIF tillägget. Information finns i CIF blogg [här](https://medium.com/adobetech/learn-how-to-create-a-shoppable-experience-with-the-new-wknd-reference-site-and-cif-b3b2c161f67e).
 
 ![WKND](/help/assets/CIF/wknd_shop.png)
 

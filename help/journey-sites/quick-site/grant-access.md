@@ -2,9 +2,12 @@
 title: Bevilja åtkomst till klientutvecklaren
 description: Anlita gränssnittsutvecklare i Cloud Manager så att de får tillgång till era AEM och er pipeline.
 exl-id: 58e95c92-b859-4bb9-aa62-7766510486fd
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+solution: Experience Manager Sites
+feature: Developing
+role: Admin, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---

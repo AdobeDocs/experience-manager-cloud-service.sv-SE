@@ -2,9 +2,12 @@
 title: Använda Git med Cloud Manager
 description: Lär dig hur du använder Cloud Managers Git-databaser och hur du integrerar din egen kundhanterade Git-databas med Cloud Manager.
 exl-id: 57e71b8a-4546-4d7f-825c-a1637d08e608
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+solution: Experience Manager
+feature: Cloud Manager, Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -25,7 +28,7 @@ I den här videoserien utforskas flera användningsfall när en kundhanterad Git
 * [Produktionsdistribution](#production-deployment)
 * [Synkroniserar versionstaggar](#sync-tags)
 
-Videoserien bygger på grundläggande kunskaper i Git och källkodshantering. Se [ytterligare resurser nedan](#additional-resources) för mer information om Git.
+Videoserien bygger på grundläggande kunskaper i Git och källkodshantering. Se [ytterligare resurser nedan](#additional-resources) om du vill ha mer information om Git.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28710/)
 
@@ -33,7 +36,7 @@ Stegen och namnkonventioner som beskrivs i den här videoserien är några av de
 
 ## Inledande synkronisering {#initial-sync}
 
-I den här videon lär du dig de första stegen för synkronisering av en kundhanterad Git-databas med Cloud Managers Git-databas.
+I den här videon får du lära dig de första stegen för synkronisering av en kundhanterad Git-databas med Cloud Managers Git-databas.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28711/?quality=12)
 

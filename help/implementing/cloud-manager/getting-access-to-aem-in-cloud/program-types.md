@@ -2,7 +2,10 @@
 title: Program och programtyper
 description: Lär dig mer om Cloud Managers hierarki och hur de olika typerna av program passar in i dess struktur och hur de skiljer sig åt.
 exl-id: 507df619-a5b5-419a-9e38-db77541425a2
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+solution: Experience Manager
+feature: Cloud Manager, Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 0%
@@ -29,7 +32,7 @@ Ett exempel är ofta användbart när hierarkin ska sammanställas.
 * Innehavare av WKND Travel och Adventure Enterprises kan ha två **program**: ett Sites-program för WKND Magazine och ett Assets-program för WKND Media.
 * Programmen WKND Magazine och WKND Media skulle ha både utveckling, scen och produktion **miljöer**.
 
-## Databas för källkod {#source-code-repository}
+## Källkodslagringsplats {#source-code-repository}
 
 Ett Cloud Manager-program etableras automatiskt med en egen Git-databas.
 

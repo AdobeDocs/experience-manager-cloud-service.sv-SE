@@ -2,14 +2,14 @@
 title: Händelsedrivna App Builder-program
 description: Lär dig hur du skapar händelsestyrda App Builder-program.
 version: Cloud Service
-feature: App Builder
+feature: App Builder, Developing
 topic: Integrations, Development
 role: Developer, Architect
 level: Beginner
 kt: 9458,9479
 thumbnail: 339244.jpg
 exl-id: 6cd06ddc-2ce3-4e59-bd62-baee44763591
-source-git-commit: a14ee350b3fdc3ac197b703aa36957d1d1dd7355
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Läs mer om händelsestyrd arkitektur, Adobe I/O-händelser och anpassade hände
 
 >[!VIDEO](https://video.tv.adobe.com/v/339244/?quality=12&learn=on)
 
-## Skapa händelsestyrda App Builder-program
+## Bygga händelsestyrda App Builder-program
 
 >[!VIDEO](https://video.tv.adobe.com/v/339245/?quality=12&learn=on)
 

@@ -2,10 +2,13 @@
 title: Launches
 description: Med lanseringar kan du effektivt utveckla innehåll för en framtida release. De gör att du kan göra ändringar redo för framtida publicering, samtidigt som du behåller dina aktuella sidor
 exl-id: 3e410120-d08f-4d05-932f-07bc4440af2b
-source-git-commit: 6bb7b2d056d501d83cf227adb239f7f40f87d0ce
+solution: Experience Manager Sites
+feature: Authoring
+role: User
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '898'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
@@ -34,11 +37,11 @@ Startar kan också vara:
 
 I det här avsnittet beskrivs hur du skapar, redigerar och befordrar (och om det behövs) [delete](/help/sites-cloud/authoring/launches/creating.md#deleting-a-launch)) starta sidor från Sites-konsolen eller [startkonsolen](#the-launches-console):
 
-* [Skapa Launches](/help/sites-cloud/authoring/launches/creating.md)
-* [Redigera Launches](/help/sites-cloud/authoring/launches/editing.md)
+* [Skapa startprogram](/help/sites-cloud/authoring/launches/creating.md)
+* [Redigeringsövningar](/help/sites-cloud/authoring/launches/editing.md)
 * [Hantera sidor i Launches](/help/sites-cloud/authoring/launches/managing-pages.md)
 * [Använda Timewarp för att förhandsgranska innehåll baserat på startprogram](/help/sites-cloud/authoring/launches/preview.md)
-* [Marknadsföra Launches](/help/sites-cloud/authoring/launches/promoting.md)
+* [Befordra lanseringar](/help/sites-cloud/authoring/launches/promoting.md)
 
 ## Startar - ordningen för händelser {#launches-the-order-of-events}
 

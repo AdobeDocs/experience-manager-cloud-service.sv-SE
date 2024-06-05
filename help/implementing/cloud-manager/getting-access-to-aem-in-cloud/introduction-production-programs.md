@@ -2,9 +2,12 @@
 title: Introduktion till produktionsprogram
 description: Lär dig vilka produktionsprogram som är och förslag på hur du konfigurerar dem.
 exl-id: bb8d4a5a-b26a-4718-9327-149fedb87e6a
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+solution: Experience Manager
+feature: Cloud Manager, Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '489'
 ht-degree: 0%
 
 ---
@@ -14,7 +17,7 @@ ht-degree: 0%
 
 Ett produktionsprogram är avsett för ett team som är redo att börja skriva, bygga och testa kod i syfte att distribuera den för att hantera livstrafik.
 
-Efter [skapa produktionsprogram,](creating-production-programs.md) a [guide för att skapa program](using-the-wizard.md) vägleder användaren genom de val som görs beroende på vad användaren vill skapa programmet.
+Efter dig [skapa produktionsprogram,](creating-production-programs.md) a [guide för programskapande](using-the-wizard.md) vägleder användaren genom de val som görs beroende på vad användaren vill skapa programmet.
 
 ## Alternativ för att skapa program {#program-creation-options}
 
@@ -28,7 +31,7 @@ I följande tabell beskrivs vanliga scenarier för tillgängliga lösningar och 
 | 1 Resurslösning | Skapa ett program som bara innehåller 1 resurser | 1 produktion + 1 fas, 1 utveckling, 1 snabb utveckling | Ej tillämpligt | Ej tillämpligt |
 | 1 platser +1 resurser | Skapa ett program: <br>1 Sites &amp; Assets-program | 1 produktion + 1 fas, 2 utveckling, 2 snabb utveckling | När en majoritet av de digitala resurserna används som stöd för webbplatsimplementeringen.<br>I sådana fall är de flesta digitala resurser i ett färdigt tillstånd och klara att användas för upplevelser över flera kanaler via Sites.<br>Vanligtvis ansvarar ett team för att hantera innehåll för både platser och resurser. | Bilder som främst används för en webbplats.<br>PDF som distribueras via en intern portal som byggts i AEM Sites. |
 | 1 platser +1 resurser | Skapa separata program:<br>1 Endast site-program och 1 Endast Assets-program | 1 produktion + 1 fas, 1 utveckling, 1 snabb utveckling<br>1 produktion + 1 fas, 1 utveckling, 1 snabb utveckling | När många digitala resurser inte har direkt stöd för implementering av webbplatser.<br> I sådana fall finns resurserna i olika lägen, inklusive råfilstyper och pågående arbeten.<br>Ett dedikerat kreativt team hanterar digitalt material under sin egen livscykel och har separata arbetsflöden och releasecykler än Sites content management-teamet. | Råbilder från en fototagning lagras i Assets-programmet och endast ett fåtal används i Sites-implementeringen.<br>Ett stort antal filtyper i Creative Cloud, som Photoshop och Illustrator, hanteras i AEM Assets och genomgår ett eget arbetsflöde för godkännande innan en färdig resurs genereras.<br>Överväg att använda [Anslutna resurser](/help/assets/use-assets-across-connected-assets-instances.md#overview-of-connected-assets) i sådana fall. |
-| 1 plats + 1 plats | Skapa separata program:<br>1 Endast webbplatser och 1 Endast webbplatser | 1 produktion + 1 fas, 1 utveckling, 1 snabb utveckling<br>1 produktion + 1 fas, 1 utveckling, 1 snabb utveckling | För implementering av multi-tenant-platser.<br>I sådana fall måste flera webbplatser med ett eget releaseschema och särskilda utvecklings- och innehållsteam hanteras. | Två varumärken med dedikerade webbplatser och separata utvecklingsteam |
+| 1 plats + 1 plats | Skapa separata program:<br>1 Platser - endast program och 1 Platser - endast program | 1 produktion + 1 fas, 1 utveckling, 1 snabb utveckling<br>1 produktion + 1 fas, 1 utveckling, 1 snabb utveckling | För implementering av multi-tenant-platser.<br>I sådana fall måste flera webbplatser med ett eget releaseschema och särskilda utvecklings- och innehållsteam hanteras. | Två varumärken med dedikerade webbplatser och separata utvecklingsteam |
 
 
 >[!NOTE]

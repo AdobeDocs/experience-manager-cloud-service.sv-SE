@@ -2,9 +2,11 @@
 title: Dynamisk mappning av modell till komponent för SPA
 description: I den här artikeln beskrivs hur den dynamiska mappningen av modell till komponent sker i JavaScript SPA SDK för AEM.
 exl-id: 3a7b3f26-4a09-40c1-af03-bb8408a68e57
-source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '315'
 ht-degree: 0%
 
 ---
@@ -17,9 +19,9 @@ I det här dokumentet beskrivs hur den dynamiska mappningen av modell till kompo
 
 The `ComponentMapping` -modulen tillhandahålls som ett NPM-paket till frontendprojektet. Det lagrar komponenter för användargränssnitt och tillhandahåller ett sätt för Single Page Application att mappa komponenter för användargränssnitt till AEM resurstyper. Modulen aktiverar en dynamisk upplösning för komponenter när JSON-modellen för programmet analyseras.
 
-Varje objekt i modellen innehåller en `:type` fält som visar en AEM resurstyp. När den är monterad kan den främre komponenten återge sig själv med det fragment av modellen som den har fått från de underliggande biblioteken.
+Varje objekt i modellen innehåller en `:type` fält som visar en AEM. När den är monterad kan den främre komponenten återge sig själv med det fragment av modellen som den har fått från de underliggande biblioteken.
 
-Se [SPA Blueprint](blueprint.md) -dokument om du vill ha mer information om modellparsning och frontdelens åtkomst till modellen.
+Se [SPA](blueprint.md) -dokument om du vill ha mer information om modellparsning och frontdelens åtkomst till modellen.
 
 Se även npm-paketet: [@adobe/aem-spa-component-mapping](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 

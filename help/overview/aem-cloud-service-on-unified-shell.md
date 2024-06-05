@@ -2,7 +2,9 @@
 title: AEM as a Cloud Service on Unified Shell
 description: Läs om fördelarna med AEM as a Cloud Service i Unified Shell
 exl-id: ea739307-dc99-4621-a239-dbe60ab6b52e
-source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
+feature: Release Information
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 1%

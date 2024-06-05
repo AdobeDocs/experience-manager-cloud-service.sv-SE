@@ -2,7 +2,9 @@
 title: Implementeringsfas
 description: Kontrollera att koden och innehållet är klara för migrering till molnet
 exl-id: d124f9a5-a754-4ed0-a839-f2968c7c8faa
-source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
+feature: Migration
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '2282'
 ht-degree: 8%

@@ -2,9 +2,11 @@
 title: Skapa program
 description: Lär dig hur du konfigurerar ett nytt program och en ny pipeline för att distribuera tillägget.
 exl-id: 06287618-0328-40b1-bba8-84002283f23f
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+feature: Onboarding
+role: Admin, User, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---

@@ -3,10 +3,11 @@ title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service versi
 description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.5.0
 feature: Release Information
 exl-id: 1aa49e85-1914-44d9-bcf7-0a1b03926df0
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 2%
+source-wordcount: '399'
+ht-degree: 1%
 
 ---
 
@@ -32,7 +33,7 @@ Releasedatum för Best Practices Analyzer v2.1.30 är 1 juni 2022.
 * BPA rapporterade NCC (ej kompatibla ändringar), UMI (Upgrade Misconfiguration Issue) och PCX (Page Complexity)-resultat som är falskt positiva. De här har åtgärdats.
 * BPA rapporterade fel när en nodnamnslängd överskred 150 byte. Detta har åtgärdats för att identifiera sådana fel endast när den överordnade noden är lika med eller större än 350 byte.
 
-## Content Transfer Tool {#ctt-release}
+## Verktyget Innehållsöverföring {#ctt-release}
 
 ### Releasedatum {#release-date-ctt}
 
@@ -43,7 +44,7 @@ Releasedatum för innehållsöverföringsverktyget v2.0.10 är 2 juni 2022.
 * Verktyget för innehållsöverföring (CTT) har utvecklats för att fungera ihop med Cloud Acceleration Manager för att effektivisera hela innehållsöverföringsprocessen. CTT fokuserar nu på att utföra innehållsextraheringar. CTT-tjänsten för förtäring är nu integrerad i Cloud Acceleration Manager. Fördelarna med den här utvecklingen är:
    * Självbetjäning för att extrahera en migreringsuppsättning en gång och importera den i flera miljöer parallellt.
    * Förbättrad användarupplevelse tack vare bättre inläsningstillstånd, skyddsanvisningar och felhantering.
-   * Inmatningsloggarna sparas och är alltid tillgängliga för felsökning.
+   * Inmatningsloggarna är beständiga och är alltid tillgängliga för felsökning.
 
 ## Cloud Acceleration Manager {#cam-release}
 
@@ -53,4 +54,4 @@ Releasedatum för Cloud Acceleration Manager är 2 juni 2022.
 
 ### Nyheter {#what-is-new-cam}
 
-* Med Cloud Acceleration Manager kan användare nu starta och hantera innehållsöverföringar för att flytta innehåll från en kunds AEM (lokala eller Adobe Managed Services) till AEM as a Cloud Service som en del av ett migreringsprojekt. Se [Använda innehållsöverföringskort](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-implementation-phase.html#content-transfer) för mer information.
+* Med Cloud Acceleration Manager kan användare nu starta och hantera innehållsöverföringar för att flytta innehåll från en kunds AEM (lokalt eller Adobe Managed Services) till AEM as a Cloud Service som en del av ett migreringsprojekt. Se [Använda innehållsöverföringskort](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-implementation-phase.html#content-transfer) för mer information.

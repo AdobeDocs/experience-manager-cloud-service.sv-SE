@@ -2,9 +2,11 @@
 title: Versionsinformation om 2020.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.7.0."
 exl-id: 75d354a3-6987-4de0-aec8-24043461c516
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+feature: Release Information
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1008'
 ht-degree: 1%
 
 ---
@@ -53,7 +55,7 @@ Utgivningsdatum för [!DNL Experience Manager] as a Cloud Service 2020.7.0 är 3
 
 ### Nyheter {#what-is-new-commerce}
 
-AEM Commerce är nu tillgänglig i Cloud Service.
+AEM Commerce finns nu i Cloud Service.
 
 Se [Komma igång med AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/commerce/getting-started.html) för mer information.
 

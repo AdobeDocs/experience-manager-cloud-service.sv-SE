@@ -2,7 +2,10 @@
 title: Använda RTF-redigeraren i [!DNL Adobe Experience Manager] för att skapa innehåll.
 description: Använd [!DNL Experience Manager] RTF-redigerare för att skapa innehåll.
 exl-id: 15c175f8-11de-4475-87a9-920219a4c004
-source-git-commit: 1a4c5e618adaef99d82a00e1118d1a0f8536fc14
+solution: Experience Manager Sites
+feature: Authoring
+role: User
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '286'
 ht-degree: 0%

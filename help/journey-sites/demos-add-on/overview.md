@@ -2,10 +2,12 @@
 title: AEM Reference Demos Add-on Journey
 description: Börja här för en guidad resa när du lägger till tillägget AEM Reference Demos i en sandlådemiljö med minimal AEM. Och testa de kraftfulla funktionerna i AEM med detaljerade exempel som bygger på vedertagna standarder.
 exl-id: 8a6d4abf-0832-40e8-9ba6-1ad4ba794ffa
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+feature: Onboarding
+role: Admin, User, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 1%
+source-wordcount: '816'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +17,7 @@ Börja här för en guidad resa när du lägger till tillägget AEM Reference De
 
 ## Introduktion {#introduction}
 
-AEM är en kraftfull verktygsuppsättning för att skapa och hantera digitala upplevelser. Innehållsförfattare kan enkelt skapa digitala upplevelser med hjälp av webbplatsredigeraren. De kan ordna innehållet med hjälp av webbplatskonsolen, samtidigt som de kan se direktsänt innehåll som det levereras av AEM till era målgrupper över olika kanaler.
+AEM är en kraftfull verktygsuppsättning för att skapa och hantera digitala upplevelser. Innehållsförfattare kan enkelt skapa digitala upplevelser med hjälp av sajtredigeraren. De kan ordna innehållet med hjälp av webbplatskonsolen, samtidigt som de kan se direktsänt innehåll som det levereras av AEM till era målgrupper över olika kanaler.
 
 Utan exempelinnehåll och konfiguration kan det vara svårt att testa de kraftfulla funktionerna i AEM för både nya och erfarna kunder. Med AEM Reference Demos Add-on kan du enkelt skapa sandlådemiljöer som är förinlästa med exempelinnehåll och förkonfigurerade med hjälp av de senaste Adobe-riktlinjerna för bästa praxis. Med tillägget kan du enkelt utvärdera AEM Sites- och AEM Screens-funktioner i sitt sammanhang och utan att behöva göra någon konfiguration alls.
 

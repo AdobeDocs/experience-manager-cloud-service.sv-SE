@@ -2,10 +2,12 @@
 title: Implementeringsfas i Cloud Acceleration Manager
 description: Den här sidan innehåller en översikt över implementeringsfasen i Cloud Acceleration Manager.
 exl-id: e6ac88f0-4b3f-43a1-98bc-8c6608713784
-source-git-commit: c8739388ac21dd40d6757815af6f2732991d216b
+feature: Migration
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 2%
+source-wordcount: '620'
+ht-degree: 1%
 
 ---
 
@@ -14,7 +16,7 @@ ht-degree: 2%
 Implementeringsfasen omfattar:
 
 * [Lokal utveckling](#local-development)
-* [Omstrukturering av kod](#code-refactoring)
+* [Kodomfaktorisering](#code-refactoring)
 * [AEM as a Cloud Service driftsättning](#aem-as-a-cloud-service-deployment)
 * [Innehållsöverföring](#content-transfer)
 
@@ -56,7 +58,7 @@ Följ det här avsnittet för att utforska aktivitetskortet för kodkorrigering:
 
    På sidan visas alla aspekter av kodomfaktorisering på tre olika flikar:
 
-   * Översikt
+   * Ökning
    * Dispatcher
    * Testning
 

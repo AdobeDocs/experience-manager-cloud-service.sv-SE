@@ -1,13 +1,15 @@
 ---
 title: Responsiv design
 description: Med responsiv design kan samma upplevelser visas effektivt på flera enheter i flera olika orienteringar.
-source-git-commit: c9ee24e7b9f10ebbf9425dff66103e097701c8e4
+exl-id: be645062-d6d6-45a2-97dc-d8aa235539b8
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '908'
 ht-degree: 0%
 
 ---
-
 
 # Responsiv design {#responsive-design}
 

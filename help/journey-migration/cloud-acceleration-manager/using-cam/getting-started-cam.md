@@ -2,7 +2,9 @@
 title: Komma igång med Cloud Acceleration Manager
 description: Den här sidan innehåller en översikt över hur du använder och kommer igång med Cloud Acceleration Manager.
 exl-id: e2fad21c-3de6-4186-97c6-ebc84780b2e8
-source-git-commit: aa032af2ed7ff877b4c9f9cb6d427c84e71c3874
+feature: Migration
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 1%

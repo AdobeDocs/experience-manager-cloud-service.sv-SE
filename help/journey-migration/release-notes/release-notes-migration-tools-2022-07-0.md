@@ -3,10 +3,11 @@ title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service versi
 description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.7.0
 feature: Release Information
 exl-id: bc8f1a80-867e-423a-9c03-4a53b1ebc57c
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 2%
+source-wordcount: '435'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +31,7 @@ Releasedatum för Best Practices Analyzer v2.1.30 är 27 juli 2022.
 * BPA rapporterade om saknade ursprungliga återgivningar för innehållsfragment. Eftersom innehållsfragment inte har några återgivningar hoppas den här kontrollen över innehållsfragment.
 * Alternativet att filtrera ACS Commons-resultat saknades i BPA-gränssnittet. Den här har åtgärdats.
 
-## Content Transfer Tool {#ctt-release}
+## Verktyget Innehållsöverföring {#ctt-release}
 
 ### Releasedatum {#release-date-ctt}
 

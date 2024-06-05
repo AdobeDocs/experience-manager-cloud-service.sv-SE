@@ -2,9 +2,12 @@
 title: Valfritt - Så här skapar du enkelsidiga program (SPA) med Adobe Experience Manager (AEM)
 description: I den här valfria fortsättningen av den AEM Headless Developer Journey får du lära dig hur AEM kan kombinera headless-leverans med traditionella CMS-funktioner i full hög och hur du kan skapa redigerbara SPA med hjälp av AEM ramverk för SPA.
 exl-id: d74848f2-683e-49e1-9374-32596ca5d7d7
-source-git-commit: 7d09cafc4f8518fee185d3f9efc76c33ec20f9a3
+solution: Experience Manager
+feature: Headless
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '1266'
+source-wordcount: '1259'
 ht-degree: 0%
 
 ---

@@ -2,7 +2,9 @@
 title: Trafikfilterregler inklusive WAF-regler
 description: Konfigurerar trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF).
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: c914ae4a0ad3486feb54cbcf91f6659afa1372b8
+feature: Security
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '3947'
 ht-degree: 0%

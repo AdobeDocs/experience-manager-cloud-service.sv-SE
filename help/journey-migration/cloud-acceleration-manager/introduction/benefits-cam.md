@@ -2,7 +2,9 @@
 title: Fördelar med att använda Cloud Acceleration Manager
 description: På den här sidan beskrivs de viktigaste fördelarna med att använda Cloud Acceleration Manager.
 exl-id: d7a6c4f6-0f50-4f44-8a62-4a5769c76bd5
-source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
+feature: Migration
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 0%

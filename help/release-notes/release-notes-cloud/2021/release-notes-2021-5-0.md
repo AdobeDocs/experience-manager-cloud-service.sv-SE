@@ -2,7 +2,9 @@
 title: Versionsinformation för 2021.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2021.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 3f9d7339-7e37-4702-821e-f2b03cd7e224
-source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
+feature: Release Information
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '1355'
 ht-degree: 0%
@@ -114,7 +116,7 @@ Nästa version är planerad till 3 juni 2021.
 
 * Intermittenta fel som uppstod när koden skulle skickas till Adobe Git har nu åtgärdats.
 
-* Tillägget Commerce kan nu användas för sandlådeprogram under arbetsflödet för redigeringsprogram.
+* Commerce-tillägg kan nu användas i sandlådeprogram under redigeringsprogrammets arbetsflöde.
 
 * Redigeringsprogrammet har uppdaterats.
 

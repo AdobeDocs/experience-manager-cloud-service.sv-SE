@@ -2,7 +2,10 @@
 title: Driftsätt ditt anpassade tema
 description: Lär dig hur du distribuerar webbplatstemat med hjälp av pipeline.
 exl-id: fe065972-39db-4074-a802-85895c701efd
-source-git-commit: d2352e66b380f5a3654e2fc99ce4204b32066683
+solution: Experience Manager Sites
+feature: Developing
+role: Admin, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 0%

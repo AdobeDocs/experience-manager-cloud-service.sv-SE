@@ -1,15 +1,17 @@
 ---
-title: AEM-projektstruktur
+title: AEM projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud Service.
 exl-id: 38f05723-5dad-417f-81ed-78a09880512a
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '2918'
+source-wordcount: '2859'
 ht-degree: 3%
 
 ---
 
-# AEM-projektstruktur
+# AEM projektstruktur
 
 >[!TIP]
 >
@@ -31,7 +33,7 @@ Den paketstruktur som beskrivs i det här dokumentet är kompatibel med **både*
 
 The `/apps` och `/libs` AEM **oföränderlig** eftersom de inte kan ändras (skapa, uppdatera, ta bort) efter att AEM startats (det vill säga vid körning). Alla försök att ändra ett oföränderligt område vid körning misslyckas.
 
-Allt annat i databasen, `/content`, `/conf`, `/var`, `/etc`, `/oak:index`, `/system`, `/tmp`och så vidare, är alla **mutabel** områden, vilket innebär att de kan ändras under körning.
+Allt annat i databasen, `/content`, `/conf`, `/var`, `/etc`, `/oak:index`, `/system`, `/tmp`och så vidare, är alla **oföränderlig** områden, vilket innebär att de kan ändras under körning.
 
 >[!WARNING]
 >
@@ -41,7 +43,7 @@ Allt annat i databasen, `/content`, `/conf`, `/var`, `/etc`, `/oak:index`, `/sys
 
 Oak indexes (`/oak:index`) hanteras av den AEM as a Cloud Service distributionsprocessen. Orsaken är att Cloud Manager måste vänta tills ett nytt index har distribuerats och indexerats om fullständigt innan det går över till den nya kodbilden.
 
-Därför måste Oak-index, även om de kan ändras vid körning, distribueras som kod så att de kan installeras innan några ändringsbara paket installeras. Därför `/oak:index` konfigurationer är en del av kodpaketet och inte en del av innehållspaketet [enligt nedan](#recommended-package-structure).
+Därför måste Oak-index, även om de kan ändras vid körning, distribueras som kod så att de kan installeras innan några ändringsbara paket installeras. Därför `/oak:index` konfigurationerna ingår i kodpaketet och inte i innehållspaketet [enligt nedan](#recommended-package-structure).
 
 >[!TIP]
 >
@@ -175,11 +177,11 @@ Medan Repo Init-skripten finns i `ui.config` -projekt som skript, kan och bör a
 + Tjänstanvändare
 + Användare
 + Grupper
-+ ACL
++ ACL:er
 
-Repo Init-skript lagras som `scripts` poster i `RepositoryInitializer` OSGi-fabrikskonfigurationer. Därför kan de vara implicit inriktade på körning, vilket möjliggör skillnader mellan AEM Author och AEM Publish Services Repo Init-skript, eller till och med mellan miljöer (Dev, Stage och Prod).
+Repo Init-skript lagras som `scripts` poster i `RepositoryInitializer` OSGi-fabrikskonfigurationer. Därför kan de vara implicit inriktade i körningsläge, vilket möjliggör skillnader mellan AEM författare och AEM Publiceringstjänstens Repo Init-skript eller till och med mellan miljöer (Dev, Stage och Prod).
 
-Repo Init OSGi-konfigurationer skrivs bäst i [`.config` Konfigurationsformat för OSGi](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#configuration-files-config-1) eftersom de har stöd för flera rader, vilket är ett undantag till de bästa sätten att använda [`.cfg.json` för att definiera OSGi-konfigurationer](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#configuration-files-cfgjson-1).
+Repo Init OSGi-konfigurationer skrivs bäst i [`.config` Konfigurationsformat för OSGi](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#configuration-files-config-1) eftersom de har stöd för flera rader, vilket är ett undantag till de bästa sätten att använda [`.cfg.json` definiera OSGi-konfigurationer](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#configuration-files-cfgjson-1).
 
 När du definierar användare och grupper betraktas bara grupper som en del av programmet och de är integrerade i dess funktion. Du definierar fortfarande användare och grupper för organisation vid körning i AEM. Om ett anpassat arbetsflöde till exempel tilldelar arbete till en namngiven grupp, definierar du den gruppen med hjälp av Repo Init i AEM. Men om grupperingen bara är organisatorisk, till exempel&quot;Wendy&#39;s Team&quot; och&quot;Sean&#39;s Team&quot;, är de här grupperna bäst definierade och hanterade vid körning i AEM.
 
@@ -242,7 +244,7 @@ Bryter ned den här mappstrukturen:
    + The `container` mappen innehåller alla [extra programpaket](#extra-application-packages) som kan ingå i AEM.
 Mappnamnet motsvarar [pakettyper](#package-types) av de paket som den innehåller.
 + Mappen på den fjärde nivån innehåller underpaketen och måste vara någon av:
-   + `install` så du kan installera på **båda** AEM författare och AEM publicera
+   + `install` så att du kan installera på **båda** AEM författare och AEM publicera
    + `install.author` så att du kan installera **endast** AEM
    + `install.publish` så att du kan installera **endast** endast AEM `install.author` och `install.publish` är mål som stöds. Andra körningslägen **stöds inte**.
 
@@ -274,11 +276,11 @@ Alla paket måste vara tillgängliga via [Adobe allmänna Maven-arkivet](https:/
 
 Om tredjepartspaketen finns i **Adobe allmänna Maven-arkivet** behövs ingen ytterligare konfiguration för att Adobe Cloud Manager ska kunna lösa artefakterna.
 
-Om tredjepartspaketen finns i en **offentlig databas för Maven-felaktigheter från tredje part** måste den här databasen registreras i projektets `pom.xml` och inbäddad med metoden [ovan](#embeddeds).
+Om tredjepartspaketen finns i en **offentlig databas för Maven-felaktigheter från tredje part** måste den här databasen registreras i projektets `pom.xml` och inbäddad med metoden [enligt ovan](#embeddeds).
 
 Tredjepartsprogram/-anslutningar bör bäddas in med dess `all` paket som en behållare i projektbehållaren (`all`).
 
-Att lägga till Maven-beroenden följer Maven-standardpraxis, och inbäddning av tredjepartsartefakter (kod och innehållspaket) är [ovan](#embedding-3rd-party-packages).
+Att lägga till Maven-beroenden följer Maven-standardpraxis, och inbäddning av tredjepartsartefakter (kod och innehållspaket) är [enligt ovan](#embedding-3rd-party-packages).
 
 >[!TIP]
 >
@@ -300,7 +302,7 @@ De vanligaste mönstren för innehållspaketberoenden är:
 
 ### Enkla distributionspaketberoenden {#simple-deployment-package-dependencies}
 
-Det enkla skiftläget anger `ui.content` varierbart innehållspaket som är beroende av `ui.apps` oföränderligt kodpaket.
+Det enkla skiftläget ställer in `ui.content` varierbart innehållspaket som är beroende av `ui.apps` oföränderligt kodpaket.
 
 + `all` har inga beroenden
    + `ui.apps` har inga beroenden
@@ -331,7 +333,7 @@ Kod- och innehållspaket, som distribueras som underpaket, måste deklarera en p
 
 #### Behållarpakettyper {#container-package-types}
 
-Behållaren `all/pom.xml` projekt **inte** deklarera `<packageType>`.
+Behållaren `all/pom.xml` projekt **inte** deklarera en `<packageType>`.
 
 #### Kodpakettyper (ej ändringsbara) {#immutable-package-types}
 

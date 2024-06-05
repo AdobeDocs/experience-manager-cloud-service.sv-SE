@@ -2,10 +2,12 @@
 title: Felsöka verktyget Innehållsöverföring
 description: Lär dig hur du felsöker verktyget Innehållsöverföring
 exl-id: 01bc9be7-a576-45eb-90a0-386ea951040d
-source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
+feature: Migration
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 87%
+source-wordcount: '179'
+ht-degree: 84%
 
 ---
 

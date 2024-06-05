@@ -2,7 +2,9 @@
 title: Versionsinformation för 2022.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 761f1605-c421-4f3a-8f90-af23f4f047b1
-source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
+feature: Release Information
+role: Admin
+source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
 workflow-type: tm+mt
 source-wordcount: '1158'
 ht-degree: 0%
@@ -85,7 +87,7 @@ Ta en titt på [Mars 2022 - versionsöversikt](https://video.tv.adobe.com/v/3414
 
 ### Nya funktioner i CIF prerelease channel {#prerelease-features-cif}
 
-* AEM CIF Search Core Component support Commerce LiveSearch
+* AEM CIF Search Core Component har stöd för Commerce LiveSearch
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
 

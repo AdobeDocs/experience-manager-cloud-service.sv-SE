@@ -1,15 +1,17 @@
 ---
-title: SPA och Adobe Experience Platform Launch Integration
+title: Integrering med SPA och Adobe Experience Platform Launch
 description: Adobe Experience Platform Launch rekommenderas för att implementera Analytics, Target och Audience Manager inom SPA.
 exl-id: 95008563-c1e5-4685-9c6d-5226d4a66c53
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+feature: Developing
+role: Admin, Architect, Developer
+source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---
 
-# SPA och Adobe Experience Platform Launch Integration {#spa-and-adobe-experience-platform-launch-integration}
+# Integrering med SPA och Adobe Experience Platform Launch {#spa-and-adobe-experience-platform-launch-integration}
 
 Adobe Experience Platform Launch rekommenderas för att implementera Analytics, Target och Audience Manager i Single Page Applications (SPA).
 
@@ -21,4 +23,4 @@ Om du vill veta hur du integrerar dina SPA med Adobe Experience Platform Launch 
 >
 >Den refererade KB:en skapades för att aktivera Adobe Experience Platform Launch-integrering med SPA som inte använder AEM SPA. Dessa metoder bör också göra det möjligt för Adobe Experience Platform Launch-integreringen att samexistera med SPA som är byggda för att använda SPA Editor.
 >
->Användningen av Redux tillsammans med JavaScript-SPA har inte utforskats fullständigt. Stöd för Redux planeras i en framtida version av SPA Editor.
+>Användningen av Redux tillsammans med JavaScript-SPA har inte utforskats fullständigt. Stöd för Redux planeras i en framtida version av SPA.
