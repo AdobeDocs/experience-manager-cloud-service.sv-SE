@@ -1,14 +1,14 @@
 ---
-title: Migreringsverktyg för att konvertera adaptiv Forms baserat på baskomponenter till centrala komponentbaserade formulär
-description: Lär dig installera och använda migreringsverktyget för att konvertera adaptiv Forms baserat på Foundation-komponenter till kärnkomponentbaserade formulär.
-Keywords: Migration Utility tool, Convert Adaptive Forms based on foundation components to core component based forms, Convert Foundation forms to Core components forms, Using Modernizer tool to convert Foundation Components to Core components in forms.
+title: Migreringsverktyg/AEM moderniseringsverktyg för att konvertera adaptiv Forms baserad på Foundation Components till Core Component-baserade formulär
+description: Lär dig installera och använda Migreringsverktyg/AEM Moderniseringsverktyg för att konvertera adaptiv Forms baserad på Foundation Components till Core Component-baserade formulär.
+Keywords: Migration Utility Tool, Convert Adaptive Forms based on Foundation Components to Core Component based forms, Convert Foundation forms to Core Components forms, Using Modernizer Tool to convert Foundation Components to Core Components in forms.
 role: User, Developer, Admin
 features: core components
 hide: true
 hidefromtoc: true
-source-git-commit: 494e90bd5822495f0619e8ebf55f373a26a3ffe6
+source-git-commit: cc1f3e2f0ddaed67de541c730c0b97f68c1e0d02
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '929'
 ht-degree: 0%
 
 ---
@@ -16,59 +16,64 @@ ht-degree: 0%
 
 # Introduktion
 
-Du kan använda migreringsverktyget för att konvertera adaptiv Forms baserat på baskomponenter till centrala komponentbaserade formulär. Du kan använda [Verktyget AEM](https://opensource.adobe.com/aem-modernize-tools/) som ett migreringsverktyg. The [Verktyg för AEM](https://opensource.adobe.com/aem-modernize-tools/) tillhandahåller en uppsättning verktyg som används för att konvertera adaptiva Forms-baserade baskomponenter till de moderna och stödda kärnkomponenterna.
+Forms Conversion Utility, en del av [AEM](https://opensource.adobe.com/aem-modernize-Tools/) med kan du enkelt konvertera adaptiva Forms som byggts med äldre Foundation Components till formulär som utnyttjar de moderna, stödda funktionerna i Core Components.
 
 ## Vad är AEM verktyg för modernisering?
 
-[Verktyg för AEM](https://opensource.adobe.com/aem-modernize-tools/) avser en uppsättning verktyg eller program som är avsedda att underlätta processen att modernisera eller uppdatera Adobe Experience Manager-projekt (AEM). De här verktygen hjälper dig vanligtvis att konvertera äldre komponenter eller funktioner i AEM till nyare, effektivare och stöds.
+[Verktyg för AEM](https://opensource.adobe.com/aem-modernize-Tools/) avser en uppsättning verktyg eller program som är avsedda att underlätta processen att modernisera eller uppdatera Adobe Experience Manager-projekt (AEM). Dessa verktyg hjälper dig vanligtvis att konvertera äldre komponenter eller funktioner i AEM till nyare, effektivare och stöds. Forms Conversion Utility är installerat under AEM Modernize Tools för att konvertera adaptiva Forms som bygger på Foundation Components till Core Component-baserade formulär.
 
-AEM Modernize Tools konverterar Adaptive Forms som bygger på äldre grundkomponenter till nyare grundformulär. Denna konverteringsprocess säkerställer att formulären överensstämmer med moderna standarder och funktioner, vilket kan förbättra prestanda, kompatibilitet och enkelt underhåll i AEM.
+Forms Conversion Utility konverterar adaptiv Forms som är baserad på äldre Foundation-komponenter till nyare Core Component-baserade formulär. Denna konverteringsprocess säkerställer att formulären överensstämmer med moderna standarder och funktioner, vilket kan förbättra prestanda, kompatibilitet och enkelt underhåll i AEM.
 
 ![Verktyg för AEM](/help/forms/assets/aem-modernize-tools.png)
 
 >[!NOTE]
 > 
-> Vi rekommenderar att du installerar verktygen AEM modernisering på din lokala AEM. Överför de grundläggande blanketterna till de centrala komponentbaserade blanketterna. Hämta formuläret tillsammans med dess resurser. Överför sedan formuläret och dess resurser till den miljö som krävs.
+> Vi rekommenderar att du installerar verktygen AEM modernisering på din lokala AEM. Migrera det adaptiva Forms som bygger på Foundation Components till Core Component-baserade formulär. Hämta formuläret tillsammans med dess resurser. Överför sedan formuläret och dess resurser till den miljö som krävs.
+
+## Att tänka på när du använder verktygen AEM Modernisering {#considerations}
+
+* Vid lyckade konverteringar tas alla regler som tillämpas på formuläret bort. Regler migreras inte automatiskt. Du bör återskapa och tillämpa dessa regler på det konverterade formuläret manuellt.
+* Översättningsinställningarna som används i det ursprungliga formuläret överförs inte. Konfigurera om översättning för det konverterade formuläret.
+  <!-- * If the form built on Foundation Components contains custom function rules, you have to rewrite these rules for the converted form based on Core Components.-->
 
 ## Krav för att använda AEM verktyg för modernisering
 
 * [Konfigurera lokal utvecklingsmiljö för AEM Forms](/help/forms/setup-local-development-environment.md)
-* [Möjliggör adaptiva kärnkomponenter i Forms för er miljö.](/help/forms/enable-adaptive-forms-core-components.md)
+* [Aktivera adaptiva Forms Core-komponenter för din miljö.](/help/forms/enable-adaptive-forms-core-components.md)
 
 * Lägg till dina användare i [!DNL forms-users] grupp. Medlemmarna i [!DNL forms-users] gruppen har behörighet att skapa ett adaptivt formulär.
 
 * Användare med följande roller har behörighet att installera AEM Modernisera verktyg i en AEM miljö:
    * Utvecklarroll
-   * Administratörsroll En detaljerad lista över formulärspecifika användargrupper finns i [Grupper och behörigheter](forms-groups-privileges-tasks.md).
+   * Administratörsroll
+
+En detaljerad lista över formulärspecifika användargrupper finns på [Grupper och behörigheter](forms-groups-privileges-tasks.md).
 
 ## Installera och konfigurera AEM verktyg för modernisering
 
-Steg för att installera och konfigurera AEM verktygen:
+Så här installerar och konfigurerar du de AEM verktygen för modernisering:
 
-1. [Installera AEM Modernisera verktyg i din lokala AEM Forms-miljö](#install-aem-modernize-tools)
-2. [Aktivera AEM verktyg för modernisering i din lokala AEM Forms-miljö](#enable-aem-modernize-tools)
+1. [Installera AEM Modernisera verktyg i din lokala AEM Forms-miljö](#install-aem-modernize-Tools)
+2. [Aktivera AEM verktyg för modernisering i din lokala AEM Forms-miljö](#enable-aem-modernize-Tools)
 
-### Installera AEM Modernisera verktyg i din lokala AEM Forms-miljö {#install-aem-modernize-tools}
+### Installera AEM Modernisera verktyg i din lokala AEM Forms-miljö {#install-aem-modernize-Tools}
 
 Så här installerar du AEM Modernisera verktyg i din lokala AEM Forms-miljö:
 
-1. Starta den lokala AEM Author Service genom att köra följande från kommandoraden:
+1. Öppna kommandotolken eller terminalen.
+1. Starta den lokala AEM författartjänsten. Kör till exempel följande kod från för att starta den lokala AEM Author-instansen:
 
    `java -jar aem-author-p4502.jar`
 
-   >[!NOTE]
-   >
-   > Ange administratörslösenordet som `admin`. Alla administratörslösenord är godtagbara, men du bör använda standardvärdet för lokal utveckling för att minska behovet av att konfigurera om.
-
-1. Klona [Verktyg för AEM](https://git.corp.adobe.com/livecycle/forms-modernizer/tree/convertForms) i din lokala dator.
+1. Klona [AEM](https://git.corp.adobe.com/livecycle/forms-modernizer/tree/convertForms) i din lokala dator.
 
    ```Shell
-   git clone [Path of Git repository of AEM Modernize Tools]
+   git clone [Path of Git repository of AEM Modernize Tool]
    ```
-   Ersätt [Sökväg till Git-databasen för AEM verktyg för modernisering] med den faktiska URL:en för motsvarande Git-databas för AEM verktyg för modernisering.
-När kommandot har körts har du en lokal kopia av AEM verktygskatalog på datorn.
 
-1. Navigera till`[AEM Modernize Tools Repository]`  i ditt lokala system.
+   När kommandot har körts har du en lokal kopia av AEM verktygskatalog på datorn.
+
+1. Navigera till`[AEM Modernize Tool Repository]`  i ditt lokala system.
 1. Kör följande kommando:
 
    ```Shell
@@ -76,14 +81,14 @@ När kommandot har körts har du en lokal kopia av AEM verktygskatalog på dator
    ```
 ![Installationsavbildningen har slutförts](/help/forms/assets/aem-modernize-install-steps.png)
 
-När installationen är klar blir AEM verktyg för modernisering tillgängliga för din miljö.
+När installationen är klar blir de AEM verktygen tillgängliga för din miljö.
 
-![Aktivera AEM verktyg för modernisering](/help/forms/assets/enable-aem-modernizer-tools.png)
+![Aktivera AEM migreringsverktyg](/help/forms/assets/enable-aem-modernizer-tools.png)
 
 
-### Aktivera AEM verktyg för modernisering i din lokala AEM Forms-miljö{#enable-aem-modernize-tools}
+### Aktivera AEM verktyg för modernisering i din lokala AEM Forms-miljö{#enable-aem-modernize-Tools}
 
-Om du vill aktivera och använda de AEM verktygen för modernisering i din AEM miljö är det viktigt att mappa reglerna för migrering av baskomponenter till kärnkomponenter:
+Om du vill aktivera och använda AEM verktyg för modernisering för din AEM miljö är det viktigt att mappa reglerna för migrering av Foundation-komponenter till Core-komponenter:
 
 1. Logga in på din författarinstans.
 1. Navigera till `http://[host]:[port]/system/console/configMgr`
@@ -93,11 +98,11 @@ Om du vill aktivera och använda de AEM verktygen för modernisering i din AEM m
 
 ![Regel för AEM](/help/forms/assets/aem-modernize-tools-component-rule.png)
 
-## Kör AEM Modernisera verktyg för att konvertera grundkomponentbaserade blanketter till kärnkomponentbaserade blanketter
+## Kör formulärkonverteringsverktyget för att konvertera Foundation Components-baserade formulär till Core Component-baserade formulär
 
 1. Gå till **[!UICONTROL Tools > AEM Modernize Tools > Forms Conversion]**.
 
-   ![Välj AEM verktyg för modernisering](/help/forms/assets/aem-modernize-tools-select.png)
+   ![Välj AEM verktyg för modernisering](/help/forms/assets/aem-modernize-tools-select-form.png)
 
 1. Välj **[!UICONTROL Forms Conversion]** alternativ.
 
@@ -109,16 +114,16 @@ Om du vill aktivera och använda de AEM verktygen för modernisering i din AEM m
 
 1. Ange **[!UICONTROL Job Name]**.
 1. I **[!UICONTROL Form]** kan du välja något av följande alternativ:
-   * **Ingen** : Välj det här alternativet om formulärhantering inte krävs.
-   * **Återställ** : Välj det här alternativet om du vill återställa formuläret till läget före den senaste konverteringen.
-   * **Kopiera till mål**: Välj det här alternativet om du vill kopiera formuläret innan du utför konverteringen.
+   * **Ingen** : Välj alternativet om du inte vill skapa en kopia av de Foundation Component-baserade formulären innan du påbörjar formulärkonverteringen.
+   * **Återställ** : Välj alternativet att återställa formuläret till det tillstånd det hade innan formulärkonverteringen startades.
+   * **Kopiera till mål**: Välj alternativet att skapa en kopia av de Foundation Component-baserade formulären innan du påbörjar formulärkonverteringen.
 I vårt fall **Kopiera till mål** är markerat. Om **Kopiera till mål** är markerat, **[!UICONTROL Source Path]** och **[!UICONTROL Target Path]** blir synliga.
 
 1. Ange `source folder` namnet i **[!UICONTROL Source Path]**.
 1. Ange `target folder` namnet i **[!UICONTROL Target Path]**.
 1. Välj **[!UICONTROL Next]**.
 1. Klicka på **[!UICONTROL Add Forms]**. Alla formulär i `source folder` visas på skärmen.
-1. Välj formuläret baserat på grundkomponenterna för att konvertera det till ett formulär baserat på kärnkomponenterna. Du kan också markera flera formulär.
+1. Välj den adaptiva Forms som baseras på Foundation Components för att konvertera den till Core Component-baserade formulär. Du kan också markera flera formulär.
 
    ![AEM Verktyg för modernisering Välj formulär](/help/forms/assets/aem-modernize-tools-select-form.png)
 
@@ -138,17 +143,12 @@ I vårt fall **Kopiera till mål** är markerat. Om **Kopiera till mål** är ma
 1. Välj **[!UICONTROL Save and Close]** om du vill spara egenskaperna för det konverterade formuläret igen.
    ![AEM modernisch Tools Adpative Form Properties](/help/forms/assets/aem-modernize-tools-af-properties.png)
 
-Nu ser du att den adaptiva formen som bygger på grundkomponenterna omvandlas till den adaptiva formen som bygger på kärnkomponenterna.
-
-## Att tänka på när du använder migreringsverktyget {#considerations}
-
-* Om formuläret som bygger på grundkomponenterna innehåller anpassade funktionsregler måste du skriva om dessa regler för det konverterade formuläret baserat på kärnkomponenterna.
-* Det konverterade formuläret innehåller inga regler i regelredigeraren, vilket kräver att regler för det konverterade formuläret skrivs om.
-* Du måste återskapa översättningsjobbet för det konverterade formuläret.
+Nu ser du att den adaptiva formen som bygger på Foundation Components omvandlas till den adaptiva formen som bygger på Core Components.
 
 ## Bästa praxis {#best-practices}
 
-* Formuläret som bygger på grundkomponenterna innehåller endast de komponenter som finns i de kärnkomponentbaserade komponenterna.
-* Kontrollera att reglerna är formaterade i XML.
+* Se till att dina grundläggande komponentbaserade formulär bara använder de komponenter som har en motsvarighet [Kärnkomponenter](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction#available-components-a-breakdown-by-component-type) tillgängliga. Om du använder Foundation Components som inte har någon motsvarande Core Component (Grundläggande komponent) konverteras inte Foundation Component (Grundläggande komponent). Därför fungerar den inte korrekt när du redigerar ett formulär
+* Kontrollera att reglerna som konverterar Foundation Components till Core Components är formaterade i XML.
+
 
 

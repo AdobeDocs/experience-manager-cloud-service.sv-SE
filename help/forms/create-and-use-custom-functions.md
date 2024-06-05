@@ -5,11 +5,10 @@ keywords: Lägg till en anpassad funktion, använd en anpassad funktion, skapa e
 contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
-mini-toc-levels: 4
 exl-id: 24607dd1-2d65-480b-a831-9071e20c473d
-source-git-commit: 6f50bdf2a826654e0d5b35de5bd50e66981fb56a
+source-git-commit: d42728bb3eb81c032723db8467957d2e01c5cbed
 workflow-type: tm+mt
-source-wordcount: '3502'
+source-wordcount: '4340'
 ht-degree: 0%
 
 ---
@@ -98,7 +97,7 @@ I ovanstående kodrad `Input1` är en valfri parameter utan något standardvärd
 I ovanstående kodrad `Input1` är en valfri parameter utan något standardvärde. Så här deklarerar du valfri parameter med standardvärdet:
 `@param {array} [input1=<value>]`
 `input1` är en valfri parameter av arraytyp med standardvärdet inställt på `value`.
-Kontrollera att parametertypen omges av klammerparenteser {} och parameternamnet omges av hakparenteser [].
+Kontrollera att parametertypen omges av klammerparenteser {} och parameternamnet omges av hakparenteser.
 
 Titta på följande kodfragment, där input2 definieras som en valfri parameter:
 
@@ -225,33 +224,124 @@ Steg för att skapa anpassade funktioner är:
 1. [Skapa ett klientbibliotek](#create-client-library)
 1. [Lägga till klientbibliotek i ett adaptivt formulär](#use-custom-function)
 
+
+### Krav för att skapa en anpassad funktion
+
+Innan du börjar lägga till en anpassad funktion i din adaptiva Forms måste du se till att du har följande:
+
+**Programvara:**
+
+* **Oformaterad textredigerare (IDE)**: En integrerad utvecklingsmiljö (IDE), som Microsoft Visual Studio Code, fungerar som en vanlig textredigerare men har avancerade funktioner för enklare redigering.
+
+* **Git:** Det här versionskontrollsystemet krävs för att hantera kodändringar. Om du inte har det installerat hämtar du det från https://git-scm.com.
+
 ### Skapa ett klientbibliotek {#create-client-library}
 
 Du kan lägga till anpassade funktioner genom att lägga till ett klientbibliotek. Så här skapar du ett klientbibliotek:
 
-1. [Klona din AEM Forms as a Cloud Service databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#accessing-git).
-1. Skapa en mapp under `[AEM Forms as a Cloud Service repository folder]/apps/` mapp. Skapa till exempel en mapp med namnet som `experience-league`.
-1. Navigera till `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/experience-league/` och skapa `ClientLibraryFolder`. Skapa till exempel en biblioteksmapp för klient som `customclientlibs`.
-1. Lägg till en egenskap `categories` med strängtypsvärde. Tilldela till exempel värdet `customfunctionscategory` till `categories` -egenskapen för `customclientlibs` mapp.
+**Klona databasen**
+
+Klona [AEM Forms as a Cloud Service Repository](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#accessing-git):
+
+1. Öppna kommandoraden eller terminalfönstret.
+
+1. Navigera till önskad plats på datorn där du vill lagra databasen.
+
+1. Kör följande kommando för att klona databasen:
+
+   `git clone [Git Repository URL]`
+
+Det här kommandot hämtar databasen och skapar en lokal mapp för den klonade databasen på din dator. I den här guiden ser vi den här mappen som [AEMaaCS-projektkatalog].
+
+**Lägg till en biblioteksmapp för klient**
+
+Så här lägger du till en ny biblioteksmapp i [AEMaaCS-projektkatalog]gör du så här:
+
+1. Öppna [AEMaaCS-projektkatalog] i en redigerare.
+
+   ![anpassad mappstruktur för funktioner](/help/forms/assets/custom-library-folder-structure.png)
+
+1. Sök `ui.apps`.
+1. Lägg till ny mapp. Lägg till exempel till en mapp med namnet som `experience-league`.
+1. Navigera till `/experience-league/` mapp och lägga till en `ClientLibraryFolder`. Skapa till exempel en biblioteksmapp för klienten med namnet `customclientlibs`.
+
+   `Location is: [AEMaaCS project directory]/ui.apps/src/main/content/jcr_root/apps/`
+
+**Lägga till filer och mappar i mappen Klientbibliotek**
+
+Lägg till följande i den tillagda klientbiblioteksmappen:
+
+* .content.xml-fil
+* js.txt, fil
+* js-mapp
+
+`Location is: [AEMaaCS project directory]/ui.apps/src/main/content/jcr_root/apps/experience-league/customclientlibs/`
+
+1. I `.content.xml` lägga till följande kodrader:
+
+   ```javascript
+   <?xml version="1.0" encoding="UTF-8"?>
+   <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+   jcr:primaryType="cq:ClientLibraryFolder"
+   categories="[customfunctionscategory]"/>
+   ```
 
    >[!NOTE]
    >
    > Du kan välja valfritt namn för `client library folder` och `categories` -egenskap.
 
-1. Skapa en mapp med namnet `js`.
-1. Navigera till `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/customclientlibs/js` mapp.
-1. Lägg till en JavaScript-fil, till exempel `function.js`. Filen innehåller koden för den anpassade funktionen.
-1. Spara `function.js` -fil.
-1. Navigera till `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/customclientlibs/js` mapp.
-1. Lägg till en textfil som `js.txt`. Filen innehåller:
+1. I `js.txt` lägga till följande kodrader:
 
    ```javascript
-       #base=js
-       functions.js
+         #base=js
+       function.js
    ```
+1. I `js` lägger du till javascript-filen som `function.js` som innehåller de anpassade funktionerna:
 
-1. Spara `js.txt` -fil.
-1. Lägg till, implementera och skicka ändringarna i databasen med följande kommandon:
+   ```javascript
+    /**
+        * Calculates Age
+        * @name calculateAge
+        * @param {object} field
+        * @return {string} 
+    */
+   
+    function calculateAge(field) {
+    var dob = new Date(field);
+    var now = new Date();
+   
+    var age = now.getFullYear() - dob.getFullYear();
+    var monthDiff = now.getMonth() - dob.getMonth();
+   
+    if (monthDiff < 0 || (monthDiff === 0 && now.getDate() < dob.getDate())) {
+    age--;
+    }
+   
+    return age;
+    }
+   ```
+1. Spara filerna.
+
+![anpassad mappstruktur för funktioner](/help/forms/assets/custom-function-added-files.png)
+
+**Inkludera den nya mappen i filter.xml**:
+
+1. Navigera till `/ui.apps/src/main/content/META-INF/vault/filter.xml` i [AEMaaCS-projektkatalog].
+
+1. Öppna filen och lägg till följande rad i slutet:
+
+   `<filter root="/apps/experience-league" />`
+1. Spara filen.
+
+![XML för anpassat funktionsfilter](/help/forms/assets/custom-function-filterxml.png)
+
+**Distribuera den nyligen skapade biblioteksmappen för klienter till AEM**
+
+Driftsätt AEM as a Cloud Service, [AEMaaCS-projektkatalog]i er Cloud Service. Så här distribuerar du till din Cloud Service:
+
+1. Verkställ ändringarna
+
+   1. Lägg till, implementera och skicka ändringarna i databasen med följande kommandon:
 
    ```javascript
        git add .
@@ -259,7 +349,11 @@ Du kan lägga till anpassade funktioner genom att lägga till ett klientbibliote
        git push
    ```
 
-1. [Kör pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline) för att distribuera den anpassade funktionen.
+1. Distribuera den uppdaterade koden:
+
+   1. Utlösa en distribution av koden via den befintliga pipeline-funktionen för hela stackar. Detta skapar och distribuerar automatiskt den uppdaterade koden.
+
+Om du inte redan har konfigurerat en pipeline kan du läsa guiden på [hur man lägger upp en pipeline för AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline).
 
 När pipeline har körts blir den anpassade funktionen som lagts till i klientbiblioteket tillgänglig i din [Regelredigerare för anpassat formulär](/help/forms/rule-editor-core-components.md).
 
@@ -443,7 +537,7 @@ Låt oss lära oss hur anpassade funktioner använder fält och globala objekt m
 
 ![Kontakta oss](/help/forms/assets/contact-us-form.png)
 
-#### Visa en panel med regeln SetProperty
++++ **Användningsfall**: Visa en panel med `SetProperty` regel
 
 Lägg till följande kod i den anpassade funktionen enligt anvisningarna i [create-custom-function](#create-custom-function) för att ange formulärfältet som `Required`.
 
@@ -485,8 +579,9 @@ Om det finns fel i fälten i `personaldetails` visas de på fältnivå när du k
 
 ![Ange förhandsgranskning av egenskapsformulär](/help/forms/assets/set-property-panel.png)
 
++++
 
-#### Validera ett fält.
++++ **Användningsfall**: Verifiera fältet.
 
 Lägg till följande kod i den anpassade funktionen enligt anvisningarna i [create-custom-function](#create-custom-function) för att validera fältet.
 
@@ -525,9 +620,9 @@ Om användaren anger ett giltigt telefonnummer och alla fält i dialogrutan `per
 
 ![Mönster för e-postadressvalidering](/help/forms/assets/validate-form-preview-form.png)
 
++++
 
-
-#### Återställ en panel
++++ **Användningsfall**: Återställ en panel
 
 Lägg till följande kod i den anpassade funktionen enligt anvisningarna i [create-custom-function](#create-custom-function) för att återställa panelen.
 
@@ -559,9 +654,9 @@ Se bilden nedan för att visa att om användaren klickar på `clear` -knappen `p
 
 ![Återställ formulär](/help/forms/assets/custom-function-reset-form.png)
 
++++
 
-
-#### Visa ett anpassat meddelande på fältnivå och markera fältet som ogiltigt
++++ **Användningsfall**: Om du vill visa ett anpassat meddelande på fältnivå och markera fältet som ogiltigt
 
 Du kan använda `markFieldAsInvalid()` för att definiera ett fält som ogiltigt och ange ett anpassat felmeddelande på fältnivå. The `fieldIdentifier` värdet kan `fieldId`, eller `field qualifiedName`, eller `field dataRef`. Värdet för objektet med namnet `option` kan `{useId: true}`, `{useQualifiedName: true}`, eller `{useDataRef: true}`.
 Syntaxerna som används för att markera ett fält som ogiltigt och ange ett anpassat meddelande är:
@@ -602,9 +697,9 @@ Om användaren skriver in mer än 15 tecken i textrutan för kommentarer valider
 
 ![Markera fältet som ett giltigt förhandsgranskningsformulär](/help/forms/assets/custom-function-validfield-form.png)
 
++++
 
-
-#### Ändra inhämtade data innan de skickas
++++ **Användningsfall**: Skicka ändrade data till servern
 
 Följande kodrad:
 `globals.functions.submitForm(globals.functions.exportData(), false);` används för att skicka formulärdata efter manipulering.
@@ -647,9 +742,9 @@ Du kan även kontrollera konsolfönstret för att visa data som skickats till se
 
 ![Inspect data i konsolfönstret](/help/forms/assets/custom-function-submit-data-console-data.png)
 
++++
 
-
-#### Åsidosätt lyckade inskickade data och felmeddelanden för ditt anpassade formulär
++++ **Användningsfall**: Åsidosätt formulärskickning och felhantering
 
 Lägg till följande kodrad enligt anvisningarna i [create-custom-function](#create-custom-function) för att anpassa inlämnings- eller felmeddelandet för formulärinskickning och visa formulärinskickningsmeddelandena i en modal ruta:
 
@@ -758,19 +853,19 @@ Om du vill visa om formuläret har skickats in eller misslyckats på ett standar
 
 Om den anpassade överföringshanteraren inte fungerar som förväntat i befintliga AEM projekt eller formulär, se [felsökning](#troubleshooting) -avsnitt.
 
-<!--
++++
 
++++ **Användningsfall**: Utför åtgärder i en specifik instans av den repeterbara panelen
 
-#### Use Case:  Perform actions in a specific instance of the repeatable panel 
+Regler som skapas med den visuella regelredigeraren på en repeterbar panel tillämpas på den sista instansen av den repeterbara panelen. Om du vill skriva en regel för en viss instans av den repeterbara panelen kan vi använda en anpassad funktion.
 
-Rules created using the visual rule editor on a repeatable panel apply to the last instance of the repeatable panel. To write a rule for a specific instance of the repeatable panel, we can use a custom function.
+Låt oss skapa ett annat formulär för att samla in information om resenärer som är på väg till en destination. En resande panel läggs till som en upprepningsbar panel, där användaren kan lägga till information för 5 resenärer med `Add Traveler` -knappen.
 
-Let's create a form to collect information about travelers heading to a destination. A traveler panel is added as a repeatable panel, where the user can add details for 5 travelers using the Add button.
+![Information om resenärer](/help/forms/assets/traveler-info-form.png)
 
-Add the following line of code as explained in the [create-custom-function](#create-custom-function) section, to perform actions in a specific instance of the repeatable panel, other than the last one:
+Lägg till följande kodrad enligt anvisningarna i [create-custom-function](#create-custom-function) för att utföra åtgärder i en specifik instans av den repeterbara panelen, förutom den sista:
 
 ```javascript
-
 /**
 * @name hidePanelInRepeatablePanel
 * @param {scope} globals
@@ -781,126 +876,126 @@ function hidePanelInRepeatablePanel(globals)
     // hides a panel inside second instance of repeatable panel
     globals.functions.setProperty(repeatablePanel[1].traveler, {visible : false});
 }  
-
-```
- 
-In this example, the `hidePanelInRepeatablePanel` custom function performs action in a specific instance of the repeatable panel. In the above code, `travelerinfo` represents the repeatable panel. The `repeatablePanel[1].traveler, {visible: false}` code hides the panel in the second instance of the repeatable panel. 
-Let us add a button labeled `Hide` to add a rule to hide a specific panel.
-
-![Hide Panel rule](/help/forms/assets/custom-function-hidepanel-rule.png)
-
-Refer to the video below to demonstrate that when the `Hide` is clicked, the panel in the second repeatable instance hides:
-
-
-
-
-#### **Usecase**: Pre-fill the field with a value when the form loads
-
-Add the following line of code, as explained in the [create-custom-function](#create-custom-function) section, to load the pre-filled value in a field when the form is initialized:
-
-```javascript
-/**
- * @name importData
- * @param {scope} globals
- */
-function importData(globals)
-{
-    globals.functions.importData(Object.fromEntries([['amount',200000]]));
-} 
 ```
 
-In the aforementioned code, the `importData` function updates the value in the `amount` textbox field when the form loads.
+I det här exemplet `hidePanelInRepeatablePanel` den anpassade funktionen utför en åtgärd i en viss instans av den repeterbara panelen. I ovanstående kod `travelerinfo` representerar den repeterbara panelen. The `repeatablePanel[1].traveler, {visible: false}` koden döljer panelen i den andra instansen av den repeterbara panelen.
 
-Let us create a rule for the `Submit` button, where the value in the `amount` textbox field changes to specified value when the form loads:
+Låt oss lägga till en knapp med etiketten `Hide` och lägga till en regel som döljer den andra instansen av en repeterbar panel.
 
-![Import Data Rule](/help/forms/assets/custom-function-import-data.png)
+![Dölj panelregel](/help/forms/assets/custom-function-hidepanel-rule.png)
 
-Refer to the screenshot below, which demonstrates that when the form loads, the value in the amount textbox is pre-filled with a specified value:
+Titta på videon nedan för att visa att när `Hide` när någon klickar på panelen i den andra upprepningsbara instansen döljs:
 
-![Import Data Rule](/help/forms/assets/cg)
-
-
-
-#### **Usecase**: Set focus on the specific field
-
-Add the following line of code, as explained in the [create-custom-function](#create-custom-function) section, to set focus on the specified field when the `Submit` button is clicked.:
-
-```javascript
-/**
- * @name setFocus
- * @param {object} field
- * @param {scope} globals
- */
-function setFocus(field, globals)
-{
-    globals.functions.setFocus(field);
-}
-```
-
-Let us add a rule to the `Submit` button to set focus on the `email` field when it is clicked:
-
-![Set Focus Rule](/help/forms/assets/custom-function-set-focus.png)
-
-Refer to the screenshot below, which demonstrates that when the `Submit` button is clicked, the focus is set on the `email` field:
-
-![Set Focus Rule](/help/forms/assets/custom-function-set-focus-form.png)
-
->[!NOTE]
->
-> You can use the optional `$focusOption` parameter, if you want to focus on the next or previous field relative to the `email` field.
+>[!VIDEO](https://video.tv.adobe.com/v/3429554?quality=12&learn=on)
 
 +++
 
-+++ **Usecase**: Add or delete repeatable panel using the `dispatchEvent` property
++++ **Usecase**: Fyll i fältet i förväg med ett värde när formuläret läses in
 
-Add the following line of code, as explained in the [create-custom-function](#create-custom-function) section, to add a panel when the `Add Traveler` button is clicked using the `dispatchEvent` property:
+Lägg till följande kodrad enligt anvisningarna i [create-custom-function](#create-custom-function) för att läsa in det förfyllda värdet i ett fält när formuläret initieras:
 
 ```javascript
 /**
- 
- * @name addInstance
+ * Tests import data
+ * @name testImportData
  * @param {scope} globals
  */
-function addInstance(globals)
+function testImportData(globals)
 {
-    var repeatablePanel = globals.form.traveler;
-    globals.functions.dispatchEvent(repeatablePanel, 'addInstance');
+    globals.functions.importData(Object.fromEntries([['amount','10000']]));
 } 
-
 ```
 
-Let us add a rule to the `Add Traveler` button to add the repeatable panel when it is clicked:
+I den ovannämnda koden `testImportData` funktionen förifyller `Booking Amount` textrutefältet när formuläret läses in. Låt oss anta att bokningsformuläret kräver att minimibokningsbeloppet är `10,000`.
 
-![Add Panel Rule](/help/forms/assets/custom-function-add-panel.png)
+Låt oss skapa en regel vid formulärinitiering, där värdet i `Booking Amount` textfälten är förifyllda med ett angivet värde när formuläret läses in:
 
-Refer to the screenshot below, which demonstrates that when the `Add Traveler` button is clicked, the traveler panel is added using the `dispatchEvent` property:
+![Importera dataregel](/help/forms/assets/custom-function-import-data.png)
 
-![Add Panel](/help/forms/assets/customg)
+Se skärmbilden nedan som visar att när formuläret läses in är värdet i `Booking Amount` textrutan är förfylld med ett angivet värde:
 
-Similarly, add a button labeled `Delete Traveler` to delete a panel. Add the following line of code, as explained in the [create-custom-function](#create-custom-function) section, to delete a panel when the `Delete Traveler` button is clicked using the `dispatchEvent` property:
+![Importera dataregelformulär](/help/forms/assets/custom-function-prefill-form.png)
+
++++
+
++++ **Usecase**: Sätt fokus på det specifika fältet
+
+Lägg till följande kodrad enligt anvisningarna i [create-custom-function](#create-custom-function) för att ange fokus på det angivna fältet när `Submit` klickar du på knappen:
 
 ```javascript
-
 /**
- 
- * @name removeInstance
+ * @name testSetFocus
+ * @param {object} emailField
  * @param {scope} globals
  */
-function removeInstance(globals)
+    function testSetFocus(field, globals)
+    {
+        globals.functions.setFocus(field);
+    }
+```
+
+Låt oss lägga till en regel i `Submit` knapp för att ställa in fokus på `Email ID` textrutefält när någon klickar på det:
+
+![Ange fokusregel](/help/forms/assets/custom-function-set-focus.png)
+
+Se skärmbilden nedan som visar att när `Submit` klickar du på knappen, fokuseras på knappen `Email ID` fält:
+
+![Ange fokusregel](/help/forms/assets/custom-function-set-focus-form.png)
+
+>[!NOTE]
+>
+> Du kan använda det valfria `$focusOption` om du vill fokusera på nästa eller föregående fält i förhållande till `email` fält.
+
++++
+
++++ **Usecase**: Lägg till eller ta bort upprepningsbar panel med `dispatchEvent` property
+
+Lägg till följande kodrad enligt anvisningarna i [create-custom-function](#create-custom-function) för att lägga till en panel när `Add Traveler` klickas på knappen med `dispatchEvent` egenskap:
+
+```javascript
+/**
+ * Tests add instance with dispatchEvent
+ * @name testAddInstance
+ * @param {scope} globals
+ */
+function testAddInstance(globals)
+{
+    var repeatablePanel = globals.form.traveler;
+    globals.functions.dispatchEvent(repeatablePanel,'addInstance');
+}
+```
+
+Låt oss lägga till en regel i `Add Traveler` om du vill lägga till den repeterbara panelen när någon klickar på den:
+
+![Lägg till panelregel](/help/forms/assets/custom-function-add-panel.png)
+
+Se gif nedan som visar att när `Add Traveler` när någon klickar på knappen läggs panelen till med `dispatchEvent` egenskap:
+
+![Lägg till panel](/help/forms/assets/custom-function-add-panel.gif)
+
+Lägg på samma sätt till följande kodrad, vilket förklaras i [create-custom-function](#create-custom-function) för att ta bort en panel när `Delete Traveler` klickas på knappen med `dispatchEvent` egenskap:
+
+```javascript
+/**
+ 
+ * @name testRemoveInstance
+ * @param {scope} globals
+ */
+function testRemoveInstance(globals)
 {
     var repeatablePanel = globals.form.traveler;
     globals.functions.dispatchEvent(repeatablePanel, 'removeInstance');
 } 
-
 ```
-Let us add a rule to the `Delete Traveler` button to delete the repeatable panel when it is clicked:
 
-![Delete Panel Rule](/help/forms/assets/custom-function-delete-panel.png)
+Låt oss lägga till en regel i `Delete Traveler` för att ta bort den repeterbara panelen när någon klickar på den:
 
-Refer to the screenshot below, which demonstrates that when the `Delete Traveler` button is clicked, the traveler panel is deleted using the `dispatchEvent` property:
+![Ta bort panelregel](/help/forms/assets/custom-function-delete-panel.png)
 
-![Delete Panel](/help/forms/assets/customg)
--->
+Se gif nedan som visar att när `Delete Traveler` när användaren klickar på knappen tas den resande panelen bort med `dispatchEvent` egenskap:
+
+![Ta bort panel](/help/forms/assets/custom-function-delete-panel.gif)
+
 
 ## Cachelagringsstöd för anpassad funktion
 
