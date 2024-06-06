@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 3e63cfc65ea28a481b50f431483a13c2fd80853c
+source-git-commit: 05144cc11c3a3e99e4e76aa6c8720592e9ca7a9f
 workflow-type: tm+mt
-source-wordcount: '1903'
+source-wordcount: '1900'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,12 @@ Titta på videon om versionsöversikten från maj 2024 om du vill se en sammanfa
 
 ### Nya funktioner på webbplatser {#sites-new-features}
 
-**AEM för Edge Delivery Services**
+#### RUM-datatjänst (Real Use Monitoring) {#real-use-monitoring}
+
+* **[RUM-datatjänsten (Real Use Monitoring) är nu GA](/help/implementing/cloud-manager/content-requests.md#real-user-monitoring-for-aem-as-a-cloud-service)** möjliggör datainsamling på klientsidan för AEM as a Cloud Service.
+Tjänsten Real Use Monitoring, kundsidessamlingen, ger en mer exakt återgivning av interaktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det ger kunder med avancerade insikter om sidtrafik och prestanda. Det är en utmärkt möjlighet att lära sig mer om hur sidan fungerar och få insikter för att förbättra den.
+
+### AEM för Edge Delivery Services
 
 Förbättrad stabilitet och olika förbättringar för en bättre redigeringsupplevelse.
 
@@ -212,11 +217,6 @@ Ungefär som AEM 6.5, kommer Apache/dispatcher att importera omskrivningskartor 
 #### Edge Side Includes (ESI) för inläsning av dynamiskt innehåll (tidig Adobe-program) {#esi-early-adopter}
 
 Hanterad CDN i Adobe har nu stöd för [Edge Side Includes (ESI)](/help/implementing/dispatcher/edge-side-includes.md), ett markeringsspråk för sammanställning av dynamiskt webbinnehåll på kantnivå. Genom att ta med ESI-fragment kan du cachelagra hela HTML-sidan vid CDN med högre TTL-värden, medan du oftare hämtar mindre avsnitt från ursprungsläget som kräver högre uppdateringsintervall (nedre TTL-värden). <!--Please reach out to **<aemcs-cdn-config-adopter@adobe.com>** for more information.-->
-
-#### Real User Monitoring (RUM) Data Service (Early Adopter Program)
-
-* **[RUM-datatjänsten (Real Use Monitoring) är nu GA](/help/implementing/cloud-manager/content-requests.md#real-user-monitoring-for-aem-as-a-cloud-service)** möjliggör datainsamling på klientsidan för AEM as a Cloud Service.
-Tjänsten Real Use Monitoring, kundsidessamlingen, ger en mer exakt återgivning av interaktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det ger kunder med avancerade insikter om sidtrafik och prestanda. Det är en utmärkt möjlighet att lära sig mer om hur sidan fungerar och få insikter för att förbättra den.
 
 ## [!DNL Experience Manager] Stödlinjer {#guides}
 

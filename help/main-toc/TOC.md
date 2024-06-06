@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 8123d5c9e3343361baab651d2c1eb72779b952ab
+source-git-commit: d4ada5f15a587d54f46a475ca574134988b463d8
 workflow-type: tm+mt
-source-wordcount: '5001'
+source-wordcount: '5010'
 ht-degree: 3%
 
 ---
@@ -424,6 +424,7 @@ ht-degree: 3%
       + [Exportera innehållsfragment till Adobe Target](/help/sites-cloud/integrating/content-fragments-target.md)
       + [Exportera Experience Fragments till Adobe Target](/help/sites-cloud/integrating/experience-fragments-target.md)
       + [Integrera med Adobe Campaign](/help/sites-cloud/integrating/campaign.md)
+   + [Övervakning av faktisk användning för AEM as a Cloud Service](/help/sites-cloud/administering/real-use-monitoring-for-aem-as-a-cloud-service.md)
 + Assets {#assets}
    + [Översikt och nyheter](/help/assets/overview.md)
    + [Betydande ändringar i [!DNL Assets] som [!DNL Cloud Service]](/help/assets/assets-cloud-changes.md)
