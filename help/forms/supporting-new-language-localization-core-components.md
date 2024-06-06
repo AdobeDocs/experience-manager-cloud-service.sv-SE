@@ -4,9 +4,9 @@ description: Lär dig hur du lägger till nya språkområden i ett adaptivt form
 feature: Adaptive Forms, Core Components
 Role: Developer, Author
 exl-id: bc06542b-84c8-4c6a-a305-effbd16d5630
-source-git-commit: 9cb3b52d0cf172c16777eadbc4d78b267c3db513
+source-git-commit: 8730383d26c6f4fbe31a25a43d33bf314251d267
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '2068'
 ht-degree: 0%
 
 ---
@@ -369,6 +369,7 @@ Med de här stegen får du hjälp att förhandsgranska ett adaptivt formulär me
 ## De bästa sätten att stödja ny lokalisering {#best-practices}
 
 * Adobe rekommenderar att du skapar ett översättningsprojekt när du har skapat ett adaptivt formulär. Detta effektiviserar lokaliseringsprocessen.
+* När komponenterna Numerisk ruta och Datumväljare översätts till ett visst språkområde kan det uppstå formateringsproblem. För att minska detta kan du **Språk** har tagits med i dialogrutan Konfigurera [Datumväljarkomponent](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/number-input#formats-configure-tab) och [Numerisk rutkomponent](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/numeric-box#formats-configure-tab).
 
 
 * Hantera nya fält:

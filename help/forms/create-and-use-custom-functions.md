@@ -6,7 +6,7 @@ contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
 exl-id: 24607dd1-2d65-480b-a831-9071e20c473d
-source-git-commit: d42728bb3eb81c032723db8467957d2e01c5cbed
+source-git-commit: 8730383d26c6f4fbe31a25a43d33bf314251d267
 workflow-type: tm+mt
 source-wordcount: '4340'
 ht-degree: 0%
@@ -996,6 +996,7 @@ Se gif nedan som visar att när `Delete Traveler` när användaren klickar på k
 
 ![Ta bort panel](/help/forms/assets/custom-function-delete-panel.gif)
 
++++
 
 ## Cachelagringsstöd för anpassad funktion
 

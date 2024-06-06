@@ -1,17 +1,17 @@
 ---
-title: Läs in alternativ för listrutor från URL
+title: Alternativ för listrutealternativ från en URL eller ett annat blad för Edge Delivery Services för AEM Forms as a Cloud Service
 description: Alternativen i listrutan ingår i ett visst kalkylblad och importeras sedan till det primära kalkylbladet via den angivna URL:en.
 feature: Edge Delivery Services
 exl-id: 5b0bc1b6-6e33-41f3-b7c1-4d997787b6cd
-source-git-commit: 4a534f4335376673c362ef91a877e67a523be560
+source-git-commit: 8730383d26c6f4fbe31a25a43d33bf314251d267
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '469'
 ht-degree: 0%
 
 ---
 
 
-# Alternativ för listrutelistan Läs in från URL
+# Alternativ från en URL eller ett annat blad för Edge Delivery Services för AEM Forms as a Cloud Service
 
 Forms innehåller ofta listrutor där användarna kan välja bland fördefinierade alternativ. Dessa alternativ definieras vanligtvis i själva formuläret, men det kan vara besvärligt att hantera långa listor. I den här handboken beskrivs hur du kan förbättra formulärutvecklingen genom att läsa in listrutealternativ från ett separat kalkylblad via en URL.
 
