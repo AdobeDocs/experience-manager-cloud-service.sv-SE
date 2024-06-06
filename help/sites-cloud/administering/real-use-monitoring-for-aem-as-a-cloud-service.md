@@ -1,7 +1,7 @@
 ---
 title: Övervakning av faktisk användning för AEM as a Cloud Service
 description: Lär dig hur du använder Real Use Monitoring (RUM) för att hämta in och analysera den digitala användarupplevelsen för en webbplats eller tillämpning i realtid.
-source-git-commit: a15f973c21044e16751401bd0ffb256a4d0fb17d
+source-git-commit: d2997213d47d398efdb7ce3810fa0959ece072c6
 workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 0%
@@ -10,6 +10,7 @@ ht-degree: 0%
 
 
 >[!NOTE]
+>
 >Vi är glada över att kunna meddela [GA-utrullning](/help/release-notes/release-notes-cloud/release-notes-current.md#real-use-monitoring) för tjänsten för övervakning av verkligt bruk, datainsamlingen på klientsidan. Det är en automatiserad tjänst och det krävs ingen kundkonfiguration.
 
 # Övervakningstjänst för faktisk användning för AEM as a Cloud Service {#real-use-monitoring-service-for-aem-as-a-cloud-service}
@@ -113,6 +114,6 @@ När du analyserar RUM-data kan det finnas skillnader i sidvyer och andra presta
 
 1. **Hur avanmäler jag mig?**
 
-Vi rekommenderar starkt att du använder övervakning av riktig användning (RUM) på grund av dess betydande fördelar och att du kan optimera dina digitala upplevelser. Den kan ge värdefulla insikter som kan förbättra webbplatsens prestanda. Tjänsten är utformad för att vara sömlös och påverkar inte webbplatsens prestanda.
+   Vi rekommenderar starkt att du använder övervakning av riktig användning (RUM) på grund av dess betydande fördelar och att du kan optimera dina digitala upplevelser. Den kan ge värdefulla insikter som kan förbättra webbplatsens prestanda. Tjänsten är utformad för att vara sömlös och påverkar inte webbplatsens prestanda.
 
-Att välja bort innebär att man missar dessa insikter. Om du råkar ut för några problem kontaktar du Adobe Support.
+   Att välja bort innebär att man missar dessa insikter. Om du råkar ut för några problem kontaktar du Adobe Support.
