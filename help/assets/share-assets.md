@@ -1,13 +1,12 @@
 ---
 title: Distribuera och dela resurser, mappar och samlingar
 description: Distribuera digitala resurser med metoder som att dela som en länk, ladda ned och via [!DNL Brand Portal], [!DNL desktop app]och [!DNL Asset Link].
-contentOwner: Vishabh Gupta
 feature: Asset Management, Collaboration, Asset Distribution
 role: User, Admin
 exl-id: 14e897cc-75c2-42bd-8563-1f5dd23642a0
-source-git-commit: f7f60036088a2332644ce87f4a1be9bae3af1c5e
+source-git-commit: 1b4c5d985c71a84449a13b79fc00adea0443a631
 workflow-type: tm+mt
-source-wordcount: '1590'
+source-wordcount: '1789'
 ht-degree: 0%
 
 ---
@@ -86,7 +85,7 @@ Så här delar du resurser som en offentlig URL:
 1. The **[!UICONTROL Link Sharing]** som innehåller en autogenererad resurslänk i dialogrutan **[!UICONTROL Share Link]** fält.
 1. Ange förfallodatumet för den delade länken efter behov.
 1. Under **[!UICONTROL Link Settings]**, markera eller avmarkera `Include Originals` eller `Include Renditions` om du vill inkludera eller exkludera någon av de två. Du måste välja minst ett alternativ.
-1. Namnen på de valda resurserna visas i den högra kolumnen i [!DNL Share Link] -dialogrutan.
+1. Namnen på de markerade resurserna visas i den högra kolumnen i [!DNL Share Link] -dialogrutan.
 1. Kopiera resurslänken och dela den med användarna.
 
 ### Dela resurslänk via e-postmeddelande {#share-assets-link-through-email}
@@ -101,13 +100,49 @@ Så här delar du resurser via e-post:
    * I **[!UICONTROL Subject]** anger du ett ämne för att ange syftet med de delade resurserna.
    * I **[!UICONTROL Message]** skriver du ett meddelande om det behövs.
    * I **[!UICONTROL Expiration]** använder du datumväljaren för att ange ett förfallodatum och en förfallotid för länken.
-   * Aktivera **[!UICONTROL Allow download of original file]** för att mottagarna ska kunna hämta den ursprungliga återgivningen.
+   * Aktivera **[!UICONTROL Allow download of the original file]** för att mottagarna ska kunna hämta den ursprungliga återgivningen.
 
 1. Klicka på **[!UICONTROL Share]**. Ett meddelande bekräftar att länken delas med användarna. Användarna får ett e-postmeddelande med den delade länken.
 
    ![E-post för länkdelning](assets/link-sharing-email-notification.png)
 
-### Hämta resurser via resurslänken
+### Anpassa e-postmall {#customize-email-template}
+
+En väldesignad mall förmedlar professionalism och kompetens och ökar trovärdigheten för ert budskap och er organisation. The [!DNL Adobe Experience Manager] Med kan du anpassa e-postmallen, som skickas till mottagarna som tar emot e-postmeddelandet som innehåller den delade länken. Anpassade e-postmallar gör det dessutom möjligt att personalisera ditt e-postinnehåll genom att adressera mottagarna med namn och referensspecifik information som är relevant för dem. Denna personliga beröring kan få mottagaren att känna sig värderad och öka engagemanget. Inte bara det, en anpassad mall säkerställer att e-postmeddelandena är i linje med varumärkesidentiteten, inklusive logotyper, färger och teckensnitt. Enhetlighet stärker varumärkesigenkänningen och förtroendet bland mottagarna.
+
+#### Format för en anpassad e-postmall {#format-of-custom-email-template}
+
+E-postmallen kan anpassas med oformaterad text eller HTML. Den redigerbara malllänken finns på `/libs/settings/dam/adhocassetshare/en.txt`. Du kan åsidosätta mallen genom att skapa filen `/apps/settings/dam/adhocassetshare/en.txt`. Du kan ändra e-postmallen så många gånger som behövs.
+
+| Platshållare | Beskrivning |
+|---|-----|
+| ${emailSubject} | Ämne för ett e-postmeddelande |
+| ${emailInitiator} | E-post-ID för den användare som skapade e-postmeddelandet |
+| ${emailMessage} | E-postbrödtext |
+| ${pagePath} | URL för den delade länken |
+| ${linkExpiry} | Utgångsdatum för delad länk |
+| ${host.prefix} | Ursprung för [!DNL Experience Manager] instans, till exempel `http://www.adobe.com"` |
+
+#### Exempel på anpassad e-postmall {#custom-email-template-example}
+
+```
+subject: ${emailSubject}
+
+<!DOCTYPE html>
+<html><body>
+<p><strong>${emailInitiator}</strong> invited you to review assets.</p>
+<p>${emailMessage}</p>
+<p>The shared link will be available until ${linkExpiry}.
+<p>
+    <a href="${pagePath}" target="_blank"><strong>Open</strong></a>
+</p>
+
+Sent from instance: ${host.prefix}
+
+</body></html>
+```
+
+### Hämta resurser via resurslänken {#download-assets-using-asset-link}
 
 Alla användare som har tillgång till länken för delade resurser kan hämta de resurser som paketerats i en zip-mapp. Hämtningsprocessen är densamma oavsett om en användare använder länken för det kopierade objektet eller resurslänken som delas via e-postmeddelandet.
 
@@ -211,7 +246,7 @@ Användarna kan hämta de nödvändiga resurserna och dela dem utanför [!DNL Ex
 
 Marknadsförare och andra användare kan enkelt dela godkänt material med sina kreatörer genom att
 
-* **Experience Manager datorprogram**: Programmet fungerar i Windows och Mac. Se [översikt över datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html). Om du vill veta hur en auktoriserad skrivbordsanvändare enkelt kan komma åt de delade resurserna kan du gå till [bläddra bland, söka efter och förhandsgranska resurser](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets). Skrivbordsanvändare kan skapa resurser och dela dem med sina motsvarigheter som är Experience Manager, till exempel genom att överföra nya bilder. Se [överföra resurser med datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#upload-and-add-new-assets-to-aem).
+* **Experience Manager datorprogram**: Programmet fungerar i Windows och Mac. Se [översikt över datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html). Om du vill veta hur en auktoriserad skrivbordsanvändare enkelt kan komma åt de delade resurserna kan du gå till [bläddra bland, söka efter och förhandsgranska resurser](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets). Skrivbordsanvändare kan skapa resurser och dela dem med sina motsvarigheter som är Experience Manager, till exempel genom att överföra nya bilder. Se [överföra resurser med ett skrivbordsprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#upload-and-add-new-assets-to-aem).
 
 * **Adobe Asset Link**: Kreatörer kan söka efter och använda resurser direkt inifrån [!DNL Adobe InDesign], [!DNL Adobe Illustrator]och [!DNL Adobe Photoshop].
 
@@ -266,7 +301,7 @@ Från [!DNL Assets] -användargränssnittet i en webbläsare kan du utforska res
 
 ### Konfigurationer som ska användas [!DNL Adobe Asset Link] {#configure-asset-link}
 
-Adobe Asset Link effektiviserar samarbetet mellan kreatörer och marknadsförare när det gäller att skapa innehåll. Den ansluts [!DNL Adobe Experience Manager Assets] med [!DNL Creative Cloud] datorprogram [!DNL Adobe InDesign], [!DNL Adobe Photoshop]och [!DNL Adobe Illustrator]. The [!DNL Adobe Asset Link] ger kreatörerna tillgång till och kan ändra innehåll som lagras i [!DNL Assets] utan att lämna de kreativa program de är mest bekanta med.
+Adobe Asset Link effektiviserar samarbetet mellan kreatörer och marknadsförare när det gäller att skapa innehåll. Den ansluts [!DNL Adobe Experience Manager Assets] med [!DNL Creative Cloud] datorprogram, [!DNL Adobe InDesign], [!DNL Adobe Photoshop]och [!DNL Adobe Illustrator]. The [!DNL Adobe Asset Link] ger kreatörerna tillgång till och kan ändra innehåll som lagras i [!DNL Assets] utan att lämna de kreativa program de är mest bekanta med.
 
 Se [konfigurera [!DNL Assets] för att använda den med [!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html).
 
@@ -300,3 +335,4 @@ Se [konfigurera [!DNL Assets] för att använda den med [!DNL Adobe Asset Link]]
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
 * [Publicera resurser till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+
