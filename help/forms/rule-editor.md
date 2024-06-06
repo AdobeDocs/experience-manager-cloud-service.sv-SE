@@ -5,7 +5,7 @@ feature: Adaptive Forms, Foundation Components
 role: User
 level: Beginner, Intermediate
 exl-id: 6fd38e9e-435e-415f-83f6-3be177738c00
-source-git-commit: 494e90bd5822495f0619e8ebf55f373a26a3ffe6
+source-git-commit: 46cd7d689c6cbc453720b5798ffb552da58f66e7
 workflow-type: tm+mt
 source-wordcount: '6292'
 ht-degree: 0%
@@ -18,26 +18,21 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
+| AEM as a Cloud Service (Foundation Components) | Den här artikeln |
+| AEM as a Cloud Service (kärnkomponenter) | [Klicka här](/help/forms/rule-editor-core-components.md) |
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html) |
-| AEM as a Cloud Service | Den här artikeln |
-
-
-| Version | Artikellänk |
-| -------- | ---------------------------- |
-| Kärnkomponent | [Klicka här](/help/forms/rule-editor-core-components.md) |
-| Foundation Component | Den här artikeln |
 
 ## Ökning {#overview}
 
 Regelredigerarfunktionen ger formuläranvändare och utvecklare möjlighet att skriva regler på adaptiva formulärobjekt. Dessa regler definierar åtgärder som ska utlösas av formulärobjekt baserat på förinställda villkor, användarindata och användaråtgärder i formuläret. Det effektiviserar formulärifyllningen ytterligare och ger större precision och snabbhet.
 
-Regelredigeraren har ett intuitivt och förenklat användargränssnitt för att skriva regler. Regelredigeraren erbjuder en visuell redigerare för alla användare.<!-- In addition, only for forms power users, rule editor provides a code editor to write rules and scripts. --> Några av de nyckelåtgärder du kan utföra på adaptiva formulärobjekt med hjälp av regler är:
+Regelredigeraren har ett intuitivt och förenklat användargränssnitt för att skriva regler. Regelredigeraren erbjuder en visuell redigerare för alla användare.<!-- In addition, only for forms power users, rule editor provides a code editor to write rules and scripts. --> Några av de viktigaste åtgärderna som du kan utföra på adaptiva formulärobjekt med hjälp av regler är:
 
 * Visa eller dölja ett objekt
 * Aktivera eller inaktivera ett objekt
 * Ange ett värde för ett objekt
-* Validera ett objekts värde
-* Utför funktioner för att beräkna värdet för ett objekt
+* Verifiera värdet för ett objekt
+* Köra funktioner för att beräkna värdet för ett objekt
 * Anropa en tjänst för formulärdatamodell och utföra en åtgärd
 * Ange ett objekts egenskap
 
@@ -45,7 +40,7 @@ Regelredigeraren har ett intuitivt och förenklat användargränssnitt för att 
 
 Användare som läggs till i användargruppen för formulär kan skapa skript och redigera befintliga. Användare i [!DNL forms-users] kan använda skript men inte skapa eller redigera skript.
 
-## Skillnad mellan regelredigerare i kärnkomponenter och Regelredigerare i Foundation Components
+## Skillnaden mellan regelredigeraren i kärnkomponenter och regelredigeraren i grundkomponenter
 
 {{rule-editor-diff}}
 
@@ -114,11 +109,11 @@ Regelredigeraren innehåller en uppsättning fördefinierade regeltyper som du k
 
 ### [!UICONTROL When] {#whenruletype}
 
-The **[!UICONTROL When]** regeltypen följer efter **condition-action-alternate action** regelkonstruktion, eller ibland bara **villkorsåtgärd** konstruera. I den här regeltypen anger du först ett villkor för utvärdering följt av en åtgärd som ska utlösas om villkoret är uppfyllt ( `True`). När du använder regeltypen När kan du använda flera operatorer för AND och OR för att skapa [kapslade uttryck](#nestedexpressions).
+Regeltypen följer regelkonstruktionen condition-action-alternate action **, eller ibland bara condition-action-konstruktionen****.****[!UICONTROL When]** I den här regeltypen anger du först ett villkor för utvärdering följt av en åtgärd som ska utlösas om villkoret uppfylls ( `True`). När du använder regeltypen När kan du använda flera AND- och OR-operatorer för att skapa [kapslade uttryck.](#nestedexpressions)
 
-Med regeltypen När kan du utvärdera ett villkor i ett formulärobjekt och utföra åtgärder på ett eller flera objekt.
+Med hjälp av regeltypen När kan du utvärdera ett villkor för ett formulärobjekt och utföra åtgärder på ett eller flera objekt.
 
-Med enkla ord är en vanlig When-regel strukturerad enligt följande:
+I klartext är en typisk When-regel strukturerad på följande sätt:
 
 `When on Object A:`
 
@@ -126,17 +121,19 @@ Med enkla ord är en vanlig When-regel strukturerad enligt följande:
 
 `Then, do the following:`
 
-Åtgärd 2 på objekt B och åtgärd 3 på objekt C.
+Åtgärd 2 om mål B.
+OCH
+Åtgärd 3 om mål C.
 
 _
 
 När du har en komponent med flera värden, till exempel alternativknappar eller listor, hämtas alternativen automatiskt och görs tillgängliga för regelskaparen när du skapar en regel för den komponenten. Du behöver inte ange alternativvärdena igen.
 
-En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När regeln skapas hämtas alternativen (alternativknappar) automatiskt och görs tillgängliga för regelskaparen enligt följande:
+En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När du skapar regeln hämtas alternativen (alternativknapparna) automatiskt och görs tillgängliga för regelskaparen enligt följande:
 
-![Flera värden visar alternativ](assets/multivaluefcdisplaysoptions1.png)
+![Visningsalternativ för flera värden](assets/multivaluefcdisplaysoptions1.png)
 
-När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Med åtgärden Clear Value Of rensas det angivna objektets värde. Med alternativet Radera värde för i programsatsen When kan du skapa komplexa villkor med flera fält.
+När du skriver en When-regel kan du utlösa åtgärden Rensa värde för. Åtgärden Rensa värde för rensar värdet för det angivna objektet. Med alternativet Radera värde för i programsatsen When kan du skapa komplexa villkor med flera fält.
 
 ![Rensa värdet för](assets/clearvalueof1.png)
 
@@ -212,7 +209,11 @@ The **Ange värdet för** regeltypen är inte tillgänglig för alla formulärob
 
 Ange värdet för objekt A till:
 
-(sträng ABC) ELLER (objektegenskap X för objekt C) ELLER (värde från en funktion) ELLER (värde från ett matematiskt uttryck) ELLER (utdatavärde för en datamodelltjänst eller webbtjänst),
+(sträng ABC) ELLER
+(objektegenskap X för objekt C) ELLER
+(värde från en funktion) ELLER
+(värde från ett matematiskt uttryck) ELLER
+(utdatavärde för en datamodellstjänst eller webbtjänst)
 
 När (valfritt):
 
@@ -220,7 +221,7 @@ När (valfritt):
 
 I följande exempel används värdet i `dependentid` field som indata och fältets värde `Relation` anges till utdata `Relation` från argumentet `getDependent` för tjänsten Form Data Model.
 
-![Ange värde-webbtjänst](assets/set-value-web-service1.png)
+![Set-value-web-service](assets/set-value-web-service1.png)
 
 Exempel på Ange värderegel med tjänsten Formulärdatamodell
 
@@ -246,7 +247,7 @@ En vanlig Visa-regel är strukturerad på följande sätt:
 
 ### [!UICONTROL Hide] {#hide}
 
-På samma sätt som regeltypen Visa kan du använda **[!UICONTROL Hide]** regeltypen för att visa eller dölja ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Regeltypen Dölj utlöser också åtgärden Visa om villkoret inte uppfylls eller returnerar `False`.
+På liknande sätt som för regeltypen Visa kan du använda kommandot **[!UICONTROL Hide]** regeltyp för att visa eller dölja ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Dölj-regeltypen aktiverar även åtgärden Visa om villkoret inte uppfylls eller returneras `False`.
 
 En vanlig Dölj-regel är strukturerad på följande sätt:
 
@@ -372,9 +373,9 @@ I det vänstra trädet för formulärobjekten kan du markera de formulärobjekt 
 
 ### C. Växla mellan formulärobjekt och funktioner {#c-form-objects-and-functions-toggle-br}
 
-När du trycker på växlingsknappen växlar du fönstret för formulärobjekt och funktioner.
+När användaren knackar på knappen växlar knappen formulärobjekt och funktionsruta.
 
-### D. Redigerare för visuella regler {#visual-rule-editor}
+### D. Visuell regelredigerare {#visual-rule-editor}
 
 Visuell regelredigerare är det område i det visuella redigeringsläget i regelredigerarens användargränssnitt där du skriver regler. Här kan du välja en regeltyp och definiera villkor och åtgärder. När du definierar villkor och åtgärder i en regel kan du dra och släppa formulärobjekt och funktioner från rutan Formulärobjekt och funktioner.
 
@@ -395,9 +396,9 @@ Users in the forms-power-users group can access code editor. For other users, co
 
 ### E. Knapparna Klar och Avbryt {#done-and-cancel-buttons}
 
-The **[!UICONTROL Done]** -knappen används för att spara en regel. Du kan spara en ofullständig regel. Ofullständiga är dock ogiltiga och kan inte köras. Sparade regler för ett formulärobjekt visas när du startar regelredigeraren nästa gång från samma formulärobjekt. Du kan hantera befintliga regler i den vyn. Mer information finns i [Hantera regler](rule-editor.md#p-manage-rules-p).
+The **[!UICONTROL Done]** -knappen används för att spara en regel. Du kan spara en ofullständig regel. Ofullständiga är dock ogiltiga och kan inte köras. Sparade regler för ett formulärobjekt visas nästa gång du startar regelredigeraren från samma formulärobjekt. Du kan hantera befintliga regler i den vyn. Mer information finns i [Hantera regler](rule-editor.md#p-manage-rules-p).
 
-Knappen **[!UICONTROL Cancel]** ignorerar alla ändringar som du har gjort i en regel och stänger regelredigeraren.
+The **[!UICONTROL Cancel]** ignorerar alla ändringar du har gjort i en regel och stänger regelredigeraren.
 
 ## Skriv regler {#write-rules}
 
@@ -480,11 +481,11 @@ Så här skriver du regler:
 
 1. I uttrycksfältet:
 
-   * Markera eller dra och släpp fältet i det första **[!UICONTROL Drop object or select here]** fältet på fliken **[!UICONTROL Salary]** Forms-objekt.
+   * Markera eller dra-och-släpp på fliken Forms-objekt på fliken **[!UICONTROL Salary]** fält i det första **[!UICONTROL Drop object or select here]** fält.
 
-   * Välj **[!UICONTROL Plus]** från fältet **[!UICONTROL Select Operator]** .
+   * Välj **[!UICONTROL Plus]** från **[!UICONTROL Select Operator]** fält.
 
-   * Markera eller dra och släpp fältet i det andra **[!UICONTROL Drop object or select here]** fältet på fliken **[!UICONTROL Spouse Salary]** Forms-objekt.
+   * Markera eller dra-och-släpp på fliken Forms-objekt på fliken **[!UICONTROL Spouse Salary]** fält i det andra **[!UICONTROL Drop object or select here]** fält.
 
    ![write-rules-visual-editor-12](assets/write-rules-visual-editor-12.png)
 
@@ -498,9 +499,9 @@ Så här skriver du regler:
 
    >[!NOTE]
    >
-   >Du kan skapa komplexa uttryck med hjälp av komponenter, funktioner, matematiska uttryck och egenskapsvärden från fältet Välj alternativ.
+   >Du kan skapa komplexa uttryck med hjälp av komponenter, funktioner, matematiska uttryck och egenskapsvärden i fältet Välj alternativ.
 
-   Skapa sedan ett villkor som när det returnerar True körs uttrycket.
+   Skapa sedan ett villkor som körs när true returneras.
 
 1. Välj **[!UICONTROL Add Condition]** om du vill lägga till en When-programsats.
 
@@ -609,7 +610,7 @@ Lägger till information om funktionen, till exempel dess mål.
    * **Detta**
 Syntax: `@this currentComponent`
 
-  Använd @this för att referera till den adaptiva formulärkomponent som regeln är skriven på.
+  Använd @this för att referera till den adaptiva formulärkomponenten som regeln är skriven för.
 
   Följande exempel baseras på fältvärdet. I följande exempel döljer regeln ett fält i formuläret. The `this` del av `this.value` refererar till den underliggande adaptiva formulärkomponenten, som regeln är skriven för.
 
@@ -638,7 +639,7 @@ Du kan t.ex. lägga till en egen funktion som beräknar en kvadratyta. Sidlängd
 
 Så här skapar du ett klientbibliotek och lägger till det i CRX-databasen:
 
-1. Skapa ett klientbibliotek. Mer information finns i [Använda bibliotek](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/clientlibs.html#developing) på klientsidan.
+1. Skapa ett klientbibliotek. Mer information finns i [Använda bibliotek på klientsidan](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/clientlibs.html#developing).
 1. Lägg till en egenskap i CRXDE `categories`med strängtypsvärde som `customfunction` till `clientlib` mapp.
 
    >[!NOTE]
@@ -777,7 +778,7 @@ Så här kopierar och klistrar du in regler:
 
 Med regelredigeraren kan du använda flera AND- och OR-operatorer för att skapa kapslade regler. Du kan blanda flera AND- och OR-operatorer i regler.
 
-Följande är ett exempel på en kapslad regel som visar ett meddelande till användaren om berättigande till vårdnad om ett barn när de nödvändiga villkoren är uppfyllda.
+Nedan visas ett exempel på en kapslad regel som visar ett meddelande till användaren om rätt att vårdas av ett barn när de obligatoriska villkoren är uppfyllda.
 
 ![Komplext uttryck](assets/complexexpression.png)
 

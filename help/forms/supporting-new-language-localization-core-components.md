@@ -4,7 +4,7 @@ description: Lär dig hur du lägger till nya språkområden i ett adaptivt form
 feature: Adaptive Forms, Core Components
 Role: Developer, Author
 exl-id: bc06542b-84c8-4c6a-a305-effbd16d5630
-source-git-commit: 6238d059ff44586ab1b0d24895a8b73d74b1f913
+source-git-commit: 7d49be6d4f58078270fb15b10ef34e81dfa790cb
 workflow-type: tm+mt
 source-wordcount: '2068'
 ht-degree: 0%

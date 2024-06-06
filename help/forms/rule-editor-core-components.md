@@ -5,9 +5,9 @@ feature: Adaptive Forms, Core Components
 role: User
 level: Beginner, Intermediate
 exl-id: 1292f729-c6eb-4e1b-b84c-c66c89dc53ae
-source-git-commit: 494e90bd5822495f0619e8ebf55f373a26a3ffe6
+source-git-commit: 46cd7d689c6cbc453720b5798ffb552da58f66e7
 workflow-type: tm+mt
-source-wordcount: '5411'
+source-wordcount: '5426'
 ht-degree: 0%
 
 ---
@@ -15,8 +15,9 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| Foundation Components | [Klicka här](/help/forms/rule-editor.md) |
-| Kärnkomponenter | Den här artikeln |
+| AEM as a Cloud Service (kärnkomponenter) | Den här artikeln |
+| AEM as a Cloud Service (Foundation Components) | [Klicka här](/help/forms/rule-editor.md) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html) |
 
 # Lägga till regler i ett adaptivt formulär (kärnkomponenter) {#adaptive-forms-rule-editor}
 
@@ -169,10 +170,10 @@ _
 
 ![Tillåtna flera fält i](/help/forms/assets/allowed-multiple-field-when.png)
 
-##### Att tänka på när du använder Tillåtna flera fält i villkorsfunktionen
+##### Att tänka på när du använder funktionen Tillåtna flera fält i When-villkorsfunktionen
 
-* Se till att [kärnkomponenten är inställd på version 3.0.14 eller senare](https://github.com/adobe/aem-core-forms-components) om du vill använda funktionen i regelredigeraren.
-* Om regler tillämpas på olika fält i villkoret När utlöses regeln även om endast ett av dessa fält ändras.
+* Kontrollera att kärnkomponenten är inställd på [version 3.0.14 eller senare](https://github.com/adobe/aem-core-forms-components) för att använda den här funktionen i regelredigeraren.
+* Om regler tillämpas på olika fält i När-villkoret utlöses regeln även om bara ett av dessa fält ändras.
 
 
 <!--
@@ -192,7 +193,7 @@ Allowed Multiple fields in When condition feature is disabled by default. To ena
    * value: deps
 1. Click **[!UICONTROL Done]**. -->
 
-Om det uppstår problem i de tillåtna fälten i villkorsfunktionen följer du felsökningsstegen enligt följande:
+Om de tillåtna flera fälten i funktionen När-villkor stöter på problem följer du felsökningsstegen som:
 
 1. Öppna formuläret i redigeringsläge.
 1. Öppna innehållsläsaren och välj **[!UICONTROL Guide Container]** som ingår i det adaptiva formuläret.
@@ -275,19 +276,15 @@ The **Ange värdet för** regeltypen är inte tillgänglig för alla formulärob
 
 Ange värdet för objekt A till:
 
-(sträng ABC) ELLER
-(objektegenskap X för objekt C) ELLER
-(värde från en funktion) ELLER
-(värde från ett matematiskt uttryck) ELLER
-(utdatavärde för en datamodelltjänst).
+(sträng ABC) ELLER (objektegenskap X för objekt C) ELLER (värde från en funktion) ELLER (värde från ett matematiskt uttryck) ELLER (utdatavärde för en datamodelltjänst),
 
 När (valfritt):
 
 (Villkor 1 OCH Villkor 2 OCH Villkor 3) är SANT;
 
-I följande exempel väljs värdet för `Question2` as `True` och anger värdet för `Result` as `correct`.
+I följande exempel väljs värdet för `Question2` as `True` och värdet för `Result` as `correct`.
 
-![Ange värde-webbtjänst](assets/set-value-web-service.png)
+![Set-value-web-service](assets/set-value-web-service.png)
 
 Exempel på Set Value-regel med tjänsten Form Data Model.
 
@@ -434,7 +431,7 @@ En del av listan med funktioner visas i figuren:
 >
 >Du kan utföra textsökning på objekt och funktionsnamn och titlar på flikarna Forms Objekt och Funktioner.
 
-I det vänstra trädet för formulärobjekten kan du markera formulärobjekten för att visa de regler som tillämpas på vart och ett av objekten. Du kan inte bara navigera genom reglerna för de olika formulärobjekten, du kan också kopiera och klistra in regler mellan formulärobjekten. Mer information finns i [Kopiera och klistra in regler](rule-editor.md#p-copy-paste-rules-p).
+I det vänstra trädet för formulärobjekten kan du markera de formulärobjekt som ska visa de regler som tillämpas på vart och ett av objekten. Du kan inte bara navigera bland reglerna för de olika formulärobjekten, du kan även kopiera och klistra in regler mellan formulärobjekten. Mer information finns i [Kopiera och klistra in regler](rule-editor.md#p-copy-paste-rules-p).
 
 ### C. Växla mellan formulärobjekt och funktioner {#c-form-objects-and-functions-toggle-br}
 
@@ -463,19 +460,19 @@ Users in the forms-power-users group can access code editor. For other users, co
 
 The **[!UICONTROL Done]** -knappen används för att spara en regel. Du kan spara en ofullständig regel. Ofullständiga är dock ogiltiga och kan inte köras. Sparade regler för ett formulärobjekt visas nästa gång du startar regelredigeraren från samma formulärobjekt. Du kan hantera befintliga regler i den vyn. Mer information finns i [Hantera regler](rule-editor.md#p-manage-rules-p).
 
-Knappen **[!UICONTROL Cancel]** ignorerar alla ändringar som du har gjort i en regel och stänger regelredigeraren.
+The **[!UICONTROL Cancel]** ignorerar alla ändringar du har gjort i en regel och stänger regelredigeraren.
 
-## Skriva regler {#write-rules}
+## Skriv regler {#write-rules}
 
 Du kan skriva regler med hjälp av den visuella regelredigeraren <!-- or the code editor. When you launch the rule editor the first time, it opens in the visual editor mode. You can switch to the code editor mode and write rules. However, if you write or modify a rule in code editor, you cannot switch to the visual editor for that rule unless you clear the code editor. When you launch the rule editor next time, it opens in the mode that you used last to create rule. -->
 
 Låt oss först titta på hur man skriver regler med hjälp av VisualEditor.
 
-### Använda den visuella redigeraren {#using-visual-editor}
+### Använda VisualEditor {#using-visual-editor}
 
-Låt oss förstå hur du skapar en regel i den visuella redigeraren med hjälp av följande exempelformulär.
+Låt oss förstå hur du skapar en regel i VisualEditor med hjälp av följande exempelformulär.
 
-![Create-rule-example](assets/create-rule-example.png)
+![Skapa-regel-exempel](assets/create-rule-example.png)
 
 I avsnittet Krav för lån i exempelformuläret för låneansökan måste de sökande ange sin äktenskapsstatus, lön och, om de är gifta, sin makas lön. Baserat på användarens indata beräknar regeln beloppet för rätt till lån och visas i fältet Låneberättigande. Använd följande regler för att implementera scenariot:
 
@@ -484,7 +481,7 @@ I avsnittet Krav för lån i exempelformuläret för låneansökan måste de sö
 
 Så här skriver du regler:
 
-1. Först skriver du regeln för att styra synligheten för fältet för makslön baserat på det alternativ som användaren väljer för alternativknappen för civilstånd.
+1. Skriv först regeln för att styra synligheten för fältet Makeslön baserat på det alternativ som användaren väljer för alternativknappen Civilstånd.
 
    Öppna låneansökningsformuläret i redigeringsläge. Välj **[!UICONTROL Marital Status]** -komponent och markera ![edit-rules](assets/edit-rules-icon.svg). Nästa, välj **[!UICONTROL Create]** för att starta regelredigeraren.
 
@@ -555,9 +552,9 @@ Så här skriver du regler:
 
    ![write-rules-visual-editor-10](assets/write-rules-visual-editor-10-cc.png)
 
-1. Välj **[!UICONTROL Select Option]** och välj **[!UICONTROL Mathematical Expression]**. Ett fält som skriver matematiskt uttryck öppnas.
+1. Välj **[!UICONTROL Select Option]** och markera **[!UICONTROL Mathematical Expression]**. Ett fält som skriver matematiskt uttryck öppnas.
 
-   ![skriva- regler-visual-editor-11](assets/write-rules-visual-editor-11-cc.png)
+   ![write-rules-visual-editor-11](assets/write-rules-visual-editor-11-cc.png)
 
 1. I uttrycksfältet:
 
@@ -581,9 +578,9 @@ Så här skriver du regler:
    >
    >Du kan skapa komplexa uttryck med hjälp av komponenter, funktioner, matematiska uttryck och egenskapsvärden i fältet Välj alternativ.
 
-   Skapa sedan ett villkor som när det returnerar True körs uttrycket.
+   Skapa sedan ett villkor som körs när true returneras.
 
-1. Välj **[!UICONTROL Add Condition]** det här alternativet om du vill lägga till en When-instruktion.
+1. Välj **[!UICONTROL Add Condition]** om du vill lägga till en When-programsats.
 
    ![skriva-regler-visual-editor-15](assets/write-rules-visual-editor-15-cc.png)
 
@@ -591,9 +588,9 @@ Så här skriver du regler:
 
    * Markera eller dra och släpp fältet i det första **[!UICONTROL Drop object or select here]** fältet på fliken **[!UICONTROL Marital Status]** Forms-objekt.
 
-   * Välj **[!UICONTROL is equal to]** från **[!UICONTROL Select Operator]** fält.
+   * Välj **[!UICONTROL is equal to]** från fältet **[!UICONTROL Select Operator]** .
 
-   * Välj String i den andra **[!UICONTROL Drop object or select here]** fält och ange **[!UICONTROL Married]** i **[!UICONTROL Enter a String]** fält.
+   * Välj Sträng i det andra **[!UICONTROL Drop object or select here]** fältet och ange **[!UICONTROL Married]** i fältet **[!UICONTROL Enter a String]** .
 
    Regeln visas slutligen så här i regelredigeraren.  ![write-rules-visual-editor-16](assets/write-rules-visual-editor-16-cc.png)
 
@@ -603,7 +600,7 @@ Så här skriver du regler:
 
    ![write-rules-visual-editor-17](assets/write-rules-visual-editor-17-cc.png)
 
-Du kan också använda regeln Ange värde för för för att beräkna låneberättigandet i regeln När som du skapade för att visa och dölja fältet Makslön. Den resulterande kombinerade regeln när Marital status är enkel visas så här i regelredigeraren.
+Alternativt kan du använda regeln Ange värde för för att beräkna låneberättigandet i regeln När som du skapade för att visa-dölja fältet Makens lön. Den resulterande kombinerade regeln när Marital status är enkel visas så här i regelredigeraren.
 
 ![write-rules-visual-editor-18](assets/write-rules-visual-editor-18-cc.png)
 
@@ -850,9 +847,9 @@ Så här kopierar och klistrar du in regler:
 
    >[!NOTE]
    >
-   >Du kan bara klistra in en regel i ett annat formulärobjekt om det formulärobjektet har stöd för den kopierade regelns händelse. En knapp har till exempel stöd för klickhändelsen. Du kan klistra in en regel med en klickningshändelse på en knapp, men inte i en kryssruta.
+   >Du kan bara klistra in en regel i ett annat formulärobjekt om det formulärobjektet har stöd för den kopierade regelns händelse. En knapp stöder till exempel händelsen click. Du kan klistra in en regel med en klickningshändelse på en knapp, men inte i en kryssruta.
 
-1. Välj **[!UICONTROL Done]** det här alternativet om du vill spara regeln.
+1. Välj **[!UICONTROL Done]** för att spara regeln.
 
 ## Kapslade uttryck {#nestedexpressions}
 
@@ -870,17 +867,17 @@ Du kan också redigera genom att dra och släppa villkor i en regel. Markera och
 
 Med regelredigeraren kan du använda datumjämförelser för att skapa villkor.
 
-Följande är ett exempelvillkor som visar ett statiskt textobjekt om inteckningen på huset redan är tagen, vilket användaren anger genom att fylla i datumfältet.
+Följande är ett exempelvillkor som visar ett statiskt textobjekt om inteckningen på huset redan har tagits, vilket användaren anger genom att fylla i datumfältet.
 
-När datumet för inteckning av fastigheten som fyllts i av användaren har passerat, visar det adaptiva formuläret en anteckning om inkomstberäkningen. Följande regel jämför det datum som fyllts i av användaren med det aktuella datumet och om det datum som fyllts i av användaren är tidigare än det aktuella datumet visas textmeddelandet (med namnet Inkomst) i formuläret.
+När datumet för inteckningen av egendomen som fyllts i av användaren har inträffat visas en anteckning om inkomstberäkningen i det adaptiva formuläret. I följande regel jämförs det datum som användaren fyller i med det aktuella datumet och om det datum som användaren fyller i är tidigare än det aktuella datumet visas textmeddelandet (Inkommande) i formuläret.
 
 ![Villkor för datumuttryck](assets/dateexpressioncondition.png)
 
 När det ifyllda datumet är tidigare än det aktuella datumet visas textmeddelandet (Inkomst) i formuläret enligt följande:
 
-![Datumuttrycksvillkor uppfyllt](assets/dateexpressionconditionmet.png)
+![Villkoret för datumuttryck uppfyllt](assets/dateexpressionconditionmet.png)
 
-## Nummerjämförelsevillkor {#number-comparison-conditions}
+## Villkor för nummerjämförelse {#number-comparison-conditions}
 
 Med regelredigeraren kan du skapa villkor som jämför två tal.
 
