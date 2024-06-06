@@ -4,9 +4,9 @@ description: Distribuera digitala resurser med metoder som att dela som en länk
 feature: Asset Management, Collaboration, Asset Distribution
 role: User, Admin
 exl-id: 14e897cc-75c2-42bd-8563-1f5dd23642a0
-source-git-commit: 1b4c5d985c71a84449a13b79fc00adea0443a631
+source-git-commit: 90da6851240add93de73dd6da46e54ffbf80a1d3
 workflow-type: tm+mt
-source-wordcount: '1789'
+source-wordcount: '1777'
 ht-degree: 0%
 
 ---
@@ -116,12 +116,12 @@ E-postmallen kan anpassas med oformaterad text eller HTML. Den redigerbara malll
 
 | Platshållare | Beskrivning |
 |---|-----|
-| ${emailSubject} | Ämne för ett e-postmeddelande |
-| ${emailInitiator} | E-post-ID för den användare som skapade e-postmeddelandet |
-| ${emailMessage} | E-postbrödtext |
-| ${pagePath} | URL för den delade länken |
-| ${linkExpiry} | Utgångsdatum för delad länk |
-| ${host.prefix} | Ursprung för [!DNL Experience Manager] instans, till exempel `http://www.adobe.com"` |
+| `${emailSubject}` | Ämne för ett e-postmeddelande |
+| `${emailInitiator}` | E-post-ID för den användare som skapade e-postmeddelandet |
+| `${emailMessage}` | E-postbrödtext |
+| `${pagePath}` | URL för den delade länken |
+| `${linkExpiry}` | Utgångsdatum för delad länk |
+| `${host.prefix}` | Ursprung för [!DNL Experience Manager] instans, till exempel `http://www.adobe.com"` |
 
 #### Exempel på anpassad e-postmall {#custom-email-template-example}
 
