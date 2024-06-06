@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Asset Management
 role: User
 exl-id: 2efc4a27-01d7-427f-9701-393497314402
-source-git-commit: f2701b35c2bc64e7bb049dc49632b7127923970d
+source-git-commit: 7820492f462d2b5824e408429332b5adf2e67aab
 workflow-type: tm+mt
 source-wordcount: '1629'
 ht-degree: 0%
@@ -25,9 +25,9 @@ Adobe Experience Manager innehåller över 100 Dynamic Media-kommandon för att 
 **Smart bildbehandling:**
 
 * Om du aktiverar Smart Imaging i Dynamic Media kan du automatiskt optimera bildformat, storlek och kvalitet baserat på webbläsarens funktioner.
-Vill du veta mer? Gå till [Smart bildbehandling](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/dynamicmedia/imaging-faq)
+Vill du veta mer? Gå till [Smart bildbehandling](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/dynamicmedia/imaging-faq).
 * Den förbättrar bildens prestanda genom att dynamiskt justera dessa parametrar.
-* Du kan utvärdera Smart bildbehandling med självutvärderingsverktyget [Ögonblicksbild](https://snapshot.scene7.com/)
+* Du kan utvärdera Smart bildbehandling med självutvärderingsverktyget [Ögonblicksbild](https://snapshot.scene7.com/).
 
 **Bildformat:**
 
