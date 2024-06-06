@@ -4,7 +4,7 @@ description: Introduktion till arkitekturen i Adobe Experience Manager as a Clou
 exl-id: 3fe856b7-a0fc-48fd-9c03-d64c31a51c5d
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: a5179851af8ec88e23d79a74265b10cbce2d50f1
 workflow-type: tm+mt
 source-wordcount: '2713'
 ht-degree: 7%
@@ -231,7 +231,7 @@ Den senaste arkitekturen för AEM as a Cloud Service medför vissa grundläggand
    * [Onboardresa](/help/journey-onboarding/overview.md)
    * [Program och programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md)
 * Utvecklingsarkitektur
-   * [Cloud Manager-databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md)
+   * [Cloud Manager-databaser](/help/implementing/cloud-manager/managing-code/managing-repositories.md)
    * [CI/CD-pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md)
    * [Testning av kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md)
 * Edge Delivery Services:

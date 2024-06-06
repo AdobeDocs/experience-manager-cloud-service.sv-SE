@@ -5,7 +5,7 @@ exl-id: 46fcc1b4-8fd5-40e1-b0fc-d2bc9df3802e
 role: Admin, Developer, User
 feature: Adaptive Forms
 contentOwner: khsingh
-source-git-commit: 9d1594e61a3ec79c0e773cac5753885684ac8a21
+source-git-commit: a5179851af8ec88e23d79a74265b10cbce2d50f1
 workflow-type: tm+mt
 source-wordcount: '1325'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Adobe Experience Manager Forms as a Cloud Service förändrar de befintliga funk
 
 * Innan ni använder era kundpaket med Forms as a Cloud Service måste ni kompilera om den anpassade koden med den senaste versionen av adobe-aemfd-docmanager.
 
-* Använd [AEM Forms as a Cloud Service migreringsverktyg](/help/forms/migrate-to-forms-as-a-cloud-service.md) för att förbereda och migrera dina adaptiva Forms, teman, mallar och molnkonfigurationer från <!-- AEM 6.3 Forms--> AEM 6.4 Forms on OSGi and AEM 6.5 Forms on OSGi to [!DNL AEM] as a Cloud Service. Använd [Git-databasen för ditt program](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) för att importera befintliga adaptiva formulärmallar.
+* Använd [AEM Forms as a Cloud Service migreringsverktyg](/help/forms/migrate-to-forms-as-a-cloud-service.md) för att förbereda och migrera dina adaptiva Forms, teman, mallar och molnkonfigurationer från <!-- AEM 6.3 Forms--> AEM 6.4 Forms on OSGi and AEM 6.5 Forms on OSGi to [!DNL AEM] as a Cloud Service. Använd [Git-databasen för ditt program](/help/implementing/cloud-manager/managing-code/managing-repositories.md) för att importera befintliga adaptiva formulärmallar.
 
 * E-post har som standard bara stöd för HTTP- och HTTP-protokoll. [Kontakta supportteam](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html#sending-email) för att göra det möjligt för portar att skicka e-post och aktivera SMTP-protokoll för din miljö.
 

@@ -6,9 +6,9 @@ exl-id: eba608eb-a19e-4bff-82ff-05860ceabe6e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: a5179851af8ec88e23d79a74265b10cbce2d50f1
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1400'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ Följ de här stegen för att slutföra konfigurationen av icke-produktionsflöd
 
    >[!TIP]
    > 
-   >Se [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) så att du kan lära dig hur du lägger till och hanterar databaser i Cloud Manager.
+   >Se [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/managing-repositories.md) så att du kan lära dig hur du lägger till och hanterar databaser i Cloud Manager.
 
    * **Git-gren** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
       * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet. Det hjälper dig att hitta matchande grenar som du kan välja.
@@ -127,6 +127,10 @@ En riktad distribution distribuerar bara kod för utvalda delar av AEM. I en så
    * Om det finns en kodrapport på webbnivå för den valda miljön är det här valet inaktiverat.
    * Om du har en befintlig pipeline som distribueras i en hel hög till en miljö, kommer den befintliga konfigurationen på hela stacken att ignoreras om du skapar en konfigurationspipeline för en webbskikt för samma miljö.
 
+>[!NOTE]
+>
+>Rörledningar för webbnivå och konfiguration stöds inte i privata databaser. Se dokumentet [Lägga till privata databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/private-repositories.md) om du vill ha mer information och en fullständig lista över begränsningar.
+
 Stegen för att slutföra skapandet av din icke-produktion, målinriktade distributionsprocess är desamma när du väljer en distributionstyp.
 
 1. Välj vilken distributionstyp du behöver.
@@ -143,7 +147,7 @@ Stegen för att slutföra skapandet av din icke-produktion, målinriktade distri
 
    >[!TIP]
    > 
-   >Se [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) så att du kan lära dig hur du lägger till och hanterar databaser i Cloud Manager.
+   >Se [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/managing-repositories.md) så att du kan lära dig hur du lägger till och hanterar databaser i Cloud Manager.
 
    * **Git-gren** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
       * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet. Här hittas de matchande grenar som du kan välja.

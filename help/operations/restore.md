@@ -2,9 +2,9 @@
 title: Innehållsåterställning i AEM as a Cloud Service
 description: Lär dig hur du återställer AEM as a Cloud Service innehåll från en säkerhetskopia med hjälp av Cloud Manager.
 exl-id: 921d0c5d-5c29-4614-ad4b-187b96518d1f
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: 5baeb4012e5aa82a8cd8710b18d9164583ede0bd
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1339'
 ht-degree: 0%
 
 ---
@@ -13,15 +13,6 @@ ht-degree: 0%
 # Innehållsåterställning i AEM as a Cloud Service {#content-restore}
 
 Lär dig hur du återställer AEM as a Cloud Service innehåll från en säkerhetskopia med hjälp av Cloud Manager.
-
->[!NOTE]
->
->Den här funktionen är bara tillgänglig för [det tidiga adopteringsprogrammet](/help/implementing/cloud-manager/release-notes/current.md#early-adoption) och har vissa begränsningar utöver de som anges i artikeln. I den tidiga antagandefasen:
->
->* Funktionen är bara tillgänglig i utvecklingsmiljöer.
->* Innehållsåterställningar är begränsade till två per månad och program.
->
->Mer information om det befintliga säkerhetskopierings- och återställningssystemet för AEM as a Cloud Service finns i [Säkerhetskopiera och återställ i AEM as a Cloud Service](/help/operations/backup.md).
 
 ## Ökning {#overview}
 
@@ -40,13 +31,41 @@ I båda fallen ändras inte versionen av den anpassade koden och AEM.
 >
 >Det går också att återställa säkerhetskopior [med det publika API:t.](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)
 
+>[!WARNING]
+>
+>* Den här funktionen bör endast användas när det finns allvarliga problem med kod eller innehåll.
+>* Om du återställer en säkerhetskopia går nya data förlorade mellan tidpunkten för säkerhetskopieringen och den aktuella. Mellanlagring återställs också till den gamla versionen.
+>* Innan du startar en innehållsåterställning bör du överväga andra alternativ för selektiv innehållsåterställning.
+
+## Alternativ för selektiv innehållsåterställning {#selective-options}
+
+Innan du återställer till en fullständig innehållsåterställning bör du överväga dessa alternativ för att enklare återställa ditt innehåll.
+
+* Om det finns ett paket för den borttagna sökvägen installerar du paketet igen med [Pakethanteraren.](/help/implementing/developing/tools/package-manager.md)
+* Om den borttagna sökvägen var en sida i Sites använder du [Återställ trädfunktion.](/help/sites-cloud/authoring/sites-console/page-versions.md)
+* Om den borttagna sökvägen var en resursmapp och de ursprungliga filerna är tillgängliga, överför du dem via [Resurskonsolen.](/help/assets/add-assets.md)
+* Om det borttagna innehållet var resurser bör du överväga [återställa tidigare versioner av resurserna.](/help/assets/manage-digital-assets.md)
+
+Om inget av ovanstående alternativ fungerar och innehållet i den borttagna banan är viktigt, utför du en innehållsåterställning enligt anvisningarna i följande avsnitt.
+
+## Skapa användarroll {#user-role}
+
+Som standard har ingen användare behörighet att köra innehållsåterställningar i utvecklings-, produktions- eller stagingmiljöer. Om du vill delegera behörigheten till specifika användare eller grupper följer du dessa allmänna steg.
+
+1. Skapa en produktprofil med ett uttrycksfullt namn som refererar till innehållsåterställning.
+1. Ange **Programåtkomst** behörighet för det program som krävs.
+1. Ange **Återställning av innehåll** behörighet för den miljö eller alla miljöer som krävs, beroende på ditt användningsfall.
+1. Tilldela användare till den profilen.
+
+Mer information om hur du hanterar behörigheter finns i [Anpassade behörigheter](/help/implementing/cloud-manager/custom-permissions.md) dokumentation.
+
 ## Återställer innehåll {#restoring-content}
 
 Bestäm först tidsramen för innehållet som du vill återställa. Utför sedan dessa steg för att återställa miljöns innehåll från en säkerhetskopia.
 
 >[!NOTE]
 >
->En användare med **Företagsägare** eller **Distributionshanteraren** roll måste vara inloggad för att initiera en återställningsåtgärd.
+>En användare måste ha [lämpliga behörigheter](#user-role) för att initiera en återställningsåtgärd.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 

@@ -1,49 +1,65 @@
 ---
-title: Åtkomst till databaser
-description: Lär dig hur du får åtkomst till och hanterar din Git-databas med hjälp av Git-kontohantering för självbetjäning från Cloud Manager.
+title: Information om databasåtkomst
+description: Lär dig hur du får åtkomst till och hanterar dina Adobe-hanterade Git-databaser med hjälp av Git-kontohantering via Creative Cloud Manager.
 exl-id: 0c0671a3-e400-46f3-ad86-166a6cfdd44b
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 0b39fc4dcaf86d436547d3941b1f12bca8c5bc9b
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '400'
 ht-degree: 0%
 
 ---
 
 
-# Åtkomst till databaser {#accessing-repos}
+# Information om databasåtkomst {#accessing-repos}
 
-Lär dig hur du får åtkomst till och hanterar din Git-databas med hjälp av Git-kontohantering för självbetjäning från Cloud Manager.
+Lär dig hur du får åtkomst till och hanterar dina Adobe-hanterade Git-databaser med hjälp av Git-kontohantering via Creative Cloud Manager.
 
-## Använda självbetjäningsarkivkontohantering {#self-service-repos}
+## Åtkomst till databasinformation från översiktssidan {#overview-page}
 
-Med Cloud Manager är det enkelt att hämta databasinformation med **Åtkomst till svarsinformation** finns väl synligt på pipeline-kortet.
+Med Cloud Manager är det enkelt att hämta databasåtkomstinformation för databaser som hanteras av Adobe via **Åtkomst till svarsinformation** finns väl synligt på pipeline-kortet.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Navigera till **Pipelines** från **Programöversikt** sidan och hitta **Åtkomst till svarsinformation** för att komma åt och hantera din Git-databas.
+1. Navigera till **Pipelines** från **Programöversikt** sida.
 
-   ![Knappen Åtkomst till upprepningsinformation på miljökortet](/help/implementing/cloud-manager/assets/repos/access-repo1.png)
+   ![Knappen Åtkomst till upprepningsinformation på miljökortet](assets/pipelines-card.png)
 
-1. Klicka på **Visa information om svar** för att öppna en dialogruta:
+1. Tryck eller klicka på **Åtkomst till svarsinformation** för att öppna **Databasinformation** dialogruta och vy:
 
-   * URL:en till Cloud Managers Git-databas.
    * Git-användarnamn.
-   * Git-lösenordet, vars värde visas när **Generera lösenord** klickas på knappen.
+   * Git-lösenordet.
+   * URL:en till Cloud Managers Git-databas.
+   * Fördefinierade Git-kommandon för att snabbt lägga till en fjärranslutning i Git-repo och push-kod.
 
-   ![Vyn Repo Info](/help/implementing/cloud-manager/assets/repos/access-repo-create.png)
+   ![Fönstret Databasinformation](assets/repository-info.png)
 
-Med hjälp av dessa inloggningsuppgifter kan användaren klona en lokal kopia av databasen och göra ändringar i den lokala databasen, och när den är klar kan han eller hon spara kodändringar i fjärrkoddatabasen i Cloud Manager.
+1. Ett nytt lösenord måste skapas för att du ska kunna få åtkomst till lösenordet. Om du vill göra det trycker eller klickar du på **Generera lösenord** -knappen.
 
-The **Åtkomst till svarsinformation** finns även på **Icke-produktion** fliken pipeline i **Pipelines** kort.
+1. Bekräfta generering av lösenord i dialogrutan **Är du säker...** genom att trycka på eller klicka **Generera lösenord**.
 
-![Knappen Åtkomst till upprepningsinformation på icke-produktionsfliken](/help/implementing/cloud-manager/assets/repos/access-repo-nonprod.png)
+   ![Bekräfta lösenordsgenerering](assets/confirm-password-generation.png)
+
+1. Lösenordet genereras och visas för kopiering i **Lösenord** fält.
+
+   * Om du genererar ett lösenord blir det tidigare lösenordet ogiltigt.
+   * Lösenordet sparas inte i molnhanteraren. Det är ditt ansvar att spara lösenordet på ett säkert sätt.
+   * Eftersom lösenordet inte sparas i Cloud Manager måste du återskapa ett nytt lösenord om du tappar bort det.
+
+   ![Exempel på ett genererat lösenord](assets/generated-password.png)
+
+Med dessa autentiseringsuppgifter kan du klona en lokal kopia av databasen, göra ändringar i den lokala databasen och när du är klar spara kodändringar i fjärrkoddatabasen i Cloud Manager.
 
 >[!NOTE]
 >
->The **Åtkomst till svarsinformation** alternativet är synligt för användare med **Utvecklare** eller **Distributionshanteraren** roller.
+>* The **Åtkomst till svarsinformation** alternativet är synligt för användare med **Utvecklare** eller **Distributionshanteraren** roller.
+>* The **Åtkomst till svarsinformation** visas bara databasens åtkomstinformation för databaser som hanteras av Adobe. Åtkomstinformation om [privata databaser](private-repositories.md) är inte tillgängligt i Cloud Manager.
+
+## Åtkomst till databasinformation från fönstret Databaser {#repositories-window}
+
+An **Åtkomst till svarsinformation** finns även i verktygsfältet i [**Databaser** -fönstret.](managing-repositories.md) den visar samma information om åtkomst till databaser som hanteras av Adobe.
 
 ## Återkalla ett åtkomstlösenord {#revoke-password}
 

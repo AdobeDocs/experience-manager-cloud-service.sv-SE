@@ -6,9 +6,9 @@ exl-id: 4aff5a84-134a-43fa-8de8-8d564f4edd16
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 0b39fc4dcaf86d436547d3941b1f12bca8c5bc9b
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1119'
 ht-degree: 0%
 
 ---
@@ -110,6 +110,10 @@ Beroende på typen av pipeline kan du eventuellt avbryta körningen genom att kl
 >
 >Du kan inte redigera en pågående pipeline.
 
+>[!NOTE]
+>
+>Rörledningar för webbnivå och konfiguration stöds inte i privata databaser. Se dokumentet [Lägga till privata databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/private-repositories.md) om du vill ha mer information och en fullständig lista över begränsningar.
+
 ## Tar bort pipelines {#deleting-pipelines}
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
@@ -143,6 +147,14 @@ När ett pipeline-steg är klart visas en sammanfattning.
 Välj **Visa detaljer** länk för att visa **Varaktighet** -avsnitt. Detta inbegriper den genomsnittliga rörledningens varaktighet på grundval av den historiska trenden för det programmet.
 
 ![Varaktighet](/help/implementing/cloud-manager/assets/configure-pipeline/duration.png)
+
+Om din pipeline innehöll en **Kodskanning** som gav upphov till problem kan du trycka eller klicka på **Ladda ned information** om du vill visa en lista med [kodkvalitetstester](/help/implementing/cloud-manager/code-quality-testing.md) som inte gick igenom.
+
+![Problem med kodkvalitet](assets/managing-pipelines-code-quality-issues.png)
+
+A **Plats för projektfil** -kolumnen är tillgänglig i CSV-filen för att ange platsen för den felaktiga koden. Den här kolumnen är den projektrelativa sökvägen, medan **Filplats** kolumnen är Maven-genererad.
+
+![Information om problem med genomsökning av projektkod](assets/managing-pipelines-code-quality-details.png)
 
 >[!NOTE]
 >

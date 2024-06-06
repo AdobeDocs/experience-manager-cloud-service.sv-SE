@@ -4,7 +4,7 @@ description: Nyheter och skillnader – Adobe Experience Manager (AEM) as a Clou
 exl-id: d1ce126e-960c-4367-b741-af709dd81010
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 73bd693d47f37b453209208816dfed15d65e9e09
 workflow-type: tm+mt
 source-wordcount: '1883'
 ht-degree: 66%
@@ -208,7 +208,7 @@ För att stödja snabba iterationer och utveckling är det också möjligt att u
 
 >[!NOTE]
 >
->Mer information får du från [innehållsåterställning](/help/operations/backup.md), [Indexering](/help/operations/indexing.md)och [andra underhållsaktiviteter](/help/operations/maintenance.md).
+>Mer information får du från [innehållsåterställning](/help/operations/restore.md), [Indexering](/help/operations/indexing.md)och [andra underhållsaktiviteter](/help/operations/maintenance.md).
 
 Med AEM as a Cloud Service automatiseras sådana åtgärder så att tjänsten inte längre behöver avbrytas.
 

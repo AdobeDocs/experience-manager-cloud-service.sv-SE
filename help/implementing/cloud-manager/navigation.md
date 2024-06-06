@@ -5,7 +5,7 @@ exl-id: 3f3d7631-2bc9-440b-9888-50f6529bcd42
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: a5179851af8ec88e23d79a74265b10cbce2d50f1
 workflow-type: tm+mt
 source-wordcount: '1381'
 ht-degree: 0%
@@ -198,7 +198,7 @@ Varje program har många alternativ och data kopplade till sig. Dessa data samla
 * Översikt - Programöversikt enligt beskrivningen i det aktuella dokumentet
 * [Aktivitet](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#activity) - Historiken över programmets rörliga körningar
 * [Pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#pipelines) - Alla rörledningar som konfigurerats för programmet
-* [Databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) - Alla databaser har konfigurerats för programmet
+* [Databaser](/help/implementing/cloud-manager/managing-code/managing-repositories.md) - Alla databaser har konfigurerats för programmet
 * [Rapporter](/help/implementing/cloud-manager/sla-reporting.md) - Mätvärden, t.ex. SLA-data
 * [Miljö](/help/implementing/cloud-manager/manage-environments.md) - Alla miljöer som konfigurerats för programmet
 * [Innehållsuppsättningar](/help/implementing/developing/tools/content-copy.md) - Innehållsuppsättningar som skapats för kopieringsändamål

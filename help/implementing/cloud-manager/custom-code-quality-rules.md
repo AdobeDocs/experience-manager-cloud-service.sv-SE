@@ -5,9 +5,9 @@ exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: ceaa3b075953e9bdbcc0ae8c47106150be9a52d7
 workflow-type: tm+mt
-source-wordcount: '4167'
+source-wordcount: '4482'
 ht-degree: 0%
 
 ---
@@ -1134,7 +1134,6 @@ Om du åsidosätter standardvärdet kan det leda till mycket långsam sidläsnin
 
 Det förväntade mönstret för helt anpassade indexnamn är: `[prefix].[indexName]-custom-[version]`. Mer information finns i dokumentet [Innehållssökning och indexering](/help/operations/indexing.md).
 
-
 ### Samma egenskap med olika analyserade värden i samma indexdefinition {#oakpal-same-property-different-analyzed-values}
 
 #### Kod som inte uppfyller kraven {#non-compliant-code-same-property-different-analyzed-values}
@@ -1187,7 +1186,7 @@ Exempel:
 
 Om den analyserade egenskapen inte uttryckligen har angetts, kommer standardvärdet att vara false.
 
-### Tagg, egenskap
+### Tagg, egenskap {#tags-property}
 
 * **Nyckel**: IndexHasValidTagsProperty
 * **Typ**: Kodmeddelande
@@ -1195,3 +1194,75 @@ Om den analyserade egenskapen inte uttryckligen har angetts, kommer standardvär
 * **Sedan**: Version 2023.1.0
 
 För specifika index måste du behålla taggegenskapen och dess aktuella värden. Det går att lägga till nya värden i taggegenskapen, men om du tar bort befintliga värden (eller egenskapen helt) kan det leda till oväntade resultat.
+
+### Indexdefinitionsnoder får inte distribueras i UI-innehållspaket {#oakpal-ui-content-package}
+
+* **Nyckel**: IndexNotUnderUIContent
+* **Typ**: Förbättring
+* **Allvarlighetsgrad**: Mindre
+* **Sedan**: Version 2024.6.0
+
+AEM Cloud Service tillåter inte anpassade sökindexdefinitioner (noder av typen `oak:QueryIndexDefinition`) från att distribueras i gränssnittets innehållspaket.
+
+>[!WARNING]
+>
+>Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att rörledningar inte fungerar från [Cloud Manager, augusti 2024-utgåvan.](/help/implementing/cloud-manager/release-notes/current.md)
+
+### Anpassad heltextindexdefinition av typen damAssetLucene måste ha rätt prefix med damAssetLucene {#oakpal-dam-asset-lucene}
+
+* **Nyckel**: CustomFulltextIndexesOfTheDamAssetCheck
+* **Typ**: Förbättring
+* **Allvarlighetsgrad**: Mindre
+* **Sedan**: Version 2024.6.0
+
+AEM Cloud Service tillåter inte anpassade fulltextindexdefinitioner av typen `damAssetLucene` från att vara prefix med något annat än `damAssetLucene`.
+
+>[!WARNING]
+>
+>Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att rörledningar inte fungerar från [Cloud Manager, augusti 2024-utgåvan.](/help/implementing/cloud-manager/release-notes/current.md)
+
+### Indexdefinitionsnoder får inte innehålla egenskaper med samma namn {#oakpal-index-property-name}
+
+* **Nyckel**: DuplicateNameProperty
+* **Typ**: Förbättring
+* **Allvarlighetsgrad**: Mindre
+* **Sedan**: Version 2024.6.0
+
+AEM Cloud Service tillåter inte anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) som innehåller egenskaper med samma namn
+
+>[!WARNING]
+>
+>Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att rörledningar inte fungerar från [Cloud Manager, augusti 2024-utgåvan.](/help/implementing/cloud-manager/release-notes/current.md)
+
+### Det är förbjudet att anpassa vissa OOTB-indexdefinitioner {#oakpal-customizing-ootb-index}
+
+* **Nyckel**: RestrictIndexCustomization
+* **Typ**: Förbättring
+* **Allvarlighetsgrad**: Mindre
+* **Sedan**: Version 2024.6.0
+
+AEM Cloud Service tillåter inte obehöriga ändringar av följande OOTB-index:
+
+* `nodetypeLucene`
+* `slingResourceResolver`
+* `socialLucene`
+* `appsLibsLucene`
+* `authorizables`
+* `pathReference`
+
+>[!WARNING]
+>
+>Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att rörledningar inte fungerar från [Cloud Manager, augusti 2024-utgåvan.](/help/implementing/cloud-manager/release-notes/current.md)
+
+### Konfigurationen av tokenisererna i analysatorerna ska skapas med namnet tokenizer {#oakpal-tokenizer}
+
+* **Nyckel**: AnalyzerTokenizerConfigCheck
+* **Typ**: Förbättring
+* **Allvarlighetsgrad**: Mindre
+* **Sedan**: Version 2024.6.0
+
+AEM Cloud Service tillåter inte att tokeniserare med felaktiga namn skapas i analysatorer. Tokenizers bör alltid definieras som `tokenizer`.
+
+>[!WARNING]
+>
+>Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att rörledningar inte fungerar från [Cloud Manager, augusti 2024-utgåvan.](/help/implementing/cloud-manager/release-notes/current.md)

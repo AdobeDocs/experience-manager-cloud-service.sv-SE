@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: d4ada5f15a587d54f46a475ca574134988b463d8
+source-git-commit: 0b39fc4dcaf86d436547d3941b1f12bca8c5bc9b
 workflow-type: tm+mt
-source-wordcount: '5010'
+source-wordcount: '5030'
 ht-degree: 3%
 
 ---
@@ -99,6 +99,7 @@ ht-degree: 3%
    + Versionsinformation för Cloud Manager {#cloud-manager}
       + [Aktuell versionsinformation](/help/implementing/cloud-manager/release-notes/current.md)
       + 2024 {#2024}
+         + [Versionsinformation för 2024.5.0](/help/implementing/cloud-manager/release-notes/2024/2024-5-0.md)
          + [Versionsinformation för 2024.4.0](/help/implementing/cloud-manager/release-notes/2024/2024-4-0.md)
          + [Versionsinformation för 2024.3.0](/help/implementing/cloud-manager/release-notes/2024/2024-3-0.md)
          + [Versionsinformation för 2024.2.0](/help/implementing/cloud-manager/release-notes/2024/2024-2-0.md)
@@ -976,6 +977,7 @@ ht-degree: 3%
          + [Skapa sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-sandbox-programs.md)
          + [Redigeringsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md)
          + [Vilolägen](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/hibernating-environments.md)
+         + [Support för Edge Delivery Services](/help/implementing/cloud-manager/edge-delivery-services.md)
       + Skapa ett AEM {#create-application-project}
          + [Guiden Skapa projekt](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md)
          + [Projektinställningar](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md)
@@ -983,12 +985,16 @@ ht-degree: 3%
       + [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md)
       + Hantera kod {#managing-code}
          + [Versionshantering för Maven Project](/help/implementing/cloud-manager/managing-code/project-version-handling.md)
-         + [Databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md)
+         + [Hantera databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/managing-repositories.md)
+         + [Lägga till Adobe-databaser](/help/implementing/cloud-manager/managing-code/adobe-repositories.md)
+         + [Lägga till privata databaser](/help/implementing/cloud-manager/managing-code/private-repositories.md)
          + [Åtkomst till databaser](/help/implementing/cloud-manager/managing-code/accessing-repos.md)
+         + [Stöd för Git-undermodul](/help/implementing/cloud-manager/managing-code/git-submodules.md)
          + [Använda Git med Cloud Manager](/help/implementing/cloud-manager/managing-code/integrating-with-git.md)
          + [Använda flera databaser](/help/implementing/cloud-manager/managing-code/working-with-multiple-source-git-repositories.md)
          + [Installation av Enterprise Development Team](/help/implementing/cloud-manager/managing-code/enterprise-team-dev-setup.md)
-         + [Arbeta med dina egna GitHub-databaser](/help/implementing/cloud-manager/managing-code/byo-github.md)
+         + [GitHub Check Configuration](/help/implementing/cloud-manager/managing-code/github-check-config.md)
+         + [GitHub-kontrollanteckningar](/help/implementing/cloud-manager/managing-code/github-annotations.md)
       + [Miljövariabler](/help/implementing/cloud-manager/environment-variables.md)
       + Cloud Manager CI-CD-pipeline {#cicd-pipelines}
          + [Introduktion](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md)
@@ -1026,6 +1032,7 @@ ht-degree: 3%
          + [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md)
          + [Kontrollerar DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md)
          + [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md)
+         + [DV-certifikat (Domain Validated)](/help/implementing/cloud-manager/managing-ssl-certifications/domain-validated-certificates.md)
       + IP-Tillåtelselista {#ip-allow-lists}
          + [Introduktion](/help/implementing/cloud-manager/ip-allow-lists/introduction.md)
          + [Lägga till en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md)
@@ -1202,7 +1209,6 @@ ht-degree: 3%
    + [Ytterligare publiceringsregioner](/help/operations/additional-publish-regions.md)
    + [Infrastruktur- och serviceövervakning på AEM as a Cloud Service](/help/operations/monitoring.md)
    + [Underhållsaktiviteter](/help/operations/maintenance.md)
-   + [Säkerhetskopiering och återställning](/help/operations/backup.md)
    + [Självbetjäningsåterställning](/help/operations/restore.md)
    + [Asynkrona jobb](/help/operations/asynchronous-jobs.md)
    + [Borttagning av det generiska lucenindexet](/help/operations/removal-generic-lucene-index.md)
