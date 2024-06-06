@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 05144cc11c3a3e99e4e76aa6c8720592e9ca7a9f
+source-git-commit: e6de1fc47eb2b9c3ba5b115c74b874016449bc20
 workflow-type: tm+mt
-source-wordcount: '1900'
+source-wordcount: '1942'
 ht-degree: 0%
 
 ---
@@ -44,12 +44,28 @@ Titta på videon om versionsöversikten från maj 2024 om du vill se en sammanfa
 
 ### Nya funktioner på webbplatser {#sites-new-features}
 
+#### Integrering av AEM {#translation-integration}
+
+Översättningsåtgärder och arbetsflöden för innehåll utlöser nu händelser som gör det möjligt att spåra relevanta processsteg och tillstånd från externa program. Följande händelser genereras. Användare kan prenumerera på händelser med Adobe Developer Console.
+
+* `TRANSLATION_JOB_CREATED`
+* `TRANSLATION_JOB_CONTENT_ADDITION_STARTED`
+* `TRANSLATION_JOB_CONTENT_ADDITION_COMPLETED`
+* `TRANSLATION_JOB_CONTENT_DELETION_STARTED`
+* `TRANSLATION_JOB_CONTENT_DELETION_COMPLETED`
+* `TRANSLATION_JOB_COMMITTED_FOR_TRANSLATION`
+* `TRANSLATION_JOB_READY_FOR_REVIEW`
+* `TRANSLATION_JOB_APPROVED`
+* `TRANSLATION_JOB_COMPLETED`
+* `TRANSLATION_JOB_CANCELLED`
+* `TRANSLATION_JOB_ERROR`
+
 #### RUM-datatjänst (Real Use Monitoring) {#real-use-monitoring}
 
 * **[RUM-datatjänsten (Real Use Monitoring) är nu GA](/help/implementing/cloud-manager/content-requests.md#real-user-monitoring-for-aem-as-a-cloud-service)** möjliggör datainsamling på klientsidan för AEM as a Cloud Service.
 Tjänsten Real Use Monitoring, kundsidessamlingen, ger en mer exakt återgivning av interaktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det ger kunder med avancerade insikter om sidtrafik och prestanda. Det är en utmärkt möjlighet att lära sig mer om hur sidan fungerar och få insikter för att förbättra den.
 
-### AEM för Edge Delivery Services
+#### AEM för Edge Delivery Services {#edge-enhancements}
 
 Förbättrad stabilitet och olika förbättringar för en bättre redigeringsupplevelse.
 
@@ -128,11 +144,11 @@ Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I v
 
 ### Forms Service
 
-Forms-tjänsten genererar interaktiv PDF forms för datainhämtning. Den kan också användas för att importera exportdata till och från ett befintligt interaktivt PDF-formulär och validera skickade data. Här är en beskrivning av funktionaliteten:
+Forms-tjänsten genererar interaktiv PDF forms för datainhämtning. Den kan också användas för att importera eller exportera data till och från ett befintligt interaktivt PDF-formulär och validera skickade data. Här är en beskrivning av funktionaliteten:
 
 * **Återger Forms**: Generera ett interaktivt PDF-formulär från en mall som skapats med AEM Forms Designer och, eventuellt, XML-data. Detta skapar i stort sett ett ifyllbart PDF-formulär som kan fyllas i med data.
 * **Extrahering och import av data**: Importera data till ett befintligt PDF-formulär och extrahera data från ett ifyllt PDF-formulär. Både XDP- och XML-dataformat stöds, och import till icke-XFA PDF forms (kallas även AcroForms) stöder dessutom FDF- och XFDF-data.
-* **Dataverifiering**: : Validera skickade data i XDP- eller XML-format mot en mall som skapats med AEM Forms Designer.
+* **Dataverifiering**: Validera skickade data i XDP- eller XML-format mot en mall som skapats med AEM Forms Designer.
 
 >[!IMPORTANT]
 >
@@ -174,7 +190,7 @@ Gränssnittet för RDE-kommandoraden har några nya funktioner som förbättrar 
 
 * [kommandot setup är interaktivt](/help/implementing/developing/introduction/rapid-development-environments.md#installing-the-rde-command-line-tools-interactive), vilket gör det enklare att välja mellan organisationer, program och miljöer. Nu går det även att åsidosätta dessa värden på kommandoraden.
 * [tyst läge](/help/implementing/developing/introduction/rapid-development-environments.md#global-flags) för en mindre detaljerad utskrift.
-* [json-läge](/help/implementing/developing/introduction/rapid-development-environments.md#global-flags) för användbara utdata när de anropas via programmering.
+* [json-läge](/help/implementing/developing/introduction/rapid-development-environments.md#global-flags) för användbara utdata när de anropas programmatiskt.
 
 ### Nya meddelanden från Åtgärdscenter {#actions-center-notifications}
 
@@ -239,4 +255,3 @@ Du hittar en fullständig lista över versioner av migreringsverktyg [här](/hel
 
 Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
 Om du vill få ett månatligt e-postmeddelande om uppdateringar av versionsinformation för Experience Cloud prenumererar du på [Produktuppdatering Adobe Priority](https://www.adobe.com/subscription/priority-product-update.html).
-
