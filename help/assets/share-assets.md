@@ -4,9 +4,9 @@ description: Distribuera digitala resurser med metoder som att dela som en länk
 feature: Asset Management, Collaboration, Asset Distribution
 role: User, Admin
 exl-id: 14e897cc-75c2-42bd-8563-1f5dd23642a0
-source-git-commit: 90da6851240add93de73dd6da46e54ffbf80a1d3
+source-git-commit: ec01a1b383160014918ee8c9b81e15f0cc855d02
 workflow-type: tm+mt
-source-wordcount: '1777'
+source-wordcount: '1771'
 ht-degree: 0%
 
 ---
@@ -121,7 +121,7 @@ E-postmallen kan anpassas med oformaterad text eller HTML. Den redigerbara malll
 | `${emailMessage}` | E-postbrödtext |
 | `${pagePath}` | URL för den delade länken |
 | `${linkExpiry}` | Utgångsdatum för delad länk |
-| `${host.prefix}` | Ursprung för [!DNL Experience Manager] instans, till exempel `http://www.adobe.com"` |
+<!--| `${host.prefix}` | Origin of the [!DNL Experience Manager] instance, for example `http://www.adobe.com"` |-->
 
 #### Exempel på anpassad e-postmall {#custom-email-template-example}
 
@@ -137,10 +137,10 @@ subject: ${emailSubject}
     <a href="${pagePath}" target="_blank"><strong>Open</strong></a>
 </p>
 
-Sent from instance: ${host.prefix}
-
 </body></html>
 ```
+
+<!--Sent from instance: ${host.prefix}-->
 
 ### Hämta resurser via resurslänken {#download-assets-using-asset-link}
 
