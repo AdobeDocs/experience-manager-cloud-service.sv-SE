@@ -4,9 +4,9 @@ description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] a
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: de06178f66c95baef15de19296a654f1ed4a0387
+source-git-commit: 8f7c2fc175a542df5725693cfc332802d54e1e88
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '400'
 ht-degree: 1%
 
 ---
@@ -20,6 +20,11 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 16544, som offentliggjordes den 4 juni 2024. Den tidigare underhållsversionen var version 16461.
 
 2024.6.0 Funktionsaktivering innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) för mer information.
+
+>[!CAUTION]
+>
+>Använd den SDK som det hänvisas till här under, eftersom en regression har bekräftats med föregående SDK:
+>`AEM SDK v2024.06.16647.20240607T103723Z-240500`
 
 ### Förbättringar {#enhancements-16544}
 
