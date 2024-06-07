@@ -3,9 +3,9 @@ title: Anpassade behörigheter
 description: Lär dig hur du kan använda anpassade behörigheter för att skapa anpassade behörighetsprofiler med konfigureringsbara behörigheter för att begränsa åtkomst till program, pipelines och miljöer för användare av Cloud Managers.
 exl-id: 167da985-7f19-45b3-90a3-884817907da2
 solution: Experience Manager
-feature: Cloud Manager, Developing
+feature: Security, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: bc92ed7acefbbd906b0986ea0b6b96fa6d8422de
 workflow-type: tm+mt
 source-wordcount: '1515'
 ht-degree: 1%
