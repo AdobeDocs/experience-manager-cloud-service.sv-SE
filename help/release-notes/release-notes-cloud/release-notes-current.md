@@ -5,7 +5,7 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: e6de1fc47eb2b9c3ba5b115c74b874016449bc20
+source-git-commit: 68e2f6867a2cbcaf52fa6de259fe118e31ee7573
 workflow-type: tm+mt
 source-wordcount: '1942'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Titta på videon om versionsöversikten från maj 2024 om du vill se en sammanfa
 
 #### RUM-datatjänst (Real Use Monitoring) {#real-use-monitoring}
 
-* **[RUM-datatjänsten (Real Use Monitoring) är nu GA](/help/implementing/cloud-manager/content-requests.md#real-user-monitoring-for-aem-as-a-cloud-service)** möjliggör datainsamling på klientsidan för AEM as a Cloud Service.
+* **[RUM-datatjänsten (Real Use Monitoring) är nu GA](/help/sites-cloud/administering/real-use-monitoring-for-aem-as-a-cloud-service.md)** möjliggör datainsamling på klientsidan för AEM as a Cloud Service.
 Tjänsten Real Use Monitoring, kundsidessamlingen, ger en mer exakt återgivning av interaktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det ger kunder med avancerade insikter om sidtrafik och prestanda. Det är en utmärkt möjlighet att lära sig mer om hur sidan fungerar och få insikter för att förbättra den.
 
 #### AEM för Edge Delivery Services {#edge-enhancements}
