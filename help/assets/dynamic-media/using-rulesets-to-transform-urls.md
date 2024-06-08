@@ -2,10 +2,10 @@
 title: Använd regeluppsättningar för att omforma URL:er
 description: Lär dig hur du distribuerar regeluppsättningar i Dynamic Media för att omvandla URL:er. Regeluppsättningar är instruktioner skrivna i ett skriptspråk (t.ex. JavaScript) som utvärderar XML-data och utför vissa åtgärder om dessa data uppfyller vissa villkor.
 contentOwner: Rick Brough
-feature: Rulesets,Troubleshooting,Upload
+feature: Rulesets,Troubleshooting,Upload,Best Practices
 role: User
 exl-id: f8010125-ba89-406a-bede-f6aa2f858c70
-source-git-commit: ad2b36ffa178d787f50d33ce3393a76811467323
+source-git-commit: 35f31c95e92148ff5f3472f26ea9c40fa5a17947
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 0%

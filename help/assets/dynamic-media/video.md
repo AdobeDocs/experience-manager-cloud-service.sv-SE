@@ -2,10 +2,10 @@
 title: Video i Dynamic Media
 description: Lär dig arbeta med video i Dynamic Media. Granska de bästa sätten att koda videofilmer, publicera videofilmer på YouTube, visa videorapporter och lägga till undertexter eller kapitelmarkörer i videofilmer.
 contentOwner: Rick Brough
-feature: Video Profiles
+feature: Video Profiles,Best Practices
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 7a80f68f71475b2bdb6b5559354d7248208a3819
+source-git-commit: 35f31c95e92148ff5f3472f26ea9c40fa5a17947
 workflow-type: tm+mt
 source-wordcount: '9237'
 ht-degree: 0%
