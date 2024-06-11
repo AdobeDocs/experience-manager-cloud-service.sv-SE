@@ -2,9 +2,9 @@
 title: AEM Assets inbyggda integrering med Adobe Express
 description: Tack vare AEM Assets inbyggda integrering med Adobe Express får du direkt åtkomst till resurser som lagras i AEM Assets inifrån användargränssnittet för Adobe Expressen.
 exl-id: d43e4451-da2a-444d-9aa4-4282130ee44f
-source-git-commit: 4e33782dd8db0c1185b9a7733e7bcccfbcf3c3ba
+source-git-commit: d7e144d7f7722d4de96b3f85d44432863b350f92
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '629'
 ht-degree: 0%
 
 ---
@@ -50,18 +50,19 @@ När du har infogat lämpliga ändringar på arbetsytan Express kan du spara dem
    ![Spara resurser i AEM](assets/adobe-express-share.png)
 
 2. I avsnittet Lagring i den högra rutan väljer du **AEM Assets**. Adobe Expressen visar dialogrutan för överföring.
-3. Välj antingen **Aktuell sida** eller **Alla sidor** sparalternativ. Markera **Aktuell sida** sparar filen i målmappen, men väljer **Alla sidor** skapar en ny mapp i målmappen för alla filer som inte är PDF och sparar dem som separata filer medan PDF-filer sparas som en enda fil i målmappen.
-4. Ange ett namn och format för resursen. Du kan spara arbetsytans innehåll i PNG-, JPEG, PDF, MP4-, MP4+PNG- eller MP4+JPEG-format. Formatet justeras automatiskt baserat på tillgången/tillgångarna.
-5. Klicka på mappikonen under **Målmapp** för att välja en plats och spara resursen/resurserna.
+3. Välj antingen **Aktuell sida** eller **Alla sidor**. Ange ett namn och format för de resurser som ska exporteras. Du kan exportera arbetsytans innehåll i formaten PNG, JPEG, PDF, MP4, MP4+PNG eller MP4+JPEG. Formatet justeras automatiskt baserat på resursen/resurserna på arbetsytans sida/sidor.
+Markera **Aktuell sida** sparar resursen på den aktuella sidan i målmappen. Om du väljer **Alla sidor** och exportformatet inte är PDF, sparas alla sidor på arbetsytan som separata filer i en ny mapp i målmappen. Om exportformatet är PDF sparas alla arbetsytesidor som en enda PDF-fil i målmappen.
+
+4. Klicka på mappikonen under **Målmapp** för att välja en plats och spara resursen/resurserna.
 
    ![Spara resurser i AEM](/help/assets/assets/page-selection-and-destination-folder.svg)
 
-6. Valfritt: Du kan lägga till kampanjmetadata för överföringen med **Projekt- eller kampanjnamn** fält. Du kan använda ett befintligt namn eller skapa ett nytt. Du kan definiera flera projekt- eller kampanjnamn för överföringen. Registrera namnet genom att skriva namnet och trycka på Retur.
+5. Valfritt: Du kan lägga till kampanjmetadata för överföringen med **Projekt- eller kampanjnamn** fält. Du kan använda ett befintligt namn eller skapa ett nytt. Du kan definiera flera projekt- eller kampanjnamn för överföringen. Registrera namnet genom att skriva namnet och trycka på Retur.
 Som en god praxis rekommenderar Adobe att du anger värden i resten av fälten samt skapar en förbättrad sökupplevelse för dina överförda resurser.
 
-7. Definiera på liknande sätt värden för **[!UICONTROL Keywords]** och **[!UICONTROL Channels]** fält.
+6. Definiera på liknande sätt värden för **[!UICONTROL Keywords]** och **[!UICONTROL Channels]** fält.
 
-8. Klicka **[!UICONTROL Upload]** om du vill överföra resurserna till AEM Assets.
+7. Klicka **[!UICONTROL Upload]** om du vill överföra resurserna till AEM Assets.
 
 ## Begränsningar {#limitations}
 
