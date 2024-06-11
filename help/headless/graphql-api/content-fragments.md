@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-source-git-commit: d0814d3feb9ad14ddd3372851a7b2df4b0c81125
+source-git-commit: 07670a532294a4ae8afb9636a206d2a8cbdce2b9
 workflow-type: tm+mt
-source-wordcount: '5365'
+source-wordcount: '5400'
 ht-degree: 0%
 
 ---
@@ -745,7 +745,7 @@ Lösningen i GraphQL innebär att man kan
 >* `_dynamicUrl` : en DAM-resurs
 >* `_dmS7Url` : en Dynamic Media-resurs
 > 
->Om bilden som refereras är en DAM-resurs är värdet för `_dmS7Url` kommer att `null`. Se [Leverans av Dynamic Media-resurser via URL i GraphQL-frågor](#dynamic-media-asset-delivery-by-url).
+>Om den refererade resursen är en DAM-resurs är värdet för `_dmS7Url` kommer att `null`. Se [Leverans av Dynamic Media-resurser via URL i GraphQL-frågor](#dynamic-media-asset-delivery-by-url).
 
 ### Omformningsbegärans struktur {#structure-transformation-request}
 
@@ -925,10 +925,6 @@ Följande begränsningar finns:
 
 Med GraphQL for AEM Content Fragments kan du begära en URL till en AEM Dynamic Media-resurs (Scene7) (som en **Innehållsreferens**).
 
->[!CAUTION]
->
->Endast *image* det går att referera till resurser från Dynamic Media.
-
 Lösningen i GraphQL innebär att man kan
 
 * use `_dmS7Url` på `ImageRef` referens
@@ -946,12 +942,12 @@ Lösningen i GraphQL innebär att man kan
 >* `_dmS7Url` : en Dynamic Media-resurs
 >* `_dynamicUrl` : en DAM-resurs
 > 
->Om bilden som refereras är en Dynamic Media-resurs är värdet för `_dynamicURL` kommer att `null`. Se [webboptimerad bildleverans i GraphQL-frågor](#web-optimized-image-delivery-in-graphql-queries).
+>Om den refererade resursen är en Dynamic Media-resurs är värdet för `_dynamicURL` kommer att `null`. Se [webboptimerad bildleverans i GraphQL-frågor](#web-optimized-image-delivery-in-graphql-queries).
 
-### Exempelfråga för leverans av Dynamic Media-mediefiler via URL {#sample-query-dynamic-media-asset-delivery-by-url}
+### Exempelfråga för leverans av Dynamic Media-mediefiler via URL - Bildreferens{#sample-query-dynamic-media-asset-delivery-by-url-imageref}
 
 Här följer ett exempel på en fråga:
-* för flera innehållsfragment av typen `team` och `person`
+* för flera innehållsfragment av typen `team` och `person`, returnera ett `ImageRef`
 
 ```graphql
 query allTeams {
@@ -973,6 +969,47 @@ query allTeams {
     }
   }
 } 
+```
+
+### Exempelfråga för leverans av Dynamic Media-mediefiler via URL - Flera referenser{#sample-query-dynamic-media-asset-delivery-by-url-multiple-refs}
+
+Här följer ett exempel på en fråga:
+* för flera innehållsfragment av typen `team` och `person`, returnera ett `ImageRef`, `MultimediaRef` och `DocumentRef`:
+
+```graphql
+query allTeams {
+  teamList {
+    items {
+      _path
+      title
+      teamMembers {
+        fullName
+        profilePicture {
+          __typename
+          ... on ImageRef{
+            _dmS7Url
+            height
+            width
+          }
+        }
+       featureVideo {
+          __typename
+          ... on MultimediaRef{
+            _dmS7Url
+            size
+          }
+        }
+      about-me {
+          __typename
+          ... on DocumentRef{
+            _dmS7Url
+            _path
+          }
+        }
+      }
+    }
+  }
+}
 ```
 
 ## GraphQL for AEM - i korthet {#graphql-extensions}
@@ -1070,7 +1107,9 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
 
       * `_dmS7Url`: på `ImageRef` referens för leverans av URL:en till en [Dynamic Media-resurs](#dynamic-media-asset-delivery-by-url)
 
-         * Se [Exempelfråga för leverans av Dynamic Media-mediefiler via URL](#sample-query-dynamic-media-asset-delivery-by-url)
+         * Se [Exempelfråga för leverans av Dynamic Media-resurser via URL - ImageRef](#sample-query-dynamic-media-asset-delivery-by-url-imageref)
+
+         * Se [Exempelfråga för leverans av Dynamic Media-mediefiler via URL - Flera referenser](#sample-query-dynamic-media-asset-delivery-by-url-multiple-refs)
 
    * `_tags`: för att visa ID:n för innehållsfragment eller variationer som innehåller taggar; detta är en array med `cq:tags` identifierare.
 
