@@ -4,9 +4,9 @@ description: Lär dig hur du använder miljöer för snabb utveckling för snabb
 exl-id: 1e9824f2-d28a-46de-b7b3-9fe2789d9c68
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 1c157af3f7ed4ab3ae4a67d7db200e772cf8b565
 workflow-type: tm+mt
-source-wordcount: '4294'
+source-wordcount: '4312'
 ht-degree: 0%
 
 ---
@@ -412,11 +412,6 @@ Kodexemplet ovan visar beteendet om ett paket inte löses. I så fall&quot;mella
 
 ### Distribuera startkod baserat på webbplatsteman och webbplatsmallar {#deploying-themes-to-rde}
 
->[!NOTE]
->
-> Den här funktionen är inte tillgänglig än. Den kommer att lanseras någon gång i juni.
->
-
 De lokala lagringsenheterna stöder kod som baseras på [webbplatsteman](/help/sites-cloud/administering/site-creation/site-themes.md) och [webbplatsmallar](/help/sites-cloud/administering/site-creation/site-templates.md). Med RDE:er görs detta med hjälp av ett kommandoradsdirektiv för att distribuera frontendpaket, i stället för med Cloud Manager [Front-End Pipeline](/help/sites-cloud/administering/site-creation/enable-front-end-pipeline.md) används för andra miljötyper.
 
 Som vanligt kan du bygga ditt front end-paket med npm:
@@ -460,6 +455,10 @@ Logs:
 >Namngivningen av filerna i paketet längst fram måste följa följande namnkonventioner:
 > * &quot;dist&quot;-mapp, för npm-paketets utdatamapp
 > * filen &quot;package.json&quot;, för npm-beroendepaketet
+
+>[!TIP]
+>
+> Om du skapade din RDE före april 2023 och upplever felet&quot;UNEXPECTED_API_ERROR&quot; när du försöker använda klientfunktionen för första gången kan du försöka ta bort miljön och skapa den igen.
 
 ### Kontrollera statusen för den lokala lagringsplatsen {#checking-rde-status}
 
