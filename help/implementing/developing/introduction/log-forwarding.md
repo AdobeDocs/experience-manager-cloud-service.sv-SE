@@ -4,9 +4,9 @@ description: Läs mer om vidarebefordran av loggar till Splunk och andra loggnin
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 0e166e8549febcf5939e4e6025519d8387231880
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '1163'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,8 @@ Kunder som har en licens för en loggningsleverantör eller värd för en loggni
 
 Loggvidarebefordran konfigureras på ett självbetjäningssätt genom att en konfiguration deklareras i Git och distribueras via Cloud Manager Configuration Pipeline till dev-, stage- och produktionsmiljötyper i produktionsprogram (ej sandlådeprogram).
 
+Det finns ett alternativ för att dirigera loggarna AEM och Apache/Dispatcher via AEM avancerade nätverksinfrastruktur, som dedikerad IP-adress.
+
 Observera att den nätverksbandbredd som är associerad med loggar som skickas till loggningsmålet räknas som en del av organisationens I/O-användning i nätverket.
 
 
@@ -36,6 +38,7 @@ Den här artikeln är organiserad på följande sätt:
 
 * Inställningar - gemensamma för alla loggningsmål
 * Målkonfigurationer för loggning - varje mål har ett något annorlunda format
+* Loggpostformat - information om loggpostformat
 * Avancerade nätverk - skicka AEM- och Apache/Dispatcher-loggar via en dedikerad utgång eller via ett VPN
 
 
@@ -48,7 +51,7 @@ Den här artikeln är organiserad på följande sätt:
         logForwarding.yaml
    ```
 
-1. logForwarding.yaml ska innehålla metadata och en konfiguration som liknar följande format (Splunk används som exempel).
+1. `logForwarding.yaml` ska innehålla metadata och en konfiguration som liknar följande format (Splunk används som exempel).
 
    ```
    kind: "LogForwarding"
@@ -64,7 +67,7 @@ Den här artikeln är organiserad på följande sätt:
          index: "AEMaaCS"
    ```
 
-   The **sort** parametern ska anges till LogForwarding. Versionen ska anges till schemaversionen, som är 1.
+   The **sort** parametern ska anges till `LogForwarding` versionen ska anges till schemaversionen, som är 1.
 
    Token i konfigurationen (t.ex. `${{SPLUNK_TOKEN}}`) representerar hemligheter, som inte bör lagras i Git. Deklarera dem som Cloud Manager i stället  [Miljövariabler](/help/implementing/cloud-manager/environment-variables.md) av typen **hemlig**. Se till att markera **Alla** som listvärde för fältet Service Applied, så att loggarna kan vidarebefordras till författare, publicering och förhandsgranskning.
 
@@ -134,14 +137,53 @@ data:
 
 En SAS-token bör användas för autentisering. Den ska skapas från signatursidan för delad åtkomst, i stället för på tokensidan för delad åtkomst, och ska konfigureras med följande inställningar:
 
-* Tillåtna tjänster: Blobb måste väljas
-* Tillåtna resurser: Objektet måste markeras
-* Tillåtna behörigheter: Skriv, Lägg till, Skapa måste vara markerat
+* Tillåtna tjänster: Blobb måste väljas.
+* Tillåtna resurser: Objektet måste markeras.
+* Tillåtna behörigheter: Skriv, Lägg till, Skapa måste vara markerat.
 * Ett giltigt start- och förfallodatum/-tid.
 
 Här följer en skärmbild av en exempelkonfiguration för SAS-token:
 
 ![Konfiguration av Azure Blob SAS-token](/help/implementing/developing/introduction/assets/azureblob-sas-token-config.png)
+
+#### Azure Blob Storage CDN-loggar {#azureblob-cdn}
+
+Var och en av de globalt distribuerade loggningsservrarna skapar en ny fil var sjätte sekund under `aemcdn` mapp. När filen har skapats läggs den inte längre till. Filnamnsformatet är YYY-MM-DDThh:mm:ss.sss-uniqueid.log. Exempel: 2024-03-04T10:00:00.000-WnFWYN9BpOUs2aOVn4ee.log.
+
+Exempel:
+
+```
+aemcdn/
+   2024-03-04T10:00:00.000-abc.log
+   2024-03-04T10:00:00.000-def.log
+```
+
+Och sedan 30 sekunder:
+
+```
+aemcdn/
+   2024-03-04T10:00:00.000-abc.log
+   2024-03-04T10:00:00.000-def.log
+   2024-03-04T10:00:30.000-ghi.log
+   2024-03-04T10:00:30.000-jkl.log
+   2024-03-04T10:00:30.000-mno.log
+```
+
+Varje fil innehåller flera json-loggposter, var och en på en separat rad. Loggpostens format beskrivs i [loggningsartikel](/help/implementing/developing/introduction/logging.md), och varje loggpost innehåller också de ytterligare egenskaper som anges i [Loggpostformat](#log-format) nedan.
+
+#### Andra Azure Blob Storage-loggar {#azureblob-other}
+
+Andra loggar än CDN-loggar visas under en mapp med följande namnkonvention:
+
+* aemaccess
+* aemerror
+* aemdispatcher
+* httpdaccess
+* httpderror
+
+Under varje mapp skapas en enda fil och läggs till i den. Kunderna ansvarar för att bearbeta och hantera den här filen så att den inte växer för stor.
+
+Se loggpostformaten i [loggningsartikel](/help/implementing/developing/introduction/logging.md). Loggposterna kommer även att innehålla de ytterligare egenskaper som anges i [Loggpostformat](#log-formats) nedan.
 
 
 ### Datadog {#datadog}
@@ -202,6 +244,24 @@ data:
       authHeaderValue: "${{HTTPS_LOG_FORWARDING_TOKEN}}"
 ```
 
+#### HTTPS CDN-loggar {#https-cdn}
+
+Webbförfrågningar (POST) skickas kontinuerligt, med en JSON-nyttolast som är en matris med loggposter, med det loggpostformat som beskrivs i [loggningsartikel](/help/implementing/developing/introduction/logging.md#cdn-log). Ytterligare egenskaper anges i [Loggpostformat](#log-formats) nedan.
+
+Det finns också en egenskap med namnet `sourcetype`, som är inställt på värdet `aemcdn`.
+
+#### Andra HTTPS-loggar {#https-other}
+
+En separat webbförfrågan (POST) skickas för varje loggpost, med de loggpostformat som beskrivs i [loggningsartikel](/help/implementing/developing/introduction/logging.md). Ytterligare egenskaper anges i [Loggpostformat](#log-format) nedan.
+
+Det finns också en egenskap med namnet `sourcetype`, som är inställt på något av dessa värden:
+
+* aemaccess
+* aemerror
+* aemdispatcher
+* httpdaccess
+* httpderror
+
 ### Splunk {#splunk}
 
 ```
@@ -237,9 +297,38 @@ data:
    ```   
 -->
 
+## Loggpostformat {#log-formats}
+
+Se det allmänna [loggningsartikel](/help/implementing/developing/introduction/logging.md) för formatet för varje loggtyp (Dispatcher-logg, CDN-logg osv.).
+
+Eftersom loggar från flera program och miljöer kan vidarebefordras till samma loggningsmål, förutom de utdata som beskrivs i loggningsartikeln, kommer följande egenskaper att finnas i varje loggpost:
+
+* aem_env_id
+* aem_env_type
+* aem_program_id
+* aem_tier
+
+Egenskaperna kan till exempel ha följande värden:
+
+```
+aem_env_id: 1242
+aem_env_type: dev
+aem_program_id: 12314
+aem_tier: author
+```
+
 ## Avancerat nätverksbyggande {#advanced-networking}
 
-Om du har organisatoriska krav för att låsa trafiken till loggningsmålet kan du konfigurera vidarebefordran av loggen så att du [avancerat nätverk](/help/security/configuring-advanced-networking.md). Se mönstren för de tre avancerade nätverkstyperna nedan, som använder en valfri `port` -parametern tillsammans med `host` parameter.
+>[!NOTE]
+>
+>Den här funktionen är ännu inte klar för tidiga användare.
+
+
+Vissa organisationer väljer att begränsa vilken trafik som kan tas emot av loggningsdestinationerna.
+
+För CDN-loggen kan du tillåta att IP-adresserna listas enligt beskrivningen i [den här artikeln](https://www.fastly.com/documentation/reference/api/utils/public-ip-list/). Om listan med delade IP-adresser är för stor kan du skicka trafik till ett (ej Adobe) Azure Blob Store där logik kan skrivas för att skicka ut loggarna från en dedikerad IP-adress till deras slutliga mål.
+
+För andra loggar kan du konfigurera vidarebefordran av loggar så att du [avancerat nätverk](/help/security/configuring-advanced-networking.md). Se mönstren för de tre avancerade nätverkstyperna nedan, som använder en valfri `port` -parametern tillsammans med `host` parameter.
 
 ### Flexibla portägg {#flex-port}
 
@@ -249,7 +338,7 @@ Om loggtrafiken går till en annan port än 443 (t.ex. 8443 nedan) ska du konfig
 {
     "portForwards": [
         {
-            "name": "mylogging.service.logger.com",
+            "name": "splunk-host.example.com",
             "portDest": 8443, # something other than 443
             "portOrig": 30443
         }    
@@ -265,7 +354,7 @@ version: "1"
 data:
   splunk:
     default:
-      host: "proxy.tunnel"
+      host: "${{AEM_PROXY_HOST}}"
       token: "${{SomeToken}}"
       port: 30443
       index: "index_name"
@@ -273,14 +362,15 @@ data:
 
 ### Dedikerad egress-IP {#dedicated-egress}
 
+
 Om loggtrafiken behöver komma ut från en dedikerad IP-adress kan du konfigurera avancerade nätverk så här:
 
 ```
 {
     "portForwards": [
         {
-            "name": "mylogging.service.com",
-            "portDest": 443, # something other than 443
+            "name": "splunk-host.example.com",
+            "portDest": 443, 
             "portOrig": 30443
         }    
     ]
@@ -290,15 +380,25 @@ Om loggtrafiken behöver komma ut från en dedikerad IP-adress kan du konfigurer
 och konfigurera bildspelsfilen så här:
 
 ```
+      
 kind: "LogForwarding"
 version: "1"
+   metadata:
+     envTypes: ["dev"]
 data:
   splunk:
-    default:
-      host: "proxy.tunnel"
-      token: "${{SomeToken}}"
-      port: 30443
-      index: "index_name"
+     default:
+       enabled: true
+       index: "index_name" 
+       token: "${{SPLUNK_TOKEN}}"  
+     aem:
+       enabled: true
+       host: "${{AEM_PROXY_HOST}}"
+       port: 30443       
+     cdn:
+       enabled: true
+       host: "splunk-host.example.com"
+       port: 443    
 ```
 
 ### VPN {#vpn}
@@ -309,24 +409,29 @@ Om loggtrafiken behöver gå via ett VPN-nätverk kan du konfigurera avancerade 
 {
     "portForwards": [
         {
-            "name": "mylogging.service.com",
-            "portDest": 443, # something other than 443
+            "name": "splunk-host.example.com",
+            "portDest": 443,
             "portOrig": 30443
         }    
     ]
 }
-```
 
-och konfigurera bildspelsfilen så här:
-
-```
 kind: "LogForwarding"
 version: "1"
+   metadata:
+     envTypes: ["dev"]
 data:
   splunk:
-    default:
-      host: "mylogging.service.com"
-      token: "${{SomeToken}}"
-      port: 30443
-      index: "index_name"
+     default:
+       enabled: true
+       index: "index_name" 
+       token: "${{SPLUNK_TOKEN}}"  
+     aem:
+       enabled: true
+       host: "${{AEM_PROXY_HOST}}"
+       port: 30443       
+     cdn:
+       enabled: true
+       host: "splunk-host.example.com"
+       port: 443     
 ```
