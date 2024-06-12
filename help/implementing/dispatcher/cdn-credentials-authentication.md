@@ -2,7 +2,8 @@
 title: Konfigurera CDN-autentiseringsuppgifter och autentisering
 description: Lär dig hur du konfigurerar CDN-inloggningsuppgifter och autentisering genom att deklarera regler i en konfigurationsfil som sedan distribueras med hjälp av Cloud Manager Configuration Pipeline.
 feature: Dispatcher
-source-git-commit: ee993798739232da794dbf7ff0a643ca93effa7d
+exl-id: a5a18c41-17bf-4683-9a10-f0387762889b
+source-git-commit: 7a53f936aacfb3e5aa431f26e5346c1809f9c76f
 workflow-type: tm+mt
 source-wordcount: '1143'
 ht-degree: 0%
@@ -71,7 +72,7 @@ Syntaxen för `X-AEM-Edge-Key` Värdet innehåller:
 
 ## Rensa API-token {#purge-API-token}
 
-Kunder kan rensa CDN-cachen genom att använda en deklarerad rensnings-API-token. Token deklareras med syntaxen nedan.  Se [Vanliga inställningar](#common-setup) för att lära dig hur du distribuerar det.
+Kunderna kan [rensa CDN-cachen](/help/implementing/dispatcher/cdn-cache-purge.md) genom att använda en deklarerad rensnings-API-token. Token deklareras med syntaxen nedan.  Se [Vanliga inställningar](#common-setup) för att lära dig hur du distribuerar det.
 
 ```
 kind: "CDN"
