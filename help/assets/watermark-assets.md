@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management,Publishing
 role: User,Admin
 exl-id: 210f8925-bd15-4b4a-8714-5a1486eeb49e
-source-git-commit: f7f60036088a2332644ce87f4a1be9bae3af1c5e
+source-git-commit: f1cae81b80f9871bffc683dcd230f4569dd05fa4
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '311'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/watermarking.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
-[!DNL Adobe Experience Manager Assets] Med kan du lägga till en digital vattenstämpel i bilder. [!DNL Assets] har stöd för att använda en bild som vattenstämpel på andra bildfiler. Vattenstämplar kan hjälpa användare att verifiera autenticitet och upphovsrättsskydd för resurserna. En vattenstämpel kan också användas för att ange ett dokuments status, t.ex. konfidentiellt, utkast, giltighet.
+[!DNL Adobe Experience Manager Assets] Med kan du lägga till en digital vattenstämpel i bilder och videoklipp. [!DNL Assets] har stöd för att använda en bild som vattenstämpel på andra bildfiler. Vattenstämplar kan hjälpa användare att verifiera autenticitet och upphovsrättsskydd för resurserna. En vattenstämpel kan också användas för att ange ett dokuments status, t.ex. konfidentiellt, utkast, giltighet.
 
 Konfigurera [!DNL Experience Manager] till vattenstämpelresurser:
 
