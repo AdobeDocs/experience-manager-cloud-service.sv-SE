@@ -10,7 +10,7 @@ role: User, Admin
 mini-toc-levels: 4
 hide: false
 hidefromtoc: false
-source-git-commit: e2d9823575f75e4cd38a61a35569cbbe14b30fc6
+source-git-commit: c24b017e60363b3b6d79105122bdbaab138c701d
 workflow-type: tm+mt
 source-wordcount: '3574'
 ht-degree: 0%
@@ -91,6 +91,8 @@ Vill du veta mer? Gå till [Ordna resurser som samlingar](/help/assets/manage-co
 * **Ordna resurser med hjälp av profiler:**
 En bearbetningsprofil automatiserar hanteringen av resurser i särskilt angivna mappar och effektiviserar organisationen. Genom att standardisera metadata, filnamn och mappstrukturer kan du använda profilerna på ett konsekvent och exakt sätt när din digitala resurssamling utökas.
 Vill du veta mer? Gå till [Ordna resurser med hjälp av profiler](/help/assets/organize-assets.md#organize-to-use-profiles).
+
+
 
 ### Optimera bildkvaliteten
 
