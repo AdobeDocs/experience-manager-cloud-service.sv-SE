@@ -5,7 +5,7 @@ exl-id: b58c8b82-a098-4d81-bc36-664e890c8f66
 solution: Experience Manager
 feature: Log Files, Developing
 role: Admin, Architect, Developer
-source-git-commit: bc92ed7acefbbd906b0986ea0b6b96fa6d8422de
+source-git-commit: 8d5d8910a906e2adf17fa9c75f17634602c2e0b9
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Adobe ger möjlighet att använda Dynatrace för att övervaka AEM as a Cloud Service som en del av företagsdistributionen, identifiera orsaken till eventuella problem och vidta åtgärder för att åtgärda dem efter behov.
 
-Med Dynatrace får du smidig synlighet för alla dina AEM program. Dynatrace ger total insyn i slutanvändarnas upplevelse genom att automatiskt identifiera dina AEM och visualisera deras beroenden från webbplatsen till behållaren till molntjänsten. Kombinerat med kompletta spår i alla nivåer och riktig användarövervakning, lyft era AEM innehållsledda upplevelser till nästa nivå utan mellanrum eller blinda fläckar. Om det uppstår avvikelser diagnostiserar Dynatrace dem i realtid, med Davis AI-motorn, och identifierar orsaken till den trasiga koden innan kunderna påverkas, vilket minimerar den genomsnittliga reparationstiden.
+Med Dynatrace får du smidig synlighet för alla dina AEM program. Dynatrace ger total insyn i slutanvändarnas upplevelse genom att automatiskt identifiera dina AEM och visualisera deras beroenden från webbplatsen till behållaren till molntjänsten. Kombinerat med kompletta spår i alla skikt och Real Use Monitoring (Faktisk användarövervakning), lyfter AEM innehållsledda upplevelser till nästa nivå utan mellanrum eller blindfläckar. Om det uppstår avvikelser diagnostiserar Dynatrace dem i realtid, med Davis AI-motorn, och identifierar orsaken till den trasiga koden innan kunderna påverkas, vilket minimerar den genomsnittliga reparationstiden.
 
 Mer information om Dynatrace finns i [Integrering med Adobe AEM Cloud Service](https://www.dynatrace.com/hub/detail/adobe-experience-manager-1/).
 

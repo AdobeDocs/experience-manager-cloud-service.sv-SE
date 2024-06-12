@@ -4,7 +4,7 @@ description: AEM Forms Edge Delivery Services som tagits fram för bästa presta
 feature: Edge Delivery Services
 exl-id: ecea1e05-d36b-4d63-af9d-c69dafd2f94f
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 8d5d8910a906e2adf17fa9c75f17634602c2e0b9
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Med de här tjänsterna kan du:
 
 * **Skapa registreringsupplevelser med valfria verktyg:** Öka redigeringseffektiviteten genom att frikoppla innehållskällor. Nu kan du använda både dokumentbaserad redigering (Microsoft SharePoint eller Google Drive) och AEM (Adaptiv Forms Editor). Du kan arbeta med flera innehållskällor på samma formulärwebbplats och använda redigeringsverktyg som Microsoft Excel, Google Sheets eller Adaptiv Forms Editor.
 
-* **Leverera enastående digitala registreringsupplevelser:** Leverera digitala registreringsupplevelser som läser in och renderar snabbt och kontinuerligt med övervakning av formulärens prestanda med hjälp av RUM (Real User Monitoring). Snabbare inläsningstider och optimerad användarupplevelse bidrar till att fler formulär fylls i och konverteras.
+* **Leverera enastående digitala registreringsupplevelser:** Leverera digitala registreringsupplevelser som läses in och återges snabbt och kontinuerligt med övervakning av formulärens prestanda med hjälp av RUM (Real Use Monitoring). Snabbare inläsningstider och optimerad användarupplevelse bidrar till att fler formulär fylls i och konverteras.
 
 * **Använd utvecklarvänliga verktyg:** AEM Forms Edge Delivery Services använder oformaterad HTML, modern CSS och vanilj-JavaScript för att skapa exceptionella upplevelser och undvika den branta inlärningskurvan i ett specifikt ramverk. En utvecklare med grundläggande webbutvecklingskunskaper kan anpassa och enkelt bygga formulärkomponenter och upplevelser. Du behöver inte vänta på att en pipeline ska köras, du behöver bara checka in koden i GitHub så att ändringarna blir aktuella.
 
@@ -61,7 +61,7 @@ Med dokumentbaserad redigering kan du skapa formulär med välbekanta verktyg so
 * Integrering med Google reCAPTCHA för skräppostskydd.
 * Möjlighet att skapa anpassade blankettkomponenter för specifika behov.
 * Skicka formulärdata direkt till Microsoft Excel- eller Google-blad eller e-postadresser.
-* Övervaka formulärens prestanda med hjälp av övervakning av användare (RUM)
+* Övervaka formulärens prestanda med hjälp av övervakning av användning i realtid (RUM)
 
 #### AEM
 

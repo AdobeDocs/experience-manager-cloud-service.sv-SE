@@ -4,7 +4,7 @@ description: Lär dig hur AEM as a Cloud Service kan dra nytta av de prestanda o
 feature: Edge Delivery Services
 exl-id: 03a1aa93-d2e6-4175-9cf3-c7ae25c0d24e
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 8d5d8910a906e2adf17fa9c75f17634602c2e0b9
 workflow-type: tm+mt
 source-wordcount: '862'
 ht-degree: 3%
@@ -18,7 +18,7 @@ Med Edge Delivery Services levererar AEM exceptionella upplevelser som skapar en
 
 Med Edge Delivery Services kan du
 
-* Skapa snabba sajter med perfekt Lightroom Score och övervaka webbplatsens prestanda kontinuerligt med hjälp av RUM (Real User Monitoring).
+* Skapa snabba sajter med perfekt Lightroom Score och övervaka webbplatsens prestanda kontinuerligt med hjälp av RUM (Real Use Monitoring).
 * Öka redigeringseffektiviteten genom att frikoppla innehållskällor. När du är klar kan du använda både AEM och dokumentbaserad redigering. På så sätt kan du arbeta med flera innehållskällor på samma webbplats.
 * Använd ett inbyggt experimentramverk som gör det möjligt att snabbt skapa tester, exekvera utan prestandapåverkan och snabbt släppa till en testvinnares produktion.
 
@@ -46,7 +46,7 @@ Edge Delivery Services är en del av Adobe Experience Manager och som sådana Ed
 
 Se [Guiden Komma igång för utvecklare för AEM med Edge Delivery Services](/help/edge/aem-authoring/edge-dev-getting-started.md) om du vill lära dig hur du påbörjar ett eget projekt att skapa med AEM och Edge Delivery Services.
 
-Du kan också använda Edge Delivery Services med [Adobe Target,](https://www.aem.live/developer/target-integration) [Real User Monitoring (RUM)](https://www.aem.live/developer/rum) för att diagnostisera användning och prestanda för dina webbplatser, och [Starta.](https://experienceleague.adobe.com/en/docs/experience-platform/tags/home)
+Du kan också använda Edge Delivery Services med [Adobe Target,](https://www.aem.live/developer/target-integration) [Realanvändningsövervakning (RUM)](https://www.aem.live/developer/rum) för att diagnostisera användning och prestanda för dina webbplatser, och [Starta.](https://experienceleague.adobe.com/en/docs/experience-platform/tags/home)
 
 ## Kom igång med Edge Delivery Services {#getting-started}
 

@@ -4,7 +4,7 @@ description: Detta är versionsinformationen för Cloud Manager 2024.6.0 i AEM a
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
 role: Admin
-source-git-commit: 5644e6f433b18408780e13057ba469e7c4926f78
+source-git-commit: 8d5d8910a906e2adf17fa9c75f17634602c2e0b9
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 0%
@@ -54,11 +54,11 @@ Med Cloud Manager kan du nu [självbetjäningsgenerering och hantering av DV-SSL
 
 Om du vill testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `Grp-aemcs-dv-dert-adopter@adobe.com` från den e-postadress som är kopplad till din Adobe ID.
 
-### Klientsamling via Real User Monitoring (RUM) {#rum}
+### Klientsidessamling via övervakning av faktisk användning (RUM) {#rum}
 
-Du kan använda [Real User Monitoring (RUM) Data Service](/help/implementing/cloud-manager/content-requests.md#cliendside-collection) för att aktivera klientsidessamling för AEM as a Cloud Service.
+Du kan använda [RUM-datatjänst (Real Use Monitoring)](/help/implementing/cloud-manager/content-requests.md#cliendside-collection) för att aktivera klientsidessamling för AEM as a Cloud Service.
 
-Real User Monitoring (RUM) Data Service ger en mer exakt återgivning av användarinteraktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det är en utmärkt möjlighet att få avancerade insikter om hur sidan fungerar. Detta är fördelaktigt för kunder som använder antingen CDN som hanteras av Adobe eller CDN som inte hanteras av Adobe. För kunder som använder ett icke-Adobe-hanterat CDN kan automatiserad trafikrapportering nu aktiveras för dem, vilket eliminerar behovet av att dela trafikrapporter med Adobe.
+Real Use Monitoring (RUM) Data Service ger en mer exakt återgivning av användarinteraktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det är en utmärkt möjlighet att få avancerade insikter om hur sidan fungerar. Detta är fördelaktigt för kunder som använder antingen CDN som hanteras av Adobe eller CDN som inte hanteras av Adobe. För kunder som använder ett icke-Adobe-hanterat CDN kan automatiserad trafikrapportering nu aktiveras för dem, vilket eliminerar behovet av att dela trafikrapporter med Adobe.
 
 Om du vill testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `aemcs-rum-adopter@adobe.com` från den e-postadress som är kopplad till din Adobe ID. Ange domännamnet för produktions-, scen- och utvecklingsmiljöer i ditt e-postmeddelande.  Tillgången till programmet för tidig användning av den här funktionen är begränsad.
 
