@@ -4,9 +4,9 @@ description: Läs mer om vidarebefordran av loggar till Splunk och andra loggnin
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 0e166e8549febcf5939e4e6025519d8387231880
+source-git-commit: e007f2e3713d334787446305872020367169e6a2
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1209'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >Den här funktionen har inte släppts ännu och vissa loggningsmål är kanske inte tillgängliga vid tidpunkten för lanseringen. Under tiden kan du öppna en supportanmälan och vidarebefordra loggar till **Splunk**, enligt beskrivningen i [loggningsartikel](/help/implementing/developing/introduction/logging.md).
 
-Kunder som har en licens för en loggningsleverantör eller värd för en loggningsprodukt kan få AEM, Apache/Dispatcher och CDN-loggar vidarebefordrade till associerade loggningsmål. AEM as a Cloud Service stöder följande loggningsmål:
+Kunder som har en licens för en loggningsleverantör eller värd för en loggningsprodukt kan ha AEM loggar (inklusive Apache/Dispatcher) och CDN-loggar vidarebefordrade till associerade loggmål. AEM as a Cloud Service stöder följande loggningsmål:
 
 * Azure Blob Storage
 * DataDog
@@ -71,7 +71,7 @@ Den här artikeln är organiserad på följande sätt:
 
    Token i konfigurationen (t.ex. `${{SPLUNK_TOKEN}}`) representerar hemligheter, som inte bör lagras i Git. Deklarera dem som Cloud Manager i stället  [Miljövariabler](/help/implementing/cloud-manager/environment-variables.md) av typen **hemlig**. Se till att markera **Alla** som listvärde för fältet Service Applied, så att loggarna kan vidarebefordras till författare, publicering och förhandsgranskning.
 
-   Det går att ange olika värden mellan cdn-loggarna och allt annat (AEM- och apache-loggar) genom att inkludera ytterligare **cdn** och/eller **aem** -block efter **standard** block, där egenskaper kan åsidosätta de som definieras i **standard** block; endast egenskapen enabled krävs. Ett möjligt användningsexempel kan vara att använda ett annat Splunk-index för CDN-loggar, vilket visas i exemplet nedan.
+   Det går att ange olika värden mellan CDN-loggar och AEM (inklusive Apache/Dispatcher) genom att inkludera ytterligare **cdn** och/eller **aem** -block efter **standard** block, där egenskaper kan åsidosätta de som definieras i **standard** block; endast egenskapen enabled krävs. Ett möjligt användningsexempel kan vara att använda ett annat Splunk-index för CDN-loggar, vilket visas i exemplet nedan.
 
    ```
       kind: "LogForwarding"
@@ -91,7 +91,7 @@ Den här artikeln är organiserad på följande sätt:
             index: "AEMaaCS_CDN"   
    ```
 
-   Ett annat scenario är att inaktivera vidarebefordran av CDN-loggarna eller allt annat (AEM- och apache-loggar). Om du till exempel bara vill vidarebefordra CDN-loggarna kan du konfigurera följande:
+   Ett annat scenario är att inaktivera vidarebefordran av CDN-loggar eller AEM (inklusive Apache/Dispatcher). Om du till exempel bara vill vidarebefordra CDN-loggarna kan du konfigurera följande:
 
    ```
       kind: "LogForwarding"
@@ -171,9 +171,9 @@ aemcdn/
 
 Varje fil innehåller flera json-loggposter, var och en på en separat rad. Loggpostens format beskrivs i [loggningsartikel](/help/implementing/developing/introduction/logging.md), och varje loggpost innehåller också de ytterligare egenskaper som anges i [Loggpostformat](#log-format) nedan.
 
-#### Andra Azure Blob Storage-loggar {#azureblob-other}
+#### Loggar för Azure Blob Storage-AEM {#azureblob-aem}
 
-Andra loggar än CDN-loggar visas under en mapp med följande namnkonvention:
+AEM (inklusive Apache/Dispatcher) visas under en mapp med följande namnkonvention:
 
 * aemaccess
 * aemerror
@@ -250,9 +250,14 @@ Webbförfrågningar (POST) skickas kontinuerligt, med en JSON-nyttolast som är 
 
 Det finns också en egenskap med namnet `sourcetype`, som är inställt på värdet `aemcdn`.
 
-#### Andra HTTPS-loggar {#https-other}
+>[!NOTE]
+>
+> Innan den första posten i CDN-loggen skickas måste HTTP-servern slutföra en engångskontroll: en begäran som skickas till sökvägen ``wellknownpath`` måste svara med ``*``.
 
-En separat webbförfrågan (POST) skickas för varje loggpost, med de loggpostformat som beskrivs i [loggningsartikel](/help/implementing/developing/introduction/logging.md). Ytterligare egenskaper anges i [Loggpostformat](#log-format) nedan.
+
+#### HTTPS-AEM {#https-aem}
+
+För AEM loggar (inklusive apache/disacher) skickas webbförfrågningar (POST) kontinuerligt, med en json-nyttolast som är en matris av loggposter, med de olika loggpostformaten som beskrivs i [loggningsartikel](/help/implementing/developing/introduction/logging.md). Ytterligare egenskaper anges i [Loggpostformat](#log-format) nedan.
 
 Det finns också en egenskap med namnet `sourcetype`, som är inställt på något av dessa värden:
 
@@ -299,7 +304,7 @@ data:
 
 ## Loggpostformat {#log-formats}
 
-Se det allmänna [loggningsartikel](/help/implementing/developing/introduction/logging.md) för formatet för varje loggtyp (Dispatcher-logg, CDN-logg osv.).
+Se det allmänna [loggningsartikel](/help/implementing/developing/introduction/logging.md) för formatet för varje loggtyp (CDN-loggar och AEM inklusive Apache/Dispatcher).
 
 Eftersom loggar från flera program och miljöer kan vidarebefordras till samma loggningsmål, förutom de utdata som beskrivs i loggningsartikeln, kommer följande egenskaper att finnas i varje loggpost:
 
@@ -328,7 +333,7 @@ Vissa organisationer väljer att begränsa vilken trafik som kan tas emot av log
 
 För CDN-loggen kan du tillåta att IP-adresserna listas enligt beskrivningen i [den här artikeln](https://www.fastly.com/documentation/reference/api/utils/public-ip-list/). Om listan med delade IP-adresser är för stor kan du skicka trafik till ett (ej Adobe) Azure Blob Store där logik kan skrivas för att skicka ut loggarna från en dedikerad IP-adress till deras slutliga mål.
 
-För andra loggar kan du konfigurera vidarebefordran av loggar så att du [avancerat nätverk](/help/security/configuring-advanced-networking.md). Se mönstren för de tre avancerade nätverkstyperna nedan, som använder en valfri `port` -parametern tillsammans med `host` parameter.
+För AEM (inklusive Apache/Dispatcher) kan du konfigurera vidarebefordran av loggar så att du går igenom [avancerat nätverk](/help/security/configuring-advanced-networking.md). Se mönstren för de tre avancerade nätverkstyperna nedan, som använder en valfri `port` -parametern tillsammans med `host` parameter.
 
 ### Flexibla portägg {#flex-port}
 
