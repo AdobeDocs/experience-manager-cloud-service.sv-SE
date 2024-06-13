@@ -4,7 +4,7 @@ description: Lär dig hur innehållsmodellering fungerar AEM redigering med proj
 exl-id: e68b09c5-4778-4932-8c40-84693db892fd
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: ff4a8caf1f4d32bae4e8c776bfcad21a665936d4
 workflow-type: tm+mt
 source-wordcount: '2233'
 ht-degree: 0%
@@ -345,7 +345,7 @@ För vissa värden kan den semantiska innebörden härledas från själva värde
 * **Bilder** - Om en referens till en resurs i AEM är en resurs med en MIME-typ som börjar med `image/`återges referensen som `<picture><img src="${reference}"></picture>`.
 * **Länkar** - Om det finns en referens i AEM och inte är en bild, eller om värdet börjar med `https?://`  eller `#`återges referensen som `<a href="${reference}">${reference}</a>` .
 * **RTF** - Om ett trimmat värde börjar med ett stycke (`p`, `ul`, `ol`, `h1`-`h6`, osv.) återges värdet som RTF.
-* **Klassnamn** - `classes` egenskapen behandlas som blockalternativ och återges i tabellrubriken för [enkla block,](#simple) eller som värdelista för objekt i en [behållarblock](#container)
+* **Klassnamn** - `classes` egenskapen behandlas som [blockalternativ](/help/edge/developer/markup-sections-blocks.md#block-options) och återges i tabellrubriken för [enkla block,](#simple) eller som värdelista för objekt i en [behållarblock](#container)
 * **Värdelistor** - Om ett värde är en flervärdesegenskap och det första värdet inte är något av föregående, sammanfogas alla värden som kommaavgränsade listor.
 
 Allt annat återges som oformaterad text.

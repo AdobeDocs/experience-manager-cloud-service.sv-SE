@@ -4,9 +4,9 @@ description: Lär dig hur du skapar block som är instrumenterade för användni
 exl-id: 65a5600a-8d16-4943-b3cd-fe2eee1b4abf
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 72949b36e7e7f8689365e7cb76a8c491edf23825
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1375'
 ht-degree: 0%
 
 ---
@@ -53,75 +53,99 @@ Följande exempel på offertblock följer den här metoden.
 
 1. Redigera `component-definition.json` filen i projektets rot och lägg till följande definition för det nya offertblocket och spara filen.
 
-   ```json
-   {
-     "title": "Quote",
-     "id": "quote",
-     "plugins": {
-       "xwalk": {
-         "page": {
-           "resourceType": "core/franklin/components/block/v1/block",
-           "template": {
-             "name": "Quote",
-             "model": "quote",
-             "quote": "<p>Think, McFly! Think!</p>",
-             "author": "Biff Tannen"
-           }
-         }
-       }
-     }
-   }
-   ```
+>[!BEGINTABS]
 
-   ![Redigera filen component-definitions.json för att definiera offertblocket](assets/create-block/component-definitions.png)
+>[!TAB JSON-exempel]
+
+```json
+{
+  "title": "Quote",
+  "id": "quote",
+  "plugins": {
+    "xwalk": {
+      "page": {
+        "resourceType": "core/franklin/components/block/v1/block",
+        "template": {
+          "name": "Quote",
+          "model": "quote",
+          "quote": "<p>Think, McFly! Think!</p>",
+          "author": "Biff Tannen"
+        }
+      }
+    }
+  }
+}
+```
+
+>[!TAB Skärmbild]
+
+![Redigera filen component-definitions.json för att definiera offertblocket](assets/create-block/component-definitions.png)
+
+>[!ENDTABS]
 
 1. Redigera `component-models.json` filen i projektets rot och lägg till följande [modelldefinition](/help/implementing/universal-editor/field-types.md#model-structure) för det nya offertblocket och spara filen.
 
    * Se dokumentet [Innehållsmodellering för AEM med Edge Delivery Services Projects](/help/edge/aem-authoring/content-modeling.md) för mer information om vad som är viktigt att tänka på när du skapar innehållsmodeller.
 
-   ```json
-   {
-     "id": "quote",
-     "fields": [
-        {
-          "component": "text-area",
-          "name": "quote",
-          "value": "",
-          "label": "Quote",
-          "valueType": "string"
-        },
-        {
-          "component": "text-input",
-          "valueType": "string",
-          "name": "author",
-          "label": "Author",
-          "value": ""
-        }
-      ]
-   }
-   ```
+>[!BEGINTABS]
 
-   ![Redigera filen component-models.json för att definiera modellen för offertblocket](assets/create-block/component-models.png)
+>[!TAB JSON-exempel]
+
+```json
+{
+  "id": "quote",
+  "fields": [
+     {
+       "component": "text-area",
+       "name": "quote",
+       "value": "",
+       "label": "Quote",
+       "valueType": "string"
+     },
+     {
+       "component": "text-input",
+       "valueType": "string",
+       "name": "author",
+       "label": "Author",
+       "value": ""
+     }
+   ]
+}
+```
+
+>[!TAB Skärmbild]
+
+![Redigera filen component-models.json för att definiera modellen för offertblocket](assets/create-block/component-models.png)
+
+>[!ENDTABS]
 
 1. Redigera `component-filters.json` filen i projektets rot och lägg till offertblocket i [filterdefinition](/help/implementing/universal-editor/customizing.md#filtering-components) så att blocket kan läggas till i valfritt avsnitt och spara filen.
 
-   ```json
-   {
-     "id": "section",
-     "components": [
-       "text",
-       "image",
-       "button",
-       "title",
-       "hero",
-       "cards",
-       "columns",
-       "quote"
-      ]
-   }
-   ```
+>[!BEGINTABS]
 
-   ![Redigera filen component-filters.json för att definiera filter för offertblocket](assets/create-block/component-filters.png)
+>[!TAB JSON-exempel]
+
+```json
+{
+  "id": "section",
+  "components": [
+    "text",
+    "image",
+    "button",
+    "title",
+    "hero",
+    "cards",
+    "columns",
+    "quote"
+   ]
+}
+```
+
+>[!TAB Skärmbild]
+
+![Redigera filen component-filters.json för att definiera filter för offertblocket](assets/create-block/component-filters.png)
+
+>[!ENDTABS]
 
 1. Använd Git för att implementera dessa ändringar i `main` gren.
 
@@ -174,55 +198,70 @@ Nu när du har ett fungerande offertblock kan du formatera det.
 
 1. I nya `quote` mapp, lägga till `quote.js` -fil som ska implementera blockdekoration genom att lägga till följande JavaScript och spara filen.
 
-   ```javascript
-   export default function decorate(block) {
-     const [quoteWrapper] = block.children;
-   
-     const blockquote = document.createElement('blockquote');
-     blockquote.textContent = quoteWrapper.textContent.trim();
-     quoteWrapper.replaceChildren(blockquote);
-   }
-   ```
+>[!BEGINTABS]
 
-   ![Lägga till JavaScript för att dekorera blocket](assets/create-block/quote-js.png)
+>[!TAB JavaScript-exempel]
 
+```javascript
+export default function decorate(block) {
+  const [quoteWrapper] = block.children;
+
+  const blockquote = document.createElement('blockquote');
+  blockquote.textContent = quoteWrapper.textContent.trim();
+  quoteWrapper.replaceChildren(blockquote);
+}
+```
+
+>[!TAB Skärmbild]
+
+![Lägga till JavaScript för att dekorera blocket](assets/create-block/quote-js.png)
+
+>[!ENDTABS]
 
 1. I `quote` mapp, lägga till `quote.css` -fil för att definiera blockets format genom att lägga till följande CSS-kod och spara filen.
 
-   ```css
-   .block.quote {
-       background-color: #ccc;
-       padding: 0 0 24px;
-       display: flex;
-       flex-direction: column;
-       margin: 1rem 0;
-   }
-   
-   .block.quote blockquote {
-       margin: 16px;
-       text-indent: 0;
-   }
-   
-   .block.quote > div:last-child > div {
-       margin: 0 16px;
-       font-size: small;
-       font-style: italic;
-       position: relative;
-   }
-   
-   .block.quote > div:last-child > div::after {
-       content: "";
-       display: block;
-       position: absolute;
-       left: 0;
-       bottom: -8px;
-       height: 5px;
-       width: 30px;
-       background-color: darkgray;
-   }
-   ```
+>[!BEGINTABS]
 
-   ![Lägga till CSS för att definiera blockformateringen](assets/create-block/quote-css.png)
+>[!TAB CSS-exempel]
+
+```css
+.block.quote {
+    background-color: #ccc;
+    padding: 0 0 24px;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.block.quote blockquote {
+    margin: 16px;
+    text-indent: 0;
+}
+
+.block.quote > div:last-child > div {
+    margin: 0 16px;
+    font-size: small;
+    font-style: italic;
+    position: relative;
+}
+
+.block.quote > div:last-child > div::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 5px;
+    width: 30px;
+    background-color: darkgray;
+}
+```
+
+>[!TAB Skärmbild]
+
+![Lägga till CSS för att definiera blockformateringen](assets/create-block/quote-css.png)
+
+>[!ENDTABS]
 
 1. Använd Git för att implementera dessa ändringar i `main` gren.
 
@@ -239,6 +278,50 @@ Nu när du har ett fungerande offertblock kan du formatera det.
    ![Det publicerade och formaterade citatteckenblocket](assets/create-block/quote-styled-published.png)
 
 Grattis! Du har nu ett fullt fungerande och formaterat citattecken. Du kan använda det här exemplet som bas för att utforma egna projektspecifika block.
+
+### Blockalternativ {#block-options}
+
+Om du behöver ett block som ska se ut eller bete dig lite annorlunda beroende på vissa omständigheter, men inte tillräckligt annorlunda för att bli ett nytt block i sig, kan du låta författarna välja mellan [blockalternativ.](content-modeling.md#type-inference)
+
+Genom att lägga till `classes` -egenskap till blocket, den egenskap som återges i tabellhuvudet för enkla block eller som värdelista för objekt i ett behållarblock.
+
+```json
+{
+  "id": "simpleMarquee",
+  "fields": [
+    {
+      "component": "text",
+      "valueType": "string",
+      "name": "marqueeText",
+      "value": "",
+      "label": "Marquee text",
+      "description": "The text you want shown in your marquee"
+    },
+    {
+      "component": "select",
+      "name": "classes",
+      "value": "",
+      "label": "Background Color",
+      "description": "The marquee background color",
+      "valueType": "string",
+      "options": [
+        {
+          "name": "Red",
+          "value": "bg-red"
+        },
+        {
+          "name": "Green",
+          "value": "bg-green"
+        },
+        {
+          "name": "Blue",
+          "value": "bg-blue"
+        }
+      ]
+    }
+  ]
+}
+```
 
 ## Använda andra arbetsgrenar {#other-branches}
 
