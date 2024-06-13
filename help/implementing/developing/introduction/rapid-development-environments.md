@@ -4,9 +4,9 @@ description: Lär dig hur du använder miljöer för snabb utveckling för snabb
 exl-id: 1e9824f2-d28a-46de-b7b3-9fe2789d9c68
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: c3d16e82702efd73accd1fffdfc4957ceb4509ec
+source-git-commit: 3577db15a276bed253c8fa51cbd100e90ec5ef45
 workflow-type: tm+mt
-source-wordcount: '4220'
+source-wordcount: '4244'
 ht-degree: 0%
 
 ---
@@ -472,11 +472,6 @@ Mer information och demonstrationer finns i videosjälvstudien [använda RDE-kom
 
 ## Loggar {#rde-logging}
 
->[!NOTE]
->
-> Den här funktionen är inte tillgänglig än. Den kommer att lanseras någon gång i juni.
-> 
-
 På samma sätt som för andra miljötyper kan loggnivåer ställas in genom att OSGi-konfigurationer ändras, även om distributionsmodellen för RDE-konfigurationer enligt beskrivningen ovan inbegriper en kommandorad i stället för en Cloud Manager-distribution. Kontrollera [loggningsdokumentation](/help/implementing/developing/introduction/logging.md) om du vill ha mer information om hur du visar, hämtar och tolkar loggar.
 
 RDE CLI har också ett eget loggkommando som kan användas för att snabbt konfigurera vilka klasser och paket som ska loggas och på vilken loggnivå. Dessa konfigurationer kan betraktas som tillfälliga eftersom de inte ändrar OSGI-egenskaperna i versionskontrollen. Den här funktionen fokuserar på att skräddarsy loggar i realtid, i stället för att leta efter loggar från det avlägsna förflutna.
@@ -484,6 +479,14 @@ RDE CLI har också ett eget loggkommando som kan användas för att snabbt konfi
 I följande exempel visas hur du finjusterar författarnivån, med ett paket inställt på en felsökningsloggnivå, och två paket (avgränsade med blanksteg) inställda på en informationsfelsökningsnivå. Utdata som innehåller en **auth** paketet är markerat.
 
 `aio aem:rde:logs --target=author --debug=org.apache.sling --info=org.apache.sling.commons.threads.impl org.apache.sling.jcr.resource.internal.helper.jcr -H .auth.`
+
+>[!TIP]
+>
+>Om felet visas `RDECLI:UNEXPECTED_API_ERROR` när du spelar med loggkommandona för författartjänsten, återställ miljön och försök igen. Det här felet genereras om den senaste återställningsåtgärden utfördes före slutet av maj 2024.
+>
+```
+>aio aem:rde:reset
+>```
 
 Se `aio aem:rde:logs --help` för alla kommandoradsalternativ.
 
