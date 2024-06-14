@@ -4,7 +4,7 @@ description: Lär dig hur du skapar block som är instrumenterade för användni
 exl-id: 65a5600a-8d16-4943-b3cd-fe2eee1b4abf
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 72949b36e7e7f8689365e7cb76a8c491edf23825
+source-git-commit: e0b4eafaa9fdc496362f90e6da14b4b198b4ea3e
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Den här handboken innehåller stegvisa instruktioner för hur du skapar block s
 
 Den här guiden kräver kunskaper om AEM med Edge Delivery Services och den universella redigeraren. Innan du börjar den här guiden bör du ha tillgång till Edge Delivery Services och känna till grunderna i den:
 
-Du har slutfört [Självstudiekurs om Edge Delivery Service.](/help/edge/developer/tutorial.md)
+* Du har slutfört [Självstudiekurs om Edge Delivery Service.](/help/edge/developer/tutorial.md)
 * Du har tillgång till en [AEM Cloud Service sandlåda.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md)
 * Du har [har aktiverat den universella redigeraren i samma sandlådemiljö.](/help/implementing/universal-editor/getting-started.md)
 * Du har slutfört [Guiden Komma igång för utvecklare för AEM med Edge Delivery Services](/help/edge/aem-authoring/edge-dev-getting-started.md) guide.
@@ -205,7 +205,7 @@ Nu när du har ett fungerande offertblock kan du formatera det.
 ```javascript
 export default function decorate(block) {
   const [quoteWrapper] = block.children;
-
+ 
   const blockquote = document.createElement('blockquote');
   blockquote.textContent = quoteWrapper.textContent.trim();
   quoteWrapper.replaceChildren(blockquote);
@@ -232,19 +232,19 @@ export default function decorate(block) {
     flex-direction: column;
     margin: 1rem 0;
 }
-
+ 
 .block.quote blockquote {
     margin: 16px;
     text-indent: 0;
 }
-
+ 
 .block.quote > div:last-child > div {
     margin: 0 16px;
     font-size: small;
     font-style: italic;
     position: relative;
 }
-
+ 
 .block.quote > div:last-child > div::after {
     content: "";
     display: block;
@@ -340,4 +340,3 @@ Se dokumentet [Innehållsmodellering för AEM med Edge Delivery Services Project
 >[!TIP]
 >
 >Om du vill få en genomgång av hur du skapar ett nytt projekt för Edge Delivery Services som är aktiverat för AEM med AEM as a Cloud Service som innehållskälla kan du titta på [det här AEM GEMs webbinarium.](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery)
-
