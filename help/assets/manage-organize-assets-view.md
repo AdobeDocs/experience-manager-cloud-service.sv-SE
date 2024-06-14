@@ -1,10 +1,11 @@
 ---
 title: Hantera era digitala resurser
 description: Flytta, ta bort, kopiera, byta namn på, uppdatera och version av dina resurser i [!DNL Assets view].
-role: User,Leader
+role: User, Leader
 contentOwner: AG
 exl-id: 2459d482-828b-4410-810c-ac55ef0a2119
-source-git-commit: 3912f52112b3d9dcb568e477c33d3f4b28064b66
+feature: Asset Management, Publishing, Collaboration, Asset Processing
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 0%

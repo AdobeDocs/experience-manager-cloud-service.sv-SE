@@ -2,7 +2,9 @@
 title: Hantera rapporter i resursvyn
 description: Få tillgång till data i rapportavsnittet i resursvyn för att utvärdera produkt- och funktionsanvändning och få insikter om viktiga framgångsmått.
 exl-id: 26d0289e-445a-4b8e-a5a1-b02beedbc3f1
-source-git-commit: 7e8d4487ec545b5625d6401513df00d5c6240ee2
+feature: Asset Insights, Asset Reports
+role: User, Admin, Developer
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 1%

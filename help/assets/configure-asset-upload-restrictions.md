@@ -2,7 +2,9 @@
 title: Konfigurera överföringsbegränsningar för resurser
 description: Konfigurera Adobe Experience Manager Assets för att begränsa vilken typ av resurser som användare kan överföra baserat på MIME-typen. Det förhindrar oavsiktliga överföringar av oönskade format och skadliga filer.
 exl-id: 094c31f3-f2e9-4b44-9995-c76fb78ca458
-source-git-commit: f7f60036088a2332644ce87f4a1be9bae3af1c5e
+feature: Upload, Asset Ingestion
+role: User, Admin, Developer
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 0%

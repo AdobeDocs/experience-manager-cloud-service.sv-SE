@@ -2,7 +2,9 @@
 title: Hur hanterar jag taggar i resursvyn?
 description: Lär dig hur du hanterar taggar i resursvyn. Taggar hjälper dig att kategorisera resurser som kan bläddras och sökas effektivare.
 exl-id: 7c5e1212-054f-46ca-9982-30e40b0482e1
-source-git-commit: cadf0e383608a39200d716cc698ad1979f24fd1d
+feature: Smart Tags
+role: User, Admin, Developer
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '1712'
 ht-degree: 0%

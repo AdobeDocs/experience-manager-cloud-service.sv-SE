@@ -2,9 +2,9 @@
 title: Distribuera och dela resurser, mappar och samlingar
 description: Distribuera digitala resurser med metoder som att dela som en länk, ladda ned och via [!DNL Brand Portal], [!DNL desktop app]och [!DNL Asset Link].
 feature: Asset Management, Collaboration, Asset Distribution
-role: User, Admin
+role: Admin, User
 exl-id: 14e897cc-75c2-42bd-8563-1f5dd23642a0
-source-git-commit: ec01a1b383160014918ee8c9b81e15f0cc855d02
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '1771'
 ht-degree: 0%

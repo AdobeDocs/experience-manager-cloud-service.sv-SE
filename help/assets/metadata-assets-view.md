@@ -1,10 +1,11 @@
 ---
 title: Hur hanterar jag metadata i resursvyn?
 description: Lär dig hur du hanterar metadata i resursvyn. Bättre metadatahantering gör materialet mer tillgängligt, enklare att hantera och komplett.
-role: User,Leader,Admin,Architect,Developer
+role: User, Leader, Admin, Architect, Developer
 contentOwner: AG
 exl-id: 7264e8d1-fc8f-4eb3-93a9-a6066ca3f851
-source-git-commit: ed5303bab864e21100cf6e52e130b4bd17bfcb45
+feature: Metadata
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '1723'
 ht-degree: 0%

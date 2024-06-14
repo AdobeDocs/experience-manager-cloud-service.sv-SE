@@ -2,7 +2,9 @@
 title: Variationer - innehåll i redigeringsfragment (resurser - innehållsfragment)
 description: Förstå hur varianter av innehållsfragment gör att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte, vilket ökar flexibiliteten.
 exl-id: af05aae6-d535-4007-ba81-7f41213ff152
-source-git-commit: a213d94b6c5bd4eaaf78b8384b96e1d99104874d
+feature: Content Fragments
+role: User
+source-git-commit: 763ef950ffa7642a345977485f56c1187f6ecc0a
 workflow-type: tm+mt
 source-wordcount: '2474'
 ht-degree: 4%

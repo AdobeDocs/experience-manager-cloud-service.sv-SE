@@ -2,11 +2,12 @@
 title: Målväljare för AEM as a Cloud Service
 description: Använd AEM målväljare för att visa och välja resurser som du kan använda som en kopia av den ursprungliga resursen.
 contentOwner: Adobe
-role: Admin,User
+role: Admin, User
 exl-id: 7e7bc1ee-d580-4c88-b550-273e8b0620ba
-source-git-commit: 96a82439c51c22125c206b4e912e85e0bf603498
+feature: Selectors
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
-source-wordcount: '1896'
+source-wordcount: '1879'
 ht-degree: 0%
 
 ---
@@ -202,7 +203,7 @@ Du kan använda egenskaperna för målväljaren för att anpassa hur målväljar
 | *viewType* | string | Nej | | The `viewType` -egenskapen används för att ange de vyer som du använder för att visa resurser. |
 | *viewTypeOptions* | string | Nej | | Den här egenskapen är relaterad till `viewType` -egenskap. du kan ange en eller flera vyer för att visa resurser. Tillgängliga viewTypeOptions är: listvy, stödrastervy, gallerivy, vattenfallsvy och trädvy. |
 | *itemNameFormatter* | string | Nej | | Med den här egenskapen kan du formatera objektnamnet |
-| *i18nSymbols* | `Object<{ id?: string, defaultMessage?: string, description?: string}>` | Nej |  | Om OTB-översättningarna inte är tillräckliga för ditt programs behov kan du visa ett gränssnitt genom vilket du kan skicka dina egna anpassade lokaliserade värden via `i18nSymbols` prop. Om du skickar ett värde genom det här gränssnittet åsidosätts standardöversättningarna och i stället används dina egna.  Om du vill utföra åsidosättningen måste du skicka en giltig [Meddelandebeskrivning](https://formatjs.io/docs/react-intl/api/#message-descriptor) objekt till nyckeln för `i18nSymbols` som du vill åsidosätta. |
+| *i18nSymboler* | `Object<{ id?: string, defaultMessage?: string, description?: string}>` | Nej |  | Om OTB-översättningarna inte är tillräckliga för ditt programs behov kan du visa ett gränssnitt genom vilket du kan skicka dina egna anpassade lokaliserade värden via `i18nSymbols` prop. Om du skickar ett värde genom det här gränssnittet åsidosätts standardöversättningarna och i stället används dina egna.  Om du vill utföra åsidosättningen måste du skicka en giltig [Meddelandebeskrivning](https://formatjs.io/docs/react-intl/api/#message-descriptor) objekt till nyckeln för `i18nSymbols` som du vill åsidosätta. |
 | *inlineAlertSetup* | string | Nej | | Det lägger till ett varningsmeddelande som du vill skicka i programmet. Du kan till exempel lägga till ett varningsmeddelande om att du inte har behörighet att komma åt den här mappen. |
 | *intl* | Objekt | Nej | | Målväljaren innehåller standardöversättningar, OOTB. Du kan välja översättningsspråk genom att ange en giltig språksträng via `intl.locale` prop. Till exempel: `intl={{ locale: "es-es" }}` </br></br> De språksträngar som stöds följer [ISO 639 - Koder](https://www.iso.org/iso-639-language-codes.html) för representation av namn på språkstandarder. </br></br> Lista över språk som stöds: engelska - en-us (standard) spanska - es-es&#39; German - de-de&#39; French - fr-fr&#39; Italian - it-it&#39; Japanese - ja-jp&#39; Korean - ko-kr&#39; Portuguese - pt-br&#39; Chinese (Traditional) - zh-cn&#39; Chinese (Taiwan) - zh-tw |
 

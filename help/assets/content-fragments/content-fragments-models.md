@@ -2,7 +2,9 @@
 title: Modeller för innehållsfragment (resurser - innehållsfragment)
 description: Läs om hur Content Fragment Models fungerar som en grund för ditt headless-innehåll i AEM, så att du kan skapa Content Fragments med strukturerat innehåll.
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
-source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
+feature: Content Fragments, GraphQL API
+role: User, Admin
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '3011'
 ht-degree: 2%

@@ -1,12 +1,12 @@
 ---
 title: '[!DNL Experience Manager Assets] integrering med [!DNL Adobe Workfront]'
 description: Introduktion till integrering mellan [!DNL Assets] och [!DNL Workfront]
-role: Admin,Leader,Architect
-feature: Integrations
+role: Admin, Leader, Architect
+feature: Workfront Integrations and Apps
 exl-id: 365de3dc-51db-4dcf-94e2-104b5a5d33a8
-source-git-commit: f295eead13bcdeed910ae6b8c82373e2b70f1224
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '390'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 [!DNL Adobe Workfront] är ett program för arbetshantering som hjälper dig att hantera hela arbetscykeln på ett och samma ställe. Integrationen mellan [!DNL Workfront] och [!DNL Adobe Experience Manager Assets] gör att organisationer kan förbättra innehållets hastighet och time-to-market genom att knyta samman arbete och hantering av digitala resurser. När man arbetar i Workfront får man tillgång till dokument och bilder.
 
-Adobe erbjuder [integrera [!DNL Workfront] och [!DNL Adobe Experience Manager Assets] inbyggt (stöd för Assets Essentials och Assets as a Cloud Service)](https://experienceleague.adobe.com/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/aem-asset-integrations.html).
+Adobe erbjuder [integrera [!DNL Workfront] och [!DNL Adobe Experience Manager Assets] Inbyggt (stöd för Assets Essentials och Assets as a Cloud Service)](https://experienceleague.adobe.com/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/aem-asset-integrations.html).
 
 Tack vare integreringen med Experience Manager kan du
 

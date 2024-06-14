@@ -2,7 +2,9 @@
 title: Färgtaggar för bilder
 description: Med Adobe Experience Manager Assets kan du skilja mellan färger i en bild och använda dem som taggar automatiskt. Du kan sedan använda dessa taggar för att söka efter och filtrera bilder.
 exl-id: 3afa949b-ea1b-4b8e-ac94-06566e2c7147
-source-git-commit: f7f60036088a2332644ce87f4a1be9bae3af1c5e
+feature: Smart Imaging, Interactive Images, Asset Management
+role: User, Admin
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '1143'
 ht-degree: 0%

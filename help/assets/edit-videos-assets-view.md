@@ -3,7 +3,8 @@ title: Redigera videoklipp
 description: Redigera videoklipp med [!DNL Adobe Express] och spara uppdaterade videor som versioner.
 role: User
 exl-id: 42b25935-e2ff-444f-97c8-b4ed56f3ef9e
-source-git-commit: afdab9a7b449673ecf15bc9ab31307388da7b64e
+feature: Best Practices, Video, Interactive Videos
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 0%

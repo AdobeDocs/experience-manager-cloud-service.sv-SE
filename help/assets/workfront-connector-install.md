@@ -2,11 +2,11 @@
 title: Installera [!DNL Workfront for Experience Manager enhanced connector]
 description: Installera [!DNL Workfront for Experience Manager enhanced connector]
 role: Admin
-feature: Integrations
+feature: Workfront Integrations and Apps
 exl-id: 2907a3b2-e28c-4194-afa8-47eadec6e39a
-source-git-commit: 393ec79e820632e879a377e697ecd09f4571c0b7
+source-git-commit: 257930bc2633a0d31ad3bd28305b8159597befa5
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/integrations/workfront-connector-install.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
-En användare med administratörsåtkomst i [!DNL Adobe Experience Manager] som [!DNL Cloud Service] installerar den utökade anslutningen. Innan du installerar bör du granska plattformsstödet och andra [krav för kopplingen](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience).
+En användare med administratörsåtkomst i [!DNL Adobe Experience Manager] som [!DNL Cloud Service] installerar den utökade anslutningen. Läs mer om plattformsstödet och andra funktioner innan du installerar [krav för kopplingen](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience).
 
 >[!IMPORTANT]
 >
@@ -28,7 +28,7 @@ En användare med administratörsåtkomst i [!DNL Adobe Experience Manager] som 
 >
 >* Adobe kräver installation och konfiguration av [!DNL Adobe Workfront for Experience Manager enhanced connector] endast via certifierade partners eller [!DNL Adobe Professional Services]. Om den distribueras och konfigureras utan en certifierad partner eller [!DNL Adobe Professional Services], stöds den inte av Adobe.
 >
->* Adobe kan släppa uppdateringar av [!DNL Adobe Workfront] och [!DNL Adobe Experience Manager] som gör denna koppling redundant, Om detta inträffar kan kunderna behöva gå över från att använda denna koppling.
+>* Adobe kan släppa uppdateringar av [!DNL Adobe Workfront] och [!DNL Adobe Experience Manager] som gör den här kopplingen överflödig. Om detta inträffar kan kunderna behöva gå över från att använda den här anslutningen.
 >
 >* Adobe har stöd för utökade anslutningsversioner 1.7.4 och senare. Tidigare förhandsversioner och anpassade versioner stöds inte. Information om hur du kontrollerar den förbättrade anslutningsversionen finns i steg 5 a i [installationsanvisningar för förbättrad anslutning](workfront-connector-install.md).
 >
@@ -38,9 +38,9 @@ Innan du installerar anslutningsprogrammet följer du de här förinstallationss
 
 1. Om ditt AEM as a Cloud Service program har konfigurerat Advanced Networking och aktiverat IP Allow-Listing måste du lägga till Workfront IP-adresser i denna allow-list för att tillåta att händelseprenumerationer och olika API-anrop skickas till AEM.
 
-   * [IP-adresser för Workfront-kluster](https://experienceleague.adobe.com/docs/workfront/using/administration-and-setup/get-started-administration/configure-your-firewall.html?lang=en#ip-addresses-to-allow-for-clusters-1-2-3-5-7-8-and-9). Så här känner du IP-klustret i [!DNL Workfront], navigera till **[!UICONTROL Setup]** > **[!UICONTROL System]** > **[!UICONTROL Customer Info]**.
+   * [Workfront Cluster IPs](https://experienceleague.adobe.com/docs/workfront/using/administration-and-setup/get-started-administration/configure-your-firewall.html?lang=en#ip-addresses-to-allow-for-clusters-1-2-3-5-7-8-and-9). Så här känner du IP-klustret i [!DNL Workfront], navigera till **[!UICONTROL Setup]** > **[!UICONTROL System]** > **[!UICONTROL Customer Info]**.
 
-   * [API:er för Workfront Event Subscription](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-api/event-subscriptions/event-subs-api.html)
+   * [API för Workfront Event Subscription](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-api/event-subscriptions/event-subs-api.html)
 
    >[!IMPORTANT]
    >
@@ -134,23 +134,23 @@ Installera tillägget i [!DNL Experience Manager] som [!DNL Cloud Service]gör d
 
    Målet för det inbäddade avsnittet är inställt på `/apps/<path-to-project-install-folder>/install`. Denna JCR-sökväg `/apps/<path-to-project-install-folder>` måste inkluderas i filterreglerna i `all/src/main/content/META-INF/vault/filter.xml` -fil. Filterreglerna för databasen hämtas vanligtvis från programnamnet. Använd namnet på mappen som mål i de befintliga reglerna.
 
-1. Skicka ändringarna till databasen.
+1. Överför ändringarna till databasen.
 
 1. Kör pipeline till [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html).
 
-1. Om du vill skapa en systemanvändarkonfiguration skapar du `wf-workfront-users` in [!DNL Experience Manager] Användargrupp och tilldela behörighet `jcr:all` till `/content/dam`. En systemanvändare `workfront-tools` skapas automatiskt och de behörigheter som krävs hanteras automatiskt. Alla användare från [!DNL Workfront] som använder den utökade kopplingen läggs automatiskt till som en del av den här gruppen.
+1. Skapa en systemanvändarkonfiguration genom att skapa `wf-workfront-users` in [!DNL Experience Manager] Användargrupp och tilldela behörighet `jcr:all` till `/content/dam`. En systemanvändare `workfront-tools` skapas automatiskt och de behörigheter som krävs hanteras automatiskt. Alla användare från [!DNL Workfront] som använder den utökade kopplingen läggs automatiskt till som en del av den här gruppen.
 
-För information om att uppdatera [!DNL Workfront for Experience Manager enhanced connector] från en tidigare version till den senaste versionen, klicka på [här](update-workfront-enhanced-connector.md).
+Om du vill ha information om att uppdatera [!DNL Workfront for Experience Manager enhanced connector] från en tidigare version till den senaste versionen, klicka på [här](update-workfront-enhanced-connector.md).
 
 ## Konfigurera anslutningen mellan [!DNL Experience Manager] som [!DNL Cloud Service] och [!DNL Workfront] {#configure-connection}
 
 Skapa en anslutning med [!DNL Workfront]gör du så här:
 
-1. I [!DNL Experience Manager] väljer du **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Workfront Tools Configuration]**.
+1. I [!DNL Experience Manager], markera **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Workfront Tools Configuration]**.
 
 1. Välj `workfront-tools` i den vänstra panelen och väljer **[!UICONTROL Create]** i det övre högra hörnet på sidan.
 
-1. I **[!UICONTROL Workfront Connection]** kan du ange den information du behöver [!DNL Workfront] driftsättning och välj **[!UICONTROL Connect to Workfront]** alternativ. När anslutningen är klar [!DNL Workfront] anpassad integration av dokument skapas automatiskt i [!DNL Workfront] miljö.
+1. I **[!UICONTROL Workfront Connection]** kan du ange den information du behöver [!DNL Workfront] driftsättning och välj **[!UICONTROL Connect to Workfront]** alternativ. När anslutningen är klar är [!DNL Workfront] anpassad integration av dokument skapas automatiskt i [!DNL Workfront] miljö.
 
    ![Anslut [!DNL Experience Manager] och [!DNL Workfront]](/help/assets/assets/wf-connection-config.png)
 

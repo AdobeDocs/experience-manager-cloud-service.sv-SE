@@ -2,10 +2,12 @@
 title: Anslut AEM Assets till Creative Cloud
 description: Lär dig hur du konfigurerar och ansluter AEM Assets till Creative Cloud. Anslut till ett berättigande för Creative Cloud som har tilldelats en annan IMS-organisation för att enkelt kunna använda de senaste Creative Cloud-integreringarna i AEM Assets, inklusive Express och Creative Cloud Libraries.
 exl-id: 880200fe-94b3-49de-802c-34283f7c71bc
-source-git-commit: 237b4a8e01af74dbaac0ba1715b5fa95c931be7c
+feature: Collaboration
+role: User
+source-git-commit: 257930bc2633a0d31ad3bd28305b8159597befa5
 workflow-type: tm+mt
 source-wordcount: '271'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 

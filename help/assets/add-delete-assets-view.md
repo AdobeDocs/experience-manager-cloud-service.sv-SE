@@ -2,7 +2,9 @@
 title: Överför resurser till databasen
 description: Överför resurser till [!DNL Assets view], visa överföringsstatus och åtgärda överföringsproblem.
 role: User
-source-git-commit: c3076ce35128c147ce2056d11d9305d9a9456636
+exl-id: 01af3b66-dba8-4b09-aadf-ba4ae09b824f
+feature: Asset Management, Publishing, Collaboration, Asset Processing
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '800'
 ht-degree: 0%

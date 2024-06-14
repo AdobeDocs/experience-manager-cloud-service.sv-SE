@@ -1,10 +1,10 @@
 ---
 title: Lägg till digitala resurser i [!DNL Adobe Experience Manager].
 description: Lägg till digitala resurser i [!DNL Adobe Experience Manager] som [!DNL Cloud Service].
-feature: Asset Management,Upload
-role: User,Admin
+feature: Asset Ingestion, Asset Management, Asset Processing, Upload
+role: User, Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: f7f60036088a2332644ce87f4a1be9bae3af1c5e
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '3071'
 ht-degree: 0%

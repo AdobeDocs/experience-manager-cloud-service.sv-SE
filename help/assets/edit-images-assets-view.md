@@ -3,7 +3,8 @@ title: Redigera bilder
 description: Redigera bilder med [!DNL Adobe Express] och spara uppdaterade bilder som versioner.
 role: User
 exl-id: cfc4c7b7-da8c-4902-9935-0e3d4388b975
-source-git-commit: 42d3751a4a29149f3b31dbc28555b81aa7ed43cc
+feature: Best Practices, Interactive Images, Smart Crop, Smart Imaging
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%

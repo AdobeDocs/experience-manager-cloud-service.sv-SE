@@ -2,7 +2,9 @@
 title: Content Fragments - Configuration Browser (Assets - Content Fragments)
 description: Lär dig hur du aktiverar funktionen för innehållsfragment i konfigurationsläsaren.
 exl-id: 9fc911de-1d33-4811-8f58-ea21ce94bedb
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+feature: Content Fragments
+role: User, Admin, Developer
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 3%

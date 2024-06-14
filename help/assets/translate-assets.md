@@ -2,10 +2,10 @@
 title: Hur översätter ni resurser i AEM?
 description: Lär dig hur du automatiserar arbetsflöden för att översätta resurser i AEM, inklusive binärfiler, metadata och taggar till flera språk.
 contentOwner: AG
-feature: Asset Management,Translation
-role: Admin,User
+feature: Asset Management, Translation
+role: Admin, User
 exl-id: 98df1412-a957-48a3-81c2-7dfe1d5e6d31
-source-git-commit: f7f60036088a2332644ce87f4a1be9bae3af1c5e
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '2468'
 ht-degree: 12%

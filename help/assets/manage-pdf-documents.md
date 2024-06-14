@@ -2,9 +2,9 @@
 title: Hantera dina PDF-dokument i [!DNL Adobe Experience Manager].
 description: Hantera PDF-dokument i [!DNL Adobe Experience Manager] som [!DNL Cloud Service].
 feature: Asset Management
-role: User,Admin
+role: User, Admin
 exl-id: 29660869-6902-4093-845b-cd629be59d4d
-source-git-commit: f7f60036088a2332644ce87f4a1be9bae3af1c5e
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 0%

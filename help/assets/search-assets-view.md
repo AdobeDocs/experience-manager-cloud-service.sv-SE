@@ -3,7 +3,8 @@ title: Lär dig hur du söker efter och identifierar resurser i [!DNL Assets vie
 description: Läs om hur du söker efter och identifierar resurser i AEM Assets-vyn. Med de kraftfulla sökfunktionerna kan du snabbt hitta rätt resurs och hjälpa dig att förbättra innehållets hastighet.
 role: User
 exl-id: abfe6a91-1699-436f-8bf4-0d0bf2369f46
-source-git-commit: f476088e13466e1c41368112fb161bcbeee2c5cd
+feature: Asset Management, Publishing, Collaboration, Asset Processing
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '1827'
 ht-degree: 0%

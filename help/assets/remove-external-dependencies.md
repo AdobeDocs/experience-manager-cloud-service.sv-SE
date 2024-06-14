@@ -1,11 +1,12 @@
 ---
 title: Ta bort externa beroenden för befintliga installationer
 description: Ta bort externa beroenden för befintliga installationer
-feature: Integrations
+feature: Workfront Integrations and Apps
 exl-id: 5b28ce97-2719-47b8-a386-77d4aaddbe81
-source-git-commit: b71a78696d4b347c97b077d84b455f53a1747a07
+role: Admin
+source-git-commit: 257930bc2633a0d31ad3bd28305b8159597befa5
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '104'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ Adobe rekommenderar att du utför konfigurationssteg för befintliga utökade an
 
 >[!NOTE]
 >
->Kör bara konfigurationsstegen om du har installerat den utökade anslutningen för Workfront före mars 2022. Det finns inga beroenden till Hoodoos distributionsplatser för nya utökade anslutningsinstallationer för Workfront från och med mars 2022.
+>Kör bara konfigurationsstegen om du har installerat den utökade anslutningen för Workfront före mars 2022. Det finns inga beroenden till Hoodoos distributionsplatser för nya utökade anslutningsinstallationer för Workfront från mars 2022.
 
 Så här tar du bort externa beroenden:
 

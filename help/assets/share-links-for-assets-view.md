@@ -1,7 +1,10 @@
 ---
 title: Hur delar jag länkar till resurser?
 description: Generera en länk och dela resurser med andra som inte har tillgång till [!DNL Assets view] program.
-source-git-commit: c3076ce35128c147ce2056d11d9305d9a9456636
+exl-id: 7d7d488b-410b-4e90-bd10-4ffbb5fcec49
+feature: Adobe Asset Link, Link Sharing
+role: Admin
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 0%

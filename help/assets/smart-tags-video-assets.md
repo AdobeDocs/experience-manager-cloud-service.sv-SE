@@ -1,10 +1,10 @@
 ---
 title: Smarta taggar för videomaterial
 description: Experience Manager lägger automatiskt till kontextuella och beskrivande smarta taggar i videoklipp med [!DNL Adobe Sensei].
-feature: Smart Tags,Tagging
-role: Admin,User
+feature: Smart Tags
+role: Admin, User
 exl-id: b59043c5-5df3-49a7-b4fc-da34c03649d7
-source-git-commit: f7f60036088a2332644ce87f4a1be9bae3af1c5e
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '1184'
 ht-degree: 0%

@@ -2,23 +2,25 @@
 title: Uppdatera [!DNL Workfront for Experience Manager enhanced connector]
 description: Uppdatera [!DNL Workfront for Experience Manager enhanced connector]
 exl-id: 09276b4d-a7c8-4927-8c0a-40eda48e55a7
-source-git-commit: 77aceab8db82082185c931202fc6ea8eee79c11e
+feature: Workfront Integrations and Apps
+role: Admin
+source-git-commit: 257930bc2633a0d31ad3bd28305b8159597befa5
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
 
 # Uppdatera [!DNL Workfront for Experience Manager enhanced connector] {#update-enhanced-connector-for-workfront}
 
-[!UICONTROL Experience Manager Assets as a Cloud Service] gör att du kan uppdatera [!DNL Workfront for Experience Manager enhanced connector] från en tidigare version till den senaste versionen.
+[!UICONTROL Experience Manager Assets as a Cloud Service] kan du uppdatera [!DNL Workfront for Experience Manager enhanced connector] från en tidigare version till den senaste versionen.
 
 >[!TIP]
 >
 >Söker du efter [!DNL Workfront for Experience Manager enhanced connector] Vill du uppdatera dokumentationen för AEM 6.5? Klicka [här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/integrations/workfront-connector-install.html?lang=en##update-enhanced-connector-for-workfront).
 
 
-Så här uppdaterar du [!DNL Workfront for Experience Manager enhanced connector] till den senaste versionen:
+Uppdatera [!DNL Workfront for Experience Manager enhanced connector] till den senaste versionen:
 
 1. Hämta den senaste versionen av den förbättrade anslutningen från [Adobe Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/workfront-tools.ui.apps.zip).
 
@@ -81,6 +83,6 @@ Så här uppdaterar du [!DNL Workfront for Experience Manager enhanced connector
 
 1. [Ta bort beroenden till Hoodoos distributionsplatser](remove-external-dependencies.md), om det finns några.
 
-1. Skicka ändringarna till databasen.
+1. Överför ändringarna till databasen.
 
 1. Kör pipeline till [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html).

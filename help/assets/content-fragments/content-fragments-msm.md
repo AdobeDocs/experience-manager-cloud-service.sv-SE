@@ -1,7 +1,10 @@
 ---
 title: Återanvänd innehållsfragment med MSM och Live-kopior
 description: Lär dig hur du använder funktionen Live Copy i MSM för att använda samma, eller liknande, innehåll i innehållsfragment på flera platser, samtidigt som du synkroniserar med källinnehållet.
-source-git-commit: 3ce1a982055c2f9c900edbd88e079deb6d3a036a
+exl-id: f050b2d1-856c-4cdb-ac74-bc78016f144a
+feature: Content Fragments
+role: User
+source-git-commit: 257930bc2633a0d31ad3bd28305b8159597befa5
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 0%

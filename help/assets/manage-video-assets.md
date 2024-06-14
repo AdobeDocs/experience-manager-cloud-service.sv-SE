@@ -2,10 +2,10 @@
 title: Hantera videomaterial
 description: Överföra, förhandsgranska, kommentera och publicera videomaterial i [!DNL Adobe Experience Manager].
 contentOwner: AG
-feature: Asset Management,Publishing,Collaboration,Video
+feature: Asset Management, Publishing, Collaboration, Video
 role: User
 exl-id: 91edce4a-dfa0-4eca-aba7-d41ac907b81e
-source-git-commit: f7f60036088a2332644ce87f4a1be9bae3af1c5e
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '4643'
 ht-degree: 5%

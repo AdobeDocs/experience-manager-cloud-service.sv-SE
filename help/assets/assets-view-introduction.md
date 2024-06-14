@@ -3,9 +3,11 @@ title: Hur tjänar du på att visa resurser AEM?
 description: Läs mer om de viktigaste fördelarna med vyn Resurser i AEM. Adobe, som använder sin expertis för att ge marknadsförare och kreatörer större frihet, introducerar en ny omvälvande användarupplevelse.
 mini-toc-levels: 3
 exl-id: c27134f5-178c-4db1-a8e6-ec45d020f2b5
-source-git-commit: 408a691de8a6fe2801a9907308db43f2050528c3
+feature: Asset Management, Publishing, Collaboration, Asset Processing
+role: User
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '972'
 ht-degree: 0%
 
 ---
@@ -83,7 +85,7 @@ I den här videon ser du hur väl Assets-vyn har integrerats med Adobe Photoshop
 
 [![Se guiden](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](edit-images-assets-view.md)
 
-De kommande versionerna av Assets as a Cloud Service skulle också innehålla [Integrering med Adobe Firefly via Adobe Express](https://firefly.adobe.com/?gclid=EAIaIQobChMIlZeKuNfj_wIVeyCtBh3e5g2cEAAYASAAEgL56_D_BwE&amp;sdid=JM4FW6VL&amp;mv=search&amp;mv2=paidsearch&amp;ef_id=EAIaIQobChMIlZeKuNfj_wIVeyCtBh3e5g2cEAAYASAAEgL56_D_BwE:G:s&amp;s_kwcid=AL!3085!3!652077237594!e!!g!adobe%20firefly!19870733758!148140507838).
+De kommande versionerna av Assets as a Cloud Service skulle också innehålla [Integrering med Adobe Firefly via Adobe Express](https://firefly.adobe.com/?gclid=EAIaIQobChMIlZeKuNfj_wIVeyCtBh3e5g2cEAAYASAAEgL56_D_BwE&amp;sdid=JM4FW6VL&amp;mv=search&amp;mv2=paidsearch&amp;ef_id=EAIaIQobChMIlZeKuNfj_wIVeyCtBh3e5g2cEAAYASAAEgL56_D_BwE:G:s&amp;s_kwcid=AL!3085!3!652077237594!e!!g!adobe%20firefly!1987073758!148140507838).
 
 ### Mappöverföringar för att konfigurera hierarkisk struktur för din organisation {#folder-uploads}
 

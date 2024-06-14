@@ -2,7 +2,9 @@
 title: Importera resurser gruppvis med hjälp av resursvyn
 description: Lär dig hur du importerar resurser i grupp med det nya resursgränssnittet (resursvyn). Det ger administratörer möjlighet att importera ett stort antal resurser från en datakälla till AEM Assets.
 exl-id: 10f9d679-7579-4650-9379-bc8287cb2ff1
-source-git-commit: cd4435247505e5067d09631b29a29e26d60eb09a
+feature: Asset Management, Publishing, Collaboration, Asset Processing
+role: User
+source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
 workflow-type: tm+mt
 source-wordcount: '1583'
 ht-degree: 0%
