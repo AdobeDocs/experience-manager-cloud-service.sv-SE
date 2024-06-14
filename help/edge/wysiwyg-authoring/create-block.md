@@ -4,9 +4,9 @@ description: Lär dig hur du skapar block som är instrumenterade för användni
 exl-id: 65a5600a-8d16-4943-b3cd-fe2eee1b4abf
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: c6013984e1c47766964e6f8ece76e7793b59308f
+source-git-commit: 364acc6a76261a725a46fe3e1ef173bc03b5a289
 workflow-type: tm+mt
-source-wordcount: '1375'
+source-wordcount: '1401'
 ht-degree: 0%
 
 ---
@@ -45,13 +45,13 @@ Följande exempel på offertblock följer den här metoden.
 
 ### Skapa blockdefinition och modell {#create-block-model}
 
-1. Klona GitHub-projektet lokalt som du skapade i [Utvecklarhandbok för att komma igång med WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) och öppna den i valfri redigerare.
+1&amp;period; klona GitHub-projektet lokalt som du skapade i [Utvecklarhandbok för att komma igång med WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) och öppna den i valfri redigerare.
 
-   * Microsoft Code används här för illustrativa ändamål.
+* Microsoft Code används här för illustrativa ändamål.
 
-   ![Klona projektet](assets/create-block/clone.png)
+![Klona projektet](assets/create-block/clone.png)
 
-1. Redigera `component-definition.json` filen i projektets rot och lägg till följande definition för det nya offertblocket och spara filen.
+2&amp;punkt; Redigera `component-definition.json` filen i projektets rot och lägg till följande definition för det nya offertblocket och spara filen.
 
 >[!BEGINTABS]
 
@@ -83,9 +83,9 @@ Följande exempel på offertblock följer den här metoden.
 
 >[!ENDTABS]
 
-1. Redigera `component-models.json` filen i projektets rot och lägg till följande [modelldefinition](/help/implementing/universal-editor/field-types.md#model-structure) för det nya offertblocket och spara filen.
+3&amp;punkt; Redigera `component-models.json` filen i projektets rot och lägg till följande [modelldefinition](/help/implementing/universal-editor/field-types.md#model-structure) för det nya offertblocket och spara filen.
 
-   * Se dokumentet [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services Projects](/help/edge/wysiwyg-authoring/content-modeling.md) för mer information om vad som är viktigt att tänka på när du skapar innehållsmodeller.
+* Se dokumentet [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services Projects](/help/edge/wysiwyg-authoring/content-modeling.md) för mer information om vad som är viktigt att tänka på när du skapar innehållsmodeller.
 
 >[!BEGINTABS]
 
@@ -119,7 +119,7 @@ Följande exempel på offertblock följer den här metoden.
 
 >[!ENDTABS]
 
-1. Redigera `component-filters.json` filen i projektets rot och lägg till offertblocket i [filterdefinition](/help/implementing/universal-editor/customizing.md#filtering-components) så att blocket kan läggas till i valfritt avsnitt och spara filen.
+4&amp;punkt; Redigera `component-filters.json` filen i projektets rot och lägg till offertblocket i [filterdefinition](/help/implementing/universal-editor/customizing.md#filtering-components) så att blocket kan läggas till i valfritt avsnitt och spara filen.
 
 >[!BEGINTABS]
 
@@ -147,9 +147,9 @@ Följande exempel på offertblock följer den här metoden.
 
 >[!ENDTABS]
 
-1. Använd Git för att implementera dessa ändringar i `main` gren.
+5&amp;period; med Git implementerar du dessa ändringar i `main` gren.
 
-   * Bekräftar till `main` är endast till för illustrativa ändamål. [Följ vedertagna standarder](https://www.aem.live/docs/dev-collab-and-good-practices) och använda en pull-begäran för faktiskt projektarbete.
+* Bekräftar till `main` är endast till för illustrativa ändamål. [Följ vedertagna standarder](https://www.aem.live/docs/dev-collab-and-good-practices) och använda en pull-begäran för faktiskt projektarbete.
 
 ### Skapa innehåll med blocket {#create-content}
 
@@ -190,13 +190,13 @@ Nu när det grundläggande offertblocket är definierat och implementerat i exem
 
 Nu när du har ett fungerande offertblock kan du formatera det.
 
-1. Gå tillbaka till redigeraren för ditt projekt.
+1&amp;period; återgå till redigeraren för ditt projekt.
 
-1. Skapa en `quote` mappen under `blocks` mapp.
+2&amp;period; Skapa en `quote` mappen under `blocks` mapp.
 
-   ![Skapa en offertmapp](assets/create-block/new-folder.png)
+![Skapa en offertmapp](assets/create-block/new-folder.png)
 
-1. I nya `quote` mapp, lägga till `quote.js` -fil som ska implementera blockdekoration genom att lägga till följande JavaScript och spara filen.
+3&amp;punkt; I ny `quote` mapp, lägga till `quote.js` -fil som ska implementera blockdekoration genom att lägga till följande JavaScript och spara filen.
 
 >[!BEGINTABS]
 
@@ -218,7 +218,7 @@ export default function decorate(block) {
 
 >[!ENDTABS]
 
-1. I `quote` mapp, lägga till `quote.css` -fil för att definiera blockets format genom att lägga till följande CSS-kod och spara filen.
+4&amp;punkt; i `quote` mapp, lägga till `quote.css` -fil för att definiera blockets format genom att lägga till följande CSS-kod och spara filen.
 
 >[!BEGINTABS]
 
@@ -263,19 +263,19 @@ export default function decorate(block) {
 
 >[!ENDTABS]
 
-1. Använd Git för att implementera dessa ändringar i `main` gren.
+5&amp;period; med Git implementerar du dessa ändringar i `main` gren.
 
-   * Bekräftar till `main` är endast till för illustrativa ändamål. [Följ vedertagna standarder](https://www.aem.live/docs/dev-collab-and-good-practices) och använda en pull-begäran för faktiskt projektarbete.
+* Bekräftar till `main` är endast till för illustrativa ändamål. [Följ vedertagna standarder](https://www.aem.live/docs/dev-collab-and-good-practices) och använda en pull-begäran för faktiskt projektarbete.
 
-1. Gå tillbaka till webbläsarfliken i Universal Editor där du redigerade sidan i ditt projekt och läs in sidan igen för att visa det formaterade blocket.
+6&amp;period; återgå till webbläsarfliken i Universal Editor där du redigerade sidan i ditt projekt och läsa in sidan igen för att visa det formaterade blocket.
 
-1. Se det nu formaterade citattecknet på sidan.
+7&amp;punkt; se det nu formaterade citattecknet på sidan.
 
-   ![Det formaterade citattecknet i Universell redigerare](assets/create-block/quote-styled.png)
+![Det formaterade citattecknet i Universell redigerare](assets/create-block/quote-styled.png)
 
-1. Kontrollera att ändringarna har flyttats till produktion genom att navigera till den publicerade sidan. Länken påminner om `https://<branch>--<repo>--<owner>.hlx.page`
+8&amp;period; Verifiera att ändringarna flyttades till produktion genom att navigera till den publicerade sidan. Länken påminner om `https://<branch>--<repo>--<owner>.hlx.page`
 
-   ![Det publicerade och formaterade citatteckenblocket](assets/create-block/quote-styled-published.png)
+![Det publicerade och formaterade citatteckenblocket](assets/create-block/quote-styled-published.png)
 
 Grattis! Du har nu ett fullt fungerande och formaterat citattecken. Du kan använda det här exemplet som bas för att utforma egna projektspecifika block.
 
