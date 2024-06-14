@@ -3,7 +3,7 @@ title: Redigera videoklipp
 description: Redigera videoklipp med [!DNL Adobe Express] och spara uppdaterade videor som versioner.
 role: User
 exl-id: 42b25935-e2ff-444f-97c8-b4ed56f3ef9e
-source-git-commit: ff201051a70862e7597cf36f70a0e7225178f1fa
+source-git-commit: afdab9a7b449673ecf15bc9ab31307388da7b64e
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 0%
@@ -83,7 +83,7 @@ Din video finns i GIF-format för nedladdning. Du kan antingen spara den rediger
 
 * Det går bara att redigera videoklipp i MP4-format.
 
-* Den maximala källfilsstorlek som stöds är 200 MB.
+* Den maximala källfilsstorlek som stöds är 1 GB.
 
 * Videor som stöds är större än 46 pixlar och mindre än 3 840 pixlar på alla sidor.
 
@@ -93,11 +93,11 @@ Din video finns i GIF-format för nedladdning. Du kan antingen spara den rediger
 
 ### Nästa steg {#next-steps}
 
-* Ge produktfeedback med [!UICONTROL Feedback] alternativ som finns i användargränssnittet i resursvyn
+* Ge produktfeedback med [!UICONTROL Feedback] som finns i användargränssnittet i resursvyn.
 
-* Ge feedback på dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som finns till höger
+* Ge feedback på dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som finns till höger.
 
-* Kontakt [Kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)
+* Kontakt [Kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support).
 
 >[!MORELIKETHIS]
 >
