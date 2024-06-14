@@ -4,7 +4,7 @@ description: Lär dig hur AEM as a Cloud Service kan användas med Edge Delivery
 feature: Edge Delivery Services
 exl-id: 41999302-b4c9-4f5a-b659-6e7398a3c4f4
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 7ad9a959592f1e8cebbcad9a67d280d5b2119866
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 0%
@@ -30,24 +30,24 @@ Adobe är enkel. Börja med dokumentbaserad redigering och lägg till komplexite
 
 ## Redigering {#authoring-edge}
 
-Med Edge Delivery Services är det enkelt, snabbt och flexibelt att skapa. Du kan välja att redigera med dokumentbaserad redigering eller AEM med den universella redigeraren.
+Med Edge Delivery Services är det enkelt, snabbt och flexibelt att skapa. Du kan välja att redigera med hjälp av dokumentbaserad redigering eller WYSIWYG-redigering med den universella redigeraren.
 
-Se dokumentet [Skapa innehåll för Edge Delivery Services](/help/edge/aem-authoring/authoring.md) för mer information.
+Se dokumentet [Skapa innehåll för Edge Delivery Services](/help/edge/wysiwyg-authoring/authoring.md) för mer information.
 
 ## Publicering {#publishing-edge}
 
 Med Edge Delivery Services är det smidigt att publicera innehåll oavsett innehållskälla.
 
-Se dokumentet [Publicera innehåll för Edge Delivery Services](/help/edge/aem-authoring/publishing.md) för mer information.
+Se dokumentet [Publicera innehåll för Edge Delivery Services](/help/edge/wysiwyg-authoring/publishing.md) för mer information.
 
 ## Utvecklar {#developing-edge}
 
 Edge Delivery Services bygger på konceptet med block. AEM innehåller ett omfattande bibliotek med fördefinierade block, som kan byggas ut efter dina projektbehov. Kod för Edge Delivery Services-projekt hanteras i GitHub.
 
-Se dokumentet [Guiden Komma igång för utvecklare för AEM med Edge Delivery Services](/help/edge/aem-authoring/edge-dev-getting-started.md) för mer information.
+Se dokumentet [Utvecklarhandbok för att komma igång med WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) för mer information.
 
 ## Befintliga AEM {#existing-projects}
 
 Du behöver inte vänta på ett nytt AEM projekt för att kunna dra nytta av Edge Delivery Services. Edge Delivery Services kan integreras i ditt befintliga AEM så att du kan utnyttja prestandavinster direkt.
 
-Se dokumentet [Använda Edge Delivery Services med befintliga AEM](/help/edge/aem-authoring/existing-projects.md) för mer information.
+Se dokumentet [Använda Edge Delivery Services med befintliga AEM](/help/edge/wysiwyg-authoring/existing-projects.md) för mer information.

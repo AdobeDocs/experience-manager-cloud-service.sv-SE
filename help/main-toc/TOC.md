@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 5b3bc9a8ef1cf1769afcd31935d321ef13bb77cd
+source-git-commit: 7ad9a959592f1e8cebbcad9a67d280d5b2119866
 workflow-type: tm+mt
 source-wordcount: '5034'
 ht-degree: 3%
@@ -823,14 +823,14 @@ ht-degree: 3%
 + Edge Delivery Services {#edge-delivery}
    + [Översikt över Edge Delivery Services](/help/edge/overview.md)
    + [Använda Edge Delivery Services med AEM](/help/edge/using.md)
-   + AEM {#aem-authoring}
-      + [Skapa innehåll för Edge Delivery](/help/edge/aem-authoring/authoring.md)
-      + [Publicera innehåll för Edge Delivery](/help/edge/aem-authoring/publishing.md)
-      + [Starthandbok för utvecklare](/help/edge/aem-authoring/edge-dev-getting-started.md)
-      + [Skapar block](/help/edge/aem-authoring/create-block.md)
-      + [Innehållsmodellering](/help/edge/aem-authoring/content-modeling.md)
-      + [Tabelldata och kalkylblad](/help/edge/aem-authoring/tabular-data.md)
-      + [Befintliga projekt och Edge Delivery](/help/edge/aem-authoring/existing-projects.md)
+   + WYSIWYG-redigering {#wysiwyg-authoring}
+      + [Skapa innehåll för Edge Delivery](/help/edge/wysiwyg-authoring/authoring.md)
+      + [Publicera innehåll för Edge Delivery](/help/edge/wysiwyg-authoring/publishing.md)
+      + [Starthandbok för utvecklare](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md)
+      + [Skapar block](/help/edge/wysiwyg-authoring/create-block.md)
+      + [Innehållsmodellering](/help/edge/wysiwyg-authoring/content-modeling.md)
+      + [Tabelldata och kalkylblad](/help/edge/wysiwyg-authoring/tabular-data.md)
+      + [Befintliga projekt och Edge Delivery](/help/edge/wysiwyg-authoring/existing-projects.md)
    + Dokumentbaserad redigering {#document-authoring}
       + [Redigering](/help/edge/docs/authoring.md)
       + [Massmetadata](/help/edge/docs/bulk-metadata.md)

@@ -1,7 +1,7 @@
 ---
 title: Stöd för Edge Delivery Services i Cloud Manager
 description: Lär dig hur du kan leverera dina Cloud Manager-projekt med hjälp av Edge Delivery Services.
-source-git-commit: 8d5d8910a906e2adf17fa9c75f17634602c2e0b9
+source-git-commit: 7ad9a959592f1e8cebbcad9a67d280d5b2119866
 workflow-type: tm+mt
 source-wordcount: '283'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Edge Delivery Services är en sammanslagen uppsättning tjänster som ger stor f
 * Skapa snabba sajter med perfekt Lightroom Score och övervaka prestanda kontinuerligt med hjälp av RUM (Real-use monitoring).
 * Öka redigeringseffektiviteten genom att frikoppla innehållskällor.
 
-Du kan använda både AEM och AEM med den universella redigeraren samt dokumentbaserad redigering.
+Du kan använda både AEM och WYSIWYG-redigering med den universella redigeraren och dokumentbaserad redigering.
 
 Med Cloud Manager på AEM as a Cloud Service kan du aktivera Edge Delivery Service för ditt projekt.
 

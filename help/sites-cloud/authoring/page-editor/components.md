@@ -5,7 +5,7 @@ exl-id: a8118329-1330-49b0-a3f8-a27774f1c5df
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 7ad9a959592f1e8cebbcad9a67d280d5b2119866
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 0%
@@ -44,7 +44,7 @@ The [Komponentkonsol](/help/sites-cloud/authoring/components-console.md) ger en 
 
 The [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) erbjuder flexibel och funktionsrik redigeringsfunktionalitet som tillhandahåller viktiga innehållstyper för att skapa sidor.
 
-De bygger med AEM bästa praxis och utgör grunden för den AEM redigeringsupplevelsen. Kärnkomponenterna kan enkelt byggas ut av utvecklare för att uppfylla specifika projektbehov.
+De byggs med AEM bästa praxis och utgör grunden för den AEM redigeringsupplevelsen. Kärnkomponenterna kan enkelt byggas ut av utvecklare för att uppfylla specifika projektbehov.
 
 Tillsammans med WCM Core Components kan du också använda [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html#features). Dessa kärnkomponenter har en standard och enklare metoder för att [skapa eller lägga till formulär på en AEM Sites-sida](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md).
 

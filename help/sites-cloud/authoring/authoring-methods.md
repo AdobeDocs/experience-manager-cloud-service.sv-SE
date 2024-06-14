@@ -5,7 +5,7 @@ feature: Authoring
 exl-id: ef482843-451b-474e-a8d0-d0bfcc17221b
 solution: Experience Manager Sites
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 7ad9a959592f1e8cebbcad9a67d280d5b2119866
 workflow-type: tm+mt
 source-wordcount: '570'
 ht-degree: 0%
@@ -20,8 +20,8 @@ Lär dig olika sätt att skapa innehåll i AEM, hur de skiljer sig åt och när 
 
 AEM as a Cloud Service har flera olika redigerare för att redigera olika typer av innehåll och stöder olika redigeringssituationer.
 
-* [AEM redigering med Page Editor](#page-editor) - Sidredigeraren är den klassiska redigeraren för att skapa innehåll i AEM, som har testats och är betrodd för tusentals eller fler webbplatser.
-* [AEM-baserad redigering med den universella redigeraren](#universal-editor) - Det universella redigeringsprogrammet är ett modernt användargränssnitt där du kan skapa AEM på ett innehållsmedvetet sätt och som är tillgängligt för AEM projekt som utnyttjar Edge Delivery Services.
+* [WYSIWYG-redigering med sidredigeraren](#page-editor) - Sidredigeraren är den klassiska redigeraren för att skapa innehåll i AEM, som har testats och är betrodd för tusentals eller fler webbplatser.
+* [WYSIWYG-redigering med den universella redigeraren](#universal-editor) - Det universella redigeringsprogrammet är ett modernt användargränssnitt där du kan skapa AEM på ett innehållsmedvetet sätt och som är tillgängligt för AEM projekt som utnyttjar Edge Delivery Services.
 * [Dokumentbaserad redigering](#document-based) - Om du använder Edge Delivery-tjänster kan du välja att redigera ditt innehåll som vanliga dokument som Microsoft Word eller Google Docs helt utanför AEM.
 * [AEM Content Fragment Editor](#cf-editor) - Det här är det självklara valet för att skapa headless-innehåll.
 
@@ -29,7 +29,7 @@ På grund av AEM integrerade och skalbara natur kan dessa metoder användas exkl
 
 Kontakta systemadministratören eller projektledaren om du är osäker på vilka redigeringsalternativ som är tillgängliga för dig eller om du vill utforska nya alternativ för att skapa ditt innehåll.
 
-## AEM redigering med Page Editor {#page-editor}
+## WYSIWYG-redigering med sidredigeraren {#page-editor}
 
 Det här är den klassiska redigeraren för att skapa innehåll i AEM, som har testats och registrerats som pålitligt för tusentals eller tusentals webbplatser.
 
@@ -39,7 +39,7 @@ Den AEM sidredigeraren innehåller en integrerad miljö för att skapa innehåll
 
 Mer information om AEM finns i dokumentet [AEM sidredigeraren.](/help/sites-cloud/authoring/page-editor/introduction.md)
 
-## AEM-baserad redigering med den universella redigeraren {#universal-editor}
+## WYSIWYG-redigering med den universella redigeraren {#universal-editor}
 
 Universal Editor är ett modernt användargränssnitt där du kan skapa AEM på ett innehållsmedvetet sätt och det är det första alternativet för AEM projekt som utnyttjar Edge Delivery Services.
 
