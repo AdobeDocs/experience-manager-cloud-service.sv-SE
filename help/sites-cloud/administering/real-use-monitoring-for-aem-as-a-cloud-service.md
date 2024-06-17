@@ -2,7 +2,9 @@
 title: Övervakning av faktisk användning för AEM as a Cloud Service
 description: Lär dig hur du använder Real Use Monitoring (RUM) för att hämta in och analysera den digitala användarupplevelsen för en webbplats eller tillämpning i realtid.
 exl-id: 91fe9454-3dde-476a-843e-0e64f6f73aaf
-source-git-commit: 0514d56fb65245b1919969a60f6d4c2b719deaa6
+feature: Administering
+role: Admin
+source-git-commit: 12e37d6d0a8674dd4329200322e2f959cc6dd787
 workflow-type: tm+mt
 source-wordcount: '1395'
 ht-degree: 0%
