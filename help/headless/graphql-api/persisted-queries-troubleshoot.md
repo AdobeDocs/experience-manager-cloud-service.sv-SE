@@ -3,9 +3,9 @@ title: Felsöka beständiga GraphQL-frågor
 description: Lär dig felsöka problem med beständiga GraphQL-frågor i Adobe Experience Manager as a Cloud Service.
 feature: Content Fragments,GraphQL API
 exl-id: 71bd1f68-ca96-4c78-a936-abed250ecec1
-source-git-commit: 220e86f18e4a61304764753d8daecb68503e9fd0
+source-git-commit: 09ef5fb49ba638f888c9c101760ffa3c7d258fda
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '363'
 ht-degree: 0%
 
 ---
@@ -14,23 +14,22 @@ ht-degree: 0%
 
 The [Actions Center](/help/operations/actions-center.md) innehåller **GraphQL beständiga frågefel** varning. Det innebär att du får information när någon av dina GraphQL beständiga frågor genererar ett fel.
 
-För att hjälpa dig att felsöka och lösa sådana problem förklarar vi *mest vanligt* orsaker till fel och steg för hur du åtgärdar dem.
+Den här sidan innehåller information om hur du felsöker och löser sådana problem *mest vanligt* orsaker till fel och steg för hur du åtgärdar dem.
 
 ## Ändringar i modellen för innehållsfragment {#changes-to-content-fragment-model}
 
 En GraphQL-beständig fråga kan misslyckas när den baseras på GraphQL-typer som är föråldrade, ofta på grund av en ändring i de underliggande modellerna för innehållsfragment.
 
-Det här kan hända av flera olika anledningar. När en innehållsmodellförfattare till exempel:
+Sådana fel kan inträffa av flera olika orsaker. Om författaren till en modell för innehållsfragment (listan inte är uttömmande):
 
 * tar bort eller byter namn på ett fält
-* uppdaterar tillåtna modeller som definierats för en fragmentreferens
-* återger en modell som refereras av andra modeller
-* andra åtgärder och orsaker
+* uppdaterar **Modelltyp** som definierar vilka modeller som tillåts för fragmentreferensen
+* Tar bort publicering av en modell som refereras av andra modeller
 
-För att åtgärda detta:
+För att åtgärda sådana fel bör du antingen:
 
-* den beständiga frågan som misslyckas bör uppdateras för att passa ändringen av modellen för innehållsfragment
-* eller så bör ändringen av den modell som orsakade problemet återställas
+* uppdatera den beständiga fråga som inte kan hantera ändringar som gjorts i modellen för innehållsfragment
+* återställa ändringen av modellen som orsakade problemet
 
 ## GraphQL-slutpunkten är inte konfigurerad {#graphql-endpoint-not-configured}
 
@@ -48,7 +47,7 @@ Mönstret ska vara `/graphql/execute.json/thePath`.
 
 I så fall returnerar frågan `405` felkod.
 
-Detta är inte specifikt för GraphQL. Se KB-artikeln [405 Fel tillåts inte](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-20824.html).
+Ett sådant fel är inte specifikt för GraphQL. Se KB-artikeln [405 Fel tillåts inte](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-20824).
 
 ## Spärrad av avsändare {#blocked-dispatcher}
 
