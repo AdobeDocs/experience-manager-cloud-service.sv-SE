@@ -3,7 +3,7 @@ title: Felsöka beständiga GraphQL-frågor
 description: Lär dig felsöka problem med beständiga GraphQL-frågor i Adobe Experience Manager as a Cloud Service.
 feature: Content Fragments,GraphQL API
 exl-id: 71bd1f68-ca96-4c78-a936-abed250ecec1
-source-git-commit: 09ef5fb49ba638f888c9c101760ffa3c7d258fda
+source-git-commit: 736fbc28c800c1c181721df7e0d7feed143642d9
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Den här sidan innehåller information om hur du felsöker och löser sådana pr
 
 En GraphQL-beständig fråga kan misslyckas när den baseras på GraphQL-typer som är föråldrade, ofta på grund av en ändring i de underliggande modellerna för innehållsfragment.
 
-Sådana fel kan inträffa av flera olika orsaker. Om författaren till en modell för innehållsfragment (listan inte är uttömmande):
+Sådana fel kan inträffa av flera olika orsaker. Exempel är (listan är inte uttömmande) när författaren till en modell för innehållsfragment:
 
 * tar bort eller byter namn på ett fält
 * uppdaterar **Modelltyp** som definierar vilka modeller som tillåts för fragmentreferensen
