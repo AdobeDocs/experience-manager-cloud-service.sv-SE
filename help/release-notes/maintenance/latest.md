@@ -4,9 +4,9 @@ description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] a
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: c969b78f5e93e15d1f8f57dd409e58a6275069ce
+source-git-commit: 339dd64c602b2eed163f36f70089a50dd0d4a11c
 workflow-type: tm+mt
-source-wordcount: '422'
+source-wordcount: '521'
 ht-degree: 1%
 
 ---
@@ -49,6 +49,11 @@ Mer information om de nya och förbättrade funktionerna och problemen som har �
 ### Kända fel {#known-issues-16544}
 
 * GRANITE-52573: Begäranden som innehåller dubbla snedstreck `//` nekas med statuskod 400. Detta beteende återställs i en senare underhållsversion.
+
+>[!NOTE]
+> AEM Engineering har identifierat en regression för startfunktioner som påverkar aktuella AEM från och med 16461. På grund av den här regressionen kommer nya startprogram (som skapats efter att nya versioner har tillämpats) som innehåller sidor som inte är djupa inte att befordras korrekt på grund av saknade konfigurationer.
+> Om dina miljöer påverkas finns ett gränssnittsskript som identifierar och uppdaterar saknade konfigurationer tillgängliga via kundsupport (intern referens, SITES-22457).
+> En mer långsiktig korrigering kommer att göras tillgänglig som säkerställer att nya startprogram skapas med alla de rätta konfigurationerna. Till dess finns även en intern korrigeringsversion tillgänglig vid behov.
 
 ### Ändringsmeddelande {#change-notice-16544}
 
