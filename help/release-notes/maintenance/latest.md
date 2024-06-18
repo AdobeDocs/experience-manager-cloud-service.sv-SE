@@ -4,9 +4,9 @@ description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] a
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 339dd64c602b2eed163f36f70089a50dd0d4a11c
+source-git-commit: e0156c54b51eed0f729f2026c47eb93917143017
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
@@ -15,55 +15,62 @@ ht-degree: 1%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsutgåvan av Experience Manager as a Cloud Service.
 
-## Version 16544 {#release-16544}
+## Utgåva 16799 {#release-16799}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 16544, som offentliggjordes den 4 juni 2024. Den tidigare underhållsversionen var version 16461.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 16799, som offentliggjordes den 18 juni 2024. Den tidigare underhållsversionen var version 16544.
 
 2024.6.0 Funktionsaktivering innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) för mer information.
 
->[!CAUTION]
->
->Använd den SDK som det hänvisas till här under, eftersom en regression har bekräftats med föregående SDK:
->`AEM SDK v2024.06.16647.20240607T103723Z-240500`
+### Förbättringar {#enhancements-16799}
 
-### Förbättringar {#enhancements-16544}
+* ASSETS-31977: Förbättrade åtgärder för att flytta, kopiera och ta bort resurser.
+* ASSETS-33618: Funktioner för automatisk transkription och översättning för videor i Dynamic Media.
+* ASSETS-33618: Godkännandeåtgärd för ContentHub och DM och lägg till egenskaper i egenskaperna damAssetLucene.
+* ASSETS-35533: Lägg till DRM- och CAI-egenskaper i index damAssetLucene.
+* ASSETS-37280: Sekventiell jobbhantering för översättning när källunderrubriken (vtt) fortfarande bearbetas.
+* ASSETS-37559: Förbättrad händelse för borttagning av resurser.
+* ASSETS-37723: Implementera resurspublicerad händelse.
+* ASSETS-37724: Implementera händelse för opublicerad resurs.
+* ASSETS-38614: Förbättringar i användargränssnittet för Dela länk.
+* ASSETS-39601: Tillämpa valideringsregex automatiskt på resursliveopynamnet.
+* ASSETS-39454: Uppgradera till visningsprogram för 2024.5.0 i Quickstart.
+* CNTBF-184: Supportsökvägar under `/conf` i innehållsomflödning.
 
-* GRANITE-41133: Stöd för Jakarta Servlet API 5 och OSGi Servlet Whiteboard API.
-* GRANITE-51355: Deprecate org.slf4j.event.
-* GRANITE-51565: AEM förlorar den lokala grupprelationen med den externa gruppen när den lokala gruppen publiceras från AEM.
-* GRANITE-51707: Ange cookie saml_request_path under http-omdirigering för autentisering.
-* GRANITE-52010: Uppdatera Jackrabbit-version till 2.20.16.
-* GRANITE-52057: Uppdatera Filevault till 3.7.3-T20240514105118-694f6aea som korrigerar JCRVLT-745.
-* SKYOPS-35998: Uppdatera Sling RepoInit-beroenden: Repoinit Parser 1.9.0, Repoinit JCR 1.1.46.
+### Åtgärdade problem {#fixed-issues-16799}
 
-### Åtgärdade problem {#fixed-issues-16544}
+* ASSETS-37335: Redigering av sökpanel i filter avmarkerar alla rutor.
+* ASSETS-38069: AEM DAM PDF Preview Issue on Timeline Filter Selection.
+* ASSETS-38215: Adobe Stock-licensknappen är nedtonad i AEM as a Cloud Service for enterprise-prenumeration.
+* ASSETS-38578: Felaktiga hyperlänkar i länkdelningsrapporten för resurser.
+* ASSETS-38678: Visa inställningar som är brutna i Samlingsinformation.
+* ASSETS-39071: Webboptimerad leverans kan generera ett undantag om den ursprungliga återgivningens mime-typ är null.
+* ASSETS-39316: Sortering efter namn fungerar inte i samlingar.
+* ASSETS-39377: Massimport från OneDrive kan misslyckas om du får ett baktryck från fjärr-API.
+* ASSETS-39428: Renderingsproblem i gränssnittet för copyrighthantering.
+* CQ-4357150: Guava i cq-content-sync bundle.
+* SCRNS-4194: Ta bort beroendet av Google Guava API:er.
+* SCRNS-4360: Knappen Hantera publikation och snabbpublicering saknas för icke-adminanvändare i innehållsleverantören för kanaler.
+* SCRNS-4323: Hide/Disable launches from screens.html.
 
-* GRANITE-51375: idp-sync returnerar NPE om ingen mellanliggande sökväg anges.
-* GUIDES-17171: Kopiering och inklistring av ämnen som överstiger 15 kB misslyckas med ett oväntat fel.
-* GUIDES-17088: Funktionen för att ändra dokumentstatus från **Filegenskaper** panelen fungerar inte som den ska och ändringar i *Utkast* tillstånd.
-* GUIDES-16931: Länkade bilder från ämnena visas inte i baslinjen när versionen har skapats.
-* GUIDES-16896: Paneler med återanvändbart innehåll listar inte element när **Användarinställningar** är inställda på att visa filer efter **Filnamn**.
+### Kända fel {#known-issues-16799}
 
-Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i guiderna för Experience Manager finns i [Frigör färdplan för Experience Manager Guides](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Ingen.
 
-### Kända fel {#known-issues-16544}
+### Ändringsmeddelande {#change-notice-16799}
 
-* GRANITE-52573: Begäranden som innehåller dubbla snedstreck `//` nekas med statuskod 400. Detta beteende återställs i en senare underhållsversion.
+* Den här versionen innehåller följande nya produktindexversioner:
+   * **damAssetLucene-11**
+   * **fragments-11**
 
->[!NOTE]
-> AEM Engineering har identifierat en regression för startfunktioner som påverkar aktuella AEM från och med 16461. På grund av den här regressionen kommer nya startprogram (som skapats efter att nya versioner har tillämpats) som innehåller sidor som inte är djupa inte att befordras korrekt på grund av saknade konfigurationer.
-> Om dina miljöer påverkas finns ett gränssnittsskript som identifierar och uppdaterar saknade konfigurationer tillgängliga via kundsupport (intern referens, SITES-22457).
-> En mer långsiktig korrigering kommer att göras tillgänglig som säkerställer att nya startprogram skapas med alla de rätta konfigurationerna. Till dess finns även en intern korrigeringsversion tillgänglig vid behov.
+  Anpassade versioner av tidigare indexversioner sammanfogas automatiskt med den nya produktindexversionen. Använd ytterligare anpassade uppdateringar för den sammanfogade versionen.
 
-### Ändringsmeddelande {#change-notice-16544}
+* Från och med september 2024 kommer AEM as a Cloud Service att inaktivera serialiseringen av Resurslösare via Sling Model Exporter-ramverket. Se [dokumentationen](/help/implementing/developing/hybrid/disallow-the-serialization-of-resourceresolvers-via-sling-model-exporter.md) för mer information.
 
-Från och med september 2024 kommer AEM as a Cloud Service att inaktivera serialiseringen av Resurslösare via Sling Model Exporter-ramverket. Se [dokumentationen](/help/implementing/developing/hybrid/disallow-the-serialization-of-resourceresolvers-via-sling-model-exporter.md) för mer information.
-
-### Föråldrade funktioner och API:er {#deprecated-16544}
+### Föråldrade funktioner och API:er {#deprecated-16799}
 
 Om du vill veta vad som är föråldrat eller borttaget i AEM as a Cloud Service kan du läsa [Föråldrade och borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
 
-### Inbäddade tekniker {#embedded-tech-16544}
+### Inbäddade tekniker {#embedded-tech-16799}
 
 | Teknik | Version | Länk |
 |---|---|---|
