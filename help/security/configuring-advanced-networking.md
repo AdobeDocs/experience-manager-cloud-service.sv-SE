@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
 feature: Security
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: a21a0cda116077a3752f33aaff6dc6c180b855aa
 workflow-type: tm+mt
-source-wordcount: '5332'
+source-wordcount: '5744'
 ht-degree: 0%
 
 ---
@@ -238,7 +238,7 @@ Konfigurationen av IP-adressen för den dedikerade IP-adressen liknar den [flexi
 
 >[!INFO]
 >
->Splunk-vidarebefordringsfunktionen är inte möjlig från en dedikerad IP-adress.
+>Om en dedikerad IP-adress för utgångar konfigureras kommer Splunk-vidarebefordran att fortsätta använda de dynamiska gruppreseriangenterna. Skräppostvidarebefordran kan inte konfigureras att använda en dedikerad IP-adress.
 
 ### UI-konfiguration {#configuring-dedicated-egress-provision-ui}
 
@@ -806,3 +806,49 @@ Anslutningspoolning är en teknik som är anpassad för att skapa och underhåll
 Att införa en lämplig strategi för sammanfogning av anslutningar är en proaktiv åtgärd för att korrigera en vanlig tillsyn i systemkonfigurationen, vilket ofta leder till sämre prestanda. Genom att upprätta en anslutningspool på rätt sätt kan Adobe Experience Manager (AEM) effektivisera externa samtal. Detta minskar inte bara resursförbrukningen utan minskar också risken för tjänstavbrott och minskar sannolikheten för att stöta på misslyckade begäranden vid kommunikation med servrar i föregående ström.
 
 Mot bakgrund av dessa uppgifter rekommenderar Adobe att du gör en ny bedömning av din nuvarande AEM och överväger att avsiktligt införliva sammanfogning av anslutningar i samband med avancerade nätverksinställningar. Genom att hantera antalet parallella anslutningar och minimera risken för inaktuella anslutningar, leder dessa åtgärder till en minskning av risken för att proxyservrar når sina anslutningsgränser. Denna strategiska implementering är därför avsedd att minska sannolikheten för att begäranden inte når externa slutpunkter.
+
+#### Vanliga frågor om anslutningsgränser
+
+När du använder avancerat nätverk är antalet anslutningar begränsat för att säkerställa stabilitet i olika miljöer och för att förhindra att lägre miljöer tömmer de tillgängliga anslutningarna.
+
+Anslutningarna är begränsade till 1 000 per AEM och varningar skickas till kunderna när antalet är 750.
+
+##### Gäller anslutningsgränsen endast utgående trafik från icke-standardportar eller all utgående trafik?
+
+Gränsen gäller endast för anslutningar som använder avancerat nätverk (utgångar på portar som inte är standard, som använder dedikerad IP-adress eller VPN).
+
+##### Vi ser ingen betydande skillnad i antalet utgående anslutningar. Varför får vi meddelandet nu?
+
+Om kunden skapar anslutningar dynamiskt (t.ex. en eller flera för varje begäran) kan en ökning av trafiken leda till att anslutningarna krymper.
+
+##### Är det möjligt att vi har råkat ut för en liknande situation tidigare utan att behöva varnas?
+
+Varningar skickas endast när den mjuka gränsen nås.
+
+##### Vad händer om maxgränsen nås?
+
+När den hårda gränsen nås kommer nya utgångsanslutningar från AEM via Advanced Networking (egress på portar som inte är standard, med dedikerad IP eller VPN) att tas bort för att skydda mot DoS-attacker.
+
+##### Kan gränsen höjas?
+
+Nej, om du har ett stort antal anslutningar kan det få en avsevärd prestandapåverkan och en DoS-funktion över brädor och miljöer.
+
+##### Stängs anslutningarna automatiskt av AEM efter en viss period?
+
+Ja, anslutningarna stängs på JVM-nivå och olika punkter i nätverksinfrastrukturen. Detta kommer dock att bli för sent för alla produktionstjänster. Anslutningar bör stängas explicit när de inte längre behövs eller återställs till poolen när anslutningspoolen används. I annat fall blir resursförbrukningen för hög och kan leda till att resurser överbelastas.
+
+##### Om den maximala anslutningsgränsen uppnås, påverkar den några licenser och leder till extra kostnader?
+
+Nej, det finns ingen licens eller kostnad kopplad till den här gränsen. Det är en teknisk gräns.
+
+##### Hur nära är vi gränsen? Vad är maxgränsen?
+
+Varningen utlöses när anslutningarna överskrider 750. Maxgränsen är 1 000 anslutningar per AEM.
+
+##### Gäller denna gräns VPN?
+
+Ja, gränsen gäller anslutningar som använder avancerade nätverk, inklusive VPN.
+
+##### Om vi använder ett dedikerat egress-IP, kommer denna begränsning fortfarande att gälla?
+
+Ja, gränsen gäller fortfarande om en dedikerad IP-adress används.
