@@ -3,9 +3,9 @@ title: Konfigurera OSGi för Adobe Experience Manager as a Cloud Service
 description: OSGi-konfiguration med hemliga värden och miljöspecifika värden
 feature: Deploying
 exl-id: f31bff80-2565-4cd8-8978-d0fd75446e15
-source-git-commit: a230efaa58cb00e8a0c0e2b23f0cc07462cc658b
+source-git-commit: b4c87b79c714c408daea08e81fbe719bc9f5adf0
 workflow-type: tm+mt
-source-wordcount: '3269'
+source-wordcount: '3302'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Du kan hantera konfigurationsinställningarna för OSGi-komponenter genom konfig
 
 ## OSGi-konfigurationsfiler {#osgi-configuration-files}
 
-Konfigurationsändringar definieras i AEM Project-kodpaket (`ui.apps`) som konfigurationsfiler (`.cfg.json`) under körningslägesspecifika konfigurationsmappar:
+Konfigurationsändringar definieras i AEM Project-kodpaket (`ui.config`) som konfigurationsfiler (`.cfg.json`) under körningslägesspecifika konfigurationsmappar:
 
 `/apps/example/config.<runmode>`
 
@@ -44,6 +44,10 @@ följer `cfg.json` Konfigurationsformat för OSGi.
 >[!NOTE]
 >
 >Tidigare versioner AEM OSGi-konfigurationsfiler som stöds med olika filformat, som `.cfg`, `.config` och som XML `sling:OsgiConfig` resursdefinitioner. Dessa format har ersatts av `.cfg.json` Konfigurationsformat för OSGi.
+
+>[!NOTE]
+>
+>OSGi-konfigurationerna lagras inte under /apps som vanliga AEM i molnet som lagras på en extern plats. Checka in Cloud Manager [Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console#configurations) för att visa OSGi-konfigurationer.
 
 ## Upplösning för körningsläge {#runmode-resolution}
 
