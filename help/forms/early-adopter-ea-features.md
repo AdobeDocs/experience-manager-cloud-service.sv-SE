@@ -2,8 +2,9 @@
 title: Aktuella funktioner för tidig användning av [!DNL Adobe Experience Manager Forms] as a Cloud Service.
 description: Aktuella funktioner för tidig användning av [!DNL Adobe Experience Manager Forms] as a Cloud Service.
 Feature: Introduction
-Role: developer, user
-source-git-commit: e6ceb53ee821a1fde5e79c687a4445d6c18faf54
+Role: developer, user, author
+exl-id: 6b3f853c-2a6d-4544-9cad-8a3fc1e1f3b9
+source-git-commit: f1ab365377af7a327dddcb9228b1a2f8610d49de
 workflow-type: tm+mt
 source-wordcount: '1731'
 ht-degree: 0%
