@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Video Profiles,Best Practices
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 35f31c95e92148ff5f3472f26ea9c40fa5a17947
+source-git-commit: 03799545e29489a20e71e588f0a9bfac92e753db
 workflow-type: tm+mt
 source-wordcount: '9237'
 ht-degree: 0%
@@ -569,7 +569,7 @@ Samtidigt som du skapar ett supportärende för Adobe där DASH är aktiverat p�
 
 Med funktioner för flera bildtexter och ljudspår i Dynamic Media kan du enkelt lägga till flera bildtexter och ljudspår i en primär video. Detta innebär att videoklippen är tillgängliga för alla mottagare världen över. Du kan anpassa en enda publicerad primär video till en global publik på flera språk och följa riktlinjer för tillgänglighet för olika geografiska regioner. Författare kan också hantera beskrivningar och ljudspår från en enda flik i användargränssnittet.
 
-![Fliken Bildtexter och ljudspår i Dynamic Media tillsammans med en tabell som visar överförda VTT-bildtextfiler och överförda MP3-ljudspårfiler för en video.](/help/assets/dynamic-media/assets/msma-subtitle-audiotracks-tab.png)
+![Fliken Bildtexter och ljudspår i Dynamic Media tillsammans med en tabell som visar överförda VTT-bildtextfiler och överförda MP3-ljudspårfiler för en video.](/help/assets/dynamic-media/assets/msma-subtitle-audiotracks-tab2.png)
 
 Några av användningsområdena för att lägga till flera bildtexter och ljudspår i den primära videon är bland annat följande:
 
@@ -616,7 +616,7 @@ Nya bildtexter och bildtexter stöds med formaten WebVTT och Adobe VTT. Dessutom
    >
    >När du har slutfört någon av ovanstående åtgärder går du tillbaka till dessa steg.
 
-   ![Fliken Bildtexter och Ljudspår på sidan Egenskaper.](/help/assets/dynamic-media/assets/msma-audiotracks.png)*Fliken Bildtexter och Ljudspår på videons egenskapssida.*
+   ![Fliken Bildtexter och Ljudspår på sidan Egenskaper.](/help/assets/dynamic-media/assets/msma-audiotracks2.png)*Fliken Bildtexter och Ljudspår på videons egenskapssida.*
 
 1. (Valfritt) Gör så här om du vill lägga till en eller flera bildtextfiler i en video:
    * Välj **[!UICONTROL Upload Captions]**.
@@ -627,8 +627,8 @@ Nya bildtexter och bildtexter stöds med formaten WebVTT och Adobe VTT. Dessutom
      |--- |--- |
      | Filnamn | Standardfilnamnet härleds från det ursprungliga filnamnet. Filnamnet kan bara ändras under överföring och kan inte ändras senare. Teckenkraven för filnamn är desamma som för AEM Assets.<br>Samma filnamn kan inte användas för ytterligare bildtextfiler och ljudspårsfiler. |
      | Språk | Välj språk för bildtexten. |
-     | Typ | Välj den typ av bildtext som du använder.<br>**Bildtext** - Bildtexten som visas med videon som översätter eller transkriberar dialogrutan.<br>**Bildtext** - Bildtexten innehåller även bakgrundsljud, talardifferentiering och annan relevant information, tillsammans med översättningen eller transkriberingen av dialogen, som gör innehållet mer tillgängligt för personer som är döva eller hörselskadade. |
-     | Etikett | Texten som visas som bildtextens namn i **[!UICONTROL Select audio or caption]** popup-lista i mediespelaren. Etiketten är vad kunden ser och motsvarar ett bildtextspår. Till exempel: `English (CC)`. |
+     | Typ | Välj den typ av bildtext som du använder.<br>**Underrubrik** - Bildtexten som visas med videon som översätter eller transkriberar dialogrutan.<br>**Bildtext** - Bildtexten innehåller även bakgrundsljud, talardifferentiering och annan relevant information, tillsammans med översättningen eller transkriberingen av dialogen, som gör innehållet mer tillgängligt för personer som är döva eller hörselskadade. |
+     | Etikett | Texten som visas som bildtextens namn i **[!UICONTROL Select audio or caption]** popup-lista i mediespelaren. Etiketten är det som kunden ser och som motsvarar ett underrubrik- eller bildtextspår. Till exempel: `English (CC)`. |
 
      Om det behövs kan du ändra eller redigera bildtextens metadata senare. När videon publiceras återspeglas dessa uppgifter på offentliga URL:er i publicerade videor.
 
@@ -704,7 +704,7 @@ Du kan följa livscykelstatusen för alla beskrivnings- eller ljudspårsfiler so
 | Misslyckades | Ett &quot;Misslyckat&quot;-läge betyder att bearbetningen av en beskrivnings- eller ljudspårsfil inte slutfördes. Ta bort beskrivnings- eller ljudspårsfilen och överför igen. |
 | Opublicerad | När en publicerad primär video avpubliceras explicit avpubliceras även eventuella beskrivnings- eller ljudspårsfiler som du har lagt till i videon. |
 
-![Statuskolumnen är markerad för bildtexter och ljudspår.](/help/assets/dynamic-media/assets/msma-lifecycle-status.png)*Livscykelstatus för varje överförd bildtext och ljudspårfil.*
+![Statuskolumnen är markerad för bildtexter och ljudspår.](/help/assets/dynamic-media/assets/msma-lifecycle-status2.png)*Livscykelstatus för varje överförd bildtext och ljudspårfil.*
 
 ### Ange standardljud för en video som har flera ljudspår
 
@@ -729,7 +729,7 @@ Alla överförda ljudspårsfiler kan dock anges som standardljud som spelas upp 
 1. Välj **[!UICONTROL Set as default]**.
 I **Ange som standard** väljer **[!UICONTROL Replace]**.
 
-   ![Rubriken Ljudspår med ett valt namn på ljudspårsfilen och markerad&quot;Ange som standard&quot;-knapp.](/help/assets/dynamic-media/assets/msma-defaultaudiotrack.png)*Ställa in standardljudspåret för en video.*
+   ![Rubriken Ljudspår med ett valt namn på ljudspårsfilen och markerad&quot;Ange som standard&quot;-knapp.](/help/assets/dynamic-media/assets/msma-defaultaudiotrack2.png)*Ställa in standardljudspåret för en video.*
 
 1. I det övre högra hörnet väljer du **[!UICONTROL Save & Close]**.
 1. Publicera videon. Se [Publicera resurser](publishing-dynamicmedia-assets.md).
