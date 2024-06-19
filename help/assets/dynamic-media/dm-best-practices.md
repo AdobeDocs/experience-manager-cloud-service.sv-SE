@@ -10,7 +10,8 @@ role: User, Admin
 mini-toc-levels: 4
 hide: false
 hidefromtoc: false
-source-git-commit: c24b017e60363b3b6d79105122bdbaab138c701d
+exl-id: 39e491bb-367d-4c72-b4ca-aab38d513ac5
+source-git-commit: 3375ffbb18c312e5df0050050ae16d75a12243e6
 workflow-type: tm+mt
 source-wordcount: '3574'
 ht-degree: 0%
@@ -142,7 +143,6 @@ Använd beskrivande filnamn som återspeglar bildinnehållet. Exempel:
   Om du gör det blir det lättare för sökmotorer att förstå bildkontexten och det blir enklare att välja sökmotoroptimering. Google föredrar bindestreck framför understreck och blanksteg i ett filnamn. Undvik också att sammanfoga ord i ett filnamn.
 * **Anpassad domän:**
 Implementera en anpassad domän som innehåller ert företags- eller varumärkesnamn för att förstärka varumärkesigenkänningen och förtroendet. Exempel:
-
    * use `http://images.mycompany.com/is/image/companyname/`
    * *undvik* `https://s7d1.scene7.com/is/image/folder/AdobeStock_28563982`
 * **Sökvänlig mappstruktur:**
@@ -351,4 +351,3 @@ För att garantera det bästa webboptimerade formatet kan du lita på att Smart 
 Genom att förlita dig på Smart Imaging kan du se till att dina bilder levereras på ett så effektivt sätt som möjligt, skräddarsytt efter varje användares webbläsarmiljö. Den här metoden förenklar processen och kan leda till bättre prestanda i fråga om bildinläsningstider och övergripande användarupplevelse.
 
 Vill du veta mer? Gå till [Smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md).
-
