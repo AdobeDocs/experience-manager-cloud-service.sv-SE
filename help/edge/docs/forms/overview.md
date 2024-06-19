@@ -4,7 +4,7 @@ description: AEM Forms Edge Delivery Services som tagits fram för bästa presta
 feature: Edge Delivery Services
 exl-id: ecea1e05-d36b-4d63-af9d-c69dafd2f94f
 role: Admin, Architect, Developer
-source-git-commit: 8d5d8910a906e2adf17fa9c75f17634602c2e0b9
+source-git-commit: f69336073addb106cde01d72c921f3b98ff6337a
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 0%
@@ -17,7 +17,7 @@ AEM Forms Edge Delivery Services är en sammanslagen uppsättning tjänster som 
 
 Med de här tjänsterna kan du:
 
-* **Skapa registreringsupplevelser med valfria verktyg:** Öka redigeringseffektiviteten genom att frikoppla innehållskällor. Nu kan du använda både dokumentbaserad redigering (Microsoft SharePoint eller Google Drive) och AEM (Adaptiv Forms Editor). Du kan arbeta med flera innehållskällor på samma formulärwebbplats och använda redigeringsverktyg som Microsoft Excel, Google Sheets eller Adaptiv Forms Editor.
+* **Skapa registreringsupplevelser med valfria verktyg:** Öka redigeringseffektiviteten genom att frikoppla innehållskällor. Nu kan du använda både dokumentbaserad redigering (Microsoft SharePoint eller Google Drive) och WYSIWYG-redigering (Adaptiv Forms Editor). Du kan arbeta med flera innehållskällor på samma formulärwebbplats och använda redigeringsverktyg som Microsoft Excel, Google Sheets eller Adaptiv Forms Editor.
 
 * **Leverera enastående digitala registreringsupplevelser:** Leverera digitala registreringsupplevelser som läses in och återges snabbt och kontinuerligt med övervakning av formulärens prestanda med hjälp av RUM (Real Use Monitoring). Snabbare inläsningstider och optimerad användarupplevelse bidrar till att fler formulär fylls i och konverteras.
 
@@ -25,13 +25,13 @@ Med de här tjänsterna kan du:
 
 ## Översikt över AEM Forms-Edge Delivery Services {#edge-overview}
 
-Med AEM Forms Edge Delivery Services får du stor flexibilitet när det gäller hur du skapar formulär på din webbplats. Du kan skapa innehåll och formulär med [AEM](/help/forms/creating-adaptive-form-core-components.md) och [Dokumentbaserad redigering](/help/edge/docs/forms/create-forms.md). AEM Forms Edge Delivery Services innehåller ett blankettblock som kallas [Adaptivt Forms-block](/help/edge/docs/forms/create-forms.md) för att lägga till ett formulär på din Edge Delivery Services webbplats.
+Med AEM Forms Edge Delivery Services får du stor flexibilitet när det gäller hur du skapar formulär på din webbplats. Du kan skapa innehåll och formulär med [WYSIWYG-redigering](/help/forms/creating-adaptive-form-core-components.md) och [Dokumentbaserad redigering](/help/edge/docs/forms/create-forms.md). AEM Forms Edge Delivery Services innehåller ett blankettblock som kallas [Adaptivt Forms-block](/help/edge/docs/forms/create-forms.md) för att lägga till ett formulär på din Edge Delivery Services webbplats.
 
 Du kan till exempel skapa formulär direkt i Microsoft Excel eller Google Sheets och dessa kalkylblad omvandlas till formulär för webbplatsen. Alla nya formulär- och formulärinnehåll, till exempel ett nytt formulärfält, är omedelbart tillgängliga på webbplatsen utan att något nytt behöver göras.
 
-Följande diagram visar hur du kan redigera formulär i Microsoft Excel eller Google Sheets (dokumentbaserad redigering) och publicera på Edge Delivery Services. Den visar också den AEM publiceringsmetoden med Adaptive Forms Editor (AEM Authoring).
+Följande diagram visar hur du kan redigera formulär i Microsoft Excel eller Google Sheets (dokumentbaserad redigering) och publicera på Edge Delivery Services. Den visar också den AEM publiceringsmetoden med Adaptive Forms Editor (WYSIWYG Authoring).
 
-![Publicera till Edge Delivery Services och AEM](/help/edge/assets/AEM-forms-with-EDS-publishing.png)
+![Publicera till Edge Delivery Services och AEM](/help/edge/docs/forms/assets/AEM-forms-with-EDS-publishing.png)
 
 AEM Forms-Edge Delivery Services använder GitHub så att kunder kan hantera och driftsätta kod direkt från sina GitHub-databaser. Du kan till exempel skriva formulär i antingen [Google Sheets](/help/edge/docs/forms/create-forms.md) eller [Microsoft Excel](/help/edge/docs/forms/create-forms.md) och formulärkomponenterna kan utvecklas med CSS och JavaScript i en GitHub-databas.
 
@@ -39,16 +39,16 @@ När formulären är klara kan du använda [AEM Sidekick](/help/edge/docs/forms/
 
 ![Installera AEM Sidekick](/help/edge/assets/aem-sidekick-preview-publish-forms.png)
 
-Välj mellan [Dokumentbaserad redigering](#document-based-authoring-features) och [AEM](#aem-authoring-features) beroende på dina specifika krav:
+Välj mellan [Dokumentbaserad redigering](#document-based-authoring-features) och [WYSIWYG-redigering](#wysiwyg-authoring-features) beroende på dina specifika krav:
 
 * För enkla formulär som bara samlar in grundläggande information med ett fåtal fält (t.ex. kontaktformulär, leadgenereringsformulär eller formulär för serviceförfrågningar) och där du behöver snabb dataanslutning via ett kalkylblad, [Dokumentbaserad redigering](#document-based-authoring-features) är en bra passform. Du kan skapa dessa formulär på samma sätt som du skapar dokument i Google Sheets eller Microsoft Excel.
 
-* För komplexa formulär, som formulär som kräver flera paneler, komplexa regler och logiska funktioner, datamanipulering, integrering med externa system eller smidiga arbetsflöden med hjälp av AEM funktioner, [AEM](#aem-authoring-features) är ett bättre alternativ.
+* För komplexa formulär, som formulär som kräver flera paneler, komplexa regler och logiska funktioner, datamanipulering, integrering med externa system eller smidiga arbetsflöden med hjälp av AEM funktioner, [WYSIWYG-redigering](#wysiwyg-authoring-features) är ett bättre alternativ.
 
 
-### Viktiga funktioner för dokumentbaserad redigering och AEM
+### Viktiga funktioner för dokumentbaserad redigering och WYSIWYG-redigering
 
-Dokumentbaserad redigering har en grundläggande uppsättning funktioner och AEM redigering ger möjlighet att skapa mer komplexa och interaktiva blanketter. De viktigaste funktionerna för både dokumentbaserad redigering och AEM:
+Dokumentbaserad redigering har en grundläggande uppsättning funktioner och WYSIWYG-redigering ger tillgång till fler funktioner utöver den dokumentbaserade redigeringen, vilket gör att du kan skapa mer komplexa och interaktiva formulär. De viktigaste funktionerna för både dokumentbaserad redigering och WYSIWYG-redigering är:
 
 #### Dokumentbaserade redigeringsfunktioner
 
@@ -63,9 +63,9 @@ Med dokumentbaserad redigering kan du skapa formulär med välbekanta verktyg so
 * Skicka formulärdata direkt till Microsoft Excel- eller Google-blad eller e-postadresser.
 * Övervaka formulärens prestanda med hjälp av övervakning av användning i realtid (RUM)
 
-#### AEM
+#### WYSIWYG-funktioner
 
-AEM Authoring har ett WYSIWYG-gränssnitt (Adaptive Forms Editor) för att skapa formulär och har alla funktioner som finns i dokumentbaserad redigering, plus en mängd andra funktioner:
+WYSIWYG Authoring har ett WYSIWYG-gränssnitt (Adaptive Forms Editor) för att skapa formulär och har alla funktioner som finns i Document-based Authoring, plus en mängd andra funktioner:
 
 * Avancerad regelredigerare för avancerad logik.
 * Utbyggbarhet på serversidan för anpassade funktioner.
@@ -77,20 +77,20 @@ AEM Authoring har ett WYSIWYG-gränssnitt (Adaptive Forms Editor) för att skapa
 * Form Data Model (FDM) för att definiera datastrukturen och interaktionen med olika datakällor.
 * Möjlighet att välja bland flera olika åtgärder för att skicka in formulär, inklusive att skicka data till Microsoft SharePoint, Microsoft OneDrive, Adobe Workfront Fusion, Salesforce, Microsoft Dynamics, många fler datakällor.
 
-I praktiken [AEM](/help/forms/creating-adaptive-form-core-components.md) bygger på grunden för [Dokumentbaserad redigering](/help/edge/docs/forms/create-forms.md), med en mer avancerad verktygslåda för att skapa och hantera komplexa formulär.
+I praktiken [WYSIWYG-redigering](/help/forms/creating-adaptive-form-core-components.md) bygger på grunden för [Dokumentbaserad redigering](/help/edge/docs/forms/create-forms.md), med en mer avancerad verktygslåda för att skapa och hantera komplexa formulär.
 
 >[!NOTE]
 >
 >
-> Funktionen AEM kan användas i ett program som är tidigt för att antas. Om du är intresserad kan du skicka ett snabbt e-postmeddelande från din arbetsadress till aem-forms-ea@adobe.com och begära åtkomst till funktionen.
+> WYSIWYG-redigeringsfunktionen är tillgänglig i ett program som tagits i bruk tidigt. Om du är intresserad kan du skicka ett snabbt e-postmeddelande från din arbetsadress till aem-forms-ea@adobe.com och begära åtkomst till funktionen.
 
 ### AEM Forms-Edge Delivery Services: Skapa, publicera och skicka in Forms
 
-I följande diagram illustreras hur man skapar, publicerar och skickar in blanketter med dokumentbaserad redigering och AEM.
+I följande diagram illustreras hur man skapar, publicerar och skickar in blanketter med hjälp av dokumentbaserad redigering och WYSIWYG-redigering.
 
 ![Dokumentbaserad redigering ](/help/edge/assets/document-based-authoring-workflow.png)
 
-![AEM](/help/edge/assets/aem-authoring-workflow.png)
+![WYSIWYG-redigering](/help/edge/assets/wysiwyg-authoring-workflow.png)
 
 ## Börja skapa formulär
 
