@@ -4,7 +4,7 @@ description: Maven-projekt på Adobe Experience Manager as a Cloud Service kräv
 exl-id: dec08410-d109-493d-bf9d-90e5556d18f0
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 520ab0229b4f00a1de981209bf26059b0d00c3da
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 0%
@@ -164,7 +164,7 @@ Till exempel:
 + Kodpaket A distribuerar till `/apps/a`
 + Kodpaket B distribueras till `/apps/a/b`
 
-Om ett beroende på paketnivå inte har etablerats från kodpaket B i kodpaket A, kan kodpaket B distribueras först i `/apps/a`. Därefter följer kodpaketet B, som distribueras till `/apps/a`. Resultatet blir att den tidigare installerade filen tas bort `/apps/a/b`.
+Om ett beroende på paketnivå inte har etablerats från kodpaket B i kodpaket A, kan kodpaket B distribueras först i `/apps/a`. Om den sedan följs av kodpaket A, som distribueras till `/apps/a`, resulterar det i att den tidigare installerade versionen tas bort `/apps/a/b`.
 
 I detta fall:
 

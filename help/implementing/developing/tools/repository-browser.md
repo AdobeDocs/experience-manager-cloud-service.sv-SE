@@ -6,9 +6,9 @@ seo-description: The repository browser provides a read-only view into the repos
 exl-id: 22473a97-8f7b-4014-b885-1233116aeda6
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 9d1b51b465a148551de93f8180b056b8e7752db5
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '871'
 ht-degree: 0%
 
 ---
@@ -33,15 +33,13 @@ Tillgänglig från [AEM as a Cloud Service Developer Console](/help/implementing
 
 Följande villkor måste vara uppfyllda för att du ska få tillgång till AEM as a Cloud Service Developer Console eller Databaswebbläsaren
 
-Så här kommer du åt AEM as a Cloud Service Developer Console:
+Mer information om AEM as a Cloud Service utvecklarkonsolen finns i [Åtkomst till Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console#developer-console-access).
 
-* För produktionsprogram måste användarna ha **Cloud Manager - Utvecklarroll** i ADOBE ADMIN CONSOLE
-* För sandlådeprogram är den tillgänglig för alla användare med en produktprofil som ger dem tillgång till AEM as a Cloud Service.
+För att komma åt Databasläsaren är kraven samma som för den AEM as a Cloud Service utvecklarkonsolen (anges ovan). Så här visar du innehållet i Databasläsaren för en viss instans:
 
-Så här öppnar du Databasläsaren:
+* Författarinstanser: Användare med produktprofilen AEM användare för **Författarinstans** kan visa databasens webbläsare med minimal läsåtkomst. Användarens behörigheter respekteras när användaren bläddrar i databasen. Användare med AEM administratörsproduktprofil kan visa databaswebbläsaren med fullständig läsåtkomst.
 
-* Användarna måste ha **Cloud Manager - utvecklare** Roll i den AEM as a Cloud Service utvecklarkonsolen för att visa författarinstanser och publiceringsinstanser.
-* Dessutom kan användare med AEM användarprofil visa databaswebbläsaren med minimal läsåtkomst. Användarens behörigheter respekteras när de bläddrar i databasen. Användare med AEM administratörsproduktprofil kan visa databaswebbläsaren med fullständig läsåtkomst.
+* Publiceringsinstanser: Användare med produktprofilen AEM användare för **Publicera instans** kan visa databasens webbläsare med minimal läsåtkomst. Om produktprofilen inte anges kommer användarna att navigera som anonyma användare och vissa sökvägar visas inte på grund av begränsad behörighet.
 
 Mer information om hur du ställer in användarbehörigheter finns i [Dokumentation för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html).
 
