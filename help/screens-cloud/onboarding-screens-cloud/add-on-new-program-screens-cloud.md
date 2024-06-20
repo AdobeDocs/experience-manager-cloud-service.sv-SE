@@ -2,7 +2,9 @@
 title: Lägga till skärmar i ett nytt program i Cloud Manager
 description: Lär dig hur du lägger till ett skärmstillägg i ett nytt program i Cloud Manager för skärmar as a Cloud Service.
 exl-id: 36d1e1e9-5272-4138-9e0d-8476edc729f0
-source-git-commit: a77e5dc4273736b969e9a4a62fcac75664495ee6
+feature: Screens Deployments
+role: Admin, Developer, User
+source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
 workflow-type: tm+mt
 source-wordcount: '288'
 ht-degree: 1%

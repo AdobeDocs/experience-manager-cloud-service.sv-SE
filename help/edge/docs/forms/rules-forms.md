@@ -3,7 +3,8 @@ title: Använd regler för att lägga till dynamiskt beteende i ett formulär
 description: AEM Forms Edge Delivery Services som tagits fram för bästa prestanda och som gör det möjligt att förutse framtiden för smidig datainsamling och användarengagemang. Använd regler för att lägga till dynamiskt beteende i formulären.
 feature: Edge Delivery Services
 exl-id: 58042016-e655-446f-a2bf-83f1811525e3
-source-git-commit: 2affe155b285986128487043fcc4f2938fc15842
+role: Admin, Architect, Developer
+source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
 workflow-type: tm+mt
 source-wordcount: '2216'
 ht-degree: 0%

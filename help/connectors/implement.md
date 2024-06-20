@@ -2,7 +2,9 @@
 title: Implementera en AEM Connector
 description: Lär dig mer om kopplingar, vad de kan göra och hur du implementerar dessa värdefulla verktyg i Experience Manager.
 exl-id: 70024424-8c52-493e-bbc9-03d238b8a5f5
-source-git-commit: 07db10c4ee9cced7b6a697fe4f41c99eaba6a39f
+feature: Operations
+role: Admin
+source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
 workflow-type: tm+mt
 source-wordcount: '935'
 ht-degree: 7%
@@ -15,7 +17,7 @@ Implementera en AEM Connector
 
 Nedan finns användbara referenser för att bygga [AEM-kopplingar](https://www.adobe.io/apis/experiencecloud/aem/aemconnectors.html) och de bör läsas tillsammans med riktlinjerna för hur kopplingar [skickas in](submit.md) och [underhålls](maintain.md).
 
-En utvecklarlicens för AEM kan fås via [Adobe Exchange Program](https://partners.adobe.com/exchangeprogram/experiencecloud).
+En utvecklarlicens för AEM kan fås via [Adobe Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud).
 
 Vanliga integreringsmönster
 ---------------------------
@@ -47,7 +49,7 @@ Community-resurser
 Förutom den statiska dokumentationen ovan erbjuder Adobe och AEM resurser för att få ut en kontakt på marknaden:
 
 * The Adobe Community&#39;s [AEM](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html) är en aktiv webbplats där dina kollegor ställer och svarar på frågor
-* Ytterligare tekniska resurser för Adobe finns tillgängliga på vissa partnernivåer. Läs mer om [Adobe Exchange Program](https://partners.adobe.com/exchangeprogram/experiencecloud).
+* Ytterligare tekniska resurser för Adobe finns tillgängliga på vissa partnernivåer. Läs mer om [Adobe Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud).
 * Om er organisation vill ha hjälp med implementeringen kan ni överväga Adobes [Professional Services](https://www.adobe.com/marketing-cloud/service-support/professional-consulting-training.html)-team eller visa en lista över Adobes partners över hela världen i [Solution Partner Finder](https://solutionpartners.adobe.com/home/partnerFinder.html)
 
 Strukturregler för paket

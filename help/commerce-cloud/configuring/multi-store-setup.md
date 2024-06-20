@@ -1,5 +1,5 @@
 ---
-title: Inställningar för Commerce Multi-Store
+title: Installation av Commerce Multi-Store
 description: Lär dig att mappa olika butiksvyer från Adobe Commerce till Adobe Experience Manager. Detta gör att projekt kan stödja flerspråkiga och flerspråkiga användningsområden.
 sub-product: Commerce
 version: Cloud Service
@@ -10,14 +10,15 @@ feature: Commerce Integration Framework
 kt: 3046
 thumbnail: 28952.jpg
 exl-id: 4385c9e5-2b25-4f95-952f-72349431cf94
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+role: Admin
+source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
 
 ---
 
-# Inställningar för Commerce Multi-Store {#multi-store}
+# Installation av Commerce Multi-Store {#multi-store}
 
 Adobe Experience Manager (AEM) CIF Core Components kan användas på flera AEM webbplatsstrukturer och den underliggande GraphQL-klientimplementeringen kan ansluta till olika Adobe Commerce-butiker/butiksvyer. Detta gör att projekt kan implementera komplexa flerbutiks-/flerplatsinställningar.
 
@@ -37,7 +38,7 @@ Så här ansluter du en AEM plats och AEM CIF kärnkomponenter till en dedikerad
 
 2. Kontrollera att anslutningen mellan AEM &amp; Adobe Commerce fungerar.
 
-3. Skapa en underordnad konfiguration för CIF-Cloud Servicens konfiguration enligt följande:
+3. Skapa en underordnad konfiguration för den CIF Cloud Servicen enligt följande steg:
 
    * Gå AEM till Verktyg > Allmänt > [Konfigurationsläsaren](/help/implementing/developing/introduction/configurations.md#using-configuration-browser)
    * Välj den baskonfiguration som du har skapat

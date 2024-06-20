@@ -3,7 +3,8 @@ title: Komma igång med AEM Forms Edge Delivery Service. Skapa ett formulär.
 description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery, dokumentbaserad framtagning = blixtsnabb och SEO-anpassade formulär för nöjdare användare och sökmotorer.
 feature: Edge Delivery Services
 exl-id: 0cf881a2-3784-45eb-afe8-3435e5e95cf4
-source-git-commit: 984ead39ef8c20f06ac63c88380323e403a08712
+role: Admin, Architect, Developer
+source-git-commit: f6a320b0f3960ae789559b837995986bf0a4bbad
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 0%

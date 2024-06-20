@@ -1,8 +1,10 @@
 ---
-title: AEM Commerce Content Author Resney
-description: Börja här för en guidad resa via AEM Commerce Authoring
+title: AEM Commerce Content Author Journey
+description: Börja här för en guidad resa genom AEM Commerce Authoring
 exl-id: 155a2534-746d-4237-b7e2-9212c36fac7f
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+feature: Commerce Integration Framework
+role: Admin
+source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 1%
@@ -11,13 +13,13 @@ ht-degree: 1%
 
 # AEM Content and Commerce Content Author Journey {#aem-commerce-author-journey}
 
-Börja här för en guidad resa AEM innehåll och handel för att lära dig hur du hanterar produktupplevelser.
+Börja här för en guidad resa genom AEM Content och Commerce där du får lära dig hur du hanterar produktupplevelser.
 
 ## Introduktion {#introduction}
 
-Den här guiden leder dig igenom de viktigaste AEM för innehåll och handel så att du när du är klar:
+Den här guiden leder dig igenom de viktigaste avsnitten AEM innehåll och Commerce så att du när du är klar:
 
-* Lär dig grunderna i AEM innehåll och handel
+* Lär dig grunderna om AEM och Commerce
 * Kom igång AEM grunderna CIF redigering
 * Skapa produktkatalogupplevelser med individuella mallar och innehåll
 * Hantera testade produktkataloger
@@ -33,7 +35,7 @@ Om du vill veta hur Adobe rekommenderar hur man löser webbplatsaffärsärenden 
 
 ## Målgrupp {#audience}
 
-Den här resan är avsedd för innehållsförfattaren i AEM Commerce. Den här resan innehåller krav, steg och tillvägagångssätt för att komma igång och hantera katalogsidor, mallar och fullständiga produktupplevelser.
+Den här resan är avsedd för den AEM Commerce-innehållsförfattaren. Den här resan innehåller krav, steg och tillvägagångssätt för att komma igång och hantera katalogsidor, mallar och fullständiga produktupplevelser.
 
 Information under den här resan kan vara användbar för andra personer, men viss information är överflödig för vissa roller. Stanna kvar och vänta på kommande resor som omfattar fler roller.
 
@@ -41,12 +43,12 @@ Information under den här resan kan vara användbar för andra personer, men vi
 
 Du kommer att utforska många ämnen under den här resan. I följande artiklar hittar du grundläggande kunskaper och länkar till detaljerad teknisk dokumentation.
 
-Även om du kan gå direkt till en viss del av resan bygger många koncept på en del i tidigare artiklar. Om du inte har använt AEM innehåll och handel tidigare rekommenderar Adobe att du börjar i början och gör sekventiellt framsteg.
+Även om du kan gå direkt till en viss del av resan bygger många koncept på en del i tidigare artiklar. Om du inte har använt AEM Innehåll och Commerce tidigare rekommenderar Adobe att du startar i början och gör en sekventiell förlopp.
 
 | # | Artikel | Beskrivning |
 |---|---|---|
-| 0 | AEM Content and Commerce Developer Trney | Det här dokumentet |
-| 1 | [Läs om AEM innehåll och handel](/help/commerce-cloud/introduction.md) | Lär dig mer om koncept och grunder AEM innehåll och handel. |
+| 0 | AEM Content and Commerce Developer Journey | Det här dokumentet |
+| 1 | [Läs om AEM och Commerce](/help/commerce-cloud/introduction.md) | Lär dig koncept och grunder om AEM och Commerce. |
 | 2 | [Komma igång med AEM CIF grunderna](getting-started.md) | Lär dig hur du får tillgång till och använder produktdata för dina användningsfall. |
 | 3 | [Hantera sidor och mallar för produktkataloger](catalog-templates.md) | Lär dig hur du skapar en typisk produktkatalogupplevelse. |
 | 4 | [Hantera testade produktkataloger](staged-catalog.md) | Lär dig hur du skapar en framtida produktkatalogupplevelse med testdata och AEM. |
@@ -54,4 +56,4 @@ Du kommer att utforska många ämnen under den här resan. I följande artiklar 
 
 ## What&#39;s Next {#what-is-next}
 
-Du är nu redo att komma igång med din AEM Content and Commerce Development-resa. Vi rekommenderar att du fortsätter till nästa del av resan och läser artikeln [Läs om AEM innehåll och handel](/help/commerce-cloud/introduction.md).
+Du är nu redo att komma igång med AEM Content and Commerce Development. Vi rekommenderar att du fortsätter till nästa del av resan och läser artikeln [Läs om AEM och Commerce](/help/commerce-cloud/introduction.md).

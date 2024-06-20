@@ -3,7 +3,9 @@ title: Introduktion och översikt
 description: Lär dig hur du använder och administrerar Experience Manager Content and Commerce as a Cloud Service.
 thumbnail: introducing-aem-commerce.jpg
 exl-id: 29410f76-a63f-4b0a-b817-2ed724ad1a3c
-source-git-commit: 07db10c4ee9cced7b6a697fe4f41c99eaba6a39f
+feature: Commerce Integration Framework
+role: Admin
+source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
 workflow-type: tm+mt
 source-wordcount: '853'
 ht-degree: 1%
@@ -13,13 +15,13 @@ ht-degree: 1%
 
 # Innehåll och handel {#content-commerce}
 
-Med Adobe Experience Manager innehåll och e-handel kan varumärken skalas och utvecklas snabbare för att särskilja handelsupplevelser och fånga upp ökade webbutgifter. AEM Content and Commerce kombinerar de engagerande, flerkanaliga och personaliserade upplevelserna i Experience Manager med valfritt antal handelslösningar för att ge alla delar av kundresan olika upplevelser, minska tiden till värde och öka konverteringsgraden.
+Med Adobe Experience Manager innehåll och e-handel kan varumärken skalas och utvecklas snabbare för att särskilja handelsupplevelser och fånga upp ökade webbutgifter. AEM Content och Commerce kombinerar de engagerande, flerkanaliga och personaliserade upplevelserna i Experience Manager med ett obegränsat antal e-handelslösningar för att ge alla delar av kundresan olika upplevelser, minska time to value och öka konverteringsgraden.
 
-## Så kan innehåll och handel hjälpa kunderna att bli framgångsrika {#successful}
+## Hur innehåll och Commerce hjälper kunderna att lyckas {#successful}
 
-Med allt högre förväntningar på onlinehandelsupplevelser har varumärkena press på sig att leverera differentierade upplevelser och mer innehåll snabbare. Att implementera en plattform för innehållshantering kräver ofta stora tids- och budgetinvesteringar i utveckling av grundläggande element, som anpassade komponenter och redigeringsverktyg, och medför kostnader för underhåll och uppgraderingar. Experience Manager Sites erbjuder Content and Commerce som en tilläggsmodul för Experience Manager as a Cloud Service som tillhandahåller körklara kärnkomponenter för e-handel, redigeringsverktyg och en referensbutik som snabbar upp idriftsättningen, möjliggör smidigt samarbete mellan team och driver konverteringsprocessen framåt.
+Med allt högre förväntningar på onlinehandelsupplevelser har varumärkena press på sig att leverera differentierade upplevelser och mer innehåll snabbare. Att implementera en plattform för innehållshantering kräver ofta stora tids- och budgetinvesteringar i utveckling av grundläggande element, som anpassade komponenter och redigeringsverktyg, och medför kostnader för underhåll och uppgraderingar. Experience Manager Sites erbjuder Content och Commerce som en tilläggsmodul för Experience Manager as a Cloud Service som innehåller färdiga e-handelskomponenter, redigeringsverktyg och en referensbutik som snabbar upp arbetet, möjliggör smidigt samarbete mellan team och driver konverteringsprocessen framåt.
 
-Varumärken kan integrera Experience Manager med Adobe Commerce, en del av Adobe Experience Cloud och valfri e-handelsmotor. Med Experience Manager Content and Commerce kan varumärken
+Varumärken kan integrera Experience Manager med Adobe Commerce, en del av Adobe Experience Cloud och valfri e-handelsmotor. Med Experience Manager Content och Commerce kan varumärken
 
 * Skala och förnya snabbare
 * Skräddarsy upplevelser och öka konverteringsgraden

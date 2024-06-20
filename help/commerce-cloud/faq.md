@@ -1,15 +1,17 @@
 ---
-title: AEM - Vanliga frågor om handelsintegrering med Commerce integration framework
-description: AEM - Vanliga frågor om handelsintegrering med Commerce integration framework
+title: AEM - Commerce-integrering med Commerce integration framework - frågor och svar
+description: AEM - Commerce-integrering med Commerce integration framework - frågor och svar
 exl-id: 0a946d98-22c7-445d-984a-9e09c306ce45
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+feature: Commerce Integration Framework
+role: Admin, Architect, User
+source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
 workflow-type: tm+mt
 source-wordcount: '963'
 ht-degree: 0%
 
 ---
 
-# AEM - Vanliga frågor om handelsintegrering med Commerce integration framework
+# AEM - Commerce-integrering med Commerce integration framework - frågor och svar
 
 ## 1. Används CIF GraphQL endast för e-handel eller kommer detta att vara tillgängligt för frågor som skapats AEM JCR?
 

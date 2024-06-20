@@ -2,10 +2,12 @@
 title: Hantera testade produktkataloger
 description: Lär dig hur du hanterar upplevelser i mellanlagrade produktkataloger.
 exl-id: 1db18818-b8e0-4127-8a65-dc3dea1f2927
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+feature: Commerce Integration Framework
+role: Admin
+source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 1%
+source-wordcount: '487'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +17,7 @@ Lär dig hur du hanterar upplevelser i mellanlagrade produktkataloger.
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om AEM- och handelsresan [Hantera sidor och mallar för produktkataloger](catalog-templates.md)lärde du dig att hantera och bygga produktkataloger baserat på mallar.
+I det föregående dokumentet om AEM och Commerce resa [Hantera sidor och mallar för produktkataloger](catalog-templates.md)lärde du dig att hantera och bygga produktkataloger baserat på mallar.
 
 Den här artikeln bygger på dessa grunder.
 
@@ -27,11 +29,11 @@ Det här dokumentet hjälper dig att förstå hur du hanterar produktkatalogsupp
     >
     >Den här funktionen är endast tillgänglig med Adobe Commerce eller Cloud Edition och tredjepartsanslutningar som stöder tokenbaserad autentisering. Mer information finns i [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/storefront/getting-started.html).
 
-Först ska vi se hur författare kan komma åt testade produktdata med CIF.
+Först ska vi se hur författare kan få åtkomst till testade produktdata med CIF.
 
 ## Arbeta med mellanlagrade produktdata {#staged-product-data}
 
-Ett sätt att få tillgång till testade produktdata är att använda produktcockpit. Öppna produktkatalogen genom att klicka på Commerce-ikonen på AEM huvudmeny. Detta ger er tillgång till liveproduktdata. Öppna filterfliken till vänster och expandera **STAGAD KATALOG**. Med hjälp av förhandsgranskningsdata kan du nu komma åt testproduktdata när som helst. Mellanlagrade data innehåller nya kategorier, produkter eller uppdaterade fält som pris.
+Ett sätt att få tillgång till testade produktdata är att använda produktcockpiten. Öppna produktkatalogen genom att klicka på ikonen Commerce i AEM. Detta ger er tillgång till liveproduktdata. Öppna filterfliken till vänster och expandera **STAGAD KATALOG**. Med hjälp av förhandsgranskningsdata kan du nu komma åt testproduktdata när som helst. Mellanlagrade data innehåller nya kategorier, produkter eller uppdaterade fält som pris.
 
 ![scen cockpit](assets/staged-cockpit.png)
 
@@ -51,7 +53,7 @@ Nu kan du bläddra i katalogen med mellanlagrade data. Om du öppnar en mellanla
 
 Med AEM Launches kan du skapa innehåll för mellanlagrade produktdata. Om du inte är bekant med Launches, följ dokumentationslänken under [Avsnittet Ytterligare resurser](#additional-resources). Startdatumet används sedan för att komma åt testproduktsdata.
 
-![start av scenen](assets/staged-launch.png)
+![stage launch](assets/staged-launch.png)
 
 Observera att väljarna respekterar startdatumet med den mellanlagrade indikatorn till höger.
 
@@ -64,7 +66,7 @@ Nu när du är klar med den här delen av resan bör du:
 * förstå begreppen för mellanlagrad produktkatalog och innehåll med Launches
 * kunna komma åt data i mellanlagrade produktkataloger via produktcockpit och redigerare
 
-Du är nu redo att hantera [produktupplevelser](product-experience-management.md). AEM Innehåll och handel har dock många ytterligare alternativ. Se vilka ytterligare resurser som finns i [Avsnittet Ytterligare resurser](#additional-resources) om du vill veta mer om de funktioner du såg under den här resan.
+Nu kan du hantera [produktupplevelser](product-experience-management.md). AEM och Commerce har dock många ytterligare alternativ. Se vilka ytterligare resurser som finns i [Avsnittet Ytterligare resurser](#additional-resources) om du vill veta mer om de funktioner du såg under den här resan.
 
 ## Ytterligare resurser {#additional-resources}
 

@@ -2,7 +2,9 @@
 title: Kantsidan innehåller
 description: Hanterad CDN i Adobe har nu stöd för Edge Side Includes (ESI), ett markeringsspråk för dynamisk sammanställning av webbinnehåll på edge-nivå.
 feature: Dispatcher
-source-git-commit: 8f9173e45dd802ecced21531dfa161890e4a8af1
+exl-id: 35093477-2788-4f69-80a9-899f43567cae
+role: Admin
+source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
 workflow-type: tm+mt
 source-wordcount: '541'
 ht-degree: 0%

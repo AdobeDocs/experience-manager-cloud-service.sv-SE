@@ -2,16 +2,18 @@
 title: Product Cockpit
 description: Lär dig hur du arbetar med Product Cockpit, som ger en enhetlig översikt över länkade produktkataloger och tillhörande innehåll.
 exl-id: 6dbf039c-e040-48f1-88f3-ebbd70cdf94d
-source-git-commit: ba0c1e13f311f48ac138f2c3ca582835a4a83bf6
+feature: Commerce Integration Framework
+role: Admin
+source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '433'
 ht-degree: 0%
 
 ---
 
 # Product Cockpit {#product-cockpit}
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 I Product Cockpit finns en enhetlig översikt över länkade produktkataloger och tillhörande innehåll. Allt associerat innehåll har länkar som snabbt kommer åt det från cockpit.
 
@@ -33,7 +35,7 @@ Aktivering av mellanlagrade katalogfunktioner kräver autentisering. Se [Komma i
 
 ## Öppnar produktdockan {#opening-product-cockpit}
 
-Det enklaste sättet att komma åt produktdockan är via menyn&quot;Handel&quot; AEM huvudmenyn. Det går också att använda Omnissearch (sök efter handel) eller att öppna `https://<yourAEMInstance>/commerce.html`.
+Det enklaste sättet att komma åt produktdockan är via Commerce-menyn AEM huvudmenyn. Du kan också använda Omnissearch (sök efter Commerce) eller öppna `https://<yourAEMInstance>/commerce.html`.
 
 ![AEM](../assets/aem-menu.png)
 
@@ -71,7 +73,7 @@ Som standard visas data i produktkatalogen i produktcockpiten. Om du använder&q
 
 Om du klickar på egenskapsikonen för en produkt eller kategori öppnas egenskapsvyn för det markerade objektet. Öppna egenskaper för en produktvariant är lika med öppna de huvudsakliga produktegenskaperna.
 
-### Flikar {#tabs}
+### Commerce Tabs {#tabs}
 
 På flikarna Allmänt och Variant visas fördefinierade handelsegenskaper som kommer från e-handelsservern. Denna information (inkl. varianter) är skrivskyddade data i AEM eftersom arkivsystemet är e-handelsserverdelen. Variantfliken visas bara för produkter med varianter och visar en lista med alla varianter.
 

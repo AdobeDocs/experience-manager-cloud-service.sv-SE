@@ -10,10 +10,11 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 314494c4-21a9-4494-9ecb-498c766cfde7
-source-git-commit: 7260649eaab303ba5bab55ccbe02395dc8159949
+role: Admin
+source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
 workflow-type: tm+mt
-source-wordcount: '2172'
-ht-degree: 1%
+source-wordcount: '2059'
+ht-degree: 0%
 
 ---
 
@@ -21,23 +22,23 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> Sökmotoroptimering (SEO) har blivit en viktig fråga för många marknadsförare. Därför måste SEO-frågor behandlas i många projekt på Adobe Experience Manager-as a Cloud Service (AEM). Se [Bästa praxis för hantering av SEO och URL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html) för ytterligare information.
+> Sökmotoroptimering (SEO) har blivit en viktig fråga för många marknadsförare. Därför måste SEO-frågor behandlas i många projekt på Adobe Experience Manager-as a Cloud Service (AEM). Se [Bästa praxis för hantering av SEO och URL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html) om du vill ha mer information.
 
-[AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) innehåller avancerade konfigurationer för att anpassa URL:er för produkt- och kategorisidor. Många implementeringar anpassar dessa URL:er för sökmotoroptimering (SEO). Följande video visar hur du konfigurerar `UrlProvider` Service och funktioner i [Samlingsmappning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) för att anpassa URL:er för produkt- och kategorisidor.
+[AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components) innehåller avancerade konfigurationer för att anpassa URL:er för produkt- och kategorisidor. Många implementeringar anpassar dessa URL:er för sökmotoroptimering (SEO). Följande video visar hur du konfigurerar `UrlProvider` Service och funktioner i [Samlingsmappning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) för att anpassa URL:er för produkt- och kategorisidor.
 
 >[!VIDEO](https://video.tv.adobe.com/v/34350/?quality=12)
 
 ## Konfiguration {#configuration}
 
-Så här konfigurerar du `UrlProvider` i enlighet med SEO:s krav och behov måste ett projekt tillhandahålla en OSGI-konfiguration för _CIF URL-providerkonfiguration_.
+Konfigurera `UrlProvider` i enlighet med SEO:s krav och behov måste ett projekt tillhandahålla en OSGI-konfiguration för _CIF URL-providerkonfiguration_.
 
 >[!NOTE]
 >
-> Sedan version 2.0.0 av AEM CIF Core Components finns det bara fördefinierade URL-format i URL-providerkonfigurationen, i stället för de format som är tillgängliga i 1.x-versioner. Dessutom har användningen av väljare för att skicka data i URL-adresser ersatts med suffix.
+> Sedan version 2.0.0 av AEM CIF Core Components finns det bara fördefinierade URL-format i URL-providerkonfigurationen, i stället för de format som kan konfigureras fritt från 1.x-versioner. Dessutom har användningen av väljare för att skicka data i URL-adresser ersatts med suffix.
 
 ### URL-format för produktsida {#product}
 
-Konfigurerar webbadresserna för produktsidorna och stöder följande alternativ:
+Konfigurerar URL:erna för produktsidorna och stöder följande alternativ:
 
 * `{{page}}.html/{{sku}}.html#{{variant_sku}}` (standard)
 * `{{page}}.html/{{sku}}/{{url_key}}.html#{{variant_sku}}`
@@ -76,21 +77,21 @@ Med exempeldata ovan ser en kategorisidas URL-adress formaterad med standardform
 
 >[!NOTE]
 > 
-> The `url_path` är en sammanfogning av `url_keys` för en produkts eller kategoris överordnade och produkten eller kategorin `url_key` avgränsad med `/` snedstreck. Varje `url_key` betraktas som unik i en viss butik.
+> The `url_path` är en kombination av `url_keys` för en produkts eller kategoris överordnade och produkten eller kategorin `url_key` avgränsad med `/` snedstreck. Varje `url_key` betraktas som unik i en viss butik.
 
 ### Butiksspecifik konfiguration {#store-specific-urlformats}
 
 De systemomfattande kategori- och produktsidans URL-format som anges av _CIF URL-providerkonfiguration_ kan ändras för varje butik.
 
-I CIF-konfigurationen kan en redigerare välja ett alternativt sidformat för produkt eller kategori. Om inget har valts där återgår implementeringen till den systemomfattande konfigurationen.
+I CIF Configuration kan en redigerare välja ett alternativ produkt- eller kategorisidans URL-format. Om inget har valts där återgår implementeringen till den systemomfattande konfigurationen.
 
 Om du ändrar URL-formatet för en aktiv webbplats kan det påverka webbplatsens organiska trafik negativt. Se [Bästa praxis](#best-practices) nedan och planera noggrant ändringen av URL-formatet i förväg.
 
-![URL-format i CIF-konfiguration](assets/store-specific-url-formats.png)
+![URL-format i CIF](assets/store-specific-url-formats.png)
 
 >[!NOTE]
 >
-> Den butiksspecifika konfigurationen av URL-formaten kräver [CIF Core Components 2.6.0](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.6.0) och den senaste versionen av tillägget Adobe Experience Manager Content and Commerce.
+> Den butiksspecifika konfigurationen av URL-formaten kräver [CIF Core Components 2.6.0](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.6.0) och den senaste versionen av Adobe Experience Manager Content och Commerce.
 
 ## Kategorimedvetna produktsid-URL:er {#context-aware-pdps}
 
@@ -107,7 +108,7 @@ Det här schemat väljer `url_path` med de flesta överordnade, baserat på anta
 
 Men när en kund går från en kategorisida till en produktsida, eller från en produktsida till en annan relaterad produktsida i samma kategori, är det värt att behålla den aktuella kategorikontexten. I det här fallet `url_path` markeringen bör föredra alternativ som finns inom den aktuella kategorikontexten framför _kanoniskt_ markeringen som beskrivs ovan.
 
-Den här funktionen måste aktiveras i _CIF URL-providerkonfiguration_. Om det här alternativet är aktiverat får markeringen fler alternativ när
+Den här funktionen måste vara aktiverad i _CIF URL-providerkonfiguration_. Om det här alternativet är aktiverat får markeringen fler alternativ när
 
 * de matchar delar av en viss kategori `url_path` från början (luddig prefixmatchning)
 * eller de matchar en viss kategori `url_key` var som helst (exakt partiell matchning)
@@ -186,7 +187,7 @@ Specifika produktsidor väljs antingen enligt produktens SKU eller kategori. Den
 
 The `UrlProvider` är förkonfigurerat för att generera djupa länkar till specifika kategorier och produktsidor på instanser på författarnivå. Den här funktionen är användbar för redigerare som bläddrar på en webbplats i förhandsgranskningsläge, navigerar till en viss produkt- eller kategorisida och växlar tillbaka till redigeringsläget för att redigera sidan.
 
-Vid publiceringsskiktsinstanser bör katalogsidans URL-adresser hållas stabila så att de inte förlorar vinster på t.ex. sökmotorrankningar. På grund av den publiceringsnivån återges inte djuplänkar till specifika katalogsidor som standard. Om du vill ändra det här beteendet _CIF URL Provider Specific Page Strategy_ kan konfigureras för att alltid generera särskilda sidadresser.
+Vid publiceringsskiktsinstanser bör katalogsidans URL-adresser hållas stabila så att de inte förlorar vinster på t.ex. sökmotorrankningar. På grund av den publiceringsnivån återges inte djuplänkar till specifika katalogsidor som standard. Om du vill ändra detta beteende _CIF URL Provider Specific Page Strategy_ kan konfigureras för att alltid generera särskilda sidadresser.
 
 ### Flera katalogsidor {#multiple-product-pages}
 
@@ -214,7 +215,7 @@ Förutom `UrlProvider`går det också att konfigurera [Samlingsmappningar](https
 
 ### Kombinera med AEM Dispatcher {#dispatcher}
 
-URL-omskrivningar kan också göras med AEM Dispatcher HTTP-server med `mod_rewrite` -modul. The [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) innehåller en referens AEM Dispatcher-konfiguration som redan innehåller grundläggande [skriv om regler](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/dispatcher.cloud) för den genererade storleken.
+URL-omskrivningar kan också göras med AEM Dispatcher HTTP-server med `mod_rewrite` -modul. The [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) innehåller en referens AEM Dispatcher-konfiguration som redan innehåller grundläggande [skriv om regler](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/dispatcher.cloud) för den genererade storleken.
 
 ## Bästa praxis {#best-practices}
 
@@ -228,13 +229,13 @@ CIF Core Components använder SKU:n som primär identifierare i alla komponenter
 
 _**Använd ett URL-format för produktsidan som innehåller kategorisammanhanget.**_
 
-Vissa funktioner i CIF URL-providern är bara tillgängliga när du använder produkts-URL-format, som kodar kategorisammanhanget, som kategorin `url_key` eller kategorin `url_path`. Även om dessa funktioner kanske inte behövs för en ny butik kan du minska migreringsansträngningarna i framtiden genom att använda något av dessa URL-format i början.
+Vissa funktioner i CIF URL-leverantör är bara tillgängliga när du använder produkts-URL-format som kodar kategorisammanhanget, till exempel kategorin `url_key` eller kategorin `url_path`. Även om dessa funktioner kanske inte behövs för en ny butik kan du minska migreringsansträngningarna i framtiden genom att använda något av de här URL-formaten i början.
 
 _**Balansera URL-längden och kodad information.**_
 
 Beroende på katalogstorleken, särskilt storleken och djupet på kategoriträdet, är det kanske inte rimligt att koda hela `url_path` av kategorier i URL:en. I så fall kan URL-längden minskas genom att endast kategorins `url_key` i stället. Den här metoden har stöd för de flesta funktioner som är tillgängliga när du använder kategorin `url_path`.
 
-Använd också [Samlingsmappningar](#sling-mapping) för att kombinera SKU:n med produkten `url_key`. I de flesta e-handelssystem följer SKU:n ett visst format och skiljer SKU:n från `url_key` för inkommande förfrågningar bör enkelt vara möjligt. Med detta i åtanke bör det vara möjligt att skriva om en produktsidas URL till `/p/{{category}}/{{sku}}-{{url_key}}.html`och en kategori-URL till `/c/{{url_key}}.html` respektive. The `/p` och `/c` -prefix är fortfarande nödvändigt för att skilja produkt- och kategorisidor från andra innehållssidor.
+Använd också [Samlingsmappningar](#sling-mapping) för att kombinera SKU med produkten `url_key`. I de flesta e-handelssystem har SKU ett visst format och skiljer SKU från `url_key` för inkommande förfrågningar bör enkelt vara möjligt. Med detta i åtanke bör det vara möjligt att skriva om en produktsidas URL till `/p/{{category}}/{{sku}}-{{url_key}}.html`och en kategori-URL till `/c/{{url_key}}.html` respektive. The `/p` och `/c` -prefix är fortfarande nödvändigt för att skilja produkt- och kategorisidor från andra innehållssidor.
 
 ### Migrera till ett nytt URL-format {#migrate-url-formats}
 
@@ -242,7 +243,7 @@ Många av de förvalda URL-formaten är på något sätt kompatibla med varandra
 
 Å andra sidan behöver sökmotorer tid för att rita om alla katalogsidor med det nya URL-formatet. För att stödja den här processen och även för att förbättra användarupplevelsen rekommenderar vi att du tillhandahåller omdirigeringar som vidarebefordrar användaren från de gamla URL:erna till de nya.
 
-Ett sätt att göra detta kan vara att ansluta en scenmiljö till e-handelsservern för produktion och konfigurera den så att den använder det nya URL-formatet. Efteråt får du [produktwebbplatskarta som genererats av CIF-produkter för webbplatskartor](../../overview/seo-and-url-management.md) för både scenen och produktionsmiljön, och använda dem för att skapa en [Omskrivningskarta för Apache httpd](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html). Denna omskrivningskarta kan sedan distribueras till Dispatcher tillsammans med utrullningen av det nya URL-formatet.
+Ett sätt att göra detta kan vara att ansluta en scenmiljö till e-handelsservern för produktion och konfigurera den så att den använder det nya URL-formatet. Efteråt får du [produktwebbplatskarta som genereras CIF webbplatskartor för produkter](../../overview/seo-and-url-management.md) för både scenen och produktionsmiljön, och använda dem för att skapa en [Apache httpd rewrite map](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html). Denna omskrivningskarta kan sedan distribueras till Dispatcher tillsammans med utrullningen av det nya URL-formatet.
 
 ## Exempel {#example}
 
@@ -255,5 +256,5 @@ The [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia) 
 ## Ytterligare resurser {#additional}
 
 * [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia)
-* [AEM](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/resource-mapping.html)
+* [AEM resursmappning](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/resource-mapping.html)
 * [Samlingsmappningar](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)

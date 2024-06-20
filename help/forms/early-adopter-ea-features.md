@@ -4,7 +4,9 @@ description: Aktuella funktioner för tidig användning av [!DNL Adobe Experienc
 Feature: Introduction
 Role: developer, user, author
 exl-id: 6b3f853c-2a6d-4544-9cad-8a3fc1e1f3b9
-source-git-commit: f1ab365377af7a327dddcb9228b1a2f8610d49de
+feature: Adaptive Forms
+role: Admin, Developer, User
+source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
 workflow-type: tm+mt
 source-wordcount: '1731'
 ht-degree: 0%

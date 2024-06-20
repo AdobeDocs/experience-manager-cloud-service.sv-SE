@@ -2,7 +2,9 @@
 title: Rensa CDN-cachen
 description: Lär dig hur du tar bort cachelagrade objekt från CDN-cachen i Adobe genom att konfigurera rensnings-API-token som sedan kan användas i API-anrop.
 feature: CDN Cache
-source-git-commit: bd8f534642848a656e5e54c425049c95cdb413f7
+exl-id: 4d091677-b817-4aeb-b131-7a5407ace3e0
+role: Admin
+source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%

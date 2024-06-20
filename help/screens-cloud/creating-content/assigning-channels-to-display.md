@@ -2,10 +2,12 @@
 title: Tilldela kanal till en skärm på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du tilldelar en kanal till en skärm på as a Cloud Service Skärmar.
 exl-id: ba001c18-7b05-4ae2-aa7f-9ebb320fedd0
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+feature: Authoring Screens
+role: Admin, Developer, User
+source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 1%
+source-wordcount: '444'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +17,7 @@ När projektkonfigurationen är klar måste du tilldela kanalen till en skärm f
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur du tilldelar en kanal till en bildskärm när bildskärmen är klar och du har lagt till innehåll i kanalen och publicerat den. Efter läsningen bör du förstå hur du tilldelar en kanal till en skärm från leverantören av skärmtjänster.
+Det här dokumentet hjälper dig att förstå hur du tilldelar en kanal till en bildskärm när bildskärmen är klar och du har lagt till innehåll i kanalen och publicerat den. När du har läst bör du kunna förstå hur du tilldelar en kanal till en skärm från leverantören av skärmtjänster.
 
 ## Förutsättningar {#prerequisites}
 
@@ -55,12 +57,12 @@ Följ stegen nedan för att tilldela en kanal till en skärm:
 
    Du kan ange följande alternativ:
 
-   * **Namn**: Namn på ditt återkommande schema.
+   * **Namn**: Namn på upprepningsschema.
    * **Upprepa**: Välj om schemat ska köras varje dag, varje vecka, varje månad eller varje år.
-   * **Starta**: Starttiden för ditt schema.
+   * **Starta**: Starttiden för schemat.
    * **End**: Sluttiden för ditt schema. Du kan ange den efter tid eller varaktighet.
    * **Tid**: Schemat avslutas vid en angiven tidpunkt.
-   * **Varaktighet**: Schemat körs för en viss tidsperiod i timmar eller minuter.
+   * **Varaktighet**: Schemat körs under en viss tid i timmar eller minuter.
 
 1. Klicka **Skapa**. Du ser att en kanal har tilldelats för den visningen, vilket visas i bilden nedan.
 

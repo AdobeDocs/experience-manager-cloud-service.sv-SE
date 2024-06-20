@@ -1,13 +1,15 @@
 ---
 title: Stöd för Git-undermodul
 description: Lär dig hur du kan använda Git-undermoduler för att sammanfoga innehåll från flera grenar i Git-databaser vid byggtillfället.
-source-git-commit: 34c96940f91d42d622d50e85e9a9d6f75f3fb483
+exl-id: fa5b0f49-4b87-4f39-ad50-7e62094d85f4
+feature: Cloud Manager, Developing
+role: Admin, Architect, Developer
+source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 0%
 
 ---
-
 
 # Stöd för Git-undermodul för Adobe-databaser {#git-submodule-support}
 

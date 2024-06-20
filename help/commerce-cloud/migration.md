@@ -1,10 +1,12 @@
 ---
-title: Migrering till tillägget AEM Commerce Integration Framework (CIF)
-description: Så här migrerar du till CIF-tillägget (AEM Commerce Integration Framework) från en gammal version
+title: Migrering till AEM Commerce integration framework (CIF)
+description: Så här migrerar du till AEM Commerce integration framework (CIF)-tillägget från en gammal version
 exl-id: 0db03a05-f527-4853-b52f-f113bce929cf
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+feature: Commerce Integration Framework
+role: Admin
+source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '470'
 ht-degree: 0%
 
 ---
@@ -13,24 +15,24 @@ ht-degree: 0%
 
 Den här guiden hjälper dig att identifiera de områden du behöver uppdatera för migrering av Experience Manager Cloud Service.
 
-## CIF-tillägg
+## CIF
 
-För Experience Manager as a Cloud Service är CIF-tillägget den enda handelslösningen som stöds för Adobe Commerce och tredjepartslösningar för e-handel. CIF-tillägget distribueras automatiskt till kunder på Experience Manager as a Cloud Service, och ingen manuell driftsättning behövs. Se [Komma igång med AEM Commerce as a Cloud Service](getting-started.md).
+För Experience Manager as a Cloud Service är CIF-tillägget den enda e-handelslösningen som stöds för Adobe Commerce och e-handelslösningar från tredje part. Tillägget CIF driftsätts automatiskt för kunder på Experience Manager as a Cloud Service; ingen manuell driftsättning behövs. Se [Komma igång med AEM Commerce as a Cloud Service](getting-started.md).
 
-Att stödja projekt som distribuerar CIF Adobe tillhandahåller [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components).
+För att stödja projekt som distribueras CIF Adobe tillhandahåller [AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components).
 
-CIF-tillägg finns för AEM 6.5 och via [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Den är kompatibel och har samma funktioner som CIF-tillägget för Experience Manager as a Cloud Service - inga justeringar krävs.
+CIF är även tillgängligt för AEM 6.5 via [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Den är kompatibel och innehåller samma funktioner som CIF för Experience Manager as a Cloud Service - inga justeringar krävs.
 
-Klassisk CIF med sina beroenden är inte längre tillgänglig. Kod som förlitar sig på den här CIF-versionen med `com.adobe.cq.commerce.api` Java-API:er måste justeras till CIF-tillägget och dess principer.
+Klassisk CIF med sina beroenden är inte längre tillgänglig. Kod som förlitar sig på den här CIF versionen med `com.adobe.cq.commerce.api` Java-API:er måste justeras till CIF och dess principer.
 
-Den tidigare tillgängliga CIF-kopplingen kan inte installeras längre. Kod som är beroende av den här kopplingen måste justeras till CIF-tillägget och dess principer.
+Den tidigare tillgängliga CIF-kopplingen kan inte installeras längre. Kod som är beroende av den här kopplingen måste justeras till CIF och dess principer.
 
 ## Projektstruktur
 
-Lär dig [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) och egenskaperna hos AEM as a Cloud Service. Anpassa projektinställningarna till den AEM as a Cloud Service layouten.
+Lär dig [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) och egenskaperna hos AEM as a Cloud Service. Anpassa projektinställningarna till AEM as a Cloud Service layout.
 Jämfört med AEM 6.5-distributioner finns det två huvudsakliga skillnader här:
 
-* GraphQL-klientens OSGI-paket **får inte** längre inkluderas i AEM, distribueras det via CIF-tillägget
+* GraphQL-klientens OSGI-paket **får inte** längre inkluderas i AEM projekt, det distribueras via CIF.
 * OSGI-konfigurationer för GraphQL-klient och Graphql Data Service **får inte** längre ingå i AEM
 
 >[!TIP]
@@ -39,7 +41,7 @@ Jämfört med AEM 6.5-distributioner finns det två huvudsakliga skillnader här
 
 ## Produktkatalog
 
-Import av produktkatalogdata stöds inte längre. Med CIF-tilläggsobjekt används produkt- och katalogbegäranden på begäran via realtidsanrop till en extern handelslösning. Gå till kapitlet Integrating för att lära dig mer om att integrera en e-handelslösning.
+Import av produktkatalogdata stöds inte längre. Med hjälp av CIF tilläggsobjekt kan produkt- och katalogförfrågningar on demand skickas via realtidsanrop till en extern e-handelslösning. Gå till kapitlet Integrating för att lära dig mer om att integrera en e-handelslösning.
 
 >[!TIP]
 >
@@ -47,7 +49,7 @@ Import av produktkatalogdata stöds inte längre. Med CIF-tilläggsobjekt använ
 
 ## Produktkatalogupplevelser med AEM rendering
 
-Om du använder katalogutkast med klassisk CIF måste du uppdatera arbetsflödet för produktkatalogen. Tillägget CIF återger nu produktkatalogupplevelser direkt med hjälp AEM katalogmallar. Du behöver inte längre replikera produktdata eller produktsidor.
+Om du använder katalogutkast med klassiska CIF måste du uppdatera produktkatalogarbetsflödet. Tillägget CIF renderar nu produktkataloger direkt med hjälp AEM katalogmallar. Du behöver inte längre replikera produktdata eller produktsidor.
 
 ## Data och shoppinginteraktion som inte är tillgängliga
 

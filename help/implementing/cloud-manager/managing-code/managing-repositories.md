@@ -2,7 +2,9 @@
 title: Hantera databaser i Cloud Manager
 description: Lär dig hur du skapar, visar och tar bort Git-databaser i Cloud Manager.
 exl-id: 6e1cf636-78f5-4270-9a21-38b4d5e5a0b0
-source-git-commit: e467c8058531441524fedd37e14b82b7fb255c69
+feature: Cloud Manager, Developing
+role: Admin, Architect, Developer
+source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 0%

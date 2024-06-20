@@ -3,7 +3,9 @@ title: AEM och Adobe Commerce Integration med Commerce integration framework
 description: AEM och Adobe Commerce är helintegrerade med Commerce integrationa frameworken (CIF). Med CIF kan AEM få åtkomst till en Adobe Commerce-instans och kommunicera med Adobe Commerce via GraphQL. AEM kan också använda produkt- och kategoriväljare och produktkonsolen för att bläddra bland produkt- och kategoridata som hämtas on demand från Adobe Commerce. Dessutom har CIF en färdig butik som kan snabba upp affärsprojekt.
 thumbnail: aem-magento-architecture.jpg
 exl-id: 110ceef5-2c35-4b81-8e89-26929c0da91b
-source-git-commit: 6d63328ca17a00e0369c57714409f3f448cb311f
+feature: Commerce Integration Framework
+role: Admin
+source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%
@@ -40,7 +42,7 @@ För komponenterna på klientsidan, som byggs med [Reagera](https://reactjs.org/
 
 ![AEM CIF Core Component Architecture](../assets/cif-component-architecture.jpg)
 
-[AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) följer mycket liknande designmönster och bästa praxis som [AEM WCM-kärnkomponenter](https://github.com/adobe/aem-core-wcm-components).
+[AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components) följer mycket liknande designmönster och bästa praxis som [AEM WCM-kärnkomponenter](https://github.com/adobe/aem-core-wcm-components).
 
 Affärslogik och serverdelskommunikation med Adobe Commerce för de AEM kärnkomponenterna implementeras i Sling Models. Om det är nödvändigt att anpassa den här logiken för att uppfylla projektspecifika krav kan delegeringsmönstret för segmenteringsmodeller användas.
 
@@ -52,5 +54,5 @@ I projekt kan AEM kärnkomponenter och anpassade projektkomponenter enkelt hämt
 
 ## Sök {#search}
 
-CIF har en färdig [Sökkärnkomponent](https://www.aemcomponents.dev/content/core-components-examples/library/commerce/search.html) som är en renderad sökupplevelse på serversidan baserad på [Commerce GraphQL API](https://developer.adobe.com/commerce/webapi/graphql/). Commerce-kunder har möjlighet att använda [Live Search](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/guide-overview.html?lang=en) i stället. Följ detta [link](/help/commerce-cloud/integrating/live-search-plp.md) om du vill veta mer om CIF - Live Search-integrering.
+CIF har en färdig [Sökkärnkomponent](https://www.aemcomponents.dev/content/core-components-examples/library/commerce/search.html) som är en renderad sökupplevelse på serversidan baserad på [COMMERCE GRAPHQL API](https://developer.adobe.com/commerce/webapi/graphql/). Commerce-kunder har möjlighet att använda [Live Search](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/guide-overview.html?lang=en) i stället. Följ detta [link](/help/commerce-cloud/integrating/live-search-plp.md) om du vill veta mer om CIF - Live Search-integrering.
 

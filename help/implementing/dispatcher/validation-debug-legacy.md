@@ -4,9 +4,10 @@ description: Validera och felsöka med Dispatcher Tools (äldre)
 feature: Dispatcher
 hidefromtoc: true
 exl-id: dc04d035-f002-42ef-9c2e-77602910c2ec
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+role: Admin
+source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
 workflow-type: tm+mt
-source-wordcount: '2329'
+source-wordcount: '2337'
 ht-degree: 0%
 
 ---
@@ -243,7 +244,7 @@ använda prefixet `etc/httpd` i arkivet.
 
 De aktiverade grupperna bör finnas i den angivna undermappen.
 
-**Filen som ingår (..) måste ha följande namn: ...**
+**Den inkluderade filen (..) måste ha följande namn: ...**
 
 Det finns två avsnitt i servergruppskonfigurationen som **måste** inkludera en specifik fil: `/renders` och `/allowedClients` i `/cache` -avsnitt. Dessa avsnitt måste se ut så här:
 
@@ -274,7 +275,7 @@ Det finns fyra avsnitt i servergruppskonfigurationen där du kan inkludera din e
 
 Du kan även inkludera **standard** version av dessa filer, vars namn föregås av ordet `default_`, till exempel `../filters/default_filters.any`.
 
-**Inkludera programsats på (..), utanför känd plats: ...**
+**Inkludera programsats vid (..), utanför känd plats: ...**
 
 Förutom de sex avsnitt som nämns i styckena ovan, får du inte använda `$include` följande skulle till exempel generera detta fel:
 
@@ -287,7 +288,7 @@ Förutom de sex avsnitt som nämns i styckena ovan, får du inte använda `$incl
 **Tillåtna klienter/återgivningar inkluderas inte från: ...**
 
 Det här felet genereras när du inte anger något &quot;include&quot; för `/renders` och `/allowedClients` i `/cache` -avsnitt. Se
-**filen som ingår (..) måste ha följande namn: ...** för mer information.
+**fil som ingår (..) måste ha följande namn: ...** för mer information.
 
 **Filtret får inte använda glob-mönster för att tillåta förfrågningar**
 
@@ -303,17 +304,17 @@ Den här programsatsen är avsedd att tillåta begäranden för `css` -filer, me
 
 **Den inkluderade filen (..) matchar inte någon känd fil**
 
-Det finns två typer av filer i din virtuella värdkonfiguration för Apache som kan anges enligt följande: skriver om och variabler.
+Det finns två typer av filer i din virtuella värdkonfiguration för Apache som kan anges som inkluderar: omskrivningar och variabler.
 De inkluderade filerna måste ha följande namn:
 
 | Typ | Inkludera filnamn |
 |-----------|---------------------------------|
 | Skriver om | `conf.d/rewrites/rewrite.rules` |
-| Variabler | `conf.d/variables/custom.vars` |
+| Variabel | `conf.d/variables/custom.vars` |
 
 >[!TIP]
 >
-Om du vill kunna inkludera fler filer på ett mycket mindre begränsat sätt kanske du vill växla till det flexibla Dispatcher-konfigurationsläget. Se [Validera och felsöka med Dispatcher Tools](/help/implementing/dispatcher/validation-debug.md) för mer information om flexibelt läge.
+>Om du vill kunna inkludera fler filer på ett mycket mindre begränsat sätt kanske du vill växla till det flexibla Dispatcher-konfigurationsläget. Se [Validera och felsöka med Dispatcher Tools](/help/implementing/dispatcher/validation-debug.md) för mer information om flexibelt läge.
 
 Du kan även inkludera **standard** version av omskrivningsreglerna, vars namn är `conf.d/rewrites/default_rewrite.rules`.
 Observera att det inte finns någon standardversion av variabelfilerna.
@@ -352,7 +353,7 @@ Undvik det här felet genom att kopiera och klistra in sökvägen från Utforska
 Den här fasen kontrollerar Apache-syntaxen genom att starta Docker i en bild. Docker måste installeras lokalt, men observera att AEM inte behöver köras.
 
 >[!NOTE]
-Windows-användare måste använda Windows 10 Professional eller andra distributioner som stöder Docker. Den här förutsättningen är nödvändig för att köra och felsöka Dispatcher på en lokal dator.
+>Windows-användare måste använda Windows 10 Professional eller andra distributioner som stöder Docker. Den här förutsättningen är nödvändig för att köra och felsöka Dispatcher på en lokal dator.
 
 Denna fas kan också köras oberoende av varandra `validator full -d out src/dispatcher`, som genererar en&quot;out&quot;-katalog som behövs för nästa kommando `bin/docker_run.sh out host.docker.internal:4503 8080`.
 
@@ -444,7 +445,7 @@ I Dispatcher-konfigurationen är samma systemvariabel tillgänglig. Om mer logik
 }
 ```
 
-När du testar konfigurationen lokalt kan du simulera olika miljötyper genom att skicka variabeln `DISP_RUN_MODE` till `docker_run.sh` skript direkt:
+När du testar konfigurationen lokalt kan du simulera olika miljötyper genom att skicka variabeln `DISP_RUN_MODE` till `docker_run.sh` direkt:
 
 ```
 $ DISP_RUN_MODE=stage docker_run.sh out docker.for.mac.localhost:4503 8080
@@ -455,7 +456,7 @@ Kör skriptet för att få en fullständig lista över tillgängliga alternativ 
 
 ## Visa Dispatcher-konfigurationen som används av Docker-behållaren {#viewing-dispatcher-configuration-in-use-by-docker-container}
 
-Med miljöspecifika konfigurationer kan det vara svårt att avgöra hur den faktiska Dispatcher-konfigurationen ser ut. När du har startat din dockningsbehållare med `docker_run.sh`kan den dumpas enligt följande:
+Med miljöspecifika konfigurationer kan det vara svårt att avgöra hur Dispatcher-konfigurationen ser ut. När du har startat din dockningsbehållare med `docker_run.sh`kan den dumpas enligt följande:
 
 * Bestäm vilket behållar-ID som används:
 

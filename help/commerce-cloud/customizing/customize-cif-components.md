@@ -11,14 +11,15 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 4933fc37-5890-47f5-aa09-425c999f0c91
-source-git-commit: bae9a5178c025b3bafa8ac2da75a1203206c16e1
+role: Admin
+source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
 workflow-type: tm+mt
 source-wordcount: '2298'
 ht-degree: 0%
 
 ---
 
-# Anpassa kärnkomponenterna i AEM CIF {#customize-cif-components}
+# Anpassa AEM CIF kärnkomponenter {#customize-cif-components}
 
 The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en referenskodbas för att använda [CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components). I den här självstudiekursen utökar du [Product Teaser](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser) om du vill visa ett anpassat attribut från Adobe Commerce. Du kan även läsa mer om GraphQL integrering mellan AEM och Adobe Commerce och de tilläggskopplingar som finns i CIF Core Components.
 
@@ -77,7 +78,7 @@ Product Teaser Component utökas genom hela kursen. Som ett första steg lägger
 
    ![Insert Product Teaser](../assets/customize-cif-components/product-teaser-add-component.png)
 
-3. Expandera sidopanelen (om den inte redan är aktiverad) och växla till listrutan för att söka efter resurser **Produkter**. Den här listan ska visa en lista över tillgängliga produkter från en ansluten Adobe Commerce-instans. Välj en produkt och **dra och släpp** den på **Product Teaser** på sidan.
+3. Expandera sidopanelen (om den inte redan är aktiverad) och växla till listrutan för att söka efter resurser **Produkter**. Den här listan bör visa en lista över tillgängliga produkter från en ansluten Adobe Commerce-instans. Välj en produkt och **dra och släpp** den på **Product Teaser** på sidan.
 
    ![Dra och släpp Product Teaser](../assets/customize-cif-components/drag-drop-product-teaser.png)
 
@@ -285,7 +286,7 @@ Använd [den utvecklingsmiljö du vill](https://experienceleague.adobe.com/docs/
 
    Lägga till i `extendProductQueryWith` är ett kraftfullt sätt att säkerställa att ytterligare produktattribut är tillgängliga för resten av modellen. Det minimerar även antalet frågor som körs.
 
-   I ovanstående kod visas`addCustomSimpleField` används för att hämta `eco_friendly` -attribut. Det här attributet visar hur du kan fråga efter anpassade attribut som ingår i Adobe Commerce-schemat.
+   I ovanstående kod visas`addCustomSimpleField` används för att hämta `eco_friendly` -attribut. Det här attributet visar hur du kan söka efter anpassade attribut som ingår i Adobe Commerce-schemat.
 
    >[!NOTE]
    >

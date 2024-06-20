@@ -1,6 +1,6 @@
 ---
 title: Formatera Adobe Experience Manager CIF Core Components
-description: Lär dig hur du formaterar Adobe Experience Manager (AEM) CIF Core Components. Självstudiekursen beskriver hur bibliotek och klientlibs på klientsidan används för att distribuera och hantera CSS och JavaScript för en AEM Commerce-implementering. Den här självstudiekursen handlar också om hur modulen ui.front och ett webbpaketprojekt är integrerade i hela byggprocessen.
+description: Lär dig hur du formaterar Adobe Experience Manager (AEM) CIF Core Components. Självstudiekursen beskriver hur klientbibliotek och klientbibliotek används för att distribuera och hantera CSS och JavaScript för en AEM Commerce-implementering. Den här självstudiekursen handlar också om hur modulen ui.front och ett webbpaketprojekt är integrerade i hela byggprocessen.
 sub-product: Commerce
 topics: Development
 version: Cloud Service
@@ -11,7 +11,8 @@ feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 exl-id: 521c1bb8-7326-4ee8-aba3-f386727e2b34
-source-git-commit: a868bf4d4acf4fbae7ccaf55b03319ba0617f9a4
+role: Admin
+source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
 workflow-type: tm+mt
 source-wordcount: '2342'
 ht-degree: 0%
@@ -87,7 +88,7 @@ Gör sedan en liten ändring av Teaser-stilen för att se hur `ui.frontend` modu
 
    ![ui.front.commerce, mapp](../assets/style-cif-component/ui-frontend-commerce-folder.png)
 
-   Observera att det finns flera Sass (`.scss`) filer under mappen. Dessa filer är de handelsspecifika formaten för var och en av Commerce-komponenterna.
+   Observera att det finns flera Sass (`.scss`) filer under mappen. Dessa filer är de Commerce-specifika formaten för var och en av Commerce-komponenterna.
 
 1. Öppna filen `_productteaser.scss`.
 

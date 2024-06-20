@@ -2,7 +2,9 @@
 title: Skicka en AEM
 description: Lär dig hur du refererar och distribuerar anslutningar på rätt sätt i Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: 9be1f00e-3666-411c-9001-c047e90b6ee5
-source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
+feature: Operations
+role: Admin
+source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%

@@ -2,9 +2,11 @@
 title: Dataskydd och dataintegritet - Adobe Experience Manager as a Cloud Service Foundation-beredskap
 description: Läs mer om Adobe Experience Manager as a Cloud Service Foundation-stöd för de olika dataskydds- och datasekretessreglerna. I denna artikel ingår EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag (Privacy Act) och hur man ska följa detta när man genomför ett nytt AEM as a Cloud Service projekt.
 exl-id: 3a4b9d00-297d-4b1d-ae57-e75fbd5c490c
-source-git-commit: 92c123817a654d0103d0f7b8e457489d9e82c2ce
+feature: Compliance
+role: Admin, Architect, Developer, Leader
+source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
@@ -29,7 +31,7 @@ På AEM Foundation-nivå lagras de personuppgifter som lagras i användarprofile
 
 ### Manuella steg {#manual-steps}
 
-1. Öppna konsolen Användaradministration genom att bläddra till **[!UICONTROL Tools - Security - Users]** eller genom att bläddra direkt till `https://<serveraddress>:<serverport>/security/users.html`
+1. Öppna konsolen för användaradministration genom att bläddra till **[!UICONTROL Tools - Security - Users]** eller genom att gå direkt till `https://<serveraddress>:<serverport>/security/users.html`
 
 <!--
    ![useradmin2](assets/useradmin2.png)

@@ -2,9 +2,11 @@
 title: Bygga produktupplevelser
 description: Lär dig hur du skapar produktinnehåll som sedan kan användas i olika kanaler för att skapa en engagerande shoppingupplevelse.
 exl-id: 4ae70e40-fdf1-4a37-b4dd-0c4882d77908
-source-git-commit: 78ead5f15c2613d9c3bed3025b43423a66805c59
+feature: Commerce Integration Framework
+role: Admin
+source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1157'
 ht-degree: 0%
 
 ---
@@ -15,7 +17,7 @@ Lär dig hantera produktupplevelser.
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om Adobe Experience Manager (AEM) innehålls- och handelsresa [Hantera testade produktkataloger](staged-catalog.md)lärde du dig att hantera upplevelser i mellanlagrade produktkataloger.
+I det föregående dokumentet om Adobe Experience Manager (AEM) Content and Commerce travel, [Hantera testade produktkataloger](staged-catalog.md)lärde du dig att hantera upplevelser i mellanlagrade produktkataloger.
 
 ## Syfte {#objective}
 
@@ -37,7 +39,7 @@ Marknadsföringsresurser handlar om att marknadsföra och använda produkten som
 
 ![pem-tillgångar](assets/pem-assets.png)
 
-### Experience Fragments {#experience-fragments}
+### Upplevelsefragment {#experience-fragments}
 
 Upplevelsefragment är ett bra sätt att skapa återanvändbart eller individuellt produktinnehåll i stor skala. Associationen fungerar på liknande sätt som en tillgång. Öppna egenskaper och växla till **Handel** -fliken. På den här fliken kan du hantera associationen med produkter och kategorier. Tabellerna under väljarna innehåller ytterligare information om de länkade objekten (visas bara med en markering). Klicka på detaljikonen så får du en fullständig vy i produktcockpit. Om du vill associera ett nytt objekt klickar du på produktväljarikonen (mappikonen), markerar ett objekt och stänger väljaren.
 
@@ -103,16 +105,16 @@ Om du har skapat associerat innehåll för den produkten växlar du till **Assoc
 
 ## Slut på resan? {#end-of-journey}
 
-Grattis! Du har slutfört AEM för innehåll och e-handelsutvecklare! Nu bör du:
+Grattis! Du har slutfört AEM och Commerce Developer-resan! Nu bör du:
 
 * förstå hur du kan koppla AEM innehåll till produktkatalogobjekt
 * använda platshållare för att berika produkt- och kategorisidor individuellt
 * kunna göra innehåll till ett köpbart och använda fliken för tillhörande innehåll
 
-Nu är ni redo att hantera produktupplevelser med hjälp AEM innehåll och handel. AEM Innehåll och handel har dock många ytterligare alternativ. Se vilka ytterligare resurser som finns i [Avsnittet Ytterligare resurser](#additional-resources) där du kan lära dig mer om de funktioner du såg under den här resan.
+Nu är ni redo att hantera produktupplevelser med AEM Content och Commerce. AEM Innehåll och Commerce har dock många ytterligare alternativ. Se vilka ytterligare resurser som finns i [Avsnittet Ytterligare resurser](#additional-resources) där du kan lära dig mer om de funktioner du såg under den här resan.
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Redigering av handelsupplevelser](/help/commerce-cloud/authoring/authoring-commerce-experiences.md)
+* [Skapa Commerce Experience](/help/commerce-cloud/authoring/authoring-commerce-experiences.md)
 * [Product Cockpit](/help/commerce-cloud/authoring/product-cockpit.md)
 * [Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=en)

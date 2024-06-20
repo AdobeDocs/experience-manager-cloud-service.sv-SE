@@ -2,10 +2,12 @@
 title: En snabbguide till WCAG 2.1
 description: A Quick Guide to the Web Content Accessibility Guidelines (WCAG) version 2.1.
 exl-id: 56aa834b-cd07-41c5-88f2-915bc0596e48
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+feature: Compliance
+role: Admin, Architect, Developer, Leader
+source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
 workflow-type: tm+mt
-source-wordcount: '1782'
-ht-degree: 90%
+source-wordcount: '1739'
+ht-degree: 88%
 
 ---
 
@@ -89,7 +91,7 @@ Denna förteckning är inte avsedd att vara uttömmande, utan innehåller en int
 * [WCAG 2 Frequently Asked Questions](https://www.w3.org/WAI/standards-guidelines/wcag/faq/)
 
 
-### What is New in WCAG 2.1 {#what-is-new}
+### Nyheter i WCAG 2.1 {#what-is-new}
 
 Riktlinjerna innehåller information om nyheter i WCAG 2.1:
 
@@ -97,7 +99,7 @@ Riktlinjerna innehåller information om nyheter i WCAG 2.1:
 
 * Avsnittet [WCAG 2.0 and 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/#versions) beskriver förhållandet mellan dem ytterligare.
 
-### Techniques for WCAG 2.1 {#techniques-for-wcag}
+### Tekniker för WCAG 2.1 {#techniques-for-wcag}
 
 Techniques for WCAG 2.1 finns på sidan [Techniques for WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/).
 
@@ -122,7 +124,7 @@ Informationen om tekniker inkluderar en beskrivning, tillämplighet, exempel, re
 
 Listan över tekniker är inte fullständig och WAI uppdaterar hela tiden listan med nya exempel som återspeglar utvecklingen inom webbteknik, designstrategier och forskningsresultat. Det är därför bra att regelbundet titta efter nyheter i listan över tekniker.
 
-### Understanding WCAG 2.1 {#understanding-wcag}
+### Om WCAG 2.1 {#understanding-wcag}
 
 Detta är en serie dokument som innehåller råd som hjälper läsarna att förstå syftet med specifika riktlinjer och framgångskriterier. Du kan [ladda ned en introduktion samt länkar till mer detaljerad information](https://www.w3.org/WAI/WCAG21/Understanding/).
 
@@ -142,7 +144,7 @@ Varje resultatkriteris sida för&quot;förståelse&quot; innehåller information
 
 Ett exempel finns på: [Understanding Success Criterion 1.1.1 (&quot;Non-text content&quot;)](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content).
 
-### Så här uppfyller du WCAG 2.1 {#how-to-meet-wcag}
+### Hur WCAG 2.1 fungerar {#how-to-meet-wcag}
 
 Avsnittet &quot;Hur du uppfyller&quot; finns på [Så här uppfyller du WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/) sida. Avsnittet innehåller en alternativ presentation av WCAG som låter läsarna förfina innehållet i riktlinjerna till de som är mest relevanta för en deras intressen och/eller omständigheter. Läsare kan filtrera de framgångskriterier som de vill visa genom att ange särskilda tekniker för webbinnehåll, t.ex. Cascading Style Sheets eller skript eller genom att ange en eller flera prioritetsnivåer.
 

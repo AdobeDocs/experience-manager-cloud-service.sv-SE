@@ -2,9 +2,11 @@
 title: Vanliga frågor och svar om skärmar
 description: På den här sidan beskrivs vanliga frågor och svar om skärmar as a Cloud Service.
 exl-id: 93f2144c-0e64-4012-88c6-86972d8cad9f
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+feature: Administering Screens
+role: Admin, Developer, User
+source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '450'
 ht-degree: 0%
 
 ---

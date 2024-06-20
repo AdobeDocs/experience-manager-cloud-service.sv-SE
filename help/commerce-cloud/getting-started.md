@@ -8,7 +8,8 @@ doc-type: tutorial
 kt: 4947
 thumbnail: 37843.jpg
 exl-id: 73ba707e-5e2d-459a-8cc8-846d1a5f2fd7
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+role: Admin
+source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
 workflow-type: tm+mt
 source-wordcount: '1066'
 ht-degree: 0%
@@ -21,10 +22,10 @@ För att komma igång med Adobe Experience Manager (AEM) Commerce as a Cloud Ser
 
 ## Onboarding {#onboarding}
 
-Introduktionen av AEM Commerce as a Cloud Service är en tvåstegsprocess:
+Introduktionen AEM Commerce as a Cloud Service är en tvåstegsprocess:
 
-1. Aktivera AEM Commerce as a Cloud Service och CIF tillägg har etablerats
-2. Anslut AEM Commerce as a Cloud Service till din e-handelslösning
+1. Aktivera AEM Commerce as a Cloud Service och CIF tillägg
+2. Koppla AEM Commerce as a Cloud Service till er e-handelslösning
 
 Det första startsteget görs av Adobe. Mer information om priser och provisionering får du av din säljare.
 
@@ -32,9 +33,9 @@ När du har etablerat dig med CIF-tillägget tillämpas det på alla befintliga 
 
 Det andra steget är självbetjäning för varje AEM as a Cloud Service miljö. Det finns ytterligare konfigurationer som du måste göra efter den första etableringen av CIF.
 
-## Ansluta AEM till en Commerce Solution {#solution}
+## Ansluta AEM till en Commerce-lösning {#solution}
 
-Ansluta CIF och [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) med en e-handelslösning måste du ange GraphQL slutpunkts-URL via en Cloud Manager-miljövariabel. Variabelnamnet är `COMMERCE_ENDPOINT`. En säker anslutning via HTTPS måste konfigureras.
+Ansluta CIF och [AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components) med en e-handelslösning måste du ange GraphQL slutpunkts-URL via en Cloud Manager-miljövariabel. Variabelnamnet är `COMMERCE_ENDPOINT`. En säker anslutning via HTTPS måste konfigureras.
 
 Miljövariabeln används på två ställen:
 
@@ -51,7 +52,7 @@ Det finns två alternativ för att konfigurera slutpunkten:
 
 >[!VIDEO](https://video.tv.adobe.com/v/37843?quality=12&learn=on)
 
-Den här konfigurationen kan göras med hjälp av en dialogruta på sidan Miljöinformation. När den här sidan visas för ett Commerce-aktiverat program visas en knapp om slutpunkten inte är konfigurerad:
+Den här konfigurationen kan göras med hjälp av en dialogruta på sidan Miljöinformation. När den här sidan visas för ett program som har Commerce aktiverat visas en knapp om slutpunkten inte är konfigurerad:
 
 ![CM-miljöinformation](/help/commerce-cloud/assets/commerce-cmui.png)
 
@@ -103,7 +104,7 @@ Du är redo att använda AEM Commerce as a Cloud Service och kan distribuera dit
 
 ## Konfigurera butiker och kataloger {#catalog}
 
-Tillägget CIF och [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) kan användas på flera AEM webbplatsstrukturer som är anslutna till olika e-handelsbutiker (eller butiksvyer, och så vidare). Som standard distribueras CIF-tillägget med en standardkonfiguration som ansluter till Adobe Commerce standardbutik och -katalog.
+Tillägget CIF och [CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components) kan användas på flera AEM webbplatsstrukturer som är anslutna till olika e-handelsbutiker (eller butiksvyer, och så vidare). Som standard distribueras CIF-tillägget med en standardkonfiguration som ansluter till Adobe Commerce standardbutik och -katalog.
 
 Den här konfigurationen kan justeras för projektet med hjälp av CIF Cloud Service-konfigurationen enligt följande steg:
 
@@ -134,12 +135,12 @@ Följande egenskaper kan konfigureras:
 
 Konfigurationen som visas ovan är för referens. Projekten ska ha egna konfigurationer.
 
-Om du vill ha mer komplexa inställningar kan du använda flera AEM webbplatsstrukturer i kombination med olika e-handelskataloger i [Inställningar för Commerce Multi-Store](configuring/multi-store-setup.md) självstudie.
+Om du vill ha mer komplexa inställningar kan du använda flera AEM webbplatsstrukturer i kombination med olika e-handelskataloger i [Installation av Commerce Multi-Store](configuring/multi-store-setup.md) självstudie.
 
 ## Ytterligare resurser {#additional-resources}
 
 - [AEM Project Archettype](https://github.com/adobe/aem-project-archetype)
 - [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia)
-- [Inställningar för Commerce Multi-Store](configuring/multi-store-setup.md)
-- [Flera inställningar för Commerce Systems](configuring/multiple-commerce-systems-setup.md)
+- [Installation av Commerce Multi-Store](configuring/multi-store-setup.md)
+- [Flera Commerce-systeminställningar](configuring/multiple-commerce-systems-setup.md)
 

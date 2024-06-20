@@ -2,7 +2,9 @@
 title: Skapa videoåtergivningar på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du skapar videoåtergivningar på skärmar as a Cloud Service.
 exl-id: a9c46036-cd29-47fa-81d9-c865cf22c98a
-source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
+feature: Administering Screens
+role: Admin, Developer, User
+source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 0%
