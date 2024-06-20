@@ -4,9 +4,9 @@ description: Den här sidan innehåller en översikt över hur du använder och 
 exl-id: e2fad21c-3de6-4186-97c6-ebc84780b2e8
 feature: Migration
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: d840e0beb8036ed8e543ac85850290e778371bbe
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '555'
 ht-degree: 1%
 
 ---
@@ -96,6 +96,10 @@ Följ stegen nedan för att ta bort ditt projekt:
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-4.png)
 
 1. Klicka **Ta bort** för att bekräfta steget.
+
+   >[!NOTE]
+   >Projekt upphör automatiskt att gälla och tas bort efter ett års inaktivitet i migreringen. Projekt förblir aktiva genom att redigera projektnamnet eller beskrivningen, överföra en BPA-rapport, skapa eller redigera en migreringsuppsättning, köra en extrahering eller köra ett intag.
+
 
 ## What&#39;s Next {#whats-next}
 
