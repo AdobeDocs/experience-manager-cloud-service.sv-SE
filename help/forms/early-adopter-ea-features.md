@@ -6,9 +6,9 @@ Role: developer, user, author
 exl-id: 6b3f853c-2a6d-4544-9cad-8a3fc1e1f3b9
 feature: Adaptive Forms
 role: Admin, Developer, User
-source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
+source-git-commit: 2766a351938062127babb01d5ed35bd37b705c21
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1733'
 ht-degree: 0%
 
 ---
@@ -75,9 +75,9 @@ Det här är mer konversationskritiska Forms ger:
 Forms är mer än bara ett nytt utseende - de förändrar användarupplevelsen.  Öka engagemanget, minska antalet blanketter som läggs ned och gör interaktionen med er webbplats roligare för alla.
 
 
-### AEM för Edge Delivery Services
+### WYSIWYG-redigering för Edge Delivery Services
 
-AEM har ett WYSIWYG-gränssnitt (Adaptive Forms Editor) för att skapa och publicera dessa formulär till Edge Delivery Services. AEM kan skapa [Dokumentbaserad redigering](/help/edge/docs/forms/overview.md#document-based-authoring-features), plus en mängd andra funktioner:
+WYSIWYG Authoring innehåller WYSIWYG-gränssnitt (Universal Editor och Adaptive Forms Editor) för att skapa och publicera anpassningsbara formulär till Edge Delivery Services. WYSIWYG Authoring ger alla funktioner i [Dokumentbaserad redigering](/help/edge/docs/forms/overview.md#document-based-authoring-features), plus en mängd andra funktioner:
 
 * Avancerad regelredigerare för avancerad logik.
 * Utbyggbarhet på serversidan för anpassade funktioner.
