@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler 
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
+source-git-commit: 1b4297c36995be7a4d305c3eddbabfef24e91559
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1310'
 ht-degree: 0%
 
 ---
@@ -307,6 +307,42 @@ Anslutningar till originalen är endast SSL och använder port 443.
 | **forwardCookie** (valfritt, standardvärdet är false) | Om värdet är true skickas&quot;Cookie&quot;-huvudet från klientbegäran till serverdelen, annars tas Cookie-huvudet bort. |
 | **forwardAuthorization** (valfritt, standardvärdet är false) | Om värdet är true skickas auktoriseringshuvudet från klientbegäran till serverdelen, annars tas auktoriseringshuvudet bort. |
 | **timeout** (valfritt, i sekunder är standardvärdet 60) | Antal sekunder som CDN ska vänta på att en backend-server ska leverera den första byten av en HTTP-svarstext. Det här värdet används också som en tidsgräns mellan byte till serverdelsservern. |
+
+### Proxyserver för Edge Delivery Services {#proxying-to-edge-delivery}
+
+Det finns scenarier där ursprungsväljare ska användas för att dirigera trafik genom AEM Publish till AEM Edge Delivery Services:
+
+* Visst innehåll levereras av en domän som hanteras av AEM Publish, medan annat innehåll från samma domän levereras av Edge Delivery Services
+* Innehåll som levereras av Edge Delivery Services kan utnyttja regler som distribueras via Configuration Pipeline, inklusive trafikfilterregler eller begäran-/svarsomvandlingar
+
+Här är ett exempel på en väljarregel för origo som kan åstadkomma detta:
+
+```
+kind: CDN
+version: '1'
+data:
+  originSelectors:
+    rules:
+      - name: select-edge-delivery-services-origin
+        when:
+          allOf:
+            - reqProperty: tier
+              equals: publish
+            - reqProperty: domain
+              equals: <Production Host>
+            - reqProperty: path
+              matches: "^^(/scripts/.*|/styles/.*|/fonts/.*|/blocks/.*|/icons/.*|.*/media_.*|/favicon.ico)"
+        action:
+          type: selectOrigin
+          originName: aem-live
+    origins:
+      - name: aem-live
+        domain: main--repo--owner.aem.live
+```
+
+>[!NOTE]
+> Eftersom Hanterat CDN i Adobe används måste du konfigurera push-ogiltigförklaring i **hanterad** läge, genom att följa Edge Delivery Servicens [Ställ in dokumentation för push-ogiltigförklaring](https://www.aem.live/docs/byo-dns#setup-push-invalidation).
+
 
 ## Omdirigeringar på klientsidan {#client-side-redirectors}
 
