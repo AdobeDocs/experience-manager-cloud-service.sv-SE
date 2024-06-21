@@ -2,7 +2,9 @@
 title: Generera variationer
 description: Lär dig mer om Generera variationer, som du kommer åt AEM as a Cloud Service och Sidekick i Edge Delivery Services
 exl-id: 9114037f-37b9-4b2f-a714-10933f69b2c3
-source-git-commit: 207778a59e18407831292be9bd00ee7973ade78c
+feature: Generate Variations
+role: Admin, Architect, Developer
+source-git-commit: bbc51796c610af02b5260c063213cde2ef610ba2
 workflow-type: tm+mt
 source-wordcount: '3262'
 ht-degree: 0%
@@ -380,7 +382,7 @@ Så här lägger du till en målgrupp från en fil på Google Drive:
 1. Skapa en kalkylbladsfil med två kolumner i Google Drive:
    1. Den första kolumnen visas i listrutan.
    1. Den andra kolumnen blir målgruppsbeskrivningen.
-1. Publicera filen:
+1. Publish filen:
    1. File -> Share -> publish to web -> CSV
 1. Kopiera URL-adressen till den publicerade filen.
 1. Gå till Generera variationer.

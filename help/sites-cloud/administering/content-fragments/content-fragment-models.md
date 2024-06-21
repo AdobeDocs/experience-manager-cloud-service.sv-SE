@@ -4,10 +4,11 @@ description: Lär dig hur Content Fragment Models fungerar som en grund för din
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: 8ab5b15f-cefc-45bf-a388-928e8cc8c603
-source-git-commit: e5a48cfd042c0e8d7448007854e1f73bded8cf7f
+solution: Experience Manager Sites
+source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3209'
+ht-degree: 1%
 
 ---
 

@@ -1,9 +1,10 @@
 ---
 title: Behörighetsaspekter för headless-innehåll
-description: Läs om olika behörigheter och ACL-överväganden för en headless-implementering med Adobe Experience Manager. Förstå de olika personifieringsnivåer och behörighetsnivåer som krävs för både författarmiljön och publiceringsmiljön.
-feature: Content Fragments,GraphQL API
+description: Läs om olika behörigheter och ACL-överväganden för en headless-implementering med Adobe Experience Manager. Förstå de olika personifieringsnivåer och behörighetsnivåer som krävs för både författarmiljöer och Publish-miljöer.
+feature: Headless, Content Fragments,GraphQL API
 exl-id: 3fbee755-2fa4-471b-83fc-3f4bf056267a
-source-git-commit: ecf4c06fd290d250c14386b3135250633b26c910
+role: Admin, Developer
+source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 0%
@@ -71,11 +72,11 @@ Om du vill skapa en grupp som hanterar modeller för innehållsfragment men inte
 | `/conf` | **tillåt** | `jcr:read` |
 | `/conf/<config-name>/settings/dam/cfm` | **tillåt** | `rep:write`, `crx:replicate` |
 
-## Publicera tjänstbehörigheter
+## Publish tjänstbehörigheter
 
-Publiceringstjänsten betraktas som&quot;live&quot;-miljö och är vanligtvis det GraphQL API-användare interagerar med. Innehåll som har redigerats och godkänts av författartjänsten publiceras till publiceringstjänsten. Det headless-programmet använder sedan det godkända innehållet från publiceringstjänsten via GraphQL API:er.
+Publish-tjänsten betraktas som en&quot;live&quot;-miljö och är vanligtvis vad GraphQL API-användare interagerar med. Innehåll som har redigerats och godkänts av författartjänsten publiceras till Publish. Det headless-programmet använder sedan det godkända innehållet från Publish-tjänsten via GraphQL API:er.
 
-Som standard är innehåll som visas via AEM Publish-tjänstens GraphQL-slutpunkter tillgängliga för alla, inklusive oautentiserade användare.
+Som standard är innehåll som visas via AEM Publish-tjänstens GraphQL-slutpunkter tillgängliga för alla, även för oautentiserade användare.
 
 ### Innehållsbehörigheter
 
@@ -86,7 +87,7 @@ Assets CUGs jobbar med:
 * Först nekas all åtkomst till mappen och undermapparna
 * Ge sedan läsåtkomst till mappen och undermapparna för alla AEM användargrupper som är listade i CUG-listan
 
-CUG-grupper kan konfigureras för resursmappar som innehåller innehåll som exponeras via GraphQL API:er. Åtkomsten till resursmappar vid publicering AEM ska styras via användargrupper i stället för direkt från användaren. Skapa (eller återanvänd) en AEM användargrupp som ger åtkomst till resursmappar som innehåller innehåll som exponeras av GraphQL API:er.
+CUG-grupper kan konfigureras för resursmappar som innehåller innehåll som exponeras via GraphQL API:er. Åtkomsten till resursmappar på AEM Publish bör styras via användargrupper i stället för direkt från användaren. Skapa (eller återanvänd) en AEM användargrupp som ger åtkomst till resursmappar som innehåller innehåll som exponeras av GraphQL API:er.
 
 #### Välj autentiseringsschema{#publish-permissions-users}
 

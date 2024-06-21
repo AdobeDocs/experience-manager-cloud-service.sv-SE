@@ -3,9 +3,9 @@ title: Registrering, inloggning och användarprofil
 description: Läs mer om registrering, inloggning, användardata och gruppsynkronisering för AEM as a Cloud Service
 exl-id: a991e710-a974-419f-8709-ad86c333dbf8
 solution: Experience Manager Sites
-feature: Authoring
+feature: Authoring, Personalization
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Webbprogram har ofta funktioner för kontohantering så att slutanvändarna kan 
 
 ## Registrering {#registration}
 
-När en slutanvändare registrerar sig för ett konto i ett AEM program skapas ett användarkonto i AEM Publish-tjänsten, vilket återspeglas på en användarresurs under `/home/users` i JCR-databasen.
+När en slutanvändare registrerar sig för ett konto i ett AEM program skapas ett användarkonto på den AEM Publish-tjänsten, vilket återspeglas på en användarresurs under `/home/users` i JCR-databasen.
 
 Det finns två sätt att genomföra registreringen, som beskrivs nedan.
 

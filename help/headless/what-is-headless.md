@@ -1,8 +1,10 @@
 ---
 title: Vad är ett headless CMS?
-description: Läs om Headless CMS. Hur fungerar de? Vilka är alternativen och skillnaderna? Varför vill du använda ett headless CMS?
+description: Läs mer om Headless CMS. Hur fungerar de? Vilka är alternativen och skillnaderna? Varför vill du använda ett headless CMS?
 exl-id: 53f24f69-ad49-4b8e-9a91-36cd64c1f2b9
-source-git-commit: 3306bde7b94b9f863b57d36542e8822df38c79ba
+feature: Headless
+role: Admin, Developer
+source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 0%
@@ -25,7 +27,7 @@ Ett CMS-system (Content Management System) lagrar, hanterar och levererar det in
 
 Traditionellt har ett CMS-system inkluderat både serverdelsfunktionaliteten för lagring och leverans av innehåll, tillsammans med klienttekniken som används för att återge markeringen för en upplevelse som webbläsaren visar (presentationslagret).
 
-Mycket kraftfullt, vilket ger dig full kontroll över innehåll och formatering, men saknar en del av den flexibilitet som krävs i dagens snabbföränderliga miljö. till exempel vid interaktion med externa appar.
+Mycket kraftfullt, vilket ger dig full kontroll över innehåll och formatering, men saknar en del av flexibiliteten som behövs i dagens snabbföränderliga miljö, till exempel när du interagerar med externa program.
 
 ## Headless CMS {#headless-cms}
 
@@ -57,7 +59,7 @@ Ett CMS-system i full hög representerar vanligtvis den traditionella topologin 
 
 En modern utveckling av CMS-systemet i full hög kan vara ett hybrid-CMS-system. Syftet är att kombinera det bästa av två världar:
 
-* effektiv frontend-utveckling i alla kanaler med moderna frontend-verktyg,
+* effektiv frontend-utveckling i alla kanaler med moderna frontverktyg,
 * samtidigt som man bevarar WYSIWYG-upplevelser för att ge icke-tekniska användare möjlighet, och för att undvika att IT blir en flaskhals för att kunna hantera innehåll och upplevelser i olika organisationer.
 
 Detta uppnås genom att man använder sig av moderna frontramverk som React, men behåller ett viktigt minimum av koppling till innehållets serverdel.

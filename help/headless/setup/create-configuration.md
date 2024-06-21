@@ -2,7 +2,9 @@
 title: Skapa en konfiguration - Headless-installation
 description: Skapa en konfiguration som ett första steg för att komma igång med headless på AEM as a Cloud Service.
 exl-id: 48801599-f279-4e55-8033-9c418d2af5bb
-source-git-commit: f6162dcbc5b7937d55922e8c963a402697110329
+feature: Headless, Content Fragments,GraphQL API
+role: Admin, Developer
+source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%

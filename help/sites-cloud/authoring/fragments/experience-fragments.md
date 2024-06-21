@@ -3,9 +3,9 @@ title: Upplevelsefragment
 description: Använd Experience Fragments i Adobe Experience Manager as a Cloud Service för att göra upplevelserna återanvändbara och flexibla.
 exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
 solution: Experience Manager Sites
-feature: Authoring
+feature: Authoring, Experience Fragments
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
 workflow-type: tm+mt
 source-wordcount: '2099'
 ht-degree: 2%

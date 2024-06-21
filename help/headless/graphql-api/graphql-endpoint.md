@@ -1,9 +1,10 @@
 ---
 title: Hantera GraphQL-slutpunkter i AEM
 description: Lär dig hur du hanterar GraphQL slutpunkter i Adobe Experience Manager as a Cloud Service för leverans av headless-material.
-feature: Content Fragments,GraphQL API
+feature: Headless, Content Fragments,GraphQL API
 exl-id: f7164ae3-4074-4db7-8c43-a79cc2ef00b1
-source-git-commit: abe5f8a4b19473c3dddfb79674fb5f5ab7e52fbf
+role: Admin, Developer
+source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
@@ -48,7 +49,7 @@ För vilken ditt program kan använda följande sökväg i URL:en för begäran:
 Om du vill aktivera en slutpunkt för GraphQL för AEM måste du:
 
 * [Aktivera din GraphQL-slutpunkt](#enabling-graphql-endpoint)
-* [Publicera din GraphQL-slutpunkt](#publishing-graphql-endpoint)
+* [Publish din GraphQL-slutpunkt](#publishing-graphql-endpoint)
 
 ## Aktivera din GraphQL-slutpunkt {#enabling-graphql-endpoint}
 

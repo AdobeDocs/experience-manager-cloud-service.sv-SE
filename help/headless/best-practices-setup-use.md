@@ -2,10 +2,12 @@
 title: Bästa tillvägagångssätt för installation och användning av AEM GraphQL med innehållsfragment
 description: Lär dig de rekommenderade bästa metoderna för konfiguration och användning av AEM GraphQL med innehållsfragment.
 exl-id: 4d6a5aaa-c8be-4858-ad07-085dc4fb77e7
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+feature: Headless
+role: Admin, Developer
+source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 5%
+source-wordcount: '702'
+ht-degree: 1%
 
 ---
 
@@ -32,7 +34,7 @@ Slutpunkten är den sökväg som används för att komma åt GraphQL för AEM. D
 
 [Hantera GraphQL-slutpunkter i AEM](/help/headless/graphql-api/graphql-endpoint.md)
 
-#### Miljöer {#environments-graphql-endpoint-creation}
+#### Miljö {#environments-graphql-endpoint-creation}
 
 Slutpunkter måste konfigureras i:
 
@@ -57,11 +59,11 @@ Cachelagring av beständiga frågor är inte aktiverat som standard i Dispatcher
 
 [GraphQL Persistent Queries - aktivera cachelagring i Dispatcher](/help/headless/deployment/dispatcher-caching.md)
 
-#### Miljöer {#environments-dispatcher-caching}
+#### Miljö {#environments-dispatcher-caching}
 
 Dispatcher är vanligtvis konfigurerad för:
 
-* Publicera: produktion
+* Publish: produktion
 
 ### CORS-inställningar {#cors-setup}
 
@@ -74,11 +76,11 @@ För att få åtkomst till GraphQL-slutpunkten måste en CORS-princip konfigurer
 
 [CORS-konfiguration (Cross-Origin Resource Sharing)](/help/headless/deployment/cross-origin-resource-sharing.md)
 
-#### Miljöer {#environments-cors-setup}
+#### Miljö {#environments-cors-setup}
 
 CORS är vanligtvis konfigurerad för:
 
-* Publicera: produktion
+* Publish: produktion
 
 ### Autentisering {#authentication}
 
@@ -88,7 +90,7 @@ Ett primärt användningsexempel för Adobe Experience Manager as a Cloud Servic
 
 [Autentisering för fjärrfrågor AEM GraphQL-frågor om innehållsfragment](/help/headless/security/authentication.md)
 
-#### Miljöer {#environments-authentication}
+#### Miljö {#environments-authentication}
 
 Autentisering är vanligtvis konfigurerad för:
 
@@ -109,7 +111,7 @@ Med en headless-implementering finns det flera säkerhets- och behörighetsområ
 
 [Behörighetsaspekter för headless-innehåll](/help/headless/security/permissions.md)
 
-#### Miljöer {#environments-permissions}
+#### Miljö {#environments-permissions}
 
 Behörigheter är vanligtvis konfigurerade för:
 
@@ -129,13 +131,13 @@ GraphQL-frågor och deras JSON-svar kan cachelagras om de är riktade som `GET` 
 
 #### Information {#details-cdn}
 
-[CDN i AEM as a Cloud Service](/help/implementing/dispatcher/cdn.md)
+[CDN på AEM as a Cloud Service](/help/implementing/dispatcher/cdn.md)
 
-#### Miljöer {#environments-cdn}
+#### Miljö {#environments-cdn}
 
 Ett CDN är vanligtvis konfigurerat för:
 
-* Publicera: produktion
+* Publish: produktion
 
 ### Konfigurera och skapa innehållsfragment {#cconfigure-create-content-fragments}
 
@@ -148,7 +150,7 @@ AEM GraphQL används för att hämta information från dina innehållsfragment. 
 * [Skapa en resursmapp](/help/headless/setup/create-assets-folder.md)
 * [Skapa och redigera dina innehållsfragment](/help/headless/setup/create-content-fragment.md)
 
-#### Miljöer {#eenvironments-content-fragments}
+#### Miljö {#eenvironments-content-fragments}
 
 Innehållsfragment definieras, skapas, testas, publiceras och öppnas på:
 
@@ -186,7 +188,7 @@ AEM headless CMS ger utvecklare frihet att skapa och leverera exceptionella uppl
 * [AEM resurser för utvecklare utan rubriker](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
 * Exempel, inklusive [Reagera](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html), [Next.js](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/next-js.html), [Node.js](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/server-to-server-app.html), bland andra
 
-#### Miljöer {#environments-your-apps}
+#### Miljö {#environments-your-apps}
 
 Appar utvecklas, testas och används vanligtvis på:
 

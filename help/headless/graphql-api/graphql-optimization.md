@@ -2,9 +2,11 @@
 title: Optimera GraphQL-frågor
 description: Lär dig hur du optimerar dina GraphQL-frågor när du filtrerar, sidlägger och sorterar innehållsfragment i Adobe Experience Manager as a Cloud Service för leverans av headless-innehåll.
 exl-id: 67aec373-4e1c-4afb-9c3f-a70e463118de
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+feature: Headless, Content Fragments,GraphQL API
+role: Admin, Developer
+source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
 workflow-type: tm+mt
-source-wordcount: '1877'
+source-wordcount: '1874'
 ht-degree: 0%
 
 ---
@@ -64,7 +66,7 @@ GraphQL-frågor och deras JSON-svar kan cachelagras om de är riktade som `GET` 
 
 Se:
 
-* [CDN i AEM as a Cloud Service](/help/implementing/dispatcher/cdn.md)
+* [CDN på AEM as a Cloud Service](/help/implementing/dispatcher/cdn.md)
 
 #### Ange rubriker för HTTP-cachekontroll {#set-http-cache-control-headers}
 

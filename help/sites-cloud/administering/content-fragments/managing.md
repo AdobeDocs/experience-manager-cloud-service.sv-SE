@@ -4,7 +4,8 @@ description: Lär dig hur du hanterar AEM innehållsfragment från konsolen och 
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
-source-git-commit: a9a2362903e8eec25393e2ceb307814e1a21f142
+solution: Experience Manager Sites
+source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
 workflow-type: tm+mt
 source-wordcount: '2628'
 ht-degree: 0%
@@ -155,7 +156,7 @@ Om du markerar ett visst fragment öppnas ett verktygsfält som fokuserar på de
 
 >[!NOTE]
 >
->Åtgärder som Publicera, Avpublicera, Ta bort, Flytta, Byt namn och Kopiera utlöser ett asynkront jobb. Jobbets förlopp kan övervakas via gränssnittet AEM asynkrona jobb.
+>Åtgärder som Publish, Unpublish, Delete, Move, Rename och Copy utlöser ett asynkront jobb. Jobbets förlopp kan övervakas via gränssnittet AEM asynkrona jobb.
 
 ### Information om dina innehållsfragment {#information-content-fragments}
 
@@ -291,7 +292,7 @@ Du kan visa och redigera egenskaperna (metadata) för ett fragment med hjälp av
 
 Du kan publicera dina innehållsfragment till:
 
-* den **[Publiceringstjänst](/help/headless/deployment/architecture.md)** - för fullständig, offentlig åtkomst
+* den **[Publish Service](/help/headless/deployment/architecture.md)** - för fullständig, offentlig åtkomst
 
 * den **[Förhandsgranskningstjänst](/help/headless/deployment/architecture.md)** - förhandsgranska innehållet innan det är fullständigt tillgängligt
 
@@ -323,7 +324,7 @@ När du har valt **Publicera** åtgärd:
 
 1. Välj något av följande alternativ för att öppna rätt dialogruta:
 
-   * **Nu** - välj antingen **Publiceringstjänst** eller **Förhandsgranskningstjänst**; efter bekräftelse publiceras fragmentet omedelbart
+   * **Nu** - välj antingen **Publish** eller **Förhandsgranskningstjänst**; efter bekräftelse publiceras fragmentet omedelbart
    * **Schema** - förutom den obligatoriska tjänsten kan du även välja datum och tid då fragmentet ska publiceras
 
 1. Ange all information i dialogrutan. För en schemalagd publiceringsbegäran:

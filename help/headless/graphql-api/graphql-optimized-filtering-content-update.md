@@ -2,7 +2,9 @@
 title: Uppdatera dina innehållsfragment för optimerad GraphQL-filtrering
 description: Lär dig hur du uppdaterar innehållsfragment för optimerad GraphQL-filtrering i Adobe Experience Manager as a Cloud Service för leverans av headless-innehåll.
 exl-id: 211f079e-d129-4905-a56a-4fddc11551cc
-source-git-commit: bae9a5178c025b3bafa8ac2da75a1203206c16e1
+feature: Headless, Content Fragments,GraphQL API
+role: Admin, Developer
+source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 0%
@@ -234,7 +236,7 @@ Därför finns den här egenskapen på JCR-noden `/content/dam` med värdet `1`,
 
      >[!NOTE]
      >
-     >Proceduren uppdaterar innehållsfragment för författare- och publiceringsinstanser.
+     >Proceduren uppdaterar innehållsfragment för författare och Publish-instanser.
      >
      >Därför rekommenderar Adobe att du utför verifieringen via databaswebbläsaren för *minst* en författare *och* en Publish-instans.
 

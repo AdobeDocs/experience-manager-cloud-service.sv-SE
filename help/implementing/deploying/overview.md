@@ -3,7 +3,8 @@ title: Distribuera till AEM as a Cloud Service
 description: Läs mer om grunderna och de bästa sätten att distribuera till AEM as a Cloud Service
 feature: Deploying
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
-source-git-commit: aa032af2ed7ff877b4c9f9cb6d427c84e71c3874
+role: Admin
+source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
 workflow-type: tm+mt
 source-wordcount: '3429'
 ht-degree: 0%
@@ -263,7 +264,7 @@ För närvarande fungerar inte AEM as a Cloud Service med indexhanteringsverktyg
 
 Publiceringsfunktionen är bakåtkompatibel med [AEM Replication Java™ API:er](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html).
 
-Om du vill utveckla och testa med replikering med molnklar AEM snabbstart måste du använda de klassiska replikeringsfunktionerna med en författare-/publiceringskonfiguration. Om användargränssnittets startpunkt på AEM Author tas bort för molnet går användarna till `http://localhost:4502/etc/replication` för konfiguration.
+Om du vill utveckla och testa med replikering med molnklar AEM snabbstart måste du använda de klassiska replikeringsfunktionerna med en Author/Publish-installation. Om användargränssnittets startpunkt på AEM Author tas bort för molnet går användarna till `http://localhost:4502/etc/replication` för konfiguration.
 
 ## Bakåtkompatibel kod för rullande distributioner {#backwards-compatible-code-for-rolling-deployments}
 
@@ -308,11 +309,11 @@ De körlägeskonfigurationer som stöds är:
 * **config.author.rde** (*Gäller AEM RDE Author Service*)
 * **config.author.stage** (*Gäller för AEM mellanlagringsförfattartjänst*)
 * **config.author.prod** (*Gäller för tjänsten AEM Production Author*)
-* **config.publish** (*Gäller AEM Publiceringstjänst*)
-* **config.publish.dev** (*Gäller för AEM Dev Publish Service*)
-* **config.publish.rde** (*Gäller AEM RDE-publiceringstjänsten*)
-* **config.publish.stage** (*Gäller för AEM mellanlagringspubliceringstjänst*)
-* **config.publish.prod** (*Gäller för AEM produktionspubliceringstjänst*)
+* **config.publish** (*Gäller för AEM Publish-tjänst*)
+* **config.publish.dev** (*Gäller för tjänsten AEM Dev Publish*)
+* **config.publish.rde** (*Gäller för AEM RDE Publish-tjänst*)
+* **config.publish.stage** (*Gäller för tjänsten AEM mellanlagring i Publish*)
+* **config.publish.prod** (*Gäller för tjänsten AEM Production Publish*)
 * **config.dev** (*Gäller för AEM Dev-tjänster*)
 * **config.rde** (*Gäller RDE-tjänster*)
 * **config.stage** (*Gäller för AEM mellanlagringstjänster*)

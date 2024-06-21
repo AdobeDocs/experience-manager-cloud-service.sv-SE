@@ -4,7 +4,8 @@ description: Lär dig hur innehållsfragment i AEM as a Cloud Service gör att d
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: ce9cb811-57d2-4a57-a360-f56e07df1b1a
-source-git-commit: 46a6f5ace7aa3def8021dd16ea394b780afce2e6
+solution: Experience Manager Sites
+source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
 workflow-type: tm+mt
 source-wordcount: '1803'
 ht-degree: 1%

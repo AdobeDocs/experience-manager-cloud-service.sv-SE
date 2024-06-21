@@ -1,17 +1,18 @@
 ---
-title: Markdown
+title: Markering
 description: Förstå hur Content Fragment Editor använder markeringssyntax för att enkelt skapa innehåll, både för sidredigering och rubrikfri leverans.
 feature: Content Fragments
 role: User
 exl-id: 6fbf8128-3b7f-4eda-bbbd-3336578d2586
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+solution: Experience Manager Sites
+source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 3%
+source-wordcount: '561'
+ht-degree: 2%
 
 ---
 
-# Markdown {#markdown}
+# Markering {#markdown}
 
 När du är [redigering](/help/sites-cloud/administering/content-fragments/authoring.md#edit-multi-line-text-fields-plaintext-markdown) dina innehållsfragment du kan ha [Textfält med flera rader](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types) definieras med **Standardtyp** av **Markering**. Innehållsfragmentsredigeraren använder *markering* så att du enkelt kan skriva innehåll för både sidredigering och headless-leverans:
 
