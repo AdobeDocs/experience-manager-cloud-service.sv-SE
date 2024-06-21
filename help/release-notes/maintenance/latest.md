@@ -4,10 +4,10 @@ description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] a
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: e0156c54b51eed0f729f2026c47eb93917143017
+source-git-commit: 53b692b9f668387c889c28498bb20c67149e36be
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 1%
+source-wordcount: '647'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +25,7 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 167
 
 * ASSETS-31977: Förbättrade åtgärder för att flytta, kopiera och ta bort resurser.
 * ASSETS-33618: Funktioner för automatisk transkription och översättning för videor i Dynamic Media.
-* ASSETS-33618: Godkännandeåtgärd för ContentHub och DM och lägg till egenskaper i egenskaperna damAssetLucene.
+* ASSETS-35185: Godkännandeåtgärd för ContentHub och DM och lägg till egenskaper i egenskaperna damAssetLucene.
 * ASSETS-35533: Lägg till DRM- och CAI-egenskaper i index damAssetLucene.
 * ASSETS-37280: Sekventiell jobbhantering för översättning när källunderrubriken (vtt) fortfarande bearbetas.
 * ASSETS-37559: Förbättrad händelse för borttagning av resurser.
@@ -48,13 +48,24 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 167
 * ASSETS-39377: Massimport från OneDrive kan misslyckas om du får ett baktryck från fjärr-API.
 * ASSETS-39428: Renderingsproblem i gränssnittet för copyrighthantering.
 * CQ-4357150: Guava i cq-content-sync bundle.
+* GRANITE-52573: Begäranden som innehåller dubbla snedstreck `//` nekas med statuskod 400.
 * SCRNS-4194: Ta bort beroendet av Google Guava API:er.
 * SCRNS-4360: Knappen Hantera publikation och snabbpublicering saknas för icke-adminanvändare i innehållsleverantören för kanaler.
 * SCRNS-4323: Hide/Disable launches from screens.html.
 
 ### Kända fel {#known-issues-16799}
 
-Ingen.
+>[!NOTE]
+> AEM Engineering har identifierat en regression för startfunktioner som påverkar aktuella AEM från och med 16461. På grund av den här regressionen kommer nya startprogram (som skapats efter att nya versioner har tillämpats) som innehåller sidor som inte är djupa inte att befordras korrekt på grund av saknade konfigurationer.
+> Om dina miljöer påverkas finns ett gränssnittsskript som identifierar och uppdaterar saknade konfigurationer tillgängliga via kundsupport (intern referens, SITES-22457).
+> En mer långsiktig korrigering kommer att göras tillgänglig som säkerställer att nya startprogram skapas med alla de rätta konfigurationerna. Till dess finns även en intern korrigeringsversion tillgänglig vid behov.
+
+#### Forms
+
+1. Om en användare hämtar den senaste AEM Forms SDK-versionen (`AEM Forms add-on v2024.05.04.00-240400`) startar inte batchfilen Docker-tjänsten. Så här löser du problemet:
+   1. Ladda ned [mapp](/help/forms/assets/sdk_hotfix.zip).
+   1. Extrahera innehållet från den hämtade mappen och kopiera `sdk.sh` och `sdk.bat` filer.
+   1. Ersätt befintlig `sdk.sh` och `sdk.bat` filer i AEM Forms SDK med de nya filerna.
 
 ### Ändringsmeddelande {#change-notice-16799}
 
