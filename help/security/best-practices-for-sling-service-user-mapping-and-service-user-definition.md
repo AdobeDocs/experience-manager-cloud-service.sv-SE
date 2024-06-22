@@ -4,7 +4,7 @@ description: Läs mer om de bästa sätten att sälja användarmappning för tj�
 exl-id: 72f0dcbf-b4e6-4a73-8232-3574a212ac19
 feature: Security
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: f28f212574dda0ece2cedb56a714d381e5bd7d3c
 workflow-type: tm+mt
 source-wordcount: '1884'
 ht-degree: 0%
@@ -189,7 +189,7 @@ Exempel på `userproperties-copy-service`:
 * Minska omfånget
 
    * Placera åtkomstkontrollprinciper i funktionsspecifika underträd
-   * Vid distribuerade artiklar: använd begränsningar för att begränsa omfattningen (se [dokumentationen](http://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html) för en lista över inbyggda begränsningar).
+   * Vid distribuerade artiklar: använd begränsningar för att begränsa omfattningen (se [dokumentationen](https://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html) för en lista över inbyggda begränsningar).
 
 * Säkerställ enhetlighet
 
