@@ -1,31 +1,31 @@
 ---
-title: Aktuella funktioner för tidig användning av [!DNL Adobe Experience Manager Forms] as a Cloud Service.
-description: Aktuella funktioner för tidig användning av [!DNL Adobe Experience Manager Forms] as a Cloud Service.
+title: Aktuella funktioner för tidig åtkomst i [!DNL Adobe Experience Manager Forms] as a Cloud Service.
+description: Aktuella funktioner för tidig åtkomst i [!DNL Adobe Experience Manager Forms] as a Cloud Service.
 Feature: Introduction
 Role: developer, user, author
 exl-id: 6b3f853c-2a6d-4544-9cad-8a3fc1e1f3b9
 feature: Adaptive Forms
 role: Admin, Developer, User
-source-git-commit: 2766a351938062127babb01d5ed35bd37b705c21
+source-git-commit: 0c49e0ba5deb3659418cb0d057151863beac5340
 workflow-type: tm+mt
 source-wordcount: '1733'
 ht-degree: 0%
 
 ---
 
-# AEM Forms Early Adobe Program
+# AEM Forms Tidig åtkomst
 
-AEM Forms Early Adobe Program ger dig en unik möjlighet att få exklusiv tillgång till de senaste funktionerna för alla andra och hjälper dig att utveckla dem. Programmet ger dig möjlighet att
+Programmet AEM Forms Early Access Program ger dig en unik möjlighet att få exklusiv tillgång till de senaste funktionerna för alla andra och hjälper dig att utveckla dem. Programmet ger dig möjlighet att
 
 * Var bland de första som får tillgång till den senaste tekniken innan den når ända ut till den vanliga tekniken.
 * Samarbeta med produktteamet för att utforma produktens framtid tillsammans. Använd era användningsexempel för att vägleda utvecklingen och säkerställa att innovationen är mogen och att den klarar utmaningarna i verkligheten.
 * Ge oss feedback och hjälp oss att lösa problem före lanseringen, vilket ger en smidigare användarupplevelse vid en fullständig release.
 
-## Hur går jag med i programmet Early Adobe?
+## Hur går jag med i programmet för tidig åtkomst?
 
-Om du är intresserad av att delta i vårt tidiga Adobe-program för tidiga utvecklare skickar du ett mejl från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com)  för att begära åtkomst. Du kan begära åtkomst till alla eller alla specifika innovationer.
+Om du är intresserad av att delta i vårt Tidig åtkomst-program för tidig åtkomst, skicka bara ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com)  för att begära åtkomst. Du kan begära åtkomst till alla eller alla specifika innovationer.
 
-## Innovationer för tidiga Adobe-program
+## Innovationer för tidig åtkomst
 
 ### AEM Forms Generative AI (Gen AI)
 
@@ -102,7 +102,7 @@ Genom att effektivisera dataöverföringsprocessen kan kopplingen hjälpa dig at
 AEM Forms till Marketo Connector hjälper er att utnyttja båda plattformarnas styrkor för att skapa en effektivare marknadsföringstrå.
 
 
-## Fler tidiga innovationer från Adobe
+## Ytterligare innovationer för tidig åtkomst
 
 ### Stöd för höger-till-vänster-språk (RTL)
 
