@@ -5,7 +5,7 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 68e2f6867a2cbcaf52fa6de259fe118e31ee7573
+source-git-commit: bd0d35c57e333d861072e189d0bef0ba14700664
 workflow-type: tm+mt
 source-wordcount: '1942'
 ht-degree: 0%
@@ -122,12 +122,12 @@ Den här versionen innebär en betydande uppgradering av den visuella regelredig
 
 
 
-### Tidiga Adobe-funktioner i AEM Forms {#forms-new-early-adopter-features}
+### Tidig åtkomst-funktioner i AEM Forms {#forms-new-access-adopter-features}
 
-AEM Forms Early Adobe Program ger dig unika möjligheter att få exklusiv tillgång till de senaste innovationerna åt alla andra och hjälper dig att utveckla dem.
+Programmet AEM Forms Early Access Program ger dig en unik möjlighet att få exklusiv tillgång till de senaste innovationerna åt alla andra och hjälper dig att utveckla dem.
 Programmet ger tillgång till flera innovationer.
 
-I den här versionsinformationen listas de innovationer som levererats i den aktuella versionen. En fullständig lista över de innovationer som finns inom programmet för tidig användning finns på [Dokumentation om AEM Forms Early Adobe-program](/help/forms/early-adopter-ea-features.md).
+I den här versionsinformationen listas de innovationer som levererats i den aktuella versionen. En fullständig lista över de innovationer som finns inom programmet för tidig åtkomst finns på [Dokumentation för AEM Forms Early Access Program](/help/forms/early-access-ea-features.md).
 
 #### Förbättrade skyddsmetoder för robotar
 
@@ -152,7 +152,7 @@ Forms-tjänsten genererar interaktiv PDF forms för datainhämtning. Den kan ock
 
 >[!IMPORTANT]
 >
-> Om du är intresserad av att delta i vårt tidiga Adobe-program för tidiga utvecklare skickar du ett mejl från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) för att begära åtkomst. Du kan begära åtkomst till alla eller alla specifika innovationer.
+> Om du är intresserad av att delta i vårt Tidig åtkomst-program för tidig åtkomst kan du skicka ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) för att begära åtkomst. Du kan begära åtkomst till alla eller alla specifika innovationer.
 
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
