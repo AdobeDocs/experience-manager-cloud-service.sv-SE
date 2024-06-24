@@ -4,9 +4,9 @@ description: Lär dig hur du använder miljöer för snabb utveckling för snabb
 exl-id: 1e9824f2-d28a-46de-b7b3-9fe2789d9c68
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 3577db15a276bed253c8fa51cbd100e90ec5ef45
+source-git-commit: 85dc92e1adc11a2ee513b7a43e0945b18b2f4790
 workflow-type: tm+mt
-source-wordcount: '4244'
+source-wordcount: '4215'
 ht-degree: 0%
 
 ---
@@ -223,11 +223,6 @@ Med noggrann samordning kan dock fler än en utvecklare validera en viss funktio
 
 
 ### Globala flaggor {#global-flags}
-
->[!NOTE]
->
-> Dessa globala flaggor är inte tillgängliga än. De kommer att introduceras någon gång i juni.
-> 
 
 * För mindre utförliga utdata använder du flaggan quiet:
 
@@ -565,11 +560,6 @@ Du kan också återställa den lokala redigeringsmiljön med hjälp av ellipskna
 Mer information om hur du använder Cloud Manager för att hantera dina miljöer finns i [Cloud Manager-dokumentationen](/help/implementing/cloud-manager/manage-environments.md).
 
 ## Kommandon som stöder JSON-utdata {#json-commands}
-
->[!NOTE]
->
-> Dessa kommandon är inte tillgängliga än. De kommer att introduceras någon gång i juni.
-> 
 
 De flesta kommandon har stöd för ```--json``` som undertrycker konsolutdata och returnerar giltig json som ska bearbetas i skript. Nedan finns några kommandon som stöds, med exempel på json-utdata.
 
