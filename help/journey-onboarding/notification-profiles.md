@@ -4,9 +4,9 @@ description: Lär dig hur du skapar användarprofiler i Admin Console för att h
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: 4edecfcd-6301-4a46-98c7-eb5665f48995
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 53a3a4c47becf58f8874083e2878fa3458d6cad7
 workflow-type: tm+mt
-source-wordcount: '982'
+source-wordcount: '1130'
 ht-degree: 0%
 
 ---
@@ -16,16 +16,19 @@ ht-degree: 0%
 
 Lär dig hur du skapar användarprofiler i Admin Console för att hantera mottagning av viktiga e-postmeddelanden.
 
-## Översikt {#overview}
+## Ökning {#overview}
 
 Adobe kontaktar då och då användare om sina AEM as a Cloud Service miljöer. Förutom meddelanden i produkten använder Adobe ibland även e-post för meddelanden. Det finns två typer av sådana e-postmeddelanden:
 
 * **Incidentmeddelande** - Dessa meddelanden skickas under en incident eller när Adobe har identifierat ett potentiellt tillgänglighetsproblem i din AEM as a Cloud Service miljö.
 * **Proaktiv avisering** - Dessa meddelanden skickas när en medlem i Adobe supportteam vill ge vägledning om en eventuell optimering eller rekommendation som kan vara till nytta för er AEM as a Cloud Service miljö.
 
->[!NOTE]
->
->Det går inte att tilldela grupper till proaktiva meddelanden. Du måste tilldela användare till produktprofilerna direkt i stället.
+Användarna kan även få dessa meddelanden för specifika program baserat på deras [anpassade gruppbehörigheter.](/help/implementing/cloud-manager/custom-permissions.md)
+
+Dessutom stöds det att tilldela grupper till proaktiva meddelanden, och användare och grupper kan tilldelas produktprofiler direkt.
+
+* Användare i incidentgruppen och den förebyggande meddelandegruppen får som standard meddelanden om alla program.
+* Om användare inte vill få alla meddelanden kan de använda anpassade READ-behörigheter för att ange vilka programmeddelanden de vill få.
 
 För att rätt användare ska kunna ta emot dessa meddelanden måste du konfigurera och tilldela användarprofiler enligt beskrivningen i det här dokumentet.
 
@@ -60,7 +63,8 @@ Skapa två användarprofiler för att konfigurera mottagning av meddelanden på 
 
    * **Produktprofilnamn**: `Incident Notification - Cloud Service`
    * **Visningsnamn**: `Incident Notification - Cloud Service`
-   * **Beskrivning**: Cloud Manager-profil för de användare som ska få meddelanden under en incident eller när Adobe har identifierat ett potentiellt tillgänglighetsproblem med din AEM as a Cloud Service miljö
+   * **Beskrivning**: Cloud Manager-profil för de användare som ska få meddelanden under en incident eller när Adobe har identifierat ett potentiellt tillgänglighetsproblem i din AEM as a Cloud Service miljö.
+      * Användare med anpassade READ-behörigheter för särskilda program får endast meddelanden för de programmen om de väljer att använda anpassade behörigheter.
 
 1. Klicka **Spara**.
 
@@ -69,6 +73,7 @@ Skapa två användarprofiler för att konfigurera mottagning av meddelanden på 
    * **Produktprofilnamn**: `Proactive Notification - Cloud Service`
    * **Visningsnamn**: `Proactive Notification - Cloud Service`
    * **Beskrivning**: Cloud Manager-profil för de användare som ska få meddelanden när en medlem i Adobe-supportteamet vill ge vägledning om en eventuell optimering eller rekommendationer som ska utföras med din AEM as a Cloud Service miljökonfiguration
+      * Användare med anpassade READ-behörigheter för särskilda program får endast meddelanden för de programmen om de väljer att använda anpassade behörigheter.
 
 1. Klicka **Spara**.
 
@@ -88,7 +93,7 @@ Nu när profilerna har skapats måste du tilldela rätt användare. Du kan göra
 
 Följ de här stegen för att lägga till användare för vilka Federated ID ännu inte har konfigurerats.
 
-1. Identifiera den eller de användare som ska ta emot incidenter eller proaktiva meddelanden.
+1. Identifiera de användare eller grupper som ska få incidentmeddelanden eller proaktiva meddelanden.
 
 1. Logga in Admin Console på [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com) om du fortfarande inte är inloggad.
 
@@ -113,13 +118,15 @@ Följ de här stegen för att lägga till användare för vilka Federated ID än
 
 1. Klicka **Spara** och ett välkomstmeddelande skickas till användaren som du har lagt till.
 
-Den inbjudna användaren får nu meddelanden. Upprepa de här stegen för de användare i ditt team som du vill ska få meddelanden om.
+Den inbjudna användaren får nu meddelanden. Användare med anpassade READ-behörigheter för särskilda program får endast meddelanden för de programmen om de väljer att använda anpassade behörigheter.
+
+Upprepa de här stegen för de användare i ditt team som du vill ska få meddelanden om.
 
 ### Lägg till befintliga användare i profiler {#existing-user}
 
 Följ de här stegen för att lägga till användare för vilka det redan finns Federated ID.
 
-1. Identifiera den eller de användare som ska ta emot incidenter eller proaktiva meddelanden.
+1. Identifiera de användare eller grupper som ska få incidentmeddelanden eller proaktiva meddelanden.
 
 1. Logga in Admin Console på [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com) om du fortfarande inte är inloggad.
 
@@ -142,7 +149,9 @@ Följ de här stegen för att lägga till användare för vilka det redan finns 
 
 1. Klicka **Spara** och ett välkomstmeddelande skickas till användaren som du har lagt till.
 
-Den inbjudna användaren får nu meddelanden. Upprepa de här stegen för de användare i ditt team som du vill ska få meddelanden om.
+Den inbjudna användaren får nu meddelanden. Användare med anpassade READ-behörigheter för särskilda program får endast meddelanden för de programmen om de väljer att använda anpassade behörigheter.
+
+Upprepa de här stegen för de användare i ditt team som du vill ska få meddelanden om.
 
 ## Ytterligare resurser {#additional-resources}
 
