@@ -2,9 +2,9 @@
 title: Godkänn resurser i Experience Manager
 description: Lär dig hur du godkänner resurser i [!DNL Experience Manager].
 role: User
-source-git-commit: 0ad9f349c997c35862e4f571b4741ed4c0c947e2
+source-git-commit: 540aa876ba7ea54b7ef4324634f6c5e220ad19d3
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '598'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,14 @@ Du måste ha tillgång till AEM Assets as a Cloud Service och behörighet att re
 
 ## Konfiguration
 
-Du måste göra en engångsuppdatering av det tillämpliga metadataschemat i [!DNL Experience Manager] innan du kan godkänna en resurs. Du kan hoppa över den här konfigurationen för [!DNL Experience Manager Assets]. Följ de här stegen för att konfigurera metadatamatchemat:
+Du måste göra en engångsuppdatering av det tillämpliga metadataschemat i administratörsvyn innan du kan godkänna en resurs. Du kan hoppa över den här konfigurationen för Assets-vyn. Följ de här stegen för att konfigurera metadatamatchemat:
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]**.
 1. Välj tillämpligt metadatamatchema och klicka på **[!UICONTROL Edit]**. <br>The **[!UICONTROL Metadata Schema Form Editor]** öppnas med **[!UICONTROL Basic]** markerad flik.
 1. Rulla ned och klicka **[!UICONTROL Review Status]**.
 1. Klicka på **[!UICONTROL Rules]** på den högra panelen.
 1. Avmarkera **[!UICONTROL Disable edit]** och klicka **[!UICONTROL Save]**.
+Om du behöver visa egenskapen som **[!UICONTROL Review Status]** fältet är mappat till, navigera till **[!UICONTROL Settings]** -fliken och visa `./jcr:content/metadata/dam:status` värdet i **[!UICONTROL Map to property]** fält.
 
 >[!NOTE]
 >
@@ -45,7 +46,7 @@ Du kan godkänna resurser i båda [!DNL Experience Manager] och [!DNL Experience
 
    >[!VIDEO](https://video.tv.adobe.com/v/3427430)
 
-   På samma sätt kan du godkänna resurser med [ny resursvy](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/manage-organize.html?lang=en#manage-asset-status).
+   På samma sätt kan du godkänna resurser med [ny Assets-vy](/help/assets/manage-organize-assets-view.md).
 
 ## Godkänn resurser gruppvis {#bulk-approve-assets}
 
@@ -59,7 +60,7 @@ Effektivisera arbetsflödet genom att snabbt godkänna flera resurser samtidigt.
 1. Markera den nya metadataprofilen och klicka på **[!UICONTROL Edit _(e)_]**. <br>The **[!UICONTROL Edit Metadata Profile]** formuläret öppnas med **[!UICONTROL Basic]** markerad flik.
 1. Dra och släpp en **[!UICONTROL Single Line Text Field]** från **[!UICONTROL Build Form]** -avsnittet på höger sida till avsnittet Metadata i formuläret.
 1. Klicka på det nya fältet och gör sedan följande uppdateringar i **[!UICONTROL Settings]** panel:
-   1. Ändra **[!UICONTROL Field Label]** till _Godkända resurser_.
+   1. Ändra **[!UICONTROL Field Label]** till _Godkänd Assets_.
    1. Uppdatera **[!UICONTROL Map to property]** till _./jcr:content/metadata/dam:status_.
    1. Ändra standardvärdet till _godkänd_.
 
@@ -74,3 +75,31 @@ Effektivisera arbetsflödet genom att snabbt godkänna flera resurser samtidigt.
 >[!NOTE]
 > 
 >Detta tillvägagångssätt godkänner de nya resurserna i mappen. För befintliga resurser i mappen måste du välja och godkänna dem manuellt. <br> Du kan också använda **[!UICONTROL Reprocess]** om du vill använda ändringarna från metadataprofilen på äldre resurser.
+
+På samma sätt kan du gruppgodkänna resurser i en mapp i Assets-vyn:
+
+1. Markera resursen/resurserna och klicka på **[!UICONTROL Bulk Metadata Edit]**.
+
+1. Välj **[!UICONTROL Approved]** i **[!UICONTROL Status]** fältet finns i [!UICONTROL Properties] i den högra rutan.
+
+1. Klicka på **[!UICONTROL Save]**.
+
+## Kopiera leverans-URL för godkända resurser {#copy-delivery-url-approved-assets}
+
+Leverans-URL:en för alla godkända resurser i databasen är tillgänglig om du har [!UICONTROL Dynamic Media with OpenAPI capabilities] aktiverat på din AEM as a Cloud Service-instans.
+
+Så här kopierar du en leverans-URL för en godkänd resurs i databasen:
+
+1. Markera resursen och klicka på **[!UICONTROL Details]**.
+
+1. Klicka på ikonen Återgivningar i den högra rutan.
+
+1. Välj **[!UICONTROL Dynamic Media with OpenAPI]** finns i **[!UICONTROL Dynamic]** -avsnitt.
+
+1. Klicka **[!UICONTROL Copy URL]** för att kopiera resursens leverans-URL.
+   ![kopiera leveransadress](/help/assets/assets/copy-delivery-url.png)
+
+   >[!NOTE]
+   >
+   >Alternativet att kopiera leverans-URL för godkända mediefiler är bara tillgängligt i Assets-vyn.
+

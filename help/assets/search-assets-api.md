@@ -1,23 +1,23 @@
 ---
-title: API för sökresurser
-description: Lär dig hur du använder API:t för sökresurser.
+title: Sök i Assets API
+description: Lär dig använda API:t för sökning i Assets.
 role: User
-source-git-commit: 0ad9f349c997c35862e4f571b4741ed4c0c947e2
+source-git-commit: 540aa876ba7ea54b7ef4324634f6c5e220ad19d3
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 0%
 
 ---
 
-# API för sökresurser {#search-assets-api}
+# Sök i Assets API {#search-assets-api}
 
-Alla [godkända tillgångar](approved-assets.md) som finns i Experience Manager-resurskatalogen kan sökas igenom och sedan levereras till integrerade program längre fram i kedjan med en leverans-URL.
+Alla [godkända tillgångar](approve-assets.md) som finns i Experience Manager-resurskatalogen kan sökas igenom och sedan levereras till integrerade program längre fram i kedjan med en leverans-URL.
 
 Att söka efter rätt godkända resurser från Experience Manager-databasen är det första steget mot att leverera resurser med hjälp av URL:en för leverans. Svaret på sökbegäran består av en array med JSON-dokument som motsvarar de resurser som uppfyller sökvillkoren. Varje JSON-dokument identifieras med en `id` -fält, som används för att disponera över resursleveransen.
 
 ![Översikt över protokollet för direkt binär överföring](assets/search-assets-api-overview.png)
 
-Du kan definiera egenskaper i API-begäran för sökresurser för att aktivera följande funktioner:
+Du kan definiera egenskaper i Search Assets API-begäran för att aktivera följande funktioner:
 
 * **Fulltextsökning**: Använd `match` fråga för att definiera texten som ska sökas igenom.  Du kan också använda operatorer i `match` -fråga för att filtrera resultaten.
 
@@ -42,7 +42,7 @@ Leveransdomänen har liknande struktur som Experience Manager författarmiljöns
 
 POST
 
-## API-huvud för sökresurser {#search-assets-api-header}
+## Sök i Assets API-huvud {#search-assets-api-header}
 
 Du måste ange följande information när du definierar en rubrik i API:t för sökresurser:
 
@@ -55,7 +55,7 @@ headers: {
     },
 ```
 
-Om du vill anropa API:t för sökning krävs en IMS-token för att definiera i `Authorization` information. IMS-token hämtas från ett tekniskt konto. Se [Hämta AEM as a Cloud Service autentiseringsuppgifter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=en#fetch-the-aem-as-a-cloud-service-credentials) för att skapa ett nytt tekniskt konto. Se [Genererar åtkomsttoken](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=en#generating-the-access-token) för att generera IMS-token och använda den på rätt sätt i API-begärandehuvudet för sökresurser.
+Om du vill anropa API:t för sökning krävs en IMS-token för att definiera i `Authorization` information. IMS-token hämtas från ett tekniskt konto. Se [Hämta AEM as a Cloud Service-autentiseringsuppgifter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=en#fetch-the-aem-as-a-cloud-service-credentials) för att skapa ett nytt tekniskt konto. Se [Genererar åtkomsttoken](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=en#generating-the-access-token) för att generera IMS-token och använda den på rätt sätt i API-begärandehuvudet för sökresurser.
 
-Information om hur du visar exempel på förfrågningar, svarsexempel och svarskoder finns i [API för sökresurser](https://adobe-aem-assets-delivery-experimental.redoc.ly/#operation/search).
+Information om hur du visar exempel på förfrågningar, svarsexempel och svarskoder finns i [Sök i Assets API](https://adobe-aem-assets-delivery-experimental.redoc.ly/#operation/search).
 

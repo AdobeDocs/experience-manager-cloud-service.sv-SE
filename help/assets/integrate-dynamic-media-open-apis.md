@@ -2,16 +2,16 @@
 title: Integrera AEM Assets med program längre fram i kedjan
 description: Integrera AEM Assets med program längre fram i kedjan
 role: User
-source-git-commit: 0ad9f349c997c35862e4f571b4741ed4c0c947e2
+source-git-commit: 540aa876ba7ea54b7ef4324634f6c5e220ad19d3
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%
 
 ---
 
-# Integrera AEM Assets med program längre fram i kedjan {#integrate-new-dynamic-media-apis}
+# Integrera AEM Assets med program längre fram i kedjan {#integrate-dynamic-media-open-apis}
 
-Alla [godkända tillgångar](approved-assets.md) som finns i Experience Manager resurslager finns tillgängliga för leverans till program i senare led.
+Alla [godkända tillgångar](approve-assets.md) som finns i Experience Manager resurslager finns tillgängliga för leverans till program i senare led.
 
 Du kan antingen integrera ditt eget anpassade användargränssnitt med Experience Manager Assets-databasen med hjälp av API:erna för sökning och leverans eller använda Adobe Micro-Frontend Resursväljare.
 
