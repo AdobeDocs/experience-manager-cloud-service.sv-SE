@@ -4,7 +4,8 @@ description: Ett anpassat formulär innehåller flera överföringsåtgärder. E
 keywords: hur man väljer en inskickningsåtgärd för ett tilläggsformulär, kopplar ett adaptivt formulär till SharePoint-listan, kopplar ett adaptivt formulär till SharePoint-dokumentbiblioteket, kopplar ett adaptivt formulär till formulärdatamodellen (FDM)
 feature: Adaptive Forms, Core Components
 exl-id: 495948e8-30a7-4e7c-952f-c71de15520f0
-source-git-commit: 520d07cbb4566f9d39a95ac890a9cd572114d710
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '672'
 ht-degree: 0%
@@ -22,7 +23,7 @@ ht-degree: 0%
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
-Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett anpassat formulär. Den aktiveras när en användare klickar på **[!UICONTROL Submit]** på ett adaptivt formulär. Forms as a Cloud Service, för Adaptive Forms baserat på kärnkomponenter, erbjuder en mängd färdiga Submit-åtgärder. Dessa färdiga sändningsåtgärder ger dig möjlighet att:
+Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett anpassat formulär. Den aktiveras när en användare klickar på **[!UICONTROL Submit]** på ett adaptivt formulär. Forms as a Cloud Service, för Adaptive Forms baserat på kärnkomponenter, erbjuder en rad fördefinierade Skicka-åtgärder. Dessa färdiga sändningsåtgärder ger dig möjlighet att:
 
 * Skicka enkelt formulärdata via e-post.
 * Initiera Microsoft® Power Automate-flöden eller AEM arbetsflöden när data skickas.
@@ -210,7 +211,7 @@ If end-user bypass those validations and submit the forms, the server again perf
 
 ## Felhantering vid Skicka-åtgärd {#error-handling-on-submit-action}
 
-Som en del av AEM riktlinjer för säkerhet och skärpa konfigurerar du anpassade felsidor som 400.jsp, 404.jsp och 500.jsp. Dessa hanterare anropas när ett formulär 400-, 404- eller 500-fel skickas. Hanterarna anropas också när dessa felkoder aktiveras på noden Publicera. Du kan också skapa JSP-sidor för andra HTTP-felkoder.
+Som en del av AEM riktlinjer för säkerhet och skärpa konfigurerar du anpassade felsidor som 400.jsp, 404.jsp och 500.jsp. Dessa hanterare anropas när ett formulär 400-, 404- eller 500-fel skickas. Hanterarna anropas också när dessa felkoder aktiveras på Publish-noden. Du kan också skapa JSP-sidor för andra HTTP-felkoder.
 
 När du förifyller en formulärdatamodell (FDM), eller schemabaserad adaptiv form med XML- eller JSON-data, till ett schema som inte innehåller data `<afData>`, `<afBoundData>`och `</afUnboundData>` -taggar, försvinner data i obegränsade fält i det adaptiva formuläret. Schemat kan vara ett XML-schema, ett JSON-schema eller en FDM (Form Data Model). Obegränsade fält är adaptiva formulärfält utan `bindref` -egenskap.
 

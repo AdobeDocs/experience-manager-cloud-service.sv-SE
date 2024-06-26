@@ -4,7 +4,8 @@ description: Lär dig hur du lägger till nya språkområden i ett adaptivt form
 feature: Adaptive Forms, Core Components
 Role: Developer, Author
 exl-id: bc06542b-84c8-4c6a-a305-effbd16d5630
-source-git-commit: 7d49be6d4f58078270fb15b10ef34e81dfa790cb
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '2068'
 ht-degree: 0%
@@ -96,7 +97,7 @@ Följ de här stegen för att lägga till stöd för nya språkområden i ett ad
 
 ### Klona din AEM as a Cloud Service Git-databas
 
-1. Öppna kommandoraden och välj en katalog där AEM as a Cloud Service databasen ska lagras, t.ex. `/cloud-service-repository/`.
+1. Öppna kommandoraden och välj en katalog där AEM as a Cloud Service-databasen ska lagras, t.ex. `/cloud-service-repository/`.
 
 1. Kör följande kommando för att klona databasen:
 
@@ -197,7 +198,7 @@ Det här kommandot hämtar hela databasen, inklusive clientlib-it-custom-locale-
 
 ### Integrera exempelklientbiblioteket
 
-Nu ska vi lägga in `clientlib-it-custom-locale` bibliotek till din AEM as a Cloud Service, [AEMaaCS-projektkatalog]:
+Nu ska vi lägga in `clientlib-it-custom-locale` bibliotek i din AEM as a Cloud Service, [AEMaaCS-projektkatalog]:
 
 1. Leta reda på exempelklientbiblioteket:
 
@@ -326,7 +327,7 @@ Det här steget gäller endast för andra språk än de som stöds vanligtvis: e
 
 Nu kan du börja använda det nya språkområdet med din adaptiva Forms. Du kan
 
-* Driftsätt AEM as a Cloud Service, [AEMaaCS-projektkatalog]till din lokala utvecklingsmiljö för att testa den nya språkkonfigurationen på din lokala dator. Så här distribuerar du till din lokala utvecklingsmiljö:
+* Driftsätt AEM as a Cloud Service [AEMaaCS-projektkatalog]till din lokala utvecklingsmiljö för att testa den nya språkkonfigurationen på din lokala dator. Så här distribuerar du till din lokala utvecklingsmiljö:
 
    1. Kontrollera att den lokala utvecklingsmiljön är igång och körs. Om du inte redan har konfigurerat en lokal utvecklingsmiljö, se guiden [Konfigurera lokal utvecklingsmiljö för AEM Forms](/help/forms/setup-local-development-environment.md).
 
@@ -340,7 +341,7 @@ Nu kan du börja använda det nya språkområdet med din adaptiva Forms. Du kan
       mvn -PautoInstallPackage clean install
       ```
 
-* Driftsätt AEM as a Cloud Service, [AEMaaCS-projektkatalog]i er Cloud Service. Så här distribuerar du till din Cloud Service:
+* Driftsätt AEM as a Cloud Service [AEMaaCS-projektkatalog]i er Cloud Service. Så här distribuerar du till din Cloud Service:
 
    1. Genomför dina ändringar:
 
@@ -357,7 +358,7 @@ Nu kan du börja använda det nya språkområdet med din adaptiva Forms. Du kan
 
 Med de här stegen får du hjälp att förhandsgranska ett adaptivt formulär med den nya språkinställningen:
 
-1. Logga in på din as a Cloud Service AEM Forms-instans.
+1. Logga in på din AEM Forms as a Cloud Service-instans.
 1. Gå till **Forms** >  **Forms och dokument**.
 1. Välj ett anpassat formulär och klicka på **Lägg till ordlista** och **Lägg till ordlista i översättningsprojekt** visas.
 1. Ange **Projektets titel** och väljer **Målspråk** i listrutan i **Lägg till ordlista i översättningsprojekt** guide.

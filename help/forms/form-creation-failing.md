@@ -1,9 +1,10 @@
 ---
 title: Hur felsöker man fel vid formulärframtagning?
-description: Felsöka fel när formulär skapas i AEM Forms as a Cloud Service miljö.
-feature: Adaptive Forms, Troubleshooting
+description: Felsöka fel när formulär skapas i AEM Forms as a Cloud Service-miljö.
+feature: Adaptive Forms
 role: User
-source-git-commit: 23491130b44147753c5b98f316be5a9e5937afea
+exl-id: 169ea727-0941-4a1d-bc33-d9fe208b27ab
+source-git-commit: 0b693cb51a96011235fa87a5899426c6b0c2509a
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 0%
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 # Problem vid publicering av formulär{#form-creation-fails}
 
-Efter uppdatering till AEM Forms as a Cloud Service `2024.5.16461`:
+Efter att användare har uppdaterat till AEM Forms as a Cloud Service `2024.5.16461`:
 
 **Vissa användare** kan stöta på problem när formulär skapas: när en användare skapar ett formulär visas följande felmeddelande i dialogrutan Skapa:
 
@@ -27,9 +28,9 @@ Problemet inträffar eftersom författaren publicerar formuläret utan **först 
 Så här löser du problemet:
 
 1. Kontrollera att mallen som du använder i formuläret inte har `jcr:uuid` och andra systemgenererade skyddade egenskaper på sökvägen `<template-path>/initial/jcr:content node`.
-1. Publicera mallen explicit med mallkonsolen.
+1. Publish mallen explicit med mallkonsolen.
 1. När mallen har publicerats kan du testa att skapa nya formulär med hjälp av mallen.
-1. Om mallen som du använde uppdaterar i de kommande versionerna ska du publicera mallen igen (som i steg 2) för att förhindra problem med att skapa formulär.
+1. Om mallen som du använde uppdaterar i de kommande versionerna, Publish mallen igen (som i steg 2) för att förhindra problem med att skapa formulär.
 
 
 <!--
@@ -55,13 +56,3 @@ To resolve the issue, perform the following workaround steps:
 1. If the template is changed in the future, publish it again as mentioned in the step 1.
 
 -->
-
-
-
-
-
-
-
-
-
-

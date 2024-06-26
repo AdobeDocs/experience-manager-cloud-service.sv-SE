@@ -8,7 +8,8 @@ feature: Adaptive Forms, Foundation Components
 discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
 exl-id: e4d8bcb9-ce1f-425e-b35c-d0a79fa771f3
-source-git-commit: 46cd7d689c6cbc453720b5798ffb552da58f66e7
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '2135'
 ht-degree: 0%
@@ -137,7 +138,7 @@ Utför följande steg för att visa fullständiga fragment i formulär:
 De adaptiva formulärfragment som du skapar visas på fliken Adaptiva formulärfragment i AEM innehållssökning. Så här infogar du ett adaptivt formulärfragment i ett adaptivt format:
 
 1. Öppna det adaptiva formuläret i redigeringsläge där du vill infoga ett adaptivt formulärfragment.
-1. Klicka **Resurser** ![assets-browser](assets/assets-browser.png) i sidlisten. Välj **Adaptiva formulärfragment** i listrutan.
+1. Klicka **Assets** ![assets-browser](assets/assets-browser.png) i sidlisten. Välj **Adaptiva formulärfragment** i listrutan.
 
    Du kan också välja att visa alla adaptiva formulärfragment eller filter baserat på formulärmodellen - Formulärmall, XML-schema eller Grundläggande.
 
@@ -230,7 +231,7 @@ Du kan utföra flera åtgärder på adaptiva formulärfragment med [!DNL AEM For
    <td><p>Skapar en ordlista för lokalisering av det valda fragmentet. <!-- For more information, see <a href="lazy-loading-adaptive-forms.md" target="_blank">Localizing Adaptive Forms</a>.<br /> <br /> --> </p> </td>
   </tr>
   <tr>
-   <td><p>Publicera/avpublicera</p> </td>
+   <td><p>Publish / Avpublicera</p> </td>
    <td><p>Publicerar/avpublicerar det markerade fragmentet.<br /> <br /> </p> </td>
   </tr>
   <tr>

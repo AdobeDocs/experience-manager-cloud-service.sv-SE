@@ -2,15 +2,15 @@
 title: Vad är adaptiva Forms-reserverade nyckelord?
 description: Reserverade nyckelord som du inte kan använda som identifierare i din adaptiva Forms.
 topic-tags: author
-role: Admin, Developer, User
+role: User, Developer
 feature: Adaptive Forms
-source-git-commit: 6511c4273ca3d394d98a61e8acb4d3cb03c243d5
+exl-id: 2cd3c322-9c38-42be-9877-a03c9ffc02ae
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 0%
 
 ---
-
 
 # Adaptiva Forms-nyckelord {#adaptive-forms-keywords}
 

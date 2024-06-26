@@ -3,7 +3,8 @@ title: Hur kan vi skapa och använda teman för att utforma ett anpassat formul�
 description: Använd adaptiva formulärteman för att utforma och ge en visuell identitet till ett adaptivt formulär. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
 feature: Adaptive Forms, Foundation Components
 exl-id: 99c3d1f7-5756-49d2-98ee-72dd62063110
-source-git-commit: eaab351460363b83c7d3667e048235506cc71c41
+role: User, Developer, Admin
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '5421'
 ht-degree: 0%
@@ -146,13 +147,13 @@ Lista med metaegenskaper för ett tema (finns på egenskapssidan för ett tema).
   </tr>
   <tr>
    <td>8.</td>
-   <td>Publicera i tid</td>
+   <td>Publish i tid</td>
    <td>Ja</td>
    <td>Det är dags att automatiskt publicera temat.</td>
   </tr>
   <tr>
    <td>9.</td>
-   <td>Publicera utanför tid</td>
+   <td>Publish off Time</td>
    <td>Ja</td>
    <td>Det är dags att automatiskt avpublicera temat.</td>
   </tr>
@@ -600,7 +601,7 @@ När du har anpassat temat kan du använda det i formuläret <!-- or interactive
 
 ## Inverkan på andra användningsområden för anpassade formulär {#impact-on-other-adaptive-form-use-cases}
 
-* **Publicera/avpublicera ett formulär:** När du publicerar ett formulär publiceras även det tema som används på (om det inte redan är publicerat)
+* **Publish/avpublicera ett formulär:** När du publicerar ett formulär publiceras även det tema som används på (om det inte redan är publicerat)
 * **Importera/exportera ett formulär:** När du importerar eller exporterar ett formulär importeras eller exporteras även det tillhörande temat automatiskt.
 * **Referenser till ett formulär:** Avsnittet Referenser i formulärreferenser innehåller en extra post för temat.
 * **Senast ändrad i ett formulär:** Uppdaterades när det associerade temat ändras.

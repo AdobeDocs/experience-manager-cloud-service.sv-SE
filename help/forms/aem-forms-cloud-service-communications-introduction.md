@@ -1,17 +1,18 @@
 ---
-title: Vad är Forms API:er för as a Cloud Service Communication?
+title: Vad är Forms as a Cloud Service kommunikations-API:er?
 description: Använd kommunikations-API:er för att signera, certifiera eller skydda dina dokument, för att automatisera PDF-genereringsprocesser och för att konvertera PDF-dokument till ett annat format.
 Keywords: How to generate document?, Generate PDF document, Manipulation PDF documents, Assembling PDF documents, Validating PDF document, APIs used in encrypting or decrypting PDFs.
-feature: Adaptive Forms, APIs
+feature: Adaptive Forms, APIs & Integrations
 role: Admin, Developer, User
-source-git-commit: 92811662e1ef9b6cbd5cb66c67f774109745bc68
+exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '2281'
 ht-degree: 1%
 
 ---
 
-# AEM Forms API:er för as a Cloud Service Communication {#frequently-asked-questions}
+# AEM Forms as a Cloud Service Communication APIs {#frequently-asked-questions}
 
 ![Hero Image](assets/cloud-communication-apis-hero-image.jpeg)
 
@@ -58,7 +59,7 @@ Du kan använda API:erna för dokumentgenerering för att skapa ett PDF-dokument
 ![Skapa PDF-dokument](assets/outPutPDF_popup.png)
 Bild: Vanligt arbetsflöde för att skapa ett PDF-dokument
 
-### Skapa PostScript-dokument (PS), skrivarkommandodokument (PCL), ZPL-dokument (Zebra Printing Language) {#create-PS-PCL-ZPL-documents}
+### Skapa dokument för PostScript (PS), Printer Command Language (PCL) och Zebra Printing Language (ZPL) {#create-PS-PCL-ZPL-documents}
 
 Du kan använda API:er för dokumentgenerering för att skapa dokument i formaten PostScript (PS), Printer Command Language (PCL) och Zebra Printing Language (ZPL) som baseras på en XDP-formulärdesign eller ett PDF-dokument. Dessa API:er hjälper till att sammanfoga en formulärdesign med formulärdata för att generera ett dokument. Du kan spara dokumentet i en fil och utveckla en anpassad process för att skicka det till en skrivare.
 
@@ -298,11 +299,11 @@ Kommunikationen tillhandahåller HTTP-API:er för on demand- och batchdokumentge
 
 ## Onboarding
 
-Kommunikationskapaciteten är tillgänglig som en fristående modul och tilläggsmodul för as a Cloud Service Forms-användare. Du kan kontakta Adobe säljteam eller din Adobe-representant för att få åtkomst. Adobe aktiverar åtkomst för organisationen och tillhandahåller behörigheter åt den person som utses till administratör i organisationen. Administratören kan ge Forms as a Cloud Service utvecklare (användare) tillgång till organisationens API:er.
+Kommunikationskapaciteten är tillgänglig som en fristående modul och tilläggsmodul för Forms as a Cloud Service användare. Du kan kontakta Adobe säljteam eller din Adobe-representant för att få åtkomst. Adobe aktiverar åtkomst för organisationen och tillhandahåller behörigheter åt den person som utses till administratör i organisationen. Administratören kan ge Forms as a Cloud Service utvecklare (användare) i organisationen åtkomst till API:erna.
 
-Efter introduktionen, för att aktivera kommunikationsfunktioner för din as a Cloud Service Forms-miljö:
+Efter introduktionen, för att aktivera kommunikationsfunktioner för din Forms as a Cloud Service miljö:
 
-1. Logga in på Cloud Manager och öppna din as a Cloud Service AEM Forms-instans.
+1. Logga in på Cloud Manager och öppna AEM Forms as a Cloud Service Instance.
 
 1. Öppna alternativet Redigera program, gå till fliken Lösningar och tillägg och välj **[!UICONTROL Forms - Communications]** alternativ.
 

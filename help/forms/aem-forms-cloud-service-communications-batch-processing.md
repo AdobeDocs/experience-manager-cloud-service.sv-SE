@@ -1,17 +1,17 @@
 ---
 title: Skapa PDF i batch utan ansträngning - Lär dig mer om konsten med batchbearbetning - Självhjälp för att generera miljontals PDF-dokument!
 description: Hur skapar man varumärkesorienterad och personaliserad kommunikation?
-feature: Adaptive Forms, APIs
+feature: Adaptive Forms, APIs & Integrations
 role: Admin, Developer, User
 exl-id: 542c8480-c1a7-492e-9265-11cb0288ce98
-source-git-commit: 975f767e75a268a1638227ae20a533f82724c80a
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '1706'
 ht-degree: 0%
 
 ---
 
-# Batchbearbetning av AEM Forms as a Cloud Service Communications
+# AEM Forms as a Cloud Service Communications Batch Processing
 
 Med kommunikation kan ni skapa, sammanställa och leverera varumärkesorienterad och personaliserad kommunikation som affärskontakter, dokument, kontoutdrag, kravbrev, förmånsmeddelanden, månadsräkningar och välkomstpaket. Du kan använda API:er för kommunikation för att kombinera en mall (XFA eller PDF) med kunddata för att generera dokument i formaten PDF, PS, PCL, DPL, IPL och ZPL.
 
@@ -98,7 +98,7 @@ Din Experience Manager-instans är nu redo att ansluta till Microsoft Azure Stor
 
 ### Skapa konfiguration för batchdatalager {#create-batch-data-store-configuration}
 
-Med batchdatakonfigurationen kan du konfigurera behållare och mappar för indata och utdata. Du sparar dina kundposter i källmappen och genererade dokument placeras i målmappen.
+Med batchdatakonfigurationen kan du konfigurera behållare och mappar för indata och utdata. Du sparar dina kundposter i Source-mappen och genererade dokument placeras i målmappen.
 
 Så här skapar du konfigurationen:
 
@@ -106,7 +106,7 @@ Så här skapar du konfigurationen:
 1. Öppna en mapp som är värd för konfigurationen och klicka på Skapa. Du använder mappen Global eller skapar en mapp.
 1. Ange namn och namn på konfigurationen. I Lagring väljer du Microsoft Azure Storage.
 1. I Sökväg till lagringskonfiguration bläddrar du till och väljer den molnkonfiguration som innehåller autentiseringsuppgifter för det kundägda Azure-lagringskontot.
-1. I källmappen anger du namnet på Azure Storage-behållaren och mappen som innehåller poster.
+1. Ange namnet på Azure Storage-behållaren och mappen som innehåller poster i Source-mappen.
 1. Ange sökvägen till Azure Storage-behållaren och mappen där de genererade dokumenten ska lagras i målmappen.
 1. Klicka på Skapa.
 

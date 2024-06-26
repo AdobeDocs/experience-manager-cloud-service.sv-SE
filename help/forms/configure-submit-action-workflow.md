@@ -3,13 +3,15 @@ Title: How to integrate AEM workflow with an Adaptive Form?
 Description: Explore the process of automated workflow initiation with AEM Forms Submit Action.
 keywords: AEM arbetsflöde, Integrera anpassat formulär med AEM arbetsflöde, Anropa AEM Skicka åtgärd
 feature: Adaptive Forms, Core Components
-source-git-commit: 95af49839d206f67ac02116730229f5b0531c5bb
+exl-id: b7788e3d-acd8-4867-b232-f9767cf6b2f5
+title: "Hur konfigurerar jag en Skicka-åtgärd för ett anpassat formulär?"
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '621'
 ht-degree: 0%
 
 ---
-
 
 # Integrera AEM anpassat formulär med AEM arbetsflöde: Effektivisera affärsprocesser
 
@@ -19,7 +21,7 @@ The **[!UICONTROL Invoke an AEM Workflow]** Åtgärden Skicka associerar ett anp
 >
 >  Lär dig hur [skapa en arbetsflödesmodell](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=en#extending-aem) för att definiera serie steg som körs när en användare startar arbetsflödet. Du kan också definiera modellegenskaper, t.ex. om arbetsflödet är tillfälligt eller använder flera resurser.
 
-AEM as a Cloud Service erbjuder olika åtgärder för att skicka in formulär. Du kan läsa mer om de här alternativen i [Inlämningsåtgärd för anpassat formulär](/help/forms/configure-submit-actions-core-components.md)  artikel.
+AEM as a Cloud Service erbjuder olika inskickningsåtgärder för att hantera inskickade formulär. Du kan läsa mer om de här alternativen i [Inlämningsåtgärd för anpassat formulär](/help/forms/configure-submit-actions-core-components.md)  artikel.
 
 ## Fördelar
 

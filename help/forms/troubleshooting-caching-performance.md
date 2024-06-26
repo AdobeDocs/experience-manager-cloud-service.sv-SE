@@ -2,10 +2,10 @@
 title: Hur felsöker vi cachningsrelaterade problem för AEM Forms as a Cloud Service?
 description: Felsöka problem med cachelagring för AEM Forms as a Cloud Service.
 contentOwner: khsingh
-feature: Adaptive Forms, Troubleshooting
+feature: Adaptive Forms
 role: User
 exl-id: eae44a6f-25b4-46e9-b38b-5cec57b6772c
-source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
+source-git-commit: 0b693cb51a96011235fa87a5899426c6b0c2509a
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 Följande problem kan uppstå när du konfigurerar eller använder Adaptiv Forms-cache i en Cloud Service-miljö:
 
-## En del anpassningsbara Forms som innehåller bilder eller videor ogiltigförklaras inte automatiskt från Dispatcher-cachen {#images-videos-not-invalidated}
+## En del anpassningsbara Forms som innehåller bilder eller videor ogiltigförklaras inte automatiskt från Dispatcher cache {#images-videos-not-invalidated}
 
-Du kan välja och lägga till bilder eller videoklipp från en filläsare i ett anpassat formulär. När dessa bilder redigeras i Resursredigeraren blir den cachelagrade versionen av ett adaptivt formulär som innehåller sådana bilder inte ogiltig. Det adaptiva formuläret fortsätter att visa äldre bilder.
+Du kan välja och lägga till bilder eller videoklipp från en filläsare i ett anpassat formulär. När dessa bilder redigeras i Assets Editor blir den cachelagrade versionen av ett adaptivt formulär som innehåller sådana bilder inte ogiltig. Det adaptiva formuläret fortsätter att visa äldre bilder.
 
 För att lösa problemet måste du efter att ha publicerat bilder och video uttryckligen avpublicera och publicera den adaptiva Forms som refererar till dessa resurser.
 
-## En del anpassningsbara Forms som innehåller innehållsfragment eller Experience Fragments ogiltigförklaras inte automatiskt från Dispatcher-cachen {#content-fragments-experience-fragments-not-invalidated}
+## En del anpassningsbara Forms som innehåller innehållsfragment eller Experience Fragments ogiltigförklaras inte automatiskt från Dispatcher cache {#content-fragments-experience-fragments-not-invalidated}
 
 Du kan lägga till ett innehålls- eller upplevelsefragment i ett anpassat formulär. När dessa fragment redigeras och publiceras separat blir den cachelagrade versionen av ett adaptivt formulär som innehåller sådana fragment inte ogiltig. Det adaptiva formuläret fortsätter att visa äldre fragment.
 

@@ -3,13 +3,15 @@ Title: How to send an email on submission of an Adaptive Form?
 Description: Explore the process to set up email notifications when submitting an Adaptive Form.
 keywords: Skicka ett e-postmeddelande för ett tilläggsformulär, Skicka med e-post, Adaptiv e-post, Skicka e-post med formulär, Skicka e-postguide
 feature: Adaptive Forms, Core Components
-source-git-commit: f1db04e6cd1f78c1530aefd29f5f036ca5e70873
+exl-id: 70386e57-345b-4edb-97f1-3fd52ea9ff4f
+title: "Hur konfigurerar jag en Skicka-åtgärd för ett anpassat formulär?"
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '425'
 ht-degree: 1%
 
 ---
-
 
 # Konfigurera åtgärden Skicka e-post för ett anpassat formulär
 
@@ -63,11 +65,9 @@ Så här konfigurerar du åtgärden Skicka:
 
 * Vi rekommenderar att du håller e-postinnehållet klart och koncist. Användarna bör förstå syftet med e-postmeddelandet och de åtgärder de behöver vidta.
 * Det rekommenderas att alla formulärfält har unika elementnamn, även om de finns på olika paneler i ett adaptivt formulär.
-* När du använder AEM as a Cloud Service måste du kryptera utgående e-post. Som standard är funktionen för utgående e-post inaktiverad. Om du vill aktivera det skickar du en supportanmälan till [begära åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email).
+* När du använder AEM as a Cloud Service kräver utgående e-post kryptering. Som standard är funktionen för utgående e-post inaktiverad. Om du vill aktivera det skickar du en supportanmälan till [begära åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email).
 
 
 ## Relaterade artiklar
 
 {{af-submit-action}}
-
-

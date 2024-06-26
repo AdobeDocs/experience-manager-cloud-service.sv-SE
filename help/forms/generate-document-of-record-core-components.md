@@ -3,7 +3,8 @@ title: Hur skapar man urkunder för Adaptive Forms?
 description: Lär dig att generera en mall för ett dokument för inspelning (Document of Record, DoR) för adaptiva Forms Core-komponenter.
 feature: Adaptive Forms, Core Components
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
-source-git-commit: 54fa7ae32fa2882d844fd1c0eb0962b6b01885a5
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '3029'
 ht-degree: 0%
@@ -290,7 +291,7 @@ En basmall används för att definiera sidhuvud, sidfot, format och utseende fö
 
 * Egenskaperna för dessa fält används för fälten i postdokumentet. Dessa fält ska följa `AF_<name of field in all caps>_XFO` namnkonvention. Fältnamnet för kryssrutan bör till exempel vara `AF_CHECKBOX_XFO`.
 
-Så här skapar du en basmall i Forms Designer.
+Så här skapar du en basmall: Forms Designer.
 
 1. Klicka **[!UICONTROL File]** > **[!UICONTROL New]**.
 1. Välj **[!UICONTROL Based on a template]** alternativ.
@@ -360,7 +361,7 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
 
    >[!NOTE]
    >
-   >Om du använder en mall för adaptiva formulär som skapats med en tidigare version av Designer än 6.3, för att egenskaperna för dekorfärg och teckensnittsfamilj ska fungera, kontrollerar du att följande finns i mallen för adaptiva formulär under rotdelformuläret:
+   >Om du använder en mall för adaptiva formulär som har skapats med en tidigare version av Designer än 6.3 måste du se till att följande finns i mallen för adaptiva färger och teckensnittsfamiljer under rotdelformuläret:
 
    ```xml
    <proto>

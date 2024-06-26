@@ -5,7 +5,8 @@ topic-tags: Adaptive Forms, author
 keywords: Google reCAPTCHA-tjänst, Adaptiv Forms, CAPTCHA-utmaning, startalternativ, kärnkomponenter, säkerhet för inskickande av formulär, skydd mot skräppost
 feature: Adaptive Forms, Core Components
 exl-id: d116f979-efb6-4fac-8202-89afd1037b2c
-source-git-commit: d2c6514eb1f38b06dfa58daa03b781920b8928f6
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '889'
 ht-degree: 0%
@@ -35,8 +36,8 @@ Formulärförfattare kan använda tjänsten reCAPTCHA från Google för att impl
 1. Hämta [API-nyckelpar för reCAPTCHA](https://www.google.com/recaptcha/admin) från Google. Den innehåller **webbplatsnyckel** och **hemlig nyckel**.
 
    ![Skapa Google reCAPTCHA-konfiguration av Google webbplats för att få reCAPTCHA-nycklar](/help/forms/assets/google-captcha.gif)
-1. Skapa en konfigurationsbehållare i din AEM Forms as a Cloud Service miljö. En konfigurationsbehållare innehåller molnkonfigurationer som används för att ansluta AEM till externa tjänster. Så här skapar och konfigurerar du en Configuration Container för att ansluta AEM Forms-miljön till reCAPTCHA-tjänsten från Google:
-   1. Öppna din as a Cloud Service AEM Forms-instans.
+1. Skapa en konfigurationsbehållare i din AEM Forms as a Cloud Service-miljö. En konfigurationsbehållare innehåller molnkonfigurationer som används för att ansluta AEM till externa tjänster. Så här skapar och konfigurerar du en Configuration Container för att ansluta AEM Forms-miljön till reCAPTCHA-tjänsten från Google:
+   1. Öppna din AEM Forms as a Cloud Service-instans.
    1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**. I Configuration Browser kan du:
    1. Välj en befintlig mapp eller skapa en mapp. Du kan skapa en mapp och aktivera alternativet Cloud Configurations för den eller Aktivera alternativet Cloud Configurations för en befintlig mapp:
 
@@ -62,7 +63,7 @@ Formulärförfattare kan använda tjänsten reCAPTCHA från Google för att impl
 
 Så här använder du reCAPTCHA i Adaptive Forms:
 
-1. Öppna din as a Cloud Service AEM Forms-instans.
+1. Öppna din AEM Forms as a Cloud Service-instans.
 1. Gå till **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents]**.
 1. Välj en adaptiv Forms och välj **[!UICONTROL Properties]**. För **[!UICONTROL Configuration Container]** väljer du den konfigurationsbehållare som innehåller molnkonfigurationen som ansluter AEM Forms till reCAPTCHA-tjänsten av Google och väljer **[!UICONTROL Save & Close]**.
 

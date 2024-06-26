@@ -2,10 +2,10 @@
 title: Hur konfigurerar jag asynkron sändning för AEM Adaptive Forms?
 description: Lär dig hur du konfigurerar asynkron överföring för Adaptive Forms. Läs mer om hur asynkron inlämning fungerar för Adaptive Forms.
 feature: Adaptive Forms, Foundation Components
-role: User
+role: User, Developer
 level: Intermediate
 exl-id: 026f4920-f8f9-4b08-b1b0-af50229633d7
-source-git-commit: eaab351460363b83c7d3667e048235506cc71c41
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '716'
 ht-degree: 0%

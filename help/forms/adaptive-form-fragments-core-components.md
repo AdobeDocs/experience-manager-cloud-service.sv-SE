@@ -5,7 +5,8 @@ topic-tags: author
 keywords: Lägg till adaptiva formulärfragment, adaptiva formulärfragment, skapa ett formulärfragment, lägga till ett fragment i ett adaptivt formulär, hantera fragment
 feature: Adaptive Forms, Core Components
 exl-id: 3a9ad1b7-2f6f-4ca9-a1c9-549c4238c59e
-source-git-commit: 46cd7d689c6cbc453720b5798ffb552da58f66e7
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '1348'
 ht-degree: 0%
@@ -163,7 +164,7 @@ Du kan utföra flera åtgärder på adaptiva formulärfragment med hjälp av AEM
    <td><p>Skapar en ordlista för lokalisering av det valda fragmentet. Mer information finns i <a>Lokalisera adaptiv Forms</a>.<br /> <br /> </p> </td>
   </tr>
   <tr>
-   <td><p>Publicera/avpublicera</p> </td>
+   <td><p>Publish / Avpublicera</p> </td>
    <td><p>Publicerar/avpublicerar det markerade fragmentet.<br /> <br /> </p> </td>
   </tr>
   <tr>

@@ -1,10 +1,11 @@
 ---
 title: Hur lägger man till ett adaptivt formulär på en AEM Sites-sida?
 description: Upptäck hur du skapar eller lägger till ett anpassat formulär på din AEM Sites-sida. Lär dig även fördelarna och olika sätt att integrera formulär på din webbplats.
-feature: Adaptive Forms, Foundation Components, Page Editor, Authoring
+feature: Adaptive Forms, Foundation Components
 Keywords: AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
 exl-id: a1846c5d-7b0f-4f48-9d15-96b2a8836a9d
-source-git-commit: 38e11538cdf3777a91a5ca60f83f8a95cd410c00
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '3095'
 ht-degree: 0%
@@ -73,7 +74,7 @@ Innan du börjar skapa eller skapa ett adaptivt formulär ska du aktivera adapti
 
 +++  Aktivera adaptiva Forms Core-komponenter för din AEM Cloud Service-miljö
 
-Se till att [Adaptiva Forms Core-komponenter är aktiverade för din as a Cloud Service AEM Forms-miljö](enable-adaptive-forms-core-components.md).
+Se till att [Adaptiva Forms Core-komponenter är aktiverade för din AEM Forms as a Cloud Service miljö](enable-adaptive-forms-core-components.md).
 
 +++
 
@@ -120,7 +121,7 @@ Om du vill aktivera alla funktioner för den adaptiva Forms-behållarkomponenten
        </sly> 
    ```
 
-1. [Kör distributionsflödet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/enable-front-end-pipeline.html) för att distribuera klientbiblioteken till din AEM as a Cloud Service miljö.
+1. [Kör distributionsflödet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/enable-front-end-pipeline.html) för att distribuera klientbiblioteken till din AEM as a Cloud Service-miljö.
 
 +++
 
@@ -206,7 +207,7 @@ Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett a
 
 ## Konfigurera ett schema eller en formulärdatamodell (FDM) för ett formulär på en AEM Sites-sida eller i ett Experience Fragment {#configure-schema-or-data-model-for-form}
 
-Du kan använda formulärdatamodellen (FDM) för att ansluta ett formulär till en datakälla för att skicka och ta emot data baserat på användaråtgärder. Du kan också ansluta ett formulär till ett JSON-schema för att ta emot skickade data i ett fördefinierat format. Beroende på behovet kan du ansluta formuläret till ett JSON-schema eller en formulärdatamodell (FDM):
+Du kan använda formulärdatamodellen (FDM) för att ansluta ett formulär till en Data Source för att skicka och ta emot data baserat på användaråtgärder. Du kan också ansluta ett formulär till ett JSON-schema för att ta emot skickade data i ett fördefinierat format. Beroende på behovet kan du ansluta formuläret till ett JSON-schema eller en formulärdatamodell (FDM):
 
 * [Skapa ett JSON-schema och överför det till din miljö](/help/forms/adaptive-form-json-schema-form-model.md)  eller
 * [Skapa en formulärdatamodell (FDM)](/help/forms/create-form-data-models.md)

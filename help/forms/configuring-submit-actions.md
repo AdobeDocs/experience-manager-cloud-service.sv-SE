@@ -3,7 +3,8 @@ title: Hur konfigurerar man en Skicka-åtgärd för ett anpassat formulär?
 description: Ett anpassat formulär innehåller flera överföringsåtgärder. En Skicka-åtgärd definierar hur ett anpassat formulär ska bearbetas när det har skickats in. Du kan använda inbyggda Skicka-åtgärder eller skapa egna.
 feature: Adaptive Forms, Foundation Components
 exl-id: a4ebedeb-920a-4ed4-98b3-2c4aad8e5f78
-source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '3710'
 ht-degree: 0%
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 **Gäller för**: ✔️ adaptiva grundkomponenter. ❌ [Kärnkomponenter i adaptiv form](/help/forms/configure-submit-actions-core-components.md). Adobe rekommenderar att du använder kärnkomponenter för att [lägga till adaptiv Forms på en AEM Sites-sida](create-or-add-an-adaptive-form-to-aem-sites-page.md) eller till [skapa fristående Adaptive Forms](creating-adaptive-form-core-components.md).
 
-En Skicka-åtgärd aktiveras när en användare klickar på **[!UICONTROL Submit]** på ett adaptivt formulär. Forms as a Cloud Service innehåller följande inskickningsåtgärder.
+En Skicka-åtgärd aktiveras när en användare klickar på **[!UICONTROL Submit]** på ett adaptivt formulär. Forms as a Cloud Service tillhandahåller följande Skicka-åtgärder direkt.
 
 * [Skicka till REST-slutpunkt](#submit-to-rest-endpoint)
 * [Skicka e-post](#send-email)
@@ -400,7 +401,7 @@ Du kan konfigurera ett adaptivt formulär så att det kör ett Microsoft® Power
 * Utför komplexa beräkningar på inhämtade data
 * Spara adaptiva Forms-data i lagringssystemen enligt ett fördefinierat schema
 
-Adaptive Forms editor har **Anropa ett Microsoft® Power Automate-flöde** Skicka-åtgärd för att skicka adaptiva formulärdata, bilagor och arkivdokument till Power Automate Cloud Flow. Om du vill skicka inhämtade data till Microsoft® Power Automate med åtgärden Skicka [Koppla samman din as a Cloud Service Forms-instans med Microsoft® Power Automate](forms-microsoft-power-automate-integration.md)
+Adaptive Forms editor har **Anropa ett Microsoft® Power Automate-flöde** Skicka-åtgärd för att skicka adaptiva formulärdata, bilagor och arkivdokument till Power Automate Cloud Flow. Om du vill skicka inhämtade data till Microsoft® Power Automate med åtgärden Skicka [Koppla samman din Forms as a Cloud Service-instans med Microsoft® Power Automate](forms-microsoft-power-automate-integration.md)
 
 När konfigurationen är klar använder du [Anropa ett Microsoft® Power Automate-flöde](forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action) skicka-åtgärd för att skicka data till ett Power Automate-flöde.
 
@@ -460,7 +461,7 @@ Författaren kan konfigurera customJavaScript-bibliotek per adaptiv form. I bibl
 
 ## Felhantering vid Skicka-åtgärd {#error-handling-on-submit-action}
 
-Som en del av AEM riktlinjer för säkerhet och skärpa konfigurerar du anpassade felsidor som 400.jsp, 404.jsp och 500.jsp. Dessa hanterare anropas när ett formulär 400-, 404- eller 500-fel skickas. Hanterarna anropas också när dessa felkoder aktiveras på noden Publicera. Du kan också skapa JSP-sidor för andra HTTP-felkoder.
+Som en del av AEM riktlinjer för säkerhet och skärpa konfigurerar du anpassade felsidor som 400.jsp, 404.jsp och 500.jsp. Dessa hanterare anropas när ett formulär 400-, 404- eller 500-fel skickas. Hanterarna anropas också när dessa felkoder aktiveras på Publish-noden. Du kan också skapa JSP-sidor för andra HTTP-felkoder.
 
 När du förifyller en formulärdatamodell (FDM), eller schemabaserad adaptiv form med XML- eller JSON-data, till ett schema som inte innehåller data `<afData>`, `<afBoundData>`och `</afUnboundData>` -taggar, försvinner data i obegränsade fält i det adaptiva formuläret. Schemat kan vara ett XML-schema, ett JSON-schema eller en FDM (Form Data Model). Obegränsade fält är adaptiva formulärfält utan `bindref` -egenskap.
 

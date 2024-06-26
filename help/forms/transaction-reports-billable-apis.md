@@ -3,7 +3,8 @@ title: Fakturerbara API:er för transaktionsrapporter
 description: Lista över alla API:er som räknas som transaktioner
 feature: Adaptive Forms, Foundation Components
 exl-id: 6dfcac3e-5654-4b4f-9134-0cd8be24332e
-source-git-commit: df4fbe8552ad61df3a8e8b44dcd1427b8f6e9240
+role: Admin, Developer, User
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '1438'
 ht-degree: 0%

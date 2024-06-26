@@ -3,10 +3,10 @@ title: Hur kan vi använda Adobe Sign i en adaptiv form?
 description: Använd Adobe Sign i ett adaptivt formulär för att låta formulärmottagarna e-signera ett formulär från valfri enhet.
 topic-tags: develop
 feature: Adaptive Forms, Foundation Components
-role: User
+role: User, Developer
 level: Intermediate
 exl-id: cde9523e-5409-4edd-af0f-2c2575cc22ea
-source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '3071'
 ht-degree: 0%
@@ -48,7 +48,7 @@ I en typisk [!DNL Adobe Sign] och Adaptiv Forms-scenario fyller en användare i 
 
 Innan du använder [!DNL Adobe Sign] i anpassad form:
 
-* Se till att [!DNL AEM Forms] as a Cloud Service är konfigurerad att använda Adobe Sign. Mer information finns i [Integrera Adobe Sign med [!DNL AEM Forms]](adobe-sign-integration-adaptive-forms.md).
+* Se till att [!DNL AEM Forms] as a Cloud Service är konfigurerat att använda Adobe Sign. Mer information finns i [Integrera Adobe Sign med [!DNL AEM Forms]](adobe-sign-integration-adaptive-forms.md).
 * Håll listan över mottagare klar. Du måste ange minst en e-postadress för varje mottagare.
 
 ## Konfigurera [!DNL Adobe Sign] för ett adaptivt formulär {#configure-adobe-sign-for-an-adaptive-form}
@@ -230,7 +230,7 @@ Du kan ha en eller flera mottagare för ett Adobe Sign-avtal. När du lägger ti
 
 Efter dig lägger du till [!DNL Adobe Sign] fält till ett adaptivt formulär, aktivera [!DNL Adobe Sign] från formulärbehållare, välj [!DNL Adobe Sign] Cloud Service och lägg till mottagare av Adobe Sign-avtal genom att välja en lämplig Skicka-åtgärd för det anpassade formuläret. Detaljerad information om adaptiva Forms Submit Actions finns i [Konfigurera åtgärden Skicka](configuring-submit-actions.md).
 
-Att signera och skicka ett formulär är oberoende av varandra. Överföring av anpassade formulär sker så snart ett Adobe Sign-avtal har skapats efter att en användare har skickat in ett formulär. [!DNL AEM Forms] as a Cloud Service väntar inte på att mottagarna ska signera eller slutföra andra åtgärder för att skicka ett adaptivt formulär. Ett formulär skickas så snart en användare klickar på Skicka-knappen eller ett steg Sammanfattning visar sammanfattningen av formuläret.
+Att signera och skicka ett formulär är oberoende av varandra. Överföring av anpassade formulär sker så snart ett Adobe Sign-avtal har skapats efter att en användare har skickat in ett formulär. [!DNL AEM Forms] as a Cloud Service väntar inte på att mottagarna ska signera eller slutföra andra åtgärder för att skicka ett anpassat formulär. Ett formulär skickas så snart en användare klickar på Skicka-knappen eller ett steg Sammanfattning visar sammanfattningen av formuläret.
 
 Dessutom, en [!DNL Adobe Sign] aktiverat anpassat formulär bäddar in Adobe Sign avtals-ID:t så att data skickas. Du kan använda avtals-ID för att spåra avtalsstatus med hjälp av anpassad kod (kräver anpassad implementering).
 

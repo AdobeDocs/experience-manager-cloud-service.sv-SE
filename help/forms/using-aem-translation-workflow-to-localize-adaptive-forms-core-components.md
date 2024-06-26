@@ -3,7 +3,8 @@ title: Hur kan vi översätta en grundkomponentbaserad adaptiv form?
 description: Lär dig skapa en formulärdatamodell (FDM) i AEM Forms, testa modellen med exempeldata och tjänster och konfigurera olika alternativ för en modell.
 feature: Adaptive Forms, Core Components
 exl-id: ad46bf0f-e6ec-4c52-9695-5768a9968e16
-source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 0%
@@ -16,7 +17,7 @@ Lokaliserade formulär hjälper er att nå en större publik över alla länder.
 
 ## Översätta ett anpassat formulär och dokument med hjälp av maskinöversättning {#localizing-an-adaptive-form-and-document-of-record-using-machine-translation}
 
-Maskinöversättningstjänsten översätter omedelbart ditt innehåll i adaptiv form och [Dokument för registrering](/help/forms/generate-document-of-record-core-components.md). AEM Forms as a Cloud Service är förkonfigurerat för att använda en testversion av Microsoft Translator för maskinöversättning. Utför följande steg för att aktivera maskinöversättning för ditt adaptiva Forms och arkivdokument:
+Maskinöversättningstjänsten översätter omedelbart ditt innehåll i adaptiv form och [Dokument för registrering](/help/forms/generate-document-of-record-core-components.md). AEM Forms as a Cloud Service är förkonfigurerat att använda en testversion av Microsoft Translator för maskinöversättning. Utför följande steg för att aktivera maskinöversättning för ditt adaptiva Forms och arkivdokument:
 
 1. Markera ett formulär i användargränssnittet för AEM Forms och välj **[!UICONTROL Add Dictionary]** alternativ.
 1. På skärmen Lägg till ordlista i översättningsprojekt finns följande i **[!UICONTROL Project]** option

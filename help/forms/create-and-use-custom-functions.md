@@ -6,7 +6,8 @@ contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Core Components
 exl-id: 24607dd1-2d65-480b-a831-9071e20c473d
-source-git-commit: 8730383d26c6f4fbe31a25a43d33bf314251d267
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '4340'
 ht-degree: 0%
@@ -25,7 +26,7 @@ ht-degree: 0%
 
 ## Introduktion
 
-AEM Forms har stöd för anpassade funktioner, vilket gör att användare kan definiera JavaScript-funktioner för implementering av komplexa affärsregler. Dessa anpassade funktioner gör att man kan förbättra blanketternas funktioner genom att underlätta hantering och bearbetning av inmatade data för att uppfylla specifika krav. De möjliggör också dynamisk ändring av formulärbeteende baserat på fördefinierade kriterier.
+AEM Forms har stöd för anpassade funktioner, vilket gör att man kan definiera JavaScript-funktioner för att implementera komplexa affärsregler. Dessa anpassade funktioner gör att man kan förbättra blanketternas funktioner genom att underlätta hantering och bearbetning av inmatade data för att uppfylla specifika krav. De möjliggör också dynamisk ändring av formulärbeteende baserat på fördefinierade kriterier.
 
 >[!NOTE]
 >
@@ -39,7 +40,7 @@ Fördelarna med att använda anpassade funktioner i Adaptive Forms är:
 * **Dynamiskt beteende**: Med anpassade funktioner kan du styra formulärens dynamiska beteende baserat på specifika villkor. Du kan till exempel visa/dölja fält, ändra fältvärden eller justera formulärlogiken dynamiskt.
 * **Integrering**: Du kan använda anpassade funktioner för att integrera med externa API:er eller tjänster. Det hjälper till att hämta data från externa källor, skicka data till externa Rest-slutpunkter eller utföra anpassade åtgärder baserade på externa händelser.
 
-Anpassade funktioner är i huvudsak klientbibliotek som läggs till i JavaScript-filen. När du har skapat en anpassad funktion blir den tillgänglig i regelredigeraren så att användaren kan välja den i ett adaptivt formulär. De anpassade funktionerna identifieras av JavaScript-anteckningarna i regelredigeraren.
+Anpassade funktioner är i huvudsak klientbibliotek som läggs till i JavaScript-filen. När du har skapat en anpassad funktion blir den tillgänglig i regelredigeraren så att användaren kan välja den i ett adaptivt formulär. De anpassade funktionerna identifieras av JavaScript kommentarer i regelredigeraren.
 
 ### JavaScript-anteckningar som stöds för anpassade funktioner {#js-annotations}
 
@@ -75,7 +76,7 @@ Parametern är en lista med argument som används av anpassade funktioner. En fu
    * datum[]: Representerar en array med datumvärden.
    * array: Representerar en generisk array som innehåller värden av olika typer.
    * object: Representerar formulärobjektet som skickas till en anpassad funktion i stället för att skicka dess värde direkt.
-   * omfång: Representerar det globala objektet, som innehåller skrivskyddade variabler som formulärinstanser, målfältsinstanser och metoder för att utföra formulärändringar i anpassade funktioner. Den deklareras som den sista parametern i JavaScript-anteckningar och visas inte i regelredigeraren i ett adaptivt formulär. Omfångsparametern har åtkomst till formulärets eller komponentens objekt för att utlösa den regel eller händelse som krävs för formulärbearbetning. Mer information om Global-objektet och hur du använder det finns i [klicka här](/help/forms/create-and-use-custom-functions.md#support-field-and-global-objects).
+   * omfång: Representerar det globala objektet, som innehåller skrivskyddade variabler som formulärinstanser, målfältsinstanser och metoder för att utföra formulärändringar i anpassade funktioner. Den deklareras som den sista parametern i JavaScript-anteckningar och visas inte i regelredigeraren för ett adaptivt formulär. Omfångsparametern har åtkomst till formulärets eller komponentens objekt för att utlösa den regel eller händelse som krävs för formulärbearbetning. Mer information om Global-objektet och hur du använder det finns i [klicka här](/help/forms/create-and-use-custom-functions.md#support-field-and-global-objects).
 
 Parametertypen är inte skiftlägeskänslig och blanksteg tillåts inte i parameternamnet.
 
@@ -170,9 +171,9 @@ Du kan skapa en anpassad funktion med eller utan jsdoc-kommentarer.
             // code to be executed
         }
 ```
-Om användaren inte lägger till några JavaScript-anteckningar i den anpassade funktionen visas den i regelredigeraren med sitt funktionsnamn. Vi rekommenderar dock att du inkluderar JavaScript-anteckningar för förbättrad läsbarhet av anpassade funktioner.
+Om användaren inte lägger till några JavaScript-anteckningar i den anpassade funktionen visas den i regelredigeraren med sitt funktionsnamn. Vi rekommenderar dock att du tar med JavaScript-anteckningar för förbättrad läsbarhet av anpassade funktioner.
 
-### Pilfunktion med obligatoriska JavaScript-anteckningar eller -kommentarer
+### Pilfunktion med obligatoriska JavaScript-anteckningar eller kommentarer
 
 Du kan skapa en anpassad funktion med en pilfunktionssyntax:
 
@@ -196,7 +197,7 @@ Du kan skapa en anpassad funktion med en pilfunktionssyntax:
 
 Om användaren inte lägger till några JavaScript-anteckningar i den anpassade funktionen visas inte den anpassade funktionen i regelredigeraren för ett anpassat formulär.
 
-### Funktionsuttryck med obligatoriska JavaScript-anteckningar eller -kommentarer
+### Funktionsuttryck med obligatoriska JavaScript-anteckningar eller kommentarer
 
 Om du vill visa anpassade funktioner i regelredigeraren för ett adaptivt formulär skapar du anpassade funktioner i följande format:
 
@@ -337,7 +338,7 @@ Lägg till följande i den tillagda klientbiblioteksmappen:
 
 **Distribuera den nyligen skapade biblioteksmappen för klienter till AEM**
 
-Driftsätt AEM as a Cloud Service, [AEMaaCS-projektkatalog]i er Cloud Service. Så här distribuerar du till din Cloud Service:
+Driftsätt AEM as a Cloud Service [AEMaaCS-projektkatalog]i er Cloud Service. Så här distribuerar du till din Cloud Service:
 
 1. Verkställ ändringarna
 
@@ -831,7 +832,7 @@ function showModal(type, message) {
 }
 ```
 
-I det här exemplet använder användaren `customSubmitSuccessHandler` och `customSubmitErrorHandler` anpassade funktioner visas meddelanden om lyckade och misslyckade åtgärder i ett modalt format. JavaScript-funktionen `showModal(type, message)` används för att dynamiskt skapa och visa en modal dialogruta på en skärm.
+I det här exemplet använder användaren `customSubmitSuccessHandler` och `customSubmitErrorHandler` anpassade funktioner visas meddelanden om lyckade och misslyckade åtgärder i ett modalt format. Funktionen JavaScript `showModal(type, message)` används för att dynamiskt skapa och visa en modal dialogruta på en skärm.
 
 Skapa nu en regel för att skicka in formulär:
 
@@ -1011,12 +1012,12 @@ Om de anpassade funktionerna ändras blir cachningen ogiltig och den tolkas.
 * Utför följande steg om den anpassade överföringshanteraren inte fungerar som förväntat i befintliga AEM projekt eller formulär:
    * Se till att [kärnkomponentversionen uppdateras till 3.0.18 och senare](https://github.com/adobe/aem-core-forms-components). För befintliga AEM och formulär finns det dock ytterligare steg att utföra:
 
-   * För AEM ska användaren ersätta alla instanser av `submitForm('custom:submitSuccess', 'custom:submitError')` med `submitForm()` och driftsätta projektet via molnhanterarens pipeline.
+   * För AEM ska användaren ersätta alla instanser av `submitForm('custom:submitSuccess', 'custom:submitError')` med `submitForm()` och driftsätta projektet via Cloud Manager pipeline.
 
    * Om de anpassade överföringshanterarna inte fungerar som de ska i befintliga formulär måste användaren öppna och spara formuläret `submitForm` regel på **Skicka** med Regelredigeraren. Den här åtgärden ersätter den befintliga regeln från `submitForm('custom:submitSuccess', 'custom:submitError')` med `submitForm()` i formuläret.
 
 
-* Om JavaScript-filen som innehåller kod för anpassade funktioner har ett fel, visas inte de anpassade funktionerna i regelredigeraren i ett anpassat formulär. Om du vill kontrollera listan med anpassade funktioner kan du navigera till `error.log` fil för felet. Om ett fel uppstår visas listan med anpassade funktioner tom:
+* Om det uppstår ett fel i JavaScript-filen som innehåller kod för anpassade funktioner visas inte de anpassade funktionerna i regelredigeraren i ett anpassat formulär. Om du vill kontrollera listan med anpassade funktioner kan du navigera till `error.log` fil för felet. Om ett fel uppstår visas listan med anpassade funktioner tom:
 
   ![felloggfil](/help/forms/assets/custom-function-list-error-file.png)
 

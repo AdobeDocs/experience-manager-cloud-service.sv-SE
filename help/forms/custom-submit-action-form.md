@@ -2,10 +2,10 @@
 title: Hur skapar man en anpassad inskickningsåtgärd för ett anpassat formulär?
 description: Lär dig hur du skapar en anpassad Skicka-åtgärd för en anpassad Forms för att fördröja överföring och bearbetning av data innan du skickar in dem till en viloslutpunkt, spara i ett datalager och utföra andra anpassade funktioner.
 feature: Adaptive Forms, Foundation Components
-role: User
+role: User, Developer
 level: Intermediate
 exl-id: 77131cc2-9cb1-4a00-bbc4-65b1a66e76f5
-source-git-commit: ddf9632c0aad1fd5a3c2fb02fe1c9673ae4eb029
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '1664'
 ht-degree: 0%
@@ -102,13 +102,13 @@ En Skicka-åtgärd är en sling:Mapp som innehåller följande:
    * **guideComponentType** av typen String och value **fd/af/components/guidepittype**
    * **guideDataModel** av typen String som anger vilken typ av adaptiv form som åtgärden Skicka gäller för. <!--**xfa** is supported for XFA-based Adaptive Forms while -->**xsd** stöds för XSD-baserad Adaptive Forms. **grundläggande** stöds för Adaptive Forms som inte använder XDP eller XSD. Om du vill visa åtgärden för flera typer av Adaptiv Forms lägger du till motsvarande strängar. Avgränsa varje sträng med kommatecken. Gör till exempel en åtgärd synlig på <!--XFA- and -->XSD-baserad Adaptiv Forms, ange värdet som <!--**xfa** and--> **xsd**.
 
-   * **jcr:description** av typen String. Värdet för den här egenskapen visas i listan Skicka åtgärd på fliken Skicka åtgärder i dialogrutan Redigera anpassat formulär. OOTB-åtgärderna finns i CRX-databasen på platsen **/libs/fd/af/components/guideSubittype**.
+   * **jcr:description** av typen String. Värdet för den här egenskapen visas i listan Skicka åtgärd på fliken Skicka åtgärder i dialogrutan Redigera anpassat formulär. OTB-åtgärderna finns i CRX-databasen på platsen **/libs/fd/af/components/guideSubittype**.
 
    * **submitService** av typen String. Mer information finns i [Schemalägg inlämning av anpassat formulär för anpassade åtgärder](#schedule-adaptive-form-submission).
 
 ## Skapa en anpassad skickaåtgärd {#creating-a-custom-submit-action}
 
-Utför följande steg för att skapa en anpassad Skicka-åtgärd som sparar data i CRX-databasen och skickar sedan ett e-postmeddelande till dig. Det adaptiva formuläret innehåller innehållet i OTB-inlämningsåtgärdsarkivet (föråldrat) som sparar data i CRX-databasen. Dessutom innehåller AEM en [E-post](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/day/cq/mailer/package-summary.html) API som kan användas för att skicka e-post. Konfigurera tjänsten Day CQ Mail via systemkonsolen innan du använder e-post-API:t. Du kan återanvända åtgärden Lagra innehåll (föråldrat) för att lagra data i databasen. Åtgärden Lagra innehåll (borttaget) finns på platsen /libs/fd/af/components/guideSubittype/store i CRX-databasen.
+Utför följande steg för att skapa en anpassad Skicka-åtgärd som sparar data i CRX-databasen och sedan skickar ett e-postmeddelande till dig. Det adaptiva formuläret innehåller OTB-innehållet för att skicka Action Store-innehåll (borttaget) som sparar data i CRX-databasen. Dessutom innehåller AEM en [E-post](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/day/cq/mailer/package-summary.html) API som kan användas för att skicka e-post. Konfigurera tjänsten Day CQ Mail via systemkonsolen innan du använder e-post-API:t. Du kan återanvända åtgärden Lagra innehåll (föråldrat) för att lagra data i databasen. Åtgärden Lagra innehåll (föråldrat) finns på platsen /libs/fd/af/components/guideSubittype/store i CRX-databasen.
 
 1. Logga in på CRXDE Lite på URL:en https://&lt;server>:&lt;port>/crx/de/index.jsp. Skapa en nod med egenskapen sling:Folder och name store_and_mail i mappen /apps/custom_submit_action. Skapa mappen custom_submit_action om den inte redan finns.
 

@@ -3,7 +3,8 @@ title: Hur skapar man ett urkunder för AEM Forms?
 description: Lär dig att generera en mall för ett dokument för inspelning (DoR) för Adaptiv Forms.
 feature: Adaptive Forms, Foundation Components
 exl-id: 16d07932-3308-4b62-8fa4-88c4e42ca7b6
-source-git-commit: 51d72edcde18503e9e4d83eaf51e28658d9ee5e6
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '4030'
 ht-degree: 0%
@@ -309,7 +310,7 @@ En basmall används för att definiera sidhuvud, sidfot, format och utseende fö
 
 * Egenskaperna för dessa fält används för fälten i postdokumentet. Dessa fält ska följa `AF_<name of field in all caps>_XFO` namnkonvention. Fältnamnet för kryssrutan bör till exempel vara `AF_CHECKBOX_XFO`.
 
-Så här skapar du en basmall i Forms Designer.
+Så här skapar du en basmall: Forms Designer.
 
 1. Klicka **[!UICONTROL File]** > **[!UICONTROL New]**.
 1. Välj **[!UICONTROL Based on a template]** alternativ.
@@ -376,7 +377,7 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
 
    >[!NOTE]
    >
-   >Om du använder en mall för adaptiva formulär som skapats med en tidigare version av Designer än 6.3, för att egenskaperna för dekorfärg och teckensnittsfamilj ska fungera, kontrollerar du att följande finns i mallen för adaptiva formulär under rotdelformuläret:
+   >Om du använder en mall för adaptiva formulär som har skapats med en tidigare version av Designer än 6.3 måste du se till att följande finns i mallen för adaptiva färger och teckensnittsfamiljer under rotdelformuläret:
 
    ```xml
    <proto>
@@ -472,7 +473,7 @@ En XCI-fil hjälper dig att ange olika egenskaper för ett dokument. Forms as a 
 | config/present/script/currentPage | Anger den inledande sidan när dokumentet öppnas. |
 | config/present/script/exclude | Informerar Forms as a Cloud Service om vilka händelser som ska ignoreras. |
 | config/present/pdf/linearized | Anger om utdatadokumentet för PDF är linjärt. |
-| config/present/script/runScripts | Styr vilken uppsättning skript som Forms as a Cloud Service kör. |
+| config/present/script/runScripts | Styr vilken uppsättning skript Forms as a Cloud Service ska köra. |
 | config/present/pdf/tagged | Styr om taggar ska tas med i utdatadokumentet för PDF. Taggar i PDF är ytterligare information som ingår i ett dokument för att visa dokumentets logiska struktur. Taggar underlättar hjälpmedelsanvändningen och formateringen. Ett sidnummer kan till exempel taggas som en artefakt så att skärmläsaren inte omsluter den mitt i texten. Även om märkord gör ett dokument mer användbart, ökar de även storleken på dokumentet och bearbetningstiden för att skapa det. |
 | config/present/pdf/fontInfo/alwaysEmbed | Anger ett teckensnitt som är inbäddat i utdatadokumentet. |
 | config/present/pdf/fontInfo/neverEmbed | Anger ett teckensnitt som aldrig får bäddas in i utdatadokumentet. |
@@ -487,7 +488,7 @@ En XCI-fil hjälper dig att ange olika egenskaper för ett dokument. Forms as a 
 > AEM Forms har en mängd inbyggda teckensnitt som är helt integrerade med PDF filer. Om du vill se en lista över teckensnitt som stöds [klicka här](/help/forms/supported-out-of-the-box-fonts.md).
 
 
-### Använda en anpassad XCI-fil i Forms as a Cloud Service miljö
+### Använda en anpassad XCI-fil i Forms as a Cloud Service
 
 1. Lägg till den anpassade XCI-filen i utvecklingsprojektet.
 1. Ange följande [egenskapen inline](/help/implementing/deploying/configuring-osgi.md):
@@ -508,7 +509,7 @@ En XCI-fil hjälper dig att ange olika egenskaper för ett dokument. Forms as a 
 
 1. Distribuera projektet till din Cloud Service-miljö.
 
-### Använda en anpassad XCI-fil i den lokala Forms as a Cloud Service utvecklingsmiljö
+### Använd en anpassad XCI-fil i den lokala Forms as a Cloud Service utvecklingsmiljö
 
 1. Överför XCI-filen till den lokala utvecklingsmiljön.
 1. Öppna konfigurationshanteraren för Cloud Service SDK. Standardwebbadressen är: <http://localhost:4502/system/console/configMgr>.

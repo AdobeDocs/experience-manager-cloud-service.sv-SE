@@ -4,9 +4,11 @@ Description: Learn how to send data from your Adaptive Form to a SharePoint stor
 keywords: Hur ansluter man SharePoint lista till ett tilläggsformulär?, Hur man ansluter SharePoint dokumentbibliotek till ett tilläggsformulär, Skicka till SharePoint, Skapa en konfiguration för SharePoint dokumentbibliotek, Använd åtgärden Skicka till SharePoint i ett adaptivt formulär, Ansluta ett adaptivt formulär till Microsoft&reg; SharePoint List.
 feature: Adaptive Forms, Core Components
 exl-id: e925a750-5fb5-4950-afd3-78551eec985d
-source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
+title: "Hur konfigurerar jag en Skicka-åtgärd för ett anpassat formulär?"
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '983'
 ht-degree: 0%
 
 ---
@@ -15,7 +17,7 @@ ht-degree: 0%
 
 The **[!UICONTROL Submit to SharePoint]** kan du smidigt koppla ditt adaptiva formulär till en Microsoft® SharePoint-lagring. Formulärdatat skickas till den SharePoint-lagring du väljer när du har skickat in formuläret.
 
-AEM as a Cloud Service erbjuder olika åtgärder för att skicka in formulär. Du kan läsa mer om de här alternativen i [Inlämningsåtgärd för anpassat formulär](/help/forms/configure-submit-actions-core-components.md)  artikel.
+AEM as a Cloud Service erbjuder olika inskickningsåtgärder för att hantera inskickade formulär. Du kan läsa mer om de här alternativen i [Inlämningsåtgärd för anpassat formulär](/help/forms/configure-submit-actions-core-components.md)  artikel.
 
 ## Fördelar
 

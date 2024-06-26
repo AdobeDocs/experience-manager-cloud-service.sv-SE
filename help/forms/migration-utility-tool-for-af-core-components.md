@@ -6,13 +6,14 @@ role: User, Developer, Admin
 features: core components
 hide: true
 hidefromtoc: true
-source-git-commit: cc1f3e2f0ddaed67de541c730c0b97f68c1e0d02
+exl-id: ee71a576-96a7-4c81-b3a3-1d678f010cba
+feature: Adaptive Forms, Core Components
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '929'
 ht-degree: 0%
 
 ---
-
 
 # Introduktion
 
@@ -149,6 +150,3 @@ Nu ser du att den adaptiva formen som bygger på Foundation Components omvandlas
 
 * Se till att dina grundläggande komponentbaserade formulär bara använder de komponenter som har en motsvarighet [Kärnkomponenter](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction#available-components-a-breakdown-by-component-type) tillgängliga. Om du använder Foundation Components som inte har någon motsvarande Core Component (Grundläggande komponent) konverteras inte Foundation Component (Grundläggande komponent). Därför fungerar den inte korrekt när du redigerar ett formulär
 * Kontrollera att reglerna som konverterar Foundation Components till Core Components är formaterade i XML.
-
-
-

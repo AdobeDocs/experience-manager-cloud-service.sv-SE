@@ -2,10 +2,10 @@
 title: Hur använder man infogade format på adaptiva formulärkomponenter?
 description: Lär dig hur du använder anpassade format på ett adaptivt formulär. Du kan också använda infogade CSS-egenskaper på enskilda komponenter i ett adaptivt formulär.
 feature: Adaptive Forms, Foundation Components
-role: User
+role: User, Developer
 level: Intermediate
 exl-id: 25adabfb-ff19-4cb2-aef5-0a8086d2e552
-source-git-commit: eaab351460363b83c7d3667e048235506cc71c41
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '734'
 ht-degree: 0%

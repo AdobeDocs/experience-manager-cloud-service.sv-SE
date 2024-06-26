@@ -3,7 +3,8 @@ title: Hur skapar man en Forms Portal på en Experience Manager Sites-sida?
 description: Lär dig hur du skapar en Forms Portal och använder färdiga komponenter på en AEM Sites-sida.
 feature: Adaptive Forms, Foundation Components
 exl-id: 13cfe3ba-2e85-46bf-a029-2673de69c626
-source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '1706'
 ht-degree: 0%
@@ -58,7 +59,7 @@ Du kan [importera färdiga Forms Portal-komponenter](#import-forms-portal-compon
 
 Så här importerar du färdiga Forms Portal-komponenter på AEM Forms as a Cloud Service:
 
-1. **Git-databasen för Cloud Manager på din lokala utvecklingsinstans:**  Din Cloud Manager Git-databas innehåller ett AEM. Den baseras på [AEM](https://github.com/adobe/aem-project-archetype/). Klona din Cloud Manager Git-databas med Git-kontohantering för självbetjäning från användargränssnittet i Cloud Manager för att få projektet i din lokala utvecklingsmiljö. Mer information om hur du använder databasen finns i [Åtkomst till databaser](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/accessing-repos.html).
+1. **Klona Cloud Manager Git-databasen på din lokala utvecklingsinstans:**  Din Cloud Manager Git-databas innehåller ett AEM. Den baseras på [AEM](https://github.com/adobe/aem-project-archetype/). Klona din Cloud Manager Git-databas med Git-kontohantering för självbetjäning från Cloud Manager användargränssnitt och lägg projektet i din lokala utvecklingsmiljö. Mer information om hur du använder databasen finns i [Åtkomst till databaser](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/accessing-repos.html).
 
 1. **Skapa [!DNL Experience Manager Forms] som [Cloud Service] projekt:** Skapa [!DNL Experience Manager Forms] som [Cloud Service] projekt baserat på [AEM 27](https://github.com/adobe/aem-project-archetype/releases/tag/aem-project-archetype-27) eller senare. Med denna typ kan utvecklarna enkelt börja utveckla för [!DNL AEM Forms] as a Cloud Service. Den innehåller även några exempelteman och mallar som hjälper dig att snabbt komma igång.
 

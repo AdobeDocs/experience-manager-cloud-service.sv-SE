@@ -1,11 +1,11 @@
 ---
-title: Hur felsöker man installations- och konfigurationsproblem i AEM Forms as a Cloud Service miljö?
-description: Felsökning av installation och konfiguration av AEM Forms as a Cloud Service miljö.
+title: Hur felsöker man installations- och konfigurationsproblem i AEM Forms as a Cloud Service?
+description: Felsökning av installation och konfiguration av AEM Forms as a Cloud Service-miljö.
 contentOwner: khsingh
-feature: Adaptive Forms, Troubleshooting
+feature: Adaptive Forms
 role: User
 exl-id: 249ec8f2-4176-428a-bfcf-80b381ec7263
-source-git-commit: a19a3d81652cb17fcd6b11e6047d2ea697bf3041
+source-git-commit: 0b693cb51a96011235fa87a5899426c6b0c2509a
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -52,7 +52,7 @@ If the profile exists and issues still persist, contact Adobe Support. -->
 
 Användarna kan inte köra byggpipeline. Pipelinen fungerar inte när den har körts ett tag.
 
-Du löser problemet genom att öppna Cloud Manager och välja **[!UICONTROL Update]** för din miljö och kör pipeline.
+Öppna Cloud Manager och välj **[!UICONTROL Update]** för din miljö och kör pipeline.
 
 
 ## Paketen är inte i aktivt läge {#bundles-inactive-state}

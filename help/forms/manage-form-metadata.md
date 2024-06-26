@@ -3,7 +3,8 @@ title: Hur hanterar vi metadata för AEM Forms?
 description: Metadata gör det enklare att kategorisera och ordna resurser och hjälper användare som letar efter en viss resurs.
 feature: Adaptive Forms, Foundation Components
 exl-id: 8527246a-37f0-4d43-a49e-1c76c265514e
-source-git-commit: 7b31a2ea016567979288c7a8e55ed5bf8dfc181d
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '1717'
 ht-degree: 0%
@@ -110,12 +111,12 @@ Nedan följer en omfattande lista över metadataegenskaper som stöds i [!DNL AE
    <td>Ett skrivskyddat värde som anger när formuläret senast publicerades.</td> 
   </tr> 
   <tr> 
-   <td>Publicera på-/avaktiveringstid</td> 
+   <td>Publish på/av-tid</td> 
    <td>Alla utom resurser</td> 
    <td><p>Tidpunkt då formuläret schemaläggs att automatiskt publiceras/avpubliceras. Användaren anger det här värdet när metadata redigeras.</p> 
     <ul> 
-     <li>Både Publicera på- och Av-tid ska ligga efter aktuellt datum. </li> 
-     <li>Publiceringstiden för publicering ska vara längre än publiceringstiden i tid. </li> 
+     <li>Både På- och Av-tid för Publish ska ligga efter aktuellt datum. </li> 
+     <li>Publish off time ska vara bortom Publish On-time. </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -153,8 +154,8 @@ Nedan följer en omfattande lista över metadataegenskaper som stöds i [!DNL AE
    <td><p>Adaptiv form</p> <p>Formulärmall</p> <p>Resurs</p> </td> 
    <td><p>Lista över resurser (andra formulär eller resurser) som det här formuläret är relaterat till. Dessa resurser kan delas in i följande två kategorier:</p> 
     <ul> 
-     <li>Referens: Resurser som det aktuella formuläret refererar till.</li> 
-     <li>Refereras av: Resurser som refererar till den aktuella tillgången.</li> 
+     <li>Referens: Assets som det aktuella formuläret refererar till.</li> 
+     <li>Refereras av: Assets som refererar till den aktuella tillgången.</li> 
     </ul> <p>De här resurserna visas som länkar och deras metadata kan du komma åt direkt genom att klicka på dem.<br /> </p> </td> 
   </tr> 
   <tr> 
@@ -177,7 +178,7 @@ Nedan följer en omfattande lista över metadataegenskaper som stöds i [!DNL AE
 
 ## Visa formulärmetadata {#view-form-metadata}
 
-Resurser har befintliga egenskapsvärden som kan visas i skrivskyddat läge. Dessa metadata kommer från när formuläret överförs eller när formuläret skapas.
+Assets har befintliga egenskapsvärden som kan visas i skrivskyddat läge. Dessa metadata kommer från när formuläret överförs eller när formuläret skapas.
 
 1. Navigera till platsen för resursen som du vill visa metadata för.
 

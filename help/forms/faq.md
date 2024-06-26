@@ -1,12 +1,12 @@
 ---
 title: Frågor och svar om AEM Forms as a Cloud Service
-description: Forms as a Cloud Service - frågor och svar
+description: Vanliga frågor och svar om Forms
 contentOwner: khsingh
 role: User
-feature: Adaptive Forms, FAQ
+feature: Adaptive Forms
 index: false
 exl-id: 0b14b680-7da5-4e0b-bd6a-c379d148f9d7
-source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
+source-git-commit: 0b693cb51a96011235fa87a5899426c6b0c2509a
 workflow-type: tm+mt
 source-wordcount: '992'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Cachelagring av funktioner för skyddat innehåll är inaktiverat som standard. 
 
 * **Jag har en lokaliserad adaptiv form. Den återger inte en lokaliserad version? Vad kan vara orsaken och hur kan man lösa den?**
 
-  URL-konventionen för lokaliserade adaptiva Forms har nu stöd för att ange nationella inställningar i URL:en. Ny URL-konvention möjliggör cachelagring av lokaliserade formulär på en Dispatcher eller CDN. I Cloud Service-miljön använder du URL-formatet `http://host:port/content/forms/af/<afName>.<locale>.html` begära en lokaliserad version av ett adaptivt formulär i stället för `http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`. Adobe rekommenderar att du använder Dispatcher eller CDN-cachning. Det förbättrar återgivningshastigheten för förfyllda formulär.
+  URL-konventionen för lokaliserade adaptiva Forms har nu stöd för att ange nationella inställningar i URL:en. Ny URL-konvention möjliggör cachelagring av lokaliserade formulär på en Dispatcher eller CDN. I Cloud Service-miljön använder du URL-formatet `http://host:port/content/forms/af/<afName>.<locale>.html` begära en lokaliserad version av ett adaptivt formulär i stället för `http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`. Adobe rekommenderar att du använder Dispatcher- eller CDN-cachning. Det förbättrar återgivningshastigheten för förfyllda formulär.
 
 * **Jag har uppdaterat ett adaptivt formulär. Är den uppdaterade versionen inte tillgänglig för kunder?**
 Som standard uppdaterar CDN cachen efter var femte minut, väntar i 5 minuter och söker sedan efter den uppdaterade versionen.

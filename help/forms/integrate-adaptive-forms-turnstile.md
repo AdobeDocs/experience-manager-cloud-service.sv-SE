@@ -5,7 +5,9 @@ topic-tags: Adaptive Forms, author
 feature: Adaptive Forms, Foundation Components
 hide: true
 hidefromtoc: true
-source-git-commit: d2c6514eb1f38b06dfa58daa03b781920b8928f6
+exl-id: 644c351b-a167-4d18-8b99-b7cae6be48d5
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 0%
@@ -24,7 +26,7 @@ AEM Forms as a Cloud Service stöder följande CAPTCHA-lösningar:
 
 ## Integrera AEM Forms med Turnstile Captcha
 
-Cloudflare&#39;s Turnstile Captcha är en säkerhetsåtgärd som syftar till att skydda formulär och webbplatser från automatiserade robotar, skadliga attacker, spam och oönskad automatiserad trafik. Den visar en kryssruta när formuläret skickas in för att verifiera att det är humant, innan det går att skicka in formuläret. AEM Forms as a Cloud Service har stöd för Turnstile Captcha i adaptiva Forms Core-komponenter.
+Cloudflare&#39;s Turnstile Captcha är en säkerhetsåtgärd som syftar till att skydda formulär och webbplatser från automatiserade robotar, skadliga attacker, spam och oönskad automatiserad trafik. Den visar en kryssruta när formuläret skickas in för att verifiera att det är humant, innan det går att skicka in formuläret. AEM Forms as a Cloud Service stöder Turnstile Captcha i adaptiva Forms Core-komponenter.
 
 <!-- ![Turnstile](assets/Turnstile-challenge.png)-->
 
@@ -34,8 +36,8 @@ Om du vill konfigurera Turnite för AEM Forms Core Components måste du skaffa [
 
 ### Steg för att konfigurera Turnstile för AEM Forms{#steps-to-configure-turnstile}
 
-1. Skapa en konfigurationsbehållare i din AEM Forms as a Cloud Service miljö. En konfigurationsbehållare innehåller molnkonfigurationer som används för att ansluta AEM till externa tjänster. Så här skapar och konfigurerar du en konfigurationsbehållare för att ansluta din AEM Forms-miljö till Turnstle:
-   1. Öppna din as a Cloud Service AEM Forms-instans.
+1. Skapa en konfigurationsbehållare i din AEM Forms as a Cloud Service-miljö. En konfigurationsbehållare innehåller molnkonfigurationer som används för att ansluta AEM till externa tjänster. Så här skapar och konfigurerar du en konfigurationsbehållare för att ansluta din AEM Forms-miljö till Turnstle:
+   1. Öppna din AEM Forms as a Cloud Service-instans.
    1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**.
    1. I Configuration Browser kan du välja en befintlig mapp eller skapa en mapp. Du kan skapa en mapp och aktivera alternativet Cloud Configurations för den eller aktivera alternativet Cloud Configurations för en befintlig mapp:
 
@@ -58,13 +60,13 @@ Om du vill konfigurera Turnite för AEM Forms Core Components måste du skaffa [
       ![Konfigurera Cloud Servicen för att ansluta din AEM Forms-miljö till Turnstile](assets/config-turntstile.png)
 
 >[!NOTE]
-> Användarna behöver inte ändra JavaScript-validerings-URL:en på klientsidan och validerings-URL:en på serversidan eftersom de redan är förifyllda för körklar validering.
+> Användare behöver inte ändra validerings-URL:en på klientsidan och validerings-URL:en på serversidan eftersom de redan är förifyllda för aktiveringsvalidering.
 
 När Turnstile Captcha-tjänsten har konfigurerats kan den användas i en adaptiv form.
 
 ## Använd Turnstile i anpassad form{#using-turnstile-foundation-components}
 
-1. Öppna din as a Cloud Service AEM Forms-instans.
+1. Öppna din AEM Forms as a Cloud Service-instans.
 1. Gå till **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents]**.
 1. Välj ett adaptivt formulär och välj **[!UICONTROL Properties]**. För **[!UICONTROL Configuration Container]** väljer du den konfigurationsbehållare som innehåller molnkonfigurationen som kopplar AEM Forms till Turnstle och väljer **[!UICONTROL Save & Close]**.
 

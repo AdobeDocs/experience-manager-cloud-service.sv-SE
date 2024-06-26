@@ -6,7 +6,9 @@ keywords: Captcha&reg; service, Adaptive Forms, CAPTCHA enge, Bot prevent, Core 
 feature: Adaptive Forms, Core Components
 hide: true
 hidefromtoc: true
-source-git-commit: d2c6514eb1f38b06dfa58daa03b781920b8928f6
+exl-id: 6c559df2-7b6a-42fe-b44c-29a782570a0c
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 0%
@@ -29,7 +31,7 @@ AEM Forms as a Cloud Service stöder följande CAPTCHA-lösningar:
 
 Med tjänsten Captcha® kan du skydda dina formulär från stötar, skräppost och automatiskt missbruk. Det utgör en utmaning för kryssrutewidgeten och utvärderar användarens svar för att avgöra om det är en människa eller en robot som interagerar med formuläret. Det förhindrar användaren att fortsätta om testet misslyckas och gör onlinetransaktionerna säkra genom att förhindra att skräppost eller skadliga aktiviteter publiceras.
 
-AEM Forms as a Cloud Service har stöd för hCaptcha® i adaptiva Forms Core-komponenter. Du kan använda den för att visa en kryssrutewidget när formulär skickas.
+AEM Forms as a Cloud Service stöder hCaptcha® i adaptiva Forms Core-komponenter. Du kan använda den för att visa en kryssrutewidget när formulär skickas.
 
 <!-- ![hCaptcha&reg;](assets/hCaptcha&reg;-challenge.png)-->
 
@@ -42,8 +44,8 @@ Om du vill konfigurera hCaptcha® med AEM Forms måste du skaffa [Kaptcha® site
 
 Så här integrerar du AEM Forms med tjänsten Captcha®:
 
-1. Skapa en konfigurationsbehållare i din AEM Forms as a Cloud Service miljö. En konfigurationsbehållare innehåller molnkonfigurationer som används för att ansluta AEM till externa tjänster. Så här skapar och konfigurerar du en konfigurationsbehållare för att ansluta din AEM Forms-miljö till hCaptcha®:
-   1. Öppna din as a Cloud Service AEM Forms-instans.
+1. Skapa en konfigurationsbehållare i din AEM Forms as a Cloud Service-miljö. En konfigurationsbehållare innehåller molnkonfigurationer som används för att ansluta AEM till externa tjänster. Så här skapar och konfigurerar du en konfigurationsbehållare för att ansluta din AEM Forms-miljö till hCaptcha®:
+   1. Öppna din AEM Forms as a Cloud Service-instans.
    1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**.
    1. I Configuration Browser kan du välja en befintlig mapp eller skapa en mapp. Du kan skapa en mapp och aktivera alternativet Cloud Configurations för den eller Aktivera alternativet Cloud Configurations för en befintlig mapp:
 
@@ -66,13 +68,13 @@ Så här integrerar du AEM Forms med tjänsten Captcha®:
       ![Konfigurera Cloud Servicen för att ansluta din AEM Forms-miljö till Captcha®](assets/create-hcaptcha-config.png)
 
    >[!NOTE]
-   > Användarna behöver inte ändra [URL för JavaScript-validering på klientsidan](https://docs.hcaptcha.com/#add-the-hcaptcha-widget-to-your-webpage) och [Validerings-URL på serversidan](https://docs.hcaptcha.com/#verify-the-user-response-server-side) eftersom de redan är förfyllda för hCaptcha®-validering.
+   > Användarna behöver inte ändra [Validerings-URL för JavaScript på klientsidan](https://docs.hcaptcha.com/#add-the-hcaptcha-widget-to-your-webpage) och [Validerings-URL på serversidan](https://docs.hcaptcha.com/#verify-the-user-response-server-side) eftersom de redan är förfyllda för hCaptcha®-validering.
 
    När hCAPTCHA-tjänsten har konfigurerats kan den användas i en [Adaptiv form baserad på kärnkomponenter](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction).
 
 ## Använd Captcha® i en adaptiv Forms Core-komponent {#using-hCaptcha®-core-components}
 
-1. Öppna din as a Cloud Service AEM Forms-instans.
+1. Öppna din AEM Forms as a Cloud Service-instans.
 1. Gå till **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents]**.
 1. Välj ett adaptivt formulär och välj **[!UICONTROL Properties]**. För **[!UICONTROL Configuration Container]** väljer du den konfigurationsbehållare som innehåller molnkonfigurationen som ansluter AEM Forms till Captcha® och väljer **[!UICONTROL Save & Close]**.
 

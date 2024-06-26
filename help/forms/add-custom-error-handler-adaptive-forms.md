@@ -6,7 +6,8 @@ contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms, Foundation Components
 exl-id: 198a26a9-d6bb-457d-aab8-0a5d15177c48
-source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '2347'
 ht-degree: 0%
@@ -196,7 +197,7 @@ Så här använder du en standardfelhanterare med [Regelredigerarens anropstjän
 1. Välj **[!UICONTROL Create]**.
 1. Skapa ett villkor i **När** -delen av regeln. Till exempel: **När[Namn på Pet ID-fält]** ändras. Markeringen ändras från **Välj läge** listruta.
 1. I **Sedan** avsnitt, markera **[!UICONTROL Invoke Service]** från **Välj åtgärd** listruta.
-1. Välj en **Bokför tjänst** och dess motsvarande databindningar från **Indata** -avsnitt. Validera till exempel **Djurs-ID** väljer du en **Bokför tjänst** as **GET /husdjur/{petId}** och markera **Djurs-ID** i **Indata** -avsnitt.
+1. Välj en **Post** och dess motsvarande databindningar från **Indata** -avsnitt. Validera till exempel **Djurs-ID** väljer du en **Post** as **GET /husdjur/{petId}** och markera **Djurs-ID** i **Indata** -avsnitt.
 1. Välj databindningar på menyn **Utdata** -avsnitt. Välj **Djurnamn** i **Utdata** -avsnitt.
 1. Välj **[!UICONTROL Default Error Handler]** från **Felhanterare** -avsnitt.
 1. Klicka på **[!UICONTROL Done]**.
@@ -228,7 +229,7 @@ Så här lägger du till och använder en anpassad felhanterare i ett adaptivt f
 
 Så här skapar du en anpassad felfunktion:
 
-1. [Klona din AEM Forms as a Cloud Service databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#accessing-git).
+1. [Klona din AEM Forms as a Cloud Service Repository](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#accessing-git).
 1. Skapa en mapp under `[AEM Forms as a Cloud Service repository folder]/apps/` mapp. Skapa till exempel en mapp med namnet som `experience-league`
 1. Navigera till `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/experience-league/` och skapa `ClientLibraryFolder` as `clientlibs`.
 1. Skapa en mapp med namnet `js`.
@@ -307,7 +308,7 @@ Använda en anpassad felhanterare med **[!UICONTROL Rule Editor's Invoke Service
 1. Välj **[!UICONTROL Create]**.
 1. Skapa ett villkor i **När** -delen av regeln. Till exempel När **[Namn på Pet ID-fält]** ändras, välj **ändras** från **Välj läge** listruta.
 1. I **Sedan** avsnitt, markera **[!UICONTROL Invoke Service]** från **Välj åtgärd** listruta.
-1. Välj en **Bokför tjänst** och dess motsvarande databindningar från **Indata** -avsnitt. Validera till exempel **Djurs-ID** väljer du en **Bokför tjänst** as **GET /husdjur/{petId}** och markera **Djurs-ID** i **Indata** -avsnitt.
+1. Välj en **Post** och dess motsvarande databindningar från **Indata** -avsnitt. Validera till exempel **Djurs-ID** väljer du en **Post** as **GET /husdjur/{petId}** och markera **Djurs-ID** i **Indata** -avsnitt.
 1. Välj databindningar på menyn **Utdata** -avsnitt. Välj till exempel **Djurnamn** i **Utdata** -avsnitt.
 1. Välj **[!UICONTROL Custom Error Handler]** från **[!UICONTROL Error Handler]** -avsnitt.
 1. Klicka på **[!UICONTROL Done]**.

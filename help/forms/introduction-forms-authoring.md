@@ -7,7 +7,8 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Adaptive Forms, Foundation Components
 docset: aem65
 exl-id: 16f86dae-86fb-481b-8978-b8898705ed7e
-source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '2453'
 ht-degree: 0%
@@ -75,7 +76,7 @@ Med sidofältet
 
 ![Sidebar](assets/sidebar-comps.png)
 
-**S.** Innehållsläsare **B.** Egenskapswebbläsaren **C.** Resursläsaren **D.** Komponentwebbläsare
+**S.** Innehållsläsare **B.** Egenskapswebbläsaren **C.** Assets webbläsare **D.** Komponentwebbläsare
 
 <!--Click to enlarge
 
@@ -99,7 +100,7 @@ Du kan dra och släppa formulärmodellelement i det adaptiva formuläret. De til
 
   Markera en komponent och markera sedan ![fältnivå](assets/Smock_SelectContainer_18_N.svg) > **[!UICONTROL Adaptive Form Container]** och sedan markera ![egenskaper](assets/Smock_Wrench_18_N.svg).
 
-* **Resursläsaren**
+* **Assets webbläsare**
 
   Segmenterar olika typer av innehåll som bilder, dokument, sidor, filmer och så vidare.
 

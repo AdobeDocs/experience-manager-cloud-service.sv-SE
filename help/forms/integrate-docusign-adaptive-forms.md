@@ -2,7 +2,9 @@
 title: Hur integrerar man DocuSign med ett adaptivt formulär?
 description: Lär dig hur du använder DocuSign med ett adaptivt formulär för att samla in e-signaturer.
 exl-id: fb2e75d6-e454-4999-a079-f663af79051f
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+feature: Adaptive Forms, Acrobat Sign
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '1413'
 ht-degree: 0%
@@ -38,7 +40,7 @@ AEM Forms as a Cloud Service innehåller en anpassad skickaåtgärd för DocuSig
 
 Utför följande steg för att konfigurera en körklar anpassad sändningsåtgärd och DocuSign-Cloud Service:
 
-1. [Klona ditt as a Cloud Service AEM Forms-projekt](setup-local-development-environment.md#forms-cloud-service-local-development-environment) eller skapa [!DNL Experience Manager Forms] som [!DNL Cloud Service] projekt baserat på [AEM 27](https://github.com/adobe/aem-project-archetype) eller senare. Skapa en [!DNL Experience Manager Forms] som [!DNL Cloud Service] projekt baserat på AEM Archetype:
+1. [Klona ditt AEM Forms as a Cloud Service-projekt](setup-local-development-environment.md#forms-cloud-service-local-development-environment) eller skapa [!DNL Experience Manager Forms] som [!DNL Cloud Service] projekt baserat på [AEM 27](https://github.com/adobe/aem-project-archetype) eller senare. Skapa en [!DNL Experience Manager Forms] som [!DNL Cloud Service] projekt baserat på AEM Archetype:
    </br> Öppna kommandotolken och kör nedanstående kommando för att skapa en [!DNL Experience Manager Forms] as a Cloud Service projekt:
 
    ```shell

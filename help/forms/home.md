@@ -3,9 +3,9 @@ title: Introduktion till [!DNL AEM Forms] as a Cloud Service
 description: Upptäck AEM Forms för att ta fram företagsklara formulär, skapa arbetsflöden för företagsprocesser och använda dokumenttjänster för att ta fram och skydda dokument.
 landing-page-description: Lär dig hur du använder formulär i AEM as a Cloud Service.
 role: Admin, Developer, User
-feature: Adaptive Forms
+feature: Adaptive Forms, Release Information
 exl-id: aa5ef10c-ba78-4a9d-8b2b-a72a7a306888
-source-git-commit: f2752673dcaa0762bb55719cee23765aa8ecde96
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '972'
 ht-degree: 3%
@@ -31,7 +31,7 @@ Adobe [!DNL Experience Manager Forms as a Cloud Service] är en kundcentrerad l�
 
 Du kan använda tjänsten för att skapa och distribuera interaktiva och engagerande digitala formulär. Ta till exempel en organisation som vill digitalisera sin kundregistreringsresa. De har flera datakällor med befintliga kunddata. De vill förifylla formulär, lägga till e-signera formulär och arkivera ifyllda formulär som PDF-filer. Dessutom har man flera tryckta blanketter (PDF forms) som man också vill konvertera till digitala blanketter.
 
-Organisationen kan använda [!DNL AEM Forms] as a Cloud Service att skapa digitala formulär, koppla ihop formulär med befintliga datakällor, integrera formulär med [!DNL Adobe Sign] för att lägga till e-signaturer i formulär och generera DoR (Document of Record) för att arkivera inskickade formulär som PDF-filer. Man kan också använda tjänsten för att konvertera PDF forms till digitala blanketter.
+Organisationen kan använda [!DNL AEM Forms] as a Cloud Service för att skapa digitala formulär, koppla formulär till befintliga datakällor, integrera formulär med [!DNL Adobe Sign] för att lägga till e-signaturer i formulär och generera DoR (Document of Record) för att arkivera inskickade formulär som PDF-filer. Man kan också använda tjänsten för att konvertera PDF forms till digitala blanketter.
 
 I stora företag skapas formulär ofta en gång och återanvänds genom att man kopierar till ett innehållshanteringssystem. Det kan vara en stor utmaning att hålla en stor databas med blanketter uppdaterad och lätt att hitta. AEM har en anpassningsbar Forms Portal som ser till att kunderna hittar och har tillgång till formulär de behöver via både webben och mobila kanaler. Du kan anpassa utseendet, varumärkesprofileringen och logotyperna i Forms Portal så att de passar organisationens specifika behov.
 

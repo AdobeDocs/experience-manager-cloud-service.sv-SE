@@ -4,7 +4,8 @@ description: Du kan använda teman för att utforma och ge en visuell identitet 
 keywords: grundläggande komponenter i adaptiv formulärformatering. använda tema i Core Components, utforma adaptiv form, anpassa teman
 feature: Adaptive Forms, Core Components
 exl-id: 11c52b66-dbb1-4c47-a94d-322950cbdac1
-source-git-commit: aca3508d85a0382f679a8fa0ca986cfd13ee793b
+role: User, Developer
+source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
 workflow-type: tm+mt
 source-wordcount: '2833'
 ht-degree: 0%
@@ -33,7 +34,7 @@ Forms som Cloud Service innehåller följande teman för Core Components based A
 
 ## Förstå temastrukturen
 
-Ett tema är ett paket som innehåller formatkomponenter som CSS-filer, JavaScript-filer och resurser (som ikoner) som definierar stilen för din adaptiva Forms. Temat Adaptiv form följer en särskild organisation som består av följande komponenter:
+Ett tema är ett paket som innehåller formatkomponenter som CSS-filer, JavaScript-filer och resurser (som ikoner) som definierar formatet för din adaptiva Forms. Temat Adaptiv form följer en särskild organisation som består av följande komponenter:
 
 * `src/theme.scss`: Den här mappen innehåller CSS-filen som har stor effekt på hela temat. Det fungerar som en central plats för att definiera och hantera temats format och beteende. Genom att redigera den här filen kan du göra ändringar som tillämpas överallt i temat, vilket påverkar både utseendet och funktionaliteten på dina adaptiva Forms- och AEM Sites-sidor.
 
@@ -275,7 +276,7 @@ Att anpassa ett tema hjälper till att utforma anpassade utseenden för Core Com
 
 ###### Testa temat för formulär som lagras i en Cloud Service-miljö
 
-Du kan också testa temat för den adaptiva formen som finns på din as a Cloud Service AEM Forms-instans. Så här konfigurerar och anger du den lokala miljön för testning av teman med Adaptive Forms på molninstansen:
+Du kan också testa temat för den adaptiva formen som finns på din AEM Forms as a Cloud Service-instans. Så här konfigurerar och anger du den lokala miljön för testning av teman med Adaptive Forms på molninstansen:
 
 1. Öppna temamappen i din utvecklingsmiljö. Öppna till exempel `aem-forms-theme-canvas` i Visual Studio Code editor.
 1. Byt namn på `env_template` fil till `.env` och lägga till följande parametrar:
@@ -375,7 +376,7 @@ Nu kan du överföra ändringarna till temadeatalogen för din AEM Forms-Cloud S
 
 Temat distribueras med [rörledning.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline.html). Så här distribuerar du temat:
 
-1. Logga in i din AEM Cloud Manager-databas.
+1. Logga in på din AEM Cloud Manager-databas.
 1. Klicka på **[!UICONTROL Add]** från **[!UICONTROL Pipelines]** -avsnitt.
 1. Välj **[!UICONTROL Add Non-Production Pipeline]** eller **[!UICONTROL Add Production Pipeline]** baserat på Cloud Servicen. Här visas till exempel **[!UICONTROL Add Production Pipeline]** är markerat.
 1. I **[!UICONTROL Add Production Pipeline]** som en del av **[!UICONTROL Configuration]** anger du namnet på pipeline. Namnet på pipeline är till exempel `customcanvastheme`.
@@ -409,7 +410,7 @@ Steg för att tillämpa ett tema på ett adaptivt formulär är:
 
 1. Klicka **Skapa** > **Adaptiv Forms**. Guiden för att skapa adaptiva formulär öppnas.
 
-1. Välj kärnkomponentmallen i **Källa** -fliken.
+1. Välj kärnkomponentmallen i **Source** -fliken.
 1. Välj temat i **Stil** -fliken.
 1. Klicka **Skapa**.
 
@@ -462,4 +463,4 @@ Om du vill ange information som logotypbild, företagsnamn i sidhuvudet och copy
 * [Generera urkunder för adaptiva Forms (kärnkomponenter)](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)
 * [Skapa en adaptiv Forms med upprepningsbara avsnitt](/help/forms/create-forms-repeatable-sections.md)
 * [Exempelmallar för teman och formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html)
-* [Aktivera adaptiva Forms Core-komponenter i AEM Forms as a Cloud Service och lokala utvecklingsmiljö](/help/forms/enable-adaptive-forms-core-components.md)
+* [Aktivera adaptiva Forms Core-komponenter i AEM Forms as a Cloud Service och lokal utvecklingsmiljö](/help/forms/enable-adaptive-forms-core-components.md)
