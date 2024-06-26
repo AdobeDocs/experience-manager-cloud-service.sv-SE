@@ -4,9 +4,9 @@ description: Lär dig grunderna i AE; pakethantering med Package Manager.
 feature: Administering, Developing
 role: Admin
 exl-id: b5fef273-912d-41f6-a698-0231eedb2b92
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 7fdb4e3da7172e3a94f105c8b2a46ef77a565532
 workflow-type: tm+mt
-source-wordcount: '3769'
+source-wordcount: '3772'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Ett paket innehåller även vaultmetainformation, inklusive filterdefinitioner o
 
 ## Paket i AEM as a Cloud Service {#aemaacs-packages}
 
-Innehållspaket som skapas för AEM as a Cloud Service program måste ha en ren separation mellan oföränderligt och muterbart innehåll. Pakethanteraren kan därför bara användas för att hantera paket som innehåller innehåll. All kod måste distribueras via Cloud Manager.
+Innehållspaket som skapats för AEM som ett molntjänstprogram måste ha en ren separation mellan oföränderligt och muterbart innehåll. Pakethanteraren kan därför bara användas för att hantera paket som innehåller innehåll. All kod måste distribueras via Cloud Manager.
 
 >[!NOTE]
 >
@@ -190,18 +190,22 @@ Du kan definiera en eller flera filterdefinitioner för ett paket. Använd mer �
 
 ![Fliken Filter](assets/edit-filter.png)
 
-När du skapar filter kan du definiera en bana eller använda ett reguljärt uttryck för att ange alla noder som du vill ta med eller utesluta.
+När du skapar regler definierar du ett reguljärt uttryck (kallas även regex, regexp eller rationellt uttryck) för att ange alla noder som du vill ta med eller exkludera.
 
 | Regeltyp | Beskrivning |
 |---|---|
-| include | Om du tar med en katalog inkluderas den katalogen och alla filer och mappar i den katalogen (det vill säga hela underträdet), men **inte** ta med andra filer eller mappar från den angivna rotsökvägen. |
-| exclude | Om du exkluderar en katalog exkluderas den katalogen och alla filer och mappar i den katalogen (det vill säga hela underträdet). |
+| include | Inkludera kommer att inkludera alla filer och mappar i den angivna katalogen som matchar det reguljära uttrycket. Inkludera **inte** ta med andra filer eller mappar från den angivna rotsökvägen. |
+| exclude | Uteslut exkluderar alla filer och mappar som matchar det reguljära uttrycket. |
 
 Paketfilter definieras oftast när du börjar [skapa paketet.](#creating-a-new-package) De kan emellertid också redigeras senare, och därefter bör paketet byggas om för att uppdatera innehållet baserat på de nya filterdefinitionerna.
 
 >[!TIP]
 >
 >Ett paket kan innehålla flera filterdefinitioner så att noder från olika platser enkelt kan kombineras till ett paket.
+
+>[!TIP]
+>
+>Mer bakgrundsinformation finns i [Apache Jackrabbit - Arbetsytefilter](https://jackrabbit.apache.org/filevault/filter.html) dokumentation.
 
 ### Beroenden {#dependencies}
 
