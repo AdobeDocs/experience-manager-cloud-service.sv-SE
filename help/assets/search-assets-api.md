@@ -2,7 +2,7 @@
 title: Sök i Assets API
 description: Lär dig använda API:t för sökning i Assets.
 role: User
-source-git-commit: 540aa876ba7ea54b7ef4324634f6c5e220ad19d3
+source-git-commit: 3e2fe458460fe8ec4c1dd12152c1134bfb9ca62b
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 0%
@@ -58,4 +58,3 @@ headers: {
 Om du vill anropa API:t för sökning krävs en IMS-token för att definiera i `Authorization` information. IMS-token hämtas från ett tekniskt konto. Se [Hämta AEM as a Cloud Service-autentiseringsuppgifter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=en#fetch-the-aem-as-a-cloud-service-credentials) för att skapa ett nytt tekniskt konto. Se [Genererar åtkomsttoken](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=en#generating-the-access-token) för att generera IMS-token och använda den på rätt sätt i API-begärandehuvudet för sökresurser.
 
 Information om hur du visar exempel på förfrågningar, svarsexempel och svarskoder finns i [Sök i Assets API](https://adobe-aem-assets-delivery-experimental.redoc.ly/#operation/search).
-
