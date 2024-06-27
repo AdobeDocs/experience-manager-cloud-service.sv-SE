@@ -1,0 +1,151 @@
+---
+title: Söka efter resurser i Content Hub
+description: Lär dig söka efter resurser i [!DNL Content Hub]
+role: User
+source-git-commit: 15a266ccb6e4117c769d775a5f579fba943389bf
+workflow-type: tm+mt
+source-wordcount: '619'
+ht-degree: 0%
+
+---
+
+
+# Sök i Assets [!DNL Content Hub] {#search-assets}
+
+![Dela resurser - bannerbild](assets/search.png)
+
+När du har ett stort antal resurser i din databas är det tidskrävande att söka efter rätt resurs. [!DNL The Content Hub] sökfunktionen ger dig möjlighet att söka efter godkända resurser så att du kan utföra ytterligare åtgärder på dem, som att hämta, dela eller skapa samlingar. Du kan använda olika funktioner för att begränsa sökresultaten, till exempel textbaserad sökning, filter, taggar eller smart taggspecifik sökning, sökning efter ett visst filformat och så vidare.
+
+## Vad du kan söka efter  {#what-you-can-search}
+
+The [!DNL Content Hub] sökningen ger resultat baserade på:
+
+* **Matchande text:** The [!DNL Content Hub] Med sökning kan du söka efter en resurs med hjälp av dess namn eller beskrivning. Du kan utföra nyckelordsbaserad sökning, som jämför nyckelordet med texten som finns i egenskaperna för en resurs.
+
+* **Matchande sammanhang:** [!DNL Content Hub] sökresultatlistan innehåller ungefärliga resultat för resurser som du får baserat på matchande kontext. Om du t.ex. skriver `cool` i sökfältet, de resurser som är relaterade till `winter`, `snow`, `cold surroundings`visas i söklistan.
+
+* **Resursinformation (titel, taggar eller smarta taggar):** [!DNL Content Hub] använder algoritmen för smart sökning för att rangordna sökresultaten korrekt och så relevant som möjligt. [Metadata](#asset-properties.md) är en samling av alla data som är tillgängliga för en tillgång, men som inte nödvändigtvis ingår i den tillgången. [Det hjälper er att kategorisera resurser ytterligare och är till hjälp när mängden digital information växer](/help/assets/configure-content-hub-ui-options.md##configure-metadata-search-content-hub).
+
+* **Senast ändrat den:** De resurser som nyligen har ändrats visas högst upp i sökresultatlistan. Du kan även filtrera datumintervallet efter dina behov.
+
+* **Användning:** De resurser som används ofta visas högst upp i söklistan.
+
+* **Sökhistorik:** Klicka i sökrutan utan att skriva något tecken för att få fram sökhistoriken. Du kan också ta bort ett visst nyckelord från historiken. Sökhistoriken sparas i en webbläsares cacheminne, vilket innebär att om du öppnar [!DNL Content Hub] om du söker i en annan webbläsare eller rensar cacheminnet för webbläsaren, kan du inte längre visa sökhistoriken.
+
+* **Sök medan du skriver:** The [!DNL Content Hub] sökningen förbättrar sökupplevelsen genom att ge automatiska förslag när du börjar skriva.
+
+## Grundläggande sökning {#basic-search}
+
+Utför grundläggande sökning på [!DNL the Content Hub]navigera till sökfältet och ange det nyckelord som du vill söka efter. Navigera till de filter som finns i den vänstra rutan och använd dem för att begränsa sökresultaten.
+
+Sök till exempel efter alla **[!UICONTROL JPEG]** bilder med nyckelord `architect` som ändras under det senaste året. Så här kör du det här scenariot:
+
+1. Ange `architect` som söknyckelord.
+
+1. Navigera till filterpanelen > **[!UICONTROL Format]** > markera **[!UICONTROL JPEG]**.
+
+1. Navigera till **[!UICONTROL Modified]** > ange datumintervall.
+
+   ![Grundläggande sökning](assets/basic-search.png)
+
+## Begränsa sökresultaten med filter {#narrow-down-search-results}
+
+Använd panelen Filter om du vill söka efter resurser baserat på metadata. Du kan filtrera sökresultat baserat på olika sökpredikt. Du kan välja alla lämpliga predikat för att minimera eller begränsa sökresultaten. När du väljer flera alternativ i ett filter visas de resurser som matchar något av de alternativ som är markerade i ett filter. När du väljer flera alternativ för olika filter visas endast de resurser som matchar alla alternativ som har valts för olika filter för att begränsa sökresultaten.
+
+Standardfiltren innehåller filformat, godkänt av, godkänt, förfallet och inte förfallet samt förfallodatum. Administratörer kan också konfigurera de filter som visas i filterlistan. Mer information finns i [Konfigurera Content Hub användargränssnitt](configure-content-hub-ui-options.md#configure-filters-content-hub).
+
+<!--
+
+<table>
+    <tbody>
+     <tr>
+      <th><strong>Search Predicate</strong></th>
+      <th><strong>Description</strong></th>
+      <th><strong>Properties</strong></th>
+     </tr>
+     <tr>
+      <td> Campaigns </td>
+      <td> Allows you to search using planned activity performed to take any particular action. For example, advertisement campaign run on Ferrari to know the understand the interests of people using number of clicks people perform.</td>
+      <td>NA</td>
+     </tr>
+     <tr>
+      <td> Channels </td>
+      <td> Helps you to understand the path from where the asset is coming from. For example, web, social media, books, catalog, etc.</td>
+      <td>NA</td>
+     </tr>
+     <tr>
+      <td> Region </td>
+      <td> Helps you to understand the location where the asset is created. For example, Japan, EMEA, Worldwide, etc.</td>
+      <td>NA</td>
+     </tr>
+     <tr>
+      <td> Keywords </td>
+      <td> Keyword helps you search using terms or the words that you enter based on the topic. For example, images, low-resolution, etc.</td>
+      <td>NA</td>
+     </tr>
+     <tr>
+      <td> Timeframe </td>
+      <td> Helps you search assets using timeline. For example, search by year 2024, Q3 2023, etc.</td>
+      <td>NA</td>
+     </tr>
+     <tr>
+      <td>File format</td>
+      <td>Composition of an asset. The supported assets include image, document, video, printable media, and so on.</td>
+      <td>
+        <ul>
+            <li>[!UICONTROL JPEG]</li> 
+            <li>[!UICONTROL Quicktime]</li> 
+            <li>[!UICONTROL PNG]</li> 
+            <li>[!UICONTROL WebP]</li> 
+            <li>[!UICONTROL MP4]</li> 
+            <li>[!UICONTROL Plain]</li> 
+            <li>[!UICONTROL PDF]</li>
+            <li>[!UICONTROL SVG + XML]</li>
+        </ul>
+      </td>
+     </tr>
+     <tr>
+      <td>Tags</td>
+      <td>Tags help you categorize assets that can be browsed and searched more efficiently based on hierarchical taxonomies.</td>
+      <td>
+        <ul>
+            <li>Field label</li>
+            <li>Property name</li>
+            <li>Path</li>
+            <li>Description</li>
+        </ul>
+      </td>
+     </tr>
+     <!--<tr>
+      <td>Subject</td>
+      <td>Classification of assets based on their theme. For example, colorful, hiking, outdoors.</td>
+      <td>NA</td>
+     </tr>
+          <tr>
+      <td>Last modified</td>
+      <td>Search assets based on their last modification. Specify the date range using the Start date and End date fields.</td>
+      <td>
+        <ul>
+            <li>Range text (From)</li> 
+            <li>Range text (To) </li>
+        </ul>
+      </td>
+     </tr>    
+     <!--<tr>
+      <td>Asset ID</td>
+      <td>Unique number that identifies the asset.</td>
+      <td>NA</td>
+     </tr>
+     <tr>
+      <td> Colors </td>
+      <td> Helps you search assets using colors that are automatically identified in an asset using Adobe's Sensei AI capabilities.</td>
+      <td>NA</td>
+     </tr>  
+    </tbody>
+   </table>
+
+-->
+
+## Gör mer med sökningar {#do-more-with-search}
+
+[!DNL The Content Hub] är inte begränsat till sökning, utan ger dig möjlighet att utföra ytterligare åtgärder, som [ladda ned](download-assets-content-hub.md), [dela](share-assets-content-hub.md)och [lägg till resurser i samling](collections-content-hub.md), direkt från sökgränssnittet eller förhandsvisningsgränssnittet. Markera resurserna på sökresultatsidan för att visa dessa alternativ.
