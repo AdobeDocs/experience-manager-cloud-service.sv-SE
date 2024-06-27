@@ -1,9 +1,9 @@
 ---
 title: Content Hub - översikt
-description: Läs mer om Content Hub, dess viktigaste fördelar, hur du får tillgång till det och hur du kan ge feedback runt de alternativ som finns i Content Hub.
-source-git-commit: ad6d213b6ecf902ec80c323a686231f21ee13811
+description: Läs mer om Content Hub, dess viktigaste fördelar, hur man får tillgång till det och hur man kan ge feedback kring de alternativ som finns i Content Hub.
+source-git-commit: b29641286919b5becc3982400ea160836531fdc5
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '646'
 ht-degree: 0%
 
 ---
