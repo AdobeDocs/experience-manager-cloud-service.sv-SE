@@ -16,7 +16,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="assets_collections"
 >title="Hantera samlingar"
->abstract="En samling är en uppsättning resurser, mappar eller andra samlingar i resursvyn. Använd samlingar för att dela resurser mellan användare. Till skillnad från mappar kan en samling innehålla resurser från olika platser. Du kan dela flera samlingar med en användare. Varje samling innehåller referenser till resurser. Resursernas referensintegritet bevaras i alla samlingar."
+>abstract="En samling är en uppsättning resurser, mappar eller andra samlingar i vyn Assets. Använd samlingar för att dela resurser mellan användare. Till skillnad från mappar kan en samling innehålla resurser från olika platser. Du kan dela flera samlingar med en användare. Varje samling innehåller referenser till resurser. Resursernas referensintegritet bevaras i alla samlingar."
 
 En samling är en uppsättning resurser, mappar eller andra samlingar i vyn Adobe Experience Manager Assets. Använd samlingar för att dela resurser mellan användare.
 
@@ -96,7 +96,7 @@ Så här tar du bort resurser från en samling:
 
 ## Hantera en smart samling {#manage-smart-collection}
 
-Spara sökresultaten som en smart samling för att dynamiskt uppdatera samlingens innehåll. Om det finns resurser som har lagts till i resursvyns databas och som passar de sökvillkor som angavs när den smarta samlingen skapades, uppdateras innehållet i den smarta samlingen automatiskt när du öppnar en smart samling.
+Spara sökresultaten som en smart samling för att dynamiskt uppdatera samlingens innehåll. Om det finns resurser som har lagts till i Assets-vydatabasen och som passar de sökvillkor som angavs när du skapade den smarta samlingen, uppdateras innehållet i den smarta samlingen automatiskt när du öppnar en smart samling.
 
 ### Skapa en smart samling {#create-smart-collection}
 
@@ -204,7 +204,7 @@ Mer information om hela arbetsflödet finns i [hantera behörigheter](https://ex
 
 ## Nästa steg {#next-steps}
 
-* Ge produktfeedback med [!UICONTROL Feedback] alternativ som finns i användargränssnittet i resursvyn
+* Ge produktfeedback med [!UICONTROL Feedback] finns i användargränssnittet i Assets-vyn
 
 * Ge feedback på dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som finns till höger
 

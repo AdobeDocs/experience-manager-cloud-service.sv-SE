@@ -1,6 +1,6 @@
 ---
 title: Introduktion till anpassade domännamn
-description: Med Cloud Managers användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt.
+description: Med Cloud Manager användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt.
 exl-id: ed03bff9-dfcc-4dfe-a501-a7facd24aa7d
 solution: Experience Manager
 feature: Cloud Manager, Developing
@@ -18,11 +18,11 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_domains"
 >title="Hantera anpassade domännamn"
->abstract="Med Cloud Managers användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt."
+>abstract="Med Cloud Manager användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name" text="Lägga till ett anpassat domännamn"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/managing-custom-domain-names" text="Visa och uppdatera anpassat domännamn"
 
-Med Cloud Managers användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt. Adobe Experience Manager as a Cloud Service etableras med ett standarddomännamn som slutar på `*.adobeaemcloud.com`. Det här standarddomännamnet kvarstår, även efter att du har associerat anpassade domännamn till webbplatsen.
+Med Cloud Manager användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt. Adobe Experience Manager as a Cloud Service etableras med ett standarddomännamn som slutar på `*.adobeaemcloud.com`. Det här standarddomännamnet kvarstår, även efter att du har associerat anpassade domännamn till webbplatsen.
 
 ## Vad är anpassade domännamn? {#what-are-custom-domain-names}
 
@@ -38,12 +38,12 @@ Du kan köpa ett domännamn från en domännamnsregistrator, ett företag eller 
 
 ## Anpassade domännamn och CDN för BYO {#byo-cdn}
 
-AEM as a Cloud Service har ett inbyggt leveransnätverk (CDN), men du kan även ta med ditt eget CDN (BYO) för AEM. Anpassade domäner kan installeras antingen i det AEM CDN eller i ett CDN som du hanterar.
+AEM as a Cloud Service har ett inbyggt nätverk för innehållsleverans (CDN), men du kan även hämta ditt eget CDN (BYO) för AEM. Anpassade domäner kan installeras antingen i det AEM CDN eller i ett CDN som du hanterar.
 
-* Anpassade domännamn (och certifikat) som är installerade i det AEM hanterade CDN hanteras via Cloud Manager.
+* Anpassade domännamn (och certifikat) som är installerade i det AEM CDN hanteras via Cloud Manager.
 * Anpassade domännamn (och certifikat) som är installerade i ditt eget CDN hanteras i det specifika CDN.
 
-Domäner som hanteras i ditt eget CDN behöver inte installeras med hjälp av Cloud Manager. De görs tillgängliga för AEM via X-Forwarded-Host och matchar de värdar som definierats i Dispatcher. Se [CDN-dokumentation](/help/implementing/dispatcher/cdn.md).
+Domäner som hanteras i ditt eget CDN behöver inte installeras med Cloud Manager. De görs tillgängliga för AEM via X-Forwarded-Host och matchar de värdar som definierats i Dispatcher. Se [CDN-dokumentation](/help/implementing/dispatcher/cdn.md).
 
 I en och samma miljö kan du ha båda domänerna installerade i det AEM CDN:et och installerade i ditt eget CDN.
 

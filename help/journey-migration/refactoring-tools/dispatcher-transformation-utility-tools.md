@@ -1,6 +1,6 @@
 ---
 title: Verktyg för AEM Dispatcher Converter
-description: Lär dig hur du konverterar befintliga konfigurationer AEM Dispatcher till konfigurationer AEM as a Cloud Service Dispatcher.
+description: Lär dig konvertera befintliga konfigurationer på AEM Dispatcher till konfigurationer på AEM as a Cloud Service Dispatcher.
 exl-id: 2e95ff7b-cc94-477d-99ab-816a58998287
 feature: Migration
 role: Admin
@@ -16,13 +16,13 @@ ht-degree: 13%
 >[!CONTEXTUALHELP]
 >id="aemcloud_nonbpa_dispconverter"
 >title="AEM Dispatcher Converter"
->abstract="Adobe Experience Manager Dispatcher Converter konverterar befintliga konfigurationer AEM Dispatcher till konfigurationer AEM as a Cloud Service Dispatcher."
+>abstract="Adobe Experience Manager Dispatcher Converter konverterar befintliga konfigurationer på AEM Dispatcher till konfigurationer på AEM as a Cloud Service Dispatcher."
 
-Adobe Experience Manager Dispatcher Converter konverterar befintliga konfigurationer AEM Dispatcher till konfigurationer AEM as a Cloud Service Dispatcher.
+Adobe Experience Manager Dispatcher Converter konverterar befintliga konfigurationer på AEM Dispatcher till konfigurationer på AEM as a Cloud Service Dispatcher.
 
 ## Introduktion till Dispatcher {#introduction-dispatcher}
 
-Dispatcher är ett Adobe Experience Manager-verktyg för cachelagring, eller belastningsbalansering, eller båda. AEM:s Dispatcher skyddar också AEM-servern mot angrepp. Därför kan du öka säkerheten för AEM genom att använda Dispatcher med en webbserver i företagsklass.
+Dispatcher är Adobe Experience Manager-cachning, eller belastningsutjämningsverktyg, eller båda, verktyg. AEM:s Dispatcher skyddar också AEM-servern mot angrepp. Därför kan du öka säkerheten för AEM genom att använda Dispatcher med en webbserver i företagsklass.
 
 >[!NOTE]
 >Det vanligaste användningsområdet för Dispatcher är att cachelagra svar från en **AEM-publiceringsinstans** för att minska svarstiden och öka säkerheten för den externt adresserade publicerade webbplatsen.
@@ -31,17 +31,17 @@ Se [Dispatcher - översikt](https://experienceleague.adobe.com/docs/experience-m
 
 ### Konfiguration och testning av Apache och Dispatcher {#dispatcher-configurations-cloud}
 
-Lär dig att strukturera AEM as a Cloud Service Apache- och Dispatcher-konfigurationer och hur du validerar och kör dem lokalt innan du distribuerar dem till molnmiljöer.
+Lär dig strukturera konfigurationerna för AEM as a Cloud Service Apache och Dispatcher och hur du validerar och kör dem lokalt innan du distribuerar dem till molnmiljöer.
 
 Se [Dispatcher i molnet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html) för mer information.
 
 ## AEM Dispatcher Converter {#aem-dispatcher-converter}
 
-AEM Dispatcher Converter kan omfaktorisera befintliga konfigurationer för Managed Services Dispatcher på plats eller Adobe till AEM as a Cloud Service kompatibla Dispatcher-konfigurationer.
+AEM Dispatcher Converter kan omfaktorisera befintliga Managed Services Dispatcher-konfigurationer på plats eller i Adobe till AEM as a Cloud Service-kompatibla Dispatcher-konfigurationer.
 
 ## Använda AEM Dispatcher Converter {#using-dispatcher-converter}
 
-* Som Adobe Developer CLI: Adobe rekommenderar vi att du använder AEM Dispatcher Converter via `aio-cli-plugin-aem-cloud-service-migration` (AEM plugin-program för omfaktorisering av as a Cloud Service kod för Adobe Developer CLI).
+* Som Adobe Developer CLI: Adobe rekommenderar vi att du använder AEM Dispatcher Converter via `aio-cli-plugin-aem-cloud-service-migration` (AEM as a Cloud Service-plugin för omfaktorisering för Adobe Developer CLI).
 
   Se **[Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#introduction)** så att du kan lära dig hur du installerar och använder plugin-programmet.
 

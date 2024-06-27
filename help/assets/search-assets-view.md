@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="assets_search"
->title="Sök resurser"
+>title="Sök i Assets"
 >abstract="Sök efter resurser genom att ange ett nyckelord i sökfältet eller genom att filtrera resurser baserat på status, filtyp, MIME-typ, storlek, skapande, ändring och förfallodatum. Du kan också använda egna filter förutom standardfiltren. Du kan spara de filtrerade resultaten som en sparad sökning eller som en smart samling."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/manage-collections.html?lang=en#manage-smart-collection" text="Skapa smarta samlingar"
 
@@ -49,7 +49,7 @@ Du kan filtrera sökresultaten baserat på följande parametrar.
 
 * Förfallodatum: Filtrera sökresultaten baserat på en `Expired` status. Du kan dessutom ange ett förfallodatumintervall för resurser för att ytterligare filtrera sökresultaten.
 
-* Egna filter: [Lägga till egna filter](#custom-filters) till användargränssnittet i resursvyn. Använd de anpassade filtren utöver standardfiltren för att förfina sökresultaten.
+* Egna filter: [Lägga till egna filter](#custom-filters) till Assets visa användargränssnittet. Använd de anpassade filtren utöver standardfiltren för att förfina sökresultaten.
 
 Du kan sortera de sökda resurserna i stigande eller fallande ordning efter `Name`, `Relevancy`, `Size`, `Modified`och `Created`.
 
@@ -57,9 +57,9 @@ Du kan sortera de sökda resurserna i stigande eller fallande ordning efter `Nam
 
 **Behörigheter krävs:**  `Can Edit`, `Owner`eller Administratör.
 
-I resursvyn kan du även lägga till anpassade filter i användargränssnittet. Du kan sedan använda dessa anpassade filter utöver [standardfilter](#refine-search-results) för att förfina sökresultaten.
+I Assets-vyn kan du även lägga till egna filter i användargränssnittet. Du kan sedan använda dessa anpassade filter utöver [standardfilter](#refine-search-results) för att förfina sökresultaten.
 
-Resursvyn innehåller följande anpassade filter:
+I Assets-vyn finns följande anpassade filter:
 
 <table>
     <tbody>
@@ -178,7 +178,7 @@ When userA is searching and userB add an asset that matches search results, will
 
 Du kan markera de resurser som visas i sökresultaten och göra följande:
 
-* **Sök efter liknande bild**: Hitta liknande bildresurser i resursgränssnittet baserat på metadata och smarta taggar.
+* **Sök efter liknande bild**: Hitta liknande bildresurser i Assets-gränssnittet baserat på metadata och smarta taggar.
 
 * **Information**: Visa och redigera resursegenskaper.
 
@@ -186,7 +186,7 @@ Du kan markera de resurser som visas i sökresultaten och göra följande:
 
 * **Lägg till i samling**: Lägg till den valda resursen i en samling.
 
-* **Fäst i snabbåtkomst**: [Fäst en resurs](my-workspace-assets-view.md) för snabbare åtkomst när du behöver det senare. Alla fästa objekt visas i **Snabb åtkomst** i Min arbetsyta.
+* **Fäst i snabbåtkomst**: [Fäst en resurs](my-workspace-assets-view.md) för snabbare åtkomst när du behöver det senare. Alla fästa objekt visas i **Snabb åtkomst** i My Workspace.
 
 * **Öppna i Adobe Express**: Redigera en bild i den integrerade Adobe Expressen från Experience Manager Assets-skärmen.
 
@@ -328,9 +328,9 @@ Om du behöver lämna feedback om funktionen Sammanhangsbaserad sökning klickar
 
 ## Nästa steg {#next-steps}
 
-* [Titta på en video där du kan söka efter resurser i resursvyn](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/basics/using.html)
+* [Titta på en video där du kan söka efter resurser i Assets-vyn](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/basics/using.html)
 
-* Ge produktfeedback med [!UICONTROL Feedback] alternativ som finns i användargränssnittet i resursvyn
+* Ge produktfeedback med [!UICONTROL Feedback] finns i användargränssnittet i Assets-vyn
 
 * Ge feedback på dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som finns till höger.
 

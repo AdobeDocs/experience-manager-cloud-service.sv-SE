@@ -13,18 +13,18 @@ ht-degree: 1%
 
 # Komma igång med Cloud Acceleration Manager {#get-started-cam}
 
-Cloud Acceleration Manager är en molnbaserad applikation som är utformad för att vägleda era IT-team under hela övergångsresan, från planering till live Cloud Service. Konfigurera era team för en framgångsrik migrering med bästa praxis, tips, dokumentation och verktyg som rekommenderas av Adobe för att hjälpa er att AEM som Cloud Service under hela kundresan.
+Cloud Acceleration Manager är en molnbaserad applikation som utformats för att vägleda era IT-team under hela övergångsperioden, från planering till Cloud Service. Konfigurera era team för en framgångsrik migrering med bästa praxis, tips, dokumentation och verktyg som rekommenderas av Adobe för att hjälpa er att AEM som Cloud Service under hela kundresan.
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur du kommer igång med CAM (Cloud Acceleration Manager). Efter läsningen bör du kunna:
+Det här dokumentet hjälper dig att förstå hur du kommer igång med Cloud Acceleration Manager (CAM). Efter läsningen bör du kunna:
 
 * förstå hur du loggar in på CAM
 * skapa projekt utifrån CAM:s användargränssnitt
 
 ## Använda Cloud Acceleration Manager {#using-cam}
 
-CAM (Cloud Acceleration Manager) ger en helhetsupplevelse för migreringar. Den levereras i form av en guidad resa genom att tillhandahålla en inledande utvärdering som pekar ut rätt verktyg, dokumentation och bästa metoder för att säkerställa en framgångsrik publicering på AEM as a Cloud Service.
+Cloud Acceleration Manager (CAM) ger en helhetsupplevelse för migreringar. Den levereras i form av en guidad resa genom att tillhandahålla en inledande utvärdering som pekar ut rätt verktyg, dokumentation och bästa praxis för att säkerställa en framgångsrik GoLive på AEM as a Cloud Service.
 
 ### Navigera till Cloud Acceleration Manager {#navigating}
 
@@ -43,10 +43,10 @@ Följ stegen nedan för att navigera till Cloud Acceleration Manager (CAM):
 >[!CONTEXTUALHELP]
 >id="aemcloud_cam_gettingstarted"
 >title="Komma igång med Cloud Acceleration Manager"
->abstract="Skapa ditt projekt och kom igång snabbt med din resa till AEM as a Cloud Service."
+>abstract="Skapa ett projekt och kom igång snabbt med din resa till AEM as a Cloud Service."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/introduction-cam/benefits-cam.html" text="Fördelar med att använda Cloud Acceleration Manager"
 
-Med landningssidan i CAM-hanteraren (Cloud Acceleration Manager) kan du skapa och redigera flera projekt.
+Med Cloud Acceleration Manager (CAM) landningssida kan du skapa och redigera flera projekt.
 
 Skapa ett projekt genom att följa stegen nedan:
 
@@ -103,4 +103,4 @@ Följ stegen nedan för att ta bort ditt projekt:
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du loggar in i Cloud Acceleration Manager och hur du skapar ett projekt är du redo att gå igenom nästa steg i [Beredskapsfas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html).
+När du har lärt dig hur du loggar in på Cloud Acceleration Manager och hur du skapar ett projekt är du redo att gå igenom nästa steg i [Beredskapsfas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html).

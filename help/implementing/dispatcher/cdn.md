@@ -1,5 +1,5 @@
 ---
-title: CDN på AEM as a Cloud Service
+title: CDN i AEM AS A CLOUD SERVICE
 description: Lär dig hur du använder det AEM-hanterade CDN och hur du pekar ditt eget CDN mot det AEM-hanterade CDN.
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
@@ -11,11 +11,11 @@ ht-degree: 5%
 
 ---
 
-# CDN på AEM as a Cloud Service {#cdn}
+# CDN i AEM AS A CLOUD SERVICE {#cdn}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_cdn"
->title="CDN på AEM as a Cloud Service"
+>title="CDN i AEM AS A CLOUD SERVICE"
 >abstract="AEM när Cloud Servicen levereras med ett inbyggt CDN. Dess huvudsakliga syfte är att minska latensen genom att leverera tillgängligt innehåll från CDN-noder nära webbläsaren. Det är helt managerat och konfigurerat för optimal prestanda i AEM-program."
 
 AEM när Cloud Servicen levereras med ett inbyggt CDN. Dess huvudsakliga syfte är att minska latensen genom att leverera tillgängligt innehåll från CDN-noder nära webbläsaren. Det är helt managerat och konfigurerat för optimal prestanda i AEM-program.
@@ -26,24 +26,24 @@ Det AEM CDN uppfyller de flesta kunders krav på prestanda och säkerhet. För p
 
 ## AEM CDN  {#aem-managed-cdn}
 
-Följ avsnitten nedan om du vill använda självbetjäningsgränssnittet för Cloud Manager för att förbereda innehållsleveransen genom att använda det medföljande CDN-nätverket:
+Följ nedanstående avsnitt för att använda Cloud Manager självbetjäningsgränssnitt för att förbereda innehållsleverans genom att använda det medföljande CDN-AEM:
 
 1. [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
 1. [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
 
 **Begränsa trafik**
 
-Som standard för en AEM-hanterad CDN-installation kan all offentlig trafik gå vidare till publiceringstjänsten, både för produktionsmiljöer och icke-produktionsmiljöer (utvecklingsmiljöer och scenmiljöer). Du kan begränsa trafiken till publiceringstjänsten för en viss miljö (till exempel begränsa mellanlagring med ett intervall av IP-adresser) via användargränssnittet i Cloud Manager.
+Som standard för en AEM-hanterad CDN-installation kan all offentlig trafik gå vidare till publiceringstjänsten, både för produktionsmiljöer och icke-produktionsmiljöer (utvecklingsmiljöer och scenmiljöer). Du kan begränsa trafiken till publiceringstjänsten för en viss miljö (t.ex. begränsa mellanlagring med ett intervall av IP-adresser) via Cloud Manager användargränssnitt.
 
 Se [Hantera IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md) om du vill veta mer.
 
 >[!CAUTION]
 >
->Endast begäranden från tillåtna IP-adresser hanteras av AEM hanterat CDN. Om du pekar ditt eget CDN mot det AEM CDN-nätverket kontrollerar du att IP-adresserna för ditt CDN är med i tillåtelselista.
+>Endast begäranden från tillåtna IP-adresser hanteras av AEM hanterade CDN. Om du pekar ditt eget CDN mot det AEM CDN-nätverket kontrollerar du att IP-adresserna för ditt CDN är med i tillåtelselista.
 
 ### Konfigurera trafik vid leveransnätverket {#cdn-configuring-cloud}
 
-Regler för att konfigurera CDN-trafik och filter kan deklareras i en konfigurationsfil och distribueras till CDN med hjälp av [Konfigurationspipeline för Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline). Mer information finns i [Konfigurera trafik vid leveransnätverket](/help/implementing/dispatcher/cdn-configuring-traffic.md) och [Trafikfilterregler inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md).
+Regler för att konfigurera CDN-trafik och filter kan deklareras i en konfigurationsfil och distribueras till CDN med hjälp av [Cloud Manager Configuration Pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline). Mer information finns i [Konfigurera trafik vid leveransnätverket](/help/implementing/dispatcher/cdn-configuring-traffic.md) och [Trafikfilterregler inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md).
 
 ### Konfigurera CDN-felsidor {#cdn-error-pages}
 

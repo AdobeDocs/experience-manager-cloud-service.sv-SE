@@ -1,6 +1,6 @@
 ---
 title: Introduktion till hantering av SSL-certifikat
-description: Lär dig hur du får tillgång till självbetjäningsverktyg i Cloud Manager för att installera SSL-certifikat.
+description: Lär dig hur Cloud Manager förser dig med självbetjäningsverktyg för att installera SSL-certifikat.
 exl-id: 0d41723c-c096-4882-a3fd-050b7c9996d8
 solution: Experience Manager
 feature: Cloud Manager, Developing
@@ -18,11 +18,11 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_sslcert"
 >title="Hantera SSL-certifikat"
->abstract="Läs om hur du får tillgång till självbetjäningsverktyg i Cloud Manager för att installera och hantera SSL-certifikat för att skydda din webbplats för användarna. Cloud Manager använder en TLS-plattformstjänst för att hantera SSL-certifikat och privata nycklar som ägs av kunder och som erhållits från tredjepartscertifikatutfärdare."
+>abstract="Läs om hur Cloud Manager förser dig med självbetjäningsverktyg för att installera och hantera SSL-certifikat för att skydda webbplatsen för dina användare. Cloud Manager använder en TLS-plattformstjänst för att hantera SSL-certifikat och privata nycklar som ägs av kunder och som erhållits från tredjepartscertifikatutfärdare."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates.html" text="Visa, uppdatera och ersätta ett SSL-certifikat"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates.html" text="Kontrollera status för ett SSL-certifikat"
 
-Med Cloud Manager får du tillgång till självbetjäningsverktyg för att installera och hantera SSL-certifikat så att du kan skydda din webbplats för användarna. Cloud Manager använder en TLS-plattformstjänst för att hantera SSL-certifikat och privata nycklar som ägs av kunder och som erhållits från tredjepartscertifikatutfärdare, till exempel Let&#39;s Encrypt.
+Cloud Manager tillhandahåller självbetjäningsverktyg för att installera och hantera SSL-certifikat så att du kan skydda webbplatsen för dina användare. Cloud Manager använder en plattforms-TLS-tjänst för att hantera SSL-certifikat och privata nycklar som ägs av kunder och som erhållits från tredjepartscertifikatutfärdare som Let&#39;s Encrypt.
 
 ## Introduktion till certifikat {#certificates}
 
@@ -32,11 +32,11 @@ När en entitet begär ett certifikat från en certifikatutfärdare slutför cer
 
 >[!IMPORTANT]
 >
->Molnhanteraren tillhandahåller inte SSL-certifikat eller privata nycklar. Dessa måste hämtas från certifikatutfärdare (CA).
+>Cloud Manager tillhandahåller inte SSL-certifikat eller privata nycklar. Dessa måste hämtas från certifikatutfärdare (CA).
 
-## SSL-hanteringsfunktioner i molnhanteraren {#features}
+## Cloud Manager SSL-hanteringsfunktioner {#features}
 
-Cloud Manager stöder följande användningsalternativ för SSL-certifikat från kund.
+Cloud Manager stöder följande alternativ för användning av SSL-certifikat.
 
 * Ett SSL-certifikat kan användas i flera miljöer. Det kan alltså läggas till en gång och användas flera gånger.
 * Varje Cloud Manager-miljö kan använda flera certifikat.
@@ -87,7 +87,7 @@ Följande `openssl` kan användas för att konvertera certifikat som inte är PE
 
 ## Begränsningar {#limitations}
 
-Vid en given tidpunkt tillåter Cloud Manager att högst 50 SSL-certifikat installeras. Dessa kan kopplas till en eller flera miljöer i programmet och även omfatta certifikat som gått ut.
+Cloud Manager tillåter att högst 50 SSL-certifikat installeras vid en given tidpunkt. Dessa kan kopplas till en eller flera miljöer i programmet och även omfatta certifikat som gått ut.
 
 Om du har nått gränsen kan du granska dina certifikat och överväga:
 

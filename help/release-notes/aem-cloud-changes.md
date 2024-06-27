@@ -1,6 +1,6 @@
 ---
-title: Betydande ändringar av Adobe Experience Manager (AEM) as a Cloud Service
-description: Observerbara ändringar av Adobe Experience Manager (AEM) as a Cloud Service.
+title: Betydande ändringar i Adobe Experience Manager (AEM) as a Cloud Service
+description: Observerbara ändringar i Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: fe11d779-66cd-45aa-aa6b-c819b88d2405
 feature: Release Information
 role: Admin
@@ -17,7 +17,7 @@ Adobe Experience Manager (AEM) Cloud Service innehåller många nya funktioner o
 
 >[!CONTEXTUALHELP]
 >id="aem_cloud_notable_changes"
->title="Betydande ändringar i AEM as a Cloud Service"
+>title="Betydande förändringar i AEM as a Cloud Service"
 >abstract="På den här fliken kan du visa innehåll som hjälper dig att förstå skillnaderna mellan AEM lokalt, eller i Adobe Managed Services, jämfört med AEM as a Cloud Service."
 >additional-url="https://video.tv.adobe.com/v/330543" text="AEM as a Cloud Service utveckling"
 
@@ -45,7 +45,7 @@ De största skillnaderna finns i följande områden:
 
 * [Borttagning av Classic UI](#classic-ui)
 
-* [Publish-side Delivery](#publish-side-delivery)
+* [Publish-Side Delivery](#publish-side-delivery)
 
 * [Hantering och leverans av tillgångar](#asset-handling)
 
@@ -89,7 +89,7 @@ I AEM Cloud Service publiceras innehåll med [Distribution av säljinnehåll](ht
 
 * Anpassade arbetsflöden som till exempel skickar innehåll till replikeringsagenter för förhandsgranskningsservrar.
 * Anpassning till replikeringsagenter för att omvandla innehåll.
-* Använda omvänd replikering för att återföra innehåll från publicering till författaren.
+* Använda omvänd replikering för att återföra innehåll från Publish till författaren.
 
 Dessutom tas knapparna för paus och inaktivering bort från administrationskonsolen för replikeringsagenten.
 
@@ -97,9 +97,9 @@ Dessutom tas knapparna för paus och inaktivering bort från administrationskons
 
 Det klassiska användargränssnittet är inte längre tillgängligt i AEM Cloud Service.
 
-## Publish-side Delivery {#publish-side-delivery}
+## Publish-Side Delivery {#publish-side-delivery}
 
-HTTP-acceleration inklusive CDN och trafikhantering för författar- och publiceringstjänster tillhandahålls som standard i AEM Cloud Service.
+HTTP-acceleration inklusive CDN och trafikhantering för författartjänster och Publish-tjänster tillhandahålls som standard i AEM Cloud Service.
 
 För projekt som går över från AMS eller en lokal installation rekommenderar Adobe starkt att du använder det inbyggda CDN, eftersom funktionerna i AEM Cloud Service är optimerade för det CDN som tillhandahålls.
 

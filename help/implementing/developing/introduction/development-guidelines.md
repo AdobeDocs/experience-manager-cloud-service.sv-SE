@@ -1,6 +1,6 @@
 ---
-title: AEM riktlinjer för as a Cloud Service utveckling
-description: Lär dig riktlinjer för utveckling på AEM as a Cloud Service och om viktiga sätt som skiljer sig från AEM på plats och AEM i AMS.
+title: AEM as a Cloud Service riktlinjer för utveckling
+description: Lär dig riktlinjer för utveckling på AEM as a Cloud Service och viktiga sätt att skilja den från AEM på plats och AEM i AMS.
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
 feature: Developing
 role: Admin, Architect, Developer
@@ -11,21 +11,21 @@ ht-degree: 0%
 
 ---
 
-# AEM riktlinjer för as a Cloud Service utveckling {#aem-as-a-cloud-service-development-guidelines}
+# AEM as a Cloud Service riktlinjer för utveckling {#aem-as-a-cloud-service-development-guidelines}
 
 >[!CONTEXTUALHELP]
 >id="development_guidelines"
->title="AEM riktlinjer för as a Cloud Service utveckling"
->abstract="Lär dig riktlinjer för utveckling på AEM as a Cloud Service och om viktiga sätt som skiljer sig från AEM på plats och AEM i AMS."
+>title="AEM as a Cloud Service riktlinjer för utveckling"
+>abstract="Lär dig riktlinjer för utveckling på AEM as a Cloud Service och viktiga sätt att skilja den från AEM på plats och AEM i AMS."
 >additional-url="https://video.tv.adobe.com/v/330555/" text="Demo av paketstruktur"
 
 I det här dokumentet presenteras riktlinjer för utveckling på AEM as a Cloud Service och viktiga sätt som skiljer sig från AEM på plats och AEM i AMS.
 
 ## Koden måste vara klustermedveten {#cluster-aware}
 
-Kod som körs AEM as a Cloud Service måste vara medveten om att den alltid körs i ett kluster. Det innebär att fler än en instans alltid körs. Koden måste vara flexibel, särskilt eftersom en instans kan stoppas när som helst.
+Kod som körs i AEM as a Cloud Service måste vara medveten om att den alltid körs i ett kluster. Det innebär att fler än en instans alltid körs. Koden måste vara flexibel, särskilt eftersom en instans kan stoppas när som helst.
 
-Under uppdateringen av AEM as a Cloud Service finns det instanser där gammal och ny kod körs parallellt. Därför får gammal kod inte bryta med innehåll som skapas av ny kod och ny kod måste kunna hantera gammalt innehåll.
+Under uppdateringen av AEM as a Cloud Service finns instanser där gammal och ny kod körs parallellt. Därför får gammal kod inte bryta med innehåll som skapas av ny kod och ny kod måste kunna hantera gammalt innehåll.
 
 Om det finns ett behov av att identifiera det primära klustret kan API:t för identifiering av Apache Sling användas för att identifiera det.
 
@@ -35,9 +35,9 @@ Tillståndet får inte sparas i minnet utan sparas i databasen. Annars kan det h
 
 ## Läge i filsystemet {#state-on-the-filesystem}
 
-Använd inte instansens filsystem AEM as a Cloud Service. Disken är tillfällig och kasseras när instanser återvinns. Det är möjligt att använda filsystemet i begränsad omfattning för tillfällig lagring i samband med behandling av enstaka begäranden, men det bör inte missbrukas för stora filer. Detta beror på att det kan ha en negativ inverkan på resursanvändningskvoten och leda till diskbegränsningar.
+Använd inte instansens filsystem i AEM as a Cloud Service. Disken är tillfällig och kasseras när instanser återvinns. Det är möjligt att använda filsystemet i begränsad omfattning för tillfällig lagring i samband med behandling av enstaka begäranden, men det bör inte missbrukas för stora filer. Detta beror på att det kan ha en negativ inverkan på resursanvändningskvoten och leda till diskbegränsningar.
 
-Som ett exempel där filsystemsanvändningen inte stöds bör publiceringsskiktet se till att alla data som måste vara beständiga skickas till en extern tjänst för längre lagringstid.
+Som ett exempel där det inte finns stöd för filsystemsanvändning bör Publish-nivån se till att alla data som måste vara beständiga skickas iväg till en extern tjänst för längre lagringstid.
 
 ## Observera {#observation}
 
@@ -45,7 +45,7 @@ På samma sätt kan man inte garantera att allt som sker asynkront, som att ager
 
 ## Bakgrundsuppgifter och tidskrävande jobb {#background-tasks-and-long-running-jobs}
 
-Kod som körs som en bakgrundsuppgift måste anta att instansen som den körs i när som helst kan tas ned. Därför måste koden vara flexibel och viktigast av allt återtagbar. Det innebär att om koden körs igen ska den inte börja om från början, utan i närheten av den plats där den slutade. Även om detta inte är ett nytt krav för den här typen av kod är det AEM as a Cloud Service mer sannolikt att en instans kommer att tas bort.
+Kod som körs som en bakgrundsuppgift måste anta att instansen som den körs i när som helst kan tas ned. Därför måste koden vara flexibel och viktigast av allt återtagbar. Det innebär att om koden körs igen ska den inte börja om från början, utan i närheten av den plats där den slutade. Även om detta inte är ett nytt krav för den här typen av kod är det troligare att en instans kommer att tas bort i AEM as a Cloud Service.
 
 För att minimera problemet bör långvariga jobb om möjligt undvikas, och de bör kunna återställas till ett minimum. För att utföra sådana jobb använder du Sling Jobs, som har en garanti som är minst en gång och därför, om de avbryts, kommer att köras igen så snart som möjligt. Men de borde förmodligen inte börja från början igen. För schemaläggning av sådana jobb är det bäst att använda [Försäljningsjobb](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#jobs-guarantee-of-processing) schemaläggaren på samma sätt säkerställer körningen minst en gång.
 
@@ -57,7 +57,7 @@ På samma sätt kan man inte garantera att allt som sker asynkront, som att ager
 
 Vi rekommenderar starkt att alla utgående HTTP-anslutningar anger rimliga anslutnings- och lästimeout. Föreslagna värden är 1 sekund för anslutningstimeout och 5 sekunder för lästimeout. De exakta numren måste bestämmas utifrån hur väl serverdelssystemet hanterar dessa begäranden.
 
-För kod som inte tillämpar dessa tidsgränser kommer AEM instanser som körs på AEM as a Cloud Service att tillämpa en global tidsgräns. Dessa timeoutvärden är 10 sekunder för anslutningsanrop och 60 sekunder för läsanrop för anslutningar.
+För kod som inte tillämpar dessa tidsgränser kommer AEM som körs på AEM as a Cloud Service att tillämpa en global tidsgräns. Dessa timeoutvärden är 10 sekunder för anslutningsanrop och 60 sekunder för läsanrop för anslutningar.
 
 Adobe rekommenderar att du använder [Bibliotek för Apache HttpComponents Client 4.x](https://hc.apache.org/httpcomponents-client-ga/) för att skapa HTTP-anslutningar.
 
@@ -91,11 +91,11 @@ Använd till exempel inte `asset.getOriginal().getStream()`, som startar nedladd
 
 ## Inga omvända replikeringsagenter {#no-reverse-replication-agents}
 
-Omvänd replikering från Publicera till Författare stöds inte i AEM as a Cloud Service. Om en sådan strategi behövs kan du använda ett externt beständigt arkiv som delas mellan gruppen med publiceringsinstanser och eventuellt klustret Författare.
+Omvänd replikering från Publish till författare stöds inte i AEM as a Cloud Service. Om en sådan strategi behövs kan du använda ett externt beständigt arkiv som delas mellan servergruppen med Publish-instanser och potentiellt Author-klustret.
 
 ## Vidarebefordra replikeringsagenter kan behöva porteras {#forward-replication-agents}
 
-Innehållet replikeras från författare till publicering via en pub-sub-mekanism. Anpassade replikeringsagenter stöds inte.
+Innehållet replikeras från författare till Publish via en pub-sub-mekanism. Anpassade replikeringsagenter stöds inte.
 
 ## Inga överbelastade utvecklingsmiljöer {#overloading-dev-envs}
 
@@ -111,7 +111,7 @@ Om du till exempel ändrar en indexdefinition i en databas med stort innehåll i
 
 För lokal utveckling skrivs loggposterna till lokala filer i `/crx-quickstart/logs` mapp.
 
-I molnmiljöer kan utvecklare hämta loggar via Cloud Manager eller använda ett kommandoradsverktyg för att avsluta loggarna. <!-- See the [Cloud Manager documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) for more details. Custom logs are not supported and so all logs should be output to the error log. -->
+I molnmiljöer kan utvecklare hämta loggar via Cloud Manager eller använda ett kommandoradsverktyg för att svepa loggarna. <!-- See the [Cloud Manager documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) for more details. Custom logs are not supported and so all logs should be output to the error log. -->
 
 **Ange loggnivå**
 
@@ -119,7 +119,7 @@ Om du vill ändra loggnivåerna för molnmiljöer bör du ändra Sling Logging O
 
 >[!NOTE]
 >
->Om du vill utföra konfigurationsändringarna som anges nedan skapar du dem i en lokal utvecklingsmiljö och skickar dem sedan till en AEM as a Cloud Service instans. Mer information om hur du gör detta finns i [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md).
+>Om du vill utföra konfigurationsändringarna som anges nedan skapar du dem i en lokal utvecklingsmiljö och skickar dem sedan till en AEM as a Cloud Service-instans. Mer information om hur du gör detta finns i [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md).
 
 **Aktivera loggnivån för FELSÖKNING**
 
@@ -161,7 +161,7 @@ Loggnivåerna är följande:
 | 0 | Allvarligt fel | Åtgärden misslyckades och installationsprogrammet kan inte fortsätta. |
 |---|---|---|
 | 1 | Fel | Åtgärden misslyckades. Installationen fortsätter, men en del av CRX installerades inte korrekt och kommer inte att fungera. |
-| 2 | Varning | Åtgärden har slutförts men problem uppstod. CRX fungerar eventuellt inte korrekt. |
+| 2 | Varning | Åtgärden har slutförts men problem uppstod. CRX kanske inte fungerar som det ska. |
 | 3 | Information | Åtgärden har slutförts. |
 
 ### Trådbitar {#thread-dumps}
@@ -179,18 +179,18 @@ Lokal utveckling (med SDK) `/apps` och `/libs` kan skrivas direkt, vilket skilje
 ### AEM as a Cloud Service utvecklingsverktyg {#aem-as-a-cloud-service-development-tools}
 
 >[!NOTE]
->Den AEM as a Cloud Service utvecklarkonsolen ska inte blandas ihop med liknande namn [*Adobe Developer Console*](https://developer.adobe.com/developer-console/).
+>AEM as a Cloud Service Developer Console får inte blandas ihop med liknande namn [*Adobe Developer Console*](https://developer.adobe.com/developer-console/).
 >
 
 Kunderna har tillgång till CRXDE-klassen i utvecklingsmiljön, men inte i fas eller produktion. Oändringsbar databas (`/libs`, `/apps`) kan inte skrivas till vid körning, så om du försöker göra det uppstår fel.
 
-I stället kan databasläsaren startas från den AEM as a Cloud Service utvecklarkonsolen, vilket ger en skrivskyddad vy i databasen för alla miljöer med författare, publicering och förhandsgranskningsnivåer. Läs mer om Databasläsaren [här](/help/implementing/developing/tools/repository-browser.md).
+I stället kan databasläsaren startas från AEM as a Cloud Service Developer Console, vilket ger en skrivskyddad vy i databasen för alla miljöer på författarnivå, publicerings- och förhandsgranskningsnivå. Läs mer om Databasläsaren [här](/help/implementing/developing/tools/repository-browser.md).
 
-En uppsättning verktyg för felsökning AEM as a Cloud Service utvecklingsmiljöer finns på AEM as a Cloud Service Developer Console för RDE-, dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller publiceringstjänstens URL:er enligt följande:
+En uppsättning verktyg för felsökning av AEM as a Cloud Service utvecklingsmiljöer finns i AEM as a Cloud Service Developer Console för RDE-, dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller Publish tjänste-URL:er enligt följande:
 
 `https://dev-console/-<namespace>.<cluster>.dev.adobeaemcloud.com`
 
-Följande CLI-kommando för Cloud Manager kan användas som en genväg för att starta den AEM as a Cloud Service utvecklarkonsolen baserat på en miljöparameter som beskrivs nedan:
+Följande Cloud Manager CLI-kommando kan användas för att starta AEM as a Cloud Service Developer Console baserat på en miljöparameter som beskrivs nedan:
 
 `aio cloudmanager:open-developer-console <ENVIRONMENTID> --programId <PROGRAMID>`
 
@@ -208,11 +208,11 @@ Som framgår nedan kan utvecklare lösa paketberoenden och -servrar:
 
 ![Dev Console 3](/help/implementing/developing/introduction/assets/devconsole3.png)
 
-Den AEM as a Cloud Service utvecklarkonsolen är också användbar för felsökning och har en länk till verktyget Förklara fråga:
+AEM as a Cloud Service Developer Console är också användbart vid felsökning och har en länk till verktyget Förklara fråga:
 
 ![Dev Console 4](/help/implementing/developing/introduction/assets/devconsole4.png)
 
-För produktionsprogram definieras åtkomsten till den AEM as a Cloud Service utvecklarkonsolen av&quot;Cloud Manager - utvecklarrollen&quot; i Adobe Admin Console, medan den AEM as a Cloud Service utvecklarkonsolen är tillgänglig för alla användare med en produktprofil som ger dem tillgång till AEM as a Cloud Service för sandlådeprogram. För alla program krävs&quot;Cloud Manager - Developer Role&quot; för statusdumpar och databasens webbläsare och användare måste också definieras i produktprofilen AEM användare eller AEM administratörer för både författar- och publiceringstjänster för att visa data från båda tjänsterna. Mer information om hur du ställer in användarbehörigheter finns i [Dokumentation för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
+För produktionsprogram definieras åtkomsten till AEM as a Cloud Service Developer Console av&quot;Cloud Manager - Developer Role&quot; i Adobe Admin Console, medan AEM as a Cloud Service Developer Console för sandlådeprogram är tillgängligt för alla användare med en produktprofil som ger dem tillgång till AEM as a Cloud Service. För alla program krävs&quot;Cloud Manager - utvecklarroll&quot; för statusdumpar och databaswebbläsaren och användare måste också definieras i produktprofilen AEM användare eller AEM administratörer för både författare och publiceringstjänster för att kunna visa data från båda tjänsterna. Mer information om hur du ställer in användarbehörigheter finns i [Cloud Manager Documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
 
 ### Prestandaövervakning {#performance-monitoring}
 
@@ -268,7 +268,7 @@ E-posttjänsten kan även konfigureras med OAuth2-stöd. Mer information finns i
 
 Före version 2021.9.0 konfigurerades e-postmeddelandet via en kundsupportförfrågan. Observera följande nödvändiga justeringar i `com.day.cq.mailer.DefaultMailService OSGI` tjänst:
 
-AEM as a Cloud Service kräver att e-post skickas via port 465. Om en e-postserver inte stöder port 465 kan port 587 användas så länge som TLS-alternativet är aktiverat.
+AEM as a Cloud Service kräver att post skickas via port 465. Om en e-postserver inte stöder port 465 kan port 587 användas så länge som TLS-alternativet är aktiverat.
 
 Om port 465 har begärts:
 
@@ -286,7 +286,7 @@ SMTP-servervärden ska vara samma som e-postservern.
 
 ## Undvik stora flervärdesegenskaper {#avoid-large-mvps}
 
-Databasen för ekinnehåll som ligger till grund för AEM as a Cloud Service är inte avsedd att användas med ett stort antal flervärdesegenskaper (MVP). En tumregel är att hålla de privata leverantörerna under 1000. Den faktiska prestandan beror dock på många faktorer.
+Oak innehållsdatabas som ligger till grund för AEM as a Cloud Service är inte avsedd att användas med ett stort antal flervärdesegenskaper (MVP). En tumregel är att hålla de privata leverantörerna under 1000. Den faktiska prestandan beror dock på många faktorer.
 
 Varningar loggas som standard efter att ha överstigit 1000. De liknar följande.
 
@@ -300,7 +300,7 @@ Stora MVP kan leda till fel på grund av att MongoDB-dokumentet överskrider 16 
 Caused by: com.mongodb.MongoWriteException: Resulting document after update is larger than 16777216
 ```
 
-Se [Apache Oak-dokumentation](https://jackrabbit.apache.org/oak/docs/dos_and_donts.html#Large_Multi_Value_Property) för mer information.
+Se [Dokumentation för Apache Oak](https://jackrabbit.apache.org/oak/docs/dos_and_donts.html#Large_Multi_Value_Property) för mer information.
 
 ## [!DNL Assets] riktlinjer för utveckling och användningsfall {#use-cases-assets}
 

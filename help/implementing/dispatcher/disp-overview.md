@@ -1,6 +1,6 @@
 ---
 title: Dispatcher i molnet
-description: Lär dig mer om Dispatcher-verktygen, vilka Apache-moduler som stöds samt äldre och flexibla lägen.
+description: Lär dig mer om Dispatcher verktyg, vilka Apache-moduler som stöds samt äldre och flexibla lägen.
 feature: Dispatcher
 exl-id: 6d78026b-687e-434e-b59d-9d101349a707
 role: Admin
@@ -16,27 +16,27 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_nonbpa_dispoverview"
 >title="Dispatcher i molnet"
->abstract="Den här sidan beskriver hur du hämtar och extraherar Dispatcher-verktygen, de Apache-moduler som stöds och ger en översikt på hög nivå över de äldre och flexibla lägena."
+>abstract="På den här sidan beskrivs hur du hämtar och extraherar Dispatcher-verktygen, de Apache-moduler som stöds, och du får en översikt över de äldre och flexibla lägena."
 
 ## Introduktion {#apache-and-dispatcher-configuration-and-testing}
 
-På den här sidan beskrivs Dispatcher-verktygen och hur du hämtar och extraherar dem, de Apache-moduler som stöds och en översikt över de äldre och flexibla lägena. Det finns också ytterligare referenser för validering och felsökning och migrering av Dispatcher-konfigurationen från AMS till AEM as a Cloud Service. <!-- ERROR: NOT FOUND (HTTP ERROR 404) Also, see [this video](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-dispatcher-cloud.html) for additional details about deploying dispatcher files in a cloud service environment. -->
+På den här sidan beskrivs Dispatcher-verktygen och hur du hämtar och extraherar dem, de Apache-moduler som stöds och en översikt över de äldre och flexibla lägena. Det finns även ytterligare referenser för validering och felsökning och migrering av Dispatcher-konfigurationen från AMS till AEM as a Cloud Service. <!-- ERROR: NOT FOUND (HTTP ERROR 404) Also, see [this video](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-dispatcher-cloud.html) for additional details about deploying dispatcher files in a cloud service environment. -->
 
 ## Dispatcher Tools {#dispatcher-sdk}
 
-Dispatcher-verktygen är en del av den övergripande AEM as a Cloud Service SDK:n och tillhandahåller:
+Dispatcher Tools ingår i AEM as a Cloud Service SDK och ger
 
-* En vaniljfilstruktur som innehåller de konfigurationsfiler som ska inkluderas i ett maven-projekt för Dispatcher.
-* Verktyg för kunder för att verifiera att Dispatcher-konfigurationen bara innehåller AEM direktiv som stöds as a Cloud Service. Verktyget validerar också att syntaxen är korrekt så att Apache kan startas utan problem.
+* En vanilj-filstruktur som innehåller de konfigurationsfiler som ska inkluderas i ett Maven-projekt för Dispatcher.
+* Verktyg för kunder som validerar att Dispatcher-konfigurationen endast innehåller direktiv som stöds av AEM as a Cloud Service. Verktyget validerar också att syntaxen är korrekt så att Apache kan startas utan problem.
 * En Docker-bild som öppnar Dispatcher lokalt.
 
 ## Hämta och extrahera verktygen {#extracting-the-sdk}
 
-Dispatcher Tools, en del av [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md), kan laddas ned från en zip-fil i [Programvarudistribution](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/aemcloud.html) portal. Alla nya konfigurationer som är tillgängliga i den nya versionen av Dispatcher Tools kan användas för att distribuera till molnmiljöer som kör den versionen av AEM i molnet eller senare.
+Dispatcher Tools, en del av [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md), kan laddas ned från en zip-fil i [Programvarudistribution](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/aemcloud.html) portal. Alla nya konfigurationer som är tillgängliga i den nya Dispatcher Tools-versionen kan användas för att distribuera till molnmiljöer som kör den versionen av AEM i molnet eller senare.
 
 Zippa upp SDK, som innehåller Dispatcher Tools för macOS, Linux® och Windows.
 
-**För macOS/Linux**, gör att artefakten för verktyget Dispatcher kan köras. Det extraherar Dispatcher Tools-filerna under katalogen som du lagrade dem till (där `version` är versionen av Dispatcher Tools).
+**För macOS/Linux**, gör Dispatcher-verktygets artefakt körbar och kör den. Det extraherar Dispatcher Tools-filerna under den katalog som du lagrade dem i (där `version` är den version av Dispatcher Tools).
 
 ```bash
 $ chmod +x aem-sdk-dispatcher-tools-<version>-unix.sh
@@ -49,11 +49,11 @@ Uncompressing aem-sdk-dispatcher-tools-<version>-unix.sh 100%
 
 ## Validera och felsöka med Dispatcher Tools {#validation-debug}
 
-Dispatcher-verktygen används för att validera och felsöka projektets Dispatcher-konfiguration. Lär dig mer om hur du använder dessa verktyg på de sidor som refereras nedan, baserat på om projektets Dispatcher-konfiguration är strukturerad i flexibelt läge eller äldre läge:
+Dispatcher-verktygen används för att validera och felsöka ditt projekts Dispatcher-konfiguration. Läs mer om hur du använder dessa verktyg på de sidor som det hänvisas till nedan, baserat på om ditt projekts Dispatcher-konfiguration är strukturerad i flexibelt läge eller äldre läge:
 
-* **Flexibelt läge** - det rekommenderade läget och standardvärdet för [AEM 28](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) och senare, som också används av Cloud Manager för nya miljöer som skapats efter Cloud Manager 2021.7.0. Kunder kan aktivera det här läget genom att lägga till mappen och filen `opt-in/USE_SOURCES_DIRECTLY`. Om du använder det här mer flexibla läget finns det inga begränsningar i filstrukturen i mappen för omskrivning som i det äldre läget krävde en enda `rewrite.rules` -fil. Det finns heller ingen begränsning för hur många regler du kan lägga till. Mer information om mappstruktur och lokal validering finns i [Validera och felsöka med Dispatcher Tools](/help/implementing/dispatcher/validation-debug.md).
+* **Flexibelt läge** - det rekommenderade läget och standardvärdet för [AEM 28](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) och högre, som också används av Cloud Manager för nya miljöer som skapats efter Cloud Manager 2021.7.0. Kunder kan aktivera det här läget genom att lägga till mappen och filen `opt-in/USE_SOURCES_DIRECTLY`. Om du använder det här mer flexibla läget finns det inga begränsningar i filstrukturen i mappen för omskrivning som i det äldre läget krävde en enda `rewrite.rules` -fil. Det finns heller ingen begränsning för hur många regler du kan lägga till. Mer information om mappstruktur och lokal validering finns i [Validera och felsöka med Dispatcher Tools](/help/implementing/dispatcher/validation-debug.md).
 
-* **Äldre läge** - mer information om mappstrukturen och lokal validering för äldre Dispatcher-konfigurationsläge finns i [Validera och felsöka med Dispatcher Tools (äldre)](/help/implementing/dispatcher/validation-debug-legacy.md)
+* **Äldre läge** - mer information om mappstrukturen och lokal validering för äldre Dispatcher-konfigurationsläge finns i [Validera och felsöka med Dispatcher Tools (Legacy)](/help/implementing/dispatcher/validation-debug-legacy.md)
 
 Mer information om hur du migrerar från den äldre konfigurationsmodellen till den mer flexibla, finns i AEM 28 och framåt. [den här dokumentationen](/help/implementing/dispatcher/validation-debug.md#migrating).
 
@@ -104,7 +104,7 @@ Tabellen nedan visar vilka Apache-moduler som stöds:
 | `mod_include (no directives supported)` | [https://httpd.apache.org/docs/2.4/mod/mod_include.html](https://httpd.apache.org/docs/2.4/mod/mod_include.html) |
 
 
-Kunder kan inte lägga till godtyckliga moduler, men ytterligare moduler kan övervägas för framtida införande. Kunder kan hitta listan över direktiv som är tillgängliga för en viss Dispatcher-version genom att köra validerarens tillåtslista-kommando i SDK:n.
+Kunder kan inte lägga till godtyckliga moduler, men ytterligare moduler kan övervägas för framtida införande. Kunderna hittar listan över direktiv som är tillgängliga för en viss Dispatcher-version genom att köra validerarens tillåtelselista-kommando i SDK.
 
 De direktiv som är tillåtna i Apache-konfigurationsfiler kan listas genom att köra validerarens tillåtelselista-kommando:
 

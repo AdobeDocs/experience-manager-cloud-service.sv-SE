@@ -1,6 +1,6 @@
 ---
 title: Funktionstestning
-description: Lär dig mer om de tre olika typerna av funktionstestning som är inbyggda i den AEM as a Cloud Service driftsättningsprocessen för att säkerställa att koden är tillförlitlig och av hög kvalitet.
+description: Läs mer om de tre olika typerna av funktionstestning som är inbyggda i AEM as a Cloud Service-distributionsprocessen för att säkerställa att koden är tillförlitlig och av hög kvalitet.
 exl-id: 7eb50225-e638-4c05-a755-4647a00d8357
 solution: Experience Manager
 feature: Cloud Manager, Developing
@@ -18,7 +18,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_nonbpa_functionaltesting"
 >title="Funktionstestning"
->abstract="Lär dig mer om de tre olika typerna av funktionstestning som är inbyggda i den AEM as a Cloud Service driftsättningsprocessen för att säkerställa att koden är tillförlitlig och av hög kvalitet."
+>abstract="Läs mer om de tre olika typerna av funktionstestning som är inbyggda i AEM as a Cloud Service-distributionsprocessen för att säkerställa att koden är tillförlitlig och av hög kvalitet."
 
 Läs mer om de olika gaten som finns i [AEM as a Cloud Service distributionsprocess](/help/implementing/cloud-manager/deploy-code.md), de olika typerna av funktionstestning som är inbyggda, hur du kan bidra och hur du bäst kan använda dem i en övergripande teststrategi.
 
@@ -116,7 +116,7 @@ Se [Testning av Experience Audit](/help/implementing/cloud-manager/experience-au
 
 Kundens kvalitetsportal för validering är en platshållare för kundens egen testningsstrategi och -insats, som utförs innan kundens programändringar når AEM i molnet.
 
-Här kan du välja de verktyg och ramverk du vill ha. Till skillnad från kundfunktionstester och anpassade användargränssnittstester finns det inga AEM as a Cloud Service gränser, och vi rekommenderar därför att du utför långvariga funktions- och gränssnittstester här.
+Här kan du välja de verktyg och ramverk du vill ha. Till skillnad från kundfunktionstester och anpassade användargränssnittstester finns det inga AEM as a Cloud Service-relaterade begränsningar, och vi rekommenderar därför att du utför långvariga funktions- och användargränssnittstester här.
 
 Du kan välja vilket verktyg och ramverk du vill, men vi rekommenderar att du anpassar HTTP-baserade integreringstester och gränssnittstester med de verktyg och ramverk som finns tillgängliga i anpassade funktionstester och anpassade kvalitetsportar för gränssnittstestning. Vi rekommenderar integrering [Rapid Development Environment (RDE)](/help/implementing/developing/introduction/rapid-development-environments.md) i er lokala testningsstrategi för att testa så nära som möjligt AEM molnmiljöer.
 

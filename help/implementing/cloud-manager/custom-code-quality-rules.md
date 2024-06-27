@@ -1,6 +1,6 @@
 ---
 title: Anpassade regler för kodkvalitet
-description: Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av testningen av kodkvalitet. De bygger på god praxis från Adobe Experience Manager Engineering.
+description: På den här sidan beskrivs de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av testningen av kodkvalitet. De bygger på god praxis från Adobe Experience Manager Engineering.
 exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
 solution: Experience Manager
 feature: Cloud Manager, Developing
@@ -17,9 +17,9 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_nonbpa_customcodequalityrules"
 >title="Anpassade regler för kodkvalitet"
->abstract="Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av testningen av kodkvalitet. De bygger på god praxis från Adobe Experience Manager Engineering."
+>abstract="På den här sidan beskrivs de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av testningen av kodkvalitet. De bygger på god praxis från Adobe Experience Manager Engineering."
 
-Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av [kodkvalitetstestning](/help/implementing/cloud-manager/code-quality-testing.md). De bygger på god praxis från Experience Manager Engineering.
+På den här sidan beskrivs de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av [kodkvalitetstestning](/help/implementing/cloud-manager/code-quality-testing.md). De bygger på god praxis från Experience Manager Engineering.
 
 >[!NOTE]
 >
@@ -572,7 +572,7 @@ public class myClass {
 
 ## OakPAL-innehållsregler {#oakpal-rules}
 
-Följande avsnitt innehåller information om de OakPAL-kontroller som körs av Cloud Manager.
+I följande avsnitt beskrivs de OakPAL-kontroller som utförs av Cloud Manager.
 
 >[!NOTE]
 >
@@ -638,14 +638,14 @@ Se [indexeringsdokumentation](/help/operations/indexing.md#preparing-the-new-ind
         + config.xml
 ```
 
-### Egna Lucene-ekindex får inte vara synkrona {#oakpal-indexasync}
+### Oak-index för anpassade Lucene får inte vara synkrona {#oakpal-indexasync}
 
 * **Nyckel**: IndexAsyncProperty
 * **Typ**: Fel
 * **Allvarlighetsgrad**: Blockerare
 * **Sedan**: 2021.8.0
 
-Oak-index av typen `lucene` måste alltid indexeras asynkront. Om du inte gör detta kan det leda till att systemet blir instabilt. Mer information om strukturen i Lucene-index finns i [Läs dokumentationen.](https://jackrabbit.apache.org/oak/docs/query/lucene.html#index-definition)
+Oak-index `lucene` måste alltid indexeras asynkront. Om du inte gör detta kan det leda till att systemet blir instabilt. Mer information om strukturen i Lucene-index finns i [Oak dokumentation.](https://jackrabbit.apache.org/oak/docs/query/lucene.html#index-definition)
 
 #### Kod som inte uppfyller kraven {#non-compliant-code-indexasync}
 
@@ -674,14 +674,14 @@ Oak-index av typen `lucene` måste alltid indexeras asynkront. Om du inte gör 
         + config.xml
 ```
 
-### Index för anpassade DAM-tillgångar Luceneak är korrekt strukturerade  {#oakpal-damAssetLucene-sanity-check}
+### Oak-index för anpassade DAM-tillgångar är korrekt strukturerade  {#oakpal-damAssetLucene-sanity-check}
 
 * **Nyckel**: IndexDamAssetLucene
 * **Typ**: Fel
 * **Allvarlighetsgrad**: Blockerare
 * **Sedan**: 2021.6.0
 
-För att resurssökningen ska fungera korrekt i Experience Manager Assets måste du anpassa `damAssetLucene` Oak-indexet måste följa en uppsättning riktlinjer som är specifika för detta index. Den här regeln kontrollerar att indexdefinitionen måste ha en egenskap med flera värden som heter `tags` som innehåller värdet `visualSimilaritySearch`.
+För att resurssökningen ska fungera korrekt i Experience Manager Assets måste du anpassa `damAssetLucene` Oak index måste följa en uppsättning riktlinjer som är specifika för detta index. Den här regeln kontrollerar att indexdefinitionen måste ha en egenskap med flera värden som heter `tags` som innehåller värdet `visualSimilaritySearch`.
 
 #### Kod som inte uppfyller kraven {#non-compliant-code-damAssetLucene}
 
@@ -842,7 +842,7 @@ Se [Experience Manager projektstruktur](/help/implementing/developing/introducti
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2020.5.0
 
-Stöd för omvänd replikering är inte tillgängligt i distributioner av Cloud Service, vilket beskrivs som en del av Experience Manager as a Cloud Service [versionsinformation](/help/release-notes/aem-cloud-changes.md#replication-agents).
+Stöd för omvänd replikering är inte tillgängligt i distributioner av Cloud Service, vilket beskrivs i Experience Manager as a Cloud Service [versionsinformation](/help/release-notes/aem-cloud-changes.md#replication-agents).
 
 Kunder som använder omvänd replikering bör kontakta Adobe för att få alternativa lösningar.
 
@@ -917,7 +917,7 @@ Den här konverteringen kan underlättas av [Moderniseringsverktyg för Experien
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
-Experience Manager as a Cloud Service tillämpar en strikt namngivningsprincip för körningslägesnamn och en strikt ordning för dessa körningslägen. En lista över körningslägen som stöds finns i dokumentet [Distribuera till Experience Manager as a Cloud Service](/help/implementing/deploying/overview.md#runmodes) och alla avvikelser från detta identifieras som en fråga.
+Experience Manager as a Cloud Service har en strikt namngivningsprincip för körningslägesnamn och en strikt ordning för dessa körningslägen. En lista över körningslägen som stöds finns i dokumentet [Distribuera till Experience Manager as a Cloud Service](/help/implementing/deploying/overview.md#runmodes) och alla avvikelser från detta identifieras som en fråga.
 
 ### Definitionsnoder för anpassade sökindex måste vara direkt underordnade /oak:index {#oakpal-custom-search}
 
@@ -926,7 +926,7 @@ Experience Manager as a Cloud Service tillämpar en strikt namngivningsprincip f
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
-Experience Manager as a Cloud Service kräver anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) be direct child nodes of `/oak:index`. Index på andra platser måste flyttas för att vara kompatibla med Experience Manager as a Cloud Service. Mer information om sökindex finns i dokumentet [Innehållssökning och indexering](/help/operations/indexing.md).
+Experience Manager as a Cloud Service kräver att anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) be direct child nodes of `/oak:index`. Index på andra platser måste flyttas för att vara kompatibla med Experience Manager as a Cloud Service. Mer information om sökindex finns i dokumentet [Innehållssökning och indexering](/help/operations/indexing.md).
 
 ### Definitionsnoder för anpassade sökindex måste ha en compatVersion av 2 {#oakpal-custom-search-compatVersion}
 
@@ -953,7 +953,7 @@ Det är svårt att felsöka problem när en anpassad sökindexdefinitionsnod har
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
-En korrekt definierad definitionsnod för ett anpassat sökindex måste innehålla en underordnad nod med namnet `indexRules` som i sin tur måste ha minst ett barn. Mer information finns i [Läs dokumentationen.](https://jackrabbit.apache.org/oak/docs/query/lucene.html)
+En korrekt definierad definitionsnod för ett anpassat sökindex måste innehålla en underordnad nod med namnet `indexRules` som i sin tur måste ha minst ett barn. Mer information finns i [Oak dokumentation.](https://jackrabbit.apache.org/oak/docs/query/lucene.html)
 
 ### Definitionsnoder för anpassade sökindex måste följa namnkonventioner {#oakpal-custom-search-definitions}
 
@@ -962,7 +962,7 @@ En korrekt definierad definitionsnod för ett anpassat sökindex måste innehål
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
-Experience Manager as a Cloud Service kräver anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) måste namnges efter ett specifikt mönster som beskrivs i dokumentet [Innehållssökning och indexering](/help/operations/indexing.md).
+Experience Manager as a Cloud Service kräver att anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) måste namnges efter ett specifikt mönster som beskrivs i dokumentet [Innehållssökning och indexering](/help/operations/indexing.md).
 
 ### Definitionsnoder för anpassade sökindex måste använda indextypen Lucene  {#oakpal-index-type-lucene}
 
@@ -971,7 +971,7 @@ Experience Manager as a Cloud Service kräver anpassade sökindexdefinitioner (d
 * **Allvarlighetsgrad**: Blockerare
 * **Sedan**: Version 2021.2.0 (ändrad typ och allvarlighetsgrad 2021.8.0)
 
-Experience Manager as a Cloud Service kräver anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) har en `type` egenskap med värdet inställt på `lucene`. Indexering med äldre indextyper måste uppdateras innan migrering till Experience Manager as a Cloud Service görs. Se [Innehållssökning och indexering](/help/operations/indexing.md#how-to-use) för mer information.
+Experience Manager as a Cloud Service kräver att anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) har en `type` egenskap med värdet inställt på `lucene`. Indexering med äldre indextyper måste uppdateras innan migrering till Experience Manager as a Cloud Service görs. Se [Innehållssökning och indexering](/help/operations/indexing.md#how-to-use) för mer information.
 
 ### Definitionsnoder för anpassade sökindex får inte innehålla en egenskap med namnet seed {#oakpal-property-name-seed}
 
@@ -980,7 +980,7 @@ Experience Manager as a Cloud Service kräver anpassade sökindexdefinitioner (d
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
-Experience Manager as a Cloud Service tillåter inte anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) som innehåller en egenskap med namnet `seed`. Indexering med den här egenskapen måste uppdateras innan migrering till Experience Manager as a Cloud Service. Se dokumentet [Innehållssökning och indexering](/help/operations/indexing.md#how-to-use) för mer information.
+Experience Manager as a Cloud Service förbjuder anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) som innehåller en egenskap med namnet `seed`. Indexering med den här egenskapen måste uppdateras innan migrering till Experience Manager as a Cloud Service. Se dokumentet [Innehållssökning och indexering](/help/operations/indexing.md#how-to-use) för mer information.
 
 ### Definitionsnoder för anpassade sökindex får inte innehålla egenskapen reindex {#oakpal-reindex-property}
 
@@ -989,7 +989,7 @@ Experience Manager as a Cloud Service tillåter inte anpassade sökindexdefiniti
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
-Experience Manager as a Cloud Service tillåter inte anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) som innehåller en egenskap med namnet `reindex`. Indexering med den här egenskapen måste uppdateras innan migrering till Experience Manager as a Cloud Service. Se dokumentet [Innehållssökning och indexering](/help/operations/indexing.md#how-to-use) för mer information.
+Experience Manager as a Cloud Service förbjuder anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) som innehåller en egenskap med namnet `reindex`. Indexering med den här egenskapen måste uppdateras innan migrering till Experience Manager as a Cloud Service. Se dokumentet [Innehållssökning och indexering](/help/operations/indexing.md#how-to-use) för mer information.
 
 ### Anpassade DAM-resursklassnoder får inte ange queryPaths {#oakpal-damAssetLucene-queryPaths}
 
@@ -1206,7 +1206,7 @@ AEM Cloud Service tillåter inte anpassade sökindexdefinitioner (noder av typen
 
 >[!WARNING]
 >
->Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att rörledningar inte fungerar från [Cloud Manager, augusti 2024-utgåvan.](/help/implementing/cloud-manager/release-notes/current.md)
+>Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att rörledningar inte fungerar från [Cloud Manager, augusti 2024.](/help/implementing/cloud-manager/release-notes/current.md)
 
 ### Anpassad heltextindexdefinition av typen damAssetLucene måste ha rätt prefix med damAssetLucene {#oakpal-dam-asset-lucene}
 
@@ -1219,7 +1219,7 @@ AEM Cloud Service tillåter inte anpassade fulltextindexdefinitioner av typen `d
 
 >[!WARNING]
 >
->Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att rörledningar inte fungerar från [Cloud Manager, augusti 2024-utgåvan.](/help/implementing/cloud-manager/release-notes/current.md)
+>Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att rörledningar inte fungerar från [Cloud Manager, augusti 2024.](/help/implementing/cloud-manager/release-notes/current.md)
 
 ### Indexdefinitionsnoder får inte innehålla egenskaper med samma namn {#oakpal-index-property-name}
 
@@ -1232,7 +1232,7 @@ AEM Cloud Service tillåter inte anpassade sökindexdefinitioner (d.v.s. noder a
 
 >[!WARNING]
 >
->Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att rörledningar inte fungerar från [Cloud Manager, augusti 2024-utgåvan.](/help/implementing/cloud-manager/release-notes/current.md)
+>Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att rörledningar inte fungerar från [Cloud Manager, augusti 2024.](/help/implementing/cloud-manager/release-notes/current.md)
 
 ### Det är förbjudet att anpassa vissa OOTB-indexdefinitioner {#oakpal-customizing-ootb-index}
 
@@ -1252,7 +1252,7 @@ AEM Cloud Service tillåter inte obehöriga ändringar av följande OOTB-index:
 
 >[!WARNING]
 >
->Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att rörledningar inte fungerar från [Cloud Manager, augusti 2024-utgåvan.](/help/implementing/cloud-manager/release-notes/current.md)
+>Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att rörledningar inte fungerar från [Cloud Manager, augusti 2024.](/help/implementing/cloud-manager/release-notes/current.md)
 
 ### Konfigurationen av tokenisererna i analysatorerna ska skapas med namnet tokenizer {#oakpal-tokenizer}
 
@@ -1265,4 +1265,4 @@ AEM Cloud Service tillåter inte att tokeniserare med felaktiga namn skapas i an
 
 >[!WARNING]
 >
->Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att rörledningar inte fungerar från [Cloud Manager, augusti 2024-utgåvan.](/help/implementing/cloud-manager/release-notes/current.md)
+>Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att rörledningar inte fungerar från [Cloud Manager, augusti 2024.](/help/implementing/cloud-manager/release-notes/current.md)

@@ -16,7 +16,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_prep"
 >title="Go-Live-förberedelser"
->abstract="För att säkerställa en smidig och framgångsrik publicering på AEM as a Cloud Service bör du planera för frysningsperioder för kod och innehåll, testning av iterationer, innehållsuppdateringar, prestandatester, säkerhetstester med mera."
+>abstract="För att säkerställa en smidig och framgångsrik publicering på AEM as a Cloud Service bör du planera för frysning av kod och innehåll, testning av iterationer, innehållsuppdateringar, prestandatester, säkerhetstester med mera."
 
 Under den här delen av resan får du lära dig att planera och utföra migreringen när både koden och innehållet är klara att flyttas över till AEM as a Cloud Service. Du får också lära dig vilka metoder och begränsningar som är bäst när du utför migreringen.
 
@@ -36,11 +36,11 @@ Det här dokumentet hjälper dig att förstå hur du utför migreringen till AEM
 
 Innan du kan utföra produktionsmigreringen följer du stegen för implementering och korrektur av migrering i [Strategi för innehållsmigrering och tidslinje](/help/journey-migration/implementation.md##strategy-timeline) i [Implementeringsfas](/help/journey-migration/implementation.md).
 
-* Starta migreringen från produktionen baserat på den erfarenhet du fick under den AEM as a Cloud Service migreringen av scenen som utfördes på kloner:
+* Starta migreringen från produktionen baserat på den erfarenhet du fick under AEM as a Cloud Service-scenmigreringen som gjordes på kloner:
    * Författare/Författare
    * Publish-Publish
 
-* Validera det innehåll som är inkapslat i både den AEM as a Cloud Service författaren och publiceringsnivån.
+* Validera det innehåll som har infogats i både AEM as a Cloud Service författare- och publiceringsskikt.
 * Instruera innehållsredigeringsteamet att undvika att flytta innehåll på både källa och mål tills det är fullständigt
 * Nytt innehåll kan läggas till, redigeras eller tas bort, men du kan inte flytta det. Detta gäller både källa och mål.
 * Spela in [tid](/help/journey-migration/implementation.md#gathering-data) för fullständig extrahering och förtäring för att få en uppskattning av framtida tidslinjer för migrering uppifrån och ned.
@@ -69,7 +69,7 @@ Dessutom måste ni planera för en frysning av innehållet när den slutliga inn
 
 När du planerar eller utför migreringen bör du tänka på följande riktlinjer:
 
-* Migrera från författare till författare och publicera till publicera
+* Migrera från författare till författare och Publish till Publish
 * Begär en produktionskloning som kan användas för att:
    * Hämta databasstatistik
    * Bevis på migrationsverksamhet
@@ -119,4 +119,4 @@ Mer information finns i [GoLive Checklist](/help/journey-onboarding/go-live-chec
 
 ## What&#39;s Next {#what-is-next}
 
-När du förstår hur du utför migreringen till AEM as a Cloud Service kan du kontrollera [Post-Go-Live](/help/journey-migration/post-go-live.md) sida för att få instansen att löpa smidigt.
+När du vet hur du migrerar till AEM as a Cloud Service kan du kontrollera [Post-Go-Live](/help/journey-migration/post-go-live.md) sida för att få instansen att löpa smidigt.

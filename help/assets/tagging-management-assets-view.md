@@ -1,6 +1,6 @@
 ---
-title: Hur hanterar jag taggar i resursvyn?
-description: Lär dig hur du hanterar taggar i resursvyn. Taggar hjälper dig att kategorisera resurser som kan bläddras och sökas effektivare.
+title: Hur hanterar jag taggar i Assets-vyn?
+description: Lär dig hur du hanterar taggar i Assets-vyn. Taggar hjälper dig att kategorisera resurser som kan bläddras och sökas effektivare.
 exl-id: 7c5e1212-054f-46ca-9982-30e40b0482e1
 feature: Smart Tags
 role: User, Admin, Developer
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 ---
 
-# Hantera taggar i resursvyn {#view-assets-and-details}
+# Hantera taggar i vyn Assets {#view-assets-and-details}
 
 
 >[!CONTEXTUALHELP]
@@ -35,7 +35,7 @@ Taggning ger många fördelar, till exempel:
 
 * Taggar kan utvecklas över tid när ett organisatoriska språk ändras.
 
-* Taggar som hanteras i administrationsvyn förblir synkroniserade med taggar som hanteras i resursvyn, vilket garanterar metadatastyrning och integritet.
+* Taggar som hanteras i administrationsvyn är synkroniserade med taggar som hanteras i Assets-vyn, vilket garanterar metadatastyrning och integritet.
 
 Om du vill kunna använda taggar på resurser måste du först skapa ett namnutrymme och sedan skapa och lägga till taggar i det. Du kan också skapa taggar och lägga till dem i ett befintligt namnutrymme. Alla taggar som du skapar på rotnivå läggs automatiskt till i namnutrymmet Standardtaggar. Du kan sedan lägga till fältet Taggar i metadataformuläret så att det visas på sidan Resursinformation. När du har konfigurerat de här inställningarna kan du börja använda taggar på resurser.
 
@@ -89,7 +89,7 @@ Om du vill skapa en standardtagg klickar du på `Create Tag` på rotnivå. Ange 
 
 >[!NOTE]
 >
->Om du tar bort `Standard Tags` I namnutrymmen där Assets as a Cloud Service används visas inte de taggar som skapas på rotnivå i listan med tillgängliga taggar.
+>Om du tar bort `Standard Tags` namnutrymme som använder Assets as a Cloud Service, visas inte de taggar som skapas på rotnivå i listan med tillgängliga taggar.
 
 ## Flytta taggar {#move-tags}
 
@@ -138,7 +138,7 @@ I den här snabbvideon ser du hur du lägger till taggkomponenten i metadataform
 >[!VIDEO](https://video.tv.adobe.com/v/3420452)
 
 
-### Lägg till taggar i resurser {#add-tags-to-assets}
+### Lägg till taggar i Assets {#add-tags-to-assets}
 
 1. Gå till sidan Resursinformation och navigera till `Tags` i metadataformuläret.
 1. Välj taggväljarikonen som finns bredvid fältet Taggar eller börja skriva ett taggnamn för att se föreslagna resultat.
@@ -185,7 +185,7 @@ Du kan också blockera smarta taggar för en enskild resurs. Navigera till infor
 
 ### Exportera blockeringslista{#export-blocklist}
 
-I resursvyn kan du exportera de listade blockerade taggarna till CSV-format. Om du vill exportera blockeringslista följer du stegen nedan:
+I Assets-vyn kan du exportera de blockerade taggarna i listan till CSV-format. Om du vill exportera blockeringslista följer du stegen nedan:
 
 1. Klicka på **[!UICONTROL Export as CSV]**.
 1. Välj en plats där du vill spara CSV-filen. Du kan också byta namn på filen efter behov.
@@ -193,7 +193,7 @@ I resursvyn kan du exportera de listade blockerade taggarna till CSV-format. Om 
 
 ### Importera blockeringslista{#import-blocklist}
 
-I resursvyn kan du importera blockerade taggar från en datakälla (CSV). Om du vill importera blockeringslista följer du stegen nedan:
+I Assets-vyn kan du importera blockerade taggar från en datakälla (CSV). Om du vill importera blockeringslista följer du stegen nedan:
 
 1. Klicka på **[!UICONTROL Import as CSV]**.
 1. Välj CSV-filen på enheten. Klicka **[!UICONTROL select a file]** för att navigera till filen från din enhet. Du kan också dra och släppa CSV-filen från enheten.

@@ -28,7 +28,7 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_react_app_guide_footer"
->title="I den här modulen lärde du dig att anpassa en exempelapp för React.<br><br>time to market: Accelerated!<br>Utvecklingscykler: Minskade!<br><br>Nu förstår du hur enkelt det är att hantera headless-innehåll för webbplatser och appar som har AEM headless-funktioner."
+>title="I den här modulen lärde du dig att anpassa en exempelapp för React.<br><br>time to market: Accelerated!<br>Utvecklingscykler: Minskade!<br><br>Nu förstår du hur enkelt det är att hantera headless-innehåll för webbplatser och appar som drivs av AEM headless-funktioner."
 >abstract=""
 
 ## Förhandsgranska appen {#preview}
@@ -81,7 +81,7 @@ Nu när du har ändrat en rubrik i appen kan du prova att ändra en bild.
 
    ![Ta bort bild från fragment](assets/do-not-localize/swap-image-4.png)
 
-1. Välj **Lägg till resurs** och sedan **Bläddra bland resurser** på snabbmenyn.
+1. Välj **Lägg till resurs** och sedan **Bläddra i Assets** på snabbmenyn.
 
 1. The **Välj resurs** öppnas och sökvägen **sample-wknd-app** > **en** > **bildfiler** väljs automatiskt åt dig.
 

@@ -30,7 +30,7 @@ Endast version 2.0.0 och senare stöds, och du bör använda den senaste version
 >[!NOTE]
 >Hämta Content Transfer Tool från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)-portalen.
 
-## Anslutning för källmiljö {#source-environment-connectivity}
+## Source Environment Connectivity {#source-environment-connectivity}
 
 >[!NOTE]
 >
@@ -62,7 +62,7 @@ Det kan vara svårt att förstå SSL-/TLS-anslutningsproblem. Om du vill felsök
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_demo"
 >title="Verktyget Innehållsöverföring körs"
->abstract="Lär dig hur du använder verktyget Innehållsöverföring för att migrera innehållet till AEM as a Cloud Service (Författare/Publicera)."
+>abstract="Lär dig hur du använder verktyget Innehållsöverföring för att migrera innehåll till AEM as a Cloud Service (författare/Publish)."
 >additional-url="https://video.tv.adobe.com/v/35460/?quality=12&amp;learn=on" text=" Se demo"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/content-transfer-tool.html#migration" text="Självstudiekurs - använda verktyget Innehållsöverföring"
 
@@ -78,7 +78,7 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 
 <!-- Contextualhelp id "aemcloud_ctt_extraction_setup" must be added here -->
 
-1. Logga in på CAM (Cloud Acceleration Manager) och klicka på CAM-projektet som du skapat tidigare för att utvärdera om du är redo att gå AEM as a Cloud Service. Om du inte har skapat något CAM-projekt, se Skapa och hantera ett projekt i CAM.
+1. Logga in på Cloud Acceleration Manager (CAM) och klicka på CAM-projektet som du skapat tidigare för att utvärdera om du är redo att gå över till AEM as a Cloud Service. Om du inte har skapat något CAM-projekt, se Skapa och hantera ett projekt i CAM.
 
 1. Klicka på **Innehållsöverföring** för att öppna vyn Migreringsuppsättningslista.
 
@@ -88,7 +88,7 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 
    >[!NOTE]
    >
-   >Högst 20 migreringsuppsättningar, inklusive utgångna uppsättningar, kan skapas per projekt i Cloud Acceleration Manager.
+   >Högst 20 migreringsuppsättningar, inklusive uppsättningar som gått ut, kan skapas per projekt i Cloud Acceleration Manager.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam2.png)
 
@@ -113,10 +113,10 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_populate_migrationset"
 >title="Fyll i migreringsuppsättning"
->abstract="När du har skapat en migreringsuppsättning måste den fyllas i med innehållet från källinstansen som måste flyttas till den AEM as a Cloud Service miljön. För att göra detta måste verktyget Innehållsöverföring vara installerat på källinstansen."
+>abstract="När du har skapat en migreringsuppsättning måste den fyllas i med innehållet från källinstansen som måste flyttas till AEM as a Cloud Service-miljön. För att göra detta måste verktyget Innehållsöverföring vara installerat på källinstansen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/extracting-content.html" text="Extraherar innehåll"
 
-Om du vill fylla i den migreringsuppsättning du skapade i Cloud Acceleration Manager installerar du den senaste versionen av verktyget Innehållsöverföring på din Adobe Experience Manager-källinstans (AEM). Följ det här avsnittet om du vill lära dig hur du fyller i migreringsuppsättningen.
+Om du vill fylla i den migreringsuppsättning som du skapade i Cloud Acceleration Manager installerar du den senaste versionen av verktyget Innehållsöverföring på Adobe Experience Manager-källinstansen (AEM). Följ det här avsnittet om du vill lära dig hur du fyller i migreringsuppsättningen.
 
 1. När du har installerat den senaste versionen av verktyget Innehållsöverföring på Adobe Experience Manager-källinstansen går du till **Åtgärder - innehållsmigrering**
 
@@ -124,11 +124,11 @@ Om du vill fylla i den migreringsuppsättning du skapade i Cloud Acceleration Ma
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam5.png)
 
-1. Klistra in extraheringsnyckeln som kopierades från CAM tidigare i indatafältet för extraheringsnyckeln i **Skapa migreringsuppsättning** formulär. När du har gjort det fylls namnen på migreringsuppsättningen och CAM-projektnamnen i automatiskt. Dessa ska matcha namnet på migreringsuppsättningen i CAM och namnet på CAM-projektet som du skapade. Nu kan du lägga till innehållssökvägar. Spara migreringsuppsättningen när du har lagt till innehållssökvägar. Du kan köra extraheringen med antingen versioner inkluderade eller exkluderade.
+1. Klistra in extraheringsnyckeln som kopierades från CAM tidigare i indatafältet för extraheringsnyckeln i **Skapa migreringsuppsättning** formulär. När du har gjort det fylls namnen på migreringsuppsättningen och projektnamnet för Cloud Acceleration Manager (CAM) i automatiskt. Dessa ska matcha namnet på migreringsuppsättningen i CAM och namnet på CAM-projektet som du skapade. Nu kan du lägga till innehållssökvägar. Spara migreringsuppsättningen när du har lagt till innehållssökvägar. Du kan köra extraheringen med antingen versioner inkluderade eller exkluderade.
 
    >[!NOTE]
    >
-   >Kontrollera att extraheringsnyckeln är giltig och att den inte är i närheten av utgångsdatumet. Du kan hämta den här informationen i **Skapa migreringsuppsättning** när du har klistrat in extraheringsnyckeln. Om du får ett anslutningsfel kan du läsa [Anslutning för källmiljö](#source-environment-connectivity) för mer information.
+   >Kontrollera att extraheringsnyckeln är giltig och att den inte är i närheten av utgångsdatumet. Du kan hämta den här informationen i **Skapa migreringsuppsättning** när du har klistrat in extraheringsnyckeln. Om du får ett anslutningsfel kan du läsa [Source Environment Connectivity](#source-environment-connectivity) för mer information.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam6.png)
 

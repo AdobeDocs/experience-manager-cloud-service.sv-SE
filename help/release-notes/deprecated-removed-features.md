@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="aem_cloud_deprecated_features"
->title="Föråldrade och borttagna funktioner i AEM as a Cloud Service"
+>title="Borttagna funktioner i AEM as a Cloud Service"
 >abstract="AEM as a Cloud Service har en distributionsmodell som bygger på molnet. Vissa funktioner har ersatts av molnbaserade motsvarigheter och på den här fliken visas dessa funktioner."
 
 
@@ -44,7 +44,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 | [!DNL Assets] | Konvertera videofilmer till mpeg. | Använd för att skapa miniatyrbilder av FFmpeg [Resursmikrotjänster](/help/assets/asset-microservices-overview.md). För MPEG-omkodning använder du [Dynamic Media](/help/assets/manage-video-assets.md). |
 | [!DNL Foundation] | Gränssnitt för trädreplikering på fliken Distribuera i replikeringsagenten (borttagning efter 30 september 2021) | [Hantera publikation](/help/operations/replication.md#manage-publication) eller [arbetsflöde för publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) metoder |
 | [!DNL Foundation] | Varken fliken Distribuera på administrationsskärmen för replikeringsagenten eller replikerings-API:t kan användas för att replikera innehållspaket över 10 MB. Använd antingen [Hantera publikation](/help/operations/replication.md#manage-publication) eller [arbetsflöde för publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) |
-| [!DNL Foundation] | Integrering med hjälp av autentiseringsuppgifter som genererats från Adobe Developer Console-projekt kommer gradvis att förlora stöd för JWT-autentiseringsuppgifter (Service Account). Det går inte att skapa nya JWT-autentiseringsuppgifter (Service Account) i Adobe Developer Console den 1 maj 2024 eller senare, även om befintliga JWT-autentiseringsuppgifter fortfarande kan användas för redan konfigurerade integreringar fram till 1 januari 2025, då befintliga JWT-autentiseringsuppgifter inte längre fungerar och kunderna måste migrera till OAuth Server-till-server-autentiseringsuppgifter. [Läs mer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console). | [Migrera](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#migration-overview) till autentiseringsuppgifter för OAuth Server-till-Server. |
+| [!DNL Foundation] | Integreringar som använder inloggningsuppgifter som genererats från Adobe Developer Console-projekt förlorar gradvis stöd för JWT-autentiseringsuppgifter (Service Account). Det går inte att skapa nya JWT-autentiseringsuppgifter i Adobe Developer Console den 1 maj 2024 eller senare, även om befintliga JWT-autentiseringsuppgifter fortfarande kan användas för redan konfigurerade integreringar fram till 1 januari 2025, då befintliga JWT-autentiseringsuppgifter inte längre fungerar och kunderna måste migrera till OAuth Server-till-Server-autentiseringsuppgifter. [Läs mer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console). | [Migrera](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#migration-overview) till autentiseringsuppgifter för OAuth Server-till-Server. |
 
 ## Borttagna funktioner {#removed-features}
 
@@ -66,7 +66,7 @@ I det här avsnittet visas funktioner som har tagits bort från [!DNL Experience
 
 ## AEM API:er {#aem-apis}
 
-Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntade borttagningsdatum. Kunder förväntas ta bort API:erna vid målborttagningsdatumet från sin kod. Om API:t används efter borttagningsdatumet genereras fel i den lokala SDK/Development Environment och Cloud Manager-byggprocessen.
+Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntade borttagningsdatum. Kunder förväntas ta bort API:erna vid målborttagningsdatumet från sin kod. Om API:t används efter borttagningsdatumet genereras fel i den lokala SDK/Development Environment och Cloud Manager byggprocess.
 
 <details>
   <summary>Expandera om du vill visa en lista över inaktuella API:er.</summary>
@@ -289,14 +289,14 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
 
 ## OSGI-konfiguration {#osgi-configuration}
 
-De två listorna nedan återspeglar den AEM as a Cloud Service OSGi-konfigurationsytan och beskriver vad kunderna kan konfigurera.
+De två listorna nedan återspeglar konfigurationsytan för AEM as a Cloud Service OSGi och beskriver vad kunderna kan konfigurera.
 
 1. En lista med OSGi-konfigurationer som inte får konfigureras av kundkoden
 1. En lista över OSGi-konfigurationer vars egenskaper kan konfigureras, men måste följa de angivna verifieringsreglerna. Dessa regler omfattar huruvida deklarationen av egenskapen är obligatorisk, dess typ och i vissa fall dess tillåtna värdeintervall.
 
 Om en OSGI-konfiguration inte anges kan den konfigureras med kundkod.
 
-Dessa regler valideras under Cloud Managers byggprocess. Ytterligare regler kan läggas till över tid och det förväntade datumet för verkställighet anges i tabellen. Kunderna förväntas följa dessa regler senast vid måldatumet. Om reglerna inte följs efter borttagningsdatumet genereras fel i Cloud Manager-byggprocessen. Maven-projekten bör omfatta [AEM as a Cloud Service SDK Build Analyzer Maven Plugin](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html) för att flagga OSGI-konfigurationsfel under lokal SDK-utveckling.
+Dessa regler valideras under Cloud Manager byggprocess. Ytterligare regler kan läggas till över tid och det förväntade datumet för verkställighet anges i tabellen. Kunderna förväntas följa dessa regler senast vid måldatumet. Om reglerna inte följs efter borttagningsdatumet genereras fel i Cloud Manager byggprocess. Maven-projekten bör omfatta [AEM as a Cloud Service SDK Build Analyzer Maven Plugin](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html) för att flagga OSGI-konfigurationsfel under lokal SDK-utveckling.
 
 Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/help/implementing/deploying/configuring-osgi.md).
 

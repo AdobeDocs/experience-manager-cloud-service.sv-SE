@@ -18,13 +18,13 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_ipallowlist"
 >title="Hantera IP-tillåtelselista"
->abstract="AEM som molntjänst är tillgänglig via Internet och skyddas genom användarautentisering och behörighet. Cloud Managers IP-tillåtelselista kan användas för att begränsa och styra åtkomsten enbart till betrodda IP-adresser. Användare av Cloud Manager med lämplig behörighet kan skapa tillåtelselista med betrodda IP-adresser från vilka webbplatsens användare kan komma åt sina AEM domäner."
+>abstract="AEM som molntjänst är tillgänglig via Internet och skyddas genom användarautentisering och behörighet. Cloud Manager IP-tillåtelselista kan användas för att begränsa och styra åtkomsten enbart till betrodda IP-adresser. Cloud Manager-användare med lämplig behörighet kan skapa tillåtelselista med betrodda IP-adresser från vilka webbplatsens användare kan komma åt sina AEM domäner."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/add-ip-allow-lists.html" text="Lägg till en IP-Tillåtelselista"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/managing-ip-allow-lists.html" text="Visa och uppdatera en IP-Tillåtelselista"
 
 AEM som molntjänst är som standard tillgänglig via Internet. Säkerhet hanteras genom användarautentisering och -auktorisering, men IP-registrering är ett sätt att begränsa åtkomsten enbart till betrodda IP-adresser.
 
-Cloud Managers IP-tillåtelselista kan användas för att begränsa och styra åtkomsten enbart till sådana betrodda IP-adresser. Cloud Manager-användare med lämplig behörighet kan [skapa tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md) av betrodda IP-adresser från vilka webbplatsens användare kan komma åt sina AEM domäner.
+Cloud Manager IP-tillåtelselista kan bara användas för att begränsa och styra åtkomsten till betrodda IP-adresser. Cloud Manager-användare med lämpliga behörigheter kan [skapa tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md) av betrodda IP-adresser från vilka webbplatsens användare kan komma åt sina AEM domäner.
 
 Efter tillägg, [IP-tillåtelselista kan tillämpas/inte tillämpas](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) flera gånger som en enhet eller enhet till en författare och/eller utgivartjänst i en miljö.
 
