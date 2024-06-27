@@ -4,7 +4,7 @@ description: Lär dig mer om underhållsåtgärder i AEM as a Cloud Service och 
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
 feature: Operations
 role: Admin
-source-git-commit: 4113bb47dee5f3a2c7743f9a79c60654e58cb6bd
+source-git-commit: f8ef7e36ad602af96c3a6055db31ac328da808e6
 workflow-type: tm+mt
 source-wordcount: '2106'
 ht-degree: 0%
@@ -46,14 +46,14 @@ Följande tabell visar vilka underhållsuppgifter som är tillgängliga.
   <tr>
     <td>Rensa version</td>
     <td>Kund</td>
-    <td>Borttagning av version är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Underhållsaktiviteter vid rensning av version och granskningslogg</a> -avsnitt.<br/><br/>Rensning kommer snart att aktiveras som standard, och dessa värden kan åsidosättas.<br><br> <!--Alexandru: leave the two line breaks in place, otherwise spacing won't render properly-->
+    <td>Borttagning av version är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Underhållsaktiviteter vid rensning av version och granskningslogg</a> -avsnitt.<br/><br/>Rensning kommer snart att aktiveras som standard, och dessa värden kan åsidosättas.<br>
    </td>
   </td>
   </tr>
   <tr>
     <td>Rensa granskningslogg</td>
     <td>Kund</td>
-    <td>Rensa granskningslogg är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Underhållsaktiviteter vid rensning av version och granskningslogg</a> -avsnitt.<br/><br/>Rensning kommer snart att aktiveras som standard, och dessa värden kan åsidosättas.<br><br> <!--Alexandru: leave the two line breaks in place, otherwise spacing won't render properly-->
+    <td>Rensa granskningslogg är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Underhållsaktiviteter vid rensning av version och granskningslogg</a> -avsnitt.<br/><br/>Rensning kommer snart att aktiveras som standard, och dessa värden kan åsidosättas.<br>
    </td>
    </td>
   </tr>
@@ -197,7 +197,7 @@ När du rensar versioner och granskningsloggen minskas storleken på databasen, 
 
 >[!NOTE]
 >
->Adobe rekommenderar inte att användare konfigurerar versionsrensning.
+>AEM Guides-kunder bör inte konfigurera version Rensa.
 
 ### Standardvärden {#defaults}
 
@@ -283,7 +283,7 @@ Se [konfigurera produktionspipelines](/help/implementing/cloud-manager/configuri
 
 >[!NOTE]
 >
->Adobe rekommenderar inte att användare konfigurerar versionsrensning.
+>AEM Guides-kunder bör inte konfigurera version Rensa.
 
 #### Standard för rensning av version {#version-purge-defaults}
 
