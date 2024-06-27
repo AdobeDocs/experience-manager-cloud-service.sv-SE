@@ -1,34 +1,34 @@
 ---
-title: Underhållsaktiviteter på AEM as a Cloud Service
-description: Lär dig mer om underhållsåtgärder på AEM as a Cloud Service och hur du konfigurerar dem.
+title: Underhållsaktiviteter i AEM as a Cloud Service
+description: Lär dig mer om underhållsåtgärder i AEM as a Cloud Service och hur du konfigurerar dem.
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
 feature: Operations
 role: Admin
-source-git-commit: c7488b9a10704570c64eccb85b34f61664738b4e
+source-git-commit: 4113bb47dee5f3a2c7743f9a79c60654e58cb6bd
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '2106'
 ht-degree: 0%
 
 ---
 
-# Underhållsaktiviteter på AEM as a Cloud Service {#maintenance-tasks-in-aem-as-a-cloud-service}
+# Underhållsaktiviteter i AEM as a Cloud Service {#maintenance-tasks-in-aem-as-a-cloud-service}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_maintenance"
 >title="Underhållsaktiviteter"
->abstract="Underhållsåtgärder är processer som körs enligt ett schema för att optimera databasen. Med AEM as a Cloud Service är behovet av att kunderna konfigurerar driftsegenskaperna för underhållsåtgärder minimalt. Kunderna kan fokusera sina resurser på frågor som rör applikationsnivå och lämna infrastrukturåtgärderna åt Adobe."
+>abstract="Underhållsåtgärder är processer som körs enligt ett schema för att optimera databasen. Med AEM as a Cloud Service är behovet av att kunderna konfigurerar driftsegenskaperna för underhållsåtgärder minimal. Kunderna kan fokusera sina resurser på frågor som rör applikationsnivå och lämna infrastrukturåtgärderna åt Adobe."
 
-Underhållsåtgärder är processer som körs enligt ett schema för att optimera databasen. Med AEM as a Cloud Service är behovet av att kunderna konfigurerar driftsegenskaperna för underhållsåtgärder minimalt. Kunderna kan fokusera sina resurser på frågor som rör applikationsnivå och lämna infrastrukturåtgärderna åt Adobe.
+Underhållsåtgärder är processer som körs enligt ett schema för att optimera databasen. Med AEM as a Cloud Service är behovet av att kunderna konfigurerar driftsegenskaperna för underhållsåtgärder minimal. Kunderna kan fokusera sina resurser på frågor som rör applikationsnivå och lämna infrastrukturåtgärderna åt Adobe.
 
 ## Konfigurera underhållsåtgärder {#maintenance-tasks-configuring}
 
-I tidigare versioner av AEM kunde du konfigurera underhållsåtgärder med underhållskortet (Verktyg > Åtgärder > Underhåll). Underhållskortet är inte längre tillgängligt för AEM as a Cloud Service, så konfigurationer bör implementeras för källkontroll och driftsättas med hjälp av Cloud Manager. Adobe hanterar de underhållsåtgärder som har inställningar som inte kan konfigureras av kunder (till exempel Datastore Garbage Collection). Andra underhållsuppgifter kan konfigureras av kunder, vilket beskrivs i tabellen nedan.
+I tidigare versioner av AEM kunde du konfigurera underhållsåtgärder med underhållskortet (Verktyg > Åtgärder > Underhåll). Underhållskortet för AEM as a Cloud Service är inte längre tillgängligt, så konfigurationer bör implementeras för källkontroll och driftsättas med Cloud Manager. Adobe hanterar de underhållsåtgärder som har inställningar som inte kan konfigureras av kunder (till exempel Datastore Garbage Collection). Andra underhållsuppgifter kan konfigureras av kunder, vilket beskrivs i tabellen nedan.
 
 >[!CAUTION]
 >
 >Adobe förbehåller sig rätten att åsidosätta en kunds konfigurationsinställningar för underhållsaktiviteter för att minska problem som prestandaförsämringar.
 
-I följande tabell visas underhållsåtgärder som är tillgängliga när AEM as a Cloud Service släpps.
+Följande tabell visar vilka underhållsuppgifter som är tillgängliga.
 
 <table style="table-layout:auto">
  <tbody>
@@ -45,26 +45,16 @@ I följande tabell visas underhållsåtgärder som är tillgängliga när AEM as
   </tr>
   <tr>
     <td>Rensa version</td>
-    <td>Adobe</td>
-    <td>För befintliga miljöer (de som skapats före ett datum som ännu inte är fastställt 2024) är rensning inaktiverat och kommer att aktiveras i framtiden med standardvärdet 7 år. Kunderna kan konfigurera det med lägre, anpassade värden (till exempel 30 dagar).<br><br> <!--Alexandru: leave the two line breaks in place, otherwise spacing won't render properly-->Nya miljöer (de som skapats med början vid ett datum som ännu inte är fastställt 2024) har rensning aktiverat som standard med värdena nedan, och kunderna kan konfigurera med anpassade värden.
-     <ol>
-       <li>Versioner som är äldre än 30 dagar tas bort</li>
-       <li>De senaste 5 versionerna de senaste 30 dagarna sparas</li>
-       <li>Oavsett reglerna ovan bevaras den senaste versionen.</li>
-       <br>Vi rekommenderar att kunder som har lagstadgade krav på att återge webbplatssidor exakt som de såg ut på ett visst datum integreras med specialiserade externa tjänster.
-     </ol></td>
+    <td>Kund</td>
+    <td>Borttagning av version är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Underhållsaktiviteter vid rensning av version och granskningslogg</a> -avsnitt.<br/><br/>Rensning kommer snart att aktiveras som standard, och dessa värden kan åsidosättas.<br><br> <!--Alexandru: leave the two line breaks in place, otherwise spacing won't render properly-->
+   </td>
   </td>
   </tr>
   <tr>
     <td>Rensa granskningslogg</td>
-    <td>Adobe</td>
-    <td>För befintliga miljöer (de som skapats före ett datum som ännu inte är fastställt 2024) är rensning inaktiverat och kommer att aktiveras i framtiden med standardvärdet 7 år. Kunderna kan konfigurera det med lägre, anpassade värden (till exempel 30 dagar).<br><br> <!-- See above for the two line breaks -->I nya miljöer (de som skapats med början av ett datum som ännu inte är fastställt 2024) kommer rensning att vara aktiverat som standard under <code>/content</code> databasens nod enligt följande:
-     <ol>
-       <li>Granskningsloggar som är äldre än 3 dagar tas bort för replikeringsgranskning</li>
-       <li>För DAM-granskning (Assets) tas granskningsloggar som är äldre än 30 dagar bort</li>
-       <li>Vid sidgranskning tas loggar som är äldre än 3 dagar bort.</li>
-       <br>Vi rekommenderar att kunder som har lagstadgade krav på att ta fram redigerbara granskningsloggar integreras med specialiserade externa tjänster.
-     </ol></td>
+    <td>Kund</td>
+    <td>Rensa granskningslogg är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Underhållsaktiviteter vid rensning av version och granskningslogg</a> -avsnitt.<br/><br/>Rensning kommer snart att aktiveras som standard, och dessa värden kan åsidosättas.<br><br> <!--Alexandru: leave the two line breaks in place, otherwise spacing won't render properly-->
+   </td>
    </td>
   </tr>
   <tr>
@@ -200,3 +190,197 @@ Kodexempel 3 (månadsvis)
    windowScheduleWeekdays="[5,5]"
    windowStartTime="14:30"/>
 ```
+
+## Underhållsaktiviteter vid rensning av version och granskningslogg {#purge-tasks}
+
+När du rensar versioner och granskningsloggen minskas storleken på databasen, och i vissa scenarier kan prestandan förbättras.
+
+>[!NOTE]
+>
+>Adobe rekommenderar inte att användare konfigurerar versionsrensning.
+
+### Standardvärden {#defaults}
+
+Rensa är för närvarande inte aktiverat som standard, men det kommer att ändras i framtiden. Miljöer som skapades innan standardrensningen aktiverades får ett mer konservativt tröskelvärde så att rensning inte inträffar oväntat. Se avsnitten Rensa och Rensa granskningslogg för version nedan för mer information om standardprincipen för rensning.
+<!-- Version purging and audit log purging are on by default, with different default values for environments with ids higher than **TBD** versus those with ids lower than that value. -->
+
+<!-- ### Overriding the default values with a new configuration {#override} -->
+
+Standardvärdena för tömning kan åsidosättas genom att en konfigurationsfil deklareras och distribueras enligt beskrivningen nedan.
+
+<!-- The reason for this behavior is to clarify the ambiguity over whether the default purge values would take effect once you remove the declaration. -->
+
+### Använda en konfiguration {#configure-purge}
+
+Deklarera en konfigurationsfil och distribuera den enligt anvisningarna i följande steg.
+
+>[!NOTE]
+>När du har distribuerat noden för versionsrensning i konfigurationsfilen måste du behålla den deklarerad och inte ta bort den. Konfigurationsflödet misslyckas om du försöker göra det.
+> 
+>På samma sätt måste du behålla granskningsloggens deklarerade nod och inte ta bort den när du distribuerar granskningsloggens tömningsnod i konfigurationsfilen.
+
+**1** - skapa följande mapp- och filstruktur i den översta mappen i ditt projekt i Git:
+
+```
+config/
+     mt.yaml
+```
+
+**2** - Deklarera egenskaper i konfigurationsfilen som innehåller:
+
+* en&quot;kind&quot;-egenskap med värdet&quot;MaintenanceTasks&quot;.
+* en &quot;version&quot;-egenskap (för närvarande är vi i version 1).
+* ett valfritt&quot;metadata&quot;-objekt med egenskapen `envTypes` med en kommaavgränsad lista över den miljötyp (dev, stage, prod) som den här konfigurationen är giltig för. Om inget metadataobjekt har deklarerats är konfigurationen giltig för alla miljötyper.
+* ett dataobjekt med båda `versionPurge` och `auditLogPurge` objekt.
+
+Se definitioner och syntax för `versionPurge` och `auditLogPurge` objekt nedan.
+
+Du bör strukturera konfigurationen på liknande sätt som i följande exempel:
+
+```
+kind: "MaintenanceTasks"
+version: "1"
+metadata:
+  envTypes: ["dev"]
+data:
+  versionPurge:
+    maximumVersions: 15
+    maximumAgeDays: 20
+    paths: ["/content"]
+    minimumVersions: 1
+    retainLabelledVersions: false
+  auditLogPurge:
+    rules:
+      - replication:
+          maximumAgeDays: 15
+          contentPath: "/content"
+          types: ["Activate", "Deactivate", "Delete", "Test", "Reverse", "Internal Poll"]
+      - pages:
+          maximumAgeDays: 15
+          contentPath: "/content"
+          types: ["PageCreated", "PageModified", "PageMoved", "PageDeleted", "VersionCreated", "PageRestored", "PageValid", "PageInvalid"]
+      - dam:
+          maximumAgeDays: 15
+          contentPath: "/content"
+          types: ["ASSET_EXPIRING", "METADATA_UPDATED", "ASSET_EXPIRED", "ASSET_REMOVED", "RESTORED", "ASSET_MOVED", "ASSET_VIEWED", "PROJECT_VIEWED", "PUBLISHED_EXTERNAL", "COLLECTION_VIEWED", "VERSIONED", "ADDED_COMMENT", "RENDITION_UPDATED", "ACCEPTED", "DOWNLOADED", "SUBASSET_UPDATED", "SUBASSET_REMOVED", "ASSET_CREATED", "ASSET_SHARED", "RENDITION_REMOVED", "ASSET_PUBLISHED", "ORIGINAL_UPDATED", "RENDITION_DOWNLOADED", "REJECTED"]
+```
+
+Kom ihåg att för att konfigurationen ska vara giltig:
+
+* alla egenskaper måste definieras. Det finns inga ärvda standardvärden.
+* Typerna (heltal, strängar, booleska värden etc.) i egenskapstabellen nedan måste respekteras.
+
+>[!NOTE]
+>Du kan använda `yq` för att lokalt validera YAML-formateringen i konfigurationsfilen (till exempel `yq mt.yaml`).
+
+**3** - Konfigurera pipelines för icke-produktion och produktionskonfiguration.
+
+Snabba utvecklingsmiljöer (RDE) har inte stöd för tömning. För andra miljötyper i produktionsprogram (icke-sandlådeprogram) skapar du en riktad distributionskonfigurationspipeline i Cloud Manager.
+
+Se [konfigurera produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) och [konfigurera icke-produktionsrörledningar](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) för mer information.
+
+### Rensa version {#version-purge}
+
+>[!NOTE]
+>
+>Adobe rekommenderar inte att användare konfigurerar versionsrensning.
+
+#### Standard för rensning av version {#version-purge-defaults}
+
+<!-- For version purging, environments with an id higher than **TBD** have the following default values: -->
+
+Rensa är för närvarande inte aktiverat som standard, men det kommer att ändras i framtiden.
+
+Miljöer som skapades när standardrensningen är aktiverad får följande standardvärden:
+
+* Versioner äldre än 30 dagar tas bort.
+* De senaste fem versionerna de senaste 30 dagarna bevaras.
+* Oavsett reglerna ovan bevaras den senaste versionen (utöver den aktuella filen).
+
+<!-- Environments with an id equal or lower than **TBD** will have the following default values: -->
+
+Miljöer som skapades innan standardrensningen är aktiverad kommer att ha standardvärdena som listas nedan, men vi rekommenderar att du sänker dessa värden för att optimera prestanda.
+
+* Versioner äldre än 7 år tas bort.
+* Alla versioner de senaste sju åren sparas.
+* Efter 7 år tas andra versioner än den senaste versionen (utöver den aktuella filen) bort.
+
+#### Egenskaper för versionsrensning {#version-purge-properties}
+
+Tillåtna egenskaper visas nedan.
+
+Kolumner som anger *standard* ange standardvärdena i framtiden, när standardvärdena tillämpas, *TBD* speglar ett miljö-ID som fortfarande inte är fastställt.
+
+| Egenskaper | framtida standard för envs>TBD | framtida standard för envs&lt;=TBD | obligatoriskt | type | Värden |
+|-----------|--------------------------|-------------|-----------|---------------------|-------------|
+| banor | [&quot;/content&quot;] | [&quot;/content&quot;] | Ja | array med strängar | Anger under vilka sökvägar versioner ska rensas när nya versioner skapas.  Kunder måste deklarera den här egenskapen, men det enda tillåtna värdet är /content. |
+| maximumAgeDays | 30 | 2557 (7 år + 2 skottdagar) | Ja | Heltal | Alla versioner som är äldre än det konfigurerade värdet tas bort. Om värdet är 0 utförs inte rensning baserat på versionens ålder. |
+| maximumVersions | 5 | 0 (ingen gräns) | Ja | Heltal | Alla versioner som är äldre än den n:te nyaste versionen tas bort. Om värdet är 0 utförs inte rensning baserat på antalet versioner. |
+| minimumVersions | 1 | 1 | Ja | Heltal | Det minsta antalet versioner som behålls oavsett ålder. Observera att minst en version alltid behålls. Värdet måste vara 1 eller högre. |
+| keepLabelledVersioned | false | false | Ja | boolesk | Avgör om explicit märkta versioner ska exkluderas från rensningen. För bättre databasoptimering rekommenderar vi att du anger värdet till false. |
+
+
+**Egenskapsinteraktioner**
+
+Följande exempel visar hur egenskaper interagerar när de kombineras.
+
+Exempel:
+
+```
+maximumAgeDays = 30
+maximumVersions = 10
+minimumVersions = 2
+```
+
+Om det finns 11 versioner dag 23, kommer den äldsta versionen att rensas nästa gång underhållsåtgärden rensas, eftersom `maximumVersions` egenskapen är inställd på 10.
+
+Om det finns 5 versioner på dag 31 kommer endast 3 att rensas sedan `minimumVersions` egenskapen är inställd på 2.
+
+Exempel:
+
+```
+maximumAgeDays = 30
+maximumVersions = 0
+minimumVersions = 1
+```
+
+Inga versioner som är nyare än 30 dagar rensas sedan `maximumVersions` egenskapen är inställd på 0.
+
+En version som är äldre än 30 dagar behålls.
+
+### Rensa granskningslogg {#audit-purge}
+
+#### Granska rensningsstandardinställningar för logg {#audit-purge-defaults}
+
+<!-- For audit log purging, environments with an id higher than **TBD** have the following default values: -->
+
+Rensa är för närvarande inte aktiverat som standard, men det kommer att ändras i framtiden.
+
+Miljöer som skapades när standardrensningen är aktiverad får följande standardvärden:
+
+* Replikerings-, DAM- och sidgranskningsloggar som är äldre än 7 dagar tas bort.
+* Alla möjliga händelser loggas.
+
+<!-- Environments with an id equal or lower than **TBD** will have the following default values: -->
+
+Miljöer som skapades innan standardrensningen är aktiverad kommer att ha standardvärdena som listas nedan, men vi rekommenderar att du sänker dessa värden för att optimera prestanda.
+
+* Replikerings-, DAM- och sidgranskningsloggar som är äldre än 7 år tas bort.
+* Alla möjliga händelser loggas.
+
+>[!NOTE]
+>Vi rekommenderar att kunder som har lagstadgade krav på att skapa icke redigerbara granskningsloggar integreras med specialiserade externa tjänster.
+
+#### Rensa egenskaper för granskningslogg {#audit-purge-properties}
+
+Tillåtna egenskaper visas nedan.
+
+Kolumner som anger *standard* ange standardvärdena i framtiden, när standardvärdena tillämpas, *TBD* speglar ett miljö-ID som fortfarande inte är fastställt.
+
+
+| Egenskaper | framtida standard för envs>TBD | framtida standard för envs&lt;=TBD | obligatoriskt | type | Värden |
+|-----------|--------------------------|-------------|-----------|---------------------|-------------|
+| regler | - | - | Ja | Objekt | En eller flera av följande noder: replikering, sidor, dam. Var och en av dessa noder definierar regler, med egenskaperna nedan. Alla egenskaper måste deklareras. |
+| maximumAgeDays | 7 dagar | för alla, 2557 (7 år + 2 skottdagar) | Ja | heltal | För replikering, sidor eller damm: antalet dagar som granskningsloggarna sparas. Granskningsloggar som är äldre än det konfigurerade värdet rensas. |
+| contentPath | &quot;/content&quot; | &quot;/content&quot; | Ja | Sträng | Sökvägen som granskningsloggarna rensas under, för den relaterade typen. Måste vara inställt på /content. |
+| typer | alla värden | alla värden | Ja | Uppräkningsmatris | För **replikering**, är de uppräknade värdena: Aktivera, Inaktivera, Ta bort, Testa, Invertera, Intern omröstning. För **sidor**&#x200B;är de uppräknade värdena: PageCreated, PageModified, PageMoved, PageDeleted, VersionCreated, PageRestistället, PageRolled Out, PageValid, PageInvalid. För **dam**&#x200B;är de uppräknade värdena: ASSET_EXPIRING, METADATA_UPDATED, ASSET_EXPIRED, ASSET_REMOVED, RESTORED, ASSET_MOVED, ASSET_VIEWED, PROJECT_VIEWED, PUBLISHED_EXTERNAL, COLLECTION_VIEWED, VERSIONED, ADDED_COMMENT, RENDITION_UPDATED, ACCEPTED, DOWNLOADED, SUBASSET_UPDATED, SUBASSET_REMOVED, ASSET_CREATED, ASSET_SHARED, RENDITION_REMOVED, ASSET_PUBLISHED, ORIGINAL_UPDATED, RENDITION_DOWNLOADED, READED JOBBAD. |
