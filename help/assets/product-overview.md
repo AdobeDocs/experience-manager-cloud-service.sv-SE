@@ -1,9 +1,9 @@
 ---
 title: Content Hub - översikt
 description: Läs mer om Content Hub, dess viktigaste fördelar, hur du får tillgång till det och hur du kan ge feedback runt de alternativ som finns i Content Hub.
-source-git-commit: 1aea6c6095aebd38f4c7c078701b29eebd3329b4
+source-git-commit: ad6d213b6ecf902ec80c323a686231f21ee13811
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -37,11 +37,11 @@ Med Content Hub kan du skapa nytt innehåll med Adobe Express (om du har Adobe E
 
 ## Förutsättningar {#prerequisites-content-hub}
 
-Experience Manager as a Cloud Service Juniversion
+Content Hub kräver en produktionsredigeringsmiljö i Experience Manager as a Cloud Service, version 2024.6 eller senare (lägsta version är 2024.6.16799).
 
 ## Hur kommer jag åt Content Hub? {#access-content-hub}
 
-När du har lagt till en användare i [Content Hub produktprofil](/help/assets/deploy-content-hub.md#content-hub-instance-product-profile)går det att komma åt Content Hub på följande sätt:
+[Efter konfiguration av Content Hub](#deploy-content-hub) och lägga till en användare i [Content Hub produktprofil](/help/assets/deploy-content-hub.md#content-hub-instance-product-profile)går det att komma åt Content Hub på följande sätt:
 
 * Öppna Content Hub via följande länk:
 
