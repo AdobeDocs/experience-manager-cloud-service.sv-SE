@@ -4,7 +4,7 @@ description: Använd resursväljaren för att söka efter, hitta och hämta resu
 contentOwner: KK
 role: Admin,User
 exl-id: b968f63d-99df-4ec6-a9c9-ddb77610e258
-source-git-commit: 60c94071332003312ed9e963bc50e35d3c29baf0
+source-git-commit: 3f2fbdc1fd4087ea4c90b9bbe11aa37a11237ae5
 workflow-type: tm+mt
 source-wordcount: '4713'
 ht-degree: 0%
@@ -404,8 +404,8 @@ Använd följande förutsättningar om du integrerar resursväljare med Dynamic 
 
 * [Kommunikationsmetoder](#prereqs)
 * För att få tillgång till Dynamic Media med OpenAPI-funktioner måste du ha licenser för:
-   * Assets-databas (t.ex. Experience Manager Assets as a Cloud Service)
-   * AEM Dynamic Media
+   * Assets-arkiv (till exempel Experience Manager Assets as a Cloud Service).
+   * AEM Dynamic Media.
 * Endast [godkända tillgångar](#approved-assets.md) kan användas för att säkerställa ett enhetligt varumärke.
 
 ### Integrering av Dynamic Media med OpenAPI-funktioner{#adobe-app-integration-polaris}
