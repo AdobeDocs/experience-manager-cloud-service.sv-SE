@@ -4,14 +4,13 @@ description: Lär dig spara grundkomponentbaserade adaptiva formulär som utkast
 feature: Adaptive Forms, Core Components
 exl-id: c0653bef-afeb-40c1-b131-7d87ca5542bc
 role: User, Developer, Admin
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: 52b87073cad84705b5dc0c6530aff44d1e686609
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
 
-<span class="preview"> Den här artikeln innehåller innehåll för förhandsversionen. Förhandsversionen är bara tillgänglig via [kanal för förhandsversion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features).
 
 # Spara grundkomponentbaserad adaptiv form som ett utkast {#save-af-form}
 

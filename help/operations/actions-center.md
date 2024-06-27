@@ -4,9 +4,9 @@ description: Utnyttja åtgärdscentret för att enkelt hantera incidenter och an
 exl-id: d5a95ac4-aa88-44d5-ba02-7c9702050208
 feature: Operations
 role: Admin
-source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
+source-git-commit: 7630481aab89b31057509f23aab334e17c537257
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '988'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 AEM när Cloud Servicen skickar e-postmeddelanden till Åtgärdscenter när allvarliga incidenter inträffar som kräver omedelbara åtgärder och proaktiva rekommendationer för optimering. Exempel är en blockerad kö eller en uppsättning med förfallna autentiseringsuppgifter. Den fullständiga uppsättningen med meddelandetyper i Åtgärdscenter kan visas i [tabellen nedan](#supported-notification-types), som kommer att byggas ut med tiden.
 
-När ett e-postmeddelande från Åtgärdscenter tas emot kan du klicka på det för att öppna AEM as a Cloud Service åtgärdscenter med en popup som visar ytterligare kontext som förklarar vilken åtgärd en kund ska vidta.
+När ett e-postmeddelande från Åtgärdscenter tas emot kan du klicka på det för att öppna AEM as a Cloud Service Actions Center med en popup-meny som visar ytterligare kontext som förklarar vad kunden ska göra.
 
 Förutom att visa information om det nyligen klickade e-postmeddelandet fungerar Åtgärdscenter som ett nav där du kan visa och hantera den aktuella och äldre meddelandeuppsättningen. <!-- It can be accessed directly at the url TBD (Alexandru: I'm intentionally keeping it TBD for now so customers do not find it) -->
 
@@ -65,7 +65,7 @@ AEM as a Cloud Service har flera typer av meddelanden, men bara en delmängd vis
 |---------------------------------|-----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
 | Driftincidenter | Kritiska incidenter som kräver omedelbara åtgärder | Användare tilldelad produktprofilen&quot;Incident Notification - Cloud Service&quot; | X |
 | Förebyggande rekommendationer | Optimeringar som ska planeras | Användare tilldelad produktprofilen &quot;Proaktivt meddelande - Cloud Service&quot; | X |
-| Molnhanterarens pipeline-status | Information om tillståndet för dina rörledningar | Användare med Business Owner, Program Manager eller Deployment Manager-roller, kryssrutan Övrigt markerad i [Inställningar för Experience Cloud](https://experience.adobe.com/preferences), som [beskrivs här](/help/implementing/cloud-manager/notifications.md). |                           |
+| Cloud Manager pipeline-status | Information om tillståndet för dina rörledningar | Användare med Business Owner, Program Manager eller Deployment Manager-roller, kryssrutan Övrigt markerad i [Inställningar för Experience Cloud](https://experience.adobe.com/preferences), som [beskrivs här](/help/implementing/cloud-manager/notifications.md). |                           |
 
 ## Meddelandetyper som stöds {#supported-notification-types}
 
@@ -76,6 +76,12 @@ I följande tabell visas de meddelandetyper som för närvarande stöds i Åtgä
 | Blockerad replikeringskö | Incident | Avblockera kön genom att följa instruktionerna i [Replikeringsdokumentation](/help/operations/replication.md#troubleshooting) |
 | Ogiltig beständig GraphQL-fråga | Incident | Åtgärda den ogiltiga GraphQL-frågan genom att referera till [Beständiga GraphQL-frågor felsökningsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries-troubleshoot.html) |
 | Trafikrydda vid ursprung | Incident | Protect ditt ursprung genom att konfigurera regler för hastighetsbegränsning för trafikfilter som utlöser vid lägre tröskelvärden än standardtrafikspiken vid ursprungsvarningen.  Se [Blockera DoS- och DDoS-attacker med trafikregler](/help/security/traffic-filter-rules-including-waf.md#blocking-dos-and-ddos-attacks-using-traffic-filter-rules) i dokumentationen för trafikfilterregler, som refererar till en självstudiekurs. |
+| Sidorna innehåller ett stort antal noder | Proaktiv | Minska det totala antalet noder på en sida. Se [Dokumentation om sidkomplexitet](https://experienceleague.adobe.com/en/docs/experience-manager-pattern-detection/table-of-contents/pcx) | |
+| Stort antal arbetsflödesinstanser som körs | Proaktiv | Avsluta pågående arbetsflöden som inte längre behövs. Lär dig hur [konfigurera ett rensningsjobb](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance) |               |
 | S2S-certifikatet förfaller | Proaktiv | Lär dig hur du uppdaterar en autentiseringsuppgift i dialogrutan [Genererar Access-token för dokumentation för API:er på serversidan](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md#refresh-credentials) | Högt antal anslutningar | Proaktiv | Läs mer om anslutningspooler i [Anslutningspoolning tillsammans med avancerad nätverksdokumentation](/help/security/configuring-advanced-networking.md#connection-pooling-advanced-networking) |
 | Mappning av tjänstanvändare har tagits bort | Proaktiv | Lär dig hur du använder det nyare användarmappningsformatet för Sling-tjänsten, vilket visas i [Bästa praxis för användarmappning av delningstjänst och användardefinition av tjänst](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/best-practices-for-sling-service-user-mapping-and-service-user-definition) |
-| Högt antal anslutningar | Proaktiv | Läs mer om anslutningspooler i [Avancerad nätverksdokumentation](/help/security/configuring-advanced-networking.md#connection-pooling-advanced-networking) |
+| Högt antal anslutningar | Proaktiv | Läs mer om anslutningspooler i [Avancerad nätverksdokumentation](/help/security/configuring-advanced-networking.md#connection-pooling-advanced-networking) |  |
+| Användare som läggs till direkt i en anpassad grupp | Proaktiv | Användare måste läggas till i relevanta IMS-grupper och dessa IMS-grupper måste läggas till som medlemmar i AEM. Justera med [Bästa praxis för IMS](/help/security/ims-support.md) | |
+| JCR-innehåll saknas | Proaktiv | Lägg till noden JCR-innehåll som saknas. Se [Dokumentation för Assets Content Validator](https://experienceleague.adobe.com/en/docs/experience-manager-pattern-detection/table-of-contents/acv) | |
+| Slutförda arbetsflöden har inte rensats | Proaktiv | Minimera antalet arbetsflödesinstanser och förbättra resultatet genom att rensa arbetsflödesinstanser som är mer än 90 dagar gamla. Lär dig hur [konfigurera underhållsaktiviteter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance) | |
+| Sling-resurstypen saknas på sidan | Proaktiv | Lägg till saknad nod för Sling-resurstyp. Se [Dokumentation för Assets Content Validator](https://experienceleague.adobe.com/en/docs/experience-manager-pattern-detection/table-of-contents/acv) |

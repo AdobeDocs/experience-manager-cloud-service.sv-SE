@@ -7,15 +7,13 @@ content-type: reference
 feature: Adaptive Forms, Core Components
 exl-id: 24607dd1-2d65-480b-a831-9071e20c473d
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: 52b87073cad84705b5dc0c6530aff44d1e686609
 workflow-type: tm+mt
-source-wordcount: '4340'
+source-wordcount: '4322'
 ht-degree: 0%
 
 ---
 
-
-<span class="preview"> Den här artikeln innehåller `Override form submission success and error handlers` som en förhandsversion. Förhandsversionen är bara tillgänglig via vår [kanal för förhandsversion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features).
 
 # Anpassade funktioner i Adaptive Forms (Core Components)
 
