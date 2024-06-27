@@ -1,9 +1,9 @@
 ---
 title: Content Hub - översikt
 description: Läs mer om Content Hub, dess viktigaste fördelar, hur du får tillgång till det och hur du kan ge feedback runt de alternativ som finns i Content Hub.
-source-git-commit: 15a266ccb6e4117c769d775a5f579fba943389bf
+source-git-commit: 1aea6c6095aebd38f4c7c078701b29eebd3329b4
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ De vanligaste egenskaperna i Content Hub, t.ex. sökfilter, fält som är tillg�
 
 **Ge icke-kreatörer möjlighet att redigera och mixa om innehåll samtidigt som de behåller sitt varumärke**
 
-Content Hub kan integreras med Adobe Express (om du har rätt till Adobe Express) för att redigera bilder med den inbyggda Express-redigeraren för att skapa fantastiska bildvarianter samtidigt som du behåller varumärket.
+Med Content Hub kan du skapa nytt innehåll med Adobe Express (om du har Adobe Express). Du kan redigera befintligt innehåll med lättanvända verktyg, producera varumärkesanpassade varianter med mallar och märkeselement och skapa nytt innehåll med de senaste GenAI-funktionerna från Adobe Firefly.
 
 **Få insikter om hur innehåll används i olika team**
 
@@ -61,6 +61,8 @@ Om du vill rekommendera produktrelaterade förbättringar klickar du på **[!UIC
 
 Ange ett ämne, en beskrivning av rekommendationen och bifoga filer om det behövs. Klicka **[!UICONTROL Submit]** för att lämna feedback till Adobe.
 
+![Content Hub feedback](assets/content-hub-feedback.png)
+
 ## Konfigurera Content Hub för ditt team {#setup-content-hub}
 
 Så här konfigurerar du Content Hub för ditt team:
@@ -69,13 +71,13 @@ Så här konfigurerar du Content Hub för ditt team:
 
 1. [Anlita Content Hub-administratör](deploy-content-hub.md#onboard-content-hub-administrator).
 
-1. [Lägga in viktiga Content Hub-användare](deploy-content-hub.md##onboard-content-hub-consumer-users).
+1. [Lägga in viktiga Content Hub-användare](deploy-content-hub.md#onboard-content-hub-consumer-users).
 
 1. [DAM-författare eller -administratörer som ska godkänna resurser med Experience Manager-resurser](approve-assets.md).
 
 1. [Administratörer kan konfigurera Content Hub användargränssnitt för andra användare](configure-content-hub-ui-options.md).
 
-1. [Ge Content Hub åtkomst till fler användare från teamet](deploy-content-hub.md##onboard-content-hub-consumer-users).
+1. [Ge Content Hub åtkomst till fler användare från teamet](deploy-content-hub.md#onboard-content-hub-consumer-users).
 
 1. [Öppna Content Hub portal](#access-content-hub).
 
