@@ -4,7 +4,7 @@ description: Redigera bilder med [!DNL Adobe Express] och spara uppdaterade bild
 role: User
 exl-id: cfc4c7b7-da8c-4902-9935-0e3d4388b975
 feature: Best Practices, Interactive Images, Smart Crop, Smart Imaging
-source-git-commit: 9a21c9218e45bb6ce91263c9798e3b1c99f369b4
+source-git-commit: 23b43f22b62451c9d0a5460999fcd43479438d7e
 workflow-type: tm+mt
 source-wordcount: '1066'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Redigera bilder i [!DNL Assets view] {#edit-images-in-assets-view}
 
-Resursvyn möjliggör grundläggande bildredigering, inklusive storleksändring, borttagning av bakgrund, beskärning och konvertering mellan JPEG och PNG-format. Dessutom möjliggör det avancerad redigering genom integrering med Adobe Express. När du har redigerat en bild kan du spara den nya bilden som en ny version. Versionshantering hjälper dig att återgå till den ursprungliga resursen senare om det behövs. Om du vill redigera en bild [öppna förhandsgranskningen](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/navigate-view#preview-assets) och klicka **Redigera bild**.
+Assets View (Visa) möjliggör grundläggande bildredigering, inklusive storleksändring, borttagning av bakgrund, beskärning och konvertering mellan JPEG och PNG-format. Dessutom möjliggör det avancerad redigering genom integrering med Adobe Express. När du har redigerat en bild kan du spara den nya bilden som en ny version. Versionshantering hjälper dig att återgå till den ursprungliga resursen senare om det behövs. Om du vill redigera en bild [öppna förhandsgranskningen](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/navigate-view#preview-assets) och klicka **Redigera bild**.
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ Resursvyn möjliggör grundläggande bildredigering, inklusive storleksändring,
 
 ## Redigera bild {#edit-image}
 
-Mark on Asset View, using the link - [Resursvy](https://experience.adobe.com/#/assets) och välja rätt databas. Kontakta organisationens administratör för att få åtkomst.
+Land på Assets View, med länken - [Assets View](https://experience.adobe.com/#/assets) och välja rätt databas. Kontakta organisationens administratör för att få åtkomst.
 Ytterligare referensinformation finns i [Kom igång med Adobe Experience Manager Assets View](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/get-started-assets-view), [Förstå användargränssnittet i Assets view](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/navigate-assets-view#understand-interface-navigation)och [Användningsexempel för Assets View](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/get-started-assets-view#use-cases).
 <!--
 >[!CONTEXTUALHELP]
@@ -88,11 +88,11 @@ Användare med Express-berättigande kan använda den inbäddade Express-rediger
 ![uttrycka i grundläggande gränssnitt](/help/assets/assets/express-in-essentials-ui.jpg)
 Redigera bilder med [!DNL Adobe Express] följer du stegen nedan:
 
-1. Gå vidare till AEM Assets View med länken - [AEM](https://experience.adobe.com/#/assets) och väljer rätt databas.
+1. Gå vidare till AEM Assets View med länken - [AEM Assets View](https://experience.adobe.com/#/assets) och väljer rätt databas.
 1. Klicka **Assets**, anger en mapp och väljer en bild.
 1. Klicka **Öppna i Adobe Express**. Bilden öppnas på en snabbarbetsyta.
 1. Gör de ändringar du vill i bilden.
-1. Om projektet kräver att du lägger till fler sidor klickar du på **Lägg till**, väljer du Assets, anger en mapp, väljer en bild som du vill ta med på arbetsytesidan och utför sedan ändringarna i bilden.
+1. Om projektet kräver att du lägger till fler sidor klickar du på **Lägg till**, väljer resurser, anger en mapp, väljer en bild som du vill ta med på arbetsytesidan och utför sedan de redigeringar som krävs på bilden.
 1. Spara bilderna genom att klicka på **Spara**. Dialogrutan Spara visas.
 
    >[!NOTE]
@@ -197,7 +197,7 @@ TBD: Insert a video of the available social media options.
 
 * Ge produktfeedback med [!UICONTROL Feedback] finns i användargränssnittet för Assets-vyn.
 
-* Ge feedback på dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som finns till höger
+* Ge feedback på dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som finns till höger.
 
 * Kontakt [Kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)
 
