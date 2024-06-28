@@ -1,17 +1,17 @@
 ---
-title: Övervakning av faktisk användning för AEM as a Cloud Service
+title: Real Use Monitoring for AEM as a Cloud Service
 description: Lär dig hur du använder Real Use Monitoring (RUM) för att hämta in och analysera den digitala användarupplevelsen för en webbplats eller tillämpning i realtid.
 exl-id: 91fe9454-3dde-476a-843e-0e64f6f73aaf
 feature: Administering
 role: Admin
-source-git-commit: 12e37d6d0a8674dd4329200322e2f959cc6dd787
+source-git-commit: 19b52f733a592c7e84ba2e9d83d37e5e181f21ab
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1313'
 ht-degree: 0%
 
 ---
 
-# Övervakningstjänst för faktisk användning för AEM as a Cloud Service {#real-use-monitoring-service-for-aem-as-a-cloud-service}
+# Real Use Monitoring Service för AEM as a Cloud Service {#real-use-monitoring-service-for-aem-as-a-cloud-service}
 
 >[!NOTE]
 >
@@ -32,8 +32,6 @@ Med RUM spåras nyckeltal från det att URL:en startas tills begäran skickas ti
 Tjänsten för övervakning av faktisk användning är fördelaktig för alla kunder. Den ger en representativ bild av användarinteraktionen och säkerställer ett tillförlitligt mått på webbplatsengagemanget genom att samla in antalet sidvisningar på klientsidan.
 
 För alla Adobe-kunder ger den här tjänsten värdefulla insikter om användarinteraktioner. Kunder som använder sitt eget CDN kan dra nytta av förenklad trafikrapportering, eftersom Adobe nu direkt integrerar datainsamlingen och eliminerar behovet av separata rapporter under förnyelsecyklerna.
-
-Vill du utnyttja webbplatsens fulla potential och använda Adobe RUM Explorer-visualiseringsverktyget för att få användbara insikter i webbplatsengagemanget? Det här verktyget ger insikter om sidans prestanda, inklusive mått på antalet klick, Core Web Vitals (CWV), konverteringar och kundresekartor. Med hjälp av dessa kraftfulla insikter kan ni finjustera era digitala upplevelser så att de bättre motsvarar användarnas behov. Om du vill veta mer och få åtkomst kan du skicka ett e-postmeddelande till oss på `rum-explorer@adobe.com`.
 
 ## Förstå hur övervakningstjänsten för faktisk användning fungerar {#understand-how-the-rum-service-works}
 
@@ -112,7 +110,7 @@ När du analyserar RUM-data kan det finnas skillnader i sidvisningar och andra p
 
 1. **Räknas RUM-samling med innehållsförfrågningar för kontraktsändamål?**
 
-   RUM-biblioteket och RUM-samlingen räknas inte som innehållsbegäranden och ökar inte antalet rapporterade sidvisningar eller API-anrop. För kunder som använder färdig CDN med AEM as a Cloud Service gäller dessutom följande: [serversidessamling](#serverside-collection) är grunden för innehållsförfrågningar.
+   RUM-biblioteket och RUM-samlingen räknas inte som innehållsbegäranden och ökar inte antalet rapporterade sidvisningar eller API-anrop. Dessutom, för kunder som använder det färdiga CDN-nätverket med AEM as a Cloud Service, [serversidessamling](#serverside-collection) är grunden för innehållsförfrågningar.
 
 1. **Hur avanmäler jag mig?**
 
