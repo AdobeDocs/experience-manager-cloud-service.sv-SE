@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 19b52f733a592c7e84ba2e9d83d37e5e181f21ab
+source-git-commit: 1e5a32625377cb564c859a6fdaf1ecef6ebebe9e
 workflow-type: tm+mt
-source-wordcount: '1805'
+source-wordcount: '1865'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,12 @@ Have a look at the June 2024 Release Overview video for a summary of the feature
 
 ## [!DNL Experience Manager Sites] som [!DNL Cloud Service] {#sites}
 
+### Ny funktion i Experience Manager Sites {#new-feature-sites}
+
+**RUM-datatjänst (Real Use Monitoring)** {#real-use-monitoring}
+
+The [RUM-datatjänst (Real Use Monitoring)](https://git.corp.adobe.com/AdobeDocs/experience-manager-cloud-service.en/blob/shwetad-patch-1/help/implementing/cloud-manager/content-requests.md#real-user-monitoring-for-aem-as-a-cloud-service) är nu allmänt tillgängligt, vilket möjliggör datainsamling på klientsidan för AEM as a Cloud Service. Den här tjänsten ger en mer exakt återgivning av användarinteraktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det ger kunderna avancerade insikter om sidtrafik och prestanda, vilket utgör en värdefull möjlighet att förstå och förbättra sidprestanda.
+
 ### Tidiga Adobe-program {#sites-early-adopter}
 
 **Generera variationer**
@@ -60,6 +66,8 @@ Innehållsförfattare kan nu bläddra bland, visa och vidta åtgärder för bild
 
 ### Nya funktioner i Experience Manager Assets {#new-features-assets}
 
+
+
 **Content Hub**
 
 Content Hub ingår som en del av Experience Manager Assets as a Cloud Service för att demokratisera tillgången till varumärkesinnehåll för organisationer och deras affärspartners. Med Content Hub kan du enkelt hitta och distribuera material, återanvända och skapa nya varumärkesanpassade varianter och snabba upp aktiveringen i stor skala.
@@ -77,7 +85,7 @@ Dynamic Media med OpenAPI-funktioner utökar DAM-funktionaliteten över Adobe oc
 
 **Fler alternativ finns på kontrollpanelen för Assets Insights**
 
-Antal resurser efter tillgångstyp och storlek är nu tillgängligt på instrumentpanelen för Assets Insights. De här alternativen innehåller realtidsdata i visningsmiljön i Assets om antalet och procentandelen resurser per storleksintervall och resurstyp.
+Antal tillgångar efter resurstyp och storlek finns nu på instrumentpanelen för Assets Insights. Dessa alternativ levererar realtidsdata i visningsmiljön i Assets. De anger antalet och procentandelen tillgångar per storleksintervall och resurstyp.
 
 <!--
 
@@ -104,7 +112,7 @@ When looking at the asset details, any image with content credentials added, suc
 
 #### Förbättrad Visual Rule Editor för Core Component Based Adaptive Forms
 
-Den här versionen innebär en betydande uppgradering av den visuella regelredigeraren för adaptiva formulär baserade på kärnkomponenter. Du kan nu:
+Den här versionen innebär en betydande uppgradering av Visual Rule Editor för adaptiva formulär baserade på kärnkomponenter. Du kan nu:
 
 * Skapa regler i Visual Rule Editor för att [åsidosätta standardmeddelanden om att formuläret har skickats in eller misslyckats](/help/forms/create-and-use-custom-functions.md#use-case-override-form-submission-success-and-error-handlers).
 
@@ -112,7 +120,7 @@ Den här versionen innebär en betydande uppgradering av den visuella regelredig
 
 * En formulärförfattare kan nu använda anpassade funktioner på [bearbeta data innan de skickas](/help/forms/create-and-use-custom-functions.md#use-case-submit-altered-data-to-the-server).
 
-* Använd [**Spara som utkast**](/help/forms/save-core-component-based-form-as-draft.md) funktioner för att spara delvis ifyllda formulär för senare inskickning. Detta är användbart i scenarier där användare måste avbryta ifyllandet av ett formulär och komma tillbaka till det senare.
+* Använd [**Spara som utkast**](/help/forms/save-core-component-based-form-as-draft.md) funktioner för att spara delvis ifyllda formulär för senare inskickning. Den här funktionen är användbar i scenarier där användare måste avbryta ifyllandet av ett formulär och komma tillbaka till det senare.
 
 ### Tidig åtkomst-funktioner i AEM Forms {#forms-new-early-access-features}
 
@@ -122,7 +130,7 @@ Den här versionsinformationen innehåller en lista över de innovationer som le
 
 #### Förbättrade skyddsmetoder för robotar
 
-AEM Forms har förbättrat sina säkerhetsfunktioner genom att lägga till stöd för två populära CAPTCHA-lösningar: Cloudflare Turnstile och hCaptcha. Detta lägger till Google reCAPTCHA, som ger användarna större valfrihet och flexibilitet när det gäller att skydda sina formulär mot inskickade bidrag från skräppost.
+AEM Forms har förbättrat sina säkerhetsfunktioner genom att lägga till stöd för två populära CAPTCHA-lösningar: Cloudflare Turnstile och hCaptcha. Den här funktionen kompletterar Google reCAPTCHA och ger användarna ytterligare alternativ. Det ger större flexibilitet när det gäller att skydda sina formulär mot inskickade bidrag från stötar och skräppost.
 
 * **Molnformad vändning**: Denna friktionslösa CAPTCHA verifierar användarna genom en enkel utmaning som inte kräver någon explicit interaktion. De kan integreras smidigt i formulären och förbättrar användarupplevelsen.
 * **hCaptcha**: Denna sekretessinriktade CAPTCHA erbjuder ett användarvänligt alternativ med fokus på datasekretess. Syftet är att skapa en balans mellan säkerhet och användarupplevelse.
@@ -130,27 +138,27 @@ AEM Forms har förbättrat sina säkerhetsfunktioner genom att lägga till stöd
 
 Genom att erbjuda flera CAPTCHA-alternativ har AEM Forms gett dig möjlighet att välja den lösning som bäst passar just dina behov.
 
-Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I vår dokumentation finns detaljerade anvisningar för varje: [Molnformad vändning](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components)och [Google reCAPTCHA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
+Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? Adobe-dokumentation innehåller detaljerade anvisningar för varje: [Molnformad vändning](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components)och [Google reCAPTCHA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
 
 
 ### Forms Service
 
 Forms-tjänsten genererar interaktiv PDF forms för datainhämtning. Den kan också användas för att importera eller exportera data till och från ett befintligt interaktivt PDF-formulär och validera skickade data. Här är en beskrivning av funktionaliteten:
 
-* **Återger Forms**: Generera ett interaktivt PDF-formulär från en mall som skapats med AEM Forms Designer och, eventuellt, XML-data. Detta skapar i stort sett ett ifyllbart PDF-formulär som kan fyllas i med data.
+* **Återger Forms**: Generera ett interaktivt PDF-formulär från en mall som skapats med AEM Forms Designer och, eventuellt, XML-data. Den här funktionen skapar ett ifyllbart PDF-formulär som kan fyllas i med data.
 * **Extrahering och import av data**: Importera data till ett befintligt PDF-formulär och extrahera data från ett ifyllt PDF-formulär. Både XDP- och XML-dataformat stöds, och import till icke-XFA PDF forms (kallas även AcroForms) stöder dessutom FDF- och XFDF-data.
 * **Dataverifiering**: Validera skickade data i XDP- eller XML-format mot en mall som skapats med AEM Forms Designer.
 
 >[!IMPORTANT]
 >
-> Om du är intresserad av att delta i vårt Tidig åtkomst-program för tidig åtkomst kan du skicka ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) för att begära åtkomst. Du kan begära åtkomst till alla eller alla specifika innovationer.
+> Om du är intresserad av att gå med i Adobe Tidig Access Program för tidig åtkomst skickar du ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) för att begära åtkomst. Du kan begära åtkomst till alla eller alla specifika innovationer.
 
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
 
 ### Meddelanden från Content Health Related Actions Center om tidiga Adobe-program {#actions-center-notifications}
 
-[Actions Center](/help/operations/actions-center.md) skickar e-postmeddelanden när viktiga incidenter inträffar eller om vi märker något om din kod eller konfiguration där du bör vidta proaktiva åtgärder. Vi har nu introducerat flera nya typer av meddelanden som är kopplade till din innehållshälsa. Detta är tillgängligt via ett program för tidig användning. Kontakta Adobe kundtjänst om du vill delta.
+[Actions Center](/help/operations/actions-center.md) skickar e-postmeddelanden när viktiga incidenter inträffar eller om något om koden eller konfigurationen visas, där du bör vidta proaktiva åtgärder. Adobe har nu introducerat flera nya typer av meddelanden som är kopplade till din innehållshälsa. Den här funktionen är tillgänglig via ett program som tagits i bruk tidigt. Kontakta Adobe kundtjänst om du vill delta.
 
 #### Sidorna innehåller ett stort antal noder {#page-nodes}
 
@@ -158,23 +166,23 @@ Ett stort antal noder kan försämra återgivningsprestanda och minska sidinläs
 
 #### Stort antal arbetsflödesinstanser som körs {#running-workflows}
 
-Arbetsflödesmotorns prestanda påverkas om det finns ett stort antal arbetsflöden som körs i redigeringsmiljön. Ta emot ett proaktivt meddelande via Åtgärdscenter när ett stort antal arbetsflödesinstanser som körs identifieras, vilket gör att du kan konfigurera ett rensningsjobb så att pågående arbetsflöden som inte är obligatoriska avbryts.
+Arbetsflödesmotorns prestanda påverkas om det finns ett stort antal arbetsflöden som körs i redigeringsmiljön. Du får ett proaktivt meddelande via Åtgärdscenter när ett stort antal arbetsflödesinstanser som körs identifieras. Med den här processen kan du konfigurera ett rensningsjobb så att onödiga arbetsflöden avbryts.
 
 #### Användare som lagts till direkt i anpassade grupper {#users-customgroups}
 
-Få ett proaktivt meddelande via Åtgärdscenter när användare läggs till direkt i anpassade grupper, så att du kan följa IMS-standarder och lägga till användare i relevanta IMS-grupper och sedan lägga till IMS-grupper som medlemmar i AEM.
+Du får ett proaktivt meddelande via Åtgärdscenter när användare läggs till direkt i anpassade grupper. Med den här processen kan du följa de bästa IMS-metoderna genom att lägga till användare i relevanta IMS-grupper och sedan inkludera dessa IMS-grupper som medlemmar i AEM.
 
 #### JCR-innehåll saknas {#jcr-content}
 
-Få ett proaktivt meddelande via Åtgärdscenter när JCR-innehåll saknas, så att du kan lägga till det saknade JCR-innehållet och undvika fel i vissa AEM Assets-funktioner.
+Åtgärdscenter meddelar dig aktivt när JCR-innehåll saknas. På så sätt kan du lägga till innehåll som saknas och förhindra att vissa AEM Assets-funktioner misslyckas.
 
 #### Slutförda arbetsflöden har inte rensats {#workflows}
 
-Få ett proaktivt meddelande via Åtgärdscenter när slutförda arbetsflöden under 90 dagar inte har rensats, vilket gör att du kan förbättra arbetsflödesmotorns prestanda genom att minimera antalet instanser av arbetsflöden.
+Åtgärdscenter meddelar dig aktivt när slutförda arbetsflöden som är över 90 dagar gamla inte har rensats. Den här metoden hjälper till att förbättra prestanda för arbetsflödesmotorn genom att minska antalet arbetsflödesinstanser.
 
 #### Sling-resurs saknas {#sling-resource}
 
-Få ett proaktivt meddelande via Åtgärdscenter när en saknad Sling-resurs upptäcks, så att du kan lägga till den saknade Sling-resursen och undvika fel i vissa AEM Assets-funktioner.
+Actions Center meddelar dig aktivt när en saknad Sling-resurs upptäcks. På så sätt kan du lägga till den saknade resursen och förhindra fel i vissa AEM Assets-funktioner.
 
 ### Content Delivery related Tire Adobe Programs {#foundation-early-adopter}
 
@@ -182,7 +190,7 @@ E-post **<aemcs-cdn-config-adopter@adobe.com>**, vilket av de tidiga adopterprog
 
 #### Grundläggande autentisering vid CDN (Early Adobe Program) {#basicauth-cdn}
 
-Protect vissa innehållsresurser genom att öppna en enkel autentiseringsdialogruta som kräver användarnamn och lösenord. Den här funktionen är främst avsedd för enkla autentiseringssituationer, som granskning av innehåll av intressenter i företag, i stället för som en fullständig lösning för slutanvändares åtkomsträttigheter. Listan över användarnamn och lösenord som hanteras via en konfigurationsfil i Git som distribueras via Configuration Pipeline, med en referens till Cloud Manager-miljövariabler av hemlig typ. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md#basic-auth).
+Protect vissa innehållsresurser genom att öppna en enkel autentiseringsdialogruta som kräver användarnamn och lösenord. Den här funktionen riktar sig främst till användarvänliga fall av autentisering, som affärsintressenter som granskar innehåll, i stället för att fungera som en heltäckande lösning för slutanvändarnas åtkomsträttigheter. Listan över användarnamn och lösenord som hanteras via en konfigurationsfil i Git som distribueras via Configuration Pipeline, med en referens till Cloud Manager-miljövariabler av hemlig typ. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md#basic-auth).
 
 #### Rensa innehåll på CDN med en självbetjäningsnyckel (Early Adobe Program) {#purge-cdn}
 
@@ -192,7 +200,7 @@ Registrera en CDN-rensnings-API-nyckel på ett självbetjäningssätt och använ
 
 #### Självserverframtagning av X-AEM-Edge-nyckel för kundhanterat CDN (BYOCDN) (tidig Adobe-program) {#byocdn-keys}
 
-Tidigare krävdes en supportanmälan för att generera den X-AEM-Edge-Key som krävs för att konfigurera ett kundhanterat CDN. Detta kan nu göras på ett självbetjäningssätt genom en konfigurationsfil som distribueras med Configuration Pipeline, vilket tar bort eventuella förseningar när det gäller att komma igång med en ny miljö. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md#CDN-HTTP-value).
+Tidigare krävdes en supportanmälan för att generera den X-AEM-Edge-Key som krävs för att konfigurera ett kundhanterat CDN. Resultatet kan nu uppnås på ett självbetjäningssätt genom en konfigurationsfil som distribueras med Configuration Pipeline, vilket tar bort eventuella förseningar när det gäller att komma igång med en ny miljö. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md#CDN-HTTP-value).
 
 <!-- Email **<aemcs-cdn-config-adopter@adobe.com>** with a request to be an early adopter. -->
 
@@ -204,11 +212,11 @@ Konfigurera 301/302 klientomdirigeringar i källkontroll och distribuera till CD
 
 Nyligen släppt [Trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md), som innehåller de valfria reglerna för brandvägg för webbprogram (WAF), låter dig konfigurera vilken trafik som ska tillåtas eller nekas.
 
-Gå med i det tidiga adopterprogrammet så att du kan få varningar när trafikfilterreglerna aktiveras. E-postmeddelanden från Åtgärdscenter håller dig informerad när vissa trafikförhållanden inträffar så att du kan vidta lämpliga åtgärder.
+Gå med i det tidiga adopterprogrammet så att du kan få varningar när trafikfilterreglerna aktiveras. E-postmeddelanden från Åtgärdscenter håller dig informerad om när vissa trafikförhållanden inträffar så att du kan vidta lämpliga åtgärder.
 
 #### Affärsanvändare kan deklarera omdirigeringar utanför Git (tidig Adobe-program) {#apache-rewritemaps-early-adopter}
 
-Ungefär som AEM 6.5, kommer Apache/dispatcher att importera omskrivningskartor som placerats på en viss plats i publiceringsdatabasen och läsa in dem, utan att någon pipeline-körning för webbnivån krävs. Detta öppnar möjligheter för en affärsanvändare att deklarera omdirigeringar med antingen ett kalkylblad eller ett användargränssnitt, som det som erbjuds av ACS Commons Redirect Map Manager eller som skapas som en del av ett kundprogram. <!-- Please reach out to **<aemcs-cdn-config-adopter@adobe.com>** for more information. -->
+Ungefär som AEM 6.5, skriver Apache/dispatcher ingest om kartor som placerats på en viss plats i publiceringsdatabasen och läser in dem, utan att någon pipeline-körning behövs på webbnivån. På så sätt kan företagsanvändare deklarera omdirigeringar med hjälp av ett kalkylblad eller ett gränssnitt, som ACS Commons Redirect Map Manager eller ett anpassat program. <!-- Please reach out to **<aemcs-cdn-config-adopter@adobe.com>** for more information. -->
 
 #### Edge Side Includes (ESI) for Loading Dynamic Content (Early Adobe Program) {#esi-early-adopter}
 
