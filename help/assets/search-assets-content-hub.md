@@ -2,9 +2,9 @@
 title: Söka efter resurser i Content Hub
 description: Lär dig söka efter resurser i [!DNL Content Hub]
 role: User
-source-git-commit: 15a266ccb6e4117c769d775a5f579fba943389bf
+source-git-commit: 5a968440c8841abe7af2c81c4af12258b7e4547f
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 0%
 ![Dela resurser - bannerbild](assets/search.png)
 
 När du har ett stort antal resurser i din databas är det tidskrävande att söka efter rätt resurs. [!DNL The Content Hub] sökfunktionen ger dig möjlighet att söka efter godkända resurser så att du kan utföra ytterligare åtgärder på dem, som att hämta, dela eller skapa samlingar. Du kan använda olika funktioner för att begränsa sökresultaten, till exempel textbaserad sökning, filter, taggar eller smart taggspecifik sökning, sökning efter ett visst filformat och så vidare.
+
+## Förutsättningar {#prerequisites}
+
+[Content Hub](deploy-content-hub.md#onboard-content-hub-users) kan utföra åtgärder som nämns i den här artikeln.
 
 ## Vad du kan söka efter  {#what-you-can-search}
 

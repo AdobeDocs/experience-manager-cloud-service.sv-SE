@@ -2,9 +2,9 @@
 title: Visa resursinsikter i Content Hub
 description: Lär dig hur du visar resursinsikter i [!DNL Content Hub]
 role: User
-source-git-commit: 788ed1189b21392bd399f7bdee888a3b5e1da117
+source-git-commit: 5a968440c8841abe7af2c81c4af12258b7e4547f
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 ![Assets insikter](assets/asset-insights-banner.jpg)
 
 [!DNL Content Hub] ger värdefulla insikter om resurser, och tar itu med en vanlig utmaning som marknadsföringsintressenter ofta stöter på - statistik om resursanvändning som används i marknadsföringskampanjer, kanaler och olika regioner. Genom att få en tydlig förståelse för resursernas prestanda och popularitet kan ni få användbara insikter som är viktiga för att förbättra användarupplevelsen.
+
+## Förutsättningar {#prerequisites}
+
+[Content Hub](deploy-content-hub.md#onboard-content-hub-users) kan utföra åtgärder som nämns i den här artikeln.
 
 ## Visa statistik för överförda tillgångar{#view-statistics-for-uploaded-assets}
 

@@ -2,7 +2,7 @@
 title: Överför varumärkesgodkända resurser till [!DNL Content Hub]
 description: Lär dig hur du överför varumärkesgodkända mediefiler till Content Hub
 role: User
-source-git-commit: 92c4cd64503653c5d9248c2c3f6952100b03ff86
+source-git-commit: 5a968440c8841abe7af2c81c4af12258b7e4547f
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Se till att du bara överför dina [varumärkesgodkänt material till Content Hu
 
 ## Förutsättningar {#prerequisites-add-assets}
 
-[Användare av Content Hub medieinnehåll med inskickningsbehörighet](/help/assets/deploy-content-hub.md#onboard-content-hub-consumer-users-submission-rights) kan överföra resurser till Content Hub.
+[Content Hub-användare med rättigheter att lägga till resurser](/help/assets/deploy-content-hub.md#onboard-content-hub-users-add-assets) kan överföra resurser till Content Hub.
 
 ## Lägga till resurser i Content Hub från det lokala filsystemet {#add-assets-local-file-system}
 

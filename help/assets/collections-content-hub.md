@@ -2,9 +2,9 @@
 title: Hantera samlingar i Content Hub
 description: Lär dig hantera samlingar i Content Hub
 role: User
-source-git-commit: 92c4cd64503653c5d9248c2c3f6952100b03ff86
+source-git-commit: 5a968440c8841abe7af2c81c4af12258b7e4547f
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,10 @@ En samling refererar till en uppsättning resurser som kan delas mellan använda
 * **Ta bort**: Ta bort hela samlingen.
 
 Det hjälper användarna att enkelt komma åt och hantera de olika resurserna som finns i [!DNL Content Hub].
+
+## Förutsättningar {#prerequisites}
+
+[Content Hub](deploy-content-hub.md#onboard-content-hub-users) kan utföra åtgärder som nämns i den här artikeln.
 
 ## Skapa samlingar{#create-collections}
 

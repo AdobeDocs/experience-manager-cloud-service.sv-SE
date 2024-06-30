@@ -1,9 +1,9 @@
 ---
 title: Konfigurera Content Hub användargränssnitt
 description: Konfigurera Content Hub användargränssnitt
-source-git-commit: 85ccd23df4ac320d6da37c54b72f0f93916e65a1
+source-git-commit: 5a968440c8841abe7af2c81c4af12258b7e4547f
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1037'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Med Experience Manager Assets kan administratörer konfigurera de alternativ som
 
 ## Förutsättningar {#prerequisites-configuration-ui}
 
-[Content Hub-administratörer](/help/assets/deploy-content-hub.md#step-3-onboard-content-hub-administrator) kan lägga till resurser i Content Hub och kan även ange konfigurationsalternativ för andra användare i organisationen.
+[Content Hub-administratörer](/help/assets/deploy-content-hub.md#step-3-onboard-content-hub-administrator) kan ange konfigurationsalternativ för andra användare i organisationen.
 
 ## Få åtkomst till konfigurationsalternativ på Content Hub {#access-configuration-options-content-hub}
 

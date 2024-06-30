@@ -2,9 +2,9 @@
 title: Resursegenskaper i [!DNL the Content Hub]
 description: Lär dig hur du visar och hanterar resursegenskaper i [!DNL Content Hub]
 role: User
-source-git-commit: e590c34c177e6b45b6a52370caa88da54b61ebc0
+source-git-commit: 5a968440c8841abe7af2c81c4af12258b7e4547f
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '580'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,10 @@ Genom att visa resursegenskaper kan du kategorisera resurser ytterligare och det
 * Mer åtkomligt - system och användare hittar det enkelt.
 * Enklare att hantera - du kan enkelt hitta resurser med samma uppsättning egenskaper och använda ändringar på dem.
 * Fullständigt - materialet innehåller mer information och sammanhang.
+
+## Förutsättningar {#prerequisites}
+
+[Content Hub](deploy-content-hub.md#onboard-content-hub-users) kan utföra åtgärder som nämns i den här artikeln.
 
 ## Visa egenskaper för en resurs {#properties-ui}
 

@@ -1,9 +1,9 @@
 ---
 title: Redigera bilder i Content Hub med Adobe Express
 description: Redigera bilder i Content Hub med Adobe Express
-source-git-commit: 52166c1983218d619c416b4c095e8954e3010dc5
+source-git-commit: 5a968440c8841abe7af2c81c4af12258b7e4547f
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Med Content Hub kan du skapa nytt innehåll med Adobe Express. Du kan redigera b
 
 ## Förutsättningar {#prereqs-edit-image-content-hub}
 
-Tillstånd att få tillgång till Adobe Express och [Användare av Content Hub medieinnehåll med inskickningsbehörighet](/help/assets/deploy-content-hub.md#onboard-content-hub-consumer-users-submission-rights) kan redigera bilder med Content Hub.
+Tillstånd att få tillgång till Adobe Express och [Content Hub-användare som har rätt att mixa om resurser till nya varianter](/help/assets/deploy-content-hub.md#onboard-content-hub-users-remix-assets) kan redigera bilder med Content Hub.
 
 >[!NOTE]
 >

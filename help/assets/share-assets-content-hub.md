@@ -2,9 +2,9 @@
 title: Dela Assets i [!DNL the Content Hub]
 description: Dela Assets i [!DNL the Content Hub]
 role: User
-source-git-commit: e20556531a82e42354b642955488bf14b83dab5e
+source-git-commit: 5a968440c8841abe7af2c81c4af12258b7e4547f
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 0%
 ![Dela resurser - bannerbild](assets/share-assets-banner.png)
 
 Att dela resurser via en länk är ett bekvämt sätt att göra resurserna tillgängliga för [!DNL the Content Hub] -användare. Funktionen gör att behöriga användare kan komma åt och hämta de resurser som delas med dem. När du hämtar resurser från en delad länk, [!DNL the Content Hub] använder en asynkron tjänst som ger snabbare och oavbruten nedladdning.
+
+## Förutsättningar {#prerequisites}
+
+[Content Hub](deploy-content-hub.md#onboard-content-hub-users) kan utföra åtgärder som nämns i den här artikeln.
 
 ## Dela en enda resurs {#share-a-single-asset}
 
