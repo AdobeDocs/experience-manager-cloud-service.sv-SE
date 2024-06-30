@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 1e5a32625377cb564c859a6fdaf1ecef6ebebe9e
+source-git-commit: 9d0ef963dfe2d81da09a7195540de87245e71a67
 workflow-type: tm+mt
-source-wordcount: '1865'
+source-wordcount: '1932'
 ht-degree: 0%
 
 ---
@@ -86,6 +86,14 @@ Dynamic Media med OpenAPI-funktioner utökar DAM-funktionaliteten över Adobe oc
 **Fler alternativ finns på kontrollpanelen för Assets Insights**
 
 Antal tillgångar efter resurstyp och storlek finns nu på instrumentpanelen för Assets Insights. Dessa alternativ levererar realtidsdata i visningsmiljön i Assets. De anger antalet och procentandelen tillgångar per storleksintervall och resurstyp.
+
+**Uppdateringar av den inbäddade Adobe Expressen**
+
+* Förbättrad användarupplevelse för att spara som en ny resurs jämfört med att spara som en ny version.
+
+* Export av flersidiga Express-dokument (tidigare endast en sida) i både flersidiga PDF- och bildformat. Om du väljer bildformat sparas varje sida som en separat resurs i DAM för distribution i efterföljande led.
+
+* Stöd för att lägga till metadata i dialogrutan Spara när du sparar en resurs.
 
 <!--
 
