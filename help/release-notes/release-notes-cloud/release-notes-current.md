@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 9d0ef963dfe2d81da09a7195540de87245e71a67
+source-git-commit: 379e5230d27be135b5862cdbfa35abc612f5ca57
 workflow-type: tm+mt
-source-wordcount: '1932'
+source-wordcount: '1958'
 ht-degree: 0%
 
 ---
@@ -241,6 +241,14 @@ Du hittar en fullständig lista över månadsutgåvor av Cloud Manager [här](/h
 ## Migreringsverktyg {#migration-tools}
 
 Du hittar en fullständig lista över versioner av migreringsverktyg [här](/help/journey-migration/release-notes/release-notes-migration-tools-current.md).
+
+## Universal Editor {#universal-editor}
+
+Du hittar en fullständig lista över universella redigeringsversioner [här](/help/release-notes/universal-editor/current.md).
+
+## Generera variationer {#generate-variations}
+
+Du hittar en fullständig lista över versioner av Generera variationer [här](/help/generative-ai/release-notes-generate-variations.md).
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
