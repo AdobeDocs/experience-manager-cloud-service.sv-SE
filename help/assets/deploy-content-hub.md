@@ -2,9 +2,9 @@
 title: Distribuera [!DNL Content Hub]
 description: Lär dig hur du distribuerar och aktiverar Content Hub och ger åtkomst till användare med olika typer av behörigheter (överföra resurser, Adobe Express-användare) och hur du ger administratörsbehörighet till användare.
 role: Admin
-source-git-commit: 5a968440c8841abe7af2c81c4af12258b7e4547f
+source-git-commit: 0d340508823be6a2c6c2beb28c17ddfb2bf6b790
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1213'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,11 @@ För att få tillgång till Content Hub-portalen måste administratörer först 
 1. Klicka på **[!UICONTROL Update]**.
 
 Content Hub är nu aktiverat för Experience Manager Assets as a Cloud Service.
+
+>[!NOTE]
+>
+>Du har tillgång till och kan använda Content Hub med upp till 250 Content Hub-användare. Kontakta din Adobe-representant om du har ytterligare frågor.
+
 
 Om du inte har använt Experience Manager Assets tidigare klickar du på **[!UICONTROL Add Program]** och ange sedan programinformation (Programnamn, konfiguration för produktion) och klicka på **[!UICONTROL Continue]**. Du kan sedan välja **[!UICONTROL Assets]** och **[!UICONTROL Content Hub]** i **[!UICONTROL Solutions & Add-ons]** -fliken.
 
