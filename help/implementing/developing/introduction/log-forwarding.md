@@ -1,12 +1,12 @@
 ---
 title: Loggvidarebefordran för AEM as a Cloud Service
-description: Läs mer om vidarebefordran av loggar till Splunk och andra loggningsleverantörer på AEM as a Cloud Service
+description: Läs mer om vidarebefordran av loggar till Splunk och andra loggningsleverantörer i AEM as a Cloud Service
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: e007f2e3713d334787446305872020367169e6a2
+source-git-commit: 29d2a759f5b3fdbccfa6a219eebebe2b0443d02e
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1278'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >Den här funktionen har inte släppts ännu och vissa loggningsmål är kanske inte tillgängliga vid tidpunkten för lanseringen. Under tiden kan du öppna en supportanmälan och vidarebefordra loggar till **Splunk**, enligt beskrivningen i [loggningsartikel](/help/implementing/developing/introduction/logging.md).
 
-Kunder som har en licens för en loggningsleverantör eller värd för en loggningsprodukt kan ha AEM loggar (inklusive Apache/Dispatcher) och CDN-loggar vidarebefordrade till associerade loggmål. AEM as a Cloud Service stöder följande loggningsmål:
+Kunder som har en licens för en loggningsleverantör eller värd för en loggningsprodukt kan ha AEM loggar (inklusive Apache/Dispatcher) och CDN-loggar vidarebefordrade till associerade loggningsmål. AEM as a Cloud Service stöder följande loggningsmål:
 
 * Azure Blob Storage
 * DataDog
@@ -27,7 +27,7 @@ Kunder som har en licens för en loggningsleverantör eller värd för en loggni
 
 Loggvidarebefordran konfigureras på ett självbetjäningssätt genom att en konfiguration deklareras i Git och distribueras via Cloud Manager Configuration Pipeline till dev-, stage- och produktionsmiljötyper i produktionsprogram (ej sandlådeprogram).
 
-Det finns ett alternativ för att dirigera loggarna AEM och Apache/Dispatcher via AEM avancerade nätverksinfrastruktur, som dedikerad IP-adress.
+Det finns ett alternativ för att dirigera loggarna AEM och Apache/Dispatcher via AEM avancerad nätverksinfrastruktur, som dedikerad IP-adress för utgångar.
 
 Observera att den nätverksbandbredd som är associerad med loggar som skickas till loggningsmålet räknas som en del av organisationens I/O-användning i nätverket.
 
@@ -199,12 +199,16 @@ data:
       enabled: true       
       host: "http-intake.logs.datadoghq.eu"
       token: "${{DATADOG_API_KEY}}"
+      tags:
+         tag1: value1
+         tag2: value2
       
 ```
 
 Att tänka på:
 
 * Skapa en API-nyckel, utan någon integrering med en viss molnleverantör.
+* taggegenskapen är valfri
 
 
 ### Elasticsearch och OpenSearch {#elastic}
@@ -221,6 +225,7 @@ data:
       host: "example.com"
       user: "${{ELASTICSEARCH_USER}}"
       password: "${{ELASTICSEARCH_PASSWORD}}"
+      pipeline: "ingest pipeline name"
 ```
 
 Att tänka på:
@@ -228,6 +233,15 @@ Att tänka på:
 * För autentiseringsuppgifter måste du använda distributionsuppgifter i stället för kontoautentiseringsuppgifter. Detta är de autentiseringsuppgifter som genereras på en skärm som kan likna den här bilden:
 
 ![Elastiska autentiseringsuppgifter för distribution](/help/implementing/developing/introduction/assets/ec-creds.png)
+
+* Den valfria pipeline-egenskapen ska anges till namnet på importflödet för Elasticsearch eller OpenSearch, som kan konfigureras för att dirigera loggposten till rätt index. Pipeline-processortypen måste anges till *script* och skriptspråket ska anges till *smärtfri*. Här följer ett exempel på ett skriptfragment som dirigerar loggposter till ett index som aemaccess_dev_26_06_2024:
+
+```
+def envType = ctx.aem_env_type != null ? ctx.aem_env_type : 'unknown';
+def sourceType = ctx._index;
+def date = new SimpleDateFormat('dd_MM_yyyy').format(new Date());
+ctx._index = sourceType + "_" + envType + "_" + date;
+```
 
 ### HTTPS {#https}
 
@@ -304,7 +318,7 @@ data:
 
 ## Loggpostformat {#log-formats}
 
-Se det allmänna [loggningsartikel](/help/implementing/developing/introduction/logging.md) för formatet för varje loggtyp (CDN-loggar och AEM inklusive Apache/Dispatcher).
+Se det allmänna [loggningsartikel](/help/implementing/developing/introduction/logging.md) för varje loggtyp (CDN-loggar och AEM inklusive Apache/Dispatcher).
 
 Eftersom loggar från flera program och miljöer kan vidarebefordras till samma loggningsmål, förutom de utdata som beskrivs i loggningsartikeln, kommer följande egenskaper att finnas i varje loggpost:
 
