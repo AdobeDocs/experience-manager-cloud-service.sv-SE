@@ -4,9 +4,9 @@ description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] a
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 90b4cf269fc8be36d90f398d1696fc40f89f5142
+source-git-commit: 3a4dd9f1d769a9c9da12fdd8febfef481112d18c
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -71,10 +71,10 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 167
 
 #### Forms
 
-1. Om en användare hämtar en version av AEM Forms SDK som är större än `AEM Forms add-on v2024.05.04.00-240400`startar inte batchfilen Docker-tjänsten. Så här löser du problemet:
-   1. Ladda ned [mapp](/help/forms/assets/sdk_hotfix.zip).
-   1. Extrahera innehållet från den hämtade mappen och kopiera `sdk.sh` och `sdk.bat` filer.
-   1. Ersätt befintlig `sdk.sh` och `sdk.bat` filer i AEM Forms SDK med de nya filerna.
+* När du installerar AEM SDK och lägger till `AEM Forms add-on v2024.05.04.00-240400`startar inte Docker-tjänsten. Dockningstjänsten krävs för att generera arkivhandlingar i en lokal utvecklingsmiljö. Så här åtgärdar du problemet:
+   1. Ladda ned [snabbkorrigering](/help/forms/assets/sdk_hotfix.zip). När du laddar ned snabbkorrigeringen kan du `.zip` mappen hämtas.
+   1. Extrahera den hämtade snabbkorrigeringen till en mapp.
+   1. Ersätt äldre `sdk.sh` och `sdk.bat` filer med nyare filer i den mapp som extraherats i steg 2.
 
 ### Ändringsmeddelande {#change-notice-16799}
 
