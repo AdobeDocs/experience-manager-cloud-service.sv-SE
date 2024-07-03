@@ -4,9 +4,9 @@ description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] a
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: f4b2ea5dac880738e6412541f06b85a6a83ccf40
+source-git-commit: 9303ecadea38d83bd71ed0d440067bae5c419940
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '944'
 ht-degree: 0%
 
 ---
@@ -15,79 +15,94 @@ ht-degree: 0%
 
 I följande avsnitt beskrivs de tekniska versionsinformationen för den aktuella underhållsutgåvan av Experience Manager as a Cloud Service.
 
-## Utgåva 16799 {#release-16799}
+## Utgåva 16971 {#release-16971}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 16799, som offentliggjordes den 18 juni 2024. Den tidigare underhållsversionen var version 16544.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 16971, som offentliggjordes den 3 juli 2024. Den tidigare underhållsversionen var version 16799.
 
-2024.6.0 Funktionsaktivering innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) för mer information.
+2024.7.0 Funktionsaktivering innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) för mer information.
 
-### Förbättringar {#enhancements-16799}
+### Förbättringar {#enhancements-16971}
 
-* ASSETS-31977: Förbättrade åtgärder för att flytta, kopiera och ta bort resurser.
-* ASSETS-33618: Funktioner för automatisk transkription och översättning av videoklipp i Dynamic Media.
-* ASSETS-35185: Godkännandeåtgärd för ContentHub och DM och lägg till egenskaper i egenskaperna damAssetLucene.
-* ASSETS-35533: Lägg till DRM- och CAI-egenskaper i index damAssetLucene.
-* ASSETS-37280: Sekventiell jobbhantering för översättning när källunderrubriken (vtt) fortfarande bearbetas.
-* ASSETS-37559: Förbättrad händelse för borttagning av resurser.
-* ASSETS-37723: Implementera resurspublicerad händelse.
-* ASSETS-37724: Implementera opublicerad händelse för resurs.
-* ASSETS-38614: Förbättringar i användargränssnittet för Share Link.
-* ASSETS-39601: Använd valideringsregex automatiskt på resursens LiveCycle-namn.
-* ASSETS-39454: Uppgradera till visningsprogram för 2024.5.0 i Quickstart.
-* CNTBF-184: Supportsökvägar under `/conf` i innehållsomflödning.
+* SITES-22948: Ta bort handelsreferenser i grundinnehållet för AEM CS.
+* 22141: [Innehållsfragment] SegmentNotFoundException från CFM ModelChangeRepositoryImpl efter OnRC.
+* SITES-21893: Image Cropping Issue on Author Instance.
+* 21788: [Innehållsfragment] Visa NOTE i CF- och CF-modellredigeraren när uiSchema är aktiverat för modellen.
+* SITES-21688: MSM-utrullningen uppdaterar inte XF-sökvägen (Experience fragment) på live-kopieringssidor.
+* SITES-21659: Returnera det fullständiga namnet för användaren som skapar/ändrar/replikerar en modellresurs.
+* SITES-21609: OpenAPI-slutpunkt för att migrera innehållsfragment från en modell till en annan.
+* 21598: [Öppna API] Skapa CFM - returfel om den angivna konfigurationssökvägen inte finns.
+* 21491: [Öppna API] CF-slutpunkten för PATCH bör respektera liverelationer på fältnivå.
+* 21434: [Öppna API] CF-GETENS slutpunkt ska respektera liverelationer på fältnivå.
+* SITES-21415: CF Editor - stöder UUID-referenser.
+* 21326: [Öppna API] Ange information om det finns referenser för ett innehållsfragment.
+* 21310: [Öppna API] Lägg till ID för innehållsfragment i översättnings-API-svar.
+* SITES-20859: CF Open API - Returnera referenser när ett fragment hämtas via sökväg.
+* 20687: [Öppna API] Slutpunkt för hämtning av batchbearbetningsstatus.
+* 20657: [Öppna API] Ange alternativ för hela match-ord när en sträng ersätts med `FindAndReplace` slutpunkt.
+* 20587: [Öppna API] Skapa `COPY` slutpunkt för innehållsfragment.
+* 20584: [Öppna API] Optimera hämtning av referenser.
+* SITES-2003: [Öppna API] Aktivera gruppbearbetning för API.
+* SITES-1976: [Öppna API] Allmänt användargränssnittsschema för villkorliga fält.
+* SITES-19556 [Innehållsfragment] Uppdatera uiSchema om det finns när modellen redigeras.
+* SITES-18056: [Öppna API] Inkludera referenser när du publicerar ett innehållsfragment till Förhandsgranska.
+* SITES-16898: [Schema] OpenAPI-slutpunkt för att migrera innehållsfragment från en modell till en annan.
+* SITES-16609: List Launches endpoint.
+* SITES-16606: Create Launch Endpoint.
+* 21617: [Xwalk] Gör Sidegenskaper/metadata redigerbara i UE.
+* SITES-19614: [Xwalk] Sidindelning av kalkylbladsredigerare och oändlig rullning.
+* 22163: [Xwalk] Förbättrat stöd för innehåll som hanteras från publiceringsnivå för Edge Delivery Sites.
+* 22109: [Xwalk] Förbättrad hantering av efterbearbetning av avancerad textmarkering.
+* SITES-2035: [Xwalk] Förbättrad hantering av MSM och Launches.
+* 21839: [Xwalk] Förbättrad sökvägsmappning och sanering för innehåll som inte hanteras av Edge Delivery.
 
-### Åtgärdade problem {#fixed-issues-16799}
+### Åtgärdade problem {#fixed-issues-16971}
 
-* ASSETS-37335: Om du redigerar sökpanelen i filtret avmarkeras alla rutor.
-* ASSETS-38069: AEM DAM PDF Preview Issue on Timeline Filter Selection.
-* ASSETS-38215: Adobe Stock-licensknapp är nedtonad i AEM as a Cloud Service for enterprise-prenumeration.
-* ASSETS-38578: Felaktiga hyperlänkar i Assets Link Share Report.
-* ASSETS-38678: Visningsinställningarna är brutna i samlingsinformationen.
-* ASSETS-39071: Webboptimerad leverans kan generera ett undantag om den ursprungliga återgivningens mimeType är null.
-* ASSETS-39316: Sortering efter namn fungerar inte i samlingar.
-* ASSETS-39377: Massimport från OneDrive kan misslyckas om du får ett baktryck från fjärr-API.
-* ASSETS-39428: Återgivningsproblem i gränssnittet för copyrighthantering.
-* CQ-4357150: Guava i cq-content-sync bundle.
-* GRANITE-52573: Begäranden som innehåller dubbla snedstreck `//` nekas med statuskod 400.
-* SCRNS-4194: Ta bort beroendet av Google Guava API:er.
-* SCRNS-4360: Publish-knappen Hantera publikation och Snabb saknas för användare som inte är administratörer i innehållsleverantören för kanaler.
-* SCRNS-4323: Hide/Disable launches from screens.html.
+* CQ-4356898: [Översättning] outOfMemory-fel för CF som innehåller ett ovanligt stort antal länkar.
+* CQ-4357055: [Översättning] Automatisk översättning fungerar inte med Rest API.
+* CQ-4353931: [Översättning] Lägg till jcr:uuid på översättningskällsidan/xf/resurs när den saknas.
+* CQ-4357591: [Översättning] Ändra arbetsflödet Associera JCR:UID så att det fungerar för sidor/XF.
 * FORMS-14844: Adaptiv Forms tillåter att formulär skickas trots att reCAPTCHA-verifiering misslyckas.
 * FORMS-14984: Forms med CAPTCHA hoppar över validering om &quot;submitMetaData&quot; saknas i skickade data.
 * FORMS-14477: Alternativen &quot;Är efter&quot; och &quot;Är före&quot; i regelredigeraren fungerar inte i datumväljarens validering.
 * FORMS-14019: Regelredigerarens &quot;Invoke Service&quot;-funktion fungerar inte i Universal Editor.
-* FORMS-14336: När inget formulärfält är markerat ska redigeraren öppnas med fokus på hela formulärelementet.
-* FORMS-15061: Loader-cirkeln kvarstår oändligt när alternativet invoke service används i regelredigeraren.
+* FORMS-14336: När inget formulärfält är markerat öppnas redigeraren med fokus på hela formulärelementet.
+* FORMS-15061: Loader-cirkeln kvarstår oändligt när tjänstalternativet anropas i regelredigeraren.
+* SITES-22457: Källinnehåll uppdateras inte när en lansering som inte är djup initieras.
+* 22748: [Innehållsfragment] Förbättra felhanteringen för uppdateringsjobb för innehållsfragment
+* 22349: [Innehållsfragment] ContentType för tomma cf-element med flera rader kan inte ändras.
+* 22343: [Innehållsfragment] Den semantiska typen &quot;enumeration&quot; är bruten.
+* SITES-22194: När omdirigeringen har angetts fungerar inte model.json längre.
+* 21953: [Öppna API] Etag ändras baserat på ordningen för validationStatus.
+* 21894: [Öppna API] Förbättra valideringen av den överordnade sökvägen när du skapar CF:er.
+* 21887: [Öppna API] Ogiltig ETag returnerades av POSTENS variantslutpunkt.
+* 21657: [Öppna API] Förbättra valideringen på egenskapen CF Search Path.
+* SITES-21949: Ogiltig söknings-API:er returnerar 500.
+* SITES-20927: Söknings-API:er returnerar 500 när frågan saknas.
+* 20544: [Öppna API] Ändra genereringen av publiceringspaketnamn för att undvika ekningskonflikter.
+* SITES-19710: CVE-2022-47937 - Ta bort all användning av org.apache.sling.Commons.json från sidredigeraren.
+* SITES-1992: [Tillgänglighet] Väljarknappen för anteckningsfärgruta saknar ett hjälpmedelsnamn.
+* SITES-10979: [Tillgänglighet] Etiketten är inte beständig.
+* SITES-10962: [Tillgänglighet] Knapp: Knappen har ingen roll.
+* SITES-10905: [Tillgänglighet] Den aktiva komponentens tillstånd saknar kontrastförhållande 3 till 1.
+* 2974:  [Tillgänglighet] - Vågrät rullning med bredden 320px.
+* SITES-22026: Det går inte att flytta Experience Fragments mellan mappar i AEM
+* SITES-22106: Funktionsproblem för språkväxling i den nya redigeraren för innehållsfragment
+* SITES-21980: Inkonsekvent hantering för UUID-baserade referenstyper.
+* SITES-7257: NPE in ThumbnailServlet.
 
-### Kända fel {#known-issues-16799}
+### Kända fel {#known-issues-16971}
 
->[!NOTE]
-> AEM Engineering har identifierat en regression för startfunktioner som påverkar aktuella AEM från och med 16461. På grund av den här regressionen kommer nya startprogram (som skapats efter att nya versioner har tillämpats) som innehåller sidor som inte är djupa inte att befordras korrekt på grund av saknade konfigurationer.
-> Om dina miljöer påverkas finns ett gränssnittsskript som identifierar och uppdaterar saknade konfigurationer tillgängliga via kundsupport (intern referens, SITES-22457).
-> En mer långsiktig korrigering kommer att göras tillgänglig som säkerställer att nya startprogram skapas med alla de rätta konfigurationerna. Till dess finns även en intern korrigeringsversion tillgänglig vid behov.
+Ingen.
 
-#### Forms
-
-* När du installerar AEM SDK och lägger till `AEM Forms add-on v2024.05.04.00-240400`startar inte Docker-tjänsten. Dockningstjänsten krävs för att generera arkivhandlingar i en lokal utvecklingsmiljö. Så här åtgärdar du problemet:
-   1. Ladda ned [snabbkorrigering](/help/forms/assets/sdk_hotfix.zip). När du laddar ned snabbkorrigeringen kan du `.zip` mappen hämtas.
-   1. Extrahera den hämtade snabbkorrigeringen till en mapp.
-   1. Ersätt äldre `sdk.sh` och `sdk.bat` filer med nyare filer i den mapp som extraherats i steg 2.
-
-### Ändringsmeddelande {#change-notice-16799}
-
-* Den här versionen innehåller följande nya produktindexversioner:
-   * **damAssetLucene-11**
-   * **fragments-11**
-
-  Anpassade versioner av tidigare indexversioner sammanfogas automatiskt med den nya produktindexversionen. Använd ytterligare anpassade uppdateringar för den sammanfogade versionen.
+### Ändringsmeddelande {#change-notice-16971}
 
 * Från och med september 2024 kommer AEM as a Cloud Service att inaktivera serialiseringen av resurslösare via Sling Model Exporter-ramverket. Se [dokumentationen](/help/implementing/developing/hybrid/disallow-the-serialization-of-resourceresolvers-via-sling-model-exporter.md) för mer information.
 
-### Föråldrade funktioner och API:er {#deprecated-16799}
+### Föråldrade funktioner och API:er {#deprecated-16971}
 
 Om du vill veta vad som är föråldrat eller borttaget i AEM as a Cloud Service går du till [Föråldrade och borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
 
-### Inbäddade tekniker {#embedded-tech-16799}
+### Inbäddade tekniker {#embedded-tech-16971}
 
 | Teknik | Version | Länk |
 |---|---|---|
