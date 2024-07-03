@@ -1,18 +1,10 @@
 ---
 title: Anpassa CIF kärnkomponenter
 description: Lär dig hur du anpassar AEM kärnkomponenter. Självstudiekursen handlar om hur du på ett säkert sätt kan utöka en CIF Core Component för att uppfylla företagsspecifika krav. Lär dig hur du utökar en GraphQL-fråga för att returnera ett anpassat attribut och visa det nya attributet i en CIF Core-komponent.
-sub-product: Commerce
-topics: Development
-version: Cloud Service
-doc-type: tutorial
-activity: develop
-audience: developer
 feature: Commerce Integration Framework
-kt: 4279
-thumbnail: customize-aem-cif-core-component.jpg
-exl-id: 4933fc37-5890-47f5-aa09-425c999f0c91
 role: Admin
-source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
+exl-id: 4933fc37-5890-47f5-aa09-425c999f0c91
+source-git-commit: ef58cf5b216ef308cc65436f2eed2e500fb2bd96
 workflow-type: tm+mt
 source-wordcount: '2298'
 ht-degree: 0%
@@ -140,7 +132,7 @@ De produkter och produktdata som visas i AEM lagras i Adobe Commerce. Lägg seda
 
 Innan du hoppar in i AEM kod är det praktiskt att utforska [GraphQL - översikt](https://devdocs.magento.com/guides/v2.4/graphql/) med en GraphQL IDE. Adobe Commerce integrering med AEM görs huvudsakligen via en serie GraphQL-frågor. Att förstå och ändra GraphQL-frågor är ett av de viktigaste sätten att utöka CIF kärnkomponenter.
 
-Använd sedan en GraphQL-utvecklingsmiljö för att verifiera att `eco_friendly` har lagts till i produktattributuppsättningen. Skärmbilder i den här självstudiekursen använder _Altair GraphQL Client_ Google Chrome-tillägg.
+Använd sedan en GraphQL-utvecklingsmiljö för att verifiera att `eco_friendly` har lagts till i produktattributuppsättningen. Skärmbilder i den här självstudiekursen använder _Altair GraphQL Client_ Google Chrome.
 
 1. Öppna GraphQL IDE och ange URL:en `http://<commerce-server>/graphql` i URL-fältet för den utvecklingsmiljö eller det tillägg du använder.
 2. Lägg till följande [produktfråga](https://devdocs.magento.com/guides/v2.4/graphql/queries/products.html) där `YOUR_SKU` är **SKU** av den produkt som använts i föregående undersökning:
