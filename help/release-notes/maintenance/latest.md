@@ -4,9 +4,9 @@ description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] a
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 3a4dd9f1d769a9c9da12fdd8febfef481112d18c
+source-git-commit: f4b2ea5dac880738e6412541f06b85a6a83ccf40
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -52,9 +52,6 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 167
 * SCRNS-4194: Ta bort beroendet av Google Guava API:er.
 * SCRNS-4360: Publish-knappen Hantera publikation och Snabb saknas för användare som inte är administratörer i innehållsleverantören för kanaler.
 * SCRNS-4323: Hide/Disable launches from screens.html.
-
-#### Forms
-
 * FORMS-14844: Adaptiv Forms tillåter att formulär skickas trots att reCAPTCHA-verifiering misslyckas.
 * FORMS-14984: Forms med CAPTCHA hoppar över validering om &quot;submitMetaData&quot; saknas i skickade data.
 * FORMS-14477: Alternativen &quot;Är efter&quot; och &quot;Är före&quot; i regelredigeraren fungerar inte i datumväljarens validering.
