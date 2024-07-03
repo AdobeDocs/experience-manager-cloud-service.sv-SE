@@ -1,13 +1,13 @@
 ---
 title: Hantera miljöer
-description: Lär dig mer om de typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
+description: Lär dig mer om vilka typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 9defb49b2639aa8945d1fed0332400b8ab5ced8c
 workflow-type: tm+mt
-source-wordcount: '2365'
+source-wordcount: '2377'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Hantera miljöer {#managing-environments}
 
-Lär dig mer om de typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
+Lär dig mer om vilka typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
 
 ## Miljötyper {#environment-types}
 
@@ -32,7 +32,7 @@ De enskilda miljöernas kapacitet beror på vilka lösningar som finns i [progra
 * [Sites](/help/overview/introduction.md)
 * [Assets](/help/assets/overview.md)
 * [Forms](/help/forms/home.md)
-* [Skärmar](/help/screens-cloud/introduction/introduction.md)
+* [Screens](/help/screens-cloud/introduction/introduction.md)
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ De enskilda miljöernas kapacitet beror på vilka lösningar som finns i [progra
 
 Om du vill lägga till eller redigera en miljö måste användaren vara medlem i **Företagsägare** roll.
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
 1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** konsol, tryck eller klicka på programmet som du vill lägga till en miljö för.
 
@@ -61,6 +61,7 @@ Om du vill lägga till eller redigera en miljö måste användaren vara medlem i
    * Välj en [**miljötyp**.](#environment-types)
       * Antalet tillgängliga/använda miljöer visas inom parentes bakom miljötypsnamnet.
    * Tillhandahålla en miljö **Namn**.
+      * Miljönamnet kan inte ändras när miljön har skapats.
    * Tillhandahålla en miljö **Beskrivning**.
    * Om du lägger till en **Production + Stage** måste du ange ett miljönamn och en beskrivning för både din produktions- och staging-miljö.
    * Välj en **Primär region** i listrutan.
@@ -73,15 +74,15 @@ Om du vill lägga till eller redigera en miljö måste användaren vara medlem i
 
 The **Ökning** visas nu din nya miljö i **Miljö** kort. Nu kan du ställa in rörledningar för din nya miljö.
 
-## Flera publiceringsområden {#multiple-regions}
+## Flera Publish-regioner {#multiple-regions}
 
-En användare med **Företagsägare** kan konfigurera produktions- och staging-miljöer så att de omfattar upp till tre ytterligare publiceringsregioner förutom den primära regionen. Ytterligare publiceringsregioner kan förbättra tillgängligheten. Se [Ytterligare dokumentation för publiceringsregioner](/help/operations/additional-publish-regions.md) för mer information.
+En användare med **Företagsägare** kan konfigurera produktions- och staging-miljöer så att de omfattar upp till tre ytterligare publiceringsregioner förutom den primära regionen. Ytterligare publiceringsregioner kan förbättra tillgängligheten. Se [Ytterligare Publish-regiondokumentation](/help/operations/additional-publish-regions.md) för mer information.
 
 >[!TIP]
 >
->Du kan använda [API för Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) om du vill fråga en aktuell lista över tillgängliga regioner.
+>Du kan använda [CLOUD MANAGER API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) om du vill fråga en aktuell lista över tillgängliga regioner.
 
-### Lägga till flera publiceringsregioner i en ny miljö {#add-regions}
+### Lägga till flera Publish-regioner i en ny miljö {#add-regions}
 
 När du lägger till en miljö kan du välja att konfigurera ytterligare regioner utöver den primära regionen.
 
@@ -102,7 +103,7 @@ Om du inte anger några ytterligare regioner [kan du göra det senare när du ha
 
 Om du vill etablera [avancerat nätverk](/help/security/configuring-advanced-networking.md) för programmet rekommenderar vi att denna etablering görs innan ytterligare publiceringsregioner läggs till i miljöerna med hjälp av Cloud Manager API. I annat fall går trafiken för de extra publiceringsregionerna igenom den primära regionens proxy.
 
-### Redigera flera publiceringsområden {#edit-regions}
+### Redigera flera Publish-regioner {#edit-regions}
 
 Om du inte angav några ytterligare regioner från början kan du göra det efter att miljöerna har skapats om du har de tillstånd som krävs.
 
@@ -154,7 +155,7 @@ Du kan också klicka på ellipsknappen för den miljö du vill använda och seda
 
 ### Åtkomst till förhandsgranskningstjänsten {#access-preview-service}
 
-I Cloud Manager finns en förhandsgranskningstjänst (som levereras som en extra publiceringstjänst) för varje AEM as a Cloud Service miljö.
+Cloud Manager tillhandahåller en förhandsgranskningstjänst (som levereras som en extra publiceringstjänst) för varje AEM as a Cloud Service-miljö.
 
 Med tjänsten kan du förhandsgranska en webbplats slutliga upplevelse innan den når den faktiska publiceringsmiljön och är tillgänglig för allmänheten.
 
@@ -178,7 +179,7 @@ När det är aktiverat kan du publicera innehåll till förhandsgranskningstjän
 >
 >Miljön måste vara i AEM version `2021.05.5368.20210529T101701Z` eller nyare för att använda förhandsgranskningstjänsten. Kontrollera att en uppdateringspipeline har körts korrekt i din miljö så att du kan använda förhandsgranskningstjänsten.
 
-### Status för ytterligare publiceringsregioner {#additional-region-status}
+### Status för ytterligare Publish-regioner {#additional-region-status}
 
 Om du har aktiverat ytterligare publiceringsregioner kan du kontrollera statusen för dessa regioner från **Miljö** kort.
 
@@ -220,9 +221,9 @@ Uppdateringar av miljöer i sandlådeprogram hanteras dock i programmen. När en
 
 ### Uppdateringar och pipeline {#updates-pipelines}
 
-Rörledningar är det enda sättet att [distribuera kod till miljöer med AEM as a Cloud Service.](deploy-code.md) Därför är varje pipeline kopplad till en viss AEM.
+Rörledningar är det enda sättet att [driftsätta kod i AEM as a Cloud Service miljöer.](deploy-code.md) Därför är varje pipeline kopplad till en viss AEM.
 
-Om Cloud Manager upptäcker att det finns en nyare version av AEM än den som senast distribuerades med pipeline, visas **Uppdatering tillgänglig** status för miljön.
+Om Cloud Manager upptäcker att det finns en nyare version av AEM än den som senast distribuerades med pipelinen visas **Uppdatering tillgänglig** status för miljön.
 
 Uppdateringsprocessen är därför en tvåstegsprocess:
 
@@ -246,7 +247,7 @@ En användare med **Distributionshanteraren** eller **Företagsägare** kan anv�
 
 När pipeline-versionen har uppdaterats till den senaste allmänt tillgängliga AEM-versionen uppmanas användaren att köra den associerade pipelinen för att distribuera den senaste versionen till miljön.
 
-![Uppmana att köra pipeline för att uppdatera miljön](assets/update-run-pipeline.png)
+![Prompt som hanterar pipeline för att uppdatera miljön](assets/update-run-pipeline.png)
 
 The **Uppdatera** Alternativets beteende varierar beroende på programmets konfiguration och aktuella tillstånd.
 
@@ -279,7 +280,7 @@ Välj **Hantera åtkomst** på menyn ellips i miljön på **Miljö** kort. Du ka
 
 >[!TIP]
 >
->Se [AEM as a Cloud Service team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md) om du vill veta hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomsten till era licensierade Adobe-lösningar.
+>Se [AEM as a Cloud Service Team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md) om du vill veta hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomsten till era licensierade Adobe-lösningar.
 
 ## Åtkomst till Developer Console {#accessing-developer-console}
 
@@ -305,7 +306,7 @@ Du kan även logga in lokalt från **Miljö** -fliken i **Ökning** sida.
 
 ## Hantera anpassade domännamn {#manage-cdn}
 
-Anpassade domännamn stöds i Cloud Manager för Sites-program för både publicerings- och förhandsgranskningstjänster.
+Anpassade domännamn stöds i Cloud Manager for Sites-program för både publicerings- och förhandsgranskningstjänster.
 
 >[!TIP]
 >
@@ -313,7 +314,7 @@ Anpassade domännamn stöds i Cloud Manager för Sites-program för både public
 
 ## Hantera IP-Tillåtelselista {#manage-ip-allow-lists}
 
-IP-tillåtelselista stöds i Cloud Manager för författare, publicering och förhandsgranskningstjänster för Sites-program.
+IP tillåtelselista stöds i Cloud Manager för författare, publicering och förhandsgranskning av Sites-program.
 
 Om du vill hantera IP-tillåtelselista går du till **Miljö** -fliken i **Ökning** sidan med ditt program. Klicka på en enskild miljö så att du kan hantera informationen om den.
 
