@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 8581ff75a68c045ccfbb6a525c1e08a6ee253d52
+source-git-commit: 1566963898fb7f6999e3fad796b938128521bcce
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Have a look at the June 2024 Release Overview video for a summary of the feature
 
 **RUM-datatjänst (Real Use Monitoring)** {#real-use-monitoring}
 
-RUM-datatjänsten (Real Use Monitoring) är nu allmänt tillgänglig, vilket möjliggör datainsamling på klientsidan för AEM as a Cloud Service. Den här tjänsten ger en mer exakt återgivning av användarinteraktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det ger kunderna avancerade insikter om sidtrafik och prestanda, vilket utgör en värdefull möjlighet att förstå och förbättra sidprestanda.
+The [RUM-datatjänst (Real Use Monitoring)](/help/sites-cloud/administering/real-use-monitoring-for-aem-as-a-cloud-service.md) är nu allmänt tillgängligt, vilket möjliggör datainsamling på klientsidan för AEM as a Cloud Service. Den här tjänsten ger en mer exakt återgivning av användarinteraktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det ger kunderna avancerade insikter om sidtrafik och prestanda, vilket utgör en värdefull möjlighet att förstå och förbättra sidprestanda.
 
 ### Tidiga Adobe-program {#sites-early-adopter}
 
