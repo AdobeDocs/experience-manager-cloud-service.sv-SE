@@ -4,9 +4,9 @@ description: Lär dig hur du använder Real Use Monitoring (RUM) för att fånga
 exl-id: 91fe9454-3dde-476a-843e-0e64f6f73aaf
 feature: Administering
 role: Admin
-source-git-commit: 9a8adf777008b7a601abc8760cee67ec3c1816c6
+source-git-commit: 8ccef0103ae7fb75171431eeb36f7352f6467d56
 workflow-type: tm+mt
-source-wordcount: '1301'
+source-wordcount: '1302'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Med RUM spåras viktiga prestandamått direkt från initieringen av URL:en tills
 
 ## Vem kan dra nytta av en tjänst för övervakning av verklig användning? {#who-can-benefit-from-rum-service}
 
-Tjänsten för övervakning av verklig användning är fördelaktig för alla kunder. Det ger en representativ återspegling av användarinteraktioner, vilket säkerställer ett tillförlitligt mått på webbplatsens engagemang genom att fånga antalet sidvisningar på klientsidan.
+Tjänsten Real Use Monitoring är fördelaktig för alla kunder. Det ger en representativ återspegling av användarinteraktioner, vilket säkerställer ett tillförlitligt mått på webbplatsens engagemang genom att fånga antalet sidvisningar på klientsidan.
 
 För alla Adobe-kunder ger den här tjänsten värdefulla insikter om användarinteraktioner. Kunder som använder sitt eget CDN kan dra nytta av förenklad trafikrapportering, eftersom Adobe nu integrerar datainsamlingen direkt, vilket eliminerar behovet av separata rapporter under förnyelsecyklerna.
 
