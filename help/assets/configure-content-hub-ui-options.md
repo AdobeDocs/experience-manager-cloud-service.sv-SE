@@ -1,9 +1,9 @@
 ---
 title: Konfigurera Content Hub användargränssnitt
 description: Konfigurera Content Hub användargränssnitt
-source-git-commit: 5a968440c8841abe7af2c81c4af12258b7e4547f
+source-git-commit: 7224cca950e61bea298f246245bdb221fd8fa22e
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1060'
 ht-degree: 0%
 
 ---
@@ -97,6 +97,10 @@ I Content Hub kan administratörer konfigurera filter som visas när de söker e
 1. Klicka på **[!UICONTROL Confirm]**. Det nya filtret visas i listan över befintliga filter.
 
 1. Klicka **[!UICONTROL Save]** om du vill använda ändringarna så att det nya filtret visas på söksidan när du filtrerar resurser.
+
+   >[!NOTE]
+   >
+   >Det nya filtret visas bara på söksidan om det finns minst en resurs i databasen som matchar filtervillkoren.
 
 Du kan också klicka ![Ikonen Redigera](assets/do-not-localize/edit_icon.svg), som finns bredvid varje tillgängligt filter, för att redigera etiketterna eller klicka på borttagningsikonen för att ta bort ett befintligt filter. Klicka **[!UICONTROL Save]** efter att ha gjort alla ändringar för att tillämpa ändringarna.
 

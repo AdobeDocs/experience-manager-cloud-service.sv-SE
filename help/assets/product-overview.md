@@ -1,7 +1,7 @@
 ---
 title: Content Hub - översikt
 description: Läs mer om Content Hub, dess viktigaste fördelar, hur man får tillgång till det och hur man kan ge feedback kring de alternativ som finns i Content Hub.
-source-git-commit: b29641286919b5becc3982400ea160836531fdc5
+source-git-commit: 7224cca950e61bea298f246245bdb221fd8fa22e
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Content Hub kräver en produktionsredigeringsmiljö i Experience Manager as a Cl
 
 ## Hur kommer jag åt Content Hub? {#access-content-hub}
 
-[Efter konfiguration av Content Hub](#deploy-content-hub) och lägga till en användare i [Content Hub produktprofil](/help/assets/deploy-content-hub.md#content-hub-instance-product-profile)går det att komma åt Content Hub på följande sätt:
+[Efter konfiguration av Content Hub](/help/assets/deploy-content-hub.md) och lägga till en användare i [Content Hub produktprofil](/help/assets/deploy-content-hub.md#content-hub-instance-product-profile)går det att komma åt Content Hub på följande sätt:
 
 * Öppna Content Hub via följande länk:
 

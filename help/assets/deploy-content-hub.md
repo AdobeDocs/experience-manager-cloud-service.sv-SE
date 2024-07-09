@@ -2,9 +2,9 @@
 title: Distribuera [!DNL Content Hub]
 description: Lär dig hur du distribuerar och aktiverar Content Hub och ger åtkomst till användare med olika typer av behörigheter (överföra resurser, Adobe Express-användare) och hur du ger administratörsbehörighet till användare.
 role: Admin
-source-git-commit: 0d340508823be6a2c6c2beb28c17ddfb2bf6b790
+source-git-commit: 7224cca950e61bea298f246245bdb221fd8fa22e
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1263'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,10 @@ För att få tillgång till Content Hub-portalen måste administratörer först 
 
 1. Expandera **[!UICONTROL Assets]** och markera **[!UICONTROL Content Hub]**.
    ![Välj Content Hub i Cloud Manager](assets/edit-program-cloud-manager-content-hub.png)
+
+   >[!NOTE]
+   >
+   >If **[!UICONTROL Update]** är inte aktiverat när du har valt Content Hub, kontrollera att du har angett Go-Live-inställningar för programmet.
 
 1. Klicka på **[!UICONTROL Update]**.
 
@@ -111,9 +115,19 @@ Dessa användare har nu tillgång till de resurser som finns på Content Hub-por
 >
 >Du kan använda alla avancerade företagsfunktioner som synkronisering med externa identitetsleverantörer.
 
-När du har lagt till lämpliga användare med Admin Console kan användarna få åtkomst till Content Hub via följande länk:
+### Hur kommer jag åt Content Hub? {#access-content-hub}
 
-`https://experience.adobe.com/#/assets/contenthub`
+Du kommer åt Content Hub på följande sätt:
+
+* Öppna Content Hub via följande länk:
+
+  `https://experience.adobe.com/#/assets/contenthub`
+
+* Logga in på `experience.adobe com` och klicka **[!UICONTROL Experience Manager Assets Content Hub]** finns i **[!UICONTROL Quick access]** avsnitt:
+  ![Content Hub Access](assets/access-content-hub.png)
+
+* Logga in på `experience.adobe com` och klicka **[!UICONTROL Experience Manager Assets Content Hub]** som finns i produktväljaren:
+  ![Content Hub Access-metod 3](assets/access-content-hub-alternate.png)
 
 ### Inaktivera e-postmeddelanden för användare {#disable-email-notifications}
 
