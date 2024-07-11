@@ -4,7 +4,7 @@ description: Lär dig hur du uppdaterar innehållsfragment för optimerad GraphQ
 exl-id: 211f079e-d129-4905-a56a-4fddc11551cc
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Developer
-source-git-commit: 66d44481fa7e58b23e0381bfebb997acbedecfb7
+source-git-commit: 8d14936ad21dc5879c72383defc3db22ce9a24ef
 workflow-type: tm+mt
 source-wordcount: '867'
 ht-degree: 0%
@@ -45,74 +45,6 @@ Det finns krav för den här uppgiften:
    | 3 | `CF_MIGRATION_BATCH` | `50` | `50` | Alla | | Variabel | Storlek på gruppen för att spara antalet innehållsfragment efter migreringen. Detta gäller hur många CF:er som sparas i databasen i en batch och kan användas för att optimera antalet skrivningar i databasen. |
    | 4 | `CF_MIGRATION_LIMIT` | `1000` | `1000` | Alla | | Variabel | Maximalt antal innehållsfragment som ska bearbetas samtidigt. Se även anmärkningar för `CF_MIGRATION_INTERVAL`. |
    | 5 | `CF_MIGRATION_INTERVAL` | `60` | `600` | Alla | | Variabel | Intervall (sekunder) för att bearbeta återstående innehållsfragment upp till nästa gräns. Det här intervallet betraktas också som både en väntetid innan jobbet startas och en fördröjning mellan bearbetningen av varje efterföljande CF_MIGRATION_LIMIT-antal CF:er. (*) |
-
-   <!--
-   <table style="table-layout:auto">
-    <tbody>
-     <tr>
-      <th>&nbsp;</th>
-      <th>Name</th>
-      <th>Value</th>
-      <th>Default Value</th>
-      <th>Service</th>
-      <th>Applied</th>
-      <th>Type</th>
-      <th>Notes</th>
-     </tr>
-
-     <tr>
-      <td>1</td>
-      <td>`CF_MIGRATION_ENABLED` </td>
-      <td>`1` </td>
-      <td>`0` </td>
-      <td>All </td>
-      <td> </td>
-      <td>Variable </td>
-      <td>Enables(!=0) or disables(0) triggering of Content Fragment migration job. </td>
-     </tr>
-     <tr>
-      <td>2</td>
-      <td>`CF_MIGRATION_ENFORCE` </td>
-      <td>`1` </td>
-      <td>`0` </td>
-      <td>All </td>
-      <td> </td>
-      <td>Variable </td>
-      <td>Enforce (!=0) remigration of Content Fragments.<br>Setting this flag to 0 does an incremental migration of CFs. This means, if the job is terminated for any reason, then the next run of the job starts migration from the point where it got terminated. The first migration is recommended for enforcement (value=1). </td>
-     </tr>
-     <tr>
-      <td>3</td>
-      <td>`CF_MIGRATION_BATCH` </td>
-      <td>`50` </td>
-      <td>`50` </td>
-      <td>All </td>
-      <td> </td>
-      <td>Variable </td>
-      <td>Size of the batch for saving the number of Content Fragments after migration.<br>This is relevant to how many CFs are saved to the repository in one batch, and can be used to optimize the number of writes to the repository. </td>
-     </tr>
-     <tr>
-      <td>4</td>
-      <td>`CF_MIGRATION_LIMIT` </td>
-      <td>`1000` </td>
-      <td>`1000` </td>
-      <td>All </td>
-      <td> </td>
-      <td>Variable </td>
-      <td>Max number of Content Fragments to process at a time.<br>See also notes for `CF_MIGRATION_INTERVAL`. </td>
-     </tr>
-     <tr>
-      <td>5</td>
-      <td>`CF_MIGRATION_INTERVAL` </td>
-      <td>`60` </td>
-      <td>`600` </td>
-      <td>All </td>
-      <td> </td>
-      <td>Variable </td>
-      <td>Interval (seconds) to process the remaining Content Fragments up until the next Limit<br>This interval is also considered as both a wait-time before starting the job, and a delay between processing of each subsequent CF_MIGRATION_LIMIT number of CFs.<br>(*)</td>
-     </tr>
-    </tbody>
-   </table>
-   -->
 
    >[!NOTE]
    >
@@ -206,33 +138,6 @@ Det finns krav för den här uppgiften:
    | | Namn | Värde | Standardvärde | Tjänst | Används | Typ | Anteckningar |
    |---|---|---|---|---|---|---|---|
    | | `CF_MIGRATION_ENABLED` | `0` | `0` | Alla | | Variabel | Inaktiverar(0) (eller Enables(!)=0)) utlöser migreringsjobb för innehållsfragment. |
-
-   <!--
-   <table style="table-layout:auto">
-    <tbody>
-     <tr>
-      <th>&nbsp;</th>
-      <th>Name</th>
-      <th>Value</th>
-      <th>Default Value</th>
-      <th>Service</th>
-      <th>Applied</th>
-      <th>Type</th>
-      <th>Notes</th>
-     </tr>
-     <tr>
-      <td></td>
-      <td>`CF_MIGRATION_ENABLED` </td>
-      <td>`0` </td>
-      <td>`0` </td>
-      <td>All </td>
-      <td> </td>
-      <td>Variable </td>
-      <td>Disables(0) (or Enables(!=0)) triggering of Content Fragment migration job. </td>
-     </tr>
-    </tbody>
-   </table>
-   -->
 
    >[!NOTE]
    >
