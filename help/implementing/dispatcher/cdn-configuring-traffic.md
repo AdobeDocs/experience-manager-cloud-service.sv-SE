@@ -4,27 +4,27 @@ description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler 
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: 1b4297c36995be7a4d305c3eddbabfef24e91559
+source-git-commit: c34aa4ad34d3d22e1e09e9026e471244ca36e260
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1326'
 ht-degree: 0%
 
 ---
 
 # Konfigurera trafik vid leveransnätverket {#cdn-configuring-cloud}
 
-AEM as a Cloud Service har en samling funktioner som kan konfigureras på [CDN som hanteras av Adobe](/help/implementing/dispatcher/cdn.md#aem-managed-cdn) lager som ändrar typen av inkommande eller utgående svar. Följande regler, som beskrivs i detalj på den här sidan, kan deklareras för att uppnå följande beteende:
+AEM as a Cloud Service erbjuder en samling funktioner som kan konfigureras i det [Adobe-hanterade CDN](/help/implementing/dispatcher/cdn.md#aem-managed-cdn)-lagret och som ändrar typen av inkommande eller utgående svar. Följande regler, som beskrivs i detalj på den här sidan, kan deklareras för att uppnå följande beteende:
 
-* [Begär omformningar](#request-transformations) - ändra aspekter av inkommande begäranden, inklusive rubriker, sökvägar och parametrar.
-* [Svarsomvandlingar](#response-transformations) - ändra rubriker som är på väg tillbaka till klienten (till exempel en webbläsare).
-* [Omdirigeringar på klientsidan](#client-side-redirectors) - utlöser en omdirigering till webbläsaren. Den här funktionen är ännu inte tillgänglig för GA, men för tidiga användare.
-* [Väljare för ursprung](#origin-selectors) - proxy till en annan bakgrund.
+* [Begär omformningar](#request-transformations) - ändra aspekter av inkommande begäranden, inklusive huvuden, sökvägar och parametrar.
+* [Svarsomvandlingar](#response-transformations) - ändra huvuden som är på väg tillbaka till klienten (till exempel en webbläsare).
+* [Omdirigering på klientsidan](#client-side-redirectors) - utlöser en omdirigering av webbläsaren. Den här funktionen är ännu inte tillgänglig för GA, men för tidiga användare.
+* [Ursprungsväljare](#origin-selectors) - proxy till en annan ursprunglig serverdel.
 
-CDN kan även konfigurera trafikfilterregler (inklusive WAF), som styr vilken trafik som tillåts eller nekas av CDN. Den här funktionen har redan släppts och du kan läsa mer om den i [Trafikfilterregler inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md) sida.
+CDN kan även konfigurera trafikfilterregler (inklusive WAF), som styr vilken trafik som tillåts eller nekas av CDN. Den här funktionen har redan släppts och du kan läsa mer om den på sidan [Trafikfilterregler, inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md).
 
-Om CDN inte kan kontakta sitt ursprung kan du dessutom skriva en regel som refererar till en egen felsida (som sedan återges). Läs mer om detta i [Konfigurera CDN-felsidor](/help/implementing/dispatcher/cdn-error-pages.md) artikel.
+Om CDN inte kan kontakta sitt ursprung kan du dessutom skriva en regel som refererar till en egen felsida (som sedan återges). Läs mer om detta i artikeln [Konfigurera CDN-felsidor](/help/implementing/dispatcher/cdn-error-pages.md).
 
-Alla dessa regler, som deklareras i en konfigurationsfil i källkontrollen, distribueras med [Konfigurationspipeline för Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline). Tänk på att den kumulativa storleken på konfigurationsfilen, inklusive trafikfilterregler, inte får överstiga 100 kB.
+Alla dessa regler, som deklareras i en konfigurationsfil i källkontrollen, distribueras med [Cloud Manager Configuration Pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline). Tänk på att den kumulativa storleken på konfigurationsfilen, inklusive trafikfilterregler, inte får överstiga 100 kB.
 
 ## Utvärderingsordning {#order-of-evaluation}
 
@@ -43,14 +43,14 @@ config/
      cdn.yaml
 ```
 
-* The `cdn.yaml` konfigurationsfilen ska innehålla både metadata och reglerna som beskrivs i exemplen nedan. The `kind` parametern ska anges till `CDN` och versionen bör anges till schemaversionen, som för närvarande är `1`.
+* Konfigurationsfilen `cdn.yaml` ska innehålla både metadata och reglerna som beskrivs i exemplen nedan. Parametern `kind` ska anges till `CDN` och versionen ska anges till schemaversionen, som för närvarande är `1`.
 
-* Skapa en riktad distributionskonfigurationspipeline i Cloud Manager. Se [konfigurera produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) och [konfigurera icke-produktionsrörledningar](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md).
+* Skapa en riktad distributionskonfigurationspipeline i Cloud Manager. Se [konfigurera produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) och [konfigurera icke-produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md).
 
 **Anteckningar**
 
 * De lokala lagringsplatserna stöder för närvarande inte konfigurationsflödet.
-* Du kan använda `yq` för att lokalt validera YAML-formateringen i konfigurationsfilen (till exempel `yq cdn.yaml`).
+* Du kan använda `yq` för att lokalt validera YAML-formateringen av konfigurationsfilen (till exempel `yq cdn.yaml`).
 
 ## Syntax {#configuration-syntax}
 
@@ -58,7 +58,7 @@ Regeltyperna i avsnitten nedan har en gemensam syntax.
 
 En regel refereras av ett namn, en villkorlig&quot;when-sats&quot; och åtgärder.
 
-När-satsen avgör om en regel ska utvärderas, baserat på egenskaper som domän, sökväg, frågesträngar, rubriker och cookies. Syntaxen är densamma för alla regeltyper. Mer information finns i [Villkorsstrukturavsnitt](/help/security/traffic-filter-rules-including-waf.md#condition-structure) i artikeln Traffic Filter Rules.
+När-satsen avgör om en regel ska utvärderas, baserat på egenskaper som domän, sökväg, frågesträngar, rubriker och cookies. Syntaxen är densamma för alla regeltyper. Mer information finns i avsnittet [Villkorsstruktur](/help/security/traffic-filter-rules-including-waf.md#condition-structure) i artikeln Regler för trafikfilter.
 
 Detaljerna för åtgärdsnoden skiljer sig åt mellan olika regeltyper och beskrivs i de enskilda avsnitten nedan.
 
@@ -68,7 +68,7 @@ Regler för omformning av begäranden gör att du kan ändra inkommande begäran
 
 Användningsexempel varierar och inkluderar URL-omskrivningar för att förenkla programmet eller mappa äldre URL-adresser.
 
-Som vi nämnt tidigare finns det en storleksbegränsning för konfigurationsfilen, så organisationer med större krav bör definiera regler i `apache/dispatcher` lager.
+Som vi nämnt tidigare finns det en storleksgräns för konfigurationsfilen, så organisationer med större krav bör definiera regler i lagret `apache/dispatcher`.
 
 Konfigurationsexempel:
 
@@ -144,7 +144,7 @@ I tabellen nedan beskrivs de tillgängliga åtgärderna.
 
 | Namn | Egenskaper | Betydelse |
 |-----------|--------------------------|-------------|
-| **set** | (reqProperty eller reqHeader eller queryParam eller reqCookie), värde | Anger en angiven begärandeparameter (endast egenskapen path stöds), eller begäranhuvud, frågeparameter eller cookie, till ett givet värde. |
+| **uppsättning** | (reqProperty eller reqHeader eller queryParam eller reqCookie), värde | Anger en angiven begärandeparameter (endast egenskapen path stöds), eller begäranhuvud, frågeparameter eller cookie, till ett givet värde. |
 |     | var, värde | Ställer in en angiven request-egenskap på ett givet värde. |
 | **unset** | reqProperty | Tar bort en angiven begärandeparameter (endast egenskapen path stöds), eller begäranhuvud, frågeparameter eller cookie, till ett givet värde. |
 |         | var | Tar bort en angiven variabel. |
@@ -168,7 +168,7 @@ actions:
 
 ### Variabel {#variables}
 
-Du kan ange variabler under begärandeomformningen och sedan referera till dem senare i utvärderingssekvensen. Se [utvärderingsordning](#order-of-evaluation) för mer information.
+Du kan ange variabler under begärandeomformningen och sedan referera till dem senare i utvärderingssekvensen. Se [utvärderingsordningen](#order-of-evaluation) för mer information.
 
 Konfigurationsexempel:
 
@@ -252,7 +252,7 @@ I tabellen nedan beskrivs de tillgängliga åtgärderna.
 
 | Namn | Egenskaper | Betydelse |
 |-----------|--------------------------|-------------|
-| **set** | reqHeader, värde | Ställer in en angiven rubrik på ett givet värde i svaret. |
+| **uppsättning** | reqHeader, värde | Ställer in en angiven rubrik på ett givet värde i svaret. |
 | **unset** | respHeader | Tar bort en angiven rubrik från svaret. |
 
 ## Väljare för ursprung {#origin-selectors}
@@ -274,7 +274,7 @@ data:
         action:
           type: selectOrigin
           originName: example-com
-          # useCache: false
+          # skpCache: true
     origins:
       - name: example-com
         domain: www.example.com
@@ -292,7 +292,7 @@ Tabellen nedan förklarar den tillgängliga åtgärden.
 | Namn | Egenskaper | Betydelse |
 |-----------|--------------------------|-------------|
 | **selectOrigin** | originName | Namnet på ett av de definierade originalen. |
-|     | useCache (valfritt, standardvärdet är true) | Flagga om cachelagring ska användas för begäranden som matchar den här regeln. |
+|     | skipCache (valfritt, standardvärdet är false) | Flagga om cachelagring ska användas för begäranden som matchar den här regeln. Som standard cachelagras svar enligt svarscachningshuvudet (t.ex. Cache-Control eller Expires) |
 
 **Original**
 
@@ -300,9 +300,9 @@ Anslutningar till originalen är endast SSL och använder port 443.
 
 | Egenskap | Betydelse |
 |------------------|--------------------------------------|
-| **name** | Namn som kan refereras av &quot;action.originName&quot;. |
+| **namn** | Namn som kan refereras av &quot;action.originName&quot;. |
 | **domän** | Domännamn som används för att ansluta till den anpassade serverdelen. Det används också för SSL SNI och validering. |
-| **ip** (tillval, stöd för iv4 och ipv6) | Om den anges används den för att ansluta till serverdelen i stället för till &quot;domän&quot;. Stilla &quot;domän&quot; används för SSL SNI och validering. |
+| **ip** (valfritt, stöd för iv4 och ipv6) | Om den anges används den för att ansluta till serverdelen i stället för till &quot;domän&quot;. Stilla &quot;domän&quot; används för SSL SNI och validering. |
 | **forwardHost** (valfritt, standardvärdet är false) | Om värdet är true skickas &quot;Host&quot;-huvudet från klientbegäran till serverdelen, annars skickas &quot;domain&quot;-värdet i &quot;Host&quot;-huvudet. |
 | **forwardCookie** (valfritt, standardvärdet är false) | Om värdet är true skickas&quot;Cookie&quot;-huvudet från klientbegäran till serverdelen, annars tas Cookie-huvudet bort. |
 | **forwardAuthorization** (valfritt, standardvärdet är false) | Om värdet är true skickas auktoriseringshuvudet från klientbegäran till serverdelen, annars tas auktoriseringshuvudet bort. |
@@ -341,13 +341,13 @@ data:
 ```
 
 >[!NOTE]
-> Eftersom Hanterat CDN i Adobe används måste du konfigurera push-ogiltigförklaring i **hanterad** läge, genom att följa Edge Delivery Servicens [Ställ in dokumentation för push-ogiltigförklaring](https://www.aem.live/docs/byo-dns#setup-push-invalidation).
+> Eftersom Hanterat CDN i Adobe används måste du konfigurera push-ogiltigförklaring i **hanterat**-läge genom att följa Edge Delivery Servicens [Konfigurera push-ogiltigförklaring](https://www.aem.live/docs/byo-dns#setup-push-invalidation).
 
 
 ## Omdirigeringar på klientsidan {#client-side-redirectors}
 
 >[!NOTE]
->Den här funktionen är ännu inte allmänt tillgänglig. Om du vill gå med i programmet för tidig adopter skickar du e-post `aemcs-cdn-config-adopter@adobe.com` och beskriva hur ni använder er.
+>Den här funktionen är ännu inte allmänt tillgänglig. Om du vill gå med i det tidiga adopterprogrammet skickar du ett e-postmeddelande till `aemcs-cdn-config-adopter@adobe.com` och beskriver ditt användningsexempel.
 
 Du kan använda omdirigeringsregler på klientsidan för 301, 302 och liknande omdirigeringar på klientsidan. Om en regel matchar svarar CDN med en statusrad som innehåller statuskoden och meddelandet (till exempel HTTP/1.1 301 Flyttad permanent), samt platshuvuduppsättningen.
 
@@ -380,5 +380,5 @@ data:
 
 | Namn | Egenskaper | Betydelse |
 |-----------|--------------------------|-------------|
-| **omdirigera** | plats | Värde för rubriken Plats. |
+| **omdirigering** | plats | Värde för rubriken Plats. |
 |     | status (valfritt, standardvärdet är 301) | HTTP-status som ska användas i omdirigeringsmeddelandet, 301 som standard, är de tillåtna värdena: 301, 302, 303, 307, 308. |
