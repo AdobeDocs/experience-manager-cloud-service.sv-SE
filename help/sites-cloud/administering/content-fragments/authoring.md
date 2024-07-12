@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
 solution: Experience Manager Sites
-source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
+source-git-commit: f81ea2b58cfa68542df957b54b1c0233b6096810
 workflow-type: tm+mt
-source-wordcount: '2668'
+source-wordcount: '2687'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Den här redigeraren innehåller:
 * [Inline-överföring av resurser som innehållsreferenser](#reference-images), utan att först behöva överföra dem till resursens DAM.
 * [Generera variationer](#generate-variations-ai) för att använda generativ AI för att snabba upp innehållsskapandet baserat på uppmaningar.
 * [Förhandsgranska](#preview-content-fragment) av den renderade upplevelsen som levereras av innehållsfragmentet.
-* Möjlighet att [Publicera](#publish-content-fragment) och [Avpublicera](#unpublish-content-fragment) från redigeraren.
+* Möjlighet att [Publish](#publish-content-fragment) och [Avpublicera](#unpublish-content-fragment) från redigeraren.
 * Möjlighet att [visa och öppna, associerade språkkopior](#view-language-copies) i redigeraren.
 * Möjlighet att [visa versionsinformation](#view-version-history) i redigeraren. Du kan också återgå till en vald version.
 * Möjlighet att [visa och öppna överordnade referenser](#view-parent-references).
@@ -45,10 +45,10 @@ När du först öppnar Content Fragment Editor visas fyra huvudområden:
    * en länk till konsolen för innehållsfragment (hemikonen)
    * information om modellen och mappen
    * länkar till [Förhandsgranska (om standardmönstret för URL för förhandsgranskning har konfigurerats för modellen)](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#content-fragment-model-properties)
-   * [Publicera](#publish-content-fragment)och [Avpublicera](#unpublish-content-fragment) funktionsmakron
+   * [Publish](#publish-content-fragment)och [Avpublicera](#unpublish-content-fragment) funktionsmakron
    * ett alternativ för att visa alla **Överordnade referenser** (länkikon)
    * fragmentet **[Status](/help/sites-cloud/administering/content-fragments/managing.md#statuses-content-fragments)** och senast sparad information
-   * växla till den ursprungliga (resursbaserade) redigeraren
+   * växla till den ursprungliga (Assets-baserade) redigeraren
 
      >[!WARNING]
      >
@@ -116,7 +116,7 @@ För varje uppdatering som du gör sparas innehållsfragmentet automatiskt. Den 
 
 ## Variationer {#variations}
 
-[Variationer](/help/sites-cloud/administering/content-fragments/overview.md#main-and-variations) är en viktig egenskap i AEM. De gör att du kan skapa och redigera kopior av **Huvud** innehåll som kan användas i specifika kanaler och scenarier, vilket gör innehållsleverans utan rubrik och sidredigering ännu mer flexibelt.
+[Variationer](/help/sites-cloud/administering/content-fragments/overview.md#main-and-variations) är en viktig egenskap i AEM innehållsfragment. De gör att du kan skapa och redigera kopior av **Huvud** innehåll som kan användas i specifika kanaler och scenarier, vilket gör innehållsleverans utan rubrik och sidredigering ännu mer flexibelt.
 
 Från redigeraren kan du:
 
@@ -336,7 +336,7 @@ Alternativt kan du [välj **Skapa nytt fragment** för att öppna **Skapa** dial
 I **Innehållsreferens** fält som du kan båda:
 
 * referensresurser som redan finns i databasen
-* ladda upp dem direkt till fältet. På så sätt slipper du använda **Resurser** konsol att överföra
+* ladda upp dem direkt till fältet. På så sätt slipper du använda **Assets** konsol att överföra
 
   >[!NOTE]
   >
@@ -348,19 +348,26 @@ I **Innehållsreferens** fält som du kan båda:
 Du kan antingen lägga till en resurs:
 
 * dra och släpp den nya resursfilen direkt (till exempel från filsystemet) till **Innehållsreferens** fält
-* använder **Lägg till resurs** väljer du **Bläddra bland resurser** eller **Överför** så öppnas rätt väljare:
+* använder **Lägg till resurs** väljer du **Bläddra i Assets** eller **Överför** så öppnas rätt väljare:
 
   ![Content Fragment Editor - Lägg till resursalternativ](assets/cf-authoring-add-asset-options.png)
 
 #### Referenssidor {#reference-pages}
 
-Så här lägger du till referenser till AEM sidor, Experience Fragments eller andra innehållstyper:
+Så här lägger du till referenser till AEM sidor, Experience Fragments eller andra sådana innehållstyper:
 
 1. Välj **Lägg till innehållssökväg**.
 
 1. Lägg till den obligatoriska sökvägen i indatafältet.
 
 1. Bekräfta med **Lägg till**.
+
+>[!NOTE]
+>
+>Detta ska inte användas för referenser till:
+>
+>* Innehållsfragment - använd en [Fragmentreferens](#fragment-references)
+>* Bilder - använd [Referensbilder](#reference-images)
 
 ### Visa överordnade referenser {#view-parent-references}
 
@@ -472,10 +479,10 @@ När URL:en har definierats **Förhandsgranska** knappen är aktiv. Du kan välj
 
 ## Publish ditt fragment {#publish-content-fragment}
 
-Du kan **Publicera** ditt fragment till antingen din
+Du kan **Publish** ditt fragment till antingen din
 
 * Förhandsgranska instans
-* Publicera instans
+* Publish, instans
 
 Du kan publicera fragmentet antingen från redigeraren eller konsolen. Se [Publicera och förhandsgranska ett fragment](/help/sites-cloud/administering/content-fragments/managing.md#publishing-and-previewing-a-fragment) för fullständig information.
 
@@ -484,7 +491,7 @@ Du kan publicera fragmentet antingen från redigeraren eller konsolen. Se [Publi
 Du kan också **Avpublicera** ditt fragment från antingen din
 
 * Förhandsgranska instans
-* Publicera instans
+* Publish, instans
 
 Du kan avpublicera fragmentet från antingen redigeraren eller konsolen. Se [Avpublicera ett fragment](/help/sites-cloud/administering/content-fragments/managing.md#unpublishing-a-fragment) för fullständig information.
 
@@ -551,6 +558,6 @@ The **Fält** På panelen visas alla fält i innehållsfragmentet. Ikonen indike
 
   Innehållsfragmentet och dess varianter har också metadatafält (variationsegenskaper) som anropas **Titel** och **Beskrivning**. De här fälten är en integrerad del av ett innehållsfragment och definieras från början när fragmentet. De kan uppdateras i *höger panel* när du redigerar fragmentet.
 
-* I Assets-dokumentationen finns fullständig information om [ursprunglig Content Fragment-redigerare](/help/assets/content-fragments/content-fragments-variations.md) - det finns på båda **Resurser** konsolen och **Innehållsfragment** konsol.
+* Se Assets dokumentation för fullständig information om [ursprunglig Content Fragment-redigerare](/help/assets/content-fragments/content-fragments-variations.md) - det finns på båda **Assets** konsolen och **Innehållsfragment** konsol.
 
 * Ditt projektteam kan anpassa redigeraren om det behövs. Se [Anpassa konsolen och redigeraren för innehållsfragment](/help/implementing/developing/extending/content-fragments-console-and-editor.md) för mer information.
