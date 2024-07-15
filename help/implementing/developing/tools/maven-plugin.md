@@ -4,9 +4,9 @@ description: Använd plugin-programmet Content Package Maven för att distribuer
 exl-id: d631d6df-7507-4752-862b-9094af9759a0
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: d757c94475f257ee4b05092671ae5e6384b8342e
 workflow-type: tm+mt
-source-wordcount: '1802'
+source-wordcount: '1235'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Använd pluginen Adobe Content Package Maven för att integrera paketets driftsättnings- och hanteringsuppgifter i dina Maven-projekt.
 
-Distributionen av de konstruerade paketen till AEM utförs av pluginmodulen för innehållspaketet för Adobe och möjliggör automatisering av uppgifter som normalt utförs med AEM [Pakethanteraren:](/help/implementing/developing/tools/package-manager.md)
+Distributionen av de konstruerade paketen till AEM utförs av plugin-programmet Maven för innehållspaket för Adobe och möjliggör automatisering av åtgärder som normalt utförs med AEM [Package Manager:](/help/implementing/developing/tools/package-manager.md)
 
 * Skapa nya paket från filer i filsystemet.
 * Installera och avinstallera paket på AEM.
@@ -27,10 +27,13 @@ I det här dokumentet beskrivs hur du använder Maven för att hantera dessa upp
 
 >[!NOTE]
 >
->Paket **skapa** ägs nu av [Apache Jackrabbit FileVault Package Maven plugin.](https://jackrabbit.apache.org/filevault-package-maven-plugin/)
+>Använd alltid de senaste tillgängliga versionerna av dessa plugin-program.
+
+>[!NOTE]
 >
->* The `content-package-maven-plugin` stöder inte längre förpackningar från version 1.0.2.
->* I den här artikeln beskrivs **distribution** av de tillverkade paketen som ska AEM utförs av pluginen för innehållspaketet Maven för Adobe.
+>Paketet **creation** ägs nu av plugin-programmet [Apache Jackrabbit FileVault Package Maven.](https://jackrabbit.apache.org/filevault-package-maven-plugin/)
+>
+>I den här artikeln beskrivs **distributionen** för de konstruerade paket som ska AEM enligt Adobe Content Package Maven plugin.
 
 ## Paket och AEM projektstruktur {#aem-project-structure}
 
@@ -38,11 +41,11 @@ AEM as a Cloud Service följer de senaste metoderna för pakethantering och proj
 
 >[!TIP]
 >
->Se [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) artikel i den AEM as a Cloud Service dokumentationen och [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) dokumentation. Båda stöds fullt ut för AEM 6.5.
+>Se artikeln [AEM Projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) i AEM as a Cloud Service-dokumentationen och dokumentationen för [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html). Båda stöds fullt ut för AEM 6.5.
 
 ## Hämta innehållspaketet Maven Plugin {#obtaining-the-content-package-maven-plugin}
 
-Plugin-programmet finns på [Maven Central Repository.](https://mvnrepository.com/artifact/com.day.jcr.vault/content-package-maven-plugin?repo=adobe-public)
+Plugin-programmet är tillgängligt från [Maven Central Repository.](https://mvnrepository.com/artifact/com.day.jcr.vault/content-package-maven-plugin?repo=adobe-public)
 
 ## Innehållspaket Maven Plugin - mål och parametrar
 
@@ -59,7 +62,7 @@ Om du vill använda plugin-programmet Content Package Maven lägger du till föl
 </plugin>
 ```
 
-Om du vill att Maven ska kunna hämta plugin-programmet använder du profilen i [Hämta innehållspaketet Maven Plugin](#obtaining-the-content-package-maven-plugin) på den här sidan.
+Om du vill att Maven ska kunna hämta plugin-programmet använder du profilen som finns i avsnittet [Hämtning av innehållspaketets plugin](#obtaining-the-content-package-maven-plugin) på den här sidan.
 
 ## Mål för Innehållspaketet Maven Plugin {#goals-of-the-content-package-maven-plugin}
 
@@ -67,7 +70,7 @@ Mål- och målparametrarna som finns i innehållspaketets plugin-program beskriv
 
 ### Plugin-prefix {#plugin-prefix}
 
-Plugin-prefixet är `content-package`. Använd det här prefixet för att köra ett mål från kommandoraden, som i följande exempel:
+Insticksprefixet är `content-package`. Använd det här prefixet för att köra ett mål från kommandoraden, som i följande exempel:
 
 ```shell
 mvn content-package:build
@@ -75,7 +78,7 @@ mvn content-package:build
 
 ### Parameterprefix {#parameter-prefix}
 
-Om inget annat anges använder målen och parametrarna `vault` -prefix, som i följande exempel:
+Om inget annat anges använder målen och parametrarna för plugin-programmet prefixet `vault`, som i följande exempel:
 
 ```shell
 mvn content-package:install -Dvault.targetURL="https://192.168.1.100:4502/crx/packmgr/service.jsp"
@@ -83,21 +86,21 @@ mvn content-package:install -Dvault.targetURL="https://192.168.1.100:4502/crx/pa
 
 ### Proxies {#proxies}
 
-Mål där proxies används för AEM använder den första giltiga proxykonfigurationen som finns i inställningarna för Maven. Om ingen proxykonfiguration hittas används ingen proxy. Se `useProxy` -parametern i [Gemensamma parametrar](#common-parameters) -avsnitt.
+Mål där proxies används för AEM använder den första giltiga proxykonfigurationen som finns i inställningarna för Maven. Om ingen proxykonfiguration hittas används ingen proxy. Se parametern `useProxy` i avsnittet [Vanliga parametrar](#common-parameters).
 
 ### Gemensamma parametrar {#common-parameters}
 
-Parametrarna i följande tabell är gemensamma för alla mål utom när de anges i **Mål** kolumn.
+Parametrarna i följande tabell är gemensamma för alla mål utom när de anges i kolumnen **Mål** .
 
 | Namn | Typ | Obligatoriskt | Standardvärde | Beskrivning | Mål |
 |---|---|---|---|---|---|
-| `failOnError` | `boolean` | Nej | `false` | Värdet för `true` gör att bygget misslyckas när ett fel inträffar. Värdet för `false` gör att bygget ignorerar felet. | Alla mål utom `package` |
-| `name` | `String` | `build`: Ja, `install`: Nej, `rm`: Ja | `build`: Inget standardvärde, `install`: Värdet för `artifactId` Maven-projektets egendom | Namnet på paketet som ska användas | Alla mål utom `ls` |
+| `failOnError` | `boolean` | Nej | `false` | Värdet `true` gör att bygget misslyckas när ett fel inträffar. Värdet `false` gör att felet ignoreras. | Alla mål utom `package` |
+| `name` | `String` | `build`: Ja, `install`: Nej, `rm`: Ja | `build`: Inget standardvärde, `install`: Värdet för egenskapen `artifactId` i Maven-projektet | Namnet på paketet som ska användas | Alla mål utom `ls` |
 | `password` | `String` | Ja | `admin` | Lösenordet som används för autentisering med AEM | Alla mål utom `package` |
 | `serverId` | `String` | Nej | Server-ID som användarnamn och lösenord för autentisering ska hämtas från | Alla mål utom `package` |
 | `targetURL` | `String` | Ja | `http://localhost:4502/crx/packmgr/service.jsp` | URL:en för HTTP-tjänstens API för AEM | Alla mål utom `package` |
 | `timeout` | `int` | Nej | `5` | Anslutningens timeout för kommunikation med pakethanterartjänsten, i sekunder | Alla mål utom `package` |
-| `useProxy` | `boolean` | Nej | `true` | Värdet för `true` gör att Maven använder den första aktiva proxykonfigurationen som hittas för proxybegäranden till Package Manager. | Alla mål utom `package` |
+| `useProxy` | `boolean` | Nej | `true` | Värdet `true` gör att Maven använder den första aktiva proxykonfigurationen som hittas för proxybegäranden till Package Manager. | Alla mål utom `package` |
 | `userId` | `String` | Ja | `admin` | Användarnamnet som ska autentiseras med AEM | Alla mål utom `package` |
 | `verbose` | `boolean` | Nej | `false` | Aktiverar eller inaktiverar utförlig loggning | Alla mål utom `package` |
 
@@ -111,26 +114,26 @@ Skapar ett innehållspaket som redan har definierats på en AEM.
 
 #### Parametrar {#parameters}
 
-Alla parametrar för byggmålet beskrivs i [Gemensamma parametrar](#common-parameters) -avsnitt.
+Alla parametrar för byggmålet beskrivs i avsnittet [Vanliga parametrar](#common-parameters).
 
 ### installera {#install}
 
-Installerar ett paket i databasen. För att detta mål ska kunna uppnås krävs inte något Maven-projekt. Målet är bundet till `install` Maven byggs livscykel.
+Installerar ett paket i databasen. För att detta mål ska kunna uppnås krävs inte något Maven-projekt. Målet är bundet till `install`-fasen av Maven-byggets livscykel.
 
 #### Parametrar {#parameters-1}
 
-Förutom följande parametrar finns beskrivningarna i [Gemensamma parametrar](#common-parameters) -avsnitt.
+Förutom följande parametrar kan du läsa beskrivningarna i avsnittet [Vanliga parametrar](#common-parameters) .
 
 | Namn | Typ | Obligatoriskt | Standardvärde | Beskrivning |
 |---|---|---|---|---|
-| `artifact` | `String` | Nej | Värdet för `artifactId` Maven-projektets egendom | En sträng i formuläret `groupId:artifactId:version[:packaging]` |
+| `artifact` | `String` | Nej | Värdet för egenskapen `artifactId` i Maven-projektet | En sträng med formatet `groupId:artifactId:version[:packaging]` |
 | `artifactId` | `String` | Nej | Ingen | ID för den artefakt som ska installeras |
-| `groupId` | `String` | Nej | Ingen | The `groupId` av den artefakt som ska installeras |
+| `groupId` | `String` | Nej | Ingen | `groupId` för den artefakt som ska installeras |
 | `install` | `boolean` | Nej | `true` | Avgör om paketet ska packas upp automatiskt när det överförs |
-| `localRepository` | `org.apache.maven.artifact.repository.ArtifactRepository` | Nej | Värdet för `localRepository` systemvariabel | Den lokala Maven-databasen som inte kan konfigureras med plugin-konfigurationen eftersom systemegenskapen alltid används |
+| `localRepository` | `org.apache.maven.artifact.repository.ArtifactRepository` | Nej | Värdet för systemvariabeln `localRepository` | Den lokala Maven-databasen som inte kan konfigureras med plugin-konfigurationen eftersom systemegenskapen alltid används |
 | `packageFile` | `java.io.File` | Nej | Den primära artefakten som definieras för projektet Maven | Namnet på den paketfil som ska installeras |
 | `packaging` | `String` | Nej | `zip` | Den typ av förpackning av artefakten som ska installeras |
-| `pomRemoteRepositories` | `java.util.List` | Ja | Värdet för `remoteArtifactRepositories` egenskap som definieras för projektet Maven | Det här värdet kan inte konfigureras med plugin-konfigurationen och måste anges i projektet. |
+| `pomRemoteRepositories` | `java.util.List` | Ja | Värdet för egenskapen `remoteArtifactRepositories` som är definierad för projektet Maven | Det här värdet kan inte konfigureras med plugin-konfigurationen och måste anges i projektet. |
 | `project` | `org.apache.maven.project.MavenProject` | Ja | Projektet som plugin-programmet är konfigurerat för | Maven-projektet som är implicit eftersom projektet innehåller plugin-konfigurationen |
 | `repositoryId` (POM), `repoID` (kommandorad) | `String` | Nej | `temp` | ID för databasen som artefakten hämtas från |
 | `repositoryUrl` (POM), `repoURL` (kommandorad) | `String` | Nej | Ingen | URL:en för databasen som artefakten hämtas från |
@@ -138,19 +141,19 @@ Förutom följande parametrar finns beskrivningarna i [Gemensamma parametrar](#c
 
 ### ls {#ls}
 
-Visar de paket som distribuerats till [Pakethanteraren](/help/implementing/developing/tools/package-manager.md).
+Visar de paket som har distribuerats till [Package Manager](/help/implementing/developing/tools/package-manager.md).
 
 #### Parametrar {#parameters-2}
 
-Alla parametrar för ls-målet beskrivs i [Gemensamma parametrar](#common-parameters) -avsnitt.
+Alla parametrar för ls-målet beskrivs i avsnittet [Vanliga parametrar](#common-parameters).
 
 ### rm {#rm}
 
-Tar bort ett paket från [Pakethanteraren](/help/implementing/developing/tools/package-manager.md).
+Tar bort ett paket från [Package Manager](/help/implementing/developing/tools/package-manager.md).
 
 #### Parametrar {#parameters-3}
 
-Alla parametrar för RM-målet beskrivs i [Gemensamma parametrar](#common-parameters) -avsnitt.
+Alla parametrar för RM-målet beskrivs i avsnittet [Vanliga parametrar](#common-parameters).
 
 ### avinstallera {#uninstall}
 
@@ -158,66 +161,8 @@ Avinstallerar ett paket. Paketet finns kvar på servern i avinstallerat läge.
 
 #### Parametrar {#parameters-4}
 
-Alla parametrar för avinstallationsmålet beskrivs i [Gemensamma parametrar](#common-parameters) -avsnitt.
+Alla parametrar för avinstallationsmålet beskrivs i avsnittet [Vanliga parametrar](#common-parameters).
 
-### package {#package}
-
-Skapar ett innehållspaket. Standardkonfigurationen för paketmålet omfattar innehållet i katalogen där kompilerade filer sparas. Körningen av paketmålet kräver att kompileringsfasen har slutförts. Paketmålet är bundet till paketfasen av bygglivscykeln för Maven.
-
-#### Parametrar {#parameters-5}
-
-Förutom följande parametrar finns mer information i beskrivningen av `name` -parametern i [Gemensamma parametrar](#common-parameters) -avsnitt.
-
-| Namn | Typ | Obligatoriskt | Standardvärde | Beskrivning |
-|---|---|---|---|---|
-| `archive` | `org.apache.maven.archiver.MavenArchiveConfiguration` | Nej | Ingen | Den arkivkonfiguration som ska användas |
-| `builtContentDirectory` | `java.io.File` | Ja | Värdet på utdatakatalogen för Maven-bygget | Katalogen som innehåller innehållet som ska inkluderas i paketet |
-| `dependencies` | `java.util.List` | Nej | Ingen |  |
-| `embeddedTarget` | `java.lang.String` | Nej | Ingen |  |
-| `embeddeds` | `java.util.List` | Nej | Ingen |  |
-| `failOnMissingEmbed` | `boolean` | Ja | `false` | Värdet för `true` gör att bygget misslyckas när en inbäddad artefakt inte hittas i projektberoendena. Värdet för `false` gör att sådana fel ignoreras. |
-| `filterSource` | `java.io.File` | Nej | Ingen | Den här parametern definierar en fil som anger källan för arbetsytefiltret. Filtren som anges i konfigurationen och injiceras via inbäddade eller underpaket sammanfogas med filinnehållet. |
-| `filters` | `com.day.jcr.vault.maven.pack.impl.DefaultWorkspaceFilter` | Nej | Ingen | Den här parametern innehåller filterelement som definierar paketinnehållet. När de körs inkluderas filtren i `filter.xml` -fil. Se [Använda filter](#using-filters) nedan. |
-| `finalName` | `java.lang.String` | Ja | The `finalName` definieras i Maven-projektet (byggfasen) | Namnet på den genererade paketets ZIP-fil, utan `.zip` filtillägg |
-| `group` | `java.lang.String` | Ja | The `groupID` definieras i projektet Maven | The `groupId` av det genererade innehållspaketet som är en del av målinstallationssökvägen för innehållspaketet |
-| `outputDirectory` | `java.io.File` | Ja | Byggkatalogen som definieras i projektet Maven | Den lokala katalog där innehållspaketet sparas |
-| `prefix` | `java.lang.String` | Nej | Ingen |  |
-| `project` | `org.apache.maven.project.MavenProject` | Ja | Ingen | The Maven project |
-| `properties` | `java.util.Map` | Nej | Ingen | Dessa parametrar definierar ytterligare egenskaper som du kan ange i `properties.xml` -fil. Dessa egenskaper kan inte skriva över följande fördefinierade egenskaper: `group` (använd `group` parameter att ställa in), `name` (använd `name` parameter att ställa in), `version` (använd `version` parameter att ställa in), `description` (anges från projektbeskrivningen), `groupId` (`groupId` av projektbeskrivningen för Maven), `artifactId` (`artifactId` av projektbeskrivningen för Maven), `dependencies` (använd `dependencies` parameter att ställa in), `createdBy` (värdet på `user.name` system property), `created` (aktuell systemtid), `requiresRoot` (använd `requiresRoot` parameter att ställa in), `packagePath` (genereras automatiskt från grupp- och paketnamnet) |
-| `requiresRoot` | `boolean` | Ja | false | Definierar om paketet kräver en rot. Bli `requiresRoot` egenskapen för `properties.xml` -fil. |
-| `subPackages` | `java.util.List` | Nej | Ingen |  |
-| `version` | `java.lang.String` | Ja | Versionen som definierats i Maven-projektet | Innehållspaketets version |
-| `workDirectory` | `java.io.File` | Ja | Den katalog som definieras i Maven-projektet (byggfasen) | Katalogen som innehåller innehållet som ska inkluderas i paketet |
-
-#### Använda filter {#using-filters}
-
-Använd elementet filters för att definiera paketinnehållet. Filtren läggs till i `workspaceFilter` -elementet i `META-INF/vault/filter.xml` paketets fil.
-
-I följande filterexempel visas XML-strukturen som ska användas:
-
-```xml
-<filter>
-   <root>/apps/myapp</root>
-   <mode>merge</mode>
-       <includes>
-              <include>/apps/myapp/install/</include>
-              <include>/apps/myapp/components</include>
-       </includes>
-       <excludes>
-              <exclude>/apps/myapp/config/*</exclude>
-       </excludes>
-</filter>
-```
-
-##### Importläge {#import-mode}
-
-The `mode` -elementet definierar hur innehåll i databasen påverkas när paketet importeras. Följande värden kan användas:
-
-* **Sammanfoga:** Innehåll i paketet som inte redan finns i databasen läggs till. Innehåll som finns både i paketet och i databasen ändras inte. Inget innehåll tas bort från databasen.
-* **Ersätt:** Innehåll i paketet som inte finns i databasen läggs till i databasen. Innehåll i databasen ersätts med matchande innehåll i paketet. Innehåll tas bort från databasen när den inte finns i paketet.
-* **Uppdatering:** Innehåll i paketet som inte finns i databasen läggs till i databasen. Innehåll i databasen ersätts med matchande innehåll i paketet.
-
-När filtret inte innehåller `mode` element, standardvärdet för `replace` används.
 
 ### help {#help}
 
@@ -234,9 +179,9 @@ När filtret inte innehåller `mode` element, standardvärdet för `replace` anv
 
 Ersätt standardpaketkonfigurationsfilerna för att anpassa paketegenskaperna. Ta till exempel med en miniatyrbild för att skilja på paketet i [Pakethanteraren](/help/implementing/developing/tools/package-manager.md).
 
-Källfilerna kan finnas var som helst i filsystemet. I POM-filen definierar du byggresurser som kopierar källfilerna till `target/vault-work/META-INF` för införande i förpackningen.
+Källfilerna kan finnas var som helst i filsystemet. I POM-filen definierar du byggresurser som kopierar källfilerna till `target/vault-work/META-INF` för inkludering i paketet.
 
-Följande POM-kod lägger till filerna i `META-INF` projektkällans mapp till paketet:
+Följande POM-kod lägger till filerna i mappen `META-INF` i projektkällan i paketet:
 
 ```xml
 <build>
@@ -250,7 +195,7 @@ Följande POM-kod lägger till filerna i `META-INF` projektkällans mapp till pa
 </build>
 ```
 
-Följande POM-kod lägger bara till en miniatyrbild i paketet. Miniatyrbilden måste ha ett namn `thumbnail.png`och måste finnas i `META-INF/vault/definition` paketets mapp. I det här exemplet finns källfilen i `/src/main/content/META-INF/vault/definition` projektmapp:
+Följande POM-kod lägger bara till en miniatyrbild i paketet. Miniatyrbilden måste ha namnet `thumbnail.png` och finnas i mappen `META-INF/vault/definition` i paketet. I det här exemplet finns källfilen i mappen `/src/main/content/META-INF/vault/definition` i projektet:
 
 ```xml
 <build>
@@ -270,4 +215,4 @@ Den senaste AEM Project Archetype implementerar paketstrukturen med bästa praxi
 
 >[!TIP]
 >
->Se [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) artikel i den AEM as a Cloud Service dokumentationen och [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) dokumentation. Båda stöds fullt ut för AEM 6.5.
+>Se artikeln [AEM Projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) i AEM as a Cloud Service-dokumentationen och dokumentationen för [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html). Båda stöds fullt ut för AEM 6.5.
