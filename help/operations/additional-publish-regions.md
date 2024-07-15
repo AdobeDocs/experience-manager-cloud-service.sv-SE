@@ -1,5 +1,5 @@
 ---
-title: Ytterligare publiceringsregioner
+title: Ytterligare Publish-regioner
 description: Läs om hur AEM as a Cloud Service stöder ytterligare publiceringsregioner för ökad tillgänglighet och minskad latens.
 exl-id: b9ac3c6a-eb8b-461d-8f1d-a0356046a3f9
 feature: Operations
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 ---
 
-# Ytterligare publiceringsregioner {#additional-publish-regions}
+# Ytterligare Publish-regioner {#additional-publish-regions}
 
 Ytterligare publiceringsregioner kan licensieras och aktiveras i program som skapats med AEM Sites. När den är konfigurerad dirigeras trafik på scenen och i produktionsmiljöer till flera publiceringsmiljöer, vilket har följande fördelar:
 
@@ -34,7 +34,7 @@ Nedan följer några exempel på användningsområden där organisationer kan dr
 
 ## Aktivera och konfigurera {#enabling-and-configuring}
 
-När du har licensierat ytterligare en publiceringsregion konfigureras regionerna med hjälp av Cloud Manager. Se [Dokumentation för Cloud Manager](/help/implementing/cloud-manager/manage-environments.md#multiple-regions) för detaljerade anvisningar.
+När du har licensierat ytterligare en publiceringsregion konfigureras regionerna med Cloud Manager. Mer information finns i [Cloud Manager-dokumentationen](/help/implementing/cloud-manager/manage-environments.md#multiple-regions).
 
 Ytterligare publiceringsregioner används i scen- och produktionsmiljöer, men inte i RDE- eller utvecklingsmiljöer.
 
@@ -47,11 +47,11 @@ Så som beskrivs i avsnittet Avancerade överväganden om nätverksarbete nedan 
 
 När ytterligare en publiceringsregion är aktiverad för ett program med avancerade nätverk redan konfigurerat, dirigeras trafiken i den extra publiceringsregionen som matchar de avancerade nätverksreglerna som standard genom den primära regionen. För att kunna utnyttja den ökade tillgängligheten rekommenderar vi att du aktiverar avancerade nätverk i de övriga regionerna.
 
-Se [Avancerad nätverkskonfiguration för ytterligare publiceringsregioner](/help/security/configuring-advanced-networking.md#advanced-networking-configuration-for-additional-publish-regions) i dokumentationen för avancerade nätverk, där du får mer information om hur du lägger till avancerade nätverkskonfigurationer i ytterligare regioner utan att förlora anslutningen.
+Avsnittet [Avancerad nätverkskonfiguration för ytterligare Publish-regioner](/help/security/configuring-advanced-networking.md#advanced-networking-configuration-for-additional-publish-regions) i dokumentationen för det avancerade nätverket innehåller mer information om hur du lägger till avancerade nätverkskonfigurationer i ytterligare regioner utan att anslutningen bryts.
 
 ## Loggning {#logging}
 
-Om ytterligare publiceringsregioner är aktiverade kommer separata loggar för varje region att göras tillgängliga via Cloud Manager. Mer information finns i [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) och [Loggar för ytterligare publiceringsregioner](/help/implementing/developing/introduction/logging.md#logs-for-additional-publish-regions).
+Om ytterligare publiceringsregioner är aktiverade kommer separata loggar för varje region att göras tillgängliga via Cloud Manager. Mer information finns i [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) och [Loggar för ytterligare Publish-regioner](/help/implementing/developing/introduction/logging.md#logs-for-additional-publish-regions).
 
 ## Begränsningar {#limitations}
 

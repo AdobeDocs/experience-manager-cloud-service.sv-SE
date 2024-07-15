@@ -21,17 +21,17 @@ Du måste uppfylla dessa krav innan du lägger till en TXT-post.
 * Du måste kunna redigera DNS-posterna för din organisations domän eller kontakta rätt person som kan göra det.
 * Du måste identifiera din domänvärd eller registrator om du inte redan känner till den.
 
-När du initierar domänverifiering får du det namn och TXT-värde du ska använda för verifiering i Cloud Manager. Lägg till en TXT-post till domänens DNS-server med det angivna namnet och värdet.
+När du initierar domänverifiering ger Cloud Manager dig det namn och TXT-värde som ska användas för verifiering. Lägg till en TXT-post till domänens DNS-server med det angivna namnet och värdet.
 
 1. Logga in på din domänvärd och hitta avsnittet med DNS-poster.
-1. Lägg till `_aemverification.[yourdomainname]` som **Namn** och lägg till TXT-värdet exakt som det ser ut.
+1. Lägg till `_aemverification.[yourdomainname]` som **Namn**-värde och lägg till TXT-värdet exakt som det visas.
 
 Se exemplen i den här tabellen.
 
 | Domän | Namn | TXT Value |
 |--- |--- |---|
-| `example.com` | `_aemverification.example.com` | Kopiera hela värdet som visas i användargränssnittet i Cloud Manager. Detta är specifikt för domänen och miljön. Till exempel:<br>`adobe-aem-verification=example.com/[program]/[env]/..*` |
-| `www.example.com` | `_aemverification.www.example.com` | Kopiera hela värdet som visas i användargränssnittet i Cloud Manager. Detta är specifikt för domänen och miljön. Till exempel:<br>`adobe-aem-verification=www.example.com/[program]/[env]/..*` |
+| `example.com` | `_aemverification.example.com` | Kopiera hela värdet som visas i Cloud Manager-gränssnittet. Detta är specifikt för domänen och miljön. Till exempel:<br>`adobe-aem-verification=example.com/[program]/[env]/..*` |
+| `www.example.com` | `_aemverification.www.example.com` | Kopiera hela värdet som visas i Cloud Manager-gränssnittet. Detta är specifikt för domänen och miljön. Till exempel:<br>`adobe-aem-verification=www.example.com/[program]/[env]/..*` |
 
 När du är klar kan du verifiera resultatet genom att köra följande kommando
 
@@ -39,9 +39,9 @@ När du är klar kan du verifiera resultatet genom att köra följande kommando
 dig _aemverification.[yourdomainname] -t txt
 ```
 
-Det förväntade resultatet ska visa det TXT-värde som anges i användargränssnittet i molnhanteraren.
+Det förväntade resultatet ska visa det TXT-värde som anges i användargränssnittet i Cloud Manager.
 
-Om din domän till exempel är `example.com`och kör sedan:
+Om din domän till exempel är `example.com` kör du:
 
 ```shell
 dig TXT _aemverification.example.com -t txt
@@ -49,4 +49,4 @@ dig TXT _aemverification.example.com -t txt
 
 >[!TIP]
 >
->Det finns flera [Verktyg för DNS-sökning](https://www.ultratools.com/tools/dnsLookup) tillgängliga. Google DoH kan användas för att söka efter TXT-postposter och identifiera om TXT-posten saknas eller är felaktig.
+>Det finns flera [tillgängliga DNS-sökverktyg](https://www.ultratools.com/tools/dnsLookup). Google DoH kan användas för att söka efter TXT-postposter och identifiera om TXT-posten saknas eller är felaktig.

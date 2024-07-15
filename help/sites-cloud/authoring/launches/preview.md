@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Förhandsgranska med Timewarp {#preview-with-timewarp}
 
-[Timewarp](/help/sites-cloud/authoring/sites-console/page-versions.md#timewarp) kan användas med sidor som också ingår i en programstart:
+[Timewarp](/help/sites-cloud/authoring/sites-console/page-versions.md#timewarp) kan användas med sidor som också ingår i en start:
 
-1. Vid val **Timewarp** i sidredigeraren uppmanas du ange ett datum. Välj ett datum som infaller efter kampanjdatumet för lanseringen:
+1. När du väljer **Timewarp** i sidredigeraren blir du ombedd att ange ett datum. Välj ett datum som infaller efter kampanjdatumet för lanseringen:
    ![Navigera från sidredigeraren](/help/sites-cloud/authoring/assets/launches-timewarp-01.png)
 
 1. Det innehåll som är lämpligt vid det datumet visas:

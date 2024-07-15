@@ -28,13 +28,13 @@ Det finns krav för den här uppgiften:
 
 1. Se till att användaren som utför uppgiften har de behörigheter som krävs:
 
-   * minst `Deployment Manager` Cloud Manager måste ha en roll.
+   * minst måste rollen `Deployment Manager` i Cloud Manager anges.
 
 ## Uppdatera dina innehållsfragment {#updating-content-fragments}
 
 1. Aktivera uppdateringen genom att ange följande variabler för instansen med Cloud Manager-gränssnittet:
 
-   ![Konfiguration av Cloud Manager](assets/cfm-graphql-update-01.png "Konfiguration av Cloud Manager")
+   ![Konfiguration av Cloud Manager-miljö](assets/cfm-graphql-update-01.png "Konfiguration av Cloud Manager-miljö")
 
    De tillgängliga variablerna är:
 
@@ -43,14 +43,14 @@ Det finns krav för den här uppgiften:
    | 1 | `CF_MIGRATION_ENABLED` | `1` | `0` | Alla | | Variabel | Enables(!=0) eller inaktiverar(0) som utlöser migreringsjobb för innehållsfragment. |
    | 2 | `CF_MIGRATION_ENFORCE` | `1` | `0` | Alla | | Variabel | Tvinga (!=0) ommigrering av innehållsfragment. Om du anger flaggan till 0 utförs en stegvis migrering av CF:er. Detta innebär, om jobbet avslutas av någon anledning, att nästa körning av jobbet startar migreringen från den punkt där det avslutades. Den första migreringen rekommenderas för tvång (value=1). |
    | 3 | `CF_MIGRATION_BATCH` | `50` | `50` | Alla | | Variabel | Storlek på gruppen för att spara antalet innehållsfragment efter migreringen. Detta gäller hur många CF:er som sparas i databasen i en batch och kan användas för att optimera antalet skrivningar i databasen. |
-   | 4 | `CF_MIGRATION_LIMIT` | `1000` | `1000` | Alla | | Variabel | Maximalt antal innehållsfragment som ska bearbetas samtidigt. Se även anmärkningar för `CF_MIGRATION_INTERVAL`. |
+   | 4 | `CF_MIGRATION_LIMIT` | `1000` | `1000` | Alla | | Variabel | Maximalt antal innehållsfragment som ska bearbetas samtidigt. Se även anteckningar för `CF_MIGRATION_INTERVAL`. |
    | 5 | `CF_MIGRATION_INTERVAL` | `60` | `600` | Alla | | Variabel | Intervall (sekunder) för att bearbeta återstående innehållsfragment upp till nästa gräns. Det här intervallet betraktas också som både en väntetid innan jobbet startas och en fördröjning mellan bearbetningen av varje efterföljande CF_MIGRATION_LIMIT-antal CF:er. (*) |
 
    >[!NOTE]
    >
    >(*)
    >
-   >Värdet för `CF_MIGRATION_INTERVAL` kan också hjälpa till att beräkna den totala körningstiden för migreringsjobbet.
+   >Värdet för `CF_MIGRATION_INTERVAL` kan också bidra till att approximera den totala körningstiden för migreringsjobbet.
    >
    >Till exempel:
    >
@@ -60,7 +60,7 @@ Det finns krav för den här uppgiften:
    >* Ungefärlig tid krävs för att slutföra migreringen = 60 + (20 000/1 000 * 60) = 1 260 sek = 21 minuter
    >  De ytterligare&quot;60&quot; sekunder som läggs till i början beror på den initiala fördröjningen när jobbet startas.
    >
-   >Det här är bara *minimum* den tid som krävs för att slutföra jobbet, men inte I/O-tiden. Den faktiska tiden kan vara längre än denna uppskattning.
+   >Det här är bara den *minsta* tiden som krävs för att slutföra jobbet, och det inkluderar inte I/O-tiden. Den faktiska tiden kan vara längre än denna uppskattning.
 
 1. Övervaka uppdateringens förlopp och slutförande.
 
@@ -88,7 +88,7 @@ Det finns krav för den här uppgiften:
         23.01.2023 12:40:45.180 *INFO* [sling-threadpool-8abcc1bb-cdcb-46d4-8565-942ad8a73209-(apache-sling-job-thread-pool)-1-Content Fragment Upgrade Job Queue Config(cfm/upgrader)] com.adobe.cq.dam.cfm.impl.upgrade.UpgradeJob Finished content fragments upgrade in 5m, slingJobId: 2023/1/23/12/34/ad1b399e-77be-408e-bc3f-57097498fddb_0, status: MaintenanceJobStatus{jobState=SUCCEEDED, statusMessage='Upgrade to version '1' succeeded.', errors=[], successCount=3781, failedCount=0, skippedCount=0}
         ```
 
-   Kunder som har aktiverat åtkomst till miljöloggar med Splunk kan använda exempelfrågan nedan för att övervaka uppgraderingsprocessen. Mer information om hur du aktiverar Splunk-loggning finns i [Felsöka produktion och scen](/help/implementing/developing/introduction/logging.md#debugging-production-and-stage).
+   Kunder som har aktiverat åtkomst till miljöloggar med Splunk kan använda exempelfrågan nedan för att övervaka uppgraderingsprocessen. Mer information om hur du aktiverar segmentloggning finns i [Felsöka produktion och scen](/help/implementing/developing/introduction/logging.md#debugging-production-and-stage).
 
    ```splunk
    index=<indexName> sourcetype=aemerror aem_envId=<environmentId> msg="*com.adobe.cq.dam.cfm.impl.upgrade.UpgradeJob Finished*" 
@@ -97,7 +97,7 @@ Det finns krav för den här uppgiften:
 
    Var:
 
-   * `environmentId` - en identifierare av kundens miljö, till exempel `e1234`
+   * `environmentId` - en identifierare för kundmiljö, till exempel `e1234`
    * `indexName` - ett kundindexnamn, samla in `aemerror` händelser
 
    Exempelutdata:
@@ -133,7 +133,7 @@ Det finns krav för den här uppgiften:
    >
    >Det här steget krävs för att slutföra uppgraderingen.
 
-   Återställ molnmiljövariabeln när uppdateringsproceduren har körts `CF_MIGRATION_ENABLED` till &#39;0&#39;, för att utlösa återvinning av alla poder.
+   När uppdateringsproceduren har körts återställer du molnmiljövariabeln `CF_MIGRATION_ENABLED` till &#39;0&#39; för att aktivera återanvändning av alla poder.
 
    | | Namn | Värde | Standardvärde | Tjänst | Används | Typ | Anteckningar |
    |---|---|---|---|---|---|---|---|
@@ -147,13 +147,13 @@ Det finns krav för den här uppgiften:
 
    Du kan verifiera att uppdateringen har slutförts med hjälp av databaswebbläsaren i Cloud Manager utvecklarkonsol för att kontrollera data för innehållsfragmentet.
 
-   * Innan den första fullständiga migreringen `cfGlobalVersion` egenskapen finns inte.
-Därför finns den här egenskapen på JCR-noden `/content/dam` med värdet `1`, bekräftar att migreringen har slutförts.
+   * Egenskapen `cfGlobalVersion` finns inte före den första fullständiga migreringen.
+Därför bekräftar förekomsten av den här egenskapen, på JCR-noden `/content/dam` med värdet `1`, att migreringen har slutförts.
 
    * Du kan även kontrollera följande egenskaper för de enskilda innehållsfragmenten:
 
       * `_strucVersion` ska ha värdet `1`
-      * `indexedData` struktur måste finnas
+      * Strukturen `indexedData` måste finnas
 
      >[!NOTE]
      >
@@ -165,6 +165,6 @@ Därför finns den här egenskapen på JCR-noden `/content/dam` med värdet `1`,
 
 Tänk på följande begränsningar:
 
-* Optimering av prestanda för GraphQL-filter är endast möjligt efter en fullständig uppdatering av alla dina innehållsfragment (vilket visas genom närvaron av `cfGlobalVersion` egenskap för JCR-noden `/content/dam`)
+* Optimering av prestanda för GraphQL-filter är endast möjligt efter en fullständig uppdatering av alla dina innehållsfragment (vilket anges av närvaron av egenskapen `cfGlobalVersion` för JCR-noden `/content/dam`)
 
-* Om innehållsfragment importeras från ett innehållspaket (med `crx/de`) när uppdateringsproceduren har körts, beaktas inte dessa innehållsfragment i GraphQL-frågeresultat förrän uppdateringsproceduren körs igen.
+* Om innehållsfragment importeras från ett innehållspaket (med `crx/de`) efter att uppdateringsproceduren har körts, beaktas inte dessa innehållsfragment i GraphQL-frågeresultaten förrän uppdateringsproceduren körs igen.

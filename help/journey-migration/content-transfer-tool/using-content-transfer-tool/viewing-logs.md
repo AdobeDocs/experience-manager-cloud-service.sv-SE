@@ -31,15 +31,15 @@ Om du vill visa extraheringsloggarna går du till Adobe Experience Manager-käll
 
 Följ sedan stegen nedan:
 
-1. Välj en migreringsuppsättning och klicka på **Visa logg** i åtgärdsfältet. Dialogrutan Logs öppnas. Klicka **Extraheringslogg** för att visa loggarna på en ny flik.
+1. Välj en migreringsuppsättning och klicka på **Visa logg** i åtgärdsfältet. Dialogrutan Logs öppnas. Klicka på **Extraheringslogg** för att visa loggarna på en ny flik.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam25.png) \
-   Eller klicka på **SLUTFÖRD** status för att visa loggar på en ny flik.
+   Du kan också klicka på statusen **SLUTFÖRD** om du vill visa loggarna på en ny flik.
 
 1. Om du vill bifoga loggarna utan att använda användargränssnittet kan du använda SSH i AEM-källmiljön och lägga till `crx-quickstart/cloud-migration/extraction-XXXXX/output.log file`.
 
 ### Inmatningsloggar
 
-Om du vill visa inmatningsloggar går du till listan Inmatningsjobb i Cloud Acceleration Manager, letar upp det önskade migreringsjobbet och klickar på de tre punkterna (**...**) av jobbet. Du kan sedan klicka **Hämtningslogg** för att ladda ned loggar.
+Om du vill visa loggar för inmatning går du till listan Inmatningsjobb i Cloud Acceleration Manager, letar upp önskat migreringsjobb och klickar på de tre punkterna (**..**) för jobbet. Du kan sedan klicka på **Hämta logg** för att hämta loggar.
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam28.png)

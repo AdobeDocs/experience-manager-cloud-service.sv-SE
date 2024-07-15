@@ -1,6 +1,6 @@
 ---
-title: Hur skapar jag en [!DNL AEM Forms] som en molntjänstmiljö?
-description: Lär dig konfigurera och konfigurera [!DNL AEM Forms] as a Cloud Service miljö.
+title: Hur konfigurerar jag en [!DNL AEM Forms]  som en molntjänstmiljö?
+description: Lär dig att konfigurera och konfigurera en  [!DNL AEM Forms] as a Cloud Service miljö.
 role: Admin, Developer, User
 feature: Adaptive Forms
 exl-id: 42f53662-fbcf-4676-9859-bf187ee9e4af
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 ---
 
-# Anlita till [!DNL AEM Forms] as a Cloud Service {#overview}
+# Inbyggt i [!DNL AEM Forms] as a Cloud Service {#overview}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -21,17 +21,17 @@ ht-degree: 1%
 
 ## Bestäm profiler {#personas-aem-forms-project}
 
-<!-- When you sign up for the service, Adobe creates an Organization identifier for your company in the Adobe Identity Management System (IMS), where your users and their permissions can be managed. So, --> Innan du går med i en as a Cloud Service miljö i Adobe Experience Manager (AEM) Forms måste du bestämma dig för vilka personer du ska arbeta och strukturera ett team för ditt projekt. En typisk [!DNL AEM Forms] projektteamet har följande egenskaper:
+<!-- When you sign up for the service, Adobe creates an Organization identifier for your company in the Adobe Identity Management System (IMS), where your users and their permissions can be managed. So, --> Innan du går med i en as a Cloud Service miljö i Adobe Experience Manager (AEM) Forms måste du bestämma dig för vilka personer som ska delta och strukturera ett team för ditt projekt. Ett typiskt [!DNL AEM Forms]-projektteam har följande profiler:
 
-* **UX-designer (User Experience)**: En UX-designer (User Experience) definierar stil, layout och varumärke för [!DNL AEM Forms] resurser.
+* **Användarupplevelse (UX) Designer**: En användarupplevelse (UX) Designer definierar format, layout och varumärkning för [!DNL AEM Forms]-resurser.
 
-* **Forms-läkare**: En Forms-användare skapar adaptiva Forms, teman och mallar utifrån den stil, layout och det varumärke som UX Designer ger. Användaren skapar också och integrerar adaptiva formulär med en formulärdatamodell (FDM) och AEM arbetsflöden. En Forms-deltagare utför vanligtvis kundrelaterade uppgifter.
+* **Forms-behandlare**: En Forms-behandlare skapar adaptiva Forms, teman och mallar utifrån den stil, layout och profilering som finns i UX Designer. Användaren skapar också och integrerar adaptiva formulär med en formulärdatamodell (FDM) och AEM arbetsflöden. En Forms-deltagare utför vanligtvis kundrelaterade uppgifter.
 
-* **Forms-utvecklare**: En Forms-utvecklare utvecklar en skräddarsydd blankettlösning. En Forms-utvecklare utför vanligtvis backend-utveckling som utveckling av anpassade komponenter, AEM arbetsflöden, förifyllda tjänster med mera.
+* **Forms-utvecklare**: En Forms-utvecklare utvecklar en anpassad formulärlösning. En Forms-utvecklare utför vanligtvis backend-utveckling som utveckling av anpassade komponenter, AEM arbetsflöden, förifyllda tjänster med mera.
 
-* **AEM**: En AEM administratör hjälper till med den övergripande konfigurationen, som att konfigurera användare, göra miljön skarpare, konfigurera datakällor, konfigurera e-post och tredjepartsprogram. AEM kan också hjälpa till med integreringar som integrering med Adobe Analytics, Adobe Target och Adobe Sign.
+* **AEM administratör**: En AEM administratör hjälper till med den övergripande konfigurationen, som att konfigurera användare, göra miljön mer skarp, konfigurera datakällor, konfigurera e-post och tredjepartsprogram. AEM kan också hjälpa till med integreringar som integrering med Adobe Analytics, Adobe Target och Adobe Sign.
 
-* **Slutanvändare**: En användare interagerar med och skickar det publicerade formuläret, signerar skickade formulär, spårar skickade ansökningar via en webbportal och får personligt anpassad kommunikation.
+* **Slutanvändare**: En användare interagerar med och skickar det publicerade formuläret, signerar skickade formulär, spårar skickade ansökningar via en webbportal och får personliga meddelanden.
 
 <!-- While onboarding to the service, assign the following AEM groups to [!DNL AEM Forms] as a Cloud Service based on their role:
 
@@ -43,24 +43,24 @@ ht-degree: 1%
 
 ## Anlita tjänsten {#onboarding}
 
-* [Inbyggt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html) till [!DNL Adobe Experience Manager] as a Cloud Service.
+* [Anmäl dig](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html) till as a Cloud Service [!DNL Adobe Experience Manager].
 
-* (Endast för sandlådor) Efter introduktionen av tjänsten [skapa](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html?lang=en) och [run](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html) både rörledningar för produktion och icke-produktion. Det aktiverar och innehåller de senaste funktionerna i [!DNL AEM Forms] as a Cloud Service för din miljö.
+* (Endast för sandlådor) Efter introduktion av tjänsten kan du [skapa](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html?lang=en) och [köra](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html) både i pipelines för produktion och icke-produktion. Den aktiverar och tillför de senaste funktionerna i [!DNL AEM Forms] as a Cloud Service till din miljö.
 
-Du kan använda Forms as a Cloud Service för att skapa ett anpassningsbart formulär (digital registrering) eller generera en kundkommunikation. Efter slutförande [Onboarding](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html) till [!DNL Adobe Experience Manager] as a Cloud Service utför du följande åtgärder för att aktivera funktionerna Forms - Digital registrering eller Kundkommunikation. <!--You can also enable both the features-->:
+Du kan använda Forms as a Cloud Service för att skapa ett anpassningsbart formulär (digital registrering) eller generera en kundkommunikation. När du har slutfört [Onboarding](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html) till as a Cloud Service [!DNL Adobe Experience Manager] utför du följande åtgärder för att aktivera funktionerna Forms - Digital registrering eller Kundkommunikation. <!--You can also enable both the features-->:
 
-1. Logga in på Cloud Manager och öppna din as a Cloud Service AEM Forms-instans.
+1. Logga in på Cloud Manager och öppna AEM Forms as a Cloud Service Instance.
 1. Öppna alternativet Redigera program, gå till fliken Lösningar och tillägg:
 
-   * Om du har en produktionsmiljö väljer du **[!UICONTROL Forms - Communications]** för att aktivera Forms - Digital registrering och Forms - Communications Add-On.
+   * Om du har en produktionsmiljö väljer du alternativet **[!UICONTROL Forms - Communications]** för att aktivera tillägget Forms - Digital registrering och Forms - kommunikation.
 
      ![Kommunikation](assets/communications.png)
 
    <!-- If you have already enabled the **[!UICONTROL Forms - Digital Enrollment]** option, then select the **[!UICONTROL Forms - Communications Add-On]** option. ![Addon](assets/add-on.png) -->
 
-   * Om du har en sandlådemiljö väljer du **[!UICONTROL Forms]** för att aktivera Forms - Digital registrering och Forms - Communications Add-On.
+   * Om du har en sandlådemiljö väljer du **[!UICONTROL Forms]** för att aktivera tillägget Forms - Digital registrering och Forms - Kommunikation.
 
-     ![Val av formulärdigital registrering](assets/forms-digital-enrollment1.png)
+     ![Val för digital registrering](assets/forms-digital-enrollment1.png)
 
 
 1. Klicka på **[!UICONTROL Update]**.
@@ -68,21 +68,21 @@ Du kan använda Forms as a Cloud Service för att skapa ett anpassningsbart form
 
 >[!NOTE]
 >
-> Om du vill aktivera och konfigurera API:er för dokumentredigering lägger du till följande regel i [Dispatcher-konfiguration](setup-local-development-environment.md#forms-specific-rules-to-dispatcher):
+> Om du vill aktivera och konfigurera API:er för dokumentbearbetning lägger du till följande regel i [Dispatcher-konfigurationen](setup-local-development-environment.md#forms-specific-rules-to-dispatcher):
 >
 > `# Allow Forms Doc Generation requests`
 > `/0062 { /type "allow" /method "POST" /url "/adobe/forms/assembler/*" }`
 
 ## Konfigurera användare {#config-users}
 
-När du är klar med introduktionen av tjänsten loggar du in på [!DNL AEM Forms] as a Cloud Service miljö, öppna Author- och Publish-instanser och lägg till användare i Forms-specifika [AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html#accessing), baserat på deras personlighet. I följande tabell visas Forms-specifika AEM, som är tillgängliga direkt i kartongen, och motsvarande användartyper. Tabellen innehåller även AEM instanstyp för varje användartyp:
+När du är klar med introduktionen till tjänsten loggar du in på din [!DNL AEM Forms]-as a Cloud Service miljö, öppnar författare och Publish-instanser och lägger till användare i Forms-specifika [AEM-grupper](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html#accessing), baserat på deras personliga profil. I följande tabell visas Forms-specifika AEM, som är tillgängliga direkt i kartongen, och motsvarande användartyper. Tabellen innehåller även AEM instanstyp för varje användartyp:
 
 | Användartyper (personas) | Användargrupper | AEM |
 |---|---|---|
 | Formgivare/Forms-utvecklare | <ul> <li> [!DNL forms-users] </li><li> [!DNL template-author] </li><li> [!DNL workflow-users] </li><li> [!DNL workflow-editors] </li><li> [!DNL fdm-authors] </li></ul> | Författarinstans |
-| User Experience(UX) Designer | <ul> <li> [!DNL forms-users]</li><li> [!DNL template-author] </li></ul> | Författarinstans |
-| AEM-administratör | <ul> <li>[!DNL aem-administrators],</li> <li>[!DNL fd-administrators] </li> </ul> | Skapa och publicera instans |
-| Slutanvändare | <ul> <li>När en användare måste logga in för att visa och skicka ett adaptivt formulär lägger du till sådana användare i [!DNL forms-users] grupp. </li> <li>När ingen användarautentisering krävs för att få tillgång till Adaptiv Forms ska du inte tilldela någon grupp till sådana användare. </li> </ul> | Skapa och publicera instans |
+| Användarupplevelse (UX) Designer | <ul> <li> [!DNL forms-users]</li><li> [!DNL template-author] </li></ul> | Författarinstans |
+| AEM-administratör | <ul> <li>[!DNL aem-administrators],</li> <li>[!DNL fd-administrators] </li> </ul> | Författare och Publish-instans |
+| Slutanvändare | <ul> <li>När en användare måste logga in för att visa och skicka ett adaptivt formulär lägger du till sådana användare i gruppen [!DNL forms-users]. </li> <li>När ingen användarautentisering krävs för att få tillgång till Adaptiv Forms ska du inte tilldela någon grupp till sådana användare. </li> </ul> | Författare och Publish-instans |
 
 Mer information om Forms-specifika AEM och motsvarande behörigheter finns i [Grupper och behörigheter](forms-groups-privileges-tasks.md).
 
@@ -90,7 +90,7 @@ Mer information om Forms-specifika AEM och motsvarande behörigheter finns i [Gr
 
 ## Nästa steg {#next-steps}
 
-[Konfigurera en lokal utvecklingsmiljö](setup-local-development-environment.md). Du kan använda en lokal utvecklingsmiljö för att skapa ett adaptivt formulär och relaterade resurser (teman, mallar, anpassade skickaåtgärder, förifyllningstjänst med mera). Och [konvertera PDF forms till adaptiv Forms](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html) utan att logga in i en molnutvecklingsmiljö.
+[Konfigurera en lokal utvecklingsmiljö](setup-local-development-environment.md). Du kan använda en lokal utvecklingsmiljö för att skapa ett adaptivt formulär och relaterade resurser (teman, mallar, anpassade skickaåtgärder, förifyllningstjänst med mera). Och [konvertera PDF forms till anpassad Forms](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html) utan att logga in i en molnutvecklingsmiljö.
 
 <!-- ### Business unit and end-users {#business-unit-and-end-users}
 

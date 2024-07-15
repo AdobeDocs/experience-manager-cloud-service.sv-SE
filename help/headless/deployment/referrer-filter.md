@@ -19,7 +19,7 @@ Adobe Experience Manager referensfilter ger åtkomst från tredjepartsvärdar.
 En OSGi-konfiguration för referensfiltret behövs för att aktivera åtkomst till GraphQL-slutpunkten för headless-program via HTTP-POST. När du använder AEM Headless Persisted Queries som öppnar AEM via HTTP-GET behövs ingen konfiguration av referensfiltret.
 
 >[!WARNING]
-> AEM refererarfilter är inte en OSGi-konfigurationsfabrik, vilket innebär att endast en konfiguration är aktiv i en AEM åt gången. Undvik när det är möjligt att lägga till anpassade inställningar för referensfilter, eftersom detta skriver över AEM systemspecifika konfigurationer och kan störa produktfunktionerna.
+> AEM referensfilter är inte en OSGi-konfigurationsfabrik, vilket innebär att endast en konfiguration är aktiv i en AEM. Undvik när det är möjligt att lägga till anpassade inställningar för referensfilter, eftersom detta skriver över AEM egna konfigurationer och kan störa produktfunktionerna.
 
 Detta gör du genom att lägga till en lämplig OSGi-konfiguration för referensfiltret som:
 
@@ -28,7 +28,7 @@ Detta gör du genom att lägga till en lämplig OSGi-konfiguration för referens
 
 Namnet på filen måste vara `org.apache.sling.security.impl.ReferrerFilter.cfg.json`.
 
-Om du till exempel vill ge åtkomst för begäranden med referenten `my.domain` du kan:
+Om du till exempel vill bevilja åtkomst för begäranden med referenten `my.domain` kan du:
 
 ```xml
 {
@@ -58,10 +58,10 @@ Om du till exempel vill ge åtkomst för begäranden med referenten `my.domain` 
 >
 >* endast ge åtkomst till betrodda domäner
 >* se till att ingen känslig information exponeras
->* inte använda jokertecken [*] syntax; detta inaktiverar både autentiserad åtkomst till GraphQL-slutpunkten och exponerar den även för hela världen.
+>* använder inte syntax för jokertecken [*]. Detta inaktiverar både autentiserad åtkomst till GraphQL-slutpunkten och exponerar den även för hela världen.
 
 >[!CAUTION]
 >
->Alla GraphQL [scheman](#schema-generation) (härleds från Content Fragment Models som har **Aktiverad**) går att läsa via GraphQL-slutpunkten.
+>Alla GraphQL [scheman](#schema-generation) (härledda från modeller för innehållsfragment som har **aktiverats**) kan läsas via GraphQL slutpunkt.
 >
 >Det innebär att du måste se till att inga känsliga data är tillgängliga, eftersom de kan läcka på det här sättet. Detta inkluderar till exempel information som kan finnas som fältnamn i modelldefinitionen.

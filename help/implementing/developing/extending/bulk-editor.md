@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Konfigurera massredigering av sidegenskaper {#configuring-bulk-editing-of-page-properties}
 
-[Massredigering av sidegenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md#from-the-sites-console-multiple-pages) Med kan du redigera egenskaper för flera sidor samtidigt.
+[Med gruppredigering av sidegenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md#from-the-sites-console-multiple-pages) kan du redigera egenskaperna för flera sidor samtidigt.
 
 ## Överväganden {#considerations}
 
@@ -22,7 +22,7 @@ Sidegenskaper är inte aktiverade för massredigering som standard. De måste va
 * Vissa fält är vanligtvis unika. Du måste bestämma om det är meningsfullt att aktivera sådana fält för massredigering, när ett värde ska användas.
    * Exempelvis är sidtitlar nästan alltid unika.
 * Vissa fält kan ha flera värden som behöver återges på ett meningsfullt sätt vid återgivningen.
-   * En nedrullningsbar meny med till exempel etiketten **Klar för publicering**. Detta kan ha flera värden före gruppredigering, till exempel **klar**, **granskning**, **pågående** och så vidare.
+   * En statuslistruta med namnet **Klar för publikation**. Detta kan ha flera värden före gruppredigering, t.ex. **ready**, **in-review**, **in-progress** osv.
 
 På grund av möjligheten att det finns flera värden bör du bara aktivera följande fälttyper för gruppredigering.
 
@@ -35,17 +35,17 @@ På grund av möjligheten att det finns flera värden bör du bara aktivera föl
 
 ## Aktivera ett fält {#enabling-a-field}
 
-De här stegen använder `/apps/core/wcm/components/page/v1/page` från [WKND-exempelinnehåll](/help/implementing/developing/introduction/develop-wknd-tutorial.md) som ett exempel för att aktivera massredigering på ett fält i en utvecklingsmiljö.
+De här stegen använder `/apps/core/wcm/components/page/v1/page` från [WKND-exempelinnehållet](/help/implementing/developing/introduction/develop-wknd-tutorial.md) som exempel för att aktivera massredigering av ett fält i en utvecklingsmiljö.
 
 1. Om du använder CRXDE öppnas sidkomponenten.
-1. Navigera till det obligatoriska fältet i `cq:dialog` definition.
+1. Navigera till det obligatoriska fältet i definitionen `cq:dialog`.
 1. Definiera följande egenskap på fältnoden:
 
    * **Namn**: `allowBulkEdit`
    * **Typ**: `Boolean`
    * **Värde**: `true`
 
-1. Välj **Spara alla** för att behålla uppdateringarna.
+1. Välj **Spara alla** om du vill behålla uppdateringarna.
 
 ## Begränsningar {#limitations}
 

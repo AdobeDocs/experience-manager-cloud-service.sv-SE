@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author Trney](overview.md) den [Introduktion](introduction.md) har omfattat de grundläggande begrepp och termer som är relevanta för utvecklingen av headless.
+I början av [AEM Headless Content Author Journey](overview.md) innehöll [Introduction](introduction.md) grundläggande begrepp och terminologi som är relevant för redigering utan rubrik.
 
 I föregående steg introducerades du att använda referenser för Headless CMS Authoring. Du lärde dig vilka typer av referenser som är tillgängliga och vad som är deras syften: Innehållsreferenser, Resurser/Mediereferenser och Fragmentreferenser.
 
@@ -25,7 +25,7 @@ Den här artikeln bygger på dessa så att du förstår hur du använder metadat
 ## Syfte {#objective}
 
 * **Målgrupp**: Avancerat
-* **Syfte**: Introduktion till användning av metadata och taggning för Headless CMS-redigering.
+* **Mål**: Introduktion till användning av metadata och taggning för Headless CMS Authoring.
 
 ## Lägga till metadata och taggar {#adding-metadata-and-tags}
 
@@ -43,4 +43,4 @@ Nu kan du använda och börja skapa innehållsfragment för ditt projekt.
 
 * [Använda taggar](/help/sites-cloud/authoring/sites-console/tags.md)
 
-* [Modeller för innehållsfragment - Tillåt modeller för innehållsfragment i resursmappen](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#allowing-content-fragment-models-assets-folder)
+* [Modeller för innehållsfragment - Tillåt modeller för innehållsfragment i din Assets-mapp](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#allowing-content-fragment-models-assets-folder)

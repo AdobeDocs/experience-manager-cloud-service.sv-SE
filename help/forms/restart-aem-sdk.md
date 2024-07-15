@@ -3,13 +3,13 @@ title: Hur startar jag om AEM SDK?
 description: De bästa sätten att starta om AEM SDK
 role: Admin, Developer, User
 feature: Adaptive Forms
-source-git-commit: a0e2c0e3020d48b171645818b8e02dc33b50c2d5
+exl-id: 5fec2a93-1dda-4240-8690-24a6afae5c2b
+source-git-commit: 62be3c6e98df9002cdfbeef50dd5475c4daa1576
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%
 
 ---
-
 
 # Starta om AEM SDK
 

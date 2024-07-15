@@ -19,23 +19,23 @@ Att skapa innehållsfragment är inriktat på både headless-leverans och framta
 Det finns två redigerare för innehållsfragment. Redigeraren som beskrivs i det här avsnittet:
 
 * har utvecklats för leverans av headless-innehåll (men kan användas för alla scenarier)
-* är tillgängligt från **Innehållsfragment** konsol
+* är tillgängligt från konsolen **Innehållsfragment**
 
 Den här redigeraren innehåller:
 
-* [Spara automatiskt](#saving-autosaving), för att förhindra oavsiktlig förlust av redigeringar.
+* [Spara automatiskt](#saving-autosaving) för att förhindra oavsiktlig förlust av redigeringar.
 * [Inline-överföring av resurser som innehållsreferenser](#reference-images), utan att först behöva överföra dem till resursens DAM.
-* [Generera variationer](#generate-variations-ai) för att använda generativ AI för att snabba upp innehållsskapandet baserat på uppmaningar.
-* [Förhandsgranska](#preview-content-fragment) av den renderade upplevelsen som levereras av innehållsfragmentet.
-* Möjlighet att [Publish](#publish-content-fragment) och [Avpublicera](#unpublish-content-fragment) från redigeraren.
-* Möjlighet att [visa och öppna, associerade språkkopior](#view-language-copies) i redigeraren.
+* [Generera variationer](#generate-variations-ai) om du vill använda den generativa AI-filen för att snabba upp innehållsskapandet baserat på uppmaningar.
+* [Förhandsgranska](#preview-content-fragment) av den återgivna upplevelsen som levereras av innehållsfragmentet.
+* Möjlighet att [Publish](#publish-content-fragment) och [avpublicera](#unpublish-content-fragment) från redigeraren.
+* Möjlighet att [visa och öppna associerade språkkopior](#view-language-copies) i redigeraren.
 * Möjlighet att [visa versionsinformation](#view-version-history) i redigeraren. Du kan också återgå till en vald version.
 * Möjlighet att [visa och öppna överordnade referenser](#view-parent-references).
-* En hierarkisk vy av innehållsavsnittet och dess referenser med hjälp av [Strukturträd](#structure-tree).
+* En hierarkisk vy av innehållsfragmentet och dess referenser med hjälp av [strukturträdet](#structure-tree).
 
 >[!WARNING]
 >
->Redigeraren som beskrivs i det här avsnittet är *endast* finns i *online* Adobe Experience Manager (AEM) as a Cloud Service.
+>Redigeraren som beskrivs i det här avsnittet är *endast* tillgänglig i *online* Adobe Experience Manager-as a Cloud Service (AEM).
 
 ## Innehållsfragmentsredigerare {#content-fragment-editor}
 
@@ -44,29 +44,29 @@ När du först öppnar Content Fragment Editor visas fyra huvudområden:
 * övre verktygsfältet: för nyckelinformation och åtgärder
    * en länk till konsolen för innehållsfragment (hemikonen)
    * information om modellen och mappen
-   * länkar till [Förhandsgranska (om standardmönstret för URL för förhandsgranskning har konfigurerats för modellen)](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#content-fragment-model-properties)
-   * [Publish](#publish-content-fragment)och [Avpublicera](#unpublish-content-fragment) funktionsmakron
-   * ett alternativ för att visa alla **Överordnade referenser** (länkikon)
-   * fragmentet **[Status](/help/sites-cloud/administering/content-fragments/managing.md#statuses-content-fragments)** och senast sparad information
+   * länkar till [Förhandsgranska (om URL-mönstret för standardförhandsvisning har konfigurerats för modellen)](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#content-fragment-model-properties)
+   * [Publish](#publish-content-fragment) och [Avpublicera](#unpublish-content-fragment) åtgärder
+   * ett alternativ för att visa alla **överordnade referenser** (länkikon)
+   * fragmentet **[Status](/help/sites-cloud/administering/content-fragments/managing.md#statuses-content-fragments)** och den senast sparade informationen
    * växla till den ursprungliga (Assets-baserade) redigeraren
 
      >[!WARNING]
      >
      >Den ursprungliga redigeraren öppnas på samma flik. Vi rekommenderar inte att båda redigerarna är öppna samtidigt.
 
-* vänster panel: visar **[Variationer](#variations)** för innehållsfragmentet och dess **Fält**:
-   * dessa länkar kan användas för [navigera i strukturen för innehållsfragment](#navigate-structure)
-* höger panel: presenterar flikar [visa egenskaper (metadata) och taggar](#view-properties-tags), information om [versionshistorik](#view-version-history)och information om [språkversioner](#view-language-copies)
-   * i **Egenskaper** kan du uppdatera **Titel** och **Beskrivning** för fragmentet, eller **Variation**
+* vänster panel: visar **[Variationer](#variations)** för innehållsfragmentet och dess **fält**:
+   * dessa länkar kan användas för att [navigera i strukturen för innehållsfragment](#navigate-structure)
+* höger panel: presenterar flikar [som visar egenskaper (metadata) och taggar](#view-properties-tags), information om [versionshistoriken](#view-version-history) och information om [språkkopior](#view-language-copies)
+   * på fliken **Egenskaper** kan du uppdatera **Title** och **Description** för fragmentet, eller **Variation**
 * central panel: visar de faktiska fälten och innehållet i den valda varianten
    * gör att du kan redigera innehållet
-   * if **Platshållare för flik** fält definieras i den modell de visas här och kan användas för navigering. De visas antingen vågrätt eller som en nedrullningsbar lista.
+   * Om **platshållarfält** definieras i den modell som de visas här och kan användas för navigering, visas de antingen vågrätt eller som en listruta.
 
   >[!NOTE]
   >
-  >Beroende på definitioner i den underliggande modellen kan fält vara av vissa typer av [Validering](/help/assets/content-fragments/content-fragments-models.md#validation).
+  >Beroende på definitioner i den underliggande modellen kan fälten omfattas av vissa typer av [validering](/help/assets/content-fragments/content-fragments-models.md#validation).
 
-![Content Fragment Editor - Översikt](assets/cf-authoring-overview.png)
+![Innehållsfragmentredigeraren - översikt](assets/cf-authoring-overview.png)
 
 ## Navigera i innehållsfragmentsstrukturen {#navigate-structure}
 
@@ -75,7 +75,7 @@ Ett enda innehållsfragment;
 * Består av två nivåer:
 
    * **[Variationer](#variations)** i innehållsfragmentet
-   * **Fält** - som definieras av innehållsfragmentmodellen och används av alla variationer
+   * **Fält** - definieras av innehållsfragmentmodellen och används av alla variationer
 
 * Kan innehålla flera olika referenser.
 
@@ -83,12 +83,12 @@ Ett enda innehållsfragment;
 
 I den vänstra panelen ser du:
 
-* listan med **[Variationer](#variations)** som har skapats för detta fragment:
-   * **Huvud** är variationen som finns när innehållsfragmentet skapas, du kan lägga till andra senare.
+* listan med **[Variationer](#variations)** som har skapats för det här fragmentet:
+   * **Main** är variationen som finns när innehållsfragmentet skapas, du kan lägga till andra senare
    * Du kan använda Generate Variations(#generate-variations) för att använda en promptbaserad mall som Adobe har skapat för ett visst användningsfall.
-   * kan du också [skapa en variant](#create-variation)
-* den **Fält** inom fragmentet och dess variationer:
-   * ikonen anger att [Datatyp](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types)
+   * du kan även [skapa en variant](#create-variation)
+* **Fält** i fragmentet och dess varianter:
+   * ikonen anger [datatypen](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types)
    * texten är fältnamnet
    * tillsammans utgör de en direkt länk till fältinnehållet på den centrala panelen (för den aktuella variationen)
 
@@ -96,17 +96,17 @@ I den vänstra panelen ser du:
 
 I olika delar av redigeraren ser du länkikonen. Detta kan användas för att öppna det objekt som visas, t.ex. en innehållsfragmentmodell, en överordnad referens eller ett fragment som refereras:
 
-![Innehållsfragmentsredigeraren - länkikon](assets/cf-authoring-link-icon.png)
+![Innehållsfragmentredigeraren - länkikon](assets/cf-authoring-link-icon.png)
 
 ### Strukturträd {#structure-tree}
 
-Öppna **Strukturträd** i redigeringsverktygsfältet för att visa den hierarkiska strukturen för innehållsfragmentet och dess referenser. Använd länkikonerna för att navigera till referenserna.
+Öppna fliken **Strukturträd** i redigeringsverktygsfältet för att visa den hierarkiska strukturen för innehållsfragmentet och dess referenser. Använd länkikonerna för att navigera till referenserna.
 
-![Content Fragment Editor - strukturträd](assets/cf-authoring-structure-tree.png)
+![Redigera innehållsfragment - strukturträdet](assets/cf-authoring-structure-tree.png)
 
 >[!NOTE]
 >
->Se [Analyserar struktur för innehållsfragment - strukturträd](/help/sites-cloud/administering/content-fragments/analysis.md#structure-tree) för mer information.
+>Mer information finns i [Analyserar struktur för innehållsfragment - strukturträd](/help/sites-cloud/administering/content-fragments/analysis.md#structure-tree).
 
 ## Spara och spara automatiskt {#saving-autosaving}
 
@@ -116,13 +116,13 @@ För varje uppdatering som du gör sparas innehållsfragmentet automatiskt. Den 
 
 ## Variationer {#variations}
 
-[Variationer](/help/sites-cloud/administering/content-fragments/overview.md#main-and-variations) är en viktig egenskap i AEM innehållsfragment. De gör att du kan skapa och redigera kopior av **Huvud** innehåll som kan användas i specifika kanaler och scenarier, vilket gör innehållsleverans utan rubrik och sidredigering ännu mer flexibelt.
+[Variationer](/help/sites-cloud/administering/content-fragments/overview.md#main-and-variations) är en viktig funktion för att AEM innehållsfragment. Med dem kan du skapa och redigera kopior av **Main** -innehållet som ska användas i vissa kanaler och scenarier, vilket gör innehållsleverans utan rubrik och sidredigering ännu mer flexibelt.
 
 Från redigeraren kan du:
 
-* [Skapa variationer](#create-variation) i **Huvud** innehåll
+* [Skapa variationer](#create-variation) av **Main** -innehållet
 
-* [Använd Generera variationer, AI](#generate-variations-ai) om du vill använda generativ AI för att använda en snabbbaserad mall som Adobe har skapat för ett visst användningsfall.
+* [Använd Generate Variations AI](#generate-variations-ai) om du vill använda Generative AI för att använda en promptbaserad mall som Adobe har skapat för ett visst användningsfall.
 
 * Välj önskad variant för att redigera innehållet
 
@@ -134,31 +134,31 @@ Från redigeraren kan du:
 
 Så här skapar du en variant av ditt innehållsfragment:
 
-1. I den vänstra panelen väljer du **plustecken** (**Skapa variation**) till höger om **Variationer**.
+1. I den vänstra panelen väljer du **plustecknet** (**Skapa variation**) till höger om **Variationer**.
 
    >[!NOTE]
    >
    >När du har skapat din första variant visas befintliga varianter på samma panel.
 
-   ![Content Fragment Editor - Skapa din första variant](assets/cf-authoring-create-variation-01.png)
+   ![Innehållsfragmentsredigeraren - Skapa din första variant](assets/cf-authoring-create-variation-01.png)
 
-1. I dialogrutan anger du **Titel** för din variant och **Beskrivning** om du vill:
+1. I dialogrutan anger du en **titel** för varianten och en **beskrivning** om du vill:
 
-   ![Redigera innehållsfragment - dialogrutan Skapa variationer](assets/cf-authoring-create-variation-02.png)
+   ![Innehållsfragmentredigeraren - dialogrutan Skapa variation](assets/cf-authoring-create-variation-02.png)
 
 1. **Skapa** variationen. Den visas i listan.
 
 ### Byta namn på en variant {#rename-variation}
 
-Byta namn på en **Variation**:
+Så här byter du namn på en **variation**:
 
 1. Välj önskad variant.
 
-1. Öppna **Egenskaper** i den högra panelen.
+1. Öppna fliken **Egenskaper** i den högra panelen.
 
-1. Uppdatera variationen **Titel**.
+1. Uppdatera variationen **Rubrik**.
 
-1. Tryck **Retur** eller flytta till ett annat fält för att automatiskt spara ändringen. Titeln uppdateras i **Variationer** till vänster.
+1. Tryck antingen på **Retur** eller flytta till ett annat fält för att spara ändringen automatiskt. Titeln uppdateras på panelen **Variationer** till vänster.
 
 ### Skapa variationer med GenAI med Generera variationer {#generate-variations-ai}
 
@@ -168,7 +168,7 @@ Så här använder du de generativa variationerna i redigeraren för innehållsf
 
 1. Öppna Content Fragment Editor. I rubriken hittar du startpunkten till Generera variationer:
 
-   ![Generera variationer i Content Fragment Editor](assets/cfm-generate-variations1.png)
+   ![Generera variationer i redigeraren för innehållsfragment](assets/cfm-generate-variations1.png)
 
 1. Generera varianter öppnas på en ny flik. I den vänstra listen kan du se AEM Cloud-instansen och det innehållsfragment som du skapar innehåll för. Välj den fråga du vill använda eller skapa en ny fråga.
 
@@ -188,8 +188,8 @@ Så här använder du de generativa variationerna i redigeraren för innehållsf
 
 1. Välj den variant som du vill ha och välj &quot;exportvariant&quot;. Bekräfta namnet på varianten av innehållsfragmentet och välj antingen:
 
-   * **Exportera**: exportera varianter till innehållsfragment och stanna i programmet Generera variationer.
-   * **Exportera och öppna**: exportera varianter till innehållsfragment och öppna en ny flik som visar innehållsfragmentet med den nya varianten från GenAI.
+   * **Exportera**: exportera variation till innehållsfragment och stanna i programmet Generera variation.
+   * **Exportera och öppna**: Exportera variation till innehållsfragment och öppna en ny flik som visar innehållsfragment med den nya varianten från GenAI.
 
      ![Exportera för att generera variationer i innehållsfragment](assets/cfm-generate-variations4.png)
 
@@ -203,21 +203,21 @@ Du kan läsa mer om Generera variationer [här](/help/generative-ai/generate-var
 
 Så här tar du bort en variant av ditt innehållsfragment:
 
-    >[!OBS!]
+    >[!NOTE]
     >
     >Du kan inte ta bort **Main**.
 
 1. Välj Variation.
 
-1. I **Variation** markerar du ikonen Ta bort (papperskorgen):
+1. På panelen **Variation** väljer du borttagningsikonen (papperskorgen):
 
-   ![Innehållsfragmentsredigeraren - ikonen Ta bort variant](assets/cf-authoring-delete-variation.png)
+   ![Innehållsfragmentsredigeraren - ikonen Ta bort variation](assets/cf-authoring-delete-variation.png)
 
-1. En dialogruta öppnas. Välj **Ta bort** för att bekräfta åtgärden.
+1. En dialogruta öppnas. Bekräfta åtgärden genom att välja **Ta bort**.
 
 ## Redigera textfält med flera rader - Oformaterad text eller Markering {#edit-multi-line-text-fields-plaintext-markdown}
 
-**[Flerradstext](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types)** fält kan ha något av tre format:
+**[Flerradiga textfält](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types)** kan ha ett av tre format:
 
 * Oformaterad text
 * [Markering](/help/sites-cloud/administering/content-fragments/markdown.md)
@@ -225,11 +225,11 @@ Så här tar du bort en variant av ditt innehållsfragment:
 
 Fält som definieras som antingen Oformaterad text eller Oformaterad markering har en enkel textruta utan formateringsalternativ (på skärmen):
 
-![Content Fragment Editor - Flerradstext - helskärm](assets/cf-authoring-multilinetext-plaintext-markdown.png)
+![Innehållsfragmentredigerare - Flera rader text - helskärm](assets/cf-authoring-multilinetext-plaintext-markdown.png)
 
 ## Redigera textfält med flera rader - RTF {#edit-multi-line-text-fields-rich-text}
 
-För **[Flerradstext](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types)** fält som definieras som **RTF** finns det olika funktioner:
+För **[flerradiga textfält](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types)** som definieras som **RTF** finns olika funktioner:
 
 * Redigera innehållet:
    * Ångra/Gör om
@@ -245,17 +245,17 @@ För **[Flerradstext](/help/sites-cloud/administering/content-fragments/content-
    * Infoga länkar
    * Markera och infoga referenser till bildresurser
    * Lägg till specialtecken
-* [Helskärmsredigerare](#full-screen-editor-rich-text) - växla mellan helskärm och flöde
+* [Helskärmsredigerare](#full-screen-editor-rich-text) - växla mellan helskärmsredigering och arbetsflöde
 * [Statistik](#statistics-rich-text)
 * [Jämför och synkronisera](#compare-and-synchronize-rich-text)
 
 Till exempel:
 
-![Content Fragment Editor - Flerradstext - växla mellan helskärmsläge](assets/cf-authoring-multilinetext-fullscreen-toggle.png)
+![Innehållsfragmentsredigeraren - Flera rader text - växla helskärm](assets/cf-authoring-multilinetext-fullscreen-toggle.png)
 
 >[!NOTE]
 >
->Flerradiga textfält anges också med lämplig [icon](#fields-datatypes-icons) i **Fält** -panelen.
+>Flerradiga textfält indikeras även av rätt [ikon](#fields-datatypes-icons) på panelen **Fält**.
 
 ### Helskärmsredigerare - RTF {#full-screen-editor-rich-text}
 
@@ -263,7 +263,7 @@ Helskärmsredigeraren har samma redigeringsalternativ som vid inflöde, men ger 
 
 Till exempel:
 
-![Content Fragment Editor - Flerradstext - helskärm](assets/cf-authoring-multilinetext-fullscreen.png)
+![Innehållsfragmentredigerare - Flera rader text - helskärm](assets/cf-authoring-multilinetext-fullscreen.png)
 
 ### Statistik - RTF {#statistics-rich-text}
 
@@ -271,15 +271,15 @@ Till exempel:
 
 Till exempel:
 
-![Innehållsfragmentsredigerare - statistik](assets/cf-authoring-multilinetext-statistics.png)
+![Innehållsfragmentredigeraren - Statistik](assets/cf-authoring-multilinetext-statistics.png)
 
 ### Jämför och synkronisera - RTF {#compare-and-synchronize-rich-text}
 
-Åtgärden **Jämför** är tillgängligt för flerradsfält när du har en **Variation** öppna.
+Åtgärden **Jämför** är tillgänglig för flerradsfält när du har öppnat **Variation**.
 
 Då öppnas fältet Flera rader i helskärmsläge och:
 
-* visar innehållet för båda **Huvud** och den aktuella **Variation** parallellt med alla skillnader markerade
+* visar innehållet för både **Main** och den aktuella **Variation** parallellt, med alla skillnader markerade
 
 * skillnaderna anges med färg:
 
@@ -287,20 +287,20 @@ Då öppnas fältet Flera rader i helskärmsläge och:
    * rött anger att innehållet har tagits bort (från varianten)
    * blå anger ersatt text
 
-* ger **Synkronisera** åtgärd, som synkroniserar innehållet från **Huvud** till aktuell variation
+* innehåller åtgärden **Synkronisera** som synkroniserar innehållet från **Huvudsida** till den aktuella varianten
 
-   * if **Huvud** har uppdaterats, kommer dessa ändringar att överföras till varianten
-   * om varianten har uppdaterats, skrivs dessa ändringar över av innehållet från **Huvud**
+   * om **Main** har uppdaterats överförs dessa ändringar till variationen
+   * om varianten har uppdaterats, skrivs dessa ändringar över av innehållet från **Main**
 
   >[!CAUTION]
   >
-  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvud**till variationen*.
+  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvudsida**till variationen*.
   >
-  >Överför ändringar *från en variant till **Huvud*** är inte tillgängligt som alternativ.
+  >Det går inte att överföra ändringar *från en variation till **Main*** som ett alternativ.
 
-Ett scenario där variantinnehållet till exempel har skrivits om helt, så en synkronisering ersätter det nya innehållet med innehållet från **Huvud**:
+Ett scenario där variantinnehållet till exempel har skrivits om helt, så en synkronisering ersätter det nya innehållet med innehållet från **Huvudsida**:
 
-![Content Fragment Editor - Jämför och synkronisera](assets/cf-authoring-multilinetext-compare.png)
+![Innehållsfragmentredigeraren - Jämför och synkronisera](assets/cf-authoring-multilinetext-compare.png)
 
 ## Hantera referenser {#manage-references}
 
@@ -325,32 +325,32 @@ Så här skapar du en referens till ett befintligt innehållsfragment:
 
 #### Skapa ett innehållsfragment och en referens {#create-reference-content-fragment}
 
-Alternativt kan du [välj **Skapa nytt fragment** för att öppna **Skapa** dialog](/help/sites-cloud/administering/content-fragments/managing.md#creating-a-content-fragment). När fragmentet har skapats refereras det.
+Du kan också [välja **Skapa nytt fragment** för att öppna dialogrutan **Skapa**](/help/sites-cloud/administering/content-fragments/managing.md#creating-a-content-fragment). När fragmentet har skapats refereras det.
 
 ### Innehållsreferenser {#content-references}
 
-[Innehållsreferenser](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#content-reference) används för att referera till andra AEM innehållstyper, som bilder, sidor och upplevelsefragment.
+[Innehållsreferenser](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#content-reference) används för att referera till andra AEM innehållstyper, som bilder, sidor och Experience Fragments.
 
 #### Referensbilder {#reference-images}
 
-I **Innehållsreferens** fält som du kan båda:
+I fälten **Innehållsreferens** kan du båda:
 
 * referensresurser som redan finns i databasen
-* ladda upp dem direkt till fältet. På så sätt slipper du använda **Assets** konsol att överföra
+* ladda upp dem direkt till fältet. På så sätt slipper du använda konsolen **Assets** för att ladda upp dem
 
   >[!NOTE]
   >
-  >Överför en bild direkt till **Innehållsreferens** fält, det **måste**:
+  >Om du vill överföra en bild direkt till fältet **Innehållsreferens** måste den **vara**:
   >
-  >* har **Rotsökväg** definierad (i [Content Fragment Model](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#content-reference)). Detta anger var bilden ska sparas.
-  >* include **Bild** i listan över godkända innehållstyper
+  >* har en **rotsökväg** definierad (i [Content Fragment Model](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#content-reference)). Detta anger var bilden ska sparas.
+  >* ta med **Bild** i listan över godkända innehållstyper
 
 Du kan antingen lägga till en resurs:
 
-* dra och släpp den nya resursfilen direkt (till exempel från filsystemet) till **Innehållsreferens** fält
-* använder **Lägg till resurs** väljer du **Bläddra i Assets** eller **Överför** så öppnas rätt väljare:
+* dra och släpp den nya resursfilen direkt (till exempel från filsystemet) till fältet **Innehållsreferens**
+* Använd åtgärden **Lägg till resurs** och välj sedan antingen **Bläddra i Assets** eller **Överför** för att öppna den väljare som du vill använda:
 
-  ![Content Fragment Editor - Lägg till resursalternativ](assets/cf-authoring-add-asset-options.png)
+  ![Innehållsfragmentredigeraren - Lägg till resursalternativ](assets/cf-authoring-add-asset-options.png)
 
 #### Referenssidor {#reference-pages}
 
@@ -366,8 +366,8 @@ Så här lägger du till referenser till AEM sidor, Experience Fragments eller a
 >
 >Detta ska inte användas för referenser till:
 >
->* Innehållsfragment - använd en [Fragmentreferens](#fragment-references)
->* Bilder - använd [Referensbilder](#reference-images)
+>* Innehållsfragment - använd en [fragmentreferens](#fragment-references)
+>* Bilder - använd [referensbilder](#reference-images)
 
 ### Visa överordnade referenser {#view-parent-references}
 
@@ -375,22 +375,22 @@ Om du väljer länkikonen i det övre verktygsfältet öppnas en lista med alla 
 
 Till exempel:
 
-![Innehållsfragmentsredigeraren - Visa referenser](assets/cf-authoring-show-references-link.png)
+![Innehållsfragmentredigeraren - Visa referenser](assets/cf-authoring-show-references-link.png)
 
 Ett fönster öppnas med alla relaterade referenser. Om du vill öppna en referens markerar du namnet eller titeln eller länkikonen.
 
 Till exempel:
 
-![Innehållsfragmentsredigeraren - Visa referenser](assets/cf-authoring-show-references.png)
+![Innehållsfragmentredigeraren - Visa referenser](assets/cf-authoring-show-references.png)
 
 ## Visa egenskaper och taggar {#view-properties-tags}
 
 Egenskaper (metadata) och taggar kan visas på egenskapsfliken på den högra panelen. Egenskaperna kan antingen vara:
 
-* för **Innehållsfragment** - if **Huvud** är markerat
-* för en specifik **Variation**
+* för **innehållsfragment** - om **Huvudfragment** är markerat
+* för en specifik **variation**
 
-![Content Fragment Editor - Egenskaper](assets/cf-authoring-properties.png)
+![Innehållsfragmentsredigeraren - Egenskaper](assets/cf-authoring-properties.png)
 
 ### Redigera egenskaper och taggar {#edit-properties-tags}
 
@@ -398,27 +398,27 @@ På fliken Egenskaper (den högra panelen) kan du även redigera:
 
 * **Titel**
 * **Beskrivning**
-* **Taggar**: med listrutan eller valdialogrutan
+* **Taggar**: använda den nedrullningsbara listan eller valdialogrutan
 
-  ![Content Fragment Editor - Hantera taggar](assets/cf-authoring-edit-tags.png)
+  ![Innehållsfragmentredigeraren - Hantera taggar](assets/cf-authoring-edit-tags.png)
 
 ### Öppna innehållsfragmentmodellen {#open-content-fragment-model}
 
-När du har **Huvud** Om du väljer det här alternativet visas namnet på den underliggande modellen för innehållsfragment i egenskapsavsnittet. När du väljer länkikonen öppnas modellen på en separat flik.
+När du har markerat **Huvudsida** visas namnet på den underliggande modellen för innehållsfragment i egenskapsavsnittet. När du väljer länkikonen öppnas modellen på en separat flik.
 
 Till exempel:
 
-![Content Fragment Editor - öppna Content Fragment Model](assets/cf-authoring-open-model.png)
+![Innehållsfragmentredigeraren - öppna innehållsfragmentmodellen](assets/cf-authoring-open-model.png)
 
 ## Visa versionshistorik {#view-version-history}
 
-I **Versionshantering** på den högra panelens flik visas information om aktuell och tidigare versioner:
+På fliken **Versionshistorik** i den högra panelen visas information om den aktuella och tidigare versionen:
 
 >[!NOTE]
 >
 >En ny version skapas när innehållsfragmentet publiceras.
 
-![Content Fragment Editor - översikt över versionshistorik](assets/cf-authoring-version-history-overview.png)
+![Innehållsfragmentredigeraren - översikt över versionshistorik](assets/cf-authoring-version-history-overview.png)
 
 ### Jämför version {#compare-version}
 
@@ -430,16 +430,16 @@ Så här jämför du en tidigare version med den aktuella:
 
 1. Välj **Jämför**.
 
-![Content Fragment Editor - Jämför versionshistorik](assets/cf-authoring-version-history-compare.png)
+![Innehållsfragmentredigeraren - Jämför versionshistorik](assets/cf-authoring-version-history-compare.png)
 
-Då öppnas en vy som visar skillnader mellan den aktuella versionen av innehållet och den valda tidigare versionen av innehållsfragmentet. Från **Variationer med ändringar** I den här listrutan kan du välja att se skillnader från huvudinnehållet och/eller innehållet från en variation.
+Då öppnas en vy som visar skillnader mellan den aktuella versionen av innehållet och den valda tidigare versionen av innehållsfragmentet. I listrutan **Variationer med ändringar** kan du välja att visa skillnader från huvudinnehållet och/eller innehållet från en variation.
 
 Skillnader anges med färg:
 
 * Grön: anger innehåll som har lagts till (i den aktuella versionen)
 * Röd: anger att innehåll har tagits bort (från den aktuella versionen)
 
-![Content Fragment Editor - versionshistorik Jämför versioner](assets/cf-authoring-version-history-compare-versions.png)
+![Innehållsfragmentredigeraren - versionshistorik, jämför versioner](assets/cf-authoring-version-history-compare-versions.png)
 
 ### Återgå till en version {#revert-version}
 
@@ -449,21 +449,21 @@ Så här återgår du till en viss version:
 
 1. Välj ikonen med tre punkter bredvid versionen.
 
-1. Välj **Återställ**.
+1. Välj **Återgå**.
 
-![Content Fragment Editor - återställ versionshistorik](assets/cf-authoring-version-history-revert.png)
+![Redigera innehållsfragment - återställ versionshistorik](assets/cf-authoring-version-history-revert.png)
 
 ## Visa språkkopior {#view-language-copies}
 
-I **Språkegenskaper** tabbinformation om relaterade språkkopior visas. Om du väljer en länkikon öppnas kopian på en separat flik.
+På fliken **Språkegenskaper** visas information om relaterade språkkopior. Om du väljer en länkikon öppnas kopian på en separat flik.
 
 Till exempel:
 
-![Content Fragment Editor - öppna Language Copy](assets/cf-authoring-open-language-copies.png)
+![Innehållsfragmentredigeraren - öppna språkkopia](assets/cf-authoring-open-language-copies.png)
 
 >[!NOTE]
 >
->Mer information om hur du översätter ett innehållsfragment och skapar språkkopior finns i [AEM översättningsresa utan rubrik](/help/journey-headless/translation/overview.md).
+>Mer information om hur du översätter ett innehållsfragment och skapar språkkopior finns i [AEM Headless Translation Journey](/help/journey-headless/translation/overview.md).
 
 
 ## Förhandsgranska fragmentet {#preview-content-fragment}
@@ -473,31 +473,31 @@ Med redigeraren för innehållsfragment kan författare förhandsgranska sina re
 Om du vill använda den här funktionen måste du först:
 
 * Samarbeta med IT-avdelningen och skapa ett externt klientprogram som återger innehållsfragmentet genom att använda JSON-utdata.
-* När det externa frontend-programmet är konfigurerat **URL-mönster för standardförhandsvisning** måste definieras som [egenskap för lämplig innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#properties).
+* När det externa klientprogrammet har konfigurerats måste URL-mönstret **Standardförhandsgranskning** definieras som en [egenskap för rätt innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#properties).
 
-När URL:en har definierats **Förhandsgranska** knappen är aktiv. Du kan välja den här knappen om du vill starta det externa programmet (på en separat flik) för att återge innehållsfragmentet.
+När URL:en har definierats är knappen **Förhandsgranska** aktiv. Du kan välja den här knappen om du vill starta det externa programmet (på en separat flik) för att återge innehållsfragmentet.
 
 ## Publish ditt fragment {#publish-content-fragment}
 
-Du kan **Publish** ditt fragment till antingen din
+Du kan **Publish** ditt fragment till antingen din:
 
 * Förhandsgranska instans
 * Publish, instans
 
-Du kan publicera fragmentet antingen från redigeraren eller konsolen. Se [Publicera och förhandsgranska ett fragment](/help/sites-cloud/administering/content-fragments/managing.md#publishing-and-previewing-a-fragment) för fullständig information.
+Du kan publicera fragmentet antingen från redigeraren eller konsolen. Mer information finns i [Publicera och förhandsgranska ett fragment](/help/sites-cloud/administering/content-fragments/managing.md#publishing-and-previewing-a-fragment).
 
 ## Avpublicera fragment {#unpublish-content-fragment}
 
-Du kan också **Avpublicera** ditt fragment från antingen din
+Du kan även **Avpublicera** ditt fragment från antingen din:
 
 * Förhandsgranska instans
 * Publish, instans
 
-Du kan avpublicera fragmentet från antingen redigeraren eller konsolen. Se [Avpublicera ett fragment](/help/sites-cloud/administering/content-fragments/managing.md#unpublishing-a-fragment) för fullständig information.
+Du kan avpublicera fragmentet från antingen redigeraren eller konsolen. Mer information finns i [Avpublicera ett fragment](/help/sites-cloud/administering/content-fragments/managing.md#unpublishing-a-fragment).
 
 ## Fält, datatyper och ikoner {#fields-datatypes-icons}
 
-The **Fält** På panelen visas alla fält i innehållsfragmentet. Ikonen indikerar **[Datatyp](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types)**:
+På panelen **Fält** visas alla fält i innehållsfragmentet. Ikonen anger **[datatypen](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types)**:
 
 <table style="table-layout:auto">
  <tbody>
@@ -542,7 +542,7 @@ The **Fält** På panelen visas alla fält i innehållsfragmentet. Ikonen indike
    <td><p> <img src="assets/cf-authoring-json-icon.png"> </p></td>
   </tr>
   <tr>
-   <td><p><b>Platshållare för flik</b></p><p>Även om den inte representeras av en faktisk ikon, visas en <b>Platshållare för flik</b> visas i den vänstra panelen. <br>Den visas också i den centrala panelen, antingen vågrätt som visas, eller i en listruta (när det finns för många för att visa vågrätt).</p> </td>
+   <td><p><b>Platshållare för flik</b></p><p>Även om den inte representeras av en faktisk ikon visas en <b>platshållare för tabbar</b> i den vänstra panelen. <br>Den visas också på den centrala panelen, antingen vågrätt som det visas, eller i en nedrullningsbar lista (när det finns för många för att visa vågrätt).</p> </td>
    <td><p> <img src="assets/cf-authoring-tab-icon.png"> </p></td>
   </tr>
  </tbody>
@@ -550,14 +550,14 @@ The **Fält** På panelen visas alla fält i innehållsfragmentet. Ikonen indike
 
 ## Bra att veta {#good-to-know}
 
-* Om du vill redigera ett innehållsfragment behöver du [lämpliga behörigheter](/help/implementing/developing/extending/content-fragments-customizing.md#asset-permissions). Kontakta systemadministratören om du har problem.
+* Du behöver [lämplig behörighet](/help/implementing/developing/extending/content-fragments-customizing.md#asset-permissions) för att redigera ett innehållsfragment. Kontakta systemadministratören om du har problem.
 
-  Om du till exempel inte har `edit` behörigheter som redigeraren ska vara skrivskyddad.
+  Om du t.ex. inte har `edit` behörigheter kommer redigeraren att vara skrivskyddad.
 
-* En innehållsfragmentmodell kan ofta definiera datafält med namnet **Titel** och **Beskrivning**. Om fälten finns är de användardefinierade och kan uppdateras i *central panel* när du redigerar fragmentet.
+* En innehållsfragmentmodell kan ofta definiera datafält med namnen **Title** och **Description**. Om dessa fält finns är de användardefinierade fält och kan uppdateras på den *centrala panelen* när fragmentet redigeras.
 
-  Innehållsfragmentet och dess varianter har också metadatafält (variationsegenskaper) som anropas **Titel** och **Beskrivning**. De här fälten är en integrerad del av ett innehållsfragment och definieras från början när fragmentet. De kan uppdateras i *höger panel* när du redigerar fragmentet.
+  Innehållsfragmentet och dess varianter har också metadatafält (variationsegenskaper) som kallas **Titel** och **Beskrivning**. De här fälten är en integrerad del av ett innehållsfragment och definieras från början när fragmentet. De kan uppdateras på den *högra panelen* när du redigerar fragmentet.
 
-* Se Assets dokumentation för fullständig information om [ursprunglig Content Fragment-redigerare](/help/assets/content-fragments/content-fragments-variations.md) - det finns på båda **Assets** konsolen och **Innehållsfragment** konsol.
+* Mer information om den [ursprungliga Content Fragment-redigeraren](/help/assets/content-fragments/content-fragments-variations.md) finns i Assets-dokumentationen. Den finns tillgänglig både från **Assets**-konsolen och från konsolen **Content Fragments**.
 
-* Ditt projektteam kan anpassa redigeraren om det behövs. Se [Anpassa konsolen och redigeraren för innehållsfragment](/help/implementing/developing/extending/content-fragments-console-and-editor.md) för mer information.
+* Ditt projektteam kan anpassa redigeraren om det behövs. Mer information finns i [Anpassa konsolen och redigeraren för innehållsfragment](/help/implementing/developing/extending/content-fragments-console-and-editor.md).

@@ -1,6 +1,6 @@
 ---
 title: Skapa en gren
-description: På den här sidan beskrivs hur du skapar en gren i Cloud Manager för skärmar as a Cloud Service.
+description: På den här sidan beskrivs hur du skapar en gren i Cloud Manager för Screens as a Cloud Service.
 exl-id: bcfdcb45-8547-4160-ba47-4f47916ca48a
 feature: Screens Deployments
 role: Admin, Developer, User
@@ -16,29 +16,29 @@ ht-degree: 1%
 I det här avsnittet beskrivs hur du skapar en gren för ditt program i Cloud Manager.
 
 >[!NOTE]
->Se [Använda guiden i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/using-the-wizard.html) om du vill lära dig hur du skapar ett AEM programprojekt i Cloud Manager med hjälp av guiden.
+>Mer information om hur du skapar ett AEM programprojekt i Cloud Manager med hjälp av guiden finns i [Använda guiden i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/using-the-wizard.html) .
 
 ## Syfte {#objective}
 
-I följande avsnitt beskrivs hur du skapar en gren för ditt program i Cloud Manager med hjälp av guiden.
+I följande avsnitt beskrivs hur du skapar en gren för programmet i Cloud Manager med hjälp av guiden.
 
-## Steg för att skapa en gren för ditt skärmsprojekt i Cloud Manager {#steps-branch-creation}
+## Steg för att skapa en gren för ditt Screens-projekt i Cloud Manager {#steps-branch-creation}
 
-1. Navigera till Cloud Manager och markera ikonen så att du kommer till översiktssidan för Cloud Manager.
+1. Navigera till Cloud Manager och markera ikonen så att du kommer till Cloud Manager Overview-sidan.
 
-1. Om du vill skapa en gren och ett projekt klickar du på **Skapa**.
+1. Klicka på **Skapa** om du vill skapa din gren och ditt projekt.
 
    ![bild](/help/screens-cloud/assets/onboarding/create-branch1.png)
 
-1. Välj **Titel** och **Nytt grennamn** från **Skapa en gren och ett projekt** guide och klicka **Skapa**.
+1. Välj **Titel** och **Nytt grennamn** i guiden **Skapa en gren och ett projekt** och klicka på **Skapa**.
 
    ![bild](/help/screens-cloud/assets/onboarding/create-branch2.png)
 
-1. Kortet för anrop till åtgärd finns på Cloud Managers **Ökning** uppdaterar status när projekt skapas.
+1. Du kan se anropskortet på Cloud Manager **Översikt** när du uppdaterar status när projekt skapas.
 
    ![bild](/help/screens-cloud/assets/onboarding/create-branch3.png)
 
-1. När projektet har skapats visas uppdateringen av anropskortet i Cloud Managers **Ökning** sida.
+1. När projektet har skapats visas uppdateringen av anropskortet på Cloud Manager **Översikt** .
 
    ![bild](/help/screens-cloud/assets/onboarding/create-branch4.png)
 

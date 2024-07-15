@@ -16,32 +16,32 @@ ht-degree: 0%
 
 En samling refererar till en uppsättning resurser som kan delas mellan användare. En samling kan innehålla resurser från olika platser och samtidigt bevara sin referensintegritet.
 
-[!DNL Content Hub] Med kan du skapa offentliga samlingar. Dessa samlingar är tillgängliga för alla behöriga användare, vilket skapar ett delat utrymme där flera användare effektivt kan komma åt och använda innehåll. Samlingar främjar samarbete och användning av resurser för ökad effektivitet och bekvämlighet. På samlingens webbsida kan du:
+Med [!DNL Content Hub] kan du skapa offentliga samlingar. Dessa samlingar är tillgängliga för alla behöriga användare, vilket skapar ett delat utrymme där flera användare effektivt kan komma åt och använda innehåll. Samlingar främjar samarbete och användning av resurser för ökad effektivitet och bekvämlighet. På samlingens webbsida kan du:
 
 * **Skapa**: Skapa en eller flera samlingar.
 * **Visa**: Visa resurserna och deras egenskaper.
 * **Dela**: Dela resurser som en länk med andra.
-* **Ladda ned**: Hämta resurserna.
+* **Hämta**: Hämta resurserna.
 * **Ta bort**: Ta bort specifika resurser från en samling.
 * **Ta bort**: Ta bort hela samlingen.
 
-Det hjälper användarna att enkelt komma åt och hantera de olika resurserna som finns i [!DNL Content Hub].
+Det hjälper användarna att enkelt komma åt och hantera de olika resurserna som är tillgängliga i [!DNL Content Hub].
 
 ## Förutsättningar {#prerequisites}
 
-[Content Hub](deploy-content-hub.md#onboard-content-hub-users) kan utföra åtgärder som nämns i den här artikeln.
+[Content Hub-användare](deploy-content-hub.md#onboard-content-hub-users) kan utföra åtgärder som nämns i den här artikeln.
 
 ## Skapa samlingar{#create-collections}
 
-Du kan [skapa en ny samling](#create-new-collection) eller [lägga till resurser i en befintlig samling](#add-assets-to-existing-collection).
+Du kan välja att [skapa en ny samling](#create-new-collection) eller [lägga till resurser i en befintlig samling](#add-assets-to-existing-collection).
 
 ### Skapa en ny samling{#create-new-collection}
 
-Markera de resurser som du vill lägga till i en samling och klicka på **[!UICONTROL Add To collection]**.
+Markera de resurser som du behöver lägga till i en samling och klicka på **[!UICONTROL Add To collection]**.
 
 ![Skapa samling](assets/add-assets-collection.jpg)
 
-Navigera till **[!UICONTROL Collections]** och klicka **[!UICONTROL Create new collection]**. Ange **[!UICONTROL Title]** och erbjuder **[!UICONTROL Description]** för tillgångarna. Klicka på **[!UICONTROL Create]**.
+Om du vill skapa en ny samling går du till fliken **[!UICONTROL Collections]** och klickar på **[!UICONTROL Create new collection]**. Ange **[!UICONTROL Title]** och ange en valfri **[!UICONTROL Description]** för resurserna. Klicka på **[!UICONTROL Create]**.
 
 ### Lägga till resurser i en befintlig samling{#add-assets-to-existing-collection}
 
@@ -49,13 +49,13 @@ Om du vill lägga till resurser i en befintlig samling markerar du de resurser d
 
 ![Skapa en ny samling](assets/create-add-collection.jpg)
 
-Välj den samling där du vill lägga till resursen. Du kan också söka i den befintliga samlingen med hjälp av sökfältet. <br>Markera samlingen/samlingarna som du vill lägga till resurserna i och klicka på **[!UICONTROL Add to collection]**.
+Välj den samling där du vill lägga till resursen. Du kan också söka i den befintliga samlingen med hjälp av sökfältet. <br>Markera den eller de samlingar som du vill lägga till resurserna i och klicka på **[!UICONTROL Add to collection]**.
 
 ## Visa samlingar{#view-collections}
 
-Navigera till **[!UICONTROL Collections]** och söka efter samlingens namn. Klicka på samlingens namn om du vill visa en lista med resurser som är tillgängliga i en samling. Du kan också använda filter i en samling för att begränsa resursresultaten.
+Navigera till fliken **[!UICONTROL Collections]** och sök efter samlingsnamnet. Klicka på samlingens namn om du vill visa en lista med resurser som är tillgängliga i en samling. Du kan också använda filter i en samling för att begränsa resursresultaten.
 
-Klicka på resursen som du vill visa i en samling. [!DNL Content Hub] visar detaljerad vy för resursen. [Se tillgångsinformation](asset-properties-content-hub.md).
+Klicka på resursen som du vill visa i en samling. [!DNL Content Hub] visar detaljerad vy för resursen. [Se resursinformation](asset-properties-content-hub.md).
 
 <!--
 ![Asset details](assets/view-collection.jpg)
@@ -72,8 +72,8 @@ Klicka på resursen som du vill visa i en samling. [!DNL Content Hub] visar deta
 
 ## Hämta resurser som är tillgängliga i en samling{#download-assets-within-collection}
 
-Navigera till **[!UICONTROL Collections]** -fliken.\
-Klicka ![hämtningsikon](assets/download-icon.svg) på samlingskortet.
+Om du vill hämta resurser som är tillgängliga i en samling går du till fliken **[!UICONTROL Collections]**.\
+Klicka på ikonen ![Hämta ](assets/download-icon.svg) på samlingskortet.
 
 ![Fliken Samling](assets/download-collection.jpg)
 
@@ -81,15 +81,15 @@ Alla resurser i samlingen hämtas.
 
 Du kan också öppna samlingen för att hämta resurserna individuellt. Klicka på samlingen som innehåller de resurser du behöver för att hämta. Markera resurserna och klicka på **[!UICONTROL Download]**.
 
-Lär dig hur [hämta en resurs från [!DNL Content Hub]](download-assets-content-hub.md).
+Lär dig hur du [hämtar en resurs från  [!DNL Content Hub]](download-assets-content-hub.md).
 
 ## Dela resurser som är tillgängliga i en samling {#share-assets-available-within-collection}
 
-Du kan också dela de tillgängliga resurserna i en samling. Navigera till **[!UICONTROL Collections]** -fliken. Välj ![dela, ikon](assets/share.svg) på samlingskortet. Delningslänken kopieras. Du kan dela den kopierade länken med mottagaren. Läs mer om [dela resurser i [!DNL Content Hub]](share-assets-content-hub.md).
+Du kan också dela de tillgängliga resurserna i en samling. Gå till fliken **[!UICONTROL Collections]**. Välj ikonen ![Dela](assets/share.svg) på samlingskortet. Delningslänken kopieras. Du kan dela den kopierade länken med mottagaren. Läs mer om att [dela resurser i  [!DNL Content Hub]](share-assets-content-hub.md).
 
 ## Redigera information om en samling {#edit-details-of-collection}
 
-Redigera **[!UICONTROL Title]** och **[!UICONTROL Description]** för en samling klickar du på samlingens namn och sedan på ![informationsikon](assets/info-icon.svg) -ikon. [!UICONTROL Collection Details] visas så att du kan redigera **[!UICONTROL Title]** och **[!UICONTROL Description]** för en samling. Klicka **[!UICONTROL Save Changes]** för att bekräfta ändringarna.
+Om du vill redigera **[!UICONTROL Title]** och **[!UICONTROL Description]** för en samling klickar du på samlingens namn och sedan på ikonen ![info](assets/info-icon.svg) . [!UICONTROL Collection Details]-skärmen visas. Du kan redigera **[!UICONTROL Title]** och **[!UICONTROL Description]** för en samling. Klicka på **[!UICONTROL Save Changes]** för att bekräfta ändringarna.
 
 ![samlingsinformation](assets/collection-details.png)
 
@@ -104,4 +104,4 @@ De markerade resurserna har tagits bort från samlingen.
 
 ## Ta bort en samling{#delete-collection}
 
-Navigera till **[!UICONTROL Collections]** och klicka på samlingen som du vill ta bort. Klicka ![ta bort ikon](assets/remove-icon.svg) om du vill ta bort samlingen.
+Om du vill ta bort en samling går du till fliken **[!UICONTROL Collections]** och klickar på samlingen som du vill ta bort. Klicka på ikonen ![Ta bort](assets/remove-icon.svg) för att ta bort samlingen.

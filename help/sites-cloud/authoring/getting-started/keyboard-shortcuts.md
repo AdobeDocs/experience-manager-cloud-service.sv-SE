@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Kortkommandon för konsoler {#keyboard-shortcuts-for-consoles}
 
-Följande kortkommandon är tillgängliga för konsolerna Platser, Resurser, Användare, Grupper, Projekt och Upplevelsefragment. Det finns även specifika genvägar för [Konsol för innehållsfragment](#keyboard-shortcuts-for-the-content-fragments-console).
+Följande kortkommandon är tillgängliga för konsolerna Webbplatser, Assets, Användare, Grupper, Projekt och Upplevelsefragment. Det finns också specifika genvägar för konsolen [Innehållsfragment](#keyboard-shortcuts-for-the-content-fragments-console).
 
 | Plats | Genväg | Beskrivning |
 |---|---|---|
@@ -23,8 +23,8 @@ Följande kortkommandon är tillgängliga för konsolerna Platser, Resurser, Anv
 | Konsol - kolumnvy | `Shift-Up/Down Arrow` | Flytta upp/ned och markera en lista med sidor på samma nivå |
 |  | `Esc` | Flytta upp en lista med sidor på samma nivå |
 | Konsoler | `?` | Hjälp för kortkommandon |
-|  | `/` | Anropa [sök](/help/sites-cloud/authoring/getting-started/search.md) |
-|  | `Alt+`&lt;`Number`> | Växla vilket [järnvägsväljare](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector) alternativ att visa |
+|  | `/` | Anropa [sökning](/help/sites-cloud/authoring/getting-started/search.md) |
+|  | `Alt+`&lt;`Number`> | Växla vilket alternativ för [spårväljare](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector) som ska visas |
 |  | ``` ` ``` | Göm rälsstöd |
 |  | `e` | Redigera |
 |  | `p` | Egenskaper |
@@ -34,7 +34,7 @@ Följande kortkommandon är tillgängliga för konsolerna Platser, Resurser, Anv
 |  | `Backspace` | Ta bort |
 | Egenskapssidor | `Ctrl+s` | Spara |
 
-Tangentkombinationerna listas med Windows [modifieringstangenter](#os-specific-modifier-keys).
+Tangentkombinationerna visas med Windows [modifieringstangenter](#os-specific-modifier-keys).
 
 ## Operativspecifika modifieringstangenter {#os-specific-modifier-keys}
 
@@ -61,7 +61,7 @@ Dessutom är kortkommandon samma för alla språk och tangentbordslayouter.
 >
 >AEM kortkommandon kan störa skärmläsare, vissa webbläsarfunktioner och andra tillgänglighetsverktyg.
 >
->Adobe rekommenderar [inaktivera AEM kortkommandon](#deactivating-keyboard-shortcuts) när du använder en skärmläsare.
+>Adobe rekommenderar [att du inaktiverar AEM kortkommandon](#deactivating-keyboard-shortcuts) när du använder en skärmläsare.
 
 ## Inaktivera kortkommandon {#deactivating-keyboard-shortcuts}
 
@@ -72,7 +72,7 @@ För användare som inte använder kortkommandon eller har vissa tillgänglighet
 Du kan inaktivera kortkommandon på två platser:
 
 * [Mina inställningar](/help/sites-cloud/authoring/getting-started/account-environment.md#my-preferences)
-* The [hjälpmeny](/help/sites-cloud/authoring/getting-started/basic-handling.md#accessing-help)
+* [Hjälp-menyn](/help/sites-cloud/authoring/getting-started/basic-handling.md#accessing-help)
 
 >[!NOTE]
 >
@@ -80,8 +80,8 @@ Du kan inaktivera kortkommandon på två platser:
 
 ## Kortkommandon för sidredigeraren {#keyboard-shortcuts-for-the-page-editor}
 
-Olika kortkommandon finns i hela AEM. Vissa gäller användning av konsoler, andra för [sidredigering](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md).
+Olika kortkommandon finns i hela AEM. Vissa gäller för användning av konsoler, andra för [sidredigering](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md).
 
 ## Kortkommandon för konsolen Innehållsfragment {#keyboard-shortcuts-for-the-content-fragments-console}
 
-Vissa kortkommandon gäller för [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/keyboard-shortcuts.md)
+Vissa kortkommandon gäller för konsolen [Innehållsfragment](/help/sites-cloud/administering/content-fragments/keyboard-shortcuts.md)

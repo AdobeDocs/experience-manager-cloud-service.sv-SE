@@ -1,5 +1,5 @@
 ---
-title: Hur ändrar man sidans nollinnehåll i Designer?
+title: Hur ändrar man Page Zero-innehåll i Designer?
 description: Ändra meddelandet som visas på sidnoll i en XFA-PDF för visningsprogram som inte kommer från Adobe PDF.
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
@@ -14,21 +14,21 @@ ht-degree: 0%
 
 # Ändra sidans nollinnehåll i Designer {#changing-page-zero-content-in-designer}
 
-Sidnollinnehåll visas som standard när ett visningsprogram som inte är Adobe PDF, t.ex. PDF i standardvisningsprogrammet [!DNL Chrome] eller [!DNL Firefox]kan inte läsa innehållet i PDF/XFA-formuläret. Standardmeddelandet Sidan är noll visas nedan.
+Sidnollinnehåll visas som standard när ett visningsprogram som inte är från Adobe PDF, t.ex. PDF i [!DNL Chrome] eller [!DNL Firefox] som är standard, inte kan läsa innehållet i formuläret PDF/XFA. Standardmeddelandet Sidan är noll visas nedan.
 
-![defaultpage0message](assets/defaultpage0message.png)
+![standardsida0meddelande](assets/defaultpage0message.png)
 
-[!DNL AEM Forms] i Designer kan du ändra meddelandet som visas på sidan noll. Gör så här om du vill ändra sidans nollmeddelande:
+[!DNL AEM Forms]-versionen av Designer låter dig ändra meddelandet som visas på sidan noll. Gör så här om du vill ändra sidans nollmeddelande:
 
-1. Se till att du har [!DNL AEM Forms] version av Designer installerad. Du kan kontrollera versionen från Om-skärmen i Designer.
+1. Kontrollera att du har [!DNL AEM Forms]-versionen av Designer installerad. Du kan kontrollera versionen från Om-skärmen i Designer.
 
 1. Öppna formuläret som du vill ändra sidans nollinnehåll för.
 
-1. Klicka **[!UICONTROL File]** > **[!UICONTROL Form Properties]**.
+1. Klicka på **[!UICONTROL File]** > **[!UICONTROL Form Properties]**.
 
-1. I [!UICONTROL Form Properties] dialogruta, klicka ![plus](assets/plus.png) (Plus-ikon) om du vill lägga till en anpassad egenskap.
+1. I dialogrutan [!UICONTROL Form Properties] klickar du på ![ plus](assets/plus.png) (plusikonen) för att lägga till en anpassad egenskap.
 
-1. Ange **pagezerocontent** som namnet på egenskapen.
+1. Ange **_pagezerocontent** som egenskapens namn.
 1. Lägg till det nya sidans nollmeddelande i RTF-format som värde. Till exempel:
 
 

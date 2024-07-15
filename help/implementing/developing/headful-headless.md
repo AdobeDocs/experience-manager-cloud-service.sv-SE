@@ -35,17 +35,17 @@ Single Page Applications (SPA) är ofta målet för innehåll som levereras head
 
 Säg att du har en befintlig webbutik för ditt företag som SPA. Där finns all produktinformation och alla bilder. Sedan introducerar ni AEM för att stärka era marknadsföringssatsningar, som reklamwebbplatser, bloggar och kampanjinnehåll. Hur integrerar man de två? AEM har flera alternativ:
 
-* **Låt systemen fungera oberoende av varandra.**
-* **Tillhandahåll webbbutiken med begränsat innehåll från AEM via GraphQL.** Innehåll kan skapas av författare i AEM, men bara ses via SPA.
-* **Bädda in SPA i AEM.** Innehåll kan skapas av författare i AEM och visas i AEM i webbutiken, men inte ändras.
-* **Bädda in SPA i AEM och aktivera redigerbara punkter.** Innehåll kan skapas av författare i AEM och visas i AEM i webbutikens sammanhang, och författarna har begränsad möjlighet att ändra innehållet i webbutikens SPA i AEM.
-* **Bädda in webbutikens SPA i AEM och aktivera hela zoner för redigering.** Innehåll kan skapas av författare i AEM och visas i AEM i webbutikens sammanhang, och författarna har begränsad möjlighet att ändra innehållet i webbutikens SPA i AEM.
+* **Tillåt att systemen fungerar oberoende.**
+* **Tillhandahåll webbbutiken med begränsat innehåll från AEM via GraphQL.**-innehåll kan skapas av författare i AEM, men bara visas via SPA.
+* **Bädda in SPA i AEM.**-innehåll kan skapas av författare i AEM och visas i AEM i webbutiken, men inte ändras.
+* **Bädda in SPA i AEM och aktivera redigerbara punkter.**-innehåll kan skapas av författare i AEM och visas i AEM i webbutikens sammanhang, och författarna har begränsad möjlighet att ändra innehållet i webbutikens SPA i AEM.
+* **Bädda in webbutikens SPA i AEM och aktivera hela zoner för redigering.**-innehåll kan skapas av författare i AEM och visas i AEM i webbutikens sammanhang, och författarna har begränsad möjlighet att ändra innehållet i webbutikens SPA i AEM.
 
 I nästa avsnitt beskrivs dessa integreringsnivåer mer ingående.
 
 >[!NOTE]
 >
->Du kan förstås även implementera SPA på nytt som en fullt fungerande AEM SPA [med AEM SPA Editor-ramverket](/help/implementing/developing/hybrid/introduction.md). Om du redan har AEM och vill skapa en webshop eller någon annan SPA, rekommenderas den här metoden, men den ligger utanför dokumentets omfång.
+>Du kan förstås även implementera om SPA som en fullt fungerande AEM SPA [med AEM SPA Editor-ramverket](/help/implementing/developing/hybrid/introduction.md). Om du redan har AEM och vill skapa en webshop eller någon annan SPA, rekommenderas den här metoden, men den ligger utanför dokumentets omfång.
 
 ## SPA integreringsnivåer {#integration-levels}
 
@@ -56,18 +56,18 @@ SPA integrering faller på ett spektrum av fyra nivåer i AEM.
    * Innehållet skapas, hanteras och levereras oberoende av varandra i två olika system.
 * **Nivå 1: Integrering av innehållsfragment**
    * [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) används i AEM för att skapa och hantera begränsat innehåll för SPA.
-   * SPA hämtar det här innehållet via AEM [GRAPHQL API](/help/headless/graphql-api/content-fragments.md).
+   * SPA hämtar det här innehållet via AEM [GraphQL API](/help/headless/graphql-api/content-fragments.md).
    * Visst innehåll hanteras i AEM och andra i ett externt system.
    * Innehåll kan bara visas i SPA.
 * **Nivå 2: Bädda in SPA i AEM**
    * [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) används i AEM för att skapa och hantera innehåll för SPA.
-   * SPA hämtar det här innehållet via AEM [GRAPHQL API](/help/headless/graphql-api/content-fragments.md).
+   * SPA hämtar det här innehållet via AEM [GraphQL API](/help/headless/graphql-api/content-fragments.md).
    * Visst innehåll hanteras i AEM och andra i ett externt system.
    * Innehåll kan visas i sitt sammanhang i AEM.
    * Begränsat innehåll kan redigeras i AEM.
 * **Nivå 3: Bädda in och aktivera SPA fullständigt i AEM**
    * [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) används i AEM för att skapa och hantera innehåll för SPA.
-   * SPA hämtar det här innehållet via AEM [GRAPHQL API](/help/headless/graphql-api/content-fragments.md).
+   * SPA hämtar det här innehållet via AEM [GraphQL API](/help/headless/graphql-api/content-fragments.md).
    * Innehåll kan visas i sitt sammanhang i AEM.
    * Det mesta innehållet kan redigeras i AEM.
 
@@ -79,9 +79,9 @@ Fördelen med och flexibiliteten i AEM blir tydlig med nivåerna 2 och 3 samtidi
 
 Det finns olika verktyg i AEM beroende på vilken integrationsnivå du väljer. Varje nivå bygger på de verktyg som använts tidigare. Följande lista länkar till relevanta resurser.
 
-* **Nivå 1:** Innehållsfragment och [AEM headless Framework](/help/headless/introduction.md) kan användas för att leverera AEM innehåll till SPA.
+* **Nivå 1:** Innehållsfragment och det [AEM headless-ramverket](/help/headless/introduction.md) kan användas för att leverera AEM innehåll till SPA.
 * **Nivå 2:** Förutom nivå ett:
-   * [Komponenten RemotePage](/help/implementing/developing/hybrid/remote-page.md) kan användas för att bädda in det externa SPA i AEM där AEM kan visas i sitt sammanhang.
-   * Vissa punkter på SPA kan också aktiveras för [tillåter begränsad redigering i AEM](/help/implementing/developing/hybrid/editing-external-spa.md).
+   * [RemotePage-komponenten](/help/implementing/developing/hybrid/remote-page.md) kan användas för att bädda in det externa SPA i AEM där AEM innehåll kan visas i sitt sammanhang.
+   * Vissa punkter på SPA kan också aktiveras för att [tillåta begränsad redigering i AEM](/help/implementing/developing/hybrid/editing-external-spa.md).
 * **Nivå 3:** Förutom nivå två:
    * Hela zoner i SPA kan aktiveras för omfattande redigering i AEM.

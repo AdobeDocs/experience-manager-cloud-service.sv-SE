@@ -29,9 +29,9 @@ AEM as a Cloud Service består av högnivålösningar som AEM Sites, AEM Assets 
 
 ### Program {#programs}
 
-AEM används som en [Program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md) som du skapar i Cloud Manager-programmet, enligt dina licensrättigheter. Dessa program ger dig full kontroll över hur det associerade AEM namnges, konfigureras och hur behörigheter tilldelas i ett visst projekt.
+AEM program materialiseras i form av ett [Program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md) som du skapar i Cloud Manager-programmet, enligt dina licensrättigheter. Dessa program ger dig full kontroll över hur det associerade AEM namnges, konfigureras och hur behörigheter tilldelas i ett visst projekt.
 
-Som kund identifieras du vanligtvis av Adobe som **tenant**, som också kallas *IMS-organisation* (Identity Management System). En innehavare kan ha så många program som behövs och licensieras. Det är till exempel ganska vanligt att se ett centralt program för AEM Assets, medan AEM Sites kan användas i flera program som motsvarar flera onlineupplevelser.
+Som kund identifieras du vanligtvis av Adobe som **klientorganisation**, som också kallas *IMS-organisation* (Identity Management System). En innehavare kan ha så många program som behövs och licensieras. Det är till exempel ganska vanligt att se ett centralt program för AEM Assets, medan AEM Sites kan användas i flera program som motsvarar flera onlineupplevelser.
 
 >[!NOTE]
 >
@@ -39,13 +39,13 @@ Som kund identifieras du vanligtvis av Adobe som **tenant**, som också kallas *
 
 Ett program kan konfigureras med valfri kombination av högnivålösningar och varje lösning kan stödja från ett-till-många-tillägg. Exempel: Commerce eller Screens för AEM Sites, Dynamic Media eller Brand Portal för AEM Assets.
 
-![AEM as a Cloud Service - program](assets/architecture-aem-edge-programs.png "AEM as a Cloud Service - Driftsättningsarkitektur")
+![AEM as a Cloud Service - Program](assets/architecture-aem-edge-programs.png "AEM as a Cloud Service - Distributionsarkitektur")
 
 ### Miljö {#environments}
 
 När ett program har skapats med AEM Sites-, AEM Assets- eller AEM Forms-lösningarna kommer tillhörande AEM att representeras i form av AEM miljöer i det här programmet.
 
-Det finns fyra typer av [miljö](/help/implementing/cloud-manager/manage-environments.md) finns hos AEM as a Cloud Service:
+Det finns fyra typer av [miljö](/help/implementing/cloud-manager/manage-environments.md) tillgängliga med AEM as a Cloud Service:
 
 * Produktionsmiljö:
 
@@ -68,7 +68,7 @@ Det finns fyra typer av [miljö](/help/implementing/cloud-manager/manage-environ
 
 ### Edge Delivery Services {#logical-architecture-edge-delivery-services}
 
-Ett AEM program kan konfigureras med [Edge Delivery Services](/help/edge/overview.md) också.
+Ett AEM program kan även konfigureras med [Edge Delivery Servicens](/help/edge/overview.md).
 
 När AEM har konfigurerats kan de referera till GitHub-koddatabaser som används för att skapa upplevelser med Edge Delivery Services. Därför blir nya konfigurationsalternativ tillgängliga för de associerade upplevelserna. Det kan vara att konfigurera CDN som hanteras i Adobe och få tillgång till licensstatistik och SLA-rapporter.
 
@@ -78,12 +78,14 @@ Listan över högnivåsammansatta tjänster i AEM as a Cloud Service kan represe
 
 ![AEM as a Cloud Service - översikt - med Edge Delivery Services](assets/architecture-aem-edge.png "AEM as a Cloud Service - översikt - med Edge Delivery Services")
 
-För innehållshantering finns det två huvuduppsättningar tjänster för utveckling av innehåll, som båda representeras av *innehållskällor*:
+För innehållshantering finns det två huvuduppsättningar tjänster för utveckling av innehåll, som båda representeras som *innehållskällor*:
 
-* AEM på författarnivå: Tillhandahåller ett webbaserat gränssnitt (med associerade API:er) för hantering av webbinnehåll. Detta gäller båda inriktningarna:
+* AEM Author tier:
+Innehåller ett webbaserat gränssnitt (med tillhörande API:er) för hantering av webbinnehåll. Detta gäller båda inriktningarna:
    * Headful - via Page editor and the Universal Editor
    * Headless - via Content Fragment editor
-* Dokumentbaserad redigeringsnivå: Gör att du kan skapa innehåll med hjälp av standardprogram, som:
+* Dokumentbaserad redigeringsnivå:
+Gör att du kan skapa innehåll med hjälp av standardprogram, som:
    * Microsoft Word och Excel - via SharePoint
    * Google Docs and Sheets - via Google Drive
 
@@ -113,12 +115,12 @@ Det finns andra närliggande tjänster:
 
 * Replikeringstjänsten:
    * Finns mellan innehållshanteringsnivån och upplevelseleveransnivån.
-   * Bearbetar *publicera* åtgärder som har utfärdats av innehållsförfattare och som sedan tillhandahåller det publicerade innehållet till publiceringsnivåerna (AEM eller Edge Delivery).
+   * Bearbetar de *publiceringsåtgärder* som har utfärdats av innehållsförfattare och tillhandahåller sedan det publicerade innehållet till publiceringsnivåerna (AEM eller Edge Delivery).
 
   >[!NOTE]
   >Replikeringstjänsten genomgick en fullständig omarbetning jämfört med 6.x-versionerna av AEM eftersom replikeringsramverket från tidigare versioner av AEM inte längre används för att publicera innehåll.
   >
-  >Den senaste arkitekturen bygger på en *publicera och prenumerera* med molnbaserade innehållsköer. För AEM publiceringsnivå tillåter det ett varierande antal utgivare att prenumerera på publiceringsinnehållet och är en viktig del i att uppnå äkta och snabb autoskalning för AEM as a Cloud Service
+  >Den senaste arkitekturen baseras på en *publicerings- och prenumerationsmetod* med molnbaserade innehållsköer. För AEM publiceringsnivå tillåter det ett varierande antal utgivare att prenumerera på publiceringsinnehållet och är en viktig del i att uppnå äkta och snabb autoskalning för AEM as a Cloud Service
 
 * Tjänsten Content Repository:
    * Används av AEM författarnivå.
@@ -178,7 +180,7 @@ Koden och konfigurationen för AEM-projekt lagras i en koddatabas från vilken d
    * För lagring av Java-kod och OSGI-konfigurationer på serversidan för AEM författare och publiceringsnivåer.
 * AEM på framsidan:
    * För lagring av JS-, CSS- och HTML-kod på klientsidan för AEM författare- och publiceringsnivåer.
-Mer information om clientlibs finns i [Använda bibliotek på klientsidan på AEM as a Cloud Service.](/help/implementing/developing/introduction/clientlibs.md)
+Mer information om klientbibliotek finns i [Använda klientbibliotek på AEM as a Cloud Service.](/help/implementing/developing/introduction/clientlibs.md)
 * AEM webbnivå:
    * Lagrar dispatcherkonfigurationsfilerna för AEM publiceringsnivå.
 * AEM:
@@ -211,7 +213,7 @@ När alla tester har slutförts distribueras den nya koden till produktionsmilj�
 
 ### Rullande uppdateringar {#rolling-updates}
 
-Cloud Manager automatiserar helt brytningen till den senaste versionen av AEM genom att uppdatera alla servicenoder med hjälp av ett rullande uppdateringsmönster. Det betyder att det finns **inga driftavbrott** för antingen författaren eller publiceringstjänsten.
+Cloud Manager automatiserar helt brytningen till den senaste versionen av AEM genom att uppdatera alla servicenoder med hjälp av ett rullande uppdateringsmönster. Det innebär att det inte finns **någon nedtid** för antingen författaren eller publiceringstjänsten.
 
 ## Viktiga innovationer sedan AEM 6.x {#major-innovations-since-aem-6x}
 

@@ -17,7 +17,7 @@ ht-degree: 0%
 Som en del av Adobe Experience Cloud kan Adobe Target öka innehållets relevans genom målinriktning och mätning i alla kanaler. Integrering av Adobe Target och AEM as a Cloud Service kräver:
 
 * med Touch-gränssnittet för att skapa en målkonfiguration i AEM as a Cloud Service (IMS-konfiguration krävs).
-* lägga till och konfigurera Adobe Target som ett tillägg i [Adobe Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/quick-start.html).
+* lägger till och konfigurerar Adobe Target som ett tillägg i [Adobe Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/quick-start.html).
 
 Adobe Launch krävs för att hantera egenskaper på klientsidan för både Analytics och Target på AEM (JS-bibliotek/taggar). Integreringen med Launch behövs dock för&quot;Experience Targeting&quot;.
 
@@ -29,17 +29,17 @@ Om du vill exportera Experience Fragments och/eller Content Fragments till Targe
 
 ## Skapa Adobe Target-konfigurationen {#create-configuration}
 
-1. Navigera till **verktyg** → **Cloud Service**.
+1. Navigera till **Verktyg** → **Cloud Service**.
    ![Navigering](assets/cloudservice1.png "Navigering")
 2. Välj **Adobe Target**.
-3. Välj **Skapa** -knappen.
+3. Klicka på knappen **Skapa**.
    ![Skapa](assets/tenant1.png "Skapa")
-4. Fyll i uppgifterna (se nedan) och välj **Anslut**.
+4. Fyll i informationen (se nedan) och välj **Anslut**.
    ![Anslut](assets/open_screen1.png "Anslut")
 
 ### IMS-konfiguration {#ims-configuration}
 
-Integreringen av AEM med Adobe Target via Target Standard API kräver att Adobe IMS (Identity Management System) konfigureras. IMS-konfigurationen för mål måste skapas (efter att Target har etablerats). Se [Konfigurera IMS-integreringar för AEM as a Cloud Service](/help/security/setting-up-ims-integrations-for-aem-as-a-cloud-service.md) och videon [Integrera Experience Platform Launch och AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html) om du vill lära dig hur du skapar mål-IMS-konfigurationen.
+Integreringen av AEM med Adobe Target via Target Standard API kräver att du konfigurerar Adobe IMS (Identity Management System). IMS-konfigurationen för mål måste skapas (efter att Target har etablerats). Se [Konfigurera IMS-integreringar för AEM as a Cloud Service](/help/security/setting-up-ims-integrations-for-aem-as-a-cloud-service.md) och videon [Integrera Experience Platform Launch och AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html) om du vill veta mer om hur du skapar mål-IMS-konfigurationen.
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ Integreringen av AEM med Adobe Target via Target Standard API kräver att Adobe 
 >
 >När du konfigurerar projektet visas produktprofilerna med beroende på om du har:
 >
->* Adobe Target Standard - endast **Standardarbetsyta** är tillgänglig
+>* Adobe Target Standard - endast **Workspace (standard)** är tillgängligt
 >* Adobe Target Premium - alla tillgängliga arbetsytor visas i listan enligt nedan
 
 ### Adobe Target klientorganisations-ID och Adobe Target klientkod {#tenant-client}
@@ -67,7 +67,7 @@ I båda fallen:
 * Om det behövs kan du ändra standardinställningen för innehavar-ID.
 * Backend-anrop till Target baseras på klientens ID och klientsidans anrop till Target baseras på klientkoden.
 
-Som tidigare nämnts är det första fallet det vanligaste för AEM as a Cloud Service. Oavsett vilket, se till att **båda** fälten innehåller rätt information beroende på dina behov.
+Som tidigare nämnts är det första fallet det vanligaste för AEM as a Cloud Service. Oavsett vad du väljer bör du kontrollera att **båda**-fälten innehåller rätt information beroende på dina krav.
 
 >[!NOTE]
 >
@@ -88,7 +88,7 @@ Så här redigerar du målkonfigurationen:
 
 ### Lägga till en konfiguration till en plats {#add-configuration}
 
-Om du vill använda en Touch UI-konfiguration på en webbplats går du till: **Webbplatser** > **Välj en webbplatssida** > **Egenskaper** > **Avancerat** > **Konfiguration** > Välj en konfigurationtenant.
+Om du vill använda en Touch UI-konfiguration på en plats går du till: **Platser** > **Välj en webbplatssida** > **Egenskaper** > **Avancerat** > **Konfiguration** > Välj konfigurationtenant.
 
 ## Integrera Adobe Target på AEM sajter med Adobe Launch {#integrate-target-launch}
 
@@ -104,29 +104,29 @@ Som en allmän översikt är integrationsstegen:
 2. Lägg till de tillägg som krävs
 3. Skapa ett dataelement (för att hämta hubbparametrar)
 4. Skapa en sidregel
-5. Bygg och publicera
+5. Bygg och Publish
 
 ### Skapa en startegenskap {#create-property}
 
 En egenskap är en behållare som är fylld med tillägg, regler och dataelement.
 
-1. Välj **Ny egenskap** -knappen.
+1. Markera knappen **Ny egenskap**.
 2. Ange ett namn för egenskapen.
 3. Som domän anger du den IP/värddator som du vill läsa in startbiblioteket för.
-4. Välj **Spara** -knappen.
+4. Klicka på knappen **Spara**.
    ![Launchproperty](assets/properties_newproperty1.png "Launchproperty")
 
 ### Lägga till de tillägg som krävs {#add-extension}
 
-**Tillägg** är den behållare som hanterar huvudbiblioteksinställningarna. Adobe Target-tillägget stöder implementeringar på klientsidan genom att använda Target JavaScript SDK för den moderna webben, at.js. Lägg till båda **Adobe Target** och **Adobe ContextHub** tillägg.
+**Tillägg** är den behållare som hanterar huvudbiblioteksinställningarna. Adobe Target-tillägget stöder implementeringar på klientsidan genom att använda Target JavaScript SDK för den moderna webben, at.js. Lägg till både **Adobe Target** och **Adobe ContextHub**.
 
 1. Välj alternativet Tilläggskatalog och sök efter mål i filtret.
-2. Välj **Adobe Target** at.js och klicka på alternativet Install.
+2. Välj **Adobe Target** at.js och klicka på alternativet Installera.
    ![Målsökning](assets/search_ext1.png "Målsökning")
-3. Välj **Konfigurera** -knappen. Observera konfigurationsfönstret med Target-kontots autentiseringsuppgifter importerade och at.js-versionen för det här tillägget.
-4. Välj **Spara** om du vill lägga till måltillägget i Launch-egenskapen. Du bör kunna se måltillägget under **Installerade tillägg** lista.
+3. Välj knappen **Konfigurera**. Observera konfigurationsfönstret med Target-kontots autentiseringsuppgifter importerade och at.js-versionen för det här tillägget.
+4. Välj **Spara** om du vill lägga till måltillägget i Launch-egenskapen. Du bör kunna se måltillägget i listan **Installerade tillägg**.
    ![Spara tillägg](assets/configure_extension1.png "Spara tillägg")
-5. Upprepa stegen ovan om du vill söka efter **Adobe ContextHub** tillägg och installation (det här tillägget krävs för integrering med kontexthub-parametrar, baserat på vilken målanpassning som görs).
+5. Upprepa stegen ovan om du vill söka efter tillägget **Adobe ContextHub** och installera det (det här tillägget krävs för integrering med ContextHub-parametrar, baserat på vilken målanpassning som görs).
 
 ### Skapa ett dataelement {#data-element}
 
@@ -140,16 +140,16 @@ En egenskap är en behållare som är fylld med tillägg, regler och dataelement
 
 ### Skapa en sidregel {#page-rule}
 
-I **Regel** definierar och ordnar den en sekvens av åtgärder, som körs på webbplatsen, för att uppnå målgruppsanpassning.
+I **Regel** definieras och ordnas en sekvens med åtgärder, som körs på webbplatsen, för att uppnå mål.
 
 1. Lägg till en uppsättning åtgärder som visas i skärmbilden.
    ![Åtgärder](assets/rules1.png "Åtgärder")
 2. I Lägg till parametrar i alla Mboxes lägger du till dataelementet som konfigurerats tidigare (se dataelementet ovan) i den parameter som skickas i mbox-anropet.
    ![Mbox](assets/map_data1.png "Åtgärder")
 
-### Bygg och publicera {#build-publish}
+### Bygg och Publish {#build-publish}
 
-Mer information om hur du skapar och publicerar finns i [page](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-launch-adobe-io.html).
+Mer information om hur du skapar och publicerar finns på [sidan](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-launch-adobe-io.html).
 
 ## Förändringar i innehållsstrukturen mellan Classic- och Touch UI-konfigurationer {#changes-content-structure}
 

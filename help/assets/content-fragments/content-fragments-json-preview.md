@@ -1,5 +1,5 @@
 ---
-title: Förhandsgranska - JSON-representation (resurser - innehållsfragment)
+title: Förhandsgranska - JSON-representation (Assets - innehållsfragment)
 description: Lär dig hur du enkelt förhandsgranskar en JSON-representation av dina innehållsfragment när du implementerar AEM headless-lösning.
 exl-id: e5f3f3ee-c191-4b7b-8a29-67524bb68a8e
 feature: Content Fragments
@@ -18,17 +18,17 @@ När du utvecklar modeller för innehållsfragment som en del av den AEM headles
 
 >[!NOTE]
 >
->Innehållsfragment är en webbplatsfunktion, men lagras som **Resurser**.
+>Innehållsfragment är en webbplatsfunktion, men lagras som **Assets**.
 >
->Det finns två redigerare för att skapa innehållsfragment. I det här avsnittet beskrivs den ursprungliga redigeraren, som du i första hand kommer åt från **Resurser** konsol. Se dokumentationen för Sites, [Content Fragments - Authoring](/help/sites-cloud/administering/content-fragments/authoring.md), om du vill ha information om den nya redigeraren (finns huvudsakligen i **Innehållsfragment** konsol).
+>Det finns två redigerare för att skapa innehållsfragment. I det här avsnittet beskrivs den ursprungliga redigeraren, som huvudsakligen nås från **Assets**-konsolen. Mer information om den nya redigeraren finns i webbplatsdokumentationen, [Innehållsfragment - redigering](/help/sites-cloud/administering/content-fragments/authoring.md) (som huvudsakligen nås från konsolen **Innehållsfragment**).
 
-Använda **Förhandsgranska** ikon:
+Använda ikonen **Förhandsgranska**:
 
-![Innehållsfragmentsredigeraren - fliken Förhandsgranska](assets/cfm-preview-01.png)
+![Innehållsfragmentredigeraren - fliken Förhandsgranska](assets/cfm-preview-01.png)
 
 Du kan visa JSON-representationen av det aktuella fragmentet. Till exempel:
 
-![Innehållsfragmentredigerare - förhandsgranskning av ett fragment](assets/cfm-preview-02.png)
+![Innehållsfragmentredigeraren - förhandsgranskning av ett fragment](assets/cfm-preview-02.png)
 
 <!--
 **Copy URL** lets you copy to clipboard the URL for either author or publish.

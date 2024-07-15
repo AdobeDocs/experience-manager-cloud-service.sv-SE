@@ -1,5 +1,5 @@
 ---
-title: AEM as a Cloud Service on Unified Shell
+title: AEM as a Cloud Service i enhetligt gränssnitt
 description: Läs om fördelarna med AEM as a Cloud Service i Unified Shell
 exl-id: ea739307-dc99-4621-a239-dbe60ab6b52e
 feature: Release Information
@@ -11,11 +11,11 @@ ht-degree: 1%
 
 ---
 
-# AEM as a Cloud Service on Unified Shell {#aem-as-a-cloud-service-on-unified-shell}
+# AEM as a Cloud Service i enhetligt gränssnitt {#aem-as-a-cloud-service-on-unified-shell}
 
 ## Ökning {#overview}
 
-AEM as a Cloud Service (Author Service) är integrerat med Unified Shell för att förbättra användarupplevelsen och kombinera den med alla andra Experience Cloud-program. Effekten av den här integreringen visas i programmets övre huvud enligt nedan.
+AEM as a Cloud Service (Author Service) är integrerat med Unified Shell för att förbättra användarupplevelsen och sammanföra den med alla andra Experience Cloud-program. Effekten av den här integreringen visas i programmets övre huvud enligt nedan.
 
 ![bild](/help/overview/assets/unifiedshell_header.png)
 
@@ -25,7 +25,7 @@ Fördelarna med detta är:
 * Smidig växling mellan företag eller övergång till ett annat program
 * Bättre produkthjälp
 * Knapp för enkel feedback i produkten för att rapportera problem eller utbyta idéer med Adobe
-* Tillgång till globala produktmeddelanden och meddelanden utöver meddelanden som är specifika för AEM as a Cloud Service
+* Tillgång till produktinformation och meddelanden utöver meddelanden som är specifika för AEM as a Cloud Service
 
 ## Inaktiverar enhetligt gränssnitt {#disabling-unified-shell}
 
@@ -34,13 +34,13 @@ AEM as a Cloud Service har ett enhetligt skal aktiverat. Om den övre rubriken h
 >[!NOTE]
 >Enhetligt gränssnitt kan endast inaktiveras av ett konto med administratörsbehörighet.
 
-1. Klicka **Verktyg > Cloud Service**.
+1. Klicka på **Verktyg > Cloud Service**.
 
    En administratörsanvändare ser det enhetliga gränssnittskonfigurationskortet enligt nedan:
 
    ![bild](/help/overview/assets/unifiedshell2.png)
 
-1. Klicka **Enhetlig gränssnittskonfiguration**. Avmarkera sedan kryssrutan nedan för att inaktivera Unified Shell:
+1. Klicka på **Enhetlig gränssnittskonfiguration**. Avmarkera sedan kryssrutan nedan för att inaktivera Unified Shell:
 
    ![bild](/help/overview/assets/unifiedshell3.png)
 
@@ -54,9 +54,9 @@ Om du vill ändra till det mörka temat klickar du på din profilikon. Den här 
 
 ![bild](/help/overview/assets/unifiedshell4.png)
 
-## Identifiera den AEM as a Cloud Service miljön {#identify-aemaacs-environment}
+## Identifiera AEM as a Cloud Service-miljön {#identify-aemaacs-environment}
 
-AEM as a Cloud Service innehåller tre typer av miljöer: produktion, scen och utveckling. Se [Miljötyper](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html) för mer information. I och med den här integreringen med Unified Shell visas den typ av miljö som användaren är inloggad på tjänsten Författare i det övre huvudet via en etikett som visas nedan.
+AEM as a Cloud Service har tre typer av miljöer: produktion, scen och utveckling. Mer information finns i [Miljötyper](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html). I och med den här integreringen med Unified Shell visas den typ av miljö som användaren är inloggad på tjänsten Författare i det övre huvudet via en etikett som visas nedan.
 
 ![bild](/help/overview/assets/unifiedshell_header_label.png)
 

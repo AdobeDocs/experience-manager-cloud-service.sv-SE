@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Typsnitt som stöder OTB (Out-of-Box) för PDF i Forms as a Cloud Service  {#ootb-supported-fonts-overview}
 
-AEM Forms as a Cloud Service har ett antal inbyggda teckensnitt med OOTB-stöd som kan användas i [Kommunikations-API:er](/help/forms/aem-forms-cloud-service-communications-introduction.md), [Dokumentation för kärnkomponenter](/help/forms/generate-document-of-record-core-components.md#customize-the-branding-information-in-document-of-record)och [Dokumentation för grundkomponenter](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#customize-the-branding-information-in-document-of-record).
+AEM Forms as a Cloud Service erbjuder ett antal inbyggda OOTB-teckensnitt som kan användas sömlöst i [kommunikations-API:er](/help/forms/aem-forms-cloud-service-communications-introduction.md), [Record-dokument för kärnkomponenter](/help/forms/generate-document-of-record-core-components.md#customize-the-branding-information-in-document-of-record) och [Document of Record för grundkomponenter](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#customize-the-branding-information-in-document-of-record).
 
 <!--
 
@@ -52,5 +52,5 @@ Listan med teckensnitt som stöds av OTB är:
 * eurosign.ttf
 
 
-Förutom teckensnitten ovan kan du använda anpassade teckensnitt för att ge PDF ett visst utseende och känsla. Om du vill aktivera anpassade teckensnitt [lägga till anpassade teckensnitt i Forms as a Cloud Service](/help/forms/use-custom-fonts.md) med en giltig licens.
+Förutom teckensnitten ovan kan du använda anpassade teckensnitt för att ge PDF ett visst utseende och känsla. Om du vill aktivera anpassade teckensnitt [lägger du till anpassade teckensnitt i din Forms as a Cloud Service-miljö](/help/forms/use-custom-fonts.md) med en giltig licens.
 

@@ -21,89 +21,89 @@ Miljöer i ett sandlådeprogram försätts i viloläge om ingen aktivitet identi
 
 Viloläge kan antingen inträffa automatiskt eller manuellt.
 
-* **Automatisk** - Sandlådemiljöer försätts automatiskt i viloläge efter åtta timmars inaktivitet. Inaktivitet definieras som varken författartjänsten, förhandsgransknings- eller publiceringstjänstens mottagningsbegäranden.
-* **Manuell** - Som användare kan du manuellt förvara en sandlådeprogrammiljö i viloläge. Du behöver inte göra det eftersom viloläge inträffar automatiskt enligt beskrivningen ovan.
+* **Automatisk** - Sandlådeprogrammiljöer försätts automatiskt i viloläge efter åtta timmars inaktivitet. Inaktivitet definieras som varken författartjänsten, förhandsgransknings- eller publiceringstjänstens mottagningsbegäranden.
+* **Manuell** - Som användare kan du manuellt placera en sandlådeprogrammiljö i viloläge. Du behöver inte göra det eftersom viloläge inträffar automatiskt enligt beskrivningen ovan.
 
 Det kan ta upp till några minuter för sandlådeprogrammiljöer att övergå i viloläge. Data bevaras under viloläge.
 
 ### Använda manuell viloläge {#using-manual-hibernation}
 
-Du kan manuellt förvara sandlådeprogrammet från Developer Console. Alla användare av Cloud Manager har tillgång till Developer Console för ett sandlådeprogram.
+Du kan manuellt förvara ditt sandlådeprogram från Developer Console. Alla användare av Cloud Manager har tillgång till Developer Console för ett sandlådeprogram.
 
 Följ de här stegen för att manuellt placera sandlådeprogrammiljöer i viloläge.
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
-1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** genom att trycka eller klicka på det program som du vill ska visas i viloläge.
+1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** trycker eller klickar du på det program du vill ska placeras i viloläge för att visa information om det.
 
-1. På **Miljö** klickar du på ellipsknappen och väljer **Developer Console**.
+1. Klicka på ellipsknappen på **miljökortet** och välj **Developer Console**.
 
-   * Se [Åtkomst till Developer Console](/help/implementing/cloud-manager/manage-environments.md#accessing-developer-console) för mer information om Developer Console.
+   * Mer information om Developer Console finns i [Åtkomst till Developer Console](/help/implementing/cloud-manager/manage-environments.md#accessing-developer-console).
 
-   ![Menyalternativet Developer Console](assets/developer-console-menu-option.png)
+   ![Developer Console-menyalternativ](assets/developer-console-menu-option.png)
 
-1. Klicka på på Developer Console **Viloläge**.
+1. Klicka på **Viloläge** i Developer Console.
 
    ![Knappen Viloläge](assets/hibernate-1.png)
 
-1. Klicka **Viloläge** för att bekräfta steget.
+1. Bekräfta steget genom att klicka på **Viloläge**.
 
    ![Bekräfta viloläge](assets/hibernate-2.png)
 
-När viloläget är slutfört visas ett meddelande om viloläget för miljön i **Developer Console** skärm.
+När viloläget är slutfört visas ett meddelande om viloläget för din miljö på skärmen **Developer Console**.
 
 ![Bekräftelse av viloläge](assets/hibernate-4.png)
 
-På Developer Console kan du även klicka på **Miljö** i textmarkeringarna ovanför **Pod** nedrullningsbar lista med miljöer som ska placeras i viloläge.
+I Developer Console kan du även klicka på länken **Miljöer** i de synliga kolumnerna ovanför listrutan **Pod** för att se en lista över miljöer som ska placeras i viloläge.
 
-![Lista över miljöer att förvara](assets/hibernate-1b.png)
+![Lista över miljöer som ska försättas i viloläge](assets/hibernate-1b.png)
 
 ## Avviloläge {#de-hibernation-introduction}
 
-Du kan manuellt förvara ditt sandlådeprogram från utvecklarkonsolen.
+Du kan förvara ditt sandlådeprogram manuellt från Developer Console.
 
 >[!IMPORTANT]
 >
->En användare med **Utvecklare** kan avplacera en sandlådeprogrammiljö.
+>En användare med en **utvecklarroll** kan avplacera en sandlådeprogrammiljö.
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
-1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** genom att trycka eller klicka på det program som du vill avaktivera för att visa information om det.
+1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** trycker eller klickar du på det program som du vill avaktivera för att visa information om det.
 
-1. På **Miljö** klickar du på ellipsknappen och väljer **Developer Console**.
+1. Klicka på ellipsknappen på **miljökortet** och välj **Developer Console**.
 
-   * Se [Åtkomst till Developer Console](/help/implementing/cloud-manager/manage-environments.md#accessing-developer-console) för mer information om Developer Console.
+   * Mer information om Developer Console finns i [Åtkomst till Developer Console](/help/implementing/cloud-manager/manage-environments.md#accessing-developer-console).
 
-1. Klicka **Avviloläge**.
+1. Klicka på **Ta bort viloläge**.
 
    ![Knappen Ej i viloläge](assets/de-hibernation-img1.png)
 
-1. Klicka **Ej viloläge** för att bekräfta steget.
+1. Bekräfta steget genom att klicka på **Ta bort viloläge**.
 
-   ![Bekräfta borttagning av viloläge](assets/de-hibernation-img2.png)
+   ![Bekräfta avviloläge](assets/de-hibernation-img2.png)
 
 1. Du får ett meddelande om att avvänjningsprocessen har startats och att den uppdateras med förloppet.
 
-   ![Meddelande om vilolägesförlopp](assets/de-hibernation-img3.png)
+   ![Meddelande om viloläge](assets/de-hibernation-img3.png)
 
 1. När processen har slutförts är sandlådeprogrammiljön aktiv igen.
 
-   ![Avvänjningen är klar](assets/de-hibernation-img4.png)
+   ![Avvänjningen har slutförts](assets/de-hibernation-img4.png)
 
 
-På Developer Console kan du även klicka på **Miljö** i textmarkeringarna ovanför **Pod** nedrullningsbar lista för en lista över miljöer som ska tas bort från viloläget.
+I Developer Console kan du även klicka på länken **Miljöer** i de synliga kolumnerna ovanför listrutan **Pod** för att visa en lista över miljöer som ska avplaceras i viloläge.
 
 ![Lista över viloläge](assets/de-hibernate-1b.png)
 
 ### Behörigheter att ta bort viloläge {#permissions-de-hibernate}
 
-Alla användare med en produktprofil som ger dem tillgång till AEM as a Cloud Service bör ha tillgång till **Developer Console**, så att de kan avhålla miljön.
+Alla användare med en produktprofil som ger dem åtkomst till AEM as a Cloud Service bör ha tillgång till **Developer Console**, vilket gör att de kan avplacera miljön i viloläge.
 
 ## Åtkomst till en miljö i viloläge {#accessing-hibernated-environment}
 
-När användaren gör några webbläsarförfrågningar mot författaren, förhandsgranskningen eller publiceringstjänsten i en miljö i viloläge, kommer användaren att få en landningssida som beskriver miljöns viloläge tillsammans med en länk till Developer Console där tjänsten kan avplaceras.
+När användaren gör någon webbläsarbegäran mot författaren, förhandsgranskningen eller publiceringstjänsten i en miljö i viloläge, kommer användaren att få en landningssida som beskriver miljöns viloläge tillsammans med en länk till Developer Console där tjänsten kan avplaceras.
 
-![Landningssida för tjänstgöring i viloläge](assets/de-hibernation-img5.png)
+![Startsida för viloläge](assets/de-hibernation-img5.png)
 
 ## Distributioner och AEM uppdateringar {#deployments-updates}
 
@@ -117,7 +117,7 @@ I miljöer med viloläge går det fortfarande att driftsätta och uppgradera man
 
 * Miljöer i ett sandlådeprogram försätts automatiskt i viloläge efter åtta timmars inaktivitet.
    * Inaktivitet definieras som varken författartjänsten, förhandsgransknings- eller publiceringstjänstens mottagningsbegäranden.
-   * När de väl har tagits i viloläge kan de [avviloläge manuellt.](#de-hibernation-introduction)
+   * När de har tagits i viloläge kan de [tas bort från viloläget manuellt.](#de-hibernation-introduction)
 * Sandlådeprogram tas bort efter sex månader när de är i viloläge, och därefter kan de återskapas.
 
 >[!NOTE]

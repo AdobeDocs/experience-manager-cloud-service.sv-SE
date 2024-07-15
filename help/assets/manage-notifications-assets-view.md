@@ -1,6 +1,6 @@
 ---
 title: Hantera meddelanden
-description: Övervaka åtgärderna som utförs på de resurser eller mappar som är tillgängliga i databasen med meddelanden i resursvyn.
+description: Övervaka åtgärderna som utförs på de resurser eller mappar som är tillgängliga i databasen med hjälp av vymeddelanden i Assets.
 exl-id: 1fe6a845-37d5-43c2-bb96-c5b149c238ab
 feature: Assets Essentials
 role: User, Leader
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Titta på resurser, mappar och samlingar {#watch-assets-folders}
 
-Med meddelanden i resursvyn kan du övervaka åtgärder som utförs för resurser, mappar och samlingar som är tillgängliga i databasen. Du måste välja och prenumerera på det innehåll som meddelandena skickas till dig för. Du kan också konfigurera de kategorier som meddelanden skickas till dig för.
+Med Assets-vymeddelanden kan du övervaka åtgärder som utförs på de resurser, mappar eller samlingar som är tillgängliga i databasen. Du måste välja och prenumerera på det innehåll som meddelandena skickas till dig för. Du kan också konfigurera de kategorier som meddelanden skickas till dig för.
 
 ## Prenumerera på meddelandekategorier {#subscribe-to-notification-categories}
 
-Du kan välja och prenumerera från en lista med kategorier för att få meddelanden. Resursvyn skickar endast meddelanden till dig för de kategorier som du väljer bland de tillgängliga alternativen:
+Du kan välja och prenumerera från en lista med kategorier för att få meddelanden. I vyn Assets skickas endast meddelanden till dig för de kategorier som du väljer bland de tillgängliga alternativen:
 
 <table>
     <tbody>
@@ -62,44 +62,44 @@ Du kan välja och prenumerera från en lista med kategorier för att få meddela
 
 Så här prenumererar du på meddelandekategorierna:
 
-1. Klicka ![klockikon](assets/bell-icon.svg) till höger i menyraden i användargränssnittet i resursvyn.
+1. Klicka på ![klockikonen](assets/bell-icon.svg) till höger i menyraden i användargränssnittet för vyn i Assets.
 
-1. Klicka ![inställningsikon](assets/settings-icon.svg) för att visa [!UICONTROL Experience Cloud preferences] sida.
+1. Klicka på ![inställningsikonen](assets/settings-icon.svg) för att visa sidan [!UICONTROL Experience Cloud preferences].
 
-1. Klicka på **[!UICONTROL Notifications]** i den vänstra rutan.
+1. Klicka på alternativet **[!UICONTROL Notifications]** i den vänstra rutan.
 
-1. I **[!UICONTROL Notifications]** -avsnittet, navigera till [!UICONTROL Assets view] och se till att växlingsalternativet är aktiverat.
+1. I avsnittet **[!UICONTROL Notifications]** går du till avsnittet [!UICONTROL Assets view] och ser till att växlingsalternativet är aktiverat.
 
-   ![Meddelanden i resursvyn](assets/enable-notifications.png)
+   ![Meddelanden i Assets-vyn](assets/enable-notifications.png)
 
-1. Klicka **[!UICONTROL Customize]** för att visa meddelandekategorierna.
-   ![Meddelanden i resursvyn](assets/enable-notification-categories.png)
+1. Klicka på **[!UICONTROL Customize]** om du vill visa meddelandekategorierna.
+   ![Meddelanden i Assets-vyn](assets/enable-notification-categories.png)
 
 1. Välj de meddelandekategorier för vilka du måste få meddelanden.
 
 ## Titta på och ta bort bevakade mappar, resurser och samlingar {#watch-unwatch-assets}
 
-Efter [prenumerera på meddelandekategorierna](#subscribe-to-notification-categories)måste du prenumerera på innehållet för att få meddelanden.
+När [du har prenumererat på meddelandekategorierna](#subscribe-to-notification-categories) måste du prenumerera på innehållet för att få meddelanden.
 
 >[!NOTE]
 >
->* För **[!UICONTROL Requests]** och **[!UICONTROL Assigned to me]** meddelandekategorier behöver du inte prenumerera på innehållet efter att du har prenumererat på meddelandekategorierna. Meddelanden skickas automatiskt till dig för förfrågningar som du har skapat och när en uppgift har tilldelats dig.
->* Resursvyn skickar endast meddelanden när andra användare utför åtgärder på det prenumererade innehållet. Du får inga meddelanden om vilka åtgärder du utför på det prenumererade innehållet.
+>* För meddelandekategorierna **[!UICONTROL Requests]** och **[!UICONTROL Assigned to me]** behöver du inte prenumerera på innehållet efter att du har prenumererat på meddelandekategorierna. Meddelanden skickas automatiskt till dig för förfrågningar som du har skapat och när en uppgift har tilldelats dig.
+>* I Assets-vyn skickas meddelanden endast när andra användare utför åtgärder på det prenumererade innehållet. Du får inga meddelanden om vilka åtgärder du utför på det prenumererade innehållet.
 
 Om du vill prenumerera på innehållet väljer du den mapp, resurs eller samling som du vill prenumerera på och klickar på **[!UICONTROL Watch]**.
 
-Resursvyn visar ett meddelande om att åtgärden lyckades. Klicka **[!UICONTROL Go to notification preferences]** finns i meddelandet om att åtgärden lyckades redigera [prenumeration på meddelandekategorier](#subscribe-to-notification-categories).
+Assets-vyn visar ett meddelande om att åtgärden lyckades. Du kan klicka på **[!UICONTROL Go to notification preferences]** som finns i meddelandet om att åtgärden lyckades om du vill redigera din [prenumeration till meddelandekategorier](#subscribe-to-notification-categories).
 
-![Meddelanden i resursvyn](assets/watch-assets.png)
+![Meddelanden i Assets-vyn](assets/watch-assets.png)
 
-Resursvyn skickar nu meddelanden för de prenumererade kategorierna. Du kan också markera flera resurser, mappar eller samlingar och klicka på **[!UICONTROL Watch]** för att spara tid. Om du väljer flera enheter som några av dem redan prenumererat på, kan du **[!UICONTROL Watch]** alternativet visas inte.
+Assets-vyn skickar nu meddelanden om de prenumererade kategorierna. Du kan också markera flera resurser, mappar eller samlingar och klicka på **[!UICONTROL Watch]** för att spara tid. Om du väljer flera enheter av vilka vissa av dem redan har prenumererats visas emellertid inte alternativet **[!UICONTROL Watch]**.
 
 Om du vill avbryta prenumerationen markerar du resursen, mappen eller samlingen som du prenumererar på och klickar på **[!UICONTROL Unwatch]**.
 
 ## Visa meddelanden {#view-notifications}
 
-Meddelandena visas i den högra änden av menyraden i användargränssnittet i resursvyn.
+Meddelandena visas i den högra änden av menyraden i användargränssnittet i Assets-vyn.
 
-![Meddelanden i resursvyn](assets/notifications-assets-essentials.png)
+![Meddelanden i Assets-vyn](assets/notifications-assets-essentials.png)
 
-När du klickar på ett meddelande navigerar resursvyn till lämplig resurs eller mapp som refereras till i meddelandet.
+När du klickar på ett meddelande navigerar Assets-vyn till rätt resurs eller mapp som det hänvisas till i meddelandet.

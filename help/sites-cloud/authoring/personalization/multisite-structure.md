@@ -16,7 +16,7 @@ ht-degree: 0%
 
 I följande diagram visas hur stöd för flera webbplatser för riktat innehåll är strukturerat.
 
-Områden visas under **/content/campaign/&lt;brand>** och som standard har varje varumärke ett originalområde som skapas automatiskt. Varje område innehåller egna aktiviteter, upplevelser och erbjudanden.
+Områden visas under **/content/campaign/&lt;brand>** och som standard har varje varumärke ett huvudområde, som skapas automatiskt. Varje område innehåller egna aktiviteter, upplevelser och erbjudanden.
 
 ![Struktur för flera webbplatser](/help/sites-cloud/authoring/assets/multisite-structure.png)
 
@@ -24,7 +24,7 @@ Om du vill söka efter riktat innehåll kan sidorna eller platserna mappas till 
 
 Följande diagram är ett exempel på hur logiken fungerar för tre platser, som kallas site1, site2 och site3.
 
-![Struktur för flera webbplatser](/help/sites-cloud/authoring/assets/multisite-structure-2.png)
+![Struktur för flera webbplatser över flera platser](/help/sites-cloud/authoring/assets/multisite-structure-2.png)
 
 * site1 söker upp myarea1 för brand1 och other area2 för brand2 baserat på områdesmappning.
 * site2 söker upp myarea1 för brand1 och master area för brand2 eftersom endast områdesmappningen för brand1 har definierats.

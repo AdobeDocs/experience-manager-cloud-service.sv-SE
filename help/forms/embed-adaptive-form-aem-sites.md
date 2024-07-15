@@ -26,9 +26,9 @@ Med AEM Forms kan formulärutvecklare smidigt bädda in Adaptiv Forms på en AEM
 
 Du kan använda AEM Page Editor för att snabbt bädda in flera formulär på dina AEM Sites-sidor. Med AEM Page Editor kan skribenter skapa sömlösa datainhämtningsupplevelser på en Sites-sida med hjälp av adaptiva Forms-komponenter, inklusive dynamiskt beteende, validering, dataintegrering, generering av dokument för post- och affärsprocessautomatisering. Du kan även använda olika funktioner på AEM Sites-sidor, som versionshantering, målgruppsanpassning, översättning och hantering av flera webbplatser.
 
-AEM Forms tillhandahåller **[!UICONTROL Adaptive Form Container]** och **[!UICONTROL Adaptive Forms – Embed(v2)]** -komponenter. Du kan använda **[!UICONTROL Adaptive Forms – Embed(v2)]** för att lägga till ett befintligt adaptivt formulär eller skapa ett formulär med Adaptiv Forms Editor, samtidigt som **[!UICONTROL Adaptive Form Container]** för att skapa nya formulär på en Experience Fragment- eller AEM Sites-sida.
+AEM Forms tillhandahåller komponenter för **[!UICONTROL Adaptive Form Container]** och **[!UICONTROL Adaptive Forms – Embed(v2)]**. Du kan använda komponenten **[!UICONTROL Adaptive Forms – Embed(v2)]** för att lägga till ett befintligt adaptivt formulär eller skapa ett formulär med Adaptiv Forms Editor, medan **[!UICONTROL Adaptive Form Container]** för att skapa ett nytt formulär på en Experience Fragment- eller AEM Sites-sida.
 
-![Ett exempel på ett adaptivt formulär på en AEM Sites-sida](/help/forms/assets/adaptive-form-in-sites-page.png)
+![Ett exempel på ett anpassat formulär på en AEM Sites-sida](/help/forms/assets/adaptive-form-in-sites-page.png)
 
 <!-- For information about embedding an Adaptive Form in an external web page, see [Embed Adaptive Form in external web page](/help/forms/using/embed-adaptive-form-external-web-page.md). 
 
@@ -52,47 +52,47 @@ In addition, Adaptive Forms in AEM Page Editor use [Adaptive Forms Core Componen
 
 Du kan utnyttja den här funktionen fullt ut genom att använda följande alternativ:
 
-* **[Skapa ett adaptivt formulär med godkända mallar och bädda in det på en AEM Sites-sida](#embed-form-using-adaptive-form-wizzard-aem-sites):** Du kan använda redan godkända mallar för att snabbt skapa och bädda in adaptiva Forms som är anpassade efter organisationens riktlinjer och designstandarder.
+* **[Skapa ett adaptivt formulär med godkända mallar och bädda in det på en AEM Sites-sida](#embed-form-using-adaptive-form-wizzard-aem-sites):** Du kan använda redan godkända mallar för att snabbt skapa och bädda in adaptiv Forms som är anpassad efter organisationens riktlinjer och designstandarder.
 
-* **[Bädda in befintliga formulär på en AEM Sites-sida](#embed-an-adaptive-form-in-sites-editor):** Ni kan enkelt integrera formulär som ni redan har skapat på era webbplatser, så att besökarna kan interagera direkt med dem.
+* **[Bädda in befintliga formulär på en AEM Sites-sida](#embed-an-adaptive-form-in-sites-editor):** Du kan enkelt integrera formulär som du redan har skapat på dina webbplatser så att besökarna kan interagera direkt med dem.
 
-* **[Konvertera ett inbäddat anpassat formulär till Experience Fragment](#convert-an-adaptive-form-in-sites-page-to-an-experience-fragment):** Konvertera ett inbäddat adaptivt formulär som lagts till på en AEM Sites-sida till ett Experience Fragment för återanvändning av formuläret på flera AEM Sites-sidor.
+* **[Konvertera ett inbäddat anpassat formulär till Experience Fragment](#convert-an-adaptive-form-in-sites-page-to-an-experience-fragment):** Konvertera ett inbäddat anpassat formulär som lagts till på en AEM Sites-sida till ett Experience Fragment för återanvändning av formuläret på flera AEM Sites-sidor.
 
-* **[Skapa och lägga till ett anpassat anpassat formulär på en AEM Sites-sida](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md#create-an-adaptive-form-in-sites-editor-or-experience-fragment):** Du kan använda **[!UICONTROL Adaptive Form Container]** för att skapa ett helt nytt formulär från grunden och skräddarsy det specifikt efter dina behov och designönskemål.
+* **[Skapa och lägg till ett anpassat anpassat formulär på en AEM Sites-sida](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md#create-an-adaptive-form-in-sites-editor-or-experience-fragment):** Du kan använda komponenten **[!UICONTROL Adaptive Form Container]** för att skapa ett helt nytt formulär från grunden och anpassa det specifikt efter dina krav och designinställningar.
 
-* **[Skapa och lägga till ett anpassat anpassat formulär i ett Experience Fragments](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md#create-an-adaptive-form-in-sites-editor):** Ni kan utöka räckvidden för era formulär genom att lägga till dem i AEM Experience Fragments, vilket möjliggör smidig återanvändning på flera sidor eller webbplatser.
+* **[Skapa och lägg till ett anpassat anpassat formulär i ett Experience Fragments](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md#create-an-adaptive-form-in-sites-editor):** Du kan utöka formulärens räckvidd genom att lägga till dem i AEM Experience Fragments, vilket möjliggör smidig återanvändning på flera sidor eller webbplatser.
 
-* **Lägga till flera formulär på en AEM Sites-sida eller Experience Fragment:**  Du kan skapa eller lägga till flera adaptiva Forms-filer på en AEM Sites-sida för att ge flera alternativ beroende på användarens önskemål och önskemål. Du kan använda AEM Page Editor för att snabbt bädda in flera formulär på dina AEM Sites-sidor. Du kan använda **[!UICONTROL Adaptive Form Container]** flera gånger för att lägga till Adaptiv Forms på en AEM Sites-sida. Du kan använda **[!UICONTROL Adaptive Forms - Embed]** flera gånger på en AEM Sites-sida, endast om **[!UICONTROL Form covers entire width of the frame]** är markerat. Om **[!UICONTROL Form covers entire width of the frame]** om alternativet inte är markerat stöder AEM Sites-sidan endast ett adaptivt formulär som ska finnas utan iframe. Lägga till mer adaptiv Forms med **[!UICONTROL Adaptive Forms - Embed]** komponent, markera **[!UICONTROL Form covers entire width of the frame]** alternativ.
+* **Lägg till flera formulär på en AEM Sites-sida eller i ett Experience Fragment:** Du kan skapa eller lägga till flera adaptiva Forms på en AEM Sites-sida för att ge flera alternativ för användare baserat på deras inställningar och krav. Du kan använda AEM Page Editor för att snabbt bädda in flera formulär på dina AEM Sites-sidor. Du kan använda komponenten **[!UICONTROL Adaptive Form Container]** flera gånger för att lägga till Adaptiv Forms på en AEM Sites-sida. Du kan använda komponenten **[!UICONTROL Adaptive Forms - Embed]** flera gånger på en AEM Sites-sida, endast om alternativet **[!UICONTROL Form covers entire width of the frame]** har valts. Om alternativet **[!UICONTROL Form covers entire width of the frame]** inte är markerat stöder AEM Sites-sidan endast ett adaptivt formulär som ska finnas utan iframe. Om du vill lägga till mer adaptiv Forms med komponenten **[!UICONTROL Adaptive Forms - Embed]** väljer du alternativet **[!UICONTROL Form covers entire width of the frame]**.
 
 ## Att tänka på när du bäddar in ett anpassat formulär på en AEM Sites-sida eller AEM Experience Fragment {#consideration}
 
-* När du skapar eller lägger till ett formulär med **[!UICONTROL Adaptive Forms – Embed(v2)]** kan formulären översättas och lokaliseras med hjälp av AEM Forms översättningsflöde. I det här fallet finns det ett enda formulär som du kan referera till på alla språkkopior av webbplatssidorna. **[!UICONTROL Adaptive Forms – Embed(v2)]** -komponenten ger inte åtkomst till olika funktioner på AEM Sites-sidor som versionshantering, målgruppsanpassning, översättning och hantering av flera webbplatser.
+* När du skapar eller lägger till ett formulär med komponenten **[!UICONTROL Adaptive Forms – Embed(v2)]**, översätts och lokaliseras formulären med hjälp av AEM Forms översättningsflöde. I det här fallet finns det ett enda formulär som du kan referera till på alla språkkopior av webbplatssidorna. **[!UICONTROL Adaptive Forms – Embed(v2)]**-komponenten ger inte åtkomst till olika funktioner på AEM Sites-sidor, som versionshantering, målgruppsanpassning, översättning och hantering av flera webbplatser.
 
-* När du använder **[!UICONTROL Adaptive Form Container]** om du vill skapa ett formulär, översätts och lokaliseras formulären via AEM Sites översättningsflöde. För varje språk genereras en separat kopia (språkkopia) av webbplatssidan och motsvarande formulär. När en innehållsförfattare ändrar en regel i ett formulär på den överordnade sidan måste samma ändringar göras i alla språkkopior av formuläret. **[!UICONTROL Adaptive Form Container]** Med kan du också använda olika funktioner på AEM Sites-sidor, som versionshantering, målgruppsanpassning, översättning och hantering av flera webbplatser.
+* När du använder **[!UICONTROL Adaptive Form Container]** för att skapa ett formulär genomgår formulären översättning och lokalisering via AEM Sites översättningsflöde. För varje språk genereras en separat kopia (språkkopia) av webbplatssidan och motsvarande formulär. När en innehållsförfattare ändrar en regel i ett formulär på den överordnade sidan måste samma ändringar göras i alla språkkopior av formuläret. I **[!UICONTROL Adaptive Form Container]** kan du även använda olika funktioner på AEM Sites-sidor, som versionshantering, målgruppsanpassning, översättning och hantering av flera webbplatser.
 
 
 ## Krav för att bädda in ett anpassat formulär på AEM Sites-sidan eller AEM Experience Fragment {#before-you-start-embedding-an-adaptive-form}
 
-Innan du börjar bädda in ett nytt adaptivt formulär eller ett befintligt adaptivt formulär med **[!UICONTROL Adaptive Forms – Embed(v2)]**, aktivera **Adaptiva Forms Core-komponenter** och lägga till **Adaptiva Forms-klientbibliotek** till din AEM Sites-sida:
+Innan du börjar bädda in ett nytt adaptivt formulär eller ett befintligt adaptivt formulär med **[!UICONTROL Adaptive Forms – Embed(v2)]** aktiverar du **Adaptiva Forms Core-komponenter** och lägger till **adaptiva Forms Client Libraries** på din AEM Sites-sida:
 
 +++  Aktivera adaptiva Forms Core-komponenter för din AEM Cloud Service-miljö
 
-Se till att [Adaptiva Forms Core-komponenter är aktiverade för din as a Cloud Service AEM Forms-miljö](enable-adaptive-forms-core-components.md).
+Kontrollera att de [adaptiva Forms Core-komponenterna är aktiverade för din AEM Forms as a Cloud Service miljö](enable-adaptive-forms-core-components.md).
 
 +++
 
 +++  Lägg till adaptiva Forms-klientbibliotek på din AEM Sites-sida eller Experience Fragment
 
-När **[!UICONTROL When form covers entire width of a page]** alternativet är markerat i **[!UICONTROL Form Containers]** dialogrutan Konfigurera och Adaptiv Forms med Core Components används. Klientbiblioteken måste inkluderas på sidan för motsvarande webbplats.
+När alternativet **[!UICONTROL When form covers entire width of a page]** är markerat i dialogrutan **[!UICONTROL Form Containers]** Konfigurera och Adaptiv Forms med hjälp av kärnkomponenter används, måste klientbiblioteken inkluderas på sidan för motsvarande webbplats.
 
-![När formuläret täcker hela sidbredden är markerat och adaptiva formulär med kärnkomponenter används](/help/forms/assets/overlaycorecomponent.gif)
+![När formuläret täcker hela bredden på en sida är det valt och adaptiva formulär med kärnkomponenter används](/help/forms/assets/overlaycorecomponent.gif)
 
 
-Lägg till **CustomerHeaderlibs** och **CustomFoterlibs** klientbibliotek till din AEM Sites-sida via distributionsflödet. Så här lägger du till klientbiblioteken:
+Lägg till klientbiblioteken **CustomHeaderlibs** och **CustomFoterlibs** på din AEM Sites-sida med hjälp av distributionsflödet. Så här lägger du till klientbiblioteken:
 
-1. Få åtkomst till och klona dina [AEM Cloud Service Git-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/managing-code/repositories.html).
+1. Få åtkomst till och klona din [AEM Cloud Service Git-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/managing-code/repositories.html).
 1. Öppna AEM Cloud Service Git-databasmappen i en textredigerare för en plan. Exempel: Microsoft® Visual Code.
-1. Öppna `ui.apps\src\main\content\jcr_root\apps\[your-project]\components\page\customheaderlibs.html` och lägg till följande kod i filen:
+1. Öppna filen `ui.apps\src\main\content\jcr_root\apps\[your-project]\components\page\customheaderlibs.html` och lägg till följande kod i filen:
 
    ```
        //Customheaderlibs.html
@@ -101,7 +101,7 @@ Lägg till **CustomerHeaderlibs** och **CustomFoterlibs** klientbibliotek till d
        </sly> 
    ```
 
-1. Öppna `ui.apps\src\main\content\jcr_root\apps\[your-project]\components\page\customfooterlibs.html` och lägg till följande kod i filen:
+1. Öppna filen `ui.apps\src\main\content\jcr_root\apps\[your-project]\components\page\customfooterlibs.html` och lägg till följande kod i filen:
 
    ```
        //customfooterlibs.html
@@ -110,7 +110,7 @@ Lägg till **CustomerHeaderlibs** och **CustomFoterlibs** klientbibliotek till d
        </sly> 
    ```
 
-1. Öppna `ui.apps\src\main\content\jcr_root\apps\[your-project]\components\xfpage\customheaderlibs.html` och lägg till följande kod i filen:
+1. Öppna filen `ui.apps\src\main\content\jcr_root\apps\[your-project]\components\xfpage\customheaderlibs.html` och lägg till följande kod i filen:
 
    ```
        //Customheaderlibs.html
@@ -119,7 +119,7 @@ Lägg till **CustomerHeaderlibs** och **CustomFoterlibs** klientbibliotek till d
        </sly> 
    ```
 
-1. Öppna `ui.apps\src\main\content\jcr_root\apps\[your-project]\components\xfpage\customfooterlibs.html` och lägg till följande kod i filen:
+1. Öppna filen `ui.apps\src\main\content\jcr_root\apps\[your-project]\components\xfpage\customfooterlibs.html` och lägg till följande kod i filen:
 
    ```
        //customfooterlibs.html
@@ -128,17 +128,17 @@ Lägg till **CustomerHeaderlibs** och **CustomFoterlibs** klientbibliotek till d
        </sly> 
    ```
 
-1. [Kör distributionsflödet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/enable-front-end-pipeline.html) för att distribuera klientbiblioteken till din AEM as a Cloud Service miljö.
+1. [Kör distributionsflödet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/enable-front-end-pipeline.html) för att distribuera klientbiblioteken till din AEM as a Cloud Service-miljö.
 
 +++
 
 +++ Aktivera **[!UICONTROL Adaptive Forms – Embed(v2)]** för din AEM Sites-sida eller Experience Fragment
 
-Aktivera **[!UICONTROL Adaptive Forms – Embed(v2)]** utför följande steg i mallens policy:
+Så här aktiverar du komponenten **[!UICONTROL Adaptive Forms – Embed(v2)]** i mallprincipen:
 
 1. Öppna AEM Sites eller Experience Fragment för redigering. Om du vill öppna sidan för redigering markerar du sidan och klickar på **[!UICONTROL Edit]**.
 1. Öppna mallen för webbplatserna eller sidan för Experience Fragment. Öppna mallen genom att gå till **[!UICONTROL Page Information]** ![Sidinformation](/help/forms/assets/Smock_Properties_18_N.svg) > **[!UICONTROL Edit Template]**. Motsvarande mall öppnas i mallredigeraren.
-1. I strukturvyn klickar du på **[!UICONTROL Policy]** ![Policy](/help/forms/assets/Smock_FeedManagement_18_N.svg) -ikonen på menyraden. I **[!UICONTROL Allowed Components]** och välj **[!UICONTROL Adaptive Forms – Embed(v2)]**  kryssrutan under **[AEM Archetype Project Name] - Adaptiv form**.
+1. Klicka på ikonen **[!UICONTROL Policy]** ![Princip](/help/forms/assets/Smock_FeedManagement_18_N.svg) på menyraden i strukturvyn. I listan **[!UICONTROL Allowed Components]** och markera kryssrutan **[!UICONTROL Adaptive Forms – Embed(v2)]** under projektnamnet **[AEM Archetype ] - Adaptiv form**.
 1. Klicka på **[!UICONTROL Done]**.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419369?quality=12&learn=on)
@@ -147,11 +147,11 @@ Aktivera **[!UICONTROL Adaptive Forms – Embed(v2)]** utför följande steg i m
 
 ## Bädda in ett adaptivt formulär med komponenten Adaptiv Forms - Embed(v2) {#embed-an-adaptive-form-in-sites-editor-or-experience-fragment}
 
-Använd **[!UICONTROL Adaptive Forms - Embed(v2)]** för att skapa ett adaptivt formulär direkt i AEM Sites-redigeraren med hjälp av guiden Skapa formulär. Det resulterande formuläret sparas som en extern enhet, vilket gör att det kan återanvändas på andra webbplatssidor och fristående formulär. Du kan bädda in ett helt nytt formulär från grunden och anpassa det specifikt efter dina krav och designönskemål, direkt på en AEM Sites-sida eller i Experience Fragment. För enstaka formulär rekommenderas direktredigering på en AEM Sites-sida, medan Experience Fragments är idealiskt för formulär som måste återanvändas på flera sidor på webbplatsen.
+Använd komponenten **[!UICONTROL Adaptive Forms - Embed(v2)]** för att skapa ett adaptivt formulär direkt i AEM Sites-redigeraren med hjälp av guiden Skapa formulär. Det resulterande formuläret sparas som en extern enhet, vilket gör att det kan återanvändas på andra webbplatssidor och fristående formulär. Du kan bädda in ett helt nytt formulär från grunden och anpassa det specifikt efter dina krav och designönskemål, direkt på en AEM Sites-sida eller i Experience Fragment. För enstaka formulär rekommenderas direktredigering på en AEM Sites-sida, medan Experience Fragments är idealiskt för formulär som måste återanvändas på flera sidor på webbplatsen.
 
 Du kan enkelt bädda in ett nytt formulär med **[!UICONTROL Adaptive Forms - Embed(v2)]**.  Tänk dig till exempel att infoga ett nytt kontaktformulär på en AEM Sites-sida eller AEM Experience Fragment. Alla uppdateringar eller ändringar som görs i kontaktformuläret på AEM Sites-sidan eller i Experience Fragment gäller automatiskt alla sidor där det distribueras. Detta förenklar hanteringen av webbplatsens formulär, vilket ger en smidig användarupplevelse och effektiviserar hela processen.
 
-Använda **[!UICONTROL Adaptive Forms - Embed(v2)]** kan du:
+Med **[!UICONTROL Adaptive Forms - Embed(v2)]** kan du:
 
 * [Bädda in ett nytt formulär med Adaptive Forms Wizard på AEM Sites Page](#embed-form-using-adaptive-form-wizzard-aem-sites)
 * [Bädda in ett nytt formulär med hjälp av guiden Adaptiv Forms i ett Experience Fragment](#embed-form-using-adaptive-form-wizzard-experience-fragment)
@@ -164,18 +164,18 @@ Använda **[!UICONTROL Adaptive Forms - Embed(v2)]** kan du:
 Steg för att bädda in nya formulär på en AEM Sites-sida är:
 
 1. Öppna AEM Sites-sidan i redigeringsläge.
-1. Dra och släpp komponentens **[!UICONTROL Adaptive Forms - Embed(v2)]** på sidan.
-1. Klicka på **Plus** och du omdirigeras till guiden för att skapa formulär.
+1. Dra och släpp komponenten **[!UICONTROL Adaptive Forms - Embed(v2)]** på sidan från panelen Komponentwebbläsaren.
+1. Klicka på ikonen **Plus** så dirigeras du till guiden för att skapa formulär.
 
    ![Adaptiv Forms - Bädda in komponent](/help/forms/assets/aemformcontainer.png)
 
-1. Skapa ett nytt adaptivt formulär från **[!UICONTROL Form Creation]** guide.
-The **[!UICONTROL Asset Path]** innehåller redan sökvägen till ett skapat adaptivt formulär
+1. Skapa ett nytt adaptivt formulär från guiden **[!UICONTROL Form Creation]**.
+**[!UICONTROL Asset Path]** innehåller redan sökvägen till ett skapat anpassat formulär
 1. Spara inställningarna. Det adaptiva formuläret är nu inbäddat på sidan.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419366/adaptive-form-aem-forms?quality=12&learn=on)
 
-Nu kan du [ange åtgärden Skicka](/help/forms/configuring-submit-actions.md) och avancerade egenskaper för inbäddade adaptiva formulär med hjälp av guiden Skapa formulär.
+Sedan kan du [ange åtgärden Skicka](/help/forms/configuring-submit-actions.md) och avancerade egenskaper för ett inbäddat adaptivt formulär med hjälp av guiden Skapa formulär.
 
 
 ### Bädda in ett nytt formulär med hjälp av guiden Adaptiv Forms i ett Experience Fragment {#embed-form-using-adaptive-form-wizzard-experience-fragment}
@@ -183,44 +183,44 @@ Nu kan du [ange åtgärden Skicka](/help/forms/configuring-submit-actions.md) oc
 Steg för att bädda in nya formulär i en Experience Fragment är:
 
 1. Öppna Experience Fragment i redigeringsläge.
-1. Dra och släpp komponentens **[!UICONTROL Adaptive Forms - Embed(v2)]** på sidan.
-1. Klicka på **Plus** och du omdirigeras till guiden för att skapa formulär.
+1. Dra och släpp komponenten **[!UICONTROL Adaptive Forms - Embed(v2)]** på sidan från panelen Komponentwebbläsaren.
+1. Klicka på ikonen **Plus** så dirigeras du till guiden för att skapa formulär.
 
    ![Adaptiv Forms - Bädda in komponent](/help/forms/assets/aemformcontainer.png)
 
-1. Skapa ett nytt adaptivt formulär från **[!UICONTROL Form Creation]** guide.
-The **[!UICONTROL Asset Path]** innehåller redan sökvägen till ett skapat adaptivt formulär
+1. Skapa ett nytt adaptivt formulär från guiden **[!UICONTROL Form Creation]**.
+**[!UICONTROL Asset Path]** innehåller redan sökvägen till ett skapat anpassat formulär
 1. Spara inställningarna. Det adaptiva formuläret är nu inbäddat i Experience Fragment.
 
-Nu kan du [ange åtgärden Skicka](/help/forms/configuring-submit-actions.md) och avancerade egenskaper för inbäddade adaptiva formulär med hjälp av guiden Skapa formulär.
+Sedan kan du [ange åtgärden Skicka](/help/forms/configuring-submit-actions.md) och avancerade egenskaper för ett inbäddat adaptivt formulär med hjälp av guiden Skapa formulär.
 
 ### Bädda in ett befintligt adaptivt formulär på en AEM Sites-sida {#embed-an-adaptive-form-in-sites-editor}
 
-Med **[!UICONTROL Adaptive Forms - Embed(v2)]** kan du enkelt integrera ett befintligt adaptivt formulär på en sida i AEM Sites. Den här funktionen gör det enklare att anpassa och återanvända Adaptive Forms, vilket ger kunderna ett bekvämt sätt att återanvända redan skapade formulär. Tänk dig att du kan lägga in ett kontaktformulär på en AEM Sites-sida och slippa återskapa formuläret flera gånger.
+Med komponenten **[!UICONTROL Adaptive Forms - Embed(v2)]** kan du enkelt integrera ett befintligt adaptivt formulär på en sida i AEM Sites. Den här funktionen gör det enklare att anpassa och återanvända Adaptive Forms, vilket ger kunderna ett bekvämt sätt att återanvända redan skapade formulär. Tänk dig att du kan lägga in ett kontaktformulär på en AEM Sites-sida och slippa återskapa formuläret flera gånger.
 
 Så här bäddar du in ett befintligt adaptivt formulär på en webbplatssida:
 
 1. Öppna AEM Sites-sidan i redigeringsläge.
-1. Dra och släpp **[!UICONTROL Adaptive Forms - Embed(v2)]** -komponenten från komponentwebbläsaren till sidan Platser.
-1. Välj **[!UICONTROL Adaptive Forms - Embed]** på sidan Platser och väljer ![Egenskaper för adaptiv formulärbehållare](/help/forms/assets/configure-icon.svg) i åtgärdsfältet. The **[!UICONTROL Edit Adaptive Forms - Embed(v2)]** öppnas.
+1. Dra och släpp komponenten **[!UICONTROL Adaptive Forms - Embed(v2)]** från komponentwebbläsaren till sidan Platser.
+1. Markera **[!UICONTROL Adaptive Forms - Embed]**-komponenten på sidan Platser och välj ![ Egenskaper för adaptiv formulärbehållare ](/help/forms/assets/configure-icon.svg) i åtgärdsfältet. Dialogrutan **[!UICONTROL Edit Adaptive Forms - Embed(v2)]** öppnas.
 1. Bläddra och välj det adaptiva formulär som ska bäddas in i **[!UICONTROL Asset Path]**.
 1. Spara inställningarna. Det adaptiva formuläret är nu inbäddat på sidan.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419368?quality=12&learn=on)
 
-Nu kan du [ange åtgärden Skicka](/help/forms/configuring-submit-actions.md) och avancerade egenskaper för inbäddade adaptiva formulär med hjälp av guiden Skapa formulär.
+Sedan kan du [ange åtgärden Skicka](/help/forms/configuring-submit-actions.md) och avancerade egenskaper för ett inbäddat adaptivt formulär med hjälp av guiden Skapa formulär.
 
 ### Bädda in ett befintligt anpassat formulär i ett Experience Fragment {#embed-an-adaptive-form-in-experience-fragment}
 
 Du kan också utöka formulärens tillgänglighet genom att bädda in dem i AEM Experience Fragment. Så här bäddar du in ett anpassat formulär i ett Experience Fragment:
 
 1. Öppna ett Experience Fragment i redigeringsläge.
-1. Dra och släpp **[!UICONTROL Adaptive Forms - Embed(v2)]** -komponenten från komponentwebbläsaren till Experience Fragment.
-1. Välj **[!UICONTROL Adaptive Forms - Embed]** i Experience Fragment och markera ![Egenskaper för adaptiv formulärbehållare](/help/forms/assets/configure-icon.svg) i åtgärdsfältet. The **[!UICONTROL Edit Adaptive Forms - Embed(v2)]** öppnas.
+1. Dra och släpp komponenten **[!UICONTROL Adaptive Forms - Embed(v2)]** från komponentwebbläsaren till Experience Fragment.
+1. Markera **[!UICONTROL Adaptive Forms - Embed]**-komponenten i Experience Fragment och välj ![ egenskaper för adaptiv formulärbehållare ](/help/forms/assets/configure-icon.svg) i åtgärdsfältet. Dialogrutan **[!UICONTROL Edit Adaptive Forms - Embed(v2)]** öppnas.
 1. Bläddra och välj det adaptiva formulär som ska bäddas in i **[!UICONTROL Asset Path]**.
 1. Spara inställningarna. Det anpassade formuläret är nu inbäddat i Experience Fragment.
 
-Nu kan du [ange åtgärden Skicka](/help/forms/configuring-submit-actions.md) och avancerade egenskaper för inbäddade adaptiva formulär med hjälp av guiden Skapa formulär.
+Sedan kan du [ange åtgärden Skicka](/help/forms/configuring-submit-actions.md) och avancerade egenskaper för ett inbäddat adaptivt formulär med hjälp av guiden Skapa formulär.
 
 ### Konvertera ett formulär på en AEM Sites-sida till ett Experience Fragment {#convert-an-adaptive-form-in-sites-page-to-an-experience-fragment}
 
@@ -229,57 +229,58 @@ Du kan konvertera ett befintligt adaptivt formulär i en webbplatssidredigerare 
 Så här konverterar du ett adaptivt formulär på en AEM Sites-sida till ett Experience Fragment:
 
 1. Öppna AEM Sites-sidan som innehåller det adaptiva formuläret (i adaptiva Forms Container-komponenten) i redigeringsläge.
-1. Öppna innehållsträdet och välj **[!UICONTROL Adaptive Forms Container]** som är värd för din adaptiva form. En AEM Sites-sida kan vara värd för flera adaptiva Forms. Välj rätt adaptiva Forms-behållare.
-1. På menyraden väljer du ![Ikon för att konvertera till upplevelsefragmentvariationer](/help/forms/assets/Smock_FilingCabinet_18_N.svg) Konvertera till Experience Fragment-variationsikon.
+1. Öppna innehållsträdet och markera **[!UICONTROL Adaptive Forms Container]** som är värd för ditt adaptiva formulär. En AEM Sites-sida kan vara värd för flera adaptiva Forms. Välj rätt adaptiva Forms-behållare.
+1. På menyraden väljer du ikonen ![Konvertera till upplevelsefragment-variationsikonen ](/help/forms/assets/Smock_FilingCabinet_18_N.svg) Konvertera till upplevelsefragment-variationsikonen.
 
    ![Klicka på filkabinettlogotypen för att konvertera ett adaptivt formulär på AEM Sites-sidan till ett Experience Fragment](/help/forms/assets/convert-form-in-sites-page-to-an-experience-fragment.png)
 
    En dialogruta visas där du kan konvertera behållaren för adaptiva formulär till ett nytt Experience Fragment eller lägga till i ett befintligt Experience Fragment.
 
-1. På **[!UICONTROL Convert to Experience Fragment]** i variantdialogrutan anger du värden för följande alternativ:
+1. I variantdialogrutan **[!UICONTROL Convert to Experience Fragment]** anger du värden för följande alternativ:
 
-   * **Åtgärd:** Välj det här alternativet om du vill skapa ett Experience Fragment eller Lägg till i ett befintligt Experience Fragment.
+   * **Åtgärd:** Välj för att skapa en upplevelsefragment eller Lägg till i ett befintligt upplevelsefragment.
    * **Överordnad sökväg:** Ange sökvägen till den mapp där Experience Fragment ska vara värd. Alternativet är bara tillgängligt för att skapa nya Experience Fragment.
-   * **Mall:** Ange sökvägen till Experience Fragment-mallen. Om du inte har någon Experience Fragment-mall [skapa](/help/implementing/developing/extending/experience-fragments.md). Alternativet är bara tillgängligt för att lägga till adaptiv form till ett befintligt Experience Fragment.
+   * **Mall:** Ange sökvägen till Experience Fragment-mallen. Om du inte har någon Experience Fragment-mall [skapar du den](/help/implementing/developing/extending/experience-fragments.md). Alternativet är bara tillgängligt för att lägga till adaptiv form till ett befintligt Experience Fragment.
    * **Fragmenttitel:** Ange Experience Fragment-titel. Titeln identifierar unikt en Experience Fragment.
    * **Fragment-taggar:** Ange tagg för Experience Fragment. Taggen identifierar unikt kategorin för en Experience Fragment.
 
 ## Konfigurera egenskaper för anpassad formulärinbäddning (v2)
 
-Du kan anpassa de avancerade inställningarna för **[!UICONTROL Adaptive Form - Embed(v2)]** -komponenten. I **[!UICONTROL Edit Adaptive Forms - Embed]** kan du ange följande:
+Du kan anpassa de avancerade inställningarna för komponenten **[!UICONTROL Adaptive Form - Embed(v2)]**. I dialogrutan **[!UICONTROL Edit Adaptive Forms - Embed]** kan du ange följande:
 
-* **Resurssökväg**: Bläddra och välj ett anpassat formulär som ska bäddas in. Den fylls i automatiskt om du släppte den från Assets-webbläsaren.
-* **Efterbeställning** : Välj den åtgärd som ska utlösas när formulär skickas. Du kan visa ett tackmeddelande eller en tacksida.
+* **Resurssökväg**: Bläddra och välj ett anpassat formulär att bädda in. Den fylls i automatiskt om du utelämnade den från Assets webbläsare.
+* **Post Submission** : Välj den åtgärd som ska utlösas när formulär skickas. Du kan visa ett tackmeddelande eller en tacksida.
    * **Visa tackmeddelande**: Skriv ett meddelande med textredigeraren som ska visas när formulär skickas. Det här alternativet är endast tillgängligt när du väljer att visa ett tackmeddelande.
-   * **Visa tacksida**: Bläddra och välj den sida som ska visas när formuläret skickas. Det här alternativet är bara tillgängligt när du väljer att visa en tacksida.
-   * **Omdirigering till dig som tackar dig**: Aktivera alternativet att ersätta sidan som innehåller det inbäddade adaptiva formuläret med tacksidan. I annat fall ersätter tack-sidan det adaptiva formuläret i dialogrutan **[!UICONTROL Adaptive Forms - Embed(v2)]** utan att uppdatera underliggande webbplatser på sidan. Det här alternativet är bara tillgängligt när du väljer att visa en tacksida.
-   * **Thankyou Message**: Kortfattad bekräftelse eller bekräftelse som visas på skärmen när ett formulär har skickats.
-   * **Thankyou Page**: Bläddra och markera den sida som ska visas när formuläret har skickats.
+   * **Visa sidan Tack**: Bläddra och markera sidan som ska visas när formulär skickas. Det här alternativet är bara tillgängligt när du väljer att visa en tacksida.
+   * **Omdirigering till dig:**: Aktivera alternativet att ersätta sidan som innehåller det inbäddade adaptiva formuläret med din tacksida. Annars ersätter du tacksidan det anpassade formuläret i komponenten **[!UICONTROL Adaptive Forms - Embed(v2)]**, utan att de underliggande webbplatserna uppdateras på sidan. Det här alternativet är bara tillgängligt när du väljer att visa en tacksida.
+   * **Tack**: En kort bekräftelse eller bekräftelse som visas på skärmen när ett formulär har skickats.
+   * **Tack-sidan**: Bläddra och markera den sida som ska visas när formuläret har skickats.
 
-* **Använd sidspråk**: Använd lokala sidor på AEM Sites-sidan i stället för anpassade formulär. Det här alternativet gäller endast för Adaptiv form (Foundation).
-* **Sätt fokus på formulär**: Välj det här alternativet om du vill fokusera på det första fältet i det adaptiva formuläret. Det här alternativet gäller endast för Adaptiv form (Foundation).
-* **Tema**: Välj ett tema som definierar formatering för komponenter i det adaptiva formuläret. Formateringen innehåller utseendeegenskaper som teckensnittsstil, bakgrundsfärg, dimensioner och justering. Det här alternativet gäller endast för Adaptiv form (Foundation).
+* **Använd sidspråk**: Använd lokala inställningar på AEM Sites-sidan i stället för de anpassade formulärspråken. Det här alternativet gäller endast för Adaptiv form (Foundation).
+* **Sätt fokus på formulär**: Markera för att ange fokus på det första fältet i det adaptiva formuläret. Det här alternativet gäller endast för Adaptiv form (Foundation).
+* **Tema**: Välj ett tema som definierar format för komponenter i det adaptiva formuläret. Formateringen innehåller utseendeegenskaper som teckensnittsstil, bakgrundsfärg, dimensioner och justering. Det här alternativet gäller endast för Adaptiv form (Foundation).
 
   >[!NOTE]
   >
-  > Du kan använda **Använd sidspråk**, **Sätt fokus på formulär** och **Tema** endast för Adaptiv form (Foundation).
+  > Du kan bara använda alternativen **Använd sidspråk**, **Sätt fokus på formulär** och **Tema** för Adaptivt formulär (Foundation).
 
-* **Formuläret täcker ramens hela bredd**: En textbunden bildruta (iframe) är ett HTML-element som läser in ett adaptivt formulär på en AEM Sites-sida.
+* **Formuläret täcker ramens hela bredd**:
+En textbunden ram (iframe) är ett HTML-element som läser in ett adaptivt formulär på en AEM Sites-sida.
 
-   * Om **[!UICONTROL Form covers entire width of the frame]** om kryssrutan är markerad upptar ett adaptivt formulär hela bredden på den behållare som det är placerat i. I det här fallet används ingen iframe för att återge formuläret. Layouten och designen för ett adaptivt formulär anpassas efter behållarens hela bredd så att den blir responsiv och kan justeras till olika skärmstorlekar. Med det här alternativet kan du bädda in flera adaptiva Forms-filer på en AEM Sites-sida.
-
-     >[!NOTE]
-     >
-     > Om du vill bädda in flera formulär på en AEM Sites-sida väljer du **[!UICONTROL Form covers entire width of the frame]** kryssrutan.
-
-   * Om **[!UICONTROL Form covers entire width of the frame]** inte är markerad, ett anpassat formulär täcker inte hela behållarens bredd. I stället används en iframe för att återge formuläret, som inte kan utökas utanför en viss bredd. Detta är användbart när ett adaptivt formulär har definierade gränser och måste finnas tillsammans med andra AEM-komponenter bredvid det i behållaren. Om det här alternativet inte är markerat tillåter det endast att en Adaptiv Forms-sida på AEM Sites-sidan bäddas in utan iframe.
+   * Om kryssrutan **[!UICONTROL Form covers entire width of the frame]** är markerad upptar ett adaptivt formulär hela bredden på behållaren där det placeras. I det här fallet används ingen iframe för att återge formuläret. Layouten och designen för ett adaptivt formulär anpassas efter behållarens hela bredd så att den blir responsiv och kan justeras till olika skärmstorlekar. Med det här alternativet kan du bädda in flera adaptiva Forms-filer på en AEM Sites-sida.
 
      >[!NOTE]
      >
-     > AEM Sites-sidan stöder endast ett adaptivt formulär utan iframe. Lägga till mer adaptiv Forms med **[!UICONTROL Adaptive Forms - Embed]** komponent, markera **[!UICONTROL Form covers entire width of the frame]** alternativ.
+     > Om du vill bädda in flera formulär på en AEM Sites-sida markerar du kryssrutan **[!UICONTROL Form covers entire width of the frame]**.
+
+   * Om kryssrutan **[!UICONTROL Form covers entire width of the frame]** inte är markerad täcker ett adaptivt formulär inte hela behållarens bredd. I stället används en iframe för att återge formuläret, som inte kan utökas utanför en viss bredd. Detta är användbart när ett adaptivt formulär har definierade gränser och måste finnas tillsammans med andra AEM-komponenter bredvid det i behållaren. Om det här alternativet inte är markerat tillåter det endast att en Adaptiv Forms-sida på AEM Sites-sidan bäddas in utan iframe.
+
+     >[!NOTE]
+     >
+     > AEM Sites-sidan stöder endast ett adaptivt formulär utan iframe. Om du vill lägga till mer adaptiv Forms med komponenten **[!UICONTROL Adaptive Forms - Embed]** väljer du alternativet **[!UICONTROL Form covers entire width of the frame]**.
 
 * **Höjd**: Ange behållarens höjd. Lämna det tomt om du vill ändra storlek på behållaren automatiskt.
-* **CSS-klientbibliotek**: Ange sökväg till ett CSS-klientbibliotek.
+* **CSS-klientbibliotek**: Ange sökvägen till ett CSS-klientbibliotek.
 
 <!--
 In AEM Sites page, you can add an Adaptive Form using:
@@ -344,7 +345,7 @@ AEM site also lets you create an Adaptive Form on the fly using the Adaptive For
 1. You can now embed an Adaptive Form on AEM site pages using the [!UICONTROL AEM Forms Container Component].
 -->
 
-## Publicera inbäddat adaptivt formulär {#publishing-embedded-adaptive-form}
+## Publish inbäddade adaptiva formulär {#publishing-embedded-adaptive-form}
 
 Vi ska titta på följande scenarier för publicering av ett inbäddat adaptivt formulär på AEM webbplatssida:
 

@@ -15,7 +15,7 @@ ht-degree: 0%
 En AEM består vanligtvis av minst två miljöer:
 
 * Författare
-* Publicera
+* Publish
 
 Dessa miljöer interagerar så att ni kan göra innehållet tillgängligt på er webbplats så att besökarna kan komma åt det.
 
@@ -26,13 +26,13 @@ I redigeringsmiljön finns mekanismer för att skapa, uppdatera och granska inne
 
 ![Diagram över författare, utgivare och avsändare](/help/sites-cloud/authoring/assets/author-publish.png)
 
-I redigeringsmiljön är AEM funktionalitet tillgänglig AEM redigeringsgränssnittet. I publiceringsmiljön utformar du hela det gränssnitt som är tillgängligt för användarna.
+I redigeringsmiljön är AEM funktionalitet tillgänglig genom AEM redigeringsgränssnitt. I publiceringsmiljön utformar du hela det gränssnitt som är tillgängligt för användarna.
 
 {{edge-delivery-authoring}}
 
 ## Författarmiljö {#author-environment}
 
-Författaren arbetar i det som kallas **författarmiljö**. I den här miljön finns ett användarvänligt gränssnitt (grafiskt användargränssnitt (GUI eller UI)) för att skapa innehållet. Det kräver att författaren loggar in med ett konto som tilldelats rätt åtkomstbehörighet.
+Författaren arbetar i det som kallas **författarmiljön**. I den här miljön finns ett användarvänligt gränssnitt (grafiskt användargränssnitt (GUI eller UI)) för att skapa innehållet. Det kräver att författaren loggar in med ett konto som tilldelats rätt åtkomstbehörighet.
 
 >[!NOTE]
 >
@@ -59,14 +59,14 @@ Det finns även administrativa uppgifter som hjälper dig att hantera ditt inneh
 
 AEM erbjuder även en förhandsvisningstjänst för webbplatser som gör att utvecklare och innehållsförfattare kan förhandsgranska webbplatsens slutliga upplevelse innan den når publiceringsmiljön och är tillgänglig för allmänheten.
 
-Se [Förhandsgranska innehåll](/help/sites-cloud/authoring/fundamentals/previewing-content.md) för mer information.
+Mer information finns i [Förhandsgranska innehåll](/help/sites-cloud/authoring/fundamentals/previewing-content.md).
 
-## Publiceringsmiljö {#publish-environment}
+## Publish Environment {#publish-environment}
 
-När det är klart publiceras webbplatsens innehåll på **publiceringsmiljö**. Här blir webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med det gränssnitt som har utformats.
+När det är klart publiceras webbplatsens innehåll i **publiceringsmiljön**. Här blir webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med det gränssnitt som har utformats.
 
 Mer information om att publicera och avpublicera sidor finns i dokumentet [Publicera sidor](/help/sites-cloud/authoring/fundamentals/publishing-pages.md).
 
 ## Dispatcher {#dispatcher}
 
-Om du vill optimera prestanda för besökare på webbplatsen kan du **[Dispatcher](/help/implementing/dispatcher/overview.md)** implementerar belastningsutjämning och cachning.
+**[Dispatcher](/help/implementing/dispatcher/overview.md)** implementerar belastningsutjämning och cachning för att optimera prestanda för besökare på din webbplats.

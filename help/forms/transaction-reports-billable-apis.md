@@ -31,9 +31,9 @@ AEM Forms har flera API:er för att skicka formulär, bearbeta dokument och åte
 
 Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett dokument eller formulär eller det återgivna dokumentets slutliga format. En transaktionsrapport delar upp transaktionerna i två kategorier: Forms Inskickat och Dokument återgivet.
 
-* **Forms:** När data skickas in från någon typ av formulär som skapats med AEM Forms och data skickas till en datalagringsplats eller databas anses det som en formuläröverföring. Att skicka ett anpassat formulär eller en formuläruppsättning betraktas till exempel som att formulär skickas in. Om en formuläruppsättning har fem formulär, och när formuläruppsättningen skickas, räknas den som fem inskickade svar av transaktionsrapporteringstjänsten.
+* **Forms har skickats:** När data skickas från en typ av formulär som skapats med AEM Forms och data skickas till en datalagringsplats eller databas betraktas som formuläröverföring. Att skicka ett anpassat formulär eller en formuläruppsättning betraktas till exempel som att formulär skickas in. Om en formuläruppsättning har fem formulär, och när formuläruppsättningen skickas, räknas den som fem inskickade svar av transaktionsrapporteringstjänsten.
 
-* **Återgivna dokument:** Generering av ett dokument genom att kombinera en mall och data, digitalt signera eller certifiera ett dokument, använda ett fakturerbart dokument-API:er för dokumenttjänster eller konvertering av ett dokument från ett format till ett annat, räknas som dokument som återges.
+* **Dokument som återges:** Generera ett dokument genom att kombinera en mall och data, signera digitalt eller certifiera ett dokument, använda ett fakturerbart dokument-API:er för dokumenttjänster eller genom att konvertera ett dokument från ett format till ett annat, räknas som dokument som återges.
 
 >[!CONTEXTUALHELP]
 >id="aemforms_cs_transaction_reporting_submission_graph_en"
@@ -495,7 +495,7 @@ API:ts användning räknas som en transaktion när du utför en eller flera av f
 
 ## Fakturerbara API:er för datainhämtning {#billable-data-capture-apis}
 
-Alla överföringshändelser för adaptiva formulär redovisas som transaktioner. Som standard räknas inte inlämning av ett PDF-formulär som en transaktion. Använd den angivna [API för transaktionsregistrering](record-transaction-custom-implementation.md) för att registrera en PDF forms som en transaktion.
+Alla överföringshändelser för adaptiva formulär redovisas som transaktioner. Som standard räknas inte inlämning av ett PDF-formulär som en transaktion. Använd det tillhandahållna [API:t för transaktionsregistrering](record-transaction-custom-implementation.md) om du vill spela in en PDF forms-överföring som en transaktion.
 
 ### Adaptiv Forms {#adaptive-forms}
 
@@ -647,7 +647,7 @@ Assign task and document services steps of Form-centric AEM Workflows on OSGi an
 
 ## Registrera fakturerbara API:er som transaktioner för anpassad kod {#recording-billable-apis-as-transactions-for-custom-code}
 
-Åtgärder som att skicka ett PDF-formulär, använda agentanvändargränssnittet för att förhandsgranska interaktiv kommunikation, skicka formulär som inte är standard och anpassade implementeringar räknas inte som transaktioner. AEM Forms tillhandahåller ett API för att spela in sådana åtgärder som transaktioner. Du kan anropa API:t från dina anpassade implementeringar till [spela in en transaktion](/help/forms/record-transaction-custom-implementation.md).
+Åtgärder som att skicka ett PDF-formulär, använda agentanvändargränssnittet för att förhandsgranska interaktiv kommunikation, skicka formulär som inte är standard och anpassade implementeringar räknas inte som transaktioner. AEM Forms tillhandahåller ett API för att spela in sådana åtgärder som transaktioner. Du kan anropa API:t från dina anpassade implementeringar för att [spela in en transaktion](/help/forms/record-transaction-custom-implementation.md).
 
 ## Relaterade artiklar {#related-articles}
 

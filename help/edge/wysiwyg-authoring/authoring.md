@@ -16,18 +16,18 @@ ht-degree: 0%
 
 Med Edge Delivery Services är det enkelt, snabbt och flexibelt att skapa. Du kan skapa innehåll för Edge Delivery Services på två sätt:
 
-* [Universal Editor](#universal-editor) - Ett modernt WYSIWYG-gränssnitt för att skapa innehåll i AEM
+* [Universell redigerare](#universal-editor) - Ett modernt WYSIWYG-gränssnitt för att skapa innehåll i AEM
 * [Dokumentbaserad redigering](#document-based) - t.ex. Microsoft Word eller Google Docs
 
 ## Redigering i Universal Editor {#universal-editor}
 
-När du använder Edge Delivery Services med AEM as a Cloud Service är det mest grundläggande att förstå att det innehåll du skapar bevaras i AEM as a Cloud Service.
+När du använder Edge Delivery Services med AEM as a Cloud Service är det viktigaste att förstå att det innehåll du skapar bevaras i AEM as a Cloud Service.
 
-![Hur WYSIWYG-redigering fungerar med Edge Delivery Services](assets/how-aem-edge-works.png)
+![Så här fungerar WYSIWYG-redigering med Edge Delivery Services](assets/how-aem-edge-works.png)
 
 1. [WYSIWYG-redigeringsmiljön](/help/sites-cloud/authoring/quick-start.md) används för innehållshantering som att skapa nya sidor, upplevelsefragment, innehållsfragment osv.
    * Alla funktioner i AEM är tillgängliga, t.ex. arbetsflöden, MSM, översättning, startprogram.
-1. [Universell redigerare](/help/sites-cloud/authoring/universal-editor/authoring.md) används för att skapa innehåll som hanteras i AEM.
+1. [Den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md) används för att skapa innehåll som hanteras i AEM.
    * Universal Editor har ett nytt och modernt gränssnitt för framtagning av material.
    * För redigering återges HTML i AEM men skript, format, ikoner och andra resurser från Edge Delivery Services tas med.
    * Även om Universell redigerare används sparas alla ändringar i AEM.
@@ -36,7 +36,7 @@ När du använder Edge Delivery Services med AEM as a Cloud Service är det mest
    * Innehållet sparas i AEM.
    * AEM återger semantiskt HTML som behövs för intag.
    * Innehåll publiceras till Edge Delivery Services.
-1. [Edge Delivery Services](/help/edge/developer/keeping-it-100.md) säkerställa 100 % Lighhade-poäng.
+1. [Edge Delivery Services](/help/edge/developer/keeping-it-100.md) säkerställer 100 % Lighthhade-poäng.
 
 Block är grundläggande komponenter i en sida som levereras av Edge Delivery Services. Författare kan välja bland standardblock som tillhandahålls som standard av Adobe eller block som anpassas för ditt projekt av utvecklarna.
 
@@ -46,11 +46,11 @@ Universal Editor är ett modernt och intuitivt GUI som du kan använda för att 
 
 Information om blocken kan sedan konfigureras i egenskapsfältet.
 
-![Konfigurera blockegenskaper](assets/block-properties.png)
+![Konfigurerar blockegenskaper](assets/block-properties.png)
 
-Mer information om hur du redigerar i Universal Editor finns i dokumentet [Skapa innehåll med den universella redigeraren.](/help/sites-cloud/authoring/universal-editor/authoring.md)
+Mer information om hur du redigerar med den universella redigeraren finns i dokumentet [Skapa innehåll med den universella redigeraren.](/help/sites-cloud/authoring/universal-editor/authoring.md)
 
-Se [Utvecklarhandbok för att komma igång med WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) om du vill lära dig hur du påbörjar ett eget projekt att skapa med AEM och Edge Delivery Services.
+Läs [Utvecklarhandboken Komma igång för WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) om du vill veta hur du startar ett eget projekt som du kan skapa med AEM och Edge Delivery Services.
 
 ## Dokumentbaserad redigering  {#document-based}
 

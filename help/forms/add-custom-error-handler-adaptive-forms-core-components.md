@@ -37,12 +37,12 @@ Felhanterare används för olika syften. Några av användningsområdena för fe
 
 * **Utför validering**: Felhanteringen börjar med att användarindata valideras mot fördefinierade regler eller villkor. När användarna fyller i ett adaptivt formulär validerar felhanteraren indata så att det uppfyller det format, den längd eller andra begränsningar som krävs.
 
-* **Ge feedback i realtid**: När ett fel upptäcks visar felhanteraren direkt feedback till användaren, t.ex. textbundna felmeddelanden under motsvarande formulärfält. Denna feedback hjälper användarna att identifiera och åtgärda fel utan att behöva skicka in formuläret och vänta på ett svar.
+* **Ge feedback i realtid**: När ett fel upptäcks visar felhanteraren direkt feedback till användaren, till exempel textbundna felmeddelanden under motsvarande formulärfält. Denna feedback hjälper användarna att identifiera och åtgärda fel utan att behöva skicka in formuläret och vänta på ett svar.
 
 
-* **Visa felmeddelanden**: När en sändning med adaptiva formulär påträffar ett valideringsfel visas ett felmeddelande i felhanteraren. Felmeddelandena ska vara tydliga, koncisa och markera de specifika fält som behöver åtgärdas.
+* **Visa felmeddelanden**: När en sändning med adaptiva formulär påträffar ett valideringsfel visar felhanteraren ett felmeddelande. Felmeddelandena ska vara tydliga, koncisa och markera de specifika fält som behöver åtgärdas.
 
-* **Markerar det felaktiga fältet**: För att dra användarens uppmärksamhet till specifika felaktiga fält markeras eller visas motsvarande fält. Den utförs genom att ändra bakgrundsfärgen, lägga till en ikon eller kantlinje eller någon annan visuell indikator som hjälper användarna att snabbt hitta och åtgärda felen.
+* **Markerar det felaktiga fältet**: För att dra användarens uppmärksamhet till specifika felaktiga fält markeras eller visas motsvarande fält i felhanteraren. Den utförs genom att ändra bakgrundsfärgen, lägga till en ikon eller kantlinje eller någon annan visuell indikator som hjälper användarna att snabbt hitta och åtgärda felen.
 
 
 ## Fel-/felsvarsformat {#failure-response-format}
@@ -67,9 +67,9 @@ Koden nedan visar den befintliga strukturen för felsvar:
 Var:
 
 * `errorCausedBy` beskriver orsaken till felet.
-* `errors` ange uttrycket för de fält som inte uppfyller valideringskriterierna tillsammans med valideringsfelmeddelandet.
-* `originCode` fält som lagts till av AEM och innehåller http-statuskoden som returneras av den externa tjänsten.
-* `originMessage` fält som lagts till av AEM och innehåller rådata som returnerats av den externa tjänsten.
+* `errors` anger uttrycket för de fält som underkändes i valideringskriterierna tillsammans med valideringsfelmeddelandet.
+* Fältet `originCode` har lagts till av AEM och innehåller http-statuskoden som returneras av den externa tjänsten.
+* Fältet `originMessage` har lagts till av AEM och innehåller råa feldata som returnerats av den externa tjänsten.
 
 Med förbättringarna i funktioner och efterföljande uppdateringar i AEM Forms-versionerna har den befintliga felsvarsstrukturen ändrats till ett nytt format baserat på RFC7807, som är bakåtkompatibel med den befintliga felsvarsstrukturen:
 
@@ -96,25 +96,25 @@ Med förbättringarna i funktioner och efterföljande uppdateringar i AEM Forms-
 >[!NOTE]
 >
 > * Kontrollera att felsvarsstrukturen innehåller antingen **fieldName** eller **dataRef**.
-> * Se till att **ContentType** header is **application/problem+json**.
+> * Kontrollera att rubriken **ContentType** är **application/problem+json**.
 
 Var:
-* `type (required)` anger feltypen. Det kan vara något av följande värden:
+* `type (required)` anger typen av fel. Det kan vara något av följande värden:
    * `SERVER_SIDE_VALIDATION` indikerar ett fel på grund av validering på serversidan.
-   * `FORM_SUBMISSION` anger ett fel när formulär skickas
-   * `SERVICE_INVOCATION` indikerar ett fel under ett anrop till en tjänst från tredje part.
-   * `FAILURE` anger ett allmänt fel.
+   * `FORM_SUBMISSION` indikerar ett fel under formuläröverföringen
+   * `SERVICE_INVOCATION` indikerar ett fel under ett anrop av en tredjepartstjänst.
+   * `FAILURE` indikerar ett allmänt fel.
    * `VALIDATION_ERROR` indikerar ett fel på grund av ett valideringsfel.
 
-* `title (optional)` innehåller en titel eller kort beskrivning av felet.
+* `title (optional)` innehåller en titel eller en kort beskrivning av felet.
 * `detail (optional)` innehåller ytterligare information om felet om det behövs.
 * `instance (optional)` representerar en instans eller identifierare som är associerad med felet och hjälper till att spåra eller identifiera den specifika förekomsten av felet.
 * `validationErrors (required)` innehåller information om valideringsfel. Den innehåller följande fält:
    * `fieldname` anger det kvalificerade fältnamnet för de fält som inte uppfyller valideringskriterierna.
-   * `dataRef` representerar JSON-sökvägen eller XPath för de fält som underkändes vid valideringen.
+   * `dataRef` representerar JSON-sökvägen eller XPath för de fält som inte kunde valideras.
    * `details` innehåller valideringsfelmeddelandet med det felaktiga fältet.
-* `originCode (optional)` fält som lagts till av AEM och innehåller http-statuskoden som returneras av den externa tjänsten
-* `originMessage (optional)` fält som lagts till av AEM och innehåller rådata som returnerats av den externa tjänsten.
+* Fältet `originCode (optional)` har lagts till av AEM och innehåller http-statuskoden som returneras av den externa tjänsten
+* Fältet `originMessage (optional)` har lagts till av AEM och innehåller råa feldata som returnerats av den externa tjänsten.
 
 ### Exempel på felsvarsformat {#sample-error-response-format}
 
@@ -162,7 +162,7 @@ Vissa av alternativen för att visa felsvaren är:
       ]}
   ```
 
-Du kan visa värdet för dataRef i **[!UICONTROL Properties]** -fönstret för en formulärkomponent.
+Du kan visa värdet för dataRef i **[!UICONTROL Properties]**-fönstret för en formulärkomponent.
 
 +++
 
@@ -172,12 +172,12 @@ Innan du lägger till en felhanterare med tjänsten Invoke i regelredigeraren:
 
 * [Aktivera adaptiva Forms Core-komponenter för din AEM Cloud Service-miljö](enable-adaptive-forms-core-components.md).
 
-* Lär dig hur [skapa anpassade funktioner](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html?lang=en#write-rules).
+* Lär dig hur du [skapar anpassade funktioner](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html?lang=en#write-rules).
 
 
 ## Lägg till felhanterare med Regelredigeraren {#add-error-handler-using-rule-editor}
 
-Använda [Regelredigerarens anropstjänst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html#invoke) definierar du valideringskriterierna baserat på den datakälla som du använder med det adaptiva formuläret. Om du använder RESTful-webbtjänster som datakälla kan du definiera valideringskriterierna i en Swagger-definitionsfil. Genom att använda felhanterarfunktionerna och regelredigeraren i Adaptive Forms kan du effektivt hantera och anpassa felhanteringen. Du definierar villkoren med Regelredigeraren och konfigurerar de åtgärder som ska utföras när regeln aktiveras. Adaptiv form validerar indata som du anger i fält baserat på förinställda valideringskriterier. Om indatavärdena inte uppfyller valideringskriterierna visas felmeddelandena på fältnivån i ett adaptivt formulär.
+Med åtgärden [Anropa tjänst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html#invoke) i regelredigeraren kan du definiera valideringskriterier baserat på datakällan som du använder med det anpassade formuläret. Om du använder RESTful-webbtjänster som datakälla kan du definiera valideringskriterierna i en Swagger-definitionsfil. Genom att använda felhanterarfunktionerna och regelredigeraren i Adaptive Forms kan du effektivt hantera och anpassa felhanteringen. Du definierar villkoren med Regelredigeraren och konfigurerar de åtgärder som ska utföras när regeln aktiveras. Adaptiv form validerar indata som du anger i fält baserat på förinställda valideringskriterier. Om indatavärdena inte uppfyller valideringskriterierna visas felmeddelandena på fältnivån i ett adaptivt formulär.
 
 >[!NOTE]
 >
@@ -192,35 +192,35 @@ Med regelredigeraren kan du:
 ### Lägg till standardfelhanterarfunktion {#add-default-errror-handler}
 
 En standardfelhanterare stöds för att visa felmeddelanden i fält om felsvaret är i standardschema eller i valideringsfel på serversidan.
-Så här använder du en standardfelhanterare med [Regelredigerarens anropstjänst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html?lang=en#invoke) åtgärd, ta ett exempel på ett enkelt adaptivt formulär med två fält, **Djurs-ID** och **Djurnamn** och använder en standardfelhanterare på **Djurs-ID** fält för att kontrollera olika fel som returneras av REST-slutpunkten som konfigurerats för att anropa en extern tjänst, till exempel `200 - OK`,`404 - Not Found`, `400 - Bad Request`. Så här lägger du till en standardfelhanterare med hjälp av åtgärden Anropa tjänst i regelredigeraren:
+För att förstå hur du använder en standardfelhanterare med hjälp av åtgärden [Anropa tjänst för regelredigerare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html?lang=en#invoke) ska du ta ett exempel på ett enkelt adaptivt formulär med två fält, **Pet ID** och **Pet Name** , och använda en standardfelhanterare i fältet **Pet ID** för att kontrollera om det finns olika fel som returneras av REST-slutpunkten som konfigurerats för att anropa en extern tjänst. exempel: `200 - OK`,`404 - Not Found`, `400 - Bad Request`. Så här lägger du till en standardfelhanterare med hjälp av åtgärden Anropa tjänst i regelredigeraren:
 
-1. Öppna ett adaptivt formulär i redigeringsläge, markera en formulärkomponent och markera **[!UICONTROL Rule Editor]** för att öppna regelredigeraren.
+1. Öppna ett adaptivt formulär i redigeringsläge, markera en formulärkomponent och välj **[!UICONTROL Rule Editor]** för att öppna regelredigeraren.
 1. Välj **[!UICONTROL Create]**.
-1. Skapa ett villkor i **När** -delen av regeln. Till exempel: **När[Namn på Pet ID-fält]** ändras. Markeringen ändras från **Välj läge** listruta.
-1. I **Sedan** avsnitt, markera **[!UICONTROL Invoke Service]** från **Välj åtgärd** listruta.
-1. Välj en **Post** och dess motsvarande databindningar från **Indata** -avsnitt. Validera till exempel **Djurs-ID** väljer du en **Post** as **GET /husdjur/{petId}** och markera **Djurs-ID** i **Indata** -avsnitt.
-1. Välj databindningar på menyn **Utdata** -avsnitt. Välj **Djurnamn** i **Utdata** -avsnitt.
-1. Välj **[!UICONTROL Default Error Handler]** från **Felhanterare** -avsnitt.
+1. Skapa ett villkor i avsnittet **När** i regeln. Till exempel ändras **När[namnet på fältet Pet-ID]** ändras. Markeringen ändras i listrutan **Välj läge**.
+1. I avsnittet **Sedan** väljer du **[!UICONTROL Invoke Service]** i listrutan **Välj åtgärd** .
+1. Välj en **Post-tjänst** och dess motsvarande databindningar i avsnittet **Indata**. Om du till exempel vill validera **Pet ID** väljer du en **Post-tjänst** som **GET /pet/{petId}** och väljer **Pet ID** i avsnittet **Indata** .
+1. Välj databindningar i avsnittet **Utdata**. Välj **Djurnamn** i avsnittet **Utdata**.
+1. Välj **[!UICONTROL Default Error Handler]** i avsnittet **Felhanterare**.
 1. Klicka på **[!UICONTROL Done]**.
 
-![lägga till en standardfelhanterare för fältvalideringskontroller i ett formulär](/help/forms/assets/default-error-handler.png)
+![lägg till en standardfelhanterare för fältverifieringskontroller i ett formulär](/help/forms/assets/default-error-handler.png)
 
-Som ett resultat av den här regeln anger du värden för **Djurs-ID** kontrollerar validering för **Djurnamn** med en extern tjänst som anropas av REST-slutpunkten. Om valideringskriterierna som baseras på datakällan misslyckas, visas felmeddelandena på fältnivå.
+Som ett resultat av den här regeln kontrollerar de värden du anger för **Pet ID** valideringen för **Pet Name** med hjälp av den externa tjänsten som anropas av REST-slutpunkten. Om valideringskriterierna som baseras på datakällan misslyckas, visas felmeddelandena på fältnivå.
 
-![visa standardfelmeddelandet när du lägger till en standardfelhanterare i ett formulär för att hantera felsvar](/help/forms/assets/default-error-message.png)
+![visar standardfelmeddelandet när du lägger till en standardfelhanterare i ett formulär som hanterar felsvar](/help/forms/assets/default-error-message.png)
 
 ### Lägg till anpassad felhanterarfunktion {#add-custom-errror-handler}
 
 Du kan lägga till en anpassad felhanterarfunktion för att utföra några av åtgärderna:
 
-* hantera felsvar som använder icke-standard- eller standardfelsvar. Observera att dessa felsvar som inte är standard inte följer [standardschema för felsvar](#failure-response-format).
+* hantera felsvar som använder icke-standard- eller standardfelsvar. Observera att dessa icke-standardfelsvar inte är kompatibla med [standardschemat för felsvar](#failure-response-format).
 * skicka analyshändelser till alla analysplattformar. Exempel: Adobe Analytics.
 * visa modal dialog med felmeddelanden.
 
 Förutom de nämnda åtgärderna kan de anpassade felhanterarna användas för att utföra anpassade funktioner som uppfyller specifika användarkrav.
 
-Den anpassade felhanteraren är en funktion (klientbibliotek) som är utformad för att svara på fel som returneras av en extern tjänst och leverera ett anpassat svar till slutanvändarna. Alla klientbibliotek med anteckningar `@errorHandler` betraktas som en anpassad felhanterarfunktion. Den här anteckningen hjälper till att identifiera felhanterarfunktionen som anges i `.js` -fil.
-Så här skapar och använder du en anpassad felhanterare med [Regelredigerarens anropstjänst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html?lang=en#invoke) åtgärd, låt oss ta ett exempel på Adaptiv form med två fält, **Djurs-ID** och **Djurnamn** och använda en anpassad felhanterare på **Djurs-ID** fält för att kontrollera olika fel som returneras av REST-slutpunkten som konfigurerats för att anropa en extern tjänst, till exempel `200 - OK`,`404 - Not Found`, `400 - Bad Request`.
+Den anpassade felhanteraren är en funktion (klientbibliotek) som är utformad för att svara på fel som returneras av en extern tjänst och leverera ett anpassat svar till slutanvändarna. Alla klientbibliotek med anteckningen `@errorHandler` betraktas som en anpassad felhanterarfunktion. Den här anteckningen hjälper till att identifiera felhanterarfunktionen som anges i filen `.js`.
+För att förstå hur du skapar och använder en anpassad felhanterare med hjälp av åtgärden [Regelredigerarens anropstjänst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html?lang=en#invoke) kan vi ta ett exempel på Adaptiv form med två fält, **Pet ID** och **Pet Name**, och använda en anpassad felhanterare i fältet **Pet ID** för att kontrollera om det finns olika fel som returneras av REST-slutpunkten som konfigurerats för att anropa en extern tjänst, till exempel `200 - OK`,`404 - Not Found`, `400 - Bad Request`.
 
 Så här lägger du till och använder en anpassad felhanterare i ett adaptivt formulär:
 1. [Skapa en anpassad felhanterare](#create-custom-error-message)
@@ -232,11 +232,11 @@ Så här skapar du en anpassad felfunktion:
 
 Så här skapar du en anpassad felfunktion:
 
-1. [Klona din AEM Forms as a Cloud Service Repository.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#accessing-git).
-1. Skapa en mapp under `[AEM Forms as a Cloud Service repository folder]/apps/` mapp. Skapa till exempel en mapp med namnet som `experience-league`
-1. Navigera till `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/experience-league/` och skapa `ClientLibraryFolder` as `clientlibs`.
+1. [Klona din AEM Forms as a Cloud Service-databas.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#accessing-git).
+1. Skapa en mapp i mappen `[AEM Forms as a Cloud Service repository folder]/apps/`. Skapa till exempel en mapp med namnet `experience-league`
+1. Navigera till `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/experience-league/` och skapa en `ClientLibraryFolder` som `clientlibs`.
 1. Skapa en mapp med namnet `js`.
-1. Navigera till `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/clientlibs/js` mapp.
+1. Navigera till mappen `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/clientlibs/js`.
 1. Lägg till en JavaScript-fil, till exempel `function.js`. Filen innehåller koden för den anpassade felhanteraren.
 Låt oss lägga till följande kod i JavaScript-filen för att visa svar och rubriker som tagits emot från REST-tjänstens slutpunkt i webbläsarkonsolen.
 
@@ -256,15 +256,15 @@ Låt oss lägga till följande kod i JavaScript-filen för att visa svar och rub
        return true; // true - call default error handler, false - don't call default error handler.
    }
    ```
-   I koden ovan `return true` anropar standardfelhanteraren automatiskt. Om du vill förhindra att standardfelhanteraren anropas som standard, inkluderar du `return false`.
+   I koden ovan anropar `return true` automatiskt standardfelhanteraren. Inkludera `return false` om du vill förhindra att standardfelhanteraren anropas som standard.
 
    >[!NOTE]
    >
-   > I `.content.xml` fil, lägga till `categories = [custom-errorhandler-name]`. I det här fallet [custom-errorhandler-name] anges som `customfunctionsdemoV2`.
+   > Lägg till `categories = [custom-errorhandler-name]` i filen `.content.xml`. I det här fallet anges till exempel [custom-errorhandler-name] som `customfunctionsdemoV2`.
 
 
-1. Spara `function.js` -fil.
-1. Navigera till `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/clientlibs/js` mapp.
+1. Spara filen `function.js`.
+1. Navigera till mappen `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/clientlibs/js`.
 1. Lägg till en textfil som `js.txt`. Filen innehåller:
 
    ```javascript
@@ -272,10 +272,10 @@ Låt oss lägga till följande kod i JavaScript-filen för att visa svar och rub
        functions.js
    ```
 
-1. Spara `js.txt` -fil.\
+1. Spara filen `js.txt`.\
    Den skapade mappstrukturen ser ut så här:
 
-   ![Mappstruktur för klientbibliotek har skapats](/help/forms/assets/customclientlibrary_folderstructure.png)
+   ![Mappstrukturen för klientbiblioteket har skapats](/help/forms/assets/customclientlibrary_folderstructure.png)
 
    >[!NOTE]
    >
@@ -296,27 +296,27 @@ När pipeline har körts blir den anpassade felhanteraren tillgänglig i regelre
 
 #### 2. Använd regelredigeraren för att konfigurera en anpassad felhanterare {#use-custom-error-handler}
 
-Innan du implementerar den anpassade felhanteraren i ett adaptivt formulär måste du kontrollera att klientbibliotekets namn finns i **[!UICONTROL Client Library Category]** justerar med namnet som anges i kategorialternativet i `.content.xml` -fil.
+Innan du implementerar den anpassade felhanteraren i ett adaptivt formulär måste du se till att klientbiblioteksnamnet i **[!UICONTROL Client Library Category]** justeras med det namn som anges i kategorialternativet i filen `.content.xml` .
 
-![Lägga till namnet på klientbiblioteket i konfigurationen för adaptiv formulärbehållare](/help/forms/assets/client-library-category-name-core-component.png)
+![Lägger till namnet på klientbiblioteket i konfigurationen för adaptiv formulärbehållare](/help/forms/assets/client-library-category-name-core-component.png)
 
-Använda en anpassad felhanterare med **[!UICONTROL Rule Editor's Invoke Service]** åtgärd:
+Så här använder du en anpassad felhanterare med åtgärden **[!UICONTROL Rule Editor's Invoke Service]**:
 
-1. Öppna ett adaptivt formulär i redigeringsläge, markera en formulärkomponent och markera **[!UICONTROL Rule Editor]** för att öppna regelredigeraren.
+1. Öppna ett adaptivt formulär i redigeringsläge, markera en formulärkomponent och välj **[!UICONTROL Rule Editor]** för att öppna regelredigeraren.
 1. Välj **[!UICONTROL Create]**.
-1. Skapa ett villkor i **När** -delen av regeln. Till exempel När **[Namn på Pet ID-fält]** ändras, välj **ändras** från **Välj läge** listruta.
-1. I **Sedan** avsnitt, markera **[!UICONTROL Invoke Service]** från **Välj åtgärd** listruta.
-1. Välj en **Post** och dess motsvarande databindningar från **Indata** -avsnitt. Validera till exempel **Djurs-ID** väljer du en **Post** as **GET /husdjur/{petId}** och markera **Djurs-ID** i **Indata** -avsnitt.
-1. Välj databindningar på menyn **Utdata** -avsnitt. Välj till exempel **Djurnamn** i **Utdata** -avsnitt.
-1. Välj **[!UICONTROL Custom Error Handler]** från **[!UICONTROL Error Handler]** -avsnitt.
+1. Skapa ett villkor i avsnittet **När** i regeln. Om till exempel **[namnet på fältet för Pet-ID]** ändras, ändras **väljs** i den nedrullningsbara listan **Välj läge**.
+1. I avsnittet **Sedan** väljer du **[!UICONTROL Invoke Service]** i listrutan **Välj åtgärd** .
+1. Välj en **Post-tjänst** och dess motsvarande databindningar i avsnittet **Indata**. Om du till exempel vill validera **Pet ID** väljer du en **Post-tjänst** som **GET /pet/{petId}** och väljer **Pet ID** i avsnittet **Indata** .
+1. Välj databindningar i avsnittet **Utdata**. Välj till exempel **Djurnamn** i avsnittet **Utdata**.
+1. Välj **[!UICONTROL Custom Error Handler]** i avsnittet **[!UICONTROL Error Handler]**.
 1. Klicka på **[!UICONTROL Done]**.
 
-![lägga till anpassad felhanterare i ett formulär för att hantera felsvar](/help/forms/assets/custom-error-handler.png)s
+![lägg till en anpassad felhanterare i ett formulär för att hantera felsvar](/help/forms/assets/custom-error-handler.png)
 
 
-Som ett resultat av den här regeln anger du värden för **Djurs-ID** kontrollerar validering för **Djurnamn** med en extern tjänst som anropas av REST-slutpunkten. Om valideringskriterierna som baseras på datakällan misslyckas, visas felmeddelandena på fältnivå.
+Som ett resultat av den här regeln kontrollerar de värden du anger för **Pet ID** valideringen för **Pet Name** med hjälp av den externa tjänsten som anropas av REST-slutpunkten. Om valideringskriterierna som baseras på datakällan misslyckas, visas felmeddelandena på fältnivå.
 
-![lägga till en anpassad felhanterare i ett formulär för att hantera felsvar](/help/forms/assets/custom-error-handler-message-core-component.png)
+![lägg till en anpassad felhanterare i ett formulär för att hantera felsvar](/help/forms/assets/custom-error-handler-message-core-component.png)
 
 Öppna webbläsarkonsolen och kontrollera svaret och rubriken som tagits emot från REST-tjänstens slutpunkt för valideringsfelmeddelandet.
 

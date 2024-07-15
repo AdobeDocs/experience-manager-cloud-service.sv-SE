@@ -1,6 +1,6 @@
 ---
-title: Konfigurera Dynamic Media Publish Setup för Image Server
-description: Lär dig hur du konfigurerar Dynamic Media Publish Setup för Image Server, som bland annat omfattar färghantering, säkerhet och miniatyrbilder.
+title: Konfigurera Dynamic Media Publish Setup for Image Server
+description: Lär dig hur du konfigurerar Dynamic Media Publish Setup for Image Server, som bland annat omfattar färghantering, säkerhet och miniatyrbilder.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: administering
@@ -11,74 +11,74 @@ mini-toc-levels: 4
 exl-id: b0891095-e4a9-4dd5-8dfd-a576bc47d082
 source-git-commit: 0e452bd94d75609ecc3c20ab6b56ded968ed0a70
 workflow-type: tm+mt
-source-wordcount: '3250'
+source-wordcount: '3090'
 ht-degree: 0%
 
 ---
 
-# Konfigurera Dynamic Media Publish Setup för Image Server
+# Konfigurera Dynamic Media Publish Setup for Image Server
 
 <!-- hide: yes
 hidefromtoc: yes -->
 
-Konfigurera Dynamic Media Publish Setup är endast tillgängligt om:
+Konfigurationen av Dynamic Media Publish är endast tillgänglig om:
 
-* Du har en *befintlig* **[!UICONTROL Dynamic Media Configuration]** (in **[!UICONTROL Cloud Services]**) i Adobe Experience Manager as a Cloud Service. Se [Skapa en Dynamic Media-konfiguration i Cloud Services](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services).
+* Du har en *befintlig* **[!UICONTROL Dynamic Media Configuration]** (i **[!UICONTROL Cloud Services]**) i Adobe Experience Manager as a Cloud Service. Se [Skapa en Dynamic Media-konfiguration i Cloud Service](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services).
 * Du är systemadministratör för Experience Manager med administratörsbehörighet.
 
-Dynamic Media Publish Setup är avsedd för erfarna webbplatsutvecklare och programmerare. Adobe Dynamic Media rekommenderar användare som ändrar dessa publiceringsinställningar att känna till Adobe Dynamic Media, HTTP-protokollets standarder och konventioner samt grundläggande bildbehandlingsteknik.
+Dynamic Media Publish Setup är avsedd att användas av erfarna webbplatsutvecklare och programmerare. Adobe Dynamic Media rekommenderar användare som ändrar dessa publiceringsinställningar att känna till Adobe Dynamic Media, HTTP-protokollets standarder och konventioner samt grundläggande bildbehandlingsteknik.
 
-På sidan Dynamic Media Publish Setup (Publiceringsinställningar) anges standardinställningar som avgör hur resurser levereras från Adobe Dynamic Media-servrar till webbplatser eller program. Om ingen inställning har angetts levererar Adobe Dynamic Media-servern en resurs enligt en standardinställning som har konfigurerats på Dynamic Media publiceringskonfiguration.
+På sidan Konfigurera för Dynamic Media Publish anges standardinställningar som avgör hur resurser levereras från Adobe Dynamic Media-servrar till webbplatser eller program. Om ingen inställning har angetts levererar Adobe Dynamic Media-servern en resurs enligt en standardinställning som har konfigurerats på inställningssidan för Dynamic Media Publish.
 
 Se även [Valfritt - Konfigurera och konfigurera Dynamic Media-inställningar](/help/assets/dynamic-media/config-dm.md#optional-setup-and-configuration-of-dynamic-media-scene-mode-settings) för fler valfria konfigurationsuppgifter.
 
 >[!NOTE]
 >
->Vill du uppgradera från Dynamic Media Classic till Dynamic Media på Adobe Experience Manager as a Cloud Service? The [Allmänna inställningar](/help/assets/dynamic-media/dm-general-settings.md) sidan och sidan Publiceringsinställningar i Dynamic Media är förifyllda med värdena från ditt Dynamic Media Classic-konto. Undantag är alla värden som anges under **[!UICONTROL Default upload options]** på sidan Allmänna inställningar. Dessa värden finns redan i Experience Manager. Alla ändringar som du gör under **[!UICONTROL Default upload options]**, på vilken av de fem flikarna som helst, via användargränssnittet i Experience Manager, visas i Dynamic Media, inte i Dynamic Media Classic. Alla andra inställningar och värden i dialogrutan [Allmänna inställningar](/help/assets/dynamic-media/dm-general-settings.md) och sidan Publiceringsinställningar finns mellan Dynamic Media Classic och Dynamic Media på Experience Manager.
+>Vill du uppgradera från Dynamic Media Classic till Dynamic Media på Adobe Experience Manager as a Cloud Service? Sidan [Allmänna inställningar](/help/assets/dynamic-media/dm-general-settings.md) och inställningssidan för Publish i Dynamic Media är förifyllda med värdena från ditt Dynamic Media Classic-konto. Undantag är alla värden som listas under **[!UICONTROL Default upload options]** på sidan Allmänna inställningar. Dessa värden finns redan i Experience Manager. Alla ändringar som du gör under **[!UICONTROL Default upload options]** på någon av de fem flikarna, via användargränssnittet i Experience Manager, visas i Dynamic Media, inte i Dynamic Media Classic. Alla andra inställningar och värden på sidan [Allmänna inställningar](/help/assets/dynamic-media/dm-general-settings.md) och Publish Setup-sidan underhålls mellan Dynamic Media Classic och Dynamic Media på Experience Manager.
 
 **Så här konfigurerar du Dynamic Media Publish Setup Image Server:**
 
 1. I läget Experience Manager Author väljer du logotypen Experience Manager för att komma åt den globala navigeringskonsolen.
-1. Välj ikonen Verktyg i den vänstra listen och gå sedan till **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
+1. Välj verktygsikonen i den vänstra listen och gå sedan till **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
 1. Ange din Image Server - publiceringskontext på sidan Image Server och använd sedan de fem flikarna för att konfigurera standardpubliceringsinställningarna.
 
    * [Bildserver](#image-server)
-      * [Säkerhet](#security-tab) tab
-      * [Kataloghantering](#catalog-management-tab) tab
-      * [Attribut för begäran](#request-attributes-tab) tab
-      * [Vanliga miniatyrattribut](#common-thumbnail-attributes-tab) tab
-      * [Färghanteringsattribut](#color-management-attributes-tab) tab
+      * Fliken [Säkerhet](#security-tab)
+      * Fliken [Kataloghantering](#catalog-management-tab)
+      * Fliken [Attribut för begäran](#request-attributes-tab)
+      * Fliken [Vanliga miniatyrattribut](#common-thumbnail-attributes-tab)
+      * Fliken [Färghanteringsattribut](#color-management-attributes-tab)
 
-   ![Dynamic Media Publish Setup page](/help/assets/assets-dm/dm-publish-setup.png)
-   *Dynamic Media Publish Setup-sidan, med **[!UICONTROL Request Attributes]**har valts.*<br><br>
+   ![Dynamic Media Publish - installationssida](/help/assets/assets-dm/dm-publish-setup.png)
+   *Dynamic Media Publish Setup page, with the **[!UICONTROL Request Attributes]**tab selected.*<br><br>
 
-1. När du är klar väljer du **[!UICONTROL Save]**.
+1. När du är klar väljer du **[!UICONTROL Save]** i sidans övre högra hörn.
 
 ## Bildserver {#image-server}
 
 Sidan Image Server används för att ange standardinställningar för att leverera bilder från bildservrar. Inställningarna är tillgängliga i fem kategorier
 
-| Publicera kontext | Beskrivning |
+| Publish Context | Beskrivning |
 | --- | --- |
 | Bildredigering | Anger kontexten för publiceringsinställningarna. |
-| Testa bildvisning | Anger kontexten för testning av publiceringsinställningar.<br>Endast för nya Dynamic Media-konton är standardvärdet **[!UICONTROL Client address]** fältet är inställt på `127.0.0.1` automatiskt.<br>Se [Testa resurser innan du gör dem offentliga](#test-assets-before-making-public). |
+| Testa bildvisning | Anger kontexten för testning av publiceringsinställningar.<br>Endast för nya Dynamic Media-konton ställs standardfältet **[!UICONTROL Client address]** automatiskt in på `127.0.0.1`.<br>Se [Testa resurser innan du publicerar dem](#test-assets-before-making-public). |
 
 ### Fliken Säkerhet {#security-tab}
 
 **[!UICONTROL Client address]** - Gör att du kan ange en eller flera IP-adresser eller IP-adressintervall. När det anges avvisas begäranden till den här bildkatalogen som kommer från en klient till en IP-adress som inte finns med i listan. Den här regeln gäller både för leverans av bilder och återgivna bilder.
 
-![Fliken Säkerhet ](/help/assets/assets-dm/dm-ipallowlist.png)<br>*Fliken Säkerhet som visar IP-fältet&quot;allow&quot;.*
+![Fliken Säkerhet ](/help/assets/assets-dm/dm-ipallowlist.png)<br>*Fliken Säkerhet visar IP-fältet &quot;tillåt&quot;.*
 
 
 ### Fliken Kataloghantering {#catalog-management-tab}
 
 **[!UICONTROL Rule set definition file path]** - Anger filen som innehåller regeluppsättningsdefinitionerna för bildkatalogen.
 
-Se även [RuleSetFile](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-rulesetfile.html) i referenshandboken för Dynamic Media Viewer.
+Se även parametern [RuleSetFile](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-rulesetfile.html) i referenshandboken för Dynamic Media-visningsprogram.
 
 >[!NOTE]
 >
->Om ditt Dynamic Media Classic-konto redan har en **[!UICONTROL Rule set definition file path]** markerat (enligt **[!UICONTROL Setup]** > **[!UICONTROL Application]** > **[!UICONTROL Publish setup]**, under **[!UICONTROL Catalog Management]** (grupp), ditt Dynamic Media-konto på Experience Manager hämtar filen från Dynamic Media Classic. Filen sparas sedan och blir tillgänglig i det här fältet när du öppnar **[!UICONTROL Dynamic Media Publish Setup]** för första gången.
+>Om ditt Dynamic Media Classic-konto redan har markerat **[!UICONTROL Rule set definition file path]** (enligt inställningen under **[!UICONTROL Setup]** > **[!UICONTROL Application]** > **[!UICONTROL Publish setup]**, under gruppen **[!UICONTROL Catalog Management]**) hämtar ditt Dynamic Media-konto på Experience Manager filen från Dynamic Media Classic. Filen lagras sedan och blir tillgänglig i det här fältet när du öppnar sidan **[!UICONTROL Dynamic Media Publish Setup]** för första gången.
 
 ### Fliken Attribut för begäran {#request-attributes-tab}
 
@@ -86,21 +86,21 @@ De här inställningarna gäller standardutseendet för bilder.
 
 | Inställning | Beskrivning |
 | --- | --- |
-| **[!UICONTROL Reply image size limit]** | Obligatoriskt.<br>Endast för nya Dynamic Media-konton anges standardstorleksgränsen automatiskt till Bredd: `3000` och höjd: `3000` för båda **[!UICONTROL Image Serving]** och **[!UICONTROL Test Image Serving]**.<br>Anger den maximala svarsbildens bredd och höjd som returneras till klienten. Servern returnerar ett fel om en begäran orsakar en svarsbild vars bredd, höjd eller båda är större än den här inställningen.<br>Se även [MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html) i referenshandboken för Dynamic Media Viewer. |
-| **[!UICONTROL Request obfuscation mode]** | Aktivera om du vill att base64-kodning ska användas på giltiga begäranden.<br>Se även [RequestObfuscation](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestobfuscation.html) i referenshandboken för Dynamic Media Viewer. |
-| **[!UICONTROL Request locking mode]** | Aktivera om du vill att ett enkelt hash-lås ska inkluderas i begäranden.<br>Se även [RequestLock](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestlock.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Reply image size limit]** | Obligatoriskt.<br>För nya Dynamic Media-konton anges standardstorleksgränsen automatiskt till Bredd: `3000` och Höjd: `3000` för både **[!UICONTROL Image Serving]** och **[!UICONTROL Test Image Serving]**.<br>Anger den maximala svarsbildens bredd och höjd som returneras till klienten. Servern returnerar ett fel om en begäran orsakar en svarsbild vars bredd, höjd eller båda är större än den här inställningen.<br>Se även parametern [MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html) i referenshandboken för Dynamic Media-visningsprogram. |
+| **[!UICONTROL Request obfuscation mode]** | Aktivera om du vill att base64-kodning ska användas på giltiga begäranden.<br>Se även parametern [RequestObfusaction](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestobfuscation.html) i referenshandboken för Dynamic Media-visningsprogram. |
+| **[!UICONTROL Request locking mode]** | Aktivera om du vill att ett enkelt hash-lås ska inkluderas i begäranden.<br>Se även parametern [RequestLock](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestlock.html) i referenshandboken för Dynamic Media-visningsprogram. |
 | **[!UICONTROL Default Request Attributes]** | |
-| **[!UICONTROL Default image file suffix]** | Obligatoriskt.<br>Standarddatafiltillägg som läggs till i fältvärdena katalogsökväg och MaskPath om sökvägen inte innehåller något filsuffix.<br>Se även [DefaultExt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultext.html) i referenshandboken för Dynamic Media Viewer. |
-| **[!UICONTROL Default font face name]** | Anger vilket teckensnitt som ska användas om inget teckensnitt anges i en textlagerbegäran. Om du anger det måste det vara ett giltigt teckensnittsnamnvärde i teckensnittskartan för den här bildkatalogen eller i teckensnittskartan för standardkatalogen.<br>Se även [DefaultFont](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultfont.html) i referenshandboken för Dynamic Media Viewer. |
-| **[!UICONTROL Default image]** | Tillhandahåller en standardbild som returneras som svar på en begäran där den begärda bilden inte hittas.<br>Se även [DefaultImage](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-defaultimage.html) i referenshandboken för Dynamic Media Viewer.<br>**ANMÄRKNING**: Om ditt Dynamic Media Classic-konto redan har en **[!UICONTROL Default image]** markerat (enligt **[!UICONTROL Setup]** > **[!UICONTROL Application]** > **[!UICONTROL Publish setup]**, under **[!UICONTROL Default Request Attributes]** (grupp), ditt Dynamic Media-konto på Experience Manager hämtar filen från Dynamic Media Classic. Filen sparas sedan och blir tillgänglig i det här fältet när du öppnar **[!UICONTROL Dynamic Media Publish Setup]** för första gången. |
-| **[!UICONTROL Default image mode]** | När skjutreglaget är aktiverat (skjutreglage till höger) visas **[!UICONTROL Default image]** ersätter varje lager som saknas i källbilden med standardbilden och returnerar den sammansatta bilden som vanligt. När skjutreglaget är inaktiverat (skjutreglage till vänster) ersätter standardbilden hela den sammansatta bilden, även om den saknade bilden bara är ett av flera lager.<br>Se även [DefaultImageMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultimagemode.html) i referenshandboken för Dynamic Media Viewer. |
-| **[!UICONTROL Default view size]** | Obligatoriskt.<br>Endast för nya Dynamic Media-konton anges standardvisningsstorleken automatiskt till Bredd: `1280` och höjd: `1280` för båda **[!UICONTROL Image Serving]** och **[!UICONTROL Test Image Serving]**.<br>Servern begränsar svarsbilderna till att inte vara större än den här bredden och höjden om begäran inte uttryckligen anger visningsstorleken med `wid=`, `hei=`, eller `scl=`.<br>Se även [DefaultPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html) i referenshandboken för Dynamic Media Viewer. |
-| **[!UICONTROL Default thumbnail size]** | Obligatoriskt.<br>Används i stället för attribut **[!UICONTROL Default view size]** för miniatyrbegäranden (`req=tmb`). Servern begränsar svarsbilderna så att de inte är större än den här bredden och höjden, om en miniatyrbildsbegäran (`req=tmb`) anger inte storleken explicit med `wid=`, `hei=`, eller `scl=`.<br>Se även [DefaultThumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html) i referenshandboken för Dynamic Media Viewer. |
-| **[!UICONTROL Default background color]** | Anger det RGB-värde som används för att fylla i områden i en svarsbild som inte innehåller verkliga bilddata.<br>Se även [BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Default image file suffix]** | Obligatoriskt.<br>Standarddatafiltillägg som läggs till i fältvärdena för katalogsökvägen och MaskPath om sökvägen inte innehåller något filsuffix.<br>Se även parametern [DefaultExt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultext.html) i referenshandboken för Dynamic Media-visningsprogram. |
+| **[!UICONTROL Default font face name]** | Anger vilket teckensnitt som ska användas om inget teckensnitt anges i en textlagerbegäran. Om du anger det måste det vara ett giltigt teckensnittsnamnvärde i teckensnittskartan för den här bildkatalogen eller i teckensnittskartan för standardkatalogen.<br>Se även parametern [DefaultFont](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultfont.html) i referenshandboken för Dynamic Media-visningsprogram. |
+| **[!UICONTROL Default image]** | Tillhandahåller en standardbild som returneras som svar på en begäran där den begärda bilden inte hittas.<br>Se även parametern [DefaultImage](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-defaultimage.html) i referenshandboken för Dynamic Media-visningsprogram.<br>**Obs!** Om ditt Dynamic Media Classic-konto redan har en **[!UICONTROL Default image]** markerad (enligt inställningen under **[!UICONTROL Setup]** > **[!UICONTROL Application]** > **[!UICONTROL Publish setup]**, under **[!UICONTROL Default Request Attributes]** -gruppen) hämtar ditt Dynamic Media-konto på Experience Manager filen från Dynamic Media Classic. Filen lagras sedan och blir tillgänglig i det här fältet när du öppnar sidan **[!UICONTROL Dynamic Media Publish Setup]** för första gången. |
+| **[!UICONTROL Default image mode]** | När skjutreglaget är aktiverat (skjutreglage till höger) ersätter **[!UICONTROL Default image]** alla lager som saknas i källbilden med standardbilden och returnerar det sammansatta som vanligt. När skjutreglaget är inaktiverat (skjutreglage till vänster) ersätter standardbilden hela den sammansatta bilden, även om den saknade bilden bara är ett av flera lager.<br>Se även parametern [DefaultImageMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultimagemode.html) i referenshandboken för Dynamic Media-visningsprogram. |
+| **[!UICONTROL Default view size]** | Obligatoriskt.<br>Endast för nya Dynamic Media-konton anges standardvisningsstorleken automatiskt till Bredd: `1280` och Höjd: `1280` för både **[!UICONTROL Image Serving]** och **[!UICONTROL Test Image Serving]**.<br>Servern begränsar svarsbilderna så att de inte är större än den här bredden och höjden om begäran inte uttryckligen anger visningsstorleken med `wid=`, `hei=` eller `scl=`.<br>Se även parametern [DefaultPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html) i referenshandboken för Dynamic Media-visningsprogram. |
+| **[!UICONTROL Default thumbnail size]** | Obligatoriskt.<br>Används i stället för attributet **[!UICONTROL Default view size]** för miniatyrbegäranden (`req=tmb`). Servern begränsar svarsbilder till att inte vara större än den här bredden och höjden om en miniatyrbegäran (`req=tmb`) inte anger storleken explicit med `wid=`, `hei=` eller `scl=`.<br>Se även parametern [DefaultThumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html) i referenshandboken för Dynamic Media-visningsprogram. |
+| **[!UICONTROL Default background color]** | Anger det RGB-värde som används för att fylla i områden i en svarsbild som inte innehåller verkliga bilddata.<br>Se även parametern [BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html) i referenshandboken för Dynamic Media-visningsprogram. |
 | **[!UICONTROL JPEG Encoding Attributes]** |  |
-| **[!UICONTROL Quality]** | <br>Anger standardattributen för svarsbilder i JPEG.<br>Endast för nya Dynamic Media-konton finns **[!UICONTROL Quality]** standardvärdet ställs automatiskt in på `80` för båda **[!UICONTROL Image Serving]** och **[!UICONTROL Test Image Serving]**.<br>Det här fältet definieras i intervallet 1-100.<br>Se även [JpegQuality](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Quality]** | <br>Anger standardattributen för svarsbilder i JPEG.<br>Endast för nya Dynamic Media-konton ställs standardvärdet **[!UICONTROL Quality]** automatiskt in på `80` för både **[!UICONTROL Image Serving]** och **[!UICONTROL Test Image Serving]**.<br>Det här fältet definieras i intervallet 1-100.<br>Se även parametern [JpegQuality](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html) i referenshandboken för Dynamic Media-visningsprogram. |
 | **[!UICONTROL Chromatically downsampling]** | Aktivera eller inaktivera kromatisk nedsampling som används av JPEG-kodare. |
-| **[!UICONTROL Default resampling mode]** | Anger de standardattribut för omsampling och interpolation som ska användas för skalning av bilddata. Använd när `resMode` har inte angetts i en begäran.<br>Endast för nya Dynamic Media-konton är standardläget för omsampling automatiskt inställt på `Sharp2` för båda **[!UICONTROL Image Serving]** och **[!UICONTROL Test Image Serving]**.<br>Se även [ResMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Default resampling mode]** | Anger de standardattribut för omsampling och interpolation som ska användas för skalning av bilddata. Använd när `resMode` inte har angetts i en begäran.<br>För nya Dynamic Media-konton är standardläget för omsampling automatiskt inställt på `Sharp2` för både **[!UICONTROL Image Serving]** och **[!UICONTROL Test Image Serving]**.<br>Se även parametern [ResMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html) i referenshandboken för Dynamic Media-visningsprogram. |
 
 ### fliken Vanliga miniatyrattribut {#common-thumbnail-attributes-tab}
 
@@ -108,12 +108,12 @@ De här inställningarna gäller för miniatyrbildernas standardutseende och -ju
 
 | Inställning | Beskrivning |
 | --- | --- |
-| **[!UICONTROL Default background color for thumbnail]** | Anger det RGB-värde som används för att fylla i en miniatyrbilds utdataområde som inte innehåller verkliga bilddata. Används endast för miniatyrbildsförfrågningar (`req=tmb`) och när **[!UICONTROL Default Thumbnail Type]** inställningen är inställd på **[!UICONTROL Fit]** eller **[!UICONTROL Texture]**.<br>Se även [ThumbBkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbbkgcolor.html) i referenshandboken för Dynamic Media Viewer. |
-| **[!UICONTROL Horizontal alignment]** | Anger den vågräta justeringen för miniatyrbilden i svarsbildsrektangeln som anges av `wid=` och `hei=` värden.<br>Används endast för miniatyrbildsförfrågningar (`req=tmb`) och när **[!UICONTROL Default Thumbnail Type]** inställningen är inställd på **[!UICONTROL Fit]**.<br>Det finns tre horisontella justeringar att välja mellan: **[!UICONTROL Center alignment]**, **[!UICONTROL Left alignment]** och **[!UICONTROL Right alignment]**.<br>Se även [ThumbHorizAlign](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbhorizalign.html) i referenshandboken för Dynamic Media Viewer. |
-| **[!UICONTROL Vertical alignment]** | Anger den lodräta justeringen för miniatyrbilden i svarsbildsrektangeln som anges av `wid=` och `hei=` värden. Används endast för miniatyrbildsförfrågningar (`req=tmb`) och när **[!UICONTROL Default Thumbnail Type]** inställningen är inställd på **[!UICONTROL Fit]**.<br>Det finns tre lodräta justeringar att välja mellan: **[!UICONTROL Top alignment]**, **[!UICONTROL Center alignment]** och **[!UICONTROL Bottom alignment]**.<br>Se även [ThumbVertAlign](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbvertalign.html) i referenshandboken för Dynamic Media Viewer. |
-| **[!UICONTROL Default cache time to live]** | Anger ett standardutgångsintervall i timmar om en viss katalogpost inte innehåller ett giltigt värde för katalogförfallotid. Ange till `-1` för att markera som aldrig förfaller. <br>Se även [Förfallotid](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) i referenshandboken för Dynamic Media Viewer. |
-| **[!UICONTROL Default thumbnail type]** | Anger ett standardvärde för miniatyrbildstypen om en viss katalogpost inte innehåller ett giltigt katalogvärde för ThumbType. Används endast för miniatyrbildsförfrågningar (`req=tmb`).<br>Det finns tre typer av miniatyrer att välja bland: **[!UICONTROL Crop]**, **[!UICONTROL Fit]** och **[!UICONTROL Texture]**.<br>Se även [ThumbType](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbtype.html) i referenshandboken för Dynamic Media Viewer. |
-| **[!UICONTROL Default thumbnail resolution]** | Anger ett standardvärde för upplösningen av miniatyrbildobjektet om en viss katalogpost inte innehåller ett giltigt ThumbRes-katalogvärde. Används endast för miniatyrbildsförfrågningar (`req=tmb`) och **[!UICONTROL Default thumbnail type]** inställningen är inställd på **[!UICONTROL Texture]**.<br>Se även [ThumbRes](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbres.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Default background color for thumbnail]** | Anger det RGB-värde som används för att fylla i en miniatyrbilds utdataområde som inte innehåller verkliga bilddata. Används endast för miniatyrbildsbegäranden (`req=tmb`) och när inställningen **[!UICONTROL Default Thumbnail Type]** är inställd på **[!UICONTROL Fit]** eller **[!UICONTROL Texture]**.<br>Se även parametern [ThumbBkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbbkgcolor.html) i referenshandboken för Dynamic Media-visningsprogram. |
+| **[!UICONTROL Horizontal alignment]** | Anger den vågräta justeringen av miniatyrbilden i svarsbildsrektangeln som anges av värdena `wid=` och `hei=`.<br>Används endast för miniatyrbegäranden (`req=tmb`) och när inställningen **[!UICONTROL Default Thumbnail Type]** är **[!UICONTROL Fit]**.<br>Det finns tre horisontella justeringar att välja mellan: **[!UICONTROL Center alignment]**, **[!UICONTROL Left alignment]** och **[!UICONTROL Right alignment]**.<br>Se även parametern [ThumbHorizAlign](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbhorizalign.html) i referenshandboken för Dynamic Media-visningsprogram. |
+| **[!UICONTROL Vertical alignment]** | Anger den lodräta justeringen av miniatyrbilden i svarsbildsrektangeln som anges av värdena `wid=` och `hei=`. Används endast för miniatyrbildsbegäranden (`req=tmb`) och när inställningen **[!UICONTROL Default Thumbnail Type]** är **[!UICONTROL Fit]**.<br>Det finns tre lodräta justeringar att välja mellan: **[!UICONTROL Top alignment]**, **[!UICONTROL Center alignment]** och **[!UICONTROL Bottom alignment]**.<br>Se även parametern [ThumbVertAlign](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbvertalign.html) i referenshandboken för Dynamic Media-visningsprogram. |
+| **[!UICONTROL Default cache time to live]** | Anger ett standardutgångsintervall i timmar om en viss katalogpost inte innehåller ett giltigt värde för katalogförfallotid. Ange `-1` för att markera som aldrig förfaller. <br>Se även parametern [Förfallotid](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html) i referenshandboken för Dynamic Media-visningsprogram. |
+| **[!UICONTROL Default thumbnail type]** | Anger ett standardvärde för miniatyrbildstypen om en viss katalogpost inte innehåller ett giltigt katalogvärde för ThumbType. Används endast för miniatyrbildsbegäranden (`req=tmb`).<br>Det finns tre typer av miniatyrer att välja mellan: **[!UICONTROL Crop]**, **[!UICONTROL Fit]** och **[!UICONTROL Texture]**.<br>Se även parametern [ThumbType](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbtype.html) i referenshandboken för Dynamic Media-visningsprogram. |
+| **[!UICONTROL Default thumbnail resolution]** | Anger ett standardvärde för upplösningen av miniatyrbildobjektet om en viss katalogpost inte innehåller ett giltigt ThumbRes-katalogvärde. Används endast för miniatyrbildsbegäranden (`req=tmb`) och när inställningen **[!UICONTROL Default thumbnail type]** är inställd på **[!UICONTROL Texture]**.<br>Se även parametern [ThumbRes](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-thumbres.html) i referenshandboken för Dynamic Media-visningsprogram. |
 
 ### Fliken Färghanteringsattribut {#color-management-attributes-tab}
 
@@ -128,7 +128,7 @@ En färgkonverteringsåtergivningsmetod tillåter åsidosättning av standardåt
 
 Olika återgivningsmetoder använder olika regler för att bestämma hur källfärgerna justeras.
 
-Se även [IccRenderIntent](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccrenderintent.html) i referenshandboken för Dynamic Media Viewer.
+Se även parametern [IccRenderIntent](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccrenderintent.html) i referenshandboken för Dynamic Media-visningsprogram.
 
 >[!NOTE]
 >
@@ -136,13 +136,13 @@ Se även [IccRenderIntent](https://experienceleague.adobe.com/docs/dynamic-media
 
 | Inställning | Egenskaper |
 | --- | --- |
-| **[!UICONTROL CMYK default color space]** | Anger namnet på ICC-färgprofilen som ska användas som arbetsprofil för CMYK-data. If **[!UICONTROL None Specified]** väljs inaktiveras färghantering för den här bildkatalogen när det gäller CMYK-källbilder. Alla CMYK-arbetsfärgrymder är enhetsberoende, vilket innebär att de baseras på faktiska kombinationer av bläck och papper. CMYK-arbetsfärgrymderna Adobe bygger på standardtryckeriet.<br> Se även [IccProfileCMYK](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html) i referenshandboken för Dynamic Media Viewer. |
-| **[!UICONTROL Gray-Scale default color space]** | Anger namnet på ICC-färgprofilen som ska användas som arbetsprofil för gråskaledata. If **[!UICONTROL None Specified]** väljs inaktiveras färghantering för den här bildkatalogen när källbilder i gråskala används.<br>Se även [IccProfileGray](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html) i referenshandboken för Dynamic Media Viewer. |
-| **[!UICONTROL RGB default color space]** | Anger namnet på ICC-färgprofilen som ska användas som arbetsprofil för RGB data. If **[!UICONTROL None Specified]** väljs inaktiveras färghantering för den här bildkatalogen när bilder från RGB-källor används. I allmänhet är det bäst att välja **[!UICONTROL Adobe RGB]** eller **[!UICONTROL sRGB]** i stället för profilen för en viss enhet (till exempel en bildskärmsprofil). **[!UICONTROL sRGB]** rekommenderas när du förbereder bilder för webben eller mobila enheter, eftersom färgrymden definieras för den standardbildskärm som används för att visa bilder på webben. **[!UICONTROL sRGB]** är också ett bra val när du arbetar med bilder från vanliga digitalkameror, eftersom sRGB används som standardfärgrymd i de flesta av dessa.<br>Se även [IccProfileRBG](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb.html) i referenshandboken för Dynamic Media Viewer. |
-| **[!UICONTROL Color conversion rendering intent]** | **[!UICONTROL Perceptual]** - Avsikten är att bevara den visuella relationen mellan färger så att de uppfattas som naturliga för det mänskliga ögat, även om färgvärdena i sig kan ändras. Den här metoden är lämplig för fotografiska bilder med många ej tryckbara färger. Den här inställningen är standardåtergivningsmetoden för den japanska tryckeribranschen. |
-|  | **[!UICONTROL Relative Colorimetric]** - Jämför de extrema färgerna i källfärgrymden med målfärgrymden och anpassar färgerna. Färger utanför färgomfånget ändras till den närmast reproducerbara färgen i målfärgrymden. Med Relativa färgvärden bevaras mer av de ursprungliga färgerna i en bild än med Perceptuell. Den här inställningen är standardåtergivningsmetoden för utskrift i Nordamerika och Europa. |
+| **[!UICONTROL CMYK default color space]** | Anger namnet på ICC-färgprofilen som ska användas som arbetsprofil för CMYK-data. Om **[!UICONTROL None Specified]** väljs inaktiveras färghantering för den här bildkatalogen när det gäller CMYK-källbilder. Alla CMYK-arbetsfärgrymder är enhetsberoende, vilket innebär att de baseras på faktiska kombinationer av bläck och papper. CMYK-arbetsfärgrymderna Adobe bygger på standardtryckeriet.<br> Se även parametern [IccProfileCMYK](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html) i referenshandboken för Dynamic Media-visningsprogram. |
+| **[!UICONTROL Gray-Scale default color space]** | Anger namnet på ICC-färgprofilen som ska användas som arbetsprofil för gråskaledata. Om **[!UICONTROL None Specified]** väljs inaktiveras färghantering för den här bildkatalogen när källbilder i gråskala används.<br>Se även parametern [IccProfileGray](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html) i referenshandboken för Dynamic Media-visningsprogram. |
+| **[!UICONTROL RGB default color space]** | Anger namnet på ICC-färgprofilen som ska användas som arbetsprofil för RGB data. Om **[!UICONTROL None Specified]** väljs inaktiveras färghantering för den här bildkatalogen när bilder från RGB-källor används. I allmänhet är det bäst att välja **[!UICONTROL Adobe RGB]** eller **[!UICONTROL sRGB]** i stället för profilen för en viss enhet (till exempel en bildskärmsprofil). **[!UICONTROL sRGB]** rekommenderas när du förbereder bilder för webben eller mobila enheter, eftersom det definierar färgrymden för standardbildskärmen som används för att visa bilder på webben. **[!UICONTROL sRGB]** är också ett bra alternativ när du arbetar med bilder från vanliga digitalkameror, eftersom sRGB används som standardfärgrymd i de flesta av dessa.<br>Se även parametern [IccProfileRBG](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb.html) i referenshandboken för Dynamic Media-visningsprogram. |
+| **[!UICONTROL Color conversion rendering intent]** | **[!UICONTROL Perceptual]** - Avsikten är att bevara den visuella relationen mellan färger så att den uppfattas som naturlig för det mänskliga ögat, även om färgvärdena i sig kan ändras. Den här metoden är lämplig för fotografiska bilder med många ej tryckbara färger. Den här inställningen är standardåtergivningsmetoden för den japanska tryckeribranschen. |
+|  | **[!UICONTROL Relative Colorimetric]** - Jämför den extrema högdagern för källfärgrymden med målfärgrymden och ändrar alla färger därefter. Färger utanför färgomfånget ändras till den närmast reproducerbara färgen i målfärgrymden. Med Relativa färgvärden bevaras mer av de ursprungliga färgerna i en bild än med Perceptuell. Den här inställningen är standardåtergivningsmetoden för utskrift i Nordamerika och Europa. |
 |  | **[!UICONTROL Saturation]** - Försöker producera levande färger i en bild på bekostnad av färgnoggrannheten. Den här återgivningsmetoden är lämplig för affärsgrafik som diagram och diagram där klara, mättade färger är viktigare än det exakta förhållandet mellan färger. |
-|  | **[!UICONTROL Absolute Colorimetric]** - Ändrar inte färger som ligger inom målfärgomfånget. Ej tryckbara färger beskärs. Ingen skalning av färger till målvitpunkten utförs. Den här metoden syftar till att bibehålla färgnoggrannheten på bekostnad av att förhållandet mellan färger bevaras och är lämplig för korrektur för att simulera utdata från en viss enhet. Den här metoden är användbar när du vill förhandsgranska hur pappersfärgen påverkar tryckta färger. |
+|  | **[!UICONTROL Absolute Colorimetric]** - Ändrar inte färger som ligger inom målomfånget. Ej tryckbara färger beskärs. Ingen skalning av färger till målvitpunkten utförs. Den här metoden syftar till att bibehålla färgnoggrannheten på bekostnad av att förhållandet mellan färger bevaras och är lämplig för korrektur för att simulera utdata från en viss enhet. Den här metoden är användbar när du vill förhandsgranska hur pappersfärgen påverkar tryckta färger. |
 
 ## Testa resurser innan du gör dem offentliga {#test-assets-before-making-public}
 
@@ -164,7 +164,7 @@ Om du vill kan du skapa en staging-miljö i stället för att göra resurserna a
 
 De flesta företag använder internet bakom en brandvägg. Tillgång till Internet är möjlig via vissa vägar och vanligtvis via ett begränsat antal offentliga IP-adresser.
 
-I företagsnätverket kan du räkna ut din offentliga IP-adress med webbplatser som [https://www.whatismyip.com](https://www.whatismyip.com/) eller begär den här informationen från IT-avdelningen.
+Från ditt företagsnätverk kan du ta reda på din offentliga IP-adress med hjälp av webbplatser som [https://www.whatismyip.com](https://www.whatismyip.com/) eller begära den här informationen från företagets IT-organisation.
 
 Med Säker testning skapar Adobe Dynamic Media en dedikerad Image Server för testmiljöer eller interna program. Alla förfrågningar till den här servern kontrollerar den ursprungliga IP-adressen. Om den inkommande begäran inte finns i den godkända listan över IP-adresser returneras ett felsvar. Adobe Dynamic Media företagsadministratör konfigurerar den godkända listan över IP-adresser för företagets säkra testmiljö.
 
@@ -210,23 +210,23 @@ Så här ser du till att tjänsten Secure Testing fungerar som förväntat:
 #### Förbered ditt konto
 
 1. Kontakta Adobe kundtjänst och begär att de aktiverar säker testning på ditt konto.
-1. I Adobe Experience Manager: **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
-1. På sidan Image Server finns **[!UICONTROL Publish Context]** nedrullningsbar lista, välja **[!UICONTROL Test Image Serving]**.
-1. Välj **[!UICONTROL Security]** -fliken.
-1. För **[!UICONTROL Client address]** filter, markera **[!UICONTROL Add]**.
-1. I **[!UICONTROL IP Address]** anger du en IP-adress.
-1. I **[!UICONTROL Mask]** skriver du en nätmask.
+1. I Adobe Experience Manager väljer du **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
+1. På sidan Image Server väljer du **[!UICONTROL Test Image Serving]** i listrutan **[!UICONTROL Publish Context]**.
+1. Välj fliken **[!UICONTROL Security]**.
+1. För filtret **[!UICONTROL Client address]** väljer du **[!UICONTROL Add]**.
+1. Skriv en IP-adress i fältet **[!UICONTROL IP Address]**.
+1. Skriv en nätmask i fältet **[!UICONTROL Mask]**.
 
    >[!NOTE]
    >
-   >Om du lägger till mer än en IP-adress och nätmask tillåts *alla* IP-adresser för att göra tillgångsanrop, och de visas alla.
+   >Om du lägger till mer än en IP-adress och nätmask tillåter det *alla* IP-adresser att göra tillgångsanrop, och alla visas.
 
 1. Gör något av följande:
 
    * Om du vill lägga till fler IP-adresser upprepar du de tre föregående stegen.
    * Fortsätt till nästa steg.
 
-1. I det övre högra hörnet på sidan Image Server väljer du **[!UICONTROL Save]**.
+1. Välj **[!UICONTROL Save]** i det övre högra hörnet på sidan Image Server.
 1. Ladda upp bilderna till ditt Adobe Dynamic Media-konto.
 
 <!--    See [Upload files](uploading-files.md#uploading_files). -->
@@ -236,7 +236,7 @@ Så här ser du till att tjänsten Secure Testing fungerar som förväntat:
 <!--    See [Publish files](publishing-files.md#publishing_files). -->
 
 1. Bestäm namnet på tjänsten för säker testning genom att gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media General Setting]**.
-1. På **[!UICONTROL Server]** sidan, hitta servernamnet till höger om **[!UICONTROL Published Server Name]**.
+1. På sidan **[!UICONTROL Server]** hittar du servernamnet till höger om **[!UICONTROL Published Server Name]**.
 
 Kontakta Adobe Care om servernamnet saknas eller om URL:en till inte fungerar.
 

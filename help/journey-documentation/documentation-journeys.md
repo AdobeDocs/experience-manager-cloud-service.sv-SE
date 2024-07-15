@@ -20,7 +20,7 @@ Dokumentation Journeys innehåller en berättande struktur i AEM dokumentation g
 
 En dokumentationsresa knyter ihop många olika och komplexa ämnen och funktioner genom att tillhandahålla en berättelse som hjälper läsaren, som kan vara ny på att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskaper.
 
-Dokumentation Resor står i kontrast till AEM befintliga tekniska dokument som primärt fokuserar på en enda funktion och dokumentation av uppgifter, och som förutsätter att man är bekant med AEM. Genom att fokusera på koncepten och ge detaljerad information till den befintliga tekniska dokumentationen ger Documentation Journeys läsarna nya möjligheter att AEM en plats där de kan förstå hur plattformen kan användas med hjälp av bästa praxis för att hantera vanliga affärsbehov och arbetsflöden. Av den anledningen fungerar Documentation Journeys som ett komplement till och inte som ersättning för [AEM befintlig teknisk dokumentation.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html)
+Dokumentation Resor står i kontrast till AEM befintliga tekniska dokument som primärt fokuserar på en enda funktion och dokumentation av uppgifter, och som förutsätter att man är bekant med AEM. Genom att fokusera på koncepten och ge detaljerad information till den befintliga tekniska dokumentationen ger Documentation Journeys läsarna nya möjligheter att AEM en plats där de kan förstå hur plattformen kan användas med hjälp av bästa praxis för att hantera vanliga affärsbehov och arbetsflöden. Av den anledningen fungerar Dokumentationsresor som ett komplement till och inte som ersättning för [AEM befintlig teknisk dokumentation.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html)
 
 ### Learning by Narrative {#narrative}
 
@@ -92,9 +92,9 @@ Du har redan tillgång till flera dokumentationsresor. Eftersom varje resa är u
 | [Headless Authoring Journey](/help/journey-headless/author/overview.md) | Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan modellera ditt innehåll i ditt första headless-projekt. |
 | [Headless Architect Journey](/help/journey-headless/architect/overview.md) | Börja här för att få en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager as a Cloud Service och hur du modellerar innehåll för ditt projekt. |
 | [Headless Translation Journey](/help/journey-headless/translation/overview.md) | Börja här för att se hur du konfigurerar och hanterar dina headless-översättningsprojekt i AEM. |
-| [AEM på introduktionsresan](/help/journey-onboarding/overview.md) | Börja här för att komma igång snabbt med din nya AEM as a Cloud Service miljö! |
-| [AEM för att skapa webbplatser snabbt](/help/journey-sites/quick-site/overview.md) | Börja här för en guidad resa med det lättanvända AEM snabbplatsverktyget som effektiviserar utvecklingen av din AEM webbplats och snabbt anpassar sajten utan någon AEM backend-kunskap. |
+| [AEM introduktionsresa](/help/journey-onboarding/overview.md) | Börja här för att komma igång snabbt med din nya AEM as a Cloud Service-miljö! |
+| [AEM snabbresa för att skapa webbplatser](/help/journey-sites/quick-site/overview.md) | Börja här för en guidad resa med det lättanvända AEM snabbplatsverktyget som effektiviserar utvecklingen av din AEM webbplats och snabbt anpassar sajten utan någon AEM backend-kunskap. |
 | AEM Commerce Journey | Kommer snart! |
-| [AEM as a Cloud Service migreringsresa](/help/journey-migration/getting-started.md) | Börja här om du vill ha en stegvis resa om hur du migrerar från en lokal installation eller en Adobe-hanterad AEM till den helt molnbaserade AEM-as a Cloud Service och får en introduktion till många fördelar. |
+| [AEM as a Cloud Service migreringsresa](/help/journey-migration/getting-started.md) | Börja här om du vill ha en stegvis resa om hur du migrerar från en lokal eller Adobe hanterad AEM till en fullständigt molnbaserad AEM as a Cloud Service och får tillgång till många fördelar. |
 
 Kontrollera om det finns mer innehåll när nya resor blir tillgängliga.

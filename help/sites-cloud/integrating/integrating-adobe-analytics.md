@@ -14,10 +14,10 @@ ht-degree: 0%
 
 # Integrera med Adobe Analytics{#integrating-with-adobe-analytics}
 
-Genom att integrera Adobe Analytics och AEM as a Cloud Service kan du spåra webbsidans aktivitet. Integreringen kräver:
+Genom att integrera Adobe Analytics och AEM as a Cloud Service kan du spåra webbsidesaktiviteten. Integreringen kräver:
 
-* med Touch-gränssnittet för att skapa en Analytics-konfiguration på AEM as a Cloud Service. IMS-autentisering krävs för att integrera Adobe Analytics med AEM as a Cloud Service.
-* lägga till och konfigurera Adobe Analytics som ett tillägg i [Adobe Launch](#analytics-launch). Mer information om Adobe Launch finns på [den här sidan](https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/quick-start.html).
+* med Touch-gränssnittet för att skapa en Analytics-konfiguration i AEM as a Cloud Service. IMS-autentisering krävs för att integrera Adobe Analytics med AEM as a Cloud Service.
+* lägger till och konfigurerar Adobe Analytics som ett tillägg i [Adobe Launch](#analytics-launch). Mer information om Adobe Launch finns på [den här sidan](https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/quick-start.html).
 
 Jämfört med tidigare versioner av AEM finns ramverksstöd inte i Analytics Configuration i AEM as a Cloud Service. I stället görs det nu via Adobe Launch, som är det defacto-verktyg för att skapa en AEM webbplats med analysfunktioner (JS-bibliotek). I Adobe Launch skapas en egenskap där Adobe Analytics-tillägget kan konfigureras och regler skapas för att skicka data till Adobe Analytics. Adobe Launch har ersatt uppgiften med analys från sitecatalyst.
 
@@ -27,10 +27,10 @@ Jämfört med tidigare versioner av AEM finns ramverksstöd inte i Analytics Con
 
 ## Skapa Adobe Analytics-konfigurationen {#analytics-configuration}
 
-1. Navigera till **verktyg** → **Cloud Service**.
+1. Navigera till **Verktyg** → **Cloud Service**.
 2. Välj **Adobe Analytics**.
    ![Adobe Analytics Window](assets/analytics_screen2.png "Adobe Analytics Window")
-3. Välj **Skapa** -knappen.
+3. Klicka på knappen **Skapa**.
 4. Fyll i informationen (se nedan) och klicka på **Anslut**.
 
 ### Konfigurationsparametrar {#configuration-parameters}
@@ -43,14 +43,14 @@ Fälten i konfigurationsfönstret är följande:
 |---|---|
 | Titel | Konfigurationsnamnet |
 | IMS-konfiguration | Välj IMS-konfigurationen (se kapitlet nedan) |
-| Segment | Möjlighet att använda ett analyssegment som definieras i den aktuella rapporteringssviten. Analysrapporterna filtreras baserat på segmentet. Se [den här sidan](https://experienceleague.adobe.com/docs/analytics/components/segmentation/seg-overview.html) om du vill ha mer information. |
+| Segment | Möjlighet att använda ett analyssegment som definieras i den aktuella rapporteringssviten. Analysrapporterna filtreras baserat på segmentet. Mer information finns på [den här sidan](https://experienceleague.adobe.com/docs/analytics/components/segmentation/seg-overview.html). |
 | Rapportsviter | En databas där du skickar data och hämtar rapporter. En rapportsvit definierar den fullständiga, oberoende rapporteringen på en vald webbplats, en uppsättning webbplatser eller en delmängd av webbplatssidor. Du kan visa rapporter som hämtats från en enda rapportserie och kan redigera det här fältet i en konfiguration när som helst enligt dina önskemål. |
 
 ### Adobe Analytics med IMS-autentisering {#configuration-parameters-ims}
 
 Integrationen av Adobe Experience Manager as a Cloud Service (AEMaaCS) med Adobe Analytics via API:t för Analytics Standard kräver att du konfigurerar Adobe IMS (Identity Management System).
 
-Se [Konfigurera IMS-integreringar för AEM as a Cloud Service](/help/security/setting-up-ims-integrations-for-aem-as-a-cloud-service.md) om du vill lära dig hur du skapar IMS-konfigurationen.
+Mer information om hur du skapar IMS-konfigurationen finns i [Konfigurera IMS-integreringar för AEM as a Cloud Service](/help/security/setting-up-ims-integrations-for-aem-as-a-cloud-service.md).
 
 >[!NOTE]
 >
@@ -60,15 +60,15 @@ Se [Konfigurera IMS-integreringar för AEM as a Cloud Service](/help/security/se
 
 ### Lägga till en konfiguration till en plats {#add-configuration}
 
-Om du vill använda en Touch UI-konfiguration på en webbplats går du till: **Webbplatser** → **Välj en webbplatssida** → **Egenskaper** → **Avancerat** → **Konfiguration** → välj konfigurationspersonen.
+Om du vill använda en Touch UI-konfiguration för en plats går du till **Webbplatser** → **Välj en webbplatssida** → **Egenskaper** → **Avancerat** → **Konfiguration** → Välj konfigurationtenanten.
 
 ## Integrera Adobe Analytics på AEM sajter med Adobe Launch {#analytics-launch}
 
 Adobe Analytics kan läggas till som ett tillägg i startegenskapen. Regler kan definieras för mappning och postanrop till Adobe Analytics:
 
-* Titta [den här videon](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/via-adobe-launch/basic-configuration-of-the-analytics-launch-extension.html) om du vill lära dig hur du konfigurerar Analytics-tillägget i Launch för en grundläggande webbplats.
+* Titta på [den här videon](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/via-adobe-launch/basic-configuration-of-the-analytics-launch-extension.html) om du vill lära dig hur du konfigurerar Analytics-tillägget i Launch för en grundläggande webbplats.
 
-* Se [den här sidan](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html) om du vill ha mer information om hur du skapar regler och skickar data till Adobe Analytics.
+* Mer information om hur du skapar regler och skickar data till Adobe Analytics finns på [den här sidan](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html).
 
 >[!NOTE]
 >

@@ -1,6 +1,6 @@
 ---
-title: Tjänsten Skärmmeddelanden på as a Cloud Service
-description: På den här sidan beskrivs hur du konfigurerar meddelandetjänsten på skärmar as a Cloud Service.
+title: Screens Notification Service i Screens as a Cloud Service
+description: På den här sidan beskrivs hur du konfigurerar meddelandetjänsten i Screens as a Cloud Service.
 index: true
 exl-id: 74215a70-45c8-4b7f-ba30-60c332de07e9
 feature: Developing Screens
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 ---
 
-# Tjänsten Skärmmeddelanden {#notification-service}
+# Screens Notification Service {#notification-service}
 
 ## Introduktion {#introduction}
 
@@ -35,4 +35,4 @@ På AEM Screens Cloud kan kunder begära en rapport om status för enhetsinaktiv
 
 ### Exempel på användningsfall
 
-Om du anger rapporttiden som 5 och pingtidsgränsen som 1 timme, kommer du att få ett e-postmeddelande som bekräftar inaktivitet för enheten om skärmenheten inte växlar mellan 04.00 och 07.00.
+Om du ställer in rapporttiden till 5 och pingtidsgränsen till 1 timme, kommer du att få ett e-postmeddelande som bekräftar inaktivitet på enheten om din Screens-enhet inte växlar mellan 04.00 och 17.00.

@@ -17,7 +17,7 @@ Under kundens implementeringsfas kommer du att utforska de verktyg du kan använ
 
 ## Story hittills {#story-so-far}
 
-I tidigare delar av resan har du gått igenom [bekanta dig med förändringar i AEM as a Cloud Service](/help/journey-migration/getting-started.md)och avgör om distributionen är klar att flyttas till molnet med [beredskapsfas](/help/journey-migration/readiness.md).
+I de föregående delarna av resan har du gått igenom [bekantat dig med ändringarna i AEM as a Cloud Service](/help/journey-migration/getting-started.md) och fastställt om din distribution är klar att flyttas till molnet med [beredskapsfasen](/help/journey-migration/readiness.md).
 
 Artikeln fortsätter med råd om hur du använder verktygen som tillhandahålls av Adobe för att se till att koden och innehållet är klara att flyttas till molnet.
 
@@ -25,7 +25,7 @@ Artikeln fortsätter med råd om hur du använder verktygen som tillhandahålls 
 
 Syftet med detta dokument är att
 
-* Vi presenterar dig för Cloud Manager, AEM kontinuerlig integrering och leveransramverk som används för att distribuera kod till AEM as a Cloud Service
+* Vi presenterar Cloud Manager, AEM kontinuerliga integrerings- och leveransramverk som används för att distribuera kod till AEM as a Cloud Service
 * Kom igång snabbt med verktyget för innehållsöverföring
 * Beskriv de kodomfaktoriseringsverktyg du måste använda så att du kan uppdatera koden för AEM as a Cloud Service
 
@@ -37,7 +37,7 @@ Med Cloud Manager kan organisationer själva hantera AEM i molnet. Det innehåll
 
 Du kan bekanta dig med Cloud Manager genom att läsa resurserna nedan:
 
-* [Onboardresa](/help/journey-onboarding/overview.md) för att förstå självhjälpsresurser om hur man kommer igång på Experience Manager as a Cloud Service.
+* [Onboarding Journey](/help/journey-onboarding/overview.md) om du vill veta mer om självhjälpsresurser om introduktion för Experience Manager as a Cloud Service.
 
 * [Integrera Git med Adobe Cloud Manager](/help/implementing/cloud-manager/managing-code/integrating-with-git.md) för att lära dig mer om hur du använder en enstaka Git-databas för att driftsätta kod.
 
@@ -47,7 +47,7 @@ Du kan bekanta dig med Cloud Manager genom att läsa resurserna nedan:
 
 Hur övergången till Cloud Service ser ut beror på vilka system du har köpt och vilka metoder du följer för programutveckling.
 
-I följande bild visas de huvudsakliga stegen som ingår i fasen, som innefattar att konvertera kod och innehåll för användning med AEM as a Cloud Service:
+I följande bild visas de viktigaste stegen som ingår i fasen som innebär att konvertera kod och innehåll för användning med AEM as a Cloud Service:
 
 ![bild](/help/journey-migration/assets/exec-image1.png)
 
@@ -61,7 +61,7 @@ Med det här verktyget kan du ange önskad delmängd av innehållet som du vill 
 
 Innehållsmigrering är en flerstegsprocess som kräver planering, spårning och samarbete mellan olika team.
 
-En fullständig beskrivning av hur verktyget fungerar och hur Adobe rekommenderar att du använder det finns i [Dokumentation för verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md).
+En fullständig beskrivning av hur verktyget fungerar och hur Adobe rekommenderar att du använder det finns i [dokumentationen för verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md).
 
 ## Kodomfaktorisering {#code-refactor}
 
@@ -72,14 +72,14 @@ Det är dags att börja omfaktorisera de befintliga funktionerna så att de blir
 Börja med att titta på dokumentationen som beskriver de grundläggande verktygen och börja omfaktorisera koden:
 
 
-* Under planeringen är det en god idé att ha en lista över områden som måste omarbetas för att vara kompatibla med AEM as a Cloud Service. Du kan granska [Utvecklingsriktlinjer](/help/implementing/developing/introduction/development-guidelines.md) om du vill ha mer information om hur du kan omforma och optimera kod för Cloud Service.
-* Läs mer om [Hantera konfigurationer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/configurations.html#what-is-a-configuration) på AEM as a Cloud Service.
+* Under planeringen är det en god idé att ha en lista över områden som måste omarbetas för att vara kompatibla med AEM as a Cloud Service. Du kan läsa [Utvecklingsriktlinjer](/help/implementing/developing/introduction/development-guidelines.md) om du vill ha mer information om hur du omformar och optimerar kod för Cloud Service.
+* Läs om hur du [hanterar konfigurationer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/configurations.html#what-is-a-configuration) i AEM as a Cloud Service.
 * Lär dig hur du konfigurerar en lokal utvecklingsmiljö genom att hämta [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html)
-* Äntligen bekanta dig med [AEM as a Cloud Service Java API](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/index.html).
+* Slutligen bör du bekanta dig med [AEM as a Cloud Service Java API](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/index.html).
 
 Du kan också:
 
-* I den här videon får du veta hur du installerar Dispatcher SDK lokalt:
+* I den här videon ser du hur du installerar Dispatcher SDK lokalt:
 
   >[!VIDEO](https://video.tv.adobe.com/v/30601)
 
@@ -91,76 +91,76 @@ Du kan också:
 
 Att utveckla och köra kod i AEM as a Cloud Service kräver en förändring i sinnesen. Observera att koden måste vara flexibel, särskilt eftersom en instans kan avbrytas när som helst. Kod som körs i Cloud Service måste vara medveten om att den alltid körs i ett kluster. Det innebär att fler än en instans alltid körs.
 
-Vissa ändringar krävs för att AEM Maven-projekt ska vara molnkompatibla. AEM as a Cloud Service kräver separation av *innehåll* och *kod* till olika paket för distribution till AEM:
+Vissa ändringar krävs för att AEM Maven-projekt ska vara molnkompatibla. AEM as a Cloud Service kräver att *content* och *code* delas upp i distinkta paket för distribution till AEM:
 
-* `/apps` och `/libs` betraktas som oföränderliga AEM eftersom de inte kan ändras efter att AEM har startats (det vill säga vid körning). Detta inkluderar åtgärder för att skapa, uppdatera eller ta bort. Alla försök att ändra ett oföränderligt område vid körning misslyckas.
+* `/apps` och `/libs` betraktas som oföränderliga AEM eftersom de inte kan ändras efter att AEM har startats (d.v.s. vid körning). Detta inkluderar åtgärder för att skapa, uppdatera eller ta bort. Alla försök att ändra ett oföränderligt område vid körning misslyckas.
 
-* Allt annat i databasen (till exempel `/content` , `/conf` , `/var` , `/home` , `/etc` , `/oak:index` , `/system` , `/tmp`) är alla oföränderliga områden, vilket innebär att de kan ändras under körning.
+* Allt annat i databasen (till exempel `/content` , `/conf` , `/var` , `/home` , `/etc` , `/oak:index` , `/system` , `/tmp`) är oföränderliga områden, vilket innebär att de kan ändras under körning.
 
-Du kan lära dig mer genom att läsa [Rekommenderad paketstruktur](/help/implementing/developing/introduction/aem-project-content-package-structure.md#recommended-package-structure) dokumentation.
+Mer information finns i dokumentationen för [Rekommenderad paketstruktur](/help/implementing/developing/introduction/aem-project-content-package-structure.md#recommended-package-structure).
 
 
 ### Migreringsverktyg för molnet {#cloud-migration-tools}
 
 I Adobe finns flera verktyg som hjälper dig att snabba upp vissa av dina åtgärder för kodomfaktorisering. Om du förstår dessa verktyg och de problem de löser blir migreringen mindre komplicerad och tidsödande.
 
-* [Migrering av arbetsflöde för tillgångar](/help/journey-migration/moving-to-aem-assets/asset-workflow-migration-tool.md), ett verktyg som används för att automatiskt migrera arbetsflöden för bearbetning av resurser
+* [Resursarbetsflödesmigrering](/help/journey-migration/moving-to-aem-assets/asset-workflow-migration-tool.md), ett verktyg som används för att automatiskt migrera arbetsflöden för resursbearbetning
 * [Dispatcher Converter](/help/journey-migration/refactoring-tools/dispatcher-transformation-utility-tools.md), ett verktyg som konverterar dina befintliga Dispatcher-konfigurationer till ett format som är klart för AEM as a Cloud Service.
-* [Databasmodernisering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/moving/refactoring-tools/repo-modernizer.html), ett verktyg som tar ett AEM flerlägesprojekt som indata och konverterar det till ett AEM as a Cloud Service
-* [Indexkonverterare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/moving/refactoring-tools/index-converter.html), ett verktyg som konverterar index till ett formulär som är kompatibelt med AEM as a Cloud Service
-* [Moderniseringsverktyg](/help/journey-migration/refactoring-tools/aem-modernization-tools.md), en svit med verktyg som kan användas för att konvertera äldre AEM till de moderna och stödda funktionerna i AEM as a Cloud Service.
+* [Databasmodernisering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/moving/refactoring-tools/repo-modernizer.html), ett verktyg som tar ett AEM flerlägesprojekt som indata och konverterar det till ett AEM as a Cloud Service-projekt
+* [Indexkonverteraren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/moving/refactoring-tools/index-converter.html), ett verktyg som konverterar index till ett formulär som är kompatibelt med AEM as a Cloud Service
+* [Moderniseringsverktyg](/help/journey-migration/refactoring-tools/aem-modernization-tools.md), en uppsättning verktyg som kan användas för att konvertera äldre AEM till de moderna och stödda funktionerna i AEM as a Cloud Service.
 
-När du väl har konfigurerat den lokala utvecklingsmiljön kan du bekanta dig med den AEM as a Cloud Service SDK:n genom att kontakta [dokumentation](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md).
+När du har konfigurerat den lokala utvecklingsmiljön kan du bekanta dig med AEM as a Cloud Service SDK genom att läsa [dokumentationen](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md).
 
 ### Schemalägg en fryst kod {#schedule-a-code-freeze}
 
 För att kunna hantera kodutvecklingen på din aktiva AEM tillsammans med kodomfaktoriseringsuppgifterna som en del av din övergångsresa rekommenderar Adobe att du planerar en frysperiod tills du har slutfört omstruktureringen av ditt Maven-projekt så att det blir kompatibelt med AEM as a Cloud Service.
 
-När projektomstruktureringen är klar kan du återuppta utvecklingen av ny kod baserat på den nya strukturen. Detta minskar antalet fel i molnhanterarens pipeline under koddistribution och testning.
+När projektomstruktureringen är klar kan du återuppta utvecklingen av ny kod baserat på den nya strukturen. Detta minskar antalet fel i Cloud Manager-pipeline under koddriftsättning och -testning.
 
 >[!NOTE]
 >Aktiviteterna Innehållsöverföring och Kodreaktorn behöver inte utföras sekventiellt. Dessa åtgärder kan utföras oberoende av varandra. Korrekt projektstruktur krävs dock för att innehållet ska återges korrekt i Cloud Service-miljön.
 
 ## Bästa metoder för koddriftsättning och testning {#best-practices}
 
-Molnhanterarens pipeline stöder körning av tester som körs mot scenmiljön.
+Cloud Manager pipeline stöder körning av tester som körs mot scenmiljön.
 
 Följ god praxis i dokumenten nedan när det gäller kvalitetstestning av kod:
 
-* [Testning av kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md), ett dokument som beskriver processen att skriva testskript och som beskriver konceptet med rekommenderad täckning på minst 50 %.
-* [Förstå regler för anpassad kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md) som syftar till att beskriva de anpassade regler för kodkvalitet som körs av Cloud Manager och som baseras på bästa praxis från AEM Engineering.
+* [Testning av kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md), ett dokument som beskriver processen att skriva testskript och förklarar konceptet med rekommenderad täckning på minst 50 %.
+* [Förstå regler för anpassad kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md) som syftar till att beskriva de anpassade regler för kodkvalitet som körs av Cloud Manager och som skapats utifrån bästa praxis från AEM.
 
 ## Förbereder för GoLive {#preparing-for-go-live}
 
-När du förbereder källsystemet för migrering måste du utföra åtgärder på system- och AEM-nivå. Du kan börja med att verifiera att innehållsdatabasen är i ett väl underhållet tillstånd genom att kontrollera [rensning av revision](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html) och [skräpinsamling för datalager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/data-store-garbage-collection.html) aktivitetsstatus. Om du kör AEM version 6.3 (eftersom verktyget Innehållsöverföring är kompatibelt från version 6.3 och framåt) bör du utföra offlinekomprimering följt av skräpinsamlingen i datalagret.
+När du förbereder källsystemet för migrering måste du utföra åtgärder på system- och AEM-nivå. Du kan börja med att verifiera att innehållsdatabasen är i ett väl underhållet tillstånd genom att kontrollera aktivitetsstatusen för [revisionsrensningen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html) och [datalagrets skräpinsamling](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/data-store-garbage-collection.html). Om du kör AEM version 6.3 (eftersom verktyget Innehållsöverföring är kompatibelt från version 6.3 och framåt) bör du utföra offlinekomprimering följt av skräpinsamlingen i datalagret.
 
-[Konsekvenskontroll](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/consistency-check.html) rekommenderas för alla AEM versioner för att säkerställa att innehållsarkivet är i ett bra läge för att starta migreringsaktiviteter.
+[Datakonsekvenskontroll](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/consistency-check.html) rekommenderas för alla AEM versioner för att säkerställa att innehållsdatabasen är i ett bra läge för att initiera migreringsaktiviteter.
 
 Åtkomst på systemadministratörsnivå krävs för att installera och konfigurera [AZCopy](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md)
 
-Vi rekommenderar även att du granskar resurser, sidor, AEM projekt, användare och grupper som inte används för att spara tid när du migrerar. Se [Hälsa för innehållsdatabas](#repository-health) -avsnitt.
+Vi rekommenderar också att du granskar eventuella oanvända Assets, Sidor, AEM, Projekt, Användare och Grupper för att spara tid vid migreringen. Se avsnittet [Hälsa för innehållsdatabas](#repository-health).
 
 ### Hälsa för innehållsdatabas {#repository-health}
 
-En gång för alla [produktionsklona](#proof-of-migration) fastställs, fortsätta för att kontrollera databasens hälsa. Som nämndes i föregående avsnitt är målet att rensa och komprimera databasen på källan innan migreringen startar. Det här steget kan spara mycket tid i annat fall för felsökning när migreringen startar.
+När åtkomsten till en [produktionsklona](#proof-of-migration) har upprättats fortsätter du med att kontrollera databasens hälsa. Som nämndes i föregående avsnitt är målet att rensa och komprimera databasen på källan innan migreringen startar. Det här steget kan spara mycket tid i annat fall för felsökning när migreringen startar.
 
 | Åtgärdsobjekt | Viktiga uppgifter |
 |---------|----------|
 | Användare, grupper och behörigheter | Ni måste förstå hur många användare, grupper och komplex medlemskapet är. Leta efter möjligheter att rensa bort oanvända användare, grupper i källan före migrering. |
-| Ofullständig resursbearbetning | Försök att slutföra bearbetningen av resurser i källsystemet innan du påbörjar migreringen för att undvika potentiella problem AEM as a Cloud Service eftermigrering. |
-| Innehållshälsa | Vi rekommenderar att du frågar efter skadat innehåll och tömmer det innan du startar migreringen. Du kan till exempel söka efter resurser eller sidor som inte har ursprungliga återgivningar eller som fastnat i arbetsflödesbearbetningen. Se även [Resurshälsa](#asset-health). |
+| Ofullständig resursbearbetning | Försök att slutföra bearbetningen av resurser i källsystemet innan du påbörjar migreringen för att undvika eventuella problem efter migreringen av AEM as a Cloud Service. |
+| Innehållshälsa | Vi rekommenderar att du frågar efter skadat innehåll och tömmer det innan du startar migreringen. Du kan till exempel söka efter resurser eller sidor som inte har ursprungliga återgivningar eller som fastnat i arbetsflödesbearbetningen. Se även [Resurstillstånd](#asset-health). |
 
 ## Samlar in data {#gathering-data}
 
 >[!NOTE]
-> The [Strategi för innehållsmigrering och tidslinje](#content-strategy-and-timeline) mer ingående information om hur man extrapolerar insamlade data och skapar en migreringsplan.
+> Avsnittet [Strategi för innehållsmigrering och tidslinje](#content-strategy-and-timeline) innehåller mer information om hur du extrapolerar insamlade data och skapar en migreringsplan.
 
 Genom att samla in data kan du planera migreringsaktiviteterna och tillhörande uppgifter. Extraherings- och inmatningstiderna är särskilt användbara eftersom datapunkterna kan kopplas till en viss migreringsuppsättningens storlek. Därför kan dessa datapunkter extrapoleras för att ta fram en plan:
 
-* Total tid som tagits för [extrahering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md)
-* Total tid som tagits för [förtäring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md)
-* Total tid som tagits för uppräkning [extrahering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md#top-up-extraction-process)
-* Total tid som tagits för uppräkning [förtäring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#top-up-ingestion-process)
+* Total tid för [extrahering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md)
+* Total tid för [intag](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md)
+* Total tid som tagits för den översta [extraheringen](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md#top-up-extraction-process)
+* Total tid för uppåtgående [förtäring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#top-up-ingestion-process)
 
 
 <!-- Alexandru: hiding this for now
@@ -169,7 +169,7 @@ One more important datapoint is the amount of time it takes to complete the [use
 
 -->
 
-Dessa datapunkter kan även hjälpa dig [Fastställa KPI:er](/help/journey-migration/readiness.md#establish-kpis) och andra migreringsrelaterade uppgifter.
+Dessa datapunkter kan även hjälpa dig att [upprätta KPI:er](/help/journey-migration/readiness.md#establish-kpis) och andra migreringsrelaterade åtgärder.
 
 ### Migreringsplan {#migration-plan}
 
@@ -182,20 +182,20 @@ I följande tabell visas en typisk migreringsplan:
 | PRDCLONE-AUTHOR-INITIAL-USRMAP-SSTAGE-AUTHOR |   |   |   |   |   |
 | PRDCLONE-PUBLISH-TOPUP-CSSTAGE-AUTHOR |   |   |   |   |   |
 
-Som du kan se i tabellen ovan är det praktiskt att följa ett specifikt namnformat för att identifiera migreringsiterationerna, till exempel: **PRDCLONE** för AEM källmiljö, **FÖRFATTARE/PUBLICERARE** för AEM as a Cloud Service miljö, **CSSTAGE-AUTHOR** för den AEM as a Cloud Service instansen och så vidare.
+Som du kan se i tabellen ovan är det praktiskt att följa ett specifikt namnformat för att identifiera migreringsiterationerna, till exempel: **PRDCLONE** för AEM, **AUTHOR/PUBLISH** för AEM as a Cloud Service-miljön, **CSSTAGE-AUTHOR** för AEM as a Cloud Service-instansen och så vidare.
 
 Några viktiga detaljer som påverkar migreringsplanen:
 
 **Totalt antal extraheringar som krävs**
 
-* Skapar- och publiceringsextraheringar i specifika miljöer betraktas som två parallella extraheringar eftersom de är oberoende av varandra.
+* Utdrag från författare och Publish i specifika miljöer betraktas som två parallella extraktioner eftersom de är oberoende av varandra.
 * Antal Top Up-extraheringar baserat på databastillväxt under specifika tidsperioder.
 
-**Totalt antal förslag som krävs**
+**Totalt antal nödvändiga förslag**
 
 * Det är viktigt att hämta det här objektet till planen, eftersom en extraherad uppsättning kan hämtas in i flera Cloud Service.
 * Antal toppfrågor.
-* Att migrera innehåll från källförfattaren till molntjänstförfattarinstansen och från källpubliceringen till Cloud Service Publish är det bästa sättet att undvika att samla in allt författarinnehåll i Cloud Service Publish.
+* Att migrera innehåll från Source Author till Cloud Service Author och från Source Publish till Cloud Service Publish är det bästa sättet att undvika att importera allt Author-innehåll till Cloud Servicen Publish.
 
 ### Migreringsspårare {#migration-tracker}
 
@@ -209,7 +209,7 @@ Spåraren hjälper dig även att:
 
 I följande tabell visas en funktionell flyttningsspårare:
 
-| Källa (miljö/instans/URL) | Mål (miljö/instans/URL) | Namn på migreringsuppsättning, typ (inledande eller övre) | Storlek på migreringsuppsättning (MB) | Användarmappning (Ja/Nej) | Varaktighet för extrahering (start, slut, tid) | Inmatningstid (start, slut, tid) | Problem / lösningar / Detaljer |
+| Source (Miljö / Instans / URL) | Mål (miljö/instans/URL) | Namn på migreringsuppsättning, typ (inledande eller övre) | Storlek på migreringsuppsättning (MB) | Användarmappning (Ja/Nej) | Varaktighet för extrahering (start, slut, tid) | Inmatningstid (start, slut, tid) | Problem / lösningar / Detaljer |
 |---|---|---|---|---|---|---|---|
 |   |   |   |   |   |   |   |   |
 
@@ -221,8 +221,8 @@ I följande avsnitt visas viktiga steg och tillhörande uppgifter som kan använ
 
 ### Engagemang {#fitment}
 
-* Rensning av revisioner, skräpinsamling i datalager och konsekvenskontroller av data. Se även [Förbereder för GoLive](#preparing-for-go-live)
-* [Samla in statistik](#gathering-data) om AEM källdatabas:
+* Rensning av revisioner, skräpinsamling i datalager och konsekvenskontroller av data. Se även [Förbereder för Go-Live](#preparing-for-go-live)
+* [Samla statistik](#gathering-data) om AEM källdatabas:
    * Storlek på segmentbutik
    * Storlek på indexarkiv
    * Antal sidor
@@ -232,7 +232,7 @@ I följande avsnitt visas viktiga steg och tillhörande uppgifter som kan använ
    * Smart taggning
    * Likhetssökning
    * Sök efter text i Word- och PDF-dokument
-* Samla in Best Practice Analyzer [rapport](/help/journey-migration/best-practices-analyzer/overview-best-practices-analyzer.md)
+* Samla in rapporten [från Best Practice Analyzer](/help/journey-migration/best-practices-analyzer/overview-best-practices-analyzer.md)
 * Importera till [Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md)
    * Granska självanalysrekommendationen för att säkerställa att AEM as a Cloud Service kan hantera lagringskraven.
 * Skapa en Adobe Support-biljett för eventuella förtydliganden innan du fortsätter med migreringsplanen.
@@ -247,15 +247,15 @@ I följande avsnitt visas viktiga steg och tillhörande uppgifter som kan använ
    * Det är en blandning av alla tillgängliga innehållstyper
    * Innehåller alla användare och grupper
 * Inkluderar antingen 25 % av innehållet eller upp till 1 TB av innehållet, beroende på vilket som är lägst.
-* Kör minst en full och [uppifrån](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#top-up-ingestion-process) migration, från produktionsklonen till den AEM as a Cloud Service icke-produktionsmiljön,
+* Utför minst en fullständig migrering och [toppöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#top-up-ingestion-process) från produktionsklonen till AEM as a Cloud Service icke-produktionsmiljö
 * Lös eventuella problem som:
    * Diskutrymme på AEM
    * Anslutning mellan AEM och AEM as a Cloud Service
-   * Alla [begränsningar relaterade till förtäring](go-live.md#known-limitations).
-* Registrera hur lång tid det tar [extraktion och förtäring](#gathering-data):
+   * Eventuella [användningsrelaterade begränsningar](go-live.md#known-limitations).
+* Registrera den tid det tar för [extrahering och förtäring](#gathering-data):
    * Se hur mycket innehåll som läggs till per vecka
-   * Extrapolera tiden som mäts från migreringsbeviset för att skapa en [migreringsplan](#migration-plan).
+   * Extrapolera de tidpunkter som mäts med hjälp av migreringsbeviset för att skapa en [migreringsplan](#migration-plan).
 
 ## What&#39;s Next {#what-is-next}
 
-När du har förstått hur du ska bedöma om AEM är redo att flyttas till molnet, och vi har lärt oss hur vi använder de verktyg som behövs för att göra det klart, är det dags att gå vidare till [direktfas](/help/journey-migration/go-live.md).
+När du har förstått hur du ska bedöma om din AEM är redo att flyttas till molnet, och vi har lärt oss hur du använder de verktyg som behövs för att göra den klar, är det dags att gå vidare till [go-live-fasen](/help/journey-migration/go-live.md).

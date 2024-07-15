@@ -17,21 +17,21 @@ På den här sidan visas självhjälpsresurser om provisioneringsprocessen för 
 
 Detta avsnitt behandlar de viktigaste artiklarna med fokus på:
 
-* Åtkomst AEM as a Cloud Service
+* Åtkomst till AEM as a Cloud Service
 * Adobe Experience Manager as a Cloud Service introduktions- och provisioneringsprocess
 * Hjälp och resurser
 
 
-### Åtkomst AEM as a Cloud Service
+### Åtkomst till AEM as a Cloud Service
 
 När automatisk etablering är klar:
 
 * Beviljade åtkomsträttigheter - Adobe skapar en organisation i Adobe Identity Management System (IMS)
 * Utsedd administratör har som standard administratörsbehörighet
 * Administratören kan lägga till användare och roller för ytterligare teammedlemmar via Admin Console
-* Granska rollbaserade behörigheter för användare för att fastställa behörighetstilldelningar i Cloud Manager
+* Granska rollbaserade behörigheter så att användare kan avgöra behörighetstilldelningar i Cloud Manager
 
-Mer information finns i [Anordnande av nyanställda på Experience Manager as a Cloud Service på Experience League](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html).
+Mer information finns i [Onboarding to Experience Manager as a Cloud Service on Experience League](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html).
 
 ### Resurser och länkar
 
@@ -60,11 +60,12 @@ Mer information finns i [Anordnande av nyanställda på Experience Manager as a 
 Tre metoder att introducera användare, beroende på storlek och inställning:
 * Skapa användare i Admin Console manuellt
 * Överför CSV-fil
-* Synkronisera användare från Enterprise Active Directory
+* Synkronisera användare från Enterprise Active
+Katalog
 
 ### 4. Admin konfigurerar organisation och ger användare och grupper åtkomst till miljöer
 
 ## Hjälp och resurser
 
-* [Inloggning för första gången - Cloud Service](/help/journey-onboarding/sysadmin/learning-path-aem-users.md)
-* [Konfigurera åtkomst till AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html#accessing)
+* [Första gången du loggar in - Cloud Service](/help/journey-onboarding/sysadmin/learning-path-aem-users.md)
+* [Konfigurerar åtkomst till AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html#accessing)

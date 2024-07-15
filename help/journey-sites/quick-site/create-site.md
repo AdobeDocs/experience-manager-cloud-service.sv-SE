@@ -18,9 +18,9 @@ Lär dig hur du snabbt skapar en AEM webbplats med hjälp av en webbplatsmall.
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet från den AEM snabbplatsgenereringsresan [Förstå Cloud Manager och arbetsflödet för att skapa snabbwebbplatser](cloud-manager.md) du har lärt dig om Cloud Manager och hur det knyter ihop den nya processen för att skapa snabbwebbplatser, och du bör nu:
+I det föregående dokumentet på AEM snabbwebbplats [Förstå Cloud Manager och arbetsflödet för att skapa snabbwebbplatser](cloud-manager.md) lärde du dig mer om Cloud Manager och hur det knyter ihop den nya processen för att skapa snabbwebbplatser. Nu bör du:
 
-* Förstå hur AEM Sites och Cloud Manager samarbetar för att underlätta utvecklingen på frontend
+* Förstå hur AEM Sites och Cloud Manager samarbetar för att underlätta framtagningen
 * Se hur anpassningssteget i gränssnittet är helt fristående från AEM och kräver ingen AEM kunskap.
 
 Den här artikeln bygger på dessa grundläggande funktioner så att du kan ta det första konfigurationssteget och skapa en webbplats för en mall som du sedan kan anpassa med hjälp av verktygen i gränssnittet.
@@ -43,8 +43,8 @@ Webbplatsmallar är ett sätt att kombinera grundläggande webbplatsinnehåll i 
 
 * `files`: Mapp med UI-kit, XD och eventuellt andra filer
 * `previews`: Mapp med skärmbilder av platsmallen
-* `site`: Innehållspaket för det innehåll som kopieras för varje plats som skapas från den här mallen, till exempel sidmallar, sidor och så vidare.
-* `theme`: Källor till malltemat för att ändra hur webbplatsen ser ut, t.ex. CSS, JavaScript osv.
+* `site`: Innehållspaket för innehållet som kopieras för varje plats som skapas från den här mallen, till exempel sidmallar, sidor och så vidare.
+* `theme`: Källor till malltemat för att ändra hur webbplatsen ser ut inklusive CSS, JavaScript och så vidare.
 
 Mallar är kraftfulla eftersom de kan återanvändas så att skribenterna snabbt kan skapa en webbplats. Och eftersom du kan ha flera mallar tillgängliga i AEM kan du tillgodose olika affärsbehov.
 
@@ -54,9 +54,9 @@ Mallar är kraftfulla eftersom de kan återanvändas så att skribenterna snabbt
 
 ## Hämta en webbplatsmall {#obtaining-template}
 
-Det enklaste sättet att komma igång är att [hämta den senaste versionen av AEM Standard Site Template från GitHub-databasen.](https://github.com/adobe/aem-site-template-standard/releases)
+Det enklaste sättet att komma igång är att [hämta den senaste versionen av AEM standardwebbplatsmall från dess GitHub-databas.](https://github.com/adobe/aem-site-template-standard/releases)
 
-När du har laddat ned den kan du ladda upp den till AEM på samma sätt som andra paket. Se [Avsnittet Ytterligare resurser](#additional-resources) om du vill ha mer information om hur du arbetar med paket.
+När du har laddat ned den kan du ladda upp den till AEM på samma sätt som andra paket. Mer information om hur du arbetar med paket finns i avsnittet [Ytterligare resurser](#additional-resources) om du behöver mer information om det här avsnittet.
 
 >[!TIP]
 >
@@ -74,17 +74,17 @@ Det är enkelt att använda en mall för att skapa en plats.
 
    * `https://<your-author-environment>.adobeaemcloud.com/sites.html/content`
 
-1. Välj **Skapa** längst upp till höger på skärmen och i listrutan väljer **Plats från mall**.
+1. Välj **Skapa** längst upp till höger på skärmen och välj **Plats från mall** på den nedrullningsbara menyn.
 
    ![Skapa en ny plats från en mall](assets/create-site-from-template.png)
 
-1. Välj **Importera** överst i den vänstra kolumnen.
+1. I guiden Skapa plats väljer du **Importera** längst upp i den vänstra kolumnen.
 
    ![Guiden Skapa webbplats](assets/site-creation-wizard.png)
 
-1. Leta reda på mallen i filläsaren [du laddat ned tidigare](#obtaining-template) och markera **Överför**.
+1. Leta reda på mallen [du hämtade tidigare](#obtaining-template) i filläsaren och välj **Överför**.
 
-1. När den har överförts visas den i listan med tillgängliga mallar. Markera den för att markera den (vilket också visar information om mallen i den högra kolumnen) och markera den sedan **Nästa**.
+1. När den har överförts visas den i listan med tillgängliga mallar. Markera den för att markera den (vilket också visar information om mallen i den högra kolumnen) och välj sedan **Nästa**.
 
    ![Välj en mall](assets/select-site-template.png)
 
@@ -93,11 +93,11 @@ Det är enkelt att använda en mall för att skapa en plats.
    * Platsens titel visas i webbläsarens namnlist.
    * Webbplatsnamnet blir en del av webbadressen.
 
-1. Välj **Skapa** och den nya platsen skapas från webbplatsmallen.
+1. Välj **Skapa** så skapas den nya webbplatsen från webbplatsmallen.
 
    ![Information om den nya platsen](assets/create-site-details.png)
 
-1. I bekräftelsedialogrutan väljer du **Klar**.
+1. Välj **Klar** i bekräftelsedialogrutan som visas.
 
    ![Dialogrutan Slutfört](assets/success.png)
 
@@ -118,15 +118,15 @@ Webbplatsmallar är mycket kraftfulla och flexibla och alla nummer kan skapas f�
 
 Om du behöver anpassa gränssnittet ytterligare bör du tänka på att den som utvecklar gränssnittet kanske inte känner till detaljerna i materialet. Därför är det en bra idé att ge utvecklaren en väg till typiskt innehåll som kan användas som referensbas när temat anpassas. Ett typiskt exempel är startsidan för webbplatsens huvudspråk.
 
-1. Navigera till startsidan för webbplatsens huvudspråk i webbläsaren och markera sedan den sida som du vill markera och markera sedan **Redigera** på menyraden.
+1. Navigera till startsidan för webbplatsens huvudspråk i webbläsaren och markera sedan sidan för att markera den. Välj sedan **Redigera** i menyraden.
 
    ![Normal hemsida](assets/home-page-in-console.png)
 
-1. I Editor väljer du **Sidinformation** i verktygsfältet och sedan **Visa som publicerad**.
+1. Gå till redigeraren, välj knappen **Sidinformation** i verktygsfältet och sedan **Visa som publicerad**.
 
    ![Redigera hemsidan](assets/home-page-edit.png)
 
-1. Kopiera sökvägen till innehållet från adressfältet på fliken som öppnas. Det kommer att se ut som `/content/<your-site>/en/home.html?wcmmode=disabled`.
+1. Kopiera sökvägen till innehållet från adressfältet på fliken som öppnas. Det ser ut ungefär som `/content/<your-site>/en/home.html?wcmmode=disabled`.
 
    ![Startsida](assets/home-page.png)
 
@@ -136,11 +136,11 @@ Om du behöver anpassa gränssnittet ytterligare bör du tänka på att den som 
 
 Nu när webbplatsen har skapats kan temat för webbplatsen som genererats av mallen hämtas och skickas till gränssnittsutvecklaren för anpassning.
 
-1. På webbplatskonsolen visar du **Plats** järnväg.
+1. Visa **Site**-listen på webbplatskonsolen.
 
-   ![Visa webbplatsspåret](assets/show-site-rail.png)
+   ![Visa webbplatsfältet](assets/show-site-rail.png)
 
-1. Välj roten för den nya platsen och välj sedan **Hämta temakällor** på platsjärnvägen.
+1. Välj roten för den nya webbplatsen och välj sedan **Hämta temakällor** i webbplatsfältet.
 
    ![Hämta temakällor](assets/download-theme-sources.png)
 
@@ -150,18 +150,18 @@ Du har nu en kopia av temakällfilerna i dina nedladdningsfiler.
 
 För att frontendutvecklaren ska kunna förhandsgranska anpassningarna med verkligt AEM innehåll från webbplatsen måste du konfigurera en proxyanvändare.
 
-1. I AEM från huvudnavigeringen går du till **verktyg** > **Säkerhet** > **Användare**.
-1. I användarhanteringskonsolen väljer du **Skapa**.
+1. Gå AEM från huvudnavigeringen till **Verktyg** > **Dokumentskydd** > **Användare**.
+1. Välj **Skapa** i användarhanteringskonsolen.
 
    ![Konsol för användarhantering](assets/user-management-console.png)
-1. I **Skapa ny användare** fönster måste du åtminstone ange:
-   * **ID** - Observera detta värde eftersom du måste ge det till den som utvecklar gränssnittet.
-   * **Lösenord** - Spara det här värdet säkert i ett lösenordsvalv eftersom du måste skicka det till klientutvecklaren.
+1. I fönstret **Skapa ny användare** måste du åtminstone ange:
+   * **ID** - Observera det här värdet eftersom du måste skicka det till den som utvecklar gränssnittet.
+   * **Lösenord** - Spara det här värdet säkert i ett lösenordsvalv eftersom du måste ange det för klientutvecklaren.
 
    ![Ny användarinformation](assets/new-user-details.png)
 
-1. På **Grupper** lägger du till proxyanvändaren i `contributors` grupp.
-   * Typning i termen `contributors` utlösare AEM funktionen för automatisk komplettering så att gruppen enkelt kan markeras.
+1. Lägg till proxyanvändaren i gruppen `contributors` på fliken **Grupper**.
+   * Om du skriver in termen `contributors` AEM funktionen för automatisk komplettering så att gruppen blir enkel att välja.
 
    ![Lägg till i grupp](assets/add-to-group.png)
 
@@ -177,16 +177,16 @@ Nu när du är klar med den här delen av AEM snabbwebbplats:
 * Lär dig hur du skapar en plats med hjälp av en mall.
 * Se hur du laddar ned mallen från din nya webbplats och kan ge den till frontutvecklaren.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM snabbwebbplats genom att granska dokumentet nästa gång [Konfigurera din pipeline,](pipeline-setup.md) där du skapar en pipeline för frontend för att hantera anpassningen av webbplatsens tema.
+Bygg vidare på den här kunskapen och fortsätt din resa med att skapa AEM genom att gå igenom dokumentet [Konfigurera din pipeline](pipeline-setup.md), där du skapar en pipeline för att hantera anpassningen av webbplatsens tema.
 
 ## Ytterligare resurser {#additional-resources}
 
-Vi rekommenderar att du går vidare till nästa del av processen Skapa snabbwebbplats genom att granska dokumentet [Konfigurera din pipeline,](pipeline-setup.md) Nedan följer ytterligare, valfria resurser som fördjupar sig i några koncept som nämns i det här dokumentet, men som inte behöver fortsätta på resan.
+Vi rekommenderar att du går vidare till nästa del av processen för att skapa snabbwebbplats genom att granska dokumentet [Konfigurera din pipeline](pipeline-setup.md), men följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta på resan.
 
-* [AEM standardmall för webbplats](https://github.com/adobe/aem-site-template-standard) - Detta är GitHub-databasen för AEM standardplatsmall.
-* [Ordna sidor](/help/sites-cloud/authoring/sites-console/organizing-pages.md) - Den här guiden beskriver hur du ordnar sidorna på din AEM.
-* [Skapa sidor](/help/sites-cloud/authoring/sites-console/creating-pages.md) - Den här guiden beskriver hur du lägger till nya sidor på webbplatsen.
-* [Hantera sidor](/help/sites-cloud/authoring/sites-console/managing-pages.md) - Den här guiden beskriver hur du hanterar sidorna på webbplatsen, inklusive flyttning, kopiering och borttagning.
+* [AEM Standardplatsmall](https://github.com/adobe/aem-site-template-standard) - Detta är GitHub-databasen för AEM standardplatsmall.
+* [Organisera sidor](/help/sites-cloud/authoring/sites-console/organizing-pages.md) - Den här guiden beskriver hur du ordnar sidorna på din AEM.
+* [Skapar sidor](/help/sites-cloud/authoring/sites-console/creating-pages.md) - Den här guiden beskriver hur du lägger till nya sidor på webbplatsen.
+* [Hantera sidor](/help/sites-cloud/authoring/sites-console/managing-pages.md) - Den här guiden beskriver hur du hanterar sidorna på din webbplats, inklusive flyttning, kopiering och borttagning.
 * [Så här arbetar du med paket](/help/implementing/developing/tools/package-manager.md) - Med paket kan du importera och exportera databasinnehåll. I det här dokumentet förklaras hur du arbetar med paket i AEM 6.5, som även gäller för AEMaaCS.
-* [Dokumentation för webbplatsadministration](/help/sites-cloud/administering/site-creation/create-site.md) - Läs de tekniska dokumenten om hur du skapar webbplatser för mer information om funktionerna i verktyget Skapa snabbwebbplats.
-* [Skapa eller lägga till formulär på en AEM Sites-sida](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md) - Lär dig stegvisa tekniker och metodtips för att integrera formulär på webbplatsen och optimera digitala upplevelser för maximal effekt.
+* [Dokumentation för webbplatsadministration](/help/sites-cloud/administering/site-creation/create-site.md) - Mer information om funktionerna i verktyget Skapa snabbwebbplats finns i de tekniska dokumenten för att skapa webbplatser.
+* [Skapa eller lägg till formulär på en AEM Sites-sida](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md) - Lär dig stegvisa tekniker och metodtips för att integrera formulär på din webbplats och optimera dina digitala upplevelser för maximal effekt.

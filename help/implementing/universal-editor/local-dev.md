@@ -32,7 +32,7 @@ I en yttre ram som skyddas med HTTPS går det inte att läsa in en osäker HTTP-
 
 För att göra detta måste du konfigurera AEM för att köra HTTPS. I utvecklingssyfte kan du använda självsignerade certifikat.
 
-[Se det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html) om hur du konfigurerar AEM som körs på HTTPS med ett självsignerat certifikat som du kan använda.
+[Se det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html) om hur du konfigurerar AEM som körs på HTTPS, inklusive ett självsignerat certifikat som du kan använda.
 
 ## Installera Universal Editor-tjänsten {#install-ue-service}
 
@@ -40,9 +40,9 @@ Den universella redigeringstjänsten är inte en fullständig kopia av den unive
 
 [NodeJS version 16](https://nodejs.org/en/download/releases) krävs för att köra en lokal kopia av Universal Editor-tjänsten.
 
-Tjänsten Universal Editor är tillgänglig via Software Distribution. Se [Dokumentation om programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html) om du vill ha information om hur du får tillgång till den.
+Tjänsten Universal Editor är tillgänglig via Software Distribution. Mer information om hur du får åtkomst till programdistributionsdokumentationen finns i [dokumentationen för programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
 
-Spara `universal-editor-service.cjs` från Software Distribution till din lokala utvecklingsmiljö.
+Spara filen `universal-editor-service.cjs` från programvarudistribution till den lokala utvecklingsmiljön.
 
 ## Skapa ett certifikat som kör den universella redigeringstjänsten med HTTPS {#ue-https}
 
@@ -54,13 +54,13 @@ Kör följande kommando.
 $ openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 365 -out certificate.pem
 ```
 
-Kommandot genererar en `key.pem` och `certificate.pem` -fil. Spara dessa filer i samma sökväg som `universal-editor-service.cjs` -fil.
+Kommandot genererar en `key.pem`- och en `certificate.pem`-fil. Spara dessa filer i samma sökväg som din `universal-editor-service.cjs`-fil.
 
 ## Konfigurera Universal Editor Service-konfigurationen {#setting-up-service}
 
 Ett antal miljövariabler måste anges i NodeJS för att den universella redigeringstjänsten ska kunna köras lokalt.
 
-På samma bana som `universal-editor-service.cjs`, `key.pem` och `certificate.pem` filer, skapa `.env` -fil med följande innehåll.
+Skapa en `.env`-fil med följande innehåll på samma sökväg som dina `universal-editor-service.cjs`-, `key.pem`- och `certificate.pem`-filer.
 
 ```text
 EXPRESS_PORT=8000
@@ -71,9 +71,9 @@ NODE_TLS_REJECT_UNAUTHORIZED=0
 
 Variabeln har följande betydelse:
 
-* `EXPRESS_PORT`: Definierar på vilken port Universal Editor-tjänsten lyssnar
-* `EXPRESS_PRIVATE`: Peka på [tidigare skapad privat nyckel,](#ue-https) `key.pem`
-* `EXPRESS_CERT`: Peka på [tidigare skapat certifikat,](#ue-https) `certificate.pem`
+* `EXPRESS_PORT`: Definierar på vilken port den universella redigeringstjänsten avlyssnar
+* `EXPRESS_PRIVATE`: pekar på din [tidigare skapade privata nyckel,](#ue-https) `key.pem`
+* `EXPRESS_CERT`: pekar på ditt [tidigare skapade certifikat,](#ue-https) `certificate.pem`
 * `NODE_TLS_REJECT_UNAUTHORIZED=0`: Accepterar självsignerade certifikat
 
 ## Kör den universella redigeringstjänsten {#running-ue}
@@ -102,23 +102,23 @@ För att en sida ska kunna redigeras med din lokala Universal Editor-tjänst må
 <meta name="urn:adobe:aue:config:service" content="https://localhost:8000">
 ```
 
-När du väl har angett det ska du se varje anrop till innehållsuppdatering gå till `https://localhost:8000` i stället för standardtjänsten Universal Editor.
+När den är inställd ska du se alla anrop om innehållsuppdatering gå till `https://localhost:8000` i stället för standardtjänsten Universal Editor.
 
 >[!NOTE]
 >
->Försöker få direktåtkomst `https://localhost:8000` resulterar i `404` fel. Detta är förväntat beteende.
+>Om du försöker få direktåtkomst till `https://localhost:8000` uppstår ett `404`-fel. Detta är förväntat beteende.
 >
->Om du vill testa åtkomsten till den lokala Universal Editor-tjänsten använder du `https://localhost:8000/corslib/LATEST`. Se [nästa avsnitt](#editing) för mer information.
+>Använd `https://localhost:8000/corslib/LATEST` om du vill testa åtkomsten till den lokala Universal Editor-tjänsten. Mer information finns i [nästa avsnitt](#editing).
 
 >[!TIP]
 >
->Mer information om hur sidorna är instrumenterade för att använda den globala redigeringstjänsten finns i dokumentet [Komma igång med Universal Editor i AEM](/help/implementing/universal-editor/getting-started.md#instrument-page)
+>Mer information om hur sidor instrumenteras för att använda den globala universella redigeringstjänsten finns i dokumentet [Komma igång med den universella redigeraren i AEM](/help/implementing/universal-editor/getting-started.md#instrument-page)
 
 ## Redigera en sida med den lokala universella redigeringstjänsten {#editing}
 
-Med [Universell redigeringstjänst som körs lokalt](#running-ue) och [Innehållssida som är instrumenterad för att använda den lokala tjänsten.](#using-loca-ue) du kan nu starta redigeraren.
+Med den [universella redigeringstjänsten som körs lokalt](#running-ue) och [innehållssidan som är instrumenterad för att använda den lokala tjänsten](#using-loca-ue) kan du nu starta redigeraren.
 
-1. Öppna webbläsaren för att `https://localhost:8000/corslib/LATEST`.
-1. Be webbläsaren godkänna [ditt självsignerade certifikat.](#ue-https)
+1. Öppna webbläsaren på `https://localhost:8000/corslib/LATEST`.
+1. Be webbläsaren acceptera [ditt självsignerade certifikat.](#ue-https)
 1. När det självsignerade certifikatet är betrott kan du redigera sidan med din lokala Universal Editor-tjänst.
 

@@ -36,7 +36,7 @@ Utför följande steg för att lösa problemet:
 
 1. Öppna ditt Experience Manager-projekt.
 1. Öppna `dispatcher/scr/conf.d/rewrites/rewrite.rules` för redigering.
-1. Öppna `conf.d/httpd-dispatcher.conf` eller någon annan konfigurationsfil som är konfigurerad att läsas in vid körning.
+1. Öppna `conf.d/httpd-dispatcher.conf` eller någon annan konfigurationsfil som har konfigurerats för inläsning vid körning.
 1. Lägg till följande kod i filen och spara den. Det är en exempelkod som ändrar den så att den passar din miljö.
 
 ```shellscript
@@ -73,4 +73,4 @@ Lös problemet genom att ange sidhuvudet 0:
    ```
 
 1. Spara och stäng filen.
-1. Ändra den mjuka länken för `src\conf.d\enabled_vhosts\default.vhost` för att peka på en ny fil.
+1. Ändra den mjuka länken för `src\conf.d\enabled_vhosts\default.vhost` så att den pekar på en ny fil.

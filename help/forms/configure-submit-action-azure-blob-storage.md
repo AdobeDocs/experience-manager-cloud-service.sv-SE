@@ -15,9 +15,9 @@ ht-degree: 0%
 
 # Skicka ett anpassat formulär till Azure Blob Storage
 
-The **[!UICONTROL Submit to Azure Blob Storage]**  Skicka åtgärd kopplar ett anpassat formulär till en Microsoft® Azure-portal. Du kan skicka formulärdata, filer, bilagor eller arkivdokument till de anslutna Azure Storage-behållarna.
+Åtgärden **[!UICONTROL Submit to Azure Blob Storage]** för att skicka kopplar ett anpassat formulär till en Microsoft® Azure-portal. Du kan skicka formulärdata, filer, bilagor eller arkivdokument till de anslutna Azure Storage-behållarna.
 
-AEM as a Cloud Service erbjuder olika inskickningsåtgärder för att hantera inskickade formulär. Du kan läsa mer om de här alternativen i [Inlämningsåtgärd för anpassat formulär](/help/forms/configure-submit-actions-core-components.md) artikel.
+AEM as a Cloud Service erbjuder olika inskickningsåtgärder för att hantera inskickade formulär. Du kan läsa mer om de här alternativen i artikeln [Åtgärd för att skicka anpassade formulär](/help/forms/configure-submit-actions-core-components.md).
 
 ## Fördelar
 
@@ -31,21 +31,21 @@ Några av fördelarna med Azure Blob Storage-integrering med AEM Forms är:
 Så här använder du Azure Blob Storage i Adaptive Forms Submit Action:
 
 1. [Skapa en Azure Blob Storage-behållare](#create-a-azure-blob-storage-container-create-azure-configuration): Den ansluter AEM Forms till Azure Storage-behållare.
-2. [Använd Azure Storage-konfigurationen i ett adaptivt formulär](#use-azure-storage-configuration-in-an-adaptive-form-use-azure-storage-configuartion-in-af): Det kopplar ditt adaptiva formulär till konfigurerade Azure-lagringsbehållare.
+2. [Använd Azure Storage-konfigurationen i ett adaptivt formulär](#use-azure-storage-configuration-in-an-adaptive-form-use-azure-storage-configuartion-in-af): Den ansluter ditt adaptiva formulär till konfigurerade Azure Storage-behållare.
 
 ### Skapa en Azure Blob Storage-behållare {#create-azure-configuration}
 
 Så här ansluter du AEM Forms till dina Azure-lagringsbehållare:
-1. Gå till **AEM Forms Author** instans > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** >  **[!UICONTROL Azure Storage]**.
-1. När du valt **[!UICONTROL Azure Storage]** omdirigeras du till **[!UICONTROL Azure Storage Browser]**.
-1. Välj en **Konfigurationsbehållare**. Konfigurationen lagras i den valda konfigurationsbehållaren.
+1. Gå till din **AEM Forms Author**-instans > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Azure Storage]**.
+1. När du har valt **[!UICONTROL Azure Storage]** omdirigeras du till **[!UICONTROL Azure Storage Browser]**.
+1. Välj en **konfigurationsbehållare**. Konfigurationen lagras i den valda konfigurationsbehållaren.
 1. Klicka på **[!UICONTROL Create]**. Guiden Skapa Azure Storage Configuration visas.
 
-   ![Azure Storage-konfiguration](/help/forms/assets/azure-storage-configuration.png)
+   ![Azure-lagringskonfiguration](/help/forms/assets/azure-storage-configuration.png)
 
 1. Ange **[!UICONTROL Title]**, **[!UICONTROL Azure Storage Account]** och **[!UICONTROL Azure Access key]**.
 
-   * Du kan hämta `Azure Storage Account` namn och `Azure Access key` från lagringskonton i Microsoft® Azure-portalen.
+   * Du kan hämta `Azure Storage Account`-namn och `Azure Access key` från lagringskonton på Microsoft® Azure-portalen.
 <!--
 
     >[!NOTE]
@@ -63,18 +63,18 @@ Nu kan du använda den här Azure Storage-behållarkonfigurationen för överfö
 ### Använd Azure Storage-konfigurationen i ett adaptivt formulär {#use-azure-storage-configuartion-in-af}
 
 Du kan använda den skapade Azure Storage-behållarkonfigurationen i ett adaptivt formulär för att spara data eller skapa ett dokument av posten i Azure Storage-behållaren. Utför följande steg för att använda konfigurationen av Azure Storage-behållaren i ett adaptivt formulär som:
-1. Skapa en [Adaptiv form](/help/forms/creating-adaptive-form-core-components.md).
+1. Skapa ett [anpassat formulär](/help/forms/creating-adaptive-form-core-components.md).
 
    >[!NOTE]
    >
-   > * Välj samma [!UICONTROL Configuration Container] för ett adaptivt formulär, där du har skapat din OneDrive-lagring.
-   > * Om nej [!UICONTROL Configuration Container] markeras och sedan den globala [!UICONTROL Storage Configuration] visas i egenskapsfönstret för Skicka åtgärd.
+   > * Välj samma [!UICONTROL Configuration Container] för ett adaptivt formulär, där du har skapat ditt OneDrive-lagringsutrymme.
+   > * Om [!UICONTROL Configuration Container] inte är markerat visas de globala [!UICONTROL Storage Configuration]-mapparna i egenskapsfönstret för Skicka åtgärd.
 
-1. Välj **Skicka åtgärd** as **[!UICONTROL Submit to Azure Blob Storage]**.
+1. Välj **Skicka åtgärd** som **[!UICONTROL Submit to Azure Blob Storage]**.
    ![Azure Blob Storage GIF](/help/forms/assets/azure-submit-video.gif)
 
-1. Välj **[!UICONTROL Storage Configuration]**, där du vill spara dina data.
-1. Klicka **[!UICONTROL Save]** för att spara Skicka-inställningarna.
+1. Markera **[!UICONTROL Storage Configuration]** där du vill spara dina data.
+1. Klicka på **[!UICONTROL Save]** om du vill spara Skicka-inställningarna.
 
 När du skickar formuläret sparas data i den angivna Azure Storage-behållarkonfigurationen.
 Mappstrukturen som data ska sparas i är `/configuration_container/form_name/year/month/date/submission_id/data`.

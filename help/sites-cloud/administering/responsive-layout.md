@@ -14,20 +14,20 @@ ht-degree: 0%
 
 # Konfigurera layoutbehållaren och layoutläget {#configuring-layout-container-and-layout-mode}
 
-[Responsiv layout](/help/sites-cloud/authoring/page-editor/responsive-layout.md) är en mekanism för att förverkliga [responsiv webbdesign](https://en.wikipedia.org/wiki/Responsive_web_design) Detta gör att innehållsförfattaren kan skapa webbsidor som har en layout och dimensioner som är beroende av vilka enheter som användarna använder.
+[Responsiv layout](/help/sites-cloud/authoring/page-editor/responsive-layout.md) är en mekanism för att förverkliga [responsiv webbdesign.](https://en.wikipedia.org/wiki/Responsive_web_design) Detta gör att innehållsförfattaren kan skapa webbsidor som har en layout och dimensioner som är beroende av vilka enheter som användarna använder.
 
 AEM realiserar responsiv layout för dina sidor med en kombination av mekanismer:
 
 * **[Layoutbehållare](/help/sites-cloud/authoring/page-editor/responsive-layout.md#adding-a-layout-container-and-its-content-edit-mode)** - Den här komponenten innehåller ett rutnätsstyckesystem där du kan lägga till och placera komponenter i ett responsivt rutnät.
    * Den kan användas som standardparsyta för sidan och/eller göras tillgänglig för författare i komponentwebbläsaren.
-   * Standardvärdet **Layoutbehållare** -komponenten definieras under `/libs/wcm/foundation/components/responsivegrid`.
+   * Standardkomponenten för **Layoutbehållare** definieras under `/libs/wcm/foundation/components/responsivegrid`.
    * Du kan definiera layoutbehållare:
       * Som en komponent som användaren kan lägga till på en sida.
       * Som standardparsys för sidan.
       * Som både en komponent och standardparsys.
          * Du kan ha layoutbehållaren som standard för sidan, samtidigt som användaren kan lägga till fler layoutbehållare i den, till exempel för att uppnå kolumnkontroll.
-* **[Layoutläge](/help/sites-cloud/authoring/page-editor/introduction.md#mode-selector)** - När layoutbehållaren är placerad på sidan kan du använda **Layout** läge för att placera innehåll i det responsiva rutnätet.
-* **[Emulator](/help/sites-cloud/authoring/page-editor/responsive-layout.md#selecting-a-device-to-emulate)** - På så sätt kan du skapa och redigera responsiva webbplatser som ändrar layouten efter enhetens/fönstrets storlek genom att ändra komponenternas storlek interaktivt. Användaren kan sedan se hur innehållet återges med emulatorn.
+* **[Layoutläge](/help/sites-cloud/authoring/page-editor/introduction.md#mode-selector)** - När layoutbehållaren har placerats på sidan kan du använda läget **Layout** för att placera innehåll i det responsiva rutnätet.
+* **[Emulator](/help/sites-cloud/authoring/page-editor/responsive-layout.md#selecting-a-device-to-emulate)** - Det gör att du kan skapa och redigera responsiva webbplatser som ändrar layout efter enhetens/fönstrets storlek genom att ändra storlek på komponenterna interaktivt. Användaren kan sedan se hur innehållet återges med emulatorn.
 
 Med dessa responsiva rutnätsmekanismer kan du:
 
@@ -38,23 +38,23 @@ Med dessa responsiva rutnätsmekanismer kan du:
 
 >[!NOTE]
 >
->När du skapar en plats från [Project Archetype](#addlink) eller från [Standardmall för webbplats](#addlink)är den responsiva layouten vanligtvis konfigurerad. Annars måste du [aktivera komponenten Layoutbehållare](#enable-the-layout-container-component-for-page) för dina sidor.
+>När du skapar en webbplats från [Project Archetype](#addlink) eller från [standardwebbplatsmallen](#addlink) konfigureras den responsiva layouten i allmänhet. Annars måste du [aktivera layoutbehållarkomponenten](#enable-the-layout-container-component-for-page) för dina sidor.
 
 ## Aktivera emulatorn {#enabling-emulator}
 
-The [Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) och [Standardmall för webbplats](/help/sites-cloud/administering/site-creation/site-templates.md#standard-site-template) är redan aktiverade för att använda emulatorn. Om du har utvecklat ditt eget innehåll som inte är baserat på kärnkomponenterna eller arkitekturen kan du läsa dokumentet [Responsiv design](/help/implementing/developing/introduction/responsive-design.md) om du vill ha mer information om hur du utvecklar dina komponenter samtidigt som du använder dessa funktioner.
+[Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) och [Standard Site Template](/help/sites-cloud/administering/site-creation/site-templates.md#standard-site-template) har redan aktiverats för att använda emulatorn. Om du har utvecklat ditt eget innehåll som inte är baserat på kärnkomponenterna eller arkitekturen kan du läsa dokumentet [Responsiv design](/help/implementing/developing/introduction/responsive-design.md) för mer information om hur du utvecklar dina komponenter samtidigt som du utnyttjar dessa funktioner.
 
 ## Aktivera layoutläge för webbplatsen {#activate-layout-mode-for-your-site}
 
-**Layout** I kan du använda emulatorn för att justera layouten för ditt innehåll för olika enheter. WKND-exempelwebbplatsen är redan aktiverad för **Layout** läge. Följ de här stegen för att aktivera din egen webbplats.
+**Layout** gör att du kan använda emulatorn för att justera layouten för ditt innehåll för olika enheter. WKND-exempelwebbplatsen har redan aktiverats för **Layout**-läget. Följ de här stegen för att aktivera din egen webbplats.
 
 ### Konfigurera brytpunkter {#configure-breakpoints}
 
-Brytpunkter är viktiga för responsiv design och definierar hur och när innehåll justeras till målenheten. Var dock försiktig eftersom varje brytpunkt du lägger in genererar ytterligare arbete åt författarna så att de får plats med innehållet. Många gånger kan det räcka med två brytpunkter, inklusive den standardbrytpunkt som alltid finns där. Adobe rekommenderar att du inte skapar fler än tre brytpunkter, inklusive standardvärdet, dvs. inte fler än två noder nedan `cq:responsive/breakpoint`.
+Brytpunkter är viktiga för responsiv design och definierar hur och när innehåll justeras till målenheten. Var dock försiktig eftersom varje brytpunkt du lägger in genererar ytterligare arbete åt författarna så att de får plats med innehållet. Många gånger kan det räcka med två brytpunkter, inklusive den standardbrytpunkt som alltid finns där. Adobe rekommenderar att du inte skapar fler än tre brytpunkter, inklusive standardvärdet, dvs. inte fler än två noder under `cq:responsive/breakpoint`.
 
 * Brytpunkter har en rubrik och en bredd:
    * Titeln beskriver den generiska enhetsgrupperingen, med orientering om det behövs.
-      * Till exempel: `phone`, `tablet`
+      * Till exempel `phone`, `tablet`
    * Bredden definierar den maximala bredden i pixlar för den allmänna enhetsgrupperingen.
       * Om till exempel brytpunktstelefonen har en bredd på 768 är det den maximala bredden för den layout som används för en telefonenhet.
 * Brytpunkter kan definieras:
@@ -79,9 +79,9 @@ På grund av arv behöver du bara göra detta för innehållets rotsida.
 1. Navigera med CRXDE Lite till något av följande:
 
    * Din malldefinition.
-   * The `jcr:content` sidans nod.
+   * Sidans `jcr:content`-nod.
 
-1. Under `jcr:content` skapa noden:
+1. Skapa noden under `jcr:content`:
 
    * Namn: `cq:responsive`
    * Typ: `nt:unstructured`
@@ -100,7 +100,7 @@ På grund av arv behöver du bara göra detta för innehållets rotsida.
 
 #### Konfigurera brytpunkter med XML {#configuring-breakpoints-using-xml}
 
-Brytpunkterna finns innanför `<jcr:content>` i `.context.html` under lämplig mallmapp (eller innehållsmapp).
+Brytpunkter finns i avsnittet `<jcr:content>` i `.context.html` under lämplig mallmapp (eller innehållsmapp).
 
 En exempeldefinition:
 
@@ -115,7 +115,7 @@ En exempeldefinition:
 
 ## Aktivera komponentstorleksändring för sidan {#enable-component-resizing-for-the-page}
 
-Ändra storlek på komponenter i **Layout** mode är en viktig del av responsiv design, som kan användas i WKND-exempelwebbplatsen. Följ de här stegen för att aktivera din egen webbplats.
+Att ändra storlek på komponenter i **Layout** -läge är en viktig del av responsiv design, som kan användas i WKND-exempelwebbplatsen. Följ de här stegen för att aktivera din egen webbplats.
 
 ### Ange layoutbehållare som huvudparsys {#set-layout-container-as-main-parsys}
 
@@ -148,7 +148,7 @@ I följande två exempel illustreras definitionen:
 
 AEM använder LESS för att generera delar av den CSS som behövs, och dessa måste inkluderas i dina projekt.
 
-Du måste skapa en [klientbibliotek](/help/implementing/developing/introduction/clientlibs.md) för att tillhandahålla ytterligare konfigurations- och funktionsanrop. Följande LESS-extrakt är ett exempel på det minsta som du måste lägga till i projektet:
+Du måste skapa ett [klientbibliotek](/help/implementing/developing/introduction/clientlibs.md) för att kunna tillhandahålla ytterligare konfigurations- och funktionsanrop. Följande LESS-extrakt är ett exempel på det minsta som du måste lägga till i projektet:
 
 ```java
 @import (once) "/libs/wcm/foundation/clientlibs/grid/grid_base.less";
@@ -203,7 +203,7 @@ Om du ändrar storlek på en komponent i rutnätet utlöses följande avlyssnare
 * `afteredit`
 * `afterchildedit`
 
-Om du vill ändra storlek på och uppdatera innehållet i en adaptiv bild som ingår i ett responsivt rutnät måste du lägga till en `afterEdit` ange till `REFRESH_PAGE` avlyssnare i `EditConfig` fil för alla ingående komponenter.
+Om du vill ändra storlek på och uppdatera innehållet i en adaptiv bild som ingår i ett responsivt stödraster måste du lägga till en `afterEdit`-uppsättning till `REFRESH_PAGE`-avlyssnare i `EditConfig`-filen för alla ingående komponenter.
 
 Till exempel:
 
@@ -223,9 +223,9 @@ För effektiv responsiv layout måste innehållsförfattaren kunna dra instanser
 
 Om du vill att författare ska kunna lägga till fler responsiva rutnät på innehållssidorna måste du aktivera layoutbehållarkomponenten för sidan. Du kan göra detta med:
 
-* **Via redigeringsmiljön** - [Redigera sidmallar](/help/sites-cloud/authoring/sites-console/templates.md) om du vill aktivera layoutbehållaren för en sida.
-* **Komponentdefinition** - Användning `allowedComponent` eller en statisk include när komponenten definieras.
+* **Via redigeringsmiljön** - [Redigera sidmallar](/help/sites-cloud/authoring/sites-console/templates.md) för att aktivera layoutbehållaren för en sida.
+* **Komponentdefinition** - Använd `allowedComponent` eller en statisk inkludering när du definierar komponenten.
 
 ### Konfigurera stödrastret för layoutbehållaren {#configure-the-grid-of-the-layout-container}
 
-Du kan konfigurera antalet kolumner som är tillgängliga för varje instans av layoutbehållaren [genom att redigera sidmallarna.](/help/sites-cloud/authoring/sites-console/templates.md)
+Du kan konfigurera antalet kolumner som är tillgängliga för varje specifik instans av layoutbehållaren [genom att redigera sidmallarna.](/help/sites-cloud/authoring/sites-console/templates.md)

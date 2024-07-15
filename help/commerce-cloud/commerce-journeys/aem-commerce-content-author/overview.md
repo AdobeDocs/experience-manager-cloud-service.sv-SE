@@ -27,7 +27,7 @@ Den här guiden leder dig igenom de viktigaste avsnitten AEM innehåll och Comme
 
 ## AEM dokumentationsresor {#documentation-journeys}
 
-[En dokumentationsresa](/help/journey-documentation/documentation-journeys.md) binder samman många olika, komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny på att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
+[En dokumentationsresa](/help/journey-documentation/documentation-journeys.md) knyter ihop många olika, komplicerade ämnen och funktioner genom att tillhandahålla en berättelse som hjälper läsaren, som kan vara ny på att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskaper.
 
 Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
 
@@ -48,12 +48,12 @@ Du kommer att utforska många ämnen under den här resan. I följande artiklar 
 | # | Artikel | Beskrivning |
 |---|---|---|
 | 0 | AEM Content and Commerce Developer Journey | Det här dokumentet |
-| 1 | [Läs om AEM och Commerce](/help/commerce-cloud/introduction.md) | Lär dig koncept och grunder om AEM och Commerce. |
-| 2 | [Komma igång med AEM CIF grunderna](getting-started.md) | Lär dig hur du får tillgång till och använder produktdata för dina användningsfall. |
-| 3 | [Hantera sidor och mallar för produktkataloger](catalog-templates.md) | Lär dig hur du skapar en typisk produktkatalogupplevelse. |
+| 1 | [Läs mer om AEM och Commerce](/help/commerce-cloud/introduction.md) | Lär dig koncept och grunder om AEM och Commerce. |
+| 2 | [Komma igång med AEM CIF grunderna i redigering](getting-started.md) | Lär dig hur du får tillgång till och använder produktdata för dina användningsfall. |
+| 3 | [Hantera produktkatalogsidor och mallar](catalog-templates.md) | Lär dig hur du skapar en typisk produktkatalogupplevelse. |
 | 4 | [Hantera testade produktkataloger](staged-catalog.md) | Lär dig hur du skapar en framtida produktkatalogupplevelse med testdata och AEM. |
-| 5 | [Bygga produktupplevelser](product-experience-management.md) | Lär dig hur du kan förbättra produktdata med engagerande innehåll i AEM. |
+| 5 | [Skapar produktupplevelser](product-experience-management.md) | Lär dig hur du kan förbättra produktdata med engagerande innehåll i AEM. |
 
 ## What&#39;s Next {#what-is-next}
 
-Du är nu redo att komma igång med AEM Content and Commerce Development. Vi rekommenderar att du fortsätter till nästa del av resan och läser artikeln [Läs om AEM och Commerce](/help/commerce-cloud/introduction.md).
+Du är nu redo att komma igång med AEM Content and Commerce Development. Vi rekommenderar att du fortsätter till nästa del av resan och läser artikeln [Lär dig mer om AEM och Commerce](/help/commerce-cloud/introduction.md).

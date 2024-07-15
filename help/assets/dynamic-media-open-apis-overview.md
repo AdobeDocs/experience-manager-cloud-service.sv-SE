@@ -19,23 +19,23 @@ Dynamic Media med OpenAPI-funktioner sätter DAM i centrum för ett flexibelt oc
 
 Dynamic Media med OpenAPI-funktioner har följande viktiga fördelar:
 
-* **Smidiga integreringar**: Dynamic Media med OpenAPI-funktioner erbjuder en omfattande uppsättning API:er för sökning och leverans. Det gör att utvecklarna enkelt kan [integrera leverans av resurser med applikationerna](/help/assets/integrate-dynamic-media-open-apis.md). Programmen omfattar både Adobe och tredjepartsprogram. Den ger en [Användargränssnittet för resursväljaren i Micro Edge](/help/assets/asset-selector.md) för att söka efter och välja godkända resurser. Väljaren kan enkelt integreras med alla program som är baserade på JavaScript ramverk som React JS, Angular JS och Vanilla JS.
+* **Smidiga integreringar**: Dynamic Media med OpenAPI-funktioner erbjuder en omfattande uppsättning API:er för sökning och leverans. Det gör att utvecklarna enkelt kan [integrera leverans av resurser med sina program](/help/assets/integrate-dynamic-media-open-apis.md). Programmen omfattar både Adobe och tredjepartsprogram. Det har ett [användargränssnitt för resursväljare i Microsoft FrontEnd](/help/assets/asset-selector.md) för att söka efter och välja godkända resurser. Väljaren kan enkelt integreras med alla program som är baserade på JavaScript ramverk som React JS, Angular JS och Vanilla JS.
 
 * **Centraliserad hantering av digitala resurser**: DAM är den enda källan till sanning för alla digitala resurser. Dina digitala resurser hanteras centralt i AEM Assets och levereras till de förbrukande programmen via referens via leverans-URL:er, utan att du behöver kopiera resurbinärfiler.
 
-* **Uppdateringar i realtid**: Alla ändringar som görs i godkända resurser i DAM, inklusive versionsuppdateringar och metadataändringar, återspeglas automatiskt i leverans-URL:erna. Med ett kort TTL-värde (Time-to-Live) på 10 minuter konfigurerat för Dynamic Media med OpenAPI-funktioner via CDN blir uppdateringarna synliga i alla redigerings- och publiceringsgränssnitt på mindre än 10 minuter.
+* **Realtidsuppdateringar**: Alla ändringar som görs i godkända resurser i DAM, inklusive versionsuppdateringar och metadataändringar, återspeglas automatiskt i leverans-URL:erna. Med ett kort TTL-värde (Time-to-Live) på 10 minuter konfigurerat för Dynamic Media med OpenAPI-funktioner via CDN blir uppdateringarna synliga i alla redigerings- och publiceringsgränssnitt på mindre än 10 minuter.
 
-* **Enhetliga varumärken**: Endast [varumärkesgodkänt material](/help/assets/approve-assets.md) exponeras för nedströmstillämpningar. [Varumärkesansvariga och marknadsförare har strikt kontroll över varumärkestillgångar](/help/assets/restrict-assets-delivery.md). Det är bara en godkänd och den senaste versionen av resursen som är tillgänglig för användning, vilket garanterar ett enhetligt varumärke i alla kanaler och tillämpningar.
+* **Varumärkeskonsekvens**: Endast [varumärkesgodkända resurser](/help/assets/approve-assets.md) exponeras för program längre fram i kedjan. [Varumärkesansvariga och marknadsförare har strikt kontroll över varumärkesresurser](/help/assets/restrict-assets-delivery.md). Det är bara en godkänd och den senaste versionen av resursen som är tillgänglig för användning, vilket garanterar ett enhetligt varumärke i alla kanaler och tillämpningar.
 
-* **Webboptimerad leverans**: Digitalt material levereras i webboptimerade format för att förbättra de digitala upplevelsernas Core Web Vitals. Detta inkluderar stöd för WebP-återgivningar för bilder, adaptiv direktuppspelning via HLS- eller DASH-protokoll för videor och ursprungliga återgivningar för dokument.
+* **Webboptimerad leverans**: Digitala resurser levereras i webboptimerade format för att förbättra de digitala upplevelsernas Core Web Vitals. Detta inkluderar stöd för WebP-återgivningar för bilder, adaptiv direktuppspelning via HLS- eller DASH-protokoll för videor och ursprungliga återgivningar för dokument.
 
-* **Dynamisk omvandling av resurser**: I vårt system går det att omvandla bilder på en gång med hjälp av URL-parametrar som kallas bildmodifierare. [Till exempel bredd, höjd, rotering, vänd, kvalitet, beskärning, format och smart beskärning](/help/assets/deliver-assets-apis.md). Omformade renderingar genereras dynamiskt och levereras smidigt via CDN.
+* **Dynamisk resursomformning**: I vårt system går det att göra bildomformningar direkt med URL-parametrar som kallas bildmodifierare. [Till exempel bredd, höjd, rotering, vänd, kvalitet, beskärning, format och smart beskärning](/help/assets/deliver-assets-apis.md). Omformade renderingar genereras dynamiskt och levereras smidigt via CDN.
 
-* **Säker leverans av tillgångar**: Dynamic Media med OpenAPI-funktioner har en mekanism för att styra åtkomsten till dina digitala resurser. Du kan ange användarroller eller användargrupper som metadata för att skydda resurser och ange en fördefinierad tidsram under vilken [endast behöriga användare har åtkomst till dessa resurser](/help/assets/restrict-assets-delivery.md). Leverans-URL:erna för skyddade tillgångar kan inte matchas för obehöriga användare under den begränsade perioden.
+* **Säker leverans av resurser**: Dynamic Media med OpenAPI-funktioner erbjuder en mekanism för kontroll över åtkomsten till dina digitala resurser. Du kan ange användarroller eller användargrupper som metadata för att skydda resurser och ange en fördefinierad tidsram under vilken [endast behöriga användare kan komma åt dessa resurser](/help/assets/restrict-assets-delivery.md). Leverans-URL:erna för skyddade tillgångar kan inte matchas för obehöriga användare under den begränsade perioden.
 
-* **Datainsikter för att fatta välgrundade beslut (kommande)**: Utöver hantering och leverans av mediefiler samlar den in leveransdatainsikter om tillgångsleveranser hos CDN, vilket gör det möjligt för varumärkesansvariga att spåra leveransstatistik över olika kanaler. Det gör det möjligt för dem att fatta datadrivna beslut för kontinuerlig optimering av resursstyrnings- och leveransstrategier.
+* **Datainsikter för att fatta välgrundade beslut (kommande)**: Utöver tillgångshantering och leverans, samlar den in leveransdatainsikter om tillgångsleveranser hos CDN, vilket gör det möjligt för varumärkesansvariga att spåra leveransmått över olika kanaler. Det gör det möjligt för dem att fatta datadrivna beslut för kontinuerlig optimering av resursstyrnings- och leveransstrategier.
 
-![Dynamic Media Open API, dataflödesdiagram](assets/dm-openapi-dfd.png)
+![Dynamic Media Öppna API-dataflödesdiagram](assets/dm-openapi-dfd.png)
 
 ## Förutsättningar för att få tillgång till Dynamic Media med OpenAPI-funktioner {#prerequisites-dynaminc-media-open-apis}
 
@@ -49,7 +49,7 @@ För att få tillgång till Dynamic Media med OpenAPI-funktioner måste du ha li
 
 Innan du skickar en begäran om att aktivera Dynamic Media med OpenAPI-funktioner i AEM as a Cloud Service måste du kontrollera att det inte redan är aktiverat.
 
-När [Förutsättningar](#prerequisites-dynaminc-media-open-apis) är uppfyllda och om Dynamic Media med OpenAPI-funktioner är aktiverat på din AEM as a Cloud Service-instans finns det en leverans-URL tillgänglig för varje godkänd resurs i databasen. Information om hur du kopierar leverans-URL finns i [Kopiera leverans-URL för godkända resurser](approve-assets.md#copy-delivery-url-approved-assets) . Adobe rekommenderar att du använder den här metoden för att verifiera att Dynamic Media med OpenAPI-funktioner är aktiverat på AEM as a Cloud Service innan du skickar in en supportanmälan för att aktivera den.
+När [Förutsättningar](#prerequisites-dynaminc-media-open-apis) har uppfyllts och om Dynamic Media med OpenAPI-funktioner har aktiverats på din AEM as a Cloud Service-instans finns det en leverans-URL tillgänglig för varje godkänd resurs i databasen. Information om hur du kopierar leverans-URL finns i [Kopiera leverans-URL för godkända resurser](approve-assets.md#copy-delivery-url-approved-assets) . Adobe rekommenderar att du använder den här metoden för att verifiera att Dynamic Media med OpenAPI-funktioner är aktiverat på AEM as a Cloud Service innan du skickar in en supportanmälan för att aktivera den.
 
 Om du vill aktivera Dynamic Media med OpenAPI-funktioner i AEM as a Cloud Service skickar du ett supportärende för Adobe med följande information:
 
@@ -71,7 +71,7 @@ När du har skickat in supportanmälan aktiverar Adobe Dynamic Media med OpenAPI
 
 >[!NOTE]
 >
->Exkludera `/conf/global/settings/dam/assets-configurations/assetdelivery` i alla typer av innehållspaket för att undvika inaktivering av Dynamic Media med OpenAPI-funktioner.
+>Undanta `/conf/global/settings/dam/assets-configurations/assetdelivery` från alla innehållspaket för att undvika inaktivering av Dynamic Media med OpenAPI-funktioner.
 
 ## Fördjupa dig i nyckelfunktionerna {#learn-more-key-capabilities}
 
@@ -95,11 +95,11 @@ När du har skickat in supportanmälan aktiverar Adobe Dynamic Media med OpenAPI
    </a>
    <div>
       <a href="/help/assets/integrate-dynamic-media-open-apis.md">
-      <strong>Integrera AEM Assets med program längre fram i kedjan</strong>
+      <strong> Integrera AEM Assets med program längre fram i kedjan </strong>
       </a>
    </div>
    <p>
-      <em>Integrera ditt eget anpassade användargränssnitt med Experience Manager Assets-databasen med hjälp av API:erna för sökning och leverans eller använd Adobe Micro-Frontend Asset Selector.</em>
+      <em>Integrera ditt eget anpassade användargränssnitt med Experience Manager Assets-databasen med hjälp av API:erna för sökning och leverans eller använd Adobe Microsoft-Edge Asset Selector.</em>
    </p>
 </td>
 <td>
@@ -108,11 +108,11 @@ När du har skickat in supportanmälan aktiverar Adobe Dynamic Media med OpenAPI
    </a>
    <div>
       <a href="/help/assets/asset-selector.md">
-      <strong>Adobe Micro-Front Asset Selector</strong>
+      <strong> AdobeMicro-Frontend Asset Selector </strong>
       </a>
    </div>
    <p>
-      <em>Ett användargränssnitt som interagerar med AEM Assets-databasen för att söka efter resurser och sedan använda dem i programutvecklingen.</em>
+      <em>Ett användargränssnitt som interagerar med AEM Assets-databasen för att söka efter resurser och sedan använda dem i programredigeringsmiljön.</em>
    </p>
 </td>
 </table>
@@ -123,7 +123,7 @@ När du har skickat in supportanmälan aktiverar Adobe Dynamic Media med OpenAPI
    </a>
    <div>
       <a href="/help/assets/search-assets-api.md">
-      <strong>Söka efter resurser i Experience Manager Assets-databasen</strong>
+      <strong> Söka efter resurser i Experience Manager Assets-databasen </strong>
       </a>
    </div>
    <p>
@@ -136,11 +136,11 @@ När du har skickat in supportanmälan aktiverar Adobe Dynamic Media med OpenAPI
    </a>
    <div>
       <a href="/help/assets/deliver-assets-apis.md">
-      <strong>Leverera resurser till program längre fram i kedjan</strong>
+      <strong> Leverera resurser till program längre fram i kedjan </strong>
       </a>
    </div>
    <p>
-      <em>Leverera material till integrerade program längre fram i kedjan med en leverans-URL.</em>
+      <em>Leverera resurser till integrerade program längre fram i kedjan med en leverans-URL.</em>
    </p>
 </td>
 <td>
@@ -149,11 +149,11 @@ När du har skickat in supportanmälan aktiverar Adobe Dynamic Media med OpenAPI
    </a>
    <div>
       <a href="/help/assets/restrict-assets-delivery.md">
-      <strong>Begränsa åtkomst till resurser i Experience Manager</strong>
+      <strong> Begränsa åtkomst till resurser i Experience Manager </strong>
       </a>
    </div>
    <p>
-      <em> DAM Admin eller Brand Managers begränsar åtkomsten genom att konfigurera roller för godkända resurser på AEM as a Cloud Service författarinstans.</em>
+      <em> DAM-administratör eller varumärkesansvariga begränsar åtkomsten genom att konfigurera roller för godkända resurser på AEM as a Cloud Service-författarinstansen.</em>
    </p>
 </td>
 </table>

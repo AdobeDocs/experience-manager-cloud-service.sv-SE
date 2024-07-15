@@ -1,6 +1,6 @@
 ---
-title: Publicera ett AEM Forms-formulär för Edge Delivery Services
-description: Publicera ett AEM Forms-formulär för Edge Delivery Services
+title: Publish och AEM Forms Edge Delivery Services Form
+description: Publish och AEM Forms Edge Delivery Services Form
 feature: Edge Delivery Services
 exl-id: dcb16da1-dcc2-4529-8859-0716e727b54d
 role: Admin, Architect, Developer
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 ---
 
-# Publicera formuläret och börja samla in data
+# Publish formulär och börja samla in data
 
 När du är redo att dela formuläret med dina kunder för datainsamling eller insändning kan du helt enkelt publicera det, så att formuläret blir lätt tillgängligt för kunderna.
 
@@ -19,20 +19,20 @@ När du är redo att dela formuläret med dina kunder för datainsamling eller i
 
 ## Krav
 
-* Du har ett AEM projekt baserat på [AEM Forms boilerplate](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [har lagt till Adaptive Forms Block i ditt befintliga AEM](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project)
+* Du har ett AEM projekt baserat på [AEM Forms-standardmallen](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [har lagt till Adaptivt Forms-block i ditt befintliga AEM ](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project)
 * Formuläret är fullständigt testat och klart att användas.
-* Dina [kalkylbladet har konfigurerats](/help/edge/docs/forms/submit-forms.md) för att ta emot data.
+* Ditt [kalkylblad är konfigurerat](/help/edge/docs/forms/submit-forms.md) för att ta emot data.
 
 
-## Publicera formuläret
+## Publish formulär
 
-+++ 1. Publicera kalkylbladet
++++ 1. Publish ditt kalkylblad
 
-1. Öppna ditt Microsoft SharePoint- eller Google Drive-konto och gå till AEM Edge Delivery-projektkatalog.
+1. Öppna ditt Microsoft SharePoint- eller Google Drive-konto och navigera till din AEM Edge Delivery projektkatalog.
 
-1. Öppna det kalkylblad som innehåller ditt formulär. Till exempel `enquiry` från Microsoft Excel-arbetsbok.
+1. Öppna det kalkylblad som innehåller ditt formulär. Till exempel Microsoft Excel-arbetsboken för `enquiry`-formuläret.
 
-1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) om du vill förhandsgranska bladet.
+1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska bladet.
 
    ![Använd AEM Sidekick för att förhandsgranska bladet](/help/edge/assets/preview-form.png)
 
@@ -47,8 +47,8 @@ När du är redo att dela formuläret med dina kunder för datainsamling eller i
        https://<branch>--<repository>--<owner>.hlx.live/<form>.json
    ```
 
-   * `<branch>` refererar till grenen i din GitHub-databas.
-   * `<repository>` anger din GitHub-databas.
+   * `<branch>` refererar till din GitHub-databas.
+   * `<repository>` betecknar din GitHub-databas.
    * `<owner>` refererar till användarnamnet för ditt GitHub-konto som är värd för din GitHub-databas.
 
    Om projektets databas till exempel heter &quot;portal&quot;, finns den under kontot &quot;wkndforms&quot; och du använder huvudgrenen, ser URL:en ut så här:
@@ -59,14 +59,14 @@ När du är redo att dela formuläret med dina kunder för datainsamling eller i
 
 +++ 2. Lägg till formuläret på din webbsida
 
-Lägg till `<form>.json` till en webbsida för att underlätta kundernas interaktion, så att de som fyller i formulären enkelt kan fylla i och skicka in dem.
+Lägg till `<form>.json` på en webbsida för att underlätta kundinteraktion, så att formuläranvändare enkelt kan fylla i och skicka formuläret.
 
 
 Så här lägger du till formuläret på din webbsida:
 
-1. Gå till ditt Microsoft SharePoint- eller Google Drive-konto och navigera till ditt `[AEM Edge Delivery project directory]`.
+1. Gå till ditt Microsoft SharePoint- eller Google Drive-konto och navigera till din `[AEM Edge Delivery project directory]`.
 
-1. Öppna en dokumentfil där du vill bädda in formuläret. Du kan till exempel öppna `index.docx` eller skapa ett nytt dokument.
+1. Öppna en dokumentfil där du vill bädda in formuläret. Du kan till exempel öppna filen `index.docx` eller skapa ett nytt dokument.
 
 1. Identifiera det önskade avsnittet i dokumentet där du vill infoga formuläret och navigera sedan till det.
 
@@ -76,9 +76,9 @@ Så här lägger du till formuläret på din webbsida:
    |---|
    | [https://main—weFinance—wkndforms.hlx.live/inquiry.json](https://main--wefinance--wkndforms.hlx.live/enquiry.json) |
 
-   ![Lägg till ett block med namnet &#39;Formulär&#39; i filen](/help/edge/assets/enquiry-doc-to-embed-form.png)
+   ![Lägg till ett block med namnet Form i filen](/help/edge/assets/enquiry-doc-to-embed-form.png)
 
-   Det här blocket fungerar som en platshållare där formuläret är inbäddat. Lägg till URL:en för `<form>.json` som en hyperlänk.
+   Det här blocket fungerar som en platshållare där formuläret är inbäddat. Lägg till URL:en för din `<form>.json`-fil som en hyperlänk på den andra raden i blocket.
 
    >[!IMPORTANT]
    >
@@ -94,16 +94,16 @@ Så här lägger du till formuläret på din webbsida:
    | [https://main—weFinance—wkndforms.hlx.page/inquiry.json](https://main--wefinance--wkndforms.hlx.page/enquiry.json) |
 
 
-   **Publicera URL**
+   **Publish URL**
 
    | Formulär |
    |---|
    | [https://main—weFinance—wkndforms.hlx.live/inquiry.json](https://main--wefinance--wkndforms.hlx.live/enquiry.json) |
 
-1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska webbsidan. Formuläret visas nu på sidan. Här är till exempel formuläret baserat på [frågekalkylblad](https://docs.google.com/spreadsheets/d/196lukD028RDK_evBelkOonPxC7w0l_IiJ-Yx3DvMfNk/edit#gid=0):
+1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska webbsidan. Formuläret visas nu på sidan. Här är till exempel formuläret baserat på kalkylbladet [för förfrågan](https://docs.google.com/spreadsheets/d/196lukD028RDK_evBelkOonPxC7w0l_IiJ-Yx3DvMfNk/edit#gid=0):
 
 
-   ![Ett exempel på ett EDS-formulär](/help/edge/assets/eds-form.png)
+   ![Ett exempel på EDS-formulär](/help/edge/assets/eds-form.png)
 
 1. Använd AEM Sidekick för att publicera formuläret. Nu kan kunderna fylla i formuläret och skicka in det.
 
@@ -113,9 +113,9 @@ Så här lägger du till formuläret på din webbsida:
 
 +++ Det går inte att skicka data till formuläret
 
-Om du råkar ut för ett fel som påminner om följande meddelande anger det att kalkylbladet inte är konfigurerat till [acceptera inskickade](/help/edge/docs/forms/submit-forms.md) ännu.
+Om du råkar ut för ett fel som påminner om följande meddelande anger det att kalkylbladet inte har konfigurerats för att [acceptera skickade](/help/edge/docs/forms/submit-forms.md)-data än.
 
-![fel vid inlämning av formulär](/help/edge/assets/form-error.png)
+![fel vid formuläröverföring](/help/edge/assets/form-error.png)
 
 +++
 

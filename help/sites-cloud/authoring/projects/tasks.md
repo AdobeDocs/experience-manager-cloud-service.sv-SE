@@ -20,13 +20,13 @@ Uppgifter används också i projekt för att avgöra hur fullständiga de aktuel
 
 ## Spåra projektförlopp {#tracking-project-progress}
 
-Du kan spåra projektförloppet genom att titta på aktiva/slutförda uppgifter i ett projekt som representeras av **Uppgifter** platta. Projektets förlopp kan avgöras av:
+Du kan spåra projektförloppet genom att titta på de aktiva/slutförda aktiviteterna i ett projekt som representeras av **aktivitetspanelen**. Projektets förlopp kan avgöras av:
 
 * **Uppgiftsruta:** Ett övergripande förlopp för projektet visas i uppgiftsrutan på sidan med projektinformation.
 
 * **Uppgiftsruta:** När du klickar på uppgiftsrutan visas en lista med uppgifter. Den här listan innehåller detaljerad information om alla uppgifter som rör projektet.
 
-Båda listar arbetsflödesuppgifter som du skapar direkt i **Uppgifter** platta.
+Båda listar arbetsflödesuppgifter och uppgifter som du skapar direkt i **aktivitetspanelen**.
 
 ### Åtgärdsfönster {#task-tile}
 
@@ -36,7 +36,7 @@ Om ett projekt innehåller några relaterade uppgifter visas en åtgärdsruta i 
 * Procent av aktiva uppgifter
 * Procent av försenade uppgifter
 
-![Aktivitetspanel](/help/sites-cloud/authoring/assets/projects-tasks-breakdown.png)
+![Åtgärdspanel](/help/sites-cloud/authoring/assets/projects-tasks-breakdown.png)
 
 ### Visa eller ändra uppgifter i ett projekt {#viewing-or-modifying-the-tasks-in-a-project}
 
@@ -50,7 +50,7 @@ Klicka på ellipsen (..) i aktivitetspanelen för att visa en lista med uppgifte
 
 #### Uppgiftsinformation {#task-details}
 
-Mer information om en viss uppgift finns i uppgiftslistan. **Öppna**.
+Om du vill ha mer information om en viss uppgift väljer du uppgiften i uppgiftslistan och **Öppna**.
 
 ![Uppgiftsinformation](/help/sites-cloud/authoring/assets/projects-task-details.png)
 
@@ -58,7 +58,7 @@ Mer information om en viss uppgift finns i uppgiftslistan. **Öppna**.
 
 I Uppgiftsinformation kan du redigera eller lägga till kommentarer. Alla kommentarer i ett projekt visas dessutom i kommentarsområdet.
 
-![Kommentarer om uppgifter](/help/sites-cloud/authoring/assets/projects-tasks-comments.png)
+![Kommentarer om aktiviteter](/help/sites-cloud/authoring/assets/projects-tasks-comments.png)
 
 ### Lägga till uppgifter {#adding-tasks}
 
@@ -66,10 +66,10 @@ Du kan lägga till nya uppgifter i projekt. Dessa uppgifter visas sedan på akti
 
 Så här lägger du till en uppgift:
 
-1. I projektet, i **Uppgifter** väljer du ikonen +. Fönstret **Lägg till uppgift** öppnas.
-1. Ange information om uppgiften. Titeln på uppgiften och vilken grupp den har tilldelats är obligatoriska. Ytterligare information som innehållssökväg, beskrivning, uppgiftsprioritet och förfallodatum är valfria. Dessutom kan du välja **Avancerat** för att ange namnet på uppgiften, som används för att namnge URL:en.
+1. I projektet väljer du +-ikonen i rutan **Åtgärder** . Fönstret **Lägg till uppgift** öppnas.
+1. Ange information om uppgiften. Titeln på uppgiften och vilken grupp den har tilldelats är obligatoriska. Ytterligare information som innehållssökväg, beskrivning, uppgiftsprioritet och förfallodatum är valfria. Du kan dessutom välja fliken **Avancerat** för att ange namnet på uppgiften, som används för att namnge URL:en.
 
-   ![Lägg till en uppgift](/help/sites-cloud/authoring/assets/projects-add-task.png)
+   ![Lägg till en aktivitet](/help/sites-cloud/authoring/assets/projects-add-task.png)
 
 1. Välj **Skapa**.
 
@@ -79,6 +79,6 @@ Ett annat sätt att komma åt uppgifter är via Inkorgen. I inkorgen kan du öpp
 
 ![Uppgifter i inkorgen](/help/sites-cloud/authoring/assets/projects-task-inbox.png)
 
-Om du vill slutföra en uppgift markerar du uppgiften och klickar på **Complete**. Lägg till information till uppgiften och klicka sedan på **Klar**. Se [Din inkorg](/help/sites-cloud/authoring/inbox.md) för mer information.
+Om du vill slutföra en uppgift markerar du uppgiften och klickar på **Slutför**. Lägg till information för aktiviteten och klicka sedan på **Klar**. Mer information finns i [Inkorgen](/help/sites-cloud/authoring/inbox.md).
 
-![Uppgiftsmeddelanden](/help/sites-cloud/authoring/assets/projects-task-notifications.png)
+![Aktivitetsmeddelanden](/help/sites-cloud/authoring/assets/projects-task-notifications.png)

@@ -1,5 +1,5 @@
 ---
-title: Lär dig hur du söker efter och identifierar resurser i [!DNL Assets view]?
+title: Lär dig hur du söker efter och identifierar resurser i  [!DNL Assets view]?
 description: Läs om hur du söker efter och identifierar resurser i AEM Assets-vyn. Med de kraftfulla sökfunktionerna kan du snabbt hitta rätt resurs och hjälpa dig att förbättra innehållets hastighet.
 role: User
 exl-id: abfe6a91-1699-436f-8bf4-0d0bf2369f46
@@ -19,7 +19,7 @@ ht-degree: 0%
 >abstract="Sök efter resurser genom att ange ett nyckelord i sökfältet eller genom att filtrera resurser baserat på status, filtyp, MIME-typ, storlek, skapande, ändring och förfallodatum. Du kan också använda egna filter förutom standardfiltren. Du kan spara de filtrerade resultaten som en sparad sökning eller som en smart samling."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/manage-collections.html?lang=en#manage-smart-collection" text="Skapa smarta samlingar"
 
-[!DNL Assets view] innehåller effektiva sökfunktioner som bara fungerar som standard. Sökningen är omfattande eftersom den består av fulltextsökning. Med de kraftfulla sökfunktionerna kan du snabbt hitta rätt resurs och hjälpa dig att förbättra innehållets hastighet. [!DNL Assets view] innehåller fulltextsökning och till och med sökningar via metadata som smarta taggar, titel, skapad den och copyright.
+[!DNL Assets view] innehåller effektiva sökfunktioner som bara fungerar som standard. Sökningen är omfattande eftersom den består av fulltextsökning. Med de kraftfulla sökfunktionerna kan du snabbt hitta rätt resurs och hjälpa dig att förbättra innehållets hastighet. [!DNL Assets view] innehåller fulltextsökning och även sökningar via metadata som smarta taggar, titel, skapad den och copyright.
 
 Så här söker du efter resurser:
 
@@ -37,27 +37,27 @@ Du kan filtrera sökresultaten baserat på följande parametrar.
 
 ![Sökfilter](assets/filters1.png)
 
-*Bild: Filtrera sökningar efter resurser baserat på olika parametrar.*
+*Figur: Filtrera sökningar efter resurser baserat på olika parametrar.*
 
-* Resursstatus: Filtrera sökresultaten med en `Approved`, `Rejected`, eller `No Status` status.
+* Resursstatus: Filtrera sökresultaten med en `Approved`-, `Rejected`- eller `No Status`-resursstatus.
 
-* Filtyp: Filtrera sökresultaten efter de filtyper som stöds, det vill säga `Images`, `Documents`och `Videos`.
+* Filtyp: Filtrera sökresultaten efter de filtyper som stöds, `Images`, `Documents` och `Videos`.
 * MIME-typ: Filtrera efter ett eller flera av de filformat som stöds. <!-- TBD:  [supported file formats](/help/assets/supported-file-formats-assets-view.md). -->
 * Bildstorlek: Ange en av flera av de minsta och högsta måtten för att filtrera bilder. Storleken anges i pixeldimensioner och är inte bildens filstorlek.
 * Skapad: Datum när resursen skapades enligt metadatan. Standarddatumformatet som används är `yyyy-mm-dd`.
 * Ändrad: Senaste ändringsdatum för resurserna. Standarddatumformatet som används är `yyyy-mm-dd`.
 
-* Förfallodatum: Filtrera sökresultaten baserat på en `Expired` status. Du kan dessutom ange ett förfallodatumintervall för resurser för att ytterligare filtrera sökresultaten.
+* Förfallodatum: Filtrera sökresultaten baserat på en `Expired`-resursstatus. Du kan dessutom ange ett förfallodatumintervall för resurser för att ytterligare filtrera sökresultaten.
 
-* Egna filter: [Lägga till egna filter](#custom-filters) till Assets visa användargränssnittet. Använd de anpassade filtren utöver standardfiltren för att förfina sökresultaten.
+* Egna filter: [Lägg till anpassade filter](#custom-filters) i användargränssnittet i Assets-vyn. Använd de anpassade filtren utöver standardfiltren för att förfina sökresultaten.
 
-Du kan sortera de sökda resurserna i stigande eller fallande ordning efter `Name`, `Relevancy`, `Size`, `Modified`och `Created`.
+Du kan sortera de sökda resurserna i stigande eller fallande ordning `Name`, `Relevancy`, `Size`, `Modified` och `Created`.
 
 ## Hantera anpassade filter {#custom-filters}
 
-**Behörigheter krävs:**  `Can Edit`, `Owner`eller Administratör.
+**Behörigheter krävs:** `Can Edit`, `Owner` eller administratör.
 
-I Assets-vyn kan du även lägga till egna filter i användargränssnittet. Du kan sedan använda dessa anpassade filter utöver [standardfilter](#refine-search-results) för att förfina sökresultaten.
+I Assets-vyn kan du även lägga till egna filter i användargränssnittet. Du kan sedan använda dessa anpassade filter utöver [standardfiltren](#refine-search-results) för att förfina sökresultaten.
 
 I Assets-vyn finns följande anpassade filter:
 
@@ -101,13 +101,13 @@ Så här lägger du till anpassade filter:
 
 1. Klicka på **[!UICONTROL Filters]**.
 
-1. I **[!UICONTROL Custom Filters]** avsnitt, klicka **[!UICONTROL Edit]** eller **[!UICONTROL Add Filters]**.
+1. Klicka på **[!UICONTROL Edit]** eller **[!UICONTROL Add Filters]** i avsnittet **[!UICONTROL Custom Filters]**.
 
-   ![Lägga till egna filter](assets/add-custom-filters.png)
+   ![Lägg till anpassade filter](assets/add-custom-filters.png)
 
-1. På **[!UICONTROL Custom filters management]** väljer du de filter som du vill lägga till i den befintliga filterlistan. Välj **[!UICONTROL Custom Filters]** om du vill markera alla filter.
+1. I dialogrutan **[!UICONTROL Custom filters management]** väljer du de filter som du vill lägga till i den befintliga filterlistan. Välj **[!UICONTROL Custom Filters]** om du vill välja alla filter.
 
-1. Klicka **[!UICONTROL Confirm]** för att lägga till filter i användargränssnittet.
+1. Klicka på **[!UICONTROL Confirm]** för att lägga till filtren i användargränssnittet.
 
 ### Ta bort egna filter {#remove-custom-filters}
 
@@ -115,33 +115,33 @@ Så här tar du bort anpassade filter:
 
 1. Klicka på **[!UICONTROL Filters]**.
 
-1. I **[!UICONTROL Custom Filters]** avsnitt, klicka **[!UICONTROL Edit]**.
+1. Klicka på **[!UICONTROL Edit]** i avsnittet **[!UICONTROL Custom Filters]**.
 
-1. På **[!UICONTROL Custom filters management]** avmarkerar du de filter som du vill ta bort från den befintliga filterlistan.
+1. I dialogrutan **[!UICONTROL Custom filters management]** avmarkerar du de filter som du vill ta bort från den befintliga filterlistan.
 
-1. Klicka **[!UICONTROL Confirm]** för att ta bort filtren från användargränssnittet.
+1. Klicka på **[!UICONTROL Confirm]** om du vill ta bort filtren från användargränssnittet.
 
-## Söka efter resurser med [!DNL Adobe Firefly] {#search-firefly}
+## Sök efter resurser med [!DNL Adobe Firefly] {#search-firefly}
 
-Du kan söka efter en resurs som inte är tillgänglig i någon av resursmapparna genom att använda [!DNL Adobe Firefly] sökfunktion för resurser i [!DNL Experience Manager Assets]. På så sätt kan du effektivt generera resurser i realtid som inte lagras i resursmapparna.
+Du kan söka efter en resurs som inte är tillgänglig i någon av resursmapparna genom att använda sökfunktionen [!DNL Adobe Firefly] i [!DNL Experience Manager Assets]. På så sätt kan du effektivt generera resurser i realtid som inte lagras i resursmapparna.
 
 ### Innan du börjar
 
-Du måste ha en aktiv [!DNL Adobe Express] prenumeration.
+Du måste ha en aktiv [!DNL Adobe Express]-prenumeration.
 
 ### Generera resurser
 
-Generera nya resurser med [!DNL Adobe Firefly]:
+Så här skapar du nya resurser med [!DNL Adobe Firefly]:
 
-1. Navigera till [!DNL AEM Assets] arbetsyta.
+1. Navigera till arbetsytan [!DNL AEM Assets].
 1. Ange resursnamnet i sökfältet högst upp på sidan.<br>
-Du kan till exempel söka efter en resurs med nyckelordet `Bugatti Type 57`. När du söker efter resursen hittas inga resultat eftersom resursen inte finns i någon av resursmapparna.
+Du kan till exempel söka efter en resurs med nyckelordet `Bugatti Type 57` . När du söker efter resursen hittas inga resultat eftersom resursen inte finns i någon av resursmapparna.
 1. Skriv resursnamnet i sökfältet mitt på sidan och klicka på **[!UICONTROL Generate]**.
    ![Integrering med Firefly](assets/firefly-integration.jpg)
    *Bild: Inga resultat hittades för Bugatti Type 57 i resursmappen.* <br>
 De nya resurserna har genererats.
    ![Integrering med Firefly](assets/bugatti-type-57.jpg)
-   *Bild: Referera till resurser som sökts med [!DNL Adobe Firefly] funktion för resurssökning.* <br>
+   *Figur: Referensresurser som har genomsökts med [!DNL Adobe Firefly]-objektsökningsfunktionen.* <br>
 Du kan överföra dessa resurser till den mapp du föredrar för enkel åtkomst.
 
 ### Överför resurser
@@ -151,15 +151,15 @@ Så här överför du den genererade resursen till resurskatalogen:
 1. Klicka på **[!UICONTROL Upload]**.
 1. Markera resursmappen som du vill överföra resursen till och klicka på **[!UICONTROL Select Folder]**.
    ![Överför resurs](assets/upload-asset-firefly.jpg)
-   *Bild: Välj den mapp som resursen ska överföras till.*
+   *Figur: Välj den mapp som resursen ska överföras till.*
 
 ## Sparade sökningar {#saved-search}
 
-Sökfunktionen är mycket enkel att använda i [!DNL Assets view]. I sökrutan kan du bara skriva ett nyckelord och trycka på Retur för att se resultatet. Du kan också snabbt söka efter dina nyligen sökta nyckelord igen med ett enda klick.
+Sökfunktionen är ganska enkel att använda i [!DNL Assets view]. I sökrutan kan du bara skriva ett nyckelord och trycka på Retur för att se resultatet. Du kan också snabbt söka efter dina nyligen sökta nyckelord igen med ett enda klick.
 
-Du kan också filtrera sökresultaten baserat på specifika villkor runt metadata och resurstyp. För filter som används ofta, för att förbättra sökupplevelsen, [!DNL Assets view] I kan du spara sökparametrarna. Du kan sedan markera den sparade sökningen och använda filtret med bara ett klick.
+Du kan också filtrera sökresultaten baserat på specifika villkor runt metadata och resurstyp. För filter som används ofta kan du spara sökparametrarna i [!DNL Assets view] för att förbättra sökupplevelsen. Du kan sedan markera den sparade sökningen och använda filtret med bara ett klick.
 
-Om du vill skapa en sparad sökning söker du efter en resurs, använder ett eller flera filter och klickar på **[!UICONTROL Save as]** > **[!UICONTROL Saved Search]** i [!UICONTROL Filters] -panelen. Du kan också klicka **[!UICONTROL Save as]** och markera **[!UICONTROL Smart Collection]** om du vill spara resultatet som en smart samling. Se [Skapa en smart samling](manage-collections-assets-view.md#create-a-smart-collection) för mer information.
+Om du vill skapa en sparad sökning söker du efter en resurs, använder ett eller flera filter och klickar på **[!UICONTROL Save as]** > **[!UICONTROL Saved Search]** på panelen [!UICONTROL Filters]. Du kan också klicka på **[!UICONTROL Save as]** och välja **[!UICONTROL Smart Collection]** för att spara resultatet som en smart samling. Mer information finns i [Skapa en smart samling](manage-collections-assets-view.md#create-a-smart-collection).
 
 ![Skapa smart samling](assets/create-smart-collection.png)
 
@@ -178,15 +178,15 @@ When userA is searching and userB add an asset that matches search results, will
 
 Du kan markera de resurser som visas i sökresultaten och göra följande:
 
-* **Sök efter liknande bild**: Hitta liknande bildresurser i Assets-gränssnittet baserat på metadata och smarta taggar.
+* **Sök efter liknande bild**: Hitta en liknande bildresurs i Assets-gränssnittet baserat på metadata och smarta taggar.
 
 * **Information**: Visa och redigera resursegenskaper.
 
-* **Ladda ned**: Hämta en resurs.
+* **Hämta**: Hämta en resurs.
 
 * **Lägg till i samling**: Lägg till den valda resursen i en samling.
 
-* **Fäst i snabbåtkomst**: [Fäst en resurs](my-workspace-assets-view.md) för snabbare åtkomst när du behöver det senare. Alla fästa objekt visas i **Snabb åtkomst** i My Workspace.
+* **Fäst i snabbåtkomst**: [Fäst en resurs](my-workspace-assets-view.md) för snabbare åtkomst när du behöver den senare. Alla fästa objekt visas i avsnittet **Snabbåtkomst** i Min Workspace.
 
 * **Öppna i Adobe Express**: Redigera en bild i den integrerade Adobe Expressen från Experience Manager Assets-skärmen.
 
@@ -200,13 +200,13 @@ Du kan markera de resurser som visas i sökresultaten och göra följande:
 
 * **Flytta**: Flytta en resurs till en annan mapplats.
 
-* **Byt namn**: Byt namn på en resurs.
+* **Byt namn på**: Byt namn på en resurs.
 
 * **Kopiera till bibliotek**: Lägg till en resurs i biblioteket.
 
-* **Tilldela uppgifter**: Tilldela användare uppgifter för en resurs.
+* **Tilldela uppgifter**: Tilldela uppgifter till användare för en resurs.
 
-* **Titta**: [Övervaka åtgärderna](manage-notifications-assets-view.md) som utförs på en tillgång.
+* **Titta**: [Övervaka de åtgärder](manage-notifications-assets-view.md) som utförs på en resurs.
 
 ## Konfigurera första sökhemsida {#configuring-search-first-homepage}
 
@@ -215,31 +215,31 @@ Med Experience Manager Assets kan du välja standardlandningssida för din organ
 Så här konfigurerar du den första startsidan för sökningen:
 
 1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL General Settings]**.
-1. Välj **[!UICONTROL Search first]**. Sökningen öppnas sedan i den första relaterade konfigurationen. Du kan ange [justering](#setting-alignment-search-bar) eller [ange bakgrund och logotypbild](#setting-background-image-and-logo) på din hemsida.
+1. Välj **[!UICONTROL Search first]**. Sökningen öppnas sedan i den första relaterade konfigurationen. Du kan ange [justering](#setting-alignment-search-bar) eller [ange bakgrunds- och logotypbild](#setting-background-image-and-logo) för din hemsida.
 
 ### Ange justering för sökfältet {#setting-alignment-search-bar}
 
-[!DNL Assets view] använder du för att ändra justeringen i sökfältet. Du kan ange att sökfältet ska visas antingen i mitten eller högst upp. Välj lämplig justering och klicka på **[!UICONTROL Save]**.
+Med [!DNL Assets view] kan du ändra justeringen av sökfältet. Du kan ange att sökfältet ska visas antingen i mitten eller högst upp. Välj lämplig justering och klicka på **[!UICONTROL Save]**.
 
-![Sök efter justering av första startsida](assets/search-first-alignment.png)
+![Sök efter justering för första hemsida](assets/search-first-alignment.png)
 
 ### Ställa in bakgrunds- och logotypbild för hemsidan {#setting-background-image-and-logo}
 
 Du kan lägga till logotyp och bakgrundsbild på din första söksida. Utför följande steg:
 
-1. Navigera till **[!UICONTROL Background and Logo image]** avsnitt under **[!UICONTROL Homepage]**.
-1. Klicka **[!UICONTROL Replace]** om du vill bläddra bland bilder från befintliga resurslager.
+1. Navigera till avsnittet **[!UICONTROL Background and Logo image]** under **[!UICONTROL Homepage]**.
+1. Klicka på **[!UICONTROL Replace]** om du vill bläddra bland bilder från den befintliga resurskatalogen.
 1. Klicka på **[!UICONTROL Save]**. [Förhandsgranska](#preview-configured-homepage) ändringarna för att granska ändringarna.
 
 ### Förgranska konfigurerad startsida {#preview-configured-homepage}
 
-Du kan förhandsgranska om du vill kontrollera layout och formatering för den första söksidan. Använda **[!UICONTROL Preview]** kan du korrigera layouten eller göra ändringar efter behov. Om du vill förhandsgranska den konfigurerade startsidan följer du stegen nedan:
+Du kan förhandsgranska om du vill kontrollera layout och formatering för den första söksidan. Med hjälp av **[!UICONTROL Preview]** kan du korrigera layouten eller göra ändringar efter behov. Om du vill förhandsgranska den konfigurerade startsidan följer du stegen nedan:
 
-1. Klicka **[!UICONTROL General Settings]** och markera **[!UICONTROL Search first]**.
-1. Navigera till **[!UICONTROL Customize search first homepage]** och klicka **[!UICONTROL Preview]**. Växla mellan **[!UICONTROL Dark theme]** för att förhandsgranska hemsidan i mörkt eller ljust tema.
-1. Klicka **[!UICONTROL Close]** för att stänga förhandsvisningsskärmen.
+1. Klicka på **[!UICONTROL General Settings]** och välj **[!UICONTROL Search first]**.
+1. Navigera till **[!UICONTROL Customize search first homepage]** och klicka på **[!UICONTROL Preview]**. Växla genom knappen **[!UICONTROL Dark theme]** om du vill förhandsgranska hemsidan i mörkt eller ljust tema.
+1. Klicka på **[!UICONTROL Close]** för att stänga förhandsgranskningsskärmen.
 
-   ![Förhandsgranska den första startsidan](assets/search-first-preview.gif)
+   ![Sök i förhandsvisning av första hemsidan](assets/search-first-preview.gif)
 
 ## Sammanhangsbaserad sökning {#contextual-search}
 
@@ -249,7 +249,7 @@ Du kan också söka efter resurser som är tillgängliga i databasen genom att d
 
 Så här kommer du åt sammanhangsbaserad sökning i Experience Manager Assets:
 
-1. Klicka **[!UICONTROL Search]** i den vänstra rutan.
+1. Klicka på **[!UICONTROL Search]** i den vänstra rutan.
 
    ![Sammanhangsbaserad sökning](assets/access-contextual-search.png)
 
@@ -286,27 +286,27 @@ Sammanhangsbaserad sökning stöder följande färdiga filter. Basera dina textm
 
 **Exempel 1**
 
-**Textfråga**: Bilder som skapas den här månaden.
+**Textfråga**: Bilder skapade den här månaden.
 
 [!DNL Experience Manager Assets] använder följande filter automatiskt och visar sökresultaten:
 
-![Sammanhangsberoende sökning, exempel 1](assets/contextual-search-example1.png)
+![Exempel på sammanhangsbaserad sökning 1](assets/contextual-search-example1.png)
 
 **Exempel 2**
 
-**Textfråga**: Bilderna är minst 200 px höga och 100 px breda med strand och klar himmel.
+**Textprompt**: Bilder som är minst 200 pixlar höga och 100 pixlar breda med strand och klar himmel.
 
 [!DNL Experience Manager Assets] använder följande filter automatiskt och visar sökresultaten:
 
-![Sammanhangsbaserad sökning - exempel 2](assets/contextual-search-example2.png)
+![Exempel på sammanhangsbaserad sökning 2](assets/contextual-search-example2.png)
 
 **Exempel 3**
 
-**Textfråga**: Jag behöver bilder med blå himmel som är 1 500 och 2 500 pixlar höga och som skapats den senaste månaden och som inte har gått ut och godkänts.
+**Textfråga**: Jag behöver bilder med blå himmel som är 1 500 och 2 500 pixlar höga och som har skapats den senaste månaden och som inte har gått ut och godkänts.
 
 [!DNL Experience Manager Assets] använder följande filter automatiskt och visar sökresultaten:
 
-![Sammanhangsbaserad sökning Exempel 3](assets/contextual-search-example3.png)
+![Exempel på sammanhangsbaserad sökning 3](assets/contextual-search-example3.png)
 
 I följande video visas hela processen, från att komma åt det kontextuella sökanvändargränssnittet till att definiera textmeddelanden och visa sökresultaten.
 
@@ -318,20 +318,20 @@ Administratörer kan även inaktivera sammanhangsbaserad sökning för användar
 
 1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL General Settings]**.
 
-1. I [!UICONTROL Contextual Search] -avsnittet, stänga av **[!UICONTROL Enable Contextual Search for your organization]** om du vill inaktivera funktionen för sammanhangsbaserad sökning för alla användare i organisationen.
+1. I avsnittet [!UICONTROL Contextual Search] stänger du av växeln **[!UICONTROL Enable Contextual Search for your organization]** för att inaktivera funktionen för sammanhangsbaserad sökning för alla användare i organisationen.
 
 ### Sammanhangsbaserad sökfeedback {#contextual-search-feedback}
 
-Om du behöver lämna feedback om funktionen Sammanhangsbaserad sökning klickar du på ![Sammanhangsbaserad sökning, ikon](assets/do-not-localize/Smock_Help_18_N.svg) och klicka på ikonen Feedback. Välj typ av feedback, ange ämne och beskrivning och klicka på **[!UICONTROL Submit]**.
+Om du behöver ge feedback på funktionen för sammanhangsbaserad sökning klickar du på ikonen ![Sammanhangsbaserad sökning](assets/do-not-localize/Smock_Help_18_N.svg) och sedan på ikonen för feedback. Välj typ av feedback, ange ämne och beskrivning och klicka på **[!UICONTROL Submit]**.
 
 ![Sammanhangsbaserad sökfeedback](assets/contextual-search-feedback.png)
 
 ## Nästa steg {#next-steps}
 
-* [Titta på en video där du kan söka efter resurser i Assets-vyn](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/basics/using.html)
+* [Titta på en video om du vill söka efter resurser i Assets-vyn](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/basics/using.html)
 
-* Ge produktfeedback med [!UICONTROL Feedback] finns i användargränssnittet i Assets-vyn
+* Ge produktfeedback med alternativet [!UICONTROL Feedback] som finns i användargränssnittet i Assets-vyn
 
-* Ge feedback på dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som finns till höger.
+* Ge feedback genom att [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som är tillgängligt på den högra sidopanelen.
 
-* Kontakt [Kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)
+* Kontakta [kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)

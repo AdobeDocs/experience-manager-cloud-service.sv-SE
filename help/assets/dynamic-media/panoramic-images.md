@@ -16,7 +16,7 @@ ht-degree: 13%
 
 I det här avsnittet beskrivs hur du arbetar med visningsprogrammet för panoramabilder för att återge sfäriska panoramabilder så att du får en totalupplevelse på 360° i ett rum, en egenskap, en plats eller ett landskap.
 
-Se även [Hantera förinställningar för visningsprogram](/help/assets/dynamic-media/managing-viewer-presets.md).
+Se även [Hantera visningsförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
 
 ![panoramabild2](assets/panoramic-image2.png)
 
@@ -27,11 +27,11 @@ För att en överförd resurs ska kvalificeras som en sfärisk panoramabild som 
 * Proportionerna 2.
 <!--  You can override the default aspect ratio setting of 2 in CRXDE Lite at the following:
   `/conf/global/settings/cloudconfigs/dmscene7/jcr:content` -->
-* Taggad med nyckelorden `equirectangular`, eller `spherical`och `panorama`, eller `spherical` och `panoramic`. Se [Använd taggar](/help/sites-cloud/authoring/sites-console/tags.md).
+* Taggad med nyckelorden `equirectangular`, `spherical` och `panorama`, eller `spherical` och `panoramic`. Se [Använd taggar](/help/sites-cloud/authoring/sites-console/tags.md).
 
 Kriterierna för proportioner och nyckelord gäller även för panoramaresurser på sidan med resursinformation och för komponenten `Panoramic Media` i innehållshanteringssystemet.
 
-Information om hur du överför resurser som ska användas med visningsprogrammet för panoramabilder finns i [Överför resurser](/help/assets/manage-digital-assets.md#uploading-assets).
+Information om hur du överför resurser som ska användas med panoramabildsvisningsprogrammet finns i [Överför resurser](/help/assets/manage-digital-assets.md#uploading-assets).
 
 <!--  NEED TO CHECK IF DM CLASSIC PART OF SKYLINE 
 
@@ -80,6 +80,6 @@ If you dropped an image into the Panoramic Media component in your WCM and the c
 
 Se [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md).
 
-## Publicera panorambilder {#publishing-panoramic-images}
+## Publish Panorambilder {#publishing-panoramic-images}
 
-Se [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
+Se [Publish-resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).

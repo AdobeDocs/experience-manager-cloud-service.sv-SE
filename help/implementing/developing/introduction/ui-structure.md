@@ -33,7 +33,7 @@ När upplösningen till exempel är lägre än 1 024 pixlar (som på en mobil en
 
 ### Sidhuvudsfält {#header-bar}
 
-![AEM](assets/ui-header-bar.png)
+![AEM rubrikfält](assets/ui-header-bar.png)
 
 Rubrikraden visar globala element som:
 
@@ -50,7 +50,7 @@ Verktygsfältet är sammanhangsberoende för din plats och de ytverktyg som är 
 
 I verktygsfältet visas de åtgärder som är tillgängliga för tillfället:
 
-![AEM Sites verktygsfält](assets/ui-sites-toolbar.png)
+![AEM Sites-verktygsfält](assets/ui-sites-toolbar.png)
 
 Även beroende på om en resurs är markerad:
 
@@ -97,21 +97,21 @@ Redigeringsramen är en behållare (abstrakt) för alla sidredigeringselement. D
 
 ### Side Panel {#side-panel}
 
-Innehåller tre standardflikar. The **Resurser** och **Komponenter** Med -flikar kan du markera sådana element och dra dem från panelen och släppa dem på sidan. The **Innehållsträd** kan du kontrollera hierarkin med innehåll på sidan.
+Innehåller tre standardflikar. På flikarna **Assets** och **Komponenter** kan du markera sådana element och dra dem från panelen och släppa dem på sidan. På fliken **Innehållsträd** kan du inspektera hierarkin med innehåll på sidan.
 
 Sidpanelen är dold som standard. När du väljer det här alternativet visas det antingen på den vänstra sidan eller när fönsterbredden är mindre än 1 024 pixlar, flyttas det över för att täcka hela fönstret som t.ex. på en mobil enhet.
 
-![Panelen Sida](assets/ui-side-panel.png)
+![Sidpanelen](assets/ui-side-panel.png)
 
 ### Side Panel - Assets {#side-panel-assets}
 
-På fliken Resurser kan du välja bland flera resurser. Du kan också filtrera efter en viss term eller markera en grupp.
+På fliken Assets kan du välja bland flera olika resurser. Du kan också filtrera efter en viss term eller markera en grupp.
 
-![Fliken Resurser](assets/ui-side-panel-assets.png)
+![Fliken Assets](assets/ui-side-panel-assets.png)
 
 ### Side Panel - Resursgrupper {#side-panel-asset-groups}
 
-På fliken Resurser finns det en listruta som du kan använda för att välja specifika resursgrupper.
+På fliken Assets finns en listruta där du kan välja en specifik resursgrupp.
 
 ![Resursgrupper](assets/ui-side-panel-asset-groups.png)
 
@@ -125,11 +125,11 @@ På fliken Komponenter kan du välja bland komponenterna. Du kan också filtrera
 
 På fliken Innehållsträd kan du visa hierarkin med innehåll på sidan. Om du klickar på en post på fliken flyttas den till och markerar objektet på sidan i redigeraren.
 
-![Innehållsträd](assets/ui-side-panel-content-tree.png)
+![Innehållsträdet](assets/ui-side-panel-content-tree.png)
 
 ### Övertäckningar {#overlays}
 
-Överlappar innehållsramen och används av [lager](#layer) för att utnyttja mekanismerna i hur du kan interagera på ett transparent sätt med komponenterna och deras innehåll.
+Överlappar innehållsramen och används av [lagren](#layer) för att realisera mekanismerna för hur du kan interagera genomskinligt med komponenterna och deras innehåll.
 
 Övertäckningarna finns i redigerarramen (med alla andra sidredigeringselement), även om de faktiskt täcker över rätt komponenter i innehållsramen.
 
@@ -156,7 +156,7 @@ Med lagerväljaren kan du välja det lager som du vill använda. När det är st
 
 Lagerväljaren är tillgänglig som en listruta från verktygsfältet (längst upp i fönstret, i redigeringsramen).
 
-![Lagerväxlare](assets/ui-layer-switcher.png)
+![Lagerväljaren](assets/ui-layer-switcher.png)
 
 ### Komponentverktygsfältet {#component-toolbar}
 
@@ -170,4 +170,4 @@ Beroende på vilket utrymme som är tillgängligt placeras komponentens verktygs
 
 <!--For more details about the concepts around the touch-enabled UI, continue to the article [Concepts of the AEM Touch-Enabled UI](/help/sites-developing/touch-ui-concepts.md).-->
 
-Mer teknisk information finns i [JS-dokumentationsuppsättning](https://developer.adobe.com/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html) för sidredigeraren.
+Mer teknisk information finns i [JS-dokumentationsuppsättningen](https://developer.adobe.com/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html) för sidredigeraren.

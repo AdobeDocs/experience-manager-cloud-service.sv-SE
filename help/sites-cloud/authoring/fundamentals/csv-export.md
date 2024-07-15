@@ -11,9 +11,9 @@ ht-degree: 14%
 
 # Exportera till CSV {#export-to-csv}
 
-**Skapa CSV-rapport** Med kan du exportera information om sidorna till en CSV-fil på det lokala systemet.
+Med **Skapa CSV-rapport** kan du exportera information om dina sidor till en CSV-fil på ditt lokala system.
 
-* Den hämtade filen anropas `export.csv`
+* Den hämtade filen kallas `export.csv`
 * Innehållet beror på de egenskaper du väljer.
 * Du kan definiera banan tillsammans med exportens djup.
 
@@ -21,7 +21,7 @@ ht-degree: 14%
 >
 >Hämtningsfunktionen och standarddestinationen för webbläsaren används.
 
-The **Skapa CSV-export** kan du välja:
+Med guiden **Skapa CSV-export** kan du välja:
 
 * Egenskaper att exportera
    * Metadata
@@ -42,15 +42,15 @@ The **Skapa CSV-export** kan du välja:
    * Ytterligare nivåer av barn
    * Nivåer
 
-Resultatet `export.csv` filen kan öppnas i Excel eller något annat kompatibelt program.
+Den resulterande `export.csv`-filen kan öppnas i Excel eller något annat kompatibelt program.
 
 Så här skapar du en CSV-export:
 
-1. Öppna **Webbplatser** navigera till önskad plats om det behövs.
+1. Öppna konsolen **Platser** och navigera till önskad plats om det behövs.
    * Alternativet Skapa **CSV-rapport** är tillgängligt när du bläddrar i **Sites-konsolen** (i listvyn)
-   * Det är ett alternativ i **Skapa** nedrullningsbar meny:
+   * Det är ett alternativ i listrutan **Skapa**:
 
-     ![Alternativet Skapa CSV](/help/sites-cloud/authoring/assets/csv-create.png)
+     ![Skapa CSV-alternativ](/help/sites-cloud/authoring/assets/csv-create.png)
 
 1. I verktygsfältet väljer du **Skapa** och sedan **CSV-rapport** för att öppna guiden:
 
@@ -58,4 +58,4 @@ Så här skapar du en CSV-export:
 
 1. Välj de egenskaper som ska exporteras.
 1. Välj **Skapa**.
-   ![Resultat av CSV-export i Excel](/help/sites-cloud/authoring/assets/csv-example.png)
+   ![Resultatbaserad CSV-export i Excel](/help/sites-cloud/authoring/assets/csv-example.png)

@@ -23,11 +23,11 @@ Med Multi Site Manager (MSM) och funktionen Live Copy kan du använda samma inne
    * När du ändrar källinnehållet synkroniseras källan och Live-kopior.
    * Du kan bara justera innehållet i Live-kopior genom att koppla från direktrelationen för enskilda undersidor och/eller komponenter.
 
-En detaljerad översikt över MSM-koncept finns på [Återanvända innehåll: Multi Site Manager och Live Copy](/help/sites-cloud/administering/msm/overview.md).
+En detaljerad översikt över MSM-koncept finns i [Återanvända innehåll: Multi Site Manager och Live Copy](/help/sites-cloud/administering/msm/overview.md).
 
 >[!NOTE]
 >
->[Multi Site Manager (MSM)](/help/sites-cloud/administering/msm/overview.md) med Adobe Experience Manager kan man återanvända material som skrivits en gång och sedan återanvänts på olika webbplatser.
+>Med funktionen [Multi Site Manager (MSM)](/help/sites-cloud/administering/msm/overview.md) i Adobe Experience Manager kan användare återanvända innehåll som har skrivits en gång och sedan återanvänds på flera webbplatser.
 
 Med MSM för innehållsfragment kan du:
 
@@ -39,30 +39,30 @@ MSM för innehållsfragment i kombination med funktioner i redigeraren för inne
 
 >[!CAUTION]
 >
->MSM för innehållsfragment är bara tillgängligt när du använder innehållsfragment via **Resurser** konsol.
+>MSM för innehållsfragment är bara tillgängligt när du använder innehållsfragment via **Assets** -konsolen.
 >
->MSM-funktionen är *not* är tillgängliga när du använder **Innehållsfragment** konsol.
+>MSM-funktionaliteten är *inte* tillgänglig när konsolen **Innehållsfragment** används.
 
 ## Använda {#how-to}
 
-I följande dokumentation finns mer information om hur du använder MSM för innehållsfragment (gäller även för Assets):
+Följande dokumentation innehåller information om hur du använder MSM för innehållsfragment (gäller även Assets):
 
-* Så här använder du [MSM för innehållsfragment (och resurser)](/help/assets/reuse-assets-using-msm.md)
+* Använda [MSM för innehållsfragment (och Assets)](/help/assets/reuse-assets-using-msm.md)
 
 * [Skapa en Live Copy](/help/assets/reuse-assets-using-msm.md)
 
   >[!CAUTION]
   >
-  >Om du vill använda MSM för att skapa kopior av innehållsfragment) kan du använda alla **Unik** begränsningar bör tas bort från alla datatyper som används i respektive [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md).
+  >Om du vill använda MSM för att skapa kopior av innehållsfragment) ska alla **unika**-begränsningar tas bort från alla datatyper som används i respektive [Content Fragment-modell](/help/assets/content-fragments/content-fragments-models.md).
 
 * [Visa egenskaper och status för källa och Live Copy](/help/assets/reuse-assets-using-msm.md#properties)
 * [Sprid ändringar från källa till Live Copy](/help/assets/reuse-assets-using-msm.md#rollout-sync)
 * Avbryt och återställ, arv för:
-   * fält och variationer i [Innehållsfragmentsredigerare](/help/assets/content-fragments/content-fragments-variations.md#inheritance)
+   * fält och variationer i [redigeraren för innehållsfragment](/help/assets/content-fragments/content-fragments-variations.md#inheritance)
    * [metadata för relaterade resurser](/help/assets/content-fragments/content-fragments-variations.md#canceling-reenabling-inheritance-individual-items)
 * [Pausa och återuppta relationen](/help/assets/reuse-assets-using-msm.md#suspend-resume)
 * [Ta bort den aktiva relationen](/help/assets/reuse-assets-using-msm.md#detach)
-* [Jämför MSM för innehållsfragment (och resurser) med MSM för webbplatser](/help/assets/reuse-assets-using-msm.md#comparison)
+* [Jämför MSM för innehållsfragment (och Assets) med MSM för webbplatser](/help/assets/reuse-assets-using-msm.md#comparison)
 
 ## Begränsningar {#limitations}
 

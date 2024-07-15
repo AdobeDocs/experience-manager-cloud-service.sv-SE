@@ -31,18 +31,18 @@ Läs vidare om du vill ha mer information om asynkron överföring i Adaptive Fo
 
 Så här konfigurerar du asynkron överföring för ett adaptivt formulär:
 
-1. I redigeringsläget Adaptivt formulär markerar du objektet Formulärbehållare och väljer ![cmppr1](assets/configure-icon.svg) för att öppna dess egenskaper.
-1. I **[!UICONTROL Submission]** egenskapsavsnittet, aktivera **[!UICONTROL Use asynchronous submission]**.
-1. I **[!UICONTROL On Submit]** väljer du något av följande alternativ när formuläret har skickats.
+1. I redigeringsläget Adaptivt formulär markerar du objektet Formulärbehållare och väljer ![cmpr1](assets/configure-icon.svg) för att öppna dess egenskaper.
+1. Aktivera **[!UICONTROL Use asynchronous submission]** i egenskapsavsnittet för **[!UICONTROL Submission]**.
+1. I avsnittet **[!UICONTROL On Submit]** väljer du något av följande alternativ för att skicka formulär.
 
-   * **[!UICONTROL Redirect to URL]**: Omdirigerar till angiven URL eller sida när formulär skickas. Du kan ange en URL-adress eller bläddra för att välja sökvägen till en sida i dialogrutan **[!UICONTROL Redirect URL/Path]** fält.
-   * **[!UICONTROL Show Message]**: Visar ett meddelande när formulär skickas. Du kan skriva ett meddelande i textfältet under **[!UICONTROL Show Message]** alternativ. Textfältet har stöd för RTF-formatering.
+   * **[!UICONTROL Redirect to URL]**: Omdirigerar till angiven URL eller sida när formulär skickas. Du kan ange en URL eller bläddra för att välja sökvägen till en sida i fältet **[!UICONTROL Redirect URL/Path]**.
+   * **[!UICONTROL Show Message]**: Visar ett meddelande om att formulär har skickats. Du kan skriva ett meddelande i textfältet under alternativet **[!UICONTROL Show Message]**. Textfältet har stöd för RTF-formatering.
 
 1. Välj ![check-button1](assets/save_icon.svg) för att spara egenskaperna.
 
 ## Hur asynkron inlämning fungerar {#how-asynchronous-submission-works}
 
-[!DNL Experience Manager Forms] innehåller färdiga funktioner och felhanterare för att skicka formulär. Hanterare är funktioner på klientsidan som körs baserat på serversvaret. När ett formulär skickas skickas data till servern för validering, som returnerar ett svar till klienten med information om om huruvida överföringen lyckades eller inte. Informationen skickas som parametrar till den relevanta hanteraren för att köra funktionen.
+[!DNL Experience Manager Forms] har körklara hanterare och felhanterare för formulärskickning. Hanterare är funktioner på klientsidan som körs baserat på serversvaret. När ett formulär skickas skickas data till servern för validering, som returnerar ett svar till klienten med information om om huruvida överföringen lyckades eller inte. Informationen skickas som parametrar till den relevanta hanteraren för att köra funktionen.
 
 Dessutom kan formulärförfattare och utvecklare skriva regler på formulärnivå för att åsidosätta standardhanterare. Mer information finns i [Åsidosätta standardhanterare med regler](#custom).
 
@@ -110,9 +110,9 @@ Utför följande steg för att skriva regler för att hantera lyckade och felade
 
 1. Öppna det adaptiva formuläret i redigeringsläge, markera ett formulärobjekt och välj ![edit-rules1](assets/edit-rules-icon.svg) för att öppna regelredigeraren.
 1. Välj **[!UICONTROL Form]** i trädet Formulärobjekt och välj **[!UICONTROL Create]**.
-1. Välj **[!UICONTROL is submitted successfully]** eller **[!UICONTROL submission fails]** från **[!UICONTROL Select state]** listruta.
-1. Definiera en **[!UICONTROL Then]** åtgärd för det markerade läget. Välj till exempel **[!UICONTROL Navigate To]** och skriv eller klistra in en URL. Du kan också dra valfri funktion med **[!UICONTROL Functions]** till regeln.
+1. Välj **[!UICONTROL is submitted successfully]** eller **[!UICONTROL submission fails]** i listrutan **[!UICONTROL Select state]**.
+1. Definiera en **[!UICONTROL Then]**-åtgärd för det valda läget. Välj till exempel **[!UICONTROL Navigate To]** och skriv eller klistra in en URL. Du kan också dra en funktion från fliken **[!UICONTROL Functions]** till regeln.
 
-   ![hanterare för skickad överföring](assets/form-submission-handler.png)
+   ![hanteraren för skickande](assets/form-submission-handler.png) har slutförts
 
-1. Välj **[!UICONTROL Done]** för att spara regeln.
+1. Välj **[!UICONTROL Done]** om du vill spara regeln.

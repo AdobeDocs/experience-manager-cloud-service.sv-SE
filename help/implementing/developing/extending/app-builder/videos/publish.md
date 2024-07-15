@@ -1,6 +1,6 @@
 ---
 title: Publicera App Builder-program
-description: Lär dig hur du publicerar och kör ett App Builder-program.
+description: Lär dig publicera och köra ett App Builder-program.
 version: Cloud Service
 feature: App Builder, Developing
 topic: Integrations, Development
@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Publicera App Builder-program
 
-Lär dig hur du skickar ditt App Builder-program för granskning och godkännande och hur du kör ett nyligen publicerat program.
+Lär dig hur du skickar in din App Builder-ansökan för granskning och godkännande och hur du kör en nyligen publicerad app.
 
 >[!VIDEO](https://video.tv.adobe.com/v/339251/?quality=12&learn=on)

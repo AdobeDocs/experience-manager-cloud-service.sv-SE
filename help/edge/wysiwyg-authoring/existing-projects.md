@@ -20,18 +20,18 @@ Du behöver inte vänta på ett nytt AEM projekt för att kunna dra nytta av Edg
 
 Innan Edge Delivery Services skapades redigerades innehåll som hanterades i AEM med AEM Page Editor. Om ditt projekt började innan Edge Delivery Services introducerades är det nästan säkert att du använder sidredigeraren.
 
-AEM sidredigeraren fungerar bara med [AEM](/help/implementing/developing/components/overview.md) som [Kärnkomponenter.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) De här komponenterna är inte kompatibla med Edge Delivery Services. På grund av detta krävs två faser för att införa Edge Delivery Services i ett befintligt AEM:
+AEM sidredigeraren fungerar bara med [AEM komponenter](/help/implementing/developing/components/overview.md), till exempel [kärnkomponenterna.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) De här komponenterna är inte kompatibla med Edge Delivery Services. På grund av detta krävs två faser för att införa Edge Delivery Services i ett befintligt AEM:
 
 * [Phase 1 - Replace Front End](#replace-front-end)
 * [Fas 2 - Byt till Universal Editor](#switch-ue)
 
 ## Phase 1 - Replace Front End {#replace-front-end}
 
-I fas ett kan du fortsätta att använda din befintliga AEM platsstruktur, komponenter och redigeringsverktyg. Webbplatsåtergivningen byggs om med hjälp av block med JavaScript och CSS, och den levereras via Edge Delivery Services.
+I fas ett kan du fortsätta att använda din befintliga AEM platsstruktur, komponenter och redigeringsverktyg. Webbplatsåtergivningen kommer att byggas om med block med JavaScript och CSS, och den kommer att levereras via Edge Delivery Services.
 
-Se [Byggavsnitt](/help/edge/developer/block-collection.md) av dokumentationen till Edge Delivery Servicens för mer information om block och hur du utvecklar för Edge Delivery-tjänster.
+Mer information om hur du blockerar och utvecklar för Edge Delivery-Edge Delivery Services finns i avsnittet [Build](/help/edge/developer/block-collection.md) i dokumentationen för .
 
-En konverterare i App Builder krävs för att konvertera den AEM renderade HTML-utdata och skicka den till Edge Delivery Services.
+En konverterare på App Builder krävs för att konvertera den AEM återgivna utdata från HTML och skicka den till Edge Delivery Services.
 
 ![Innehållskonverteraren i publiceringsflödet](assets/content-converter.png)
 

@@ -24,19 +24,19 @@ Migreringsuppsättningar kan tas bort från Cloud Acceleration Manager.
 
 Följ stegen nedan för att ta bort en migreringsuppsättning:
 
-1. Navigera till listvyn Migreringsuppsättning i Cloud Acceleration Manager och klicka på de tre punkterna (**...**) bredvid den migreringsuppsättning som du vill ta bort. The **Ta bort** åtgärden ska vara synlig så som visas nedan.
+1. Navigera till listvyn Migreringsuppsättning i Cloud Acceleration Manager och klicka på de tre punkterna (**...**) bredvid den migreringsuppsättning som du vill ta bort. Åtgärden **Ta bort** ska vara synlig enligt nedan.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/migration-delete1.png)
 
-1. När du klickar **Ta bort** En dialogruta visas där du kan bekräfta borttagningsåtgärden.
+1. När du klickar på **Ta bort** visas en dialogruta som bekräftar borttagningsåtgärden.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/migration-delete2.png)
 
 >[!NOTE]
 >
->När du tar bort en migreringsuppsättning från CAM (Cloud Acceleration Manager) tas den inte bort från verktyget Innehållsöverföring. När en migreringsuppsättning har tagits bort från CAM kan användaren inte köra extraheringar på den migreringsuppsättningen från guiden Innehållsöverföring. Om migreringsuppsättningen togs bort från guiden för innehållsöverföring kan användaren återskapa den så länge som migreringsuppsättningen fortfarande är tillgänglig i Cloud Acceleration Manager.
+>När du tar bort en migreringsuppsättning från Cloud Acceleration Manager (CAM) tas den inte bort från verktyget Innehållsöverföring. När en migreringsuppsättning har tagits bort från CAM kan användaren inte köra extraheringar på den migreringsuppsättningen från guiden Innehållsöverföring. Om migreringsuppsättningen togs bort från guiden för innehållsöverföring kan användaren återskapa den så länge som migreringsuppsättningen fortfarande är tillgänglig i Cloud Acceleration Manager.
 >
->För att synkronisera verktyget Innehållsöverföring med molnaccelerationshanteraren kan användaren även ta bort migreringsuppsättningen från verktyget Innehållsöverföring.
+>Om du vill att verktyget Innehållsöverföring ska vara synkroniserat med Cloud Acceleration Manager kan användaren även ta bort migreringsuppsättningen från verktyget Innehållsöverföring.
 
 Om du vill ta bort migreringsuppsättningen från guiden innehållsöverföring markerar du migreringsuppsättningen och klickar på **Ta bort** i åtgärdsfältet.
 

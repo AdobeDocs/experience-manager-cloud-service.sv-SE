@@ -16,14 +16,14 @@ ht-degree: 0%
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author Trney](overview.md) den [Introduktion](introduction.md) har omfattat de grundläggande begrepp och termer som är relevanta för utvecklingen av headless.
+I början av [AEM Headless Content Author Journey](overview.md) innehöll [Introduction](introduction.md) grundläggande begrepp och terminologi som är relevant för redigering utan rubrik.
 
 Den här artikeln bygger vidare på dessa artiklar så att du förstår hur du skapar ditt eget innehåll för AEM headless-projekt.
 
 ## Syfte {#objective}
 
 * **Målgrupp**: Nybörjare
-* **Syfte**: Introducing the basics of Headless CMS Authoring:
+* **Mål**: Introducera grunderna för Headless CMS-redigering:
    * Introduktion till utveckling med AEMaaCS
    * Introduktion till innehållsfragment
 
@@ -31,19 +31,19 @@ Den här artikeln bygger vidare på dessa artiklar så att du förstår hur du s
 
 Innan du får grepp om innehållsfragment finns det en (mycket) snabb introduktion till AEM...men ingenting ersätter faktiskt upplevelsen av att logga in och försöka använda systemet.
 
-### Skapa, förhandsgranska och publicera {#author-preview-publish}
+### Författare, Förhandsgranska och Publish {#author-preview-publish}
 
 En AEM brukar bestå av tre miljöer:
 
 * Författare
-* Publicera
+* Publish
 * Förhandsgranska
 
 Du loggar in på och använder redigeringsmiljön för att generera ditt innehåll. När det är klart publicerar du sedan innehållet så att det blir allmänt tillgängligt. För hemlösa är detta för andra program, för webbsidor är det för läsare på webben.
 
 Mer information finns i Authoring Concepts.
 
-Från **Innehållsfragment** konsolen kan du även publicera på **Förhandsgranskningstjänst**, för testning och förhandsgranskning, före publicering. Se Publicera och förhandsgranska ett fragment.
+Från konsolen **Innehållsfragment** kan du även publicera till **förhandsgranskningstjänsten**, för testning och förhandsgranskning, före Publish. Se Publicera och förhandsgranska ett fragment.
 
 ### Loggar in {#signing-in}
 
@@ -59,7 +59,7 @@ Ditt konto har konfigurerats med de privilegier du behöver. Om du har några pr
 
 Första gången du loggar in i en liten onlinekurs kommer några av huvudfunktionerna i användargränssnittet att markeras.
 
-Du kan sedan använda navigeringspanelen för att komma åt AEM nyckelområden. För innehållsfragment använder du **Innehållsfragment** konsol (för vissa åtgärder använder du även **Resurser** konsol).
+Du kan sedan använda navigeringspanelen för att komma åt AEM nyckelområden. För innehållsfragment använder du konsolen **Innehållsfragment** (för vissa åtgärder använder du även konsolen **Assets**).
 
 Du kan öppna navigeringspanelen genom att markera ikonen Adobe i det övre vänstra hörnet följt av den lilla kompasikonen.
 
@@ -70,21 +70,21 @@ The Navigation Panel can be opened by selecting Adobe icon at the top left, foll
 -->
 
 >[!NOTE]
->Även om innehållsfragment är en funktion i AEM **Webbplatser**, sparas de som **Resurser**. Detta är en teknisk detalj som inte bör påverka dig, men som kan vara användbar att känna till.
+>Innehållsfragment är en funktion i AEM **Webbplatser**, men de sparas som **Assets**. Detta är en teknisk detalj som inte bör påverka dig, men som kan vara användbar att känna till.
 
 I konsolen kan du välja mappar i den vänstra panelen för att navigera till ditt innehållsfragment. Du kan också filtrera och/eller söka.
 
-![Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/assets/cf-managing-console-filter.png)
+![Konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/assets/cf-managing-console-filter.png)
 
 ### funktionsmakron, markera, visa {#actions-selecting-viewing}
 
-I **Innehållsfragment** konsol: en rad åtgärder är tillgängliga för dina innehållsfragment från verktygsfältet:
+I konsolen **Innehållsfragment** finns ett antal åtgärder tillgängliga för dina innehållsfragment från verktygsfältet:
 
 <!-- ![Console actions](assets/cfm-managing-cf-console-01.png) -->
 
-* **Öppna i resurser**
+* **Öppna i Assets**
 * **Skapa**
-* The **Refererad av** -kolumnen innehåller också en direkt länk för att visa alla överordnade referenser till det fragmentet, inklusive referenser till innehållsfragment, Experience Fragments och pages.
+* Kolumnen **Refererad av** innehåller också en direktlänk som visar alla överordnade referenser till det fragmentet, inklusive referenser till innehållsfragment, Experience Fragments och sidor.
 * Vid hovring över mappnamnet visas JCR-sökvägen.
 
 När du har valt fragmentet är alla lämpliga åtgärder tillgängliga:
@@ -92,7 +92,7 @@ När du har valt fragmentet är alla lämpliga åtgärder tillgängliga:
 <!-- ![Console actions - fragment selected](assets/cfm-managing-cf-console-selected-01.png) -->
 
 * **Öppna**
-* **Publicera** (och **Avpublicera**)
+* **Publish** (och **Avpublicera**)
 * **Kopiera**
 * **Flytta**
 * **Byt namn**
@@ -100,7 +100,7 @@ När du har valt fragmentet är alla lämpliga åtgärder tillgängliga:
 
 >[!NOTE]
 >
->Åtgärder som Publicera, Avpublicera, Ta bort, Flytta, Byt namn, Kopiera, utlöser ett asynkront jobb. Jobbets förlopp kan övervakas via gränssnittet AEM asynkrona jobb.
+>Åtgärder som Publish, Unpublish, Delete, Move, Rename, Copy, trigger an asynchronous job. Jobbets förlopp kan övervakas via gränssnittet AEM asynkrona jobb.
 
 <!--
 The **Assets** console has dedicated **Action Toolbars**, and **Quick Actions** that you can use after selecting a resource (for example, a folder or content fragment).
@@ -134,27 +134,27 @@ Om du inte har ett fåtal innehållsfragment vill du ordna dem så att du (och a
 
 #### Skapa en mapp {#creating-folder}
 
-Du kan göra detta genom att skapa en serie mappar i **Filer** i **Resurser** konsol. Välj **Skapa** alternativ (överst till höger), följt av **Mapp**:
+Du kan göra detta genom att skapa en serie mappar i avsnittet **Filer** i **Assets**-konsolen. Välj alternativet **Skapa** (överst till höger) följt av **Mapp**:
 
 ![Alternativet Skapa mapp](/help/journey-headless/author/assets/headless-journey-author-folder-01.png)
 
-En dialogruta öppnas där du kan ange information och sedan bekräfta med **Skapa**:
+En dialogruta öppnas där du kan ange informationen och sedan bekräfta med **Skapa**:
 
 ![Dialogrutan Skapa mapp](/help/journey-headless/author/assets/headless-journey-author-folder-02.png)
 
 #### Använda banor och taggar för att begränsa antalet modeller för innehållsfragment i mappen {#tags-paths-for-models-in-folder}
 
-Det här avsnittet är något mer avancerat. Du behöver det inte riktigt om du bara börjar och provar saker, men det är *mycket* är användbart när du har många fragment. Så det är bra att veta om - även om du inte använder det helt än.
+Det här avsnittet är något mer avancerat. Du behöver det egentligen inte om du just har börjat och försöker saker, men det är *mycket* användbart när du har många fragment. Så det är bra att veta om - även om du inte använder det helt än.
 
 Din innehållsarkitekt har skapat alla innehållsfragmentmodeller som krävs för ditt aktuella projekt, och kanske även några andra projekt. För att göra det enklare för dig själv och andra författare kan du begränsa listan med modeller som är tillgängliga för en viss mapp.
 
-När du har skapat mappen kan du öppna den **Egenskaper**. Här finns olika flikar med information och konfigurationsinformation om mappen. Du kan använda kommandot **Profiler** om du vill definiera specifika sökvägar och/eller taggar för den här mappen. Detta begränsar vilka modeller för innehållsfragment som är tillgängliga för användning i mappen, eftersom det innebär att modeller för innehållsfragment måste uppfylla dessa krav innan de kan användas för att generera fragment i den här mappen.
+När du har skapat mappen kan du öppna mappen **Egenskaper**. Här finns olika flikar med information och konfigurationsinformation om mappen. Särskilt för innehållsfragment kan du använda fliken **Profiler** för att definiera specifika sökvägar och/eller taggar för den här mappen. Detta begränsar vilka modeller för innehållsfragment som är tillgängliga för användning i mappen, eftersom det innebär att modeller för innehållsfragment måste uppfylla dessa krav innan de kan användas för att generera fragment i den här mappen.
 
 ![Skapa mappegenskaper - principer](/help/journey-headless/author/assets/headless-journey-author-folder-04.png)
 
 >[!NOTE]
 >
->Du kan läsa mer under Modeller för innehållsfragment - Tillåt modeller för innehållsfragment i resursmappen.
+>Du kan läsa mer under Modeller för innehållsfragment - Tillåt modeller för innehållsfragment i din Assets-mapp.
 
 Du navigerar sedan genom de här mapparna för att skapa och redigera dina innehållsfragment.
 
@@ -162,19 +162,19 @@ Du navigerar sedan genom de här mapparna för att skapa och redigera dina inneh
 
 Bara om..
 
-Du kommer antagligen att få en inledande mapp där du kan skapa dina mappar. Detta beror på att viss konfigurationsinformation måste tillämpas (vanligtvis av en utvecklare eller systemadministratör) på rotmappen. Det här intresserar dig förmodligen inte, men om det behövs kan du kontrollera **Konfiguration** i **Cloud Service** i mappen **Egenskaper**:
+Du kommer antagligen att få en inledande mapp där du kan skapa dina mappar. Detta beror på att viss konfigurationsinformation måste tillämpas (vanligtvis av en utvecklare eller systemadministratör) på rotmappen. Detta intresserar dig förmodligen inte, men om det behövs kan du kontrollera **Konfiguration** i **Cloud Service** i mappen **Egenskaper**:
 
 ![Skapa mappegenskaper - Konfiguration](/help/journey-headless/author/assets/headless-journey-author-folder-03.png)
 
 >[!NOTE]
 >
->Du kan läsa mer under Använd konfigurationen i resursmappen.
+>Du kan läsa mer under Använd konfigurationen i din Assets-mapp.
 
 ### Skapa ett innehållsfragment {#creating-fragment}
 
-I **Innehållsfragment** konsol du kan använda **Skapa** för att öppna **Nytt innehållsfragment** dialog:
+I konsolen **Innehållsfragment** kan du använda **Skapa** för att öppna dialogrutan **Nytt innehållsfragment**:
 
-![Konsol för innehållsfragment - Skapa ett nytt fragment](/help/sites-cloud/administering/content-fragments/assets/cfc-console-create.png)
+![Konsolen för innehållsfragment - Skapar ett nytt fragment](/help/sites-cloud/administering/content-fragments/assets/cfc-console-create.png)
 
 Ange:
 
@@ -188,16 +188,16 @@ Bekräfta sedan med antingen **Skapa** eller **Skapa och öppna**.
 
 ### Redigera ett fragment {#editing-fragment}
 
-Du kan öppna ett fragment omedelbart efter att du har skapat det, eller genom att välja det från konsolen för innehållsfragment (även från konsolen Resurser).
+Du kan öppna ett fragment omedelbart efter att du har skapat det, eller genom att välja det från konsolen för innehållsfragment (även från Assets-konsolen).
 
 >[!NOTE]
 >
->Innehållsfragment är en webbplatsfunktion, men lagras som **Resurser**.
+>Innehållsfragment är en webbplatsfunktion, men lagras som **Assets**.
 >
 >Det finns två redigerare för att skapa innehållsfragment.
 >
->* Den nya redigeraren, som huvudsakligen kommer från **Innehållsfragment** konsol.
->* Den ursprungliga redigeraren, som du i första hand kommer åt från **Resurser** konsol.
+>* Den nya redigeraren, som huvudsakligen nås från konsolen **Innehållsfragment** .
+>* Den ursprungliga redigeraren, som främst nås från **Assets**-konsolen.
 
 När redigeraren öppnas ser du:
 
@@ -205,17 +205,17 @@ När redigeraren öppnas ser du:
    * en länk till konsolen för innehållsfragment (hemikonen)
    * information om modellen och mappen
    * länkar till förhandsgranskning, om standardmönstret för URL för förhandsgranskning har konfigurerats för modellen
-   * Åtgärder för publicering och avpublicering
-   * ett alternativ för att visa alla **Överordnade referenser** (länkikon)
-   * fragmentet **Status** och senast sparad information
-   * växla till den ursprungliga (resursbaserade) redigeraren
-* vänster panel: visar **Variationer** för innehållsfragmentet och dess **Fält**:
+   * Publish och Unpublish actions
+   * ett alternativ för att visa alla **överordnade referenser** (länkikon)
+   * fragmentet **Status** och den senast sparade informationen
+   * växla till den ursprungliga (Assets-baserade) redigeraren
+* vänster panel: visar **Variationer** för innehållsfragmentet och dess **fält**:
    * dessa länkar kan användas för att navigera i strukturen för innehållsfragment
 * höger panel: visar flikar med egenskaper (metadata) och taggar, information om versionshistorik och information om språkkopior
-   * i **Egenskaper** kan du uppdatera **Titel** och **Beskrivning** för fragmentet, eller **Variation**
+   * på fliken **Egenskaper** kan du uppdatera **Title** och **Description** för fragmentet, eller **Variation**
 * central panel: visar de faktiska fälten och innehållet i den valda varianten
    * gör att du kan redigera innehållet
-   * if **Platshållare för flik** fält definieras i den modell de visas här och kan användas för navigering
+   * om **platshållarfält** definieras i den modell de visas här och kan användas för navigering
 
 Ett fragment kan till exempel:
 
@@ -231,7 +231,7 @@ Ett fragment kan till exempel:
 >
 >Se Modeller för innehållsfragment - Datatyper och egenskaper för allmän information.
 
-Bekräfta dina uppdateringar med antingen **Spara** eller **Spara och stäng**.
+Bekräfta uppdateringarna med **Spara** eller **Spara och stäng**.
 
 >[!NOTE]
 >
@@ -254,25 +254,25 @@ Modeller för innehållsfragment är faktiskt viktiga för dina innehållsfragme
 
 <!-- needs more details -->
 
-När du är klar med fragmentet kan du **Publicera** så att den blir tillgänglig för headless-applikationer.
+När du har slutfört fragmentet kan du **Publish** så att det blir tillgängligt för de headless-program som använder det.
 
 Publiceringsåtgärderna är tillgängliga i redigeraren:
 
-![Content Fragment Editor - My Fragment](/help/journey-headless/author/assets/headless-journey-author-content-fragment-06.png)
+![Innehållsfragmentredigeraren - Mitt fragment](/help/journey-headless/author/assets/headless-journey-author-content-fragment-06.png)
 
 >[!NOTE]
 >
->Du kan även publicera ditt fragment från någon av **Resurser** eller **Innehållsfragment** konsol.
+>Du kan också publicera ditt fragment från konsolen **Assets** eller **Innehållsfragment** .
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har lärt dig grunderna är nästa steg att [Läs mer om referenser](references.md). Här presenteras och diskuteras de olika referenser som finns tillgängliga och hur du skapar strukturnivåer med Fragment References - en viktig del i utvecklingen för headless.
+Nu när du har lärt dig grunderna är nästa steg att [Lär dig mer om referenser](references.md). Här presenteras och diskuteras de olika referenser som finns tillgängliga och hur du skapar strukturnivåer med Fragment References - en viktig del i utvecklingen för headless.
 
 ## Ytterligare resurser {#additional-resources}
 
 * [Authoring Concepts](/help/sites-cloud/authoring/author-publish.md)
 
-* [Grundläggande hantering](/help/sites-cloud/authoring/basic-handling.md) - den här sidan är huvudsakligen baserad på **Webbplatser** konsol, men många/de flesta funktioner är också relevanta för redigering **Innehållsfragment** under **Resurser** konsol.
+* [Grundläggande hantering](/help/sites-cloud/authoring/basic-handling.md) - Den här sidan är primärt baserad på konsolen **Platser**, men många/de flesta funktioner är också relevanta för att skapa **innehållsfragment** under konsolen **Assets**.
 
    * [Navigeringspanel](/help/sites-cloud/authoring/basic-handling.md#navigation-panel)
 
@@ -290,7 +290,7 @@ Nu när du har lärt dig grunderna är nästa steg att [Läs mer om referenser](
 
    * [Hantera innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md)
 
-   * [Använd konfigurationen i resursmappen](/help/sites-cloud/administering/content-fragments/setup.md#apply-the-configuration-to-your-folder)
+   * [Använd konfigurationen i din Assets-mapp](/help/sites-cloud/administering/content-fragments/setup.md#apply-the-configuration-to-your-folder)
 
    * [Skapa ett innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#creating-a-content-fragment)
 
@@ -298,13 +298,13 @@ Nu när du har lärt dig grunderna är nästa steg att [Läs mer om referenser](
 
    * Publicering
 
-      * från redigeraren, eller **Resurser** konsol
+      * Från redigeraren eller **Assets**-konsolen
 
-         * [Snabbpublicering](/help/assets/manage-publication.md#quick-publish)
+         * [Snabb Publish](/help/assets/manage-publication.md#quick-publish)
 
          * [Hantera publikation](/help/assets/manage-publication.md#manage-publication)
 
-      * Från **Innehållsfragment** Konsol
+      * Från konsolen **Innehållsfragment**
 
          * [Publicera och förhandsgranska ett innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#publishing-and-previewing-a-fragment)
 
@@ -314,12 +314,12 @@ Nu när du har lärt dig grunderna är nästa steg att [Läs mer om referenser](
 
       * [Modeller för innehållsfragment - egenskaper](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#properties)
 
-      * [Modeller för innehållsfragment - Tillåt modeller för innehållsfragment i resursmappen](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#allowing-content-fragment-models-assets-folder)
+      * [Modeller för innehållsfragment - Tillåt modeller för innehållsfragment i din Assets-mapp](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#allowing-content-fragment-models-assets-folder)
 
-* [Content Fragments - original editor, from the Assets Console](/help/assets/content-fragments/content-fragments-variations.md)
+* [Content Fragments - original editor, from Assets Console](/help/assets/content-fragments/content-fragments-variations.md)
 
 * Komma igång-guider
-   * [Skapa en huvudlös konfiguration för resursmapp](/help/headless/setup/create-assets-folder.md)
+   * [Skapa en huvudlös Assets-mapp](/help/headless/setup/create-assets-folder.md)
 
 * AEM Headless Content Architect Journey
 

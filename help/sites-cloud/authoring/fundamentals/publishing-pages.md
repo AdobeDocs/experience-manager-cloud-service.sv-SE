@@ -11,7 +11,7 @@ ht-degree: 4%
 
 # Publicera sidor {#publishing-pages}
 
-När du har skapat och granskat ditt innehåll i författarmiljön är målet att [göra den tillgänglig på din offentliga webbplats](/help/sites-cloud/authoring/getting-started/concepts.md) (publiceringsmiljön).
+När du har skapat och granskat ditt innehåll i författarmiljön är målet att [göra det tillgängligt på din offentliga webbplats](/help/sites-cloud/authoring/getting-started/concepts.md) (din publiceringsmiljö).
 
 Detta kallas att publicera en sida. När du vill ta bort en sida från publiceringsmiljön kallas det för att avpublicera. När sidan publiceras och avpubliceras är den fortfarande tillgänglig i redigeringsmiljön för ytterligare ändringar tills du tar bort den.
 
@@ -25,13 +25,13 @@ Du kan publicera/avpublicera en sida direkt eller vid ett fördefinierat datum/t
 
 Du kan stöta på olika termer om publicering när du arbetar med Adobe Experience Manager (AEM) as a Cloud Service.
 
-* **Publicera/avpublicera**
+* **Publish/Avpublicera**
    * Detta är de primära villkoren för de åtgärder som gör innehållet tillgängligt för allmänheten i publiceringsmiljön (eller inte).
    * Detta är de termer som används i AEM.
 * **Aktivera/inaktivera**
    * Dessa termer är synonyma med publicera/avpublicera.
    * Dessa termer användes i tidigare versioner av AEM.
-* **Replikering/replikering**
+* **Replikera/replikera**
    * Detta är de tekniska termer som beskriver hur data flyttas (till exempel sidinnehåll, filer, kod, användarkommentarer) från en miljö till en annan när du publicerar en sida.
    * Dessa termer används främst av utvecklare.
 
@@ -52,7 +52,7 @@ Beroende på din plats kan du publicera:
 
 >[!NOTE]
 >
->Om du vill bevara sidordningen måste du använda [Hantera publikation](#manage-publication) om du vill publicera den överordnade sidan tillsammans med eventuella underordnade sidor i en enda åtgärd.
+>Om du vill bevara sidordningen måste du använda [Hantera publikation](#manage-publication) för att publicera den överordnade sidan tillsammans med eventuella underordnade sidor i en enda åtgärd.
 >
 >Sidordningen garanteras inte:
 >* om endast underordnade sidor har valts för publicering (som orderinformationen finns på den överordnade sidan)
@@ -60,32 +60,32 @@ Beroende på din plats kan du publicera:
 
 >[!NOTE]
 >
-> Fler möjligheter finns på **I tid** och **Fråntid** i [Fliken Grundläggande i Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md#basic)
+> Mer information finns i **På tid** och **Från tid** på fliken [Grundläggande i Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md#basic)
 
 ### Publicera från Redigeraren {#publishing-from-the-editor}
 
 Om du redigerar en sida kan den publiceras direkt från redigeraren.
 
-1. Välj **Sidinformation** -ikonen för att öppna menyn och sedan **Publicera sida** alternativ.
+1. Välj ikonen **Sidinformation** för att öppna menyn och sedan alternativet **Publish Page** .
 
    ![Publicera en sida via sidalternativ](/help/sites-cloud/authoring/assets/publishing-page-options.png)
 
 1. Beroende på om sidan har referenser som behöver publiceras:
 
    * Sidan publiceras direkt om det inte finns några referenser att publicera.
-   * Om sidan innehåller referenser som behöver publiceras visas dessa i **Publicera** guide, där du kan
-      * Ange vilka resurser, eller taggar och så vidare, som du vill publicera tillsammans med sidan och använd sedan **Publicera** för att slutföra processen.
+   * Om sidan innehåller referenser som behöver publiceras visas dessa i guiden **Publish** där du kan antingen:
+      * Ange vilka resurser, eller taggar och så vidare, som du vill publicera tillsammans med sidan och använd sedan **Publish** för att slutföra processen.
       * Använd **Avbryt** om du vill avbryta åtgärden.
 
-   ![Publicera referenser med sidan](/help/sites-cloud/authoring/assets/publishing-references.png)
+   ![Publicerar referenser med sidan](/help/sites-cloud/authoring/assets/publishing-references.png)
 
-1. Markera **Publicera** kommer att replikera sidan till publiceringsmiljön. I sidredigeraren visas en informationsbanderoll som bekräftar publiceringsåtgärden.
+1. Om du väljer **Publish** replikeras sidan till publiceringsmiljön. I sidredigeraren visas en informationsbanderoll som bekräftar publiceringsåtgärden.
 
-   ![Banderoll för publiceringsstatusinformation](/help/sites-cloud/authoring/assets/publishing-info.png)
+   ![Banderoll för Publish-statusinformation](/help/sites-cloud/authoring/assets/publishing-info.png)
 
    När du visar samma sida i konsolen visas den uppdaterade publiceringsstatusen.
 
-   ![Sidpubliceringsstatus i kolumnvy i platskonsolen](/help/sites-cloud/authoring/assets/publishing-status-console-column.png)
+   ![Sidpubliceringsstatus i kolumnvy i webbplatskonsolen](/help/sites-cloud/authoring/assets/publishing-status-console-column.png)
 
 >[!NOTE]
 >
@@ -93,26 +93,26 @@ Om du redigerar en sida kan den publiceras direkt från redigeraren.
 
 >[!NOTE]
 >
->Sidor som används av [alias](/help/sites-cloud/authoring/fundamentals/page-properties.md#advanced) i redigeraren kan inte publiceras. Publiceringsalternativen i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
+>Sidor som används av [alias](/help/sites-cloud/authoring/fundamentals/page-properties.md#advanced) i redigeraren kan inte publiceras. Publish-alternativen i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
 
 ### Publicera från konsolen {#publishing-from-the-console}
 
 I platskonsolen finns det två alternativ för publicering:
 
-* [Snabbpublicering](#quick-publish)
+* [Snabb Publish](#quick-publish)
 * [Hantera publikation](#manage-publication)
 
-#### Snabbpublicering {#quick-publish}
+#### Snabb Publish {#quick-publish}
 
-**Snabbpublicering** är för enkla fall och publicerar den eller de markerade sidorna omedelbart utan ytterligare interaktion. Därför kommer alla icke-publicerade referenser också att publiceras automatiskt.
+**Snabba Publish** är till för enkla ärenden och publicerar de markerade sidorna direkt utan ytterligare interaktion. Därför kommer alla icke-publicerade referenser också att publiceras automatiskt.
 
-Så här publicerar du en sida med Snabbpublicering:
+Så här publicerar du en sida med Quick Publish:
 
-1. Markera sidan eller sidorna i webbplatskonsolen och klicka på **Snabbpublicering** -knappen.
+1. Markera sidan eller sidorna i webbplatskonsolen och klicka på knappen **Snabba Publish** .
 
    ![Välja sidor för publicering](/help/sites-cloud/authoring/assets/publishing-select-pages.png)
 
-1. Bekräfta publikationen genom att klicka på **Publicera** eller avbryta genom att klicka på **Avbryt**. Kom ihåg att alla opublicerade referenser också publiceras automatiskt.
+1. Bekräfta publikationen genom att klicka på **Publish** i dialogrutan Snabb Publish eller klicka på **Avbryt**. Kom ihåg att alla opublicerade referenser också publiceras automatiskt.
 
    ![Snabbpubliceringsbekräftelse](/help/sites-cloud/authoring/assets/publishing-quick-publish.png)
 
@@ -120,15 +120,15 @@ Så här publicerar du en sida med Snabbpublicering:
 
 >[!NOTE]
 >
->Snabbpublicering är en ytlig publicering, d.v.s. endast den valda sidan/de markerade sidorna publiceras och inga underordnade sidor publiceras.
+>Quick Publish är en ytlig publicering, d.v.s. endast den markerade sidan/de markerade sidorna publiceras och inga underordnade sidor publiceras.
 
 #### Hantera publikation {#manage-publication}
 
-**Hantera publikation** erbjuder fler alternativ än **Snabbpublicering**, vilket gör det möjligt att inkludera underordnade sidor, anpassa referenserna och starta eventuella arbetsflöden och erbjuda möjlighet att publicera vid ett senare datum.
+**Hantera publikation** har fler alternativ än **Snabb-publicering**, vilket gör det möjligt att inkludera underordnade sidor, anpassa referenserna och starta eventuella arbetsflöden och erbjuda möjlighet att publicera vid ett senare datum.
 
 >[!NOTE]
 >
->Om du vill bevara sidordningen måste du använda **Hantera publikation** om du vill publicera den överordnade sidan tillsammans med eventuella underordnade sidor i en enda åtgärd.
+>Om du vill bevara sidordningen måste du använda **Hantera publikation** för att publicera den överordnade sidan tillsammans med eventuella underordnade sidor i en enda åtgärd.
 >
 >Sidordningen garanteras inte:
 >* om endast underordnade sidor har valts för publicering (som orderinformationen finns på den överordnade sidan)
@@ -136,11 +136,11 @@ Så här publicerar du en sida med Snabbpublicering:
 
 Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
-1. Markera sidan eller sidorna i webbplatskonsolen och klicka på **Hantera publikation** -knappen.
+1. Markera sidan eller sidorna i webbplatskonsolen och klicka på knappen **Hantera publikation** .
 
    ![Välja sidor för publicering](/help/sites-cloud/authoring/assets/publishing-select-pages.png)
 
-1. Guiden **Hantera publikation** startar. Det första steget **Alternativ** kan du:
+1. Guiden **Hantera publikation** startar. I det första steget, **Alternativ**, kan du:
 
    * **Åtgärd**
 
@@ -154,13 +154,13 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
      >[!NOTE]
      >
-     >Om du vill avbryta en publicering/avpublicering senare går du till [Arbetsflödeskonsol](/help/sites-cloud/administering/workflows-administering.md#suspending-resuming-and-terminating-a-workflow-instance) för att avsluta motsvarande arbetsflöde.
+     >Om du vill avbryta en publicering/avpublicering senare går du till [arbetsflödeskonsolen](/help/sites-cloud/administering/workflows-administering.md#suspending-resuming-and-terminating-a-workflow-instance) och avslutar motsvarande arbetsflöde.
 
    ![Hantera publikationsalternativ](/help/sites-cloud/authoring/assets/publishing-manage-publication-options.png)
 
-1. Klicka **Nästa** för att fortsätta.
+1. Klicka på **Nästa** för att fortsätta.
 
-1. I nästa steg i guiden Hantera publikation **Omfång** kan du definiera omfattningen för publikationen/avpublikationen, t.ex. inkludera underordnade sidor och/eller inkludera referenser.
+1. I nästa steg i guiden Hantera publikation, **Omfång**, kan du definiera omfattningen för publikationen/avpublikationen, till exempel att inkludera underordnade sidor och/eller inkludera referenser.
 
    ![Hantera publikationsomfång](/help/sites-cloud/authoring/assets/publishing-manage-publication-scope.png)
 
@@ -168,29 +168,29 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
    Du kan använda knappen **Lägg till innehåll** för att lägga till ytterligare sidor i listan över sidor som ska publiceras, om du inte valde någon innan du startade guiden Hantera publikation.
 
-   Markera **Lägg till innehåll** knappen startar [sökvägsläsare](/help/sites-cloud/authoring/fundamentals/environment-tools.md#path-browser) för att tillåta innehållsval.
+   Om du väljer knappen **Lägg till innehåll** startas [sökvägsläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#path-browser) så att innehåll kan väljas.
 
-   Markera önskade sidor och klicka sedan på **Välj** för att lägga till innehåll i guiden eller **Avbryt** om du vill avbryta markeringen och återgå till guiden.
+   Markera önskade sidor och klicka sedan på **Välj** för att lägga till innehållet i guiden eller **Avbryt** för att avbryta valet och återgå till guiden.
 
    **Ta bort markering**
 
    I guiden kan du markera ett objekt i listan för att ta bort det från markeringen.
 
-   ![Hantera publikationsmarkering av sidor](/help/sites-cloud/authoring/assets/publishing-manage-publication-select.png)
+   ![Hantera publikation, välja sidor](/help/sites-cloud/authoring/assets/publishing-manage-publication-select.png)
 
    **Publicerade referenser**
 
-   Du kan visa och ändra referenserna som ska publiceras eller inte publiceras för en sida genom att markera den och sedan klicka på **Publicerade referenser** -knappen.
+   Du kan visa och ändra referenserna som ska publiceras eller avpubliceras för en sida genom att markera den och sedan klicka på knappen **Publicerade referenser** .
 
    ![Hantera publikationsalternativ](/help/sites-cloud/authoring/assets/publishing-manage-publication-references.png)
 
-   The **Publicerade referenser** visas referenserna för det markerade innehållet. Som standard är alla markerade och publicerade/opublicerade, men du kan avmarkera dem genom att avmarkera dem så att de inte tas med i funktionsmakrot.
+   I dialogrutan **Publicerade referenser** visas referenser för det markerade innehållet. Som standard är alla markerade och publicerade/opublicerade, men du kan avmarkera dem genom att avmarkera dem så att de inte tas med i funktionsmakrot.
 
-   Klicka **Klar** för att spara dina ändringar eller **Avbryt** om du vill avbryta markeringen och återgå till guiden.
+   Klicka på **Klar** om du vill spara ändringarna eller på **Avbryt** om du vill avbryta markeringen och återgå till guiden.
 
-   Tillbaka i guiden **Referenser** kolumnen uppdateras för att återspegla ditt val av referenser som ska publiceras eller inte publiceras.
+   I guiden uppdateras kolumnen **Referenser** så att den återspeglar ditt val av referenser som ska publiceras eller avpubliceras.
 
-   ![Hantera publikationsmarkering av sidor](/help/sites-cloud/authoring/assets/publishing-manage-publication-select.png)
+   ![Hantera publikation, välja sidor](/help/sites-cloud/authoring/assets/publishing-manage-publication-select.png)
 
    **Inkludera underordnade**
 
@@ -198,28 +198,28 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
    >
    >Se [Publicera och avpublicera ett träd](#publishing-and-unpublishing-a-tree)
 
-   Klicka **Inkludera underordnade** öppnar en dialogruta där du kan:
+   Om du klickar på **Inkludera underordnade** öppnas en dialogruta där du kan:
 
    * **Inkludera underordnade**
    * **Inkludera endast omedelbart underordnade**
    * **Inkludera endast ändrade sidor**
-   * **Inkludera endast redan publicerade sidor**
+   * **Ta endast med redan publicerade sidor**
 
-   Aktivera önskade alternativ och bekräfta med **OK** om du vill lägga till de underordnade sidorna i listan med sidor som ska publiceras eller avpubliceras baserat på markeringsalternativen. Klicka **Avbryt** om du vill avbryta markeringen och återgå till guiden.
+   Aktivera de nödvändiga alternativen och bekräfta med **OK** för att lägga till de underordnade sidorna i listan över sidor som ska publiceras eller avpubliceras baserat på de valda alternativen. Klicka på **Avbryt** om du vill avbryta markeringen och återgå till guiden.
 
    ![Hantera publikation inklusive underordnade](/help/sites-cloud/authoring/assets/publishing-include-children.png)
 
-1. Klicka **Publicera** för att slutföra.
+1. Klicka på **Publish** för att slutföra.
 
    I webbplatskonsolen bekräftar ett meddelande publikationen.
 
-1. Om de publicerade sidorna är kopplade till arbetsflöden kan de visas i en **Arbetsflöden** steg i guiden.
+1. Om de publicerade sidorna är kopplade till arbetsflöden kan de visas i ett slutligt **arbetsflödessteg** i publikationsguiden.
 
-   ![Hantera publikationsmarkering av sidor](/help/sites-cloud/authoring/assets/publishing-manage-publication-workflow.png)
+   ![Hantera publikation, välja sidor](/help/sites-cloud/authoring/assets/publishing-manage-publication-workflow.png)
 
    >[!NOTE]
    >
-   >The **Arbetsflöden** visas baserat på vilka rättigheter din användare har eller inte har. Se föregående kommentar på den här sidan om publiceringsrättigheter och Hantera åtkomst till arbetsflöden och [Använda arbetsflöden på sidor](/help/sites-cloud/authoring/workflows/applying.md) för mer information.
+   >Steget **Arbetsflöden** visas baserat på vilka rättigheter din användare har eller inte har. Mer information finns i föregående kommentar på den här sidan om publiceringsbehörigheter och hanterad åtkomst till arbetsflöden och [Tillämpa arbetsflöden på sidor](/help/sites-cloud/authoring/workflows/applying.md).
 
    Resurserna grupperas efter de arbetsflöden som utlöses och de olika alternativen:
 
@@ -231,26 +231,26 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
 ## Avpublicerar sidor {#unpublishing-pages}
 
-Om du avpublicerar en sida tas den bort från publiceringen, eller [förhandsgranska](/help/sites-cloud/authoring/fundamentals/previewing-content.md), så att den inte längre är tillgänglig för läsarna.
+Om du avpublicerar en sida tas den bort från publiceringsmiljön eller [förhandsvisningen](/help/sites-cloud/authoring/fundamentals/previewing-content.md) så att den inte längre är tillgänglig för läsarna.
 
-I en [liknande publiceringssätt](#publishing-pages), en eller flera sidor kan avpubliceras från det önskade målet:
+På ett [sätt som liknar publicering](#publishing-pages) kan en eller flera sidor avpubliceras från det önskade målet:
 
 * [Från sidredigeraren](#unpublishing-from-the-editor)
 * [Från webbplatskonsolen](#unpublishing-from-the-console)
 
 ### Avpublicera från redigeraren {#unpublishing-from-the-editor}
 
-Om du vill avpublicera en sida när du redigerar den väljer du **Avpublicera sida** i **Sidinformation** meny, som du skulle [publicera sidan](#publishing-from-the-editor).
+Om du vill avpublicera en sida när du redigerar den väljer du **Avpublicera sida** på menyn **Sidinformation**, på samma sätt som du [publicerar sidan](#publishing-from-the-editor).
 
 >[!NOTE]
 >
->Sidor som används av [alias](/help/sites-cloud/authoring/fundamentals/page-properties.md#advanced) i redigeraren kan inte avpubliceras. Publiceringsalternativen i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
+>Sidor som används av [alias](/help/sites-cloud/authoring/fundamentals/page-properties.md#advanced) i redigeraren kan inte avpubliceras. Publish-alternativen i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
 
 ### Avpublicera från konsolen {#unpublishing-from-the-console}
 
-Precis som du [publicera med alternativet Hantera publikation](#manage-publication)kan du också använda den för att avpublicera.
+Precis som du [använder alternativet Hantera publikation för att publicera](#manage-publication) kan du även använda det för att avpublicera.
 
-1. Markera sidan eller sidorna i webbplatskonsolen och klicka på **Hantera publikation** -knappen.
+1. Markera sidan eller sidorna i webbplatskonsolen och klicka på knappen **Hantera publikation** .
 1. Guiden **Hantera publikation** startar. I det första steget **Alternativ** väljer du **Avpublicera** i stället för standardalternativet **Publicera**.
 
    ![Avpublicering - alternativ](/help/sites-cloud/authoring/assets/publishing-unpublish.png)
@@ -259,58 +259,58 @@ Precis som du [publicera med alternativet Hantera publikation](#manage-publicati
 
    >[!NOTE]
    >
-   >Om du vill avbryta en publicering/avpublicering senare går du till [Arbetsflödeskonsol](/help/sites-cloud/administering/workflows-administering.md#suspending-resuming-and-terminating-a-workflow-instance) för att avsluta motsvarande arbetsflöde.
+   >Om du vill avbryta en publicering/avpublicering senare går du till [arbetsflödeskonsolen](/help/sites-cloud/administering/workflows-administering.md#suspending-resuming-and-terminating-a-workflow-instance) och avslutar motsvarande arbetsflöde.
 
    >[!NOTE]
-   >Om du har en [Förhandsgranska](/help/sites-cloud/authoring/fundamentals/previewing-content.md) -miljö kan du välja **Mål** under Hantera publicering.
+   >Om du har en [förhandsvisningsmiljö](/help/sites-cloud/authoring/fundamentals/previewing-content.md) kan du välja **Mål** under Hantera publikation.
 
-1. Slutför borttagningen genom att fortsätta med guiden på samma sätt som du gör [publicera sidan](#manage-publication).
+1. Om du vill slutföra den borttagna publikationen fortsätter du med guiden på samma sätt som du [publicerar sidan](#manage-publication).
 
-   ![Avpublicering - omfång](/help/sites-cloud/authoring/assets/publishing-unpublish-scope.png)
+   ![Avpublicerar - scope](/help/sites-cloud/authoring/assets/publishing-unpublish-scope.png)
 
 ## Publicera och avpublicera ett träd {#publishing-and-unpublishing-a-tree}
 
 När du har angett eller uppdaterat ett stort antal innehållssidor, som alla finns på samma rotsida, kan det vara enklare att publicera hela trädet i en enda åtgärd.
 
-Du kan använda [Hantera publikation](#manage-publication) på webbplatskonsolen för att göra detta.
+Du kan använda alternativet [Hantera publikation](#manage-publication) på webbplatskonsolen för att göra detta.
 
-1. I webbplatskonsolen väljer du rotsidan för trädet som du vill publicera eller avpublicera och väljer **Hantera publikation**.
+1. På webbplatskonsolen markerar du rotsidan för trädet som du vill publicera eller avpublicera och väljer **Hantera publikation**.
 1. Guiden **Hantera publikation** startar. Välj om du vill publicera eller avpublicera och när det ska ske och välj **Nästa** för att fortsätta.
-1. I **Omfång** markerar du rotsidan och väljer **Inkludera underordnade**.
+1. I steget **Omfång** markerar du rotsidan och väljer **Inkludera underordnade**.
 
-   ![Hantera publikationsmarkering av sidor](/help/sites-cloud/authoring/assets/publishing-manage-publication-select.png)
+   ![Hantera publikation, välja sidor](/help/sites-cloud/authoring/assets/publishing-manage-publication-select.png)
 
-1. I **Inkludera underordnade** dialog:
+1. I dialogrutan **Inkludera underordnade**:
 
    * välj **Inkludera underordnade**
-   * avmarkera **Inkludera endast omedelbart underordnade**
-   * avmarkera **Inkludera endast redan publicerade sidor**
+   * avmarkera **Ta endast med direkt underordnade**
+   * avmarkera **Ta endast med redan publicerade sidor**
    * konfigurera **Inkludera endast ändrade sidor** efter behov
 
    Dessa alternativ är markerade som standard, så du måste komma ihåg att konfigurera dem. Bekräfta markeringen med **OK** om du vill lägga till innehållet i publikationen/avpublikationen.
 
-   ![Inkludera underordnade för trädpublicering](/help/sites-cloud/authoring/assets/publishing-include-children-tree.png)
+   ![Inkluderar underordnade för trädpublikation](/help/sites-cloud/authoring/assets/publishing-include-children-tree.png)
 
-1. I **Hantera publikation** kan du anpassa markeringen ytterligare genom att lägga till ytterligare sidor eller ta bort de markerade sidorna.
+1. I guiden **Hantera publikation** kan du anpassa markeringen ytterligare genom att lägga till ytterligare sidor eller ta bort de markerade sidorna.
 
-   Kom ihåg att du även kan granska referenser som ska publiceras via **Publicerade referenser** alternativ.
+   Kom ihåg att du även kan granska referenser som ska publiceras via alternativet **Publicerade referenser**.
 
-1. [Fortsätt med guiden Hantera publikation som vanligt](#manage-publication) för att slutföra publikationen eller avpubliceringen av trädet.
+1. [Fortsätt med guiden Hantera publikation som vanligt](#manage-publication) för att slutföra publikationen eller ta bort publikationen för trädet.
 
 ## Bestämmer publiceringsstatus {#determining-publication-status}
 
 Du kan ange en sidas publiceringsstatus:
 
-* I [resursöversiktsinformation på webbplatskonsolen](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources)
+* I [resursöversiktsinformationen på webbplatskonsolen](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources)
 
   ![Publikationsstatus i kortvyn](/help/sites-cloud/authoring/assets/publishing-status-console-card.png)
 
   Publikationsstatusen visas i [kort](/help/sites-cloud/authoring/getting-started/basic-handling.md#card-view)-, [kolumn](/help/sites-cloud/authoring/getting-started/basic-handling.md#column-view)- och [list](/help/sites-cloud/authoring/getting-started/basic-handling.md#list-view)vyerna i Sites-konsolen.
 
-* I [tidslinje](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline)
+* På tidslinjen [](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline)
 
   ![Publiceringsstatus i tidslinjevyn](/help/sites-cloud/authoring/assets/publishing-status-timeline.png)
 
-* I [Sidinformation-menyn](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-information) när du redigerar en sida
+* På menyn [Sidinformation](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-information) när du redigerar en sida
 
   ![Publiceringsstatus på menyn Sidinformation](/help/sites-cloud/authoring/assets/publishing-status-page-information.png)

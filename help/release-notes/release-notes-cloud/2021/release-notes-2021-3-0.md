@@ -1,6 +1,6 @@
 ---
-title: Versionsinformation för 2021.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
-description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2021.3.0."
+title: Versionsinformation för version 2021.3.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: "[!DNL Adobe Experience Manager] as a Cloud Service versionsinformation för 2021.3.0."
 exl-id: 0c07364c-ba25-4081-8e35-3c1c84ed556f
 feature: Release Information
 role: Admin
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 >[!NOTE]
 >
->Se [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html) för information om dokumentationsuppdateringar som inte är direkt relaterade till en release.
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
 
 ## Releasedatum {#release-date}
 
@@ -29,11 +29,11 @@ Följande version (2021.4.0) kommer att vara den 29 april 2021.
 
 ## [!DNL Adobe Experience Manager Sites] as a Cloud Service {#sites}
 
-* [En progressiv webbprogramversion (PWA) av en webbplats](/help/sites-cloud/authoring/sites-console/enable-pwa.md) kan nu aktiveras på projektnivå via enkel konfiguration.
+* [En progressiv webbprogramversion (PWA) av en webbplats ](/help/sites-cloud/authoring/sites-console/enable-pwa.md) kan nu aktiveras på projektnivå via enkel konfiguration.
 * Modelltillägg för innehållsfragment - nu möjligt att definiera datatyper med flera rader som flerfältslista.
 * Förbättringar i gränssnittet för innehållsfragmentredigeraren - kapslade underordnade fragment visas nu i vägbeskrivningar och förbättrad vy för åtgärder för publicering, spara och spara och avsluta
 
-## [!DNL Adobe Experience Manager Assets] som [!DNL Cloud Service] {#assets}
+## [!DNL Adobe Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
 ### Nyheter i [!DNL Assets] {#what-is-new-assets}
 
@@ -47,8 +47,8 @@ Ability to select a root path. select if a minimum number of tags is required.
 
 Add a Boolean or radio widget type to metadata schema setup. -->
 
-* [!DNL Experience Manager] utökar funktionerna för anslutna resurser så att de kan använda [!DNL Dynamic Media] bilder i de kärnkomponenter som stöds. Se [använd anslutna resurser](/help/assets/use-assets-across-connected-assets-instances.md).
-* Experience Manager-administratörer kan schemalägga inmatningar av gruppresurser vid ett visst datum eller en viss tidpunkt. Administratörer kan även schemalägga återkommande frågor baserat på datum och tid. Se [massmaterialinmatning](/help/assets/add-assets.md#asset-bulk-ingestor).
+* [!DNL Experience Manager] utökar funktionerna för anslutna Assets så att de stöder användning av [!DNL Dynamic Media]-bilder i de kärnkomponenter som stöds. Se [Använd ansluten Assets](/help/assets/use-assets-across-connected-assets-instances.md).
+* Experience Manager-administratörer kan schemalägga inmatningar av gruppresurser vid ett visst datum eller en viss tidpunkt. Administratörer kan även schemalägga återkommande frågor baserat på datum och tid. Se [massinläsning av resurser](/help/assets/add-assets.md#asset-bulk-ingestor).
 
 ### Felkorrigeringar i [!DNL Assets] {#bug-fixes-assets}
 
@@ -58,13 +58,13 @@ Add a Boolean or radio widget type to metadata schema setup. -->
 * Det tar lång tid att öppna taggväljaren när väljaren är en del av ett komplext metadataschema. (CQ-4316426)
 * När du överför en resurs med samma filnamn som en befintlig, visas inte dialogrutan för namnkonflikt för att uppmana användaren att skapa en version. (CQ-4315424)
 * Egenskaper för mappmetadata kan anges och sparas på popup-menyn på mappens egenskapssida. När markeringen sparas i databasen visas den inte när mappmetadataegenskaperna öppnas igen. (CQ-4314429)
-* Resurser med filnamn som innehåller mellanslag eller specialtecken överförs med webbläsaren. (CQ-4318381)
+* Assets med filnamn som innehåller mellanslag eller specialtecken överförs med webbläsaren. (CQ-4318381)
 
-## [!DNL Adobe Experience Manager Forms] som [!DNL Cloud Service] {#forms}
+## [!DNL Adobe Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
 AEM Forms har hjälpt många organisationer att skapa fantastiska startupplevelser och registreringsupplevelser under årens lopp. Dessa upplevelser har hjälpt organisationer att konvertera leads till försäljning, bearbeta inhämtade kunddata, leverera responsiva upplevelser baserat på målgruppsprofilen och mycket mer. Nu finns AEM Forms som molntjänst.
 
-Du kan använda [AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/home.html) skapa digitala formulär, koppla formulär till befintliga datakällor, integrera formulär med Adobe Sign för att lägga till e-signaturer i formulär, generera arkiveringsdokument (Document of Record, DoR) för att arkivera inskickade formulär som PDF-filer. Tjänsten kan också konvertera PDF forms till digitala blanketter. Förutom AEM Forms standardfunktioner erbjuder tjänsten flera inbyggda funktioner i molnet, som automatisk skalning, noll driftstopp för uppgraderingar och molnbaserad utvecklingsmiljö.
+Du kan använda [AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/home.html) för att skapa digitala formulär, koppla formulär till befintliga datakällor, integrera formulär med Adobe Sign för att lägga till e-signaturer i formulär, generera arkiveringsdokument (Document of Record, DoR) för att arkivera skickade formulär som PDF-filer. Tjänsten kan också konvertera PDF forms till digitala blanketter. Förutom AEM Forms standardfunktioner erbjuder tjänsten flera inbyggda funktioner i molnet, som automatisk skalning, noll driftstopp för uppgraderingar och molnbaserad utvecklingsmiljö.
 
 Du kan kontakta din Adobe-representant för att få en demo eller anmäla dig till tjänsten.
 
@@ -76,9 +76,9 @@ Du kan kontakta din Adobe-representant för att få en demo eller anmäla dig ti
 
 * Produktdetaljkomponenten kan nu användas och konfigureras på alla innehållssidor
 
-* Lanserade CIF Venia Reference Site - 2021.03.25 som innehåller den senaste CIF Core Components version v1.9.0. Se [CIF Venia Reference Site](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.03.25) för mer information.
+* Lanserade CIF Venia Reference Site - 2021.03.25 som innehåller den senaste CIF Core Components version v1.9.0. Mer information finns i [CIF Venedig-referenswebbplats](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2021.03.25).
 
-* Frisläppta CIF kärnkomponenter v1.9.0. Se [CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.9.0) för mer information.
+* Frisläppta CIF kärnkomponenter v1.9.0. Mer information finns i [CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.9.0).
 
 
 ## Cloud Manager {#cloud-manager}
@@ -92,29 +92,29 @@ Nästa version är planerad till den 8 april 2021.
 
 ### Nyheter {#what-is-new-march}
 
-* Kunder med miljöer med befintliga konfigurationer av anpassade domännamn för [IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/managing-ip-allow-lists.md#pre-existing-cdn), [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md#pre-existing-cdn) och [Anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md#pre-existing-cdn) visa ett meddelande om sina tidigare konfigurationer och kan självbetjäna via användargränssnittet.
+* Kunder som har miljöer med redan befintliga konfigurationer av anpassade domännamn för [IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/managing-ip-allow-lists.md#pre-existing-cdn), [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md#pre-existing-cdn) och [anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md#pre-existing-cdn) kan se ett meddelande om sina tidigare konfigurationer och kan självbetjäna via användargränssnittet.
 
 * Användare med nödvändig behörighet kan nu redigera ett program och göra följande på ett självbetjäningssätt:
 
    * Lägg till Sites-lösning i ett befintligt program med Assets eller omvänt.
-   * Ta bort platser eller resurser från ett befintligt program med både platser och resurser.
+   * Ta bort Sites eller Assets från ett befintligt program med både Sites och Assets.
    * Lägg till andra, outnyttjade lösningsberättigande antingen till ett befintligt program eller som ett nytt program.
 
-* **Uppdatera AEM** etiketten visas nu för båda *Körning av pipeline* och *Aktivitet* skärmar.
+* Etiketten **AEM Push Update** visas nu både för skärmarna *Pipeline Execution* och *Activity*.
 
-* Om en miljö är i viloläge men det även finns en AEM uppdatering tillgänglig, visas **Viloläge** status har företräde framför **Uppdatering tillgänglig**.
+* Om en miljö är i viloläge, men det även finns en tillgänglig AEM, prioriteras statusen **i viloläge** framför **Tillgänglig uppdatering**.
 
-* Användarna kan nu se sin molnhanterarroll(er) genom att välja alternativet Visa molnhanterarroll(er) efter att ha navigerat till ikonen Användarprofil (överst till höger) i Unified Shell.
+* Nu kan användare se sina Cloud Manager-roller genom att välja alternativet Visa Cloud Manager-roller efter att ha navigerat till ikonen Användarprofil (överst till höger) i Unified Shell.
 
 * Etiketten **Ansökan om godkännande** har fått en ny etikett till **Produktionsgodkännande** för större tydlighet.
 
-* The **Version** etiketten har ändrats till **Git-kod** i körningsfönstret för produktionspipeline.
+* Etiketten **Version** har fått en ny etikett till **Git-taggen** i körningsfönstret för produktionspipeline.
 
 * Etiketterna som definierar beteendet när viktiga mätvärden inte uppfyller det definierade tröskelvärdet har märkts om för att återspegla deras verkliga beteende: **Avbryt omedelbart** och **Godkänn omedelbart**.
 
 * Listorna över klass- och metodborttagning har uppdaterats baserat på version `2021.3.4997.20210303T022849Z-210225` av AEM Cloud Service SDK.
 
-* Produktionspipelinen för Cloud Manager kommer nu att innehålla [Anpassade gränssnittstestningar](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing) funktioner.
+* Cloud Manager Production Pipeline kommer nu att innehålla funktionen [Testning av anpassat användargränssnitt](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing).
 
 ### Felkorrigeringar {#bug-fixes-cm-march}
 
@@ -148,8 +148,8 @@ Releasedatum för innehållsöverföringsverktyget v1.3.0 är 4 mars 2021.
 
 ### Nyheter i verktyget Innehållsöverföring {#what-is-new-ctt-march}
 
-* CTT installeras nu på `/apps` i stället för `/libs` Webbläsarbokmärken till vissa sidor kanske inte längre är giltiga.
-* När CTT är installerat måste användaren navigera ytterligare en nivå för att komma till sidan Innehållsöverföring. Se [Använda verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html) för mer information.
+* CTT installeras nu på `/apps` i stället för `/libs` webbläsarbokmärken på vissa sidor kanske inte längre är giltiga.
+* När CTT är installerat måste användaren navigera ytterligare en nivå för att komma till sidan Innehållsöverföring. Mer information finns i [Använda verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html).
 
 ### Felkorrigeringar {#bug-fixes-ctt-march}
 

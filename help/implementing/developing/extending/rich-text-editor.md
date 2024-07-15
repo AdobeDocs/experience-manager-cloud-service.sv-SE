@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Konfigurera RTF-redigeraren {#configure-the-rich-text-editor}
 
-Med RTF-redigeraren får författarna ett stort antal funktioner för att redigera textinnehåll. Ikoner, markeringsrutor, verktygsfält och menyer finns för WYSIWYG-textredigering. Administratörer konfigurerar RTE för att aktivera, inaktivera och utöka de funktioner som är tillgängliga i redigeringskomponenterna. Se hur författare [använd RTE för redigering](/help/sites-cloud/authoring/page-editor/rich-text-editor.md) webbinnehåll.
+Med RTF-redigeraren får författarna ett stort antal funktioner för att redigera textinnehåll. Ikoner, markeringsrutor, verktygsfält och menyer finns för WYSIWYG-textredigering. Administratörer konfigurerar RTE för att aktivera, inaktivera och utöka de funktioner som är tillgängliga i redigeringskomponenterna. Se hur författare [använder RTE för att skapa ](/help/sites-cloud/authoring/page-editor/rich-text-editor.md) webbinnehåll.
 
 De RTE-begrepp och -steg som krävs för att konfigurera den listas nedan.
 
@@ -28,15 +28,15 @@ De RTE-begrepp och -steg som krävs för att konfigurera den listas nedan.
 
 RTE-gränssnittet erbjuder en [responsiv design](/help/sites-cloud/authoring/page-editor/responsive-layout.md) för redigeringsmiljön. Gränssnittet är utformat för att användas på enheter med pekskärm och stationära datorer.
 
-![Verktygsfältet för textredigeraren](assets/rte-toolbar-full-screen-mode.png)
+![Verktygsfältet RTF-redigerare](assets/rte-toolbar-full-screen-mode.png)
 
 *Bild: Verktygsfältet för textredigeraren med alla tillgängliga alternativ aktiverade.*
 
-Verktygsfältet innehåller alternativ för WYSIWYG-redigering. [!DNL Experience Manager] administratörer kan konfigurera de alternativ som är tillgängliga i verktygsfältet i gränssnittet. En omfattande uppsättning redigeringsalternativ finns som standard i [!DNL Experience Manager]. Utvecklare kan anpassa [!DNL Experience Manager] om du vill lägga till fler redigeringsalternativ.
+Verktygsfältet innehåller alternativ för WYSIWYG-redigering. [!DNL Experience Manager]-administratörer kan konfigurera de alternativ som är tillgängliga i verktygsfältet i gränssnittet. En omfattande uppsättning redigeringsalternativ är tillgängliga som standard i [!DNL Experience Manager]. Utvecklare kan anpassa [!DNL Experience Manager] om du vill lägga till fler redigeringsalternativ.
 
 ## Olika redigeringslägen {#editingmodes}
 
-Författare kan skapa och redigera textinnehåll i [!DNL Experience Manager] med de olika komponentlägena. Alternativen i verktygsfältet för att skapa och formatera innehåll och användarupplevelsen i komponenter med RTE-funktioner i olika redigeringslägen varierar beroende på RTE-konfigurationer.
+Författare kan skapa och redigera textinnehåll i [!DNL Experience Manager] med hjälp av de olika komponentlägena. Alternativen i verktygsfältet för att skapa och formatera innehåll och användarupplevelsen i komponenter med RTE-funktioner i olika redigeringslägen varierar beroende på RTE-konfigurationer.
 
 | Redigeringsläge | Redigeringsområde | Rekommenderade funktioner som ska aktiveras |
 |--- |--- |--- |
@@ -53,13 +53,13 @@ Författare kan skapa och redigera textinnehåll i [!DNL Experience Manager] med
 
 Om du vill redigera innehållet på en sida öppnar du innehållet med ett långsamt dubbelklick . Ett kompakt verktygsfält med grundläggande alternativ visas.
 
-![Direktredigering med grundläggande alternativ i verktygsfältet](assets/inline-editing-mode-basic-options.png)
+![Inline-redigering med grundläggande alternativ i verktygsfältet](assets/inline-editing-mode-basic-options.png)
 
 *Bild: Inline-redigering med grundläggande alternativ i verktygsfältet.*
 
 ### Redigering i helskärmsläge {#full-screen-editing}
 
-[!DNL Experience Manager] -komponenter kan öppnas i helskärmsläge som döljer sidinnehållet och tar upp den tillgängliga skärmen. Överväg att redigera i helskärmsläge som en detaljerad version av den infogade redigeringen eftersom den erbjuder de flesta redigeringsalternativen. Du kan öppna den genom att klicka ![Ikon för att öppna RTE i helskärmsläge](assets/rte_fullscreen.png)från det kompakta verktygsfältet när du använder det infogade redigeringsläget.
+[!DNL Experience Manager] komponenter kan öppnas i helskärmsläge som döljer sidinnehållet och tar upp den tillgängliga skärmen. Överväg att redigera i helskärmsläge som en detaljerad version av den infogade redigeringen eftersom den erbjuder de flesta redigeringsalternativen. Du kan öppna den genom att klicka på ikonen ![för att öppna RTE i helskärmsläge](assets/rte_fullscreen.png) från det kompakta verktygsfältet när du använder det infogade redigeringsläget.
 
 I dialogrutans helskärmsläge, tillsammans med ett detaljerat verktygsfält för textredigering, är även de alternativ och komponenter som är tillgängliga i en dialogruta tillgängliga. Det gäller endast för en dialogruta som innehåller RTE tillsammans med andra komponenter.
 
@@ -73,88 +73,88 @@ När du dubbelklickar på en komponent öppnas en dialogruta där du kan rediger
 
 ![Dialogruteredigeringsläge](assets/dialog_editing_modetouchui.png)
 
-*Bild: Dialogruteredigeringsläge.*
+*Figur: Dialogruteredigeringsläge.*
 
 ## Om RTE-plugin-program och associerade funktioner {#aboutplugins}
 
 Funktionerna är tillgängliga via ett antal plugin-program, var och en med:
 
-* A `features` egenskap som är
+* En `features`-egenskap som är
 
    * Används för att aktivera eller inaktivera grundläggande funktioner för det plugin-programmet.
    * Konfigureras med en standardiserad procedur.
 
 * I tillämpliga fall krävs specialkonfigurering för fler egenskaper och alternativ.
 
-Grundfunktionerna i textredigeringsprojektet aktiveras, eller inaktiveras, av värdet på `features` på en nod som är specifik för rätt plugin-program.
+Grundfunktionerna i textredigeraren aktiveras, eller inaktiveras, av värdet för egenskapen `features` på en nod som är specifik för det aktuella plugin-programmet.
 
 I följande tabell visas de aktuella plugin-programmen:
 
-* Plugin-ID:n med en länk till API-dokumentationen. ID används som nodnamn när [aktivera ett plugin-program](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#activateplugin).
-* Tillåtna värden för `features` -egenskap.
+* Plugin-ID:n med en länk till API-dokumentationen. ID används som nodnamn när [ett plugin-program ](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#activateplugin) aktiveras.
+* Tillåtna värden för egenskapen `features`.
 * En beskrivning av de funktioner som tillhandahålls av plugin-programmet.
 
 | Plug-in-ID | funktioner | Beskrivning |
 |--- |--- |--- |
-| redigera | `cut`, `copy`, `paste-default`, `paste-plaintext`, `paste-wordhtml` | [Klipp ut, kopiera och, de tre inklistringslägena](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#textstyles). |
+| redigera | `cut`, `copy`, `paste-default`, `paste-plaintext`, `paste-wordhtml` | [Klipp ut, kopiera och klistra in ](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#textstyles). |
 | findreplace | `find`, `replace` | Sök och ersätt. |
 | format | `bold`, `italic`, `underline` | [Grundläggande textformatering](configure-rich-text-editor-plug-ins.md#textstyles). |
 | image | `image` | Grundläggande bildstöd (dra från innehåll eller Innehållssökning). Beroende på webbläsaren har stödet olika beteenden för författare |
-| tangenter | - | Information om hur du definierar det här värdet finns i [tabbstorlek](configure-rich-text-editor-plug-ins.md#tabsize). |
+| tangenter | - | Mer information om hur du definierar det här värdet finns i [tabbstorlek](configure-rich-text-editor-plug-ins.md#tabsize). |
 | justera | `justifyleft`, `justifycenter`, `justifyright` | Styckejustering. |
-| länkar | `modifylink`, `unlink`, `anchor` | [Hyperlänkar och ankarpunkter](configure-rich-text-editor-plug-ins.md#linkstyles). |
-| listor | `ordered`, `unordered`, `indent`, `outdent` | Detta plugin-program kontrollerar båda [indrag och listor](configure-rich-text-editor-plug-ins.md#indentmargin); inklusive kapslade listor. |
-| felverktyg | `specialchars`, `sourceedit` | Med andra verktyg kan man skriva [specialtecken](configure-rich-text-editor-plug-ins.md#spchar) eller redigera HTML-källan. Du kan också lägga till en [intervall med specialtecken](configure-rich-text-editor-plug-ins.md#definerangechar) om du vill definiera en egen lista. |
-| Paraformat | `paraformat` | Standardstyckeformaten är Stycke, Rubrik 1, Rubrik 2 och Rubrik 3 (`<p>`, `<h1>`, `<h2>`och `<h3>`). Du kan [lägga till fler styckeformat](configure-rich-text-editor-plug-ins.md#paraformats) eller utöka listan. |
+| länkar | `modifylink`, `unlink`, `anchor` | [Hyperlänkar och ankare](configure-rich-text-editor-plug-ins.md#linkstyles). |
+| listor | `ordered`, `unordered`, `indent`, `outdent` | Denna plugin styr både [indrag och listor](configure-rich-text-editor-plug-ins.md#indentmargin), inklusive kapslade listor. |
+| felverktyg | `specialchars`, `sourceedit` | Med andra verktyg kan författare ange [specialtecken](configure-rich-text-editor-plug-ins.md#spchar) eller redigera HTML-källan. Du kan också lägga till ett [intervall med specialtecken](configure-rich-text-editor-plug-ins.md#definerangechar) om du vill definiera en egen lista. |
+| Paraformat | `paraformat` | Standardstyckeformaten är Stycke, Rubrik 1, Rubrik 2 och Rubrik 3 (`<p>`, `<h1>`, `<h2>` och `<h3>`). Du kan [lägga till fler styckeformat](configure-rich-text-editor-plug-ins.md#paraformats) eller utöka listan. |
 | stavningskontroll | `checktext` | [Språkmedveten stavningskontroll](configure-rich-text-editor-plug-ins.md#adddict). |
-| stilar | `styles` | Stöd för formatering med en CSS-klass. [Lägga till nya textformat](configure-rich-text-editor-plug-ins.md#textstyles) om du vill lägga till (eller utöka) egna format för användning med text. |
+| stilar | `styles` | Stöd för formatering med en CSS-klass. [Lägg till nya textformat](configure-rich-text-editor-plug-ins.md#textstyles) om du vill lägga till (eller utöka) egna format för användning med text. |
 | nedsänkt | `subscript`, `superscript` | Tillägg till de grundläggande formaten, med underskript och superskript. |
-| table | `table`, `removetable`, `insertrow`, `removerow`, `insertcolumn`, `removecolumn`, `cellprops`, `mergecells`, `splitcell`, `selectrow`, `selectcolumns` | Se [konfigurera tabellformat](configure-rich-text-editor-plug-ins.md#tablestyles) om du vill lägga till egna format för hela tabeller eller enskilda celler. |
-| ångra | `undo`, `redo` | Historikstorlek för [ångra och göra om](configure-rich-text-editor-plug-ins.md#undohistory) åtgärder. |
+| table | `table`, `removetable`, `insertrow`, `removerow`, `insertcolumn`, `removecolumn`, `cellprops`, `mergecells`, `splitcell`, `selectrow`, `selectcolumns` | Se [konfigurera tabellformat](configure-rich-text-editor-plug-ins.md#tablestyles) för att lägga till egna format för hela tabeller eller enskilda celler. |
+| ångra | `undo`, `redo` | Historikstorlek för [ångra- och gör om](configure-rich-text-editor-plug-ins.md#undohistory)-åtgärder. |
 
 >[!NOTE]
 >
->Plugin-programmet för helskärmsläge stöds inte i dialogruteläge. Användning av `dialogFullScreen` inställning för att konfigurera verktygsfältet för helskärmsläge.
+>Plugin-programmet för helskärmsläge stöds inte i dialogruteläge. Använd inställningen `dialogFullScreen` för att konfigurera verktygsfältet för helskärmsläge.
 
 ## Förstå konfigurationssökvägar och -platser {#understand-the-configuration-paths-and-locations}
 
-The [RTE-redigeringsläge och gränssnitt](#editingmodes) som du anger för författarna bestämmer var konfigurationsinformationen ska placeras när du är [aktivera RTE-plugin-program](configure-rich-text-editor-plug-ins.md#activateplugin). Platserna är:
+[läget för RTE-redigering och gränssnittet](#editingmodes) som du anger för författarna avgör platsen för konfigurationsinformationen när du [aktiverar RTE-plugin-program](configure-rich-text-editor-plug-ins.md#activateplugin). Platserna är:
 
-* Textbunden: `cq:editConfig/cq:inplaceEditing`.
+* Textbundet läge: `cq:editConfig/cq:inplaceEditing`.
 * Helskärmsläge: `cq:editConfig/cq:inplaceEditing`.
 * Dialogruteläge: `cq:dialog`.
-* Dialogruteläge för helskärm: `cq:dialog`.
+* Dialogruteläge i helskärmsläge: `cq:dialog`.
 
 >[!NOTE]
 >
->Namnge inte noden under `cq:inplaceEditing` as `config`. På `cq:inplaceEditing` -nod definierar du följande egenskaper:
+>Namnge inte noden under `cq:inplaceEditing` som `config`. Definiera följande egenskaper på noden `cq:inplaceEditing`:
 >
 >* **Namn**: `configPath`
 >* **Typ**: `String`
 >* **Värde**: sökväg till noden som innehåller den faktiska konfigurationen
 >
->Ge inte RTE-konfigurationsnoden namnet `config`. I annat fall gäller RTE-konfigurationerna bara för administratörerna och inte för användarna i gruppen `content-author`.
+>Ge inte RTE-konfigurationsnoden namnet `config`. Annars gäller RTE-konfigurationerna bara för administratörerna och inte för användarna i gruppen `content-author`.
 
 Konfigurera följande egenskaper som gäller i redigeringsläget för dialogrutor:
 
-* `useFixedInlineToolbar`: Du kan göra så att verktygsfältet RTE är fast i stället för flytande. Ange den här booleska egenskapen som är definierad på RTE-noden med sling:resourceType= `cq/gui/components/authoring/dialog/richtext` till `True`. När den här egenskapen är inställd på `True`, är textredigeringen startad på `foundation-contentloaded` -händelse. Du kan förhindra detta genom att ange egenskapen `customStart` till `True` och aktivera `rte-start` -händelse för att starta RTE-redigering. När den här egenskapen `true`, RTE startar inte vid klickning och detta är standardbeteendet.
+* `useFixedInlineToolbar`: Du kan åtgärda RTE-verktygsfältet i stället för att låta det flyta. Ange den här booleska egenskapen som definierats på RTE-noden med sling:resourceType= `cq/gui/components/authoring/dialog/richtext` till `True`. När den här egenskapen är inställd på `True` startas textredigeringen för händelsen `foundation-contentloaded`. Du kan förhindra detta genom att ange egenskapen `customStart` till `True` och utlösa händelsen `rte-start` för att starta RTE-redigering. När den här egenskapen är `true` startar inte RTE vid klickning och detta är standardbeteendet.
 
-* `customStart`: Ange den här booleska egenskapen som definieras på RTE-noden till `True`för att styra när RTE ska startas genom att händelsen utlöses `rte-start`.
+* `customStart`: Ange den här booleska egenskapen som definierats på RTE-noden till `True` för att styra när RTE ska startas genom att utlösa händelsen `rte-start`.
 
-* `rte-start`: Utlös den här händelsen på `contenteditable-div` av RTE, när redigering av RTE ska börja. Fungerar bara om `customStart` har angetts till `true`.
+* `rte-start`: Utlös den här händelsen på `contenteditable-div` i RTE när du ska börja redigera RTE. Det fungerar bara om `customStart` har angetts till `true`.
 
-När textredigeraren används i dialogrutan med pekfunktioner anger du egenskapen `useFixedInlineToolbar` till `true` för att undvika problem.
+När RTE används i den beröringsaktiverade dialogrutan anger du egenskapen `useFixedInlineToolbar` till `true` för att undvika problem.
 
 ## Aktivera RTE-funktioner genom att aktivera plugin-program {#enable-rte-functionalities-by-activating-plug-ins}
 
 RTE-funktioner är tillgängliga via en serie plugin-program, var och en med features-egenskaper. Du kan konfigurera egenskapen features för att aktivera eller inaktivera de olika funktionerna i varje plugin-program.
 
-Detaljerade konfigurationer av RTE-plugin-program finns i [aktivera och konfigurera RTE-plugin-program](configure-rich-text-editor-plug-ins.md).
+Detaljerade konfigurationer av RTE-plugin-program finns i [Så här aktiverar och konfigurerar du RTE-plugin-program](configure-rich-text-editor-plug-ins.md).
 
 <!-- TBD ENGREVIEW: To confirm if the sample works in CS or not?
 **Sample**: Download [this sample configuration](/help/sites-administering/assets/rte-sample-all-features-enabled-10.zip) that illustrates how to configure RTE. In this package all the features are enabled. -->
 
-The [Textkomponent för kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor) I kan mallredigerare konfigurera många RTE-plugin-program med användargränssnittet som innehållsprinciper, vilket eliminerar behovet av teknisk konfiguration. Innehållsprinciper kan fungera med gränssnittskonfigurationer för textredigering enligt beskrivningen i det här dokumentet. Mer information finns i [skapa sidmallar](/help/sites-cloud/authoring/sites-console/templates.md) och [Dokumentation för grundkomponentutvecklare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html).
+Med textkomponenten [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor) kan mallredigerare konfigurera många RTE-plugin-program med användargränssnittet som innehållsprinciper, vilket eliminerar behovet av teknisk konfiguration. Innehållsprinciper kan fungera med gränssnittskonfigurationer för textredigering enligt beskrivningen i det här dokumentet. Mer information finns i [Skapa sidmallar](/help/sites-cloud/authoring/sites-console/templates.md) och [Dokumentation för grundkomponentsutvecklare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html).
 
 >I referenssyfte finns textstandardkomponenterna (levereras som en del av en standardinstallation) på:
 >
@@ -165,9 +165,9 @@ The [Textkomponent för kärnkomponenter](https://experienceleague.adobe.com/doc
 
 ## Verktygsfältet Konfigurera RTE {#dialogfullscreen}
 
-[!DNL Experience Manager] I kan du konfigurera gränssnittet för RTF-redigeraren på ett annat sätt för de olika redigeringslägena. Standardinställningarna anges nedan. Du kan åsidosätta dessa standardinställningar baserat på dina behov. Du anpassar bara de verktygsfältsfunktioner som du vill ge författarna. Du behöver inte ange alla verktygsfältskonfigurationer.
+I [!DNL Experience Manager] kan du konfigurera gränssnittet för RTF-redigeraren på ett annat sätt för de olika redigeringslägena. Standardinställningarna anges nedan. Du kan åsidosätta dessa standardinställningar baserat på dina behov. Du anpassar bara de verktygsfältsfunktioner som du vill ge författarna. Du behöver inte ange alla verktygsfältskonfigurationer.
 
-Konfigurera verktygsfältet för `dialogFullScreen`använder du följande exempelkonfiguration.
+Använd följande exempelkonfiguration om du vill konfigurera verktygsfältet för `dialogFullScreen`.
 
 ```java
 <uiSettings jcr:primaryType="nt:unstructured">
@@ -210,13 +210,13 @@ Konfigurera verktygsfältet för `dialogFullScreen`använder du följande exempe
 
 Olika gränssnittsinställningar används för infogat läge och helskärmsläge. Egenskapen toolbar anger verktygsfältets alternativ.
 
-Om till exempel själva alternativet är en funktion (till exempel `Bold`), anges som `PluginName#FeatureName` (till exempel `links#modifylink`).
+Om alternativet i sig själv är en funktion (till exempel `Bold`) anges det som `PluginName#FeatureName` (till exempel `links#modifylink`).
 
 Om alternativet är ett popup-fönster (som innehåller vissa funktioner i ett plugin-program) anges det som `#PluginName` (till exempel `#format`).
 
-Avgränsare (`|`) mellan en grupp alternativ kan anges med `-`.
+Avgränsare (`|`) mellan en grupp med alternativ kan anges med `-`.
 
-Popup-noden under infogat läge eller helskärmsläge innehåller en lista över de popup-fönster som används. Varje underordnad nod under `popovers` Noden namnges efter plugin-programmet (till exempel format). Den har egenskapen &quot;items&quot; som innehåller en lista med funktioner för plugin-programmet (till exempel format#bold).
+Popup-noden under infogat läge eller helskärmsläge innehåller en lista över de popup-fönster som används. Varje underordnad nod under noden `popovers` namnges efter plugin-programmet (till exempel format). Den har egenskapen &quot;items&quot; som innehåller en lista med funktioner för plugin-programmet (till exempel format#bold).
 
 ## RTE-inställningar (User Interface Settings) och innehållsprinciper {#rtecontentpolicies}
 
@@ -228,7 +228,7 @@ De tillgängliga alternativen i textredigeraren flödar nedåt från användargr
 * Om användargränssnittskonfigurationen för textredigeraren har tagits bort eller inte aktiverar ett objekt kan innehållsprincipen inte konfigurera det.
 * En författare har bara tillgång till funktioner som är tillgängliga i användargränssnittskonfigurationerna och i innehållsprinciperna.
 
-Du kan till exempel se [Dokumentation för komponenten Text Core](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor).
+Du kan till exempel se dokumentationen för [textkärnkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor).
 
 ## Anpassa mappningen mellan verktygsfältsikoner och kommandon {#iconstoolbar}
 
@@ -239,7 +239,7 @@ Du kan anpassa mappningen mellan koralikonerna som visas i verktygsfältet för 
 1. Skapa noder för enskilda ikoner under den.
 1. På varje enskild ikonnod anger du en korallikon och ett kommando som ska kopplas till ikonen.
 
-Nedan finns ett exempelfragment som mappar kommandot `Bold` till korallikonen med namnet `textItalic`.
+Nedan visas ett exempelfragment som mappar kommandot `Bold` till koralikonen `textItalic`.
 
 ```java
 <text jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" name="./text" useFixedInlineToolbar="{Boolean}true">
@@ -263,24 +263,24 @@ Nedan finns ett exempelfragment som mappar kommandot `Bold` till korallikonen me
 
 ## Kända begränsningar {#known-limitations}
 
-[!DNL Experience Manager] RTE-kapacitet har följande begränsningar:
+[!DNL Experience Manager] RTE-funktionen har följande begränsningar:
 
-* RTE-funktioner stöds endast i [!DNL Experience Manager] komponentdialogrutor. RTE stöds inte i guider eller Foundation-formulär.
+* RTE-funktioner stöds bara i [!DNL Experience Manager] komponentdialogrutor. RTE stöds inte i guider eller Foundation-formulär.
 
 * [!DNL Experience Manager] fungerar inte på hybridenheter. <!-- TBD: Check. This is not mentioned in Known Issue /help/release-notes/known-issues.md-->
 
-* Namnge inte RTE-konfigurationsnoden `config`. I annat fall gäller RTE-konfigurationen bara för administratörerna och inte för användarna i gruppen `content-author`.
+* Ge inte RTE-konfigurationsnoden namnet `config`. Annars gäller RTE-konfigurationen bara för administratörerna och inte för användarna i gruppen `content-author`.
 
 * RTE stöder inte inbäddning av innehåll i en textbunden ram eller en iframe.
 
 ## God praxis och tips {#best-practices-and-tips}
 
 * Aktivera bara plugin-program utan dialogruta för en flytande dialogruta. Plugin-program utan popup-fönster är mindre och lämpar sig bäst för en flytande dialogruta.
-* Aktivera plugin-programmen med större popup-fönster, till exempel `Paste` plugin-program, endast i helskärmsläge eller helskärmsläge. Plugin-program med stor popup-meny behöver mer utrymme på skärmen för att kunna skapa på ett bra sätt.
-* Om du använder anpassade plugin-program för CoralUI3 RTE ska du använda `rte.coralui3` bibliotek.
+* Aktivera plugin-program med större popup-fönster, till exempel plugin-programmet `Paste`, endast i helskärmsläge eller i helskärmsläge. Plugin-program med stor popup-meny behöver mer utrymme på skärmen för att kunna skapa på ett bra sätt.
+* Om du använder anpassade plugin-program för CoralUI3 RTE använder du biblioteket `rte.coralui3`.
 
 >[!MORELIKETHIS]
 >
 >* [Konfigurera RTE-plugin-program](configure-rich-text-editor-plug-ins.md)
->* [Använd RTF-redigerare för att skapa](/help/sites-cloud/authoring/page-editor/rich-text-editor.md)
->* [Konfigurera RTE för hjälpmedelsanpassade webbplatser](rte-accessible-content.md)
+>* [Använd RTF-redigerare för redigering](/help/sites-cloud/authoring/page-editor/rich-text-editor.md)
+>* [Konfigurera RTE för tillgängliga webbplatser](rte-accessible-content.md)

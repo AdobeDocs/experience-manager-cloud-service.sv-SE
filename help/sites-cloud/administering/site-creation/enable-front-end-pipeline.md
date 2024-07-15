@@ -18,7 +18,7 @@ Lär dig hur du kan aktivera frontend-flödet för befintliga webbplatser så at
 
 ## Ökning {#overview}
 
-Det är en mekanism som snabbt kan driftsätta endast koden på era webbplatser baserat på [webbplatsteman](site-themes.md) och [webbplatsmallar.](site-templates.md)
+Framsidespipelinen är en mekanism som snabbt kan distribuera endast startkoden för dina webbplatser baserat på [webbplatsteman](site-themes.md) och [webbplatsmallar.](site-templates.md)
 
 I stället för att använda den fullständiga stacken hanteras bara den färdiga koden av den här pipeline som gör processen snabbare och gör det även möjligt för gränssnittsutvecklare att enkelt och snabbt anpassa din webbplats utan att känna till AEM.
 
@@ -26,7 +26,7 @@ Platser som är baserade på platsmallar kan som standard använda frontendspipe
 
 >[!TIP]
 >
->Om du inte känner till produktionsflödet och hur du snabbt distribuerar webbplatser med hjälp av det och webbplatsmallar kan du läsa [Snabbskapande av webbplats - resa](/help/journey-sites/quick-site/overview.md) för en introduktion.
+>Om du inte är bekant med frontend-flödet och hur du snabbt distribuerar webbplatser med hjälp av det och webbplatsmallar kan du få en introduktion i [Snabbskapande webbplatsskaparresa](/help/journey-sites/quick-site/overview.md) .
 
 Om du inte har skapat din befintliga webbplats baserat på webbplatsmallar och teman, kan AEM konfigurera din webbplats så att den läser in de teman som distribueras med Front End Pipeline ovanpå befintliga klientbibliotek.
 
@@ -34,9 +34,9 @@ Om du inte har skapat din befintliga webbplats baserat på webbplatsmallar och t
 
 När du aktiverar frontend-flödet för en webbplats gör AEM följande ändringar i platsstrukturen.
 
-* Alla sidor på webbplatsen kommer att innehålla ytterligare en CSS- och JS-fil, som kan ändras genom att distribuera uppdateringar via en dedikerad molnhanterare.
+* Alla sidor på webbplatsen kommer att innehålla ytterligare en CSS- och JS-fil, som kan ändras genom att distribuera uppdateringar via en dedikerad frontpipeline från Cloud Manager.
 * De tillagda CSS- och JS-filerna kommer från början att vara tomma, men en temakällsmapp kan laddas ned för att starta mappstrukturen som gör det möjligt att distribuera CSS- och JS-koduppdateringar via den pipeline som läggs till.
-* Den här ändringen kan bara ångras av en utvecklare genom att ta bort `SiteConfig` och `HtmlPageItemsConfig` noder som skapas under den här åtgärden `/conf/<site-name>/sling:configs`.
+* Den här ändringen kan bara ångras av en utvecklare genom att `SiteConfig`- och `HtmlPageItemsConfig`-noderna som skapas under `/conf/<site-name>/sling:configs` tas bort.
 
 >[!NOTE]
 >
@@ -44,16 +44,16 @@ När du aktiverar frontend-flödet för en webbplats gör AEM följande ändring
 
 ## Krav {#requirements}
 
-AEM kan automatiskt anpassa din befintliga webbplats så att den använder frontendriet. För att kunna göra detta måste webbplatsen använda [v2 eller senare av Page Component of the Core Components.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/page.html)
+AEM kan automatiskt anpassa din befintliga webbplats så att den använder frontendriet. Om du vill kunna göra detta måste webbplatsen använda [v2 eller senare av Page Component i Core Components.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/page.html)
 
 ## Aktivera frontendspipeline {#enabling}
 
-Du aktiverar din plats från webbplatskonsolen med hjälp av [Platsjärnvägar.](site-rail.md)
+Du aktiverar din plats från webbplatskonsolen med hjälp av [platslisten.](site-rail.md)
 
-1. Logga in AEM och navigera till webbplatsen via **Global navigering** > **Webbplatser**.
+1. Logga in AEM och navigera till din webbplats via **Global navigering** > **Webbplatser**.
 1. Välj din plats i konsolen. Markera platsens rot och inte underordnade sidor.
-1. När webbplatsen är markerad öppnar du [järnvägsväljare](/help/sites-cloud/authoring/basic-handling.md#rail-selector) till vänster och välj **Plats**.
-1. I **Plats** klicka på knappen **Aktivera frontdelspipeline**.
+1. När platsen är markerad öppnar du [spårväljaren](/help/sites-cloud/authoring/basic-handling.md#rail-selector) till vänster och väljer **Plats**.
+1. Klicka på knappen **Aktivera frontpipeline** i **webbplatsens**-spår.
 
    ![Aktivera frontendpipeline](/help/sites-cloud/administering/assets/enable-front-end-pipeline.png)
 
@@ -62,5 +62,5 @@ Du aktiverar din plats från webbplatskonsolen med hjälp av [Platsjärnvägar.]
 Nu är webbplatsen redo att använda frontendriet. Om du vill veta mer om frontend-flödet och hur du hanterar ditt webbplatstema kan du läsa:
 
 * [Använda webbplatsservern för att hantera ditt webbplatstema](site-rail.md)
-* [Skapa snabbt webbplatser](/help/journey-sites/quick-site/overview.md) - Den här dokumentationsresan ger dig och en heltäckande översikt över processen att snabbt distribuera en webbplats med hjälp av pipeline i gränssnittet och verktyget för att skapa snabbwebbplatser.
-* [CI/CD-rör](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end) - I det här dokumentet beskrivs frontendjörledningen i samband med rörledningar i full hög och på webbnivå.
+* [Snabbresa för att skapa webbplats](/help/journey-sites/quick-site/overview.md) - Den här dokumentationsresan ger dig och en heltäckande översikt över processen att snabbt distribuera en webbplats med hjälp av frontendspipelinen och verktyget Skapa snabbwebbplats.
+* [CI/CD-pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end) - Det här dokumentet beskriver frontendpipelinen i kontexten för hela stacken och på webbskiktet.

@@ -1,6 +1,6 @@
 ---
-title: Versionsinformation om 2021.11.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation om 2021.11.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Versionsinformation för version 2021.11.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation för version 2021.11.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 86f8ddd1-af51-4874-9111-0935b5a162c1
 feature: Release Information
 role: Admin
@@ -21,45 +21,45 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 >[!NOTE]
 >
->Se [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html) för information om dokumentationsuppdateringar som inte är direkt relaterade till en release.
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
 
 ## Releasedatum {#release-date}
 
-Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2021.11.0) är 16 december 2021.
+Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2021.11.0) är 16 december 2021.
 Följande version (2022.1.0) är den 3 februari 2022.
 
 ## Släpp video {#release-video}
 
-Ta en titt på [Versionsöversikt december 2021](https://video.tv.adobe.com/v/339278) video med en sammanfattning av funktioner som lagts till i version 2021.11.0 (november 2021).
+Titta på videon [Versionsöversikt för december 2021](https://video.tv.adobe.com/v/339278) om du vill se en sammanfattning av funktioner som lagts till i version 2021.11.0 (november 2021).
 
-## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
+## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
 ### Nya funktioner i [!DNL Assets] {#assets-features}
 
 * Dynamic Media Image Smart Crop och Swatch drivs nu av de senaste Sensei-tjänsterna som genererar förbättrade beskärningar och färgrutor. Dessutom har en förbättring startats för att generera olika beskärningsinnehåll, med samma proportioner men med olika upplösningar. Dessutom behålls alla manuella redigeringar vid ombearbetningen om bredden och höjden inte ändras i bildprofilen.
 
-### Nya funktioner i [!DNL Assets] prerelease channel {#assets-prerelease-features}
+### Nya funktioner i betaversionskanalen [!DNL Assets] {#assets-prerelease-features}
 
-* [!DNL Dynamic Media] - Du kan nu använda AEM Dynamic Media gränssnitt för att konfigurera allmänna inställningar och publiceringsinställningar i stället för att behöva gå igenom Dynamic Media Classic datorprogram.
+* [!DNL Dynamic Media] - Du kan nu använda AEM Dynamic Media-gränssnitt för att konfigurera allmänna inställningar och Publish-inställningar i stället för att behöva gå igenom Dynamic Media Classic skrivbordsprogram.
 
-* [!DNL Dynamic Media] har nu stöd för inhämtning, förhandsgranskning, uppspelning och publicering av MXF-videor. Anteckningar och videor som kan köpas för MXF-videor stöds ännu inte.
+* [!DNL Dynamic Media] har nu stöd för hämtning, förhandsgranskning, uppspelning och publicering för MXF-videor. Anteckningar och videor som kan köpas för MXF-videor stöds ännu inte.
 
-* När du har konfigurerat en anslutning mellan distributioner av fjärr-DAM och platser, blir resurserna på fjärr-DAM tillgängliga i Sites-distributionen. Nu kan du utföra [uppdatera, ta bort, byta namn på och flytta åtgärder](/help/assets/use-assets-across-connected-assets-instances.md) på DAM-fjärrresurserna eller -mapparna. Uppdateringarna, med viss fördröjning, är automatiskt tillgängliga i Sites-distributionen.
+* När du har konfigurerat en anslutning mellan distributioner av fjärr-DAM och platser, blir resurserna på fjärr-DAM tillgängliga i Sites-distributionen. Du kan nu utföra [uppdaterings-, borttagnings-, namnbyt- och flyttåtgärderna](/help/assets/use-assets-across-connected-assets-instances.md) på fjärr-DAM-resurser eller -mappar. Uppdateringarna, med viss fördröjning, är automatiskt tillgängliga i Sites-distributionen.
 
-## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
+## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms}
 
-* **Externt AEM arbetsflödesdata för säker bearbetning**: Du kan lagra data AEM arbetsflöden (AEM data från arbetsflödesvariabler) som innehåller känsliga dataelement (SPD) i en kundhanterad databas för säker bearbetning. Dataelementen och arbetsflödesvariablerna lagras inte i AEM och hämtas på begäran från en kundhanterad databas när arbetsflödet bearbetas.
+* **Gör AEM arbetsflödesdata externt för säker bearbetning**: Du kan lagra processdata AEM arbetsflödesdata (AEM arbetsflödesvariabeldata) som innehåller känsliga SPD-element (Personal Data) i en kundhanterad databas för säker bearbetning. Dataelementen och arbetsflödesvariablerna lagras inte i AEM och hämtas på begäran från en kundhanterad databas när arbetsflödet bearbetas.
 
-### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms}
+### Nya funktioner som är tillgängliga i betaversionskanalen i [!DNL Forms] {#prerelease-features-forms}
 
 * **[!DNL AEM Forms as a Cloud Service - Communications]**: [Kommunikations-API:er](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/using-communications/aem-forms-cloud-service-communications.html) hjälper dig att kombinera en mall och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge och gruppläge. Med API:erna kan du skapa program som gör att du kan:
 
    * Generera dokument genom att fylla i mallfiler (PDF och XDP) med XML-data.
    * Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
 
-* **Anpassade teckensnitt för dokument i dokumentformat och PDF som skapats med kommunikationsAPI:er**: Nu kan du använda typsnitt som är godkända av varumärket i PDF-dokument som genererats med kommunikations-API:er för att anpassa dig till organisationens krav.
+* **Anpassade teckensnitt för dokument med dokumentinformation och PDF som skapats med kommunikations-API:er**: Du kan nu använda teckensnitt som godkänts av varumärket i PDF-dokument som skapats med kommunikations-API:er för att anpassa dem efter organisationens krav.
 
 * **Forms Portal**: Du kan använda [Forms Portal](/help/forms/configure-forms-portal.md) för att lista dina publicerade adaptiva formulär på en AEM Sites-sida. Det hjälper en besökare att hitta alla tillgängliga formulär. Dessutom kan besökaren använda formulärportalen för att spara och komma åt utkast av ett adaptivt formulär och titta på PDF-versionen av ett skickat adaptivt formulär.
 
@@ -69,7 +69,7 @@ Ta en titt på [Versionsöversikt december 2021](https://video.tv.adobe.com/v/33
 
 * Utökade myAccount-komponenter som baseras på Commerce utbyggbara Premiere-komponenter
 
-![Utökade komponenter för myAccount](/help/assets/CIF/extended-myAccount-components.png)
+![Utökade komponenter för mitt konto](/help/assets/CIF/extended-myAccount-components.png)
 
 * Författare kan skapa ad hoc-produkter för Commerce Recommendations med hjälp av ytterligare rekommendationstyper
 
@@ -86,10 +86,10 @@ Nästa version är planerad till 9 december 2021.
 
 ### Nyheter {#what-is-new-cm-nov}
 
-* Användare kan nu använda nya frontledningslinjer för att exklusivt distribuera slutkod på ett accelererat sätt. Se [Front End Pipelines för Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end) om du vill veta mer.
+* Användare kan nu använda nya frontledningslinjer för att exklusivt distribuera slutkod på ett accelererat sätt. Mer information finns i [Cloud Manager Front End Pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end).
 
   >[!IMPORTANT]
-  >Du måste ha AEM version `2021.10.5933.20211012T154732Z` eller senare om du vill använda nya frontledningslinjer.
+  >Du måste ha AEM version `2021.10.5933.20211012T154732Z` eller senare för att kunna använda nya frontendpipelines.
 
 * Varaktigheten i bildrutorna för kodkvalitet minskar avsevärt genom att utföra kodanalysen på ett mer effektivt sätt utan att behöva skapa en hel AEM. Denna förändring rullar ut progressivt under de veckor som följer efter releasen.
 
@@ -99,7 +99,7 @@ Nästa version är planerad till 9 december 2021.
 
 * Miljöskapande är nu tillgängligt via offentligt exponerade API.
 
-* The `x-request-id` svarshuvudet är nu synligt i API-uppspelningen på [www.adobe.io](https://www.adobe.io/). Det här huvudet är användbart när du skickar in kundvårdsproblem för felsökning.
+* Svarshuvudet `x-request-id` visas nu i API-spelarvyn på [www.adobe.io](https://www.adobe.io/). Det här huvudet är användbart när du skickar in kundvårdsproblem för felsökning.
 
 * Som användare ser jag att Pipeline-kortet med noll rörledningar ger mig lämplig vägledning.
 
@@ -119,7 +119,7 @@ Nästa version är planerad till 9 december 2021.
 
 * Pipeline PATCH API misslyckas om det inte finns någon distributionsfas.
 
-* The `ClientlibProxyResourceCheck` kvalitetsregeln genererade falskt positiva problem när det fanns klientbibliotek med gemensamma grundsökvägar.
+* Kvalitetsregeln `ClientlibProxyResourceCheck` gav upphov till falskt positiva problem när det fanns klientbibliotek med gemensamma grundsökvägar.
 
 * Felmeddelandet när det maximala antalet databaser har uppnåtts specificerade inte orsaken till felet.
 
@@ -140,4 +140,4 @@ Releasedatum för Best Practices Analyzer v2.1.22 är 1 december 2021.
 ### Felkorrigeringar {#bug-fixes-bpa}
 
 * Identifieringen av Foundation-komponenter förfinades för att minska falska negativ.
-* För AEM Forms-kunder gäller BPA-meddelanden `EMAIL_PDF_SUBMIT_ACTION` som inte är tillgänglig på AEM as a Cloud Service har åtgärdats.
+* För AEM Forms-kunder har BPA-meddelanden om att `EMAIL_PDF_SUBMIT_ACTION` inte är tillgänglig på AEM as a Cloud Service korrigerats.

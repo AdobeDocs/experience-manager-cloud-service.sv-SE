@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Inlämningsåtgärd för anpassat formulär {#configuring-the-submit-action}
 
-<span class="preview"> Adobe rekommenderar att du använder kärnkomponenter för att [lägga till adaptiv Forms på en AEM Sites-sida](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md) eller till [skapa fristående Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md). </span>
+<span class="preview"> Adobe rekommenderar att du använder kärnkomponenter för att [lägga till adaptiv Forms på en AEM Sites-sida](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md) eller för att [skapa fristående adaptiv Forms](/help/forms/creating-adaptive-form-core-components.md). </span>
 
 
 | Version | Artikellänk |
@@ -23,7 +23,7 @@ ht-degree: 0%
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
-Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett anpassat formulär. Den aktiveras när en användare klickar på **[!UICONTROL Submit]** på ett adaptivt formulär. Forms as a Cloud Service, för Adaptive Forms baserat på kärnkomponenter, erbjuder en rad fördefinierade Skicka-åtgärder. Dessa färdiga sändningsåtgärder ger dig möjlighet att:
+Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett anpassat formulär. Den aktiveras när en användare klickar på knappen **[!UICONTROL Submit]** i ett anpassat formulär. Forms as a Cloud Service, för Adaptive Forms baserat på kärnkomponenter, erbjuder en rad fördefinierade Skicka-åtgärder. Dessa färdiga sändningsåtgärder ger dig möjlighet att:
 
 * Skicka enkelt formulärdata via e-post.
 * Initiera Microsoft® Power Automate-flöden eller AEM arbetsflöden när data skickas.
@@ -31,30 +31,30 @@ Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett a
 * Skicka smidigt data till en konfigurerad datakälla med hjälp av FDM (Form Data Model).
 * Skicka enkelt data till en REST-slutpunkt.
 
-Du kan [utöka standardåtgärderna för att skicka](custom-submit-action-form.md). Du kan också anpassa Skicka-åtgärder för organisationsspecifika krav.
+Du kan [utöka standardåtgärderna för att skicka in](custom-submit-action-form.md). Du kan också anpassa Skicka-åtgärder för organisationsspecifika krav.
 
-Om du vill definiera en Skicka-åtgärd för en anpassad version använder du dialogrutan Konfigurera för en **Adaptiv formulärbehållare** -komponenten. Dialogrutan Konfigurera för **Adaptiv formulärbehållare** ingår:
+Använd dialogrutan Konfigurera för en **adaptiv formulärbehållare** om du vill definiera en Skicka-åtgärd för en anpassad formulärbehållare. Konfigurationsdialogrutan för en **adaptiv formulärbehållare** innehåller:
 * Fliken Grundläggande
 * Fliken Formulärdatamodell
 * Fliken Skicka
 
-Du kan definiera egenskaperna för formulärbehållaren i dialogrutan Konfigurera. Mer information om dialogrutan Konfigurera för en formulärbehållarkomponent finns i [klicka här.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/form-container.html)
+Du kan definiera egenskaperna för formulärbehållaren i dialogrutan Konfigurera. [Klicka här om du vill veta mer om dialogrutan Konfigurera för en formulärbehållarkomponent.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/form-container.html)
 
 ## Välj och konfigurera en Skicka-åtgärd för ett anpassat formulär {#select-and-configure-submit-action}
 
 Så här väljer och konfigurerar du en Skicka-åtgärd för formuläret:
 
-1. Öppna innehållsläsaren och välj **[!UICONTROL Guide Container]** som ingår i det adaptiva formuläret.
-1. Klicka på egenskaperna för stödlinjebehållaren ![Stödlinjeegenskaper](/help/forms/assets/configure-icon.svg) -ikon. Dialogrutan Adaptiv formulärbehållare öppnas.
+1. Öppna innehållsläsaren och markera komponenten **[!UICONTROL Guide Container]** i det adaptiva formuläret.
+1. Klicka på ikonen för egenskaper för stödlinjebehållaren ![Egenskaper för stödlinje](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare öppnas.
 
-1. Klicka på  **[!UICONTROL Submission]** -fliken.
+1. Klicka på fliken **[!UICONTROL Submission]**.
 
-   ![Klicka på skiftningsikonen för att öppna dialogrutan Adaptiv formulärbehållare och konfigurera en sändningsåtgärd](/help/forms/assets/adaptive-forms-submit-message.png)
+   ![Klicka på skiftnyckelsikonen för att öppna dialogrutan Adaptiv formulärbehållare och konfigurera en sändningsåtgärd](/help/forms/assets/adaptive-forms-submit-message.png)
 
-1. Välj och konfigurera en **[!UICONTROL Submit action]**, baserat på era behov.
+1. Välj och konfigurera en **[!UICONTROL Submit action]** utifrån dina krav.
 
 Du kan också konfigurera olika åtgärder för att skicka in anpassade formulär.
-* **Omdirigerings-URL/sökväg** - Med det här alternativet kan användaren konfigurera en sida för varje formulär som formuläranvändarna omdirigeras till efter att ha skickat in ett adaptivt formulär.
+* **Omdirigerings-URL/sökväg** - Med det här alternativet kan användaren konfigurera en sida för varje formulär som formuläranvändarna omdirigeras till efter att ha skickat ett anpassat formulär.
 * **Visa meddelande** - Med det här alternativet kan användare lägga till ett meddelande som visas när det adaptiva formuläret har skickats. Den fördefinierade texten tas med i dialogrutan och kan ändras av användaren.
 
 Mer information om följande Skicka-åtgärder finns i:
@@ -74,7 +74,7 @@ Du kan även skicka ett adaptivt formulär till andra lagringskonfigurationer:
 * [Ansluta anpassat formulär till Salesforce-program](/help/forms/aem-forms-salesforce-integration.md)
 * [Ansluta ett anpassat formulär till Microsoft® Dynamics OData](/help/forms/ms-dynamics-odata-configuration.md)
 
-Du kan [anpassa standardåtgärderna för att skicka](custom-submit-action-form.md). Dessutom kan du anpassa Skicka-åtgärder så att de passar specifika organisatoriska krav.
+Du kan [anpassa standardåtgärderna för att skicka ](custom-submit-action-form.md). Dessutom kan du anpassa Skicka-åtgärder så att de passar specifika organisatoriska krav.
 
 
 <!--
@@ -213,7 +213,7 @@ If end-user bypass those validations and submit the forms, the server again perf
 
 Som en del av AEM riktlinjer för säkerhet och skärpa konfigurerar du anpassade felsidor som 400.jsp, 404.jsp och 500.jsp. Dessa hanterare anropas när ett formulär 400-, 404- eller 500-fel skickas. Hanterarna anropas också när dessa felkoder aktiveras på Publish-noden. Du kan också skapa JSP-sidor för andra HTTP-felkoder.
 
-När du förifyller en formulärdatamodell (FDM), eller schemabaserad adaptiv form med XML- eller JSON-data, till ett schema som inte innehåller data `<afData>`, `<afBoundData>`och `</afUnboundData>` -taggar, försvinner data i obegränsade fält i det adaptiva formuläret. Schemat kan vara ett XML-schema, ett JSON-schema eller en FDM (Form Data Model). Obegränsade fält är adaptiva formulärfält utan `bindref` -egenskap.
+När du förifyller en formulärdatamodell (FDM), eller schemabaserad adaptiv form med XML- eller JSON-dataklagomål till ett schema som inte innehåller `<afData>` -, `<afBoundData>` - och `</afUnboundData>` -taggar, förloras data i obegränsade fält i det adaptiva formuläret. Schemat kan vara ett XML-schema, ett JSON-schema eller en FDM (Form Data Model). Obegränsade fält är adaptiva formulärfält utan egenskapen `bindref`.
 
 <!-- For more information, see [Customizing Pages shown by the Error Handler](/help/sites-developing/customizing-errorhandler-pages.md). -->
 

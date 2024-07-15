@@ -23,7 +23,7 @@ Dessa åtgärder omfattar:
 * Att hämta resurser som ligger över det angivna gränsvärdet från en fjärrdistribution av Experience Manager.
 * Att öppna Live-kopior.
 
-Du kan visa status för asynkrona jobb från **[!UICONTROL Background Operations]** instrumentpanel på **Global navigering** > **verktyg** > **Allmänt** > **Jobb**.
+Du kan visa status för asynkrona jobb från kontrollpanelen **[!UICONTROL Background Operations]** på **Global navigering** > **Verktyg** > **Allmänt** > **Jobs**.
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ När AEM bearbetar en åtgärd asynkront får du ett meddelande i din [inkorg](/
 
 Gå till sidan **[!UICONTROL Background Operations]** för att se detaljerad status gällande asynkrona åtgärder.
 
-1. I gränssnittet Experience Manager väljer du **Global navigering** > **verktyg** > **Allmänt** > **Jobb**.
+1. I Experience Manager-gränssnittet väljer du **Global navigering** > **Verktyg** > **Allmänt** > **Jobb**.
 
 1. Granska informationen om åtgärderna på sidan **[!UICONTROL Background Operations]**.
 
@@ -77,7 +77,7 @@ Det finns flera alternativ runt asynkrona jobb som kan konfigureras. I följande
 
 >[!NOTE]
 >
->[OSGi-konfigurationer](/help/implementing/deploying/configuring-osgi.md#creating-osgi-configurations) anses ha muterbart innehåll och sådana konfigurationer måste distribueras som ett innehållspaket för en produktionsmiljö.
+>[OSGi-konfigurationer](/help/implementing/deploying/configuring-osgi.md#creating-osgi-configurations) betraktas som muterbart innehåll och alla sådana konfigurationer måste distribueras som ett innehållspaket för en produktionsmiljö.
 
 ### Töm slutförda jobb {#purging-completed-jobs}
 

@@ -9,7 +9,7 @@ hidefromtoc: true
 exl-id: 2488f813-df15-4dbb-8747-f827ee5925e1
 source-git-commit: aa7429d9ca9f67979303c0b85c9dbd5b8c74c05c
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
@@ -26,10 +26,10 @@ När du begär felrapporten skickar Adobe Dynamic Media-teamet rapporten med e-p
 
 Du kan begära en felrapport en gång i månaden för ett visst företag.
 
-**Så här begär du en felrapport för Dynamic Media URL:er som inte kan levereras:**
+**Så här begär du en felrapport för Dynamic Media-leverans-URL:er som inte fungerar:**
 
-1. [Skicka e-post till reports-dynamic-media@adobe.com](mailto:reports-dynamic-media@adobe.com) med det företagsnamn som är kopplat till ditt Dynamic Media-konto.
+1. [Skicka ett e-postmeddelande till reports-dynamic-media@adobe.com](mailto:reports-dynamic-media@adobe.com) med det företagsnamn som är associerat med ditt Dynamic Media-konto.
 
-   Om du inte känner till företagsnamnet kan du läsa [Dynamic Media Configuration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/config-dm.html?lang=en#configuring-dynamic-media-cloud-services) sida in **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media Configuation]**. Klicka på Dynamic Media Configuration Browser **[!UICONTROL global]** väljer du *[Dynamic_Media_folder_icon]* kryssruta och sedan markera **[!UICONTROL Edit]**. Du måste ha administratörsbehörighet i AEM för att komma åt sidan Dynamic Media-konfiguration.
+   Om du inte känner till företagsnamnet kan du gå till sidan [Dynamic Media-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/config-dm.html?lang=en#configuring-dynamic-media-cloud-services) i **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media Configuation]**. Klicka på **[!UICONTROL global]** på Dynamic Media Configuration Browser-sidan, markera kryssrutan *[Dynamic_Media_folder_icon]* och välj sedan **[!UICONTROL Edit]**. Du måste ha administratörsbehörighet i AEM för att komma åt sidan Dynamic Media-konfiguration.
 
    ![Öppnar konfigurationssidan för Dynamic Media.](/help/assets/dynamic-media/assets/reporting-accessdmconfig.png)

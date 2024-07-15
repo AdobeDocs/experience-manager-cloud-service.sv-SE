@@ -24,15 +24,15 @@ Med AEM snabbverktyg kan andra användare snabbt skapa en webbplats från grunde
 
 Med verktyget Skapa snabbwebbplats kan du snabbt anpassa temat och formatet för AEM (JavaScript, CSS och statiska resurser). Detta gör att gränssnittsutvecklaren, som inte behöver ha någon kunskap om AEM, kan arbeta separat och parallellt med innehållsskaparna. Den AEM administratören laddar ned webbplatstemat och skickar det till den frontendutvecklare som anpassar det med sina favoritverktyg och sedan implementerar ändringarna i den AEM koddatabasen, som sedan distribueras.
 
-Det här dokumentet fokuserar på att skapa webbplatser med verktyget Skapa snabbwebbplats. Om du vill ha en översikt över arbetsflödet för att skapa och anpassa webbplatser går du till [AEM för att skapa webbplatser snabbt](/help/journey-sites/quick-site/overview.md)
+Det här dokumentet fokuserar på att skapa webbplatser med verktyget Skapa snabbwebbplats. Om du vill ha en översikt över arbetsflödet för att skapa och anpassa webbplatser läser du [AEM Skapa snabbwebbplats](/help/journey-sites/quick-site/overview.md)
 
 ## Struktur för planeringsplats {#structure}
 
-Ta tid till att fundera över webbplatsens syfte och planerade innehåll långt i förväg. Detta styr hur du utformar webbplatsens struktur. En bra webbplatsstruktur har stöd för enkel navigering och innehållsidentifiering för webbplatsens besökare och har stöd för olika AEM funktioner som [hantering och översättning av flera webbplatser](/help/sites-cloud/administering/msm-and-translation.md).
+Ta tid till att fundera över webbplatsens syfte och planerade innehåll långt i förväg. Detta styr hur du utformar webbplatsens struktur. En bra webbplatsstruktur stöder enkel navigering och innehållsidentifiering för webbplatsens besökare och stöder olika AEM funktioner som [hantering av flera webbplatser och översättning](/help/sites-cloud/administering/msm-and-translation.md).
 
 >[!TIP]
 >
->[WKND-referensplatsen](https://wknd.site) innehåller en implementering av bästa praxis för en fullt fungerande varumärkeswebbplats för upplevelser utomhus. Se hur en välbyggd AEM är strukturerad.
+>[WKND-referenswebbplatsen ](https://wknd.site) innehåller en implementering av bästa praxis för en fullt fungerande varumärkeswebbplats för upplevelser utomhus. Se hur en välbyggd AEM är strukturerad.
 
 ## Webbplatsmallar {#site-templates}
 
@@ -56,11 +56,11 @@ Det är enkelt att använda en mall för att skapa en plats.
 
    * `https://<your-author-environment>.adobeaemcloud.com/sites.html/content`
 
-1. Välj **Skapa** längst upp till höger på skärmen och i listrutan väljer **Plats från mall**.
+1. Välj **Skapa** längst upp till höger på skärmen och välj **Plats från mall** på den nedrullningsbara menyn.
 
    ![Skapa en plats från en mall](../assets/create-site-from-template.png)
 
-1. Välj en befintlig mall i den vänstra panelen eller på **Importera** längst upp i den vänstra kolumnen om du vill importera en ny mall.
+1. I guiden Skapa plats väljer du en befintlig mall på den vänstra panelen eller på **Importera** högst upp i den vänstra kolumnen om du vill importera en ny mall.
 
    ![Guiden Skapa webbplats](../assets/site-creation-wizard.png)
 
@@ -76,13 +76,13 @@ Det är enkelt att använda en mall för att skapa en plats.
 
    * Platsens titel visas i webbläsarens namnlist.
    * Webbplatsnamnet blir en del av webbadressen.
-   * Platsnamnet måste uppfylla [AEM sidnamnkonventioner](/help/sites-cloud/authoring/sites-console/organizing-pages.md#page-name-restrictions-and-best-practices).
+   * Webbplatsnamnet måste uppfylla [AEM regler för sidnamngivning](/help/sites-cloud/authoring/sites-console/organizing-pages.md#page-name-restrictions-and-best-practices).
 
-1. Välj **Skapa** och webbplatsen skapas från webbplatsmallen.
+1. Välj **Skapa** så skapas webbplatsen från webbplatsmallen.
 
    ![Information om den nya platsen](../assets/create-site-details.png)
 
-1. I bekräftelsedialogrutan väljer du **Klar**.
+1. Välj **Klar** i bekräftelsedialogrutan som visas.
 
    ![Dialogrutan Slutfört](../assets/success.png)
 
@@ -96,8 +96,8 @@ Innehållsförfattare kan nu börja skriva!
 
 Om webbplatsen kräver anpassning utöver de tillgängliga mallarna finns det flera alternativ.
 
-* Om webbplatsens struktur eller det ursprungliga innehållet måste justeras, [webbplatsmallen kan anpassas efter dina behov](site-templates.md).
-* Om platsens format måste justeras, [temat kan hämtas och anpassas](/help/journey-sites/quick-site/overview.md).
-* Om webbplatsfunktionaliteten måste justeras [sajten kan anpassas helt](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
+* Om webbplatsens struktur eller det ursprungliga innehållet måste justeras kan [platsmallen anpassas efter dina behov](site-templates.md).
+* Om webbplatsens format måste justeras kan du [hämta och anpassa webbplatstemat](/help/journey-sites/quick-site/overview.md).
+* Om webbplatsfunktionaliteten måste justeras kan [platsen anpassas helt](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
 
 Alla anpassningar bör göras med stöd av en utvecklingsteam.

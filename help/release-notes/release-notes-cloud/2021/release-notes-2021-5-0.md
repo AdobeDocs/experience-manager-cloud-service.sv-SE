@@ -1,6 +1,6 @@
 ---
-title: Versionsinformation för 2021.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för 2021.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Versionsinformation för version 2021.5.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation för version 2021.5.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 3f9d7339-7e37-4702-821e-f2b03cd7e224
 feature: Release Information
 role: Admin
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 >[!NOTE]
 >
->Se [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html) för information om dokumentationsuppdateringar som inte är direkt relaterade till en release.
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
 
 ## Releasedatum {#release-date}
 
@@ -29,43 +29,43 @@ Följande version (2021.6.0) kommer att vara den 28 juni 2021.
 
 ## AEM as a Cloud Service Foundation {#foundation}
 
-### Nyheter i AEM as a Cloud Service grunden {#what-is-new-foundation}
+### Nyheter i AEM as a Cloud Service Foundation {#what-is-new-foundation}
 
-* [Förhandsversion - kanal](/help/release-notes/prerelease.md): Förgranska kommande funktioner under en hel månad innan de publiceras i produktion!
+* [Förhandsversion av kanal](/help/release-notes/prerelease.md): Förhandsgranska kommande funktioner under en hel månad innan de publiceras live!
 
-* [API-borttagning](/help/release-notes/deprecated-removed-features.md): en lista över de senaste inaktuella API:erna för AEM as a Cloud Service finns tillgänglig.
+* [API-borttagning](/help/release-notes/deprecated-removed-features.md): det finns en lista över de senaste inaktuella API:erna för AEM as a Cloud Service.
 
 * [AEM as a Cloud Service SDK Build Analyzer Maven Plugin](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html): Uppdatera dina maven-projekt till den senaste versionen, som innehåller en inaktuell Java API-kontroll och andra förbättringar.
 
-## [!DNL Adobe Experience Manager Sites] som [!DNL Cloud Service] {#sites}
+## [!DNL Adobe Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 
 ### Nyheter i [!DNL Sites] {#what-is-new-sites}
 
-* Du kommer snart att kunna verifiera innehåll på en ny [Förhandsgranskningsnivå](/help/sites-cloud/authoring/sites-console/previewing-content.md) för att simulera det slutliga utseendet och känslan på samma sätt som i publiceringsskiktet. Detta aktiveras av guiden AEM Sites Managed Publication, som nu låter dig välja ett publiceringsmål mellan Publicera eller Förhandsgranska. Du kommer sedan åt upplevelser på förhandsgranskning via en dedikerad URL. Efter validering i förhandsgranskning kan innehåll publiceras från författare till publicering som vanligt. Om du aktiverar förhandsgranskningstjänsten i AEM as a Cloud Service miljöer kommer den gradvis att lanseras under de närmaste veckorna.
+* Du kommer snart att kunna verifiera innehåll på ett nytt [förhandsgranskningssteg](/help/sites-cloud/authoring/sites-console/previewing-content.md) för att simulera det slutliga utseendet och utseendet som på Publish-nivån. Detta aktiveras av guiden AEM Sites Managed Publication, som nu låter dig välja ett publiceringsmål mellan Publish eller Preview. Du kommer sedan åt upplevelser på förhandsgranskning via en dedikerad URL. När du har validerat Förhandsgranska kan innehåll publiceras från Författare till Publish som vanligt. Att aktivera förhandsgranskningstjänsten i AEM as a Cloud Service-miljöer kommer gradvis att lanseras under de närmaste veckorna.
 
-## [!DNL Adobe Experience Manager Assets] som [!DNL Cloud Service] {#assets}
+## [!DNL Adobe Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
 ### Nyheter i [!DNL Assets] {#what-is-new-assets}
 
-* Du kan hämta resurser som delas med funktionen Länkdelning. Nedladdningen använder nu en asynkron tjänst som ger snabbare och oavbruten nedladdning, även för mycket stora nedladdningar. Se [ladda ned resurser](/help/assets/download-assets-from-aem.md#link-share-download).
+* Du kan hämta resurser som delas med funktionen Länkdelning. Nedladdningen använder nu en asynkron tjänst som ger snabbare och oavbruten nedladdning, även för mycket stora nedladdningar. Se [hämta resurser](/help/assets/download-assets-from-aem.md#link-share-download).
 
-  ![Hämta inkorg](/help/assets/assets/download-inbox.png)
+  ![Hämta inkorgen](/help/assets/assets/download-inbox.png)
 
 ### Nya funktioner i prerelease-kanalen {#what-is-new-assets-prerelease}
 
 * Metadata-scheman kan tillämpas direkt på mappegenskaperna.
 
-  ![Lägg till metadatamatchemat från mappegenskaper](/help/assets/assets/metadata-schema-folder-properties.png)
+  ![Lägg till metadataschema från mappegenskaper](/help/assets/assets/metadata-schema-folder-properties.png)
 
 * Med verktyget Massingestor kan du lägga till metadata vid ett massintag.
 
-* En förbättring av användarupplevelsen visar antalet resurser i en mapp. För över 1 000 resurser i en mapp: [!DNL Assets] visar 1000+.
+* En förbättring av användarupplevelsen visar antalet resurser i en mapp. För mer än 1 000 resurser i en mapp visar [!DNL Assets] 1 000+.
 
   ![Antalet resurser i en mapp visas i gränssnittet](/help/assets/assets/browse-folder-number-of-assets.png)
 
 ### Fel som har åtgärdats i [!DNL Assets] {#assets-bugs-fixed}
 
-* När du överför mycket stora filer kraschar [!DNL Experience Manager desktop app]. (CQ-4320942)
+* När mycket stora filer överförs kraschar [!DNL Experience Manager desktop app]. (CQ-4320942)
 * Alternativen i verktygsfältet är olika när samma samling väljs inifrån en mapp och när den väljs från ett sökresultat. (CQ-4321406)
 
 #### Nyheter i Dynamic Media {#what-is-new-dm}
@@ -73,14 +73,14 @@ Följande version (2021.6.0) kommer att vara den 28 juni 2021.
 * Med DPR (Smart Imaging DPR) (Device Pixel Ratio) och optimering av nätverksbandbredd kan du leverera bilder av högsta kvalitet effektivt på enheter med högupplösta skärmar och begränsad nätverksbandbredd. Mer information finns i [Vanliga frågor om smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md) och [Bildoptimering med nästa generations bildformat WebP och AVIF.](https://medium.com/adobetech/image-optimisation-with-next-gen-image-formats-webp-and-avif-248c75afacc4)
 * Introducerat stöd för nästa generationens AVIF-bildformat i Dynamic Media-leverans (fmt URL-modifierare).
 
-## [!DNL Adobe Experience Manager Forms] som [!DNL Cloud Service] {#forms}
+## [!DNL Adobe Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms}
 
-* **Sammanhangsberoende hjälp**: Kontextuell hjälp har lagts till för redigerare av adaptiva formulär, mallredigerare och temaredigerare som hjälper författare att förstå olika funktioner i redigerare.
-* **Felmeddelanden i egenskapsbläddraren**: Felmeddelanden för varje egenskap i webbläsaren Adaptiva Forms-egenskaper har lagts till. Dessa meddelanden hjälper till att förstå tillåtna värden för ett fält.
+* **Sammanhangsberoende hjälp**: En sammanhangsberoende hjälp har lagts till för adaptiv formulärredigerare, mallredigerare och temaredigerare för att hjälpa författare att förstå olika funktioner i redigerare.
+* **Felmeddelanden i egenskapsläsaren**: Felmeddelanden har lagts till för varje egenskap i webbläsaren Adaptiva Forms-egenskaper. Dessa meddelanden hjälper till att förstå tillåtna värden för ett fält.
 
-### Kommande betafunktion i [!DNL Forms] {#what-is-new-forms-prerelease}
+### Kommande betafunktion för [!DNL Forms] {#what-is-new-forms-prerelease}
 
 Utdata som en molntjänst: Med Output Service kan du kombinera XDP-mallar och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront och asynkront gruppläge. Med Output Service kan du skapa program som gör att du kan:
 
@@ -112,7 +112,7 @@ Nästa version är planerad till 3 juni 2021.
 
 * Databasslutpunkten i det offentliga API:t innehåller nu Git-URL:en.
 
-* Distributionsloggen som hämtas av en Cloud Manager-användare är mer insiktsfull och innehåller information om fel och lyckade scenarier.
+* Distributionsloggen som laddas ned av en Cloud Manager-användare är mer insiktsfull och innehåller information om fel och lyckade scenarier.
 
 * Intermittenta fel som uppstod när koden skulle skickas till Adobe Git har nu åtgärdats.
 
@@ -130,13 +130,13 @@ Nästa version är planerad till 3 juni 2021.
 
 * Ibland kan användaren se en grön&quot;aktiv&quot; status bredvid ett IP-Tillåtelselista även när konfigurationen inte har distribuerats.
 
-* I stället för att ta bort &quot;borttagna&quot;-variabler skulle API:t för pipelines-variabler bara markera dem med status **BORTTAGEN**.
+* I stället för att ta bort &#39;borttagna&#39;-variabler skulle API:t för pipelines-variabler bara markera dem med statusen **DELETED**.
 
 * Vissa problem med saklig kodkvalitet påverkade felaktigt tillförlitlighetsgraderingen.
 
 * Eftersom jokerteckendomäner inte stöds tillåter inte gränssnittet användaren att skicka in en jokerteckendomän.
 
-* När en pipeline-körning startades mellan midnatt och kl. 1 UTC garanterades inte artefaktversionen som genererades av Cloud Manager att vara större än en version som skapades föregående dag.
+* När en pipeline-körning startades mellan midnatt och kl. 1:00 UTC var det inte säkert att den artefaktversion som genererades av Cloud Manager var större än den version som skapades föregående dag.
 
 * När projektet med exempelkoden har skapats visas Hantera Git som en länk från hjältekortet på sidan Översikt när sandlådeprogrammet har konfigurerats.
 
@@ -150,7 +150,7 @@ Releasedatum för Content Transfer Tool v1.4.6 är 27 maj 2021.
 
 * En ny loggningssats har lagts till i snabbstartsloggen, om användaren inte har körningsbehörighet för den körbara Java-filen.
 
-* När en användare tar bort en migreringsuppsättning från CTT-användargränssnittet, där en extrahering utfördes, `tmp` mapp som är associerad med den migreringsuppsättningen tas bort för att spara utrymme.
+* När en användare tar bort en migreringsuppsättning från CTT-användargränssnittet, där en extrahering utfördes, tas mappen `tmp` som är associerad med den migreringsuppsättningen bort för att spara utrymme.
 
 ### Felkorrigeringar {#bug-fixes-ctt-latest}
 
@@ -170,7 +170,7 @@ Releasedatum för innehållsöverföringsverktyget v1.4.0 är 11 maj 2021.
 ### Felkorrigeringar {#bug-fixes-ctt-may}
 
 * Flera felkorrigeringar som rör funktionen för automatisk uppdatering i gränssnittet för verktyget Innehållsöverföring.
-* Innehållsöverföring med `wipe=true` resulterade i fel räknarindex för målet. Den här har åtgärdats.
+* Innehållsöverföringsverktyget med `wipe=true` resulterade i ett felaktigt räknarindex på målet. Den här har åtgärdats.
 
 ## Commerce Add-on {#cloud-services-commerce}
 

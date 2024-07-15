@@ -23,14 +23,14 @@ I det här dokumentet förklaras dessa två användningsområden i detalj och du
 
 >[!TIP]
 >
->Granska dokumentet om du inte redan gjort det [Introduktion till Universal Editor](/help/implementing/universal-editor/introduction.md) för en fullständig översikt och ett värde för Universell redigerare.
+>Om du inte redan gjort det kan du läsa dokumentet [Universal Editor Introduction](/help/implementing/universal-editor/introduction.md) för att få en fullständig översikt över och ett värde för Universal Editor.
 
 ## Användningsexempel {#use-cases}
 
 Den universella redigeraren är en bekväm och intuitiv visuell redigerare för alla som skapar innehållet. De två huvudsakliga användningsområdena är:
 
-* [WYSIWYG-redigering](#wysiwyg-authoring) - Använd AEM Sites Console för att hantera ditt innehåll och skapa sidor i AEM med hjälp av den universella redigeraren
-* [Headless Authoring](#headless-authoring) - Skapa material i ett eget headless-program med Universal Editor.
+* [WYSIWYG-redigering](#wysiwyg-authoring) - Använd AEM Sites-konsolen för att hantera ditt innehåll och författarsidor i AEM med den universella redigeraren
+* [Headless Authoring](#headless-authoring) - Skapa innehåll i ditt eget headless-program med Universal Editor.
 
 ### WYSIWYG-redigering {#wysiwyg-authoring}
 
@@ -40,9 +40,9 @@ På så sätt kan du dra nytta av de verktyg som finns i Sites-konsolen, till ex
 
 Om det är ditt sätt att arbeta kan du i nästa steg få en fullständig översikt över hur du kommer igång med den universella redigeraren i AEM.
 
-1. [Utvecklarhandbok för att komma igång med WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) - Kom igång med ditt första Universal Editor-projekt i AEM
-1. [Skapa block som är instrumenterade för användning med den universella redigeraren](/help/edge/wysiwyg-authoring/create-block.md) - Lär dig hur du kan använda spärrar för att göra ditt innehåll redigerbart i den universella redigeraren
-1. [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services Projects](/help/edge/wysiwyg-authoring/content-modeling.md) - Lär dig mer om hur block är uppbyggda för att effektivt modellera ditt innehåll för användning med den universella redigeraren.
+1. [Guiden Komma igång för utvecklare för WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) - Kom igång med ditt första Universal Editor-projekt i AEM
+1. [Skapar block som är instrumenterade för användning med den universella redigeraren](/help/edge/wysiwyg-authoring/create-block.md) - Lär dig hur du gör instrumentblock för att göra ditt innehåll redigerbart i den universella redigeraren
+1. [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services Projects](/help/edge/wysiwyg-authoring/content-modeling.md) - Lär dig mer om hur block är strukturerade för att effektivt modellera ditt innehåll för användning med den universella redigeraren.
 
 När du har läst dessa dokument kan du gå tillbaka till den här sidan för att lära dig mer om hur du använder utan rubrik och hur den universella redigeraren fungerar i allmänhet.
 
@@ -69,13 +69,13 @@ Universal Editor fungerar på följande sätt.
 1. Innehållsförfattaren redigerar sidinnehållet i ett intuitivt WYSIWYG-gränssnitt och redigerar på plats.
 1. Den universella redigeraren återställer automatiskt ändringarna till AEM.
 
-Om du vill veta mer om arkitekturen för Universal Editor kan du läsa dokumentet [Universell redigeringsarkitektur.](/help/implementing/universal-editor/architecture.md)
+Om du vill veta mer om arkitekturen för Universal Editor kan du läsa dokumentet [Universal Editor Architecture.](/help/implementing/universal-editor/architecture.md)
 
 ## Universal Editor Concepts {#concepts}
 
 För att en sida eller ett program ska kunna redigeras av den universella redigeraren måste den vara korrekt instrumenterad. När den har instrumenterats kan den anpassas ytterligare efter dina projektbehov.
 
-* [Attribut och typer](/help/implementing/universal-editor/attributes-types.md) - För att en app eller sida ska kunna redigeras av den universella redigeraren måste den vara ordentligt instrumenterad. Detta inkluderar rätt metadata så att redigeraren kan redigera innehållet i programmet.
-* [Modelldefinitioner, fält och komponenttyper](/help/implementing/universal-editor/field-types.md) - När metadata finns för att möjliggöra redigering av en komponent, definierar du vilka fält och komponenttyper som kan ändras i egenskapsfältet i redigeraren. Det gör du genom att skapa en modell och länka till den från komponenten.
-* [Anpassa redigeringsmiljön](/help/implementing/universal-editor/customizing.md) - När appen eller sidan är helt integrerad kan den universella redigerarupplevelsen anpassas ytterligare genom att de tillgängliga komponenterna filtreras eller genom att redigerarens funktioner utökas.
-* [Universella redigeringshändelser](/help/implementing/universal-editor/events.md) - Du kan anpassa din app ytterligare genom att reagera på standardhändelser som universella skickar när innehållet och användargränssnittet ändras.
+* [Attribut och typer](/help/implementing/universal-editor/attributes-types.md) - För att ett program eller en sida ska kunna redigeras av den universella redigeraren måste det vara korrekt instrumenterat. Detta inkluderar rätt metadata så att redigeraren kan redigera innehållet i programmet.
+* [Modelldefinitioner, fält och komponenttyper](/help/implementing/universal-editor/field-types.md) - När metadata finns för att aktivera redigering av en komponent definierar du vilka fält och komponenttyper som de kan ändra i egenskapsfältet i redigeraren. Det gör du genom att skapa en modell och länka till den från komponenten.
+* [Anpassa redigeringsupplevelsen för den universella redigeraren](/help/implementing/universal-editor/customizing.md) - När appen eller sidan är helt instrumenterad kan redigerarupplevelsen för den universella redigeraren anpassas ytterligare genom att de tillgängliga komponenterna filtreras eller genom att redigerarens funktionalitet utökas.
+* [Universella redigeringshändelser](/help/implementing/universal-editor/events.md) - Du kan anpassa appen ytterligare genom att reagera på standardhändelser som universella skickar vid ändringar av innehållet och användargränssnittet.

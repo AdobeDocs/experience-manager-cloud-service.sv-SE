@@ -18,7 +18,7 @@ Lär dig hur innehållsmodellering fungerar för WYSIWYG-redigering med Edge Del
 
 ## Förutsättningar {#prerequisites}
 
-Projekt som använder WYSIWYG-redigering med Edge Delivery Services ärver merparten av mekanismerna i andra Edge Delivery Services, oberoende av innehållskällan eller [redigeringsmetod.](/help/edge/wysiwyg-authoring/authoring.md)
+Projekt som använder WYSIWYG-redigering med Edge Delivery Services ärver merparten av mekanismerna i andra Edge Delivery Services-projekt, oberoende av innehållskällan eller [redigeringsmetoden.](/help/edge/wysiwyg-authoring/authoring.md)
 
 Innan du börjar modellera innehåll för projektet bör du först läsa följande dokumentation.
 
@@ -30,20 +30,20 @@ Det är viktigt att förstå dessa koncept för att komma fram till en övertyga
 
 ## Standardinnehåll {#default-content}
 
-**Standardinnehåll** är innehåll som en författare intuitivt lägger upp på en sida utan att lägga till någon extra semantik. Detta inkluderar text, rubriker, länkar och bilder. Sådant innehåll är självförklarande när det gäller funktion och syfte.
+**Standardinnehåll** är innehåll som en författare intuitivt placerar på en sida utan att lägga till ytterligare semantik. Detta inkluderar text, rubriker, länkar och bilder. Sådant innehåll är självförklarande när det gäller funktion och syfte.
 
 I AEM implementeras det här innehållet som komponenter med mycket enkla, fördefinierade modeller, som innehåller allt som kan serialiseras i Markdown och HTML.
 
 * **Text**: RTF (inklusive listelement och kraftig eller kursiv text)
 * **Titel**: Text, typ (h1-h6)
-* **Bild**: Källa, beskrivning
-* **Knapp**: Text, titel, url, typ (standard, primär, sekundär)
+* **Bild**: Source, beskrivning
+* **Knapp**: Text, rubrik, url, typ (standard, primär, sekundär)
 
-Modellen för dessa komponenter är en del av [Mallen för WYSIWYG-redigering med Edge Delivery Services.](https://github.com/adobe-rnd/aem-boilerplate-xwalk/blob/main/component-models.json#L2-L112)
+Modellen för de här komponenterna ingår i [mallsidan för WYSIWYG-redigering med Edge Delivery Services.](https://github.com/adobe-rnd/aem-boilerplate-xwalk/blob/main/component-models.json#L2-L112)
 
 ## Block {#blocks}
 
-Block används för att skapa mer avancerat innehåll med specifika format och funktioner. I motsats till standardinnehåll kräver block ytterligare semantik. Block kan liknas vid [-komponenter i AEM.](/help/implementing/developing/components/overview.md)
+Block används för att skapa mer avancerat innehåll med specifika format och funktioner. I motsats till standardinnehåll kräver block ytterligare semantik. Blocken kan liknas vid [komponenter i AEM.](/help/implementing/developing/components/overview.md)
 
 Block är huvudsakligen innehållsdelar som dekorerats av JavaScript och formaterats med en formatmall.
 
@@ -51,7 +51,7 @@ Block är huvudsakligen innehållsdelar som dekorerats av JavaScript och formate
 
 När du använder WYSIWYG-redigering med Edge Delivery Services måste innehållet i blocken utformas explicit för att författaren ska kunna använda gränssnittet för att skapa innehåll. Du måste i princip skapa en modell så att författargränssnittet vet vilka alternativ som ska visas för författaren baserat på blocket.
 
-The [`component-models.json`](https://github.com/adobe-rnd/aem-boilerplate-xwalk/blob/main/component-models.json) -filen definierar blockmodellen. De fält som definieras i komponentmodellen bevaras som egenskaper i AEM och återges som celler i tabellen som utgör ett block.
+Filen [`component-models.json`](https://github.com/adobe-rnd/aem-boilerplate-xwalk/blob/main/component-models.json) definierar blockmodellen. De fält som definieras i komponentmodellen bevaras som egenskaper i AEM och återges som celler i tabellen som utgör ett block.
 
 ```json
 {
@@ -82,9 +82,9 @@ The [`component-models.json`](https://github.com/adobe-rnd/aem-boilerplate-xwalk
 }
 ```
 
-Observera att inte alla block måste ha en modell. Vissa block är bara [behållare](#container) för en lista med underordnade, där varje underordnad har sin egen modell.
+Observera att inte alla block måste ha en modell. Vissa block är bara [behållare](#container) för en lista med underordnade objekt, där varje underordnad har sin egen modell.
 
-Det är också nödvändigt att definiera vilka block som finns och som kan läggas till på en sida med den universella redigeraren. The [`component-definitions.json`](https://github.com/adobe-rnd/aem-boilerplate-xwalk/blob/main/component-definition.json) -filen listar komponenterna när de görs tillgängliga av den universella redigeraren.
+Det är också nödvändigt att definiera vilka block som finns och som kan läggas till på en sida med den universella redigeraren. [`component-definitions.json`](https://github.com/adobe-rnd/aem-boilerplate-xwalk/blob/main/component-definition.json)-filen visar komponenterna så fort de är tillgängliga av den universella redigeraren.
 
 ```json
 {
@@ -108,12 +108,12 @@ Det går att använda en modell för många block. Vissa block kan till exempel 
 
 För varje block gäller följande:
 
-* Måste använda `core/franklin/components/block/v1/block` resurstyp, den allmänna implementeringen av blocklogiken i AEM.
+* Resurstypen `core/franklin/components/block/v1/block` måste användas, den allmänna implementeringen av blocklogiken i AEM.
 * Blocknamnet måste definieras, som ska återges i blockets tabellrubrik.
    * Blocknamnet används för att hämta rätt format och skript för att dekorera blocket.
-* Kan definiera en [modell-ID.](/help/implementing/universal-editor/field-types.md#model-structure)
+* Kan definiera ett [modell-ID.](/help/implementing/universal-editor/field-types.md#model-structure)
    * Modell-ID är en referens till komponentens modell, som definierar de fält som är tillgängliga för författaren i egenskapsfältet.
-* Kan definiera en [filter-ID.](/help/implementing/universal-editor/customizing.md#filtering-components)
+* Kan definiera ett [filter-ID.](/help/implementing/universal-editor/customizing.md#filtering-components)
    * Filter-ID är en referens till komponentens filter, som gör att du kan ändra redigeringsbeteendet, till exempel genom att begränsa vilka underordnade som kan läggas till i blocket eller avsnittet eller vilka RTE-funktioner som är aktiverade.
 
 All den här informationen lagras i AEM när ett block läggs till på en sida. Om resurstypen eller blocknamnet saknas återges inte blocket på sidan.
@@ -122,11 +122,11 @@ All den här informationen lagras i AEM när ett block läggs till på en sida. 
 >
 >Det är inte nödvändigt eller rekommenderat att implementera anpassade AEM. Komponenterna för Edge Delivery Services som tillhandahålls av AEM är tillräckliga och erbjuder vissa skyddsräcken för att underlätta utvecklingen.
 >
->Komponenterna i AEM återger en kod som kan användas av [helix-html2md](https://github.com/adobe/helix-html2md) vid publicering till Edge Delivery Services och [aem.js](https://github.com/adobe/aem-boilerplate/blob/main/scripts/aem.js) när du läser in en sida i Universal Editor. Markeringen är det stabila kontraktet mellan AEM och andra delar av systemet och tillåter inte anpassningar. Därför får projekt inte ändra komponenterna och inte använda anpassade komponenter.
+>Komponenterna som tillhandahålls av AEM återger en kod som kan användas av [helix-html2md](https://github.com/adobe/helix-html2md) vid publicering till Edge Delivery Services och av [aem.js](https://github.com/adobe/aem-boilerplate/blob/main/scripts/aem.js) vid inläsning av en sida i den universella redigeraren. Markeringen är det stabila kontraktet mellan AEM och andra delar av systemet och tillåter inte anpassningar. Därför får projekt inte ändra komponenterna och inte använda anpassade komponenter.
 
 ### Blockstruktur {#block-structure}
 
-Egenskaperna för blocken är [som definieras i komponentmodellerna](#model-definition) och beständig som sådan i AEM. Egenskaper återges som celler i blockets tabellliknande struktur.
+Egenskaperna för blocken är [definierade i komponentmodellerna](#model-definition) och beständiga som sådana i AEM. Egenskaper återges som celler i blockets tabellliknande struktur.
 
 #### Enkla block {#simple}
 
@@ -181,7 +181,7 @@ I följande exempel definieras bilden först i modellen och sedan i textsekunden
 
 >[!ENDTABS]
 
-Du kan lägga märke till att vissa typer av värden tillåter semikolonisering i markeringen, och egenskaper kombineras i enskilda celler. Detta beteende beskrivs i avsnittet [Texthärledning.](#type-inference)
+Du kan lägga märke till att vissa typer av värden tillåter semikolonisering i markeringen, och egenskaper kombineras i enskilda celler. Det här beteendet beskrivs i avsnittet [Typhärledning.](#type-inference)
 
 #### Nyckelvärdesblock {#key-value}
 
@@ -189,7 +189,7 @@ I många fall rekommenderar vi att du dekorerar den renderade semantiska koden, 
 
 I andra fall läses dock blocket som en konfiguration som påminner om nyckelvärdepar.
 
-Ett exempel på detta är [metadata för avsnitt.](/help/edge/developer/markup-sections-blocks.md#sections) I det här fallet kan blocket konfigureras att återges som nyckelvärdepar-tabell. Se avsnittet [Avsnittsmetadata](#sections-metadata) för mer information.
+Ett exempel på detta är metadata för avsnittet [.](/help/edge/developer/markup-sections-blocks.md#sections) I det här fallet kan blocket konfigureras att återges som nyckelvärdepar-tabell. Mer information finns i avsnittet [Avsnitt och Avsnittsmetadata](#sections-metadata).
 
 >[!BEGINTABS]
 
@@ -245,7 +245,7 @@ Ett exempel på detta är [metadata för avsnitt.](/help/edge/developer/markup-s
 
 Båda de tidigare strukturerna har en enda dimension: listan med egenskaper. Behållarblock gör att du kan lägga till underordnade (vanligtvis av samma typ eller modell) och därför är tvådimensionella. Dessa block har fortfarande stöd för sina egna egenskaper som återges som rader med en enda kolumn först. Men de tillåter också att du lägger till underordnade objekt, för vilka varje objekt återges som rad och varje egenskap som kolumn i den raden.
 
-I följande exempel accepterar ett block en lista med länkade ikoner som underordnade, där varje länkad ikon har en bild och en länk. Lägg märke till [filter-ID](/help/implementing/universal-editor/customizing.md#filtering-components) anges i blockets data för att referera till filterkonfigurationen.
+I följande exempel accepterar ett block en lista med länkade ikoner som underordnade, där varje länkad ikon har en bild och en länk. Observera [filter-ID](/help/implementing/universal-editor/customizing.md#filtering-components) som angetts i blockets data för att referera till filterkonfigurationen.
 
 >[!BEGINTABS]
 
@@ -322,9 +322,9 @@ I följande exempel accepterar ett block en lista med länkade ikoner som undero
 
 ### Skapa semantiska innehållsmodeller för block {#creating-content-models}
 
-Med [Förklaring av blockstrukturens mekanik.](#block-structure) Det går att skapa en innehållsmodell som mappar innehåll som bevaras i AEM en till en till leveransnivån.
+Med [mekanismerna i blockstrukturen förklarad ](#block-structure) går det att skapa en innehållsmodell som mappar innehåll som bevaras i AEM en till en till leveransnivån.
 
-Tidigt i varje projekt måste man tänka på en innehållsmodell för varje block. Den måste vara agnostisk mot innehållskällan och redigeringsmiljön för att författare ska kunna växla eller kombinera dem när blockimplementeringar och format återanvänds. Mer information och allmänna riktlinjer finns i [David&#39;s Model (ta 2).](https://www.aem.live/docs/davidsmodel) Mer specifikt finns i [blocksamling](/help/edge/developer/block-collection.md) innehåller en omfattande uppsättning innehållsmodeller för specifika användningsområden för vanliga användargränssnittsmönster.
+Tidigt i varje projekt måste man tänka på en innehållsmodell för varje block. Den måste vara agnostisk mot innehållskällan och redigeringsmiljön för att författare ska kunna växla eller kombinera dem när blockimplementeringar och format återanvänds. Mer information och allmänna riktlinjer finns i [David&#39;s Model (ta 2).](https://www.aem.live/docs/davidsmodel) Mer specifikt innehåller [blocksamlingen](/help/edge/developer/block-collection.md) en omfattande uppsättning innehållsmodeller för specifika användningsområden för vanliga användargränssnittsmönster.
 
 För WYSIWYG-redigering med Edge Delivery Services ställer det här en fråga om hur en övertygande semantisk innehållsmodell ska användas när informationen skrivs med formulär som består av flera fält i stället för att semantisk kod redigeras i sitt sammanhang som RTF.
 
@@ -342,17 +342,17 @@ För att lösa det här problemet finns det tre metoder som gör det enklare att
 
 För vissa värden kan den semantiska innebörden härledas från själva värdena. Sådana värden är:
 
-* **Bilder** - Om en referens till en resurs i AEM är en resurs med en MIME-typ som börjar med `image/`återges referensen som `<picture><img src="${reference}"></picture>`.
-* **Länkar** - Om det finns en referens i AEM och inte är en bild, eller om värdet börjar med `https?://`  eller `#`återges referensen som `<a href="${reference}">${reference}</a>` .
-* **RTF** - Om ett trimmat värde börjar med ett stycke (`p`, `ul`, `ol`, `h1`-`h6`, osv.) återges värdet som RTF.
-* **Klassnamn** - `classes` egenskapen behandlas som [blockalternativ](/help/edge/developer/markup-sections-blocks.md#block-options) och återges i tabellrubriken för [enkla block,](#simple) eller som värdelista för objekt i en [behållarblock](#container) Det är användbart om du vill [formatera ett block annorlunda,](/help/edge/wysiwyg-authoring/create-block.md#block-options) men behöver inte skapa ett helt nytt block.
-* **Värdelistor** - Om ett värde är en flervärdesegenskap och det första värdet inte är något av föregående, sammanfogas alla värden som kommaavgränsade listor.
+* **Bilder** - Om en referens till en resurs i AEM är en resurs med en MIME-typ som börjar med `image/` återges referensen som `<picture><img src="${reference}"></picture>`.
+* **Länkar** - Om det finns en referens i AEM och inte är en bild, eller om värdet börjar med `https?://` eller `#`, återges referensen som `<a href="${reference}">${reference}</a>` .
+* **RTF** - Om ett trimmat värde börjar med ett stycke (`p`, `ul`, `ol`, `h1`-`h6` osv.) återges värdet som RTF-text.
+* **Klassnamn** - Egenskapen `classes` behandlas som [blockalternativ](/help/edge/developer/markup-sections-blocks.md#block-options) och återges i tabellhuvudet för [enkla block](#simple) eller som värdelista för objekt i ett [ behållarblock.](#container) Det är användbart om du vill [formatera ett block på ett annat sätt,](/help/edge/wysiwyg-authoring/create-block.md#block-options), men inte behöver skapa ett helt nytt block.
+* **Värdelistor** - Om ett värde är en flervärdesegenskap och det första värdet inte är något av de föregående, sammanfogas alla värden som kommaavgränsade listor.
 
 Allt annat återges som oformaterad text.
 
 #### Dölj fält {#field-collapse}
 
-Fältkomprimering är den mekanism som används för att kombinera flera fältvärden till ett enda semantiskt element baserat på en namnkonvention med suffix `Title`, `Type`, `MimeType`, `Alt`och `Text` (alla skiftlägeskänsliga). Egenskaper som slutar med något av dessa suffix betraktas inte som ett värde, utan som ett attribut för en annan egenskap.
+Fältkomprimering är en mekanism för att kombinera flera fältvärden till ett enda semantiskt element baserat på en namnkonvention med suffixen `Title`, `Type`, `MimeType`, `Alt` och `Text` (alla skiftlägeskänsliga). Egenskaper som slutar med något av dessa suffix betraktas inte som ett värde, utan som ett attribut för en annan egenskap.
 
 ##### Bilder {#image-collapse}
 
@@ -400,7 +400,7 @@ Fältkomprimering är den mekanism som används för att kombinera flera fältv�
 
 >[!TAB Markering]
 
-Nej `linkType`, eller `linkType=default`
+Ingen `linkType` eller `linkType=default`
 
 ```html
 <a href="https://www.adobe.com" title="Navigate to adobe.com">adobe.com</a>
@@ -461,7 +461,7 @@ _[adobe.com](https://www.adobe.com "Navigate to adobe.com")_
 
 #### Elementgruppering {#element-grouping}
 
-while [fältkomprimering](#field-collapse) Om du vill kombinera flera egenskaper till ett enda semantiskt element, handlar elementgruppering om att sammanfoga flera semantiska element till en enda cell. Detta är särskilt användbart när det gäller användningsfall där författaren bör begränsas i den typ och det antal element som de kan skapa.
+Medan [fältkomprimering](#field-collapse) handlar om att kombinera flera egenskaper till ett enda semantiskt element, handlar elementgruppering om att sammanfoga flera semantiska element till en enda cell. Detta är särskilt användbart när det gäller användningsfall där författaren bör begränsas i den typ och det antal element som de kan skapa.
 
 En teaser-komponent kan t.ex. tillåta författaren att endast skapa en underrubrik, rubrik och en enda styckebeskrivning kombinerat med högst två knappar för att anropa till åtgärd. När du grupperar dessa element tillsammans skapas en semantisk kod som kan formateras utan ytterligare åtgärd.
 
@@ -532,13 +532,13 @@ Elementgruppering använder en namnkonvention där gruppnamnet separeras från v
 
 ## Avsnittsmetadata {#sections-metadata}
 
-På samma sätt som en utvecklare kan definiera och modellera flera [block,](#blocks) de kan definiera olika avsnitt.
+På samma sätt som en utvecklare kan definiera och modellera flera [block,](#blocks) kan de definiera olika avsnitt.
 
 Innehållsmodellen för Edge Delivery Services tillåter avsiktligt bara en enda kapslingsnivå, vilket är vilket standardinnehåll eller -block som finns i ett avsnitt. Detta innebär att om du vill ha mer komplexa visuella komponenter som kan innehålla andra komponenter måste de modelleras som sektioner och kombineras med hjälp av en autoblockerande klientsida. Typiska exempel på detta är tabbar och komprimerbara avsnitt som dragspelspaneler.
 
-Ett avsnitt kan definieras på samma sätt som ett block, men med resurstypen för `core/franklin/components/section/v1/section`. Avsnitt kan ha ett namn och en [filter-ID,](/help/implementing/universal-editor/customizing.md#filtering-components) som används av [Universal Editor](/help/implementing/universal-editor/introduction.md) bara, samt [modell-ID,](/help/implementing/universal-editor/field-types.md#model-structure) som används för att återge avsnittets metadata. Modellen är på det här sättet modellen för avsnittets metadatablocket, som automatiskt läggs till i ett avsnitt som nyckelvärdesblock om det inte är tomt.
+Ett avsnitt kan definieras på samma sätt som ett block, men med resurstypen `core/franklin/components/section/v1/section`. Avsnitt kan ha ett namn och ett [filter-ID,](/help/implementing/universal-editor/customizing.md#filtering-components), som endast används av [Universal Editor](/help/implementing/universal-editor/introduction.md), samt ett [modell-ID,](/help/implementing/universal-editor/field-types.md#model-structure), som används för att återge avsnittsmetadata. Modellen är på det här sättet modellen för avsnittets metadatablocket, som automatiskt läggs till i ett avsnitt som nyckelvärdesblock om det inte är tomt.
 
-The [modell-ID](/help/implementing/universal-editor/field-types.md#model-structure) och [filter-ID](/help/implementing/universal-editor/customizing.md#filtering-components) standardavsnittet är `section`. Den kan användas för att ändra standardavsnittets beteende. I följande exempel läggs vissa format och en bakgrundsbild till i avsnittets metadatamodell.
+[modell-ID](/help/implementing/universal-editor/field-types.md#model-structure) och [filter-ID](/help/implementing/universal-editor/customizing.md#filtering-components) för standardavsnittet är `section`. Den kan användas för att ändra standardavsnittets beteende. I följande exempel läggs vissa format och en bakgrundsbild till i avsnittets metadatamodell.
 
 ```json
 {
@@ -595,7 +595,7 @@ I följande exempel definieras ett tabbavsnitt, som kan användas för att skapa
 
 ## Sidmetadata {#page-metadata}
 
-Dokument kan ha en sida [metadatablockering,](https://www.aem.live/developer/block-collection/metadata) som används för att definiera vilka `<meta>` element återges i `<head>` på en sida. Sidegenskaperna för sidor i AEM as a Cloud Service mappas till de som är tillgängliga direkt för Edge Delivery Services, som `title`, `description`, `keywords`, osv.
+Dokument kan ha ett [metadatablock ](https://www.aem.live/developer/block-collection/metadata) som används för att definiera vilka `<meta>` element som ska återges i `<head>` på en sida. Sidegenskaperna för sidorna i AEM as a Cloud Service är mappade till de som är tillgängliga direkt för Edge Delivery Services, som `title`, `description`, `keywords` osv.
 
 Innan du kan utforska hur du definierar egna metadata bör du läsa följande dokument för att först förstå begreppet sidmetadata.
 
@@ -606,7 +606,7 @@ Det går också att definiera ytterligare sidmetadata på två sätt.
 
 ### Kalkylblad för metadata {#metadata-spreadsheets}
 
-Det går att definiera metadata per bana eller per bana på ett tabellliknande sätt AEM as a Cloud Service. Det finns ett redigeringsgränssnitt för tabellliknande data som liknar Excel- och Google-ark.
+Det går att definiera metadata per bana eller per bana på ett tabellliknande sätt i AEM as a Cloud Service. Det finns ett redigeringsgränssnitt för tabellliknande data som liknar Excel- och Google-ark.
 
 Om du vill skapa en sådan tabell skapar du en sida och använder metadatamallen i webbplatskonsolen.
 
@@ -625,11 +625,11 @@ Kontrollera att kalkylbladet läggs till i sökvägsmappningen innan du publicer
 
 ### Sidegenskaper {#page-properties}
 
-Många av de standardsidegenskaper som är tillgängliga i AEM mappas till respektive sidmetadata i ett dokument. Till exempel `title`, `description`, `robots`, `canonical url` eller `keywords`. Vissa AEM-specifika egenskaper är också tillgängliga:
+Många av de standardsidegenskaper som är tillgängliga i AEM mappas till respektive sidmetadata i ett dokument. Det inkluderar till exempel `title`, `description`, `robots`, `canonical url` eller `keywords`. Vissa AEM-specifika egenskaper är också tillgängliga:
 
-* `cq:lastModified` as `modified-time` i ISO8601-format
-* Den tidpunkt då dokumentet senast publicerades som `published-time` i ISO8601-format
-* `cq:tags` as `cq-tags` som en kommaavgränsad lista med tagg-ID:n.
+* `cq:lastModified` som `modified-time` i ISO8601-format
+* Den tid dokumentet senast publicerades som `published-time` i ISO8601-format
+* `cq:tags` som `cq-tags` som en kommaavgränsad lista med tagg-ID:n.
 
 Det går också att definiera en komponentmodell för anpassade sidmetadata, som kommer att göras tillgänglig för författaren som en flik i dialogrutan AEM Sites sidegenskaper.
 
@@ -652,11 +652,11 @@ Om du vill göra det skapar du en komponentmodell med ID:t `page-metadata`.
 
 Nu när du vet hur man modellerar innehåll kan du skapa block för egna Edge Delivery Services med WYSIWYG-redigeringsprojekt.
 
-Se dokumentet [Skapa block som är instrumenterade för användning med den universella redigeraren](/help/edge/wysiwyg-authoring/create-block.md) om du vill lära dig hur du skapar block som kan användas med den universella redigeraren i WYSIWYG-redigering med Edge Delivery Services.
+Läs dokumentet [Skapa block som är instrumenterade för användning med den universella redigeraren](/help/edge/wysiwyg-authoring/create-block.md) om du vill veta hur du skapar block som är instrumenterade för användning med den universella redigeraren vid WYSIWYG-redigering med Edge Delivery Services-projekt.
 
-Om du redan är bekant med att skapa block kan du läsa dokumentet [Utvecklarhandbok för att komma igång med WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) så att du kommer igång med en ny Adobe Experience Manager-webbplats med hjälp av Edge Delivery Services och den universella redigeraren för framtagning av innehåll.
+Om du redan är bekant med att skapa block kan du läsa dokumentet [Utvecklarhandbok för att komma igång med WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) så att du kommer igång med en ny Adobe Experience Manager-webbplats med hjälp av Edge Delivery Services och den universella redigeraren för innehållsredigering.
 
 >[!TIP]
 >
->Om du vill få en genomgång av hur du skapar ett projekt för nya Edge Delivery Services som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla kan du titta på [det här AEM GEMs webbinarium.](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/wysiwyg-authoring-and-edge-delivery)
+>En genomgång av hur du skapar ett nytt projekt för Edge Delivery Services som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här webbinariet för AEM.](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/wysiwyg-authoring-and-edge-delivery)
 

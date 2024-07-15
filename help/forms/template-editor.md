@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Skapa en adaptiv formulärmall {#adaptive-form-templates}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -28,7 +28,7 @@ Du vill till exempel att alla formulärförfattare ska ha vissa textrutor, navig
 * Ange formulärets ursprungliga innehåll.
 * Ange ett tema, Skicka åtgärder.
 
-Du kan hämta och installera [!DNL AEM Forms] referera till innehållspaket från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) portalen för att importera referensteman och mallar till din miljö.
+Du kan hämta och installera [!DNL AEM Forms]-referenspaketet för innehåll från [portalen för programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) om du vill importera referensteman och mallar till din miljö.
 
 ## Arbeta med mallar {#working-with-templates}
 
@@ -40,13 +40,13 @@ I Experience Manager finns en global mapp där du kan ordna mallar. Den är dock
 
 När du har skapat en mapp öppnar du mappen och utför följande steg för att skapa en mall:
 
-1. Välj **[!UICONTROL Create]** i den mapp du har skapat.
-1. I avsnittet Välj en malltyp väljer du **[!UICONTROL Adaptive Form template]** och markera **[!UICONTROL Next]**.
+1. Välj **[!UICONTROL Create]** i mappen som du har skapat.
+1. I avsnittet Välj en malltyp väljer du **[!UICONTROL Adaptive Form template]** och sedan **[!UICONTROL Next]**.
 
 1. Ange en malltitel i avsnittet Mallinformation och välj **[!UICONTROL Create]**.
 Du kan också ange en beskrivning.
 
-1. Välj **[!UICONTROL Done]** för att gå tillbaka till konsolen, eller välj **[!UICONTROL Open]** om du vill öppna mallen i redigeraren.
+1. Välj **[!UICONTROL Done]** om du vill återgå till konsolen eller välj **[!UICONTROL Open]** om du vill öppna mallen i redigeraren.
 
 ### Mallredigeringsgränssnitt {#template-editor-ui}
 
@@ -55,12 +55,12 @@ När du öppnar en mall för redigering kan du se följande AEM Editor-komponent
 * **Verktygsfältet Sida**
 Innehåller följande alternativ:
 
-   * **Växla sidopanel**: Visa eller dölj sidofältet.
-   * **Sidinformation**: Gör att du kan ange information som publicerings-/avpubliceringstid, miniatyrbilder, klientbibliotek, sidprincip och klientbibliotek för siddesign.
+   * **Växla sidopanel**: Här kan du visa eller dölja sidofältet.
+   * **Sidinformation**: Gör att du kan ange information som publicerings-/avpubliceringstid, miniatyrer, klientbibliotek, sidprincip och klientbibliotek för siddesign.
      <!-- * **Emulator**: Lets you simulate and customize the look for different devices.-->
-   * **Lägesväljare:** Här kan du ändra läge.Du kan välja **[!UICONTROL Structure]** läge, **[!UICONTROL Initial Content]**, **[!UICONTROL Layout Control]** läge. I strukturläget kan du lägga till och anpassa sidhuvud och sidfot. Med det inledande innehållsläget kan du anpassa formulärinnehållet.
-   * **Förhandsgranska:** Gör att du kan förhandsgranska hur mallen ser ut när du publicerar den. Du kan använda Lagerväljaren och Förhandsgranska för att växla redigerings- och förhandsgranskningslägen.
-* **Sidofält:** Innehåller webbläsarna Innehåll, Egenskaper, Assets och Komponenter.
+   * **Lägesväljare:** Du kan ändra läge.Du kan välja **[!UICONTROL Structure]** läge, **[!UICONTROL Initial Content]**, **[!UICONTROL Layout Control]** läge. I strukturläget kan du lägga till och anpassa sidhuvud och sidfot. Med det inledande innehållsläget kan du anpassa formulärinnehållet.
+   * **Förhandsgranska:** Du kan förhandsgranska hur mallen ser ut när du publicerar den. Du kan använda Lagerväljaren och Förhandsgranska för att växla redigerings- och förhandsgranskningslägen.
+* **Sidofältet:** Tillhandahåller webbläsarna Innehåll, Egenskaper, Assets och Komponenter.
 * **Komponentverktygsfältet:** När du markerar en komponent visas ett verktygsfält där du kan anpassa komponenten.
 * **Sida**: Det område där du lägger till innehåll för att skapa mallen.
 
@@ -83,13 +83,13 @@ När du markerar strukturlagret i mallredigeraren kan du se layoutbehållarna ov
 
 Layoutbehållare i strukturlagret
 
-**S.** Layoutbehållare för huvudkomponent **B.** Layoutbehållare för sidfotskomponent
+**A.** Layoutbehållare för huvudkomponent **B.** Layoutbehållare för sidfotskomponent
 
 Dra och släpp komponenten Adaptiv formulärrubrik i layoutbehållaren ovanför behållaren för adaptiv form. När du har lagt till komponenten kan du ange dess egenskaper så att du kan lägga till en logotyp och ange dess titel.
 
 På samma sätt kan du ange copyrightinformation och företagsinformation när du drar sidfotskomponenten i layoutbehållaren nedanför den adaptiva formulärbehållaren.
 
-![Sidhuvud och sidfot som lagts till i strukturlagret](assets/header-and-footer.png)
+![Sidhuvud och sidfot har lagts till i strukturlagret](assets/header-and-footer.png)
 
 Sidhuvud och sidfot som lagts till i strukturlagret
 
@@ -107,7 +107,7 @@ Du kan till exempel lägga till rubrikkomponenten i mallen. När du markerar kom
 
 När alternativet Ursprungligt innehåll är markerat öppnas mallens adaptiva formulärbehållare som ett adaptivt formulär för redigering. Precis som när du skapar ett adaptivt formulär kan du ange inledande inställningar, som att välja ett tema och skicka åtgärder.
 
-Formulärförfattare använder det som bas för att skapa ett formulär. Innehållsflödesstrukturen anges i lagret Ursprungligt innehåll i mallen. Om du vill växla till att redigera det ursprungliga innehållet i formulärmallen innan du förhandsgranskar i sidverktygsfältet väljer du ![canvas-drop-down](assets/canvas-drop-down.png) **>** **[!UICONTROL Initial Content]**.
+Formulärförfattare använder det som bas för att skapa ett formulär. Innehållsflödesstrukturen anges i lagret Ursprungligt innehåll i mallen. Om du vill växla till att redigera det ursprungliga innehållet i formulärmallen väljer du ![listrutan för arbetsyta](assets/canvas-drop-down.png) **>** **[!UICONTROL Initial Content]** innan du förhandsgranskar i sidverktygsfältet.
 
 
 I lagret Ursprungligt innehåll skapar du mallen Adaptivt formulär som dina författare använder som bas. Om du redigerar en mall på samma sätt som när du redigerar ett formulär, använder du de alternativ som finns i sidofältet. Sidofältet innehåller webbläsare för innehåll, egenskaper, resurser och komponenter.
@@ -129,18 +129,18 @@ Du har lagt till en logotyp, angett en rubrik och lagt till en sidfot i struktur
 
 Ändra lagret från Struktur till Inledande innehåll och börja lägga till innehåll i formuläret. Om du vill skapa en flikstruktur lägger du till en underordnad panel i guideRootPanel i behållaren för adaptivt format. Så här lägger du till en panel:
 
-* Du kan lägga till en panel genom att trycka på **[!UICONTROL +]** när du väljer **[!UICONTROL Drag components here]** alternativ.
+* Du kan lägga till en panel genom att trycka på knappen **[!UICONTROL +]** när du väljer alternativet **[!UICONTROL Drag components here]**.
 
 * Du kan dra och släppa panelkomponenten från komponentwebbläsaren i sidofältet.
-* Du kan lägga till en underordnad panel till `guideRootPanel` i komponentens verktygsfält.
+* Du kan lägga till en underordnad panel för `guideRootPanel` från komponentens verktygsfält.
 
-Om du vill skapa flikarna Allmän information och Professional Information lägger du till två paneler i den underordnade panelen i `guideRootPanel`. Markera panelerna och markera ![cmppr](assets/configure-icon.svg) för att öppna egenskaperna i sidofältet. Ändra elementnamnen som `general-info` och `professional-info`och titlar som General Information respektive Professional Information. I sidlisten väljer du innehåll för att öppna innehållsläsaren. På fliken Formulärobjekt väljer du `guideRootPanel`. I redigeraren markeras guideRootPanel. Välj ![cmppr](assets/configure-icon.svg) i komponentens verktygsfält för att öppna dess egenskaper. I fältet Panellayout väljer du **[!UICONTROL Tabs on Top]** och markera **[!UICONTROL Done]**. Flikmallstrukturen används.
+Om du vill skapa flikarna Allmän information och Professional Information lägger du till två paneler i den underordnade panelen för `guideRootPanel`. Markera panelerna och välj ![cmpr](assets/configure-icon.svg) för att öppna egenskaperna i sidofältet. Ändra elementnamnen som `general-info` och `professional-info`, och titlarna som Allmän information respektive Professional Information. I sidlisten väljer du innehåll för att öppna innehållsläsaren. Välj `guideRootPanel` på fliken Formulärobjekt. I redigeraren markeras guideRootPanel. Välj ![cmpr](assets/configure-icon.svg) i komponentens verktygsfält för att öppna dess egenskaper. Markera **[!UICONTROL Tabs on Top]** och välj **[!UICONTROL Done]** i fältet Panellayout. Flikmallstrukturen används.
 
 #### Lägga till innehåll på flikar {#adding-content-in-tabs}
 
-När du har lagt till paneler och strukturerat dem som flikar kan du lägga till fält inuti flikarna. När du väljer en flik i redigeraren visas **[!UICONTROL Drag components here]** alternativ. Du kan dra och släppa komponenter som textrutor, listobjekt och knappar. Du kan dra och släppa komponenter från komponentwebbläsaren i sidofältet.
+När du har lagt till paneler och strukturerat dem som flikar kan du lägga till fält inuti flikarna. När du väljer en flik i redigeraren kan du se alternativet **[!UICONTROL Drag components here]**. Du kan dra och släppa komponenter som textrutor, listobjekt och knappar. Du kan dra och släppa komponenter från komponentwebbläsaren i sidofältet.
 
-Varje komponent har egenskaper som förbättrar datainhämtning och -hantering. Du kan till exempel aktivera **[!UICONTROL Required field]** -egenskap för en komponent. Författarna kan ange ett meddelande som kunderna ser när de inte fyller i ett obligatoriskt fält. Ange meddelandet i **[!UICONTROL Required Field Message]** -egenskap.
+Varje komponent har egenskaper som förbättrar datainhämtning och -hantering. Du kan till exempel aktivera egenskapen **[!UICONTROL Required field]** för en komponent. Författarna kan ange ett meddelande som kunderna ser när de inte fyller i ett obligatoriskt fält. Ange meddelandet i egenskapen **[!UICONTROL Required Field Message]**.
 
 I exempelmallen läggs fälten Namn, Telefonnummer och Födelsedatum till på fliken Allmän information. På fliken Professional Information, Anställda, typ av anställning, läggs fält för utbildningsbehörighet till.
 
@@ -158,21 +158,21 @@ När du skapar ett adaptivt formulär kan du se mallen som visas när du ombeds 
 
 ## Importera eller exportera en mall {#importing-or-exporting-a-template}
 
-Ett formulär fungerar med sin mall. När du hämtar ett adaptivt formulär som skapats med en anpassad mall hämtas inte mallen. När du importerar formuläret till ett annat [!DNL AEM Forms] -instansen importeras den utan sin mall. Om ett formulär importeras men mallen inte är tillgänglig, återges inte formuläret. Du kan paketera den anpassade mallen från `/conf` nod i `https://<server>:<port>/crx/packmgr`och lägga in den i [!DNL AEM Forms] instans där du vill överföra formuläret. Du kan också [Skapa en mall med AEM Archeype och distribuera den till din Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/pages-templates.html#prerequisites).
+Ett formulär fungerar med sin mall. När du hämtar ett adaptivt formulär som skapats med en anpassad mall hämtas inte mallen. När du importerar formuläret till en annan [!DNL AEM Forms]-instans importeras det utan någon mall. Om ett formulär importeras men mallen inte är tillgänglig, återges inte formuläret. Du kan paketera den anpassade mallen från noden `/conf` i `https://<server>:<port>/crx/packmgr` och portera den i instansen [!DNL AEM Forms] där du vill överföra formuläret. Du kan också [skapa en mall med AEM Archeype och distribuera den till din Cloud Services-instans](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/pages-templates.html#prerequisites).
 
 >[!NOTE]
 >
-> * Du kan även konfigurera [!UICONTROL Document of Record] direkt från redigeraren för adaptiva formulär eller redigeraren för adaptiva formulärmallar. Mer information finns i [Generera arkivdokument för adaptiv Forms](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#document-of-record-support-in-adaptive-form-editor-dor-support-in-adaptiveform).
+> * Du kan också konfigurera mallen [!UICONTROL Document of Record] direkt från redigeraren för adaptiva formulär eller mallredigeraren för adaptiva formulär. Mer information finns i [Skapa postdokument för adaptiv Forms](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#document-of-record-support-in-adaptive-form-editor-dor-support-in-adaptiveform).
 
 
 ## Koppla ett formulärdatamodellschema till en mall {#associating-form-data-model-schema-in-template}
 
-Författare kan associera en [!UICONTROL Form Data Model Schema] till en adaptiv formulärmall i mallredigeraren. Det gör att författare kan välja ett schema i mallredigeraren. När du kopplar ett schema till en mall och en formulärförfattare skapar ett formulär baserat på mallen, markeras schemat automatiskt för formuläret. Det hjälper formulärförfattare att reglera användningen av scheman och sparar tid även för formulärförfattare. Så här väljer du ett formulärdatamodellschema i mallredigeraren:
+Författare kan associera en [!UICONTROL Form Data Model Schema] till en anpassad formulärmall i mallredigeraren. Det gör att författare kan välja ett schema i mallredigeraren. När du kopplar ett schema till en mall och en formulärförfattare skapar ett formulär baserat på mallen, markeras schemat automatiskt för formuläret. Det hjälper formulärförfattare att reglera användningen av scheman och sparar tid även för formulärförfattare. Så här väljer du ett formulärdatamodellschema i mallredigeraren:
 
-1. Välj **[!UICONTROL Content Browser]** på vänster sida.
+1. Välj **[!UICONTROL Content Browser]** som finns till vänster.
 1. Gå till formulärbehållaren **[!UICONTROL Setting]**.
 1. Välj **[!UICONTROL Data Model]**.
-1. Välj formulärdatamodell genom att **[!UICONTROL Select Form Data Model]** och spara konfigurationen.
+1. Välj formulärdatamodellen via **[!UICONTROL Select Form Data Model]** och spara konfigurationen.
 
 ![Form-Data-Model-Association-in-Forms](/help/forms/assets/select-form-data-model-img.png)
 
@@ -180,7 +180,7 @@ Författare kan associera en [!UICONTROL Form Data Model Schema] till en adaptiv
 
 ## Skapa ett anpassat formulär med hjälp av mallen {#creating-an-adaptive-form-using-the-template}
 
-När du har skapat och aktiverat en mall är den tillgänglig i formulärhanteraren när du skapar ett anpassat formulär. Information om hur du använder en mall och skapar ett adaptivt formulär finns i [Skapa ett adaptivt formulär](creating-adaptive-form.md).
+När du har skapat och aktiverat en mall är den tillgänglig i formulärhanteraren när du skapar ett anpassat formulär. Mer information om hur du använder en mall och skapar ett adaptivt formulär finns i [Skapa ett adaptivt formulär](creating-adaptive-form.md).
 
 
 <!--

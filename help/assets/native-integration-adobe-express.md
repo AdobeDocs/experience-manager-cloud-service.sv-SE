@@ -32,7 +32,7 @@ Så här börjar du använda AEM Assets i redigeraren:
 
 2. Öppna en ny tom arbetsyta genom att läsa in en ny mall eller ett projekt, eller genom att skapa en resurs.
 
-3. Klicka **[!UICONTROL Assets]** finns i den vänstra navigeringsrutan. Adobe Express visar en lista över databaser som du har behörighet att komma åt tillsammans med en lista över resurser och mappar som är tillgängliga på rotnivå.
+3. Klicka på **[!UICONTROL Assets]** i den vänstra navigeringsrutan. Adobe Express visar en lista över databaser som du har behörighet att komma åt tillsammans med en lista över resurser och mappar som är tillgängliga på rotnivå.
 
 4. Bläddra bland eller sök resurser i databasen för att dra och släppa dem på arbetsytan. Du kan filtrera resurser med hjälp av olika tillgängliga filter, till exempel filtyp, MIME-typ och dimensioner.
 
@@ -40,31 +40,31 @@ Så här börjar du använda AEM Assets i redigeraren:
    >
    >Filtrera efter dimension gäller inte videoklipp.
 
-   ![Inkludera resurser från resurstillägg](assets/adobe-express-native-integration.png)
+   ![Inkludera resurser från Assets-tillägg](assets/adobe-express-native-integration.png)
 
 
 ## Spara Adobe Expresser i AEM Assets {#save-express-projects-in-assets}
 
 När du har infogat lämpliga ändringar på arbetsytan Express kan du spara dem i AEM Assets-databasen.
 
-1. Klicka **[!UICONTROL Share]** för att öppna **[!UICONTROL Share]** -dialogrutan.
+1. Klicka på **[!UICONTROL Share]** för att öppna dialogrutan **[!UICONTROL Share]**.
 
    ![Spara resurser i AEM](assets/adobe-express-share.png)
 
-2. I avsnittet Lagring i den högra rutan väljer du **AEM Assets**. Adobe Expressen visar dialogrutan för överföring.
+2. Välj **AEM Assets** i lagringsavsnittet i den högra rutan. Adobe Expressen visar dialogrutan för överföring.
 3. Välj antingen **Aktuell sida** eller **Alla sidor**. Ange ett namn och format för de resurser som ska exporteras. Du kan exportera arbetsytans innehåll i formaten PNG, JPEG, PDF, MP4, MP4+PNG eller MP4+JPEG. Formatet justeras automatiskt baserat på resursen/resurserna på arbetsytans sida/sidor.
-Markera **Aktuell sida** sparar resursen på den aktuella sidan i målmappen. Om du väljer **Alla sidor** och exportformatet inte är PDF, sparas alla sidor på arbetsytan som separata filer i en ny mapp i målmappen. Om exportformatet är PDF sparas alla arbetsytesidor som en enda PDF-fil i målmappen.
+Om du väljer **Aktuell sida** sparas resursen på den aktuella sidan i målmappen. Om du väljer **Alla sidor** och exportformatet inte är PDF, sparas alla sidor på arbetsytan som separata filer i en ny mapp i målmappen. Om exportformatet är PDF sparas alla arbetsytesidor som en enda PDF-fil i målmappen.
 
-4. Klicka på mappikonen under **Målmapp** för att välja en plats och spara resursen/resurserna.
+4. Klicka på mappikonen under **Målmapp** för att välja en plats och spara resurserna.
 
    ![Spara resurser i AEM](/help/assets/assets/page-selection-and-destination-folder.svg)
 
-5. Valfritt: Du kan lägga till kampanjmetadata för överföringen med **Projekt- eller kampanjnamn** fält. Du kan använda ett befintligt namn eller skapa ett nytt. Du kan definiera flera projekt- eller kampanjnamn för överföringen. Registrera namnet genom att skriva namnet och trycka på Retur.
+5. Valfritt: Du kan lägga till kampanjmetadata för överföringen med fältet **Projekt eller kampanjnamn**. Du kan använda ett befintligt namn eller skapa ett nytt. Du kan definiera flera projekt- eller kampanjnamn för överföringen. Registrera namnet genom att skriva namnet och trycka på Retur.
 Som en god praxis rekommenderar Adobe att du anger värden i resten av fälten samt skapar en förbättrad sökupplevelse för dina överförda resurser.
 
-6. Definiera på liknande sätt värden för **[!UICONTROL Keywords]** och **[!UICONTROL Channels]** fält.
+6. Definiera värden för fälten **[!UICONTROL Keywords]** och **[!UICONTROL Channels]**.
 
-7. Klicka **[!UICONTROL Upload]** om du vill överföra resurserna till AEM Assets.
+7. Klicka på **[!UICONTROL Upload]** för att överföra resurserna till AEM Assets.
 
 ## Begränsningar {#limitations}
 

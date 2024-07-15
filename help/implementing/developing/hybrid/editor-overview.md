@@ -27,9 +27,9 @@ SPA i AEM innehåller ett tunt JS-lager som interagerar med den SPA JS-koden nä
 
 Mer information om SPA i AEM finns i:
 
-* [SPA](blueprint.md) för de tekniska kraven för en SPA.
-* [Komma igång med SPA i AEM med React](getting-started-react.md) för en snabb genomgång av en enkel SPA med React.
-* [Komma igång med SPA i AEM med Angular](getting-started-angular.md) för en snabb genomgång av en enkel SPA med Angular.
+* [SPA Blueprint](blueprint.md) för tekniska krav för en SPA.
+* [Komma igång med SPA i AEM med React](getting-started-react.md) om du vill få en snabb genomgång av en enkel SPA med React.
+* [Komma igång med SPA i AEM med Angular](getting-started-angular.md) om du vill få en snabb genomgång av en enkel SPA med hjälp av Angular.
 
 ## Design {#design}
 
@@ -37,26 +37,27 @@ Sidkomponenten för en SPA tillhandahåller inte elementen HTML i dess underordn
 
 ### Sidmodellshantering {#page-model-management}
 
-Lösning och hantering av sidmodellen delegeras till en angiven `PageModel` bibliotek. SPA måste använda sidmodellbiblioteket så att det kan initieras och redigeras av SPA. Sidmodellbiblioteket som indirekt tillhandahålls AEM sidkomponenten via `aem-react-editable-components` npm. Sidmodellen är en tolk mellan AEM och SPA och måste därför alltid finnas. När sidan har skapats, ytterligare ett bibliotek `cq.authoring.pagemodel.messaging` måste läggas till för att det ska gå att kommunicera med sidredigeraren.
+Upplösningen och hanteringen av sidmodellen har delegerats till ett angivet `PageModel`-bibliotek. SPA måste använda sidmodellbiblioteket så att det kan initieras och redigeras av SPA. Sidmodellbiblioteket tillhandahölls indirekt till AEM sidkomponent via `aem-react-editable-components` npm. Sidmodellen är en tolk mellan AEM och SPA och måste därför alltid finnas. När sidan har skapats måste ytterligare ett bibliotek `cq.authoring.pagemodel.messaging` läggas till för att möjliggöra kommunikation med sidredigeraren.
 
-Om den SPA sidkomponenten ärver från sidhuvudkomponenten finns det två alternativ för att skapa `cq.authoring.pagemodel.messaging` tillgänglig klientbibliotekskategori:
+Om den SPA sidkomponenten ärver från sidhuvudkomponenten finns det två alternativ för att göra klientbibliotekskategorin `cq.authoring.pagemodel.messaging` tillgänglig:
 
 * Om mallen är redigerbar lägger du till den i sidprincipen.
 * Eller lägg till kategorierna med `customfooterlibs.html`.
 
-För varje resurs i den exporterade modellen mappas SPA en faktisk komponent som utför återgivningen. Modellen, som representeras som JSON, återges sedan med komponentmappningarna i en behållare.
+För varje resurs i den exporterade modellen kommer SPA att mappa en faktisk komponent som gör
+återgivning. Modellen, som representeras som JSON, återges sedan med komponentmappningarna i en behållare.
 
 ![Modell- och komponentmappning i SPA](assets/model-component-mapping.png)
 
 >[!CAUTION]
 >
->Inkluderingen av `cq.authoring.pagemodel.messaging` -kategorin ska begränsas till SPA.
+>Inkluderingen av kategorin `cq.authoring.pagemodel.messaging` ska begränsas till kontexten för SPA.
 
 ### Kommunikationsdatatyp {#communication-data-type}
 
-När `cq.authoring.pagemodel.messaging` läggs till på sidan, skickas ett meddelande till sidredigeraren för att fastställa JSON-kommunikationens datatyp. När kommunikationsdatatypen är JSON kommunicerar GET-förfrågningarna med Sling Model-slutpunkterna för en komponent. När en uppdatering har gjorts i sidredigeraren skickas JSON-representationen av den uppdaterade komponenten till sidmodellsbiblioteket. Sidmodellbiblioteket informerar sedan SPA om uppdateringar.
+När kategorin `cq.authoring.pagemodel.messaging` läggs till på sidan skickas ett meddelande till sidredigeraren för att fastställa JSON-kommunikationens datatyp. När kommunikationsdatatypen är JSON kommunicerar GET-förfrågningarna med Sling Model-slutpunkterna för en komponent. När en uppdatering har gjorts i sidredigeraren skickas JSON-representationen av den uppdaterade komponenten till sidmodellsbiblioteket. Sidmodellbiblioteket informerar sedan SPA om uppdateringar.
 
-![SPA](assets/communication.png)
+![SPA kommunikation](assets/communication.png)
 
 ## Arbetsflöde {#workflow}
 
@@ -73,7 +74,7 @@ Du kan förstå interaktionsflödet mellan SPA och AEM genom att tänka på SPA 
 
 Med tanke på de viktigaste elementen i SPA Editor visas arbetsflödet på hög nivå för redigering av en SPA i AEM för författaren enligt följande.
 
-![Animerat SPA arbetsflöde](assets/workflow.gif)
+![Animerat SPA](assets/workflow.gif)
 
 1. SPA Editor läses in.
 1. SPA läses in i en separat ram.
@@ -96,7 +97,7 @@ Med tanke på de viktigaste elementen i SPA Editor visas arbetsflödet på hög 
 
 Detta är en mer detaljerad översikt över klient-server-interaktionen när du redigerar en SPA.
 
-![Klientserverredigeringsarbetsflöde](assets/client-server-editing.png)
+![Redigeringsarbetsflöde för klient-server](assets/client-server-editing.png)
 
 1. SPA initierar sig själv och begär sidmodellen från Sling Model Exporter.
 1. Sling Model Exporter begär de resurser som utgör sidan från databasen.
@@ -105,7 +106,7 @@ Detta är en mer detaljerad översikt över klient-server-interaktionen när du 
 1. SPA instansierar sina komponenter baserat på sidmodellen.
 1. **6a** Innehållet informerar redigeraren om att det är klart för redigering.
 
-   **6b** Sidredigeraren begär komponentredigeringskonfigurationer.
+   **6b** Sidredigeraren begär komponentredigeringskonfigurationerna.
 
    **6c** Sidredigeraren tar emot komponentkonfigurationerna.
 1. När författaren redigerar en komponent skickar sidredigeraren en ändringsbegäran till standardserverprogrammet för POST.
@@ -130,12 +131,12 @@ Detta är en mer detaljerad översikt över klient-server-interaktionen när du 
 
 Det här är en mer detaljerad översikt som fokuserar på redigeringsupplevelsen.
 
-![Arbetsflöde för SPA](assets/authoring-workflow.png)
+![SPA redigeringsarbetsflöde](assets/authoring-workflow.png)
 
 1. SPA hämtar sidmodellen.
 1. **2a** Sidmodellen förser redigeraren med de data som krävs för redigering.
 
-   **2b** När det visas ett meddelande uppdaterar komponentens orchestrator sidans innehållsstruktur.
+   **2b** När du får ett meddelande uppdaterar komponentens koordinator sidans innehållsstruktur.
 1. Komponentkoordinatorn efterfrågar mappningen mellan en AEM resurstyp och en SPA.
 1. Komponentkoordinatorn instansierar SPA dynamiskt baserat på sidmodell och komponentmappning.
 1. Sidredigeraren uppdaterar sidmodellen.
@@ -148,7 +149,7 @@ Det här är en mer detaljerad översikt som fokuserar på redigeringsupplevelse
 
 ## Krav och begränsningar {#requirements-limitations}
 
-Om du vill att författaren ska kunna använda sidredigeraren för att redigera innehållet i en SPA måste ditt SPA program implementeras för att interagera med AEM SDK för SPA. Se [Komma igång med SPA i AEM med React](getting-started-react.md) så att du inte behöver veta mer för att få igång ditt dokument.
+Om du vill att författaren ska kunna använda sidredigeraren för att redigera innehållet i en SPA måste ditt SPA program implementeras för att interagera med AEM SDK för SPA. Se dokumentet [Komma igång med SPA i AEM med React](getting-started-react.md) för att få reda på vad du behöver veta för att få igång ditt arbete.
 
 ### Ramverk som stöds {#supported-frameworks}
 
@@ -161,20 +162,20 @@ Tidigare versioner av dessa ramverk kan fungera med AEM SDK för redigeraren, me
 
 ### Ytterligare ramar {#additional-frameworks}
 
-Ytterligare SPA kan implementeras för att fungera med AEM SPA Editor SDK. Se [SPA](blueprint.md) dokumentera de krav som ett ramverk måste uppfylla för att skapa ett ramverksspecifikt lager som består av moduler, komponenter och tjänster för att fungera med AEM SPA.
+Ytterligare SPA kan implementeras för att fungera med AEM SPA Editor SDK. Se dokumentet [SPA Blueprint](blueprint.md) för de krav som ett ramverk måste uppfylla för att skapa ett ramverksspecifikt lager som består av moduler, komponenter och tjänster för att fungera med AEM SPA.
 
 ### Använda flera väljare {#multiple-selectors}
 
-Ytterligare anpassade väljare kan definieras och användas som en del av en SPA som utvecklats för AEM SDK. Detta stöd kräver dock att `model` vara den första väljaren och tillägget vara `.json` enligt JSON-exportörens krav.
+Ytterligare anpassade väljare kan definieras och användas som en del av en SPA som utvecklats för AEM SDK. Det här stödet kräver dock att väljaren `model` är den första väljaren och tillägget är `.json` enligt JSON-exportörens krav.
 
 ### Krav för textredigeraren {#text-editor-requirements}
 
 Om du vill använda redigeraren i stället för en textkomponent som skapats i SPA måste du konfigurera ytterligare.
 
-1. Ange ett attribut (det kan vara valfritt) för behållarelementet som innehåller texten HTML. För WKND SPA Project är det en `<div>` -elementet och väljaren som har använts är `data-rte-editelement`.
-1. Ange konfigurationen `editElementQuery` på motsvarande AEM `cq:InplaceEditingConfig` som pekar på den väljaren, till exempel `data-rte-editelement`. På så sätt kan redigeraren veta vilket HTML-element som radbryter HTML-texten.
+1. Ange ett attribut (det kan vara valfritt) för behållarelementet som innehåller texten HTML. För WKND-SPA är det ett `<div>`-element och väljaren som har använts är `data-rte-editelement`.
+1. Ange konfigurationen `editElementQuery` för den motsvarande AEM textkomponentens `cq:InplaceEditingConfig` som pekar på den väljaren, till exempel `data-rte-editelement`. På så sätt kan redigeraren veta vilket HTML-element som radbryter HTML-texten.
 
-Mer information om `editElementQuery` -egenskapen och konfigurationen för RTF-redigeraren finns i [Konfigurera RTF-redigeraren](/help/implementing/developing/extending/rich-text-editor.md).
+Mer information om egenskapen `editElementQuery` och konfigurationen av RTF-redigeraren finns i [Konfigurera RTF-redigeraren](/help/implementing/developing/extending/rich-text-editor.md).
 
 ### Begränsningar {#limitations}
 

@@ -1,6 +1,6 @@
 ---
 title: Verktyget Innehållskopia
-description: Med innehållskopieringsverktyget kan man kopiera muterbart innehåll on demand från produktionsmiljön i AEM as a Cloud Service till lägre miljöer i testsyfte.
+description: Med innehållskopieringsverktyget kan man kopiera muterbart innehåll on-demand från produktionsmiljöer i AEM as a Cloud Service till lägre miljöer för teständamål.
 exl-id: 5883e4bc-9861-498e-bd35-32ff03d901cc
 feature: Developing
 role: Admin, Architect, Developer
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Verktyget Innehållskopia {#content-copy}
 
-Med innehållskopieringsverktyget kan man kopiera muterbart innehåll on demand från produktionsmiljön i AEM as a Cloud Service till lägre miljöer i testsyfte.
+Med innehållskopieringsverktyget kan man kopiera muterbart innehåll on-demand från produktionsmiljöer i AEM as a Cloud Service till lägre miljöer för teständamål.
 
 ## Introduktion {#introduction}
 
-Aktuella, riktiga data är värdefulla för testning, validering och för att ge användaren erkännande. Med innehållskopieringsverktyget kan du kopiera innehåll från en produktion AEM en as a Cloud Service miljö till en staging, utveckling eller [Rapid Development Environment (RDE)](/help/implementing/developing/introduction/rapid-development-environments.md) miljö för sådan testning.
+Aktuella, riktiga data är värdefulla för testning, validering och för att ge användaren erkännande. Med innehållskopieringsverktyget kan du kopiera innehåll från en AEM as a Cloud Service-produktionsmiljö till en staging-, development- eller [Rapid Development Environment (RDE)](/help/implementing/developing/introduction/rapid-development-environments.md) -miljö för sådan testning.
 
 Innehållet som ska kopieras definieras av en innehållsuppsättning. En innehållsuppsättning består av en lista med JCR-sökvägar som innehåller det muterbara innehåll som ska kopieras från en källredigeringstjänstmiljö till en målredigeringstjänstmiljö i samma Cloud Manager-program. Följande sökvägar tillåts i en innehållsuppsättning.
 
@@ -41,52 +41,52 @@ Om du vill använda verktyget för innehållskopiering krävs vissa behörighete
 | Innehållskopia | AEM | Distributionshanterarroll |
 |---|---|---|
 | Skapa och ändra [innehållsuppsättningar](#create-content-set) | Krävs inte | Obligatoriskt |
-| Starta eller avbryta [innehållskopia](#copy-content) | Obligatoriskt | Obligatoriskt |
+| Starta eller avbryta [innehållskopieringsprocessen](#copy-content) | Obligatoriskt | Obligatoriskt |
 
-Mer information om behörigheter och hur du ställer in dem finns i [AEM as a Cloud Service team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md).
+Mer information om behörigheter och hur du ställer in dem finns i [AEM as a Cloud Service Team och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md).
 
 ## Skapa en innehållsuppsättning {#create-content-set}
 
 Innan något innehåll kan kopieras måste en innehållsuppsättning definieras. När innehållet har definierats kan det återanvändas för att kopiera innehållet. Följ de här stegen för att skapa en innehållsuppsättning.
 
-1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
-1. Navigera till navigeringspanelen på sidan **Innehållsuppsättningar** -fliken från **Ökning** sida.
+1. Navigera till fliken **Innehållsuppsättningar** på sidan **Översikt** med hjälp av sidnavigeringspanelen.
 
-1. Klicka på längst upp till höger på skärmen **Lägg till innehållsuppsättning**.
+1. Klicka på **Lägg till innehållsuppsättning** längst upp till höger på skärmen.
 
    ![Innehållsuppsättningar](assets/content-sets.png)
 
-1. På **Information** Ange ett namn och en beskrivning för innehållsuppsättningen och välj **Fortsätt**.
+1. Ange ett namn och en beskrivning för innehållsuppsättningen på fliken **Detaljer** i guiden och välj **Fortsätt**.
 
    ![Information om innehållsuppsättning](assets/add-content-set-details.png)
 
-1. På **Innehållsbanor** -fliken i guiden anger du sökvägarna till det ändringsbara innehåll som ska inkluderas i innehållsuppsättningen.
+1. På fliken **Innehållssökvägar** i guiden anger du sökvägarna till det ändringsbara innehåll som ska inkluderas i innehållsuppsättningen.
 
-   1. Ange banan i dialogrutan **Lägg till inkluderingssökväg** fält.
-   1. Klicka **Lägg till bana** för att lägga till sökvägen till innehållsuppsättningen.
-   1. Klicka **Lägg till bana** igen efter behov.
+   1. Ange sökvägen i fältet **Lägg till inkluderingssökväg**.
+   1. Klicka på **Lägg till sökväg** för att lägga till sökvägen till innehållsuppsättningen.
+   1. Klicka på **Lägg till sökväg** igen om det behövs.
       * Upp till 50 banor är tillåtna.
 
-   ![Lägg till banor i innehållsuppsättningen](assets/add-content-set-paths.png)
+   ![Lägg till sökvägar i innehållsuppsättningen](assets/add-content-set-paths.png)
 
 1. Om du måste förfina eller begränsa din innehållsuppsättning kan delbanor uteslutas.
 
-   1. Klicka på i listan med inkluderade sökvägar **Lägg till exkludera delsökvägar** bredvid den bana som du vill begränsa.
+   1. Klicka på **Lägg till exkludera delsökvägar** bredvid den sökväg du vill begränsa i listan över inkluderade sökvägar.
    1. Ange den delbana som ska uteslutas under den valda banan.
-   1. Välj **Uteslut bana**.
-   1. Välj **Lägg till exkludera delsökvägar** igen om du vill lägga till ytterligare sökvägar som ska uteslutas efter behov.
+   1. Välj **Uteslut sökväg**.
+   1. Välj **Lägg till exkludera delsökvägar** igen om du vill lägga till ytterligare sökvägar som ska exkluderas efter behov.
       * Undantagna sökvägar måste vara relativa till den inkluderade sökvägen.
       * Det finns ingen gräns för antalet uteslutna banor.
 
-   ![Exkludera banor](assets/add-content-set-paths-excluded.png)
+   ![Exkluderar banor](assets/add-content-set-paths-excluded.png)
 
 1. Du kan redigera de angivna sökvägarna om det behövs.
 
    1. Klicka på X bredvid de uteslutna delbanorna så att du kan ta bort dem.
-   1. Klicka på ellipsknappen bredvid banorna så att du kan se **Redigera** och **Ta bort** alternativ.
+   1. Klicka på ellipsknappen bredvid sökvägarna så att du kan visa alternativen **Redigera** och **Ta bort**.
 
-   ![Redigera sökvägslista](assets/add-content-set-excluded-paths.png)
+   ![Redigerar sökvägslista](assets/add-content-set-excluded-paths.png)
 
 1. Välj **Skapa** för att skapa innehållsuppsättningen.
 
@@ -94,7 +94,7 @@ Innehållsuppsättningen kan nu användas för att kopiera innehåll mellan milj
 
 ## Redigera en innehållsuppsättning {#edit-content-set}
 
-Följ liknande steg som när du skapar ett innehållssteg. Istället för att klicka **Lägg till innehållsuppsättning** väljer du en befintlig uppsättning från konsolen och väljer **Redigera** på ellipsmenyn.
+Följ liknande steg som när du skapar ett innehållssteg. I stället för att klicka på **Lägg till innehållsuppsättning** markerar du en befintlig uppsättning i konsolen och väljer **Redigera** på ellipsmenyn.
 
 ![Redigera innehållsuppsättning](assets/edit-content-set.png)
 
@@ -105,13 +105,13 @@ När du redigerar din innehållsuppsättning kan du expandera de konfigurerade s
 När en innehållsuppsättning har skapats kan du använda den för att kopiera innehåll. Följ de här stegen för att kopiera innehåll.
 
 >[!NOTE]
-> Använd inte Content Copy i en miljö som [innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md) -åtgärden körs i den miljön.
+> Använd inte Content Copy i en miljö när en [innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md)-åtgärd körs i den miljön.
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
-1. Navigera till **Miljö** från **Ökning** sida.
+1. Gå till skärmen **Miljö** från sidan **Översikt**.
 
-1. Navigera till **Innehållsuppsättningar** sidan från **Miljö** skärm.
+1. Navigera till sidan **Innehållsuppsättningar** från skärmen **Miljö**.
 
 1. Välj en innehållsuppsättning från konsolen och välj **Kopiera innehåll** på ellipsmenyn.
 
@@ -125,7 +125,7 @@ När en innehållsuppsättning har skapats kan du använda den för att kopiera 
    >* Miljön har en pågående pipeline eller en åtgärd för att kopiera innehåll.
    >* Miljön försätts i viloläge eller startar.
 
-1. I **Kopiera innehåll** anger du källa och mål för kopieringsåtgärden.
+1. I dialogrutan **Kopiera innehåll** anger du källan och målet för kopieringsåtgärden.
 
    ![Kopierar innehåll](assets/copying-content.png)
 
@@ -142,15 +142,15 @@ Kopieringsprocessen startar. Kopieringsprocessens status visas i konsolen för d
 
 ## Innehållskopia aktivitet {#copy-activity}
 
-Du kan övervaka statusen för dina kopieringsprocesser i **Kopiera innehållsaktivitet** sida.
+Du kan övervaka statusen för dina kopieringsprocesser på sidan **Kopiera innehållsaktivitet**.
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
-1. Navigera till **Miljö** från **Ökning** sida.
+1. Gå till skärmen **Miljö** från sidan **Översikt**.
 
-1. Navigera till **Kopiera innehållsaktivitet** sidan från **Miljö** skärm.
+1. Navigera till sidan **Kopiera innehållsaktivitet** från skärmen **Miljö**.
 
-![Innehållskopia aktivitet](assets/copy-content-activity.png)
+![Aktivitet för innehållskopia](assets/copy-content-activity.png)
 
 ### Status för innehållskopia {#statuses}
 
@@ -167,7 +167,7 @@ När du börjar kopiera innehåll kan processen ha någon av följande statusar.
 
 Om du måste avbryta en innehållskopia efter att du startat den kan du också avbryta den.
 
-Om du vill göra det går du till **Kopiera innehållsaktivitet** väljer du **Avbryt** på ellipsmenyn i kopieringsprocessen som du påbörjade tidigare.
+På sidan **Kopiera innehållsaktivitet** väljer du åtgärden **Avbryt** på ellipsmenyn för den kopieringsprocess som du startade tidigare.
 
 ![Avbryt innehållskopia](assets/content-copy-cancel.png)
 
@@ -181,9 +181,9 @@ Om du vill göra det går du till **Kopiera innehållsaktivitet** väljer du **A
 
 Du kan kontrollera loggarna för både käll- och målmiljöer för att se om det finns några slutförda innehållskopieringsprocesser.
 
-Om du vill göra det går du till **Kopiera innehållsaktivitet** väljer du **Loggar** åtgärden på ellipsmenyn i kopieringsprocessen som du vill granska loggarna för och sedan välja för vilken miljö.
+På sidan **Kopiera innehållsaktivitet** väljer du åtgärden **Loggar** på ellipsmenyn för kopieringsprocessen som du vill granska loggarna för och väljer sedan för vilken miljö.
 
-![Åtkomst till loggar för innehållskopiering](assets/copy-content-logs.png)
+![Åtkomst till loggar för kopieringsinnehållsprocess](assets/copy-content-logs.png)
 
 Loggarna hämtas till din lokala dator. Om hämtningen inte startar kontrollerar du inställningarna för popup-blockering.
 

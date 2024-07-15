@@ -16,8 +16,8 @@ ht-degree: 0%
 Eftersom AEM baseras på Sling och använder en JCR-databas är de nodtyper som erbjuds av båda dessa standarder tillgängliga för användning i AEM:
 
 * [JCR-nodtyper](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
-* [Sling Node Types](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
+* [Dela nodtyper](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
 
-Förutom dessa. AEM innehåller ett antal anpassade nodtyper. För den senaste listan med alla associerade egenskaper [använd CRXDE](/help/implementing/developing/tools/crxde.md) om du vill bläddra i följande sökväg i AEM:
+Förutom dessa. AEM innehåller ett antal anpassade nodtyper. [Använd CRXDE](/help/implementing/developing/tools/crxde.md) för att bläddra i följande sökväg i AEM databas för den senaste listan med alla associerade egenskaper:
 
 `/jcr:system/jcr:nodeTypes`

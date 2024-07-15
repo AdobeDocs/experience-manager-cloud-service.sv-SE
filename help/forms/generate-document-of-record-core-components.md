@@ -17,7 +17,7 @@ ht-degree: 0%
 
 När ett formulär fylls i eller skickas kan du spara en post med formuläret, i utskrift eller i dokumentformat. Den här posten kallas dokumentarkivhandling (DoR). Det är en utskriftsvänlig kopia av det inskickade formuläret. Du kan också hänvisa till urkunder för den information de fyller i vid ett senare tillfälle eller använda arkiveringsdokumentet för att arkivera formulär och innehåll tillsammans i PDF-format.
 
-![Dokument för registrering](assets/document-of-record.png)
+![Postdokument](assets/document-of-record.png)
 
 Om du vill skapa ett dokument med poster sammanfogas en XFA- eller Acrobat-baserad mall med data som samlats in via ett adaptivt formulär. Du kan generera ett dokument för inspelning automatiskt eller on-demand. Med alternativet on-demand kan du ange en anpassad XFA- eller Acrobat-baserad mall som ger ett anpassat utseende till ditt postdokument.
 
@@ -31,20 +31,20 @@ Du kan:
 
 Innan du börjar lära dig mer och förbereder de resurser som krävs för ett dokument:
 
-**Basmall:** En XFA-mall (XDP-fil) som skapats i Forms Designer eller ett Acrobat-formulär (AcroForm). [Basmall](#base-template-of-a-document-of-record) används för att ange formaterings- och varumärkesinformation för ett arkivdokument. Överför din XFA-mall (XDP-fil) till din AEM Forms-instans tidigare.
+**Basmall:** En XFA-mall (XDP-fil) skapad i Forms Designer eller ett Acrobat-formulär (AcroForm). [Basmallen](#base-template-of-a-document-of-record) används för att ange formaterings- och varumärkesinformation för ett postdokument. Överför din XFA-mall (XDP-fil) till din AEM Forms-instans tidigare.
 
-**Adaptiv form:** Ett anpassat formulär som postdokumentet ska skapas för.
+**Anpassat formulär:** Ett anpassat formulär som postdokumentet ska skapas för.
 
 ## Generera ett XFA-baserat arkivdokument {#generate-an-XFA-based-document-of-record}
 
 Överför din XFA-mall (XDP-fil) till din AEM Forms-instans. Utför följande steg för att konfigurera ett adaptivt formulär så att XFA-mallen (XDP-filen) används som mall för postdokument:
 
-1. I författarinstansen av Experience Manager klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
+1. Klicka på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents]i författarinstansen Experience Manager.**
 1. Välj ett formulär eller Skapa ett anpassat formulär och klicka på **[!UICONTROL Properties]**.
-1. Välj **[!UICONTROL Form Model]**.
-1. På  **[!UICONTROL Form Model]** -fliken, i **[!UICONTROL Select From]** nedrullningsbar meny, välja **[!UICONTROL Form Data Model]**, **[!UICONTROL Schema]** eller **[!UICONTROL None]**. Du kan också välja en formulärmodell när du skapar ett formulär.
-1. I avsnittet Dokumentmall på fliken Formulärmodell väljer du **Associera formulärmall som postdokumentmall**. När du väljer det här alternativet visas alla XFA-mallar (XDP-filer) som är tillgängliga på datorn. Välj lämplig fil. Se även till att samma schema (dataschema) används för Adaptivt formulär och vald XFA-mall (XDP-fil).
-1. Klicka **[!UICONTROL Done.]**
+1. Välj **[!UICONTROL Form Model]** i fönstret Egenskaper.
+1. Välj **[!UICONTROL Form Data Model]**, **[!UICONTROL Schema]** eller **[!UICONTROL None]** i listrutan **[!UICONTROL Select From]** på fliken **[!UICONTROL Form Model]**. Du kan också välja en formulärmodell när du skapar ett formulär.
+1. Välj **Associera formulärmall som postmall** i avsnittet Dokumentmall på fliken Formulärmodell. När du väljer det här alternativet visas alla XFA-mallar (XDP-filer) som är tillgängliga på datorn. Välj lämplig fil. Se även till att samma schema (dataschema) används för Adaptivt formulär och vald XFA-mall (XDP-fil).
+1. Klicka på **[!UICONTROL Done.]**
 
 Ditt adaptiva formulär är nu konfigurerat att använda en XDP-fil som mall för postdokument. Nästa steg är att [binda adaptiva formulärkomponenter till motsvarande mallfält](#bind-adaptive-form-components-with-template-fields).
 
@@ -52,12 +52,12 @@ Ditt adaptiva formulär är nu konfigurerat att använda en XDP-fil som mall fö
 
 Överför Adobe Acrobat PDF (Acrobat) till din AEM Forms-instans. Utför följande steg för att konfigurera ett adaptivt formulär så att det använder Adobe Acrobat PDF (Acrobat) som mall för arkivdokument:
 
-1. I författarinstansen av Experience Manager klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
-1. Välj ett formulär eller **[!UICONTROL Create an Adaptive Form]** och klicka **[!UICONTROL Properties]**.
-1. Välj **[!UICONTROL Form Model]**.
-1. På  **[!UICONTROL Form Model]** -fliken, i **[!UICONTROL Select From]** nedrullningsbar meny, välja **[!UICONTROL Form Data Model]**, **[!UICONTROL Schema]** eller **[!UICONTROL None]**. Du kan också välja en formulärmodell när du skapar ett formulär.
-1. I avsnittet Dokumentmall på fliken Formulärmodell väljer du **Associera formulärmall som postdokumentmall**. När du väljer det här alternativet visas alla Acrobat-PDF (Acrobat) som är tillgängliga på datorn. Markera den Acrobat som du vill använda.
-1. Klicka **[!UICONTROL Done.]**
+1. Klicka på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents]i författarinstansen Experience Manager.**
+1. Välj ett formulär eller **[!UICONTROL Create an Adaptive Form]** och klicka på **[!UICONTROL Properties]**.
+1. Välj **[!UICONTROL Form Model]** i fönstret Egenskaper.
+1. Välj **[!UICONTROL Form Data Model]**, **[!UICONTROL Schema]** eller **[!UICONTROL None]** i listrutan **[!UICONTROL Select From]** på fliken **[!UICONTROL Form Model]**. Du kan också välja en formulärmodell när du skapar ett formulär.
+1. Välj **Associera formulärmall som postmall** i avsnittet Dokumentmall på fliken Formulärmodell. När du väljer det här alternativet visas alla Acrobat-PDF (Acrobat) som är tillgängliga på datorn. Markera den Acrobat som du vill använda.
+1. Klicka på **[!UICONTROL Done.]**
 
 Ditt adaptiva formulär är nu konfigurerat att använda en Acrobat som mall för arkivdokument. Nästa steg är att [binda adaptiva formulärkomponenter till motsvarande mallfält](#bind-adaptive-form-components-with-template-fields).
 
@@ -73,12 +73,12 @@ När ett anpassat formulär konfigureras för att automatiskt generera ett dokum
 
 Så här konfigurerar du ett anpassat formulär så att det automatiskt genererar ett postdokument:
 
-1. I författarinstansen av Experience Manager klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
+1. Klicka på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents]i författarinstansen Experience Manager.**
 1. Välj ett formulär eller Skapa ett anpassat formulär och klicka på **[!UICONTROL Properties]**.
-1. Välj **[!UICONTROL Form Model]**.
-1. På  **[!UICONTROL Form Model]** -fliken, i **[!UICONTROL Select From]** nedrullningsbar meny, välja **[!UICONTROL Form Data Model]**, **[!UICONTROL Schema]** eller **[!UICONTROL None]**. Du kan också välja en formulärmodell när du skapar ett formulär.
-1. I avsnittet Dokumentmall på fliken Formulärmodell väljer du **Generera postdokument**.
-1. Klicka **[!UICONTROL Done.]**
+1. Välj **[!UICONTROL Form Model]** i fönstret Egenskaper.
+1. Välj **[!UICONTROL Form Data Model]**, **[!UICONTROL Schema]** eller **[!UICONTROL None]** i listrutan **[!UICONTROL Select From]** på fliken **[!UICONTROL Form Model]**. Du kan också välja en formulärmodell när du skapar ett formulär.
+1. Välj **Generera postdokument** i avsnittet Dokumentmall på fliken Formulärmodell.
+1. Klicka på **[!UICONTROL Done.]**
 
 ## Bind adaptiva formulärkomponenter till mallfält {#bind-adaptive-form-components-with-template-fields}
 
@@ -86,12 +86,12 @@ Bind adaptiva formulärfält med mallfält för att visa hämtade formulärdata 
 
 1. Öppna det adaptiva formuläret, som är konfigurerat att använda en anpassad formulärmall för redigering.
 
-1. Markera en adaptiv formulärkomponent och klicka på Konfigurera ![Konfigurera](assets/Smock_Wrench_18_N.svg) -ikon. Egenskapsläsaren öppnas.
+1. Markera en adaptiv formulärkomponent och klicka på ikonen Konfigurera ![Konfigurera](assets/Smock_Wrench_18_N.svg). Egenskapsläsaren öppnas.
 
 1. Bläddra och markera ett fält i egenskapswebbläsaren.
 
-   * (För AcroForm-mall) **[!UICONTROL Document of Record Bind Reference field]** -egenskap.
-   * (För XFA-mall) **[!UICONTROL Data Model Bind Reference]** -egenskap.
+   * (För AcroForm-mall) egenskapen **[!UICONTROL Document of Record Bind Reference field]**.
+   * (För XFA-mall) egenskapen **[!UICONTROL Data Model Bind Reference]**.
 
 1. Klicka på **[!UICONTROL Save]**.
 
@@ -99,8 +99,8 @@ Bind adaptiva formulärfält med mallfält för att visa hämtade formulärdata 
 In the following video, Adaptive Form components are bound with corresponding Acroform template fields and the Document of Record is sent as an email attachment.
 -->
 
-Du kan använda skicka-åtgärder som&quot;Skicka e-post&quot;,&quot;Anropa ett AEM&quot;,&quot;Anropa ett Power Automate-flöde&quot; och andra [Skicka funktionsmakron](configuring-submit-actions.md) för att få ett dokument.
-![Bildöverföringsåtgärder](/help/forms/assets/submit-actions-img.png)
+Du kan använda Skicka-åtgärder som&quot;Skicka e-post&quot;,&quot;Anropa ett AEM&quot;,&quot;Anropa ett Power Automate-flöde&quot; och andra [Skicka-åtgärder](configuring-submit-actions.md) för att ta emot ett arkivdokument.
+![Överföringsåtgärder för bilder](/help/forms/assets/submit-actions-img.png)
 
 
 
@@ -110,11 +110,11 @@ Anpassningsbara formulär och motsvarande dokument med postmallar kan utvecklas 
 
 När du ändrar en dokumentmall och överför den ändrade dokumentmallen till AEM Forms, identifierar den adaptiva Forms-redigeraren automatiskt de ändrade bindningarna och informerar dig om adaptiva formulärkomponenter som kräver nya bindningar. Du kan göra inkrementella uppdateringar i en dokumentmall.
 
-Exempel: en organisation *Vi.butik* har en AcroForm-baserad dokumentmall, *we-retail-invoice.pdf*. Mallen ser ut så här:
+En organisation, *We.Retail*, har till exempel en AcroForm-baserad dokumentmall, *we-retail-invoice.pdf*. Mallen ser ut så här:
 
 ![Ursprunglig mall](assets/we-retail-invoice.png)
 
-Efter att ha använt mallen ett tag bestämmer sig organisationen för att byta namn `invoice-number` fält till `bill-number` fält och e-postadress för inhämtning av köpare. En utvecklare uppdaterar namnet på `invoice-number` och lägger till ett e-postfält i mallen. Han skapar också en ny version av mallen som kallas  *we-retail-invoice-v2.pdf*.
+Efter att ha använt mallen ett tag bestämmer sig organisationen för att byta namn på fältet `invoice-number` till fältet `bill-number` och hämta e-postadressen till köparna. En utvecklare uppdaterar namnet på fältet `invoice-number` och lägger till ett e-postfält i mallen. Han skapar också en ny version av mallen med namnet *we-retail-invoice-v2.pdf*.
 
 ![Uppdaterad mall](assets/we-retail-new-invoice.png)
 
@@ -132,7 +132,7 @@ The form developer binds Adaptive Forms fields with corresponding Document of Re
 
 När det adaptiva formuläret skickas genereras nu ett uppdaterat arkivdokument.
 
-![Uppdaterad](assets/we-retail-new-invoice-sent-to-customer.png)
+![Uppdaterad-](assets/we-retail-new-invoice-sent-to-customer.png)
 
 ## Viktiga saker att tänka på när du arbetar med postdokumentet {#key-considerations-when-working-with-document-of-record}
 
@@ -248,7 +248,7 @@ I följande tabell beskrivs adaptiva formulärkomponenter och motsvarande XFA-ko
   </tr>
   <tr>
    <td>Panel<br /> </td>
-   <td>Delformulär<br /> </td>
+   <td>Delformulär <br /> </td>
    <td>Upprepningsbara panelmappar till repeterbara delformulär.</td>
   </tr>
  </tbody>
@@ -271,7 +271,7 @@ Basmallen innehåller formaterings- och utseendeinformation för arkivhandlingar
 
 Mallsidan från en basmall används som mallsida för dokumentmallen. Huvudsidan kan innehålla information som sidhuvud, sidfot och sidnummer som du kan använda i postdokumentet. Du kan använda den här informationen på postdokumentet med hjälp av basmallen för automatisk generering av postdokumentet. Om du använder en basmall kan du ändra standardegenskaperna för fält.
 
-Följ alltid [Grundmallskonventioner](#base-template-conventions) när du utformar en basmall.
+Följ alltid [Basmallskonventioner](#base-template-conventions) när du utformar basmallen.
 
 ## Grundmallskonventioner {#base-template-conventions}
 
@@ -279,26 +279,26 @@ En basmall används för att definiera sidhuvud, sidfot, format och utseende fö
 
 **Konventioner för mallsidor**
 
-* I basmallen ger du rotdelformuläret namnet `AF_METATEMPLATE` och mallsidan som `AF_MASTERPAGE`.
+* I basmallen ger du rotdelformuläret namnet `AF_METATEMPLATE` och huvudsidan namnet `AF_MASTERPAGE`.
 
-* Mallsidan med namnet `AF_MASTERPAGE` som finns under `AF_METATEMPLATE` rotdelformulär är att föredra när du vill extrahera sidhuvud, sidfot och formatinformation.
+* Huvudsidan med namnet `AF_MASTERPAGE` som finns under rotdelformuläret `AF_METATEMPLATE` är att föredra om du vill extrahera sidhuvud, sidfot och formatinformation.
 
-* If `AF_MASTERPAGE` saknas används den första mallsidan i basmallen.
+* Om `AF_MASTERPAGE` saknas används den första mallsidan i basmallen.
 
-**Formatkonventioner för fält**
+**Formateringskonventioner för fält**
 
-* Om du vill använda format på fälten i postdokumentet innehåller basmallen fält som finns i `AF_FIELDSSUBFORM` under `AF_METATEMPLATE` rotdelformulär.
+* Om du vill använda format på fälten i postdokumentet innehåller basmallen fält som finns i delformuläret `AF_FIELDSSUBFORM` under rotdelformuläret `AF_METATEMPLATE`.
 
-* Egenskaperna för dessa fält används för fälten i postdokumentet. Dessa fält ska följa `AF_<name of field in all caps>_XFO` namnkonvention. Fältnamnet för kryssrutan bör till exempel vara `AF_CHECKBOX_XFO`.
+* Egenskaperna för dessa fält används för fälten i postdokumentet. Dessa fält bör följa namnkonventionen för `AF_<name of field in all caps>_XFO`. Fältnamnet för kryssrutan bör till exempel vara `AF_CHECKBOX_XFO`.
 
 Så här skapar du en basmall: Forms Designer.
 
-1. Klicka **[!UICONTROL File]** > **[!UICONTROL New]**.
-1. Välj **[!UICONTROL Based on a template]** alternativ.
+1. Klicka på **[!UICONTROL File]** > **[!UICONTROL New]**.
+1. Välj alternativet **[!UICONTROL Based on a template]**.
 
-1. Välj **[!UICONTROL Forms - Document of Record]** kategori.
+1. Välj kategorin **[!UICONTROL Forms - Document of Record]**.
 1. Välj **[!UICONTROL DoR Base Template]**.
-1. Klicka **[!UICONTROL Next]** och tillhandahålla den information som krävs.
+1. Klicka på **[!UICONTROL Next]** och ange nödvändig information.
 
 1. (Valfritt) Ändra format och utseende på fält som du vill använda i fälten i postdokumentet.
 1. Spara formuläret.
@@ -306,7 +306,7 @@ Så här skapar du en basmall: Forms Designer.
 
 Du kan nu använda det sparade formuläret som en basmall för ett postdokument. Ändra eller ta inte bort några skript i basmallen.
 
-**Ändra basmall**
+**Ändrar basmall**
 
 * Använd ingen formatering över fält i basmallen. Du bör ta bort dessa fält från basmallen så att eventuella uppgraderingar av basmallen automatiskt hämtas.
 * När du ändrar basmallen ska du inte ta bort, lägga till eller ändra skript.
@@ -319,32 +319,32 @@ När du genererar ett dokument för registrering kan du ändra profileringsinfor
 
 Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokument av post kontrollerar du att webbläsarens språkområde är korrekt inställt. Så här anpassar du profileringsinformationen i Document of Record:
 
-1. Markera en panel (rotpanelen) i postdokumentet och välj sedan ![konfigurera](assets/configure.png).
+1. Markera en panel (rotpanelen) i postdokumentet och välj sedan ![configure](assets/configure.png).
 1. Välj ![dortab](assets/dortab.png). Fliken Dokument för post visas.
 1. Välj antingen standardmallen eller en anpassad mall för återgivning av postdokumentet. Om du väljer standardmallen visas en miniatyrförhandsvisning av postdokumentet under listrutan Mall.
 1. Beroende på om du väljer en standardmall eller en anpassad mall visas några av följande egenskaper, eller alla egenskaper, på fliken Dokument för post. Ange nedanstående egenskaper för att definiera utseendet på postdokumentet:
 
    1. **Grundläggande egenskaper**:
-      * **Mall**: Om du vill välja en anpassad mall bläddrar du och väljer en XDP-fil på din [!DNL AEM Forms] server. Om du vill använda en mall som inte är tillgänglig på din [!DNL AEM Forms] ska du först överföra XDP-filen till din [!DNL AEM Forms] server.
-      * **Dekorfärg**: Den färg i vilken rubriktext och avgränsningslinjer återges i postdokumentet PDF.
-      * **Font Family**: Teckensnittsfamilj för texten i PDF på dokumentationssidan.
+      * **Mall**: Om du vill välja en anpassad mall bläddrar du och väljer en XDP-fil på [!DNL AEM Forms]-servern. Om du vill använda en mall som inte är tillgänglig på din [!DNL AEM Forms]-server bör du först överföra XDP-filen till din [!DNL AEM Forms]-server.
+      * **Dekorfärg**: Den färg i vilken rubriktext och avgränsningslinjer återges i postens PDF-dokument.
+      * **Teckensnittsfamilj**: Teckensnittsfamilj för texten i PDF för dokument för post.
 
         >[!NOTE]
         >
-        > AEM Forms har en mängd inbyggda teckensnitt som är helt integrerade med PDF filer. Om du vill se en lista över teckensnitt som stöds [klicka här](/help/forms/supported-out-of-the-box-fonts.md).
+        > AEM Forms har en mängd inbyggda teckensnitt som är helt integrerade med PDF filer. [Klicka här](/help/forms/supported-out-of-the-box-fonts.md) om du vill visa en lista över teckensnitt som stöds.
 
-      * **Inkludera formulärobjekt som inte är bundna till datamodell**: Att ställa in egenskapen inkluderar obundna fält från schemabaserade adaptiva formulär i postdokumentet.
+      * **Inkludera formulärobjekt som inte är bundna till datamodell**: Om du anger egenskapen inkluderas obundna fält från schemabaserat anpassat formulär i postdokumentet.
 
       <!-- **Exclude hidden fields from the Document of Record**: Setting the property identifies the hidden fields for exclusion from Document of Record.-->
 
-      * **Dölj beskrivning av paneler**: Om du anger egenskapen utesluts beskrivningen av panelen/tabellen från postdokumentet. Gäller för panel och tabell.
+      * **Dölj beskrivning av paneler**: Om egenskapen anges utesluts beskrivning av panelen/tabellen från postdokumentet. Gäller för panel och tabell.
 
 
 
    1. **Egenskaper för formulärfält**:
-      * **Visa endast de valda värdena för komponenterna Kryssruta och Alternativknapp**: Om du ställer in egenskapen visas endast markerade värden för kryssrutor och alternativknappar i [!UICONTROL Document of Record].
-      * **Avgränsare för flera värden**: Du kan välja valfri avgränsare, t.ex. komma eller radbrytning, om du vill visa flera värden.
-      * **Justering**: Du kan välja önskad justering (Vågrät, Lodrät, Samma som adaptiv form) för att ange justeringen för fält som kryssruta eller alternativknapp som ska visas på [!UICONTROL Document of Record]. Som standard är den lodräta justeringen inställd för fälten i [!UICONTROL Document of Record]. Ställa in egenskaperna från [!UICONTROL Form Field Properties] av DoR skriver över egenskaperna som anges i [!UICONTROL Item Alignment] för fälten i ett adaptivt formulär. Om du vill välja [!UICONTROL Same as Aaptive form] -alternativet används justeringen som den har konfigurerats i en instans av adaptiv formulärförfattare för [!UICONTROL Document of Record] fält.
+      * **Visa endast de markerade värdena för komponenterna Kryssruta och Alternativknapp**: Om du anger egenskapen visas endast markerade värden för kryssrutor och alternativknappar i [!UICONTROL Document of Record].
+      * **Avgränsare för flera värden**: Du kan välja en avgränsare, till exempel komma eller radbrytning, om du vill visa flera värden.
+      * **Alternativ Justering**: Du kan välja önskad justering (Vågrät, Lodrät, Samma som adaptiv form) för att ange justeringen för fält som kryssruta eller alternativknapp som ska visas i [!UICONTROL Document of Record]. Som standard är den lodräta justeringen inställd för fälten i [!UICONTROL Document of Record]. Om du ställer in egenskaperna från [!UICONTROL Form Field Properties] i DoR skrivs egenskaperna som angetts i [!UICONTROL Item Alignment] för fälten i ett adaptivt formulär över. Om du väljer alternativet [!UICONTROL Same as Aaptive form] används justeringen som konfigurerats i en författarinstans för adaptiva formulär för [!UICONTROL Document of Record]-fält.
       * **Antal alternativ för vågrät justering**:Du kan ange hur många alternativ som ska visas i postdokumentet för den vågräta justeringen.
 
 
@@ -352,9 +352,9 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
    1. **Egenskaper för mallsida**:
       * **Logotypbild**: Du kan antingen välja att använda logotypbilden från det adaptiva formuläret, välja en från DAM eller överföra en från datorn.
       * **Formulärtitel**: Titel på DoR.
-      * **Sidhuvudstext**: Text som visas i rubrikavsnittet i postdokumentet.
-      * **Ansvarsfriskrivning**: Ansvarsfriskrivning.
-      * **Ansvarsfriskrivning**: Text som anger omfattningen av rättigheter och skyldigheter i registreringsdokumentet.
+      * **Huvudtext**: Text som visas i rubrikavsnittet i postdokumentet.
+      * **Ansvarsfriskrivning**: Etikett för friskrivning.
+      * **Ansvarsfriskrivning**: Text som anger omfattningen av rättigheter och skyldigheter i dokumentdokumentet.
       * **Ansvarsfriskrivning**: Ansvarsfriskrivning.
 
       ![Egenskaper för mallsida](/help/forms/assets/dorpropertiesimg.png)
@@ -375,7 +375,7 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
    </proto>
    ```
 
-1. Om du vill spara varumärkeskonfigurationen väljer du **[!UICONTROL Done]**.
+1. Välj **[!UICONTROL Done]** om du vill spara profileringsändringarna.
 
 
 
@@ -385,7 +385,7 @@ Det anpassade formuläret kan vara långt och innehålla flera formulärfält. D
 
 Innan du genererar ett postdokument väljer du Layout för postdokumentet för den panelen som Tabell eller Kolumn i inställningarna för en panel. Fälten i panelen ordnas därefter i postdokumentet.
 
-![Fält i en panel återges i en tabellayout i postdokumentet](assets/dortablelayout.png)
+![Fält i en panel återges i en tabelllayout i postdokumentet](assets/dortablelayout.png)
 
 Fält i en panel återges i en tabellayout i postdokumentet
 
@@ -397,19 +397,19 @@ Fält i en panel återges i en kolumnlayout i postdokumentet
 
 Med dokumentinställningar kan du välja vilka alternativ du vill inkludera i postdokumentet. En bank godkänner till exempel namn, ålder, personnummer och telefonnummer i ett formulär. Formuläret genererar ett bankkontonummer och filialinformation. Du kan välja att bara visa namn, personnummer, bankkonto och filialinformation i registreringsdokumentet.
 
-Inställningen för dokumentkomponenten är tillgänglig under dess egenskaper. Om du vill komma åt egenskaperna för en komponent markerar du komponenten och klickar på ![cmppr](assets/cmppr.png) i övertäckningen. Egenskaperna listas i sidlisten och du hittar följande inställningar i den.
+Inställningen för dokumentkomponenten är tillgänglig under dess egenskaper. Om du vill komma åt egenskaperna för en komponent markerar du komponenten och klickar på ![cmpr](assets/cmppr.png) i övertäckningen. Egenskaperna listas i sidlisten och du hittar följande inställningar i den.
 
 **Fältnivåinställningar**
 
-* **Exkludera från postdokument**: Om egenskapen true anges exkluderas fältet från postdokumentet. Det här är en skriptbar egenskap med namnet `excludeFromDoR`. Dess beteende beror på **Uteslut fält från DoR om de är dolda** formulärnivåegenskap.
+* **Uteslut från postdokument**: Om egenskapen true anges exkluderas fältet från postdokument. Det här är en skriptbar egenskap med namnet `excludeFromDoR`. Dess beteende beror på **Uteslut fält från DoR om egenskapen** för dold formulärnivå är aktiv.
 
-* **Visa panelen som tabell:** Om du ställer in egenskapen visas panelen som tabell i Postdokument om panelen innehåller färre än 6 fält. Gäller endast för panelen.
-* **Exkludera rubrik från arkivdokument:** Om du anger egenskapen utesluts panelens/tabellens namn från Postdokument. Gäller endast för panel och tabell.
-* **Exkludera beskrivning från postdokument:** Om du ställer in egenskapen utesluts beskrivningen av panelen/tabellen från Postdokument. Gäller endast för panel och tabell.
+* **Visa panelen som tabell:** Om egenskapen anges visas panelen som tabell i postdokument om panelen innehåller färre än 6 fält. Gäller endast för panelen.
+* **Exkludera rubrik från postdokument:** Om egenskapen anges exkluderas panelens/tabellens namn från postdokumentet. Gäller endast för panel och tabell.
+* **Uteslut beskrivning från postdokument:** Om egenskapen anges exkluderas beskrivning av panelen/tabellen från postdokument. Gäller endast för panel och tabell.
 
-**Inställningar för formulärnivå**
+**Inställningar på formulärnivå**
 
-* **Inkludera obundna fält i DoR:** När du anger egenskapen inkluderas obundna fält från schemabaserade adaptiva formulär i postdokumentet. Som standard är det sant.
+* **Inkludera obundna fält i DoR:** Inställning av egenskapen inkluderar obundna fält från schemabaserat anpassat formulär i arkivdokumentet. Som standard är det sant.
 
 ## Se även {#see-also}
 

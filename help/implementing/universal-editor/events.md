@@ -17,23 +17,23 @@ Lär dig mer om de olika händelser som den universella redigeraren skickar och 
 
 ## Introduktion {#introduction}
 
-Program kan ha olika krav för sid- och komponentuppdateringar. Därför skickar den universella redigeraren definierade händelser till fjärrprogram. Om fjärrprogrammet inte har någon anpassad händelseavlyssnare för den skickade händelsen kan en [händelseavlyssnare för fallback](#fallback-listeners) tillhandahålls av `universal-editor-cors` paketet körs.
+Program kan ha olika krav för sid- och komponentuppdateringar. Därför skickar den universella redigeraren definierade händelser till fjärrprogram. Om fjärrprogrammet inte har någon anpassad händelseavlyssnare för den skickade händelsen körs en [fallback-händelseavlyssnare](#fallback-listeners) som tillhandahålls av paketet `universal-editor-cors`.
 
-Alla händelser anropas på det DOM-element som påverkas på fjärrsidan. Händelser bubblar upp till `BODY` element där standardhändelseavlyssnaren tillhandahålls av `universal-editor-cors` paketet är registrerat. Det finns händelser för innehållet och händelserna för användargränssnittet.
+Alla händelser anropas på det DOM-element som påverkas på fjärrsidan. Händelser bubblar upp till elementet `BODY` där standardhändelseavlyssnaren som tillhandahålls av paketet `universal-editor-cors` är registrerad. Det finns händelser för innehållet och händelserna för användargränssnittet.
 
 Alla händelser följer en namngivningskonvention.
 
 * `aue:<content-or-ui>-<event-name>`
 
-Till exempel: `aue:content-update` och `aue:ui-select`
+Till exempel `aue:content-update` och `aue:ui-select`
 
-Händelser inkluderar nyttolasten för begäran och svaret och aktiveras när motsvarande anrop lyckas. Mer information om samtal och exempel på deras nyttolaster finns i dokumentet [Universella redigeringsanrop.](/help/implementing/universal-editor/calls.md)
+Händelser inkluderar nyttolasten för begäran och svaret och aktiveras när motsvarande anrop lyckas. Mer information om samtal och exempel på deras nyttolaster finns i dokumentet [Universal Editor Call.](/help/implementing/universal-editor/calls.md)
 
 ## Händelser för innehållsuppdatering {#content-events}
 
 ### aue:content-add {#content-add}
 
-The `aue:content-add` -händelsen utlöses när en ny komponent läggs till i en behållare.
+Händelsen `aue:content-add` utlöses när en ny komponent läggs till i en behållare.
 
 Nyttolasten är innehåll från Universal Editor, med reservinnehåll från komponentdefinitionen.
 
@@ -55,7 +55,7 @@ Nyttolasten är innehåll från Universal Editor, med reservinnehåll från komp
 
 ### aue:content-details {#content-details}
 
-The `aue:content-details` -händelsen utlöses när en komponent läses in i egenskapsfältet.
+Händelsen `aue:content-details` utlöses när en komponent läses in i egenskapsfältet.
 
 Nyttolasten är komponentens innehåll och eventuellt dess schema.
 
@@ -72,7 +72,7 @@ Nyttolasten är komponentens innehåll och eventuellt dess schema.
 
 ### aue:content-move {#content-move}
 
-The `aue:content-move` -händelsen utlöses när en komponent flyttas.
+Händelsen `aue:content-move` utlöses när en komponent flyttas.
 
 Nyttolasten är komponenten, källbehållaren och målbehållaren.
 
@@ -91,7 +91,7 @@ Nyttolasten är komponenten, källbehållaren och målbehållaren.
 
 ### aue:content-patch {#content-patch}
 
-The `aue:content-patch` -händelsen utlöses när en komponents data uppdateras i egenskapsfältet.
+Händelsen `aue:content-patch` utlöses när en komponents data uppdateras i egenskapsfältet.
 
 Nyttolasten är en JSON-korrigering av de uppdaterade egenskaperna.
 
@@ -110,7 +110,7 @@ Nyttolasten är en JSON-korrigering av de uppdaterade egenskaperna.
 
 ### ljud:content-remove {#content-remove}
 
-The `aue:content-remove` -händelsen utlöses när en komponent tas bort från en behållare.
+Händelsen `aue:content-remove` aktiveras när en komponent tas bort från en behållare.
 
 Nyttolasten är objekt-ID för den borttagna komponenten.
 
@@ -126,7 +126,7 @@ Nyttolasten är objekt-ID för den borttagna komponenten.
 
 ### aue:content-update {#content-update}
 
-The `aue:content-update` -händelsen utlöses när egenskaperna för en komponent uppdateras i sitt sammanhang.
+Händelsen `aue:content-update` aktiveras när egenskaperna för en komponent uppdateras i sitt sammanhang.
 
 Nyttolasten är det uppdaterade värdet.
 
@@ -182,13 +182,13 @@ Svarsnyttolast
 
 ### aue:ui-publish {#ui-publish}
 
-The `aue:ui-publish` -händelsen utlöses när innehållet publiceras (med anrop på `BODY` nivå).
+Händelsen `aue:ui-publish` aktiveras när innehåll publiceras (med anrop på `BODY`-nivå).
 
 Nyttolasten är en lista över artikel-ID:n och deras publiceringsstatus.
 
 ### aue:ui-select {#ui-select}
 
-The `aue:ui-select` -händelsen utlöses när en komponent markeras.
+Händelsen `aue:ui-select` utlöses när en komponent väljs.
 
 Nyttolasten är objekt-ID, objektegenskaper och objekttyp för den valda komponenten.
 
@@ -205,7 +205,7 @@ Nyttolasten är objekt-ID, objektegenskaper och objekttyp för den valda kompone
 
 ### aue:ui-preview {#ui-preview}
 
-The `aue:ui-preview` -händelsen aktiveras när sidans redigeringsläge ändras till **Förhandsgranska**.
+Händelsen `aue:ui-preview` aktiveras när sidans redigeringsläge ändras till **Förhandsgranska**.
 
 Nyttolasten är tom för den här händelsen.
 
@@ -217,7 +217,7 @@ Nyttolasten är tom för den här händelsen.
 
 ### aue:ui-edit {#ui-edit}
 
-The `aue:ui-edit` -händelsen aktiveras när sidans redigeringsläge ändras till **Redigera**.
+Händelsen `aue:ui-edit` aktiveras när sidans redigeringsläge ändras till **Redigera**.
 
 Nyttolasten är tom för den här händelsen.
 
@@ -229,7 +229,7 @@ Nyttolasten är tom för den här händelsen.
 
 ### aue:ui-viewport-change {#ui-viewport-change}
 
-The `aue:ui-viewport-change` -händelsen utlöses när visningsrutans storlek ändras.
+Händelsen `aue:ui-viewport-change` aktiveras när visningsrutans storlek ändras.
 
 Nyttolasten är vyportens dimensioner.
 
@@ -244,7 +244,7 @@ Nyttolasten är vyportens dimensioner.
 
 ### aue:initierad {#initialized}
 
-The `aue:initialized` -händelsen aktiveras för att fjärrsidan ska få veta att den har lästs in i Universell redigerare.
+Händelsen `aue:initialized` aktiveras för att fjärrsidan ska kunna känna till att den har lästs in i Universell redigerare.
 
 Nyttolasten är tom för den här händelsen.
 
@@ -273,8 +273,8 @@ Nyttolasten är tom för den här händelsen.
 |---|---|
 | `aue:ui-publish` | Gör ingenting |
 | `aue:ui-select` | Bläddra till det markerade elementet |
-| `aue:ui-preview` | Lägg till `class="adobe-ue-preview"` till taggen HTML |
-| `aue:ui-edit` | Lägg till `class=adobe-ue-edit"` till taggen HTML |
+| `aue:ui-preview` | Lägg till `class="adobe-ue-preview"` i taggen HTML |
+| `aue:ui-edit` | Lägg till `class=adobe-ue-edit"` i taggen HTML |
 | `aue:ui-viewport-change` | Gör ingenting |
 | `aue:initialized` | Gör ingenting |
 

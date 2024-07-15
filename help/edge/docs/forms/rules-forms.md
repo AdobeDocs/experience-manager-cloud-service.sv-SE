@@ -15,7 +15,7 @@ ht-degree: 0%
 
 En av de kraftfulla funktionerna för att skapa formulär med hjälp av ett kalkylblad är möjligheten att använda inbyggda kalkylbladsfunktioner för att skapa regler, vilket gör det möjligt att villkorligt visa eller dölja formulärfält, automatisera beräkningar baserat på användarens indata och skapa en mer dynamisk användarupplevelse.
 
-I den här artikeln beskrivs hur du använder olika egenskaper för adaptiva formulärblock i huvudsak [`Visible`](#visible-property), [`Visibility Expression`](#visible-expression-property) och [`Value Expression`](#value-expression-property) egenskaper tillsammans med [kalkylbladsfunktioner](#spreadsheet-functions-for-rules) för att skapa effektiva regler för formulären. Vi ska också titta på några exempel som visar hur dessa regler kan implementeras i praktiken.
+I den här artikeln beskrivs hur du använder olika egenskaper för adaptiva formulärblock, huvudsakligen [`Visible`](#visible-property), [`Visibility Expression`](#visible-expression-property) och [`Value Expression`](#value-expression-property) tillsammans med [-kalkylbladsfunktioner ](#spreadsheet-functions-for-rules), för att skapa effektiva regler för dina formulär. Vi ska också titta på några exempel som visar hur dessa regler kan implementeras i praktiken.
 
 ## Om en linjes konstruktion
 
@@ -28,18 +28,18 @@ Regler är som instruktioner som talar om för oss vad vi ska göra i olika situ
 
 Om du till exempel vill visa en e-postruta när en kryssruta är markerad:
 
-* Villkor: &quot;Tycker du om att prenumerera på tidskrifter och aktiviteter?&quot; är markerad. (Ja eller nej?). Detta villkor ställs in i `Visible` formulärets egenskap.
-* Åtgärd (True): E-postrutan visas. (Vad händer om ja). The `Visibility Expression`  använd villkoret som definierats för `visible` för att dynamiskt visa fält.
-* Åtgärd (Falskt): E-postrutan är dold. (Vad händer om nej). The `Visibility Expression`  använd villkoret som definierats för `Value` för att dölja fält dynamiskt.
+* Villkor: &quot;Tycker du om att prenumerera på tidskrifter och aktiviteter?&quot; är markerad. (Ja eller nej?). Det här villkoret anges i formulärets `Visible`-egenskap.
+* Åtgärd (True): E-postrutan visas. (Vad händer om ja). `Visibility Expression` använder villkoret som definierats för egenskapen `visible` för att dynamiskt visa fält.
+* Åtgärd (Falskt): E-postrutan är dold. (Vad händer om nej). `Visibility Expression` använder villkoret som definierats för `Value` för att dynamiskt dölja fält.
 
-Detaljerade stegvisa instruktioner finns i [visa/dölj e-postfält baserat på ett villkor](#example-1-conditional-email-field)
+Detaljerade steg-för-steg-instruktioner finns i [fältet för att visa/dölja e-post baserat på ett villkor](#example-1-conditional-email-field)
 
 
 ## Förstå egenskaperna för värde, synlighet, synlighetsuttryck och värdeuttryck
 
 ### Synlig egenskap
 
-Tänk dig en ljusbrytare för formulärfältet. The `Visible` -egenskapen är som den växeln och styr om fältet är synligt från början i formuläret när det läses in.
+Tänk dig en ljusbrytare för formulärfältet. Egenskapen `Visible` är som den växeln och styr om fältet är synligt från början i formuläret när det läses in första gången.
 
 * Sant (som ljusväxeln är på): Fältet visas i formuläret.
 * Falskt (som om ljusbrytaren är av): Fältet är dolt i formuläret.
@@ -48,17 +48,17 @@ Du kan använda SpreadSheet-formeln (inklusive taggen =) för att skriva en form
 
 ### Synlig uttrycksegenskap (Visa/dölj ett fält)
 
-The `Visible Expression` kan du använda regeln som lagts till i `Visible` för att bestämma om fältet ska visas eller döljas baserat på användarinteraktioner.
+Med egenskapen `Visible Expression` kan du använda den regel som lagts till i egenskapen `Visible` för att bestämma om fältet ska visas eller döljas baserat på användarinteraktioner.
 
-Använd `=FORMULATEXT("Address of the corresponding Visible property)` för att använda formeln som anges i `Visible` Egenskap som en sträng till `Visible Expression` egenskapsfält. Detta krävs för att dynamiskt visa/dölja fält i ett publicerat formulär.
+Använd `=FORMULATEXT("Address of the corresponding Visible property)` för att hämta formeln som anges i egenskapen `Visible` som en sträng till egenskapsfältet `Visible Expression`. Detta krävs för att dynamiskt visa/dölja fält i ett publicerat formulär.
 
 ![Forumaltext](/help/edge/assets/aem-forms-formulatext.png)
 
 ### Värdeegenskap (ange initiala data)
 
-Föreställ dig ett förinställt värde på en nedtoningsbrytare för ett rumsljus. The `Value` -egenskapen liknar den som avgör det inledande tillståndet för de data som en användare ser i fältet.  Den anger eller hämtar aktuella data som visas i formulärfältet.
+Föreställ dig ett förinställt värde på en nedtoningsbrytare för ett rumsljus. Egenskapen `Value` är liknande, vilket avgör det inledande tillståndet för de data som en användare ser i fältet.  Den anger eller hämtar aktuella data som visas i formulärfältet.
 
-När formuläret läses in för första gången `Value` anger vad användaren ser i fältet innan han/hon gör några ändringar. Ogilla `Visible` och `Visible Expression` -egenskaper som styr synlighet, påverkar egenskapen Value direkt själva data. Användarna kan ändra det här värdet genom att skriva, välja alternativ (nedrullningsbara menyer) eller interagera med fältet.
+När formuläret läses in för första gången anger egenskapen `Value` vad användaren ser i fältet innan han/hon gör några ändringar. Till skillnad från egenskaperna `Visible` och `Visible Expression` som styr synligheten, påverkar egenskapen Värde direkt själva data. Användarna kan ändra det här värdet genom att skriva, välja alternativ (nedrullningsbara menyer) eller interagera med fältet.
 
 Du kan använda Excel-formel (inklusive taggen =) för att skriva en formel med hjälp av kalkylbladsliknande logik för att bestämma vilket värde som visas i fältet. Du kan använda värden från andra fält i formuläret i den här formeln. Du kan till exempel beräkna en rabatt automatiskt baserat på orderbeloppet som anges i ett annat fält.
 
@@ -67,7 +67,7 @@ Du kan använda Excel-formel (inklusive taggen =) för att skriva en formel med 
 
 Med den här egenskapen kan du styra det värde som visas i ett fält baserat på en formel, som liknar synligt uttryck. Tänk dig en kalkylator inbyggd i fältet.
 
-Använd `=FORMULATEXT("Address of the corresponding Value property)` för att använda formeln som anges i `Value` Egenskap som en sträng till `Value Expression` egenskapsfält. Detta krävs för att dynamiskt beräkna och visa beräknade värden i ett publicerat formulär.
+Använd `=FORMULATEXT("Address of the corresponding Value property)` för att hämta formeln som anges i egenskapen `Value` som en sträng till egenskapsfältet `Value Expression`. Detta krävs för att dynamiskt beräkna och visa beräknade värden i ett publicerat formulär.
 
 ![Forumaltext](/help/edge/assets/aem-forms-formulatext-value.png)
 
@@ -78,7 +78,7 @@ Här är en analogi för att stärka dessa koncept:
 * Värde: Detta är som en förinställd nedtoningsbrytare för ljuset (ursprungliga data i fältet). Användarna kan sedan justera intensiteten (ändra värdet).
 * Värdeuttryck: Det här är som en avancerad räknare inbyggd i priskoden för en produkt i huset (form). Pristaggen (fältet) visar det slutliga priset baserat på en formel (till exempel tillägg av moms till baspriset) som använder annan information som baspriset (värde från ett annat fält).
 
-Genom att kombinera dessa egenskaper med [kalkylbladsfunktioner](#spreadsheet-functions-for-rules)kan du få ett brett urval av dynamiska beteenden i dina formulär.
+Genom att kombinera dessa egenskaper med [kalkylbladsfunktioner](#spreadsheet-functions-for-rules) kan du få ett brett urval av dynamiska beteenden i dina formulär.
 
 ## Kalkylbladsfunktioner för regler
 
@@ -115,16 +115,16 @@ Skapa ett formulär med en kryssruta och en e-postruta, som visas i bilden nedan
 
 Så här använder du en regel för att visa e-postfältet när du markerar en kryssruta:
 
-1. Ange `Value` egenskapen för kryssrutefältet till `TRUE`.
-1. Ange `Checked` egenskapen för kryssrutefältet till `FALSE`. Detta garanterar att kryssrutan inte är markerad som standard.
-1. Ange `Visible` egenskapen för e-postfältet till `=[address of Checked property of the checkbox field] = true()`. Till exempel `=Q11=TRUE()`. Formeln utvärderas om kryssrutan är markerad eller inte. Om kryssrutan är markerad utvärderas formeln till TRUE. Om kryssrutan inte är markerad utvärderas formeln till FALSE.
+1. Ange egenskapen `Value` för kryssrutefältet till `TRUE`.
+1. Ange egenskapen `Checked` för kryssrutefältet till `FALSE`. Detta garanterar att kryssrutan inte är markerad som standard.
+1. Ange egenskapen `Visible` för e-postfältet till `=[address of Checked property of the checkbox field] = true()`. Till exempel `=Q11=TRUE()`. Formeln utvärderas om kryssrutan är markerad eller inte. Om kryssrutan är markerad utvärderas formeln till TRUE. Om kryssrutan inte är markerad utvärderas formeln till FALSE.
 
 
 
-   The `TRUE()` returnerar det logiska värdet när du ställer in det på point `Checked` egenskapen, om `checked = false` det returnerar false. If `checked=true`, returneras `true`. Detta garanterar att e-postfältet döljs som standard.
+   Funktionen `TRUE()` returnerar det logiska värdet när du anger det som en punkt på egenskapen `Checked` om `checked = false` returnerar false. Om `checked=true` returneras `true`. Detta garanterar att e-postfältet döljs som standard.
 
 
-1. Ange `Visible Expression` egenskapen för kryssrutefältet till `=FORMULATEXT ((address of Visible property of the checkbox field))`. Till exempel: `=FORMULATEXT((G12))`. Funktionen FORMULATEXT() tar en formel som indata och returnerar själva formeln som en textsträng. Det hjälper till att använda formeln i formuläret.
+1. Ange egenskapen `Visible Expression` för kryssrutefältet till `=FORMULATEXT ((address of Visible property of the checkbox field))`. Exempel: `=FORMULATEXT((G12))`. Funktionen FORMULATEXT() tar en formel som indata och returnerar själva formeln som en textsträng. Det hjälper till att använda formeln i formuläret.
 
    ![Villkorligt e-postfält](/help/edge/assets/aem-forms-visible-expression-formula-text.png)
 
@@ -143,11 +143,11 @@ Skapa ett formulär med ett datumfält, en rumsbudget, en uppskattad resekostnad
 
 Så här använder du en automatisk beräkning för att visa beräknad resekostnad:
 
-1. Ange `Value` egenskapen för `amount` fält till `=F6*DAYS(F3,F2)`. Den här formeln beräknar antal dagar från `Start Date`  och `End Date`, multiplar antal dagar med rumsbudget och visar resultatet `Estimated Trip Cost` fält.
+1. Ange egenskapen `Value` för fältet `amount` till `=F6*DAYS(F3,F2)`. Den här formeln beräknar antalet dagar från `Start Date` och `End Date`, multiplicerar antalet dagar med rumsbudget och visar resultatet i fältet `Estimated Trip Cost`.
 
-1. Ange `Value Expression` egenskapen för `Estimated Trip Cost` fält till `=FORMULATEXT ((address of value property of the amount field))`. Till exempel: `=FORMULATEXT(F7)`. Funktionen FORMULATEXT() tar en formel som indata och returnerar själva formeln som en textsträng. Det hjälper till att använda formeln i formuläret.
+1. Ange egenskapen `Value Expression` för fältet `Estimated Trip Cost` till `=FORMULATEXT ((address of value property of the amount field))`. Exempel: `=FORMULATEXT(F7)`. Funktionen FORMULATEXT() tar en formel som indata och returnerar själva formeln som en textsträng. Det hjälper till att använda formeln i formuläret.
 
-1. Förhandsgranska och publicera formuläret. Nu när du anger en `Start Date`, `End Date`och rumsbudget. The `Estimated Trip Cost` beräknas automatiskt.
+1. Förhandsgranska och publicera formuläret. Nu när du anger en `Start Date`-, `End Date`- och rumsbudget. `Estimated Trip Cost` beräknas automatiskt.
 
 ## Exempel på funktioner i kalkylblad
 
@@ -160,12 +160,12 @@ Här är några exempel på vanliga tabellfunktioner:
 
   Exempel: Dölja fältet Bekräfta e-post om e-postfältet lämnas tomt.
 
-   1. Ange `Visible` egenskapen för fältet Bekräfta e-post till `=NOT(if('address of email field'=""))`.
+   1. Ange egenskapen `Visible` för fältet Bekräfta e-post till `=NOT(if('address of email field'=""))`.
 
-      ![AEM Forms - dölj bekräftelsefält](/help/edge/assets/aem-forms-not-function-hide-email-field.png)
+      ![AEM Forms döljer bekräftelsefält](/help/edge/assets/aem-forms-not-function-hide-email-field.png)
 
 
-   1. Ange det synliga uttrycket i fältet Bekräfta e-post till `=FORMULATEXT ((address of visible property of the Confirm Email field))`
+   1. Ange det synliga uttrycket för fältet Bekräfta e-post till `=FORMULATEXT ((address of visible property of the Confirm Email field))`
 
       ![AEM Forms visible-uttrycksformel](/help/edge/assets/aem-forms-visible-expression-formula-text.png)
 
@@ -174,7 +174,7 @@ Här är några exempel på vanliga tabellfunktioner:
 
    * Exempel: Aktivera bara knappen &quot;skicka&quot; om alla obligatoriska fält är ifyllda.
 
-   1. Ange `Visible` egenskapen för skicka-knappen till:
+   1. Ställ in egenskapen `Visible` för skicka-knappen till:
 
 
 
@@ -206,7 +206,7 @@ Här är några exempel på vanliga tabellfunktioner:
 
    * Exempel: Använder en rabatt om en användare anger någon av de tillämpliga rabattkupongkoderna.
 
-   1. Ange `Visible` egenskapen för fältet&quot;final amount&quot; till:
+   1. Ställ in egenskapen `Visible` för fältet&quot;final amount&quot; på:
 
 
   ```JavaScript
@@ -233,9 +233,9 @@ Här är några exempel på vanliga tabellfunktioner:
 
    * Exempel: Visa ett anpassat meddelande baserat på en vald produktkategori.
 
-   1. Ange `Value` egenskapen för `message` fält till `Only upto 7 kg check-in lagguage is allowed!`:
+   1. Ange egenskapen `Value` för fältet `message` till `Only upto 7 kg check-in lagguage is allowed!`:
 
-   1. Ange `Visible` egenskapen för `message` fält till:
+   1. Ange egenskapen `Visible` för fältet `message` till:
 
 
       ```JavaScript
@@ -248,7 +248,7 @@ Här är några exempel på vanliga tabellfunktioner:
       =if(F5="Economy", TRUE(), FALSE())
       ```
 
-   1. Ange värdeuttrycket för `message` fält till
+   1. Ange värdeuttrycket för fältet `message` till
 
       ```JavaScript
       =FORMULATEXT ((address of value property of the final amount field))
@@ -268,7 +268,8 @@ Här är några exempel på vanliga tabellfunktioner:
 
   Exempel: Beräkna den totala kostnaden för artiklar i en kundvagn.
 
-  I värdeuttrycket för fältet &quot;total kostnad&quot;: SUM(price * quantity)
+  I värdeuttrycket för fältet&quot;total kostnad&quot;:
+SUM (pris * kvantitet)
 
   Formeln förutsätter att du har separata fält för&quot;pris&quot; och&quot;kvantitet&quot; för varje artikel. De multipliceras och SUM() används för att addera den totala kostnaden för alla artiklar i kundvagnen.
 
@@ -276,7 +277,8 @@ Här är några exempel på vanliga tabellfunktioner:
 
   Exempel: Avrundar ett beräknat rabattbelopp till två decimaler.
 
-  I värdeuttrycket för fältet &quot;rabattbelopp&quot; (förutsatt att en rabatt beräknas någon annanstans): ROUND(rabatt, 2)
+  I värdeuttrycket för fältet &quot;rabattbelopp&quot; (förutsatt att en rabatt beräknas någon annanstans):
+ROUND(rabatt, 2)
 
   Den här formeln avrundar rabattvärdet till två decimaler.
 
@@ -284,22 +286,23 @@ Här är några exempel på vanliga tabellfunktioner:
 
   Exempel: Söker efter den lägsta ålder som krävs för ett registreringsformulär baserat på ett valt land.
 
-  I värdeuttrycket för ett fält av typen &quot;minimal ålder&quot;: MIN(ageLimits[&quot;US&quot;], ageLimits[&quot;UK&quot;], ageLimits[&quot;Frankrike&quot;])
+  I värdeuttrycket för fältet&quot;minimiålder&quot;:
+MIN(ageLimits[&quot;US&quot;], ageLimits [&quot;UK&quot;], ageLimits [&quot;Frankrike&quot;])
 
   Formeln förutsätter att du har en tabell med namnet&quot;ageLimits&quot; som lagrar krav på minimiålder för olika länder. MIN() används för att hitta det minsta värdet bland dem.
 
 
-Med Adaptive Forms Block kan du dessutom ta kontroll över dina formulär genom att skapa [anpassade funktioner](#creating-custom-functions). Med anpassade funktioner kan du definiera egna regler och logik, vilket ger dig fullständig kontroll över hur formulären fungerar.
+Dessutom kan du med Adaptive Forms Block ta kontrollen över dina formulär genom att skapa [anpassade funktioner](#creating-custom-functions). Med anpassade funktioner kan du definiera egna regler och logik, vilket ger dig fullständig kontroll över hur formulären fungerar.
 
 
 ## Skapa och distribuera anpassade funktioner
 
-Det anpassningsbara Forms-blocket OTB (Out-of-the-box) kan implementeras för många [vanliga funktioner för kalkylblad](#spreadsheet-functions-for-rules). Om du vill ha större kontroll över formulären kan du använda valfri OTB-funktion i Microsoft® Excel eller Google Sheets i dina adaptiva Forms-block. Det adaptiva Forms-blocket innehåller inte implementering för alla OTB-funktioner som finns i Microsoft® Excel eller Google Sheets. Om du behöver någon av dessa funktioner kan du utveckla en anpassad funktion med liknande syntax för att få den funktionalitet som finns i Microsoft® Excel eller Google Sheets. Du kan till exempel implementera [Funktionen Year() i Microsoft® Excel](https://support.microsoft.com/en-us/office/calculate-age-113d599f-5fea-448f-a4c3-268927911b37#) för att beräkna ålder från och med födelsedatumet.
+Det anpassningsbara Forms-blocket som finns i körklart läge (OTB) innehåller implementeringar för många [vanliga kalkylbladsfunktioner](#spreadsheet-functions-for-rules). Om du vill ha större kontroll över formulären kan du använda valfri OTB-funktion i Microsoft® Excel eller Google Sheets i dina adaptiva Forms-block. Det adaptiva Forms-blocket innehåller inte implementering för alla OTB-funktioner som finns i Microsoft® Excel eller Google Sheets. Om du behöver någon av dessa funktioner kan du utveckla en anpassad funktion med liknande syntax för att få den funktionalitet som finns i Microsoft® Excel eller Google Sheets. Du kan till exempel implementera funktionen [Microsoft® Excel&#39;s Year()](https://support.microsoft.com/en-us/office/calculate-age-113d599f-5fea-448f-a4c3-268927911b37#) för att beräkna åldern från och med födelsedatumet.
 
 
 ### Skapa en anpassad funktion
 
-Anpassade funktioner finns i `[Adaptive form block]/functions.js` -fil. Att skapa innefattar i allmänhet följande steg:
+Anpassade funktioner finns i filen `[Adaptive form block]/functions.js`. Att skapa innefattar i allmänhet följande steg:
 
 * Funktionsdeklaration: Definiera funktionsnamnet och dess parametrar (de indata som accepteras).
 * Logikimplementering: Skriv koden som anger de specifika beräkningar eller ändringar som utförs av funktionen.
@@ -348,8 +351,8 @@ export { now, year };
 
 Så här använder du den anpassade funktionen i ditt formulär:
 
-1. **Lägg till funktionen**: Inkludera din anpassade funktion i `[Adaptive form block]/functions.js` -fil. Kom ihåg att lägga till den i exportsatsen i filen.
-1. **Distribuera filen**: Distribuera den uppdaterade `functions.js` till ditt GitHub-projekt och verifiera att bygget har slutförts.
-1. **Funktionsanvändning**: Använd funktionen i formulärets kalkylblad med `Value`, `Value Expression`, `Visible`, eller `Visible Expression` egenskaper, som liknar andra kalkylbladsfunktioner som stöds av OTB.
+1. **Lägg till funktionen**: Inkludera din anpassade funktion i filen `[Adaptive form block]/functions.js`. Kom ihåg att lägga till den i exportsatsen i filen.
+1. **Distribuera filen**: Distribuera den uppdaterade `functions.js` filen till ditt GitHub-projekt och verifiera att bygget lyckades.
+1. **Funktionsanvändning**: Använd funktionen i formulärets kalkylblad med egenskaperna `Value`, `Value Expression`, `Visible` eller `Visible Expression` som liknar andra kalkylbladsfunktioner som stöder OTB.
 1. **Förhandsgranska formuläret**: Använd AEM Sidekick för att förhandsgranska formuläret med den nyligen implementerade funktionen.
 

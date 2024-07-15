@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Innan du börjar lansera Adobe Experience Manager bör alla som deltar i projektet veta vilka de tre viktigaste nyckeltalen är och varför de spelar någon roll.
 
-**Rätt nyckeltal hjälper dig att få ut mer av Adobe Experience Manager**
+**Rätt KPI:er hjälper dig att få ut mer av Adobe Experience Manager**
 
 
 I en studie från 2018 analyserade IDC det affärsvärde som flera stora företag såg när de använde Adobe Experience Manager. I genomsnitt hade de organisationer som använder Experience Manager Sites förbättrat produktiviteten i sina digitala upplevelseteam med 23 %, minskat den tid som krävdes för att göra mindre redaktionella ändringar med 64 % och ökat antalet besökare per månad med 10 %. De företag som använder Experience Manager Assets ökade produktiviteten i sina team för digitala resurser med 19 %, kortade tiden för att skapa nya resurser med 47 % och minskade tiden för att lansera marknadsföringskampanjer med 20 %.
@@ -53,4 +53,4 @@ Efter lanseringen av Experience Manager får du snabbt en klar uppsättning nyck
 
 >[!TIP]
 >
-> Om du behöver mer hjälp med dina KPI:er kan du kontakta [Adobe konsulttjänster](https://www.adobe.com/experience-cloud/consulting-services.html) eller din implementeringspartner.
+> Kontakta [Adobe Consulting Services](https://www.adobe.com/experience-cloud/consulting-services.html) eller din implementeringspartner om du behöver ytterligare hjälp med nyckeltal.

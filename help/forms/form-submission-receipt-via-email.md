@@ -18,15 +18,15 @@ ht-degree: 0%
 
 ## Inlämning av data i anpassade formulär {#adaptive-form-data-submission}
 
-Adaptiv Forms har flera färdiga [Skicka funktionsmakron](configuring-submit-actions.md) arbetsflöden för att skicka formulärdata till olika slutpunkter.
+Adaptiv Forms innehåller flera färdiga [Skicka åtgärder](configuring-submit-actions.md)-arbetsflöden för att skicka formulärdata till olika slutpunkter.
 
-Till exempel **[!UICONTROL Send email]** Skicka åtgärd skickar ett e-postmeddelande när ett anpassat formulär har skickats. Den kan även konfigureras för att skicka formulärdata och PDF i e-postmeddelandet.
+Åtgärden **[!UICONTROL Send email]** skickar till exempel ett e-postmeddelande när ett anpassat formulär har skickats. Den kan även konfigureras för att skicka formulärdata och PDF i e-postmeddelandet.
 
 I den här artikeln beskrivs stegen för att aktivera e-poståtgärden för ett adaptivt formulär och olika konfigurationer som tillhandahålls.
 
 >[!NOTE]
 >
->Du kan också använda **[!UICONTROL Send PDF via email]** möjlighet att skicka det ifyllda formuläret via e-post som en bifogad fil i PDF. Konfigurationsalternativen som är tillgängliga för den här åtgärden är samma som de alternativ som är tillgängliga för **[!UICONTROL Send email]** åtgärd. Åtgärden Email PDF är bara tillgänglig för XFA-baserad Adaptive Forms
+>Du kan också använda alternativet **[!UICONTROL Send PDF via email]** för att skicka det ifyllda formuläret via e-post som en bifogad fil i PDF. Konfigurationsalternativen som är tillgängliga för den här åtgärden är samma som alternativen som är tillgängliga för åtgärden **[!UICONTROL Send email]**. Åtgärden Email PDF är bara tillgänglig för XFA-baserad Adaptive Forms
 
 ## Skicka e-poståtgärd {#email-action}
 
@@ -64,21 +64,21 @@ Med åtgärden Skicka e-post kan en författare automatiskt skicka e-post till e
 
 Fältnamnen i ett adaptivt formulär kallas platshållare som ersätts med värdet i det fältet när användaren skickar formuläret.
 
-I **[!UICONTROL Send email]** kan du använda platshållare som bearbetas när åtgärden utförs. Det betyder att e-postens rubriker (som **[!UICONTROL To]**, **[!UICONTROL CC]**, **[!UICONTROL BCC]**, **[!UICONTROL Subject]**) genereras när användaren skickar formuläret.
+I åtgärden **[!UICONTROL Send email]** kan du använda platshållare som bearbetas när åtgärden utförs. Det innebär att rubrikerna i e-postmeddelandet (som **[!UICONTROL To]**, **[!UICONTROL CC]**, **[!UICONTROL BCC]**, **[!UICONTROL Subject]**) genereras när användaren skickar formuläret.
 
-Om du vill definiera en platshållare anger du `${<field name>}` i ett fält efter markering **[!UICONTROL Send email]** som Skicka-åtgärd.
+Om du vill definiera en platshållare anger du `${<field name>}` i ett fält efter att du har valt **[!UICONTROL Send email]** som överföringsåtgärd.
 
-Om formuläret till exempel innehåller **[!UICONTROL Email address]** fält, namngivna `email_addr`för att hämta användarens e-post-ID kan du ange följande i **[!UICONTROL To]**, **[!UICONTROL CC]**, eller **[!UICONTROL BCC]** fält.
+Om formuläret till exempel innehåller fältet **[!UICONTROL Email address]**, med namnet `email_addr`, för att hämta användarens e-post-ID, kan du ange följande i fälten **[!UICONTROL To]**, **[!UICONTROL CC]** eller **[!UICONTROL BCC]**.
 
 `${email_addr}`
 
-När en användare skickar formuläret skickas ett e-postmeddelande till det e-post-ID som anges i `email_addr` formulärfält.
+När en användare skickar formuläret skickas ett e-postmeddelande till det e-post-ID som anges i fältet `email_addr` i formuläret.
 
 >[!NOTE]
 >
->Du hittar namnet på ett fält i **[!UICONTROL Edit]** för fältet.
+>Du kan hitta namnet på ett fält i dialogrutan **[!UICONTROL Edit]** för fältet.
 
-Variabelplatshållare kan också användas i **[!UICONTROL Subject]** och **[!UICONTROL Email Template]** fält.
+Variabelplatshållare kan också användas i fälten **[!UICONTROL Subject]** och **[!UICONTROL Email Template]**.
 
 Till exempel:
 

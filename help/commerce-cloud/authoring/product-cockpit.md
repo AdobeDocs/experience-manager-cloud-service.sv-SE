@@ -25,9 +25,9 @@ Mellanlagrade produktdata inkluderar eventuell mutation i framtiden, t.ex. nya k
 
 ## Konfiguration {#configuration}
 
-Produktkataloger måste konfigureras i AEM. Se [konfigurera butik och kataloger](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/getting-started.html#catalog) för mer information.
+Produktkataloger måste konfigureras i AEM. Mer information finns i [konfigurera butik och kataloger](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/getting-started.html#catalog).
 
-Aktivering av mellanlagrade katalogfunktioner kräver autentisering. Se [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/getting-started.html) för mer information.
+Aktivering av mellanlagrade katalogfunktioner kräver autentisering. Mer information finns i [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/getting-started.html).
 
 >[!NOTE]
 >
@@ -35,9 +35,9 @@ Aktivering av mellanlagrade katalogfunktioner kräver autentisering. Se [Komma i
 
 ## Öppnar produktdockan {#opening-product-cockpit}
 
-Det enklaste sättet att komma åt produktdockan är via Commerce-menyn AEM huvudmenyn. Du kan också använda Omnissearch (sök efter Commerce) eller öppna `https://<yourAEMInstance>/commerce.html`.
+Det enklaste sättet att komma åt produktdockan är via menyn Commerce AEM huvudmenyn. Det går också att använda Omnissearch (sök efter Commerce) eller öppna `https://<yourAEMInstance>/commerce.html`.
 
-![AEM](../assets/aem-menu.png)
+![AEM-menyn](../assets/aem-menu.png)
 
 ## Bläddra i produktkataloger {#browsing-product-catalogs}
 

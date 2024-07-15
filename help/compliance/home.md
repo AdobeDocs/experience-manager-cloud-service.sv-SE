@@ -15,7 +15,7 @@ ht-degree: 40%
 
 # Efterlevnad av AEM as a Cloud Service {#aem-compliance}
 
-Klicka på de här länkarna för en översikt över kompatibilitetsfrågor på Experience Manager as a Cloud Service.
+Klicka på de här länkarna för en översikt över kompatibilitetsfrågor i Experience Manager as a Cloud Service.
 
 * [Beredskap för dataskydd och dataintegritet](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md)
 * [Foundation Ready for Data Protection and Data Privacy Regulations](/help/compliance/data-privacy-and-protection-readiness/foundation-readiness.md)

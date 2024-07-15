@@ -1,6 +1,6 @@
 ---
-title: Ansluta en databas till [!DNL AEM Forms] as a Cloud Service?
-description: Hämta och spara data till RESTful web services, SOAP-based web services och OData services från ett adaptivt formulär eller ett AEM arbetsflöde.
+title: Hur ansluter jag en databas till  [!DNL AEM Forms] as a Cloud Service?
+description: Hämta och spara data till RESTful-webbtjänster, SOAP webbtjänster och OData-tjänster från ett adaptivt formulär eller ett AEM arbetsflöde.
 feature: Adaptive Forms, Form Data Model
 role: Admin, User
 exl-id: 9d146275-de0a-4861-b060-d205ed6305f3
@@ -30,7 +30,7 @@ Ett distribuerat modulärt system har sina fördelar, men utmaningen består i a
 
 ## Översikt över dataintegrering {#data-integration-overview}
 
-![aem-forms-data-integeration](assets/aem-forms-data-integeration.png)
+![aem-forms-data-integration](assets/aem-forms-data-integeration.png)
 
 [!DNL AEM Forms] Med dataintegrering kan du konfigurera och ansluta olika datakällor med [!DNL AEM Forms]. Det ger ett intuitivt användargränssnitt för att skapa ett enhetligt datarepresentationsschema för affärsenheter och tjänster över anslutna datakällor. Den enhetliga representationen kallas för en formulärdatamodell (FDM), ett tillägg till JSON-schemat. Enheterna i en formulärdatamodell kallas datamodellsobjekt. Med en formulärdatamodell (FDM) kan du
 
@@ -50,7 +50,7 @@ När du har skapat en formulärdatamodell (FDM) kan du använda den för att:
 
 Det första steget för att implementera dataintegrering för att skicka adaptiva formulär till en databas är att identifiera och konfigurera datakällor som lagrar information som du vill använda i adaptiva Forms. Därefter skapar du en FDM (Form Data Model) som använder datamodellsobjekt, egenskaper och tjänster från en eller flera datakällor. Du kan skapa adaptiv Forms baserat på en formulärdatamodell (FDM) där fält för adaptiva formulär är bundna till respektive datakällegenskaper.
 
-[!DNL AEM Forms] I kan du också skapa en formulärdatamodell (FDM) som är oberoende av datakällor och associera eller binda datamodellsobjekt och egenskaper i formulärdatamodellen (FDM) med datakällan senare. Det eliminerar eventuella beroenden till datakällor när du arbetar med en formulärdatamodell (FDM).
+Med [!DNL AEM Forms] kan du även skapa en formulärdatamodell (FDM) som är oberoende av datakällor och associera eller binda datamodellsobjekt och egenskaper i formulärdatamodellen (FDM) med datakällan senare. Det eliminerar eventuella beroenden till datakällor när du arbetar med en formulärdatamodell (FDM).
 
 Läs följande för att komma igång, förstå och implementera dataintegrering:
 
@@ -61,4 +61,4 @@ Läs följande för att komma igång, förstå och implementera dataintegrering:
 
 >[!NOTE]
 >
->[!UICONTROL Experience Manager Forms] stöder inte relationsdatabaser.
+>[!UICONTROL Experience Manager Forms] stöder inte relationsdatabas.

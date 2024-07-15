@@ -1,6 +1,6 @@
 ---
 title: Konfigurera CDN-felsidor
-description: Lär dig hur du åsidosätter standardfelsidan genom att lagra statiska filer i värdbaserat lagringsutrymme som Amazon S3 eller Azure Blob Storage, och referera till dem i en konfigurationsfil som distribueras med Cloud Manager Configuration Pipeline.
+description: Lär dig hur du åsidosätter standardfelsidan genom att lagra statiska filer i värdbaserade lagringsenheter som Amazon S3 eller Azure Blob Storage, och referera till dem i en konfigurationsfil som distribueras med Cloud Manager Configuration Pipeline.
 feature: Dispatcher
 exl-id: 1ecc374c-b8ee-41f5-a565-5b36445d3c7c
 role: Admin
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Konfigurera CDN-felsidor {#cdn-error-pages}
 
-Om det osannolika skulle inträffa [CDN som hanteras av Adobe](/help/implementing/dispatcher/cdn.md#aem-managed-cdn) kan inte nå AEM. CDN är som standard en unik felsida som anger att servern inte kan nås. Du kan åsidosätta standardfelsidan genom att lagra statiska filer i värdbaserat lagringsutrymme som Amazon S3 eller Azure Blob Storage och referera till dem i en konfigurationsfil som distribueras med [Konfigurationspipeline för Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline).
+Om det osannolika skulle inträffa att det [Adobe-hanterade CDN](/help/implementing/dispatcher/cdn.md#aem-managed-cdn) inte kan nå AEM ursprung, visas som standard en allmän felsida utan varumärke som anger att servern inte kan nås. Du kan åsidosätta standardfelsidan genom att lagra statiska filer i ett självvärdbaserat lagringsutrymme som Amazon S3 eller Azure Blob Storage och referera till dem i en konfigurationsfil som distribueras med [Cloud Manager Configuration Pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline).
 
 ## Inställningar {#setup}
 
@@ -26,14 +26,14 @@ config/
      cdn.yaml
 ```
 
-* The `cdn.yaml` konfigurationsfilen ska innehålla både metadata och reglerna som beskrivs i exemplen nedan. The `kind` parametern ska anges till `CDN` och versionen bör anges till schemaversionen, som för närvarande är `1`.
+* Konfigurationsfilen `cdn.yaml` ska innehålla både metadata och reglerna som beskrivs i exemplen nedan. Parametern `kind` ska anges till `CDN` och versionen ska anges till schemaversionen, som för närvarande är `1`.
 
-* Skapa en riktad distributionskonfigurationspipeline i Cloud Manager. Se [konfigurera produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) och [konfigurera icke-produktionsrörledningar](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md).
+* Skapa en riktad distributionskonfigurationspipeline i Cloud Manager. Se [konfigurera produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) och [konfigurera icke-produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md).
 
 **Anteckningar**
 
 * De lokala lagringsplatserna stöder för närvarande inte konfigurationsflödet.
-* Du kan använda `yq` för att lokalt validera YAML-formateringen i konfigurationsfilen (till exempel `yq cdn.yaml`).
+* Du kan använda `yq` för att lokalt validera YAML-formateringen av konfigurationsfilen (till exempel `yq cdn.yaml`).
 
 ### Konfiguration {#configuration}
 

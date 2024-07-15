@@ -20,18 +20,18 @@ ht-degree: 0%
 | AEM as a Cloud Service | Den här artikeln |
 
 
-![dataintegrering](do-not-localize/data-integeration.png)
+![data-integration](do-not-localize/data-integeration.png)
 
-[!DNL Experience Manager Forms] dataintegrering gör att du kan använda olika backend-datakällor för att skapa en formulärdatamodell (FDM) som du kan använda som schema i olika adaptiva Forms <!--and interactive communications--> arbetsflöden. Det kräver att du konfigurerar datakällor och skapar FDM (Form Data Model) baserat på datamodellsobjekt och tjänster som är tillgängliga i datakällor. Mer information finns i följande:
+Med dataintegrationen i [!DNL Experience Manager Forms] kan du använda olika backend-datakällor för att skapa en formulärdatamodell (FDM) som du kan använda som schema i olika adaptiva Forms <!--and interactive communications--> -arbetsflöden. Det kräver att du konfigurerar datakällor och skapar FDM (Form Data Model) baserat på datamodellsobjekt och tjänster som är tillgängliga i datakällor. Mer information finns i följande:
 
-* [[!DNL Experience Manager Forms] Dataintegrering](data-integration.md)
+* [[!DNL Experience Manager Forms] dataintegrering](data-integration.md)
 * [Konfigurera datakällor](configure-data-sources.md)
 * [Skapa formulärdatamodell (FDM)](create-form-data-models.md)
 * [Arbeta med formulärdatamodell (FDM)](work-with-form-data-model.md)
 
 En formulärdatamodell (FDM) är ett tillägg till JSON-schema som du kan använda för att:
 
-* [Skapa adaptiva Forms och fragment](#create-af)
+* [Skapa anpassningsbara Forms och fragment](#create-af)
   <!--* [Create interactive communications and building blocks like text, list, and condition fragments](#create-ic)-->
 * [Förhandsgranska med exempeldata](#preview-ic)
 * [använder datamodelltjänst för formulär](#prefill)
@@ -40,23 +40,23 @@ En formulärdatamodell (FDM) är ett tillägg till JSON-schema som du kan använ
 
 ## Skapa adaptiva Forms och fragment {#create-af}
 
-Du kan [Adaptiv Forms](creating-adaptive-form.md) och adaptiva formulärfragment <!-- [Adaptive Form Fragments](adaptive-form-fragments.md) --> baserat på en formulärdatamodell (FDM). Så här använder du en FDM (Form Data Model) när du skapar ett adaptivt formulär eller adaptivt formulärfragment:
+Du kan skapa [anpassningsbara Forms](creating-adaptive-form.md)- och adaptiva formulärfragment <!-- [Adaptive Form Fragments](adaptive-form-fragments.md) --> baserat på en formulärdatamodell (FDM). Så här använder du en FDM (Form Data Model) när du skapar ett adaptivt formulär eller adaptivt formulärfragment:
 
-1. På fliken Formulärmodell på skärmen Lägg till egenskaper väljer du **[!UICONTROL Form Data Model]** i **[!UICONTROL Select From]** listruta.
+1. På fliken Formulärmodell på skärmen Lägg till egenskaper väljer du **[!UICONTROL Form Data Model]** i listrutan **[!UICONTROL Select From]**.
 
    ![create-af-1-1](assets/create-af-1-1.png)
 
-2. Markera för att expandera **[!UICONTROL Select Form Data Model]**. Alla tillgängliga formulärdatamodeller (FDM) visas.
+2. Välj att expandera **[!UICONTROL Select Form Data Model]**. Alla tillgängliga formulärdatamodeller (FDM) visas.
 
    Välj en från datamodell.
 
    ![create-af-2-1](assets/create-af-2-1.png)
 
-3. (**Endast adaptiva formulärfragment**) Du kan skapa ett adaptivt formulärfragment baserat på endast ett datamodellsobjekt i en formulärdatamodell (FDM). Expandera **[!UICONTROL Form Data Model Definitions]** nedrullningsbar meny. Den visar alla datamodellsobjekt i den angivna formulärdatamodellen (FDM). Markera ett datamodellsobjekt i listan.
+3. (**Endast adaptiva formulärfragment**) Du kan skapa ett adaptivt formulärfragment baserat på endast ett datamodellsobjekt i en formulärdatamodell (FDM). Visa listrutan **[!UICONTROL Form Data Model Definitions]**. Den visar alla datamodellsobjekt i den angivna formulärdatamodellen (FDM). Markera ett datamodellsobjekt i listan.
 
    ![create-af-3](assets/create-af-3.png)
 
-   När det adaptiva formuläret eller adaptiva formulärfragment som baseras på en FDM (Form Data Model) har skapats visas formulärdatamodellsobjekt i dialogrutan **[!UICONTROL Data Sources]** i Content Browser i Adaptive Form Editor.
+   När det adaptiva formuläret eller adaptiva formulärfragment som baseras på en formulärdatamodell (FDM) har skapats visas formulärdatamodellsobjekt på fliken **[!UICONTROL Data Sources]** i innehållsläsaren i den adaptiva formulärredigeraren.
 
    >[!NOTE]
    >
@@ -88,7 +88,7 @@ For more information, see:
 
 ## Förhandsgranska med exempeldata {#preview-ic}
 
-Med formulärdatamodellsredigeraren kan du generera och redigera exempeldata för datamodellsobjekt i formulärdatamodellen (FDM). Du kan använda dessa data för att förhandsgranska och testa <!--interactive communications and--> Adaptiv Forms. Du måste generera exempeldata innan du förhandsgranskar enligt beskrivningen i [Arbeta med formulärdatamodell](work-with-form-data-model.md#sample).
+Med formulärdatamodellsredigeraren kan du generera och redigera exempeldata för datamodellsobjekt i formulärdatamodellen (FDM). Du kan använda dessa data för att förhandsgranska och testa <!--interactive communications and--> Adaptiv Forms. Du måste generera exempeldata innan du förhandsgranskar enligt beskrivningen i [Arbeta med formulärdatamodellen](work-with-form-data-model.md#sample).
 
 <!--To preview an interactive communication with sample Form Data Model data:
 
@@ -104,9 +104,9 @@ Om du vill förhandsgranska ett adaptivt formulär med exempeldata öppnar du de
 
 ## Förifyll med tjänsten Formulärdatamodell {#prefill}
 
-[!DNL Experience Manager Forms] har en färdig förifyllningstjänst för formulärdatamodell som du kan aktivera för Adaptiv Forms <!--and interactive communications--> baserat på formulärdatamodell (FDM). förifyllningstjänsten frågar efter datakällor för datamodellobjekt i det adaptiva formuläret <!--and interactive communication--> och fyller i data i förväg när formuläret eller kommunikationen återges.
+[!DNL Experience Manager Forms] tillhandahåller en färdig tjänst för förifyllning av formulärdatamodell som du kan aktivera för Adaptiv Forms <!--and interactive communications--> baserat på formulärdatamodell (FDM). Förifyllningstjänsten frågar efter datakällor för datamodellobjekt i det adaptiva formuläret <!--and interactive communication--> och fyller i data i förväg när formuläret eller kommunikationen återges.
 
-Om du vill aktivera förifyllningstjänsten för formulärdatamodellen för ett adaptivt formulär öppnar du egenskaperna för den adaptiva formulärbehållaren och väljer **[!UICONTROL Form Data Model Prefill service]** från **[!UICONTROL Prefill Service]** nedrullningsbar meny i dragspelsfliken Grundläggande. Spara sedan egenskaperna.
+Om du vill aktivera förifyllningstjänsten för formulärdatamodell för ett adaptivt formulär öppnar du egenskaperna för den adaptiva formulärbehållaren och väljer **[!UICONTROL Form Data Model Prefill service]** i listrutan **[!UICONTROL Prefill Service]** i dragspelsfliken Grundläggande. Spara sedan egenskaperna.
 
 ![prefill-service](assets/prefill-service.png)
 
@@ -118,19 +118,19 @@ Edit Properties dialog for an interactive communication-->
 
 ## Skriv data i anpassat formulär till datakällor {#write-af}
 
-När en användare skickar ett formulär baserat på en formulärdatamodell (FDM) kan du konfigurera formuläret så att det skriver skickade data för ett datamodellsobjekt till sina datakällor. För att uppnå detta [!DNL Experience Manager Forms] tillhandahålla [Skicka åtgärd för formulärdatamodell](configuring-submit-actions.md), finns endast i körklart läge för Adaptive Forms baserat på en formulärdatamodell (FDM). Den skriver skickade data för ett datamodellsobjekt i sin datakälla.
+När en användare skickar ett formulär baserat på en formulärdatamodell (FDM) kan du konfigurera formuläret så att det skriver skickade data för ett datamodellsobjekt till sina datakällor. [!DNL Experience Manager Forms] tillhandahåller [åtgärd för att skicka formulärdatamodell](configuring-submit-actions.md), som bara är tillgänglig för Adaptiv Forms baserat på en formulärdatamodell (FDM), för att uppnå det här användningsexemplet. Den skriver skickade data för ett datamodellsobjekt i sin datakälla.
 
 Så här konfigurerar du åtgärden Skicka i formulärdatamodell:
 
-1. Öppna innehållsläsaren och välj **[!UICONTROL Guide Container]** som ingår i det adaptiva formuläret.
-1. Klicka på egenskaperna för stödlinjebehållaren ![Stödlinjeegenskaper](/help/forms/assets/configure-icon.svg) -ikon. Dialogrutan Adaptiv formulärbehållare öppnas.
-1. Klicka på  **[!UICONTROL Submission]** -fliken.
+1. Öppna innehållsläsaren och markera komponenten **[!UICONTROL Guide Container]** i det adaptiva formuläret.
+1. Klicka på ikonen för egenskaper för stödlinjebehållaren ![Egenskaper för stödlinje](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare öppnas.
+1. Klicka på fliken **[!UICONTROL Submission]**.
 1. I listrutan **[!UICONTROL Submit Action]** väljer du **[!UICONTROL Submit using Form Data Model]**.
 
    ![Åtgärdskonfiguration](/help/forms/assets/configure-submit-action-invoke-fdm.png)
 
 1. Ange **[!UICONTROL Data model to submit]**.
-1. Klicka **[!UICONTROL Done]**
+1. Klicka på **[!UICONTROL Done]**
 
 När formuläret skickas skrivs data för det konfigurerade datamodellobjektet till respektive datakälla. Dessutom kan du skicka en bifogad fil med en FDM (Form Data Model) och ett DoR-dokument (Document of Record) till datakällan. Mer information om formulärdatamodell (FDM) finns i [[!DNL AEM Forms] Dataintegrering](data-integration.md).
 
@@ -138,41 +138,41 @@ När formuläret skickas skrivs data för det konfigurerade datamodellobjektet t
 
 >[!NOTE]
 >
-> AEM as a Cloud Service erbjuder olika åtgärder för att skicka in formulär. Du kan läsa mer om de här alternativen i [Inlämningsåtgärd för anpassat formulär](/help/forms/configure-submit-actions-core-components.md)  artikel.
+> AEM as a Cloud Service erbjuder olika inskickningsåtgärder för att hantera inskickade formulär. Du kan läsa mer om de här alternativen i artikeln [Åtgärd för att skicka anpassade formulär](/help/forms/configure-submit-actions-core-components.md).
 
 Du kan också skicka formulärbilagor till en datakälla med hjälp av objektegenskapen för binär datamodell. Gör följande för att skicka bilagor till en JDBC-datakälla:
 
 1. Lägg till ett datamodellsobjekt som innehåller en binär egenskap i formulärdatamodellen (FDM).
-1. Dra och släpp **[!UICONTROL File Attachment]** från komponentwebbläsaren till det adaptiva formuläret.
-1. Markera den tillagda komponenten och välj ![settings_icon](assets/configure-icon.svg) om du vill öppna egenskapsgranskaren för komponenten.
-1. I fältet Bindningsreferens väljer du ![foldersearch_18](assets/folder-search-icon.svg) och navigera till den binära egenskap som du lade till i formulärdatamodellen (FDM). Konfigurera andra egenskaper efter behov.
+1. I det adaptiva formuläret drar och släpper du komponenten **[!UICONTROL File Attachment]** från komponentwebbläsaren till det adaptiva formuläret.
+1. Markera den tillagda komponenten och välj ![settings_icon](assets/configure-icon.svg) för att öppna egenskapsgranskaren för komponenten.
+1. I fältet Bindningsreferens väljer du ![foldersearch_18](assets/folder-search-icon.svg) och navigerar till den binära egenskap som du har lagt till i formulärdatamodellen (FDM). Konfigurera andra egenskaper efter behov.
 
-   Välj ![check-button](assets/save_icon.svg) för att spara egenskaperna. Bilagefältet är nu bundet till den binära egenskapen för formulärdatamodellen (FDM).
+   Välj ![bockknapp](assets/save_icon.svg) om du vill spara egenskaperna. Bilagefältet är nu bundet till den binära egenskapen för formulärdatamodellen (FDM).
 
-1. Aktivera i delen Skicka i egenskaperna för den adaptiva formulärbehållaren **[!UICONTROL Submit Form Attachments]**. Den bifogade filen i fältet för binära egenskaper skickas till datakällan när formuläret skickas.
+1. Aktivera **[!UICONTROL Submit Form Attachments]** i avsnittet Överföring i egenskaperna för den anpassade formulärbehållaren. Den bifogade filen i fältet för binära egenskaper skickas till datakällan när formuläret skickas.
 
 ## Anropa tjänster i Adaptive Forms med hjälp av regler {#invoke-services}
 
-I ett adaptivt formulär baserat på en formulärdatamodell (FDM) kan du [skapa regler](rule-editor.md) för att anropa tjänster som konfigurerats i formulärdatamodellen (FDM). The **[!UICONTROL Invoke Services]** -åtgärden i en regel listar alla tillgängliga tjänster i FDM (Form Data Model) och låter dig välja in- och utdatafält för tjänsten. Du kan också använda **[!UICONTROL Set Value]** regeltyp som anropar en formulärdatamodelltjänst och ställer in värdet för ett fält på utdata som returneras av tjänsten.
+I ett adaptivt formulär baserat på en formulärdatamodell (FDM) kan du [skapa regler](rule-editor.md) för att anropa tjänster som konfigurerats i formulärdatamodellen (FDM). Åtgärden **[!UICONTROL Invoke Services]** i en regel visar alla tillgängliga tjänster i FDM (Form Data Model) och gör att du kan välja in- och utdatafält för tjänsten. Du kan också använda regeltypen **[!UICONTROL Set Value]** för att anropa en formulärdatamodelltjänst och ange värdet för ett fält till utdata som returneras av tjänsten.
 
 I följande regel anropas till exempel en get-tjänst som tar Employee Id som indata och de returnerade värdena fylls i i motsvarande fält för beroende ID, efternamn, förnamn och kön i formuläret.
 
 ![invoke-service](assets/invoke-service.png)
 
-Dessutom kan du använda `guidelib.dataIntegrationUtils.executeOperation` API för att skriva ett JavaScript i kodredigeraren för regelredigeraren. <!-- For API details, see [API to invoke Form Data Model service](invoke-form-data-model-services.md).-->
+Du kan dessutom använda API:t `guidelib.dataIntegrationUtils.executeOperation` för att skriva en JavaScript i kodredigeraren för regelredigeraren. <!-- For API details, see [API to invoke Form Data Model service](invoke-form-data-model-services.md).-->
 
 ### Anropa en formulärdatamodell (FDM) med anpassade funktioner {#invoke-form-data-model-using-custom-functions}
 
-Du kan [anropa en formulärdatamodell från regelredigeraren med anpassade funktioner](/help/forms/rule-editor.md#custom-functions-in-rule-editor-custom-functions). Om du vill anropa formulärdatamodellen (FDM) lägger du till en formulärdatamodell till tillåtelselista. Så här lägger du till en formulärdatamodell i en lista över tillåtna:
+Du kan [anropa en formulärdatamodell från regelredigeraren med anpassade funktioner ](/help/forms/rule-editor.md#custom-functions-in-rule-editor-custom-functions). Om du vill anropa formulärdatamodellen (FDM) lägger du till en formulärdatamodell till tillåtelselista. Så här lägger du till en formulärdatamodell i en lista över tillåtna:
 
 1. Gå till webbkonsolen Experience Manager på `https://server:host/system/console/configMgr`.
-1. Sök **[!UICONTROL Adaptive Form-Level Whitelisting of Form Data Model for Service Invocation - Configuration Factory]**.
-1. Klicka ![plus-ikon](/help/forms/assets/Smock_Add_18_N.svg) -ikon för att lägga till konfigurationen.
-1. Lägg till **[!UICONTROL Content path pattern]** för att ange var din adaptiva Forms finns.  Som standard är värdet `/content/forms/af/(.*)` som innehåller alla adaptiva Forms. Du kan också ange sökvägen för ett visst anpassat formulär.
-1. Lägg till **[!UICONTROL Form Data Model path pattern]** för att ange platsen för formulärdatamodellen (FDM). Som standard är värdet `/content/dams/formsanddocuments-fdm/(.*)` som innehåller alla formulärdatamodeller (FDM). Du kan också ange sökvägen för en viss formulärdatamodell (FDM).
+1. Sök efter **[!UICONTROL Adaptive Form-Level Whitelisting of Form Data Model for Service Invocation - Configuration Factory]**.
+1. Klicka på ikonen ![plus ](/help/forms/assets/Smock_Add_18_N.svg) för att lägga till konfigurationen.
+1. Lägg till **[!UICONTROL Content path pattern]** för att ange platsen för din adaptiva Forms.  Som standard är värdet `/content/forms/af/(.*)`, som innehåller alla adaptiva Forms. Du kan också ange sökvägen för ett visst anpassat formulär.
+1. Lägg till **[!UICONTROL Form Data Model path pattern]** för att ange platsen för formulärdatamodellen (FDM). Som standard är värdet `/content/dams/formsanddocuments-fdm/(.*)`, som innehåller alla formulärdatamodeller (FDM). Du kan också ange sökvägen för en viss formulärdatamodell (FDM).
 1. Spara inställningarna.
 
-Den tillagda konfigurationen sparas under **[!UICONTROL Adaptive Form-Level Whitelisting of Form Data Model for Service Invocation - Configuration Factory]** alternativ.
+Den tillagda konfigurationen sparas under alternativet **[!UICONTROL Adaptive Form-Level Whitelisting of Form Data Model for Service Invocation - Configuration Factory]**.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3423977/adaptive-forms-custom-function-rule-editor)
 

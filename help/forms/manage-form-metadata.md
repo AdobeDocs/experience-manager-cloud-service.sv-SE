@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Lägga till, ta bort eller redigera metadata i ett anpassat formulär {#manage-form-metadata}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 
 | Version | Artikellänk |
@@ -23,13 +23,13 @@ ht-degree: 0%
 
 Metadata gör det enklare att kategorisera och ordna resurser och hjälper användare som letar efter en viss resurs.
 
-[!DNL AEM Forms]som standard innehåller en definierad uppsättning metadata för varje resurstyp. Utöver standardmetadata kan du lägga till anpassade metadata för varje resurstyp. [!DNL AEM Forms] ger dig även rätt sätt att skapa, hantera och utbyta alla dessa metadata effektivt för dina formulär.
+[!DNL AEM Forms] innehåller som standard en definierad uppsättning metadata för varje resurstyp. Utöver standardmetadata kan du lägga till anpassade metadata för varje resurstyp. [!DNL AEM Forms] ger dig även rätt sätt att skapa, hantera och utbyta alla dessa metadata effektivt för dina formulär.
 
 <!-- If you are a developer or a site owner, you can customize Forms Portal, the end-user interface for [!DNL AEM Forms] to reflect the metadata you are using in your organization. For more information abouts Forms Portal, see [Introduction to publishing forms on a portal](introduction-publishing-forms.md). -->
 
 ## Metadata i [!DNL AEM Forms] {#metadata-in-aem-forms}
 
-I [!DNL AEM Forms], beror listan med metadataegenskaper som är associerade med en resurs på dess typ. Om du lägger till en anpassad metadataegenskap läggs den till i alla resurser av den typ som de anpassade metadata lades till i.
+I [!DNL AEM Forms] beror listan med metadataegenskaper som är associerade med en resurs på dess typ. Om du lägger till en anpassad metadataegenskap läggs den till i alla resurser av den typ som de anpassade metadata lades till i.
 
 ### Resurstyper {#asset-types}
 
@@ -44,7 +44,7 @@ Följande resurstyper stöds i [!DNL AEM Forms]:
 
 #### Omfattande lista med metadata {#extensive-list-of-metadata}
 
-Nedan följer en omfattande lista över metadataegenskaper som stöds i [!DNL AEM Forms]:
+Följande är en omfattande lista över metadataegenskaper som stöds i [!DNL AEM Forms]:
 
 <table>
  <tbody> 
@@ -56,7 +56,7 @@ Nedan följer en omfattande lista över metadataegenskaper som stöds i [!DNL AE
   <tr> 
    <td>Titel</td> 
    <td>Alla utom resurser</td> 
-   <td>Visa resursens namn.<br /> </td> 
+   <td>Resursens visningsnamn.<br /> </td> 
   </tr> 
   <tr> 
    <td>Beskrivning</td> 
@@ -156,7 +156,7 @@ Nedan följer en omfattande lista över metadataegenskaper som stöds i [!DNL AE
     <ul> 
      <li>Referens: Assets som det aktuella formuläret refererar till.</li> 
      <li>Refereras av: Assets som refererar till den aktuella tillgången.</li> 
-    </ul> <p>De här resurserna visas som länkar och deras metadata kan du komma åt direkt genom att klicka på dem.<br /> </p> </td> 
+    </ul> <p>De här resurserna visas som länkar och deras metadata kan nås direkt genom att klicka på dem.<br /> </p> </td> 
   </tr> 
   <tr> 
    <td>Val av formulärmodell (XDP/XSD)</td> 
@@ -184,14 +184,14 @@ Assets har befintliga egenskapsvärden som kan visas i skrivskyddat läge. Dessa
 
 1. Öppna egenskapssidan på något av följande sätt:
 
-   * Klicka på **[!UICONTROL Properties]** ![Egenskaper](assets/Smock_Info_18_N.svg) -ikon från snabbåtgärder.
+   * Klicka på ikonen **[!UICONTROL Properties]** ![Egenskaper](assets/Smock_Info_18_N.svg) från snabbåtgärder.
 
      >[!NOTE]
      >
      >Snabbåtgärder är de åtgärdsobjekt som visas över en miniatyrbild när du håller muspekaren.
 
-   * Markera formuläret och klicka på knappen **[!UICONTROL Properties]** ![Egenskaper](assets/Smock_Info_18_N.svg) som visas i verktygsfältet.
-   * Navigera till sidan med formulärinformation genom att klicka på miniatyrbilden för formuläret när det inte är i markeringsläget. Klicka nu på ![Egenskaper](assets/Smock_Info_18_N.svg) ögonikonen i det övre högra hörnet och klicka sedan på Egenskaper i listan nedanför.
+   * Markera formuläret och klicka på ikonen **[!UICONTROL Properties]** ![Egenskaper](assets/Smock_Info_18_N.svg) som visas i verktygsfältet.
+   * Navigera till sidan med formulärinformation genom att klicka på miniatyrbilden för formuläret när det inte är i markeringsläget. Klicka nu på ögonikonen ![Egenskaper](assets/Smock_Info_18_N.svg) i det övre högra hörnet och klicka sedan på Egenskaper i listan under den.
 
 1. Egenskapssidan som öppnas visar ett schema som bara innehåller de metadataegenskaper som innehåller vissa värden.
 
@@ -234,7 +234,7 @@ På den vänstra panelen på egenskapssidan visas miniatyrbilden för formuläre
 
 För alla formulärtyper kan du överföra en bild genom att klicka på **[!UICONTROL Upload Image]** och bläddra efter en bildfil från den lokala katalogen. Den markerade bilden används som miniatyrbild i stället för som standardbild.
 
-För Adaptiv Forms finns ytterligare funktioner som gör att användaren kan generera en miniatyrbild som en ögonblicksbild av den aktuella förhandsvisningen av adaptiva formulär. Sedan [!DNL AEM Forms] har också stöd för utveckling av Adaptiv Forms. Förhandsgranskningen av den adaptiva formen kan ändras varje gång du ändrar den adaptiva formen. Den här funktionen för att generera en miniatyrbild hjälper dig att få en ny miniatyrbild för det adaptiva formuläret baserat på den aktuella förhandsvisningsstatusen. Klicka **[!UICONTROL Generate Preview]** att genomföra denna åtgärd.
+För Adaptiv Forms finns ytterligare funktioner som gör att användaren kan generera en miniatyrbild som en ögonblicksbild av den aktuella förhandsvisningen av adaptiva formulär. Eftersom [!DNL AEM Forms] även stöder redigering av Adaptiv Forms kan förhandsgranskningen av den adaptiva formen ändras varje gång du ändrar den adaptiva formen. Den här funktionen för att generera en miniatyrbild hjälper dig att få en ny miniatyrbild för det adaptiva formuläret baserat på den aktuella förhandsvisningsstatusen. Klicka på **[!UICONTROL Generate Preview]** om du vill utföra den här åtgärden.
 
 >[!NOTE]
 >
@@ -244,17 +244,17 @@ För Adaptiv Forms finns ytterligare funktioner som gör att användaren kan gen
 
 ## Lägg till anpassade metadata {#add-custom-metadata}
 
-Förutom de metadata som anges i kartongen [!DNL AEM Forms] har stöd för nya anpassade metadata.
+Förutom de metadata som anges i rutan stöder [!DNL AEM Forms] nya anpassade metadata.
 
-Ett verktyg (redigeraren för metadataschema) tillhandahålls för att definiera metadatalayouten, det vill säga layouten för det som visas i **[!UICONTROL Properties]** sida i ett formulär. Med metadatarameditor kan du lägga till eller ändra ett anpassat schema för dina resurser.
+Ett verktyg (redigeringsprogram för metadatamatchning) tillhandahålls för att definiera schemat för metadatalayouten, det vill säga layouten för det som visas på sidan **[!UICONTROL Properties]** i ett formulär. Med metadatarameditor kan du lägga till eller ändra ett anpassat schema för dina resurser.
 
-[!DNL AEM Forms] visar metadatamatcheman för de formulärtyper som stöds i det här verktyget. På så sätt kan du komma åt dessa scheman och använda funktionerna som finns i redigeraren för metadatamatchning för att lägga till anpassade egenskaper.
+[!DNL AEM Forms] visar metadatamappningar för de formulärtyper som stöds i det här verktyget. På så sätt kan du komma åt dessa scheman och använda funktionerna som finns i redigeraren för metadatamatchning för att lägga till anpassade egenskaper.
 
 ### Navigera i metadatamodeditorn {#navigate-the-metadata-schema-editor}
 
 1. Navigera till **[!UICONTROL Tools > Assets > Metadata Schemas]**.
 
-1. Klicka **[!UICONTROL forms]** från listade schemaformulär.
+1. Klicka på **[!UICONTROL forms]** i listade schemaformulär.
 
 1. I listan som öppnas klickar du på resurstypen som du vill lägga till anpassade metadata för.
 
@@ -262,11 +262,11 @@ Ett verktyg (redigeraren för metadataschema) tillhandahålls för att definiera
    >
    >Dessa scheman innehåller metadataegenskaper som anges utanför rutan och får inte ändras/redigeras (markera kryssrutan och klicka på Redigera från verktygsfältet) för att undvika funktionsproblem.
 
-1. Alla resurstyper som du klickar på öppnas en lista som innehåller `extendedmetadata` alternativ. Redigera schemat.
+1. Alla resurstyper som du klickar på öppnar en lista som innehåller alternativet `extendedmetadata`. Redigera schemat.
 
-1. Markera kryssrutan bredvid `extendedmetadata` och klicka sedan på Redigera ![Redigera](assets/Smock_Edit_18_N.svg) som visas i verktygsfältet.
+1. Markera kryssrutan bredvid `extendedmetadata` och klicka sedan på ikonen Redigera ![redigering](assets/Smock_Edit_18_N.svg) som visas i verktygsfältet.
 
-1. [!DNL AEM Forms] öppnar metadataschredigeraren/formulärbyggaren för den valda resurstypen (i det här fallet Adaptiv form).
+1. [!DNL AEM Forms] öppnar metadatamatchredigeraren/formulärbyggaren för den valda resurstypen (i det här fallet Adaptiv form).
 
    Metadataredigerare
 
@@ -276,14 +276,14 @@ Ett verktyg (redigeraren för metadataschema) tillhandahålls för att definiera
 
    1. Du kan lägga till fler flikar genom att klicka på +-symbolen.
 
-   1. Du kan lägga till ett anpassat fält av önskad typ genom att dra fältkomponenten från **[!UICONTROL Build Form]** till schemasidan.
-   1. Specifikationerna för detta fält kan anges i **[!UICONTROL Settings]** efter att du klickat på fältet.
+   1. Du kan lägga till ett anpassat fält av önskad typ genom att dra fältkomponenten från avsnittet **[!UICONTROL Build Form]** till schemasidan.
+   1. Specifikationerna för det här fältet kan anges under avsnittet **[!UICONTROL Settings]** när du har klickat på fältet.
 
 ### Lägg till anpassad metadataegenskap i schemaredigeraren {#add-custom-metadata-property-in-schema-editor}
 
 1. Navigera till fliken (befintlig eller ny) där du vill lägga till den anpassade egenskapen.
 
-1. Dra en komponent av önskad typ från **[!UICONTROL Build Form]** till vänster och placera på en lämplig plats.
+1. Dra en komponent av önskad typ från avsnittet **[!UICONTROL Build Form]** till den vänstra panelen och placera på en lämplig plats.
 
    >[!NOTE]
    >
@@ -292,7 +292,7 @@ Ett verktyg (redigeraren för metadataschema) tillhandahålls för att definiera
 1. Klicka på en komponent som du just har dragit. Fyll i information för följande fält på fliken Inställningar som öppnas i den högra panelen:
 
    1. Ange en fältetikett som ska användas som visningsnamn ovanför fältet som placeras i schemat (till exempel: Avdelning)
-   1. I egenskapsfältet Mappa till kan du se ett förifyllt värde **&#39;./jcr:content/metadata/default&#39;**. Ändra &#39;**standard**&#39; till ett önskat egenskapsnamn, som används för att lagra egenskapen i crx-databasen (till exempel: &#39;./jcr:content/metadata/dec&#39;)
+   1. Under Mappa till egenskapsfält kan du se det förfyllda värdet **./jcr:content/metadata/default&#39;**. Ändra **default** till ett önskat egenskapsnamn, som används för att lagra egenskapen i crx-databasen (till exempel: &#39;./jcr:content/metadata/dec&#39;)
 
       >[!NOTE]
       >
@@ -301,10 +301,10 @@ Ett verktyg (redigeraren för metadataschema) tillhandahålls för att definiera
       >Egenskapsnamnet måste också vara unikt för att du inte ska kunna skriva värden för två eller flera egenskaper på samma plats i databasen. Vi rekommenderar att du ändrar värdet &#39;default&#39;.
 
    1. Fyll i andra inställningar baserat på behov. Välj till exempel alternativet Obligatoriskt om du vill göra fältet obligatoriskt.
-   1. Om du vill ta bort ett fält som du har lagt till markerar du fältet och klickar sedan på borttagningen ![Ta bort](assets/Smock_Delete_18_N.svg) -ikon.
+   1. Om du vill ta bort ett fält som du har lagt till markerar du fältet och klickar sedan på ikonen Ta bort ![Ta bort](assets/Smock_Delete_18_N.svg) .
 
 1. Om det behövs följer du steg 1-3 för att lägga till en annan egenskap.
-1. Klicka **[!UICONTROL Save]** efter att ha gjort alla ändringar.
+1. Klicka på **[!UICONTROL Save]** när du har gjort alla ändringar.
 
    Du har lagt till en anpassad metadataegenskap.
 

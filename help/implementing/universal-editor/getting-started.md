@@ -18,7 +18,7 @@ Lär dig hur du får tillgång till den universella redigeraren och hur du börj
 
 >[!TIP]
 >
->Om du hellre vill dyka rakt in i ett exempel kan du läsa [Universal Editor Sample App på GitHub.](https://github.com/adobe/universal-editor-sample-editable-app)
+>Om du hellre vill dyka rakt in i ett exempel kan du granska [Universal Editor-exempelappen på GitHub.](https://github.com/adobe/universal-editor-sample-editable-app)
 
 ## Inledande steg {#onboarding}
 
@@ -40,7 +40,7 @@ Innan ditt program kan instrumenteras för användning med den universella redig
 @adobe/universal-editor-cors
 ```
 
-Om du vill aktivera instrumenteringen måste följande import läggas till i `index.js`.
+Om du vill aktivera instrumenteringen måste följande import läggas till i din `index.js`.
 
 ```javascript
 import "@adobe/universal-editor-cors";
@@ -56,25 +56,25 @@ Om du inte implementerar ett React-program och/eller kräver återgivning på se
 
 Den senaste versionen rekommenderas alltid, men det går att referera till tidigare versioner av tjänsten om ändringarna bryts.
 
-* `https://universal-editor-service.experiencecloud.live/corslib/LATEST` - det allra senaste EU CORS lib
-* `https://universal-editor-service.experiencecloud.live/corslib/2/LATEST` - senaste UE CORS lib under version 2.x
-* `https://universal-editor-service.experiencecloud.live/corslib/2.1/LATEST` - det senaste UE CORS-klippet under version 2.1.x
-* `https://universal-editor-service.experiencecloud.live/corslib/2.1.1`- Exakt UE CORS lib version 2.1.1
+* `https://universal-editor-service.experiencecloud.live/corslib/LATEST` - Det allra senaste UE CORS-biblioteket
+* `https://universal-editor-service.experiencecloud.live/corslib/2/LATEST` - Det senaste UE CORS-biblioteket under version 2.x
+* `https://universal-editor-service.experiencecloud.live/corslib/2.1/LATEST` - Det senaste UE CORS-biblioteket under version 2.1.x
+* `https://universal-editor-service.experiencecloud.live/corslib/2.1.1`- The exact UE CORS lib version 2.1.1
 
 ## Lägg till nödvändiga OSGi-konfigurationer {#osgi-configurations}
 
 För att kunna redigera AEM med din app med Universal Editor måste CORS och cookie-inställningarna göras i AEM.
 
-Följande [OSGi-konfigurationer måste anges för AEM.](/help/implementing/deploying/configuring-osgi.md)
+Följande [OSGi-konfigurationer måste anges för den AEM författarinstansen.](/help/implementing/deploying/configuring-osgi.md)
 
-* `SameSite Cookies = None` in `com.day.crx.security.token.impl.impl.TokenAuthenticationHandler`
+* `SameSite Cookies = None` i `com.day.crx.security.token.impl.impl.TokenAuthenticationHandler`
 * Ta bort X-FRAME-OPTIONS: SAMEORIGIN Header i `org.apache.sling.engine.impl.SlingMainServlet`
 
 ### com.day.crx.security.token.impl.impl.TokenAuthenticationHandler {#samesite-cookies}
 
 Inloggningstokens cookie måste skickas till AEM som en tredjepartsdomän. Därför måste cookie-filen för samma plats anges explicit till `None`.
 
-Den här egenskapen måste anges i `com.day.crx.security.token.impl.impl.TokenAuthenticationHandler` OSGi-konfiguration.
+Den här egenskapen måste anges i OSGi-konfigurationen `com.day.crx.security.token.impl.impl.TokenAuthenticationHandler`.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -87,7 +87,7 @@ Den här egenskapen måste anges i `com.day.crx.security.token.impl.impl.TokenAu
 
 X-Frame-Options: SAMEORIGIN förhindrar återgivning AEM sidor i en iframe. Om du tar bort sidhuvudet kan sidorna läsas in.
 
-Den här egenskapen måste anges i `org.apache.sling.engine.impl.SlingMainServlet` OSGi-konfiguration.
+Den här egenskapen måste anges i OSGi-konfigurationen `org.apache.sling.engine.impl.SlingMainServlet`.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -99,11 +99,11 @@ Den här egenskapen måste anges i `org.apache.sling.engine.impl.SlingMainServle
 
 ## Instrument för sidan {#instrument-page}
 
-Tjänsten Universal Editor kräver en [enhetligt resursnamn (URN)](https://en.wikipedia.org/wiki/Uniform_Resource_Name) för att identifiera och använda rätt serverdelssystem för innehållet i den app som redigeras. Därför krävs ett URN-schema för att mappa tillbaka innehåll till innehållsresurser.
+Tjänsten Universal Editor kräver ett [enhetligt resursnamn (URN)](https://en.wikipedia.org/wiki/Uniform_Resource_Name) för att identifiera och använda rätt serverdelssystem för innehållet i appen som redigeras. Därför krävs ett URN-schema för att mappa tillbaka innehåll till innehållsresurser.
 
 ### Skapa anslutningar {#connections}
 
-Anslutningar som används i appen lagras som `<meta>` taggar på sidans `<head>`.
+Anslutningar som används i appen lagras som `<meta>` taggar i sidans `<head>`.
 
 ```html
 <meta name="urn:adobe:aue:<category>:<referenceName>" content="<protocol>:<url>">
@@ -111,25 +111,25 @@ Anslutningar som används i appen lagras som `<meta>` taggar på sidans `<head>`
 
 * `<category>` - Det här är en klassificering av anslutningen med två alternativ.
    * `system` - För anslutningsslutpunkter
-   * `config` - för [definiera valfria konfigurationsinställningar](#configuration-settings)
+   * `config` - För [att definiera valfria konfigurationsinställningar](#configuration-settings)
 * `<referenceName>` - Det här är ett kort namn som återanvänds i dokumentet för att identifiera anslutningen. T.ex. `aemconnection`
-* `<protocol>` - Detta anger vilket beständighets-plugin-program för Universal Editor Persistence Service som ska användas. T.ex. `aem`
-* `<url>` - Detta är URL:en till det system där ändringarna ska kvarstå. T.ex. `http://localhost:4502`
+* `<protocol>` - Detta anger vilket beständighets-plugin-program för den universella redigerarens beständighetstjänst som ska användas. T.ex. `aem`
+* `<url>` - Det här är URL:en till systemet där ändringarna ska sparas. T.ex. `http://localhost:4502`
 
-Identifierare `urn:adobe:aue:system` representerar anslutningen för Adobe Universal Editor.
+Identifieraren `urn:adobe:aue:system` representerar anslutningen för Adobe Universal Editor.
 
-`data-aue-resource`s använder `urn` för att förkorta identifieraren.
+`data-aue-resource` använder prefixet `urn` för att korta ned identifieraren.
 
 ```html
 data-aue-resource="urn:<referenceName>:<resource>"
 ```
 
-* `<referenceName>` - Detta är den namngivna referens som omnämns i `<meta>` -tagg. T.ex. `aemconnection`
-* `<resource>` - Detta är en pekare till resursen i målsystemet. t.ex. en AEM innehållssökväg som `/content/page/jcr:content`
+* `<referenceName>` - Det här är den namngivna referensen som nämns i `<meta>` -taggen. T.ex. `aemconnection`
+* `<resource>` - Detta är en pekare till resursen i målsystemet. Till exempel en AEM innehållssökväg som `/content/page/jcr:content`
 
 >[!TIP]
 >
->Se dokumentet [Attribut och typer](attributes-types.md) om du vill ha mer information om de dataattribut och datatyper som krävs för den universella redigeraren.
+>I dokumentet [Attribut och typer](attributes-types.md) finns mer information om de dataattribut och datatyper som krävs för den universella redigeraren.
 
 ### Exempelanslutning {#example}
 
@@ -165,7 +165,7 @@ data-aue-resource="urn:<referenceName>:<resource>"
 
 ### Konfigurationsinställningar {#configuration-settings}
 
-Du kan använda `config` i anslutningens URN för att ange service- och tilläggsslutpunkter om det behövs.
+Du kan använda prefixet `config` i anslutnings-URN för att ange tjänste- och tilläggsslutpunkter om det behövs.
 
 Om du inte vill använda Universal Editor, som hanteras av Adobe, men din egen värdversion, kan du ange detta i en metatagg. Om du vill skriva över standardtjänstslutpunkten som tillhandahålls av Universal Editor anger du en egen tjänstslutpunkt:
 
@@ -178,7 +178,7 @@ Om du inte vill använda Universal Editor, som hanteras av Adobe, men din egen v
 
 Om du bara vill aktivera vissa tillägg för en sida kan du ange detta i en metatagg. Om du vill hämta tillägg anger du slutpunkterna för tillägget:
 
-* Meta name: `urn:adobe:aue:config:extensions`
+* Metanamn: `urn:adobe:aue:config:extensions`
 * Metainnehåll: `content="https://adobe.com,https://anotherone.com,https://onemore.com"` (exempel)
 
 ```html
@@ -189,16 +189,16 @@ Om du bara vill aktivera vissa tillägg för en sida kan du ange detta i en meta
 
 Din app är nu instrumenterad för att använda den universella redigeraren!
 
-Se [Skapa innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md) om du vill lära dig hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
+Se [Skapa innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md) för att lära dig hur enkelt och intuitivt det är för innehållsförfattare att skapa innehåll med den universella redigeraren.
 
 ## Ytterligare resurser {#additional-resources}
 
 Mer information om Universal Editor finns i de här dokumenten.
 
-* [Introduktion till Universal Editor](introduction.md) - Lär dig hur den universella redigeraren möjliggör redigering av alla aspekter av innehåll i alla implementeringar, så att du kan leverera enastående upplevelser, öka innehållets hastighet och skapa en toppmodern utvecklarupplevelse.
-* [Skapa innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md) - Lär dig hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
+* [Introduktion till universell redigering](introduction.md) - Lär dig hur den universella redigeraren kan redigera alla delar av innehåll i alla implementeringar så att du kan leverera enastående upplevelser, öka innehållets hastighet och skapa en toppmodern utvecklarupplevelse.
+* [Skapa innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md) - Lär dig hur enkelt och intuitivt det är för innehållsförfattare att skapa innehåll med den universella redigeraren.
 * [Publicera innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/publishing.md) - Lär dig hur den universella redigeraren publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
-* [Universal Editor Architecture](architecture.md) - Lär dig mer om arkitekturen i den universella redigeraren och hur data flödar mellan tjänster och lager.
-* [Attribut och typer](attributes-types.md) - Läs mer om de dataattribut och datatyper som krävs för den universella redigeraren.
+* [Universell redigeringsarkitektur](architecture.md) - Lär dig mer om arkitekturen för den universella redigeraren och hur data flödar mellan dess tjänster och lager.
+* [Attribut och typer](attributes-types.md) - Lär dig mer om de dataattribut och datatyper som krävs för den universella redigeraren.
 * [Autentisering av universell redigerare](authentication.md) - Lär dig hur den universella redigeraren autentiseras.
 

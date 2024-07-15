@@ -16,13 +16,13 @@ ht-degree: 0%
 ## Introduktion {#apache-and-dispatcher-configuration-and-testing}
 
 >[!NOTE]
->Mer information om Dispatcher i molnet och hur du hämtar Dispatcher-verktyg finns i [Dispatcher i molnet](/help/implementing/dispatcher/disp-overview.md) sida. Om Dispatcher-konfigurationen är i äldre läge finns mer information i [dokumentation för äldre läge](/help/implementing/dispatcher/validation-debug-legacy.md).
+>Mer information om Dispatcher i molnet och hur du hämtar Dispatcher-verktyg finns på sidan [Dispatcher i molnet](/help/implementing/dispatcher/disp-overview.md). Om din Dispatcher-konfiguration är i äldre läge läser du [dokumentationen för äldre läge](/help/implementing/dispatcher/validation-debug-legacy.md).
 
 I följande avsnitt beskrivs filstrukturen för flexibelt läge, lokal validering, felsökning och migrering från äldre läge till flexibelt läge.
 
-I den här artikeln förutsätts att i projektets Dispatcher-konfiguration ingår filen `opt-in/USE_SOURCES_DIRECTLY`. Den här filen gör att SDK och körningsmiljön validerar och distribuerar konfigurationen på ett bättre sätt jämfört med det äldre läget, vilket eliminerar begränsningar i antal och storlek på filer.
+I den här artikeln förutsätts att Dispatcher-konfigurationen för ditt projekt innehåller filen `opt-in/USE_SOURCES_DIRECTLY`. Den här filen gör att SDK och körningsmiljön validerar och distribuerar konfigurationen på ett bättre sätt jämfört med det äldre läget, vilket eliminerar begränsningar i antal och storlek på filer.
 
-Om Dispatcher-konfigurationen inte innehåller den tidigare nämnda filen rekommenderar Adobe att du migrerar från äldre läge till det flexibla läget enligt anvisningarna i [Migrera från äldre läge till flexibelt läge](#migrating) -avsnitt.
+Om din Dispatcher-konfiguration inte innehåller den tidigare nämnda filen rekommenderar Adobe att du migrerar från äldre läge till det flexibla läget enligt beskrivningen i avsnittet [Migrera från äldre läge till flexibelt läge](#migrating).
 
 ## Filstruktur {#flexible-mode-file-structure}
 
@@ -81,13 +81,13 @@ Följande filer kan anpassas och överförs till din molninstans vid distributio
 
 * `conf.d/available_vhosts/<CUSTOMER_CHOICE>.vhost`
 
-Du kan ha en eller flera av dessa filer. De innehåller `<VirtualHost>` poster som matchar värdnamn och som tillåter att Apache hanterar varje domäntrafik med olika regler. Filerna skapas i `available_vhosts` och aktiveras med en symbolisk länk i `enabled_vhosts` katalog. Från `.vhost` filer, andra filer, som omskrivningar och variabler, inkluderas.
+Du kan ha en eller flera av dessa filer. De innehåller `<VirtualHost>` poster som matchar värdnamn och tillåter Apache att hantera varje domäntrafik med olika regler. Filerna skapas i katalogen `available_vhosts` och aktiveras med en symbolisk länk i katalogen `enabled_vhosts`. Från filerna `.vhost` inkluderas andra filer, som omskrivningar och variabler.
 
 >[!NOTE]
 >
 >I det flexibla läget bör du använda relativa sökvägar i stället för absoluta sökvägar.
 
-Kontrollera att det alltid finns minst en virtuell värd som matchar ServerAlias `\*.local`, `localhost`och `127.0.0.1` som behövs för att göra Dispatcher-ogiltigförklaringen. Serveralias `*.adobeaemcloud.net` och `*.adobeaemcloud.com` krävs också i minst en värdkonfiguration och behövs för interna Adobe-processer.
+Se till att det alltid finns minst en virtuell värd tillgänglig som matchar ServerAlias `\*.local`, `localhost` och `127.0.0.1` som behövs för Dispatcher-ogiltigförklaringen. Serveralias `*.adobeaemcloud.net` och `*.adobeaemcloud.com` krävs också i minst en värdkonfiguration och behövs för interna Adobe-processer.
 
 Om du vill matcha den exakta värden eftersom du har flera värdfiler kan du följa följande exempel:
 
@@ -128,23 +128,23 @@ mklink wknd.vhost ..\available_vhosts\wknd.vhost
 
 >[!NOTE]
 >
-> När du arbetar med symboliska länkar under Windows bör du köra i en förhöjd kommandotolk, i Windows-undersystemet för Linux eller ha [Skapa symboliska länkar](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/create-symbolic-links) privilegium tilldelat.
+> När du arbetar med symboliska länkar under Windows bör du köra i en utökad kommandotolk, i Windows-undersystemet för Linux eller ha privilegiet [Skapa symboliska länkar](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/create-symbolic-links) tilldelat.
 
 * `conf.d/rewrites/rewrite.rules`
 
-Filen inkluderas inifrån `.vhost` filer. Den har en uppsättning regler för omskrivning av `mod_rewrite`.
+Filen inkluderas från dina `.vhost`-filer. Den har en uppsättning omskrivningsregler för `mod_rewrite`.
 
 * `conf.d/variables/custom.vars`
 
-Filen inkluderas inifrån `.vhost` filer. Du kan lägga till definitioner för Apache-variabler på den här platsen.
+Filen inkluderas från dina `.vhost`-filer. Du kan lägga till definitioner för Apache-variabler på den här platsen.
 
 * `conf.d/variables/global.vars`
 
-Filen inkluderas inifrån `dispatcher_vhost.conf` -fil. Du kan ändra Dispatcher och skriva om loggnivån i den här filen.
+Filen inkluderas från filen `dispatcher_vhost.conf`. Du kan ändra din Dispatcher och skriva om loggnivån i den här filen.
 
 * `conf.dispatcher.d/available_farms/<CUSTOMER_CHOICE>.farm`
 
-Du kan ha en eller flera av de här filerna och de innehåller grupper som matchar värdnamn och som gör att Dispatcher-modulen kan hantera varje grupp med olika regler. Filerna skapas i `available_farms` och aktiveras med en symbolisk länk i `enabled_farms` katalog. Från `.farm` filer, andra filer som filter, cacheregler och andra inkluderas.
+Du kan ha en eller flera av de här filerna och de innehåller grupper som matchar värdnamnen, och Dispatcher-modulen kan hantera varje grupp med olika regler. Filerna skapas i katalogen `available_farms` och aktiveras med en symbolisk länk i katalogen `enabled_farms`. Från filerna `.farm` inkluderas andra filer som filter, cacheregler och andra.
 
 * `conf.dispatcher.d/enabled_farms/<CUSTOMER_CHOICE>.farm`
 
@@ -166,27 +166,27 @@ mklink wknd.farm ..\available_farms\wknd.farm
 
 >[!NOTE]
 >
-> När du arbetar med symboliska länkar under Windows bör du köra i en förhöjd kommandotolk, i Windows-undersystemet för Linux eller ha [Skapa symboliska länkar](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/create-symbolic-links) privilegium tilldelat.
+> När du arbetar med symboliska länkar under Windows bör du köra i en utökad kommandotolk, i Windows-undersystemet för Linux eller ha privilegiet [Skapa symboliska länkar](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/create-symbolic-links) tilldelat.
 
 * `conf.dispatcher.d/cache/rules.any`
 
-Filen inkluderas inifrån `.farm` filer. Den anger cachelagringsinställningar.
+Filen inkluderas från dina `.farm`-filer. Den anger cachelagringsinställningar.
 
 * `conf.dispatcher.d/clientheaders/clientheaders.any`
 
-Filen inkluderas inifrån `.farm` filer. Den anger vilka begärandehuvuden som ska vidarebefordras till serverdelen.
+Filen inkluderas från dina `.farm`-filer. Den anger vilka begärandehuvuden som ska vidarebefordras till serverdelen.
 
 * `conf.dispatcher.d/filters/filters.any`
 
-Filen inkluderas inifrån `.farm` filer. Den har en uppsättning regler som ändrar vilken trafik som ska filtreras bort och inte hamna i bakgrunden.
+Filen inkluderas från dina `.farm`-filer. Den har en uppsättning regler som ändrar vilken trafik som ska filtreras bort och inte hamna i bakgrunden.
 
 * `conf.dispatcher.d/virtualhosts/virtualhosts.any`
 
-Filen inkluderas inifrån `.farm` filer. Den har en lista med värdnamn eller URI-sökvägar som ska matchas med matchning av glob. Denna matchning avgör vilken serverdel som ska användas för att hantera en begäran.
+Filen inkluderas från dina `.farm`-filer. Den har en lista med värdnamn eller URI-sökvägar som ska matchas med matchning av glob. Denna matchning avgör vilken serverdel som ska användas för att hantera en begäran.
 
 * `opt-in/USE_SOURCES_DIRECTLY`
 
-Den här filen ger en mer flexibel Dispatcher-konfiguration och tar bort tidigare begränsningar för antal och storlek på filer. SDK och runtime-modulen gör också att konfigurationen valideras och distribueras på ett bättre sätt.
+Den här filen möjliggör en mer flexibel Dispatcher-konfiguration och tar bort tidigare begränsningar för antal och storlek på filer. SDK och runtime-modulen gör också att konfigurationen valideras och distribueras på ett bättre sätt.
 
 Ovanstående filer refererar till de oföränderliga konfigurationsfiler som listas nedan. Ändringar av oföränderliga filer bearbetas inte av Dispatcher i molnmiljöer.
 
@@ -198,10 +198,10 @@ Vi rekommenderar att ovanstående filer refererar till de oföränderliga filer 
 
 * `conf.d/available_vhosts/default.vhost`
 
-Innehåller ett exempel på en virtuell värd. Skapa en kopia av den här filen för din egen virtuella värd, anpassa den, gå till `conf.d/enabled_vhosts` och skapa en symbolisk länk till en egen kopia.
+Innehåller ett exempel på en virtuell värd. Skapa en kopia av den här filen för din egen virtuella värd, anpassa den, gå till `conf.d/enabled_vhosts` och skapa en symbolisk länk till din anpassade kopia.
 Kopiera inte filen default.vhost direkt till `conf.d/enabled_vhosts`.
 
-Kontrollera att det alltid finns ett virtuellt värdsystem som matchar ServerAlias `\*.local`, `localhost`och `127.0.0.1` som behövs för att göra Dispatcher-ogiltigförklaringen. Serveralias `*.adobeaemcloud.net` och `*.adobeaemcloud.com` behövs för interna Adobe-processer.
+Kontrollera att det alltid finns en virtuell värd som matchar ServerAlias `\*.local`, `localhost` och `127.0.0.1` som behövs för att Dispatcher ska bli ogiltigt. Serveralias `*.adobeaemcloud.net` och `*.adobeaemcloud.com` behövs för interna Adobe-processer.
 
 * `conf.d/dispatcher_vhost.conf`
 
@@ -209,39 +209,39 @@ En del av basramverket, som används för att illustrera hur dina virtuella vär
 
 * `conf.d/rewrites/default_rewrite.rules`
 
-Skriv om standardregler som är lämpliga för ett standardprojekt. Om du behöver anpassa kan du ändra `rewrite.rules`. När du anpassar kan du fortfarande inkludera standardreglerna först, om de passar dina behov.
+Skriv om standardregler som är lämpliga för ett standardprojekt. Ändra `rewrite.rules` om du behöver anpassa. När du anpassar kan du fortfarande inkludera standardreglerna först, om de passar dina behov.
 
 * `conf.dispatcher.d/available_farms/default.farm`
 
-Innehåller ett exempel på en Dispatcher-servergrupp. Skapa en kopia av den här filen för din egen servergrupp, anpassa den, gå till `conf.d/enabled_farms` och skapa en symbolisk länk till en egen kopia.
+Innehåller ett exempel på en Dispatcher-servergrupp. Skapa en kopia av den här filen för din egen servergrupp, anpassa den, gå till `conf.d/enabled_farms` och skapa en symbolisk länk till din anpassade kopia.
 
 * `conf.dispatcher.d/cache/default_invalidate.any`
 
-En del av basramverket genereras vid start. Du är **obligatoriskt** för att inkludera den här filen i alla grupper som du definierar, i `cache/allowedClients` -avsnitt.
+En del av basramverket genereras vid start. Du **måste** inkludera den här filen i alla grupper som du definierar i avsnittet `cache/allowedClients`.
 
 * `conf.dispatcher.d/cache/default_rules.any`
 
-Standardcacheregler som är lämpliga för ett standardprojekt. Om du behöver anpassa kan du ändra `conf.dispatcher.d/cache/rules.any`. När du anpassar kan du fortfarande inkludera standardreglerna först, om de passar dina behov.
+Standardcacheregler som är lämpliga för ett standardprojekt. Ändra `conf.dispatcher.d/cache/rules.any` om du behöver anpassa. När du anpassar kan du fortfarande inkludera standardreglerna först, om de passar dina behov.
 
 * `conf.dispatcher.d/clientheaders/default_clientheaders.any`
 
-Standardbegäranrubriker som ska vidarebefordras till serverdelen, lämpliga för ett standardprojekt. Om du behöver anpassa kan du ändra `clientheaders.any`. När du anpassar kan du fortfarande inkludera standardrubrikerna för begäran först, om de passar dina behov.
+Standardbegäranrubriker som ska vidarebefordras till serverdelen, lämpliga för ett standardprojekt. Ändra `clientheaders.any` om du behöver anpassa. När du anpassar kan du fortfarande inkludera standardrubrikerna för begäran först, om de passar dina behov.
 
 * `conf.dispatcher.d/dispatcher.any`
 
-En del av grundramverket som används för att illustrera hur Dispatcher-grupper inkluderas.
+En del av det grundläggande ramverket, som används för att illustrera hur era Dispatcher gårdar ingår.
 
 * `conf.dispatcher.d/filters/default_filters.any`
 
-Standardfilter som passar för ett standardprojekt. Om du behöver anpassa kan du ändra `filters.any`. När du anpassar kan du fortfarande inkludera standardfiltren först, om de passar dina behov.
+Standardfilter som passar för ett standardprojekt. Ändra `filters.any` om du behöver anpassa. När du anpassar kan du fortfarande inkludera standardfiltren först, om de passar dina behov.
 
 * `conf.dispatcher.d/renders/default_renders.any`
 
-Den här filen genereras vid start och ingår i det grundläggande ramverket. Du är **obligatoriskt** för att inkludera den här filen i alla grupper som du definierar, i `renders` -avsnitt.
+Den här filen genereras vid start och ingår i det grundläggande ramverket. Du **måste** inkludera den här filen i alla grupper som du definierar i avsnittet `renders`.
 
 * `conf.dispatcher.d/virtualhosts/default_virtualhosts.any`
 
-Standardvärdglobbning som passar för ett standardprojekt. Om du behöver anpassa kan du ändra `virtualhosts.any`. När du anpassar bör du inte ta med standardvärdglobbning, eftersom den matchar **var** inkommande begäran.
+Standardvärdglobbning som passar för ett standardprojekt. Ändra `virtualhosts.any` om du behöver anpassa. När du anpassar bör du inte ta med standardvärddatorns ordlista, eftersom den matchar **varje** inkommande begäran.
 
 ## Apache-moduler som stöds {#apache-modules}
 
@@ -253,7 +253,7 @@ Se [Apache-moduler som stöds](/help/implementing/dispatcher/disp-overview.md#su
 >
 >Avsnitten nedan innehåller kommandon som använder Mac- eller Linux®-versionerna av SDK, men Windows SDK kan också användas på ett liknande sätt.
 
-Använd `validate.sh` skript enligt nedan:
+Använd skriptet `validate.sh` så som visas nedan:
 
 ```
 $ validate.sh src/dispatcher
@@ -294,27 +294,27 @@ Phase 3 finished
 Skriptet har följande tre faser:
 
 1. Den kör valideraren. Om konfigurationen inte är giltig misslyckas skriptet.
-2. Det kör `httpd -t` för att testa om syntaxen är korrekt så att Apache httpd kan starta. Om det lyckas bör konfigurationen vara klar för distribution.
-3. Kontrollerar att delmängden av Dispatcher SDK-konfigurationsfilerna, som är avsedda att vara oföränderliga enligt beskrivningen i [Filstruktursektion](##flexible-mode-file-structure), har inte ändrats och matchar den aktuella SDK-versionen.
+2. Det kör kommandot `httpd -t` för att testa om syntaxen är korrekt så att Apache httpd kan starta. Om det lyckas bör konfigurationen vara klar för distribution.
+3. Kontrollerar att delmängden av Dispatcher SDK-konfigurationsfilerna, som är avsedda att vara oföränderliga enligt beskrivningen i [filstrukturavsnittet](##flexible-mode-file-structure), inte har ändrats och att de matchar den aktuella SDK-versionen.
 
-Under en driftsättning av Cloud Manager `httpd -t` syntaxkontrollen körs också och fel inkluderas i Cloud Manager `Build Images step failure` log.
+Under en Cloud Manager-distribution körs även syntaxkontrollen `httpd -t` och eventuella fel inkluderas i Cloud Manager `Build Images step failure`-loggen.
 
 >[!NOTE]
 >
->Se [Automatisk omladdning och validering](#automatic-loading) för ett effektivt alternativ till att köra `validate.sh` efter varje konfigurationsändring.
+>I avsnittet [Automatisk omladdning och validering](#automatic-loading) finns ett effektivt alternativ till att köra `validate.sh` efter varje konfigurationsändring.
 
 ### Fas 1 {#first-phase}
 
-Om ett direktiv inte är tillåtslista loggas ett fel och en avslutningskod som inte är noll returneras. Dessutom genomsöks alla filer ytterligare med mönstret `conf.dispatcher.d/enabled_farms/*.farm` och kontrollerar att
+Om ett direktiv inte är tillåtslista loggas ett fel och en avslutningskod som inte är noll returneras. Dessutom genomsöks alla filer med mönstret `conf.dispatcher.d/enabled_farms/*.farm` och följande kontrolleras:
 
-* Det finns ingen filterregel som tillåter via `/glob` (se [CVE-2016-0957](https://nvd.nist.gov/vuln/detail/CVE-2016-0957)) om du vill ha mer information.
-* Ingen administratörsfunktion visas. Åtkomst till banor som `/crx/de or /system/console`.
+* Det finns ingen filterregel som tillåter via `/glob` (mer information finns i [CVE-2016-0957](https://nvd.nist.gov/vuln/detail/CVE-2016-0957)).
+* Ingen administratörsfunktion visas. Åtkomst till sökvägar som `/crx/de or /system/console`.
 
 Valideringsverktyget rapporterar endast förbjuden användning av Apache-direktiv som inte har tillåtslista. Den rapporterar inte syntaktiska eller semantiska problem med din Apache-konfiguration eftersom den här informationen endast är tillgänglig för Apache-moduler i en körningsmiljö.
 
 Nedan visas felsökningstekniker för felsökning av vanliga valideringsfel som genereras av verktyget:
 
-**Det går inte att hitta en `conf.dispatcher.d` undermapp i arkivet**
+**Det går inte att hitta en `conf.dispatcher.d`-undermapp i arkivet**
 
 Arkivet bör innehålla mapparna `conf.d` och `conf.dispatcher.d`. Observera att du **inte** bör
 använda prefixet `etc/httpd` i arkivet.
@@ -323,9 +323,11 @@ använda prefixet `etc/httpd` i arkivet.
 
 De aktiverade grupperna bör finnas i den angivna undermappen.
 
-**Den inkluderade filen (..) måste ha följande namn: ...**
+**Filen som ingår (..) måste ha namnet: ...**
 
-Det finns två avsnitt i servergruppskonfigurationen som **måste** inkludera en specifik fil: `/renders` och `/allowedClients` i `/cache` -avsnitt. Dessa avsnitt måste se ut så här:
+Det finns två avsnitt i gruppkonfigurationen som **måste** innehålla en
+specifik fil: `/renders` och `/allowedClients` i avsnittet `/cache` . Dessa
+-avsnitten ska se ut så här:
 
 ```
 /renders {
@@ -343,7 +345,7 @@ Och:
 
 **Filen finns på en okänd plats: ...**
 
-Det finns fyra avsnitt i servergruppskonfigurationen där du kan inkludera egna filer: `/clientheaders`, `filters`, `/rules` in `/cache` och `/virtualhosts`. De inkluderade filerna måste ha följande namn:
+Det finns fyra avsnitt i servergruppskonfigurationen där du kan inkludera dina egna filer: `/clientheaders`, `filters`, `/rules` i `/cache` -avsnittet och `/virtualhosts`. De inkluderade filerna måste ha följande namn:
 
 | Avsnitt | Inkludera filnamn |
 |------------------|--------------------------------------|
@@ -352,11 +354,12 @@ Det finns fyra avsnitt i servergruppskonfigurationen där du kan inkludera egna 
 | `/rules` | `../cache/rules.any` |
 | `/virtualhosts` | `../virtualhosts/virtualhosts.any` |
 
-Du kan även inkludera **standard** version av dessa filer, vars namn föregås av ordet `default_`, till exempel `../filters/default_filters.any`.
+Du kan också inkludera **standardversionen** av de filerna, vars namn föregås av ordet `default_`, till exempel `../filters/default_filters.any`.
 
-**Inkludera programsats vid (..), utanför känd plats: ...**
+**Inkludera programsats på (..), utanför en känd plats: ...**
 
-Förutom de sex avsnitt som nämns i styckena ovan, får du inte använda `$include` följande skulle till exempel generera detta fel:
+Förutom de sex avsnitt som nämns i styckena ovan är du inte tillåten
+Om du till exempel vill använda programsatsen `$include` skulle följande generera det här felet:
 
 ```
 /invalidate {
@@ -366,12 +369,12 @@ Förutom de sex avsnitt som nämns i styckena ovan, får du inte använda `$incl
 
 **Tillåtna klienter/återgivningar inkluderas inte från: ...**
 
-Det här felet genereras när du inte anger något &quot;include&quot; för `/renders` och `/allowedClients` i `/cache` -avsnitt. Se
-**fil som ingår (..) måste ha följande namn: ...** för mer information.
+Det här felet genereras när du inte anger något inkluderingsfält för `/renders` och `/allowedClients` i avsnittet `/cache`. Se
+**filen som ingår (..) måste ha namnet: ...** för mer information.
 
-**Filtret får inte använda glob-mönster för att tillåta förfrågningar**
+**Filtret får inte använda glob-mönster för att tillåta begäranden**
 
-Det är inte säkert att tillåta begäranden med `/glob` formatregel, som matchas mot den fullständiga förfrågningsraden, till exempel
+Det är inte säkert att tillåta begäranden med en formatregel `/glob`, som matchas mot den fullständiga förfrågningsraden, till exempel
 
 ```
 /0100 {
@@ -379,7 +382,7 @@ Det är inte säkert att tillåta begäranden med `/glob` formatregel, som match
 }
 ```
 
-Den här programsatsen är avsedd att tillåta begäranden för `css` -filer, men tillåter även förfrågningar till **alla** resurs följt av frågesträng `?a=.css`. Det är därför förbjudet att använda sådana filter (se även CVE-2016-0957).
+Den här satsen är avsedd att tillåta begäranden för `css` filer, men tillåter även begäranden till **any**-resurser följt av frågesträngen `?a=.css`. Det är därför förbjudet att använda sådana filter (se även CVE-2016-0957).
 
 **Den inkluderade filen (..) matchar inte någon känd fil**
 
@@ -390,7 +393,7 @@ Som standard kan två typer av filer i din virtuella värdkonfiguration för Apa
 | Skriver om | `conf.d/rewrites/rewrite.rules` |
 | Variabel | `conf.d/variables/custom.vars` |
 
-I flexibelt läge kan även andra filer inkluderas, förutsatt att de finns i underkataloger (på alla nivåer) av `conf.d` katalog med följande prefix.
+I flexibelt läge kan även andra filer inkluderas, förutsatt att de finns i underkataloger (på alla nivåer) med `conf.d`-katalogprefix enligt följande.
 
 | Inkludera filens övre katalogprefix |
 |-------------------------------------|
@@ -398,22 +401,24 @@ I flexibelt läge kan även andra filer inkluderas, förutsatt att de finns i un
 | `conf.d/modsec` |
 | `conf.d/rewrites` |
 
-Du kan till exempel inkludera en fil i en skapad katalog under `conf.d/includes` katalog enligt följande:
+Du kan till exempel inkludera en fil i en skapad katalog under katalogen `conf.d/includes` enligt följande:
 
 ```
 Include conf.d/includes/mynewdirectory/myincludefile.conf
 ```
 
-Du kan även inkludera **standard** version av omskrivningsreglerna, vars namn är `conf.d/rewrites/default_rewrite.rules`.
+Du kan också inkludera **standardversionen** av reglerna för omskrivning, vars namn är `conf.d/rewrites/default_rewrite.rules`.
 Observera att det inte finns någon standardversion av variabelfilerna.
 
 **Inaktuell konfigurationslayout har identifierats, kompatibilitetsläge aktiveras**
 
-Det här meddelandet anger att din konfiguration har den föråldrade layouten version 1 som innehåller en fullständig Apache-konfiguration och filer med `ams_` prefix. Den här konfigurationen stöds fortfarande för bakåtkompatibilitet, men du bör växla till den nya layouten.
+Det här meddelandet anger att din konfiguration har den föråldrade layouten version 1 som innehåller en fullständig
+Apache-konfiguration och filer med `ams_` prefix. Den här konfigurationen stöds fortfarande bakåt
+bör du växla till den nya layouten.
 
-Den första fasen kan också **kör separat**, i stället för från wrapper `validate.sh` skript.
+Den första fasen kan också **köras separat** i stället för omslutningsskriptet `validate.sh`.
 
-När du springer mot din maven-artefakt eller din `dispatcher/src` underkatalog rapporterar den misslyckade valideringen:
+När den körs mot din maven-artefakt eller din `dispatcher/src`-underkatalog rapporterar den verifieringsfel:
 
 ```
 $ validator full -relaxed dispatcher/src
@@ -433,7 +438,7 @@ Cloud manager validator 2.0.xx
   conf.dispatcher.d\available_farms\default.farm:15: parent directory outside server root: c:\k\a\aem-dispatcher-sdk-windows-symlinks-testing3\dispatcher\src
 ```
 
-Undvik det här felet genom att kopiera och klistra in sökvägen från Utforskaren i Windows och sedan i kommandotolken med en `cd` till den banan.
+Undvik det här felet genom att kopiera och klistra in sökvägen från Utforskaren i Windows och sedan i kommandotolken med ett `cd`-kommando i sökvägen.
 
 ### Fas 2 {#second-phase}
 
@@ -441,16 +446,16 @@ Den här fasen kontrollerar Apache-syntaxen genom att starta Apache HTTPD i en d
 
 >[!NOTE]
 >
->Windows-användare måste använda Windows 10 Professional eller andra distributioner som stöder Docker. Detta krav är ett krav för att köra och felsöka Dispatcher på en lokal dator.
+>Windows-användare måste använda Windows 10 Professional eller andra distributioner som stöder Docker. Detta krav är en förutsättning för att köra och felsöka Dispatcher på en lokal dator.
 >För både Windows och macOS rekommenderar Adobe att du använder Docker Desktop.
 
-Denna fas kan också köras oberoende av varandra `bin/docker_run.sh src/dispatcher host.docker.internal:4503 8080`.
+Den här fasen kan även köras oberoende av `bin/docker_run.sh src/dispatcher host.docker.internal:4503 8080`.
 
-Under en driftsättning av Cloud Manager `httpd -t` syntaxkontroll körs också och eventuella fel inkluderas i felloggen för stegen Build Images i Cloud Manager.
+Under en Cloud Manager-distribution körs även syntaxkontrollen `httpd -t` och eventuella fel inkluderas i Cloud Manager Build Images-loggen för stegfel.
 
 ### Fas 3 {#third-phase}
 
-Om ett fel uppstår i den här fasen betyder det att Adobe har ändrat en eller flera oföränderliga filer. I så fall måste du ersätta motsvarande oföränderliga filer med den nya versionen som finns i `src` SDK-katalogen. Loggexemplet nedan visar detta problem:
+Om ett fel uppstår i den här fasen betyder det att Adobe har ändrat en eller flera oföränderliga filer. I så fall måste du ersätta motsvarande oföränderliga filer med den nya versionen som levereras i katalogen `src` i SDK. Loggexemplet nedan visar detta problem:
 
 ```
 Phase 3: Immutability check
@@ -469,19 +474,19 @@ immutable file 'conf.dispatcher.d/clientheaders/default_clientheaders.any' has b
   
 ```
 
-Denna fas kan också köras oberoende av varandra `bin/docker_immutability_check.sh src/dispatcher`.
+Den här fasen kan även köras oberoende av `bin/docker_immutability_check.sh src/dispatcher`.
 
-Dina lokala oföränderliga filer kan uppdateras genom att köra `bin/update_maven.sh src/dispatcher` skript i Dispatcher-mappen, där `src/dispatcher` är Dispatcher-konfigurationskatalogen. Skriptet uppdaterar även `pom.xml` filen i den överordnade katalogen så att också Maven immutability-kontrollerna uppdateras.
+Dina lokala oföränderliga filer kan uppdateras genom att köra skriptet `bin/update_maven.sh src/dispatcher` på din Dispatcher-mapp, där `src/dispatcher` är din konfigurationskatalog för Dispatcher. Det här skriptet uppdaterar även alla `pom.xml`-filer i den överordnade katalogen så att Immutability-kontrollerna för maven också uppdateras.
 
-## Felsöka konfigurationen av Apache och Dispatcher {#debugging-apache-and-dispatcher-configuration}
+## Felsöka Apache- och Dispatcher-konfigurationen {#debugging-apache-and-dispatcher-configuration}
 
 Du kan köra Apache Dispatcher lokalt med `./bin/docker_run.sh src/dispatcher docker.for.mac.localhost:4503 8080`.
 
-Som tidigare nämnts måste Docker installeras lokalt och det är inte nödvändigt att AEM körs. Windows-användare måste använda Windows 10 Professional eller andra distributioner som stöder Docker. Detta krav är ett krav för att köra och felsöka Dispatcher på en lokal dator.
+Som tidigare nämnts måste Docker installeras lokalt och det är inte nödvändigt att AEM körs. Windows-användare måste använda Windows 10 Professional eller andra distributioner som stöder Docker. Detta krav är en förutsättning för att köra och felsöka Dispatcher på en lokal dator.
 
-Följande strategi kan användas för att öka loggutdata för modulen Dispatcher och för att se resultaten av `RewriteRule` utvärdering i både lokala miljöer och molnmiljöer.
+Följande strategi kan användas för att öka loggutdata för Dispatcher-modulen och för att se resultaten av utvärderingen av `RewriteRule` i både lokala miljöer och molnmiljöer.
 
-Loggnivåer för dessa moduler definieras av variablerna `DISP_LOG_LEVEL` och `REWRITE_LOG_LEVEL`. De kan anges i filen `conf.d/variables/global.vars`. Den relevanta delen är följande:
+Loggnivåer för de modulerna definieras av variablerna `DISP_LOG_LEVEL` och `REWRITE_LOG_LEVEL`. De kan anges i filen `conf.d/variables/global.vars`. Den relevanta delen är följande:
 
 ```
 # Log level for the dispatcher
@@ -505,13 +510,13 @@ Loggnivåer för dessa moduler definieras av variablerna `DISP_LOG_LEVEL` och `R
 # Define REWRITE_LOG_LEVEL warn
 ```
 
-När du kör Dispatcher lokalt skrivs loggarna ut direkt till terminalutdata. Oftast vill du att de här loggarna ska vara i felsökningsversionen, vilket du kan göra genom att skicka felsökningsnivån som en parameter när du kör Docker. Till exempel: `DISP_LOG_LEVEL=Debug ./bin/docker_run.sh src docker.for.mac.localhost:4503 8080`.
+När du kör Dispatcher lokalt skrivs loggar ut direkt till slututdata. Oftast vill du att de här loggarna ska vara i felsökningsversionen, vilket du kan göra genom att skicka felsökningsnivån som en parameter när du kör Docker. Till exempel: `DISP_LOG_LEVEL=Debug ./bin/docker_run.sh src docker.for.mac.localhost:4503 8080`.
 
 Loggar för molnmiljöer visas via loggningstjänsten i Cloud Manager.
 
 >[!NOTE]
 >
->För miljöer på AEM as a Cloud Service är felsökningen den högsta nivån för vertikal intensitet. Spårningsloggsnivån stöds inte, så du bör undvika att ange den när du arbetar i molnmiljöer.
+>I miljöer på AEM as a Cloud Service är felsökning den högsta nivån för vertikal intensitet. Spårningsloggsnivån stöds inte, så du bör undvika att ange den när du arbetar i molnmiljöer.
 
 ### Automatisk omladdning och validering {#automatic-reloading}
 
@@ -519,7 +524,7 @@ Loggar för molnmiljöer visas via loggningstjänsten i Cloud Manager.
 >
 >På grund av en Windows-begränsning är den här funktionen bara tillgänglig för macOS- och Linux®-användare.
 
-Istället för att köra lokal validering (`validate.sh`) och starta dockningsbehållaren (`docker_run.sh`) varje gång konfigurationen ändras kan du köra `docker_run_hot_reload.sh` skript. Skriptet söker efter ändringar i konfigurationen och läser automatiskt in den igen och kör valideringen igen. Genom att använda det här alternativet kan du spara mycket tid vid felsökning.
+I stället för att köra lokal validering (`validate.sh`) och starta dockningsbehållaren (`docker_run.sh`) varje gång konfigurationen ändras, kan du köra `docker_run_hot_reload.sh`-skriptet. Skriptet söker efter ändringar i konfigurationen och läser automatiskt in den igen och kör valideringen igen. Genom att använda det här alternativet kan du spara mycket tid vid felsökning.
 
 Du kan köra skriptet med följande kommando: `./bin/docker_run_hot_reload.sh src/dispatcher host.docker.internal:4503 8080`
 
@@ -551,7 +556,7 @@ INFO Mon Jul  4 09:53:55 UTC 2022: Apache httpd informationServer version: Apach
 
 ### Infoga anpassade miljövariabler {#environment-variables}
 
-Du kan använda anpassade miljövariabler med SDK:n för dispatcher genom att ange dem i en separat fil och referera till dem i `ENV_FILE` systemvariabel innan den lokala dispatchern startas.
+Du kan använda anpassade miljövariabler med SDK:n för dispatcher genom att ange dem i en separat fil och referera till dem i miljövariabeln `ENV_FILE` innan du startar den lokala dispatchern.
 
 En fil med anpassade miljövariabler skulle se ut så här:
 
@@ -570,7 +575,7 @@ export ENV_FILE=custom.env
 
 ## Olika Dispatcher-konfigurationer per miljö {#different-dispatcher-configurations-per-environment}
 
-För närvarande används samma Dispatcher-konfiguration för alla miljöer på AEM as a Cloud Service. Körningsmiljön har en miljövariabel `ENVIRONMENT_TYPE` som innehåller det aktuella körningsläget (utveckling, scen eller produktion) och en&quot;definition&quot;. &quot;define&quot; kan vara `ENVIRONMENT_DEV`, `ENVIRONMENT_STAGE`, eller `ENVIRONMENT_PROD`. I Apache-konfigurationen kan variabeln användas direkt i ett uttryck. Alternativt kan&quot;define&quot; användas för att bygga logik:
+För närvarande används samma Dispatcher-konfiguration för alla miljöer på AEM as a Cloud Service. Runtime-modulen har en miljövariabel `ENVIRONMENT_TYPE` som innehåller det aktuella körningsläget (utveckling, scen eller produktion) och en &quot;define&quot;. Definitionen kan vara `ENVIRONMENT_DEV`, `ENVIRONMENT_STAGE` eller `ENVIRONMENT_PROD`. I Apache-konfigurationen kan variabeln användas direkt i ett uttryck. Alternativt kan&quot;define&quot; användas för att bygga logik:
 
 ```
 # Simple usage of the environment variable
@@ -587,7 +592,7 @@ ServerName ${ENVIRONMENT_TYPE}.company.com
 </IfDefine>
 ```
 
-I Dispatcher-konfigurationen är samma systemvariabel tillgänglig. Om mer logik krävs definierar du variablerna enligt exemplet ovan och använder dem sedan i Dispatcher-konfigurationsavsnittet:
+I Dispatcher-konfigurationen är samma systemvariabel tillgänglig. Om mer logik krävs definierar du variablerna enligt exemplet ovan och använder dem sedan i konfigurationsavsnittet för Dispatcher:
 
 ```
 /virtualhosts {
@@ -595,20 +600,20 @@ I Dispatcher-konfigurationen är samma systemvariabel tillgänglig. Om mer logik
 }
 ```
 
-Du kan också använda Cloud Manager-miljövariabler i din httpd/dispatcher-konfiguration, men inte miljöhemligheter. Den här metoden är särskilt viktig om ett program har flera dev-miljöer och vissa av dessa dev-miljöer har olika värden för httpd/dispatcher-konfigurationen. Samma ${VIRTUALHOST} syntax används som i exemplet ovan, men Define-deklarationerna i variabelfilen ovan används inte. Läs [Dokumentation för Cloud Manager](/help/implementing/cloud-manager/environment-variables.md) för instruktioner om hur du konfigurerar Cloud Manager-miljövariabler.
+Du kan också använda Cloud Manager-miljövariabler i din httpd/dispatcher-konfiguration, men inte i miljöhemligheter. Den här metoden är särskilt viktig om ett program har flera dev-miljöer och vissa av dessa dev-miljöer har olika värden för httpd/dispatcher-konfigurationen. Samma ${VIRTUALHOST}-syntax används som i exemplet ovan, men Define-deklarationerna i ovanstående variabelfil används inte. Läs [Cloud Manager-dokumentationen](/help/implementing/cloud-manager/environment-variables.md) för instruktioner om hur du konfigurerar Cloud Manager-miljövariabler.
 
-När du testar konfigurationen lokalt kan du simulera olika miljötyper genom att skicka variabeln `DISP_RUN_MODE` till `docker_run.sh` direkt:
+När du testar konfigurationen lokalt kan du simulera olika miljötyper genom att skicka variabeln `DISP_RUN_MODE` till skriptet `docker_run.sh` direkt:
 
 ```
 $ DISP_RUN_MODE=stage docker_run.sh src docker.for.mac.localhost:4503 8080
 ```
 
 Standardkörningsläget när inget värde för DISP_RUN_MODE skickas är &quot;dev&quot;.
-Kör skriptet för att få en fullständig lista över tillgängliga alternativ och variabler `docker_run.sh` utan argument.
+Kör skriptet `docker_run.sh` utan argument om du vill ha en fullständig lista över tillgängliga alternativ och variabler.
 
-## Visa Dispatcher-konfigurationen som används av Docker-behållaren {#viewing-dispatcher-configuration-in-use-by-docker-container}
+## Visa den Dispatcher-konfiguration som används av Docker-behållaren {#viewing-dispatcher-configuration-in-use-by-docker-container}
 
-Med miljöspecifika konfigurationer kan det vara svårt att avgöra hur Dispatcher-konfigurationen ser ut. När du har startat din dockningsbehållare med `docker_run.sh`kan den dumpas enligt följande:
+Med miljöspecifika konfigurationer kan det vara svårt att avgöra hur Dispatcher-konfigurationen ser ut. När du har startat din Docker-behållare med `docker_run.sh` kan den dumpas enligt följande:
 
 * Bestäm vilket behållar-ID som används:
 
@@ -631,19 +636,19 @@ $ docker exec d75fbd23b29 httpd-test
 
 ## Migrera från äldre läge till flexibelt läge {#migrating}
 
-Med Cloud Manager 2021.7.0 genererar nya Cloud Manager-program maven-projektstrukturer med [AEM 28](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) eller högre, som innehåller filen **opt-in/USE_SOURCES_DIRECTLY**. Det tar bort tidigare begränsningar i [äldre läge](/help/implementing/dispatcher/validation-debug-legacy.md) runt antalet och storleken på filer, vilket även gör att SDK och runtime-modulen validerar och distribuerar konfigurationen på ett förbättrat sätt. Om Dispatcher-konfigurationen inte har den här filen rekommenderar vi att du migrerar. Följ de här stegen för att säkerställa en säker övergång:
+Med Cloud Manager 2021.7.0 genererar nya Cloud Manager-program maven-projektstrukturer med [AEM 28](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) eller senare, som innehåller filen **opt-in/USE_SOURCES_DIRECTLY**. Den tar bort tidigare begränsningar för det [äldre läget](/help/implementing/dispatcher/validation-debug-legacy.md) runt antalet filer och filstorleken, vilket även gör att SDK och miljön validerar och distribuerar konfigurationen på ett förbättrat sätt. Om din Dispatcher-konfiguration inte har den här filen rekommenderar vi att du migrerar. Följ de här stegen för att säkerställa en säker övergång:
 
-1. **Lokal testning.** Lägg till mappen och filen med hjälp av SDK:t för de senaste Dispatcher-verktygen `opt-in/USE_SOURCES_DIRECTLY`. Följ instruktionerna för lokal validering i den här artikeln så att du kan testa att Dispatcher fungerar lokalt.
-1. **Molnutvecklingstestning:**
-   * Verkställ filen `opt-in/USE_SOURCES_DIRECTLY` till en Git-gren som distribueras av icke-produktionsflödet till en molnutvecklingsmiljö.
-   * Använd Cloud Manager för att distribuera till en molnutvecklingsmiljö.
-   * Testa noggrant. Det är viktigt att verifiera att konfigurationen av Apache och Dispatcher fungerar som du förväntar dig innan du distribuerar ändringar i högre miljöer. Kontrollera alla beteenden som hör till din anpassade konfiguration. Registrera en kundsupportanmälan om du tror att den distribuerade Dispatcher-konfigurationen inte återspeglar din anpassade konfiguration.
+1. **Local testing.** Lägg till mappen och filen `opt-in/USE_SOURCES_DIRECTLY` med de senaste SDK-verktygen för Dispatcher. Följ instruktionerna för lokal validering i den här artikeln så att du kan testa att Dispatcher fungerar lokalt.
+1. **Molnutvecklingstest:**
+   * Bekräfta filen `opt-in/USE_SOURCES_DIRECTLY` till en Git-gren som distribueras av icke-produktionsflödet till en molnutvecklingsmiljö.
+   * Använd Cloud Manager för att driftsätta i en molnutvecklingsmiljö.
+   * Testa noggrant. Det är viktigt att verifiera att din Apache- och Dispatcher-konfiguration fungerar som du förväntar dig innan du distribuerar ändringar i högre miljöer. Kontrollera alla beteenden som hör till din anpassade konfiguration. Registrera en kundsupportanmälan om du tror att den distribuerade Dispatcher-konfigurationen inte återspeglar din anpassade konfiguration.
 
    >[!NOTE]
    >
    >I det flexibla läget bör du använda relativa sökvägar i stället för absoluta sökvägar.
 1. **Distribuera till produktion:**
-   * Verkställ filen `opt-in/USE_SOURCES_DIRECTLY` till en Git-gren som distribueras via produktionsflödet till molnscenen och produktionsmiljöerna.
+   * Bekräfta filen `opt-in/USE_SOURCES_DIRECTLY` till en Git-gren som distribueras av produktionsflödet till molnscenen och produktionsmiljöerna.
    * Använd Cloud Manager för att distribuera till testmiljöer.
-   * Testa noggrant. Det är viktigt att verifiera att konfigurationen av Apache och Dispatcher fungerar som du förväntar dig innan du distribuerar ändringar i högre miljöer. Kontrollera alla beteenden som är relaterade till din anpassade konfiguration. Registrera en kundsupportanmälan om du tror att den distribuerade Dispatcher-konfigurationen inte återspeglar din anpassade konfiguration.
+   * Testa noggrant. Det är viktigt att verifiera att din Apache- och Dispatcher-konfiguration fungerar som du förväntar dig innan du distribuerar ändringar i högre miljöer. Kontrollera alla beteenden som är relaterade till din anpassade konfiguration. Registrera en kundsupportanmälan om du tror att den distribuerade Dispatcher-konfigurationen inte återspeglar din anpassade konfiguration.
    * Använd Cloud Manager för att fortsätta distributionen till produktionen.

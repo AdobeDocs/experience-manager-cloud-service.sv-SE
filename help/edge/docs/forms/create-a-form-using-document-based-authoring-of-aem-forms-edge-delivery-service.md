@@ -1,6 +1,6 @@
 ---
 title: Skapa ett formulär med dokumentbaserad redigering för AEM Forms Edge Delivery Service
-description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery + doc-based authoring = blazingerande hastighet & SEO-vänliga formulär för nöjdare användare och sökmotorer.
+description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery + dokumentbaserad redigering = blixtsnabb och SEO-anpassade formulär för nöjdare användare och sökmotorer.
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Skapa ett formulär med dokumentbaserad redigering för AEM Forms Edge Delivery Service
 
-I dagens digitala samhälle är det viktigt för alla företag att skapa användarvänliga formulär. Med dokumentbaserad redigering i AEM Forms Edge Delivery kan du skapa formulär med välbekanta verktyg som Word eller Google Docs. Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft Sharepoint för att enkelt bearbeta inlämnade data eller för att initiera ett befintligt arbetsflöde.
+I dagens digitala samhälle är det viktigt för alla företag att skapa användarvänliga formulär. Med dokumentbaserad redigering i AEM Forms Edge Delivery kan du skapa formulär med välbekanta verktyg som Word eller Google Docs. Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft Sharepoint för att enkelt bearbeta inskickade data eller starta ett befintligt arbetsflöde.
 
 Den här guiden leder dig igenom:
 
@@ -30,7 +30,7 @@ Oavsett om du är nybörjare eller proffs ger den här guiden dig möjlighet att
 
 ## Förbered kalkylbladet för att ta emot data
 
-1. Skapa en Microsoft Excel-arbetsbok eller ett Google-blad var som helst under AEM Edge Delivery-projektkatalog på Microsoft OneDrive eller Google Drive. Det här dokumentet använder ett Google-blad med namnet `contact-us.xlsx`, som finns i roten av ett Adobe Experience Manager-projekt (AEM).
+1. Skapa en Microsoft Excel-arbetsbok eller ett Google-blad var som helst under Edge Delivery AEM projektkatalog på Microsoft OneDrive eller Google Drive. Det här dokumentet använder ett Google-blad med namnet `contact-us.xlsx`, som finns i roten för ett Adobe Experience Manager-projekt (AEM).
 
 1. Kontrollera att AEM användare (till exempel helix@adobe.com) som är konfigurerad för ditt projekt har redigeringsbehörighet för bladet.
 
@@ -52,7 +52,7 @@ Oavsett om du är nybörjare eller proffs ger den här guiden dig möjlighet att
 
    Du kan göra detta manuellt eller genom att använda en begäran om POST i formulärflödet i AEM Admin-tjänsten. Administrationstjänsten undersöker informationen i POSTEN och genererar de rubriker, tabeller och blad som behövs för att effektivt kunna importera data och få ut det mesta av blanketttjänsten.
 
-   Om du vill veta hur du formaterar POSTEN för att konfigurera bladet kan du läsa [Dokumentation för Admin API](https://www.hlx.live/docs/admin.html#tag/form). Ta också en titt på exemplet nedan:
+   Mer information om hur du formaterar begäran om POST för att konfigurera bladet finns i [dokumentationen för Admin API](https://www.hlx.live/docs/admin.html#tag/form). Ta också en titt på exemplet nedan:
 
    **Begäran**
 
@@ -116,7 +116,7 @@ Oavsett om du är nybörjare eller proffs ger den här guiden dig möjlighet att
 
 Ovannämnda POST innehåller exempeldata, inklusive både formulärfält och deras respektive exempelvärden. Dessa data används av administrationstjänsten för att konfigurera formuläret.
 
-Om du föredrar att skapa rubrikerna manuellt bör du läsa dokumentet Admin Service [Manuell inställning av Forms-blad](https://www.hlx.live/docs/manual-forms-sheet-setup).
+Administratörstjänsten rekommenderar att du konfigurerar bladet, men om du föredrar att skapa rubrikerna manuellt kan du läsa dokumentet [Manuella inställningar för Forms-blad](https://www.hlx.live/docs/manual-forms-sheet-setup).
 
 När du skickar en begäran om POST till administratörstjänsten kommer du att se följande ändringar i arbetsboken:
 
@@ -209,7 +209,8 @@ Det finns olika sätt att formatera formulärdata i POSTENS brödtext.
       }
   ```
 
-* `x-www-form-urlencoded` brödtext (`content-type` header must set to `application/x-www-form-urlencoded`) &#39;firstName=bruce&amp;lastname=banner&amp;email=bruce%40example.com&#39;
+* `x-www-form-urlencoded` body (`content-type` header måste anges till `application/x-www-form-urlencoded`)
+&#39;firstName=bruce&amp;lastname=banner&amp;email=bruce%40example.com&#39;
 
 
 

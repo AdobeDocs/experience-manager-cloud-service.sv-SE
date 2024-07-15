@@ -30,11 +30,11 @@ När du skapar en snurra uppsättning eller en bilduppsättning, eller överför
 
 | Resurs - begränsningstyp | Bästa praxis | Begränsning har införts |
 | --- | --- | --- |
-| **Bild** - Antal smarta beskärningar per bild | 5 | 100 |
-| **Alla uppsättningar** - Antal dubblettresurser per uppsättning | Inga dubbletter | 20 |
+| **Bild** - antal smarta beskärningar per bild | 5 | 100 |
+| **Alla uppsättningar** - antal dubblettresurser per uppsättning | Inga dubbletter | 20 |
 | **Alla uppsättningar** - Maximalt antal resurser per uppsättning | 5-10 bilder per uppsättning | 1000 |
-| **Rotation** - Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 |
-| **PDF** - Maximalt antal sidor för PDF som ska användas för extrahering |  | 100 (för alla PDF) |
+| **Snurra uppsättning** - Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 |
+| **PDF** - Maximalt antal sidor för en PDF som ska tas i beaktande för extrahering |  | 100 (för alla PDF) |
 
 <!-- See also [Dynamic Media limitations](/help/assets/limitations.md). -->
 

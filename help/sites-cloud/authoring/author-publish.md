@@ -15,11 +15,11 @@ ht-degree: 0%
 
 # Skapande och publicering av begrepp {#authoring-publishing}
 
-För en innehållsförfattare kan en AEM as a Cloud Service installation betraktas som tre primära lager på den mest grundläggande nivån
+En AEM as a Cloud Service-installation kan ses som tre primära lager på den mest grundläggande nivån
 
 * Författarnivå
 * Förhandsgranskningsnivå
-* Publiceringsnivå
+* Publish Tier
 
 Dessa nivåer interagerar så att ni kan göra innehåll tillgängligt på er webbplats så att era besökare kan komma åt det. Det grundläggande arbetsflödet är:
 
@@ -31,7 +31,7 @@ Innehåll kan vara av många olika typer, bland annat sidor, resurser och publik
 
 ![Diagram över författare, utgivare och avsändare](assets/author-publish.jpg)
 
-Mer information om den tekniska arkitekturen för AEM as a Cloud Service finns i dokumentet [En introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service.](/help/overview/architecture.md)
+Mer information om AEM as a Cloud Service tekniska arkitektur finns i dokumentet [En introduktion till Adobe Experience Manager as a Cloud Service arkitektur.](/help/overview/architecture.md)
 
 {{edge-delivery-authoring}}
 
@@ -54,20 +54,20 @@ Det finns även administrativa uppgifter som hjälper dig att hantera ditt inneh
 
 AEM administreras också från författarmiljön.
 
-Se dokumentet [Quick Start Guide to Authoring](/help/sites-cloud/authoring/quick-start.md) för en översikt över redigeringsprocessen.
+I dokumentet [Snabbstartsguide till redigering](/help/sites-cloud/authoring/quick-start.md) finns en översikt över redigeringsprocessen.
 
 ## Förhandsgranska innehåll {#previewing-content}
 
 AEM erbjuder också en förhandsgranskningstjänst som gör att utvecklare och innehållsförfattare kan förhandsgranska en webbplats slutliga upplevelse innan den når publiceringsmiljön och är tillgänglig för allmänheten.
 
-Se dokumentet [Förhandsgranska innehåll](/help/sites-cloud/authoring/sites-console/previewing-content.md) för mer information.
+Mer information finns i dokumentet [Förhandsgranska innehåll](/help/sites-cloud/authoring/sites-console/previewing-content.md).
 
-## Publiceringsmiljö {#publish-environment}
+## Publish Environment {#publish-environment}
 
 När det är klart publiceras webbplatsens innehåll i publiceringsmiljön på publiceringsnivån. Här blir webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med innehållsmallens utseende och känsla.
 
-Se dokumentet [Publicera sidor](/help/sites-cloud/authoring/sites-console/publishing-pages.md) för mer information om publicering och avpublicering av sidor.
+Mer information om publicering och avpublicering av sidor finns i dokumentet [Publicera sidor](/help/sites-cloud/authoring/sites-console/publishing-pages.md).
 
 ## Dispatcher {#dispatcher}
 
-Om du vill optimera prestanda för besökare på webbplatsen kan du **[Dispatcher](/help/implementing/dispatcher/overview.md)** implementerar belastningsutjämning och cachelagring för både publicerings- och förhandsgranskningsnivåer.
+**[Dispatcher](/help/implementing/dispatcher/overview.md)** implementerar belastningsutjämning och cachning för både publicerings- och förhandsgranskningsnivåer för att optimera prestanda för besökare på din webbplats.

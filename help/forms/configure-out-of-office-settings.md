@@ -39,17 +39,17 @@ Du kan dela upp objektdelegering baserat på arbetsflödesmodellerna. Du kan til
 
 Utför följande steg för att aktivera inställningen Frånvarande för ditt konto och delegera dina inkorgsobjekt till en annan användare:
 
-1. Logga in på din AEM. Välj ![Inkorg](assets/bell.svg) ikon och markera **[!UICONTROL View All]**. En lista över dina inkorgsobjekt visas.
-1. Välj ![Visa väljare](assets/viewlist.svg) eller ![Visa väljare](assets/calendar.svg) -ikonen bredvid **[!UICONTROL Create]** knapp och markera **[!UICONTROL Settings]**. Dialogrutan Inställningar visas.
-1. Öppna **[!UICONTROL Out of Office]** i inställningsdialogrutan.
-1. Välj **[!UICONTROL Enable/Disable]** om du vill aktivera inställningen Frånvarande.
-1. Ange **[!UICONTROL Start Time]**  och **[!UICONTROL End Time]** för inställningen. Objekten delegeras endast under den angivna perioden. Lämna **[!UICONTROL End Time]** fältet är tomt för att delegera objekt för en obestämd tidsperiod.
-1. Välj **[!UICONTROL Forward my items during this period]** kryssrutan. Om du inte markerar alternativet och inte anger en tilldelad användare vidarebefordras inte objekten till någon användare. Även om du är borta och inställningen är aktiverad finns objekten kvar i Inkorgen.
-1. Välj **[!UICONTROL Add Assignee]**. Ange en användare i **[!UICONTROL Assignee]** fält som objekten ska delegeras till. Ange **[!UICONTROL Workflow Model]** för att delegera till den angivna användaren. Du kan välja mer än en arbetsflödesmodell.
+1. Logga in på din AEM. Markera ikonen ![Inkorg](assets/bell.svg) och välj **[!UICONTROL View All]**. En lista över dina inkorgsobjekt visas.
+1. Markera ikonen ![Visa väljare](assets/viewlist.svg) eller ![Visa väljare](assets/calendar.svg) bredvid knappen **[!UICONTROL Create]** och välj **[!UICONTROL Settings]**. Dialogrutan Inställningar visas.
+1. Öppna fliken **[!UICONTROL Out of Office]** i inställningsdialogrutan.
+1. Markera knappen **[!UICONTROL Enable/Disable]** om du vill aktivera inställningen Frånvarande.
+1. Ange **[!UICONTROL Start Time]** och **[!UICONTROL End Time]** för inställningen. Objekten delegeras endast under den angivna perioden. Lämna fältet **[!UICONTROL End Time]** tomt om du vill delegera objekt för en obegränsad tidsperiod.
+1. Markera kryssrutan **[!UICONTROL Forward my items during this period]**. Om du inte markerar alternativet och inte anger en tilldelad användare vidarebefordras inte objekten till någon användare. Även om du är borta och inställningen är aktiverad finns objekten kvar i Inkorgen.
+1. Välj **[!UICONTROL Add Assignee]**. Ange en användare i fältet **[!UICONTROL Assignee]** som objekten ska delegeras till. Ange **[!UICONTROL Workflow Model]** att delegera till den angivna användaren. Du kan välja mer än en arbetsflödesmodell.
 
    Om du dessutom vill tilldela alla objekt, oavsett arbetsflödesmodell, till en viss användare väljer du **[!UICONTROL All Workflows]** i listrutan Arbetsflödesmodell. <br>
 
-   Om du vill tilldela objekt till en viss användare för alla arbetsflödesmodeller utom ett fåtal, väljer du **[!UICONTROL All Workflows]** i listrutan Arbetsflödesmodell väljer du **[!UICONTROL + Add Exceptions]**och ange vilka arbetsflödesmodeller som ska utelämnas.
+   Om du vill tilldela objekt till en viss användare för alla arbetsflödesmodeller utom ett fåtal, väljer du **[!UICONTROL All Workflows]** i listrutan Arbetsflödesmodell, väljer **[!UICONTROL + Add Exceptions]** och anger vilka arbetsflödesmodeller som ska utelämnas.
    <br>
 
    Upprepa steget för att lägga till fler tilldelningar. <br>
@@ -66,8 +66,8 @@ Nu tilldelas objekt som du har tilldelats under frånvaroperioden automatiskt ti
 
 >[!NOTE]
 >
->(Endast för Forms-centrerade arbetsflödesobjekt) Aktivera **[!UICONTROL Allow assignee to delegate using the 'Out of Office' settings]** alternativ för **[!UICONTROL Assign task]** i arbetsflödet. Endast objekt som har det ovannämnda alternativet aktiverat delegeras till andra användare.
->(Endast för Forms-centrerade arbetsflödesobjekt) Aktivera **[!UICONTROL Allow assignee to delegate using 'Out of Office' settings]** alternativ för **[!UICONTROL Assign task]** i arbetsflödet. Endast objekt som har det tidigare nämnda alternativet aktiverat delegeras till andra användare.
+>(Endast för Forms-centrerade arbetsflödesobjekt) Aktivera alternativet **[!UICONTROL Allow assignee to delegate using the 'Out of Office' settings]** för steget **[!UICONTROL Assign task]** i arbetsflödet. Endast objekt som har det ovannämnda alternativet aktiverat delegeras till andra användare.
+>(Endast för Forms-centrerade arbetsflödesobjekt) Aktivera alternativet **[!UICONTROL Allow assignee to delegate using 'Out of Office' settings]** för steget **[!UICONTROL Assign task]** i arbetsflödet. Endast objekt som har det tidigare nämnda alternativet aktiverat delegeras till andra användare.
 
 ## Begränsningar {#limitations}
 

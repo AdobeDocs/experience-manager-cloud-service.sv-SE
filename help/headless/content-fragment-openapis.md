@@ -15,4 +15,4 @@ ht-degree: 0%
 
 Med den moderniserade OpenAPI-implementeringen av API:t för hantering av innehållsfragment kan utvecklare programmässigt skapa, läsa, uppdatera och ta bort åtgärder på AEM författare för att hantera innehållsfragmentsmodeller och innehållsfragment som lagras i AEM. Dessa API:er har stöd för ett antal användningsfall.
 
-Befintlig användning av [Resurser för HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) för innehållsfragment ska migreras till det nya OpenAPI:t för hantering av innehållsfragment. Fullständig dokumentation finns på [API för hantering av innehållsfragment](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/).
+Den befintliga användningen av [Assets HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) för innehållsfragment bör migreras till det nya OpenAPI:t för hantering av innehållsfragment. Fullständig dokumentation finns i [API för hantering av innehållsfragment](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/).

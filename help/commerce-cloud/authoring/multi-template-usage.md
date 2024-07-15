@@ -24,7 +24,7 @@ ht-degree: 0%
 >
 > Den här funktionen fungerar bara för butiker som baseras på CIF (till exempel Venia).
 
-[AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components) ger innehållsförfattare möjlighet att skapa ytterligare kategori- och produktsidor. Dessa sidor kan berikas med ytterligare marknadsföringsmaterial och konfigureras för specifika kategorier och produkter. I följande videofilm visas hur du konfigurerar den här funktionen.
+[AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) ger innehållsförfattare möjlighet att skapa ytterligare kategori- och produktsidor. Dessa sidor kan berikas med ytterligare marknadsföringsmaterial och konfigureras för specifika kategorier och produkter. I följande videofilm visas hur du konfigurerar den här funktionen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28969/?quality=12)
 
@@ -33,8 +33,8 @@ Du kan välja specifika produktsidor antingen med en sku eller med en produkts k
 Mer information om det här avsnittet finns i följande resurser:
 
 - [Avancerade URL-konfigurationer](../configuring/advanced-url-configuration.md)
-- [AEM CIF Core Components - Konfiguration av flera katalogsidor](https://github.com/adobe/aem-core-cif-components/wiki/configuration#multi-catalog-page-template-configuration)
+- [AEM CIF Core Components - Konfiguration av flerkatalogsida](https://github.com/adobe/aem-core-cif-components/wiki/configuration#multi-catalog-page-template-configuration)
 
 ## Relaterade resurser {#related}
 
-Det går också att dynamiskt rikta in specifika delar av en sida och återanvända samma mall. Lär dig hur [förbättra produktdata med tillhörande AEM](./enrich-product-associated-content.md).
+Det går också att dynamiskt rikta in specifika delar av en sida och återanvända samma mall. Lär dig hur du [förbättrar produktdata med associerat AEM](./enrich-product-associated-content.md).

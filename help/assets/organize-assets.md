@@ -65,48 +65,48 @@ Det mest grundläggande sättet att ordna resurser är att spara resurserna i ma
 * Använd endast mappar för att få en enhetlig lagringsstruktur för dina digitala resurser. Denna konsekvens hjälper er att arbeta och hantera ert material bättre. Resurser som placeras i följande typer av mappar kan till exempel hjälpa dig att dela upp dina resurser:
 
    * **Utvecklingsmappar**: innehåller digitala resurser som du för närvarande arbetar med.
-   * **Klientmappar**: innehåller digitala resurser baserade på klienter eller projektnamn.
-   * **Primära mappar**: innehåller digitala källresurser.
+   * **Klientmappar**: innehåller digitala resurser som är baserade på klienter eller projektnamn.
+   * **Primära mappar**: innehåller ursprungliga digitala källresurser.
    * **Återgivningsmappar**: innehåller återgivningar och kopior av det ursprungliga digitala källmaterialet.
-   * **Filstorleksmappar**: innehåller digitala resurser baserade på små, medelstora eller stora filstorlekar.
+   * **Filstorleksmappar**: innehåller digitala resurser baserat på liten, medelstor eller stor filstorlek.
    * **Mellanlagringsmappar**: innehåller digitala resurser som är klara att publiceras live på din webbplats.
-   * **MIME-typmappar**: innehåller digitala resurser som är specifika för MIME-typer, t.ex. bilder, dokument och multimedia.
-   * **Arkivera mappar**: innehåller pensionerade digitala resurser.
-   * **Datumbaserade mappar**: innehåller digitala resurser baserat på skapandedatum eller senaste ändringsdatum.
+   * **MIME-typmappar**: innehåller digitala resurser som är specifika för MIME-typer som bilder, dokument och multimedia.
+   * **Arkivmappar**: innehåller kasserade digitala resurser.
+   * **Datumbaserade mappar**: innehåller digitala resurser baserat på ett skapandedatum eller ett senast ändrat datum.
 
 * Skapa en katalog med mappar som troligtvis inte ändras så att anpassningar och automatisering fortsätter att fungera. De tilldelade bearbetningsprofilerna fortsätter till exempel att fungera.
-* Om en resurs redan har publicerats använder du [!DNL Experience Manager] om du vill flytta resursen till en annan mapp och publicera på nytt från den nya platsen. Den ursprungliga publicerade resursplatsen är fortfarande tillgänglig tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen är dock *vilse* till [!DNL Experience Manager] och kan inte avpubliceras. Därför bör du först avpublicera en resurs och sedan flytta den till en annan mapp.
+* Om en resurs redan har publicerats använder du [!DNL Experience Manager] för att flytta resursen till en annan mapp och publicera den på nytt från den nya platsen. Den ursprungliga publicerade resursplatsen är fortfarande tillgänglig tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen är *förlorad* till [!DNL Experience Manager] och kan inte avpubliceras. Därför bör du först avpublicera en resurs och sedan flytta den till en annan mapp.
 
 ## Ordna resurser med hjälp av taggar {#use-tags-to-organize-assets}
 
 Om du lägger till taggar i resurser blir det enklare att hämta dem under en sökning, skapa samlingar med hjälp av sökresultaten, öka rankningen för vissa resurser och använda AI-algoritmer i Adobe Sensei för tillgångsidentifiering.
 
-[!DNL Adobe Experience Manager Assets] använder en självlärande algoritm för att skapa mycket beskrivande taggar som gör att du kan hitta rätt resurs med bara några klick. Smart taggning använder Adobe Sensei, artificiell intelligens och maskininlärningsmiljö, som kan utbildas för att känna igen och använda både standard- och företagsspecifika taggar på bilder. Smarta taggar kan även identifiera innehåll, enskilda ord eller fraser och automatiskt använda beskrivande taggar på resurser.
+[!DNL Adobe Experience Manager Assets] använder en självlärande algoritm för att skapa väldigt beskrivande taggar som gör att du kan hitta rätt resurs med bara några klick. Smart taggning använder Adobe Sensei, artificiell intelligens och maskininlärningsmiljö, som kan utbildas för att känna igen och använda både standard- och företagsspecifika taggar på bilder. Smarta taggar kan även identifiera innehåll, enskilda ord eller fraser och automatiskt använda beskrivande taggar på resurser.
 
 Så här lägger du till taggar i en resurs:
 
 1. Logga in på [!DNL Experience Manager Assets].
-1. Klicka **[!UICONTROL Assets]** > **[!UICONTROL Files]**, markera resursen och klicka på **[!UICONTROL Properties]** för att öppna resursegenskaperna.
-1. I **[!UICONTROL Basic]** klickar du på mappikonen i **[!UICONTROL Tags]** metadata. Ett popup-fönster öppnas.
+1. Klicka på **[!UICONTROL Assets]** > **[!UICONTROL Files]**, markera resursen och klicka på **[!UICONTROL Properties]** för att öppna resursegenskaperna.
+1. Klicka på mappikonen i **[!UICONTROL Tags]**-metadata på fliken **[!UICONTROL Basic]**. Ett popup-fönster öppnas.
 1. Sök efter eller välj lämpliga taggar från de befintliga taggarna i `cq-tags`. Du kan tilldela flera taggar till resursen.
 
-   Du kan sortera taggstrukturen i stigande eller fallande ordning baserat på **[!UICONTROL Name]** (i alfabetisk ordning), **[!UICONTROL Created]** datum, eller **[!UICONTROL Modified]** datum. I följande bild sorteras taggstrukturen i bokstavsordning baserat på **[!UICONTROL Name]**.
+   Du kan sortera taggstrukturen i stigande eller fallande ordning baserat på **[!UICONTROL Name]** (i alfabetisk ordning), **[!UICONTROL Created]**-datum eller **[!UICONTROL Modified]**-datum. I följande illustration sorteras taggstrukturen i bokstavsordning baserat på **[!UICONTROL Name]**.
 
    ![add-tags](assets/add-tags-to-asset.png)
 
-1. Klicka **Spara** om du vill uppdatera ändringar i metadata för resursen.
+1. Klicka på **Spara** om du vill uppdatera ändringarna i resursens metadata.
 
 Mer information finns i följande artiklar:
 
 * [Redigera metadata för resurser](meta-edit.md)
-* [Smarta taggar i resurser](smart-tags.md)
+* [Smarta taggar i Assets](smart-tags.md)
 * [Lägga till taggar och predikat i sökpanelen](/help/assets/search-facets.md/#adding-a-tags-predicate)
 
 ## Ordna som samlingar {#organize-as-collections}
 
-Med resurssamlingar i [!DNL Experience Manager Assets]kan du effektivisera möjligheten att skapa, redigera och dela resurser mellan användare. Skapa flera typer av samlingar baserat på hur du använder dem, inklusive samlingar som innehåller en statisk referenslista över resurser, mappar och samlingar samt samlingar som hämtar resurser baserat på sökvillkor. Du kan skapa samlingar med resurser från olika platser och dela dem med flera användare med olika åtkomstnivåer, behörighet att visa och redigera.
+Med resurssamlingar i [!DNL Experience Manager Assets] kan du effektivisera möjligheten att skapa, redigera och dela resurser mellan användare. Skapa flera typer av samlingar baserat på hur du använder dem, inklusive samlingar som innehåller en statisk referenslista över resurser, mappar och samlingar samt samlingar som hämtar resurser baserat på sökvillkor. Du kan skapa samlingar med resurser från olika platser och dela dem med flera användare med olika åtkomstnivåer, behörighet att visa och redigera.
 
-Mer information finns i [hantera samlingar](manage-collections.md)
+Mer information finns i [Hantera samlingar](manage-collections.md)
 
 
 ## Använd profiler för att ordna dina resurser {#organize-to-use-profiles}
@@ -117,9 +117,9 @@ Genom att standardisera metadataanvändning, filnamngivning och mappstruktur sä
 
 **Se även**
 
-* [Översätt resurser](translate-assets.md)
-* [Resurser för HTTP API](mac-api-assets.md)
-* [Resurser som stöds i filformat](file-format-support.md)
+* [Översätt Assets](translate-assets.md)
+* [ASSETS HTTP API](mac-api-assets.md)
+* [Filformat som stöds av Assets](file-format-support.md)
 * [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
 * [Resursrapporter](asset-reports.md)
@@ -129,11 +129,11 @@ Genom att standardisera metadataanvändning, filnamngivning och mappstruktur sä
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publicera resurser till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 >[!MORELIKETHIS]
 >
->* [Använda mikrotjänster och bearbetningsprofiler](asset-microservices-configure-and-use.md)
+>* [Använd resursmikrotjänster och bearbetningsprofiler](asset-microservices-configure-and-use.md)
 >* [Metadataprofiler](metadata-profiles.md)
 >* [Videoprofiler](/help/assets/dynamic-media/video-profiles.md)
 >* [Dynamic Media bildprofiler](/help/assets/dynamic-media/image-profiles.md)

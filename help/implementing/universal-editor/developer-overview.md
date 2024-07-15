@@ -26,7 +26,7 @@ Den gör detta genom att ta ett standardexempel som de flesta AEM utvecklare kä
 >
 >Det här dokumentet innehåller extra steg som illustrerar hur den universella redigeraren fungerar och är avsett att fördjupa utvecklarens förståelse för redigeraren. Det är därför inte den mest direkta vägen till att instrumentera ett program, utan det mest illustrativa i den universella redigeraren och hur det fungerar.
 >
->Om du vill komma igång så snabbt som möjligt kan du läsa [Komma igång med Universal Editor i AEM](/help/implementing/universal-editor/getting-started.md) -dokument.
+>Om du vill komma igång så snabbt som möjligt kan du läsa dokumentet [Komma igång med den universella redigeraren i AEM](/help/implementing/universal-editor/getting-started.md).
 
 ## Förutsättningar {#prerequisites}
 
@@ -36,14 +36,14 @@ Du behöver följande för att kunna följa med i den här översikten.
    * Din lokala utvecklingsinstans måste vara [konfigurerad med HTTPS för utvecklingssyfte på `localhost`.](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html)
    * [WKND-demowebbplatsen måste vara installerad.](https://github.com/adobe/aem-guides-wknd)
 * [Åtkomst till den universella redigeraren](/help/implementing/universal-editor/getting-started.md#onboarding)
-* [En lokal universell redigeringstjänst](/help/implementing/universal-editor/local-dev.md) som körs för utvecklingsändamål
+* [En lokal Universal Editor-tjänst](/help/implementing/universal-editor/local-dev.md) som körs i utvecklingssyfte
    * Se till att du dirigerar webbläsaren till [acceptera det självsignerade certifikatet för lokala tjänster.](/help/implementing/universal-editor/local-dev.md#editing)
 
-Förutom att man är allmänt bekant med webbutveckling utgår man i det här dokumentet från att man är van vid AEM. Om du inte är van vid AEM kan du överväga att [WKND-självstudiekursen innan du fortsätter.](/help/implementing/developing/introduction/develop-wknd-tutorial.md)
+Förutom att man är allmänt bekant med webbutveckling utgår man i det här dokumentet från att man är van vid AEM. Om du inte är van vid AEM kan du överväga att granska [WKND-självstudiekursen innan du fortsätter.](/help/implementing/developing/introduction/develop-wknd-tutorial.md)
 
 ## Starta AEM och logga in i den universella redigeraren {#sign-in}
 
-Om du inte redan har det måste du ha den lokala AEM utvecklingsinstansen igång med WKND installerat och HTTPS aktiverat som [som beskrivs i kravbreven.](#prerequisites) I den här översikten antas att din instans körs på `https://localhost:8443`.
+Om du inte redan har det måste du ha den lokala AEM utvecklingsinstansen installerad med WKND och HTTPS aktiverad som [enligt villkoren.](#prerequisites) Den här översikten förutsätter att din instans körs vid `https://localhost:8443`.
 
 1. Öppna mallsidan för WKND English i AEM Editor.
 
@@ -51,7 +51,7 @@ Om du inte redan har det måste du ha den lokala AEM utvecklingsinstansen igång
    https://localhost:8443/editor.html/content/wknd/language-masters/en.html
    ```
 
-1. I **Sidinformation** menyn i redigeraren väljer **Visa som publicerad**. Då öppnas samma sida på en ny flik med AEM Editor inaktiverat.
+1. Välj **Visa som publicerad** på menyn **Sidinformation** i redigeraren. Då öppnas samma sida på en ny flik med AEM Editor inaktiverat.
 
    ```text
    https://localhost:8443/content/wknd/language-masters/en.html?wcmmode=disabled
@@ -65,17 +65,17 @@ Om du inte redan har det måste du ha den lokala AEM utvecklingsinstansen igång
    https://experience.adobe.com/#/aem/editor
    ```
 
-1. Klistra in länken som du kopierade tidigare av WKND-innehållet i **Webbplats-URL** och klickar på **Öppna**.
+1. Klistra in länken som du kopierade tidigare av WKND-innehållet i fältet **Webbplats-URL** i den universella redigeraren och klicka på **Öppna**.
 
-   ![Öppna WKND-sidan i Universal Editor](assets/dev-ue-open.png)
+   ![Öppna WKND-sidan i den universella redigeraren](assets/dev-ue-open.png)
 
 ## Universal Editor försöker läsa in innehållet {#sameorigin}
 
-Universal Editor läser in innehåll som ska redigeras i en ram. AEM standardinställningar för X-Frame-alternativ förhindrar detta, vilket tydligt kan ses som ett fel i webbläsaren och detaljeras i konsolutdata när du försöker läsa in din lokala kopia av WKND.
+Universal Editor läser in innehåll som ska redigeras i en ram. Om du AEM standardinställningarna för X-Frame-alternativ förhindrar du detta, vilket tydligt kan ses som ett fel i webbläsaren och visas i konsolutdata när du försöker läsa in din lokala kopia av WKND.
 
-![Webbläsarfel på grund av alternativet SAMEORIGIN](assets/dev-sameorigin.png)
+![Webbläsarfel på grund av SAMEORIGIN-alternativet](assets/dev-sameorigin.png)
 
-Alternativet X-bildruta `sameorigin` förhindrar återgivning AEM sidor i en ram. Du måste ta bort det här sidhuvudet för att sidorna ska kunna läsas in i Universal Editor.
+Alternativet X-Frame `sameorigin` förhindrar återgivning AEM sidor i en ram. Du måste ta bort det här sidhuvudet för att sidorna ska kunna läsas in i Universal Editor.
 
 1. Öppna Configuration Manager.
 
@@ -87,7 +87,7 @@ Alternativet X-bildruta `sameorigin` förhindrar återgivning AEM sidor i en ram
 
    ![OSGi-egenskap för SAMEORIGIN](assets/dev-sameorigin-osgi.png)
 
-1. Ta bort egenskapen `X-Frame-Options=SAMEORIGIN` för egenskapen **Ytterligare svarsrubriker**.
+1. Ta bort egenskapen `X-Frame-Options=SAMEORIGIN` för egenskapen **Ytterligare svarshuvuden**.
 
 1. Spara ändringarna.
 
@@ -95,8 +95,8 @@ Om du nu läser in den universella redigeraren igen ser du att AEM sida läses i
 
 >[!TIP]
 >
->* Se dokumentet [Komma igång med Universal Editor i AEM](/help/implementing/universal-editor/getting-started.md#sameorigin) för mer information om OSGi-konfigurationen.
->* Se dokumentet [Konfigurera OSGi för Adobe Experience Manager as a Cloud Service](/help/implementing/deploying/configuring-osgi.md) för mer information om OSGi i AEM.
+>* Mer information om OSGi-konfigurationen finns i dokumentet [Komma igång med den universella redigeraren i AEM](/help/implementing/universal-editor/getting-started.md#sameorigin).
+>* Läs dokumentet [Konfigurera OSGi för Adobe Experience Manager as a Cloud Service](/help/implementing/deploying/configuring-osgi.md) för mer information om OSGi i AEM.
 
 ## Hantera samma webbplatskookies {#samesite-cookies}
 
@@ -104,7 +104,7 @@ När Universal Editor läser in sidan, läses den in till AEM inloggningssida f�
 
 Du kan dock inte logga in. När du visar webbläsarkonsolen ser du att webbläsaren har blockerat indata i bildrutan
 
-![Indata blockerade](assets/dev-cross-origin.png)
+![Indata blockerad](assets/dev-cross-origin.png)
 
 Inloggningstokens cookie skickas till AEM som en tredjepartsdomän. Därför måste cookies på samma plats tillåtas i AEM.
 
@@ -116,9 +116,9 @@ Inloggningstokens cookie skickas till AEM som en tredjepartsdomän. Därför må
 
 1. Redigera OSGi-konfigurationen `com.day.crx.security.token.impl.impl.TokenAuthenticationHandler`
 
-   ![OSGi-egenskap för cookies på samma plats](assets/dev-cross-origin-osgi.png)
+   ![OSGi-egenskap för cookies för samma webbplats](assets/dev-cross-origin-osgi.png)
 
-1. Ändra egenskapen **Attributet SameSite för cookie-filen för inloggningstoken** till `None`.
+1. Ändra egenskapen **SameSite-attributet för cookien** för inloggningstoken till `None`.
 
 1. Spara ändringarna.
 
@@ -126,12 +126,12 @@ Om du nu läser in den universella redigeraren igen kan du logga in på AEM och 
 
 >[!TIP]
 >
->* Se dokumentet [Komma igång med Universal Editor i AEM](/help/implementing/universal-editor/getting-started.md#samesite-cookies) för mer information om OSGi-konfigurationen.
->* Se dokumentet [Konfigurera OSGi för Adobe Experience Manager as a Cloud Service](/help/implementing/deploying/configuring-osgi.md) för mer information om OSGi i AEM.
+>* Mer information om OSGi-konfigurationen finns i dokumentet [Komma igång med den universella redigeraren i AEM](/help/implementing/universal-editor/getting-started.md#samesite-cookies).
+>* Läs dokumentet [Konfigurera OSGi för Adobe Experience Manager as a Cloud Service](/help/implementing/deploying/configuring-osgi.md) för mer information om OSGi i AEM.
 
 ## Universell redigerare Ansluter till fjärrramen {#ue-connect-remote-frame}
 
-När sidan har lästs in i Universal Editor och du har loggat in på AEM försöker Universal Editor ansluta till fjärrbildrutan. Detta görs via ett JavaScript-bibliotek som måste läsas in i fjärrbildrutan. Om JavaScript-biblioteket inte finns skapar sidan slutligen ett timeout-fel i konsolen.
+När sidan har lästs in i Universal Editor och du har loggat in på AEM försöker Universal Editor ansluta till fjärrbildrutan. Detta görs via ett JavaScript-bibliotek som måste läsas in i fjärrbildrutan. Om JavaScript-biblioteket inte finns skapas ett timeout-fel i konsolen.
 
 ![Timeout-fel](assets/dev-timeout.png)
 
@@ -143,7 +143,7 @@ Du måste lägga till det nödvändiga JavaScript-biblioteket till sidkomponente
    https://localhost:8443/crx/de
    ```
 
-1. Under `/apps/wknd/components/page`, redigera filen `customheaderlibs.html`.
+1. Redigera filen `customheaderlibs.html` under `/apps/wknd/components/page`.
 
    ![Redigera filen customheaderlibs.html](assets/dev-customheaderlibs.png)
 
@@ -153,20 +153,20 @@ Du måste lägga till det nödvändiga JavaScript-biblioteket till sidkomponente
    <script src="https://universal-editor-service.experiencecloud.live/corslib/LATEST"></script>
    ```
 
-1. Klicka **Spara alla** och sedan läsa in Universal Editor igen.
+1. Klicka på **Spara alla** och läs sedan in den universella redigeraren igen.
 
 Sidan läses nu in med rätt JavaScript-bibliotek så att den universella redigeraren kan ansluta till sidan och timeoutfelet visas inte längre i konsolen.
 
 >[!TIP]
 >
 >* Biblioteket kan läsas in antingen i sidhuvudet eller i sidfoten.
->* The `universal-editor-embedded.js` bibliotek [är tillgängligt på NPM](https://www.npmjs.com/package/@adobe/universal-editor-cors) och du kan lägga det själv om det behövs eller placera det direkt i programmet.
+>* `universal-editor-embedded.js`-biblioteket [ är tillgängligt på NPM](https://www.npmjs.com/package/@adobe/universal-editor-cors) och du kan vara värd för det själv om det behövs eller placera det direkt i programmet.
 
 ## Definiera en anslutning för att behålla ändringar {#connection}
 
-WKND-sidan läses nu in korrekt i Universell redigerare och JavaScript-biblioteket läses in för att ansluta redigeraren till din app.
+WKND-sidan läses nu in korrekt i Universal Editor och JavaScript-biblioteket läses in för att ansluta redigeraren till din app.
 
-Du har dock troligen lagt märke till att du inte kan interagera med sidan i Universalläsaren. Universal Editor kan inte redigera sidan. För att den universella redigeraren ska kunna redigera innehållet måste du definiera en anslutning så att den vet var innehållet ska skrivas. För lokal utveckling måste du skriva tillbaka till den lokala AEM-utvecklingsinstansen på `https://localhost:8443`.
+Du har dock troligen lagt märke till att du inte kan interagera med sidan i Universalläsaren. Universal Editor kan inte redigera sidan. För att den universella redigeraren ska kunna redigera innehållet måste du definiera en anslutning så att den vet var innehållet ska skrivas. För lokal utveckling måste du skriva tillbaka till din lokala AEM på `https://localhost:8443`.
 
 1. Öppna CRXDE Lite.
 
@@ -174,7 +174,7 @@ Du har dock troligen lagt märke till att du inte kan interagera med sidan i Uni
    https://localhost:8443/crx/de
    ```
 
-1. Under `/apps/wknd/components/page`, redigera filen `customheaderlibs.html`.
+1. Redigera filen `customheaderlibs.html` under `/apps/wknd/components/page`.
 
    ![Redigera filen customheaderlibs.html](assets/dev-instrument-app.png)
 
@@ -184,7 +184,7 @@ Du har dock troligen lagt märke till att du inte kan interagera med sidan i Uni
    <meta name="urn:adobe:aue:system:aem" content="aem:https://localhost:8443">
    ```
 
-   * Den senaste versionen av biblioteket rekommenderas alltid. Om du behöver en tidigare version, se dokumentet [Getting Started with the Universal Editor in AEM.](/help/implementing/universal-editor/getting-started.md#alternative)
+   * Den senaste versionen av biblioteket rekommenderas alltid. Om du behöver en tidigare version läser du dokumentet [Komma igång med den universella redigeraren i AEM.](/help/implementing/universal-editor/getting-started.md#alternative)
 
 1. Lägg till de metadata som behövs för anslutningen till den lokala Universal Editor-tjänsten i slutet av filen.
 
@@ -192,21 +192,21 @@ Du har dock troligen lagt märke till att du inte kan interagera med sidan i Uni
    <meta name="urn:adobe:aue:config:service" content="https://localhost:8000">
    ```
 
-1. Klicka **Spara alla** och sedan läsa in Universal Editor igen.
+1. Klicka på **Spara alla** och läs sedan in den universella redigeraren igen.
 
 Nu kan den universella redigeraren inte bara läsa in ditt innehåll från den lokala AEM utvecklingsinstansen, utan även veta var de ändringar du gör med den lokala universella redigeringstjänsten ska sparas. Det här är det första steget när du ska göra ditt program redigerbart med den universella redigeraren.
 
 >[!TIP]
 >
->* Se dokumentet [Komma igång med Universal Editor i AEM](/help/implementing/universal-editor/getting-started.md#connection) om du vill ha mer information om anslutningsmetadata.
->* Se dokumentet [Universal Editor Architecture](/help/implementing/universal-editor/architecture.md#service) om du vill ha mer information om strukturen för Universal Editor.
->* Se dokumentet [Local AEM Development with the Universal Editor](/help/implementing/universal-editor/local-dev.md) om du vill ha mer information om hur du ansluter till en självständig version av Universal Editor.
+>* Mer information om anslutningsmetadata finns i dokumentet [Getting Started with the Universal Editor i AEM](/help/implementing/universal-editor/getting-started.md#connection).
+>* Mer information om strukturen för den universella redigeraren finns i dokumentet [Universal Editor Architecture](/help/implementing/universal-editor/architecture.md#service).
+>* Se dokumentet [Local AEM Development with the Universal Editor](/help/implementing/universal-editor/local-dev.md) för mer information om hur du ansluter till en självvärdbaserad version av Universal Editor.
 
 ## Instrumenting Components {#instrumenting-components}
 
 Men du märker antagligen att du fortfarande inte kan göra så mycket med den universella redigeraren. Om du försöker klicka på lagret högst upp på WKND-sidan i Universalläsaren kan du inte markera det (eller något annat på sidan).
 
-Komponenterna måste också vara instrumenterade för att kunna redigeras med den universella redigeraren. Om du vill göra det måste du redigera teaserkomponenten. Därför måste du täcka över kärnkomponenterna eftersom kärnkomponenterna är under `/libs`, som är oföränderlig.
+Komponenterna måste också vara instrumenterade för att kunna redigeras med den universella redigeraren. Om du vill göra det måste du redigera teaserkomponenten. Därför måste du täcka över kärnkomponenterna eftersom kärnkomponenterna är under `/libs`, som inte kan ändras.
 
 1. Öppna CRXDE Lite.
 
@@ -214,21 +214,21 @@ Komponenterna måste också vara instrumenterade för att kunna redigeras med de
    https://localhost:8443/crx/de
    ```
 
-1. Markera noden `/libs/core/wcm/components` och klicka **Överläggsnod** i verktygsfältet.
+1. Markera noden `/libs/core/wcm/components` och klicka på **Överläggsnod** i verktygsfältet.
 
-1. Med `/apps/` markerat som **Överläggsplats**, klicka **OK**.
+1. Med `/apps/` markerat som **plats för övertäckning** klickar du på **OK**.
 
-   ![Täck över teaser](assets/dev-overlay-teaser.png)
+   ![Täck över lagret](assets/dev-overlay-teaser.png)
 
-1. Välj `teaser` nod under `/libs/core/wcm/components` och klicka **Kopiera** i verktygsfältet.
+1. Markera noden `teaser` under `/libs/core/wcm/components` och klicka på **Kopiera** i verktygsfältet.
 
-1. Markera den överlappande noden vid `/apps/core/wcm/components` och klicka **Klistra in** i verktygsfältet.
+1. Markera den överlappande noden på `/apps/core/wcm/components` och klicka på **Klistra in** i verktygsfältet.
 
 1. Dubbelklicka på filen `/apps/core/wcm/components/teaser/v2/teaser/teaser.html` för att redigera den.
 
    ![Redigera filen teaser.html](assets/dev-edit-teaser.png)
 
-1. I slutet av den första `div` på ungefär rad 26 lägger du till instrumenteringsinformation för komponenten.
+1. Lägg till instrumenteringsinformation för komponenten i slutet av den första `div` på ungefär rad 26.
 
    ```text
    data-aue-resource="urn:aem:${resource.path}"
@@ -236,17 +236,17 @@ Komponenterna måste också vara instrumenterade för att kunna redigeras med de
    data-aue-label="Teaser"
    ```
 
-1. Klicka **Spara alla** i verktygsfältet och läsa in den universella redigeraren igen.
+1. Klicka på **Spara alla** i verktygsfältet och läs in den universella redigeraren igen.
 
 1. Klicka på teaserkomponenten överst på sidan i Universalläsaren och se att du nu kan markera den.
 
-1. Klicka på **Innehållsträd** -ikonen i egenskapsfältet i Universal Editor ser du att redigeraren känner igen alla tassers på sidan nu när du har instrumenterat den. Det lager du valde är det som är markerat.
+1. Om du klickar på ikonen **Innehållsträd** i egenskapsfältet i Universal Editor kan du se att redigeraren känner igen alla scener på sidan nu när du har instrumenterat den. Det lager du valde är det som är markerat.
 
-   ![Välja den instrumenterade teaserkomponenten](assets/dev-select-teaser.png)
+   ![Markera den instrumenterade teaserkomponenten](assets/dev-select-teaser.png)
 
 >[!TIP]
 >
->Se dokumentet [Använda Sling Resource Merger i Adobe Experience Manager as a Cloud Service](/help/implementing/developing/introduction/sling-resource-merger.md) om du vill ha mer information om hur du täcker över noder.
+>Mer information om att täcka över noder finns i dokumentet [Använda sammanslagningen av delningsresurser i Adobe Experience Manager as a Cloud Service](/help/implementing/developing/introduction/sling-resource-merger.md).
 
 ## Teaser-underkomponenterna för instrument {#subcomponents}
 
@@ -258,11 +258,11 @@ Nu kan du markera suddgummit, men fortfarande inte redigera det. Detta beror på
    https://localhost:8443/crx/de
    ```
 
-1. Markera noden `/apps/core/wcm/components/teaser/v2/teaser/` och dubbelklicka på `title.html` -fil.
+1. Markera noden `/apps/core/wcm/components/teaser/v2/teaser/` och dubbelklicka på filen `title.html`.
 
    ![Redigera filen title.html](assets/dev-edit-title.png)
 
-1. Infoga följande egenskaper i slutet av `h2` -tagg (nära rad 17).
+1. Infoga följande egenskaper i slutet av taggen `h2` (nära rad 17).
 
    ```text
    data-aue-prop="jcr:title"
@@ -270,11 +270,11 @@ Nu kan du markera suddgummit, men fortfarande inte redigera det. Detta beror på
    data-aue-label="Title"
    ```
 
-1. Klicka **Spara alla** i verktygsfältet och läsa in den universella redigeraren igen.
+1. Klicka på **Spara alla** i verktygsfältet och läs in den universella redigeraren igen.
 
 1. Klicka på titeln för samma teaser-komponent överst på sidan och se att du nu kan markera den. Innehållsträdet visar också titeln som en del av den valda teaserkomponenten.
 
-   ![Välj titel i teaser](assets/dev-select-title.png)
+   ![Välj en titel i lagret](assets/dev-select-title.png)
 
 Nu kan du redigera teaserkomponentens titel!
 
@@ -291,7 +291,7 @@ Du har identifierat teaser-komponenten för Universal Editor genom att instrumen
 Du har även instrumenterat titelkomponenten i teaserkomponenten.
 
 * `data-aue-prop` är JCR-attributet som är skrivet.
-* `data-aue-type` är hur attributet ska redigeras. I det här fallet med textredigeraren eftersom det är en titel (till skillnad från RTF-redigeraren).
+* `data-aue-type` är så attributet ska redigeras. I det här fallet med textredigeraren eftersom det är en titel (till skillnad från RTF-redigeraren).
 
 ## Definiera autentiseringsrubriker {#auth-header}
 
@@ -301,7 +301,7 @@ Nu kan du redigera titeln på teaser in-line och ändringarna sparas i webbläsa
 
 Om du läser in webbläsaren igen läses den tidigare titeln in igen. Detta beror på att även om den universella redigeraren kan ansluta till din AEM kan redigeraren ännu inte autentisera till din AEM för att skriva tillbaka ändringar i JCR.
 
-Om du visar nätverksfliken för webbläsarutvecklarverktygen och söker efter `update`ser du att 401-fel uppstår när du försöker redigera titeln.
+Om du visar nätverksfliken för webbläsarutvecklarverktygen och söker efter `update`, kan du se att det uppstår ett 401-fel när du försöker redigera titeln.
 
 ![Fel vid försök att redigera titeln](assets/dev-edit-error.png)
 
@@ -309,7 +309,7 @@ När du använder Universal Editor för att redigera AEM produktionsinnehåll an
 
 När du utvecklar lokalt kan du inte använda AEM identitetsleverantör eftersom IMS-tokens bara skickas till domäner som ägs av Adobe. Du måste manuellt ange ett sätt att autentisera genom att explicit ange en autentiseringshuvud.
 
-1. Klicka på knappen **Autentiseringsrubriker** i verktygsfältet.
+1. Klicka på ikonen **Autentiseringshuvuden** i verktygsfältet i det universella redigeringsgränssnittet.
 
 1. Kopiera den autentiseringsrubrik som krävs för att autentisera den lokala AEM och klicka på **Spara**.
 
@@ -319,7 +319,7 @@ När du utvecklar lokalt kan du inte använda AEM identitetsleverantör eftersom
 
 Det finns inte längre några fel rapporterade i webbläsarkonsolen och ändringarna sparas sedan i den lokala AEM.
 
-Om du undersöker trafiken i webbläsarens utvecklingsverktyg och letar efter `update` -händelser kan du se uppdateringens detaljer.
+Om du undersöker trafiken i webbläsarens utvecklingsverktyg och letar efter händelserna `update` kan du se uppdateringens detaljer.
 
 ![Teaser title har redigerats](assets/dev-edit-title-successfully.png)
 
@@ -342,7 +342,7 @@ Om du undersöker trafiken i webbläsarens utvecklingsverktyg och letar efter `u
 ```
 
 * `connections` är anslutningen till din lokala AEM
-* `target` är den exakta noden och egenskaperna som uppdateras i JCR-uttrycket
+* `target` är den exakta noden och de egenskaper som uppdateras i JCR
 * `value` är den uppdatering du har gjort.
 
 Du kan se ändringen som finns kvar i JCR.
@@ -353,7 +353,7 @@ Du kan se ändringen som finns kvar i JCR.
 >
 >Det finns många verktyg tillgängliga online för att generera nödvändiga autentiseringshuvuden för dina test- och utvecklingssyften.
 >
->Exempel på huvud för grundläggande autentisering `Basic YWRtaW46YWRtaW4=` är för användar-/lösenordskombinationen av `admin:admin` som är vanligt för lokal AEM.
+>Det grundläggande exemplet `Basic YWRtaW46YWRtaW4=` för autentiseringshuvudet är för kombinationen av användare/lösenord för `admin:admin`, vilket är vanligt vid lokal AEM.
 
 ## Instrumentera appen för Properties Rail {#properties-rail}
 
@@ -369,7 +369,7 @@ Om du vill uppdatera appen så att den använder egenskapsfältet för redigerin
    https://localhost:8443/crx/de
    ```
 
-1. Under `/apps/wknd/components/page`, redigera filen `customheaderlibs.html`.
+1. Redigera filen `customheaderlibs.html` under `/apps/wknd/components/page`.
 
    ![Redigera filen customheaderlibs.html](assets/dev-instrument-properties-rail.png)
 
@@ -458,19 +458,19 @@ Om du vill uppdatera appen så att den använder egenskapsfältet för redigerin
    </script>
    ```
 
-1. Klicka **Spara alla** i verktygsfältet.
+1. Klicka på **Spara alla** i verktygsfältet.
 
 ## Vad betyder allt det? {#what-does-it-mean-2}
 
-För att kunna redigeras med egenskapsfältet måste komponenterna tilldelas till `groups`så att varje definition börjar som en lista med grupper som innehåller komponenterna.
+För att kunna redigeras med egenskapsfältet måste komponenterna tilldelas till `groups`, så varje definition börjar som en lista med grupper som innehåller komponenterna.
 
 * `title` är namnet på gruppen.
 * `id` är gruppens unika identifierare, i det här fallet allmänna komponenter som utgör sidinnehållet i motsats till avancerade komponenter för sidlayout, till exempel.
 
-Varje grupp har sedan en array med `components`.
+Varje grupp har sedan en matris på `components`.
 
 * `title` är namnet på komponenten.
-* `id` är komponentens unika identifierare, i det här fallet en teaser.
+* `id` är den unika identifieraren för komponenten, i det här fallet en teaser.
 
 Varje komponent har sedan en plugin-definition som definierar hur komponenten mappas till AEM.
 
@@ -478,7 +478,7 @@ Varje komponent har sedan en plugin-definition som definierar hur komponenten ma
 * `page` definierar vilken typ av komponent det är, i det här fallet en standardsidkomponent.
 * `resourceType` är mappningen till den faktiska AEM.
 
-Varje komponent måste sedan mappas till en `model` för att definiera enskilda redigerbara fält.
+Varje komponent måste sedan mappas till en `model` för att definiera de enskilda redigerbara fälten.
 
 * `id` är modellens unika identifierare, som måste matcha komponentens ID.
 * `fields` är en array med de enskilda fälten.
@@ -501,13 +501,13 @@ Du måste också definiera på komponentnivå vilken modell komponenten ska anv�
 
    ![Redigera filen teaser.html](assets/dev-edit-teaser.png)
 
-1. I slutet av den första `div` på ungefär rad 32, efter de egenskaper du lade till tidigare, lägger du till instrumenteringsinformation för modellen som den teaser-komponenten ska använda.
+1. I slutet av den första `div` på ungefär rad 32, efter de egenskaper du lade till tidigare, lägger du till instrumenteringsinformation för modellen som den teaserkomponenten ska använda.
 
    ```text
    data-aue-model="teaser"
    ```
 
-1. Klicka **Spara alla** i verktygsfältet och läsa in den universella redigeraren igen.
+1. Klicka på **Spara alla** i verktygsfältet och läs in den universella redigeraren igen.
 
 Nu är du redo att testa egenskaperna för den räl som är instrumenterad för komponenten.
 
@@ -531,11 +531,11 @@ Du kan till exempel lägga till ett fält för att justera komponentens format.
    https://localhost:8443/crx/de
    ```
 
-1. Under `/apps/wknd/components/page`, redigera filen `customheaderlibs.html`.
+1. Redigera filen `customheaderlibs.html` under `/apps/wknd/components/page`.
 
    ![Redigera filen customheaderlibs.html](assets/dev-instrument-styles.png)
 
-1. Lägg till ytterligare ett objekt i modelldefinitionsskriptet `fields` -matris för formatfältet. Kom ihåg att lägga till ett kommatecken efter det sista fältet innan du infogar det nya.
+1. Lägg till ytterligare ett objekt i `fields`-arrayen för formatfältet i modelldefinitionsskriptet. Kom ihåg att lägga till ett kommatecken efter det sista fältet innan du infogar det nya.
 
    ```json
    {
@@ -551,13 +551,13 @@ Du kan till exempel lägga till ett fält för att justera komponentens format.
    }
    ```
 
-1. Klicka **Spara alla** i verktygsfältet och läsa in den universella redigeraren igen.
+1. Klicka på **Spara alla** i verktygsfältet och läs in den universella redigeraren igen.
 
 1. Klicka en gång till på teaserns titel för att redigera den.
 
 1. Klicka på egenskapsfältet och se att det finns ett nytt fält för att justera komponentens format.
 
-   ![Den instrumenterade egenskapslinjen med formatfältet](assets/dev-style-instrumented.png)
+   ![De instrumenterade egenskaperna flödar med formatfältet](assets/dev-style-instrumented.png)
 
 Alla fält i JCR för komponenten kan visas på det här sättet i Universal Editor.
 
@@ -570,7 +570,7 @@ När du börjar instrumentera ditt eget program bör du tänka på de grundlägg
 1. [Du konfigurerar utvecklingsmiljön.](#prerequisites)
    * AEM körs lokalt på HTTPS med WKND installerat
    * Universell redigeringstjänst som körs lokalt på HTTPS
-1. Du har uppdaterat inställningarna AEM OSGi så att innehållet kan läsas in på fjärrbasis.
+1. Du har AEM OSGi-inställningarna så att innehållet kan läsas in på fjärrbasis.
    * [`org.apache.sling.engine.impl.SlingMainServlet`](#sameorigin)
    * [`com.day.crx.security.token.impl.impl.TokenAuthenticationHandler`](#samesite-cookies)
 1. [Du har lagt till ](#ue-connect-remote-frame)
@@ -589,10 +589,10 @@ Du kan följa dessa steg för att mäta hur din egen app kan användas med den u
 
 Titta på följande dokument för mer information om funktionerna i den universella redigeraren.
 
-* Om du vill komma igång så snabbt som möjligt kan du läsa [Komma igång med Universal Editor i AEM](/help/implementing/universal-editor/getting-started.md) -dokument.
-* Se dokumentet [Komma igång med Universal Editor i AEM](/help/implementing/universal-editor/getting-started.md#sameorigin) för mer information om nödvändiga OSGi-konfigurationer.
-* Se dokumentet [Komma igång med Universal Editor i AEM](/help/implementing/universal-editor/getting-started.md#connection) om du vill ha mer information om anslutningsmetadata.
-* Se dokumentet [Universal Editor Architecture](/help/implementing/universal-editor/architecture.md#service) om du vill ha mer information om strukturen för Universal Editor.
-* Se dokumentet [Local AEM Development with the Universal Editor](/help/implementing/universal-editor/local-dev.md) om du vill ha mer information om hur du ansluter till en självständig version av Universal Editor.
-* Se dokumentet [Använda Sling Resource Merger i Adobe Experience Manager as a Cloud Service](/help/implementing/developing/introduction/sling-resource-merger.md) om du vill ha mer information om hur du täcker över noder.
+* Om du vill komma igång så snabbt som möjligt kan du läsa dokumentet [Komma igång med den universella redigeraren i AEM](/help/implementing/universal-editor/getting-started.md).
+* Mer information om nödvändiga OSGi-konfigurationer finns i dokumentet [Komma igång med den universella redigeraren i AEM](/help/implementing/universal-editor/getting-started.md#sameorigin).
+* Mer information om anslutningsmetadata finns i dokumentet [Getting Started with the Universal Editor i AEM](/help/implementing/universal-editor/getting-started.md#connection).
+* Mer information om strukturen för den universella redigeraren finns i dokumentet [Universal Editor Architecture](/help/implementing/universal-editor/architecture.md#service).
+* Se dokumentet [Local AEM Development with the Universal Editor](/help/implementing/universal-editor/local-dev.md) för mer information om hur du ansluter till en självvärdbaserad version av Universal Editor.
+* Mer information om att täcka över noder finns i dokumentet [Använda sammanslagningen av delningsresurser i Adobe Experience Manager as a Cloud Service](/help/implementing/developing/introduction/sling-resource-merger.md).
 

@@ -1,5 +1,5 @@
 ---
-title: Identifiera duplicerade resurser för [!DNL Adobe Experience Manager] som [!DNL Cloud Service]
+title: Identifiera duplicerade resurser för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud Service]
 description: Lär dig hur du identifierar dubblettresurser
 contentOwner: KK
 mini-toc-levels: 3
@@ -21,7 +21,7 @@ ht-degree: 3%
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/duplicate-detection.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
-Om en DAM-användare överför en eller flera resurser som redan finns i databasen, [!DNL Experience Manager] identifierar dupliceringen och meddelar användaren. Dubblettidentifiering är inaktiverat som standard eftersom det kan påverka prestanda beroende på databasens storlek och antalet överförda resurser.
+Om en DAM-användare överför en eller flera resurser som redan finns i databasen, upptäcker [!DNL Experience Manager] dupliceringen och meddelar användaren. Dubblettidentifiering är inaktiverat som standard eftersom det kan påverka prestanda beroende på databasens storlek och antalet överförda resurser.
 
 Så här aktiverar du funktionen:
 
@@ -29,9 +29,9 @@ Så här aktiverar du funktionen:
 
 1. Klicka på **[!UICONTROL Asset Duplication Detector]**.
 
-1. På [!UICONTROL Asset Duplication Detector page], klicka **[!UICONTROL Enabled]**.
+1. Klicka på **[!UICONTROL Enabled]** på [!UICONTROL Asset Duplication Detector page].
 
-   `dam:sha1` värdet för fältet Identifiera metadata ser till att duplicerade resurser identifieras även om filnamnen är olika.
+   Värdet `dam:sha1` för fältet Identifiera metadata ser till att dubblettresurser identifieras även om filnamnen är olika.
 
 1. Klicka på **[!UICONTROL Save]**.
 
@@ -39,7 +39,7 @@ Så här aktiverar du funktionen:
 
 >[!NOTE]
 >
->Om du har konfigurerat dupliceringsavkännaren med `/apps/example/config.author/com.adobe.cq.assetcompute.impl.assetprocessor.AssetDuplicationDetector.cfg.json` konfigurationsfilen (OSGi-konfiguration) kan du fortsätta att använda den, men Adobe rekommenderar att du använder den nya metoden.
+>Om du har konfigurerat Duplication Detector med konfigurationsfilen `/apps/example/config.author/com.adobe.cq.assetcompute.impl.assetprocessor.AssetDuplicationDetector.cfg.json` (OSGi-konfiguration) kan du fortsätta att använda den, men Adobe rekommenderar att du använder den nya metoden.
 
 
 När den är aktiverad skickar Experience Manager meddelanden om duplicerade resurser till Inkorgen Experience Manager. Det är ett aggregerat resultat för flera dubbletter. Användarna kan välja att ta bort resurserna baserat på resultatet.

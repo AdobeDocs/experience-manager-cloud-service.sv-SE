@@ -1,5 +1,5 @@
 ---
-title: Skapa ett appverktyg
+title: Skapa ett App Builder-program
 description: Lär dig skapa och starta ett nytt App Builder-program.
 version: Cloud Service
 feature: App Builder, Developing
@@ -16,11 +16,11 @@ ht-degree: 0%
 
 ---
 
-# Skapa ett appverktyg
+# Skapa ett App Builder-program
 
 ## Konfigurera ditt första projekt
 
-Lär dig grunderna i att skapa ditt första App Builder-projekt.
+Lär dig grunderna i hur du skapar ditt första App Builder-projekt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/339168/?quality=12&learn=on)
 
@@ -32,12 +32,12 @@ Lär dig hur du konfigurerar din lokala miljö för App Builder-utveckling.
 
 ## Initiera ditt första projekt
 
-Lär dig hur du initierar ett App Builder-projekt.
+Lär dig initiera ett App Builder-projekt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/339170/?quality=12&learn=on)
 
 ## Bygg, kör och testa programmet
 
-Lär dig hur du skapar, kör och testar appen App Builder.
+Lär dig hur du skapar, kör och testar App Builder-program.
 
 >[!VIDEO](https://video.tv.adobe.com/v/339171/?quality=12&learn=on)

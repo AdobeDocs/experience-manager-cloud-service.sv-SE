@@ -16,7 +16,7 @@ ht-degree: 1%
 Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2021.12.0.
 
 >[!NOTE]
->Om du vill visa den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service klickar du på [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
+>Klicka [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html) om du vill se den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service.
 
 ## Best Practices Analyzer {#bpa-release}
 
@@ -33,7 +33,7 @@ Releasedatum för Best Practices Analyzer v2.1.22 är 1 december 2021.
 ### Felkorrigeringar {#bug-fixes-bpa}
 
 * Identifieringen av Foundation-komponenter förfinades för att minska falska negativ.
-* För AEM Forms-kunder gäller BPA-meddelanden `EMAIL_PDF_SUBMIT_ACTION` som inte är tillgänglig på AEM as a Cloud Service har åtgärdats.
+* För AEM Forms-kunder har BPA-meddelanden om att `EMAIL_PDF_SUBMIT_ACTION` inte är tillgänglig på AEM as a Cloud Service korrigerats.
 
 
 ## Verktyget Innehållsöverföring {#ctt-release}
@@ -44,5 +44,5 @@ Releasedatum för innehållsöverföringsverktyget v1.7.10 är 8 december 2021.
 
 ### Nyheter {#what-is-new-ctt}
 
-* Växla som lagts till i inmatningsfasen i verktyget Innehållsöverföring så att användarna kan inaktivera [pre-copy](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html) under intag. För optimal överföringshastighet bör pre-copy under intag inaktiveras för små migreringsuppsättningar eller om endast ett fåtal bloggar har lagts till sedan det senaste intaget.
+* Växla som lagts till i inmatningsfasen i verktyget Innehållsöverföring så att användarna kan inaktivera [pre-copy](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html) under importen. För optimal överföringshastighet bör pre-copy under intag inaktiveras för små migreringsuppsättningar eller om endast ett fåtal bloggar har lagts till sedan det senaste intaget.
 * Användarmappning har uppdaterats för att använda ett förbättrat API för användarhantering som gör att 2 000 användare kan hämtas samtidigt, vilket avsevärt förbättrar prestandan.

@@ -21,42 +21,42 @@ ht-degree: 0%
 
 >[!INFO]
 >
->Du kan också titta [det här klippet](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/repository-browser.html) om du vill få en snabb videointroduktion om hur du använder Databasläsaren för att felsöka AEM as a Cloud Service.
+>Du kan även titta på [det här klippet](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/repository-browser.html) för att få en snabb videointroduktion om hur du använder Databasläsaren för att felsöka AEM as a Cloud Service.
 
 ## Introduktion {#introduction}
 
 Databasens webbläsare är ett utvecklarverktyg som ger en skrivskyddad vy i databasen för alla miljöer när det gäller författare, publicering och förhandsgranskningsnivåer. Den är utformad för att göra det enklare att se och felsöka innehåll genom att visa innehållsstrukturen.
 
-Tillgänglig från [AEM as a Cloud Service Developer Console](/help/implementing/developing/introduction/development-guidelines.md#crxde-lite-and-developer-console)kan den användas för att bläddra i databasen för en författare eller publicera en instans för en vald miljö.
+Den är tillgänglig från [AEM as a Cloud Service Developer Console](/help/implementing/developing/introduction/development-guidelines.md#crxde-lite-and-developer-console) och kan användas för att bläddra i databasen för en författare eller publicera en instans för en vald miljö.
 
 ### Åtkomstkrav {#access-prerequisites}
 
-Följande villkor måste vara uppfyllda för att du ska få tillgång till AEM as a Cloud Service Developer Console eller Databaswebbläsaren
+Följande villkor måste vara uppfyllda för att du ska få åtkomst till AEM as a Cloud Service Developer Console eller databasläsaren
 
-Mer information om AEM as a Cloud Service utvecklarkonsolen finns i [Åtkomst till Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console#developer-console-access).
+Mer information om hur du kommer åt AEM as a Cloud Service Developer Console finns i [Developer Console-åtkomst](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console#developer-console-access).
 
-För att komma åt Databasläsaren är kraven samma som för den AEM as a Cloud Service utvecklarkonsolen (anges ovan). Så här visar du innehållet i Databasläsaren för en viss instans:
+För att få åtkomst till Databasläsaren är kraven samma som för AEM as a Cloud Service Developer Console (anges ovan). Så här visar du innehållet i Databasläsaren för en viss instans:
 
-* Författarinstanser: Användare med produktprofilen AEM användare för **Författarinstans** kan visa databasens webbläsare med minimal läsåtkomst. Användarens behörigheter respekteras när användaren bläddrar i databasen. Användare med AEM administratörsproduktprofil kan visa databaswebbläsaren med fullständig läsåtkomst.
+* Författarinstanser: Användare med AEM användarproduktprofil för **författarinstansen** kan visa databaswebbläsaren med minimal läsåtkomst. Användarens behörigheter respekteras när användaren bläddrar i databasen. Användare med AEM administratörsproduktprofil kan visa databaswebbläsaren med fullständig läsåtkomst.
 
-* Publiceringsinstanser: Användare med produktprofilen AEM användare för **Publicera instans** kan visa databasens webbläsare med minimal läsåtkomst. Om produktprofilen inte anges kommer användarna att navigera som anonyma användare och vissa sökvägar visas inte på grund av begränsad behörighet.
+* Publish-instanser: Användare med AEM användarproduktprofil för **Publish-instansen** kan visa databaswebbläsaren med minimal läsåtkomst. Om produktprofilen inte anges kommer användarna att navigera som anonyma användare och vissa sökvägar visas inte på grund av begränsad behörighet.
 
-Mer information om hur du ställer in användarbehörigheter finns i [Dokumentation för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html).
+Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html).
 
 ### Starta Databasläsaren {#launching-the-repository-browser}
 
 Databaswebbläsaren kan startas genom att följa stegen nedan.
 
-1. Klicka på de tre punkterna bredvid den miljö du vill använda i Cloud Manager och välj **Developer Console**
+1. I Cloud Manager klickar du på de tre punkterna bredvid den miljö du vill använda och väljer **Developer Console**
 
    ![repobrowser1](/help/implementing/developing/tools/assets/repobrowser1.png)
 
-1. Klicka sedan på **Databasläsare** tab
-1. Välj en ruta som motsvarar författaren, publiceringen eller förhandsgranskningen genom att klicka på **Pod** listruta.
+1. Klicka sedan på fliken **Databasläsare**
+1. Välj en ruta som motsvarar författaren, publiceringen eller förhandsgranskningen genom att klicka på listrutan **Pod** .
 
    ![repobrowser2](/help/implementing/developing/tools/assets/repobrowser2.png)
 
-1. Starta databaswebbläsaren genom att klicka på **Öppna databasläsaren** länka längre ned. Webbläsaren som motsvarar en representativ instans (pod) för den valda nivån startas. Du kan inte styra den specifika pod för den nivån som startas.
+1. Starta databaswebbläsaren genom att klicka på länken **Öppna databasläsare** längre ned. Webbläsaren som motsvarar en representativ instans (pod) för den valda nivån startas. Du kan inte styra den specifika pod för den nivån som startas.
 
 ## Funktioner {#features}
 
@@ -66,7 +66,7 @@ Du kan använda den vänstra navigeringsrutan för att navigera i innehållshier
 
 ![repobrowser3](/help/implementing/developing/tools/assets/repobrowser3.png)
 
-Du kan också navigera direkt till en sökväg genom att ange den i dialogrutan **Bana** enligt nedan. Sökvägen utökar också sin plats i innehållshierarkin till vänster.
+Du kan också navigera direkt till en sökväg genom att ange den i fältet **Sökväg**, vilket visas nedan. Sökvägen utökar också sin plats i innehållshierarkin till vänster.
 
 ![repobrowser14](/help/implementing/developing/tools/assets/repobrowser14.png)
 
@@ -74,7 +74,7 @@ När du klickar på en mapp till vänster fylls fältet Sökväg automatiskt i m
 
 När du klickar på en mapp ändras URL-adressen dynamiskt så att den innehåller sökvägen till mappen. Med den här funktionen kan du skapa bokmärkningsbara URL:er.
 
-Som standard visas endast offentligt innehåll i Databasläsaren för publicering, vilket innebär att vissa mappar `/conf` eller `/home` är inte synliga.
+Som standard visas endast offentligt innehåll i Databasläsaren för publicering, vilket innebär att vissa mappar som `/conf` eller `/home` inte visas.
 
 Gör följande om du vill göra platserna synliga:
 
@@ -86,7 +86,7 @@ Gör följande om du vill göra platserna synliga:
 
    ![repobrowser8](/help/implementing/developing/tools/assets/repobrowser8.png)
 
-1. Skapa en produktprofil för administratörer. I exemplet nedan anropas den **DEV - AEM administratörer publicerar**
+1. Skapa en produktprofil för administratörer. I exemplet nedan kallas det **DEV - AEM administratörer Publish**
 
    ![repobrowser9](/help/implementing/developing/tools/assets/repobrowser9.png)
 
@@ -94,24 +94,24 @@ Gör följande om du vill göra platserna synliga:
 
    ![repobrowser10](/help/implementing/developing/tools/assets/repobrowser10.png)
 
-1. Vänta i några minuter och öppna sedan **AEM** konsol
-1. Lägg till gruppen som motsvarar den nya produktprofilen som medlem i administratörsgruppen genom att klicka på **Verktyg - Säkerhet - Grupper på författaren** och sedan klicka på **administratörer** grupp. Lägg sedan till gruppen enligt nedan
+1. Vänta i några minuter och öppna sedan konsolen **AEM författare**
+1. Lägg till gruppen som motsvarar den nya produktprofilen som medlem i administratörsgruppen genom att klicka på **Verktyg - Dokumentskydd - grupper på författaren** och sedan på gruppen **administratörer** . Lägg sedan till gruppen enligt nedan
 
    ![repobrowser11](/help/implementing/developing/tools/assets/repobrowser11.png)
 
-1. Aktivera **administratörer** och nya **DEV - AEM administratörer publicerar** grupp så att de blir tillgängliga vid publicering
+1. Aktivera gruppen **administratörer** och den nya gruppen **DEV - AEM administratörer Publish** så att de blir tillgängliga vid publicering
 
    ![repobrowser12](/help/implementing/developing/tools/assets/repobrowser12.png)
 
-1. Som en bra säkerhetspraxis bör du ta bort den nya **DEV - AEM administratörer publicerar** grupp från administratörens grupp på **författare** så att den nya gruppen isoleras för publicering
+1. Som en god säkerhetspraxis tar du bort den nya gruppen **DEV - AEM administratörer Publish** från administratörsgruppen på **författaren** så att den nya gruppen isoleras för publicering
 
    ![repobrowser13](/help/implementing/developing/tools/assets/repobrowser13.png)
 
-1. När du öppnar databaswebbläsaren för en publiceringsinstans visas alla mappar, inklusive `/home` och `/conf`.
+1. Vid åtkomst till databaswebbläsaren för en publiceringsinstans visas alla mappar, inklusive `/home` och `/conf`.
 
 ### Visa JCR-egenskaper {#view-jcr-properties}
 
-När du klickar på en nod visas dess JCR-egenskaper i den högra rutan i navigeringsläsaren. Nedan visas ett exempel för `experience-fragments` nod.
+När du klickar på en nod visas dess JCR-egenskaper i den högra rutan i navigeringsläsaren. Nedan visas ett exempel för noden `experience-fragments`.
 
 ![repobrowser4](/help/implementing/developing/tools/assets/repobrowser41.png)
 
@@ -143,6 +143,6 @@ Och för följande textbaserade MIME-typer:
 
 ### Hämta innehåll {#download-content}
 
-Du kan också använda databaswebbläsaren för att hämta innehåll. I exemplet nedan kan du trycka på **ladda ned** länk för att ladda ned `jcr:data` associeras med den valda noden. Den här funktionen är tillgänglig för alla binära egenskaper genom att navigera till noden som innehåller egenskapsdefinitionen.
+Du kan också använda databaswebbläsaren för att hämta innehåll. I exemplet nedan kan du trycka på länken **download** för att hämta `jcr:data` som är associerad med den valda noden. Den här funktionen är tillgänglig för alla binära egenskaper genom att navigera till noden som innehåller egenskapsdefinitionen.
 
 ![repobrowser5](/help/implementing/developing/tools/assets/repobrowser52.png)

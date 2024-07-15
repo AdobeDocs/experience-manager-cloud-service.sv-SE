@@ -22,7 +22,7 @@ Dynamic Media bildförinställningar och renderingar av Smart Crop främjar syst
 ## Statiska återgivningar {#static-renditions}
 
 Statiska återgivningar är förgenererade versioner av digitala resurser, som vanligtvis skapas vid tillgångsintag eller ändring. Dessa renderingar är optimerade för specifika syften och plattformar, som webbminiatyrer, mobilvänliga format för responsiv design eller högupplösta versioner för utskrift, vilket ger en effektiv och enhetlig upplevelse.
-Läs [visa och ladda ned](#view-dynamic-renditions) statiska återgivningar i [!DNL Experience Manager Assets].
+Lär dig [hur du visar och hämtar ](#view-dynamic-renditions) statiska återgivningar i [!DNL Experience Manager Assets].
 
 ## Dynamiska renderingar {#dynamic-renditions}
 
@@ -37,11 +37,11 @@ Med dessa renderingar kan organisationer leverera personaliserade och optimerade
    * [Profiler för smart beskärning](/help/assets/dynamic-media/image-profiles.md#creating-image-profiles)
    * [Bildförinställningar](/help/assets/dynamic-media/managing-image-presets.md)
 
-  Du kan [växla vy](/help/assets/assets-view-introduction.md#how-to-access-assets-view) senare för att förhandsvisa dynamiska återgivningar i resursvyn.
+  Du kan [växla vyn](/help/assets/assets-view-introduction.md#how-to-access-assets-view) senare för att förhandsgranska dynamiska återgivningar i vyn Assets.
 
 ### Visa och ladda ned dynamiska renderingar {#view-renditions}
 
-Visa eller hämta dynamiska återgivningar av bilder i [!DNL Experience Manager Assets]gör du så här:
+Så här visar eller hämtar du dynamiska återgivningar av bilder i [!DNL Experience Manager Assets]:
 
 1. Gå till **[!UICONTROL Assets Management]** > **[!UICONTROL Assets]**.
 
@@ -49,16 +49,16 @@ Visa eller hämta dynamiska återgivningar av bilder i [!DNL Experience Manager 
 
 1. Klicka på bilden som du vill visa och klicka på **[!UICONTROL Details]**.
 
-1. Klicka på **[!UICONTROL Renditions]**. <br> The **[!UICONTROL Renditions]** öppnas med den tillgängliga panelen **[!UICONTROL Dynamic]** och **[!UICONTROL Smart Crop]** renderingar.
+1. Klicka på **[!UICONTROL Renditions]** på den högra menyn. <br> Panelen **[!UICONTROL Renditions]** öppnas med de tillgängliga renderingarna **[!UICONTROL Dynamic]** och **[!UICONTROL Smart Crop]**.
 
    ![dynamiska återgivningar](assets/preset_smart_crop.png)
    <!-- ![dynamic renditions](assets/preset_smart_crop_view.png) -->
 
 1. Klicka på den återgivning du behöver för att visa eller hämta.
 
-1. Klicka på ![hämtningsikon](assets/do-not-localize/download-icon.png) -ikonen bredvid den dynamiska återgivning som du behöver ladda ned. <br> Du kan också välja bildåtergivning och klicka på **[!UICONTROL Download Rendition]** längst ned.
+1. Klicka på ikonen ![Hämta ](assets/do-not-localize/download-icon.png) bredvid den dynamiska återgivning som du behöver hämta. <br> Du kan också välja bildåtergivningen och klicka på alternativet **[!UICONTROL Download Rendition]** längst ned.
 
-   Du kan klicka på ![hämtningsikon](assets/do-not-localize/download-icon.png) ikonen är tillgänglig längst upp på **[!UICONTROL Smart Crop]** återgivningsavsnitt om du vill hämta alla tillgängliga Smart Crop-återgivningar för den resursen.
+   Du kan klicka på ikonen ![Hämta ](assets/do-not-localize/download-icon.png) som finns längst upp i avsnittet **[!UICONTROL Smart Crop]** återgivningar om du vill hämta alla tillgängliga Smart Crop-återgivningar för resursen.
 
 >[!NOTE]
 >

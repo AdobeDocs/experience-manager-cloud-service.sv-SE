@@ -24,7 +24,7 @@ I den här videon utforskas hur en AEM är integrerad med Experience Platform Ta
 
 ## Krav
 
-Automatiseringskonfigurationen är utformad för att fungera direkt med en AEM sajt som byggts med [AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) med [Adobe-klientdatalager](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) aktiverat. Du kan skapa en ny webbplats där dessa funktioner aktiveras automatiskt med [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) eller genom att skapa en plats med en [Webbplatsmall](/help/journey-sites/quick-site/create-site.md).
+Automatiseringsinställningarna är utformade för att fungera direkt med en AEM webbplats som byggts med [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) med [Adobe Client Data Layer](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) aktiverat. Du kan skapa en ny webbplats som har dessa funktioner aktiverade automatiskt med [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) eller genom att skapa en webbplats med en [webbplatsmall](/help/journey-sites/quick-site/create-site.md).
 
 ## Förutsättningar {#prerequisites}
 
@@ -38,36 +38,36 @@ Innan du använder den här funktionen är det viktigt att du följer dessa anvi
 1. Gå till Cloud Manager (https://experience.adobe.com/cloud-manager).
 1. Välj lämpligt program.
 1. Kontrollera att miljön finns i den senaste versionen av Cloud Servicen (om så inte är fallet väljer du Uppdatera i menyalternativen).
-1. Kör en fullständig stapel-pipeline i Cloud Manager.
+1. Kör en pipeline i Full Stack i Cloud Manager.
 
 Miljön bör nu vara redo för Experience Cloud Setup Automation.
 
 ## Så här konfigurerar du
 
-1. Navigera till **Webbplatser** och välj roten på webbplatsen som ska integreras med Adobe Analytics.
-1. Utöka menyn för sidospåret och markera **Konfigurationsanalys**.
+1. Navigera till **Webbplatser** och markera roten för webbplatsen som ska integreras med Adobe Analytics.
+1. Expandera sidofältets meny och välj **Konfigurera analys**.
 
    Det här är ett nytt alternativ på sidospåret som öppnar en panel med kontroller och status för automatisk installation av Experience Cloud.
-1. Välj **Integrera analyser** -knappen.
-1. Ange ett namn för **Report Suite-ID**.
+1. Välj knappen **Integrera analys** .
+1. Ange ett namn för **Report Suite-ID** i den dialogruta som visas.
 
-   Den här strängen används för att skapa en [Report Suite-ID](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html) i Adobe Analytics som datalager för analysdata för den valda AEM. Den angivna strängen har bifogats med miljö- och skiktidentifierare för att säkerställa unikt utseende.
+   Den här strängen används för att skapa ett [Report Suite-ID](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html) i Adobe Analytics som datalager för analysdata för den valda AEM. Den angivna strängen har bifogats med miljö- och skiktidentifierare för att säkerställa unikt utseende.
 
 1. Uppdatera sidan och panelen och välj **Kontrollera integreringsstatus** för att kontrollera automatiseringsstatus.
 
-   Automatiseringsinställningarna görs asynkront. The **Kontrollera integreringsstatus** visar integreringens aktuella status.
+   Automatiseringsinställningarna görs asynkront. **Kontrollera integreringsstatus** visar integreringens aktuella status.
 
    * **Pågår** - anger att jobbet körs.
-   * **Integreringen är klar** - anger att jobbet har slutfört integreringen av analys och taggar, konfigureringen av taggtillägg och taggar samt skapandet av nya Report Suite i Adobe Analytics.
+   * **Integreringen är slutförd** - anger att jobbet har slutförts genom att integrera analys och taggar, konfigurera taggtillägg och taggar samt skapa den nya rapportsviten i Adobe Analytics.
    * **Fel** - anger att det automatiska jobbet inte kunde slutföras. Kontrollera loggfilerna för det här jobbet genom att klicka på länken Loggar.
 
 ## Validera AEM
 
 När automatiseringen är klar validerar du att webbplatsen nu kör Analytics-händelserna.
 
-1. Öppna en sida på webbplatsen med **Webbplatsredigeraren**.
-1. Använd **Visa som publicerad** om du vill läsa in en publicerad version av sidan.
-1. Använd webbläsarens utvecklarverktyg för att inspektera nätverkstrafiken och att **Taggar** och `AppMeasurement.js` filer läses nu in.
+1. Öppna en sida på webbplatsen med **webbplatsredigeraren**.
+1. Använd alternativet **Visa som publicerad** om du vill läsa in en publicerad version av sidan.
+1. Använd utvecklarverktygen i webbläsaren för att kontrollera nätverkstrafiken och att **taggar** och `AppMeasurement.js` filer nu läses in.
 1. Inspect är webbläsarens konsol för att se att händelser på sid- och komponentnivå utlöses och samlas in av Adobe Client Data Layer.
 
 ## Validera Analytics-konfiguration
@@ -75,9 +75,9 @@ När automatiseringen är klar validerar du att webbplatsen nu kör Analytics-h�
 Navigera sedan till Adobe Analytics för att visa data som flödar in från händelser på AEM webbplats.
 
 1. Navigera till Adobe Analytics i samma IMS-organisation som din AEM.
-1. Skapa en ny översiktsrapport för AEM Sites genom att navigera till **Rapporter** > **Engagemang** > **Adobe Experience Manager** > **Platsprestandaöversikt**.
+1. Skapa en ny översiktsrapport för AEM Sites genom att navigera till **Rapporter** > **engagemang** > **Adobe Experience Manager** > **Platsprestandaöversikt**.
 1. Välj **Öppna rapport**.
-1. Välj **Report Suite-ID** som matchar namnet på Report Suite som användes i föregående övning.
+1. Välj det **Report Suite-ID** som matchar namnet på Report Suite som användes i föregående övning.
 1. Visa dataflödet för analyser i den nya mallen över tid.
 
    >[!NOTE]

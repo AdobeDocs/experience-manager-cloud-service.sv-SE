@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Anpassa konsolen och redigeraren för innehållsfragment {#customizing-content-fragment-console-and-editor}
 
-Både Content Fragments Console och Editor är utökningsbara och kan anpassas efter dina behov med Adobe App Builder.
+Både Content Fragments Console och Editor är utbyggbara och kan anpassas efter dina behov med Adobe App Builder.
 
 Mer information finns i:
 
@@ -21,12 +21,12 @@ Mer information finns i:
 
    * [Få åtkomst](https://developer.adobe.com/uix/docs/guides/get-access/)
 
-   * [Utbyggbarhet för användargränssnitt](https://developer.adobe.com/uix/docs/)
+   * [UI-utökningsbarhet](https://developer.adobe.com/uix/docs/)
 
 * konsolen Innehållsfragment:
 
-   * [Utveckla tillägg AEM Content Fragments Console i steg för steg](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/)
+   * [Steg-för-steg-AEM Content Fragments Console Extension Development](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/)
 
 * Innehållsfragmentsredigeraren
 
-   * [AEM Content Fragments Editor Extension Points](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/)
+   * [AEM Extension Points för redigeraren för innehållsfragment](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/)

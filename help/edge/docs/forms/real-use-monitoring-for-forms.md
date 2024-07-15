@@ -27,7 +27,7 @@ Du kan visa kontrollpanelen för Edge Delivery Services för AEM Forms as a Clou
 
 https://data.aem.live/?ext=forms
 
-![Inloggningsskärm för RUM för Edge Delivery Services för Forms](/help/edge/assets/rum-login-screen.png)
+![RUM-inloggningsskärm för Edge Delivery Services för Forms](/help/edge/assets/rum-login-screen.png)
 
 Om du vill logga in på kontrollpanelen för Edge Delivery Services för AEM Forms as a Cloud Service anger du följande:
 
@@ -48,23 +48,23 @@ Bilden nedan visar kontrollpanelen för Edge Delivery Services för AEM Forms as
 Den här kontrollpanelen ger viktiga insikter i hur besökare interagerar med formulär på din Adobe Experience Manager (AEM) webbplats. Genom att övervaka dessa mätvärden kan ni identifiera områden som kan förbättras och optimera formulären för bättre användarupplevelser och konverteringsgrader:
 
 * **Formulärvningar**: Spåra det totala antalet gånger som formulär visas
-* **Skicka formulär**: Spåra det totala antalet slutförda överföringar
+* **Formuläröverföringar**: Spåra det totala antalet slutförda överföringar
 
-* **Största innehållsfärg**: Den visar den hastighet med vilken URL-adressen läses in, vilket anger den tid det tar att återge det största innehållselementet som är synligt i visningsrutan från det ögonblick användaren begär URL-adressen. Det största innehållselementet kan vara en bild, en video eller ett stort textelement på blocknivå. Prestandaklassificeringarna för URL-inläsningshastighet kategoriseras enligt följande:
+* **Störst innehållsmässig målning**: Den visar den hastighet med vilken URL-adressen läses in, vilket anger den tid det tar att återge det största innehållselementet som är synligt i visningsrutan från det ögonblick som användaren begär URL-adressen. Det största innehållselementet kan vara en bild, en video eller ett stort textelement på blocknivå. Prestandaklassificeringarna för URL-inläsningshastighet kategoriseras enligt följande:
    * **Bra**: Om inläsningstiden är 2,5 sekunder eller mindre.
-   * **Okej**: Om inläsningstiden är längre än 2,5 sekunder men högst 4 sekunder.
+   * **OK**: Om inläsningstiden är längre än 2,5 sekunder men mindre än 4 sekunder.
    * **Felaktig**: Om inläsningstiden är längre än 4 sekunder
 
-* **Kumulativ layoutväxling**: Det mäter den totala summan av alla enskilda layoutskiftningar för varje oväntad layoutändring som inträffar under hela sidans livstid. Det spelar en viktig roll när det gäller att identifiera en sidas prestanda, eftersom det leder till en dålig användarupplevelse när sidelementen flyttas när en användare försöker interagera med dem. Den här poängen varierar från noll till ett positivt tal: noll innebär ingen växling, medan ett högre värde innebär fler layoutändringar på sidan. De prestandamått som används för att utvärdera poängen för layoutändringar är kategoriserade enligt följande:
+* **Kumulativ layoutförskjutning**: Den mäter den totala summan av alla enskilda layoutförskjutningar för varje oväntad layoutförskjutning som inträffar under hela sidans livstid. Det spelar en viktig roll när det gäller att identifiera en sidas prestanda, eftersom det leder till en dålig användarupplevelse när sidelementen flyttas när en användare försöker interagera med dem. Den här poängen varierar från noll till ett positivt tal: noll innebär ingen växling, medan ett högre värde innebär fler layoutändringar på sidan. De prestandamått som används för att utvärdera poängen för layoutändringar är kategoriserade enligt följande:
 
    * **Bra**: Om layoutskifttalet är 0,1 eller mindre.
-   * **Okej**: Om layoutskifttalet är större än 0,1 men högst 0,25.
-   * **Felaktig**: Om layoutens skifthöjd överstiger 0,25.
+   * **OK**: Om layoutskifttalet är större än 0,1 men mindre än 0,25.
+   * **Dåligt**: Om layoutskifttalet överstiger 0,25.
 
-* **Interaktion till nästa målning**: Här utvärderas hur snabbt en sida reagerar på användarinteraktioner, med tanke på hur lång tid det tar för sidan att svara på klickningar, tryckningar och tangentbordsinmatningar under en användares besök på sidan. Slutvärdet är den längsta interaktionen som observerats, bortsett från eventuella avvikelser. Prestandamätningarna för Interaction to Next Paint är kategoriserade enligt följande:
+* **Interaktion med nästa färg**: Den utvärderar hur snabbt en sida reagerar på användarinteraktioner, med tanke på hur lång tid det tar för sidan att svara på klickningar, tryckningar och tangentbordsinmatningar under en användares besök på sidan. Slutvärdet är den längsta interaktionen som observerats, bortsett från eventuella avvikelser. Prestandamätningarna för Interaction to Next Paint är kategoriserade enligt följande:
    * **Bra**: Om längden mellan användaråtgärder är 200 millisekunder (ms) eller mindre.
-   * **Okej**: Om längden är mer än 200 ms men mindre än 500 ms.
-   * **Felaktig**: Om längden överstiger 500 ms.
+   * **OK**: Om längden är längre än 200 ms men mindre än 500 ms.
+   * **Dåligt**: Om längden överstiger 500 ms.
 
 ## Användbara insikter
 

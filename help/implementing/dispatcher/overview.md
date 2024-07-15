@@ -13,10 +13,10 @@ ht-degree: 0%
 
 # Leveransflöde {#content-delivery}
 
-Den aktuella sidan innehåller information om publicering av tjänstinnehåll på AEM as a Cloud Service. Leverans av Publish-tjänstinnehåll omfattar:
+Den aktuella sidan innehåller information om publicering av tjänstinnehåll i AEM as a Cloud Service. Leverans av Publish-tjänstinnehåll omfattar:
 
 * CDN
-* AEM
+* AEM Dispatcher
 * AEM
 
 Dataflödet är följande:
@@ -25,11 +25,11 @@ Dataflödet är följande:
 1. Begäran gjordes till CDN som mappats i DNS till den domänen
 1. Om innehållet cachelagras fullständigt i CDN skickas det till webbläsaren av CDN
 1. Om innehållet inte är fullständigt cachelagrat anropar CDN (omvänd proxy) till Dispatcher
-1. Om innehållet har cache-lagrats fullständigt i Dispatcher skickas det till CDN
-1. Om innehållet inte är fullständigt cachelagrat anropar Dispatcher (omvänd proxy) till AEM publicering
+1. Om innehållet cachelagras helt på Dispatcher skickar Dispatcher det till CDN
+1. Om innehållet inte är fullständigt cachelagrat anropar Dispatcher (omvänd proxy) till AEM
 1. Innehållet återges av webbläsaren, som också kan cachelagra det beroende på sidhuvudena
 
-Som standard förfaller innehållstypen HTML/text efter 300 sekunder (5 minuter) i Dispatcher-lagret, ett tröskelvärde som både Dispatcher-cachen och CDN respekterar. Under omdistributioner av publiceringstjänsten rensas Dispatcher-cachen och värms upp innan de nya publiceringsnoderna tar emot trafik.
+Som standard förfaller innehållstypen HTML/text efter 300 sekunder (5 minuter) i Dispatcher-lagret, vilket är ett tröskelvärde som både Dispatcher cache och CDN respekterar. Under omdistributioner av publiceringstjänsten rensas Dispatcher-cachen och värms upp innan de nya publiceringsnoderna tar emot trafik.
 
 I följande avsnitt finns mer information om innehållsleverans:
 * [CDN-konfiguration](/help/implementing/dispatcher/cdn.md)

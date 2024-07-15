@@ -1,5 +1,5 @@
 ---
-title: Från kalkylblad till Forms - Mastering Form Fragements for Edge Delivery Forms
+title: Från kalkylblad till Forms - Mastering av formulärfragment för Edge Delivery Forms
 description: Skapa kraftfulla formulär snabbare med Form Fragments
 feature: Edge Delivery Services
 hide: true
@@ -13,4 +13,4 @@ ht-degree: 0%
 
 ---
 
-# Mastering Form Fragements for AEM Forms Edge Delivery Service
+# Mastering Form Fragments for AEM Forms Edge Delivery Service

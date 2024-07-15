@@ -1,6 +1,6 @@
 ---
 title: Söka efter resurser i Content Hub
-description: Lär dig söka efter resurser i [!DNL Content Hub]
+description: Lär dig söka efter resurser i  [!DNL Content Hub]
 role: User
 source-git-commit: 5a968440c8841abe7af2c81c4af12258b7e4547f
 workflow-type: tm+mt
@@ -10,39 +10,39 @@ ht-degree: 0%
 ---
 
 
-# Sök i Assets [!DNL Content Hub] {#search-assets}
+# Sök i Assets i [!DNL Content Hub] {#search-assets}
 
-![Dela resurser - bannerbild](assets/search.png)
+![Dela banderollbild för resurser](assets/search.png)
 
-När du har ett stort antal resurser i din databas är det tidskrävande att söka efter rätt resurs. [!DNL The Content Hub] sökfunktionen ger dig möjlighet att söka efter godkända resurser så att du kan utföra ytterligare åtgärder på dem, som att hämta, dela eller skapa samlingar. Du kan använda olika funktioner för att begränsa sökresultaten, till exempel textbaserad sökning, filter, taggar eller smart taggspecifik sökning, sökning efter ett visst filformat och så vidare.
+När du har ett stort antal resurser i din databas är det tidskrävande att söka efter rätt resurs. [!DNL The Content Hub]-sökningen ger dig möjlighet att söka efter godkända resurser så att du kan utföra ytterligare åtgärder på dem, till exempel hämta, dela eller skapa samlingar. Du kan använda olika funktioner för att begränsa sökresultaten, till exempel textbaserad sökning, filter, taggar eller smart taggspecifik sökning, sökning efter ett visst filformat och så vidare.
 
 ## Förutsättningar {#prerequisites}
 
-[Content Hub](deploy-content-hub.md#onboard-content-hub-users) kan utföra åtgärder som nämns i den här artikeln.
+[Content Hub-användare](deploy-content-hub.md#onboard-content-hub-users) kan utföra åtgärder som nämns i den här artikeln.
 
 ## Vad du kan söka efter  {#what-you-can-search}
 
-The [!DNL Content Hub] sökningen ger resultat baserade på:
+[!DNL Content Hub]-sökningen ger resultat baserat på:
 
-* **Matchande text:** The [!DNL Content Hub] Med sökning kan du söka efter en resurs med hjälp av dess namn eller beskrivning. Du kan utföra nyckelordsbaserad sökning, som jämför nyckelordet med texten som finns i egenskaperna för en resurs.
+* **Matchande text:** Med [!DNL Content Hub]-sökningen kan du söka efter en resurs med hjälp av dess namn eller beskrivning. Du kan utföra nyckelordsbaserad sökning, som jämför nyckelordet med texten som finns i egenskaperna för en resurs.
 
-* **Matchande sammanhang:** [!DNL Content Hub] sökresultatlistan innehåller ungefärliga resultat för resurser som du får baserat på matchande kontext. Om du t.ex. skriver `cool` i sökfältet, de resurser som är relaterade till `winter`, `snow`, `cold surroundings`visas i söklistan.
+* **Matchande kontext:** [!DNL Content Hub] sökresultatlistan innehåller ungefärliga resultat för resurser som du får baserat på matchande kontext. Om du till exempel skriver `cool` i sökfältet visas resurserna som är relaterade till `winter`, `snow`, `cold surroundings` i söklistan.
 
-* **Resursinformation (titel, taggar eller smarta taggar):** [!DNL Content Hub] använder algoritmen för smart sökning för att rangordna sökresultaten korrekt och så relevant som möjligt. [Metadata](#asset-properties.md) är en samling av alla data som är tillgängliga för en tillgång, men som inte nödvändigtvis ingår i den tillgången. [Det hjälper er att kategorisera resurser ytterligare och är till hjälp när mängden digital information växer](/help/assets/configure-content-hub-ui-options.md##configure-metadata-search-content-hub).
+* **Resursinformation (titel, taggar eller smarta taggar):** [!DNL Content Hub] använder algoritmen för smart sökning för att rangordna sökresultaten korrekt och så relevant som möjligt. [Metadata](#asset-properties.md) är samlingen av alla data som är tillgängliga för en resurs, men det är inte säkert att de finns i resursen. [Det hjälper dig att kategorisera resurser ytterligare och är till hjälp när mängden digital information växer.](/help/assets/configure-content-hub-ui-options.md##configure-metadata-search-content-hub)
 
-* **Senast ändrat den:** De resurser som nyligen har ändrats visas högst upp i sökresultatlistan. Du kan även filtrera datumintervallet efter dina behov.
+* **Senast ändrat:** Resurserna som nyligen ändrades visas högst upp i sökresultatlistan. Du kan även filtrera datumintervallet efter dina behov.
 
 * **Användning:** De resurser som används ofta visas högst upp i söklistan.
 
-* **Sökhistorik:** Klicka i sökrutan utan att skriva något tecken för att få fram sökhistoriken. Du kan också ta bort ett visst nyckelord från historiken. Sökhistoriken sparas i en webbläsares cacheminne, vilket innebär att om du öppnar [!DNL Content Hub] om du söker i en annan webbläsare eller rensar cacheminnet för webbläsaren, kan du inte längre visa sökhistoriken.
+* **Sökhistorik:** Klicka i sökrutan utan att skriva ett tecken för att få tillgång till sökhistoriken. Du kan också ta bort ett visst nyckelord från historiken. Sökhistoriken sparas i cacheminnet för en webbläsare, vilket innebär att du inte kan visa sökhistoriken längre om du öppnar sökningen i [!DNL Content Hub] i en annan webbläsare eller om du rensar cacheminnet för webbläsaren.
 
-* **Sök medan du skriver:** The [!DNL Content Hub] sökningen förbättrar sökupplevelsen genom att ge automatiska förslag när du börjar skriva.
+* **Sökning medan du skriver:** [!DNL Content Hub] Sökningen förbättrar sökupplevelsen genom att ge förslag som fylls i automatiskt när du börjar skriva.
 
 ## Grundläggande sökning {#basic-search}
 
-Utför grundläggande sökning på [!DNL the Content Hub]navigera till sökfältet och ange det nyckelord som du vill söka efter. Navigera till de filter som finns i den vänstra rutan och använd dem för att begränsa sökresultaten.
+Om du vill utföra grundläggande sökning på [!DNL the Content Hub] går du till sökfältet och anger det nyckelord som du behöver söka efter. Navigera till de filter som finns i den vänstra rutan och använd dem för att begränsa sökresultaten.
 
-Sök till exempel efter alla **[!UICONTROL JPEG]** bilder med nyckelord `architect` som ändras under det senaste året. Så här kör du det här scenariot:
+Du kan till exempel söka efter alla **[!UICONTROL JPEG]**-bilder med nyckelordet `architect` som har ändrats under det senaste året. Så här kör du det här scenariot:
 
 1. Ange `architect` som söknyckelord.
 
@@ -152,4 +152,4 @@ Standardfiltren innehåller filformat, godkänt av, godkänt, förfallet och int
 
 ## Gör mer med sökningar {#do-more-with-search}
 
-[!DNL The Content Hub] är inte begränsat till sökning, utan ger dig möjlighet att utföra ytterligare åtgärder, som [ladda ned](download-assets-content-hub.md), [dela](share-assets-content-hub.md)och [lägg till resurser i samling](collections-content-hub.md), direkt från sökgränssnittet eller förhandsvisningsgränssnittet. Markera resurserna på sökresultatsidan för att visa dessa alternativ.
+[!DNL The Content Hub] är inte begränsat till sökning, utan låter dig utföra ytterligare åtgärder, som [download](download-assets-content-hub.md), [share](share-assets-content-hub.md) och [lägga till resurser i samlingen](collections-content-hub.md), direkt från sök- eller förhandsgranskningsgränssnittet. Markera resurserna på sökresultatsidan för att visa dessa alternativ.

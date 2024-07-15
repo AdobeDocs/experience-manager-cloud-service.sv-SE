@@ -17,7 +17,7 @@ Lär dig hur du kan leverera dina Cloud Manager-projekt med hjälp av Edge Deliv
 
 >[!NOTE]
 >
->Den här funktionen är bara tillgänglig för [det tidiga adopteringsprogrammet.](/help/implementing/cloud-manager/release-notes/current.md#early-adoption)
+>Den här funktionen är bara tillgänglig för [det tidiga adopterprogrammet.](/help/implementing/cloud-manager/release-notes/current.md#early-adoption)
 
 ## Edge Delivery Services i korthet {#edge-overview}
 
@@ -28,19 +28,19 @@ Edge Delivery Services är en sammanslagen uppsättning tjänster som ger stor f
 
 Du kan använda både AEM och WYSIWYG-redigering med den universella redigeraren och dokumentbaserad redigering.
 
-Med Cloud Manager på AEM as a Cloud Service kan du aktivera Edge Delivery Service för ditt projekt.
+Med Cloud Manager i AEM as a Cloud Service kan du aktivera Edge Delivery Service för ditt projekt.
 
 >[!TIP]
 >
->Mer information om Edge Delivery Services och hur de kan användas med AEM finns i dokumentet [Edge Delivery Services - översikt.](/help/edge/overview.md)
+>Mer information om Edge Delivery Services och hur de kan användas med AEM finns i dokumentet [Översikt över Edge Delivery Services.](/help/edge/overview.md)
 
-## Edge Delivery Services i Cloud Manager {#edge-in-cloud-manager}
+## EDGE DELIVERY SERVICES i CLOUD MANAGER {#edge-in-cloud-manager}
 
-Om du har licensierat Edge Delivery Services som en del av Adobe Experience Manager Sites kan du lägga upp din webbplats med Edge Delivery Services direkt i Cloud Manager och publicera den [med en guidad självbetjäningsupplevelse.](/help/implementing/cloud-manager/managing-code/private-repositories.md)
+Om du har licensierat Edge Delivery Services som en del av Adobe Experience Manager Sites kan du publicera din webbplats med Edge Delivery Services direkt i Cloud Manager och gå live [med hjälp av en guidad självbetjäning.](/help/implementing/cloud-manager/managing-code/private-repositories.md)
 
 Detta ger en enhetlig upplevelse av alla dina AEM egenskaper och säkerställer konsekvens med alla kritiska arbetsflöden, inklusive domännamnshantering, SSL-certifikathantering och CDN-mappningar.
 
-Edge Delivery Servicens är tillgängliga för båda [produktion och sandlådeprogram.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md)
+Edge Delivery Services är tillgängliga för både [produktion och sandlådeprogram.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md)
 
 ## Aktivera Edge Delivery Services {#enabling}
 

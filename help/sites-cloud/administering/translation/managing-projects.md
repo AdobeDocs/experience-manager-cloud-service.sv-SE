@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Hantera översättningsprojekt {#managing-translation-projects}
 
-Med översättningsprojekt kan du hantera översättning av AEM. Ett översättningsprojekt är en typ av AEM [projekt](/help/sites-cloud/authoring/projects/overview.md) som innehåller resurser som ska översättas till andra språk. Dessa resurser är sidorna och resurserna i [språkversioner](preparation.md) som har skapats från språkinställaren.
+Med översättningsprojekt kan du hantera översättning av AEM. Ett översättningsprojekt är en typ av AEM [projekt](/help/sites-cloud/authoring/projects/overview.md) som innehåller resurser som ska översättas till andra språk. De här resurserna är sidorna och resurserna för [språkkopiorna](preparation.md) som skapas från språkinställningen.
 
 >[!TIP]
 >
->Om du inte är van vid att översätta innehåll, se [Sites Translation Journey,](/help/journey-sites/translation/overview.md) som vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
+>Om du inte är van vid att översätta innehåll läser du [Platsöversättningsresa](/help/journey-sites/translation/overview.md), som är en guidad väg genom att översätta ditt AEM Sites-innehåll med hjälp av AEM kraftfulla översättningsverktyg, som är idealisk för dem som saknar AEM eller översättningsupplevelse.
 
 När resurser läggs till i ett översättningsprojekt skapas ett översättningsjobb för dem. Jobb innehåller kommandon och statusinformation som du använder för att hantera de mänskliga översättnings- och maskinöversättningsarbetsflödena som körs på resurserna.
 
@@ -32,16 +32,16 @@ När resurser läggs till i ett översättningsprojekt skapas ett översättning
 
 AEM identifierar om ett översättningsprojekt skapas för den inledande översättningen av innehåll eller för att uppdatera redan översatta språkkopior. När du skapar ett översättningsprojekt för en sida och anger vilka språkkopior du översätter för, identifierar AEM om källsidan redan finns i målspråkskopiorna:
 
-* **Språkkopian innehåller inte sidan:** AEM behandlar denna situation som den inledande översättningen. Sidan kopieras omedelbart till språkkopian och inkluderas i projektet. När den översatta sidan importeras till AEM kopieras AEM den direkt till språkkopian.
+* **Språkkopian innehåller inte sidan:** AEM behandlar den här situationen som den inledande översättningen. Sidan kopieras omedelbart till språkkopian och inkluderas i projektet. När den översatta sidan importeras till AEM kopieras AEM den direkt till språkkopian.
 * **Språkkopian innehåller redan sidan:** AEM behandlar den här situationen som en uppdaterad översättning. En startsida skapas och en kopia av sidan läggs till i startprogrammet och ingår i projektet. Med det här programmet kan du granska uppdaterade översättningar innan du implementerar dem i språkkopian:
 
    * När den översatta sidan importeras till AEM, skrivs sidan över vid start.
    * Den översatta sidan skriver bara över språkkopian när startsidan höjs.
 
-Till exempel `/content/wknd/fr` språkrot skapas för den franska översättningen av `/content/wknd/en` huvudspråk. Det finns inga andra sidor i den franska språkversionen.
+Exempelvis skapas språkroten `/content/wknd/fr` för den franska översättningen av huvudspråket `/content/wknd/en`. Det finns inga andra sidor i den franska språkversionen.
 
-* Ett översättningsprojekt skapas för `/content/wknd/en/products` sida och alla underordnade sidor, med den franska språkkopian som mål. Eftersom språkkopian inte innehåller `/content/wknd/fr/products` AEM kopierar omedelbart `/content/wknd/en/products` och alla underordnade sidor till den franska språkkopian. Kopiorna ingår också i översättningsprojektet.
-* Ett översättningsprojekt skapas för `/content/wknd/en` sida och alla underordnade sidor, med den franska språkkopian som mål. Eftersom språkkopian innehåller den sida som motsvarar `/content/wknd/en` (språkroten), AEM kopierar `/content/wknd/en` och alla underordnade sidor och lägger till dem i en programstart. Kopiorna ingår också i översättningsprojektet.
+* Ett översättningsprojekt skapas för sidan `/content/wknd/en/products` och alla underordnade sidor med den franska språkkopian som mål. Eftersom språkkopian inte innehåller sidan `/content/wknd/fr/products` kopierar AEM omedelbart sidan `/content/wknd/en/products` och alla underordnade sidor till den franska språkkopian. Kopiorna ingår också i översättningsprojektet.
+* Ett översättningsprojekt skapas för sidan `/content/wknd/en` och alla underordnade sidor med den franska språkkopian som mål. Eftersom språkkopian innehåller den sida som motsvarar sidan `/content/wknd/en` (språkroten), AEM kopierar sidan `/content/wknd/en` och alla underordnade sidor och lägger till dem i en start. Kopiorna ingår också i översättningsprojektet.
 
 ## Översättning från webbplatskonsolen {#performing-initial-translations-and-updating-existing-translations}
 
@@ -57,11 +57,11 @@ Skapa översättningsprojekt så att du kan köra och hantera arbetsflödet för
 
 Du kan ange att de underordnade sidorna för den markerade sidan också ska vara markerade. I det här fallet läggs kopior av de underordnade sidorna också till i varje projekt så att de översätts. När underordnade sidor är kopplade till olika konfigurationer för översättningsintegreringsramverk skapar AEM ytterligare projekt.
 
-Du kan också [skapa översättningsprojekt manuellt](#creating-a-translation-project-using-the-projects-console).
+Du kan även [skapa översättningsprojekt](#creating-a-translation-project-using-the-projects-console) manuellt.
 
 >[!NOTE]
 >
->Om du vill skapa ett projekt måste ditt konto vara medlem i `project-administrators` grupp.
+>Om du vill skapa ett projekt måste ditt konto vara medlem i gruppen `project-administrators`.
 
 ### Initiala översättningar och uppdatering av översättningar {#initial-and-updating}
 
@@ -69,27 +69,27 @@ Referenspanelen anger om du uppdaterar befintliga språkkopior eller skapar den 
 
 ![Uppdatera språkkopior](../assets/update-language-copies.png)
 
-Efter översättning kan du [granska översättningen](#reviewing-and-promoting-updated-content) innan språkkopian skrivs över med den. Om det inte finns någon språkkopia för den valda sidan visas fliken Skapa och översätt för att ge åtkomst till projektrelaterade kommandon.
+Efter översättning kan du [granska översättningen](#reviewing-and-promoting-updated-content) innan du skriver över språkkopian med den. Om det inte finns någon språkkopia för den valda sidan visas fliken Skapa och översätt för att ge åtkomst till projektrelaterade kommandon.
 
-![Skapa och översätta](../assets/create-and-translate.png)
+![Skapa och översätt](../assets/create-and-translate.png)
 
 ### Skapa översättningsprojekt för en ny språkkopia {#create-translation-projects-for-a-new-language-copy}
 
 1. Använd webbplatskonsolen för att välja sidan som du lägger till i översättningsprojekt.
 
-1. Öppna verktygsfältet **Referenser** järnväg.
+1. Använd verktygsfältet och öppna **referenslisten**.
 
    ![Referenser](../assets/references.png)
 
 1. Välj **Språkkopior** och välj sedan de språkkopior som du översätter källsidorna för.
-1. Välj **Skapa och översätta** och konfigurera översättningsjobbet:
+1. Välj **Skapa och översätt** och konfigurera sedan översättningsjobbet:
 
-   * Använd **Språk** för att välja en språkkopia som du vill översätta. Välj ytterligare språk efter behov. De språk som visas i listan motsvarar [språktrötter som du har skapat](preparation.md#creating-a-language-root).
+   * Använd listrutan **Språk** för att välja en språkkopia som du vill översätta för. Välj ytterligare språk efter behov. Språk som visas i listan motsvarar de [språkrötter som du har skapat](preparation.md#creating-a-language-root).
       * Om du väljer flera språk skapas ett projekt med ett översättningsjobb för varje språk.
-   * Om du vill översätta den markerade sidan och alla underordnade sidor väljer du **Markera alla undersidor**. Om du bara vill översätta den markerade sidan avmarkerar du alternativet.
-   * För **Projekt**, markera **Skapa översättningsprojekt**.
-   * Valfritt för **Projektmall** väljer du ett projekt som användarroller och behörigheter ska ärvas från.
-   * I **Titel** skriv ett namn för projektet.
+   * Om du vill översätta den markerade sidan och alla underordnade sidor väljer du **Markera alla underordnade sidor**. Om du bara vill översätta den markerade sidan avmarkerar du alternativet.
+   * För **Projekt** väljer du **Skapa översättningsprojekt**.
+   * Om du vill kan du för **Projektmall** välja ett projekt som du vill ärva användarroller och behörigheter från.
+   * Ange ett namn för projektet i **Rubrik**.
 
    ![Skapa översättningsprojekt](../assets/create-translation-project.png)
 
@@ -99,17 +99,17 @@ Efter översättning kan du [granska översättningen](#reviewing-and-promoting-
 
 1. Använd webbplatskonsolen för att välja sidan som du lägger till i översättningsprojekten.
 
-1. Öppna verktygsfältet **Referenser** järnväg.
+1. Använd verktygsfältet och öppna **referenslisten**.
 
    ![Referenser](../assets/references.png)
 
 1. Välj **Språkkopior** och välj sedan de språkkopior som du översätter källsidorna för.
-1. Välj **Uppdatera språkkopior** och konfigurera översättningsjobbet:
+1. Välj **Uppdatera språkkopior** och konfigurera sedan översättningsjobbet:
 
-   * Om du vill översätta den markerade sidan och alla underordnade sidor väljer du **Markera alla undersidor**. Om du bara vill översätta den markerade sidan avmarkerar du alternativet.
-   * För **Projekt**, markera **Skapa översättningsprojekt**.
-   * Valfritt för **Projektmall** väljer du ett projekt som användarroller och behörigheter ska ärvas från.
-   * I **Titel** skriv ett namn för projektet.
+   * Om du vill översätta den markerade sidan och alla underordnade sidor väljer du **Markera alla underordnade sidor**. Om du bara vill översätta den markerade sidan avmarkerar du alternativet.
+   * För **Projekt** väljer du **Skapa översättningsprojekt**.
+   * Om du vill kan du för **Projektmall** välja ett projekt som du vill ärva användarroller och behörigheter från.
+   * Ange ett namn för projektet i **Rubrik**.
 
    ![Skapa projekt för att uppdatera språkkopior](../assets/create-update-language-copies-project.png)
 
@@ -117,7 +117,7 @@ Efter översättning kan du [granska översättningen](#reviewing-and-promoting-
 
 ### Lägga till sidor i ett översättningsprojekt {#adding-pages-to-a-translation-project}
 
-När du har skapat ett översättningsprojekt kan du använda **Resurs** för att lägga till sidor i projektet. Det är praktiskt att lägga till sidor när du inkluderar sidor från olika grenar i samma projekt.
+När du har skapat ett översättningsprojekt kan du använda spåret **Resurser** för att lägga till sidor i projektet. Det är praktiskt att lägga till sidor när du inkluderar sidor från olika grenar i samma projekt.
 
 När du lägger till sidor i ett översättningsprojekt inkluderas sidorna i ett nytt översättningsjobb. Du kan också [lägga till sidor i ett befintligt jobb](#adding-pages-assets-to-a-translation-job).
 
@@ -125,7 +125,7 @@ När du lägger till sidor i ett projekt läggs kopior av sidorna till i en prog
 
 1. Använd webbplatskonsolen för att välja sidan som du lägger till i översättningsprojektet.
 
-1. Öppna verktygsfältet **Referenser** järnväg.
+1. Använd verktygsfältet och öppna **referenslisten**.
 
    ![Referenser](../assets/references.png)
 
@@ -135,8 +135,8 @@ När du lägger till sidor i ett projekt läggs kopior av sidorna till i en prog
 
 1. Välj **Uppdatera språkkopior** och konfigurera sedan egenskaperna:
 
-   * Om du vill översätta den markerade sidan och alla underordnade sidor väljer du **Markera alla undersidor**. Om du bara vill översätta den markerade sidan avmarkerar du alternativet.
-   * För **Projekt**, markera **Lägg till i befintligt översättningsprojekt**.
+   * Om du vill översätta den markerade sidan och alla underordnade sidor väljer du **Markera alla underordnade sidor**. Om du bara vill översätta den markerade sidan avmarkerar du alternativet.
+   * För **Projekt** väljer du **Lägg till i befintligt översättningsprojekt**.
    * Välj projektet i **Befintligt översättningsprojekt**.
 
    >[!NOTE]
@@ -149,10 +149,10 @@ När du lägger till sidor i ett projekt läggs kopior av sidorna till i en prog
 
 Det går bara att skapa strukturen för språkkopian, så att du kan kopiera innehåll och strukturella ändringar i språkinställningen till (oöversatta) språkkopior. Detta har ingenting med översättningsjobb eller -projekt att göra. Du kan använda detta för att synkronisera dina språkmallsidor, även utan översättning.
 
-Fyll i din språkkopia så att den innehåller innehåll från huvudspråket som du översätter. Innan du fyller i din språkkopia måste du ha [skapade språkroten](preparation.md#creating-a-language-root) av språkversionen.
+Fyll i din språkkopia så att den innehåller innehåll från huvudspråket som du översätter. Innan du fyller i din språkkopia måste du ha [skapat språkroten](preparation.md#creating-a-language-root) för språkkopian.
 
 1. Använd webbplatskonsolen för att välja språkroten för huvudspråket som du använder som källa.
-1. Öppna referenslisten genom att klicka eller trycka **Referenser** i verktygsfältet.
+1. Öppna referenslisten genom att klicka eller trycka på **Referenser** i verktygsfältet.
 
    ![Referenser](../assets/references.png)
 
@@ -160,10 +160,10 @@ Fyll i din språkkopia så att den innehåller innehåll från huvudspråket som
 
    ![Välj språkkopior](../assets/language-copy-structure-select.png)
 
-1. Välj **Uppdatera språkkopior** för att visa översättningsverktygen och konfigurera egenskaperna:
+1. Välj **Uppdatera språkkopior** om du vill visa översättningsverktygen och konfigurera egenskaperna:
 
-   * Välj **Markera alla undersidor** alternativ.
-   * För **Projekt**, markera **Skapa endast struktur**.
+   * Välj alternativet **Markera alla undersidor**.
+   * För **Projekt** väljer du **Skapa endast struktur**.
 
    ![Endast struktur](../assets/language-copy-structure-only.png)
 
@@ -173,10 +173,10 @@ Fyll i din språkkopia så att den innehåller innehåll från huvudspråket som
 
 Manuella redigeringar av översatt innehåll kan synkroniseras tillbaka till översättningshanteringssystemet (TMS) för att utbilda översättningsminnet.
 
-1. När du har uppdaterat textinnehåll på en översatt sida i webbplatskonsolen väljer du **Uppdatera översättningsminne**.
+1. Välj **Uppdatera översättningsminne** när du har uppdaterat textinnehåll på en översatt sida i webbplatskonsolen.
 1. I en listvy visas en jämförelse sida vid sida av källan och översättningen för alla textkomponenter som redigerades. Välj vilka översättningsuppdateringar som ska synkroniseras med översättningsminnet och välj **Uppdatera minne**.
 
-![Jämför ändringar av översättningsminne](../assets/update-translation-memory-compare.png)
+![Jämför ändringar för översättningsminne](../assets/update-translation-memory-compare.png)
 
 AEM uppdaterar översättningen av de befintliga strängarna i översättningsminnet för den konfigurerade TMS:en.
 
@@ -197,11 +197,11 @@ Uppdateringarna av översättningsminnet kan fångas upp och skickas till en anp
 
 En egenskap kan väljas i listvyn i webbplatskonsolen som visar om en sida har översatts, är i översättning eller ännu inte har översatts.
 
-1. I platskonsolen växlar du till [listvy](/help/sites-cloud/authoring/basic-handling.md#viewing-and-selecting-resources).
-1. Välj, **Visa inställningar** i listrutan.
-1. I dialogrutan markerar du **Översatt** egenskap och välj **Uppdatera**.
+1. Gå till webbplatskonsolen och växla till [listvyn](/help/sites-cloud/authoring/basic-handling.md#viewing-and-selecting-resources).
+1. Välj **Visa inställningar** i listrutan.
+1. I dialogrutan kontrollerar du egenskapen **Translated** och väljer **Update**.
 
-Platskonsolen visar nu **Översatt** kolumn som visar översättningsstatusen för de listade sidorna.
+Platskonsolen visar nu kolumnen **Översatt** med översättningsstatusen för de listade sidorna.
 
 ![Översättningsstatus i listvyn](../assets/translation-status-list-view.png)
 
@@ -211,20 +211,20 @@ Många översättningsuppgifter och avancerade alternativ finns i projektkonsole
 
 ### Om projektkonsolen
 
-Översättningsprojekt i AEM använder standarden [AEM projektkonsol](/help/sites-cloud/authoring/projects/overview.md). Om du inte är van vid AEM kan du läsa den dokumentationen.
+Översättningsprojekt i AEM använder standardprojektkonsolen [AEM](/help/sites-cloud/authoring/projects/overview.md). Om du inte är van vid AEM kan du läsa den dokumentationen.
 
 Som alla andra projekt består ett översättningsprojekt av plattor som ger en översikt över projektuppgifterna.
 
 ![Översättningsprojekt](../assets/translation-project.png)
 
-* **Sammanfattning** - En översikt över projektet
-* **Uppgifter** - en eller flera översättningsuppgifter
+* **Sammanfattning** - en översikt över projektet
+* **Uppgifter** - en eller flera översättningsaktiviteter
 * **Team** - Användare som samarbetar i översättningsprojektet
-* **Uppgifter** - Objekt som måste fyllas i som en del av översättningsarbetet
+* **Uppgifter** - Objekt som måste slutföras som en del av översättningsarbetet
 
 Använd kommandona och ellipsknapparna längst upp och längst ned på plattorna (respektive) för att komma åt kontroller och alternativ för de olika plattorna.
 
-![Knappen Kommandon](../assets/context.png)
+![Kommandoknapp](../assets/context.png)
 
 ![Ellipsknapp](../assets/ellipsis.png)
 
@@ -234,23 +234,23 @@ Du kan skapa ett översättningsprojekt manuellt om du föredrar att använda pr
 
 >[!NOTE]
 >
->Om du vill skapa ett projekt måste ditt konto vara medlem i `project-administrators` grupp.
+>Om du vill skapa ett projekt måste ditt konto vara medlem i gruppen `project-administrators`.
 
-När du skapar ett översättningsprojekt manuellt måste du ange värden för följande översättningsrelaterade egenskaper utöver de [grundläggande egenskaper](/help/sites-cloud/authoring/projects/managing.md#creating-a-project):
+När du skapar ett översättningsprojekt manuellt måste du ange värden för följande översättningsrelaterade egenskaper utöver de [grundläggande egenskaperna](/help/sites-cloud/authoring/projects/managing.md#creating-a-project):
 
 * **Namn:** Projektnamn
-* **Källspråk:** Källinnehållets språk
+* **Source-språk:** Källinnehållets språk
 * **Målspråk:** Det eller de språk som innehållet översätts till
    * Om du väljer flera språk skapas ett jobb för varje språk i projektet.
-* **Översättningsmetod:** Välj **Översättning av människor** för att ange att översättningen ska utföras manuellt.
+* **Översättningsmetod:** Välj **mänsklig översättning** för att ange att översättningen ska utföras manuellt.
 
-1. I verktygsfältet i projektkonsolen väljer du **Skapa**.
-1. Välj **Översättningsprojekt** mall och välj sedan **Nästa**.
-1. Ange värden för **Grundläggande** egenskapsfliken.
+1. Välj **Skapa** i verktygsfältet i projektkonsolen.
+1. Markera mallen **Översättningsprojekt** och välj sedan **Nästa**.
+1. Ange värden för egenskapsfliken **Grundläggande**.
 1. Välj **Avancerat** och ange värden för översättningsrelaterade egenskaper.
-1. Välj **Skapa**. I bekräftelserutan väljer du **Klar** för att gå tillbaka till projektkonsolen, eller välj **Öppna projekt** för att öppna och börja hantera projektet.
+1. Välj **Skapa**. I bekräftelserutan väljer du **Klar** om du vill gå tillbaka till projektkonsolen eller **Öppna projekt** om du vill öppna och börja hantera projektet.
 
-### Lägga till sidor och resurser i ett översättningsjobb {#adding-pages-assets-to-a-translation-job}
+### Lägga till sidor och Assets i ett översättningsjobb {#adding-pages-assets-to-a-translation-job}
 
 Du kan lägga till sidor, resurser eller taggar i översättningsjobbet för översättningsprojektet. Så här lägger du till sidor eller resurser:
 
@@ -258,9 +258,9 @@ Du kan lägga till sidor, resurser eller taggar i översättningsjobbet för öv
 
    ![Översättningsjobbpanel](../assets/translation-job.png)
 
-1. Välj **Lägg till** i verktygsfältet och sedan markera **Resurser/sidor**.
+1. I nästa fönster väljer du knappen **Lägg till** i verktygsfältet och sedan **Assets/Sidor**.
 
-   ![Lägga till sidor](../assets/add-to-project.png)
+   ![Lägg till sidor](../assets/add-to-project.png)
 
 1. I det modala fönstret markerar du det översta objektet i grenen som du vill lägga till och markerar sedan bockmarkeringsikonen. Flerval är aktiverat i det här fönstret.
 
@@ -270,37 +270,37 @@ Du kan lägga till sidor, resurser eller taggar i översättningsjobbet för öv
 
    ![Sök efter innehåll](../assets/search-for-content.png)
 
-1. När du har valt **Välj**. Dina sidor och/eller resurser läggs till i översättningsjobbet.
+1. Välj **Markera** när du har markerat. Dina sidor och/eller resurser läggs till i översättningsjobbet.
 
 >[!TIP]
 >
->Den här metoden lägger till sidor/resurser och deras underordnade sidor i projektet. Välj **Resurs/sida (utan underordnade)** om du bara vill lägga till de överordnade.
+>Den här metoden lägger till sidor/resurser och deras underordnade sidor i projektet. Välj **Resurs/sida (utan underordnade)** om du bara vill lägga till överordnade objekt.
 
 ### Lägga till taggar i ett översättningsjobb {#adding-tags-to-a-translation-job}
 
-Du kan lägga till taggar i ett översättningsprojekt som liknar [hur du lägger till resurser och sidor i ett projekt](#adding-pages-assets-to-a-translation-job). Välj bara **Taggar** under **Lägg till** sedan följer du samma steg.
+Du kan lägga till taggar i ett översättningsprojekt som liknar [hur du lägger till resurser och sidor i ett projekt](#adding-pages-assets-to-a-translation-job). Välj bara **Taggar** under menyn **Lägg till** och följ sedan samma steg.
 
 ### Visa information om översättningsprojekt {#seeing-translation-project-details}
 
-Översättningsprojektegenskaperna är tillgängliga via ellipsknappen i sammanfattningsrutan för projektet. Förutom generiska [projektinformation](/help/sites-cloud/authoring/projects/overview.md#project-info), innehåller översättningsprojektegenskaperna översättningsspecifika.
+Översättningsprojektegenskaperna är tillgängliga via ellipsknappen i sammanfattningsrutan för projektet. Förutom den allmänna [projektinformationen](/help/sites-cloud/authoring/projects/overview.md#project-info) innehåller översättningsprojektegenskaperna översättningsspecifika.
 
-I översättningsprojektet väljer du ellipsen längst ned i rutan Översättningssammanfattning. De flesta projektspecifika egenskaper finns på **Avancerat** -fliken.
+I översättningsprojektet väljer du ellipsen längst ned i rutan Översättningssammanfattning. De flesta projektspecifika egenskaper finns på fliken **Avancerat**.
 
-* **Källspråk:** Språket för de sidor som översätts
+* **Source-språk:** Språket för de sidor som översätts
 * **Målspråk:** Det eller de språk som sidorna översätts till
 * **Molnkonfiguration:** Molnkonfigurationen för översättningstjänstkopplingen som används för projektet
-* **Översättningsmetod:** Översättningsarbetsflödet **Översättning av människor** eller **Maskinöversättning**
-* **Översättningsprovider:** Översättningstjänstleverantören som utför översättningen
-* **Innehållskategori:** (Maskinöversättning) Innehållskategorin som används för översättning
-* **Autentiseringsuppgifter för översättningsprovider:** Autentiseringsuppgifterna för att logga in på providern
-* **Befordra översättningsstarter automatiskt:** Efter att ha tagit emot översatt innehåll befordras översättningsöppningar automatiskt
-   * **Ta bort start efter befordran:** Om översättningsstarter befordras automatiskt tar du bort starten efter beställningen
+* **Översättningsmetod:** Översättningsarbetsflödet, antingen **Personöversättning** eller **Maskinöversättning**
+* **Översättningsprovider:** Den översättningstjänstleverantör som utför översättningen
+* **Innehållskategori:** (maskinöversättning) Innehållskategorin som används för översättning
+* **Autentiseringsuppgifter för översättningsprovider:** Autentiseringsuppgifterna som ska loggas in i providern
+* **Befordra översättningsstarter automatiskt:** När översatt innehåll har tagits emot befordras översättningsstarter automatiskt
+   * **Ta bort start efter erbjudande:** Om översättning startas automatiskt tar du bort start efter befordran
 * **Godkänn översättningar automatiskt:** När översatt innehåll har tagits emot godkänns översättningsjobb automatiskt
 * **Upprepa översättning:** Konfigurera återkommande körning av ett översättningsprojekt genom att välja den frekvens som projektet automatiskt skapar och kör översättningsjobb
 
 När ett projekt skapas med referenslinjen för en sida, konfigureras dessa egenskaper automatiskt baserat på källsidans egenskaper.
 
-![Översättningsprojektsegenskaper](../assets/translation-project-properties.png)
+![Översättningsprojektegenskaper](../assets/translation-project-properties.png)
 
 ### Övervaka status för ett översättningsjobb {#monitoring-the-status-of-a-translation-job}
 
@@ -312,15 +312,15 @@ I följande tabell beskrivs varje status som ett jobb eller ett objekt i jobbet 
 
 | Status | Beskrivning |
 |---|---|
-| **Utkast** | Översättningsjobbet har inte startats. Översättningsjobb finns i **Utkast** när de skapas. |
-| **Skickat** | Filer i översättningsjobbet har den här statusen när de har skickats till översättningstjänsten. Den här statusen kan inträffa efter **Begär omfång** kommandot eller **Starta** kommandot är utfärdat. |
-| **Begärt omfång** | Filerna i jobbet har skickats till översättningsleverantören för omfång för det mänskliga översättningsarbetsflödet. Den här statusen visas efter **Begär omfång** kommandot är utfärdat. |
+| **Utkast** | Översättningsjobbet har inte startats. Översättningsjobb har statusen **Utkast** när de skapas. |
+| **Skickat** | Filer i översättningsjobbet har den här statusen när de har skickats till översättningstjänsten. Den här statusen kan inträffa efter att kommandot **Begär omfång** eller kommandot **Start** har utfärdats. |
+| **Omfattning begärd** | Filerna i jobbet har skickats till översättningsleverantören för omfång för det mänskliga översättningsarbetsflödet. Den här statusen visas efter att kommandot **Begär omfång** har utfärdats. |
 | **Omfånget har slutförts** | Leverantören har omfattat översättningsjobbet. |
 | **Bekräftat för översättning** | Projektägaren har accepterat omfattningen. Den här statusen anger att översättningsleverantören ska börja översätta filerna i jobbet. |
 | **Översättning pågår** | För ett jobb är översättningen av en eller flera filer i jobbet inte slutförd än. För ett objekt i jobbet översätts objektet. |
 | **Översatt** | För ett jobb är översättningen av alla filer i jobbet slutförd. För ett objekt i jobbet översätts objektet. |
 | **Klar för granskning** | Objektet i jobbet översätts och filen har importerats till AEM. |
-| **Complete** | Projektägaren har angett att översättningskontraktet är slutfört. |
+| **Fullständigt** | Projektägaren har angett att översättningskontraktet är slutfört. |
 | **Avbryt** | Anger att översättningsleverantören ska sluta arbeta med ett översättningsjobb. |
 | **Feluppdatering** | Ett fel uppstod när filer överfördes mellan AEM och översättningstjänsten. |
 | **Okänt läge** | Ett okänt fel har inträffat. |
@@ -335,9 +335,9 @@ Ange det datum före vilket översättningsleverantören måste returnera övers
 
    ![Översättningssammanfattningsruta](../assets/translation-summary-tile.png)
 
-1. På **Grundläggande** använder du datumväljaren på fliken **Förfallodatum** för att välja förfallodatum.
+1. På fliken **Grundläggande** använder du datumväljaren för egenskapen **Förfallodatum** för att välja förfallodatum.
 
-   ![Översättningsprojektsegenskaper](../assets/translation-project-properties-basic.png)
+   ![Översättningsprojektegenskaper](../assets/translation-project-properties-basic.png)
 
 1. Välj **Spara och stäng**.
 
@@ -351,13 +351,13 @@ Kontakta översättningsleverantören om du vill ha mer information om omfångsr
 >
 >Omfattningen är valfri och gäller endast för mänsklig översättning. Du kan starta ett översättningsjobb utan omfång.
 
-När du omsluter ett översättningsjobb är jobbets status **Begärt omfång**. När översättningsleverantören returnerar omfånget ändras statusen till **Omfånget har slutförts**. När omfånget är klart kan du använda **Visa omfång** för att granska omfångsresultaten.
+När du omsluter ett översättningsjobb är jobbets status **Omfång begärd**. När översättningsleverantören returnerar omfånget ändras statusen till **Omfånget slutfört**. När omfånget är klart kan du använda kommandot **Visa omfång** för att granska omfångsresultaten.
 
 Omfånget fungerar bara korrekt när den översättningsleverantör som du använder har stöd för den här funktionen.
 
 1. Öppna översättningsprojektet i projektkonsolen.
 1. På översättningsjobbets titel väljer du kommandomenyn och sedan **Begär omfång**.
-1. När jobbstatusen ändras till **Omfånget har slutförts** väljer du kommandomenyn och väljer **Visa omfång**.
+1. När jobbstatusen ändras till **Omfånget slutfört** väljer du kommandomenyn och sedan **Visa omfång** .
 
 ### Startar översättningsjobb {#starting-translation-jobs}
 
@@ -366,20 +366,20 @@ Starta ett översättningsjobb för att översätta källsidorna till målspråk
 Du kan starta ett enskilt jobb inifrån projektet.
 
 1. Öppna översättningsprojektet i projektkonsolen.
-1. På översättningsjobbpanelen väljer du kommandomenyn och sedan **Starta**.
+1. På översättningsjobbpanelen väljer du kommandomenyn och sedan **Start**.
 1. I åtgärdsdialogrutan som bekräftar översättningens början väljer du **Stäng**.
 
-När du har startat översättningsjobbet visas översättningen i **Pågår** status.
+När du har startat översättningsjobbet visar översättningsjobbpanelen översättningen med statusen **Pågår**.
 
 Du kan också starta alla översättningsjobb för ett projekt.
 
 1. Välj översättningsprojektet i projektkonsolen.
-1. I verktygsfältet markerar du **Starta översättningsjobb**.
-1. Granska listan över jobb som har startats i dialogrutan och bekräfta sedan med **Starta** eller avbryta med **Avbryt**.
+1. Välj **Starta översättningsjobb** i verktygsfältet.
+1. Granska listan över jobb som har startats i dialogrutan och bekräfta sedan med **Start** eller avbryt med **Avbryt**.
 
 ### Avbryta ett översättningsjobb {#canceling-a-translation-job}
 
-Avbryt ett översättningsjobb om du vill stoppa översättningsprocessen och förhindra att översättningsleverantören utför fler översättningar. Du kan avbryta ett jobb när jobbet har **Bekräftat för översättning** eller **Översättning pågår** status.
+Avbryt ett översättningsjobb om du vill stoppa översättningsprocessen och förhindra att översättningsleverantören utför fler översättningar. Du kan avbryta ett jobb när jobbet har statusen **Bekräftad för översättning** eller **Pågående översättning**.
 
 1. Öppna översättningsprojektet i projektkonsolen.
 1. På översättningsjobbpanelen väljer du kommandomenyn och sedan **Avbryt**.
@@ -387,7 +387,7 @@ Avbryt ett översättningsjobb om du vill stoppa översättningsprocessen och f�
 
 ### Acceptera och ignorera arbetsflöde {#accept-reject-workflow}
 
-När innehållet kommer tillbaka efter översättning och är i **Klar för granskning** kan du gå in i översättningsjobbet och acceptera/avvisa innehåll.
+När innehållet kommer tillbaka efter översättning och har statusen **Klart för granskning** kan du gå in i översättningsjobbet och acceptera/avvisa innehåll.
 
 Om du väljer **Avvisa översättning** kan du lägga till en kommentar.
 
@@ -398,7 +398,7 @@ Om du avvisar innehåll skickas det tillbaka till översättningsleverantören d
 Slutför ett översättningsjobb när du har granskat de översatta filerna från leverantören.
 
 1. Öppna översättningsprojektet i projektkonsolen.
-1. På översättningsjobbpanelen väljer du kommandomenyn och sedan **Complete**.
+1. På översättningsjobbpanelen väljer du kommandomenyn och sedan **Fullständig**.
 1. Jobbet har nu statusen **Complete**.
 
 För mänskliga översättningsarbetsflöden anger en översättning för leverantören att översättningsavtalet har uppfyllts och att de bör spara översättningen till sitt översättningsminne.
@@ -416,57 +416,57 @@ Du kan använda webbplatskonsolen för att granska innehåll, jämföra språkko
 
 ### Befordra uppdaterat innehåll {#promoting-updated-content}
 
-När innehåll översätts för en befintlig språkkopia granskar du översättningarna, gör ändringar om det behövs och höjer sedan översättningarna så att de flyttas till språkkopian. Du kan granska översatta filer när översättningsjobbet visar **Klar för granskning** status.
+När innehåll översätts för en befintlig språkkopia granskar du översättningarna, gör ändringar om det behövs och höjer sedan översättningarna så att de flyttas till språkkopian. Du kan granska översatta filer när översättningsjobbet visar statusen **Klart för granskning**.
 
 ![Jobbet är klart för granskning](../assets/job-ready-for-review.png)
 
-1. Markera sidan i språkmallen och välj **Referenser** väljer **Språkkopior**.
+1. Markera sidan i språkmallen, välj **Referenser** och sedan **Språkkopior**.
 1. Välj den språkkopia som ska granskas.
 
    ![Språkkopia klar för granskning](../assets/language-copy-ready-for-review.png)
 
-1. Välj **Starta** för att visa startrelaterade kommandon.
+1. Välj **Starta** om du vill visa startrelaterade kommandon.
 
    ![Startar](../assets/language-copy-launch.png)
 
-1. Om du vill öppna startkopian av sidan för att granska och redigera innehållet klickar du på **Öppna sida**.
-1. När du har granskat innehållet och gjort de ändringar som krävs befordrar du en startkopia genom att klicka **Befordra**.
-1. På **Promote Launch** sida, ange vilka sidor som ska befordras och markera sedan **Befordra**.
+1. Klicka på **Öppna sida** om du vill öppna startkopian av sidan för att granska och redigera innehållet.
+1. När du har granskat innehållet och gjort nödvändiga ändringar kan du befordra startkopian genom att klicka på **Befordra**.
+1. På sidan **Befordra start** anger du vilka sidor som ska befordras och väljer sedan **Befordra**.
 
 ### Jämför språkkopior {#comparing-language-copies}
 
 Så här jämför du språkkopior med språkinställningen:
 
 1. Gå till den språkkopia som du vill jämföra i webbplatskonsolen.
-1. Öppna [Referensspår](/help/sites-cloud/authoring/basic-handling.md#references).
-1. Under **Kopior** rubrikmarkera **Språkkopior.**
-1. Välj en språkversion och sedan kan du antingen klicka **Jämför med mallsida** eller **Jämför med föregående** om tillämpligt.
+1. Öppna [referenslisten](/help/sites-cloud/authoring/basic-handling.md#references).
+1. Under rubriken **Kopior** väljer du **Språkkopior.**
+1. Välj den specifika språkkopian och klicka sedan på **Jämför med mallsida** eller **Jämför med föregående** om tillämpligt.
 
    ![Jämför språkkopior](../assets/language-copy-compare.png)
 
 1. De två sidorna (start och källa) öppnas sida vid sida.
-   * Mer information om hur du använder den här funktionen finns i [Sidskillnader](/help/sites-cloud/authoring/sites-console/page-diff.md).
+   * Mer information om hur du använder den här funktionen finns i [Sidskillnad](/help/sites-cloud/authoring/sites-console/page-diff.md).
 
-## Flytta eller byta namn på en källsida {#move-source}
+## Flytta eller byta namn på en Source-sida {#move-source}
 
-Om en redan översatt källsida måste [ändrat namn eller flyttat](/help/sites-cloud/authoring/sites-console/managing-pages.md#moving-or-renaming-a-page)när du översätter sidan igen efter flytten skapas en språkkopia baserad på det nya sidnamnet/den nya sidplatsen. Den gamla språkkopian som baseras på föregående namn/plats finns fortfarande kvar. Du kan förhindra detta genom att använda funktionen för att kopiera uppdateringsspråk efter flytten:
+Om en redan översatt källsida måste [byta namn eller flyttas](/help/sites-cloud/authoring/sites-console/managing-pages.md#moving-or-renaming-a-page), skapas en språkkopia baserad på det nya sidnamnet/den nya platsen när sidan översätts igen. Den gamla språkkopian som baseras på föregående namn/plats finns fortfarande kvar. Du kan förhindra detta genom att använda funktionen för att kopiera uppdateringsspråk efter flytten:
 
 1. Flytta en sida som har en språkkopia.
 1. Välj språkkopieringsroten.
-1. Öppna **Referenser** -panelen.
-1. Välj **Språk Kopior**.
+1. Öppna panelen **Referenser**.
+1. Välj **Språkkopior**.
 1. Välj de målspråk som du vill uppdatera.
 1. Välj **Uppdatera språkkopior**.
 
-   ![update-language-copies](../assets/translation-move-to.png)
+   ![updating-language-copies](../assets/translation-move-to.png)
 
-1. Klicka **Uppdatera**. A [Starta](/help/sites-cloud/authoring/launches/promoting.md) skapas.
+1. Klicka på **Uppdatera**. En [Launch](/help/sites-cloud/authoring/launches/promoting.md) kommer att skapas.
 1. Navigera till den önskade språkroten och markera den.
-1. Använda **Referenser** panel, markera **Startar**.
+1. Välj **Startar** med hjälp av panelen **Referenser**.
 
-   ![Promot-launch-translation](../assets/promote-launch-translation.png)
+   ![Promote-launch-translation](../assets/promote-launch-translation.png)
 
-1. Klicka på Launch som skapades och klicka på **Befordra lansering**.
+1. Klicka på den Launch som skapades och klicka på **Promote launch**.
 
 Nu har källsidan flyttats och tillhörande språkkopia.
 
@@ -478,14 +478,14 @@ Nu har källsidan flyttats och tillhörande språkkopia.
 
 Du kan hämta innehållet i ett översättningsjobb, till exempel för att skicka till en översättningsleverantör som inte är integrerad med AEM via en koppling, eller för att granska innehållet.
 
-1. I översättningsjobbpanelens nedrullningsbara meny väljer du **Exportera**.
-1. I dialogrutan väljer du **Hämta exporterad fil** och om det behövs kan du spara filen i webbläsardialogrutan.
-1. I dialogrutan väljer du **Stäng**.
+1. Välj **Exportera** i listrutan för översättningsjobbpanelen.
+1. Välj **Hämta exporterad fil** i dialogrutan och använd vid behov webbläsardialogrutan för att spara filen.
+1. Välj **Stäng** i dialogrutan.
 
 ### Importera ett översättningsjobb {#importing-a-translation-job}
 
 Du kan importera översatt innehåll till AEM när översättningsleverantören skickar det till dig eftersom det inte är integrerat med AEM via en koppling.
 
-1. I översättningsjobbpanelens nedrullningsbara meny väljer du **Importera**.
+1. Välj **Importera** i listrutan för översättningsjobbpanelen.
 1. Använd webbläsarens dialogruta för att markera filen som ska importeras.
-1. I dialogrutan väljer du **Stäng**.
+1. Välj **Stäng** i dialogrutan.

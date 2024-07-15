@@ -1,6 +1,6 @@
 ---
-title: Versionsinformation om 2020.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
-description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.7.0."
+title: Versionsinformation för version 2020.7.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: "[!DNL Adobe Experience Manager] as a Cloud Service versionsinformation för 2020.7.0."
 exl-id: 75d354a3-6987-4de0-aec8-24043461c516
 feature: Release Information
 role: Admin
@@ -17,7 +17,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för Experience
 
 ## Releasedatum {#release-date}
 
-Utgivningsdatum för [!DNL Experience Manager] as a Cloud Service 2020.7.0 är 30 juli 2020.
+Lanseringsdatumet för [!DNL Experience Manager] as a Cloud Service 2020.7.0 är 30 juli 2020.
 
 ## Adobe Experience Manager Sites as a Cloud Service {#cloud-services-sites}
 
@@ -27,29 +27,29 @@ Utgivningsdatum för [!DNL Experience Manager] as a Cloud Service 2020.7.0 är 3
 
 * En ny implementering av användargränssnittet ersätter implementeringen som baseras på det klassiska användargränssnittet.
 
-* Förenklade dialogrutor för användargränssnitt, där man kan skapa ramverk för variabelmappning och andra konfigurationer för [!DNL Adobe Launch]. Se [Integrera Adobe Analytics](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/integrations/integrating-adobe-analytics.html) och [Integrera Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/integrations/integrating-adobe-target.html).
+* Förenklade dialogrutor för användargränssnitt, vilket gör att ramverket skapas för variabelmappning och andra konfigurationer till [!DNL Adobe Launch]. Se [Integrera Adobe Analytics](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/integrations/integrating-adobe-analytics.html) och [Integrera Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/integrations/integrating-adobe-target.html).
 
-* Konfigurationer lagras nu i `/conf` i stället för `/etc/cloudsettings` i Experience Manager-databasen.
+* Konfigurationer lagras nu i `/conf` i stället för i `/etc/cloudsettings` i Experience Manager-databasen.
 
 ## [!DNL Adobe Experience Manager Assets] as a Cloud Service {#assets}
 
 ### Nyheter i [!DNL Assets] {#what-is-new-assets}
 
-* [!DNL Asset Compute Service] är en skalbar och utbyggbar tjänst för att bearbeta resurser. Administratörer kan konfigurera [!DNL Experience Manager] för att anropa anpassade program som skapats med [!DNL Asset Compute Service]. Utvecklare kan använda tjänsten för att skapa specialanpassade program som klarar komplexa användningsfall. Den här webbtjänsten kan generera miniatyrbilder för olika filtyper, bildåtergivning av hög kvalitet från filformat i Adobe, koda videofilmer (framtida), extrahera metadata, extrahera full text som prekursor för indexering och köra en mediefil genom alla tillgängliga [!DNL Sensei] tjänster. se [använda mikrotjänster och bearbetningsprofiler](/help/assets/asset-microservices-configure-and-use.md).
+* [!DNL Asset Compute Service] är en skalbar och utökningsbar tjänst för att bearbeta resurser. Administratörer kan konfigurera [!DNL Experience Manager] att anropa anpassade program som skapats med [!DNL Asset Compute Service]. Utvecklare kan använda tjänsten för att skapa specialanpassade program som klarar komplexa användningsfall. Den här webbtjänsten kan generera miniatyrer för olika filtyper, bildåtergivning av hög kvalitet från filformat i Adobe, koda videofilmer (framtida), extrahera metadata, extrahera full text som prekursor för indexering och köra en resurs via alla tillgängliga [!DNL Sensei]-tjänster. se [använda resursmikrotjänster och bearbetningsprofiler](/help/assets/asset-microservices-configure-and-use.md).
 
-* Den inledande konfigurationen av [!DNL Dynamic Media] in [!DNL Experience Manager] as a Cloud Service har förbättrats för att bli mer robust. Det ger nu administratörerna förlopp för processerna.
+* Den inledande konfigurationen av [!DNL Dynamic Media] i [!DNL Experience Manager] as a Cloud Service har förbättrats för att bli mer robust. Det ger nu administratörerna förlopp för processerna.
 
-* Publicera resurser på [!DNL Dynamic Media] förenklas och görs mer robust genom att göra det till en integrerad del av den övergripande processen för bearbetning av tillgångar med hjälp av mikrotjänster och genom att förbättra grupppubliceringsbackend.
+* Publicering av resurser till [!DNL Dynamic Media] förenklas och görs mer robust genom att göra det till en integrerad del av den övergripande bearbetningen av resurser med hjälp av mikrotjänster och genom att förbättra grupppubliceringsbackend.
 
-* Arbetsflödessteg som inte är kompatibla med en Cloud Service-distribution har nu markerats med en varning i [!UICONTROL workflow model] redigerare. När du kör de befintliga arbetsflödena i Cloud Service-miljön hoppas de inkompatibla arbetsflödesstegen över.
+* Arbetsflödessteg som inte är kompatibla med en Cloud Service-distribution har nu markerats med en varning i [!UICONTROL workflow model]-redigeraren. När du kör de befintliga arbetsflödena i Cloud Service-miljön hoppas de inkompatibla arbetsflödesstegen över.
 
-* Arbetsflödesmodeller som skapats av kunder som distribueras till `/conf/global` i Git-projektet som är kopplat till miljön i [!DNL Cloud Manager] distribueras automatiskt till `/var` och därmed tillgängliga i [!DNL Experience Manager]. Arbetsflödesmodellerna för produkter i `/libs` som ändrats av kunden inte automatiskt distribueras till `/var`.
+* Arbetsflödesmodeller som skapats av kunder som har distribuerats till `/conf/global` i Git-projektet som är kopplat till miljön i [!DNL Cloud Manager] distribueras automatiskt till `/var` och är därmed tillgängliga i [!DNL Experience Manager]. Produktarbetsflödesmodellerna under `/libs` som ändrades av kunden distribueras inte automatiskt till `/var`.
 
 ### Fel har åtgärdats {#assets-bugs-fixed}
 
 * Guiden Flytta resurs läses inte in som förväntat för resurserna som ingår i samlingar. (CQ-4296756)
 * Värdena för `dam:size` och `dam:sha1` är exkluderade från XMP. (CQ-4237355)
-* När resurser avpubliceras i grupp [!DNL Brand Portal] genererar ett fel som tyder på att URI:n för begäran är för lång. (CQ-4299474)
+* När resurser avpubliceras i grupp genererar [!DNL Brand Portal] ett fel som anger att URI:n för begäran är för lång. (CQ-4299474)
 
 ## Adobe Experience Manager Commerce as a Cloud Service {#cloud-services-commerce}
 
@@ -57,20 +57,20 @@ Utgivningsdatum för [!DNL Experience Manager] as a Cloud Service 2020.7.0 är 3
 
 AEM Commerce finns nu i Cloud Service.
 
-Se [Komma igång med AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/commerce/getting-started.html) för mer information.
+Mer information finns i [Komma igång med AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/commerce/getting-started.html).
 
 ## Kärnkomponenter {#core-components}
 
 ### Nyheter {#what-is-new-core-components}
 
-Version 2.11.0 av [AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) ingår nu som en del av AEM Sites:
+Version 2.11.0 av [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är nu tillgänglig som en del av AEM Sites, inklusive:
 
-* Introduktion till en ny [PDF Viewer Component](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/pdf-viewer.html).
+* Introduktion av en ny [PDF-visningskomponent](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/pdf-viewer.html).
 
 * Stöd för AMP (Accelerated Mobile Pages) för kärnkomponenter finns nu. Det hjälper till att skapa snabbare kundupplevelser genom att göra sidövergången direkt när du kommer in på webbplatsen från ett mobilsökresultat från Google, vilket förbättrar användarengagemanget och SEO.
-Se [AMP-stöd för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/amp.html) för mer information.
+Mer information finns i [AMP-stöd för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/amp.html).
 
-* Kompatibilitet med version 1.0.2 av [Adobe-klientdatalager](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html).
+* Kompatibilitet med version 1.0.2 av [Adobe-klientdatalagret](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html).
 
 * Felkorrigeringar och förbättringar av kodkvaliteten.
 
@@ -78,7 +78,7 @@ Se [AMP-stöd för kärnkomponenterna](https://experienceleague.adobe.com/docs/e
 
 ### Releasedatum {#release-date-cm}
 
-Releasedatum för [!UICONTROL Cloud Manager] Version 2020.7.0 är 9 juli 2020.
+Releasedatum för [!UICONTROL Cloud Manager] version 2020.7.0 är 9 juli 2020.
 
 ### Nyheter {#what-is-new-cloud-manager}
 
@@ -88,22 +88,22 @@ Releasedatum för [!UICONTROL Cloud Manager] Version 2020.7.0 är 9 juli 2020.
 
 * Antalet miljövariabler per miljö har ökat till 200.
 
-* Molnhanterarens pipelines har nu stöd för kundspecifika variabler och hemligheter.
+* Cloud Manager rörledningar har nu stöd för variabler och hemligheter som kunderna ställer in.
 
   Mer information finns i Förloppsvariabler.
 
 * Stöd finns nu för autentiseringsbundna privata Maven-databaser.
 
-* Molnhanterarens byggbehållare har nu stöd för både Java 8 och Java 11.
+* Cloud Manager byggbehållare stöder nu både Java 8 och Java 11.
 Mer information finns i Använda Java 11-stöd.
 
 ### Felkorrigeringar {#bug-fixes-cm}
 
-* Länken från Cloud Manager till Developer Console var felaktigt aktiv innan miljöerna skapades helt.
+* Länken från Cloud Manager till Developer Console var inkorrekt aktiv innan miljöerna skapades helt.
 
-* Länken till Developer Console direkt från Cloud Manager visar inte alternativet att avplacera/viloläge för sandlådeprogrammets miljö.
+* Länken till Developer Console direkt från Cloud Manager visade inte möjligheten att avviloläge/viloläge för sandlådeprogrammets miljö.
 
-* The **Avbryt** och **Spara** på redigeringssidan för icke-produktionsförlopp var inte alltid synliga.
+* Alternativen **Avbryt** och **Spara** på redigeringssidan för icke-produktionsförlopp är inte alltid synliga.
 
 * Vissa fel i kodkvalitetsprocessen kan leda till att loggfilen inte genereras korrekt.
 
@@ -117,19 +117,19 @@ Mer information finns i Använda Java 11-stöd.
 
 ### Kända fel {#known-issues}
 
-* På grund av en förändring i hur kodsatsen beräknas kan *minimum* versionen av Jacoco-pluginprogrammet är nu 0.7.5.201505241946 (släppt i maj 2015). Kunder som uttryckligen hänvisar till en äldre version får ett felmeddelande i kodkvalitetsprocessen.
+* På grund av en ändring i hur kodsatsen beräknas är versionen *minimum* av Jacoco-pluginprogrammet nu 0.7.5.201505241946 (släppt i maj 2015). Kunder som uttryckligen hänvisar till en äldre version får ett felmeddelande i kodkvalitetsprocessen.
 
 ## Adobe Experience Manager as a Cloud Service Foundation {#cloud-foundation}
 
 ### Nyheter {#what-is-new-foundations}
 
-* [Loggar kan vidarebefordras till Splunk-konton](/help/implementing/developing/introduction/logging.md#splunk-logs), som gör det möjligt att använda Splunk-investeringen.
+* [Loggar kan vidarebefordras till Splunk-konton](/help/implementing/developing/introduction/logging.md#splunk-logs), som gör att organisationer kan använda sin Splunk-investering.
 
-* [En statisk, dedikerad IP-adress för utgångar](/help/implementing/developing/introduction/development-guidelines.md#dedicated-egress-ip-address) kan tilldelas för utgående trafik som programmeras i Java-kod, vilket kan vara användbart för vissa integreringar.
+* [En statisk, dedikerad IP-adress ](/help/implementing/developing/introduction/development-guidelines.md#dedicated-egress-ip-address) kan tilldelas för utgående trafik som programmeras i Java-kod, vilket kan vara användbart för vissa integreringar.
 
-* Ported AEM Analytics cloud service UI from Classic UI to new AEM UI. Platsen för Analytics-molntjänsten i AEM från har också flyttats `/etc` till `/conf`, för anpassning till andra AEM molntjänster.
+* Ported AEM Analytics cloud service UI from Classic UI to new AEM UI. Platsen för Analytics-molntjänsten i AEM från `/etc` till `/conf` har också flyttats för att anpassas till andra AEM molntjänster.
 
-* Portat AEM molntjänstgränssnitt från Classic UI till nytt AEM. Platsen för målmolntjänsten i AEM från har också flyttats `/etc` till `/conf`, för anpassning till andra AEM molntjänster.
+* Portat AEM molntjänstgränssnitt från Classic UI till nytt AEM. Platsen för Target-molntjänsten i AEM från `/etc` till `/conf` flyttades också för att anpassas till andra AEM molntjänster.
 
 ## Cloud Readiness Analyzer {#cloud-readiness-analyzer}
 
@@ -139,7 +139,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * Tidigare version av CRA kunde inte köras på Adobe Experience Manager (AEM) 6.1. Explicit stöd för att tillåta användare i administratörsgruppen har lagts till.
 
-  Se [Installera CRA på AEM 6.1](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/cloud-readiness-analyzer/using-cloud-readiness-analyzer.html#installing-on-aem61) för mer information.
+  Mer information finns i [Installera CRA på AEM 6.1](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/cloud-readiness-analyzer/using-cloud-readiness-analyzer.html#installing-on-aem61).
 
 * Den förfallotidsstämpel som visades i sammanfattningsrapporten var felaktig.
 

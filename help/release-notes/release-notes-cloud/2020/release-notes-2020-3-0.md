@@ -1,6 +1,6 @@
 ---
 title: Versionsinformation för version 2020.3.0
-description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.3.0."
+description: "[!DNL Adobe Experience Manager] as a Cloud Service versionsinformation för 2020.3.0."
 exl-id: 0393c789-3999-4e51-be83-269d6eabd3f3
 feature: Release Information
 role: Admin
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 ---
 
-# Versionsinformation för AEM as a Cloud Service 2020.3.0 {#release-notes}
+# Versionsinformation om AEM as a Cloud Service 2020.3.0 {#release-notes}
 
-På den här sidan finns en översikt över den allmänna versionsinformationen för Experience Manager as a Cloud Service 2020.3.0.
+På den här sidan beskrivs den allmänna versionsinformationen för Experience Manager as a Cloud Service 2020.3.0.
 
 ## Releasedatum {#release-date}
 
@@ -21,7 +21,7 @@ Releasedatum för Experience Manager as a Cloud Service 2020.3.0 är 5 mars 2020
 
 ## Cloud Manager {#cloud-manager}
 
-Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Cloud Manager i AEM as a Cloud Service Release 2020.3.0.
+Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Cloud Manager i AEM as a Cloud Service version 2020.3.0.
 
 ### Nyheter {#what-is-new}
 
@@ -36,4 +36,4 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 * Den tillfälliga SonarQube-instansen som användes i byggsteget misslyckades ibland att starta inom den konfigurerade tidsgränsen.
 * Samtidig generering av dev-miljöer i samma Cloud Service-program kan stöta på ett villkor där endast en kunde skapas.
 * Meddelanden från Experience Cloud om program för Cloud Service togs inte emot konsekvent.
-* I specifika projekt *ResourceResolver-objekt ska alltid stängas* skulle generera ett Null-pekarundantag. Detta påverkade dock inte pipelinekörningen.
+* I specifika projekt ska *ResourceResolver-objekten alltid vara stängda* vilket ger ett Null-pekarundantag. Detta påverkade emellertid inte pipelinekörningen.

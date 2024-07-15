@@ -15,22 +15,22 @@ I följande avsnitt beskrivs några problem som du kan stöta på när du använ
 
 ## Gammal sidversion på publicerad webbplats {#old-page-version-still-on-published-site}
 
-* **Problem**:
-   * Du har ändrat en sida och publicerat sidan på den publicerade webbplatsen, men *gammal* versionen av sidan visas fortfarande på publiceringswebbplatsen.
+* **Utgåva**:
+   * Du har ändrat en sida och publicerat sidan på den publicerade webbplatsen, men den *gamla* versionen av sidan visas fortfarande på den publicerade webbplatsen.
 * **Orsak**:
-   * Detta kan ha flera orsaker, oftast cachen (antingen din lokala webbläsare eller Dispatcher), men ibland kan det vara ett problem med replikeringskön.
+   * Detta kan ha flera orsaker, oftast cacheminnet (antingen din lokala webbläsare eller Dispatcher), men ibland kan det vara ett problem med replikeringskön.
 * **Lösningar**:
    * Här finns olika möjligheter:
    * Bekräfta att sidan har replikerats korrekt. Kontrollera sidstatus och, om det behövs, status för replikeringskön.
    * Rensa cacheminnet i den lokala webbläsaren och få åtkomst till sidan igen.
-   * Lägg till `?` till slutet av sidans URL. Till exempel:
+   * Lägg till `?` i slutet av sidans URL. Till exempel:
       * `http://<host>:<port>/sites.html/content?`
       * Detta begär sidan direkt från AEM och kringgår Dispatcher. Om du får den uppdaterade sidan är det en indikation på att du bör rensa Dispatcher-cachen.
    * Kontakta systemadministratören om det finns problem med replikeringsköerna.
 
 ## Komponentåtgärder visas inte i verktygsfältet {#component-actions-not-visible-on-toolbar}
 
-* **Problem**:
+* **Utgåva**:
    * Hela omfånget av tillämpliga komponentåtgärder visas inte när du redigerar en innehållssida i redigeringsmiljön.
 * **Orsak**:
    * I sällsynta fall kan en tidigare åtgärd påverka verktygsfältet.

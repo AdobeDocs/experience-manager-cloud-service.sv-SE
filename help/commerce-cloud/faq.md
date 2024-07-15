@@ -15,11 +15,11 @@ ht-degree: 0%
 
 ## 1. Används CIF GraphQL endast för e-handel eller kommer detta att vara tillgängligt för frågor som skapats AEM JCR?
 
-Adobe har antagit Adobe Commerce GraphQL API:er som sin officiella e-handels-API för alla e-handelsrelaterade data. AEM använder därför GraphQL för att utbyta affärsdata med Adobe Commerce och med valfri e-handelsmotor via I/O Runtime. Det här GraphQL-API:t är oberoende av AEM GraphQL-API:t för att komma åt innehållsfragment.
+Adobe har antagit Adobe Commerce GraphQL API:er som sin officiella e-handels-API för alla e-handelsrelaterade data. AEM använder därför GraphQL för att utbyta affärsdata med Adobe Commerce och med valfri e-handelsmotor via I/O Runtime. Det här GraphQL-API:t är oberoende av hur GraphQL-API AEM åtkomst till innehållsfragment.
 
 ## 2. Kan produktresurser (bilder) lagras och refereras från AEM via Adobe Commerce Admin? Hur kan resurser från Dynamic Media förbrukas?
 
-Det finns ingen officiell integrering med AEM Assets - Adobe Commerce. Det finns en partnerkoppling på [marknadsplats](https://marketplace.magento.com) <!-- THIS IS THE OLD URL THAT WAS USED. IT WAS 404 (https://marketplace.magento.com/bounteous-dam.html) -->
+Det finns ingen officiell integrering med AEM Assets - Adobe Commerce. Det finns en partnerkoppling tillgänglig på [Marketplace](https://marketplace.magento.com) <!-- THIS IS THE OLD URL THAT WAS USED. IT WAS 404 (https://marketplace.magento.com/bounteous-dam.html) -->
 
 Som en tillfällig lösning kan du lagra produktresurser (bilder) i AEM Assets, men du måste lagra resursens URL-adresser manuellt i Adobe Commerce. Dynamic Media är nu en del av AEM Assets och fungerar på samma sätt.
 
@@ -43,13 +43,13 @@ Detta beror på några andra aspekter som du måste tänka på. Hur stor är cac
 
 PIM-data exponeras för AEM och kunder via GraphQL-förfrågningar. Vi rekommenderar att PIM integreras med e-handelsmotorn (Adobe Commerce eller andra) så att PIM-data kan hämtas från e-handelsmotorn.
 
-## 8. Cachelagrar du även priser och andra data via Dispatcher. Blir det ofta en cachedomål?
+## 8. Cachelagra även priser och andra data via Dispatcher. Blir det ofta en cachedomål?
 
-Dynamiska data som pris eller lager cachelagras inte i Dispatcher. Dynamiska data hämtas på klientsidan med webbkomponenter direkt via GraphQL API:er. Endast statiska data (som produkt- eller kategoridata) cachelagras i Dispatcher. Om produktdata ändras måste cacheminnet ogiltigförklaras.
+Dynamiska data som pris eller lager cachelagras inte på Dispatcher. Dynamiska data hämtas på klientsidan med webbkomponenter direkt via GraphQL API:er. Endast statiska data (som produkt- eller kategoridata) cachelagras på Dispatcher. Om produktdata ändras måste cacheminnet ogiltigförklaras.
 
 ## 9. Hur fungerar cacheminnet för AEM Dispatcher med AEM och e-handel?
 
-Adobe rekommenderar att du ställer in TTL-baserad cacheogiltigförklaring för sidor som cachelagrats på Dispatcher. För dynamisk information som pris eller aktie rekommenderar Adobe att du återger data på klientsidan. Mer information om TTL-baserad cacheogiltigförklaring finns i [Optimera Dispatcher-cachen](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html) och [Optimering av AEM](https://experienceleague.adobe.com/docs/commerce-operations/deliver-commerce-at-scale/performance.html).
+Adobe rekommenderar att du ställer in TTL-baserad cacheogiltigförklaring för sidor som cachelagrats på Dispatcher. För dynamisk information som pris eller aktie rekommenderar Adobe att du återger data på klientsidan. Mer information om TTL-baserad cacheogiltigförklaring finns i [Optimera Dispatcher-cachen](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html) och [AEM Prestandaoptimering](https://experienceleague.adobe.com/docs/commerce-operations/deliver-commerce-at-scale/performance.html).
 
 ## 10. Finns det någon rekommendation om enhetlig sökning AEM innehåll med Commerce?
 
@@ -69,7 +69,7 @@ Adobe rekommenderar att man hanterar marknadsföringsrelaterade data och innehå
 
 ## 14. Hur kan PCI-kompatibilitet säkerställas när AEM används för hela presentationslagret?
 
-Adobe rekommenderar att abstrakta betalningsmetoder används. Detta innebär att webbläsarklienten kommunicerar direkt med betalgatewayleverantören så att varken Adobe eller e-handelslösningarna lagrar eller skickar kortinnehavardata. Den här metoden kräver endast en nivå 3 PCI-kompatibilitet. Det finns dock ytterligare saker att tänka på som helt PCI-kompatibla, till exempel hur medarbetarna interagerar med systemet och data. Mer information om Adobe Commerce PCI-kompatibilitet finns i [Krav för PCI-kompatibilitet](https://business.adobe.com/products/magento/pci-compliance.html).
+Adobe rekommenderar att abstrakta betalningsmetoder används. Detta innebär att webbläsarklienten kommunicerar direkt med betalgatewayleverantören så att varken Adobe eller e-handelslösningarna lagrar eller skickar kortinnehavardata. Den här metoden kräver endast en nivå 3 PCI-kompatibilitet. Det finns dock ytterligare saker att tänka på som helt PCI-kompatibla, till exempel hur medarbetarna interagerar med systemet och data. Mer information om Adobe Commerce PCI-kompatibilitet finns i [PCI-kompatibilitetskrav](https://business.adobe.com/products/magento/pci-compliance.html).
 
 ## 15. Om jag använder molnversionerna AEM och Adobe Commerce, är denna gemensamma lösning PCI-kompatibel?
 
@@ -77,4 +77,4 @@ Ja, självutvärderingsformulär D och försäkran om överensstämmelse finns t
 
 ## 16. Hur begär jag en I/O Runtime-licens?
 
-Du kan begära en testlicens för att använda I/O Runtime [här](https://developer.adobe.com/app-builder/trial/).
+Du kan begära en utvärderingslicens för att använda I/O-miljön [här](https://developer.adobe.com/app-builder/trial/).

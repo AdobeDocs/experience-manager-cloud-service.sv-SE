@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Följande specialfall loggas:
 
-1. Om en användare inte har någon e-postadress `profile/email` fält för *jcr* -noden migreras användaren eller gruppen i fråga men mappas inte. Detta gäller även om e-postadressen används som användarnamn för inloggning.
+1. Om en användare inte har någon e-postadress i fältet `profile/email` för sin *jcr*-nod migreras användaren eller gruppen i fråga men mappas inte. Detta gäller även om e-postadressen används som användarnamn för inloggning.
 
 1. Om det inte går att hitta något e-postmeddelande i IMS-systemet (Adobe Identity Management System) för det organisations-ID som används (eller, om IMS-ID:t inte kan hämtas), migreras användaren eller gruppen men inte mappas.
 
@@ -35,7 +35,7 @@ Följande specialfall loggas:
 
 ## Ytterligare överväganden {#additional-considerations}
 
-* Om inställningen **Rensa befintligt innehåll i molninstansen före intag** har angetts tas redan överförda användare bort från Cloud Servicen. Hela den befintliga databasen tas också bort och en ny databas skapas där innehållet hämtas. Den här åtgärden återställer även alla inställningar, inklusive behörigheter, för målanvändarinstansen och gäller för en Cloud Service som lagts till i **administratörer** grupp. Administratörsanvändaren måste läsas till **administratörer** grupp för att hämta åtkomsttoken för CTT.
+* Om inställningen **Rensa befintligt innehåll i molninstansen innan** har angetts tas redan överförda användare i Cloud Servicen bort. Hela den befintliga databasen tas också bort och en ny databas skapas där innehållet hämtas. Den här åtgärden återställer även alla inställningar, inklusive behörigheter, för målanvändarinstansen och gäller för en Cloud Service som lagts till i gruppen **administratörer**. Administratörsanvändaren måste läsas till gruppen **administratörer** för att hämta åtkomsttoken för CTT.
 
 * Adobe rekommenderar att du tar bort alla befintliga användare från målinstansen AEM Cloud Servicen innan du kör CTT med användarmappning. Den här åtgärden är nödvändig för att förhindra konflikter mellan att migrera användare från AEM till AEM. Konflikter kan uppstå vid förtäring om samma användare finns på AEM och AEM.
 
@@ -47,4 +47,4 @@ Följande specialfall loggas:
 
 ### What&#39;s Next {#whats-next}
 
-När du har lärt dig viktiga saker och exceptionella saker är du nu redo att använda verktyget. Se [Använda verktyget för användarmappning](/help/journey-migration/content-transfer-tool/user-mapping-tool-legacy/using-user-mapping-tool-legacy.md) för mer information.
+När du har lärt dig viktiga saker och exceptionella saker är du nu redo att använda verktyget. Mer information finns i [Använda verktyget för användarmappning](/help/journey-migration/content-transfer-tool/user-mapping-tool-legacy/using-user-mapping-tool-legacy.md).

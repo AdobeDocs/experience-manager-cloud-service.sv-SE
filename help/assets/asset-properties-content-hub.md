@@ -1,6 +1,6 @@
 ---
-title: Resursegenskaper i [!DNL the Content Hub]
-description: Lär dig hur du visar och hanterar resursegenskaper i [!DNL Content Hub]
+title: Resursegenskaper i  [!DNL the Content Hub]
+description: Lär dig hur du visar och hanterar resursegenskaper i  [!DNL Content Hub]
 role: User
 source-git-commit: 5a968440c8841abe7af2c81c4af12258b7e4547f
 workflow-type: tm+mt
@@ -12,9 +12,9 @@ ht-degree: 0%
 
 # Hantera resursegenskaper i Content Hub {#asset-properties}
 
-![Bild på metadatabubrik](assets/metadata-banner-image.png)
+![Metadatabannerbild](assets/metadata-banner-image.png)
 
-[!DNL The Content Hub] gör att du kan visa information om resursen som är viktig för en effektiv resursdistribution. Det är en samling av alla data som är tillgängliga för en tillgång.
+Med [!DNL The Content Hub] kan du visa information om resursen som är viktig för en effektiv resursdistribution. Det är en samling av alla data som är tillgängliga för en tillgång.
 
 Genom att visa resursegenskaper kan du kategorisera resurser ytterligare och det är praktiskt när mängden digital information ökar. Det går att hantera några hundra filer baserat på bara filnamn, miniatyrbilder och minne. Den här metoden är dock inte skalbar när antalet inblandade personer och antalet hanterade resurser ökar. Dessutom ökar värdet på en digital resurs allt eftersom resursen blir:
 
@@ -24,17 +24,17 @@ Genom att visa resursegenskaper kan du kategorisera resurser ytterligare och det
 
 ## Förutsättningar {#prerequisites}
 
-[Content Hub](deploy-content-hub.md#onboard-content-hub-users) kan utföra åtgärder som nämns i den här artikeln.
+[Content Hub-användare](deploy-content-hub.md#onboard-content-hub-users) kan utföra åtgärder som nämns i den här artikeln.
 
 ## Visa egenskaper för en resurs {#properties-ui}
 
-Innan du använder, delar eller hämtar en resurs kan du visa den närmare. Med förhandsvisningsfunktionen kan du visa inte bara bilderna utan även några andra resurstyper som stöds. Du kan inte bara visa resursen utan även visa detaljerad information och vidta andra åtgärder. Om du vill visa information om en resurs går du till resursen eller [sök](search-assets.md) resursen och klicka sedan på resursen för att öppna dess egenskaper. I följande bild visas fälten som är tillgängliga på en egenskapssida för en resurs:
+Innan du använder, delar eller hämtar en resurs kan du visa den närmare. Med förhandsvisningsfunktionen kan du visa inte bara bilderna utan även några andra resurstyper som stöds. Du kan inte bara visa resursen utan även visa detaljerad information och vidta andra åtgärder. Om du vill visa information om en resurs går du till resursen eller [söker](search-assets.md) efter resursen och klickar sedan på resursen för att öppna dess egenskaper. I följande bild visas fälten som är tillgängliga på en egenskapssida för en resurs:
 
-![Egenskaper för ett tillgångsgränssnitt](assets/properties-ui.png)
+![Egenskaper för ett resursgränssnitt](assets/properties-ui.png)
 
-* **S:** En tillgångs namn
-* **B:** Procentandel av zoomning eller förhandsgranskning av resurser som zoomas in eller ut
-* **C:** Ångra zoomning till tidigare markerad procent
+* **A:** Namnet på en tillgång
+* **B:** Procentandel av zoomning eller förhandsgranskning av resurser som är närmare zoomat in eller ut
+* **C:** Ångra zooma till den tidigare valda procentandelen
 * **D:** Gå till föregående eller nästa resurs
 * **E:** Antal Assets
 * **F:** Hämta resursen
@@ -103,9 +103,9 @@ När du har överfört en resurs hämtar Content Hub vissa egenskaper som genere
 
 <!--* **Tags:** Tags help you categorize assets that can be browsed and searched more efficiently. Tagging helps in propagating the appropriate taxonomy to other users and workflows. -->
 
-* **Smarta taggar:** [!DNL The Content Hub] använder Adobe Sensei smarta innehållstjänster för att utbilda resurser med hjälp av algoritmen för igenkänning i den taggbaserade strukturen. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. Smarta taggar ökar innehållets hastighet genom att hjälpa dig att snabbt hitta relevanta resurser. De smarta taggarna är ett exempel på resursinformation som inte finns i bilden. [!DNL The Content Hub] använder automatiskt smarta taggar på resurser som standard.
+* **Smarta taggar:** [!DNL The Content Hub] använder Adobe Sensei smarta innehållstjänster för att utbilda resurser med hjälp av igenkänningsalgoritmen i den taggbaserade strukturen. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. Smarta taggar ökar innehållets hastighet genom att hjälpa dig att snabbt hitta relevanta resurser. De smarta taggarna är ett exempel på resursinformation som inte finns i bilden. [!DNL The Content Hub] använder smarta taggar automatiskt på resurser som standard.
 
-* **Färgtaggar:** [Färgtaggar](#https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/color-tag-images.html?lang=en) hjälper dig att identifiera en resurs med hjälp av färger som identifieras automatiskt i en resurs med hjälp av Adobe Sensei AI-funktioner.
+* **Färgtaggar:** [Med färgtaggar](#https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/color-tag-images.html?lang=en) kan du identifiera en resurs med hjälp av färger som identifieras automatiskt i en resurs med hjälp av Adobe Sensei AI-funktioner.
 
 * Överföringsdatum
 
@@ -115,7 +115,7 @@ När du har överfört en resurs hämtar Content Hub vissa egenskaper som genere
 
 * Senast ändrad av
 
-Det finns också egenskaper som anges när resurser läggs till i Content Hub. Mer information finns i [Lägg till varumärkesgodkända mediefiler i Content Hub](upload-brand-approved-assets.md). Dessa egenskaper visas också på sidan med resursegenskaper.
+Det finns också egenskaper som anges när resurser läggs till i Content Hub. Mer information finns i [Lägga till varumärkesgodkända resurser i Content Hub](upload-brand-approved-assets.md). Dessa egenskaper visas också på sidan med resursegenskaper.
 
 Administratörer kan också konfigurera de egenskaper som ska visas för varje resurs. Mer information finns i [Konfigurera Content Hub användargränssnitt](configure-content-hub-ui-options.md#configure-asset-details-content-hub).
 

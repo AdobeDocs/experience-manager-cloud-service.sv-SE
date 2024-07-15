@@ -32,14 +32,14 @@ Du kan lägga till ett fragment flera gånger i ett dokument och använda databi
 
 >[!NOTE]
 >
-> Du kan enkelt anpassa fragmentupplevelsen för användare med [Konfigurera dialogruta och designdialogruta för komponenten Formulärfragment](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/adaptive-form-fragment).
+> Du kan enkelt anpassa fragmentupplevelsen för användare med dialogrutan [Konfigurera och dialogrutan Design för komponenten Form Fragment](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/adaptive-form-fragment).
 
 ## Skapa ett anpassat formulärfragment {#create-a-fragment}
 
 Du kan skapa ett anpassat formulärfragment från grunden eller spara en panel i ett befintligt anpassat formulär som fragment. Skapa ett formulärfragment:
 
 1. Logga in på din AEM Forms-instans på https://[*värdnamn*]:[*port*]/aem/forms.html.
-1. Klicka **Skapa > Adaptivt formulärfragment**.
+1. Klicka på **Skapa > Adaptivt formulärfragment**.
 
    ![Skapa anpassat formulärfragment](/help/forms/assets/adaptive-form-fragment.png)
 
@@ -48,22 +48,22 @@ Du kan skapa ett anpassat formulärfragment från grunden eller spara en panel i
 
    När du skapar formulärfragment för kärnkomponentbaserade formulär använder du alternativet Välj formulärtema för att välja ett kärnkomponentbaserat tema.
 
-1. Klicka för att öppna **Formulärmodell** -fliken och från **Välj från** väljer du en av följande modeller för fragmentet:
+1. Klicka för att öppna fliken **Formulärmodell** och välj en av följande modeller för fragmentet på den nedrullningsbara menyn **Välj från**:
 
    ![Visar modelltyp på fliken Formulärmodell](assets/create-af-1-1.png)
 
-   * **Ingen**: Anger att fragmentet ska skapas från grunden utan att någon formulärmodell används.
+   * **Inget**: Anger att fragmentet ska skapas från grunden utan att någon formulärmodell används.
 
      >[!NOTE]
      >
      > I Adaptiv Forms kan du använda ett enda formulärfragment (baserat på kärnkomponenter) flera gånger. Det stöder både icke-baserade och schemabaserade formulärfragment.
 
-   * **Schema**: Anger att fragmentet ska skapas med ett XML- eller JSON-schema som har överförts till AEM Forms. Du kan överföra eller välja mellan tillgängliga XML- eller JSON-scheman som formulärmodell för fragmentet. När du väljer ett XML-schema kan du också skapa ett adaptivt formulärfragment genom att välja en complexType som finns i det valda schemat från **[!UICONTROL XML Schema Complex Type]** listruta. När du väljer ett JSON-schema kan du också skapa ett adaptivt formulärfragment genom att välja en schemadefinition som finns i det valda schemat från **[!UICONTROL JSON Schema Definitions]** listruta.
+   * **Schema**: Anger att fragmentet ska skapas med ett XML- eller JSON-schema som har överförts till AEM Forms. Du kan överföra eller välja mellan tillgängliga XML- eller JSON-scheman som formulärmodell för fragmentet. När du väljer ett XML-schema kan du också skapa ett adaptivt formulärfragment genom att välja en complexType som finns i det valda schemat i listrutan **[!UICONTROL XML Schema Complex Type]**. När du väljer ett JSON-schema kan du också skapa ett adaptivt formulärfragment genom att välja en schemadefinition som finns i det valda schemat i listrutan **[!UICONTROL JSON Schema Definitions]**.
    * **Formulärdatamodell**: Anger att fragmentet ska skapas med en formulärdatamodell (FDM). Du kan skapa ett adaptivt formulärfragment baserat på endast ett datamodellsobjekt i en formulärdatamodell (FDM). Visa listrutan FDM-definitioner (Form Data Model). Den visar alla datamodellsobjekt i den angivna formulärdatamodellen (FDM). Markera ett datamodellsobjekt i listan.
 
-   ![FDM (Form Data Model)](assets/create-af-3.png)
+   ![Formulärdatamodell (FDM)](assets/create-af-3.png)
 
-1. Klicka **Skapa** och sedan klicka **Öppna** om du vill öppna fragmentet, med en standardmall, i redigeringsläge. I redigeringsläget kan du lägga till alla adaptiva formulärkomponenter i fragmentet.
+1. Klicka på **Skapa** och sedan på **Öppna** för att öppna fragmentet med en standardmall i redigeringsläge. I redigeringsläget kan du lägga till alla adaptiva formulärkomponenter i fragmentet.
 
 <!-- For information about Adaptive Form components, see [Introduction to authoring Adaptive Forms](../../forms/using/introduction-forms-authoring.md). --> Om du dessutom har valt ett XML-schema som formulärmodell för fragmentet visas en ny flik med formulärmodellhierarkin i innehållssökaren. Du kan dra och släppa formulärmodellelement till fragmentet. <!--The added form-model elements get converted into form components while retaining the original properties from the associated XDP or XSD. -->
 
@@ -75,11 +75,11 @@ När det adaptiva formulärfragmentet som baseras på ett schema eller en formul
 Så här lägger du till ett adaptivt formulärfragment i ett adaptivt formulär:
 
 1. Öppna det adaptiva formuläret i redigeringsläge.
-1. Lägg till **Adaptivt formulärfragment** till formuläret.
-1. Öppna konfigurationsdialogrutan för **Adaptivt formulärfragment** -komponenten.
-1. Välj **Fragmentreferens** i **Grundläggande** -fliken. Alla adaptiva Forms-fragment som är tillgängliga för ditt formulär, beroende på formulärmodellen, visas.
+1. Lägg till komponenten **Adaptivt formulärfragment** i formuläret.
+1. Öppna konfigurationsdialogrutan för komponenten **Adaptivt formulärfragment**.
+1. Markera **fragmentreferensen** på fliken **Grundläggande**. Alla adaptiva Forms-fragment som är tillgängliga för ditt formulär, beroende på formulärmodellen, visas.
 
-1. Markera ett adaptivt formulärfragment på **Adaptivt formulärfragment** i din adaptiva form.
+1. Markera ett adaptivt formulärfragment i komponenten **Adaptivt formulärfragment** i ditt adaptiva formulär.
 
    ![välj alternativet Adaptiva formulärfragment](/help/forms/assets/adaptive-form-fragment-basic.png)
 
@@ -117,7 +117,7 @@ Du kan skapa kapslade adaptiva formulärfragment, vilket betyder att du kan läg
 
 Du kan använda ett icke-baserat och schemabaserat formulärfragment flera gånger i ett anpassat formulär för att spara data unikt för varje formulärfragmentfält. Du kan t.ex. använda ett adressformulärfragment för att samla in adressinformation för permanenta adresser, kommunikationer och för att presentera levande adresser i ett låneansökningsformulär.
 
-![använda flera fragment i adaptiv form](/help/forms/assets/using-multiple-fragment-af.gif)
+![använder flera fragment i adaptiv form](/help/forms/assets/using-multiple-fragment-af.gif)
 
 <!--
 
@@ -135,7 +135,7 @@ Du kan utföra flera åtgärder på adaptiva formulärfragment med hjälp av AEM
 
 1. Gå till `https://[hostname]/aem/forms.html`.
 
-1. Klicka **Välj** i AEM Forms-verktygsfältet och välj ett adaptivt formulärfragment. I verktygsfältet visas följande åtgärder som du kan utföra på det valda adaptiva formulärfragmentet.
+1. Klicka på **Markera** i AEM Forms-verktygsfältet och välj ett adaptivt formulärfragment. I verktygsfältet visas följande åtgärder som du kan utföra på det valda adaptiva formulärfragmentet.
 
 <table>
  <tbody>
@@ -161,11 +161,11 @@ Du kan utföra flera åtgärder på adaptiva formulärfragment med hjälp av AEM
   </tr>
   <tr>
    <td><p>Lägg till ordlista</p> </td>
-   <td><p>Skapar en ordlista för lokalisering av det valda fragmentet. Mer information finns i <a>Lokalisera adaptiv Forms</a>.<br /> <br /> </p> </td>
+   <td><p>Skapar en ordlista för lokalisering av det valda fragmentet. Mer information finns i <a>Lokalisera anpassad Forms</a>.<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>Publish / Avpublicera</p> </td>
-   <td><p>Publicerar/avpublicerar det markerade fragmentet.<br /> <br /> </p> </td>
+   <td><p>Publicerar/återpublicerar det valda fragmentet.<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>Ta bort</p> </td>

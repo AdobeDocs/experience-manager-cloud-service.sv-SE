@@ -1,5 +1,5 @@
 ---
-title: Associerat innehåll (resurser - innehållsfragment)
+title: Associerat innehåll (Assets - innehållsfragment)
 description: Förstå hur den associerade innehållsfunktionen för AEM innehållsfragment tillhandahåller anslutningen så att resurser kan användas tillsammans med fragmentet.
 exl-id: 8c8ad768-a210-4d34-bb47-2347599bcac9
 feature: Content Fragments
@@ -14,21 +14,21 @@ ht-degree: 3%
 
 # Associerat innehåll{#associated-content}
 
-För innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service tillhandahåller den associerade innehållsfunktionen (som är tillgänglig i den ursprungliga redigeraren) anslutningen så att resurser kan användas tillsammans med fragmentet. Detta ger flexibilitet genom att [som ger dig tillgång till en rad resurser när du använder innehållsfragmentet](/help/assets/content-fragments/content-fragments.md#using-associated-content), samtidigt som det går snabbare att söka efter rätt resurs. Den här funktionen kan användas både för innehållsleverans utan rubrik och för att skapa sidor.
+För innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service ger den tillhörande innehållsfunktionen (som är tillgänglig i den ursprungliga redigeraren) anslutningen så att resurser kan användas tillsammans med fragmentet. Detta ger flexibilitet genom att [tillhandahåller ett intervall med resurser som du kan komma åt när du använder innehållsfragmentet](/help/assets/content-fragments/content-fragments.md#using-associated-content), samtidigt som det minskar tiden som krävs för att söka efter rätt resurs. Den här funktionen kan användas både för innehållsleverans utan rubrik och för att skapa sidor.
 
 >[!NOTE]
 >
->Innehållsfragment är en webbplatsfunktion, men lagras som **Resurser**.
+>Innehållsfragment är en webbplatsfunktion, men lagras som **Assets**.
 >
->Det finns två redigerare för att skapa innehållsfragment. I det här avsnittet beskrivs den ursprungliga redigeraren, som du i första hand kommer åt från **Resurser** konsol.
+>Det finns två redigerare för att skapa innehållsfragment. I det här avsnittet beskrivs den ursprungliga redigeraren, som huvudsakligen nås från **Assets**-konsolen.
 
 ## Lägga till associerat innehåll {#adding-associated-content}
 
 >[!NOTE]
 >
->Det finns olika metoder att lägga till [visuella resurser (till exempel bilder)](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
+>Det finns olika metoder för att lägga till [visuella resurser (till exempel bilder)](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till avsnittet och/eller sidan.
 
-För att kunna skapa associationen måste du först [lägga till medieresurser i en samling](/help/assets/manage-collections.md). När det är klart kan du:
+För att kunna skapa associationen måste du först [lägga till dina medieresurser i en samling](/help/assets/manage-collections.md). När det är klart kan du:
 
 1. Öppna fragmentet och välj **Associerat innehåll** på sidopanelen.
 
@@ -37,7 +37,7 @@ För att kunna skapa associationen måste du först [lägga till medieresurser i
 1. Beroende på om några samlingar redan har associerats eller inte väljer du antingen:
 
    * **Associera innehåll** - det här är den första associerade samlingen
-   * **Associera samling** - associerade samlingar har redan konfigurerats
+   * **Associate Collection** - associerade samlingar har redan konfigurerats
 
 1. Välj önskad samling.
 
@@ -45,7 +45,7 @@ För att kunna skapa associationen måste du först [lägga till medieresurser i
 
    ![Välj samling](assets/cfm-assoc-content-02.png)
 
-1. Bekräfta (med **Välj**). Samlingen visas som associerad.
+1. Bekräfta (med **Markera**). Samlingen visas som associerad.
 
    ![Bekräftad association](assets/cfm-assoc-content-03.png)
 
@@ -54,6 +54,6 @@ För att kunna skapa associationen måste du först [lägga till medieresurser i
 När du har kopplat en samling kan du:
 
 * **Ta bort** associationen.
-* **Lägg till resurser** till samlingen.
+* **Lägg till Assets** i samlingen.
 * Välj en resurs för ytterligare åtgärder.
 * Redigera resursen.

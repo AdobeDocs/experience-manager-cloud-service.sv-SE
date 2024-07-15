@@ -18,7 +18,7 @@ Carousel-banners gör det möjligt för marknadsförare att öka konverteringsgr
 
 Det kan vara tidskrävande att skapa och ändra innehåll i reklambanners, vilket begränsar möjligheten att snabbt publicera nytt innehåll eller göra det mer riktat. Med Carousel Banners kan du snabbt skapa eller ändra roterande banderoller och lägga till interaktivitet som hotspot-länkar till produktdetaljer eller relaterade resurser. Ni kan leverera dem till alla skärmar och snabbare få ut nytt marknadsföringsmaterial.
 
-Carousel Banners utses av en banderoll med ordet **[!UICONTROL CAROUSELSET]**:
+Carousel Banners har angetts av en banderoll med ordet **[!UICONTROL CAROUSELSET]**:
 
 ![chlimage_1-438](assets/chlimage_1-438.png)
 
@@ -34,11 +34,11 @@ I det här exemplet har en användare markerat ett bildschema och öppnat fönst
 
 ## Se hur karusellbanners skapas {#watch-how-carousel-banners-are-created}
 
-Se en genomgång på [hur karusellbanderoller skapas](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner) (Varaktighet: 10 minuter och 33 sekunder). Du får också lära dig hur du förhandsgranskar, redigerar och levererar karusellbanderoller.
+Titta på en genomgång av [hur karusellbanners skapas](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner) (varaktighet: 10 minuter och 33 sekunder). Du får också lära dig hur du förhandsgranskar, redigerar och levererar karusellbanderoller.
 
 >[!NOTE]
 >
->Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]** för att kunna skapa eller redigera karusellbanners. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **d[!UICONTROL am-users]** grupp.
+>Icke-administrativa användare måste läggas till i gruppen **[!UICONTROL dam-users]** för att kunna skapa eller redigera Carousel-banners. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i gruppen **d[!UICONTROL am-users]**.
 
 ## Snabbstart: Carousel Banners {#quick-start-carousel-banners}
 
@@ -63,7 +63,7 @@ Så här kommer du igång snabbt:
 
    Om du är administratör kan du anpassa karusellens beteende och utseende genom att skapa en egen förinställning för Carousel-visningsprogrammet. Den största fördelen är att du kan återanvända den här anpassade visningsförinställningen för flera bildspel. Man kan dock anpassa karusellens beteende och utseende direkt när man skapar karusellen. Detta är att föredra när du vill ha en specifik design för en viss karusell.
 
-1. [Överföra en bildbanderoll](#uploading-image-banners).
+1. [Överför en bildbanderoll](#uploading-image-banners).
 
    Överför bildbanderoller som du vill göra interaktiva.
 
@@ -71,27 +71,27 @@ Så här kommer du igång snabbt:
 
    I Carousels-uppsättningar navigerar användarna genom banderollbilder och väljer hotspot-områden eller bildscheman för att få tillgång till relevant innehåll.
 
-   Om du vill skapa en Carousel-uppsättning i resurser väljer du **[!UICONTROL Create]** väljer **[!UICONTROL Carousel Sets]**. Lägga till resurser i bildrutor och markera **[!UICONTROL Save]**. Du kan också redigera karusellens utseende och beteende direkt i redigeraren.
+   Om du vill skapa en Carousel-uppsättning i Assets väljer du **[!UICONTROL Create]** och sedan **[!UICONTROL Carousel Sets]**. Lägg till resurser i bildrutor och välj **[!UICONTROL Save]**. Du kan också redigera karusellens utseende och beteende direkt i redigeraren.
 
-1. [Lägga till aktiveringspunkter eller bildscheman i en bildbanderoll](#adding-hotspots-or-image-maps-to-an-image-banner).
+1. [Lägg till aktiveringspunkter eller bildscheman i en bildbanderoll](#adding-hotspots-or-image-maps-to-an-image-banner).
 
    Lägg till en eller flera hotspot-områden eller bildscheman i en bildbanderoll. Koppla sedan vart och ett till en åtgärd som en länk, en snabbvy eller ett Experience Fragment. När du har lagt till aktiveringspunkter eller bildscheman avslutar du den här uppgiften genom att publicera karuselluppsättningen. Med Publicering skapas den inbäddningskod som du kan använda för att kopiera och tillämpa på webbplatsens landningssida.
 
-   Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners) - Valfritt. Om du vill kan du visa en representation av karuselluppsättningen och testa dess interaktivitet.
+   Se [ (valfritt) Förhandsgranska Carousel Banners ](#optional-previewing-carousel-banners) - valfritt. Om du vill kan du visa en representation av karuselluppsättningen och testa dess interaktivitet.
 
-1. [Publicera Carousel Banners](#publishing-carousel-banners).
+1. [Publish Carousel Banners](#publishing-carousel-banners).
 
-   Du publicerar en Carousel-uppsättning på samma sätt som andra resurser. Navigera till Carousel-uppsättningen i Resurser, markera den och markera den **[!UICONTROL Publish]**. När du publicerar en Carousel Set aktiveras URL:en och strängen Embed.
+   Du publicerar en Carousel-uppsättning på samma sätt som andra resurser. I Assets går du till Carousel-uppsättningen, markerar den och väljer **[!UICONTROL Publish]**. När du publicerar en Carousel Set aktiveras URL:en och strängen Embed.
 
 1. Gör något av följande:
 
-   * [Lägg till en karusellbanderoll på din webbsida](#adding-a-carousel-banner-to-your-website-page)Du kan lägga till karusellbanderollens URL eller inbäddningskod som du har kopierat till webbsidan.
+   * [Lägg till en karusellbanderoll på webbplatssidan](#adding-a-carousel-banner-to-your-website-page)Du kan lägga till karusellbanderollens URL eller inbäddningskod som du har kopierat till webbplatssidan.
 
       * [Integrera karusellbanderollen med en befintlig snabbvy](#integrating-the-carousel-banner-with-an-existing-quickview). Om du använder ett tredjepartssystem för hantering av webbinnehåll måste du integrera den nya Carousel-banderollen med den befintliga snabbvyimplementeringen på din webbplats.
 
-   * [Lägg till en karusellbanderoll på din webbplats i Experience Manager](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md). Om du är kund hos Experience Manager Sites kan du lägga till karuselluppsättningen direkt på sidan med hjälp av komponenten Interactive Media.
+   * [Lägg till en karusellbanderoll på webbplatsen i Experience Manager](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md). Om du är kund hos Experience Manager Sites kan du lägga till karuselluppsättningen direkt på sidan med hjälp av komponenten Interactive Media.
 
-Om du måste redigera Carousel-uppsättningar, se [Redigera Carousel-uppsättningar](#editing-carousel-sets). Dessutom kan du visa och redigera [Carousel Set-egenskaper](/help/assets/manage-digital-assets.md#editing-properties).
+Om du måste redigera Carousel-uppsättningar läser du [Redigera Carousel-uppsättningar](#editing-carousel-sets). Dessutom kan du visa och redigera [Carousel Set-egenskaper](/help/assets/manage-digital-assets.md#editing-properties).
 
 ## Identifiera variabler för hotspot och bildschema {#identifying-hotspot-and-image-map-variables}
 
@@ -117,7 +117,7 @@ Ibland räcker det att rådfråga IT-specialister som är ansvariga för den bef
 
 De flesta QuickView-implementeringar använder följande paradigm:
 
-* Användaren aktiverar ett element i användargränssnittet på webbplatsen. Välj t.ex. en **[!UICONTROL Quickview]** -knappen.
+* Användaren aktiverar ett element i användargränssnittet på webbplatsen. Välj till exempel en **[!UICONTROL Quickview]**-knapp.
 * Webbplatsen skickar en Ajax-begäran till baksidan för att läsa in QuickView-data eller -innehåll vid behov.
 * Quickview-data översätts till innehållet som förberedelse för återgivning på webbsidan.
 * Slutligen återges sådant innehåll på skärmen visuellt i koden.
@@ -126,12 +126,12 @@ Då besöker man olika delar av den befintliga webbplatsen där QuickView-funkti
 
 Normalt behöver du inte använda några specialverktyg för felsökning. Moderna webbläsare har webbinspektörer som klarar ett bra jobb. Nedan följer några exempel på webbläsare som innehåller webbinspektörer:
 
-* Om du vill visa alla utgående HTTP-begäranden i Google Chrome trycker du på F12 (Windows®) eller Command-Option-I (Mac) för att öppna panelen för utvecklingsverktyget. Välj fliken Nätverk.
+* Om du vill visa alla utgående HTTP-begäranden i Google Chrome trycker du på F12 (Windows®) eller Command-Option-I (Mac) för att öppna panelen Utvecklarverktyg. Välj fliken Nätverk.
 * I Firefox kan du antingen aktivera Firebug-plugin genom att trycka på F12 (Windows®) eller Command-Option-I (Mac). Använd fliken Nätverk eller det inbyggda verktyget Granska och fliken Nätverk.
 
 När nätverksövervakning är aktiverat i webbläsaren utlöser du snabbvyn på sidan.
 
-Nu hittar du snabbvyns Ajax-URL i nätverksloggen och kopierar den inspelade URL:en för framtida analys. Vanligtvis skickas flera begäranden till servern när du utlöser snabbvyn. Vanligtvis är Quickview Ajax-URL en en av de första i listan. Den har antingen en komplex frågesträngsdel eller sökväg och dess MIME-svarstyp är antingen `text/html`, `text/xml`, eller `text/javascript`.
+Nu hittar du snabbvyns Ajax-URL i nätverksloggen och kopierar den inspelade URL:en för framtida analys. Vanligtvis skickas flera begäranden till servern när du utlöser snabbvyn. Vanligtvis är Quickview Ajax-URL en en av de första i listan. Den har antingen en komplex frågesträngsdel eller sökväg och dess MIME-svarstyp är antingen `text/html`, `text/xml` eller `text/javascript`.
 
 Under den här processen är det viktigt att du besöker olika delar av webbplatsen, med olika produktkategorier och typer. Anledningen är att URL:er för snabbvyn har delar som är gemensamma för en viss webbplatskategori, men som bara ändras om du besöker ett annat område på webbplatsen.
 
@@ -151,7 +151,7 @@ Titta på följande exempel på QuickView-URL:er och deras resulterande hotspot-
      <li><p><code>https://server/json?productId=1196184&amp;source=100</code></p> </li>
      <li><p><code>https://server/json?productId=1081492&amp;source=100</code></p> </li>
      <li><p><code>https://server/json?productId=1898294&amp;source=100</code></p> </li>
-    </ul> <p>Den enda variabeldelen i URL:en är värdet på <code>productId=</code> frågesträngsparameter, och det är tydligt ett SKU-värde. Därför behöver aktiveringspunkter och bildscheman bara SKU-fält med värden som <code>866558,</code> <code>1196184,</code> <code>1081492,</code> <code>1898294.</code></p> </td>
+    </ul> <p>Den enda variabeldelen i URL:en är värdet på frågesträngsparametern <code>productId=</code>, och det är tydligt ett SKU-värde. Därför behöver aktiveringspunkter och bildscheman bara SKU-fält med värden som <code>866558,</code> <code>1196184,</code> <code>1081492,</code> <code>1898294.</code></p> </td>
   </tr>
   <tr>
    <td>En SKU, finns i URL-sökvägen.</td>
@@ -160,7 +160,7 @@ Titta på följande exempel på QuickView-URL:er och deras resulterande hotspot-
      <li><p><code>https://server/product/6422350843</code></p> </li>
      <li><p><code>https://server/product/1607745002</code></p> </li>
      <li><p><code>https://server/product/0086724882</code></p> </li>
-    </ul> <p>Variabeldelen finns i den sista delen av banan och blir SKU-värdet för hotspot-områden/bildscheman:<strong><code>6422350843</code>, <code>1607745002,</code> </strong><code>0086724882.</code></p> </td>
+    </ul> <p>Variabeldelen finns i den sista delen av sökvägen och blir SKU-värdet för hotspot-områden/bildscheman:<strong><code>6422350843</code>, <code>1607745002,</code> </strong><code>0086724882.</code></p> </td>
   </tr>
   <tr>
    <td>SKU och kategori-ID i frågesträngen.</td>
@@ -169,7 +169,7 @@ Titta på följande exempel på QuickView-URL:er och deras resulterande hotspot-
      <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=305466</code></p> </li>
      <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=310181</code></p> </li>
      <li><p><code>https://server/quickView/product/?category=1740148&amp;prodId=308706</code></p> </li>
-    </ul> <p>I det här fallet finns det två olika delar i URL:en. SKU:n lagras i <code>prodId</code> -parametern och kategori-ID:t lagras i <code>category=</code>parameter.</p> <p>Definitionerna av hotspot/bildschema är par. Det vill säga ett SKU-värde och en extra variabel som kallas <code>categoryId</code>. De resulterande paren är följande:</p>
+    </ul> <p>I det här fallet finns det två olika delar i URL:en. SKU:n lagras i parametern <code>prodId</code> och kategori-ID:t lagras i parametern <code>category=</code>.</p> <p>Definitionerna av hotspot/bildschema är par. Det vill säga ett SKU-värde och en extra variabel som kallas <code>categoryId</code>. De resulterande paren är följande:</p>
     <ul>
      <li><p>SKU är <strong><code>305466</code></strong> och <code>categoryId</code> är <code>1100004</code>.</p> </li>
      <li><p>SKU är <strong><code>310181</code></strong> och <code>categoryId</code> är <strong><code>1100004</code></strong>.</p> </li>
@@ -183,43 +183,43 @@ Titta på följande exempel på QuickView-URL:er och deras resulterande hotspot-
 
 Om du redan har överfört de bilder du vill använda går du vidare till nästa steg, [Skapa Carousel-uppsättningar](#creating-carousel-sets). De bilder som används i karusellen måste överföras när Dynamic Media har aktiverats.
 
-Information om hur du överför bildbanderoller finns i [Överför resurser](/help/assets/manage-digital-assets.md).
+Mer information om hur du överför bildbanderoller finns i [Överför resurser](/help/assets/manage-digital-assets.md).
 
 ## Skapa Carousel-uppsättningar {#creating-carousel-sets}
 
 >[!NOTE]
 >
->Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]** för att kunna skapa eller redigera karusellbanners. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL dam-users]** grupp.
+>Icke-administrativa användare måste läggas till i gruppen **[!UICONTROL dam-users]** för att kunna skapa eller redigera Carousel-banners. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i gruppen **[!UICONTROL dam-users]**.
 
 **Så här skapar du Carousel-uppsättningar:**
 
-1. I Resurser navigerar du till den mapp där du vill skapa Carousel-uppsättningen och går till **[!UICONTROL Create > Carousel Set]**.
-1. På Carousel Banner Editor väljer du **[!UICONTROL Tap to open Asset Selector]** för att välja bilden för den första bilden.
+1. I Assets navigerar du till den mapp där du vill skapa Carousel-uppsättningen och går till **[!UICONTROL Create > Carousel Set]**.
+1. På Carousel Banner Editor-sidan väljer du **[!UICONTROL Tap to open Asset Selector]** för att välja bilden för din första bild.
 
    Gör något av följande på Carousel Banner Editor-sidan:
 
-   * I närheten av sidans övre vänstra hörn väljer du **[!UICONTROL Add Slide]** -ikon.
+   * I närheten av sidans övre vänstra hörn väljer du ikonen **[!UICONTROL Add Slide]**.
 
-   * I mitten av sidan väljer du **[!UICONTROL Tap to open Asset Selector]**.
+   * Välj **[!UICONTROL Tap to open Asset Selector]** i mitten av sidan.
 
-   Välj det här alternativet om du vill välja resurser som ska ingå i Carousel-uppsättningen. Markerade resurser har en bockmarkeringsikon över sig. När du är klar väljer du **[!UICONTROL Select]**.
+   Välj det här alternativet om du vill välja resurser som ska ingå i Carousel-uppsättningen. Markerade resurser har en bockmarkeringsikon över sig. När du är klar väljer du **[!UICONTROL Select]** i sidans övre högra hörn.
 
-   Med resursväljaren kan du söka efter resurser genom att skriva ett nyckelord och välja **[!UICONTROL Return]**. Du kan också använda filter för att förfina sökresultatet. Du kan filtrera efter sökväg, samling, filtyp och tagg. Markera filtret och välj sedan **[!UICONTROL Filter]** i verktygsfältet. Ändra vyn genom att markera ikonen Visa och välja **[!UICONTROL Column View]**, **[!UICONTROL Card View]**, eller **[!UICONTROL List View]**.
+   Med resursväljaren kan du söka efter resurser genom att skriva ett nyckelord och välja **[!UICONTROL Return]**. Du kan också använda filter för att förfina sökresultatet. Du kan filtrera efter sökväg, samling, filtyp och tagg. Markera filtret och välj sedan ikonen **[!UICONTROL Filter]** i verktygsfältet. Ändra vyn genom att markera ikonen Visa och välja **[!UICONTROL Column View]**, **[!UICONTROL Card View]** eller **[!UICONTROL List View]**.
 
-   Se [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md) för mer information.
+   Mer information finns i [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md).
 
 1. Fortsätt med att lägga till bilder tills du har lagt till alla bilder som du vill rotera genom i Carousel-uppsättningen.
 1. (Valfritt) Gör något av följande:
 
    * Om det behövs kan du dra bildrutorna för att ändra ordning på bilderna i listan.
-   * Markera bilden och markera sedan **[!UICONTROL Delete Slide]** i verktygsfältet.
+   * Om du vill ta bort en bild markerar du bilden och väljer sedan **[!UICONTROL Delete Slide]** i verktygsfältet.
 
    * Om du vill använda en förinställning väljer du den förinställda listrutan längst upp till höger på sidan och väljer sedan en förinställning som ska användas på uppsättningen samtidigt.
 
-   Om du vill ta bort en bildruta markerar du bildrutan. I verktygsfältet väljer du **[!UICONTROL Delete Slide]** i verktygsfältet. Om du vill flytta en bildruta markerar du ikonen för att ändra ordning och flyttar den till önskad plats.
+   Om du vill ta bort en bildruta markerar du bildrutan. Välj **[!UICONTROL Delete Slide]** i verktygsfältet. Om du vill flytta en bildruta markerar du ikonen för att ändra ordning och flyttar den till önskad plats.
 
 1. När du har lagt till bilderna i bildrutor kan du lägga till en aktiveringspunkt, ett bildschema eller båda delarna. Se [Lägga till aktiveringspunkter eller bildscheman i en bildbanderoll](#adding-hotspots-or-image-maps-to-an-image-banner).
-1. Du kan ändra den visuella designen och beteendet för karuselluppsättningar. Välj **[!UICONTROL Behavior]** och **[!UICONTROL Appearance]** om du vill justera hur karusellbanderollen visas eller hur specifika komponenter fungerar. Se [Hantera visningsförinställningar](/help/assets/dynamic-media/viewer-presets.md) om du vill ha mer information om hur du använder visningsprogrammet.
+1. Du kan ändra den visuella designen och beteendet för karuselluppsättningar. Välj flikarna **[!UICONTROL Behavior]** och **[!UICONTROL Appearance]** om du vill justera hur karusellbanderollen visas eller hur specifika komponenter fungerar. Mer information om hur du använder visningsprogramredigeraren finns i [Hantera visningsförinställningar](/help/assets/dynamic-media/viewer-presets.md).
 
    >[!NOTE]
    >
@@ -231,7 +231,7 @@ Information om hur du överför bildbanderoller finns i [Överför resurser](/he
    >* Ändra markeringsformatet för ett bildschema eller ikonen som används för aktiveringspunkter.
    >* Innan du redigerar en visningsförinställning väljer du det format som du vill basera förinställningen på. Om du inte väljer ett format förlorar du alla ändringar när du börjar redigera visningsförinställningen om du ändrar till en annan förinställning.
 
-   Du kan också förhandsgranska karusellbanderollens utseende. Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners).
+   Du kan också förhandsgranska karusellbanderollens utseende. Se [ (valfritt) Förhandsgranska Carousel-banderoller ](#optional-previewing-carousel-banners).
 
 1. Välj **[!UICONTROL Save]** när du är klar.
 
@@ -241,7 +241,7 @@ Du kan lägga till aktiveringspunkter eller bildscheman i en banderoll med hjäl
 
 När du lägger till aktiveringspunkter eller bildscheman kan du definiera dem som en snabbvypopup-visning, som en hyperlänk eller som en upplevelsefragment.
 
-Se [Experience Fragment](/help/sites-cloud/authoring/fragments/content-fragments.md).
+Se [Upplevelsefragment](/help/sites-cloud/authoring/fragments/content-fragments.md).
 
 >[!NOTE]
 >
@@ -253,7 +253,7 @@ Kom ihåg att spara ditt arbete när du lägger till hotspot-områden eller bild
 
 När du är klar med att skapa en karusellbanderoll kan du använda Förhandsgranska för att se hur karusellbanderollen ser ut för kunderna.
 
-Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners).
+Se [ (valfritt) Förhandsgranska Carousel-banderoller ](#optional-previewing-carousel-banners).
 
 >[!NOTE]
 >
@@ -267,12 +267,12 @@ Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-
 
 <!-- See also [Adding Image Maps](/help/assets/image-maps.md). -->
 
-**Så här lägger du till hotspot-områden eller bildscheman i en bildbanderoll:**
+**Så här lägger du till aktiveringspunkter eller bildscheman i en bildbanderoll:**
 
 1. Navigera från Assets till karuselluppsättningen som du vill göra interaktiv.
-1. Välj karuselluppsättning och välj **[!UICONTROL Edit]**. Carousel Viewer Editor öppnas.
+1. Markera karuselluppsättningen och välj **[!UICONTROL Edit]**. Carousel Viewer Editor öppnas.
 1. Markera den bildruta som du vill göra interaktiv.
-1. I närheten av sidans övre vänstra hörn väljer du **[!UICONTROL Hotspot]** eller **[!UICONTROL Image Map]**.
+1. Välj **[!UICONTROL Hotspot]** eller **[!UICONTROL Image Map]** i sidans övre vänstra hörn.
 1. Gör något av följande:
 
    * För aktiveringspunkter: På bilden väljer du en plats där du vill att aktiveringspunkten ska visas.
@@ -280,21 +280,21 @@ Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-
 
    Om det behövs drar du hotspot- eller bildschemat till en ny plats. Du kan också använda piltangenterna på tangentbordet för att styra positionen för ett markerat hotspot-område. Lägg till fler hotspot-områden eller bildscheman efter behov.
 
-   Om du vill ta bort ett hotspot- eller bildschema markerar du **[!UICONTROL Actions]** -fliken. Under **[!UICONTROL Maps & Hotspots]** rubrik, från **[!UICONTROL Selected Type]** markerar du namnet på den hotspot eller bildschema som du vill ta bort. Välj **[!UICONTROL Trash]** -ikonen bredvid menyn och välj **[!UICONTROL Delete]**.
+   Om du vill ta bort ett hotspot-område eller bildschema väljer du fliken **[!UICONTROL Actions]**. Under rubriken **[!UICONTROL Maps & Hotspots]** i listrutan **[!UICONTROL Selected Type]** markerar du namnet på hotspot eller bildschema som du vill ta bort. Markera ikonen **[!UICONTROL Trash]** bredvid menyn och välj sedan **[!UICONTROL Delete]**.
 
-1. Skriv namnet på aktiveringspunkten eller bildschemat i textfältet Namn. Det här namnet visas även i **[!UICONTROL Maps & Hotspot]** listruta. Om du anger ett namn blir det enkelt att identifiera hotspot-området eller bildschemat om du vill ändra det i framtiden.
-1. Gör något av följande i dialogrutan **[!UICONTROL Actions]** tab:
+1. Skriv namnet på aktiveringspunkten eller bildschemat i textfältet Namn. Det här namnet visas också i listrutan **[!UICONTROL Maps & Hotspot]**. Om du anger ett namn blir det enkelt att identifiera hotspot-området eller bildschemat om du vill ändra det i framtiden.
+1. Gör något av följande på fliken **[!UICONTROL Actions]**:
 
    * Välj **[!UICONTROL Quickview]**.
 
-      * Om du är Experience Manager Sites <!-- and Ecommerce--> kund väljer du produktväljarikonen (förstoringsglas) för att öppna sidan Välj produkt. Om du vill gå tillbaka till Carousel Banner Editor väljer du den produkt du vill använda och markerar sedan bockmarkeringen i det övre högra hörnet på sidan.
-      * Om du inte är Experience Manager Sites <!-- or Ecommerce --> kund:
+      * Om du är kund hos Experience Manager Sites <!-- and Ecommerce--> väljer du produktväljarens ikon (förstoringsglas) för att öppna produktsidan. Om du vill gå tillbaka till Carousel Banner Editor väljer du den produkt du vill använda och markerar sedan bockmarkeringen i det övre högra hörnet på sidan.
+      * Om du inte är Experience Manager Sites <!-- or Ecommerce -->-kund:
 
          * Definiera variabler. Se [Identifiera hotspot-variabler](#identifying-hotspot-and-image-map-variables).
          * Ange sedan SKU-värdet manuellt. I textfältet SKU-värde skriver du produktens SKU (Stock Keeping Unit), som är en unik identifierare för varje separat produkt eller tjänst som du erbjuder. Det angivna SKU-värdet fyller automatiskt i variabeldelen av snabbvymallen. Systemet känner nu till att associera den markerade aktiveringspunkten med en viss SKU:s snabbvy.
          * (Valfritt) Om det finns andra variabler i snabbvyn som du måste använda för att identifiera en produkt ytterligare väljer du **[!UICONTROL Add Generic Variable]**. Ange en extra variabel i textfältet. Till exempel är category=Mens en tillagd variabel.
 
-         * Se [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md) för mer information.
+         * Mer information finns i [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md).
 
    * Välj **[!UICONTROL Hyperlink]**.
 
@@ -308,11 +308,11 @@ Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-
 
    Var noga med att ange om länken ska öppnas på en ny webbläsarflik (rekommenderat standardvärde) eller på samma flik.
 
-   Se [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md) för mer information.
+   Mer information finns i [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md).
 
    * Välj **[!UICONTROL Experience Fragment]**.
 
-      * Om du är Experience Manager Sites-kund väljer du sökikonen (förstoringsglas) för att öppna sidan Experience Fragment. Om du vill gå tillbaka till sidan för hantering av aktiveringspunkter väljer du den upplevelsefragment du vill använda och sedan väljer du den i det övre högra hörnet på sidan **[!UICONTROL Select]**.
+      * Om du är Experience Manager Sites-kund väljer du sökikonen (förstoringsglas) för att öppna sidan Experience Fragment. Om du vill gå tillbaka till sidan för hantering av aktiveringspunkter väljer du det Experience Fragment som du vill använda och sedan väljer du **[!UICONTROL Select]** i det övre högra hörnet på sidan.
 Se [Upplevelsefragment](/help/sites-cloud/authoring/fragments/content-fragments.md).
 
       * Ange bredd och höjd för Experience Fragment så som det visas på banderollen.
@@ -325,20 +325,20 @@ Se [Upplevelsefragment](/help/sites-cloud/authoring/fragments/content-fragments.
 
    ![experience_fragment-carouselbanner](assets/experience_fragment-carouselbanner.png)
 
-   Du kan också förhandsgranska karusellbanderollens utseende. Se [(Valfritt) Förhandsgranska Carousel Banners](#optional-previewing-carousel-banners).
+   Du kan också förhandsgranska karusellbanderollens utseende. Se [ (valfritt) Förhandsgranska Carousel-banderoller ](#optional-previewing-carousel-banners).
 
 1. Välj **[!UICONTROL Save]**.
-1. Publicera karuselluppsättningen. Publicering skapar den inbäddningskod eller URL som du kan använda på din webbsida. Om du är Experience Manager Sites-kund lägger du till karuselluppsättningen direkt på din webbsida.
+1. Publish karuselluppsättningen. Publicering skapar den inbäddningskod eller URL som du kan använda på din webbsida. Om du är Experience Manager Sites-kund lägger du till karuselluppsättningen direkt på din webbsida.
 
-   Se [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
+   Se [Publish-resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
-   Se [Lägg till en karuselluppsättning på webbplatsens landningssida](#adding-a-carousel-banner-to-your-website-page)
+   Se [Lägg till en Carousel-uppsättning på webbplatsens landningssida](#adding-a-carousel-banner-to-your-website-page)
 
 ## Redigera Carousel-uppsättningar {#editing-carousel-sets}
 
 >[!NOTE]
 >
->Icke-administrativa användare måste läggas till i **[!UICONTROL dam-users]** för att kunna skapa eller redigera karusellbanners. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i **[!UICONTROL dam-users]** grupp.
+>Icke-administrativa användare måste läggas till i gruppen **[!UICONTROL dam-users]** för att kunna skapa eller redigera Carousel-banners. Om du har problem med att skapa eller redigera kontaktar du systemadministratören som kan lägga till dig i gruppen **[!UICONTROL dam-users]**.
 
 Du kan utföra olika redigeringsåtgärder på Carousel Sets, till exempel:
 
@@ -349,25 +349,25 @@ Du kan utföra olika redigeringsåtgärder på Carousel Sets, till exempel:
 * Ta bort Carousel Set.
 * Lägg till eller redigera hotspot-områden och bildscheman. Se även [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md).
 
-**Redigera Carousel-uppsättningar:**
+**Så här redigerar du Carousel-uppsättningar:**
 
 1. Gör något av följande:
 
    * Håll pekaren över en Carousel Set-resurs och välj sedan **[!UICONTROL Edit]** (pennikon).
-   * Hovra över en Carousel Set-resurs, välj **[!UICONTROL Select]** (bockmarkeringsikon) och sedan väljer du **[!UICONTROL Edit]**.
+   * Håll pekaren över en Carousel Set-resurs, välj **[!UICONTROL Select]** (bockmarkeringsikon) och välj sedan **[!UICONTROL Edit]** i verktygsfältet.
 
-   * Välj en Carousel Set-resurs och välj sedan i det övre vänstra hörnet på sidan **[!UICONTROL Edit]** (pennikon).
+   * Välj en Carousel Set-resurs och välj sedan **[!UICONTROL Edit]** (pennikon) i det övre vänstra hörnet på sidan.
 
 1. Om du vill redigera Carousel-uppsättningen gör du något av följande:
 
-   * Om du vill lägga till en bildruta väljer du **[!UICONTROL Add Slide]** -ikon. Navigera till den resurs som du vill lägga till i bildrutan och markera sedan bockmarkeringen.
+   * Om du vill lägga till en bildruta väljer du ikonen **[!UICONTROL Add Slide]**. Navigera till den resurs som du vill lägga till i bildrutan och markera sedan bockmarkeringen.
    * Om du vill ändra ordning på bildrutorna drar du en bildruta till en ny plats (markera sorteringsikonen för att flytta objekt).
-   * Om du vill lägga till ett hotspot- eller bildschema markerar du hotspot- eller bildschemaikonerna och ser [Lägga till aktiveringspunkter och bildscheman i en bildbanderoll](#adding-hotspots-or-image-maps-to-an-image-banner).
-   * Om du vill redigera karuselluppsättningens utseende eller beteende väljer du **[!UICONTROL Appearance]** tabb eller **[!UICONTROL Behavior]** och sedan ange önskade alternativ.
-   * Om du vill redigera aktiveringspunkter eller bildscheman markerar du ett hotspot-område eller bildschema på lämplig bildruta. Under **[!UICONTROL Actions]** gör ändringarna.
+   * Om du vill lägga till ett hotspot- eller bildschema markerar du hotspot- eller bildschemaikonerna och läser [Lägga till hotspot- eller bildscheman i en bildbanderoll](#adding-hotspots-or-image-maps-to-an-image-banner).
+   * Om du vill redigera karuselluppsättningens utseende eller beteende väljer du fliken **[!UICONTROL Appearance]** eller fliken **[!UICONTROL Behavior]** och anger sedan önskade alternativ.
+   * Om du vill redigera aktiveringspunkter eller bildscheman markerar du ett hotspot-område eller bildschema på lämplig bildruta. Gör dina ändringar på fliken **[!UICONTROL Actions]**.
    * Om du vill ta bort en bildruta markerar du den och väljer sedan **[!UICONTROL Delete Slide]** i verktygsfältet.
-   * Om du vill använda en förinställning, nära det övre högra hörnet på sidan, väljer du **[!UICONTROL Preset]** och välj sedan en visningsförinställning.
-   * Om du vill ta bort en hel Carousel-uppsättning går du till Carousel-uppsättningen, markerar den och markerar den **[!UICONTROL Delete]**.
+   * Om du vill använda en förinställning väljer du listrutan **[!UICONTROL Preset]** längst upp till höger på sidan och väljer sedan en visningsförinställning.
+   * Om du vill ta bort en hel Carousel-uppsättning går du till Carousel-uppsättningen, markerar den och väljer sedan **[!UICONTROL Delete]**.
 
    >[!NOTE]
    >
@@ -380,13 +380,13 @@ Du kan använda Förhandsgranska för att se hur karusellbanderollen ser ut för
 När du är nöjd med karusellbanderollen kan du publicera den.
 Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
 Se [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager Sites-sidor.
-Se [Lägga till Dynamic Media Assets på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
+Se [Lägg till Dynamic Media Assets på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
 
-Du kan förhandsgranska karusellbanners från Carousel Editor (föredragen metod) eller från **[!UICONTROL Viewers]** lista.
+Du kan förhandsgranska karusellbanderoller från Carousel Editor (föredragen metod) eller från listan **[!UICONTROL Viewers]**.
 
 **Om du vill förhandsgranska Carousel Banners:**
 
-1. I **[!UICONTROL Assets]** navigera till en befintlig Carousel-banderoll som du har skapat och välj att öppna den.
+1. I **[!UICONTROL Assets]** navigerar du till en befintlig Carousel-banderoll som du har skapat och väljer att öppna den.
 1. Välj **[!UICONTROL Edit]**.
 1. I listan med visningsförinställningar i det högra hörnet av verktygsfältet väljer du ett visningsprogram för att förhandsvisa karusellbanderollen.
 
@@ -397,12 +397,12 @@ Du kan förhandsgranska karusellbanners från Carousel Editor (föredragen metod
 
 **Så här förhandsgranskar du Carousel banners från visningslistan:**
 
-1. I **[!UICONTROL Assets]** navigera till en befintlig Carousel-banderoll som du har skapat och välj att öppna den.
+1. I **[!UICONTROL Assets]** navigerar du till en befintlig Carousel-banderoll som du har skapat och väljer att öppna den.
 1. I det övre vänstra hörnet av förhandsvisningssidan väljer du ikonen Innehåll.
-1. I **[!UICONTROL Viewers]** i panelen till vänster på sidan markerar du namnet på den visningsförinställning för Carousel banner som du vill använda.
+1. I listan **[!UICONTROL Viewers]** på panelen till vänster på sidan markerar du namnet på den visningsförinställning för Carousel banner som du vill använda.
 1. Om du vill testa de associerade åtgärderna markerar du hotspot-områden eller bildscheman på bilden.
 
-## Publicera Carousel Banners {#publishing-carousel-banners}
+## Publish Carousel Banners {#publishing-carousel-banners}
 
 Om du vill använda karusellen måste du publicera den. När du publicerar en Carousel Set aktiveras URL:en och Bädda in kod. Carousel publiceras också i Dynamic Media Cloud, som är integrerat med ett CDN för skalbar och högpresterande leverans.
 
@@ -412,7 +412,7 @@ Om du vill använda karusellen måste du publicera den. När du publicerar en Ca
 >
 >Om du ändrar en befintlig publicerad interaktiv bild som du använder i en karusellbanderoll publicerar du den interaktiva bilden så att ändringarna återspeglas i karusellbanderollen.
 
-Se [Publicera Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md) om du vill ha information om hur du publicerar Carousel-banners.
+Se [Publish Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md) för mer information om hur du publicerar Carousel-banners.
 
 ## Lägg till en Carousel-banderoll på din webbsida {#adding-a-carousel-banner-to-your-website-page}
 
@@ -420,7 +420,7 @@ När du har överfört banderollbilder för att skapa en karusell, tillagda hots
 
 >[!NOTE]
 >
->Om du är kund hos Experience Manager Sites kan du lägga till karusellbanderollen direkt på din sida genom att dra Interactive Media-komponenten till din sida. Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
+>Om du är kund hos Experience Manager Sites kan du lägga till karusellbanderollen direkt på din sida genom att dra Interactive Media-komponenten till din sida. Se [Lägg till Dynamic Media Assets på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
 
 Om du är en fristående Experience Manager Assets-kund kan du dock lägga till karusellbanderollen manuellt på webbplatsens landningssida.
 

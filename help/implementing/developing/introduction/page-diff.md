@@ -48,4 +48,4 @@ Skillnaden sker på klientsidan genom DOM-jämförelse, vilket gör diff-process
 
    * Komponenter som använder AJAX för att inkludera innehåll
    * Enkelsidiga program
-   * JavaScript-baserade komponenter som ändrar DOM när användaren interagerar.
+   * JavaScript-baserade komponenter som ändrar DOM efter användarinteraktion.

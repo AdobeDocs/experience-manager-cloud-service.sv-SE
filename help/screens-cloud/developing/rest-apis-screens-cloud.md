@@ -1,6 +1,6 @@
 ---
 title: REST API:er
-description: Skärmar as a Cloud Service har ett enkelt RESTful-API som följer Siren-specifikationen. Följ den här sidan om du vill lära dig hur du navigerar i innehållsstrukturen och skickar kommandon till enheter i miljön.
+description: Screens as a Cloud Service har ett enkelt RESTful-API som följer Siren-specifikationen. Följ den här sidan om du vill lära dig hur du navigerar i innehållsstrukturen och skickar kommandon till enheter i miljön.
 exl-id: 2c52583f-0dd9-4fa3-880b-7671442989ae
 feature: Developing Screens
 role: Admin, Developer
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # REST API:er {#rest-apis}
 
-AEM Screens tillhandahåller ett enkelt RESTful-API som följer [Siren](https://github.com/kevinswiber/siren) -specifikation. Det gör att du kan navigera i innehållsstrukturen och skicka kommandon till enheter i miljön.
+AEM Screens tillhandahåller ett enkelt RESTful-API som följer specifikationen [Siren](https://github.com/kevinswiber/siren) . Det gör att du kan navigera i innehållsstrukturen och skicka kommandon till enheter i miljön.
 
 API:t finns på [*http://localhost:4502/api/screens.json*](http://localhost:4502/api/screens.json).
 
@@ -99,7 +99,7 @@ Host: http://localhost:4502
 
 Den JSON som returneras av API-anropen kan innehålla en lista över åtgärder som är tillgängliga för resursen.
 
-Visningen visar till exempel en *broadcast-command* åtgärd som gör att du kan skicka ett kommando till alla enheter som är tilldelade den visningen.
+Visningen innehåller till exempel en *broadcast-command*-åtgärd som gör att du kan skicka ett kommando till alla enheter som är tilldelade den visningen.
 
 ```xml
 GET /api/screens/content/screens/we-retail/locations/demo/flagship/single.json HTTP/1.1

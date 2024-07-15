@@ -13,9 +13,9 @@ ht-degree: 1%
 
 # Konfigurera Sök i Forms {#configuring-search-forms}
 
-Adobe Experience Manager as a Cloud Service har en kraftfull [Sök](/help/sites-cloud/authoring/search.md) mekanism.
+Adobe Experience Manager as a Cloud Service har en kraftfull [sökfunktion](/help/sites-cloud/authoring/search.md).
 
-I kombination med detta finns det också en uppsättning fördefinierade alternativ som hjälper dig att filtrera innehållet. Dessa innehåller fördefinierade egenskaper som **Ändringsdatum**, **Publiceringsstatus**, eller **LiveCopy-status** så att du snabbt kan hitta de resurser du behöver.
+I kombination med detta finns det också en uppsättning fördefinierade alternativ som hjälper dig att filtrera innehållet. Dessa innehåller fördefinierade aspekter som **Ändringsdatum**, **Publish-status** eller **Livecopy-status** som hjälper dig att snabbt hitta rätt resurser.
 
 ![sök- och filteranvändning](assets/csf-usage.png)
 
@@ -23,50 +23,50 @@ Tillsammans hjälper vi er att snabbt och enkelt hitta ert innehåll:
 
 * [Sök och filtrera](/help/sites-cloud/authoring/search.md#search-and-filter)
 * [Järnvägsväljare](/help/sites-cloud/authoring/basic-handling.md#rail-selector)
-* den [Resursläsaren](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#assets-browser) (när sidor redigeras)
+* [Assets Browser](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#assets-browser) (vid sidredigering)
 
 >[!NOTE]
 >
->Du kan konfigurera underliggande [Innehållssökning och indexering](/help/operations/indexing.md) service.
+>Du kan konfigurera den underliggande tjänsten [Innehållssökning och indexering](/help/operations/indexing.md).
 
-Använda **Sök i Forms** kan du anpassa och utöka dessa paneler efter dina specifika behov.
+Med **Sök i Forms** kan du anpassa och utöka panelerna efter dina specifika behov.
 
-The **Sök i Forms** gör att du kan välja [predikat](#predicates-and-their-settings) som du kan kombinera och definiera. The [dialogrutor för att konfigurera dessa formulär](#configuring-your-search-forms) kan nås via:
+Med **Sök i Forms** får du ett färdigt urval av [predikat](#predicates-and-their-settings) som du kan kombinera och definiera. [Dialogrutorna för konfiguration av dessa formulär](#configuring-your-search-forms) kan nås via:
 
-* **verktyg**
+* **Verktyg**
    * **Allmänt**
       * **Sök i Forms**
 
 ## Forms som standard {#default-forms}
 
-När du först öppnar **Sök i Forms** konsolen ser du att alla konfigurationer har en hänglåssymbol. Detta anger att motsvarande konfiguration är standardkonfigurationen (ej ifylld) - och kan inte tas bort. När du har anpassat och sparat en konfiguration försvinner låset. Den kommer att visas igen när du [ta bort din anpassade konfiguration](#deleting-a-configuration-to-reinstate-the-default), i vilket fall standardinställningen (och hänglåsindikatorn) återställs.
+När du först öppnar konsolen **Sök i Forms** ser du att alla konfigurationer har en hänglåssymbol. Detta anger att motsvarande konfiguration är standardkonfigurationen (ej ifylld) - och kan inte tas bort. När du har anpassat och sparat en konfiguration försvinner låset. Den kommer att visas igen när du [tar bort din anpassade konfiguration](#deleting-a-configuration-to-reinstate-the-default). I så fall återställs standardinställningen (och hänglåsindikatorn).
 
-![konfigurera sökformulär, översikt](assets/csf-overview.png)
+![konfigurera en översikt över sökformulär](assets/csf-overview.png)
 
 Standardkonfigurationerna (i alfabetisk ordning) är:
 
-* **Resursadministratörssökväg**
+* **Assets Admin Search Rail**
 * **Sidredigeraren (dokumentsökning)**
-* **Page Editor (Experience Fragments Search)**
+* **Sidredigeraren (Experience Fragments Search)**
 * **Sidredigeraren (bildsökning)**
-* **Page Editor (manuskriptsökning)**
+* **Sidredigeraren (manuell sökning)**
 * **Sidredigeraren (sidsökning)**
-* **Page Editor (Styckesökning)**
-* **Page Editor (produktsökning)**
+* **Sidredigeraren (sökning efter stycken)**
+* **Sidredigeraren (produktsökning)**
 * **Sidredigeraren (Scene7-sökning)**
 * **Sidredigeraren (videosökning)**
 * **Sökväg för projektadministratör**
 * **Sökväg för projektöversättning**
-* **Webbplatsadministratörens sökväg**
-* **Snippets Admin Search Rail**
+* **Sökväg för webbplatsadministratörer**
+* **Sökväg för fragmentadministratör**
 * **Stock Admin Search Rail**
-* **Sökväg för innehållsfragmentsmodeller**
+* **Sökväg för innehållsfragmentmodeller**
 * **Sökväg för projektadministratör**
 * **Sökväg för projektöversättning**
 
 >[!NOTE]
 >
->Mer information om resursrelaterade sökformulär finns i [Resurser - sökansikten](/help/assets/search-facets.md).
+>Mer information om resursrelaterade sökformulär finns i [Assets - sökansikten](/help/assets/search-facets.md).
 
 
 ## Förutsägelser och deras inställningar {#predicates-and-their-settings}
@@ -137,7 +137,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
   </tr>
   <tr>
    <td>Komponenter</td>
-   <td>Gör att en författare kan söka efter/filtrera sidor som har en viss komponent på sig. Exempel: ett bildgalleri.<br /> </td>
+   <td>Gör att en författare kan söka efter/filtrera sidor som har en viss komponent på sig. Ett bildgalleri, till exempel.<br /> </td>
    <td>
     <ul>
      <li>Platshållare</li>
@@ -258,7 +258,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
   </tr>
   <tr>
    <td>Alternativ</td>
-   <td><p>Alternativen är innehållsnoder som skapas av användaren.</p> <p>Se <a href="#addinganoptionspredicate">Lägga till en alternativpredikat</a> för mer information.</p> </td>
+   <td><p>Alternativen är innehållsnoder som skapas av användaren.</p> <p>Mer information finns i <a href="#addinganoptionspredicate">Lägga till en alternativpredikat</a>.</p> </td>
    <td>
     <ul>
      <li>Fältetikett</li>
@@ -288,7 +288,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
    <td>
     <ul>
      <li>Fältetikett</li>
-     <li>Namn på publiceringsegenskap*</li>
+     <li>Publish-egenskapsnamn*</li>
      <li>Egenskapsnamn för låsta sidor*</li>
      <li>Beskrivning</li>
     </ul> </td>
@@ -339,7 +339,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
    </td>
   </tr>
   <tr>
-   <td>Publiceringsstatus</td>
+   <td>Publish-status</td>
    <td>Filtrera resurser baserat på deras publiceringsstatus.</td>
    <td>
     <ul>
@@ -482,7 +482,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
 >De vanliga sökpredikten definieras i:
 >  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
 >
->Informationen är endast avsedd som referens och du får inte ändra `/libs`.
+>Den här informationen är endast avsedd som referens, du får inte ändra `/libs`.
 
 <!--
 >* Search predicates related only to siteadmin (classic UI) are located under:
@@ -509,9 +509,9 @@ Beroende på predikatet finns ett urval av inställningar tillgängliga för kon
 
 * **Egenskapsnamn**
 
-  Egenskapen som ska genomsökas. Den använder en relativ sökväg och jokertecknen `*/*/*` ange egenskapens djup i förhållande till `jcr:content` nod (varje asterisk representerar en nodnivå).
+  Egenskapen som ska genomsökas. Den använder en relativ sökväg och jokertecknen `*/*/*` anger djupet för egenskapen i förhållande till noden `jcr:content` (varje asterisk representerar en nodnivå).
 
-  Om du bara vill söka på en underordnad nod på första nivån för resursen som har `x` -egenskapen på `jcr:content` nod använder `*/jcr:content/x`
+  Om du bara vill söka på en underordnad nod på första nivån för resursen som har egenskapen `x` på noden `jcr:content` använder du `*/jcr:content/x`
 
 * **Egenskapsdjup**
 
@@ -525,37 +525,37 @@ Beroende på predikatet finns ett urval av inställningar tillgängliga för kon
 
 * **Intervalltext**
 
-  Etiketten för intervallfältet i **Datumintervall** förutsäga.
+  Etiketten för intervallfältet i predikatet **Datumintervall** .
 
-* **Alternativbana**
+* **Alternativsökväg**
 
-  Användaren kan markera sökvägen med hjälp av Bandläsaren på fliken för predikatinställningar. När du har valt **+** -ikonen används för att lägga till markeringen i listan över giltiga alternativ (sedan **-** -ikonen som ska tas bort om det behövs).
+  Användaren kan markera sökvägen med hjälp av Bandläsaren på fliken för predikatinställningar. När du har markerat ikonen **+** används den för att lägga till markeringen i listan över giltiga alternativ (och ikonen **-** tas bort om det behövs).
 
   Alternativen är innehållsnoder som skapas av användaren och som har följande struktur:
 
   `(jcr:primaryType = nt:unstructured, value (String), jcr:title (String))`
 
-* **Alternativ nodsökväg**
-I praktiken samma som **Sökväg till alternativ**, det är bara det här som finns i det vanliga predikatfältet, det andra är specifikt för resurser.
+* **Nodsökväg för alternativ**
+I själva verket är det samma som **Alternativsökväg** , men bara det här är i det vanliga predikatfältet, det andra är specifikt för resurser.
 
-* **Enkel markering**
+* **En markering**
 Om det här alternativet är markerat återges alternativen som kryssrutor som bara tillåter ett urval. Om du av misstag markerar kryssrutan kan den avmarkeras.
 
-* **Egenskapsnamn för Publicera och Live-kopia**
+* **Egenskapsnamn för Publish och Live Copy**
 Etiketterna för publicerings- och Live copy-kryssrutorna för platsspecifika predikat.
 
-* Det &amp;sista; på fältetiketterna i **Inställningar** -fliken betyder att fälten är obligatoriska och om de lämnas tomma visas ett felmeddelande.
+* &amp;ast; på fältetiketterna på fliken **Settings** betyder det att fälten är obligatoriska och om de lämnas tomma visas ett felmeddelande.
 
 ## Konfigurera din sökning i Forms {#configuring-your-search-forms}
 
 ### Skapa/öppna en anpassad konfiguration {#creating-opening-a-customized-configuration}
 
-1. Navigera till **verktyg**, **Allmänt**, **Sök i Forms**.
+1. Navigera till **Verktyg**, **Allmänt**, **Sök i Forms**.
 
 1. Välj den konfiguration som du vill anpassa.
-1. Använd **Redigera** -ikonen för att öppna konfigurationen för uppdatering.
-1. Om du gör en ny anpassning vill du antagligen [lägga till nya predikatfält och definiera inställningarna](#add-edit-a-predicate-field-and-define-field-settings) efter behov. Om en befintlig anpassning finns kan du välja ett befintligt fält och [uppdatera inställningarna](#add-edit-a-predicate-field-and-define-field-settings).
-1. Välj **Klar** för att spara konfigurationen. Ändringarna visas nästa gång konfigurationen används.
+1. Använd ikonen **Redigera** för att öppna konfigurationen för uppdatering.
+1. Om du har gjort en ny anpassning vill du förmodligen [lägga till nya predikatfält och definiera inställningarna](#add-edit-a-predicate-field-and-define-field-settings) efter behov. Om det finns en befintlig anpassning kan du välja ett befintligt fält och [uppdatera inställningarna](#add-edit-a-predicate-field-and-define-field-settings).
+1. Välj **Klar** om du vill spara konfigurationen. Ändringarna visas nästa gång konfigurationen används.
 
    >[!NOTE]
    >
@@ -569,7 +569,7 @@ Etiketterna för publicerings- och Live copy-kryssrutorna för platsspecifika pr
 Du kan lägga till eller redigera fält och definiera/uppdatera deras inställningar:
 
 1. [Öppna den anpassade konfigurationen](#creating-opening-a-customized-configuration) för uppdatering.
-1. Om du vill lägga till ett nytt fält öppnar du **Välj predikat** och dra predikatet till önskad plats. Till exempel **Prediktion för datumintervall**:
+1. Om du vill lägga till ett nytt fält öppnar du fliken **Välj predikat** och drar predikatet till önskad plats. Exempel: **Förutsägelse för datumintervall**:
 
    ![lägg till ett predikat](assets/csf-add-predicate.png)
 
@@ -577,17 +577,17 @@ Du kan lägga till eller redigera fält och definiera/uppdatera deras inställni
 
    * Du lägger till ett nytt fält:
 
-     När du har lagt till predikatet **Inställningar** öppnas och visar de egenskaper som kan definieras.
+     När du har lagt till predikatet öppnas fliken **Inställningar** och egenskaperna som kan definieras visas.
 
    * Du vill uppdatera ett befintligt predikat:
 
-     Markera predikatfältet (till höger) och öppna sedan **Inställningar** -fliken.
+     Markera predikatfältet (till höger) och öppna sedan fliken **Inställningar**.
 
-   Till exempel inställningarna för **Prediktion för datumintervall**:
+   Till exempel inställningarna för **Förutsägelse av datumintervall**:
 
-   ![ändra predikat](assets/csf-modify-predicate.png)
+   ![Ändra predikat](assets/csf-modify-predicate.png)
 
-1. Gör dina ändringar efter behov och bekräfta med **Klar**. Ändringarna visas nästa gång konfigurationen används.
+1. Gör önskade ändringar och bekräfta med **Klar**. Ändringarna visas nästa gång konfigurationen används.
 
 ### Förhandsgranska sökkonfigurationen {#previewing-the-search-configuration}
 
@@ -599,14 +599,14 @@ Du kan lägga till eller redigera fält och definiera/uppdatera deras inställni
 
    ![förhandsgranska formulär](assets/csf-preview-form.png)
 
-1. **Stäng** förhandsgranskningen för att returnera och slutföra konfigurationen.
+1. **Stäng** förhandsgranskningen om du vill returnera och slutföra konfigurationen.
 
 ### Ta bort ett predikatfält {#deleting-a-predicate-field}
 
 1. [Öppna den anpassade konfigurationen](#creating-opening-a-customized-configuration) för uppdatering.
-1. Markera predikatfältet (till höger), öppna **Inställningar** och sedan väljer **Ta bort** ikon (längst ned till vänster).
+1. Markera predikatfältet (till höger), öppna fliken **Inställningar** och välj sedan ikonen **Ta bort** (längst ned till vänster).
 
-   ![ta bort ikon](assets/csf-delete-icon.png)
+   ![Ta bort ikon](assets/csf-delete-icon.png)
 
 1. En dialogruta begär att du bekräftar borttagningsåtgärden.
 
@@ -622,7 +622,7 @@ När du har anpassat en konfiguration åsidosätter detta standardinställningar
 
 En anpassad konfiguration tas bort från konsolen:
 
-1. Välj önskad konfiguration (till exempel **Page Editor (Styckesökning)**) och sedan **Ta bort** ikon i verktygsfältet:
+1. Välj önskad konfiguration (till exempel **Sidredigeraren (sökning efter stycken)**) och sedan ikonen **Ta bort** i verktygsfältet:
 
    ![återställ standard](assets/csf-restore-default.png)
 
@@ -640,26 +640,26 @@ I följande exempel (som används för att söka efter mallen som används för 
 
    Noderna för de enskilda alternativen behöver egenskaperna:
 
-   * `jcr:title` - den fältetikett som ska visas i sökfältet
+   * `jcr:title` - fältetiketten som ska visas i sökfältet
    * `value` - egenskapsvärdet som ska genomsökas
 
-   ![Förutsägelsedefinition](assets/csf-options-predicate-01.png)
+   ![Predikatdefinition](assets/csf-options-predicate-01.png)
 
    >[!NOTE]
    >
-   >Du ***måste*** ändrar ingenting i dialogrutan `/libs` bana.
+   >Du ***får*** inte ändra något i sökvägen `/libs`.
    >
-   >Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du installerar en snabbkorrigering eller ett funktionspaket).
+   >Detta beror på att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
    >
    >Den rekommenderade metoden för konfiguration och andra ändringar är:
    >
-   >1. Återskapa önskat objekt som det finns i `/libs`, under `/apps`. I det här fallet från:
+   >1. Återskapa det obligatoriska objektet, som det finns i `/libs`, under `/apps`. I det här fallet från:
    >1. `/libs/cq/gui/content/common/options/predicates`
    >1. Gör ändringar i `/apps.`
 
-1. Öppna **Sök i Forms** och välj den konfiguration som du vill uppdatera. Till exempel: **Webbplatsadministratörens sökväg**. Välj sedan **Redigera**.
+1. Öppna **sökkonsolen för Forms** och välj den konfiguration som du vill uppdatera. Till exempel **Sökväg för webbplatsadministratörer**. Välj sedan **Redigera**.
 
-1. Beroende på konfigurationen lägger du till en **Alternativ** eller **Alternativ, egenskap** till konfigurationen.
+1. Beroende på konfigurationen lägger du till en **Alternativ**- eller **Alternativ-egenskap** i konfigurationen.
 1. Uppdatera fälten, särskilt:
 
    * **Egenskapsnamn**
@@ -668,7 +668,7 @@ I följande exempel (som används för att söka efter mallen som används för 
 
      `jcr:content/cq:template`
 
-   * **Alternativ nodsökväg**
+   * **Alternativnodssökväg**
 
      Välj den sökväg där du vill ha dina alternativ. Till exempel:
 
@@ -676,8 +676,8 @@ I följande exempel (som används för att söka efter mallen som används för 
 
    ![Alternativpredikat](assets/csf-options-predicate-02.png)
 
-1. Välj **Klar** för att spara konfigurationen.
-1. Navigera till rätt konsol (i det här exemplet **Webbplatser**) och öppna **Sök - filter** järnväg. De nya sökformulären, tillsammans med de olika alternativen, visas. Välj önskat alternativ för att visa sökresultaten.
+1. Välj **Klar** om du vill spara konfigurationen.
+1. Navigera till rätt konsol (i det här exemplet **Platser**) och öppna fältet **Sök - Filter**. De nya sökformulären, tillsammans med de olika alternativen, visas. Välj önskat alternativ för att visa sökresultaten.
 
    ![alternativ som används](assets/csf-options-usage.png)
 
@@ -696,15 +696,15 @@ I följande tabell visas de behörigheter som krävs för att utföra redigering
  <tbody>
   <tr>
    <td>Redigera </td>
-   <td>Läsa, skriva behörigheter på <code>/apps </code>nod.</td>
+   <td>Läs- och skrivbehörigheter på noden <code>/apps </code>.</td>
   </tr>
   <tr>
    <td>Ta bort</td>
-   <td>Läsa, skriva, ta bort behörigheter för <code>/apps</code> nod</td>
+   <td>Läsa, skriva, ta bort behörigheter på noden <code>/apps</code></td>
   </tr>
   <tr>
    <td>Förhandsgranska</td>
-   <td>Läsa, skriva, ta bort behörigheter för <code>/var/dam/content</code> nod.<br /> Läsa, skriva behörigheter på <code>/apps</code> nod.</td>
+   <td>Läsa, skriva, ta bort behörigheter på noden <code>/var/dam/content</code>.<br /> Läs- och skrivbehörigheter på noden <code>/apps</code>.</td>
   </tr>
  </tbody>
 </table>

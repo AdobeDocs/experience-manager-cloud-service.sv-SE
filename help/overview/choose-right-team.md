@@ -28,9 +28,10 @@ För närvarande fokuserar man på att sätta rätt personer i rätt jobb för a
 
 Din uppgift den här veckan är att granska båda listorna med ditt implementeringsteam och se till att du har personer med relevanta kvalifikationer i varje roll.
 
-## **Viktiga roller för AEM Experience Manager Sites**
+## **Nyckelroller för AEM Experience Manager Sites**
 
-Ett vinnande team behöver nio personer i rätt platser, precis som ert driftsättningsteam. Hur framgångsrik du är med Adobe Experience Manager Sites beror på styrkan hos era teammedlemmar och hur väl de arbetar tillsammans. Se till att du har dessa nio roller tilldelade personer med de föreslagna kvalifikationerna.
+Ett vinnande team behöver nio personer i rätt platser, precis som ert driftsättningsteam. Hur framgångsrik du är med Adobe Experience Manager Sites beror på styrkan hos era teammedlemmar och hur väl de arbetar tillsammans. Se till att du har dessa nio roller tilldelade
+till personer med de föreslagna kvalifikationerna.
 
 | Roll | Kompetens | Kapacitetsnivå | Kvaliteter |
 |--- |--- |--- |--- |
@@ -50,9 +51,9 @@ Nu när du vet vilka roller som krävs kan du titta på tabellen nedan för att 
 
 ![Granska roller för implementering](assets/team_involvement.png)
 
-**Granska den här listan med ditt implementeringsteam** och se till att ni har personer med relevanta kvalifikationer i varje roll. Teammedlemmar som inte är lika bekanta med Adobe Experience Cloud kan använda [Experience League](https://experienceleague.adobe.com/#recommended/solutions/experience-manager) utbildningsresurser för att bli certifierade genom [Adobe Digital Learning](https://learning.adobe.com/certification.html).
+**Granska den här listan med ditt implementeringsteam** och se till att du har personer med relevanta kvalifikationer i varje roll. Teammedlemmar som är mindre bekanta med Adobe Experience Cloud kan använda [Experience League](https://experienceleague.adobe.com/#recommended/solutions/experience-manager) utbildningsresurser för att bli certifierade via [Adobe Digital Learning](https://learning.adobe.com/certification.html).
 
-## **Viktiga roller för AEM Experience Manager Assets**
+## **Nyckelroller för AEM Experience Manager Assets**
 
 Från Architect till ScrumMaster är alla roller i teamet oumbärliga - inklusive DAM-biblioteket.
 
@@ -75,7 +76,7 @@ Nu när du vet vilka roller som krävs kan du titta på tabellen nedan för att 
 
 <br>
 
-![Vågrätt stapeldiagram med fiktiva roller och deras medverkan i AEM Assets team.](/help/overview/assets/team_involvement2.png)
+![Vågrätt stapeldiagram med fiktiva roller och deras grad av engagemang i AEM Assets-teamet.](/help/overview/assets/team_involvement2.png)
 
 >[!TIP]
 >

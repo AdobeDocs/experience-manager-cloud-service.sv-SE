@@ -19,9 +19,9 @@ ht-degree: 2%
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/watermarking.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
-[!DNL Adobe Experience Manager Assets] Med kan du lägga till en digital vattenstämpel i bilder och videoklipp. [!DNL Assets] har stöd för att använda en bild som vattenstämpel på andra bildfiler. Vattenstämplar kan hjälpa användare att verifiera autenticitet och upphovsrättsskydd för resurserna. En vattenstämpel kan också användas för att ange ett dokuments status, t.ex. konfidentiellt, utkast, giltighet.
+Med [!DNL Adobe Experience Manager Assets] kan du lägga till en digital vattenstämpel i bilder och videoklipp. [!DNL Assets] har stöd för att använda en bild som vattenstämpel på andra bildfiler. Vattenstämplar kan hjälpa användare att verifiera autenticitet och upphovsrättsskydd för resurserna. En vattenstämpel kan också användas för att ange ett dokuments status, t.ex. konfidentiellt, utkast, giltighet.
 
-Konfigurera [!DNL Experience Manager] till vattenstämpelresurser:
+Så här konfigurerar du [!DNL Experience Manager] till vattenstämpelresurser:
 
 1. En PNG-fil används som en vattenstämpel. Överför den här filen till din DAM-databas.
 
@@ -29,9 +29,9 @@ Konfigurera [!DNL Experience Manager] till vattenstämpelresurser:
 
 1. Klicka på **[!UICONTROL System Watermarking Profile]**.
 
-1. På [!UICONTROL System Watermarking Profile page]anger du bildsökvägen som ska överföras till DAM-databasen i steg 1.
+1. På [!UICONTROL System Watermarking Profile page] anger du bildsökvägen som ska överföras till DAM-databasen i steg 1.
 
-1. Ange vattenstämpelskalan (från 0,0 till 1,0) i förhållande till återgivningsbredden i dialogrutan **[!UICONTROL Scale]** fält.
+1. Ange vattenstämpelskalan, från 0,0 till 1,0, i förhållande till återgivningsbredden, i fältet **[!UICONTROL Scale]**.
 
 1. Klicka på **[!UICONTROL Save]**.
 
@@ -39,16 +39,16 @@ Konfigurera [!DNL Experience Manager] till vattenstämpelresurser:
 
    >[!NOTE]
    >
-   >Om du har konfigurerat systemprofilen för vattenstämplar med `com.adobe.cq.assetcompute.impl.profile.WatermarkingProfileServiceImpl.cfg.json` konfigurationsfilen (OSGi-konfiguration) kan du fortsätta att använda den, men Adobe rekommenderar att du använder den nya metoden.
+   >Om du har konfigurerat en systemvattenstämpelprofil med hjälp av konfigurationsfilen `com.adobe.cq.assetcompute.impl.profile.WatermarkingProfileServiceImpl.cfg.json` (OSGi-konfiguration) kan du fortsätta att använda den, men Adobe rekommenderar att du använder den nya metoden.
 
 
 1. [Skapa en bearbetningsprofil](/help/assets/asset-microservices-configure-and-use.md#create-custom-profile) om du vill använda resursmikrotjänster för att använda vattenstämpeln.
 
    ![Resursbearbetningsprofil för att skapa vattenstämpel](assets/watermark-processing-profile.png)
 
-   Se till att du aktiverar **[!UICONTROL Watermark]** växla när du skapar bearbetningsprofilen.
+   Se till att du aktiverar växlingsknappen **[!UICONTROL Watermark]** när du skapar bearbetningsprofilen.
 
-1. [Använda bearbetningsprofilerna på en mapp](/help/assets/asset-microservices-configure-and-use.md#use-profiles) för att skapa material med vattenstämpel.
+1. [Använd bearbetningsprofilerna på en mapp](/help/assets/asset-microservices-configure-and-use.md#use-profiles) för att skapa resurser med vattenstämpel.
 
 ## Tips och begränsningar {#tips-limitations-bestpractices}
 
@@ -58,9 +58,9 @@ Konfigurera [!DNL Experience Manager] till vattenstämpelresurser:
 
 **Se även**
 
-* [Översätt resurser](translate-assets.md)
-* [Resurser för HTTP API](mac-api-assets.md)
-* [Resurser som stöds i filformat](file-format-support.md)
+* [Översätt Assets](translate-assets.md)
+* [ASSETS HTTP API](mac-api-assets.md)
+* [Filformat som stöds av Assets](file-format-support.md)
 * [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
 * [Resursrapporter](asset-reports.md)
@@ -70,9 +70,9 @@ Konfigurera [!DNL Experience Manager] till vattenstämpelresurser:
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publicera resurser till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 >[!MORELIKETHIS]
 >
 >* [Resursmikrotjänster - översikt](/help/assets/asset-microservices-overview.md).
->* [Använda resursmikrotjänster med bearbetningsprofiler](/help/assets/asset-microservices-configure-and-use.md).
+>* [Använd resursmikrotjänster med bearbetningsprofiler](/help/assets/asset-microservices-configure-and-use.md).

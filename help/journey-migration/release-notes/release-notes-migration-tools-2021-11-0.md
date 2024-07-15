@@ -16,7 +16,7 @@ ht-degree: 1%
 Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2021.11.0.
 
 >[!NOTE]
->Om du vill visa den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service klickar du på [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
+>Klicka [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html) om du vill se den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service.
 
 ## Verktyget Innehållsöverföring {#ctt-release}
 
@@ -26,6 +26,6 @@ Releasedatum för innehållsöverföringsverktyget v1.7.2 är 1 november 2021.
 
 ### Nyheter {#what-is-new-ctt}
 
-* Stöd för ett valfritt [pre-copy](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html) steg som lagts till för att användas med verktyget Innehållsöverföring när AEM är konfigurerad att använda File Data Store för att avsevärt snabba upp extraheringsfasen.
+* Stöd för ett valfritt [pre-copy](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html)-steg som lagts till för användning med verktyget Innehållsöverföring när AEM har konfigurerats för att använda File Data Store för att avsevärt snabba upp extraheringsfasen.
 
 * Ytterligare beskrivande meddelanden som lagts till i inmatningsfasen i användargränssnittet för verktyget Innehållsöverföring för att ange när indexering och mongo-återställningssteg pågår.

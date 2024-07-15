@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Resursmikrotjänster ger skalbar och flexibel bearbetning av resurser med molnbaserade program (kallas även arbetare). Adobe hanterar tjänsterna för optimal hantering av olika tillgångstyper och bearbetningsalternativ.
 
-Med Resursmikrotjänster kan du bearbeta en [många olika filtyper](/help/assets/file-format-support.md) som täcker fler format som är färdiga än vad som är möjligt med tidigare versioner av [!DNL Experience Manager]. Miniatyrbildsextrahering av PSD och PSB-format är nu möjligt men tidigare krävda tredjepartslösningar som [!DNL ImageMagick].
+Med tillgångsmikrotjänster kan du bearbeta ett [brett urval av filtyper](/help/assets/file-format-support.md) som omfattar fler format som är körklara än vad som är möjligt med tidigare versioner av [!DNL Experience Manager]. Miniatyrbildextrahering av PSD och PSB-format är nu möjligt men tidigare krävda tredjepartslösningar som [!DNL ImageMagick].
 
 Resursbearbetningen beror på konfigurationen i **[!UICONTROL Processing Profiles]**. Experience Manager har en grundläggande standardkonfiguration och låter administratörer lägga till mer specifik konfiguration för bearbetning av resurser. Administratörer kan skapa, underhålla och ändra konfigurationerna för efterbehandlingsarbetsflöden, inklusive valfri anpassning. Genom att anpassa arbetsflödena kan utvecklarna utöka standarderbjudandet.
 
@@ -29,54 +29,54 @@ https://adobe-my.sharepoint.com/personal/gklebus_adobe_com/_layouts/15/guestacce
 
 >[!NOTE]
 >
->Bearbetningen av tillgångar som beskrivs här ersätter `DAM Update Asset` arbetsflödesmodell som finns i tidigare versioner av [!DNL Experience Manager]. De flesta standardstegen för generering av återgivning och metadatarelaterade steg ersätts av bearbetningen av resursmikrotjänsterna, och eventuella återstående steg kan ersättas av arbetsflödeskonfigurationen för efterbearbetning.
+>Resursbearbetningen som beskrivs här ersätter arbetsflödesmodellen `DAM Update Asset` som finns i tidigare versioner av [!DNL Experience Manager]. De flesta standardstegen för generering av återgivning och metadatarelaterade steg ersätts av bearbetningen av resursmikrotjänsterna, och eventuella återstående steg kan ersättas av arbetsflödeskonfigurationen för efterbearbetning.
 
 ## Förstå alternativ för tillgångsbearbetning {#get-started}
 
-[!DNL Experience Manager] tillåter följande nivåer av bearbetning.
+[!DNL Experience Manager] tillåter följande bearbetningsnivåer.
 
 | Alternativ | Beskrivning | Användningsexempel som täcks |
 |---|---|---|
-| [Standardkonfiguration](#default-config) | Den är tillgänglig som den är och kan inte ändras. Den här konfigurationen har mycket grundläggande funktioner för att skapa renderingar. | <ul> <li>Standardminiatyrbilder som används av [!DNL Assets] användargränssnitt (48, 140 och 319 pixlar) </li> <li> Stor förhandsgranskning (webbåtergivning - 1 280 pixlar) </li><li> Metadata och textrahering.</li></ul> |
+| [Standardkonfiguration](#default-config) | Den är tillgänglig som den är och kan inte ändras. Den här konfigurationen har mycket grundläggande funktioner för att skapa renderingar. | <ul> <li>Standardminiatyrbilder som används i användargränssnittet för [!DNL Assets] (48, 140 och 319 pixlar) </li> <li> Stor förhandsgranskning (webbåtergivning - 1 280 pixlar) </li><li> Metadata och textrahering.</li></ul> |
 | [Anpassad konfiguration](#standard-config) | Konfigureras av administratörer via användargränssnittet. Ger fler alternativ för generering av återgivning genom att utöka standardalternativet. Utöka det färdiga alternativet om du vill ha olika format och renderingar. | <ul><li>FPO-återgivning. </li> <li>Ändra filformat och upplösning för bilder</li> <li> Tillämpa villkoren på konfigurerade filtyper. </li> </ul> |
-| [Egen profil](#custom-config) | Konfigureras av administratörer via användargränssnittet för att använda anpassad kod via anpassade program för anrop [Tjänsten Asset compute](https://experienceleague.adobe.com/docs/asset-compute/using/introduction.html). Stöder mer komplexa krav med en molnbaserad och skalbar metod. | Se [tillåtna användningsfall](#custom-config). |
+| [Egen profil](#custom-config) | Konfigureras av administratörer via användargränssnittet för att använda anpassad kod via anpassade program för att anropa [Asset Compute-tjänsten](https://experienceleague.adobe.com/docs/asset-compute/using/introduction.html). Stöder mer komplexa krav med en molnbaserad och skalbar metod. | Se [tillåtna användningsfall](#custom-config). |
 
 <!-- To create custom processing profiles specific to your custom requirements, say to integrate with other systems, see [post-processing workflows](#post-processing-workflows).
 -->
 
 ## Filformat som stöds {#supported-file-formats}
 
-Resursmikrotjänsterna har stöd för en mängd olika filformat för att bearbeta, generera renderingar eller extrahera metadata. Se [filformat](file-format-support.md) för en fullständig lista över MIME-typer och de funktioner som stöds för varje typ.
+Resursmikrotjänsterna har stöd för en mängd olika filformat för att bearbeta, generera renderingar eller extrahera metadata. I [filformat som stöds](file-format-support.md) finns en fullständig lista över MIME-typer och de funktioner som stöds för varje typ.
 
 ## Standardkonfiguration {#default-config}
 
 Vissa standardinställningar är förkonfigurerade för att säkerställa att standardåtergivningarna som krävs i Experience Manager är tillgängliga. Standardkonfigurationen ser också till att metadataextrahering och textrahering är tillgängliga. Användare kan börja ladda upp eller uppdatera resurser direkt och grundläggande bearbetning är tillgänglig som standard.
 
-Med standardkonfigurationen konfigureras bara den mest grundläggande bearbetningsprofilen. En sådan bearbetningsprofil visas inte i användargränssnittet och du kan inte ändra den. Det körs alltid för att bearbeta överförda resurser. En sådan standardbearbetningsprofil säkerställer att den grundläggande bearbetning som krävs av [!DNL Experience Manager] har slutförts för alla resurser.
+Med standardkonfigurationen konfigureras bara den mest grundläggande bearbetningsprofilen. En sådan bearbetningsprofil visas inte i användargränssnittet och du kan inte ändra den. Det körs alltid för att bearbeta överförda resurser. En sådan standardbearbetningsprofil ser till att den grundläggande bearbetning som krävs av [!DNL Experience Manager] har slutförts för alla resurser.
 
 <!-- ![processing-profiles-standard](assets/processing-profiles-standard.png)
 -->
 
 ## Standardkonfiguration {#standard-config}
 
-[!DNL Experience Manager] har funktioner för att generera mer specifika renderingar för vanliga format efter användarens behov. En administratör kan skapa ytterligare [!UICONTROL Processing Profiles] för att underlätta skapandet av en sådan återgivning. Användarna tilldelar sedan en eller flera av de tillgängliga profilerna till specifika mappar för att få den ytterligare bearbetningen klar. Den extra bearbetningen kan till exempel generera renderingar för webben, mobiler och surfplattor. I följande video visas hur du skapar och använder [!UICONTROL Processing Profiles] och hur du får åtkomst till de återgivningar som skapats.
+[!DNL Experience Manager] innehåller funktioner för att generera mer specifika återgivningar för vanliga format efter användarens behov. En administratör kan skapa ytterligare [!UICONTROL Processing Profiles] för att underlätta skapandet av en sådan återgivning. Användarna tilldelar sedan en eller flera av de tillgängliga profilerna till specifika mappar för att få den ytterligare bearbetningen klar. Den extra bearbetningen kan till exempel generera renderingar för webben, mobiler och surfplattor. I följande video visas hur du skapar och använder [!UICONTROL Processing Profiles] och hur du får åtkomst till de återgivningar som skapas.
 
-* **Återgivningens bredd och höjd**: Specifikationen för återgivningsbredd och -höjd ger maximala storlekar för den genererade utdatabilden. Resursmikrotjänsterna försöker skapa den största möjliga återgivningen, som inte är större än den angivna bredden och höjden. Proportionerna bevaras, det vill säga de ursprungliga. Ett tomt värde innebär att resursbearbetningen baseras på originalets pixeldimension.
+* **Bredd och höjd för återgivning**: I specifikationen för återgivningsbredd och -höjd finns maximala storlekar för den genererade utdatabilden. Resursmikrotjänsterna försöker skapa den största möjliga återgivningen, som inte är större än den angivna bredden och höjden. Proportionerna bevaras, det vill säga de ursprungliga. Ett tomt värde innebär att resursbearbetningen baseras på originalets pixeldimension.
 
-* **MIME-typinkluderingsregler**: När en resurs med en viss MIME-typ bearbetas kontrolleras MIME-typen först mot det utelämnade MIME-typvärdet för återgivningsspecifikationen. Om den matchar den listan genereras inte den här specifika återgivningen för resursen (blockeringslista). Annars kontrolleras MIME-typen mot den inkluderade MIME-typen, och om den matchar listan genereras återgivningen (tillåtelselista).
+* **Inkluderingsregler för MIME-typ**: När en resurs med en viss MIME-typ bearbetas kontrolleras MIME-typen först mot det utelämnade MIME-typvärdet för återgivningsspecifikationen. Om den matchar den listan genereras inte den här specifika återgivningen för resursen (blockeringslista). Annars kontrolleras MIME-typen mot den inkluderade MIME-typen, och om den matchar listan genereras återgivningen (tillåtelselista).
 
-* **Särskild FPO-återgivning**: Vid montering av stora resurser från [!DNL Experience Manager] till [!DNL Adobe InDesign] dokument, en kreatör väntar länge efter att de [placera en resurs](https://helpx.adobe.com/indesign/using/placing-graphics.html). Användaren kan inte använda [!DNL InDesign]. Detta stör det kreativa flödet och påverkar användarupplevelsen negativt. Med Adobe kan du tillfälligt placera små renderingar i [!DNL InDesign] till att börja med, som kan ersättas med högupplösta resurser på begäran senare. [!DNL Experience Manager] innehåller återgivningar som endast används för placering (FPO). Dessa FPO-återgivningar har en liten filstorlek men har samma proportioner.
+* **Särskild FPO-återgivning**: När stora resurser från [!DNL Experience Manager] monteras i [!DNL Adobe InDesign] -dokument väntar en kreatör en avsevärd tid efter att de [har placerat ut en resurs](https://helpx.adobe.com/indesign/using/placing-graphics.html). Under tiden har användaren blockerats från att använda [!DNL InDesign]. Detta stör det kreativa flödet och påverkar användarupplevelsen negativt. Med Adobe kan du tillfälligt placera små återgivningar i [!DNL InDesign]-dokument till att börja med, vilket kan ersättas med högupplösta resurser vid behov senare. [!DNL Experience Manager] innehåller renderingar som endast används för placering (FPO). Dessa FPO-återgivningar har en liten filstorlek men har samma proportioner.
 
-Bearbetningsprofilen kan innehålla en FPO-återgivning (endast för placering). Se [!DNL Adobe Asset Link] [dokumentation](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) för att förstå om du behöver aktivera det för din bearbetningsprofil. Mer information finns i [Adobe Asset Link - fullständig dokumentation](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html).
+Bearbetningsprofilen kan innehålla en FPO-återgivning (endast för placering). Se [!DNL Adobe Asset Link] [dokumentation](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) om du behöver aktivera den för din bearbetningsprofil. Mer information finns i [Fullständig dokumentation för Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html).
 
 ### Skapa en standardprofil {#create-standard-profile}
 
 Så här skapar du en standardbearbetningsprofil:
 
-1. Administratörsåtkomst **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]**. Klicka på **[!UICONTROL Create]**.
+1. Administratörer har åtkomst till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]**. Klicka på **[!UICONTROL Create]**.
 1. Ange ett namn som hjälper dig att identifiera profilen unikt när du använder den i en mapp.
-1. Om du vill generera FPO-återgivningar går du till **[!UICONTROL Image]** flik, aktivera **[!UICONTROL Create FPO Rendition]**. Ange en **[!UICONTROL Quality]** värde mellan 1 och 100.
-1. Om du vill generera andra återgivningar klickar du på **[!UICONTROL Add New]** och lämna följande information:
+1. Aktivera **[!UICONTROL Create FPO Rendition]** på fliken **[!UICONTROL Image]** om du vill generera FPO-återgivningar. Ange ett **[!UICONTROL Quality]**-värde från 1-100.
+1. Om du vill generera andra återgivningar klickar du på **[!UICONTROL Add New]** och anger följande information:
 
    * Filnamn för varje återgivning.
    * Filformat (PNG, JPEG, GIF eller WebP) för varje återgivning.
@@ -101,7 +101,7 @@ The following video demonstrates the usefulness and usage of standard profile.
 
 ## Anpassade profil- och användningsfall {#custom-config}
 
-The [!DNL Asset Compute Service] har stöd för en mängd olika användningsområden, t.ex. standardbearbetning, bearbetning av Adobe-specifika format som Photoshop-filer samt implementering av anpassad eller organisationsspecifik bearbetning. Den anpassning av arbetsflödet för DAM-uppdatering av tillgångar som tidigare krävdes hanteras antingen automatiskt eller genom att profilkonfigurationen bearbetas. Adobe rekommenderar att man utvecklar och använder [!DNL Asset Compute Service] för att utöka standardfunktionerna. En översikt finns på [förstå hur utbyggbar den är och när den ska användas](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html).
+[!DNL Asset Compute Service] har stöd för en mängd olika användningsfall, till exempel standardbearbetning, bearbetning av Adobe-specifika format som Photoshop-filer och implementering av anpassad eller organisationsspecifik bearbetning. Den anpassning av arbetsflödet för DAM-uppdatering av tillgångar som tidigare krävdes hanteras antingen automatiskt eller genom att profilkonfigurationen bearbetas. Om affärsbehoven inte uppfylls av dessa bearbetningsalternativ rekommenderar Adobe att du utvecklar och använder [!DNL Asset Compute Service] för att utöka standardfunktionerna. En översikt finns i [Förstå utökningsmöjligheter och när du ska använda dem](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html).
 
 >[!NOTE]
 >
@@ -109,12 +109,12 @@ The [!DNL Asset Compute Service] har stöd för en mängd olika användningsomr�
 
 Det kan omvandla bild, video, dokument och andra filformat till olika renderingar, bland annat miniatyrbilder, extraherad text och metadata samt arkiv.
 
-Utvecklare kan använda [!DNL Asset Compute Service] till [skapa anpassade program](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html) för de användningsfall som stöds. [!DNL Experience Manager] kan anropa dessa anpassade program från användargränssnittet med hjälp av anpassade profiler som administratörer konfigurerar. [!DNL Asset Compute Service] har stöd för följande användningsområden när externa tjänster anropas:
+Utvecklare kan använda [!DNL Asset Compute Service] för att [skapa anpassade program](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html) för de användningsområden som stöds. [!DNL Experience Manager] kan anropa dessa anpassade program från användargränssnittet med hjälp av anpassade profiler som administratörer konfigurerar. [!DNL Asset Compute Service] har stöd för följande användningsfall för anrop av externa tjänster:
 
-* Använd [!DNL Adobe Photoshop]&#39;s [ImageCutout API](https://developer.adobe.com/photoshop/photoshop-api-docs/) och spara resultatet som rendering.
+* Använd [ImageCutout API](https://developer.adobe.com/photoshop/photoshop-api-docs/) för [!DNL Adobe Photoshop] och spara resultatet som rendering.
 * Anropa tredjepartssystem för att uppdatera data, till exempel ett PIM-system.
-* Använd [!DNL Photoshop] API för att generera olika renderingar baserat på Photoshop-mall.
-* Använd [ADOBE LIGHTROOM API](https://developer.adobe.com/photoshop/photoshop-api-docs/) för att optimera inkapslade resurser och spara dem som återgivningar.
+* Använd [!DNL Photoshop]-API:t för att skapa olika renderingar baserat på Photoshop-mallen.
+* Använd [Adobe Lightroom API](https://developer.adobe.com/photoshop/photoshop-api-docs/) för att optimera de kapslade resurserna och spara dem som återgivningar.
 
 >[!NOTE]
 >
@@ -124,34 +124,34 @@ Utvecklare kan använda [!DNL Asset Compute Service] till [skapa anpassade progr
 
 Så här skapar du en anpassad profil:
 
-1. Administratörsåtkomst **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]**. Klicka på **[!UICONTROL Create]**.
+1. Administratörer har åtkomst till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]**. Klicka på **[!UICONTROL Create]**.
 1. Klicka på fliken **[!UICONTROL Custom]**. Klicka på **[!UICONTROL Add New]**. Ange önskat filnamn för återgivningen.
 1. Ange följande information.
 
    * Filnamn för varje återgivning och ett filtillägg som stöds.
-   * [Slutpunkts-URL för en anpassad app i App Builder](https://experienceleague.adobe.com/docs/asset-compute/using/extend/deploy-custom-application.html). Appen måste komma från samma organisation som Experience Manager-kontot.
+   * [Slutpunkts-URL för en anpassad App Builder-app](https://experienceleague.adobe.com/docs/asset-compute/using/extend/deploy-custom-application.html). Appen måste komma från samma organisation som Experience Manager-kontot.
    * Lägg till tjänstparametrar i [skicka extra information eller parametrar till det anpassade programmet](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#extend).
    * Inkluderade och exkluderade MIME-typer för att begränsa bearbetningen till ett fåtal specifika filformat.
 
    Klicka på **[!UICONTROL Save]**.
 
-De anpassade programmen är headless [Project App Builder](https://developer.adobe.com/app-builder/docs/overview/) appar. Ditt anpassade program får alla angivna filer om de är konfigurerade med en bearbetningsprofil. Programmet måste filtrera filerna.
+De anpassade programmen är headless [Project App Builder](https://developer.adobe.com/app-builder/docs/overview/)-appar. Ditt anpassade program får alla angivna filer om de är konfigurerade med en bearbetningsprofil. Programmet måste filtrera filerna.
 
 >[!CAUTION]
 >
->Om appen App Builder och [!DNL Experience Manager] kontot inte kommer från samma organisation, integreringen fungerar inte.
+>Om App Builder-programmet och [!DNL Experience Manager]-kontot inte kommer från samma organisation fungerar inte integreringen.
 
 ### Ett exempel på en anpassad profil {#custom-profile-example}
 
 För att illustrera hur den anpassade profilen används ska vi överväga ett användningsexempel för att använda anpassad text på kampanjbilder. Du kan skapa en bearbetningsprofil som använder Photoshop API för att redigera bilderna.
 
-Integreringen av Asset compute-tjänsten gör att Experience Manager kan skicka dessa parametrar till det anpassade programmet med [!UICONTROL Service Parameters] fält. Det anpassade programmet anropar sedan Photoshop API och skickar dessa värden till API:t. Du kan till exempel skicka teckensnittsnamn, textfärg, textvikt och textstorlek för att lägga till den anpassade texten i kampanjbilder.
+Integrering med Asset Compute Service gör att Experience Manager kan skicka dessa parametrar till det anpassade programmet med hjälp av fältet [!UICONTROL Service Parameters]. Det anpassade programmet anropar sedan Photoshop API och skickar dessa värden till API:t. Du kan till exempel skicka teckensnittsnamn, textfärg, textvikt och textstorlek för att lägga till den anpassade texten i kampanjbilder.
 
 <!-- TBD: Check screenshot against the interface. -->
 
 ![custom-processing-profile](assets/custom-processing-profile.png)
 
-*Bild: Använd [!UICONTROL Service Parameters] fält för att skicka tillagd information till fördefinierade parametrar som byggs in i det anpassade programmet. I det här exemplet uppdateras bilderna med `Jumanji` text in `Arial-BoldMT` teckensnitt.*
+*Figur: Använd fältet [!UICONTROL Service Parameters] för att skicka tillagd information till fördefinierade parametrar som byggs in i det anpassade programmet. I det här exemplet uppdateras bilderna med `Jumanji` text i `Arial-BoldMT` font när kampanjbilder överförs.*
 
 ## Använda bearbetningsprofiler för att bearbeta resurser {#use-profiles}
 
@@ -159,11 +159,11 @@ Skapa och använd de extra anpassade bearbetningsprofilerna på specifika mappar
 
 Använd bearbetningsprofiler på mappar på något av följande sätt:
 
-* Administratörer kan välja en bearbetningsprofildefinition i **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]** och använda **[!UICONTROL Apply Profile to Folders]** åtgärd. Den öppnar en innehållsläsare där du kan navigera till specifika mappar, markera dem och bekräfta programmet för profilen.
-* Användare kan välja en mapp i Assets-användargränssnittet och använda **[!UICONTROL Properties]** åtgärd för att öppna fönstret för mappegenskaper klickar du på **[!UICONTROL Asset Processing]** -fliken och i [!UICONTROL Processing Profile] väljer du lämplig bearbetningsprofil för den mappen. Klicka på **[!UICONTROL Save & Close]**.
-  ![Använda bearbetningsprofil på en mapp från fliken Resursegenskaper](assets/folder-properties-processing-profile.png)
+* Administratörer kan välja en bearbetningsprofildefinition i **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]** och använda åtgärden **[!UICONTROL Apply Profile to Folders]**. Den öppnar en innehållsläsare där du kan navigera till specifika mappar, markera dem och bekräfta programmet för profilen.
+* Användare kan välja en mapp i Assets användargränssnitt, använda åtgärden **[!UICONTROL Properties]** för att öppna fönstret för mappegenskaper, klicka på fliken **[!UICONTROL Asset Processing]** och i listan [!UICONTROL Processing Profile] väljer du lämplig bearbetningsprofil för den mappen. Klicka på **[!UICONTROL Save & Close]** om du vill spara ändringarna.
+  ![Använd bearbetningsprofil på en mapp från fliken Resursegenskaper](assets/folder-properties-processing-profile.png)
 
-* Användarna kan välja mappar eller specifika resurser i Assets-användargränssnittet för att tillämpa en bearbetningsprofil och sedan välja ![ikon för ombearbetning av resurser](assets/do-not-localize/reprocess-assets-icon.png) **[!UICONTROL Reprocess Assets]** från de tillgängliga alternativen överst.
+* Användare kan välja mappar eller specifika resurser i Assets användargränssnitt för att tillämpa en bearbetningsprofil och sedan välja alternativet ![Ikon för ombearbetning av resurser](assets/do-not-localize/reprocess-assets-icon.png) **[!UICONTROL Reprocess Assets]** bland de tillgängliga alternativen överst.
 
 >[!TIP]
 >
@@ -175,53 +175,53 @@ När en bearbetningsprofil har tillämpats på en mapp bearbetas alla nya resurs
 >
 >En bearbetningsprofil som används på en mapp fungerar för hela trädet, men kan åsidosättas om en annan profil används på en undermapp. När resurser överförs till en mapp kontrollerar Experience Manager egenskaperna för den innehållande mappen för att hitta en bearbetningsprofil. Om ingen används kontrolleras en överordnad mapp i hierarkin för att en bearbetningsprofil ska användas.
 
-Kontrollera att resurserna bearbetas genom att förhandsgranska de genererade återgivningarna i dialogrutan [!UICONTROL Renditions] i den vänstra listen. Öppna förhandsgranskningen av resursen och öppna den vänstra listen för att komma åt **[!UICONTROL Renditions]** vy. De specifika återgivningarna i bearbetningsprofilen, för vilka den specifika resursens typ matchar reglerna för MIME-typinkludering, bör vara synliga och tillgängliga.
+Kontrollera att resurserna bearbetas genom att förhandsgranska de genererade återgivningarna i vyn [!UICONTROL Renditions] i den vänstra listen. Öppna förhandsgranskningen av resursen och öppna den vänstra listen för att komma åt vyn **[!UICONTROL Renditions]**. De specifika återgivningarna i bearbetningsprofilen, för vilka den specifika resursens typ matchar reglerna för MIME-typinkludering, bör vara synliga och tillgängliga.
 
-![additional-renditions](assets/renditions-additional-renditions.png)
+![extra-renderingar](assets/renditions-additional-renditions.png)
 
 *Bild: Exempel på två extra återgivningar som genereras av en bearbetningsprofil som tillämpas på den överordnade mappen.*
 
-## Efterbehandlingsarbetsflöden {#post-processing-workflows}
+## Post arbetsflöden {#post-processing-workflows}
 
-I en situation där ytterligare bearbetning av resurser krävs som inte kan utföras med bearbetningsprofilerna, kan ytterligare efterbearbetningsarbetsflöden läggas till i konfigurationen. Med efterbearbetning kan du lägga till helt anpassad bearbetning utöver den konfigurerbara bearbetningen med hjälp av objektmikrotjänster.
+I en situation där ytterligare bearbetning av resurser krävs som inte kan utföras med bearbetningsprofilerna, kan ytterligare efterbearbetningsarbetsflöden läggas till i konfigurationen. Med Post-bearbetning kan du lägga till helt anpassad bearbetning utöver den konfigurerbara bearbetningen med hjälp av objektmikrotjänster.
 
-Efterbehandlingsarbetsflöden, eller [Starta arbetsflödet automatiskt](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/auto-start-workflows.html), om konfigureras, körs automatiskt av [!DNL Experience Manager] när mikrotjänsterna har behandlats klart. Du behöver inte lägga till startprogram för arbetsflöden manuellt för att utlösa arbetsflödena. Exemplen innehåller:
+Post-bearbetningsarbetsflöden, eller [Autostart](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/auto-start-workflows.html), om dessa har konfigurerats, körs automatiskt av [!DNL Experience Manager] när bearbetningen av mikrotjänsterna har slutförts. Du behöver inte lägga till startprogram för arbetsflöden manuellt för att utlösa arbetsflödena. Exemplen innehåller:
 
 * Anpassade arbetsflödessteg för att bearbeta resurser.
 * Integreringar för att lägga till metadata eller egenskaper i resurser från externa system, till exempel produkt- eller processinformation.
 * Ytterligare bearbetning utförd av externa tjänster.
 
-Lägga till en arbetsflödeskonfiguration för efterbearbetning i [!DNL Experience Manager]gör du så här:
+Så här lägger du till en arbetsflödeskonfiguration för efterbearbetning i [!DNL Experience Manager]:
 
-* Skapa en eller flera arbetsflödesmodeller. Dessa anpassade modeller kallas *arbetsflödesmodeller för efterbearbetning* i den här dokumentationen. De där är vanliga [!DNL Experience Manager] arbetsflödesmodeller.
+* Skapa en eller flera arbetsflödesmodeller. Dessa anpassade modeller kallas *arbetsflödesmodeller för efterbearbetning* i den här dokumentationen. Det är vanliga [!DNL Experience Manager] arbetsflödesmodeller.
 * Lägg till de arbetsflödessteg som krävs till dessa modeller. Granska stegen från standardarbetsflödet och lägg till alla nödvändiga standardsteg i det anpassade arbetsflödet. Stegen körs på resurserna baserat på en arbetsflödesmodellkonfiguration. Om du till exempel vill att smart taggning ska ske automatiskt när resurser överförs lägger du till steget i den anpassade arbetsflödesmodellen för efterbearbetning.
-* Lägg till [!UICONTROL DAM Update Asset Workflow Completed Process] i slutet. Om du lägger till det här steget vet Experience Manager när bearbetningen avslutas och resursen kan markeras som bearbetad, det vill säga *Nytt* visas på resursen.
+* Lägg till [!UICONTROL DAM Update Asset Workflow Completed Process] steg i slutet. Om du lägger till det här steget vet Experience Manager när bearbetningen avslutas och resursen kan markeras som bearbetad. Det innebär att *Nytt* visas på resursen.
 * Skapa en konfiguration för tjänsten Custom Workflow Runner som gör att du kan konfigurera körning av en arbetsflödesmodell efter bearbetning antingen med en sökväg (mappsökväg) eller med ett reguljärt uttryck.
 
-Mer information om vilket standardarbetsflödessteg som kan användas i efterbearbetningsarbetsflödet finns i [arbetsflödessteg i efterbearbetningsarbetsflöde](developer-reference-material-apis.md#post-processing-workflows-steps) i utvecklarreferensen.
+Mer information om vilket standardarbetsflödessteg som kan användas i efterbearbetningsarbetsflödet finns i [arbetsflödessteg i efterbearbetningsarbetsflödet](developer-reference-material-apis.md#post-processing-workflows-steps) i utvecklarreferensen.
 
 ### Skapa arbetsflödesmodeller för efterbearbetning {#create-post-processing-workflow-models}
 
-Arbetsflödesmodellerna för efterbearbetning är regelbundna [!DNL Experience Manager] arbetsflödesmodeller. Skapa olika modeller om du behöver olika bearbetning för olika databasplatser eller resurstyper.
+Arbetsflödesmodeller för Post-bearbetning är vanliga [!DNL Experience Manager] arbetsflödesmodeller. Skapa olika modeller om du behöver olika bearbetning för olika databasplatser eller resurstyper.
 
 Bearbetningsstegen läggs till efter behov. Du kan använda båda, de steg som stöds och eventuella anpassade arbetsflödessteg.
 
-Se till att det sista steget i varje efterbehandlingsarbetsflöde är `DAM Update Asset Workflow Completed Process`. I det sista steget ser du till att Experience Manager vet när bearbetningen av mediefiler är klar.
+Kontrollera att det sista steget i varje efterbearbetningsarbetsflöde är `DAM Update Asset Workflow Completed Process`. I det sista steget ser du till att Experience Manager vet när bearbetningen av mediefiler är klar.
 
 ### Konfigurera arbetsflödeskörning efter bearbetning {#configure-post-processing-workflow-execution}
 
 När objektets mikrotjänster har slutfört bearbetningen av de överförda resurserna kan du definiera arbetsflödet för efterbearbetning för ytterligare bearbetning av resurserna. Om du vill konfigurera efterbearbetning med arbetsflödesmodeller kan du göra något av följande:
 
-* [Använda en arbetsflödesmodell i mappegenskaper](#apply-workflow-model-to-folder).
+* [Använd en arbetsflödesmodell i mappegenskaperna](#apply-workflow-model-to-folder).
 * [Konfigurera tjänsten Custom Workflow Runner](#configure-custom-workflow-runner-service).
 
 #### Tillämpa en arbetsflödesmodell på en mapp {#apply-workflow-model-to-folder}
 
-För vanliga fall av efterbearbetning bör du överväga att använda metoden för att tillämpa ett arbetsflöde på en mapp. Använda en arbetsflödesmodell i mappen [!UICONTROL Properties]gör du så här:
+För vanliga fall av efterbearbetning bör du överväga att använda metoden för att tillämpa ett arbetsflöde på en mapp. Så här använder du en arbetsflödesmodell i mappen [!UICONTROL Properties]:
 
 1. Skapa en arbetsflödesmodell.
-1. Välj en mapp och klicka på **[!UICONTROL Properties]** i verktygsfältet och klicka sedan på **[!UICONTROL Assets Processing]** -fliken.
-1. Under **[!UICONTROL Auto-start Workflow]**, väljer önskat arbetsflöde, anger en rubrik för arbetsflödet och sparar sedan ändringarna.
+1. Välj en mapp, klicka på **[!UICONTROL Properties]** i verktygsfältet och klicka sedan på fliken **[!UICONTROL Assets Processing]**.
+1. Under **[!UICONTROL Auto-start Workflow]** väljer du önskat arbetsflöde, anger en rubrik för arbetsflödet och sparar sedan ändringarna.
 
    ![Tillämpa ett efterbearbetningsarbetsflöde på en mapp i dess egenskaper](assets/post-processing-profile-workflow-for-folders.png)
 
@@ -229,48 +229,48 @@ För vanliga fall av efterbearbetning bör du överväga att använda metoden f�
 
 Du kan konfigurera den anpassade arbetsflödets körningstjänst för de avancerade konfigurationer som inte kan uppfyllas på ett enkelt sätt genom att tillämpa ett arbetsflöde på en mapp. Ett arbetsflöde som använder ett reguljärt uttryck. Adobe CQ DAM Custom Workflow Runner (`com.adobe.cq.dam.processor.nui.impl.workflow.CustomDamWorkflowRunnerImpl`) är en OSGi-tjänst. Det innehåller följande två konfigurationsalternativ:
 
-* Efterbehandlingsarbetsflöden efter sökväg (`postProcWorkflowsByPath`): Flera arbetsflödesmodeller kan visas baserat på olika databassökvägar. Separera banor och modeller med ett kolon. Enkla databassökvägar stöds. Mappa dessa till en arbetsflödesmodell i `/var` bana. Till exempel: `/content/dam/my-brand:/var/workflow/models/my-workflow`.
-* Efterbehandlingsarbetsflöden efter uttryck (`postProcWorkflowsByExpression`): Flera arbetsflödesmodeller kan listas baserat på olika reguljära uttryck. Uttryck och modeller ska separeras med ett kolon. Det reguljära uttrycket ska peka direkt på resursnoden och inte på en av återgivningarna eller filerna. Till exempel: `/content/dam(/.*/)(marketing/seasonal)(/.*):/var/workflow/models/my-workflow`.
+* Arbetsflöden för Post-bearbetning efter sökväg (`postProcWorkflowsByPath`): Flera arbetsflödesmodeller kan listas baserat på olika databassökvägar. Separera banor och modeller med ett kolon. Enkla databassökvägar stöds. Mappa dessa till en arbetsflödesmodell i sökvägen `/var`. Till exempel: `/content/dam/my-brand:/var/workflow/models/my-workflow`.
+* Post-bearbetningsarbetsflöden efter uttryck (`postProcWorkflowsByExpression`): Flera arbetsflödesmodeller kan listas baserat på olika reguljära uttryck. Uttryck och modeller ska separeras med ett kolon. Det reguljära uttrycket ska peka direkt på resursnoden och inte på en av återgivningarna eller filerna. Till exempel: `/content/dam(/.*/)(marketing/seasonal)(/.*):/var/workflow/models/my-workflow`.
 
-Mer information om hur du distribuerar en OSGi-konfiguration finns i [distribuera till [!DNL Experience Manager]](/help/implementing/deploying/overview.md).
+Mer information om hur du distribuerar en OSGi-konfiguration finns i [Distribuera till [!DNL Experience Manager]](/help/implementing/deploying/overview.md).
 
 #### Inaktivera arbetsflödeskörning efter bearbetning
 
-När efterbearbetning inte behövs skapar och använder du en tom arbetsflödesmodell i __Starta arbetsflödet automatiskt__ markering.
+När efterbearbetning inte behövs skapar och använder du en tom arbetsflödesmodell i __Automatisk start av arbetsflöde__ -valet.
 
 ##### Skapa arbetsflödesmodellen Inaktiverad autostart
 
 1. Navigera till __Verktyg > Arbetsflöde > Modeller__
-1. Välj __Skapa > Skapa modell__ från det övre åtgärdsfältet
+1. Välj __Skapa > Skapa modell__ i det övre åtgärdsfältet
 1. Ange en titel och ett namn för den nya arbetsflödesmodellen, till exempel:
    * Titel: Inaktivera autostart av arbetsflöde
    * Namn: disable-auto-start-workflow
 1. Välj __Klar__ för att skapa arbetsflödesmodellen
-1. __Välj__ och __Redigera__ den skapade arbetsflödesmodellen
-1. Välj __Steg 1__ från modelldefinitionen och ta bort den
-1. Öppna __Side Panel__ och markera __Steg__
-1. Dra __DAM-uppdateringsarbetsflödet för resurser har slutförts__ steg in i modelldefinitionen
-1. Välj __Sidinformation__ (bredvid __Side Panel__ växla) och markera __Öppna egenskaper__
-1. Under __Grundläggande__ flik, välja __Övergående arbetsflöde__
+1. __Markera__ och __Redigera__ den skapade arbetsflödesmodellen
+1. Välj __Steg 1__ från modelldefinitionen i arbetsflödesmodellredigeraren och ta bort det
+1. Öppna __sidopanelen__ och välj __Steg__
+1. Dra steget __DAM Update Asset Workflow Completed__ till modelldefinitionen
+1. Markera knappen __Sidinformation__ (bredvid växlingsknappen __Side Panel__) och välj __Öppna egenskaper__
+1. Välj __Övergående arbetsflöde__ på fliken __Grundläggande__
 1. Välj __Spara och stäng__ i det övre åtgärdsfältet
 1. Välj __Synkronisera__ i det övre åtgärdsfältet
 1. Stäng arbetsflödesmodellredigeraren
 
 ##### Använda arbetsflödesmodellen Inaktiverad autostart
 
-Följ stegen som beskrivs i [använda en arbetsflödesmodell i en mapp](#apply-workflow-model-to-folder) och ange __Inaktivera autostart av arbetsflöde__ som __Starta arbetsflödet automatiskt__ för mappar kräver inte efterbearbetning av resurser.
+Följ stegen som beskrivs i [tillämpa en arbetsflödesmodell på en mapp](#apply-workflow-model-to-folder) och ange __Inaktivera autostart av arbetsflöde__ eftersom __autostart av arbetsflöde__ för mappar inte kräver efterbearbetning av resurser.
 
 ## Bästa praxis och begränsningar {#best-practices-limitations-tips}
 
-* Tänk på dina behov av alla typer av återgivningar när du utformar arbetsflöden. Om du inte förutser att en återgivning behövs i framtiden tar du bort steget när du skapar den från arbetsflödet. Återgivningar kan inte tas bort gruppvis efteråt. Oönskade återgivningar kan ta upp stora mängder lagringsutrymme efter långvarig användning av [!DNL Experience Manager]. För enskilda resurser kan du ta bort återgivningar manuellt från användargränssnittet. För flera resurser kan du antingen anpassa [!DNL Experience Manager] om du vill ta bort specifika återgivningar eller ta bort resurserna och överföra dem igen.
+* Tänk på dina behov av alla typer av återgivningar när du utformar arbetsflöden. Om du inte förutser att en återgivning behövs i framtiden tar du bort steget när du skapar den från arbetsflödet. Återgivningar kan inte tas bort gruppvis efteråt. Oönskade återgivningar kan ta upp stora mängder lagringsutrymme efter långvarig användning av [!DNL Experience Manager]. För enskilda resurser kan du ta bort återgivningar manuellt från användargränssnittet. För flera resurser kan du antingen anpassa [!DNL Experience Manager] för att ta bort specifika återgivningar eller ta bort resurserna och överföra dem igen.
 * Stödet är för närvarande begränsat till att generera renderingar. Generering av ny resurs stöds inte.
 * För närvarande är filstorleksgränsen för metadataextrahering ungefär 15 GB. När mycket stora resurser överförs misslyckas ibland metadataextraheringen.
 
 **Se även**
 
-* [Översätt resurser](translate-assets.md)
-* [Resurser för HTTP API](mac-api-assets.md)
-* [Resurser som stöds i filformat](file-format-support.md)
+* [Översätt Assets](translate-assets.md)
+* [ASSETS HTTP API](mac-api-assets.md)
+* [Filformat som stöds av Assets](file-format-support.md)
 * [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
 * [Resursrapporter](asset-reports.md)
@@ -280,14 +280,14 @@ Följ stegen som beskrivs i [använda en arbetsflödesmodell i en mapp](#apply-w
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publicera resurser till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 >[!MORELIKETHIS]
 >
->* [Introduktion till tjänsten Asset compute](https://experienceleague.adobe.com/docs/asset-compute/using/introduction.html).
->* [Förstå utbyggbarhet och när den ska användas](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html).
+>* [Introduktion till tjänsten Asset Compute](https://experienceleague.adobe.com/docs/asset-compute/using/introduction.html).
+>* [Förstå utökningsbarhet och när den ska användas](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html).
 >* [Skapa anpassade program](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html).
->* [MIME-typer som stöds för olika användningsområden](/help/assets/file-format-support.md).
+>* [MIME-typer som stöds för olika användningsfall](/help/assets/file-format-support.md).
 
 <!-- TBD: 
 * How/where can admins check what's already configured and provisioned.

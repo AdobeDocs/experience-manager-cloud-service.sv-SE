@@ -21,7 +21,7 @@ Adobe rekommenderar att du utför konfigurationssteg för befintliga utökade an
 
 Så här tar du bort externa beroenden:
 
-1. Ta bort följande konfiguration för Hoodoo-databasen från den överordnade `pom.xml`:
+1. Ta bort följande konfiguration för Hoodoo-databas från den överordnade `pom.xml`:
 
    ```XML
      <repository>
@@ -31,7 +31,7 @@ Så här tar du bort externa beroenden:
      </repository>
    ```
 
-1. Ta bort följande serverkonfiguration från `settings.xml` fil, tillgänglig på `./cloudmanager/maven/settings.xml`:
+1. Ta bort följande serverkonfiguration från filen `settings.xml` som är tillgänglig på `./cloudmanager/maven/settings.xml`:
 
    ```XML
          <server>
@@ -47,4 +47,4 @@ Så här tar du bort externa beroenden:
          </server>
    ```
 
-1. Kör [nya installationssteg](workfront-connector-install.md).
+1. Kör de [nya installationsstegen](workfront-connector-install.md).

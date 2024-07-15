@@ -1,6 +1,6 @@
 ---
 title: Introduktion till App Builder
-description: Lär dig grunderna i App Builder från dess affärsvärde till dess arkitektur.
+description: Lär dig grunderna i App Builder - från affärsvärde till arkitektur.
 version: Cloud Service
 feature: App Builder, Developing
 topic: Integrations, Development
@@ -20,24 +20,24 @@ ht-degree: 1%
 
 ## Introduktion
 
-Läs mer om App Builder, dess funktioner och det affärsvärde som App Builder erbjuder.
+Läs mer om App Builder, dess funktioner och det affärsvärde App Builder erbjuder.
 
 >[!VIDEO](https://video.tv.adobe.com/v/339158/?quality=12&learn=on)
 
 ## Pekpunkter
 
-Lär dig hur slutanvändare interagerar med App Builder-SPA och var utvecklare kan lära sig mer om App Builder-utveckling.
+Lär dig hur slutanvändarna interagerar med App Builder SPA och var utvecklarna kan lära sig mer om App Builder utveckling.
 
 >[!VIDEO](https://video.tv.adobe.com/v/339159/?quality=12&learn=on)
 
 ## Arkitektur
 
-Läs mer om apparkitekturen i App Builder och dess fördelar.
+Läs om App Builder programarkitektur och dess fördelar.
 
 >[!VIDEO](https://video.tv.adobe.com/v/339160/?quality=12&learn=on)
 
 ## Affärsvärde och användningsområden
 
-Lär dig mer om designprinciper och vanliga användningsområden i App Builder.
+Läs om App Builder designprinciper och vanliga användningsområden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/339161/?quality=12&learn=on)

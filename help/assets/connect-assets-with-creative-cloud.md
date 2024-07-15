@@ -29,11 +29,11 @@ Så här ansluter du till en ny Creative Cloud-organisation:
 
 1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL Creative Cloud]**.
 
-1. Markera den nya Creative Cloud-organisationen med **[!UICONTROL Select new Creative Cloud org ID]** listruta. I listan visas alla organisationer som du har tillgång till. Markera organisationen med aktiva Creative Cloud-berättiganden.
+1. Markera den nya Creative Cloud-organisationen med hjälp av listrutan **[!UICONTROL Select new Creative Cloud org ID]**. I listan visas alla organisationer som du har tillgång till. Markera organisationen med aktiva Creative Cloud-berättiganden.
 
-1. Klicka **[!UICONTROL Switch orgs]** för att byta till den nya organisationen.
+1. Klicka på **[!UICONTROL Switch orgs]** för att växla till den nya organisationen.
 
-   ![Korsorganisation](assets/cross-org-entitlements.png)
+   ![Korsorganisationsberättiganden](assets/cross-org-entitlements.png)
 
 ## Begränsningar {#limitations}
 

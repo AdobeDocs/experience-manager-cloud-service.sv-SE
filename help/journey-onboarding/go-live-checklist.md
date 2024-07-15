@@ -1,6 +1,6 @@
 ---
 title: GoLive Checklist
-description: Lär dig mer om alla element som behöver vara på plats för att lyckas med GoLive med AEM as a Cloud Service
+description: Läs om alla element som behövs för att du ska lyckas med Adobe GoLive med AEM as a Cloud Service
 exl-id: b424a9db-0f3b-4a8d-be84-365d68df46ca
 feature: Onboarding
 role: Admin, User, Developer
@@ -15,29 +15,29 @@ ht-degree: 0%
 
 Granska den här listan över aktiviteter för att säkerställa att du kan genomföra en smidig och framgångsrik Go-Live.
 
-* Köra en produktionsprocess från början till slut med funktions- och gränssnittstestning för att säkerställa en **alltid aktuell** AEM produktupplevelse. Se följande resurser.
+* Kör en komplett produktionsprocess med funktions- och gränssnittstestning för att säkerställa en **alltid aktuell** AEM produktupplevelse. Se följande resurser.
    * [Uppdateringar av AEM](/help/implementing/deploying/aem-version-updates.md)
    * [Anpassad funktionstestning](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing)
    * [UI-testning](/help/implementing/cloud-manager/ui-testing.md)
 * Om du migrerar från AEM 6.5 bör du migrera innehåll till produktion och se till att en relevant delmängd är tillgänglig på testningen.
    * DevOps bästa praxis för AEM innebär att koden går från utveckling till produktionsmiljö medan innehållet rör sig från produktionsmiljöer.
 * Schemalägg en frysperiod för kod och innehåll.
-   * Se även avsnittet [Tidslinjer för Kod- och Content Freeze för migrering](#code-content-freeze)
+   * Se även avsnittet [Tidslinjer för Kod- och Innehållsfrysning för migreringen](#code-content-freeze)
 * Utför den slutliga innehållsuppsättningen.
 * Validera dispatcherkonfigurationer.
    * Använd en lokal dispatchervaliderare som gör det lättare att konfigurera, validera och simulera avsändaren lokalt
-      * [Konfigurera de lokala dispatcherverktygen.](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html#prerequisites)
+      * [Konfigurera lokala dispatcherverktyg.](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html#prerequisites)
    * Granska konfigurationen av det virtuella värdsystemet noggrant.
       * Den enklaste (och standardlösningen) är att inkludera `ServerAlias *` i din virtuella värdfil i `/dispatcher/src/conf.d/available_vhostsfolder`.
          * Detta gör att värdaliasen som används av produktfunktionstester, invalidering av dispatchercache och kloner kan fungera.
-      * Om `ServerAlias *` är inte acceptabelt, åtminstone följande `ServerAlias` poster måste tillåtas utöver dina anpassade domäner:
+      * Om `ServerAlias *` inte är godtagbart måste minst följande `ServerAlias`-poster vara tillåtna utöver dina anpassade domäner:
          * `localhost`
          * `*.local`
          * `publish*.adobeaemcloud.net`
          * `publish*.adobeaemcloud.com`
 * Konfigurera CDN, SSL och DNS.
    * Om du använder ditt eget CDN anger du en supportanmälan för att konfigurera lämplig routning.
-      * Se avsnittet [Customer CDN points to AEM Managed CDN](/help/implementing/dispatcher/cdn.md#point-to-point-cdn) i CDN-dokumentationen för mer information.
+      * Mer information finns i avsnittet [Customer CDN points to AEM Managed CDN](/help/implementing/dispatcher/cdn.md#point-to-point-cdn) i CDN-dokumentationen.
       * Konfigurera SSL och DNS enligt dokumentationen från CDN-leverantören.
    * Om du inte använder ytterligare ett CDN hanterar du SSL och DNS enligt följande dokumentation:
       * Hantera SSL-certifikat

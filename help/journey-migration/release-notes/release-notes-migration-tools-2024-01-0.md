@@ -1,6 +1,6 @@
 ---
-title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2024.01.0
-description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2024.01.0
+title: Versionsinformation om migreringsverktyg i AEM as a Cloud Service version 2024.01.0
+description: Versionsinformation om migreringsverktyg i AEM as a Cloud Service version 2024.01.0
 feature: Release Information
 source-git-commit: 77da30bab941e7274c82ea5ce55a3f9c65608f49
 workflow-type: tm+mt
@@ -9,9 +9,9 @@ ht-degree: 2%
 
 ---
 
-# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2024.01.0 {#release-notes}
+# Versionsinformation om migreringsverktyg i AEM as a Cloud Service version 2024.01.0 {#release-notes}
 
-Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2024.01.0.
+På den här sidan finns versionsinformation för migreringsverktyg i AEM as a Cloud Service 2024.01.0.
 
 ## Verktyget Innehållsöverföring {#ctt-release}
 

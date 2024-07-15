@@ -10,14 +10,14 @@ ht-degree: 0%
 
 ---
 
-# Referensresurser för Forms as a Cloud Service {#reference-themes}
+# Referens för Assets för Forms as a Cloud Service {#reference-themes}
 
-Du kan hämta referensteman, mallar och formulärdatamodellen (FDM) genom att installera [Referensresurspaket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-forms-reference-content.ui.content-2.0.0.zip). Det hjälper dig att snabbt komma igång och snabba upp utvecklingen av adaptiva Forms. Du kan använda [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager.html) för att distribuera det här paketet till din Forms as a Cloud Service miljö.
+Du kan hämta referensteman, mallar och formulärdatamodellen (FDM) genom att installera [Reference Assets-paketet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-forms-reference-content.ui.content-2.0.0.zip). Det hjälper dig att snabbt komma igång och snabba upp utvecklingen av adaptiva Forms. Du kan använda [Package Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager.html) för att distribuera det här paketet till din Forms as a Cloud Service miljö.
 Referenstillgångarna i paketet är:
 
 ## Teman {#themes}
 
-[Teman](/help/forms/themes.md) gör att du kan formatera formulär utan djupare kunskaper om CSS. Följande teman ingår:
+Med [Teman](/help/forms/themes.md) kan du formatera formulär utan djupa kunskaper om CSS. Följande teman ingår:
 
 * Beryl
 * Tranquil
@@ -31,13 +31,13 @@ Varje tema innehåller en unik och elegant stil som du kan använda för att ska
 
 Teman som ingår i det här paketet är responsiva, och format i dessa teman definieras för mobilskärmar och datorskärmar. De flesta moderna webbläsare på en mängd olika enheter kan återge formulär som används med något av dessa teman utan krångel.
 
-Mer information om hur du installerar paketet finns i [Så här arbetar du med paket](/help/implementing/developing/tools/package-manager.md).
+Mer information om hur du installerar paketet finns i [Arbeta med paket](/help/implementing/developing/tools/package-manager.md).
 
 ### Beryl {#beryl}
 
 Beryltemat används av den anpassade formen We.Gov och betonar användningen av bakgrundsbilder, genomskinlighet och stora, platta ikoner. På skärmbilden nedan ser du hur Beryl-temat ser ut och hur det kan förbättra formateringen av ditt formulär.
 
-![Beryltema](/help/forms/assets/beryl.png)
+![Berytema](/help/forms/assets/beryl.png)
 
 <!--[Click to enlarge
 
@@ -74,7 +74,7 @@ Liberty theme uses a minimalist approach to highlight the important. For example
 
 Med det tillfälliga temat får du ljusa och mörka nyanser av det Tranquil-färgschemat för att framhäva olika komponenter i ett formulär. Alternativknappar, paneler och flikar får till exempel en annan grön ton.
 
-![Löpande tema](/help/forms/assets/tranquil.png)
+![Transiärt tema](/help/forms/assets/tranquil.png)
 
 <!--[Click to enlarge](assets/tranquil-1.png)-->
 
@@ -89,7 +89,7 @@ Ultramarintemat använder djupa blå skuggor för att framhäva komponenter som 
 
 Urbane-temat betonar ett minimalistiskt och funktionellt utseende på ditt formulär. När du använder Urbane-temat i ditt formulär ser du att komponenterna är platta. Panelerna får tunna konturer för att skapa ett modernt utseende.
 
-![Urbantema](/help/forms/assets/urbane.png)
+![Urban-tema](/help/forms/assets/urbane.png)
 <!--[Click to enlarge](assets/urbane-1.png)-->
 
 <!-- ## U.S. Web Design Standards {#u-s-web-design-standards}
@@ -120,7 +120,7 @@ Grundmallen innehåller en tom arbetsyta som du kan använda för att skapa en i
 
 Datamodellen för Microsoft Dynamics 365 hjälper dig att använda Microsoft Dynamics 365 som datakälla. Det innehåller också exempeltjänster för att läsa, uppdatera, ta bort och lägga till data i datakällan för Microsoft Dynamics 365.
 
-![Microsoft® Dynamics 365 Form Data Model](/help/forms/assets/microsoft-dynamic-fdm.png)
+![Microsoft® Dynamics 365-formulärdatamodell](/help/forms/assets/microsoft-dynamic-fdm.png)
 
 ### Salesforce
 

@@ -1,6 +1,6 @@
 ---
-title: Komma igång med AEM Forms Edge Delivery Service. Skapa ett formulär.
-description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery, dokumentbaserad framtagning = blixtsnabb och SEO-anpassade formulär för nöjdare användare och sökmotorer.
+title: Komma igång med tjänsten AEM Forms Edge Delivery. Skapa ett formulär.
+description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery dokumentbaserad redigering = blixtsnabb och SEO-vänliga formulär för nöjdare användare och sökmotorer.
 feature: Edge Delivery Services
 exl-id: 0cf881a2-3784-45eb-afe8-3435e5e95cf4
 role: Admin, Architect, Developer
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427881?quality=12&learn=on)
 
-AEM Forms Edge Delivery innehåller ett block, Adaptive Forms Block, som gör det enkelt att skapa formulär för inhämtning och lagring av inhämtade data. Du kan [skapa ett nytt AEM projekt förkonfigurerat med Adaptive Forms Block](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project).
+AEM Forms Edge Delivery har ett block, Adaptive Forms Block, som hjälper dig att enkelt skapa formulär för att hämta in och lagra inhämtade data. Du kan [skapa ett nytt AEM projekt förkonfigurerat med adaptivt Forms-block](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project) -projekt.
 
 Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft SharePoint för att enkelt bearbeta inlämnade data eller starta ett befintligt arbetsflöde.
 
@@ -26,9 +26,9 @@ Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets
 
 Kontrollera att du har utfört följande steg innan du börjar:
 
-* Konfigurera en [AEM projekt med AEM Forms standardmall](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [har lagt till Adaptive Forms Block i ditt befintliga AEM](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project) och klona motsvarande GitHub-databas på din lokala dator.
-I det här dokumentet kallas den lokala mappen i ditt Edge Delivery Services-projekt (EDS) `[EDS Project repository]`.
-* Se till att du har tillgång till Google Sheets eller Microsoft SharePoint. Information om hur du konfigurerar Microsoft SharePoint som innehållskälla finns i [Så här använder du SharePoint](https://www.aem.live/docs/setup-customer-sharepoint).
+* Konfigurera ett [AEM-projekt med AEM Forms-standardmallen](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lade till Adaptivt Forms-block i ditt befintliga AEM ](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project) och klona motsvarande GitHub-databas på den lokala datorn.
+I det här dokumentet kallas den lokala mappen för ditt EDS-projekt för `[EDS Project repository]`.
+* Se till att du har tillgång till Google Sheets eller Microsoft SharePoint. Information om hur du konfigurerar Microsoft SharePoint som innehållskälla finns i [Använda SharePoint](https://www.aem.live/docs/setup-customer-sharepoint).
 
 
 
@@ -67,35 +67,35 @@ Ensure a smooth GitHub build process by addressing potential issues:
 
 +++ Steg 1: Skapa ett formulär med Microsoft Excel eller Google Sheet.
 
-Istället för att navigera i komplexa processer kan du enkelt skapa ett formulär med hjälp av ett kalkylblad. Du kan definiera de rader och kolumner som ska utgöra formulärstrukturen. Varje rad representerar en individ [formulärfält](/help/edge/docs/forms/form-components.md#available-components) och kolumnrubrikerna definierar motsvarande [fältegenskaper](/help/edge/docs/forms/form-components.md#components-properties).
+Istället för att navigera i komplexa processer kan du enkelt skapa ett formulär med hjälp av ett kalkylblad. Du kan definiera de rader och kolumner som ska utgöra formulärstrukturen. Varje rad representerar ett enskilt [formulärfält](/help/edge/docs/forms/form-components.md#available-components) och kolumnrubrikerna definierar motsvarande [fältegenskaper](/help/edge/docs/forms/form-components.md#components-properties).
 
-Ta till exempel följande kalkylblad, där rader ger konturfält för ett `enquiry` formulär- och kolumnrubriker definierar deras egenskaper:
+Ta till exempel följande kalkylblad, där rader anger fälten för ett `enquiry`-formulär och kolumnrubriker definierar deras egenskaper:
 
 ![Kalkylblad för förfrågan](/help/edge/assets/enquiry-form-spreadsheet.png)
 
 Så här fortsätter du med att skapa formulär:
 
-1. Gå till projektmappen AEM Edge Delivery på Microsoft SharePoint eller Google Drive.
+1. Gå till din projektmapp AEM Edge Delivery på Microsoft SharePoint eller Google Drive.
 
-1. Skapa en Microsoft Excel-arbetsbok eller ett Google-blad var som helst i AEM Edge Delivery-projektkatalog. Skapa till exempel ett kalkylblad med namnet `enquiry` på AEM Edge Delivery-projektkatalog på Google Drive.
+1. Skapa en Microsoft Excel-arbetsbok eller ett Google-blad var som helst i AEM Edge Delivery projektkatalog. Skapa till exempel ett kalkylblad med namnet `enquiry` AEM Edge Delivery projektkatalog på Google Drive.
 
    ![Exempelinnehåll på Google Drive](/help/edge/assets/upload-sample-files-to-your-content-folder.png)
 
-1. Se till att bladet delas med rätt AEM (till exempel `helix@adobe.com`) [enligt de konfigurationer som har angetts för ditt projekt](https://www.aem.live/docs/setup-customer-sharepoint). Ge användaren redigeringsbehörighet för bladet.
+1. Kontrollera att bladet delas med rätt AEM (till exempel `helix@adobe.com`) [ enligt de konfigurationer som har angetts för ditt projekt](https://www.aem.live/docs/setup-customer-sharepoint). Ge användaren redigeringsbehörighet för bladet.
 
 1. Öppna det skapade kalkylbladet och ändra standardbladets namn till &quot;shared-default&quot;.
 
-   ![ändra namn på standardblad till &quot;shared-default&quot;](/help/edge/assets/rename-sheet-to-shared-default.png)
+   ![Byt namn på standardblad till &quot;shared-default&quot;](/help/edge/assets/rename-sheet-to-shared-default.png)
 
-1. Om du vill lägga till formulärfälten infogar du rader och kolumnrubriker i bladet&quot;shared-default&quot;. Varje rad ska representera en [formulärfält](/help/edge/docs/forms/form-components.md#available-components), med kolumnrubriker som definierar motsvarande fält [egenskaper](/help/edge/docs/forms/form-components.md#components-properties).
+1. Om du vill lägga till formulärfälten infogar du rader och kolumnrubriker i bladet&quot;shared-default&quot;. Varje rad ska representera ett [formulärfält](/help/edge/docs/forms/form-components.md#available-components), med kolumnrubriker som definierar motsvarande [fältegenskaper](/help/edge/docs/forms/form-components.md#components-properties).
 
 
-   För att komma igång snabbt bör du överväga att kopiera innehållet i [Kalkylblad för förfrågan](https://docs.google.com/spreadsheets/d/196lukD028RDK_evBelkOonPxC7w0l_IiJ-Yx3DvMfNk/edit#gid=0) i kalkylbladet. När du har kopierat innehållet sparar du kalkylbladet.
+   För att komma igång snabbt bör du överväga att kopiera innehållet i [kalkylbladet för förfrågan](https://docs.google.com/spreadsheets/d/196lukD028RDK_evBelkOonPxC7w0l_IiJ-Yx3DvMfNk/edit#gid=0) till kalkylbladet. När du har kopierat innehållet sparar du kalkylbladet.
 
    >[!VIDEO](https://video.tv.adobe.com/v/3427468?quality=12&learn=on)
 
 
-1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) om du vill förhandsgranska bladet.
+1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska bladet.
 
    ![Använd AEM Sidekick för att förhandsgranska bladet](/help/edge/assets/preview-form.png)
 
@@ -106,8 +106,8 @@ Så här fortsätter du med att skapa formulär:
        https://<branch>--<repository>--<owner>.hlx.live/<form-path>/<form-file-name>.json
    ```
 
-   * `<branch>` refererar till grenen i din GitHub-databas.
-   * `<repository>` anger din GitHub-databas.
+   * `<branch>` refererar till din GitHub-databas.
+   * `<repository>` betecknar din GitHub-databas.
    * `<owner>` refererar till användarnamnet för ditt GitHub-konto som är värd för din GitHub-databas.
 
    Om projektets databas till exempel heter &quot;portal&quot;, finns den under kontot &quot;wkndforms&quot; och du använder huvudgrenen, ser URL:en ut så här:
@@ -122,7 +122,7 @@ Så här fortsätter du med att skapa formulär:
 
 Till nu har du förberett formulärets struktur. Nu kan du förhandsgranska formuläret:
 
-1. Öppna ditt Microsoft SharePoint- eller Google Drive-konto och gå till AEM Edge Delivery-projektkatalog.
+1. Öppna ditt Microsoft SharePoint- eller Google Drive-konto och navigera till din AEM Edge Delivery projektkatalog.
 
 
 
@@ -137,9 +137,9 @@ Till nu har du förberett formulärets struktur. Nu kan du förhandsgranska form
    | [https://main—weFinance—wkndforms.hlx.live/inquiry.json](https://main--wefinance--wkndforms.hlx.live/enquiry.json) |
 
 
-   ![Lägg till adaptivt Forms-block på din webbsida](/help/edge/assets/add-adaptive-forms-block.png)
+   ![Lägg till anpassat Forms-block på din webbsida](/help/edge/assets/add-adaptive-forms-block.png)
 
-   Det här blocket fungerar som en platshållare där formuläret är inbäddat. Lägg till förhandsgransknings-URL:en på blockets andra rad `<form>.json` som en hyperlänk.
+   Det här blocket fungerar som en platshållare där formuläret är inbäddat. Lägg till förhandsgransknings-URL:en för din `<form>.json`-fil som en hyperlänk på den andra raden i blocket.
 
    >[!IMPORTANT]
    >
@@ -147,21 +147,21 @@ Till nu har du förberett formulärets struktur. Nu kan du förhandsgranska form
    > Kontrollera att URL-adressen är formaterad som en hyperlänk i stället för att visas som oformaterad text.
 
 
-1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) om du vill förhandsgranska dokumentet. Formuläret visas nu på sidan. Här är till exempel formuläret baserat på [frågekalkylblad](https://docs.google.com/spreadsheets/d/196lukD028RDK_evBelkOonPxC7w0l_IiJ-Yx3DvMfNk/edit#gid=0):
+1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska dokumentet. Formuläret visas nu på sidan. Här är till exempel formuläret baserat på kalkylbladet [för förfrågan](https://docs.google.com/spreadsheets/d/196lukD028RDK_evBelkOonPxC7w0l_IiJ-Yx3DvMfNk/edit#gid=0):
 
 
    [![Ett exempel på ett EDS-formulär](/help/edge/assets/eds-form.png)](https://main--portal--wkndforms.hlx.live/)
 
    Fyll i formuläret och klicka på skicka-knappen. Ett fel visas, ungefär som följande, eftersom kalkylbladet inte är inställt på att acceptera data än.
 
-   ![fel vid inlämning av formulär](/help/edge/assets/form-error.png)
+   ![fel vid formuläröverföring](/help/edge/assets/form-error.png)
 
 +++
 
 
 ## Nästa steg
 
-[Förbered kalkylbladet](/help/edge/docs/forms/submit-forms.md) för att börja ta emot data när formulär skickas in.
+[Förbered kalkylbladet](/help/edge/docs/forms/submit-forms.md) för att börja ta emot data när formulär skickas.
 
 
 ## Se även

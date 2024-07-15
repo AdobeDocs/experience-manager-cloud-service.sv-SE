@@ -19,17 +19,17 @@ Platshållartexten representerar ett ord eller en kort fras. Avsikten är att hj
 
 ![Datumkomponent med och utan platshållartext](assets/dat-picker-place-holder-text.png)
 
-**S.** Datumkomponent med platshållartext **B.** Datumkomponent utan platshållartext
+**A.** Date-komponent med platshållartext **B.** Date-komponent utan platshållartext
 
 [!DNL AEM Forms] har stöd för platshållartext för lösenordsrutor, datumväljare, numeriska rutor och textrutefält.\
 Platshållartexter stöds inte för den inbyggda HTML5-datumwidgeten. Så här anger du en platshållartext:
 
 1. Högerklicka på en komponent som stöder platshållartext och klicka på **Redigera**. Dialogrutan Redigera komponent visas.
 
-1. Öppna **Titel och text** -fliken.
-1. Ange ett ord eller en kort fras i **Platshållartextruta**. Klicka **OK**.
+1. Öppna fliken **Titel och text**.
+1. Ange ett ord eller en kort fras i textrutan **Platshållare**. Klicka på **OK**.
 
 >[!NOTE]
 >
->Platshållartext stöds inte på [!DNL Microsoft Internet Explorer 9].
+>Platshållartext stöds inte i [!DNL Microsoft Internet Explorer 9].
 

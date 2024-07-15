@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Innehållsfragment {#content-fragments}
 
-Innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service är [skapat och hanterat som sidoberoende resurser](/help/sites-cloud/administering/content-fragments/overview.md).
+Innehållsfragment i Adobe Experience Manager (AEM)-as a Cloud Service [skapas och hanteras som sidoberoende resurser](/help/sites-cloud/administering/content-fragments/overview.md).
 
 Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna.
 
@@ -19,32 +19,32 @@ Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfr
 
 >[!NOTE]
 >
->Innehållsfragment är en **Webbplatser** -funktionen, men lagras som **Resurser**.
+>Innehållsfragment är en **webbplatsfunktion**, men lagras som **Assets**.
 >
->De hanteras nu främst med **[Innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console)** konsolen, men de kan fortfarande hanteras från **[Resurser](/help/assets/content-fragments/content-fragments-managing.md)** konsol.
+>De hanteras nu primärt med konsolen **[Innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console)**, men de kan fortfarande hanteras från konsolen **[Assets](/help/assets/content-fragments/content-fragments-managing.md)**.
 >
 >Det finns två redigerare för att skapa innehållsfragment:
 >
->* Den nya redigeraren för [Content Fragments - Authoring](/help/sites-cloud/administering/content-fragments/authoring.md), kommer i första hand åt från **Innehållsfragment** konsol.
->* The [originalredigerare](/help/assets/content-fragments/content-fragments-variations.md) primärt hämtas från **Resurser** konsol.
+>* Den nya redigeraren för [innehållsfragment - redigering](/help/sites-cloud/administering/content-fragments/authoring.md), nås primärt från konsolen **Innehållsfragment**.
+>* Den [ursprungliga redigeraren](/help/assets/content-fragments/content-fragments-variations.md) är primärt åtkomlig från **Assets**-konsolen.
 
 >[!NOTE]
 >
->**Innehållsfragment** och **[Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md)** har olika funktioner i AEM:
+>**Innehållsfragment** och **[Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md)** är olika funktioner i AEM:
 >* **Innehållsfragment** är redaktionellt innehåll, med definition och struktur, men utan ytterligare visuell design och/eller layout. De kan användas för att få tillgång till strukturerade data, bland annat texter, siffror och datum.
 >* **Upplevelsefragment** är helt utformat för innehåll, ett fragment av en webbsida.
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
->Mer information finns i [Förstå innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
+>Mer information finns i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
 
 >[!CAUTION]
 >
->Den här sidan måste läsas tillsammans med [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) (och relaterade sidor) eftersom det innehåller grundläggande terminologi och begrepp, tillsammans med att skapa och hantera fragment.
+>Den här sidan måste läsas tillsammans med [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) (och relaterade sidor) eftersom den innehåller grundläggande terminologi och koncept samt skapar och hanterar fragment.
 
 Innehållsfragmenten aktiverar:
 
-* **Marknadsförings- och kampanjstrategi**
+* **Marknadsföring och kampanjstrategi**
    * Granska innehåll via centralt hanterade innehållsfragment.
 * **Creative Pro**
    * Spåra kreativa resurser via samlingar som är kopplade till innehållsfragment.
@@ -64,18 +64,18 @@ Innehållsfragmenten aktiverar:
 ## Lägga till ett innehållsfragment på sidan {#adding-a-content-fragment-to-your-page}
 
 1. Öppna sidan för redigering.
-2. Lägg till **Innehållsfragment** från någon av **Komponenter** webbläsare **Infoga ny komponent**.
+2. Lägg till komponenten **Innehållsfragment**, antingen från webbläsaren **Komponenter** eller från **Infoga ny komponent**.
 3. Du kan antingen:
-   * Öppna **Resurser** webbläsare och filter för **Innehållsfragment** (standard är Bilder). Dra sedan det önskade fragmentet till komponentinstansen.
-   * Markera innehållets fragmentkomponent och sedan **Konfigurera** i verktygsfältet. I dialogrutan kan du öppna urvalsdialogrutan för att bläddra och välja önskat alternativ **Innehållsfragment**.
+   * Öppna webbläsaren **Assets** och filtrera efter **Innehållsfragment** (standardvärdet är Bilder). Dra sedan det önskade fragmentet till komponentinstansen.
+   * Markera innehållskomponenten och **Konfigurera** i verktygsfältet. I dialogrutan kan du öppna urvalsdialogrutan för att bläddra och välja önskat **innehållsfragment**.
 
    >[!NOTE]
    >
    >Ett annat sätt är att dra ett visst innehållsfragment direkt till sidan. Då skapas automatiskt den associerade komponenten (innehållsfragment).
 
-4. Till att börja med innehåller innehållet från **Huvud** Element och **Master** (variation) visas. Du kan [markera andra element och/eller variationer](#selecting-the-element-or-variation) efter behov.
+4. Till att börja med visas innehållet från elementet **Main** och **Master** (variation). Du kan [markera andra element och/eller variationer](#selecting-the-element-or-variation) efter behov.
 
-   ![Innehållsfragment i Resursläsaren](/help/sites-cloud/authoring/assets/content-fragments.png)
+   ![Innehållsfragment i Assets-webbläsaren](/help/sites-cloud/authoring/assets/content-fragments.png)
 
    >[!NOTE]
    >
@@ -86,11 +86,11 @@ Innehållsfragmenten aktiverar:
 
 ### Markera elementet eller variationen {#selecting-the-element-or-variation}
 
-Öppna fragmentets **Konfiguration** för att konfigurera fragmentet för användning på den aktuella sidan. Dialogrutan kan vara beroende av vilken komponent som används.
+Öppna fragmentets dialogruta **Konfiguration** för att konfigurera fragmentet för användning på den aktuella sidan. Dialogrutan kan vara beroende av vilken komponent som används.
 
 >[!NOTE]
 >
->Se även [Kärnkomponenter, komponenten Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
+>Se även [kärnkomponenter, komponenten Content Fragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 
 I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland annat:
 
@@ -107,16 +107,16 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
   >Vilka element som är tillgängliga beror på vilken modell som används.
 
 * **Variant**
-   * Standardvärdet **Master** är alltid tillgängligt.
+   * Standardmallen **Master** är alltid tillgänglig.
    * En markering är tillgänglig om variationer har skapats för fragmentet.
 
 * **ID**
 
-   * **HTML ID** -attribut som ska användas på komponenten.
+   * **HTML ID**-attribut som ska användas för komponenten.
 
 ### Snabb anslutning till Fragment Editor {#quick-connection-to-fragment-editor}
 
-Du kan öppna fragmentkällan för redigering (resursen) med **Redigera** -ikonen i komponentens verktygsfält. Då kan du [redigera och hantera innehållsfragmentet](/help/sites-cloud/administering/content-fragments/overview.md).
+Du kan öppna fragmentkällan för redigering (resursen) med ikonen **Redigera** i komponentverktygsfältet. På så sätt kan du [redigera och hantera innehållsfragmentet](/help/sites-cloud/administering/content-fragments/overview.md).
 
 >[!CAUTION]
 >
@@ -124,15 +124,15 @@ Du kan öppna fragmentkällan för redigering (resursen) med **Redigera** -ikone
 
 ### Lägga till mellaninnehåll {#adding-in-between-content}
 
-När ett visst innehållsfragment läggs till på sidan finns det ett **Dra komponenter hit** platshållare mellan styckena HTML (och längst upp/längst ned) i fragmentet.
+När ett visst innehållsfragment läggs till på sidan finns det en **Drag-komponent här** mellan varje HTML-stycke (och längst upp/längst ned) i fragmentet.
 
-Detta gör att du kan lägga till extra innehåll [in-between (d.v.s. in-between content)](/help/assets/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments) fragmentinnehållet (vid någon av de tillgängliga punkterna), utan att behöva ändra rotfragmentet.
+Detta gör att du kan lägga till extra innehåll [däremellan (det vill säga mellanliggande innehåll)](/help/assets/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments) i fragmentinnehållet (vid någon av de tillgängliga punkterna), utan att behöva ändra rotfragmentet.
 
 För mellanliggande innehåll kan du:
 
-* Lägg till komponenter från [Komponentwebbläsare](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser).
-* Lägg till resurser från [Resursläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#assets-browser).
-* Använd [Associerat innehåll](#using-associated-content) som en källa för mellanliggande innehåll.
+* Lägg till komponenter från [komponentwebbläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser).
+* Lägg till resurser från [Assets-webbläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#assets-browser).
+* Använd [Associerat innehåll](#using-associated-content) som källa för mellanliggande innehåll.
 
 >[!CAUTION]
 >
@@ -144,7 +144,7 @@ För mellanliggande innehåll kan du:
 >
 >Du kan också [infoga visuella resurser (bilder) i själva fragmentet](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment).
 >
->Visuella resurser som infogats i själva fragmentet kopplas till föregående stycke i fragmentet. Det innebär att du inte kan placera innehåll mellan en visuell resurs och föregående stycke. Om du behöver den här anslutningsnivån kan du lägga till bilden i fragmentet (som en [blandat mediefragment](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)).
+>Visuella resurser som infogats i själva fragmentet kopplas till föregående stycke i fragmentet. Det innebär att du inte kan placera innehåll mellan en visuell resurs och föregående stycke. Om du behöver den här anslutningsnivån kan du lägga till bilden i fragmentet (som ett [blandat mediefragment](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)).
 
 >[!CAUTION]
 >
@@ -159,23 +159,23 @@ För mellanliggande innehåll kan du:
 
 ### Använda associerat innehåll {#using-associated-content}
 
-Om du har [associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) med [innehållsfragment](/help/assets/content-fragments/content-fragments.md) dessa resurser är tillgängliga från sidopanelen (när du har placerat fragmentet på innehållssidan). Associerat innehåll är i själva verket en särskild innehållskälla för [mellanliggande innehåll](/help/assets/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments).
+Om du har [associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) med [innehållsfragmentet](/help/assets/content-fragments/content-fragments.md) är dessa resurser tillgängliga från sidopanelen (efter att du har placerat fragmentet på innehållssidan). Associerat innehåll är i själva verket en särskild innehållskälla för [det mellanliggande innehållet](/help/assets/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments).
 
 >[!NOTE]
 >
->Det finns olika metoder att lägga till [visuella resurser (till exempel bilder)](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
+>Det finns olika metoder för att lägga till [visuella resurser (till exempel bilder)](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till avsnittet och/eller sidan.
 
 >[!NOTE]
 >
->Om du har flera innehållsfragment på en sida **Associerat innehåll** -fliken visar resurser som passar alla fragment.
+>Om du har flera innehållsfragment på en sida visar fliken **Associerat innehåll** resurser som passar alla fragment.
 
-När du har lagt till ett fragment med associerat innehåll på sidan visas en ny flik (**Associerat innehåll**) öppnas på sidopanelen.
+När du har lagt till ett fragment med associerat innehåll på sidan öppnas en ny flik (**Associerat innehåll**) på sidopanelen.
 
 Här kan du dra resurserna till önskad plats (antingen till en befintlig komponent eller till önskad plats där rätt komponent skapas):
 
 ![Infoga en bild](/help/sites-cloud/authoring/assets/content-fragments-image.png)
 
-### Resurser som infogats i fragmentet {#assets-inserted-into-the-fragment}
+### Assets infogat i fragmentet {#assets-inserted-into-the-fragment}
 
 Om resurser (till exempel bilder) har infogats i själva fragmentet (som [blandade mediefragment](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)) är alternativen för att redigera dessa resurser i sidredigeraren begränsade.
 
@@ -192,8 +192,8 @@ Andra ändringar, som att flytta, kopiera och ta bort, måste göras i fragmentr
 
 Fragment måste publiceras så att de kan användas på dina publicerade webbsidor:
 
-* Ett fragment kan publiceras efter [skapa fragmentet i konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#publishing-and-previewing-a-fragment).
-* Om en *opublicerat fragment* används på en sida som publiceras, kan fragmentet också publiceras just nu.
+* Ett fragment kan publiceras när [fragmentet har skapats i konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#publishing-and-previewing-a-fragment).
+* Om ett *opublicerat fragment* används på en sida som publiceras, kan fragmentet även publiceras just nu.
 
 ## Exportera innehållsfragment {#exporting-content-fragments}
 

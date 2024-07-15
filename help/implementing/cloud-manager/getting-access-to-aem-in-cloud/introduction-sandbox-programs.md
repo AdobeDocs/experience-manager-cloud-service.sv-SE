@@ -21,11 +21,11 @@ Lär dig vilka sandlådeprogram som skiljer sig från produktionsprogram.
 
 Ett sandlådeprogram skapas vanligtvis för att användas för utbildning, löpande demonstrationer, aktivering eller konceptbevis (POC) och är därför inte avsett för livstrafik.
 
-Ett sandlådeprogram är ett av de två tillgängliga programmen i AEM Cloud Service, och det andra är ett [produktionsprogram.](introduction-production-programs.md) Se [Program och programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md) om du vill veta mer om programtyper.
+Ett sandlådeprogram är en av de två typer av program som är tillgängliga i AEM Cloud Service, och det andra är ett [produktionsprogram.](introduction-production-programs.md) Mer information om programtyper finns i [Förstå program och programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md).
 
 ## Automatiskt skapande {#auto-creation}
 
-I sandlådeprogram skapas automatiskt. När du skapar ett sandlådeprogram, Cloud Manager automatiskt:
+I sandlådeprogram skapas automatiskt. När du skapar ett sandlådeprogram gör Cloud Manager automatiskt följande:
 
 * Lägger till AEM Sites och AEM Assets som lösningar i programmet.
 * Ställer in en projekt-Git-databas med ett exempelprojekt baserat på [AEM Project Archetype.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
@@ -40,7 +40,7 @@ Eftersom de inte är avsedda för direkttrafik har sandlådeprogram vissa begrä
 
 ### Ingen Live-trafik {#live-traffic}
 
-Sandlådeprogram är inte avsedda att bära trafik i realtid och omfattas därför inte av [AEM as a Cloud Service åtaganden.](https://www.adobe.com/legal/service-commitments.html)
+Sandlådeprogram är inte avsedda att innehålla livstrafik och omfattas därför inte av [AEM as a Cloud Service-åtaganden.](https://www.adobe.com/legal/service-commitments.html)
 
 ### Ingen autoskalning {#auto-scaling}
 
@@ -52,7 +52,7 @@ Anpassade domäner och IP-tillåtelselista är inte tillgängliga i sandlådepro
 
 ### Inget avancerat nätverk {#advanced-networking}
 
-[Avancerade nätverksfunktioner](/help/security/configuring-advanced-networking.md) (till exempel kan du inte använda självbetjäning för VPN, portar som inte är standard, dedikerade IP-adresser för utgångar och så vidare) i sandlådeprogram.
+[Avancerade nätverksfunktioner](/help/security/configuring-advanced-networking.md) (t.ex. självbetjäning för VPN, portar som inte är standard, dedikerade IP-adresser för utgångar och så vidare) är inte tillgängliga i sandlådeprogram.
 
 ### Manuella AEM {#updates}
 
@@ -61,15 +61,15 @@ AEM uppdateras inte automatiskt i sandlådeprogram, men kan tillämpas manuellt 
 * En manuell uppdatering kan bara köras när målmiljön har en korrekt konfigurerad pipeline.
 * En manuell uppdatering av antingen en produktions- eller staging-miljö uppdaterar automatiskt den andra. Miljöuppsättningen Production+Stage måste finnas i samma AEM.
 
-Se [AEM](/help/implementing/deploying/aem-version-updates.md) för mer information.
+Mer information finns i [AEM versionsuppdateringar](/help/implementing/deploying/aem-version-updates.md).
 
-Se [Uppdaterar miljö](/help/implementing/cloud-manager/manage-environments.md#updating-dev-environment) för att lära dig hur man uppdaterar en miljö.
+Mer information om hur du uppdaterar en miljö finns i [Uppdatera miljö](/help/implementing/cloud-manager/manage-environments.md#updating-dev-environment).
 
 ### Viloläge och borttagning {#hibernation}
 
 Miljöer i ett sandlådeprogram försätts automatiskt i viloläge efter åtta timmars inaktivitet. Sandlådemiljöer tas bort efter sex sammanhängande månader i viloläge.
 
-Se [Viloläge och avvänjningsmiljöer för sandlådor](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/hibernating-environments.md) om du vill ha mer information om hur du avplacerar miljöer i viloläge och tar bort sandlådor automatiskt.
+Se [Vilolägen och Fristående sandlådemiljöer](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/hibernating-environments.md) om du vill ha mer information om hur du frigör miljöer och tar bort sandlådor automatiskt.
 
 ### Ingen teknisk support {#no-support}
 

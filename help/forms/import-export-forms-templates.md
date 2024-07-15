@@ -21,22 +21,22 @@ ht-degree: 1%
 
 # Importera eller exportera anpassningsbara Forms- och AEM Forms-resurser {#importing-and-exporting-assets-to-aem-forms}
 
-Du kan flytta adaptiva Forms och relaterade resurser som adaptiva formulärteman, formulärdatamodell (FDM), adaptiva formulärmallar, fragment och PDF forms mellan [!DNL AEM Forms] -instanser.
+Du kan flytta adaptiva Forms och relaterade resurser som adaptiva formulärteman, formulärdatamodell (FDM), adaptiva formulärmallar, fragment och PDF forms mellan [!DNL AEM Forms]-instanser.
 
 ## Ladda ned anpassningsbara Forms-, PDF forms- och samhörande resurser {#download-forms-amp-documents-assets}
 
 Så här hämtar du formulär eller relaterade resurser:
 
-1. Logga in på [!DNL Experience Manager Forms] -instans.
+1. Logga in på din [!DNL Experience Manager Forms]-instans.
 1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 
    ![Välj Forms](/help/forms/assets/select-forms.png)
 
-1. Markera resurserna och klicka på **[!UICONTROL Download]** ikonen från den övre listen.
+1. Markera resurserna och klicka på ikonen **[!UICONTROL Download]** i den övre listen.
 
-   ![Ladda ned Forms](/help/forms/assets/download-form.png)
+   ![Hämta Forms](/help/forms/assets/download-form.png)
 
-   När du laddar ned formuläret **[!UICONTROL Download Asset(s)]** visas.
+   När du hämtar formuläret visas dialogrutan **[!UICONTROL Download Asset(s)]**.
 
    ![Hämta formulärresurser](/help/forms/assets/download-form-assets.png)
 
@@ -49,40 +49,40 @@ De valda resurserna hämtas som ett arkiv (.zip-fil).
 Du kan överföra de resurstyper som stöds individuellt eller som ett ZIP-arkiv. För en ZIP-fil visas de relativa sökvägarna för alla resurser som stöds. Resurser som inte stöds i ZIP ignoreras och visas inte. Om ZIP-arkivet bara innehåller resurser som inte stöds visas ett felmeddelande i stället för popup-dialogrutan.
 Så här överför du ett formulär eller en relaterad resurs:
 
-1. Logga in på [!DNL Experience Manager Forms] -instans.
+1. Logga in på din [!DNL Experience Manager Forms]-instans.
 1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 
    ![Välj Forms](/help/forms/assets/select-forms.png)
 
 1. Välj **[!UICONTROL Create]** > **[!UICONTROL File Upload]**. En dialogruta visas.
 
-   ![Ladda upp Forms](/help/forms/assets/form-upload.png)
+   ![Överför Forms](/help/forms/assets/form-upload.png)
 
 1. I dialogrutan bläddrar du till och väljer paketet eller arkivet som ska importeras. Du kan också välja andra filtyper som stöds. Välj **[!UICONTROL Open]**. Mappen eller filnamnet som du väljer får inte innehålla några specialtecken.
 
-   Verifiera i dialogrutan informationen om de resurser som överförs och välj **[!UICONTROL Upload]**.
+   Verifiera informationen om resurser som överförs i dialogrutan och välj **[!UICONTROL Upload]**.
 
    Om du överför en befintlig formulärresurs uppdateras resursen.
 
    >[!NOTE]
    >
-   > När ett namn hamnar i konflikt med olika resurstyper ersätter inte överföring av ett paket den befintliga mapphierarkin. Om du t.ex. har ett adaptivt formulär som heter &#39;Utbildning&#39; på platsen `/content/dam/formsanddocuments` på en server. Du kan hämta det adaptiva formuläret och överföra det till en annan server. Den andra servern har också en mapp med namnet &quot;Training&quot; på samma plats `/content/dam/formsanddocuments`. Överföringen misslyckas.
+   > När ett namn hamnar i konflikt med olika resurstyper ersätter inte överföring av ett paket den befintliga mapphierarkin. Om du till exempel har ett adaptivt formulär med namnet &quot;Training&quot; på platsen `/content/dam/formsanddocuments` på en server. Du kan hämta det adaptiva formuläret och överföra det till en annan server. Den andra servern har också en mapp med namnet &quot;Training&quot; på samma plats `/content/dam/formsanddocuments`. Överföringen misslyckas.
 
 ## Hämta ett tema
 
 Du kan exportera teman i [!DNL AEM Forms] som du kan använda i andra projekt eller instanser. Med AEM kan du hämta teman som en zip-fil som du kan överföra till instansen.
 Så här hämtar du ett tema:
 
-1. Logga in på [!DNL Experience Manager Forms] Författarinstans.
+1. Logga in på din [!DNL Experience Manager Forms] Author-instans.
 1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Themes]**.
 
    ![Välj tema](/help/forms/assets/select-theme.png)
 
-1. Välj temat på sidan Teman och klicka på **[!UICONTROL Download]** ikonen från den övre listen.
+1. Välj temat på sidan Teman och klicka på ikonen **[!UICONTROL Download]** i den övre listen.
 
-   ![Ladda ned tema](/help/forms/assets/download-theme.png)
+   ![Hämta tema](/help/forms/assets/download-theme.png)
 
-   När du laddar ned temat **[!UICONTROL Download Asset(s)]** visas.
+   När du hämtar temat visas dialogrutan **[!UICONTROL Download Asset(s)]**.
 
    ![Hämta temaresurser](/help/forms/assets/download-theme-asset.png)
 
@@ -95,8 +95,8 @@ De valda resurserna hämtas som ett arkiv (.zip-fil).
 Du kan överföra och använda teman som andra skapar i dina formulär.
 Så här överför du ett tema:
 
-1. Logga in på [!DNL Experience Manager Forms] -instans.
-1. I Experience Manager går du till **[!UICONTROL Forms]** > **[!UICONTROL Themes]**.
+1. Logga in på din [!DNL Experience Manager Forms]-instans.
+1. Gå till **[!UICONTROL Forms]** > **[!UICONTROL Themes]** i Experience Manager.
 
    ![Välj tema](/help/forms/assets/select-theme.png)
 
@@ -114,7 +114,7 @@ Du kan använda mappar för att ordna och ordna resurser. Genom att ordna dokume
 
 Så här skapar du en mapp:
 
-1. Logga in på [!DNL Experience Manager Forms] -instans.
+1. Logga in på din [!DNL Experience Manager Forms]-instans.
 1. Välj **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 
    ![Välj formulär](/help/forms/assets/select-forms.png)
@@ -123,8 +123,8 @@ Så här skapar du en mapp:
 
    ![Skapa mapp](/help/forms/assets/create-folder.png)
 
-   The **[!UICONTROL Add Folder]** visas.
-1. Ange **[!UICONTROL Title]**. The **[!UICONTROL Name]** fylls i automatiskt när du skriver **[!UICONTROL Title]**.
+   Dialogrutan **[!UICONTROL Add Folder]** visas.
+1. Ange **[!UICONTROL Title]**. **[!UICONTROL Name]** fylls i automatiskt när du skriver **[!UICONTROL Title]**.
 
    ![Lägg till mapp](/help/forms/assets/add-folder.png)
 
@@ -136,7 +136,7 @@ Så här skapar du en mapp:
 
 En ny mapp med den titel du har definierat visas på den aktuella platsen i resurslistan.
 
-Om det finns en mapp med det angivna namnet misslyckas överföringen. Du kan visa felmeddelandet genom att hovra över felet ![aem6forms_error_alert](assets/Smock_Alert_18_N.svg) -ikonen som visas bredvid namnfältet.
+Om det finns en mapp med det angivna namnet misslyckas överföringen. Du kan visa felmeddelandet genom att hovra över ikonen ![aem6forms_error_alert](assets/Smock_Alert_18_N.svg) som visas bredvid namnfältet.
 
 Du kan markera den skapade mappen så att den hamnar i mappen och skapa resurser eller mappar i mappen. Du kan också markera en mapp och välja att placera den i kö för hämtning, ta bort den eller redigera namnet på den.
 
@@ -146,9 +146,9 @@ Du kan använda en befintlig resurs för att snabbt skapa en resurs med liknande
 
 Så här skapar du kopior av resurser:
 
-1. Logga in på [!DNL Experience Manager Forms] -instans.
-1. Välj en eller flera resurser på den relevanta tillgångssidan. Gränssnittet visar **[!UICONTROL Copy]** -ikon.
-1. Välj **[!UICONTROL Copy]**. Gränssnittet visar ![Ikonen Klistra in](/help/forms/assets/Smock_Paste_18_N.svg) -ikon.
+1. Logga in på din [!DNL Experience Manager Forms]-instans.
+1. Välj en eller flera resurser på den relevanta tillgångssidan. Gränssnittet visar ikonen **[!UICONTROL Copy]**.
+1. Välj **[!UICONTROL Copy]**. Gränssnittet visar ikonen ![Klistra in](/help/forms/assets/Smock_Paste_18_N.svg) .
 
    ![Kopiera resurs](/help/forms/assets/copy-asset.png)
 
@@ -157,13 +157,13 @@ Så här skapar du kopior av resurser:
 
    ![Klistra in resurs](/help/forms/assets/paste-asset.png)
 
-1. The **[!UICONTROL Paste]** visas. I systemet genereras namn och titlar automatiskt till de nya kopiorna av resurser, men du kan redigera namn och namn för resurserna.
+1. Dialogrutan **[!UICONTROL Paste]** visas. I systemet genereras namn och titlar automatiskt till de nya kopiorna av resurser, men du kan redigera namn och namn för resurserna.
 
    Om du kopierar och klistrar in resurserna på samma plats läggs suffixet&quot;-CopyXX&quot; till i det befintliga namnet på `asset`. Om det inte finns någon titel för den kopierade resursen förblir det automatiskt genererade titelfältet tomt.
 
    ![Klistra in resurs på ny plats](/help/forms/assets/paste-click-asset.png)
 
-   Om det behövs kan du redigera **[!UICONTROL Title]** som du vill spara kopian av resursen med. The **[!UICONTROL Name]** fylls i automatiskt när du skriver **[!UICONTROL Title]**.
+   Om det behövs redigerar du **[!UICONTROL Title]** som du vill spara kopian av resursen med. **[!UICONTROL Name]** fylls i automatiskt när du skriver **[!UICONTROL Title]**.
 1. Välj **[!UICONTROL Paste]**. Nya kopior av de kopierade resurserna skapas.
 
 ## Sök {#search-forms}
@@ -172,8 +172,8 @@ När du har ett stort antal resurser är det tidskrävande att söka efter rätt
 
 Så här söker du efter resursen:
 
-1. Logga in på [!DNL Experience Manager Forms] -instans.
-1. Klicka på ![sökningsikon](assets/folder-search-icon.svg) sökikon.
+1. Logga in på din [!DNL Experience Manager Forms]-instans.
+1. Klicka på sökikonen ![sök](assets/folder-search-icon.svg) .
 
    ![Sökformulär](/help/forms/assets/search-form.png)
 
@@ -183,7 +183,7 @@ Så här söker du efter resursen:
 
    ![Söka efter resurser](/help/forms/assets/search-bar.png)
 
-Mer information och instruktioner om hur du använder sökningar finns i [Sök](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html).
+Mer information och instruktioner om hur du använder sökfunktionen finns i [Sök](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html).
 
 <!--
 ## Export or create a package {#export-a-workflow-application}

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # SPA- och serveråtergivning{#spa-and-server-side-rendering}
 
-Single page-applikationer (SPA) kan ge användaren en rik, dynamisk upplevelse som reagerar och beter sig på välbekanta sätt, ofta precis som ett systemspecifikt program. [Den här funktionaliteten uppnås genom att klienten förlitar sig på att läsa in innehållet framtill och sedan göra en grov förbättring av användarinteraktionen](introduction.md#how-does-a-spa-work). Den här processen minimerar mängden kommunikation som krävs mellan klienten och servern, vilket gör programmet mer reaktivt.
+Single page-applikationer (SPA) kan ge användaren en rik, dynamisk upplevelse som reagerar och beter sig på välbekanta sätt, ofta precis som ett systemspecifikt program. [Den här funktionaliteten uppnås genom att klienten förlitar sig på att läsa in innehållet i förväg och sedan göra en grov förbättring av användarinteraktionen](introduction.md#how-does-a-spa-work). Den här processen minimerar mängden kommunikation som krävs mellan klienten och servern, vilket gör programmet mer reaktivt.
 
 Den här processen kan dock leda till längre inledande inläsningstider, särskilt om SPA är stor och har mycket innehåll. För att optimera inläsningstiden kan en del av innehållet återges på serversidan. Med SSR-återgivning (server-side rendering) går sidans initiala belastning snabbare och skickar sedan vidare återgivning till klienten.
 
@@ -26,18 +26,18 @@ När du beslutar dig för att implementera SSR måste du först uppskatta vilken
 SSR ger vanligtvis ett visst värde när det finns ett tydligt&quot;ja&quot; till någon av följande frågor:
 
 * **SEO:** Krävs det fortfarande SSR för att din webbplats ska kunna indexeras korrekt av sökmotorer som genererar trafik? Kom ihåg att de viktigaste sökmotorcrawlarna nu utvärderar JS.
-* **Sidhastighet:** Ger SSR en mätbar hastighetsförbättring i realtidsmiljöer och ökar den övergripande användarupplevelsen?
+* **Sidhastighet:** Ger SSR en mätbar hastighetsförbättring i realtidsmiljöer och förbättrar den övergripande användarupplevelsen?
 
 Endast när minst en av dessa två frågor besvaras med ett tydligt&quot;ja&quot; för ditt projekt rekommenderar Adobe att SSR implementeras. I följande avsnitt beskrivs hur du gör detta med Adobe I/O Runtime, som ingår i [App Builder](https://developer.adobe.com/app-builder).
 
 ## Adobe I/O Runtime {#adobe-i-o-runtime}
 
-Om du [är säkra på att ditt projekt kräver SSR](#when-to-use-ssr), rekommenderas Adobe att använda Adobe I/O Runtime.
+Om du [ är säker på att ditt projekt kräver implementering av SSR](#when-to-use-ssr) rekommenderar Adobe att du använder Adobe I/O Runtime.
 
 Mer information om Adobe I/O Runtime finns i:
 
-* [https://developer.adobe.com/runtime](https://developer.adobe.com/runtime) - för en översikt över runtime-funktionen i App Builder
-* [https://developer.adobe.com/app-builder](https://developer.adobe.com/app-builder) - för mer information om den fullständiga App Builder-produkten
+* [https://developer.adobe.com/runtime](https://developer.adobe.com/runtime) - en översikt över runtime-funktionen i App Builder
+* [https://developer.adobe.com/app-builder](https://developer.adobe.com/app-builder) - för mer information om App Builder fullständiga produkt
 * [https://developer.adobe.com/runtime/docs/](https://developer.adobe.com/runtime/docs) - för detaljerad dokumentation
 
 I följande avsnitt beskrivs hur Adobe I/O Runtime kan användas för att implementera SSR för dina SPA i två olika modeller:
@@ -47,7 +47,7 @@ I följande avsnitt beskrivs hur Adobe I/O Runtime kan användas för att implem
 
 >[!NOTE]
 >
->Adobe rekommenderar en separat Adobe I/O Runtime-arbetsyta per miljö (stage, prod, testing osv.). Detta möjliggör typiska mönster för systemutvecklingscykler (SDLC) med olika versioner av ett program som distribueras till olika miljöer. Se [CI/CD för App Builder-program](https://developer.adobe.com/app-builder/docs/guides/deployment/ci_cd_for_firefly_apps/) för mer information.
+>Adobe rekommenderar en separat Adobe I/O Runtime-arbetsyta per miljö (stage, prod, testing osv.). Detta möjliggör typiska mönster för systemutvecklingscykler (SDLC) med olika versioner av ett program som distribueras till olika miljöer. Mer information finns i [CI/CD for App Builder Applications](https://developer.adobe.com/app-builder/docs/guides/deployment/ci_cd_for_firefly_apps/).
 >
 >En separat arbetsyta behövs inte per instans (författare, publicering) såvida det inte finns skillnader i körtidsimplementeringen per instanstyp.
 
@@ -57,32 +57,32 @@ I följande avsnitt beskrivs hur Adobe I/O Runtime kan användas för att implem
 
 ## Fjärrrenderarkonfiguration {#remote-content-renderer-configuration}
 
-AEM måste veta var det fjärråtergivna innehållet kan hämtas. Oavsett [vilken modell du väljer att implementera för SSR,](#adobe-i-o-runtime) du måste ange AEM hur du får åtkomst till den här fjärråtergivningstjänsten.
+AEM måste veta var det fjärråtergivna innehållet kan hämtas. Oavsett [vilken modell du väljer att implementera för SSR ](#adobe-i-o-runtime) måste du ange hur du ska AEM åtkomst till den här fjärråtergivningstjänsten.
 
-Den här tjänsten utförs via **RemoteContentRenderer - Configuration Factory OSGi-tjänst**. Sök efter strängen RemoteContentRenderer i webbkonsolens konfigurationskonsol på `http://<host>:<port>/system/console/configMgr`.
+Den här tjänsten utförs med hjälp av **RemoteContentRenderer - Configuration Factory OSGi-tjänsten**. Sök efter strängen RemoteContentRenderer i webbkonsolens konsol på `http://<host>:<port>/system/console/configMgr`.
 
-![Renderingskonfiguration](assets/renderer-configuration.png)
+![Återgivningskonfiguration](assets/renderer-configuration.png)
 
 Följande fält är tillgängliga för konfigurationen:
 
-* **Mönster för innehållsbana** - Reguljärt uttryck som matchar en del av innehållet, om det behövs
+* **Mönster för innehållssökväg** - Reguljärt uttryck som matchar en del av innehållet, om det behövs
 * **URL för fjärrslutpunkt** - URL för slutpunkten som ansvarar för att generera innehållet
    * Använd det säkra HTTPS-protokollet om det inte finns i det lokala nätverket.
-* **Ytterligare begäranderubriker** - Ytterligare rubriker som ska läggas till i begäran som skickas till fjärrslutpunkten
+* **Ytterligare begärandehuvuden** - Ytterligare huvuden som ska läggas till i begäran som skickas till fjärrslutpunkten
    * Mönster: `key=value`
 * **Timeout för begäran** - Timeout för fjärrvärdbegäran i millisekunder
 
 >[!NOTE]
 >
->Oavsett om du väljer att implementera [AEM kommunikationsflöde](#aem-driven-communication-flow) eller [Adobe I/O Runtime-styrt flöde,](#adobe-i-o-runtime-driven-communication-flow) du måste definiera en fjärrkonfiguration för innehållsåtergivning.
+>Oavsett om du väljer att implementera det [AEM kommunikationsflödet](#aem-driven-communication-flow) eller det [Adobe I/O Runtime-drivna flödet](#adobe-i-o-runtime-driven-communication-flow) måste du definiera en fjärrkonfiguration för innehållsåtergivning.
 
 >[!NOTE]
 >
->Den här konfigurationen använder [Remote Content Renderer,](#remote-content-renderer) som har ytterligare alternativ för tillägg och anpassning.
+>Den här konfigurationen använder [Renderer för fjärrinnehåll](#remote-content-renderer), som har ytterligare tillgängliga tillägg och anpassningsalternativ.
 
 ## AEM kommunikationsflöde {#aem-driven-communication-flow}
 
-När SSR används [arbetsflöde för komponentinteraktion](introduction.md#interaction-with-the-spa-editor) SPA i AEM innehåller en fas där det inledande innehållet i appen genereras på Adobe I/O Runtime.
+När du använder SSR innehåller [komponentens interaktionsarbetsflöde](introduction.md#interaction-with-the-spa-editor) för SPA i AEM en fas i vilken det inledande innehållet i appen genereras på Adobe I/O Runtime.
 
 1. Webbläsaren begär SSR-innehåll från AEM.
 1. AEM skickar modellen till Adobe I/O Runtime.
@@ -115,7 +115,7 @@ Båda modellerna är giltiga och stöds av AEM. Man bör dock beakta fördelarna
     </ul> </td>
    <td>
     <ul>
-     <li>SPA utvecklare kanske inte känner till<br /> </li>
+     <li>SPA utvecklaren<br /> kanske inte känner till </li>
     </ul> </td>
   </tr>
   <tr>
@@ -126,7 +126,7 @@ Båda modellerna är giltiga och stöds av AEM. Man bör dock beakta fördelarna
     </ul> </td>
    <td>
     <ul>
-     <li>Klientlib-resurser som krävs av programmet, t.ex. CSS och JavaScript, måste göras tillgängliga av den AEM utvecklaren via <code><a href="/help/implementing/developing/introduction/clientlibs.md">allowProxy</a></code> property<br /> </li>
+     <li>Klientlib-resurser som krävs av programmet, t.ex. CSS och JavaScript, måste göras tillgängliga av den AEM utvecklaren via egenskapen <code><a href="/help/implementing/developing/introduction/clientlibs.md">allowProxy</a></code> <br /> </li>
      <li>Resurserna måste synkroniseras mellan AEM och Adobe I/O Runtime<br /> </li>
      <li>Om du vill aktivera redigering av SPA kan det behövas en proxyserver för Adobe I/O Runtime</li>
     </ul> </td>
@@ -154,21 +154,21 @@ Precis som AEM stöder ramverken Angular och React SPA direkt, stöds även serv
 
 ## Renderare för fjärrinnehåll {#remote-content-renderer}
 
-The [Konfiguration av fjärrinnehållsrenderare](#remote-content-renderer-configuration) som krävs för att använda SSR tillsammans med SPA i AEM går in i en mer generaliserad renderingstjänst som kan byggas ut och anpassas efter dina behov.
+Den [Remote Content Renderer Configuration](#remote-content-renderer-configuration) som krävs för att använda SSR med SPA i AEM finns i en mer generaliserad renderingstjänst som kan utökas och anpassas efter dina behov.
 
 ### RemoteContentRenderingService {#remotecontentrenderingservice}
 
-`RemoteContentRenderingService` En OSGi-tjänst för att hämta innehåll som återges på en fjärrserver, till exempel från Adobe I/O. Innehållet som skickas till fjärrservern baseras på den begärandeparameter som skickas.
+`RemoteContentRenderingService` En OSGi-tjänst som hämtar innehåll som återges på en fjärrserver, till exempel från Adobe I/O. Innehållet som skickas till fjärrservern baseras på den begärandeparameter som skickas.
 
-`RemoteContentRenderingService` Kan injiceras genom beroendeinvertering till antingen en anpassad Sling-modell eller en servlet när ytterligare innehållsmanipulering krävs.
+`RemoteContentRenderingService` kan injiceras genom beroendeinvertering till antingen en anpassad Sling-modell eller en servlet när ytterligare innehållsmanipulering krävs.
 
-Tjänsten används internt av [RemoteContentRendererRequestHandlerServlet](#remotecontentrendererrequesthandlerservlet).
+Den här tjänsten används internt av [RemoteContentRendererRequestHandlerServlet](#remotecontentrendererrequesthandlerservlet).
 
 ### RemoteContentRendererRequestHandlerServlet {#remotecontentrendererrequesthandlerservlet}
 
-The `RemoteContentRendererRequestHandlerServlet` används för att ställa in konfigurationen för begäran programmatiskt. `DefaultRemoteContentRendererRequestHandlerImpl`, den medföljande standardimplementeringen av begäranhanteraren, gör att du kan skapa flera OSGi-konfigurationer så att du kan mappa en plats i innehållsstrukturen till en fjärrslutpunkt.
+`RemoteContentRendererRequestHandlerServlet` används för att ställa in konfigurationen för begäran programmatiskt. `DefaultRemoteContentRendererRequestHandlerImpl`, den angivna standardimplementeringen av begäranhanteraren, gör att du kan skapa flera OSGi-konfigurationer så att du kan mappa en plats i innehållsstrukturen till en fjärrslutpunkt.
 
-Implementera `RemoteContentRendererRequestHandler` gränssnitt. Var noga med att ställa in `Constants.SERVICE_RANKING` egenskapen component till ett heltal som är högre än 100, vilket är rankningen för `DefaultRemoteContentRendererRequestHandlerImpl`.
+Implementera gränssnittet `RemoteContentRendererRequestHandler` om du vill lägga till en anpassad begärandehanterare. Se till att du ställer in `Constants.SERVICE_RANKING`-komponentegenskapen på ett heltal som är högre än 100, vilket är rankningen för `DefaultRemoteContentRendererRequestHandlerImpl`.
 
 ```javascript
 @Component(immediate = true,
@@ -200,4 +200,4 @@ Vanligtvis är HTML-mallen för en sidkomponent huvudmottagaren för en sådan f
 
 ### Krav {#requirements}
 
-Servlets använder Sling Model Exporter för att serialisera komponentdata. Som standard är båda `com.adobe.cq.export.json.ContainerExporter` och `com.adobe.cq.export.json.ComponentExporter` stöds som Sling Model-kort. Om det behövs kan du lägga till klasser som begäran ska anpassas till med `RemoteContentRendererServlet` och implementera `RemoteContentRendererRequestHandler#getSlingModelAdapterClasses`. Ytterligare klasser måste utöka `ComponentExporter`.
+Servlets använder Sling Model Exporter för att serialisera komponentdata. Som standard stöds både `com.adobe.cq.export.json.ContainerExporter` och `com.adobe.cq.export.json.ComponentExporter` som Sling Model-kort. Om det behövs kan du lägga till klasser som begäran ska anpassas till med `RemoteContentRendererServlet` och implementera `RemoteContentRendererRequestHandler#getSlingModelAdapterClasses`. De ytterligare klasserna måste utöka `ComponentExporter`.

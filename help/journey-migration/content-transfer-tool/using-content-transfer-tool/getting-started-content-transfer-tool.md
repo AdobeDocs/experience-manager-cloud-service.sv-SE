@@ -23,7 +23,7 @@ ht-degree: 2%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current.html" text="Versionsinformation"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="Programdistributionsportal"
 
-Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) på din källinstans av Adobe Experience Manager (AEM). Glöm inte att hämta den senaste versionen. Mer information om den senaste versionen finns på [Versionsinformation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current.html).
+Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet med hjälp av [Package Manager](/help/implementing/developing/tools/package-manager.md) på din Adobe Experience Manager-källinstans (AEM). Glöm inte att hämta den senaste versionen. Mer information om den senaste versionen finns i [Versionsinformation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current.html).
 
 Endast version 2.0.0 och senare stöds, och du bör använda den senaste versionen.
 
@@ -47,10 +47,10 @@ Källinstansen AEM kanske köras bakom en brandvägg där den bara kan nå vissa
 
 Det kan vara svårt att förstå SSL-/TLS-anslutningsproblem. Om du vill felsöka anslutningsproblem under en extraheringsprocess kan du aktivera SSL-loggning via systemkonsolen i AEM genom att följa dessa steg:
 
-1. Navigera till Adobe Experience Manager Web Console i källinstansen genom att gå till **Verktyg > Åtgärder > Webbkonsol** eller direkt till URL:en på *https://serveraddress:serverport/system/console/configMgr*
+1. Navigera till Adobe Experience Manager Web Console på din källinstans genom att gå till **Verktyg > Åtgärder > Webbkonsol** eller direkt till URL:en på *https://serveraddress:serverport/system/console/configMgr*
 1. Sök efter **Konfiguration av extraheringstjänst för innehållsöverföringsverktyg**
 1. Använd pennikonknappen för att redigera dess konfigurationsvärden
-1. Aktivera **Aktivera SSL-loggning för extrahering** ställa in och sedan trycka **Spara**:
+1. Aktivera inställningen **Aktivera SSL-loggning för extrahering** och tryck sedan på **Spara**:
 
    ![bild](/help/journey-migration/content-transfer-tool/assets/enable_ssl_logging.png)
 
@@ -80,7 +80,7 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 
 1. Logga in på Cloud Acceleration Manager (CAM) och klicka på CAM-projektet som du skapat tidigare för att utvärdera om du är redo att gå över till AEM as a Cloud Service. Om du inte har skapat något CAM-projekt, se Skapa och hantera ett projekt i CAM.
 
-1. Klicka på **Innehållsöverföring** för att öppna vyn Migreringsuppsättningslista.
+1. Klicka på kortet **Innehållsöverföring** för att öppna vyn med listan över migreringsuppsättningar.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam1.png)
 
@@ -92,7 +92,7 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam2.png)
 
-   Följande dialogruta visas. Observera att ett migreringsuppsättning upphör att gälla efter en längre inaktivitetsperiod. När varningar visas på projektkortet och migreringsjobbtabellsraderna för en tidsperiod, kommer migreringsuppsättningen att upphöra att gälla och dess data kommer inte längre att vara tillgängliga. Granska [Förfallotid för migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md#migration-set-expiry) för mer information.
+   Följande dialogruta visas. Observera att ett migreringsuppsättning upphör att gälla efter en längre inaktivitetsperiod. När varningar visas på projektkortet och migreringsjobbtabellsraderna för en tidsperiod, kommer migreringsuppsättningen att upphöra att gälla och dess data kommer inte längre att vara tillgängliga. Granska [migreringsuppsättningen upphör](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md#migration-set-expiry) om du vill ha mer information.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam3.png)
 
@@ -100,7 +100,7 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
    >
    >Namnet måste följa samma konventioner som en AEM nod så det får inte innehålla något av följande tecken: . / : [ ] | *
 
-1. Nu bör du se din migreringslista i listvyn. Markera symbolen med tre punkter (**...**) för att öppna listrutan och välja **Kopiera extraheringsnyckel**. Du behöver den här nyckeln under extraheringsfasen. Kopiera den här extraheringsnyckeln.
+1. Nu bör du se din migreringslista i listvyn. Markera symbolen med tre punkter (**..**) för att öppna listrutan och välj **Kopiera extraheringsnyckel**. Du behöver den här nyckeln under extraheringsfasen. Kopiera den här extraheringsnyckeln.
 
    >[!NOTE]
    >
@@ -118,40 +118,40 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 
 Om du vill fylla i den migreringsuppsättning som du skapade i Cloud Acceleration Manager installerar du den senaste versionen av verktyget Innehållsöverföring på Adobe Experience Manager-källinstansen (AEM). Följ det här avsnittet om du vill lära dig hur du fyller i migreringsuppsättningen.
 
-1. När du har installerat den senaste versionen av verktyget Innehållsöverföring på Adobe Experience Manager-källinstansen går du till **Åtgärder - innehållsmigrering**
+1. När du har installerat den senaste versionen av verktyget Innehållsöverföring på Adobe Experience Manager-källinstansen går du till **Åtgärder - Innehållsmigrering**
 
-1. Klicka **Skapa migreringsuppsättning**.
+1. Klicka på **Skapa migreringsuppsättning**.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam5.png)
 
-1. Klistra in extraheringsnyckeln som kopierades från CAM tidigare i indatafältet för extraheringsnyckeln i **Skapa migreringsuppsättning** formulär. När du har gjort det fylls namnen på migreringsuppsättningen och projektnamnet för Cloud Acceleration Manager (CAM) i automatiskt. Dessa ska matcha namnet på migreringsuppsättningen i CAM och namnet på CAM-projektet som du skapade. Nu kan du lägga till innehållssökvägar. Spara migreringsuppsättningen när du har lagt till innehållssökvägar. Du kan köra extraheringen med antingen versioner inkluderade eller exkluderade.
+1. Klistra in extraheringsnyckeln som kopierades från CAM tidigare i indatafältet för extraheringsnyckeln i formuläret **Skapa migreringsuppsättning**. När du har gjort det fylls namnen på migreringsuppsättningen och projektnamnet för Cloud Acceleration Manager (CAM) i automatiskt. Dessa ska matcha namnet på migreringsuppsättningen i CAM och namnet på CAM-projektet som du skapade. Nu kan du lägga till innehållssökvägar. Spara migreringsuppsättningen när du har lagt till innehållssökvägar. Du kan köra extraheringen med antingen versioner inkluderade eller exkluderade.
 
    >[!NOTE]
    >
-   >Kontrollera att extraheringsnyckeln är giltig och att den inte är i närheten av utgångsdatumet. Du kan hämta den här informationen i **Skapa migreringsuppsättning** när du har klistrat in extraheringsnyckeln. Om du får ett anslutningsfel kan du läsa [Source Environment Connectivity](#source-environment-connectivity) för mer information.
+   >Kontrollera att extraheringsnyckeln är giltig och att den inte är i närheten av utgångsdatumet. Du kan hämta den här informationen i dialogrutan **Skapa migreringsuppsättning** när du har klistrat in extraheringsnyckeln. Om du får ett anslutningsfel finns mer information i [Source Environment Connectivity](#source-environment-connectivity) .
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam6.png)
 
 1. Välj sedan följande parametrar för att skapa en migreringsuppsättning:
 
-   1. **Inkludera version**: Välj det som behövs. När versioner inkluderas, banan `/var/audit` inkluderas automatiskt för att migrera granskningshändelser.
+   1. **Inkludera version**: Välj det som behövs. När versioner inkluderas inkluderas sökvägen `/var/audit` automatiskt för att migrera granskningshändelser.
 
       ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam7.png)
 
       >[!NOTE]
-      >Om du tänker ta med versioner som en del av en migreringsuppsättning och utför uppsättningar med `wipe=false`måste du inaktivera versionsrensning på grund av en aktuell begränsning i verktyget Innehållsöverföring. Om du föredrar att behålla versionsrensning aktiverad och utför summeringar i en migreringsuppsättning, måste du utföra inmatningen som `wipe=true`.
+      >Om du tänker ta med versioner som en del av en migreringsuppsättning och utför tilläggsprogram med `wipe=false`, måste du inaktivera versionsrensning på grund av en aktuell begränsning i verktyget Innehållsöverföring. Om du föredrar att behålla versionsrensning aktiverad och utför toppuppsättningar i en migreringsuppsättning, måste du utföra det som `wipe=true`.
 
 
-   1. **Banor som ska inkluderas**: Använd sökvägsläsaren för att välja sökvägar som ska migreras. Banväljaren accepterar indata genom att skriva eller genom att välja.
+   1. **Sökvägar som ska inkluderas**: Använd sökvägsläsaren för att välja sökvägar som ska migreras. Banväljaren accepterar indata genom att skriva eller genom att välja.
 
       >[!IMPORTANT]
       >Följande sökvägar är begränsade när du skapar en migreringsuppsättning:
       >* `/apps`
       >* `/libs`
       >* `/home`
-      >* `/etc` (vissa `/etc` banor kan markeras i CTT)
+      >* `/etc` (vissa `/etc` sökvägar kan väljas i CTT)
 
-1. Klicka **Spara** när du har fyllt i alla fält i **Skapa migreringsuppsättning** informationsskärmen.
+1. Klicka på **Spara** när du har fyllt i alla fält på informationsskärmen för **Skapa migreringsuppsättning**.
 
 <!-- 1. You will view your migration set in the **Content Transfer** wizard, as shown in the figure below.
 
@@ -172,7 +172,7 @@ Om du vill fylla i den migreringsuppsättning som du skapade i Cloud Acceleratio
 När du har skapat en migreringsuppsättning rekommenderar vi att du kör en storlekskontroll på migreringsuppsättningen innan du startar en extraheringsprocess.
 Genom att köra en storlekskontroll på migreringsuppsättningen kan du:
 
-* Kontrollera om det finns tillräckligt med diskutrymme i `crx-quickstart` underkatalog för att slutföra extraheringen.
+* Kontrollera om det finns tillräckligt med diskutrymme i underkatalogen `crx-quickstart` för att slutföra extraheringen.
 * Kontrollera om migreringsuppsättningens storlek ligger inom de produktgränser som stöds och undvik misslyckade innehållsfrågor.
 
 Följ stegen nedan för att göra en storlekskontroll:
@@ -181,19 +181,19 @@ Följ stegen nedan för att göra en storlekskontroll:
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam8.png)
 
-1. Då öppnas **Kontrollera storlek** -dialogrutan.
+1. Dialogrutan **Kontrollera storlek** öppnas.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam9.png)
 
-1. Klicka **Kontrollera storlek** för att starta processen. Du kommer sedan tillbaka till vyn med migreringsuppsättningslistor och du bör se ett meddelande som anger att **Kontrollera storlek** är igång.
+1. Klicka på **Kontrollera storlek** för att starta processen. Du kommer sedan tillbaka till vyn med migreringsuppsättningslistor och du bör se ett meddelande om att **Kontrollera storlek** körs.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam10.png)
 
-1. Efter **Kontrollera storlek** processen är slutförd, statusen ändras till **SLUTFÖRD**. Välj samma migreringsuppsättning och klicka på **Kontrollera storlek** för att visa resultaten. Nedan visas ett exempel på **Kontrollera storlek** resultat utan varningar.
+1. När **Kontrollera storlek**-processen har slutförts ändras statusen till **SLUTFÖRD**. Välj samma migreringsuppsättning och klicka på **Kontrollera storlek** för att visa resultatet. Nedan visas ett exempel på **Kontrollera storlek** utan varningar.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam11.png)
 
-1. Om **Kontrollera storlek** resultatet visar att det antingen inte finns tillräckligt med diskutrymme eller att migreringsuppsättningen överskrider produktgränserna, eller både och **VARNING** status visas.
+1. Om resultatet **Kontrollera storlek** visar att det antingen inte finns tillräckligt med diskutrymme, eller att migreringsuppsättningen överskrider produktgränserna, eller båda, visas en **VARNING** -status.
 
 <!--   ![image](/help/journey-migration/content-transfer-tool/assets/CTT_CheckSize_image6.png)
    
@@ -204,4 +204,4 @@ Följ stegen nedan för att göra en storlekskontroll:
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du skapar en migreringsuppsättning kan du nu lära dig mer om extraherings- och inmatningsprocesser i verktyget Innehållsöverföring. Innan du lär dig dessa processer måste du granska [Hantera stora innehållsdatabaser](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md) för att avsevärt snabba upp extraherings- och intagsfaserna i innehållsöverföringsaktiviteten för att flytta innehåll till AEM as a Cloud Service.
+När du har lärt dig hur du skapar en migreringsuppsättning kan du nu lära dig mer om extraherings- och inmatningsprocesser i verktyget Innehållsöverföring. Innan du lär dig dessa processer måste du granska [Hantera stora innehållsdatabaser](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md) för att avsevärt snabba upp extraherings- och inmatningsfaserna i innehållsöverföringsaktiviteten så att innehåll flyttas till AEM as a Cloud Service.

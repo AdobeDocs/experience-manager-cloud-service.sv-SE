@@ -19,16 +19,16 @@ Lär dig hur AEM webbplatsmallar kan användas för att fördefiniera webbplatss
 
 För att AEM snabbt ska kunna skapa webbplatser som är anpassade till företagets behov kan AEM skapa nya webbplatser med hjälp av webbplatsmallar och webbplatsteman.
 
-* An **AEM webbplatsmall** innehåller allmänt grundläggande information om webbplatsinnehåll och struktur och webbplatsformat, så kallade webbplatsteman, så att du snabbt kan komma igång med en ny webbplats. Mallarna är kraftfulla eftersom de kan återanvändas och anpassas. Och eftersom du kan ha flera mallar tillgängliga i AEM kan du skapa olika webbplatser som passar olika affärsbehov.
-* An **AEM webbplatstema** är ett paket som innehåller CSS-, JavaScript- och statiska resurser som definierar formateringen för din AEM och som följer strukturen för ett AEM webbplatstema.
+* En **AEM webbplatsmall** innehåller vanligtvis baswebbplatsinnehåll samt struktur- och webbplatsformatinformation, så kallat webbplatstema, för att snabbt komma igång med en ny webbplats. Mallarna är kraftfulla eftersom de kan återanvändas och anpassas. Och eftersom du kan ha flera mallar tillgängliga i AEM kan du skapa olika webbplatser som passar olika affärsbehov.
+* Ett **AEM webbplatstema** är ett paket som innehåller CSS-, JavaScript- och statiska resurser som definierar formateringen för din AEM och som uppfyller strukturen för ett AEM webbplatstema.
 
 ## Ytterligare resurser {#additional-resources}
 
-För [webbplatsgenerering](/help/sites-cloud/administering/site-creation/create-site.md) är vanligtvis AEM administratörens ansvar. Mer information om hur du anpassar webbplatsmallar och -teman finns i administrationsdokumentationen.
+Eftersom det i allmänhet är administratören som ansvarar för att skapa [platsen](/help/sites-cloud/administering/site-creation/create-site.md) finns mer information i administrationsdokumentationen om hur du anpassar webbplatsmallar och teman.
 
 * [Webbplatsmallar](/help/sites-cloud/administering/site-creation/site-templates.md) - Lär dig hur AEM webbplatsmallar kan användas för att fördefiniera webbplatsstrukturen och det ursprungliga innehållet så att du snabbt kan skapa nya webbplatser.
-* [Webbplatsteman](/help/sites-cloud/administering/site-creation/site-themes.md) - Lär dig hur AEM teman kan användas för att anpassa webbplatsens stil och design.
+* [Webbplatsteman](/help/sites-cloud/administering/site-creation/site-themes.md) - Lär dig hur AEM webbplatsteman kan användas för att anpassa webbplatsens stil och design.
 
 >[!TIP]
 >
->En fullständig beskrivning av processen att skapa en webbplats från en mall och anpassa dess tema finns i [Skapa snabbt webbplatser](/help/journey-sites/quick-site/overview.md).
+>En fullständig beskrivning av processen att skapa en webbplats från en mall och anpassa dess tema finns på [snabbwebbplatsresan](/help/journey-sites/quick-site/overview.md).

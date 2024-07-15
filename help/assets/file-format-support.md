@@ -1,6 +1,6 @@
 ---
 title: Filformat och MIME-typer som stöds
-description: Filformat och MIME-typer som stöds av [!DNL Experience Manager Assets] som [!DNL Cloud Service].
+description: Filformat och MIME-typer som stöds av  [!DNL Experience Manager Assets]  som a [!DNL Cloud Service].
 contentOwner: AG
 feature: Asset Management, Renditions
 role: User, Admin
@@ -12,19 +12,19 @@ ht-degree: 0%
 
 ---
 
-# [!DNL Assets] filformat {#supported-file-formats}
+# Filformat som stöds av [!DNL Assets] {#supported-file-formats}
 
-[!DNL Adobe Experience Manager] som [!DNL Cloud Service] har stöd för grundläggande funktioner för innehållshantering - lagring, hantering av metadata online, versionshantering, överföring och hämtning med mera - för alla binära filer, oavsett format. [!DNL Adobe Experience Manager Assets] har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika format.
+[!DNL Adobe Experience Manager] som [!DNL Cloud Service] har stöd för grundläggande innehållshanteringsfunktioner - lagring, hantering av metadata online, versionshantering, överföring och hämtning och så vidare - för alla binära filer, oavsett format. [!DNL Adobe Experience Manager Assets] har stöd för ett stort antal filformat och varje produktfunktion har olika stöd för olika format.
 
-Dessutom [!DNL Experience Manager Assets] har utökat stöd för att generera förhandsgranskningar och återgivningar och för att extrahera metadata och text för fulltextindexering. Den här utökade supporten tillhandahålls med [tillgångsmikrotjänster](asset-microservices-configure-and-use.md).
+Dessutom har [!DNL Experience Manager Assets] utökat stöd för att generera förhandsgranskningar och återgivningar och extrahera metadata och text för fulltextindexering. Den här utökade supporten tillhandahålls med [tillgångsmikrotjänster](asset-microservices-configure-and-use.md).
 
 Några av de viktigaste funktionerna för resurskonvertering är följande:
 
-* Nyckel [Adobe-filformat](#adobe-formats) som producerats av Adobe program och tjänster, inklusive [!DNL Adobe Photoshop], [!DNL Adobe InDesign], [!DNL Adobe Illustrator], [!DNL Adobe XD], [!DNL Adobe Dimension]och [!DNL Adobe Acrobat] eller PDF.
-* Nyckel [bildfilformat](#image-formats).
-* [Camera Raw filformat](#camera-raw-formats) för ett stort antal kameror, inklusive Canon, Nikon, Fujifilm, Olympus och andra tillverkare (med Adobe Camera Raw som bas).
-* Vanliga [dokumentformat](#document-formats), inklusive Microsoft® Office och Open Document-format.
-* Stort urval av [video](#video-formats) och [ljud](#audio-formats) format.
+* Viktiga [filformat för Adobe](#adobe-formats) som skapats av program och tjänster från Adobe, inklusive [!DNL Adobe Photoshop], [!DNL Adobe InDesign], [!DNL Adobe Illustrator], [!DNL Adobe XD], [!DNL Adobe Dimension] och [!DNL Adobe Acrobat] eller PDF.
+* Viktiga [bildfilformat](#image-formats).
+* [Camera Raw filformat](#camera-raw-formats) för ett stort antal kameror, bland annat Canon, Nikon, Fujifilm, Olympus och andra tillverkare (med Adobe Camera Raw i botten).
+* Vanliga [dokumentformat](#document-formats), inklusive Microsoft® Office- och Open Document-format.
+* Ett brett urval av formaten [video](#video-formats) och [audio](#audio-formats).
 
 I följande förklaring beskrivs stödnivån för varje format.
 
@@ -51,7 +51,7 @@ I följande förklaring beskrivs stödnivån för varje format.
 | PSD | ✓ | - | ✓ | ✓ |
 | XD | ✓ | - | ✓ | ✓ |
 
-\* för [!DNL Adobe InDesign] filer (INDD) bestäms storleken på återgivningarna av den förhandsgranskning som är inbäddad i INDD-filen. Konfigurera inställningarna i [!DNL InDesign] (**[!UICONTROL Preferences > File Handling > Always Save Preview Images with Documents, Preview Size]**) så att du kan bädda in större återgivningar.
+\* För [!DNL Adobe InDesign] filer (INDD) bestäms storleken på återgivningarna av den förhandsgranskning som är inbäddad i INDD-filen. Konfigurera inställningarna i [!DNL InDesign] (**[!UICONTROL Preferences > File Handling > Always Save Preview Images with Documents, Preview Size]**) så att du kan bädda in större återgivningar.
 
 ## Bildformat {#image-formats}
 
@@ -175,7 +175,7 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 
 ## Ljudformat {#audio-formats}
 
-[!DNL Assets] som [!DNL Cloud Service] har stöd för XMP metadataextrahering för ljudformaten AIF, ASF, M4A, MP3, WAV och WMA.
+[!DNL Assets] som [!DNL Cloud Service] har stöd XMP metadataextrahering för ljudformaten AIF, ASF, M4A, MP3, WAV och WMA.
 
 ## Indataformat som stöds för ljud- och videotranskription {#audio-video-transcription-formats}
 
@@ -229,15 +229,15 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 | Format | Överför (indataformat) | Skapa bildförinställning (utdataformat) | Förhandsgranska dynamisk återgivning | Leverera dynamisk återgivning | Hämta dynamisk återgivning | Ange typer som stöder det här formatet |
 |---|:---:|:---:|:---:|:---:|:---:| --- |
 | AVIF | - | - | - | ✓ | - | - |
-| BMP | ✓ | - | - | - | - | [Bild](/help/assets/dynamic-media/image-sets.md), [Blandade media](/help/assets/dynamic-media/mixed-media-sets.md)och [Snurra](/help/assets/dynamic-media/spin-sets.md) |
+| BMP | ✓ | - | - | - | - | [Bild](/help/assets/dynamic-media/image-sets.md), [Blandade media](/help/assets/dynamic-media/mixed-media-sets.md) och [Snurra](/help/assets/dynamic-media/spin-sets.md) |
 | [EPS](/help/assets/dynamic-media/managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats) | ✓ | ✓ | ✓ | ✓ | ✓ | - |
 | GIF | ✓ | ✓ | ✓ | ✓ | ✓ | - |
 | HEIC | - | - | - | ✓ | - | - |
-| JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | [Bild](/help/assets/dynamic-media/image-sets.md), [Blandade media](/help/assets/dynamic-media/mixed-media-sets.md)och [Snurra](/help/assets/dynamic-media/spin-sets.md) |
+| JPEG | ✓ | ✓ | ✓ | ✓ | ✓ | [Bild](/help/assets/dynamic-media/image-sets.md), [Blandade media](/help/assets/dynamic-media/mixed-media-sets.md) och [Snurra](/help/assets/dynamic-media/spin-sets.md) |
 | PICT | ✓ | - | - | - | - | - |
-| PNG | ✓ | ✓ | ✓ | ✓ | ✓ | [Bild](/help/assets/dynamic-media/image-sets.md), [Blandade media](/help/assets/dynamic-media/mixed-media-sets.md)och [Snurra](/help/assets/dynamic-media/spin-sets.md) |
+| PNG | ✓ | ✓ | ✓ | ✓ | ✓ | [Bild](/help/assets/dynamic-media/image-sets.md), [Blandade media](/help/assets/dynamic-media/mixed-media-sets.md) och [Snurra](/help/assets/dynamic-media/spin-sets.md) |
 | PSD ‡ | ✓ | - | - | - | - | - |
-| TIFF | ✓ | ✓ | ✓ | ✓ | ✓ | [Bild](/help/assets/dynamic-media/image-sets.md), [Blandade media](/help/assets/dynamic-media/mixed-media-sets.md)och [Snurra](/help/assets/dynamic-media/spin-sets.md) |
+| TIFF | ✓ | ✓ | ✓ | ✓ | ✓ | [Bild](/help/assets/dynamic-media/image-sets.md), [Blandade media](/help/assets/dynamic-media/mixed-media-sets.md) och [Snurra](/help/assets/dynamic-media/spin-sets.md) |
 | WEBP | - | - | - | ✓ | - | - |
 <!-- AVIF, HEIC, and WebP added to table above on March 4, 2024 based on CQDOC-21294 -->
 
@@ -245,7 +245,7 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 
 ## Dynamic Media - Rasterbildformat som inte stöds {#unsupported-raster-image-formats-dm}
 
-Följande undertyper av rasterbildfilformat som *not* stöds i [!DNL Dynamic Media]:
+Följande undertyper av rasterbildfilformat som *inte* stöds i [!DNL Dynamic Media]:
 
 * PNG-filer som har en IDAT-segmentstorlek som är större än 100 MB.
 * PSB-filer
@@ -256,7 +256,7 @@ Följande undertyper av rasterbildfilformat som *not* stöds i [!DNL Dynamic Med
 
 ## Dynamic Media - 3D-filformat som stöds {#support-3d-formats-dynamic-media}
 
-Se även [Stöd för 3D-format](/help/assets/file-format-support.md#support-3d-formats)
+Se även [3D-format som stöds](/help/assets/file-format-support.md#support-3d-formats)
 
 | 3D-filtillägg | Filformat | MIME-typ | Anteckningar |
 |---|---|---|---|
@@ -267,8 +267,8 @@ Se även [Stöd för 3D-format](/help/assets/file-format-support.md#support-3d-f
 
 **Se även**
 
-* [Översätt resurser](translate-assets.md)
-* [Resurser för HTTP API](mac-api-assets.md)
+* [Översätt Assets](translate-assets.md)
+* [ASSETS HTTP API](mac-api-assets.md)
 * [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
 * [Resursrapporter](asset-reports.md)
@@ -278,9 +278,9 @@ Se även [Stöd för 3D-format](/help/assets/file-format-support.md#support-3d-f
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publicera resurser till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 >[!MORELIKETHIS]
 >
->* [Behandling av tillgångar med hjälp av mikrotjänster](asset-microservices-overview.md).
+>* [Resursbearbetning med hjälp av objektmikrotjänster](asset-microservices-overview.md).
 >* [Filformat som stöds för smart taggning av textbaserade resurser](/help/assets/smart-tags.md#smart-tags-supported-file-formats)

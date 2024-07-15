@@ -24,9 +24,9 @@ ht-degree: 0%
 
 AEM som molntjänst är som standard tillgänglig via Internet. Säkerhet hanteras genom användarautentisering och -auktorisering, men IP-registrering är ett sätt att begränsa åtkomsten enbart till betrodda IP-adresser.
 
-Cloud Manager IP-tillåtelselista kan bara användas för att begränsa och styra åtkomsten till betrodda IP-adresser. Cloud Manager-användare med lämpliga behörigheter kan [skapa tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md) av betrodda IP-adresser från vilka webbplatsens användare kan komma åt sina AEM domäner.
+Cloud Manager IP-tillåtelselista kan bara användas för att begränsa och styra åtkomsten till betrodda IP-adresser. Cloud Manager-användare med lämplig behörighet kan [skapa tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md) med betrodda IP-adresser som webbplatsens användare kan komma åt sina AEM.
 
-Efter tillägg, [IP-tillåtelselista kan tillämpas/inte tillämpas](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) flera gånger som en enhet eller enhet till en författare och/eller utgivartjänst i en miljö.
+När du har lagt till [IP-tillåtelselista kan de tillämpas/tas bort](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) flera gånger som en enhet eller entitet för en författare och/eller utgivartjänst i en miljö.
 
 >[!NOTE]
 >

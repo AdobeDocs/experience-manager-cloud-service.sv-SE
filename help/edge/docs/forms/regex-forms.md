@@ -1,6 +1,6 @@
 ---
-title: AEM Forms Edge Delivery Services - vanliga regex-uttryck för validering av formulärfält
-description: AEM Forms Edge Delivery Services - vanliga regex-uttryck för validering av formulärfält
+title: AEM Forms Edge Delivery Services, ofta använda regex-uttryck för validering av formulärfält
+description: AEM Forms Edge Delivery Services, ofta använda regex-uttryck för validering av formulärfält
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true

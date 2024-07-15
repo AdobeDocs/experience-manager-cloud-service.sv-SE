@@ -1,6 +1,6 @@
 ---
 title: AEM Modernization Tools
-description: Läs mer om verktygen som kan användas för att konvertera äldre AEM till de moderna och stödda funktionerna hos AEM as a Cloud Service.
+description: Läs mer om verktygen som kan användas för att konvertera äldre AEM till AEM as a Cloud Service moderna och stödda funktioner.
 exl-id: d541fae0-6386-403f-99c9-373dc978ad13
 feature: Migration
 role: Admin
@@ -13,7 +13,7 @@ ht-degree: 35%
 
 # AEM Modernization Tools {#aem-moderization-tools}
 
-De AEM moderniseringsverktygen innehåller en uppsättning verktyg som kan användas för att konvertera äldre AEM till de moderna och stödda funktionerna i AEM as a Cloud Service.
+Verktygen AEM modernisering innehåller en uppsättning verktyg som kan användas för att konvertera äldre AEM till AEM as a Cloud Service moderna och stödda funktioner.
 
 
 ## Introduktion {#introduction}
@@ -32,4 +32,4 @@ Se **[Introduktion AEM moderniseringsverktyg](https://opensource.adobe.com/aem-m
 
 ## Installation och implementering AEM Moderniseringsverktyg {#installing-implementing}
 
-Se **[Git-resurs: AEM Modernize Tools Suite](https://github.com/adobe/aem-modernize-tools)** om du vill veta mer om installation och implementering.
+Mer information om installation och implementering finns i **[Git Resource: AEM Modernize Tools Suite](https://github.com/adobe/aem-modernize-tools)**.

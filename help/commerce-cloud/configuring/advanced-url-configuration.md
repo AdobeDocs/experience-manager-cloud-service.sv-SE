@@ -22,15 +22,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Sökmotoroptimering (SEO) har blivit en viktig fråga för många marknadsförare. Därför måste SEO-frågor behandlas i många projekt på Adobe Experience Manager-as a Cloud Service (AEM). Se [Bästa praxis för hantering av SEO och URL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html) om du vill ha mer information.
+> Sökmotoroptimering (SEO) har blivit en viktig fråga för många marknadsförare. Därför måste SEO:s frågor behandlas i många projekt om Adobe Experience Manager (AEM) as a Cloud Service. Mer information finns i [Bästa metoder för SEO- och URL-hantering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html).
 
-[AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components) innehåller avancerade konfigurationer för att anpassa URL:er för produkt- och kategorisidor. Många implementeringar anpassar dessa URL:er för sökmotoroptimering (SEO). Följande video visar hur du konfigurerar `UrlProvider` Service och funktioner i [Samlingsmappning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) för att anpassa URL:er för produkt- och kategorisidor.
+[AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) innehåller avancerade konfigurationer för att anpassa URL:er för produkt- och kategorisidor. Många implementeringar anpassar dessa URL:er för sökmotoroptimering (SEO). Följande video visar hur du konfigurerar tjänsten `UrlProvider` och funktionerna i [Sling Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) för att anpassa URL:er för produkt- och kategorisidor.
 
 >[!VIDEO](https://video.tv.adobe.com/v/34350/?quality=12)
 
 ## Konfiguration {#configuration}
 
-Konfigurera `UrlProvider` i enlighet med SEO:s krav och behov måste ett projekt tillhandahålla en OSGI-konfiguration för _CIF URL-providerkonfiguration_.
+Om du vill konfigurera tjänsten `UrlProvider` enligt SEO-kraven och -behoven måste ett projekt tillhandahålla en OSGI-konfiguration för _CIF URL-providerkonfigurationen_.
 
 >[!NOTE]
 >
@@ -48,17 +48,17 @@ Konfigurerar URL:erna för produktsidorna och stöder följande alternativ:
 * `{{page}}.html/{{category}}/{{url_key}}.html#{{variant_sku}}`
 * `{{page}}.html/{{url_path}}.html#{{variant_sku}}`
 
-Om det finns [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia):
+Om det finns [Venias referensarkiv](https://github.com/adobe/aem-cif-guides-venia):
 
 * `{{page}}` ersätts med `/content/venia/us/en/products/product-page`
-* `{{sku}}` ersätts med exempelvis produktens SKU, `VP09`
-* `{{url_key}}` ersätts med produktens `url_key` egenskap, till exempel `lenora-crochet-shorts`
+* `{{sku}}` ersätts med produktens SKU, till exempel `VP09`
+* `{{url_key}}` ersätts med produktens `url_key`-egenskap, till exempel `lenora-crochet-shorts`
 * `{{url_path}}` ersätts med produktens `url_path`, till exempel `venia-bottoms/venia-pants/lenora-crochet-shorts`
-* `{{variant_sku}}` ersätts med den markerade varianten, till exempel `VP09-KH-S`
+* `{{variant_sku}}` ersätts med den valda varianten, till exempel `VP09-KH-S`
 
-Sedan `url_path` eftersom de fördefinierade produkt-URL-formaten är inaktuella används en produkts `url_rewrites` och välja det med de flesta bansegmenten som alternativ om `url_path` är inte tillgängligt.
+Eftersom `url_path` har tagits bort använder de fördefinierade produkt-URL-formaten en produkts `url_rewrites` och väljer den med de flesta sökvägssegmenten som alternativ om `url_path` inte är tillgänglig.
 
-Med exempeldata ser en produktvariant-URL som är formaterad med standardformatet för URL ut som `/content/venia/us/en/products/product-page.html/VP09.html#VP09-KH-S`.
+Med exempeldata ovan ser en produktvariant-URL som formaterats med standardformatet för URL ut som `/content/venia/us/en/products/product-page.html/VP09.html#VP09-KH-S`.
 
 ### URL-format för kategorisida {#product-list}
 
@@ -67,31 +67,31 @@ Konfigurerar URL:erna för kategorierna eller produktlistsidorna och stöder fö
 * `{{page}}.html/{{url_path}}.html` (standard)
 * `{{page}}.html/{{url_key}}.html`
 
-Om det finns [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia):
+Om det finns [Venias referensarkiv](https://github.com/adobe/aem-cif-guides-venia):
 
 * `{{page}}` ersätts med `/content/venia/us/en/products/category-page`
-* `{{url_key}}` ersätts av kategoriens `url_key` property
-* `{{url_path}}` ersätts av kategoriens `url_path`
+* `{{url_key}}` ersätts av kategorins `url_key`-egenskap
+* `{{url_path}}` ersätts av kategorins `url_path`
 
-Med exempeldata ovan ser en kategorisidas URL-adress formaterad med standardformatet för URL-adresser ut som `/content/venia/us/en/products/category-page.html/venia-bottoms/venia-pants.html`.
+Med exempeldata ovan ser en kategorisidas URL som är formaterad med standardformatet för URL ut som `/content/venia/us/en/products/category-page.html/venia-bottoms/venia-pants.html`.
 
 >[!NOTE]
 > 
-> The `url_path` är en kombination av `url_keys` för en produkts eller kategoris överordnade och produkten eller kategorin `url_key` avgränsad med `/` snedstreck. Varje `url_key` betraktas som unik i en viss butik.
+> `url_path` är en sammanfogning av `url_keys` för en produkts eller kategorins överordnade och produktens eller kategorins `url_key` avgränsade med `/` snedstreck. Varje `url_key` betraktas som unik i en angiven butik.
 
 ### Butiksspecifik konfiguration {#store-specific-urlformats}
 
-De systemomfattande kategori- och produktsidans URL-format som anges av _CIF URL-providerkonfiguration_ kan ändras för varje butik.
+Du kan ändra formaten för systemomfattande kategori och produktsidans URL som anges av _CIF URL-providerkonfigurationen_ för varje butik.
 
 I CIF Configuration kan en redigerare välja ett alternativ produkt- eller kategorisidans URL-format. Om inget har valts där återgår implementeringen till den systemomfattande konfigurationen.
 
 Om du ändrar URL-formatet för en aktiv webbplats kan det påverka webbplatsens organiska trafik negativt. Se [Bästa praxis](#best-practices) nedan och planera noggrant ändringen av URL-formatet i förväg.
 
-![URL-format i CIF](assets/store-specific-url-formats.png)
+![URL-format i CIF ](assets/store-specific-url-formats.png)
 
 >[!NOTE]
 >
-> Den butiksspecifika konfigurationen av URL-formaten kräver [CIF Core Components 2.6.0](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.6.0) och den senaste versionen av Adobe Experience Manager Content och Commerce.
+> Den butiksspecifika konfigurationen av URL-formaten kräver [CIF Core Components 2.6.0](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.6.0) och den senaste versionen av Adobe Experience Manager Content och Commerce Add-on.
 
 ## Kategorimedvetna produktsid-URL:er {#context-aware-pdps}
 
@@ -99,26 +99,26 @@ Eftersom det är möjligt att koda kategoriinformation i en produkt-URL kan prod
 
 I standardformatet för URL väljs ett av de möjliga alternativen med följande schema:
 
-* om `url_path` definieras av e-handelns serverdel som använder den (borttagen)
-* från `url_rewrites` använda de URL:er som slutar med produktens `url_key` som alternativ
+* om `url_path` definieras av e-handelsbackend använder det (borttaget)
+* från `url_rewrites` använder de URL:er som slutar med produktens `url_key` som alternativ
 * de här alternativen använder det som har flest bansegment
 * om det finns flera, ta den första i den ordning som e-handelsbackend ger den
 
-Det här schemat väljer `url_path` med de flesta överordnade, baserat på antagandet att en underordnad kategori är mer specifik än den överordnade kategorin. Den markerade `url_path` beaktas _kanoniskt_ och används alltid som en kanonisk länk på produktsidor eller i produktwebbplatskartan.
+Det här schemat väljer `url_path` med de mest överordnade, baserat på antagandet att en underordnad kategori är mer specifik än dess överordnade kategori. Den valda `url_path` betraktas som _kanoniskt_ och används alltid som en kanonisk länk på produktsidor eller i produktwebbplatskartan.
 
-Men när en kund går från en kategorisida till en produktsida, eller från en produktsida till en annan relaterad produktsida i samma kategori, är det värt att behålla den aktuella kategorikontexten. I det här fallet `url_path` markeringen bör föredra alternativ som finns inom den aktuella kategorikontexten framför _kanoniskt_ markeringen som beskrivs ovan.
+Men när en kund går från en kategorisida till en produktsida, eller från en produktsida till en annan relaterad produktsida i samma kategori, är det värt att behålla den aktuella kategorikontexten. I det här fallet bör markeringen `url_path` föredra alternativ som finns i den aktuella kategorikontexten framför den _kanoniska_ markering som beskrivs ovan.
 
-Den här funktionen måste vara aktiverad i _CIF URL-providerkonfiguration_. Om det här alternativet är aktiverat får markeringen fler alternativ när
+Den här funktionen måste vara aktiverad i _CIF URL-providerkonfigurationen_. Om det här alternativet är aktiverat får markeringen fler alternativ när
 
-* de matchar delar av en viss kategori `url_path` från början (luddig prefixmatchning)
-* eller de matchar en viss kategori `url_key` var som helst (exakt partiell matchning)
+* de matchar delar av en angiven kategoris `url_path` från början (otydlig prefixmatchning)
+* eller så matchar de `url_key` för en viss kategori var som helst (exakt partiell matchning)
 
 Ta till exempel svaret på en [produktfråga](https://devdocs.magento.com/guides/v2.4/graphql/queries/products.html) nedan. Med följande:
 
 * användaren finns på kategorisidan&quot;New Products / New in Sommaren 2022&quot;
 * butiken använder standardsidans URL-format
 
-Alternativet new-products/new-in-summer-2022/gold-cirque-earrings.html matchar två av kontextens bansegment från början. Det vill säga&quot;nya produkter&quot; och&quot;nya-sommaren-2022&quot;. Om butiken använder ett URL-format för kategorisida som bara innehåller kategorin `url_key`, skulle samma alternativ fortfarande vara markerat eftersom det matchar kontextens `url_key` var som helst. I båda fallen skapas produktsidans URL för&quot;new-products/new-in-summer-2022/gold-cirque-earrings.html&quot; `url_path`.
+Alternativet new-products/new-in-summer-2022/gold-cirque-earrings.html matchar två av kontextens bansegment från början. Det vill säga&quot;nya produkter&quot; och&quot;nya-sommaren-2022&quot;. Om butiken använder ett URL-format för kategorisidor som bara innehåller kategorin `url_key`, skulle samma alternativ fortfarande vara markerat eftersom det matchar kontextens `url_key` var som helst. I båda fallen skapas produktsidans URL för&quot;new-products/new-in-summer-2022/gold-cirque-earrings.html&quot; `url_path`.
 
 ```
 {
@@ -154,15 +154,15 @@ Alternativet new-products/new-in-summer-2022/gold-cirque-earrings.html matchar t
 
 >[!NOTE]
 >
-> Kategorimedvetna produkt-URL:er kräver [CIF Core Components 2.6.0](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.6.0) eller nyare.
+> Kategorimedvetna produkt-URL:er kräver [CIF Core Components 2.6.0](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.6.0) eller senare.
 
 ## Specifika kategori- och produktsidor {#specific-pages}
 
-Det går att skapa [sidor med flera kategorier och produkter](../authoring/multi-template-usage.md) för endast en viss delmängd av kategorier eller produkter i en katalog.
+Det går bara att skapa [flera kategorier och produktsidor](../authoring/multi-template-usage.md) för en viss delmängd av kategorier eller produkter i en katalog.
 
 ### Urvalskriterier {#specific-pages-selection}
 
-Urvalet av en viss kategorisida är rakt framåt, baserat på kategorins `url_path` eller `url_key`. Matchande underkategorier stöds bara för URL-format som innehåller hela kategorin `url_path`. Annars är det bara en exakt matchning av `url_key` är möjligt.
+Markeringen av en viss kategorisida är rak framåt, baserat på kategorins `url_path` eller `url_key`. Matchande underkategorier stöds bara för URL-format som innehåller den fullständiga kategorin `url_path`. I annat fall går det bara att exakt matcha `url_key`.
 
 Specifika produktsidor väljs antingen enligt produktens SKU eller kategori. Den senare kräver att viss kategoriinformation kodas i produkt-URL:en. Den här funktionen är bara tillgänglig för vissa av standardformaten för URL-adresser. I följande tabell finns en jämförelse som visar vilket URL-format som stöder specifikt sidval per SKU eller kategori.
 
@@ -181,41 +181,41 @@ Specifika produktsidor väljs antingen enligt produktens SKU eller kategori. Den
 
 >[!NOTE]
 >
-> Välja specifika produktsidor per kategori kräver [CIF Core Components 2.6.0](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.6.0) eller nyare.
+> Om du väljer specifika produktsidor per kategori krävs [CIF Core Components 2.6.0](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.6.0) eller senare.
 
 ### Djuplänkning {#specific-pages-deep-linking}
 
-The `UrlProvider` är förkonfigurerat för att generera djupa länkar till specifika kategorier och produktsidor på instanser på författarnivå. Den här funktionen är användbar för redigerare som bläddrar på en webbplats i förhandsgranskningsläge, navigerar till en viss produkt- eller kategorisida och växlar tillbaka till redigeringsläget för att redigera sidan.
+`UrlProvider` är förkonfigurerad för att generera djuplänkar till specifika kategorier och produktsidor på instanser på författarnivå. Den här funktionen är användbar för redigerare som bläddrar på en webbplats i förhandsgranskningsläge, navigerar till en viss produkt- eller kategorisida och växlar tillbaka till redigeringsläget för att redigera sidan.
 
-Vid publiceringsskiktsinstanser bör katalogsidans URL-adresser hållas stabila så att de inte förlorar vinster på t.ex. sökmotorrankningar. På grund av den publiceringsnivån återges inte djuplänkar till specifika katalogsidor som standard. Om du vill ändra detta beteende _CIF URL Provider Specific Page Strategy_ kan konfigureras för att alltid generera särskilda sidadresser.
+Vid publiceringsskiktsinstanser bör katalogsidans URL-adresser hållas stabila så att de inte förlorar vinster på t.ex. sökmotorrankningar. På grund av den publiceringsnivån återges inte djuplänkar till specifika katalogsidor som standard. Om du vill ändra det här beteendet kan du konfigurera _CIF URL-providerspecifik sidstrategi_ så att den alltid genererar särskilda sidadresser.
 
 ### Flera katalogsidor {#multiple-product-pages}
 
 När redaktörer vill ha fullständig kontroll över navigeringen på den översta nivån på en webbplats kanske det inte är önskvärt att använda en enda katalogsida för att återge kategorierna på den översta nivån i en katalog. I stället kan redigerare skapa flera katalogsidor, en för varje kategori i katalogen som de vill inkludera i navigeringen på den översta nivån.
 
-I det fallet kan varje katalogsida ha en referens till en produkt- och kategorisida som är specifik för den kategori som har konfigurerats för katalogsidan. The `UrlProvider` använder de här anslutningarna för att skapa länkar för sidorna och kategorierna i den konfigurerade kategorin. Av prestandaskäl beaktas dock endast de underordnade katalogsidorna för en webbplats navigeringsrot/landningssida.
+I det fallet kan varje katalogsida ha en referens till en produkt- och kategorisida som är specifik för den kategori som har konfigurerats för katalogsidan. `UrlProvider` använder dessa anslutningar för att skapa länkar för sidorna och kategorierna i den konfigurerade kategorin. Av prestandaskäl beaktas dock endast de underordnade katalogsidorna för en webbplats navigeringsrot/landningssida.
 
 Vi rekommenderar att produkt- och kategorisidorna för en katalogsida är underordnade den katalogsidan, annars kanske inte komponenter som Navigation eller Breadcrumb fungerar som de ska.
 
 >[!NOTE]
 >
-> Fullt stöd för flera katalogsidor kräver [CIF Core Components 2.10.0](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.10.0) eller nyare.
+> Fullt stöd för flera katalogsidor kräver [CIF Core Components 2.10.0](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.10.0) eller senare.
 
 ## Anpassningar {#customization}
 
 ### Anpassade URL-format {#custom-url-format}
 
-Ett projekt kan implementera antingen [`ProductUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/ProductUrlFormat.html) eller [`CategoryUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/CategoryUrlFormat.html) och registrera implementeringen som en tjänst av allmänt ekonomiskt intresse. Dessa implementeringar, om de är tillgängliga, ersätter det konfigurerade fördefinierade formatet. Om det finns flera registrerade implementeringar ersätter den med den högre rangordningen dem med den lägre rangordningen.
+Om du vill ange ett anpassat URL-format kan ett projekt implementera tjänstgränssnittet [`ProductUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/ProductUrlFormat.html) eller [`CategoryUrlFormat`](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/urls/CategoryUrlFormat.html) och registrera implementeringen som en OSGI-tjänst. Dessa implementeringar, om de är tillgängliga, ersätter det konfigurerade fördefinierade formatet. Om det finns flera registrerade implementeringar ersätter den med den högre rangordningen dem med den lägre rangordningen.
 
 Implementeringarna av det anpassade URL-formatet måste implementera ett par metoder för att skapa en URL från angivna parametrar och för att tolka en URL för att returnera samma parametrar.
 
 ### Kombinera med delningskartor {#sling-mapping}
 
-Förutom `UrlProvider`går det också att konfigurera [Samlingsmappningar](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) för att skriva om och bearbeta URL:er. Det AEM Archetype-projektet innehåller även [en exempelkonfiguration](https://github.com/adobe/aem-cif-project-archetype/tree/master/src/main/archetype/samplecontent/src/main/content/jcr_root/etc/map.publish) om du vill konfigurera vissa kopplingsmappningar för port 4503 (publicera) och 80 (Dispatcher).
+Förutom `UrlProvider` går det också att konfigurera [Kopplingsmappningar](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) så att URL:er skrivs om och bearbetas. Det AEM Archetype-projektet innehåller även [en exempelkonfiguration](https://github.com/adobe/aem-cif-project-archetype/tree/master/src/main/archetype/samplecontent/src/main/content/jcr_root/etc/map.publish) som konfigurerar vissa Sling Mappings för port 4503 (publicera) och 80 (Dispatcher).
 
 ### Kombinera med AEM Dispatcher {#dispatcher}
 
-URL-omskrivningar kan också göras med AEM Dispatcher HTTP-server med `mod_rewrite` -modul. The [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) innehåller en referens AEM Dispatcher-konfiguration som redan innehåller grundläggande [skriv om regler](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/dispatcher.cloud) för den genererade storleken.
+URL-omskrivningar kan också göras med hjälp AEM Dispatcher HTTP-server med modulen `mod_rewrite`. [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) innehåller en referens AEM Dispatcher config som redan innehåller grundläggande [omskrivningsregler](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/dispatcher.cloud) för den genererade storleken.
 
 ## Bästa praxis {#best-practices}
 
@@ -223,19 +223,19 @@ URL-omskrivningar kan också göras med AEM Dispatcher HTTP-server med `mod_rewr
 
 Som vi nämnt innan du väljer ett av de tillgängliga standardformaten, eller till och med implementerar ett anpassat format, beror i hög grad på butikens behov och krav. Följande förslag kan hjälpa dig att fatta ett väl underbyggt beslut.
 
-_**Använd ett URL-format för produktsidan som innehåller SKU:n.**_
+_**Använd ett URL-format för en produktsida som innehåller SKU:n.**_
 
 CIF Core Components använder SKU:n som primär identifierare i alla komponenter. Om produktsidans URL-format inte innehåller SKU:n måste du ha en GraphQL-fråga för att kunna lösa det. Den här upplösningen kan påverka tiden till första byten. Det kan också vara önskvärt att kunderna kan hitta produkter genom SKU med sökmotorer.
 
-_**Använd ett URL-format för produktsidan som innehåller kategorisammanhanget.**_
+_**Använd ett URL-format för en produktsida som innehåller kategorikontexten.**_
 
-Vissa funktioner i CIF URL-leverantör är bara tillgängliga när du använder produkts-URL-format som kodar kategorisammanhanget, till exempel kategorin `url_key` eller kategorin `url_path`. Även om dessa funktioner kanske inte behövs för en ny butik kan du minska migreringsansträngningarna i framtiden genom att använda något av de här URL-formaten i början.
+Vissa funktioner i CIF URL-provider är bara tillgängliga när du använder produkts-URL-format, som kodar kategorikontexten, till exempel kategorin `url_key` eller kategorin `url_path`. Även om dessa funktioner kanske inte behövs för en ny butik kan du minska migreringsansträngningarna i framtiden genom att använda något av de här URL-formaten i början.
 
-_**Balansera URL-längden och kodad information.**_
+_**Balans mellan URL-längd och kodad information.**_
 
-Beroende på katalogstorleken, särskilt storleken och djupet på kategoriträdet, är det kanske inte rimligt att koda hela `url_path` av kategorier i URL:en. I så fall kan URL-längden minskas genom att endast kategorins `url_key` i stället. Den här metoden har stöd för de flesta funktioner som är tillgängliga när du använder kategorin `url_path`.
+Beroende på katalogstorleken, särskilt kategoriträdets storlek och djup, är det inte säkert att det går att koda hela `url_path` kategorier till URL:en. I så fall kan URL-längden minskas genom att endast kategorins `url_key` inkluderas i stället. Den här metoden stöder de flesta av de funktioner som är tillgängliga när du använder kategorin `url_path`.
 
-Använd också [Samlingsmappningar](#sling-mapping) för att kombinera SKU med produkten `url_key`. I de flesta e-handelssystem har SKU ett visst format och skiljer SKU från `url_key` för inkommande förfrågningar bör enkelt vara möjligt. Med detta i åtanke bör det vara möjligt att skriva om en produktsidas URL till `/p/{{category}}/{{sku}}-{{url_key}}.html`och en kategori-URL till `/c/{{url_key}}.html` respektive. The `/p` och `/c` -prefix är fortfarande nödvändigt för att skilja produkt- och kategorisidor från andra innehållssidor.
+Använd också [Samlingsmappningar](#sling-mapping) för att kombinera SKU:n med produkten `url_key`. I de flesta e-handelssystem följer SKU:n ett visst format och det bör vara enkelt att separera SKU:n från `url_key` för inkommande begäranden. Med detta i åtanke bör det vara möjligt att skriva om en produktsidas URL till `/p/{{category}}/{{sku}}-{{url_key}}.html` och en kategori-URL till `/c/{{url_key}}.html`. Prefixen `/p` och `/c` behövs fortfarande för att skilja produkt- och kategorisidor från andra innehållssidor.
 
 ### Migrera till ett nytt URL-format {#migrate-url-formats}
 
@@ -243,18 +243,18 @@ Många av de förvalda URL-formaten är på något sätt kompatibla med varandra
 
 Å andra sidan behöver sökmotorer tid för att rita om alla katalogsidor med det nya URL-formatet. För att stödja den här processen och även för att förbättra användarupplevelsen rekommenderar vi att du tillhandahåller omdirigeringar som vidarebefordrar användaren från de gamla URL:erna till de nya.
 
-Ett sätt att göra detta kan vara att ansluta en scenmiljö till e-handelsservern för produktion och konfigurera den så att den använder det nya URL-formatet. Efteråt får du [produktwebbplatskarta som genereras CIF webbplatskartor för produkter](../../overview/seo-and-url-management.md) för både scenen och produktionsmiljön, och använda dem för att skapa en [Apache httpd rewrite map](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html). Denna omskrivningskarta kan sedan distribueras till Dispatcher tillsammans med utrullningen av det nya URL-formatet.
+Ett sätt att göra detta kan vara att ansluta en scenmiljö till e-handelsservern för produktion och konfigurera den så att den använder det nya URL-formatet. Hämta sedan produktwebbplatskartan [som genererats av CIF för webbplatskartor](../../overview/seo-and-url-management.md) för både scenen och produktionsmiljön och använd dem för att skapa en [Apache httpd-omskrivningskarta](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html). Denna omskrivningskarta kan sedan distribueras till Dispatcher tillsammans med utrullningen av det nya URL-formatet.
 
 ## Exempel {#example}
 
-The [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia) projektet innehåller exempelkonfigurationer som visar hur anpassade URL:er används för produkt- och kategorisidor. Med den här konfigurationen kan varje projekt ställa in enskilda URL-mönster för produkt- och kategorisidor efter sina SEO-behov. En kombination av CIF `UrlProvider` och Samlingsmappningar enligt ovan används.
+Projektet [Venias referensarkiv](https://github.com/adobe/aem-cif-guides-venia) innehåller exempelkonfigurationer som visar hur anpassade URL:er används för produkt- och kategorisidor. Med den här konfigurationen kan varje projekt ställa in enskilda URL-mönster för produkt- och kategorisidor efter sina SEO-behov. En kombination av CIF `UrlProvider` och kopplingsmappningar enligt beskrivningen ovan används.
 
 >[!NOTE]
 >
->Den här konfigurationen måste justeras med den externa domän som används av projektet. Samlingsmappningarna fungerar baserat på värdnamnet och domänen. Den här konfigurationen är därför inaktiverad som standard och måste aktiveras före distributionen. Om du vill göra det byter du namn på kopplingsmappningen `hostname.adobeaemcloud.com` mapp i `ui.content/src/main/content/jcr_root/etc/map.publish/https` enligt det använda domännamnet och aktivera den här konfigurationen genom att lägga till `resource.resolver.map.location="/etc/map.publish"` till `JcrResourceResolver` projektets konfiguration.
+>Den här konfigurationen måste justeras med den externa domän som används av projektet. Samlingsmappningarna fungerar baserat på värdnamnet och domänen. Den här konfigurationen är därför inaktiverad som standard och måste aktiveras före distributionen. Om du vill göra det byter du namn på mappen för kopplingsmappning `hostname.adobeaemcloud.com` i `ui.content/src/main/content/jcr_root/etc/map.publish/https` enligt det domännamn som används och aktiverar den här konfigurationen genom att lägga till `resource.resolver.map.location="/etc/map.publish"` i projektkonfigurationen `JcrResourceResolver`.
 
 ## Ytterligare resurser {#additional}
 
 * [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia)
-* [AEM resursmappning](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/resource-mapping.html)
-* [Samlingsmappningar](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
+* [AEM Resursmappning](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/resource-mapping.html)
+* [Kopplingsmappningar](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)

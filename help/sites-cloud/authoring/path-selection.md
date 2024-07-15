@@ -14,31 +14,31 @@ ht-degree: 3%
 
 # Banmarkering {#path-selection}
 
-När du redigerar är det ofta nödvändigt att välja en annan resurs, till exempel när du definierar en länk till en annan sida eller markerar en bild. Markera en bana enkelt genom att [sökvägsfält](#path-fields) erbjuder automatisk komplettering och [sökvägsläsare](#path-browser) ger mer robust markering.
+När du redigerar är det ofta nödvändigt att välja en annan resurs, till exempel när du definierar en länk till en annan sida eller markerar en bild. För att enkelt kunna markera en sökväg erbjuder [sökvägsfält](#path-fields) automatisk komplettering och [sökvägsläsaren](#path-browser) ger en mer robust markering.
 
 ## Sökvägsfält {#path-fields}
 
-Det exempel som används här för att illustrera är bildkomponenten. Mer information om hur du använder och redigerar komponenter finns i [Komponenter för sidredigering.](/help/sites-cloud/authoring/page-editor/components.md)
+Det exempel som används här för att illustrera är bildkomponenten. Mer information om att använda och redigera komponenter finns i [Komponenter för sidredigering.](/help/sites-cloud/authoring/page-editor/components.md)
 
 Sökvägsfält har automatisk komplettering och framåtblickande funktioner som gör det enklare att hitta en resurs.
 
-Klicka på **Öppna dialogrutan Markering** knappen i sökvägsfältet öppnar [sökvägsläsare](#path-browser) för mer detaljerade markeringsalternativ.
+Om du klickar på knappen **Öppna dialogruta för markering** i sökvägsfältet öppnas dialogrutan [sökvägsläsare](#path-browser) där du kan ange mer detaljerade markeringsalternativ.
 
-![Öppna dialogrutan Markering](assets/path-selection-open-selection-dialog.png)
+![Öppna knappen i dialogrutan Markering](assets/path-selection-open-selection-dialog.png)
 
 Du kan också börja skriva i sökvägsfältet och AEM erbjuder matchande sökvägar när du skriver.
 
-![Öppna dialogrutan Markering](assets/path-selection-open-selection-dialog.png)
+![Öppna knappen i dialogrutan Markering](assets/path-selection-open-selection-dialog.png)
 
 ## Sökvägsläsaren {#path-browser}
 
-Sökvägsläsaren är ordnad som [kolumnvy](/help/sites-cloud/authoring/basic-handling.md#column-view) i [**Webbplatser** konsol,](/help/sites-cloud/authoring/sites-console/introduction.md) för ett mer detaljerat urval av resurser.
+Sökvägsläsaren är organiserad som [kolumnvyn](/help/sites-cloud/authoring/basic-handling.md#column-view) i [**Sites**-konsolen](/help/sites-cloud/authoring/sites-console/introduction.md), vilket ger ett mer detaljerat urval av resurser.
 
-![Sökvägsläsaren](/help/sites-cloud/authoring/assets/path-browser.png)
+![Sökvägsläsare](/help/sites-cloud/authoring/assets/path-browser.png)
 
-* När en resurs har valts **Välj** knappen längst upp till höger i dialogrutan blir aktiv.
+* När en resurs har valts blir knappen **Markera** i dialogrutans övre högra hörn aktiv.
    * Markera för att bekräfta markeringen eller **Avbryt** för att avbryta.
-* Om kontexten tillåter val av flera resurser aktiveras även **Välj** men lägger även till antalet markerade resurser i fönstrets övre högra hörn.
+* Om kontexten tillåter val av flera resurser aktiveras även knappen **Markera** när du väljer en resurs, men antalet markerade resurser läggs också till i fönstrets övre högra hörn.
    * Klicka på **X** bredvid talet för att avmarkera alla.
 * När du navigerar genom trädet visas platsen i de synliga kolumnerna högst upp i dialogrutan.
    * Dessa vägbeskrivningar kan också användas för att snabbt hoppa in i resurshierarkin.
@@ -46,4 +46,4 @@ Sökvägsläsaren är ordnad som [kolumnvy](/help/sites-cloud/authoring/basic-ha
    * Klicka på **X** i sökfältet för att rensa sökningen.
 * Om du vill begränsa sökningen kan du visa filteralternativen och filtrera resultaten baserat på en viss bana.
 
-![Alternativet Filter](assets/path-selection-filters.png)
+![Filteralternativ](assets/path-selection-filters.png)

@@ -41,4 +41,4 @@ Fördelarna med att använda Cloud Acceleration Manager är:
 
 ## What’s Next {#whats-next}
 
-När du har lärt dig vad som är Cloud Acceleration Manager kan du nu använda och [Kom igång med Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html).
+När du har lärt dig vad som är Cloud Acceleration Manager är du nu redo att använda och [Kom igång med Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html).

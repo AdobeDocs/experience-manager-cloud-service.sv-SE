@@ -26,13 +26,13 @@ DPR på klientsidan ger helt korrekta värden och fungerar för alla enheter, oa
 
 **Återgivna appar på serversidan**
 
-1. Läs in servicearbetares init (`srvinit.js`) genom att inkludera följande skript i sidhuvudsavsnittet på HTML-sidan:
+1. Läs in tjänstarbetarens init (`srvinit.js`) genom att inkludera följande skript i sidhuvudsavsnittet på HTML-sidan:
 
    ```javascript
    <script type="text/javascript" src="srvinit.js"></script>
    ```
 
-   Adobe rekommenderar att du läser in skriptet _före_ andra skript så att servicearbetaren påbörjar initieringen direkt.
+   Adobe rekommenderar att du läser in det här skriptet _före_ andra skript så att servicearbetaren börjar initiera omedelbart.
 
 1. Inkludera följande DPR-bildtagg överst i brödavsnittet på HTML-sidan:
 
@@ -45,7 +45,7 @@ DPR på klientsidan ger helt korrekta värden och fungerar för alla enheter, oa
        aem_dm_dpr_5x.jpg 5x">
    ```
 
-   Du måste inkludera den här koden för DPR-bildtaggen _före_ alla statiska bilder på HTML-sidan.
+   Du måste inkludera den här DPR-bildtaggen _före_ för alla statiska bilder på HTML-sidan.
 
 **Återgivna appar på klientsidan**
 
@@ -58,18 +58,18 @@ DPR på klientsidan ger helt korrekta värden och fungerar för alla enheter, oa
 
    Du kan kombinera båda DPR-skripten till ett för att undvika flera nätverksbegäranden.
 
-   Adobe rekommenderar att du läser in dessa skript _före_ alla andra skript på HTML-sidan.
-Adobe rekommenderar också att du Bootstrap under taggen diff HTML i stället för ett body-element i appen. Orsaken är att `dprImageInjection.js` infogar dynamiskt bildtaggen högst upp i brödavsnittet på HTML-sidan.
+   Adobe rekommenderar att du läser in dessa _före_ eventuella andra skript på HTML-sidan.
+Adobe rekommenderar också att du Bootstrap under taggen diff HTML i stället för ett body-element i appen. Orsaken är att `dprImageInjection.js` dynamiskt infogar bildtaggen högst upp i brödavsnittet på HTML-sidan.
 
-## Hämta JavaScript-filer {#client-side-dpr-script}
+## Nedladdning av JavaScript-filer {#client-side-dpr-script}
 
-Följande JavaScript-filer i nedladdningen finns endast som exempelreferens. Om du tänker använda de här filerna på HTML-sidor måste du redigera varje fils kod så att den passar dina egna behov.
+Följande JavaScript-filer i nedladdningen är endast tillgängliga som exempel. Om du tänker använda de här filerna på HTML-sidor måste du redigera varje fils kod så att den passar dina egna behov.
 
 * `dprImageInjection.js`
 * `srvinit.js`
 * `srvwrk.js`
 
-[Hämta JavaScript-filer](/help/assets/dynamic-media/assets/aem-dynamicmedia-smartimaging-dpr.zip)
+[Nedladdning av JavaScript-filer](/help/assets/dynamic-media/assets/aem-dynamicmedia-smartimaging-dpr.zip)
 
 >[!MORELIKETHIS]
 >

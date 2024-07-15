@@ -20,12 +20,12 @@ Med Forms-centrerade AEM kan ni automatisera Forms-centrerade affärsprocesser. 
 Ett formulärcentrerat arbetsflöde kan aktiveras eller startas på något av följande sätt:
 
 * Skicka ett program från AEM Inbox
-* Skicka en ansökan från AEM [!DNL Forms] App
+* Skicka ett program från AEM [!DNL Forms]-appen
 * Skicka ett anpassat formulär
 * Använda en bevakad mapp
 * Skicka ett interaktivt meddelande eller ett brev
 
-Mer information om arbetsflöden och funktioner för Forms-centrerade AEM finns i [Forms-centrerat arbetsflöde i OSGi](aem-forms-workflow.md).
+Mer information om Forms-centrerade AEM arbetsflöden och funktioner finns i [Forms-centrerat arbetsflöde i OSGi](aem-forms-workflow.md).
 
 ## Användardata och datalager {#user-data-and-data-stores}
 
@@ -45,7 +45,7 @@ Standarddatabasplatserna där nyttolast, utkast och historik för en arbetsflöd
    <td><b>AEM 6.3 [!DNL Forms]</b></td>
   </tr>
   <tr>
-   <td><strong>Arbetsflöde <br /> instance</strong></td>
+   <td><strong>Arbetsflödesinstans <br /></strong></td>
    <td>/var/workflow/instances/[server_id]/&lt;date&gt;/[workflow-instance]/</td>
    <td>/etc/workflow/instances/[server_id]/[date]/[workflow-instance]/</td>
   </tr>
@@ -73,16 +73,16 @@ Du kan komma åt och ta bort användardata från en arbetsflödesinstans i datab
 
 Du kan dock inte identifiera eller så kan resultatet vara tvetydigt när du identifierar arbetsflöden som är kopplade till en initierare i följande scenarier:
 
-* **Arbetsflöde som aktiveras via en bevakad mapp**: En arbetsflödesinstans kan inte identifieras med sin initierare om arbetsflödet utlöses av en bevakad mapp. I det här fallet kodas användarinformationen i de lagrade data.
-* **Arbetsflöde initierat från publiceringens AEM**: Alla arbetsflödesinstanser skapas med en tjänstanvändare när Adaptive Forms eller brev skickas från AEM publiceringsinstans. I dessa fall hämtas inte användarnamnet för den inloggade användaren i arbetsflödets instansdata.
+* **Arbetsflödet som utlöses via en bevakad mapp**: Det går inte att identifiera en arbetsflödesinstans med hjälp av dess initierare om arbetsflödet utlöses av en bevakad mapp. I det här fallet kodas användarinformationen i de lagrade data.
+* **Arbetsflödet startades från publiceringsinstansen AEM**: Alla arbetsflödesinstanser skapas med en tjänstanvändare när adaptiv Forms eller brev skickas från AEM publiceringsinstans. I dessa fall hämtas inte användarnamnet för den inloggade användaren i arbetsflödets instansdata.
 
 ### Åtkomst till användardata {#access}
 
 Så här identifierar och får du åtkomst till användardata som lagras för en arbetsflödesinstans:
 
-1. AEM författarinstansen går du till `https://'[server]:[port]'/crx/de` och navigera till **[!UICONTROL Tools > Query]**.
+1. Gå till `https://'[server]:[port]'/crx/de` AEM författarinstansen och navigera till **[!UICONTROL Tools > Query]**.
 
-   Välj **[!UICONTROL SQL2]** från **[!UICONTROL Type]** nedrullningsbar meny.
+   Välj **[!UICONTROL SQL2]** i listrutan **[!UICONTROL Type]**.
 
 1. Utför någon av följande frågor beroende på vilken information som är tillgänglig:
 
@@ -96,7 +96,7 @@ Så här identifierar och får du åtkomst till användardata som lagras för en
 
    Frågan returnerar platsen för alla arbetsflödesinstanser för den angivna arbetsflödesinitieraren eller den aktuella arbetsflödestilldelaren.
 
-   Följande fråga returnerar till exempel två arbetsflödesinstanser från `/var/workflow/instances` nod vars arbetsflödesinitierare är `srose`.
+   Följande fråga returnerar till exempel två arbetsflödesinstanser från noden `/var/workflow/instances` vars arbetsflödesinitierare är `srose`.
 
    ![workflow-instance](assets/workflow-instance.png)
 
@@ -104,7 +104,7 @@ Så här identifierar och får du åtkomst till användardata som lagras för en
 
    ![status](assets/status.png)
 
-1. Navigera till arbetsflödesinstansnoden `data/payload/`. The `path` -egenskapen lagrar sökvägen till arbetsflödesinstansens nyttolast. Du kan navigera till sökvägen för att komma åt data som lagras i nyttolasten.
+1. Navigera till `data/payload/` i arbetsflödets instansnod. Egenskapen `path` lagrar sökvägen till arbetsflödesinstansens nyttolast. Du kan navigera till sökvägen för att komma åt data som lagras i nyttolasten.
 
    ![nyttload-path](assets/payload-path.png)
 
@@ -120,7 +120,7 @@ Så här identifierar och får du åtkomst till användardata som lagras för en
 
    >[!NOTE]
    >
-   >AEM [!DNL Forms] lagras data även i offlineläge. Det är möjligt att data för en arbetsflödesinstans lagras lokalt på enskilda enheter och skickas till [!DNL Forms] när programmet synkroniseras med servern.
+   >AEM [!DNL Forms]-appen lagrar även data i offlineläge. Det är möjligt att data för en arbetsflödesinstans lagras lokalt på enskilda enheter och skickas till [!DNL Forms]-servern när programmet synkroniseras med servern.
 
 ### Ta bort användardata {#delete-user-data}
 
@@ -133,25 +133,25 @@ Du måste vara AEM administratör för att kunna ta bort användardata från arb
    * Sökvägar till nyttolaster för arbetsflödesinstanser
    * Banor till utkast och historik för arbetsflödesinstanser
 
-1. Utför det här steget för arbetsflödesinstanser i **KÖRS**, **UPPHÄVD**, eller **STAL** status:
+1. Utför det här steget för arbetsflödesinstanser med statusen **KÖRNING**, **SUSPENDED** eller **STALE**:
 
-   1. Gå till `https://'[server]:[port]'/aem/start.html` och logga in med administratörsuppgifter.
+   1. Gå till `https://'[server]:[port]'/aem/start.html` och logga in med administratörsautentiseringsuppgifter.
    1. Navigera till **[!UICONTROL Tools > Workflow> Instances]**.
    1. Välj relevanta arbetsflödesinstanser för användaren och välj **[!UICONTROL Terminate]** för att avsluta instanser som körs.
 
       Mer information om hur du arbetar med arbetsflödesinstanser finns i [Administrera arbetsflödesinstanser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/workflows/overview.html#authoring).
 
-1. Gå till [!DNL CRXDE Lite] konsol, navigera till nyttolastsökvägen för en arbetsflödesinstans och ta bort `payload` nod.
-1. Navigera till utkastssökvägen för en arbetsflödesinstans och ta bort `draft` nod.
-1. Navigera till historiksökvägen för en arbetsflödesinstans och ta bort `history` nod.
-1. Navigera till arbetsflödesinstanssökvägen för en arbetsflödesinstans och ta bort `[workflow-instance-ID]` nod för arbetsflödet.
+1. Gå till konsolen [!DNL CRXDE Lite], navigera till nyttolastsökvägen för en arbetsflödesinstans och ta bort noden `payload`.
+1. Navigera till utkastssökvägen för en arbetsflödesinstans och ta bort noden `draft`.
+1. Navigera till historiksökvägen för en arbetsflödesinstans och ta bort noden `history`.
+1. Navigera till arbetsflödesinstanssökvägen för en arbetsflödesinstans och ta bort noden `[workflow-instance-ID]` för arbetsflödet.
 
    >[!NOTE]
    >
    >Om du tar bort arbetsflödesinstansnoden tas arbetsflödesinstansen bort för alla arbetsflödesdeltagare.
 
 1. Upprepa steg 2-6 för alla arbetsflödesinstanser som identifieras för en användare.
-1. Identifiera och ta bort offlineutkast och skicka data från AEM [!DNL Forms] app-outbox för arbetsflödesdeltagare för att undvika att skickas till servern.
+1. Identifiera och ta bort offlineutkast och överföringsdata från AEM [!DNL Forms]-apputkorgen för arbetsflödesdeltagare för att undvika att skickas till servern.
 
 Du kan också använda API:er för att komma åt och ta bort noder och egenskaper. Mer information finns i följande dokument.
 
@@ -161,4 +161,4 @@ Du kan också använda API:er för att komma åt och ta bort noder och egenskape
 
 >[!MORELIKETHIS]
 >
->* [Använd AEM Forms arbetsflöde för automatisering av affärsprocesser](/help/forms/aem-forms-workflow.md)
+>* [Använd AEM Forms-arbetsflöde för automatisering av affärsprocesser](/help/forms/aem-forms-workflow.md)

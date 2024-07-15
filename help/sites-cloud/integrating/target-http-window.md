@@ -3,7 +3,7 @@ title: Adobe AEM Target HTTP Window
 description: Adobe AEM Target HTTP Window
 source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '197'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ Den här sidan beskriver de konfigurerbara parametrarna som finns i HTTP-fönstr
 
 ## Parametrar {#parameters}
 
-![Mål-HTTP-fönster](assets/httpwindow.png "Mål-HTTP-fönster")
+![HTTP-målfönster](assets/httpwindow.png "HTTP-målfönster")
 
 Fönstret innehåller följande konfigurerbara parametrar:
 

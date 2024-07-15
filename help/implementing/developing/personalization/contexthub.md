@@ -13,27 +13,27 @@ ht-degree: 0%
 
 # ContextHub {#contexthub}
 
-ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata. Den huvudsakliga funktionen är möjligheten att [visa kontextdata samtidigt som man simulerar och växlar mellan olika personligheter](/help/sites-cloud/authoring/personalization/contexthub.md).
+ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata. Dess primära funktion är att erbjuda möjligheten att [visa kontextdata samtidigt som man simulerar och växlar mellan olika profiler ](/help/sites-cloud/authoring/personalization/contexthub.md).
 
 Med ContextHub kan du:
 
-* [Presentera, visa, växla mellan personligheter och simulera användarupplevelsen](#presentation) när sidor skapas med kontextdata.
+* [Presentera, visa, växla mellan olika profiler och simulera användarupplevelsen](#presentation) när du redigerar sidor med hjälp av kontextdata.
 * [Behåll kontextdata](#persistence) på webbplatsen som en datalagerrepresentation.
-* [Hantera segment](#segmentation) för den markerade kontexten.
+* [Hantera segment](#segmentation) för den valda kontexten.
 
-Med JavaScript API:t på klientsidan kan du komma åt data för att anpassa innehåll.
+Med JavaScript-API:t på klientsidan kan du komma åt data för att anpassa innehåll.
 
 ## Presentation {#presentation}
 
-The [ContextHub-verktygsfältet](/help/sites-cloud/authoring/personalization/contexthub.md) gör det möjligt för marknadsförare och författare att se och ändra butiksdata för att simulera användarupplevelsen när de skapar sidor. Verktygsfältet består av grupper med UI-moduler som ger åtkomst till [ContextHub-butiker,](#persistence) som innehåller ContextHub-data på klienten.
+Verktygsfältet [ContextHub](/help/sites-cloud/authoring/personalization/contexthub.md) gör att marknadsförare och författare kan se och ändra lagringsdata för att simulera användarupplevelsen när de skapar sidor. Verktygsfältet består av grupper med gränssnittsmoduler som ger åtkomst till [ContextHub-arkiv](#persistence) som innehåller ContextHub-data på klienten.
 
 Varje ContextHub-gränssnittsmodul är en instans av en fördefinierad modultyp:
 
 * ContextHub innehåller flera [exempelmodultyper](sample-modules.md).
-* Använd AEM konsoler för att [lägg till gränssnittsmoduler](configuring-contexthub.md#adding-a-ui-module)och till [gruppera dem i gränssnittslägen](configuring-contexthub.md#adding-a-ui-mode).
+* Använd AEM konsoler för att [lägga till gränssnittsmoduler](configuring-contexthub.md#adding-a-ui-module) och för att [gruppera dem i gränssnittslägen](configuring-contexthub.md#adding-a-ui-mode).
 * Utvecklare kan [skapa anpassade modultyper](extending-contexthub.md#creating-contexthub-ui-module-types).
 
-Utvecklare måste [lägg till ContextHub-komponenten på sidan](configuring-contexthub.md).
+Utvecklare måste [lägga till ContextHub-komponenten på sidan](configuring-contexthub.md).
 
 ## Persistence {#persistence}
 
@@ -41,11 +41,11 @@ ContextHub lagrar kontextdata på klienten. Med ContextHub JavaScript API kan du
 
 Varje ContextHub-butik är en instans av en fördefinierad lagringstyp:
 
-* ContextHub innehåller flera [exempelarkivtyper](sample-stores.md).
-* Använd AEM konsoler för att [skapa butiker](configuring-contexthub.md#creating-a-contexthub-store).
+* ContextHub innehåller flera [typer av exempelarkiv](sample-stores.md).
+* Använd AEM för att [skapa butiker](configuring-contexthub.md#creating-a-contexthub-store).
 * Utvecklare kan [skapa anpassade butikstyper](extending-contexthub.md#creating-custom-store-candidates).
-* Utvecklare kan [åtkomstarkivdata](adding-contexthub.md#interacting-with-contexthub-stores) genom JavaScript.
+* Utvecklare kan [komma åt lagringsdata](adding-contexthub.md#interacting-with-contexthub-stores) via JavaScript.
 
 ## Segmentering {#segmentation}
 
-ContextHub innehåller en segmenteringsmotor som hanterar segment och fastställer vilka segment som matchas för den aktuella kontexten. Flera segment är definierade. Du kan använda JavaScript-API:t för att [identifiera matchade segment](adding-contexthub.md#determining-resolved-contexthub-segments).
+ContextHub innehåller en segmenteringsmotor som hanterar segment och fastställer vilka segment som matchas för den aktuella kontexten. Flera segment är definierade. Du kan använda JavaScript API för att [identifiera lösta segment](adding-contexthub.md#determining-resolved-contexthub-segments).

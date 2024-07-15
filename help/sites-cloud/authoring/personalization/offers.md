@@ -14,25 +14,25 @@ ht-degree: 0%
 
 # Skapa och hantera erbjudanden (Erbjudandekonsol) {#creating-and-managing-offers}
 
-The **Erbjudanden** Konsolen kommer att bli inaktuell i framtiden. Så från och med nu är det:
+Konsolen **Erbjudanden** kommer att bli inaktuell i framtiden. Så från och med nu är det:
 
-* Endast tillgängligt för kunder som har *äldre* redan definierade erbjudanden (det vill säga, befintliga)
+* Endast tillgängligt för kunder som redan har *äldre* erbjudanden (d.v.s. redan befintliga)
 * Vi rekommenderar att alla sådana gamla erbjudanden konverteras till Experience Fragment-erbjudanden
-   * Så snart det senaste äldre erbjudandet konverteras/tas bort, **Erbjudanden** Konsolen är inte längre tillgänglig.
+   * Så snart det senaste äldre erbjudandet har konverterats/tagits bort är konsolen **Erbjudanden** inte längre tillgänglig.
 
-![Personaliseringskonsoler](/help/sites-cloud/authoring/assets/offers-consoles.png)
+![Personalization-konsoler](/help/sites-cloud/authoring/assets/offers-consoles.png)
 
 >[!NOTE]
 >
->Kunder som har äldre erbjudanden kan fortfarande använda **Erbjudanden** för att se både befintliga och nya erbjudanden.
+>Kunder som har tidigare erbjudanden kan fortfarande använda konsolen **Erbjudanden** för att både se befintliga erbjudanden och skapa nya, gamla erbjudanden.
 >
->Kunder som inte har tidigare erbjudanden kommer inte att se **Erbjudanden** konsol.
+>Kunder som saknar tidigare erbjudanden kan inte se konsolen **Erbjudanden**.
 >
->Alla kunder kan använda **Upplevelsefragment** att skapa och hantera erbjudanden.
+>Alla kunder kan använda **Experience Fragments Offers** för att skapa och hantera erbjudanden.
 
 ## Konvertera ett äldre erbjudande till ett upplevelsefragment {#convert-legacy-offer-to-experience-fragment}
 
-A **Konvertera till upplevelsefragmentvariation** har implementerats för att hjälpa er att konvertera ert gamla erbjudande till en Experience Fragment:
+Ett **alternativ och ett arbetsflöde för att konvertera till upplevelsefragmentvariation** har implementerats för att hjälpa dig att konvertera ditt gamla erbjudande till ett Experience Fragment:
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ A **Konvertera till upplevelsefragmentvariation** har implementerats för att hj
 
 >[!CAUTION]
 >
->The **Konvertera till upplevelsefragmentvariation** finns för alla kärnkomponenter.
+>Alternativet **Konvertera till upplevelsefragmentvariation** är tillgängligt för alla kärnkomponenter.
 >
 >Det här alternativet stöds inte för anpassade komponenter. För sådana komponenter måste du manuellt konvertera innehållet till ett upplevelsefragment.
 
@@ -52,27 +52,27 @@ A **Konvertera till upplevelsefragmentvariation** har implementerats för att hj
 >
 >Så snart det senaste äldre erbjudandet har konverterats/tagits bort:
 >
->* The **Erbjudanden** Konsolen är inte längre tillgänglig.
+>* Konsolen **Erbjudanden** är inte längre tillgänglig.
 >* Målikonen i verktygsfältet för andra påverkade komponenter visas inte längre.
 
 1. Öppna en sida som innehåller erbjudandet för redigering.
 
-1. Växla till **Målinriktning** läge för den sidan.
+1. Växla till **målläge** för den sidan.
 
 1. Välj **Börja målinrikta**.
 
 1. Välj lämplig (riktad) komponent.
 
-1. Komponentverktygsfältet innehåller ett alternativ för att **Konvertera till upplevelsefragmentvariation**:
+1. Komponentverktygsfältet innehåller ett alternativ för **Konvertera till upplevelsefragmentvariation**:
 
-   ![Konvertera äldre erbjudande till Experience Fragment](/help/sites-cloud/authoring/assets/offers-convert-legacy-icon.png)
+   ![Konverterar gammalt erbjudande till Experience Fragment](/help/sites-cloud/authoring/assets/offers-convert-legacy-icon.png)
 
-1. En dialogruta visas. Här kan du välja önskat **Åtgärd**:
+1. En dialogruta visas. Här kan du välja önskad **åtgärd**:
 
    * Skapa ett nytt Experience Fragment
    * Lägg till innehåll i ett befintligt Experience Fragment
 
-   Välj **Skapa ett nytt Experience Fragment**.
+   I det här scenariot väljer du **Skapa ett nytt Experience Fragment**.
 
    ![Dialogrutan Konvertera till upplevelsefragmentvariationer](/help/sites-cloud/authoring/assets/offers-convert-dialog.png)
 
@@ -84,12 +84,12 @@ Ange den överordnade sökvägen för det nya upplevelsefragmentet
 Välj den mall som ska användas för att skapa upplevelsefragmentet.
    * **Fragmenttitel**
 Ange rubriken.
-   * **Fragment-taggar**
+   * **Fragmenttaggar**
 Lägg till taggar, om det behövs.
 
 1. Bekräfta med **Klar**.
 
-   Om du nu navigerar till **Experience Fragment-erbjudanden** konsolen kan du se ditt nya upplevelsefragment, tillsammans med tillhörande varianter.
+   Om du nu navigerar till konsolen **Experience Fragment Offers** kan du se ditt nya upplevelsefragment tillsammans med tillhörande variationer.
 
 ### Målinriktad med erbjudandemallen {#targeting-offers-template}
 
@@ -97,14 +97,14 @@ Lägg till taggar, om det behövs.
 >
 >Det här alternativet är endast tillgängligt för kunder som har tidigare erbjudanden.
 >
->Som med **Erbjudanden** konsolen är inte längre tillgänglig:
+>Precis som med konsolen **Erbjudanden** är den inte längre tillgänglig:
 >
 >* när det senaste äldre erbjudandet har konverterats till Experience Fragments
 >* när äldre erbjudanden är föråldrade (i framtiden)
 >
 >Därför rekommenderar vi att du använder Experience Fragments, inte det här alternativet.
 
-För kunder med tidigare erbjudanden **Använd erbjudandemall** är synliga när du aktiverar komponenter som **not** Upplevelsefragment:
+För kunder med tidigare erbjudanden är alternativen för **Använd erbjudandemall** synliga när du riktar in komponenter som **inte** är upplevelsefragment:
 
 ![Dialogrutan Konvertera till upplevelsefragmentvariationer](/help/sites-cloud/authoring/assets/offers-legacy-target-non-experience-fragment.png)
 
@@ -114,7 +114,7 @@ För kunder med tidigare erbjudanden **Använd erbjudandemall** är synliga när
 >
 >Konsolen kommer att bli inaktuell i framtiden eftersom den erbjuder ett äldre sätt att personalisera innehåll.
 >
->Du har tid att förbereda dig. Se hur man [konvertera era gamla erbjudanden till ett upplevelsefragment](#convert-legacy-offer-to-experience-fragment).
+>Du har tid att förbereda dig. Se hur du [konverterar dina befintliga erbjudanden till ett upplevelsefragment](#convert-legacy-offer-to-experience-fragment).
 
 Använd offertkonsolen för att skapa erbjudanden som du kan [använda i aktivitetsupplevelser](/help/sites-cloud/authoring/personalization/targeted-content.md). Genom att skapa erbjudanden i offertkonsolen sparar du tid när flera upplevelser kräver samma erbjudande:
 
@@ -127,14 +127,14 @@ Erbjudandekonsolen organiserar erbjudanden efter varumärke. Varje varumärke in
 
 Skapa ett varumärke som era erbjudanden är kopplade till. Öppna ett varumärke i Offers-konsolen för att komma åt dess erbjudandebibliotek där du kan skapa mappar och erbjudanden.
 
-När du skapar ett varumärke med hjälp av Erbjudandekonsolen visas det också i [Aktivitetskonsol](/help/sites-cloud/authoring/personalization/activities.md) där ni kan lägga till och administrera aktiviteter för varumärket.
+När du skapar ett varumärke med hjälp av konsolen Erbjudanden visas det också i [aktivitetskonsolen](/help/sites-cloud/authoring/personalization/activities.md) där du kan lägga till och administrera aktiviteter för varumärket.
 
-1. Välj i navigeringskonsolen **Personalisering** > **Erbjudanden**.
+1. I navigeringskonsolen väljer du **Personalization** > **Erbjudanden**.
 
-   ![Navigera till erbjudandekonsolen](/help/sites-cloud/authoring/assets/offers-navigation.png)
+   ![Navigerar till erbjudandekonsolen](/help/sites-cloud/authoring/assets/offers-navigation.png)
 
-1. Välj **Skapa** och sedan **Skapa** **Varumärke**.
-1. Välj varumärkesmallen och välj **Nästa**.
+1. Välj **Skapa** och sedan **Skapa** **varumärke**.
+1. Markera varumärkesmallen och välj **Nästa**.
 1. Skriv en rubrik för varumärket som du vill att det ska visas i konsolerna för erbjudanden och aktiviteter. Du kan också ange eller markera en eller flera taggar som ska kopplas till varumärket.
 1. Välj **Skapa**.
 
@@ -147,10 +147,10 @@ Lägg till en mapp i erbjudandebiblioteket för ett varumärke för att ordna oc
 
    ![Skapar erbjudandemapp](/help/sites-cloud/authoring/assets/offers-create-folder.png)
 
-1. Välj **Mapp** och klicka **Nästa**.
+1. Välj **Mapp** och klicka på **Nästa**.
 1. Skriv en rubrik för mappen som du vill att den ska visas i erbjudandebiblioteket och skriv eller välj taggar.
 
-   ![Definiera mappegenskaper](/help/sites-cloud/authoring/assets/offers-folder-properties.png)
+   ![Definierar mappegenskaper](/help/sites-cloud/authoring/assets/offers-folder-properties.png)
 
 1. Välj **Skapa**.
 
@@ -165,8 +165,8 @@ När du har skapat erbjudandet kan du öppna det och redigera innehållet.
 
    ![Skapar erbjudandemapp](/help/sites-cloud/authoring/assets/offers-create-folder.png)
 
-1. Välj **Erbjudandesida** mall och välj sedan **Nästa**.
-1. Skriv en rubrik för erbjudandet och välj eller ange en eller flera taggar som ska kopplas till erbjudandet. Välj sedan **Skapa**.
+1. Markera mallen **Erbjudandesida** och välj sedan **Nästa**.
+1. Ange en titel för erbjudandet och välj eller skriv en eller flera taggar som du vill associera med erbjudandet. Välj sedan **Skapa**.
 1. I bekräftelsedialogrutan öppnar du erbjudandet för redigering genom att välja **Öppna sida**.
 
 ### Redigera ett erbjudande {#editing-an-offer}
@@ -175,7 +175,7 @@ När du har skapat erbjudandet kan du öppna det och redigera innehållet.
 
 Du kan öppna ett erbjudande från en mapp i ett erbjudandebibliotek eller från sökresultat. Du kan också öppna ett erbjudande från en upplevelse som använder erbjudandet.
 
-1. I konsolen Erbjudanden väljer du ikonen bredvid erbjudandet och väljer **Redigera**.
+1. I konsolen Erbjudanden markerar du ikonen bredvid erbjudandet och väljer **Redigera**.
 1. Lägg till komponenter i erbjudandet och redigera komponentinnehållet som vanligt.
 
 ### Ta bort ett erbjudande {#deleting-an-offer}
@@ -184,15 +184,15 @@ Ta bort ett erbjudande när det inte längre behövs. När du försöker ta bort
 
 Du kan ta bort ett erbjudande när du visar antingen mappinnehåll i ett erbjudandebibliotek eller sökresultat.
 
-1. I konsolen Erbjudanden väljer du ikonen bredvid erbjudandet och väljer **Ta bort**.
+1. I konsolen Erbjudanden markerar du ikonen bredvid erbjudandet och väljer **Ta bort**.
 
-   Välj erbjudandet och välj **Ta bort**.
+   Markera erbjudandet och välj **Ta bort**.
 
 1. I dialogrutan som visas väljer du **Ta bort** för att bekräfta borttagningen.
 1. Om erbjudandet används i en eller flera upplevelser visas en dialogruta som anger att det hänvisas till erbjudandet:
 
    * Om du vill ta bort erbjudandet och ta bort det från upplevelserna väljer du **Tvinga borttagning**.
-   * Välj **Avbryt**.
+   * Välj **Avbryt** om du vill behålla erbjudandet.
 
 ### Söker efter erbjudanden {#searching-for-offers}
 

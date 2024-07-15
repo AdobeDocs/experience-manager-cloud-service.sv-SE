@@ -22,7 +22,7 @@ AEM Content &amp; Commerce Authoring innehåller en uppsättning redigeringsverk
 
 ## Produktväljare {#product-picker}
 
-Om du vill använda produktväljaren i en projektkomponent måste utvecklaren lägga till `commerce/gui/components/common/cifproductfield` till en komponentdialogruta. Använd till exempel följande för `cq:dialog`:
+Om du vill använda produktväljaren i en projektkomponent måste utvecklaren lägga till `commerce/gui/components/common/cifproductfield` i en komponentdialogruta. Använd till exempel följande för `cq:dialog`:
 
 ```xml
 <product jcr:primaryType="nt:unstructured"
@@ -34,7 +34,7 @@ Om du vill använda produktväljaren i en projektkomponent måste utvecklaren l�
     selectionId="sku"/>
 ```
 
-I produktfältet kan du navigera till den produkt som en användare vill välja genom de olika vyerna. Som standard returnerar produktfältet produktens ID, men det kan konfigureras med `selectionId` -attribut.
+I produktfältet kan du navigera till den produkt som en användare vill välja genom de olika vyerna. Som standard returnerar produktfältet produktens ID, men det kan konfigureras med attributet `selectionId`.
 
 Produktväljarfältet har stöd för följande valfria egenskaper:
 
@@ -43,16 +43,16 @@ Produktväljarfältet har stöd för följande valfria egenskaper:
 - multiple (true, false) - aktivera valet av en eller flera produkter (standard = false)
 - emptyText - för att konfigurera det tomma textvärdet för väljarfältet
 
-Standardegenskaper för dialogrutefält som `name`, `fieldLabel`, eller `fieldDescription`, stöds.
+Standardegenskaper för dialogrutefält som `name`, `fieldLabel` eller `fieldDescription` stöds också.
 
 >[!CAUTION]
 >
->The `cifproductfield` kräver `cif.shell.picker` clientlib. Om du vill lägga till ett clientlib i en dialogruta kan du använda egenskapen extraClientlibs.
+>Komponenten `cifproductfield` kräver `cif.shell.picker` clientlib. Om du vill lägga till ett clientlib i en dialogruta kan du använda egenskapen extraClientlibs.
 >[!CAUTION]
 >
->Från och med CIF Core Components version 2.0.0 stöds `id` togs bort och ersattes med `uid`. Adobe rekommenderar att du använder `sku` eller `slug` som en produkt-ID. Adobe fortsätter att stödja `id` endast för projekt som använder CIF Core Components version 1.x.
+>Från och med CIF Core Components version 2.0.0 har stödet för `id` tagits bort och ersatts med `uid`. Adobe rekommenderar att du använder `sku` eller `slug` som en produkt-ID. Adobe stöder endast `id` för projekt som använder CIF Core Components version 1.x.
 
-Ett fullt fungerande exempel på `cifproductfield` finns i [CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser/_cq_dialog/.content.xml) projekt. Se även [Anpassa dialogrutor](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html#customizing-dialogs) av dokumentationen AEM kärnkomponenter.
+Ett fullt fungerande exempel på `cifproductfield` finns i [CIF Core Components](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser/_cq_dialog/.content.xml) -projektet. Se även [Anpassa dialogrutor](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html#customizing-dialogs) i dokumentationen för AEM Core Components.
 
 ## Kategoriväljaren {#category-picker}
 
@@ -70,16 +70,16 @@ Följande kodutdrag kan användas i en cq:dialog-konfiguration:
 
 Fältet för kategoriväljare har stöd för följande valfria egenskaper:
 
-- selectionId(id, uid, instruktionsmarginal, urlPath, idAndUrlPath _(borttagen)_, uidAndUrlPath _(borttagen)_) - låter dig välja vilket kategoriattribut som ska returneras av väljaren (standard = id).
+- selectionId(id, uid, instruktionsmarginal, urlPath, idAndUrlPath _(utgått)_, uidAndUrlPath _(utgått)_) - låter dig välja vilket kategoriattribut som ska returneras av väljaren (standard = id).
 - multiple (true, false) - aktivera markering av en eller flera kategorier (standard = false)
 
-Standardegenskaper för dialogrutefält som `name`, `fieldLabel`, eller `fieldDescription`, stöds.
+Standardegenskaper för dialogrutefält som `name`, `fieldLabel` eller `fieldDescription` stöds också.
 
 >[!CAUTION]
 >
->Samma som `cifproductfield` komponenten `cifcategoryfield` -komponenten kräver också `cif.shell.picker` clientlib. Om du vill lägga till ett clientlib i en dialogruta kan du använda `extraClientlibs` -egenskap. Se [Anpassa dialogrutor](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html#customizing-dialogs) av dokumentationen AEM kärnkomponenter.
+>Samma som komponenten `cifproductfield` i komponenten `cifcategoryfield` kräver även `cif.shell.picker` clientlib. Om du vill lägga till ett klientlib i en dialogruta kan du använda egenskapen `extraClientlibs`. Mer information finns i [Anpassa dialogrutor](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html#customizing-dialogs) i dokumentationen AEM kärnkomponenter.
 >[!CAUTION]
 >
->Från och med CIF Core Components version 2.0.0 stöds `id` togs bort och ersattes med `uid`. Adobe rekommenderar att du använder `uid` eller `urlPath` som kategoriidentifierare. Adobe fortsätter att stödja `id` &amp; `idAndUrlPath` endast för projekt som använder CIF Core Components version 1.x.
+>Från och med CIF Core Components version 2.0.0 har stödet för `id` tagits bort och ersatts med `uid`. Adobe rekommenderar att du använder `uid` eller `urlPath` som kategoriidentifierare. Adobe fortsätter att stödja `id` och `idAndUrlPath` endast för projekt som använder CIF Core Components version 1.x.
 
-Ett fullt fungerande exempel på `cifcategoryfield` finns i [CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/featuredcategorylist/v1/featuredcategorylist/_cq_dialog/.content.xml) projekt.
+Ett fullt fungerande exempel på `cifcategoryfield` finns i [CIF Core Components](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/featuredcategorylist/v1/featuredcategorylist/_cq_dialog/.content.xml) -projektet.

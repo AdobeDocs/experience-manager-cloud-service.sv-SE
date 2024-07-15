@@ -1,6 +1,6 @@
 ---
-title: Hantera rapporter i resursvyn
-description: Få tillgång till data i rapportavsnittet i resursvyn för att utvärdera produkt- och funktionsanvändning och få insikter om viktiga framgångsmått.
+title: Hantera rapporter i Assets-vyn
+description: Använd uppgifterna i rapportavsnittet i Assets-vyn för att utvärdera produkt- och funktionsanvändning och få insikter om viktiga framgångsmått.
 exl-id: 26d0289e-445a-4b8e-a5a1-b02beedbc3f1
 feature: Asset Insights, Asset Reports
 role: User, Admin, Developer
@@ -17,9 +17,9 @@ Med tillgångsrapportering kan administratörer se vilka aktiviteter Adobe Exper
 
 ## Åtkomstrapporter {#access-reports}
 
-Alla användare som är tilldelade till resursvyn: Administratörens produktprofil kan komma åt instrumentpanelen för insikter eller skapa användardefinierade rapporter i resursvyn.
+Alla användare som har tilldelats produktprofilen för Assets-vyadministratörer kan komma åt Insikter-instrumentpanelen eller skapa användardefinierade rapporter i Assets-vyn.
 
-Om du vill få åtkomst till rapporter går du till **[!UICONTROL Reports]** under **[!UICONTROL Settings]**.
+Navigera till **[!UICONTROL Reports]** under **[!UICONTROL Settings]** för att få åtkomst till rapporter.
 
 ![Rapporter](assets/reports.png)
 <!--
@@ -35,26 +35,26 @@ In the **[!UICONTROL Reports]** screen, various components are shown in the tabu
 
 ## Visa insikter {#view-live-statistics}
 
-I resursvyn kan du visa realtidsdata för din resursvymiljö med Insikter-instrumentpanelen. Du kan visa händelsemått i realtid under de senaste 30 dagarna eller under de senaste 12 månaderna.
+I Assets-vyn kan du visa realtidsdata för din Assets-visningsmiljö med Insikter-kontrollpanelen. Du kan visa händelsemått i realtid under de senaste 30 dagarna eller under de senaste 12 månaderna.
 
 <!--![Toolbar options when you select an asset](assets/assets-essentials-live-statistics.png)-->
 
-Klicka **[!UICONTROL Insights]** som finns i det vänstra navigeringsfönstret för att visa följande automatiskt genererade diagram:
+Klicka på **[!UICONTROL Insights]** i den vänstra navigeringsrutan för att visa följande automatiskt genererade diagram:
 
-* **Nedladdningar**: Antalet resurser som hämtats från resursvyn under de senaste 30 dagarna eller 12 månaderna representeras med hjälp av ett linjediagram.
+* **Hämtningar**: Antalet resurser som hämtats från Assets-visningsmiljön under de senaste 30 dagarna eller 12 månaderna representeras av ett linjediagram.
   ![insights-downloads](/help/assets/assets/insights-downloads2341.svg)
 
-* **Överföringar**: Antalet resurser som har överförts till resursvymiljön under de senaste 30 dagarna eller 12 månaderna representeras av ett linjediagram.
+* **Överföringar**: Antalet resurser som har överförts till visningsmiljön i Assets under de senaste 30 dagarna eller 12 månaderna representeras av ett linjediagram.
   ![insights-uploads](/help/assets/assets/insights-uplods2.svg)
   <!--* **Asset Count by Size**: The division of count of assets based on their range of various sizes from 0 MB to 100 GB.-->
 
-* **Lagringsanvändning**: Lagringsanvändningen, i byte, för resursvymiljön som representeras med ett stapeldiagram.
+* **Lagringsanvändning**: Lagringsanvändningen (i byte) för visningsmiljön i Assets representeras av ett stapeldiagram.
   ![insights-uploads](/help/assets/assets/insights-storage-usage1.svg)
   <!--* **Delivery**: The graph depicts the count of assets as the delivery dates.-->
 
 <!--* **Asset Count by Asset Type**: Represents count of various MIME types of the available assets. For example, application/zip, image/png, video/mp4, application/postscripte.-->
 
-* **Vanliga sökningar**: Visa de mest sökbara termerna tillsammans med det antal gånger som de har sökts igenom i resursvyn under de senaste 30 dagarna eller 12 månaderna i tabellformat.
+* **Vanliga sökningar**: Visa de mest sökta söktermerna tillsammans med det antal gånger som de sökts igenom i Assets-visningsmiljön under de senaste 30 dagarna eller 12 månaderna, representerade i ett tabellformat.
   ![insights-uploads](/help/assets/assets/insights-top-search.svg)
   <!--
    ![Insights](assets/insights1.png)
@@ -65,25 +65,25 @@ Klicka **[!UICONTROL Insights]** som finns i det vänstra navigeringsfönstret f
 
 Så här skapar du en hämtningsrapport:
 
-1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL Reports]** och klicka **[!UICONTROL Create Report]**.
+1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL Reports]** och klicka på **[!UICONTROL Create Report]**.
 
-1. I [!UICONTROL Configuration] -flik anger du rapporttypen som **[!UICONTROL Download]**.
+1. Ange rapporttypen **[!UICONTROL Download]** på fliken [!UICONTROL Configuration].
 
 1. Ange en rubrik och en valfri beskrivning för rapporten.
 
-1. Välj mappsökvägen, som omfattar de resurser som rapporten ska köras på, med hjälp av **[!UICONTROL Select Folder Path]** fält.
+1. Välj mappsökvägen, som omfattar de resurser som rapporten ska köras på, med hjälp av fältet **[!UICONTROL Select Folder Path]**.
 
 1. Välj datumintervall för rapporten.
 
    >[!NOTE]
    >
-   > Resursvyn konverterar alla lokala tidszoner till UTC (Coordinated Universal Time).
+   > I Assets-vyn konverteras alla lokala tidszoner till UTC (Coordinated Universal Time).
 
-1. I [!UICONTROL Columns] markerar du de kolumnnamn du vill visa i rapporten.
+1. På fliken [!UICONTROL Columns] markerar du de kolumnnamn som du vill visa i rapporten.
 
 1. Klicka på **[!UICONTROL Create]**.
 
-   ![Ladda ned rapport](assets/download-reports-config.png)
+   ![Hämta rapport](assets/download-reports-config.png)
 
 I följande tabell förklaras användningen av alla kolumner som du kan lägga till i rapporten:
 
@@ -99,7 +99,7 @@ I följande tabell förklaras användningen av alla kolumner som du kan lägga t
      </tr>
      <tr>
       <td>Bana</td>
-      <td>Mappsökvägen där resursen är tillgänglig i resursvyn.</td>
+      <td>Mappsökvägen där resursen är tillgänglig i Assets-vyn.</td>
      </tr>
      <tr>
       <td>MIME-typ</td>
@@ -123,7 +123,7 @@ I följande tabell förklaras användningen av alla kolumner som du kan lägga t
      </tr>
      <tr>
       <td>Skapad den</td>
-      <td>Det datum då resursen överförs till resursvyn.</td>
+      <td>Det datum då resursen överförs till Assets-vyn.</td>
      </tr>
      <tr>
       <td>Ändringsdatum</td>
@@ -144,17 +144,17 @@ I följande tabell förklaras användningen av alla kolumner som du kan lägga t
 
 Så här skapar du en överföringsrapport:
 
-1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL Reports]** och klicka **[!UICONTROL Create Report]**.
+1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL Reports]** och klicka på **[!UICONTROL Create Report]**.
 
-1. I [!UICONTROL Configuration] -flik anger du rapporttypen som **[!UICONTROL Upload]**.
+1. Ange rapporttypen **[!UICONTROL Upload]** på fliken [!UICONTROL Configuration].
 
 1. Ange en rubrik och en valfri beskrivning för rapporten.
 
-1. Välj mappsökvägen, som omfattar de resurser som rapporten ska köras på, med hjälp av **[!UICONTROL Select Folder Path]** fält.
+1. Välj mappsökvägen, som omfattar de resurser som rapporten ska köras på, med hjälp av fältet **[!UICONTROL Select Folder Path]**.
 
 1. Välj datumintervall för rapporten.
 
-1. I [!UICONTROL Columns] markerar du de kolumnnamn du vill visa i rapporten.
+1. På fliken [!UICONTROL Columns] markerar du de kolumnnamn som du vill visa i rapporten.
 
 1. Klicka på **[!UICONTROL Create]**.
 
@@ -174,7 +174,7 @@ I följande tabell förklaras användningen av alla kolumner som du kan lägga t
      </tr>
      <tr>
       <td>Bana</td>
-      <td>Mappsökvägen där resursen är tillgänglig i resursvyn.</td>
+      <td>Mappsökvägen där resursen är tillgänglig i Assets-vyn.</td>
      </tr>
      <tr>
       <td>MIME-typ</td>
@@ -190,7 +190,7 @@ I följande tabell förklaras användningen av alla kolumner som du kan lägga t
      </tr>
      <tr>
       <td>Skapad den</td>
-      <td>Det datum då resursen överförs till resursvyn.</td>
+      <td>Det datum då resursen överförs till Assets-vyn.</td>
      </tr>
      <tr>
       <td>Ändringsdatum</td>
@@ -205,15 +205,15 @@ I följande tabell förklaras användningen av alla kolumner som du kan lägga t
 
 ## Visa befintliga rapporter {#view-report-list}
 
-Efter [skapa rapporten](#create-download-report)kan du visa listan över befintliga rapporter och välja att hämta dem i CSV-format eller ta bort dem.
+När du har [skapat rapporten](#create-download-report) kan du visa listan över befintliga rapporter och välja att hämta dem i ett CSV-format eller ta bort dem.
 
-Om du vill visa en lista med rapporter går du till **[!UICONTROL Settings]** > **[!UICONTROL Reports]**.
+Navigera till **[!UICONTROL Settings]** > **[!UICONTROL Reports]** om du vill visa listan med rapporter.
 
 För varje rapport kan du visa rapportrubrik, rapporttyp, beskrivning som anges när rapporten skapas, rapportens status, e-post-ID för den som skapade rapporten och rapportens skapandedatum.
 
-`Completed ` rapportens status visar att rapporten är klar för hämtning.
+`Completed `-status för rapporten visar att rapporten är klar för hämtning.
 
-![Förteckning över rapporter](assets/list-of-reports.png)
+![Lista över rapporter](assets/list-of-reports.png)
 
 
 ## Hämta en CSV-rapport {#download-csv-report}
@@ -224,7 +224,7 @@ Så här hämtar du en rapport i CSV-format:
 
 1. Välj en rapport och klicka på **[!UICONTROL Download CSV]**.
 
-Den valda rapporten hämtas i CSV-format. Kolumnerna som visas i CSV-rapporten beror på vilka kolumner som du markerar när [skapa rapporten](#create-download-report).
+Den valda rapporten hämtas i CSV-format. Kolumnerna som visas i CSV-rapporten beror på vilka kolumner du markerar när du [skapar rapporten](#create-download-report).
 
 ## Ta bort en rapport {#delete-report}
 
@@ -234,4 +234,4 @@ Ta bort en rapport:
 
 1. Välj en rapport och klicka på **[!UICONTROL Delete]**.
 
-1. Klicka **[!UICONTROL Delete]** igen för att bekräfta.
+1. Bekräfta genom att klicka på **[!UICONTROL Delete]** igen.

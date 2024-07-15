@@ -18,14 +18,14 @@ Lär dig hur du använder sidopanelen i AEM webbplatsredigeraren för att lägga
 
 ## Lägen i sidopanelen {#modes}
 
-Sidpanelen är alltid tillgänglig i sidredigeraren genom att trycka på eller klicka på **Växla sidopanel** i verktygsfältet i sidredigeraren.
+Sidpanelen är alltid tillgänglig i sidredigeraren genom att trycka på eller klicka på ikonen **Växla sidopanel** i verktygsfältet i sidredigeraren.
 
 ![Växla sidopanel](assets/editor-side-panel-side-panel-toggle.png)
 
 När du öppnar sidopanelen öppnas den från vänster sida och du kan sedan välja mellan tre viktiga flikar:
 
-* [Komponentwebbläsaren](#components-browser) för att lägga till nytt innehåll på sidan
-* [Resursläsaren](#assets-browser) för att lägga till nya resurser på sidan
+* [Komponentwebbläsaren](#components-browser) som lägger till nytt innehåll på sidan
+* [Resursläsaren](#assets-browser) som lägger till nya resurser på sidan
 * [Innehållsträdet](#content-tree) för att bläddra i sidans struktur
 
 ## Komponentbläddraren {#components-browser}
@@ -34,9 +34,9 @@ När du öppnar sidopanelen öppnas den från vänster sida och du kan sedan vä
 
 Komponentwebbläsaren visar alla komponenter som är tillgängliga för användning på den aktuella sidan. Dessa kan dras till rätt plats och sedan redigeras för att lägga till ditt innehåll.
 
-Tryck eller klicka på **Komponenter** -fliken i sidopanelen för att komma åt **Komponenter** webbläsare.
+Tryck eller klicka på fliken **Komponenter** på sidopanelen för att öppna webbläsaren **Komponenter**.
 
-![Ikonen för komponentwebbläsaren på sidopanelen](assets/editor-side-panel-components-browser.png)
+![Ikonen för komponentwebbläsaren på sidpanelen](assets/editor-side-panel-components-browser.png)
 
 Utseendet och hanteringen beror på vilken typ av enhet du använder.
 
@@ -46,7 +46,7 @@ När du öppnar komponentwebbläsaren på en mobil enhet täcker den helt den si
 
 Om du vill lägga till en komponent på sidan markerar och drar du komponenten och flyttar den åt höger. Komponentwebbläsaren stängs och sidan visas igen där du kan placera komponenten.
 
-![Komponentbläddraren på mobilen](assets/editor-side-panel-mobile-device.png)
+![Komponentwebbläsaren på mobilen](assets/editor-side-panel-mobile-device.png)
 
 >[!NOTE]
 >
@@ -62,7 +62,7 @@ Om du vill lägga till en komponent på sidan klickar du på den önskade kompon
 
 ### Använda komponentwebbläsaren {#using-component-browser}
 
-Komponenter i **Komponenter** webbläsaren representeras av:
+Komponenterna i **Components**-webbläsaren representeras av:
 
 * Komponentnamn
 * Komponentgrupp (i grått)
@@ -70,28 +70,28 @@ Komponenter i **Komponenter** webbläsaren representeras av:
    * Standardkomponenternas ikoner är monokroma.
    * Förkortningar är alltid de två första tecknen i komponentnamnet.
 
-I det övre verktygsfältet i **Komponenter** webbläsare:
+I det övre verktygsfältet i webbläsaren **Komponenter** kan du:
 
 * Filtrera komponenter efter namn.
 * Begränsa visningen till en viss grupp med listrutan.
 
-Om du vill ha en mer detaljerad beskrivning av komponenten kan du markera informationsikonen bredvid komponenten i **Komponenter** webbläsare (om tillgängligt). För **Innehållsfragment**:
+Om du vill ha en mer detaljerad beskrivning av komponenten kan du välja informationsikonen bredvid komponenten i webbläsaren **Komponenter** (om den är tillgänglig). För **innehållsfragment**:
 
 ![Information om komponentwebbläsare](assets/editor-side-panel-component-description.png)
 
-Mer detaljerad information om vilka komponenter som är tillgängliga finns i [Komponentkonsol.](/help/sites-cloud/authoring/components-console.md)
+Mer detaljerad information om de komponenter som är tillgängliga finns i [Komponentkonsolen.](/help/sites-cloud/authoring/components-console.md)
 
-## Resursläsaren {#assets-browser}
+## Assets Browser {#assets-browser}
 
-The **Resurser** webbläsaren visar alla [resurser](/help/assets/overview.md) som kan användas på den aktuella sidan.
+Webbläsaren **Assets** visar alla [resurser](/help/assets/overview.md) som är tillgängliga för användning på den aktuella sidan.
 
-Tryck eller klicka på **Resurser** på sidopanelen för att bläddra bland resurserna.
+Tryck eller klicka på fliken **Assets** på sidopanelen för att bläddra bland resurserna.
 
-![Knappen Resursläsare](assets/editor-side-panel-assets-browser-tab.png)
+![Assets Browser button](assets/editor-side-panel-assets-browser-tab.png)
 
 Oändlig rullning används för att expandera listan med resurser när du rullar.
 
-![Resursläsaren](assets/editor-side-panel-assets-browser.png)
+![Assets Browser](assets/editor-side-panel-assets-browser.png)
 
 Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
@@ -101,7 +101,7 @@ När du öppnar resursläsaren på en mobil enhet täcker den helt den sida som 
 
 Om du vill lägga till en resurs på sidan väljer du och drar den önskade resursen och flyttar den sedan åt höger. Resursläsaren stängs och sidan visas igen, där du kan lägga till resursen i den nödvändiga komponenten.
 
-![Resursläsaren på mobilen](assets/editor-side-panel-assets-browser-mobile.png)
+![Assets Browser on mobile](assets/editor-side-panel-assets-browser-mobile.png)
 
 >[!NOTE]
 >
@@ -113,20 +113,20 @@ När du öppnar resursläsaren på en stationär enhet öppnas den till vänster
 
 Om du vill lägga till en resurs på sidan markerar du den önskade resursen och drar den till önskad komponent eller plats.
 
-![Resursläsaren på skrivbordet](assets/editor-side-panel-assets-browser-desktop.png)
+![Assets Browser på skrivbordet](assets/editor-side-panel-assets-browser-desktop.png)
 
-### Använda Resursläsaren {#using-assets-browser}
+### Använda Assets Browser {#using-assets-browser}
 
 Om du vill lägga till en resurs på sidan markerar och drar du den till önskad plats. Detta kan vara:
 
 * En befintlig komponent av lämplig typ.
    * Du kan till exempel dra en resurs av typen bild till en bildkomponent.
-* A [platshållare](/help/sites-cloud/authoring/page-editor/edit-content.md#component-placeholder) i styckesystemet för att skapa en komponent av lämplig typ.
+* En [platshållare](/help/sites-cloud/authoring/page-editor/edit-content.md#component-placeholder) i styckesystemet för att skapa en komponent av lämplig typ.
    * Du kan till exempel dra en resurs av typen bild till styckesystemet för att skapa en bildkomponent.
 
 >[!NOTE]
 >
->Det går att dra och släppa resurser för specifika resurser och komponenttyper. Se [Infoga en komponent med Resursläsaren](/help/sites-cloud/authoring/page-editor/edit-content.md#adding-a-component-from) för mer information.
+>Det går att dra och släppa resurser för specifika resurser och komponenttyper. Mer information finns i [Infoga en komponent med Assets Browser](/help/sites-cloud/authoring/page-editor/edit-content.md#adding-a-component-from).
 
 I det övre verktygsfältet i resursläsaren kan du filtrera resurserna efter:
 
@@ -136,19 +136,19 @@ I det övre verktygsfältet i resursläsaren kan du filtrera resurserna efter:
 * Resursegenskaper som orientering och stil
    * Endast tillgängligt för vissa tillgångstyper
 
-Om du snabbt behöver göra en ändring i en resurs kan du starta [tillgångsredigerare](/help/assets/manage-digital-assets.md) direkt från resursläsaren genom att klicka på redigeringsikonen som visas bredvid resursens namn.
+Om du snabbt behöver göra en ändring i en resurs kan du starta [resursredigeraren](/help/assets/manage-digital-assets.md) direkt från resursläsaren genom att klicka på redigeringsikonen som visas bredvid resursens namn.
 
 ![Knappen Resursredigering](assets/editor-side-panel-asset-edit-button.png)
 
 ## Innehållsträd {#content-tree}
 
-The **Innehållsträd** ger en översikt över alla komponenter på sidan i en hierarki så att du snabbt kan se hur sidan är uppbyggd.
+**Innehållsträdet** ger en översikt över alla komponenter på sidan i en hierarki så att du snabbt kan se hur sidan är uppbyggd.
 
 >[!NOTE]
 >
 >Innehållsträdet är inte tillgängligt om du redigerar en sida på en mobil enhet (om webbläsarbredden är mindre än 1024px).
 
-Tryck eller klicka på **Innehållsträd** för att komma åt innehållsträdet.
+Tryck eller klicka på fliken **Innehållsträd** för att komma åt innehållsträdet.
 
 ![Knappen Innehållsträd](assets/editor-side-panel-content-tree-tab.png)
 
@@ -162,7 +162,7 @@ Komponenttyper visas på användarspråket, medan komponentbeskrivningstexten ko
 
 Om du klickar på markören bredvid en komponent kommer den nivån att komprimeras eller utökas.
 
-![Utökning av Content Tree Chevron](assets/editor-side-panel-content-tree-chevron.png)
+![Utökning av krona i innehållsträd](assets/editor-side-panel-content-tree-chevron.png)
 
 Om du klickar på komponenten markeras komponenten i sidredigeraren. Vilka åtgärder som är tillgängliga beror på sidstatus. Till exempel:
 
@@ -174,7 +174,7 @@ Komponenterna på en bassida har de vanliga alternativen.
 
 Om komponenten som du klickar på i trädet är redigerbar visas en skiftnyckelsikon till höger om namnet. Om du klickar på den här ikonen öppnas redigeringsdialogrutan för komponenten.
 
-![Redigera innehållsträd](assets/editor-side-panel-content-tree-edit.png)
+![Redigeringsknapp för innehållsträd](assets/editor-side-panel-content-tree-edit.png)
 
 ### En Live-kopia {#live-copy}
 
@@ -182,4 +182,4 @@ En sida som är en del av en [livecopy](/help/sites-cloud/administering/msm/over
 
 ## Associerad innehållsläsare {#associated-content-browser}
 
-Om sidan innehåller innehållsfragment har du även tillgång till [webbläsare för associerat innehåll.](/help/sites-cloud/authoring/fragments/content-fragments.md#using-associated-content)
+Om sidan innehåller innehållsfragment har du även åtkomst till [webbläsaren för associerat innehåll.](/help/sites-cloud/authoring/fragments/content-fragments.md#using-associated-content)

@@ -1,6 +1,6 @@
 ---
 title: Föråldrade och borttagna funktioner
-description: Versionsinformation om borttagna och borttagna funktioner i [!DNL Adobe Experience Manager] som [!DNL Cloud Service].
+description: Versionsinformation som är specifik för borttagna och borttagna funktioner i  [!DNL Adobe Experience Manager]  som en [!DNL Cloud Service].
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
 feature: Release Information
 role: Admin
@@ -19,9 +19,9 @@ ht-degree: 0%
 >abstract="AEM as a Cloud Service har en distributionsmodell som bygger på molnet. Vissa funktioner har ersatts av molnbaserade motsvarigheter och på den här fliken visas dessa funktioner."
 
 
-Adobe utvärderar ständigt produktfunktioner och kan med tiden förnya eller ersätta äldre funktioner med modernare alternativ för att förbättra det totala kundvärdet, alltid under noggrant övervägande av bakåtkompatibilitet. Som [!DNL Adobe Experience Manager] som [!DNL Cloud Service] innehåller en distributionsmodell som bygger på molnet, och vissa funktioner har ersatts av molnbaserade motsvarigheter.
+Adobe utvärderar ständigt produktfunktioner och kan med tiden förnya eller ersätta äldre funktioner med modernare alternativ för att förbättra det totala kundvärdet, alltid under noggrant övervägande av bakåtkompatibilitet. Eftersom [!DNL Adobe Experience Manager] som [!DNL Cloud Service] tillhandahåller en molnbaserad distributionsmodell har vissa funktioner ersatts av molnbaserade motsvarigheter.
 
-Att informera om den förestående borttagningen/ersättningen av [!DNL Experience Manager] funktioner gäller följande regler:
+Följande regler gäller för att kommunicera den förestående borttagningen/ersättningen av [!DNL Experience Manager]-funktioner:
 
 1. Föråldringsanmälan kommer först. Föråldrade funktioner är fortfarande tillgängliga men har inte förbättrats ytterligare.
 1. Funktioner som annonserats vara borttagna så snart som möjligt i den senare större versionen. Det faktiska måldatumet för borttagning tillkännages.
@@ -30,20 +30,20 @@ Den här processen ger kunderna minst en releasecykel för att anpassa implement
 
 ## Föråldrade funktioner {#deprecated-features}
 
-I det här avsnittet visas funktioner som har markerats som inaktuella i [!DNL Experience Manager] som [!DNL Cloud Service]. Vanligtvis är funktioner som ska tas bort i en framtida version först inaktuella, med ett alternativ.
+I det här avsnittet visas funktioner som har markerats som borttagna i [!DNL Experience Manager] som [!DNL Cloud Service]. Vanligtvis är funktioner som ska tas bort i en framtida version först inaktuella, med ett alternativ.
 
 Kunderna rekommenderas att granska om de använder funktionen/funktionen i den aktuella distributionen och planera för att ändra implementeringen så att den använder det alternativ som erbjuds.
 
 | Funktioner | Inaktuell funktion | Ersättning |
 | ------------ | ------------------ | ----------- |
 | [!DNL Sites] | Upplev fragmentegenskaper för **Status för sociala medier**. | Funktionen tas bort snart. |
-| [!DNL Sites] | Mallbaserade enkla innehållsfragment. | [Modellbaserade strukturerade innehållsfragment](/help/assets/content-fragments/content-fragments-models.md) nu. |
-| [!DNL Assets] | `DAM Asset Update` arbetsflöde för att bearbeta inkapslade bilder. | Tillgångsanvändning [tillgångsmikrotjänster](/help/assets/asset-microservices-overview.md) nu. |
-| [!DNL Assets] | Överför resurser direkt till [!DNL Experience Manager]. Se [inaktuella API:er för överföring av resurser](/help/assets/developer-reference-material-apis.md#deprecated-asset-upload-api). | Använd [Direkt binär överföring](/help/assets/add-assets.md). Mer teknisk information finns i [API:er för direktöverföring](/help/assets/developer-reference-material-apis.md#upload-binary). |
-| [!DNL Assets] | [Vissa arbetsflödessteg](/help/assets/developer-reference-material-apis.md#post-processing-workflows-steps) in `DAM Asset Update` arbetsflödet stöds inte, inklusive anrop av kommandoradsverktyg som [!DNL ImageMagick]. | [Resursmikrotjänster](/help/assets/asset-microservices-overview.md) som ersätter många arbetsflöden. Använd [efterbehandlingsarbetsflöden](/help/assets/asset-microservices-configure-and-use.md#post-processing-workflows). |
-| [!DNL Assets] | Konvertera videofilmer till mpeg. | Använd för att skapa miniatyrbilder av FFmpeg [Resursmikrotjänster](/help/assets/asset-microservices-overview.md). För MPEG-omkodning använder du [Dynamic Media](/help/assets/manage-video-assets.md). |
-| [!DNL Foundation] | Gränssnitt för trädreplikering på fliken Distribuera i replikeringsagenten (borttagning efter 30 september 2021) | [Hantera publikation](/help/operations/replication.md#manage-publication) eller [arbetsflöde för publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) metoder |
-| [!DNL Foundation] | Varken fliken Distribuera på administrationsskärmen för replikeringsagenten eller replikerings-API:t kan användas för att replikera innehållspaket över 10 MB. Använd antingen [Hantera publikation](/help/operations/replication.md#manage-publication) eller [arbetsflöde för publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) |
+| [!DNL Sites] | Mallbaserade enkla innehållsfragment. | [Modellbaserade strukturerade innehållsfragment](/help/assets/content-fragments/content-fragments-models.md). |
+| [!DNL Assets] | `DAM Asset Update` arbetsflöde för att bearbeta inkapslade bilder. | Tillgångsintaget använder [tillgångsmikrotjänster](/help/assets/asset-microservices-overview.md) nu. |
+| [!DNL Assets] | Överför resurser direkt till [!DNL Experience Manager]. Se [inaktuella API:er för överföring av resurser](/help/assets/developer-reference-material-apis.md#deprecated-asset-upload-api). | Använd [direkt binär överföring](/help/assets/add-assets.md). Mer teknisk information finns i [API:er för direktöverföring](/help/assets/developer-reference-material-apis.md#upload-binary). |
+| [!DNL Assets] | [Vissa arbetsflödessteg](/help/assets/developer-reference-material-apis.md#post-processing-workflows-steps) i `DAM Asset Update`-arbetsflödet stöds inte, inklusive anrop av kommandoradsverktyg som [!DNL ImageMagick]. | [Resursmikrotjänster](/help/assets/asset-microservices-overview.md) ersätter många arbetsflöden. Använd [efterbearbetningsarbetsflöden](/help/assets/asset-microservices-configure-and-use.md#post-processing-workflows) för anpassad bearbetning. |
+| [!DNL Assets] | Konvertera videofilmer till mpeg. | Använd [Resursmikrotjänster](/help/assets/asset-microservices-overview.md) för att skapa miniatyrbilder för MPEG. Använd [Dynamic Media](/help/assets/manage-video-assets.md) för MPEG-omkodning. |
+| [!DNL Foundation] | Gränssnitt för trädreplikering på fliken Distribuera i replikeringsagenten (borttagning efter 30 september 2021) | [Hantera publicering](/help/operations/replication.md#manage-publication) eller [arbetsflöden för publiceringsinnehåll](/help/operations/replication.md#publish-content-tree-workflow) |
+| [!DNL Foundation] | Varken fliken Distribuera på administrationsskärmen för replikeringsagenten eller replikerings-API:t kan användas för att replikera innehållspaket över 10 MB. Använd i stället [Hantera publikation](/help/operations/replication.md#manage-publication) eller [publicera innehållsträdet](/help/operations/replication.md#publish-content-tree-workflow) |
 | [!DNL Foundation] | Integreringar som använder inloggningsuppgifter som genererats från Adobe Developer Console-projekt förlorar gradvis stöd för JWT-autentiseringsuppgifter (Service Account). Det går inte att skapa nya JWT-autentiseringsuppgifter i Adobe Developer Console den 1 maj 2024 eller senare, även om befintliga JWT-autentiseringsuppgifter fortfarande kan användas för redan konfigurerade integreringar fram till 1 januari 2025, då befintliga JWT-autentiseringsuppgifter inte längre fungerar och kunderna måste migrera till OAuth Server-till-Server-autentiseringsuppgifter. [Läs mer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console). | [Migrera](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#migration-overview) till autentiseringsuppgifter för OAuth Server-till-Server. |
 
 ## Borttagna funktioner {#removed-features}
@@ -52,16 +52,16 @@ I det här avsnittet visas funktioner som har tagits bort från [!DNL Experience
 
 | Område | Funktion | Ersättning | Borttagningsdatum för mål |
 | ------------ | ------------------ | ----------- | ------------------- |
-| Användargränssnitt | Klassiskt användargränssnitt har tagits bort från produktanvändargränssnittet. Det finns ett fåtal klassiska användargränssnittsdialogrutor för vissa funktioner, som Länkkontroll, Rensa version och vissa Cloud Service. Kommande [produktuppdateringar](/help/release-notes/home.md) kan ta bort Classic UI-tillgängligheten ytterligare. | Standardgränssnitt | Borttagen |
-| [!DNL Dynamic Media] | Tidigare integreringar med [Dynamic Media Classic](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/scene7.html#integration) och [Dynamic Media hybridläge](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dynamic.html#dynamic) är inte tillgängliga i [!DNL Experience Manager] som [!DNL Cloud Service]. | Använd [Dynamic Media](/help/assets/dynamic-media/dynamic-media.md) tillhandahålls med [!DNL Experience Manager] som [!DNL Cloud Service]. | Borttagen |
+| Användargränssnitt | Klassiskt användargränssnitt har tagits bort från produktanvändargränssnittet. Det finns ett fåtal klassiska användargränssnittsdialogrutor för vissa funktioner, som Länkkontroll, Rensa version och vissa Cloud Service. De kommande [produktuppdateringarna](/help/release-notes/home.md) kan ta bort Classic UI-tillgängligheten ytterligare. | Standardgränssnitt | Borttagen |
+| [!DNL Dynamic Media] | Tidigare integreringar med [Dynamic Media Classic](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/scene7.html#integration) och [Dynamic Media hybridläge](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dynamic.html#dynamic) är inte tillgängliga i [!DNL Experience Manager] som [!DNL Cloud Service]. | Använd [Dynamic Media](/help/assets/dynamic-media/dynamic-media.md) som tillhandahålls med [!DNL Experience Manager] som [!DNL Cloud Service]. | Borttagen |
 | [!DNL Sites] | Portal Director och Portlet Component | Dessa funktioner har tagits bort i [!DNL Experience Manager] 6.4 och har nu tagits bort från [!DNL Experience Manager]. | Borttagen |
-| [!DNL Sites] | Designimporteraren | Den här funktionen har tagits bort som oföränderliga avsnitt i [!DNL Experience Manager] databasen är inte tillgänglig vid körning. | Borttagen |
-| [!DNL Assets] | [!DNL Assets] Det går inte att dela med Marketing Cloud Assets Core Service och Creative Cloud. | För integrering med [!DNL Adobe Creative Cloud], använda [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html). | Borttagen |
+| [!DNL Sites] | Designimporteraren | Den här funktionen har tagits bort eftersom oföränderliga avsnitt i databasen [!DNL Experience Manager] inte är tillgängliga vid körning. | Borttagen |
+| [!DNL Assets] | Det går inte att dela [!DNL Assets] med Marketing Cloud Assets Core Service och Creative Cloud-tjänster. | Använd [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) för integrering med [!DNL Adobe Creative Cloud]. | Borttagen |
 | [!DNL Foundation] | Stöd för Apache Sling-datakällor (OSGi bundle org.apache.sling.datasource) | Ej tillämpligt | Borttagen |
 | [!DNL Foundation] | Stöd för JST-skriptmallar (OSGi bundle org.apache.sling.scripting.jst) | Ej tillämpligt | Borttagen |
 | [!DNL Foundation] | Stöd för Apache Felix Http Whiteboard | OSGi Http Whiteboard | Mars 2022 |
 | [!DNL Foundation] | Stöd för com.adobe.granite.oauth.server | Integrering med Adobe IMS | Mars 2023 |
-| [!DNL Foundation] | Stöd för org.apache.sling.servicusermapping-funktion till [hämta användar-ID för tjänsten](https://sling.apache.org/apidocs/sling12/org/apache/sling/serviceusermapping/ServiceUserMapper.html#getServiceUserID-org.osgi.framework.Bundle-java.lang.String-) | Ej tillämpligt | 8/30/24 |
+| [!DNL Foundation] | Stöd för funktionen org.apache.sling.servicusermapping till [hämta tjänstanvändar-ID](https://sling.apache.org/apidocs/sling12/org/apache/sling/serviceusermapping/ServiceUserMapper.html#getServiceUserID-org.osgi.framework.Bundle-java.lang.String-) | Ej tillämpligt | 8/30/24 |
 
 
 ## AEM API:er {#aem-apis}
@@ -116,7 +116,7 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
   </tr>
   <tr>
     <td>org.json</td>
-    <td>Apache Johnzons implementering av <a href="https://johnzon.apache.org/index.html">javax.json</a> rekommenderas och bör användas. </td>
+    <td>Apache Johnzon-implementeringen av <a href="https://johnzon.apache.org/index.html">javax.json</a> rekommenderas och bör användas. </td>
     <td>4/30/21</td>
     <td>12/31/21</td>
   </tr>
@@ -296,20 +296,20 @@ De två listorna nedan återspeglar konfigurationsytan för AEM as a Cloud Servi
 
 Om en OSGI-konfiguration inte anges kan den konfigureras med kundkod.
 
-Dessa regler valideras under Cloud Manager byggprocess. Ytterligare regler kan läggas till över tid och det förväntade datumet för verkställighet anges i tabellen. Kunderna förväntas följa dessa regler senast vid måldatumet. Om reglerna inte följs efter borttagningsdatumet genereras fel i Cloud Manager byggprocess. Maven-projekten bör omfatta [AEM as a Cloud Service SDK Build Analyzer Maven Plugin](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html) för att flagga OSGI-konfigurationsfel under lokal SDK-utveckling.
+Dessa regler valideras under Cloud Manager byggprocess. Ytterligare regler kan läggas till över tid och det förväntade datumet för verkställighet anges i tabellen. Kunderna förväntas följa dessa regler senast vid måldatumet. Om reglerna inte följs efter borttagningsdatumet genereras fel i Cloud Manager byggprocess. Maven-projekt bör innehålla [AEM as a Cloud Service SDK Build Analyzer Maven Plugin](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html) för att flagga OSGI-konfigurationsfel under lokal SDK-utveckling.
 
 Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/help/implementing/deploying/configuring-osgi.md).
 
 +++OSGi-konfigurationer som inte kan ändras.
-* **`org.apache.felix.webconsole.internal.servlet.OsgiManager`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
-* **`com.day.cq.auth.impl.cug.CugSupportImpl`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
-* **`com.day.cq.jcrclustersupport.ClusterStartLevelController`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
-* **`org.apache.felix.http (Factory)`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
-* **`org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet`** (Tillkännagivande: 2021-08-25, Kräftelsedatum: 2021-08-26)
+* **`org.apache.felix.webconsole.internal.servlet.OsgiManager`** (Anmälningsdatum: 2021-04-30, Kräftelsedatum: 2021-07-31)
+* **`com.day.cq.auth.impl.cug.CugSupportImpl`** (Anmälningsdatum: 2021-04-30, Kräftelsedatum: 2021-07-31)
+* **`com.day.cq.jcrclustersupport.ClusterStartLevelController`** (Anmälningsdatum: 2021-04-30, Kräftelsedatum: 2021-07-31)
+* **`org.apache.felix.http (Factory)`** (Anmälningsdatum: 2021-04-30, Kräftelsedatum: 2021-07-31)
+* **`org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet`** (Tillkännagivandedatum: 2021-08-25, Kräftelsedatum: 2021-08-26)
 +++
 
 +++OSGi-konfigurationer som omfattas av build-valideringsregler.
-* **`org.apache.felix.eventadmin.impl.EventAdmin`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
+* **`org.apache.felix.eventadmin.impl.EventAdmin`** (Anmälningsdatum: 2021-04-30, Kräftelsedatum: 2021-07-31)
 * `org.apache.felix.eventadmin.ThreadPoolSize`
    * Typ: heltal
    * Obligatoriskt intervall: 2-100
@@ -322,10 +322,10 @@ Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/he
 * `org.apache.felix.eventadmin.IgnoreTimeout`
    * Obligatoriskt
    * Typ: strängmatris
-   * Obligatoriskt intervall: Måste innehålla minst alla `org.apache.felix*`, `org.apache.sling*`, `come.day*`, `com.adobe*`
+   * Obligatoriskt intervall: Måste innehålla minst `org.apache.felix*`, `org.apache.sling*`, `come.day*`, `com.adobe*`
 * `org.apache.felix.eventadmin.IgnoreTopic`
    * Typ: strängmatris
-* **`org.apache.felix.http`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
+* **`org.apache.felix.http`** (Anmälningsdatum: 2021-04-30, Kräftelsedatum: 2021-07-31)
    * `org.apache.felix.http.timeout`
       * Typ: heltal
    * `org.apache.felix.http.session.timeout`
@@ -388,7 +388,7 @@ Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/he
       * Typ: strängmatris
    * `org.apache.felix.http.session.uniqueid`
       * Typ: boolesk
-* **`org.apache.sling.scripting.cache`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
+* **`org.apache.sling.scripting.cache`** (Anmälningsdatum: 2021-04-30, Kräftelsedatum: 2021-07-31)
    * `org.apache.sling.scripting.cache.size`
       * Typ: heltal
       * Obligatoriskt intervall: >= 2048
@@ -396,7 +396,7 @@ Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/he
       * Obligatoriskt
       * Typ: strängmatris
       * Obligatoriskt intervall: måste innehålla js
-* **`com.day.cq.mailer.DefaultMailService`** (Tillkännagivande: 2021-04-30, Datum för verkställighet: 2021-07-31)
+* **`com.day.cq.mailer.DefaultMailService`** (Anmälningsdatum: 2021-04-30, Kräftelsedatum: 2021-07-31)
    * `smtp.host`
       * Typ: sträng
    * `smtp.port`
@@ -418,7 +418,7 @@ Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/he
       * Typ: boolesk
    * `oauth.flow`
       * Typ: boolesk
-* **`org.apache.sling.commons.log.LogManager.factory.config`** (Tillkännagivande: 21-16-11, Datum för verkställighet: 2-16-21)
+* **`org.apache.sling.commons.log.LogManager.factory.config`** (Meddelande: 11/16/21, Kräftelsedatum: 2/16/21)
    * `org.apache.sling.commons.log.level`
       * Typ: uppräkning
       * Obligatoriskt intervall: INFO, DEBUG eller TRACE

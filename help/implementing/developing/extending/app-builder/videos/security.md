@@ -1,6 +1,6 @@
 ---
-title: App Builder-säkerhet
-description: Läs mer om App Builder-programsäkerhet för AEM as a Cloud Service.
+title: App Builder säkerhet
+description: Läs mer om App Builder programsäkerhet för AEM as a Cloud Service.
 version: Cloud Service
 feature: App Builder, Developing
 topic: Integrations, Development
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ---
 
-# App Builder-säkerhet
+# App Builder säkerhet
 
 Läs mer om Adobe Runtime-åtgärdens säkerhet, användar- och AppBuilder-autentisering och behörighet.
 

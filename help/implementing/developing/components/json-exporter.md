@@ -27,7 +27,7 @@ Med innehållsfragment som använder strukturerat innehåll kan du tillhandahål
 
 Med den AEM JSON-exporteraren kan du leverera innehållet på en (y) AEM-sida i JSON-datamodellsformat. Detta kan sedan användas av dina egna program.
 
-Inom AEM levereras med väljaren `model` och `.json` tillägg.
+Inom AEM leverans uppnås med väljaren `model` och tillägget `.json`.
 
 `.model.json`
 
@@ -39,11 +39,11 @@ Inom AEM levereras med väljaren `model` och `.json` tillägg.
 
 1. Levererar innehåll som:
 
-   ![JSON-modell för WKND-innehåll](assets/json-model-wknd.png)
+   ![JSON-modell av WKND-innehåll](assets/json-model-wknd.png)
 
 Du kan också leverera innehållet i ett strukturerat innehållsfragment genom att specifikt rikta in det på det.
 
-Detta görs med hela sökvägen till fragmentet (via `jcr:content`), till exempel med ett suffix som
+Detta görs med hela sökvägen till fragmentet (via `jcr:content`), till exempel med ett suffix som det.
 
 `.../jcr:content/root/container/container/contentfragment.model.json`
 
@@ -57,22 +57,22 @@ Sidan kan innehålla antingen ett enda innehållsfragment eller flera komponente
 
 * Levererar innehåll som:
 
-  ![JSON-modell för WKND-innehållsfragment](assets/json-model-wknd-content-fragment.png)
+  ![JSON-modell av WKND-innehållsfragment](assets/json-model-wknd-content-fragment.png)
 
   >[!NOTE]
   >
-  >Du kan [anpassa era egna komponenter](enabling-json-exporter.md) för att få tillgång till och använda dessa data.
+  >Du kan [anpassa dina egna komponenter](enabling-json-exporter.md) för att komma åt och använda dessa data.
 
   >[!NOTE]
   >
-  >Även om det inte är en standardimplementering [flera väljare stöds,](enabling-json-exporter.md#multiple-selectors) men `model` måste vara den första.
+  >Även om det inte är en standardimplementering stöds [flera väljare, ](enabling-json-exporter.md#multiple-selectors) men `model` måste vara den första.
 
 ### Ytterligare information {#further-information}
 
-* Resurser för HTTP API
-   * [Resurser för HTTP API](/help/assets/developer-reference-material-apis.md)
+* ASSETS HTTP API
+   * [ASSETS HTTP API](/help/assets/developer-reference-material-apis.md)
 * Sling Models:
-   * [Sling Models - Associera en modellklass med en resurstyp sedan 130](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)
+   * [Sling Models - Associerar en modellklass med en resurstyp sedan 130](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)
 * AEM med JSON:
    * [Aktivera JSON-export för en komponent](enabling-json-exporter.md)
 
@@ -81,4 +81,4 @@ Sidan kan innehålla antingen ett enda innehållsfragment eller flera komponente
 * [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)
 * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
 * [Skapa med innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md)
-* [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
+* [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och komponenten [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)

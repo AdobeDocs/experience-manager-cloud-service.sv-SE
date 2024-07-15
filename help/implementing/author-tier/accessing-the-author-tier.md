@@ -1,6 +1,6 @@
 ---
 title: Åtkomst till författarnivån
-description: Lär dig hur du får åtkomst till författarnivån i en AEM as a Cloud Service miljö.
+description: Lär dig hur du får tillgång till en AEM as a Cloud Service-miljös författarnivå.
 exl-id: 4143a125-3d46-4c44-b52c-f55c5194fb9c
 feature: Configuring
 role: Admin
@@ -13,7 +13,7 @@ ht-degree: 13%
 
 # Åtkomst till författarnivån {#accessing-the-author-tier}
 
-Åtkomst till författarnivån i en AEM as a Cloud Service miljö görs via en standard och en icke-anpassningsbar URL.
+Åtkomst till författarnivå i en AEM as a Cloud Service-miljö görs via en standard och en icke-anpassningsbar URL.
 
 URL-formatet är följande:
 

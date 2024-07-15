@@ -17,46 +17,46 @@ Varje sida har en uppsättning [egenskaper](/help/sites-cloud/authoring/sites-co
 
 Standardläget för varje sidegenskap är:
 
-* Dolt i vyn Skapa (till exempel **Skapa sida** guide)
+* Dold i vyn Skapa (t.ex. guiden **Skapa sida**)
 
 * Finns i redigeringsvyn (till exempel **Visa egenskaper**)
 
 Fälten måste vara specifikt konfigurerade om någon ändring krävs. Detta görs med lämpliga nodegenskaper:
 
-* Page-egenskap som ska vara tillgänglig i vyn create (till exempel **Skapa sida** guide):
+* Sidegenskap som ska vara tillgänglig i skapandevyn (t.ex. guiden **Skapa sida**):
 
    * Namn: `cq:showOnCreate`
    * Typ: `Boolean`
 
-* Page-egenskap som ska vara tillgänglig i redigeringsvyn, till exempel **Visa**/**Redigera**  **Egenskaper** alternativ:
+* Sidegenskapen ska vara tillgänglig i redigeringsvyn, till exempel alternativet **Visa**/**Redigera** **Egenskaper** :
 
    * Namn: `cq:hideOnEdit`
    * Typ: `Boolean`
 
 >[!TIP]
 >
->Se [Utöka Sidegenskaper, genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/page-properties-technical-video-develop.html) för att få hjälp med att anpassa sidegenskaper.
+>I självstudiekursen [Utöka sidegenskaper](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/page-properties-technical-video-develop.html) finns en guide om hur du anpassar sidegenskaper.
 
 ## Konfigurera dina sidegenskaper {#configuring-your-page-properties}
 
 Du kan också konfigurera fälten som är tillgängliga genom att konfigurera dialogrutan för sidkomponenten och använda lämpliga nodegenskaper.
 
-Som standard är [**Skapa sida** guide](/help/sites-cloud/authoring/sites-console/creating-pages.md#creating-a-new-page) visar fält grupperade under **Fler rubriker och beskrivning**. Så här döljer du dessa konfigurationer:
+Som standard visar guiden **](/help/sites-cloud/authoring/sites-console/creating-pages.md#creating-a-new-page)[** Skapa sida de fält som är grupperade under **Fler rubriker och beskrivning**. Så här döljer du dessa konfigurationer:
 
 1. Skapa sidkomponenten under `/apps`.
-1. Skapa en åsidosättning (med *dialogruta* tillhandahålls av [Samla resurser](/help/implementing/developing/introduction/sling-resource-merger.md)) för `basic` del av sidkomponenten, till exempel:
+1. Skapa en åsidosättning (med *dialog diff* från [Sling Resource Merger](/help/implementing/developing/introduction/sling-resource-merger.md)) för `basic`-delen av sidkomponenten, till exempel:
 
    ```xml
    <your-page-component>/cq:dialog/content/items/tabs/items/basic
    ```
 
-1. Ange `path` egenskap på `basic` för att peka på åsidosättningen av den grundläggande fliken (se även nästa steg). Till exempel:
+1. Ställ in egenskapen `path` för `basic` så att den pekar på åsidosättningen av grundfliken (se även nästa steg). Till exempel:
 
    ```xml
    /apps/demos/components/page/tabs/basic
    ```
 
-1. Skapa en åsidosättning av `basic` - `moretitles` i motsvarande sökväg, till exempel:
+1. Skapa en åsidosättning av avsnittet `basic` - `moretitles` vid motsvarande sökväg, till exempel:
 
    ```xml
    /apps/demos/components/page/tabs/basic/items/column/items/moretitles
@@ -68,14 +68,14 @@ Som standard är [**Skapa sida** guide](/help/sites-cloud/authoring/sites-consol
    * **Typ**: `Boolean`
    * **Värde**: `false`
 
-   The **Fler rubriker och beskrivning** -avsnittet visas inte längre i **Skapa sida** guide.
+   Avsnittet **Fler rubriker och beskrivning** visas inte längre i guiden **Skapa sida**.
 
 >[!NOTE]
 >
->Information om hur du konfigurerar sidegenskaper för användning med live-kopior finns i [Utöka Multi Site Manager](/help/implementing/developing/extending/msm.md#configuring-msm-locks-on-page-properties) för mer information.
+>Mer information finns i [Utöka Multi Site Manager](/help/implementing/developing/extending/msm.md#configuring-msm-locks-on-page-properties) när du konfigurerar sidegenskaper för användning med live-kopior.
 
 ## Exempelkonfiguration av sidegenskaper {#sample-configuration-of-page-properties}
 
-I det här exemplet visas tekniken för dialogrutor i [Samla resurser](/help/implementing/developing/introduction/sling-resource-merger.md) inklusive användning av [`sling:orderBefore`](/help/implementing/developing/introduction/sling-resource-merger.md#properties). Det visar också hur man använder båda `cq:showOnCreate` och `cq:hideOnEdit`.
+I det här exemplet visas dialogtekniken för [Sling Resource Merger](/help/implementing/developing/introduction/sling-resource-merger.md), inklusive användningen av [`sling:orderBefore`](/help/implementing/developing/introduction/sling-resource-merger.md#properties). Det visar också hur både `cq:showOnCreate` och `cq:hideOnEdit` används.
 
-Koden för den här sidan finns på [GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-page-dialog).
+Du hittar koden för den här sidan på [GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-page-dialog).

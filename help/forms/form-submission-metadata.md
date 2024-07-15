@@ -1,6 +1,6 @@
 ---
 title: Hur uppdaterar man metadata i ett inskickat formulär?
-description: Lär dig hur du lägger till information i metadata för ett skickat formulär med användardata. Lär dig mer om hur du visar uppdaterade metadata för inlämning av formulär i CRX-databasen.
+description: Lär dig hur du lägger till information i metadata för ett skickat formulär med användardata. Lär dig mer om hur du visar de uppdaterade metadatan för inlämning av formulär i CRX-databasen.
 feature: Adaptive Forms
 role: User
 level: Intermediate
@@ -28,12 +28,12 @@ Gör så här för att lägga till ett element i metadata:
 
 1. Öppna det adaptiva formuläret i redigeringsläge.\
    Om du vill öppna formuläret i redigeringsläge markerar du formuläret i formulärhanteraren och väljer **[!UICONTROL Open]**.
-1. Markera en komponent i redigeringsläget och välj ![fältnivå](assets/select_parent_icon.svg) > **[!DNL Adaptive Form Container]** och sedan markera ![cmppr](assets/configure-icon.svg).
-1. Klicka på **[!DNL Metadata]**.
-1. Klicka på i avsnittet Metadata **[!DNL Add]**.
+1. Markera en komponent i redigeringsläget, välj ![fältnivå](assets/select_parent_icon.svg) > **[!DNL Adaptive Form Container]** och välj sedan ![cmpr](assets/configure-icon.svg).
+1. Klicka på **[!DNL Metadata]** i sidlisten.
+1. Klicka på **[!DNL Add]** i avsnittet Metadata.
 1. Använd fältet Värde på fliken Metadata för att lägga till skript. De skript du lägger till samlar in data från element i formuläret och beräknar värden som matas in i metadata.
 
-   Till exempel: **[!DNL true]** loggas i metadata om den angivna åldern är större än 21, och **[!DNL false]** loggas om den är mindre än 21. Du anger följande skript på fliken Metadata:
+   **[!DNL true]** loggas till exempel i metadata om den angivna åldern är större än 21 och **[!DNL false]** loggas om den är mindre än 21. Du anger följande skript på fliken Metadata:
 
    `(agebox.value >= 21) ? true : false`
 
@@ -55,10 +55,10 @@ Om du lägger till ett kryssruteelement i metadata lagras markerade värden som 
 
 ![Lagra flera värden från en kryssruta](assets/checkbox-metadata.png)
 
-Du väljer Adaptiv formulärbehållare och i formuläregenskaperna lägger du till en metadatanyckel `cb1` som lagrar `checkbox1.value`och publicera formuläret. När kunden fyller i formuläret väljer kunden passnummer och personnummer i kryssrutefältet. Värdena 1 och 2 lagras som 1 och 2 i fältet cb1 i metadata för överföringen.
+Du väljer behållaren för anpassat formulär och i formuläregenskaperna lägger du till en metadatanyckel `cb1` som lagrar `checkbox1.value` och publicerar formuläret. När kunden fyller i formuläret väljer kunden passnummer och personnummer i kryssrutefältet. Värdena 1 och 2 lagras som 1 och 2 i fältet cb1 i metadata för överföringen.
 
-![Metadatapost för flera värden som är markerade i ett kryssrutefält](assets/metadata-entry.png)
+![Metadatapost för flera värden som har markerats i ett kryssrutefält](assets/metadata-entry.png)
 
 >[!NOTE]
 >
->Exemplet ovan är endast avsett för inlärning. Kontrollera att du söker efter metadata på rätt plats som konfigurerats i din [!DNL Experience Manager Forms] implementering.
+>Exemplet ovan är endast avsett för inlärning. Kontrollera att du söker efter metadata på rätt plats som konfigurerats i implementeringen av [!DNL Experience Manager Forms].

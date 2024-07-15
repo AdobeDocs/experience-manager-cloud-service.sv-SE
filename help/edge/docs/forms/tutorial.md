@@ -17,7 +17,7 @@ I dagens digitala samhälle är det viktigt för alla företag att skapa använd
 
 Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft SharePoint för att enkelt bearbeta inlämnade data eller starta ett befintligt arbetsflöde.
 
-AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa formulär för att hämta in och lagra inhämtade data. Du kan [skapa ett nytt AEM projekt förkonfigurerat med Adaptive Forms Block](#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM](#add-adaptive-forms-block-to-your-existing-aem-project).
+AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa formulär för att hämta in och lagra inhämtade data. Du kan [skapa ett nytt AEM projekt förkonfigurerat med adaptivt Forms-block](#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM](#add-adaptive-forms-block-to-your-existing-aem-project) -projekt.
 
 Den här AEM Forms-självstudiekursen guidar dig genom att skapa, förhandsgranska och publicera egna anpassade formulär med ett nytt Adobe Experience Manager (AEM) Forms-projekt.
 
@@ -28,7 +28,7 @@ Den här AEM Forms-självstudiekursen guidar dig genom att skapa, förhandsgrans
 * Du förstår grunderna i HTML, CSS och JavaScript.
 * Du har installerat Node/npm för lokal utveckling.
 
-**Skärp dig!** I den här självstudien används macOS, Chrome och Visual Studio Code. Stegen kan anpassas för andra inställningar, men skärmbilderna och specifika gränssnittselement kan skilja sig åt beroende på vilket operativsystem, vilken webbläsare och vilken kodredigerare du har valt.
+**Upp med huvudet!** I den här självstudien används macOS, Chrome och Visual Studio Code. Stegen kan anpassas för andra inställningar, men skärmbilderna och specifika gränssnittselement kan skilja sig åt beroende på vilket operativsystem, vilken webbläsare och vilken kodredigerare du har valt.
 
 
 ## Skapa ett nytt AEM projekt förkonfigurerat med Adaptive Forms Block
@@ -40,40 +40,40 @@ Med AEM Forms-mallen för mallar kommer du snabbt igång med ett AEM projekt som
 1. Skapa en GitHub-databas för ditt AEM. Så här skapar du databas:
    1. Gå till [https://github.com/adobe-rnd/aem-boilerplate-forms](https://github.com/adobe-rnd/aem-boilerplate-forms).
 
-      ![AEM Forms Boilerplate](/help/edge/assets/aem-forms-boilerplate.png)
-   1. Klicka på **Använd den här mallen** och väljer **Skapa en ny databas** alternativ. Skärmen Skapa en ny databas öppnas.
+      ![AEM Forms-mallsida](/help/edge/assets/aem-forms-boilerplate.png)
+   1. Klicka på alternativet **Använd den här mallen** och välj alternativet **Skapa en ny databas**. Skärmen Skapa en ny databas öppnas.
 
-      ![Skapa en ny databas med AEM Forms Boilerplate](/help/edge/assets/create-new-repository-using-aem-forms-boilerplate.png)
+      ![Skapa en ny databas med AEM Forms-standardmallen](/help/edge/assets/create-new-repository-using-aem-forms-boilerplate.png)
 
-   1. När du skapar en ny databas väljer du **ägare** och ange **Databasnamn** . Adobe rekommenderar att databasen är inställd på **Offentlig**. Välj **public** och klicka på **Skapa databas**.
+   1. Välj **owner** och ange **Databasnamn** på skärmen Skapa en ny databas. Adobe rekommenderar att databasen är inställd på **Offentlig**. Välj därför alternativet **public** och klicka på **Skapa databas**.
 
-   ![Ställ in databasen till publik](/help/edge/assets/create-a-new-repo-keep-it-public.png)
+   ![Ställ in databasen på public](/help/edge/assets/create-a-new-repo-keep-it-public.png)
 
 
 1. Installera AEM Code Sync GitHub App på din databas. Installera:
    1. Gå till [https://github.com/apps/aem-code-sync/installations/new](https://github.com/apps/aem-code-sync/installations/new).
-   1. På skärmen Install AEM Code Sync väljer du **Välj bara databaser** och välj din nya databas. Klicka på Spara.
+   1. På skärmen Install AEM Code Sync väljer du alternativet **Only select Repositories** och väljer din nya databas. Klicka på Spara.
 
-   ![Ställ in databasen till publik](/help/edge/assets/install-aem-code-sync-app-for-your-repo.png)
+   ![Ställ in databasen på public](/help/edge/assets/install-aem-code-sync-app-for-your-repo.png)
 
    >[!NOTE]
    >
    >
    > Om du använder GitHub Enterprise med IP-filtrering kan du lägga till följande IP-adress i tillåtelselista: 3.227.118.73
 
-   Grattis! Du har en ny webbplats på `https://<branch>--<repo>--<owner>.hlx.page/`.
+   Grattis! Du har en ny webbplats som körs på `https://<branch>--<repo>--<owner>.hlx.page/`.
 
-   * `<branch>` refererar till grenen i din GitHub-databas.
-   * `<repository>` anger din GitHub-databas.
+   * `<branch>` refererar till din GitHub-databas.
+   * `<repository>` betecknar din GitHub-databas.
    * `<owner>` refererar till användarnamnet för ditt GitHub-konto som är värd för din GitHub-databas.
 
-   Om förgreningsnamnet till exempel är `main`, databasen är `wefinance`och ägaren är `wkndforms`, kommer webbplatsen att vara igång på [https://main—weFinance—wkndforms.hlx.page/](https://main--wefinance--wkndforms.hlx.page/).
+   Om filialnamnet till exempel är `main`, databasen är `wefinance` och ägaren är `wkndforms`, kommer webbplatsen att vara igång på [https://main—weFinance—wkndforms.hlx.page/](https://main--wefinance--wkndforms.hlx.page/).
 
 
 
 ### Länka din egen innehållskälla
 
-Din nya GitHub-databas pekar på [exempelinnehåll som lagras i en Google Drive-mapp](https://drive.google.com/drive/folders/1bvjfi6TqpYA7DvbX6kKc-m7FgHuJ4RUQ). Det här skrivskyddade innehållet är en bra utgångspunkt för dina formulär. Du kan kopiera det till din egen Google Drive och anpassa det efter dina behov.
+Din nyligen skapade GitHub-databas pekar på [exempelinnehåll som lagras i en Google Drive-mapp](https://drive.google.com/drive/folders/1bvjfi6TqpYA7DvbX6kKc-m7FgHuJ4RUQ). Det här skrivskyddade innehållet är en bra utgångspunkt för dina formulär. Du kan kopiera det till din egen Google Drive och anpassa det efter dina behov.
 
 ![Exempelinnehåll på Google Drive](/help/edge/assets/folder-with-sample-content.png)
 
@@ -94,20 +94,20 @@ Så här kopierar du exempelinnehållet till din egen innehållsmapp och pekar d
 
    ![Dela mapp med AEM användare, ange redigeringsbehörighet - Google Drive](/help/edge/assets/add-aem-user-google-folder.png)
 
-1. Kopiera [exempelinnehåll som lagras i Google Drive-mappen](https://drive.google.com/drive/folders/17LSiMZC77N8tCJRW45TnHHGcG8V3SLG_) till din mapp. Kopiera:
+1. Kopiera exempelinnehållet [som lagras i Google Drive-mappen](https://drive.google.com/drive/folders/17LSiMZC77N8tCJRW45TnHHGcG8V3SLG_) till din mapp. Kopiera:
 
    1. Hämta filerna tillsammans eller hämta enskilda filer.
 
       ![Hämta exempelinnehåll](/help/edge/assets/download-sample-content.png)
 
-      The `nav` och `footer` -filer definierar den grundläggande layouten för sidorna och ändras sällan i ett projekt. De har också en särskild struktur som skiljer sig från de flesta andra innehållsfiler. Genom att undersöka dessa filer får du en känsla för hur innehållet är organiserat i AEM projekt.
+      Filerna `nav` och `footer` definierar den grundläggande layouten för dina sidor och ändras sällan i ett projekt. De har också en särskild struktur som skiljer sig från de flesta andra innehållsfiler. Genom att undersöka dessa filer får du en känsla för hur innehållet är organiserat i AEM projekt.
 
 
    1. Överför dessa filer till Microsoft SharePoint eller Google Drive-mappen.
 
       ![Exempelinnehåll på Google Drive](/help/edge/assets/upload-sample-files-to-your-content-folder.png)
 
-      Se till att du kopierar  `enquiry` från exempelinnehållet till din mapp på Google Drive eller Microsoft SharePoint. Den innehåller en struktur för ett exempelformulär.
+      Kontrollera att du kopierar bladet `enquiry` från exempelinnehållet till din mapp på Google Drive eller Microsoft SharePoint. Den innehåller en struktur för ett exempelformulär.
 
 1. Nu när du har konfigurerat innehållsmappen är det dags att länka den till ditt projekt på GitHub som du skapade med AEM Forms Boilerplate tidigare. Ansluta:
 
@@ -133,7 +133,7 @@ Så här kopierar du exempelinnehållet till din egen innehållsmapp och pekar d
       Mer information om hur du hanterar filer med Microsoft SharePoint finns i [Så här använder du Adobe SharePoint](https://www.aem.live/docs/setup-customer-sharepoint).
 
 
-   1. Genomför den uppdaterade `fsatb.yaml` när du har uppdaterat referensen ser allt bra ut. Om du stöter på några byggproblem kan du läsa [Felsökning av byggproblem med GitHub](#troubleshooting-github-build-issues).
+   1. Genomför den uppdaterade `fsatb.yaml`-filen när du har uppdaterat referensen och allt ser bra ut. Om du stöter på några byggproblem kan du läsa [Felsökning av GitHub-byggproblem](#troubleshooting-github-build-issues).
 
 
 
@@ -149,11 +149,11 @@ När du är klar med det sista steget är den nya innehållskällan inte tom, me
 
 Så här förhandsgranskar du opublicerat innehåll:
 
-1. Installera Chrome-tillägget som anropades [AEM Sidekick](https://chrome.google.com/webstore/detail/helix-sidekick-beta/ccfggkjabjahcjoljmgmklhpaccedipo).
+1. Installera Chrome-tillägget [AEM Sidekick](https://chrome.google.com/webstore/detail/helix-sidekick-beta/ccfggkjabjahcjoljmgmklhpaccedipo).
 
    ![Installera AEM Sidekick](/help/edge/assets/install-aem-sidekick.png)
 
-   När du har installerat tillägget i Chrome, glöm inte att fästa det, blir det enklare att hitta det.
+   När du har installerat tillägget på Chrome, glöm inte att fästa det, blir det enklare att hitta det.
 
    ![Fäst AEM Sidekick](/help/edge/assets/pin-aem-sidekick.png)
 
@@ -167,9 +167,9 @@ Så här förhandsgranskar du opublicerat innehåll:
 
    ![Markera alla filer](/help/edge/assets/select-all-files.png)
 
-1. Klicka på ikonen AEM Sidekick som är fäst i Chrome-tilläggsfältet. Ett verktygsfält visas på skärmen. Du kan välja att förhandsgranska eller publicera ditt innehåll.
+1. Klicka på AEM Sidekick-ikonen som är fäst i Chrome tilläggsfält. Ett verktygsfält visas på skärmen. Du kan välja att förhandsgranska eller publicera ditt innehåll.
 
-   Om du kopierade över `index`, `nav`, `footer` och `enquiry` -filer är alla separata dokument med sina egna förhandsgransknings- och publiceringscykler, så se till att du förhandsgranskar (och publicerar) alla.
+   Om du kopierade över `index`-, `nav`-, `footer`- och `enquiry`-filer är alla dessa separata dokument med sina egna förhandsgransknings- och publiceringscykler, så se till att du förhandsgranskar (och publicerar) alla dem.
 
    När du förhandsgranskar filerna visas dokumenten på de nya webbläsarflikarna. Om du vill förhandsgranska exempelformuläret går du till följande URL:
 
@@ -178,12 +178,12 @@ Så här förhandsgranskar du opublicerat innehåll:
    https://<branch>--<repository>--<owner>.hlx.live
    ```
 
-   * `<branch>` refererar till grenen i din GitHub-databas.
-   * `<repository>` anger din GitHub-databas.
+   * `<branch>` refererar till din GitHub-databas.
+   * `<repository>` betecknar din GitHub-databas.
    * `<owner>` refererar till användarnamnet för ditt GitHub-konto som är värd för din GitHub-databas.
 
 
-   `https://<branch>--<repo>--<owner>.hlx.page/enquiry` URL.
+   URL för `https://<branch>--<repo>--<owner>.hlx.page/enquiry`.
 
    Om projektdatabasen till exempel heter&quot;weFinance&quot; finns den under kontoägaren&quot;wkndforms&quot; (wkndforms)&quot; (wkndforms) och du använder huvudgrenen är URL:en:
 
@@ -191,7 +191,7 @@ Så här förhandsgranskar du opublicerat innehåll:
 
 ### Skapa ett formulär
 
-Exempelinnehållet innehåller ett frågeblad som fungerar som mall för frågeformuläret. Varje rad i bladet representerar en [formulärfält](/help/edge/docs/forms/form-components.md#available-components)och kolumnrubrikerna definierar [fältegenskaper](/help/edge/docs/forms/form-components.md#available-components). Det här exempelformuläret ger dig ett försprång när du skapar formuläret.
+Exempelinnehållet innehåller ett frågeblad som fungerar som mall för frågeformuläret. Varje rad i kalkylbladet representerar ett [formulärfält](/help/edge/docs/forms/form-components.md#available-components) och kolumnrubrikerna definierar [fältegenskaperna](/help/edge/docs/forms/form-components.md#available-components). Det här exempelformuläret ger dig ett försprång när du skapar formuläret.
 
 ![Formulär för förfrågan](/help/edge/docs/forms/assets/enquiry-form-microsoft-sharepoint.png)
 
@@ -201,9 +201,9 @@ Vi börjar med att uppdatera en fältetikett. Öppna förfrågningsbladet för r
 
 När du förhandsgranskar eller publicerar filen visas en JSON-version av filen på en ny flik. Kopiera förhandsgransknings- (.hlx.page) eller publicerings-URL:en (.hlx.live) för filen.
 
-![JSON i formulärkalkylbladet](/help/edge/assets//preview-and-publish-enquiry-form.png)
+![JSON för formulärkalkylbladet](/help/edge/assets//preview-and-publish-enquiry-form.png)
 
-Öppna `enquiry` och ersätt URL:en i formulärblocket med URL:en för filen som kopierades i föregående steg. Kontrollera att URL:en är en hyperlänk.
+Öppna filen `enquiry` och ersätt URL:en i formulärblocket med URL:en för filen som kopierades i föregående steg. Kontrollera att URL:en är en hyperlänk.
 
 ![Förfrågningsfil med URL:en .json för kalkylbladets URL](/help/edge/assets/enquiry-doc-to-embed-form.png)
 
@@ -220,11 +220,11 @@ Om du vill förhandsgranska det uppdaterade frågeformuläret går du till följ
        
 ```
 
-Etiketten på skicka-knappen uppdateras till `Let's Chat`.
+Etiketten för skicka-knappen uppdateras till `Let's Chat`.
 
 ![Formulär för förfrågan](/help/edge/assets/updated-form.png)
 
-Mer information om hur du skapar och publicerar ett nytt formulär finns på [skapa ett formulär](/help/edge/docs/forms/create-forms.md) guide.
+Mer information om hur du skapar och publicerar ett nytt formulär finns i handboken [Skapa ett formulär](/help/edge/docs/forms/create-forms.md).
 
 ### Börja utveckla format och funktionalitet
 
@@ -250,7 +250,7 @@ För att komma igång med en lokal AEM utvecklingsmiljö på nolltid:
    aem up
    ```
 
-The Adaptive Forms Block `blocks/form` är din lekplats för format och kod för dina formulär! Redigera alla `.css` eller `.js` filer i den här katalogen så ser du ändringarna direkt i webbläsaren.
+Mappen Adaptive Forms Block `blocks/form` är din spelningsmiljö för formatering och kod för dina formulär! Redigera alla `.css`- eller `.js`-filer i den här katalogen så ser du ändringarna direkt i webbläsaren.
 
 Är du redo att visa upp din skapelse? Använd Git för att implementera och föra över ändringarna. Detta uppdaterar förhandsgransknings- och produktionsmiljöer som du kan nå på dessa URL:er (ersätt platshållare med projektinformation):
 
@@ -271,13 +271,13 @@ Om du har ett befintligt AEM kan du integrera det adaptiva Forms-blocket i ditt 
 >[!NOTE]
 >
 >
-> Det här steget gäller projekt som byggts med [AEM](https://github.com/adobe/aem-boilerplate). Om du skapade AEM med [AEM Forms Boilerplate](https://github.com/adobe-rnd/aem-boilerplate-forms)kan du hoppa över det här steget.
+> Det här steget gäller projekt som skapats med [AEM-standardmallen](https://github.com/adobe/aem-boilerplate). Om du har skapat ditt AEM med [AEM Forms-standardmallen](https://github.com/adobe-rnd/aem-boilerplate-forms) kan du hoppa över det här steget.
 
 Integrera:
 
-1. Clone the Adaptive Forms Block: [https://github.com/adobe-rnd/aem-boilerplate-forms](https://github.com/adobe-rnd/aem-boilerplate-forms) till datorn.
+1. Klona det adaptiva Forms-blockarkivet: [https://github.com/adobe-rnd/aem-boilerplate-forms](https://github.com/adobe-rnd/aem-boilerplate-forms) till din dator.
 
-1. I den hämtade mappen finns `blocks/form` mapp. Kopiera mappen. Gå nu till AEM `blocks` och klistra in den kopierade formulärmappen här.
+1. I den hämtade mappen hittar du mappen `blocks/form`. Kopiera mappen. Navigera till det lokala `blocks`-mappen för ditt AEM och klistra in den kopierade formulärmappen här.
 
 1. Verkställ och skicka dessa ändringar till ditt AEM på GitHub.
 
@@ -289,11 +289,11 @@ Så ja! Det adaptiva Forms-blocket ingår nu i ditt AEM. Du kan börja skapa och
 
 Se till att GitHub-byggprocessen blir smidig genom att åtgärda potentiella problem:
 
-* **Lösning av modulsökvägsfel:**
-Om du får felmeddelandet&quot;Det går inte att matcha sökvägen till modulen &quot;&#39;../../scripts/lib-franklin.js&#39;&quot; går du till [EDS-projekt]/blocks/forms/form.js fil. Uppdatera importsatsen genom att ersätta filen lib-franklin.js med filen aem.js.
+* **Resolve Module Path-fel:**
+Om du får felmeddelandet&quot;Det går inte att lösa sökvägen till modulen &quot;&#39;../../scripts/lib-franklin.js&#39;&quot; går du till filen [EDS Project]/blocks/forms/form.js. Uppdatera importsatsen genom att ersätta filen lib-franklin.js med filen aem.js.
 
 * **Hantera lintingfel:**
-Om du skulle stöta på ett lintingfel kan du kringgå dem. Öppna [EDS-projekt]/package.json fil och ändra&quot;lint&quot;-skriptet från `"lint": "npm run lint:js && npm run lint:css"` till `"lint": "echo 'skipping linting for now'"`. Spara filen och implementera ändringarna i GitHub-projektet.
+Om du skulle stöta på ett lintingfel kan du kringgå dem. Öppna [EDS-projektfilen]/package.json och ändra lint-skriptet från `"lint": "npm run lint:js && npm run lint:css"` till `"lint": "echo 'skipping linting for now'"`. Spara filen och implementera ändringarna i GitHub-projektet.
 
 
 ## Se även

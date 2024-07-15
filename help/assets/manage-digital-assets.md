@@ -20,19 +20,19 @@ ht-degree: 8%
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
-I den här artikeln beskrivs hur du hanterar och redigerar resurser i [!DNL Adobe Experience Manager Assets]. Att hantera [!DNL Content Fragments], se [[!DNL Content Fragments]](content-fragments/content-fragments.md) resurser.
+I den här artikeln beskrivs hur du hanterar och redigerar resurser i [!DNL Adobe Experience Manager Assets]. Mer information om hur du hanterar [!DNL Content Fragments] finns i [[!DNL Content Fragments]](content-fragments/content-fragments.md)-resurser.
 
 ## Skapa mappar {#creating-folders}
 
-När du organiserar en samling resurser, till exempel, alla `Nature` kan du skapa mappar som håller ihop dem. Du kan använda mappar för att kategorisera och ordna dina resurser. [!DNL Experience Manager Assets] kräver inte att du ordnar resurser i mappar för att fungera bättre.
+När du organiserar en samling resurser, till exempel alla `Nature`-bilder, kan du skapa mappar som håller ihop dem. Du kan använda mappar för att kategorisera och ordna dina resurser. [!DNL Experience Manager Assets] kräver inte att du ordnar resurser i mappar för att fungera bättre.
 
 >[!NOTE]
 >
->* Dela en resursmapp av typen `sling:OrderedFolder`, stöds inte vid delning till Experience Cloud. Om du vill dela en mapp ska du inte markera [!UICONTROL Ordered] när du skapar en mapp.
->* Experience Manager tillåter inte att `subassets` ord som namnet på en mapp. Det är ett nyckelord reserverat för nod som innehåller delresurser för sammansatta resurser
+>* Delning av en Assets-mapp av typen `sling:OrderedFolder` stöds inte vid delning till Experience Cloud. Om du vill dela en mapp ska du inte välja [!UICONTROL Ordered] när du skapar en mapp.
+>* Experience Manager tillåter inte att `subassets` ord används som namn på en mapp. Det är ett nyckelord reserverat för nod som innehåller delresurser för sammansatta resurser
 
-1. Navigera till den plats i mappen med digitala resurser där du vill skapa en mapp. Klicka på **[!UICONTROL Create]**. Välj **[!UICONTROL New Folder]**.
-1. I **[!UICONTROL Title]** anger du ett mappnamn. Som standard använder DAM den titel som du angav som mappnamn. När mappen har skapats kan du åsidosätta standardmappen och ange ett annat mappnamn.
+1. Navigera till den plats i mappen med digitala resurser där du vill skapa en mapp. Klicka på **[!UICONTROL Create]** på menyn. Välj **[!UICONTROL New Folder]**.
+1. Ange ett mappnamn i fältet **[!UICONTROL Title]**. Som standard använder DAM den titel som du angav som mappnamn. När mappen har skapats kan du åsidosätta standardmappen och ange ett annat mappnamn.
 1. Klicka på **[!UICONTROL Create]**. Mappen visas i mappen med digitala resurser.
 
 Följande (blankstegsavgränsad lista med) tecken stöds inte:
@@ -51,7 +51,7 @@ Välj ZIP-arkiv som hanteras i Experience Manager och extrahera filerna direkt t
 Så här extraherar du ZIP-filerna:
 
 1. Välj ZIP-filtyp.
-1. Klicka på **[!UICONTROL Extract Archive]** som finns i åtgärdsfältet.
+1. Klicka på alternativet **[!UICONTROL Extract Archive]** i åtgärdsfältet.
 1. Välj den mapp där du behöver spara de extraherade resurserna som är tillgängliga i den komprimerade mappen.
 1. Klicka på **[!UICONTROL Next]**.
 1. Välj lämpligt beteende för att hantera filnamnskonflikter under extraheringen. Du kan välja att skapa en version av en befintlig resurs, ersätta resursen, behålla båda resurserna i målmappen eller hoppa över extraheringen av den nya resursen.
@@ -68,12 +68,12 @@ Så här extraherar du ZIP-filerna:
 
 Följ de här stegen för att förhandsgranska en resurs.
 
-1. Navigera från användargränssnittet Resurser till platsen för den resurs som du vill förhandsgranska.
+1. I Assets-användargränssnittet navigerar du till platsen för resursen som du vill förhandsgranska.
 1. Välj önskad resurs för att öppna den.
 
-1. I förhandsgranskningsläget finns zoomalternativ för [bildtyper som stöds](/help/assets/file-format-support.md) (med interaktiv redigering).
+1. I förhandsgranskningsläget är zoomalternativ tillgängliga för [bildtyper som stöds](/help/assets/file-format-support.md) (med interaktiv redigering).
 
-   Om du vill zooma in en resurs väljer du `+` (eller välj förstoringsglaset på resursen). Om du vill zooma ut väljer du `-`. När du zoomar in kan du titta närmare på alla delar av bilden genom att panorera. Med den återställda zoompilen återgår du till den ursprungliga vyn.
+   Om du vill zooma in på en resurs väljer du `+` (eller väljer förstoringsglaset på resursen). Om du vill zooma ut väljer du `-`. När du zoomar in kan du titta närmare på alla delar av bilden genom att panorera. Med den återställda zoompilen återgår du till den ursprungliga vyn.
 
    Välj **[!UICONTROL Reset]** om du vill återställa vyn till den ursprungliga storleken.
 
@@ -81,34 +81,34 @@ Följ de här stegen för att förhandsgranska en resurs.
 
 1. Navigera till platsen för resursen vars metadata du vill redigera.
 
-1. Markera resursen och välj **[!UICONTROL Properties]** i verktygsfältet för att visa resursegenskaper. Du kan också välja **[!UICONTROL Properties]** Snabba åtgärder på tillgångskortet.
+1. Markera resursen och välj **[!UICONTROL Properties]** i verktygsfältet för att visa resursegenskaper. Du kan också välja snabbåtgärden **[!UICONTROL Properties]** på resurskortet.
 
    ![properties_quickaction](assets/properties_quickaction.png)
 
-1. I [!UICONTROL Properties] redigerar du metadataegenskaperna på olika flikar. Under till exempel **[!UICONTROL Basic]** kan du redigera titeln, beskrivningen och så vidare.
+1. Redigera metadataegenskaperna på olika flikar på sidan [!UICONTROL Properties]. Du kan till exempel redigera titeln, beskrivningen och så vidare på fliken **[!UICONTROL Basic]**.
 
    >[!NOTE]
    >
-   >Layouten för [!UICONTROL Properties] vilken sida och vilka metadataegenskaper som är tillgängliga beror på det underliggande metadataschemat. Så här ändrar du layouten för [!UICONTROL Properties] sida, se [Metadata-scheman](/help/assets/metadata-schemas.md).
+   >Layouten för sidan [!UICONTROL Properties] och de metadataegenskaper som är tillgängliga beror på det underliggande metadataschemat. Mer information om hur du ändrar layouten för sidan [!UICONTROL Properties] finns i [Metadatascheman](/help/assets/metadata-schemas.md).
 
 1. Om du vill schemalägga ett visst datum/tid för att aktivera resursen använder du datumväljaren bredvid fältet **[!UICONTROL On Time]**.
 
    ![Datumväljaren](assets/date-picker.png)
 
-1. Om du vill inaktivera tillgången efter en viss tid väljer du datum/tid för inaktiveringen i datumväljaren bredvid **[!UICONTROL Off Time]** fält. Inaktiveringsdatumet ska vara senare än aktiveringsdatumet för en tillgång. Efter [!UICONTROL Off Time], är en resurs och dess återgivningar inte tillgängliga via webbgränssnittet Resurser eller via HTTP-API:t.
+1. Om du vill inaktivera resursen efter en viss tid väljer du datum/tid för inaktiveringen i datumväljaren bredvid fältet **[!UICONTROL Off Time]**. Inaktiveringsdatumet ska vara senare än aktiveringsdatumet för en tillgång. Efter [!UICONTROL Off Time] är en resurs och dess återgivningar inte tillgängliga via Assets webbgränssnitt eller via HTTP API.
 
    <!--![chlimage_1-218](assets/chlimage_1-218.png)
-1. I **[!UICONTROL Tags]** markerar du en eller flera taggar. Om du vill lägga till en egen tagg skriver du namnet på taggen i rutan och markerar `Enter` -tangenten. Den nya taggen sparas i [!DNL Experience Manager].
+1. Markera en eller flera taggar i fältet **[!UICONTROL Tags]**. Om du vill lägga till en egen tagg skriver du namnet på taggen i rutan och väljer `Enter`. Den nya taggen sparas i [!DNL Experience Manager].
 
    YouTube kräver att taggar ska publiceras och ha en länk till YouTube (om en lämplig länk finns).
 
    >[!NOTE]
    >
-   > Om du vill skapa taggar måste du ha skrivbehörighet på `/content/cq:tags/default` sökväg i CRX-databasen.
+   > Om du vill skapa taggar måste du ha skrivbehörighet på sökvägen `/content/cq:tags/default` i CRX-databasen.
 
 1. Välj **[!UICONTROL Save & Close]**.
 
-1. Navigera till användargränssnittet Resurser. De redigerade metadataegenskaperna, inklusive rubrik, beskrivning och taggar, visas på resurskortet i kortvyn och under relevanta kolumner i listvyn.
+1. Gå till Assets användargränssnitt. De redigerade metadataegenskaperna, inklusive rubrik, beskrivning och taggar, visas på resurskortet i kortvyn och under relevanta kolumner i listvyn.
 
 <!-- TBD: Uncomment after verification for Dec release.
 
@@ -132,65 +132,65 @@ När du kopierar en resurs eller en mapp kopieras hela resursen eller mappen til
 
 Några attribut som är unika för en viss kopia av en tillgång överförs inte. Några exempel är:
 
-* Tillgångs-ID, datum och tid när de skapades samt versioner och versionshistorik. Vissa av dessa egenskaper indikeras av egenskaperna `jcr:uuid`, `jcr:created`och `cq:name`.
+* Tillgångs-ID, datum och tid när de skapades samt versioner och versionshistorik. Vissa av dessa egenskaper indikeras av egenskaperna `jcr:uuid`, `jcr:created` och `cq:name`.
 
 * Skapandetid och refererade sökvägar är unika för varje resurs och för varje återgivning.
 
 Övriga egenskaper och metadatainformation bevaras. Ingen del av kopian skapas när en resurs kopieras.
 
-1. Välj en eller flera resurser i resursgränssnittet och välj sedan **[!UICONTROL Copy]** -ikonen i verktygsfältet. Du kan även välja **[!UICONTROL Copy]** ![copy_icon](assets/copy_icon.png) snabbåtgärd från tillgångskortet.
+1. I Assets-gränssnittet väljer du en eller flera resurser och sedan ikonen **[!UICONTROL Copy]** i verktygsfältet. Du kan också välja snabbåtgärden **[!UICONTROL Copy]** ![copy_icon](assets/copy_icon.png) från resurskortet.
 
    >[!NOTE]
    >
-   >Om du använder [!UICONTROL Copy] kan du bara kopiera en resurs åt gången.
+   >Om du använder snabbåtgärden [!UICONTROL Copy] kan du bara kopiera en resurs åt gången.
 
 1. Navigera till den plats där du vill kopiera resurserna.
 
    >[!NOTE]
    >
-   >Om du kopierar en resurs på samma plats, [!DNL Experience Manager] genererar automatiskt en variant av namnet. Om du till exempel kopierar en resurs med namnet `Square`, [!DNL Experience Manager] genererar automatiskt titeln för kopian som `Square1`.
+   >Om du kopierar en resurs på samma plats, genererar [!DNL Experience Manager] automatiskt en variant av namnet. Om du till exempel kopierar en resurs med namnet `Square`, genererar [!DNL Experience Manager] automatiskt titeln för kopian som `Square1`.
 
-1. Klicka på **[!UICONTROL Paste]** resursikonen i verktygsfältet. Resurser kopieras till den här platsen.
+1. Klicka på resursikonen **[!UICONTROL Paste]** i verktygsfältet. Assets kopieras till den här platsen.
 
    <!--![chlimage_1-219](assets/chlimage_1-219.png)-->
 
    >[!NOTE]
    >
-   >The **[!UICONTROL Paste]** ikonen är tillgänglig i verktygsfältet tills inklistringsåtgärden är slutförd.
+   >Ikonen **[!UICONTROL Paste]** är tillgänglig i verktygsfältet tills inklistringsåtgärden har slutförts.
 
 ### Flytta eller byta namn på resurser {#moving-or-renaming-assets}
 
 1. Navigera till platsen för resursen som du vill flytta.
 
-1. Markera resursen och välj **[!UICONTROL Move]** icon ![move_icon](assets/move_icon.png) i verktygsfältet.
+1. Markera resursen och välj ikonen **[!UICONTROL Move]** ![move_icon](assets/move_icon.png) i verktygsfältet.
 
-1. Gör något av följande i guiden Flytta resurser:
+1. Gör något av följande i guiden Flytta Assets:
 
    * Ange namnet på resursen när den har flyttats. Välj sedan **[!UICONTROL Next]** för att fortsätta.
 
-   * Välj **[!UICONTROL Cancel]** för att stoppa processen.
+   * Välj **[!UICONTROL Cancel]** om du vill stoppa processen.
 
    >[!NOTE]
    >
    >* Du kan ange samma namn för resursen om det inte finns någon resurs med det namnet på den nya platsen. Du bör emellertid använda ett annat namn om du flyttar resursen till en plats där det finns en resurs med samma namn. Om du använder samma namn genereras automatiskt en variant av namnet. Om resursen till exempel har namnet Fyrkant, genereras namnet Fyrkant1 för kopian.
    >* När namnet ändras tillåts inte tomt utrymme i filnamnet.
 
-1. På **[!UICONTROL Select Destination]** gör du något av följande:
+1. Gör något av följande i dialogrutan **[!UICONTROL Select Destination]**:
 
    * Navigera till den nya platsen för resurserna och välj sedan **[!UICONTROL Next]** för att fortsätta.
 
-   * Välj **[!UICONTROL Back]** för att gå tillbaka till **[!UICONTROL Rename]** skärm.
+   * Välj **[!UICONTROL Back]** om du vill gå tillbaka till skärmen **[!UICONTROL Rename]**.
 
-1. Om de resurser som flyttas har några referenssidor, resurser eller samlingar, **[!UICONTROL Adjust References]** visas bredvid **[!UICONTROL Select Destination]** -fliken.
+1. Om de resurser som flyttas har referenssidor, resurser eller samlingar visas fliken **[!UICONTROL Adjust References]** bredvid fliken **[!UICONTROL Select Destination]**.
 
-   Gör något av följande i dialogrutan **[!UICONTROL Adjust References]** skärm:
+   Gör något av följande på skärmen **[!UICONTROL Adjust References]**:
 
-   * Ange vilka referenser som ska justeras baserat på den nya informationen och välj sedan **[!UICONTROL Move]** för att fortsätta.
+   * Ange de referenser som ska justeras baserat på den nya informationen och välj sedan **[!UICONTROL Move]** för att fortsätta.
 
-   * Från **[!UICONTROL Adjust]** markerar/avmarkerar du referenser till resurserna.
-   * Välj **[!UICONTROL Back]** för att gå tillbaka till **[!UICONTROL Select Destination]** skärm.
+   * Välj/avmarkera referenser till resurserna i kolumnen **[!UICONTROL Adjust]**.
+   * Välj **[!UICONTROL Back]** om du vill gå tillbaka till skärmen **[!UICONTROL Select Destination]**.
 
-   * Välj **[!UICONTROL Cancel]** för att stoppa flyttåtgärden.
+   * Välj **[!UICONTROL Cancel]** om du vill stoppa flyttåtgärden.
 
    Om du inte uppdaterar referenser fortsätter de att peka på resursens tidigare sökväg. Om du justerar referenserna uppdateras de till den nya resurssökvägen.
 
@@ -202,29 +202,29 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    <!--![chlimage_1-220](assets/chlimage_1-220.png)-->
 
-1. Välj ikonen GlobalNav och välj **[!UICONTROL Renditions]** från listan.
+1. Välj ikonen GlobalNav och välj **[!UICONTROL Renditions]** i listan.
 
    ![renditions_menu](assets/renditions_menu.png)
 
-1. I **[!UICONTROL Renditions]** visa en lista över återgivningar som genererats för resursen.
+1. Visa listan över återgivningar som genererats för resursen på panelen **[!UICONTROL Renditions]**.
 
    ![renditions_panel](assets/renditions_panel.png)
 
    >[!NOTE]
    >
-   >Som standard [!DNL Experience Manager Assets] visar inte den ursprungliga återgivningen av resursen i förhandsgranskningsläget. Om du är administratör kan du använda övertäckningar för att konfigurera [!DNL Assets] om du vill visa de ursprungliga återgivningarna i förhandsvisningsläget.
+   >Som standard visar [!DNL Experience Manager Assets] inte den ursprungliga återgivningen av resursen i förhandsgranskningsläget. Om du är administratör kan du använda övertäckningar för att konfigurera [!DNL Assets] så att ursprungliga återgivningar visas i förhandsgranskningsläget.
 
 1. Välj en återgivning om du vill visa eller ta bort återgivningen.
 
-   **Ta bort en återgivning**
+   **Tar bort en återgivning**
 
-   Välj en återgivning på menyn **[!UICONTROL Renditions]** och sedan markera **[!UICONTROL Delete Rendition]** -ikonen i verktygsfältet. Det går inte att ta bort återgivningar gruppvis när resursbearbetningen är slutförd. För enskilda resurser kan du ta bort återgivningar manuellt från användargränssnittet. För flera resurser kan du anpassa [!DNL Experience Manager] om du vill ta bort en viss återgivning eller ta bort resurserna och överföra de borttagna resurserna igen.
+   Välj en återgivning på panelen **[!UICONTROL Renditions]** och välj sedan ikonen **[!UICONTROL Delete Rendition]** i verktygsfältet. Det går inte att ta bort återgivningar gruppvis när resursbearbetningen är slutförd. För enskilda resurser kan du ta bort återgivningar manuellt från användargränssnittet. För flera resurser kan du anpassa [!DNL Experience Manager] om du vill ta bort specifika återgivningar eller ta bort resurserna och överföra de borttagna resurserna igen.
 
    ![delete_renderingicon](assets/delete_renditionicon.png)
 
-   **Överföra en ny återgivning**
+   **Överför en ny återgivning**
 
-   Navigera till sidan med tillgångsinformation för resursen och välj **[!UICONTROL Add Rendition]** i verktygsfältet för att överföra en ny återgivning för resursen.
+   Navigera till resursens informationssida och välj ikonen **[!UICONTROL Add Rendition]** i verktygsfältet för att överföra en ny återgivning för resursen.
 
    <!--![chlimage_1-221](assets/chlimage_1-221.png)-->
 
@@ -232,7 +232,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
    >
    >Om du väljer en återgivning på panelen **[!UICONTROL Renditions]** ändras sammanhanget för verktygsfältet och endast de åtgärder som är relevanta visas. Alternativ som ikonen Överför återgivning visas inte. Om du vill visa de här alternativen i verktygsfältet går du till informationssidan för resursen.
 
-   Du kan konfigurera dimensionerna för den återgivning som du vill ska visas på informationssidan för en bild- eller videoresurs. Baserat på de dimensioner du anger visar Resurser återgivningen med de exakta eller närmaste dimensionerna.
+   Du kan konfigurera dimensionerna för den återgivning som du vill ska visas på informationssidan för en bild- eller videoresurs. Beroende på de dimensioner du anger visas återgivningen med de exakta eller närmaste måtten i Assets.
 
    Du kan inte skapa återgivningar med följande prefix eftersom de är interna för Adobe:
 
@@ -244,11 +244,11 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    Om du vill konfigurera återgivningsdimensionerna för en bild på resursdetaljnivån överlagrar du noden `renditionpicker` (`libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/renditionpicker`) och konfigurera värdet för breddegenskapen (width). Konfigurera egenskapen **[!UICONTROL size (Long) in KB]** i stället för bredden för att anpassa återgivningen på resursdetaljsidan utifrån bildstorleken. För storleksbaserad anpassning prioriterar egenskapen `preferOriginal` originalet om storleken på den matchade återgivningen är större än originalet.
 
-   På samma sätt kan du anpassa anteckningssidans bild genom att lägga över `libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker`.
+   På samma sätt kan du anpassa anteckningssidans bild genom att täcka över `libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker`.
 
    <!--![chlimage_1-222](assets/chlimage_1-222.png)-->
 
-   Om du vill konfigurera återgivningsdimensioner för en videoresurs går du till `videopicker` nod i CRX-databasen på platsen `/libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/videopicker`, lägg över noden och redigera sedan lämplig egenskap.
+   Om du vill konfigurera återgivningsdimensioner för en videoresurs går du till noden `videopicker` i CRX-databasen på platsen `/libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/videopicker`, lägger över noden och redigerar sedan lämplig egenskap.
 
    >[!NOTE]
    >
@@ -266,7 +266,7 @@ Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckni
 
 1. I bekräftelsedialogrutan klickar du på:
 
-   * **[!UICONTROL Cancel]** för att stoppa åtgärden
+   * **[!UICONTROL Cancel]** om du vill stoppa åtgärden
    * **[!UICONTROL Delete]** för att bekräfta åtgärden:
 
       * Om resursen inte har några referenser tas resursen bort.
@@ -284,57 +284,57 @@ Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckni
 
 Se [hämta resurser från [!DNL Experience Manager]](/help/assets/download-assets-from-aem.md).
 
-## Publicera eller avpublicera resurser {#publish-assets}
+## Publish eller avpublicera resurser {#publish-assets}
 
 1. Navigera till platsen för resursen eller resursmappen som du vill publicera eller som du vill ta bort från publiceringsmiljön (avpublicera).
 
-1. Markera resursen eller mappen som ska publiceras eller avpubliceras och välj **[!UICONTROL Manage Publication]** ![hantera publikationsalternativ](assets/do-not-localize/globe-publication.png) i verktygsfältet. Om du snabbt vill publicera väljer du **[!UICONTROL Quick Publish]** i verktygsfältet. Om mappen som du vill publicera innehåller en tom mapp publiceras inte den tomma mappen.
+1. Markera resursen eller mappen som ska publiceras eller avpubliceras och välj alternativet **[!UICONTROL Manage Publication]** ![hantera publicering](assets/do-not-localize/globe-publication.png) i verktygsfältet. Du kan även publicera snabbt genom att välja alternativet **[!UICONTROL Quick Publish]** i verktygsfältet. Om mappen som du vill publicera innehåller en tom mapp publiceras inte den tomma mappen.
 
-1. Välj **[!UICONTROL Publish]** eller **[!UICONTROL Unpublish]** efter behov.
+1. Välj alternativet **[!UICONTROL Publish]** eller **[!UICONTROL Unpublish]** efter behov.
 
    ![Avpubliceringsåtgärd](assets/unpublish_action.png)
-   *Bild: Alternativ för publicering och avpublicering samt schemaläggning.*
+   *Bild: Publish, avpubliceringsalternativ och schemaläggningsalternativ.*
 
-1. Välj **[!UICONTROL Now]** för att agera på resursen direkt eller välja **[!UICONTROL Later]** för att schemalägga åtgärden. Välj datum och tid om du väljer **[!UICONTROL Later]** alternativ. Klicka på **[!UICONTROL Next]**.
+1. Välj **[!UICONTROL Now]** om du vill agera på resursen direkt eller välj **[!UICONTROL Later]** om du vill schemalägga åtgärden. Välj ett datum och en tid om du väljer alternativet **[!UICONTROL Later]**. Klicka på **[!UICONTROL Next]**.
 
 1. Om en resurs refererar till andra resurser vid publicering visas dess referenser i guiden. Endast de referenser som inte har publicerats eller ändrats sedan den senaste publiceringen visas. Välj de referenser som du vill publicera.
 
-1. Om en resurs refererar till andra resurser vid avpublicering väljer du de referenser som du vill avpublicera. Klicka på **[!UICONTROL Unpublish]**. Klicka på **[!UICONTROL Cancel]** för att stoppa funktionsmakrot eller klicka **[!UICONTROL Unpublish]** för att bekräfta att resurserna ska avpubliceras vid det angivna datumet.
+1. Om en resurs refererar till andra resurser vid avpublicering väljer du de referenser som du vill avpublicera. Klicka på **[!UICONTROL Unpublish]**. Klicka på **[!UICONTROL Cancel]** i bekräftelsedialogrutan för att stoppa åtgärden eller klicka på **[!UICONTROL Unpublish]** för att bekräfta att resurserna ska avpubliceras vid det angivna datumet.
 
 Förstå följande begränsningar och tips för publicering eller avpublicering av resurser och mappar:
 
-* Alternativet att [!UICONTROL Manage Publication] är bara tillgängligt för användarkonton som har replikeringsbehörigheter.
+* Alternativet [!UICONTROL Manage Publication] är bara tillgängligt för användarkonton som har replikeringsbehörigheter.
 * När du avpublicerar en komplex resurs avpublicerar du bara resursen. Undvik att avpublicera referenserna eftersom andra publicerade resurser kan referera till dem.
 * Tomma mappar publiceras inte.
 * Om du publicerar ett material som bearbetas publiceras bara det ursprungliga innehållet. Återgivningarna saknas. Antingen väntar du på att bearbetningen ska slutföras och publicerar eller publicerar om resursen när bearbetningen är klar.
 
 ## Stängd användargrupp {#closed-user-group}
 
-En stängd användargrupp (CUG) används för att begränsa åtkomsten till specifika resursmappar som publiceras från [!DNL Experience Manager]. Om du skapar en CUG-fil för en mapp är åtkomsten till mappen (inklusive mappresurser och undermappar) begränsad till endast tilldelade medlemmar eller grupper. För att få åtkomst till mappen måste de logga in med sina inloggningsuppgifter.
+En stängd användargrupp (CUG) används för att begränsa åtkomst till specifika resursmappar som publiceras från [!DNL Experience Manager]. Om du skapar en CUG-fil för en mapp är åtkomsten till mappen (inklusive mappresurser och undermappar) begränsad till endast tilldelade medlemmar eller grupper. För att få åtkomst till mappen måste de logga in med sina inloggningsuppgifter.
 
 CUG är ett extra sätt att begränsa åtkomsten till dina resurser. Du kan också konfigurera en inloggningssida för mappen.
 
-1. Välj en mapp i resursgränssnittet och välj egenskapsikonen i verktygsfältet för att visa egenskapssidan.
-1. Från **[!UICONTROL Permissions]** flik, lägga till medlemmar eller grupper under **[!UICONTROL Closed User Group]**.
+1. Välj en mapp i Assets-gränssnittet och välj egenskapsikonen i verktygsfältet för att visa egenskapssidan.
+1. Lägg till medlemmar eller grupper under **[!UICONTROL Closed User Group]** på fliken **[!UICONTROL Permissions]**.
 
    ![add_user](assets/add_user.png)
 
-1. Om du vill visa en inloggningsskärm när användare öppnar mappen väljer du **[!UICONTROL Enable]** alternativ. Välj sedan sökvägen till en inloggningssida i [!DNL Experience Manager]och spara ändringarna.
+1. Om du vill visa en inloggningsskärm när användare öppnar mappen väljer du alternativet **[!UICONTROL Enable]**. Välj sedan sökvägen till en inloggningssida i [!DNL Experience Manager] och spara ändringarna.
 
    ![login_page](assets/login_page.png)
 
    >[!NOTE]
    >
-   >Om du inte anger sökvägen till en inloggningssida [!DNL Experience Manager] visar standardinloggningssidan i publiceringsinstansen.
+   >Om du inte anger sökvägen till en inloggningssida visar [!DNL Experience Manager] standardinloggningssidan i publiceringsinstansen.
 
-1. Publicera mappen och försök sedan komma åt den från publiceringsinstansen. En inloggningsskärm visas.
-1. Om du är CUG-medlem anger du dina säkerhetsuppgifter. Mappen visas efter [!DNL Experience Manager] autentiserar dig.
+1. Publish mappen och försök sedan komma åt den från publiceringsinstansen. En inloggningsskärm visas.
+1. Om du är CUG-medlem anger du dina säkerhetsuppgifter. Mappen visas när [!DNL Experience Manager] har autentiserat dig.
 
 ## Sök resurser {#search-assets}
 
 Att söka resurser är centralt för användningen av ett digitalt resurshanteringssystem - oavsett om det är avsett för kreativa användare, för robust hantering av resurser av företagsanvändare och marknadsförare eller för administration av DAM-administratörer.
 
-Mer information om enkla, avancerade och anpassade sökningar för att hitta och använda de lämpligaste resurserna finns i [söka efter resurser i [!DNL Experience Manager]](/help/assets/search-assets.md).
+Mer information om enkla, avancerade och anpassade sökningar för att identifiera och använda de lämpligaste resurserna finns i [söka efter resurser i [!DNL Experience Manager]](/help/assets/search-assets.md).
 
 ## Snabbåtgärder {#quick-actions}
 
@@ -404,11 +404,11 @@ The editing tools in the [!DNL Experience Manager Assets] interface let you perf
 På tidslinjen kan du visa olika händelser för ett markerat objekt, t.ex. aktiva arbetsflöden för en resurs, kommentarer/anteckningar, aktivitetsloggar och versioner.
 
 ![Sortera tidslinjeposter för en resurs](assets/sort_timeline.gif)
-*Bild: Sortera tidslinjeposter för en resurs*
+*Figur: Sortera tidslinjeposter för en resurs*
 
 >[!NOTE]
 >
->I [Samlingskonsol](/help/assets/manage-collections.md#navigate-the-collections-console), **[!UICONTROL Show All]** finns det alternativ för att endast visa kommentarer och arbetsflöden. Dessutom visas tidslinjen bara för samlingar på den översta nivån som visas i konsolen. Den visas inte om du navigerar i någon av samlingarna.
+>I [Samlingskonsolen](/help/assets/manage-collections.md#navigate-the-collections-console) innehåller listan **[!UICONTROL Show All]** alternativ som endast kan användas för att visa kommentarer och arbetsflöden. Dessutom visas tidslinjen bara för samlingar på den översta nivån som visas i konsolen. Den visas inte om du navigerar i någon av samlingarna.
 
 >[!NOTE]
 >
@@ -422,10 +422,10 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 
 >[!NOTE]
 >
->För innehållsfragment, [anteckningar skapas i fragmentredigeraren](content-fragments/content-fragments.md).
+>För innehållsfragment skapas [anteckningar i fragmentredigeraren](content-fragments/content-fragments.md).
 
 1. Navigera till platsen för resursen som du vill lägga till anteckningar i.
-1. Välj **[!UICONTROL Annotate]** ikoner från något av följande:
+1. Välj ikonen **[!UICONTROL Annotate]** från något av följande:
 
    * [Snabbåtgärder](#quick-actions)
    * Från verktygsfältet när du har valt resursen eller navigerat till resurssidan
@@ -455,7 +455,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
    >Du kan lägga till flera anteckningar innan du sparar dem.
 
 1. Välj **[!UICONTROL Close]** om du vill avsluta anteckningsläget.
-1. Om du vill visa meddelandet loggar du in på Assets med Aaron MacDonalds inloggningsuppgifter och klickar på knappen **[!UICONTROL Notifications]** om du vill visa meddelandet.
+1. Om du vill visa meddelandet loggar du in på Assets med Aaron MacDonalds inloggningsuppgifter och klickar på ikonen **[!UICONTROL Notifications]** för att visa meddelandet.
 
    >[!NOTE]
    >
@@ -465,7 +465,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 
    <!--![chlimage_1-237](assets/chlimage_1-237.png)-->
 
-   Ange önskad färg i dialogrutan **[!UICONTROL Annotation Color]** och sedan markera **[!UICONTROL Accept]**.
+   Ange önskad färg i rutan **[!UICONTROL Annotation Color]** och välj sedan **[!UICONTROL Accept]**.
 
 <!-- ![chlimage_1-238](assets/chlimage_1-238.png)-->
 
@@ -485,7 +485,7 @@ Du kan bara visa en anteckning åt gången.
 
 1. Om du vill visa sparade anteckningar för en resurs går du till resursens plats och öppnar resurssidan för resursen.
 
-1. Välj ikonen GlobalNav och välj **[!UICONTROL Timeline]** från listan.
+1. Välj ikonen GlobalNav och välj **[!UICONTROL Timeline]** i listan.
 
    <!--![chlimage_1-239](assets/chlimage_1-239.png)-->
 
@@ -493,11 +493,11 @@ Du kan bara visa en anteckning åt gången.
 
    <!--![chlimage_1-240](assets/chlimage_1-240.png)-->
 
-   Markera en kommentar i **[!UICONTROL Timeline]** för att visa motsvarande anteckning i bilden.
+   Välj en kommentar på panelen **[!UICONTROL Timeline]** om du vill visa motsvarande anteckning på bilden.
 
    <!--![chlimage_1-241](assets/chlimage_1-241.png)-->
 
-   Välj **[!UICONTROL Delete]**, om du vill ta bort en viss kommentar.
+   Välj **[!UICONTROL Delete]** om du vill ta bort en viss kommentar.
 
 ### Skriv ut anteckningar {#printing-annotations}
 
@@ -509,13 +509,13 @@ Du kan också välja att bara skriva ut anteckningarna eller granskningsstatusen
 >
 >Du kan markera flera anteckningar när du skriver ut den kommenterade resursen som PDF.
 
-Om du vill skriva ut anteckningarna och granskningsstatusen väljer du **[!UICONTROL Print]** och följ instruktionerna i guiden. The **[!UICONTROL Print]** visas bara i verktygsfältet när resursen har tilldelats minst en antecknings- eller granskningsstatus.
+Om du vill skriva ut anteckningarna och granskningsstatusen väljer du ikonen **[!UICONTROL Print]** och följer instruktionerna i guiden. Ikonen **[!UICONTROL Print]** visas bara i verktygsfältet när resursen har tilldelats minst en antecknings- eller granskningsstatus.
 
-1. Öppna förhandsgranskningssidan för en resurs i resursgränssnittet.
+1. Öppna förhandsgranskningssidan för en resurs i Assets-gränssnittet.
 1. Gör något av följande:
 
    * Om du vill skriva ut alla anteckningar och granskningsstatus hoppar du över steg 3 och går direkt till steg 4.
-   * Om du vill skriva ut särskilda anteckningar och granskningsstatus öppnar du [tidslinje](/help/assets/manage-digital-assets.md#timeline) och sedan gå till steg 3.
+   * Om du vill skriva ut specifika anteckningar och granskningsstatus öppnar du [tidslinjen](/help/assets/manage-digital-assets.md#timeline) och går sedan till steg 3.
 
 1. Om du vill skriva ut särskilda anteckningar väljer du anteckningarna på tidslinjen.
 
@@ -525,11 +525,11 @@ Om du vill skriva ut anteckningarna och granskningsstatusen väljer du **[!UICON
 
    <!--![chlimage_1-243](assets/chlimage_1-243.png)-->
 
-1. Välj **[!UICONTROL Print]** -ikonen i verktygsfältet.
+1. Välj ikonen **[!UICONTROL Print]** i verktygsfältet.
 
    <!--![chlimage_1-244](assets/chlimage_1-244.png)-->
 
-1. I dialogrutan Skriv ut väljer du den position du vill att anteckningarna/granskningsstatusen ska visas på PDF. Om du till exempel vill att anteckningarna/statusen ska skrivas ut längst upp till höger på sidan som innehåller den utskrivna bilden använder du **Övre vänster** inställning. Det är markerat som standard.
+1. I dialogrutan Skriv ut väljer du den position du vill att anteckningarna/granskningsstatusen ska visas på PDF. Om du till exempel vill att anteckningarna/statusen ska skrivas ut längst upp till höger på sidan som innehåller den utskrivna bilden använder du inställningen **Övre vänstra**. Det är markerat som standard.
 
    <!--![chlimage_1-245](assets/chlimage_1-245.png)-->
 
@@ -543,7 +543,7 @@ Om du vill skriva ut anteckningarna och granskningsstatusen väljer du **[!UICON
 
    <!--![chlimage_1-247](assets/chlimage_1-247.png)-->
 
-   Om du vill ändra utseendet på den återgivna PDF-filen, t.ex. teckenfärg, storlek och format, bakgrundsfärg för kommentarer och statusvärden, öppnar du **[!UICONTROL Annotation PDF configuration]** från Configuration Manager och ändra önskade alternativ. Om du till exempel vill ändra visningsfärgen för den godkända statusen ändrar du färgkoden i motsvarande fält. Mer information om hur du ändrar teckenfärg för anteckningar finns i [Anteckningar](/help/assets/manage-digital-assets.md#annotating).
+   Om du vill ändra utseendet på den återgivna PDF-filen, till exempel teckensnittsfärg, storlek och format, bakgrundsfärg för kommentarer och statusvärden, öppnar du **[!UICONTROL Annotation PDF configuration]** i Configuration Manager och ändrar önskade alternativ. Om du till exempel vill ändra visningsfärgen för den godkända statusen ändrar du färgkoden i motsvarande fält. Mer information om hur du ändrar teckenfärg i anteckningar finns i [Anteckning](/help/assets/manage-digital-assets.md#annotating).
 
    Återgå till den återgivna PDF-filen och uppdatera den. Det uppdaterade PDF återspeglar de ändringar du gjorde.
 
@@ -555,7 +555,7 @@ Här följer exempel där du skapar versioner:
 
 * Du ändrar en bild i ett annat program och överför den till Assets. En version av bilden skapas så att originalbilden inte skrivs över.
 * Du redigerar metadata för en resurs.
-* Du använder [!DNL Experience Manager] för att checka ut en befintlig resurs och spara dina ändringar. En ny version skapas varje gång resursen sparas.
+* Du använder [!DNL Experience Manager]-datorprogrammet för att checka ut en befintlig resurs och spara dina ändringar. En ny version skapas varje gång resursen sparas.
 
 Du kan även aktivera automatisk versionshantering via ett arbetsflöde. När du skapar en version för en resurs sparas metadata och återgivningar tillsammans med versionen. Återgivningar är renderingsalternativ för samma bilder, till exempel en PNG-återgivning av en överförd JPEG-fil.
 
@@ -571,15 +571,15 @@ Versionsfunktionen gör följande:
 
    ![tidslinje](assets/timeline.png)
 
-1. Välj **[!UICONTROL Actions]** (pil) längst ned för att visa de tillgängliga åtgärder du kan utföra på resursen.
+1. Välj ikonen **[!UICONTROL Actions]** (pil) längst ned för att visa de tillgängliga åtgärder du kan utföra på resursen.
 
    <!--![chlimage_1-249](assets/chlimage_1-249.png)-->
 
-1. Välj **[!UICONTROL Save as Version]** för att skapa en version för resursen.
+1. Välj **[!UICONTROL Save as Version]** om du vill skapa en version för resursen.
 
 <!--![chlimage_1-250](assets/chlimage_1-250.png)-->
 
-1. Lägg till en etikett och kommentar och klicka sedan på **[!UICONTROL Create]** för att skapa en version. Du kan också välja **Avbryt** för att avsluta åtgärden.
+1. Lägg till en etikett och kommentar och klicka sedan på **[!UICONTROL Create]** för att skapa en version. Du kan också välja **Avbryt** om du vill avsluta åtgärden.
 
    <!--![chlimage_1-251](assets/chlimage_1-251.png)-->
 
@@ -587,16 +587,16 @@ Versionsfunktionen gör följande:
 
    ![versions_option](assets/versions_option.png)
 
-1. Välj en specifik version för resursen om du vill förhandsgranska den eller aktivera den för visning i resursgränssnittet.
+1. Välj en specifik version för resursen om du vill förhandsgranska den eller aktivera den för visning i användargränssnittet i Assets.
 
    ![select_version](assets/select_version.png)
 
-1. Lägg till en etikett och kommentar för versionen som ska återställas till den aktuella versionen i resursgränssnittet.
+1. Lägg till en etikett och kommentar för versionen som ska återställas till den aktuella versionen i Assets-gränssnittet.
 
    ![save_version](assets/save_version.png)
 
 1. Om du vill generera en förhandsgranskning för versionen väljer du **[!UICONTROL Preview Version]**.
-1. Om du vill visa den här versionen i resursgränssnittet väljer du **[!UICONTROL Revert to this Version]**.
+1. Om du vill visa den här versionen i Assets-gränssnittet väljer du **[!UICONTROL Revert to this Version]**.
 1. Om du vill jämföra två versioner går du till tillgångssidan för resursen och väljer vilken version som ska jämföras med den aktuella versionen.
 
    ![select_version_tocompare](assets/select_version_tocompare.png)
@@ -612,15 +612,15 @@ Versionsfunktionen gör följande:
 
    ![tidslinje-1](assets/timeline-1.png)
 
-1. Välj **[!UICONTROL Actions]** (pil) längst ned för att öppna en lista med tillgängliga åtgärder för resursen.
+1. Välj ikonen **[!UICONTROL Actions]** (pil) längst ned för att öppna listan med tillgängliga åtgärder för resursen.
 
    <!--![chlimage_1-252](assets/chlimage_1-252.png)-->
 
-1. Välj **[!UICONTROL Start Workflow]** från listan.
+1. Välj **[!UICONTROL Start Workflow]** i listan.
 
    <!--![chlimage_1-253](assets/chlimage_1-253.png)-->
 
-1. I **[!UICONTROL Start Workflow]** väljer du en arbetsflödesmodell i listan.
+1. Välj en arbetsflödesmodell i listan i dialogrutan **[!UICONTROL Start Workflow]**.
 
    <!--![chlimage_1-254](assets/chlimage_1-254.png)-->
 
@@ -628,7 +628,7 @@ Versionsfunktionen gör följande:
 
    <!--![chlimage_1-255](assets/chlimage_1-255.png)-->
 
-1. Välj **[!UICONTROL Start]** och sedan **[!UICONTROL Proceed]** i dialogrutan för att bekräfta. Varje steg i arbetsflödet visas på tidslinjen som en händelse.
+1. Markera **[!UICONTROL Start]** och välj sedan **[!UICONTROL Proceed]** i dialogrutan för att bekräfta. Varje steg i arbetsflödet visas på tidslinjen som en händelse.
 
    <!--![chlimage_1-256](assets/chlimage_1-256.png)-->
 
@@ -639,15 +639,15 @@ En samling är en ordnad uppsättning med resurser. Använd samlingar för att d
 * En samling kan innehålla resurser från olika platser eftersom de bara innehåller referenser till dessa resurser. Varje samling bevarar materialens referensintegritet.
 * Du kan dela samlingar med flera användare med olika behörighetsnivåer, inklusive redigering, visning och så vidare.
 
-Mer information om hantering av samlingar finns i [hantera samlingar](/help/assets/manage-collections.md).
+Mer information om samlingshantering finns i [Hantera samlingar](/help/assets/manage-collections.md).
 
 ## Dölj utgångna resurser när du visar resurser i skrivbordsappen eller Adobe Asset Link {#hide-expired-assets-via-acp-api}
 
-[!DNL Experience Manager] datorprogrammet ger åtkomst till DAM-databasen från Windows eller Mac. Adobe Asset Link ger åtkomst till resurser inifrån det stöd [!DNL Creative Cloud] datorprogram.
+Datorprogrammet [!DNL Experience Manager] ger åtkomst till DAM-databasen från Windows eller Mac. Adobe Asset Link ger åtkomst till resurser från de [!DNL Creative Cloud]-skrivbordsprogram som stöds.
 
-När du bläddrar bland resurser inifrån [!DNL Experience Manager] de utgångna resurserna visas inte i användargränssnittet. Administratörer kan göra följande konfiguration för att förhindra att resurser som har gått ut visas, söks och hämtas när de bläddrar bland resurser från skrivbordsappen och Asset Link. Konfigurationen fungerar för alla användare, oavsett administratörsbehörighet.
+När du bläddrar bland resurser i användargränssnittet för [!DNL Experience Manager] visas inte de utgångna resurserna. Administratörer kan göra följande konfiguration för att förhindra att resurser som har gått ut visas, söks och hämtas när de bläddrar bland resurser från skrivbordsappen och Asset Link. Konfigurationen fungerar för alla användare, oavsett administratörsbehörighet.
 
-Kör följande CURL-kommando. Säkerställ läsåtkomst på `/conf/global/settings/dam/acpapi/` för de användare som har åtkomst till resurser. Användare som tillhör `dam-user` gruppen har behörigheten som standard.
+Kör följande CURL-kommando. Kontrollera läsåtkomst på `/conf/global/settings/dam/acpapi/` för de användare som har åtkomst till resurser. Användare som ingår i gruppen `dam-user` har behörigheten som standard.
 
 ```curl
 curl -v -u admin:admin --location --request POST 'http://localhost:4502/conf/global/settings/dam/acpapi/configuration/_jcr_content' \
@@ -659,13 +659,13 @@ curl -v -u admin:admin --location --request POST 'http://localhost:4502/conf/glo
 --data-urlencode '../../jcr:primaryType=sling:Folder'
 ```
 
-Om du vill veta mer kan du se hur [bläddra bland DAM-resurser med datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) och [Så här använder du Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html).
+Om du vill ha mer information kan du läsa om hur du [bläddrar bland DAM-resurser med skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) och [hur du använder Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html).
 
 **Se även**
 
-* [Översätt resurser](translate-assets.md)
-* [Resurser för HTTP API](mac-api-assets.md)
-* [Resurser som stöds i filformat](file-format-support.md)
+* [Översätt Assets](translate-assets.md)
+* [ASSETS HTTP API](mac-api-assets.md)
+* [Filformat som stöds av Assets](file-format-support.md)
 * [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
 * [Resursrapporter](asset-reports.md)
@@ -675,4 +675,4 @@ Om du vill veta mer kan du se hur [bläddra bland DAM-resurser med datorprogramm
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publicera resurser till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)

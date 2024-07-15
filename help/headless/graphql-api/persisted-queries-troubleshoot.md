@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Felsöka beständiga GraphQL-frågor {#troubleshoot-persisted-graphql-queries}
 
-The [Actions Center](/help/operations/actions-center.md) innehåller **GraphQL beständiga frågefel** varning. Det innebär att du får information när någon av dina GraphQL beständiga frågor genererar ett fel.
+[Åtgärdscenter](/help/operations/actions-center.md) innehåller varningen **GraphQL persisted query error** . Det innebär att du får information när någon av dina GraphQL beständiga frågor genererar ett fel.
 
-Den här sidan innehåller information om hur du felsöker och löser sådana problem *mest vanligt* orsaker till fel och steg för hur du åtgärdar dem.
+Den här sidan innehåller de *vanligaste* orsakerna till fel och anvisningar om hur du åtgärdar dem, så att du kan felsöka och lösa sådana problem.
 
 ## Ändringar i modellen för innehållsfragment {#changes-to-content-fragment-model}
 
@@ -24,7 +24,7 @@ En GraphQL-beständig fråga kan misslyckas när den baseras på GraphQL-typer s
 Sådana fel kan inträffa av flera olika orsaker. Exempel är (listan är inte uttömmande) när författaren till en modell för innehållsfragment:
 
 * tar bort eller byter namn på ett fält
-* uppdaterar **Modelltyp** som definierar vilka modeller som tillåts för fragmentreferensen
+* uppdaterar **modelltypen** som definierar vilka modeller som tillåts för fragmentreferensen
 * Tar bort publicering av en modell som refereras av andra modeller
 
 För att åtgärda sådana fel bör du antingen:
@@ -34,24 +34,24 @@ För att åtgärda sådana fel bör du antingen:
 
 ## GraphQL-slutpunkten är inte konfigurerad {#graphql-endpoint-not-configured}
 
-Vid beständiga frågor returnerar du `404` felkod, tillsammans med informationen `No suitable endpoint found`innebär det att ingen GraphQL-slutpunkt har konfigurerats i AEM.
+När beständiga frågor returnerar felkoden `404` tillsammans med informationen `No suitable endpoint found` innebär det att ingen GraphQL-slutpunkt har konfigurerats i AEM.
 
-För att korrigera detta följer du stegen för att aktivera och publicera slutpunkten från [Hantera GraphQL-slutpunkter i AEM](/help/headless/graphql-api/graphql-endpoint.md).
+För att korrigera detta följer du stegen för att aktivera och publicera din slutpunkt från [Hantera GraphQL-slutpunkter i AEM](/help/headless/graphql-api/graphql-endpoint.md).
 
 ## Sökväg saknas i GraphQL beständiga fråge-URL {#missing-path-query-url}
 
-Om beständiga frågor returneras `400` felkod med informationen `Suffix: '/' does not contain a path`, anropas GraphQL-servern utan ett sökvägssuffix.
+Om beständiga frågor returnerar `400`-felkoden med informationen `Suffix: '/' does not contain a path` anropas GraphQL-servern utan något sökvägssuffix.
 
 Mönstret ska vara `/graphql/execute.json/thePath`.
 
 ## Blockerad på grund av IP tillåtelselista {#blocked-due-to-ip-allow-list}
 
-I så fall returnerar frågan `405` felkod.
+I så fall returnerar frågan felkoden `405`.
 
 Ett sådant fel är inte specifikt för GraphQL. Se KB-artikeln [405 Fel tillåts inte](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-20824).
 
 ## Spärrad av avsändare {#blocked-dispatcher}
 
-Om GraphQL-slutpunkten returnerar `404` fel vid publicering för `POST` -begäranden, det betyder att GraphQL-frågor blockeras på dispatchernivå och att slutpunkten måste aktiveras manuellt.
+Om GraphQL-slutpunkten returnerar felet `404` vid publicering för `POST`-begäranden betyder det att GraphQL-frågor blockeras på dispatchernivå och slutpunkten måste aktiveras manuellt.
 
-Detta bör inte vara fallet som standard, men en anpassad dispatcherkonfiguration kan orsaka problemet. Se mer under [Dispatcher - slutpunktskonfiguration med AEM Headless](/help/headless/deployment/dispatcher.md).
+Detta bör inte vara fallet som standard, men en anpassad dispatcherkonfiguration kan orsaka problemet. Se mer under [Dispatcher - Slutpunktskonfiguration med AEM Headless](/help/headless/deployment/dispatcher.md).

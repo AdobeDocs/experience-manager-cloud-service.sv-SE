@@ -47,7 +47,7 @@ På samma sätt kan man inte garantera att allt som sker asynkront, som att ager
 
 Kod som körs som en bakgrundsuppgift måste anta att instansen som den körs i när som helst kan tas ned. Därför måste koden vara flexibel och viktigast av allt återtagbar. Det innebär att om koden körs igen ska den inte börja om från början, utan i närheten av den plats där den slutade. Även om detta inte är ett nytt krav för den här typen av kod är det troligare att en instans kommer att tas bort i AEM as a Cloud Service.
 
-För att minimera problemet bör långvariga jobb om möjligt undvikas, och de bör kunna återställas till ett minimum. För att utföra sådana jobb använder du Sling Jobs, som har en garanti som är minst en gång och därför, om de avbryts, kommer att köras igen så snart som möjligt. Men de borde förmodligen inte börja från början igen. För schemaläggning av sådana jobb är det bäst att använda [Försäljningsjobb](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#jobs-guarantee-of-processing) schemaläggaren på samma sätt säkerställer körningen minst en gång.
+För att minimera problemet bör långvariga jobb om möjligt undvikas, och de bör kunna återställas till ett minimum. För att utföra sådana jobb använder du Sling Jobs, som har en garanti som är minst en gång och därför, om de avbryts, kommer att köras igen så snart som möjligt. Men de borde förmodligen inte börja från början igen. För schemaläggning av sådana jobb är det bäst att använda schemaläggaren [Sling Jobs](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#jobs-guarantee-of-processing) eftersom detta gör att körningen sker minst en gång.
 
 Använd inte Sling Commons Scheduler för schemaläggning eftersom körning inte kan garanteras. Det är troligare att det är planerat.
 
@@ -59,13 +59,13 @@ Vi rekommenderar starkt att alla utgående HTTP-anslutningar anger rimliga anslu
 
 För kod som inte tillämpar dessa tidsgränser kommer AEM som körs på AEM as a Cloud Service att tillämpa en global tidsgräns. Dessa timeoutvärden är 10 sekunder för anslutningsanrop och 60 sekunder för läsanrop för anslutningar.
 
-Adobe rekommenderar att du använder [Bibliotek för Apache HttpComponents Client 4.x](https://hc.apache.org/httpcomponents-client-ga/) för att skapa HTTP-anslutningar.
+Adobe rekommenderar att du använder det tillhandahållna [Apache HttpComponents Client 4.x-biblioteket](https://hc.apache.org/httpcomponents-client-ga/) för att skapa HTTP-anslutningar.
 
 Alternativ som är kända för att fungera, men som kan kräva att du själv anger beroendet är:
 
-* [java.net.URL](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URL.html) och/eller [java.net.URLConnection](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URLConnection.html) (tillhandahålls av AEM)
+* [java.net.UR](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URL.html) och/eller [java.net.URLConnection](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/net/URLConnection.html) (tillhandahålls av AEM)
 * [Apache Commons HttpClient 3.x](https://hc.apache.org/httpclient-3.x/) (rekommenderas inte eftersom den är inaktuell och ersatt av version 4.x)
-* [OK HTTP](https://square.github.io/okhttp/) (Tillhandahålls inte av AEM)
+* [OK Http](https://square.github.io/okhttp/) (tillhandahålls inte av AEM)
 
 Förutom att tillhandahålla timeout bör även en korrekt hantering av sådana tidsgränser och oväntade HTTP-statuskoder implementeras.
 
@@ -87,7 +87,7 @@ Koden bör inte heller försöka hämta inbyggda binära filer eller inbyggda Ja
 
 Binärfiler bör nås via CDN, som kommer att betjäna binärfiler utanför de centrala AEM.
 
-Använd till exempel inte `asset.getOriginal().getStream()`, som startar nedladdningen av en binärfil till AEM.
+Använd t.ex. inte `asset.getOriginal().getStream()`, vilket utlöser hämtning av en binär fil till AEM.
 
 ## Inga omvända replikeringsagenter {#no-reverse-replication-agents}
 
@@ -109,11 +109,11 @@ Om du till exempel ändrar en indexdefinition i en databas med stort innehåll i
 
 ### Loggar {#logs}
 
-För lokal utveckling skrivs loggposterna till lokala filer i `/crx-quickstart/logs` mapp.
+För lokal utveckling skrivs loggposter till lokala filer i mappen `/crx-quickstart/logs`.
 
 I molnmiljöer kan utvecklare hämta loggar via Cloud Manager eller använda ett kommandoradsverktyg för att svepa loggarna. <!-- See the [Cloud Manager documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) for more details. Custom logs are not supported and so all logs should be output to the error log. -->
 
-**Ange loggnivå**
+**Anger loggnivå**
 
 Om du vill ändra loggnivåerna för molnmiljöer bör du ändra Sling Logging OSGI-konfigurationen, följt av en fullständig omdistribution. Eftersom detta inte är omedelbart, var försiktig med att aktivera utförliga loggar i produktionsmiljöer som tar emot mycket trafik. I framtiden kan det finnas mekanismer som gör att loggnivån kan ändras snabbare.
 
@@ -121,7 +121,7 @@ Om du vill ändra loggnivåerna för molnmiljöer bör du ändra Sling Logging O
 >
 >Om du vill utföra konfigurationsändringarna som anges nedan skapar du dem i en lokal utvecklingsmiljö och skickar dem sedan till en AEM as a Cloud Service-instans. Mer information om hur du gör detta finns i [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md).
 
-**Aktivera loggnivån för FELSÖKNING**
+**Aktiverar debug-loggnivån**
 
 Standardloggnivån är INFO, d.v.s. DEBUG-meddelanden loggas inte. Om du vill aktivera DEBUG-loggnivån uppdaterar du följande egenskap till felsökningsläge.
 
@@ -142,9 +142,9 @@ Ange till exempel `/apps/<example>/config/org.apache.sling.commons.log.LogManage
 
 Lämna inte loggen på DEBUG-loggnivån längre än nödvändigt eftersom detta genererar många poster.
 
-Du kan ange diskreta loggnivåer för olika AEM miljöer med hjälp av OSGi-konfigurationsinriktning som baseras på körningsläge om det är önskvärt att alltid logga in `DEBUG` under utvecklingen. Till exempel:
+Separata loggnivåer kan anges för olika AEM miljöer med hjälp av körlägesbaserad OSGi-konfigurationsinriktning om det är önskvärt att alltid logga på `DEBUG` under utvecklingen. Till exempel:
 
-| Miljö | OSGi-konfigurationsplats via körningsläge | `org.apache.sling.commons.log.level` egenskapsvärde |
+| Miljö | OSGi-konfigurationsplats via körningsläge | Egenskapsvärdet `org.apache.sling.commons.log.level` |
 | - | - | - |
 | Utveckling | /apps/example/config/org.apache.sling.Commons.log.LogManager.factory.config~example.cfg.json | FELSÖKNING |
 | Scen | /apps/example/config.stage/org.apache.sling.Commons.log.LogManager.factory.config~example.cfg.json | VARNING |
@@ -172,9 +172,9 @@ Tråddumpar i molnmiljöer samlas in kontinuerligt, men kan för närvarande int
 
 ### Lokal utveckling {#local-development}
 
-För lokal utveckling har utvecklare full tillgång till CRXDE Lite (`/crx/de`) och AEM webbkonsol (`/system/console`).
+För lokal utveckling har utvecklare fullständig åtkomst till CRXDE Lite (`/crx/de`) och AEM webbkonsol (`/system/console`).
 
-Lokal utveckling (med SDK) `/apps` och `/libs` kan skrivas direkt, vilket skiljer sig från molnmiljöer där mapparna på den översta nivån inte kan ändras.
+På lokal utveckling (med SDK) kan `/apps` och `/libs` skrivas direkt, vilket skiljer sig från molnmiljöer där mapparna på den översta nivån inte kan ändras.
 
 ### AEM as a Cloud Service utvecklingsverktyg {#aem-as-a-cloud-service-development-tools}
 
@@ -182,9 +182,9 @@ Lokal utveckling (med SDK) `/apps` och `/libs` kan skrivas direkt, vilket skilje
 >AEM as a Cloud Service Developer Console får inte blandas ihop med liknande namn [*Adobe Developer Console*](https://developer.adobe.com/developer-console/).
 >
 
-Kunderna har tillgång till CRXDE-klassen i utvecklingsmiljön, men inte i fas eller produktion. Oändringsbar databas (`/libs`, `/apps`) kan inte skrivas till vid körning, så om du försöker göra det uppstår fel.
+Kunderna har tillgång till CRXDE-klassen i utvecklingsmiljön, men inte i fas eller produktion. Det går inte att skriva till den oföränderliga databasen (`/libs`, `/apps`) vid körning, så om du försöker göra det kommer det att uppstå fel.
 
-I stället kan databasläsaren startas från AEM as a Cloud Service Developer Console, vilket ger en skrivskyddad vy i databasen för alla miljöer på författarnivå, publicerings- och förhandsgranskningsnivå. Läs mer om Databasläsaren [här](/help/implementing/developing/tools/repository-browser.md).
+I stället kan databasläsaren startas från AEM as a Cloud Service Developer Console, vilket ger en skrivskyddad vy i databasen för alla miljöer på författarnivå, publicerings- och förhandsgranskningsnivå. Läs mer om databasläsaren [här](/help/implementing/developing/tools/repository-browser.md).
 
 En uppsättning verktyg för felsökning av AEM as a Cloud Service utvecklingsmiljöer finns i AEM as a Cloud Service Developer Console för RDE-, dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller Publish tjänste-URL:er enligt följande:
 
@@ -194,7 +194,7 @@ Följande Cloud Manager CLI-kommando kan användas för att starta AEM as a Clou
 
 `aio cloudmanager:open-developer-console <ENVIRONMENTID> --programId <PROGRAMID>`
 
-Se [den här sidan](/help/release-notes/home.md) för mer information.
+Mer information finns på [den här sidan](/help/release-notes/home.md).
 
 Utvecklare kan generera statusinformation och lösa olika resurser.
 
@@ -212,7 +212,7 @@ AEM as a Cloud Service Developer Console är också användbart vid felsökning 
 
 ![Dev Console 4](/help/implementing/developing/introduction/assets/devconsole4.png)
 
-För produktionsprogram definieras åtkomsten till AEM as a Cloud Service Developer Console av&quot;Cloud Manager - Developer Role&quot; i Adobe Admin Console, medan AEM as a Cloud Service Developer Console för sandlådeprogram är tillgängligt för alla användare med en produktprofil som ger dem tillgång till AEM as a Cloud Service. För alla program krävs&quot;Cloud Manager - utvecklarroll&quot; för statusdumpar och databaswebbläsaren och användare måste också definieras i produktprofilen AEM användare eller AEM administratörer för både författare och publiceringstjänster för att kunna visa data från båda tjänsterna. Mer information om hur du ställer in användarbehörigheter finns i [Cloud Manager Documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
+För produktionsprogram definieras åtkomsten till AEM as a Cloud Service Developer Console av&quot;Cloud Manager - Developer Role&quot; i Adobe Admin Console, medan AEM as a Cloud Service Developer Console för sandlådeprogram är tillgängligt för alla användare med en produktprofil som ger dem tillgång till AEM as a Cloud Service. För alla program krävs&quot;Cloud Manager - utvecklarroll&quot; för statusdumpar och databaswebbläsaren och användare måste också definieras i produktprofilen AEM användare eller AEM administratörer för både författare och publiceringstjänster för att kunna visa data från båda tjänsterna. Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
 
 ### Prestandaövervakning {#performance-monitoring}
 
@@ -228,59 +228,59 @@ Avsnitten nedan beskriver hur du begär, konfigurerar och skickar e-post.
 
 ### Aktivera utgående e-post {#enabling-outbound-email}
 
-Portar som används för att skicka e-post är som standard inaktiverade. Om du vill aktivera en port konfigurerar du [avancerat nätverk](/help/security/configuring-advanced-networking.md)och se till att du för varje miljö som behövs anger `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` slutpunktens regler för portvidarebefordran, som mappar den avsedda porten (till exempel 465 eller 587) till en proxyport.
+Portar som används för att skicka e-post är som standard inaktiverade. Om du vill aktivera en port konfigurerar du [avancerat nätverk](/help/security/configuring-advanced-networking.md) och ser till att du anger portvidarebefordringsreglerna för `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` för varje nödvändig miljö, som mappar den avsedda porten (till exempel 465 eller 587) till en proxyport.
 
-Vi rekommenderar att du konfigurerar avancerade nätverk med `kind` parametern inställd på `flexiblePortEgress` eftersom Adobe kan optimera prestandan för flexibel trafik i hamnutgångar. Om en unik IP-adress för utgångar krävs väljer du en `kind` parameter för `dedicatedEgressIp`. Om du redan har konfigurerat VPN av andra skäl kan du även använda den unika IP-adressen som den avancerade nätverksvarianten ger.
+Vi rekommenderar att du konfigurerar avancerat nätverk med en `kind`-parameter som är inställd på `flexiblePortEgress` eftersom Adobe kan optimera prestanda för flexibel portbelastningstrafik. Om en unik IP-adress för utgångar krävs väljer du parametern `kind` för `dedicatedEgressIp`. Om du redan har konfigurerat VPN av andra skäl kan du även använda den unika IP-adressen som den avancerade nätverksvarianten ger.
 
 Du måste skicka e-post via en e-postserver i stället för direkt till e-postklienter. Annars kan e-postmeddelandena vara blockerade.
 
 ### Skicka e-post {#sending-emails}
 
-The [Day CQ Mail Service OSGI Service](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service) ska användas och e-post måste skickas till den e-postserver som anges i supportförfrågan i stället för direkt till mottagarna.
+[Day CQ Mail Service OSGI-tjänsten](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service) ska användas och e-postmeddelanden måste skickas till den e-postserver som anges i supportförfrågan i stället för direkt till mottagarna.
 
 ### Konfiguration {#email-configuration}
 
-E-post i AEM ska skickas med [Day CQ Mail Service OSGi-tjänst](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service).
+E-post i AEM ska skickas med [Day CQ Mail Service OSGi-tjänsten](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service).
 
-Se [AEM 6.5-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html) om du vill ha mer information om hur du konfigurerar e-postinställningar. Observera följande nödvändiga justeringar för AEM as a Cloud Service `com.day.cq.mailer.DefaultMailService OSGI` tjänst:
+Mer information om hur du konfigurerar e-postinställningar finns i [AEM 6.5-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html). Observera följande nödvändiga justeringar av tjänsten `com.day.cq.mailer.DefaultMailService OSGI` för AEM as a Cloud Service:
 
 * SMTP-serverns värdnamn ska anges till $[env:AEM_PROXY_HOST;default=proxy.tunnel]
 * SMTP-serverporten ska anges till värdet för den ursprungliga proxyporten som angetts i parametern portForwards som används i API-anropet när avancerade nätverk konfigureras. Exempel: 30465 (i stället för 465)
 
-SMTP-serverporten ska anges som `portDest` värdet som anges i parametern portForwards som används i API-anropet när avancerade nätverk konfigureras och `portOrig` ska vara ett meningsfullt värde som ligger inom intervallet 30000-30999. Om till exempel SMTP-serverporten är 465 bör port 30465 användas som `portOrig` värde.
+SMTP-serverporten ska anges som det `portDest`-värde som anges i parametern portForwards som används i API-anropet när avancerade nätverk konfigureras och `portOrig`-värdet ska vara ett meningsfullt värde som ligger inom det nödvändiga intervallet 30000-30999. Om till exempel SMTP-serverporten är 465 bör port 30465 användas som `portOrig`-värde.
 
-I det här fallet, och under förutsättning att SSL måste aktiveras, i konfigurationen av **Day CQ Mail Service OSGI** tjänst:
+I det här fallet, och om SSL måste aktiveras, i konfigurationen för **Day CQ Mail Service OSGI**:
 
 * Ange `smtp.port` till `30465`
 * Ange `smtp.ssl` till `true`
 
-Om målporten är 587 kan du även `portOrig` Värdet 30587 bör användas. Om SSL ska vara inaktiverat, konfigureras tjänsten Dag CQ Mail Service OSGI:
+Om målporten är 587 bör `portOrig`-värdet 30587 användas. Om SSL ska vara inaktiverat, konfigureras tjänsten Dag CQ Mail Service OSGI:
 
 * Ange `smtp.port` till `30587`
 * Ange `smtp.ssl` till `false`
 
-The `smtp.starttls` egenskapen ställs automatiskt in av AEM as a Cloud Service vid körning till ett lämpligt värde. Om `smtp.ssl` är inställt på true, `smtp.startls` ignoreras. If `smtp.ssl` är inställt på false, `smtp.starttls` är inställt på true. Detta är oberoende av `smtp.starttls` värden som anges i OSGI-konfigurationen.
+Egenskapen `smtp.starttls` anges automatiskt av AEM as a Cloud Service vid körning till ett lämpligt värde. Om `smtp.ssl` är true ignoreras `smtp.startls`. Om `smtp.ssl` är inställt på false är `smtp.starttls` inställt på true. Detta är oavsett `smtp.starttls`-värdena som angetts i OSGI-konfigurationen.
 
 
 E-posttjänsten kan även konfigureras med OAuth2-stöd. Mer information finns i [OAuth2-stöd för e-posttjänsten](/help/security/oauth2-support-for-mail-service.md).
 
 ### Äldre e-postkonfiguration {#legacy-email-configuration}
 
-Före version 2021.9.0 konfigurerades e-postmeddelandet via en kundsupportförfrågan. Observera följande nödvändiga justeringar i `com.day.cq.mailer.DefaultMailService OSGI` tjänst:
+Före version 2021.9.0 konfigurerades e-postmeddelandet via en kundsupportförfrågan. Observera följande nödvändiga justeringar av tjänsten `com.day.cq.mailer.DefaultMailService OSGI`:
 
 AEM as a Cloud Service kräver att post skickas via port 465. Om en e-postserver inte stöder port 465 kan port 587 användas så länge som TLS-alternativet är aktiverat.
 
 Om port 465 har begärts:
 
-* set `smtp.port` till `465`
-* set `smtp.ssl` till `true`
+* ange `smtp.port` till `465`
+* ange `smtp.ssl` till `true`
 
 och om port 587 har begärts:
 
-* set `smtp.port` till `587`
-* set `smtp.ssl` till `false`
+* ange `smtp.port` till `587`
+* ange `smtp.ssl` till `false`
 
-The `smtp.starttls` egenskapen ställs automatiskt in av AEM as a Cloud Service vid körning till ett lämpligt värde. Om `smtp.ssl` är inställt på true, `smtp.startls` ignoreras. If `smtp.ssl` är inställt på false, `smtp.starttls` är inställt på true. Detta är oberoende av `smtp.starttls` värden som anges i OSGI-konfigurationen.
+Egenskapen `smtp.starttls` anges automatiskt av AEM as a Cloud Service vid körning till ett lämpligt värde. Om `smtp.ssl` är true ignoreras `smtp.startls`. Om `smtp.ssl` är inställt på false är `smtp.starttls` inställt på true. Detta är oavsett `smtp.starttls`-värdena som angetts i OSGI-konfigurationen.
 
 SMTP-servervärden ska vara samma som e-postservern.
 
@@ -300,8 +300,8 @@ Stora MVP kan leda till fel på grund av att MongoDB-dokumentet överskrider 16 
 Caused by: com.mongodb.MongoWriteException: Resulting document after update is larger than 16777216
 ```
 
-Se [Dokumentation för Apache Oak](https://jackrabbit.apache.org/oak/docs/dos_and_donts.html#Large_Multi_Value_Property) för mer information.
+Mer information finns i [dokumentationen för Apache Oak](https://jackrabbit.apache.org/oak/docs/dos_and_donts.html#Large_Multi_Value_Property).
 
-## [!DNL Assets] riktlinjer för utveckling och användningsfall {#use-cases-assets}
+## [!DNL Assets] utvecklingsriktlinjer och användningsexempel {#use-cases-assets}
 
-Mer information om användningsfall, rekommendationer och referensmaterial för Assets as a Cloud Service finns i [Utvecklarreferenser för Assets](/help/assets/developer-reference-material-apis.md#assets-cloud-service-apis).
+Mer information om användningsfall, rekommendationer och referensmaterial för utveckling av Assets as a Cloud Service finns i [Utvecklarreferenser för Assets](/help/assets/developer-reference-material-apis.md#assets-cloud-service-apis).

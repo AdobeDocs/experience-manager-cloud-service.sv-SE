@@ -1,6 +1,6 @@
 ---
 title: Hur ansluter AEM anpassat formulär till Microsoft&reg; SharePoint List?
-description: Koppla ett anpassat formulär till Microsoft&reg; SharePoint List. Lär dig hur du konfigurerar listan Microsoft&reg; SharePoint och skapar en FDM (Form Data Model) med hjälp av konfigurationen. Dessutom får du lära dig hur du integrerar FDM med ditt adaptiva formulär.
+description: Koppla ett anpassat formulär till Microsoft&reg; SharePoint List. Lär dig konfigurera listan Microsoft&reg; SharePoint och skapa en FDM (Form Data Model) med hjälp av konfigurationen. Dessutom får du lära dig hur du integrerar FDM med ditt adaptiva formulär.
 role: User, Developer
 keywords: ansluta AEM adaptiva blanketter till Microsoft SharePoint List, ansluta adaptiva blanketter till Microsoft SharePoint List, integrera AEM adaptiva blanketter i Microsoft SharePoint List, integrera adaptiva blanketter till Microsoft SharePoint List, skicka data från ett adaptivt formulär till SharePoint List, skicka AEM arbetsflöde till SharePoint List.
 hide: true
@@ -15,14 +15,14 @@ ht-degree: 0%
 
 # Ansluta ett anpassat formulär till Microsoft® SharePoint List
 
-<span class="preview"> Det här är en förhandsversion som du kommer åt via vår [kanal för förhandsversion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
+<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
 
-**Microsoft® SharePoint**: Microsoft® SharePoint möjliggör samarbete genom att tillhandahålla dynamiska och effektiva gruppwebbplatser för alla team, avdelningar och avdelningar. Det används för att lagra, ordna, dela och få åtkomst till information från alla enheter med valfri webbläsare, till exempel Microsoft® Edge, Internet Explorer, Chrome eller Firefox. De två huvudkomponenterna i **Microsoft® SharePoint** är:
+**Microsoft® SharePoint**: Microsoft® SharePoint möjliggör samarbete genom att tillhandahålla dynamiska och effektiva gruppwebbplatser för alla team, avdelningar och avdelningar. Det används för att lagra, ordna, dela och få åtkomst till information från alla enheter med valfri webbläsare, t.ex. Microsoft® Edge, Internet Explorer, Chrome eller Firefox. De två huvudkomponenterna i **Microsoft® SharePoint** är:
 
 * **Microsoft® SharePoint Document Library**: Microsoft® SharePoint Document Library visar en lista med filer och mappar tillsammans med nyckelinformation, t.ex. det senaste ändringsdatumet och filens ägare. Den här funktionen gör det enkelt att ordna och navigera i filer.
-Instruktioner om hur du integrerar en **Microsoft® SharePoint Document Library** med en adaptiv form, se [Inlämningsåtgärd för anpassat formulär](/help/forms/configuring-submit-actions.md#submit-to-sharepoint) artikel.
+Instruktioner om hur du integrerar ett **Microsoft® SharePoint Document Library** med ett adaptivt formulär finns i artikeln [Adaptiv formulärskickningsåtgärd](/help/forms/configuring-submit-actions.md#submit-to-sharepoint) .
 
-* **Microsoft® SharePoint List**: Microsoft® SharePoint List är en samling data. Du kan lägga till kolumner för olika typer av data och skapa vyer för att visa data effektivt. Du kan enkelt gruppera, filtrera, sortera och formatera listorna.
+* **Microsoft® SharePoint List**: Microsoft® SharePoint List är en datamängd. Du kan lägga till kolumner för olika typer av data och skapa vyer för att visa data effektivt. Du kan enkelt gruppera, filtrera, sortera och formatera listorna.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3424820/connect-aem-adaptive-form-to-sharepointlist/?quality=12&learn=on)
 
@@ -42,7 +42,7 @@ Nu kan du:
 
 ## Ansluta ett anpassat formulär till Microsoft® SharePoint List {#connect-af-sharepoint-list}
 
-Integrera Microsoft® SharePoint List med ditt adaptiva formulär [konfigurera ett adaptivt formulär att använda en FDM (Form Data Model)](/help/forms/creating-adaptive-form-core-components.md#configure-a-schema-or-form-data-model-for-an-adaptive-formconfigure-schema-or-data-model-for-form)
+Om du vill integrera Microsoft® SharePoint List med ditt adaptiva formulär [konfigurerar du ett adaptivt formulär att använda en formulärdatamodell (FDM)](/help/forms/creating-adaptive-form-core-components.md#configure-a-schema-or-form-data-model-for-an-adaptive-formconfigure-schema-or-data-model-for-form)
 
 När du har konfigurerat ett adaptivt formulär att använda en formulärdatamodell (FDM) kan du:
 
@@ -69,7 +69,7 @@ Så här integrerar du Microsoft® SharePoint List i ett AEM arbetsflöde:
 1. [Konfigurera åtgärden Skicka för att starta ett AEM arbetsflöde](/help/forms/configuring-submit-actions.md#invoke-an-aem-workflow)
 
 
-Lär dig hur [använd AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/workflow/use-workflow.html) för att samarbeta, hantera och bearbeta innehåll i en adaptiv form.
+Lär dig hur du [använder AEM arbetsflöde](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/workflow/use-workflow.html) för att samarbeta, hantera och bearbeta innehåll i ett adaptivt formulär.
 
 ## Bästa praxis {#best-practices}
 

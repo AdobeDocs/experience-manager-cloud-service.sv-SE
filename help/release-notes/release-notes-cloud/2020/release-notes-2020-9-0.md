@@ -1,6 +1,6 @@
 ---
-title: Versionsinformation om 2020.9.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
-description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.9.0."
+title: Versionsinformation för version 2020.9.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: "[!DNL Adobe Experience Manager] as a Cloud Service versionsinformation för 2020.9.0."
 exl-id: 2332512f-8c52-4569-a006-faa36a7670a1
 feature: Release Information
 role: Admin
@@ -23,7 +23,7 @@ Releasedatum för [!DNL Adobe Experience Manager] as a Cloud Service 2020.9.0 ä
 
 ### Nyheter i [!DNL Sites] {#what-is-new-sites}
 
-* Redigeraren för Single Page Application (SPA) JavaScript SDK [är nu öppen källkod](/help/implementing/developing/hybrid/reference-materials.md).
+* Redigeraren för enkelsidigt program (SPA) JavaScript SDK [är nu öppen källkod](/help/implementing/developing/hybrid/reference-materials.md).
 
 ## [!DNL Adobe Experience Manager Assets] as a Cloud Service {#assets}
 
@@ -33,10 +33,10 @@ Releasedatum för [!DNL Adobe Experience Manager] as a Cloud Service 2020.9.0 ä
 
 * Förbättringar i [!DNL Dynamic Media]
 
-   * Selektiv publicering - nu kan ett marknadsföringsteam få tillgång till [!DNL Dynamic Media] smarta beskärningsbilder och dynamiska återgivningar som synkroniseras med [!DNL Dynamic Media] så att de kan skapa marknadsföringsmaterial, utan att behöva publicera materialet på [!DNL Dynamic Media] för global leverans. [!DNL Experience Manager] och [!DNL Dynamic Media] publiceringen är fristående och kan ske separat för att uppnå detta. Se [selektiv publicering](/help/assets/dynamic-media/selective-publishing.md).
-   * Administratörer kan nu återställa [!DNL Dynamic Media] Cloud Servicens lösenord som tas emot vid etablering. Återställningen kan göras i [!DNL Experience Manager] utan att behöva använda [!DNL Dynamic Media Classic] datorprogram.
+   * Selektiv Publish - Nu kan ett marknadsföringsteam få tillgång till [!DNL Dynamic Media] smarta beskärningsbilder och dynamiska återgivningar som synkroniseras med [!DNL Dynamic Media] så att de kan skapa marknadsföringsmaterial, utan att behöva publicera dessa resurser på [!DNL Dynamic Media] för global leverans. Publiceringen av [!DNL Experience Manager] och [!DNL Dynamic Media] är fristående och kan ske separat för att uppnå detta. Se [selektiv publicering](/help/assets/dynamic-media/selective-publishing.md).
+   * Administratörer kan nu återställa lösenordet för Cloud Servicen [!DNL Dynamic Media] som tas emot vid etablering. Återställningen kan göras i användargränssnittet för [!DNL Experience Manager] utan att du behöver använda skrivbordsappen [!DNL Dynamic Media Classic].
 
-* Mer information om följande förbättringar finns i [nyheter i Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html).
+* Mer information om följande förbättringar finns i [Nyheter i Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html).
 
    * Förbättrad förhandsgranskning av PDF med integrering av Adobe Document Cloud View SDK.
    * Ladda ned med ett klick.
@@ -52,7 +52,7 @@ TBD: list of Assets aaCS bugs that are fixed.
 
 ### Nyheter {#what-is-new-commerce}
 
-* Frisläppta CIF kärnkomponenter v1.3.0. Se [CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.3.0) för mer information.
+* Frisläppta CIF kärnkomponenter v1.3.0. Mer information finns i [CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-1.3.0).
 
 * Förhandsgranskning med produkt-/kategorimallar är nu tillgänglig. På så sätt kan företagsanvändare/marknadsförare i AEM visa produkt-/kategorimallarna med riktiga data.
 
@@ -70,7 +70,7 @@ TBD: list of Assets aaCS bugs that are fixed.
 
 ### Releasedatum {#release-date-cm}
 
-Releasedatum för [!UICONTROL Cloud Manager] Version 2020.9.0 är 3 september 2020.
+Releasedatum för [!UICONTROL Cloud Manager] version 2020.9.0 är 3 september 2020.
 
 ### Nyheter {#what-is-new-cloud-manager}
 
@@ -88,7 +88,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 ### Nyheter {#what-is-new-cra}
 
-* Cloud Readiness Analyzer (CRA) har en startstatuskonsol som visar en explicit **Generera rapport** för användaren att klicka för att köra CRA.
+* Cloud Readiness Analyzer (CRA) har en startstatuskonsol som visar en explicit **Generate Report** -knapp som användaren kan klicka på för att köra CRA.
 
 * CRA-gränssnittet visar förloppet medan det körs. Här visas objekt som analyseras och upptäckter som hittas under körningen.
 
@@ -108,9 +108,9 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * CTT-användargränssnittet har en funktion för automatisk inläsning som laddar om översiktssidan var 30:e sekund.
 
-* Knapp tillagd i CTT-användargränssnittet för hämtning *Åtkomsttoken* enkelt.
+* Knappen har lagts till i CTT-användargränssnittet för att enkelt hämta *åtkomsttoken*.
 
-* Beskrivande valideringsmeddelande har lagts till för *URL* och *Migreringsuppsättningsnamn*.
+* Beskrivande valideringsmeddelande har lagts till för *URL* och *migreringsuppsättningsnamn*.
 
 ## Kodomfaktoriseringsverktyg {#code-refactoring}
 
@@ -120,8 +120,8 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * AIO-CLI-plugin-programmet har stöd för Repository Modernizer och gör att användare kan köra verktyget med plugin-programmet.
 
-  Se [Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration) för mer information.
+  Mer information finns i [Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration).
 
 * Verktyget Databasmodernisering kan användas för att strukturera om befintliga projektpaket till paket som är kompatibla med den projektstruktur som har definierats för AEM as a Cloud Service.
 
-  Se [Git-resurs: Databasmoderering](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer) för mer information.
+  Mer information finns i [Git-resurs: Databasmoderering](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer).

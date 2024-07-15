@@ -1,6 +1,6 @@
 ---
 title: Implementeringsfas i Cloud Acceleration Manager
-description: Den här sidan innehåller en översikt över implementeringsfasen i Cloud Acceleration Manager.
+description: På den här sidan finns en översikt över implementeringsfasen i Cloud Acceleration Manager.
 exl-id: e6ac88f0-4b3f-43a1-98bc-8c6608713784
 feature: Migration
 role: Admin
@@ -17,16 +17,16 @@ Implementeringsfasen omfattar:
 
 * [Lokal utveckling](#local-development)
 * [Kodomfaktorisering](#code-refactoring)
-* [AEM as a Cloud Service driftsättning](#aem-as-a-cloud-service-deployment)
+* [Driftsättning av AEM as a Cloud Service](#aem-as-a-cloud-service-deployment)
 * [Innehållsöverföring](#content-transfer)
 
 
-Klicka på projektkortet så att du kan öppna projektstartsidan och navigera till **Implementering** som på bilden nedan.
+Klicka på ditt projektkort så att du kan öppna projektstartsidan och navigera till avsnittet **Implementering**, vilket visas i följande bild.
 
 ![bild](/help/journey-migration/cloud-acceleration-manager/assets/implementation-1.png)
 
 >[!NOTE]
->Se [Skapa och hantera ett projekt i Cloud Acceleration Manager](getting-started-cam.md#create-project) om du vill veta mer.
+>Mer information finns i [Skapa och hantera ett projekt i Cloud Acceleration Manager](getting-started-cam.md#create-project).
 
 
 ## Använda lokalt utvecklingskort {#local-development}
@@ -35,7 +35,7 @@ Det lokala utvecklingskortet innehåller allt relevant innehåll som kan hjälpa
 
 Följ det här avsnittet för att utforska aktivitetskortet för lokal utveckling:
 
-1. Klicka **Visa** från **Lokal utveckling** kort.
+1. Klicka på **Visa** på kortet **Lokal utveckling**.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/implementation-2.png)
 
@@ -50,7 +50,7 @@ Aktivitetskortet Code Refactoring innehåller all relevant information och marke
 
 Följ det här avsnittet för att utforska aktivitetskortet för kodkorrigering:
 
-1. Klicka **Granska** från **Kodomfaktorisering** aktivitetskort.
+1. Klicka på **Granska** på aktivitetskortet **Kodkorrigering**.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/implementation-4.png)
 
@@ -65,22 +65,22 @@ Följ det här avsnittet för att utforska aktivitetskortet för kodkorrigering:
 >[!NOTE]
 >Granska innehållet på de här flikarna för att förstå några andra områden som inte omfattas av Best Practices Analyzer.
 
-The **Dispatcher** På -fliken finns information om hur du strukturerar konfigurationerna för AEM as a Cloud Service Apache och Dispatcher samt hur du validerar och kör dem lokalt innan du distribuerar dem till molnmiljöer. Det beskriver även felsökning i molnmiljöer.
+Fliken **Dispatcher** innehåller information om hur du strukturerar AEM as a Cloud Service Apache- och Dispatcher-konfigurationer och hur du validerar och kör den lokalt innan du distribuerar den till molnmiljöer. Det beskriver även felsökning i molnmiljöer.
 
 ![bild](/help/journey-migration/cloud-acceleration-manager/assets/coderefactoring-2.png)
 
-The **Testning** -fliken innehåller information om funktioner, Experience Audit och UI-testning.
+Fliken **Testing** innehåller information om funktioner, Experience Audit och UI-testning.
 
 ![bild](/help/journey-migration/cloud-acceleration-manager/assets/coderefactoring-3.png)
 
 
 ## Använda AEM as a Cloud Service distributionskort {#aem-as-a-cloud-service-deployment}
 
-AEM as a Cloud Service driftsättningskort innehåller allt relevant innehåll som hjälper dig att distribuera koden till AEM as a Cloud Service.
+AEM as a Cloud Service driftsättningskort innehåller allt relevant innehåll som hjälper dig att driftsätta koden i AEM as a Cloud Service.
 
-Följ det här avsnittet så att du kan utforska AEM aktivitetskort för as a Cloud Service distributionskort:
+Följ det här avsnittet för att utforska aktivitetskortet för AEM as a Cloud Service Deployment Card:
 
-1. Klicka **Visa** från **AEM as a Cloud Service driftsättning** aktivitetskort.
+1. Klicka på **Visa** på aktivitetskortet för **AEM as a Cloud Service-distribution**.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/implementation-6.png)
 
@@ -95,23 +95,23 @@ Med kortet för innehållsöverföring kan du starta och hantera innehållsöver
 
 Följ det här avsnittet för att utforska aktivitetskortet för innehållsöverföring:
 
-1. Klicka **Granska** från **Innehållsöverföring** aktivitetskort.
+1. Klicka på **Granska** på aktivitetskortet **Innehållsöverföring**.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/contenttransfer-1.png)
 
-1. Om du vill starta en innehållsöverföring måste du skapa en migreringsuppsättning. Klicka **Skapa migreringsuppsättning**. Med en migreringsuppsättning kan innehåll överföras till AEM as a Cloud Service.
+1. Om du vill starta en innehållsöverföring måste du skapa en migreringsuppsättning. Klicka på **Skapa migreringsuppsättning**. Med en migreringsuppsättning kan innehåll överföras till AEM as a Cloud Service.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/contenttransfer-2.png)
 
    >[!NOTE]
-   >Ett migreringsset upphör att gälla efter en längre inaktivitetsperiod. Se [Förfallotid för migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md#migration-set-expiry) för mer information.
+   >Ett migreringsset upphör att gälla efter en längre inaktivitetsperiod. Mer information finns i [Förfallotid för migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md#migration-set-expiry).
 
    >[!NOTE]
-   >Se [krav](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html) och [bästa praxis och riktlinjer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html) innan du använder verktyget Innehållsöverföring.
+   >Se [förutsättningarna](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html) och [bästa praxis och riktlinjer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html) innan du använder verktyget Innehållsöverföring.
 
-1. Hämta och installera verktyget Innehållsöverföring för att fylla i migreringsuppsättningen och slutföra extraheringsfasen av innehållsöverföringen. Granska [Komma igång med verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html) om du vill lära dig hur du använder verktyget Innehållsöverföring.
+1. Hämta och installera verktyget Innehållsöverföring för att fylla i migreringsuppsättningen och slutföra extraheringsfasen av innehållsöverföringen. Granska [Komma igång med verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html) om du vill veta mer om hur du använder verktyget Innehållsöverföring.
 
-1. Om du vill importera innehåll från migreringsuppsättningen till en miljö på AEM as a Cloud Service måste du påbörja ett intag. Navigera till **Inmatningsjobb** och klicka **Nytt intag**. Granska [Infoga innehåll i mål](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md) så att du kan lära dig hur du slutför överföringsfasen av innehåll.
+1. Om du vill importera innehåll från migreringsuppsättningen till en miljö på AEM as a Cloud Service måste du påbörja ett intag. Navigera till **Inmatningsjobb** och klicka på **Nytt intag**. Granska [Inkluderande innehåll i mål](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md) så att du kan lära dig hur du slutför innehållsöverföringsfasen.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/contenttransfer-3.png)
 

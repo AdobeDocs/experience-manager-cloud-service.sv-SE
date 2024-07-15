@@ -17,7 +17,7 @@ Skapa en demowebbplats i AEM baserat på ett bibliotek med förkonfigurerade mal
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om AEM Reference Demos Add-On-resan, [Create Program,](create-program.md) du tog det första konfigurationssteget för att skapa ett program för testning och använde en pipeline för att distribuera tilläggsinnehållet. Nu bör du:
+I det föregående dokumentet om AEM Reference Demos Add-On-resan [Create Program](create-program.md) tog du det första konfigurationssteget för att skapa ett program för testningsändamål och använde en pipeline för att distribuera tilläggsinnehållet. Nu bör du:
 
 * Lär dig hur du använder Cloud Manager för att skapa ett program.
 * Lär dig hur du aktiverar tillägget Referensdemonstrationer för det nya programmet.
@@ -33,7 +33,7 @@ Det här dokumentet hjälper dig att förstå hur du skapar en webbplats baserat
 * Lär dig hur du skapar en webbplats baserad på en mall.
 * Förstå grunderna för navigering i webbplatsstrukturen och redigering av en sida.
 
-## Skapa en demowebbplats eller ett skärmsprojekt {#create-site}
+## Skapa en demowebbplats eller Screens Project {#create-site}
 
 När pipeline har distribuerat tillägget för referensdemo kan du komma åt AEM redigeringsmiljö och skapa demowebbplatser baserat på tilläggsinnehållet.
 
@@ -41,23 +41,23 @@ När pipeline har distribuerat tillägget för referensdemo kan du komma åt AEM
 
    ![Åtkomst till redigeringsmiljön](assets/access-author.png)
 
-1. På AEM huvudmeny väljer du **Webbplatser**.
+1. Välj **Webbplatser** på AEM huvudmeny.
 
    ![Åtkomst till webbplatser](assets/access-sites.png)
 
-1. I webbplatskonsolen väljer du **Skapa** längst upp till höger på skärmen och välj **Plats från mall** i listrutan.
+1. I webbplatskonsolen väljer du **Skapa** längst upp till höger på skärmen och väljer **Plats från mall** i listrutan.
 
    ![Skapa webbplats från mall](assets/create-site-from-template.png)
 
-1. Guiden Skapa webbplats startar. I den vänstra kolumnen ser du demomallarna som pipeline distribuerade till din redigeringsinstans. Markera den och visa information i den högra kolumnen. Om du vill testa eller demonstrera AEM Screens ska du välja **Webbplatsmall för We.Cafe**. Välj **Nästa**.
+1. Guiden Skapa webbplats startar. I den vänstra kolumnen ser du demomallarna som pipeline distribuerade till din redigeringsinstans. Markera den och visa information i den högra kolumnen. Om du vill testa eller demonstrera AEM Screens måste du välja webbplatsmallen **We.Cafe**. Välj **Nästa**.
 
    ![Guiden Skapa webbplats](assets/site-creation-wizard.png)
 
-1. På nästa skärm anger du en rubrik för webbplatsen eller skärmsprojektet. Om det utelämnas kan du ange eller generera ett platsnamn från titeln. Välj **Skapa**.
+1. På nästa skärm anger du en titel för din webbplats eller ditt Screens-projekt. Om det utelämnas kan du ange eller generera ett platsnamn från titeln. Välj **Skapa**.
 
    * Platsens titel visas i webbläsarens namnlist.
    * Webbplatsnamnet blir en del av webbadressen.
-   * Webbplatsnamnet måste följa AEM regler för sidnamngivning, som finns i [Ytterligare resurser](#additional-resources) -avsnitt.
+   * Webbplatsnamnet måste uppfylla AEM regler för sidnamngivning, som det finns mer information om i avsnittet [Ytterligare resurser](#additional-resources).
 
    ![Webbplatsinformation](assets/site-details.png)
 
@@ -75,7 +75,7 @@ Nu när demowebbplatsen har skapats kan du navigera och använda den på samma s
 
    ![Ny demowebbplats i webbplatskonsolen](assets/new-demo-site.png)
 
-1. Kontrollera att konsolvyn är inställd på i skärmens övre högra hörn **Kolumnvy**.
+1. Kontrollera att konsolvyn är inställd på **Kolumnvy** i skärmens övre högra hörn.
 
    ![Kolumnvy](assets/column-view.png)
 
@@ -83,7 +83,7 @@ Nu när demowebbplatsen har skapats kan du navigera och använda den på samma s
 
    ![Platsstruktur](assets/site-structure.png)
 
-1. Markera en sida och markera den sedan **Redigera** i verktygsfältet.
+1. Markera en sida som du vill markera och välj sedan **Redigera** i verktygsfältet.
 
    ![Välj sida](assets/select-page.png)
 
@@ -105,12 +105,12 @@ Nu när du har slutfört den här delen av AEM Reference Demo Add-On-resan bör 
 
 Nu kan du testa funktionerna i AEM med tilläggsinnehåll. Du har två alternativ för att fortsätta din resa:
 
-* Om du vill göra en fullständig demonstration och testa AEM Screens-innehåll måste du se till att du har distribuerat en webbplats baserat på **Webbplatsmall för We.Cafe** enligt beskrivningen ovan och fortsätta [Aktivera AEM Screens för din demowebbplats.](screens.md)
-* Om du bara vill visa demowebbplatsinnehåll fortsätter du [Hantera dina demowebbplatser,](manage.md) där du får lära dig mer om de verktyg du kan använda för att hantera dina demowebbplatser och hur du tar bort dem.
+* Om du vill demonstrera och testa AEM Screens-innehåll till fullo kontrollerar du att du har distribuerat en webbplats baserad på webbplatsmallen **We.Cafe** enligt beskrivningen ovan och fortsätter med [Aktivera AEM Screens för din demowebbplats.](screens.md)
+* Om du bara använder för att demonstrera webbplatsinnehåll kan du fortsätta med [Hantera dina demowebbplatser](manage.md) där du kan lära dig mer om de verktyg som finns för att hantera dina demowebbplatser och hur du tar bort dem.
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Dokumentation för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/cloud-manager-introduction.html) - Om du vill ha mer information om funktionerna i Cloud Manager kan du läsa de detaljerade tekniska dokumenten direkt.
-* [Skapa webbplats](/help/sites-cloud/administering/site-creation/create-site.md) - Lär dig hur du använder AEM för att skapa en webbplats med hjälp av webbplatsmallar för att definiera webbplatsens format och struktur.
+* [Cloud Manager-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/cloud-manager-introduction.html) - Om du vill ha mer information om Cloud Manager funktioner kan det vara bra att läsa den detaljerade tekniska dokumentationen.
+* [Skapa plats](/help/sites-cloud/administering/site-creation/create-site.md) - Lär dig hur du använder AEM för att skapa en webbplats med hjälp av webbplatsmallar för att definiera webbplatsens format och struktur.
 * [AEM sidnamnkonventioner](/help/sites-cloud/authoring/sites-console/organizing-pages.md#page-name-restrictions-and-best-practices). - På den här sidan finns information om hur du organiserar AEM sidor.
-* [AEM grundläggande hantering](/help/sites-cloud/authoring/basic-handling.md) - Utforska det här dokumentet om du inte AEM förstå grundläggande begrepp som navigering och konsolorganisering.
+* [AEM Grundläggande hantering](/help/sites-cloud/authoring/basic-handling.md) - Utforska det här dokumentet om du inte AEM förstå grundläggande begrepp som navigering och konsolorganisation.

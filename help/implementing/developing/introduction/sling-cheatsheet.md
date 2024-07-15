@@ -15,4 +15,4 @@ ht-degree: 0%
 
 ![Om Apache Sling-skriptupplösningen.](assets/sling-cheatsheet-01.png)
 
-![Med SlingPostServlet - det här är standardhanteraren för dina POSTER. Det kan göra nästan vad som helst.](assets/sling-cheatsheet-02.png)
+![Använda SlingPostServlet - det här är standardhanteraren för dina POSTER. Det kan göra nästan vad som helst.](assets/sling-cheatsheet-02.png)

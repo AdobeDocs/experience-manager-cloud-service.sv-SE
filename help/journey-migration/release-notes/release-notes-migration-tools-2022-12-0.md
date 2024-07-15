@@ -1,6 +1,6 @@
 ---
-title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.12.0
-description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.12.0
+title: Versionsinformation om migreringsverktyg i AEM as a Cloud Service version 2022.12.0
+description: Versionsinformation om migreringsverktyg i AEM as a Cloud Service version 2022.12.0
 feature: Release Information
 exl-id: e4b6795b-6999-451b-b51f-056a9d2ea652
 role: Admin
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 ---
 
-# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.12.0 {#release-notes}
+# Versionsinformation om migreringsverktyg i AEM as a Cloud Service version 2022.12.0 {#release-notes}
 
 Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2022.12.0.
 

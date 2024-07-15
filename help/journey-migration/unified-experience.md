@@ -19,7 +19,7 @@ Adobe har utvecklat verktyg för att automatisera vissa av de kodkorrigeringsupp
 
 Plugin-programmet för enhetlig upplevelse ger följande fördelar:
 
-* Enhetliggör verktyg som fungerar med källkod i ett `node.js` program exponeras som `aio-cli ` plugin-program för att ge användaren en konsekvent användarupplevelse.
+* Enhetliggör verktyg som fungerar med källkod i ett `node.js`-program som visas som plugin-program `aio-cli ` för att ge användaren en konsekvent användarupplevelse.
 
 * Kör alla verktyg med ett enda kommando samtidigt som du får flexibiliteten att köra specifika verktyg efter behov.
 
@@ -27,14 +27,14 @@ Plugin-programmet för enhetlig upplevelse ger följande fördelar:
 
 ## Om plugin-programmet {#understanding-plugin}
 
-The `aio-cli-plugin-aem-cloud-service-migration` plugin-programmet består av två huvuddelar:
+Plugin-programmet `aio-cli-plugin-aem-cloud-service-migration` består av två huvuddelar:
 
 * **Användargränssnitt**
 
-   * `aio-cli` kommandon för att köra ett eller flera verktyg för kodomfaktorisering (genom att koppla ihop verktygen som ska köras sekventiellt).
+   * `aio-cli`-kommandon för att köra ett eller flera verktyg för kodomfaktorisering (genom att kedja verktygen som ska köras sekventiellt).
    * `config.yaml` som har de indataparametrar som krävs.
 
-* **Underliggande Code Refactoring Tool Suite**
+* **Underliggande verktygslåda för kodkorrigering**
 
   Kodomfaktoriseringsverktygen utför sina funktioner genom att:
 
@@ -44,7 +44,7 @@ The `aio-cli-plugin-aem-cloud-service-migration` plugin-programmet består av tv
 
 ## Tillgänglighet {#availability}
 
-Se [Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration) där du kan lära dig mer om användning och hur du kan bidra till denna plugin-kod som är öppen för användning i GitHub.
+Se [Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration) där du kan lära dig mer om användning och hur du kan bidra till denna plugin-kod som är öppen från GitHub.
 
 >[!NOTE]
 >För närvarande är plugin-programmet integrerat med AEM Dispatcher Converter och Repository Modernizer.

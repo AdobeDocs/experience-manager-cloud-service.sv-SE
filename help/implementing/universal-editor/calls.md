@@ -20,25 +20,25 @@ Lär dig mer om de olika typer av samtal som görs till appen av den universella
 
 Den universella redigeraren kommunicerar med ditt instrumenterade program via en serie definierade anrop. Detta är genomskinligt och påverkar inte slutanvändarens upplevelse.
 
-För utvecklaren kan det dock vara värdefullt att förstå dessa anrop och vad de gör när du felsöker programmet i den universella redigeraren. Om du har instrumenterat din app och den inte fungerar som förväntat kan det vara bra att öppna **Nätverk** -fliken för utvecklingsverktygen i webbläsaren och inspektera samtalen när du redigerar innehåll i appen.
+För utvecklaren kan det dock vara värdefullt att förstå dessa anrop och vad de gör när du felsöker programmet i den universella redigeraren. Om du har instrumenterat din app och den inte fungerar som förväntat kan det vara bra att öppna fliken **Nätverk** i utvecklarverktygen i webbläsaren och inspektera samtalen när du redigerar innehåll i din app.
 
 ![Exempel på ett detaljsamtal på fliken Nätverk i webbläsarens utvecklarverktyg](assets/calls-network-tab.png)
 
-* The **Nyttolast** av samtalet innehåller information om vad som uppdateras av redigeraren, bland annat information om vad som ska uppdateras och hur det ska uppdateras.
-* The **Svar** innehåller information om exakt vad som uppdaterades av redigeringstjänsten. Detta är för att underlätta uppdatering av innehållet i redigeraren. I vissa fall, som `move` måste hela sidan uppdateras.
+* **Nyttolasten** för samtalet innehåller information om vad som uppdateras av redigeraren, inklusive identifiering av vad som ska uppdateras och hur det ska uppdateras.
+* **Svaret** innehåller information om exakt vad som uppdaterades av redigeringstjänsten. Detta är för att underlätta uppdatering av innehållet i redigeraren. I vissa fall, som vid ett `move`-anrop, måste hela sidan uppdateras.
 
-När ett samtal har slutförts aktiveras händelser som innehåller nyttolasten för begäran och svaret, som kan anpassas för din egen app. Se dokumentet [Universella redigeringshändelser](/help/implementing/universal-editor/events.md) för mer information.
+När ett samtal har slutförts aktiveras händelser som innehåller nyttolasten för begäran och svaret, som kan anpassas för din egen app. Mer information finns i dokumentet [Universal Editor Events](/help/implementing/universal-editor/events.md).
 
 Nedan följer en lista över de typer av anrop som den universella redigeraren gör till ditt program tillsammans med exempel på nyttolaster och svar.
 
 ## Uppdatera {#update}
 
-An `update` anropet inträffar när du redigerar innehåll i appen med den universella redigeraren. The `update` kvarstår ändringarna.
+Ett `update`-anrop inträffar när du redigerar innehåll i appen med den universella redigeraren. `update` består av ändringarna.
 
 Nyttolasten innehåller information om vad som ska skrivas tillbaka till JCR.
 
 * `resource`: JCR-sökvägen som ska uppdateras
-* `prop`: Den JCR-egenskap som uppdateras
+* `prop`: JCR-egenskapen som uppdateras
 * `type`: JCR-värdetypen för egenskapen som uppdateras
 * `value`: Uppdaterade data
 
@@ -82,12 +82,12 @@ Nyttolasten innehåller information om vad som ska skrivas tillbaka till JCR.
 
 ## Information {#details}
 
-A `details` anropet inträffar när appen läses in i Universal Editor för att hämta appens innehåll.
+Ett `details`-anrop inträffar när appen läses in i Universal Editor för att hämta appens innehåll.
 
 Dess nyttolast innehåller de data som ska återges samt detaljer om vad data representerar (schemat) så att de kan återges i den universella redigeraren.
 
-* För en komponent hämtar Universal Editor endast en `data` -objektet, eftersom dataschemat definieras i programmet.
-* För innehållsfragment hämtar den universella redigeraren även en `schema` eftersom innehållsfragmentmodellen är definierad i JCR.
+* För en komponent hämtar bara Universal Editor ett `data`-objekt, eftersom dataschemat definieras i appen.
+* För innehållsfragment hämtar den universella redigeraren även ett `schema`-objekt eftersom innehållsfragmentmodellen är definierad i JCR.
 
 >[!BEGINTABS]
 
@@ -146,11 +146,11 @@ Dess nyttolast innehåller de data som ska återges samt detaljer om vad data re
 
 ## Lägg till {#add}
 
-An `add` anropet inträffar när du placerar en ny komponent i programmet med den universella redigeraren.
+Ett `add`-anrop inträffar när du placerar en ny komponent i appen med den universella redigeraren.
 
-Nyttolasten innehåller en `path` objekt som innehåller var innehållet ska läggas till.
+Dess nyttolast innehåller ett `path`-objekt som innehåller var innehållet ska läggas till.
 
-Den innehåller även `content` objekt med ytterligare objekt för slutpunktsspecifik information om innehållet som ska lagras [för varje plugin.](/help/implementing/universal-editor/architecture.md) Om din app till exempel baseras på innehåll från AEM och Magento, innehåller nyttolasten ett dataobjekt för varje system.
+Den innehåller även ett `content`-objekt med ytterligare objekt för slutpunktsspecifik information om innehållet som ska lagras [ för varje plugin-program.](/help/implementing/universal-editor/architecture.md) Om din app till exempel baseras på innehåll från AEM och Magento, innehåller nyttolasten ett dataobjekt för varje system.
 
 >[!BEGINTABS]
 
@@ -204,9 +204,9 @@ Den innehåller även `content` objekt med ytterligare objekt för slutpunktsspe
 
 ## Flytta {#move}
 
-A `move` anropet inträffar när du flyttar en komponent i programmet med den universella redigeraren.
+Ett `move`-anrop inträffar när du flyttar en komponent i appen med den universella redigeraren.
 
-Nyttolasten innehåller en `from` objekt som definierar var komponenten fanns och en `to` objekt som definierar var det flyttades.
+Dess nyttolast innehåller ett `from`-objekt som definierar var komponenten fanns och ett `to`-objekt som definierar var den flyttades.
 
 >[!BEGINTABS]
 
@@ -260,7 +260,7 @@ Nyttolasten innehåller en `from` objekt som definierar var komponenten fanns oc
 
 ## Ta bort {#remove}
 
-A `remove` anropet inträffar när du tar bort en komponent i programmet med den universella redigeraren.
+Ett `remove`-anrop inträffar när du tar bort en komponent i appen med den universella redigeraren.
 
 Dess nyttolast inkluderar sökvägen till objektet som tas bort.
 
@@ -308,9 +308,9 @@ Dess nyttolast inkluderar sökvägen till objektet som tas bort.
 
 >[!ENDTABS]
 
-## Publicera {#publish}
+## Publish {#publish}
 
-A `publish` anropet inträffar när du klickar på **Publicera** om du vill publicera det redigerade innehållet i Universal Editor.
+Ett `publish`-anrop inträffar när du klickar på knappen **Publish** i den universella redigeraren för att publicera det innehåll som du har redigerat.
 
 Den universella redigeraren itererar över innehållet och skapar en lista med referenser som också måste publiceras.
 

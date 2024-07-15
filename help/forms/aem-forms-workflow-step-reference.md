@@ -50,24 +50,24 @@ Tilldela ett arbetsobjekt och tilldelar det till en användare eller grupp. För
 Du kan också använda komponenten för att styra aktivitetens beteende. Du kan till exempel skapa ett automatiskt dokument för post, tilldela uppgiften till en viss användare eller grupp, ange sökvägen för skickade data, ange sökvägen för data som ska fyllas i i förväg och ange standardåtgärder. Tilldela uppgift-steget har följande egenskaper:
 
 * **[!UICONTROL Title]**: Aktivitetens namn. Titeln visas i AEM Inkorg.
-* **[!UICONTROL Description]**: Förklaring av de åtgärder som utförs i uppgiften. Den här informationen är användbar för andra processutvecklare när du arbetar i en delad utvecklingsmiljö.
+* **[!UICONTROL Description]**: Förklaring av de åtgärder som utförs i aktiviteten. Den här informationen är användbar för andra processutvecklare när du arbetar i en delad utvecklingsmiljö.
 
 * **[!UICONTROL Thumbnail Path]**: Sökväg till aktivitetsminiatyrbilden. Om ingen sökväg anges visas en standardminiatyrbild för ett adaptivt formulär och en standardikon för Postdokument.
 * **[!UICONTROL Workflow Stage]**: Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inkorg. Du kan definiera dessa steg i modellens egenskaper (Sidekick > Sida > Sidegenskaper > Steg).
-* **[!UICONTROL Priority]**: Vald prioritet visas i AEM Inkorg. De tillgängliga alternativen är Hög, Medel och Låg. Standardvärdet är Medel.
-* **[!UICONTROL Due Date]**: Ange efter hur många dagar eller timmar aktiviteten ska markeras som försenad. Om du väljer **[!UICONTROL Off]**, markeras uppgiften aldrig som försenad. Du kan också ange en uttidshanterare för att utföra vissa åtgärder när åtgärden är försenad.
+* **[!UICONTROL Priority]**: Den valda prioriteten visas i AEM Inkorg. De tillgängliga alternativen är Hög, Medium och Låg. Standardvärdet är Medium.
+* **[!UICONTROL Due Date]**: Ange antalet dagar eller timmar efter vilka aktiviteten har markerats som försenad. Om du väljer **[!UICONTROL Off]** markeras aktiviteten aldrig som försenad. Du kan också ange en uttidshanterare för att utföra vissa åtgärder när åtgärden är försenad.
 
-* **[!UICONTROL Days]**: Antal dagar innan uppgiften ska slutföras. Antalet dagar räknas efter att uppgiften har tilldelats en användare. Om en uppgift inte är fullständig och korsar det antal dagar som anges i fältet Dagar, aktiveras en timeout-hanterare efter förfallodatumet om den väljs.
-* **[!UICONTROL Hours]**: Antal timmar innan uppgiften ska slutföras. Antalet timmar räknas efter att uppgiften har tilldelats en användare. Om en uppgift inte är slutförd och korsar det antal timmar som anges i fältet Timmar, aktiveras en timeout-hanterare efter de timmar som ska förfalla.
-* **[!UICONTROL Time-out after Due Date]**: Välj det här alternativet om du vill aktivera markeringsfältet för Timeout-hanteraren.
-* **[!UICONTROL Timeout Handler]**: Välj det skript som ska köras när tilldelningssteget överskrider förfallodatumet. Skript i CRX-databasen på [appar]/fd/dashboard/scripts/timeoutHandler är tillgängliga för val. Den angivna sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används.
+* **[!UICONTROL Days]**: Antalet dagar innan aktiviteten ska slutföras. Antalet dagar räknas efter att uppgiften har tilldelats en användare. Om en uppgift inte är fullständig och korsar det antal dagar som anges i fältet Dagar, aktiveras en timeout-hanterare efter förfallodatumet om den väljs.
+* **[!UICONTROL Hours]**: Antalet timmar innan aktiviteten ska slutföras. Antalet timmar räknas efter att uppgiften har tilldelats en användare. Om en uppgift inte är slutförd och korsar det antal timmar som anges i fältet Timmar, aktiveras en timeout-hanterare efter de timmar som ska förfalla.
+* **[!UICONTROL Time-out after Due Date]**: Välj det här alternativet om du vill aktivera markeringsfältet för Timeout-hanterare.
+* **[!UICONTROL Timeout Handler]**: Välj det skript som ska köras när tilldelningsaktivitetssteget överskrider förfallodatumet. Skript som placeras i CRX-databasen på [apps]/fd/dashboard/scripts/timeoutHandler är tillgängliga för val. Den angivna sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används.
 * **[!UICONTROL Highlight the action and comment from the last task in Task Details]**: Välj det här alternativet om du vill visa den senaste åtgärden som utfördes och kommentarer som togs emot i aktivitetsinformationsavsnittet för en uppgift.
-* **[!UICONTROL Type]**: Välj vilken typ av dokument som ska fyllas när arbetsflödet startas. Du kan välja ett adaptivt formulär, ett skrivskyddat adaptivt formulär, ett icke-interaktivt PDF-dokument.
+* **[!UICONTROL Type]**: Välj vilken typ av dokument som ska fyllas i när arbetsflödet startas. Du kan välja ett adaptivt formulär, ett skrivskyddat adaptivt formulär, ett icke-interaktivt PDF-dokument.
 
 <!-- , Interactive Communication Agent UI, or Interactive Communication Web Channel Document. -->
 
 
-* **[!UICONTROL Use Adaptive Form]**: Ange vilken metod som ska användas för att hitta den adaptiva formen. Det här alternativet är tillgängligt om du väljer Adaptivt formulär eller Skrivskyddat anpassat formulär i listrutan Typ. Du kan använda det adaptiva formulär som skickas till arbetsflödet, som finns på en absolut sökväg eller som finns på en sökväg i en variabel. Du kan använda en variabel av typen String för att ange sökvägen.\
+* **[!UICONTROL Use Adaptive Form]**: Ange den metod som ska användas för att hitta det adaptiva indataformuläret. Det här alternativet är tillgängligt om du väljer Adaptivt formulär eller Skrivskyddat anpassat formulär i listrutan Typ. Du kan använda det adaptiva formulär som skickas till arbetsflödet, som finns på en absolut sökväg eller som finns på en sökväg i en variabel. Du kan använda en variabel av typen String för att ange sökvägen.\
   Du kan koppla flera adaptiva Forms till ett arbetsflöde. Det innebär att du kan ange ett adaptivt formulär i körningsmiljön med de tillgängliga indatametoderna.
 
 <!-- 
@@ -80,13 +80,13 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 
 -->
 
-* **[!UICONTROL Adaptive Form Path]**: Ange sökvägen till det adaptiva formuläret. Du kan använda det adaptiva formulär som skickas till arbetsflödet, finns på en absolut sökväg eller hämta det adaptiva formuläret från en sökväg som lagras i en variabel av strängdatatyp.
-* **[!UICONTROL Select input PDF using]**: Ange sökvägen till ett icke-interaktivt PDF-dokument. Fältet är tillgängligt när du väljer ett icke-interaktivt PDF-dokument i textfältet. Du kan markera indata PDF med den sökväg som är relativ till nyttolasten, som har sparats med en absolut sökväg eller med en variabel av dokumentdatatypen. Till exempel: [Payload_Directory]/Workflow/PDF/credit-card.pdf. Sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används. Du måste ha alternativet Dokument för post aktiverat eller formulärmallsbaserad Adaptiv Forms för att kunna använda alternativet PDF-sökväg.
-* **[!UICONTROL For completed task, render the Adaptive Form as]**: När en åtgärd har markerats som slutförd kan du återge det adaptiva formuläret som ett skrivskyddat anpassat formulär eller ett PDF-dokument. Du måste ha alternativet Dokument för post aktiverat eller formulärmallsbaserad Adaptiv Forms för att kunna återge det adaptiva formuläret som Dokument för post.
+* **[!UICONTROL Adaptive Form Path]**: Ange sökvägen för det adaptiva formuläret. Du kan använda det adaptiva formulär som skickas till arbetsflödet, finns på en absolut sökväg eller hämta det adaptiva formuläret från en sökväg som lagras i en variabel av strängdatatyp.
+* **[!UICONTROL Select input PDF using]**: Ange sökvägen för ett icke-interaktivt PDF-dokument. Fältet är tillgängligt när du väljer ett icke-interaktivt PDF-dokument i textfältet. Du kan markera indata PDF med den sökväg som är relativ till nyttolasten, som har sparats med en absolut sökväg eller med en variabel av dokumentdatatypen. Exempel: [Payload_Directory]/Workflow/PDF/credit-card.pdf. Sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används. Du måste ha alternativet Dokument för post aktiverat eller formulärmallsbaserad Adaptiv Forms för att kunna använda alternativet PDF-sökväg.
+* **[!UICONTROL For completed task, render the Adaptive Form as]**: När en uppgift har markerats som slutförd kan du återge det adaptiva formuläret som ett skrivskyddat anpassat formulär eller ett PDF-dokument. Du måste ha alternativet Dokument för post aktiverat eller formulärmallsbaserad Adaptiv Forms för att kunna återge det adaptiva formuläret som Dokument för post.
 * **[!UICONTROL Pre-populated]**: Följande fält i listan nedan fungerar som indata för uppgiften:
 
    * **[!UICONTROL Select input data file using]**: Sökväg till indatafil (.json, .xml, .doc eller formulärdatamodell (FDM)). Du kan hämta indatafilen med en sökväg som är relativ till nyttolasten eller hämta filen som lagras i en variabel av datatypen Document, XML eller JSON. Filen innehåller till exempel de data som har skickats för formuläret via ett AEM Inkorgsprogram. En exempelsökväg är [Payload_Directory]/workflow/data.
-   * **[!UICONTROL Select input attachments using]**: Bifogade filer på platsen bifogas till formuläret som är kopplat till uppgiften. Sökvägen kan vara relativ till nyttolasten eller hämta den bifogade filen som lagras i en variabel i ett dokument. En exempelsökväg är [Payload_Directory]/attachments/. Du kan ange bifogade filer som placeras i förhållande till nyttolasten eller använda en dokumenttypsvariabel (Array list > Document) för att ange en bifogad indatafil för det adaptiva formuläret.
+   * **[!UICONTROL Select input attachments using]**: Bifogade filer som är tillgängliga på platsen bifogas till formuläret som är associerat med uppgiften. Sökvägen kan vara relativ till nyttolasten eller hämta den bifogade filen som lagras i en variabel i ett dokument. En exempelsökväg är [Payload_Directory]/attachments/. Du kan ange bifogade filer som placeras i förhållande till nyttolasten eller använda en dokumenttypsvariabel (Array list > Document) för att ange en bifogad indatafil för det adaptiva formuläret.
 
   <!-- 
     
@@ -98,7 +98,7 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
     
     -->
 
-   * **[!UICONTROL Request Attribute Mapping]**: Använd avsnittet Mappning av attribut för att definiera [namn och värde för attributet request](work-with-form-data-model.md#bindargument). Hämta informationen från datakällan baserat på attributnamnet och värdet som anges i begäran. Du kan definiera ett attributvärde för begäran med hjälp av ett literalt värde eller en variabel av datatypen String.
+   * **[!UICONTROL Request Attribute Mapping]**: Använd avsnittet Mappning av attribut för begäran för att definiera [namnet och värdet för attributet ](work-with-form-data-model.md#bindargument) för begäran. Hämta informationen från datakällan baserat på attributnamnet och värdet som anges i begäran. Du kan definiera ett attributvärde för begäran med hjälp av ett literalt värde eller en variabel av datatypen String.
 
   <!--  
      
@@ -108,9 +108,9 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 
 * **[!UICONTROL Submitted information]**: Följande fält i listan nedan fungerar som utdataplatser för uppgiften:
 
-   * **[!UICONTROL Save output data file using]**: Spara datafilen (.json, .xml, .doc eller formulärdatamodell (FDM)). Datafilen innehåller information som skickas via det associerade formuläret. Du kan spara utdatafilen med en sökväg som är relativ till nyttolasten eller lagra den i en variabel av datatypen Document, XML eller JSON. Till exempel: [Payload_Directory]/Arbetsflöde/data, där data är en fil.
-   * **[!UICONTROL Save attachments using]**: Spara de bifogade formulären i en uppgift. Du kan spara de bifogade filerna med en sökväg som är relativ till nyttolasten eller lagra den i en variabel i arraylistan med dokumentdatatypen.
-   * **[!UICONTROL Save Document of Record using]**: Sökväg att spara en postdokumentfil. Till exempel: [Payload_Directory]/DocumentofRecord/credit-card.pdf. Du kan spara postdokumentet med en sökväg som är relativ till nyttolasten eller lagra det i en variabel av dokumentdatatypen. Om du väljer **[!UICONTROL Relative to Payload]** om sökvägsfältet lämnas tomt, genereras inte dokumentdokumentet. Det här alternativet är bara tillgängligt om du väljer Adaptivt formulär i listrutan Typ.
+   * **[!UICONTROL Save output data file using]**: Spara datafilen (.json, .xml, .doc eller formulärdatamodell (FDM)). Datafilen innehåller information som skickas via det associerade formuläret. Du kan spara utdatafilen med en sökväg som är relativ till nyttolasten eller lagra den i en variabel av datatypen Document, XML eller JSON. Exempel: [Payload_Directory]/Workflow/data, där data är en fil.
+   * **[!UICONTROL Save attachments using]**: Spara formulärbilagorna som anges i en uppgift. Du kan spara de bifogade filerna med en sökväg som är relativ till nyttolasten eller lagra den i en variabel i arraylistan med dokumentdatatypen.
+   * **[!UICONTROL Save Document of Record using]**: Sökväg för att spara en postdokumentfil. Exempel: [Payload_Directory]/DocumentofRecord/credit-card.pdf. Du kan spara postdokumentet med en sökväg som är relativ till nyttolasten eller lagra det i en variabel av dokumentdatatypen. Om du väljer alternativet **[!UICONTROL Relative to Payload]** genereras inte postdokumentet om sökvägsfältet lämnas tomt. Det här alternativet är bara tillgängligt om du väljer Adaptivt formulär i listrutan Typ.
 
   <!-- 
     
@@ -120,49 +120,49 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
     
     -->
 
-* **[!UICONTROL Assignee]** > **[!UICONTROL Assign options]**: Ange vilken metod som ska användas för att tilldela en användare uppgiften. Du kan dynamiskt tilldela uppgiften till en användare eller en grupp med skriptet för deltagarväljaren eller tilldela uppgiften till en viss AEM användare eller grupp.
-* **[!UICONTROL Participant Chooser]**: Alternativet är tillgängligt när **[!UICONTROL Dynamically to a user or group]** är markerat i fältet Tilldela alternativ. Du kan använda ett ECMAScript eller en tjänst för att dynamiskt välja en användare eller grupp. Mer information finns i [Tilldela användare ett arbetsflöde dynamiskt](https://helpx.adobe.com/experience-manager/kb/HowToAssignAWorkflowDynamicallyToParticipants.html) och [Skapa ett anpassat Adobe Experience Manager Dynamic Participant-steg.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=en&amp;CID=RedirectAEMCommunityKautuk)
+* **[!UICONTROL Assignee]** > **[!UICONTROL Assign options]**: Ange den metod som ska användas för att tilldela en användare uppgiften. Du kan dynamiskt tilldela uppgiften till en användare eller en grupp med skriptet för deltagarväljaren eller tilldela uppgiften till en viss AEM användare eller grupp.
+* **[!UICONTROL Participant Chooser]**: Alternativet är tillgängligt när alternativet **[!UICONTROL Dynamically to a user or group]** har valts i fältet Tilldela alternativ. Du kan använda ett ECMAScript eller en tjänst för att dynamiskt välja en användare eller grupp. Mer information finns i [Tilldela ett arbetsflöde dynamiskt till användarna](https://helpx.adobe.com/experience-manager/kb/HowToAssignAWorkflowDynamicallyToParticipants.html) och [Skapa ett anpassat Adobe Experience Manager Dynamic Participant-steg.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=en&amp;CID=RedirectAEMCommunityKautuk)
 
-* **[!UICONTROL Participants]**: Fältet är tillgängligt när **[!UICONTROL com.adobe.granite.workflow.core.process.RandomParticipantChooser]** alternativet är markerat i **[!UICONTROL Participant Chooser]** fält. I fältet kan du välja användare eller grupper för alternativet RandomParticipantChooser.
+* **[!UICONTROL Participants]**: Fältet är tillgängligt när alternativet **[!UICONTROL com.adobe.granite.workflow.core.process.RandomParticipantChooser]** har valts i fältet **[!UICONTROL Participant Chooser]**. I fältet kan du välja användare eller grupper för alternativet RandomParticipantChooser.
 
-* **[!UICONTROL Assignee]**: Fältet är tillgängligt när **[!UICONTROL com.adobe.fd.workspace.step.service.VariableParticipantChooser]** är markerat i **[!UICONTROL Participant Chooser]** fält. I fältet kan du välja en variabel av datatypen String för att definiera den som tilldelas.
+* **[!UICONTROL Assignee]**: Fältet är tillgängligt när **[!UICONTROL com.adobe.fd.workspace.step.service.VariableParticipantChooser]** har valts i fältet **[!UICONTROL Participant Chooser]**. I fältet kan du välja en variabel av datatypen String för att definiera den som tilldelas.
 
-* **[!UICONTROL Arguments]**: Fältet är tillgängligt när ett annat skript än skriptet RandomParticipantChoose har valts i fältet för deltagarväljaren. I fältet kan du ange en lista med ett kommaavgränsat argument för det skript som valts i fältet Deltagare.
+* **[!UICONTROL Arguments]**: Fältet är tillgängligt när ett annat skript än skriptet RandomParticipantChoose har valts i fältet Deltagarväljare. I fältet kan du ange en lista med ett kommaavgränsat argument för det skript som valts i fältet Deltagare.
 
-* **[!UICONTROL User or Group]**: Uppgiften tilldelas en vald användare eller grupp. Alternativet är tillgängligt när **[!UICONTROL To a specific user or group option]** är markerat i **[!UICONTROL Assign options]** fält. I fältet visas alla användare och grupper i [!DNL workflow-users] grupp.\
-  The **[!UICONTROL User or Group]** listar de användare och grupper som den inloggade användaren har åtkomst till. Hur användarnamn visas beror på om du har åtkomstbehörighet för **[!UICONTROL users]** i crx-databasen för just den användaren.
+* **[!UICONTROL User or Group]**: Uppgiften tilldelas en vald användare eller grupp. Alternativet är tillgängligt när **[!UICONTROL To a specific user or group option]** har valts i fältet **[!UICONTROL Assign options]**. I fältet visas alla användare och grupper i gruppen [!DNL workflow-users].\
+  I listrutan **[!UICONTROL User or Group]** visas de användare och grupper som den inloggade användaren har åtkomst till. Visningen av användarnamn beror på om du har åtkomstbehörighet till noden **[!UICONTROL users]** i crx-databasen för den aktuella användaren.
 
-* **[!UICONTROL Send Notification Email]**: Välj det här alternativet om du vill skicka e-postmeddelanden till den tilldelade personen. Dessa meddelanden skickas när en uppgift tilldelas en användare eller grupp. Du kan använda **[!UICONTROL Recipient Email Address]** om du vill ange vilken mekanism som ska användas för att hämta e-postadressen.
+* **[!UICONTROL Send Notification Email]**: Välj det här alternativet om du vill skicka e-postmeddelanden till den som tilldelats. Dessa meddelanden skickas när en uppgift tilldelas en användare eller grupp. Du kan använda alternativet **[!UICONTROL Recipient Email Address]** för att ange vilken mekanism som ska användas för att hämta e-postadressen.
 
-* **[!UICONTROL Recipient Email Address]**: Du kan lagra en e-postadress i en variabel, använda en litteral för att ange en permanent e-postadress eller använda den förvalda e-postadressen för den som har angetts i profilen för den som tilldelats. Du kan använda literalen eller en variabel för att ange en grupps e-postadress. Variabelalternativet är användbart när du dynamiskt vill hämta och använda en e-postadress. The **[!UICONTROL Use default email address of the assignee]** är bara för en tilldelad. I det här fallet används den e-postadress som lagras i användarprofilen för tilldelade användare.
+* **[!UICONTROL Recipient Email Address]**: Du kan lagra en e-postadress i en variabel, använda en litteral för att ange en permanent e-postadress eller använda den förvalda e-postadressen för den som har angetts i profilen för den som tilldelats. Du kan använda literalen eller en variabel för att ange en grupps e-postadress. Variabelalternativet är användbart när du dynamiskt vill hämta och använda en e-postadress. Alternativet **[!UICONTROL Use default email address of the assignee]** är endast för en tilldelad. I det här fallet används den e-postadress som lagras i användarprofilen för tilldelade användare.
 
 * **[!UICONTROL HTML Email Template]**: Välj e-postmall för e-postmeddelandet. Om du vill redigera en mall ändrar du filen på /libs/fd/dashboard/templates/email/htmlEmailTemplate.txt i crx-databasen.
-* **[!UICONTROL Allow Delegation To]**: AEM Inkorg ger den inloggade användaren möjlighet att delegera det tilldelade arbetsflödet till en annan användare. Du får delegera inom samma grupp eller till arbetsflödesanvändaren i en annan grupp. Om uppgiften har tilldelats en enskild användare och **[!UICONTROL allow delegation to members of the assignee group]** om du väljer det här alternativet går det inte att delegera uppgiften till en annan användare eller grupp.
-* **[!UICONTROL Share Settings]**: AEM Inkorgen innehåller alternativ för att dela en enskild eller alla uppgifter i inkorgen med en annan användare:
-   * När **[!UICONTROL Allow assignee to share explicitly in inbox]** är markerat kan användaren markera uppgiften i AEM Inkorg och dela den med en annan AEM.
-   * När **[!UICONTROL Allow assignee to share via inbox sharing]** är valt och användare delar sina inkorgsobjekt eller tillåter andra användare att komma åt sina inkorgsobjekt. Endast uppgifter med det tidigare alternativet aktiverat delas med andra användare.
-   * När **[!UICONTROL Allow assignee to delegate using 'Out of Office' settings]** är markerat. Uppdragaren kan aktivera alternativet att delegera uppgiften till andra användare tillsammans med andra frånvaroalternativ. Alla nya uppgifter som tilldelas till användaren utanför kontoret delegeras automatiskt (tilldelas) till de användare som anges i inställningarna utanför kontoret.
+* **[!UICONTROL Allow Delegation To]**: I AEM Inkorg finns ett alternativ för den inloggade användaren att delegera det tilldelade arbetsflödet till en annan användare. Du får delegera inom samma grupp eller till arbetsflödesanvändaren i en annan grupp. Om uppgiften har tilldelats en enskild användare och alternativet **[!UICONTROL allow delegation to members of the assignee group]** har valts går det inte att delegera uppgiften till en annan användare eller grupp.
+* **[!UICONTROL Share Settings]**: AEM Inkorg innehåller alternativ för att dela en enskild eller alla uppgifter i inkorgen med en annan användare:
+   * När alternativet **[!UICONTROL Allow assignee to share explicitly in inbox]** är markerat kan användaren markera uppgiften i AEM Inkorg och dela den med en annan AEM.
+   * När alternativet **[!UICONTROL Allow assignee to share via inbox sharing]** är markerat och användarna delar sina inkorgsobjekt eller tillåter andra användare att få åtkomst till sina inkorgsobjekt, delas endast uppgifter med det tidigare nämnda alternativet.
+   * När **[!UICONTROL Allow assignee to delegate using 'Out of Office' settings]** har valts. Uppdragaren kan aktivera alternativet att delegera uppgiften till andra användare tillsammans med andra frånvaroalternativ. Alla nya uppgifter som tilldelas till användaren utanför kontoret delegeras automatiskt (tilldelas) till de användare som anges i inställningarna utanför kontoret.
 
   Det gör att andra användare kan välja tilldelningsuppgifter när de inte är på kontoret och inte kan arbeta med tilldelade uppgifter.
 
-* **[!UICONTROL Actions]** > **[!UICONTROL Default Actions]**: Det finns färdiga funktioner för att skicka, spara och återställa. Som standard är alla standardåtgärder aktiverade.
+* **[!UICONTROL Actions]** > **[!UICONTROL Default Actions]**: Utanför rutan finns åtgärderna Skicka, Spara och Återställ. Som standard är alla standardåtgärder aktiverade.
 * **[!UICONTROL Route Variable]**: Namn på flödesvariabeln. Vägvariabeln hämtar anpassade åtgärder som en användare väljer i AEM Inkorg.
-* **[!UICONTROL Routes]**: En aktivitet kan förgrena till olika vägar. När du väljer det här alternativet i AEM Inkorg returnerar flödet ett värde och arbetsflödesgrenarna baserat på det valda flödet. Du kan antingen lagra vägar i en variabel av datatypen String eller välja **[!UICONTROL Literal]** om du vill lägga till flöden manuellt.
+* **[!UICONTROL Routes]**: En aktivitet kan förgrena till olika vägar. När du väljer det här alternativet i AEM Inkorg returnerar flödet ett värde och arbetsflödesgrenarna baserat på det valda flödet. Du kan antingen lagra vägar i en variabel av datatypen String eller välja **[!UICONTROL Literal]** om du vill lägga till vägar manuellt.
 
 * **[!UICONTROL Route Title]**: Ange ruttens titel. Den visas i AEM Inkorg.
 * **[!UICONTROL Coral Icon]**: Ange ett HTML-attribut för en korallikon. Adobe CorelUI-biblioteket innehåller en mängd ikoner som sätter pekskärpan först. Du kan välja och använda en ikon för rutten. Den visas tillsammans med titeln i AEM Inkorg. Om du lagrar rutterna i en variabel använder rutterna en taggikon.
 * **[!UICONTROL Allow assignee to add comment]**: Välj det här alternativet om du vill aktivera kommentarer för uppgiften. En tilldelad kan lägga till kommentarerna från AEM Inkorg när uppgiften skickas.
-* **[!UICONTROL Save comment in variable]**: Spara kommentaren i en variabel av datatypen String. Det här alternativet visas bara om du väljer **[!UICONTROL Allow assignee to add comment]** kryssrutan.
+* **[!UICONTROL Save comment in variable]**: Spara kommentaren i en variabel av datatypen String. Det här alternativet visas bara om du markerar kryssrutan **[!UICONTROL Allow assignee to add comment]**.
 
 * **[!UICONTROL Allow assignee to add attachments to the task]**: Välj det här alternativet om du vill aktivera bilagor för uppgiften. En tilldelad kan lägga till de bifogade filerna inifrån AEM Inkorg när uppgiften skickas. Du kan också begränsa den maximala storleken **[!UICONTROL (Maximum File Size)]** för en bifogad fil. Standardstorleken är 2 MB.
 
-* **[!UICONTROL Save output task attachments using]**: Ange platsen för den bifogade mappen. Du kan spara bilagor för utdatauppgifter med en relativ sökväg till nyttolasten eller med en variabel av en array med dokumentdatatyper. Det här alternativet visas bara om du väljer **[!UICONTROL Allow assignee to add attachments to the task]** kryssruta och markera **[!UICONTROL Adaptive Form]**, **[!UICONTROL Read-only Adaptive Form]**, eller **[!UICONTROL Non-interactive PDF document]** från **[!UICONTROL Type]** nedrullningsbar lista i **[!UICONTROL Form/Document]** -fliken.
+* **[!UICONTROL Save output task attachments using]**: Ange platsen för den bifogade mappen. Du kan spara bilagor för utdatauppgifter med en relativ sökväg till nyttolasten eller med en variabel av en array med dokumentdatatyper. Det här alternativet visas bara om du markerar kryssrutan **[!UICONTROL Allow assignee to add attachments to the task]** och väljer **[!UICONTROL Adaptive Form]**, **[!UICONTROL Read-only Adaptive Form]** eller **[!UICONTROL Non-interactive PDF document]** i listrutan **[!UICONTROL Type]** på fliken **[!UICONTROL Form/Document]**.
 
 * **[!UICONTROL Use custom metadata]**: Välj det här alternativet om du vill aktivera det anpassade metadatafältet. Anpassade metadata används i e-postmallar.
-* **[!UICONTROL Custom Metadata]**: Välj anpassade metadata för e-postmallarna. Anpassade metadata är tillgängliga i crx-databaser på apparna/fd/dashboard/scripts/metadataScripts. Den angivna sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används. Du kan också använda en tjänst för anpassade metadata. Du kan också utöka `WorkitemUserMetadataService` för att skapa anpassade metadata.
-* **[!UICONTROL Show Data from Previous Steps]**: Välj det här alternativet om du vill att tilldelningar ska kunna visa tidigare tilldelningar, åtgärder som redan har vidtagits för uppgiften, kommentarer som har lagts till i uppgiften och dokumentdokument för den slutförda uppgiften, om tillgängligt.
-* **[!UICONTROL Show Data from Subsequent Steps]**: Välj det här alternativet om du vill att den som är tilldelad ska kunna visa den åtgärd som vidtagits och de kommentarer som lagts till i uppgiften av efterföljande tilldelningar. Den aktuella tilldelaren kan även visa en dokumentfil för den slutförda uppgiften, om en sådan finns.
-* **[!UICONTROL Visibility of data type]**: Som standard kan en tilldelad visa ett arkivdokument, tilldelningar, åtgärd och kommentarer som tidigare och efterföljande tilldelningar har lagt till. Använd datatypsalternativet för synlighet för att begränsa vilken typ av data som är synlig för de tilldelade.
+* **[!UICONTROL Custom Metadata]**: Välj anpassade metadata för e-postmallarna. Anpassade metadata är tillgängliga i crx-databaser på apparna/fd/dashboard/scripts/metadataScripts. Den angivna sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används. Du kan också använda en tjänst för anpassade metadata. Du kan också utöka gränssnittet `WorkitemUserMetadataService` för att tillhandahålla anpassade metadata.
+* **[!UICONTROL Show Data from Previous Steps]**: Välj det här alternativet om du vill aktivera tilldelningar för att visa tidigare tilldelningar, åtgärder som redan har vidtagits för uppgiften, kommentarer som har lagts till i uppgiften och dokumentdokument för den slutförda uppgiften, om tillgängligt.
+* **[!UICONTROL Show Data from Subsequent Steps]**: Välj det här alternativet om du vill aktivera den aktuella tilldelade personen för att visa den åtgärd som vidtagits och de kommentarer som lagts till i uppgiften av efterföljande tilldelningar. Den aktuella tilldelaren kan även visa en dokumentfil för den slutförda uppgiften, om en sådan finns.
+* **[!UICONTROL Visibility of data type]**: Som standard kan en tilldelad visa ett dokument för registrering, tilldelningar, åtgärd och kommentarer som tidigare och efterföljande tilldelningar har lagt till. Använd datatypsalternativet för synlighet för att begränsa vilken typ av data som är synlig för de tilldelade.
 
 >[!NOTE]
 >
@@ -170,7 +170,7 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 
 ## Konvertera till PDF/A-steg {#convert-pdfa}
 
-PDF/A är ett arkiveringsformat som gör att dokumentets innehåll bevaras på lång sikt genom att teckensnitten bäddas in och filen dekomprimeras. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Du kan använda ***Konvertera till PDF/A*** i ett AEM arbetsflöde för att konvertera dina PDF-dokument till PDF/A-format.
+PDF/A är ett arkiveringsformat som gör att dokumentets innehåll bevaras på lång sikt genom att teckensnitten bäddas in och filen dekomprimeras. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Du kan använda steget ***Konvertera till PDF/A*** i ett AEM arbetsflöde för att konvertera dina PDF-dokument till PDF/A-format.
 
 Följande egenskaper gäller för steget Konvertera till PDF/A:
 
@@ -187,17 +187,17 @@ Följande egenskaper gäller för steget Konvertera till PDF/A:
 
 ## Skicka e-poststeg {#send-email-step}
 
-Använd e-poststeget för att skicka ett e-postmeddelande, till exempel ett e-postmeddelande med ett postdokument, en länk till ett anpassat formulär <!-- , link of an interactive communication-->eller med ett bifogat PDF-dokument. Skicka e-poststeg som stöds [HTML email](https://en.wikipedia.org/wiki/HTML_email). HTML e-postmeddelanden är responsiva och anpassar sig efter mottagarnas e-postklient och skärmstorlek. Du kan använda en HTML-e-postmall för att definiera utseendet, färgschemat och beteendet för e-postmeddelandet.
+Använd e-poststeget för att skicka ett e-postmeddelande, till exempel ett e-postmeddelande med ett postdokument, en länk till ett anpassat formulär <!-- , link of an interactive communication--> eller med ett bifogat PDF-dokument. Skicka e-post-steget stöder [HTML-e-post](https://en.wikipedia.org/wiki/HTML_email). HTML e-postmeddelanden är responsiva och anpassar sig efter mottagarnas e-postklient och skärmstorlek. Du kan använda en HTML-e-postmall för att definiera utseendet, färgschemat och beteendet för e-postmeddelandet.
 
-I e-poststeget används Day CQ Mail Service för att skicka e-postmeddelanden. Kontrollera att e-posttjänsten är konfigurerad innan du använder e-poststeget. E-poststöd är som standard bara för HTTP- och HTTP-protokoll. [Kontakta supportteam](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html?lang=en#sending-email) för att göra det möjligt för portar att skicka e-post och aktivera SMTP-protokoll för din miljö. Begränsningen bidrar till att förbättra plattformens säkerhet.
+I e-poststeget används Day CQ Mail Service för att skicka e-postmeddelanden. Kontrollera att e-posttjänsten är konfigurerad innan du använder e-poststeget. E-poststöd är som standard bara för HTTP- och HTTP-protokoll. [Kontakta supportteamet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html?lang=en#sending-email) om du vill aktivera portar för att skicka e-post och aktivera SMTP-protokoll för din miljö. Begränsningen bidrar till att förbättra plattformens säkerhet.
 
 E-poststeget har följande egenskaper:
 
-**[!UICONTROL Title]**: Stegen är en titel som hjälper dig att identifiera steget i arbetsflödesredigeraren.
+**[!UICONTROL Title]**: Stegen för steget hjälper dig att identifiera steget i arbetsflödesredigeraren.
 
 **[!UICONTROL Description]**: Förklaring är användbar för andra processutvecklare när du arbetar i en delad utvecklingsmiljö.
 
-**[!UICONTROL Email Subject]**: Ämne kan hämtas från ett arbetsflödes metadata, anges manuellt eller hämtas från värdet som lagras i en variabel. Välj bland följande alternativ:
+**[!UICONTROL Email Subject]**: Ämne kan hämtas från ett arbetsflödes-metadata, anges manuellt eller hämtas från värdet som lagras i en variabel. Välj bland följande alternativ:
 
 * **[!UICONTROL Literal]** Ange ett ämne manuellt.
 * **[!UICONTROL Retrieve from Workflow metadata]** - Hämta ämnet från en metadataegenskap.
@@ -205,11 +205,11 @@ E-poststeget har följande egenskaper:
 
 **[!UICONTROL HTML Email Template]**: HTML-mall för e-postmeddelandet. Du kan ange variabler i en e-postmall. E-poststeget extraheras och visar alla variabler som ingår i en mall för indata.
 
-**[!UICONTROL Email Template Metadata]**: Värdet för e-postmallvariablerna kan vara ett användarspecificerat värde, sökvägen till en resurs på författaren eller på publiceringsservern, bilden eller en metadataegenskap för arbetsflödet.
+**[!UICONTROL Email Template Metadata]**: Värdet för e-postmallvariablerna kan vara ett användarspecificerat värde, sökvägen till en resurs på författaren eller publiceringsservern, bilden eller en metadataegenskap för arbetsflödet.
 
-* **[!UICONTROL Literal]**: Använd alternativet när du vet exakt vilket värde du ska ange. Till exempel: [example@example.com](mailto:example@example.com).
+* **[!UICONTROL Literal]**: Använd alternativet när du känner till det exakta värdet som ska anges. Exempel: [example@example.com](mailto:example@example.com).
 
-* **[!UICONTROL Workflow Metadata]**: Använd alternativet när värdet som ska användas sparas i en arbetsflödets metadataegenskap. När du har valt alternativet anger du metadataegenskapens namn i den tomma textrutan under alternativet Metadata för arbetsflöde. Till exempel emailAddress.
+* **[!UICONTROL Workflow Metadata]**: Använd alternativet när värdet som ska användas sparas i en metadataegenskap för arbetsflöde. När du har valt alternativet anger du metadataegenskapens namn i den tomma textrutan under alternativet Metadata för arbetsflöde. Till exempel emailAddress.
 
 <!-- 
 
@@ -217,15 +217,15 @@ E-poststeget har följande egenskaper:
 
 -->
 
-* **[!UICONTROL Image]**: Använd alternativet för att bädda in en bild i e-postmeddelandet. När du har valt alternativet bläddrar du och väljer bilden. Bildalternativet är bara tillgängligt för de bildtaggar (&lt;img src=&quot;&lt;span id=&quot; translate=&quot;no&quot; />&quot;/>) som är tillgängliga i e-postmallen.&#42;
+* **[!UICONTROL Image]**: Använd alternativet för att bädda in en bild i e-postmeddelandet. När du har valt alternativet bläddrar du och väljer bilden. Bildalternativet är bara tillgängligt för de bildtaggar (&lt;img src=&quot;&#42;&quot;/>) som är tillgängliga i e-postmallen.
 
-**[!UICONTROL Sender's / Recipient's Email Address]**: Välj **[!UICONTROL Literal]** om du vill ange en e-postadress manuellt eller välja **[!UICONTROL Retrieve from Workflow metadata]** alternativ för att hämta e-postadressen från en metadataegenskap. Du kan också ange en lista med egenskapsmatriser för metadata för **[!UICONTROL Retrieve from Workflow metadata]** alternativ. Välj **[!UICONTROL Variable]** om du vill hämta e-postadressen från värdet som lagras i en variabel av strängdatatyp.
+**[!UICONTROL Sender's / Recipient's Email Address]**: Välj alternativet **[!UICONTROL Literal]** om du vill ange en e-postadress manuellt eller välj alternativet **[!UICONTROL Retrieve from Workflow metadata]** om du vill hämta e-postadressen från en metadataegenskap. Du kan också ange en lista med egenskapsmatriser för metadata för alternativet **[!UICONTROL Retrieve from Workflow metadata]**. Välj alternativet **[!UICONTROL Variable]** om du vill hämta e-postadressen från värdet som lagras i en variabel av strängdatatyp.
 
-* **[!UICONTROL File Attachment]**: Resursen som är tillgänglig på den angivna platsen är kopplad till e-postmeddelandet. Resursens sökväg kan vara relativ till nyttolasten eller den absoluta sökvägen. En exempelsökväg är [Payload_Directory]/attachments/.
+* **[!UICONTROL File Attachment]**: Den tillgängliga resursen på den angivna platsen är kopplad till e-postmeddelandet. Resursens sökväg kan vara relativ till nyttolasten eller den absoluta sökvägen. En exempelsökväg är [Payload_Directory]/attachments/.
 
-Välj **[!UICONTROL Variable]** om du vill hämta den bifogade filen som lagras i en variabel av datatypen Document, XML eller JSON.
+Välj alternativet **[!UICONTROL Variable]** om du vill hämta den bifogade filen som lagras i en variabel av datatypen Dokument, XML eller JSON.
 
-**[!UICONTROL File Name]**: Namnet på e-postbilagefilen. E-poststeget ändrar det ursprungliga filnamnet för den bifogade filen till det angivna filnamnet. Namnet kan anges manuellt eller hämtas från en metadataegenskap eller variabel i arbetsflödet. Använd **[!UICONTROL Literal]** när du vet exakt vilket värde du ska ange. Använd **[!UICONTROL Variable]** om du vill hämta filnamnet från det värde som lagras i en variabel av strängdatatyp. Använd **[!UICONTROL Retrieve from a Workflow Metadata]** när värdet som ska användas sparas i en metadataegenskap för arbetsflöde.
+**[!UICONTROL File Name]**: Namnet på e-postbilagefilen. E-poststeget ändrar det ursprungliga filnamnet för den bifogade filen till det angivna filnamnet. Namnet kan anges manuellt eller hämtas från en metadataegenskap eller variabel i arbetsflödet. Använd alternativet **[!UICONTROL Literal]** när du vet exakt vilket värde du ska ange. Använd alternativet **[!UICONTROL Variable]** för att hämta filnamnet från värdet som lagras i en variabel av strängdatatyp. Använd alternativet **[!UICONTROL Retrieve from a Workflow Metadata]** när värdet som ska användas sparas i en metadataegenskap för arbetsflöde.
 
 ## Generera dokumentarkivhandlingssteget {#generate-document-of-record-step}
 
@@ -233,10 +233,10 @@ När ett formulär fylls i eller skickas kan du spara en post med formuläret, i
 
 Dokumentsteget har följande egenskaper:
 
-**[!UICONTROL Use Adaptive Form]**: Ange vilken metod som ska användas för att hitta den adaptiva formen. Du kan använda det adaptiva formulär som skickas till arbetsflödet, som finns på en absolut sökväg eller som finns på en sökväg i en variabel. Du kan använda en variabel av datatypen String för att ange sökvägen i **[!UICONTROL Select variable to resolve]** fält.\
+**[!UICONTROL Use Adaptive Form]**: Ange den metod som ska användas för att hitta det adaptiva indataformuläret. Du kan använda det adaptiva formulär som skickas till arbetsflödet, som finns på en absolut sökväg eller som finns på en sökväg i en variabel. Du kan använda en variabel av datatypen String för att ange sökvägen i fältet **[!UICONTROL Select variable to resolve]**.\
 Du kan koppla flera adaptiva Forms till ett arbetsflöde. Det innebär att du kan ange ett adaptivt formulär i körningsmiljön med de tillgängliga indatametoderna.
 
-**[!UICONTROL Adaptive Form Path]**: Ange sökvägen till det adaptiva formuläret. Fältet är tillgängligt när du väljer **[!UICONTROL Available at an absolute path]** från **[!UICONTROL Use Adaptive Form]** fält.
+**[!UICONTROL Adaptive Form Path]**: Ange sökvägen för det adaptiva formuläret. Fältet är tillgängligt när du väljer alternativet **[!UICONTROL Available at an absolute path]** i fältet **[!UICONTROL Use Adaptive Form]**.
 
 **[!UICONTROL Select Input data using]**: Sökväg till indata för det adaptiva formuläret. Du kan behålla data på en plats i förhållande till nyttolasten, ange en absolut sökväg till data eller hämta data som lagras i en variabel av datatypen Document, JSON eller XML. Indata sammanfogas med det adaptiva formuläret för att skapa ett postdokument.
 
@@ -244,24 +244,24 @@ Du kan koppla flera adaptiva Forms till ett arbetsflöde. Det innebär att du ka
 
 Om du anger sökvägen till en mapp, till exempel bilagor, bifogas alla filer som är direkt tillgängliga i mappen till Dokument för post. Om det finns filer i de mappar som är direkt tillgängliga i den angivna sökvägen inkluderas filerna i Postdokument som bilagor. Om det finns mappar i direkt tillgängliga mappar hoppas de mapparna över.
 
-**[!UICONTROL Save Generated Document of Record using below options]**: Ange platsen där en postfil ska sparas. Du kan välja att skriva över nyttolastmappen, placera postdokumentet på en plats i nyttolastkatalogen eller lagra postdokumentet i en variabel av dokumentdatatypen.
+**[!UICONTROL Save Generated Document of Record using below options]**: Ange platsen för att behålla en postdokumentfil. Du kan välja att skriva över nyttolastmappen, placera postdokumentet på en plats i nyttolastkatalogen eller lagra postdokumentet i en variabel av dokumentdatatypen.
 
-**[!UICONTROL Locale]**: Ange språk för postdokumentet. Välj **[!UICONTROL Literal]** om du vill välja språkinställning i en nedrullningsbar lista eller välja **[!UICONTROL Variable]** för att hämta språkinställningen från värdet som lagras i en variabel av strängdatatyp. Definiera språkkoden medan värdet för språkinställningen lagras i en variabel. Ange till exempel **sv_SE** för engelska och **fr_FR** för franska.
+**[!UICONTROL Locale]**: Ange språk för postdokumentet. Välj **[!UICONTROL Literal]** om du vill välja språkområde från en nedrullningsbar lista eller välj **[!UICONTROL Variable]** om du vill hämta språkområdet från det värde som lagras i en variabel av strängdatatyp. Definiera språkkoden medan värdet för språkinställningen lagras i en variabel. Ange till exempel **en_US** för engelska och **fr_FR** för franska.
 
 ## Anropa DDX-steg {#invokeddx}
 
-Document Description XML (DDX) är ett deklarativt kodspråk vars element representerar byggstenar av dokument. Dessa byggstenar innehåller PDF- och XDP-dokument och andra element som kommentarer, bokmärken och formaterad text. DDX definierar en uppsättning åtgärder som kan tillämpas på ett eller flera indatadokument för att generera ett eller flera utdatadokument. Ett enda DX kan användas med ett antal olika källdokument. Du kan använda ***Anropa DDX-steg*** i ett AEM arbetsflöde för att utföra olika åtgärder, t.ex. att samla ihop dokument, skapa och ändra Acrobat och XFA Forms, samt andra som beskrivs i [DDX-referensdokumentation](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf).
+Document Description XML (DDX) är ett deklarativt kodspråk vars element representerar byggstenar av dokument. Dessa byggstenar innehåller PDF- och XDP-dokument och andra element som kommentarer, bokmärken och formaterad text. DDX definierar en uppsättning åtgärder som kan tillämpas på ett eller flera indatadokument för att generera ett eller flera utdatadokument. Ett enda DX kan användas med ett antal olika källdokument. Du kan använda steget ***Anropa DDX*** i ett AEM arbetsflöde för att utföra olika åtgärder, som att samla ihop disassemblerande dokument, skapa och ändra Acrobat och XFA Forms, och andra som beskrivs i [DDX-referensdokumentationen](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf).
 
 Anropa DDX-steget har följande egenskaper:
 
 **[!UICONTROL Input Documents]**: Används för att ange egenskaper för ett indatadokument. De olika alternativ som är tillgängliga under den här fliken är:
-* **[!UICONTROL Specify DDX Using]**: Anger indatadokumentet i förhållande till nyttolasten, har en absolut sökväg, kan anges som nyttolast eller lagras i en variabel av dokumentdatatypen.
-* **[!UICONTROL Create Map from Payload]**: Lägg till alla dokument under nyttolastmappen i Input Document Map för invoke API i Assembler. Nodnamnet för varje dokument används som en nyckel på kartan.
-* **[!UICONTROL Input Document's Map]**: Alternativ används för att lägga till flera poster med **[!UICONTROL ADD]** -knappen. Varje post representerar dokumentets nyckel på kartan och dokumentets källa.
+* **[!UICONTROL Specify DDX Using]**: Anger indatadokumentet relativt till nyttolasten, har en absolut sökväg, kan anges som nyttolast eller lagras i en variabel av dokumentdatatypen.
+* **[!UICONTROL Create Map from Payload]**: Lägg till alla dokument under nyttolastmappen i Input Document&#39;s Map för invoke API i Assembler. Nodnamnet för varje dokument används som en nyckel på kartan.
+* **[!UICONTROL Input Document's Map]**: Alternativet används för att lägga till flera poster med knappen **[!UICONTROL ADD]**. Varje post representerar dokumentets nyckel på kartan och dokumentets källa.
 
-**[!UICONTROL Environment Options]**: Det här alternativet används för att ange bearbetningsinställningar för anrop av API. De olika alternativ som är tillgängliga under den här fliken är:
+**[!UICONTROL Environment Options]**: Det här alternativet används för att ange bearbetningsinställningar för anrop-API. De olika alternativ som är tillgängliga under den här fliken är:
 * **[!UICONTROL Validate Only]**: Kontrollerar giltigheten för indata-DDX-dokumentet.
-* **[!UICONTROL Fail on Error]**: Booleskt värde som anger om anrop-API-tjänsten misslyckas, om ett fel uppstår eller inte. Som standard är värdet Falskt.
+* **[!UICONTROL Fail on Error]**: Ett booleskt värde som anger om API-anropstjänsten misslyckas, om ett fel uppstår eller inte. Som standard är värdet Falskt.
 * **[!UICONTROL First Bates Number]**: Anger talet, som ökar automatiskt. Det här självökande numret visas automatiskt på varje sida i följd.
 * **[!UICONTROL Default Style]**: Anger standardformatet för utdatafilen.
 
@@ -271,11 +271,11 @@ Anropa DDX-steget har följande egenskaper:
 
 **[!UICONTROL Output Documents]**: Anger platsen där utdatafilen ska sparas. De olika alternativ som är tillgängliga under den här fliken är:
 * **[!UICONTROL Save Output in Payload]**: Sparar utdatadokument under nyttolastmappen, eller skriver över nyttolasten om nyttolasten är en fil.
-* **[!UICONTROL Output Document's Map]**: Anger platsen där varje dokumentfil ska sparas explicit genom att en post per dokument läggs till. Varje post representerar dokumentet och platsen där det ska sparas. Om det finns flera utdatadokument används det här alternativet.
+* **[!UICONTROL Output Document's Map]**: Anger platsen där varje dokumentfil ska sparas explicit genom att lägga till en post per dokument. Varje post representerar dokumentet och platsen där det ska sparas. Om det finns flera utdatadokument används det här alternativet.
 
 ## Anropa tjänststeget i FDM (Form Data Model) {#invoke-form-data-model-service-step}
 
-Du kan använda [[!DNL AEM Forms] Dataintegrering](data-integration.md) för att konfigurera och ansluta till olika datakällor. Dessa datakällor kan vara en webbtjänst, REST-tjänst, OData-tjänst och CRM-lösning. [!DNL AEM Forms] Med dataintegrering kan du skapa en formulärdatamodell (FDM) som omfattar olika tjänster för att utföra datahämtnings-, additions- och uppdateringsåtgärder för den konfigurerade databasen. Du kan använda **[!UICONTROL Invoke Data Model Service step]** för att välja en formulärdatamodell (FDM) och använda FDM-tjänsterna för att hämta, uppdatera eller lägga till data till olika datakällor.
+Du kan använda [[!DNL AEM Forms] Dataintegrering](data-integration.md) för att konfigurera och ansluta till olika datakällor. Dessa datakällor kan vara en webbtjänst, REST-tjänst, OData-tjänst och CRM-lösning. Med dataintegrering i [!DNL AEM Forms] kan du skapa en formulärdatamodell (FDM) som omfattar olika tjänster för att utföra datahämtnings-, additions- och uppdateringsåtgärder för den konfigurerade databasen. Du kan använda **[!UICONTROL Invoke Data Model Service step]** för att välja en formulärdatamodell (FDM) och använda FDM-tjänsterna för att hämta, uppdatera eller lägga till data i olika datakällor.
 
 Följande databastabell och JSON-filen används som exempel för att förklara indata för stegfält:
 
@@ -285,7 +285,7 @@ Följande databastabell och JSON-filen används som exempel för att förklara i
  <tbody> 
   <tr> 
    <td>Egenskap</td> 
-   <td>Värde<br /> </td> 
+   <td>Värde <br /> </td> 
   </tr> 
   <tr> 
    <td>FirstName<br /> </td> 
@@ -300,7 +300,7 @@ Följande databastabell och JSON-filen används som exempel för att förklara i
    <td>1</td> 
   </tr> 
   <tr> 
-   <td>E-postadress<br /> </td> 
+   <td>E-postadress <br /> </td> 
    <td>srose@we.info</td> 
   </tr> 
  </tbody> 
@@ -332,12 +332,12 @@ Följande databastabell och JSON-filen används som exempel för att förklara i
 
 FDM-tjänststeget (Invoke Form Data Model) innehåller följande listade fält som underlättar FDM-åtgärder (Form Data Model):
 
-* **[!UICONTROL Title]**: Stegets namn. Det hjälper till att identifiera stegen i arbetsflödesredigeraren.
+* **[!UICONTROL Title]**: Stegen är titel. Det hjälper till att identifiera stegen i arbetsflödesredigeraren.
 * **[!UICONTROL Description]**: Förklaring är användbar för andra processutvecklare när du arbetar i en delad utvecklingsmiljö.
 
-* **[!UICONTROL Form Data Model Path]**: Bläddra och välj en FDM (Form Data Model) som finns på servern.
+* **[!UICONTROL Form Data Model Path]**: Bläddra och välj en formulärdatamodell (FDM) som finns på servern.
 
-* **[!UICONTROL Errors and Validations]**: Med det här alternativet kan du samla in felmeddelanden och ange valideringsalternativ för data som hämtas och skickas till datakällor. Med dessa ändringar kan du se till att data som skickas till FDM-tjänststeget (Invoke Form Data Model) följer de databegränsningar som definieras av datakällan. Mer information finns i [Automatisk validering av indata](work-with-form-data-model.md#automated-validation-of-input-data)
+* **[!UICONTROL Errors and Validations]**: Med alternativet kan du hämta felmeddelanden och ange valideringsalternativ för data som hämtas och skickas till datakällor. Med dessa ändringar kan du se till att data som skickas till FDM-tjänststeget (Invoke Form Data Model) följer de databegränsningar som definieras av datakällan. Mer information finns i [Automatisk validering av indata](work-with-form-data-model.md#automated-validation-of-input-data)
 
 * **[!UICONTROL Validation level]**: Det finns tre valideringskategorier: Basic, Full och OFF:
 
@@ -347,31 +347,31 @@ FDM-tjänststeget (Invoke Form Data Model) innehåller följande listade fält s
 
 * **[!UICONTROL Terminate Workflow on Failure]**: När en begränsning inte kan valideras stoppas arbetsflödet.
 
-* **[!UICONTROL Store Error Code in Variable]**: Du kan lagra en felkod i en [Strängtypsvariabel](variable-in-aem-workflows.md).
+* **[!UICONTROL Store Error Code in Variable]**: Du kan lagra en felkod i en [String-typvariabel](variable-in-aem-workflows.md).
 
-* **[!UICONTROL Store Error Message in Variable]**: Du kan lagra ett felmeddelande i en [Strängtypsvariabel](variable-in-aem-workflows.md).
+* **[!UICONTROL Store Error Message in Variable]**: Du kan lagra ett felmeddelande i en [String-typvariabel](variable-in-aem-workflows.md).
 
-* **[!UICONTROL Store Error Details in Variable]**: Du kan lagra en felinformation i en [JSON-typvariabel](variable-in-aem-workflows.md).
+* **[!UICONTROL Store Error Details in Variable]**: Du kan lagra en feldetalj i en [JSON-typvariabel](variable-in-aem-workflows.md).
 
-* **[!UICONTROL Service]**: Lista över de tjänster som den valda formulärdatamodellen (FDM) tillhandahåller.
+* **[!UICONTROL Service]**: Lista över tjänster som den valda FDM (Form Data Model) tillhandahåller.
 * **[!UICONTROL Input for services]** > **[!UICONTROL Provide input data using literal, variable, or workflow metadata, and a JSON file]**: En tjänst kan ha flera argument. Välj alternativet för att hämta värdet för tjänstargumenten från en metadataegenskap för arbetsflöde, ett JSON-objekt, en variabel eller ange värdet direkt i textrutan:
 
-   * **[!UICONTROL Literal]**: Använd alternativet när du vet exakt vilket värde du ska ange. Exempel: srose@we.info.
+   * **[!UICONTROL Literal]**: Använd alternativet när du känner till det exakta värdet som ska anges. Exempel: srose@we.info.
    * **[!UICONTROL Variable]**: Använd alternativet för att hämta värdet som lagras i en variabel.
-   * **[!UICONTROL Retrieve from Workflow Metadata]**: Använd alternativet när värdet som ska användas sparas i en arbetsflödets metadataegenskap. Till exempel emailAddress.
+   * **[!UICONTROL Retrieve from Workflow Metadata]**: Använd alternativet när värdet som ska användas sparas i en metadataegenskap för arbetsflöde. Till exempel emailAddress.
 
-   * **[!UICONTROL Relative to Payload]**: Använd alternativet för att hämta den bifogade filen som har sparats på en relativ sökväg till nyttolasten. Markera alternativet och ange antingen mappnamnet som innehåller den bifogade filen eller ange namnet på den bifogade filen i textrutan.
+   * **[!UICONTROL Relative to Payload]**: Använd alternativet för att hämta den bifogade filen som har sparats på en sökväg i förhållande till nyttolasten. Markera alternativet och ange antingen mappnamnet som innehåller den bifogade filen eller ange namnet på den bifogade filen i textrutan.
 
-     Om mappen Relativt till nyttolast i CRX-databasen till exempel innehåller en bifogad fil på `attachment\attachment-folder` plats, ange `attachment\attachment-folder` i textrutan efter att du har valt **[!UICONTROL Relative to Payload]** alternativ.
+     Om till exempel mappen Relativt till nyttolast i CRX-databasen innehåller en bifogad fil på platsen `attachment\attachment-folder` anger du `attachment\attachment-folder` i textrutan efter att du har valt alternativet **[!UICONTROL Relative to Payload]**.
 
    * **[!UICONTROL JSON Dot Notation]**: Använd alternativet när värdet som ska användas finns i en JSON-fil. Till exempel försäkring.customerDetails.emailAddress. Alternativet JSON-punktnotation är bara tillgängligt om du har valt kartinmatningsfält från alternativet JSON för inmatning.
    * **[!UICONTROL Map input fields from input JSON]**: Ange sökvägen till en JSON-fil för att hämta indatavärdet för vissa tjänstargument från JSON-filen. Sökvägen till JSON-filen kan vara relativ till nyttolasten, en absolut sökväg eller så kan du välja ett JSON-inmatningsdokument med variabeln JSON eller Form Data Model (FDM).
 
-* **[!UICONTROL Input for services]** > **[!UICONTROL Provide input data using variable or a JSON file]**: Välj alternativet om du vill hämta värden för alla argument från en JSON-fil som har sparats med en absolut sökväg, med en sökväg som är relativ till nyttolasten eller i en variabel.
-* **[!UICONTROL Select Input JSON document using]**: JSON-filen innehåller värden för alla tjänstargument. JSON-filens sökväg kan vara **[!UICONTROL relative to the payload]** eller en **[!UICONTROL absolute path]**. Du kan också hämta JSON-indata med hjälp av en variabel av datatypen JSON eller Form Data Model (FDM).
+* **[!UICONTROL Input for services]** > **[!UICONTROL Provide input data using variable or a JSON file]**: Välj alternativet för att hämta värden för alla argument från en JSON-fil som har sparats med en absolut sökväg, med en sökväg som är relativ till nyttolasten eller i en variabel.
+* **[!UICONTROL Select Input JSON document using]**: JSON-filen innehåller värden för alla tjänstargument. JSON-filens sökväg kan vara **[!UICONTROL relative to the payload]** eller **[!UICONTROL absolute path]**. Du kan också hämta JSON-indata med hjälp av en variabel av datatypen JSON eller Form Data Model (FDM).
 
 * **[!UICONTROL JSON Dot Notation]**: Lämna fältet tomt om du vill använda alla objekt i den angivna JSON-filen som indata för tjänstargument. Om du vill läsa ett specifikt JSON-objekt från den angivna JSON-filen som indata för serviceargument anger du punktnotation för JSON-objektet, till exempel, om du har en JSON som liknar den som anges i början av avsnittet, anger du försäkring.customerDetails för att ge all information om en kund som indata till tjänsten.
-* **[!UICONTROL Output of service]** > **[!UICONTROL Map and write output values to variable or metadata]**: Välj alternativet att spara utdatavärdena som egenskaper för arbetsflödesinstansens metadatanod i crx-databasen. Ange namnet på metadataegenskapen och välj det motsvarande tjänstutdataattribut som ska mappas med metadataegenskapen, till exempel mappa det telefonnummer som returneras av utdatatjänsten med egenskapen phone_number för arbetsflödets metadata. På samma sätt kan du lagra utdata i en variabel med datatypen Long. När du väljer en egenskap för **[!UICONTROL Service output attribute to be mapped]** , fylls endast variabler som kan lagra data för den valda egenskapen i för **[!UICONTROL Save the output to]** alternativ.
+* **[!UICONTROL Output of service]** > **[!UICONTROL Map and write output values to variable or metadata]**: Välj alternativet att spara utdatavärdena som egenskaper för arbetsflödesinstansens metadatanod i crx-databasen. Ange namnet på metadataegenskapen och välj det motsvarande tjänstutdataattribut som ska mappas med metadataegenskapen, till exempel mappa det telefonnummer som returneras av utdatatjänsten med egenskapen phone_number för arbetsflödets metadata. På samma sätt kan du lagra utdata i en variabel med datatypen Long. När du väljer en egenskap för alternativet **[!UICONTROL Service output attribute to be mapped]** fylls endast variabler som kan lagra data för den valda egenskapen i för alternativet **[!UICONTROL Save the output to]**.
 
 * **[!UICONTROL Output of service]** > **[!UICONTROL Save output to variable or a JSON file]**: Välj alternativet att spara utdatavärdena i en JSON-fil med en absolut sökväg, med en sökväg som är relativ till nyttolasten eller i en variabel.
 * **[!UICONTROL Save Output JSON document using below options]**: Spara JSON-utdatafilen. Sökvägen till JSON-utdatafilen kan vara relativ till nyttolasten eller en absolut sökväg. Du kan också spara JSON-utdatafilen med en variabel av datatypen JSON eller Form Data Model (FDM).
@@ -380,22 +380,22 @@ FDM-tjänststeget (Invoke Form Data Model) innehåller följande listade fält s
 
 ## Underteckna dokumentsteg {#sign-document-step}
 
-Med steget Signera dokument kan du använda [!DNL Adobe Sign] för att signera dokument. När du använder [!DNL Adobe Sign] Arbetsflödessteg för att signera ett adaptivt formulär kan skickas mellan mottagarna en i taget eller skickas till alla mottagare samtidigt, beroende på arbetsflödesstegets konfiguration. [!DNL Adobe Sign] Adaptiv Forms skickas till Experience Manager Forms Server först när alla mottagare har slutfört signeringsprocessen.
+Med steget Signera dokument kan du använda [!DNL Adobe Sign] för att signera dokument. När du använder arbetsflödessteget [!DNL Adobe Sign] för att signera ett anpassat formulär, kan formuläret skickas mellan mottagare i taget eller skickas till alla mottagare samtidigt, beroende på arbetsflödesstegets konfiguration. [!DNL Adobe Sign]-aktiverade adaptiva Forms skickas till Experience Manager Forms Server först när alla mottagare har slutfört signeringsprocessen.
 
-Som standard är [!DNL Adobe Sign] Tjänsten Schemaläggaren kontrollerar (avsöker) mottagarens svar efter 24 timmars intervall. Du kan [ändra standardintervallet för miljön](adobe-sign-integration-adaptive-forms.md#for-aem-workflows-only-configure-dnl-adobe-acrobat-sign-scheduler-to-sync-the-signing-status-configure-adobe-sign-scheduler-to-sync-the-signing-status).
+Som standard kontrollerar tjänsten [!DNL Adobe Sign] Scheduler (enkäter) mottagarens svar efter var 24:e timme. Du kan [ändra standardintervallet för din miljö](adobe-sign-integration-adaptive-forms.md#for-aem-workflows-only-configure-dnl-adobe-acrobat-sign-scheduler-to-sync-the-signing-status-configure-adobe-sign-scheduler-to-sync-the-signing-status).
 
 Stegen Signera dokument har följande egenskaper:
 
 * **[!UICONTROL Agreement Name]**: Ange avtalets namn. Avtalsnamnet blir en del av ämnet och brödtexten i det e-postmeddelande som skickas till signerarna. Du kan antingen lagra namnet i en variabel av datatypen String eller välja **[!UICONTROL Literal]** om du vill lägga till namnet manuellt.
 
-* **[!UICONTROL Locale]**: Ange språk för alternativen för e-post och verifiering. Du kan antingen lagra språkinställningen i en variabel av datatypen String eller välja **[!UICONTROL Literal]** om du vill välja språkområde i listan med tillgängliga alternativ. Du måste definiera språkkoden medan du lagrar värdet för språkinställningen i en variabel. Ange till exempel **[!UICONTROL en_US]** för engelska och **[!UICONTROL fr_FR]** för franska.
+* **[!UICONTROL Locale]**: Ange språk för alternativen för e-post och verifiering. Du kan antingen lagra språkinställningen i en variabel av datatypen String eller välja **[!UICONTROL Literal]** för att välja språkinställningen i listan med tillgängliga alternativ. Du måste definiera språkkoden medan du lagrar värdet för språkinställningen i en variabel. Ange till exempel **[!UICONTROL en_US]** för engelska och **[!UICONTROL fr_FR]** för franska.
 
-* **[!UICONTROL Adobe Sign Cloud Configuration]**: Välj en [!DNL Adobe Sign] Molnkonfiguration. Om du inte har konfigurerat [!DNL Adobe Sign] for [!DNL AEM Forms], se [Integrera Adobe Sign med [!DNL AEM Forms]](adobe-sign-integration-adaptive-forms.md).
+* **[!UICONTROL Adobe Sign Cloud Configuration]**: Välj en [!DNL Adobe Sign] molnkonfiguration. Om du inte har konfigurerat [!DNL Adobe Sign] för [!DNL AEM Forms] kan du läsa [Integrera Adobe Sign med [!DNL AEM Forms]](adobe-sign-integration-adaptive-forms.md).
 
 * **[!UICONTROL Select Document to be signed using]**: Du kan välja ett dokument från en plats som är relativ till nyttolasten, använda nyttolasten som dokument, ange en absolut sökväg för dokumentet eller hämta dokumentet som lagras i en variabel av dokumentdatatypen.
-* **[!UICONTROL Days Until Deadline]**: Ett dokument markeras som förfallet (passerat deadline) efter att det inte finns någon aktivitet i uppgiften för det antal dagar som anges i **[!UICONTROL Days Until Deadline]** fält. Antalet dagar räknas efter att dokumentationen har tilldelats en användare för signering.
+* **[!UICONTROL Days Until Deadline]**: Ett dokument markeras som förfallet (passerat tidsgräns) efter det att aktiviteten inte har någon aktivitet för det antal dagar som anges i fältet **[!UICONTROL Days Until Deadline]**. Antalet dagar räknas efter att dokumentationen har tilldelats en användare för signering.
 * **[!UICONTROL Reminder Email Frequency]**: Du kan skicka en påminnelse via e-post varje dag eller vecka. Veckan räknas från den dag som dokumentationen tilldelas en användare för signering.
-* **[!UICONTROL Signature Process]**: Du kan välja att signera ett dokument i sekventiell eller parallell ordning. I sekventiell ordning tar en signerare emot dokumentet i taget för signering. När den första signeraren har slutfört signeringen av dokumentet skickas dokumentet till den andra signeraren och så vidare. Flera signerare kan signera ett dokument samtidigt i parallell ordning.
+* **[!UICONTROL Signature Process]**: Du kan välja att signera ett dokument i en sekventiell eller parallell ordning. I sekventiell ordning tar en signerare emot dokumentet i taget för signering. När den första signeraren har slutfört signeringen av dokumentet skickas dokumentet till den andra signeraren och så vidare. Flera signerare kan signera ett dokument samtidigt i parallell ordning.
 * **[!UICONTROL Redirection URL]**: Ange en URL för omdirigering. När dokumentet har signerats kan du dirigera om den som tilldelats till en URL. Oftast innehåller denna URL ett tackmeddelande eller ytterligare instruktioner.
 * **[!UICONTROL Workflow Stage]**: Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inkorg. Du kan definiera dessa steg i modellens egenskaper ( **[!UICONTROL Sidekick]** > **[!UICONTROL Page]** > **[!UICONTROL Page Properties]** > **[!UICONTROL Stages]**).
 * **[!UICONTROL Select Recipients]**: Ange metoden för att välja mottagare för dokumentet. Du kan dynamiskt tilldela arbetsflödet till en användare eller en grupp eller manuellt lägga till information om en mottagare. När du väljer Manuellt i listrutan lägger du till mottagarinformation som e-post, roll och autentiseringsmetod.
@@ -404,10 +404,10 @@ Stegen Signera dokument har följande egenskaper:
   >
   >* I rollavsnittet kan du ange mottagarrollen som signerare, godkännare, godkännare, certifierad mottagare, formulärifyllare och delegerande.
   >* Om du väljer Delegerande i alternativet Roll kan delegeraren tilldela signeringsaktiviteten till en annan mottagare.
-  >* Om du har konfigurerat en autentiseringsmetod för [!DNL Adobe Sign], baserat på din konfiguration, väljer du en autentiseringsmetod som telefonbaserad autentisering, autentisering via social identitet, kunskapsbaserad autentisering, autentisering baserad på myndighetsidentitet.
+  >* Om du har konfigurerat en autentiseringsmetod för [!DNL Adobe Sign], baserat på din konfiguration, väljer du en autentiseringsmetod som telefonbaserad autentisering, social identitet, kunskapsbaserad autentisering, myndighetsidentitetsbaserad autentisering.
 
 * **[!UICONTROL Script or service to select recipients]**: Alternativet är bara tillgängligt om du väljer alternativet Dynamiskt i fältet Välj mottagare. Du kan ange ett ECMAScript eller en tjänst för att välja signerare och verifieringsalternativ för ett dokument.
-* **[!UICONTROL Recipient Details]**: Alternativet är bara tillgängligt om alternativet Manuellt är markerat i fältet Välj mottagare. Ange en e-postadress och välj en valfri verifieringsmekanism. Kontrollera att motsvarande verifieringsalternativ är aktiverat för den konfigurerade [!DNL Adobe Sign] konto. Du kan använda en variabel av datatypen String för att definiera värden för fälten E-post, Landskod och Telefonnummer. Fälten Landskod och Telefonnummer visas bara om du väljer Telefonverifiering i den 2-stegsvisa verifieringslistan.
+* **[!UICONTROL Recipient Details]**: Alternativet är bara tillgängligt om alternativet Manuellt är markerat i fältet Välj mottagare. Ange en e-postadress och välj en valfri verifieringsmekanism. Innan du väljer en verifieringsmekanism i två steg ska du kontrollera att motsvarande verifieringsalternativ är aktiverat för det konfigurerade [!DNL Adobe Sign]-kontot. Du kan använda en variabel av datatypen String för att definiera värden för fälten E-post, Landskod och Telefonnummer. Fälten Landskod och Telefonnummer visas bara om du väljer Telefonverifiering i den 2-stegsvisa verifieringslistan.
 * **[!UICONTROL Signed Document]**: Du kan spara statusen för det signerade dokumentet till Variabel. Om du vill lägga till en elektronisk signaturgranskningsversion för att öka säkerheten och lagligheten i det signerade dokumentet kan du inkludera revideringsrapport. Du kan spara det signerade dokumentet med hjälp av variabeln eller nyttolastmappen.
 
   >[!NOTE]
@@ -512,7 +512,7 @@ Send a document directly to a printer. It supports the following printing access
 
 ## Generera utskriftssteg {#generatePrintedOutput}
 
-Steget genererar ett PCL-, PostScript-, ZPL-, IPL-, TPCL- eller DPL-utdata baserat på en formulärdesign och datafil. Datafilen sammanfogas med formulärdesignen och formateras för utskrift. De utdata som genereras i det här steget kan skickas direkt till en skrivare eller sparas som en fil. Vi rekommenderar att du använder det här steget när du vill använda formulärdesigner eller data från ett program. Om formulärdesignerna finns i nätverket, det lokala filsystemet eller på HTTP-platsen använder du åtgärden generatePrintedOutput.
+Steget genererar ett PCL-, PostScript-, ZPL-, IPL-, TPCL- eller DPL-utdata som genereras av en formulärdesign och datafil. Datafilen sammanfogas med formulärdesignen och formateras för utskrift. De utdata som genereras i det här steget kan skickas direkt till en skrivare eller sparas som en fil. Vi rekommenderar att du använder det här steget när du vill använda formulärdesigner eller data från ett program. Om formulärdesignerna finns i nätverket, det lokala filsystemet eller på HTTP-platsen använder du åtgärden generatePrintedOutput.
 
 Programmet kräver till exempel att du sammanfogar en formulärdesign med en datafil. Informationen innehåller hundratals poster. Dessutom krävs att utdata skickas till en skrivare som stöder ZPL. Formulärdesignen och dina indata finns i ett program. Använd åtgärden generatePrintedOutput för att sammanfoga varje post med en formulärdesign och skicka utdata till en skrivare som stöder ZPL.
 
@@ -520,9 +520,9 @@ Stegen Generera utskrift har följande egenskaper:
 
 **[!UICONTROL Input properties]**
 
-* **[!UICONTROL Select template file using]**: Ange sökvägen till mallfilen. Du kan välja mallfilen med hjälp av sökvägen som är relativ till nyttolasten, sparad med en absolut sökväg eller med hjälp av en variabel av datatypen Dokument. Till exempel: [Payload_Directory]/Workflow/data.xml. Om sökvägen inte finns i crx-databasen kan en administratör skapa sökvägen innan den används. Dessutom kan du acceptera nyttolasten som indatafil.
+* **[!UICONTROL Select template file using]**: Ange sökvägen för mallfilen. Du kan välja mallfilen med hjälp av sökvägen som är relativ till nyttolasten, sparad med en absolut sökväg eller med hjälp av en variabel av datatypen Dokument. Exempel: [Payload_Directory]/Workflow/data.xml. Om sökvägen inte finns i crx-databasen kan en administratör skapa sökvägen innan den används. Dessutom kan du acceptera nyttolasten som indatafil.
 
-* **[!UICONTROL Select data document using]**: Ange sökvägen till en indatafil. Du kan markera indatafilen med den sökväg som är relativ till nyttolasten, som har sparats med en absolut sökväg eller med en variabel av dokumentdatatypen. Till exempel: [Payload_Directory]/Workflow/data.xml. Om sökvägen inte finns i crx-databasen kan en administratör skapa sökvägen innan den används.
+* **[!UICONTROL Select data document using]**: Ange sökvägen till en indatafil. Du kan markera indatafilen med den sökväg som är relativ till nyttolasten, som har sparats med en absolut sökväg eller med en variabel av dokumentdatatypen. Exempel: [Payload_Directory]/Workflow/data.xml. Om sökvägen inte finns i crx-databasen kan en administratör skapa sökvägen innan den används.
 
 * **[!UICONTROL Printer Format]**: Ett värde för utskriftsformat som anger vilket sidbeskrivningsspråk som ska användas när ingen XDC-fil anges för att generera utdataströmmen. Om du anger ett literalt värde väljer du något av följande värden:
 
@@ -546,35 +546,37 @@ Stegen Generera utskrift har följande egenskaper:
 
 **[!UICONTROL Advanced Properties]**
 
-* **[!UICONTROL Select Content Root location using]**: Innehållsroten är ett strängvärde som anger URI, absolut referens eller plats i databasen för att hämta relativa resurser som används i formulärdesignen. Om formulärdesignen till exempel refererar till en bild relativt, som `../myImage.gif`, `myImage.gif` måste vara på `repository://`. Standardvärdet är `repository://`, som pekar på databasens rotnivå.
+* **[!UICONTROL Select Content Root location using]**: Innehållsroten är ett strängvärde som anger URI, absolut referens eller plats i databasen för att hämta relativa resurser som används i formulärdesignen. Om formulärdesignen till exempel refererar till en bild relativt, som `../myImage.gif`, måste `myImage.gif` vara vid `repository://`. Standardvärdet är `repository://`, vilket pekar på databasens rotnivå.
 
-  När du väljer en resurs från ditt program måste innehållsrots-URI-sökvägen ha rätt struktur. Om ett formulär till exempel hämtas från ett program med namnet SampleApp och placeras på `SampleApp/1.0/forms/Test.xdp`måste innehållets rot-URI anges som `repository://administrator@password/Applications/SampleApp/1.0/forms/`, eller `repository:/Applications/SampleApp/1.0/forms/` (när behörigheten är null). När innehållets rot-URI anges på det här sättet matchas sökvägarna för alla refererade resurser i formuläret mot denna URI.
+  När du väljer en resurs från ditt program måste innehållsrots-URI-sökvägen ha rätt struktur. Om ett formulär till exempel hämtas från ett program med namnet SampleApp och placeras på `SampleApp/1.0/forms/Test.xdp` måste innehållets rot-URI anges som `repository://administrator@password/Applications/SampleApp/1.0/forms/` eller `repository:/Applications/SampleApp/1.0/forms/` (när behörigheten är null). När innehållets rot-URI anges på det här sättet matchas sökvägarna för alla refererade resurser i formuläret mot denna URI.
 
 * **[!UICONTROL Select XCI file using]**: XCI-filer används för att beskriva teckensnitt och andra egenskaper som används för formulärdesignelement. Du kan behålla en XCI-fil i förhållande till nyttolasten, på en absolut sökväg eller med en variabel av dokumentdatatypen.
 
 * **[!UICONTROL Locale]**: Anger vilket språk som ska användas för att generera PDF-dokumentet. Om du anger ett literalt värde väljer du ett språk i listan eller något av dessa värden:
-   * **[!UICONTROL To use server default]**: (Standard) Använd inställningen Språk ut som konfigurerats på [!DNL AEM Forms] Server. Inställningen Språk konfigureras med administrationskonsolen. (Se [Designer - hjälp](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf).)
+   * **[!UICONTROL To use server default]**:
+(Standard) Använd språkinställningen som är konfigurerad på [!DNL AEM Forms] -servern. Inställningen Språk konfigureras med administrationskonsolen. (Se [Hjälp om Designer](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf).)
 
-   * **[!UICONTROL To use custom value]**: Ange språkkoden i den litterala rutan eller välj en strängvariabel som innehåller språkkoden. En fullständig lista över språkkoder som stöds finns på https://docs.oracle.com/javase/1.5.0/docs/guide/intl/locale.doc.html.
+   * **[!UICONTROL To use custom value]**:
+Skriv språkkoden i den litterala rutan eller välj en strängvariabel som innehåller språkkoden. En fullständig lista över språkkoder som stöds finns på https://docs.oracle.com/javase/1.5.0/docs/guide/intl/locale.doc.html.
 
 * **[!UICONTROL Copies]**: Ett heltalsvärde som anger antalet kopior som ska genereras för utdata. Standardvärdet är 1.
 
-* **[!UICONTROL Duplex Printing]**: Ett sidnumreringsvärde som anger om dubbelsidig eller enkelsidig utskrift ska användas. Skrivare som stöder PostScript och PCL använder det här värdet. Om du anger ett literalt värde väljer du något av följande värden:
-   * **[!UICONTROL Duplex Long Edge]**: Använd dubbelsidig utskrift och utskrift med sidnumrering i långkant.
-   * **[!UICONTROL Duplex Short Edge]**: Använd dubbelsidig utskrift och utskrift med hjälp av sidnumrering med kort kant.
+* **[!UICONTROL Duplex Printing]**: Ett sidnumreringsvärde som anger om dubbelsidig utskrift eller enkelsidig utskrift ska användas. Skrivare som stöder PostScript och PCL använder det här värdet. Om du anger ett literalt värde väljer du något av följande värden:
+   * **[!UICONTROL Duplex Long Edge]**: Använd dubbelsidig utskrift och utskrift med hjälp av sidnumrering med lång kant.
+   * **[!UICONTROL Duplex Short Edge]**: Använd dubbelsidig utskrift och utskrift med hjälp av kortkantssidnumrering.
    * **[!UICONTROL Simplex]**: Använd enkelsidig utskrift.
 
 ## Generera icke-interaktiv PDF-utdatasteg   {#generatePDFdocuments}
 
 1. Dra arbetsflödet Generera icke-interaktiv PDF-utdata på fliken Forms Workflow i Sidekick.
 1. Dubbelklicka på det tillagda arbetsflödessteget för att redigera komponenten.
-1. Konfigurera indatadokument, utdatadokument och andra parametrar i dialogrutan Redigera komponent och klicka på **[!UICONTROL OK]**.
+1. Konfigurera indatadokument, utdatadokument och ytterligare parametrar i dialogrutan Redigera komponent och klicka sedan på **[!UICONTROL OK]**.
 
 ### Indatadokument {#input-documents-3}
 
 * **Mallfil**: Anger platsen för XDP-mallen. Det är ett obligatoriskt fält.
 
-* **Datadokument**: Anger platsen för den data-XML som måste sammanfogas med mallen.
+* **Datadokument**: Anger platsen för XML-data som måste sammanfogas med mallen.
 
 ### Utdatadokument {#output-document}
 
@@ -583,9 +585,9 @@ Stegen Generera utskrift har följande egenskaper:
 ### Ytterligare parametrar {#additional-parameters-1}
 
 * **Innehållsrot**: Anger sökvägen till mappen i databasen där fragment eller bilder som används i XDP-indatamallen lagras.
-* **Språk**: Anger standardspråkområdet för det genererade PDF-formuläret.
-* **Acrobat Version**: Anger Acrobat-målversionen för det genererade PDF-formuläret.
-* **Linjäriserad PDF**: Anger om den genererade PDF ska optimeras för webbvisning.
+* **Språk**: Anger standardspråk för genererat PDF-formulär.
+* **Acrobat Version**: Anger målversionen för Acrobat för det genererade PDF-formuläret.
+* **Linjärt PDF**: Anger om det genererade PDF ska optimeras för webbvisning.
 * **Tagged PDF**: Anger om den genererade PDF ska vara tillgänglig.
 * **XCI-dokument**: Anger sökvägen till XCI-filen.
 

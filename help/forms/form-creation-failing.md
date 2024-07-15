@@ -13,15 +13,15 @@ ht-degree: 0%
 
 # Problem vid publicering av formulär{#form-creation-fails}
 
-Efter att användare har uppdaterat till AEM Forms as a Cloud Service `2024.5.16461`:
+När användare har uppdaterat till AEM Forms as a Cloud Service version `2024.5.16461`:
 
-**Vissa användare** kan stöta på problem när formulär skapas: när en användare skapar ett formulär visas följande felmeddelande i dialogrutan Skapa:
+**Vissa användare** kan ha problem med att skapa formulär. Problemet är att när en användare skapar ett formulär visas följande felmeddelande i dialogrutan Skapa:
 
 `A server error occurred. Try again after sometime.`
 
 ## Orsak {#cause-form-creation-fails}
 
-Problemet inträffar eftersom författaren publicerar formuläret utan **först publicera mallen** som används i den. Detta resulterar i att `jcr:uuid` och andra skyddade och systemgenererade egenskaper för `<template-path>/initial/jcr:content` nod, orsakar fel vid efterföljande formulärskapande.
+Problemet inträffar eftersom författaren publicerar formuläret utan att **först publicera mallen** som används i det. Detta resulterar i att `jcr:uuid` och andra skyddade och systemgenererade egenskaper läggs till i noden `<template-path>/initial/jcr:content`, vilket orsakar fel vid efterföljande formulärskapande.
 
 ## Tillfällig lösning {#resolution-form-creation-fails}
 

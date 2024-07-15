@@ -1,6 +1,6 @@
 ---
-title: Använda RTF-redigeraren i [!DNL Adobe Experience Manager] för att skapa innehåll.
-description: Använd [!DNL Experience Manager] RTF-redigerare för att skapa innehåll.
+title: Använd RTF-redigeraren i [!DNL Adobe Experience Manager] för att skapa innehåll.
+description: Använd  [!DNL Experience Manager] RTF-redigeraren för att skapa innehåll.
 exl-id: 15c175f8-11de-4475-87a9-920219a4c004
 source-git-commit: 0ad9f349c997c35862e4f571b4741ed4c0c947e2
 workflow-type: tm+mt
@@ -11,21 +11,21 @@ ht-degree: 0%
 
 # Använda RTF-redigeraren för att skapa innehåll {#use-rich-text-editor-to-author-content}
 
-RTE (Rich Text Editor) är en grundläggande byggsten för att lägga till textinnehåll i [!DNL Adobe Experience Manager]. Många andra komponenter som tillåter redigering är också baserade på RTE. Utvecklare i Experience Manager kan anpassa RTE och administratörer konfigurerar RTE för författare.
+RTE (Rich Text Editor) är ett grundläggande byggblock för att lägga till textinnehåll i [!DNL Adobe Experience Manager]. Många andra komponenter som tillåter redigering är också baserade på RTE. Utvecklare i Experience Manager kan anpassa RTE och administratörer konfigurerar RTE för författare.
 
 ## In-place editing {#in-place-editing}
 
-Markera en textbaserad komponent med ett enda klick för att visa [komponentverktygsfältet](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar).
+Om du markerar en textbaserad komponent med ett enda klick visas [komponentens verktygsfält](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar).
 
-![Komponentens verktygsfält](/help/sites-cloud/authoring/assets/editing-component-toolbar.png)
+![Komponentverktygsfältet](/help/sites-cloud/authoring/assets/editing-component-toolbar.png)
 
 Om du klickar igen eller först markerar komponenten med ett långsamt dubbelklick öppnas redigering på plats. Redigeringsläget innehåller ett verktygsfält. Du kan redigera innehållet och göra grundläggande formateringsändringar.
 
-![In place editing with the RTE](/help/sites-cloud/authoring/assets/rte-in-place-editing.png)
+![Redigering på plats med RTE](/help/sites-cloud/authoring/assets/rte-in-place-editing.png)
 
 Verktygsfältet innehåller vanligtvis följande alternativ:
 
-* **Format**: Framhäv text som fet eller kursiv eller understruken text.
+* **Format**: Framhäv text som fet, kursiv eller understruken text.
 * **Listor**: Skapa punktlistor eller numrerade listor och ange indrag.
 * **Hyperlänk**: Skapa länkar.
 * **Bryt länk**: Ta bort hyperlänk.
@@ -35,9 +35,9 @@ Verktygsfältet innehåller vanligtvis följande alternativ:
 
 ## Redigering i helskärmsläge {#full-screen-editing}
 
-För textbaserade komponenter klickar du på helskärmsläget ![Knappen RTE i helskärmsläge](/help/sites-cloud/authoring/assets/editing-full-screen.png) från [verktygsfält](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) för att öppna RTF-redigeraren och dölja resten av sidinnehållet.
+För textbaserade komponenter klickar du på helskärmsläget ![RTE-helskärmsknappen](/help/sites-cloud/authoring/assets/editing-full-screen.png) i [verktygsfältet](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) för att öppna RTF-redigeraren och dölja resten av sidinnehållet.
 
-I helskärmsläge visas alla konfigurerade alternativ som du kan använda för att skapa. Tillgänglighet av alternativ [beror på konfigurationen](/help/implementing/developing/extending/rich-text-editor.md).
+I helskärmsläge visas alla konfigurerade alternativ som du kan använda för att skapa. Tillgängligheten för alternativ [beror på konfigurationen](/help/implementing/developing/extending/rich-text-editor.md).
 
 ![RTE i helskärmsläge](/help/sites-cloud/authoring/assets/rte-full-screen.png)
 
@@ -52,8 +52,8 @@ Klicka på Minimera för att stänga helskärmsläget.
 
 >[!TIP]
 >
->Kopiera kapslade listor från [!DNL Microsoft Word] i RTE kan ge inkonsekventa resultat. Klistra i stället in som text och gör manuell justering.
+>Om du kopierar kapslade listor från [!DNL Microsoft Word] till textredigeraren kan resultatet bli inkonsekvent. Klistra i stället in som text och gör manuell justering.
 
 >[!MORELIKETHIS]
 >
->* [Konfigurera textredigerare](/help/implementing/developing/extending/rich-text-editor.md)
+>* [Konfigurera RTF-redigerare](/help/implementing/developing/extending/rich-text-editor.md)

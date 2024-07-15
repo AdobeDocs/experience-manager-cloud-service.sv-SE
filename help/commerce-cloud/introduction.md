@@ -13,13 +13,13 @@ ht-degree: 1%
 ---
 
 
-# Innehåll och handel {#content-commerce}
+# Innehåll och Commerce {#content-commerce}
 
 Med Adobe Experience Manager innehåll och e-handel kan varumärken skalas och utvecklas snabbare för att särskilja handelsupplevelser och fånga upp ökade webbutgifter. AEM Content och Commerce kombinerar de engagerande, flerkanaliga och personaliserade upplevelserna i Experience Manager med ett obegränsat antal e-handelslösningar för att ge alla delar av kundresan olika upplevelser, minska time to value och öka konverteringsgraden.
 
 ## Hur innehåll och Commerce hjälper kunderna att lyckas {#successful}
 
-Med allt högre förväntningar på onlinehandelsupplevelser har varumärkena press på sig att leverera differentierade upplevelser och mer innehåll snabbare. Att implementera en plattform för innehållshantering kräver ofta stora tids- och budgetinvesteringar i utveckling av grundläggande element, som anpassade komponenter och redigeringsverktyg, och medför kostnader för underhåll och uppgraderingar. Experience Manager Sites erbjuder Content och Commerce som en tilläggsmodul för Experience Manager as a Cloud Service som innehåller färdiga e-handelskomponenter, redigeringsverktyg och en referensbutik som snabbar upp arbetet, möjliggör smidigt samarbete mellan team och driver konverteringsprocessen framåt.
+Med allt högre förväntningar på onlinehandelsupplevelser har varumärkena press på sig att leverera differentierade upplevelser och mer innehåll snabbare. Att implementera en plattform för innehållshantering kräver ofta stora tids- och budgetinvesteringar i utveckling av grundläggande element, som anpassade komponenter och redigeringsverktyg, och medför kostnader för underhåll och uppgraderingar. Experience Manager Sites erbjuder Content och Commerce som en tilläggsmodul för Experience Manager as a Cloud Service som innehåller färdiga komponenter för e-handel, redigeringsverktyg och en referensbutik som snabbar upp användningen, möjliggör smidigt samarbete mellan team och driver konverteringsprocessen framåt.
 
 Varumärken kan integrera Experience Manager med Adobe Commerce, en del av Adobe Experience Cloud och valfri e-handelsmotor. Med Experience Manager Content och Commerce kan varumärken
 
@@ -61,13 +61,13 @@ Kraftfulla CIF i AEM gör det möjligt för innehållsskapare att snabbt skapa k
 
 ### Tid till värde (TTV) {#ttv}
 
-Snabbare projektutveckling med [AEM kärnkomponenter](https://www.aemcomponents.dev/), [AEM Venia reference storefront](https://github.com/adobe/aem-cif-guides-venia), [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)och integreringsmönster för PWA (Headless content &amp; commerce).
+Snabbar upp projektutvecklingen med [AEM Core Components](https://www.aemcomponents.dev/), [AEM Venia reference storefront](https://github.com/adobe/aem-cif-guides-venia), [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) och integreringsmönster för PWA (Headless content &amp; commerce).
 
 CIF har tagits fram för kontinuerlig innovation med ett kontinuerligt uppdaterat tillägg som ger kunden tillgång till nya och förbättrade funktioner.
 
 ### Integreringar {#integrations}
 
-Koppla samman ditt ekosystem (till exempel en e-handelslösning) med Experience Cloud med  [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html), en serverfri PaaS som bygger på mikrotjänster, och [CIF](https://github.com/adobe/commerce-cif-graphql-integration-reference).
+Koppla ditt ekosystem (till exempel en e-handelslösning) till Experience Cloud med [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html), en icke-serverbaserad PaaS utan mikrotjänst och [CIF referensimplementering](https://github.com/adobe/commerce-cif-graphql-integration-reference).
 
 ## Beprövade mönster och bästa praxis {#proven}
 
@@ -84,4 +84,4 @@ CIF stöder kunder med standardiserade integreringsmönster baserade på bästa 
 
 Om du följer en Commerce Journey, gå till nästa steg:
 
-* The [AEM Innehållsförfattarens resa](/help/commerce-cloud/commerce-journeys/aem-commerce-content-author/getting-started.md)
+* Resan [AEM Innehållsförfattare](/help/commerce-cloud/commerce-journeys/aem-commerce-content-author/getting-started.md)

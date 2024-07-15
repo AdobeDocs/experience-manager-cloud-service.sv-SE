@@ -1,6 +1,6 @@
 ---
-title: Versionsinformation för 2021.4.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för 2021.4.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Versionsinformation för version 2021.4.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation för version 2021.4.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 775332b5-24ce-430e-97a2-6eeb80877c64
 feature: Release Information
 role: Admin
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 >[!NOTE]
 >
->Se [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html) för information om dokumentationsuppdateringar som inte är direkt relaterade till en release.
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
 
 ## Releasedatum {#release-date}
 
@@ -31,9 +31,9 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 ### Nyheter {#what-is-new-foundation}
 
-* [Arbetsflödet Publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) - En ny arbetsflödesmodell och ett nytt steg ger bättre prestanda vid publicering av djupa innehållshierarkier.
+* [Publish Content Tree-arbetsflöde](/help/operations/replication.md#publish-content-tree-workflow) - En ny arbetsflödesmodell och ett nytt steg ger bättre prestanda vid publicering av djupa innehållshierarkier.
 
-## [!DNL Adobe Experience Manager Sites] som [!DNL Cloud Service] {#sites}
+## [!DNL Adobe Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 
 ### Nyheter i [!DNL Sites] {#what-is-new-sites}
 
@@ -51,7 +51,7 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 * GraphQL - beständiga frågor stöder nu användardefinierade slutpunkter som är specifika för AEM Sites-konfigurationer (CQ-4315928)
 
-## [!DNL Adobe Experience Manager Assets] som [!DNL Cloud Service] {#assets}
+## [!DNL Adobe Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
 ### Nyheter i [!DNL Assets] {#what-is-new-assets}
 
@@ -59,17 +59,17 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 * När en resurs hämtas via alternativet för länkdelning kan du nu välja att hämta eller inte hämta återgivningarna. Tidigare hämtades alla resursåtergivningar.
 
-* Administratörer kan konfigurera [!DNL Experience Manager] om du vill ta bort resurskällan efter att ha gjort en massresursinmatning. Se [massmaterialinmatning](/help/assets/add-assets.md#asset-bulk-ingestor).
+* Administratörer kan konfigurera [!DNL Experience Manager] för att ta bort resurskällan efter att ha gjort ett gruppresursförslag. Se [massinläsning av resurser](/help/assets/add-assets.md#asset-bulk-ingestor).
 
-* När du utför en hälsokontroll för att importera resurser i grupp ger Experience Manager nu fler orsaker till misslyckanden. Se [massmaterialinmatning](/help/assets/add-assets.md#asset-bulk-ingestor).
+* När du utför en hälsokontroll för att importera resurser i grupp ger Experience Manager nu fler orsaker till misslyckanden. Se [massinläsning av resurser](/help/assets/add-assets.md#asset-bulk-ingestor).
 
-* När du importerar resurser med bulkimportverktyget har administratörer nu möjlighet att ta bort källfilerna när importen har slutförts. Se [massmaterialinmatning](/help/assets/add-assets.md#asset-bulk-ingestor).
+* När du importerar resurser med bulkimportverktyget har administratörer nu möjlighet att ta bort källfilerna när importen har slutförts. Se [massinläsning av resurser](/help/assets/add-assets.md#asset-bulk-ingestor).
 
 * När du redigerar ett metadataram kan administratörer snabbt och enkelt göra urvalet med ett nytt rotsökvägsväljarfält, vilket minskar konfigurationstiden.
 
-* När du redigerar ett metadataschema läggs en datatyp till som ger ett friformstextområde i metadataredigeraren. Användare kan använda det här textområdet för att ange frihandstext som metadata för en resurs. Se [metadatamatchredigerare](/help/assets/metadata-schemas.md).
+* När du redigerar ett metadataschema läggs en datatyp till som ger ett friformstextområde i metadataredigeraren. Användare kan använda det här textområdet för att ange frihandstext som metadata för en resurs. Se [metadatamatchredigeraren](/help/assets/metadata-schemas.md).
 
-* Metadata för många resurser kan importeras gruppvis med hjälp av en CSV-fil och kan exporteras till en CSV-fil. Standarddatumformatet är nu `yyyy-MM-dd'T'HH:mm:ss.SSSXXX`. Användare kan använda ett annat format genom att uppdatera kolumnrubriken. Lägg till exempel `Date: DateFormat: yyyy-MM-dd'T'HH:mm:ssXXX` som kolumnrubrik i CSV-filen i stället för ordet `Date`.
+* Metadata för många resurser kan importeras gruppvis med hjälp av en CSV-fil och kan exporteras till en CSV-fil. Standarddatumformatet är nu `yyyy-MM-dd'T'HH:mm:ss.SSSXXX`. Användare kan använda ett annat format genom att uppdatera kolumnrubriken. Lägg till exempel till `Date: DateFormat: yyyy-MM-dd'T'HH:mm:ssXXX` som kolumnrubrik i CSV-filen i stället för ordet `Date`.
 
 * När du bläddrar bland resurser i kolumnvyn visas en visuell indikator med statusen Godkänd eller Avvisad för varje resurs.
 
@@ -91,19 +91,19 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 * Alternativet Snabb publicering visas inte när en resurs har valts från sökresultatet efter att ha sökt efter den. (CQ-4317748)
 
-## [!DNL Adobe Experience Manager Forms] som [!DNL Cloud Service] {#forms}
+## [!DNL Adobe Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms}
 
-* **Använd autentiseringsmetoden för myndighets-ID i Adobe Sign-aktiverad Adaptive Forms**
+* **Använd autentiseringsmetoden för myndighets-ID i Adobe Sign-aktiverade adaptiva Forms**
 
   Adobe Sign Government ID-process drivs av avancerade maskininlärningsalgoritmer och ger företag över hela världen möjlighet att säkra en högkvalitativ autentisering av mottagarens identitet. Nu kan du använda autentiseringsmetoden för myndighets-ID i Adobe Sign-aktiverade Adaptive Forms.
 
-  Myndighets-ID är en autentiseringsmetod för premiumidentitet som instruerar mottagaren att [ladda upp bilden av ett foto på ett foto av ett foto av ett foto som utfärdats av en myndighet (körkort, nationellt ID, pass)](https://helpx.adobe.com/in/sign/using/adobesign-authentication-government-id.html)och utvärderar sedan dokumentet för att säkerställa att det är autentiskt.
+  Myndighets-ID är en autentiseringsmetod för premiumidentitet som instruerar mottagaren att [överföra bilden av ett myndighetsutfärdat identitetsdokument (körkort, nationellt ID, pass)](https://helpx.adobe.com/in/sign/using/adobesign-authentication-government-id.html) och sedan utvärdera dokumentet för att säkerställa att det är autentiskt.
 
-* **Stöd för att använda signeringsfunktionen i formulär för asynkrona inskickade formulär med adaptiv formatering**
+* **Stöd för signering i formulär för asynkrona, adaptiva formulärinskickade formulär**
 
-  Nu kan du använda signeringsfunktionen i formulär för asynkrona, anpassningsbara formulärinskickade formulär. Du kan även bädda in ett anpassat formulär i en [!DNL Experience Manager Sites] och använda signeringsfunktionen i formulär för att skicka formulär med adaptiv form.
+  Nu kan du använda signeringsfunktionen i formulär för asynkrona, anpassningsbara formulärinskickade formulär. Du kan även bädda in ett anpassat formulär på en [!DNL Experience Manager Sites]-sida och använda signeringsfunktionen i formulär för att skicka formulär med adaptiv form.
 
 * **Stöd för att använda en variabel för att ange en bifogad fil när ett adaptivt formulär fylls i i förväg för steget Tilldela uppgift**
 
@@ -113,7 +113,7 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
   Du kan använda det literala alternativet för att ange ett värde för en JSON-typvariabel i det angivna variabelsteget i ett AEM arbetsflöde. Med alternativet literal kan du ange en JSON i form av en sträng.
 
-* **Använd lokal utvecklingsmiljö för att skapa en dokumentfil (DoR)**
+* **Använd lokal utvecklingsmiljö för att skapa en DoR-fil (Document of Record)**
 
   Du kan använda en XDP-fil som en dokumentmall på Cloud Service och AEM Forms as a Cloud Service SDK (lokal utvecklingsmiljö). Tidigare var stödet begränsat till endast Cloud Service.
 
@@ -138,7 +138,7 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 * Visuell indikator för mellanlagrade katalogdata i AEM
 
-* Commerce-slutpunkten kan nu konfigureras via användargränssnittet i Cloud Manager
+* Commerce-slutpunkten kan nu konfigureras via Cloud Manager UI
 
 ### Felkorrigeringar {#bug-fixes-commerce}
 
@@ -159,13 +159,13 @@ Nästa version är planerad till 6 maj 2021.
 
 * En användare med nödvändig behörighet kan nu skicka slutpunkten för e-handeln via användargränssnittet.
 
-* Miljövariabler kan nu omfatta en viss tjänst, antingen författare eller publicerad. AEM version krävs `2021.03.5104.20210328T185548Z` eller senare.
+* Miljövariabler kan nu omfatta en viss tjänst, antingen författare eller publicerad. Kräver AEM version `2021.03.5104.20210328T185548Z` eller senare.
 
-* The **Hantera Git** knappen visas på pipelines-kortet även när inga rörledningar har konfigurerats.
+* Knappen **Hantera Git** visas på pipelines-kortet även när inga pipelines har konfigurerats.
 
-* Den version av AEM projekttyp som används av Cloud Manager har uppdaterats till version 27.
+* Den version av den AEM projekttypen som används av Cloud Manager har uppdaterats till version 27.
 
-* Projekt i Adobe I/O Developer Console som har skapats i Cloud Manager kan inte längre redigeras eller tas bort oavsiktligt.
+* Projekt i Adobe I/O Developer Console som har skapats av Cloud Manager kan inte längre redigeras eller tas bort oavsiktligt.
 
 * När en användare lägger till en ny miljö informeras de om att när en miljö har skapats kan den inte flyttas till en annan region.
 
@@ -173,17 +173,17 @@ Nästa version är planerad till 6 maj 2021.
 
 * Felmeddelandet när en pipeline startades när en miljö togs bort har klargjorts.
 
-* OSGi-paket som tillhandahålls av Eclipse-projekt är nu undantagna från regeln `CQBP-84--dependencies`.
+* OSGi-paket som tillhandahålls av Eclipse-projekt är nu uteslutna från regeln `CQBP-84--dependencies`.
 
 ### Felkorrigeringar {#bug-fixes-cm-april}
 
-* När du redigerar Experience Audit-sidan för en pipeline ska du ange en indatasökväg som börjar med ett snedstreck `( / )` kommer inte längre att resultera i att steget fastnar i väntande status.
+* När du redigerar Experience Audit-sidan för en pipeline kommer en indatasökväg som börjar med snedstrecket `( / )` inte längre att resultera i att steget fastnar i väntande status.
 
 * När en ny produktionspipeline skapas granskades inte standardstartsidan om användaren inte lägger till någon åsidosättning av innehållsgranskning.
 
-* Problem med `CloudServiceIncompatibleWorkflowProcess` hade fel allvarlighetsgrad i CSV-filen för den hämtningsbara utgåvan.
+* Problem för `CloudServiceIncompatibleWorkflowProcess` hade fel allvarlighetsgrad i CSV-filen för den hämtningsbara utgåvan.
 
-* The `Runmode` kontrollen genererade falskt positiva värden på noder som inte finns i mappen.
+* Kontrollen `Runmode` genererade falskt positiva värden på noder som inte finns i mappen.
 
 ## Best Practices Analyzer {#best-practices-analyzer}
 

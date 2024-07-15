@@ -14,19 +14,19 @@ ht-degree: 3%
 
 # Webbplatskonsolen {#sites-console}
 
-Lär dig använda **Webbplatser** konsol för att hantera och ordna dina AEM sidor.
+Lär dig hur du använder konsolen **Platser** för att hantera och ordna dina AEM sidor.
 
 ## Orientering {#orientation}
 
-The **Webbplatser** konsolen gör att du kan visa sidhierarkin.
+Med konsolen **Platser** kan du visa sidhierarkin.
 
-![Kolumnvy på Sites-konsolen med ett objekt markerat](assets/sites-console-column-view-selected.png)
+![Kolumnvy på webbplatskonsolen med ett markerat objekt](assets/sites-console-column-view-selected.png)
 
 Här finns olika vyer och verktygsfält som du kan använda för att hantera och ordna sidorna.
 
-* [Verktygsfältet för konsolen](#toolbar) finns alltid till för att hjälpa dig navigera.
-* [Tre olika vyer](#views) gör att du enkelt kan hitta och markera sidan.
-* [Verktygsfältet Åtgärder](#action-toolbar) visas när du har valt ett objekt som du vill vidta åtgärder för.
+* [Verktygsfältet för konsolen](#toolbar) finns alltid tillgängligt för att hjälpa dig navigera.
+* [Tre olika vyer](#views) gör det enkelt att hitta och välja sidan.
+* [Åtgärdsverktygsfältet](#action-toolbar) visas när du har valt ett objekt som du vill vidta åtgärder för.
 * [Sidpanelen](#side-panel) har flera alternativ för att visa detaljerad information på en markerad sida.
 
 ## Verktygsfältet Konsol {#console-toolbar}
@@ -41,17 +41,17 @@ Med sidpanelsväljaren kan du visa ytterligare information om det markerade obje
 
 ![Knappen för sidpanelsväljare](assets/sites-console-side-panel-button.png)
 
-Vilka alternativ som visas beror på den aktuella konsolen. Till exempel i **Webbplatser** Du kan bara markera innehåll (standardvärdet), tidslinjen, referenser eller panelen på filtersidan.
+Vilka alternativ som visas beror på den aktuella konsolen. I **Webbplatser** kan du t.ex. markera endast innehåll (standardvärdet), tidslinjen, referenser eller panelen på filtersidan.
 
 ![Exempel på sidpanelsväljare](assets/sites-console-side-panel-selector.png)
 
-Mer information om sidopanelen finns i dokumentet [Panelen Sida i platskonsolen.](/help/sites-cloud/authoring/sites-console/console-side-panel.md)
+Mer information om sidopanelen finns i dokumentet [Platskonsolens sidopanel.](/help/sites-cloud/authoring/sites-console/console-side-panel.md)
 
 ### Breadcrumbs {#breadcrumbs}
 
 I mitten av spåret, och alltid med en beskrivning av det markerade objektet, kan du navigera på webbplatsens nivåer med hjälp av spåren.
 
-![Bläddringar i navigeringsfältet](assets/sites-console-breadcrumbs-navigation.png)
+![Bläddra i navigeringsfältet](assets/sites-console-breadcrumbs-navigation.png)
 
 
 Tryck eller klicka på den synliga texten för att visa en listruta med hierarkinivåerna för det markerade objektet. Tryck eller klicka på en post för att hoppa till den platsen.
@@ -60,22 +60,22 @@ Tryck eller klicka på den synliga texten för att visa en listruta med hierarki
 
 ### Markera alla {#select-all}
 
-Tryck eller klicka på **Markera alla** markerar alla objekt i den aktuella vyn av konsolen.
+Om du trycker eller klickar på knappen **Markera alla** markeras alla objekt i den aktuella vyn av konsolen.
 
-![Knappen Markera allt](assets/sites-console-select-all.png)
+![Markera alla-knapp](assets/sites-console-select-all.png)
 
-När du har markerat alla objekt visas antalet markerade objekt längst upp till höger i verktygsfältet där **Markera alla** visas.
+När du har markerat alla objekt visas antalet markerade objekt längst upp till höger i verktygsfältet där knappen **Markera allt** visas.
 
 Du kan avmarkera alla objekt och avsluta markeringsläget genom att:
 
-* Klicka eller peka på **X** bredvid antalet.
-* Använda **escape** -tangenten.
+* Klicka eller tryck på **X** bredvid antalet.
+* Använda tangenten **escape**.
 
 ![Avmarkera alla](assets/sites-console-deselect-all.png)
 
 ### Skapa-knapp {#create-button}
 
-The **Skapa** Med kan du lägga till nya sidor på webbplatsen samt skapa ytterligare webbplatsobjekt som Live-kopior eller Launches.
+Med knappen **Skapa** kan du lägga till nya sidor på webbplatsen samt skapa ytterligare webbplatsobjekt, till exempel Live-kopior eller Launches.
 
 ![Knappen Skapa](assets/sites-console-create.png)
 
@@ -92,13 +92,13 @@ Mer information om hur de fungerar finns i länkarna till dessa funktioner.
 
 ## Vyer och val av sidor {#views}
 
-The **Webbplatser** konsolen har tre olika vyer av innehållshierarkin. Du kan visa, navigera i och välja (för ytterligare åtgärder) dina resurser med någon av de tillgängliga vyerna.
+Konsolen **Platser** innehåller tre olika vyer av din innehållshierarki. Du kan visa, navigera i och välja (för ytterligare åtgärder) dina resurser med någon av de tillgängliga vyerna.
 
 * [Kolumnvy](#column-view)
 * [Kortvy](#card-view)
 * [Listvy](#list-view)
 
-The **Visa** ikonen längst till höger i verktygsfältet AEM visar den aktuella vyn som är markerad.
+Ikonen **Visa** längst till höger i verktygsfältet AEM anger att den aktuella vyn är markerad.
 
 Om du trycker eller klickar på den kan du välja en annan vy.
 
@@ -132,11 +132,11 @@ Välja en specifik resurs beror på en kombination av vyn och enheten:
 
 1. I kortvyn:
 
-   ![Vyn Kort](assets/sites-console-card-view-select.png)
+   ![Vyn Kort ](assets/sites-console-card-view-select.png)
 
-1. När du har valt en resurs täcks den översta rubriken av [funktionsmakron, verktygsfält](#actions-toolbar) som ger åtkomst till åtgärder som för närvarande gäller för den valda resursen.
+1. När du har valt en resurs täcks den översta rubriken av verktygsfältet [Åtgärder](#actions-toolbar) som ger åtkomst till åtgärder som för närvarande gäller för den valda resursen.
 
-1. Välj **X** längst upp till höger, eller använd **escape**.
+1. Om du vill avsluta markeringsläget markerar du **X** längst upp till höger eller använder **escape**.
 
 ### Kolumnvy {#column-view}
 
@@ -181,11 +181,11 @@ I kortvyn visas varje objekt på den aktuella nivån i hierarkin som ett stort k
    * Om sidan är låst, dold eller ingår i en livecopy.
    * Anger om du måste agera på objektet som en del av ett arbetsflöde.
 
-Kortvyn erbjuder också [snabbåtgärder](#quick-actions) för objekt som markering och vanliga åtgärder som redigering.
+I kortvyn finns även [snabbåtgärder](#quick-actions) för objekt som markering och vanliga åtgärder som redigering.
 
 ![Snabbåtgärder](assets/sites-console-quick-actions.png)
 
-Du kan navigera nedåt i trädet genom att trycka på/klicka på kort (var noga med att inte trycka på snabbåtgärderna) eller uppåt igen genom att använda [vägbeskrivningar i sidhuvudet](#the-header).
+Du kan navigera nedåt i trädet genom att trycka på/klicka på kort (var noga med att inte trycka på snabbåtgärderna) eller uppåt igen genom att använda [breadcrumbs i sidhuvudet](#the-header).
 
 ### Listvy {#list-view}
 
@@ -193,18 +193,18 @@ Listvyn innehåller information för varje resurs på den aktuella nivån i en l
 
 ![Listvy](assets/sites-console-list-view.png)
 
-* Du kan navigera nedåt i trädet genom att trycka på/klicka på resursnamnet och sedan säkerhetskopiera genom att använda [vägbeskrivningar i sidhuvudet](#the-header).
-* Om du enkelt vill markera alla objekt i listan använder du [**Markera alla** i verktygsfältet.](#select-all)
+* Du kan navigera genom trädet genom att trycka/klicka på resursnamnet och säkerhetskopiera genom att använda [breadcrumbs i rubriken](#the-header).
+* Om du enkelt vill markera alla objekt i listan använder du kryssrutan [**Markera alla** i verktygsfältet.](#select-all)
 
-* Markera de kolumner som ska visas med **Visa inställningar** som finns under knappen Vyer. Följande kolumner är tillgängliga för visning:
+* Markera de kolumner som ska visas med alternativet **Visa inställningar** som finns under knappen Vyer. Följande kolumner är tillgängliga för visning:
 
    * **Namn** - Sidnamn, som kan vara användbart i en flerspråkig redigeringsmiljö eftersom det är en del av sidans URL och inte ändras oavsett språk
-   * **Ändrad** - Senast ändrat den och senast ändrat av användaren
+   * **Ändrad** - Senast ändrat den och senast ändrad av användaren
    * **Publicerad** - Publiceringsstatus
    * **Förhandsgranska** - Förhandsgranskningsstatus
    * **Mall** - Mall som sidan baseras på
    * **Åtgärd**
-   * **Arbetsflöde** - Det arbetsflöde som för närvarande används på sidan. Mer information finns när du för musen över eller öppnar tidslinjen.
+   * **Arbetsflöde** - Arbetsflöde som för närvarande används på sidan. Mer information finns när du för musen över eller öppnar tidslinjen.
    * **Översatt**
    * **Sidvyer**
    * **Unika besökare**
@@ -212,7 +212,7 @@ Listvyn innehåller information för varje resurs på den aktuella nivån i en l
 
 ![Konfigurera kolumner](assets/sites-console-select-columns.png)
 
-Som standard är **Namn** -kolumnen visas, vilket utgör en del av sidans URL. I vissa fall kan författaren behöva komma åt sidor på ett annat språk och det kan vara bra att se sidans namn (som vanligtvis inte ändras) om författaren inte kan sidans språk.
+Som standard visas kolumnen **Namn** som utgör en del av sidans URL. I vissa fall kan författaren behöva komma åt sidor på ett annat språk och det kan vara bra att se sidans namn (som vanligtvis inte ändras) om författaren inte kan sidans språk.
 
 * Ändra objektens ordning med hjälp av den prickade lodräta listen längst till höger om varje objekt i listan.
 
@@ -224,7 +224,7 @@ Markera det lodräta markeringsfältet och dra objektet till en ny plats i lista
 
 >[!NOTE]
 >
->Att ändra ordningen fungerar bara i en ordnad mapp som har `jcr:primaryType` värde som `sling:OrderedFolder`.
+>Det går bara att ändra ordningen i en ordnad mapp som har värdet `jcr:primaryType` som `sling:OrderedFolder`.
 
 ## Verktygsfältet Åtgärder {#actions-toolbar}
 
@@ -235,30 +235,30 @@ När en resurs har valts kan du utföra olika åtgärder för det valda objektet
 Verktygsfältet Åtgärder visas bara när en resurs har valts i konsolen. Den åtgärd som är tillgänglig i verktygsfältet Åtgärder ändras så att den återspeglar de åtgärder du kan vidta för de valda objekten. De vanligaste åtgärderna är:
 
 * [**Skapa**](#create-action) - Skapa nytt innehåll eller innehållsrelaterade åtgärder
-* **Redigera** - Beroende på hur den valda sidan skapades kan **Redigera** öppnas rätt redigerare.
-   * [Page Editor](/help/sites-cloud/authoring/page-editor/introduction.md) - För sidor som skapats med AEM sidredigeraren
-   * [Universal Editor](/help/sites-cloud/authoring/universal-editor/authoring.md) - För sidor som skapats med den universella redigeraren
+* **Redigera** - Beroende på hur den markerade sidan skapades kommer åtgärden **Redigera** att öppna rätt redigerare.
+   * [Sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) - För sidor som skapats med AEM sidredigeraren
+   * [Universell redigerare](/help/sites-cloud/authoring/universal-editor/authoring.md) - för sidor som skapats med den universella redigeraren
 * [**Egenskaper**](/help/sites-cloud/authoring/sites-console/page-properties.md) - Öppnar fönstret för sidegenskaper
-* [**Lås**](/help/sites-cloud/authoring/sites-console/managing-pages.md#locking-a-page) - Lås en sida för att förhindra att andra ändrar den
+* [**Lås**](/help/sites-cloud/authoring/sites-console/managing-pages.md#locking-a-page) - Lås en sida så att andra inte kan ändra den
 * [**Kopiera**](/help/sites-cloud/authoring/sites-console/managing-pages.md#copying-and-pasting-a-page) - Kopiera en sida
-* [**Flytta**](/help/sites-cloud/authoring/sites-console/managing-pages.md#moving-or-renaming-a-page) - Flytta eller byta namn på en sida
-* [**Snabbpublicering**](/help/sites-cloud/authoring/sites-console/publishing-pages.md#quick-publish) - Publicera en eller flera sidor direkt
+* [**Flytta**](/help/sites-cloud/authoring/sites-console/managing-pages.md#moving-or-renaming-a-page) - Flytta eller ändra namn på en sida
+* [**Snabb Publish**](/help/sites-cloud/authoring/sites-console/publishing-pages.md#quick-publish) - Publish en eller flera sidor direkt
 * [**Hantera publikation**](/help/sites-cloud/authoring/sites-console/publishing-pages.md#manage-publication) - Schemalägg en eller flera sidor för publicering
-* [**Återställ**](/help/sites-cloud/authoring/sites-console/page-versions.md#restore-version) - Återställa en version av en sida eller ett sidträd
+* [**Återställ**](/help/sites-cloud/authoring/sites-console/page-versions.md#restore-version) - Återställ en version av en sida eller ett sidträd
 * [**Ta bort**](/help/sites-cloud/authoring/sites-console/managing-pages.md#deleting-a-page) - Ta bort en eller flera sidor
 
-På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt bli längre än det tillgängliga utrymmet. När detta inträffar visas ytterligare alternativ. Klicka eller peka på ellipsen (de tre punkterna eller **...**) öppnar en nedrullningsbar väljare med alla återstående åtgärder.
+På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt bli längre än det tillgängliga utrymmet. När detta inträffar visas ytterligare alternativ. Om du klickar eller trycker på ellipsen (de tre punkterna eller **...**) öppnas en nedrullningsbar väljare som innehåller alla återstående åtgärder.
 
 ![Ytterligare alternativ](assets/sites-console-additional-options.png)
 
 ### Skapa åtgärd {#create-action}
 
-Skapa-åtgärden har liknande alternativ som [**Skapa** verktygsfältsknapp](#create-button) för att skapa nya sidor och liknande objekt.
+Skapa-åtgärden har liknande alternativ som [**Skapa**-verktygsfältsknappen](#create-button) för att skapa nya sidor och liknande objekt.
 
 Dessutom kan man skapa sidrelaterade åtgärder.
 
 * [**Arbetsflöde**](/help/sites-cloud/authoring/workflows/overview.md) - Tillämpa ett arbetsflöde på en sida
-* [**Version**](/help/sites-cloud/authoring/sites-console/page-versions.md) - Skapa en sidversion
+* [**Version**](/help/sites-cloud/authoring/sites-console/page-versions.md) - Skapa en version av en sida
 
 ## Mallar
 

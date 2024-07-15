@@ -1,6 +1,6 @@
 ---
-title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.7.0
-description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.7.0
+title: Versionsinformation om migreringsverktyg i AEM as a Cloud Service version 2022.7.0
+description: Versionsinformation om migreringsverktyg i AEM as a Cloud Service version 2022.7.0
 feature: Release Information
 exl-id: bc8f1a80-867e-423a-9c03-4a53b1ebc57c
 role: Admin
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 ---
 
-# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.7.0 {#release-notes}
+# Versionsinformation om migreringsverktyg i AEM as a Cloud Service version 2022.7.0 {#release-notes}
 
 Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2022.7.0.
 
@@ -23,8 +23,8 @@ Releasedatum för Best Practices Analyzer v2.1.30 är 27 juli 2022.
 
 ### Nyheter {#what-is-new-bpa}
 
-* BPA kan nu identifiera och rapportera den totala flyttbara Lucene-indexstorleken som är Total Lucene-index exklusive `/oak:index/lucene` och `/oak:index/damAssetLucene`.
-* Ett nytt mönster har lagts till i BPA för att identifiera och rapportera användningen av den anpassade i18n-ordlistan. Translator.html är inte tillgängligt i AEM as a Cloud Service och anpassade i18n-ordlistor måste distribueras från Git via Cloud Managers CI/CD-pipeline.
+* BPA kan nu identifiera och rapportera den totala flyttbara Lucene-indexstorleken, som är Total Lucene-index exklusive `/oak:index/lucene` och `/oak:index/damAssetLucene`.
+* Ett nytt mönster har lagts till i BPA för att identifiera och rapportera användningen av den anpassade i18n-ordlistan. Translator.html är inte tillgängligt i AEM as a Cloud Service och en anpassad i18n-ordlista måste distribueras från Git via Cloud Manager CI/CD-pipeline.
 
 ### Felkorrigeringar {#bug-fixes-bpa}
 
@@ -60,5 +60,5 @@ Releasedatum för Cloud Acceleration Manager är 15 juli 2022.
 
 ### Nyheter {#what-is-new-cam}
 
-* Molnaccelerationshanteraren ger nu användare möjlighet att hämta migreringstoken manuellt för att kunna påbörja ett intag när automatisk hämtning misslyckas. Automatisk hämtning kan misslyckas om kunderna har konfigurerat en IP-lista som blockerar CAM eller om en icke-admin-användare försöker starta ett intag. Se [Felsökning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#troubleshooting) för mer information.
+* Cloud Acceleration Manager ger nu användare möjlighet att hämta migreringstoken manuellt för att kunna starta ett intag när automatisk hämtning misslyckas. Automatisk hämtning kan misslyckas om kunderna har konfigurerat en IP-lista som blockerar CAM eller om en icke-admin-användare försöker starta ett intag. Mer information finns i [Felsökning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#troubleshooting).
 * Långa tabeller på sidan Migreringskomplexitet är nu komprimerbara för att underlätta användningen.

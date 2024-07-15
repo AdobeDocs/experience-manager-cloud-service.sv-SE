@@ -1,6 +1,6 @@
 ---
 title: Dataskydd och dataintegritet - Adobe Experience Manager as a Cloud Service beredskap
-description: Läs mer om Adobe Experience Manager as a Cloud Service stöd för de olika dataskydds- och datasekretessreglerna och hur man gör när man implementerar ett nytt AEM as a Cloud Service projekt. Dessa förordningar omfattar EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentsekretesslag.
+description: Läs mer om Adobe Experience Manager as a Cloud Service stöd för de olika dataskydds- och datasekretessreglerna och hur man gör när man implementerar ett nytt AEM as a Cloud Service-projekt. Dessa förordningar omfattar EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentsekretesslag.
 exl-id: 5dfa353b-84c5-4b07-bfcd-b03c2d361553
 feature: Compliance
 role: Admin, Architect, Developer, Leader
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Mer information om Adobe svar på sekretessfrågor och vad dessa svar innebär för dig som Adobe-kund finns i [Adobe Sekretesscenter](https://www.adobe.com/privacy.html).
+>Mer information om Adobe svar på sekretessfrågor och vad dessa svar innebär för dig som Adobe-kund finns i [Adobe Privacy Center](https://www.adobe.com/privacy.html).
 
 För att hjälpa Adobe-kunder att följa dessa bestämmelser tillhandahåller Adobe dokumentation och procedurer (med API:er när sådana finns) för kundintegritetsadministratörer och AEM:
 
@@ -80,15 +80,15 @@ Adobe tillhandahåller rutiner för hantering av sekretessförfrågningar som r�
 
 Följande diagram visar hur ett arbetsflöde för sekretesspolicy kan se ut (illustreras med Adobe Experience Manager 6.5):
 
-![Dataskydd och integritet](assets/data-protection-and-privacy-01.png)
+![Dataskydd och sekretess](assets/data-protection-and-privacy-01.png)
 
 ## Adobe Experience Manager as a Cloud Service och regelberedskap {#aem-as-a-cloud-service-and-regulatory-readiness}
 
-Se avsnitten nedan för dokumentation om produktområden av AEM as a Cloud Service.
+Se avsnitten nedan för dokumentation om AEM as a Cloud Service produkter.
 
 ## Adobe Experience Manager as a Cloud Service Foundation {#aem-foundation}
 
-Se [AEM Foundation Ready for Data Protection and Data Privacy Regulations](/help/compliance/data-privacy-and-protection-readiness/foundation-readiness.md).
+Se [AEM Foundation Readiness for Data Protection and Data Privacy Regulations](/help/compliance/data-privacy-and-protection-readiness/foundation-readiness.md).
 
 ## Adobe Experience Manager Sites as a Cloud Service {#aem-sites}
 
@@ -99,6 +99,6 @@ Se [AEM Sites beredskap för dataskydd och dataintegritet](/help/compliance/data
 Integreringar av Adobe Experience Manager as a Cloud Service med Adobe Target och Adobe Analytics implementeras med tjänster som är klara för dataskydd och sekretess (till exempel GDPR). Inga personuppgifter från Adobe Target eller Adobe Analytics lagras i AEM i samband med integreringarna.
 Mer information finns i:
 
-* [Adobe Target - sekretessöversikt](https://experienceleague.adobe.com/docs/target-dev/developer/implementation/privacy/cmp-privacy-and-general-data-protection-regulation.html)
+* [Adobe Target - Integritetsöversikt](https://experienceleague.adobe.com/docs/target-dev/developer/implementation/privacy/cmp-privacy-and-general-data-protection-regulation.html)
 
 * [Adobe Analytics arbetsflöde för datasekretess](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html)

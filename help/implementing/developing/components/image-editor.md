@@ -21,7 +21,7 @@ Bildredigeraren behåller bildschemaområden som både absoluta och relativa enh
 
 ### imageMap, egenskap {#imagemap-property}
 
-Koordinaterna för bildschemat bevaras till JCR som `imageMap` av bildredigeraren. Den har följande format.
+Koordinaterna för bildschemat bevaras som en `imageMap`-egenskap i JCR-läsaren. Den har följande format.
 
 Egenskapen lagrar kartområden enligt följande:
 
@@ -46,13 +46,13 @@ Skalbar vektorgrafik (SVG) stöds av bildredigeraren.
 
 I vissa situationer måste redigeringsåtgärderna begränsas för vissa MIME-typer på grund av att det inte finns stöd för bearbetning på serversidan. Det är till exempel inte tillåtet att redigera bilder i SVG.
 
-Insticksprogram i bildredigeraren kan aktiveras selektivt av MIME-typ genom att en `supportedMimeTypes` på den enskilda plugin-programmets konfigurationsnod.
+Plugin-program i bildredigeraren kan aktiveras selektivt av MIME-typ genom att en `supportedMimeTypes`-egenskap anges på den enskilda plugin-programmets konfigurationsnod.
 
 ### Exempel {#example}
 
 Låt oss till exempel säga att beskärning bara ska vara tillåten för bilderna GIF, JPEG, PNG, WEBP och TIFF.
 
-The `supportedMimeTypes` måste sedan anges som en sträng med de tillåtna MIME-typerna på konfigurationsnoden för plugin-programmet på `cq:editConfig` bildkomponentens nod.
+Egenskapen `supportedMimeTypes` måste sedan anges som en sträng med de tillåtna MIME-typerna på konfigurationsnoden för plugin-programmet på noden `cq:editConfig` i avbildningskomponenten.
 
 `/apps/core/wcm/components/image/v2/image/cq:editConfig`
 

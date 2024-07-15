@@ -7,13 +7,13 @@ role: User, Developer
 level: Beginner
 hide: true
 hidefromtoc: true
-source-git-commit: e6c58c835798b16158ab4aca26e381ab8f36afd3
+exl-id: b59cb56c-9629-48e4-b5c9-a861013a1360
+source-git-commit: af58a784f24f212962ad73f11015fb788493d8b5
 workflow-type: tm+mt
 source-wordcount: '918'
 ht-degree: 0%
 
 ---
-
 
 # Skapa ett adaptivt formulär (kärnkomponenter) - självstudiekurs
 
@@ -32,14 +32,14 @@ I slutet av självstudiekursen kan du:
 * Lokalisera ditt anpassningsbara formulär för olika språk
 * Konfigurera formuläret för att producera strukturerade data
 * Konfigurera formuläret för att skicka data till en REST-slutpunkt
-* Publicera ditt adaptiva formulär
+* Publish ditt adaptiva formulär
 
 
 ## Varför skapa ett formulär som bygger på kärnkomponenter?
 
 AEM Forms tillhandahåller Foundation Components och Core Components för att skapa formulärupplevelser. Kärnkomponenterna är det moderna och rekommenderade sättet att skapa nya formulärupplevelser. Varför använda kärnkomponenter? De här komponenterna är enkla, med öppen källkod (finns för github), har bra Google Lighthuse- och webbinarier, är kompatibla med hjälpmedel och har alla de välbekanta funktionerna i AEM Sites (som versionshantering och lokalisering). Dessutom är de här komponenterna enklare att formatera och du kan enkelt anpassa deras utseende enligt företagets riktlinjer för varumärkesanpassning. Dessa har inga beroenden från tredje part, och utvecklare med kunskap om JavaScript och CSS kan enkelt anpassa dessa komponenter.
 
-![Varför skapa Core Components-baserade Adaptive Forms? Komponenterna är lätta, enklare att formatera, har hög ljusstyrka, stöder tillgänglighetsstandarder, är enkla att anpassa, har öppen källkod, finns på github, är inte beroende av bibliotek från tredje part och har nästan ingen inlärningskurva för AEM utvecklare och AEM författare Förutom AEM Forms Core Components har de alla funktioner som finns i AEM WCM Core Components.](/help/forms/assets/cc-core-components-benefits.png){width="50%"}
+![Varför skapa Core Components-baserade Adaptive Forms? De här komponenterna är lätta, enklare att formatera, har hög ljusstyrka, stöder tillgänglighetsstandarder, är enkelt anpassningsbara, har öppen källkod, finns på github, är inte beroende av bibliotek från tredje part och har nästan ingen inlärningskurva för AEM utvecklare och AEM författare Förutom AEM Forms Core Components har de alla funktioner som finns i AEM WCM Core Components.](/help/forms/assets/cc-core-components-benefits.png){width="50%"}
 
 ## Användningsfall: Effektiv förkvalificering av bostadslån med adaptiv Forms
 
@@ -66,9 +66,9 @@ Du kan skapa och testa det adaptiva formuläret direkt på den lokala datorn inn
 Lokal utveckling med AEM SDK sparar tid och förenklar utvecklingsprocessen
 
 
-**Är du redo att börja?**
+**Klar att börja?**
 
-1. [Ställ in utvecklingsverktyg för AEM projekt](/help/forms/setup-local-development-environment.md#set-up-development-tools-for-aem-projects): Hämta och installera den senaste versionen av [Java 11™](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=en#local-development-environment-set-up), [Git](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=en#install-git), [Node.js (npm)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=en#node-js)och [Maven](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=en#install-maven). Du kan även installera en vanlig textredigerare. Exemplen i den här självstudiekursen är baserade på Visual Studio Code.
+1. [Konfigurera utvecklingsverktyg för AEM projekt](/help/forms/setup-local-development-environment.md#set-up-development-tools-for-aem-projects): Hämta och installera den senaste versionen av [Java 11™](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=en#local-development-environment-set-up), [Git](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=en#install-git), [Node.js (npm)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=en#node-js) och [Maven](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=en#install-maven). Du kan även installera en vanlig textredigerare. Exemplen i den här självstudiekursen är baserade på Visual Studio Code.
 
 1. [Installera AEM SDK](/help/forms/setup-local-development-environment.md#set-up-local-experience-manager-environment-for-development): Hämta och installera den senaste versionen av AEM SDK. Detta är de verktyg som behövs för AEM. Anteckna versionen av AEM SDK.
 
@@ -76,7 +76,7 @@ Lokal utveckling med AEM SDK sparar tid och förenklar utvecklingsprocessen
 
    ![installera AEM SDK](/help/forms/assets/start-aem-sdk.png)
 
-1. [Lägg till AEM Forms Add-on](/help/forms/setup-local-development-environment.md#add-forms-archive-to-local-author-and-publish-instances-and-configure-forms-specific-users): Hämta och installera AEM Forms-tillägget som matchar din AEM SDK från [Programvarudistribution](https://experience.adobe.com/#/downloads) Portal.
+1. [Lägg till AEM Forms-tillägget](/help/forms/setup-local-development-environment.md#add-forms-archive-to-local-author-and-publish-instances-and-configure-forms-specific-users): Hämta och installera AEM Forms-tilläggsmatchningen till den version av ditt AEM-SDK som finns på [Software Distribution](https://experience.adobe.com/#/downloads)-portalen.
    ![install-aem-forms-add-on](/help/forms/assets/install-aem-forms-add-on.png)
 
    +++Installera AEM Forms Add-on:
@@ -84,7 +84,7 @@ Lokal utveckling med AEM SDK sparar tid och förenklar utvecklingsprocessen
    Installera AEM Forms Add-on:
 
    1. Stoppa AEM SDK.
-   1. Lägg till AEM Forms-tilläggsfilen (.far) i dialogrutan `AEM SDK/crx-quickstart/install` mapp,
+   1. Lägg till AEM Forms-tilläggsfilen (.far) i mappen `AEM SDK/crx-quickstart/install`,
    1. Starta om AEM SDK.
 
 +++
@@ -119,7 +119,7 @@ Lokal utveckling med AEM SDK sparar tid och förenklar utvecklingsprocessen
 +++
 
 
-Detaljerade instruktioner och stegvisa anvisningar om hur du konfigurerar din lokala AEM Forms-utvecklingsmiljö finns i [Konfigurera lokal utvecklingsmiljö för AEM Forms](/help/forms/setup-local-development-environment.md) artikel.
+Detaljerade instruktioner och stegvisa anvisningar om hur du konfigurerar din lokala AEM Forms-utvecklingsmiljö finns i artikeln [Konfigurera lokal utvecklingsmiljö för AEM Forms](/help/forms/setup-local-development-environment.md) .
 
 
 

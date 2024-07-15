@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Skapa sidor {#creating-pages}
 
-Lär dig hur du skapar nya sidor för din webbplats med **Webbplatser** konsol.
+Lär dig hur du skapar nya sidor för din webbplats med konsolen **Platser**.
 
 >[!TIP]
 >
@@ -30,9 +30,9 @@ Kontakta systemadministratören om du råkar ut för problem.
 
 Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida innan du kan börja skapa innehåll:
 
-1. Öppna [den **Webbplatser** konsol.](/help/sites-cloud/authoring/sites-console/introduction.md)
+1. Öppna [konsolen **Platser**.](/help/sites-cloud/authoring/sites-console/introduction.md)
 1. Navigera till den plats där du vill skapa den nya sidan.
-1. Öppna den nedrullningsbara väljaren med **Skapa** i verktygsfältet väljer du **Sida** från listan:
+1. Öppna den nedrullningsbara väljaren med **Skapa** i verktygsfältet och välj sedan **Sida** i listan:
 
    ![Skapa en sida](/help/sites-cloud/authoring/assets/organizing-create-page.png)
 
@@ -46,7 +46,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
 1. Från det sista steget i guiden kan du antingen:
 
-   * Använd de tre flikarna för att ange [sidegenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md) du vill tilldela till den nya sidan väljer du **Skapa** för att skapa sidan.
+   * Använd de tre flikarna för att ange de [sidegenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md) som du vill tilldela den nya sidan och välj sedan **Skapa** för att skapa sidan.
 
    * Använd **Bakåt** för att återgå till mallval.
 
@@ -59,33 +59,33 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
    * **Namn**:
 
       * Detta används för att generera URI. Om inget anges hämtas namnet från titeln.
-      * Om du anger en sida **Namn** när du skapar en sida, AEM [validerar namnet enligt konventionerna](/help/implementing/developing/introduction/naming-conventions.md) som ålagts av AEM och JCR.
-      * Du **kan inte skicka ogiltiga tecken** i **Namn** fält. När AEM upptäcker ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
+      * Om du anger en sida **Namn** när du skapar en sida, validerar AEM [namnet enligt konventionerna](/help/implementing/developing/introduction/naming-conventions.md) som AEM och JCR tillämpar.
+      * Du **kan inte skicka ogiltiga tecken** i fältet **Namn**. När AEM upptäcker ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
 
    >[!TIP]
    >
    >Se [Konventioner för sidnamngivning](#page-naming-conventions).
 
-   Minimiinformationen som krävs för att skapa en sida är **Titel**.
+   Den information som krävs för att skapa en sida är **Title**.
 
-   ![Ange sidrubrik](/help/sites-cloud/authoring/assets/organizing-create-page-title.png)
+   ![Tillhandahåller sidtitel](/help/sites-cloud/authoring/assets/organizing-create-page-title.png)
 
-1. Tryck eller klicka **Skapa** för att slutföra processen och skapa en ny sida. Bekräftelsedialogrutan frågar om du vill **Öppna** sidan omedelbart eller återgå till konsolen (**Klar**). Välj ett alternativ för att avsluta processen med att skapa sidan.
+1. Tryck eller klicka på **Skapa** för att slutföra processen och skapa den nya sidan. Bekräftelsedialogrutan frågar om du vill **öppna** sidan direkt eller återgå till konsolen (**Klar**). Välj ett alternativ för att avsluta processen med att skapa sidan.
 
    ![Sidskapandet lyckades](/help/sites-cloud/authoring/assets/organizing-create-page-success.png)
 
-   * Om du väljer **Öppna**, **Webbplatser** konsolen öppnar rätt redigerare baserat på den nya sidans mall, antingen:
+   * Om du väljer **Öppna** öppnar konsolen **Platser** rätt redigerare baserat på den nya sidans mall, antingen:
       * [Sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md)
       * [Universell redigerare](/help/sites-cloud/authoring/universal-editor/authoring.md)
 
 Om du återgår till konsolen kan du se din nya sida:
 
-![Resultat av ny sida](/help/sites-cloud/authoring/assets/organizing-create-page-result.png)
+![Resulterande ny sida](/help/sites-cloud/authoring/assets/organizing-create-page-result.png)
 
 >[!NOTE]
 >
->Om du skapar en sida med ett namn som redan finns på samma plats, skapar AEM sidan med en variant av det namn som anges genom att lägga till en siffra. Om `beach` finns redan, blir den nya sidan `beach1`.
+>Om du skapar en sida med ett namn som redan finns på samma plats, skapar AEM sidan med en variant av det namn som anges genom att lägga till en siffra. Om till exempel `beach` redan finns blir den nya sidan `beach1`.
 
 >[!CAUTION]
 >
->När en sida har skapats kan dess mall inte ändras såvida du inte [skapa en startsida med en ny mall](/help/sites-cloud/authoring/launches/creating.md#create-launch-with-new-template)men befintligt innehåll går förlorat.
+>När en sida har skapats kan dess mall inte ändras såvida du inte [skapar en start med en ny mall](/help/sites-cloud/authoring/launches/creating.md#create-launch-with-new-template), men befintligt innehåll går förlorat.

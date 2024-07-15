@@ -22,7 +22,7 @@ Använd TransactionRecorder-API:t för att registrera åtgärder som inte räkna
 
 Du kan använda anpassad kod för att skicka ett PDF-formulär. Eller så skickar du ett formulär med egna metoder i stället för att använda de skicka-metoder som finns i AEM Forms. Alla tidigare nämnda åtgärder och anpassade implementeringar av AEM Forms API:er räknas inte som transaktioner. AEM Forms tillhandahåller ett API, [TransactionRecorder](https://javadoc.io/doc/com.adobe.aem/aem-forms-sdk-api/latest/com/adobe/aem/transaction/core/ITransactionRecorder.html), för att registrera sådana åtgärder som transaktioner.
 
-Om du vill registrera en transaktion skriver du [standardsäljare](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/store-and-retrieve-af-with-2fa/create-servlet.html?lang=en) och anropa en klientserver för att registrera en transaktion. Du kan anropa servleten med AJAX eller någon annan standardmetod.
+Om du vill spela in en transaktion skriver du [standardservern ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/store-and-retrieve-af-with-2fa/create-servlet.html?lang=en) och anropar servern från en klient för att registrera en transaktion. Du kan anropa servleten med AJAX eller någon annan standardmetod.
 
 ## Exempel på kod på serversidan {#sample-server-sided-code}
 
@@ -74,7 +74,7 @@ private TransactionRecord extractTxRecordFromRequest(SlingHttpServletRequest req
 
 ## Exempel på kod på klientsidan {#sample-client-side-code}
 
-Du kan använda exempelkoden nedan för att anropa den server som har `TransactionRecorder`API.
+Du kan använda exempelkoden nedan för att anropa servern som har `TransactionRecorder`-API:t.
 
 ```javascript
 $.ajax({

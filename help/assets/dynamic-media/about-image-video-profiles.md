@@ -27,12 +27,12 @@ Du måste ha administratörsbehörighet för att skapa, redigera och ta bort Dyn
 
 När du har skapat din bildprofil eller videoprofil tilldelar du den till en eller flera mappar som du använder för nyligen överförda Dynamic Media-resurser.
 
-Se även [Bästa metoderna för att ordna dina digitala resurser så att du kan använda Bearbeta profiler](/help/assets/organize-assets.md).
+Se även [Bästa metoder för att ordna din digitala Assets för att använda Bearbeta profiler](/help/assets/organize-assets.md).
 
 
 >[!NOTE]
 >
->Resurser som du flyttar från en mapp till en annan bearbetas inte om. Anta till exempel att du har Mapp 1 som har tilldelats profilen A och Mapp 2 som har profilen B tilldelad. Om du flyttar resurser från Mapp 1 till Mapp 2 behåller de flyttade resurserna sin ursprungliga bearbetning från Mapp 1.
+>Assets som du flyttar från en mapp till en annan bearbetas inte om. Anta till exempel att du har Mapp 1 som har tilldelats profilen A och Mapp 2 som har profilen B tilldelad. Om du flyttar resurser från Mapp 1 till Mapp 2 behåller de flyttade resurserna sin ursprungliga bearbetning från Mapp 1.
 >
 >Detsamma gäller även när du flyttar resurser mellan två mappar som har samma profil tilldelad.
 
@@ -40,17 +40,17 @@ Se även [Bästa metoderna för att ordna dina digitala resurser så att du kan 
 
 Du kan bearbeta om resurser i en mapp som redan har en Dynamic Media Image Profile eller en Dynamic Media Video Profile som du senare har ändrat.
 
-Anta att du har skapat en Dynamic Media-bildprofil och tilldelat den till en mapp. Bildprofiler som du överförde till mappen tillämpades automatiskt på resurserna. Men senare bestämmer du dig för att lägga till en ny smart beskärningsproportion i bildprofilen. I stället för att behöva välja och ladda upp resurserna till mappen igen kör du *Dynamic Media Reprocess* arbetsflöde.
+Anta att du har skapat en Dynamic Media-bildprofil och tilldelat den till en mapp. Bildprofiler som du överförde till mappen tillämpades automatiskt på resurserna. Men senare bestämmer du dig för att lägga till en ny smart beskärningsproportion i bildprofilen. I stället för att nu behöva markera och överföra resurserna till mappen igen kör du arbetsflödet *Dynamic Media Reprocess*.
 
 Du kan köra arbetsflödet för ombearbetning på en resurs som bearbetningen misslyckades för första gången. Även om du inte har redigerat en bildprofil eller videoprofil, eller redan har använt en bildprofil eller videoprofil, kan du köra arbetsflödet för ombearbetning på en mapp med resurser när som helst.
 
-Du kan också justera batchstorleken för arbetsflödet för ombearbetning från standardvärdet 50 resurser upp till 1 000 resurser. När du kör _Dynamic Media Reprocess_ arbetsflöde i en mapp grupperas resurserna i grupper och skickas sedan till Dynamic Media-servern för bearbetning. Efter bearbetning uppdateras metadata för varje resurs i hela gruppuppsättningen den [!DNL Adobe Experience Manager]. Om gruppstorleken är stor kan bearbetningen fördröjas. Om gruppstorleken är för liten kan det orsaka för många rundningar till Dynamic Media-servern.
+Du kan också justera batchstorleken för arbetsflödet för ombearbetning från standardvärdet 50 resurser upp till 1 000 resurser. När du kör arbetsflödet _Dynamic Media Reprocess_ på en mapp grupperas resurserna i grupper och skickas sedan till Dynamic Media-servern för bearbetning. Efter bearbetning uppdateras metadata för varje resurs i hela gruppuppsättningen [!DNL Adobe Experience Manager]. Om gruppstorleken är stor kan bearbetningen fördröjas. Om gruppstorleken är för liten kan det orsaka för många rundningar till Dynamic Media-servern.
 
-Se [Justera batchstorleken för arbetsflödet för ombearbetning](#adjusting-load).
+Se [Justera gruppstorleken för arbetsflödet för ombearbetning](#adjusting-load).
 
 >[!NOTE]
 >
->Om du migrerar resurser från Dynamic Media Classic till [!DNL Experience Manager]aktiverar du migreringsreplikeringsagenten på Dynamic Media-servern. När migreringen är klar kontrollerar du att agenten är inaktiverad.
+>Om du utför en massmigrering av resurser från Dynamic Media Classic till [!DNL Experience Manager] aktiverar du migreringsreplikeringsagenten på Dynamic Media-servern. När migreringen är klar kontrollerar du att agenten är inaktiverad.
 >
 >Migreringens publiceringsagent måste inaktiveras på Dynamic Media-servern så att arbetsflödet för ombearbetning fungerar som förväntat.
 
@@ -62,7 +62,7 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
 
 **Så här bearbetar du om Dynamic Media-resurser i en mapp:**
 
-1. I [!DNL Experience Manager]navigerar du från sidan Resurser till en resursmapp som har en bildprofil eller en videoprofil tilldelad och för vilken du vill tillämpa **Dynamic Media Reprocess** arbetsflöde.
+1. I [!DNL Experience Manager] navigerar du från Assets-sidan till en resursmapp som har en bildprofil eller en videoprofil tilldelad och för vilken du vill tillämpa arbetsflödet för **Dynamic Media-ombearbetning**.
 
    Mappar som har tilldelats en bildprofil eller videoprofil visas med profilens namn direkt under mappnamnet i kortvyn.
 
@@ -73,52 +73,52 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
    * Det är en god vana att undvika att köra det här arbetsflödet på en mapphierarki som har fler än 1 000 resurser.
 
 1. I den nedrullningsbara listan i det övre vänstra hörnet av sidan väljer du **[!UICONTROL Timeline]**.
-1. Nära sidans nedre vänstra hörn, till höger om sidan [!UICONTROL Comment] markerar du karikonen ( **^** ) .
+1. I närheten av sidans nedre vänstra hörn, till höger om fältet [!UICONTROL Comment], väljer du karikonen ( **^** ).
 
-   ![Skärmbild av resurser i Experience Manager som visar en vald mapp med resurser, listrutan Tidslinje markerad, knappen Starta arbetsflöde markerad och karikonen till höger om fältet Kommentar markerad](/help/assets/dynamic-media/assets/reprocess-assets1.png).
+   ![Skärmbild av Assets i Experience Manager som visar en markerad mapp med resurser, listrutan Tidslinje markerad, knappen Starta arbetsflöde markerad och karikonen till höger om kommentarsfältet är också markerad](/help/assets/dynamic-media/assets/reprocess-assets1.png).
 
 1. Välj **[!UICONTROL Start Workflow]**.
-1. Från **[!UICONTROL Start Workflow]** nedrullningsbar lista, välja **[!UICONTROL Dynamic Media Reprocess]**.
-1. (Valfritt) I dialogrutan **Ange arbetsflödets titel** anger du ett namn för arbetsflödet i textfältet. Du kan använda namnet för att referera till arbetsflödesinstansen, om det behövs.
+1. Välj **[!UICONTROL Dynamic Media Reprocess]** i listrutan **[!UICONTROL Start Workflow]**.
+1. (Valfritt) Ange ett namn för arbetsflödet i textfältet **Ange arbetsflödets namn**. Du kan använda namnet för att referera till arbetsflödesinstansen, om det behövs.
 
-   ![Skärmbild av användargränssnittet i tidslinjen där&quot;Dynamic Media Reprocess&quot; är valt i listrutan Starta arbetsflöde och knappen Start är markerad](/help/assets/dynamic-media/assets/reprocess-assets2.png).
+   ![Skärmbild av användargränssnittet i tidslinjen med &quot;Dynamic Media Reprocess&quot; markerat i listrutan Starta arbetsflöde och knappen Start markerad](/help/assets/dynamic-media/assets/reprocess-assets2.png).
 
-1. Välj **[!UICONTROL Start]** väljer **[!UICONTROL Confirm]**.
+1. Välj **[!UICONTROL Start]** och sedan **[!UICONTROL Confirm]**.
 
-   Om du vill övervaka arbetsflödet eller kontrollera förloppet går du till [!DNL Experience Manager] huvudkonsolsida, välja **[!UICONTROL Tools > Workflow]**. Välj ett arbetsflöde på sidan Arbetsflödesinstanser. Välj **[!UICONTROL Open History]**. Du kan också avsluta, göra uppehåll i eller byta namn på ett valt arbetsflöde från samma sida för arbetsflödesinstanser.
+   Om du vill övervaka arbetsflödet eller kontrollera förloppet väljer du **[!UICONTROL Tools > Workflow]** på huvudkonsolsidan för [!DNL Experience Manager]. Välj ett arbetsflöde på sidan Arbetsflödesinstanser. Välj **[!UICONTROL Open History]** på menyraden. Du kan också avsluta, göra uppehåll i eller byta namn på ett valt arbetsflöde från samma sida för arbetsflödesinstanser.
 
 ### Justera batchstorleken för arbetsflödet för ombearbetning (valfritt) {#adjusting-load}
 
-(Valfritt) Standardbatchstorleken i ombearbetningsarbetsflödet är 50 resurser per jobb. Den optimala batchstorleken styrs av den genomsnittliga tillgångsstorleken och de MIME-typer av resurser som ombearbetningen körs på. Ett högre värde innebär att du har många filer i ett och samma ombearbetningsjobb. Bearbetningsbanderollen är alltså fortfarande på [!DNL Experience Manager] resurser under en längre tid. Om den genomsnittliga filstorleken är liten, 1 MB eller mindre, bör du öka värdet till flera 100, men aldrig mer än 1 000. Om den genomsnittliga filstorleken är hundratals megabyte rekommenderar Adobe att du minskar gruppstorleken med upp till 10.
+(Valfritt) Standardbatchstorleken i ombearbetningsarbetsflödet är 50 resurser per jobb. Den optimala batchstorleken styrs av den genomsnittliga tillgångsstorleken och de MIME-typer av resurser som ombearbetningen körs på. Ett högre värde innebär att du har många filer i ett och samma ombearbetningsjobb. Bearbetningsbanderollen är alltså kvar på [!DNL Experience Manager] resurser under en längre tid. Om den genomsnittliga filstorleken är liten, 1 MB eller mindre, bör du öka värdet till flera 100, men aldrig mer än 1 000. Om den genomsnittliga filstorleken är hundratals megabyte rekommenderar Adobe att du minskar gruppstorleken med upp till 10.
 
-**Om du vill justera batchstorleken för arbetsflödet för ombearbetning:**
+**Om du vill justera gruppstorleken för arbetsflödet för ombearbetning:**
 
-1. I [!DNL Experience Manager], markera **[!UICONTROL Adobe Experience Manager]** för att komma åt den globala navigeringskonsolen väljer du **[!UICONTROL Tools]** (hammer) ikon > **[!UICONTROL Workflow > Models]**.
-1. På sidan Arbetsflödesmodeller i kortvyn eller listvyn väljer du **[!UICONTROL Dynamic Media Reprocess]**.
+1. I [!DNL Experience Manager] väljer du **[!UICONTROL Adobe Experience Manager]** för att komma åt den globala navigeringskonsolen och väljer sedan **[!UICONTROL Tools]**-ikonen (hammare) > **[!UICONTROL Workflow > Models]**.
+1. Välj **[!UICONTROL Dynamic Media Reprocess]** i kortvyn eller listvyn på sidan Arbetsflödesmodeller.
 
    ![Skärmbild av sidan Arbetsflödesmodeller med arbetsflödet &quot;Dynamic Media Reprocess&quot; markerat i kortvyn i Experience Manager](/help/assets/dynamic-media/assets/reprocess-assets7.png).
 
-1. Välj **[!UICONTROL Edit]**. En ny flik i webbläsaren öppnar sidan Dynamic Media arbetsflödesmodell för ombearbetning.
-1. På sidan Dynamic Media Reprocess workflow, i det övre högra hörnet, väljer du **[!UICONTROL Edit]** för att låsa upp arbetsflödet.
+1. Välj **[!UICONTROL Edit]** i verktygsfältet. En ny flik i webbläsaren öppnar sidan Dynamic Media arbetsflödesmodell för ombearbetning.
+1. På sidan Dynamic Media Reprocess workflow (Återbearbeta arbetsflöde), i det övre högra hörnet, väljer du **[!UICONTROL Edit]** för att låsa upp arbetsflödet.
 1. I arbetsflödet väljer du Scene7 Batch Upload-komponenten för att öppna verktygsfältet och väljer sedan **[!UICONTROL Configure]** i verktygsfältet.
 
-   ![Skärmbild av komponenten &quot;Scene7 Batch Upload&quot; på sidan &quot;Dynamic Media Reprocess&quot; med muspekaren över ikonen &quot;Configure&quot; (Konfigurera)](/help/assets/dynamic-media/assets/reprocess-assets8.png).
+   ![Skärmbild av komponenten &quot;Scene7 Batch Upload&quot; på sidan &quot;Dynamic Media Reprocess&quot; med muspekaren över ikonen &quot;Configure&quot; ](/help/assets/dynamic-media/assets/reprocess-assets8.png).
 
-1. På **[!UICONTROL Batch Upload to Scene7—Step Properties]** anger du följande:
-   * I **[!UICONTROL Title]** och **[!UICONTROL Description]** textfält, ange en ny titel och beskrivning för jobbet, om så önskas.
-   * Välj **[!UICONTROL Handler Advance]** om hanteraren går vidare till nästa steg.
-   * I **[!UICONTROL Timeout]** anger du timeout för extern process (sekunder).
-   * I **[!UICONTROL Period]** anger du ett avsökningsintervall (sekunder) som ska testas för att den externa processen ska slutföras.
+1. Ange följande i dialogrutan **[!UICONTROL Batch Upload to Scene7—Step Properties]**:
+   * I textfälten **[!UICONTROL Title]** och **[!UICONTROL Description]** anger du en ny titel och beskrivning för jobbet, om så önskas.
+   * Välj **[!UICONTROL Handler Advance]** om hanteraren ska gå vidare till nästa steg.
+   * I fältet **[!UICONTROL Timeout]** anger du tidsgränsen för den externa processen (sekunder).
+   * I fältet **[!UICONTROL Period]** anger du ett avsökningsintervall (sekunder) som ska testas för att den externa processen ska slutföras.
    * I **[!UICONTROL Batch field]** anger du det maximala antalet resurser (50-1000) som ska bearbetas i ett batchbearbetningsjobb för en Dynamic Media-server.
    * Välj **[!UICONTROL Advance on timeout]** om du vill fortsätta när tidsgränsen nås. Avmarkera alternativet om du vill fortsätta till inkorgen när tidsgränsen nås.
 
-   ![Skärmbild på sidan&quot;Batch Upload to Scene7 - Step Properties&quot;](/help/assets/dynamic-media/assets/reprocess-assets3.png).
+   ![Skärmbild av sidan&quot;Batch Upload to Scene7 - Step Properties&quot; ](/help/assets/dynamic-media/assets/reprocess-assets3.png).
 
-1. I det övre högra hörnet av **[!UICONTROL Batch Upload to Scene7 – Step Properties]** väljer **[!UICONTROL Done]**.
+1. Välj **[!UICONTROL Done]** i det övre högra hörnet i dialogrutan **[!UICONTROL Batch Upload to Scene7 – Step Properties]**.
 
-1. I det övre högra hörnet av modellsidan för arbetsflöde för Dynamic Media Reprocess väljer du **[!UICONTROL Sync]**. När du ser **[!UICONTROL Synced]**, är arbetsflödets körningsmodell synkroniserad och klar att bearbeta resurser i en mapp igen.
+1. Markera **[!UICONTROL Sync]** i det övre högra hörnet på sidan för arbetsflödesmodellen för Dynamic Media Reprocess. När du ser **[!UICONTROL Synced]** synkroniseras arbetsflödets körningsmodell och kan bearbeta resurser i en mapp igen.
 
-   ![Skärmbild av resurser i Experience Manager som visar en vald mapp med resurser, listrutan Tidslinje markerad, knappen Starta arbetsflöde markerad och karikonen till höger om fältet Kommentar markerad](/help/assets/dynamic-media/assets/reprocess-assets1.png).
+   ![Skärmbild av Assets i Experience Manager som visar en markerad mapp med resurser, listrutan Tidslinje markerad, knappen Starta arbetsflöde markerad och karikonen till höger om kommentarsfältet är också markerad](/help/assets/dynamic-media/assets/reprocess-assets1.png).
 
 1. Stäng webbläsarfliken som visar arbetsflödesmodellen Dynamic Media Reprocess.
 

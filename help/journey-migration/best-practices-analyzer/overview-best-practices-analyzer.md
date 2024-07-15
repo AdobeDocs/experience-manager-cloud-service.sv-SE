@@ -39,4 +39,4 @@ Mer information om kategorierna och eventuella konsekvenser och lösningar som �
 >[!NOTE]
 >Rapporten Best Practices Analyzer snabbar upp processen att beräkna den tid och kostnad som krävs för övergången till AEM as a Cloud Service genom att tillhandahålla information som annars skulle behöva samlas in och utvärderas manuellt.
 
-Du kan även hämta rapporten Best Practices Analyzer från din AEM. Se [Visa rapporten Best Practices Analyzer](/help/journey-migration/best-practices-analyzer/using-best-practices-analyzer.md#viewing-report) för mer information.
+Du kan även hämta rapporten Best Practices Analyzer från din AEM. Mer information finns i [Visa rapporten om Best Practices Analyzer](/help/journey-migration/best-practices-analyzer/using-best-practices-analyzer.md#viewing-report).

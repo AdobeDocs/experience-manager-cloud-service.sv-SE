@@ -1,5 +1,5 @@
 ---
-title: ContextHub JavaScript API-referens
+title: ContextHub JavaScript API Reference
 description: ContextHub JavaScript API är tillgängligt för skript när ContextHub-komponenten har lagts till på sidan
 exl-id: ec35bef5-610c-4e85-a43a-d4201b5eb03e
 feature: Developing, Personalization
@@ -11,13 +11,13 @@ ht-degree: 0%
 
 ---
 
-# ContextHub JavaScript API-referens {#contexthub-javascript-api-reference}
+# ContextHub JavaScript API Reference {#contexthub-javascript-api-reference}
 
-ContextHub JavaScript API är tillgängligt för skript när [ContextHub-komponenten har lagts till på sidan](adding-contexthub.md).
+ContextHub JavaScript API är tillgängligt för dina skript när [ContextHub-komponenten har lagts till på sidan ](adding-contexthub.md).
 
 ## ContextHub-konstanter {#contexthub-constants}
 
-Konstantvärden som definieras av JavaScript-API:t för ContextHub.
+Konstantvärden som definieras av ContextHub JavaScript-API:t.
 
 ### Händelsekonstanter {#event-constants}
 
@@ -64,7 +64,7 @@ I följande tabell visas namnen på händelser som inträffar för användargrä
 | `ContextHub.Constants.EVENT_UI_INITIALIZED` | Utlöses när gränssnittsbehållaren initieras | `ui-initialized` |
 | `ContextHub.Constants.ACTIVE_UI_MODE` | Anger aktivt användargränssnittsläge | `/_/active-ui-mode` |
 
-## ContextHub JavaScript API-referens {#contexthub-javascript-api-reference-2}
+## ContextHub JavaScript API Reference {#contexthub-javascript-api-reference-2}
 
 ContextHub-objektet ger åtkomst till alla arkiv.
 
@@ -95,7 +95,7 @@ Hämtar en butik som ett JavaScript-objekt.
 
 ##### Parametrar {#parameters-}
 
-* **`name`:** Namnet som butiken registrerades med.
+* **`name`:** Namnet som butiken registrerats med.
 
 ##### Returnerar {#returns-getstore-name}
 
@@ -111,7 +111,7 @@ var geoloc = ContextHub.getStore("geolocation");
 
 ## ContextHub.SegmentEngine.Segment {#contexthub-segmentengine-segment}
 
-Representerar ett ContextHub-segment. Använd `ContextHub.SegmentEngine.SegmentManager` för att få segment.
+Representerar ett ContextHub-segment. Använd `ContextHub.SegmentEngine.SegmentManager` för att hämta segment.
 
 ### Funktioner (ContextHub.ContextEngine.Segment) {#functions-contexthub-contextengine-segment}
 
@@ -145,7 +145,7 @@ Basklassen för ContextHub-butiker.
 
 #### eventera {#eventing}
 
-A [`ContextHub.Utils.Eventing`](#contexthub-utils-eventing) -objekt. Använd det här objektet för bindningsfunktioner för att lagra händelser. Mer information om standardvärde och initiering finns i [`init(name,config)`](#init-name-config).
+Ett [`ContextHub.Utils.Eventing`](#contexthub-utils-eventing)-objekt. Använd det här objektet för bindningsfunktioner för att lagra händelser. Mer information om standardvärde och initiering finns i [`init(name,config)`](#init-name-config).
 
 #### name {#name}
 
@@ -153,30 +153,30 @@ Butikens namn.
 
 #### beständighet {#persistence}
 
-A `ContextHub.Utils.Persistence` -objekt. Mer information om standardvärde och initiering finns i [`init(name,config)`](#init-name-config).
+Ett `ContextHub.Utils.Persistence`-objekt. Mer information om standardvärde och initiering finns i [`init(name,config)`](#init-name-config).
 
 ### Funktioner (ContextHub.Store.Core) {#functions-contexthub-store-core}
 
 #### addAllItems(träd, alternativ) {#addallitems-tree-options}
 
-Sammanfogar ett dataobjekt eller en array med lagringsdata. Varje nyckel/värde-par i objektet eller arrayen läggs till i arkivet (via `setItem` function):
+Sammanfogar ett dataobjekt eller en array med lagringsdata. Varje nyckel/värde-par i objektet eller arrayen läggs till i arkivet (via funktionen `setItem`):
 
-* **Objekt:** Tangenter är egenskapsnamnen.
-* **Array:** Tangenter är matrisindex.
+* **Objekt:** Nycklar är egenskapsnamnen.
+* **Matris:** Nycklar är matrisindex.
 
 Värden kan vara objekt.
 
 ##### Parametrar {#parameters-addallitems}
 
-* **`tree`:** (Objekt eller array) De data som ska läggas till i arkivet.
-* **`options`:** (Object) Ett valfritt objekt med alternativ som skickas till funktionen setItem. Mer information finns i `options` parameter för [`setItem(key,value,options)`](#setitem-key-value-options).
+* **`tree`:** (objekt eller matris) De data som ska läggas till i arkivet.
+* **`options`:** (Object) Ett valfritt objekt med alternativ som skickas till funktionen setItem. Mer information finns i parametern `options` för [`setItem(key,value,options)`](#setitem-key-value-options).
 
 ##### Returnerar {#returns-addallitems}
 
-A `boolean` värde:
+Värdet `boolean`:
 
-* Värdet för `true` anger att dataobjektet har lagrats.
-* Värdet för `false` anger att datalagret inte ändras.
+* Värdet `true` anger att dataobjektet har lagrats.
+* Värdet `false` anger att datalagret inte ändras.
 
 #### addReference(key, anotherKey) {#addreference-key-anotherkey}
 
@@ -184,20 +184,20 @@ Skapar en referens från en tangent till en annan. En nyckel kan inte referera t
 
 ##### Parametrar {#parameters-addreference}
 
-* **`key`:** Nyckeln som refererar `anotherKey`.
+* **`key`:** Nyckeln som refererar till `anotherKey`.
 
-* **`anotherkey`:** Nyckeln som refereras av `key`.
+* **`anotherkey`:** Nyckeln som `key` refererar till.
 
 ##### Returnerar {#returns-addreference}
 
-A `boolean` värde:
+Värdet `boolean`:
 
-* Värdet för `true` anger att referensen har lagts till.
-* Värdet för `false` anger att ingen referens har lagts till.
+* Värdet `true` anger att referensen har lagts till.
+* Värdet `false` anger att ingen referens har lagts till.
 
 #### announReadiness() {#announcereadiness}
 
-Utlöser `ready` -händelse för den här butiken. Den här funktionen har inga parametrar och returnerar inget värde.
+Startar `ready`-händelsen för den här butiken. Den här funktionen har inga parametrar och returnerar inget värde.
 
 #### clear() {#clean}
 
@@ -221,7 +221,7 @@ Hämtar nycklarna från butiken. Du kan också hämta nycklar som används inter
 
 ##### Parametrar {#parameters-getkeys}
 
-* **`includeInternals`:** Värdet för `true` innehåller internt använda nycklar i resultatet. Dessa tangenter börjar med understrecket (`_`). Standardvärdet är `false`.
+* **`includeInternals`:** Värdet `true` innehåller internt använda nycklar i resultatet. Dessa tangenter börjar med understrecket (`_`). Standardvärdet är `false`.
 
 ##### Returnerar {#returns-getkeys}
 
@@ -235,8 +235,8 @@ Hämtar referenserna från butiken.
 
 En array som använder refererande nycklar som index för refererade nycklar:
 
-* Referensnycklar motsvarar `key` parametern för `addReference` funktion.
-* Refererade nycklar motsvarar `anotherKey` parametern för `addReference` funktion.
+* Referensnycklar motsvarar parametern `key` i funktionen `addReference`.
+* Refererade nycklar motsvarar parametern `anotherKey` i funktionen `addReference`.
 
 #### getTree(includeInternals) {#gettree-includeinternals}
 
@@ -244,7 +244,7 @@ Hämtar dataträdet från butiken. Du kan också inkludera nyckel/värde-par som
 
 ##### Parametrar {#parameters-gettree}
 
-* `includeInternals:` Värdet för `true` innehåller nyckelvärdepar som används internt i resultatet. Nyckeln till dessa data börjar med understrecket (`_`). Standardvärdet är `false`.
+* `includeInternals:` Värdet `true` innehåller nyckelvärdepar som används internt i resultatet. Nycklarna för dessa data börjar med understrecket (`_`). Standardvärdet är `false`.
 
 ##### Returnerar {#returns-gettree}
 
@@ -256,16 +256,16 @@ Initierar butiken.
 
 * Ställer in lagringsdata till ett tomt objekt.
 * Ställer in butiksreferenserna till ett tomt objekt.
-* The `eventChannel` är `data:<name>`, där `<name>` är butiksnamnet.
-* The `storeDataKey` är `/store/<name>`, där `<name>` är butiksnamnet.
+* `eventChannel` är `data:<name>`, där `<name>` är butiksnamnet.
+* `storeDataKey` är `/store/<name>`, där `<name>` är butiksnamnet.
 
 ##### Parametrar {#parameters-init}
 
 * **`name`:** Butikens namn.
 * **`config`:** Ett objekt som innehåller konfigurationsegenskaper:
    * `eventDeferring`: Standardvärdet är 32.
-   * `eventing`: [ContextHub.Utils.Eventing](#contexthub-utils-eventing) objekt för den här butiken. Standardvärdet är `ContextHub.eventing` objekt använder.
-   * `persistence`: `ContextHub.Utils.Persistence` objekt för den här butiken. Standardvärdet är `ContextHub.persistence` -objekt.
+   * `eventing`: Objektet [ ContextHub.Utils.Eventing](#contexthub-utils-eventing) för det här arkivet. Standardvärdet är det `ContextHub.eventing`-objekt som används.
+   * `persistence`: Objektet `ContextHub.Utils.Persistence` för den här butiken. Standardvärdet är objektet `ContextHub.persistence`.
 
 #### isEventingPaused() {#iseventingpaused}
 
@@ -275,7 +275,7 @@ Avgör om händelser pausas för det här arkivet.
 
 Boolesk:
 
-* `true`: Händelsen pausas så att inga händelser utlöses för det här arkivet.
+* `true`: Händelser pausas så att inga händelser aktiveras för det här arkivet.
 * `false`: Händelser pausas inte så att händelser utlöses för det här arkivet.
 
 #### pauseEventing() {#pauseeventing}
@@ -286,22 +286,22 @@ Pausar händelser för arkivet så att inga händelser utlöses. Den här funkti
 
 Tar bort ett nyckel/värde-par från arkivet.
 
-När en tangent tas bort utlöser funktionen `data` -händelse. Händelsedata innehåller arkivnamnet, namnet på den nyckel som togs bort, det värde som togs bort, det nya värdet för nyckeln (null) och åtgärdstypen &quot;remove&quot;.
+När en tangent tas bort utlöser funktionen händelsen `data`. Händelsedata innehåller arkivnamnet, namnet på den nyckel som togs bort, det värde som togs bort, det nya värdet för nyckeln (null) och åtgärdstypen &quot;remove&quot;.
 
-Du kan även förhindra att `data` -händelse.
+Du kan också förhindra att händelsen `data` aktiveras.
 
 ##### Parametrar {#parameters-removeitem}
 
 * **`key`:** (String) Namnet på nyckeln som ska tas bort.
 * **`options`:** (Objekt) Ett objekt med alternativ. Följande objektegenskaper är giltiga:
-   * silent: Ett värde på `true` förhindrar att `data` -händelse. Standardvärdet är `false`.
+   * silent: Värdet `true` förhindrar att händelsen `data` aktiveras. Standardvärdet är `false`.
 
 ##### Returnerar {#returns-removeitem}
 
-A `boolean` värde:
+Värdet `boolean`:
 
-* Värdet för `true` anger att nyckel/värde-paret har tagits bort.
-* Värdet för `false` anger att datalagret inte ändras eftersom nyckeln inte hittades i arkivet.
+* Värdet `true` anger att nyckel/värde-paret har tagits bort.
+* Värdet `false` anger att datalagret är oförändrat eftersom nyckeln inte hittades i arkivet.
 
 #### removeReference(key) {#removereference-key}
 
@@ -309,20 +309,20 @@ Tar bort en referens från arkivet.
 
 ##### Parametrar {#parameters-removereference}
 
-* **`key`:** Nyckelreferensen som ska tas bort. Den här parametern motsvarar `key` parametern för `addReference` funktion.
+* **`key`:** Nyckelreferensen som ska tas bort. Den här parametern motsvarar parametern `key` i funktionen `addReference`.
 
 ##### Returnerar {#returns-removereference}
 
-A `boolean` värde:
+Värdet `boolean`:
 
-* Värdet för `true` anger att referensen har tagits bort.
-* Värdet för `false` anger att nyckeln inte var giltig och att arkivet är oförändrat.
+* Värdet `true` anger att referensen har tagits bort.
+* Värdet `false` anger att nyckeln inte var giltig och att arkivet inte är förändrat.
 
 #### reset(keepRemainingData) {#reset-keepremainingdata}
 
 Återställer de ursprungliga värdena för butikens beständiga data. Du kan också ta bort alla andra data från arkivet. Händelser pausas för det här arkivet när arkivet återställs. Den här funktionen returnerar inget värde.
 
-Startvärden anges i `initialValues` egenskapen för det config-objekt som används för att instansiera lagringsobjektet.
+Initialvärden anges i egenskapen `initialValues` för det config-objekt som används för att instansiera lagringsobjektet.
 
 ##### Parametrar {#parameters-reset}
 
@@ -334,12 +334,12 @@ Hämtar en refererad nyckel. Du kan också ange antalet iterationer som ska anv�
 
 ##### Parametrar {#parameters-resolvereference}
 
-* **`key`:** (String) Nyckeln som referensen ska matchas för. Detta `key` parametern motsvarar `key` parametern för `addReference` funktion.
+* **`key`:** (String) Nyckeln som referensen ska matchas för. Parametern `key` motsvarar parametern `key` i funktionen `addReference`.
 * **`retry`:** (Number) Antalet iterationer som ska användas.
 
 ##### Returnerar {#returns-resolvereference}
 
-A `string` värdet som representerar den refererade nyckeln. Om ingen referens är löst, är värdet för `key` parametern returneras.
+Ett `string`-värde som representerar den refererade nyckeln. Om ingen referens matchas returneras värdet för parametern `key`.
 
 #### resumeEventing() {#resumeeventing}
 
@@ -349,31 +349,31 @@ A `string` värdet som representerar den refererade nyckeln. Om ingen referens �
 
 Lägger till ett nyckel/värde-par i butiken.
 
-Utlöser `data` bara om värdet för nyckeln skiljer sig från värdet som för närvarande lagras för nyckeln. Du kan även förhindra att utlösaren av `data` -händelse.
+Startar bara `data`-händelsen om värdet för nyckeln skiljer sig från värdet som för närvarande lagras för nyckeln. Du kan också förhindra utlösaren av `data`-händelsen.
 
-Händelsedata innehåller butiksnamnet, nyckeln, det föregående värdet, det nya värdet och åtgärdstypen för `set`.
+Händelsedata innehåller butiksnamnet, nyckeln, det tidigare värdet, det nya värdet och åtgärdstypen för `set`.
 
 ##### Parametrar {#parameters-setitem}
 
 * **`key`:** (String) Namnet på nyckeln.
 * **`options`:** (Objekt) Ett objekt med alternativ. Följande objektegenskaper är giltiga:
-   * `silent`: Värdet för `true` förhindrar att `data` -händelse. Standardvärdet är `false`.
+   * `silent`: Värdet `true` förhindrar att `data`-händelsen aktiveras. Standardvärdet är `false`.
 * **`value`:** (Objekt) Värdet som ska associeras med nyckeln.
 
 ##### Returnerar {#returns-setitem}
 
-A `boolean` värde:
+Värdet `boolean`:
 
-* Värdet för `true` anger att dataobjektet har lagrats.
-* Värdet för `false` anger att datalagret inte ändras.
+* Värdet `true` anger att dataobjektet har lagrats.
+* Värdet `false` anger att datalagret inte ändras.
 
 ## ContextHub.Store.JSONPStore {#contexthub-store-jsonpstore}
 
-Ett arkiv som innehåller JSON-data. Data hämtas från en extern JSONP-tjänst, eller eventuellt från en tjänst som returnerar JSON-data. Ange tjänstinformationen med [`init`](#init-name-config) när du skapar en instans av den här klassen.
+Ett arkiv som innehåller JSON-data. Data hämtas från en extern JSONP-tjänst, eller eventuellt från en tjänst som returnerar JSON-data. Ange tjänstinformationen med funktionen [`init`](#init-name-config) när du skapar en instans av den här klassen.
 
-Butiken använder beständighet i minnet (JavaScript-variabel). Lagringsdata är bara tillgängliga under sidans livstid.
+Butiken använder In-Memory Persiststance (JavaScript variable). Lagringsdata är bara tillgängliga under sidans livstid.
 
-ContextHub.Store.JSONPStore extends [ContextHub.Store.Core](#contexthub-store-core) och ärver funktionerna i den klassen.
+ContextHub.Store.JSONPStore utökar [ContextHub.Store.Core](#contexthub-store-core) och ärver funktionerna för den klassen.
 
 ### Funktioner (ContextHub.Store.JSONPStore) {#functions-contexthub-store-jsonpstore}
 
@@ -385,15 +385,15 @@ Konfigurerar informationen för anslutning till den JSONP-tjänst som det här o
 
 * **`serviceConfig`:** Ett objekt som innehåller följande egenskaper:
    * `host`: (String) Servernamnet eller IP-adressen.
-   * `jsonp`: (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, i annat fall false. När värdet är true är {callback: &quot;ContextHub.Callbacks.*Object.name*}-objektet läggs till i service.params-objektet.
-   * `params`: (Object) URL-parametrar representeras som objektegenskaper. Parameternamn är egenskapsnamn och parametervärden är egenskapsvärden.
+   * `jsonp`: (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, annars false. När värdet är true är {callback: &quot;ContextHub.Callbacks.Objektet *Object.name* läggs till i objektet service.params.
+   * `params`: (Objekt) URL-parametrar representeras som objektegenskaper. Parameternamn är egenskapsnamn och parametervärden är egenskapsvärden.
    * `path`: (String) Sökvägen till tjänsten.
    * `port`: (Number) Tjänstens portnummer.
    * `secure`: (String eller Boolean) Anger vilket protokoll som ska användas för tjänstens URL:
       * `auto`: //
       * `true`: https://
       * `false`: http://
-* **åsidosätt:** (Boolean). Värdet för `true` gör att den befintliga tjänstkonfigurationen ersätts med egenskaperna för `serviceConfig`. Värdet för `false` gör att befintliga tjänstkonfigurationsegenskaper sammanfogas med egenskaperna för `serviceConfig`.
+* **åsidosätt:** (Boolean). Värdet `true` gör att den befintliga tjänstkonfigurationen ersätts av egenskaperna för `serviceConfig`. Värdet `false` gör att de befintliga tjänstkonfigurationsegenskaperna sammanfogas med egenskaperna för `serviceConfig`.
 
 #### getRawResponse() {#getrawresponse}
 
@@ -412,11 +412,11 @@ Hämtar tjänstobjektet för det här ContextHub.Store.JSONPStore-objektet. Tjä
 Ett objekt med följande egenskaper:
 
 * **`host`:** (String) Servernamnet eller IP-adressen.
-* **`jsonp`:** (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, i annat fall false. När värdet är true är {callback: &quot;ContextHub.Callbacks.*Object.name*}-objektet läggs till i service.params-objektet.
+* **`jsonp`:** (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, annars false. När värdet är true är {callback: &quot;ContextHub.Callbacks.Objektet *Object.name* läggs till i objektet service.params.
 * **`params`:** (Objekt) URL-parametrar representeras som objektegenskaper. Parameternamn är egenskapsnamn och parametervärden är egenskapsvärden.
 * **`path`:** (String) Sökvägen till tjänsten.
-* **`port`:** (Nummer) Tjänstens portnummer.
-* **`secure`:** (Sträng eller Boolean) Anger vilket protokoll som ska användas för tjänstens URL:
+* **`port`:** (Number) Tjänstens portnummer.
+* **`secure`:** (String eller Boolean) Anger vilket protokoll som ska användas för tjänstens URL:
    * `auto`: //
    * `true`: https://
    * `false`: http://
@@ -427,39 +427,39 @@ Hämtar URL:en för JSONP-tjänsten.
 
 ##### Parametrar {#parameters-getserviceurl}
 
-* **`resolve`:** (Boolean) Avgör om lösta parametrar ska tas med i URL:en. Värdet för `true` löser parametrar, och `false` inte.
+* **`resolve`:** (Boolean) Avgör om matchade parametrar ska inkluderas i URL:en. Värdet `true` löser parametrarna och `false` gör det inte.
 
 ##### Returnerar {#returns-getserviceurl}
 
-A `string` värde som representerar tjänst-URL:en.
+Ett `string`-värde som representerar tjänst-URL:en.
 
 #### init(name, config) {#init-name-config-1}
 
-initierar `ContextHub.Store.JSONPStore` -objekt.
+initierar objektet `ContextHub.Store.JSONPStore`.
 
 ##### Parametrar {#parameters-init-1}
 
 * **`name`:** (String) Butikens namn.
-* **`config`:** (Objekt) Ett objekt som innehåller egenskapen service. JSONPStore-objektet använder egenskaperna för `service` objekt för att skapa URL:en för JSONP-tjänsten:
+* **`config`:** (Objekt) Ett objekt som innehåller egenskapen service. JSONPStore-objektet använder egenskaperna för objektet `service` för att skapa URL:en för JSONP-tjänsten:
    * `eventDeferring`: 32.
-   * `eventing`: ContextHub.Utils.Eventing-objektet för det här arkivet. Standardvärdet är `ContextHub.eventing` -objekt.
-   * `persistence`: ContextHub.Utils.Persistence-objektet för det här arkivet. Som standard används minnesbeständighet (JavaScript-objekt).
-   * `service`: (Object)
+   * `eventing`: Objektet ContextHub.Utils.Eventing för det här arkivet. Standardvärdet är objektet `ContextHub.eventing`.
+   * `persistence`: Objektet ContextHub.Utils.Persistence för det här arkivet. Som standard används minnesbeständighet (JavaScript-objekt).
+   * `service`: (objekt)
       * `host`: (String) Servernamnet eller IP-adressen.
-      * `jsonp`: (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, i annat fall false. När true är `{callback: "ContextHub.Callbacks.*Object.name*}`objekt läggs till i `service.params`.
-      * `params`: (Object) URL-parametrar representeras som objektegenskaper. Parameternamn och värden är objektegenskapsnamnen och -värdena.
+      * `jsonp`: (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, annars false. När värdet är true läggs objektet `{callback: "ContextHub.Callbacks.*Object.name*}` till i `service.params`.
+      * `params`: (Objekt) URL-parametrar representeras som objektegenskaper. Parameternamn och värden är objektegenskapsnamnen och -värdena.
       * `path`: (String) Sökvägen till tjänsten.
       * `port`: (Number) Tjänstens portnummer.
       * `secure`: (String eller Boolean) Anger vilket protokoll som ska användas för tjänstens URL:
          * `auto`: //
          * `true`: https://
          * `false`: http://
-      * `timeout`: (Number) Den väntetid i millisekunder som JSONP-tjänsten ska svara före timeout.
-         * `ttl`: Den kortaste tiden i millisekunder som går mellan anrop till JSONP-tjänsten. (Se [queryService](#queryservice-reload) funktion).
+      * `timeout`: (Nummer) Väntetiden i millisekunder på att JSONP-tjänsten ska svara före timeout.
+         * `ttl`: Den kortaste tiden i millisekunder som går mellan anrop till JSONP-tjänsten. (Se funktionen [queryService](#queryservice-reload)).
 
 #### queryService(reload) {#queryservice-reload}
 
-Frågar fjärrtjänsten JSONP och cachelagrar svaret. Om tiden sedan föregående anrop till den här funktionen är mindre än värdet för `config.service.ttl`, anropas inte tjänsten och det cachelagrade svaret ändras inte. Du kan också tvinga tjänsten att anropas. The `config.service.ttl`egenskapen anges när anropet av [init](#init-name-config) funktion för att initiera arkivet.
+Frågar fjärrtjänsten JSONP och cachelagrar svaret. Om tiden sedan det föregående anropet till den här funktionen är mindre än värdet `config.service.ttl` anropas inte tjänsten och det cachelagrade svaret ändras inte. Du kan också tvinga tjänsten att anropas. Egenskapen `config.service.ttl` anges när funktionen [init](#init-name-config) anropas för att initiera arkivet.
 
 Startar ready-händelsen när frågan är klar. Om JSONP-tjänstens URL inte är inställd händer ingenting.
 
@@ -483,15 +483,15 @@ Matchar den angivna parametern.
 
 ## ContextHub.Store.PersistedJSONPStore {#contexthub-store-persistedjsonpstore}
 
-`ContextHub.Store.PersistedJSONPStore` extends [ContextHub.Store.JSONPStore](#contexthub-store-jsonpstore) så den ärver alla funktioner i den klassen. Data som hämtas från JSONP-tjänsten sparas dock enligt konfigurationen för ContextHub-beständighet. (Se [Persistenslägen:](adding-contexthub.md#persistence-modes))
+`ContextHub.Store.PersistedJSONPStore` utökar [ ContextHub.Store.JSONPStore](#contexthub-store-jsonpstore) så att den ärver alla funktioner i den klassen. Data som hämtas från JSONP-tjänsten sparas dock enligt konfigurationen för ContextHub-beständighet. (Se [Persistenslägen:](adding-contexthub.md#persistence-modes))
 
 ## ContextHub.Store.PersistedStore {#contexthub-store-persistedstore}
 
-`ContextHub.Store.PersistedStore` extends [ContextHub.Store.Core](#contexthub-store-core) så den ärver alla funktioner i den klassen. Data i det här arkivet bevaras enligt konfigurationen för ContextHub-beständighet.
+`ContextHub.Store.PersistedStore` utökar [ ContextHub.Store.Core](#contexthub-store-core) så att den ärver alla funktioner i den klassen. Data i det här arkivet bevaras enligt konfigurationen för ContextHub-beständighet.
 
 ## ContextHub.Store.SessionStore {#contexthub-store-sessionstore}
 
-`ContextHub.Store.SessionStore` extends [ContextHub.Store.Core](#contexthub-store-core) så den ärver alla funktioner i den klassen. Data i det här arkivet bevaras med hjälp av en minnesbeständig (JavaScript-objekt).
+`ContextHub.Store.SessionStore` utökar [ ContextHub.Store.Core](#contexthub-store-core) så att den ärver alla funktioner i den klassen. Data i det här arkivet sparas med InMemory Perstance (JavaScript-objekt).
 
 ## ContextHub.UI {#contexthub-ui}
 
@@ -501,17 +501,17 @@ Hanterar gränssnittsmoduler och gränssnittsmodulrenderare.
 
 #### registerRenderer(moduleType, renderer, dontRender) {#registerrenderer-moduletype-renderer-dontrender}
 
-Registrerar en gränssnittsmodulrenderare med ContextHub. När återgivaren har registrerats kan den användas för att [skapa gränssnittsmoduler](configuring-contexthub.md#adding-a-ui-module). Använd den här funktionen när du är [utöka `ContextHub.UI.BaseModuleRenderer`](extending-contexthub.md#creating-contexthub-ui-module-types) för att skapa en anpassad renderare för användargränssnittsmodul.
+Registrerar en gränssnittsmodulrenderare med ContextHub. När återgivaren har registrerats kan den användas för att [skapa gränssnittsmoduler](configuring-contexthub.md#adding-a-ui-module). Använd den här funktionen när du [utökar `ContextHub.UI.BaseModuleRenderer`](extending-contexthub.md#creating-contexthub-ui-module-types) för att skapa en anpassad renderare för användargränssnittsmodul.
 
 ##### Parametrar {#parameters-registerrenderer}
 
-* **`moduleType`:** (String) Identifieraren för gränssnittsmodulens renderare. Om en renderare redan är registrerad med det angivna värdet avregistreras den befintliga renderaren innan den registreras.
+* **`moduleType`:** (String) Identifieraren för gränssnittsmodulåtergivaren. Om en renderare redan är registrerad med det angivna värdet avregistreras den befintliga renderaren innan den registreras.
 * **`renderer`:** (String) Namnet på den klass som återger gränssnittsmodulen.
-* **`dontRender`:** (Boolean) Ange som `true` för att förhindra att ContextHub-gränssnittet återges efter att återgivaren har registrerats. Standardvärdet är `false`.
+* **`dontRender`:** (Boolean) Ange `true` för att förhindra att ContextHub-gränssnittet återges efter att återgivaren har registrerats. Standardvärdet är `false`.
 
 ##### Exempel {#example-registerrenderer}
 
-I följande exempel registreras en renderare som `contexthub.browserinfo` modultyp.
+I följande exempel registreras en renderare som modultypen `contexthub.browserinfo`.
 
 ```javascript
 ContextHub.UI.registerRenderer('contexthub.browserinfo', new SurferinfoRenderer());
@@ -529,11 +529,11 @@ Avgör om det finns en cookie.
 
 ##### Parametrar {#parameters-exists}
 
-* **`key`:** A `String` som innehåller nyckeln till den cookie som du testar för.
+* **`key`:** A `String` som innehåller nyckeln för den cookie som du testar för.
 
 ##### Returnerar {#returns-exists}
 
-A `boolean` värdet true anger att cookien finns.
+Värdet `boolean` är true och anger att cookien finns.
 
 ##### Exempel {#example-exists}
 
@@ -549,7 +549,7 @@ Returnerar alla cookies som har nycklar som matchar ett filter.
 
 ##### Parametrar {#parameters-getallitems}
 
-* **`filter`:** (Valfritt) Kriterier för att matcha cookie-nycklar. Om du vill returnera alla cookies anger du inget värde. Följande typer stöds:
+* **`filter`:** (valfritt) Villkor för matchning av cookie-nycklar. Om du vill returnera alla cookies anger du inget värde. Följande typer stöds:
    * Sträng: Strängen jämförs med cookie-nyckeln.
    * Array: Varje objekt i arrayen är ett filter.
    * Ett RegExp-objekt: Objektets testfunktion används för att matcha cookie-nycklar.
@@ -575,7 +575,7 @@ Returnerar ett cookie-värde.
 
 ##### Returnerar {#returns-getitem-1}
 
-cookie-värdet, eller `null` om ingen cookie hittades för nyckeln.
+Cookie-värdet eller `null` om ingen cookie hittades för nyckeln.
 
 ##### Exempel {#example-getitem-1}
 
@@ -589,11 +589,11 @@ Returnerar en array med nycklarna för befintliga cookies som matchar ett filter
 
 ##### Parametrar {#parameters-getkeys-1}
 
-* **`filter`:** Kriterier för matchning av cookie-nycklar. Följande typer stöds:
+* **`filter`:** Villkor för matchning av cookie-nycklar. Följande typer stöds:
    * Sträng: Strängen jämförs med cookie-nyckeln.
    * Array: Varje objekt i arrayen är ett filter.
    * Ett RegExp-objekt: Objektets testfunktion används för att matcha cookie-nycklar.
-   * En funktion: En funktion som testar en cookie-nyckel för en matchning. Funktionen måste ta cookie-nyckeln som parameter och returnera `true` om testet bekräftar en matchning.
+   * En funktion: En funktion som testar en cookie-nyckel för en matchning. Funktionen måste ta cookie-nyckeln som en parameter och returnera `true` om testet bekräftar en matchning.
 
 ##### Returnerar {#returns-getkeys-1}
 
@@ -611,8 +611,8 @@ Tar bort en cookie. Om du vill ta bort cookien anges värdet till en tom sträng
 
 ##### Parametrar {#parameters-removeitem-1}
 
-* **`key`:** A `String` värdet som representerar nyckeln till den cookie som ska tas bort.
-* **`options`:** Ett objekt som innehåller egenskapsvärden för konfiguration av cookie-attributen. Se [`setItem`](#setitem-key-value-options) funktion för information. The `expires` -egenskapen har ingen effekt.
+* **`key`:** Ett `String`-värde som representerar nyckeln till den cookie som ska tas bort.
+* **`options`:** Ett objekt som innehåller egenskapsvärden för konfiguration av cookie-attributen. Mer information finns i funktionen [`setItem`](#setitem-key-value-options). Egenskapen `expires` har ingen effekt.
 
 ##### Returnerar {#returns-removeitem-1}
 
@@ -630,12 +630,12 @@ Skapar en cookie med den angivna nyckeln och det angivna värdet och lägger til
 
 ##### Parametrar {#parameters-setitem-1}
 
-* **`key`:** En sträng som innehåller nyckeln till cookien.
+* **`key`:** En sträng som innehåller nyckeln för cookien.
 * **`value`:** En sträng som innehåller cookie-värdet.
 * **`options`:** (Valfritt) Ett objekt som innehåller någon av följande egenskaper som konfigurerar cookie-attributen:
-   * `expires`: A `date` eller `number` värdet som anger när cookien förfaller. Ett datumvärde anger den absoluta förfallotiden. Ett tal (i dagar) anger förfallotiden till den aktuella tiden plus talet. Standardvärdet är `undefined`.
-   * `secure`: A `boolean` värde som anger `Secure` cookie-attributet. Standardvärdet är `false`.
-   * `path`: A `String` värde som ska användas som `Path` cookie-attributet. Standardvärdet är `undefined`.
+   * `expires`: Ett `date`- eller `number`-värde som anger när cookien upphör att gälla. Ett datumvärde anger den absoluta förfallotiden. Ett tal (i dagar) anger förfallotiden till den aktuella tiden plus talet. Standardvärdet är `undefined`.
+   * `secure`: Ett `boolean`-värde som anger cookie-attributet `Secure`. Standardvärdet är `false`.
+   * `path`: Ett `String`-värde som ska användas som `Path`-attribut för cookien. Standardvärdet är `undefined`.
 
 ##### Returnerar {#returns-setitem-1}
 
@@ -654,12 +654,12 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 #### vDanish(filter, options) {#vanish-filter-options}
 
-Tar bort alla cookies som matchar ett visst filter. Cookies matchas med `getKeys` och tas bort med `removeItem` funktion.
+Tar bort alla cookies som matchar ett visst filter. Cookies matchas med funktionen `getKeys` och tas bort med funktionen `removeItem`.
 
 ##### Parametrar {#parameters-vanish}
 
-* **`filter`:** The `filter` argument som ska användas i anropet till [`getKeys`](#getkeys-filter) funktion.
-* **`options`:** The `options` argument som ska användas i anropet till [`removeItem`](#removeitem-key-options) funktion.
+* **`filter`:** Argumentet `filter` som ska användas i anropet till funktionen [`getKeys`](#getkeys-filter).
+* **`options`:** Argumentet `options` som ska användas i anropet till funktionen [`removeItem`](#removeitem-key-options).
 
 ##### Returnerar {#returns-vanish}
 
@@ -667,7 +667,7 @@ Den här funktionen returnerar inget värde.
 
 ## ContextHub.Utils.Eventing {#contexthub-utils-eventing}
 
-Gör att du kan binda och koppla upp funktioner till ContextHub-butikshändelser. Åtkomst `ContextHub.Utils.Eventing` objekt för en butik med [eventera](#eventing) butikens egenskap.
+Gör att du kan binda och koppla upp funktioner till ContextHub-butikshändelser. Få åtkomst till `ContextHub.Utils.Eventing`-objekt för en butik med hjälp av egenskapen [Eventing](#eventing) för butiken.
 
 ### Funktioner (ContextHub.Utils.Eventing) {#functions-contexthub-utils-eventing}
 
@@ -677,8 +677,8 @@ Avbinder en funktion från en händelse.
 
 ##### Parametrar {#parameters-off}
 
-* **`name`:** The [händelsens namn](#contexthub-utils-eventing) som du avbinder funktionen för.
-* **`selector`:** Väljaren som identifierar bindningen. (Se `selector` -parametern för [`on`](#on-name-handler-selector-triggerforpastevents) och [`once`](#once-name-handler-selector-triggerforpastevents) funktioner).
+* **`name`:** Namnet [på händelsen ](#contexthub-utils-eventing) som du tar bort bindningen för funktionen.
+* **`selector`:** Väljaren som identifierar bindningen. (Se parametern `selector` för funktionerna [`on`](#on-name-handler-selector-triggerforpastevents) och [`once`](#once-name-handler-selector-triggerforpastevents).)
 
 ##### Returnerar {#returns-off}
 
@@ -690,19 +690,19 @@ Bindar en funktion till en händelse. Funktionen anropas varje gång händelsen 
 
 ##### Parametrar {#parameters-on}
 
-* **`name`:** (String) [händelsens namn](#contexthub-utils-eventing) som du binder funktionen till.
+* **`name`:** (String) Namnet [på händelsen ](#contexthub-utils-eventing) som du binder funktionen till.
 * **`handler`:** (Funktion) Funktionen som ska bindas till händelsen.
-* **`selector`:** (String) En unik identifierare för bindningen. Du behöver väljaren för att identifiera bindningen om du vill använda `off` funktionen för att ta bort bindningen.
-* **`triggerForPastEvents`:** (Boolean) Anger om hanteraren ska köras för händelser som har inträffat tidigare. Värdet för `true` anropar hanteraren för tidigare händelser. Värdet för `false` anropar hanteraren för framtida händelser. Standardvärdet är `true`.
+* **`selector`:** (String) En unik identifierare för bindningen. Du behöver väljaren för att identifiera bindningen om du vill använda funktionen `off` för att ta bort bindningen.
+* **`triggerForPastEvents`:** (Boolean) Anger om hanteraren ska köras för händelser som har inträffat tidigare. Värdet `true` anropar hanteraren för tidigare händelser. Värdet `false` anropar hanteraren för framtida händelser. Standardvärdet är `true`.
 
 ##### Returnerar {#returns-on}
 
-När `triggerForPastEvents` argument `true`returnerar den här funktionen en `boolean` värde som anger om händelsen har inträffat tidigare:
+När argumentet `triggerForPastEvents` är `true` returnerar den här funktionen ett `boolean`-värde som anger om händelsen har inträffat tidigare:
 
 * `true`: Händelsen inträffade tidigare och hanteraren anropas.
 * `false`: Händelsen har inte inträffat tidigare.
 
-If `triggerForPastEvents` är `false`returnerar den här funktionen inget värde.
+Om `triggerForPastEvents` är `false` returnerar den här funktionen inget värde.
 
 ##### Exempel {#example-on}
 
@@ -730,19 +730,19 @@ Bindar en funktion till en händelse. Funktionen anropas bara en gång för den 
 
 ##### Parametrar {#parameters-once}
 
-* **`name`:** (String) [händelsens namn](#contexthub-utils-eventing) som du binder funktionen till.
+* **`name`:** (String) Namnet [på händelsen ](#contexthub-utils-eventing) som du binder funktionen till.
 * **`handler`:** (Funktion) Funktionen som ska bindas till händelsen.
-* **`selector`:** (String) En unik identifierare för bindningen. Du behöver väljaren för att identifiera bindningen om du vill använda `off` funktionen för att ta bort bindningen.
-* **`triggerForPastEvents`:** (Boolean) Anger om hanteraren ska köras för händelser som har inträffat tidigare. Värdet för `true` anropar hanteraren för tidigare händelser. Värdet för `false` anropar hanteraren för framtida händelser. Standardvärdet är `true`.
+* **`selector`:** (String) En unik identifierare för bindningen. Du behöver väljaren för att identifiera bindningen om du vill använda funktionen `off` för att ta bort bindningen.
+* **`triggerForPastEvents`:** (Boolean) Anger om hanteraren ska köras för händelser som har inträffat tidigare. Värdet `true` anropar hanteraren för tidigare händelser. Värdet `false` anropar hanteraren för framtida händelser. Standardvärdet är `true`.
 
 ##### Returnerar {#returns-once}
 
-När `triggerForPastEvents` argument `true`returnerar den här funktionen en `boolean` värde som anger om händelsen har inträffat tidigare:
+När argumentet `triggerForPastEvents` är `true` returnerar den här funktionen ett `boolean`-värde som anger om händelsen har inträffat tidigare:
 
 * `true`: Händelsen inträffade tidigare och hanteraren anropas.
 * `false`: Händelsen har inte inträffat tidigare.
 
-If `triggerForPastEvents` är `false`returnerar den här funktionen inget värde.
+Om `triggerForPastEvents` är `false` returnerar den här funktionen inget värde.
 
 ## ContextHub.Utils.inheritance {#contexthub-utils-inheritance}
 
@@ -805,7 +805,7 @@ Serialiserar JavaScript-värden och -objekt till strängvärden i JSON-format.
 
 ##### Returnerar {#returns-stringify}
 
-Det serialiserade strängvärdet. När `data` är ett R `egExp` returnerar funktionen ett tomt objekt. När `data` är en funktion, returnerar `undefined`.
+Det serialiserade strängvärdet. När `data` är ett R `egExp`-värde returnerar den här funktionen ett tomt objekt. Returnerar `undefined` när `data` är en funktion.
 
 ##### Exempel {#example-stringify}
 
@@ -838,7 +838,7 @@ Skapar en kopia av ett dataobjekt och lägger till dataträdet från ett andra o
 ##### Parametrar {#parameters-addallitems-1}
 
 * **`tree`:** Det objekt som kopieras.
-* **`secondTree`:** Det objekt som sammanfogas med kopian av `tree` -objekt.
+* **`secondTree`:** Objektet som sammanfogas med kopian av `tree`-objektet.
 
 ##### Returnerar {#returns-addallitems-1}
 
@@ -867,11 +867,11 @@ Hämtar värdet från ett objekt för nyckeln.
 
 ##### Returnerar {#returns-getitem-2}
 
-Värdet som motsvarar tangenten. När nyckeln har underordnade nycklar returnerar den här funktionen ett komplext objekt. När värdetypen för nyckeln är `undefined`, `null` returneras.
+Värdet som motsvarar tangenten. När nyckeln har underordnade nycklar returnerar den här funktionen ett komplext objekt. När värdetypen för nyckeln är `undefined` returneras `null`.
 
 ##### Exempel {#example-getitem-2}
 
-Titta på följande JavaScript-objekt:
+Tänk på följande JavaScript-objekt:
 
 ```javascript
 myObject {
@@ -919,9 +919,9 @@ Hämtar alla nycklar från ett objekts dataträd. Om du vill kan du bara hämta 
 
 ##### Parametrar {#parameters-getkeys-2}
 
-* **`tree`:** Det objekt som nycklarna för dataträdet ska hämtas från.
+* **`tree`:** Det objekt som nycklarna i dataträdet ska hämtas från.
 * **`parent`:** (Valfritt) Nyckeln till ett objekt i dataträdet som du vill hämta nycklarna för de underordnade objekten för.
-* **`order`:** (Valfritt) En funktion som bestämmer sorteringsordningen för de returnerade tangenterna. (Se [`Array.prototype.sort`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) på Mozilla Developer Network.)
+* **`order`:** (Valfritt) En funktion som fastställer sorteringsordningen för de returnerade tangenterna. (Se [`Array.prototype.sort`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) i Mozilla Developer Network.)
 
 ##### Returnerar {#returns-getkeys-2}
 
@@ -948,7 +948,7 @@ myObject {
 }
 ```
 
-The `ContextHub.Utils.JSON.tree.getKeys(myObject);` skriptet returnerar följande array:
+Skriptet `ContextHub.Utils.JSON.tree.getKeys(myObject);` returnerar följande array:
 
 ```javascript
 ["/location", "/location/city", "/location/country", "/location/latitude", "/location/longitude", "/location/weather", "/location/weather/humidity", "/location/weather/precipitation", "/location/weather/temperature", "/location/weather/wind"]
@@ -1015,15 +1015,15 @@ Använd den resulterande arrayen för att skapa en användbar nyckel.
 
 ##### Parametrar {#parameters-sanitizekey}
 
-* **`key`:** The `string` för att sanera.
+* **`key`:** `string` som ska saneras.
 
 ##### Returnerar {#returns-sanitizekey}
 
-En array med `string` värden där varje sträng är den del av `key` som avgränsades av snedstreck. representerar den sanerade nyckeln. Om den sanerade arrayen har längden noll returneras den här funktionen `null`.
+En array med `string` värden där varje sträng är den del av `key` som avgränsades av snedstreck. representerar den sanerade nyckeln. Om den sanerade arrayen har längden noll returnerar funktionen `null`.
 
 ##### Exempel {#example-sanitizekey}
 
-Följande kod sanerar en sträng för att skapa arrayen `["this", "is", "a", "path"]`och sedan genererar nyckeln `"/this/is/a/path"` från matrisen:
+Följande kod sanerar en sträng för att skapa arrayen `["this", "is", "a", "path"]` och genererar sedan nyckeln `"/this/is/a/path"` från arrayen:
 
 ```javascript
 var key = " / this////is/a/path ";
@@ -1033,17 +1033,17 @@ ContextHub.Utils.JSON.tree.sanitizeKey(key)
 
 #### setItem(tree, key, value) {#setitem-tree-key-value}
 
-Lägger till ett nyckel/värde-par i dataträdet för en kopia av ett objekt. Mer information om dataträd finns i [Persistens.](contexthub.md#persistence)
+Lägger till ett nyckel/värde-par i dataträdet för en kopia av ett objekt. Mer information om dataträd finns i [Persistence.](contexthub.md#persistence)
 
 ##### Parametrar {#parameters-setitem-2}
 
 * **`tree`:** Ett dataobjekt.
-* **`key`:** Den tangent som ska kopplas till värdet som du lägger till. Nyckeln är sökvägen till objektet i dataträdet. Detta funktionsanrop `ContextHub.Utils.JSON.tree.sanitize` om du vill rensa nyckeln innan du lägger till den.
+* **`key`:** Nyckeln som ska associeras med värdet som du lägger till. Nyckeln är sökvägen till objektet i dataträdet. Den här funktionen anropar `ContextHub.Utils.JSON.tree.sanitize` för att rensa nyckeln innan den läggs till.
 * **`value`:** Värdet som ska läggas till i dataträdet.
 
 ##### Returnerar {#returns-setitem-2}
 
-En kopia av `tree` objekt som innehåller `key`/ `value` par.
+En kopia av objektet `tree` som innehåller paret `key`/ `value`.
 
 ##### Exempel {#example-setitem-2}
 
@@ -1080,7 +1080,7 @@ Returnerar de butikstyper som är registrerade som butikskandidater. Hämta anti
 
 ##### Parametrar {#parameters-getregisteredcandidates}
 
-* **`storeType`:** (String) Namnet på lagringstypen. Se `storeType` parametern för [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](#contexthub-utils-storecandidates) funktion.
+* **`storeType`:** (String) Namnet på lagringstypen. Se parametern `storeType` för funktionen [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](#contexthub-utils-storecandidates).
 
 ##### Returnerar {#returns-getregisteredcandidates}
 
@@ -1092,7 +1092,7 @@ Returnerar en butikstyp från de registrerade anbudssökande. Om fler än en lag
 
 ##### Parametrar {#parameters-getstorefromcandidates}
 
-* `storeType`: (String) Namnet på lagringskandidaten. Se `storeType` parametern för [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](#registerstorecandidate-store-storetype-priority-applies) funktion.
+* `storeType`: (String) Namnet på lagringskandidaten. Se parametern `storeType` för funktionen [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](#registerstorecandidate-store-storetype-priority-applies).
 
 ##### Returnerar {#returns-getstorefromcandidates}
 
@@ -1104,7 +1104,7 @@ Returnerar namnen på de butikstyper som är registrerade som butikskandidater. 
 
 ##### Returnerar {#returns-getsupportedstoretypes}
 
-En array med strängvärden, där varje sträng är den storetype som en lagringskandidat registrerades med. Se `storeType` parametern för [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](#contexthub-utils-storecandidates) funktion.
+En array med strängvärden, där varje sträng är den storetype som en lagringskandidat registrerades med. Se parametern `storeType` för funktionen [`ContextHub.Utils.storeCandidates.registerStoreCandidate`](#contexthub-utils-storecandidates).
 
 #### registerStoreCandidate(store, storeType, priority, apply) {#registerstorecandidate-store-storetype-priority-applies}
 
@@ -1114,10 +1114,10 @@ Prioriteten är ett tal som anger vikten av butiker med samma namn. När en buti
 
 ##### Parametrar {#parameters-registerstorecandidate}
 
-* **`store`:** (Objekt) Det lagringsobjekt som ska registreras som lagringskandidater.
+* **`store`:** (Objekt) Det lagringsobjekt som ska registreras som en lagringskandidater.
 * **`storeType`:** (String) Namnet på lagringskandidaten. Detta värde krävs när en instans av lagringskandidaten skapas.
-* **`priority`:** (Number) Prioriteten för butikskandidaten.
-* **`applies`:** (Funktion) Funktionen som ska anropas som utvärderar butikens tillämplighet i den aktuella miljön. Funktionen måste returnera `true` om butiken är tillämplig, och `false` annars. Standardvärdet är en funktion som returnerar true: `function() {return true;}`
+* **`priority`:** (Number) Prioriteten för lagringskandidaten.
+* **`applies`:** (Funktion) Den funktion som ska anropas som utvärderar butikens tillämplighet i den aktuella miljön. Funktionen måste returnera `true` om arkivet är tillämpligt, i annat fall `false`. Standardvärdet är en funktion som returnerar true: `function() {return true;}`
 
 ##### Exempel {#example-registerstorecandidate}
 

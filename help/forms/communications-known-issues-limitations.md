@@ -73,22 +73,22 @@ Se alltid till att du använder rätt XDC-fil för skrivaren. Undvik till exempe
 
 ### Skript för XFA-formulär (XDP/PDF) {#scripts}
 
-En formulärdesign som används med kommunikations-API:erna kan innehålla skript som körs på servern. Kontrollera att en formulärdesign inte innehåller skript som körs på klienten. Mer information om hur du skapar formulärdesignskript finns i [Designer - hjälp](use-forms-designer.md).
+En formulärdesign som används med kommunikations-API:erna kan innehålla skript som körs på servern. Kontrollera att en formulärdesign inte innehåller skript som körs på klienten. Mer information om hur du skapar formulärdesignskript finns i [Designer-hjälpen](use-forms-designer.md).
 
 <!-- #### Working with Fonts
  Document Considerations for Working with Fonts>> -->
 
 ### Teckensnittsmappning {#font-mapping}
 
-Om du vill designa ett formulär som använder teckensnitt som finns i skrivaren, väljer du ett teckensnittsnamn i Designer som matchar teckensnitten som finns i skrivaren. En lista med teckensnitt som stöds för PCL eller PostScript finns i motsvarande enhetsprofiler (XDC-filer). Du kan också skapa teckensnittsmappning för att mappa teckensnitt som inte finns installerade på skrivaren till teckensnitt med ett annat teckensnittsnamn. I ett PostScript-scenario kan referenser till teckensnittet Arial® mappas till det skrivarresidenta Helvetica®-teckensnittet.
+Om du vill designa ett formulär som använder teckensnitt som finns i skrivaren väljer du ett teckensnittsnamn i Designer som matchar teckensnitten som finns i skrivaren. En lista över teckensnitt som stöds för PCL eller PostScript finns i motsvarande enhetsprofiler (XDC-filer). Du kan också skapa teckensnittsmappning för att mappa teckensnitt som inte finns installerade på skrivaren till teckensnitt med ett annat teckensnittsnamn. I ett PostScript-scenario kan referenser till teckensnittet Arial® mappas till det skrivarresidenta Helvetica®-teckensnittet.
 
 Om ett teckensnitt är installerat på en klientdator är det tillgängligt i listrutan i Designer. Om teckensnittet inte är installerat måste du ange teckensnittsnamnet manuellt. Alternativet&quot;Ersätt ej tillgängliga teckensnitt permanent&quot; i Designer kan vara inaktiverat. I annat fall skrivs ersättningsteckensnittets namn till XDP-filen när XDP-filen sparas i Designer. Det innebär att det skrivarresidenta teckensnittet inte används.
 
-Det finns två typer av OpenType®-teckensnitt. En typ är ett TrueType OpenType®-teckensnitt som PCL stöder. Den andra är CFF OpenType®. PDF och PostScript-utdata har stöd för inbäddade Type-1-, TrueType- och OpenType®-teckensnitt. PCL-utdata stöder inbäddade TrueType-teckensnitt.
+Det finns två typer av OpenType®-teckensnitt. En typ är ett TrueType OpenType®-teckensnitt som PCL stöder. Den andra är CFF OpenType®. PDF- och PostScript-utdata stöder inbäddade Type-1-, TrueType- och OpenType®-teckensnitt. PCL-utdata stöder inbäddade TrueType-teckensnitt.
 
 Type-1- och OpenType®-teckensnitt bäddas inte in i PCL-utdata. Innehåll som är formaterat med Type-1- och OpenType®-teckensnitt rastreras och genereras som en bitmappsbild som kan vara stor och långsammare att generera.
 
-Hämtade eller inbäddade teckensnitt ersätts automatiskt när du genererar PostScript-, PCL- eller PDF-utdata. Det innebär att endast den deluppsättning av teckensnittstecknen som krävs för att det genererade dokumentet ska kunna återges korrekt inkluderas i det genererade utdata.
+Hämtade eller inbäddade teckensnitt ersätts automatiskt när du genererar utdata från PostScript, PCL eller PDF. Det innebär att endast den deluppsättning av teckensnittstecknen som krävs för att det genererade dokumentet ska kunna återges korrekt inkluderas i det genererade utdata.
 
 ### Arbeta med enhetsprofilfiler (XDC-fil) {#working-with-xdc-files}
 
@@ -163,7 +163,7 @@ I följande tabell anges XCI-alternativ.
 
 * Du kan bara använda en viss renderingstyp (PDF, PRINT) en gång i listan med utskriftsalternativ. Du kan t.ex. inte ha två PRINT-alternativ där var och en anger en PCL-återgivningstyp.
 
-* För en gruppkonfiguration tillåts bara en instans av en kombination av värden av OutputType (PDF, PRINT) och RenderType(PostScript, PCL, IPL, ZPL o.s.v.).
+* För en gruppkonfiguration tillåts endast en instans av en kombination av värden av OutputType (PDF, PRINT) och RenderType (PostScript, PCL, IPL, ZPL o.s.v.).
 
 * För asynkrona API:er (gruppbearbetning) är standardpostnivån 2. Du kan använda en anpassad XCI för att ändra postnivå till 1.
 
@@ -179,7 +179,7 @@ I följande tabell anges XCI-alternativ.
 
 **Kan jag använda en bevakad mapp eller andra lagringsmekanismer för att lagra indata och utdata?**
 
-För tillfället kan du använda Microsoft Azure Storage för att spara indata och genererade dokument. Microsoft Azure-lagring ger olika alternativ för att [automatisera dataförflyttningar](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10).
+För tillfället kan du använda Microsoft Azure Storage för att spara indata och genererade dokument. Microsoft Azure-lagring innehåller olika alternativ för att [automatisera dataförflyttningsåtgärder](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10).
 
 **Ingår ett Microsoft Azure Storage-konto i Experience Manager Forms Cloud Service-licensen?**
 
@@ -189,7 +189,7 @@ Microsoft Azure Storage-kontot är oberoende av Experience Manager Forms Cloud S
 
 Indata och utdata sparas endast på Microsoft Azure Storage.
 
-**Finns bara API:er för kommunikation för Experience Manager Forms Cloud Service? Kan jag få liknande funktionalitet i en lokal miljö?**
+**Är kommunikations-API:er bara tillgängliga för Experience Manager Forms Cloud Service? Kan jag få liknande funktionalitet i en lokal miljö?**
 
 Du kan använda AEM Forms Output-tjänsten för att kombinera en mall (XFA eller PDF) med kunddata för att generera dokument i PDF, PS-, PCL- och ZPL-format.
 
@@ -211,5 +211,5 @@ Ja, du kan köra flera gruppåtgärder samtidigt. Använd alltid olika käll- oc
 >* [Introduktion till AEM Forms as a Cloud Service Communications](/help/forms/aem-forms-cloud-service-communications-introduction.md)
 >* [AEM Forms as a Cloud Service Architecture for Adaptive Forms and Communication APIs](/help/forms/aem-forms-cloud-service-architecture.md)
 >* [Kommunikationsbearbetning - Synkrona API:er](/help/forms/aem-forms-cloud-service-communications.md)
->* [Kommunikationsbearbetning - batch-API:er](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
+>* [Kommunikationsbearbetning - Grupp-API:er](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
 

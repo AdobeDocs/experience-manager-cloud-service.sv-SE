@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # Guiden Skapa projekt {#project-creation-wizard}
 
-När du har skapat ditt produktionsprogram kan du använda en guide för att skapa ett AEM baserat på [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) för att snabbt komma igång.
+När du har skapat ditt produktionsprogram erbjuder Cloud Manager en guide för att skapa ett AEM projekt baserat på [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) för att snabbt komma igång.
 
 Följ de här stegen för att skapa ett AEM programprojekt i Cloud Manager med hjälp av guiden.
 
 1. Skapa ett produktionsprogram genom att följa stegen i dokumentet [Skapa produktionsprogram](creating-production-programs.md)
 
-1. När programmet är klart kan du få åtkomst till **Ökning** -skärmen i programmet och se **Skapa gren och projekt** telefonsamtalskort överst.
+1. När programkonfigurationen är klar går du till skärmen **Översikt** för ditt program och tittar på anropskortet **Skapa gren och projekt** längst upp.
 
    ![Call-to-action-vård för guiden](assets/create-wizard1.png)
 
-1. Klicka **Skapa** för att starta guiden och bekräfta projektet **Titel** och **Nytt grennamn** i **Skapa en gren och ett projekt** -fönstret.
+1. Klicka på **Skapa** för att starta guiden och bekräfta projektets **namn** och **namn på ny gren** i fönstret **Skapa en gren och ett projekt**.
 
    ![Skapa en gren och ett projekt](assets/create-wizard2.png)
 
@@ -32,21 +32,21 @@ Följ de här stegen för att skapa ett AEM programprojekt i Cloud Manager med h
 
    ![Ytterligare projektparametrar](assets/create-wizard5.png)
 
-1. Klicka **Skapa** för att starta projektskapandet.
+1. Klicka på **Skapa** för att börja skapa projektet.
 
 
-A **Projekt skapas** kortet ersätter nu **Skapa gren och projekt** telefonsvararkort som överst på **Programöversikt** skärm.
+Ett **pågående projekt**-kort ersätter nu anropskortet **Skapa gren och projekt** som överst på skärmen **Programöversikt**.
 
 ![Projektskapande pågår](assets/create-wizard3.png)
 
-När programmet är klart **Lägg till miljö** kortet ersätter **Projekt skapas** överst på **Programöversikt** skärm.
+När programmet har skapats ersätter ett **Lägg till miljö** kortet **Projekt under arbete** högst upp på skärmen **Programöversikt**.
 
 ![Lägg till miljö](assets/create-wizard4.png)
 
 Nu har du ett AEM baserat på den AEM typen av arkiv som lagts till i Git-databasen och som kan användas som grund för utveckling för ditt eget projekt. Därefter kan du skapa miljöer där du kan distribuera projektkoden.
 
-Se [Hantera dina miljöer](/help/implementing/cloud-manager/manage-environments.md) om du vill lära dig hur du lägger till eller hanterar miljöer.
+Mer information om hur du lägger till eller hanterar miljöer finns i [Hantera dina miljöer](/help/implementing/cloud-manager/manage-environments.md).
 
 >[!NOTE]
 >
->Guiden är bara tillgänglig för produktionsprogram. För [sandlådeprogram](introduction-sandbox-programs.md#auto-creation) innehåller automatisk projektgenerering. Guiden behövs inte.
+>Guiden är bara tillgänglig för produktionsprogram. Eftersom [sandlådeprogram](introduction-sandbox-programs.md#auto-creation) innehåller automatisk projektgenerering behövs inte guiden.

@@ -13,33 +13,35 @@ ht-degree: 1%
 
 # Beständiga GraphQL-frågor {#persisted-graphql-queries}
 
-Beständiga frågor är GraphQL-frågor som skapas och lagras på den as a Cloud Service Adobe Experience Manager-servern (AEM). De kan begäras med en GET-begäran från klientprogram. Svaret på en GET-begäran kan cachas i skikten dispatcher och CDN, vilket i slutänden förbättrar prestanda för det begärande klientprogrammet. Detta skiljer sig från vanliga GraphQL-frågor, som körs med förfrågningar från POSTER där svaret inte enkelt kan cachas.
+Beständiga frågor är GraphQL-frågor som skapas och lagras på Adobe Experience Manager (AEM) as a Cloud Service server. De kan begäras med en GET-begäran från klientprogram. Svaret på en GET-begäran kan cachas i skikten dispatcher och CDN, vilket i slutänden förbättrar prestanda för det begärande klientprogrammet. Detta skiljer sig från vanliga GraphQL-frågor, som körs med förfrågningar från POSTER där svaret inte enkelt kan cachas.
 
 >[!NOTE]
 >
->Beständiga frågor rekommenderas. Se [GraphQL Query Best Practices (Dispatcher)](/help/headless/graphql-api/content-fragments.md#graphql-query-best-practices) för mer information och den relaterade Dispatcher-konfigurationen.
+>Beständiga frågor rekommenderas. Läs [GraphQL Query Best Practices (Dispatcher)](/help/headless/graphql-api/content-fragments.md#graphql-query-best-practices) om du vill ha mer information och relaterad Dispatcher-konfiguration.
 
-The [GraphiQL IDE](/help/headless/graphql-api/graphiql-ide.md) finns i AEM för att du ska kunna utveckla, testa och behålla dina GraphQL-frågor innan [överföra till produktionsmiljön](#transfer-persisted-query-production). För ärenden som behöver anpassas (till exempel när [anpassa cachen](/help/headless/graphql-api/graphiql-ide.md#caching-persisted-queries)) kan du använda API:t; se exemplet på cURL i [Så här behåller du en GraphQL-fråga](#how-to-persist-query).
+[GraphiQL IDE](/help/headless/graphql-api/graphiql-ide.md) är tillgänglig i AEM så att du kan utveckla, testa och behålla dina GraphQL-frågor innan du [överför till produktionsmiljön](#transfer-persisted-query-production). Om du behöver anpassa (till exempel när du [anpassar cachen](/help/headless/graphql-api/graphiql-ide.md#caching-persisted-queries)) kan du använda API:t, se exemplet på cURL i [Så här gör du för att behålla en GraphQL-fråga](#how-to-persist-query).
 
 ## Beständiga frågor och slutpunkter {#persisted-queries-and-endpoints}
 
-Beständiga frågor måste alltid använda den slutpunkt som är relaterad till [lämplig platskonfiguration](graphql-endpoint.md)så att de kan använda antingen eller båda:
+Beständiga frågor måste alltid använda den slutpunkt som är relaterad till [lämplig platskonfiguration](graphql-endpoint.md), så att de kan använda antingen eller båda:
 
-* Den globala konfigurationen och slutpunkten Frågan har åtkomst till alla modeller för innehållsfragment.
-* Specifika platskonfigurationer och slutpunkter Om du vill skapa en beständig fråga för en specifik platskonfiguration måste du ha en motsvarande platskonfigurationsspecifik slutpunkt (för att ge åtkomst till relaterade modeller för innehållsfragment).
+* Den globala konfigurationen och slutpunkten
+Frågan har åtkomst till alla modeller för innehållsfragment.
+* Specifika platskonfigurationer och slutpunkter
+För att skapa en beständig fråga för en specifik platskonfiguration krävs en motsvarande platskonfigurationsspecifik slutpunkt (för att ge åtkomst till relaterade modeller för innehållsfragment).
 Om du till exempel vill skapa en beständig fråga specifikt för WKND-platskonfigurationen, måste en motsvarande WKND-specifik platskonfiguration och en WKND-specifik slutpunkt skapas i förväg.
 
 >[!NOTE]
 >
->Se [Aktivera funktionen för innehållsfragment i konfigurationsläsaren](/help/sites-cloud/administering/content-fragments/setup.md#enable-content-fragment-functionality-configuration-browser) för mer information.
+>Mer information finns i [Aktivera funktionen för innehållsfragment i konfigurationsläsaren](/help/sites-cloud/administering/content-fragments/setup.md#enable-content-fragment-functionality-configuration-browser).
 >
->The **GraphQL Beständiga frågor** måste aktiveras för rätt platskonfiguration.
+>**GraphQL beständiga frågor** måste aktiveras för rätt platskonfiguration.
 
-Om det till exempel finns en viss fråga som heter `my-query`, som använder en modell `my-model` från platskonfigurationen `my-conf`:
+Om det till exempel finns en viss fråga med namnet `my-query` som använder modellen `my-model` från platskonfigurationen `my-conf`:
 
-* Du kan skapa en fråga med `my-conf` en specifik slutpunkt, och därefter sparas frågan så här:
+* Du kan skapa en fråga med den `my-conf` specifika slutpunkten och sedan sparas frågan så här:
   `/conf/my-conf/settings/graphql/persistentQueries/my-query`
-* Du kan skapa samma fråga med `global` slutpunkt, men frågan sparas sedan som följer:
+* Du kan skapa samma fråga med `global`-slutpunkten, men sedan sparas frågan så här:
   `/conf/global/settings/graphql/persistentQueries/my-query`
 
 >[!NOTE]
@@ -50,15 +52,15 @@ Om det till exempel finns en viss fråga som heter `my-query`, som använder en 
 
 ## Så här behåller du en GraphQL-fråga {#how-to-persist-query}
 
-Vi rekommenderar att du behåller frågor i en AEM redigeringsmiljö först och sedan [överför frågan](#transfer-persisted-query-production) till din produktion AEM publiceringsmiljö, som kan användas av program.
+Vi rekommenderar att du till att börja med behåller frågor i en AEM redigeringsmiljö och sedan [överför frågan](#transfer-persisted-query-production) till din AEM publiceringsmiljö, som kan användas av program.
 
 Det finns olika metoder för beständiga frågor, bland annat:
 
-* GraphiQL IDE - se [Sparar beständiga frågor](/help/headless/graphql-api/graphiql-ide.md#saving-persisted-queries) (föredragen metod)
+* GraphiQL IDE - se [Spara beständiga frågor](/help/headless/graphql-api/graphiql-ide.md#saving-persisted-queries) (föredragen metod)
 * cURL - se följande exempel
 * Andra verktyg, inklusive [Postman](https://www.postman.com/)
 
-GraphiQL IDE är **standard** metod för beständiga frågor. Bevara en given fråga med **cURL** kommandoradsverktyg:
+GraphiQL IDE är den **föredragna** metoden för beständiga frågor. Så här behåller du en given fråga med kommandoradsverktyget **cURL**:
 
 1. Förbered frågan genom att PUTing den till den nya slutpunkts-URL:en `/graphql/persist.json/<config>/<persisted-label>`.
 
@@ -97,7 +99,7 @@ GraphiQL IDE är **standard** metod för beständiga frågor. Bevara en given fr
    }
    ```
 
-1. Du kan sedan begära den beständiga frågan genom att GETing the URL `/graphql/execute.json/<shortPath>`.
+1. Du kan sedan begära den beständiga frågan genom att GETing anger URL:en `/graphql/execute.json/<shortPath>`.
 
    Använd till exempel den beständiga frågan:
 
@@ -193,9 +195,9 @@ För att köra en Persistent-fråga gör ett klientprogram en GET-begäran med f
 GET <AEM_HOST>/graphql/execute.json/<PERSISTENT_PATH>
 ```
 
-Plats `PERSISTENT_PATH` är en förkortad sökväg där den beständiga frågan sparas.
+Där `PERSISTENT_PATH` är en förkortad sökväg till den plats där den beständiga frågan sparas.
 
-1. Till exempel: `wknd` är konfigurationsnamnet och `plain-article-query` är namnet på den beständiga frågan. Så här kör du frågan:
+1. `wknd` är till exempel konfigurationsnamnet och `plain-article-query` är namnet på den beständiga frågan. Så här kör du frågan:
 
    ```shell
    $ curl -X GET \
@@ -206,7 +208,7 @@ Plats `PERSISTENT_PATH` är en förkortad sökväg där den beständiga frågan 
 
    >[!NOTE]
    >
-   > Frågevariabler och -värden måste vara korrekta [kodad](#encoding-query-url) när en fråga som är sparad körs.
+   > Frågevariabler och -värden måste vara korrekt [kodade](#encoding-query-url) när en Persisted-fråga körs.
 
    Till exempel:
 
@@ -215,11 +217,11 @@ Plats `PERSISTENT_PATH` är en förkortad sökväg där den beständiga frågan 
        "https://publish-p123-e456.adobeaemcloud.com/graphql/execute.json/wknd/plain-article-query-parameters%3Bapath%3D%2Fcontent%2Fdam%2Fwknd%2Fen%2Fmagazine%2Falaska-adventure%2Falaskan-adventures%3BwithReference%3Dfalse
    ```
 
-   Se använda [frågevariabler](#query-variables) för mer information.
+   Mer information finns i Använda [frågevariabler](#query-variables).
 
 ## Använda frågevariabler {#query-variables}
 
-Frågevariabler kan användas med beständiga frågor. Frågevariablerna läggs till i begäran med ett semikolon (`;`) med variabelnamnet och variabelvärdet. Flera variabler avgränsas med semikolon.
+Frågevariabler kan användas med beständiga frågor. Frågevariablerna läggs till i begäran med prefixet semikolon (`;`) med variabelnamnet och variabelvärdet. Flera variabler avgränsas med semikolon.
 
 Mönstret ser ut så här:
 
@@ -227,7 +229,7 @@ Mönstret ser ut så här:
 <AEM_HOST>/graphql/execute.json/<PERSISTENT_QUERY_PATH>;variable1=value1;variable2=value2
 ```
 
-Följande fråga innehåller en variabel `activity` om du vill filtrera en lista baserat på ett aktivitetsvärde:
+Följande fråga innehåller till exempel variabeln `activity` för att filtrera en lista baserat på ett aktivitetsvärde:
 
 ```graphql
 query getAdventuresByActivity($activity: String!) {
@@ -250,45 +252,47 @@ query getAdventuresByActivity($activity: String!) {
   }
 ```
 
-Frågan kan sparas under en sökväg `wknd/adventures-by-activity`. Anropa den beständiga frågan där `activity=Camping` begäran skulle se ut så här:
+Den här frågan kan sparas under sökvägen `wknd/adventures-by-activity`. Så här anropar du den beständiga frågan där `activity=Camping` begäran skulle se ut:
 
 ```
 <AEM_HOST>/graphql/execute.json/wknd/adventures-by-activity%3Bactivity%3DCamping
 ```
 
-UTF-8-kodning `%3B` är för `;` och `%3D` är kodningen för `=`. Frågevariablerna och eventuella specialtecken måste [korrekt kodad](#encoding-query-url) för den beständiga frågan som ska köras.
+UTF-8-kodningen `%3B` är för `;` och `%3D` är kodningen för `=`. Frågevariablerna och eventuella specialtecken måste vara [kodade korrekt](#encoding-query-url) för att den beständiga frågan ska kunna köras.
 
 ### Använda frågevariabler - Bästa praxis {#query-variables-best-practices}
 
 När du använder variabler i dina frågor finns det några metodtips som du bör följa:
 
-* Kodning I allmänhet rekommenderas alltid att alla specialtecken kodas, till exempel `;`, `=`, `?`, `&`, bland annat.
+* Kodning
+Som en allmän metod bör du alltid koda alla specialtecken, till exempel `;`, `=`, `?`, `&`.
 
-* Semikolonbeständiga frågor som använder flera variabler (som avgränsas med semikolon) måste ha antingen:
-   * de semikolon som är kodade (`%3B`); om du kodar URL:en så blir det också möjligt
+* Semikolon
+Beständiga frågor som använder flera variabler (som avgränsas med semikolon) måste ha antingen:
+   * semikolon kodade (`%3B`). Om URL:en kodas kommer även detta att uppnås
    * eller ett avslutande semikolon som lagts till i slutet av frågan
 
 * `CACHE_GRAPHQL_PERSISTED_QUERIES`
-När `CACHE_GRAPHQL_PERSISTED_QUERIES` är aktiverat för Dispatcher och sedan parametrar som innehåller `/` eller `\` i deras värde kodas två gånger på Dispatcher-nivån.
+När `CACHE_GRAPHQL_PERSISTED_QUERIES` är aktiverat för Dispatcher kodas parametrar som innehåller `/` - eller `\` -tecknen i deras värde två gånger på Dispatcher-nivå.
 För att undvika denna situation:
 
    * Aktivera `DispatcherNoCanonURL` på Dispatcher.
-Detta instruerar Dispatcher att vidarebefordra den ursprungliga URL:en till AEM, så att dubblerade kodningar förhindras.
-Den här inställningen fungerar för närvarande bara på `vhost` nivå, så om du redan har Dispatcher-konfigurationer för att skriva om URL:er (t.ex. när du använder förkortade URL:er) kan du behöva en separat `vhost` för beständiga fråge-URL:er.
+Detta instruerar Dispatcher att vidarebefordra den ursprungliga URL-adressen till AEM, så att dubblerade kodningar förhindras.
+Den här inställningen fungerar för närvarande bara på nivån `vhost`, så om du redan har Dispatcher-konfigurationer för att skriva om URL:er (t.ex. när du använder förkortade URL:er) kan du behöva en separat `vhost` för beständiga fråge-URL:er.
 
-   * Skicka `/` eller `\` okodade tecken.
-När du anropar den beständiga fråge-URL:en ser du till att alla `/` eller `\` tecken förblir okodade i värdet för beständiga frågevariabler.
+   * Skicka `/` eller `\` tecken utan kodning.
+När du anropar den beständiga fråge-URL:en måste du se till att alla `/`- eller `\`-tecken förblir okodade i värdet för beständiga frågevariabler.
      >[!NOTE]
      >
-     >Det här alternativet rekommenderas endast när `DispatcherNoCanonURL` -lösningen kan inte implementeras av någon anledning.
+     >Det här alternativet rekommenderas bara när `DispatcherNoCanonURL`-lösningen inte kan implementeras av någon anledning.
 
 * `CACHE_GRAPHQL_PERSISTED_QUERIES`
 
-  När `CACHE_GRAPHQL_PERSISTED_QUERIES` är aktiverat för Dispatcher, och sedan `;` kan inte användas i variabelvärdet.
+  När `CACHE_GRAPHQL_PERSISTED_QUERIES` är aktiverat för Dispatcher kan inte tecknet `;` användas i värdet för en variabel.
 
 ## Cachelagra beständiga frågor {#caching-persisted-queries}
 
-Beständiga frågor rekommenderas eftersom de kan cachelagras på [Dispatcher](/help/headless/deployment/dispatcher.md) och CDN-lager (Content Delivery Network), vilket i slutänden förbättrar prestandan för det begärande klientprogrammet.
+Beständiga frågor rekommenderas eftersom de kan cachelagras på [Dispatcher](/help/headless/deployment/dispatcher.md) - och CDN-lagren (Content Delivery Network), vilket i slutänden förbättrar prestandan för det begärande klientprogrammet.
 
 Som standard blir cachen ogiltig AEM baserat på en TTL-definition (Time To Live). Dessa TTL:er kan definieras med följande parametrar. Dessa parametrar kan nås på olika sätt, med variationer i namnen beroende på vilken mekanism som används:
 
@@ -305,7 +309,7 @@ Som standard blir cachen ogiltig AEM baserat på en TTL-definition (Time To Live
 
 För författarinstanser är standardvärdena:
 
-* `max-age`  : 60
+* `max-age` : 60
 * `s-maxage` : 60
 * `stale-while-revalidate` : 86400
 * `stale-if-error` : 86400
@@ -315,14 +319,14 @@ De var:
 * kan inte skrivas över:
    * med en OSGi-konfiguration
 * kan skrivas över:
-   * av en begäran som definierar inställningar för HTTP-huvudet med cURL; den bör innehålla lämpliga inställningar för `cache-control` och/eller `surrogate-control`; för exempel, se [Hantera cache på nivån för beständig fråga](#cache-persisted-query-level)
-   * om du anger värden i **Sidhuvuden** dialogrutan [GraphiQL IDE](#http-cache-headers-graphiql-ide)
+   * av en begäran som definierar inställningar för HTTP-huvudet med cURL; den bör innehålla lämpliga inställningar för `cache-control` och/eller `surrogate-control`; se till exempel [Hantera cache på den beständiga frågenivån](#cache-persisted-query-level)
+   * om du anger värden i dialogrutan **Headers** i [GraphiQL IDE](#http-cache-headers-graphiql-ide)
 
 ### Publish-instanser {#publish-instances}
 
 Standardvärdena för publiceringsinstanser är:
 
-* `max-age`  : 60
+* `max-age` : 60
 * `s-maxage` : 7200
 * `stale-while-revalidate` : 86400
 * `stale-if-error` : 86400
@@ -331,7 +335,7 @@ Dessa kan skrivas över:
 
 * [från GraphQL IDE](#http-cache-headers-graphiql-ide)
 
-* [på den beständiga frågenivån](#cache-persisted-query-level); detta innebär att skicka frågan till AEM med cURL i kommandoradsgränssnittet och att publicera den beständiga frågan.
+* [ på nivån för beständig fråga](#cache-persisted-query-level). Detta innebär att frågan skickas till AEM med cURL i kommandoradsgränssnittet och att den beständiga frågan publiceras.
 
 * [med Cloud Manager-variabler](#cache-cloud-manager-variables)
 
@@ -339,7 +343,7 @@ Dessa kan skrivas över:
 
 ### Hantera rubriker för HTTP-cache i GraphiQL IDE {#http-cache-headers-graphiql-ide}
 
-GraphiQL IDE - se [Sparar beständiga frågor](/help/headless/graphql-api/graphiql-ide.md#managing-cache)
+GraphiQL IDE - se [Spara beständiga frågor](/help/headless/graphql-api/graphiql-ide.md#managing-cache)
 
 ### Hantera cache på nivån för beständig fråga {#cache-persisted-query-level}
 
@@ -363,11 +367,11 @@ curl -u admin:admin -X POST \
 --data '{ "query": "{articleList { items { _path author } } }", "cache-control": { "max-age": 300 }, "surrogate-control": {"max-age":600, "stale-while-revalidate":1000, "stale-if-error":1000} }'
 ```
 
-The `cache-control` kan anges vid skapande (PUT) eller senare (till exempel via en POST-förfrågan). Cachekontrollen är valfri när du skapar den beständiga frågan, eftersom AEM kan ange standardvärdet. Se [Så här behåller du en GraphQL-fråga](#how-to-persist-query), för ett exempel på beständig fråga med cURL.
+`cache-control` kan anges när den skapas (PUT) eller senare (till exempel via en POST-förfrågan). Cachekontrollen är valfri när du skapar den beständiga frågan, eftersom AEM kan ange standardvärdet. Se [Så här behåller du en GraphQL-fråga](#how-to-persist-query) om du vill se ett exempel på hur en fråga bevaras med cURL.
 
 ### Hantera cache med Cloud Manager-variabler {#cache-cloud-manager-variables}
 
-[Miljövariabler för Cloud Manager](/help/implementing/cloud-manager/environment-variables.md) kan definieras med Cloud Manager för att definiera de värden som krävs:
+[Cloud Manager miljövariabler](/help/implementing/cloud-manager/environment-variables.md) kan definieras med Cloud Manager för att definiera de värden som krävs:
 
 | Namn | Värde | Tjänsten används | Typ |
 |--- |--- |--- |--- |
@@ -378,7 +382,7 @@ The `cache-control` kan anges vid skapande (PUT) eller senare (till exempel via 
 
 ### Hantera cache med en OSGi-konfiguration {#cache-osgi-configration}
 
-Om du vill hantera cachen globalt kan du [konfigurera OSGi-inställningarna](/help/implementing/deploying/configuring-osgi.md) för **Konfiguration av beständig frågetjänst**.
+Om du vill hantera cacheminnet globalt kan du [konfigurera OSGi-inställningarna](/help/implementing/deploying/configuring-osgi.md) för **konfigurationen för den beständiga frågetjänsten**.
 
 >[!NOTE]
 >
@@ -386,13 +390,13 @@ Om du vill hantera cachen globalt kan du [konfigurera OSGi-inställningarna](/he
 
 >[!NOTE]
 >
->The **Konfiguration av beständig frågetjänst** används också för [konfigurera frågesvarskoden](#configuring-query-response-code).
+>**Konfiguration av den beständiga frågetjänsten** används även för [konfigurering av frågesvartekod](#configuring-query-response-code).
 
 Standardkonfigurationen för OSGi för publiceringsinstanser:
 
-* läser Cloud Manager-variabler om de är tillgängliga:
+* läser Cloud Manager-variablerna om sådana finns:
 
-  | OSGi-konfigurationsegenskap | läser detta | Cloud Manager-variabel |
+  | OSGi-konfigurationsegenskap | läser detta | Cloud Manager Variable |
   |--- |--- |--- |
   | `cacheControlMaxAge` | läsningar | `graphqlCacheControl` |
   | `surrogateControlMaxAge` | läsningar | `graphqlSurrogateControl` |
@@ -401,23 +405,25 @@ Standardkonfigurationen för OSGi för publiceringsinstanser:
 
   {style="table-layout:auto"}
 
-* Om den inte är tillgänglig använder OSGi-konfigurationen [standardvärden för publiceringsinstanser](#publish-instances).
+* Om det inte är tillgängligt använder OSGi-konfigurationen [standardvärdena för publiceringsinstanser](#publish-instances).
 
 ## Konfigurera frågesvarskoden {#configuring-query-response-code}
 
-Som standard är `PersistedQueryServlet` skickar en `200` svar när den kör en fråga, oavsett det faktiska resultatet.
+Som standard skickar `PersistedQueryServlet` ett `200`-svar när en fråga körs, oavsett det faktiska resultatet.
 
-Du kan [konfigurera OSGi-inställningarna](/help/implementing/deploying/configuring-osgi.md) för **Konfiguration av beständig frågetjänst** för att kontrollera om mer detaljerade statuskoder returneras av `/execute.json/persisted-query` slutpunkten, om det finns ett fel i den beständiga frågan.
+Du kan [konfigurera OSGi-inställningarna](/help/implementing/deploying/configuring-osgi.md) för **konfigurationen för den beständiga frågetjänsten** för att kontrollera om mer detaljerade statuskoder returneras av `/execute.json/persisted-query`-slutpunkten, om det finns ett fel i den beständiga frågan.
 
 >[!NOTE]
 >
->The **Konfiguration av beständig frågetjänst** används också för [hantera cache](#cache-osgi-configration).
+>**Konfiguration av den beständiga frågetjänsten** används även för [hantering av cache](#cache-osgi-configration).
 
 Fältet `Respond with application/graphql-response+json` (`responseContentTypeGraphQLResponseJson`) kan definieras enligt behov:
 
-* `false` (standardvärde): Det spelar ingen roll om den beständiga frågan lyckas eller inte. The `Content-Type` header returned is `application/json`och `/execute.json/persisted-query` *alltid* returnerar statuskoden `200`.
+* `false` (standardvärde):
+Det spelar ingen roll om den beständiga frågan lyckas eller inte. Det `Content-Type`-huvud som returnerades är `application/json` och `/execute.json/persisted-query` *always* returnerar statuskoden `200`.
 
-* `true`: Den returnerade `Content-Type` är `application/graphql-response+json`och slutpunkten returnerar rätt svarskod när det finns någon form av fel när den beständiga frågan körs:
+* `true`:
+Den returnerade `Content-Type` är `application/graphql-response+json` och slutpunkten returnerar lämplig svarskod när det finns någon form av fel när den beständiga frågan körs:
 
   | Code | Beskrivning |
   |--- |--- |
@@ -432,7 +438,7 @@ Fältet `Respond with application/graphql-response+json` (`responseContentTypeGr
 
 ## Kodning av fråge-URL för användning av ett program {#encoding-query-url}
 
-Om det används av ett program används alla specialtecken som används för att konstruera frågevariabler (d.v.s. semikolon (`;`), likhetstecken (`=`), snedstreck `/`) måste konverteras till motsvarande UTF-8-kodning.
+Om du vill använda ett program måste alla specialtecken som används för att skapa frågevariabler (d.v.s. semikolon (`;`), likhetstecken (`=`), snedstreck `/`) konverteras till motsvarande UTF-8-kodning.
 
 Till exempel:
 
@@ -446,10 +452,10 @@ URL:en kan delas upp i följande delar:
 |----------| -------------|
 | `/graphql/execute.json` | Beständig frågeslutpunkt |
 | `/wknd/adventure-by-path` | Sökväg för beständig fråga |
-| `%3B` | Kodning `;` |
+| `%3B` | Kodning av `;` |
 | `adventurePath` | Frågevariabel |
-| `%3D` | Kodning `=` |
-| `%2F` | Kodning `/` |
+| `%3D` | Kodning av `=` |
+| `%2F` | Kodning av `/` |
 | `%2Fcontent%2Fdam...` | Kodad sökväg till innehållsfragmentet |
 
 I vanlig text ser URI:n för begäran ut så här:
@@ -458,7 +464,7 @@ I vanlig text ser URI:n för begäran ut så här:
 /graphql/execute.json/wknd/adventure-by-path;adventurePath=/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp
 ```
 
-Om du vill använda en beständig fråga i en klientapp bör AEM headless Client SDK användas för [JavaScript](https://github.com/adobe/aem-headless-client-js), [Java](https://github.com/adobe/aem-headless-client-java), eller [NodeJS](https://github.com/adobe/aem-headless-client-nodejs). SDK för den Headless-klienten kodar automatiskt alla frågevariabler som behövs i begäran.
+Om du vill använda en beständig fråga i en klientapp bör den AEM huvudlösa klientens SDK användas för [JavaScript](https://github.com/adobe/aem-headless-client-js), [Java](https://github.com/adobe/aem-headless-client-java) eller [NodeJS](https://github.com/adobe/aem-headless-client-nodejs). SDK för den Headless-klienten kodar automatiskt alla frågevariabler som behövs i begäran.
 
 ## Överför en beständig fråga till produktionsmiljön  {#transfer-persisted-query-production}
 
@@ -466,22 +472,22 @@ Beständiga frågor ska alltid skapas på en AEM författartjänst och sedan pub
 
 ### Paketera beständiga frågor
 
-Beständiga frågor kan byggas in i [AEM](/help/implementing/developing/tools/package-manager.md). AEM paket kan sedan laddas ned och installeras i olika miljöer. AEM paket kan också replikeras från en AEM redigeringsmiljö till AEM Publish-miljöer.
+Beständiga frågor kan byggas in i [AEM paket](/help/implementing/developing/tools/package-manager.md). AEM paket kan sedan laddas ned och installeras i olika miljöer. AEM paket kan också replikeras från en AEM redigeringsmiljö till AEM Publish-miljöer.
 
 Skapa ett paket:
 
-1. Navigera till **verktyg** > **Distribution** > **Paket**.
-1. Skapa ett nytt paket genom att trycka **Skapa paket**. Då öppnas en dialogruta där du kan definiera paketet.
-1. I dialogrutan Paketdefinition, under **Allmänt** ange en **Namn** som &quot;wknd-persistent-queries&quot;.
+1. Navigera till **Verktyg** > **Distribution** > **Paket**.
+1. Skapa ett nytt paket genom att trycka på **Skapa paket**. Då öppnas en dialogruta där du kan definiera paketet.
+1. I dialogrutan Paketdefinition, under **Allmänt**, anger du ett **Namn** som &quot;wknd-persistent-queries&quot;.
 1. Ange ett versionsnummer som &quot;1.0&quot;.
-1. Under **Filter** lägg till en ny **Filter**. Använd Sökväg för att välja `persistentQueries` under konfigurationen. För `wknd` konfiguration, den fullständiga sökvägen `/conf/wknd/settings/graphql/persistentQueries`.
-1. Välj **Spara** för att spara den nya paketdefinitionen och stänga dialogrutan.
-1. Välj **Bygge** i den skapade paketdefinitionen.
+1. Lägg till ett nytt **Filter** under **Filter**. Använd Sökväg till Finder för att välja mappen `persistentQueries` under konfigurationen. Den fullständiga sökvägen för konfigurationen `wknd` är till exempel `/conf/wknd/settings/graphql/persistentQueries`.
+1. Välj **Spara** om du vill spara den nya paketdefinitionen och stänga dialogrutan.
+1. Välj knappen **Skapa** i den skapade paketdefinitionen.
 
 När paketet har byggts kan du:
 
-* **Ladda ned** paketet och ladda upp det på nytt i en annan miljö.
-* **Replikera** paketet genom att trycka **Mer** > **Replikera**. Paketet kommer att replikeras till den anslutna AEM Publish-miljön.
+* **Hämta** paketet och överföra det igen till en annan miljö.
+* **Replikera** paketet genom att trycka på **Mer** > **Replikera**. Paketet kommer att replikeras till den anslutna AEM Publish-miljön.
 
 <!--
 1. Using replication/distribution tool:

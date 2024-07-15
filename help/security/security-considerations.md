@@ -21,18 +21,18 @@ För att stödja asymmetriska, kryptografiska åtgärder lagrar AEM certifikat i
 
 ### Egenskaper hos Trust Store {#truststore-characteristics}
 
-* Förtroendearkivet finns nedan `/etc/truststore` och består av en Java™-nyckelfil, nyckelbehållarlösenordet och databasmetadata. Både lösenordet och nyckelbehållaren krypteras av tekniska skäl, även om de certifikat som finns som standard är tillgängliga för alla via API:t
+* Trust-store finns under `/etc/truststore` och består av en Java™-nyckelbehållarfil, nyckelbehållarlösenordet och databasmetadata. Både lösenordet och nyckelbehållaren krypteras av tekniska skäl, även om de certifikat som finns som standard är tillgängliga för alla via API:t
 * Innan i rutan används certifikaten endast för HTTPS- och SAML-stöd, och arkivet måste skapas manuellt först
-* Kunderna kan använda den i sin egen kod via [API för nyckelbehållare](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/keystore/KeyStoreService.html#getTrustStore-org.apache.sling.api.resource.ResourceResolver-)
-* Trust-butiken kan hanteras via användargränssnittet på **verktyg** - **Säkerhet** - **Trust Store** eller genom åtkomst *`https://serveraddress:serverport/libs/granite/security/content/truststore.html`*, enligt nedan:
+* Kunder kan använda den i sin egen kod via [nyckelbehållar-API:t](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/keystore/KeyStoreService.html#getTrustStore-org.apache.sling.api.resource.ResourceResolver-)
+* Förtroendearkivet kan hanteras via användargränssnittet på **Verktyg** - **Säkerhet** - **Pålitlighetsarkivet** eller genom att gå till *`https://serveraddress:serverport/libs/granite/security/content/truststore.html`* enligt nedan:
 
-  ![Hantering av betrodda arkiv](/help/security/assets/global-trust-store-modified.png)
+  ![Pålitlig arkivhantering](/help/security/assets/global-trust-store-modified.png)
 
 * Åtkomsten till förtroendearkivet kan begränsas ytterligare av åtkomstkontrollen i databasen beroende på användningsfallet.
 
 >[!NOTE]
 >
->Adobe rekommenderar att standardåtkomstkontrollerna används för Trust Store, vilket betyder att den förblir tillgänglig för alla. För den säkraste konfigurationen kan du använda en nekandeprincip `jcr:all` för alla.
+>Adobe rekommenderar att standardåtkomstkontrollerna används för Trust Store, vilket betyder att den förblir tillgänglig för alla. För den säkraste konfigurationen kan du använda en princip för att neka `jcr:all` för alla.
 
 <!--
 Commenting out section for now as requested by Lars

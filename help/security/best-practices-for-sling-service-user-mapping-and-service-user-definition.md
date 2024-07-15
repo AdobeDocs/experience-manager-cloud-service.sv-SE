@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Mappning av tjänstanvändare {#service-user-mapping}
 
-Om du vill lägga till en mappning från tjänsten till motsvarande systemanvändare måste du skapa en fabrikskonfiguration för `ServiceUserMapper` service. För att behålla denna modulära form kan sådana konfigurationer tillhandahållas med hjälp av ändringsmekanismen för Sling (se [SLING-3578](https://issues.apache.org/jira/browse/SLING-3578) för mer information). Det rekommenderade sättet att installera sådana konfigurationer med ditt paket är att lägga till det i provisioneringsmodellen för QuickStart enligt följande exempel:
+Om du vill lägga till en mappning från tjänsten till motsvarande systemanvändare måste du skapa en fabrikskonfiguration för tjänsten `ServiceUserMapper`. För att behålla denna modulära form kan sådana konfigurationer tillhandahållas med Sling-funktionen för&quot;ändring&quot; (mer information finns i [SLING-3578](https://issues.apache.org/jira/browse/SLING-3578)). Det rekommenderade sättet att installera sådana konfigurationer med ditt paket är att lägga till det i provisioneringsmodellen för QuickStart enligt följande exempel:
 
 ```
 org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-my-mapping
@@ -32,23 +32,23 @@ Sedan AEM 6.4 definieras mappningsformatet enligt följande:
 
 >[!NOTE]
 >
->The `userName` är föråldrad och bör inte längre användas.
+>`userName` är föråldrad och bör inte längre användas.
 
 ```
 bundleId [:subserviceName] = userName | [principalNames]   
 ```
 
-`bundleId` och `subserviceName` identifiera tjänsten, `userName/principalNames` identifiera tjänstanvändaren och `principalNames` är en kommaavgränsad lista.
+`bundleId` och `subserviceName` identifierar tjänsten, `userName/principalNames` identifierar tjänstanvändaren och `principalNames` är en kommaavgränsad lista.
 
-Observera också att `principalNames` är listan med tjänstens huvudnamn som inte är samma som ID:t.
+Observera också att `principalNames` är en lista över tjänstanvändarens huvudnamn som inte är samma som ID:t.
 
 
 **Bästa praxis**
 
-* Undertjänstnamn för olika uppgifter - om tjänsterna i ditt paket utför olika uppgifter bör du identifiera `subserviceNames` för att gruppera dem efter uppgifter
-* Om en viss tjänst utför olika åtgärder (till exempel läser resursinnehåll och uppdaterar information under ett underträd till `/var`) rekommenderas att detta återspeglas genom att olika tjänstesystem sammanställs som återspeglar den enskilda operationen, t.ex. sammanläggning av den gemensamma `dam-reader-service` med specifika funktioner `assetreport-writer-service`
+* Undertjänstnamn för olika aktiviteter - om tjänsterna i ditt paket utför olika uppgifter rekommenderar vi att du identifierar `subserviceNames` för att gruppera dem efter aktiviteter
+* Om en viss tjänst utför olika åtgärder (till exempel läser resursinnehåll och uppdaterar information under ett underträd till `/var`), bör du spegla detta genom att samla olika tjänstobjekt som speglar den enskilda åtgärden, till exempel genom att sammanfoga den vanliga `dam-reader-service` med din funktionsspecifik `assetreport-writer-service`
 * Varje tjänst är idealisk bunden till en mycket specifik och begränsad uppsättning operationer
-* Det nya formatet med `[one,or,multiple,principalNames]` är det rekommenderade sättet att definiera tjänstanvändarmappningar från och med AEM 6.4.
+* Det nya formatet med `[one,or,multiple,principalNames]` rekommenderas för att definiera tjänstanvändarmappningar från och med AEM 6.4.
 
 Nedan finns en lista med skäl för att ändra formatet och varför Adobe rekommenderar att du använder det istället för versionsmappning bara för ett enda användar-ID:
 
@@ -64,21 +64,21 @@ Nedan finns en lista med skäl för att ändra formatet och varför Adobe rekomm
 
 Sekvensen med anrop för att lösa tjänstmappningen som beskrivs nedan:
 
-1. Sök efter aktiva `principalNames` mappning för angiven `bundleId` och `subserviceName`
-1. `principalNames` mappning för `bundleId` och null `subserviceName`
-1. `userName` mappning för `bundleId` och `subserviceName`
-1. `userName` mappning `bundleId` och null `subserviceName`
+1. Sök efter aktiv `principalNames`-mappning för angiven `bundleId` och `subserviceName`
+1. `principalNames`-mappning för `bundleId` och null `subserviceName`
+1. `userName`-mappning för `bundleId` och `subserviceName`
+1. `userName`-mappning för `bundleId` och null `subserviceName`
 1. Standardmappning
 1. Standardanvändare
 
 ### SlingRepository - tjänstinloggning {#slingrepository-servicelogin}
 
-Sekvensen för att hämta en tjänst `Session/ResourceResolver` fungerar på följande sätt:
+Sekvensen för att hämta en tjänst `Session/ResourceResolver` fungerar så här:
 
-1. Hämta huvudnamn från `ServiceUserMapper` => databasinloggning före autentisering enligt beskrivningen nedan
+1. Hämta huvudnamn från `ServiceUserMapper` =>-databasinloggning före autentisering enligt beskrivningen nedan
 1. Hämta användar-ID från `ServiceUserMapper`
 1. Kontrollera om 1ServiceUserConfiguration` är inaktuellt användar-ID
-1. Standardinloggning för Sling-tjänsten med användar-ID (t.ex. en sekvens av `createAdministrativeSession` och personifiera för användar-ID)
+1. Standardinloggning för Sling-tjänsten med användar-ID (t.ex. en sekvens av `createAdministrativeSession` och personifiering för användar-ID)
 
 Den nya mappningen med huvudnamn resulterar i följande förenklade databasinloggning:
 
@@ -90,11 +90,11 @@ Den nya mappningen med huvudnamn resulterar i följande förenklade databasinlog
   >
   >Alla nödvändiga behörigheter måste deklareras för tjänstanvändarna. Alla och andra gruppbehörigheter ärvs inte längre.
 
-* Det finns ingen ytterligare administratörsinloggning för tjänsten -`Session/ResourceResolver` skapas.
+* Inga ytterligare administratörsinloggningar för tjänsten `Session/ResourceResolver` har skapats.
 
 ### ServiceUserConfiguration har tagits bort {#deprecated-serviceUserConfiguration}
 
-Observera att det är samma sak att ange ett användarnamn i mappningen som det befintliga `ServiceUserConfiguration.simpleSubjectPopulation`. Med det nya formatet kan du kringgå det som `ServiceUserConfiguration` kan speglas direkt med tjänstanvändarens mappning. The `ServiceUserConfiguration` har därför ersatts för AEM och alla befintliga användningar har ersatts.
+Observera att det är samma sak att ange ett användarnamn i mappningen som det befintliga `ServiceUserConfiguration.simpleSubjectPopulation`. Med det nya formatet kan den tillfälliga lösning som tillhandahålls av `ServiceUserConfiguration` återspeglas direkt med tjänstanvändarmappningen. `ServiceUserConfiguration` har därför ersatts för AEM och alla befintliga användningar har ersatts.
 
 ## Tjänstanvändare {#service-users}
 
@@ -116,17 +116,17 @@ Vi rekommenderar att du återanvänder befintliga användare om följande villko
 
 När du har verifierat att ingen befintlig tjänstanvändare i AEM kan användas för ditt användningsfall och att motsvarande RTC-problem har godkänts kan du lägga till den nya användaren i standardinnehållet. Helst är det en medlem i det utökade säkerhetsteamet som deltar i RTC-omröstningen, så se till att du även engagerar lämpliga intressenter.
 
-**Namngivningskonvention**
+**Namnkonvention**
 
 AEM säkerhetsteam har definierat följande namngivningskonvention för tjänstanvändare för att göra nya tjänstanvändare mer konsekventa och för att förbättra läsbarheten och underhållet.
 
-Ett användarnamn för en tjänst består av 3 element avgränsade med bindestreck **&#39;-&#39;**:
+Ett tjänstanvändarnamn består av 3 element avgränsade med bindestreck **-**:
 
 1. Den logiska entiteten/funktionen som är målet för tjänståtgärderna (undvik sökvägselement som kan ändras)
 1. Den uppgift som tjänsterna ska utföra
-1. Efterföljande **service** för att på ett enkelt sätt utifrån id:t och huvudnamnet kunna identifiera att användaren är en tjänstanvändare
+1. Slutför **-tjänsten** så att det är enkelt att hitta ID:t och huvudnamnet att användaren är en tjänstanvändare
 
-**Bästa praxis**
+**God praxis**
 
 * Blanda inte olika enheter/funktioner. Dela till enskilda tjänstanvändare och slå ihop dem i mappningen om tjänsten har olika behov
 * Begränsa dig till en väldefinierad uppgift per tjänstanvändare. Dela om du slutar bevilja för många eller orelaterade behörigheter
@@ -138,28 +138,28 @@ I slutet bör tjänstens användarnamn visa:
 
 * Hur det ska användas och om det kan återanvändas:
 
-   * Mycket generiskt: `content-writer-service`. Säkert att återanvända i aggregering om era tjänster också behöver kunna läsa allt innehåll
+   * Mycket allmänt: `content-writer-service`. Säkert att återanvända i aggregering om era tjänster också behöver kunna läsa allt innehåll
    * Mycket specifik: `asset-linkshare-service`. Det är inte så säkert att återanvända om inte din tjänst också gör länkdelning av resurser.
 
 * Hur funktionsuppsättningen och behörighetsinställningarna ser ut:
 
    * Den logiska entiteten måste matcha behörighetsinställningarna:
 
-      * A `content-foo-service` ska bara associeras med åtgärder för innehåll. Bevilja den behörighet att arbeta på andra enheter, som konfiguration eller användare, skulle vara fel
+      * En `content-foo-service` ska bara associeras med åtgärder för innehåll. Bevilja den behörighet att arbeta på andra enheter, som konfiguration eller användare, skulle vara fel
       * En specifik tjänst som `personalization-foo-service` bör också ha särskilda behörigheter. Om ni ger behörigheter för allt innehåll är det inte längre specifikt. Återanvänd en vanlig användare i en aggregering
-      * En funktionsspecifik tjänst som `msm-xyz-service` ska bara ha msm-relaterade behörigheter. Utöka inte behörigheter till icke-relaterade funktioner som att hantera communitykonfiguration eller skärmanvändare.
+      * En funktionsspecifik tjänst som `msm-xyz-service` ska endast ha msm-relaterade behörigheter. Utöka inte behörigheter till icke-relaterade funktioner som att hantera communitykonfiguration eller skärmanvändare.
 
    * Aktiviteten måste matcha behörigheterna:
 
-      * A `foo-reader-service` bör bara kunna läsa vanliga objekt. Ge aldrig skrivbehörigheter
-      * A `foo-writer-service` kan förväntas utföra skrivåtgärder. Det bör dock inte ges behörighet att läsa/ändra innehåll för åtkomstkontroll
-      * A `foo-replicator-service` kan förväntas ha `crx:replicate` beviljad.
+      * En `foo-reader-service` ska bara kunna läsa vanliga objekt. Ge aldrig skrivbehörigheter
+      * En `foo-writer-service` kan förväntas utföra skrivåtgärder. Det bör dock inte ges behörighet att läsa/ändra innehåll för åtkomstkontroll
+      * `foo-replicator-service` kan förväntas ha `crx:replicate` tilldelat.
 
 **Exempel**
 
-Exempel på `configuration-reader-service`:
+Exempel för `configuration-reader-service`:
 
-* Namnet anger att det refererar till konfigurationer i allmänhet och inte konfigurering av en viss funktion, som konfiguration av DM-integrering. En tjänstanvändare som är särskilt inriktad på att läsa konfigurationen för en sådan integrering namnges i stället `dmconfig-reader-service` eller `s7config-reader-service`
+* Namnet anger att det refererar till konfigurationer i allmänhet och inte konfigurering av en viss funktion, som konfiguration av DM-integrering. En tjänstanvändare som är specifikt inriktad på att läsa konfigurationen för en sådan integrering får i stället namnet `dmconfig-reader-service` eller `s7config-reader-service`
 
   >[!NOTE]
   >
@@ -167,12 +167,12 @@ Exempel på `configuration-reader-service`:
 
 * Aktivitetselementet anger att tjänster som är bundna till den användaren endast utför läsåtgärder.
 
-Exempel på `userproperties-copy-service`:
+Exempel för `userproperties-copy-service`:
 
 * Tjänster som är bundna till den här tjänstanvändaren kommer att fungera på användar-/gruppegenskaper som profiler eller inställningar
 * Det är specifikt avsett att bara kopiera den informationen i motsats till ett namn som `userproperties-writer-service` som skulle innehålla alla typer av skrivåtgärder. Det är därför möjligt att behörighetsinställningarna för de här kopieringsåtgärderna endast tillåter att objekt på en plats läggs till och tas bort från en annan plats.
 
-**Metodtips för behörighetsinställningar**
+**Bästa praxis för behörighetsinställningar**
 
 * Använd alltid huvudbaserad åtkomstkontroll för tjänstanvändare. Mer information finns i exemplen nedan:
 
@@ -183,23 +183,23 @@ Exempel på `userproperties-copy-service`:
 * Begränsa behörigheter
 
    * Ge bara den minsta uppsättning behörigheter som behövs
-   * Mer information finns i [Mappningsbehörigheter till objekt](https://jackrabbit.apache.org/oak/docs/security/privilege/mappingtoitems.html) och [Mappa API-anrop till behörigheter](https://jackrabbit.apache.org/oak/docs/security/privilege/mappingtoprivileges.html) dokumentation
-   * Bevilja inte behörighet för `jcr:all`. Det är sannolikt inte minimalt.
+   * Mer information finns i dokumentationen för [Mappningsbehörigheter till objekt](https://jackrabbit.apache.org/oak/docs/security/privilege/mappingtoitems.html) och [Mappnings-API-anrop till behörigheter](https://jackrabbit.apache.org/oak/docs/security/privilege/mappingtoprivileges.html)
+   * Ge inte behörighet till `jcr:all`. Det är sannolikt inte minimalt.
 
 * Minska omfånget
 
    * Placera åtkomstkontrollprinciper i funktionsspecifika underträd
-   * Vid distribuerade artiklar: använd begränsningar för att begränsa omfattningen (se [dokumentationen](https://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html) för en lista över inbyggda begränsningar).
+   * Vid distribuerade objekt: använd begränsningar för att begränsa omfånget (se [dokumentationen](https://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html) för en lista över inbyggda begränsningar).
 
 * Säkerställ enhetlighet
 
    * Gör behörigheterna konsekventa med entiteten och aktiviteten som du använde i tjänstens användarnamn
-   * Undvik att lägga till orelaterade behörigheter. Det skulle till exempel vara udda att ha en `workflow-administration-service` och ge den behörighet att utföra användarhanteringsåtgärder på `/home/users/screens` eller låt det läsa s7-config.
+   * Undvik att lägga till orelaterade behörigheter. Det skulle till exempel vara konstigt att ha en `workflow-administration-service` och ge den behörighet att utföra användarhanteringsåtgärder på `/home/users/screens` eller låta den läsa s7-config.
 
 * Fullständighet
 
    * Se till att din tjänst har alla behörigheter den behöver för att utföra de uppgifter den är avsedd att utföra. Tjänsten måste komma igång direkt även i kundmiljöer.
-   * Förvänta dig aldrig/be kunder utöka behörighetsinställningarna (till exempel nedan `/apps`)
+   * Förvänta dig aldrig/be kunder utöka behörighetsinställningarna (till exempel under `/apps`)
 
 * Undvik dubblering av behörighetsinställningar
 
@@ -214,21 +214,21 @@ Exempel på `userproperties-copy-service`:
    * Inloggning och utvärdering
    * Fungerar inte med huvudbaserad AC-installation
 
-* Åtkomst till noden user-home (eller något underträd i den), som inte har en förutsägbar sökväg, fås i repo init med home()`userId`). Se försäljningsrepo init [dokumentation](https://sling.apache.org/documentation/bundles/repository-initialization.html) för mer information.
+* Åtkomst till noden user-home (eller något underträd i den), som inte har en förutsägbar sökväg, uppnås i repo init med home(`userId`). Mer information finns i försäljningsrepo init [documentation](https://sling.apache.org/documentation/bundles/repository-initialization.html).
 * RTC: skapa ett dedikerat RTC-problem om du ändrar behörigheter för en befintlig tjänstanvändare och ser till att du får det granskat av säkerhetsteamet.
 
-**Skapa med databasinitiering**
+**Skapad med databasinitiering**
 
 Använd alltid `repo-init` för att definiera tjänstanvändare och deras behörighetsinställningar och placera båda i rätt avsnitt i QuickStart-funktionsmodellen:
 
-**Bästa praxis**
+**God praxis**
 
 * Använd alltid `repo-init` för att skapa tjänstanvändaren
 * Ange alltid en mellanliggande sökväg för att skapa en tjänstanvändare
-* Alla inbyggda tjänstanvändare för AEM måste finnas nedan `system/cq:services/internal`
-* Lägg dessutom till den mellanliggande relativa sökvägen för att gruppera tjänstanvändare efter funktion: `system/cq:services/internal/<your-feature>`
-* Kunddefinierade tjänstanvändare måste finnas nedan `system/cq:services/<customer-intermediate-rel-path>` och aldrig nedanför det interna trädet
-* Använd **med fast sökväg** i stället för **med bana** om en användare redan fanns och behöver flyttas till den nya plats som stöder huvudbaserad auktorisering.
+* Alla inbyggda tjänstanvändare för AEM måste finnas under `system/cq:services/internal`
+* Lägg dessutom till den mellanliggande relativa sökvägen till grupperade tjänstanvändare efter funktion: `system/cq:services/internal/<your-feature>`
+* Kunddefinierade tjänstanvändare måste finnas under `system/cq:services/<customer-intermediate-rel-path>` och aldrig under det interna trädet
+* Använd **med den tvingade sökvägen** i stället för **med sökvägen** om det redan finns en användare som måste flyttas till den nya platsen som stöder huvudbaserad auktorisering.
 
 **Exempel**
 
@@ -275,4 +275,4 @@ delete service my-feature-service
 
 Det är viktigt att skriva tester på serversidan för tjänstanvändare och deras behörighetsinställningar. Detta verifierar inte bara att konfigurationen fungerar, utan hjälper dig även att upptäcka regressioner och oavsiktliga misstag när du ändrar innehåll för åtkomstkontroll eller tjänstanvändare.
 
-The `com.adobe.granite.testing.clients` biblioteket innehåller många verktyg som gör det enkelt att skriva SST-filer för tjänstanvändare.
+Biblioteket `com.adobe.granite.testing.clients` innehåller många verktyg som gör det enkelt att skriva SST-filer för tjänstanvändare.

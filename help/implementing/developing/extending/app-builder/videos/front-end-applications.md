@@ -1,6 +1,6 @@
 ---
-title: Front-end-program för App Builder
-description: Lär dig hur du skapar avancerade App Builder-program.
+title: Front-end-applikationer för App Builder
+description: Lär dig hur du bygger App Builder-applikationer.
 version: Cloud Service
 feature: App Builder, Developing
 topic: Integrations, Development
@@ -16,16 +16,16 @@ ht-degree: 0%
 
 ---
 
-# Front-end-program för App Builder
+# Front-end-applikationer för App Builder
 
-## Introduktion till avancerade App Builder-applikationer
+## Introduktion till App Builder-program
 
-Läs om hur man använder Adobe App Builder-applikationer, till exempel projektinitieringsalternativ och Adobe Spectrum.
+Läs mer om App Builder-program, inklusive projektinitieringsalternativ och Adobe Spectrum.
 
 >[!VIDEO](https://video.tv.adobe.com/v/339247/?quality=12&learn=on)
 
-## Bygga applikationer i Adobe App Builder
+## Bygga App Builder-applikationer
 
-Lär dig hur du skapar ett klientprogram i App Builder med React och Adobe Runtime-åtgärder inifrån programmet.
+Lär dig hur du skapar ett klientprogram för App Builder med React och Adobe Runtime-åtgärder inifrån programmet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/339248/?quality=12&learn=on)

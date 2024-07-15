@@ -25,15 +25,15 @@ Du måste ha administratörsbehörighet för att konfigurera överföringsbegrä
 
 ## Använd begränsningar för överföringar av resurser {#apply-restrictions-asset-uploadsssssss}
 
-Konfigurera [!DNL Experience Manager] för att begränsa användare till att överföra filer av särskilda MIME-typer:
+Så här konfigurerar du [!DNL Experience Manager] för att begränsa användare till att överföra filer av specifika MIME-typer:
 
 1. Navigera till **[!UICONTROL Tools > Assets > Assets Configurations]**.
 
 1. Klicka på **[!UICONTROL Upload Restrictions]**.
 
-1. Klicka **[!UICONTROL Add]** för att definiera tillåtna MIME-typer.
+1. Klicka på **[!UICONTROL Add]** för att definiera de tillåtna MIME-typerna.
 
-1. Ange MIME-typen i textrutan. Klicka **[!UICONTROL Add]** igen för att ange fler tillåtna MIME-typer. Du kan också klicka ![ta bort ikon](assets/delete-icon.svg) om du vill ta bort en MIME-typ från listan.
+1. Ange MIME-typen i textrutan. Du kan klicka på **[!UICONTROL Add]** igen om du vill ange fler tillåtna MIME-typer. Du kan också klicka på ikonen ![Ta bort](assets/delete-icon.svg) om du vill ta bort en MIME-typ från listan.
 
 1. Klicka på **[!UICONTROL Save]**.
 
@@ -41,9 +41,9 @@ Konfigurera [!DNL Experience Manager] för att begränsa användare till att öv
 
 Om du vill tillåta överföring av bilder i alla format och PDF-filer till Experience Manager Assets gör du följande inställningar:
 
-![Begränsningar för överföring av tillgångar](assets/asset-upload-restrictions.png)
+![Resursöverföringsbegränsningar](assets/asset-upload-restrictions.png)
 
-`image/*` som MIME-typen tillåter överföring av bilder i alla format. `application/pdf` som MIME-typen tillåter överföring av PDF-filer till Experience Manager Assets.
+`image/*` som MIME-typ tillåter överföring av bilder i alla format. `application/pdf` som MIME-typ tillåter överföring av PDF-filer till Experience Manager Assets.
 
 Om du försöker överföra en fil som inte finns med i listan över tillåtna MIME-typer visas följande felmeddelande i Experience Manager Assets:
 
@@ -61,9 +61,9 @@ Baserat på de inställningar som avbildas i bilden kan du överföra bilder i f
 
 **Se även**
 
-* [Översätt resurser](translate-assets.md)
-* [Resurser för HTTP API](mac-api-assets.md)
-* [Resurser som stöds i filformat](file-format-support.md)
+* [Översätt Assets](translate-assets.md)
+* [ASSETS HTTP API](mac-api-assets.md)
+* [Filformat som stöds av Assets](file-format-support.md)
 * [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
 * [Resursrapporter](asset-reports.md)
@@ -73,4 +73,4 @@ Baserat på de inställningar som avbildas i bilden kan du överföra bilder i f
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publicera resurser till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)

@@ -38,7 +38,7 @@ I ett CMS-system i full hög finns funktionen för att hantera innehåll i CMS-s
 
 Om en ny kanal måste läggas till eller stöd för nya typer av upplevelser krävs, kan en (eller flera) ny komponent infogas i högen och det finns bara en plats att göra ändringar på.
 
-![Lägga till en ny kanal i högen](/help/journey-headless/developer/assets/adding-channel.png)
+![Lägger till en ny kanal i högen](/help/journey-headless/developer/assets/adding-channel.png)
 
 Men komplexiteten i beroendena i högen blir snabbt uppenbar eftersom andra objekt i högen måste justeras för att passa ändringarna.
 
@@ -46,7 +46,7 @@ Men komplexiteten i beroendena i högen blir snabbt uppenbar eftersom andra obje
 
 Huvudet för alla system är vanligtvis systemets utdatarenderare, vanligtvis i form av ett grafiskt gränssnitt eller andra grafiska utdata.
 
-När vi talar om ett headless CMS hanterar CMS-systemet innehållet och fortsätter att leverera det till konsumenterna. Genom att bara leverera **innehåll** på ett standardiserat sätt utelämnar ett headless CMS den slutliga återgivningen och lämnar kvar **presentation** av innehållet till den konsumerande tjänsten.
+När vi talar om ett headless CMS hanterar CMS-systemet innehållet och fortsätter att leverera det till konsumenterna. Om **content** endast levereras på ett standardiserat sätt utesluter dock ett headless CMS den slutliga utdatarenderingen och **presentationen** av innehållet lämnas till den förbrukande tjänsten.
 
 ![Headless CMS](/help/journey-headless/developer/assets/headless-cms.png)
 
@@ -74,12 +74,12 @@ Tack för att du kom igång med din AEM översättningsresa utan trassel! Nu nä
 * Förstå de grundläggande begreppen för leverans av headless-innehåll.
 * Lär dig hur AEM hanterar headless och translation.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless translation genom att nästa gång du granskar dokumentet [Kom igång med AEM headless translation](getting-started.md) där du får en översikt över hur AEM hanterar headless-innehåll och lär dig mer om översättningsverktygen.
+Bygg vidare på den här kunskapen och fortsätt din AEM översättningsresa utan rubriker genom att gå igenom dokumentet [Kom igång med AEM översättningen](getting-started.md) där du får en översikt över hur AEM hanterar innehåll utan rubriker och lär dig dess översättningsverktyg.
 
 ## Ytterligare resurser {#additional-resources}
 
-Vi rekommenderar att du går vidare till nästa del av den headless-översättningsresan genom att granska dokumentet [Kom igång med AEM headless translation,](getting-started.md) Nedan följer ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men som inte behöver fortsätta på den headless-resan.
+Vi rekommenderar att du går vidare till nästa del av den headless-översättningsresan genom att granska dokumentet [Kom igång med AEM headless-översättning](getting-started.md), men följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta på den headless-resan.
 
-* [MSM och översättning](/help/sites-cloud/administering/msm-and-translation.md) - Information om AEM Multi-Site Manager och hur det fungerar med översättningsverktygen
+* [MSM och översättning](/help/sites-cloud/administering/msm-and-translation.md) - Information om hur du AEM Multi-Site Manager och hur det fungerar med översättningsverktygen
 * [Introduktion till AEM som headless CMS](/help/headless/introduction.md)
 * [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

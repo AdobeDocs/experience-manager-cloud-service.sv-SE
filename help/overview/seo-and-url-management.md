@@ -27,7 +27,7 @@ Det finns vissa vedertagna rutiner för webbadresser.
 
 Ställ följande fråga när du utvärderar URL:er i ett AEM-projekt:
 
-*&quot;Om en användare ser den här URL:en och inget av innehållet på sidan, kan de beskriva vad sidan handlar om?&quot;*
+*&quot;Om en användare ser den här URL:en och inget innehåll på sidan, kan de beskriva vad sidan handlar om?&quot;*
 
 Om svaret är ja är det troligt att URL:en fungerar bra för en sökmotor.
 
@@ -74,14 +74,14 @@ Här följer några allmänna tips om hur du skapar URL:er för SEO:
 
 * Stöd skiftlägesokänslighet i URL-begäranden.
 
-   * Konfigurera Dispatcher för att skriva om alla inkommande begäranden som gemener.
+   * Konfigurera Dispatcher att skriva om alla inkommande begäranden som gemener.
    * Utbilda innehållsförfattarna att skapa alla sidor med gemener.
 
 * Se till att varje sida bara hanteras från ett protokoll.
 
-   * Ibland serveras webbplatser `http` tills en användare når en sida med t.ex. ett formulär för utcheckning eller inloggning, då den växlar till `https`. Vid länkning från den här sidan, om användaren kan återgå till `http` sidor och få tillgång till dem via `https`spårar sökmotorn dessa som två separata sidor.
+   * Ibland serveras webbplatser över `http` tills en användare når en sida med t.ex. ett utchecknings- eller inloggningsformulär, där användaren växlar till `https`. Om användaren kan gå tillbaka till `http` sidor och komma åt dem via `https` när han/hon länkar från den här sidan spåras de som två separata sidor.
 
-   * Google föredrar för närvarande `https`-sidor framför `http`-sidor. Därför gör det ofta att allas liv blir lättare att betjäna hela webbplatsen `https`.
+   * Google föredrar för närvarande `https`-sidor framför `http`-sidor. Därför gör det ofta att allas liv blir lättare att betjäna hela webbplatsen över `https`.
 
 ### Serverkonfiguration {#server-configuration}
 
@@ -106,7 +106,7 @@ Tidigare var det vedertaget att använda frågeparametrar när man skapade ett f
 Trenden de senaste åren har varit att ta bort dessa så att URL:er blir mer läsbara. På många plattformar innebär det att omdirigeringar implementeras på webbservern eller innehållsleveransnätverket (CDN) – men Sling gör det enklare. Sling-väljare:
 
 * gör webbadresser enklare att läsa
-* Gör att du kan cachelagra sidorna på Dispatcher, vilket ofta förbättrar säkerheten.
+* Gör att du kan cachelagra dina sidor på Dispatcher, vilket ofta förbättrar säkerheten.
 * gör att du kan adressera innehållet direkt, i stället för att ha en allmän servlet som hämtar innehållet. Detta ger dig de fördelar med ACL:er som du tillämpar på din databas och filter som du tillämpar på Dispatcher.
 
 #### Använda väljare för servrar {#using-selectors-for-servlets}
@@ -143,7 +143,7 @@ Några saker att ha i åtanke:
 * Själva URL:en förlorar SEO-värde. Användare som har åtkomst till webbplatsen, inklusive sökmotorer, får inga semantiska värden från URL:en eftersom URL:en representerar en programmatisk sökväg och inte innehållshierarkin.
 * Frågeparametrar finns i URL:en vilket innebär att Dispatcher inte kan cachelagra svaret.
 * Om du vill skydda servleten måste du implementera en egen anpassad säkerhetslogik i den.
-* Dispatcher måste konfigureras (med försiktighet) för att kunna visas `/bin/myApp/myServlet`. Att helt enkelt visa `/bin` ger åtkomst till vissa servletar som inte ska vara öppna för webbplatsens besökare.
+* Dispatcher måste konfigureras (noggrant) för att `/bin/myApp/myServlet` ska kunna visas. Att helt enkelt visa `/bin` ger åtkomst till vissa servletar som inte ska vara öppna för webbplatsens besökare.
 
 #### Sling-serverlets (en nivå ned) {#sling-servlets-one-level-down}
 
@@ -170,7 +170,7 @@ Fördelarna med det här tillvägagångssätt är:
 * Du kan baka in SEO-värdet, som genereras av semantiken i webbplatshierarkin och sidnamnet.
 * Eftersom det inte finns några frågeparametrar kan Dispatcher cachelagra svaret. Uppdateringar som görs på den adresserade sidan gör även att cacheminnet blir ogiltigt när sidan aktiveras.
 * Alla åtkomstkontrollistor som används för `/content/my-brand/my-page` träder i kraft när en användare försöker få åtkomst till den här servern.
-* Dispatcher kommer redan att konfigureras för att hantera det här innehållet som en funktion för att skicka webbplatsen. Ingen ytterligare konfiguration krävs.
+* Dispatcher kommer redan att konfigureras för att hantera det här innehållet som en funktion för att visa webbplatsen. Ingen ytterligare konfiguration krävs.
 
 ### URL-omskrivning {#url-rewriting}
 
@@ -194,7 +194,7 @@ Du kanske vill visa lokaliserade sidnamn för användare av översatt innehåll.
 
 Utmaningen med att lokalisera sidans namn är att många av de lokaliseringsverktyg som finns på den AEM plattformen kräver att sidnamnen matchar olika språk för att innehållet ska vara synkroniserat.
 
-The `sling:alias` kan du ta med dig tårtan och äta den också. Du kan lägga till `sling:alias` som en egenskap för alla resurser för att tillåta att ett aliasnamn används för resursen. I föregående exempel skulle du få:
+Med egenskapen `sling:alias` kan du ta tårtan och äta den också. Du kan lägga till `sling:alias` som en egenskap för alla resurser för att tillåta att ett aliasnamn används för resursen. I föregående exempel skulle du få:
 
 * En sida i JCR:
   `…/es/home`
@@ -229,9 +229,9 @@ I en vanlig AEM-installation:
 
 Mappningsdefinitioner kan läggas till på den här platsen för att mappa inkommande begäranden, skriva om URL:er på sidorna i AEM, eller både och.
 
-Skapa en `sling:Mapping` nod på den här platsen under `/http` eller `/https`. Baserat på egenskaperna `sling:match` och `sling:internalRedirect` som har angetts för den här noden dirigerar AEM om all trafik för den matchade URL:en till det värde som har angetts i egenskapen `internalRedirect`.
+Om du vill skapa en mappning skapar du en `sling:Mapping`-nod på den här platsen under `/http` eller `/https`. Baserat på egenskaperna `sling:match` och `sling:internalRedirect` som har angetts för den här noden dirigerar AEM om all trafik för den matchade URL:en till det värde som har angetts i egenskapen `internalRedirect`.
 
-Det här är den metod som beskrivs i den officiella AEM- och Sling-dokumentationen, men det stöd för reguljära uttryck som tillhandahålls av implementeringen är begränsat i omfattning jämfört med de alternativ som är tillgängliga om `SlingResourceResolver` används direkt. Implementering av mappningar på det här sättet kan även leda till problem med invalidering av Dispatcher-cachen.
+Det här är den metod som beskrivs i den officiella AEM- och Sling-dokumentationen, men det stöd för reguljära uttryck som tillhandahålls av implementeringen är begränsat i omfattning jämfört med de alternativ som är tillgängliga om `SlingResourceResolver` används direkt. Implementering av mappningar på det här sättet kan även leda till problem med Dispatcher cacheogiltigförklaring.
 
 Här är ett exempel på hur problemet uppstår:
 
@@ -239,9 +239,9 @@ Här är ett exempel på hur problemet uppstår:
 1. Dispatcher vidarebefordrar denna begäran till publiceringsservern.
 1. Publiceringsservern skickar begäran till `/content/my-brand/my-page` med `/etc/map` och återger sidan.
 
-1. Dispatcher cache-lagrar svaret vid `/my-page.html` och returnerar svaret till användaren.
+1. Dispatcher cachelagrar svaret vid `/my-page.html` och returnerar svaret till användaren.
 1. En innehållsförfattare ändrar den här sidan och aktiverar den.
-1. Dispatcher flush-agenten skickar en ogiltigförklaring för `/content/my-brand/my-page`**.** Eftersom Dispatcher inte har någon cache-lagrad sida på den här sökvägen, förblir det gamla innehållet cache-lagrat och inaktuellt.
+1. Dispatcher-rensningsagenten skickar en begäran om ogiltigförklaring för `/content/my-brand/my-page`**.** Eftersom Dispatcher inte har någon cachelagrad sida på den här sökvägen förblir det gamla innehållet cachelagrat och inaktuellt.
 
 Det finns sätt att konfigurera anpassade regler för utskickstömning som mappar den kortare URL:en till den längre URL:en för att göra cache-lagring ogiltig.
 
@@ -288,7 +288,7 @@ Det finns dock ett enklare sätt att hantera det här på:
 
 Hittills har du implementerat mappningar tillsammans med logiken i dina komponenter för att använda mappningarna när du skriver URL:er på våra sidor.
 
-Den sista pusselbiten är hantering av dessa förkortade URL:er när de kommer till Dispatcher, där är `mod_rewrite` blir en lek. Den största fördelen med att använda `mod_rewrite` är att URL:erna mappas tillbaka till det långa formuläret *före* skickas till modulen Dispatcher. Det innebär att Dispatcher begär den långa URL:en från publiceringsservern och cachelagrar den därefter. Därför kan alla Dispatcher-tömningar som kommer in från publiceringsservern göra det här innehållet ogiltigt.
+Den sista pusselbiten är att hantera dessa förkortade URL:er när de kommer in på Dispatcher, där `mod_rewrite` spelar. Den största fördelen med att använda `mod_rewrite` är att URL:erna mappas tillbaka till det långa formuläret *innan* de skickas till modulen Dispatcher. Det innebär att Dispatcher begär den långa URL:en från publiceringsservern och cachelagrar den därefter. Alla Dispatcher-tömningar som kommer in från publiceringsservern kan därför göra det här innehållet ogiltigt.
 
 Om du vill implementera den här reglerna kan du lägga till `RewriteRule`-element under den virtuella värden i Apache HTTP Server-konfigurationen. Om du vill utöka de förkortade URL:erna från det tidigare exemplet kan du implementera en regel som ser ut så här:
 
@@ -331,7 +331,7 @@ RewriteEngine On
 RewriteMap lowercase int:tolower
 ```
 
-Lägg även till följande längst upp i `htaccess` fil:
+Lägg även till följande längst upp i filen `htaccess`:
 
 ```xml
 RewriteCond $1 [A-Z]
@@ -351,17 +351,17 @@ Disallow: /
 
 I en aktiv miljö kan du även välja att inte tillåta specifika sökvägar som du inte vill indexera.
 
-Caveat med placeringen av `robots.txt` filen i platsroten är att begäranden om rensning av Dispatcher kan ta bort den här filen och URL-mappningar placerar troligtvis platsroten någon annanstans än i `DOCROOT` enligt definitionen i Apache HTTP Server-konfigurationen. Därför är det vanligt att placera den här filen på författarinstansen i webbplatsroten och replikera den till publiceringsinstansen.
+Det kavatt med placeringen av filen `robots.txt` i platsroten är att Dispatcher rensningsbegäranden kan ta bort den här filen och URL-mappningar placerar troligtvis platsroten på en annan plats än `DOCROOT` enligt definitionen i Apache HTTP Server-konfigurationen. Därför är det vanligt att placera den här filen på författarinstansen i webbplatsroten och replikera den till publiceringsinstansen.
 
 ### Bygga en XML-webbplatskarta på AEM {#building-an-xml-sitemap-on-aem}
 
 Crawlers använder XML-webbplatskartor för att bättre förstå webbplatsernas struktur. Även om det inte finns någon garanti för att en platskarta leder till förbättrad SEO-rankning är detta en överenskommen bästa praxis. Du kan manuellt underhålla en XML-fil på webbservern och använda den som platskarta, men du rekommenderas att generera platskartan programmatiskt, vilket säkerställer att platskartan automatiskt återspeglar ändringarna när författare skapar innehåll.
 
-AEM använder [Modulen Apache Sling Sitemap](https://github.com/apache/sling-org-apache-sling-sitemap) för att generera XML-webbplatskartor, som innehåller ett stort antal alternativ för utvecklare och redigerare att hålla webbplatsernas XML-webbplatskarta uppdaterad.
+AEM använder modulen [Apache Sling Sitemap](https://github.com/apache/sling-org-apache-sling-sitemap) för att generera XML-webbplatskartor, som innehåller en mängd alternativ för utvecklare och redigerare att hålla en platskarta för XML uppdaterad.
 
-Modulen Apache Sling Sitemap skiljer mellan en webbplatskarta på den översta nivån och en kapslad platskarta, som båda genereras för en resurs som har den `sling:sitemapRoot` egenskap inställd på `true`. I allmänhet återges platskartor med hjälp av väljare på sökvägen till platskartan på den översta nivån i trädet, vilket är den resurs som inte har något annat överordnat objekt för platskartan. Denna platskarta på den översta nivån visar också platskartsindexet, som vanligtvis är det som en webbplatsägare konfigurerar i sökmotorns konfigurationsportal eller lägger till i webbplatsens `robots.txt`.
+Modulen Apache Sling Sitemap skiljer mellan en platskarta på den översta nivån och en kapslad platskarta, som båda genereras för en resurs som har egenskapen `sling:sitemapRoot` inställd på `true`. I allmänhet återges platskartor med hjälp av väljare på sökvägen till platskartan på den översta nivån i trädet, vilket är den resurs som inte har något annat överordnat objekt för platskartan. Den här platskartan på den översta nivån visar också platskartsindexet, som vanligtvis är det som en webbplatsägare skulle konfigurera i sökmotorns konfigurationsportal eller lägga till i webbplatsens `robots.txt`.
 
-Ta till exempel en plats som definierar en platskarta på den översta nivån på `my-page` och en kapslad platskarta på `my-page/news`, för att generera en dedikerad webbplatskarta för sidor i nyhetsunderträdet. De resulterande, relevanta URL-adresserna skulle
+Ta till exempel en plats som definierar en platskarta på den översta nivån på `my-page` och en kapslad platskarta på `my-page/news` för att generera en dedikerad platskarta för sidorna i nyhetsunderträdet. De resulterande, relevanta URL-adresserna skulle
 
 * `<https://www.mydomain.com/my-brand/my-page.sitemap-index.xml>`
 * `<https://www.mydomain.com/my-brand/my-page.sitemap.xml>`
@@ -369,26 +369,26 @@ Ta till exempel en plats som definierar en platskarta på den översta nivån p�
 
 >[!NOTE]
 >
-> Väljarna `sitemap` och `sitemap-index` kan störa anpassade implementeringar. Om du inte vill använda produktfunktionen konfigurerar du en egen servertjänst som servar väljarna med en `service.ranking` högre än 0.
+> Väljarna `sitemap` och `sitemap-index` kan störa anpassade implementeringar. Om du inte vill använda produktfunktionen konfigurerar du en egen servertjänst som betjänar väljarna med en `service.ranking` högre än 0.
 
-I standardkonfigurationen finns ett alternativ i dialogrutan Sidegenskaper för att markera en sida som en platskarta och på så sätt, som beskrivs ovan, generera en platskarta för sig själv och dess underordnade. Detta beteende implementeras av implementeringar av `SitemapGenerator` gränssnitt och kan utökas genom att man lägger till alternativa implementeringar. Men eftersom hur ofta XML-webbplatskartorna ska genereras om beror på arbetsflödena och arbetsbelastningarna för att skapa innehåll, levereras inte produkten `SitemapScheduler` konfiguration. Detta gör att funktionen effektivt kan välja att delta.
+I standardkonfigurationen finns ett alternativ i dialogrutan Sidegenskaper för att markera en sida som en platskarta och på så sätt, som beskrivs ovan, generera en platskarta för sig själv och dess underordnade. Det här beteendet implementeras av implementeringar av gränssnittet `SitemapGenerator` och kan utökas genom att du lägger till alternativa implementeringar. Eftersom hur ofta XML-webbplatskartorna ska genereras om i hög grad beror på arbetsflödena för innehållsredigering och arbetsbelastningar, levereras ingen `SitemapScheduler`-konfiguration. Detta gör att funktionen effektivt kan välja att delta.
 
-Aktivera bakgrundsjobbet som genererar XML-platskartorna på en `SitemapScheduler` måste konfigureras. Skapa en OSGI-konfiguration för PID `org.apache.sling.sitemap.impl.SitemapScheduler`. Schemaläggarens uttryck `0 0 0 * * ?` kan användas som utgångspunkt för att generera om alla XML-webbplatskartor en gång om dagen vid midnatt.
+Om du vill aktivera bakgrundsjobbet som genererar XML-platskartorna måste en `SitemapScheduler` konfigureras. Om du vill göra det skapar du en OSGI-konfiguration för PID `org.apache.sling.sitemap.impl.SitemapScheduler`. Schemaläggaruttrycket `0 0 0 * * ?` kan användas som startpunkt för att återskapa alla XML-platskartor en gång om dagen vid midnatt.
 
-![Apache Sling Sitemap - Schemaläggare](assets/sling-sitemap-scheduler.png)
+![Webbplatskarta för Apache Sling - Schemaläggare](assets/sling-sitemap-scheduler.png)
 
-Jobbet för att skapa platskartor kan köras både på instanser för författare och publiceringsnivåer. I de flesta fall rekommenderas att du kör genereringen på instanser av publiceringsskikt, eftersom rätt kanoniska URL:er bara kan genereras där (på grund av att reglerna för Sling Resource Mapping vanligtvis bara finns på instanser av publiceringsskikt). Det är dock möjligt att plugin-program för en anpassad implementering av den externaliseringsmekanism som används för att generera kanoniska URL:er genom att implementera [SitemapLinkExternalizer](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/sitemap/externalizer/SitemapLinkExternalizer.html) gränssnitt. Om en anpassad implementering kan generera de kanoniska URL:erna för en platskarta på författarskiktsinstansen, `SitemapScheduler` kan konfigureras för utvecklarens körningsläge och arbetsbelastningen för generering av XML-platskarta kan fördelas mellan författartjänstklustrets instanser. I det här scenariot måste särskild försiktighet ägnas åt hantering av innehåll som ännu inte har publicerats, som har ändrats eller som bara är synligt för en begränsad grupp användare.
+Jobbet för att skapa platskartor kan köras både på instanser för författare och publiceringsnivåer. I de flesta fall rekommenderas att du kör genereringen på instanser av publiceringsskikt, eftersom rätt kanoniska URL:er bara kan genereras där (på grund av att reglerna för Sling Resource Mapping vanligtvis bara finns på instanser av publiceringsskikt). Det går dock att plugin-program för en anpassad implementering av den externaliseringsmekanism som används för att generera kanoniska URL:er genom att implementera gränssnittet [SitemapLinkExternalizer](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/sitemap/externalizer/SitemapLinkExternalizer.html). Om en anpassad implementering kan generera de kanoniska URL:erna för en webbplatskarta på författarskiktsinstanserna, kan `SitemapScheduler` konfigureras för författarens körningsläge och arbetsbelastningen för generering av XML-platskarta kan fördelas över författartjänstklustrets instanser. I det här scenariot måste särskild försiktighet ägnas åt hantering av innehåll som ännu inte har publicerats, som har ändrats eller som bara är synligt för en begränsad grupp användare.
 
-AEM Sites innehåller en standardimplementering av en `SitemapGenerator` som går igenom ett träd med sidor för att generera en platskarta. Den är förkonfigurerad så att bara kanoniska URL:er för en webbplats och eventuella språkalternativ genereras, om sådana finns. Den kan även konfigureras så att den innehåller det senaste ändringsdatumet för en sida vid behov. Aktivera *Lägg till senast ändrad* alternativ för *Adobe AEM SEO - Generator för sidträdsschema* Konfiguration och val *Senast ändrad källa*. När platskartor genereras på publiceringsnivån bör du använda `cq:lastModified` datum.
+AEM Sites innehåller en standardimplementering av en `SitemapGenerator` som går igenom ett träd med sidor för att generera en platskarta. Den är förkonfigurerad så att bara kanoniska URL:er för en webbplats och eventuella språkalternativ genereras, om sådana finns. Den kan även konfigureras så att den innehåller det senaste ändringsdatumet för en sida vid behov. Aktivera alternativet *Lägg till senast ändrad* för *Adobe AEM SEO - Site Tree Generator* och välj *Senast ändrad Source*. När platskartor genereras på publiceringsnivån bör du använda datumet `cq:lastModified`.
 
-![Adobe AEM SEO - Konfiguration av platskarta för sidträd](assets/sling-sitemap-pagetreegenerator.png)
+![Adobe AEM SEO - Generatorkonfiguration för sidträdsschema](assets/sling-sitemap-pagetreegenerator.png)
 
 För att begränsa innehållet i en webbplatskarta kan följande gränssnitt implementeras vid behov:
 
-* den [SitemapPageFilter](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/sitemap/SitemapPageFilter.html) kan implementeras för att dölja sidor från XML-webbplatskartor som genereras av den AEM Sites-specifika webbplatskartan
-* a [SitemapProductFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapProductFilter.html) eller [SitemapCategoryFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapCategoryFilter.html) kan implementeras för att filtrera bort produkter eller kategorier från XML-webbplatskartor som genereras av [Commerce integrationa frameworkar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html) specifika generatorer för webbplatskartor
+* [SitemapPageFilter](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/sitemap/SitemapPageFilter.html) kan implementeras för att dölja sidor från XML-webbplatskartor som genereras av den AEM Sites-specifika platskartegeneratorn
+* a [SitemapProductFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapProductFilter.html) eller [SitemapCategoryFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapCategoryFilter.html) kan implementeras för att filtrera bort produkter eller kategorier från XML-webbplatskartor som genereras av de [Commerce integration frameworks](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html) -specifika platskartegeneratorerna
 
-Om standardimplementeringarna inte fungerar med ett visst användningsfall eller om tilläggspunkterna inte är tillräckligt flexibla, kan en anpassad `SitemapGenerator` kan implementeras för att få full kontroll över innehållet i en genererad webbplatskarta. I följande exempel visas hur detta kan göras med hjälp av standardimplementeringens logik för AEM Sites. Den använder [ResourceTreeSitemapGenerator](https://javadoc.io/doc/org.apache.sling/org.apache.sling.sitemap/latest/org/apache/sling/sitemap/spi/generator/ResourceTreeSitemapGenerator.html) som en startpunkt för att gå igenom ett sidträd:
+Om standardimplementeringarna inte fungerar med ett visst användningsfall eller om tilläggspunkterna inte är tillräckligt flexibla, kan en anpassad `SitemapGenerator` implementeras för att ta full kontroll över innehållet i en genererad platskarta. I följande exempel visas hur detta kan göras med hjälp av standardimplementeringens logik för AEM Sites. Den använder [ResourceTreeSitemapGenerator](https://javadoc.io/doc/org.apache.sling/org.apache.sling.sitemap/latest/org/apache/sling/sitemap/spi/generator/ResourceTreeSitemapGenerator.html) som startpunkt för att gå igenom ett sidträd:
 
 ```
 import java.util.Optional;
@@ -461,7 +461,7 @@ public class SitemapGeneratorImpl extends ResourceTreeSitemapGenerator {
 }
 ```
 
-Dessutom kan de funktioner som implementeras för XML-webbplatskartor användas i olika fall, t.ex. för att lägga till den kanoniska länken eller språkvarianterna i en sidas huvud. Se [SeoTags](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/SeoTags.html) för mer information.
+Dessutom kan de funktioner som implementeras för XML-webbplatskartor användas i olika fall, t.ex. för att lägga till den kanoniska länken eller språkvarianterna i en sidas huvud. Mer information finns i gränssnittet [SeoTags](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/SeoTags.html).
 
 ### Skapa 301 omdirigeringar för äldre URL:er {#creating-redirects-for-legacy-urls}
 

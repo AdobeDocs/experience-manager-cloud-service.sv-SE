@@ -28,13 +28,13 @@ För att ett program ska kunna redigeras av den universella redigeraren måste d
 
 | Dataegenskap | Beskrivning |
 |---|---|
-| `data-aue-resource` | URN to the resource, see the section [Instrument the Page of the document Getting Started with the Universal Editor in AEM](getting-started.md#instrument-thepage) |
-| `data-aue-prop` | Resursens attribut, se avsnittet [Instrument the Page of the document Getting Started with the Universal Editor in AEM](getting-started.md#instrument-thepage) |
+| `data-aue-resource` | URN till resursen, se avsnittet [Instrument the Page of the document Getting Started with the Universal Editor in AEM](getting-started.md#instrument-thepage) |
+| `data-aue-prop` | Resursens attribut, se avsnittet [Instrument på sidan i dokumentet Getting Started with the Universal Editor i AEM](getting-started.md#instrument-thepage) |
 | `data-aue-type` | [Typ av redigerbart objekt](#item-types) (till exempel text, bild och referens) |
 | `data-aue-filter` | Definierar vilka referenser som kan användas |
-| `data-aue-label` | Definierar en anpassad etikett för ett markeringsbart objekt som visas i redigeraren <br>Om `data-aue-model` är inställd hämtas etiketten med hjälp av modellen |
+| `data-aue-label` | Definierar en anpassad etikett för ett markeringsbart objekt som visas i redigeraren <br>Om `data-aue-model` anges hämtas etiketten med hjälp av modellen |
 | `data-aue-model` | Definierar en modell som används för formulärbaserad redigering i egenskapsfältet |
-| `data-aue-behavior` | Definierar [instrumentets beteende](#behaviors)fristående text eller bild kan också efterlikna en komponent så att den kan flyttas eller tas bort |
+| `data-aue-behavior` | Definierar [beteendet för en instrumentering](#behaviors), t.ex. fristående text eller bild, kan också härma en komponent för att göra den flyttbar eller borttagbar |
 
 ## Objekttyper {#item-types}
 
@@ -42,14 +42,14 @@ För att ett program ska kunna redigeras av den universella redigeraren måste d
 |---|---|---|---|---|---|---|---|
 | `text` | Texten kan redigeras i HTML-taggarna, men bara i ett enkelt textformat, ingen formatering, det här används ofta för rubrikkomponenter, till exempel | Valfritt | Obligatoriskt | n/a | Valfritt | n/a | Valfritt |
 | `richtext` | Texten kan redigeras med omfattande textfunktioner. RTE visas på den högra panelen | Valfritt | Obligatoriskt | n/a | Valfritt | n/a | Valfritt |
-| `media` | Det redigerbara objektet är en resurs, till exempel bild eller video | Valfritt | Obligatoriskt | Valfritt<br>lista med bild- eller videofiltervillkor som skickas till resursväljaren | Valfritt | n/a | Valfritt |
-| `container` | De redigerbara funktionerna fungerar som behållare för komponenter som kallas Styckesystem. | Beroende <br>se nedan | Beroende <br>se nedan | Valfritt<br>en lista över tillåtna komponenter | Valfritt | n/a | n/a |
+| `media` | Det redigerbara objektet är en resurs, till exempel bild eller video | Valfritt | Obligatoriskt | Valfri<br>lista med bild- eller videofiltervillkor som skickas till resursväljaren | Valfritt | n/a | Valfritt |
+| `container` | De redigerbara funktionerna fungerar som behållare för komponenter som kallas Styckesystem. | Beroende <br>se nedan | Beroende <br>se nedan | Valfri<br>lista över tillåtna komponenter | Valfritt | n/a | n/a |
 | `component` | Det redigerbara är en komponent. Det lägger inte till ytterligare funktioner. Det är obligatoriskt att ange flyttbara/borttagbara delar av DOM och att öppna egenskapsspåret och dess fält | Obligatoriskt | n/a | n/a | Valfritt | Valfritt | n/a |
-| `reference` | Det redigerbara är en referens, till exempel Innehållsfragment, Upplevelsefragment eller Produkt | Beroende <br>se nedan | Beroende <br>se nedan | Valfritt<br>lista med villkor för innehållsfragment, produkt eller Experience Fragment-filter som skickas vidare till referensväljaren | Valfritt | Valfritt | n/a |
+| `reference` | Det redigerbara är en referens, till exempel Innehållsfragment, Upplevelsefragment eller Produkt | Beroende <br>se nedan | Beroende <br>se nedan | Valfri<br>lista över villkor för innehållsfragment, produkt eller Experience Fragment-filter som skickas till referensväljaren | Valfritt | Valfritt | n/a |
 
-Beroende på användningsfallet `data-aue-prop` eller `data-aue-resource` kan vara nödvändigt eller inte. Till exempel:
+Beroende på användningsfallet kan `data-aue-prop` eller `data-aue-resource` behövas. Till exempel:
 
-* `data-aue-resource` är obligatoriskt om du skickar frågor till innehållsfragment via GraphQL och vill göra listan redigerbar i sitt sammanhang.
+* `data-aue-resource` krävs om du frågar innehållsfragment via GraphQL och vill göra listan redigerbar i sitt sammanhang.
 * `data-aue-prop` krävs om du har en komponent som återger innehållet i ett refererat innehållsfragment och du vill uppdatera referensen i komponenten.
 
 ## Beteenden {#behaviors}

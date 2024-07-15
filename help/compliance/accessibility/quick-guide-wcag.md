@@ -29,7 +29,7 @@ WCAG 2.1 består av en uppsättning teknikoberoende riktlinjer och framgångskri
 
 Om du till exempel beskriver en bild (eller annat innehåll som inte är text) genom att använda attributet `alt` i HTML blir det till stor fördel för personer som är blinda eller har nedsatt syn. Textbeskrivningen i attributet `alt` kan antingen konverteras till tal eller överföras till elektroniska, uppdateringsbara blindskriftsskärmar. 
 
-WCAG 2.1 kan också ge fördelar för andra mottagare, inklusive personer som kan komma i fråga *delvis inaktiverad*. Det kan vara personer som på grund av omständigheter som surfteknik, nätverksanslutningshastighet eller surfmiljö kan uppleva hinder som liknar de personer med funktionshinder har.
+WCAG 2.1 kan dessutom ge andra mottagare fördelar, inklusive personer som kan betraktas som *inaktiverade*. Det kan vara personer som på grund av omständigheter som surfteknik, nätverksanslutningshastighet eller surfmiljö kan uppleva hinder som liknar de personer med funktionshinder har.
 
 Med Adobe Experience Manager kan författare och/eller webbplatsägare skapa webbinnehåll som uppfyller relevanta framgångskriterier för WCAG 2.1 nivå A och nivå AA.
 
@@ -116,7 +116,7 @@ Varje teknik har ett unikt nummer som refererar till dess samling. En av ARIA-te
 
 Tekniker kan vara tillräckliga, rådgivande eller felaktiga:
 
-* A *Tillräcklig teknik* är ett som, om det följs, är tillräckligt för att uppfylla ett visst kriterium för framgång.
+* En *Tillräcklig teknik* är en teknik som, om den följs, räcker för att uppfylla ett visst kriterium för framgång.
 * En *rådgivande teknik* är en teknik som, om den följs, kommer att ha en positiv inverkan på tillgängligheten, men kanske inte i sig räcker för att uppfylla ett visst kriterium.
 * En *felaktig teknik* är en teknik som beskriver ett specifikt exempel när ett framgångskriterium inte uppfylls.
 
@@ -146,7 +146,7 @@ Ett exempel finns på: [Understanding Success Criterion 1.1.1 (&quot;Non-text co
 
 ### Hur WCAG 2.1 fungerar {#how-to-meet-wcag}
 
-Avsnittet &quot;Hur du uppfyller&quot; finns på [Så här uppfyller du WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/) sida. Avsnittet innehåller en alternativ presentation av WCAG som låter läsarna förfina innehållet i riktlinjerna till de som är mest relevanta för en deras intressen och/eller omständigheter. Läsare kan filtrera de framgångskriterier som de vill visa genom att ange särskilda tekniker för webbinnehåll, t.ex. Cascading Style Sheets eller skript eller genom att ange en eller flera prioritetsnivåer.
+Avsnittet &quot;Så här möts&quot; finns på sidan [Så här uppfyller du WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/). Avsnittet innehåller en alternativ presentation av WCAG som låter läsarna förfina innehållet i riktlinjerna till de som är mest relevanta för en deras intressen och/eller omständigheter. Läsare kan filtrera de framgångskriterier som de vill visa genom att ange särskilda tekniker för webbinnehåll, t.ex. Cascading Style Sheets eller skript eller genom att ange en eller flera prioritetsnivåer.
 
 Utan filtrering visar den här resursen alla framgångskriterier grupperade efter riktlinjer. För varje framgångskriterium anges följande:
 

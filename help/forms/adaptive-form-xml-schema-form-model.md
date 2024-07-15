@@ -7,7 +7,7 @@ level: Beginner, Intermediate
 exl-id: 5b8ad9a8-77d4-4234-a4d7-c8964b975e96
 source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '956'
 ht-degree: 0%
 
 ---
@@ -166,7 +166,7 @@ Du kan lägga till följande attribut i XML-schemaelement om du vill lägga till
 >* Inled det första tecknet i elementnamnet med versal
 >* Infoga tomt utrymme vid gränserna för Camera Case.
 >
->Om du till exempel lägger till `userFirstName` schemaelement, den bildtext som genereras i det adaptiva formuläret är `User First Name`.
+>Om du t.ex. lägger till schemaelementet `userFirstName` är den bildtext som genereras i det adaptiva formuläret `User First Name`.
 
 ## Begränsa tillåtna värden för en adaptiv formulärkomponent {#limit-acceptable-values-for-an-adaptive-form-component}
 
@@ -197,7 +197,7 @@ Du kan lägga till följande begränsningar i XML-schemaelement för att begrän
    <td>
     <ul>
      <li>Numerisk ruta</li>
-     <li>Numerisk stege<br /> </li>
+     <li>Numerisk nummerlista<br /> </li>
      <li>Datumväljaren</li>
     </ul> </td>
   </tr>
@@ -282,7 +282,7 @@ Du kan lägga till följande begränsningar i XML-schemaelement för att begrän
  </tbody>
 </table>
 
-## Vanliga frågor {#frequently-asked-questions}
+## Frågor och svar {#frequently-asked-questions}
 
 **Jag har en lång komplex struktur i Content Finder. Hur hittar jag ett specifikt element?**
 
@@ -293,7 +293,7 @@ Du har två alternativ:
 
 **Vad är en bindRef?**
 
-A `bindRef` är anslutningen mellan en adaptiv formulärkomponent och ett schemaelement eller attribut. Det dikterar `XPath` där värdet som hämtas från den här komponenten eller det här fältet är tillgängligt i XML-utdata. A `bindRef`används också när ett fältvärde fylls i i förväg från förfylld (förifylld) XML.
+En `bindRef` är anslutningen mellan en adaptiv formulärkomponent och ett schemaelement eller attribut. Det anger `XPath` där värdet som hämtas från den här komponenten eller det här fältet är tillgängligt i XML-utdata. Ett `bindRef` används också när ett fältvärde fylls i i förväg från förfylld (förifylld) XML.
 
 **Varför kan jag inte dra enskilda element i ett delformulär (struktur som genereras från en komplex typ) för repeterbara delformulär (värdena minOcCours och maxOccurs är större än 1)?**
 
@@ -301,4 +301,4 @@ I ett upprepningsbart delformulär måste du använda delformuläret Fullständi
 
 >[!MORELIKETHIS]
 >
->* [Utforma JSON-schema för ett adaptivt formulär](/help/forms/adaptive-form-json-schema-form-model.md)
+>* [Designa JSON-schema för ett adaptivt formulär](/help/forms/adaptive-form-json-schema-form-model.md)

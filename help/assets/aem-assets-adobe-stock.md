@@ -19,33 +19,33 @@ ht-degree: 2%
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/aem-assets-adobe-stock.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
-[!DNL Adobe Stock] ger designers och företag tillgång till miljontals utvalda och royaltyfria foton, vektorer, illustrationer, videor, mallar och 3D-resurser av hög kvalitet för alla kreativa projekt.
+[!DNL Adobe Stock]-tjänsten ger designer och företag tillgång till miljontals utvalda och royaltyfria foton, vektorer, illustrationer, videor, mallar och 3D-resurser av hög kvalitet för alla kreativa projekt.
 
-[!DNL Adobe Stock] som standard inkluderar Enterprise-erbjudanden delningsrättigheter i hela organisationen. När en mediefil har hämtats av en användare i organisationen kan andra användare i organisationen identifiera, hämta och använda den här mediefilen utan att behöva licensiera den igen. När en mediefil har licensierats av din organisation är rätten att använda den evig.
+[!DNL Adobe Stock] för Enterprise-erbjudandet innehåller som standard delningsrättigheter i hela organisationen. När en mediefil har hämtats av en användare i organisationen kan andra användare i organisationen identifiera, hämta och använda den här mediefilen utan att behöva licensiera den igen. När en mediefil har licensierats av din organisation är rätten att använda den evig.
 
-Organisationer kan integrera sina företag [!DNL Adobe Stock] planera med [!DNL Experience Manager Assets] för att säkerställa att licensierade mediefiler finns tillgängliga i stor omfattning för kreativa projekt och marknadsföringsprojekt, med de kraftfulla filhanteringsfunktionerna i [!DNL Experience Manager]. [!DNL Experience Manager] -användare snabbt kan hitta, förhandsgranska och licensiera Adobe Stock-resurser som har sparats i [!DNL Experience Manager], utan att lämna [!DNL Experience Manager] gränssnitt.
+Organisationer kan integrera sin [!DNL Adobe Stock]-företagsplan med [!DNL Experience Manager Assets] för att se till att licensierade mediefiler finns tillgängliga i stor omfattning för kreativa projekt och marknadsföringsprojekt, med de kraftfulla resurshanteringsfunktionerna i [!DNL Experience Manager]. [!DNL Experience Manager]-användare kan snabbt hitta, förhandsgranska och licensiera Adobe Stock-resurser som har sparats i [!DNL Experience Manager], utan att lämna [!DNL Experience Manager]-gränssnittet.
 
 ## Integrera [!DNL Experience Manager] och [!DNL Adobe Stock] {#integrate-aem-and-adobe-stock}
 
-[!DNL Experience Manager Assets] ger användarna möjlighet att söka, förhandsgranska, spara och licensiera [!DNL Adobe Stock] resurser direkt från [!DNL Experience Manager].
+[!DNL Experience Manager Assets] ger användarna möjlighet att söka efter, förhandsgranska, spara och licensiera [!DNL Adobe Stock]-resurser direkt från [!DNL Experience Manager].
 
 **Förutsättningar**
 
 Integreringen kräver:
 
-* En igång [!DNL Experience Manager Assets] som [!DNL Cloud Service] instance
-* An [företag [!DNL Adobe Stock] plan](https://stockenterprise.adobe.com/)
+* En [!DNL Experience Manager Assets]-instans som körs och körs som [!DNL Cloud Service]
+* En [Enterprise [!DNL Adobe Stock] plan](https://stockenterprise.adobe.com/)
 * En användare med behörigheter i Admin Console till standardproduktprofilen för Stock
-* En användare med behörighet till profilen Developer Access som skapar integration i Adobe Developer Console
+* En användare med behörighet till profilen Developer Access för att skapa integrering i Adobe Developer Console
 
-Ett företag [!DNL Adobe Stock] plan,
+En [!DNL Adobe Stock]-företagsplan,
 
-* Anger produktberättigande för [!DNL Adobe Stock] (Lager som är anslutna till Experience Manager)
-* Krediter som köpts till [!DNL Adobe Admin Console] för ditt Stock-berättigande
+* Tillhandahåller produktberättigande för [!DNL Adobe Stock] (Stock som är anslutna till Experience Manager)
+* Krediter som köpts in i [!DNL Adobe Admin Console] för ditt aktieberättigande
 * Aktiverar JWT-autentisering (Service Account) inom [!DNL Adobe Developer Console] för ditt Stock-berättigande
-* Gör det möjligt att hantera krediter och licenser globalt inifrån [!DNL Adobe Admin Console]
+* Aktiverar hantering av krediter och licenser globalt inifrån [!DNL Adobe Admin Console]
 
-Inom berättigandet finns en standardproduktprofil för [!DNL Adobe Stock] finns i [!DNL Admin Console]. Det går att skapa flera profiler, och de här profilerna avgör vem som kan licensiera Stock-mediefiler. En användare som har direktåtkomst till produktprofilen har åtkomst [https://stock.adobe.com/](https://stock.adobe.com/) och licensiera Stock-mediefiler. Det finns ett annat sätt att använda Developer Access för att skapa en integrering (API). Integreringen autentiserar kommunikationen mellan [!DNL Experience Manager Assets] och [!DNL Adobe Stock].
+I berättigandet finns en standardproduktprofil för [!DNL Adobe Stock] i [!DNL Admin Console]. Det går att skapa flera profiler, och de här profilerna avgör vem som kan licensiera Stock-mediefiler. En användare som har direktåtkomst till produktprofilen har åtkomst till [https://stock.adobe.com/](https://stock.adobe.com/) och kan licensiera Stock-mediefiler. Det finns ett annat sätt att använda Developer Access för att skapa en integrering (API). Integrationen autentiserar kommunikationen mellan [!DNL Experience Manager Assets] och [!DNL Adobe Stock].
 
 >[!NOTE]
 >
@@ -84,30 +84,30 @@ Inom berättigandet finns en standardproduktprofil för [!DNL Adobe Stock] finns
 
 -->
 
-## Steg för integrering [!DNL Experience Manager] och [!DNL Adobe Stock] {#integration-steps}
+## Steg för att integrera [!DNL Experience Manager] och [!DNL Adobe Stock] {#integration-steps}
 
-Integrera [!DNL Experience Manager] och [!DNL Adobe Stock]utför du följande steg i den listade sekvensen:
+Om du vill integrera [!DNL Experience Manager] och [!DNL Adobe Stock] utför du följande steg i den listade sekvensen:
 
 1. [Hämta offentligt certifikat](#public-certificate)
 
-   I [!DNL Experience Manager], skapa ett IMS-konto och generera ett offentligt certifikat (offentlig nyckel).
+   I [!DNL Experience Manager] skapar du ett IMS-konto och skapar ett offentligt certifikat (offentlig nyckel).
 
-1. [Skapa JWT-anslutning (Service Account)](#createnewintegration)
+1. [Skapa tjänstkontoanslutning (JWT)](#createnewintegration)
 
-   I [!DNL Adobe Developer Console], skapa ett projekt för [!DNL Adobe Stock] organisation. Under projektet konfigurerar du ett API med den offentliga nyckeln för att skapa en JWT-anslutning (Service Account). Hämta tjänstkontots autentiseringsuppgifter och information om JWT-nyttolast.
+   Skapa ett projekt för din [!DNL Adobe Stock]-organisation i [!DNL Adobe Developer Console]. Under projektet konfigurerar du ett API med den offentliga nyckeln för att skapa en JWT-anslutning (Service Account). Hämta tjänstkontots autentiseringsuppgifter och information om JWT-nyttolast.
 
 1. [Konfigurera IMS-konto](#create-ims-account-configuration)
 
-   I [!DNL Experience Manager]konfigurerar du IMS-kontot med hjälp av tjänstkontots autentiseringsuppgifter och JWT-nyttolast.
+   I [!DNL Experience Manager] konfigurerar du IMS-kontot med tjänstkontots autentiseringsuppgifter och JWT-nyttolast.
 
 1. [Konfigurera molntjänst](#configure-the-cloud-service)
 
-   I [!DNL Experience Manager], konfigurera och [!DNL Adobe Stock] molntjänst som använder IMS-kontot.
+   Konfigurera en [!DNL Adobe Stock]-molntjänst med IMS-kontot i [!DNL Experience Manager].
 
 
 ### Skapa en IMS-konfiguration {#create-an-ims-configuration}
 
-IMS-konfigurationen autentiserar din [!DNL Experience Manager Assets] författarinstans med [!DNL Adobe Stock] berättigande.
+IMS-konfigurationen autentiserar din [!DNL Experience Manager Assets]-författarinstans med [!DNL Adobe Stock]-berättigandet.
 
 IMS-konfigurationen har två steg:
 
@@ -118,29 +118,29 @@ IMS-konfigurationen har två steg:
 
 Den offentliga nyckeln (certifikatet) autentiserar din produktprofil i Adobe Developer Console.
 
-1. Logga in på [!DNL Experience Manager Assets] molninstans.
+1. Logga in på din [!DNL Experience Manager Assets]-molninstans.
 
-1. Från **[!UICONTROL Tools]** navigera till **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
+1. Gå till **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]** från panelen **[!UICONTROL Tools]**.
 
-1. På sidan Adobe IMS-konfigurationer klickar du på **[!UICONTROL Create]**. The **[!UICONTROL Adobe IMS Technical Account Configuration]** sidan öppnas.
+1. Klicka på **[!UICONTROL Create]** på sidan Adobe IMS-konfigurationer. Sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** öppnas.
 
-1. I **[!UICONTROL Certificate]** flik, välja **[!UICONTROL Adobe Stock]** från **[!UICONTROL Cloud Solution]** listruta.
+1. Välj **[!UICONTROL Adobe Stock]** i listrutan **[!UICONTROL Cloud Solution]** på fliken **[!UICONTROL Certificate]**.
 
 1. Du kan skapa ett certifikat eller återanvända ett befintligt certifikat för konfigurationen.
 
-   Om du vill skapa ett certifikat väljer du **[!UICONTROL Create new certificate]** kryssruta och ange en **alias** för den offentliga nyckeln. Aliaset används som namn på den offentliga nyckeln.
+   Om du vill skapa ett certifikat markerar du kryssrutan **[!UICONTROL Create new certificate]** och anger ett **alias** för den offentliga nyckeln. Aliaset används som namn på den offentliga nyckeln.
 
 1. Klicka på **[!UICONTROL Create certificate]**. Klicka sedan på **[!UICONTROL OK]** för att generera den offentliga nyckeln.
 
-1. Klicka på **[!UICONTROL Download Public Key]** och spara filen med den offentliga nyckeln (.crt) på datorn. Den offentliga nyckeln används senare för att konfigurera API för din Brand Portal-klient och generera autentiseringsuppgifter för tjänstkontot i Adobe Developer Console.
+1. Klicka på ikonen **[!UICONTROL Download Public Key]** och spara filen med den offentliga nyckeln (.crt) på datorn. Den offentliga nyckeln används senare för att konfigurera API för din Brand Portal-klient och generera autentiseringsuppgifter för tjänstkontot i Adobe Developer Console.
 
    Klicka på **[!UICONTROL Next]**.
 
    ![generate-certificate](assets/stock-integration-ims-account.png)
 
-1. I **Konto** skapas ett Adobe IMS-konto som kräver inloggningsuppgifterna för tjänstkontot.
+1. På fliken **Konto** skapas ett Adobe IMS-konto som kräver autentiseringsuppgifterna för tjänstkontot.
 
-   Öppna en ny flik och [skapa en JWT-anslutning (Service Account) i Adobe Developer Console](#createnewintegration).
+   Öppna en ny flik och [skapa en JWT-anslutning i Adobe Developer Console](#createnewintegration).
 
 ### Skapa JWT-anslutning (Service Account) {#createnewintegration}
 
@@ -157,45 +157,45 @@ Så här genererar du tjänstkontots autentiseringsuppgifter och JWT-nyttolast:
 
    Klicka på **[!UICONTROL Edit project]**. Uppdatera **[!UICONTROL Project Title]** och **[!UICONTROL Description]** och klicka sedan på **[!UICONTROL Save]**.
 
-1. I **[!UICONTROL Project overview]** flik, klicka **[!UICONTROL Add API]**.
+1. Klicka på **[!UICONTROL Add API]** på fliken **[!UICONTROL Project overview]**.
 
-1. I **[!UICONTROL Add an API window]**, markera **[!UICONTROL Adobe Stock]**. Klicka på **[!UICONTROL Next]**.
+1. I **[!UICONTROL Add an API window]** väljer du **[!UICONTROL Adobe Stock]**. Klicka på **[!UICONTROL Next]**.
 
-1. I **[!UICONTROL Configure API]** fönster, markera **[!UICONTROL Service Account (JWT)]** autentisering. Klicka på **[!UICONTROL Next]**.
+1. Välj **[!UICONTROL Service Account (JWT)]** autentisering i fönstret **[!UICONTROL Configure API]**. Klicka på **[!UICONTROL Next]**.
 
    ![create-jwt-credentials](assets/aem-stock-jwt.png)
 
-1. Klicka på **[!UICONTROL Upload your public key]**. Klicka **[!UICONTROL Select a File]** och ladda upp den publika nyckeln (.crt-filen) som du har laddat ned i [hämta offentligt certifikat](#public-certificate) -avsnitt. Klicka på **[!UICONTROL Next]**.
+1. Klicka på **[!UICONTROL Upload your public key]**. Klicka på **[!UICONTROL Select a File]** och överför den offentliga nyckeln (.crt-filen) som du har hämtat i avsnittet [Hämta offentligt certifikat](#public-certificate). Klicka på **[!UICONTROL Next]**.
 
 1. Verifiera den offentliga nyckeln och klicka på **[!UICONTROL Next]**.
 
-1. Välj standard **[!UICONTROL Adobe Stock]** produktprofil och klicka på **[!UICONTROL Save configured API]**.
+1. Välj standardproduktprofilen för **[!UICONTROL Adobe Stock]** och klicka på **[!UICONTROL Save configured API]**.
 
-1. När API:t har konfigurerats omdirigeras du till API-översikten. Från vänster navigering under **[!UICONTROL Credentials]** klickar du på **[!UICONTROL Service Account (JWT)]** alternativ. Här kan du visa autentiseringsuppgifter och utföra åtgärder som att generera JWT-tokens, kopiera autentiseringsuppgifter och hämta klienthemlighet.
+1. När API:t har konfigurerats omdirigeras du till API-översikten. Klicka på alternativet **[!UICONTROL Service Account (JWT)]** i den vänstra navigeringen under **[!UICONTROL Credentials]**. Här kan du visa autentiseringsuppgifter och utföra åtgärder som att generera JWT-tokens, kopiera autentiseringsuppgifter och hämta klienthemlighet.
 
-1. Från **[!UICONTROL Client Credentials]** -fliken, kopiera **[!UICONTROL client ID]**.
+1. Kopiera **[!UICONTROL client ID]** från fliken **[!UICONTROL Client Credentials]**.
 
-   Klicka **[!UICONTROL Retrieve Client Secret]** och kopiera **[!UICONTROL client secret]**.
+   Klicka på **[!UICONTROL Retrieve Client Secret]** och kopiera **[!UICONTROL client secret]**.
 
    ![generate-jwt-credentials](assets/aem-stock-jwt-credential.png)
 
-1. Navigera till **[!UICONTROL Generate JWT]** och kopiera **[!UICONTROL JWT Payload]** information.
+1. Navigera till fliken **[!UICONTROL Generate JWT]** och kopiera **[!UICONTROL JWT Payload]**-informationen.
 
-Du kan nu använda klient-ID (API-nyckel), klienthemlighet och JWT-nyttolast för att [konfigurera IMS-kontot](#create-ims-account-configuration) in [!DNL Experience Manager Assets].
+Du kan nu använda klient-ID (API-nyckel), klienthemlighet och JWT-nyttolast för att [konfigurera IMS-kontot](#create-ims-account-configuration) i [!DNL Experience Manager Assets].
 
 ### Konfigurera IMS-konto {#create-ims-account-configuration}
 
-Du måste ha [certifikat](#public-certificate) och [JWT-referenser (service account)](#createnewintegration) för att konfigurera IMS-kontot.
+Du måste ha autentiseringsuppgifterna [certificate](#public-certificate) och [service account (JWT)](#createnewintegration) för att kunna konfigurera IMS-kontot.
 
 Så här konfigurerar du IMS-kontot:
 
-1. Öppna IMS-konfigurationen och gå till **[!UICONTROL Account]** -fliken. Du höll sidan öppen medan [erhålla det offentliga certifikatet](#public-certificate).
+1. Öppna IMS-konfigurationen och gå till fliken **[!UICONTROL Account]**. Du höll sidan öppen medan [det offentliga certifikatet](#public-certificate) hämtades.
 
 1. Ange en **[!UICONTROL Title]** för IMS-kontot.
 
-   I **[!UICONTROL Authorization Server]** anger du URL-adressen: [https://ims-na1.adobelogin.com/](https://ims-na1.adobelogin.com/).
+   Ange URL:en i fältet **[!UICONTROL Authorization Server]**: [https://ims-na1.adobelogin.com/](https://ims-na1.adobelogin.com/).
 
-   Ange klient-ID i **[!UICONTROL API key]** fält, **[!UICONTROL Client Secret]** och **[!UICONTROL Payload]** (JWT-nyttolast) som du har kopierat när [skapar tjänstkontoanslutningen (JWT)](#createnewintegration).
+   Ange klient-ID i fältet **[!UICONTROL API key]**, **[!UICONTROL Client Secret]** och **[!UICONTROL Payload]** (JWT-nyttolast) som du kopierade när du [skapade JWT-anslutningen](#createnewintegration).
 
 1. Klicka på **[!UICONTROL Create]**. En IMS-kontokonfiguration skapas.
 
@@ -203,22 +203,22 @@ Så här konfigurerar du IMS-kontot:
 
 1. Välj IMS-kontokonfigurationen och klicka på **[!UICONTROL Check Health]**.
 
-   Klicka **[!UICONTROL Check]** i dialogrutan. När konfigurationen är klar visas ett meddelande om att *Token har hämtats*.
+   Klicka på **[!UICONTROL Check]** i dialogrutan. Ett meddelande visas om att *token har hämtats* när konfigurationen har slutförts.
 
    ![hälsokontroll](assets/aem-stock-healthcheck.png)
 
 
 ### Konfigurera molntjänst {#configure-the-cloud-service}
 
-Konfigurera [!DNL Adobe Stock] molntjänst:
+Så här konfigurerar du molntjänsten [!DNL Adobe Stock]:
 
-1. I [!DNL Experience Manager] användargränssnitt, navigera till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Stock]**.
+1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Stock]** i användargränssnittet för [!DNL Experience Manager].
 
-1. I [!DNL Adobe Stock Configurations] sida, klicka **[!UICONTROL Create]**.
+1. Klicka på **[!UICONTROL Create]** på sidan [!DNL Adobe Stock Configurations].
 
 1. Ange en **[!UICONTROL Title]** för molnkonfigurationen.
 
-   Välj den IMS-konfiguration som du har skapat när [konfigurera IMS-kontot](#create-ims-account-configuration).
+   Välj den IMS-konfiguration som du skapade när du [konfigurerade IMS-kontot](#create-ims-account-configuration).
 
    Välj språkinställning i listrutan.
 
@@ -226,24 +226,24 @@ Konfigurera [!DNL Adobe Stock] molntjänst:
 
 1. Klicka på **[!UICONTROL Save & Close]**.
 
-   Dina [!DNL Experience Manager Assets] författarinstansen är nu integrerad med [!DNL Adobe Stock]. Du kan skapa flera [!DNL Adobe Stock] konfigurationer (till exempel språkbaserade konfigurationer). Nu kan du få åtkomst till, söka efter och licensiera [!DNL Adobe Stock] resurser inifrån [!DNL Experience Manager] användargränssnitt.
+   Din [!DNL Experience Manager Assets]-författarinstans är nu integrerad med [!DNL Adobe Stock]. Du kan skapa flera [!DNL Adobe Stock]-konfigurationer (till exempel språkbaserade konfigurationer). Du kan nu komma åt, söka efter och licensiera [!DNL Adobe Stock]-resurserna inifrån användargränssnittet i [!DNL Experience Manager].
 
    ![search-stock-assets](assets/aem-stock-searchstocks.png)
 
    >[!NOTE]
    >
-   >I det här skedet av integreringen kan bara administratörer komma åt [!DNL Adobe Stock] resurser, söka efter Stock-resurser (med omvärldsbevakning) och licensiera [!DNL Adobe Stock] resurser.
+   >I det här skedet av integreringen kan bara administratörer komma åt [!DNL Adobe Stock]-resurserna, söka efter Stock-resurser (med omvärldsbevakning) och licensiera [!DNL Adobe Stock]-resurserna.
    >
-   >Administratörer kan lägga till användare eller grupper ytterligare i [!DNL Adobe Stock] molntjänst och ge behörigheter till dessa icke-adminanvändare i [!DNL Experience Manager] för att komma åt Stock-konfigurationen.
+   >Administratörer kan lägga till användare eller grupper ytterligare i molntjänsten [!DNL Adobe Stock] och ge dessa icke-adminanvändare i [!DNL Experience Manager] behörighet att komma åt Stock-konfigurationen.
 
-1. Om du vill lägga till användare eller grupper väljer du [!DNL Adobe Stock] molnkonfiguration och klicka på **[!UICONTROL Properties]**.
+1. Om du vill lägga till användare eller grupper väljer du molnkonfigurationen [!DNL Adobe Stock] och klickar på **[!UICONTROL Properties]**.
 
-1. Sök för att lägga till de användare eller grupper som du har tilldelat behörighet att komma åt Adobe Stock-konfigurationen. Se [tilldela behörigheter till användargrupp](#assign-permissions-to-group).
+1. Sök för att lägga till de användare eller grupper som du har tilldelat behörighet att komma åt Adobe Stock-konfigurationen. Se [tilldela behörigheter till användargruppen](#assign-permissions-to-group).
 
 
 ## Tilldela behörigheter till användargruppen {#assign-permissions-to-group}
 
-Administratörer kan skapa användargrupper och ge behörigheter till vissa användare eller grupper för att få åtkomst till [!DNL Adobe Stock] molntjänst.
+Administratörer kan skapa användargrupper och ge behörigheter till vissa användare eller grupper för åtkomst till molntjänsten [!DNL Adobe Stock].
 
 Följande behörigheter krävs för att en användare ska kunna söka efter och licensiera Adobe Stock-resurser:
 
@@ -251,15 +251,15 @@ Följande behörigheter krävs för att en användare ska kunna söka efter och 
 * Behörigheter: `jcr:read`
 * Behörighetstyp: `Allow`
 
-Du kan skapa en användargrupp eller tilldela behörigheter till en befintlig användargrupp. Behörigheter kan tilldelas från [!DNL Experience Manager Assets] eller från [!DNL User Admin] Konsol.
+Du kan skapa en användargrupp eller tilldela behörigheter till en befintlig användargrupp. Behörigheter kan tilldelas från gränssnittet [!DNL Experience Manager Assets] eller från konsolen [!DNL User Admin].
 
-**Att ge åtkomst till en användargrupp från [!DNL Experience Manager]:**
+**För att ge åtkomst till en användargrupp från [!DNL Experience Manager]:**
 
-1. I [!DNL Experience Manager] användargränssnitt, navigera till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Groups]**. Skapa en användargrupp för [!DNL Adobe Stock].
+1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Groups]** i användargränssnittet för [!DNL Experience Manager]. Skapa en användargrupp för [!DNL Adobe Stock].
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Permissions]**.
 
-1. Sök efter användargruppen i den vänstra panelen och lägg till ny **[!UICONTROL Access Control Entry (ACE)]** för Adobe Stock.
+1. Sök efter användargruppen i den vänstra panelen och lägg till nya **[!UICONTROL Access Control Entry (ACE)]** för Adobe Stock.
 
    * Konfigurera sökvägen: `/conf/global/settings/stock`
    * Behörigheter: `jcr:read`
@@ -269,89 +269,89 @@ Du kan skapa en användargrupp eller tilldela behörigheter till en befintlig an
 
    ![användarbehörigheter](assets/aem-stock-user-permissions.png)
 
-1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Stock]**. Välj [!DNL Adobe Stock] molnkonfiguration och klicka på **[!UICONTROL Properties]**.
+1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Stock]**. Välj molnkonfigurationen [!DNL Adobe Stock] och klicka på **[!UICONTROL Properties]**.
 
-1. Lägg till den skapade användargruppen i [!DNL Adobe Stock] konfiguration. Klicka på **[!UICONTROL Save & Close]**.
+1. Lägg till den skapade användargruppen i konfigurationen för [!DNL Adobe Stock]. Klicka på **[!UICONTROL Save & Close]**.
 
    ![assign-user](assets/aem-stock-adduser.png)
 
-**Att ge åtkomst till en användare från [!DNL User Admin Console]:**
+**För att ge åtkomst till en användare från [!DNL User Admin Console]:**
 
-1. Öppna [!DNL Experience Manager] Användare Admin Console. Standardwebbadressen är `http://localhost:4502/userdamin`.
+1. Öppna Admin Console för [!DNL Experience Manager]-användare. Standardwebbadressen är `http://localhost:4502/userdamin`.
 
 1. I den vänstra panelen söker du efter användaren genom att ange `user_id` eller `name`. Dubbelklicka för att öppna användaregenskaperna.
 
-1. Navigera till **[!UICONTROL Permissions]** och tillåt `read` behörigheter för [!DNL Adobe Stock] molnkonfiguration: `/conf/global/settings/stock`.
+1. Navigera till fliken **[!UICONTROL Permissions]** och tillåt `read` behörigheter för molnkonfigurationen [!DNL Adobe Stock]: `/conf/global/settings/stock`.
 
    >[!CAUTION]
    >
-   >Om molnkonfigurationen inte tillåts kan användaren bara komma åt **[!UICONTROL Assets]** i [!DNL Experience Manager] gränssnitt.
+   >Om molnkonfigurationen inte tillåts kan användaren bara komma åt **[!UICONTROL Assets]** i [!DNL Experience Manager]-gränssnittet.
    >
-   >Tillåt åtkomst till [!UICONTROL Assets] och [!DNL Adobe Stock] ser du till att molnkonfigurationen tillåts för användaren.
+   >Om du vill tillåta åtkomst till [!UICONTROL Assets] och [!DNL Adobe Stock] resurser kontrollerar du att molnkonfigurationen tillåts för användaren.
 
-1. Klicka **[!UICONTROL Save]** för att uppdatera behörigheterna.
+1. Klicka på **[!UICONTROL Save]** för att uppdatera behörigheterna.
 
    ![assign-user-in-user-admin](assets/aem-stock-user-admin-console.png)
 
-1. Lägg till användaren eller gruppen i [!DNL Adobe Stock] molnkonfiguration.
+1. Lägg till användaren eller gruppen i molnkonfigurationen [!DNL Adobe Stock].
 
 
 ## Få tillgång till Adobe Stock-resurser {#access-stock-assets}
 
-En icke-admin-användare som har behörighet till [!DNL Adobe Stock] molnkonfigurationen kan söka efter och licensiera [!DNL Adobe Stock] resurser från [!DNL Experience Manager] gränssnitt.
+En icke-admin-användare som har behörighet till molnkonfigurationen [!DNL Adobe Stock] kan söka efter och licensiera [!DNL Adobe Stock]-resurserna från gränssnittet [!DNL Experience Manager].
 
-Användaren måste utföra ett extra steg för att aktivera [!DNL Adobe Stock] molnkonfiguration före åtkomst [!DNL Adobe Stock] resurser. Det är en engångsaktivitet. Om användaren har tilldelats behörigheter för flera [!DNL Adobe Stock] molnkonfigurationer kan användaren välja önskad konfiguration från **[!UICONTROL User Preferences]**.
+Användaren måste utföra ett extra steg för att aktivera molnkonfigurationen [!DNL Adobe Stock] innan [!DNL Adobe Stock]-resurserna kan nås. Det är en engångsaktivitet. Om användaren har tilldelats behörigheter för flera [!DNL Adobe Stock] molnkonfigurationer kan användaren välja önskad konfiguration från **[!UICONTROL User Preferences]**.
 
-Aktivera [!DNL Adobe Stock] molnkonfiguration:
+Så här aktiverar du molnkonfigurationen [!DNL Adobe Stock]:
 
 1. Logga in på [!DNL Experience Manager].
 
-1. Klicka på användarikonen i det övre högra hörnet och klicka sedan på **[!UICONTROL My Preferences]**. The **[!UICONTROL User Preferences]** öppnas.
+1. Klicka på användarikonen i det övre högra hörnet och klicka sedan på **[!UICONTROL My Preferences]**. Fönstret **[!UICONTROL User Preferences]** öppnas.
 
-1. Markera önskat **[!UICONTROL Stock Configuration]** i listrutan och klicka på **[!UICONTROL Accept]** för att aktivera konfigurationen.
+1. Välj önskad **[!UICONTROL Stock Configuration]** i listrutan och klicka på **[!UICONTROL Accept]** för att aktivera konfigurationen.
 
    ![användarinställningar](assets/aem-stock-preferences.png)
 
-1. Navigera till **[!UICONTROL Assets]** > **[!UICONTROL Adobe Stock]**. Nu kan du visa, söka och licensiera [!DNL Adobe Stock] resurser.
+1. Navigera till **[!UICONTROL Assets]** > **[!UICONTROL Adobe Stock]**. Du kan nu visa, söka efter och licensiera [!DNL Adobe Stock] resurser.
 
-I följande tabell förklaras hur användarbehörigheter fungerar när du använder [!DNL Adobe Stock] resurser:
+I följande tabell beskrivs hur användarbehörigheterna fungerar när resurserna i [!DNL Adobe Stock] används:
 
-| Användare | Grupp | Behörigheter | Acceptera Stock-konfigurationen i användarinställningarna | Åtkomst till resurser | Använd Adobe Stock |
+| Användare | Grupp | Behörigheter | Acceptera Stock-konfigurationen i användarinställningarna | Använd Assets | Använd Adobe Stock |
 | --- | --- | --- | --- | --- | --- |
 | admin | Ej tillämpligt | Alla | Ej tillämpligt | Ja | Ja |
 | test-doc1 | DAM-användare | /conf/global/settings/stock/cloud-config | Ja | Ja | Ja |
 | test-doc1 | DAM-användare | /conf/global/settings/stock/cloud-config | Nej | Fel: Det gick inte att läsa in data | Nej |
-| test-doc1 | DAM-användare | **tillåt**: /conf/global/settings/stock **neka**: /cloud-config | Stock-konfigurationen visas inte | Ja | Nej |
+| test-doc1 | DAM-användare | **allow**: /conf/global/settings/stock **deny**: /cloud-config | Stock-konfigurationen visas inte | Ja | Nej |
 
-## Använd och hantera [!DNL Adobe Stock] resurser i [!DNL Experience Manager] {#usemanage}
+## Använd och hantera [!DNL Adobe Stock]-resurser i [!DNL Experience Manager] {#usemanage}
 
-Med den här funktionen kan organisationer låta användarna arbeta med [!DNL Adobe Stock] resurser i [!DNL Experience Manager Assets]. Från [!DNL Experience Manager] användargränssnitt, användare kan söka [!DNL Adobe Stock] och licensiera de mediefiler som behövs.
+Med den här funktionen kan organisationer tillåta sina användare att arbeta med [!DNL Adobe Stock]-resurser i [!DNL Experience Manager Assets]. I användargränssnittet [!DNL Experience Manager] kan användare söka efter [!DNL Adobe Stock] resurser och licensiera de nödvändiga resurserna.
 
-En gång en [!DNL Adobe Stock] mediefilen är licensierad i [!DNL Experience Manager]kan den användas och hanteras som en vanlig resurs. I [!DNL Experience Manager], kan användarna söka efter och förhandsgranska resurserna, kopiera och publicera resurserna, dela resurserna på [!DNL Brand Portal], få tillgång till och använda resurserna via [!DNL Experience Manager] datorprogram, och så vidare.
+När en [!DNL Adobe Stock]-resurs har licensierats i [!DNL Experience Manager] kan den användas och hanteras som en vanlig resurs. I [!DNL Experience Manager] kan användarna söka efter och förhandsgranska resurserna, kopiera och publicera resurserna, dela resurserna på [!DNL Brand Portal], komma åt och använda resurserna via [!DNL Experience Manager] skrivbordsappen och så vidare.
 
-![Sök efter [!DNL Adobe Stock] resurser och filtrera resultat från [!DNL Adobe Experience Manager] arbetsyta](assets/adobe-stock-search-results-workspace.png)
+![Sök efter [!DNL Adobe Stock] resurser och filtrera resultat från din [!DNL Adobe Experience Manager]-arbetsyta](assets/adobe-stock-search-results-workspace.png)
 
-**S.** Sök efter resurser som liknar de resurser vars [!DNL Adobe Stock] ID anges. **B.** Sök efter resurser som matchar ditt val av form eller orientering. **C.** Sök efter en eller flera resurstyper som stöds **D.** Öppna eller komprimera filterrutan **E.** Licensiera och spara den valda resursen i [!DNL Experience Manager] **F.** Spara resursen i [!DNL Experience Manager] med vattenstämpel **G.** Utforska resurser på [!DNL Adobe Stock] webbplatsen som liknar den valda resursen **H.** Visa markerade resurser på [!DNL Adobe Stock] webbplats **Jag.** Antal valda resurser från sökresultaten **J.** Växla mellan kortvyn och listvyn
+**A.** Sök efter resurser som liknar de resurser vars [!DNL Adobe Stock]-ID anges. **B.** Sök efter resurser som matchar ditt val av form eller orientering. **C.** Sök efter en eller flera resurstyper som stöds **D.** Öppna eller komprimera filterfönstret **E.** Licensiera och spara den valda resursen i [!DNL Experience Manager] **F.** Spara resursen i [!DNL Experience Manager] med vattenstämpel **G.** Utforska resurser på webbplatsen [!DNL Adobe Stock] som liknar den valda resursen **}H.** Visa de markerade resurserna på [!DNL Adobe Stock] webbplatsen **I.** Antal markerade resurser från sökresultaten **J.** Växla mellan kortvyn och listvyn
 
 ### Hitta resurser {#find-assets}
 
-Dina [!DNL Experience Manager] -användare kan söka efter resurser i båda, [!DNL Experience Manager] och [!DNL Adobe Stock]. När sökplatsen inte är begränsad till [!DNL Adobe Stock], sökresultaten från [!DNL Experience Manager] och [!DNL Adobe Stock] visas.
+Dina [!DNL Experience Manager]-användare kan söka efter resurser i både [!DNL Experience Manager] och [!DNL Adobe Stock]. När sökplatsen inte är begränsad till [!DNL Adobe Stock] visas sökresultaten från [!DNL Experience Manager] och [!DNL Adobe Stock].
 
-* Sök efter [!DNL Adobe Stock] resurser, klicka på **[!UICONTROL Navigation]** > **[!UICONTROL Assets]** > **[!UICONTROL Search Adobe Stock]**.
+* Om du vill söka efter [!DNL Adobe Stock] resurser klickar du på **[!UICONTROL Navigation]** > **[!UICONTROL Assets]** > **[!UICONTROL Search Adobe Stock]**.
 
-* Söka efter resurser i [!DNL Adobe Stock] och [!DNL Experience Manager Assets]klickar du på Sök ![sök](assets/do-not-localize/search_icon.png).
+* Om du vill söka efter resurser i [!DNL Adobe Stock] och [!DNL Experience Manager Assets] klickar du på Sök ![sök](assets/do-not-localize/search_icon.png).
 
-Du kan också börja skriva `Location: Adobe Stock` i sökfältet för att markera [!DNL Adobe Stock] resurser. [!DNL Experience Manager] har avancerade filtreringsfunktioner för de sökbara resurserna, vilket gör att användarna snabbt kan nollställa de resurser som behövs med hjälp av filter, som typer av resurser som stöds, bildorientering och licensierat läge.
+Du kan också börja skriva `Location: Adobe Stock` i sökfältet för att välja [!DNL Adobe Stock] resurser. [!DNL Experience Manager] har avancerade filtreringsfunktioner för de sökda resurserna, vilket gör att användare snabbt kan nollställa de nödvändiga resurserna med hjälp av filter, som typer av resurser som stöds, bildorientering och licensierat tillstånd.
 
 >[!NOTE]
 >
->Resurser som sökts från [!DNL Adobe Stock] visas i [!DNL Experience Manager]. [!DNL Adobe Stock] resurser hämtas och lagras i [!DNL Experience Manager] databasen först efter att en användare antingen [sparar en resurs](/help/assets/aem-assets-adobe-stock.md#saveassets) eller [licensierar och sparar en resurs](/help/assets/aem-assets-adobe-stock.md#licenseassets). Resurser som redan är lagrade i [!DNL Experience Manager] visas och markeras för att underlätta referens och åtkomst. Dessutom finns [!DNL Stock] resurser sparas med ytterligare metadata som anger källan som [!DNL Stock].
+>Assets som söks igenom från [!DNL Adobe Stock] visas i [!DNL Experience Manager]. [!DNL Adobe Stock] resurser hämtas och lagras i [!DNL Experience Manager]-databasen först när en användare antingen [sparar en resurs](/help/assets/aem-assets-adobe-stock.md#saveassets) eller [licenser och sparar en resurs](/help/assets/aem-assets-adobe-stock.md#licenseassets). Assets som redan är lagrade i [!DNL Experience Manager] visas och markeras för att underlätta referens och åtkomst. Dessutom sparas [!DNL Stock]-resurserna med ytterligare metadata för att ange källan som [!DNL Stock].
 
-![Sök efter filter i [!DNL Experience Manager] och markerade [!DNL Adobe Stock] resurser i sökresultat](assets/aem-search-filters2.jpg)
+![Sökfilter i [!DNL Experience Manager] och markerade [!DNL Adobe Stock] resurser i sökresultat](assets/aem-search-filters2.jpg)
 
 ### Spara och visa de resurser som behövs {#saveassets}
 
-Välj en resurs som du vill spara i [!DNL Experience Manager]. Klicka [!UICONTROL Save] i verktygsfältet högst upp och ange resursens namn och plats. De olicensierade resurserna sparas lokalt med en vattenstämpel.
+Välj en resurs som du vill spara i [!DNL Experience Manager]. Klicka på [!UICONTROL Save] i verktygsfältet högst upp och ange resursens namn och plats. De olicensierade resurserna sparas lokalt med en vattenstämpel.
 
 Nästa gång du söker efter resurser markeras de sparade resurserna med ett märke som anger att sådana resurser är tillgängliga i [!DNL Experience Manager Assets].
 
@@ -361,31 +361,31 @@ Nästa gång du söker efter resurser markeras de sparade resurserna med ett mä
 
 ### Licensiera resurser {#licenseassets}
 
-Användare kan licensiera [!DNL Adobe Stock] tillgångar genom att använda sin kvot [!DNL Adobe Stock] företagsplan. När du licensierar en mediefil sparas den utan vattenstämpel och är tillgänglig för sökning och användning i [!DNL Experience Manager Assets].
+Användare kan licensiera [!DNL Adobe Stock] resurser genom att använda kvoten för deras [!DNL Adobe Stock] Enterprise-plan. När du licensierar en resurs sparas den utan vattenstämpel och är tillgänglig för sökning och användning i [!DNL Experience Manager Assets].
 
-![Dialog där du kan licensiera och spara [!DNL Adobe Stock] resurser i [!DNL Experience Manager Assets]](assets/aem-stock_licenseandsave.jpg)
+![Dialogruta där du kan licensiera och spara [!DNL Adobe Stock] resurser i [!DNL Experience Manager Assets]](assets/aem-stock_licenseandsave.jpg)
 
 
 ### Få åtkomst till metadata och resursegenskaper {#access-metadata-and-asset-properties}
 
-Användarna kan komma åt och förhandsgranska metadata, inklusive [!DNL Adobe Stock] metadataegenskaper för resurser som sparats i [!DNL Experience Manager]och lägga till **[!UICONTROL License References]** för en tillgång. Uppdateringarna av licensreferensen synkroniseras dock inte mellan [!DNL Experience Manager] och [!DNL Adobe Stock] webbplats.
+Användare kan komma åt och förhandsgranska metadata, inklusive [!DNL Adobe Stock]-metadataegenskaperna för resurserna som sparats i [!DNL Experience Manager], och lägga till **[!UICONTROL License References]** för en resurs. Uppdateringarna av licensreferensen synkroniseras dock inte mellan [!DNL Experience Manager] och [!DNL Adobe Stock]-webbplatsen.
 
 Användarna kan se egenskaperna för både, licensierade och olicensierade resurser.
 
-![Visa och få tillgång till metadata och licensreferenser för sparade resurser](assets/metadata_properties.jpg)
+![Visa och få åtkomst till metadata och licensreferenser för sparade resurser](assets/metadata_properties.jpg)
 
 
 ## Kända begränsningar {#known-limitations}
 
-* **Funktioner som begränsar användare från licenser fungerar inte korrekt**: Alla användare har `read` behörigheter till Stock-konfigurationen tillåts söka efter och licensiera [!DNL Adobe Stock] resurser.
+* **Funktioner för att begränsa användare från licensiering fungerar inte korrekt**: Alla användare med `read` behörighet för Stock-konfigurationen kan söka efter och licensiera [!DNL Adobe Stock]-resurserna.
 
-* **Användare som inte är administratörer måste manuellt aktivera [!DNL Adobe Stock] molnkonfiguration**: I **[!UICONTROL User Preferences]** fönster, **[!UICONTROL Stock Configuration]** visar [!DNL Adobe Stock] molnkonfiguration har aktiverats men fungerar inte för användare som inte är administratörer. Användaren måste klicka på **[!UICONTROL Accept]** för att aktivera Stock-konfigurationen. Om det här steget inte är slutfört visas ett felmeddelande om åtkomst **[!UICONTROL Assets]**.
+* **Icke-adminanvändare måste manuellt aktivera [!DNL Adobe Stock] molnkonfigurationen**: I fönstret **[!UICONTROL User Preferences]** visar **[!UICONTROL Stock Configuration]** molnkonfigurationen [!DNL Adobe Stock] som aktiverad, men den fungerar inte för icke-adminanvändare. Användaren måste klicka på knappen **[!UICONTROL Accept]** för att aktivera Stock-konfigurationen. Om det här steget inte är slutfört visas ett felmeddelande om åtkomst till **[!UICONTROL Assets]**.
 
-* **Varning om redigeringsbild visas inte**: Vid licensiering av en bild kan användare inte kontrollera om en bild endast är för redaktionellt bruk. För att förhindra eventuell felaktig användning kan administratören stänga av åtkomsten till redaktionella mediefiler från Admin Console.
+* **Varning om redigerbar bild visas inte**: När en bild licensieras kan användare inte kontrollera om bilden endast är redigerbar. För att förhindra eventuell felaktig användning kan administratören stänga av åtkomsten till redaktionella mediefiler från Admin Console.
 
-* **Fel licenstyp visas**: En felaktig licenstyp kan visas i [!DNL Experience Manager] för en tillgång. Användarna kan logga in på [!DNL Adobe Stock] webbplats för att se licenstypen.
+* **Fel licenstyp visas**: Det är möjligt att en felaktig licenstyp visas i [!DNL Experience Manager] för en resurs. Användarna kan logga in på webbplatsen [!DNL Adobe Stock] för att se licenstypen.
 
-* **Referensfält och metadata synkroniseras inte**: När en användare uppdaterar ett licensreferensfält uppdateras licensreferensinformationen i [!DNL Experience Manager] men inte på [!DNL Adobe Stock] webbplats. Om användaren uppdaterar referensfälten på [!DNL Adobe Stock] på webbplatsen synkroniseras inte uppdateringarna i [!DNL Experience Manager].
+* **Referensfält och metadata synkroniseras inte**: När en användare uppdaterar ett licensreferensfält uppdateras licensreferensinformationen i [!DNL Experience Manager] men inte på webbplatsen [!DNL Adobe Stock]. Om användaren uppdaterar referensfälten på webbplatsen [!DNL Adobe Stock] synkroniseras inte uppdateringarna i [!DNL Experience Manager].
 
 <!--
 ## Use and manage [!DNL Adobe Stock] assets in [!DNL Experience Manager] {#usemanage}
@@ -459,9 +459,9 @@ Users can see the properties for both, licensed and unlicensed assets.
 
 **Se även**
 
-* [Översätt resurser](translate-assets.md)
-* [Resurser för HTTP API](mac-api-assets.md)
-* [Resurser som stöds i filformat](file-format-support.md)
+* [Översätt Assets](translate-assets.md)
+* [ASSETS HTTP API](mac-api-assets.md)
+* [Filformat som stöds av Assets](file-format-support.md)
 * [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
 * [Resursrapporter](asset-reports.md)
@@ -471,10 +471,10 @@ Users can see the properties for both, licensed and unlicensed assets.
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publicera resurser till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 >[!MORELIKETHIS]
 >
 >* [Videosjälvstudiekurs om hur du använder Adobe Stock-resurser med Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html)
 >* [Adobe Stock Enterprise Plan - hjälp](https://helpx.adobe.com/enterprise/using/adobe-stock-enterprise.html)
->* [ADOBE STOCK FAQ](https://helpx.adobe.com/stock/faq.html)
+>* [Vanliga frågor om Adobe Stock](https://helpx.adobe.com/stock/faq.html)

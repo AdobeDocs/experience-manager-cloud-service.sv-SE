@@ -24,7 +24,7 @@ Du kan till exempel:
 
 * Gör om åtgärder så länge du inte har gjort någon sidredigering sedan du använde Ångra.
 * Ångra högst 20 redigeringsåtgärder (standardinställning).
-* Använd även [Kortkommandon](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md) för att ångra och göra om.
+* Använd även [kortkommandon](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md) för att ångra och göra om.
 
 Du kan använda Ångra och Gör om för följande typer av sidändringar:
 

@@ -1,6 +1,6 @@
 ---
 title: Lägga till ett SSL-certifikat
-description: Lär dig hur du lägger till ett eget SSL-certifikat med hjälp av självbetjäningsverktygen i Cloud Manager.
+description: Lär dig hur du lägger till ett eget SSL-certifikat med Cloud Manager självbetjäningsverktyg.
 exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
 solution: Experience Manager
 feature: Cloud Manager, Developing
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Lägga till ett SSL-certifikat {#adding-an-ssl-certificate}
 
-Lär dig hur du lägger till ett eget SSL-certifikat med hjälp av självbetjäningsverktygen i Cloud Manager.
+Lär dig hur du lägger till ett eget SSL-certifikat med Cloud Manager självbetjäningsverktyg.
 
 >[!TIP]
 >
@@ -22,36 +22,36 @@ Lär dig hur du lägger till ett eget SSL-certifikat med hjälp av självbetjän
 
 ## Certifikatkrav {#certificate-requirements}
 
-Granska avsnittet **Certifikatkrav** av dokumentet [Introduktion till hantering av SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md#requirements) för att säkerställa att det certifikat du vill lägga till stöds av AEM as a Cloud Service.
+Granska avsnittet **Certifikatkrav** i dokumentet [Introduktion till hantering av SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md#requirements) för att kontrollera att det certifikat som du vill lägga till stöds av AEM as a Cloud Service.
 
 ## Lägga till ett certifikat {#adding-a-cert}
 
-Följ de här stegen för att lägga till ett certifikat med hjälp av Cloud Manager.
+Följ de här stegen för att lägga till ett certifikat med Cloud Manager.
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation
 
-1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** väljer du programmet.
+1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
 
-1. Navigera till **Miljö** från **Ökning** sida.
+1. Gå till skärmen **Miljö** från sidan **Översikt**.
 
-1. Klicka **SSL-certifikat** från den vänstra navigeringspanelen. En tabell med information om eventuella befintliga SSL-certifikat visas på huvudskärmen.
+1. Klicka på **SSL-certifikat** i den vänstra navigeringspanelen. En tabell med information om eventuella befintliga SSL-certifikat visas på huvudskärmen.
 
-   ![Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/assets/ssl/ssl-cert-1.png)
+   ![Lägger till ett SSL-certifikat](/help/implementing/cloud-manager/assets/ssl/ssl-cert-1.png)
 
-1. Klicka **Lägg till SSL-certifikat** att öppna **Lägg till SSL-certifikat** -dialogrutan.
+1. Klicka på **Lägg till SSL-certifikat** för att öppna dialogrutan **Lägg till SSL-certifikat**.
 
    * Ange ett namn för ditt certifikat i **Certifikatnamn**.
       * Detta är endast avsett som information och kan vara vilket namn som helst som gör det enkelt att referera till ditt certifikat.
-   * Klistra in **Certifikat**, **Privat nyckel** och **Certifikatkedja** värden i sina respektive fält. Alla tre fälten är obligatoriska.
+   * Klistra in värdena för **Certifikat**, **Privat nyckel** och **Certifikatkedja** i respektive fält. Alla tre fälten är obligatoriska.
    * I vissa fall kan slutanvändarcertifikatet inkluderas i kedjan och måste tas bort innan kedjan klistras in i fältet.
 
    ![Dialogrutan Lägg till SSL-certifikat](/help/implementing/cloud-manager/assets/ssl/ssl-cert-02.png)
 
    * Alla fel som upptäcks visas.
       * Du måste åtgärda alla fel innan certifikatet kan sparas.
-      * Se [Certifikatfel](#certificate-errors) om du vill veta mer om hur du åtgärdar vanliga fel.
+      * Mer information om hur du åtgärdar vanliga fel finns i avsnittet [Certifikatfel](#certificate-errors).
 
-1. Klicka **Spara** för att spara ditt certifikat.
+1. Klicka på **Spara** för att spara certifikatet.
 
 När certifikatet har sparats visas det som en ny rad i tabellen.
 
@@ -59,15 +59,15 @@ När certifikatet har sparats visas det som en ny rad i tabellen.
 
 >[!NOTE]
 >
->En användare måste vara medlem i **Företagsägare** eller **Distributionshanteraren** roll för att installera ett SSL-certifikat i Cloud Manager.
+>En användare måste vara medlem i rollen **Business Owner** eller **Deployment Manager** för att kunna installera ett SSL-certifikat i Cloud Manager.
 
 >[!NOTE]
 >
->Om du får ett fel som liknar `The Subject of an intermediate certificate must match the issuer in the previous certificate. The SKI of an intermediate certificate must match the AKI of the previous certificate.`har du antagligen tagit med klientcertifikatet i certifikatkedjan. Kontrollera att kedjan inte innehåller klientcertifikatet och försök igen.
+>Om du får ett fel som liknar `The Subject of an intermediate certificate must match the issuer in the previous certificate. The SKI of an intermediate certificate must match the AKI of the previous certificate.`, har du antagligen inkluderat klientcertifikatet i certifikatkedjan. Kontrollera att kedjan inte innehåller klientcertifikatet och försök igen.
 
 ## Certifikatfel {#certificate-errors}
 
-Vissa fel kan uppstå om ett certifikat inte har installerats korrekt eller uppfyller kraven för Cloud Manager.
+Vissa fel kan uppstå om ett certifikat inte har installerats korrekt eller uppfyller kraven i Cloud Manager.
 
 ### Certifikatprofil {#certificate-policy}
 
@@ -106,7 +106,7 @@ OID-mönstret i texten definierar certifikatets principtyp.
 | `2.23.140.1.2.2` | OV | Ja |
 | `2.23.140.1.2.1` | DV | Nej |
 
-Av `grep`pinga efter OID-mönstren i utdatafältstexten, du kan bekräfta din certifikatprincip.
+Genom att `grep`pinga för OID-mönstren i utdatafälttexten kan du bekräfta din certifikatprincip.
 
 ```shell
 # "EV Policy"
@@ -123,7 +123,7 @@ openssl x509 -in certificate.pem -text grep "Policy: 2.23.140.1.2.1" -B5
 
 Den vanligaste orsaken till att en certifikatdistribution misslyckas är att de mellanliggande certifikaten eller kedjecertifikaten inte är i rätt ordning.
 
-Mellanliggande certifikatfiler måste avslutas med rotcertifikatet eller det certifikat som ligger närmast roten. De måste vara i fallande ordning från `main/server` certifikat till roten.
+Mellanliggande certifikatfiler måste avslutas med rotcertifikatet eller det certifikat som ligger närmast roten. De måste vara i fallande ordning från certifikatet `main/server` till roten.
 
 Du kan ange ordningen för de mellanliggande filerna med följande kommando.
 
@@ -131,7 +131,7 @@ Du kan ange ordningen för de mellanliggande filerna med följande kommando.
 openssl crl2pkcs7 -nocrl -certfile $CERT_FILE | openssl pkcs7 -print_certs -noout
 ```
 
-Du kan verifiera att den privata nyckeln och `main/server` certifikatmatchning med följande kommandon.
+Du kan verifiera att den privata nyckeln och `main/server`-certifikatet matchar med följande kommandon.
 
 ```shell
 openssl x509 -noout -modulus -in certificate.pem | openssl md5
@@ -143,8 +143,8 @@ openssl rsa -noout -modulus -in ssl.key | openssl md5
 
 >[!NOTE]
 >
->Utdata för dessa två kommandon måste vara exakt likadana. Om du inte kan hitta någon matchande privat nyckel för `main/server` måste du ange ett nytt certifikat genom att generera ett nytt CSR och/eller begära ett uppdaterat certifikat från din SSL-leverantör.
+>Utdata för dessa två kommandon måste vara exakt likadana. Om du inte kan hitta en matchande privat nyckel för ditt `main/server`-certifikat måste du ange en ny nyckel för certifikatet genom att generera en ny CSR och/eller begära ett uppdaterat certifikat från din SSL-leverantör.
 
 ### Giltighetsdatum för certifikat {#certificate-validity-dates}
 
-SSL-certifikatet förväntas vara giltigt i minst 90 dagar från dagens datum. Du bör kontrollera certifikatkedjans giltighet.
+Cloud Manager förväntar att SSL-certifikatet ska vara giltigt i minst 90 dagar från dagens datum. Du bör kontrollera certifikatkedjans giltighet.

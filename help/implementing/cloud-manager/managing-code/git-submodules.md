@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Git-undermoduler kan användas för att sammanfoga innehåll från flera grenar i Git-databaser vid byggtillfället.
 
-När Cloud Managers byggprocess körs, efter att databasen som konfigurerats för pipelinen klonats och den konfigurerade grenen checkas ut, om grenen innehåller en `.gitmodules` -filen i rotkatalogen körs kommandot.
+När Cloud Manager byggprocess körs, efter att databasen som konfigurerats för pipelinen har klonats och den konfigurerade grenen har checkats ut, körs kommandot om grenen innehåller en `.gitmodules`-fil i rotkatalogen.
 
 Med följande kommando checkas varje undermodul ut i lämplig katalog.
 
@@ -23,9 +23,9 @@ Med följande kommando checkas varje undermodul ut i lämplig katalog.
 $ git submodule update --init
 ```
 
-Den här tekniken är ett möjligt alternativ till den lösning som beskrivs i dokumentet [Arbeta med Git-databaser med flera källor](/help/implementing/cloud-manager/managing-code/working-with-multiple-source-git-repositories.md) för organisationer som känner sig bekväma med att använda Git-undermoduler och inte vill hantera en extern sammanfogningsprocess.
+Den här tekniken är ett möjligt alternativ till den lösning som beskrivs i dokumentet [Arbeta med flera Source Git-databaser](/help/implementing/cloud-manager/managing-code/working-with-multiple-source-git-repositories.md) för organisationer som är bekväma med att använda Git-undermoduler och inte vill hantera en extern sammanfogningsprocess.
 
-Låt oss till exempel säga att det finns tre databaser, där var och en innehåller en gren med namnet `main`. I den primära databasen, det vill säga den som är konfigurerad i pipelines, `main` grenen har en `pom.xml` fil som deklarerar projekten i de två andra databaserna.
+Låt oss till exempel säga att det finns tre databaser, där var och en innehåller en gren med namnet `main`. I den primära databasen, d.v.s. den som konfigurerats i pipelines, har grenen `main` en `pom.xml`-fil som deklarerar projekten i de andra två databaserna.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -53,7 +53,7 @@ $ git submodule add -b main https://git.cloudmanager.adobe.com/ProgramName/proje
 $ git submodule add -b main https://git.cloudmanager.adobe.com/ProgramName/projectB/ project-b
 ```
 
-Detta resulterar i en `.gitmodules` -fil som liknar följande:
+Detta resulterar i en `.gitmodules`-fil som liknar följande.
 
 ```text
 [submodule "project-a"]
@@ -66,7 +66,7 @@ Detta resulterar i en `.gitmodules` -fil som liknar följande:
     branch = main
 ```
 
-Mer information om Git-undermoduler finns i [Git-referenshandbok.](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+Mer information om Git-undermoduler finns i [referenshandboken för Git.](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 
 ### Begränsningar och Recommendations {#limitations-recommendations}
 
@@ -76,15 +76,15 @@ Tänk på följande begränsningar när du använder Git-undermoduler med databa
 * Det finns bara stöd för undermoduler i roten av förgreningen.
 * Av säkerhetsskäl ska du inte bädda in autentiseringsuppgifter i Git-URL:er.
 * Om inget annat är nödvändigt rekommenderas en kort undermodul.
-   * Om du vill göra det kör du `git config -f .gitmodules submodule.<submodule path>.shallow true` för varje undermodul.
+   * Det gör du genom att köra `git config -f .gitmodules submodule.<submodule path>.shallow true` för varje undermodul.
 * Git-undermodulreferenser lagras för specifika Git-implementeringar. Detta innebär att när ändringar görs i undermodulens databas måste implementeringen som refereras uppdateras.
    * Genom att till exempel använda `git submodule update --remote`
 
 ## Stöd för Git-undermodul för privata databaser {#private-repositories}
 
-Stöd för Git-undermoduler vid användning [privata databaser](private-repositories.md) är i stort sett detsamma som när du använder Adobe-databaser.
+Stöd för Git-undermoduler när [privata databaser](private-repositories.md) används är i stort sett detsamma som när du använder Adobe-databaser.
 
-När du har konfigurerat `pom.xml` filen och kör `git submodule` -kommandon måste du lägga till `.gitmodules` till rotkatalogen för aggregeringsdatabasen för Cloud Manager för att identifiera inställningarna för undermodulen.
+När du har konfigurerat din `pom.xml`-fil och kör `git submodule`-kommandona måste du lägga till en `.gitmodules`-fil i rotkatalogen i aggregeringsdatabasen för att Cloud Manager ska kunna identifiera inställningarna för undermodulen.
 
 ![.gitmodules-fil](assets/gitmodules.png)
 
@@ -97,4 +97,4 @@ Tänk på följande begränsningar när du använder Git-undermoduler med privat
 * Git-URL:erna för undermodulerna kan antingen vara i HTTPS- eller SSH-format, men de måste länka till en github.com
    * Det går inte att lägga till en undermodul i en GitHub-aggregeringsdatabas eller vice versa om du lägger till en undermodul i Adobe.
 * GitHub-undermodulerna måste vara tillgängliga för Adobe GitHub-appen.
-* [Begränsningarna med att använda Git-undermoduler med databaser som hanteras av Adobe](#limitations-recommendations) gäller också.
+* [Begränsningarna för att använda Git-undermoduler med databaser som hanteras med Adobe ](#limitations-recommendations) gäller också.

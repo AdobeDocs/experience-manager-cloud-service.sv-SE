@@ -23,34 +23,34 @@ Experience Cloud Setup Automation hjälper till att koppla Adobe Analytics till 
 
 ## Fördelar med att integrera Adobe Analytics med Adaptive Forms {#advantages-of-integrating-adobe-analytics-with-aem-forms}
 
-* **Insikter i slutanvändarnas beteende**: Adobe Analytics hjälper till att få insikter om slutanvändarnas beteende, avslöjar användaråtgärder, bortfall och slutförandefrekvens, vilket ger en djupare förståelse för hur olika användare interagerar med formulär.
-* **Ge icke-tekniska affärsanvändare möjlighet att få insikter**: Adobe Analytics har ett lättanvänt gränssnitt som ger även icke-tekniska användare möjlighet att få tillgång till och tolka data om formuläranvändning, vilket främjar datadrivna beslut som förbättrar registreringsupplevelsen.
-* **Optimera datainhämtningsupplevelsen baserat på användning**: Organisationer identifierar enkelt problem vid datainhämtning, vilket leder till riktade förbättringar som förbättrar formuläranvändbarheten och ökar antalet lyckade inskick.
+* **Insikter i slutanvändarnas beteende**: Adobe Analytics hjälper till att få insikter i slutanvändarnas beteende, avslöjar användaråtgärder, bortfall och slutförandefrekvens, vilket ger en djupare förståelse för hur individer interagerar med formulär.
+* **Möjliggör för icke-tekniska affärsanvändare att få insikter**: Adobe Analytics genom sitt lättanvända gränssnitt ger även icke-tekniska användare möjlighet att få åtkomst till och tolka formuläranvändningsdata, vilket främjar datadrivna beslut för att förbättra registreringsupplevelsen.
+* **Optimera datainhämtningen baserat på användning**: Organisationer kan enkelt identifiera problem vid datainhämtning, vilket leder till målinriktade förbättringar som förbättrar formuläranvändbarheten och ökar antalet lyckade inskickade data.
 
 ## Omfattning av anpassade användningsmått för Forms {#scope-of-adaptive-forms-usage-metrics}
 
 Adobe Analytics har en omfattande uppsättning av adaptiva Forms-prestandamätningar som utformats för att ge värdefulla insikter om formuläranvändning och erbjuder snabba analysverktyg. Dessa mått är:
 
-* **Formuläråtergivning, formulärinskickning, valideringsfel och unika besökare** så att ni kan bedöma hur användbara och effektiva era formulär är.
+* **Formuläråtergivningar, formulärinskickningar, valideringsfel och unika besökare** som gör att du kan bedöma hur användbara och effektiva dina formulär är.
 
-* **Information om besökare** som omfattar besöks- och inlämningsfrekvenser och unika besökarantal, vilket ger en heltäckande bild av er formulärpublik.
+* **Besökarinsikter** som omfattar besöks- och överföringsfrekvenser och unika besökarantal, vilket ger en heltäckande bild av formulärens målgrupp.
 
-* **Enhetstyp** data som informerar dig om vilka enheter användare använder för att få tillgång till dina formulär.
+* **Enhetstyp** data som informerar dig om vilka enheter som användarna använder för att komma åt formulären.
 
-* **Geografisk fördelning** visar den regionala fördelningen av formuläranvändarna.
+* **Geografisk fördelning** visar den regionala fördelningen för formuläranvändarna.
 
-* **Trafikkällor** och **Populära formulär** mätvärden som består av de viktigaste hänvisande domänerna och de mest besökta formulären hjälper er att förstå var trafiken kommer ifrån och vilka formulär som är de populäraste.
+* **Trafikkällor** och **Populära formulärvärden** som består av de mest refererande domänerna och de mest besökta formulären hjälper dig att förstå var trafiken kommer ifrån och vilka formulär som är de mest populära.
 
-* **Användaraktivitet i de vanligaste formulären** ger insikter om fältbesök, formuläråtergivningar, valideringsfel, övergivna formulär och inskickade formulär, så att du kan analysera användarbeteenden.
+* **Användaraktivitet på de vanligaste formulären** ger insikter om fältbesök, formuläråtergivningar, valideringsfel, övergivna formulär och formulärinskickade formulär, så att du kan analysera användarens beteende.
 
-* **Tidslinje för den tid som läggs på formulär** som ger en tidslinjebaserad bild av användarinteraktionen med era formulär.
+* **Tidslinje för den tid som läggs på formulär** som ger en tidslinjebaserad vy över användarinteraktionen med formulären.
 
-* **Områden som kräver hjälp av besökare** mätvärden som innehåller hjälpvyer, valideringsfel och besöksfrekvenser, som visar var användarna kan behöva hjälp med att fylla i formulär.
+* **Områden som kräver besökarhjälp**, som innehåller hjälpvyer, valideringsfelinstanser och frekvenser för fältbesök, där användarna kan behöva hjälp med att fylla i formulär.
 
 ![Analysrapport](assets/analytics-report.png){width="100%"}
 
 
-Detaljerad information om varje mätvärde finns på [Visa och förstå AEM Forms Analytics-rapporter](/help/forms/view-understand-aem-forms-analytics-reports.md)
+Mer information om varje mätvärde finns på [Visa och förstå AEM Forms Analytics-rapporter](/help/forms/view-understand-aem-forms-analytics-reports.md)
 
 ## Förutsättningar {#prerequisites}
 
@@ -58,13 +58,13 @@ Detaljerad information om varje mätvärde finns på [Visa och förstå AEM Form
 Analytics, Data Collection (Formerly Adobe Launch), and Experience Manager (experience.adobe.com)
 -->
 
-Experience Cloud Setup Automation kräver en **Adobe Analytics-licens**, **Datainsamling (tidigare Adobe Launch)** för att hantera spårningsskript och **Experience Manager Forms-licens** för smidig datainsamling och generering av insikter.
+Experience Cloud Setup Automation kräver en **Adobe Analytics-licens**, **Datainsamling (tidigare Adobe Launch)** för att hantera spårningsskript, och en **Experience Manager Forms-licens** för smidig datainsamling och insiktsgenerering.
 
-Om du har en aktiv licens för **Adobe Analytics** och **Experience Manager Forms** och du kan integrera med **Datainsamling (tidigare Adobe Launch)** bör du verifiera deras tillgänglighet i utvecklarkonsolen.
+Om du har en aktiv licens för **Adobe Analytics** och **Experience Manager Forms**, och du har integrering med **datainsamling (tidigare Adobe Launch)**, bör du verifiera deras tillgänglighet i utvecklarkonsolen.
 
-Du kan kontrollera att det som nämns ovan finns för din as a Cloud Service Forms-miljö på [utvecklarkonsol](https://developer.adobe.com/console/projects), navigera till projektet och söka efter projektet med program-ID - miljö-ID, till exempel, för miljön med URL `https://author-p45913-e175111-cmstg.adobeaemcloud.com/index.html`, program-id - miljö-id är `p45913-e175111`. Kontrollera att Experience Cloud Setup Automation, Adobe Analytics och Experience Platform Launch är listade. Om de listas kan du aktivera Adobe Analytics för att få en snabb spåranalys av din adaptiva Forms.
+Om du vill verifiera att ovanstående är tillgängligt för din Forms as a Cloud Service-miljö går du till [utvecklarkonsolen](https://developer.adobe.com/console/projects), navigerar till projektet och söker efter ditt projekt med program-ID:t - program-ID:t, till exempel för miljön med URL:en `https://author-p45913-e175111-cmstg.adobeaemcloud.com/index.html`, program-ID:t för miljön är `p45913-e175111`. Kontrollera att Experience Cloud Setup Automation, Adobe Analytics och Experience Platform Launch är listade. Om de listas kan du aktivera Adobe Analytics för att få en snabb spåranalys av din adaptiva Forms.
 
-![Forms Analytics-integrering krävs](assets/analytics-aem.png){width="100%"}
+![Nödvändig integrering med Forms Analytics](assets/analytics-aem.png){width="100%"}
 
 <!-- 
 >[!NOTE]
@@ -95,47 +95,47 @@ Utför följande steg för att aktivera och konfigurera Adobe Analytics för en 
 1. Skapa en konfigurationsbehållare för molntjänster:
    1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**.
    1. Välj eller skapa en konfigurationsbehållare och aktivera mappen för **[!UICONTROL Cloud Configurations]**.
-   1. Välj **[!UICONTROL Save & Close]** för att spara konfigurationen och stänga dialogrutan.
-1. Gå till på din AEM **[Forms]** >> **[Forms och dokument]**.
-1. Välj **[!UICONTROL Form]** >> **[!UICONTROL Properties]**, i **[!UICONTROL Configuration Container]** väljer du konfigurationsbehållaren som du skapade eller markerade i dialogrutan **[!UICONTROL Configuration Browser]** i steg 1.
-1. Välj aktivitetspanelen i det vänstra fältet och klicka på **Konfigurationsanalys** och **Aktivera Adobe Analytics**.
+   1. Välj **[!UICONTROL Save & Close]** om du vill spara konfigurationen och stänga dialogrutan.
+1. Gå till **[Forms]** >> **[Forms och Dokument]** i din AEM.
+1. Välj **[!UICONTROL Form]** >> **[!UICONTROL Properties]** i **[!UICONTROL Configuration Container]** och markera den konfigurationsbehållare som du skapade eller markerade i **[!UICONTROL Configuration Browser]** i steg 1.
+1. Markera aktivitetspanelen till vänster och klicka på **Konfigurera analys** och **Aktivera Adobe Analytics**.
 1. Ange det namn du föredrar för rapportsviten, klicka på **[!UICONTROL Next]** och **[!UICONTROL Save]**.
-1. När du har sparat projektet körs inställningarna en tid tills Adobe Analytics har integrerats med ditt adaptiva formulär. Du kan även kontrollera **integreringsstatus**.
+1. När du har sparat projektet körs inställningarna en tid tills Adobe Analytics har integrerats med ditt adaptiva formulär. Du kan även kontrollera **integreringsstatusen**.
 
    >[!NOTE]
    >
    >Om konfigurationen tar längre tid än 15 minuter kan du försöka att aktivera analyser för formulären igen.
 
-1. Gå till på din AEM **[!UICONTROL Forms]** >> **[Forms och dokument]** och väljer **[!UICONTROL Form]** ser du att Adobe Analytics är integrerat i ditt formulär så som visas i bilden nedan.
-1. Nu kan du se [Adaptiv form Adobe Analytics-rapport](#view-adobe-analytics-report).
+1. I din AEM, gå till **[!UICONTROL Forms]** >> **[Forms och Dokument]** och markera din **[!UICONTROL Form]** ser du att Adobe Analytics är integrerat i ditt formulär, vilket visas i bilden nedan.
+1. Nu kan du visa din [anpassade formulär-Adobe Analytics-rapport](#view-adobe-analytics-report).
 
-![Integrerad AEM Analytics](assets/analytics-aem-integrated.png){width="100%"}
+![Integrerad AEM ](assets/analytics-aem-integrated.png){width="100%"}
 
 
 ### Aktivera Adobe Analytics med adaptiv Forms för kärnkomponenter {#integrate-adobe-analytics-with-aem-forms-for-core-components}
 
-1. Gå till på din AEM **[!UICONTROL Forms]** >> **[!UICONTROL Forms and Document]** och väljer **[!UICONTROL Form]**.
-1. Välj aktivitetspanelen till vänster och klicka på **Konfigurationsanalys** och **Aktivera Adobe Analytics**.
+1. Gå till **[!UICONTROL Forms]** >> **[!UICONTROL Forms and Document]** och markera **[!UICONTROL Form]** på din AEM.
+1. Markera aktivitetspanelen till vänster och klicka på **Konfigurera analys** och **Aktivera Adobe Analytics**.
 1. Ange det namn du föredrar för rapportsviten, klicka på **[!UICONTROL Next]** och **[!UICONTROL Save]**.
-1. När du har sparat projektet körs inställningarna en tid tills Adobe Analytics har integrerats med ditt adaptiva formulär. Du kan även kontrollera **integreringsstatus**.
+1. När du har sparat projektet körs inställningarna en tid tills Adobe Analytics har integrerats med ditt adaptiva formulär. Du kan även kontrollera **integreringsstatusen**.
 
    >[!NOTE]
    >
    >Om konfigurationen tar längre tid än 15 minuter kan du försöka att aktivera analyser för formulären igen.
 
-1. Gå till på din AEM **[!UICONTROL Forms]** >> **[!UICONTROL Forms and Document]** och väljer **[!UICONTROL Form]** ser du att Adobe Analytics är integrerat i ditt formulär.
-1. Nu kan du se [Adaptiv form Adobe Analytics-rapport](#view-adobe-analytics-report).
+1. I din AEM, gå till **[!UICONTROL Forms]** >> **[!UICONTROL Forms and Document]** och markera **[!UICONTROL Form]** ser du att Adobe Analytics är integrerat i ditt formulär.
+1. Nu kan du visa din [anpassade formulär-Adobe Analytics-rapport](#view-adobe-analytics-report).
 
 ## Visa rapporten Adaptiv Forms Adobe Analytics {#view-adobe-analytics-report}
 
-1. Gå till på din AEM **[!UICONTROL Forms]** >> **[!UICONTROL Forms and Document]**.
+1. Gå till **[!UICONTROL Forms]** >> **[!UICONTROL Forms and Document]** på din AEM.
 1. Markera formuläret så ser du att Adobe Analytics är integrerat, som det visas till vänster, med Forms som har aktiverats för Adobe Analytics.
 
    ![Visa rapport](assets/activ-aa.png){width="100%"}
 
-1. Klicka **Adobe Analytics** för att visa rapporten och analysera prestandadata.
+1. Klicka på **Adobe Analytics** om du vill visa rapporten och analysera prestandadata.
 
-Om du vill koppla ett adaptivt formulär till Adobe Analytics med hjälp av manuella metoder går du till [Integrera AEM Forms med Adobe Analytics](/help/forms/integrate-aem-forms-with-adobe-analytics.md).
+Om du vill ansluta ett adaptivt formulär till Adobe Analytics med den manuella metoden går du till [Integrera AEM Forms med Adobe Analytics](/help/forms/integrate-aem-forms-with-adobe-analytics.md).
 
 ## Aktivera Analytics för adaptiv Forms i Sites {#Connect-Analytics-to-Adaptive-Forms-in-Sites}
 
@@ -147,21 +147,21 @@ För att kunna ansluta och aktivera analyser i Adaptive Forms for AEM Sites mås
 
 ### Ansluta adaptiva Forms i Sites för att aktivera Analytics {#Connect-analytics-to-adaptive-forms}
 
-Om du vill ansluta adaptivt formulär på en AEM Sites-sida för att aktivera Analytics för snabbspårsanalys inkluderar du `customfooterlibs` klientbibliotek till AEM Sites-sidan med hjälp av AEM Archetype/Git Repository och distributionskanalen.
+Om du vill ansluta adaptivt formulär på en AEM Sites-sida för att aktivera Analytics för snabbspåranalyser inkluderar du klientbiblioteket `customfooterlibs` till AEM Sites-sidan med hjälp av AEM Archetype/Git Repository och distributionsflödet.
 
-1. Öppna [AEM Forms Archetype eller Klonad Git-databas](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) i en textredigerare. Exempel: Visual Studio Code.
+1. Öppna ditt [AEM Forms-projekt Archetype eller Klonad Git-databas](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) i en textredigerare. Exempel: Visual Studio Code.
 
-1. Navigera till den sida i webbplatserna där det adaptiva formuläret finns, till exempel I det här demoprojektet har vi `ui.apps/src/main/content/jcr_root/apps/corecomponents/components/page/.content.xml`.
+1. Navigera till sidan med webbplatserna där det adaptiva formuläret finns, till exempel I det här demoprojektet har vi `ui.apps/src/main/content/jcr_root/apps/corecomponents/components/page/.content.xml`.
 
 1. Kopiera värdet för `sling:resourceSuperType`. Värdet är till exempel `core/wcm/components/page/v3/page`.
 
-   ![försäljningsresurs](/help/forms/assets/slingresource.png){width="100%"}
+   ![avlutningsresurs](/help/forms/assets/slingresource.png){width="100%"}
 
-1. Skapa en liknande struktur på platsen `ui.apps/src/main/content/jcr_root/apps` samma som `core/wcm/components/page/v3/page`.
+1. Skapa en liknande struktur på platsen `ui.apps/src/main/content/jcr_root/apps` som `core/wcm/components/page/v3/page`.
 
    ![övertäckningsstruktur](/help/forms/assets/overlaystructure.png){width="100%"}
 
-1. Lägg till en `customfooterlibs.html` -fil.
+1. Lägg till en `customfooterlibs.html`-fil.
 
    ```
    // customheaderlibs.html
@@ -170,53 +170,53 @@ Om du vill ansluta adaptivt formulär på en AEM Sites-sida för att aktivera An
    </sly>
    ```
 
-   The `customfooterlibs.html` används för JavaScript.
+   `customfooterlibs.html` används för JavaScript.
 
 1. [Kör pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/enable-front-end-pipeline.html) för att distribuera ändringarna.
 
 ### Aktivera Form Analytics-regler för Forms på Sites {#bind-forms-analytics-rules-to-forms-in-sites}
 
-1. Besök **Adobe Experience Platform Data Collection**.
-1. Klicka **Taggar** till vänster.
-1. Sök i ditt projekt med program-ID:t som visas i bilden nedan, t.ex. efter miljön med URL:en `https://author-p45921-e175111-cmstg.adobeaemcloud.com/index.html`, program-ID är `45921`.
+1. Gå till **Adobe Experience Platform datainsamling**.
+1. Klicka på **Taggar** till vänster.
+1. Sök i ditt projekt med program-ID enligt bilden nedan, till exempel för miljön med URL `https://author-p45921-e175111-cmstg.adobeaemcloud.com/index.html`, är program-ID `45921`.
 
    ![Söka-formulär-in-data-samling](/help/forms/assets/aep-data-collection.png){width="100%"}
 
-1. Lägg till konfiguration för **Formulärregler** och **Dataelement** enligt nedan:
+1. Lägg till konfiguration för **formulärregler** och **dataelement** enligt nedan:
 
 #### Lägg till formulärregler {#form-rules}
 
-1. Markera formuläret och lägg till **Ny egenskap** längst upp till höger eller klicka på formuläret.
-1. Klicka på egenskapssidan **Regler** och välj händelser för formuläret. I exempelbilden nedan är det **Formulärevenemang**.
+1. Markera formuläret och lägg till **Ny egenskap** i det övre högra hörnet eller klicka på formuläret.
+1. Klicka på **Regler** på egenskapssidan och välj händelser för formuläret. I exempelbilden nedan är det **Formulärevenemang**.
 
    ![Söka-formulär-in-data-samling](/help/forms/assets/aep-form-event-properties.png){width="100%"}
 
-1. Markera alla händelser i formuläret och **copy** som finns på den övre högra listen.
-1. När du har kopierat en **Kopiera regel** visas där du söker på din webbplatssida med projekt-id:t för att klistra in formulärreglerna.
+1. Markera alla händelser i formuläret och **kopiera** som finns i det övre högra fältet.
+1. När du har kopierat visas ett popup-fönster med namnet **Kopieringsregel** där du kan klistra in formulärreglerna på webbplatssidan med projekt-id:t.
 
-   ![Copy-form-rules](/help/forms/assets/copy-form-rules.png){width="100%"}
+   ![Kopiera-form-rules](/help/forms/assets/copy-form-rules.png){width="100%"}
 
-1. Klicka **copy** om du vill klistra in formulärreglerna på sidan Webbplatser.
+1. Klicka på **kopiera** för att klistra in formulärreglerna på sidan Webbplatser.
 
 #### Lägg till dataelement {#data-elements}
 
-1. Markera formuläret och lägg till **Ny egenskap** längst upp till höger eller klicka på formuläret.
-1. Klicka på egenskapssidan **Dataelement** och välj händelser för formuläret.
-1. Markera alla händelser i formuläret och **copy** på den övre högra listen.
-1. När du har kopierat en **Kopiera regel** visas där du söker på din webbplatssida med projekt-id:t för att klistra in formulärreglerna.
-1. Klicka **copy** om du vill klistra in formulärreglerna på sidan Webbplatser.
+1. Markera formuläret och lägg till **Ny egenskap** i det övre högra hörnet eller klicka på formuläret.
+1. Klicka på **Dataelement** på egenskapssidan och välj händelser för formuläret.
+1. Markera alla händelser i formuläret och **kopiera** som finns i det övre högra fältet.
+1. När du har kopierat visas ett popup-fönster med namnet **Kopieringsregel** där du kan klistra in formulärreglerna på webbplatssidan med projekt-id:t.
+1. Klicka på **kopiera** för att klistra in formulärreglerna på sidan Webbplatser.
 
    ![Form-data-elements](/help/forms/assets/form-data-elements.png){width="100%"}
 
 När du har kopplat form- och webbplatsreglerna genom de ovannämnda stegen utför du följande steg för att aktivera Analytics för ditt adaptiva formulär på sidan Platser:
 
-1. Klicka **Publiceringsflöde** till vänster.
-1. Klicka **Lägg till bibliotek** och ange det namn du föredrar.
-1. I **Miljö** nedrullningsbar meny till höger, välj **utveckling**.
-1. Klicka **Lägg till alla ändrade resurser**.
-1. Klicka **Spara och bygg till utveckling**.
+1. Klicka på **Publiceringsflöde** till vänster.
+1. Klicka på **Lägg till bibliotek** och ange det namn du vill ha.
+1. I listrutan **Miljö** till höger väljer du **utveckling**.
+1. Klicka på **Lägg till alla ändrade resurser**.
+1. Klicka på **Spara och skapa till utveckling**.
 
-![publicera-till-utveckling](/help/forms/assets/publish-to-dev.png){width="100%"}
+![publicera till utveckling](/help/forms/assets/publish-to-dev.png){width="100%"}
 
 
 <!--

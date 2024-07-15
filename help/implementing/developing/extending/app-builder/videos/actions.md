@@ -1,6 +1,6 @@
 ---
-title: Åtgärder i App Builder
-description: Lär dig mer om åtgärder i Adobe Runtime och hur du använder dem i App Builder.
+title: App Builder-åtgärder
+description: Läs mer om åtgärder i Adobe Runtime och hur du använder dem i App Builder-program.
 version: Cloud Service
 feature: App Builder, Developing
 topic: Integrations, Development
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ---
 
-# Åtgärder i App Builder
+# App Builder-åtgärder
 
 ## Inledning till åtgärder
 
@@ -30,9 +30,9 @@ Lär dig hur åtgärder som rör aktiveringar, webbåtgärder, utlösare och reg
 
 >[!VIDEO](https://video.tv.adobe.com/v/339193/?quality=12&learn=on)
 
-## Åtgärder i App Builder-program
+## Åtgärder i App Builder
 
-Lär dig hur du skapar åtgärder som kan användas som App Builder-program.
+Lär dig hur du skapar funktionsmakron som kan användas som App Builder-program.
 
 >[!VIDEO](https://video.tv.adobe.com/v/339194/?quality=12&learn=on)
 

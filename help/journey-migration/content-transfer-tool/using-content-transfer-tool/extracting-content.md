@@ -1,5 +1,5 @@
 ---
-title: Extraherar innehåll från källa
+title: Extrahera innehåll från Source
 description: Lär dig hur du extraherar innehåll från en Adobe Experience Manager-källinstans (AEM) och senare överför det till en Cloud Service AEM.
 exl-id: c5c08c4e-d5c3-4a66-873e-96986e094fd3
 feature: Migration
@@ -11,7 +11,7 @@ ht-degree: 9%
 
 ---
 
-# Extraherar innehåll från källa {#extracting-content}
+# Extrahera innehåll från Source {#extracting-content}
 
 ## Extraheringsprocess i verktyget Innehållsöverföring {#extraction-process}
 
@@ -25,40 +25,40 @@ ht-degree: 9%
 Följ stegen nedan för att extrahera migreringsuppsättningen från Content Transfer Tool:
 
 >[!NOTE]
->Om Amazon S3, Azure Data Store eller File Data Store används som typ av datalager kan du köra det valfria förkopieringssteget för att öka extraheringsfasens hastighet. Steg före kopiering är mest effektivt för första fullständiga extrahering och förtäring. Se [Hantera stora innehållsdatabaser](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md) för mer information.
+>Om Amazon S3, Azure Data Store eller File Data Store används som typ av datalager kan du köra det valfria förkopieringssteget för att öka extraheringsfasens hastighet. Steg före kopiering är mest effektivt för första fullständiga extrahering och förtäring. Mer information finns i [Hantera stora innehållsdatabaser](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md).
 
-1. Välj en migreringsuppsättning från **Innehållsöverföring** guide och klicka **Extract** för att påbörja extraheringen.
+1. Välj en migreringsuppsättning i guiden **Innehållsöverföring** och klicka på **Extrahera** för att starta extraheringen.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam12.png)
 
    >[!TIP]
-   >Ett intag kan nu schemaläggas att starta automatiskt omedelbart efter att en extrahering har slutförts. Se [Infoga innehåll i mål](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md) för mer information.
+   >Ett intag kan nu schemaläggas att starta automatiskt omedelbart efter att en extrahering har slutförts. Mer information finns i [Inkluderar innehåll i mål](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md).
 
    >[!IMPORTANT]
    >
-   >Kontrollera att Extraheringsnyckeln är giltig och att den inte är i närheten av utgångsdatumet. Om den ligger nära sitt förfallodatum kan du förnya extraheringsnyckeln genom att markera migreringsuppsättningen och klicka på Egenskaper. Klicka **Förnya**. Då kommer du till Cloud Acceleration Manager där du kan klicka **Kopiera extraheringsnyckel**. Varje gång du klickar **Kopiera extraheringsnyckel**skapas en ny extraheringsnyckel som är giltig i 14 dagar från det att den skapades.
+   >Kontrollera att Extraheringsnyckeln är giltig och att den inte är i närheten av utgångsdatumet. Om den ligger nära sitt förfallodatum kan du förnya extraheringsnyckeln genom att markera migreringsuppsättningen och klicka på Egenskaper. Klicka på **Förnya**. Detta tar dig till Cloud Acceleration Manager där du kan klicka på **Kopiera extraheringsnyckel**. Varje gång du klickar på **Kopiera extraheringsnyckel** skapas en ny extraheringsnyckel som är giltig i 14 dagar från det att den skapades.
    >![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam13.png)
 
-1. Då öppnas dialogrutan Extrahering. Klicka **Extract** för att starta extraheringsfasen.
+1. Då öppnas dialogrutan Extrahering. Klicka på **Extrahera** för att starta extraheringsfasen.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam14b.png)
 
    >[!NOTE]
-   >Du kan också skriva över mellanlagringsbehållaren under extraheringsfasen. If **Skriv över mellanlagringsbehållare** är inaktiverat kan extraheringen för efterföljande migreringar snabbas upp om innehållssökvägarna eller inkluderingsversionsinställningarna inte har ändrats. Om innehållssökvägarna eller inkluderingsversionsinställningarna har ändrats **Skriv över mellanlagringsbehållare** ska vara aktiverat.
+   >Du kan också skriva över mellanlagringsbehållaren under extraheringsfasen. Om **Skriv över mellanlagringsbehållaren** är inaktiverad kan extraheringarna för efterföljande migreringar snabbas upp om innehållssökvägarna eller inkluderingsversionsinställningarna inte har ändrats. Om innehållssökvägarna eller inkluderingsversionsinställningarna har ändrats bör **Skriv över mellanlagringsbehållaren** aktiveras.
 
-1. The **Extrahering** fältet visas nu **KÖRS** status för att ange att extraheringen pågår.
+1. Fältet **Extrahering** visar nu statusen **RUNNING** som anger att extraheringen pågår.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam15.png)
 
-   Klicka **Visa förlopp** för att få en detaljerad bild av den pågående extraheringen.
+   Du kan klicka på **Visa förlopp** för att få en detaljerad vy över den pågående extraheringen.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam16.png)
 
-   Du kan också övervaka extraheringsfasens förlopp från Cloud Acceleration Manager genom att gå till sidan Innehållsöverföring och se den mer i detalj genom att klicka på **...** > **Visa detaljer**.
+   Du kan också övervaka extraheringsfasens förlopp från Cloud Acceleration Manager genom att gå till sidan Innehållsöverföring och visa den mer i detalj genom att klicka på **..** > **Visa information**.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam17.png)
 
-1. När extraheringen är klar granskar du de andra kolumnerna som **Källa** och **Banor** om du vill ha information om den migreringsuppsättning som du har fyllt i. Klicka **...** > **Visa detaljer** för att se detaljer, inklusive varaktigheten för varje steg i extraheringen. Visa den här dialogrutan under extraheringen så att du kan se hur stegen utvecklas.
+1. När extraheringen är klar granskar du andra kolumner som **Source** och **Banor** för information om den migreringsuppsättning som du har fyllt i. Klicka på **..** > **Visa information** om du vill se information, inklusive längden för varje steg i extraheringen. Visa den här dialogrutan under extraheringen så att du kan se hur stegen utvecklas.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam18b.png)
 
@@ -75,11 +75,11 @@ När extraheringen är klar kan du överföra delta-innehåll med extraheringsme
 
 Följ stegen nedan:
 
-1. Navigera till **Innehållsöverföring** och välj den migreringsuppsättning som du vill utföra extraheringen för uppifrån. Klicka på **Extract** för att starta uppdateringsextraheringen.
+1. Navigera till guiden **Innehållsöverföring** och välj den migreringsuppsättning som du vill utföra extraheringen för. Klicka på **Extract** för att starta uppdateringsextraheringen.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam19.png)
 
-1. The **Extrahering av migreringsuppsättning** visas. Klicka **Extract**.
+1. Dialogrutan **Extrahering av migreringsuppsättning** visas. Klicka på **Extract**.
 
    >[!IMPORTANT]
    >Du bör inaktivera alternativet **Overwrite staging container during extraction**.
@@ -88,4 +88,4 @@ Följ stegen nedan:
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du extraherar innehåll från källan i verktyget Innehållsöverföring är du nu redo att lära dig Inmatningsprocessen i verktyget Innehållsöverföring. Se [Infoga innehåll i mål](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md) där du kan lära dig hur du importerar dina migreringsuppsättningar från verktyget Innehållsöverföring.
+När du har lärt dig hur du extraherar innehåll från Source i verktyget Innehållsöverföring är du nu redo att lära dig hur du använder verktyget för innehållsöverföring. Se [Inkludera innehåll i mål](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md) där du kan lära dig hur du importerar din migreringsuppsättning från verktyget Innehållsöverföring.

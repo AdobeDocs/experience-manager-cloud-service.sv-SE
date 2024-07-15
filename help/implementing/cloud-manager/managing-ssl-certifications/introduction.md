@@ -28,7 +28,7 @@ Cloud Manager tillhandahåller självbetjäningsverktyg för att installera och 
 
 Företag använder SSL-certifikat för att skydda sina webbplatser och låta sina kunder lita på dem. Om du vill använda SSL-protokollet måste ett SSL-certifikat användas på en webbserver.
 
-När en entitet begär ett certifikat från en certifikatutfärdare slutför certifikatutfärdaren en verifieringsprocess. Detta kan omfatta allt från verifiering av domännamnskontroll till insamling av registreringsdokument och prenumerationsavtal. När informationen för en entitet har verifierats signerar certifikatutfärdaren sin offentliga nyckel med certifikatutfärdarens privata nyckel. Eftersom alla viktiga certifikatutfärdare har rotcertifikat i webbläsare länkas entitetens certifikat via en *förtroendekedja* och webbläsaren kommer att känna igen det som ett pålitligt certifikat.
+När en entitet begär ett certifikat från en certifikatutfärdare slutför certifikatutfärdaren en verifieringsprocess. Detta kan omfatta allt från verifiering av domännamnskontroll till insamling av registreringsdokument och prenumerationsavtal. När informationen för en entitet har verifierats signerar certifikatutfärdaren sin offentliga nyckel med certifikatutfärdarens privata nyckel. Eftersom alla viktiga certifikatutfärdare har rotcertifikat i webbläsare länkas entitetens certifikat via en *förtroendekedja* och webbläsaren identifierar det som ett betrott certifikat.
 
 >[!IMPORTANT]
 >
@@ -47,7 +47,7 @@ Cloud Manager stöder följande alternativ för användning av SSL-certifikat.
 
 ## Recommendations {#recommendations}
 
-AEM as a Cloud Service stöder endast `https` webbplatser.
+AEM as a Cloud Service stöder bara säkra `https`-platser.
 
 * Kunder med flera anpassade domäner vill inte överföra ett certifikat varje gång de lägger till en domän.
 * Sådana kunder tjänar på att skaffa ett certifikat med flera domäner.
@@ -63,9 +63,9 @@ OV- och EV-certifikat ger användarna extra, CA-validerad information som kan an
 
 ### Certifikatformat {#certificate-format}
 
-SSL-certifikatfiler måste vara i PEM-format för att kunna installeras med Cloud Manager. Vanliga filtillägg för PEM-formatet är bland annat `.pem,` .`crt`, `.cer`och `.cert`.
+SSL-certifikatfiler måste vara i PEM-format för att kunna installeras med Cloud Manager. Vanliga filtillägg för PEM-formatet är `.pem,`.`crt`, `.cer` och `.cert`.
 
-Följande `openssl` kan användas för att konvertera certifikat som inte är PEM-certifikat.
+Följande `openssl`-kommandon kan användas för att konvertera certifikat som inte är PEM-certifikat.
 
 * Konvertera PFX till PEM
 

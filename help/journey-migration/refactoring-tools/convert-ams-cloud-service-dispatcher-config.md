@@ -3,8 +3,8 @@ title: Konvertera en hanterad tjänst till en Adobe Experience Manager as a Clou
 description: Konvertera en hanterad tjänst till en Adobe Experience Manager as a Cloud Service Dispatcher-konfiguration
 source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
-source-wordcount: '1282'
-ht-degree: 39%
+source-wordcount: '1262'
+ht-degree: 37%
 
 ---
 
@@ -89,7 +89,7 @@ Om du ser fel som handlar om saknade inkluderingsfiler ska du kontrollera om du 
 
 1. **Byta namn på servergruppsfiler**
 
-   Alla grupper i conf.dispatcher.d/enabled_farm måste byta namn för att matcha mönstret *.farm. Byt namn till exempel `customerX_farm.any` till `customerX.farm`.
+   Alla grupper i conf.dispatcher.d/enabled_farm måste byta namn för att matcha mönstret *.farm. Byt till exempel namn på `customerX_farm.any` till `customerX.farm`.
 
 1. **Kontrollera cache**
 
@@ -97,15 +97,15 @@ Om du ser fel som handlar om saknade inkluderingsfiler ska du kontrollera om du 
 
    Ta bort alla filer som har prefixet `ams_`.
 
-   Om conf.dispatcher.d/cache nu är tom kopierar du filen `conf.dispatcher.d/cache/rules.any` från standardkonfigurationen för Dispatcher till den här mappen. Standardkonfigurationen för Dispatcher finns i mappen src för denna SDK. Glöm inte att anpassa $include-satserna som refererar till `ams_*_cache.any` regelfiler i servergruppsfilerna också.
+   Om conf.dispatcher.d/cache nu är tom kopierar du filen `conf.dispatcher.d/cache/rules.any` från Dispatcher standardkonfiguration till den här mappen. Standardkonfigurationen för Dispatcher finns i mappen src för denna SDK. Glöm inte att anpassa $include-satserna som refererar till `ams_*_cache.any`-regelfilerna i servergruppsfilerna också.
 
-   Om i stället conf.dispatcher.d/cache nu innehåller en enda fil med suffix `_cache.any`bör namnet ändras till `rules.any`. Kom ihåg att anpassa $include-satserna som refererar till den filen i servergruppsfilerna också.
+   Om conf.dispatcher.d/cache nu innehåller en enda fil med suffixet `_cache.any` bör namnet på filen ändras till `rules.any`. Kom ihåg att anpassa $include-satserna som refererar till den filen i servergruppsfilerna också.
 
    Om mappen emellertid innehåller flera, servergruppsspecifika filer med det mönstret, ska innehållet kopieras till $include-satsen som refererar till dem i servergruppsfilerna.
 
    Ta bort alla filer som har suffixet `_invalidate_allowed.any`.
 
-   Kopiera filen conf.dispatcher.d/cache/default_invalidate_any från standardkonfigurationen för Dispatcher till den platsen.
+   Kopiera filen conf.dispatcher.d/cache/default_invalidate_any från Dispatcher standardkonfiguration till den platsen.
 
    I varje servergruppsfil tar du bort allt innehåll i avsnittet cache/allowedClients och ersätter det med:
 
@@ -117,13 +117,13 @@ Om du ser fel som handlar om saknade inkluderingsfiler ska du kontrollera om du 
 
    Ta bort alla filer som har prefixet `ams_`.
 
-   Om conf.dispatcher.d/clientheaders innehåller en enda fil med suffix `_clientheaders.any`, ändra namn på det till `clientheaders.any`. Kom ihåg att anpassa $include-satserna som refererar till den filen i servergruppsfilerna också.
+   Om conf.dispatcher.d/clientheaders innehåller en enda fil med suffixet `_clientheaders.any` byter du namn på den till `clientheaders.any`. Kom ihåg att anpassa $include-satserna som refererar till den filen i servergruppsfilerna också.
 
    Om mappen emellertid innehåller flera, servergruppsspecifika filer med det mönstret, ska innehållet kopieras till $include-satsen som refererar till dem i servergruppsfilerna.
 
    Kopiera filen `conf.dispatcher/clientheaders/default_clientheaders.any` från standardkonfigurationen för Dispatcher till den platsen.
 
-   Ersätt alla `clientheader` include-programsatser som visas som följande:
+   Ersätt alla `clientheader` &quot;include&quot;-satser som visas som följande i varje servergruppsfil:
 
    `$include "/etc/httpd/conf.dispatcher.d/clientheaders/ams_publish_clientheaders.any"`
 
@@ -196,7 +196,7 @@ med programsatsen:
 
    * Alla andra fel finns i felsökningsavsnittet i dokumentationen för valideringsverktyget. 
 
-## Testa konfigurationen med en lokal driftsättning {#testing-config-local-deployment}
+## Testa konfigurationen med en lokal distribution {#testing-config-local-deployment}
 
 >[!IMPORTANT]
 >
@@ -204,12 +204,12 @@ med programsatsen:
 
 Med hjälp av skriptet `docker_run.sh` i Dispatcher SDK kan du testa att konfigurationen inte innehåller några andra fel som bara skulle visas i driftsättningen:
 
-1. Generera driftsättningsinformation med valideraren.
+1. Generera distributionsinformation med valideraren.
 
    `validator full -d out`
 Validerar den fullständiga konfigurationen och genererar distributionsinformation in out.
 
-1. Starta Dispatcher i en buffertavbildning med den distributionsinformationen.
+1. Starta Dispatcher i en dockningsbild med den distributionsinformationen.
 
    När AEM publiceringsserver körs på din macOS-dator och lyssnar på port 4503 kan du köra Dispatcher framför den servern enligt följande:
 

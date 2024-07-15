@@ -19,14 +19,14 @@ Användarna kan på ett tillförlitligt sätt avgöra om allt innehåll som extr
 
 >[!INFO]
 >
->Den här funktionen är tillgänglig från och med version 1.8.x av verktyget för innehållsöverföring (CTT). AEM Cloud Service målmiljö måste köra minst version 6158 eller senare. Källmiljön måste också vara konfigurerad för att kunna köras [pre-copy](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#setting-up-pre-copy-step). Valideringsfunktionen söker efter filen azcopy.config i källan. Om filen inte hittas körs inte valideringen. Mer information om hur du konfigurerar en azcopy.config-fil finns i [den här sidan](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#configure-azcopy-config-file).
+>Den här funktionen är tillgänglig från och med version 1.8.x av verktyget för innehållsöverföring (CTT). AEM Cloud Service målmiljö måste köra minst version 6158 eller senare. Källmiljön måste också vara konfigurerad för att köra [pre-copy](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#setting-up-pre-copy-step). Valideringsfunktionen söker efter filen azcopy.config i källan. Om filen inte hittas körs inte valideringen. Mer information om hur du konfigurerar en azcopy.config-fil finns på [den här sidan](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#configure-azcopy-config-file).
 
 Det är valfritt att validera en innehållsöverföring. Om du aktiverar den här funktionen ökar både tiden det tar att utföra en extrahering och ett intag. Om du vill använda funktionen aktiverar du den i systemkonsolen för AEM genom att följa dessa steg:
 
-1. Navigera till Adobe Experience Manager Web Console i källinstansen genom att gå till **Verktyg - Åtgärder - Webbkonsol** eller direkt till URL:en på *https://serveraddress:serverport/system/console/configMgr*
+1. Gå till Adobe Experience Manager Web Console på din källinstans genom att gå till **Verktyg - Åtgärder - Webbkonsol** eller direkt till URL:en på *https://serveraddress:serverport/system/console/configMgr*
 1. Sök efter **Konfiguration av extraheringstjänst för innehållsöverföringsverktyg**
 1. Använd pennikonknappen för att redigera dess konfigurationsvärden
-1. Aktivera **Aktivera migreringsvalidering vid extrahering** ställa in och sedan trycka **Spara**:
+1. Aktivera inställningen **Aktivera migreringsvalidering under extrahering** och tryck sedan på **Spara**:
 
    ![bild](/help/journey-migration/content-transfer-tool/assets/CTTvalidation1.png)
 
@@ -38,7 +38,7 @@ Mer information om hur du installerar verktyget Innehållsöverföring finns i [
 
 När migreringsvalidering är aktiverat i AEM källmiljö påbörjar du en extrahering.
 
-If **Skriv över mellanlagringsbehållaren under extraheringen** är aktiverat loggas alla noder som är inblandade i extraheringen till extraheringssökvägssammanfattningen. När den här inställningen används är det viktigt att aktivera **Rensa befintligt innehåll i molninstansen före intag** Inställningen under intaget, annars kan det verka som att det saknas noder i matsmältningen. Detta är de noder som redan finns på målet från tidigare inmatningar.
+Om **Skriv över mellanlagringsbehållaren under extraheringen** är aktiverat loggas alla noder som är inblandade i extraheringen till extraheringssökvägssammanfattningen. När den här inställningen används är det viktigt att aktivera inställningen **Rensa befintligt innehåll i molninstansen före intag** vid förtäring, annars kan det finnas noder som saknas i uppslutningssammanfattningen. Detta är de noder som redan finns på målet från tidigare inmatningar.
 
 En grafisk illustration av detta finns i följande exempel:
 
@@ -48,7 +48,7 @@ En grafisk illustration av detta finns i följande exempel:
 
   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/validation-01.png)
 
-* **Inmatning (svep)**
+* **Inmatning (svepning)**
 
   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/validation-02.png)
 
@@ -74,7 +74,7 @@ En grafisk illustration av detta finns i följande exempel:
 
 När extraktionen är klar, börja intaget.
 
-Inmatningsloggens överkant innehåller en post som påminner om `aem-ethos/tools:1.2.438`. Kontrollera att versionsnumret är **1.2.438** eller senare, annars stöds inte valideringen av AEM as a Cloud Service som du använder.
+Inmatningsloggens överkant kommer att innehålla en post som liknar `aem-ethos/tools:1.2.438`. Kontrollera att versionsnumret är **1.2.438** eller högre, annars stöds inte valideringen i den version av AEM as a Cloud Service som du använder.
 
 När intaget är klart och valideringen börjar, noteras följande loggpost i matningsloggen:
 
@@ -129,22 +129,22 @@ Migration validation took 0 minutes
 
 Ovanstående felexempel uppnåddes genom att ett intag kördes och därefter kördes samma intag igen med rensning inaktiverat, så att inga noder berördes under intaget - allt fanns redan på målet.
 
-Förutom att den ingår i matningsloggen kan man även få tillgång till valideringsrapporten via **Inmatningsjobb** användargränssnitt i Cloud Acceleration Manager. Klicka på de tre punkterna (**...**) och klicka sedan på **Valideringsrapport** i listrutan för att visa valideringsrapporten.
+Förutom att den ingår i inmatningsloggen kan du även få åtkomst till verifieringsrapporten via användargränssnittet **Inmatningsjobb** i Cloud Acceleration Manager. Om du vill göra det klickar du på de tre punkterna (**..**) och sedan på **Valideringsrapport** i listrutan för att visa valideringsrapporten.
 
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/CTTvalidationreportnew.png)
 
 ## Validera huvudmigreringen {#how-to-validate-principal-migration}
 
-Se [Användarmappning och huvudmigrering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/user-mapping-and-migration.md) för att läsa information om huvudmigrering och varför det är nödvändigt.
+Läs [Användarmappning och huvudmigrering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/user-mapping-and-migration.md) om du vill läsa information om huvudmigreringar och varför det är nödvändigt.
 
 När extraheringen och intaget har slutförts finns en sammanfattning och rapport om den huvudsakliga migreringen. Den här informationen kan användas för att validera vilka användare och grupper som migrerats och, kanske, för att avgöra varför vissa inte gjorde det.
 
-Om du vill visa den här informationen går du till Cloud Acceleration Manager. Klicka på projektkortet och klicka på kortet för innehållsöverföring. Navigera till **Inmatningsjobb** och hitta det intag du vill verifiera. Klicka på de tre punkterna (**...**) för det intrycket och klicka sedan **Visa huvudsammanfattning** i listrutan.
+Om du vill se den här informationen går du till Cloud Acceleration Manager. Klicka på projektkortet och klicka på kortet för innehållsöverföring. Navigera till **Inmatningsjobb** och leta reda på det intag som du vill verifiera. Klicka på de tre punkterna (**..**) för det intagandet och klicka sedan på **Visa huvudsammanfattning** i listrutan.
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ingestion-principal-action.png)
 
-En dialogruta med den sammanfattande informationen visas. Använd hjälpikonerna för att läsa en mer fullständig beskrivning. Klicka på **Ladda ned rapport** om du vill hämta den fullständiga kommaavgränsade (CSV) rapporten.
+En dialogruta med den sammanfattande informationen visas. Använd hjälpikonerna för att läsa en mer fullständig beskrivning. Klicka på knappen **Hämta rapport** om du vill hämta den fullständiga kommaavgränsade (CSV) rapporten.
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ingestion-principal-dialog.png)
 
@@ -156,7 +156,7 @@ En dialogruta med den sammanfattande informationen visas. Använd hjälpikonerna
 
 ### Valideringen misslyckades. Vad händer nu? {#validation-fail}
 
-Det första steget är att avgöra om intag verkligen misslyckades eller om det extraherade innehållet redan finns i målmiljön. Detta kan inträffa om ett intag upprepas med **Rensa befintligt innehåll i molninstansen före intag** inaktiverat alternativ.
+Det första steget är att avgöra om intag verkligen misslyckades eller om det extraherade innehållet redan finns i målmiljön. Detta kan inträffa om ett intag upprepas med alternativet **Rensa befintligt innehåll i molninstansen innan intag** inaktiveras.
 
 Verifiera genom att välja en sökväg i valideringsrapporten och kontrollera om den finns i målmiljön. Om det här är en publiceringsmiljö kan du vara begränsad till att kontrollera sidor och resurser direkt. Öppna en biljett hos Kundtjänst om du behöver hjälp med det här steget.
 
@@ -164,8 +164,8 @@ Verifiera genom att välja en sökväg i valideringsrapporten och kontrollera om
 
 Vissa vägar från extraherings- och intagssammanfattningarna exkluderas för att hålla storleken på dessa filer hanterbar, med målet att kunna beräkna migreringens valideringsresultat inom två timmar efter att intaget har slutförts.
 
-De sökvägar vi för närvarande utesluter från sammanfattningarna är bland annat: `cqdam.text.txt` återgivningar, noder i `/home`och noder i `/jcr:system`.
+De sökvägar som för närvarande utesluts från sammanfattningarna är: `cqdam.text.txt` återgivningar, noder i `/home` och noder i `/jcr:system`.
 
 ### Stängda användargrupper fungerar inte {#validating-cugs}
 
-Se [Migrerar stängda användargrupper](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/closed-user-groups-migration.md) om du vill ha mer information när du använder en CUG-princip (Closed User Group).
+Mer information om hur du använder en CUG-princip (Closed User Group) finns i [Migrera stängda användargrupper](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/closed-user-groups-migration.md).

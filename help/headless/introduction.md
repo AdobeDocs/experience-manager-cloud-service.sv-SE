@@ -17,11 +17,11 @@ ht-degree: 8%
 
 Lär dig hur du använder Adobe Experience Manager (AEM) som ett headless CMS (Content Management System) med funktioner som Content Fragment Models, Content Fragments och ett GraphQL-API som tillsammans ger en kraftfull, skalbar upplevelse.
 
-Du kan läsa detaljerad dokumentation om de olika funktionerna och/eller följa valet av [Headless Journeys för att få en översikt över de första stegen](#first-steps).
+Du kan läsa detaljerad dokumentation om de olika funktionerna och/eller följa urvalet av [Headless Journeys för att få en översikt över de första stegen](#first-steps).
 
 >[!NOTE]
 >
->Se även [Vad är Headless?](/help/headless/what-is-headless.md) för en introduktion till Headless-koncept och -terminologi.
+>Se även [Vad är Headless?](/help/headless/what-is-headless.md) om du vill ha en introduktion till Headless-koncept och -terminologi.
 
 {{headless-trials-promotion}}
 
@@ -35,7 +35,7 @@ Den Headless-implementeringen förskjuter hantering av sidor och komponenter, vi
 
 ## Funktioner {#aem-headless-features}
 
-AEM as a Cloud Service är ett flexibelt verktyg för den headless-implementeringsmodellen med tre kraftfulla funktioner:
+AEM as a Cloud Service är ett flexibelt verktyg för en headless-implementeringsmodell med tre kraftfulla funktioner:
 
 1. **Modeller för innehållsfragment**
    * Content Fragment Models är strukturerade representationer av innehåll.
@@ -44,11 +44,11 @@ AEM as a Cloud Service är ett flexibelt verktyg för den headless-implementerin
 1. **Innehållsfragment**
    * Ett innehållsfragment skapas baserat på en innehållsfragmentmodell.
    * Innehållsfragment skapas av innehållsförfattare med hjälp av AEM Content Fragment Editor.
-   * Innehållsfragment lagras som AEM Assets, men kan hanteras via Resurskonsolen eller [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console).
+   * Innehållsfragment lagras som AEM Assets, men kan hanteras via Assets Console eller [konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console).
 1. **Innehålls-API för leverans**
    * AEM GraphQL API stöder leverans av innehållsfragment.
    * AEM Assets REST API stöder CRUD-åtgärder för innehållsfragment.
-   * Direktleverans av innehåll är också möjligt med [JSON-export av kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html).
+   * Direktleverans av innehåll är också möjligt med [JSON-exporten av kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html).
 
 ## Dina första steg {#first-steps}
 
@@ -56,12 +56,12 @@ Det finns flera tillgängliga resurser för att komma igång med AEM headless-fu
 
 | Resurs | Beskrivning | Typ | Målgrupp | Beräkna. Tid |
 |---|---|---|---|---|
-| [Headless Developer Journey](/help/journey-headless/developer/overview.md) | **För utvecklare som inte är AEM och utan headless** börjar du här för att få en omfattande introduktion till AEM och dess headless-funktioner från teorin om headless genom att publicera ditt första headless-projekt. | Guide | Utvecklare **nya i AEM och utan huvud** | 1 timme |
-| [Headless Setup](/help/headless/setup/introduction.md) | **För erfarna AEM** som behöver en kort sammanfattning av de viktigaste AEM rubrikfria funktionerna, se den här snabbstartsöversikten. | Referensinställningar | Utvecklare, administratörer **med AEM** | 20 minuter |
-| [Självstudiekurs utan hörn](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) | **Om du föredrar en praktisk lösning och är bekant med AEM** den här självstudiekursen lär sig att implementera en enkel headless-app. | Självstudiekurs | Utvecklare | 2 timmar |
-| [Headless Architect Journey](/help/journey-headless/architect/overview.md) | **För arkitekter som är nya för AEM och utan huvud** börjar du här för att få en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager as a Cloud Service och för hur du modellerar innehåll för ditt projekt. | Guide | Arkitekter | 1 timme |
-| [Headless Authoring Journey](/help/journey-headless/author/overview.md) | **För företagsanvändare som inte är AEM och utan headless** börjar du här för att få en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager as a Cloud Service och för hur du modellerar innehåll för ditt projekt. | Guide | Innehållsskapare | 1 timme |
-| [Headless Translation Journey](/help/journey-headless/translation/overview.md) | För dessa **intresserad av AEM översättningsstrategi för headless**. Lär dig mer om headless-teknik och hur du skapar och uppdaterar översättningsprojekt i AEM från A till Z. | Guide | Översättningsspecialister | 1 timme |
+| [Headless Developer Journey](/help/journey-headless/developer/overview.md) | **För utvecklare som inte har använt AEM eller använder headless** kan du börja här för att få en omfattande introduktion till AEM och dess headless-funktioner, från teorin om headless genom att publicera ditt första headless-projekt. | Guide | Utvecklare **nya för AEM och utan huvud** | 1 timme |
+| [Headless-inställningar](/help/headless/setup/introduction.md) | **För erfarna AEM**-användare som behöver en kort sammanfattning av AEM headless-funktioner kan du ta en titt på den här snabbstartsöversikten. | Referensinställningar | Utvecklare, administratörer **med AEM** | 20 minuter |
+| [Självstudiekurs utan hörn](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) | **Om du föredrar en praktisk strategi och är bekant med AEM**, kan du använda den här självstudiekursen direkt för att implementera en enkel headless-app. | Självstudiekurs | Utvecklare | 2 timmar |
+| [Headless Architect Journey](/help/journey-headless/architect/overview.md) | **För arkitekter som inte har använt AEM eller använder headless** kan du börja här för att få en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager as a Cloud Service och hur du modellerar innehåll för ditt projekt. | Guide | Arkitekter | 1 timme |
+| [Headless Authoring Journey](/help/journey-headless/author/overview.md) | **För företagsanvändare som inte har AEM eller använder headless** -tekniker kan du börja här för att få en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager as a Cloud Service och hur du modellerar innehåll för ditt projekt. | Guide | Innehållsskapare | 1 timme |
+| [Headless Translation Journey](/help/journey-headless/translation/overview.md) | För de **som är intresserade av AEM översättningsmetod för headless**. Lär dig mer om headless-teknik och hur du skapar och uppdaterar översättningsprojekt i AEM från A till Z. | Guide | Översättningsspecialister | 1 timme |
 
 ## Jämför Headful och Headless {#headful-headless}
 
@@ -69,4 +69,4 @@ Den här guiden fokuserar på den fullständiga headless-implementeringsmodellen
 
 >[!TIP]
 >
->Se dokumentet [Headless and Headless in AEM](/help/implementing/developing/headful-headless.md) för mer information.
+>Mer information finns i dokumentet [Headful and Headless in AEM](/help/implementing/developing/headful-headless.md).

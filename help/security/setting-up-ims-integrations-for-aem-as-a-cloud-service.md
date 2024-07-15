@@ -41,19 +41,19 @@ Integreringarna använder en IMS-integrering som konfigurerats med S2S OAuth.
 
 Som ett första steg måste du konfigurera OAuth-autentiseringsuppgifterna i Adobe Developer Console.
 
-Mer information om hur du gör detta finns i dokumentationen för Developer Console, beroende på dina krav:
+Mer information om hur du gör detta finns i Developer Console-dokumentationen, beroende på dina krav:
 
 * Översikt
 
-   * [Server-till-server-autentisering](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/)
+   * [Server till server-autentisering](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/)
 
 * Skapa en ny OAuth-autentiseringsuppgift:
 
-   * [Implementeringshandbok för OAuth Server-till-Server-autentiseringsuppgifter](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+   * [Implementeringshandbok för autentiseringsuppgifter för OAuth Server-till-Server](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
 
 * Migrera en befintlig JWT-autentiseringsuppgift till en OAuth-autentiseringsuppgift:
 
-   * [Migrerar från JWT-autentiseringsuppgifter (Service Account) till OAuth Server-till-Server-autentiseringsuppgifter](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
+   * [Migrerar från JWT-autentiseringsuppgifter (Service Account) till autentiseringsuppgifter för OAuth Server-till-Server](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
 
 Till exempel:
 
@@ -63,7 +63,7 @@ Till exempel:
 
 Så här skapar du en ny Adobe IMS-integrering med OAuth:
 
-1. I AEM navigerar du till **verktyg**, **Säkerhet**, **Integrering med Adobe IMS**.
+1. I AEM går du till **Verktyg**, **Säkerhet**, **Adobe IMS-integrering**.
 
 1. Välj **Skapa**.
 
@@ -81,9 +81,9 @@ Så här migrerar du en befintlig Adobe IMS-integrering baserad på JWT-autentis
 >
 >I det här exemplet visas en Starta IMS-konfiguration.
 
-1. I AEM navigerar du till **verktyg**, **Säkerhet**, **Integrering med Adobe IMS**.
+1. I AEM går du till **Verktyg**, **Säkerhet**, **Adobe IMS-integrering**.
 
-1. Välj den JWT-konfiguration som ska migreras. JWT-konfigurationer är markerade med en varning **JWT-autentiseringsuppgifter (borttagen)**.
+1. Välj den JWT-konfiguration som ska migreras. JWT-konfigurationer har markerats med varningen **JWT-autentiseringsuppgifter (borttagen)**.
 
 1. Välj **Egenskaper**:
 
@@ -93,13 +93,13 @@ Så här migrerar du en befintlig Adobe IMS-integrering baserad på JWT-autentis
 
    ![Konfigurationsegenskaper - skrivskyddad](assets/ims-migrate-jwt-properties-read-only.png)
 
-1. Välj **OAuth** från **Autentiseringstyp** listruta:
+1. Välj **OAuth** i listrutan **Autentiseringstyp**:
 
    ![Välj autentiseringstyp](assets/ims-migrate-jwt-authentication-type.png)
 
-1. De tillgängliga egenskaperna uppdateras. Använd information från Developer Console för att slutföra dem:
+1. De tillgängliga egenskaperna uppdateras. Fyll i uppgifterna från Developer Console:
 
    ![Fullständig OAuth-information](assets/ims-migrate-jwt-complete-oauth-details.png)
 
-1. Använd **Spara och stäng** för att behålla uppdateringarna.
-När du återgår till konsolen **JWT-autentiseringsuppgifter (borttagen)** varningen försvinner.
+1. Använd **Spara och stäng** för att behålla dina uppdateringar.
+När du återgår till konsolen försvinner varningen **JWT-autentiseringsuppgifter (utgått)**.

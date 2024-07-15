@@ -1,5 +1,5 @@
 ---
-title: Händelsedrivna App Builder-program
+title: Händelsestyrda App Builder-program
 description: Lär dig hur du skapar händelsestyrda App Builder-program.
 version: Cloud Service
 feature: App Builder, Developing
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ---
 
-# Händelsedrivna App Builder-program
+# Händelsestyrda App Builder-program
 
 ## Introduktion till händelsestyrda App Builder-program
 
@@ -28,4 +28,4 @@ Läs mer om händelsestyrd arkitektur, Adobe I/O-händelser och anpassade hände
 
 >[!VIDEO](https://video.tv.adobe.com/v/339245/?quality=12&learn=on)
 
-Lär dig hur du skapar publiceringar kan använda händelser i ett App Builder-program.
+Lär dig hur du bygger publicering och kan använda händelser i ett App Builder-program.

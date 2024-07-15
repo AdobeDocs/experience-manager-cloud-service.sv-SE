@@ -24,7 +24,7 @@ Alla program/fjärrsidor ansvarar för autentisering till de backend-system som 
 
 ## Standardflöde {#standard-flow}
 
-Detta är lösningen för AEM as a Cloud Service och AMS som använder IMS för att använda Universell redigerare.
+Det här är lösningen för AEM as a Cloud Service och AMS som använder IMS för att använda Universal Editor.
 
 Om du vill använda den universella redigeraren måste användaren vara inloggad i det enhetliga gränssnitt som autentiserar mot IMS. Den angivna IMS-token lagras i användarens sessionsarkiv.
 

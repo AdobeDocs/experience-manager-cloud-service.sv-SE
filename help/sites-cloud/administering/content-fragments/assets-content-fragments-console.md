@@ -1,6 +1,6 @@
 ---
-title: Visa och hantera resurser i konsolen för innehållsfragment
-description: Lär dig hur du visar och hanterar resurser i **Content Fragments Console** för Adobe Experience Manager as a Cloud Service.
+title: Visa och hantera Assets i konsolen för innehållsfragment
+description: Läs om hur du visar och hanterar Assets i **Content Fragments Console** i Adobe Experience Manager as a Cloud Service.
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: 865e1fa8-2956-45cf-9dd7-034d491808fe
@@ -12,42 +12,42 @@ ht-degree: 0%
 
 ---
 
-# Visa och hantera resurser i konsolen för innehållsfragment {#viewing-managing-assets-content-fragments-console}
+# Visa och hantera Assets i konsolen för innehållsfragment {#viewing-managing-assets-content-fragments-console}
 
-Som standard är [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console) av Adobe Experience Manager as a Cloud Service presenterar [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md).
+Som standard visas dina [innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) i konsolen [Innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console) i Adobe Experience Manager as a Cloud Service.
 
-Du kan även visa och hantera andra typer av **Resurser** i det här **Konsol för innehållsfragment**.
-
->[!NOTE]
->
->Du kan även komma åt innehållsfragment från **[Resurser](/help/assets/overview.md)** konsol.
-
-## Visa resurser {#viewing-assets}
-
-Du kan använda panelen längst till vänster i konsolen Innehållsfragment för att välja  **Resurser** som resurstyp för att visa, bläddra och hantera:
-
-![Konsol för innehållsfragment - navigering](/help/sites-cloud/administering/content-fragments/assets/cf-console-assets-navigation.png)
+Du kan även visa och hantera alla andra typer av **Assets** i den här **konsolen för innehållsfragment**.
 
 >[!NOTE]
 >
->Även om innehållsfragment lagras som resurser visas de inte i den här vyn.
+>Du kan även komma åt innehållsfragment från konsolen **[Assets](/help/assets/overview.md)**.
 
-## Hantera resurser {#managing-assets}
+## Visa Assets {#viewing-assets}
 
-Från **Resurser** vyn för konsolen för innehållsfragment kan du:
+Du kan använda panelen längst till vänster i konsolen Innehållsfragment för att välja **Assets** som resurstyp för att visa, bläddra och hantera:
 
-![Konsolen Innehållsfragment - bläddra bland resurser](/help/sites-cloud/administering/content-fragments/assets/cf-console-assets-browse.png)
+![Konsolen för innehållsfragment - navigering](/help/sites-cloud/administering/content-fragments/assets/cf-console-assets-navigation.png)
 
-* Navigera i strukturen och bläddra bland resurserna; [liknar funktionerna i Assets-konsolen](/help/assets/navigate-assets-view.md)
+>[!NOTE]
+>
+>Även om innehållsfragment lagras som Assets visas de inte i den här vyn.
+
+## Hantera Assets {#managing-assets}
+
+I vyn **Assets** i konsolen Innehållsfragment kan du:
+
+![Konsolen för innehållsfragment - bläddra bland resurser](/help/sites-cloud/administering/content-fragments/assets/cf-console-assets-browse.png)
+
+* Navigera i strukturen och bläddra i din Assets; [liknar funktionerna i Assets-konsolen](/help/assets/navigate-assets-view.md)
 * [Skapa en mapp](/help/assets/manage-digital-assets.md#creating-folders)
-* [Överför resurser](/help/assets/add-delete-assets-view.md)
+* [Ladda upp Assets](/help/assets/add-delete-assets-view.md)
 * Konfigurera vytypen (Lista, Stödraster, Galleri, Vattenfall) och, när det är lämpligt, de kolumner som visas
 
-Du kan också vidta åtgärder för en eller flera markerade resurser:
+Du kan också vidta åtgärder för en eller flera av de valda Assets-programmen:
 
-![Konsol för innehållsfragment - åtgärder för vald resurs](/help/sites-cloud/administering/content-fragments/assets/cf-console-assets-actions.png)
+![Konsolen för innehållsfragment - åtgärder för den valda resursen](/help/sites-cloud/administering/content-fragments/assets/cf-console-assets-actions.png)
 
-Se [Hantera resurser](/help/assets/manage-organize-assets-view.md) för mer information om
+Se [Hantera Assets](/help/assets/manage-organize-assets-view.md) för mer information om:
 
 * Information
 * Ladda ned

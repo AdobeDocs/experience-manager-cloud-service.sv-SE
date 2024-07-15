@@ -19,24 +19,24 @@ När du använder en IP-tillåtelselista kopplas alla IP-intervall som ingår i 
 
 ## Använder IP-Tillåtelselista {#applying}
 
-En användare i **Företagsägare** eller **Distributionshanteraren** kan följa de här stegen för att använda en IP-tillåtelselista.
+En användare i rollen **Affärsägare** eller **Distributionshanterare** kan följa de här stegen för att tillämpa en IP-tillåtelselista.
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
-1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** väljer du programmet.
-1. Navigera till **Miljö** från **Ökning** sida.
-1. Navigera till den specifika miljöinformationssidan på sidan **Miljö** och navigera till **IP TILLÅTELSELISTA** tabell.
+1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
+1. Gå till skärmen **Miljö** från sidan **Översikt**.
+1. Navigera till den specifika miljöinformationssidan på skärmen **Miljöer** och navigera till tabellen **IP Tillåtelselista**.
 1. Använd inmatningsfälten högst upp i tabellen så att du kan välja IP tillåtelselista och författaren eller publiceringstjänsten som du vill använda den på.
    * IP-Tillåtelselista måste finnas i Cloud Manager för att det ska kunna användas.
-1. Klicka **Använd** och bekräfta ditt bidrag.
+1. Klicka på **Använd** och bekräfta ditt bidrag.
 
 ## Tillåtelselista som inte används {#un-applying}
 
-En användare i **Företagsägare** eller **Distributionshanteraren** kan följa de här stegen för att ta bort en IP-tillåtelselista.
+En användare i rollen **Affärsägare** eller **Distributionshanterare** kan följa de här stegen för att ta bort en IP-tillåtelselista.
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
-1. Navigera till **Miljö** från **Ökning** sida.
-1. Navigera till den specifika miljöinformationssidan på sidan **Miljö** och navigera till **IP TILLÅTELSELISTA** tabell.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
+1. Gå till skärmen **Miljö** från sidan **Översikt**.
+1. Navigera till den specifika miljöinformationssidan på skärmen **Miljöer** och navigera till tabellen **IP Tillåtelselista**.
 1. Identifiera raden i IP-tillåtelselista som du vill ta bort.
 1. Markera ellipsknappen längst till höger på raden.
-1. Välj **Oanvänd** och bekräfta ditt bidrag.
+1. Välj alternativet **Ta bort tillämpning** och bekräfta överföringen.

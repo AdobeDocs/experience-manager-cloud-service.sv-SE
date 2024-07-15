@@ -1,6 +1,6 @@
 ---
 title: Uppdateringar av AEM
-description: Läs om hur Adobe Experience Manager (AEM) as a Cloud Service använder kontinuerlig integrering och leverans (CI/CD) för att hålla dina projekt uppdaterade.
+description: Läs om hur Adobe Experience Manager (AEM) as a Cloud Service använder kontinuerlig integrering och leverans (CI/CD) för att hålla dina projekt uppdaterade med den senaste versionen.
 feature: Deploying
 exl-id: 36989913-69db-4f4d-8302-57c60f387d3d
 role: Admin
@@ -14,16 +14,16 @@ ht-degree: 0%
 
 # Uppdateringar av AEM {#aem-version-updates}
 
-Läs om hur Adobe Experience Manager (AEM) as a Cloud Service använder kontinuerlig integrering och leverans (CI/CD) för att hålla dina projekt uppdaterade.
+Läs om hur Adobe Experience Manager (AEM) as a Cloud Service använder kontinuerlig integrering och leverans (CI/CD) för att hålla dina projekt uppdaterade med den senaste versionen.
 
 ## CI/CD {#ci-cd}
 
-AEM as a Cloud Service använder kontinuerlig integrering och kontinuerlig leverans (CI/CD) för att säkerställa att dina projekt finns i den senaste AEM versionen. Den här processen uppdaterar dina produktions-, staging- och utvecklingsinstanser utan att störa användarna.
+AEM as a Cloud Service använder kontinuerlig integrering och kontinuerlig leverans (CI/CD) för att säkerställa att dina projekt har den senaste AEM versionen. Den här processen uppdaterar dina produktions-, staging- och utvecklingsinstanser utan att störa användarna.
 
 >[!NOTE]
-> Eftersom utvecklingsinstanser redan uppdateras automatiskt kanske de manuella uppdateringarna för utvecklingsinstanser inte är tillgängliga för _några_ av dina program. Den här funktionen går över till automatiska uppdateringar.
+> Eftersom utvecklingsinstanser redan uppdateras automatiskt kanske de manuella uppdateringarna för utvecklingsinstanser inte är tillgängliga för _vissa_ av dina program. Den här funktionen går över till automatiska uppdateringar.
 
-Innan instanserna uppdateras automatiskt kommer en ny AEM att publiceras 3-5 dagar i förväg. Under den här perioden kan din utvecklingsinstans uppdateras automatiskt eller om den är tillgänglig kan du välja att göra det [aktivera uppdateringen för dina utvecklingsinstanser](/help/implementing/cloud-manager/manage-environments.md#updating-dev-environment). Versionsuppdateringar tillämpas automatiskt i dina utvecklingsmiljöer först. Om uppdateringen lyckas fortsätter den till din scen och dina produktionsinstanser. Utvecklings- och staging-instanserna fungerar som en automatiserad kvalitetsport, där dina anpassade tester körs innan uppdateringen tillämpas i produktionsmiljön.
+Innan instanserna uppdateras automatiskt kommer en ny AEM att publiceras 3-5 dagar i förväg. Under den här perioden kan din utvecklingsinstans uppdateras automatiskt eller om den är tillgänglig kan du välja att [utlösa uppdateringen för dina utvecklingsinstanser](/help/implementing/cloud-manager/manage-environments.md#updating-dev-environment). Versionsuppdateringar tillämpas automatiskt i dina utvecklingsmiljöer först. Om uppdateringen lyckas fortsätter den till din scen och dina produktionsinstanser. Utvecklings- och staging-instanserna fungerar som en automatiserad kvalitetsport, där dina anpassade tester körs innan uppdateringen tillämpas i produktionsmiljön.
 
 ### NIMU (Non-Intrusive Maintenance Updates) {#nimu}
 
@@ -32,8 +32,8 @@ Med NIMU kan kunden använda pipeline när som helst, även om en AEM version ä
 
 #### Uppdatera aktiviteter
 
-Den aktuella AEM-versionen kan fortfarande kontrolleras för varje miljö, som tidigare, med hjälp av miljöpanelen i användargränssnittet i Cloud Manager. Samma kvalitetsgater som används i pipeline används av icke-intrångsrelaterade underhållsuppdateringar, inklusive kundens skriftliga tester.
-Ett meddelande om användargränssnittet i molnhanteraren skickas när en icke-intrångsrelaterad underhållsuppdatering tillämpas i programmets miljöer. Du kan konfigurera det så att det även skickas till ditt e-postmeddelande.
+Den aktuella AEM-versionen kan fortfarande kontrolleras för varje miljö, som tidigare, med hjälp av Cloud Manager UI-miljöpanel. Samma kvalitetsgater som används i pipeline används av icke-intrångsrelaterade underhållsuppdateringar, inklusive kundens skriftliga tester.
+Ett Cloud Manager UI-meddelande skickas varje gång en icke-påträngande underhållsuppdatering används i programmets miljöer. Du kan konfigurera det så att det även skickas till ditt e-postmeddelande.
 
 >[!NOTE]
 >
@@ -55,15 +55,15 @@ Det finns två typer AEM versionsuppdateringar:
 
 >[!NOTE]
 >
-> Kontrollera nyckeldatum för månatliga releaser på [Experience Manager släpper en färdplan](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service) och markera dina kalendrar för att förbereda dig för de viktigaste aktiviteterna för att göra dig redo för releasen.
+> Kontrollera nyckeldatum för månatliga releaser på [Experience Manager-releasemartan](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service) och markera dina kalendrar för att förbereda dig för de viktigaste aktiviteterna för att göra dig redo för releasen.
 
 ## Uppdateringsfel {#update-failure}
 
-AEM uppdateringar genomgår en intensiv och helt automatiserad produktvalideringsplan som omfattar flera steg, vilket säkerställer att ingen tjänst avbryts för system i produktionen. Hälsokontroller används för att övervaka programmets hälsa. Om dessa kontroller misslyckas under en AEM as a Cloud Service uppdatering fortsätter inte releasen och Adobe undersöker varför uppdateringen orsakade detta oväntade beteende.
+AEM uppdateringar genomgår en intensiv och helt automatiserad produktvalideringsplan som omfattar flera steg, vilket säkerställer att ingen tjänst avbryts för system i produktionen. Hälsokontroller används för att övervaka programmets hälsa. Om dessa kontroller misslyckas under en AEM as a Cloud Service-uppdatering fortsätter inte releasen och Adobe undersöker varför uppdateringen orsakade detta oväntade beteende.
 
-När du distribuerar en ny version av anpassad kod i din miljö, [Funktionstester för produkter och anpassade](/help/implementing/cloud-manager/overview-test-results.md#functional-testing) spela en viktig roll. De säkerställer att produktionssystemen förblir stabila och fungerar även efter det att en ändring har gjorts. De här testerna används också i AEM.
+När du distribuerar en ny version av anpassad kod i din miljö spelar [Funktionstester för produkter och anpassade ](/help/implementing/cloud-manager/overview-test-results.md#functional-testing) en viktig roll. De säkerställer att produktionssystemen förblir stabila och fungerar även efter det att en ändring har gjorts. De här testerna används också i AEM.
 
-Om uppdateringen till produktionsmiljön misslyckas, återställer Cloud Manager automatiskt testmiljön. Detta görs automatiskt för att säkerställa att både testnings- och produktionsmiljöerna finns i samma AEM när uppdateringen är klar.
+Om uppdateringen till produktionsmiljön misslyckas, kommer Cloud Manager automatiskt att återställa testmiljön. Detta görs automatiskt för att säkerställa att både testnings- och produktionsmiljöerna finns i samma AEM när uppdateringen är klar.
 Om en automatisk uppdatering av en utvecklingsmiljö misslyckas uppdateras inte heller mellanlagrings- och produktionsmiljöer.
 
 >[!NOTE]
@@ -81,7 +81,7 @@ Om en automatisk uppdatering av en utvecklingsmiljö misslyckas uppdateras inte 
    * Om du avbryter pipelinen efter en scendistribution indikerar det att koden är&quot;en eliminering&quot; och inte en giltig kandidat för produktion, se [Konfigurera en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md).
 
 * **Icke-produktionsförlopp**
-   * Konfigurera en [Icke-produktionsförlopp](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#full-stack-code).
+   * Konfigurera en [icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#full-stack-code).
    * Snabbare leverans/frekvens vid produktionsfel. Identifiera problem i icke-producerade rörledningar genom att aktivera produktfunktionstestning, anpassad funktionstestning och anpassad gränssnittstestning.
 
 * **Innehållskopia**
@@ -89,7 +89,7 @@ Om en automatisk uppdatering av en utvecklingsmiljö misslyckas uppdateras inte 
 
 * **Automatiserad funktionstestning**
    * Inkludera automatiserad testning i pipeline så att du kan testa viktiga funktioner.
-   * [Funktionstestning av kund](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing) och [Anpassade gränssnittstestningar](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing) blockerar, om de misslyckas kommer AEM inte att lanseras.
+   * [Funktionstestning av kundens ](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing) och [testning av anpassade användargränssnitt](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing) blockeras, om de misslyckas kommer AEM inte att lanseras.
 
 ## Regression {#regression}
 
@@ -99,6 +99,6 @@ Om du råkar ut för ett problem som rör regression ska du skicka in ett suppor
 
 Vanligtvis har uppdateringarna inga driftavbrott, inklusive för redigeringsinstansen, som är ett kluster med noder. Rullande uppdateringar är möjliga på grund av [funktionen för lagring av sammansatta noder i Oak.](https://jackrabbit.apache.org/oak/docs/nodestore/compositens.html)
 
-Med den här funktionen kan AEM referera till flera databaser samtidigt. I en [löpande driftsättning](/help/implementing/deploying/overview.md#how-rolling-deployments-work), innehåller den nya AEM en egen `/libs` (den tjärMK-baserade oföränderliga databasen). Den skiljer sig från den äldre AEM-versionen, men båda refererar till en delad DocumentMK-baserad mutable-databas som innehåller områden som `/content` , `/conf` , `/etc` och andra.
+Med den här funktionen kan AEM referera till flera databaser samtidigt. I en [rullande distribution](/help/implementing/deploying/overview.md#how-rolling-deployments-work) innehåller den nya AEM en egen `/libs` (den TjärMK-baserade oföränderliga databasen). Den skiljer sig från den äldre AEM versionen, även om båda refererar till en delad DocumentMK-baserad ändringsbar databas som innehåller områden som `/content`, `/conf` och `/etc` med flera.
 
-Eftersom både den gamla och den nya versionen har sina egna versioner av `/libs`kan båda vara aktiva under den rullande uppdateringen. Och båda kan ta trafik tills den gamla är helt ersatt av den nya.
+Eftersom både den gamla och den nya versionen har egna versioner av `/libs` kan båda vara aktiva under den rullande uppdateringen. Och båda kan ta trafik tills den gamla är helt ersatt av den nya.

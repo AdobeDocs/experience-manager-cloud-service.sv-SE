@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Distribuera App Builder-program
 
-Lär dig vad som används för att distribuera App Builder och hur du distribuerar appen App Builder med Adobe I/O CLI.
+Lär dig vad driftsättningsmöjligheterna för App Builder innebär och hur du driftsätter dina App Builder-program med Adobe I/O CLI.
 
 >[!VIDEO](https://video.tv.adobe.com/v/339250/?quality=12&learn=on)

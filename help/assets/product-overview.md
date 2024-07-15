@@ -33,7 +33,7 @@ Med Content Hub kan du skapa nytt innehåll med Adobe Express (om du har Adobe E
 
 **Få insikter om hur innehåll används i olika team**
 
-[!DNL Content Hub] ger värdefulla insikter om resurser, och tar itu med en vanlig utmaning som marknadsföringsintressenter ofta stöter på - statistik om resursanvändning som används i marknadsföringskampanjer, kanaler och olika regioner. Genom att få en tydlig förståelse för resursernas prestanda och popularitet kan ni få användbara insikter som är viktiga för att förbättra användarupplevelsen.
+[!DNL Content Hub] ger värdefulla insikter om resurser, och åtgärdar en vanlig utmaning som marknadsföringsintressenter ofta stöter på - statistik om resursanvändning som används i marknadsföringskampanjer, kanaler och olika regioner. Genom att få en tydlig förståelse för resursernas prestanda och popularitet kan ni få användbara insikter som är viktiga för att förbättra användarupplevelsen.
 
 ## Förutsättningar {#prerequisites-content-hub}
 
@@ -41,25 +41,25 @@ Content Hub kräver en produktionsredigeringsmiljö i Experience Manager as a Cl
 
 ## Hur kommer jag åt Content Hub? {#access-content-hub}
 
-[Efter konfiguration av Content Hub](/help/assets/deploy-content-hub.md) och lägga till en användare i [Content Hub produktprofil](/help/assets/deploy-content-hub.md#content-hub-instance-product-profile)går det att komma åt Content Hub på följande sätt:
+[När du har konfigurerat Content Hub](/help/assets/deploy-content-hub.md) och lagt till en användare i [Content Hub produktprofil](/help/assets/deploy-content-hub.md#content-hub-instance-product-profile) kan du få åtkomst till Content Hub på följande sätt:
 
 * Öppna Content Hub via följande länk:
 
   `https://experience.adobe.com/#/assets/contenthub`
 
-* Logga in på experience.adobe com och klicka på **[!UICONTROL Experience Manager Assets Content Hub]** finns i **[!UICONTROL Quick access]** avsnitt:
+* Logga in på experience.adobe com och klicka på **[!UICONTROL Experience Manager Assets Content Hub]** som finns i avsnittet **[!UICONTROL Quick access]**:
   ![Content Hub Access](assets/access-content-hub.png)
 
-* Logga in på experience.adobe com och klicka på **[!UICONTROL Experience Manager Assets Content Hub]** som finns i produktväljaren:
+* Logga in på experience.adobe com och klicka på **[!UICONTROL Experience Manager Assets Content Hub]** i produktväljaren:
   ![Content Hub Access-metod 3](assets/access-content-hub-alternate.png)
 
 
 
 ## Ge Content Hub feedback {#provide-content-hub-feedback}
 
-Om du vill rekommendera produktrelaterade förbättringar klickar du på **[!UICONTROL Feedback]** bredvid organisationsnamnet högst upp i Content Hub användargränssnitt.
+Om du vill rekommendera produktrelaterade förbättringar klickar du på **[!UICONTROL Feedback]** bredvid ditt organisationsnamn högst upp i Content Hub användargränssnitt.
 
-Ange ett ämne, en beskrivning av rekommendationen och bifoga filer om det behövs. Klicka **[!UICONTROL Submit]** för att lämna feedback till Adobe.
+Ange ett ämne, en beskrivning av rekommendationen och bifoga filer om det behövs. Klicka på **[!UICONTROL Submit]** för att skicka feedback till Adobe.
 
 ![Content Hub feedback](assets/content-hub-feedback.png)
 
@@ -71,15 +71,15 @@ Så här konfigurerar du Content Hub för ditt team:
 
 1. [Anlita Content Hub-administratör](deploy-content-hub.md#onboard-content-hub-administrator).
 
-1. [Lägga in viktiga Content Hub-användare](deploy-content-hub.md#onboard-content-hub-consumer-users).
+1. [Lägg till viktiga Content Hub-användare](deploy-content-hub.md#onboard-content-hub-consumer-users).
 
 1. [DAM-författare eller -administratörer som ska godkänna resurser med Experience Manager-resurser](approve-assets.md).
 
-1. [Administratörer kan konfigurera Content Hub användargränssnitt för andra användare](configure-content-hub-ui-options.md).
+1. [Administratörer kan konfigurera Content Hub-användargränssnittet för andra användare](configure-content-hub-ui-options.md).
 
-1. [Ge Content Hub åtkomst till fler användare från teamet](deploy-content-hub.md#onboard-content-hub-consumer-users).
+1. [Bevilja Content Hub-åtkomst till fler användare från teamet](deploy-content-hub.md#onboard-content-hub-consumer-users).
 
-1. [Öppna Content Hub portal](#access-content-hub).
+1. [Öppna Content Hub-portalen](#access-content-hub).
 
 1. [Ge Content Hub feedback](#provide-content-hub-feedback).
 
@@ -93,7 +93,7 @@ Så här konfigurerar du Content Hub för ditt team:
    </a>
    <div>
       <a href="/help/assets/configure-content-hub-ui-options.md">
-      <strong>Konfigurera Content Hub användargränssnitt</strong>
+      <strong> Konfigurera Content Hub-användargränssnitt </strong>
       </a>
    </div>
    <p>
@@ -108,7 +108,7 @@ Så här konfigurerar du Content Hub för ditt team:
    </a>
    <div>
       <a href="/help/assets/search-assets-content-hub.md">
-      <strong>Sök efter resurser som finns i Content Hub</strong>
+      <strong> Söka efter resurser som är tillgängliga i Content Hub </strong>
       </a>
    </div>
    <p>
@@ -121,7 +121,7 @@ Så här konfigurerar du Content Hub för ditt team:
    </a>
    <div>
       <a href="/help/assets/edit-images-content-hub.md">
-      <strong>Redigera bilder med Adobe Express</strong>
+      <strong> Redigera bilder med Adobe Express </strong>
       </a>
    </div>
    <p>
@@ -136,7 +136,7 @@ Så här konfigurerar du Content Hub för ditt team:
    </a>
    <div>
       <a href="/help/assets/share-assets-content-hub.md">
-      <strong>Dela resurser som finns i Content Hub</strong>
+      <strong>Dela resurser som är tillgängliga i Content Hub</strong>
       </a>
    </div>
    <p>
@@ -153,7 +153,7 @@ Så här konfigurerar du Content Hub för ditt team:
       </a>
    </div>
    <p>
-      <em>Lär dig hur du skapar samlingar med hjälp av resurser och sedan hanterar dem.</em>
+      <em>Lär dig hur du skapar samlingar med resurser och sedan hanterar dem.</em>
    </p>
 </td>
 <td>
@@ -166,7 +166,7 @@ Så här konfigurerar du Content Hub för ditt team:
       </a>
    </div>
    <p>
-      <em> Innehållsmodulen ger värdefulla insikter om resurser och åtgärdar en vanlig utmaning som marknadsförare ofta stöter på</em>
+      <em> Innehållsmodulen ger värdefulla insikter i resurser och åtgärdar en vanlig utmaning som marknadsföringsintressenter ofta stöter på</em>
    </p>
 </td>
 </table>

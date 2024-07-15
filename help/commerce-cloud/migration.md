@@ -17,27 +17,27 @@ Den här guiden hjälper dig att identifiera de områden du behöver uppdatera f
 
 ## CIF
 
-För Experience Manager as a Cloud Service är CIF-tillägget den enda e-handelslösningen som stöds för Adobe Commerce och e-handelslösningar från tredje part. Tillägget CIF driftsätts automatiskt för kunder på Experience Manager as a Cloud Service; ingen manuell driftsättning behövs. Se [Komma igång med AEM Commerce as a Cloud Service](getting-started.md).
+För Experience Manager as a Cloud Service är CIF-tillägget den enda e-handelslösningen som stöds för Adobe Commerce och e-handelslösningar från tredje part. Tillägget CIF driftsätts automatiskt för kunder i Experience Manager as a Cloud Service, och ingen manuell driftsättning behövs. Se [Komma igång med AEM Commerce as a Cloud Service](getting-started.md).
 
-För att stödja projekt som distribueras CIF Adobe tillhandahåller [AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components).
+Om du vill ha stöd för projekt som distribueras CIF Adobe tillhandahåller du [AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components).
 
-CIF är även tillgängligt för AEM 6.5 via [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Den är kompatibel och innehåller samma funktioner som CIF för Experience Manager as a Cloud Service - inga justeringar krävs.
+CIF är tillgängligt för AEM 6.5 och via [Programdistributionsportalen](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Den är kompatibel och innehåller samma funktioner som CIF för Experience Manager as a Cloud Service - inga justeringar krävs.
 
-Klassisk CIF med sina beroenden är inte längre tillgänglig. Kod som förlitar sig på den här CIF versionen med `com.adobe.cq.commerce.api` Java-API:er måste justeras till CIF och dess principer.
+Klassisk CIF med sina beroenden är inte längre tillgänglig. Kod som är beroende av den här CIF versionen med `com.adobe.cq.commerce.api` Java API:er måste justeras till CIF och dess principer.
 
 Den tidigare tillgängliga CIF-kopplingen kan inte installeras längre. Kod som är beroende av den här kopplingen måste justeras till CIF och dess principer.
 
 ## Projektstruktur
 
-Lär dig [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) och egenskaperna hos AEM as a Cloud Service. Anpassa projektinställningarna till AEM as a Cloud Service layout.
+Lär dig [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) och egenskaperna för AEM as a Cloud Service. Anpassa projektinställningarna till AEM as a Cloud Service layout.
 Jämfört med AEM 6.5-distributioner finns det två huvudsakliga skillnader här:
 
-* GraphQL-klientens OSGI-paket **får inte** längre inkluderas i AEM projekt, det distribueras via CIF.
-* OSGI-konfigurationer för GraphQL-klient och Graphql Data Service **får inte** längre ingå i AEM
+* GraphQL-klientens OSGI-paket **får inte** längre inkluderas i AEM, det distribueras via CIF.
+* OSGI-konfigurationer för GraphQL-klienten och Graphql-datatjänsten **får inte** längre inkluderas i AEM
 
 >[!TIP]
 >
->Kolla in [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia) på GitHub. Detta projekt innehåller Maven-profiler för AEM as a Cloud Service och lokala driftsättningar som tar hänsyn till de olika ramverksvillkoren.
+>Kolla in projektet [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia) på GitHub. Detta projekt innehåller Maven-profiler för AEM as a Cloud Service och anläggningsdistributioner som tar hänsyn till de olika ramverksvillkoren.
 
 ## Produktkatalog
 
@@ -45,7 +45,7 @@ Import av produktkatalogdata stöds inte längre. Med hjälp av CIF tilläggsobj
 
 >[!TIP]
 >
->Om det inte finns några API:er i realtid bör en extern produktcache med API:er användas för integreringen. Exempel [Magento öppen källkod](https://business.adobe.com/products/magento/open-source.html).
+>Om det inte finns några API:er i realtid bör en extern produktcache med API:er användas för integreringen. Exempel: [Magento öppen källkod](https://business.adobe.com/products/magento/open-source.html).
 
 ## Produktkatalogupplevelser med AEM rendering
 

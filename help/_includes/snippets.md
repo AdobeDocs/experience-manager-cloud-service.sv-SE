@@ -9,7 +9,7 @@ ht-degree: 0%
 
 ## Erbjudande om Headless-testversioner {#headless-trials-promotion}
 
-[![Lär känna vårt headless CMS med en 30-dagars testversion](./assets/aem-headless-trial-promo.png){align="left"}](https://commerce.adobe.com/business-trial/sign-up?items%5B0%5D%5Bid%5D=649A1AF5CBC5467A25E84F2561274821&amp;cli=headless_exl_banner_campaign&amp;co=US&amp;lang=en)
+[![Lär känna vårt headless CMS med 30-dagars testversion](./assets/aem-headless-trial-promo.png){align="left"}](https://commerce.adobe.com/business-trial/sign-up?items%5B0%5D%5Bid%5D=649A1AF5CBC5467A25E84F2561274821&amp;cli=headless_exl_banner_campaign&amp;co=US&amp;lang=en)
 
 ## Redigering av Edge Delivery Services {#edge-delivery-authoring}
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 * [Skapa ett AEM anpassat formulär](/help/forms/creating-adaptive-form-core-components.md)
 * [Lägg till ett AEM anpassat formulär på AEM Sites-sidan](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
 * [Använda teman i ett AEM anpassat formulär](/help/forms/using-themes-in-core-components.md)
-* [Lägga till komponenter i ett AEM adaptivt formulär](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html#components)
+* [Lägg till komponenter i ett AEM anpassat formulär](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html#components)
 * [Använd CAPTCHA i en AEM anpassad form](/help/forms/captcha-adaptive-forms-core-components.md)
 * [Generera PDF-version (DoR) av ett AEM adaptivt formulär](/help/forms/generate-document-of-record-core-components.md)
 * [Översätt en AEM adaptiv form](/help/forms/using-aem-translation-workflow-to-localize-adaptive-forms-core-components.md)
@@ -59,7 +59,7 @@ ht-degree: 0%
 * [Kom igång med AEM Forms Edge Delivery Services](/help/edge/docs/forms/tutorial.md)
 * [Skapa ett formulär med Google eller Microsoft Excel](/help/edge/docs/forms/create-forms.md)
 * [Konfigurera dina Google-blad eller Microsoft Excel-filer så att du kan börja ta emot &#x200B;](/help/edge/docs/forms/submit-forms.md)
-* [Publicera formuläret och börja samla in data](/help/edge/docs/forms/publish-forms.md)
+* [Publish formulär och börja samla in data](/help/edge/docs/forms/publish-forms.md)
 * [Anpassa utseendet på &#x200B;](/help/edge/docs/forms/style-theme-forms.md)
 * [Lägga till repeterbara avsnitt i ett &#x200B;](/help/edge/docs/forms/repeatable-forms.md)
 * [Visa ett anpassat tackmeddelande efter att formuläret har skickats &#x200B;](/help/edge/docs/forms/thank-you-page-form.md)
@@ -80,7 +80,7 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
   </tr>
   <tr>
     <td>Ange alternativ för listrutor </td>
-    <td>Alternativen i listrutan anges med regelredigerarens <b>Ange alternativ för</b> -egenskap.</td>
+    <td>Alternativen i listrutan ställs in med regelredigerarens <b>Set Options of</b> -egenskap.</td>
     <td>Alternativen i listrutan ställs in med de anpassade funktionerna. 
    </td>
    </tr>
@@ -101,14 +101,14 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
    <tr>
     <td>ES10-support </td>
     <td>ES10 stöds inte ännu. </td>
-    <td>Stöd för moderna JavaScript-funktioner som att låta- och pilfunktioner (ES10-stöd) finns i anpassade funktioner. 
+    <td>Stöd för moderna JavaScript-funktioner, t.ex. låt- och pilfunktioner (ES10-stöd), i anpassade funktioner. 
    </td>
    </tr>
    </tr>
    <tr>
    <td>Egenskapen Tjänstutdata</td>
-   <td> Egenskapen Service output stöds i <b>Ange värdet för</b> i regelredigeraren. </td>
-   <td>The <b>Ange värdet för</b> alternativet stöder inte <b>Tjänstutdata</b> för att anropa API:er i regelredigeraren.
+   <td> Egenskapen för tjänstutdata stöds i alternativet <b>Ange värdet </b> i regelredigeraren. </td>
+   <td>Alternativet <b>Set Value of </b> stöder inte egenskapen <b>Service output</b> för anrop av API:er i regelredigeraren.
    </td>
    </tr>
    </tr>

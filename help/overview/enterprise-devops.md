@@ -45,7 +45,7 @@ Utvecklarna ansvarar för att utveckla och anpassa det föreslagna projektet (oa
 * förverkliga designen
 * utveckla nödvändiga tjänster och skript så att ni kan implementera de funktioner som krävs
 
-Konfigurationen av [utveckling](/help/implementing/developing/introduction/development-guidelines.md) miljön kan vara beroende av olika faktorer, men vanligtvis består den av:
+Konfigurationen av [utvecklingsmiljön](/help/implementing/developing/introduction/development-guidelines.md) kan vara beroende av olika faktorer, även om den vanligtvis består av:
 
 * Ett integrerat utvecklingssystem med versionskontroll som ger en integrerad kodbas. Den här integrerade kodbasen används för att sammanfoga kod från de enskilda utvecklingsmiljöer som används av varje utvecklare.
 * En personlig miljö för varje utvecklare, vilken vanligtvis finns på hens lokala dator. Koden synkroniseras med versionskontrollsystemet med lämpliga intervall
@@ -64,9 +64,9 @@ Mellanlagringsmiljön bör vara en spegling av produktionsmiljön - konfiguratio
 * Den kan användas för sluttester (design, funktionalitet och gränssnitt) innan den distribueras till produktionsmiljöerna.
 * Även om det inte alltid är möjligt att ha samma mellanlagringsmiljö som produktionsmiljön bör den vara så lik som möjligt för att möjliggöra prestanda- och lasttestning.
 
-### Produktion - Skapa och publicera {#production-author-and-publish}
+### Production - Author and Publish {#production-author-and-publish}
 
-Produktionsmiljön består av miljöer som [skapa och publicera](/help/sites-cloud/authoring/author-publish.md) implementeringen.
+Produktionsmiljön består av miljöer som [skapar och publicerar](/help/sites-cloud/authoring/author-publish.md) implementeringen.
 
 En produktionsmiljö består av minst en författarinstans och en publiceringsinstans:
 
@@ -88,7 +88,7 @@ Innehåll som aktiverats paketeras och placeras i författarmiljöns replikering
 
 Om du vill återreplikera data som genererats i en publiceringsmiljö till författarmiljön avsöker en replikeringslyssnare i redigeringsmiljön publiceringsmiljön och hämtar sådant innehåll från publiceringsmiljöns utkorg för omvänd replikering.
 
-#### Publicera {#publish}
+#### Publish {#publish}
 
 Normalt finns en publiceringsmiljö i DMZ (Demilitarized Zone). I den här miljön får besökarna tillgång till ditt innehåll (t.ex. via en webbplats eller i form av ett mobilprogram) och kan interagera med det, oavsett om det är offentligt eller i intranätet. En publiceringsmiljö:
 
@@ -110,7 +110,7 @@ Sprid alltid kod nedifrån och upp:
 
 Vanligtvis överförs koden (till exempel anpassade webbprogramfunktioner och designmallar) genom att paket exporteras och importeras mellan olika innehållsdatabaser. Om det behövs kan den här replikeringen konfigureras som en automatisk process.
 
-Projekt på AEM as a Cloud Service utlöser ofta koddistribution:
+Projekt i AEM as a Cloud Service utlöser ofta koddistribution:
 
 * Automatiskt: för överföring till utvecklings- och QA-miljöer.
 * Manuellt: distributioner till staging- och produktionsmiljöerna görs på ett mer kontrollerat sätt, ofta manuellt, men det går att automatisera vid behov.
@@ -132,6 +132,6 @@ Produktionsinnehållet bör flyttas från produktionsmiljön till mellanlagrings
 Innehåll kan överföras:
 
 * Mellan olika miljöer – genom exporter och importer av paket.
-* Mellan olika instanser - genom direkt replikering (AEM as a Cloud Service replikering) av innehållet (med en HTTP- eller HTTPS-anslutning).
+* Mellan olika instanser - genom direkt replikering (AEM as a Cloud Service-replikering) av innehållet (med en HTTP- eller HTTPS-anslutning).
 
 ![Innehållsförflyttning](assets/content-movement.png)

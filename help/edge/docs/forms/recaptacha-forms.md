@@ -17,11 +17,11 @@ ht-degree: 0%
 reCAPTCHA är ett populärt verktyg som används för att skydda webbplatser mot bedrägliga aktiviteter, skräppost och missbruk. I Edge Delivery Services ger Adaptive Forms Block möjlighet att lägga till Google reCAPTCHA för att skilja mellan människor och botar. Med den här funktionen kan användare skydda sin webbplats från skräppost och missbruk.
 Ta till exempel ett formulär som samlar in data som start- och slutdatum, rumsbudget, beräknad resekostnad och resande information. I sådana fall finns det en risk för att obehöriga använder formuläret för att skicka nätfiske eller översvämma det med irrelevant eller skadligt innehåll med hjälp av skräppost. Integreringen av reCAPTCHA ger ökad säkerhet genom att verifiera att inskickade data kommer från verkliga användare, vilket minimerar inmatningen av skräppost.
 
-Edge Delivery Servicens har bara stöd för **Poängbaserad(v3)-reCAPTCHA** för det adaptiva formulärblocket.
+Edge Delivery Services har bara stöd för **Score based(v3)-reCAPTCHA** för det adaptiva formulärblocket.
 
 ![Recaptcha V2](/help/forms/assets/recaptcha-v2-invisible.png)
 
-The **reCAPTCHA** funktionen finns i förhandsversionen. Om du vill begära åtkomst till **reCAPTCHA** för AEM Forms-Edge Delivery Services skickar du ett e-postmeddelande från din arbetsadress till mailto:aem-forms-ea@adobe.com.
+Funktionen **reCAPTCHA** finns under förhandsversionen. Om du vill begära åtkomst till funktionen **reCAPTCHA** för AEM Forms-Edge Delivery Services skickar du ett e-postmeddelande från din arbetsadress till mailto:aem-forms-ea@adobe.com.
 
 <!--
 By the end of this article, you learn to:

@@ -16,14 +16,14 @@ ht-degree: 0%
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author Trney](overview.md) den [Grundläggande om innehållsmodellering för Headless med AEM](basics.md) har omfattat de grundläggande begrepp och termer som är relevanta för utvecklingen av headless.
+I början av [AEM Headless Content Author ](overview.md) innehöll [Grundläggande om innehållsmodellering för Headless med AEM](basics.md) grundläggande koncept och terminologi som är relevant för redigering för headless.
 
 Den här artikeln bygger vidare på dessa så att du förstår hur du skapar egna modeller för innehållsfragment för AEM headless-projekt.
 
 ## Syfte {#objective}
 
 * **Målgrupp**: Nybörjare
-* **Syfte**: koncept och mekanismer för att modellera innehåll för headless CMS med Content Fragments Models.
+* **Mål**: koncept och mekanismer för att modellera innehåll för det Headless CMS med hjälp av modeller för innehållsfragment.
 
 <!-- which persona does this? -->
 <!-- and who allows the configuration on the folders? -->
@@ -42,37 +42,37 @@ At the very start you need to enable Content Fragment Models for your site, this
 
 ## Skapa modeller för innehållsfragment {#creating-content-fragment-models}
 
-Sedan kan du skapa modellerna för innehållsfragment och definiera strukturen. Detta kan göras under **verktyg** > **Allmänt** > **Modeller för innehållsfragment**.
+Sedan kan du skapa modellerna för innehållsfragment och definiera strukturen. Detta kan du göra under **Verktyg** > **Allmänt** > **Modeller för innehållsfragment**.
 
-![Content Fragment Models in Tools](assets/cfm-tools.png)
+![Modeller för innehållsfragment i verktyg](assets/cfm-tools.png)
 
 När du har valt detta navigerar du till modellens plats och väljer **Skapa**. Här kan du ange olika nyckeldetaljer.
 
-Alternativet **Aktivera modell** aktiveras som standard. Det innebär att din modell är tillgänglig för användning (när du skapar innehållsfragment) så snart du har sparat den. Du kan inaktivera detta om du vill - det finns möjligheter att senare aktivera (eller inaktivera) en befintlig modell.
+Alternativet **Aktivera modell** är aktiverat som standard. Det innebär att din modell är tillgänglig för användning (när du skapar innehållsfragment) så snart du har sparat den. Du kan inaktivera detta om du vill - det finns möjligheter att senare aktivera (eller inaktivera) en befintlig modell.
 
 ![Skapa innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/assets/cfm-models-02.png)
 
-Bekräfta med **Skapa** så kan du **Öppna** din modell för att börja definiera strukturen.
+Bekräfta med **Skapa** och du kan sedan **Öppna** din modell för att börja definiera strukturen.
 
 ## Definiera modeller för innehållsfragment {#defining-content-fragment-models}
 
-När du först öppnar en ny modell ser du en stor tom yta till vänster och en lång lista med **Datatyper** till höger:
+När du först öppnar en ny modell visas ett stort tomt utrymme till vänster och en lång lista med **datatyper** till höger:
 
 ![Tom modell](/help/sites-cloud/administering/content-fragments/assets/cfm-models-03.png)
 
 Så vad ska man göra?
 
-Du kan dra instanser av **Datatyper** till vänster - du definierar redan din modell!
+Du kan dra instanser av **datatyperna** till vänster - du definierar redan modellen!
 
-![Definiera fält](/help/sites-cloud/administering/content-fragments/assets/cfm-models-04.png)
+![Definierar fält](/help/sites-cloud/administering/content-fragments/assets/cfm-models-04.png)
 
-När du har lagt till en datatyp måste du definiera **Egenskaper** för det fältet. De beror på vilken typ som används. Till exempel:
+När du har lagt till en datatyp måste du definiera **egenskaperna** för det fältet. De beror på vilken typ som används. Till exempel:
 
 ![Dataegenskaper](/help/sites-cloud/administering/content-fragments/assets/cfm-models-05.png)
 
 Du kan lägga till så många fält du behöver. Till exempel:
 
-![Content Fragment Model](/help/sites-cloud/administering/content-fragments/assets/cfm-models-07.png)
+![Modell för innehållsfragment](/help/sites-cloud/administering/content-fragments/assets/cfm-models-07.png)
 
 ### Dina innehållsförfattare {#your-content-authors}
 
@@ -101,9 +101,9 @@ Modeller för innehållsfragment måste publiceras när/innan beroende innehåll
 >
 >Om en författare försöker publicera ett innehållsfragment för vilket modellen ännu inte har publicerats, visar en urvalslista detta och modellen publiceras med fragmentet.
 
-Så snart en modell har publicerats *låst* till skrivskyddat läge på författaren. Detta syftar till att förhindra ändringar som kan leda till fel i befintliga GraphQL-scheman och -frågor, särskilt i publiceringsmiljön. Den anges i konsolen av **Låst**.
+Så snart en modell har publicerats är den *låst* i skrivskyddat läge vid författaren. Detta syftar till att förhindra ändringar som kan leda till fel i befintliga GraphQL-scheman och -frågor, särskilt i publiceringsmiljön. Den indikeras i konsolen av **Locked**.
 
-När modellen är **Låst** (i läget SKRIVSKYDDAD) kan du se innehåll och struktur i modeller, men du kan inte redigera dem direkt, men du kan hantera dem **Låst** modeller från antingen konsolen eller modellredigeraren.
+När modellen är **Låst** (i SKRIVSKYDDAT läge) kan du se innehållet och strukturen för modeller, men du kan inte redigera dem direkt. Du kan dock hantera **låsta** modeller från antingen konsolen eller modellredigeraren.
 
 ## What&#39;s Next {#whats-next}
 
@@ -113,7 +113,7 @@ Nu när du har lärt dig grunderna är nästa steg att börja skapa egna modelle
 
 * [Authoring Concepts](/help/sites-cloud/authoring/author-publish.md)
 
-* [Grundläggande hantering](/help/sites-cloud/authoring/basic-handling.md) - den här sidan är huvudsakligen baserad på **Webbplatser** konsol, men många/de flesta funktioner är också relevanta för navigering till och åtgärder på, **Modeller för innehållsfragment** under **Allmänt** konsol.
+* [Grundläggande hantering](/help/sites-cloud/authoring/basic-handling.md) - Den här sidan är huvudsakligen baserad på konsolen **Platser**, men många/de flesta funktioner är också relevanta för att navigera till och vidta åtgärder på **modeller för innehållsfragment** under konsolen **Allmänt**.
 
 * [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)
 
@@ -123,7 +123,7 @@ Nu när du har lärt dig grunderna är nästa steg att börja skapa egna modelle
 
       * [Aktivera eller inaktivera en innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#enabling-disabling-a-content-fragment-model)
 
-      * [Tillåt modeller för innehållsfragment i resursmappen](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#allowing-content-fragment-models-assets-folder)
+      * [Tillåt modeller för innehållsfragment i din Assets-mapp](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#allowing-content-fragment-models-assets-folder)
 
       * [Ta bort en innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#deleting-a-content-fragment-model)
 

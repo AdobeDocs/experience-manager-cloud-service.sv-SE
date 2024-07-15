@@ -20,18 +20,18 @@ Den här guiden hjälper dig att komma igång med en ny Adobe Experience Manager
 
 Innan du börjar den här guiden bör du känna till grunderna i och ha tillgång till Edge Delivery Services som:
 
-* Du har slutfört [Självstudiekurs om Edge Delivery Service.](/help/edge/developer/tutorial.md)
-* Du har tillgång till en [AEM Cloud Service sandlåda.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md)
-* Du har [har aktiverat den universella redigeraren i samma sandlådemiljö.](/help/implementing/universal-editor/getting-started.md)
+* Du har slutfört självstudiekursen [Edge Delivery Service.](/help/edge/developer/tutorial.md)
+* Du har åtkomst till en [AEM Cloud Service-sandlåda.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md)
+* Du har [aktiverat den universella redigeraren i samma sandlådemiljö.](/help/implementing/universal-editor/getting-started.md)
 
 ## Välj rätt redigerare {#editor-choice}
 
 AEM erbjuder två olika innehållsredigerare och vilka alternativ du kan välja mellan beror på din situation.
 
-* **Universal Editor** - Det här bör vara standardalternativet för nya platser.
-* **AEM Page Editor** - Detta bör väljas för en befintlig migrering från AEM Sites till Edge Delivery Services.
+* **Universell redigerare** - Det här bör vara standardalternativet för nya webbplatser.
+* **AEM sidredigeraren** - Detta bör väljas för en befintlig AEM Sites-migrering till Edge Delivery Services.
 
-Den här guiden fokuserar AEM projekt på Edge Delivery Services med hjälp av den universella redigeraren. Se dokumentet [Använda Edge Delivery Services med AEM](/help/edge/using.md) om du vill ha mer information om hur du väljer rätt redigerare och migrerar befintliga AEM till Edge Delivery Services.
+Den här guiden fokuserar AEM projekt på Edge Delivery Services med hjälp av den universella redigeraren. Se dokumentet [Använda Edge Delivery Services med AEM](/help/edge/using.md) för mer information om hur du väljer rätt redigerare och migreringen av befintliga AEM till Edge Delivery Services.
 
 ## Grundbegrepp vid utveckling för Edge Delivery Services {#core-concepts}
 
@@ -45,83 +45,83 @@ AEM tillhandahåller standardblock som en del av produkten i projektmallen. Exem
 
 >[!TIP]
 >
->Se [Byggavsnitt](/help/edge/developer/block-collection.md) av dokumentationen till Edge Delivery Servicens för mer information om block och hur du utvecklar för Edge Delivery-tjänster.
+>Mer information om hur du blockerar och utvecklar för Edge Delivery-Edge Delivery Services finns i avsnittet [Build](/help/edge/developer/block-collection.md) i dokumentationen för .
 
 ### Edge Delivery Services och GitHub {#github-edge}
 
 Edge Delivery utnyttjar GitHub så att du kan hantera och driftsätta kod direkt från din GitHub-databas.
 
-Dina författare kan skapa innehåll med antingen dokumentbaserad redigering eller innehåll i AEM med den universella redigeraren. Utvecklare kan anpassa webbplatsens funktionalitet med hjälp av CSS och JavaScript i GitHub, oavsett hur författarna skapar sitt innehåll.
+Dina författare kan skapa innehåll med antingen dokumentbaserad redigering eller innehåll i AEM med den universella redigeraren. Utvecklare kan anpassa webbplatsens funktionalitet med hjälp av CSS och JavaScript i GitHub oavsett hur författarna skapar sitt innehåll.
 
 Webbplatser skapas automatiskt för var och en av dina grenar, från förhandsgranskning av innehåll till produktion. Alla resurser du lägger in i GitHub-databasen är tillgängliga på din webbplats utan någon byggprocess.
 
 >[!TIP]
 >
->Se [Byggavsnitt](/help/edge/developer/block-collection.md) av dokumentationen till Edge Delivery Servicens för mer information om block och hur du utvecklar för Edge Delivery-tjänster.
+>Mer information om hur du blockerar och utvecklar för Edge Delivery-Edge Delivery Services finns i avsnittet [Build](/help/edge/developer/block-collection.md) i dokumentationen för .
 
 ## Komma igång med WYSIWYG-redigering och Edge Delivery Services {#getting-started}
 
-När du är klar [förutsättningarna](#prerequisites) och har gjort [valet av universell redigerare,](#editor-choice) du kan komma igång med ditt eget projekt.
+När du har uppfyllt [villkoren](#prerequisites) och gjort [till ett val att använda Universell redigerare](#editor-choice) kan du komma igång med ditt eget projekt.
 
 ### Skapa ditt GitHub-projekt {#create-github-project}
 
 Först måste du skapa ett nytt projekt på GitHub, baserat på mallen Adobe.
 
-1. Navigera till [`https://github.com/adobe-rnd/aem-boilerplate-xwalk`](https://github.com/adobe-rnd/aem-boilerplate-xwalk) och klicka på **Använd den här mallen** och markera **Skapa en ny databas**.
+1. Navigera till [`https://github.com/adobe-rnd/aem-boilerplate-xwalk`](https://github.com/adobe-rnd/aem-boilerplate-xwalk) och klicka på **Använd den här mallen** och välj **Skapa en ny databas**.
 
    * Du måste vara inloggad på GitHub för att kunna se det här alternativet.
 
    ![Kopiera databasprojekt](assets/edge-dev-getting-started/use-template-project.png)
 
-1. Som standard tilldelas databasen till dig. Ändra vid behov, ange ett databasnamn och en beskrivning och klicka på **Skapa databas**.
+1. Som standard tilldelas databasen till dig. Ändra detta om det behövs, ange ett databasnamn och en beskrivning och klicka på **Skapa databas**.
 
-   ![Skapa databasen](assets/edge-dev-getting-started/create-repo.png)
+   ![Skapar databasen](assets/edge-dev-getting-started/create-repo.png)
 
-1. På en ny flik i samma webbläsare går du till [`https://github.com/apps/aem-code-sync`](https://github.com/apps/aem-code-sync) och klicka **Konfigurera**.
+1. Navigera till [`https://github.com/apps/aem-code-sync`](https://github.com/apps/aem-code-sync) och klicka på **Konfigurera** på en ny flik i samma webbläsare.
 
    ![Kodsynkronisering](assets/edge-dev-getting-started/configure-code-sync.png)
 
-1. Klicka **Konfigurera** för den organisation där du skapade din nya databas i föregående steg.
+1. Klicka på **Konfigurera** för den organisation där du skapade din nya databas i föregående steg.
 
    ![Välja organisation för kodsynkronisering](assets/edge-dev-getting-started/code-sync-org.png)
 
-1. På AEM Code Sync GitHub-sidan under **Databasåtkomst**, markera **Välj endast databaser** väljer du databasen som du skapade i föregående steg och klickar sedan på **Spara**.
+1. På sidan AEM för GitHub-kodsynkronisering under **Databasåtkomst** väljer du **Markera endast databaser**, markera databasen som du skapade i föregående steg och klicka sedan på **Spara**.
 
-   ![Bevilja åtkomst AEM Code Sync](assets/edge-dev-getting-started/grant-code-sync-acces.png)
+   ![Beviljar åtkomst AEM kodsynkronisering](assets/edge-dev-getting-started/grant-code-sync-acces.png)
 
 1. När AEM Code Sync har installerats får du en bekräftelse. Gå tillbaka till webbläsarfliken i din nya databas.
 
    ![Bekräftelse av installation av kodsynkronisering](assets/edge-dev-getting-started/confirmation.png)
 
-1. Klicka på `fstab.yaml` filen som ska öppnas och sedan **Redigera den här filen** för att redigera den.
+1. Klicka på filen `fstab.yaml` för att öppna den och redigera den sedan genom att klicka på ikonen **Redigera den här filen** .
 
    ![fstab.yaml](assets/edge-dev-getting-started/fstab.png)
 
-1. Redigera `fstab.yaml` fil för att uppdatera monteringspunkten för projektet. Ersätt Google Docs-URL:en som är standard med URL:en för den AEM as a Cloud Service författarinstansen och klicka sedan på **Genomför ändringar...**.
+1. Redigera filen `fstab.yaml` för att uppdatera monteringspunkten för projektet. Ersätt standardwebbadressen för Google Docs med webbadressen för AEM as a Cloud Service-redigeringsinstansen och klicka sedan på **Verkställ ändringar..**.
 
    * `https://<aem-author>/bin/franklin.delivery/<owner>/<repository>/main`
    * Om du ändrar monteringspunkten får Edge Delivery Servicens information om var innehållet på platsen finns.
 
    ![Uppdaterar fstab](assets/edge-dev-getting-started/fstab-update.png)
 
-1. Lägg till ett implementeringsmeddelande efter behov och klicka sedan på **Verkställ ändringar**, implementera dem direkt i `main` gren.
+1. Lägg till ett implementeringsmeddelande efter behov och klicka sedan på **Verkställ ändringar** och implementera dem direkt i `main` -grenen.
 
-   ![Genomför ändringar](assets/edge-dev-getting-started/commit-fstab-changes.png)
+   ![Utför ändringar](assets/edge-dev-getting-started/commit-fstab-changes.png)
 
-1. Återgå till rotkatalogen i databasen och klicka på `paths.json` och sedan **Redigera den här filen** -ikon.
+1. Gå tillbaka till roten för databasen, klicka på `paths.json` och sedan på ikonen **Redigera den här filen** .
 
    ![paths.json](assets/edge-dev-getting-started/paths.png)
 
-1. Standardmappningen använder databasens namn. Uppdatera den standardmappning som krävs för ditt projekt med `/content/<site-name>/:/` och klicka **Genomför ändringar...**.
+1. Standardmappningen använder databasens namn. Uppdatera den standardmappning som krävs för ditt projekt med `/content/<site-name>/:/` och klicka på **Verkställ ändringar..**.
 
    * Ange din egen `<site-name>`. Du kommer att behöva det i ett senare steg.
    * Mappningarna anger för Edge Delivery Servicens hur innehållet i din AEM ska mappas till webbplatsens URL.
 
    ![Uppdaterar paths.json](assets/edge-dev-getting-started/paths-update.png)
 
-1. Lägg till ett implementeringsmeddelande efter behov och klicka sedan på **Verkställ ändringar**, implementera dem direkt i `main` gren.
+1. Lägg till ett implementeringsmeddelande efter behov och klicka sedan på **Verkställ ändringar** och implementera dem direkt i `main` -grenen.
 
-   ![Genomför ändringar](assets/edge-dev-getting-started/commit-paths-changes.png)
+   ![Utför ändringar](assets/edge-dev-getting-started/commit-paths-changes.png)
 
 ### Skapa och redigera en ny AEM {#create-aem-site}
 
@@ -131,15 +131,15 @@ Nu när du har ett GitHub-projekt måste du skapa en ny AEM som projektet kan an
 >
 >Om du vill redigera webbplatsen med Universal Editor måste du använda en Chromium-baserad webbläsare.
 
-1. Ladda ned den senaste WYSIWYG-redigeringen med webbplatsmallen Edge Delivery Services från GitHub på [`https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases`](https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases).
+1. Hämta den senaste WYSIWYG-redigeringen med webbplatsmallen för Edge Delivery Services från GitHub på [`https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases`](https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases).
 
-1. Logga in på din AEM as a Cloud Service redigeringsinstans och navigera till webbplatskonsolen och tryck eller klicka **Skapa** -> **Plats från mall**.
+1. Logga in på din AEM as a Cloud Service-redigeringsinstans och navigera till webbplatskonsolen och tryck eller klicka på **Skapa** -> **Plats från mall**.
 
    ![Skapa en ny plats från konsolen](assets/edge-dev-getting-started/create-site-console.png)
 
-1. På **Välj en webbplatsmall** klickar du på **Importera** om du vill importera en ny mall.
+1. På fliken **Välj en platsmall** i guiden Skapa plats klickar du på knappen **Importera** för att importera en ny mall.
 
-   ![Importera mallar](assets/edge-dev-getting-started/site-templates.png)
+   ![Importerar mallar](assets/edge-dev-getting-started/site-templates.png)
 
 1. Ladda upp WYSIWYG-redigeringen med webbplatsmallen för Edge Delivery Services som du hämtade från GitHub.
 
@@ -149,39 +149,39 @@ Nu när du har ett GitHub-projekt måste du skapa en ny AEM som projektet kan an
 
    ![Välj mall](assets/edge-dev-getting-started/select-template.png)
 
-1. Ange följande fält och tryck eller klicka **Skapa**.
+1. Ange följande fält och tryck eller klicka på **Skapa**.
 
-   * **Platsrubrik** - Lägg till en beskrivande rubrik för webbplatsen.
-   * **Platsrubrik** - Använd `<site-name>` som du definierade i [föregående steg.](#create-github-project)
+   * **Platstitel** - Lägg till en beskrivande titel för webbplatsen.
+   * **Platstitel** - Använd `<site-name>` som du definierade i [föregående steg.](#create-github-project)
    * **GitHub-URL** - Använd URL:en för GitHub-projektet som du skapade i föregående steg.
 
    ![Webbplatsinformation](assets/edge-dev-getting-started/create-site-details.png)
 
-1. AEM bekräftar att webbplatsen har skapats med en dialogruta. Tryck eller klicka **OK** för att stänga.
+1. AEM bekräftar att webbplatsen har skapats med en dialogruta. Tryck eller klicka på **OK** för att stänga.
 
    ![Bekräftelse av webbplatsskapande](assets/edge-dev-getting-started/site-creation-confirmation.png)
 
-1. Gå till webbplatskonsolen `index.html` för den nyligen skapade webbplatsen och tryck eller klicka **Redigera** i verktygsfältet.
+1. På webbplatskonsolen går du till `index.html` för den nyligen skapade webbplatsen och trycker eller klickar på **Redigera** i verktygsfältet.
 
-   ![Redigera den nya webbplatsen](assets/edge-dev-getting-started/new-site.png)
+   ![Redigerar den nya platsen](assets/edge-dev-getting-started/new-site.png)
 
-1. Den universella redigeraren öppnas på en ny flik. Du kan behöva trycka eller klicka **Logga in med Adobe** för att autentisera för att redigera sidan.
+1. Den universella redigeraren öppnas på en ny flik. Du kan behöva trycka eller klicka på **Logga in med Adobe** för att autentisera för att redigera sidan.
 
-   ![Universal Editor](assets/edge-dev-getting-started/universal-editor.png)
+   ![Universell redigerare](assets/edge-dev-getting-started/universal-editor.png)
 
-Nu kan du redigera webbplatsen med Universal Editor. Se [Dokumentation för Universal Editor](/help/sites-cloud/authoring/universal-editor/authoring.md) för mer information.
+Nu kan du redigera webbplatsen med Universal Editor. Mer information finns i [dokumentationen för den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md).
 
 ### Publicera din nya webbplats {#publishing}
 
 När du är klar med redigeringen av den nya webbplatsen med Universal Editor kan du publicera innehållet.
 
-1. På webbplatskonsolen väljer du alla sidor som du har skapat för den nya platsen och trycker eller klickar på **Snabbpublicering** i verktygsfältet.
+1. På webbplatskonsolen markerar du alla sidor som du har skapat för den nya webbplatsen och trycker eller klickar på **Snabbpublicering** i verktygsfältet.
 
    ![Välja sidor att publicera](assets/edge-dev-getting-started/publishing.png)
 
-1. Tryck eller klicka **Publicera** i bekräftelsedialogrutan för att starta processen.
+1. Tryck eller klicka på **Publish** i bekräftelsedialogrutan för att starta processen.
 
-   ![Dialogrutan Publicera](assets/edge-dev-getting-started/publish-confirmation.png)
+   ![Dialogrutan Publish](assets/edge-dev-getting-started/publish-confirmation.png)
 
 1. Öppna en ny flik i samma webbläsare och navigera till URL:en för den nya platsen.
 
@@ -195,8 +195,8 @@ När du är klar med redigeringen av den nya webbplatsen med Universal Editor ka
 
 Nu när du har en fungerande WYSIWYG-redigering med Edge Delivery Services kan du börja skapa och formatera egna block.
 
-Se guiden [Skapa block som är instrumenterade för användning med den universella redigeraren](/help/edge/wysiwyg-authoring/create-block.md) för mer information.
+Mer information finns i guiden [Skapa block som är instrumenterade för användning med den universella redigeraren](/help/edge/wysiwyg-authoring/create-block.md).
 
 >[!TIP]
 >
->Om du vill få en genomgång av hur du skapar ett projekt för nya Edge Delivery Services som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla kan du titta på [det här AEM GEMs webbinarium.](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery)
+>En genomgång av hur du skapar ett nytt projekt för Edge Delivery Services som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här webbinariet för AEM.](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery)

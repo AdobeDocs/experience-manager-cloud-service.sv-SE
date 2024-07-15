@@ -15,13 +15,13 @@ ht-degree: 1%
 
 # Konfigurera ett anpassat formulär för REST-slutpunktsåtgärd
 
-Använd **[!UICONTROL Submit to REST Endpoint]** åtgärd för att skicka skickade data till en REST-URL. URL:en kan vara en intern (servern som formuläret återges på) eller en extern server.
+Använd åtgärden **[!UICONTROL Submit to REST Endpoint]** för att skicka skickade data till en REST-URL. URL:en kan vara en intern (servern som formuläret återges på) eller en extern server.
 
-AEM as a Cloud Service erbjuder olika inskickningsåtgärder för att hantera inskickade formulär. Du kan läsa mer om de här alternativen i [Inlämningsåtgärd för anpassat formulär](/help/forms/configure-submit-actions-core-components.md)  artikel.
+AEM as a Cloud Service erbjuder olika inskickningsåtgärder för att hantera inskickade formulär. Du kan läsa mer om de här alternativen i artikeln [Åtgärd för att skicka anpassade formulär](/help/forms/configure-submit-actions-core-components.md).
 
 ## Fördelar
 
-Några av fördelarna med att konfigurera **[!UICONTROL Submit to REST endpoint]** Skicka-åtgärd för Adaptive Forms är:
+Några av fördelarna med att konfigurera **[!UICONTROL Submit to REST endpoint]**-sändningsåtgärden för Adaptiv Forms är:
 
 * Det möjliggör smidig integrering av formulärdata med externa system och tjänster via RESTful API:er.
 * Det ger flexibilitet vid hantering av data som skickas från Adaptive Forms, vilket ger stöd för dynamiska och komplexa datastrukturer.
@@ -32,40 +32,40 @@ Några av fördelarna med att konfigurera **[!UICONTROL Submit to REST endpoint]
 
 Så här konfigurerar du åtgärden skicka:
 
-1. Öppna innehållsläsaren och välj **[!UICONTROL Guide Container]** som ingår i det adaptiva formuläret.
-1. Klicka på egenskaperna för stödlinjebehållaren ![Stödlinjeegenskaper](/help/forms/assets/configure-icon.svg) -ikon. Dialogrutan Adaptiv formulärbehållare öppnas.
-1. Klicka på  **[!UICONTROL Submission]** -fliken.
+1. Öppna innehållsläsaren och markera komponenten **[!UICONTROL Guide Container]** i det adaptiva formuläret.
+1. Klicka på ikonen för egenskaper för stödlinjebehållaren ![Egenskaper för stödlinje](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare öppnas.
+1. Klicka på fliken **[!UICONTROL Submission]**.
 1. I listrutan **[!UICONTROL Submit Action]** väljer du **[!UICONTROL Submit to Rest endpoint]**.
-   ![Åtgärdskonfiguration för Skicka till resterande slutpunkt](/help/forms/assets/submit-action-restendpoint.png)
+   ![Åtgärdskonfiguration för slutpunkten Skicka till vila](/help/forms/assets/submit-action-restendpoint.png)
 
-   Om du vill skicka data till en intern server anger du sökvägen till resursen. Data bokförs som resurssökväg. Till exempel: `/content/restEndPoint`. För sådana efterfrågningar används autentiseringsinformationen i förfrågan.
+   Om du vill skicka data till en intern server anger du sökvägen till resursen. Data bokförs som resurssökväg. Exempel: `/content/restEndPoint`. För sådana efterfrågningar används autentiseringsinformationen i förfrågan.
 
    Ange en URL om du vill skicka data till en extern server. URL-formatet är `https://host:port/path_to_rest_end_point`. Se till att du konfigurerar sökvägen så att den hanterar POSTENS begäran anonymt.
 
-   ![Mappning för fältvärden skickas som Tack-sidan-parametrar](assets/post-enabled-actionconfig.png)
+   ![Mappning för fältvärden skickas som parametrar för Tack-sidan](assets/post-enabled-actionconfig.png)
 
-   I exemplet ovan har användaren angett information i `textbox` hämtas med parameter `param1`. Syntax för att bokföra data som samlats in med `param1` är:
+   I exemplet ovan hämtas användarinformationen i `textbox` med parametern `param1`. Syntaxen för att bokföra data som har hämtats med `param1` är:
 
    `String data=request.getParameter("param1");`
 
-   På samma sätt är parametrar som du använder för att bokföra XML-data och bifogade filer `dataXml` och `attachments`.
+   På samma sätt är parametrar som du använder för att skicka XML-data och bifogade filer `dataXml` och `attachments`.
 
    Du kan till exempel använda de här två parametrarna i skriptet för att tolka data till en slutpunkt. Du använder följande syntax för att lagra och analysera data:
 
    `String data=request.getParameter("dataXml");`
    `String att=request.getParameter("attachments");`
 
-   I detta exempel `data` lagrar XML-data, och `att` lagrar data för bifogade filer.
+   I det här exemplet lagrar `data` XML-data och `att` lagrar data för bifogade filer.
 
-   The **[!UICONTROL Submit to REST endpoint]** Skicka åtgärd skickar data som är ifyllda i formuläret till en konfigurerad bekräftelsesida som en del av HTTP GET-begäran. Du kan lägga till namnet på fältet som ska begäras. Begäran har följande format:
+   Åtgärden **[!UICONTROL Submit to REST endpoint]** Skicka skickar data som är ifyllda i formuläret till en konfigurerad bekräftelsesida som en del av HTTP GET-begäran. Du kan lägga till namnet på fältet som ska begäras. Begäran har följande format:
 
    `{fieldName}={request parameter name}`
 
-   Som visas i bilden nedan, `param1` och `param2` skickas som parametrar med värden som kopierats från **textruta** och **numerisk** fält för nästa åtgärd.
+   Som visas i bilden nedan skickas `param1` och `param2` som parametrar med värden som kopierats från fälten **texbox** och **numerbox** för nästa åtgärd.
 
    ![Konfigurerar åtgärden Skicka för resterande slutpunkt](assets/action-config.png)
 
-   Du kan också **[!UICONTROL Enable POST request]** och ange en URL för att skicka begäran. Om du vill skicka data till den AEM servern som är värd för formuläret använder du en relativ sökväg som motsvarar rotsökvägen för AEM. Till exempel: `/content/forms/af/SampleForm.html`. Om du vill skicka data till en annan server använder du den absoluta sökvägen.
+   Du kan också **[!UICONTROL Enable POST request]** och ange en URL för att skicka begäran. Om du vill skicka data till den AEM servern som är värd för formuläret använder du en relativ sökväg som motsvarar rotsökvägen för AEM. Exempel: `/content/forms/af/SampleForm.html`. Om du vill skicka data till en annan server använder du den absoluta sökvägen.
 
 1. Klicka på **[!UICONTROL Done]**.
 

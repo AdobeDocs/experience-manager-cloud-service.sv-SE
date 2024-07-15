@@ -1,5 +1,5 @@
 ---
-title: GraphQL Persistent Queries - aktivera cachelagring i Dispatcher
+title: GraphQL Persisted Queries - aktivera cachelagring i Dispatcher
 description: Dispatcher är ett cachnings- och säkerhetslager framför Adobe Experience Manager Publish-miljöer. Du kan aktivera cachelagring för beständiga frågor i AEM Headless.
 feature: Headless, Dispatcher, GraphQL API
 exl-id: 30a97e56-6699-41c4-a4eb-fc6236667f8f
@@ -11,17 +11,17 @@ ht-degree: 0%
 
 ---
 
-# GraphQL Persistent Queries - aktivera cachelagring i Dispatcher {#graphql-persisted-queries-enabling-caching-dispatcher}
+# GraphQL Persisted Queries - aktivera cachelagring i Dispatcher {#graphql-persisted-queries-enabling-caching-dispatcher}
 
 >[!CAUTION]
 >
->Om cachelagring i Dispatcher är aktiverad är [CORS-filter](/help/headless/deployment/cross-origin-resource-sharing.md) behövs inte och därför kan avsnittet ignoreras.
+>Om cachelagring i Dispatcher är aktiverat behövs inte [CORS-filtret](/help/headless/deployment/cross-origin-resource-sharing.md), så avsnittet kan ignoreras.
 
 Cachelagring av beständiga frågor är inte aktiverat som standard i Dispatcher. Standardaktivering är inte möjlig eftersom kunder som använder CORS (Cross-Origin Resource Sharing) med flera ursprung måste granska och eventuellt uppdatera sin Dispatcher-konfiguration.
 
 >[!NOTE]
 >
->Dispatcher cachelagrar inte `Vary` header.
+>Dispatcher cachelagrar inte huvudet `Vary`.
 >
 >Cachelagring av andra CORS-relaterade rubriker kan aktiveras i Dispatcher, men kan vara otillräcklig om det finns flera CORS-ursprung.
 
@@ -31,7 +31,7 @@ Cachelagring av beständiga frågor är inte aktiverat som standard i Dispatcher
 
 ## Aktivera cachelagring av beständiga frågor {#enable-caching-persisted-queries}
 
-Om du vill aktivera cachelagring av beständiga frågor definierar du variabeln Dispatcher `CACHE_GRAPHQL_PERSISTED_QUERIES`:
+Om du vill aktivera cachelagring av beständiga frågor definierar du Dispatcher-variabeln `CACHE_GRAPHQL_PERSISTED_QUERIES`:
 
 1. Lägg till variabeln i Dispatcher-filen `global.vars`:
 
@@ -41,7 +41,7 @@ Om du vill aktivera cachelagring av beständiga frågor definierar du variabeln 
 
 >[!NOTE]
 >
->Att uppnå individuella `ETag` huvudberäkning för cachelagrade beständiga frågor (för *var* unika svar) `FileETag Digest` -inställningen måste användas i den virtuella värdkonfigurationen för dispatcherns konfiguration (om den inte redan finns):
+>För att få fram individuell `ETag`-huvudberäkning för de cachelagrade beständiga frågorna (för *each*-svar som är unika) måste `FileETag Digest`-inställningen användas i den virtuella värdkonfigurationen för dispatcherns konfiguration (om den inte redan finns):
 >
 >```xml
 ><Directory />    
@@ -52,7 +52,7 @@ Om du vill aktivera cachelagring av beständiga frågor definierar du variabeln 
 
 >[!NOTE]
 >
->Anpassa till [Dispatcher-krav för dokument som kan cachas](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html#how-does-the-dispatcher-return-documents%3F)lägger Dispatcher till suffixet `.json` till alla beständiga fråge-URL:er, så att resultatet kan cachelagras.
+>För att uppfylla [Dispatcher-kraven för dokument som kan cachas](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html#how-does-the-dispatcher-return-documents%3F) lägger Dispatcher till suffixet `.json` i alla beständiga fråge-URL:er, så att resultatet kan cachas.
 >
 >Det här suffixet läggs till av en omskrivningsregel när den beständiga frågecachelagringen är aktiverad.
 
@@ -60,10 +60,10 @@ Om du vill aktivera cachelagring av beständiga frågor definierar du variabeln 
 
 Kunder som använder CORS-begäranden kan behöva granska och uppdatera sin CORS-konfiguration i Dispatcher.
 
-* The `Origin` får inte skickas till AEM publicera via Dispatcher:
-   * Kontrollera `clientheaders.any` -fil.
+* Rubriken `Origin` får inte skickas till AEM publicera via Dispatcher:
+   * Kontrollera filen `clientheaders.any`.
 * CORS-begäranden måste i stället utvärderas för tillåtna ursprung på Dispatcher-nivå. På så sätt säkerställs också att CORS-relaterade rubriker ställs in korrekt, på ett och samma ställe, i samtliga fall.
-   * En sådan konfiguration bör läggas till i `vhost` -fil. En exempelkonfiguration ges nedan. För enkelhetens skull har endast den korrespondensrelaterade delen angetts. Du kan anpassa den efter dina specifika användningsexempel.
+   * En sådan konfiguration bör läggas till i filen `vhost`. En exempelkonfiguration ges nedan. För enkelhetens skull har endast den korrespondensrelaterade delen angetts. Du kan anpassa den efter dina specifika användningsexempel.
 
   ```xml
   <VirtualHost *:80>

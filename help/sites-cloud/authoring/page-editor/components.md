@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Komponenter är den grundläggande byggstenen för innehållssidor i Adobe Experience Manager (AEM). Komponenter som bilder, text, titlar och så vidare, kan enkelt dras och släppas för att skapa innehåll.
 
-AEM innehåller en mängd färdiga komponenter som ger omfattande funktionalitet för webbplatsförfattare. De är tillgängliga när [redigera en sida](/help/sites-cloud/authoring/page-editor/edit-content.md) och grupperas efter huvudfunktionsområde (kallas komponentgrupp) för att underlätta filtreringen.
+AEM innehåller en mängd färdiga komponenter som ger omfattande funktionalitet för webbplatsförfattare. De är tillgängliga när [en sida redigeras](/help/sites-cloud/authoring/page-editor/edit-content.md) och grupperas efter huvudfunktionsområdet (kallas komponentgrupp) för att underlätta filtreringen.
 
 >[!NOTE]
 >
@@ -26,7 +26,7 @@ AEM innehåller en mängd färdiga komponenter som ger omfattande funktionalitet
 
 ## Allmän användning {#general-usage}
 
-Komponenterna finns på **Komponenter** fliken på sidpanelen i sidredigeraren när [redigera en sida.](/help/sites-cloud/authoring/page-editor/edit-content.md)
+Komponenterna är tillgängliga på fliken **Komponenter** på sidpanelen i sidredigeraren när du [redigerar en sida.](/help/sites-cloud/authoring/page-editor/edit-content.md)
 
 Du kan markera en komponent och dra den till önskad plats på sidan. Du kan sedan redigera den med:
 
@@ -38,15 +38,15 @@ Mer information om hur du lägger till komponenter på en sida finns i [Redigera
 
 ## Översikt över alla komponenter {#overview-of-all-components}
 
-The [Komponentkonsol](/help/sites-cloud/authoring/components-console.md) ger en översikt över de komponentgrupper och komponenter som finns i AEM. Du kan visa viktig information om de enskilda komponenterna och deras användning.
+[Komponentkonsolen](/help/sites-cloud/authoring/components-console.md) ger en översikt över komponentgrupperna och komponenterna som tillhandahålls av din AEM. Du kan visa viktig information om de enskilda komponenterna och deras användning.
 
 ## Kärnkomponenter {#core-components}
 
-The [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) erbjuder flexibel och funktionsrik redigeringsfunktionalitet som tillhandahåller viktiga innehållstyper för att skapa sidor.
+[Kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) erbjuder flexibla och funktionsrika redigeringsfunktioner, som tillhandahåller viktiga innehållstyper för att skapa sidor.
 
 De byggs med AEM bästa praxis och utgör grunden för den AEM redigeringsupplevelsen. Kärnkomponenterna kan enkelt byggas ut av utvecklare för att uppfylla specifika projektbehov.
 
-Tillsammans med WCM Core Components kan du också använda [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html#features). Dessa kärnkomponenter har en standard och enklare metoder för att [skapa eller lägga till formulär på en AEM Sites-sida](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md).
+Tillsammans med WCM Core-komponenterna kan du även använda [adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html#features). Dessa kärnkomponenter tillhandahåller en standard och enklare metod för att [skapa eller lägga till formulär på en AEM Sites-sida](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md).
 
 ### Konfigurera mallar {#configuring-templates}
 

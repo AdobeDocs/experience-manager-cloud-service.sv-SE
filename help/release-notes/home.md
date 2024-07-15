@@ -24,10 +24,10 @@ ht-degree: 6%
 
 Med den kontinuerliga releasemodellen i [!DNL Adobe Experience Manager] as a Cloud Service uppdateras programmet automatiskt fortlöpande. Det finns två typer av uppdateringar, funktionsreleaser och underhållsreleaser:
 
-* [Funktioner](/help/release-notes/release-notes-cloud/release-notes-current.md) görs med en förutsägbar månadsfrekvens och fokuserar på nya funktioner och produktinnovationer.
-* [Underhållsreleaser](/help/release-notes/maintenance/latest.md) görs ofta och fokuseras på säkerhetsuppdateringar, felkorrigeringar och prestandaförbättringar. Detta säkerställer att [!DNL Adobe Experience Manager] as a Cloud Service är alltid uppdaterat med viktiga korrigeringar.
+* [Funktionsreleaser](/help/release-notes/release-notes-cloud/release-notes-current.md) görs med en förutsägbar månadsfrekvens och fokuseras på nya funktioner och produktinnovationer.
+* [Underhållsreleaser](/help/release-notes/maintenance/latest.md) utförs ofta och är inriktade på säkerhetsuppdateringar, felkorrigeringar och prestandaförbättringar. Detta garanterar att [!DNL Adobe Experience Manager] as a Cloud Service alltid är uppdaterat med viktiga korrigeringar.
 
-Utöver innovationshastigheten, [!DNL Adobe Experience Manager] as a Cloud Service kan också förgranska kommande funktioner en hel månad i förväg innan de släpps i produktion. På så sätt kan du bedöma vilken inverkan en kommande release har på organisationen genom att testa hur funktionerna i din egen anpassade miljö fungerar och utbilda/förbered de interna användarna i god tid. Om du har ett AEM, t.ex. formulär, kan du se till att det också uppdateras genom att välja lösningen i [programinställningar](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md).
+Förutom innovationshastigheten ger [!DNL Adobe Experience Manager] as a Cloud Service även flexibilitet att förhandsgranska kommande funktioner en hel månad i förväg innan de släpps i produktion. På så sätt kan du bedöma vilken inverkan en kommande release har på organisationen genom att testa hur funktionerna i din egen anpassade miljö fungerar och utbilda/förbered de interna användarna i god tid. Om du har ett AEM tillägg, till exempel formulär, kan du se till att det också uppdateras genom att välja lösningen i [programinställningarna](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md).
 
 >[!NOTE]
 >
@@ -35,9 +35,9 @@ Utöver innovationshastigheten, [!DNL Adobe Experience Manager] as a Cloud Servi
 
 Så här förbereder du en release:
 
-1. Markera dina kalendrar: Kontrollera nyckeldatum för månatliga releaser på [Experience Manager släpper en färdplan](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service) och markera dina kalendrar för att förbereda dig för de viktigaste aktiviteterna för att göra dig redo för releasen.
-1. Läs versionsinformationen: Läs [aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) för att bekanta sig med releasefunktionerna och förhandsversionsfunktionerna.
-1. Få tillgång till och prova nya funktioner: Aktivera [prerelease channel](/help/release-notes/prerelease.md) i icke-produktionsmiljöer och börja testa de funktioner som ska utvärderas i dina anpassade miljöer.
+1. Markera dina kalendrar: Kontrollera nyckeldatum för månatliga releaser på [Experience Manager-releasernas färdplan](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service) och markera dina kalendrar så att du kan förbereda dig för de viktigaste aktiviteterna så att de blir klara för releasen.
+1. Granska versionsinformationen: Läs [aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) för att få information om releasefunktionerna och förhandsversionsfunktionerna.
+1. Få åtkomst till och försök med nya funktioner: Aktivera [prerelease-kanalen](/help/release-notes/prerelease.md) i icke-produktionsmiljöer och börja testa funktionerna i dina anpassade miljöer.
 1. Utbilda dina användare: Använd dokumentation och Experience League-resurser för att få användarna att komma igång och bli bättre på de nya funktionerna.
 
 ## Viktig versionsinformation {#key-articles}

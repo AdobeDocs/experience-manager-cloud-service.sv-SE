@@ -18,9 +18,9 @@ När det anpassade domännamnet har verifierats och distribuerats kan du uppdate
 
 ## Vad är DNS-inställningar? {#dns-settings}
 
-A `CNAME` eller En post dirigerar all Internettrafik för domänen till den plats där den pekar när den har etablerats. Om den platsen inte har etablerats för att betjäna trafiken uppstår ett driftstopp. Om innehållet inte har testats kan det finnas fel i det. Det är därför det här steget alltid utförs när testningen är klar och du är redo att publicera.
+En `CNAME`- eller A-post dirigerar all Internettrafik för domänen till den plats där den pekar när den har etablerats. Om den platsen inte har etablerats för att betjäna trafiken uppstår ett driftstopp. Om innehållet inte har testats kan det finnas fel i det. Det är därför det här steget alltid utförs när testningen är klar och du är redo att publicera.
 
-Om du vill konfigurera de här inställningarna måste du avgöra om en `CNAME` eller Apex-posten måste konfigureras så att den pekar ditt anpassade domännamn mot Cloud Manager-domännamnet. Följande avsnitt hjälper dig att avgöra vilken typ av post som passar din DNS-konfiguration.
+Om du vill konfigurera de här inställningarna måste du avgöra om en `CNAME`- eller Apex-post måste konfigureras så att den pekar ditt anpassade domännamn mot Cloud Manager domännamn. Följande avsnitt hjälper dig att avgöra vilken typ av post som passar din DNS-konfiguration.
 
 >[!NOTE]
 >
@@ -28,9 +28,9 @@ Om du vill konfigurera de här inställningarna måste du avgöra om en `CNAME` 
 
 ## CNAME-post {#cname-record}
 
-Ett kanoniskt namn eller en CNAME-post är en typ av DNS-post som mappar ett aliasnamn till ett sant eller kanoniskt domännamn. CNAME-poster används vanligtvis för att mappa en underdomän som `www.example.com` till den domän som är värd för underdomänens innehåll.
+Ett kanoniskt namn eller en CNAME-post är en typ av DNS-post som mappar ett aliasnamn till ett sant eller kanoniskt domännamn. CNAME-poster används vanligtvis för att mappa en underdomän som `www.example.com` till den domän som är värd för den underdomänens innehåll.
 
-Logga in på din domänregistrator och skapa en `CNAME` till att peka ditt anpassade domännamn mot målet, som i följande tabell.
+Logga in på din domänregistrator och skapa en `CNAME`-post för att peka ditt anpassade domännamn mot målet, som i följande tabell.
 
 | CNAME | Anpassad domännamnspunkt till mål |
 |--- |--- |
@@ -38,9 +38,9 @@ Logga in på din domänregistrator och skapa en `CNAME` till att peka ditt anpas
 
 ## APEX-post {#apex-record}
 
-En apex-domän är en anpassad domän som inte innehåller någon underdomän, som `example.com`. En apex-domän har konfigurerats med en `A` , `ALIAS` , eller `ANAME` spela in via din DNS-leverantör. Apex-domäner måste peka på specifika IP-adresser.
+En domän är en anpassad domän som inte innehåller någon underdomän, till exempel `example.com`. En huvuddomän har konfigurerats med en `A`-, `ALIAS`- eller `ANAME`-post via din DNS-leverantör. Apex-domäner måste peka på specifika IP-adresser.
 
-Lägg till följande `A` poster till domänens DNS-inställningar via din domänleverantör.
+Lägg till följande `A`-poster i domänens DNS-inställningar via din domänleverantör.
 
 * `A RECORD`
 

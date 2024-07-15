@@ -1,6 +1,6 @@
 ---
-title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.07.0
-description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.07.0
+title: Versionsinformation om migreringsverktyg i AEM as a Cloud Service version 2023.07.0
+description: Versionsinformation om migreringsverktyg i AEM as a Cloud Service version 2023.07.0
 feature: Release Information
 exl-id: 2f787321-f156-480d-bbe8-1a6d04f110c5
 role: Admin
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 ---
 
-# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.07.0 {#release-notes}
+# Versionsinformation om migreringsverktyg i AEM as a Cloud Service version 2023.07.0 {#release-notes}
 
 Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2023.07.0.
 

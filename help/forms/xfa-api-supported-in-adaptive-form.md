@@ -136,7 +136,7 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filerna fungera
    <td><p>Mappad till egenskapen short description i Adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>bildtext<em> (alla fälttyper)</em></p> </td>
+   <td><p>bildtext <em> (alla fälttyper)</em></p> </td>
    <td><p>Mappas till egenskapen Title i adaptiv form.</p> </td>
   </tr>
   <tr>
@@ -148,27 +148,27 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filerna fungera
    <td><p>Mappad till värdeegenskapen i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>objekt<em> (Listruta, kryssruta)</em></p> </td>
+   <td><p>objekt<em> (listruta, kryssruta)</em></p> </td>
    <td><p>Mappad till options-egenskapen i adaptiv form. Du kan åsidosätta den med hjälp av uttrycket Alternativ.</p> </td>
   </tr>
   <tr>
-   <td><p>maxChar<em> (Textfält)</em></p> </td>
+   <td><p>maxChar<em> (textfält)</em></p> </td>
    <td><p>Mappas till egenskapen Maximum för tillåtna tecken i Adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>flera<em> (Textfält)</em></p> </td>
+   <td><p>multiline<em> (textfält)</em></p> </td>
    <td><p>Mappad till egenskapen Tillåt flera rader i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>fracDigit<em> (Numeriskt fält, decimalfält)</em></p> </td>
+   <td><p>fracDigit<em> (numeriskt fält, decimalfält)</em></p> </td>
    <td><p>Mappas till egenskapen Frac digits i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>leadDigit<em> (Numeriskt fält, decimalfält)</em></p> </td>
+   <td><p>leadDigit<em> (numeriskt fält, decimalfält)</em></p> </td>
    <td><p>Mappas till egenskapen Leadsiffror i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>multiSelect<em> (Listruta)</em></p> </td>
+   <td><p>multiSelect<em> (listruta)</em></p> </td>
    <td><p>Mappad till egenskapen Tillåter flera markeringar i adaptiv form.</p> </td>
   </tr>
  </tbody>
@@ -198,7 +198,7 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filen fungerar 
   </tr>
   <tr>
    <td><p>validationState </p> </td>
-   <td><p>Det här skriptet körs under körning och kan inte åsidosättas i Adaptiv form.<br /> </p> </td>
+   <td><p>Det här skriptet körs under körning och kan inte åsidosättas i adaptiv form.<br /> </p> </td>
   </tr>
   <tr>
    <td><p>avsluta </p> </td>

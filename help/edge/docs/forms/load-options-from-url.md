@@ -25,7 +25,7 @@ Fördelarna med att läsa in en listruta från ett separat kalkylblad är:
 
 
 
-![Alternativ för nedrullningsbara listor](/help/forms/assets/drop-down-options.png)
+![Listrutealternativ](/help/forms/assets/drop-down-options.png)
 
 
 I slutet av den här artikeln lär du dig att:
@@ -40,7 +40,8 @@ Definiera alternativ i ett separat kalkylblad
 1. Skapa ett kalkylblad:
    1. Leta reda på AEM projektmapp i Microsoft® SharePoint eller Google Drive.
    1. Lägg till ett nytt blad. Exempel:&quot;shared-country&quot;.
-1. Definiera alternativkolumner: Lägg till två kolumner: &quot;Alternativ&quot; och &quot;Värde&quot;.
+1. Definiera alternativkolumner:
+Lägg till två kolumner:&quot;Alternativ&quot; och&quot;Värde&quot;.
    * &quot;Option&quot; definierar den text som visas i listrutan.
    * &quot;Värde&quot; definierar det skickade värdet när en användare väljer alternativet.
 
@@ -48,26 +49,28 @@ Definiera alternativ i ett separat kalkylblad
    >
    >Om både alternativ och värde är identiska krävs bara kolumnen&quot;Alternativ&quot;.
 
-1. Fyll i kalkylbladet: Ange dina landsalternativ i kolumnen&quot;Alternativ&quot; (och&quot;Värde&quot; om det behövs).
+1. Fyll i kalkylblad:
+Ange dina landsalternativ i kolumnen&quot;Alternativ&quot; (och&quot;Värde&quot; om det behövs).
 
    Se exemplet nedan för strukturen.
 
    ![Listruta för land](/help/forms/assets/drop-down-country-options.png)
 
-1. Förhandsgranska och publicera `shared-country` kalkylblad med [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content).
+1. Förhandsgranska och publicera `shared-country`-bladet med [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content).
 
-   Se webbadressen som visar `shared-country` sheet: https://main—weFinance—wkndforms.hlx.live/inquiry.json?sheet=country
+   Se URL:en som visar bladet `shared-country`:
+https://main—weFinance—wkndforms.hlx.live/inquiry.json?sheet=country
 
 >[!NOTE]
 >
-> `?sheet=country` är en frågeparameter som läggs till i URL:en. Den här parametern anger JSON som filtreras baserat på `shared-country` blad. Den dirigerar om till JSON-filen som innehåller information om olika länder.
+> `?sheet=country` är en frågeparameter som har lagts till i URL:en. Den här parametern anger den JSON som filtreras baserat på bladet `shared-country`. Den dirigerar om till JSON-filen som innehåller information om olika länder.
 
 ## Lägg till URL för att läsa in alternativ i listrutan{#add-url}
 
-The `Options` egenskap för en `select` fältet accepterar en URL. URL:en returnerar en JSON-array som används som alternativ för `Destination` listruta. Så här lägger du till URL:en för att läsa in listrutealternativ:
+Egenskapen `Options` för ett `select`-fält accepterar en URL. URL:en returnerar en JSON-matris som används som alternativ för den nedrullningsbara listan `Destination`. Så här lägger du till URL:en för att läsa in listrutealternativ:
 
 1. Gå till AEM projektmapp på Microsoft® SharePoint eller Google Drive och öppna kalkylbladet. Du kan också skapa nya kalkylblad för ett formulär.
-1. Kopiera URL:en för `shared-country` bladet och klistra in det i `Options` kolumn för `Destination` fält.
+1. Kopiera URL:en för bladet `shared-country` och klistra in den i kolumnen `Options` för fältet `Destination`.
 
    ![Kalkylblad för förfrågan](/help/forms/assets/drop-down-enquiry.png)
 
@@ -76,11 +79,11 @@ The `Options` egenskap för en `select` fältet accepterar en URL. URL:en return
 
    ![Listruta för land](/help/forms/assets/load-dropdown-options-form.png)
 
-Du kan se [frågekalkylblad](/help/forms/assets/enquiry-options.xlsx) om du vill lägga till alternativen för URL för att läsa in listrutor.
+Du kan referera till [frågekalkylbladet](/help/forms/assets/enquiry-options.xlsx) för att lägga till URL:en för att läsa in listrutealternativ.
 
-När du har integrerat URL:en i formulärdefinitionen för att läsa in listrutealternativen kan du välja mellan alternativen för `Destination` visas från webbadressen.
+När du har integrerat URL:en i formulärdefinitionen för att läsa in listrutealternativen visas alternativen för listrutan `Destination` från URL:en.
 
-Se URL:en nedan som visar `enquiry` formulär som visar de alternativ som har sparats i det separata bladet:
+Se URL:en nedan, som visar formuläret `enquiry` med de alternativ som har sparats i det separata bladet:
 
 https://main--wefinance--wkndforms.hlx.live/enquiry-form
 

@@ -16,19 +16,19 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->If [cachelagring i Dispatcher har aktiverats](/help/headless/deployment/dispatcher-caching.md) behövs inte CORS-filtret, så det här avsnittet kan ignoreras.
+>Om [cachelagring i Dispatcher har aktiverats](/help/headless/deployment/dispatcher-caching.md) behövs inte CORS-filtret, så det här avsnittet kan ignoreras.
 
 >[!NOTE]
 >
->En detaljerad översikt över CORS resursdelningsprincip i AEM finns på [CORS (Cross-Origin Resource Sharing)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html#understand-cross-origin-resource-sharing-(cors)).
+>En detaljerad översikt över CORS-resursdelningsprincipen i AEM finns i [Förstå korsdomänsresursdelning (CORS)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html#understand-cross-origin-resource-sharing-(cors)).
 
-För att komma åt GraphQL-slutpunkten måste en CORS-princip konfigureras och läggas till i ett AEM projekt som [distribueras till AEM via Cloud Manager](/help/implementing/cloud-manager/deploy-code.md). Detta görs genom att en lämplig OSGi CORS-konfigurationsfil läggs till för de önskade slutpunkterna. Flera CORS-konfigurationer kan skapas och distribueras till olika miljöer. Exempel finns i [WKND-referensplats](https://github.com/adobe/aem-guides-wknd/tree/master/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig)
+För att få åtkomst till GraphQL-slutpunkten måste en CORS-princip konfigureras och läggas till i ett AEM som [distribueras till AEM via Cloud Manager](/help/implementing/cloud-manager/deploy-code.md). Detta görs genom att en lämplig OSGi CORS-konfigurationsfil läggs till för de önskade slutpunkterna. Flera CORS-konfigurationer kan skapas och distribueras till olika miljöer. Exempel finns i [WKND-referenswebbplatsen](https://github.com/adobe/aem-guides-wknd/tree/master/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig)
 
-CORS-konfigurationen måste ange en betrodd webbplatsens ursprung `alloworigin` eller `alloworiginregexp` för vilka tillträde måste beviljas.
+CORS-konfigurationen måste ange den betrodda webbplatsens ursprung `alloworigin` eller `alloworiginregexp` som åtkomst måste beviljas för.
 
-Konfigurationsfilen måste ha följande namn: `com.adobe.granite.cors.impl.CORSPolicyImpl~appname-graphql.cfg.json` där `appname` återspeglar programmets namn.
+Konfigurationsfilen måste ha följande namn: `com.adobe.granite.cors.impl.CORSPolicyImpl~appname-graphql.cfg.json` där `appname` speglar namnet på ditt program.
 
-Om du till exempel vill ge åtkomst till GraphQL-slutpunkten `/content/cq:graphql/wknd/endpoint` och beständiga frågeslutpunkter för `https://my.domain` du kan använda:
+Om du till exempel vill ge åtkomst till GraphQL-slutpunkten `/content/cq:graphql/wknd/endpoint` och den beständiga frågeslutpunkten för `https://my.domain` kan du använda:
 
 ```json
 {
@@ -63,4 +63,4 @@ Om du till exempel vill ge åtkomst till GraphQL-slutpunkten `/content/cq:graphq
 }
 ```
 
-Om du har konfigurerat en hjälpsökväg för slutpunkten kan du även använda den i `allowedpaths`.
+Om du har konfigurerat en huvudsökväg för slutpunkten kan du även använda den i `allowedpaths`.

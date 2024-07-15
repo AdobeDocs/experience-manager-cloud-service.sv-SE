@@ -17,29 +17,29 @@ Index Converter är ett verktyg som utvecklats för att migrera en kunds indexde
 
 ## Introduktion {#introduction}
 
-Med indexkonverteraren kan AEM utvecklare migrera befintliga anpassade indexdefinitioner för oak till AEM as a Cloud Service kompatibla indexdefinitioner för oak.
+Med indexkonverteraren kan AEM utvecklare migrera befintliga anpassade Oak-indexdefinitioner till AEM as a Cloud Service-kompatibla anpassade Oak-indexdefinitioner.
 
 >[!NOTE]
->Endast indexkonverterare omformningar *lucen* ange definitioner för anpassade ekindexvärden som finns under `/apps` eller `/oak:index`. Den omformas inte *lucen* typindex som skapas för `nt:base`.
+>Indexkonverteraren omformar bara anpassade Oak-indexdefinitioner av typen *lucene* som finns under `/apps` eller `/oak:index`. Den transformerar inte *lucene*-typindex som skapas för `nt:base`.
 
-Det finns två sätt att skapa anpassade indexdefinitioner för eko:
+Det finns två sätt att skapa anpassade Oak Index-definitioner:
 
 * `under /apps` (via ett anpassat innehållspaket)
-* direkt under `/oak:index` bana
+* direkt under sökvägen `/oak:index`
 
-If [Kontrollera läckindex](https://adobe-consulting-services.github.io/acs-aem-commons/features/ensure-oak-index/index.html) användes, kontrollera att definitioner inte stöds på AEM as a Cloud Service. De måste därför först konverteras till indexdefinitioner för ekolor och sedan migreras till anpassade indexdefinitioner för ekolor som är kompatibla med AEM as a Cloud Service, enligt riktlinjerna nedan:
+Om [Kontrollera att Oak Index](https://adobe-consulting-services.github.io/acs-aem-commons/features/ensure-oak-index/index.html) användes kontrollerar du att definitioner inte stöds i AEM as a Cloud Service. Därför måste de först konverteras till Oak Index Definitions och sedan migreras till anpassade Oak Index Definitions som är kompatibla med AEM as a Cloud Service enligt riktlinjerna nedan:
 
-* Om egenskapen ignore är inställd på `true`, ignorera eller hoppa över Skräddarsy definition
+* Om ignorerad egenskap är inställd på `true`, ignorera eller hoppa över Kontrollera definition
 * Uppdatera `jcr:primaryType` till `oak:QueryIndexDefinition`
 * Ta bort alla egenskaper som ska ignoreras enligt OSGi-konfigurationer
-* Ta bort underträd `/facets/jcr:content` från Kontrollera definition
+* Ta bort underträdet `/facets/jcr:content` från Kontrollera definition
 
 ## Använda indexkonverteraren {#using-index-converter}
 
-* Som Adobe I/O CLI: Adobe rekommenderar vi att du använder indexkonverteraren via `aio-cli-plugin-aem-cloud-service-migration` (AEM plugin-program för omfaktorisering av as a Cloud Service kod för CLI-programmet för Adobe I/O).
+* Som Adobe I/O CLI: Adobe rekommenderar vi att du använder indexkonverteraren med `aio-cli-plugin-aem-cloud-service-migration` (AEM as a Cloud Service-plugin för kodomfaktorisering för Adobe I/O CLI).
 
-  Se **[Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#introduction)** om du vill lära dig hur du installerar och använder plugin-programmet.
+  Mer information om hur du installerar och använder plugin-programmet finns i **[Git-resurs: aio-cli-plugin-program-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#introduction)**.
 
 * Som ett fristående verktyg: Indexkonverteraren kan också köras som ett fristående verktyg.
 
-  Se **[Git-resurs: aem-cs-source-migration-index-converter](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/index-converter)** om du vill lära dig hur du använder det här verktyget.
+  Se **[Git-resurs: aem-cs-source-migration-index-converter](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/index-converter)** om du vill veta mer om hur du använder det här verktyget.

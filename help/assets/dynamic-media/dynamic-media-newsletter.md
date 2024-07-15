@@ -12,7 +12,7 @@ ht-degree: 0%
 
 ---
 
-# ![Dynamic Media Newsletter logo](/help/assets/dynamic-media/assets/dynamic-media-newsletter-logo.png)
+# ![Dynamic Media Newsletter, logotyp](/help/assets/dynamic-media/assets/dynamic-media-newsletter-logo.png)
 
 >[!NOTE]
 >
@@ -52,7 +52,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * Titta på on-demand-webbinariet SKill Builder för Dynamic Media Classic.
    * Se Dynamic Media sessioner från Online Adobe Summit 2020.
    * Läs mer om Adobe kostnadsfria Dynamic Media Classic-revisioner.
-   * Möt `John Monroe`, Senior Program Manager for Adobe Account Team.
+   * Möt `John Monroe`, Senior Program Manager för Adobe Account Team.
 
 * **[Februari 2020, utgåva 2](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_02_2020_Feb.html)**
 
@@ -63,7 +63,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * Se hur du använder Dynamic Media beskärningsmagi.
    * För att du ska få ut mer av Dynamic Media Classic kan du dra nytta av en kostnadsfri revision från Adobe.
    * Läs mer om det nya användargränssnittet för Dynamic Media Classic.
-   * Möt `Georgia Myers`, chef för Customer Success for Adobe Experience Cloud.
+   * Möt `Georgia Myers`, chef för kundnöjdhet för Adobe Experience Cloud.
 
 * **[Januari 2020, utgåva 1](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_01_2020_Jan.html)**
 
@@ -83,9 +83,9 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * Kraftfulla nya säkerhetsfunktioner.
    * Hur Adobe förbereder sig för en lyckad semestersäsong.
    * Dela nyhetsbrevet med dina kollegor för att bygga upp teamets expertis.
-   * Möt `Apoorva Gupta`, Senior Product Manager, Dynamic Media
+   * Möt `Apoorva Gupta`, Senior Product Manager, Dynamic Media.
 
-* **[oktober 2019, utgåva 10](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_10_2019_Oct.html)**
+* **[Oktober 2019, utgåva 10](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_10_2019_Oct.html)**
 
   I detta nummer:
 
@@ -93,7 +93,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * En infografik med tips för häpnadsväckande resultat från högkvalitativa bilder och videor.
    * En CMSwire-artikel som hjälper er att förstå hur ni uppdaterar er multimediestrategi för att uppfylla dagens kunders förväntningar.
    * Tillgång till on-demand-webbinariet på Dynamic Media från serien SKill Builder.
-   * Möt `Nick Peters`, Manager, Site Reliable Engineering, Adobe Experience Manager.
+   * Träffa `Nick Peters`, chef, Site Reliable Engineering, Adobe Experience Manager.
    * Kom igång med Dynamic Media och Dynamic Media Classic i Experience League.
 
 * **[September 2019, utgåva 09](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_09_2019_Sept.html)**
@@ -115,7 +115,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * Läs mer om en webbinarier som är utformad för att hjälpa dig komma igång med Experience Manager Assets och Dynamic Media.
    * Börja din resa och få värde från Dynamic Media på Experience League.
    * Få en smygtitt på den kraftfulla integrering som kommer i september och som gör att ni kan analysera hur besökarna interagerar med ert multimediematerial.
-   * Möt `PieterJan Pieper`, Dynamic Media tekniska support wiz.
+   * Träffa `PieterJan Pieper`, Dynamic Media tekniska support wiz.
 
 * **[Juli 2019, utgåva 07](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_07_2019_July.html)**
 
@@ -137,7 +137,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * Läs mer om den kommande Adobe Insider Tour.
    * Läs om hur ni kan skydda era digitala resurser från att bli piratkopierade.
    * Lär dig mer om AI-driven Smart Crop för bilder.
-   * Möt `Alex Thiers`, en av drivkrafterna bakom många av de goda funktionerna och innovationerna inom Dynamic Media och Dynamic Media Classic.
+   * Möt `Alex Thiers`, en av drivkrafterna bakom många av de fantastiska funktionerna och innovationerna inom Dynamic Media och Dynamic Media Classic.
 
 * **[maj 2019, utgåva 05](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_05_2019_May.html)**
 

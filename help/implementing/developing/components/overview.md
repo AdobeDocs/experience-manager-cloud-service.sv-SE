@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Komponenter - översikt {#components-overview}
 
-På den här sidan finns en översikt över Adobe Experience Manager (AEM) komponenter som [används för att skapa sidor](/help/sites-cloud/authoring/page-editor/components.md).
+Den här sidan innehåller en översikt över Adobe Experience Manager-komponenter (AEM), till exempel de [som används för sidredigering](/help/sites-cloud/authoring/page-editor/components.md).
 
 ## Vad är komponenter? {#what-are-components}
 
@@ -26,7 +26,7 @@ På den här sidan finns en översikt över Adobe Experience Manager (AEM) kompo
 * ha ett standardiserat användargränssnitt.
 * Har redigeringsbeteende som kan konfigureras.
 * Använd dialogrutor som har skapats med delelement som baseras på GRE-komponenter.
-* De utvecklas med [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html).
+* De har utvecklats med [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html).
 * De kan utvecklas för att skapa anpassade komponenter som utökar standardfunktionerna.
 
 Eftersom komponenterna är modulära kan du:
@@ -44,22 +44,22 @@ Varje AEM:
 
 ## Grundläggande komponenter i AEM {#aem-core-components}
 
-[AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser.
+[De AEM kärnkomponenterna ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är en uppsättning standardiserade WCM-komponenter (Web Content Management) som AEM för att snabba upp utvecklingstiden och minska underhållskostnaderna för dina webbplatser.
 
-Kärnkomponenterna finns med AEM as a Cloud Service och [WKND - självstudiekurs](/help/implementing/developing/introduction/develop-wknd-tutorial.md) visar hur du implementerar och använder komponenter. Komponenterna levereras med all källkod och kan användas som de är eller som startpunkter för ändrade eller utökade komponenter.
+Core Components ingår i AEM as a Cloud Service och [WKND Tutorial](/help/implementing/developing/introduction/develop-wknd-tutorial.md) visar hur du implementerar och använder komponenter. Komponenterna levereras med all källkod och kan användas som de är eller som startpunkter för ändrade eller utökade komponenter.
 
 ### Visa tillgängliga komponenter {#viewing-available-components}
 
-Om du vill se en översikt över alla tillgängliga komponenter i AEM ska du använda [Komponentkonsol](/help/sites-cloud/authoring/components-console.md).
+Använd [komponentkonsolen](/help/sites-cloud/authoring/components-console.md) om du vill ha en översikt över alla tillgängliga komponenter i AEM.
 
 Du kan också använda CRXDE Lite för att få en lista över alla komponenter som är tillgängliga i databasen.
 
-1. I **[!UICONTROL CRXDE Lite]**, markera **[!UICONTROL Tools]** från verktygsfältet och sedan **[!UICONTROL Query]** som öppnar **[!UICONTROL Query]** -fliken.
+1. I **[!UICONTROL CRXDE Lite]** väljer du **[!UICONTROL Tools]** i verktygsfältet och sedan **[!UICONTROL Query]**, som öppnar fliken **[!UICONTROL Query]**.
 
-1. I **[!UICONTROL Query]** flik, välja `XPath` as **[!UICONTROL Type]**.
+1. Välj `XPath` som **[!UICONTROL Type]** på fliken **[!UICONTROL Query]**.
 
-1. I **[!UICONTROL Query]** anger du följande sträng:
+1. Ange följande sträng i indatafältet **[!UICONTROL Query]**:
 
    `//element(*, cq:Component)`
 
-1. Klicka **[!UICONTROL Execute]** och komponenterna visas.
+1. Klicka på **[!UICONTROL Execute]** så visas komponenterna.

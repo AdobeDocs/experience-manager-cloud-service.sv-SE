@@ -17,9 +17,9 @@ Lär dig hur du styr de rörledningar som skapas automatiskt för att validera v
 
 ## Konfiguration av GitHub-kontroller {#configuration}
 
-När du använder [privata databaser,](private-repositories.md#using) a [pipeline med hög kvalitet för stackkod](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) skapas automatiskt. Detta tillvägagångssätt startas vid varje uppdatering av pull-begäran.
+När du använder [privata databaser ](private-repositories.md#using) skapas en [pipeline för full stackkodkvalitet](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) automatiskt. Detta tillvägagångssätt startas vid varje uppdatering av pull-begäran.
 
-Du kan kontrollera dessa kontroller genom att skapa en `.cloudmanager/pr_pipelines.yml` -filen i standardgrenen i den privata databasen.
+Du kan kontrollera dessa kontroller genom att skapa en `.cloudmanager/pr_pipelines.yml`-fil i standardgrenen i den privata databasen.
 
 ```yaml
 github:
@@ -37,7 +37,7 @@ pipelines:
 |---|---|---|---|
 | `shouldDeletePreviousComment` | `true` eller `false` | `false` | Om bara den sista kommentaren med kodskanningen ska behållas i GitHub pull-begäran eller om alla ska behållas |
 | `type` | `CI_CD` | n/a | Definierar beteendet för en CI/CD-pipeline |
-| `template.programID` | Heltal | Inga pipeline-variabler återanvänds | Kan användas för att återanvända [pipeline-variabler](/help/implementing/cloud-manager/configuring-pipelines/pipeline-variables.md) som ställs in på en av de befintliga rörledningarna som skapas automatiskt av varje PR. |
-| `template.pipelineID` | Heltal | Inga pipeline-variabler återanvänds | Kan användas för att återanvända [pipeline-variabler](/help/implementing/cloud-manager/configuring-pipelines/pipeline-variables.md) som ställs in på en av de befintliga rörledningarna som skapas automatiskt av varje PR. |
+| `template.programID` | Heltal | Inga pipeline-variabler återanvänds | Kan användas för att återanvända de [pipeline-variabler](/help/implementing/cloud-manager/configuring-pipelines/pipeline-variables.md) som anges på en av de befintliga pipelines som skapas automatiskt av varje PR. |
+| `template.pipelineID` | Heltal | Inga pipeline-variabler återanvänds | Kan användas för att återanvända de [pipeline-variabler](/help/implementing/cloud-manager/configuring-pipelines/pipeline-variables.md) som anges på en av de befintliga pipelines som skapas automatiskt av varje PR. |
 | `namePrefix` | Sträng | `Full Stack Code Quality Pipeline for PR` | Används för att ange namnet på den pipeline som skapas automatiskt |
-| `importantMetricsFailureBehavior` | `CONTINUE` eller `FAIL` eller `PAUSE` | `CONTINUE` | Anger pipeline:s viktiga måttbeteende<br>`CONTINUE` = Om ett viktigt mätresultat misslyckas, flyttas pipeline automatiskt framåt<br>`FAIL` = pipelinen avslutas med statusen MISSLYCKAD om ett viktigt mätresultat misslyckas<br>`PAUSE` = Kodsökningssteget får en VÄNTNINGSstatus när ett viktigt mätresultat misslyckas och måste återupptas manuellt |
+| `importantMetricsFailureBehavior` | `CONTINUE` eller `FAIL` eller `PAUSE` | `CONTINUE` | Anger det viktiga måttbeteendet för pipelinen <br>`CONTINUE` = Om ett viktigt mätresultat misslyckas, flyttas pipelinen automatiskt framåt <br>`FAIL` = pipelinen avslutas med en FAILED-status om ett viktigt mätresultat misslyckas<br>`PAUSE` = Kodsökningssteget får en VÄNTNINGSstatus när ett viktigt mätresultat misslyckas och måste återupptas manuellt |

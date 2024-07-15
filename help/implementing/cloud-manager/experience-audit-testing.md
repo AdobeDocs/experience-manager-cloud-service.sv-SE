@@ -24,13 +24,13 @@ Läs om hur Experience Audit validerar er distributionsprocess och ser till att 
 
 ## Ökning {#overview}
 
-Experience Audit är en funktion i Cloud Manager Sites Production pipelines som validerar distributionsprocessen och hjälper till att säkerställa att ändringar som distribueras:
+Experience Audit är en funktion i Cloud Manager Sites Production pipelines som validerar driftsättningsprocessen och säkerställer att ändringar som distribueras:
 
 1. Uppfyll grundläggande standarder för prestanda, tillgänglighet, bästa praxis, SEO (Search Engine Optimization) och PWA (Progressive Web App).
 
 1. Inför inte regressioner.
 
-Experience Audit i Cloud Manager säkerställer att användarens upplevelse på webbplatsen är av högsta standard.
+Med Experience Audit i Cloud Manager säkerställs att användarens upplevelse på webbplatsen är av högsta standard.
 
 Granskningsresultaten är informativa och gör det möjligt för distributionshanteraren att se poängen och ändringen mellan aktuella och tidigare poäng. Den här insikten är värdefull för att avgöra om det finns en regression som introducerades i den aktuella distributionen.
 
@@ -42,12 +42,12 @@ Experience Audit drivs av Google Lightroom, ett verktyg med öppen källkod frå
 
 ## Tillgänglighet {#availability}
 
-Experience Audit är tillgänglig för Cloud Manager:
+Experience Audit finns för Cloud Manager:
 
 * Sites production pipelines, som standard.
 * Utvecklingsledningar för frontend, om du vill.
 
-Se [Konfigurationsavsnitt](#configuration) för mer information om hur du konfigurerar granskningen för de valfria miljöerna.
+Mer information om hur du konfigurerar granskningen för de valfria miljöerna finns i avsnittet [Konfiguration](#configuration).
 
 ## Konfiguration {#configuration}
 
@@ -57,43 +57,43 @@ Du konfigurerar vilka sidor som ska ingå i Experience Audit när du konfigurera
 
 1. Beroende på vilken typ av pipeline du vill konfigurera kan du följa anvisningarna för att:
 
-   * Lägg till en ny [Produktionspipeline.](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) om du vill definiera sökvägarna som ska utvärderas av granskningen.
-   * Lägg till en ny [icke-produktionsrörledning,](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) om du vill aktivera granskningen i en pipeline i början eller i en hel utvecklingsfas.
-   * Eller så kan du [redigera en befintlig pipeline,](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md) och uppdatera de befintliga alternativen.
+   * Lägg till en ny [produktionspipeline,](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md), om du vill definiera sökvägarna som ska utvärderas av granskningen.
+   * Lägg till en ny [icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) om du vill aktivera granskningen för en frontendpipeline eller en fullständig utvecklingspipeline.
+   * Du kan också [redigera en befintlig pipeline](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md) och uppdatera befintliga alternativ.
 
-1. Om du lägger till eller redigerar ett icke-produktionsflöde som du vill använda Experience Audit för, måste du välja **Experience Audit** kryssrutan på **Källkod** -fliken.
+1. Om du lägger till eller redigerar ett icke-produktionsflöde som du vill använda Experience Audit för, måste du markera kryssrutan **Experience Audit** på fliken **Source Code**.
 
-   ![Aktivera Experience Audit](assets/experience-audit-enable.jpg)
+   ![Aktiverar Experience Audit](assets/experience-audit-enable.jpg)
 
    * Detta är endast nödvändigt för rörledningar som inte är avsedda för produktion.
-   * The **Experience Audit** visas när kryssrutan är markerad.
+   * Fliken **Experience Audit** visas när kryssrutan är markerad.
 
-1. För rörledningar för både produktion och icke-produktion definierar ni de banor som ska inkluderas i Experience Audit på **Experience Audit** -fliken.
+1. För pipelines för både produktion och icke-produktion definierar du sökvägarna som ska inkluderas i Experience Audit på fliken **Experience Audit** .
 
-   * Sidsökvägar måste börja med `/` och är relativa till din plats.
-   * Om din webbplats till exempel är `wknd.site` och vill inkludera `https://wknd.site/us/en/about-us.html` Ange sökvägen i Experience Audit `/us/en/about-us.html`.
+   * Sidsökvägarna måste börja med `/` och är relativa till din plats.
+   * Om din webbplats till exempel är `wknd.site` och vill inkludera `https://wknd.site/us/en/about-us.html` i Experience Audit anger du sökvägen `/us/en/about-us.html`.
 
    ![Definiera en sökväg för Experience Audit](assets/experience-audit-add-page.png)
 
-1. Tryck eller klicka **Lägg till sida** och sökvägen fylls i automatiskt med adressen till din miljö och läggs till i sökvägstabellen.
+1. Tryck eller klicka på **Lägg till sida** så fylls sökvägen automatiskt i med adressen till din miljö och läggs till i sökvägstabellen.
 
-   ![Spara bana till tabellen](assets/experience-audit-page-added.png)
+   ![Sparar sökvägen till tabellen](assets/experience-audit-page-added.png)
 
 1. Fortsätt att lägga till banor efter behov genom att upprepa de två föregående stegen.
 
    * Du kan lägga till högst 25 banor.
    * Om du inte definierar några sökvägar inkluderas webbplatsens hemsida som standard i Experience Audit.
 
-1. Klicka **Spara** för att spara på rörledningen.
+1. Klicka på **Spara** för att spara din pipeline.
 
 ## Upplevelsegranskningsresultat {#understanding-experience-audit-results}
 
-Experience Audit ger aggregerade och detaljerade testresultat på sidnivå via [körningssida för produktionsflöde](/help/implementing/cloud-manager/deploy-code.md).
+Experience Audit ger aggregerade och detaljerade testresultat på sidnivå via sidan [för körning av produktionspipeline](/help/implementing/cloud-manager/deploy-code.md).
 
 * Sammanlagda mätvärden mäter medelpoängen på de sidor som granskats för prestanda, tillgänglighet, bästa praxis, SEO (sökmotoroptimering).
 * Enskilda sidnivåpoäng kan också göras via fördjupning.
 * Detaljerad information om poängen finns tillgänglig för att visa resultaten av de enskilda testerna tillsammans med vägledning om hur man åtgärdar eventuella problem som identifierats.
-* En historik över testresultaten finns kvar i Cloud Manager för att avgöra om ändringar som införs i pipeline inkluderar eventuella regressioner från föregående körning.
+* En historik över testresultaten finns kvar i Cloud Manager för att avgöra om ändringar som införs i pipelinen innehåller regressioner från den föregående körningen.
 
 ### Sammanställd bakgrundsmusik {#aggregate-scores}
 
@@ -103,15 +103,15 @@ Det finns en sammanställd nivå för varje testtyp, som prestanda, tillgänglig
 
 Ändringsmåttet kan ha något av följande värden.
 
-* **Positivt värde** - Sidorna har förbättrats på det valda testet sedan den senaste produktionsflödet kördes.
+* **Positivt värde** - Sidorna har förbättrats på det valda testet sedan den senaste körningen av produktionsflödet.
 
-* **Negativt värde** - sidorna har kraschat på det valda testet sedan den senaste produktionspipeline kördes.
+* **Negativt värde** - sidorna har gått om i det valda testet sedan den senaste körningen av produktionspipelinen.
 
-* **Ingen ändring** - Sidorna har fått samma resultat sedan den senaste produktionsflödet.
+* **Ingen ändring** - Sidorna har fått samma resultat sedan den senaste produktionspipeline-körningen.
 
-* **Ej tillämpligt** - Det fanns inga tidigare poäng att jämföra.
+* **N/A** - Det fanns inga tidigare poäng att jämföra.
 
-![Resultat av granskning](/help/implementing/cloud-manager/assets/exp-audit-1.png)
+![Upplev granskningsresultat](/help/implementing/cloud-manager/assets/exp-audit-1.png)
 
 ### Poäng på sidnivå {#page-level-scores}
 

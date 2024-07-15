@@ -24,7 +24,7 @@ Det här dokumentet innehåller en översikt över en modelldefinition och över
 
 >[!TIP]
 >
->Om du inte känner till hur du kan mäta din app för den universella redigeraren kan du läsa dokumentet [Universell redigeringsöversikt för AEM.](/help/implementing/universal-editor/developer-overview.md)
+>Om du inte känner till hur du kan mäta upp din app för den universella redigeraren kan du läsa dokumentet [Universal Editor Overview för AEMutvecklare.](/help/implementing/universal-editor/developer-overview.md)
 
 ## Modelldefinitionsstruktur {#model-structure}
 
@@ -41,9 +41,9 @@ Modelldefinitionen är en JSON-struktur som börjar med en array med modeller.
 ]
 ```
 
-Se **[Fält](#fields)** för mer information om hur du definierar `fields` array.
+Mer information om hur du definierar `fields`-arrayen finns i avsnittet **[Fält](#fields)** i det här dokumentet.
 
-Om du vill använda modelldefinitionen med en komponent `data-aue-model` kan användas.
+Om du vill använda modelldefinitionen med en komponent kan attributet `data-aue-model` användas.
 
 ```html
 <div data-aue-resource="urn:datasource:/content/path" data-aue-type="component"  data-aue-model="model-id">Click me</div>
@@ -81,7 +81,7 @@ Ett fältobjekt har följande typdefinition.
 | `required` | `boolean` | Är fältet obligatoriskt | Nej |
 | `readOnly` | `boolean` | Är fältet skrivskyddat | Nej |
 | `hidden` | `boolean` | Är fältet dolt som standard | Nej |
-| `condition` | `RulesLogic` | Regel som visar eller döljer fältet baserat på en [villkor](/help/implementing/universal-editor/customizing.md#conditionally-hide) | Nej |
+| `condition` | `RulesLogic` | Regel som visar eller döljer fältet baserat på ett [villkor](/help/implementing/universal-editor/customizing.md#conditionally-hide) | Nej |
 | `multi` | `boolean` | Är fältet ett flerfält | Nej |
 | `validation` | `ValidationType` | Valideringsregel eller -regler för fältet | Nej |
 | `raw` | `unknown` | Raw-data som kan användas av komponenten | Nej |
@@ -92,16 +92,16 @@ Följande komponenttyper kan användas för återgivningsfält.
 
 | Beskrivning | Komponenttyp |
 |---|---|
-| [AEM](#aem-tag) | `aem-tag` |
-| [AEM](#aem-content) | `aem-content` |
+| [AEM-tagg](#aem-tag) | `aem-tag` |
+| [AEM innehåll](#aem-content) | `aem-content` |
 | [Boolean](#boolean) | `boolean` |
 | [Kryssrutegrupp](#checkbox-group) | `checkbox-group` |
 | [Behållare](#container) | `container` |
 | [Innehållsfragment](#content-fragment) | `aem-content-fragment` |
 | [Datum och tid](#date-time) | `date-time` |
-| [Multimarkering](#multiselect) | `multiselect` |
-| [Nummer](#number) | `number` |
-| [Alternativgrupp](#radio-group) | `radio-group` |
+| [Multiselect](#multiselect) | `multiselect` |
+| [Number](#number) | `number` |
+| [Grupp med alternativknappar](#radio-group) | `radio-group` |
 | [Referens](#reference) | `reference` |
 | [RTF](#rich-text) | `richtext` |
 | [Välj](#select) | `select` |
@@ -132,7 +132,7 @@ En AEM taggkomponenttyp aktiverar en AEM taggväljare som kan användas för att
 
 >[!TAB Skärmbild]
 
-![Skärmbild AEM taggkomponenttypen](assets/component-types/aem-tag-picker.png)
+![Skärmbild av AEM taggkomponenttyp](assets/component-types/aem-tag-picker.png)
 
 >[!ENDTABS]
 
@@ -161,7 +161,7 @@ En AEM innehållskomponenttyp aktiverar en AEM innehållsväljare som kan använ
 
 >[!TAB Skärmbild]
 
-![Skärmbild AEM innehållskomponenttyp](assets/component-types/aem-content-picker.png)
+![Skärmbild av AEM innehållskomponenttyp](assets/component-types/aem-content-picker.png)
 
 >[!ENDTABS]
 
@@ -297,7 +297,7 @@ En behållarkomponenttyp tillåter gruppering av komponenter. Den erbjuder en ex
 
 #### Innehållsfragment {#content-fragment}
 
-Du kan använda väljaren för innehållsfragment för att välja en [Innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md) och dess variationer (om det behövs). Den erbjuder en extra konfiguration.
+Du kan använda väljaren för innehållsfragment för att välja ett [innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md) och dess variationer (om det behövs). Den erbjuder en extra konfiguration.
 
 | Konfiguration | Värdetyp | Beskrivning | Obligatoriskt |
 |---|---|---|---|
@@ -343,7 +343,7 @@ Den erbjuder även en ytterligare valideringstyp.
 
 | Valideringstyp | Värdetyp | Beskrivning | Obligatoriskt |
 |---|---|---|---|
-| `customErrorMsg` | `string` | Meddelande som visas om `valueFormat` är inte uppfyllt | Nej |
+| `customErrorMsg` | `string` | Meddelande som visas om `valueFormat` inte uppfylls | Nej |
 
 >[!BEGINTABS]
 
@@ -423,7 +423,7 @@ Den erbjuder även en ytterligare valideringstyp.
 
 #### Experience Fragment {#experience-fragment}
 
-Experience Fragment-väljaren kan användas för att välja en [Experience Fragment](/help/sites-cloud/authoring/fragments/experience-fragments.md) och dess variationer (om det behövs). Den erbjuder en extra konfiguration.
+Experience Fragment-väljaren kan användas för att välja ett [Experience Fragment](/help/sites-cloud/authoring/fragments/experience-fragments.md) och dess variationer (om det behövs). Den erbjuder en extra konfiguration.
 
 | Konfiguration | Värdetyp | Beskrivning | Obligatoriskt |
 |---|---|---|---|
@@ -521,7 +521,7 @@ En komponenttyp för flerval visar flera objekt för markering i en listruta, in
 >[!TAB Skärmbilder]
 
 ![Skärmbild av flervalskomponenttyp](assets/component-types/multiselect.png)
-![Skärmbild av flervalskomponenttyp med gruppering](assets/component-types/multiselect-group.png)
+![ Skärmbild av flervalskomponenttyp med gruppering ](assets/component-types/multiselect-group.png)
 
 >[!ENDTABS]
 
@@ -533,7 +533,7 @@ En talkomponenttyp tillåter indata för ett tal. Det erbjuder ytterligare valid
 |---|---|---|---|
 | `numberMin` | `number` | Minsta tillåtna antal | Nej |
 | `numberMax` | `number` | Högsta tillåtna antal | Nej |
-| `customErrorMsg` | `string` | Meddelande som visas om `numberMin` eller `numberMax` är inte uppfyllt | Nej |
+| `customErrorMsg` | `string` | Meddelande som visas om `numberMin` eller `numberMax` inte uppfylls | Nej |
 
 >[!BEGINTABS]
 
@@ -580,7 +580,7 @@ En talkomponenttyp tillåter indata för ett tal. Det erbjuder ytterligare valid
 
 >[!TAB Skärmbild]
 
-![Skärmbild av talkomponenttyp](assets/component-types/number.png)
+![Skärmbild av nummerkomponenttyp](assets/component-types/number.png)
 
 >[!ENDTABS]
 
@@ -612,7 +612,7 @@ En alternativgruppskomponenttyp tillåter en ömsesidigt uteslutande markering a
 
 >[!TAB Skärmbild]
 
-![Skärmbild av komponenttypen alternativgruppskomponent](assets/component-types/radio.png)
+![Skärmbild av komponenttypen för alternativgruppskomponent](assets/component-types/radio.png)
 
 >[!ENDTABS]
 
@@ -651,7 +651,7 @@ RTF ger möjlighet till RTF-inmatning med flera rader. Det erbjuder ytterligare 
 | Valideringstyp | Värdetyp | Beskrivning | Obligatoriskt |
 |---|---|---|---|
 | `maxSize` | `number` | Högsta tillåtna antal tecken | Nej |
-| `customErrorMsg` | `string` | Meddelande som visas om `maxSize` har överskridits | Nej |
+| `customErrorMsg` | `string` | Meddelande som visas om `maxSize` överskrids | Nej |
 
 >[!BEGINTABS]
 
@@ -733,7 +733,7 @@ En select-komponenttyp gör att du kan välja ett enstaka alternativ i en lista 
 
 Med en flikkomponenttyp kan du gruppera andra inmatningsfält tillsammans på flera flikar för att förbättra layoutordningen för författarna.
 
-A `tab` kan betraktas som en avgränsare i arrayen med `fields`. Allt som kommer efter en `tab` placeras på den fliken tills en ny `tab` påträffas, där följande objekt placeras på den nya fliken.
+En `tab`-definition kan betraktas som en avgränsare i arrayen för `fields`. Allt som kommer efter en `tab` placeras på den fliken tills en ny `tab` påträffas, där följande objekt placeras på den nya fliken.
 
 Om du vill att objekt ska visas ovanför alla flikar måste de definieras före alla tabbar.
 
@@ -786,7 +786,7 @@ Text tillåter en enda rad med textinmatning.  Det innehåller ytterligare valid
 | `minLength` | `number` | Minsta antal tillåtna tecken | Nej |
 | `maxLength` | `number` | Högsta antal tillåtna tecken | Nej |
 | `regExp` | `string` | Reguljärt uttryck som indatatexten måste matcha | Nej |
-| `customErrorMsg` | `string` | Meddelande som visas om `minLength`, `maxLength`och/eller `regExp` har överträtts | Nej |
+| `customErrorMsg` | `string` | Meddelande som visas om `minLength`, `maxLength` och/eller `regExp` bryts | Nej |
 
 >[!BEGINTABS]
 

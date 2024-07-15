@@ -22,16 +22,16 @@ Adobe Experience Manager innehåller över 100 Dynamic Media-kommandon för att 
 
 ## Aktivera Smart Imaging i Dynamic Media {#bp-enable-smart-imaging}
 
-**Smart bildbehandling:**
+**Smart bildåtergivning:**
 
 * Om du aktiverar Smart Imaging i Dynamic Media kan du automatiskt optimera bildformat, storlek och kvalitet baserat på webbläsarens funktioner.
 Vill du veta mer? Gå till [Smart bildbehandling](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/dynamicmedia/imaging-faq).
 * Den förbättrar bildens prestanda genom att dynamiskt justera dessa parametrar.
-* Du kan utvärdera Smart bildbehandling med självutvärderingsverktyget [Ögonblicksbild](https://snapshot.scene7.com/).
+* Du kan utvärdera Smart Imaging med självutvärderingsverktyget [Snapshot](https://snapshot.scene7.com/).
 
 **Bildformat:**
 
-* Undvik att använda explicit `fmt=webp` eller `fmt=avif` -kommandon i en URL, såvida det inte är särskilt nödvändigt för ett användningsfall.
+* Undvik att använda explicita `fmt=webp`- eller `fmt=avif`-kommandon i en URL om det inte krävs särskilt för ett användningsfall.
 * Smart Imaging väljer automatiskt det bästa formatet, vilket ger optimala bandbreddsvinster.
 
 **Standardbeteende:**
@@ -47,10 +47,10 @@ Genom att göra välgrundade val i bildformat och aktivera Smart Imaging kan du 
 
 Viktiga överväganden när du arbetar med källbilder:
 
-* **Källbildformat:**
+* **Source bildformat:**
    * Med förlustfria format som PNG, TIFF och PSD kan du vara säker på att bildkvaliteten förblir hög utan några komprimeringsartefakter.
    * Dessa format bevarar alla ursprungliga data, vilket gör dem idealiska för redigering och vidare bearbetning.
-* **Storlek på källbild:**
+* **Source bildstorlek:**
    * Från och med en högupplöst bild får du mer detaljrikedom och flexibilitet.
    * När bilder måste visas i olika storlekar (till exempel på olika enheter eller skärmupplösningar) ger en större källbild bättre skalning.
    * För bilder som har stöd för zoomning (t.ex. produktfoton) bör du rikta in dig på dimensioner på minst 2 000 pixlar på den längsta sidan.
@@ -74,42 +74,42 @@ As a best practice for image format, start with the most common setting `&fmt=JP
 
 Att minska bildstorleken dynamiskt är en av de vanligaste uppgifterna. Det handlar om att ange storleken och, om så önskas, vilket nedsamplingsläge som används för att nedskala bilden.
 
-* För bildstorlek är det bästa och enklaste sättet att använda `&wid=<value>` och `&hei=<value>,`eller bara `&hei=<value>`. Dessa parametrar ställer automatiskt in bildbredden i enlighet med proportionerna.
-* `&resMode=<value>`styr den algoritm som används för nedsampling. Börja med `&resMode=sharp2`. Det här värdet ger den bästa bildkvaliteten. När nedsampling används `value =bilin` är snabbare, leder det ofta till aliasing av artefakter.
+* För storleksändring av bilder är det bästa och enklaste sättet att använda `&wid=<value>` och `&hei=<value>,` eller bara `&hei=<value>`. Dessa parametrar ställer automatiskt in bildbredden i enlighet med proportionerna.
+* `&resMode=<value>`styr den algoritm som används för nedsampling. Börja med `&resMode=sharp2`. Det här värdet ger den bästa bildkvaliteten. Nedsamplingen `value =bilin` är snabbare, men leder ofta till aliasing av artefakter.
 
-Ett tips om hur du kan ändra bildstorlek är att använda `&wid=<value>&hei=<value>&resMode=sharp2` eller `&hei=<value>&resMode=sharp2`
+Använd `&wid=<value>&hei=<value>&resMode=sharp2` eller `&hei=<value>&resMode=sharp2` om du vill ändra bildstorlek
 
 ## Bästa tillvägagångssätt för bildskärpa {#best-practices-for-image-sharpening}
 
 Bildskärpa är den mest komplicerade aspekten när det gäller att styra bilder på webbplatsen och var många misstag görs. Ta dig tid att lära dig mer om hur skärpa och oskarp maskning fungerar i Experience Manager genom att titta på följande resurser:
 
-* Rapport om bästa praxis [Adobe Dynamic Media Classic bästa praxis för bildkvalitet och skärpa](/help/assets/dynamic-media/assets/sharpening_images.pdf) gäller även Experience Manager.
+* Best practices white paper [Adobe Dynamic Media Classic Image Quality and Sharpening Best Practices](/help/assets/dynamic-media/assets/sharpening_images.pdf) gäller även Experience Manager.
 
-* Titta [Använd bildskärpa med Experience Manager - Dynamic Media](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-image-sharpening-feature-video-use#dynamic-media).
+* Titta på [Använd bildskärpa med Experience Manager - Dynamic Media](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-image-sharpening-feature-video-use#dynamic-media).
 
 Med Experience Manager kan du öka skärpan i bilder vid intag, vid leverans eller både och. Normalt är det dock bäst att öka skärpan i bilder med bara en metod eller en annan, men inte med båda. Att skärpa bilderna vid leverans, på en URL-adress, ger oftast bäst resultat.
 
 Det finns två metoder för bildskärpa:
 
-* Enkel skärpa ( `&op_sharpen`) - Precis som det skärpefilter som används i Photoshop, tillämpar enkel skärpa den grundläggande skärpan på den slutliga vyn av bilden efter den dynamiska storleksändringen. Den här metoden kan dock inte konfigureras av användaren. Det bästa sättet är att undvika att använda `&op_sharpen` om det inte är nödvändigt.
-* Oskarp maskering ( `&op_USM`) - Oskarp maskning är ett skärpefilter som är branschstandard. Det bästa sättet är att göra bilder skarpare med oskarp maskering enligt riktlinjerna nedan. Med Oskarp maskning kan du styra följande tre parametrar:
+* Enkel skärpa ( `&op_sharpen`) - Precis som skärpefiltret som används i Photoshop, tillämpar enkel skärpa grundläggande skärpa på den slutliga vyn av bilden efter den dynamiska storleksändringen. Den här metoden kan dock inte konfigureras av användaren. Det bästa sättet är att undvika att använda `&op_sharpen` om det inte behövs.
+* Oskarp maskering ( `&op_USM`) - Oskarp maskering är ett skärpefilter som är branschstandard. Det bästa sättet är att göra bilder skarpare med oskarp maskering enligt riktlinjerna nedan. Med Oskarp maskning kan du styra följande tre parametrar:
 
    * `&op_sharpen=`belopp,radie,tröskelvärde
 
       * **[!UICONTROL amount]** (0-5, effektens styrka.)
-      * **[!UICONTROL radius]** (0-250, bredden på de&quot;skärpelinjer&quot; som ritas runt objektet med skärpa, mätt i pixlar.)
+      * **[!UICONTROL radius]** (0-250, bredden på de&quot;skärpelinjer&quot; som ritas runt det skarpa objektet, mätt i pixlar.)
 
      Tänk på att parametrarnas radie och mängd fungerar mot varandra. Minskad radie kan kompenseras genom att öka beloppet. Med radie får du bättre kontroll eftersom ett lägre värde ökar skärpan endast för kantpixlarna, medan ett högre värde ökar skärpan för ett större antal pixlar.
 
       * **[!UICONTROL threshold]** (0-255, effektkänslighet.)
 
-     Den här parametern avgör hur annorlunda de pixlar som ska göras skarpare måste vara från det omgivande området innan de betraktas som kantpixlar och filtret gör dem skarpare. The **[!UICONTROL threshold]** kan du undvika att använda för mycket skärpa i områden med liknande färger, som hudtoner. Ett tröskelvärde på 12 ignorerar till exempel små variationer i hudtonens ljusstyrka för att undvika att lägga till&quot;brus&quot;, samtidigt som kantkontrasten läggs till i områden med hög kontrast, till exempel där ögonfransarna möter huden.
+     Den här parametern avgör hur annorlunda de pixlar som ska göras skarpare måste vara från det omgivande området innan de betraktas som kantpixlar och filtret gör dem skarpare. Parametern **[!UICONTROL threshold]** hjälper till att undvika att göra områden med liknande färger, som hudtoner, för mycket skarpare. Ett tröskelvärde på 12 ignorerar till exempel små variationer i hudtonens ljusstyrka för att undvika att lägga till&quot;brus&quot;, samtidigt som kantkontrasten läggs till i områden med hög kontrast, till exempel där ögonfransarna möter huden.
 
      Mer information om hur du ställer in de här tre parametrarna, inklusive de bästa sätten att använda med filtret, finns i följande resurser:
 
-      * Rapport om bästa praxis [Adobe Dynamic Media Classic bästa praxis för bildkvalitet och skärpa](/help/assets/dynamic-media/assets/sharpening_images.pdf) gäller även Experience Manager.
+      * Best practices white paper [Adobe Dynamic Media Classic Image Quality and Sharpening Best Practices](/help/assets/dynamic-media/assets/sharpening_images.pdf) gäller även Experience Manager.
 
-      * Titta [Använd bildskärpa med Experience Manager - Dynamic Media](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-image-sharpening-feature-video-use#dynamic-media).
+      * Titta på [Använd bildskärpa med Experience Manager - Dynamic Media](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-image-sharpening-feature-video-use#dynamic-media).
 
       * Med Experience Manager kan du även styra en fjärde parameter: monokrom (0,1). Den här parametern avgör om oskarp maskning används separat på varje färgkomponent med värdet 0 eller på bildens intensitet/intensitet med värdet 1.
 
@@ -126,25 +126,25 @@ Lämna den monokroma parameterinställningen på 0.
 
 ### Bästa tillvägagångssätt för JPEF-komprimering (`&qlt=`) {#best-practices-for-jpef-compression-qlt}
 
-* Den här parametern styr kodningskvaliteten för JPG. Ett högre värde innebär en bild med högre kvalitet men en stor filstorlek. Ett lägre värde innebär en bild med lägre kvalitet men mindre filstorlek. Intervallet för parametern är 0-100.
-* Om du vill optimera kvaliteten ska du inte ange parametervärdet 100. Skillnaden mellan en inställning på 90 eller 95 och 100 är nästan osynlig. Och ändå ökar 100 bildfilens storlek i onödan. Om du vill optimera kvaliteten men undvika att bildfilerna blir för stora anger du `qlt= value` till 90 eller 95.
-* Om du vill optimera för en liten bildfilsstorlek men behålla bildkvaliteten på en godtagbar nivå anger du `qlt= value` till 80. Värden under 70 till 75 ger en signifikant försämring av bildkvaliteten.
-* Det bästa sättet att vara i mitten är att ställa in `qlt= value` till 85 om du vill stanna i mitten.
-* Använda chroma-flaggan i `qlt=`
+* Den här parametern styr JPG kodningskvaliteten. Ett högre värde innebär en bild med högre kvalitet men en stor filstorlek. Ett lägre värde innebär en bild med lägre kvalitet men mindre filstorlek. Intervallet för parametern är 0-100.
+* Om du vill optimera kvaliteten ska du inte ange parametervärdet 100. Skillnaden mellan en inställning på 90 eller 95 och 100 är nästan osynlig. Och ändå ökar 100 bildfilens storlek i onödan. Om du vill optimera för kvaliteten men undvika att bildfilerna blir för stora anger du därför `qlt= value` till 90 eller 95.
+* Om du vill optimera för en liten bildfilsstorlek men behålla bildkvaliteten på en acceptabel nivå anger du `qlt= value` till 80. Värden under 70 till 75 ger en signifikant försämring av bildkvaliteten.
+* För att vara i mitten bör du ange `qlt= value` till 85 för att förbli i mitten.
+* Använda kroma-flaggan i `qlt=`
 
-   * The `qlt=` parametern har en andra inställning som gör att du kan aktivera nedsampling av färgvärden i RGB `,1` eller avaktivera med hjälp av värdet `,0`.
-   * Börja med att stänga av nedsampling av kromaticitet i RGB (`,0`). Den här inställningen ger vanligtvis bättre bildkvalitet, särskilt för syntetiska bilder med många skarpa kanter och kontrast.
+   * Parametern `qlt=` har en andra inställning som gör att du kan aktivera nedsampling av färgvärden i RGB med värdet `,1` eller inte med värdet `,0`.
+   * Om du vill göra det enkelt kan du börja med nedsampling av färgförändringar i RGB inaktiverat (`,0`). Den här inställningen ger vanligtvis bättre bildkvalitet, särskilt för syntetiska bilder med många skarpa kanter och kontrast.
 
-Ett tips för komprimering med JPG är att använda `&qlt=85,0`.
+Använd `&qlt=85,0` som bästa praxis för komprimering JPG.
 
-## Bästa tillvägagångssätt för storleksändring av JPEG (`&jpegSize=`) {#best-practices-for-jpeg-sizing-jpegsize}
+## Bästa tillvägagångssätt för att ändra storlek på JPEG (`&jpegSize=`) {#best-practices-for-jpeg-sizing-jpegsize}
 
-Parametern `jpegSize` är användbart om du vill garantera att en bild inte överskrider en viss storlek för leverans till enheter som har begränsat minne.
+Parametern `jpegSize` är användbar om du vill garantera att en bild inte överskrider en viss storlek för leverans till enheter som har begränsat minne.
 
 * Den här parametern anges i kilobyte (`jpegSize=&lt;size_in_kilobytes&gt;`). Det definierar den största tillåtna storleken för bildleverans.
-* `&jpegSize=` interagerar med komprimeringsparametern JPG `&qlt=`. Om JPG svarar med den angivna komprimeringsparametern JPG (`&qlt=`) överstiger inte ejpegSize-värdet, bilden returneras med `&qlt=` enligt definition. I annat fall `&qlt=` minskas gradvis tills bilden får plats i den tillåtna maxstorleken. Eller tills systemet avgör att det inte får plats och returnerar ett fel.
+* `&jpegSize=` interagerar med JPG komprimeringsparametern `&qlt=`. Om JPG svar med den angivna JPG-komprimeringsparametern (`&qlt=`) inte överskrider ejpegSize-värdet returneras bilden med `&qlt=` enligt definitionen. Annars minskas `&qlt=` gradvis tills bilden får plats i den högsta tillåtna storleken. Eller tills systemet avgör att det inte får plats och returnerar ett fel.
 
-Som bästa praxis bör du ange `&jpegSize=` och lägg till parametern `&qlt=` om du levererar JPG-bilder till enheter med begränsat minne.
+Det bästa är att ange `&jpegSize=` och lägga till parametern `&qlt=` om du levererar JPG-bilder till enheter med begränsat minne.
 
 ## Sammanfattning av bästa praxis {#best-practices-summary}
 
@@ -161,5 +161,5 @@ Om skärpeeffekten fortfarande inte är tillräcklig ökar du radien i decimalst
 Följande allmänna förslag är användbara när du experimenterar för att optimera arbetsflödet:
 
 * Testa olika parametrar i realtid direkt på en URL.
-* Det är en god vana att gruppera Dynamic Media Image Serving-kommandon i en bildförinställning. En bildförinställning är i princip URL-kommandomakron med egna förinställningsnamn, som `$thumb_low$` och `&product_high$`. Det anpassade förinställningsnamnet i en URL-sökväg anropar de här förinställningarna. Den här funktionen hjälper dig att hantera kommandon och kvalitetsinställningar för olika användningsmönster för bilder på webbplatsen och förkortar den totala längden på URL-adresser.
-* Experience Manager har också mer avancerade sätt att finjustera bildkvaliteten, t.ex. genom att använda skärpebilder vid intag. Om du vill justera och optimera återgivningsresultaten [Adobe Consulting Services](https://business.adobe.com/customers/consulting-services/main.html) kan hjälpa er med skräddarsydda insikter och bästa praxis.
+* Det är en god vana att gruppera Dynamic Media Image Serving-kommandon i en bildförinställning. En bildförinställning är i princip URL-kommandomakron med anpassade förinställningsnamn som `$thumb_low$` och `&product_high$`. Det anpassade förinställningsnamnet i en URL-sökväg anropar de här förinställningarna. Den här funktionen hjälper dig att hantera kommandon och kvalitetsinställningar för olika användningsmönster för bilder på webbplatsen och förkortar den totala längden på URL-adresser.
+* Experience Manager har också mer avancerade sätt att finjustera bildkvaliteten, t.ex. genom att använda skärpebilder vid intag. [Adobe Consulting-tjänster](https://business.adobe.com/customers/consulting-services/main.html) kan hjälpa dig med anpassade insikter och metodtips för att optimera återgivningsresultaten.

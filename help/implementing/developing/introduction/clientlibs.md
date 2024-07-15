@@ -1,5 +1,5 @@
 ---
-title: Använda bibliotek på klientsidan på AEM as a Cloud Service
+title: Använda bibliotek på klientsidan i AEM as a Cloud Service
 description: AEM innehåller biblioteksmappar på klientsidan, som gör att du kan lagra klientsidans kod (klientlibs) i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
 exl-id: 370db625-09bf-43fb-919d-4699edaac7c8
 feature: Developing
@@ -12,34 +12,34 @@ ht-degree: 0%
 ---
 
 
-# Använda bibliotek på klientsidan på AEM as a Cloud Service {#using-client-side-libraries}
+# Använda bibliotek på klientsidan i AEM as a Cloud Service {#using-client-side-libraries}
 
-Digitala upplevelser är till stor del beroende av bearbetning på klientsidan som styrs av komplex JavaScript- och CSS-kod. Med AEM-bibliotek (klientbibliotek) kan du ordna och centralt lagra dessa klientbibliotek i databasen. Kopplad med [front end build process in the AEM Project Archetype,](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) det blir enkelt att hantera koden för ditt AEM.
+Digitala upplevelser är till stor del beroende av bearbetning på klientsidan som styrs av komplex JavaScript- och CSS-kod. Med AEM-bibliotek (klientbibliotek) kan du ordna och centralt lagra dessa klientbibliotek i databasen. I kombination med [front end-byggprocessen i AEM Project-arkitypen ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) blir det enkelt att hantera din front end-kod för ditt AEM.
 
 Fördelarna med att använda klienter i AEM är bland annat:
 
 * Kod på klientsidan lagras i databasen precis som all annan programkod och annat innehåll
 * Med Clientlibs in AEM kan du samla all CSS och JS i en enda fil
-* Visa klienten via en bana som är tillgänglig via [avsändare](/help/implementing/dispatcher/disp-overview.md)
+* Visa klientlibs via en sökväg som är tillgänglig via [dispatchern](/help/implementing/dispatcher/disp-overview.md)
 * Tillåter omskrivning av sökvägar för refererade filer eller bilder
 
 Clientlibs är den inbyggda lösningen för CSS och JavaScript från AEM.
 
 >[!TIP]
 >
->Utvecklare som skapar CSS och JavaScript för AEM ska också kunna använda [AEM Project Archetype och dess automatiserade front-end-byggprocess.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)
+>Utvecklare som skapar CSS och JavaScript för AEM-projekt bör också bekanta sig med [AEM Project Archetype och dess automatiserade front end-byggprocess.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)
 
 ## Vad är klientbibliotek? {#what-are-clientlibs}
 
-Webbplatser kräver JavaScript och CSS samt statiska resurser som ikoner och webbteckensnitt för att behandlas på klientsidan. En klientlib är en AEM som refererar (vid behov efter kategori) och betjänar sådana resurser.
+Webbplatser kräver JavaScript och CSS samt statiska resurser som ikoner och webbteckensnitt för att kunna bearbetas på klientsidan. En klientlib AEM en mekanism för att referera (vid behov per kategori) och betjäna sådana resurser.
 
-AEM samlar in webbplatsens CSS och JavaScript i en enda fil, på en central plats, för att säkerställa att endast en kopia av en resurs inkluderas i HTML-utdata. Detta maximerar effektiviteten vid leverans och gör att sådana resurser kan underhållas centralt i databasen via proxy, vilket skyddar åtkomsten.
+AEM samlar in webbplatsens CSS och JavaScript i en enda fil, på en central plats, för att säkerställa att endast en kopia av en resurs inkluderas i utdata från HTML. Detta maximerar effektiviteten vid leverans och gör att sådana resurser kan underhållas centralt i databasen via proxy, vilket skyddar åtkomsten.
 
-## Front-End Development för AEM as a Cloud Service {#fed-for-aemaacs}
+## Front-End Development for AEM as a Cloud Service {#fed-for-aemaacs}
 
-Alla JavaScript-, CSS- och andra front end-resurser ska bevaras i [ui.front-modulen i AEM Project Archetype.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) Tack vare den flexibla arkitekturen kan du använda dina moderna webbverktyg för att skapa och hantera dessa resurser.
+Alla JavaScript-, CSS- och andra frontresurser ska bevaras i modulen [ui.front i AEM Project Archetype.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) Med den flexibla arkitekturen kan du använda dina moderna webbverktyg för att skapa och hantera de här resurserna.
 
-Arketypen kan sedan kompilera resurserna till en enda CSS- och JS-fil och bädda in dem automatiskt i en `cq:clientLibraryFolder` i databasen.
+Arketypen kan sedan kompilera resurserna till en enda CSS- och JS-fil, och bädda in dem automatiskt i en `cq:clientLibraryFolder` i databasen.
 
 ## Mappstruktur för klientbibliotek {#clientlib-folders}
 
@@ -53,21 +53,21 @@ En biblioteksmapp på klientsidan är en databasnod av typen `cq:ClientLibraryFo
   - channels (string) multiple
 ```
 
-* `cq:ClientLibraryFolder` kan placeras var som helst i `/apps` underträd till databasen.
-* Använd `categories` för noden för att identifiera de bibliotekskategorier som den tillhör.
+* `cq:ClientLibraryFolder`-noder kan placeras var som helst inom `/apps`-underträdet i databasen.
+* Använd egenskapen `categories` för noden för att identifiera de bibliotekskategorier som den tillhör.
 
-Varje `cq:ClientLibraryFolder` innehåller en uppsättning JS- och/eller CSS-filer, tillsammans med några stödfiler (se nedan). Viktiga egenskaper för `cq:ClientLibraryFolder` är konfigurerade enligt följande:
+Varje `cq:ClientLibraryFolder` fylls i med en uppsättning JS- och/eller CSS-filer, tillsammans med några stödfiler (se nedan). Viktiga egenskaper för `cq:ClientLibraryFolder` har konfigurerats enligt följande:
 
-* `allowProxy`: Eftersom alla klientlibs måste lagras under `apps`, tillåter den här egenskapen åtkomst till klientbibliotek via proxyservrar. Se avsnittet [Hitta en klientbiblioteksmapp och använda servern för proxyklientbibliotek](#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) nedan.
-* `categories`: Identifierar de kategorier i vilka uppsättningen JS- och/eller CSS-filer i detta `cq:ClientLibraryFolder` höst. The `categories` eftersom en biblioteksmapp är flervärdesdel kan den ingå i mer än en kategori (se nedan hur detta kan vara användbart).
+* `allowProxy`: Eftersom alla klientbibliotek måste lagras under `apps`, tillåter den här egenskapen åtkomst till klientbibliotek via proxyservrar. Se avsnittet [Hitta en biblioteksmapp för klient och Använda servern för proxyklientbibliotek](#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) nedan.
+* `categories`: Identifierar de kategorier som uppsättningen med JS- och/eller CSS-filer i `cq:ClientLibraryFolder` hamnar i. Egenskapen `categories`, som är flervärd, gör att en biblioteksmapp kan ingå i mer än en kategori (se nedan för hur detta kan vara användbart).
 
-Om klientbiblioteksmappen innehåller en eller flera källfiler som sammanfogas till en enda JS- och/eller CSS-fil vid körning. Den genererade filens namn är nodnamnet med antingen `.js` eller `.css` filnamnstillägg. Biblioteksnoden med namnet `cq.jquery` resultat i den genererade filen med namnet `cq.jquery.js` eller `cq.jquery.css`.
+Om klientbiblioteksmappen innehåller en eller flera källfiler som sammanfogas till en enda JS- och/eller CSS-fil vid körning. Den genererade filens namn är nodnamnet med filnamnstillägget `.js` eller `.css`. Till exempel resulterar biblioteksnoden `cq.jquery` i den genererade filen `cq.jquery.js` eller `cq.jquery.css`.
 
 Klientbiblioteksmappar innehåller följande objekt:
 
 * JS- och/eller CSS-källfiler
 * Statiska resurser som stöder CSS-format, som ikoner, webbteckensnitt osv.
-* Ett `js.txt` fil och/eller en `css.txt` som identifierar de källfiler som ska sammanfogas i de genererade JS- och/eller CSS-filerna
+* En `js.txt`-fil och/eller en `css.txt`-fil som identifierar de källfiler som ska sammanfogas i de genererade JS- och/eller CSS-filerna
 
 ![Clientlib-arkitektur](assets/clientlib-architecture.drawio.png)
 
@@ -75,46 +75,46 @@ Klientbiblioteksmappar innehåller följande objekt:
 
 Klientbibliotek måste finnas under `/apps`. Den här regeln är nödvändig för att kunna isolera kod från innehåll och konfiguration på ett bättre sätt.
 
-I ordning för klientbiblioteken under `/apps` För att vara tillgänglig används en proxyserver. Åtkomstkontrollistorna används fortfarande i klientbiblioteksmappen, men med den kan innehållet läsas via `/etc.clientlibs/` om `allowProxy` egenskapen är inställd på `true`.
+En proxyserver används för att klientbiblioteken under `/apps` ska kunna nås. Åtkomstkontrollistorna används fortfarande i klientbiblioteksmappen, men med den kan innehållet läsas via `/etc.clientlibs/` om egenskapen `allowProxy` är inställd på `true`.
 
 1. Öppna CRXDE Lite i en webbläsare (`https://<host>:<port>/crx/de`).
-1. Välj `/apps` mapp och klicka på **Skapa > Skapa nod**.
-1. Ange ett namn för biblioteksmappen och i dialogrutan **Typ** välj lista `cq:ClientLibraryFolder`. Klicka **OK** och sedan klicka **Spara alla**.
-1. Om du vill ange den eller de kategorier som biblioteket tillhör väljer du `cq:ClientLibraryFolder` lägg till följande egenskap och klicka sedan på **Spara alla**:
+1. Markera mappen `/apps` och klicka på **Skapa > Skapa nod**.
+1. Ange ett namn för biblioteksmappen och välj `cq:ClientLibraryFolder` i listan **Typ**. Klicka på **OK** och sedan på **Spara alla**.
+1. Om du vill ange kategorin eller kategorierna som biblioteket tillhör markerar du noden `cq:ClientLibraryFolder`, lägger till följande egenskap och klickar sedan på **Spara alla**:
    * Namn: `categories`
    * Typ: String
    * Värde: Kategorinamnet
    * Flera: Markerade
-1. För att klientbiblioteken ska vara tillgängliga via proxy under `/etc.clientlibs`väljer du `cq:ClientLibraryFolder` lägg till följande egenskap och klicka sedan på **Spara alla**:
+1. För att klientbiblioteken ska kunna nås via proxy under `/etc.clientlibs`, markerar du noden `cq:ClientLibraryFolder`, lägger till följande egenskap och klickar sedan på **Spara alla**:
    * Namn: `allowProxy`
    * Typ: Boolean
    * Värde: `true`
-1. Om du behöver hantera statiska resurser skapar du en undermapp med namnet `resources` nedanför klientbiblioteksmappen.
-   * Om du lagrar statiska resurser var som helst utom under mappen `resources`kan de inte refereras till i en publiceringsinstans.
+1. Om du behöver hantera statiska resurser skapar du en undermapp med namnet `resources` under klientbiblioteksmappen.
+   * Om du lagrar statiska resurser var som helst utom under mappen `resources` kan de inte refereras till på en publiceringsinstans.
 1. Lägg till källfiler i biblioteksmappen.
    * Detta görs vanligtvis i den inledande byggprocessen för [AEM Project Archetype.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)
    * Du kan ordna källfiler i undermappar om du vill.
 1. Markera klientbiblioteksmappen och klicka på **Skapa > Skapa fil**.
 1. Skriv något av följande filnamn i rutan Filnamn och klicka på OK:
-   * **`js.txt`:** Använd det här filnamnet för att generera en JavaScript-fil.
+   * **`js.txt`:** Använd det här filnamnet för att skapa en JavaScript-fil.
    * **`css.txt`:** Använd det här filnamnet för att generera en CSS (Cascading Style Sheet).
 1. Öppna filen och skriv följande text för att identifiera källfilernas rot:
    * `#base=*[root]*`
-   * Ersätt `[root]` med sökvägen till den mapp som innehåller källfilerna i förhållande till TXT-filen. Använd till exempel följande text när källfilerna finns i samma mapp som TXT-filen:
+   * Ersätt `[root]` med sökvägen till mappen som innehåller källfilerna i förhållande till TXT-filen. Använd till exempel följande text när källfilerna finns i samma mapp som TXT-filen:
       * `#base=.`
-   * Följande kod anger roten som mappen mobile under `cq:ClientLibraryFolder` nod:
+   * Följande kod anger roten som mappen mobile under noden `cq:ClientLibraryFolder`:
       * `#base=mobile`
-1. På raderna nedan `#base=[root]`anger du sökvägarna för källfilerna i förhållande till roten. Placera filnamnen på separata rader.
-1. Klicka **Spara alla**.
+1. På raderna under `#base=[root]` skriver du sökvägarna för källfilerna i förhållande till roten. Placera filnamnen på separata rader.
+1. Klicka på **Spara alla**.
 
 ## Serverar bibliotek på klientsidan {#serving-clientlibs}
 
-När klientbiblioteksmappen är [konfigurerad efter behov,](#creating-clientlib-folders) dina klienter kan beställas via proxy. Exempel:
+När klientbiblioteksmappen har [konfigurerats enligt behov](#creating-clientlib-folders) kan dina klienter begäras via proxy. Exempel:
 
-* Du har en klientlib i `/apps/myproject/clientlibs/foo`
+* Du har ett klientlib i `/apps/myproject/clientlibs/foo`
 * Du har en statisk bild i `/apps/myprojects/clientlibs/foo/resources/icon.png`
 
-The `allowProxy` kan du begära:
+Med egenskapen `allowProxy` kan du begära:
 
 * Klientlib via `/etc.clientlibs/myprojects/clientlibs/foo.js`
 * Den statiska bilden via `/etc.clientlibs/myprojects/clientlibs/foo/resources/icon.png`
@@ -125,9 +125,9 @@ När dina klienter har lagrats och hanterats i klientbiblioteksmappen kan de nå
 
 Klientbibliotek läses in via en hjälpmall från AEM, som du kommer åt via `data-sly-use`. Hjälpmallar är tillgängliga i den här filen, som kan anropas via `data-sly-call`.
 
-Varje hjälpmall förväntar sig en `categories` för att referera till önskade klientbibliotek. Det alternativet kan antingen vara en array med strängvärden eller en sträng som innehåller en kommaseparerad värdelista.
+Varje hjälpmall förväntar sig ett `categories`-alternativ för att referera till de önskade klientbiblioteken. Det alternativet kan antingen vara en array med strängvärden eller en sträng som innehåller en kommaseparerad värdelista.
 
-[Se dokumentationen för HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html#loading-client-libraries) om du vill ha mer information om hur du läser in klientlibs via HTML.
+[Mer information om hur du läser in klipp via HTML finns i dokumentationen för HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html#loading-client-libraries).
 
 <!--
 ### Setting Cache Timestamps {#setting-cache-timestamps}
@@ -135,15 +135,15 @@ Varje hjälpmall förväntar sig en `categories` för att referera till önskade
 This is possible. Still need detail.
 -->
 
-## Klientbibliotek på författare jämfört med Publicera {#clientlibs-author-publish}
+## Klientbibliotek på författare jämfört med Publish {#clientlibs-author-publish}
 
-De flesta klientlibs krävs i AEM publiceringsinstans. Det vill säga att de flesta kundens syften är att skapa en användarupplevelse av innehållet. För clientlibs on publish instances, [verktyg för framtagning](#fed-for-aemaacs) kan användas och distribueras via [klientbiblioteksmappar enligt beskrivningen ovan.](#creating-clientlib-folders)
+De flesta klientlibs krävs i AEM publiceringsinstans. Det vill säga att de flesta kundens syften är att skapa en användarupplevelse av innehållet. För klientbibliotek på publiceringsinstanser kan [klientbyggverktygen](#fed-for-aemaacs) användas och distribueras via [klientbiblioteksmappar enligt beskrivningen ovan.](#creating-clientlib-folders)
 
 Det finns dock tillfällen då klientbibliotek kan behövas för att anpassa redigeringsupplevelsen. Om du till exempel anpassar en dialogruta kan det krävas att du distribuerar små bitar av CSS eller JS till AEM.
 
 ### Hantera klientbibliotek på författare {#clientlibs-on-author}
 
-Om du behöver använda klientbibliotek när du är författare kan du skapa dina klientbibliotek under `/apps` använda samma metoder som för publicering, men skriva direkt under `/apps/.../clientlibs/foo` i stället för att skapa ett helt projekt för att hantera det.
+Om du behöver använda klientbibliotek på författaren kan du skapa dina klientbibliotek under `/apps` med samma metoder som för publicering, men skriva det direkt under `/apps/.../clientlibs/foo` i stället för att skapa ett helt projekt för att hantera det.
 
 Du kan sedan&quot;koppla&quot; till JS:t för redigering genom att lägga till dina klientbibliotek i en körklar klientbibliotekskategori.
 
@@ -153,7 +153,7 @@ AEM innehåller flera verktyg för felsökning och testning av klientbiblioteksm
 
 ### Identifiera klientbibliotek {#discover-client-libraries}
 
-The `/libs/cq/granite/components/dumplibs/dumplibs` genererar en sida med information om alla klientbiblioteksmappar i systemet. The `/libs/granite/ui/content/dumplibs` -noden har komponenten som en resurstyp. Om du vill öppna sidan använder du följande URL (ändra värd och port efter behov):
+Komponenten `/libs/cq/granite/components/dumplibs/dumplibs` genererar en sida med information om alla klientbiblioteksmappar i systemet. Noden `/libs/granite/ui/content/dumplibs` har komponenten som en resurstyp. Om du vill öppna sidan använder du följande URL (ändra värd och port efter behov):
 
 `https://<host>:<port>/libs/granite/ui/content/dumplibs.test.html`
 
@@ -161,45 +161,45 @@ Informationen omfattar bibliotekets sökväg och typ (CSS eller JS) samt värden
 
 ### Se genererade utdata {#see-generated-output}
 
-The `dumplibs` -komponenten innehåller en testväljare som visar den källkod som genereras för `ui:includeClientLib` -taggar. Sidan innehåller kod för olika kombinationer av js-, css- och temaattribut.
+Komponenten `dumplibs` innehåller en testväljare som visar den källkod som genereras för `ui:includeClientLib` -taggar. Sidan innehåller kod för olika kombinationer av js-, css- och temaattribut.
 
 1. Använd någon av följande metoder för att öppna sidan Testa utdata:
-   * Från `dumplibs.html` klickar du på länken på sidan **Klicka här för utdatatestning** text.
+   * Klicka på länken i texten **Klicka här för utdatatestning** på sidan `dumplibs.html`.
    * Öppna följande URL i webbläsaren (använd en annan värd och port efter behov):
       * `http://<host>:<port>/libs/granite/ui/content/dumplibs.html`
    * Standardsidan visar utdata för taggar utan värde för attributet categories.
-1. Om du vill visa utdata för en kategori anger du värdet för klientbibliotekets `categories` egenskap och klicka på **Skicka fråga**.
+1. Om du vill visa utdata för en kategori anger du värdet för klientbibliotekets `categories`-egenskap och klickar på **Skicka fråga**.
 
 ## Ytterligare funktioner i klientbiblioteksmappen {#additional-features}
 
-Det finns flera andra funktioner som stöds av klientbiblioteksmappar i AEM. Dessa är dock inte nödvändiga på AEM as a Cloud Service och därför bör de inte användas. De listas här för fullständighet.
+Det finns flera andra funktioner som stöds av klientbiblioteksmappar i AEM. Dessa krävs dock inte av AEM as a Cloud Service och därför bör de inte användas. De listas här för fullständighet.
 
 >[!WARNING]
 >
->Dessa extrafunktioner i klientbiblioteksmappar behövs inte på AEM as a Cloud Service och därför bör de inte användas. De listas här för fullständighet.
+>Dessa extrafunktioner i klientbiblioteksmappar behövs inte i AEM as a Cloud Service och därför bör de inte användas. De listas här för fullständighet.
 
 ### Bibliotekshanteraren Adobe Granite HTML {#html-library-manager}
 
-Ytterligare inställningar för klientbibliotek kan styras via **Bibliotekshanteraren Adobe Granite HTML** panelen i systemkonsolen på `https://<host>:<port>/system/console/configMgr`).
+Ytterligare inställningar för klientbibliotek kan styras via panelen **Adobe Granite HTML Library Manager** i systemkonsolen på `https://<host>:<port>/system/console/configMgr`).
 
 ### Ytterligare mappegenskaper {#additional-folder-properties}
 
 Ytterligare mappegenskaper kan styra beroenden och inbäddningar, men behövs vanligtvis inte längre och användningen bör därför inte användas:
 
-* `dependencies`: Det här är en lista över andra klientbibliotekskategorier som den här biblioteksmappen är beroende av. Anges till exempel två `cq:ClientLibraryFolder` noder `F` och `G`, om det finns en fil i `F` kräver en annan fil i `G` för att fungera korrekt, och minst en av `categories` av `G` ska vara bland `dependencies` av `F`.
-* `embed`: Används för att bädda in kod från andra bibliotek. Om nod `F` bäddar in noder `G` och `H`blir HTML en sammanfogning av innehåll från noder `G` och `H`.
+* `dependencies`: Det här är en lista över andra klientbibliotekskategorier som den här biblioteksmappen är beroende av. Om till exempel två `cq:ClientLibraryFolder`-noder `F` och `G` kräver en annan fil i `F` för att den ska fungera på rätt sätt i `G` måste minst en av `categories` i `G` finnas bland `dependencies` i `F` .
+* `embed`: Används för att bädda in kod från andra bibliotek. Om noden `F` bäddar in noderna `G` och `H` blir HTML en sammanfogning av innehåll från noderna `G` och `H`.
 
 ### Länka till beroenden {#linking-to-dependencies}
 
-När koden i klientbiblioteksmappen refererar till andra bibliotek identifierar du de andra biblioteken som beroenden. The `ui:includeClientLib` -taggen som refererar till din klientbiblioteksmapp gör att HTML-koden innehåller en länk till den biblioteksfil som genereras och beroendena.
+När koden i klientbiblioteksmappen refererar till andra bibliotek identifierar du de andra biblioteken som beroenden. Taggen `ui:includeClientLib` som refererar till din klientbiblioteksmapp gör att HTML-koden innehåller en länk till den biblioteksfil som genererats och beroendena.
 
-Beroenden måste vara ett annat `cq:ClientLibraryFolder`. Om du vill identifiera beroenden lägger du till en egenskap i `cq:ClientLibraryFolder` nod med följande attribut:
+Beroenden måste vara en annan `cq:ClientLibraryFolder`. Om du vill identifiera beroenden lägger du till en egenskap i noden `cq:ClientLibraryFolder` med följande attribut:
 
 * **Namn:** beroenden
-* **Typ:** Sträng[]
-* **Värden:** Värdet på egenskapen categories för den cq:ClientLibraryFolder-nod som den aktuella biblioteksmappen är beroende av.
+* **Typ:** String[]
+* **Värden:** Värdet på kategoriegenskapen i cq:ClientLibraryFolder-noden som den aktuella biblioteksmappen är beroende av.
 
-Till exempel `/etc/clientlibs/myclientlibs/publicmain` är beroende av `cq.jquery` bibliotek. Sidan som refererar till huvudklientbiblioteket genererar HTML som innehåller följande kod:
+`/etc/clientlibs/myclientlibs/publicmain` är till exempel beroende av biblioteket `cq.jquery`. Sidan som refererar till huvudklientbiblioteket genererar HTML som innehåller följande kod:
 
 ```xml
 <script src="/etc/clientlibs/foundation/cq.jquery.js" type="text/javascript">
@@ -214,25 +214,25 @@ Inbäddning av kod är användbart för att ge åtkomst till bibliotek som lagra
 
 #### Appspecifika klientbiblioteksmappar {#app-specific-client-library-folders}
 
-Det är en god vana att behålla alla programrelaterade filer i programmappen nedan `/apps`. Det är också en god vana att neka åtkomst för webbplatsbesökare till `/apps` mapp. Skapa en klientbiblioteksmapp under `/etc` mapp som bäddar in klientbiblioteket som finns under `/apps`.
+Det är en god vana att behålla alla programrelaterade filer i programmappen under `/apps`. Det är också en god vana att neka åtkomst för webbplatsbesökare till mappen `/apps`. Om du vill följa båda de bästa metoderna skapar du en klientbiblioteksmapp under mappen `/etc` som bäddar in klientbiblioteket som är under `/apps`.
 
-Använd egenskapen categories för att identifiera klientbiblioteksmappen som ska bäddas in. Om du vill bädda in biblioteket lägger du till en egenskap i inbäddningen `cq:ClientLibraryFolder` nod, med följande egenskapsattribut:
+Använd egenskapen categories för att identifiera klientbiblioteksmappen som ska bäddas in. Om du vill bädda in biblioteket lägger du till en egenskap i noden `cq:ClientLibraryFolder` med följande egenskapsattribut:
 
-* **Namn:** embed
-* **Typ:** Sträng[]
-* **Värde:** Värdet för egenskapen categories i `cq:ClientLibraryFolder` nod som ska bäddas in.
+* **Namn:** bädda in
+* **Typ:** String[]
+* **Värde:** Värdet på kategoriegenskapen för noden `cq:ClientLibraryFolder` som ska bäddas in.
 
 #### Använda inbäddning för att minimera begäranden {#using-embedding-to-minimize-requests}
 
-I vissa fall kan det finnas ett relativt stort antal HTML som har skapats för en vanlig sida av publiceringsinstansen `<script>` -element.
+I vissa fall kan du upptäcka att det sista HTML som genereras för den typiska sidan av publiceringsinstansen innehåller ett relativt stort antal `<script>` element.
 
-I sådana fall kan det vara användbart att kombinera all nödvändig klientbibliotekskod till en enda fil så att antalet fram- och tillbaka-begäranden vid sidinläsning minskar. För att göra detta kan du `embed` de nödvändiga biblioteken i ditt programspecifika klientbibliotek med hjälp av egenskapen embed i `cq:ClientLibraryFolder` nod.
+I sådana fall kan det vara användbart att kombinera all nödvändig klientbibliotekskod till en enda fil så att antalet fram- och tillbaka-begäranden vid sidinläsning minskar. För att göra detta kan du `embed` de nödvändiga biblioteken i ditt programspecifika klientbibliotek med hjälp av inbäddningsegenskapen för noden `cq:ClientLibraryFolder` .
 
 #### Sökvägar i CSS-filer {#paths-in-css-files}
 
-När du bäddar in CSS-filer använder den genererade CSS-koden sökvägar till resurser som är relativa till inbäddningsbiblioteket. Till exempel det bibliotek som är tillgängligt för allmänheten `/etc/client/libraries/myclientlibs/publicmain` bäddar in `/apps/myapp/clientlib` klientbibliotek:
+När du bäddar in CSS-filer använder den genererade CSS-koden sökvägar till resurser som är relativa till inbäddningsbiblioteket. Det offentligt tillgängliga biblioteket `/etc/client/libraries/myclientlibs/publicmain` bäddar till exempel in klientbiblioteket `/apps/myapp/clientlib`:
 
-The `main.css` filen innehåller följande format:
+Filen `main.css` innehåller följande format:
 
 ```javascript
 body {
@@ -243,7 +243,7 @@ body {
 }
 ```
 
-CSS-filen som `publicmain` noden genererar följande format med den ursprungliga bildens URL:
+CSS-filen som genereras av noden `publicmain` innehåller följande format med den ursprungliga bildens URL:
 
 ```javascript
 body {
@@ -256,15 +256,15 @@ body {
 
 #### Se Inbäddade filer i utdata från HTML {#see-embedded-files}
 
-Om du vill spåra ursprunget för inbäddad kod eller se till att inbäddade klientbibliotek ger det förväntade resultatet, kan du se namnen på de filer som bäddas in under körning. Om du vill se filnamnen lägger du till `debugClientLibs=true` parametern till webbsidans URL. Biblioteket som skapas innehåller `@import` -programsatser i stället för den inbäddade koden.
+Om du vill spåra ursprunget för inbäddad kod eller se till att inbäddade klientbibliotek ger det förväntade resultatet, kan du se namnen på de filer som bäddas in under körning. Om du vill visa filnamnen lägger du till parametern `debugClientLibs=true` i webbsidans URL. Biblioteket som skapas innehåller `@import` programsatser i stället för den inbäddade koden.
 
-I exemplet i föregående [Bädda in kod från andra bibliotek](#embedding-code-from-other-libraries) -avsnittet, `/etc/client/libraries/myclientlibs/publicmain` klientbiblioteksmappen bäddar in `/apps/myapp/clientlib` biblioteksmapp för klient. Om du lägger till parametern på webbsidan skapas följande länk i webbsidans källkod:
+I exemplet i det föregående avsnittet [Embedding Code From Other Libraries](#embedding-code-from-other-libraries) bäddar klientbiblioteksmappen `/etc/client/libraries/myclientlibs/publicmain` in klientbiblioteksmappen `/apps/myapp/clientlib` . Om du lägger till parametern på webbsidan skapas följande länk i webbsidans källkod:
 
 ```xml
 <link rel="stylesheet" href="/etc/clientlibs/mycientlibs/publicmain.css">
 ```
 
-Öppna `publicmain.css` filen visar följande kod:
+Om du öppnar filen `publicmain.css` visas följande kod:
 
 ```javascript
 @import url("/apps/myapp/clientlib/styles/main.css");
@@ -277,7 +277,7 @@ I exemplet i föregående [Bädda in kod från andra bibliotek](#embedding-code-
 
 ### Använda preprocessorer {#using-preprocessors}
 
-AEM möjliggör anslutningsbara preprocessorer och levereras med stöd för [YUI-kompressor](https://github.com/yui/yuicompressor#yui-compressor---the-yahoo-javascript-and-css-compressor) för CSS och JavaScript och [Google Closure Compiler (GCC)](https://developers.google.com/closure/compiler/) för JavaScript med YUI inställt som AEM standardpreprocessor.
+AEM tillåter anslutningsbara preprocessorer och levereras med stöd för [YUI Compressor](https://github.com/yui/yuicompressor#yui-compressor---the-yahoo-javascript-and-css-compressor) för CSS och JavaScript och [Google Closure Compiler (GCC)](https://developers.google.com/closure/compiler/) för JavaScript med YUI inställt som AEM standardpreprocessor.
 
 De anslutningsbara preprocessorerna möjliggör flexibel användning, inklusive:
 
@@ -288,7 +288,7 @@ De anslutningsbara preprocessorerna möjliggör flexibel användning, inklusive:
 
 >[!NOTE]
 >
->Som standard använder AEM YUI-kompressor. Se [YUI Compressor GitHub-dokumentation](https://github.com/yui/yuicompressor/issues) om du vill se en lista över kända fel. Om du växlar till GCC-komprimerare för vissa klienter kan vissa problem som uppstår när du använder YUI lösas.
+>Som standard använder AEM YUI-kompressor. En lista över kända fel finns i [YUI Compressor GitHub-dokumentationen](https://github.com/yui/yuicompressor/issues). Om du växlar till GCC-komprimerare för vissa klienter kan vissa problem som uppstår när du använder YUI lösas.
 
 >[!CAUTION]
 >
@@ -298,8 +298,8 @@ De anslutningsbara preprocessorerna möjliggör flexibel användning, inklusive:
 
 Du kan välja att konfigurera preprocessorer-konfigurationen per klientbibliotek eller system i hela systemet.
 
-* Lägg till flervärdesegenskaper `cssProcessor` och `jsProcessor` på klientbiblioteksnoden
-* Eller definiera systemets standardkonfiguration via **HTML Library Manager** OSGi-konfiguration
+* Lägg till flervärdesegenskaperna `cssProcessor` och `jsProcessor` på klientbiblioteksnoden
+* Eller definiera systemstandardkonfigurationen via OSGi-konfigurationen för **HTML Library Manager**
 
 En preprocessorkonfiguration på klientlib-noden har företräde framför OSGI-konfigurationen.
 
@@ -348,8 +348,8 @@ Mer information om GCC-alternativ finns i [GCC-dokumentation](https://developers
 YUI anges som standardminifierare i AEM. Följ de här stegen för att ändra detta till GCC.
 
 1. Gå till Apache Felix Config Manager på (`http://<host>:<port/system/console/configMgr`)
-1. Sök och redigera **Bibliotekshanteraren Adobe Granite HTML**.
-1. Aktivera **Minify** (om inte redan aktiverat).
-1. Ange värdet **Standardkonfigurationer för JS-processor** till `min:gcc`.
+1. Hitta och redigera bibliotekshanteraren **Adobe Granite HTML**.
+1. Aktivera alternativet **Minify** (om det inte redan är aktiverat).
+1. Ange värdet **JS-processorns standardkonfigurationer** till `min:gcc`.
    * Alternativ kan skickas om de avgränsas med ett semikolon, till exempel `min:gcc;obfuscate=true`.
-1. Klicka **Spara** för att spara ändringarna.
+1. Klicka på **Spara** för att spara ändringarna.

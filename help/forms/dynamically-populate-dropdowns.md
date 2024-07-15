@@ -17,14 +17,14 @@ ht-degree: 0%
 
 ## Förutsättningar {#prerequisites}
 
-* [Skapa OSGI-paket](https://helpx.adobe.com/experience-manager/using/creating-osgi-bundles-digital-marketing.html)
+* [Skapar OSGI-paket](https://helpx.adobe.com/experience-manager/using/creating-osgi-bundles-digital-marketing.html)
 * [Utveckla AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/overview.html#developing)
 * [Skapa anpassat formulär](creating-adaptive-form.md)
 * [Skapa anpassat formulär](introduction-forms-authoring.md)
 
 ## Procedur för att dynamiskt fylla i nedrullningsbara listor {#procedure-to-dynamically-populate-drop-down-lists}
 
-Tänk dig ett scenario där du vill fylla i **Läge** nedrullningsbar lista baserad på ett värde som du väljer i **Land** listruta. Om du väljer Australien i dialogrutan **Land** nedrullningsbar lista **Läge** i den nedrullningsbara listan visas lägena i Australien. I proceduren nedan beskrivs hur du utför den här uppgiften.
+Tänk dig ett scenario där du vill fylla i listrutan **Läge** baserat på ett värde som du väljer i listrutan **Land**. Om du väljer Australien i listrutan **Land** visas lägena i Australien i listrutan **Läge**. I proceduren nedan beskrivs hur du utför den här uppgiften.
 
 1. Skapa ett projekt med följande moduler:
 
@@ -142,16 +142,16 @@ Tänk dig ett scenario där du vill fylla i **Läge** nedrullningsbar lista base
    }
    ```
 
-1. Skapa en nedrullningsbar nod under en viss mapphierarki i program (skapa till exempel en nod under /apps/myfolder/demo). Se till att `sling:resourceType` -parametern för noden är densamma som den som servleten pekar på (/apps/populatedDrop).
+1. Skapa en nedrullningsbar nod under en viss mapphierarki i program (skapa till exempel en nod under /apps/myfolder/demo). Kontrollera att parametern `sling:resourceType` för noden är densamma som den som servleten pekar på (/apps/populatedDropDown).
 
-   ![Skapa en listnod](assets/dropdown-node.png)
+   ![Skapa en nedrullningsbar nod](assets/dropdown-node.png)
 
 1. Paketera noden och bädda in .jar-filen på en viss plats (till exempel /apps/myfolder/demo/install/). Distribuera samma fil på servern.
 1. Skapa ett anpassat formulär och lägg till två listrutor, Land och Delstat. Listan Land kan innehålla namn på länder. Tillståndslistan kan dynamiskt fylla i namn på lägen för det land du väljer i den första listan.
 
    Lägg till namnen på länderna som ska visas i listan Land. I listan Läge lägger du till ett skript som fyller i det baserat på namnet på landet i listan Land.
 
-   ![Lägga till landsnamn](assets/country-dropdown.png) ![Lägga till skript för att fylla i lägesnamn](assets/state-dropdown.png) ![Listrutor för land och delstat för att samla in](assets/2dropdowns.png)
+   ![Lägger till landsnamn](assets/country-dropdown.png) ![Lägger till skript för att fylla i lägesnamn](assets/state-dropdown.png) ![Listrutor med länder och stater för att samla in](assets/2dropdowns.png)
 
    ```javascript
    JSON.parse(

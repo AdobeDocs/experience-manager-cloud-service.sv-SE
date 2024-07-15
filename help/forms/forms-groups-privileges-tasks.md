@@ -1,9 +1,10 @@
 ---
-title: Vilka användargrupper finns tillgängliga direkt i AEM Forms as a Cloud Service?
+title: Vilka användargrupper finns i AEM Forms as a Cloud Service?
 description: Lista över användargrupper som inte ingår i rutan och behörigheter som tilldelats varje grupp
 role: Admin, Developer, User
 feature: Adaptive Forms
-source-git-commit: 527c9944929c28a0ef7f3e617ef6185bfed0d536
+exl-id: bd66ce92-14d9-47fe-b5d3-022e3e468d25
+source-git-commit: 05548d56d791584781606b02839c5602b4469f7b
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 3%
@@ -19,7 +20,7 @@ ht-degree: 3%
 
 Du kan [skapa grupper](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html#accessing) och tilldela profiler och [användare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html#accessing) till grupperna. Dessa profiler styr behörigheter för de användare som ingår i gruppen.
 
-När du har konfigurerat [!DNL AEM Forms] as a Cloud Service, de grupper som listas i tabellen nedan, t.ex. [!DNL forms-users] och blankettkonstruktörer kan automatiskt tilldelas
+När du har konfigurerat [!DNL AEM Forms] as a Cloud Service är grupperna som listas i tabellen nedan, som [!DNL forms-users] och formulär-power-user, automatiskt tillgängliga för tilldelning:
 
 <table>
  <tbody>
@@ -61,7 +62,7 @@ När du har konfigurerat [!DNL AEM Forms] as a Cloud Service, de grupper som lis
    <td>[!DNL template-authors] <sup>[2]</sup></td> 
    <td>
     <ul> 
-     <li>Skapa och förhandsgranska Adaptiv Forms <!-- or interactive communications --> mallar</li> 
+     <li>Skapa och förhandsgranska adaptiva Forms <!-- or interactive communications -->-mallar</li> 
     </ul> </td> 
   </tr>
   <tr>

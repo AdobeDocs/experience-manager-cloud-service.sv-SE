@@ -1,6 +1,6 @@
 ---
-title: Versionsinformation för 2024.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för 2024.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Versionsinformation för version 2024.5.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation för version 2024.5.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
 source-git-commit: 076d2a6aa6e02a7ef6f9347f2dc36ca02103c130
 workflow-type: tm+mt
 source-wordcount: '1949'
@@ -10,25 +10,25 @@ ht-degree: 0%
 
 # Versionsinformation 2024.5.0 för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
-I följande avsnitt beskrivs versionsinformationen för 2024.5.0-versionen av [!DNL Experience Manager] as a Cloud Service.
+I följande avsnitt beskrivs versionsinformationen för funktionen för 2024.5.0-versionen av [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2022 eller 2023.
 >
->Ta en titt på [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) om de kommande funktionsaktiviteterna för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för att lära dig mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
->Se [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html) för information om dokumentationsuppdateringar som inte är direkt relaterade till en release.
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
 
 ## Releasedatum {#release-date}
 
-Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2024.5.0) är 30 maj 2024. Nästa version (2024.6.0) är planerad till 27 juni 2024.
+Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2024.5.0) är 30 maj 2024. Nästa version (2024.6.0) är planerad till 27 juni 2024.
 
 ## Versionsinformation om underhåll {#maintenance}
 
-Du kan hitta den senaste underhållsreleasenumerationen [här](/help/release-notes/maintenance/latest.md).
+Du hittar den senaste underhållsversionsinformationen [här](/help/release-notes/maintenance/latest.md).
 
 ## Släpp video {#release-video}
 
@@ -36,7 +36,7 @@ Titta på videon om versionsöversikten från maj 2024 om du vill se en sammanfa
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429503?quality=12)
 
-## [!DNL Experience Manager Sites] som [!DNL Cloud Service] {#sites}
+## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 
 ### Nya funktioner på webbplatser {#sites-new-features}
 
@@ -58,7 +58,7 @@ Titta på videon om versionsöversikten från maj 2024 om du vill se en sammanfa
 
 #### RUM-datatjänst (Real Use Monitoring) {#real-use-monitoring}
 
-* **[RUM-datatjänsten (Real Use Monitoring) är nu GA](/help/implementing/cloud-manager/content-requests.md#real-user-monitoring-for-aem-as-a-cloud-service)** som möjliggör datainsamling på klientsidan för AEM as a Cloud Service.
+* **[Datatjänsten för övervakning av faktisk användning (RUM) är nu GA](/help/implementing/cloud-manager/content-requests.md#real-user-monitoring-for-aem-as-a-cloud-service)** som aktiverar datainsamling på klientsidan för AEM as a Cloud Service.
 Tjänsten Real Use Monitoring, kundsidessamlingen, ger en mer exakt återgivning av interaktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det ger kunder med avancerade insikter om sidtrafik och prestanda. Det är en utmärkt möjlighet att lära sig mer om hur sidan fungerar och få insikter för att förbättra den.
 
 #### AEM för Edge Delivery Services {#edge-enhancements}
@@ -69,9 +69,9 @@ Förbättrad stabilitet och olika förbättringar för en bättre redigeringsupp
 
 **Generera variationer**
 
-Utnyttja GenAI genom AEM nya funktioner, [generera variationer](/help/generative-ai/generate-variations.md), nu i Cloud Service. Generera variationer hjälper er att generera och skala innehåll med hjälp av generativ AI. Kontakta ert Adobe-kontoteam för att ta del av detta i programmet.
+Utnyttja GenAI genom att AEM nya funktioner, [generera varianter](/help/generative-ai/generate-variations.md), som nu är tillgängliga i Cloud Service. Generera variationer hjälper er att generera och skala innehåll med hjälp av generativ AI. Kontakta ert Adobe-kontoteam för att ta del av detta i programmet.
 
-**Resursbläddring i Content Fragment Console**
+**Resurssökning i Content Fragment Console**
 
 Innehållsförfattare kan nu bläddra bland, visa och vidta åtgärder för bilder och andra resurser utan att behöva lämna konsolen Innehållsfragment.
 
@@ -79,7 +79,7 @@ Innehållsförfattare kan nu bläddra bland, visa och vidta åtgärder för bild
 
 Är du intresserad av att testa funktionen och ge feedback? Skicka ett e-postmeddelande till aemcs-headless-adopter@adobe.com från ditt officiella e-post-ID om du vill veta mer om det tidiga adopterprogrammet.
 
-## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
+## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
 ### Nya funktioner i administrationsvyn {#admin-view-new-features}
 
@@ -88,13 +88,13 @@ Innehållsförfattare kan nu bläddra bland, visa och vidta åtgärder för bild
 
 ### Nya funktioner i vyn Assets {#assets-view-new-features}
 
-**Publish material till AEM och Dynamic Media**
+**Publish-resurser till AEM och Dynamic Media**
 
-Med Experience Manager Assets kan du nu snabbt [publicera resurser på Experience Manager och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md) använda Assets-vyn utan att växla till administrationsvyn. Du kan publicera resurser när du överför, bläddrar bland och söker efter resurser.
+Med Experience Manager Assets kan du nu snabbt [publicera resurser till Experience Manager och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md) med Assets-vyn utan att växla till administrationsvyn. Du kan publicera resurser när du överför, bläddrar bland och söker efter resurser.
 
 ![kontrollera publiceringsstatus1](/help/assets/assets/check-publish-status1.png)
 
-## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
+## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
 <!-- 
 
@@ -108,13 +108,13 @@ Med Experience Manager Assets kan du nu snabbt [publicera resurser på Experienc
 
 Den här versionen innebär en betydande uppgradering av den visuella regelredigeraren för adaptiva formulär baserade på kärnkomponenter. Du kan nu:
 
-* Skapa regler i Visual Rule Editor för att [åsidosätta standardmeddelanden om att formuläret har skickats in eller misslyckats](/help/forms/create-and-use-custom-functions.md#use-case-override-form-submission-success-and-error-handlers).
+* Skapa regler i redigeraren för visuell regel för att [åsidosätta standardmeddelanden om att formuläret har skickats in eller misslyckats](/help/forms/create-and-use-custom-functions.md#use-case-override-form-submission-success-and-error-handlers).
 
-* I den adaptiva Forms-regelredigeraren har du lagt till möjligheten att [välja olika typer av fält för WHEN-åtgärden](/help/forms/rule-editor-core-components.md#allowed-multiple-fields-in-when).
+* I den adaptiva Forms-regelredigeraren lade till möjligheten att [välja olika typer av fält för WHEN-åtgärden](/help/forms/rule-editor-core-components.md#allowed-multiple-fields-in-when).
 
-* En formulärförfattare kan nu använda anpassade funktioner på [bearbeta data innan de skickas](/help/forms/create-and-use-custom-functions.md#use-case-submit-altered-data-to-the-server).
+* En formulärförfattare kan nu använda anpassade funktioner på [förbearbeta data innan de skickas in](/help/forms/create-and-use-custom-functions.md#use-case-submit-altered-data-to-the-server).
 
-* Använd [**Spara som utkast**](/help/forms/save-core-component-based-form-as-draft.md) funktioner för att spara delvis ifyllda formulär för senare inskickning. Detta är användbart i scenarier där användare måste avbryta ifyllandet av ett formulär och komma tillbaka till det senare.
+* Använd funktionen [**Spara som utkast**](/help/forms/save-core-component-based-form-as-draft.md) om du vill spara delvis ifyllda formulär som kan skickas senare. Detta är användbart i scenarier där användare måste avbryta ifyllandet av ett formulär och komma tillbaka till det senare.
 
 
 
@@ -122,19 +122,19 @@ Den här versionen innebär en betydande uppgradering av den visuella regelredig
 
 Programmet AEM Forms Early Access Program ger dig en unik möjlighet att få exklusiv tillgång till de senaste innovationerna åt alla andra och hjälper dig att utveckla dem. Programmet ger tillgång till flera innovationer.
 
-I den här versionsinformationen listas de innovationer som levererats i den aktuella versionen. En fullständig lista över de innovationer som finns inom programmet för tidig åtkomst finns på [Dokumentation för AEM Forms Early Access Program](/help/forms/early-access-ea-features.md).
+I den här versionsinformationen listas de innovationer som levererats i den aktuella versionen. En fullständig lista över de innovationer som är tillgängliga under Tidig åtkomst-programmet finns i [AEM Forms Tidig åtkomst-programdokumentation](/help/forms/early-access-ea-features.md).
 
 #### Förbättrade skyddsmetoder för robotar
 
 AEM Forms har förbättrat sina säkerhetsfunktioner genom att lägga till stöd för två populära CAPTCHA-lösningar: Cloudflare Turnstile och hCaptcha. Detta lägger till Google reCAPTCHA, som ger användarna större valfrihet och flexibilitet när det gäller att skydda sina formulär mot inskickade bidrag från skräppost.
 
-* **Molnformad vändning**: Denna friktionslösa CAPTCHA verifierar användarna genom en enkel utmaning som inte kräver någon explicit interaktion. De kan integreras smidigt i formulären och förbättrar användarupplevelsen.
-* **hCaptcha**: Denna sekretessinriktade CAPTCHA erbjuder ett användarvänligt alternativ med fokus på datasekretess. Syftet är att skapa en balans mellan säkerhet och användarupplevelse.
-* **Google reCAPTCHA**: AEM Forms fortsätter att stödja både reCAPTCHA v2 och reCAPTCHA Enterprise, som är en tillförlitlig och väletablerad lösning.
+* **Cloudflare Turnstle**: Den här friktionslösa CAPTCHA verifierar användare genom en enkel utmaning som inte kräver explicit interaktion. De kan integreras smidigt i formulären och förbättrar användarupplevelsen.
+* **hCaptcha**: Denna sekretessfokuserade CAPTCHA erbjuder ett användarvänligt alternativ med fokus på datasekretess. Syftet är att skapa en balans mellan säkerhet och användarupplevelse.
+* **Google reCAPTCHA**: AEM Forms har fortsatt stöd för både reCAPTCHA v2 och reCAPTCHA Enterprise, vilket är en tillförlitlig och väletablerad lösning.
 
 Genom att erbjuda flera CAPTCHA-alternativ har AEM Forms gett dig möjlighet att välja den lösning som bäst passar just dina behov.
 
-Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I vår dokumentation finns detaljerade anvisningar för varje: [Molnformad vändning](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components)och [Google reCAPTCHA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
+Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I vår dokumentation finns detaljerade anvisningar för varje: [Cloudflare Turnstile](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components) och [Google reCAPTCHA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
 
 
 ### Forms Service
@@ -142,38 +142,38 @@ Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I v
 Forms-tjänsten genererar interaktiv PDF forms för datainhämtning. Den kan också användas för att importera eller exportera data till och från ett befintligt interaktivt PDF-formulär och validera skickade data. Här är en beskrivning av funktionaliteten:
 
 * **Återger Forms**: Generera ett interaktivt PDF-formulär från en mall som skapats med AEM Forms Designer och, eventuellt, XML-data. Detta skapar i stort sett ett ifyllbart PDF-formulär som kan fyllas i med data.
-* **Extrahering och import av data**: Importera data till ett befintligt PDF-formulär och extrahera data från ett ifyllt PDF-formulär. Både XDP- och XML-dataformat stöds, och import till icke-XFA PDF forms (kallas även AcroForms) stöder dessutom FDF- och XFDF-data.
-* **Dataverifiering**: Validera skickade data i XDP- eller XML-format mot en mall som skapats med AEM Forms Designer.
+* **Dataextrahering och import**: Importera data till ett befintligt PDF-formulär och extrahera data från ett ifyllt PDF-formulär. Både XDP- och XML-dataformat stöds, och import till icke-XFA PDF forms (kallas även AcroForms) stöder dessutom FDF- och XFDF-data.
+* **Dataverifiering**: Verifiera skickade data i XDP- eller XML-format mot en mall som skapats med AEM Forms Designer.
 
 >[!IMPORTANT]
 >
-> Om du är intresserad av att delta i vårt Tidig åtkomst-program för tidig åtkomst kan du skicka ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) för att begära åtkomst. Du kan begära åtkomst till alla eller alla specifika innovationer.
+> Om du är intresserad av att delta i vårt Tidig åtkomst-program för tidig åtkomst skickar du ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) för att begära åtkomst. Du kan begära åtkomst till alla eller alla specifika innovationer.
 
 
-## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
+## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
 
 ### OAuth Server-till-Server-autentiseringsuppgifter för integrering AEM andra Adobe-lösningar {#S2S-OAuth-credentials}
 
 Adobe Developer Console används för att generera autentiseringsuppgifter för att komma åt olika API:er. En av autentiseringstyperna, JWT (Service Account), har ersatts med autentiseringsuppgifter för OAuth Server-till-Server, som AEM Cloud Service nu stöder för integrering med andra Adobe-lösningar som Adobe Analytics och Adobe Target.
 
-[Läs om borttagningen](/help/security/jwt-credentials-deprecation-in-adobe-developer-console.md) och [lära dig hur du använder gränssnittet för AEM författare](/help/security/setting-up-ims-integrations-for-aem-as-a-cloud-service.md) för att konfigurera integreringar med andra Adobe-lösningar.
+[Läs om borttagningen](/help/security/jwt-credentials-deprecation-in-adobe-developer-console.md) och [lär dig hur du använder användargränssnittet för AEM](/help/security/setting-up-ims-integrations-for-aem-as-a-cloud-service.md) för att konfigurera integreringar med andra Adobe-lösningar.
 
 ### Trafikrasch vid ursprungsvarningar {#traffic-spike-origin}
 
-[Ta emot proaktiva meddelanden](/help/security/traffic-filter-rules-including-waf.md#traffic-spike-at-origin-alert) via Åtgärdscenter när trafikmönster på ursprungsplatsen tyder på en DDoS-attack, vilket gör att du kan undersöka och konfigurera trafikfilterregler.
+[Ta emot proaktiva meddelanden](/help/security/traffic-filter-rules-including-waf.md#traffic-spike-at-origin-alert) via Åtgärdscenter när trafikmönster på origo indikerar en DDoS-attack, så att du kan undersöka och konfigurera trafikfilterregler.
 
 ### Nya funktioner för RDE {#RDE-new-features}
 
-[Rapid Development Environment (RDE)](/help/implementing/developing/introduction/rapid-development-environments.md) gör att utvecklare snabbt kan driftsätta, granska och testa ändringar i molnet. Flera nya funktioner kommer att lanseras under juni-månaden. Vi bjuder också in dig direkt till Adobe Engineering på [RDE-indragskanal](https://discord.com/channels/1131492224371277874/1245304281184079872).
+[Med Rapid Development Environment (RDE)](/help/implementing/developing/introduction/rapid-development-environments.md) kan utvecklare snabbt distribuera, granska och testa ändringar i molnet. Flera nya funktioner kommer att lanseras under juni-månaden. Du kan även delta direkt i Adobe-teknik på [RDE Discord-kanalen](https://discord.com/channels/1131492224371277874/1245304281184079872).
 
 
 #### RDE-stöd för frontkod med hjälp av webbplatsteman och webbplatsmallar {#rde-frontend}
 
-[De lokala lagringsenheterna har nu stöd för slutkod](/help/implementing/developing/introduction/rapid-development-environments.md#deploying-themes-to-rde) baserat på [webbplatsteman](/help/sites-cloud/administering/site-creation/site-themes.md) och [webbplatsmallar](/help/sites-cloud/administering/site-creation/site-templates.md), för tidiga användare. Med de lokala redigeringssystemen görs detta med hjälp av ett kommandoradsdirektiv i stället för ett [rörledning för frontend](/help/sites-cloud/administering/site-creation/enable-front-end-pipeline.md).
+[De lokala lagringsplatserna har nu stöd för slutkod](/help/implementing/developing/introduction/rapid-development-environments.md#deploying-themes-to-rde) baserat på [webbplatsteman](/help/sites-cloud/administering/site-creation/site-themes.md) och [webbplatsmallar](/help/sites-cloud/administering/site-creation/site-templates.md) för användare som använder tidigare. Med RDE:er görs detta med hjälp av ett kommandoradsdirektiv i stället för en [frontendpipeline](/help/sites-cloud/administering/site-creation/enable-front-end-pipeline.md).
 
 #### Förbättrad loggning för RDE {#rde-logging}
 
-När du felsöker kod i en RDE kan utvecklare nu [konfigurera och strömma loggar mer produktivt](/help/implementing/developing/introduction/rapid-development-environments.md#rde-logging), med kommandoraden och utan att ändra OSGI-egenskaper i versionskontrollen. Funktioner:
+När du felsöker kod i en RDE kan utvecklare nu [konfigurera och strömma loggar mer produktivt](/help/implementing/developing/introduction/rapid-development-environments.md#rde-logging) med kommandoraden och utan att ändra OSGI-egenskaper i versionskontrollen. Funktioner:
 
 * deklarera loggnivåer per paket eller klassnivå
 * anpassa loggutdataformatet
@@ -183,13 +183,13 @@ När du felsöker kod i en RDE kan utvecklare nu [konfigurera och strömma logga
 
 Gränssnittet för RDE-kommandoraden har några nya funktioner som förbättrar utvecklarupplevelsen:
 
-* [kommandot setup är interaktivt](/help/implementing/developing/introduction/rapid-development-environments.md#installing-the-rde-command-line-tools-interactive), vilket gör det enklare att välja mellan organisationer, program och miljöer. Nu går det även att åsidosätta dessa värden på kommandoraden.
-* [tyst läge](/help/implementing/developing/introduction/rapid-development-environments.md#global-flags) för en mindre detaljerad utskrift.
+* [kommandot setup är interaktivt](/help/implementing/developing/introduction/rapid-development-environments.md#installing-the-rde-command-line-tools-interactive) vilket gör det enklare att välja mellan organisationer, program och miljöer. Nu går det även att åsidosätta dessa värden på kommandoraden.
+* [tyst läge](/help/implementing/developing/introduction/rapid-development-environments.md#global-flags) för mindre utförliga utdata.
 * [json-läge](/help/implementing/developing/introduction/rapid-development-environments.md#global-flags) för användbara utdata när de anropas programmatiskt.
 
 ### Nya meddelanden från Åtgärdscenter {#actions-center-notifications}
 
-[Actions Center](/help/operations/actions-center.md) skickar e-postmeddelanden när viktiga incidenter inträffar eller om vi märker något om din kod eller konfiguration där du bör vidta proaktiva åtgärder. Det finns tre nya typer av meddelanden:
+[Åtgärdscenter](/help/operations/actions-center.md) skickar e-postmeddelanden när viktiga incidenter inträffar, eller om vi noterar något om koden eller konfigurationen där du bör vidta förebyggande åtgärder. Det finns tre nya typer av meddelanden:
 
 * för många utgående anslutningar via avancerad nätverksinfrastruktur
 * användning av ett föråldrat tjänstanvändarmappningsformat
@@ -197,7 +197,7 @@ Gränssnittet för RDE-kommandoraden har några nya funktioner som förbättrar 
 
 ### Tidiga Adobe-program {#foundation-early-adopter}
 
-E-post **<aemcs-cdn-config-adopter@adobe.com>**, vilket av de tidiga adopterprogrammen nedan du är intresserad av.
+Mejla **<aemcs-cdn-config-adopter@adobe.com>** som anger vilket av de tidiga adopterprogrammen nedan du är intresserad av.
 
 #### Rensa innehåll på CDN med en självbetjäningsnyckel (Early Adobe Program) {#purge-cdn}
 
@@ -213,11 +213,11 @@ Tidigare krävdes en supportanmälan för att generera den X-AEM-Edge-Key som kr
 
 #### Omdirigeringar på klientsidan (tidig Adobe-program) {#client-side-redirects-early-adopter}
 
-Konfigurera 301/302 klientomdirigeringar i källkontroll och distribuera till CDN. [Läs mer](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors).<!-- and join the early adopter program by emailing **<aemcs-cdn-config-adopter@adobe.com>**. --> Observera att det redan finns flera andra funktioner för [CDN-konfiguration](/help/implementing/dispatcher/cdn-configuring-traffic.md), inklusive begäran- och svarsomvandlingar och dirigering av trafik till externa webbplatser.
+Konfigurera 301/302 klientomdirigeringar i källkontroll och distribuera till CDN. [Läs mer](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors).<!-- and join the early adopter program by emailing **<aemcs-cdn-config-adopter@adobe.com>**. --> Observera att det redan finns flera andra funktioner som är tillgängliga för [CDN-konfigurationen](/help/implementing/dispatcher/cdn-configuring-traffic.md), bland annat omvandlingar av begäranden och svar samt routning av trafik till platser utanför AEM.
 
 #### Varningar om trafikfilterregler (tidig Adobe-program) {#traffic-filter-rules-alerts-early-adopter}
 
-Nyligen släppt [Trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md), som innehåller de valfria reglerna för brandvägg för webbprogram (WAF), låter dig konfigurera vilken trafik som ska tillåtas eller nekas.
+Med de nyligen släppta [trafikfilterreglerna](/help/security/traffic-filter-rules-including-waf.md), som innehåller de valfria reglerna för brandväggen för webbprogram (WAF), kan du konfigurera vilken trafik som ska tillåtas eller nekas.
 
 Gå med i det tidiga adopterprogrammet så att du kan få varningar när trafikfilterreglerna aktiveras. E-postmeddelanden från Åtgärdscenter håller dig informerad när vissa trafikförhållanden inträffar så att du kan vidta lämpliga åtgärder.
 
@@ -227,16 +227,16 @@ Ungefär som AEM 6.5, kommer Apache/dispatcher att importera omskrivningskartor 
 
 #### Edge Side Includes (ESI) for Loading Dynamic Content (Early Adobe Program) {#esi-early-adopter}
 
-Hanterad CDN i Adobe har nu stöd för [Edge Side Includes (ESI)](/help/implementing/dispatcher/edge-side-includes.md), ett markeringsspråk för sammanställning av dynamiskt webbinnehåll på kantnivå. Genom att ta med ESI-fragment kan du cachelagra hela HTML-sidan vid CDN med högre TTL-värden, medan du oftare hämtar mindre avsnitt från ursprungsläget som kräver högre uppdateringsintervall (nedre TTL-värden). <!--Please reach out to **<aemcs-cdn-config-adopter@adobe.com>** for more information.-->
+Hanterad CDN i Adobe har nu stöd för [Edge Side Includes (ESI)](/help/implementing/dispatcher/edge-side-includes.md), ett markeringsspråk för dynamisk sammanställning av webbinnehåll på kantnivå. Genom att ta med ESI-fragment kan du cachelagra hela HTML-sidan vid CDN med högre TTL-värden, medan du oftare hämtar mindre avsnitt från ursprungsläget som kräver högre uppdateringsintervall (nedre TTL-värden). <!--Please reach out to **<aemcs-cdn-config-adopter@adobe.com>** for more information.-->
 
-## [!DNL Experience Manager] Stödlinjer {#guides}
+## [!DNL Experience Manager] stödlinjer {#guides}
 
 * **Publish ett ämne eller dess element till ett Experience Fragment**
 Nu kan du publicera ett ämne eller dess element i ett Experience Fragment i Experience Manager Guides. En Experience Fragment är en modulär innehållsenhet som integrerar både innehåll och layout.  Experience Fragments är avgörande och kan hjälpa er att skapa enhetliga och engagerande upplevelser.
-* **Möjlighet att skicka metadata för ämnesresursen till utdata från Native PDF**
+* **Möjlighet att skicka metadata för ämnesresursen till utdata från PDF**
 Du kan lägga till metadata för ämnesresursen när du genererar utdata för Native PDF. Med den här funktionen kan du lägga till specifika metadata för olika ämnen, som ämnesrubrik och författare, i avsnittets sidhuvuden och sidfötter.
 
-Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides release roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -244,9 +244,9 @@ Du hittar en fullständig lista över månadsutgåvor av Cloud Manager [här](/h
 
 ## Migreringsverktyg {#migration-tools}
 
-Du hittar en fullständig lista över versioner av migreringsverktyg [här](/help/journey-migration/release-notes/release-notes-migration-tools-current.md).
+Du hittar en fullständig lista över migreringsverktygen [här](/help/journey-migration/release-notes/release-notes-migration-tools-current.md).
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
 Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
-Om du vill få ett månatligt e-postmeddelande om uppdateringar av versionsinformation för Experience Cloud prenumererar du på [Produktuppdatering Adobe Priority](https://www.adobe.com/subscription/priority-product-update.html).
+Om du vill få ett månatligt e-postmeddelande om uppdateringar av versionsinformation för Experience Cloud, prenumererar du på [produktuppdateringen för Adobe Priority](https://www.adobe.com/subscription/priority-product-update.html).

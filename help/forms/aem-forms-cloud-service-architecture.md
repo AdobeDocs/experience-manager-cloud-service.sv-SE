@@ -1,6 +1,6 @@
 ---
 title: AEM Forms as a Cloud Service Architecture for Adaptive Forms and Communication APIs
-description: Förstå arkitekturen i [!DNL AEM Forms] as a Cloud Service att lära sig om plattformens skalbarhet, flexibilitet och prestanda.
+description: Förstå arkitekturen hos  [!DNL AEM Forms] as a Cloud Service för att lära dig mer om plattformens skalbarhet, flexibilitet och prestanda.
 role: Admin, Developer, User
 feature: Adaptive Forms
 exl-id: 9d677bee-50ca-460e-b503-6b7799900735
@@ -11,14 +11,14 @@ ht-degree: 0%
 
 ---
 
-# [!DNL AEM] Forms as a Cloud Service arkitektur {#architecture}
+# [!DNL AEM] Forms as a Cloud Service-arkitektur {#architecture}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/aem-forms-architecture-deployment.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
-[!DNL Adobe Experience Manager Forms] as a Cloud Service är en molnbaserad lösning för företag som vill skapa, hantera, publicera och uppdatera komplexa digitala formulär och kommunikation och samtidigt integrera inlämnade data med back-end-processer, affärsregler och spara data i ett externt datalager. Den utökas [!DNL Adobe Experience Manager as a Cloud Service]. Mer information om skalning, driftsättning, miljöer och annan infrastruktur finns i [En introduktion till arkitekturen i [!DNL Adobe Experience Manager as a Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html).
+[!DNL Adobe Experience Manager Forms] as a Cloud Service är en molnbaserad lösning för företag att skapa, hantera, publicera och uppdatera komplexa digitala formulär och kommunikation samtidigt som inskickade data integreras med bakomliggande processer, affärsregler och data sparas i ett externt datalager. Den utökar [!DNL Adobe Experience Manager as a Cloud Service]. Mer information om skalning, distribution, miljöer och annan infrastruktur finns i [En introduktion till arkitekturen i [!DNL Adobe Experience Manager as a Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html).
 
 AEM Forms as a Cloud Service har stöd för två viktiga användningsområden: digital registrering och kundkommunikation. Följande illustrationer visar arkitekturen för båda användningsområdena.
 
@@ -28,7 +28,7 @@ AEM Forms as a Cloud Service har stöd för två viktiga användningsområden: d
 
 ## Forms Communications
 
-![Forms-kommunikation](assets/forms-cloud-service-architecture-forms-communications.svg)
+![Forms-Communication](assets/forms-cloud-service-architecture-forms-communications.svg)
 
 ## Komponenter
 
@@ -36,11 +36,11 @@ Forms as a Cloud Service består av flera komponenter:
 
 ### CDN (Content Delivery Network)
 
-Alla AEM Forms as a Cloud Service program har tillgång till [inbyggd CDN-tjänst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html). Det ingår i licensen för Forms som Cloud Service.
+Alla AEM Forms as a Cloud Service program har tillgång till [den inbyggda CDN-tjänsten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html). Det ingår i licensen för Forms som Cloud Service.
 
 ### Författare
 
-En författare är en as a Cloud Service AEM Forms-instans som körs i standardkörningsläget för författare. Det är avsett för interna användare, formulärdesigners och utvecklare. I en redigeringsmiljö kan du använda följande funktioner:
+En författare är en AEM Forms as a Cloud Service-instans som körs i standardkörningsläget för författare. Det är avsett för interna användare, formulärdesigners och utvecklare. I en redigeringsmiljö kan du använda följande funktioner:
 
 * Skapa och hantera formulär.
 * Ansluter till tjänsten Automated forms conversion för att konvertera ett PDF- eller XDP-formulär till ett adaptivt formulär.
@@ -50,9 +50,9 @@ En författare är en as a Cloud Service AEM Forms-instans som körs i standardk
 * Synkrona RESTful API:er (Real-time API:er) och Batch API:er för att skapa, sammanställa och leverera varumärkesorienterad och personaliserad kommunikation.
 * Synkrona API:er för att kombinera, ordna om och validera PDF-dokument.
 
-### Publicera
+### Publish
 
-En Publish-instans är en AEM Forms-as a Cloud Service som körs i det vanliga publiceringskörningsläget. Publiceringsinstanser är avsedda för slutanvändare av formulärbaserade program, t.ex. användare som öppnar en offentlig webbplats och som skickar formulär. Det aktiverar följande funktioner:
+En Publish-instans är en AEM Forms-as a Cloud Service som körs i Publish standardkörningsläge. Publish-instanser är avsedda för användare av formulärbaserade program, t.ex. användare som öppnar en offentlig webbplats och skickar formulär. Det aktiverar följande funktioner:
 
 * Återge och skicka formulär för slutanvändare.
 * Transportering av obearbetade inlämnade formulärdata för vidare bearbetning och lagring i det slutliga databassystemet.
@@ -61,7 +61,7 @@ En Publish-instans är en AEM Forms-as a Cloud Service som körs i det vanliga p
 * Synkronisera API:er för att skapa, sammanställa och leverera varumärkesorienterad och personaliserad kommunikation.
 * Synkronisera API:er för att kombinera, ordna om och validera PDF-dokument.
 
-Omvänd replikering är inte tillgängligt på AEM as a Cloud Service för att skicka innehåll/data från publiceringstjänsten till författartjänsten. Du kan dock konfigurera en anpassad Forms som körs vid publicering så att data skickas till ett arbetsflöde på en författare (arbetsflöden kan bara köras på författaren). Detta är praktiskt vid användning av godkännanden.
+Omvänd replikering är inte tillgängligt i AEM as a Cloud Service för att skicka innehåll/data från Publish-tjänsten till författartjänsten. Du kan dock konfigurera en anpassad Forms som körs på Publish så att data skickas till ett arbetsflöde på en författare (arbetsflöden kan bara köras på författaren). Detta är praktiskt vid användning av godkännanden.
 
 #### Dispatcher
 
@@ -71,7 +71,7 @@ Omvänd replikering är inte tillgängligt på AEM as a Cloud Service för att s
 
 **Tjänsten Automated forms conversion**
 
-[Tjänsten automated forms conversion](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html) konverterar automatiskt dina PDF- och XFA-formulär till enhetsvänliga, responsiva och HTML5-baserade adaptiva formulär.
+[Automated forms conversion-tjänsten](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html) konverterar automatiskt dina PDF- och XFA-formulär till enhetsvänliga, responsiva och HTML5-baserade adaptiva formulär.
 
 **Adobe Sign**
 
@@ -82,19 +82,19 @@ Adobe’s PDF Services API lets create, combine, export, and extract data from P
 
 ### Kundhanterad lagring
 
-Forms as a Cloud Service innehåller alternativ för att lagra innehåll i ett externt lagringssystem som Blob Store, Database eller en lagringstjänst. Du kan också lagra processdata (AEM data från arbetsflödesvariabler) som innehåller känsliga SPD-element (Personal Data) i en kundhanterad databas för säker bearbetning. Adobe rekommenderar att du endast lagrar känsliga data på kundhanterade lager.
+Forms as a Cloud Service har alternativ för att lagra innehåll i ett externt lagringssystem som Blob Store, Database eller en lagringstjänst. Du kan också lagra processdata (AEM data från arbetsflödesvariabler) som innehåller känsliga SPD-element (Personal Data) i en kundhanterad databas för säker bearbetning. Adobe rekommenderar att du endast lagrar känsliga data på kundhanterade lager.
 
-Du kan använda **Enhetlig lagringsanslutning** för att ansluta till Blob Storage och **FDM (Form Data Model)** för att ansluta till databaser eller backend-tjänster (RESTful, SOAP, Azure Blob Storage med mera).
+Du kan använda **Unified Storage Connector** för att ansluta till Blob Storage och **Form Data Model (FDM)** för att ansluta till databaser eller backend-tjänster (RESTful, SOAP, Azure Blob Storage med mera).
 
 ### Dokumenttjänster
 
 Dokumenttjänster består av följande:
 
-* **Output Service (Communications - Document Generation APIs)** hjälper er att skapa varumärkesgodkända, personaliserade och standardiserade dokument som affärskorrespondenser, kontoutdrag, kravbrev, förmånsmeddelanden, månatliga räkningar eller välkomstpaket.
+* **Utdatatjänst (kommunikation - API:er för dokumentgenerering)** hjälper till att skapa varumärkesgodkända, personaliserade och standardiserade dokument som affärskorrespondenser, kontoutdrag, kravbearbetningsbrev, månatliga fakturor eller välkomstpaket.
 
-* **Assembler Service (kommunikation - API:er för dokumenthantering)** hjälper dig att kombinera, ordna om och validera PDF-dokument.
+* **Assembler Service (Communications - Document Management APIs)** hjälper dig att kombinera, ordna om och validera PDF-dokument.
 
-* **DoR-tjänst (Document of Record)** används för att generera DoR (Document of Record). Tjänsten körs i sina egna poder, separat från författaren och publiceringsinstanser av Forms as a Cloud Service. Det ger bättre prestanda och skalar fönstren oberoende av belastningen.
+* **DoR-tjänsten (Document of Record)** hjälper till att generera DoR-dokument (Document of Record). Tjänsten körs i sina egna poder, separat från författaren och Publish-instanser av Forms as a Cloud Service. Det ger bättre prestanda och skalar fönstren oberoende av belastningen.
 
 ### Cloud Manager
 
@@ -103,11 +103,12 @@ Cloud Manager är en viktig komponent i [AEM as a Cloud Service](https://experie
 * Skapa och hantera program
 * Skapa och hantera AEM miljöer i programmen
 * Skapa och hantera pipelines för distribution av kundkoden och konfigurationen till en viss miljö
-* Få meddelanden om viktiga livscykelhändelser för de här komponenterna (t.ex. produktuppdateringar) Mer information om Cloud Manager finns i [Förstå Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/cloud-manager/understand-cloud-manager-for-aem.html) och [Introduktion till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html).
+* Få meddelanden om viktiga livscykelhändelser för dessa komponenter (t.ex. produktuppdateringar)
+Mer information om Cloud Manager finns i [Förstå Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/cloud-manager/understand-cloud-manager-for-aem.html) och [Introduktion till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html).
 
 ### Developer Console
 
-En Developer Console innehåller olika detaljer om varje Forms som körs som en molntjänstmiljö. Den här informationen är användbar vid felsökning av miljön. Mer information finns i [Felsökning AEM as a Cloud Service med Developer Console](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html).
+En Developer Console tillhandahåller olika detaljer om varje Forms som körs som en molntjänstmiljö. Den här informationen är användbar vid felsökning av miljön. Mer information finns i [Felsöka AEM as a Cloud Service med Developer Console](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html).
 
 <!--
 
@@ -190,15 +191,15 @@ Set up your development environment, [Configure your CI/CD Pipeline](https://exp
 
 ### Adaptiv formulärredigering {#local-development}
 
-När du konfigurerar och konfigurerar [!DNL AEM Forms] i en as a Cloud Service miljö kan du skapa utvecklings-, staging- och produktionsmiljöer. Konfigurera dessutom en lokal utvecklingsmiljö för snabb utveckling och upprepningar. Du kan hämta och konfigurera AEM SDK och [!DNL AEM Forms] arkiv med tilläggsfunktioner för att konfigurera en lokal [!DNL Forms] as a Cloud Service utvecklingsmiljö.  Detaljerade anvisningar finns i [Konfigurera en lokal utvecklingsmiljö](setup-local-development-environment.md).
+När du konfigurerar och konfigurerar en [!DNL AEM Forms]-as a Cloud Service miljö konfigurerar du utvecklings-, mellanlagrings- och produktionsmiljöer. Konfigurera dessutom en lokal utvecklingsmiljö för snabb utveckling och upprepningar. Du kan hämta och konfigurera AEM SDK och tilläggsarkiv för [!DNL AEM Forms] för att konfigurera en lokal [!DNL Forms] as a Cloud Service utvecklingsmiljö.  Mer information finns i [Konfigurera en lokal utvecklingsmiljö](setup-local-development-environment.md).
 
 ## Felsökning {#debugging}
 
-AEM as a Cloud Service använder självbetjäning, skalbar, molninfrastruktur. Det kräver att AEM utvecklare förstår och felsöker olika aspekter av AEM as a Cloud Service, från att bygga och distribuera till att få information om AEM program som körs. Mer information finns i [Felsökning AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/overview.html).
+AEM as a Cloud Service använder sig av självbetjäning, skalbar, molninfrastruktur. Det kräver att AEM utvecklare förstår och felsöker olika aspekter av AEM as a Cloud Service, från att bygga och distribuera till att få information om AEM program som körs. Mer information finns i [Felsöka AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/overview.html).
 
 
 >[!MORELIKETHIS]
 >
 >* [Introduktion till AEM Forms as a Cloud Service Communications](/help/forms/aem-forms-cloud-service-communications-introduction.md)
->* [Batchbearbetning av AEM Forms as a Cloud Service Communications](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
+>* [AEM Forms as a Cloud Service Communications Batch Processing](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
 >* [Kommunikationsbearbetning - Synkrona API:er](/help/forms/aem-forms-cloud-service-communications.md)

@@ -17,20 +17,20 @@ Sidkomponenten för en SPA tillhandahåller inte HTML-elementen för dess undero
 
 ## Sidmodellshantering {#page-model-management}
 
-Lösning och hantering av sidmodellen delegeras till en angiven [`PageModelManager`](blueprint.md#pagemodelmanager) -modul. SPA måste interagera med `PageModelManager` när det initieras för att hämta den första sidmodellen och registrera sig för modelluppdateringar - oftast när författaren redigerar sidan via sidredigeraren. The `PageModelManager` kan nås av SPA som ett npm-paket. Som tolk mellan AEM och SPA, `PageModelManager` är avsedd att medfölja SPA.
+Sidmodellens upplösning och hantering har delegerats till en angiven [`PageModelManager`](blueprint.md#pagemodelmanager)-modul. SPA måste interagera med modulen `PageModelManager` när den initieras för att hämta den första sidmodellen och registrera sig för modelluppdateringar - oftast när författaren redigerar sidan via sidredigeraren. `PageModelManager` är tillgängligt för SPA som ett nPM-paket. Som tolk mellan AEM och SPA ska `PageModelManager` åtfölja SPA.
 
-Om du vill tillåta att sidan kan redigeras, ett klientbibliotek med namnet `cq.authoring.pagemodel.messaging` måste läggas till för att en kommunikationskanal ska kunna skapas mellan SPA och sidredigeraren. Om den SPA sidkomponenten ärver från sidans wcm/core-komponent finns det följande alternativ för att skapa `cq.authoring.pagemodel.messaging` tillgänglig klientbibliotekskategori:
+Om du vill tillåta att sidan kan redigeras måste ett klientbibliotek med namnet `cq.authoring.pagemodel.messaging` läggas till för att tillhandahålla en kommunikationskanal mellan SPA och sidredigeraren. Om den SPA sidkomponenten ärver från sidans wcm/core-komponent finns det följande alternativ för att göra klientbibliotekskategorin `cq.authoring.pagemodel.messaging` tillgänglig:
 
 * Om mallen är redigerbar lägger du till klientbibliotekskategorin i sidprincipen.
-* Lägg till klientbibliotekskategorin med `customfooterlibs.html` för sidkomponenten.
+* Lägg till klientbibliotekskategorin med hjälp av sidkomponentens `customfooterlibs.html`.
 
-Glöm inte att begränsa möjligheten att inkludera `cq.authoring.pagemodel.messaging` till sidredigerarens kontext.
+Glöm inte att begränsa inkludering av kategorin `cq.authoring.pagemodel.messaging` till kontexten för sidredigeraren.
 
 ## Kommunikationsdatatyp {#communication-data-type}
 
-Kommunikationsdatatypen ställs in på ett HTML-element i AEM Page-komponenten med hjälp av `data-cq-datatype` -attribut. När kommunikationsdatatypen är JSON, når GET-förfrågningarna en komponents Sling Model-slutpunkter. När en uppdatering har gjorts i sidredigeraren skickas JSON-representationen av den uppdaterade komponenten till sidmodellsbiblioteket. Sidmodellbiblioteket varnar sedan SPA om uppdateringar.
+Kommunikationsdatatypen anges som ett HTML-element inuti AEM Page-komponenten med attributet `data-cq-datatype`. När kommunikationsdatatypen är JSON, når GET-förfrågningarna en komponents Sling Model-slutpunkter. När en uppdatering har gjorts i sidredigeraren skickas JSON-representationen av den uppdaterade komponenten till sidmodellsbiblioteket. Sidmodellbiblioteket varnar sedan SPA om uppdateringar.
 
-**SPA -`body.html`**
+**SPA sidkomponent -`body.html`**
 
 ```
 <div id="page"></div>
@@ -38,7 +38,7 @@ Kommunikationsdatatypen ställs in på ett HTML-element i AEM Page-komponenten m
 
 Förutom att vara god praxis att inte fördröja DOM-genereringen kräver SPA att skripten läggs till i slutet av brödtexten.
 
-**SPA -`customfooterlibs.html`**
+**SPA sidkomponent -`customfooterlibs.html`**
 
 ```
 <sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"></sly>
@@ -49,7 +49,7 @@ Förutom att vara god praxis att inte fördröja DOM-genereringen kräver SPA at
 
 Meta-resursegenskaperna som beskriver SPA innehåll:
 
-**SPA -`customheaderlibs.html`**
+**SPA sidkomponent -`customheaderlibs.html`**
 
 ```
 <meta property="cq:datatype" data-sly-test="${wcmmode.edit || wcmmode.preview}" content="JSON"/>
@@ -67,18 +67,18 @@ Meta-resursegenskaperna som beskriver SPA innehåll:
 
 ## Metaegenskaper {#meta-properties}
 
-* `cq:wcmmode`: WCM-läge för redigerare (till exempel sida, mall)
-* `cq:pagemodel_root_url`: URL för appens rotmodell. Viktigt vid direkt åtkomst till en underordnad sida eftersom den underordnade sidmodellen är ett fragment av appens rotmodell. The `PageModelManager` disponerar sedan systematiskt om den inledande programmodellen när den anger programmet från dess rotstartpunkt.
-* `cq:pagemodel_router`: Aktivera eller inaktivera [`ModelRouter`](routing.md) i `PageModelManager` bibliotek
-* `cq:pagemodel_route_filters`: Kommaseparerad lista eller reguljära uttryck som tillhandahåller vägar för [`ModelRouter`](routing.md) måste ignorera.
+* `cq:wcmmode`: Redigerarnas WCM-läge (till exempel sida, mall)
+* `cq:pagemodel_root_url`: URL för appens rotmodell. Viktigt vid direkt åtkomst till en underordnad sida eftersom den underordnade sidmodellen är ett fragment av appens rotmodell. `PageModelManager` komponerar sedan systematiskt om den inledande programmodellen när programmet anges från dess rotstartpunkt.
+* `cq:pagemodel_router`: Aktivera eller inaktivera [`ModelRouter`](routing.md) för biblioteket `PageModelManager`
+* `cq:pagemodel_route_filters`: Kommaseparerad lista eller reguljära uttryck för att tillhandahålla vägar som [`ModelRouter`](routing.md) måste ignorera.
 
 ## Synkronisering av sidredigeringsövertäckning {#page-editor-overlay-synchronization}
 
-Synkroniseringen av övertäckningarna garanteras av samma Mutation-server som tillhandahålls av `cq.authoring.page` kategori.
+Synkroniseringen av övertäckningarna garanteras av exakt samma Mutation Observer som tillhandahålls av kategorin `cq.authoring.page`.
 
 ## Sling Model JSON Exported Structure Configuration {#sling-model-json-exported-structure-configuration}
 
 När routningsfunktionerna är aktiverade antas att JSON-exporten av SPA innehåller olika vägar för programmet tack vare JSON-exporten av den AEM navigeringskomponenten. JSON-utdata för den AEM navigeringskomponenten kan konfigureras i innehållsprincipen för SPA genom följande två egenskaper:
 
 * `structureDepth`: Nummer som motsvarar djupet i det exporterade trädet
-* `structurePatterns`: Regex för en matris av regexter som motsvarar den sida som ska exporteras
+* `structurePatterns`: Regex för en matris med regex som motsvarar den sida som ska exporteras

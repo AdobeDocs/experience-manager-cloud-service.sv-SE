@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Headless Setup {#introduction}
 
-Nedan beskrivs en enkel väg för att skapa, hantera och leverera upplevelser med AEM as a Cloud Service i fem steg för användare som redan är bekanta med AEM och headless-teknik. Varje guide bygger vidare på det föregående, så vi rekommenderar att du tittar noga igenom dem i ordning.
+Nedan beskrivs ett enkelt sätt att skapa, hantera och leverera upplevelser med AEM as a Cloud Service i fem steg för användare som redan är bekanta med AEM och headless-teknik. Varje guide bygger vidare på det föregående, så vi rekommenderar att du tittar noga igenom dem i ordning.
 
 1. [Skapa en konfiguration](create-configuration.md)
 1. [Skapa en innehållsfragmentmodell](create-content-model.md)
-1. [Skapa en resursmapp](create-assets-folder.md)
+1. [Skapa en Assets-mapp](create-assets-folder.md)
 1. [Skapa ett innehållsfragment](create-content-fragment.md)
 1. [Skapa en API-begäran](create-api-request.md)
 
@@ -29,8 +29,8 @@ Nedan beskrivs en enkel väg för att skapa, hantera och leverera upplevelser me
 >
 >* [Headless Developer Journey](/help/journey-headless/developer/overview.md)
 >* [Headless Content Architect Journey](/help/journey-headless/architect/overview.md)
->* [Headless Content Author Journey](/help/journey-headless/author/overview.md)
->* [Headless Translation Journey](/help/journey-headless/translation/overview.md).
+>* [Författarresa för Headless Content Author](/help/journey-headless/author/overview.md)
+>* [Huvudlös översättningsresa](/help/journey-headless/translation/overview.md).
 
 ## Målgrupp {#audience}
 
@@ -38,9 +38,9 @@ De uppgifter som beskrivs är nödvändiga för en grundläggande heltäckande d
 
 I en produktionssituation utförs uppgifterna dock av olika personer, olika många gånger. Till exempel:
 
-* **Administratörer** måste ställa in den inledande konfigurationen och mappstrukturen för innehållet normalt bara en gång eller sporadiskt.
-* **Informationsarkitekter** i allmänhet lägger till nya modeller allt eftersom organisationens behov förändras.
-* **Innehållsförfattare** skapa kontinuerligt innehåll som innehållsfragment baserat på de modeller som definieras av arkitekterna.
+* **Administratörer** måste konfigurera den inledande konfigurationen och mappstrukturen för innehållet, vanligtvis endast en gång eller sporadiskt.
+* **Informationsarkitekter** lägger vanligtvis till nya modeller allt eftersom organisationens behov förändras.
+* **Innehållsförfattare** skapar kontinuerligt innehåll som innehållsfragment baserat på de modeller som definieras av arkitekterna.
 
 ## Nästa steg {#next-step}
 

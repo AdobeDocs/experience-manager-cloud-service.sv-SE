@@ -26,7 +26,7 @@ Detta avsnitt behandlar följande ämnen:
 
 ## Ökning {#overview}
 
-***AEM Screens*** utnyttjar Adobe Analytics och med det kan ni uppnå något unikt på marknaden - flerkanalsanalyser som hjälper er att korrelera innehåll som visas på plats med andra datakällor.
+***AEM Screens*** använder Adobe Analytics och med det kan du uppnå något unikt på marknaden - kanalövergripande analyser som hjälper till att korrelera innehåll som visas på plats med andra datakällor.
 
 AEM Screens är en färdig integrerad lösning med Adobe Analytics och ger dig ett bevis på uppspelning.
 
@@ -39,7 +39,7 @@ I det här avsnittet beskrivs följande funktioner som används för att ansluta
 * Gör det möjligt att skapa feedbackslingor som spårar uppspelningshändelser över tid
 * Tillåter systemet att ändra innehåll och layouter baserat på kriterier som innehållets författare har definierat
 
-Adobe Analytics Integration med AEM Screens har alltså följande begränsningar *mål*:
+Adobe Analytics-integrering med AEM Screens tvingar alltså följande *mål*:
 
 * Aktivera ROI från implementering av digitala signaturer
 * Integrera Analytics som grund för att i framtiden kunna samla in och analysera användningsinformation
@@ -63,4 +63,4 @@ Det här scenariot anropar Analytics API via REST-anrop från en analystjänst i
 Analyshändelser lagras offline i indexedDB och sedan i chunked-läge och skickas till molnet.
 
 >[!NOTE]
->Mer information om sekvensering och standarddatamodell för händelser finns i [Konfigurera Adobe Analytics för AEM Screens](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/administering/analytics-integration/configuring-adobe-analytics-aem-screens.html) för mer information.
+>Mer information om sekvensering och standarddatamodell för händelser finns i [Konfigurera Adobe Analytics för AEM Screens](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/administering/analytics-integration/configuring-adobe-analytics-aem-screens.html).

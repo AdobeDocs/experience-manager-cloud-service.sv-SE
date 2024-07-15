@@ -36,21 +36,21 @@ En gruppåtgärd är en process för att generera flera dokument av liknande typ
 
 * **Konfiguration (definition)**: En batchkonfiguration lagrar information om olika resurser och egenskaper som ska anges för genererade dokument. Det innehåller till exempel information om XDP- eller PDF-mallen och platsen för kunddata som ska användas tillsammans med att ange olika egenskaper för utdatadokument.
 
-* **Körning**: Om du vill starta en gruppåtgärd skickar du gruppkonfigurationsnamnet till API:t för batchkörning.
+* **Körning**: Om du vill starta en gruppåtgärd skickar du gruppkonfigurationsnamnet till API:t för gruppkörning.
 
 ### Komponenter i en gruppåtgärd {#components-of-a-batch-operations}
 
-**Molnkonfiguration**: Med Experience Manager Cloud-konfigurationen kan du ansluta en Experience Manager-instans till kundägd Microsoft Azure Storage. Här kan du ange autentiseringsuppgifter för ett kundägt Microsoft Azure-konto som du kan ansluta till.
+**Molnkonfiguration**: Med Experience Manager Cloud-konfigurationen kan du ansluta en Experience Manager-instans till kundägd Microsoft Azure-lagring. Här kan du ange autentiseringsuppgifter för ett kundägt Microsoft Azure-konto som du kan ansluta till.
 
-**Konfiguration av batchdatalager (USC)**: Med batchdatakonfigurationen kan du konfigurera en specifik instans av Blob Storage för API:er för grupper. Här kan du ange in- och utdataplatser i kundägd Microsoft Azure Blob-lagring.
+**Konfiguration av batchdatalager (USC)**: Med batchdatakonfiguration kan du konfigurera en specifik instans av bloblagring för API:er för batchdata. Här kan du ange in- och utdataplatser i kundägd Microsoft Azure Blob-lagring.
 
-**Grupp-API:er**: Gör att du kan skapa en gruppkonfiguration och köra batchkörningar baserat på dessa konfigurationer för att sammanfoga en PDF- eller XDP-mall med data och generera utdata i formaten PDF, PS, PCL, DPL, IPL och ZPL. Kommunikationen innehåller batch-API:er för konfigurationshantering och batchkörning.
+**Batch-API:er**: Gör att du kan skapa en gruppkonfiguration och köra batchkörningar baserat på dessa konfigurationer för att sammanfoga en PDF- eller XDP-mall med data och generera utdata i formaten PDF, PS, PCL, DPL, IPL och ZPL. Kommunikationen innehåller batch-API:er för konfigurationshantering och batchkörning.
 
 ![data-merge-table](assets/communications-batch-structure.png)
 
 **Lagring**: Kommunikations-API:er använder kundägd Microsoft Azure Cloud-lagring för att hämta kundposter och lagra genererade dokument. Du konfigurerar Microsoft Azure Storage i Experience Manager Cloud Service Configuration.
 
-**App**: Ditt anpassade program som använder API:erna för grupper för att generera och använda dokument.
+**App**: Ditt anpassade program för att använda API:erna för att generera och använda dokument.
 
 ## Generera flera dokument med gruppåtgärder {#generate-multiple-documents-using-batch-operations}
 
@@ -58,7 +58,7 @@ Du kan använda gruppåtgärder för att generera flera dokument med schemalagda
 
 >[!VIDEO](https://video.tv.adobe.com/v/338349)
 
-Du kan titta på videon eller följa instruktionerna nedan för att lära dig hur du genererar dokument med gruppåtgärder. API-referensdokumentationen som används i video är tillgänglig i formatet .yaml. Du kan ladda ned [Grupp-API:er](assets/batch-api.yaml) och ladda upp den till Postman för att kontrollera API:ernas funktionalitet och följa med i videon.
+Du kan titta på videon eller följa instruktionerna nedan för att lära dig hur du genererar dokument med gruppåtgärder. API-referensdokumentationen som används i video är tillgänglig i formatet .yaml. Du kan hämta filen [Batch-API:er](assets/batch-api.yaml) och överföra den till Postman för att kontrollera API:ernas funktioner och följa med i videon.
 
 ### Krav {#pre-requisites}
 
@@ -80,7 +80,7 @@ Innan du använder en gruppåtgärd:
 
 ### Överför kunddata (XML-filer) till Azure Storage {#upload-customer-data-to-Azure-Storage}
 
-Skapa på din Microsoft Azure-lagring [behållare](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs) och [ladda upp kunddata (XML)](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs#managing-blobs-in-a-blob-container) till [mappar](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal) i behållarna.
+Skapa [containers](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs) och [överför kunddata (XML)](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs#managing-blobs-in-a-blob-container) till [folders](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal) inuti behållarna på din Microsoft Azure-lagring.
 >[!NOTE]
 >
 >Du kan konfigurera Microsoft Azure-lagring så att indatamappen rensas automatiskt eller så att innehåll i utdatamappen flyttas till en annan plats vid schemalagda intervall. Se dock till att mapparna inte rensas när en gruppåtgärd som refererar till mapparna fortfarande körs.
@@ -123,15 +123,15 @@ En organisation har vanligtvis flera mallar. Till exempel en mall var för kredi
 
 ## Använd batch-API för att generera dokument {#use-batch-API-to-generate-documents}
 
-Om du vill använda ett batch-API skapar du en batchkonfiguration och kör en körning som baseras på den konfigurationen. API-dokumentationen innehåller information om API:er för att skapa och köra en batch, motsvarande parametrar och eventuella fel. Du kan ladda ned [API-definitionsfil](assets/batch-api.yaml) och ladda upp den till [Postman](https://go.postman.co/home) eller liknande program för att testa API:erna för att skapa och köra en gruppåtgärd.
+Om du vill använda ett batch-API skapar du en batchkonfiguration och kör en körning som baseras på den konfigurationen. API-dokumentationen innehåller information om API:er för att skapa och köra en batch, motsvarande parametrar och eventuella fel. Du kan hämta [API-definitionsfilen](assets/batch-api.yaml) och överföra den till [Postman](https://go.postman.co/home) eller liknande program för att testa API:erna för att skapa och köra en gruppåtgärd.
 
 ### Skapa en batch {#create-a-batch}
 
-Använd kommandot `POST /config` API. Inkludera följande obligatoriska egenskaper i HTTP-begärans innehåll:
+Använd API:t `POST /config` om du vill skapa en grupp. Inkludera följande obligatoriska egenskaper i HTTP-begärans innehåll:
 
-* **configName**: Ange gruppnamnet. Exempel: `wknd-job`
-* **dataSourceConfigUri**: Ange plats för konfigurationen för batchdatalagret. Den kan vara en relativ eller absolut sökväg till konfigurationen. Till exempel: `/conf/global/settings/forms/usc/batch/wknd-batch`
-* **outputTypes**: Ange utdataformat: PDF och PRINT. Om du använder utdatatypen PRINT, `printedOutputOptionsList` anger du minst ett utskriftsalternativ. Utskriftsalternativen identifieras av sin renderingstyp, så för närvarande tillåts inte flera utskriftsalternativ med samma renderingstyp. De format som stöds är PS, PCL, DPL, IPL och ZPL.
+* **configName**: Ange gruppens unika namn. Exempel: `wknd-job`
+* **dataSourceConfigUri**: Ange platsen för konfigurationen för batchdatalagret. Den kan vara en relativ eller absolut sökväg till konfigurationen. Till exempel: `/conf/global/settings/forms/usc/batch/wknd-batch`
+* **outputTypes**: Ange utdataformat: PDF och PRINT. Om du använder utdatatypen PRINT anger du minst ett utskriftsalternativ i egenskapen `printedOutputOptionsList`. Utskriftsalternativen identifieras av sin renderingstyp, så för närvarande tillåts inte flera utskriftsalternativ med samma renderingstyp. De format som stöds är PS, PCL, DPL, IPL och ZPL.
 
 * **mall**: Ange en absolut eller relativ sökväg för mallen. Exempel: `crx:///content/dam/formsanddocuments/wknd/statements.xdp`
 
@@ -139,11 +139,11 @@ Om du anger en relativ sökväg anger du även en innehållsrot. Mer information
 
 <!-- For example, you include the following JSON in the body of HTTP APIs to create a batch named wknd-job: -->
 
-Du kan använda `GET /config /[configName]` för att se information om batchkonfigurationen.
+Du kan använda `GET /config /[configName]` för att visa information om batchkonfigurationen.
 
 ### Kör en batch {#run-a-batch}
 
-Om du vill köra (köra) en batch använder du `POST /config /[configName]/execution`. Om du till exempel vill köra en batch med namnet wknd-demo använder du /config/wknd-demo/execution. Servern returnerar HTTP-svarskod 202 när den godkänner begäran. API:t returnerar ingen nyttolast förutom en unik kod (execution-identifier) i huvudet för HTTP-svaret för batchjobbet som körs på servern. Du kan använda körnings-ID:t för att hämta batchstatus.
+Om du vill köra (köra) en grupp använder du `POST /config /[configName]/execution`. Om du till exempel vill köra en batch med namnet wknd-demo använder du /config/wknd-demo/execution. Servern returnerar HTTP-svarskod 202 när den godkänner begäran. API:t returnerar ingen nyttolast förutom en unik kod (execution-identifier) i huvudet för HTTP-svaret för batchjobbet som körs på servern. Du kan använda körnings-ID:t för att hämta batchstatus.
 
 >[!NOTE]
 >
@@ -151,7 +151,7 @@ Om du vill köra (köra) en batch använder du `POST /config /[configName]/execu
 
 ### Kontrollera status för en batch {#status-of-a-batch}
 
-Om du vill hämta status för en batch använder du `GET /config /[configName]/execution/[execution-identifier]`. Körnings-ID:t inkluderas i rubriken för HTTP-svar för gruppkörningsbegäran.
+Använd `GET /config /[configName]/execution/[execution-identifier]` om du vill hämta status för en grupp. Körnings-ID:t inkluderas i rubriken för HTTP-svar för gruppkörningsbegäran.
 
 Svaret på statusbegäran innehåller statusavsnittet. Den innehåller information om batchjobbets status, antalet poster som redan är i pipeline (som redan har lästs och bearbetats) och status för varje outputType/renderType(antal pågående, slutförda och misslyckade objekt). Statusen omfattar även start- och sluttid för batchjobb tillsammans med information om eventuella fel. Sluttiden är -1 tills batchkörningen faktiskt har slutförts.
 
@@ -162,9 +162,9 @@ Svaret på statusbegäran innehåller statusavsnittet. Den innehåller informati
 
 ### Visa genererade dokument {#view-generated-documents}
 
-När jobbet är klart lagras de genererade dokumenten i `success` på den målplats som anges i konfigurationen för batchdatalagret. Om det finns några fel skapar tjänsten en `failure` mapp. Här finns information om typ och orsak till fel.
+När jobbet är klart lagras de genererade dokumenten i mappen `success` på den målplats som anges i konfigurationen för batchdatalagret. Om det finns några fel skapar tjänsten en `failure`-mapp. Här finns information om typ och orsak till fel.
 
-Låt oss förstå med hjälp av ett exempel: Anta att det finns en indatafil `record1.xml` och två utdatatyper: `PDF` och `PCL`. Sedan innehåller målplatsen två undermappar `pdf` och `pcl`, en för varje utdatatyp. Låt oss anta att genereringen av PDF har slutförts, och sedan `pdf` undermappen innehåller `success` undermapp som i sin tur innehåller det genererade PDF-dokumentet `record1.pdf`. Låt oss anta att PCL-genereringen misslyckades, sedan `pcl` undermappen innehåller en `failure` undermapp som i sin tur innehåller en felfil `record1.error.txt` som innehåller information om felet. Målplatsen innehåller också en temporär mapp med namnet `__tmp__` som innehåller vissa filer som krävs vid batchkörning. Den här mappen kan tas bort när det inte finns några aktiva batchkörningar som refererar till målmappen.
+Låt oss förstå med hjälp av ett exempel: Anta att det finns en indatafil `record1.xml` och två utdatatyper: `PDF` och `PCL`. Målplatsen innehåller sedan två undermappar, `pdf` och `pcl`, en för var och en av utdatatyperna. Låt oss anta att genereringen av PDF har slutförts. `pdf`-undermappen innehåller `success`-undermappen som i sin tur innehåller det faktiska genererade PDF-dokumentet `record1.pdf`. Anta att PCL-genereringen misslyckades. Undermappen `pcl` innehåller en `failure`-undermapp som i sin tur innehåller en felfil `record1.error.txt` som innehåller information om felet. Målplatsen innehåller också en temporär mapp med namnet `__tmp__` som innehåller vissa filer som krävs under gruppkörning. Den här mappen kan tas bort när det inte finns några aktiva batchkörningar som refererar till målmappen.
 
 >[!NOTE]
 >
@@ -172,11 +172,11 @@ Låt oss förstå med hjälp av ett exempel: Anta att det finns en indatafil `re
 
 ## API-referensdokumentation
 
-API-referensdokumentationen innehåller detaljerad information om alla parametrar, autentiseringsmetoder och olika tjänster som tillhandahålls av API:er. API-referensdokumentationen finns i .yaml-format. Du kan ladda ned [Grupp-API:er](assets/batch-api.yaml) och ladda upp den till Postman för att kontrollera API:ernas funktionalitet.
+API-referensdokumentationen innehåller detaljerad information om alla parametrar, autentiseringsmetoder och olika tjänster som tillhandahålls av API:er. API-referensdokumentationen finns i .yaml-format. Du kan hämta filen [Batch-API:er](assets/batch-api.yaml) och överföra den till Postman för att kontrollera API:ernas funktioner.
 
 >[!MORELIKETHIS]
 >
 >* [Introduktion till AEM Forms as a Cloud Service Communications](/help/forms/aem-forms-cloud-service-communications-introduction.md)
 >* [AEM Forms as a Cloud Service Architecture for Adaptive Forms and Communication APIs](/help/forms/aem-forms-cloud-service-architecture.md)
 >* [Kommunikationsbearbetning - Synkrona API:er](/help/forms/aem-forms-cloud-service-communications.md)
->* [Kommunikationsbearbetning - batch-API:er](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
+>* [Kommunikationsbearbetning - Grupp-API:er](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)

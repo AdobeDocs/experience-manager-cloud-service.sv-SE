@@ -39,32 +39,32 @@ Användare tror ofta att en headless-implementering begränsar författarens mö
 Kraven för en implementering som ska använda den universella redigeraren är raka framifrån och stöder följande:
 
 * **Valfri arkitektur** - Återgivning på serversidan, edge-side-återgivning, rendering på klientsidan osv.
-* **Alla ramverk** - Vanilla AEM, eller ett ramverk från tredje part som React, Next.js, Angular osv.
-* **Alla värdtjänster** - Kan lagras lokalt på AEM eller på en fjärrdomän
+* **Alla ramverk** - Vanilla-AEM eller andra tredjepartsramverk som React, Next.js, Angular och så vidare.
+* **Valfri värdtjänst** - Kan lagras lokalt på AEM eller på en fjärrdomän
 
 ### Allt innehåll {#any-content}
 
-En innehållsförfattare bör ha samma kraftfulla redigeringsupplevelse som den AEM sidredigeraren. Men den universella redigeraren kan redigera **alla** innehåll visuellt och i sitt sammanhang och har stöd för
+En innehållsförfattare bör ha samma kraftfulla redigeringsupplevelse som den AEM sidredigeraren. Men den universella redigeraren tillåter innehållsförfattare att redigera **vilket**-innehåll som helst visuellt och i sitt sammanhang och stöder:
 
-* **AEM sidstrukturer** - Kapslad `cq:Components` av `cq:Pages`, inklusive Experience Fragments
-* **AEM innehållsfragment** - Redigera innehåll från innehållsfragment så som de visas i sitt sammanhang.
-* **Dokument** - Konceptkorrektur har visat att Word-, Excel-, Google Docs- och Markdown-dokument också kan redigeras på samma sätt (detta är Pågående arbete).
+* **AEM sidstrukturer** - kapslade `cq:Components` av `cq:Pages`, inklusive Experience Fragments
+* **AEM Innehållsfragment** - Redigera innehåll från innehållsfragment så som de visas i sammanhanget för upplevelsen.
+* **Dokument** - Konceptkorrektur har visat att även Word-, Excel-, Google-dokument eller Markup-dokument kan redigeras på samma sätt (detta är Pågående arbete).
 
 ### Alla proportioner {#any-aspect}
 
 Innehållet handlar inte bara om informationen som finns, utan även om hur det återges och tas emot. Innehållet innehåller ytterligare metadata och instrumenteringsregler som den universella redigeraren kan förstå och redigera, inklusive:
 
-* **Använda layout och format** - Genom att använda ett formatsystem kan marknadsförare och innehållsförfattare tillämpa olika format på sitt innehåll och skapa olika layouter för innehåll som kolumner, karuseller, flikar, dragspel och så vidare.
+* **Använda layout och format** - Genom att använda ett formatsystem kan marknadsföraren och innehållsförfattaren tillämpa olika format på sitt innehåll och skapa olika layouter för innehåll som kolumner, karuseller, flikar, dragspel och så vidare.
 
 ## Värde {#value}
 
 Genom att frikoppla redigeringsupplevelsen från ett visst innehållsleveranssystem blir redigeraren helt universell och flexibel så att innehållsförfattaren kan leverera enastående upplevelser, öka innehållets hastighet och skapa en toppmodern utvecklarupplevelse.
 
-![The value of the Universal Editor](assets/value.png)
+![Värdet för den universella redigeraren](assets/value.png)
 
-* **Leverera enastående upplevelser** - För att yrkesutövare ska kunna skapa en övertygande upplevelse för besökare kan yrkesutövare skapa och redigera innehållet i förhandsvisningssammanhang. På så sätt kan de skapa innehåll som passar upplevelsens design och som utgör en meningsfull resa för besökarna.
-* **Öka innehållshastigheten** - För att effektivisera yrkesutövarnas arbetsflöde tillåter den universella redigeraren redigering av innehåll i förhandsgranskningen som vägledning för användarna genom att endast visa de alternativ som är relevanta för det sammanhanget och som gör arbetsflödet oberoende av innehållskällorna.
-* **Avancerad utvecklarupplevelse** - För att stödja heterogena applikationslandskap i verkligheten är den universella redigeraren helt fristående och teknikberoende, vilket gör att utvecklare kan använda den teknologi de föredrar för att implementera upplevelsen.
+* **Leverera exceptionella upplevelser** - För att yrkesverksamma ska kunna skapa en övertygande upplevelse för besökare kan de yrkesverksamma i den universella redigeraren skapa och redigera innehållet i förhandsvisningssammanhang. På så sätt kan de skapa innehåll som passar upplevelsens design och som utgör en meningsfull resa för besökarna.
+* **Öka innehållshastigheten** - För att effektivisera administrationsarbetsflödet för granskare tillåter den universella redigeraren redigering av innehåll i förhandsgranskningen som vägledning för användarna genom att endast visa de alternativ som är relevanta för det sammanhanget och gör arbetsflödet oberoende av innehållskällorna.
+* **Den senaste utvecklarupplevelsen** - För att stödja heterogena programlandskap i verkligheten är den universella redigeraren helt fristående och teknikberoende, vilket gör att utvecklare kan använda den teknologi de föredrar för att implementera upplevelsen.
 
 ## Universal Editor och Content Fragment Editor {#universal-editor-content-fragment-editor}
 
@@ -86,12 +86,12 @@ En marknadsförare vill skapa innehåll som är skräddarsytt efter layouten i e
 
 När du utforskar den universella redigeraren och fortsätter implementera den i dina egna projekt bör du tänka på följande begränsningar.
 
-* Högst 25 AEM (innehållsfragment, sidor, upplevelsefragment, resurser osv.) ska vara referenser som instrumentering på en enda sida.
+* Högst 25 AEM (innehållsfragment, sidor, Experience Fragments, Assets osv.) ska vara referenser som instrumentering på en enda sida.
 * AEM as a Cloud Service är den enda AEM som stöds.
-* AEM as a Cloud Service release `2023.8.13099` eller högre krävs.
+* AEM as a Cloud Service version `2023.8.13099` eller senare krävs.
 * Innehållsförfattare måste ha sina egna Experience Cloud-konton.
-* Chrome och Edge stöds av webbläsarna
+* Chrome och Edge stöds
 
 ## Nästa steg {#next-steps}
 
-Se dokumentet [Användningsexempel och inlärningssökvägar i Universal Editor](/help/implementing/universal-editor/use-cases.md) om du vill veta mer om vanliga användningsområden för den universella redigeraren och hitta rätt dokumentationsresurser som kan hjälpa dig i ditt projekt.
+Läs dokumentet [Universal Editor Use Case and Learning Paths](/help/implementing/universal-editor/use-cases.md) om du vill veta mer om vanliga användningsfall för Universal Editor och hitta rätt dokumentationsresurser för ditt projekt.

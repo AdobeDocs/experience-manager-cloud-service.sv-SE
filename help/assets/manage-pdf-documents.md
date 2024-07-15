@@ -1,6 +1,6 @@
 ---
-title: Hantera dina PDF-dokument i [!DNL Adobe Experience Manager].
-description: Hantera PDF-dokument i [!DNL Adobe Experience Manager] som [!DNL Cloud Service].
+title: Hantera dina PDF-dokument i  [!DNL Adobe Experience Manager].
+description: Hantera PDF-dokument i [!DNL Adobe Experience Manager]  som en [!DNL Cloud Service].
 feature: Asset Management
 role: User, Admin
 exl-id: 29660869-6902-4093-845b-cd629be59d4d
@@ -21,26 +21,26 @@ Document Cloud PDF viewer ger AEM Assets fördelar på följande sätt:
 * [Stöd för förhandsgranskning av flera sidor för dokument i andra format](#multi-format)
 
 > Tips
-> Om du inte kan hämta förhandsgranskning av flera sidor för ett tidigare överfört PDF-dokument markerar du PDF och klickar på **![Återbearbeta](/help/assets/assets/Reprocess.svg) Bearbeta resurser igen**.
+> Om du inte kan hämta förhandsgranskning av flera sidor för ett tidigare överfört PDF-dokument markerar du PDF och klickar på **![Bearbeta igen](/help/assets/assets/Reprocess.svg) Assets**.
 >
 
 ## Stöd för visningsprogramkomponenter för PDF Document Cloud {#pdf-doc-cloud}
 
 Det inbyggda visningsprogrammet för PDF Doc Cloud har följande komponenter i AEM Assets:
 
-* **PDF-visningsprogram med sidminiatyrer** Miniatyrbildsvyn är en liten förhandsvisning av sidorna i ett PDF-dokument. Med hjälp av miniatyrbilder kan du gå direkt till önskad sida. Du kommer åt miniatyrbilder av det markerade PDF-dokumentet via ![miniatyrbild](/help/assets/assets/thumbnail.svg) till vänster.
+* **PDF-visningsprogrammet som använder sidminiatyrer** Miniatyrbildsvyn är en liten förhandsvisning av sidorna i ett PDF-dokument. Med hjälp av miniatyrbilder kan du gå direkt till önskad sida. Du kommer åt miniatyrbilder av det markerade PDF-dokumentet via ![miniatyrbild](/help/assets/assets/thumbnail.svg) i den vänstra rutan.
 
-* **PDF viewer med bokmärken** Bokmärke är en direktlänk som leder dig till innehållet i dokumentet. Du kan komma åt bokmärken i det markerade PDF-dokumentet via ![bokmärke](/help/assets/assets/bookmark.svg) till vänster.
+* Bokmärket **PDF viewer som använder bokmärken** är en direktlänk som leder dig till dokumentets innehåll. Du kan komma åt bokmärken för det markerade PDF-dokumentet via ![bokmärke](/help/assets/assets/bookmark.svg) i den vänstra rutan.
 
-* **Sök i PDF** Du kan använda sökning ![sök](/help/assets/assets/Search.svg) om du vill söka efter texten i PDF-dokumentet.
+* **Sök i PDF** Du kan använda sökningen ![search](/help/assets/assets/Search.svg) för att söka efter texten i PDF-dokumentet.
 
 * **Page Up/Page Down** Använd Page Up ![Page Up](/help/assets/assets/ArrowUp.svg) eller Page Down ![Page Down](/help/assets/assets/ArrowDown.svg) för att bläddra igenom dokumentet.
 
-* **Zooma ut/zooma in** Använd utzoomning ![Zooma ut](/help/assets/assets/ZoomOut.svg) eller Zooma in ![Zooma in](/help/assets/assets/ZoomIn.svg) för att flöda dokumentet.
+* **Zooma ut/zooma in** Använd Zooma ut ![Zooma ut](/help/assets/assets/ZoomOut.svg) eller Zooma in ![Zooma in](/help/assets/assets/ZoomIn.svg) för att strömma dokumentet.
 
-* **Sidanpassning** Använd bredd- eller höjddimensionerna för att anpassa dokumentet efter skärmstorleken.
+* **Sidanpassning** Använd bredd- och höjddimensioner för att passa dokumentet efter skärmstorleken.
 
-* **Docka/avdocka PDF** Du kan docka eller avdocka komponenterna i det inbyggda PDF-visningsprogrammet med det här alternativet.
+* **Docka/avdocka PDF** Du kan docka eller avdocka komponenterna i visningsprogrammet för PDF med det här alternativet.
 
 ## Stöd för förhandsvisning av flera sidor och anteckningar för PDF-resurser {#multi-page}
 
@@ -50,9 +50,9 @@ Med Adobe Experience Manager Assets kan du förhandsgranska PDF-dokument som bes
 1. Bläddra i det PDF-dokument som du vill överföra och förhandsgranska.
 1. Öppna dokumentet.
 1. Dokumentvisningsprogrammet i PDF läses in som standard. Du kan också välja PDF återgivning på panelen Återgivning.
-1. Under listrutan Återgivningar väljer du **Alla återgivningar**.
+1. Välj **Alla återgivningar** i listrutan Återgivningar.
 
-Du kan också använda [anteckningar](#pdf-annotations) till PDF-dokumentet i en förhandsvisning av flera sidor.
+Du kan också använda [anteckningar](#pdf-annotations) på PDF-dokumentet i en förhandsvisning av flera sidor.
 
 > ANMÄRKNING
 > Den maximala storleken för en resurs som du kan förhandsgranska är upp till 100 MB.
@@ -64,13 +64,13 @@ Du kan också använda [anteckningar](#pdf-annotations) till PDF-dokumentet i en
 ![Multi-page Preview](/help/assets/assets/multi-page.png)
 -->
 
-**PDF Anteckningar{#pdf-annotations}**
+**PDF-anteckningar{#pdf-annotations}**
 
 Med Experience Manager Assets kan du lägga till kommentarer i ett PDF-dokument. Ett PDF-dokument kan ha flera anteckningar.
 
 Gör så här om du vill lägga till kommentarer i ett PDF-dokument:
-1. Gå till Assets-gränssnittet och navigera till det PDF-dokument som du vill kommentera. Det inbyggda visningsprogrammet för PDF öppnas till höger och förhandsvisar det markerade PDF-dokumentet.
-1. Klicka **Anteckna** på den översta menyn.
+1. Gå till Assets-gränssnittet och navigera till dokumentet PDF som du vill kommentera. Det inbyggda visningsprogrammet för PDF öppnas till höger och förhandsvisar det markerade PDF-dokumentet.
+1. Klicka på **Anteckna** på den översta menyn.
 Följande anteckningar kan användas på ett PDF-dokument:
 
 <table>
@@ -79,11 +79,11 @@ Följande anteckningar kan användas på ett PDF-dokument:
             <th> Beskrivning </th>
         </tr>
         <tr>
-           <td> <img src="/help/assets/assets/Comment.svg"> Kommentar </td>
+           <td> <img src="/help/assets/assets/Comment.svg">-kommentar </td>
             <td> Markera Kommentar för att uttrycka en observation. </td>
         </tr>
         <tr>
-            <td> <img src="/help/assets/assets/Text.svg"> Textruta </td>
+            <td> Textruta för <img src="/help/assets/assets/Text.svg"> </td>
             <td> Ange texten genom att markera Textruta. </td>
         </tr>
         <tr>
@@ -95,15 +95,15 @@ Följande anteckningar kan användas på ett PDF-dokument:
             <td> Markera texten som ska markeras i olika färger. </td>
         </tr>
         <tr>
-            <td> <img src="/help/assets/assets/TextUnderline.svg"> Understrykning av text </td>
+            <td> <img src="/help/assets/assets/TextUnderline.svg"> understrykning av text </td>
             <td> Markera texten som du vill stryka under. </td>
         </tr>
         <tr>
-            <td> <img src="/help/assets/assets/TextStrikethrough.svg"> Genomstruken </td>
+            <td> <img src="/help/assets/assets/TextStrikethrough.svg"> genomstruken </td>
             <td> Markera texten som du vill stryka över. </td>
         </tr>
         <tr>
-            <td> <img src="/help/assets/assets/Draw.svg"> Rita </td>
+            <td> <img src="/help/assets/assets/Draw.svg">-teckning </td>
             <td> Infoga en visuell konst på PDF. </td>
         </tr>
         <tr>
@@ -135,9 +135,9 @@ Utför följande steg för att förhandsgranska flera sidor i andra dokumentform
 
 **Se även**
 
-* [Översätt resurser](translate-assets.md)
-* [Resurser för HTTP API](mac-api-assets.md)
-* [Resurser som stöds i filformat](file-format-support.md)
+* [Översätt Assets](translate-assets.md)
+* [ASSETS HTTP API](mac-api-assets.md)
+* [Filformat som stöds av Assets](file-format-support.md)
 * [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
 * [Resursrapporter](asset-reports.md)
@@ -147,4 +147,4 @@ Utför följande steg för att förhandsgranska flera sidor i andra dokumentform
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publicera resurser till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)

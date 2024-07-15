@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Ett hjälpmedelsanpassat formulär är ett formulär som alla kan använda, inklusive användare med särskilda behov. Adaptiva Forms har flera funktioner som gör dem mer användbara för användare med olika funktioner. Att bygga upp tillgängligheten i Adaptive Forms ger inte bara största möjliga publik av innehåll, utan det är också ett krav när man levererar dokument i de länder där det krävs överensstämmelse med tillgänglighetsstandarder. [!DNL AEM Forms] hjälper formulärutvecklare att följa standarderna för tillgänglighet.
+Ett hjälpmedelsanpassat formulär är ett formulär som alla kan använda, inklusive användare med särskilda behov. Adaptiva Forms har flera funktioner som gör dem mer användbara för användare med olika funktioner. Att bygga upp tillgängligheten i Adaptive Forms ger inte bara största möjliga publik av innehåll, utan det är också ett krav när man levererar dokument i de länder där det krävs överensstämmelse med tillgänglighetsstandarder. [!DNL AEM Forms] hjälper formulärutvecklare att följa tillgänglighetsstandarderna.
 
 När du skapar ett adaptivt formulär bör du tänka på följande när du skapar tillgängliga adaptiva formulär:
 
@@ -29,7 +29,7 @@ När du skapar ett adaptivt formulär bör du tänka på följande när du skapa
 
 ## Förutsättning
 
-Du behöver ett hjälpmedelsverktyg som **Namnkontroll och beskrivning för hjälpmedel (ANDI)** och **Tema för adaptiv form har utvecklats för att åtgärda tillgänglighetsrelaterade problem** för att skapa ett tillgängligt adaptivt formulär.
+Du behöver ett hjälpmedelsverktyg som **hjälpmedels- och beskrivningsverktyg (ANDI)** och ett **anpassat formulärtema som utvecklats för att åtgärda tillgänglighetsrelaterade problem** för att skapa ett tillgängligt anpassat formulär.
 
 ### Hämta och installera hjälpmedelstestningsverktyget
 
@@ -40,7 +40,7 @@ Med verktyget för hjälpmedelsförberedda namn- och beskrivningsgranskare (ANDI
 * Identifierar problem med tangentbordstillgänglighet och färgkontrast
 * Identifierar tydligt skärmläsarinnehållet enligt standarderna
 
-ANDI fungerar med alla större webbläsare. Se, [ANDI:s dokumentation](https://www.ssa.gov/accessibility/andi/help/install.html) om du vill ha detaljerade anvisningar om hur du konfigurerar och använder verktyget.
+ANDI fungerar med alla större webbläsare. Mer information om hur du konfigurerar och använder verktyget finns i [ANDI:s dokumentation](https://www.ssa.gov/accessibility/andi/help/install.html).
 
 ### Hämta och installera temat Ultramarine-Accessible
 
@@ -59,8 +59,8 @@ Du bör fokusera på fyra nyckelaspekter: tangentbordsnavigering, färgkontrast,
 Använd temat Ultramarine-Accessible i din befintliga adaptiva form. Så här använder du temat:
 
 1. Öppna det adaptiva formuläret för redigering.
-1. Markera en komponent och välj den överordnade ikonen. Välj **[!UICONTROL Adaptive Form Container]** och välj sedan konfigurationsikonen.
-1. Välj temat Ultramarine-Accessible i egenskapsläsaren och välj **[!UICONTROL Save]** -ikon.
+1. Markera en komponent och välj den överordnade ikonen. Välj **[!UICONTROL Adaptive Form Container]** på snabbmenyn och välj sedan konfigurationsikonen.
+1. Välj det ultramarine-Accessible-temat i egenskapsläsaren och välj ikonen **[!UICONTROL Save]**.
 1. Uppdatera webbläsarfönstret. Temat tillämpas på den adaptiva formen.
 
 När du har tillämpat ett tillgängligt tema utför du följande korrigeringar. Förutom tillgänglighetskorrigeringar som ingår i det tillgängliga temat finns det korrigeringar:
@@ -91,7 +91,7 @@ När du har tillämpat ett tillgängligt tema utför du följande korrigeringar.
 
 1. Lägg till anpassad hjälpmedelstext i alla skrivskyddade celler i tabeller. Du kan även inaktivera alla skrivskyddade celler i tabeller.
 
-1. Ta bort signaturfält för skript, om sådana finns i det adaptiva formuläret. Konfigurera det adaptiva formuläret som ska användas [!DNL Adobe Sign] för en smidig digital signeringsupplevelse.
+1. Ta bort signaturfält för skript, om sådana finns i det adaptiva formuläret. Konfigurera det adaptiva formuläret så att det använder [!DNL Adobe Sign] för en sömlös digital signeringsupplevelse.
 
 ### 2. Ange korrekta etiketter för formulärkontroller {#provide-proper-labels-for-form-controls}
 
@@ -101,18 +101,18 @@ Etiketten som upplevs av skärmläsare behöver inte nödvändigtvis vara samma 
 
 Så här använder du alternativet Hjälpmedel:
 
-1. Markera en komponent och markera ![cmppr](assets/cmppr.png).
-1. Klicka **[!UICONTROL Accessibility]** i sidlisten för att välja önskat hjälpmedelsalternativ.
+1. Markera en komponent och välj ![cmpr](assets/cmppr.png).
+1. Klicka på **[!UICONTROL Accessibility]** i sidlisten för att välja önskat hjälpmedelsalternativ.
 
 ### Tillgänglighetsalternativ i formulärkomponenter {#accessibility-options-in-form-components}
 
-![Tillgänglighetsalternativ i formulärkomponenter](assets/accessibility-options.png)
+![Hjälpmedelsalternativ i formulärkomponenter](assets/accessibility-options.png)
 
-**Egen text** Formulärförfattare anger innehållet i alternativet Anpassad text för hjälpmedel. Den här anpassade texten används i hjälpmedelstekniken, till exempel skärmläsare. Att använda inställningen Titel är det bästa alternativet i de flesta scenarier. Du bör endast skapa Reader-text för anpassad skärm när du inte kan använda rubriken eller en kort beskrivning.
+**Anpassad text** Formulärförfattare tillhandahåller innehållet i hjälpmedelsalternativet Egen text. Den här anpassade texten används i hjälpmedelstekniken, till exempel skärmläsare. Att använda inställningen Titel är det bästa alternativet i de flesta scenarier. Du bör endast skapa Reader-text för anpassad skärm när du inte kan använda rubriken eller en kort beskrivning.
 
 **Kort beskrivning** För de flesta komponenter visas den korta beskrivningen vid körning när användaren placerar pekaren över komponenten. Du kan ange det här alternativet i fältet för kort beskrivning under alternativet för hjälpinnehåll.
 
-**Titel** Använd det här alternativet för att [!DNL AEM Forms] Använd den visuella etikett som är kopplad till formulärfältet som skärmläsartext.
+**Titel** Använd det här alternativet om du vill att [!DNL AEM Forms] ska kunna använda den visuella etikett som är associerad med formulärfältet som skärmläsartext.
 
 **Namn** Du kan ange ett värde i fältet Namn på fliken Bindning. Namnet får inte innehålla blanksteg.
 
@@ -129,7 +129,7 @@ Bilder kan förbättra förståelsen för vissa användare. För användare som 
 
 Kontrollera att texten beskriver objektet och dess syfte i formuläret. En skärmläsare läser upp den här alternativa texten när en bild påträffas. En bild måste alltid ha en alternativ text angiven.
 
-Markera en bildkomponent och markera ![cmppr](assets/cmppr.png). Ange alternativ text för en bild under Egenskaper i sidlisten.
+Markera en bildkomponent och välj ![cmpr](assets/cmppr.png). Ange alternativ text för en bild under Egenskaper i sidlisten.
 
 ![Alternativ text för en bild](assets/image-properties.png)
 
@@ -147,7 +147,7 @@ Vi rekommenderar att du använder standardfärgerna för teckensnitt och bakgrun
 
 Ett hjälpmedelsanpassat formulär kan fyllas i helt och hållet med bara tangentbordet eller en motsvarande indataenhet. Användare med nedsatt rörelseförmåga eller nedsatt syn har kanske inget annat val än att använda tangentbordet och många användare som kan använda en mus föredrar tangentbordsinmatning. Genom att använda de olika indatametoderna kan du inte bara skapa hjälpmedelsförberedda formulär, du kan också skapa formulär som bättre passar alla användares önskemål.
 
-Följande kortkommandon finns i [!DNL AEM Forms].
+Följande kortkommandon är tillgängliga i [!DNL AEM Forms].
 
 | Åtgärd | Kortkommando |
 |---|---|
@@ -158,7 +158,7 @@ Följande kortkommandon finns i [!DNL AEM Forms].
 | Återställ ifyllda data i ett formulär | Alt+R |
 | Skicka ett formulär | Alt+S |
 
-Dessutom finns det olika kortkommandon för **[!UICONTROL Date Picker]** i Adaptive Forms. Om du vill aktivera kortkommandona väljer du **[!UICONTROL Date Picker]** -komponent och markera ![Konfigurera](assets/configure-icon.svg) för att öppna egenskaperna. I **[!UICONTROL Patterns]** väljer du ett visningsmönster med **[!UICONTROL Type]** och **[!UICONTROL Pattern]** nedrullningsbara listor. Spara egenskaperna för att aktivera användning av kortkommandon för **[!UICONTROL Date Picker]** -komponenten.
+Dessutom finns det olika kortkommandon för komponenten **[!UICONTROL Date Picker]** i Adaptive Forms. Om du vill aktivera kortkommandona markerar du komponenten **[!UICONTROL Date Picker]** och väljer ![Konfigurera](assets/configure-icon.svg) för att öppna egenskaperna. I avsnittet **[!UICONTROL Patterns]** väljer du ett visningsmönster med listrutorna **[!UICONTROL Type]** och **[!UICONTROL Pattern]**. Spara egenskaperna för att aktivera användning av kortkommandon för komponenten **[!UICONTROL Date Picker]**.
 
 Följande kortkommandon är tillgängliga för datumväljarkomponenten i Adaptiv Forms:
 
@@ -173,8 +173,8 @@ Följande kortkommandon är tillgängliga för datumväljarkomponenten i Adaptiv
 | Flytta markören bakåt i kalendern som är tillgänglig i datumväljarkomponenten | Vänsterpil |
 | Flytta markören framåt i kalendern som är tillgänglig i datumväljarkomponenten | Högerpil |
 | Utför åtgärden för den bildtext som är tillgänglig mellan höger och vänster navigeringspilar i kalendern | Skift + uppåtpil |
-| Utför åtgärden för höger navigeringspil ![högerpil](assets/right-navigation-icon.svg) som är tillgängliga i kalendern | Skift + Vänsterpil |
-| Utför åtgärden för den vänstra navigeringspilen ![vänsterpil](assets/left-navigation-icon.svg) som är tillgängliga i kalendern | Skift + högerpil |
+| Utför åtgärden för högernavigeringspilikonen ![högerpil](assets/right-navigation-icon.svg) som är tillgänglig i kalendern | Skift + Vänsterpil |
+| Utför åtgärden för den vänstra navigeringspilikonen ![vänsterpil](assets/left-navigation-icon.svg) som är tillgänglig i kalendern | Skift + högerpil |
 
 ## Använd hjälpmedelsverktyget för att hitta återstående tillgänglighetsproblem
 

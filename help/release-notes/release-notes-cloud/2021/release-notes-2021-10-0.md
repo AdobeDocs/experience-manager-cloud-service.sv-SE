@@ -1,6 +1,6 @@
 ---
-title: Versionsinformation om 2021.10.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation om 2021.10.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Versionsinformation för version 2021.10.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation för version 2021.10.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: ab584923-5f06-4b54-941b-e00bc1158b81
 feature: Release Information
 role: Admin
@@ -21,32 +21,32 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 >[!NOTE]
 >
->Se [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html) för information om dokumentationsuppdateringar som inte är direkt relaterade till en release.
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
 
 ## Releasedatum {#release-date}
 
-Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2021.10.0) är 4 november 2021.
+Releasedatum för [!DNL Adobe Experience Manager] som aktuell [!DNL Cloud Service]-version (2021.10.0) är 4 november 2021.
 Följande version (2021.11.0) är den 2 december 2021.
 
 ## Släpp video {#release-video}
 
-Ta en titt på [Oktober 2021 versionsöversikt](https://video.tv.adobe.com/v/338253) video med en sammanfattning av tillagda funktioner.
+Titta på videon [Oktober 2021 Release Overview](https://video.tv.adobe.com/v/338253) för en sammanfattning av de funktioner som lagts till.
 
-## [!DNL Experience Manager Sites] som [!DNL Cloud Service] {#sites}
+## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 
 ### Ny funktion i [!DNL Sites] {#sites-features}
 
 * Modeller för innehållsfragment ställs nu automatiskt in i skrivskyddat läge när de har publicerats, så att du inte oavsiktligt kan bryta aktiva API-frågor efter att ha publicerat om en redigerad modell. Användarna får en varning när de försöker redigera en publicerad modell. Du kan redigera när du har godkänt varningen.
 
-## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
+## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
 ### Nya funktioner i [!DNL Assets] {#assets-features}
 
-* [!DNL Experience Manager] har nu stöd för automatisk generering av texttranskript från ljud- och videomaterial som stöds, med en inbyggd koppling till [!DNL Azure Media Services]. The [filtyper som stöds](/help/assets/file-format-support.md#audio-video-transcription-formats) transkriberas automatiskt och texten lagras i WebVTT-format. WebVTT-bildtexterna används för effektivare sökning, bildtext eller översättning. Funktionen förbättrar också tillgängligheten, identifieringen och lokaliseringen av resurserna.
+* [!DNL Experience Manager] har nu stöd för automatisk generering av texttranskript från ljud- och videoresurser som stöds, med en inbyggd koppling till [!DNL Azure Media Services]. De [filtyper](/help/assets/file-format-support.md#audio-video-transcription-formats) som stöds transkriberas automatiskt och texten lagras i WebVTT-format. WebVTT-bildtexterna används för effektivare sökning, bildtext eller översättning. Funktionen förbättrar också tillgängligheten, identifieringen och lokaliseringen av resurserna.
 
-### Ny funktion i [!DNL Assets] prerelease channel {#assets-prerelease-features}
+### Ny funktion i betaversionskanalen [!DNL Assets] {#assets-prerelease-features}
 
-* [!DNL Dynamic Media] Image Smart Crop och Swatch bygger nu på de senaste Sensei-tjänsterna som genererar förbättrade beskärningar och färgrutor. Dessutom har en förbättring startats för att generera olika beskärningsinnehåll, med samma proportioner men med olika upplösningar. Dessutom behålls alla manuella redigeringar vid ombearbetningen om bredden och höjden inte ändras i bildprofilen.
+* [!DNL Dynamic Media] Image Smart Crop och Swatch drivs nu av de senaste Sensei-tjänsterna som genererar förbättrade beskärningar och färgrutor. Dessutom har en förbättring startats för att generera olika beskärningsinnehåll, med samma proportioner men med olika upplösningar. Dessutom behålls alla manuella redigeringar vid ombearbetningen om bredden och höjden inte ändras i bildprofilen.
 
 * Smarta taggar tillämpas automatiskt på resurserna med hjälp av resursmikrotjänster i stället för med smarta innehållstjänster. Den underliggande modellen uppdateras för att förbättra taggningsresultaten och minska bias. <!-- As it uses asset microservices, it is now possible to develop custom workers using Stock10-based Smart Tags. -->
 
@@ -56,24 +56,24 @@ Ta en titt på [Oktober 2021 versionsöversikt](https://video.tv.adobe.com/v/338
 No customer-reported bugs fixed in Oct release. Details in CQDOC-18404.
 -->
 
-## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
+## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms-oct-2021}
 
-* **Analytics för Adaptive Forms**: Du kan nu fånga in och spåra beteenden hos både inloggad och ej inloggad (anonym) via Adobe Analytics för Adaptive Forms för att samla in användarinsikter. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
+* **Analytics for Adaptive Forms**: Nu kan du samla in och spåra beteenden hos både inloggad och ej inloggad (anonym) med Adobe Analytics for Adaptive Forms för att samla in användarinsikter. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
 
-### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms-oct-2021}
+### Nya funktioner som är tillgängliga i betaversionskanalen i [!DNL Forms] {#prerelease-features-forms-oct-2021}
 
-* **Externt AEM arbetsflödesdata för säker bearbetning**: Du kan lagra data AEM arbetsflöden (AEM data från arbetsflödesvariabler) som innehåller känsliga dataelement (SPD) i en kundhanterad databas för säker bearbetning. Dataelementen och arbetsflödesvariablerna lagras inte i AEM och hämtas på begäran från en kundhanterad databas när arbetsflödet bearbetas.
+* **Gör AEM arbetsflödesdata externt för säker bearbetning**: Du kan lagra processdata AEM arbetsflödesdata (AEM arbetsflödesvariabeldata) som innehåller känsliga SPD-element (Personal Data) i en kundhanterad databas för säker bearbetning. Dataelementen och arbetsflödesvariablerna lagras inte i AEM och hämtas på begäran från en kundhanterad databas när arbetsflödet bearbetas.
 
-### Betafunktioner i [!DNL Forms] {#what-is-new-forms-oct2021-beta}
+### Beta-funktioner i [!DNL Forms] {#what-is-new-forms-oct2021-beta}
 
 * **[!DNL AEM Forms as a Cloud Service - Communications]**: [Kommunikations-API:er](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/using-communications/aem-forms-cloud-service-communications.html) hjälper dig att kombinera en mall och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge och gruppläge. Med API:erna kan du skapa program som gör att du kan:
 
    * Generera dokument genom att fylla i mallfiler (PDF och XDP) med XML-data.
    * Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
 
-Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betaprogrammet.
+Du kan skriva till [!DNL formscsbeta@adobe.com] för att registrera dig för betaprogrammet.
 
 ## CIF {#cloud-services-cif}
 
@@ -100,10 +100,10 @@ Nästa version är planerad till 9 december 2021.
 
 ### Nyheter {#what-is-new-cm-nov}
 
-* Användare kan nu använda nya frontledningslinjer för att exklusivt distribuera slutkod på ett accelererat sätt. Se [Front End Pipelines för Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end) om du vill veta mer.
+* Användare kan nu använda nya frontledningslinjer för att exklusivt distribuera slutkod på ett accelererat sätt. Mer information finns i [Cloud Manager Front End Pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end).
 
   >[!IMPORTANT]
-  >Du måste ha AEM version `2021.10.5933.20211012T154732Z` om du vill använda nya frontledningslinjer.
+  >Du måste ha AEM version `2021.10.5933.20211012T154732Z` för att kunna använda nya frontendpipelines.
 
 * Varaktigheten i bildrutorna för kodkvalitet minskar avsevärt genom att utföra kodanalysen på ett mer effektivt sätt utan att behöva skapa en hel AEM. Denna förändring rullar ut progressivt under de veckor som följer efter releasen.
 
@@ -113,7 +113,7 @@ Nästa version är planerad till 9 december 2021.
 
 * Miljöskapande är nu tillgängligt via offentligt exponerade API.
 
-* The `x-request-id` svarshuvudet är nu synligt i API-uppspelningen på [www.adobe.io](https://www.adobe.io/). Det här huvudet är användbart när du skickar in kundvårdsproblem för felsökning.
+* Svarshuvudet `x-request-id` visas nu i API-spelarvyn på [www.adobe.io](https://www.adobe.io/). Det här huvudet är användbart när du skickar in kundvårdsproblem för felsökning.
 
 * Som användare ser jag att Pipeline-kortet med noll rörledningar ger mig lämplig vägledning.
 
@@ -133,7 +133,7 @@ Nästa version är planerad till 9 december 2021.
 
 * Pipeline PATCH API misslyckas om det inte finns någon distributionsfas.
 
-* The `ClientlibProxyResourceCheck` kvalitetsregeln genererade falskt positiva problem när det fanns klientbibliotek med gemensamma grundsökvägar.
+* Kvalitetsregeln `ClientlibProxyResourceCheck` gav upphov till falskt positiva problem när det fanns klientbibliotek med gemensamma grundsökvägar.
 
 * Felmeddelandet när det maximala antalet databaser har uppnåtts specificerade inte orsaken till felet.
 
@@ -146,7 +146,7 @@ Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.10.0 är 14 oktobe
 
 ### Nyheter {#what-is-new-cm-oct}
 
-* Som en förberedelse för vissa kommande ändringar kommer befintliga distributionsrutnät nu att refereras och märkas i användargränssnittet som **Hel hög** rörledningar.
+* Som förberedelse för vissa kommande ändringar kommer befintliga distributionspipelines nu att refereras och märkas i användargränssnittet som **fullständigt stackade**-pipelines.
 
 * Pipelinekortet har uppdaterats så att det nu visas ett enda, integrerat ansikte som visar både pipelines för produktion och icke-produktion, och användaren kan välja Kör/Pausa/Fortsätt direkt på den åtgärdsmeny som är kopplad till varje pipeline.
 
@@ -154,15 +154,15 @@ Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.10.0 är 14 oktobe
 
 * Lägg till och redigera rörliga upplevelser har uppdaterats för att nu använda välbekanta, moderna moduler.
 
-* Användare av Cloud Manager kan nu skicka feedback direkt från användargränssnittet via **Feedback** överst till höger på landningssidan.
+* Cloud Manager-användare kan nu skicka feedback direkt från användargränssnittet via knappen **Feedback** överst till höger på landningssidan.
 
-* Årliga SLA-diagram kan nu hämtas från användargränssnittet i Cloud Manager.
+* Årliga SLA-diagram kan nu hämtas från Cloud Manager användargränssnitt.
 
 * Kodkvalitet och icke-produktionsrelaterade pipeline-körningar kommer nu att använda en mer effektiv, ytlig kloningsprocess under byggsteget, vilket ger en snabbare byggtid för kunder med särskilt stora Git-databaser.
 
 * Guiden Lägg till IP Tillåtelselista informerar nu användaren om maximalt tillåtet antal IP-Tillåtelselista har uppnåtts.
 
-* API-dokumentationen för Cloud Manager innehåller nu en interaktiv spelningsmiljö som gör att inloggade användare kan experimentera med API:t från sin webbläsare. Se [API-spelning för Cloud Manager](https://www.adobe.io/experience-cloud/cloud-manager/reference/playground/) för mer information.
+* Cloud Manager API-dokumentationen innehåller nu en interaktiv spelningsmiljö som gör att inloggade användare kan experimentera med API:t från sin webbläsare. Mer information finns i [Cloud Manager API Playground](https://www.adobe.io/experience-cloud/cloud-manager/reference/playground/).
 
 * Verktygstipset på programkortet blir mer beskrivande om ett markeringsalternativ under Navigera till är inaktiverat. Nu visas&quot;En produktionsmiljö finns inte&quot;.
 

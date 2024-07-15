@@ -1,5 +1,5 @@
 ---
-title: Översikt över testning av Cloud Manager
+title: Cloud Manager Tests - översikt
 description: Få en översikt över de tre typer av tester som Cloud Manager automatiskt kör för att säkerställa kvaliteten på din anpassade kod.
 exl-id: 5f5c97b1-4180-4f49-af8b-257d4744766e
 solution: Experience Manager
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Översikt över testning av Cloud Manager {#overview}
+# Cloud Manager Tests - översikt {#overview}
 
 Det finns tre testkategorier som stöds av Cloud Manager för rörledningar för Cloud Service.
 
@@ -21,15 +21,15 @@ Det finns tre testkategorier som stöds av Cloud Manager för rörledningar för
 
    * Kodkvalitetstestningen utvärderar kvaliteten på programkoden.
    * Kodkvalitetspipelinen utförs omedelbart efter byggsteget i alla icke-produktions- och produktionspipelinjer.
-   * The [regler för anpassad kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md) som körs av Cloud Manager skapas baserat på bästa praxis från AEM Engineering.
+   * De [anpassade reglerna för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md) som körs av Cloud Manager skapas baserat på bästa praxis från AEM.
 
 1. [Funktionstestning](/help/implementing/cloud-manager/functional-testing.md)
 
-   * Funktionstestning är en del av testfasen i ett [produktionsflöde](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) och eventuellt en del av testfasen i [rörledning för icke-produktion](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md).
+   * Funktionstestning är en del av testfasen i en [produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) och kan ingå i testfasen i en [icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) .
 
 1. [Testning av Experience Audit](/help/implementing/cloud-manager/experience-audit-testing.md)
 
-   * Experience Audit-testning är aktiverat i alla produktionspipelines i Cloud Manager och kan inte hoppas över.
+   * Granskningstestning är aktiverat i alla Cloud Manager-produktionspipelines och kan inte hoppas över.
 
 Dessa tester kan vara:
 

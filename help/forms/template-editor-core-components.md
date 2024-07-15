@@ -28,11 +28,11 @@ You can download and install [!DNL AEM Forms] reference content package from [So
 
 ## Förutsättning
 
-**Aktivera adaptiva Forms Core-komponenter för din miljö**: När du skapar ett program är de adaptiva Forms Core-komponenterna redan aktiverade för din miljö. Om du har en as a Cloud Service formulärmiljö baserad på [AEM Archetype 39 eller tidigare](https://github.com/adobe/aem-project-archetype), [Aktivera adaptiva Forms Core-komponenter för din miljö](enable-adaptive-forms-core-components.md).
+**Aktivera adaptiva Forms Core-komponenter för din miljö**: När du skapar ett program är de adaptiva Forms Core-komponenterna redan aktiverade för din miljö. Om du har en as a Cloud Service formulärmiljö baserad på [AEM Archetype 39 eller tidigare](https://github.com/adobe/aem-project-archetype) [Aktivera adaptiva Forms Core-komponenter för din miljö](enable-adaptive-forms-core-components.md).
 
 >[!NOTE]
 >
-> När man driftsätter Forms as a Cloud Service-miljön baserat på Archetype 45 är **Adaptiv Forms (kärnkomponent)** -mallar och kärnkomponentbaserade teman läggs till i din miljö.
+> När du distribuerar Forms as a Cloud Service-miljön baserat på Arketyp 45 läggs mallarna **Adaptive Forms (Core Component)** och kärnkomponentbaserade teman till i din miljö.
 
 ## Arbeta med mall {#working-with-templates}
 
@@ -48,13 +48,13 @@ I Experience Manager finns en global mapp där du kan ordna mallar. Den är dock
 
 När du har skapat en mapp öppnar du mappen och utför följande steg för att skapa en mall:
 
-1. Välj **[!UICONTROL Create]** i den mapp du har skapat.
-1. I **[!UICONTROL Pick a Template Type]** avsnitt, markera **[!UICONTROL Adaptive Form (Core Component) template]** och markera **[!UICONTROL Next]**.
+1. Välj **[!UICONTROL Create]** i mappen som du har skapat.
+1. I avsnittet **[!UICONTROL Pick a Template Type]** väljer du **[!UICONTROL Adaptive Form (Core Component) template]** och sedan **[!UICONTROL Next]**.
 
-1. I **[!UICONTROL Template Details]** -avsnitt, ange **Malltitel** och markera **[!UICONTROL Create]**.
+1. Ange en **malltitel** i avsnittet **[!UICONTROL Template Details]** och välj **[!UICONTROL Create]**.
 Du kan också ange en beskrivning.
 
-1. Välj **[!UICONTROL Done]** för att gå tillbaka till konsolen, eller välj **[!UICONTROL Open]** om du vill öppna mallen i redigeraren.
+1. Välj **[!UICONTROL Done]** om du vill återgå till konsolen eller välj **[!UICONTROL Open]** om du vill öppna mallen i redigeraren.
 
 ## Mallredigeringsgränssnitt {#template-editor-ui}
 
@@ -63,12 +63,12 @@ När du öppnar en mall för redigering kan du se följande AEM Editor-komponent
 * **Verktygsfältet Sida**
 Innehåller följande alternativ:
 
-   * **Växla sidopanel**: Visa eller dölj sidofältet.
-   * **Sidinformation**: Gör att du kan ange information som publicerings-/avpubliceringstid, miniatyrbilder, klientbibliotek, sidprincip och klientbibliotek för siddesign.
+   * **Växla sidopanel**: Här kan du visa eller dölja sidofältet.
+   * **Sidinformation**: Gör att du kan ange information som publicerings-/avpubliceringstid, miniatyrer, klientbibliotek, sidprincip och klientbibliotek för siddesign.
      <!-- * **Emulator**: Lets you simulate and customize the look for different devices.-->
-   * **Lägesväljare:** Gör att du kan ändra läge. Du kan **[!UICONTROL Structure]** läge, **[!UICONTROL Initial Content]**, **[!UICONTROL Layout Control]** läge. I strukturläget kan du lägga till och anpassa sidhuvud och sidfot. Med det inledande innehållsläget kan du anpassa formulärinnehållet.
-   * **Förhandsgranska:** Gör att du kan förhandsgranska hur mallen ser ut när du publicerar den. Du kan använda Lagerväljaren och Förhandsgranska för att växla redigerings- och förhandsgranskningslägen.
-* **Sidofält:** Innehåller webbläsarna Innehåll, Egenskaper, Assets och Komponenter.
+   * **Lägesväljare:** Du kan ändra läge. Du kan välja **[!UICONTROL Structure]**-läge, **[!UICONTROL Initial Content]**, **[!UICONTROL Layout Control]**-läge. I strukturläget kan du lägga till och anpassa sidhuvud och sidfot. Med det inledande innehållsläget kan du anpassa formulärinnehållet.
+   * **Förhandsgranska:** Du kan förhandsgranska hur mallen ser ut när du publicerar den. Du kan använda Lagerväljaren och Förhandsgranska för att växla redigerings- och förhandsgranskningslägen.
+* **Sidofältet:** Tillhandahåller webbläsarna Innehåll, Egenskaper, Assets och Komponenter.
 * **Komponentverktygsfältet:** När du markerar en komponent visas ett verktygsfält där du kan anpassa komponenten.
 * **Sida**: Det område där du lägger till innehåll för att skapa mallen.
 
@@ -121,9 +121,9 @@ Du kan till exempel lägga till rubrikkomponenten i mallen. När du markerar kom
 
 När alternativet Ursprungligt innehåll är markerat öppnas mallens adaptiva formulärbehållare som ett adaptivt formulär för redigering. Med den kan du skapa ett fördefinierat innehåll som kan ändras när du skapar adaptiv Forms som är kopplat till mallen. Precis som när du skapar ett adaptivt formulär kan du ange inledande inställningar, som att välja ett tema och skicka åtgärder.
 
-Formulärförfattare använder det som bas för att skapa ett formulär. Innehållsflödesstrukturen anges i lagret Ursprungligt innehåll i mallen. Om du vill växla till att redigera det ursprungliga innehållet i formulärmallen innan du förhandsgranskar i sidverktygsfältet väljer du ![canvas-drop-down](assets/canvas-drop-down.png) **>** **[!UICONTROL Initial Content]**.
+Formulärförfattare använder det som bas för att skapa ett formulär. Innehållsflödesstrukturen anges i lagret Ursprungligt innehåll i mallen. Om du vill växla till att redigera det ursprungliga innehållet i formulärmallen väljer du ![listrutan för arbetsyta](assets/canvas-drop-down.png) **>** **[!UICONTROL Initial Content]** innan du förhandsgranskar i sidverktygsfältet.
 
-![Sidhuvud och sidfot som lagts till i lagret Ursprungligt innehåll](assets/header-and-footer.png)
+![Sidhuvud och sidfot har lagts till i det inledande innehållslagret](assets/header-and-footer.png)
 
 I lagret Ursprungligt innehåll skapar du mallen Adaptivt formulär som dina författare använder som bas. Om du redigerar en mall på samma sätt som när du redigerar ett formulär, använder du de alternativ som finns i sidofältet. Sidofältet innehåller webbläsare för innehåll, egenskaper, resurser och komponenter.
 
@@ -139,33 +139,33 @@ När du redigerar en mall kan du definiera layouten, vilket innebär att en resp
 
 ![Layoutbehållare i strukturlagret](/help/forms/assets/layout-template-core-component.png)
 
-Läs artikeln [förstå responsiv layout](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/responsive-layout-feature-video-understand.html?lang=en) om du vill ha mer information.
+Mer information finns i artikeln [Förstå responsiv layout](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/responsive-layout-feature-video-understand.html?lang=en).
 
 ## Aktivera mallen {#enabling-the-template}
 
 När du skapar en mall läggs den till som ett utkast. Aktivera mallen för att använda den för att skapa Adaptiv Forms. Så här aktiverar du en mall:
 
-1. Navigera till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL Templates]**och öppna mappen där du har skapat mallen.
+1. Navigera till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL Templates]** och öppna mappen där du har skapat mallen.
 Mallen som du har skapat markeras som Utkast.
 1. Markera mallen och välj **[!UICONTROL Enable]** i verktygsfältet.
 När du skapar ett adaptivt formulär kan du se mallen som visas när du ombeds att välja en mall.
 
 ## Importera eller exportera en mall {#importing-or-exporting-a-template}
 
-Ett formulär fungerar med sin mall. När du hämtar ett adaptivt formulär som skapats med en anpassad mall hämtas inte mallen. När du importerar formuläret till ett annat [!DNL AEM Forms] -instansen importeras den utan sin mall. Om ett formulär importeras men mallen inte är tillgänglig, återges inte formuläret. Du kan paketera den anpassade mallen från `/conf` nod i `https://<server>:<port>/crx/packmgr`och lägga in den i [!DNL AEM Forms] instans där du vill överföra formuläret. Du kan också [Skapa en mall med AEM Archetype och distribuera den till din Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/pages-templates.html#prerequisites).
+Ett formulär fungerar med sin mall. När du hämtar ett adaptivt formulär som skapats med en anpassad mall hämtas inte mallen. När du importerar formuläret till en annan [!DNL AEM Forms]-instans importeras det utan någon mall. Om ett formulär importeras men mallen inte är tillgänglig, återges inte formuläret. Du kan paketera den anpassade mallen från noden `/conf` i `https://<server>:<port>/crx/packmgr` och portera den i instansen [!DNL AEM Forms] där du vill överföra formuläret. Du kan också [skapa en mall med hjälp AEM Archetype och distribuera den till din Cloud Services-instans](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/pages-templates.html#prerequisites).
 
 >[!NOTE]
 >
-> * Du kan även konfigurera [!UICONTROL Document of Record] direkt från redigeraren för adaptiva formulär eller redigeraren för adaptiva formulärmallar. Mer information finns i [Generera arkivdokument för adaptiv Forms](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#document-of-record-support-in-adaptive-form-editor-dor-support-in-adaptiveform).
+> * Du kan också konfigurera mallen [!UICONTROL Document of Record] direkt från redigeraren för adaptiva formulär eller mallredigeraren för adaptiva formulär. Mer information finns i [Skapa postdokument för adaptiv Forms](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#document-of-record-support-in-adaptive-form-editor-dor-support-in-adaptiveform).
 
 ## Koppla ett formulärdatamodellschema till en mall {#associating-form-data-model-schema-in-template}
 
-Författare kan associera en [!UICONTROL Form Data Model Schema] till en adaptiv formulärmall i mallredigeraren. Det gör att författare kan välja ett schema i mallredigeraren. När du kopplar ett schema till en mall och en formulärförfattare skapar ett formulär baserat på mallen, markeras schemat automatiskt för formuläret. Det hjälper formulärförfattare att reglera användningen av scheman och sparar tid även för formulärförfattare. Så här väljer du ett formulärdatamodellschema i mallredigeraren:
+Författare kan associera en [!UICONTROL Form Data Model Schema] till en anpassad formulärmall i mallredigeraren. Det gör att författare kan välja ett schema i mallredigeraren. När du kopplar ett schema till en mall och en formulärförfattare skapar ett formulär baserat på mallen, markeras schemat automatiskt för formuläret. Det hjälper formulärförfattare att reglera användningen av scheman och sparar tid även för formulärförfattare. Så här väljer du ett formulärdatamodellschema i mallredigeraren:
 
-1. Välj **[!UICONTROL Content Browser]** till vänster.
+1. Välj **[!UICONTROL Content Browser]** som finns till vänster.
 1. Gå till formulärbehållaren **[!UICONTROL Setting]**.
 1. Välj **[!UICONTROL Data Model]**.
-1. Välj formulärdatamodell (FDM) genom att **[!UICONTROL Select Form Data Model]** och spara konfigurationen.
+1. Välj formulärdatamodellen (FDM) via **[!UICONTROL Select Form Data Model]** och spara konfigurationen.
 
 ![Form-Data-Model-Association-in-Forms](/help/forms/assets/select-form-data-model-img-core-component.png)
 
@@ -202,7 +202,7 @@ After you have added fields, you can add buttons such as Submit and Reset.
 
 ### Lägga till anpassade egenskaper i adaptiva formulärkomponenter med hjälp av en mallpolicy
 
-Med anpassade egenskaper kan du koppla anpassade attribut (nyckelvärdepar) till en anpassad formulärets kärnkomponent med hjälp av formulärmallen. De anpassade egenskaperna visas i **[!UICONTROL properties]** i den headless-renderingen av komponenten. Det gör att du kan skapa dynamiskt formulärbeteende som anpassas baserat på anpassade attributvärden. Utvecklare kan till exempel utforma olika renderingar av en Headless Forms-komponent för mobiler, datorer eller webbplattformar, vilket avsevärt förbättrar användarupplevelsen på en mängd olika enheter.
+Med anpassade egenskaper kan du koppla anpassade attribut (nyckelvärdepar) till en anpassad formulärets kärnkomponent med hjälp av formulärmallen. De anpassade egenskaperna visas i avsnittet **[!UICONTROL properties]** i komponentens huvudlösa återgivning. Det gör att du kan skapa dynamiskt formulärbeteende som anpassas baserat på anpassade attributvärden. Utvecklare kan till exempel utforma olika renderingar av en Headless Forms-komponent för mobiler, datorer eller webbplattformar, vilket avsevärt förbättrar användarupplevelsen på en mängd olika enheter.
 
 Steg för att lägga till anpassade egenskaper i komponentfält för adaptiva formulär är:
 
@@ -213,33 +213,33 @@ Steg för att lägga till anpassade egenskaper i komponentfält för adaptiva fo
 
 1. Gå till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Templates]**.
 1. Markera mallen baserat på kärnkomponenter och öppna den i redigeringsläge.
-1. Klicka på **[!UICONTROL Policy]** ![Policy](/help/forms/assets/Smock_FeedManagement_18_N.svg) ikonen för ett fält av typen Adaptiv Form Core Component där de anpassade egenskaperna måste definieras. The **[!UICONTROL Adaptive Form Field]** visas.
-1. Välj **[!UICONTROL Custom Properties]** -fliken.
-1. Ange **[!UICONTROL Policy Title]** under **[!UICONTROL Policy]** -avsnitt.
-1. Ange **[!UICONTROL Group name]** och lägg till nyckelvärdepar som är kopplade till en viss grupp. Gruppnamnet är synligt för formulärförfattare i redigeringsdialogrutan för en komponent. Om du väljer gruppnamnet kan alla associerade nyckelvärdepar användas för en komponent.
-1. Klicka **[Klar]**.
+1. Klicka på ikonen **[!UICONTROL Policy]** ![Princip](/help/forms/assets/Smock_FeedManagement_18_N.svg) i ett fält av typen kärnkomponent i adaptiv form där de anpassade egenskaperna måste definieras. Dialogrutan **[!UICONTROL Adaptive Form Field]** visas.
+1. Välj fliken **[!UICONTROL Custom Properties]**.
+1. Ange **[!UICONTROL Policy Title]** under avsnittet **[!UICONTROL Policy]**.
+1. Ange **[!UICONTROL Group name]** och lägg till nyckelvärdepar som är associerade med en viss grupp. Gruppnamnet är synligt för formulärförfattare i redigeringsdialogrutan för en komponent. Om du väljer gruppnamnet kan alla associerade nyckelvärdepar användas för en komponent.
+1. Klicka på **[Klar]**.
 
-![Lägga till gruppnamn för anpassade egenskaper i mallredigeraren](/help/forms/assets/custom-properties-core-component.png)
+![Lägger till gruppnamn för anpassade egenskaper i mallredigeraren](/help/forms/assets/custom-properties-core-component.png)
 
-När du lägger till minst en anpassad egenskapsgrupp med hjälp av mallprincipen visas **[!UICONTROL Advanced]** visas i dialogrutan Redigera för en motsvarande kärnkomponent.
+När du lägger till minst en anpassad egenskapsgrupp med hjälp av mallprincipen visas fliken **[!UICONTROL Advanced]** i dialogrutan Redigera för en motsvarande kärnkomponent.
 
 #### Välj ett eget gruppnamn i redigeringsdialogrutan för en kärnkomponent {#select-a-custom-group-name}
 
 1. Öppna ett adaptivt formulär i redigeringsläge.
-1. Markera komponenten som de anpassade egenskaperna har definierats för i mallredigeraren och välj ![settings_icon](assets/configure-icon.svg) för att öppna komponentens redigeringsdialogruta.
-1. Välj **[!UICONTROL Advanced]** -fliken.
-1. Välj det anpassade egenskapsgruppnamnet från **[!UICONTROL Custom Property Select]** nedrullningsbar meny. Alla definierade egna gruppnamn fylls i automatiskt i listrutan.
-1. Välj **[!UICONTROL Done]** för att spara egenskaperna.
+1. Markera komponenten som de anpassade egenskaperna har definierats för i mallredigeraren och välj ![settings_icon](assets/configure-icon.svg) för att öppna redigeringsdialogrutan för komponenten.
+1. Välj fliken **[!UICONTROL Advanced]**.
+1. Välj det anpassade egenskapsgruppnamnet i listrutan **[!UICONTROL Custom Property Select]**. Alla definierade egna gruppnamn fylls i automatiskt i listrutan.
+1. Välj **[!UICONTROL Done]** om du vill spara egenskaperna.
 
 ![välj namn på anpassad egenskapsgrupp](/help/forms/assets/select-custom-properties-group-name.png)
 
 >[!NOTE]
 >
-> * The **[!UICONTROL Additional Custom Properties]** Med kryssrutan kan du lägga till komponentspecifika anpassade egenskaper dynamiskt utöver de som anges i mallprincipen. Den anpassade egenskapen för den specifika komponenten har företräde framför den anpassade egenskapen som angetts i mallprincipen när nyckelnamnsvärdena matchar.
+> * Med kryssrutan **[!UICONTROL Additional Custom Properties]** kan du lägga till komponentspecifika anpassade egenskaper dynamiskt utöver de som anges i mallprincipen. Den anpassade egenskapen för den specifika komponenten har företräde framför den anpassade egenskapen som angetts i mallprincipen när nyckelnamnsvärdena matchar.
 
 ## Skapa ett anpassat formulär med hjälp av mallen {#creating-an-adaptive-form-using-the-template}
 
-När du har skapat och aktiverat en mall är den tillgänglig i formulärhanteraren när du skapar ett anpassat formulär. Information om hur du använder en mall och skapar ett adaptivt formulär finns i [Skapa ett adaptivt formulär baserat på kärnkomponenter](/help/forms/creating-adaptive-form-core-components.md).
+När du har skapat och aktiverat en mall är den tillgänglig i formulärhanteraren när du skapar ett anpassat formulär. Mer information om hur du använder en mall och skapar ett adaptivt formulär finns i [Skapa ett adaptivt formulär baserat på kärnkomponenter](/help/forms/creating-adaptive-form-core-components.md).
 <!--
 ## Change display option of out of the box templates  {#change-display-option-of-out-of-the-box-templates}
 
@@ -280,7 +280,7 @@ You can also save an Adaptive Form as a template for future use. To save a Adapt
 
 ## Bästa praxis {#best-practices}
 
-* Skapa mallar med komponenterna som bygger på kärnkomponenter, till exempel Adaptiv formulärtext, Adaptiv formulärbehållare med mera. Om du vill ha information om adaptiva Forms Core-komponenter [klicka här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html).
+* Skapa mallar med komponenterna som bygger på kärnkomponenter, till exempel Adaptiv formulärtext, Adaptiv formulärbehållare med mera. [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) om du vill ha information om adaptiva Forms Core-komponenter.
 * Begränsa antalet mallar så att de matchar de i grunden olika formulärtyperna som finns på webbplatserna
 * Ge de anpassade komponenter som används i en mall den flexibilitet och konfigurationsmöjligheter som behövs.
 

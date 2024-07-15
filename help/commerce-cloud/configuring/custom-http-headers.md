@@ -24,7 +24,7 @@ För att få bättre kontroll över sin serverdel kan författarna konfigurera a
 
 ## Konfiguration {#configuration}
 
-Om du vill konfigurera anpassade HTTP-huvuden måste du först definiera dem. De anpassade HTTP-rubrikerna måste först definieras genom att de läggs till i `com.adobe.cq.cif.http.internal.HttpHeadersConfigProviderImpl` tjänstkonfiguration med en OSGi-konfiguration.
+Om du vill konfigurera anpassade HTTP-huvuden måste du först definiera dem. De anpassade HTTP-rubrikerna måste först definieras genom att de läggs till i tjänstkonfigurationen `com.adobe.cq.cif.http.internal.HttpHeadersConfigProviderImpl` med en OSGi-konfiguration.
 
 Du kan konfigurera värdena för HTTP-rubrikerna på Cloud Servicens konfigurationssida för ditt projekt:
 

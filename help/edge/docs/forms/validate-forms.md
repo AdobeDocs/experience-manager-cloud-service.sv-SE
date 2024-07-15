@@ -19,7 +19,7 @@ Adaptiv Forms Block har inbyggda valideringsfunktioner. Dessa valideringar anvä
 
 ## Fälttyper och validering
 
-Det adaptiva Forms-blocket har stöd för en mängd olika [Indatatyper för HTML-5](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types), inklusive text, e-post, nummer, datum med mera. Den rymmer också [textområde](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea), urval och fältuppsättning tillsammans med omfattande indatavalideringsfunktioner som är inbyggda i HTML-5.
+Det adaptiva Forms-blocket har stöd för en mängd olika [HTML-5-indatatyper](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types), inklusive text, e-post, tal, datum och mer. Den innehåller även [textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea), select och fieldsSet tillsammans med omfattande indatavalideringsfunktioner som är inbyggda i HTML-5.
 
 använder fälttyper i HTML för att definiera vilken typ av data som en användare kan ange. Olika fälttyper har olika inbyggda valideringsregler:
 

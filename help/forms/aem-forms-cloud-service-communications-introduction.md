@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # AEM Forms as a Cloud Service Communication APIs {#frequently-asked-questions}
 
-![Hero Image](assets/cloud-communication-apis-hero-image.jpeg)
+![Hero-bild](assets/cloud-communication-apis-hero-image.jpeg)
 
 
 | Version | Artikellänk |
@@ -42,11 +42,11 @@ A credit card statement can be created using Communications APIs. This sample st
 
 ## Dokumentgenerering
 
-API:er för dokumentgenerering för kommunikation hjälper dig att kombinera en mall (XFA eller PDF) med kunddata (XML) för att generera dokument i PDF och utskriftsformat som PS, PCL, DPL, IPL och ZPL. Dessa API:er använder PDF- och XFA-mallar med [XML-data](communications-known-issues-limitations.md#form-data) för att generera ett enda dokument on demand eller flera dokument med hjälp av ett batchjobb.
+API:er för dokumentgenerering för kommunikation hjälper dig att kombinera en mall (XFA eller PDF) med kunddata (XML) för att generera dokument i PDF och utskriftsformat som PS, PCL, DPL, IPL och ZPL. Dessa API:er använder PDF- och XFA-mallar med [XML-data](communications-known-issues-limitations.md#form-data) för att generera ett enda dokument vid behov eller flera dokument med hjälp av ett batchjobb.
 
-Vanligtvis skapar du en mall med [Designer](use-forms-designer.md) och använda API:er för kommunikation för att sammanfoga data med mallen. Programmet kan skicka utdatadokumentet till en nätverksskrivare, en lokal skrivare eller till ett lagringssystem för arkivering. Ett typiskt exempel och anpassade arbetsflöden ser ut så här:
+Vanligtvis skapar du en mall med [Designer](use-forms-designer.md) och använder kommunikationsAPI:er för att sammanfoga data med mallen. Programmet kan skicka utdatadokumentet till en nätverksskrivare, en lokal skrivare eller till ett lagringssystem för arkivering. Ett typiskt exempel och anpassade arbetsflöden ser ut så här:
 
-![Arbetsflöde för generering av kommunikationsdokument](assets/communicaions-workflow.png)
+![Arbetsflöde för dokumentgenerering för kommunikation](assets/communicaions-workflow.png)
 
 Beroende på hur de används kan du även göra dessa dokument tillgängliga för hämtning via din webbplats eller en lagringsserver.
 
@@ -111,7 +111,7 @@ When such an interactive PDF document is flattened using the Communications APIs
 
 ## Dokumentmanipulering
 
-API:er för dokumentbearbetning (Document Transformation) hjälper dig att kombinera och ordna om PDF-dokument. Vanligtvis skapar du en DX och skickar den till dokumenthanterings-API:er för att montera eller ordna om ett dokument. The [DDX-dokument](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf) innehåller instruktioner om hur du använder källdokumenten för att skapa en uppsättning med obligatoriska dokument. DDX-referensdokumentationen innehåller detaljerad information om alla åtgärder som stöds. Några exempel på dokumentbearbetning är:
+API:er för dokumentbearbetning (Document Transformation) hjälper dig att kombinera och ordna om PDF-dokument. Vanligtvis skapar du en DX och skickar den till dokumenthanterings-API:er för att montera eller ordna om ett dokument. [DDX-dokumentet](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf) innehåller instruktioner om hur du använder källdokumenten för att skapa en uppsättning med obligatoriska dokument. DDX-referensdokumentationen innehåller detaljerad information om alla åtgärder som stöds. Några exempel på dokumentbearbetning är:
 
 ### Sammanställa dokument från PDF
 
@@ -138,7 +138,7 @@ Bild: Dela upp ett källdokument baserat på bokmärken i flera dokument
 
 >[!NOTE]
 >
-> AEM Forms har en mängd inbyggda teckensnitt som är helt integrerade med PDF filer. Om du vill se en lista över teckensnitt som stöds [klicka här](/help/forms/supported-out-of-the-box-fonts.md).
+> AEM Forms har en mängd inbyggda teckensnitt som är helt integrerade med PDF filer. [Klicka här](/help/forms/supported-out-of-the-box-fonts.md) om du vill visa en lista över teckensnitt som stöds.
 
 <!-- 
 
@@ -168,7 +168,7 @@ The [PDF to XDP API](https://developer.adobe.com/experience-manager-forms-cloud-
 
 ## Extrahering av dokument
 
-<span class="preview"> Funktionen för dokumentextrahering ingår i programmet Early Adobe. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
+<span class="preview"> Funktionen för dokumentextrahering är under Tidiga Adobe-program. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
 Med dokumentextraheringstjänsten kan du hämta PDF-dokumentets egenskaper, t.ex. användarbehörighet, PDF-egenskaper och metadata. Extraheringsfunktionerna är:
 
@@ -176,7 +176,7 @@ Med dokumentextraheringstjänsten kan du hämta PDF-dokumentets egenskaper, t.ex
 * Extrahera användningsrättigheterna som är aktiverade i ett PDF-dokument, så hämtar användarna användningsrättigheterna som är aktiverade eller inaktiverade i ett PDF-dokument för Adobe Acrobat Reader-utbyggbarhet.
 * Hämta metadatainformationen som finns i ett PDF-dokument. Metadata är information om dokumentet (som skiljer sig från dokumentets innehåll, som text och bilder). Adobe Extensible Metadata Platform (XMP) är en standard för hantering av dokumentmetadata. Tjänsten XMP Utilities kan hämta XMP metadata från PDF-dokument och exportera XMP metadata till PDF-dokument.
 
-The [API-referensdokumentation](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) innehåller detaljerad information om alla parametrar, autentiseringsmetoder och tjänster som tillhandahålls av API:er. API-referensdokumentationen finns också i .yaml-format. Du kan hämta .yaml-filen och överföra den till Postman för att kontrollera API:ernas funktioner.
+[API-referensdokumentationen](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) innehåller detaljerad information om alla parametrar, autentiseringsmetoder och tjänster som tillhandahålls av API:er. API-referensdokumentationen finns också i .yaml-format. Du kan hämta .yaml-filen och överföra den till Postman för att kontrollera API:ernas funktioner.
 
 <!--
 
@@ -198,7 +198,7 @@ API:er för dokumentkonvertering för kommunikation hjälper till att konvertera
 
 ### Konvertera PDF till XDP {#convert-pdf-to-xdp}
 
-<span class="preview"> Funktionen Convert PDF to XDP är en del av programmet Early Adobe. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
+<span class="preview"> Funktionen för att konvertera PDF till XDP finns i Tidigt Adobe-program. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
 Konverterar ett PDF-dokument till en XDP-fil. För att ett PDF-dokument ska kunna konverteras till en XDP-fil måste PDF-dokumentet innehålla en XFA-ström i ordlistan.
 
@@ -208,7 +208,7 @@ Tjänsten DocAssurance innehåller API:erna för signatur och kryptering:
 
 ### Signatur-API:er
 
-Med signatur-API:erna kan din organisation skydda säkerheten och sekretessen för Adobe PDF-dokument som den distribuerar och tar emot. <!--This service uses digital signatures and certification to ensure that only intended recipients can alter documents. --> Dokumentets säkerhetsfunktioner används i själva dokumentet, och dokumentet förblir säkert och styrs under hela sin livscykel. Dokumentet förblir säkert även utanför brandväggen när det laddas ned offline och när det skickas tillbaka till organisationen. Du kan utföra följande uppgifter med signatur-API:erna:
+Med signatur-API:erna kan din organisation skydda säkerheten och sekretessen för Adobe PDF-dokument som den distribuerar och tar emot. <!--This service uses digital signatures and certification to ensure that only intended recipients can alter documents. --> Säkerhetsfunktionerna tillämpas på själva dokumentet. Dokumentet förblir säkert och styrs under hela livscykeln. Dokumentet förblir säkert även utanför brandväggen när det laddas ned offline och när det skickas tillbaka till organisationen. Du kan utföra följande uppgifter med signatur-API:erna:
 
 * Lägg till ett synligt signaturfält i ett PDF-dokument.
 * Lägg till ett osynligt signaturfält i ett PDF-dokument.
@@ -226,17 +226,17 @@ Du kan utföra följande uppgifter med krypterings-API:erna:
 * Hämta den typ av skydd som används för ett PDF-dokument.
 * Returnera säkerhetstypen som används för ett PDF-dokument.
 
-Både signatur-API:er och krypterings-API:er [Synkrona API:er](#types-of-communications-apis-types).
+Både signatur-API:er och krypterings-API:er är [synkrona API:er](#types-of-communications-apis-types).
 
 
 ### Dokumentverktyg {#doc-utility}
 
-Dokumentverktyg med synkrona API:er hjälper dig att konvertera dokument mellan filformaten PDF och XDP. Använd användarrättigheter för ett dokument och extrahera de aktiverade användningsrättigheterna från ett dokument. Frågeinformation om ett PDF-dokument. <!-- determines whether a PDF document contains comments or attachments and more, and use document transformation services for XMP utilities--> Information om API:er för användningsrättigheter finns nedan:
+Dokumentverktyg med synkrona API:er hjälper dig att konvertera dokument mellan filformaten PDF och XDP. Använd användarrättigheter för ett dokument och extrahera de aktiverade användningsrättigheterna från ett dokument. Frågeinformation om ett PDF-dokument. <!-- determines whether a PDF document contains comments or attachments and more, and use document transformation services for XMP utilities--> Information om API:er för användningsrättigheter anges nedan:
 
 
 #### API:er för användningsrättigheter (Reader Extension)
 
-<span class="preview"> Funktionen för användningsrättigheter (Reader Extension) ingår i programmet för tidig användning. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
+<span class="preview"> Funktionen Användningsrättigheter (Reader Extension) finns under Tidiga Adobe-programmet. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
 Med funktionen Användningsrättigheter kan man enkelt utbyta interaktiva PDF-dokument genom att utöka funktionaliteten i Adobe Reader med ytterligare användarrättigheter. Tjänsten fungerar med Adobe Reader 7.0 eller senare och lägger till användarrättigheter i ett PDF-dokument. Den här åtgärden aktiverar funktioner som normalt inte är tillgängliga när ett PDF-dokument öppnas med Adobe Reader, till exempel för att lägga till kommentarer i ett dokument, fylla i formulär och spara dokumentet.
 
@@ -257,29 +257,29 @@ Dessa specialfunktioner aktiveras automatiskt när ett PDF-dokument med aktivera
 
 De olika funktionerna för användarrättigheter för utökning av PDF Reader är följande:
 
-* **Streckkodsavkodning**: Om du vill avkoda streckkoder i PDF-dokumentet.
+* **Streckkoder avkodas**: Om du vill avkoda streckkoder i PDF-dokumentet.
 
-* **Kommentar**: Om du vill kommentera offline i PDF-dokumentet.
+* **Kommentarer**: Om du vill kommentera offline i PDF-dokumentet.
 
-* **Kommentarer online**: Att kommentera online i PDF-dokumentet.
+* **Kommentarer online**: Om du vill kommentera online i PDF-dokumentet.
 
-* **Digital signatur**: Lägga till digitala signaturer i ett PDF-dokument.
+* **Digital signatur**: Så här lägger du till digitala signaturer i ett PDF-dokument.
 
-* **Dynamiska formulärfält**: Lägga till formulärfält i ett PDF-dokument.
+* **Dynamiska formulärfält**: Så här lägger du till formulärfält i ett PDF-dokument.
 
-* **Dynamiska formulärsidor**: Lägga till formulärsidor i ett PDF-dokument.
+* **Dynamiska formulärsidor**: Så här lägger du till formulärsidor i ett PDF-dokument.
 
-* **Inbäddade filer**: Att bädda in filer i ett PDF-dokument.
+* **Inbäddade filer**: Om du vill bädda in filer i ett PDF-dokument.
 
-* **Import av formulärdata**: Så här importerar du formulärdata till ett PDF-dokument.
+* **Importera formulärdata**: Om du vill importera formulärdata till ett PDF-dokument.
 
-* **Export av formulärdata**: Så här importerar du formulärdata till ett PDF-dokument.
+* **Formulärdataexport**: Så här importerar du formulärdata till ett PDF-dokument.
 
-* **Formulärfyllning**: Fylla i formulärfält i ett PDF-dokument.
+* **Formulärfyllning**: Om du vill fylla i formulärfält i ett PDF-dokument.
 
-* **Online Forms**: Så här får du åtkomst till en webbtjänst eller databas från ett PDF-dokument.
+* **Online Forms**: Om du vill komma åt en webbtjänst eller databas från ett PDF-dokument.
 
-* **Skicka fristående**: Att skicka formulärdata offline från ett PDF-dokument.
+* **Skicka fristående**: Om du vill skicka formulärdata offline från ett PDF-dokument.
 
 
 #### Andra funktioner
@@ -287,15 +287,15 @@ De olika funktionerna för användarrättigheter för utökning av PDF Reader ä
 * **Meddelande**: Meddelandet som visas i Adobe Acrobat Reader när ett PDF-dokument öppnas med en eller flera användningsrättigheter.
 * **Lås upp lösenord**: Lösenordet som krävs för att öppna ett krypterat PDF-dokument. Det här är vanligtvis lösenordet för dokumentöppning, men om PDF-dokumentet dessutom skyddas av ett behörighetslösenord kan det användas för att öppna det.
 
-The [API-referensdokumentation](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) innehåller detaljerad information om alla parametrar, autentiseringsmetoder och olika tjänster som tillhandahålls av API:er. API-referensdokumentationen finns också i .yaml-format. Du kan hämta .yaml-filen och överföra den till Postman för att kontrollera API:ernas funktioner.
+[API-referensdokumentationen](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) innehåller detaljerad information om alla parametrar, autentiseringsmetoder och olika tjänster som tillhandahålls av API:er. API-referensdokumentationen finns också i .yaml-format. Du kan hämta .yaml-filen och överföra den till Postman för att kontrollera API:ernas funktioner.
 
 ## Typer av API:er för kommunikation {#types}
 
 Kommunikationen tillhandahåller HTTP-API:er för on demand- och batchdokumentgenerering:
 
-* **[Synkrona API:er](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/)** lämpar sig för dokumentgenerering on-demand, låg latens och en post. Dessa API:er lämpar sig bättre för användaråtgärdsbaserade användningsfall. Du kan till exempel skapa ett dokument när en användare har fyllt i ett formulär.
+* **[Synkrona API:er](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/)** är lämpliga för dokumentgenerering on demand, low latency och single record. Dessa API:er lämpar sig bättre för användaråtgärdsbaserade användningsfall. Du kan till exempel skapa ett dokument när en användare har fyllt i ett formulär.
 
-* **[Batch-API:er (asynkrona API:er)](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/)** är lämpliga för schemalagda, höga genomströmningsscenarier och flera dokumentgenereringsscenarier. Dessa API:er genererar dokument gruppvis. Till exempel genereras telefonräkningar, kreditkortsräkningar och förmånsräkningar varje månad.
+* **[Batch-API:er (asynkrona API:er)](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/)** passar för schemalagda, höga genomströmningsscenarier och flera dokumentgenereringsscenarier. Dessa API:er genererar dokument gruppvis. Till exempel genereras telefonräkningar, kreditkortsräkningar och förmånsräkningar varje månad.
 
 ## Onboarding
 
@@ -305,13 +305,13 @@ Efter introduktionen, för att aktivera kommunikationsfunktioner för din Forms 
 
 1. Logga in på Cloud Manager och öppna AEM Forms as a Cloud Service Instance.
 
-1. Öppna alternativet Redigera program, gå till fliken Lösningar och tillägg och välj **[!UICONTROL Forms - Communications]** alternativ.
+1. Öppna alternativet Redigera program, gå till fliken Lösningar och tillägg och välj alternativet **[!UICONTROL Forms - Communications]**.
 
    ![Kommunikation](assets/communications.png)
 
-   Om du redan har aktiverat **[!UICONTROL Forms - Digital Enrollment]** väljer du **[!UICONTROL Forms - Communications Add-On]** alternativ.
+   Om du redan har aktiverat alternativet **[!UICONTROL Forms - Digital Enrollment]** väljer du alternativet **[!UICONTROL Forms - Communications Add-On]**.
 
-   ![Addon](assets/add-on.png)
+   ![Lägg till](assets/add-on.png)
 
 1. Klicka på **[!UICONTROL Update]**.
 
@@ -319,7 +319,7 @@ Efter introduktionen, för att aktivera kommunikationsfunktioner för din Forms 
 
 >[!NOTE]
 >
-> Om du vill aktivera och konfigurera API:er för dokumentredigering lägger du till följande regel i [Dispatcher-konfiguration](setup-local-development-environment.md#forms-specific-rules-to-dispatcher):
+> Om du vill aktivera och konfigurera API:er för dokumentbearbetning lägger du till följande regel i [Dispatcher-konfigurationen](setup-local-development-environment.md#forms-specific-rules-to-dispatcher):
 >
 > `# Allow Forms Doc Generation requests`
 > `/0062 { /type "allow" /method "POST" /url "/adobe/forms/assembler/*" }`

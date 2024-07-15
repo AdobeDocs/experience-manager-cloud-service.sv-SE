@@ -22,17 +22,17 @@ Möjligheten att ta bort innehåll är kraftfull, men potentiellt känslig, och 
 
 När det gäller borttagningsbehörigheter måste innehållsfragment beaktas på två nivåer:
 
-1. **Innehållsfragmentet som en enskild enhet.**
+1. **Innehållsfragmentet som en enskild entitet.**
 
    * **Använd skiftläge**: En användare som måste redigera/uppdatera ett innehållsfragment - **och ta bort ett helt fragment**.
-   * **Behörigheter**: Behörigheten Ta bort kan tilldelas via användar- och/eller grupphantering.
+   * **Behörigheter**: Du kan tilldela behörigheten Ta bort via Hantering av användare och/eller grupper.
 
-2. **De flera underenheter som utgör ett innehållsfragment, till exempel variationer, undernoder.**
+2. **De flera underentiteter som utgör ett innehållsfragment, till exempel varianter, undernoder.**
 
    Den grundläggande åtgärden i redigeraren för innehållsfragment kräver att sådana tillfälliga delelement kan tas bort. Till exempel när du ändrar variationer, även när du redigerar metadata eller hanterar associerat innehåll.
 
-   * **Använd skiftläge**: En användare som måste redigera/uppdatera ett innehållsfragment - **utan tillstånd att ta bort ett helt fragment**.
-   * **Behörigheter**: Se [Behörigheter krävs endast för redigeringsfunktionen](#permissions-required-for-editor-functionality-only).
+   * **Använd skiftläge**: En användare som måste redigera/uppdatera ett innehållsfragment - **utan att kunna ta bort ett helt fragment**.
+   * **Behörigheter**: Se [Behörigheter krävs endast för redigeringsfunktioner](#permissions-required-for-editor-functionality-only).
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ När det gäller borttagningsbehörigheter måste innehållsfragment beaktas på
 
 ## Behörigheter krävs endast för redigeringsfunktionen {#permissions-required-for-editor-functionality-only}
 
-För användare som behöver redigera/uppdatera ett innehållsfragment, **utan att tillåta dem att ta bort ett helt fragment** måste specifika behörigheter tilldelas eftersom grundläggande åtgärder i redigeraren för innehållsfragment kräver att tillfälliga delelement kan tas bort.
+För användare som behöver redigera/uppdatera ett innehållsfragment, **utan att tillåta dem att ta bort ett helt fragment**, måste specifika behörigheter tilldelas eftersom grundläggande åtgärder i redigeraren för innehållsfragment kräver att tillfälliga delelement kan tas bort.
 
 Till exempel när du ändrar variationer, även när du redigerar metadata eller hanterar associerat innehåll.
 
@@ -56,9 +56,9 @@ En mapp som innehåller alla innehållsfragment, till exempel:
 
 >[!CAUTION]
 >
->Ange behörigheter för `/content/dam` är också möjligt eftersom alla innehållsfragment lagras här.
+>Det går också att ange behörigheter för `/content/dam` eftersom alla innehållsfragment lagras här.
 >
->Den här åtgärden använder dock samma borttagningsbehörigheter för *alla* även andra tillgångstyper.
+>Den här åtgärden tillämpar dock samma borttagningsbehörigheter för *alla* andra resurstyper också.
 
 Behörigheten som krävs för att en viss användare och/eller grupp ska kunna redigera/uppdatera ett innehållsfragment är:
 
@@ -70,10 +70,10 @@ Behörigheten som krävs för att en viss användare och/eller grupp ska kunna r
 
    * `jcr:addChildNodes`, `jcr:modifyProperties`
 
-* För `jcr:content`nod för alla innehållsfragment:
+* För noden `jcr:content`för alla innehållsfragment:
 
-   * `jcr:addChildNodes`, `jcr:modifyProperties`och `jcr:removeChildNodes`
+   * `jcr:addChildNodes`, `jcr:modifyProperties` och `jcr:removeChildNodes`
 
-* För alla noder nedan `jcr:content` av alla innehållsfragment:
+* För alla noder under `jcr:content` i alla innehållsfragment:
 
-   * `jcr:addChildNodes`, `jcr:modifyProperties`och `jcr:removeChildNodes`, `jcr:removeNode`
+   * `jcr:addChildNodes`, `jcr:modifyProperties` och `jcr:removeChildNodes`, `jcr:removeNode`

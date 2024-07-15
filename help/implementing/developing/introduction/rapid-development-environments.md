@@ -17,23 +17,23 @@ För att kunna driftsätta ändringar kräver de aktuella utvecklingsmiljöerna 
 
 Tack vare de lokala redigeringssystemen kan utvecklare snabbt driftsätta och granska ändringar, vilket minimerar den tid som krävs för att testa funktioner som är beprövade i en lokal utvecklingsmiljö.
 
-När ändringarna har testats i en RDE kan de distribueras till en vanlig molnutvecklingsmiljö via Cloud Managers pipeline.
+När ändringarna har testats i en RDE kan de distribueras till en vanlig Cloud Development-miljö via Cloud Manager pipeline.
 
 >[!NOTE]
-> Ta kontakt med RDE-utvecklarna på vår [Discord channel](https://discord.com/channels/1131492224371277874/1245304281184079872). Du kan ställa frågor eller ge feedback om RDE-ämnen.
+> Kontakta RDE-utvecklarna på vår [Discord-kanal](https://discord.com/channels/1131492224371277874/1245304281184079872). Du kan ställa frågor eller ge feedback om RDE-ämnen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415582/?quality=12&learn=on)
 
 
-Du kan se ytterligare videofilmer som visar [konfigurera](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-setup.html), [hur man använder den](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html)och [utvecklingslivscykel](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/development-life-cycle.html) med RDE.
+Du kan se ytterligare videofilmer som visar [hur du konfigurerar den](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-setup.html), [hur du använder den](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html) och [utvecklingscykeln](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/development-life-cycle.html) med hjälp av RDE.
 
 ## Introduktion {#introduction}
 
-RDE kan användas för konfigurationer av kod, innehåll och Apache eller Dispatcher. Till skillnad från vanliga Cloud Development-miljöer kan utvecklare använda lokala kommandoradsverktyg för att synkronisera kod som skapats lokalt till en RDE.
+RDE kan användas för kod, innehåll och Apache- eller Dispatcher-konfigurationer. Till skillnad från vanliga Cloud Development-miljöer kan utvecklare använda lokala kommandoradsverktyg för att synkronisera kod som skapats lokalt till en RDE.
 
 Alla program tillhandahålls med en RDE. Om det finns sandlådekonton är de i viloläge efter några timmars icke-användning.
 
-När de skapas ställs de lokala utvecklingsmiljöerna in på den senast tillgängliga Adobe Experience Manager-versionen (AEM). En RDE-återställning, som kan utföras med Cloud Manager, går igenom RDE-filen och ställer in den till den senast tillgängliga AEM.
+När de skapas ställs de lokala utvecklingsmiljöerna in på den senast tillgängliga Adobe Experience Manager-versionen (AEM). En RDE-återställning, som kan utföras med Cloud Manager, går igenom RDE-filen och ställer in den till den senast tillgängliga AEM-versionen.
 
 Vanligtvis används en RDE av en enskild utvecklare vid en viss tidpunkt för att testa och felsöka en viss funktion. När utvecklingssessionen är klar kan den återställas till ett standardläge för nästa användning.
 
@@ -41,52 +41,52 @@ Ytterligare RDE kan licensieras för produktionsprogram (ej sandlådeprogram).
 
 ## Aktivera RDE i ett program {#enabling-rde-in-a-program}
 
-Följ de här stegen så att du kan använda Cloud Manager för att skapa en RDE för ditt program.
+Följ de här stegen för att använda Cloud Manager för att skapa en RDE för ditt program.
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
 1. Klicka på det program som du vill lägga till en RDE till för att visa information om det.
 
-   * RDE kan läggas till i båda [sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-sandbox-programs.md) och [produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-production-programs.md).
+   * RDE kan läggas till i både [sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-sandbox-programs.md) och [produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-production-programs.md).
 
-1. Från **Programöversikt** sida, klicka **Lägg till miljö** på **Miljö** för att lägga till en miljö.
+1. Klicka på **Lägg till miljö** på **miljökortet** på sidan **Programöversikt** för att lägga till en miljö.
 
    ![Miljökort](/help/implementing/cloud-manager/assets/no-environments.png)
 
-   * The **Lägg till miljö** finns även på **Miljö** -fliken.
+   * Alternativet **Lägg till miljö** är också tillgängligt på fliken **Miljö**.
 
      ![Fliken Miljö](/help/implementing/cloud-manager/assets/environments-tab.png)
 
-   * The **Lägg till miljö** kan vara inaktiverat på grund av bristande behörighet eller beroende på vilka licensierade resurser som används.
+   * Alternativet **Lägg till miljö** kan vara inaktiverat på grund av bristande behörighet eller beroende på de licensierade resurserna.
 
-1. I **Lägg till miljö** som visas:
+1. I dialogrutan **Lägg till miljö** som visas:
 
-   * Välj **Snabb utveckling** under **Välj miljötyp** rubrik.
+   * Välj **Snabb utveckling** under rubriken **Välj miljötyp**.
       * Antalet tillgängliga/använda miljöer visas inom parentes bakom miljötypen.
-   * Ange en **Namn** för miljön.
-   * Ange ett valfritt **Beskrivning** för miljön.
-   * Välj en **Molnregion**.
+   * Ange ett **namn** för miljön.
+   * Ange en valfri **beskrivning** för miljön.
+   * Välj en **molnregion**.
 
    ![Dialogrutan Lägg till miljö](/help/implementing/cloud-manager/assets/add-environment-wizard.png)
 
-1. Klicka **Spara** för att lägga till den angivna miljön.
+1. Klicka på **Spara** för att lägga till den angivna miljön.
 
-The **Ökning** visas nu din nya miljö i **Miljö** kort.
+Skärmen **Översikt** visar nu din nya miljö på kortet **Miljöer**.
 
-När de skapas ställs de virtuella skrivborden in på den senast tillgängliga AEM. En RDE-återställning, som även kan utföras med Cloud Manager, går igenom RDE-filen och ställer in den till den senast tillgängliga AEM.
+När de skapas ställs de virtuella skrivborden in på den senast tillgängliga AEM. En RDE-återställning, som även kan utföras med Cloud Manager, går igenom RDE-filen och ställer in den till den senast tillgängliga AEM-versionen.
 
 Mer information om hur du använder Cloud Manager för att skapa miljöer, hantera vem som har åtkomst till dem och tilldela anpassade domäner finns i [Cloud Manager-dokumentationen](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md).
 
 ## Installera kommandoradsverktygen för RDE {#installing-the-rde-command-line-tools}
 
-När du har lagt till en RDE för ditt program med hjälp av Cloud Manager kan du interagera med den genom att konfigurera kommandoradsverktygen enligt följande steg:
+När du har lagt till en RDE för programmet med Cloud Manager kan du interagera med den genom att konfigurera kommandoradsverktygen enligt följande steg:
 
 >[!IMPORTANT]
 >
->Kontrollera att du har version 20 av [Nod och NPM har installerats](https://nodejs.org/en/download/) för att Adobe I/O CLI och tillhörande plugin-program ska fungera korrekt.
+>Kontrollera att version 20 av [Node och NPM är installerade](https://nodejs.org/en/download/) så att Adobe I/O CLI och relaterade plugin-program fungerar som de ska.
 
 
-1. Installera CLI-verktygen för Adobe I/O enligt detta [procedur](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/).
+1. Installera CLI-verktygen för Adobe I/O enligt den här [proceduren](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/).
 1. Installera Adobe I/O CLI-verktyg AEM RDE-plugin:
 
    ```
@@ -101,7 +101,7 @@ När du har lagt till en RDE för ditt program med hjälp av Cloud Manager kan d
    aio aem:rde:setup
    ```
 
-   Installationssteget kan hoppas över om avsikten är att använda en skriptmiljö. I så fall kan värdena för organisation, program och miljö inkluderas i varje kommando. [Mer information finns i följande kommandon](#rde-cli-commands).
+   Installationssteget kan hoppas över om avsikten är att använda en skriptmiljö. I så fall kan värdena för organisation, program och miljö inkluderas i varje kommando. [Mer information finns i följande kommandon.](#rde-cli-commands).
 
 ### Den interaktiva installationen {#installing-the-rde-command-line-tools-interactive}
 
@@ -112,12 +112,12 @@ Setup the CLI configuration necessary to use the RDE commands.
 ? Do you want to store the information you enter in this setup procedure locally? (y/N)
 ```
 
-Välj `no` till
+Välj `no` att
 * lagra organisationen, programmet och miljön globalt i din AIR-konfiguration.
 * arbeta med en enda RDE.
 
-Välj `yes` till
-* lagra organisationen, programmet och miljön lokalt i den aktuella katalogen, i en `.aio` -fil. Detta är praktiskt om du vill implementera filen i versionskontrollen så att andra klonar Git-databasen kan använda den.
+Välj `yes` att
+* lagra organisationen, programmet och miljön lokalt i den aktuella katalogen i en `.aio`-fil. Detta är praktiskt om du vill implementera filen i versionskontrollen så att andra klonar Git-databasen kan använda den.
 * arbeta med många referensdataposter, så att den konfigurationen används i stället när du växlar till en annan katalog.
 * använder konfigurationen i en programmatisk kontext som ett skript, som kan referera till den.
 
@@ -153,7 +153,7 @@ I miljöer där ingen användare interaktivt kan köra installationskommandot en
 
    `aio config:set cloudmanager_orgid 4E03EQC05D34GL1A0B49421C@AdobeOrg`
 
-   * Ditt eget organisations-ID kan slås upp med metoden [här.](https://experienceleague.adobe.com/docs/core-services/interface/administration/organizations.html#concept_EA8AEE5B02CF46ACBDAD6A8508646255)
+   * Ditt eget organisations-ID kan slås upp med metoden [som beskrivs här.](https://experienceleague.adobe.com/docs/core-services/interface/administration/organizations.html#concept_EA8AEE5B02CF46ACBDAD6A8508646255)
 
 1. Konfigurera sedan ditt program-ID:
 
@@ -167,37 +167,37 @@ I miljöer där ingen användare interaktivt kan köra installationskommandot en
 
    `aio login`
 
-   Dessa steg kräver att du är medlem i Cloud Manager **Utvecklare - Cloud Service** Produktprofil. Se [den här sidan](/help/journey-onboarding/assign-profiles-cloud-manager.md#assign-developer) för mer information.
+   Dessa steg kräver att du är medlem i produktprofilen Cloud Manager **Developer - Cloud Service**. Mer information finns på [den här sidan](/help/journey-onboarding/assign-profiles-cloud-manager.md#assign-developer).
 
-Titta på videosjälvstudiekursen om du vill ha mer information och demonstration [Konfigurera en RDE (06:24)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-setup.html).
+Titta på videosjälvstudiekursen [om hur du konfigurerar en RDE (06:24)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-setup.html) om du vill ha mer information och demonstration.
 </details>
 
 ## Använda RDE under utvecklingen av en ny funktion {#using-rde-while-developing-a-new-feature}
 
 Adobe rekommenderar följande arbetsflöde för att utveckla en ny funktion:
 
-* När en mellanliggande milstolpe har nåtts och validerats lokalt med den AEM as a Cloud Service SDK:n, bekräftar du koden till en Git-funktionsgren. Branschen bör inte vara en del av huvudraden ännu, även om det är valfritt att binda sig för Git. Vad som utgör en&quot;mellanmilstolpe&quot; varierar beroende på teamets vanor. Exempel är några nya kodrader, en halv arbetsdag eller en underfunktion.
+* När en mellanliggande milstolpe har nåtts och validerats lokalt med AEM as a Cloud Service SDK implementerar du koden i en Git-funktionsgren. Branschen bör inte vara en del av huvudraden ännu, även om det är valfritt att binda sig för Git. Vad som utgör en&quot;mellanmilstolpe&quot; varierar beroende på teamets vanor. Exempel är några nya kodrader, en halv arbetsdag eller en underfunktion.
 
-* Återställ RDE om den har använts av en annan funktion och du vill [återställa till standardläge](#reset-rde). <!-- Alexandru: hiding for now, do not delete This can be done by way of [Cloud Manager](#reset-the-rde-cloud-manager) or by way of the [command line](#reset-the-rde-command-line). -->Återställningen tar några minuter och allt befintligt innehåll och all befintlig kod tas bort. Du kan använda kommandot för RDE-status för att bekräfta att RDE är klart. Den senaste versionen av AEM kommer tillbaka till RDE.
+* Återställ RDE om den har använts av en annan funktion och du vill [återställa den till standardläge](#reset-rde). <!-- Alexandru: hiding for now, do not delete This can be done by way of [Cloud Manager](#reset-the-rde-cloud-manager) or by way of the [command line](#reset-the-rde-command-line). -->Återställningen tar några minuter och allt befintligt innehåll och all befintlig kod tas bort. Du kan använda kommandot för RDE-status för att bekräfta att RDE är klart. Den senaste versionen av AEM kommer tillbaka till RDE.
 
   >[!IMPORTANT]
   >
   > Om din testnings- och produktionsmiljö inte får automatiska AEM och ligger bakom den senaste versionen av AEM, kanske koden som körs på den lokala utvecklingsmiljön inte stämmer överens med hur koden fungerar i testversionerna och produktionerna. I så fall är det särskilt viktigt att utföra grundliga tester av koden på mellanlagring innan den distribueras till produktion.
 
 
-* Synkronisera lokal kod med RDE-kommandoradsgränssnittet. Du kan installera ett innehållspaket, ett specifikt paket, en OSGI-konfigurationsfil, en innehållsfil och en zip-fil för en Apache/Dispatcher-konfiguration. Det går också att referera till ett fjärrinnehållspaket. Se [Kommandoradsverktyg för RDE](/help/implementing/developing/introduction/rapid-development-environments.md#rde-cli-commands) för mer information. Du kan använda statuskommandot för att validera att distributionen lyckades. Du kan också använda Package Manager för att installera innehållspaket.
+* Synkronisera lokal kod med RDE-kommandoradsgränssnittet. Du kan installera ett innehållspaket, ett specifikt paket, en OSGI-konfigurationsfil, en innehållsfil och en zip-fil för en Apache/Dispatcher-konfiguration. Det går också att referera till ett fjärrinnehållspaket. Mer information finns i [RDE Command-Line Tools](/help/implementing/developing/introduction/rapid-development-environments.md#rde-cli-commands). Du kan använda statuskommandot för att validera att distributionen lyckades. Du kan också använda Package Manager för att installera innehållspaket.
 
-* Testa koden i RDE. URL:er för författare och publicering är tillgängliga i Cloud Manager.
+* Testa koden i RDE. URL:er för författare och Publish finns i Cloud Manager.
 
 * Om koden inte beter sig som förväntat kan du använda standardfelsökningstekniker för att förstå problemet och göra lämpliga ändringar. Utan att implementera kodändringarna i Git (eftersom de inte har validerats) kan du synkronisera koden med den lokala CLI:n. Fortsätt tills problemet är löst.
 
 * När koden beter sig som förväntat implementerar du koden i Git-funktionsgrenen.
 
-* Kod som synkroniseras till RDE använder inte en molnhanterarpipeline, så nu bör du använda en icke-produktionsprocess i Cloud Manager för att distribuera Git-funktionsgrenen till molnutvecklingsmiljön. Detta validerar att koden klarar Cloud Managers kvalitetsportar och gör att du kan vara säker på att koden senare distribueras med hjälp av Cloud Managers produktionsflöde.
+* Kod som synkroniseras till RDE använder inte en Cloud Manager-pipeline, så nu bör du använda en icke-produktionsprocess från Cloud Manager för att distribuera Git-funktionsgrenen till molnutvecklingsmiljön. Detta validerar att koden klarar Cloud Manager kvalitetsportar och gör att du kan vara säker på att koden senare distribueras med Cloud Manager produktionsflöde.
 
 * Upprepa stegen ovan för varje mellanliggande milstolpe tills all kod för funktionen är klar och fungerar bra i både RDE- och Cloud Development-miljön.
 
-* Distribuera koden till produktionen via Cloud Managers produktionsflöde.
+* Distribuera koden till produktionen via Cloud Manager produktionsflöde.
 
 ## Felsöka en befintlig funktion med RDE {#use-rde-to-debug-an-existing-feature}
 
@@ -240,7 +240,7 @@ Med noggrann samordning kan dock fler än en utvecklare validera en viss funktio
 
   `aio aem rde <command> --organizationId=<value> --programId=<value> --environmentId=<value>`
 
-  Detta kräver fortfarande en ```aio login``` ska utföras.
+  Detta kräver fortfarande att ```aio login``` utförs.
 
 ### Distribuera till RDE {#deploying-to-rde}
 
@@ -267,13 +267,13 @@ Du kan även referera till en fjärrdatabas:
 
 Som standard distribueras artefakter till både författar- och publiceringsnivåer, men flaggan&quot;-s&quot; kan användas för att ange ett specifikt skikt som mål.
 
-Alla AEM kan distribueras, till exempel paket med kod, innehåll eller en [behållarpaket](/help/implementing/developing/introduction/aem-project-content-package-structure.md#container-packages) (kallas även&quot;all&quot;-paketet).
+Alla AEM kan distribueras, till exempel paket med kod, innehåll eller ett [behållarpaket](/help/implementing/developing/introduction/aem-project-content-package-structure.md#container-packages) (kallas även&quot;alla&quot;-paket).
 
 >[!IMPORTANT]
 >
 >Dispatcher-konfigurationen för WKND-projektet distribueras inte via innehållspaketinstallationen ovan. Distribuera den separat enligt stegen&quot;Distribuera en Apache/Dispatcher-konfiguration&quot;.
 
-<u>Distribuera en OSGI-konfiguration</u>
+<u>Distribuerar en OSGI-konfiguration</u>
 
 `aio aem:rde:install com.adobe.granite.demo.MyServlet.cfg.json`
 
@@ -297,7 +297,7 @@ Där svaret för en lyckad distribution liknar följande:
 #3: deploy staged for osgi-bundle org.apache.felix.gogo.jline-1.1.8.jar on author,publish - done by 9E0725C05D53BE1A0B49431C@AdobeID at 2022-09-14T07:54:28.882Z
 ```
 
-<u>Distribuera en innehållsfil</u>
+<u>Distribuerar en innehållsfil</u>
 
 Använd följande för att distribuera en innehållsfil:
 
@@ -314,11 +314,11 @@ Där svaret för en lyckad distribution liknar följande:
 
 Hela mappstrukturen måste vara i form av en ZIP-fil för den här typen av konfiguration.
 
-Från `dispatcher` i ett AEM projekt kan du zippa upp Dispatcher-konfigurationen genom att köra kommandot nedan:
+Från modulen `dispatcher` i ett AEM projekt kan du zippa upp Dispatcher-konfigurationen genom att köra kommandot nedan:
 
 `mvn clean package`
 
-Eller använda zip-kommandot nedan från `src` katalogen för `dispatcher` modul:
+Eller använd zip-kommandot nedan från katalogen `src` i modulen `dispatcher`:
 
 `zip -y -r dispatcher.zip .`
 
@@ -328,11 +328,11 @@ Distribuera sedan konfigurationen med det här kommandot:
 
 >[!TIP]
 >
->Kommandot ovan förutsätter att du distribuerar [WKND](https://github.com/adobe/aem-guides-wknd) projektets Dispatcher-konfigurationer. Se till att ersätta `X.X.X` med motsvarande WKND-projektversionsnummer eller projektspecifikt versionsnummer när du distribuerar projektets Dispatcher-konfiguration.
+>Ovanstående kommando förutsätter att du distribuerar [WKND](https://github.com/adobe/aem-guides-wknd)-projektets Dispatcher-konfigurationer. Se till att ersätta `X.X.X` med motsvarande WKND-projektversionsnummer eller projektspecifikt versionsnummer när du distribuerar projektets Dispatcher-konfiguration.
 
 >[!NOTE]
 >
->RDE har stöd för Dispatcher-konfiguration i flexibelt läge, men inte Dispatcher-konfiguration i äldre läge. Se [Dispatcher-dokumentation](/help/implementing/dispatcher/disp-overview.md#validation-debug) om du vill ha information om de två lägena. Du kan även läsa dokumentationen om [migrera till flexibel modell](/help/implementing/dispatcher/validation-debug.md#migrating), om du inte redan har gjort det.
+>RDE har stöd för Dispatcher-konfiguration i flexibelt läge, men inte för Dispatcher-konfiguration i äldre läge. Mer information om de två lägena finns i [Dispatcher-dokumentationen](/help/implementing/dispatcher/disp-overview.md#validation-debug). Du kan även läsa dokumentationen om [migrering till det flexibla läget](/help/implementing/dispatcher/validation-debug.md#migrating), om du inte redan har gjort det.
 
 En lyckad distribution genererar ett svar som liknar följande:
 
@@ -364,13 +364,13 @@ Kodexemplet ovan visar beteendet om ett paket inte löses. I så fall&quot;mella
 
 ### Distribuera startkod baserat på webbplatsteman och webbplatsmallar {#deploying-themes-to-rde}
 
-De lokala lagringsenheterna stöder kod som baseras på [webbplatsteman](/help/sites-cloud/administering/site-creation/site-themes.md) och [webbplatsmallar](/help/sites-cloud/administering/site-creation/site-templates.md). Med RDE:er görs detta med hjälp av ett kommandoradsdirektiv för att distribuera frontendpaket, i stället för med Cloud Manager [Front-End Pipeline](/help/sites-cloud/administering/site-creation/enable-front-end-pipeline.md) används för andra miljötyper.
+De lokala redigeringssystemen har stöd för klientkod som baseras på [webbplatsteman](/help/sites-cloud/administering/site-creation/site-themes.md) och [webbplatsmallar](/help/sites-cloud/administering/site-creation/site-templates.md). Med RDE:er används detta kommandoradsdirektiv för att distribuera frontendpaket, i stället för Cloud Manager [Front-End Pipeline](/help/sites-cloud/administering/site-creation/enable-front-end-pipeline.md) som används för andra miljötyper.
 
 Som vanligt kan du bygga ditt front end-paket med npm:
 
 `npm run build`
 
-Den ska generera en `dist/` mappen, så den översta paketmappen bör innehålla en `package.json` och `dist` mapp:
+Den ska generera en `dist/`-mapp, så den främre paketmappen ska innehålla en `package.json`-fil och en `dist`-mapp:
 
 ```
 ls ./path-to-frontend-pkg-folder/
@@ -389,7 +389,7 @@ Logs:
 > with workspace hash 692021864642a20d6d298044a927d66c0d9cf2adf42d4cca0c800a378ac3f8d3
 ```
 
-Du kan även komprimera `package.json` och `dist` och distribuera zip-filen:
+Du kan också komprimera filen `package.json` och mappen `dist` och distribuera zip-filen:
 
 `zip -r frontend-pkg.zip ./path-to-frontend-pkg-folder/dist ./path-to-frontend-pkg-folder/package.json`
 
@@ -449,9 +449,9 @@ som returnerar ett svar i form av:
 
 ### Tar bort från RDE {#deleting-from-rde}
 
-Du kan ta bort konfigurationer och paket som tidigare har distribuerats till RDE med CLI-verktyget. Använd `status` om du vill visa en lista över vad som kan tas bort, som innehåller `bsn` för paket och `pid` för konfigurationer att referera till i kommandot delete.
+Du kan ta bort konfigurationer och paket som tidigare har distribuerats till RDE med CLI-verktyget. Använd kommandot `status` om du vill se en lista över vad som kan tas bort, som innehåller `bsn` för paket och `pid` för konfigurationer att referera till i kommandot delete.
 
-Om `com.adobe.granite.demo.MyServlet.cfg.json` har installerats, `bsn` är bara `com.adobe.granite.demo.MyServlet`, utan **cfg.json** suffix.
+Om till exempel `com.adobe.granite.demo.MyServlet.cfg.json` har installerats är `bsn` bara `com.adobe.granite.demo.MyServlet`, utan suffixet **cfg.json**.
 
 Det går inte att ta bort innehållspaket eller innehållsfiler. Om du vill ta bort dem bör du återställa den skrivskyddade miljön, vilket innebär att den återgår till standardläget.
 
@@ -463,27 +463,27 @@ aio aem:rde:delete com.adobe.granite.csrf.impl.CSRFFilter
 #14: delete completed for osgi-config com.adobe.granite.csrf.impl.CSRFFilter on publish - done by karl at 2022-09-12T22:01:12.979Z
 ```
 
-Mer information och demonstrationer finns i videosjälvstudien [använda RDE-kommandon (10:01)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html).
+Mer information och demonstration finns i videosjälvstudien [om hur du använder RDE-kommandon (10:01)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html).
 
 ## Loggar {#rde-logging}
 
-På samma sätt som för andra miljötyper kan loggnivåer ställas in genom att OSGi-konfigurationer ändras, även om distributionsmodellen för RDE-konfigurationer enligt beskrivningen ovan inbegriper en kommandorad i stället för en Cloud Manager-distribution. Kontrollera [loggningsdokumentation](/help/implementing/developing/introduction/logging.md) om du vill ha mer information om hur du visar, hämtar och tolkar loggar.
+På samma sätt som för andra miljötyper kan loggnivåer ställas in genom att OSGi-konfigurationer ändras, även om distributionsmodellen för RDE-konfigurationer enligt beskrivningen ovan inbegriper en kommandorad i stället för en Cloud Manager-distribution. Mer information om hur du visar, hämtar och tolkar loggar finns i [loggningsdokumentationen](/help/implementing/developing/introduction/logging.md).
 
 RDE CLI har också ett eget loggkommando som kan användas för att snabbt konfigurera vilka klasser och paket som ska loggas och på vilken loggnivå. Dessa konfigurationer kan betraktas som tillfälliga eftersom de inte ändrar OSGI-egenskaperna i versionskontrollen. Den här funktionen fokuserar på att skräddarsy loggar i realtid, i stället för att leta efter loggar från det avlägsna förflutna.
 
-I följande exempel visas hur du finjusterar författarnivån, med ett paket inställt på en felsökningsloggnivå, och två paket (avgränsade med blanksteg) inställda på en informationsfelsökningsnivå. Utdata som innehåller en **auth** paketet är markerat.
+I följande exempel visas hur du finjusterar författarnivån, med ett paket inställt på en felsökningsloggnivå, och två paket (avgränsade med blanksteg) inställda på en informationsfelsökningsnivå. Utdata som innehåller ett **auth**-paket är markerade.
 
 `aio aem:rde:logs --target=author --debug=org.apache.sling --info=org.apache.sling.commons.threads.impl org.apache.sling.jcr.resource.internal.helper.jcr -H .auth.`
 
 >[!TIP]
 >
->Om felet visas `RDECLI:UNEXPECTED_API_ERROR` när du spelar med loggkommandona för författartjänsten, återställ miljön och försök igen. Det här felet genereras om den senaste återställningsåtgärden utfördes före slutet av maj 2024.
+>Om felet `RDECLI:UNEXPECTED_API_ERROR` visas när du spelar upp med loggkommandona för författartjänsten, återställer du miljön och försöker igen. Det här felet genereras om den senaste återställningsåtgärden utfördes före slutet av maj 2024.
 >
 ```
 >aio aem:rde:reset
 >```
 
-Se `aio aem:rde:logs --help` för alla kommandoradsalternativ.
+Mer information om alla kommandoradsalternativ finns i `aio aem:rde:logs --help`.
 
 Funktioner:
 
@@ -521,21 +521,21 @@ This usually takes a few minutes. Use the [status command](#checking-rde-status)
 
 Du kan använda Cloud Manager för att återställa din RDE genom att följa stegen nedan:
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
 1. Klicka på det program för vilket du vill återställa RDE.
 
-1. Från **Ökning** klickar du på **Miljö** överst på skärmen.
+1. På sidan **Översikt** klickar du på fliken **Miljö** högst upp på skärmen.
 
    ![Fliken Miljö](/help/implementing/cloud-manager/assets/environments-tab2.png)
 
-   * Du kan även klicka på **Visa alla** på **Miljö** för att gå direkt till **Miljö** -fliken.
+   * Du kan också klicka på knappen **Visa alla** på kortet **Miljöer** om du vill gå direkt till fliken **Miljöer**.
 
-     ![Visa alla](/help/implementing/cloud-manager/assets/environment-showall.png)
+     ![Visa alla alternativ](/help/implementing/cloud-manager/assets/environment-showall.png)
 
-1. The **Miljö** öppnas och alla miljöer för programmet visas.
+1. Fönstret **Miljö** öppnas och alla miljöer för programmet visas.
 
-   ![Fliken Miljöer](/help/implementing/cloud-manager/assets/environments-tab-populated.png)
+   ![Miljöfliken](/help/implementing/cloud-manager/assets/environments-tab-populated.png)
 
 1. Klicka på ellipsknappen för den RDE som du vill återställa och välj sedan **Återställ**.
 
@@ -545,23 +545,23 @@ Du kan använda Cloud Manager för att återställa din RDE genom att följa ste
 
    ![Bekräfta återställning](/help/implementing/cloud-manager/assets/rde-reset-confirm.png)
 
-1. Cloud Manager bekräftar med ett banderollmeddelande att återställningsprocessen har startats.
+1. Cloud Manager bekräftar genom ett banderollmeddelande att återställningsprocessen har startat.
 
    ![Återställ banderollmeddelande](/help/implementing/cloud-manager/assets/rde-reset-banner.png)
 
-När återställningsprocessen för RDE har startats tar det oftast några minuter att slutföra och återställa miljön till standardläget. Återställningsprocessens status kan visas när som helst i **Status** kolumn i **Miljö** eller i **Miljö** -fönstret.
+När återställningsprocessen för RDE har startats tar det oftast några minuter att slutföra och återställa miljön till standardläget. Återställningsprocessens status kan visas när som helst i kolumnen **Status** på kortet **Environmental** eller i fönstret **Environment** .
 
 ![Återställningsstatus för RDE](/help/implementing/cloud-manager/assets/rde-reset-status-environments-card.png)
 
-Du kan också återställa den lokala redigeringsmiljön med hjälp av ellipsknappen direkt från **Miljö** på **Ökning** sida.
+Du kan också återställa den lokala lagringsplatsen med hjälp av ellipsknappen direkt från kortet **Miljöer** på sidan **Översikt**.
 
-![Återställ RDE från miljökort](/help/implementing/cloud-manager/assets/rde-reset-environments-card.png)
+![Återställ RDE från miljökortet](/help/implementing/cloud-manager/assets/rde-reset-environments-card.png)
 
-Mer information om hur du använder Cloud Manager för att hantera dina miljöer finns i [Cloud Manager-dokumentationen](/help/implementing/cloud-manager/manage-environments.md).
+Mer information om hur du använder Cloud Manager för att hantera miljöer finns i [Cloud Manager-dokumentationen](/help/implementing/cloud-manager/manage-environments.md).
 
 ## Kommandon som stöder JSON-utdata {#json-commands}
 
-De flesta kommandon har stöd för ```--json``` som undertrycker konsolutdata och returnerar giltig json som ska bearbetas i skript. Nedan finns några kommandon som stöds, med exempel på json-utdata.
+De flesta kommandon har stöd för den globala flaggan ```--json``` som undertrycker konsolutdata och returnerar giltig json som ska bearbetas i skript. Nedan finns några kommandon som stöds, med exempel på json-utdata.
 
 ### Status {#status}
 
@@ -930,11 +930,11 @@ RDE-specifik OSGI-konfiguration kan tillämpas med hjälp av suffix i mappnamnet
 * `config.author.rde`
 * `config.publish.rde`
 
-Se [dokumentation för körningsläge](/help/implementing/deploying/overview.md#runmodes) för allmän information om körningslägen.
+Mer information om körningslägen finns i [dokumentationen för körningsläge](/help/implementing/deploying/overview.md#runmodes).
 
 >[!NOTE]
 >
->RDE OSGI-konfigurationen är unik eftersom den ärver värdena för alla OSGI-egenskaper som deklarerats av paketets `dev` körningsläge.
+>RDE OSGI-konfigurationen är unik eftersom den ärver värdena för alla OSGI-egenskaper som deklarerats av paketets `dev`-körningsläge.
 
 RDE skiljer sig från andra miljöer där innehåll kan installeras i en install.rde-mapp (eller install.author.rde eller install.publish.rde) under /apps. På så sätt kan du implementera innehåll för att Git och leverera det till RDE med hjälp av kommandoradsverktygen.
 
@@ -946,7 +946,7 @@ När en RDE återställs tas allt innehåll bort, och om så önskas måste en e
 
 1. Placera och implementera exempelinnehållet i Git i en install.rde-mapp under /apps och synka sedan det övergripande innehållspaketet till RDE med kommandoradsverktygen.
 
-1. Använd [innehållskopia, verktyg](/help/implementing/developing/tools/content-copy.md) om du vill kopiera en definierad innehållsuppsättning från produkter, scener eller dev-miljöer, eller från en annan RDE.
+1. Använd verktyget [innehållskopiering](/help/implementing/developing/tools/content-copy.md) för att kopiera en definierad innehållsuppsättning från produkter-, scen- eller dev-miljöer eller från en annan RDE-miljö.
 
 1. Använd pakethanteraren
 
@@ -991,7 +991,7 @@ Forms-utvecklare kan använda AEM Forms Cloud Service Rapid Development Environm
 
 ## RDE, genomgång
 
-Om du vill veta mer om RDE i AEM as a Cloud Service kan du titta i videosjälvstudiekursen som visar [hur den ska konfigureras, hur den ska användas och utvecklingscykeln (01:25)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html).
+Om du vill veta mer om RDE i AEM as a Cloud Service kan du titta i videosjälvstudiekursen som demonstrerar [hur du konfigurerar den, hur du använder den och utvecklingscykeln (01:25)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html).
 
 # Felsökning {#troubleshooting}
 
@@ -999,13 +999,13 @@ Om du vill veta mer om RDE i AEM as a Cloud Service kan du titta i videosjälvst
 
 ### Så här skaffar du den senaste AEM för en befintlig RDE {#get-latest-aem-version}
 
-När de skapas ställs de lokala utvecklingsmiljöerna in på den senast tillgängliga Adobe Experience Manager-versionen (AEM). An [RDE-återställning,](#reset-rde) som kan utföras med Cloud Manager eller `aio aem:rde:reset` används RDE-kommandot för att bläddra i RDE-filen och ställa in den till den senast tillgängliga AEM.
+När de skapas ställs de lokala utvecklingsmiljöerna in på den senast tillgängliga Adobe Experience Manager-versionen (AEM). En [RDE-återställning,](#reset-rde), som kan utföras med Cloud Manager eller kommandot `aio aem:rde:reset`, går igenom RDE-filen och anger den till den senast tillgängliga AEM.
 
 ## felsökning av plugin-program för aio RDE {#aio-rde-plugin-troubleshooting}
 
 ### Fel som rör otillräcklig behörighet {#insufficient-permissions}
 
-Om du vill använda RDE-plugin-programmet måste du vara medlem i Cloud Manager **Utvecklare - Cloud Service** Produktprofil. Se [den här sidan](/help/journey-onboarding/assign-profiles-cloud-manager.md#assign-developer) för mer information.
+Om du vill använda RDE-plugin-programmet måste du vara medlem i produktprofilen Cloud Manager **Developer - Cloud Service**. Mer information finns på [den här sidan](/help/journey-onboarding/assign-profiles-cloud-manager.md#assign-developer).
 
 Du kan också bekräfta att du har den här utvecklarrollen om du kan logga in på utvecklarkonsolen med det här kommandot:
 
@@ -1013,7 +1013,7 @@ Du kan också bekräfta att du har den här utvecklarrollen om du kan logga in p
 
 >[!TIP]
 >
->Om du ser `Warning: cloudmanager:* is not a aio command.` fel måste du installera [aio-cli-plugin-cloud-manager](https://github.com/adobe/aio-cli-plugin-cloudmanager) genom att köra kommandot nedan:
+>Om felet `Warning: cloudmanager:* is not a aio command.` visas måste du installera [ aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager) genom att köra kommandot nedan:
 >
 >```
 >aio plugins:install @adobe/aio-cli-plugin-cloudmanager

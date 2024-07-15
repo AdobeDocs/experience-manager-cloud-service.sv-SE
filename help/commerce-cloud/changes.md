@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Betydande ändringar i tillägget för Commerce integration framework (CIF){#notable-changes}
 
-Adobe Experience Manager as a Cloud Service har många nya funktioner och möjligheter att hantera dina AEM projekt. Om du vill veta mer om de här funktionerna kan du följa länken för [ändringar av Experience Manager as a Cloud Service](/help/release-notes/aem-cloud-changes.md).
+Adobe Experience Manager as a Cloud Service har många nya funktioner och möjligheter att hantera dina AEM projekt. Om du vill veta mer om de här funktionerna kan du följa länken för [ändringar i Experience Manager as a Cloud Service](/help/release-notes/aem-cloud-changes.md).
 
 I det här dokumentet beskrivs de viktiga skillnaderna mellan tilläggen för Commerce integration framework (CIF) och äldre CIF, så kallade CIF Classic (Quickstart) och CIF OpenSource.
 
@@ -21,7 +21,7 @@ I det här dokumentet beskrivs de viktiga skillnaderna mellan tilläggen för Co
 
 Tillägget AEM CIF installeras via Cloud Manager. Installationen kräver en CIF, förutom för sandlådor där CIF kan installeras utan krediter. Krediter tas emot automatiskt via etablering av CIF tillägg i ditt AEM.
 
-Tillägget uppdateras automatiskt som en del av den vanliga AEM as a Cloud Service uppdateringen.
+Tillägget uppdateras automatiskt som en del av den vanliga AEM as a Cloud Service-uppdateringen.
 
 **Tidigare CIF versioner**
 
@@ -31,7 +31,7 @@ Tillägget uppdateras automatiskt som en del av den vanliga AEM as a Cloud Servi
 
 ## Konfiguration av slutpunkt
 
-Slutpunkten konfigureras och uppdateras antingen via användargränssnittet i Cloud Manager eller via dess CLI.
+Slutpunkten konfigureras och uppdateras antingen via Cloud Manager UI eller dess CLI.
 
 **Tidigare CIF versioner**
 
@@ -40,12 +40,12 @@ Slutpunkten konfigureras och uppdateras antingen via användargränssnittet i Cl
 
 ## Driftsättning CIF Veniaprojektet
 
-Projektet är tillgängligt i [Git-databas för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/integrating-with-git.html) och driftsättning via [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
+Projektet är tillgängligt i [Cloud Manager Git-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/integrating-with-git.html) och distributionen görs via [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
 
 **Tidigare CIF versioner**
 
 * CIF Classic: Genom att AEM
-* CIF: Via [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
+* CIF öppen källkod: Via [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
 
 ## Produktkatalogdata
 
@@ -61,7 +61,7 @@ AEM återger produktkatalogupplevelser direkt med hjälp AEM katalogmallar som h
 
 **Tidigare CIF versioner**
 
-* CIF Classic: AEM skapar en AEM sida för varje kategori/produkt med hjälp av katalogritningsverktyget. Dessa sidor replikeras till AEM.
+* CIF Classic: AEM skapar en AEM sida för varje kategori/produkt med hjälp av katalogritningsverktyget. Dessa sidor replikeras till AEM Publish.
 
 >[!NOTE]
 >

@@ -53,14 +53,14 @@ Så här ansluter du en AEM plats och AEM CIF kärnkomponenter till en dedikerad
 4. Tilldela den underordnade konfigurationen till en AEM plats
 
    * Gå till AEM Sites Console
-   * Navigera till regionen eller språkroten i platsstrukturen. Till exempel: `/content/venia/us _or_ /content/venia/us/en` för Venias exempelsida
+   * Navigera till regionen eller språkroten i platsstrukturen. Exempel: `/content/venia/us _or_ /content/venia/us/en` för Venias exempelsida
    * Markera sidan och öppna sidegenskaperna
    * Välj fliken Avancerat
-   * I `Configuration` väljer du konfigurationen som du skapade i steg 3
+   * I avsnittet `Configuration` väljer du konfigurationen som du skapade i steg 3
 
 ## Ytterligare resurser
 
 * [Adobe Commerce webbplatser, butiker och vyer](https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html)
-* [AEM CIF kärnkomponenter - konfiguration av flera butiker/platser](https://github.com/adobe/aem-core-cif-components#multi-store--site-configuration)
-* [Använda Multi-Site Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/translation/multi-site-manager-feature-video-use.html)
+* [AEM CIF kärnkomponenter - konfiguration för flera butiker/platser](https://github.com/adobe/aem-core-cif-components#multi-store--site-configuration)
+* [Använder Multi-Site Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/translation/multi-site-manager-feature-video-use.html)
 * [Återanvända innehåll: Multi Site Manager och Live Copy](/help/sites-cloud/administering/msm/overview.md)

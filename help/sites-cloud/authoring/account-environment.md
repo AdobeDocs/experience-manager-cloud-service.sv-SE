@@ -18,16 +18,16 @@ Adobe Experience Manager (AEM) ger dig möjlighet att konfigurera ditt konto och
 
 Med alternativet [Användare](#user-settings) i [sidhuvudet](/help/sites-cloud/authoring/basic-handling.md#the-header) och den tillhörande dialogrutan [Mina inställningar](#my-preferences) kan du ändra dina användaralternativ.
 
-Börja med att gå till [Användare](#user-settings) i sidhuvudet.
+Börja med att gå till alternativet [Användare](#user-settings) i sidhuvudet.
 
 ## Användarinställningar {#user-settings}
 
-The **Användare** dialogrutan ger dig tillgång till:
+Dialogrutan **Användare** ger dig åtkomst till:
 
 * Personifiera som
    * Med funktionen Personifiera som kan en användare arbeta för en annan användares räkning. <!--With the [Impersonate as](/help/sites-administering/security.md#impersonating-another-user) functionality, a user can work on behalf of another user.-->
 * Profil
-   * Det är en praktisk länk till dina användarinställningar <!--Offers a convenient link to your [user settings](/help/sites-administering/security.md))-->
+   * Det erbjuder en praktisk länk till dina användarinställningar <!--Offers a convenient link to your [user settings](/help/sites-administering/security.md))-->
 * [Mina inställningar](#my-preferences)
    * Ange olika inställningar som är unika för användaren
 
@@ -35,7 +35,7 @@ The **Användare** dialogrutan ger dig tillgång till:
 
 ### Mina inställningar {#my-preferences}
 
-The **Mina inställningar** öppnas via [Användare](#user-settings) i sidhuvudet.
+Dialogrutan **Mina inställningar** öppnas med alternativet [Användare](#user-settings) i sidhuvudet.
 
 Varje användare kan ange sina egna önskade egenskaper.
 
@@ -49,7 +49,7 @@ Varje användare kan ange sina egna önskade egenskaper.
 
   Detta definierar beteendet för att öppna fönster. Välj antingen:
 
-   * **Flera fönster** (Standard)
+   * **Flera fönster** (standard)
 
       * Sidorna öppnas i ett nytt fönster.
 
@@ -75,10 +75,10 @@ Varje användare kan ange sina egna önskade egenskaper.
   Det här alternativet definierar hur datum i systemet visas. Följande alternativ är tillgängliga:
 
    * **Visa alltid exakt datum**: Det exakta datumet visas alltid (aldrig ett relativt datum).
-   * **1 dag**: Det relativa datumet visas för datum inom en dag, annars visas ett exakt datum.
+   * **1 Dag**: Det relativa datumet visas för datum inom en dag, annars visas ett exakt datum.
    * **7 dagar (standard)**: Det relativa datumet visas för datum inom sju dagar, annars visas ett exakt datum.
-   * **1 månad**: Det relativa datumet visas för datum inom en månad, annars visas ett exakt datum.
-   * **1 år**: Det relativa datumet visas för datum inom ett år, annars visas ett exakt datum.
+   * **1 Month**: Det relativa datumet visas för datum inom en månad, annars visas ett exakt datum.
+   * **1 År**: Det relativa datumet visas för datum inom ett år, annars visas ett exakt datum.
    * **Visa alltid relativt datum**: Exakta datum visas aldrig och endast relativa datum visas.
 
 * **Aktivera kortkommandon**
@@ -90,10 +90,10 @@ Varje användare kan ange sina egna önskade egenskaper.
 
   Det här alternativet aktiverar kortkommandon. Som standard är de aktiverade, men kan inaktiveras, till exempel om en användare har vissa tillgänglighetskrav.
 
-* **Aktivera startsidan för resurser**
+* **Aktivera Assets hemsida**
 
-  Det här alternativet är bara tillgängligt om systemadministratören har aktiverat Assets Home Page (Startsidan för resurser) för hela organisationen.
+  Det här alternativet är endast tillgängligt om systemadministratören har aktiverat Assets hemsida för hela organisationen.
 
 * **Stock-konfiguration**
 
-  Med det här alternativet kan du ange önskad Adobe Stock-konfiguration och det är bara tillgängligt om systemadministratören har aktiverat [Integrering med Adobe Stock](/help/assets/aem-assets-adobe-stock.md).
+  Med det här alternativet kan du ange den önskade Adobe Stock-konfigurationen och det är bara tillgängligt om systemadministratören har aktiverat [Adobe Stock-integrering](/help/assets/aem-assets-adobe-stock.md).

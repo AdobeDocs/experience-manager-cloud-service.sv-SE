@@ -12,7 +12,7 @@ ht-degree: 1%
 
 ---
 
-# Integrera anpassningsbart formulär med Salesforce {#configure-salesforce-with-ouath-2.0-client-credential}
+# Integrera anpassat formulär med Salesforce {#configure-salesforce-with-ouath-2.0-client-credential}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -27,7 +27,7 @@ Du kan använda klientautentiseringsuppgifter för OAuth 2.0 för att integrera 
 
 AEM Forms utbyter klientautentiseringsuppgifterna (konsumentnyckel och hemlighet), som definieras i det Salesforce-anslutna programmet, för att få en åtkomsttoken.
 
-AEM as a Cloud Service erbjuder olika åtgärder för att skicka in formulär. Du kan läsa mer om de här alternativen i [Inlämningsåtgärd för anpassat formulär](/help/forms/configure-submit-actions-core-components.md) artikel.
+AEM as a Cloud Service erbjuder olika inskickningsåtgärder för att hantera inskickade formulär. Du kan läsa mer om de här alternativen i artikeln [Åtgärd för att skicka anpassade formulär](/help/forms/configure-submit-actions-core-components.md).
 
 Det finns många fördelar med att använda OAuth 2.0-klientautentiseringsuppgifter för autentisering över autentisering av Authorization Code Flow:
 
@@ -38,9 +38,9 @@ Det finns många fördelar med att använda OAuth 2.0-klientautentiseringsuppgif
 
 Innan du ställer in kommunikation mellan ett Salesforce-program och en AEM-miljö:
 
-* Skapa en [Salesforce-ansluten app med OAuth 2.0-klientautentiseringsflöde](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&amp;type=5) och en användare som bara har API för din organisation och som får tillgång till konsumentnyckeln och konsumenthemligheten för appen.
+* Skapa en [Salesforce-ansluten app med OAuth 2.0-klientautentiseringsflöde](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&amp;type=5) och en API-användare för din organisation och hämta konsumentnyckeln och konsumenthemligheten för appen.
 
-* Kontrollera att Swagger-filen är rätt konfigurerad för att matcha organisationens API:er. Du kan också välja att [skapa en Swagger-fil](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html) från scratch, skräddarsytt för användning i AEM.
+* Kontrollera att Swagger-filen är rätt konfigurerad för att matcha organisationens API:er. Du kan också välja att [skapa en Swagger-fil](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html) från början, som är anpassad för användning i AEM.
 
 
 ## Konfigurera Salesforce-program med OAuth 2.0-klientautentiseringsflöde {#steps-to-create-aem-datasource-configuration}
@@ -50,18 +50,18 @@ Så här ansluter du adaptivt formulär till Salesforce-programmet med autentise
 1. Logga in på din Author-instans.
 1. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Data Sources]**.
 1. Välj konfigurationsmappen.
-1. Klicka **[!UICONTROL Create]** och **[!UICONTROL Create Data Source Configuration]** visas.
-1. Ange **[!UICONTROL Title]** och väljer **[!UICONTROL Service Type]** as **[!UICONTROL RESTful Service]**.
+1. Klicka på **[!UICONTROL Create]** så visas **[!UICONTROL Create Data Source Configuration]**.
+1. Ange **[!UICONTROL Title]** och välj **[!UICONTROL Service Type]** som **[!UICONTROL RESTful Service]**.
 1. Klicka på **[!UICONTROL Next]**.
-1. Välj **[!UICONTROL Swagger Source]** as **[!UICONTROL File].**
+1. Välj **[!UICONTROL Swagger Source]** som **[!UICONTROL File].**
 
    >[!NOTE]
    >
    > När swagger-filen väljs fylls schemat, värdnamnet och bassökvägen i automatiskt.
 
 1. Överför den skapade swagger-filen från den lokala datorn genom att klicka på **[!UICONTROL Browse]**.
-1. Välj **[!UICONTROL Authentication Type]** as **[!UICONTROL OAuth 2.0]** och **[!UICONTROL Authentication Settings]** visas.
-1. Välj **[!UICONTROL Grant Type]** as **[!UICONTROL Client Credential]**.
+1. Markera **[!UICONTROL Authentication Type]** som **[!UICONTROL OAuth 2.0]** så visas panelen **[!UICONTROL Authentication Settings]**.
+1. Välj **[!UICONTROL Grant Type]** som **[!UICONTROL Client Credential]**.
 1. Ange **[!UICONTROL Client Id]** och **[!UICONTROL Client Secret]** som hämtats från Salesforce-appen som är ansluten.
 1. Ange **[!UICONTROL Access Token URL]** i format
    `https://[MyDomainName].my.salesforce.com/services/oauth2/token`.
@@ -71,12 +71,12 @@ Så här ansluter du adaptivt formulär till Salesforce-programmet med autentise
    > Varje organisation har ett eget specifikt domännamn.
 
 1. Klicka på **[!UICONTROL Test Connection]**.
-1. Om anslutningen lyckas klickar du på **[!UICONTROL Create]** -knappen.
+1. Om anslutningen lyckas klickar du på knappen **[!UICONTROL Create]**.
 
 
-När du har konfigurerat Salesforce-programmet kan du använda konfigurationen när du skapar formulärdatamodell (FDM). Mer information finns i [Skapa formulärdatamodell (FDM)](create-form-data-models.md). [Konfigurera åtgärden Skicka formulärdatamodell](/help/forms/using-form-data-model.md) för ett adaptivt formulär som skickar data till Salesforce-program.
+När du har konfigurerat Salesforce-programmet kan du använda konfigurationen när du skapar formulärdatamodell (FDM). Mer information finns i [Skapa formulärdatamodell (FDM)](create-form-data-models.md). [Konfigurera formulärdatamodellens överföringsåtgärd](/help/forms/using-form-data-model.md) för ett anpassat formulär för att skicka data till Salesforce-program.
 
-Mer information om hur du skapar och använder FDM (Form Data Model) i affärsarbetsflöden finns i [Dataintegrering](data-integration.md).
+Mer information om hur du skapar och använder FDM (Form Data Model) i arbetsflöden finns i [Dataintegrering](data-integration.md).
 
 ## Relaterade artiklar
 

@@ -15,11 +15,11 @@ ht-degree: 0%
 
 Olika medarbetare arbetar med ett typiskt AEM Screens-projekt. Följande information hjälper dig att bestämma vilka profiler du behöver för ditt projekt.
 
-Var och en av rolldefinitionerna som beskrivs i tabellen nedan belyser rollerna och ansvarsområdena för en viss person och deras resa i en skärms as a Cloud Service projektutveckling och implementering.
+Var och en av rolldefinitionerna som beskrivs i tabellen nedan belyser rollerna och ansvarsområdena för en viss person och deras resa i en as a Cloud Service projektutveckling och implementering i Screens.
 
 | Persontyp | Vilka de är |
 |--- |--- |
 | **Nätverksadministratör** | Ansvarig för att konfigurera spelaren och hantera vanligtvis hela distributionen för en AEM Screens-distribution. Definierar användarupplevelsedesign (stil, layout, branding) enligt organisationens krav och skapar projektstruktur och kanaler. |
-| **Utvecklare** | Ansvarig för installation och konfigurering av as a Cloud Service skärmar. Utför utvecklings- och integreringsuppgifter för att utveckla användarupplevelsen, anpassade mallar, anpassade komponenter och AEM. |
+| **Utvecklare** | Ansvarig för installation och konfigurering av Screens as a Cloud Service miljöer. Utför utvecklings- och integreringsuppgifter för att utveckla användarupplevelsen, anpassade mallar, anpassade komponenter och AEM. |
 | **Innehållsförfattare** | När en projektstruktur och kanaler har definierats enligt projektkraven ansvarar en innehållsförfattare för att lägga till innehåll i kanaler och hantera platser och enheter. |
-| **Företagsledare - Digital** | Ansvarig för affärsenhetens marknadsföringsstrategi och intäkter, viktiga affärsintressenter för digitala användningsfall, lösningar och tjänsteerbjudanden för slutanvändarna, signerar på implementering och leverans av användningsfall. |
+| **Business Executive - Digital** | Ansvarig för affärsenhetens marknadsföringsstrategi och intäkter, viktiga affärsintressenter för digitala användningsfall, lösningar och tjänsteerbjudanden för slutanvändarna, signerar på implementering och leverans av användningsfall. |

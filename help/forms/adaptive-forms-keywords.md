@@ -236,4 +236,4 @@ Adaptiva Forms-nyckelord är fördefinierade, reserverade identifierare som har 
  </tbody>
 </table>
 
-Undvik, förutom nyckelorden ovan, att använda namn som liknar [Adaptiva Forms JavaScript API:er](https://adobe.com/go/learn_aemforms_javascript_api_63).
+Undvik, förutom nyckelorden ovan, att använda namn som liknar [API:er för anpassade Forms JavaScript](https://adobe.com/go/learn_aemforms_javascript_api_63).

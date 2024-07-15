@@ -1,6 +1,6 @@
 ---
-title: Access Cloud Manager
-description: Lär dig hur du får åtkomst till Cloud Manager så att du kan konfigurera dina projektresurser.
+title: Använd Cloud Manager
+description: Lär dig hur du får tillgång till Cloud Manager så att du kan konfigurera dina projektresurser.
 role: Admin, User, Developer
 exl-id: c9476ac9-8318-493e-a48d-94ff5a6433a7
 feature: Onboarding
@@ -11,81 +11,81 @@ ht-degree: 0%
 
 ---
 
-# Access Cloud Manager {#cloud-resources}
+# Använd Cloud Manager {#cloud-resources}
 
-I den här delen av [startresan,](overview.md) får du lära dig hur du får tillgång till Cloud Manager så att du kan konfigurera dina projektresurser.
+I den här delen av [introduktionsresan ](overview.md) får du lära dig hur du kommer åt Cloud Manager så att du kan konfigurera dina projektresurser.
 
 ## Syfte {#objective}
 
-I föregående artikel på denna introduktionsresa [Tilldela teammedlemmar till Cloud Manager-produktprofiler,](assign-profiles-cloud-manager.md) du har gett ditt AEMaaCS-team rätt roller. Lär dig nu hur du får tillgång till Cloud Manager så att du kan konfigurera dina projektresurser som teamet använder.
+I den föregående artikeln i den här introduktionsresan, [Tilldela teammedlemmar till Cloud Manager produktprofiler](assign-profiles-cloud-manager.md), har du gett ditt AEMaaCS-team rätt roller. Nu kan du lära dig hur du får tillgång till Cloud Manager så att du kan konfigurera projektresurser som teamet använder.
 
-Sedan du slutförde föregående steget på den här resan har ditt team tillgång till Cloud Manager. Cloud Manager används för att skapa och hantera projektresurser som program och miljöer.
+Sedan du slutförde föregående steget på den här resan kan ditt team få tillgång till Cloud Manager. Cloud Manager används för att skapa och hantera projektresurser som program och miljöer.
 
 När du har läst det här dokumentet bör du förstå följande:
 
-* Att en systemadministratör har tilldelats **Företagsägare** rollen måste vara den första i organisationen som loggar in och får tillgång till Cloud Manager.
+* En systemadministratör som tilldelats rollen **Business Owner** måste vara den första i organisationen som kan logga in och komma åt Cloud Manager.
 * Logga in på Cloud Manager.
 
 ## Cloud Manager {#cloud-manager}
 
-Cloud Manager är en viktig komponent i AEM as a Cloud Service och fungerar som en enda startpunkt för ditt team. Den stöder kunder med företagsutvecklingsmiljöer med specialbyggda CI/CD-ledningar som är utrustade för grundlig testning och högsta kodkvalitet för att leverera enastående upplevelser. Cloud Manager innehåller allt som krävs för att komma igång på ett självbetjäningssätt, inklusive möjligheten att skapa molnresurser och miljöer.
+Cloud Manager är en viktig komponent i AEM as a Cloud Service och fungerar som en gemensam startpunkt för ert team. Den stöder kunder med företagsutvecklingsmiljöer med specialbyggda CI/CD-ledningar som är utrustade för grundlig testning och högsta kodkvalitet för att leverera enastående upplevelser. Cloud Manager tillhandahåller allt som krävs för att komma igång på ett självbetjäningssätt, inklusive möjligheten att skapa molnresurser och miljöer.
 
-Vanligtvis är en teammedlem tilldelad till **Företagsägare** produktprofilen ansvarar för att lägga till molnresurser som program och miljöer. Den här personen förstår affärsbehoven och vem som slutför den ursprungliga installationen av Cloud Manager.
+Vanligtvis är det en teammedlem som har tilldelats produktprofilen **Business Owner** som ansvarar för att lägga till dina molnresurser, till exempel program och miljöer. Denna person förstår vilka behov företaget har och vem som slutför den första Cloud Manager-installationen.
 
-Som systemadministratör har du redan tilldelat dig själv till **Företagsägare** produktprofil och kan konfigurera molnresurserna. Beroende på de faktiska projektkraven kan det hända att företagsägarna inte är samma som systemadministratören.
+För den här introduktionsresan har du som systemadministratör redan tilldelat dig till produktprofilen **Business Owner** och kan konfigurera molnresurserna. Beroende på de faktiska projektkraven kan det hända att företagsägarna inte är samma som systemadministratören.
 
 ## Använd Cloud Manager som systemadministratör och företagsägare {#access-sysadmin-bo}
 
-Före de gruppmedlemmar som du tilldelade **Företagsägare** kan komma åt molnhanteraren och börja skapa molnresurser måste systemadministratören tilldelas **Företagsägare** roll. De måste också logga in i Cloud Manager på samma sätt som du gjorde i det föregående steget i den här introduktionsresan.
+Innan teammedlemmarna som du tilldelade rollen **Business Owner** kan komma åt molnhanteraren och börja skapa molnresurser måste systemadministratören tilldelas rollen **Business Owner**. De måste också logga in på Cloud Manager på samma sätt som du gjorde i det föregående steget i den här introduktionsresan.
 
-1. Se till att du som systemadministratör har **Företagsägare** tilldelad roll.
+1. Kontrollera att du som systemadministratör har rollen **Affärsägare** tilldelad.
 
-   * Återgå till föregående steg på denna resa. [Tilldela teammedlemmar till Cloud Manager-produktprofiler,](assign-profiles-cloud-manager.md) om du vill ha mer information om hur du tilldelar **Företagsägare** till systemadministratören.
+   * Återgå till föregående steg i den här resan, [Tilldela teammedlemmar till Cloud Manager produktprofiler](assign-profiles-cloud-manager.md) om du vill ha mer information om hur du tilldelar systemadministratören rollen **Affärsägare**.
 
-1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och presenteras med den normala landningssidan.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och få den normala startsidan.
 
-Genom att logga in som systemadministratör med **Företagsägare** du initiera Cloud Manager för användning av andra användare med **Företagsägare** roll. Du får ingen bekräftelse eller något meddelande. Det räcker att bara logga in.
+Genom att logga in som systemadministratör med rollen **Business Owner** initierar du Cloud Manager för användning av andra användare med rollen **Business Owner**. Du får ingen bekräftelse eller något meddelande. Det räcker att bara logga in.
 
-Tills du loggar in på Cloud Manager som systemadministratör med **Företagsägare** roll, andra användare med **Företagsägare** kan inte skapa program i Cloud Manager. Den här regeln gäller även om de har tilldelats rätt roller.
+Innan du har loggat in på Cloud Manager som systemadministratör med rollen **Business Owner** kan andra användare med rollen **Business Owner** inte skapa program i Cloud Manager. Den här regeln gäller även om de har tilldelats rätt roller.
 
 ## Navigera till Cloud Manager {#navigate-cloud-manager}
 
-Användare med **Företagsägare** rollen får ett välkomstmeddelande med en länk för att komma igång. Följ stegen nedan för att navigera till Cloud Manager med det här välkomstmeddelandet.
+Användare med rollen **Affärsägare** får ett välkomstmeddelande med en länk för att komma igång. Följ stegen nedan för att navigera till Cloud Manager med det här välkomstmeddelandet.
 
-1. I ditt välkomstmeddelande klickar du på **Kom igång**, vilket visas i figuren nedan.
+1. Klicka på **Kom igång** från ditt välkomstmeddelande, vilket visas i bilden nedan.
    ![Exempel på e-post](/help/journey-onboarding/assets/get-started-email.png)
 
-1. Navigera till Cloud Managers **Program och produkter** sida.
+1. Gå till Cloud Manager **Program- och produktsida**.
 
    >[!TIP]
    >
-   >Du kan även navigera direkt till inloggningssidan för Cloud Manager från `[my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/)`. Bokmärk den här sidan för framtida referens.
+   >Du kan även navigera direkt till Cloud Manager inloggningssida från `[my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/)`. Bokmärk den här sidan för framtida referens.
 
-1. Du dirigeras till Cloud Managers landningssida.
+1. Du dirigeras till Cloud Manager landningssida.
 
-Du kan även navigera till Cloud Managers **Program och produkter** från Adobe Experience Cloud hemsida genom att följa dessa steg
+Du kan även navigera till Cloud Manager **Program- och produktsida** från Adobe Experience Cloud hemsida genom att följa de här stegen
 
 1. Navigera direkt till [Adobe Experience Cloud](https://experience.adobe.com) och logga in med din Adobe ID.
 
-1. På Adobe Experience Cloud hemsida väljer du **Experience Manager** för att öppna AEM startsida.
+1. På Adobe Experience Cloud hemsida väljer du **Experience Manager** för att öppna AEM hemsida.
 
    ![Experience Cloud hemsida](/help/journey-onboarding/assets/setup-resources2.png)
 
-1. På **Cloud Manager** platta, markera **Starta**.
+1. Välj **Starta** på panelen **Cloud Manager**.
 
    ![AEM startsida](/help/journey-onboarding/assets/setup-resources3.png)
 
-1. När du har loggat in dirigeras du till landningssidan för Cloud Manager. Se [Visa Cloud Managers program](#viewing-programs) för mer information.
+1. När du har loggat in dirigeras du till Cloud Manager landningssida. Mer information finns i [Visa Cloud Manager-program](#viewing-programs).
 
 Det är upp till dig och det påverkar inte hur du använder Cloud Manager eller hur du hanterar dina program.
 
 >[!NOTE]
 >
->Beroende på vilka roller som har tilldelats i Cloud Manager och programmets status visas olika skärmar när du använder användargränssnittet i Cloud Manager.
+>Beroende på vilka roller som har tilldelats i Cloud Manager och programmets status visas olika skärmar när du använder Cloud Manager användargränssnitt.
 
 ## Visningsprogram {#viewing-programs}
 
-När du har lyckats få tillgång till Cloud Manager beror det du ser på hur dina program är, vilket beskrivs i följande avsnitt.
+När du har fått tillgång till Cloud Manager beror det hur programmen ser ut, vilket beskrivs i följande avsnitt.
 
 ### När inga program finns {#no-programs}
 
@@ -101,13 +101,13 @@ Om det finns program i organisationen visar landningssidan dina befintliga progr
 
 ### När ett program finns och du är systemadministratör {#programs-exist-sysadmin}
 
-Om det finns program i organisationen och du är systemadministratör visas landningssidan **Hantera åtkomst** med **Lägg till program** alternativ.
+Om det finns program i organisationen och du är systemadministratör, visas knappen **Hantera åtkomst** på landningssidan tillsammans med alternativet **Lägg till program** på sidan.
 
 ![Systemadministratörsvy](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/admin-console-4.png)
 
 ## Verifiera dina användarroller {#verify-user-roles}
 
-När du har loggat in i Cloud Manager kan du verifiera att du har tilldelats **Företagsägare** produktprofil.
+När du har loggat in på Cloud Manager kan du verifiera att du har tilldelats produktprofilen **Business Owner**.
 
 1. Välj din profil längst upp till höger i fönstret.
 
@@ -115,22 +115,23 @@ När du har loggat in i Cloud Manager kan du verifiera att du har tilldelats **F
 
    ![Användarroller](/help/journey-onboarding/assets/setup-resources6.png)
 
-1. Dialogrutan bör bekräfta att din användare har **Företagsägare** roll.
+1. Dialogrutan bör bekräfta att din användare har rollen **Affärsägare**.
 
    ![Lista över användarroller](/help/journey-onboarding/assets/setup-resources7.png)
 
-Du har loggat in på Cloud Manager som företagsägare! Om du inte har tilldelats **Företagsägare** ska du kontakta systemadministratören.
+Du har loggat in på Cloud Manager som företagsägare! Kontakta systemadministratören om du inte har tilldelats rollen **Affärsägare**.
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har tillgång till Cloud Manager som systemadministratör kan du skapa ditt första program.
+Nu när du har åtkomst till Cloud Manager som systemadministratör kan du skapa ditt första program.
 
-Fortsätt din introduktionsresa genom att nästa gång du granskar dokumentet [Skapa ett program](create-program.md) där du lär dig hur man gör det.
+Fortsätt din introduktionsresa genom att nästa gång granska dokumentet [Skapa ett program](create-program.md) där du får lära dig hur du gör det.
 
 ## Ytterligare resurser {#additional-resources}
 
 Här följer ytterligare, valfria resurser om du vill gå längre än vad som ingår i introduktionsresan.
 
-* [Introduktion till Cloud Manager](/help/onboarding/cloud-manager-introduction.md) - Lär dig mer om Cloud Manager, Cloud Manager-program och miljöer.
-* [AEM as a Cloud Service team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md) - Lär dig hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomst till era licensierade Adobe-lösningar.
+* [Introduktion till Cloud Manager](/help/onboarding/cloud-manager-introduction.md) -
+Läs om Cloud Manager, Cloud Manager program och miljöer.
+* [AEM as a Cloud Service Team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md) - Lär dig hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomst till licensierade Adobe-lösningar.
 <!-- ERROR: Not Found (HTTP error 404) * [AEM Champion Tips and Tricks - Cloud Manager UI](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/aem-champions/cloud-manager-ui.md) - Watch this video for an overview of Cloud Manager's UI from an AEM champion. -->

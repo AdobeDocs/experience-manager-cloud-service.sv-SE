@@ -43,13 +43,13 @@ En synkron åtgärd är en process där dokument genereras linjärt. Dessa API:e
 
 API-åtgärder för en innehavare har stöd för två typer av autentisering:
 
-* **Grundläggande autentisering**: Grundläggande autentisering är ett enkelt autentiseringsschema som är inbyggt i HTTP-protokollet. Klienten skickar HTTP-begäranden med auktoriseringshuvudet som innehåller ordet Basic följt av ett blanksteg och en base64-kodad sträng med användarnamn:password. Om du till exempel vill auktorisera som administratör/administratör skickar klienten Basic [base64-encoded string username]: [base64-kodat stränglösenord].
+* **Grundläggande autentisering**: Grundläggande autentisering är ett enkelt autentiseringsschema som är inbyggt i HTTP-protokollet. Klienten skickar HTTP-begäranden med auktoriseringshuvudet som innehåller ordet Basic följt av ett blanksteg och en base64-kodad sträng med användarnamn:password. Om klienten till exempel vill auktorisera som administratör/administratör skickar klienten det grundläggande [base64-kodade stränganvändarnamnet ]: [base64-kodade stränglösenordet].
 
 * **Tokenbaserad autentisering:** Tokenbaserad autentisering använder en åtkomsttoken (Bearer-autentiseringstoken) för att göra begäranden till Experience Manager as a Cloud Service. AEM Forms as a Cloud Service tillhandahåller API:er för att på ett säkert sätt hämta åtkomsttoken. Så här hämtar och använder du token för att autentisera en begäran:
 
    1. [Hämta as a Cloud Service autentiseringsuppgifter för Experience Manager från Developer Console](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html).
    1. [Installera Experience Manager as a Cloud Service-autentiseringsuppgifter i din miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html). (Programserver, webbserver eller andra icke-AEM servrar) som är konfigurerade att skicka begäranden till (ringa anrop) molntjänsten.
-   1. [Generera en JWT-token och ersätt den med Adobe IMS API:er för en åtkomsttoken](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html).
+   1. [Generera en JWT-token och ersatte den med Adobe IMS-API:er för en åtkomsttoken](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html).
    1. Kör Experience Manager-API:t med åtkomsttoken som en Bearer-autentiseringstoken.
    1. [Ange lämplig behörighet för den tekniska kontoanvändaren i Experience Manager-miljön](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
 
@@ -137,7 +137,7 @@ En organisation har vanligtvis flera mallar. Till exempel en mall var för kredi
 
 ### Anropa ett API
 
-The [API-referensdokumentation](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/) innehåller detaljerad information om alla parametrar, autentiseringsmetoder och olika tjänster som tillhandahålls av API:er. API-referensdokumentationen innehåller även API-definitionsfilen i .yaml-format. Du kan hämta .yaml-filen och överföra den till [Postman](https://www.postman.com/) för att kontrollera API:ernas funktioner.
+[API-referensdokumentationen](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/) innehåller detaljerad information om alla parametrar, autentiseringsmetoder och olika tjänster som tillhandahålls av API:er. API-referensdokumentationen innehåller även API-definitionsfilen i .yaml-format. Du kan hämta .yaml-filen och överföra den till [Postman](https://www.postman.com/) för att kontrollera API:ernas funktioner.
 
 >[!VIDEO](https://video.tv.adobe.com/v/335771)
 
@@ -150,4 +150,4 @@ The [API-referensdokumentation](https://developer.adobe.com/experience-manager-f
 >* [Introduktion till AEM Forms as a Cloud Service Communications](/help/forms/aem-forms-cloud-service-communications-introduction.md)
 >* [AEM Forms as a Cloud Service Architecture for Adaptive Forms and Communication APIs](/help/forms/aem-forms-cloud-service-architecture.md)
 >* [Kommunikationsbearbetning - Synkrona API:er](/help/forms/aem-forms-cloud-service-communications.md)
->* [Kommunikationsbearbetning - batch-API:er](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
+>* [Kommunikationsbearbetning - Grupp-API:er](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)

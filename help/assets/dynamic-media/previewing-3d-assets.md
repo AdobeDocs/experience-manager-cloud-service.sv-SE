@@ -51,12 +51,12 @@ Experience Manager har stöd för interaktiv 3D-förhandsgranskning i följande 
 
 >[!NOTE]
 >
->Om materialet inte återges i förhandsgranskning av en gLTF-modell måste du se till att de namnges korrekt och i en `textures` i samma rotmapp som modellen, som följande:
+>Om material inte återges i förhandsgranskning av en gLTF-modell kontrollerar du att de har rätt namn och finns i en `textures`-mapp i samma rotmapp som modellen, som i följande:
 
     Resurs (mapp)
     model.gltf
     model.bin
-    texturer (mapp)
+    textures (mapp)
     material_0_baseColor.jpeg
     material_0_normal.jpeg
 
@@ -70,19 +70,19 @@ Dessutom är funktioner i klientdatorn - som en arbetsstation, bärbar dator ell
 
 1. Se till att du har överfört 3D-resurser till Experience Manager.
 Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-assets) och [Överför resurser](/help/assets/manage-digital-assets.md#uploading-assets).
-1. Från Experience Manager, på **[!UICONTROL Navigation]** sida, gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
+1. Gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]** från Experience Manager på sidan **[!UICONTROL Navigation]**.
 
    ![Navigeringssida](/help/assets/dynamic-media/assets/navigation-assets.png)
 
-1. I den nedrullningsbara listan Visa i det övre högra hörnet på sidan väljer du **[!UICONTROL Card View]** navigera sedan till en 3D-resurs som du vill förhandsgranska.
+1. I den nedrullningsbara listan Visa i det övre högra hörnet av sidan väljer du **[!UICONTROL Card View]** och navigerar sedan till en 3D-resurs som du vill förhandsgranska.
 
    ![Val av 3D-kort](/help/assets/dynamic-media/assets/3d-card-select.png)
    _I kortvyn väljer du kortet för den 3D-resurs som du vill förhandsgranska._
 
 1. Välj kortet för 3D-resursen.
 
-   ![Interaktiv förhandsvisning av 3D](/help/assets/dynamic-media/assets/3d-preview.png)
-   _Interaktiv förhandsgranskning av en 3D-resurs på sidan med resursinformationsvyn._
+   ![Interaktiv 3D-förhandsvisning](/help/assets/dynamic-media/assets/3d-preview.png)
+   _Interaktiv förhandsgranskning av en 3D-resurs på sidan med resursinfo._
 1. Gör något av följande på sidan med resursinformationsvyn för 3D-resursen:
 
    | Visa | Beskrivning | Musåtgärd | Åtgärd på pekskärmen |
@@ -94,4 +94,4 @@ Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-asse
    | **Återställ** | I närheten av det nedre högra hörnet av sidan väljer du ikonen Återställ om du vill återställa målpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |   |   |
    | **Helskärmsläge** | Om du vill aktivera helskärmsläget väljer du Helskärmsikonen längst ned till höger på sidan. |   |   |
 
-1. När du är klar väljer du **[!UICONTROL Close]**.
+1. När du är klar väljer du **[!UICONTROL Close]** i sidans övre högra hörn.

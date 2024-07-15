@@ -30,17 +30,17 @@ Gör så här för att lägga till AEM Assets-tillägg i Adobe Expressen:
 
 1. Öppna en ny tom arbetsyta genom att läsa in en ny mall eller ett projekt, eller genom att skapa en resurs.
 
-1. Klicka **[!UICONTROL Add-ons]** finns i den vänstra navigeringsrutan.
+1. Klicka på **[!UICONTROL Add-ons]** i den vänstra navigeringsrutan.
 
-1. Ange **[!UICONTROL AEM Assets]** i sökfältet som finns högst upp i [!UICONTROL Add-ons] och klicka på AEM Assets-tillägget.
+1. Ange **[!UICONTROL AEM Assets]** i sökfältet som finns längst upp i avsnittet [!UICONTROL Add-ons] och klicka på AEM Assets-tillägget.
 
    ![AEM Assets-tillägg](assets/aem-assets-add-on.png)
 
-1. Klicka på **[!UICONTROL Add]**. Tillägget visas i listan med **[!UICONTROL Your add-ons]** -avsnitt. Klicka på tillägget igen för att visa innehållet i den högra navigeringsrutan. Tillägget visar en lista över databaser som du har behörighet att komma åt tillsammans med en lista över resurser och mappar som är tillgängliga på rotnivå.
+1. Klicka på **[!UICONTROL Add]**. Tillägget visas i listan i avsnittet **[!UICONTROL Your add-ons]**. Klicka på tillägget igen för att visa innehållet i den högra navigeringsrutan. Tillägget visar en lista över databaser som du har behörighet att komma åt tillsammans med en lista över resurser och mappar som är tillgängliga på rotnivå.
 
    Använd sökfältet för att söka efter resurser som du behöver använda på arbetsytan.
 
-   ![Söka efter resurser i AEM Assets-tillägg](assets/assets-add-on-browse-assets.png)
+   ![Sök efter resurser i AEM Assets-tillägg](assets/assets-add-on-browse-assets.png)
 
    A. Välj AEM Assets-databas B. Sök efter resurser med sökfältet C. Sortera resurserna i stigande eller fallande ordning D. De resurser och mappar som är tillgängliga på den valda platsen. E. Spara ändringarna i AEM Assets
 
@@ -50,18 +50,18 @@ Gör så här för att lägga till AEM Assets-tillägg i Adobe Expressen:
 
 När du har lagt till AEM Assets-tillägget i Adobe Expressen kan du börja använda PNG- och JPEG-bilder som lagras i AEM Assets-databasen på arbetsytan Express. Navigera till rätt mapp och klicka på resursen för att inkludera den på arbetsytan.
 
-![Inkludera resurser från resurstillägg](assets/aem-assets-add-on-include-assets.png)
+![Inkludera resurser från Assets-tillägg](assets/aem-assets-add-on-include-assets.png)
 
 
 ## Spara Adobe Expresser i AEM Assets {#save-express-projects-in-assets}
 
 När du har infogat lämpliga ändringar på arbetsytan Express kan du spara den i AEM Assets-databasen.
 
-1. Klicka **[!UICONTROL Save]** för att öppna **[!UICONTROL Upload]** -dialogrutan.
+1. Klicka på **[!UICONTROL Save]** för att öppna dialogrutan **[!UICONTROL Upload]**.
 1. Ange ett namn och format för resursen. Du kan spara innehållet på arbetsytan i PNG- eller JPEG-format.
 
-1. Klicka på mappikonen intill **[!UICONTROL Location]** navigera till den plats där du behöver spara resursen och klicka på **[!UICONTROL Select]**. Namnet på mappen visas i **[!UICONTROL Location]** fält.
+1. Klicka på mappikonen bredvid fältet **[!UICONTROL Location]**, navigera till den plats där du behöver spara resursen och klicka på **[!UICONTROL Select]**. Namnet på mappen visas i fältet **[!UICONTROL Location]**.
 
-1. Klicka **[!UICONTROL Upload]** för att överföra resursen till AEM Assets.
+1. Klicka på **[!UICONTROL Upload]** för att överföra resursen till AEM Assets.
 
    ![Spara resurser i AEM](assets/aem-assets-add-on-save.png)

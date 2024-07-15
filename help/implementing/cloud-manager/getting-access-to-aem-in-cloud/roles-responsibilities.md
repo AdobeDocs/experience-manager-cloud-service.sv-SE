@@ -22,10 +22,10 @@ ht-degree: 0%
 Adobe tillhandahåller en uppsättning tjänster för tillhandahållande, utveckling, staging och produktion av Experience Manager as a Cloud Service. För att utvecklingen och driftsättningen av lösningen ska kunna fortsätta så effektivt som möjligt är det viktigt att kunden och anpassaren förstår och uppfyller sina roller enligt beskrivningen nedan.
 
 
-| Aktivitet | Delverksamhet | Kund | Customizer | Adobe | Funktioner i Cloud Manager |
+| Aktivitet | Delverksamhet | Kund | Customizer | Adobe | Cloud Manager-funktionalitet |
 |---------------------------------|-------------------------------------------------------|-------------|-------------|---------|-----------------------------|
 | Provisionering | Val av molnregion | Medarbetare | Ägare | Rådgivare | Ja |
-| Provisionering | Åtkomst till AEM as a Cloud Service |             |             | Ägare | Ja |
+| Provisionering | Tillgång till AEM as a Cloud Service |             |             | Ägare | Ja |
 | Provisionering | Skapande av miljöer | Medarbetare | Ägare | Rådgivare | Ja |
 | Provisionering | Nätverkskonfiguration | Medarbetare | Ägare | Rådgivare | Ja |
 | Provisionering | Konfiguration av miljö- och nätverkssäkerhet | Medarbetare | Ägare | Rådgivare | Ja |
@@ -50,16 +50,16 @@ Adobe tillhandahåller en uppsättning tjänster för tillhandahållande, utveck
 | Produktion | Produktionshändelsens svar | Medarbetare | Medarbetare | Ägare |                             |
 | Produktion | Se till att Experience Manager är i drift |             |             | Ägare |                             |
 | Produktion | Underhåll på infrastruktur- och operativsystemnivå |             |             | Ägare |                             |
-| Produktion | AEM as a Cloud Service programunderhåll |             |             | Ägare |                             |
+| Produktion | Programunderhåll från AEM as a Cloud Service |             |             | Ägare |                             |
 | Produktion | Konfiguration och anpassningsunderhåll | Medarbetare | Ägare |         |                             |
 | Produktion | Administration av produktionsprogram | Ägare |             |         |                             |
 | Produktion | Anpassa produktionsinfrastruktur |             |             | Ägare |                             |
 | Produktion | Skalbar produktionsinfrastruktur |             |             | Ägare |                             |
-| Produktion | Uppdateringar till AEM as a Cloud Service program |             |             | Ägare |                             |
+| Produktion | Uppdateringar av AEM as a Cloud Service |             |             | Ägare |                             |
 | Produktion | Säkerhetskopiering och återställning av produktion |             |             | Ägare |                             |
 
 >[!NOTE]
 >
 > Ovanstående förutsätter att Premier Support ingår. Tabellen kan komma att ändras enligt överenskommelse mellan kunden och Customizer. Adobe rekommenderar att du samarbetar med dina säljteam och anpassningsteam på Adobe om du behöver få veta mer om något av det ovanstående.
 > Kunder som inte själva vill hantera anpassningar bör få tillgång till Adobe Professional Services-teamets eller en Experience Manager partners tjänster.
->För att bibehålla en hög kvalitetsnivå kräver Adobe att partners som deltar i as a Cloud Service utvecklingsprojekt i Experience Manager har minst en person som har fått en avancerad utvecklarcertifiering för Experience Manager.
+>För att bibehålla en hög kvalitetsnivå kräver Adobe att partners som deltar i as a Cloud Service utvecklingsprojekt i Experience Manager har minst en medarbetare som har fått en avancerad utvecklarcertifiering för programvaran Experience Manager.

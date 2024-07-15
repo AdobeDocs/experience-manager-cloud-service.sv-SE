@@ -37,7 +37,7 @@ Mer information om hur du implementerar responsiva designbeteenden finns i följ
 * [Flytande stödraster](#developing-a-fluid-grid)
 * [Adaptiva bilder](#using-adaptive-images)
 
-När du designar använder du **Emulator** om du vill förhandsgranska sidorna för olika skärmstorlekar.
+När du designar kan du använda verktygsfältet **Emulator** för att förhandsgranska sidorna för olika skärmstorlekar.
 
 ## Innan du utvecklar {#before-you-develop}
 
@@ -51,29 +51,29 @@ Innan du utvecklar det AEM programmet som stöder dina webbsidor bör du fatta f
 
 Den typiska AEM programstrukturen har stöd för alla responsiva designimplementeringar:
 
-* Sidkomponenter finns nedanför `/apps/<application_name>/components`
-* Mallar finns nedan `/apps/<application_name>/templates`
+* Sidkomponenter finns under `/apps/<application_name>/components`
+* Mallar finns under `/apps/<application_name>/templates`
 
 ## Använda mediefrågor {#using-media-queries}
 
 Mediefrågor möjliggör selektiv användning av CSS-format för sidåtergivning. Med AEM utvecklingsverktyg och funktioner kan du effektivt och effektivt implementera mediefrågor i dina program.
 
-W3C-gruppen tillhandahåller [Mediefrågor](https://www.w3.org/TR/css3-mediaqueries/) rekommendation som beskriver denna CSS3-funktion och syntaxen.
+W3C-gruppen tillhandahåller rekommendationen [Mediefrågor](https://www.w3.org/TR/css3-mediaqueries/) som beskriver den här CSS3-funktionen och syntaxen.
 
 ### Skapa CSS-filen {#creating-the-css-file}
 
 I CSS-filen definierar du mediefrågor baserat på egenskaperna för de enheter som du har som mål. Följande implementeringsstrategi är effektiv för att hantera format för varje mediefråga:
 
-* Använd en [Mappen Klientbibliotek](clientlibs.md) för att definiera den CSS som ska monteras när sidan återges.
+* Använd en [klientbiblioteksmapp](clientlibs.md) för att definiera den CSS som sätts samman när sidan återges.
 * Definiera varje mediefråga och tillhörande format i separata CSS-filer. Det är användbart att använda filnamn som representerar enhetsfunktionerna i mediefrågan.
 * Definiera format som är gemensamma för alla enheter i en separat CSS-fil.
 * I css.txt-filen i mappen Klientbibliotek ordnar du CSS-listfilerna så som krävs i den sammansatta CSS-filen.
 
-The [WKND, genomgång](develop-wknd-tutorial.md) använder den här strategin för att definiera format i webbplatsdesignen. CSS-filen som används av WKND finns på `/apps/wknd/clientlibs/clientlib-grid/less/grid.less`.
+I [WKND-självstudien](develop-wknd-tutorial.md) används den här strategin för att definiera format i webbplatsdesignen. CSS-filen som används av WKND finns på `/apps/wknd/clientlibs/clientlib-grid/less/grid.less`.
 
 ### Använda mediefrågor med AEM sidor {#using-media-queries-with-aem-pages}
 
-[WKND-exempelprojektet](/help/implementing/developing/introduction/develop-wknd-tutorial.md) och [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) använder [Page Core Component,](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/page.html) som innehåller klientlibs via sidprincipen.
+[WKND-exempelprojektet](/help/implementing/developing/introduction/develop-wknd-tutorial.md) och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) använder [Page Core Component,](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/page.html), som inkluderar klientlibs via sidprincipen.
 
 Om din egen sidkomponent inte är baserad på Page Core-komponenten kan du även inkludera klientbiblioteksmappen i HTML- eller JSP-skriptet för den. Om du gör det genereras och refereras CSS-filen med de mediefrågor som behövs för att det responsiva rutnätet ska fungera.
 
@@ -99,37 +99,37 @@ JSP-skriptet genererar följande HTML-kod som refererar till formatmallarna:
 
 ## Förhandsgranska för specifika enheter {#previewing-for-specific-devices}
 
-Med emulatorn kan du förhandsgranska sidorna i olika visningsrutestorlekar så att du kan testa beteendet i din responsiva design. När du redigerar en sida i platskonsolen kan du trycka eller klicka på **Emulator** -ikonen för att visa emulatorn.
+Med emulatorn kan du förhandsgranska sidorna i olika visningsrutestorlekar så att du kan testa beteendet i din responsiva design. När du redigerar en sida i platskonsolen kan du trycka eller klicka på ikonen **Emulator** för att visa emulatorn.
 
 ![Emulatorikonen i verktygsfältet](assets/emulator-icon.png)
 
-I emulatorverktygsfältet kan du trycka eller klicka på **Enheter** om du vill visa en listruta där du kan välja en enhet. När du väljer en enhet ändras sidan så att den anpassas till visningsrutans storlek.
+I emulatorns verktygsfält kan du trycka eller klicka på ikonen **Enheter** för att visa en nedrullningsbar meny där du kan välja en enhet. När du väljer en enhet ändras sidan så att den anpassas till visningsrutans storlek.
 
-![Verktygsfältet för emulatorn](assets/emulator.png)
+![Emulatorverktygsfältet](assets/emulator.png)
 
 ### Ange enhetsgrupper {#specifying-device-groups}
 
-Ange de enhetsgrupper som visas i dialogrutan **Enheter** lista, lägga till `cq:deviceGroups` egenskapen till `jcr:content` noden på mallsidan på din plats. Värdet för egenskapen är en array med sökvägar till enhetsgruppsnoderna.
+Om du vill ange de enhetsgrupper som visas i listan **Enheter** lägger du till en `cq:deviceGroups` -egenskap i noden `jcr:content` på mallsidan på platsen. Värdet för egenskapen är en array med sökvägar till enhetsgruppsnoderna.
 
-Exempelvis är mallsidan för WKND-webbplatsen `/conf/wknd/settings/wcm/template-types/empty-page/structure`. Och `jcr:content` noden under den innehåller följande egenskap:
+Exempelvis är mallsidan för WKND-webbplatsen `/conf/wknd/settings/wcm/template-types/empty-page/structure`. Noden `jcr:content` under den innehåller följande egenskap:
 
 * Namn: `cq:deviceGroups`
 * Typ: `String[]`
 * Värde: `mobile/groups/responsive`
 
-Enhetsgruppnoderna finns i `/etc/mobile/groups` mapp.
+Enhetsgruppnoderna finns i mappen `/etc/mobile/groups`.
 
 ## Responsiva bilder {#responsive-images}
 
 Responsiva sidor anpassar sig dynamiskt till den enhet som de återges på, vilket ger en bättre upplevelse för användaren. Men det är också viktigt att resurserna optimeras till brytpunkten och enheten för att minimera sidinläsningstiden.
 
-[Komponenten Core Component Image](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html) funktioner som adaptiv bildmarkering.
+[Core Component Image Component Component ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html) har funktioner som adaptiv bildmarkering.
 
-* Som standard använder bildkomponenten [Adaptiv bildserver](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/adaptive-image-servlet.html) för att leverera rätt återgivning.
-* [Webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) är även tillgängligt via en enkel kryssruta i sin policy, som levererar bildresurser från DAM i WebP-format och kan minska nedladdningsstorleken för en bild med i genomsnitt cirka 25 %.
+* Som standard använder Image-komponenten [Adaptive Image Server](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/adaptive-image-servlet.html) för att leverera rätt återgivning.
+* [Webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) är också tillgängligt via en enkel kryssruta i policyn, som levererar bildresurser från DAM i WebP-format och kan minska hämtningsstorleken för en bild med i genomsnitt cirka 25 %.
 
 ## Layoutbehållaren {#layout-container}
 
 Med AEM Layout Container kan du effektivt implementera responsiv layout för att anpassa sidans dimensioner till klientens visningsruta.
 
-Se dokumentet [Konfigurera layoutbehållare och layoutläge](/help/sites-cloud/administering/responsive-layout.md) om du vill ha mer information om hur layoutbehållaren fungerar och hur du aktiverar responsiva layouter för ditt innehåll.
+Se dokumentet [Konfigurera layoutbehållare och layoutläge](/help/sites-cloud/administering/responsive-layout.md) för mer information om hur layoutbehållaren fungerar och hur du aktiverar responsiva layouter för ditt innehåll.

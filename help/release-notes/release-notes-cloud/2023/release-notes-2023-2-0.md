@@ -1,6 +1,6 @@
 ---
-title: Versionsinformation för 2023.2.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för 2023.2.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Versionsinformation för version 2023.2.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation för version 2023.2.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 671056e6-84cc-4c2c-bca3-fde68d5cc835
 feature: Release Information
 role: Admin
@@ -13,21 +13,21 @@ ht-degree: 0%
 
 # Versionsinformation 2023.2.0 för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
-I följande avsnitt beskrivs versionsinformationen för 2023.2.0-versionen av [!DNL Experience Manager] as a Cloud Service.
+I följande avsnitt beskrivs versionsinformationen för funktionen för 2023.2.0-versionen av [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2021, 2022 och så vidare.
 >
->Ta en titt på [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) om de kommande funktionsaktiviteterna för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för att lära dig mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
->Se [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html) för information om dokumentationsuppdateringar som inte är direkt relaterade till en release.
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
 
 ## Releasedatum {#release-date}
 
-Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2023.2.0) är 12 april 2023. Nästa version (2023.4.0) är planerad till 7 juni 2023.
+Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2023.2.0) är 12 april 2023. Nästa version (2023.4.0) är planerad till 7 juni 2023.
 
 ## Släpp video {#release-video}
 
@@ -35,14 +35,14 @@ Titta på videon med versionsöversikten från februari 2023 om du vill se en sa
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416885/?quality=12)
 
-## [!DNL Experience Manager Sites] som [!DNL Cloud Service] {#sites}
+## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 
-### Nya funktioner i [!DNL Experience Manager Sites] förleasa {#prerelease-sites}
+### Nya funktioner i förhandsversionen av [!DNL Experience Manager Sites] {#prerelease-sites}
 
 * Exportera innehållsfragment från AEM som en molntjänst till Adobe som JSON erbjuder.
 * Stöd för sidnumrering och sortering i GraphQL, tillsammans med förbättringar för intern cachning, hjälper nu till att förbättra prestanda i fristående klientprogram när du hämtar stora innehållsuppsättningar från AEM med komplexa GraphQL-frågor och filter.
 
-## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
+## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
 ### Nya funktioner i [!DNL Assets] {#assets-features}
 
@@ -53,32 +53,32 @@ Titta på videon med versionsöversikten från februari 2023 om du vill se en sa
 
 * Stöd för WebP-bilder som automatiskt extraherar metadata, genererar miniatyrbilder och anpassade renderingar. Funktioner för smarta taggar och smart beskärning stöds nu även för dessa filer.
 
-## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
+## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
-### Nya funktioner i [!DNL Forms] {#new-features-available-in-channel}
+### Nya funktioner tillgängliga i [!DNL Forms] {#new-features-available-in-channel}
 
-* **[Använd kärnkomponenterna för datainhämtning för att bygga adaptiva Forms](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)**: [Använda adaptiv Forms-redigerare](/help/forms/creating-adaptive-form-core-components.md) för att skapa formulär baserade på standardiserade datainhämtningskomponenter (kärnkomponenter). Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser.
+* **[Använd kärnkomponenter för datainhämtning för att skapa adaptiva Forms](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)**: [Använd den adaptiva Forms-redigeraren](/help/forms/creating-adaptive-form-core-components.md) för att skapa formulär baserade på standardiserade datainhämtningskomponenter (kärnkomponenter). Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser.
 
-* **[Stöd för Frontend-pipeline för styling core Component-baserad Adaptive Forms](/help/forms/using-themes-in-core-components.md)**: Använd standardiserade BEM-baserade teman för Core Components-baserade Adaptive Forms genom att använda dem med Frontend Deployment Pipeline för att förbättra utseendet och känslan i era formulär och anpassa dem efter företagets varumärkesgodkända riktlinjer.
+* **[Stöd för frontend-pipeline för att utforma kärnkomponentbaserade adaptiva Forms](/help/forms/using-themes-in-core-components.md)**: Använd standardiserade BEM-baserade teman för Core Components-baserade Adaptive Forms genom att distribuera dem med Frontend Deployment Pipeline för att förbättra utseendet på och känslan i formulären och anpassa dem efter företagets varumärkesgodkända riktlinjer för designen.
 
-* **[Generera arkivdokument för centrala komponentbaserade adaptiva Forms](/help/forms/generate-document-of-record-core-components.md)**: Skapa ett urkunder som innehåller inlämnade data för Adaptive Forms som byggts med hjälp av centrala komponenter för arkivering eller referens till slutanvändare, i utskrift eller i dokumentformat.
+* **[Generera arkivdokument för huvudkomponentbaserade adaptiva Forms](/help/forms/generate-document-of-record-core-components.md)**: Skapa ett dokument med inskickade data för adaptiva Forms som skapats med hjälp av kärnkomponenter för arkivering eller referens till slutanvändare, i utskrift eller i dokumentformat.
 
 ![https://www.aemcomponents.dev/](/help/forms/assets/sample-core-components-based-adaptive-form.png)
 
-* **[Skapa formulär effektivt med funktionen Spara ett anpassat formulär som mall](/help/forms/template-editor.md#save-an-adaptive-form-as-template-saving-adaptive-form-as-template)**: Snabba upp och standardisera blankettutvecklingen genom att spara befintliga blanketter som godkänts av varumärket som blankettmallar för snabb återanvändning.
+* **[Effektiv formulärutveckling med funktionen Spara ett anpassat formulär som en mall](/help/forms/template-editor.md#save-an-adaptive-form-as-template-saving-adaptive-form-as-template)**: Snabba upp och standardisera formulärutvecklingen genom att spara befintliga varumärkesgodkända formulär som formulärmallar för snabb återanvändning.
 
-* **[Ansluta AEM Forms till JDBC-databaser](/help/forms/configure-data-sources.md#configure-relational-database-configure-relational-database)**: Anslut till företagsdatabaser direkt från AEM Cloud-tjänsten med JDBC-protokoll, utan att behöva visa dem via REST API.
+* **[Anslut AEM Forms till JDBC-stödda databaser](/help/forms/configure-data-sources.md#configure-relational-database-configure-relational-database)**: Anslut till företagsdatabaser direkt från AEM Cloud-tjänsten med JDBC-protokoll, utan att behöva visa dem via REST API.
 
-* **[Integrera med REST-slutpunkter med Open API 3.0](/help/forms/configure-data-sources.md#configure-restful-services-open-api-specification-version-20-configure-restful-services-swagger-version30)**: Integrera smidigt i databassystem som stöder Open API 3.0 för att lagra och hämta data med hjälp av formulärdatamodeller.
+* **[Integrera med REST-slutpunkter med Open API 3.0](/help/forms/configure-data-sources.md#configure-restful-services-open-api-specification-version-20-configure-restful-services-swagger-version30)**: Integrera sömlöst i postsystem som stöder Open API 3.0 för att lagra och hämta data med hjälp av formulärdatamodeller.
 
-* **[Dela ett adaptivt formulär för granskning](/help/forms/create-reviews-forms.md)**: Använd den adaptiva Forms-granskningsfunktionen för att låta en eller flera granskare granska formuläret.
+* **[Dela ett anpassat formulär för granskning](/help/forms/create-reviews-forms.md)**: Använd den adaptiva Forms-granskningsfunktionen för att tillåta en eller flera granskare att granska formuläret.
 
 
-### Funktioner i [!DNL Forms] prerelease {#prerelease-features-forms}
+### Funktioner i förhandsversionen av [!DNL Forms] {#prerelease-features-forms}
 
-* **[Skicka anpassningsbara Forms till Microsoft SharePoint och Microsoft OneDrive](/help/forms/configuring-submit-actions.md)**: Förbättra affärsanvändarnas möjlighet att snabbt öppna nya formulär och lagra inlämnade data i vardagliga verktyg som de använder som Microsoft SharePoint webbplats eller OneDrive-mapp.
+* **[Skicka adaptiva Forms till Microsoft SharePoint och Microsoft OneDrive](/help/forms/configuring-submit-actions.md)**: Förbättra affärsanvändarnas möjlighet att snabbt starta nya formulär och lagra inskickade data i vardagliga verktyg som de använder, som Microsoft SharePoint webbplats eller OneDrive-mapp.
 
-![Skicka anpassningsbara Forms till Microsoft SharePoint och Microsoft OneDrive](/help/forms/assets/onedrive-and-sharepoint.jpg)
+![Skicka anpassad Forms till Microsoft SharePoint och Microsoft OneDrive](/help/forms/assets/onedrive-and-sharepoint.jpg)
 
 
 ## Headless Adaptive Forms early adopter {#forms-early-adopter}
@@ -94,12 +94,12 @@ Du kan skicka ett e-postmeddelande till aem-forms-headless@adobe.com från ditt 
 
 ## Versionsinformation om underhåll {#maintenance}
 
-Du kan hitta den senaste underhållsreleasenumerationen [här](/help/release-notes/maintenance/latest.md).
+Du hittar den senaste underhållsversionsinformationen [här](/help/release-notes/maintenance/latest.md).
 
 ## Cloud Manager {#cloud-manager}
 
-Du hittar en fullständig lista över månatliga utgåvor av Cloud Manager [här](/help/implementing/cloud-manager/release-notes/current.md).
+Du hittar en fullständig lista över månadsutgåvor av Cloud Manager [här](/help/implementing/cloud-manager/release-notes/current.md).
 
 ## Migreringsverktyg {#migration-tools}
 
-Du hittar en fullständig lista över versioner av migreringsverktyg [här](/help/journey-migration/release-notes/release-notes-migration-tools-current.md).
+Du hittar en fullständig lista över migreringsverktygen [här](/help/journey-migration/release-notes/release-notes-migration-tools-current.md).

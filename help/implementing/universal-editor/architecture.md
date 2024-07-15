@@ -27,34 +27,34 @@ Den universella redigeraren består av fyra viktiga byggblock som interagerar s�
 
 I det här dokumentet beskrivs dessa byggstenar och hur de utbyter data.
 
-![Architecture of the Universal Editor](assets/architecture.png)
+![Arkitektur för Universal Editor](assets/architecture.png)
 
 >[!TIP]
 >
->För att se hur Universal Editor och dess arkitektur fungerar, se [Komma igång med Universal Editor i AEM](getting-started.md) om du vill lära dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
+>Om du vill se hur den universella redigeraren och dess arkitektur fungerar ska du läsa [Komma igång med den universella redigeraren i AEM](getting-started.md) för att lära dig hur du får tillgång till den universella redigeraren och hur du börjar använda den AEM första appen.
 
 ### Redigerare {#editors}
 
-* **Universal Editor** - Universell redigerare använder en instrumenterad DOM för att tillåta redigering på plats av innehåll. Se [Attribut och typer](attributes-types.md) om du vill ha information om nödvändiga metadata. Se dokumentet [Komma igång med Universal Editor i AEM](getting-started.md) för ett exempel på instrumentering i AEM.
-* **Properties Rail** - Vissa egenskaper hos komponenter kan inte redigeras i sitt sammanhang, till exempel ska en karusells rotationstid eller vilken dragspelsflik alltid öppnas eller stängas. För att sådan komponentinformation ska kunna redigeras finns en formulärbaserad redigerare i sidlisten i redigeraren.
+* **Universell redigerare** - Universell redigerare använder en instrumenterad DOM för att tillåta redigering av innehåll på plats. Mer information om nödvändiga metadata finns i [Attribut och typer](attributes-types.md). I dokumentet [Komma igång med den universella redigeraren i AEM](getting-started.md) finns ett exempel på instrumenteringen i AEM.
+* **Egenskapsspår** - Vissa egenskaper i komponenter kan inte redigeras i sitt sammanhang, till exempel kan en karusells rotationstid eller vilken dragspelsflik alltid ska öppnas eller stängas. För att sådan komponentinformation ska kunna redigeras finns en formulärbaserad redigerare i sidlisten i redigeraren.
 
 ### Remote App {#remote-app}
 
-DOM måste vara instrumenterad för att ett program ska kunna redigeras i sitt sammanhang i den universella redigeraren. Fjärrprogrammet måste återge vissa attribut i DOM. Se [Attribut och typer](attributes-types.md) om du vill ha information om nödvändiga metadata. Se dokumentet [Komma igång med Universal Editor i AEM](getting-started.md) för ett exempel på instrumentering i AEM.
+DOM måste vara instrumenterad för att ett program ska kunna redigeras i sitt sammanhang i den universella redigeraren. Fjärrprogrammet måste återge vissa attribut i DOM. Mer information om nödvändiga metadata finns i [Attribut och typer](attributes-types.md). I dokumentet [Komma igång med den universella redigeraren i AEM](getting-started.md) finns ett exempel på instrumenteringen i AEM.
 
 Den universella redigeraren strävar efter ett minimum av SDK, och därför är det implementeringen av fjärrappen som ansvarar för instrumenteringen.
 
 ### API-lager {#api-layer}
 
-* **Innehållsdata** - För den universella redigeraren är varken källsystemen för innehållsdata eller hur de konsumeras viktigt. Det är bara viktigt att definiera och tillhandahålla de attribut som krävs med kontextredigerbara data.
+* **Innehållsdata** - För den universella redigeraren är varken källsystemen för innehållsdata eller hur de konsumeras viktiga. Det är bara viktigt att definiera och tillhandahålla de attribut som krävs med kontextredigerbara data.
 * **Beständiga data** - För varje redigerbar data finns det en URN-identifierare. Denna URN används för att dirigera beständigheten till rätt system och resurs.
 
 ### Beständigt lager {#persistence-layer}
 
-* **Content Fragment Model** - För att stöda en rät för redigering av egenskaper för innehållsfragment, redigeraren för innehållsfragment och formulärbaserade redigerare krävs modeller per komponent och innehållsfragment.
+* **Modell för innehållsfragment** - För att stöda fältet för redigering av egenskaper för innehållsfragment, redigeraren för innehållsfragment och formulärbaserade redigerare krävs modeller per komponent och innehållsfragment.
 * **Innehåll** - Innehåll kan lagras var som helst, t.ex. i AEM, Magento.
 
-![Beständigt lager](assets/persistence-layer.png)
+![Persistence-lager](assets/persistence-layer.png)
 
 ## Universal Editor Service och Backend System Dispatch {#service}
 

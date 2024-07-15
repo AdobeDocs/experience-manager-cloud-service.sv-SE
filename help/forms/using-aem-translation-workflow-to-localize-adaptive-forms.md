@@ -22,17 +22,17 @@ I den här artikeln förklaras hur du använder AEM översättningsarbetsflöde 
 
 ## Lokalisera ett adaptivt formulär och dokument med hjälp av maskinöversättning {#localizing-an-adaptive-form-and-document-of-record-using-machine-translation}
 
-Maskinöversättningstjänsten översätter omedelbart ditt innehåll i Adaptiv form och Dokumentdokument. [!DNL AEM Forms] är förkonfigurerad att använda en testversion av [!DNL Microsoft Translator] för maskinöversättning. Utför följande steg för att aktivera maskinöversättning för ditt adaptiva Forms och arkivdokument:
+Maskinöversättningstjänsten översätter omedelbart ditt innehåll i Adaptiv form och Dokumentdokument. [!DNL AEM Forms] är förkonfigurerad att använda en utvärderingsversion av [!DNL Microsoft Translator] för maskinöversättning. Utför följande steg för att aktivera maskinöversättning för ditt adaptiva Forms och arkivdokument:
 
-1. På [!DNL AEM Forms] Användargränssnitt, markera ett formulär och välj **Lägg till ordlista** alternativ.
-1. I **Lägg till ordlista i översättningsprojekt** väljer du **Skapa ett nytt översättningsprojekt** eller **Lägg till i ett befintligt översättningsprojekt** alternativ.
-1. I **Projektets titel** anger du rubriken. Exempel: `Government Reference Site - German locale.`
-1. I **Målspråk** anger du nationella inställningar (till exempel `German(de)`) och klicka på **Klar**. Du kan ange flera språkinställningar. Formuläret översätts till alla språkområden som anges i **Målspråk** fält.
-1. I dialogrutan Lexikon tillagd klickar du på **Öppna projekt**. Öppna det skapade projektet på skärmen Projekt.
-1. Klicka på **ellipser** längst ned i **Översättningssammanfattning** platta. Skärmen Översättningssammanfattning öppnas.
-1. Klicka på **Redigera** ikonen längst upp på **Översättningssammanfattning** skärm. Öppna **Översättning** och välj Maskinöversättning i **Översättningsmetod** skärm. Välj lämplig **Översättningsprovider** och **Molnkonfiguration**. Klicka på **Klar** ikonen längst upp på skärmen.
-1. På **Översättningsjobb** platta, klicka på ![aem62forms_down](assets/aem62forms_downarrow.png) och klicka på **Starta**. Status för rutan ändras till Utkast. När översättningen är klar ändras statusen till **Klar för granskning**. Uppdatera sidan efter några minuter och kontrollera statusen.
-1. Efter statusändringen ändras till **Klar för granskning** på **Översättningsjobb** öppnar du formuläret i ett webbläsarfönster. En lokaliserad version av formuläret visas.
+1. Markera ett formulär i användargränssnittet för [!DNL AEM Forms] och välj alternativet **Lägg till ordlista** .
+1. På skärmen **Lägg till ordlista i översättningsprojekt** väljer du alternativet **Skapa ett nytt översättningsprojekt** eller **Lägg till i ett befintligt översättningsprojekt** .
+1. Ange titeln i fältet **Projekttitel**. Exempel: `Government Reference Site - German locale.`
+1. I fältet **Målspråk** anger du en språkinställning (till exempel `German(de)`) och klickar på **Klar**. Du kan ange flera språkinställningar. Formuläret översätts till alla språk som anges i fältet **Målspråk**.
+1. Klicka på **Öppna projekt** i dialogrutan Lexikon tillagd. Öppna det skapade projektet på skärmen Projekt.
+1. Klicka på **ellipserna** längst ned i rutan **Översättningssammanfattning**. Skärmen Översättningssammanfattning öppnas.
+1. Klicka på ikonen **Redigera** längst upp på skärmen **Översättningssammanfattning**. Öppna fliken **Översättning** och välj Maskinöversättning på skärmen **Översättningsmetod**. Välj lämplig **översättningsprovider** och **molnkonfiguration**. Klicka på ikonen **Klar** längst upp på skärmen.
+1. Klicka på ikonen ![aem62forms_down](assets/aem62forms_downarrow.png) på panelen **Översättningsjobb** och klicka sedan på **Start** . Status för rutan ändras till Utkast. När översättningen är klar ändras statusen till **Klar för granskning**. Uppdatera sidan efter några minuter och kontrollera statusen.
+1. När statusen har ändrats till **Klar för granskning** i rutan **Översättningsjobb** öppnar du formuläret i ett webbläsarfönster. En lokaliserad version av formuläret visas.
 
    >[!NOTE]
    >
@@ -47,7 +47,7 @@ Maskinöversättningstjänsten översätter omedelbart ditt innehåll i Adaptiv 
 
 [Dokumentinställningar](generate-document-of-record-for-non-xfa-based-adaptive-forms.md#p-document-of-record-settings-p)
 
-1. [Anpassa varumärkesinformationen i arkivdokumentet](generate-document-of-record-for-non-xfa-based-adaptive-forms.md) och se till att webbläsarens språkområde är inställt på samma språk som du har lokaliserat det adaptiva formuläret med hjälp av datorspråket. Webbläsarens språkområde hjälper till att lokalisera varumärkesinformationen i arkivdokumentet.
+1. [Anpassa profileringsinformationen för arkivhandlingsdokumentet](generate-document-of-record-for-non-xfa-based-adaptive-forms.md) och se till att webbläsarens språkområde är inställt på samma språk som du har lokaliserat det adaptiva formuläret på datorspråket. Webbläsarens språkområde hjälper till att lokalisera varumärkesinformationen i arkivdokumentet.
 1. Om du vill visa det lokaliserade postdokumentet väljer du Generera förhandsgranskning. Dokumentet på PDF skapas och öppnas på en ny flik i webbläsaren.
 
 <!-- ## Localizing an Adaptive Form and its Document of Record using Human Translation {#localizing-an-adaptive-form-and-its-document-of-record-using-human-translation}

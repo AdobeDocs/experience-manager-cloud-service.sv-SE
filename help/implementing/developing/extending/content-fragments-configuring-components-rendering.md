@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Innehållsfragment Konfigurera komponenter för återgivning{#content-fragments-configuring-components-for-rendering}
 
-Det finns flera [avancerade tjänster](#definition-of-advanced-services-that-need-configuration) relaterat till återgivning av innehållsfragment. För att kunna använda dessa tjänster måste resurstyperna för sådana komponenter göra sig kända för innehållsfragmentets ramverk.
+Det finns flera [avancerade tjänster](#definition-of-advanced-services-that-need-configuration) som är relaterade till återgivningen av innehållsfragment. För att kunna använda dessa tjänster måste resurstyperna för sådana komponenter göra sig kända för innehållsfragmentets ramverk.
 
-Detta görs genom att konfigurera [OSGi-tjänst - Konfiguration av komponent för innehållsfragment](#osgi-service-content-fragment-component-configuration).
+Detta görs genom att konfigurera [OSGi-tjänsten - komponentkonfigurationen för innehållsfragment](#osgi-service-content-fragment-component-configuration).
 
 Denna information krävs när
 
@@ -26,9 +26,9 @@ Adobe rekommenderar att du använder kärnkomponenterna.
 
 >[!CAUTION]
 >
->* **Om du inte behöver [avancerade tjänster](#definition-of-advanced-services-that-need-configuration)** som beskrivs nedan kan du ignorera den här konfigurationen.
+>* **Om du inte behöver de [avancerade tjänster](#definition-of-advanced-services-that-need-configuration)** som beskrivs nedan kan du ignorera den här konfigurationen.
 >
->* **När du utökar eller använder komponenter som inte finns i kartongen** rekommenderar vi inte att du ändrar OSGi-konfigurationen.
+>* **När du utökar eller använder körklara komponenter** bör du inte ändra OSGi-konfigurationen.
 >
 >* **Du kan skriva en helt ny komponent som endast använder API:t för innehållsfragment, utan några avancerade tjänster**. I så fall måste du dock utveckla komponenten så att den hanterar lämplig bearbetning.
 >
@@ -41,8 +41,8 @@ De tjänster som kräver registrering av en komponent är:
 * Kontrollera beroenden korrekt under publiceringen (d.v.s. se till att fragment och modeller kan publiceras automatiskt med en sida om de har ändrats sedan den senaste publiceringen).
 * Stöd för innehållsfragment vid fulltextsökning.
 * Hantering/hantering av *mellanliggande innehåll.*
-* Hantering/hantering av *resurser för olika medier.*
-* Skickar rensning för refererade fragment (om en sida som innehåller ett fragment publiceras igen).
+* Hantering/hantering av *blandade medieresurser.*
+* Dispatcher rensar för refererade fragment (om en sida som innehåller ett fragment publiceras om).
 * Använda styckebaserad återgivning.
 
 Om du behöver en eller flera av de här funktionerna är det (oftast) enklare att använda de avancerade tjänsterna som är färdiga i stället för att utveckla dem från grunden.
@@ -55,11 +55,11 @@ Konfigurationen måste vara bunden till OSGi-tjänsten **Konfiguration av kompon
 
 >[!NOTE]
 >
->Se [OSGi-konfiguration](/help/implementing/deploying/overview.md#osgi-configuration) för mer information.
+>Mer information finns i [OSGi-konfiguration](/help/implementing/deploying/overview.md#osgi-configuration).
 
 Till exempel:
 
-![Konfiguration av OSGi Configuration Content Fragment Component](assets/cf-component-configuration-osgi.png)
+![Konfiguration av komponent för OSGi-konfigurationsfragment](assets/cf-component-configuration-osgi.png)
 
 OSGi-konfigurationen är:
 
@@ -80,7 +80,7 @@ OSGi-konfigurationen är:
   <tr>
    <td><strong>Referensegenskap</strong></td>
    <td><code>dam.cfm.component.fileReferenceProp</code></td>
-   <td>Namnet på den egenskap som innehåller referensen till fragmentet, till exempel <code>fragmentPath</code> eller <code>fileReference</code></td>
+   <td>Namnet på egenskapen som innehåller referensen till fragmentet, till exempel <code>fragmentPath</code> eller <code>fileReference</code></td>
   </tr>
   <tr>
    <td><strong>Elementegenskap(er)</strong></td>
@@ -95,7 +95,7 @@ OSGi-konfigurationen är:
  </tbody>
 </table>
 
-För vissa funktioner måste komponenten följa fördefinierade konventioner. Följande tabell visar vilka egenskaper som behöver definieras, av komponenten, för varje stycke (det vill säga, `jcr:paragraph` för varje komponentinstans) så att tjänsterna kan identifiera och bearbeta dem korrekt.
+För vissa funktioner måste komponenten följa fördefinierade konventioner. Följande tabell visar vilka egenskaper som måste definieras, av komponenten, för varje stycke (det vill säga `jcr:paragraph` för varje komponentinstans) så att tjänsterna kan identifiera och bearbeta dem korrekt.
 
 <table>
  <thead>
@@ -107,7 +107,7 @@ För vissa funktioner måste komponenten följa fördefinierade konventioner. F�
  <tbody>
   <tr>
    <td><code>paragraphScope</code></td>
-   <td><p>En strängegenskap som definierar hur stycken ska skrivas ut i <em>renderingsläge för enskilt element</em>.</p> <p>Värden:</p>
+   <td><p>En strängegenskap som definierar hur stycken ska skrivas ut i <em>renderingsläget för ett element</em>.</p> <p>Värden:</p>
     <ul>
      <li><code>all</code> : för att återge alla stycken</li>
      <li><code>range</code> : för att återge styckeintervallet från <code>paragraphRange</code></li>
@@ -115,7 +115,7 @@ För vissa funktioner måste komponenten följa fördefinierade konventioner. F�
   </tr>
   <tr>
    <td><code>paragraphRange</code></td>
-   <td><p>En strängegenskap som definierar det intervall med stycken som ska skrivas ut om i <em>renderingsläge för enskilt element</em>.</p> <p>Format:</p>
+   <td><p>En strängegenskap som definierar det intervall med stycken som ska skrivas ut i <em>renderingsläget för ett element</em>.</p> <p>Format:</p>
     <ul>
      <li><code>1</code> eller <code>1-3</code> eller <code>1-3;6;7-8</code> eller <code>*-3;5-*</code>
      <ul>
@@ -124,12 +124,12 @@ För vissa funktioner måste komponenten följa fördefinierade konventioner. F�
        <li><code>*</code> jokertecken</li>
      </ul>
      </li>
-     <li>endast utvärderat om <code>paragraphScope</code> är inställd på <code>range</code></li>
+     <li>endast utvärderat om <code>paragraphScope</code> är inställt på <code>range</code></li>
     </ul> </td>
   </tr>
   <tr>
    <td><code>paragraphHeadings</code></td>
-   <td>En boolesk egenskap som definierar om rubriker (till exempel <code>h1</code>, <code>h2</code>, <code>h3</code>) räknas som punkter (<code>true</code>) eller inte (<code>false</code>)</td>
+   <td>En boolesk egenskap som definierar om rubriker (till exempel <code>h1</code>, <code>h2</code>, <code>h3</code>) räknas som stycken (<code>true</code>) eller inte (<code>false</code>)</td>
   </tr>
  </tbody>
 </table>

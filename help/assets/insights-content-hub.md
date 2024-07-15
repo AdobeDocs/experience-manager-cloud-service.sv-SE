@@ -1,6 +1,6 @@
 ---
 title: Visa resursinsikter i Content Hub
-description: Lär dig hur du visar resursinsikter i [!DNL Content Hub]
+description: Lär dig hur du visar resursinsikter i  [!DNL Content Hub]
 role: User
 source-git-commit: 5a968440c8841abe7af2c81c4af12258b7e4547f
 workflow-type: tm+mt
@@ -9,21 +9,21 @@ ht-degree: 0%
 
 ---
 
-# Assets Insikter i [!DNL Content Hub] {#assets-insights}
+# Assets Insights i [!DNL Content Hub] {#assets-insights}
 
-![Assets insikter](assets/asset-insights-banner.jpg)
+![Assets-insikter](assets/asset-insights-banner.jpg)
 
-[!DNL Content Hub] ger värdefulla insikter om resurser, och tar itu med en vanlig utmaning som marknadsföringsintressenter ofta stöter på - statistik om resursanvändning som används i marknadsföringskampanjer, kanaler och olika regioner. Genom att få en tydlig förståelse för resursernas prestanda och popularitet kan ni få användbara insikter som är viktiga för att förbättra användarupplevelsen.
+[!DNL Content Hub] ger värdefulla insikter om resurser, och åtgärdar en vanlig utmaning som marknadsföringsintressenter ofta stöter på - statistik om resursanvändning som används i marknadsföringskampanjer, kanaler och olika regioner. Genom att få en tydlig förståelse för resursernas prestanda och popularitet kan ni få användbara insikter som är viktiga för att förbättra användarupplevelsen.
 
 ## Förutsättningar {#prerequisites}
 
-[Content Hub](deploy-content-hub.md#onboard-content-hub-users) kan utföra åtgärder som nämns i den här artikeln.
+[Content Hub-användare](deploy-content-hub.md#onboard-content-hub-users) kan utföra åtgärder som nämns i den här artikeln.
 
 ## Visa statistik för överförda tillgångar{#view-statistics-for-uploaded-assets}
 
-Du kan visa statistik för överförda resurser och samlingar genom att navigera till **[!UICONTROL Insights]** -fliken. Spåra överföringshistoriken för dina resurser med den årliga, månatliga och dagliga resursuppladdningsvyn.
+Du kan visa statistik för överförda resurser och samlingar genom att gå till fliken **[!UICONTROL Insights]**. Spåra överföringshistoriken för dina resurser med den årliga, månatliga och dagliga resursuppladdningsvyn.
 
-![Överför tillgångsstatistik](assets/assets-insights.jpg)
+![Överför resursstatistik](assets/assets-insights.jpg)
 
 <!-- You can track the upload history of your assets over the past 30 days or gain a more comprehensive view with data spanning the last 12 months. This feature enables you to evaluate the upload count of assets.  -->
 
@@ -45,8 +45,8 @@ Cirkeldiagrammet visar det totala antalet mediefiler per filformat, vilket ger e
 
 Du kan även visa:
 
-* **Aktiva användare per dag och månad**: Antal aktiva användare per dag eller månad som representeras med ett linjediagram.
+* **Aktiva användare per dag och månad**: Antal aktiva användare per dag eller månad som representeras av ett linjediagram.
 * **[!UICONTROL Assets by Campaigns]**: Antal tillgångar och respektive procentandel baserat på kampanjer.
-* **[!UICONTROL Assets by Channels]**: Antal tillgångar och respektive procentandel baserat på vilka kanaler som används.
-* **[!UICONTROL Assets by Regions]**: Antal tillgångar och respektive procentandel baserat på områden där tillgångarna används.
+* **[!UICONTROL Assets by Channels]**: Tillgångsantal och respektive procentandel baserat på vilka kanaler som används.
+* **[!UICONTROL Assets by Regions]**: Antal tillgångar och respektive procentandel baserat på områden där resursen används.
 

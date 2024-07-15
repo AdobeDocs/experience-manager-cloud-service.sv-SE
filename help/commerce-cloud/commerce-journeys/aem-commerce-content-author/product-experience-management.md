@@ -17,7 +17,7 @@ Lär dig hantera produktupplevelser.
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om Adobe Experience Manager (AEM) Content and Commerce travel, [Hantera testade produktkataloger](staged-catalog.md)lärde du dig att hantera upplevelser i mellanlagrade produktkataloger.
+I det föregående dokumentet om Adobe Experience Manager (AEM) Content and Commerce-resan, [Hantera upplevelser i mellanlagrade produktkataloger](staged-catalog.md), lärde du dig att hantera upplevelser i mellanlagrade produktkataloger.
 
 ## Syfte {#objective}
 
@@ -31,17 +31,17 @@ I AEM kan du skapa olika typer av innehåll och länka dem till produktkatalogen
 
 ### Assets {#assets}
 
-På en hög nivå finns det två typer av mediefiler relaterade till produkter: produkt och marknadsföring. Produktresurserna hanteras av handlarna och fokuserar på att visa produkten (främst framför en neutral bakgrund). Resurserna hanteras antingen i e-handelslösningen eller i AEM Assets (med en Assets-integrering till handels-/pim-lösningen).
+På en hög nivå finns det två typer av mediefiler relaterade till produkter: produkt och marknadsföring. Produktresurserna hanteras av handlarna och fokuserar på att visa produkten (främst framför en neutral bakgrund). Resurserna hanteras antingen i e-handelslösningen eller i AEM Assets (med en Assets-integrering till e-handelslösningen/pim-lösningen).
 
 Marknadsföringsresurser handlar om att marknadsföra och använda produkten som ägs av marknadsföringen. Det kan till exempel vara olika produkter (&quot;gå till väga som det ser ut&quot;), i en viss kontext (&quot;utomhusfall&quot;) eller hur man gör-gör-PDF-filer. CIF är ett enkelt sätt att länka AEM resurser till ett produktkatalogobjekt.
 
-Öppna resursegenskaperna och växla till **Handel** -fliken. På den här fliken kan du hantera associationen med produkter. Tabellen nedanför väljaren innehåller ytterligare information för de länkade objekten (endast synlig med en markering). Klicka på detaljikonen så får du en fullständig vy i produktcockpit. Om du vill associera ett nytt objekt klickar du på produktväljarikonen (mappikonen), markerar ett objekt och stänger väljaren.
+Öppna resursegenskaperna och växla till fliken **Commerce**. På den här fliken kan du hantera associationen med produkter. Tabellen nedanför väljaren innehåller ytterligare information för de länkade objekten (endast synlig med en markering). Klicka på detaljikonen så får du en fullständig vy i produktcockpit. Om du vill associera ett nytt objekt klickar du på produktväljarikonen (mappikonen), markerar ett objekt och stänger väljaren.
 
-![pem-tillgångar](assets/pem-assets.png)
+![pem assets](assets/pem-assets.png)
 
 ### Upplevelsefragment {#experience-fragments}
 
-Upplevelsefragment är ett bra sätt att skapa återanvändbart eller individuellt produktinnehåll i stor skala. Associationen fungerar på liknande sätt som en tillgång. Öppna egenskaper och växla till **Handel** -fliken. På den här fliken kan du hantera associationen med produkter och kategorier. Tabellerna under väljarna innehåller ytterligare information om de länkade objekten (visas bara med en markering). Klicka på detaljikonen så får du en fullständig vy i produktcockpit. Om du vill associera ett nytt objekt klickar du på produktväljarikonen (mappikonen), markerar ett objekt och stänger väljaren.
+Upplevelsefragment är ett bra sätt att skapa återanvändbart eller individuellt produktinnehåll i stor skala. Associationen fungerar på liknande sätt som en tillgång. Öppna egenskaper och växla till fliken **Commerce**. På den här fliken kan du hantera associationen med produkter och kategorier. Tabellerna under väljarna innehåller ytterligare information om de länkade objekten (visas bara med en markering). Klicka på detaljikonen så får du en fullständig vy i produktcockpit. Om du vill associera ett nytt objekt klickar du på produktväljarikonen (mappikonen), markerar ett objekt och stänger väljaren.
 
 ![pem xf](assets/pem-xf.png)
 
@@ -67,41 +67,41 @@ När du klickar på åtgärdsikonen öppnas det innehållet på en ny webbläsar
 
 I de tidigare modulerna har du lärt dig hur du arbetar med flera produktkatalogmallar. Flera mallar är ett bra sätt att skapa olika mallar, men behövs ofta inte. Ofta kan samma mall användas med platshållare för enstaka innehåll. CIF stöder platshållare för innehållsfragment och Experience Fragments.
 
-Låt oss börja med Experience Fragment-platshållaren. Öppna en produktmall i AEM. Dra och släpp **Commerce Experience Fragment** -komponenten i mallen och sedan öppnar du dialogrutan config.
+Låt oss börja med Experience Fragment-platshållaren. Öppna en produktmall i AEM. Dra och släpp **Commerce Experience Fragment**-komponenten på mallen och öppna sedan konfigurationsdialogrutan.
 
 ![pem-platshållare](assets/pem-placeholder.png)
 
 Öppna komponentens dialogruta och ange ett namn för platshållaren. Du måste ange ett platshållarnamn och du kan lägga till så många platshållare som du behöver.
 
-![pem XF, dialogruta](assets/pem-dialog-xf.png)
+![Pem XF-dialogruta](assets/pem-dialog-xf.png)
 
-Öppna den Experience Fragment som du har kopplat till en produkt i föregående steg. Öppna egenskaper och växla till fliken E-handel. Ange samma platshållarnamn under **Platshållarplats för katalog**.
+Öppna den Experience Fragment som du har kopplat till en produkt i föregående steg. Öppna egenskaper och växla till fliken E-handel. Ange samma platshållarnamn under **Katalogplatshållarplatsen**.
 
 ![pem xf](assets/pem-xf.png)
 
-Dra och släpp **Commerce Content Fragment** -komponenten i mallen och öppna konfigurationsdialogrutan.
+Dra och släpp komponenten **Commerce Content Fragment** i mallen och öppna konfigurationsdialogrutan.
 
-![pem CF-dialogruta](assets/pem-dialog-cf.png)
+![Pem CF-dialogruta](assets/pem-dialog-cf.png)
 
-I den här dialogrutan återanvänds dialogrutan för kärnkomponentens innehållsfragment. Mer information finns under ytterligare resurser. Den enda skillnaden är **Länkelement** som konfigurerar identifierarfältet (produkt-SKU eller kategori-UID) i modellen för innehållsfragment.
+I den här dialogrutan återanvänds dialogrutan för kärnkomponentens innehållsfragment. Mer information finns under ytterligare resurser. Den enda skillnaden är egenskapen **Link Element** som konfigurerar identifierarfältet (produkt-SKU eller kategori-UID) i modellen Content Fragment.
 
 Förhandsgranska nu en produktsida som antingen har ett associerat innehållsfragment och/eller Experience Fragment. När AEM återger en sida görs en sökning efter varje platshållare baserat på typen (Innehåll eller Experience Fragment), identifieraren och platshållarnamnet för Experience Fragments. AEM använder en URL-matchare för att hämta identifieraren (SKU för produkter, UID för kategorier). Om en upplevelse eller ett innehållsfragment returneras återges det på platshållarplatsen, i annat fall ignoreras platshållaren.
 
-![pem result](assets/pem-result.png)
+![pem-resultat](assets/pem-result.png)
 
 ## Gör innehåll köpbart {#making-shoppable}
 
 Det går också att göra en vanlig AEM att handla genom att lägga till handelskomponenter. Skapa en innehållssida i AEM och öppna den tomma sidan i redigeraren.
 
-![pem, tom sida](assets/pem-page-empty.png)
+![pem empty page](assets/pem-page-empty.png)
 
-Först drar och släpper du en produktdetaljkomponent på sidan. Gå sedan till sidofältet Resurser, byt till produkter och välj en produkt. Dra och släpp produkten på produktkomponenten. Då visas en vanlig produktkomponent på en innehållssida.
+Först drar och släpper du en produktdetaljkomponent på sidan. Gå sedan till Assets sidopanel, byt till produkter och välj en produkt. Dra och släpp produkten på produktkomponenten. Då visas en vanlig produktkomponent på en innehållssida.
 
-![pem - produktsida](assets/pem-page-product.png)
+![Pem - produktsida](assets/pem-page-product.png)
 
-Om du har skapat associerat innehåll för den produkten växlar du till **Associerat Commerce-innehåll**. På den här fliken visas allt AEM innehåll som är kopplat till den här produkten. På så sätt kan du nu snabbt försköna sidorna med allt tillhörande innehåll.
+Om du har skapat associerat innehåll för den produkten växlar du till **Associerat Commerce-innehåll** i sidofältet i Assets. På den här fliken visas allt AEM innehåll som är kopplat till den här produkten. På så sätt kan du nu snabbt försköna sidorna med allt tillhörande innehåll.
 
-![pem-berikad sida](assets/pem-page-enriched.png)
+![Pem-anrikad sida](assets/pem-page-enriched.png)
 
 ## Slut på resan? {#end-of-journey}
 
@@ -111,7 +111,7 @@ Grattis! Du har slutfört AEM och Commerce Developer-resan! Nu bör du:
 * använda platshållare för att berika produkt- och kategorisidor individuellt
 * kunna göra innehåll till ett köpbart och använda fliken för tillhörande innehåll
 
-Nu är ni redo att hantera produktupplevelser med AEM Content och Commerce. AEM Innehåll och Commerce har dock många ytterligare alternativ. Se vilka ytterligare resurser som finns i [Avsnittet Ytterligare resurser](#additional-resources) där du kan lära dig mer om de funktioner du såg under den här resan.
+Nu är ni redo att hantera produktupplevelser med AEM Content och Commerce. AEM Innehåll och Commerce har dock många ytterligare alternativ. Ta en titt på några av de ytterligare resurser som är tillgängliga i avsnittet [Ytterligare resurser](#additional-resources) där du kan läsa mer om de funktioner du såg under den här resan.
 
 ## Ytterligare resurser {#additional-resources}
 

@@ -18,21 +18,21 @@ Följande problem kan uppstå när du konfigurerar en Cloud Service:
 
 ## Forms-alternativet är inte tillgängligt
 
-The **[!UICONTROL Forms]** alternativet är inte tillgängligt på **[!UICONTROL Navigation]** sida.
+Alternativet **[!UICONTROL Forms]** är inte tillgängligt på sidan **[!UICONTROL Navigation]**.
 
 ![Forms-alternativet är inte tillgängligt](assets/installation-configuration-forms-option-unavailable-troubleshooting.png)
 
-Aktivera **[!UICONTROL Forms]** alternativ:
+Aktivera alternativet **[!UICONTROL Forms]**:
 
 1. Logga in på [Cloud Manager](https://experience.adobe.com/)
-1. Leta upp programmet och klicka på ![Forms-alternativet är inte tillgängligt](assets/Smock_Edit_18_N.svg) -ikon. Den öppnar sidan Redigera program för ditt program.
-1. Öppna **[!UICONTROL Solutions & Add-ons]** -fliken.
-1. Välj **[!UICONTROL Forms]** och klicka **[!UICONTROL Save]**.
+1. Leta upp programmet och klicka på ikonen ![Forms är inte tillgänglig](assets/Smock_Edit_18_N.svg) . Den öppnar sidan Redigera program för ditt program.
+1. Öppna fliken **[!UICONTROL Solutions & Add-ons]**.
+1. Välj alternativet **[!UICONTROL Forms]** och klicka på **[!UICONTROL Save]**.
 
    ![Välj alternativet Forms](assets/installation-configuration-select-forms-option.png)
-1. [Skapa](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use) och [run](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html) både rörledningar för produktion och icke-produktion.
+1. [Skapa](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use) och [kör](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html) både produktions- och icke-produktionspipelines.
 
-När rörledningen har byggts och driftsatts **[!UICONTROL Forms]** på **[!UICONTROL Navigation]** sida.
+När pipelinen har skapats och distribuerats är alternativet **[!UICONTROL Forms]** på sidan **[!UICONTROL Navigation]**.
 
 <!--  
 ## Environment creation fails {#environment-creation-fails}
@@ -52,7 +52,7 @@ If the profile exists and issues still persist, contact Adobe Support. -->
 
 Användarna kan inte köra byggpipeline. Pipelinen fungerar inte när den har körts ett tag.
 
-Öppna Cloud Manager och välj **[!UICONTROL Update]** för din miljö och kör pipeline.
+Du löser problemet genom att öppna Cloud Manager, välja alternativet **[!UICONTROL Update]** för din miljö och köra pipeline.
 
 
 ## Paketen är inte i aktivt läge {#bundles-inactive-state}
@@ -61,5 +61,5 @@ Så här löser du problemet:
 
 1. Starta AEM och vänta tills alla paket är klara.
 1. Stoppa AEM (Ctrl + C).
-1. Placera Forms `.far` i installationsmappen.
+1. Placera Forms `.far`-filen i installationsmappen.
 1. Starta om AEM.

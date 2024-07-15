@@ -1,6 +1,6 @@
 ---
 title: Dataskydd och dataintegritet - Adobe Experience Manager as a Cloud Service Foundation-beredskap
-description: Läs mer om Adobe Experience Manager as a Cloud Service Foundation-stöd för de olika dataskydds- och datasekretessreglerna. I denna artikel ingår EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag (Privacy Act) och hur man ska följa detta när man genomför ett nytt AEM as a Cloud Service projekt.
+description: Läs mer om Adobe Experience Manager as a Cloud Service Foundation-stöd för de olika dataskydds- och datasekretessreglerna. I denna artikel ingår EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag (Privacy Act) och hur man följer den när man genomför ett nytt AEM as a Cloud Service-projekt.
 exl-id: 3a4b9d00-297d-4b1d-ae57-e75fbd5c490c
 feature: Compliance
 role: Admin, Architect, Developer, Leader
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Mer information om Adobe svar på sekretessfrågor och vad det innebär för dig som Adobe-kund finns i [Adobe Sekretesscenter](https://www.adobe.com/privacy.html).
+>Mer information om Adobe svar på sekretessfrågor och vad det innebär för dig som Adobe-kund finns i [Adobe Privacy Center](https://www.adobe.com/privacy.html).
 
 ## Stöd för AEM Foundation Data Privacy and Protection {#aem-foundation-data-privacy-and-protection-support}
 
@@ -31,7 +31,7 @@ På AEM Foundation-nivå lagras de personuppgifter som lagras i användarprofile
 
 ### Manuella steg {#manual-steps}
 
-1. Öppna konsolen för användaradministration genom att bläddra till **[!UICONTROL Tools - Security - Users]** eller genom att gå direkt till `https://<serveraddress>:<serverport>/security/users.html`
+1. Öppna konsolen för användaradministration genom att bläddra till **[!UICONTROL Tools - Security - Users]** eller genom att bläddra direkt till `https://<serveraddress>:<serverport>/security/users.html`
 
 <!--
    ![useradmin2](assets/useradmin2.png)
@@ -41,7 +41,7 @@ På AEM Foundation-nivå lagras de personuppgifter som lagras i användarprofile
 
    ![sök efter konto](assets/dpp-foundation-01.png)
 
-1. Öppna sedan användarprofilen genom att klicka på den och sedan kontrollera under **[!UICONTROL Details]** -fliken.
+1. Öppna sedan användarprofilen genom att klicka på den och kontrollera den på fliken **[!UICONTROL Details]**.
 
    ![användarprofil](assets/dpp-foundation-02.png)
 
@@ -49,7 +49,7 @@ På AEM Foundation-nivå lagras de personuppgifter som lagras i användarprofile
 
 Som vi nämnt tillhandahåller Adobe API:er för åtkomst av användardata, för att underlätta automatisering. Det finns flera typer av API:er som du kan använda:
 
-**UserProperties API**
+**API för användaregenskaper**
 
 ```shell
 curl -u user:password http://localhost:4502/libs/granite/security/search/profile.userproperties.json\?authId\=cavery
@@ -57,7 +57,7 @@ curl -u user:password http://localhost:4502/libs/granite/security/search/profile
 
 **Sling API**
 
-**Identifierar användarens hemsida:**
+**Identifierar användarens startsida:**
 
 ```xml
 curl -g -u user:password 'http://localhost:4502/libs/granite/security/search/authorizables.json?query={"condition":[{"named":"cavery"}]}'
@@ -83,7 +83,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 1. Öppna konsolen för användaradministration och sök efter användaren i fråga enligt beskrivningen ovan.
 2. Håll pekaren över användaren och klicka på markeringsikonen. Profilen blir grå vilket anger att den är markerad.
 
-3. Klicka på i den övre menyn **Inaktivera** för att inaktivera (inaktivera) användaren:
+3. Klicka på **Inaktivera** i den övre menyn för att inaktivera (inaktivera) användaren:
 
    ![inaktivera konto](assets/dpp-foundation-03.png)
 
@@ -97,13 +97,13 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 >[!NOTE]
 >
->För AEM as a Cloud Service finns det ingen manuell procedur i användargränssnittet för att ta bort en användarprofil, eftersom CRXDE inte är tillgängligt.
+>För AEM as a Cloud Service finns det ingen manuell procedur i användargränssnittet för att ta bort en användarprofil eftersom CRXDE inte är tillgängligt.
 
 ### HTTP-API {#http-api-1}
 
-Följande procedurer använder `curl` kommandoradsverktyg som illustrerar hur du inaktiverar användaren med **[!UICONTROL cavery]** `userId` och ta bort användarens profiler som finns på standardplatsen.
+Följande procedurer använder kommandoradsverktyget `curl` för att illustrera hur du inaktiverar användaren med **[!UICONTROL cavery]** `userId` och tar bort användarens profiler som finns på standardplatsen.
 
-**Identifierar användarens hemsida:**
+**Identifierar användarens startsida:**
 
 ```shell
 curl -g -u user:password 'http://localhost:4502/libs/granite/security/search/authorizables.json?query={"condition":[{"named":"cavery"}]}'

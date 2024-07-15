@@ -17,9 +17,9 @@ ht-degree: 0%
 >[!CAUTION]
 >
 >* AEM innehållsfragment exporteras till standardarbetsytan i Adobe Target.
->* AEM måste integreras med Adobe Target enligt instruktionerna i [Integrera med Adobe Target](/help/sites-cloud/integrating/integrating-adobe-target.md).
+>* AEM måste integreras med Adobe Target enligt instruktionerna under [Integrering med Adobe Target](/help/sites-cloud/integrating/integrating-adobe-target.md).
 
-Du kan exportera [Innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md)som har skapats i Adobe Experience Manager as a Cloud Service (AEM) till Adobe Target (Target). De kan sedan användas som erbjudanden i Target-aktiviteter för att testa och personalisera upplevelser i stor skala.
+Du kan exportera [innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md) som skapats i Adobe Experience Manager as a Cloud Service (AEM) till Adobe Target (Target). De kan sedan användas som erbjudanden i Target-aktiviteter för att testa och personalisera upplevelser i stor skala.
 
 Det finns ett alternativ för att exportera ett innehållsfragment till Adobe Target:
 
@@ -37,7 +37,7 @@ Efter det kan du
 
 * [Exportera ett innehållsfragment till Adobe Target](#exporting-a-content-fragment-to-adobe-target)
 * [Använda dina innehållsfragment i Adobe Target](#using-your-content-fragments-in-adobe-target)
-* Och [Ta bort ett innehållsfragment som redan har exporterats till Adobe Target](#deleting-a-content-fragment-already-exported-to-adobe-target)
+* Dessutom [Ta bort ett innehållsfragment som redan har exporterats till Adobe Target](#deleting-a-content-fragment-already-exported-to-adobe-target)
 
 Innehållsfragment kan exporteras till standardarbetsytan i Adobe Target eller till användardefinierade arbetsytor för Adobe Target.
 
@@ -66,15 +66,15 @@ Följande åtgärd krävs:
 
 ## Lägg till molnkonfigurationen {#add-the-cloud-configuration}
 
-Innan du exporterar ett fragment måste du lägga till **Molnkonfiguration** for **Adobe Target** till fragmentet eller mappen. Detta gör även att du kan:
+Innan du exporterar ett fragment måste du lägga till **molnkonfigurationen** för **Adobe Target** i fragmentet eller mappen. Detta gör även att du kan:
 
 * ange de formatalternativ som ska användas för exporten
 * välj en målarbetsyta som mål
 * välj en externaliseringsdomän för att skriva om referenser i innehållsfragmentet (valfritt)
 
-De obligatoriska alternativen kan väljas i **Sidegenskaper** av den mapp eller det fragment som krävs, eller både och. Specifikationen ärvs efter behov.
+De obligatoriska alternativen kan väljas i **Sidegenskaper** för den obligatoriska mappen, eller i ett fragment, eller båda. Specifikationen ärvs om det behövs.
 
-1. Navigera till **Resurser** konsol.
+1. Gå till **Assets**-konsolen.
 
 1. Öppna **Sidegenskaper** för rätt mapp eller fragment.
 
@@ -84,9 +84,9 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** av den mapp eller 
    >
    >Om du lägger till molnkonfigurationen i själva innehållsfragmentet ärvs konfigurationen av alla variationer.
 
-1. Välj **Cloud Service** -fliken.
+1. Markera fliken **Cloud Service**.
 
-1. Under **Konfiguration av Cloud Service**, markera **Adobe Target** i listrutan.
+1. Under **Konfiguration av Cloud Service** väljer du **Adobe Target** i listrutan.
 
    <!-- is this note appropriate? -->
 
@@ -94,9 +94,9 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** av den mapp eller 
    >
    >JSON-formatet för ett Content Fragment-erbjudande kan anpassas. Om du vill göra det definierar du en komponent för kundinnehållsfragment och kommenterar sedan hur egenskaperna ska exporteras i komponentens Sling Model.
    >
-   >Se kärnkomponenten: [Kärnkomponenter - innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)
+   >Se kärnkomponenten: [Kärnkomponenter - Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)
 
-1. Under **Adobe Target** välj:
+1. Under **Adobe Target** väljer du:
 
    * lämplig konfiguration
    * det obligatoriska formatalternativet
@@ -107,7 +107,7 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** av den mapp eller 
    >
    >Externeringsdomänen är valfri.
    >
-   > En AEM externaliserare konfigureras när du vill att det exporterade innehållet ska peka mot en viss *publicera* domän. Mer information finns i [Konfigurera AEM Link Externalizer](/help/implementing/developing/extending/content-fragments-customizing.md#configuring-the-aem-link-externalizer).
+   > En AEM externalisering konfigureras när du vill att det exporterade innehållet ska peka på en specifik *publiceringsdomän*. Mer information finns i [Konfigurera AEM Link Externalizer](/help/implementing/developing/extending/content-fragments-customizing.md#configuring-the-aem-link-externalizer).
    >
    > Observera också att Externalizer-domäner bara är relevanta för innehållet i det innehållsfragment som skickas till Target, och inte för metadata som Visa erbjudandeinnehåll.
 
@@ -127,7 +127,7 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** av den mapp eller 
 >
 >Att lägga till en ny äldre konfiguration är ett specialscenario som bara stöds för export av innehållsfragment.
 
-Efter [lägga till molnkonfigurationen](#add-the-cloud-configuration) för att kunna använda Launch by Adobe måste du, för att kunna integrera AEM med Adobe Target, även manuellt integrera med Adobe Target med en äldre konfiguration.
+När du har [lagt till molnkonfigurationen](#add-the-cloud-configuration) för att använda Launch byn Adobe, måste du även integrera AEM med Adobe Target manuellt med Adobe Target med en äldre konfiguration.
 
 ### Skapa en målmolnkonfiguration {#creating-a-target-cloud-configuration}
 
@@ -139,17 +139,17 @@ Du kan konfigurera molnkonfigurationen så att segment från Adobe Target synkro
 
 Använd följande procedur för att skapa en Target-molnkonfiguration i AEM:
 
-1. Navigera till **Äldre Cloud Service** via **AEM** > **verktyg** > **Cloud Service** > **Äldre Cloud Service**.
+1. Navigera till **Äldre Cloud Service** via logotypen **AEM** > **Verktyg** > **Cloud Service** > **Äldre Cloud Service**.
 Till exempel: ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
 
-   The **Adobe Experience Cloud** översiktssidan öppnas.
+   Översiktssidan för **Adobe Experience Cloud** öppnas.
 
-1. I **Adobe Target** avsnitt, klicka **Konfigurera nu**.
-1. I **Skapa konfiguration** dialog:
+1. Klicka på **Konfigurera nu** i avsnittet **Adobe Target**.
+1. I dialogrutan **Skapa konfiguration**:
 
-   1. Ge konfigurationen en **Titel**.
-   1. Välj **Adobe Target Configuration** mall.
-   1. Klicka **Skapa**.
+   1. Ge konfigurationen en **titel**.
+   1. Välj mallen **Adobe Target Configuration**.
+   1. Klicka på **Skapa**.
 
 Nu kan du välja den nya konfigurationen för redigering.
 
@@ -170,19 +170,19 @@ Nu kan du välja den nya konfigurationen för redigering.
 
    -->
 
-1. I **Adobe Target-inställningar** anger du värden för dessa egenskaper.
+1. Ange värden för de här egenskaperna i dialogrutan **Adobe Target-inställningar**.
 
-   * **Autentisering**: det här är standardvärdet för IMS (användarens inloggningsuppgifter är inaktuella)
+   * **Autentisering**: som standard används IMS (användarautentiseringsuppgifter är inaktuella)
 
    * **Klientkod**: Målkontots klientkod
 
-   * **Klient-ID**: innehavar-ID
+   * **Klient-ID**: klientorganisations-ID
 
-   * **IMS-konfiguration**: välj önskad konfiguration i listrutan
+   * **IMS-konfiguration**: välj den konfiguration som krävs i listrutan
 
-   * **API-typ**: standardvärdet är REST (XML är föråldrat)
+   * **API-typ**: standard är REST (XML är inaktuellt)
 
-   * **A4T Analytics Cloud-konfiguration**: Välj den Analytics-molnkonfiguration som används för mål och mått för aktivitet. Du behöver detta om du använder Adobe Analytics som rapportkälla när du skapar innehåll för målgruppsanpassning.
+   * **A4T Analytics Cloud Configuration**: Välj den Analytics-molnkonfiguration som används för mål- och mätvärden för aktivitet. Du behöver detta om du använder Adobe Analytics som rapportkälla när du skapar innehåll för målgruppsanpassning.
 
      <!-- Is this needed?
      If you do not see your cloud configuration, see note in [Configuring A4T Analytics Cloud Configuration](#configuring-a-t-analytics-cloud-configuration).
@@ -192,11 +192,11 @@ Nu kan du välja den nya konfigurationen för redigering.
 
    * **Synkronisera segment från Adobe Target:** Välj det här alternativet om du vill hämta segment som har definierats i Target för att använda dem i AEM. Välj det här alternativet när API-typegenskapen är REST, eftersom textbundna segment inte stöds och du alltid måste använda segment från Target. (Den AEM termen segment motsvarar målgruppen.)
 
-   * **Klientbibliotek:** this default to AT.js (mbox.js is deprecated)
+   * **Klientbibliotek:** som standard är AT.js (mbox.js är inaktuellt)
 
      >[!NOTE]
      >
-     >Målbiblioteksfilen, [AT.JS](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/at-js/how-atjs-works.html), är ett nytt implementeringsbibliotek för Adobe Target som är utformat för både vanliga webbimplementeringar och ensidiga program.
+     >Målbiblioteksfilen, [AT.JS](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/at-js/how-atjs-works.html), är ett nytt implementeringsbibliotek för Adobe Target som är utformat för både vanliga webbimplementeringar och enkelsidiga program.
      >
      >mbox.js har tagits bort och kommer att tas bort i ett senare skede.
      >
@@ -209,9 +209,9 @@ Nu kan du välja den nya konfigurationen för redigering.
      >* Bättre implementeringsalternativ för ensidiga program
      >* AT.js innehåller komponenterna som ingick i target.js, så det finns inte längre något anrop till target.js
      >
-     >Du kan välja AT.js eller mbox.js i **Klientbibliotek** listruta.
+     >Du kan välja AT.js eller mbox.js i listrutan **Klientbibliotek** .
 
-   * **Använd Tag Management System för att leverera klientbibliotek** - Välj det här alternativet om du vill använda klientbiblioteket från Adobe Launch eller något annat tagghanteringssystem (eller DTM, som är inaktuellt).
+   * **Använd Tag Management System för att leverera klientbiblioteket** - Välj det här alternativet om du vill använda klientbiblioteket från Adobe Launch eller ett annat tagghanteringssystem (eller DTM, som är inaktuellt).
 
    * **Anpassad AT.js**: Bläddra för att överföra din anpassade AT.js. Lämna tomt om du vill använda standardbiblioteket.
 
@@ -221,23 +221,23 @@ Nu kan du välja den nya konfigurationen för redigering.
      >
      >Korrekt målinriktning innebär att molntjänstkonfigurationen väntar på att kontexten ska läsas in innan innehållet läses in. Därför kan en korrekt målinriktning, vad gäller prestanda, skapa en fördröjning på några millisekunder innan innehållet läses in.
      >
-     >Korrekt målinriktning är alltid aktiverat på författarinstansen. På publiceringsinstansen kan du dock välja att inaktivera korrekt målanpassning globalt genom att avmarkera kryssrutan bredvid Korrekt målanpassning i molntjänstkonfigurationen (**http://localhost:4502/etc/cloudservices.html**). Du kan även aktivera och inaktivera exakt målinriktning för enskilda komponenter, oavsett vilken inställning du har i molntjänstkonfigurationen.
+     >Korrekt målinriktning är alltid aktiverat på författarinstansen. På publiceringsinstansen kan du dock avaktivera korrekt målinriktning globalt genom att avmarkera kryssrutan intill Accurate Targeting i molntjänstkonfigurationen (**http://localhost:4502/etc/cloudservices.html**). Du kan även aktivera och inaktivera exakt målinriktning för enskilda komponenter, oavsett vilken inställning du har i molntjänstkonfigurationen.
      >
-     >Om du har ***redan*** har skapat riktade komponenter och du ändrar den här inställningen påverkar inte ändringarna dessa komponenter. Du måste göra ändringar i den komponenten direkt.
+     >Om du redan har ***skapat*** målkomponenter och du ändrar den här inställningen påverkar ändringarna inte dessa komponenter. Du måste göra ändringar i den komponenten direkt.
 
-1. Klicka **Anslut till Adobe Target** för att initiera anslutningen med Target. Om anslutningen lyckas visas meddelandet **Anslutningen lyckades** visas. Klicka **OK** i meddelandet och sedan **OK** i dialogrutan.
+1. Klicka på **Anslut till Adobe Target** för att initiera anslutningen med Target. Om anslutningen lyckas visas meddelandet **Anslutningen lyckades**. Klicka på **OK** i meddelandet och sedan på **OK** i dialogrutan.
 
 ### Lägga till ett målramverk {#adding-a-target-framework}
 
 <!-- Is this section needed? -->
 
-När du har konfigurerat molnkonfigurationen för Target lägger du till ett Target-ramverk. Ramverket identifierar de standardparametrar som skickas till Adobe Target från de tillgängliga [ContextHub](/help/implementing/developing/personalization/configuring-contexthub.md) -komponenter. Target använder parametrarna för att fastställa vilka segment som gäller för den aktuella kontexten.
+När du har konfigurerat molnkonfigurationen för Target lägger du till ett Target-ramverk. Ramverket identifierar de standardparametrar som skickas till Adobe Target från de tillgängliga [ContextHub](/help/implementing/developing/personalization/configuring-contexthub.md) -komponenterna. Target använder parametrarna för att fastställa vilka segment som gäller för den aktuella kontexten.
 
 Du kan skapa flera ramverk för en enda Target-konfiguration. Flera ramverk är användbara när du behöver skicka en annan uppsättning parametrar till Target för olika delar av webbplatsen. Skapa ett ramverk för varje uppsättning parametrar som du måste skicka. Associera varje avsnitt på webbplatsen med rätt ramverk. Observera t*att en webbsida bara kan använda ett ramverk åt gången.
 
-1. Klicka på knappen **+** (plustecken) bredvid Tillgängliga konfigurationer.
+1. Klicka på **+** (plustecken) bredvid Tillgängliga konfigurationer på målkonfigurationssidan.
 
-1. I dialogrutan Skapa ramverk anger du **Titel** väljer du **Adobe Target Framework** och klicka **Skapa**.
+1. Ange en **titel** i dialogrutan Skapa ramverk, markera **Adobe Target Framework** och klicka på **Skapa**.
 
    <!-- ![Configure Target Framework Dialog](assets/config-target-framework-dialog.png) -->
 
@@ -245,17 +245,17 @@ Du kan skapa flera ramverk för en enda Target-konfiguration. Flera ramverk är 
 
    <!-- ![Configuring ContextHub](assets/chlimage_1-162.png) -->
 
-1. Dra den klientkontextkomponent som representerar de data som du vill använda för mappning till släppmålet. Du kan också dra i **ContextHub Store** till ramverket.
+1. Dra den klientkontextkomponent som representerar de data som du vill använda för mappning till släppmålet. Du kan också dra **ContextHub Store** -komponenten till ramverket.
 
    >[!NOTE]
    >
    >Vid mappning skickas parametrar till en mbox via enkla strängar. Du kan inte mappa arrayer från ContextHub.
 
-   Använd till exempel **Profildata** om webbplatsbesökarna för att styra er Target-kampanj drar du **Profildata** till sidan. De profildatavariabler som är tillgängliga för mappning till Target-parametrar visas.
+   Om du till exempel vill använda **profildata** om webbplatsbesökarna för att styra målkampanjen drar du komponenten **profildata** till sidan. De profildatavariabler som är tillgängliga för mappning till Target-parametrar visas.
 
    <!-- ![Profile Data](assets/chlimage_1-163.png) -->
 
-1. Markera variablerna som du vill göra synliga för Adobe Target-systemet genom att markera **Dela** -kryssrutan i rätt kolumner.
+1. Markera de variabler som du vill göra synliga för Adobe Target-systemet genom att markera kryssrutan **Dela** i rätt kolumner.
 
    <!-- ![Share](assets/chlimage_1-164.png) -->
 
@@ -263,7 +263,7 @@ Du kan skapa flera ramverk för en enda Target-konfiguration. Flera ramverk är 
    >
    >Synkronisering av parametrar är bara ett sätt - från AEM till Adobe Target.
 
-Ditt ramverk har skapats. Om du vill kopiera ramverket till publiceringsinstansen använder du **Aktivera ramverk** från sidosparken.
+Ditt ramverk har skapats. Om du vill replikera ramverket till publiceringsinstansen använder du alternativet **Aktivera ramverk** från sidosparken.
 
 <!--
 ### Associating Activities With the Target Cloud Configuration  {#associating-activities-with-the-target-cloud-configuration}
@@ -320,10 +320,10 @@ When you associate a page with the framework, the child pages inherit the associ
 
 Så här exporterar du ett innehållsfragment från AEM till mål (efter att du har angett molnkonfigurationen):
 
-1. Navigera till ditt innehållsfragment i **Resurser** konsol.
+1. Navigera till ditt innehållsfragment i **Assets**-konsolen.
 1. Markera det innehållsfragment som du vill exportera till mål.
 
-1. Välj **Exportera till Adobe Target**.
+1. Välj **Exportera till Adobe Target-erbjudanden**.
 
    ![Exportera till Adobe Target](assets/cfm-export-target-01.png)
 
@@ -337,7 +337,7 @@ Så här exporterar du ett innehållsfragment från AEM till mål (efter att du 
    
    -->
 
-1. Välj **Exportera utan publicering** eller **Publicera** efter behov.
+1. Välj **Exportera utan publicering** eller **Publish** efter behov.
 
    >[!NOTE]
    >
@@ -347,7 +347,7 @@ Så här exporterar du ett innehållsfragment från AEM till mål (efter att du 
 
    >[!NOTE]
    >
-   >Markera **Publicera** publicerar innehållsfragmentet omedelbart och skickar det till Target.
+   >Om du väljer **Publish** publiceras innehållsfragmentet direkt och skickas till Target.
 
 1. Välj **OK** i bekräftelsedialogrutan.
 
@@ -355,27 +355,27 @@ Så här exporterar du ett innehållsfragment från AEM till mål (efter att du 
 
    >[!NOTE]
    >
-   >[Olika detaljer](/help/sites-cloud/authoring/fragments/content-fragments.md#details-of-your-content-fragment) av exporten visas i **Listvy** av konsolen och **Egenskaper**.
+   >[Olika detaljer](/help/sites-cloud/authoring/fragments/content-fragments.md#details-of-your-content-fragment) i exporten visas i **listvyn** i konsolen och i **Egenskaper**.
 
    >[!NOTE]
    >
-   >När du visar ett innehållsfragment i Adobe Target visas *senast ändrad* datum som visas är det datum då fragmentet senast ändrades i AEM, inte det datum då fragmentet senast exporterades till Adobe Target.
+   >När du visar ett innehållsfragment i Adobe Target är det *senast ändrade*-datum som visas det datum då fragmentet senast ändrades i AEM, inte det datum då fragmentet senast exporterades till Adobe Target.
 
 >[!NOTE]
 >
->Du kan också exportera från sidredigeraren med jämförbara kommandon i [Sidinformation](/help/sites-cloud/authoring/page-editor/introduction.md#page-information) -menyn.
+>Du kan också exportera från sidredigeraren med jämförbara kommandon på menyn [Sidinformation](/help/sites-cloud/authoring/page-editor/introduction.md#page-information) .
 
 ## Använda dina innehållsfragment i Adobe Target {#using-your-content-fragments-in-adobe-target}
 
-När du har utfört de föregående åtgärderna visas innehållsfragmentet på sidan Erbjudanden i Mål. Se [specifik Target-dokumentation](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/content-fragments-aem.html) om du vill veta mer om vad du kan uppnå där.
+När du har utfört de föregående åtgärderna visas innehållsfragmentet på sidan Erbjudanden i Mål. Mer information om vad du kan uppnå där finns i [specifik måldokumentation](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/content-fragments-aem.html).
 
 >[!NOTE]
 >
->När du visar ett innehållsfragment i Adobe Target visas *senast ändrad* datum som visas är det datum då fragmentet senast ändrades i AEM, inte det datum då fragmentet senast exporterades till Adobe Target.
+>När du visar ett innehållsfragment i Adobe Target är det *senast ändrade*-datum som visas det datum då fragmentet senast ändrades i AEM, inte det datum då fragmentet senast exporterades till Adobe Target.
 
 ## Ta bort ett innehållsfragment som redan har exporterats till Adobe Target {#deleting-a-content-fragment-already-exported-to-adobe-target}
 
-Precis som vid export kan du även ta bort ett innehållsfragment från Adobe Target i det övre verktygsfältet i **Resurser** konsol när fragmentet har valts:
+Precis som vid export kan du även ta bort ett innehållsfragment från Adobe Target från det övre verktygsfältet i **Assets** -konsolen när fragmentet har valts:
 
 ![Ta bort i Adobe Target](assets/cfm-export-target-02.png)
 
@@ -405,10 +405,10 @@ Mer information finns i följande:
 * [Creating a Target Cloud Configuration](/help/sites-cloud/integrating/integrating-adobe-target.md#create-configuration)
 -->
 
-* [Kärnkomponenter - innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)
+* [Kärnkomponenter - Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)
 
-* [Utveckling av Adobe Target](https://developers.adobetarget.com/)
+* [Adobe Target-utveckling](https://developers.adobetarget.com/)
 
-* [Adobe Target - Använda AEM innehållsfragment i Target-aktiviteter för att underlätta optimering eller personalisering](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/content-fragments-aem.html)
+* [Adobe Target - Använda AEM innehållsfragment i målaktiviteter för att underlätta optimering eller personalisering](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/content-fragments-aem.html)
 
-* [Adobe Target - AEM Experience Fragments och Content Fragments - översikt](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/aem-experience-and-content-fragments.html)
+* [Adobe Target - AEM Experience Fragments and Content Fragments overview](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/aem-experience-and-content-fragments.html)

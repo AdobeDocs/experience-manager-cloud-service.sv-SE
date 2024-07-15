@@ -17,13 +17,13 @@ AEM används för att lagra, formatera och återge innehåll som är tillgängli
 
 ## Redigeringskanaler {#authoring-channels}
 
-Kanalen är det centrala objektet för innehåll som levereras till en uppsättning skärmar. Därför öppnar en innehållsförfattare vanligtvis en kanal i redigeraren för att lägga till eller ändra innehåll. Eftersom kanalen är en ***cq:Sida*** kommer att följa samma traditionella UX-mönster för att lägga till och ändra komponenter i kanalen.
+Kanalen är det centrala objektet för innehåll som levereras till en uppsättning skärmar. Därför öppnar en innehållsförfattare vanligtvis en kanal i redigeraren för att lägga till eller ändra innehåll. Eftersom kanalen är en ***cq:Page*** följer den samma traditionella UX-mönster för att lägga till och ändra komponenter i kanalen.
 
 Men eftersom komponenter i en kanal vanligtvis återges i helskärmsläge blir redigeringsupplevelsen lidande när du försöker redigera enskilda komponenter eller skapa nya order. Kanalen använder därför väljare för att återge olika vyer av komponenterna. I redigeringsmiljön används redigeringsväljaren för att aktivera den anpassade kanalåtergivningen.
 
 Exempel: `http://localhost:4502/editor.html/content/screens/we-retail/channels/idle.edit.html](http://localhost:4502/editor.html/content/screens/we-retail/channels/idle.edit.html`
 
-Användaren behöver inte ta hand om att lägga till väljaren till URL-adressen när han/hon redigerar. En logik på klientsidan lyssnar på lagerväxlingshändelsen och lägger till väljaren om kanalen har den dedikerade resurstypen *skärmar/kärna/komponenter/kanal.*
+Användaren behöver inte ta hand om att lägga till väljaren till URL-adressen när han/hon redigerar. En logik på klientsidan lyssnar på lagerväxelhändelsen och lägger till väljaren om kanalen har den dedikerade resurstypen *skärmar/kärna/komponenter/kanal.*
 
 ## Återgivningskomponenter {#rendering-components}
 
@@ -44,4 +44,4 @@ De inbyggda komponenterna använder följande klientbibliotekskategorier:
 
 >[!NOTE]
 >
->Använd *** för att utveckla anpassade komponenter[AEM Screens exempelkomponentmall](https://github.com/Adobe-Marketing-Cloud/aem-screens-component-template)***.
+>Använd exempelkomponentmallen ***[AEM Screens](https://github.com/Adobe-Marketing-Cloud/aem-screens-component-template)*** för att utveckla anpassade komponenter.

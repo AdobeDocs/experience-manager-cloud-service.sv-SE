@@ -4,7 +4,7 @@ description: Dynamic Media hjälper er att leverera visuella marknadsförings- o
 contentOwner: Rick Brough
 source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # Arbeta med Dynamic Media{#working-with-dynamic-media}
 
-[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) hjälper till att leverera visuellt marknadsförings- och marknadsföringsmaterial on demand, som automatiskt skalas för konsumtion på webben, mobiler och sociala medier. Med en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
+[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) hjälper till att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobiler och sociala medier. Med en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
 
 Dynamic Media visar interaktivt material som zoomning, 360-gradersrotation och video. Dynamic Media införlivar smidigt arbetsflödena i Adobe Experience Manager Digital Asset Management (Assets) för att förenkla och effektivisera hanteringen av digitala kampanjer.
 
-Det går inte att arbeta med Dynamic Media i det klassiska användargränssnittet. Se [Arbeta med Dynamic Media,](/help/assets/dynamic-media/dynamic-media.md) som täcker det beröringskänsliga användargränssnittet.
+Det går inte att arbeta med Dynamic Media i det klassiska användargränssnittet. Se [Arbeta med Dynamic Media](/help/assets/dynamic-media/dynamic-media.md) som täcker det beröringskänsliga användargränssnittet.
 
 <!-- 
 

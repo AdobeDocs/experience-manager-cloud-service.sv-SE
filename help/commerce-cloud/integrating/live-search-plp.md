@@ -1,6 +1,6 @@
 ---
-title: '''[!DNL Live Search] CIF'
-description: Aktivera CIF [!DNL Live Search] Produktlistsidkomponent på en AEM webbplats
+title: '[!DNL Live Search] CIF på produktlistsida'
+description: Använda CIF komponenter för att aktivera  [!DNL Live Search] produktlistsidkomponenten på en AEM webbplats
 exl-id: 7f2d9a43-a7cb-4d9d-a108-b016cd1ff81e
 feature: Commerce Integration Framework
 role: Admin
@@ -11,17 +11,17 @@ ht-degree: 0%
 
 ---
 
-# [!DNL Live Search] CIF {#live-search-cif-component}
+# CIF [!DNL Live Search] {#live-search-cif-component}
 
 Live Search för Adobe Commerce ger en snabb, relevant och intuitiv sökupplevelse utan extra kostnad. Live Search som drivs av Adobe Sensei använder artificiell intelligens och maskininlärningsalgoritmer för att göra en djupgående analys av samlade besöksdata. När dessa data kombineras med din Adobe Commerce-katalog skapas en relevant och personaliserad shoppingupplevelse.
 
-I det här avsnittet beskrivs hur du använder en AEM CIF-komponent för att implementera [!DNL Live Search] Produktlistsida (PLP) i din AEM.
+I det här avsnittet beskrivs hur du använder en AEM CIF-komponent för att implementera PLP-widgeten ([!DNL Live Search] Product Listing Page) på din AEM.
 
 ## Förutsättningar {#prerequisites}
 
-Det här avsnittet förutsätter att du har en lokal [AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html) konfigurera.
+Det här avsnittet förutsätter att du har konfigurerat en lokal [AEM-miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 
-PLP-komponenten kräver [[!DNL Live Search] CIF](live-search-popover.md) installeras. PLP-widgeten kräver en webbläsarsessionsvariabel som genereras av povern.
+PLP-komponenten kräver att komponenten [[!DNL Live Search] CIF](live-search-popover.md) är installerad. PLP-widgeten kräver en webbläsarsessionsvariabel som genereras av povern.
 
 ## Uppdatera disposition {#update-composer}
 
@@ -54,11 +54,11 @@ till:
 
 ## Filändringar {#files-changes}
 
-Flera filer måste uppdateras för att kunna aktiveras [!DNL Live Search] funktionalitet. Redigera följande filer. Radnummer kan skilja sig något från dem som visas här.
+Flera filer måste uppdateras för att aktivera funktionen [!DNL Live Search]. Redigera följande filer. Radnummer kan skilja sig något från dem som visas här.
 
 * ui.apps/src/main/content/jcr_root/apps/venia/clientlibs/clientlib-cif/.content.xml
 
-  Lägg till `core.cif.productlist.v1` till `embed` linje.
+  Lägg till `core.cif.productlist.v1` på raden `embed`.
 
   ```
   embed="[core.cif.components.common,core.cif.components.product.v3,core.cif.components.productcarousel.v1,core.cif.components.productcollection.v2,core.cif.components.productteaser.v1,core.cif.components.searchbar.v2,core.cif.components.header.v1,core.cif.components.carousel.v1,core.cif.components.categorycarousel.v1,core.cif.components.featuredcategorylist.v1,core.cif.components.storefront-events.v1,core.cif.components.extensions.product-recs.storefront-events-collector.v1,core.wcm.components.commons.site.link,core.cif.productlist.v1]"
@@ -281,7 +281,7 @@ Flera filer måste uppdateras för att kunna aktiveras [!DNL Live Search] funkti
 
 * ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productlist/productlist.html
 
-  Skapa fil `productlist.html`:
+  Skapa filen `productlist.html`:
 
   ```html
   <div
@@ -337,11 +337,11 @@ Flera filer måste uppdateras för att kunna aktiveras [!DNL Live Search] funkti
 
 Det kan finnas kategorier där standardkategorin eller katalogsidan är önskad, i stället för att använda PLP-widgeten. I AEM måste dessa kategorisidor konfigureras manuellt.
 
-1. Välj en kategorisidmall på sidan Författare. _Venedig Store - startsida_ > _Katalogsida_ > _Venedig Store - kategorisida_ och väljer&quot;Leta upp utseendet&quot; eller skapar en ny sidmall.
+1. Välj en kategorisidmall på sidan Författare. _Venedig Store - Hem_ > _Katalogsida_ > _Venedig Store - Kategorisida_ och välj&quot;Leta rätt på utseendet&quot; eller skapa en ny sidmall.
 
 ![Välj mallen](../assets/cif-widget-1.jpg)
 
-1. Klicka på _Egenskaper_ -avsnittet och välj _Handel_ -fliken.
+1. Klicka på avsnittet _Egenskaper_ och välj fliken _Commerce_ .
 
 ![Välj egenskaper](../assets/cif-widget-2.jpg)
 

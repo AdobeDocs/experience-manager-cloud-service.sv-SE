@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Den här funktionen har inte släppts ännu och vissa loggningsmål är kanske inte tillgängliga vid tidpunkten för lanseringen. Under tiden kan du öppna en supportanmälan och vidarebefordra loggar till **Splunk**, enligt beskrivningen i [loggningsartikel](/help/implementing/developing/introduction/logging.md).
+>Den här funktionen har inte släppts ännu och vissa loggningsmål är kanske inte tillgängliga vid tidpunkten för lanseringen. Under tiden kan du öppna en supportbiljett för att vidarebefordra loggar till **Splunk**, vilket beskrivs i [loggningsartikeln](/help/implementing/developing/introduction/logging.md).
 
 Kunder som har en licens för en loggningsleverantör eller värd för en loggningsprodukt kan ha AEM loggar (inklusive Apache/Dispatcher) och CDN-loggar vidarebefordrade till associerade loggningsmål. AEM as a Cloud Service stöder följande loggningsmål:
 
@@ -67,11 +67,11 @@ Den här artikeln är organiserad på följande sätt:
          index: "AEMaaCS"
    ```
 
-   The **sort** parametern ska anges till `LogForwarding` versionen ska anges till schemaversionen, som är 1.
+   Parametern **kind** ska anges till `LogForwarding`. Versionen ska anges till schemaversionen, som är 1.
 
-   Token i konfigurationen (t.ex. `${{SPLUNK_TOKEN}}`) representerar hemligheter, som inte bör lagras i Git. Deklarera dem som Cloud Manager i stället  [Miljövariabler](/help/implementing/cloud-manager/environment-variables.md) av typen **hemlig**. Se till att markera **Alla** som listvärde för fältet Service Applied, så att loggarna kan vidarebefordras till författare, publicering och förhandsgranskning.
+   Tokens i konfigurationen (till exempel `${{SPLUNK_TOKEN}}`) representerar hemligheter som inte ska lagras i Git. Deklarera dem i stället som Cloud Manager [miljövariabler](/help/implementing/cloud-manager/environment-variables.md) av typen **secrets**. Välj **Alla** som listvärde för fältet Tjänst används, så att loggarna kan vidarebefordras till författare, publicering och förhandsgranskningsnivåer.
 
-   Det går att ange olika värden mellan CDN-loggar och AEM (inklusive Apache/Dispatcher) genom att inkludera ytterligare **cdn** och/eller **aem** -block efter **standard** block, där egenskaper kan åsidosätta de som definieras i **standard** block; endast egenskapen enabled krävs. Ett möjligt användningsexempel kan vara att använda ett annat Splunk-index för CDN-loggar, vilket visas i exemplet nedan.
+   Det går att ange olika värden mellan CDN-loggar och AEM (inklusive Apache/Dispatcher) genom att inkludera ytterligare ett **cdn**- och/eller **aem** -block efter **default** -blocket, där egenskaper kan åsidosätta de som definieras i **default** -blocket. Det krävs bara den aktiverade egenskapen. Ett möjligt användningsexempel kan vara att använda ett annat Splunk-index för CDN-loggar, vilket visas i exemplet nedan.
 
    ```
       kind: "LogForwarding"
@@ -111,8 +111,8 @@ Den här artikeln är organiserad på följande sätt:
 
 1. För andra miljötyper än RDE (som för närvarande inte stöds) skapar du en riktad distributionskonfigurationspipeline i Cloud Manager.
 
-   * [Se konfigurera produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md).
-   * [Se konfigurera icke-produktionspipelinor](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md).
+   * [Se konfigurera produktionspipelinor](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md).
+   * [Se konfigurera icke-produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md).
 
 ## Konfiguration för loggningsmål {#logging-destinations}
 
@@ -144,11 +144,11 @@ En SAS-token bör användas för autentisering. Den ska skapas från signatursid
 
 Här följer en skärmbild av en exempelkonfiguration för SAS-token:
 
-![Konfiguration av Azure Blob SAS-token](/help/implementing/developing/introduction/assets/azureblob-sas-token-config.png)
+![Azure Blob SAS-tokenkonfiguration](/help/implementing/developing/introduction/assets/azureblob-sas-token-config.png)
 
 #### Azure Blob Storage CDN-loggar {#azureblob-cdn}
 
-Var och en av de globalt distribuerade loggningsservrarna skapar en ny fil var sjätte sekund under `aemcdn` mapp. När filen har skapats läggs den inte längre till. Filnamnsformatet är YYY-MM-DDThh:mm:ss.sss-uniqueid.log. Exempel: 2024-03-04T10:00:00.000-WnFWYN9BpOUs2aOVn4ee.log.
+Var och en av de globalt distribuerade loggningsservrarna skapar en ny fil var sjätte sekund, under mappen `aemcdn`. När filen har skapats läggs den inte längre till. Filnamnsformatet är YYY-MM-DDThh:mm:ss.sss-uniqueid.log. Exempel: 2024-03-04T10:00:00.000-WnFWYN9BpOUs2aOVn4ee.log.
 
 Exempel:
 
@@ -169,7 +169,7 @@ aemcdn/
    2024-03-04T10:00:30.000-mno.log
 ```
 
-Varje fil innehåller flera json-loggposter, var och en på en separat rad. Loggpostens format beskrivs i [loggningsartikel](/help/implementing/developing/introduction/logging.md), och varje loggpost innehåller också de ytterligare egenskaper som anges i [Loggpostformat](#log-format) nedan.
+Varje fil innehåller flera json-loggposter, var och en på en separat rad. Loggpostformaten beskrivs i [loggningsartikeln](/help/implementing/developing/introduction/logging.md) och varje loggpost innehåller även de ytterligare egenskaper som nämns i avsnittet [Loggpostformat](#log-format) nedan.
 
 #### Loggar för Azure Blob Storage-AEM {#azureblob-aem}
 
@@ -183,7 +183,7 @@ AEM (inklusive Apache/Dispatcher) visas under en mapp med följande namnkonventi
 
 Under varje mapp skapas en enda fil och läggs till i den. Kunderna ansvarar för att bearbeta och hantera den här filen så att den inte växer för stor.
 
-Se loggpostformaten i [loggningsartikel](/help/implementing/developing/introduction/logging.md). Loggposterna kommer även att innehålla de ytterligare egenskaper som anges i [Loggpostformat](#log-formats) nedan.
+Se loggpostformaten i [loggningsartikeln](/help/implementing/developing/introduction/logging.md). Loggposterna innehåller även de ytterligare egenskaper som nämns i avsnittet [Loggpostformat](#log-formats) nedan.
 
 
 ### Datadog {#datadog}
@@ -232,9 +232,9 @@ Att tänka på:
 
 * För autentiseringsuppgifter måste du använda distributionsuppgifter i stället för kontoautentiseringsuppgifter. Detta är de autentiseringsuppgifter som genereras på en skärm som kan likna den här bilden:
 
-![Elastiska autentiseringsuppgifter för distribution](/help/implementing/developing/introduction/assets/ec-creds.png)
+![Elastic deployment credentials](/help/implementing/developing/introduction/assets/ec-creds.png)
 
-* Den valfria pipeline-egenskapen ska anges till namnet på importflödet för Elasticsearch eller OpenSearch, som kan konfigureras för att dirigera loggposten till rätt index. Pipeline-processortypen måste anges till *script* och skriptspråket ska anges till *smärtfri*. Här följer ett exempel på ett skriptfragment som dirigerar loggposter till ett index som aemaccess_dev_26_06_2024:
+* Den valfria pipeline-egenskapen ska anges till namnet på importflödet för Elasticsearch eller OpenSearch, som kan konfigureras för att dirigera loggposten till rätt index. Pipelinens processortyp måste anges till *script* och skriptspråket ska anges till *smärtfritt*. Här följer ett exempel på ett skriptfragment som dirigerar loggposter till ett index som aemaccess_dev_26_06_2024:
 
 ```
 def envType = ctx.aem_env_type != null ? ctx.aem_env_type : 'unknown';
@@ -260,20 +260,20 @@ data:
 
 #### HTTPS CDN-loggar {#https-cdn}
 
-Webbförfrågningar (POST) skickas kontinuerligt, med en JSON-nyttolast som är en matris med loggposter, med det loggpostformat som beskrivs i [loggningsartikel](/help/implementing/developing/introduction/logging.md#cdn-log). Ytterligare egenskaper anges i [Loggpostformat](#log-formats) nedan.
+Webbförfrågningar (POST) skickas kontinuerligt, med en JSON-nyttolast som är en matris med loggposter, med loggpostformatet som beskrivs i [loggningsartikeln](/help/implementing/developing/introduction/logging.md#cdn-log). Ytterligare egenskaper anges i avsnittet [Loggpostformat](#log-formats) nedan.
 
-Det finns också en egenskap med namnet `sourcetype`, som är inställt på värdet `aemcdn`.
+Det finns också en egenskap med namnet `sourcetype` som är inställd på värdet `aemcdn`.
 
 >[!NOTE]
 >
-> Innan den första posten i CDN-loggen skickas måste HTTP-servern slutföra en engångskontroll: en begäran som skickas till sökvägen ``wellknownpath`` måste svara med ``*``.
+> Innan den första CDN-loggposten skickas måste HTTP-servern slutföra en engångskontroll: en begäran som skickas till sökvägen ``wellknownpath`` måste svara med ``*``.
 
 
 #### HTTPS-AEM {#https-aem}
 
-För AEM loggar (inklusive apache/disacher) skickas webbförfrågningar (POST) kontinuerligt, med en json-nyttolast som är en matris av loggposter, med de olika loggpostformaten som beskrivs i [loggningsartikel](/help/implementing/developing/introduction/logging.md). Ytterligare egenskaper anges i [Loggpostformat](#log-format) nedan.
+För AEM (inklusive apache/disacher) skickas webbförfrågningar (POST) kontinuerligt, med en JSON-nyttolast som är en matris med loggposter, med de olika loggpostformaten som beskrivs i [loggningsartikeln](/help/implementing/developing/introduction/logging.md). Ytterligare egenskaper anges i avsnittet [Loggpostformat](#log-format) nedan.
 
-Det finns också en egenskap med namnet `sourcetype`, som är inställt på något av dessa värden:
+Det finns också en egenskap med namnet `sourcetype` som är inställd på något av följande värden:
 
 * aemaccess
 * aemerror
@@ -318,7 +318,7 @@ data:
 
 ## Loggpostformat {#log-formats}
 
-Se det allmänna [loggningsartikel](/help/implementing/developing/introduction/logging.md) för varje loggtyp (CDN-loggar och AEM inklusive Apache/Dispatcher).
+I den allmänna [loggningsartikeln](/help/implementing/developing/introduction/logging.md) finns information om formatet för respektive loggtyp (CDN-loggar och AEM loggar inklusive Apache/Dispatcher).
 
 Eftersom loggar från flera program och miljöer kan vidarebefordras till samma loggningsmål, förutom de utdata som beskrivs i loggningsartikeln, kommer följande egenskaper att finnas i varje loggpost:
 
@@ -347,7 +347,7 @@ Vissa organisationer väljer att begränsa vilken trafik som kan tas emot av log
 
 För CDN-loggen kan du tillåta att IP-adresserna listas enligt beskrivningen i [den här artikeln](https://www.fastly.com/documentation/reference/api/utils/public-ip-list/). Om listan med delade IP-adresser är för stor kan du skicka trafik till ett (ej Adobe) Azure Blob Store där logik kan skrivas för att skicka ut loggarna från en dedikerad IP-adress till deras slutliga mål.
 
-För AEM (inklusive Apache/Dispatcher) kan du konfigurera vidarebefordran av loggar så att du går igenom [avancerat nätverk](/help/security/configuring-advanced-networking.md). Se mönstren för de tre avancerade nätverkstyperna nedan, som använder en valfri `port` -parametern tillsammans med `host` parameter.
+För AEM loggar (inklusive Apache/Dispatcher) kan du konfigurera vidarebefordran av loggar så att de går igenom [avancerat nätverk](/help/security/configuring-advanced-networking.md). Se mönstren för de tre avancerade nätverkstyperna nedan, som använder en valfri `port`-parameter, tillsammans med parametern `host`.
 
 ### Flexibla portägg {#flex-port}
 

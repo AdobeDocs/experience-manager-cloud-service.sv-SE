@@ -22,21 +22,21 @@ Så här aktiverar du instansen för funktionen för innehållsfragment:
 
   >[!CAUTION]
   >
-  >Om du inte aktiverar **Modeller för innehållsfragment**:
+  >Om du inte aktiverar **modeller för innehållsfragment**:
   >
-  >* den **Skapa** kan inte användas för att skapa modeller.
-  >* kommer du inte att kunna [välj platskonfigurationen för att skapa den relaterade slutpunkten](/help/headless/graphql-api/graphql-endpoint.md).
+  >* alternativet **Skapa** är inte tillgängligt för att skapa modeller.
+  >* Du kan inte [välja platskonfigurationen för att skapa den relaterade slutpunkten](/help/headless/graphql-api/graphql-endpoint.md).
 
-* **GraphQL Beständiga frågor** - valfritt
+* **GraphQL Persisted Queries** - valfritt
 
 Instansen har konfigurerats:
 
-* av [aktivera funktioner i Configuration Browser](#enable-content-fragment-functionality-configuration-browser)
-* sedan [tillämpa konfigurationen på dina enskilda resursmappar](#apply-the-configuration-to-your-folder)
+* av [aktivera funktioner i konfigurationsläsaren](#enable-content-fragment-functionality-configuration-browser)
+* [tillämpar sedan konfigurationen på dina enskilda Assets-mappar](#apply-the-configuration-to-your-folder)
 
 ## Aktivera funktionen för innehållsfragment i konfigurationsläsaren {#enable-content-fragment-functionality-configuration-browser}
 
-Om du vill använda funktionen för innehållsfragment, för modeller för innehållsfragment och GraphQL beständiga frågor, ska du **måste** först aktivera dem via **Konfigurationsläsaren**:
+Om du vill använda funktionen för innehållsfragment, för modeller för innehållsfragment och GraphQL beständiga frågor, måste **du** först aktivera dem via **Konfigurationsläsaren**:
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ Om du vill använda funktionen för innehållsfragment, för modeller för inneh
 
 >[!NOTE]
 >
->[Delkonfigurationer](/help/implementing/developing/introduction/configurations.md#configuration-resolution) (en konfiguration som är kapslad i en annan konfiguration) stöds fullt ut för användning med Content Fragments, Content Fragment Models och GraphQL queries.
+>[Delkonfigurationer](/help/implementing/developing/introduction/configurations.md#configuration-resolution) (en konfiguration som är kapslad i en annan konfiguration) stöds fullt ut för användning med innehållsfragment, innehållsfragmentmodeller och GraphQL-frågor.
 >
 >Observera följande:
 >
@@ -58,21 +58,21 @@ Om du vill använda funktionen för innehållsfragment, för modeller för inneh
 
 1. Använd **Skapa** för att öppna dialogrutan där du:
 
-   1. Ange en **Titel**.
-   1. När du skapar **Namn** blir nodnamnet i databasen.
-Du kan ange ett namn. Om du lämnar fältet tomt genereras det automatiskt baserat på titeln och justeras sedan enligt [AEM namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md); du kan justera resultatet om det behövs.
+   1. Ange en **titel**.
+   1. När **Name** skapas blir det nodnamnet i databasen.
+Du kan ange ett namn. Om du lämnar fältet tomt genereras det automatiskt baserat på titeln och justeras sedan enligt [AEM namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md). Du kan justera resultatet om det behövs.
    1. Om du vill aktivera deras användning väljer du
       * **Modeller för innehållsfragment**
-      * **GraphQL Beständiga frågor**
+      * **GraphQL beständiga frågor**
 
       ![Definiera konfiguration](assets/cf-setup-create-conf.png)
 
-1. Välj **Skapa** för att spara definitionen.
+1. Välj **Skapa** om du vill spara definitionen.
 
 ## Använd konfigurationen för din mapp {#apply-the-configuration-to-your-folder}
 
-När konfigurationen **global** är aktiverat för funktionen för innehållsfragment och gäller sedan för alla Resursmappar som är tillgängliga via **Resurser** konsol.
+När konfigurationen **global** är aktiverad för funktionen Innehållsfragment gäller den alla Assets-mappar som är tillgängliga via **Assets**-konsolen.
 
-Om du vill använda andra konfigurationer (och därmed utesluta globala) med en jämförbar resursmapp måste du definiera anslutningen. Gör detta genom att välja lämplig **Konfiguration** i **Cloud Service** -fliken i **Mappegenskaper** för rätt mapp.
+Om du vill använda andra konfigurationer (alltså inte globala) med en jämförbar Assets-mapp måste du definiera anslutningen. Det gör du genom att välja lämplig **konfiguration** på fliken **Cloud Service** i **Mappegenskaper** för rätt mapp.
 
 ![Använd konfiguration](assets/cf-setup-apply-conf.png)

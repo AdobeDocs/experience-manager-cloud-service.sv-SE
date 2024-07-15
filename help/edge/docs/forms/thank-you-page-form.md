@@ -26,7 +26,7 @@ Följ stegen nedan för att konfigurera ett anpassat tackmeddelande för ditt ad
 
 1. Gå till ditt AEM-projekt på din lokala dator eller GitHub-databas.
 
-1. Navigera till [AEM projektmapp]\blocks\form\submit.js fil för redigering.
+1. Navigera till [AEM projektmapp]\blocks\form\submit.js för redigering.
 
 1. Hitta följande kod
 

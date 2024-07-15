@@ -38,7 +38,7 @@ Det finns grundläggande skillnader mellan dessa tidigare metoder och AEM as a C
 
 >[!NOTE]
 >
->Mer information om On-Premise och Managed Service finns i [AEM 6.5-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65.html) .
+>Mer information om versionerna av On-Premise och Managed Service finns i [AEM 6.5-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65.html) .
 
 ## Arkitektur {#architecture}
 
@@ -73,7 +73,7 @@ AEM as a Cloud Service använder nu kontinuerlig integrering och kontinuerlig le
 
 >[!NOTE]
 >
->Om uppdateringen till produktionsmiljön misslyckas kommer Cloud Manager automatiskt att återställa testmiljön. Detta görs automatiskt för att säkerställa att både testnings- och produktionsmiljöerna har samma AEM när uppdateringen är klar.
+>Om uppdateringen till produktionsmiljön misslyckas, kommer Cloud Manager automatiskt att återställa testmiljön. Detta görs automatiskt för att säkerställa att både testnings- och produktionsmiljöerna har samma AEM när uppdateringen är klar.
 
 Det finns två typer AEM versionsuppdateringar:
 
@@ -83,13 +83,13 @@ Det finns två typer AEM versionsuppdateringar:
    * Är främst avsedda för underhåll, inklusive de senaste felkorrigeringarna och säkerhetsuppdateringarna.
    * Påverkar inte särskilt mycket eftersom ändringarna tillämpas regelbundet.
 
-* **Nya funktioner**
+* **Nya funktionsuppdateringar**
 
    * Publiceras enligt ett förutsägbart månadsschema.
 
 >[!TIP]
 >
->Mer information finns i [Uppdateringar av AEM](/help/implementing/deploying/aem-version-updates.md).
+>Mer information finns i [AEM Versionsuppdateringar](/help/implementing/deploying/aem-version-updates.md).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -115,11 +115,11 @@ Antal och typer av AEM-program som kan skapas via Cloud Manager beror på:
 
 Cloud Manager har utvecklats till en självbetjäningsportal där huvudkomponenterna i AEM as a Cloud Service kan skapas och konfigureras:
 
-* Skapa och hantera nya program. Se [Program och programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md) för mer information.
+* Skapa och hantera nya program. Mer information finns i [Förstå program och programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md).
 
-* Skapa och hantera AEM miljöer i dessa program. Se [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md) för mer information.
+* Skapa och hantera AEM miljöer i dessa program. Mer information finns i [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md).
 
-* Skapa och hantera pipelines för distribution av kundkoden och den relaterade konfigurationen till en viss miljö. Se [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) för mer information.
+* Skapa och hantera pipelines för distribution av kundkoden och den relaterade konfigurationen till en viss miljö. Mer information finns i [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md).
 
 * Meddelas om viktiga livscykelhändelser för dessa komponenter (t.ex. produktuppdateringar).
 
@@ -152,13 +152,13 @@ En annan viktig skillnad är att det nu finns:
 
 >[!TIP]
 >
->En fullständig översikt över introduktionsprocessen finns i [introduktionsresa](/help/journey-onboarding/overview.md).
+>En fullständig översikt över introduktionsprocessen finns under [introduktionsresan](/help/journey-onboarding/overview.md).
 
 ## Utvecklar {#developing}
 
 >[!NOTE]
 >
->Om du vill ha mer information börjar du med [Utvecklingsriktlinjer](/help/implementing/developing/introduction/development-guidelines.md) och [Utveckla - WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
+>Mer information finns i [Utvecklingsriktlinjer](/help/implementing/developing/introduction/development-guidelines.md) och [Utvecklingsguiden](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
 
 Den nya arkitekturen som stöder AEM as a Cloud Service inbegriper några viktiga förändringar av den övergripande utvecklingsupplevelsen. Ett av de främsta målen för AEM as a Cloud Service är att göra det möjligt för erfarna kunder (som har använt AEM antingen lokalt eller i Adobe Managed Services) att migrera till AEM as a Cloud Service så snabbt som möjligt, utan att behöva skriva om en stor mängd av den anpassade koden. Vissa justeringar kan dock fortfarande behövas.
 
@@ -174,7 +174,7 @@ För att befintliga AEM-program ska kunna köras på AEM as a Cloud Service mås
 
 Den här processen kallas vanligtvis för Cloud-first-utveckling. Eftersom längden från början till slut förväntas ta några minuter (från 20 till 50 beroende på programmets komplexitet), måste snabba utvecklingsmetoder användas innan den väntande koden och konfigurationen ändras i molnet.
 
-Webbkonsolen, där OSGI-paket och tillhörande konfigurationer hanteras, och tidigare en del av AEM QuickStart, är inte längre tillgänglig på AEM as a Cloud Service. Den nya utvecklarkonsolen har ett skrivskyddat gränssnitt för större delen av körningsinformationen. Med den här konsolen kan utvecklare välja och logga in direkt på en viss nod i en författare eller publiceringstjänst och visa relevant information.
+Webbkonsolen, där OSGI-paket och tillhörande konfigurationer hanteras, och tidigare en del av AEM QuickStart, är inte längre tillgänglig i AEM as a Cloud Service. Den nya utvecklarkonsolen har ett skrivskyddat gränssnitt för större delen av körningsinformationen. Med den här konsolen kan utvecklare välja och logga in direkt på en viss nod i en författare eller publiceringstjänst och visa relevant information.
 
 >[!NOTE]
 >
@@ -184,7 +184,7 @@ Ett annat vanligt behov hos utvecklare är snabb åtkomst till loggfilerna i oli
 
 På grund av den tydliga åtskillnaden mellan kod och innehåll kan utvecklare använda en viss process för att uppdatera innehåll som en del av en distribution. De typiska användningsområdena för innehåll som kan ändras är:
 
-* Standard *standard* innehåll som ingår i kundprojektet (till exempel mappar, mallar, arbetsflöden och så vidare)
+* *standardinnehåll* som är en del av kundprojektet (till exempel mappar, mallar, arbetsflöden och så vidare)
 
 * Definitioner för sökindex
 
@@ -194,7 +194,7 @@ På grund av den tydliga åtskillnaden mellan kod och innehåll kan utvecklare a
 
 ### Lokal utveckling {#aem-as-a-cloud-service-developing-local-development}
 
-För att stödja snabba iterationer och utveckling är det också möjligt att utveckla AEM program utanför den AEM as a Cloud Service kontexten. För detta ändamål finns följande artefakter tillgängliga för utvecklare:
+För att möjliggöra snabb utveckling och utveckling är det också möjligt att utveckla AEM program utanför AEM as a Cloud Service. För detta ändamål finns följande artefakter tillgängliga för utvecklare:
 
 * Snabbstart för AEM as a Cloud Service: ett `.jar`-baserat, fristående installationsprogram för den senaste AEM-kodbasen med samma funktionalitet och API-område.
 
@@ -208,7 +208,7 @@ För att stödja snabba iterationer och utveckling är det också möjligt att u
 
 >[!NOTE]
 >
->Mer information får du från [innehållsåterställning](/help/operations/restore.md), [Indexering](/help/operations/indexing.md)och [andra underhållsaktiviteter](/help/operations/maintenance.md).
+>Om du vill ha mer information börjar du med [innehållsåterställning](/help/operations/restore.md), [indexering](/help/operations/indexing.md) och [andra underhållsaktiviteter](/help/operations/maintenance.md).
 
 Med AEM as a Cloud Service automatiseras sådana åtgärder så att tjänsten inte längre behöver avbrytas.
 
@@ -242,7 +242,7 @@ Det kombinerar fördelarna med:
 
 >[!NOTE]
 >
->Mer information finns i [Grundläggande hantering](/help/sites-cloud/authoring/basic-handling.md) är en bra utgångspunkt.
+>[Grundläggande hantering](/help/sites-cloud/authoring/basic-handling.md) är en bra startpunkt om du vill ha mer information.
 
 De grundläggande principerna i redigeringsgränssnittet för Sites och Assets är välbekanta för alla som har använt AEM tidigare.
 
@@ -256,7 +256,7 @@ Mer information finns i översikten över [Ändringar i Sites](/help/sites-cloud
 
 ## AEM Assets {#aem-assets}
 
-Adobe Experience Manager Assets as a Cloud Service är en molnbaserad, PaaS-lösning som gör att företag inte bara kan använda sin hantering av digitala resurser och Dynamic Media-åtgärder snabbt och effektivt, utan även använda nästa generations smarta funktioner, som AI/ML, inifrån ett system som alltid är aktuellt, alltid tillgängligt och alltid håller på att lära sig.
+Adobe Experience Manager Assets as a Cloud Service erbjuder en Adobe PaaS-lösning i molnet som gör att företag inte bara kan använda sin hantering av digitala resurser och Dynamic Media snabbt och effektivt, utan även använda nästa generations smarta funktioner, som AI/ML, inifrån ett system som alltid är aktuellt, alltid tillgängligt och alltid håller på att lära sig.
 
 Assets inkluderar nästa generations materialbearbetning i molnet samt högpresterande materialimport och sökning.
 
@@ -268,7 +268,7 @@ Mer information finns i:
 
 * [En introduktion till Adobe Experience Manager as a Cloud Service](/help/overview/introduction.md)
 * [Arkitekturen](/help/overview/architecture.md) i Adobe Experience Manager as a Cloud Service
-* [Betydande ändringar i AEM as a Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
+* [Noterbara ändringar i AEM as a Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
 * [Betydande förändringar av AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
 * [Betydande förändringar av AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
 * [Nu kommer AEM Assets as a Cloud Service](/help/assets/overview.md)
@@ -276,6 +276,6 @@ Mer information finns i:
 
 >[!TIP]
 >
->När du har en översikt över AEM as a Cloud Service kan du snabbt komma igång genom att granska [Onboardresa](/help/journey-onboarding/overview.md).
+>När du har en översikt över AEM as a Cloud Service kan du komma igång snabbt genom att granska [Onboarding Journey](/help/journey-onboarding/overview.md).
 >
->Är du redan upptagen eller redo att dyka upp i testning AEM funktioner? Installera [AEM Reference Demos Add-on](/help/journey-sites/demos-add-on/overview.md) för att utforska AEM kraftfulla funktioner med hjälp av avancerade exempel.
+>Har du redan börjat eller är redo att testa AEM funktioner? Installera tillägget [AEM Reference Demos](/help/journey-sites/demos-add-on/overview.md) för att utforska AEM kraftfulla funktioner med hjälp av avancerade exempel.

@@ -17,17 +17,17 @@ ht-degree: 29%
 
 * AEM as a Cloud Service har stöd för Admin Console för AEM-instanser och Adobe Identity Management System (förkortas till IMS) för autentisering.
 * Med Admin Console kan administratörer hantera alla Experience Cloud-användare centralt.
-* Användare och grupper kan tilldelas till produktprofiler som är kopplade till en AEM as a Cloud Service instans, så att de kan logga in på den instansen.
+* Användare och grupper kan tilldelas till produktprofiler som är kopplade till en AEM as a Cloud Service-instans, så att de kan logga in på den instansen.
 
 >[!TIP]
 >
->Se [Konfigurera åtkomst till AEM för administratörer](https://experienceleague.adobe.com/?recommended=ExperienceManager-A-1-2020.1.aem) för en introduktion till hur användare autentiserar med Adobe IMS för att AEM as a Cloud Service. Läs också om hur Adobe IMS-användare, användargrupper och produktprofiler används för att styra åtkomsten till AEM samt funktioner och funktioner. Adobe ID krävs.
+>Se [Konfigurera åtkomst till AEM för administratörer](https://experienceleague.adobe.com/?recommended=ExperienceManager-A-1-2020.1.aem) för en introduktion till hur användare autentiserar med Adobe IMS till AEM as a Cloud Service. Läs också om hur Adobe IMS-användare, användargrupper och produktprofiler används för att styra åtkomsten till AEM samt funktioner och funktioner. Adobe ID krävs.
 
 ## Viktiga högdagrar {#key-highlights}
 
 AEM as a Cloud Service har endast stöd för IMS-autentisering för författare, administratörer och utvecklare. Det har inte stöd för externa slutanvändare på kundwebbplatser som webbplatsbesökare.
 
-* Admin Console representerar kunder som IMS-organisationer, författare och publiceringsinstanser i en miljö som produktkontextinstanser. Den här representationen gör att system- och produktadministratörer kan hantera åtkomst till instanser.
+* Admin Console representerar kunder som IMS-organisationer, författare och Publish-instanser i en miljö som produktkontextinstanser. Den här representationen gör att system- och produktadministratörer kan hantera åtkomst till instanser.
 * Produktprofiler i Admin Console avgör vilka instanser en användare har åtkomst till.
 * Kunder kan använda sina egna SAML 2-kompatibla identitetsleverantörer (IDP for short) för enkel inloggning.
 * Endast Enterprise ID:n eller Federated ID:n för kunder med enkel inloggning stöds, inga personliga Adobe ID:n.
@@ -54,7 +54,7 @@ När en kund finns som IMS-organisation måste han/hon konfigurera sitt system e
 
 ![IMS-integrering](/help/security/assets/ims2.png)
 
-1. Den utsedda systemadministratören får en inbjudan om att logga in i Cloud Manager. När du har loggat in på Cloud Manager kan systemadministratörerna välja att tillhandahålla AEM program och miljöer eller navigera till Admin Console för administrativa uppgifter.
+1. Den utsedda systemadministratören får en inbjudan om att logga in på Cloud Manager. När du har loggat in på Cloud Manager kan systemadministratörerna välja att tillhandahålla AEM program och miljöer eller navigera till Admin Console för administrativa uppgifter.
 1. Systemadministratören gör anspråk på en domän för att bekräfta ägarskapet för respektive domän (till exempel acme.com)
 1. Systemadministratören ställer in användarkataloger.
 1. Systemadministratören gör IDP-konfiguration i Admin Console för att konfigurera enkel inloggning.
@@ -62,7 +62,7 @@ När en kund finns som IMS-organisation måste han/hon konfigurera sitt system e
 
 Grunderna om Adobe Identity Management, inklusive IDP-konfiguration, beskrivs [här](https://helpx.adobe.com/enterprise/using/set-up-identity.html).
 
-Företagsadministration och användning i Admin Console omfattas [här](https://helpx.adobe.com/enterprise/admin-guide.html).
+Företagsadministration och användning i Admin Console beskrivs [här](https://helpx.adobe.com/enterprise/admin-guide.html).
 
 ### Onboarding-användare i Admin Console {#onboarding-users-in-admin-console}
 
@@ -88,11 +88,11 @@ När användarsynkronisering körs hämtar den en lista över användare från o
 
 Med verktyget kan systemadministratören mappa användargrupper i kundens katalog med produktkonfiguration och användargrupper i Admin Console.
 
-För att konfigurera användarsynkronisering måste organisationen skapa en uppsättning autentiseringsuppgifter på samma sätt som de använder [API för användarhantering](https://developer.adobe.com/umapi/).
+Om du vill konfigurera användarsynkronisering måste organisationen skapa en uppsättning autentiseringsuppgifter på samma sätt som de använder [API:t för användarhantering](https://developer.adobe.com/umapi/).
 
 ![Verktyg för användarsynkronisering](/help/security/assets/ims5.png)
 
-Verktyget för användarsynkronisering distribueras via Adobe GitHub-databasen [på den här platsen](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.9.0rc2).
+Verktyget för användarsynkronisering distribueras via Adobe GitHub-databasen [ på den här platsen](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.9.0rc2).
 
 >[!NOTE]
 >
@@ -104,11 +104,11 @@ Mer information om de nya gruppfunktionerna finns på [den här webbplatsen](htt
 
 **Dokumentation om användarsynkronisering**
 
-Se [UST-dokumentation](https://adobe-apiplatform.github.io/user-sync.py/en/) för mer information.
+Mer information finns i [UST-dokumentation](https://adobe-apiplatform.github.io/user-sync.py/en/).
 
-Verktyget för användarsynkronisering måste registreras som Adobe Developer klient-UMAPI enligt proceduren [här](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html).
+Verktyget för användarsynkronisering måste registrera sig som Adobe Developer klient-UMAPI med proceduren [här](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html).
 
-Adobe Developer Console Documentation finns [här](https://developer.adobe.com/developer-console/).
+Adobe Developer Console-dokumentation finns [här](https://developer.adobe.com/developer-console/).
 
 API:t för User Management som används av verktyget för användarsynkronisering beskrivs [här](https://adobe-apiplatform.github.io/user-sync.py/en/).
 
@@ -130,7 +130,7 @@ Nedan visas de viktigaste OSGI-konfigurationerna som måste ändras för att än
 
 ### Hantera produkter och användaråtkomst i Admin Console {#managing-products-and-user-access-in-admin-console}
 
-När produktadministratören loggar in på Admin Console visas flera instanser av den AEM as a Cloud Service produktkontexten, vilket visas nedan. Välj till exempel någon av produkterna i **Ökning** sida:
+När produktadministratören loggar in på Admin Console visas flera instanser av AEM as a Cloud Service produktkontext, vilket visas nedan. Välj till exempel någon av produkterna på sidan **Översikt**:
 
 ![Inloggning på instanser](/help/security/assets/ims6.png)
 
@@ -138,9 +138,9 @@ En lista över befintliga instanser visas:
 
 ![Inloggning på instanser2](/help/security/assets/ims7.png)
 
-Under varje instans av produktkontext finns instanser som sträcker sig över redigerings- eller publiceringstjänsterna i produktions-, scen- eller utvecklingsmiljöer. Varje instans är associerad med produktprofiler eller Cloud Manager-roller. De här produktprofilerna används för att tilldela användare och grupper behörighet.
+Under varje instans av produktkontext finns instanser som omfattar tjänsterna Författare eller Publish i produktions-, scen- eller utvecklingsmiljöer. Varje instans är associerad med produktprofiler eller Cloud Manager-roller. De här produktprofilerna används för att tilldela användare och grupper behörighet.
 
-The **AEM administratörer_xxx** profilen används för att ge administratörsbehörighet i den associerade AEM-instansen när **AEM Users_xxx** används för att lägga till vanliga användare.
+Profilen **AEM Administrators_xxx** används för att ge administratörsbehörighet i den associerade AEM instansen medan profilen **AEM Users_xxx** används för att lägga till vanliga användare.
 
 Alla användare och grupper som läggs till under den här produktprofilen kan logga in på den instansen enligt exemplet nedan:
 
@@ -148,7 +148,7 @@ Alla användare och grupper som läggs till under den här produktprofilen kan l
 
 >[!WARNING]
 >
->Ändra inte **AEM administratörer** produktprofilnamn. Ändra namnet på **AEM administratörer** produktprofilen tar bort administratörsrättigheter för alla användare som har tilldelats den profilen.
+>Ändra inte produktprofilnamnet för **AEM administratörer**. Om du ändrar namnet på produktprofilen **AEM Administratörer** tas administratörsrättigheter bort från alla användare som tilldelats den profilen.
 
 ### Logga in på Adobe Experience Manager as a Cloud Service {#logging-in-to-aem}
 
@@ -189,7 +189,7 @@ När autentiseringen är klar omdirigeras användaren tillbaka till AEM och logg
 
 Åtkomstkontrollistorna och behörigheterna fortsätter att hanteras i AEM. Användargrupper som synkroniseras från IMS kan tilldelas lokala grupper där åtkomstkontrollistor och behörigheter definieras.
 
-I exemplet nedan läggs synkroniserade grupper till i den lokala **Dam_Users** gruppera som exempel.
+I exemplet nedan läggs synkroniserade grupper till i den lokala gruppen **Dam_Users** som ett exempel.
 
 Användaren ingår i följande grupper i IMS:
 
@@ -203,19 +203,19 @@ I AEM kan användargrupper som synkroniseras från IMS läggas till som medlemma
 
 ![ACL3](/help/security/assets/ims17.png)
 
-Som visas nedan är gruppen **AEM-GRP_008** ärver behörigheter och behörigheter för **DAM-användare**. Detta arv är ett effektivt sätt att hantera behörigheter för synkroniserade grupper och används ofta i den LDAP-baserade autentiseringsmetoden.
+Som framgår nedan ärver gruppen **AEM-GRP_008** behörigheter och behörigheter för **DAM-användare**. Detta arv är ett effektivt sätt att hantera behörigheter för synkroniserade grupper och används ofta i den LDAP-baserade autentiseringsmetoden.
 
 ![ACL3](/help/security/assets/ims18.png)
 
 
 ### Åtkomst till Cloud Manager {#accessing-cloud-manager}
 
-För att kunna komma åt Cloud Manager eller miljöer på AEM as a Cloud Service måste du tilldelas Profiler för Cloud Manager-produkten.
+För att få tillgång till Cloud Manager eller miljöer i AEM as a Cloud Service måste du tilldelas Profiles of the Cloud Manager Product.
 
-Se Rolldefinitioner om du vill veta mer om roller för användare som styr tillgängligheten av specifika funktioner i Cloud Manager.
+Se Rolldefinitioner om du vill veta mer om roller för användare som styr tillgängligheten för specifika funktioner i Cloud Manager.
 
 >[!NOTE]
->Cloud Manager har förkonfigurerade roller med lämpliga behörigheter. Om du vill veta mer om de roller som har specifika behörigheter, förkonfigurerade uppgifter eller behörigheter som är kopplade till varje roll kan du läsa [Rollbaserade behörigheter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/role-based-permissions).
+>Cloud Manager har förkonfigurerade roller med lämpliga behörigheter. Om du vill veta mer om de olika rollerna med specifika behörigheter, förkonfigurerade uppgifter eller behörigheter som är kopplade till varje roll kan du läsa [Rollbaserade behörigheter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/role-based-permissions).
 
 **Steg för att lägga till en användare**
 
@@ -231,7 +231,7 @@ Se Rolldefinitioner om du vill veta mer om roller för användare som styr tillg
    ![ACL3](/help/security/assets/ims22.png)
 
 
-1. När du har lagts till i rätt profil bör du kunna komma åt respektive innehavare i Cloud Manager via [Adobe Experience Cloud](https://my.cloudmanager.adobe.com) med hjälp av det övre högra hörnet i användargränssnittet.
+1. När du har lagts till i rätt profil bör du kunna komma åt respektive innehavare i Cloud Manager via [Adobe Experience Cloud](https://my.cloudmanager.adobe.com) i det övre högra hörnet i användargränssnittet.
 
 
 ### Åtkomst till en instans i AEM as a Cloud Service {#accessing-instance-cloud-service}
@@ -239,9 +239,9 @@ Se Rolldefinitioner om du vill veta mer om roller för användare som styr tillg
 >[!IMPORTANT]
 >Stegen som nämns i föregående avsnitt måste vara slutförda innan du beviljas åtkomst till en instans i AEM as a Cloud Service.
 
-Så här får du åtkomst till en AEM i **Admin Console**, ska du se Cloud Manager-programmet och miljöerna i programmet i produktlistan på **Admin Console**.
+Om du vill ha åtkomst till en AEM i **Admin Console** bör du se Cloud Manager-programmet och miljöerna i programmet i produktlistan på **Admin Console**.
 
-På skärmbilden nedan visas två tillgängliga miljöer, nämligen *dev-författare* och *publicera*.
+På skärmbilden nedan visas två tillgängliga miljöer, *dev author* och *publish*.
 
 ![ACL3](/help/security/assets/ims19.png)
 

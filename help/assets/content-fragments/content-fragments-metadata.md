@@ -1,5 +1,5 @@
 ---
-title: Metadata - Fragmentegenskaper (resurser - innehållsfragment)
+title: Metadata - Fragmentegenskaper (Assets - Innehållsfragment)
 description: Se hur du kan visa och redigera metadataegenskaperna för innehållsfragment.
 exl-id: bc67480d-a1e4-4ef9-b811-8bd110f70369
 feature: Content Fragments
@@ -18,26 +18,26 @@ Se hur du kan visa och redigera metadataegenskaperna för innehållsfragment i A
 
 >[!NOTE]
 >
->Innehållsfragment är en webbplatsfunktion, men lagras som **Resurser**.
+>Innehållsfragment är en webbplatsfunktion, men lagras som **Assets**.
 >
->Det finns två redigerare för att skapa innehållsfragment. I det här avsnittet beskrivs den ursprungliga redigeraren, som du i första hand kommer åt från **Resurser** konsol. Se dokumentationen för Sites, [Content Fragments - Authoring](/help/sites-cloud/administering/content-fragments/authoring.md), om du vill ha information om den nya redigeraren (finns huvudsakligen i **Innehållsfragment** konsol).
+>Det finns två redigerare för att skapa innehållsfragment. I det här avsnittet beskrivs den ursprungliga redigeraren, som huvudsakligen nås från **Assets**-konsolen. Mer information om den nya redigeraren finns i webbplatsdokumentationen, [Innehållsfragment - redigering](/help/sites-cloud/administering/content-fragments/authoring.md) (som huvudsakligen nås från konsolen **Innehållsfragment**).
 
 ## Redigera egenskaper/metadata {#editing-properties-meta-data}
 
 Du kan visa och redigera metadata (egenskaper) för innehållsfragment:
 
-1. I **Resurser** konsolen navigerar till platsen för innehållsfragmentet.
+1. Gå till platsen för innehållsfragmentet i **Assets**-konsolen.
 2. Antingen:
 
-   * Välj [**Visa egenskaper** öppna dialogrutorna](/help/assets/manage-digital-assets.md#editing-properties). När du har öppnat för visning kan du även redigera.
-   * Öppna innehållsfragmentet för redigering och markera sedan **Metadata** från sidopanelen.
+   * Välj [**Visa egenskaper** för att öppna dialogrutorna](/help/assets/manage-digital-assets.md#editing-properties). När du har öppnat för visning kan du även redigera.
+   * Öppna innehållsfragmentet för redigering och välj sedan **Metadata** på sidopanelen.
 
    ![Metadata på sidopanelen](assets/cfm-metadata-01.png)
 
-3. The **Grundläggande** -fliken innehåller alternativ som du kan visa eller redigera:
+3. Fliken **Grundläggande** innehåller alternativ som du kan visa eller redigera:
 
-   * miniatyrbild som du kan använda **Överför bild**
-   * **Content Fragment Model** anger den modell som används för att skapa det aktuella fragmentet
+   * Miniatyrbild som du kan **överföra bild** för
+   * **Modell för innehållsfragment** anger den modell som används för att skapa det aktuella fragmentet
    * **Titel**
    * **Beskrivning**
    * **Taggar**
@@ -46,7 +46,7 @@ Du kan till exempel tagga relevanta fragment som&quot;Julstart&quot; så att du 
 
         >[!NOTE]
         >
-        >**Taggar** kan också läggas till när [skapa ditt Variation-innehåll](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content) och när [skapa variationer](/help/assets/content-fragments/content-fragments-variations.md#creating-a-variation).
+        >**Taggar** kan också läggas till när du [redigerar variantinnehåll](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content) och när [skapar variationer](/help/assets/content-fragments/content-fragments-variations.md#creating-a-variation).
 
    * **Skapad** (endast visning)
 

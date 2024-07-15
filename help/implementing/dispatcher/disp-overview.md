@@ -32,11 +32,11 @@ Dispatcher Tools ingår i AEM as a Cloud Service SDK och ger
 
 ## Hämta och extrahera verktygen {#extracting-the-sdk}
 
-Dispatcher Tools, en del av [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md), kan laddas ned från en zip-fil i [Programvarudistribution](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/aemcloud.html) portal. Alla nya konfigurationer som är tillgängliga i den nya Dispatcher Tools-versionen kan användas för att distribuera till molnmiljöer som kör den versionen av AEM i molnet eller senare.
+Dispatcher-verktygen, som ingår i [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md), kan hämtas från en zip-fil på [Software Distribution](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/aemcloud.html) -portalen. Alla nya konfigurationer som är tillgängliga i den nya Dispatcher Tools-versionen kan användas för att distribuera till molnmiljöer som kör den versionen av AEM i molnet eller senare.
 
 Zippa upp SDK, som innehåller Dispatcher Tools för macOS, Linux® och Windows.
 
-**För macOS/Linux**, gör Dispatcher-verktygets artefakt körbar och kör den. Det extraherar Dispatcher Tools-filerna under den katalog som du lagrade dem i (där `version` är den version av Dispatcher Tools).
+**För macOS/Linux** gör du Dispatcher-verktygets artefakt körbar och kör den. Det extraherar Dispatcher Tools-filerna under den katalog som du sparade dem i (där `version` är versionen av Dispatcher Tools).
 
 ```bash
 $ chmod +x aem-sdk-dispatcher-tools-<version>-unix.sh
@@ -45,21 +45,21 @@ Verifying archive integrity...  100%   All good.
 Uncompressing aem-sdk-dispatcher-tools-<version>-unix.sh 100%
 ```
 
-**För Windows**, extrahera zip-arkivet för Dispatcher Tooling.
+**Extrahera zip-arkivet för Dispatcher Tooling för Windows**.
 
 ## Validera och felsöka med Dispatcher Tools {#validation-debug}
 
 Dispatcher-verktygen används för att validera och felsöka ditt projekts Dispatcher-konfiguration. Läs mer om hur du använder dessa verktyg på de sidor som det hänvisas till nedan, baserat på om ditt projekts Dispatcher-konfiguration är strukturerad i flexibelt läge eller äldre läge:
 
-* **Flexibelt läge** - det rekommenderade läget och standardvärdet för [AEM 28](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) och högre, som också används av Cloud Manager för nya miljöer som skapats efter Cloud Manager 2021.7.0. Kunder kan aktivera det här läget genom att lägga till mappen och filen `opt-in/USE_SOURCES_DIRECTLY`. Om du använder det här mer flexibla läget finns det inga begränsningar i filstrukturen i mappen för omskrivning som i det äldre läget krävde en enda `rewrite.rules` -fil. Det finns heller ingen begränsning för hur många regler du kan lägga till. Mer information om mappstruktur och lokal validering finns i [Validera och felsöka med Dispatcher Tools](/help/implementing/dispatcher/validation-debug.md).
+* **Flexibelt läge** - det rekommenderade läget och standardvärdet för [AEM architype 28](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) och senare, som också används av Cloud Manager för nya miljöer som skapas efter Cloud Manager 2021.7.0. Kunder kan aktivera det här läget genom att lägga till mappen och filen `opt-in/USE_SOURCES_DIRECTLY`. Genom att använda det här mer flexibla läget finns det inga begränsningar i filstrukturen i mappen för omskrivningar som i det äldre läget krävde en enskild `rewrite.rules`-fil. Det finns heller ingen begränsning för hur många regler du kan lägga till. Mer information om mappstruktur och lokal validering finns i [Validera och felsöka med Dispatcher-verktyg](/help/implementing/dispatcher/validation-debug.md).
 
-* **Äldre läge** - mer information om mappstrukturen och lokal validering för äldre Dispatcher-konfigurationsläge finns i [Validera och felsöka med Dispatcher Tools (Legacy)](/help/implementing/dispatcher/validation-debug-legacy.md)
+* **Äldre läge** - mer information om mappstrukturen och lokal validering för äldre Dispatcher-konfigurationsläge finns i [Validera och felsöka med Dispatcher-verktyg (äldre)](/help/implementing/dispatcher/validation-debug-legacy.md)
 
-Mer information om hur du migrerar från den äldre konfigurationsmodellen till den mer flexibla, finns i AEM 28 och framåt. [den här dokumentationen](/help/implementing/dispatcher/validation-debug.md#migrating).
+Mer information om hur du migrerar från den äldre konfigurationsmodellen till den mer flexibla, som finns i AEM 28 och framåt, finns i [den här dokumentationen](/help/implementing/dispatcher/validation-debug.md#migrating).
 
 ## Disposition av innehåll {#content-disposition}
 
-För publiceringsskiktet är standardinställningen för att visa blober som en bifogad fil. Åsidosätt den här inställningen med standardinställningen [dispositionshuvud](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition) i Dispatcher.
+För publiceringsskiktet är standardinställningen för att visa blober som en bifogad fil. Åsidosätt den här inställningen med standarddispositionsrubriken [för innehåll](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition) i Dispatcher.
 
 Nedan visas ett exempel på hur konfigurationen ska se ut:
 
@@ -120,8 +120,8 @@ Allowlisted directives:
 
 ## Mappstruktur {#folder-structure}
 
-Projektets mappstruktur Apache och Dispatcher skiljer sig något åt beroende på vilket läge projektet använder, vilket beskrivs i [Validera och felsöka med Dispatcher Tools](#validation-debug) ovan.
+Projektets mappstruktur Apache och Dispatcher skiljer sig något åt beroende på vilket läge projektet använder, vilket beskrivs i avsnittet [Validering och felsökning i Dispatcher-verktygen](#validation-debug) ovan.
 
 ## Migrera Dispatcher-konfigurationen från AMS {#ams-aem}
 
-Mer information om hur du migrerar Dispatcher-konfigurationen från AMS till AEM as a Cloud Service finns i [Migrera Dispatcher-konfigurationen från AMS till AEM](/help/implementing/dispatcher/ams-aem.md) as a Cloud Service sida.
+Mer information om hur du migrerar Dispatcher-konfigurationen från AMS till AEM as a Cloud Service finns i as a Cloud Service [Migrera Dispatcher-konfigurationen från AMS till AEM](/help/implementing/dispatcher/ams-aem.md).

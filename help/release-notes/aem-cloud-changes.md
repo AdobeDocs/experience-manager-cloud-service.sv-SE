@@ -51,13 +51,13 @@ De största skillnaderna finns i följande områden:
 
 ## /apps och /libs kan inte ändras under körning {#apps-libs-immutable}
 
-Allt innehåll och alla undermappar i `/apps` och `/libs` är skrivskyddad. Funktioner eller anpassad kod som förväntar sig att göra ändringar där misslyckas. Ett fel returneras som anger att sådant innehåll är skrivskyddat och att skrivåtgärden inte kunde slutföras. Detta påverkar på flera AEM områden:
+Allt innehåll och alla undermappar i `/apps` och `/libs` är skrivskyddade. Funktioner eller anpassad kod som förväntar sig att göra ändringar där misslyckas. Ett fel returneras som anger att sådant innehåll är skrivskyddat och att skrivåtgärden inte kunde slutföras. Detta påverkar på flera AEM områden:
 
-* Inga ändringar i `/libs` tillåts överhuvudtaget.
+* Inga ändringar i `/libs` tillåts alls.
    * Detta är inte en ny regel, men den har inte införts i tidigare lokala versioner av AEM.
-* Övertäckningar för områden i `/libs` som fortfarande får användas inom `/apps`.
+* Övertäckningar för områden i `/libs` som kan överlappas tillåts fortfarande i `/apps`.
    * Sådana övertäckningar måste komma från Git via CI/CD-ledningen.
-* Designinformation för statiska mallar som lagras i `/apps` kan inte redigeras via gränssnittet.
+* Designinformation för statiska mallar som lagras i `/apps` kan inte redigeras via användargränssnittet.
    * Du bör använda Redigerbara mallar i stället.
    * Om statiska mallar fortfarande krävs måste konfigurationsinformationen komma från Git via CI/CD-flödet.
 * MSM Blueprint och anpassade MSM roll-out-konfigurationer måste installeras från Git via CI/CD-pipeline.
@@ -74,18 +74,18 @@ Webbkonsolen, som användes i tidigare versioner av AEM för att ändra OSGi-pak
 
 ## Ändringar i publiceringsdatabasen tillåts inte {#changes-to-publish-repo}
 
-Förutom ändringarna under `/home` på publiceringsnivån tillåts inte direkta ändringar i publiceringsdatabasen på AEM Cloud Service. I tidigare versioner av lokala AEM eller AEM på AMS kan kodändringar göras direkt till publiceringsdatabasen. Vissa begränsningar kan minskas på följande sätt:
+Förutom ändringar i mappen `/home` på publiceringsnivån tillåts inte direkta ändringar i publiceringsdatabasen på AEM Cloud Service. I tidigare versioner av lokala AEM eller AEM på AMS kan kodändringar göras direkt till publiceringsdatabasen. Vissa begränsningar kan minskas på följande sätt:
 
 * För innehåll och innehållsbaserad konfiguration: gör ändringarna i Author-instansen och publicera dem.
 * För kod och konfiguration: gör ändringarna i GIT-databasen och kör CI/CD-flödet för att implementera dem.
 
 ## Anpassade körningslägen tillåts inte {#custom-runmodes}
 
-Ytterligare eller anpassade körningslägen är inte möjliga i AEM Cloud Service. En lista över körningslägen som finns för AEM Cloud Service finns i [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md#runmodes).
+Ytterligare eller anpassade körningslägen är inte möjliga i AEM Cloud Service. En lista över körningslägen som finns i körklart läge för AEM Cloud Service finns i [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md#runmodes).
 
 ## Borttagning av replikeringsagenter och relaterade ändringar {#replication-agents}
 
-I AEM Cloud Service publiceras innehåll med [Distribution av säljinnehåll](https://sling.apache.org/documentation/bundles/content-distribution.html). Replikeringsagenterna som användes i tidigare versioner av AEM används inte längre eller tillhandahålls, vilket kan påverka följande områden i befintliga AEM projekt:
+I AEM Cloud Service publiceras innehåll med [Sling Content Distribution](https://sling.apache.org/documentation/bundles/content-distribution.html). Replikeringsagenterna som användes i tidigare versioner av AEM används inte längre eller tillhandahålls, vilket kan påverka följande områden i befintliga AEM projekt:
 
 * Anpassade arbetsflöden som till exempel skickar innehåll till replikeringsagenter för förhandsgranskningsservrar.
 * Anpassning till replikeringsagenter för att omvandla innehåll.
@@ -105,4 +105,4 @@ För projekt som går över från AMS eller en lokal installation rekommenderar 
 
 ## Hantering och leverans av tillgångar {#asset-handling}
 
-Överföring, bearbetning och nedladdning av mediefiler är optimerade i [!DNL Experience Manager Assets] som [!DNL Cloud Service]. AEM [!DNL Assets] är nu mer effektivt, ger större skalbarhet och gör att du kan ladda upp och ned snabbare. Dessutom påverkas den befintliga anpassade koden och vissa åtgärder. För en lista över ändringar och för paritet med [!DNL Experience Manager] 6.5-funktioner, se [ändringar i [!DNL Assets]](/help/assets/assets-cloud-changes.md).
+Överföring, bearbetning och hämtning av resurser optimeras i [!DNL Experience Manager Assets] som en [!DNL Cloud Service]. AEM [!DNL Assets] är nu mer effektiv, ger större skalbarhet och gör att du kan överföra och hämta snabbare. Dessutom påverkas den befintliga anpassade koden och vissa åtgärder. En lista över ändringar och paritet med [!DNL Experience Manager] 6.5-funktioner finns i [ändringarna av  [!DNL Assets]](/help/assets/assets-cloud-changes.md).

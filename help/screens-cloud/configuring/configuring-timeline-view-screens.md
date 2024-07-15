@@ -1,6 +1,6 @@
 ---
 title: Konfigurera tidslinjevy för AEM Screens
-description: På den här sidan beskrivs hur du konfigurerar en tidslinjevy på as a Cloud Service Skärmar.
+description: På den här sidan beskrivs hur du konfigurerar en tidslinjevy i Screens as a Cloud Service.
 exl-id: 53afe1f5-8f0b-4cca-a819-d3e9375cbe37
 feature: Administering Screens
 role: Admin, Developer, User
@@ -40,8 +40,8 @@ Kommentarerna är ett bra, konsoliderat sätt för AEM att diskutera ett sätt s
 
 1. Navigera till kanalen som du vill lägga till en kommentar för.
 1. Markera kanalen.
-1. Öppna **Tidslinje** kolumn.
-1. Lägg till din kommentar och tryck **Retur**.
+1. Öppna kolumnen **Tidslinje**.
+1. Lägg till din kommentar och tryck på **Retur**.
 
 ![Lägg till en kommentar](/help/screens-cloud/assets/configure/screen-timeline3.jpg)
 
@@ -63,17 +63,17 @@ Versionshantering skapar en ögonblicksbild av en kanal vid en viss tidpunkt. Me
 
 1. Navigera till kanalen som du vill lägga till en kommentar för.
 1. Markera kanalen.
-1. Öppna **Tidslinje** kolumn.
+1. Öppna kolumnen **Tidslinje**.
 1. Klicka på knappen (tre punkter) efter kommentarsfältet längst ned på sidan.
 
    ![Lägg till en kommentar](/help/screens-cloud/assets/configure/screens-timeline5.jpg)
 
 1. Välj **Spara som version**.
-1. Ange en **Etikett** och **Kommentar** för versionen.
+1. Ange en **etikett** och **kommentar** för versionen.
 
    ![Lägg till en kommentar](/help/screens-cloud/assets/configure/screens-timeline6.jpg)
 
-1. Bekräfta den nya versionen genom att välja **Skapa**.Informationen i tidslinjen uppdateras för att ange den nya versionen.
+1. Bekräfta den nya versionen genom att välja **Skapa**. Informationen i tidslinjen uppdateras för att ange den nya versionen.
 
 #### Återgå till en version {#revertversion}
 
@@ -81,8 +81,8 @@ Så här återställer du den markerade sidan till en tidigare version:
 
 1. Navigera till kanalen för att lägga till en kommentar.
 1. Markera kanalen.
-1. Öppna **Tidslinje** kolumn.
-1. Välj antingen **Visa alla** eller **Versioner** från filterlistrutan. Kanalversionerna för den valda kanalen visas.
+1. Öppna kolumnen **Tidslinje**.
+1. Välj antingen **Visa alla** eller **Versioner** i listrutan för filter. Kanalversionerna för den valda kanalen visas.
 1. Välj den version som du vill återställa till. Möjliga alternativ visas:
 
    ![Lägg till en kommentar](/help/screens-cloud/assets/configure/screens-timeline7.jpg)
@@ -95,8 +95,8 @@ Du kan förhandsgranska en viss version:
 
 1. Navigera till kanalen för att lägga till en kommentar.
 1. Markera kanalen.
-1. Öppna **Tidslinje** kolumn.
-1. Välj antingen **Visa alla** eller **Versioner** från filterlistrutan. Kanalversionerna för den valda kanalen visas.
+1. Öppna kolumnen **Tidslinje**.
+1. Välj antingen **Visa alla** eller **Versioner** i listrutan för filter. Kanalversionerna för den valda kanalen visas.
 1. Markera den version som du vill förhandsgranska. Möjliga alternativ visas:
 
    ![Förhandsgranska version](/help/screens-cloud/assets/configure/screens-timeline8.jpg)
@@ -109,8 +109,8 @@ Du kan jämföra en specifik version med den aktuella versionen:
 
 1. Navigera till kanalen som du vill lägga till en kommentar för.
 1. Markera kanalen.
-1. Öppna **Tidslinje** kolumn
-1. Välj antingen **Visa alla** eller **Versioner** från filterlistrutan. Kanalversionerna för den valda kanalen visas.
+1. Öppna kolumnen **Tidslinje**
+1. Välj antingen **Visa alla** eller **Versioner** i listrutan för filter. Kanalversionerna för den valda kanalen visas.
 1. Välj den version som du vill jämföra. Möjliga alternativ visas:
 
    ![Jämför version](/help/screens-cloud/assets/configure/screens-timeline9.jpg)
@@ -130,7 +130,7 @@ När du använder arbetsflödet anger du följande information:
 
 1. Navigera till kanalen som du vill lägga till en kommentar för.
 1. Markera kanalen.
-1. Öppna **Tidslinje** kolumn.
+1. Öppna kolumnen **Tidslinje**.
 1. Klicka på knappen (tre punkter) i kommentarsfältet längst ned.
 
    ![Starta arbetsflöde](/help/screens-cloud/assets/configure/screens-timeline10.jpg)
@@ -141,11 +141,11 @@ När du använder arbetsflödet anger du följande information:
 
    ![Starta arbetsflöde](/help/screens-cloud/assets/configure/screens-timeline11.jpg)
 
-1. Fortsätt genom att klicka **Nästa**.
+1. Fortsätt genom att klicka på **Nästa**.
 1. I scopet kan du:
    * **Lägg till innehåll** om du vill lägga till ytterligare resurser i arbetsflödet.
-   * **Inkludera underordnade** för att ange att underordnade resurser ska inkluderas i arbetsflödet.
-   * **Ta bort markering** för att ta bort resursen från arbetsflödet.
+   * **Inkludera underordnade** för att ange att underordnade för den resursen ska inkluderas i arbetsflödet.
+   * **Ta bort markering** om du vill ta bort resursen från arbetsflödet.
 
    ![Starta arbetsflöde](/help/screens-cloud/assets/configure/screens-timeline12.jpg)
 

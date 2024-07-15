@@ -1,5 +1,5 @@
 ---
-title: Miljövariabler för Cloud Manager
+title: Cloud Manager miljövariabler
 description: Standardmiljövariabler kan konfigureras och hanteras via Cloud Manager och tillhandahållas i körningsmiljön, som används i OSGi-konfigurationen.
 exl-id: 5cdd5532-11fe-47a3-beb2-21967b0e43c6
 solution: Experience Manager
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Miljövariabler för Cloud Manager {#environment-variables}
+# Cloud Manager miljövariabler {#environment-variables}
 
 Standardmiljövariabler kan konfigureras och hanteras via Cloud Manager. De tillhandahålls körtidsmiljön och kan användas i OSGi-konfigurationer. Miljövariabler kan vara antingen miljöspecifika värden eller miljöhemligheter, baserat på vad som ändras.
 
@@ -25,7 +25,7 @@ Miljövariabler ger en mängd fördelar för användare av AEM as a Cloud Servic
 * De behöver bara konfigureras och konfigureras en gång och kan uppdateras och tas bort vid behov.
 * Deras värden kan uppdateras när som helst och börja gälla omedelbart utan att kodändringar eller -distributioner behövs.
 * De kan skilja kod från konfiguration och ta bort behovet av att inkludera känslig information i versionskontrollen.
-* De förbättrar säkerheten i det AEM as a Cloud Service programmet eftersom de finns utanför koden.
+* De förbättrar säkerheten i AEM as a Cloud Service eftersom de finns utanför koden.
 
 Exempel på vanliga användningsområden är:
 
@@ -37,48 +37,48 @@ Exempel på vanliga användningsområden är:
 
 >[!NOTE]
 >
->Du måste vara medlem i [**Distributionshanteraren** roll](/help/onboarding/cloud-manager-introduction.md#role-based-premissions) för att lägga till eller ändra miljövariabler.
+>Du måste vara medlem i rollen [**Distributionshanteraren**](/help/onboarding/cloud-manager-introduction.md#role-based-premissions) för att kunna lägga till eller ändra miljövariabler.
 
 1. Logga in på Adobe Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/).
-1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** väljer du den som du vill hantera.
-1. I navigeringsfältet väljer du **Miljö** väljer du sedan den miljö som du vill skapa en miljövariabel för.
-1. I detalj om miljön väljer du **Konfiguration** välj **Lägg till** för att öppna **Miljökonfiguration** -dialogrutan.
-   * Om du lägger till en miljövariabel för första gången kan du se **Lägg till konfiguration** i mitten av sidan. Du kan använda den här knappen **Lägg till** för att öppna **Miljökonfiguration** -dialogrutan.
+1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** väljer du den du vill hantera.
+1. Välj fönstret **Miljö** för det valda programmet i navigeringsfältet och välj sedan den miljö som du vill skapa en miljövariabel för.
+1. Markera fliken **Konfiguration** i detaljerna för miljön och välj sedan **Lägg till** för att öppna dialogrutan **Miljökonfiguration**.
+   * Om du lägger till en miljövariabel för första gången kan du se knappen **Lägg till konfiguration** mitt på sidan. Du kan använda den här knappen eller **Lägg till** för att öppna dialogrutan **Miljökonfiguration** .
 
    ![Fliken Konfiguration](assets/configuration-tab.png)
 
 1. Ange variabelinformationen.
    * **Namn**
    * **Värde**
-   * **Tjänsten används** - Definierar för vilken tjänst (Författare/Publicera/Förhandsgranska) variabeln gäller eller om den gäller för alla tjänster
+   * **Tjänsten används** - Definierar för vilken tjänst (Författare/Publish/Förhandsgranska) variabeln gäller eller om den gäller för alla tjänster
    * **Typ** - Definierar om variabeln är normal eller hemlig
 
-   ![Lägga till en variabel](assets/add-variable.png)
+   ![Lägger till en variabel](assets/add-variable.png)
 
 1. När du har angett den nya variabeln måste du välja **Lägg till** i den sista kolumnen i raden som innehåller den nya variabeln.
    * Du kan ange flera variabler samtidigt genom att ange en ny rad och välja **Lägg till**.
 
    ![Spara variabler](assets/save-variables.png)
 
-1. Välj **Spara** för att behålla variablerna.
+1. Välj **Spara** om du vill behålla variablerna.
 
-En indikator med status **Uppdaterar** visas högst upp i tabellen och bredvid den nyligen tillagda variabeln för att ange att miljön uppdateras med konfigurationen. När du är klar visas den nya systemvariabeln i tabellen.
+En indikator med statusen **Uppdatering** visas högst upp i tabellen och bredvid den nyligen tillagda variabeln för att ange att miljön uppdateras med konfigurationen. När du är klar visas den nya systemvariabeln i tabellen.
 
 ![Uppdaterar variabler](assets/updating-variables.png)
 
 >[!TIP]
 >
->Om du vill lägga till flera variabler bör du lägga till den första variabeln och sedan använda **Lägg till** knappen i **Miljökonfiguration** om du vill lägga till ytterligare variabler. På så sätt kan du lägga till dem med en uppdatering i miljön.
+>Om du vill lägga till flera variabler bör du lägga till den första variabeln och sedan använda knappen **Lägg till** i dialogrutan **Miljökonfiguration** för att lägga till ytterligare variabler. På så sätt kan du lägga till dem med en uppdatering i miljön.
 
 ## Uppdaterar miljövariabler {#update-variables}
 
-När du har skapat miljövariabler kan du uppdatera dem med **Lägg till/uppdatera** knappen för att starta **Miljökonfiguration** -dialogrutan.
+När du har skapat miljövariabler kan du uppdatera dem med knappen **Lägg till/uppdatera** för att öppna dialogrutan **Miljökonfiguration** .
 
 1. Logga in på Adobe Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/).
-1. Cloud Manager visar de olika tillgängliga programmen. Markera den du vill hantera.
-1. I navigeringspanelen väljer du **Miljö** väljer du sedan den miljö som du vill ändra en miljövariabel för.
-1. I detalj om miljön väljer du **Konfiguration** välj **Lägg till/uppdatera** längst upp till höger för att öppna **Miljökonfiguration** -dialogrutan.
-1. Använd ellipsknappen i den sista kolumnen i raden i variabeln som du vill ändra och markera **Redigera** eller **Ta bort**.
+1. Cloud Manager listar de olika program som är tillgängliga. Markera den du vill hantera.
+1. Välj fönstret **Miljö** för det valda programmet i navigeringspanelen och välj sedan den miljö som du vill ändra en miljövariabel för.
+1. Markera fliken **Konfiguration** och välj sedan **Lägg till/uppdatera** i det övre högra hörnet för att öppna dialogrutan **Miljökonfiguration**.
+1. Använd ellipsknappen i den sista kolumnen i raden i variabeln som du vill ändra och välj **Redigera** eller **Ta bort**.
 
    ![Redigera eller ta bort variabel](assets/edit-delete-variable.png)
 
@@ -90,41 +90,41 @@ När du har skapat miljövariabler kan du uppdatera dem med **Lägg till/uppdate
 
 1. När du har gjort de nödvändiga konfigurationsändringarna väljer du **Spara**.
 
-[Som när du lägger till variabler](#add-variables) en indikator med status **Uppdaterar** visas högst upp i tabellen och bredvid de nyligen uppdaterade variablerna för att ange att miljön uppdateras med konfigurationen. När du är klar visas de uppdaterade miljövariablerna i tabellen.
+[Som när du lägger till variabler ](#add-variables) visas en indikator med statusen **Uppdatering** överst i tabellen och bredvid de nyligen uppdaterade variablerna för att ange att miljön uppdateras med konfigurationen. När du är klar visas de uppdaterade miljövariablerna i tabellen.
 
 >[!TIP]
 >
->Om du vill uppdatera flera variabler bör du använda **Miljökonfiguration** om du vill uppdatera alla nödvändiga variabler samtidigt innan du trycker eller klickar **Spara**. På så sätt kan du lägga till dem med en uppdatering i miljön.
+>Om du vill uppdatera flera variabler bör du använda dialogrutan **Miljökonfiguration** för att uppdatera alla nödvändiga variabler samtidigt innan du trycker eller klickar på **Spara**. På så sätt kan du lägga till dem med en uppdatering i miljön.
 
 ## Använda miljövariabler {#using}
 
-Miljövariabler kan göra `pom.xml` konfigurationer säkrare och flexiblare. Lösenord behöver till exempel inte vara hårdkodade och konfigurationen kan anpassas baserat på värdena i miljövariablerna.
+Miljövariabler kan göra dina `pom.xml`-konfigurationer säkrare och mer flexibla. Lösenord behöver till exempel inte vara hårdkodade och konfigurationen kan anpassas baserat på värdena i miljövariablerna.
 
 Du får åtkomst till miljövariabler och hemligheter via XML enligt följande.
 
 * `${env.VARIABLE_NAME}`
 
-Se dokumentet [Konfigurera projekt](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md#password-protected-maven-repository-support-password-protected-maven-repositories) som ett exempel på hur du använder båda variabeltyperna i en `pom.xml` -fil.
+I dokumentet [Konfigurera projekt](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md#password-protected-maven-repository-support-password-protected-maven-repositories) finns ett exempel på hur du använder båda typerna av variabler i en `pom.xml` -fil.
 
-Se [officiell dokumentation för Maven](https://maven.apache.org/settings.html#quick-overview) för mer information.
+Mer information finns i den [officiella dokumentationen för Maven](https://maven.apache.org/settings.html#quick-overview).
 
 ## Miljövariabel tillgänglighet {#availability}
 
 Miljövariabler kan användas på flera ställen.
 
-### Skapa, förhandsgranska och publicera {#author-preview-publish}
+### Författare, Förhandsgranska och Publish {#author-preview-publish}
 
 Både vanliga miljövariabler och hemligheter kan användas i redigerings-, förhandsgransknings- och publiceringsmiljöer.
 
 ### Dispatcher {#dispatcher}
 
-Endast reguljära miljövariabler kan användas med [avsändaren.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) Hemligheter kan inte användas.
+Endast reguljära miljövariabler kan användas med [dispatchern.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) hemligheter kan inte användas.
 
-Miljövariabler kan dock inte användas i `IfDefine` direktiv.
+Miljövariabler kan dock inte användas i `IfDefine`-direktiv.
 
 >[!TIP]
 >
->Du bör validera din användning av miljövariabler med [avsändare lokalt](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) före distribution.
+>Du bör validera din användning av miljövariabler med [dispatchern lokalt](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) innan du distribuerar.
 
 ### OSGi-konfigurationer {#osgi}
 

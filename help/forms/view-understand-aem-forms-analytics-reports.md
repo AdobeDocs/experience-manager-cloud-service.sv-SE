@@ -27,41 +27,41 @@ Genom att samla in och spåra nyckeltal för prestandaindikatorer kan företag i
 
 ## Konfigurera Adobe Analytics till Adaptiv Forms {#setup-adobe-analytics-to-aem-forms}
 
-För AEM Forms Analytics-rapporten integrerar du först Adobe Analytics till AEM Forms via Experience Cloud Setup Automation. Experience Cloud Setup Automation i Adaptive Forms kräver en Adobe Analytics-licens, Data Collection (tidigare Adobe Launch) för att hantera spårningsskript och integrering med Experience Platform Launch API för smidig datainsamling och generering av insikter. Besök [Aktivera Adobe Analytics för ett adaptivt formulär med Experience Cloud Setup Automation](/help/forms/enable-adobe-analytics-adaptive-form-using-experience-cloud-setup-automation.md) om du vill ha fullständig installationsinformation.
+För AEM Forms Analytics-rapporten integrerar du först Adobe Analytics till AEM Forms via Experience Cloud Setup Automation. Experience Cloud Setup Automation i Adaptive Forms kräver en Adobe Analytics-licens, Data Collection (tidigare Adobe Launch) för att hantera spårningsskript och integrering med Experience Platform Launch API för smidig datainsamling och generering av insikter. Gå till [Aktivera Adobe Analytics för ett adaptivt formulär med Experience Cloud Setup Automation](/help/forms/enable-adobe-analytics-adaptive-form-using-experience-cloud-setup-automation.md) om du vill ha fullständig installationsinformation.
 
 ## Visa rapporten Adaptiv Forms Adobe Analytics {#view-adobe-analytics-report}
 
-1. Gå till på din AEM **[!UICONTROL Forms]** >> **[!UICONTROL Forms and Document]**.
+1. Gå till **[!UICONTROL Forms]** >> **[!UICONTROL Forms and Document]** på din AEM.
 1. Markera formuläret så ser du att Adobe Analytics är integrerat, som det visas till vänster, med Forms som har aktiverats för Adobe Analytics.
 
    ![Visa rapport](assets/activ-aa.png){width="100%"}
 
-1. Klicka **Adobe Analytics** för att visa rapporten och analysera prestandadata.
+1. Klicka på **Adobe Analytics** om du vill visa rapporten och analysera prestandadata.
 
 ## Analysrapport om adaptiva Forms {#understanding-aem-forms-analytics-reports}
 
 Adobe Analytics har ett omfattande utbud av adaptiva Forms-prestandamätningar som ger värdefull information om formuläranvändning. Dessa mått är:
 
-### **Hur fungerar Adaptive Forms?** {#how-your-adaptive-form-is-performing}
+### **Hur fungerar Adaptiv Forms?** {#how-your-adaptive-form-is-performing}
 
 Här finns mätvärden för formuläråtergivning, formulärinskickning, valideringsfel och unika besökare, som gör att du kan bedöma hur användbara och effektiva dina formulär är:
 
 * **Formuläråtergivningar**: Formuläråtergivningar visar hur många gånger formuläret har återgetts eller öppnats.
 
-* **Formulärinlämning**: Inskickade formulär anger hur många gånger de anpassningsbara formulären har fyllts i och skickats in av användarna.
+* **Formuläröverföringar**: Formuläröverföringar anger hur många gånger anpassningsbara formulär har fyllts i och skickats av användarna.
 
 * **Valideringsfel**: Valideringsfel visar det totala antalet valideringsrelaterade fel som inträffade i formulärfälten.
 
-* **Unika besökare**: Unika besökare representerar det antal gånger som formuläret återges av en besökare. Mer information om unika besökare finns på [Unika besökare, besök och kundbeteende](https://experienceleague.adobe.com/docs/analytics/components/metrics/visits.html).
+* **Unika besökare**: Unika besökare representerar det antal gånger som formuläret återges av en besökare. Mer information om unika besökare finns i [Unika besökare, besök och kundbeteende](https://experienceleague.adobe.com/docs/analytics/components/metrics/visits.html).
 
-  ![Forms prestanda](assets/forms-performance.png){width="100%"}
+  ![Forms-prestanda](assets/forms-performance.png){width="100%"}
 
 ### **Besökare i formulären** {#visitors-to-your-forms}
 
 Det hjälper er att få värdefulla insikter om besökaraktiviteten i era formulär:
 
-* **Besök och inskickat material**: Här beskrivs hur ofta du besöker formulär i ett datumintervall och hur många formulär du skickar in. Mer information finns på den här klickningen [Besök](https://experienceleague.adobe.com/docs/analytics/components/metrics/visits.html).
-* **Unika besökare och deras totala besök**: Det skiljer mellan nya och returnerade användare. En besökare kan till exempel komma till din webbplats varje dag i en månad, men de räknas ändå som en unik besökare. Besök [Unika besökare](https://experienceleague.adobe.com/docs/analytics/components/metrics/unique-visitors.html) för detaljerad information.
+* **Besök och inskickade formulär**: Här beskrivs hur ofta du besöker formulär i ett datumintervall och hur många formulär som skickas. Mer information om detta finns på [Besök](https://experienceleague.adobe.com/docs/analytics/components/metrics/visits.html).
+* **Unika besökare och deras totala besök**: Det skiljer mellan nya och återkommande användare. En besökare kan till exempel komma till din webbplats varje dag i en månad, men de räknas ändå som en unik besökare. Besök [unika besökare](https://experienceleague.adobe.com/docs/analytics/components/metrics/unique-visitors.html) om du vill ha mer information.
 
   ![Forms Visitors](assets/forms-visitors.png){width="100%"}
 
@@ -71,17 +71,17 @@ Enhetstypen hjälper dig att identifiera vilken typ av enhet som används för a
 
 ![Enhetstyp](assets/device-type.png){width="100%"}
 
-### **Geografisk fördelning** {#geographical-breakdown}
+### **Geografisk uppdelning** {#geographical-breakdown}
 
 Här visas den plats där du har åtkomst till Forms. Här finns regionspecifik information om formuläranvändare. Du kan till exempel se att en regionspecifik information om en formuläranvändare är Indien, vilket visas i bilden.
 
-![Geografisk fördelning](assets/geographical-breakdown.png){width="100%"}
+![Geografisk uppdelning](assets/geographical-breakdown.png){width="100%"}
 
 ### **De viktigaste trafikkällorna och de populära formulären** {#top-sources-of-traffic-and-popular-forms}
 
-Detta hjälper dig att identifiera den primära källan eller länken till den plats där formulären refereras. I den angivna bilden nedan visas till exempel sökinstanser för dina adaptiva formulär där 18,9 % är **Typat/bokmärkt**, 70,49 % baserat på **Sökmotorer** och 24 % kommer från **Andra webbplatser**. Du kan definiera dimensionsobjekt baserat på dina behov. Dessutom kan ni ta reda på vilka som är de mest besökta eller populära formulären.
+Detta hjälper dig att identifiera den primära källan eller länken till den plats där formulären refereras. I den angivna bilden nedan visas till exempel sökinstanser för dina adaptiva formulär där 18,9 % är **Typed/Bookmarked**, 70,49 % baseras på **sökmotorer** och 24 % kommer från **Andra webbplatser**. Du kan definiera dimensionsobjekt baserat på dina behov. Dessutom kan ni ta reda på vilka som är de mest besökta eller populära formulären.
 
-![Refererade platser](assets/referred-sites.png){width="100%"}
+![Refererade webbplatser](assets/referred-sites.png){width="100%"}
 
 ### **Användaraktivitet i de vanligaste formulären** {#user-activity-on-top-forms}
 
@@ -89,7 +89,7 @@ En heltäckande bild av användarengagemanget med fältbesök, formuläråtergiv
 
 ![Användaraktivitet](assets/user-activity.png){width="100%"}
 
-### **Tidslinje för den tid som läggs på formulär** {#timeline-for-time-spent-on-forms}
+### **Tidslinje för tid i formulär** {#timeline-for-time-spent-on-forms}
 
 Det är den tid användarna lägger på era formulär över tiden, vilket hjälper er att identifiera engagemangsmönster.
 
@@ -97,13 +97,13 @@ Det är den tid användarna lägger på era formulär över tiden, vilket hjälp
 
 ### **Områden där besökare behöver hjälp med att fylla i formuläret** {#areas-requiring-assistance}
 
-Mätvärden som hjälpvyer, valideringsfel och fältbesök visar var användarna behöver hjälp eller hur vi kan spåra fel i fält. I bilden nedan ser du till exempel att i ett formulär med fält som **Fullständigt namn**, **Telefonnummer**, **GörB**. The **Fullständigt namn** har 12 besök, av 12 besök har 8 besök valideringsfel och 1 klickad på hjälpikon för att få hjälp med det här fältet. Du kan se mätdata för andra formulärfält.
+Mätvärden som hjälpvyer, valideringsfel och fältbesök visar var användarna behöver hjälp eller hur vi kan spåra fel i fält. I bilden nedan ser du till exempel det i ett formulär med fält som **Fullständigt namn**, **Telefonnummer**, **DoB**. Fältet **Fullständigt namn** har 12 besök, av 12 besök har 8 besök valideringsfel och 1 klickad på hjälpikon för att få hjälp med det här fältet. Du kan se mätdata för andra formulärfält.
 
 ![Hjälpområden](assets/assisting-areas.png){width="100%"}
 
 ### **Det sista formulärfältet som besökarna visade innan de övergav formuläret** {#last-form-field-that-visitors-viewed}
 
-Det hjälper dig att analysera formulärfälten där användarna har tillbringat tid innan du överger formuläret. I bilden nedan finns till exempel två övergivna formulär kvar i fältet **Fullständigt namn**, 2 kvar i fältet **Telefonnummer** och 1 kvar i fältet **Textindata**.
+Det hjälper dig att analysera formulärfälten där användarna har tillbringat tid innan du överger formuläret. I bilden nedan finns t.ex. 5 övergivna formulär, 2 kvar i fältet **Fullständigt namn**, 2 kvar i fältet **Telefonnummer** och 1 kvar i fältet **Textindata**.
 
 ![Fältbesökare](assets/field-visitors.png){width="100%"}
 

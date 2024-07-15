@@ -13,58 +13,58 @@ ht-degree: 2%
 ---
 
 
-# Introduktion av resurser som [!DNL Cloud Service] för hantering av digitala resurser i AEM {#assets-cloud-service-introduction}
+# Vi presenterar Assets som [!DNL Cloud Service] för Digital Asset Management i AEM {#assets-cloud-service-introduction}
 
 <!-- Need review information from gklebus -->
 
-Adobe Experience Manager Assets som [!DNL Cloud Service] erbjuder en molnbaserad, PaaS-lösning som gör att företag inte bara kan utföra sin digitala resurshantering och Dynamic Media-åtgärder snabbt och effektivt, utan även använda nästa generations smarta funktioner, som AI/ML, inifrån ett system som alltid är aktuellt, alltid tillgängligt och alltid är inlärningsbart.
+Adobe Experience Manager Assets som [!DNL Cloud Service] erbjuder en molnbaserad, PaaS-lösning för företag att inte bara utföra sina Digital Asset Management- och Dynamic Media-åtgärder snabbt och effektivt, utan även använda nästa generations smarta funktioner, som AI/ML, inifrån ett system som alltid är tillgängligt och alltid är inlärningsbart.
 
 Samtidig förtäring av många resurser eller komplexa resurser är en resurskrävande uppgift för en författarinstans i Experience Manager. Den primära instansen förbrukar mycket processorkraft, minne och I/O-resurser när resurser läggs till, bearbetas eller till och med migreras. Sådana prestandaproblem påverkar redigering och surfning hos slutanvändarna.
 
 Företag behöver stöd för en mängd olika filformat och innehållsupplösningar för användning på flera enheter, i olika geografiska områden och på flera språk. Resurshanterings- och lagringskrav kräver resurser och funktioner som kan överbelasta en traditionell lösning. Ibland ger inte tekniska begränsningar av behandlingen av tillgångar de resultat man önskar och i andra fall är kostnaden för lagring ett hinder för vinstmarginalerna.
 
-Börja med att förstå [fördelarna med ett molnbaserat erbjudande](#solution-benefits) för hantering av digitala resurser. Se vad som är viktigt [ändringar av Experience Manager som [!DNL Cloud Service]](/help/release-notes/aem-cloud-changes.md) som också påverkade Experience Manager Assets och som följde upp [ändringar i tillgångar](/help/assets/assets-cloud-changes.md).
+Börja med att förstå [fördelarna med ett molnbaserat erbjudande](#solution-benefits) för hantering av digitala resurser. Kolla in de [ändringarna av Experience Manager som en [!DNL Cloud Service]](/help/release-notes/aem-cloud-changes.md) som också påverkar Experience Manager Assets och följ upp de [ändringarna av Assets](/help/assets/assets-cloud-changes.md) som är anmärkningsvärda.
 
-Läs vidare för att lära dig mer om [information om de nya Assets-funktionerna](#whats-new-assets) och [kända problem](/help/release-notes/maintenance/latest.md). Se en lista med [borttagna eller inaktuella funktioner](/help/release-notes/deprecated-removed-features.md) om du vill veta vad som tas bort i den här versionen. Slutligen, förstå Experience Manager villkoren med hjälp av detta [ordlista](/help/overview/terminology.md).
+Läs vidare om du vill veta [mer om de nya Assets-funktionerna](#whats-new-assets) och [kända problem](/help/release-notes/maintenance/latest.md). Se en lista över [borttagna eller borttagna funktioner](/help/release-notes/deprecated-removed-features.md) om du vill veta vad som har tagits bort i den här versionen. Lär dig slutligen villkoren för Experience Manager med hjälp av den här [ordlistan](/help/overview/terminology.md).
 
 ## Lösningsfördelar {#solution-benefits}
 
-Nedan beskrivs de viktigaste fördelarna med Assets som [!DNL Cloud Service] för hantering av digitala resurser. Mer information finns på [översikt över Experience Manager som [!DNL Cloud Service]](/help/overview/introduction.md).
+Följande är de viktigaste fördelarna med Assets som [!DNL Cloud Service] för Digital Asset Management. Mer information finns i [översikt över Experience Manager som en [!DNL Cloud Service]](/help/overview/introduction.md).
 
-* **Moderna molntjänster för bearbetning av resurser**: De nya mikrotjänsterna är molnbaserade, skalbara, tillförlitliga och problemfria tjänster för filhantering.
-* **Mycket skalbar**: Elastisk skalbarhet för alla typer av driftsättningar. Praktiskt taget obegränsade resurser som finns tillgängliga on-demand, vid behov. Sparar kostnaden för överdesign jämfört med ett traditionellt system.
+* **Moderna molntjänster för bearbetning av resurser**: De nya mikrotjänsterna är en molnbaserad, skalbar, tillförlitlig och problemfri tjänst för bearbetning av resurser.
+* **Mycket skalbar**: Elastisk skalbarhet för alla typer av distributioner. Praktiskt taget obegränsade resurser som finns tillgängliga on-demand, vid behov. Sparar kostnaden för överdesign jämfört med ett traditionellt system.
 * **Senaste programvara**: Alltid aktuell och alltid uppdaterad. Alla användare har bara den senaste programvaran med alla korrigeringar, funktioner, säkerhet och felkorrigeringar tillgängliga. Utvecklare och integratörer arbetar med den senaste uppsättningen API:er utan problem med stöd för flera versioner.
-* **Alltid online**: Noll driftstopp (0dt), tack vare instansen som distribueras i ett kluster med säkerhetskopior och redundans. Uppgraderingar är också 0dt.
-* **Konstantövervakning**: Övervakningen av systemet är automatiserade och inbyggda kontroller och utlösare som hjälper till att upprätthålla prestanda, tillgänglighet och övergripande tillförlitlighet.
-* **Smidig driftsättning**: Experience Manager i molnåtgärderna är helt automatiserade och kräver ingen manuell åtgärd. För automatiserad driftsättning automatiserar komponenten Cloud Manager (CM) byggandet av driftsättningsbara Docker-bilder som innehåller din anpassade kod.
+* **Alltid online**: Nollställ driftavbrott (0dt) tack vare instansen som distribuerats i ett kluster med säkerhetskopieringar och redundans. Uppgraderingar är också 0dt.
+* **Konstantövervakning**: Övervakningen av systemet är automatiserad och inbyggd kontroll och utlösare som hjälper till att upprätthålla prestanda, tillgänglighet och övergripande tillförlitlighet.
+* **Problemfria distributioner**: Experience Manager i molnåtgärderna är helt automatiserade och kräver ingen manuell åtgärd. För automatiserad driftsättning automatiserar Cloud Manager-komponenten (CM) byggandet av driftsättningsbara Docker-bilder som innehåller din anpassade kod.
 
 ## Tillgängliga personbaserade upplevelser för hantering av digitala resurser {#persona-based-experiences}
 
 Adobe erbjuder robusta DAM-lösningar (Digital Asset Management) så att ni får ut mesta möjliga av era digitala resurser. Adobe Experience Manager Assets har två olika upplevelser som använder samma Cloud Service:
 
-* **Administratörsvy**: Det befintliga as a Cloud Service användargränssnittet för Assets. Använd administrationsvyn för alla avancerade funktioner för hantering av digitala resurser, inklusive integreringar, arbetsflöden, innehållsautomatisering, publicering med mera.
+* **Administratörsvy**: Det befintliga as a Cloud Service användargränssnittet i Assets. Använd administrationsvyn för alla avancerade funktioner för hantering av digitala resurser, inklusive integreringar, arbetsflöden, innehållsautomatisering, publicering med mera.
 
-* **Resursvy**: Adobe lättweight asset management experience to store, manage, discover, and use digital assets. Effektivt användargränssnitt med viktiga funktioner för hantering av digitala resurser. Utformad för enklare DAM-användare med fokus på överföring, metadatahantering, sökning, hämtning och delning.
+* **Assets View**: Adobe lightweight asset management experience för att lagra, hantera, identifiera och använda digitala resurser. Effektivt användargränssnitt med viktiga funktioner för hantering av digitala resurser. Utformad för enklare DAM-användare med fokus på överföring, metadatahantering, sökning, hämtning och delning.
 
-Användare som har åtkomst till administrationsvyn kan även komma åt resursvyn. Resursvyn har ett förenklat användargränssnitt som gör det enkelt att hantera, identifiera och distribuera digitala resurser. Ett stort antal användare från olika funktioner, inklusive kreatörer, marknadsförare och branschgrupper, kan samarbeta om resurser och få tillgång till rätt, godkänt material när och var de behöver det. Många tillfälliga DAM-användare föredrar resursvyn eftersom den bara innehåller en delmängd av funktioner. Upplevelsen riktar sig till kreatörer, skrivskyddade mediekonsumenter och användare med mindre vikt-DAM.
+Användare som har åtkomst till administrationsvyn har även åtkomst till vyn Assets. Assets View har ett förenklat användargränssnitt som gör det enkelt att hantera, upptäcka och distribuera digitala resurser. Ett stort antal användare från olika funktioner, inklusive kreatörer, marknadsförare och branschgrupper, kan samarbeta om resurser och få tillgång till rätt, godkänt material när och var de behöver det. Många tillfälliga DAM-användare föredrar Assets-vyn eftersom den bara innehåller en delmängd av funktioner. Upplevelsen riktar sig till kreatörer, skrivskyddade mediekonsumenter och användare med mindre vikt-DAM.
 
 DAM-bibliotek, utvecklare och superanvändare kan fortsätta att använda administrationsvyn eller växla mellan användargränssnitten efter behov. Du kan välja den upplevelse som fungerar bäst för din roll.
 
 ![add-tags](assets/newui-overview.svg)
 
-Mer information om hur du kommer åt resursvyn och vissa av de förenklingar som den erbjuder via administratörsvyn finns i [Introduktion till resursvyn](/help/assets/assets-view-introduction.md).
+Mer information om hur du kommer åt vyn Assets och vissa av de förenklingar som den erbjuder via administratörsvyn finns i [Introduktion till vyn Assets](/help/assets/assets-view-introduction.md).
 
 ## Integrering med dokumentbaserad redigering för Edge Delivery Services {#integrate-doc-authoring-edge-and-assets}
 
-Med Edge Delivery kan ni skapa snabba, engagerande webbplatser där författare snabbt kan uppdatera och publicera innehåll och nya webbplatser snabbt kan lanseras.
+Med Edge Delivery kan ni skapa snabba, engagerande webbplatser där författarna snabbt kan uppdatera och publicera innehåll och nya webbplatser snabbt kan lanseras.
 
 Integrera AEM Assets med dokumentbaserad redigering för Edge Delivery Services för att göra det möjligt för webbplatsförfattare att använda bilder som finns i AEM Assets-arkiv när de skriver dokument i Microsoft Word eller Google Docs. Mer information finns i [Integrera AEM Assets med dokumentbaserad redigering](/help/edge/using.md#integrate-assets-edge).
 
 ## Integrering med Adobe Journey Optimizer {#integration-with-ajo}
 
-[Adobe Journey Optimizer](https://business.adobe.com/products/journey-optimizer/adobe-journey-optimizer.html) förenklar hanteringen av kundresan och ger kunderna möjlighet att skapa flerkanalskampanjer med smarta beslut och insikter. När du utformar meddelanden med Journey Optimizer kan du komma åt Assets as a Cloud Service-databasen direkt från Journey Optimizer-gränssnittet. Användare får åtkomst till resurser via det inbäddade användargränssnittet i Experience Manager Assets. Mer information finns i [Skapa och hantera mediefiler med Experience Manager Assets](https://experienceleague.adobe.com/docs/journey-optimizer/using/content-management/assets-images/assets.html).
+[Adobe Journey Optimizer](https://business.adobe.com/products/journey-optimizer/adobe-journey-optimizer.html) förenklar kundens resehantering genom att tillhandahålla flerkanalskampanjer med smarta beslut och insikter. När du utformar meddelanden med Journey Optimizer kan du komma åt Assets as a Cloud Service databaser direkt inifrån Journey Optimizer gränssnitt. Användare får åtkomst till resurser via det inbäddade användargränssnittet i Experience Manager Assets. Mer information finns i [Skapa och hantera resurser med Experience Manager Assets](https://experienceleague.adobe.com/docs/journey-optimizer/using/content-management/assets-images/assets.html).
 
-## Nya resurser {#whats-new-assets}
+## Nya Assets-funktioner {#whats-new-assets}
 
 De viktiga nya funktionerna är:
 
@@ -73,9 +73,9 @@ De viktiga nya funktionerna är:
 
 **Se även**
 
-* [Översätt resurser](translate-assets.md)
-* [Resurser för HTTP API](mac-api-assets.md)
-* [Resurser som stöds i filformat](file-format-support.md)
+* [Översätt Assets](translate-assets.md)
+* [ASSETS HTTP API](mac-api-assets.md)
+* [Filformat som stöds av Assets](file-format-support.md)
 * [Sök resurser](search-assets.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
 * [Resursrapporter](asset-reports.md)
@@ -85,4 +85,4 @@ De viktiga nya funktionerna är:
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publicera resurser till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)

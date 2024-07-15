@@ -53,28 +53,28 @@ Om du vill aktivera en slutpunkt för GraphQL för AEM måste du:
 
 ## Aktivera din GraphQL-slutpunkt {#enabling-graphql-endpoint}
 
-Om du vill aktivera en GraphQL-slutpunkt måste du först ha en lämplig konfiguration. Se [Content Fragments - Configuration Browser](/help/sites-cloud/administering/content-fragments/setup.md#enable-content-fragment-functionality-configuration-browser).
+Om du vill aktivera en GraphQL-slutpunkt måste du först ha en lämplig konfiguration. Se [Innehållsfragment - Konfigurationsläsaren](/help/sites-cloud/administering/content-fragments/setup.md#enable-content-fragment-functionality-configuration-browser).
 
 >[!CAUTION]
 >
->Om [användning av innehållsfragmentmodeller inte har aktiverats](/help/sites-cloud/administering/content-fragments/setup.md#enable-content-fragment-functionality-configuration-browser), **Skapa** kommer inte att vara tillgängligt.
+>Om [användningen av innehållsfragmentmodeller inte har aktiverats](/help/sites-cloud/administering/content-fragments/setup.md#enable-content-fragment-functionality-configuration-browser) är alternativet **Skapa** inte tillgängligt.
 
 Så här aktiverar du motsvarande slutpunkt:
 
-1. Navigera till **verktyg**, **Allmänt** väljer **GraphQL**.
+1. Navigera till **Verktyg**, **Allmänt** och välj sedan **GraphQL**.
 1. Välj **Skapa**.
-1. The **Skapa ny GraphQL-slutpunkt** öppnas. Här kan du ange:
-   * **Namn**: slutpunktens namn; du kan ange valfri text.
+1. Dialogrutan **Skapa ny GraphQL-slutpunkt** öppnas. Här kan du ange:
+   * **Namn**: slutpunktens namn. Du kan ange valfri text.
    * **Använd GraphQL-schema från**: använd listrutan för att välja önskad plats/önskat projekt.
 
    >[!NOTE]
    >
    >Följande varning visas i dialogrutan:
    >
-   >* *GraphQL slutpunkter kan medföra problem med datasäkerhet och prestanda om de inte hanteras varsamt. Kontrollera att rätt behörigheter har angetts när du har skapat en slutpunkt.*
+   >* *GraphQL-slutpunkter kan medföra problem med datasäkerhet och prestanda om de inte hanteras med omsorg. Kontrollera att rätt behörigheter har angetts efter att en slutpunkt har skapats.*
 
 1. Bekräfta med **Skapa**.
-1. The **Nästa steg** kommer att innehålla en direktlänk till säkerhetskonsolen så att du kan kontrollera att den skapade slutpunkten har rätt behörigheter.
+1. Dialogrutan **Nästa steg** innehåller en direktlänk till säkerhetskonsolen så att du kan kontrollera att den skapade slutpunkten har rätt behörigheter.
 
    >[!CAUTION]
    >
@@ -84,7 +84,7 @@ Så här aktiverar du motsvarande slutpunkt:
 
 ## Publicera din GraphQL-slutpunkt {#publishing-graphql-endpoint}
 
-Markera den nya slutpunkten och **Publicera** för att göra den helt tillgänglig i alla miljöer.
+Markera den nya slutpunkten och **Publish** för att göra den helt tillgänglig i alla miljöer.
 
 >[!CAUTION]
 >
@@ -92,4 +92,4 @@ Markera den nya slutpunkten och **Publicera** för att göra den helt tillgängl
 >
 >På publiceringsinstanser kan detta utgöra ett säkerhetsproblem, eftersom GraphQL-frågor kan medföra en stor belastning på servern.
 >
->Konfigurera [Behöriga åtkomstkontrollistor för ditt användningsfall](/help/headless/security/permissions.md) på slutpunkten.
+>Ställ in [ACL:er som passar ditt användningsfall](/help/headless/security/permissions.md) på slutpunkten.

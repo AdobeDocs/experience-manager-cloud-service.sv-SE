@@ -16,11 +16,11 @@ ht-degree: 0%
 
 Det finns ett urval kortkommandon som kan användas i konsolen Innehållsfragment.
 
-Olika kortkommandon finns i hela AEM. Vissa gäller när [redigera sidor](/help/sites-cloud/authoring/page-editor/keyboard-shortcuts.md), andra till [allmän användning av konsoler](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md).
+Olika kortkommandon finns i hela AEM. Vissa gäller när [sidor redigeras](/help/sites-cloud/authoring/page-editor/keyboard-shortcuts.md), andra när det gäller [allmän användning av konsoler](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md).
 
 >[!NOTE]
 >
->The [modifieringstangenter](#os-specific-modifier-keys) som krävs för AEM kortkommandon varierar beroende på operativsystem.
+>De [modifieringstangenter](#os-specific-modifier-keys) som krävs för AEM kortkommandon varierar beroende på operativsystem.
 
 ## Console för innehållsfragment - kortkommandon {#content-fragments-console-keyboard-shortcuts}
 
@@ -39,11 +39,11 @@ Olika kortkommandon finns i hela AEM. Vissa gäller när [redigera sidor](/help/
 | Markera ett eller flera innehållsfragment | `u` | Öppna dialogrutan Avpublicera nu |
 | Alla öppna dialogrutor | `esc` | Dialogrutan stängs |
 
-Du kan även använda olika kortkommandon för skrivbordsanvändare. Vissa gäller när [redigera sidor](/help/sites-cloud/authoring/page-editor/keyboard-shortcuts.md), andra till allmänheten [användning av konsoler](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md).
+Du kan även använda olika kortkommandon för skrivbordsanvändare. En del gäller när [sidor redigeras](/help/sites-cloud/authoring/page-editor/keyboard-shortcuts.md), andra när det gäller allmän [användning av konsoler](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md).
 
 >[!NOTE]
 >
->Kortkommandon för redigeraren är alltid aktiva oavsett om [konsolgenvägar har inaktiverats](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md#deactivating-keyboard-shortcuts).
+>Kortkommandon för redigeraren är alltid aktiva oavsett om kortkommandona för [konsolen har inaktiverats](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md#deactivating-keyboard-shortcuts).
 
 ## Operativspecifika modifieringstangenter {#os-specific-modifier-keys}
 

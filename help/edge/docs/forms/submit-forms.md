@@ -14,7 +14,7 @@ ht-degree: 0%
 # Konfigurera dina Google-blad eller Microsoft Excel-filer så att du kan börja ta emot data
 
 
-En gång har du [skapade och förhandsvisade formuläret](/help/edge/docs/forms/create-forms.md)är det dags att aktivera motsvarande kalkylblad så att det kan börja ta emot data. Du kan manuellt aktivera kalkylbladet för att ta emot data eller använda admin-API:er för att aktivera ett kalkylblad för att ta emot data.
+När du har [skapat och förhandsgranskat formuläret](/help/edge/docs/forms/create-forms.md) är det dags att aktivera motsvarande kalkylblad för att börja ta emot data. Du kan manuellt aktivera kalkylbladet för att ta emot data eller använda admin-API:er för att aktivera ett kalkylblad för att ta emot data.
 
 ![Dokumentbaserat redigeringssystem](/help/edge/assets/document-based-authoring-workflow-enable-sheet-to-accept-data.png)
 
@@ -28,11 +28,11 @@ En gång har du [skapade och förhandsvisade formuläret](/help/edge/docs/forms/
 
 Aktivera att kalkylbladet accepterar data
 
-1. Öppna kalkylbladet som innehåller formuläret och lägg till ett nytt blad och ge det ett nytt namn `incoming`.
+1. Öppna kalkylbladet som innehåller ditt formulär och lägg till ett nytt blad och ge det ett nytt namn till `incoming`.
 
    >[!WARNING]
    >
-   > Om `incoming` bladet finns inte, AEM skickar inga data till kalkylbladet.
+   > Om bladet `incoming` inte finns skickar AEM inga data till kalkylbladet.
 
 1. I det här bladet infogar du en tabell med namnet &quot;intag_form&quot;. Välj det antal kolumner som krävs för att matcha formulärfältsnamnen. Gå sedan till Infoga > Tabell i verktygsfältet och klicka på OK.
 
@@ -42,7 +42,7 @@ Aktivera att kalkylbladet accepterar data
 
 1. I det inkommande bladet väljer du Klistra in special > Transponera rader till kolumner för att kopiera fält-ID:n som kolumnrubriker i det nya bladet. Behåll endast de fält vars data behöver hämtas från andra fält som kan ignoreras.
 
-   Varje värde i `Name` kolumn i `shared-default` bladet, med undantag för skicka-knappen, kan fungera som ett sidhuvud i `incoming` blad. Titta på följande bild som illustrerar rubriker för ett&quot;kontaktformulär&quot;:
+   Varje värde i `Name`-kolumnen i `shared-default` -bladet, förutom skicka-knappen, kan fungera som en rubrik i `incoming` -bladet. Titta på följande bild som illustrerar rubriker för ett&quot;kontaktformulär&quot;:
 
    ![Fält för ett kontaktformulär](/help/edge/assets/contact-us-form-excel-sheet-fields.png)
 
@@ -52,12 +52,12 @@ Aktivera att kalkylbladet accepterar data
 
    >[!NOTE]
    >
-   >Även om du har förhandsgranskat bladet tidigare måste du förhandsgranska det igen när du har skapat `incoming` första gången.
+   >Även om du har förhandsgranskat bladet tidigare måste du förhandsgranska det igen när du har skapat bladet `incoming` för första gången.
 
 
-När fältnamnen har lagts till i `incoming` kan du godkänna att ditt formulär skickas vidare. Du kan förhandsgranska formuläret och skicka data till bladet med hjälp av det.
+När fältnamnen har lagts till i bladet `incoming` kan ditt formulär ta emot inskickade data. Du kan förhandsgranska formuläret och skicka data till bladet med hjälp av det.
 
-När bladet har konfigurerats för att ta emot data kan du [förhandsgranska formuläret med Adaptiv Forms Block](/help/edge/docs/forms/create-forms.md#preview-the-form-using-your-edge-delivery-service-eds-page) eller [använd POST-förfrågningar](#use-admin-apis-to-send-data-to-your-sheet) för att börja skicka data till bladet.
+När kalkylbladet har konfigurerats för att ta emot data kan du [förhandsgranska formuläret med hjälp av adaptivt Forms-block](/help/edge/docs/forms/create-forms.md#preview-the-form-using-your-edge-delivery-service-eds-page) eller [använda förfrågningar från POSTER](#use-admin-apis-to-send-data-to-your-sheet) för att börja skicka data till bladet.
 
 >[!WARNING]
 >
@@ -65,7 +65,7 @@ När bladet har konfigurerats för att ta emot data kan du [förhandsgranska for
 
 ### Använd admin-API:er för att aktivera ett kalkylblad som accepterar data
 
-Du kan också skicka en begäran om POST till formuläret så att det kan ta emot data och konfigurera rubriker för `incoming` blad. När tjänsten tar emot en begäran om POST analyserar tjänsten innehållet i begäran och skapar automatiskt de huvuden och ark som behövs för datainhämtning.
+Du kan också skicka en begäran om POST till formuläret så att det kan ta emot data och konfigurera rubriker för bladet `incoming`. När tjänsten tar emot en begäran om POST analyserar tjänsten innehållet i begäran och skapar automatiskt de huvuden och ark som behövs för datainhämtning.
 
 Så här använder du Admin API:er för att aktivera ett kalkylblad för att ta emot data:
 
@@ -74,17 +74,17 @@ Så här använder du Admin API:er för att aktivera ett kalkylblad för att ta 
 
    >[!WARNING]
    >
-   > Om `incoming` bladet finns inte, AEM skickar inga data till arbetsboken.
+   > Om bladet `incoming` inte finns skickar AEM inga data till arbetsboken.
 
 1. Förhandsgranska bladet i sidosparken.
 
    >[!NOTE]
    >
-   >Även om du har förhandsgranskat bladet tidigare måste du förhandsgranska det igen när du har skapat `incoming` första gången.
+   >Även om du har förhandsgranskat bladet tidigare måste du förhandsgranska det igen när du har skapat bladet `incoming` för första gången.
 
-1. Skicka begäran om POST för att generera lämpliga rubriker i `incoming` och lägg till `shared-default` till uppslagsbladet, om det inte redan finns.
+1. Skicka begäran om POST för att generera lämpliga rubriker i `incoming`-bladet och lägg till `shared-default`-bladen i ditt uppslagsblad, om det inte redan finns.
 
-   Om du vill veta hur du formaterar POSTEN för att konfigurera bladet kan du läsa [Dokumentation för Admin API](https://www.aem.live/docs/admin.html#tag/authentication/operation/profile). Du kan titta på exemplet nedan:
+   Mer information om hur du formaterar begäran om POST för att konfigurera bladet finns i [dokumentationen för Admin API](https://www.aem.live/docs/admin.html#tag/authentication/operation/profile). Du kan titta på exemplet nedan:
 
    **Begäran**
 
@@ -172,7 +172,7 @@ Ett blad med namnet &quot;Slack&quot; läggs till i Excel-arbetsboken eller Goog
 
 ## Skicka data till bladet {#send-data-to-your-sheet}
 
-När bladet är inställt på att ta emot data kan du [förhandsgranska formuläret med Adaptiv Forms Block](/help/edge/docs/forms/create-forms.md#preview-the-form-using-your-edge-delivery-service-eds-page) eller [använd admin-API:er](#use-admin-apis-to-send-data-to-your-sheet) för att börja skicka data till bladet.
+När kalkylbladet är inställt på att ta emot data kan du [förhandsgranska formuläret med Adaptivt Forms-block](/help/edge/docs/forms/create-forms.md#preview-the-form-using-your-edge-delivery-service-eds-page) eller [använda Admin-API:er](#use-admin-apis-to-send-data-to-your-sheet) för att börja skicka data till bladet.
 
 ### Använd admin-API:er för att skicka data till bladet
 
@@ -186,13 +186,13 @@ POST https://my-domain.com/email-form
 
 >[!NOTE]
 >
-> URL:en ska inte ha filnamnstillägget .json. Du måste publicera bladet för att POSTEN ska fungera på `.live` eller på produktionsdomänen.
+> URL:en ska inte ha filnamnstillägget .json. Du måste publicera bladet för att POST-åtgärder ska fungera på `.live` eller på produktionsdomänen.
 
 #### Formatera formulärdata
 
 Det finns olika sätt att formatera formulärdata i POSTENS brödtext. Du kan använda
 
-* array med `name:value` par:
+* matris med `name:value` par:
 
   ```JSON
   {
@@ -270,7 +270,7 @@ Det finns olika sätt att formatera formulärdata i POSTENS brödtext. Du kan an
   }'
   ```
 
-* URL-kodad (`x-www-form-urlencoded`) body (with `content-type` sidhuvud inställt på `application/x-www-form-urlencoded`)
+* URL-kodad (`x-www-form-urlencoded`) brödtext (med rubriken `content-type` inställd på `application/x-www-form-urlencoded`)
 
   ```Shell
   'Email=kent%40wknd.com&Name=clark&Subject=Regarding+Product+Inquiry&Message=I   +have+some+questions+about+your+products.&Phone=123-456-7890&Company=Adobe+Inc.&   Country=United+States&PreferredContactMethod=Email&SubscribeToNewsletter=true'
@@ -284,7 +284,7 @@ Det finns olika sätt att formatera formulärdata i POSTENS brödtext. Du kan an
     https://main--portal--wkndforms.hlx.live/contact-us
   ```
 
-Nu kan du [anpassa tackmeddelandet](/help/edge/docs/forms/thank-you-page-form.md).
+Sedan kan du [anpassa tackmeddelandet](/help/edge/docs/forms/thank-you-page-form.md).
 
 ## Se även
 

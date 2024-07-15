@@ -34,9 +34,9 @@ De sidor som utgör din upplevelse är enkla att hantera i webbplatskonsolen, vi
 
 >[!TIP]
 >
->Den här dokumentationsresan täcker bara grunderna AEM webbplatsfunktioner, så du som översättningsspecialist förstår det innehåll du behöver översätta.
+>Den här dokumentationsresan täcker bara grunderna för hur du AEM webbplatsfunktioner så att du som översättningsspecialist förstår det innehåll du behöver översätta.
 >
->Mer information om AEM Sites och alla dess kraftfulla funktioner finns i [ytterligare informationsavsnitt](#additional-information) i slutet av den här artikeln om du vill ha mer AEM Sites-resurser.
+>Mer information om AEM Sites och alla dess kraftfulla funktioner finns i [informationsavsnittet](#additional-information) i slutet av den här artikeln om du vill ha mer information om AEM Sites-resurser.
 
 ## Översätta webbplatsinnehåll i AEM {#translating-in-aem}
 
@@ -59,11 +59,11 @@ Tack för att du kom igång med din AEM Sites översättningsresa! Nu när du l�
 * Lär dig grunderna i AEM Sites framtagning av innehåll.
 * Lär dig mer om hur AEM stöder översättning.
 
-Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sites genom att granska nästa gång dokumentet [Kom igång med AEM Sites translation](getting-started.md) där du får en översikt över hur AEM hanterar innehåll och lär dig mer om översättningsverktygen.
+Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sites genom att gå igenom dokumentet [Kom igång med AEM Sites translation](getting-started.md) där du får en översikt över hur AEM hanterar innehåll och lär dig dess översättningsverktyg.
 
 ## Ytterligare resurser {#additional-resources}
 
-Vi rekommenderar att du går vidare till nästa del av webbplatsöversättningsresan genom att granska dokumentet [Kom igång med AEM Sites translation,](getting-started.md) Nedan följer ytterligare, valfria resurser som fördjupar sig i några koncept som nämns i det här dokumentet, men som inte behöver fortsätta på resan.
+Vi rekommenderar att du går vidare till nästa del av webbplatsöversättningsresan genom att granska dokumentet [Kom igång med AEM Sites-översättning](getting-started.md), men följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta på resan.
 
-* [Snabbstartsguide till framtagning av sidor](/help/sites-cloud/authoring/quick-start.md) - En snabb översikt av de viktigaste begreppen för att skapa innehåll med AEM Sites
-* [MSM och översättning](/help/sites-cloud/administering/msm-and-translation.md) - Information om AEM Multi-Site Manager och hur det fungerar med översättningsverktygen
+* [Snabbstartsguide till redigeringssidor](/help/sites-cloud/authoring/quick-start.md) - en snabb översikt av de viktigaste begreppen för att skapa innehåll med AEM Sites
+* [MSM och översättning](/help/sites-cloud/administering/msm-and-translation.md) - Information om hur du AEM Multi-Site Manager och hur det fungerar med översättningsverktygen

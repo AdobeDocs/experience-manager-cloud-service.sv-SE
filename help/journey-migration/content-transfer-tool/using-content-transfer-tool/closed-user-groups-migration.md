@@ -33,14 +33,14 @@ Verifiering av gruppen och dess medlemmar ska göras innan publicering inleds. H
 
 Därefter måste processerna aktiveras och egenskaperna anges för att aktivera CUG-grupper. Det gör du genom att publicera om alla sidor som är kopplade till en CUG-princip. Detta kalibrerar Publish-instansen för att spåra profilerna.
 
-Detta aktiverar CUG-profiler vid publicering, och innehållet är bara tillgängligt för autentiserade användare som är medlemmar i gruppen som är kopplad till profilerna.
+Detta aktiverar CUG-profiler på Publish, och innehållet är bara tillgängligt för autentiserade användare som är medlemmar i den grupp som är kopplad till profilerna.
 
 ## Sammanfattning
 
 Sammanfattningsvis är det här stegen för att aktivera CUG efter en migrering:
 
-1. Kontrollera att varje grupp som används i CUG-principer finns vid publicering efter migreringen.
+1. Kontrollera att varje grupp som används i CUG-principer finns på Publish efter migreringen.
    - Det kan finnas en grupp om den ingår i ett migrerat innehålls CUG-princip eller i innehållets ACL.
-   - Om den inte gör det kan du använda Paket för att installera den på målinstansen (eller skapa den manuellt där) och aktivera den och dess medlemmar. Kontrollera sedan att den finns vid publicering.
+   - Om den inte gör det kan du använda Paket för att installera den på målinstansen (eller skapa den manuellt där) och aktivera den och dess medlemmar. Verifiera sedan att det finns i Publish.
 1. Publicera om alla sidor som är kopplade till en CUG-princip och kontrollera att den publiceras, till exempel genom att redigera sidan först. Det är viktigt att publicera om alla.
    - När alla sidor har publicerats om kontrollerar du att de fungerar för varje CUG-skyddad sida.

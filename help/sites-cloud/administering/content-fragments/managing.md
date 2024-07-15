@@ -14,16 +14,16 @@ ht-degree: 0%
 
 # Hantera innehållsfragment {#managing-content-fragments}
 
-Lär dig hantera dina **Innehållsfragment** i Adobe Experience Manager (AEM) as a Cloud Service från [Konsol för innehållsfragment](#content-fragments-console)och [Innehållsfragmentsredigerare](/help/sites-cloud/administering/content-fragments/authoring.md#content-fragment-editor). Dessa innehållsfragment kan användas som bas för rubrikfritt innehåll eller för att skapa sidor.
+Lär dig hur du hanterar dina **innehållsfragment** i Adobe Experience Manager (AEM) as a Cloud Service från den dedikerade [konsolen för innehållsfragment](#content-fragments-console) och [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md#content-fragment-editor). Dessa innehållsfragment kan användas som bas för rubrikfritt innehåll eller för att skapa sidor.
 
 >[!NOTE]
 >
->Ditt projektteam kan anpassa konsolen och redigeraren om det behövs. Se [Anpassa konsolen och redigeraren för innehållsfragment](/help/implementing/developing/extending/content-fragments-console-and-editor.md) för mer information.
+>Ditt projektteam kan anpassa konsolen och redigeraren om det behövs. Mer information finns i [Anpassa konsolen och redigeraren för innehållsfragment](/help/implementing/developing/extending/content-fragments-console-and-editor.md).
 
-När du har definierat [Modeller för innehållsfragment](#creating-a-content-model) kan du använda dessa för att:
+När du har definierat dina [modeller för innehållsfragment](#creating-a-content-model) kan du använda dessa för att:
 
 * [Skapa dina innehållsfragment](#creating-a-content-fragment).
-* Öppna sedan [Innehållsfragmentsredigerare](#opening-the-fragment-editor) till [skapa ditt innehåll och hantera dina variationer](#editing-the-content-of-your-fragment).
+* Öppna sedan [Content Fragment Editor](#opening-the-fragment-editor) för att [redigera ditt innehåll och hantera dina variationer](#editing-the-content-of-your-fragment).
 * [Hantera taggar](#manage-tags)
 * [Visa och redigera egenskaperna (metadata)](#viewing-and-editing-properties)
 * [Visa strukturträdet](/help/sites-cloud/administering/content-fragments/authoring.md#structure-tree)
@@ -32,12 +32,12 @@ När du har definierat [Modeller för innehållsfragment](#creating-a-content-mo
 >
 >Innehållsfragment kan användas:
 >
->* for [Headless Content Delivery using Content Fragments with GraphQL](/help/sites-cloud/administering/content-fragments/content-delivery-with-graphql.md),
+>* för [leverans av Headless-innehåll med innehållsfragment med GraphQL](/help/sites-cloud/administering/content-fragments/content-delivery-with-graphql.md),
 >* när du redigerar sidor, se [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md).
 
 >[!NOTE]
 >
->Innehållsfragment lagras som **Resurser**. De hanteras huvudsakligen från **Innehållsfragment** konsolen, men kan även hanteras från [Resurser](/help/assets/content-fragments/content-fragments-managing.md) konsol.
+>Innehållsfragment lagras som **Assets**. De hanteras huvudsakligen från konsolen **Innehållsfragment**, men kan även hanteras från konsolen [Assets](/help/assets/content-fragments/content-fragments-managing.md).
 
 ## Konsolen Innehållsfragment {#content-fragments-console}
 
@@ -45,7 +45,7 @@ Konsolen Innehållsfragment är avsedd för hantering, sökning och skapande av 
 
 Konsolen för innehållsfragment ger direktåtkomst till dina fragment och relaterade uppgifter. Konsolen kan nås direkt från den översta nivån i Global Navigation.
 
-![Global navigering - konsol för innehållsfragment](assets/cf-managing-global-navigation.png)
+![Global navigering - konsolen för innehållsfragment](assets/cf-managing-global-navigation.png)
 
 Mer information finns i:
 
@@ -59,7 +59,7 @@ Mer information finns i:
 
 * [Söka och filtrera i konsolen för innehållsfragment](#filtering-fragments)
 
-* Ett urval av [kortkommandon](/help/sites-cloud/administering/content-fragments/keyboard-shortcuts.md) är tillgängliga för användning i den här konsolen
+* Det finns ett urval av [kortkommandon](/help/sites-cloud/administering/content-fragments/keyboard-shortcuts.md) som kan användas i den här konsolen
 
 >[!NOTE]
 >
@@ -67,52 +67,53 @@ Mer information finns i:
 
 >[!CAUTION]
 >
->Konsolen är *endast* finns på Adobe Experience Manager-as a Cloud Service (AEM) online.
+>Den här konsolen är *endast* tillgänglig i Adobe Experience Manager-as a Cloud Service (AEM) online.
 
 ### Konsolens grundläggande struktur och hantering {#basic-structure-handling-content-fragments-console}
 
-Markera **Innehållsfragment** öppnar konsolen på en ny flik.
+Om du väljer **Innehållsfragment** öppnas konsolen på en ny flik.
 
 <!-- CQDOC-21349: screenshot -->
 
-![Konsol för innehållsfragment - översikt](assets/cf-managing-console-overview.png)
+![Konsolen för innehållsfragment - översikt](assets/cf-managing-console-overview.png)
 
 Här ser du att det finns tre huvudområden:
 
 * Det övre verktygsfältet
    * Tillhandahåller AEM
    * Visar även din IMS-organisation
-   * Tillhandahåller olika [funktionsmakron](#actions-unselected)
+   * Tillhandahåller olika [åtgärder](#actions-unselected)
 * Den vänstra panelen
    * Här kan du dölja eller visa mappträdet
    * Du kan välja en viss gren av trädet
    * Storleken kan ändras så att kapslade mappar visas
-   * Du kan välja mellan att visa innehållsfragment eller [Resurser](/help/sites-cloud/administering/content-fragments/assets-content-fragments-console.md)
+   * Du kan välja mellan att visa innehållsfragment eller [Assets](/help/sites-cloud/administering/content-fragments/assets-content-fragments-console.md)
 * Den högra panelen - härifrån kan du:
    * Se listan med alla innehållsfragment i den markerade grenen i trädet:
       * Innehållsfragment från den markerade mappen och alla underordnade mappar visas:
          * Platsen anges av vägbeskrivningarna. Dessa kan även användas för att ändra platsen:
       * [Information visas om varje fragment](#information-content-fragments)
          * [Du kan välja vilka kolumner som ska visas](#select-columns-console)
-      * [Olika informationsområden](#information-content-fragments) om ett innehållsfragment innehåller länkar. Beroende på fältet kan dessa:
+      * [Olika fält med information](#information-content-fragments) om ett innehållsfragment innehåller länkar. Beroende på fältet kan dessa:
          * Öppna rätt fragment i redigeraren
          * Visa information om referenser
          * Visa information om språkversioner av fragmentet
-      * [Vissa andra informationsområden](#information-content-fragments) om ett innehållsfragment kan användas för [Snabb filtrering](#fast-filtering):
+      * [Vissa andra fält med information](#information-content-fragments) om ett innehållsfragment kan användas för [Snabb filtrering](#fast-filtering):
          * Markera ett värde i kolumnen och tillämpas omedelbart som ett filter
-         * Snabb filtrering stöds för **Modell**, **Status**, **Ändrad av**, **Taggar** och **Publicerat av** kolumner.
+         * Snabb filtrering stöds för kolumnerna **Model**, **Status**, **Modified By**, **Tags** och **Published By By**.
       * Genom att använda musen på kolumnrubrikerna visas en listruta med åtgärdsväljare och breddreglage. Med dessa kan du:
-         * Sortera - välj lämplig åtgärd för antingen stigande eller fallande Detta sorterar hela tabellen efter den kolumnen. Sortering är bara tillgängligt för lämpliga kolumner.
+         * Sortera - välj lämplig åtgärd för antingen stigande eller fallande
+Då sorteras hela tabellen efter den kolumnen. Sortering är bara tillgängligt för lämpliga kolumner.
          * Ändra storlek på kolumnen med antingen funktionsmakrot eller breddreglagen
-      * Markera ett eller flera fragment för ytterligare [åtgärd](#actions-selected-content-fragment)
-   * Använd [Sök](#searching-fragments) box
-   * Öppna [Panelen Filter](#filtering-fragments)
+      * Välj ett eller flera fragment för ytterligare [åtgärd](#actions-selected-content-fragment)
+   * Använd rutan [Sök](#searching-fragments)
+   * Öppna [filterpanelen](#filtering-fragments)
 
 ### Åtgärder {#actions}
 
 I konsolen finns ett antal åtgärder som du kan använda, antingen direkt eller efter att du har valt ett visst fragment:
 
-* Olika åtgärder är direkt [tillgänglig från konsolen](#actions-unselected)
+* Olika åtgärder är direkt [tillgängliga från konsolen](#actions-unselected)
 * Du kan [markera ett eller flera innehållsfragment för att visa lämpliga åtgärder](#actions-selected-content-fragment)
 
 #### Åtgärder (omarkerade) {#actions-unselected}
@@ -120,17 +121,17 @@ I konsolen finns ett antal åtgärder som du kan använda, antingen direkt eller
 Vissa åtgärder är tillgängliga från konsolen - utan att du behöver välja ett visst innehållsfragment:
 
 * **[Skapa](#creating-a-content-fragment)** ett nytt innehållsfragment
-* [Filter](#filtering-fragments) innehållsfragment enligt ett urval predikatmallar och spara filtret för framtida bruk
-* [Sök](#searching-fragments) innehållsfragment
+* [Filtrera](#filtering-fragments) innehållsfragment enligt ett urval predikat och spara filtret för framtida bruk
+* [Sök](#searching-fragments) i innehållsfragment
 * [Anpassa tabellvyn för att visa markerade kolumner med information](#select-columns-console)
-* Använd **Öppna i resurser** om du vill öppna den aktuella platsen direkt i **Resurser** konsol
+* Använd **Öppna i Assets** för att öppna den aktuella platsen direkt i **Assets**-konsolen
 
   >[!NOTE]
   >
-  >The **Resurser** konsolen används för att komma åt resurser, som bilder, videor och så vidare.  Konsolen kan nås:
+  >**Assets**-konsolen används för att komma åt resurser, till exempel bilder, videor och så vidare.  Konsolen kan nås:
   >
-  >* med **Öppna i resurser** link (in the Content Fragments console)
-  >* direkt från **Navigering** fönster
+  >* med länken **Öppna i Assets** (i konsolen för innehållsfragment)
+  >* direkt från den globala **navigeringsrutan**
 
 #### Åtgärder för ett (markerat) innehållsfragment {#actions-selected-content-fragment}
 
@@ -138,11 +139,11 @@ Om du markerar ett visst fragment öppnas ett verktygsfält som fokuserar på de
 
 <!-- CQDOC-21349: screenshot -->
 
-![Konsol för innehållsfragment - verktygsfält för ett valt fragment](assets/cf-managing-console-fragment-toolbar.png)
+![Konsolen för innehållsfragment - verktygsfält för ett valt fragment](assets/cf-managing-console-fragment-toolbar.png)
 
 * **[Öppna i ny redigerare](#editing-the-content-of-your-fragment)**
 * **[Öppna](/help/assets/content-fragments/content-fragments-variations.md)** (i originalredigeraren)
-* **[Publicera](#publishing-and-previewing-a-fragment)** (och **[Avpublicera](#unpublishing-a-fragment)**)
+* **[Publish](#publishing-and-previewing-a-fragment)** (och **[Avpublicera](#unpublishing-a-fragment)**)
 * **[Hantera taggar](#manage-tags)**
 * **[Kopiera](/help/assets/manage-digital-assets.md)**
 * **[Flytta](/help/assets/manage-digital-assets.md)**
@@ -152,7 +153,7 @@ Om du markerar ett visst fragment öppnas ett verktygsfält som fokuserar på de
 
 >[!NOTE]
 >
->Använd **Öppna** för att öppna det markerade fragmentet i *original* redigerare.
+>Använd **Öppna** för att öppna det markerade fragmentet i *originalredigeraren*.
 
 >[!NOTE]
 >
@@ -166,46 +167,46 @@ Huvudpanelen/den högra panelen (tabellvyn) i konsolen innehåller en rad inform
    * Tillhandahåller en länk för att öppna fragmentet i redigeraren.
 * **Modell**
    * Endast information.
-   * Kan användas för [Snabb filtrering](#fast-filtering)
+   * Kan användas för [snabb filtrering](#fast-filtering)
 * **Mapp**
    * Tillhandahåller en länk för att öppna mappen i konsolen.
 Vid hovring över mappnamnet visas JCR-sökvägen.
 * **Status**
    * Endast information.
-   * Kan användas för [Snabb filtrering](#fast-filtering)
+   * Kan användas för [snabb filtrering](#fast-filtering)
 * **Förhandsgranska**
    * Endast information:
-      * **Synkroniserad**: Innehållsfragmentet är synkroniserat på **Upphovsman** och **Förhandsgranska** tjänster.
-      * **Slut på synkronisering**: Innehållsfragmentet är inte synkroniserat på **Upphovsman** och **Förhandsgranska** tjänster. Du måste **Publicera** till **Förhandsgranska** för att se till att de två instanserna är synkroniserade igen.
-      * blank: Innehållsfragmentet finns inte på **Förhandsgranska** service.
+      * **In sync**: Content Fragment is in-sync on the **Author** and **Preview** services.
+      * **Osynkroniserad**: Innehållsfragmentet är inte synkroniserat på tjänsterna **Författare** och **Förhandsgranska**. Du måste **Publish** till **Preview** för att se till att de två instanserna synkroniseras igen.
+      * blank: Innehållsfragmentet finns inte i tjänsten **Preview**.
 * **Ändrad**
    * Endast information.
 * **Ändrad av**
    * Endast information.
-   * Kan användas för [Snabb filtrering](#fast-filtering).
+   * Kan användas för [snabb filtrering](#fast-filtering).
 * **Taggar**
    * Endast information.
    * Visar alla taggar som hör till innehållsfragmentet, både Main och alla variationer.
-   * Kan användas för [Snabb filtrering](#fast-filtering).
-* **Publicerad den**
+   * Kan användas för [snabb filtrering](#fast-filtering).
+* **Publicerad**
    * Endast information.
-* **Publicerat av**
+* **Publicerad av**
    * Endast information.
-   * Kan användas för [Snabb filtrering](#fast-filtering).
+   * Kan användas för [snabb filtrering](#fast-filtering).
 * **Refererad av**:
-   * Tillhandahåller en länk som öppnar en dialogruta med alla [överordnade referenser](#parent-references-fragment)  av det fragmentet, inklusive referenser till innehållsfragment, upplevelsefragment och sidor. Om du vill öppna en viss referens klickar du på **Titel** i dialogrutan.
+   * Tillhandahåller en länk som öppnar en dialogruta med alla [överordnade referenser](#parent-references-fragment) för det fragmentet, inklusive referenser till innehållsfragment, upplevelsefragment och sidor. Om du vill öppna en viss referens klickar du på **Titel** i dialogrutan.
 
      ![Konsolen Innehållsfragment - dialogrutan Referenser](assets/cf-managing-console-references-dialog.png)
 
-* **Språk**: visa alla [Språk](#language-copies-fragment) kopior
+* **Språk**: ange eventuella [Språk](#language-copies-fragment)-kopior
 
-   * Anger språket för innehållsfragmentet tillsammans med det totala antalet lokala/lokala[Språk](#language-copies-fragment)  kopior som är associerade med innehållsfragmentet.
+   * Anger språket för innehållsfragmentet, tillsammans med det totala antalet lokala/[språkkopior](#language-copies-fragment) som är associerade med innehållsfragmentet.
 
-     ![Konsol för innehållsfragment - språkindikator](assets/cf-managing-console-language-indicator.png)
+     ![Konsolen för innehållsfragment - språkindikator](assets/cf-managing-console-language-indicator.png)
 
    * Välj antal för att öppna en dialogruta som visar alla språkkopior. Om du vill öppna en viss språkkopia klickar du på **Titel** i dialogrutan.
 
-     ![Konsol för innehållsfragment - språkdialogruta](assets/cf-managing-console-languages-dialog.png)
+     ![Konsolen för innehållsfragment - dialogrutan Språk](assets/cf-managing-console-languages-dialog.png)
 
 
 ## Skapa innehållsfragment {#creating-content-fragments}
@@ -220,52 +221,57 @@ Innan du skapar ditt innehållsfragment måste den underliggande modellen för i
 
 Så här skapar du ett innehållsfragment:
 
-1. Från **Innehållsfragment** konsol, välj **Skapa** (överst till höger).
+1. Välj **Skapa** (överst till höger) i konsolen **Innehållsfragment**.
 
    >[!NOTE]
    >
    >Om du vill ha platsen för det nya fragmentet fördefinierad kan du navigera till mappen där du vill skapa fragmentet, eller ange platsen när du skapar fragmentet.
 
-1. The **Nytt innehållsfragment** öppnas dialogrutan där du kan ange:
+1. Dialogrutan **Nytt innehållsfragment** öppnas och här kan du ange:
 
-   * **Plats** - Kompletteras automatiskt med den aktuella platsen, men du kan välja en annan plats om det behövs.
-   * **Content Fragment Model** - Välj den modell som ska användas som bas för fragmentet i listrutan.
+   * **Plats** - Automatiskt slutförd med den aktuella platsen, men du kan välja en annan plats om det behövs.
+   * **Modell för innehållsfragment** - Välj den modell som ska användas som bas för fragmentet i listrutan.
    * **Titel**
-   * **Namn** - Kompletteras automatiskt baserat på **Titel**, men du kan redigera den om det behövs.
+   * **Namn** - Kompletteras automatiskt baserat på **Titel**, men du kan redigera det om det behövs.
    * **Beskrivning**
 
    ![Dialogrutan Nytt innehållsfragment](assets/cf-managing-new-cf-dialog.png)
 
-1. Välj **Skapa**, eller **Skapa och öppna** för att behålla din definition.
+1. Välj **Skapa** eller **Skapa och öppna** om du vill behålla definitionen.
 
 ## Status för innehållsfragment {#statuses-content-fragments}
 
-Under dess existens kan ett innehållsfragment ha flera statusvärden, vilket visas i [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console) och [Innehållsfragmentsredigerare](/help/sites-cloud/administering/content-fragments/authoring.md):
+Under dess existens kan ett innehållsfragment ha flera statusvärden, vilket visas i [konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console) och [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md):
 
-* **Nytt** (grå) Ett nytt innehållsfragment har skapats, men har inget innehåll som aldrig har redigerats, eller öppnats, i redigeraren för innehållsfragment.
-* **Utkast** (blått) Någon har antingen redigerat eller öppnat (nytt) innehållsfragment i redigeraren för innehållsfragment - men det har ännu inte publicerats.
-* **Publicerad** (grönt) Innehållsfragmentet har publicerats.
-* **Ändrad** (orange) Innehållsfragmentet har redigerats efter att det publicerades (men innan ändringen publicerades).
-* **Opublicerad** (rött) Innehållsfragmentet har avpublicerats.
+* **Nytt** (grått)
+Ett nytt innehållsfragment har skapats, men har inget innehåll som aldrig har redigerats, eller öppnats, i redigeraren för innehållsfragment.
+* **Utkast** (blått)
+Någon har antingen redigerat eller öppnat (nytt) innehållsfragment i Content Fragment Editor - men det har ännu inte publicerats.
+* **Publicerad** (grön)
+Innehållsfragmentet har publicerats.
+* **Ändrad** (orange)
+Innehållsfragmentet har redigerats efter att det publicerades (men innan ändringen publicerades).
+* **Opublicerad** (röd)
+Innehållsfragmentet har avpublicerats.
 
 ## Redigera innehållet i fragmentet (och variationer) {#editing-the-content-of-your-fragment}
 
 >[!IMPORTANT]
 >
->Mer information finns här: [se Skapa innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md)
+>Mer information finns i [Skapa innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md)
 
 Så här öppnar du fragmentet för redigering:
 
-1. Använd **Innehållsfragment** för att navigera till platsen för ditt innehållsfragment.
-1. Öppna fragmentet för redigering genom att markera fragmentet och sedan **Öppna i ny redigerare** i verktygsfältet.
+1. Använd konsolen **Innehållsfragment** för att navigera till platsen för ditt innehållsfragment.
+1. Öppna fragmentet för redigering genom att markera fragmentet och sedan **Öppna i ny redigerare** från verktygsfältet.
 
-1. Fragmentredigeraren öppnas. Välj önskat **Variation** Gör önskade ändringar (de sparas automatiskt):
+1. Fragmentredigeraren öppnas. Välj önskad **variant** och gör önskade ändringar (de sparas automatiskt):
 
    ![Fragmentredigerare](assets/cf-managing-editor.png)
 
 ## Visa och hantera taggar {#manage-tags}
 
-På konsolen Innehållsfragment kan du visa alla använda taggar i **Taggar** kolumn, efter att ha säkerställt att [kolumnen visas](#select-columns-console).
+På konsolen Innehållsfragment kan du visa alla taggar som har använts i kolumnen **Taggar**. När du har kontrollerat att [kolumnen visas](#select-columns-console) kan du kontrollera det.
 
 ### Hantera taggar (konsol) {#manage-tags-console}
 
@@ -282,23 +288,23 @@ Så här hanterar du taggar:
 
 ### Visa och redigera, taggar (Editor) {#viewing-and-editing-tags}
 
-Du kan också visa och redigera de taggar som har tillämpats på ett fragment med hjälp av [Egenskaper](/help/sites-cloud/administering/content-fragments/authoring.md) i redigeraren. Den information som visas skiljer sig åt mellan **Huvud** och **Variationer**.
+Du kan också visa och redigera de taggar som har tillämpats på ett fragment på fliken [Egenskaper](/help/sites-cloud/administering/content-fragments/authoring.md) i redigeraren. Informationen som visas skiljer sig mellan **Main** och alla **Variations**.
 
 ## Visa och redigera, Egenskaper (Editor) {#viewing-and-editing-properties}
 
-Du kan visa och redigera egenskaperna (metadata) för ett fragment med hjälp av [Egenskaper](/help/sites-cloud/administering/content-fragments/authoring.md) i redigeraren. Den information som visas skiljer sig åt mellan **Huvud** och **Variationer**.
+Du kan visa och redigera egenskaperna (metadata) för ett fragment på fliken [Egenskaper](/help/sites-cloud/administering/content-fragments/authoring.md) i redigeraren. Informationen som visas skiljer sig mellan **Main** och alla **Variations**.
 
 ## Publicera och förhandsgranska ett fragment {#publishing-and-previewing-a-fragment}
 
 Du kan publicera dina innehållsfragment till:
 
-* den **[Publish Service](/help/headless/deployment/architecture.md)** - för fullständig, offentlig åtkomst
+* **[Publish-tjänsten](/help/headless/deployment/architecture.md)** - för fullständig, offentlig åtkomst
 
-* den **[Förhandsgranskningstjänst](/help/headless/deployment/architecture.md)** - förhandsgranska innehållet innan det är fullständigt tillgängligt
+* **[Förhandsgranskningstjänsten](/help/headless/deployment/architecture.md)** - för att förhandsgranska innehållet innan det är fullständigt tillgängligt
 
   >[!CAUTION]
   >
-  >Publicera innehållsfragment till **Förhandsgranskningstjänst** är bara tillgängligt från konsolen för innehållsfragment, med **Publicera** åtgärd.
+  >Publicering av innehållsfragment till **förhandsgranskningstjänsten** är bara tillgängligt från konsolen för innehållsfragment, med åtgärden **Publish** .
 
   >[!NOTE]
   >
@@ -306,30 +312,30 @@ Du kan publicera dina innehållsfragment till:
 
 >[!CAUTION]
 >
->Om fragmentet är baserat på en modell bör du se till att [modellen har publicerats](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#publishing-a-content-fragment-model).
+>Om fragmentet är baserat på en modell bör du kontrollera att modellen [har publicerats](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#publishing-a-content-fragment-model).
 >
 >Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
 
 ### Publicering {#publishing}
 
-Du kan publicera dina innehållsfragment med **Publicera** från antingen
+Du kan publicera dina innehållsfragment med alternativet **Publish** från antingen:
 
-* verktygsfältet i [Konsol för innehållsfragment](#actions-selected-content-fragment)
+* verktygsfältet i konsolen [Innehållsfragment](#actions-selected-content-fragment)
 
    * Markera ett eller flera fragment i listan.
 
-* verktygsfältet i [Redigera innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md#content-fragment-editor)
+* verktygsfältet i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md#content-fragment-editor)
 
-När du har valt **Publicera** åtgärd:
+När du har valt åtgärden **Publish**:
 
 1. Välj något av följande alternativ för att öppna rätt dialogruta:
 
-   * **Nu** - välj antingen **Publish** eller **Förhandsgranskningstjänst**; efter bekräftelse publiceras fragmentet omedelbart
-   * **Schema** - förutom den obligatoriska tjänsten kan du även välja datum och tid då fragmentet ska publiceras
+   * **Nu** - välj antingen **Publish-tjänsten** eller **förhandsgranskningstjänsten**. Efter bekräftelse publiceras fragmentet omedelbart
+   * **Schema** - förutom den tjänst som krävs kan du även välja datum och tid när fragmentet ska publiceras
 
 1. Ange all information i dialogrutan. För en schemalagd publiceringsbegäran:
 
-   ![Dialogrutan Publicera](assets/cf-managing-publish-dialog.png)
+   ![Dialogrutan Publish](assets/cf-managing-publish-dialog.png)
 
    >[!NOTE]
    >
@@ -341,19 +347,19 @@ Efter publiceringen uppdateras fragmentets status och visas i redigeraren och ko
 
 >[!NOTE]
 >
->Dessutom när du [publicera en sida som använder fragmentet](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing); fragmentet kommer att listas i sidreferenserna.
+>När du [publicerar en sida som använder fragmentet ](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing) visas dessutom fragmentet i sidreferenserna.
 
 ## Avpublicera ett fragment {#unpublishing-a-fragment}
 
 Du kan avpublicera innehållsfragment:
 
-* verktygsfältet i [Konsol för innehållsfragment](#actions-selected-content-fragment)
+* verktygsfältet i konsolen [Innehållsfragment](#actions-selected-content-fragment)
 
    * Markera ett eller flera fragment i listan.
 
-* verktygsfältet i [Redigera innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md#content-fragment-editor)
+* verktygsfältet i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md#content-fragment-editor)
 
-I båda fallen väljer du **Avpublicera** i verktygsfältet, följt av **Nu** eller **Schemalagd**.
+I båda fallen väljer du **Avpublicera** i verktygsfältet, följt av antingen **Nu** eller **Schemalagd**.
 
 När dialogrutan öppnas kan du välja rätt tjänst:
 
@@ -361,7 +367,7 @@ När dialogrutan öppnas kan du välja rätt tjänst:
 
 >[!NOTE]
 >
->The **Avpublicera** åtgärden visas bara när publicerade fragment är tillgängliga.
+>Åtgärden **Avpublicera** visas bara när publicerade fragment är tillgängliga.
 
 >[!CAUTION]
 >
@@ -371,7 +377,7 @@ När dialogrutan öppnas kan du välja rätt tjänst:
 
 <!-- CQDOC-21349: screenshot -->
 
-The **Ersätt** (i det övre verktygsfältet) för att söka efter och ersätta angiven text i de valda innehållsfragmenten.
+Åtgärden **Ersätt** är tillgänglig (i det övre verktygsfältet) för att söka efter och ersätta angiven text i de valda innehållsfragmenten.
 
 ![Sök och ersätt](assets/cf-managing-find-replace.png)
 
@@ -381,7 +387,7 @@ Innan du ersätter en produkt kontrolleras valideringskriterierna och du informe
 >
 >Åtgärden Sök och ersätt kan bara utföras på högst 20 markerade innehållsfragment (i taget).
 >
->Om du markerar fler än 20 innehållsfragment visas meddelandet **Det går inte att hitta och ersätta**.
+>Om du väljer fler än 20 innehållsfragment visas meddelandet **Det går inte att söka efter och ersätta**.
 
 <!-- CQDOC-21349: screenshot -->
 
@@ -391,21 +397,21 @@ Innan du ersätter en produkt kontrolleras valideringskriterierna och du informe
 
 Ta bort ett fragment:
 
-1. I **Innehållsfragment** konsolen navigerar till platsen för innehållsfragmentet.
+1. I konsolen **Innehållsfragment** navigerar du till platsen för innehållsfragmentet.
 1. Markera fragmentet.
 1. Välj **Ta bort** i verktygsfältet.
-1. Bekräfta **Ta bort** åtgärd.
+1. Bekräfta åtgärden **Ta bort**.
 
 >[!NOTE]
 >
->The **Ta bort** är inte tillgängligt för fragment som för närvarande publiceras, de måste avpubliceras först.
+>**Delete** är inte tillgänglig för fragment som är publicerade just nu. De måste avpubliceras först.
 
 ## Söka efter överordnade referenser för ditt fragment {#parent-references-fragment}
 
 Information om överordnade referenser finns i
 
-* **Referenser** kolumn i konsolen Innehållsfragment
-* den [överordnad referenslänk i det övre verktygsfältet i redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md#view-parent-references)
+* **Referenser**-kolumnen i konsolen Innehållsfragment
+* den [överordnade referenslänken i det övre verktygsfältet i redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md#view-parent-references)
 
 Båda innehåller en länk som öppnar en dialogruta med alla överordnade referenser till det fragmentet, inklusive referenser till innehållsfragment, Experience Fragments och pages. Om du vill öppna en viss referens klickar du på **Titel** eller länkikonen i dialogrutan.
 
@@ -417,26 +423,26 @@ Till exempel:
 
 Information om språkkopior finns på:
 
-* den **Språk** kolumn i [Konsol för innehållsfragment](#information-content-fragments)
-* den [Fliken Språkkopior i redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md#view-language-copies)
+* kolumnen **Språk** i konsolen [Innehållsfragment](#information-content-fragments)
+* fliken [Språkkopior i redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md#view-language-copies)
 
 Ikonen anger språkområdet för innehållsfragmentet tillsammans med det totala antalet språkområden/språkkopior som är associerade med innehållsfragmentet. Från konsolen:
 
-![Konsol för innehållsfragment - språkindikator](assets/cfc-console-language-indicator.png)
+![Konsolen för innehållsfragment - språkindikator](assets/cfc-console-language-indicator.png)
 
 Välj antal för att öppna en dialogruta som visar alla språkkopior. Om du vill öppna en viss språkkopia klickar du på **Titel** i dialogrutan.
 
-![Konsol för innehållsfragment - språkdialogruta](assets/cf-managing-console-languages-dialog.png)
+![Konsolen för innehållsfragment - dialogrutan Språk](assets/cf-managing-console-languages-dialog.png)
 
 ## Markera kolumner som visas i konsolen {#select-columns-console}
 
 Precis som med andra konsoler kan du konfigurera de kolumner som är synliga och tillgängliga för åtgärder:
 
-![Konsol för innehållsfragment - kolumnkonfiguration](assets/cf-managing-console-column-icon.png)
+![Konsolen för innehållsfragment - kolumnkonfiguration](assets/cf-managing-console-column-icon.png)
 
 Här visas en lista med kolumner som du kan dölja eller visa:
 
-![Konsol för innehållsfragment - kolumnkonfiguration](assets/cf-managing-console-column-selection.png)
+![Konsolen för innehållsfragment - kolumnkonfiguration](assets/cf-managing-console-column-selection.png)
 
 ## Filtrera fragment {#filtering-fragments}
 
@@ -446,30 +452,30 @@ På panelen Filter finns:
    * inklusive innehållsfragmentmodeller, lokalisering, taggar, statusfält med flera
    * ett eller flera predikat kan markeras och kombineras för att skapa filtret
 * **Uteslut undermappsobjekt**, vilket ger dig möjlighet att utesluta innehållsfragment som lagras i undermappar
-* möjlighet att **Spara** din konfiguration
+* möjlighet att **spara** din konfiguration
 * alternativet att hämta ett sparat sökfilter för återanvändning
 
-När du har valt **Filtrera med** visas (under sökrutan). De kan avmarkeras därifrån. Till exempel:
+När du har valt alternativet **Filtrera efter** visas alternativen (under sökrutan). De kan avmarkeras därifrån. Till exempel:
 
 <!-- CQDOC-21349: screenshot -->
 
-![Konsol för innehållsfragment - filtrering](assets/cf-managing-console-filter.png)
+![Konsolen för innehållsfragment - filtrering](assets/cf-managing-console-filter.png)
 
 ### Snabb filtrering {#fast-filtering}
 
 Du kan också välja ett predikat genom att klicka på ett visst kolumnvärde i listan. Du kan välja ett eller flera värden för att kombinera predikat.
 
-Välj till exempel **Publicerad** i **Status** kolumn:
+Välj till exempel **Publicerad** i kolumnen **Status**:
 
 >[!NOTE]
 >
->Snabb filtrering stöds bara för **Modell**, **Status**, **Ändrad av**, **Taggar** och **Publicerat av** kolumner.
+>Snabb filtrering stöds bara för kolumnerna **Model**, **Status**, **Modified By**, **Tags** och **Published By By** .
 
-![Konsol för innehållsfragment - filtrering](assets/cf-managing-console-fast-filter-overview.png)
+![Konsolen för innehållsfragment - filtrering](assets/cf-managing-console-fast-filter-overview.png)
 
 När du har valt det här alternativet visas det som ett filterpredikat och listan filtreras därefter:
 
-![Konsol för innehållsfragment - filtrering](assets/cf-managing-console-fast-filter-criteria.png)
+![Konsolen för innehållsfragment - filtrering](assets/cf-managing-console-fast-filter-criteria.png)
 
 ## Söka efter fragment {#searching-fragments}
 
@@ -477,14 +483,14 @@ I sökrutan går det att söka i heltext. Ange dina söktermer i sökrutan:
 
 <!-- CQDOC-21349: screenshot -->
 
-![Konsolen Innehållsfragment - Sökning](assets/cf-managing-console-search-specification.png)
+![Konsolen för innehållsfragment - söker](assets/cf-managing-console-search-specification.png)
 
 Ger de valda resultaten:
 
 <!-- CQDOC-21349: screenshot -->
 
-![Konsol för innehållsfragment - sökresultat](assets/cf-managing-console-search-results.png)
+![Konsolen för innehållsfragment - sökresultat](assets/cf-managing-console-search-results.png)
 
-I sökrutan kan du även snabbt komma åt **Senaste innehållsfragment** och **Sparade sökningar**:
+Sökrutan ger dig även snabb åtkomst till **Senaste innehållsfragment** och **sparade sökningar**:
 
-![Konsol för innehållsfragment - senaste och sparade](assets/cf-managing-console-search-saved.png)
+![Konsolen för innehållsfragment - senaste och sparade](assets/cf-managing-console-search-saved.png)

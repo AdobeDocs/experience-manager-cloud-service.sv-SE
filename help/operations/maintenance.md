@@ -46,14 +46,14 @@ Följande tabell visar vilka underhållsuppgifter som är tillgängliga.
   <tr>
     <td>Rensa version</td>
     <td>Kund</td>
-    <td>Borttagning av version är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Underhållsaktiviteter vid rensning av version och granskningslogg</a> -avsnitt.<br/><br/>Rensning kommer snart att aktiveras som standard, och dessa värden kan åsidosättas.<br>
+    <td>Borttagning av version är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i avsnittet <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Rensa och Rensa granskningslogg </a>.<br/><br/>Rensning kommer snart att vara aktiverat som standard, med dessa värden åsidosatta.<br>
    </td>
   </td>
   </tr>
   <tr>
     <td>Rensa granskningslogg</td>
     <td>Kund</td>
-    <td>Rensa granskningslogg är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Underhållsaktiviteter vid rensning av version och granskningslogg</a> -avsnitt.<br/><br/>Rensning kommer snart att aktiveras som standard, och dessa värden kan åsidosättas.<br>
+    <td>Rensa granskningslogg är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i avsnittet <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Rensa version och Rensa granskningslogg - underhållsaktiviteter</a>.<br/><br/>Rensning kommer snart att vara aktiverat som standard, med dessa värden åsidosatta.<br>
    </td>
    </td>
   </tr>
@@ -67,24 +67,24 @@ Följande tabell visar vilka underhållsuppgifter som är tillgängliga.
     <td>Ad hoc-aktivitetsrensning</td>
     <td>Kund</td>
     <td>
-    <p>Måste göras i git. Åsidosätt den färdiga konfigurationsnoden för underhållsperioden under <code>/libs</code> genom att skapa egenskaper under mappen <code>/apps/settings/granite/operations/maintenance/granite_weekly</code>, <code>granite_daily</code> eller <code>granite_monthly</code>.</p>
-    <p>Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation. Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan. Ge den ett namn <code>granite_TaskPurgeTask</code>, med attribut <code>sling:resourceType</code> ange till <code>granite/operations/components/maintenance/task</code> och-attribut <code>granite.maintenance.name</code> ange till <code>TaskPurge</code>. Konfigurera OSGI-egenskaperna, se <code>com.adobe.granite.taskmanagement.impl.purge.TaskPurgeMaintenanceTask</code> för listan med egenskaper.</p>
+    <p>Måste göras i git. Åsidosätt den körklara konfigurationsnoden för underhållsfönstret under <code>/libs</code> genom att skapa egenskaper under mappen <code>/apps/settings/granite/operations/maintenance/granite_weekly</code>, <code>granite_daily</code> eller <code>granite_monthly</code>.</p>
+    <p>Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation. Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan. Ge den namnet <code>granite_TaskPurgeTask</code>, med attributet <code>sling:resourceType</code> inställt på <code>granite/operations/components/maintenance/task</code> och attributet <code>granite.maintenance.name</code> inställt på <code>TaskPurge</code>. Konfigurera OSGI-egenskaperna, se <code>com.adobe.granite.taskmanagement.impl.purge.TaskPurgeMaintenanceTask</code> för en lista över egenskaper.</p>
   </td>
   </tr>
     <tr>
     <td>Rensa arbetsflöde</td>
     <td>Kund</td>
     <td>
-    <p>Måste göras i git. Åsidosätt den färdiga konfigurationsnoden för underhållsperioden under <code>/libs</code> genom att skapa egenskaper under mappen <code>/apps/settings/granite/operations/maintenance/granite_weekly</code>, <code>granite_daily</code> eller <code>granite_monthly</code>. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation.</p>
-    <p>Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den) <code>granite_WorkflowPurgeTask</code>) med lämpliga egenskaper. Konfigurera OSGI-egenskaperna finns i <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/workflows-administering.html#regular-purging-of-workflow-instances">AEM 6.5 Maintenance Task - dokumentation</a>.</p>
+    <p>Måste göras i git. Åsidosätt den körklara konfigurationsnoden för underhållsfönstret under <code>/libs</code> genom att skapa egenskaper under mappen <code>/apps/settings/granite/operations/maintenance/granite_weekly</code>, <code>granite_daily</code> eller <code>granite_monthly</code>. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation.</p>
+    <p>Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den <code>granite_WorkflowPurgeTask</code>) med lämpliga egenskaper. Konfigurera OSGI-egenskaperna i <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/workflows-administering.html#regular-purging-of-workflow-instances">AEM 6.5-underhållsaktivitetens dokumentation</a>.</p>
   </td>
   </tr>
   <tr>
     <td>Rensa projekt</td>
     <td>Kund</td>
     <td>
-    <p>Måste göras i git. Åsidosätt den färdiga konfigurationsnoden för underhållsperioden under <code>/libs</code> genom att skapa egenskaper under mappen <code>/apps/settings/granite/operations/maintenance/granite_weekly</code>, <code>granite_daily</code> eller <code>granite_monthly</code>. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation.</p>
-    <p>Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den) <code>granite_ProjectPurgeTask</code>) med lämpliga egenskaper. Se listan över OSGI-egenskaper under"Adobe Projects Purge Configuration".</p>
+    <p>Måste göras i git. Åsidosätt den körklara konfigurationsnoden för underhållsfönstret under <code>/libs</code> genom att skapa egenskaper under mappen <code>/apps/settings/granite/operations/maintenance/granite_weekly</code>, <code>granite_daily</code> eller <code>granite_monthly</code>. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation.</p>
+    <p>Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den <code>granite_ProjectPurgeTask</code>) med lämpliga egenskaper. Se listan över OSGI-egenskaper under"Adobe Projects Purge Configuration".</p>
   </td>
   </tr>
   </tbody>
@@ -104,8 +104,8 @@ Följande tabell visar vilka underhållsuppgifter som är tillgängliga.
     <td>JCR-noddefinition</td>
   <td>
   <p><strong>windowSchedule=day</strong> (det här värdet ska inte ändras)</p>
-  <p><strong>windowStartTime=HH:MM</strong> med som 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska börja köras.</p>
-  <p><strong>windowEndTime=HH:MM</strong> med som 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska sluta köras om de inte redan har slutförts.</p>
+  <p><strong>windowStartTime=HH:MM</strong> använder som 24-timmars klocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska börja köras.</p>
+  <p><strong>windowEndTime=HH:MM</strong> använder som 24-timmars klocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret Dagligt underhåll ska sluta köras om de inte redan har slutförts.</p>
   <p>En underhållsaktivitet kan inte utföras mer än en gång under den här tidsramen.</p>
   </td> 
   </tr>
@@ -115,10 +115,10 @@ Följande tabell visar vilka underhållsuppgifter som är tillgängliga.
     <td>JCR-noddefinition</td>
     <td>
     <p><strong>windowSchedule=week</strong> (det här värdet ska inte ändras)</p>
-    <p><strong>windowStartTime=HH:MM</strong> med som 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till veckounderhållet ska börja köras.</p>
-    <p><strong>windowEndTime=HH:MM</strong> med som 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till veckounderhållet ska sluta köras om de inte redan har slutförts.</p>
+    <p><strong>windowStartTime=HH:MM</strong> använder som 24-timmars klocka. Definierar när underhållsaktiviteterna som är kopplade till veckounderhållet ska börja köras.</p>
+    <p><strong>windowEndTime=HH:MM</strong> använder som 24-timmars klocka. Definierar när underhållsaktiviteterna som är kopplade till veckounderhållet ska sluta köras om de inte redan har slutförts.</p>
     <p>En underhållsaktivitet kan inte utföras mer än en gång under den här tidsramen.</p>
-    <p><strong>windowScheduleWeekdays= Array med två värden från 1-7 (till exempel [5,5])</strong> Det första värdet i arrayen är startdagen när jobbet schemaläggs och det andra värdet är slutdagen då jobbet stoppas. Den exakta tiden för start och slut styrs av windowStartTime respektive windowEndTime.</p>
+    <p><strong>windowScheduleWeekdays= Array med två värden från 1-7 (till exempel [5,5])</strong> Det första värdet i arrayen är startdagen när jobbet schemaläggs och det andra värdet är slutdagen när jobbet stoppas. Den exakta tiden för start och slut styrs av windowStartTime respektive windowEndTime.</p>
     </td>
   </tr>
   <tr>
@@ -127,10 +127,10 @@ Följande tabell visar vilka underhållsuppgifter som är tillgängliga.
     <td>JCR-noddefinition</td>
     <td>
     <p><strong>windowSchedule=monthly</strong> (det här värdet ska inte ändras)</p>
-    <p><strong>windowStartTime=HH:MM</strong> med som 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret för månatligt underhåll ska börja köras.</p>
-    <p><strong>windowEndTime=HH:MM</strong> med som 24-timmarsklocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret för månatligt underhåll ska sluta köras om de inte redan har slutförts.</p>
+    <p><strong>windowStartTime=HH:MM</strong> använder som 24-timmars klocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret för månatligt underhåll ska börja köras.</p>
+    <p><strong>windowEndTime=HH:MM</strong> använder som 24-timmars klocka. Definierar när underhållsaktiviteterna som är kopplade till fönstret för månatligt underhåll ska sluta köras om de inte redan har slutförts.</p>
     <p>En underhållsaktivitet kan inte utföras mer än en gång under den här tidsramen.</p>
-    <p><strong>windowScheduleWeekdays=Array med två värden från 1-7 (till exempel [5,5])</strong> Det första värdet i arrayen är startdagen när jobbet schemaläggs och det andra värdet är slutdagen då jobbet stoppas. Den exakta tiden för start och slut styrs av windowStartTime respektive windowEndTime.</p>
+    <p><strong>windowScheduleWeekdays=Array med två värden från 1-7 (till exempel [5,5])</strong> Det första värdet i arrayen är startdagen när jobbet schemaläggs och det andra värdet är slutdagen när jobbet stoppas. Den exakta tiden för start och slut styrs av windowStartTime respektive windowEndTime.</p>
     <p><strong>windowFirstLastStartDay= 0/1</strong> 0 att schemalägga den första veckan i månaden eller 1 att schemalägga den sista veckan i månaden. Om ett värde saknas schemaläggs jobben effektivt på den dag som styrs av windowScheduleWeekdays (varje månad).</p>
     </td>
     </tr>
@@ -219,21 +219,21 @@ Deklarera en konfigurationsfil och distribuera den enligt anvisningarna i följa
 > 
 >På samma sätt måste du behålla granskningsloggens deklarerade nod och inte ta bort den när du distribuerar granskningsloggens tömningsnod i konfigurationsfilen.
 
-**1** - skapa följande mapp- och filstruktur i den översta mappen i ditt projekt i Git:
+**1** - skapa följande mapp- och filstruktur i mappen på den översta nivån i ditt projekt i Git:
 
 ```
 config/
      mt.yaml
 ```
 
-**2** - Deklarera egenskaper i konfigurationsfilen som innehåller:
+**2** - Deklarera egenskaper i konfigurationsfilen, som innehåller:
 
 * en&quot;kind&quot;-egenskap med värdet&quot;MaintenanceTasks&quot;.
 * en &quot;version&quot;-egenskap (för närvarande är vi i version 1).
-* ett valfritt&quot;metadata&quot;-objekt med egenskapen `envTypes` med en kommaavgränsad lista över den miljötyp (dev, stage, prod) som den här konfigurationen är giltig för. Om inget metadataobjekt har deklarerats är konfigurationen giltig för alla miljötyper.
-* ett dataobjekt med båda `versionPurge` och `auditLogPurge` objekt.
+* ett valfritt metadataobjekt med egenskapen `envTypes` med en kommaavgränsad lista över den miljötyp (dev, stage, prod) som den här konfigurationen är giltig för. Om inget metadataobjekt har deklarerats är konfigurationen giltig för alla miljötyper.
+* ett dataobjekt med både `versionPurge` och `auditLogPurge` objekt.
 
-Se definitioner och syntax för `versionPurge` och `auditLogPurge` objekt nedan.
+Se definitioner och syntax för objekten `versionPurge` och `auditLogPurge` nedan.
 
 Du bör strukturera konfigurationen på liknande sätt som i följande exempel:
 
@@ -277,7 +277,7 @@ Kom ihåg att för att konfigurationen ska vara giltig:
 
 Snabba utvecklingsmiljöer (RDE) har inte stöd för tömning. För andra miljötyper i produktionsprogram (icke-sandlådeprogram) skapar du en riktad distributionskonfigurationspipeline i Cloud Manager.
 
-Se [konfigurera produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) och [konfigurera icke-produktionsrörledningar](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) för mer information.
+Mer information finns i [konfigurera produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) och [konfigurera icke-produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md).
 
 ### Rensa version {#version-purge}
 
@@ -309,11 +309,11 @@ Miljöer som skapades innan standardrensningen är aktiverad kommer att ha stand
 
 Tillåtna egenskaper visas nedan.
 
-Kolumner som anger *standard* ange standardvärdena i framtiden, när standardvärdena tillämpas, *TBD* speglar ett miljö-ID som fortfarande inte är fastställt.
+Kolumnerna som indikerar *standard* anger standardvärdena i framtiden, när standardvärden används. *TBD* visar ett miljö-ID som fortfarande inte har bestämts.
 
 | Egenskaper | framtida standard för envs>TBD | framtida standard för envs&lt;=TBD | obligatoriskt | type | Värden |
 |-----------|--------------------------|-------------|-----------|---------------------|-------------|
-| banor | [&quot;/content&quot;] | [&quot;/content&quot;] | Ja | array med strängar | Anger under vilka sökvägar versioner ska rensas när nya versioner skapas.  Kunder måste deklarera den här egenskapen, men det enda tillåtna värdet är /content. |
+| banor | [/content ] | [/content ] | Ja | array med strängar | Anger under vilka sökvägar versioner ska rensas när nya versioner skapas.  Kunder måste deklarera den här egenskapen, men det enda tillåtna värdet är /content. |
 | maximumAgeDays | 30 | 2557 (7 år + 2 skottdagar) | Ja | Heltal | Alla versioner som är äldre än det konfigurerade värdet tas bort. Om värdet är 0 utförs inte rensning baserat på versionens ålder. |
 | maximumVersions | 5 | 0 (ingen gräns) | Ja | Heltal | Alla versioner som är äldre än den n:te nyaste versionen tas bort. Om värdet är 0 utförs inte rensning baserat på antalet versioner. |
 | minimumVersions | 1 | 1 | Ja | Heltal | Det minsta antalet versioner som behålls oavsett ålder. Observera att minst en version alltid behålls. Värdet måste vara 1 eller högre. |
@@ -332,9 +332,9 @@ maximumVersions = 10
 minimumVersions = 2
 ```
 
-Om det finns 11 versioner dag 23, kommer den äldsta versionen att rensas nästa gång underhållsåtgärden rensas, eftersom `maximumVersions` egenskapen är inställd på 10.
+Om det finns 11 versioner dag 23, kommer den äldsta versionen att rensas nästa gång underhållsaktiviteten rensas, eftersom egenskapen `maximumVersions` är inställd på 10.
 
-Om det finns 5 versioner på dag 31 kommer endast 3 att rensas sedan `minimumVersions` egenskapen är inställd på 2.
+Om det finns 5 versioner på dag 31 kommer endast 3 att rensas eftersom egenskapen `minimumVersions` är inställd på 2.
 
 Exempel:
 
@@ -344,7 +344,7 @@ maximumVersions = 0
 minimumVersions = 1
 ```
 
-Inga versioner som är nyare än 30 dagar rensas sedan `maximumVersions` egenskapen är inställd på 0.
+Inga versioner som är senare än 30 dagar rensas eftersom egenskapen `maximumVersions` är inställd på 0.
 
 En version som är äldre än 30 dagar behålls.
 
@@ -375,7 +375,7 @@ Miljöer som skapades innan standardrensningen är aktiverad kommer att ha stand
 
 Tillåtna egenskaper visas nedan.
 
-Kolumner som anger *standard* ange standardvärdena i framtiden, när standardvärdena tillämpas, *TBD* speglar ett miljö-ID som fortfarande inte är fastställt.
+Kolumnerna som indikerar *standard* anger standardvärdena i framtiden, när standardvärden används. *TBD* visar ett miljö-ID som fortfarande inte har bestämts.
 
 
 | Egenskaper | framtida standard för envs>TBD | framtida standard för envs&lt;=TBD | obligatoriskt | type | Värden |
@@ -383,4 +383,4 @@ Kolumner som anger *standard* ange standardvärdena i framtiden, när standardv�
 | regler | - | - | Ja | Objekt | En eller flera av följande noder: replikering, sidor, dam. Var och en av dessa noder definierar regler, med egenskaperna nedan. Alla egenskaper måste deklareras. |
 | maximumAgeDays | 7 dagar | för alla, 2557 (7 år + 2 skottdagar) | Ja | heltal | För replikering, sidor eller damm: antalet dagar som granskningsloggarna sparas. Granskningsloggar som är äldre än det konfigurerade värdet rensas. |
 | contentPath | &quot;/content&quot; | &quot;/content&quot; | Ja | Sträng | Sökvägen som granskningsloggarna rensas under, för den relaterade typen. Måste vara inställt på /content. |
-| typer | alla värden | alla värden | Ja | Uppräkningsmatris | För **replikering**, är de uppräknade värdena: Aktivera, Inaktivera, Ta bort, Testa, Invertera, Intern omröstning. För **sidor**&#x200B;är de uppräknade värdena: PageCreated, PageModified, PageMoved, PageDeleted, VersionCreated, PageRestistället, PageRolled Out, PageValid, PageInvalid. För **dam**&#x200B;är de uppräknade värdena: ASSET_EXPIRING, METADATA_UPDATED, ASSET_EXPIRED, ASSET_REMOVED, RESTORED, ASSET_MOVED, ASSET_VIEWED, PROJECT_VIEWED, PUBLISHED_EXTERNAL, COLLECTION_VIEWED, VERSIONED, ADDED_COMMENT, RENDITION_UPDATED, ACCEPTED, DOWNLOADED, SUBASSET_UPDATED, SUBASSET_REMOVED, ASSET_CREATED, ASSET_SHARED, RENDITION_REMOVED, ASSET_PUBLISHED, ORIGINAL_UPDATED, RENDITION_DOWNLOADED, READED JOBBAD. |
+| typer | alla värden | alla värden | Ja | Uppräkningsmatris | De uppräknade värdena för **replikering** är: Aktivera, Inaktivera, Ta bort, Testa, Invertera, Intern omröstning. För **sidor** är de uppräknade värdena: PageCreated, PageModified, PageMoved, PageDeleted, VersionCreated, PageRestated, PageRolled Out, PageValid, PageInvalid. De uppräknade värdena för **dam** är: ASSET_EXPIRING, METADATA_UPDATED, ASSET_EXPIRED, ASSET_REMOVED, RESTORED, ASSET_MOVED, ASSET_VIEWED, PROJECT_VIEWED, PUBLISHED_EXTERNAL, COLLECTION_VIEWED, VERSIONED, ADDED_COMMENT, RENDITION_UPDATED, ACCEPTED, DOWNLOADED, SUBASSET_UPDATED, SUBASSET_REMOVED, ASSET_CREATED, ASSET_SHARED, RENDITION_REMOVED, ASSET_PUBLISHED, ORIGINAL_UPDATED, RENDITION_TION HÄMTAD, AVVISAD. |

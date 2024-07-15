@@ -18,19 +18,19 @@ ht-degree: 0%
 Nedan följer de tillgängliga JavaScript API-referenserna för NPM-modulerna för AEM SDK-ramverket för redigeraren.
 
 * [Komponentmappning](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
-* [Sidmodellshanteraren](https://www.npmjs.com/package/@adobe/aem-spa-model-manager)
+* [Sidmodellhanteraren](https://www.npmjs.com/package/@adobe/aem-spa-model-manager)
 * [Reagera på redigerbara komponenter](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
-* [Redigerbara komponenter för angular](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
+* [Redigerbara komponenter för Angular](https://www.npmjs.com/package/@adobe/aem-angular-editable-components)
 
-## Öppna källdatabaser för GitHub {#github-repositories}
+## Öppna Source GitHub-databaser {#github-repositories}
 
 Nedan följer databaserna med öppen källkod i GitHub för SPA bibliotek.
 
 * [Komponentmappning](https://github.com/adobe/aem-spa-component-mapping)
-* [Sidmodellshanteraren](https://github.com/adobe/aem-spa-page-model-manager)
+* [Sidmodellhanteraren](https://github.com/adobe/aem-spa-page-model-manager)
 * [Reagera på redigerbara komponenter](https://github.com/adobe/aem-react-editable-components)
-* [Redigerbara komponenter för angular](https://github.com/adobe/aem-angular-editable-components)
-* [SPA](https://github.com/adobe/aem-spa-project-core)
+* [Redigerbara komponenter för Angular](https://github.com/adobe/aem-angular-editable-components)
+* [SPA projektkärna](https://github.com/adobe/aem-spa-project-core)
 
 >[!TIP]
 >

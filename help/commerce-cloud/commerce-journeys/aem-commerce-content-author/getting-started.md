@@ -17,7 +17,7 @@ Lär dig mer om Adobe Experience Manager (AEM) CIF Authoring.
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om denna AEM och Commerce resa [Läs om AEM och Commerce](/help/commerce-cloud/introduction.md)har du lärt dig grunderna i och begreppen headless CMS och AEM Content och Commerce.
+I det föregående dokumentet om den här AEM och Commerce-resan [Lär dig mer om AEM och Commerce](/help/commerce-cloud/introduction.md) lärde du dig grunderna i och begreppen headless CMS och AEM Content och Commerce.
 
 Den här artikeln bygger på dessa grunder.
 
@@ -70,26 +70,26 @@ Bläddra i katalogstrukturen till vänster och markera kategorin.
 Produkcockpiten är en central plats där man snabbt kommer åt produktkatalogen med allt berikat innehåll. I en av de kommande modulerna lär du dig att berika produktdata med innehåll. För närvarande fokuserar vi på att få tillgång till produktdata.
 
 På huvudmenyn klickar du på E-handel för att visa en lista över alla bifogade produktkataloger.
-![e-postmenyalternativ](assets/commerce-menu-item.png)
+![E-handelsmenyobjekt](assets/commerce-menu-item.png)
 
 Här visas en lista med alla anslutna produktkataloger.
-![integrerade kataloger](assets/cockpit-Integrated-catalogs.png)
+![cockpitintegrerade kataloger](assets/cockpit-Integrated-catalogs.png)
 
 Produktkatalogen visar som standard alla förstanivåkategorier med alla produkter. Om du klickar på en kategori öppnas den kategorin med alla relaterade produkter och underkategorier, inklusive deras produkter.
-![produktkatalog för cockpit](assets/cockpit-product-catalog.png)
+![cockpitproduktkatalog](assets/cockpit-product-catalog.png)
 
 Du kan öppna produktegenskaperna genom att klicka på egenskapsikonen. Ikonen visas genom att du håller pekaren över en produktruta.
-![egenskaper för cockpit-produkter](assets/cockpit-properties.png)
+![cockpitproduktegenskaper](assets/cockpit-properties.png)
 
-Alla produktegenskaper är skrivskyddade eftersom data läses in i realtid från den anslutna serverdelen. Du måste ändra produktegenskaper i det serverdelssystem som är arkivsystemet. Fliken **Varianter** visas endast om produkten har variationer. Om du klickar på fliken visas alla variationer med dess attribut.
-![cockpitproduktvarianter](assets/cockpit-properties-variants.png)
+Alla produktegenskaper är skrivskyddade eftersom data läses in i realtid från den anslutna serverdelen. Du måste ändra produktegenskaper i det serverdelssystem som är arkivsystemet. Fliken **Varianter** visas bara om produkten har variationer. Om du klickar på fliken visas alla variationer med dess attribut.
+![produktvarianter för cockpit](assets/cockpit-properties-variants.png)
 
 De återstående flikarna visar allt AEM som är kopplat till produkten. Dessa flikar beskrivs i en av de kommande modulerna.
 
 ## AEM Omnisearch {#omnisearch}
 
 Att använda Omnissearch är ett enkelt sätt att hitta AEM med hjälp av fulltextsökning. CIF utökar Omnissearch med fulltextsökning av produktkataloger med tillhörande AEM.
-![e-postmenyalternativ](assets/omnisearch.png)
+![E-handelsmenyobjekt](assets/omnisearch.png)
 
 Omnisearch kör en fulltextsökning i e-handelsservern för att hitta alla relaterade produkter. Resultatet visas under **Visa alla produkter**. Omnissearch söker även AEM efter innehåll som är kopplat till den sökda produkten. Resultaten anges i respektive AEM. I det här exemplet är ett innehållsfragment relaterat till produkten.
 
@@ -101,10 +101,10 @@ Nu när du är klar med den här delen av resan bör du:
 * Så här kommer du åt produktkatalogen i AEM med produkt- och kategoriväljare
 * Åtkomst till innehåll och e-handelsdata via produktcockpit och AEM Omnisearch
 
-Bygg vidare på denna kunskap och fortsätt din resa genom att nästa gång du granskar dokumentet [Hantera sidor och mallar för produktkataloger](catalog-templates.md), där du får lära dig hur du bygger och anpassar din första produktkatalogupplevelse.
+Bygg vidare på den här kunskapen och fortsätt din resa genom att gå igenom dokumentet [Hantera sidor och mallar för produktkataloger](catalog-templates.md) där du får lära dig hur du skapar och anpassar din första produktkatalogsupplevelse.
 
 ## Ytterligare resurser {#additional-resources}
 
-Vi rekommenderar att du går vidare till nästa del av resan[Hantera sidor och mallar för produktkataloger](catalog-templates.md)-Nedan följer några valfria resurser som gör en djupdykning i några koncept som nämns här. Dessa valfria resurser krävs dock inte för att fortsätta resan.
+Vi rekommenderar att du går vidare till nästa del av resan -[Hantera produktkatalogsidor och mallar](catalog-templates.md) - men följande är valfria resurser som gör en djupdykning i några koncept som nämns här. Dessa valfria resurser krävs dock inte för att fortsätta resan.
 
 * [Konfigurera butiker och kataloger](/help/commerce-cloud/getting-started.md#catalog)

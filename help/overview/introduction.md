@@ -15,11 +15,11 @@ ht-degree: 40%
 
 [Adobe Experience Manager](https://www.adobe.com/marketing/experience-manager.html) (AEM) finns nu som en molntjänst.
 
-Adobe Experience Manager (AEM) as a Cloud Service är det senaste erbjudandet på AEM produktlinje, vilket hjälper er att fortsätta erbjuda era kunder personaliserade, innehållsledda upplevelser. Den ger molnbaserad flexibilitet för att snabba upp time to value och är utbyggbar för att uppfylla just era verksamhetskrav. Ni kan bygga vidare på tidigare investeringar och innovationer genom att bevara och utöka alla era användningsfall och funktioner.
+Adobe Experience Manager (AEM) as a Cloud Service är det senaste erbjudandet på AEM produktlinje, vilket hjälper er att även i fortsättningen erbjuda era kunder personaliserade, innehållsledda upplevelser. Den ger molnbaserad flexibilitet för att snabba upp time to value och är utbyggbar för att uppfylla just era verksamhetskrav. Ni kan bygga vidare på tidigare investeringar och innovationer genom att bevara och utöka alla era användningsfall och funktioner.
 
 Med AEM as a Cloud Service kan du utnyttja de AEM programmen på ett molnbaserat sätt så att du kan:
 
-* Skala upp DevOps-satsningarna med Cloud Manager: CI/CD-ramverk, autoskalning, API-anslutning, flexibla driftsättningslägen, portar för kodkvalitet, genomskinlighet för tjänstleverans och guidade uppdateringar.
+* Anpassa DevOps-möjligheterna med Cloud Manager: CI/CD-ramverk, autosaling, API-anslutning, flexibla driftsättningslägen, portar för kodkvalitet, genomskinlighet för tjänstleverans och guidade uppdateringar.
 
 * Gör det möjligt för utvecklare att lägga till automatisering i applikationsutvecklingsrutiner.
 
@@ -31,7 +31,7 @@ Med AEM as a Cloud Service kan du utnyttja de AEM programmen på ett molnbaserat
 
 * Säkerställ maximal flexibilitet och effektivitet med optimerade prestandatopologier.
 
-* Dra nytta av AEM as a Cloud Service integrering med Adobe Experience Cloud för att skapa bättre kundupplevelser med produkter för webbmarknadsföring och webbanalys.
+* Utnyttja AEM as a Cloud Service djupgående integrering med Adobe Experience Cloud för att ge bättre kundupplevelser med produkter för webbmarknadsföring och webbanalys.
 
 * Använd verktyg som snabbar upp migreringen, t.ex. kodomfaktorisering, innehållsöverföring med mera.
 
@@ -48,7 +48,7 @@ Med AEM as a Cloud Service
 >[!NOTE]
 >Se [Terminologi](terminology.md) för några av de nya termer som har introducerats med AEM as a Cloud Service.
 
-## As a Cloud Service värdeökning {#value-added-as-a-cloud-service}
+## As a Cloud Service värde {#value-added-as-a-cloud-service}
 
 AEM uppnår dessa mål genom att utnyttja de viktigaste egenskaperna hos moderna Cloud Services:
 
@@ -72,14 +72,14 @@ AEM uppnår dessa mål genom att utnyttja de viktigaste egenskaperna hos moderna
 
 * [Nyheter och skillnader](/help/overview/what-is-new-and-different.md) i Adobe Experience Manager as a Cloud Service och tidigare versioner
 * [Arkitekturen](/help/overview/architecture.md) i Adobe Experience Manager as a Cloud Service
-* [Betydande ändringar i AEM as a Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
+* [Noterbara ändringar i AEM as a Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
 * [Betydande förändringar av AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
 * [Betydande förändringar av AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
-* [Introduktion till as a Cloud Service resurser](/help/assets/overview.md)
+* [Nu kommer Assets as a Cloud Service](/help/assets/overview.md)
 * [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
 
 >[!TIP]
 >
->När du har en översikt över AEM as a Cloud Service kan du snabbt komma igång genom att granska [Onboardresa](/help/journey-onboarding/overview.md).
+>När du har en översikt över AEM as a Cloud Service kan du komma igång snabbt genom att granska [Onboarding Journey](/help/journey-onboarding/overview.md).
 >
->Är du redan upptagen eller redo att dyka upp i testning AEM funktioner? Installera [AEM Reference Demos Add-on](/help/journey-sites/demos-add-on/overview.md) för att utforska AEM kraftfulla funktioner med hjälp av avancerade exempel.
+>Har du redan börjat eller är redo att testa AEM funktioner? Installera tillägget [AEM Reference Demos](/help/journey-sites/demos-add-on/overview.md) för att utforska AEM kraftfulla funktioner med hjälp av avancerade exempel.

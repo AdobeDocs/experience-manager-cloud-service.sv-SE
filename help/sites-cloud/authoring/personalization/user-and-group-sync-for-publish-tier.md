@@ -36,14 +36,15 @@ Du kan skriva en egen registreringskod som innehåller användarens användarnam
 
 1. Visa en anpassad AEM som samlar in registreringsinformation
 1. Vid inlämningen används en korrekt etablerad tjänstanvändare för
-   1. Verifiera att en befintlig användare inte redan finns, med en av API:erna för UserManager `findAuthorizables()` metoder
-   1. Skapa en användarpost med någon av API:erna för UserManager `createUser()` metoder
-   1. Bevara alla profildata som samlats in med det redigerbara gränssnittets `setProperty()` metoder
+   1. Verifiera att en befintlig användare inte redan finns, med hjälp av någon av `findAuthorizables()`-metoderna i UserManager API
+   1. Skapa en användarpost med en av UserManager API:ns `createUser()`-metoder
+   1. Behåll alla profildata som har hämtats med hjälp av `setProperty()`-metoderna i det redigerbara gränssnittet
 1. Valfria flöden, som att kräva att användaren validerar sin e-post.
 
-**Krav:**
+**Förutsättning:**
 
-För att ovanstående logik ska fungera korrekt måste du aktivera [datasynkronisering](#data-synchronization-data-synchronization) genom att skicka en begäran till kundsupporten där det anges vilket program och vilken miljö som är lämplig.
+Aktivera [datasynkronisering](#data-synchronization-data-synchronization) genom att skicka in data för att ovanstående logik ska fungera korrekt.
+en förfrågan till kundsupport med uppgifter om lämpliga program och miljöer.
 
 ### Extern {#external-managed-registration}
 
@@ -61,18 +62,19 @@ Inloggning kan implementeras med följande två metoder:
 
 Kunderna kan skriva egna komponenter. Om du vill veta mer kan du kanske börja lära dig mer om:
 
-* The [Sling Authentication Framework](https://sling.apache.org/documentation/the-sling-engine/authentication/authentication-framework.html)
-* Och fundera [fråga AEM Community Experts session](https://bit.ly/ATACEFeb15) om inloggning.
+* [Sling Authentication Framework](https://sling.apache.org/documentation/the-sling-engine/authentication/authentication-framework.html)
+* Och överväg att [fråga den AEM communityexpertsessionen](https://bit.ly/ATACEFeb15) om inloggning.
 
-**Krav:**
+**Förutsättning:**
 
-För att ovanstående logik ska fungera korrekt måste du aktivera [datasynkronisering](#data-synchronization-data-synchronization) genom att skicka en begäran till kundsupporten där det anges vilket program och vilken miljö som är lämplig.
+Aktivera [datasynkronisering](#data-synchronization-data-synchronization) genom att skicka in data för att ovanstående logik ska fungera korrekt.
+en förfrågan till kundsupport med uppgifter om lämpliga program och miljöer.
 
 ### Integrering med en identitetsleverantör {#integration-with-an-idp}
 
 Kunder kan integrera med en IdP (identitetsleverantör) som autentiserar användaren. Integrationstekniken inkluderar SAML och OAuth/SSO, enligt beskrivningen nedan.
 
-**SAML-BASERAT**
+**SAML BASERAT**
 
 Kunder kan använda SAML-baserad autentisering via SAML IdP. När en IdP används med AEM ansvarar IdP för att autentisera användarens inloggningsuppgifter och förmedla användarens autentisering med AEM, skapa användarposten i AEM efter behov och hantera användarens gruppmedlemskap i AEM, vilket beskrivs i SAML-försäkran.
 
@@ -80,21 +82,21 @@ Kunder kan använda SAML-baserad autentisering via SAML IdP. När en IdP använd
 >
 >Endast den initiala autentiseringen av användarens autentiseringsuppgifter autentiseras av IdP:en och efterföljande begäranden till AEM utförs med en cookie för AEM inloggningstoken, så länge cookien är tillgänglig.
 
-Mer information om [SAML 2.0-autentiseringshanterare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/authentication/saml-2-0.html).
+Mer information om autentiseringshanteraren [SAML 2.0](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/authentication/saml-2-0.html) finns i dokumentationen.
 
 **OAuth/SSO**
 
-Se [Dokumentation för enkel inloggning (SSO)](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/single-sign-on.html) om du vill ha information om hur du AEM SSO-autentiseringshanterartjänsten.
+Mer information om hur du AEM SSO-autentiseringshanterartjänsten finns i [dokumentationen för enkel inloggning (SSO)](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/single-sign-on.html).
 
-The `com.adobe.granite.auth.oauth.provider` -gränssnittet kan implementeras med valfri OAuth-leverantör.
+Gränssnittet `com.adobe.granite.auth.oauth.provider` kan implementeras med valfri OAuth-provider.
 
-**Krav:**
+**Förutsättning:**
 
-Det bästa sättet är att alltid förlita sig på idP (Identity Provider) som en enda sanning när användarspecifika data lagras. Om den ytterligare användarinformationen lagras i den lokala databasen, som inte ingår i idP:n, ska du aktivera [datasynkronisering](#data-synchronization-data-synchronization) genom att skicka en begäran till kundsupporten där det anges vilket program och vilken miljö som är lämplig. Förutom [datasynkronisering](#data-synchronization-data-synchronization), när det gäller SAML-autentiseringsprovidern, se till att [dynamiskt gruppmedlemskap](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/authentication/saml-2-0) är aktiverat.
+Det bästa sättet är att alltid förlita sig på idP (Identity Provider) som en enda sanning när användarspecifika data lagras. Om den ytterligare användarinformationen lagras i den lokala databasen, som inte är en del av idP, ska du aktivera [datasynkronisering](#data-synchronization-data-synchronization) genom att skicka en begäran till kundsupport som anger rätt program och miljöer. Förutom [datasynkronisering](#data-synchronization-data-synchronization), när det gäller SAML-autentiseringsprovidern, kontrollerar du att [dynamiskt gruppmedlemskap](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/authentication/saml-2-0) är aktiverat.
 
 ### Anteckningssessioner och inkapslade token {#sticky-sessions-and-encapsulated-tokens}
 
-AEM as a Cloud Service möjliggör cookie-baserade klistersessioner så att slutanvändaren dirigeras till samma publiceringsnod vid varje begäran. I vissa fall, t.ex. vid användartrafik, kan den inkapslade tokenfunktionen öka prestandan så att användarposten i databasen inte behöver refereras till vid varje begäran. Om publiceringsnoden som en slutanvändare har en tillhörighet till ersätts, är användar-ID-posten tillgänglig på den nya publiceringsnoden, vilket beskrivs i [datasynkronisering](#data-synchronization-data-synchronization) nedan.
+AEM as a Cloud Service möjliggör cookie-baserade klistersessioner så att slutanvändaren dirigeras till samma publiceringsnod vid varje begäran. I vissa fall, t.ex. vid användartrafik, kan den inkapslade tokenfunktionen öka prestandan så att användarposten i databasen inte behöver refereras till vid varje begäran. Om publiceringsnoden som en slutanvändare har en tillhörighet till ersätts, är användar-ID-posten tillgänglig på den nya publiceringsnoden, vilket beskrivs i avsnittet [datasynkronisering](#data-synchronization-data-synchronization) nedan.
 
 Om du vill utnyttja den inkapslade tokenfunktionen skickar du en begäran till kundsupporten där det anges vilket program och vilken miljö som är lämplig. Viktigare är att den inkapslade token inte kan aktiveras utan [datasynkronisering](#data-synchronization-data-synchronization) och måste aktiveras tillsammans. Granska därför användningsexemplet noggrant innan du aktiverar och kontrollera att funktionen är nödvändig.
 
@@ -106,12 +108,13 @@ Det finns olika sätt att se på beständiga data, beroende på vilken typ av da
 
 Information om användarprofiler kan skrivas och läsas på två sätt:
 
-* Användning på serversidan med `com.adobe.granite.security.user` Gränssnittet UserPropertiesManager som placerar data under användarens nod i `/home/users`. Se till att sidor som är unika per användare inte cachelagras.
-* Klientsidan som använder ContextHub, enligt beskrivningen i [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/personalization/contexthub.html#personalization).
+* Användning på serversidan med gränssnittet `com.adobe.granite.security.user` UserPropertiesManager, som placerar data under användarens nod i `/home/users`. Se till att sidor som är unika per användare inte cachelagras.
+* Klientsidan använder ContextHub, vilket beskrivs i [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/personalization/contexthub.html#personalization).
 
-**Krav:**
+**Förutsättning:**
 
-Aktivera för att beständighetslogiken för användarprofiler på serversidan ska fungera korrekt [datasynkronisering](#data-synchronization-data-synchronization) genom att skicka en begäran till kundsupporten där det anges vilket program och vilken miljö som är lämplig.
+Aktivera [datasynkronisering](#data-synchronization-data-synchronization) genom att skicka in data för att beständighetslogiken för användarprofilen på serversidan ska fungera korrekt.
+en förfrågan till kundsupport med uppgifter om lämpliga program och miljöer.
 
 ### Datalager från tredje part {#third-party-data-stores}
 
@@ -119,9 +122,10 @@ Slutanvändardata kan skickas till tredjepartsleverantörer som CRM och hämtas 
 
 Det är möjligt att få åtkomst i realtid till tredjepartstjänster för att hämta profilattribut, men det är viktigt att se till att detta inte påverkar behandlingen av förfrågningar i AEM.
 
-**Krav:**
+**Förutsättning:**
 
-För att ovanstående logik ska fungera korrekt måste du aktivera [datasynkronisering](#data-synchronization-data-synchronization) genom att skicka en begäran till kundsupporten där det anges vilket program och vilken miljö som är lämplig.
+Aktivera [datasynkronisering](#data-synchronization-data-synchronization) genom att skicka in data för att ovanstående logik ska fungera korrekt.
+en förfrågan till kundsupport med uppgifter om lämpliga program och miljöer.
 
 ## Behörigheter (stängda användargrupper) {#permissions-closed-user-groups}
 
@@ -134,7 +138,7 @@ Oberoende av inloggning kan den anpassade koden också innehålla och hantera en
 
 ## Datasynkronisering {#data-synchronization}
 
-Slutanvändarna på webbplatsen förväntar sig en enhetlig upplevelse på alla webbsidesförfrågningar eller till och med när de loggar in i en annan webbläsare, även om de inte känner till dem, kommer de till olika servernoder i infrastrukturen på publiceringsnivån. AEM as a Cloud Service uppnår detta genom att snabbt synkronisera `/home` mapphierarki (användarprofilinformation, gruppmedlemskap och så vidare) över alla noder i publiceringsnivån.
+Slutanvändarna på webbplatsen förväntar sig en enhetlig upplevelse på alla webbsidesförfrågningar eller till och med när de loggar in i en annan webbläsare, även om de inte känner till dem, kommer de till olika servernoder i infrastrukturen på publiceringsnivån. AEM as a Cloud Service uppnår detta genom att snabbt synkronisera mapphierarkin `/home` (användarprofilinformation, gruppmedlemskap och så vidare) över alla noder i publiceringsnivån.
 
 Till skillnad från andra AEM använder synkronisering av användare och gruppmedlemskap i AEM as a Cloud Service inte en metod för att skicka meddelanden från punkt till punkt, utan implementerar i stället en strategi för att publicera prenumerationer som inte kräver någon kundkonfiguration.
 

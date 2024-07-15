@@ -1,6 +1,6 @@
 ---
 title: Versionsinformation om Adobe Experience Manager as a Cloud Service 2020.4.0
-description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.4.0."
+description: "[!DNL Adobe Experience Manager] as a Cloud Service versionsinformation för 2020.4.0."
 exl-id: d98a3862-76fa-4b5b-b81a-333f5f532b67
 feature: Release Information
 role: Admin
@@ -17,35 +17,35 @@ På den här sidan finns en beskrivning av den allmänna versionsinformationen f
 
 ## Releasedatum {#release-date}
 
-Utgivningsdatum för [!DNL Experience Manager] as a Cloud Service 2020.4.0 är 9 april 2020.
+Lanseringsdatumet för [!DNL Experience Manager] as a Cloud Service 2020.4.0 är 9 april 2020.
 
 ## Nyheter i Assets {#assets}
 
-Läs om nya funktioner, förbättringar och felkorrigeringar för [!DNL Experience Manager Assets] och [!DNL Dynamic Media] i den aktuella versionen.
+Lär dig mer om nya funktioner, förbättringar och felkorrigeringar för [!DNL Experience Manager Assets] och [!DNL Dynamic Media] i den aktuella versionen.
 
-* [Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html) stöder användningsexemplen för resursdistribution för Experience Manager Assets. [!DNL Brand Portal] hjälper organisationer att tillgodose sina marknadsföringsbehov genom att på ett säkert sätt distribuera godkänt varumärke och produktmaterial till externa byråer, partners, interna team och återförsäljare för nedladdning.
-   * [!DNL Brand Portal] konfigurationen slutförs via [!DNL Adobe I/O] konsol. Se [konfigurera Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html).
+* [Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html) stöder användningsexemplen för resursdistribution för Experience Manager Assets. [!DNL Brand Portal] hjälper organisationer att tillgodose sina marknadsföringsbehov genom att på ett säkert sätt distribuera godkända varumärkes- och produktresurser till externa byråer, partners, interna team och återförsäljare för nedladdning.
+   * Konfigurationen av [!DNL Brand Portal] har slutförts via [!DNL Adobe I/O]-konsolen. Se [konfigurera Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html).
    * Resurskälla i [!DNL Brand Portal] stöds ännu inte med [!DNL Experience Manager] as a Cloud Service.
 
-* [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) v2.0 fungerar med [!DNL Experience Manager] as a Cloud Service. [!DNL Adobe Asset Link] effektiviserar samarbetet mellan kreatörer och marknadsförare när det gäller att skapa innehåll genom att koppla samman [!DNL Experience Manager Assets] med [!DNL Creative Cloud] datorprogram [!DNL Adobe Photoshop], [!DNL Adobe Illustrator]och [!DNL Adobe InDesign] via appen [!DNL Asset Link] -panelen.
-   * [!DNL Experience Manager] är förkonfigurerad för [!DNL Adobe Asset Link], vilket resulterar i [enkel konfiguration](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html) och snabbare nå ut till kreatörer.
-   * [!DNL Asset Link] har nu stöd för [Experience Manager-miljöväljare](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) som gör det möjligt för kreativa användare att enkelt ansluta till en annan [!DNL Experience Manager] miljö. Ett exempel där den här funktionen är användbar är för designers som arbetar med flera kunder med olika [!DNL Experience Manager Assets] distributioner.
+* [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) v2.0 fungerar med [!DNL Experience Manager] as a Cloud Service. [!DNL Adobe Asset Link] effektiviserar samarbetet mellan kreatörer och marknadsförare när det gäller att skapa innehåll genom att ansluta [!DNL Experience Manager Assets] med [!DNL Creative Cloud] datorprogram [!DNL Adobe Photoshop], [!DNL Adobe Illustrator] och [!DNL Adobe InDesign] via panelen i appen [!DNL Asset Link].
+   * [!DNL Experience Manager] är förkonfigurerad för [!DNL Adobe Asset Link], vilket ger [enkel konfiguration](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html) och snabbare utrullning till kreatörer.
+   * [!DNL Asset Link] har nu stöd för en [Experience Manager-miljöväljare](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) som gör att kreativa användare enkelt kan ansluta till en annan [!DNL Experience Manager]-miljö. Ett exempel där den här funktionen är användbar är för byrådesigners som arbetar med flera klienter med olika [!DNL Experience Manager Assets]-distributioner.
 
-* Användare kan konfigurera [efterbehandlingsarbetsflöden](/help/assets/asset-microservices-configure-and-use.md#post-processing-workflows) till autostart i mappen [!UICONTROL Properties] användargränssnitt för de specifika mapphierarkierna.
-   * Mappen [!UICONTROL Properties] användargränssnittet har förenklats med nya [!UICONTROL Asset Processing] som innehåller metadataprofil, bearbetningsprofil och den nya arbetsflödeskonfigurationen för autostart.
+* Användare kan konfigurera [efterbearbetningsarbetsflöden](/help/assets/asset-microservices-configure-and-use.md#post-processing-workflows) så att de startar automatiskt i användargränssnittet för mappen [!UICONTROL Properties] för de specifika mapphierarkierna.
+   * Mappens användargränssnitt [!UICONTROL Properties] är förenklat, med den nya fliken [!UICONTROL Asset Processing] som innehåller metadataprofil, bearbetningsprofil och den nya arbetsflödeskonfigurationen för autostart.
 
-     ![Bearbetningsprofiler kan enkelt tillämpas på mappar och allt material som överförs till mappar bearbetas med dessa profiler](/help/assets/assets/asset-processing-folder-properties.png)
+     ![Bearbetningsprofiler kan enkelt tillämpas på mappar och alla resurser som överförs till mappar bearbetas med hjälp av de här profilerna](/help/assets/assets/asset-processing-folder-properties.png)
 
    * Med alternativet Återbearbetning av resurser kan du välja en specifik bearbetningsprofil för att bearbeta om användarvalda resurser i undermappar.
 
-     ![Bearbeta markerade resurser med en viss bearbetningsprofil](/help/assets/assets/fpo-existing-asset-reprocess.gif)
+     ![Bearbeta om markerade resurser med en specifik bearbetningsprofil](/help/assets/assets/fpo-existing-asset-reprocess.gif)
 
-   * [!DNL Dynamic Media]: Lagt till selektiv publiceringskonfiguration så att resurserna automatiskt publiceras för säker förhandsvisning. Dessutom kan resurserna publiceras explicit på Experience Manager utan att publiceras till DMS7 för att levereras offentligt.
+   * [!DNL Dynamic Media]: En selektiv publiceringskonfiguration har lagts till så att resurser automatiskt publiceras endast för säker förhandsvisning. Dessutom kan resurserna publiceras explicit på Experience Manager utan att publiceras till DMS7 för att levereras offentligt.
 
 ### Felkorrigeringar {#assets-bug-fixes}
 
 * Anläggningar för tillgångsbearbetningsproblem.
-* Korrigeringar i [!DNL Dynamic Media] konfigurera och publicera resurser till [!DNL Dynamic Media] leveranstjänst.
+* Korrigeringar i [!DNL Dynamic Media]-konfiguration och publicering av resurser till [!DNL Dynamic Media]-leveranstjänsten.
 
 >[!MORELIKETHIS]
 >
@@ -56,10 +56,10 @@ Läs om nya funktioner, förbättringar och felkorrigeringar för [!DNL Experien
 
 ## Nyheter i Cloud Manager {#whats-new-cloud-manager}
 
-* Utgivar-URL:er är nu tillgängliga från miljösidan i användargränssnittet för Cloud Manager.
-* Ändringar i navigeringen så att användaren kan redigera, byta eller lägga till ett program från översiktssidan i Cloud Manager.
-* Ändringar som gör att användaren kan redigera program från programkortet på Cloud Managers startsida.
-* Ny pipeline-status **Rörledning** visas mot den miljö som det är associerat med.
+* Utgivar-URL:er är nu tillgängliga från miljösidan i Cloud Manager användargränssnitt.
+* Ändringar i navigeringen så att användaren kan redigera, byta eller lägga till ett program från Cloud Manager översiktssida.
+* Ändringar som gör att användaren kan redigera program från programkortet på Cloud Manager startsida.
+* Den nya pipelinestatusen **Pipeline som körs** visas mot den miljö som den är associerad med.
 * Förbättringar av förståelsen av sidan för att implementera pipeline. Detta inkluderar visning av Pipeline-namn (endast icke-produktionspipeline) och typ samt ett märke som anger om pipelinestatusen pågår/avbryts/misslyckades.
 * Verktygstips som förbättrar användarupplevelsen och gör det lättare att förstå varför knappen Lägg till program/miljö är inaktiverad.
 * Misslyckade miljöer kan nu tas bort via gränssnittet och API:t.

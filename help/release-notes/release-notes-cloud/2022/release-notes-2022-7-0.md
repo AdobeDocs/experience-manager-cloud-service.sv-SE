@@ -1,6 +1,6 @@
 ---
-title: Versionsinformation för 2022.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för 2022.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Versionsinformation för version 2022.7.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation för version 2022.7.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: b339ab48-e836-4589-a573-9c50917b9280
 feature: Release Information
 role: Admin
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Versionsinformation 202278.0 för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
-I följande avsnitt beskrivs versionsinformationen för 2022.7.0-versionen av [!DNL Experience Manager] as a Cloud Service.
+I följande avsnitt beskrivs versionsinformationen för funktionen för 2022.7.0-versionen av [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -21,11 +21,11 @@ I följande avsnitt beskrivs versionsinformationen för 2022.7.0-versionen av [!
 
 >[!NOTE]
 >
->Se [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html) för information om dokumentationsuppdateringar som inte är direkt relaterade till en release.
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
 
 ## Releasedatum {#release-date}
 
-Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (202.7.0) är 8 augusti 2022.
+Releasedatum för [!DNL Adobe Experience Manager] som aktuell [!DNL Cloud Service]-version (2022.7.0) är 8 augusti 2022.
 
 Nästa version (2022.8.0) är planerad till 1 september 2022.
 
@@ -35,13 +35,13 @@ Titta på videon med versionsöversikten för juli 2022 om du vill se en sammanf
 
 >[!VIDEO](https://video.tv.adobe.com/v/345409/?quality=12)
 
-## [!DNL Experience Manager Sites] som [!DNL Cloud Service] {#sites}
+## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 
 ### Nya funktioner i [!DNL Sites] {#sites-features}
 
-* The [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console) nu stöder [kortkommandon](/help/sites-cloud/administering/content-fragments/keyboard-shortcuts.md).
+* [Konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console) har nu stöd för [kortkommandon](/help/sites-cloud/administering/content-fragments/keyboard-shortcuts.md).
 
-* AEM som Cloud Servicens [webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) ger möjlighet att avsevärt förbättra sidhastigheten genom att leverera format som WebP. Den här nya tjänsten erbjuder också flexiblare alternativ för storleksändring och omformning av bilder. Alla versioner av [Core Image Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) kan du använda den här tjänsten och leverera bilder som WebP genom att klicka på ett alternativ i bildkomponentens profil.
+* AEM som Cloud Servicens [webboptimerade bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) kan förbättra sidhastigheten avsevärt genom att leverera format som WebP. Den här nya tjänsten erbjuder också flexiblare alternativ för storleksändring och omformning av bilder. I alla versioner av [kärnbildkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) kan du använda den här tjänsten och leverera bilder som WebP genom att klicka på ett alternativ i bildkomponentens profil.
 
 * AEM personaliseringsaktiviteter kan nu använda upplevelsefragment i stället för våra gamla erbjudanden. Den här funktionen:
    * möjliggör en migreringsväg där AEM innehåll skulle främja upplevelsefragmenterbjudanden i stället för äldre bibliotekserbjudanden för att tillhandahålla lämpligt formaterat innehåll som passar personaliseringen i stor skala framåt.
@@ -52,25 +52,25 @@ Titta på videon med versionsöversikten för juli 2022 om du vill se en sammanf
 >
 >Befintliga personaliseringsaktiviteter som redan använder äldre erbjudanden kan fortsätta att göra det, men nya personaliseringsaktiviteter bör skapas som upplevelsefragment eftersom det är det rekommenderade tillvägagångssättet.
 
-## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
+## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
-### Nya funktioner i [!DNL Assets] prerelease channel {#prerelease-features-assets}
+### Nya funktioner som är tillgängliga i betaversionskanalen i [!DNL Assets] {#prerelease-features-assets}
 
-Nu kan du konfigurera Adobe Experience Manager Assets till [begränsa vilken typ av resurser som användare kan överföra baserat på MIME-typen](/help/assets/configure-asset-upload-restrictions.md).
+Du kan nu konfigurera Adobe Experience Manager Assets att [begränsa vilken typ av resurser som användare kan överföra baserat på MIME-typen](/help/assets/configure-asset-upload-restrictions.md).
 
-![Begränsningar för överföring av tillgångar](/help/assets/assets/asset-upload-restrictions.png)
+![Resursöverföringsbegränsningar](/help/assets/assets/asset-upload-restrictions.png)
 
-## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
+## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
 ### Nya funktioner i [!DNL Forms] {#forms-features}
 
-* **[Stöd för tangentbordsinmatning med Scribble-signaturer](/help/forms/signing-forms-using-scribble.md)**: Adaptiv Forms används i allt större utsträckning på pekenheter, och ett vanligt krav är att stödja signaturer. Att signera dokument på pekenheter har blivit ett accepterat sätt att signera formulär. Adaptiv Forms har inbyggt stöd för Scribble Signatures och Adobe Sign för sådana användningsområden. Nu kan du, tillsammans med andra alternativ som redan stöds, även använda tangentbordet för att göra signaturer till klottersignaturer i ett adaptivt formulär. Det förbättrar också tillgängligheten.
+* **[Stöd för tangentbordsinmatning för signaturer](/help/forms/signing-forms-using-scribble.md)**: Adaptiv Forms används i allt större utsträckning på enheter med pekskärm, och ett vanligt krav är att stödja signaturer. Att signera dokument på pekenheter har blivit ett accepterat sätt att signera formulär. Adaptiv Forms har inbyggt stöd för Scribble Signatures och Adobe Sign för sådana användningsområden. Nu kan du, tillsammans med andra alternativ som redan stöds, även använda tangentbordet för att göra signaturer till klottersignaturer i ett adaptivt formulär. Det förbättrar också tillgängligheten.
 
-![Stöd för tangentbordsinmatning för klottersignaturer på iphone](/help/release-notes/assets/scribble-keyboard-mobile.png)
+![Tangentbordsinmatningsstöd för klottersignaturer på iphone](/help/release-notes/assets/scribble-keyboard-mobile.png)
 
 * **Använd guiden Adaptiv Forms på det lokala språket**: Du kan använda guiden på valfritt språk. Det har nu stöd för alla språk som stöds av Adobe Experience Manager.
 
-### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms}
+### Nya funktioner som är tillgängliga i betaversionskanalen i [!DNL Forms] {#prerelease-features-forms}
 
 <!-- 
 
@@ -80,9 +80,9 @@ Nu kan du konfigurera Adobe Experience Manager Assets till [begränsa vilken typ
 
 -->
 
-* **[Anropa DDX - ett AEM arbetsflödessteg](/help/forms/aem-forms-workflow-step-reference.md#invokeddx)**: XML (DDX) för dokumentbeskrivning är ett deklarativt kodspråk vars element representerar byggstenar i dokument. Dessa byggstenar innehåller PDF- och XDP-dokument och andra element som kommentarer, bokmärken och formaterad text. DDX-dokument är mallar för dokumenten och beskriver önskade egenskaper för källdokument som ska visas i resulterande dokument. Ett enda DX kan användas med ett antal olika källdokument. Du kan använda steget Anropa och AEM arbetsflöde för att utföra olika åtgärder, t.ex. att samla ihop dokument, skapa och ändra Acrobat och XFA Forms samt andra åtgärder som beskrivs i [DDX-referens](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf) dokumentation.
+* **[Anropa DDX - Ett AEM arbetsflödessteg](/help/forms/aem-forms-workflow-step-reference.md#invokeddx)**: XML-kod för dokumentbeskrivning (DDX) är ett deklarativt kodspråk vars element representerar byggstenar av dokument. Dessa byggstenar innehåller PDF- och XDP-dokument och andra element som kommentarer, bokmärken och formaterad text. DDX-dokument är mallar för dokumenten och beskriver önskade egenskaper för källdokument som ska visas i resulterande dokument. Ett enda DX kan användas med ett antal olika källdokument. Du kan använda steget Anropa och AEM arbetsflöde för att utföra olika åtgärder, som att sätta ihop isär dokument, skapa och ändra Acrobat och XFA Forms samt andra åtgärder som beskrivs i [DDX Reference](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf) -dokumentationen.
 
-* **[Konvertera till PDF/A - ett AEM arbetsflödessteg](/help/forms/aem-forms-workflow-step-reference.md##convert-pdfa)**: PDF/A är ett arkiveringsformat som gör att dokumentets innehåll bevaras på lång sikt. Alla teckensnitt bäddas in och filen är okomprimerad. Nu kan du använda steget Konvertera till PDF/A och AEM arbetsflöde för att konvertera dina dokument eller filer i valfritt format till PDF/A-format.
+* **[Konvertera till PDF/A - Ett AEM arbetsflödessteg](/help/forms/aem-forms-workflow-step-reference.md##convert-pdfa)**: PDF/A är ett arkiveringsformat för långtidsbevaring av dokumentets innehåll, alla teckensnitt bäddas in och filen är okomprimerad. Nu kan du använda steget Konvertera till PDF/A och AEM arbetsflöde för att konvertera dina dokument eller filer i valfritt format till PDF/A-format.
 
 
 ## CIF {#cloud-services-cif}
@@ -99,31 +99,31 @@ Nu kan du konfigurera Adobe Experience Manager Assets till [begränsa vilken typ
 
 * Fel sidkomponent i datalagret
 
-## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
+## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
 
 ### Nyheter {#what-is-new-foundation}
 
-* The [Databasläsare](/help/implementing/developing/tools/repository-browser.md) har nu ett sökvägsinmatningsfält, vilket gör det möjligt att hoppa direkt till en viss mapp i databashierarkin
-* Sling Content Distribution (SCD) har nu stöd för en explicit&quot;invalidation&quot;-åtgärd som gör innehållet ogiltigt utan att det publiceras. Se [Cachelagring i AEM as a Cloud Service](/help/implementing/dispatcher/caching.md#explicit-invalidation) sida för mer information.
-* mod_macro finns nu i AEM as a Cloud Service. Se [det här registret](/help/implementing/dispatcher/disp-overview.md) för en lista över Apache-moduler som stöds.
+* [Databasläsaren](/help/implementing/developing/tools/repository-browser.md) har nu ett sökvägsinmatningsfält, vilket gör det möjligt att hoppa direkt till en viss mapp i databashierarkin
+* Sling Content Distribution (SCD) har nu stöd för en explicit&quot;invalidation&quot;-åtgärd som gör innehållet ogiltigt utan att det publiceras. Mer information finns i [Cachelagring i AEM as a Cloud Service](/help/implementing/dispatcher/caching.md#explicit-invalidation).
+* mod_macro finns nu i AEM as a Cloud Service. I [den här tabellen](/help/implementing/dispatcher/disp-overview.md) finns en lista över Apache-moduler som stöds.
 
-### Förbättringar i AEM as a Cloud Service SDK Dispatcher Tools {#dispatcher-tools-enhancements}
+### Förbättringar av Dispatcher-verktygen i AEM as a Cloud Service SDK {#dispatcher-tools-enhancements}
 
-* Apache kan startas med `docker_run_hot_reload.sh` som automatiskt läser in och validerar alla efterföljande ändringar i cache- och dispatcherkonfigurationen, vilket förbättrar utvecklarhastigheten. Stöds endast för flyttarverktygens flexibla läge. Se även [Felsöka konfigurationen av Apache och Dispatcher](/help/implementing/dispatcher/validation-debug.md#automatic-reloading) om du vill ha mer information om automatisk omladdning och validering.
+* Apache kan startas med skriptet `docker_run_hot_reload.sh`, som automatiskt läser in och validerar alla efterföljande ändringar i cache- och dispatcherkonfigurationen, vilket förbättrar utvecklarhastigheten. Stöds endast för flyttarverktygens flexibla läge. Mer information om automatisk omladdning och validering finns i [Felsöka Apache- och Dispatcher-konfigurationen](/help/implementing/dispatcher/validation-debug.md#automatic-reloading).
 * Lokal konfiguration av cache/dispatcher spårar förändringar i molnmiljöer närmare, vilket ökar pariteten mellan de två miljöerna.
 
-### Nya funktioner i [!DNL Experience Manager] prerelease channel {#prerelease-features-foundation}
+### Nya funktioner som är tillgängliga i betaversionskanalen i [!DNL Experience Manager] {#prerelease-features-foundation}
 
-* AEM as a Cloud Service är nu integrerat med Unified Shell för att förbättra användarupplevelsen och göra den enhetlig med alla andra Experience Cloud-program. Se [AEM as a Cloud Service on Unified Shell](/help/overview/aem-cloud-service-on-unified-shell.md) för mer information.
+* AEM as a Cloud Service är nu integrerat med Unified Shell för att förbättra användarupplevelsen och göra den enhetlig med alla andra Experience Cloud-program. Mer information finns i [AEM as a Cloud Service i Unified Shell](/help/overview/aem-cloud-service-on-unified-shell.md).
 
 ## Adobe Learning Manager Connectors {#learn-manage}
 
-* Nya Adobe Learning Manager har kontakter till Adobe Experience Manager Sites, Marketo Engage och Adobe Commerce. Mer information finns i: [Adobe Learning Manager Användarhandbok](https://helpx.adobe.com/learning-manager/user-guide.html).
+* Nya Adobe Learning Manager har kontakter till Adobe Experience Manager Sites, Marketo Engage och Adobe Commerce. Mer information finns i: [Adobe Learning Manager användarhandbok](https://helpx.adobe.com/learning-manager/user-guide.html).
 
 ## Cloud Manager {#cloud-manager}
 
-Du hittar en fullständig lista över månatliga utgåvor av Cloud Manager [här](/help/implementing/cloud-manager/release-notes/current.md).
+Du hittar en fullständig lista över månadsutgåvor av Cloud Manager [här](/help/implementing/cloud-manager/release-notes/current.md).
 
 ## Migreringsverktyg {#migration-tools}
 
-Du hittar en fullständig lista över versioner av migreringsverktyg [här](/help/journey-migration/release-notes/release-notes-migration-tools-current.md).
+Du hittar en fullständig lista över migreringsverktygen [här](/help/journey-migration/release-notes/release-notes-migration-tools-current.md).

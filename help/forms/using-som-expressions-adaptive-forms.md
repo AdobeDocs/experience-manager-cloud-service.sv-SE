@@ -8,7 +8,7 @@ discoiquuid: 13f00bb2-561f-4d64-8829-292c663abeab
 docset: aem65
 source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '344'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Följande bild visar en nodstruktur som ett adaptivt formulär översätter till
 
 DOM-träd
 
-A SOM expression for any element in an Adaptive Form prefix by `guide[0].guide1[0]`. Positionen för en komponent i nodstrukturhierarkin används för att härleda dess SOM-uttryck.
+A SOM expression for any element in an Adaptive Form is prefix by `guide[0].guide1[0]`. Positionen för en komponent i nodstrukturhierarkin används för att härleda dess SOM-uttryck.
 
 ![DOM-träd med två alternativknappar](assets/hierarchy_radio_button.png)
 
@@ -34,7 +34,7 @@ DOM-träd med två alternativknappar
 
 SOM-uttrycket ändras när du ändrar positionen för alternativknapparna i den adaptiva formen. I redigeringsläget kan du visa SOM-uttrycket för ett fält eller element i [!DNL AEM Forms] med alternativet Visa SOM-uttryck. Alternativet visas på panelen och när du högerklickar på fältet eller elementet.
 
-![Extrahera SOM-uttryck i en adaptiv form](assets/som-expressions.png)
+![Extraherar SOM-uttryck i en adaptiv form](assets/som-expressions.png)
 
 Extrahera SOM-uttryck i en adaptiv form
 
@@ -44,4 +44,4 @@ I paneler kan du komma åt funktionen från panelens verktygsfält. Funktionen u
 
 Extrahera SOM-uttryck med panelens verktygsfält
 
-Vissa API:er listas i [GuideBridge](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html) använder SOM-uttrycket för ett element. Om du till exempel vill ge fokus till ett visst fält i en adaptiv form skickar du motsvarande SOM-uttryck till `getFocus`API in `guideBridge`.
+Vissa API:er i [GuideBridge](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html) använder SOM-uttrycket för ett element. Om du till exempel vill ge fokus till ett visst fält i ett adaptivt formulär skickar du motsvarande SOM-uttryck till `getFocus`-API:t i `guideBridge`.

@@ -32,9 +32,9 @@ Följ stegen nedan för att navigera till Cloud Acceleration Manager (CAM):
 
 1. Logga in på [Adobe Experience Cloud](https://experience.adobe.com).
 
-1. Klicka **Experience Manager** kort.
+1. Klicka på kortet **Experience Manager**.
 
-1. Klicka **Starta** från **Cloud Acceleration Manager** så att du kan öppna landningssidan.
+1. Klicka på **Starta** på **Cloud Acceleration Manager**-kortet så att du kan öppna landningssidan.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-1.png)
 
@@ -50,18 +50,18 @@ Med Cloud Acceleration Manager (CAM) landningssida kan du skapa och redigera fle
 
 Skapa ett projekt genom att följa stegen nedan:
 
-1. Klicka **Skapa projekt** från landningssidan.
+1. Klicka på **Skapa projekt** på landningssidan.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-2.png)
 
    >[!NOTE]
    >Användare som använder CAM för första gången kan se en dialogruta för att skapa ett projekt. Användare som har använt CAM tidigare ser ett standardprojekt eller projekt som skapats tidigare.
 
-1. Ange **Namn** och **Beskrivning** för ditt projekt och klicka **Skapa**.
+1. Ange **namn** och **beskrivning** för projektet och klicka på **Skapa**.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-3.png)
 
-1. Projektet skapas nu och visas på **Cloud Acceleration Manager** landningssida.
+1. Projektet skapas nu och visas på **Cloud Acceleration Manager** -landningssidan.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-landing.png)
 
@@ -81,11 +81,11 @@ Följ stegen nedan för att redigera ditt projekt:
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-4.png)
 
-1. Du kan redigera projektnamnet, beskrivningen och även överföra en ny bild eller redigera en befintlig bild från **Redigera projekt** -dialogrutan.
+1. Du kan redigera projektnamnet, beskrivningen och till och med överföra en ny bild eller redigera en befintlig bild i dialogrutan **Redigera projekt** .
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-edit.png)
 
-1. Klicka **Uppdatera** för att genomföra ändringarna.
+1. Klicka på **Uppdatera** för att genomföra ändringarna.
 
 ### Tar bort projektet {#delete-project}
 
@@ -95,7 +95,7 @@ Följ stegen nedan för att ta bort ditt projekt:
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-4.png)
 
-1. Klicka **Ta bort** för att bekräfta steget.
+1. Bekräfta steget genom att klicka på **Ta bort**.
 
    >[!NOTE]
    >Projekt upphör automatiskt att gälla och tas bort efter ett års inaktivitet i migreringen. Projekt förblir aktiva genom att redigera projektnamnet eller beskrivningen, överföra en BPA-rapport, skapa eller redigera en migreringsuppsättning, köra en extrahering eller köra ett intag.
@@ -103,4 +103,4 @@ Följ stegen nedan för att ta bort ditt projekt:
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du loggar in på Cloud Acceleration Manager och hur du skapar ett projekt är du redo att gå igenom nästa steg i [Beredskapsfas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html).
+När du har lärt dig hur du loggar in på Cloud Acceleration Manager och hur du skapar ett projekt kan du gå igenom nästa steg i [beredskapsfasen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html).

@@ -21,39 +21,39 @@ Det gör det lättare att förhandsgranska sidor som annars inte skulle vara syn
 
 >[!NOTE]
 >
->Som innehållet *publicerad* till förhandsvisningsmiljön är den tillgänglig via URL (så behöver inte åtkomst till AEM).
+>Eftersom innehållet är *publicerat* i förhandsvisningsmiljön är det tillgängligt via URL (så behöver inte åtkomst till AEM).
 
 Mer information om förhandsvisningsmiljöerna finns i [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md#access-preview-service).
 
 ## Publicera innehåll för förhandsgranskning {#publishing-content-to-preview}
 
-Du kan publicera innehåll till förhandsgranskningstjänsten med **Hanterad publikation** Gränssnitt.
+Du kan publicera innehåll till förhandsgranskningstjänsten med användargränssnittet för **Hanterad publikation**.
 
-1. Markera den eller de sidor du vill skicka för förhandsgranskning i webbplatskonsolen och klicka på knappen **Hantera publikation** -knappen.
-1. I följande guide väljer du **Förhandsgranska** som mål.
+1. I webbplatskonsolen markerar du den eller de sidor som du vill skicka för förhandsgranskning och klickar på knappen **Hantera publikation** .
+1. Välj **Förhandsgranska** som mål i följande guide.
 
    ![hanterad publikation](/help/sites-cloud/authoring/assets/previewmanagedpublication.png)
 
-1. Klicka **Nästa** och sedan **Publicera** för att bekräfta.
+1. Klicka på **Nästa** och sedan på **Publish** för att bekräfta.
 
 1. I en dialogruta visas URL:er för att komma åt innehållet i förhandsvisningsmiljön.
 
    >[!NOTE]
    >
-   >Som innehållet *publicerad* till förhandsvisningsmiljön är den tillgänglig via URL (så behöver inte åtkomst till AEM).
+   >Eftersom innehållet är *publicerat* i förhandsvisningsmiljön är det tillgängligt via URL (så behöver inte åtkomst till AEM).
 
-Du kan även använda de URL-adresser som visas i guiden för att visa förhandsgranskningsinnehållet, men du kan också lägga till `preview-` till publicerings-URL:en för produktionsinstansen.
+Du kan också använda de URL:er som visas i guiden för att visa förhandsgranskningsinnehållet, men du kan också lägga till `preview-` i publicerings-URL:en för produktionsinstansen.
 
 ```
 https://preview-p<programID>-e>environmentID>.adobeaemcloud.com/<pathtopage>.html
 ```
 
-Se dokumentet [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md) om du vill ha mer information om hur du hämtar URL:er för dina miljöer.
+Mer information om hur du hämtar URL:er för dina miljöer finns i dokumentet [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md).
 
-Innehåll kan också publiceras för förhandsgranskning med en [arbetsflöde för publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) med `agentId` parametern inställd på `preview` eller genom att använda [replikerings-API](/help/operations/replication.md#replication-api) med `AgentFilter` konfigurerad för förhandsgranskning.
+Innehåll kan också publiceras för förhandsgranskning med ett [publiceringsinnehållsträdsarbetsflöde](/help/operations/replication.md#publish-content-tree-workflow) med parametern `agentId` inställd på `preview` eller med [replikerings-API](/help/operations/replication.md#replication-api) med en `AgentFilter` konfigurerad för förhandsgranskning.
 
 ## Avpublicera innehåll från förhandsgranskning {#unpublishing-content-from-preview}
 
-Avpublicera innehåll från **Förhandsgranska** miljön är i stort sett samma process som [avpublicera sidor](/help/sites-cloud/authoring/sites-console/publishing-pages.md#unpublishing-pages) från **Publicera** miljö.
+Att avpublicera innehåll från din **förhandsvisningsmiljö** är i princip samma process som [att avpublicera sidor](/help/sites-cloud/authoring/sites-console/publishing-pages.md#unpublishing-pages) från **Publish** -miljön.
 
-Den enda skillnaden är att du kan välja **Mål** att **Förhandsgranska**.
+Den enda skillnaden är att du kan välja **destination** som **förhandsvisning**.

@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Innan optimeringsrekommendationerna tillämpas bör du överväga [Uppdatera dina innehållsfragment för sidindelning och sortering i GraphQL-filtrering](/help/headless/graphql-api/graphql-optimized-filtering-content-update.md) för bästa prestanda.
+>Innan optimeringsrekommendationerna tillämpas bör du överväga att [uppdatera innehållsfragmenten för sidindelning och sortering i GraphQL-filtrering](/help/headless/graphql-api/graphql-optimized-filtering-content-update.md) för bästa prestanda.
 
 Riktlinjerna är till för att förhindra prestandaproblem i dina GraphQL-frågor.
 
@@ -48,25 +48,25 @@ Olika metoder för cachning kan också användas för optimering.
 
 **Rekommendation**
 
-[AEM](/help/implementing/dispatcher/overview.md) är cacheminnet på den första nivån i AEM, före CDN-cachen.
+[AEM Dispatcher](/help/implementing/dispatcher/overview.md) är den första nivån i AEM, före CDN-cache.
 
 **Ytterligare referens**
 
 Se:
 
-* [GraphQL Persistent Queries - aktivera cachelagring i Dispatcher](/help/headless/deployment/dispatcher-caching.md)
+* [GraphQL Persisted Queries - aktivera cachelagring i Dispatcher](/help/headless/deployment/dispatcher-caching.md)
 
 #### Använd ett CDN (Content Delivery Network) {#use-cdn}
 
 **Rekommendation**
 
-GraphQL-frågor och deras JSON-svar kan cachelagras om de är riktade som `GET` -begäranden när ett CDN används. Icke cachelagrade begäranden kan däremot vara mycket (resurskrävande) och långsamma att behandla, vilket kan få ytterligare negativa effekter på ursprungsmaterialets resurser.
+GraphQL-frågor och deras JSON-svar kan cachelagras om de är riktade som `GET`-begäranden när ett CDN används. Icke cachelagrade begäranden kan däremot vara mycket (resurskrävande) och långsamma att behandla, vilket kan få ytterligare negativa effekter på ursprungsmaterialets resurser.
 
 **Ytterligare referens**
 
 Se:
 
-* [CDN på AEM as a Cloud Service](/help/implementing/dispatcher/cdn.md)
+* [CDN i AEM AS A CLOUD SERVICE](/help/implementing/dispatcher/cdn.md)
 
 #### Ange rubriker för HTTP-cachekontroll {#set-http-cache-control-headers}
 
@@ -74,7 +74,7 @@ Se:
 
 När du använder beständiga GraphQL-frågor med ett CDN bör du ange lämpliga rubriker för HTTP-cachekontroll.
 
-Varje beständig fråga kan ha sin egen uppsättning specifika cachekontrollrubriker. Rubrikerna kan ställas in över [GRAPHQL API](/help/headless/graphql-api/content-fragments.md) eller [AEM GraphiQL IDE](/help/headless/graphql-api/graphiql-ide.md).
+Varje beständig fråga kan ha sin egen uppsättning specifika cachekontrollrubriker. Rubrikerna kan ställas in över [GraphQL API](/help/headless/graphql-api/content-fragments.md) eller [AEM GraphiQL IDE](/help/headless/graphql-api/graphiql-ide.md) .
 
 **Ytterligare referens**
 
@@ -97,7 +97,7 @@ Kontakta Adobe för att aktivera den här funktionen för ditt AEM Cloud Service
 
 I en AEM med ett stort antal innehållsfragment som delar samma modell kan GraphQL listfrågor bli dyra (i form av resurser).
 
-Det beror på att *alla* fragment som delar en modell som används i GraphQL-frågan måste läsas in i minnet. Detta förbrukar både tid och minne. Filtrering, som kan minska antalet objekt i den (slutliga) resultatmängden, kan bara användas **efter** läser in hela resultatuppsättningen i minnet.
+Detta beror på att *alla* fragment som delar en modell som används i GraphQL-frågan måste läsas in i minnet. Detta förbrukar både tid och minne. Filtrering, som kan minska antalet objekt i den (slutliga) resultatuppsättningen, kan bara tillämpas **efter** att hela resultatuppsättningen har lästs in i minnet.
 
 Detta kan leda till att även små resultatuppsättningar (kan) ger sämre prestanda. I själva verket beror dock avmattningen på storleken på den ursprungliga resultatmängden, eftersom den måste hanteras internt innan filtrering kan tillämpas.
 
@@ -106,11 +106,11 @@ För att minska prestanda- och minnesproblem måste den här första resultatmä
 I AEM finns det två sätt att optimera GraphQL-frågor:
 
 * [Hybridfiltrering](#use-aem-graphql-hybrid-filtering)
-* [Sidindelning](#use-aem-graphql-pagination) (eller sidnumrering)
+* [Sidindelning](#use-aem-graphql-pagination) (eller sidindelning)
 
    * [Sortering](#use-graphql-sorting) är inte direkt relaterat till optimering, men är relaterat till sidindelning
 
-Varje metod har sina egna användningsfall och begränsningar. I det här avsnittet finns information om Hybrid-filtrering och -sidindelning, samt en del av [bästa praxis](#best-practices) för optimering av GraphQL-frågor.
+Varje metod har sina egna användningsfall och begränsningar. I det här avsnittet finns information om Hybrid-filtrering och sidindelning, tillsammans med några av de [bästa metoderna](#best-practices) som kan användas för att optimera GraphQL-frågor.
 
 #### Använd AEM GraphQL hybridfiltrering {#use-aem-graphql-hybrid-filtering}
 
@@ -145,20 +145,21 @@ Svarstiden för komplexa frågor, med stora resultatuppsättningar, kan förbät
 
 GraphQL i AEM har stöd för två typer av sidnumrering:
 
-* [limit/offset-baserad sidnumrering](/help/headless/graphql-api/content-fragments.md#list-offset-limit)
-Detta används för listfrågor, som avslutas med `List`; till exempel `articleList`.
-Om du vill använda den måste du ange positionen för det första objektet som ska returneras ( `offset`) och antalet objekt som ska returneras ( `limit`, eller sidstorlek).
+* [begränsa/förskjutningsbaserad sidnumrering](/help/headless/graphql-api/content-fragments.md#list-offset-limit)
+Detta används för listfrågor, som avslutas med `List` , till exempel `articleList` .
+Om du vill använda det måste du ange positionen för det första objektet som ska returneras (`offset`) och antalet objekt som ska returneras (`limit`, eller sidstorleken).
 
-* [markörbaserad sidnumrering](/help/headless/graphql-api/content-fragments.md#paginated-first-after) (representeras av `first`och `after`) Detta ger ett unikt ID för varje objekt, som också kallas markör.
+* [markörbaserad sidnumrering](/help/headless/graphql-api/content-fragments.md#paginated-first-after) (representeras av `first` och `after`)
+Detta ger ett unikt ID för varje objekt, som också kallas markör.
 I frågan anger du markören för det sista objektet på föregående sida plus sidstorleken (det maximala antalet objekt som ska returneras).
 
-  Eftersom markörbaserad sidnumrering inte passar i de listbaserade frågestrukturerna har AEM infört `Paginated` frågetyp, till exempel `articlePaginated`. De datastrukturer och parametrar som används följer [GraphQL Cursor ConnectionSpecification](https://relay.dev/graphql/connections.htm).
+  Eftersom markörbaserad sidnumrering inte passar i de listbaserade frågornas datastrukturer har AEM introducerat `Paginated`-frågetyp, till exempel `articlePaginated`. De datastrukturer och parametrar som används följer [GraphQL Cursor ConnectionSpecification](https://relay.dev/graphql/connections.htm).
 
   >[!NOTE]
   >
-  >AEM har för närvarande stöd för sidväxling framåt (med `after`/`first` parametrar).
+  >AEM har för närvarande stöd för framåtriktad sidindelning (med `after`/`first` parametrar).
   >
-  >Bakåt sidindelning (med `before`/`last` parametrar) stöds inte.
+  >Bakåtväxling (med `before`/`last` parametrar) stöds inte.
 
 **Ytterligare referens**
 
@@ -196,7 +197,7 @@ För närvarande fungerar filtrering på JCR-nivå bara för fragment på den ö
 
 Om ett filter åtgärdar fälten i ett kapslat fragment måste AEM återgå till att läsa in (i minnet) alla fragment som delar den underliggande modellen.
 
-Du kan fortfarande optimera sådana GraphQL-frågor genom att kombinera filteruttryck i fält med fragment på översta nivån och de på fält i kapslade fragment med [AND-operator](#logical-operations-in-filter-expressions).
+Du kan fortfarande optimera sådana GraphQL-frågor genom att kombinera filteruttryck i fält med fragment på översta nivån och i fält med kapslade fragment med operatorn [AND](#logical-operations-in-filter-expressions).
 
 ### Använda innehållsstrukturen {#use-content-structure}
 
@@ -204,7 +205,7 @@ I AEM anses det som god praxis att använda databasstrukturen för att begränsa
 
 Detta arbetssätt bör även tillämpas på GraphQL-frågor.
 
-Detta kan du göra genom att använda ett filter på `_path` fältet för fragmentet på den översta nivån:
+Detta kan du göra genom att använda ett filter i fältet `_path` i fragmentet på den översta nivån:
 
 ```graphql
 {
@@ -227,7 +228,7 @@ Detta kan du göra genom att använda ett filter på `_path` fältet för fragme
 
 >[!NOTE]
 >
->Efterföljande `/` på `value` krävs för att uppnå bästa prestanda.
+>Den avslutande `/` på `value` krävs för att uppnå bästa prestanda.
 
 ### Använd sidindelning {#use-paging}
 
@@ -237,47 +238,47 @@ Om du filtrerar eller sorterar efter kapslade fragment kan sidnumrerade frågor 
 
 För sidindelning är sortering lika viktigt eftersom paginerade resultat alltid sorteras - antingen explicit eller implicit.
 
-Om du är mest intresserad av att bara hämta de första sidorna är det ingen större skillnad mellan att använda `...List` eller `...Paginated` frågor. Om ditt program är intresserat av att läsa mer än en eller två sidor bör du överväga `...Paginated` fråga eftersom den fungerar betydligt bättre med de senare sidorna.
+Om du i första hand är intresserad av att bara hämta de första sidorna finns det ingen större skillnad mellan att använda `...List`- och `...Paginated`-frågorna. Om ditt program är intresserat av att läsa mer än en eller två sidor bör du överväga frågan `...Paginated` eftersom den fungerar betydligt bättre med de senare sidorna.
 
 ### Logiska åtgärder i filteruttryck {#logical-operations-in-filter-expressions}
 
-Om du filtrerar kapslade fragment kan du fortfarande tillämpa JCR-filtrering genom att tillhandahålla ett medföljande filter på ett fält på den översta nivån som kombineras med `AND` -operator.
+Om du filtrerar kapslade fragment kan du fortfarande tillämpa JCR-filtrering genom att tillhandahålla ett medföljande filter på ett fält på den översta nivån som kombineras med operatorn `AND`.
 
-Ett vanligt användningsfall skulle vara att begränsa frågans omfattning med hjälp av ett filter på `_path` -fältet i fragmentet på den översta nivån och filtrera sedan efter ytterligare fält som kan finnas på den översta nivån eller på ett kapslat fragment.
+Ett typiskt användningsfall skulle vara att begränsa frågans omfattning med ett filter i fältet `_path` i fragmentet på den översta nivån och sedan filtrera på ytterligare fält som kan finnas på den översta nivån, eller på ett kapslat fragment.
 
-I det här fallet kombineras de olika filteruttrycken med `AND`. Därför är filtret aktiverat `_path` kan effektivt begränsa den inledande resultatmängden. Alla andra filter i fält på den översta nivån kan även bidra till att minska den inledande resultatmängden, så länge som de kombineras med `AND`.
+I det här fallet kombineras de olika filteruttrycken med `AND`. Därför kan filtret på `_path` effektivt begränsa den inledande resultatmängden. Alla andra filter i fält på den översta nivån kan även hjälpa till att minska den inledande resultatmängden, så länge de kombineras med `AND`.
 
-Filtrera uttryck i kombination med `OR` kan inte optimeras om kapslade fragment är inblandade. `OR` uttryck kan bara optimeras om *no* kapslade fragment är inblandade.
+Filteruttryck som kombinerats med `OR` kan inte optimeras om kapslade fragment är inblandade. `OR`-uttryck kan bara optimeras om *inga* kapslade fragment är inblandade.
 
 ### Undvik filtrering i textfält med flera rader {#avoid-filtering-multiline-textfields}
 
 Fälten i ett textfält med flera rader (html, markdown, plaintext, json) kan inte filtreras via en JCR-fråga eftersom innehållet i dessa fält måste beräknas direkt.
 
-Om du fortfarande behöver filtrera i ett textfält med flera rader bör du begränsa storleken på det ursprungliga resultatet genom att lägga till ytterligare filteruttryck och kombinera dem med `AND`. Begränsa omfånget genom att filtrera på `_path` -fältet är också en bra metod.
+Om du fortfarande behöver filtrera i ett textfält med flera rader bör du begränsa storleken på den ursprungliga resultatmängden genom att lägga till ytterligare filteruttryck och kombinera dem med `AND`. Det är också bra att begränsa omfånget genom att filtrera fältet `_path`.
 
 ### Undvik filtrering i virtuella fält {#avoid-filtering-virtual-fields}
 
-Virtuella fält (de flesta fält börjar med `_`) beräknas medan en GraphQL-fråga körs och ligger därför utanför JCR-baserad filtrering.
+Virtuella fält (de flesta fält som börjar med `_`) beräknas medan en GraphQL-fråga körs och ligger därför utanför JCR-baserad filtrering.
 
-Ett viktigt undantag är `_path` -fält, som kan användas effektivt för att minska storleken på den ursprungliga resultatmängden - om innehållet är strukturerat därefter (se [Använda innehållsstrukturen](#use-content-structure)).
+Ett viktigt undantag är fältet `_path`, som kan användas effektivt för att minska storleken på den ursprungliga resultatmängden, om innehållet är strukturerat därefter (se [Använd innehållsstrukturen](#use-content-structure)).
 
 ### Filtrera: Undantag {#filtering-exclusions}
 
 Det finns flera andra situationer där ett filteruttryck inte kan utvärderas på JCR-nivån (och därför bör undvikas för att uppnå bästa prestanda):
 
-* Filtrera uttryck på en `Float` värdet som använder `_sensitiveness` filteralternativ, och var `_sensitiveness` är inställt på något annat än `0.0` .
+* Filtrera uttryck på ett `Float`-värde som använder filteralternativet `_sensitiveness` och där `_sensitiveness` är inställt på något annat än `0.0` .
 
-* Filtrera uttryck på en `String` värdet med `_ignoreCase` filteralternativ.
+* Filtrera uttryck på ett `String`-värde med filteralternativet `_ignoreCase`.
 
-* Filtrera på `null` värden.
+* Filtrerar på `null`-värden.
 
 * Filter på arrayer med `_apply: ALL_OR_EMPTY`.
 
 * Filter på arrayer med `_apply: INSTANCES`, `_instances: 0`.
 
-* Filtrera uttryck med `CONTAINS_NOT` -operator.
+* Filtrera uttryck med operatorn `CONTAINS_NOT`.
 
-* Filtrera uttryck på en `Calendar`, `Date` eller `Time` värdet som använder `NOT_AT` -operator.
+* Filtrera uttryck på ett `Calendar`-, `Date`- eller `Time`-värde som använder operatorn `NOT_AT`.
 
 ### Minimera innehållets fragmentkapsling {#minimize-content-fragment-nesting}
 
@@ -289,7 +290,7 @@ Djupkapsling kan också ha negativa effekter på innehållsstyrningen. I allmän
 
 ### Alla format skrivs inte ut (textelement med flera rader) {#do-not-output-all-formats}
 
-AEM GraphQL kan returnera text som skapats i **[Flerradstext](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types)** datatyp, i flera format: RTF, Enkel text och Markering.
+AEM GraphQL kan returnera text, som har skapats i datatypen **[Flera rader](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types)**, i flera format: RTF, Enkel text och Markering.
 
 Om du skriver ut alla tre formaten ökar textutdatafilens storlek i JSON med faktorn tre. Detta i kombination med i allmänhet stora resultatuppsättningar från mycket breda frågor kan skapa mycket stora JSON-svar som därför tar lång tid att beräkna. Det är bättre att begränsa utdata till endast de textformat som krävs för återgivning av innehållet.
 

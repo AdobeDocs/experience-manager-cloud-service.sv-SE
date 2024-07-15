@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Tabeller i adaptiv form {#tables-in-adaptive-forms}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 
 | Version | Artikellänk |
@@ -42,11 +42,11 @@ AEM Forms tillhandahåller en tabellkomponent i komponentwebbläsaren i sidofäl
 
 Om du vill skapa en tabell drar och släpper du tabellkomponenten från komponentwebbläsaren i sidosparken på det adaptiva formuläret. Tabellen innehåller som standard två kolumner och tre rader, inklusive rubrikraden.
 
-![Tabellkomponent i AEM](assets/sidebar-tables.png)
+![Tabellkomponent i AEM ](assets/sidebar-tables.png)
 
 ### Om rubrik- och brödceller {#about-header-and-body-cells}
 
-Rubrikcellerna är textfält. Om du vill ändra rubrikens etikett högerklickar du på rubrikcellen och klickar på **Redigera**. Uppdatera etiketten i dialogrutan Redigera **Värde** fält och klicka **OK**.
+Rubrikcellerna är textfält. Om du vill ändra rubrikens etikett högerklickar du på rubrikcellen och klickar på **Redigera**. Uppdatera etiketten i fältet **Värde** i dialogrutan Redigera och klicka på **OK**.
 
 Tabellcellerna är som standard textrutor. Du kan ersätta en innehållscell med andra adaptiva formulärkomponenter som är tillgängliga i sidosparken, till exempel en numerisk ruta, datumväljare eller listruta.
 
@@ -54,7 +54,7 @@ Den första innehållsraden i följande tabell innehåller t.ex. textruta, datum
 
 ![radcellstyper](assets/row-cell-types.png)
 
-Du kan sammanfoga två eller flera innehållsceller genom att markera cellerna som du vill sammanfoga, högerklicka och markera **Sammanfoga**. Du kan också dela en sammanfogad cell genom att högerklicka på den och markera **Dela celler**.
+Du kan sammanfoga två eller flera innehållsceller genom att markera cellerna som du vill sammanfoga, högerklicka och välja **Sammanfoga**. Du kan även dela en sammanfogad cell genom att högerklicka på den och välja **Dela celler**.
 
 ### Lägga till, ta bort, flytta rader och kolumner {#add-delete-move-rows-and-columns}
 
@@ -62,13 +62,13 @@ Du kan lägga till och ta bort en rad eller kolumn och flytta en rad uppåt och 
 
 #### Lägga till, ta bort eller flytta en rad
 
-Om du vill lägga till, ta bort eller flytta raden klickar du på någon av radens celler. öppna innehållsläsaren ![Content Browser](/help/forms/assets/Smock_Layers_18_N.svg) och markerar motsvarande rad markeras den markerade raden med verktygsfältsalternativet där du kan lägga till, ta bort eller flytta raden uppåt eller nedåt.
+Om du vill lägga till, ta bort eller flytta raden klickar du på någon av radens celler. öppnar innehållsläsaren ![Innehållsläsaren](/help/forms/assets/Smock_Layers_18_N.svg) och markerar motsvarande rad, markerar den markerade raden med verktygsfältsalternativet där du kan lägga till, ta bort eller flytta raden uppåt eller nedåt.
 
-* The **[!UICONTROL Move Up]** och **[!UICONTROL Move Down]** flyttar den markerade raden uppåt och nedåt.
+* Åtgärden **[!UICONTROL Move Up]** och **[!UICONTROL Move Down]** flyttar den markerade raden upp och ned.
 
-* The **[!UICONTROL Add Column]** läggs en rad till nedanför den markerade raden.
+* Åtgärden **[!UICONTROL Add Column]** lägger till en rad nedanför den markerade raden.
 
-* The **[!UICONTROL Delete Column]** tar bort den markerade raden.
+* Åtgärden **[!UICONTROL Delete Column]** tar bort den markerade raden.
 
 ![add-delete-move-row-column](assets/add-delete-move-row.png)
 
@@ -90,9 +90,9 @@ Om du vill lägga till eller ta bort en kolumn klickar du på textcellen i rubri
 
 Du kan lägga till en beskrivning av tabellen för att förklara hur informationen är organiserad och att skärmläsare kan tolka och läsa upp den. Så här lägger du till beskrivningen:
 
-1. Markera tabellen och välj ![cmppr](assets/cmppr.png) om du vill visa dess egenskaper i sidofältet.
+1. Markera tabellen och välj ![cmpr](assets/cmppr.png) för att visa dess egenskaper i sidofältet.
 1. Ange en sammanfattning på fliken Tillgänglighet.
-1. Klicka **Klar**.
+1. Klicka på **Klar**.
 
 ### Sortera kolumner i en tabell {#sortcolumnstable}
 
@@ -108,38 +108,38 @@ Om du vill använda sortering på tabellkolumner måste tabellkolumncellerna inn
 
 Så här aktiverar du sortering:
 
-1. Markera tabellen och välj ![configure_icon](assets/configure_icon.png) (Konfigurera). Du kan också markera tabellen med **Innehåll** webbläsaren i sidospåret av Interactive Communication.
+1. Markera tabellen och välj ![configure_icon](assets/configure_icon.png) (Konfigurera). Du kan också markera tabellen med hjälp av webbläsaren **Innehåll** i sidoknappen i den interaktiva kommunikationen.
 1. Välj **Aktivera sortering**.
-1. Välj ![ready_icon](assets/done_icon.png) om du vill spara tabellegenskaperna. Sorteringsikonerna, uppåt- och nedåtpilarna, i kolumnrubriker representerar att sorteringen har aktiverats.
+1. Välj ![done_icon](assets/done_icon.png) om du vill spara tabellegenskaperna. Sorteringsikonerna, uppåt- och nedåtpilarna, i kolumnrubriker representerar att sorteringen har aktiverats.
 
    ![Aktivera sortering](assets/enable_sorting_new.png)
 
-1. Växla till **Förhandsgranska** för att visa utdata. Tabellen sorteras automatiskt baserat på tabellens första kolumn.
+1. Växla till **förhandsgranskningsläget** om du vill visa utdata. Tabellen sorteras automatiskt baserat på tabellens första kolumn.
 1. Klicka på kolumnrubriken om du vill sortera värdena baserat på kolumnen.
 
    En kolumnrubrik med en uppåtpil representerar att tabellen sorteras baserat på den kolumnen. Dessutom visas värdena i kolumnen i stigande ordning.
 
-   ![Sortera i stigande ordning](assets/sorting_ascending_new.png)
+   ![Sortering i stigande ordning](assets/sorting_ascending_new.png)
 
    På samma sätt visas en kolumnrubrik med en nedpil som värden i kolumnen i fallande ordning.
 
-   Du kan också göra ändringar i tabellen i **Förhandsgranska** och klicka på kolumnrubriken igen för att sortera kolumnvärdena.
+   Du kan också göra ändringar i tabellen i **förhandsgranskningsläget** och sedan klicka på kolumnrubriken igen för att sortera kolumnvärdena.
 
 ## Ange kolumnbredd för en tabell {#set-column-width}
 
 Gör så här för att ange kolumnbredd för en tabell:
 
-1. I **[!UICONTROL Content]** väljer du **[!UICONTROL Table]** och väljer Konfigurera (![Konfigurera](assets/configure-icon.svg)).
+1. Markera komponenten **[!UICONTROL Table]** på fliken **[!UICONTROL Content]** och välj ikonen Konfigurera (![Konfigurera](assets/configure-icon.svg)).
 
-1. Ange den kommaavgränsade listan med värden i dialogrutan **[!UICONTROL Column Width]** -fält för att ange den proportionella bredden för varje kolumn i tabellen. För en tabell som innehåller 3 kolumner anger du till exempel 2,4,6 som värde i **[!UICONTROL Column Width]** resulterar i att kolumnbredden ställs in som 2/12 för den första kolumnen, 4/12 för den andra kolumnen och 6/12 för den tredje kolumnen. 2/12 som bredd för den första kolumnen avser en sjättedel av tabellbredden. På samma sätt anger 4/12 den andra kolumnbredden som en tredjedel av tabellbredden och 6/12 den tredje kolumnbredden som halva tabellbredden.
+1. Ange den kommaavgränsade listan med värden i fältet **[!UICONTROL Column Width]** för att ange den proportionella bredden för varje kolumn i tabellen. Om du till exempel anger 2,4,6 som värde i fältet **[!UICONTROL Column Width]** för en tabell som innehåller 3 kolumner, blir bredden på kolumnerna 2/12 för den första kolumnen, 4/12 för den andra kolumnen och 6/12 för den tredje kolumnen. 2/12 som bredd för den första kolumnen avser en sjättedel av tabellbredden. På samma sätt anger 4/12 den andra kolumnbredden som en tredjedel av tabellbredden och 6/12 den tredje kolumnbredden som halva tabellbredden.
 
 ## Konfigurera tabellformat {#configure}
 
 Du kan definiera formatet för en tabell med hjälp av stilläget i verktygsfältet på sidan. Utför följande steg för att växla till formateringsläge och redigera tabellformatet
 
-1. I verktygsfältet för sidan, före förhandsvisning, väljer du ![canvas-drop-down](assets/canvas-drop-down.png) > **Stil**.
+1. I verktygsfältet för sidan, före förhandsvisning, väljer du ![listrutan för arbetsyta](assets/canvas-drop-down.png) > **Format**.
 
-1. Markera en tabell i sidlisten och välj knappen Redigera ![edit-button](assets/edit-button.png).
+1. Markera tabellen i sidlisten och välj redigeringsknappen ![edit-button](assets/edit-button.png).
 Du kan se formategenskaperna i sidofältet.
 
 ![Formategenskaper för en tabell](assets/style-table.png)
@@ -152,11 +152,11 @@ Du kan se formategenskaperna i sidofältet.
 
 Tabeller har färdiga funktioner för att dynamiskt lägga till eller ta bort rader vid körning.
 
-1. Markera en tabellrad och markera ![cmppr](assets/cmppr.png).
+1. Markera en tabellrad och välj ![cmpr](assets/cmppr.png).
 1. På fliken Upprepa inställningar anger du minsta och högsta antal rader för att begränsa antalet rader i tabellen.
-1. Klicka **Klar**.
+1. Klicka på **Klar**.
 
-Vid körning eller förhandsgranskning visas **+** och ![Ta bort-knapp](/help/forms/assets/Smock_Delete.svg) för att lägga till eller ta bort en rad.
+Vid körning eller förhandsgranskning visas knapparna **+** och ![Ta bort knapp](/help/forms/assets/Smock_Delete.svg) för att lägga till eller ta bort en rad.
 
 ![add-delete-rows-dynamically](assets/add-delete-layout.png)
 
@@ -171,20 +171,20 @@ Tabeller i anpassningsbara formulär gör att du kan skriva uttryck i JavaScript
 Tabellerna och raderna har endast stöd för synlighetsuttryck som styr synligheten baserat på värdet som returneras av ett uttryck, men cellerna har stöd för följande uttryck:
 
 * **Initieringsskript:** för att utföra en åtgärd vid initiering av ett fält.
-* **Value Commit Script:** om du vill ändra komponenterna i ett formulär efter att värdet för ett fält har ändrats.
+* **Värde implementerar skript:** om du vill ändra komponenterna i ett formulär efter att värdet för ett fält har ändrats.
 
 >[!NOTE]
 >
 >Om XFA-skriptet för ändring/utträde också tillämpas på samma fält, körs XFA-skriptet för ändring/utträde före skriptet för värdeimplementering.
 
-* **Beräkna uttryck**: för automatisk beräkning av ett fälts värde.
+* **Beräkna uttryck**: för att beräkna ett fälts värde automatiskt.
 * **Valideringsuttryck**: för att validera ett fält.
-* **Åtkomstuttryck**: för att aktivera/inaktivera ett fält.
-* **Synlighetsuttryck**: för att styra visningen av ett fält och en panel.
+* **Åtkomstuttryck**: om du vill aktivera/inaktivera ett fält.
+* **Synlighetsuttryck**: om du vill styra synligheten för ett fält och en panel.
 
 Synlighetsuttrycket för en tabell eller rad kan definieras på fliken Panelegenskaper i motsvarande dialogruta för redigeringskomponenter. Uttrycken för en cell kan definieras på fliken Skript i dialogrutan Redigera komponent.
 
-En fullständig lista över adaptiva formulärklasser, händelser, objekt och offentliga API:er finns på [API-referens för JavaScript-bibliotek för adaptiva formulär](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html).
+En fullständig lista över adaptiva formulärklasser, händelser, objekt och offentliga API:er finns i [API-referens för JavaScript-bibliotek för adaptiva formulär](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html).
 
 ## Mobillayouter {#mobile-layouts}
 
@@ -214,11 +214,11 @@ I kolumnlayouten Komprimerbar komprimeras kolumnerna i tabellen så att en eller
 
 Följande bilder jämför hur en tabell ser ut på en enhet med komprimerade och expanderade kolumner.
 
-![komprimerad kolumn](assets/collapsed-column.png)
+![komprimerad-kolumn](assets/collapsed-column.png)
 
 Komprimerade kolumner i en tabell där bara två kolumner visas på en mobil enhet
 
-![collapsible_column](assets/collapsible_column.png)
+![komprimsible_column](assets/collapsible_column.png)
 
 Utökad kolumn i en tabell på en mobil enhet
 
@@ -235,8 +235,8 @@ I det här exemplet används elementnamnegenskapen för:
 * raden är **Rad1**
 * innehållscellen under transaktionsdatumet är **tableItem1**
 * innehållscellen under Beskrivning är **tableItem2**
-* innehållscellen under Transaktionstypen är **type**
-* den cell under Belopp i USD är **tableItem3**
+* innehållscellen under transaktionstypen är **typ**
+* innehållscellen i USD är **tableItem3**
 
 XML-filen som innehåller data i följande format:
 
@@ -296,9 +296,9 @@ XML-filen som innehåller data i följande format:
 </afData>
 ```
 
-I XML-exemplet definieras data för en rad av `<Row1>` -taggar, som är elementnamnet för raden i tabellen. I `<Row1>` -taggen definieras data för varje cell i -taggen för elementnamnet, till exempel `<tableItem1>`, `<tableItem2>`, `<tableItem3>`och `<type>`.
+I XML-exempelkoden definieras data för en rad med `<Row1>`-taggarna, som är elementnamnet för raden i tabellen. I taggen `<Row1>` definieras data för varje cell i taggen för elementnamnet, till exempel `<tableItem1>`, `<tableItem2>`, `<tableItem3>` och `<type>`.
 
-Om du vill sammanfoga dessa data med tabellen vid körning måste vi peka det adaptiva formuläret som innehåller tabellen mot den absoluta XML-platsen med wcmmode inaktiverat. Om det adaptiva formuläret till exempel är *https://localhost:4502/myForms/bankTransaction.html* och XML-filen sparas på *C:/myTransactions/bankSummary.xml* kan du visa tabellen med data på följande URL:
+Om du vill sammanfoga dessa data med tabellen vid körning måste vi peka det adaptiva formuläret som innehåller tabellen mot den absoluta XML-platsen med wcmmode inaktiverat. Om det adaptiva formuläret till exempel finns på *https://localhost:4502/myForms/bankTransaction.html* och XML-datafilen sparas på *C:/myTransactions/bankSummary.xml* kan du visa tabellen med data på följande URL:
 
 *https://localhost:4502/myForms/bankTransaction.html?dataRef=file:/// C:/myTransactions/bankSummary.xml&amp;wcmmode=disabled*
 

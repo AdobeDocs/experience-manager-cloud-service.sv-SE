@@ -14,20 +14,20 @@ ht-degree: 0%
 
 # Spara grundkomponentbaserad adaptiv form som ett utkast {#save-af-form}
 
-Att spara adaptiva formulär som utkast är en viktig funktion som förbättrar användareffektiviteten och exaktheten. Med den här funktionen kan användare spara förloppet och gå tillbaka för att slutföra uppgifterna senare utan att förlora den angivna informationen. Tillhandahåller en  `save-as-draft` ger flexibilitet i hanteringen av tid, minskar risken för dataförlust och bevarar precisionen i inskickade data. Du kan spara formulär som utkast för att slutföra dem senare.
+Att spara adaptiva formulär som utkast är en viktig funktion som förbättrar användareffektiviteten och exaktheten. Med den här funktionen kan användare spara förloppet och gå tillbaka för att slutföra uppgifterna senare utan att förlora den angivna informationen. Om du anger ett `save-as-draft`-alternativ får du flexibilitet när det gäller att hantera tiden, minskar risken för dataförlust och bevarar precisionen för inskickade data. Du kan spara formulär som utkast för att slutföra dem senare.
 
 ## Överväganden
 
 * [Möjliggör adaptiva kärnkomponenter i Forms för er miljö.](/help/forms/enable-adaptive-forms-core-components.md)
 
-* Se till att [kärnkomponenten är inställd på version 3.0.24 eller senare](https://github.com/adobe/aem-core-forms-components) om du vill använda den här funktionen.
-* Se till att du har en [Azure-lagringskonto och en åtkomstnyckel](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal) för att auktorisera åtkomst till Azure-lagringskontot.
+* Kontrollera att kärnkomponenten [är inställd på version 3.0.24 eller senare](https://github.com/adobe/aem-core-forms-components) för att använda den här funktionen.
+* Kontrollera att du har ett [Azure-lagringskonto och en åtkomstnyckel](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal) för att auktorisera åtkomst till Azure-lagringskontot.
 
 ## Spara ett adaptivt formulär som ett utkast
 
-[!DNL Experience Manager Forms] Dataintegrering (data-integration.md) ger [!DNL Azure] lagringskonfiguration för att integrera formulär med [!DNL Azure] lagringstjänster. Formulärdatamodellen (FDM) kan användas för att skapa adaptiv Forms som interagerar med [!DNL Azure] server för att möjliggöra arbetsflöden.
+[!DNL Experience Manager Forms] Dataintegrering (data-integration.md) ger [!DNL Azure] lagringskonfiguration för att integrera formulär med [!DNL Azure] lagringstjänster. FDM (Form Data Model) kan användas för att skapa adaptiv Forms som samverkar med [!DNL Azure]-servern för att möjliggöra affärsarbetsflöden.
 
-Om du vill spara formuläret som ett utkast måste du ha ett Azure-lagringskonto och en åtkomstnyckel för att auktorisera åtkomst till [!DNL Azure] lagringskonto. Så här sparar du ett formulär som ett utkast:
+Om du vill spara formuläret som ett utkast kontrollerar du att du har ett Azure-lagringskonto och en åtkomstnyckel för att auktorisera åtkomst till lagringskontot [!DNL Azure]. Så här sparar du ett formulär som ett utkast:
 
 1. [Skapa Azure Storage-konfiguration](#create-azure-storage-configuration)
 1. [Konfigurera Unified Storage Connector för Forms Portal](#configure-usc-forms-portal)
@@ -36,7 +36,7 @@ Om du vill spara formuläret som ett utkast måste du ha ett Azure-lagringskonto
 
 ### 1. Skapa Azure Storage-konfiguration {#create-azure-storage-configuration}
 
-En gång har du ett Azure-lagringskonto och en åtkomstnyckel för att auktorisera åtkomst till [!DNL Azure] lagringskonto, utför följande steg för att skapa Azure Storage-konfigurationen:
+När du har ett Azure-lagringskonto och en åtkomstnyckel för att auktorisera åtkomst till [!DNL Azure]-lagringskontot utför du följande steg för att skapa Azure Storage-konfigurationen:
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Azure Storage]**.
 
@@ -46,16 +46,16 @@ En gång har du ett Azure-lagringskonto och en åtkomstnyckel för att auktorise
 
    ![Välj Azure Storage Configuration-mapp](/help/forms/assets/save-form-as-draft-select-config-folder.png)
 
-1. Ange en rubrik för konfigurationen i dialogrutan **[!UICONTROL Title]** fält.
-1. Ange namnet på [!DNL Azure] lagringskonto i **[!UICONTROL Azure Storage Account]** och **[!UICONTROL Azure Access Key]** fält.
+1. Ange en rubrik för konfigurationen i fältet **[!UICONTROL Title]**.
+1. Ange namnet på lagringskontot [!DNL Azure] i fälten **[!UICONTROL Azure Storage Account]** och **[!UICONTROL Azure Access Key]**.
 
-   ![Azure Storage-konfiguration](/help/forms/assets/save-form-as-draft-azure-storage.png)
+   ![Azure-lagringskonfiguration](/help/forms/assets/save-form-as-draft-azure-storage.png)
 
-1. Klicka **Spara**.
+1. Klicka på **Spara**.
 
 >[!NOTE]
 >
-> Du kan hämta **[!UICONTROL Azure Storage Account]** och **[!UICONTROL Azure Access Key]** från [Microsoft Azure Portal](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal).
+> Du kan hämta **[!UICONTROL Azure Storage Account]** och **[!UICONTROL Azure Access Key]** från [Microsoft Azure-portalen](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal).
 
 
 ### 2. Konfigurera Unified Storage Connector för Forms Portal {#configure-usc-forms-portal}
@@ -66,34 +66,34 @@ När du har skapat Azure Storage-konfigurationen konfigurerar du Unified Storage
 
    ![Enhetlig anslutningslagring](/help/forms/assets/save-form-as-draft-unified-connector.png)
 
-1. I **[!UICONTROL Forms Portal]** avsnitt, markera **[!UICONTROL Azure]** från **[!UICONTROL Storage]** listruta.
-1. Ange [konfigurationssökväg för Azure-lagringskonfigurationen](#create-azure-storage-configuration) i **[!UICONTROL Storage Configuration Path]** fält.
+1. I avsnittet **[!UICONTROL Forms Portal]** väljer du **[!UICONTROL Azure]** i listrutan **[!UICONTROL Storage]**.
+1. Ange [konfigurationssökvägen för Azure-lagringskonfigurationen](#create-azure-storage-configuration) i fältet **[!UICONTROL Storage Configuration Path]**.
 
    ![Inställning för enhetlig anslutningslagring](/help/forms/assets/save-form-as-draft-unified-connector-storage.png)
 
-1. Välj **[!UICONTROL Save]** och sedan **[!UICONTROL Publish]** för att publicera konfigurationen.
+1. Välj **[!UICONTROL Save]** och välj sedan **[!UICONTROL Publish]** för att publicera konfigurationen.
 
 ### 3. Skapa regler för att spara ett adaptivt formulär som ett utkast {#rule-to-save-adaptive-form-as-draft}
 
-Om du vill spara ett formulär som ett utkast skapar du ett **Spara formulär** regler för en formulärkomponent, t.ex. en knapp. När användaren klickar på knappen aktiveras regeln och formuläret sparas som ett utkast. Utför följande steg för att skapa **Spara formulär** regel för en knappkomponent:
+Om du vill spara ett formulär som ett utkast skapar du en **Spara formulär**-regel för en formulärkomponent, till exempel en knapp. När användaren klickar på knappen aktiveras regeln och formuläret sparas som ett utkast. Så här skapar du regeln **Spara formulär** för en knappkomponent:
 
 1. Öppna ett adaptivt formulär i redigeringsläge i instansen Författare.
-1. Välj ![Ikon för komponenter](assets/components_icon.png) och dra **[!UICONTROL Button]** till formuläret.
-1. Välj **[!UICONTROL Button]** och sedan markera ![Ikonen Konfigurera](assets/configure_icon.png).
-1. Välj **[!UICONTROL Edit Rules]** om du vill öppna Regelredigeraren.
-1. Välj **[!UICONTROL Create]** för att konfigurera och skapa regeln.
-1. I **[!UICONTROL When]** avsnitt, markera **klickas** och i **[!UICONTROL Then]** väljer du **Spara formulär** alternativ.
-1. Välj **[!UICONTROL Done]** för att spara regeln.
+1. I den vänstra rutan väljer du ikonen ![Komponenter](assets/components_icon.png) och drar komponenten **[!UICONTROL Button]** till formuläret.
+1. Markera komponenten **[!UICONTROL Button]** och välj sedan ikonen ![Konfigurera](assets/configure_icon.png).
+1. Välj ikonen **[!UICONTROL Edit Rules]** för att öppna regelredigeraren.
+1. Välj **[!UICONTROL Create]** om du vill konfigurera och skapa regeln.
+1. I avsnittet **[!UICONTROL When]** väljer du **är klickad** och i avsnittet **[!UICONTROL Then]** väljer du alternativet **Spara formulär**.
+1. Välj **[!UICONTROL Done]** om du vill spara regeln.
 
 ![Skapa regel för knapp](/help/forms/assets/save-form-as-drfat-create-rule.png)
 
-När du förhandsgranskar ett adaptivt formulär fyller du i det och klickar på knappen **Spara formulär** knappen sparas formuläret som ett utkast för senare bruk.
+När du förhandsgranskar ett adaptivt formulär, fyller i det och klickar på knappen **Spara formulär** sparas formuläret som ett utkast för senare bruk.
 
 ## Komponenten Utkast och inskickat material till en lista över utkast på AEM Sites-sidan
 
-AEM Forms tillhandahåller **Utkast och inskickat material** portalkomponent som inte finns i kartongen för att visa sparade formulär på AEM Sites sidor. The **Utkast och inskickat material** -komponenten visar formulär som har sparats som utkast för senare ifyllnad, samt skickade formulär. Den här komponenten ger en personlig upplevelse för alla inloggade användare genom att lista de utkast och inskickade data som rör den adaptiva Forms som har skapats av användaren.
+AEM Forms tillhandahåller portalkomponenten **Utkast och inskickningar** direkt för att visa sparade formulär på AEM Sites-sidor. Komponenten **Utkast och inskickningar** visar formulär som har sparats som utkast för senare ifyllnad samt skickade formulär. Den här komponenten ger en personlig upplevelse för alla inloggade användare genom att lista de utkast och inskickade data som rör den adaptiva Forms som har skapats av användaren.
 
-Du kan använda färdiga Forms Portal-komponenter för att lista formulärutkast på AEM Sites-sidan. Utför följande steg för att använda **Utkast och inskickat material** portalkomponent:
+Du kan använda färdiga Forms Portal-komponenter för att lista formulärutkast på AEM Sites-sidan. Utför följande steg för att använda portalkomponenten **Utkast och överföringar**:
 
 1. [Aktivera Forms Portal-komponenten för utkast och inskickat material](#enable-component)
 2. [Lägg till komponenten Utkast och överföringar på AEM Sites-sidan](#Add-drafts-submissions-component)
@@ -101,15 +101,15 @@ Du kan använda färdiga Forms Portal-komponenter för att lista formulärutkast
 
 ### 1. Aktivera Forms Portal-komponenten för utkast och inskickat material{#enable-component}
 
-Aktivera **[!UICONTROL Drafts & Submissions]** utför följande steg i mallprincipen:
+Så här aktiverar du komponenten **[!UICONTROL Drafts & Submissions]** i mallprincipen:
 
-1. Öppna AEM Sites-sidan i en **Redigera** läge.
+1. Öppna AEM Sites-sidan i **redigeringsläge**.
 1. Gå till **[!UICONTROL Page Information]** > **[!UICONTROL Edit Template]**
    ![Redigera mallprincip](/help/forms/assets/save-form-as-draft-edit-template.png)
 
-1. Klicka på **[!UICONTROL Policy]** och väljer **[!UICONTROL Drafts & Submissions]**  kryssrutan under **[AEM Archetype Project Name] - Forms och Communications Portal**.
+1. Klicka på **[!UICONTROL Policy]** och markera kryssrutan **[!UICONTROL Drafts & Submissions]** under **[AEM Archetype Project Name] - Forms and Communications Portal**.
 
-   ![Välj profil](/help/forms/assets/save-form-as-draft-enable-policy.png)
+   ![Principval](/help/forms/assets/save-form-as-draft-enable-policy.png)
 
 1. Klicka på **[!UICONTROL Done]**.
 
@@ -117,30 +117,30 @@ När en portalkomponent är aktiverad kan du använda den i författarinstansen 
 
 ### 2. Lägg till komponenten Utkast &amp; Submissions (Utkast &amp; överföringar) på AEM Sites-sidan{#Add-drafts-submissions-component}
 
-Du kan skapa och anpassa Forms Portal på webbplatser som skapats med AEM genom att lägga till och konfigurera portalkomponenterna. Se till att [Komponenten Utkast och överföringar är aktiverad](#enable-component) innan du använder dem på AEM Sites-sidan.
+Du kan skapa och anpassa Forms Portal på webbplatser som skapats med AEM genom att lägga till och konfigurera portalkomponenterna. Kontrollera att komponenten [Utkast och överföringar är aktiverad](#enable-component) innan du använder dem på AEM Sites-sidan.
 
-Om du vill lägga till en komponent drar och släpper du komponenten från **Utkast och inskickat material** i layoutbehållaren på sidan, eller markera ikonen Lägg till i layoutbehållaren och lägg till komponenten från **[!UICONTROL Insert New Component]** -dialogrutan.
+Om du vill lägga till en komponent drar och släpper du komponenten från komponentrutan **Utkast och överföringar** till layoutbehållaren på sidan. Du kan också välja ikonen Lägg till i layoutbehållaren och lägga till komponenten från dialogrutan **[!UICONTROL Insert New Component]** .
 
 ![Lägg till utkast och skicka-komponent](/help/forms/assets/save-form-as-draft-add-dns.png)
 
 ### 3. Konfigurera komponenten Utkast och överföringar {#configure-drafts-submissions-component}
 
-The **Utkast och inskickat material** -komponenten visar formulär som har sparats som utkast för att fylla i senare och skickade formulär. Konfigurera **Utkast och inskickat material** utför du följande steg:
-1. Välj **Utkast och inskickat material** -komponenten.
-1. Klicka på ![Ikonen Konfigurera](assets/configure_icon.png) och dialogrutan visas.
-1. I **[!UICONTROL Drafts and Submissions]** anger du följande:
-   * **Titel** Om du vill identifiera en komponent på en platssida och som standard visas titeln ovanpå komponenten.
-   * **Typ**: Att ange formulärlistan som utkast eller skickade formulär.
-   * **Layout**: Om du vill visa en lista över utkast eller skickade formulär i kort- eller listformat.
+Komponenten **Utkast och inskickningar** visar formulär som har sparats som utkast för att fylla i senare och skickade formulär. Så här konfigurerar du **Utkast och överföringar**:
+1. Markera komponenten **Utkast och överföringar**.
+1. Klicka på ikonen ![Konfigurera](assets/configure_icon.png) så visas dialogrutan.
+1. Ange följande i dialogrutan **[!UICONTROL Drafts and Submissions]**:
+   * **Titel** Om du vill identifiera en komponent på en webbplatssida visas titeln som standard ovanpå komponenten.
+   * **Typ**: För att ange formulärlistan som utkast eller skickade formulär.
+   * **Layout**: Om du vill visa en lista med formulärutkast eller skickade formulär i kort- eller listformat.
 
-   ![Egenskaper för utkast- och inskickskomponenter](/help/forms/assets/save-form-as-draft-dns-properties.png)
+   ![Egenskaper för utkast och skicka komponent](/help/forms/assets/save-form-as-draft-dns-properties.png)
 
-1. Klicka **Klar**.
+1. Klicka på **Klar**.
 
-När **[!UICONTROL Select Type]** markeras som **Utkast till Forms**visas de formulär som sparats som utkast:
-![Ikonen Utkast](assets/drafts-component.png)
+När **[!UICONTROL Select Type]** har valts som **Utkast av Forms** visas de formulär som har sparats som utkast:
+![Ikonen Utkast ](assets/drafts-component.png)
 
-När **[!UICONTROL Select Type]** markeras som **Forms har skickats** visas de inskickade formulären:
+När **[!UICONTROL Select Type]** har valts som **Skickat Forms** visas de skickade formulären:
 
 ![Ikonen Skicka](assets/submission-listing.png)
 

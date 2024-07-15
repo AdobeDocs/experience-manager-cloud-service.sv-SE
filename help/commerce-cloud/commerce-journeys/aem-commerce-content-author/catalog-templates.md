@@ -17,7 +17,7 @@ Lär dig hur du hanterar produktkatalogsidor och mallar.
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om redigeringsresan för AEM och Commerce [Komma igång med AEM CIF grunderna](getting-started.md)har du lärt dig grunderna i CIF.
+I det föregående dokumentet på redigeringsresan för AEM och Commerce, [Komma igång med AEM CIF ](getting-started.md) , lärde du dig grunderna i CIF.
 
 Den här artikeln bygger på dessa grunder.
 
@@ -63,7 +63,7 @@ Du kan redigera mallar antingen genom att öppna mallsidan direkt eller genom at
 
 ### Kategori- eller produktspecifika mallar {#specific}
 
-CIF stöder flera mallar med bara några klick. Om du vill skapa en annan mall väljer du den generiska mallen från respektive kategori och skapar en sida med **Skapa** åtgärd.
+CIF stöder flera mallar med bara några klick. Om du vill skapa en annan mall väljer du den generiska mallen från respektive kategori och skapar en sida med åtgärden **Skapa** .
 
 ![skapa mallsida](assets/create-template-page.png)
 
@@ -73,7 +73,7 @@ Välj respektive produkt- eller kategorimall.
 
 Ange rubriken och skapa sidan.
 
-![skapa mallinmatning](assets/create-template-enter.png)
+![skapa mallcenter](assets/create-template-enter.png)
 
 Observera att du nu har en specifik mall under den generiska.
 
@@ -87,15 +87,15 @@ Lägg till en bild ovanpå sidan.
 
 ![skapa malluppdatering](assets/create-template-update.png)
 
-Mallen kan förhandsgranskas med alla kategorier och produkter. Öppna **Sidinformation** och sedan **Visa med kategori/produkt**. Välj produkt/kategori i väljaren för att få en förhandsvisning av den här produkten/kategorin. Välj **Köp looken** för att få en förhandsgranskning av den uppdaterade mallen.
+Mallen kan förhandsgranskas med alla kategorier och produkter. Öppna **Sidinformation** och välj sedan **Visa med kategori/produkt**. Välj produkt/kategori i väljaren för att få en förhandsvisning av den här produkten/kategorin. Välj **Köp kategorin Look** om du vill ha en förhandsvisning av den uppdaterade mallen.
 
 ![skapa mall ](assets/create-template-picker.png)
 
-Nu måste du tilldela mallen till den specifika kategorin. Öppna egenskaper i **Sidinformation** och växla till fliken E-handel. Klicka på mappikonen och välj **Köp looken** -kategorin i kategoriväljaren. Du kan tilldela flera kategorier till en mall och även inkludera underkategorier genom att markera kryssrutan.
+Nu måste du tilldela mallen till den specifika kategorin. Öppna egenskaper på menyn **Sidinformation** och växla till fliken E-handel. Klicka på mappikonen och välj kategorin **Leta upp** i kategoriväljaren. Du kan tilldela flera kategorier till en mall och även inkludera underkategorier genom att markera kryssrutan.
 
-![skapa mallkoppling](assets/create-template-associate.png)
+![skapa mallassociation](assets/create-template-associate.png)
 
-Gå tillbaka till startsidan och klicka på **Köp looken** för att se den specifika mallen. Alla andra kategorier använder fortfarande den allmänna mallen.
+Gå tillbaka till huvudstartsidan och klicka på kategorin **Leta upp** för att visa den specifika mallen. Alla andra kategorier använder fortfarande den allmänna mallen.
 
 ![skapa mallresultat](assets/create-template-result.png)
 
@@ -109,11 +109,11 @@ Nu när du är klar med den här delen av resan bör du:
 * hur generiska mallar fungerar
 * har skapat en enskild mall
 
-Bygg vidare på denna kunskap och fortsätt din resa genom att nästa gång du granskar dokumentet [Hantera testade produktkataloger](staged-catalog.md), där du får lära dig hur du arbetar med mellanlagrade produktdata och AEM.
+Bygg vidare på den här kunskapen och fortsätt din resa genom att gå igenom dokumentet [Hantera testade produktkataloger](staged-catalog.md) där du får lära dig hur du arbetar med testade produktdata och AEM.
 
 ## Ytterligare resurser {#additional-resources}
 
-Vi rekommenderar att du går vidare till nästa del av resan genom att granska dokumentet [Hantera testade produktkataloger](staged-catalog.md), är följande ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men som inte behöver fortsätta på den lösa resan:
+Vi rekommenderar att du går vidare till nästa del av resan genom att granska dokumentet [Hantera upplevelser i den mellanlagrade produktkatalogen](staged-catalog.md), men följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta på den vanliga resan:
 
 * [Skapa flera kategori- och produktsidor](/help/commerce-cloud/authoring/multi-template-usage.md)
 * [Migreringsguide för Experience Manager Cloud Servicen](/help/commerce-cloud/migration.md) - Så här migrerar du till AEM Commerce integration framework (CIF)-tillägget från en gammal version

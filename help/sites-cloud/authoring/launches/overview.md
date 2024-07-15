@@ -35,7 +35,7 @@ Startar kan också vara:
 * Skapat för flera rotgrenar. Du kan skapa en start för hela webbplatsen (och göra ändringarna där), men det kan vara opraktiskt eftersom hela webbplatsen måste kopieras. När det gäller hundratals eller till och med tusentals sidor påverkas systemkraven och prestandan av både kopieringsåtgärden och senare jämförelserna som krävs för kampanjuppgifterna.
 * Kapslad (en programstart inom en programstart) för att ge dig möjlighet att skapa en programstart från en befintlig programstart så att författare kan utnyttja redan gjorda ändringar i stället för att behöva göra samma ändringar flera gånger för varje programstart.
 
-I det här avsnittet beskrivs hur du skapar, redigerar och befordrar (och om det behövs) [delete](/help/sites-cloud/authoring/launches/creating.md#deleting-a-launch)) starta sidor från Sites-konsolen eller [startkonsolen](#the-launches-console):
+I det här avsnittet beskrivs hur du skapar, redigerar och befordrar (och vid behov [delete](/help/sites-cloud/authoring/launches/creating.md#deleting-a-launch)) startsidor från Sites-konsolen eller [startkonsolen](#the-launches-console):
 
 * [Skapa startprogram](/help/sites-cloud/authoring/launches/creating.md)
 * [Redigeringsövningar](/help/sites-cloud/authoring/launches/editing.md)
@@ -61,23 +61,23 @@ Med Launes kan du:
    * Redigera startegenskaper, som flaggorna **Titel**, **Startdatum** och **Produktionsklar**.
 * Du kan befordra och publicera innehållet antingen manuellt eller automatiskt:
    * Manuellt:
-      * Befordra ert startmaterial tillbaka till **Mål** (källsidor) när den är klar att publiceras.
-      * Publicera innehållet från källsidorna (efter att ha befordrat dem).
+      * Befordra startinnehållet tillbaka till **Target** (källsidor) när det är klart för publicering.
+      * Publish innehållet från källsidorna (efter att de har befordrats).
       * Befordra antingen alla sidor eller endast ändrade sidor.
    * Automatiskt - det innebär följande:
-      * The **Starta**(**Live**) **datum** fält: detta kan anges när du skapar eller redigerar en start.
-      * The **Produktionsklar** flagga: detta kan bara anges när du redigerar en start.
-      * Om **Produktionsklar** -flaggan är inställd, lanseringen befordras automatiskt till produktionssidorna på den angivna **Starta**(**Live**) **datum**. Efter kampanjen publiceras produktionssidorna automatiskt.\
+      * Fältet **Starta**(**Live**) **date**: detta kan anges när du skapar eller redigerar en start.
+      * Flaggan **Produktionsklar**: den kan bara anges när du redigerar en start.
+      * Om flaggan **Production Ready** är inställd befordras starten automatiskt till produktionssidorna på den angivna **Launch**(**Live**) **date** . Efter kampanjen publiceras produktionssidorna automatiskt.\
         Om inget datum har angetts har flaggan ingen effekt.
 * Uppdatera käll- och startsidor parallellt:
    * Ändringar av källsidorna implementeras automatiskt i startkopian (om den har konfigurerats som arv, d.v.s. som en live-kopia).
    * Du kan göra ändringar i startversionen utan att störa dessa automatiska uppdateringar eller källsidorna.
 
-  ![Parallella åtgärder](/help/sites-cloud/authoring/assets/launches-parallel.png)
+  ![Åtgärder parallellt](/help/sites-cloud/authoring/assets/launches-parallel.png)
 
-* [Skapa en kapslad start](/help/sites-cloud/authoring/launches/creating.md#creating-a-nested-launch) - en programstart inom en programstart:
+* [Skapa en kapslad programstart](/help/sites-cloud/authoring/launches/creating.md#creating-a-nested-launch) - en programstart inom en programstart:
    * Källan är en befintlig start.
-   * Du kan [befordra en kapslad lansering](/help/sites-cloud/authoring/launches/promoting.md#promoting-a-nested-launch) till vilket mål som helst. Det kan vara en överordnad start eller källsidorna på den översta nivån (Produktion).
+   * Du kan [befordra en kapslad start](/help/sites-cloud/authoring/launches/promoting.md#promoting-a-nested-launch) till vilket mål som helst. Det kan vara en överordnad start eller källsidorna på den översta nivån (Produktion).
 
   ![En kapslad start](/help/sites-cloud/authoring/assets/launches-nested.png)
 
@@ -87,15 +87,15 @@ Med Launes kan du:
 
 >[!NOTE]
 >
->Att skapa och redigera starter kräver åtkomsträttigheter till `/content/launches` - som med standardgruppen `content-authors`.
+>Du måste ha behörighet till `/content/launches` för att kunna skapa och redigera starter, precis som med standardgruppen `content-authors`.
 >
 >Kontakta systemadministratören om du får problem.
 
 ## Startar i referenser (platskonsolen) {#launches-in-references-sites-console}
 
-1. I **Webbplatser** navigera till startkällan (startfilerna).
-1. Öppna **Referenser** och välj källsidan.
-1. Välj **Startar**, listas de befintliga starterna tillsammans med tillgång till **Startar konsolen**:
+1. Gå till startkällan i konsolen **Platser**.
+1. Öppna listen **Referenser** och välj källsidan.
+1. Välj **Startar**, de befintliga starterna visas tillsammans med åtkomst till **startarkonsolen**:
 
    ![Referenser till starter i webbplatskonsolen](/help/sites-cloud/authoring/assets/launches-references.png)
 
@@ -107,13 +107,13 @@ Med Launes kan du:
 
 På startkonsolen får du en översikt över dina starter och kan agera på dem som visas. Konsolen kan nås av:
 
-* The **verktyg** Konsol: **verktyg**, **Webbplatser**, **Startar**.
+* **Verktyg**-konsolen: **Verktyg**, **Webbplatser**, **Startar**.
 
-* **Startar konsolen** längst ned i **Startar** i **Referenser** när du navigerar i källinnehåll i webbplatskonsolen.
+* **Startar konsolen** längst ned i avsnittet **Startar** i fältet **Referenser** när du navigerar i källinnehåll i webbplatskonsolen.
 
   ![Startar konsolen i referenser till starter i webbplatskonsolen](/help/sites-cloud/authoring/assets/launches-references.png)
 
-* The **Startar** längst upp till höger när du navigerar till startinnehåll i webbplatskonsolen:
+* Knappen **Startar** längst upp till höger när du navigerar till startinnehåll i webbplatskonsolen:
 
   ![Startar alternativ i webbplatskonsolen](/help/sites-cloud/authoring/assets/launches-console-navigate-launch-content.png)
 

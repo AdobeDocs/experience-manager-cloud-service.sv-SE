@@ -23,12 +23,12 @@ Releasedatum för Best Practices Analyzer v2.1.40 är 3 mars 2023.
 
 ### Nyheter {#what-is-new-bpa}
 
-* BPA kan nu identifiera och rapportera om noder som är i konflikt - noder med samma `jcr:uuid`. Sådana upptäckter flaggas som kritiska eftersom det kan leda till innehållsproblem när innehåll flyttas till AEM as a Cloud Service.
-* BPA kan nu identifiera och rapportera om användningen av händelseavlyssnare. Vi rekommenderar att du justerar den här typen av händelsehanteringsmekanism till snedningsjobb när du går till AEM as a Cloud Service.
+* BPA kan nu identifiera och rapportera om noder som står i konflikt - noder med samma `jcr:uuid`. Sådana upptäckter flaggas som kritiska eftersom de kan leda till innehållsproblem när innehåll flyttas till AEM as a Cloud Service.
+* BPA kan nu identifiera och rapportera om användningen av händelseavlyssnare. Vi rekommenderar att du justerar den här typen av händelsehanteringsmekanism till snedjobb när du flyttar till AEM as a Cloud Service.
 
 ### Felkorrigeringar {#bug-fixes-bpa}
 
-* BPA rapporterade falsk positiv information om `grouprendercondition`. Den här har åtgärdats.
+* BPA rapporterade falsk positiv information på `grouprendercondition`. Den här har åtgärdats.
 
 ## Verktyget Innehållsöverföring {#ctt-release}
 
@@ -39,7 +39,7 @@ Releasedatum för Content Transfer Tool v 2.0.16 är 8 mars 2023.
 ### Nyheter {#what-is-new-ctt}
 
 * Användarmappningen har effektiviserats och integrerats i innehållsextraheringssteget. Ingen konfiguration behövs, och som standard görs användarmappningen automatiskt när användaren startar innehållsextraheringen. Användaren har möjlighet att inaktivera användarmappning vid behov. Läs mer [här.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/user-mapping-and-migration.html#user-mapping-detail)
-* Förkopieringssteget med [AzCopy](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10) har integrerats med verktyget Innehållsöverföring för att avsevärt snabba upp extraheringen. Precopy konfigureras och installeras automatiskt när den här versionen av CTT installeras. När extraheringen initieras körs som standard precopy automatiskt för migreringsuppsättningar som är större än 200 GB. Användaren har möjlighet att inaktivera det vid behov. Läs mer [här.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/handling-large-content-repositories.html)
+* Precopy-steget med [AzCopy](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10) har integrerats med verktyget Innehållsöverföring för att avsevärt snabba upp extraheringen av innehåll. Precopy konfigureras och installeras automatiskt när den här versionen av CTT installeras. När extraheringen initieras körs som standard precopy automatiskt för migreringsuppsättningar som är större än 200 GB. Användaren har möjlighet att inaktivera det vid behov. Läs mer [här.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/handling-large-content-repositories.html)
 * CTT kan nu användas på Windows-servrar.
 
 ### Felkorrigeringar {#bug-fixes-ctt}

@@ -21,21 +21,21 @@ ht-degree: 2%
 
 Formulärförfattare kan konfigurera en sida för varje formulär som formuläranvändarna omdirigeras till efter att de har skickat in formuläret.
 
-1. Markera en komponent i redigeringsläget och klicka sedan på ![fältnivå](assets/select_parent_icon.svg) > **[!UICONTROL Adaptive Form Container]** och klicka sedan på ![cmppr](assets/configure-icon.svg).
+1. Markera en komponent i redigeringsläget, klicka på ![fältnivå](assets/select_parent_icon.svg) > **[!UICONTROL Adaptive Form Container]** och klicka sedan på ![cmpr](assets/configure-icon.svg).
 
-1. Klicka på **[!UICONTROL Submission]**.
+1. Klicka på **[!UICONTROL Submission]** i sidlisten.
 
-1. Ange URL:en för omdirigeringssidan under **[!UICONTROL Redirect URL/Path]** i **[!UICONTROL Submission]** -avsnitt.
+1. Ange URL:en för omdirigeringssidan under **[!UICONTROL Redirect URL/Path]** i avsnittet **[!UICONTROL Submission]**.
 1. Under Skicka-åtgärd kan du som alternativ konfigurera parametern som ska skickas till omdirigeringssidan för slutpunktsåtgärden Skicka till REST.
 
-   ![Omdirigeringssidkonfiguration](assets/redirect-url.png)
+   ![Konfiguration av omdirigeringssida](assets/redirect-url.png)
 
    Omdirigeringssidkonfiguration
 
-Formulärförfattare kan använda följande parametrar som skickas till sidan Tack. För alla tillgängliga Skicka-åtgärder, `status` och `owner` parametrar skickas. Förutom dessa två parametrar skickas ytterligare några parametrar för följande Skicka-åtgärder:
+Formulärförfattare kan använda följande parametrar som skickas till sidan Tack. `status`- och `owner`-parametrar skickas för alla tillgängliga överföringsåtgärder. Förutom dessa två parametrar skickas ytterligare några parametrar för följande Skicka-åtgärder:
 
-* **[!UICONTROL Submit to REST endpoint]**: Parametrar som lagts till för mappning mellan fältparametrar skickas. `status` och `owner` parametrar skickas inte i denna Skicka-åtgärd. Mer information finns i [Konfigurera åtgärden Skicka till REST-slutpunkt](configuring-submit-actions.md).
+* **[!UICONTROL Submit to REST endpoint]**: Parametrar som har lagts till för mappning mellan fältparametrar skickas. Parametrarna `status` och `owner` skickas inte i den här åtgärden. Mer information finns i [Konfigurera åtgärden Skicka till REST-slutpunkt](configuring-submit-actions.md).
 
 >[!MORELIKETHIS]
 >
->* [Konfigurera en omdirigeringssida eller ett tackmeddelande](/help/forms/configure-redirect-page-or-thank-you-message.md)
+>* [Konfigurera en omdirigeringssida eller tacka dig för meddelandet](/help/forms/configure-redirect-page-or-thank-you-message.md)

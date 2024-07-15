@@ -8,7 +8,7 @@ discoiquuid: a1229970-5a5a-4f76-a880-278f972587cc
 docset: aem65
 source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Anpassat formulärfragment är en grupp med fält eller en panel som innehåller en grupp med fält som du kan använda när du skapar ett formulär. Du kan skapa ett formulär snabbt och enkelt. Du kan dra och släppa ett adaptivt formulärfragment i ett formulär med hjälp av resursläsaren i sidofältet, och du kan redigera det i formulärredigeraren.
 
-För adaptiva Forms-författare finns referensfragment i [!DNL AEM Forms] package [[!DNL AEM FORMS] REFERENSFRAGMENT](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-FRAGMENTS). Den innehåller följande fragment:
+För adaptiva Forms-författare anges referensfragment i [!DNL AEM Forms]-paketet [[!DNL AEM FORMS] REFERENSFRAGMENT](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/fd/AEM-FORMS-6.3-REFERENCE-FRAGMENTS). Den innehåller följande fragment:
 
 * Adress
 * Kontaktinformation
@@ -31,9 +31,9 @@ För adaptiva Forms-författare finns referensfragment i [!DNL AEM Forms] packag
 * Villkor
 * Villkor med Klottra
 
-När du installerar paketet skapas en referensfragmentmapp med referensfragment under Forms &amp; Documents. Information om hur du installerar ett paket finns i [Distribuera innehållspaket via Cloud Manager och Package Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#deploying-content-packages-via-cloud-manager-and-package-manager) och [Så här arbetar du med paket](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html).
+När du installerar paketet skapas en referensfragmentmapp med referensfragment under Forms &amp; Documents. Information om hur du installerar ett paket finns i [Distribuera innehållspaket via Cloud Manager och Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#deploying-content-packages-via-cloud-manager-and-package-manager) och [Arbeta med paket](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html).
 
-![Alla fragment listas](assets/ootb-frags.png)
+![Alla fragment listade](assets/ootb-frags.png)
 
 ## Adress {#address}
 
@@ -58,7 +58,7 @@ Inkluderar fält för hämtning av telefonnummer och e-postadress.
 ## Kreditkortsinformation {#credit-card-information}
 
 Inkluderar fält för att samla in kreditkortsinformation som kan användas för att bearbeta betalningar.
-[![Information om kreditkort](assets/cc-info.png)](assets/cc-info-1.png)
+[![Information om kreditkort, fragment](assets/cc-info.png)](assets/cc-info-1.png)
 
 ## Aktuell anställning {#current-employment}
 
@@ -114,7 +114,7 @@ Inkluderar fält för att ange rubrik, förnamn, mellannamn och efternamn.
 
 Anger villkor som användare ska godkänna innan de skickar in ett formulär.
 
-![Fragment för villkor](assets/tnc.png)
+![Villkor för fragment](assets/tnc.png)
 
 <!--[Click to enlarge
 

@@ -1,6 +1,6 @@
 ---
 title: Kontrollpanel för CDN-prestanda
-description: Förstå hur Cloud Manager utvärderar prestanda för leveransnätverk (CDN) och vad du kan lära dig från kontrollpanelen.
+description: Lär dig hur Cloud Manager utvärderar prestanda för leveransnätverk (CDN) och vad du kan lära dig av kontrollpanelen.
 exl-id: ecd8c1ca-873f-4e73-ad73-b5f7561eb109
 solution: Experience Manager
 feature: Cloud Manager, Developing
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Kontrollpanel för CDN-prestanda {#cdn-performance}
 
-Förstå hur Cloud Manager utvärderar prestanda för leveransnätverk (CDN) och vad du kan lära dig från kontrollpanelen.
+Lär dig hur Cloud Manager utvärderar prestanda för leveransnätverk (CDN) och vad du kan lära dig av kontrollpanelen.
 
 ## Ökning {#overview}
 
-Alla program i Cloud Manager har en kontrollpanel för CDN-prestanda. Den här kontrollpanelen ger en övergripande poäng för CDN-prestanda tillsammans med trender, varningar och förslag på förbättringar efter behov.
+Alla Cloud Manager-program har en kontrollpanel för CDN-prestanda. Den här kontrollpanelen ger en övergripande poäng för CDN-prestanda tillsammans med trender, varningar och förslag på förbättringar efter behov.
 
 ![Kontrollpanel för CDN-prestanda](assets/cdn-performance-dashboard.png)
 
@@ -26,13 +26,13 @@ Alla program i Cloud Manager har en kontrollpanel för CDN-prestanda. Den här k
 
 CDN-kontrollpanelen finns på översiktssidan för alla program.
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
-1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** genom att trycka eller klicka på det program vars CDN-kontrollpanel du vill visa.
+1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** trycker eller klickar du på det program vars CDN-kontrollpanel du vill visa.
 
    ![Sidan Mina program](assets/my-programs.png)
 
-1. På **Programöversikt** sidan med ditt program, bläddra nedåt under **Miljö** och **Pipelines** kort för att se **Prestanda** kort.
+1. På sidan **Programöversikt** i ditt program kan du bläddra nedåt under korten **Miljöer** och **Pipelines** för att se kortet **Prestanda**.
 
    ![Prestanda](assets/cdn-performance-overview.png)
 
@@ -42,13 +42,13 @@ Kontrollpanelen ger en övergripande poäng för CDN-prestanda tillsammans med t
 
 ![Kontrollpanel för CDN-prestanda](assets/cdn-performance-dashboard.png)
 
-Om du vill ha mer information om CDN-prestanda och förslag på hur du kan förbättra den trycker du eller klickar **Visa trend**.
+Om du vill ha mer information om CDN-prestanda och förslag på hur du kan förbättra den trycker eller klickar du på **Visa trend**.
 
 ![Resultattrend](assets/cdn-performance-trend.png)
 
-Tryck eller klicka **Visa** nedanför diagrammet för att ändra tidsrymden.
+Tryck eller klicka på **Visa** nedanför diagrammet om du vill ändra tidsrymden för diagrammet.
 
-Om du vill ha förslag på hur du kan förbättra CDN-prestanda väljer du **Recommendations** -fliken.
+Om du vill ha förslag på hur du kan förbättra CDN-prestanda väljer du fliken **Recommendations**.
 
 ![CDN-rekommendationer](assets/cdn-performance-recommendations.png)
 
@@ -67,12 +67,12 @@ Cache Hit Ratio = Cache Hits / (Hits + Misses + Passes + Other)
 ```
 
 * **Träff** - Data begärs från cacheminnet och hittas.
-* **Fröken** - Data begärs från cacheminnet och kan inte hittas.
-* **Godkänd** - Data begärs från cacheminnet och är inställda på att inte cachelagra dessa data i något fall.
-* **Övriga** - Alla dataförfrågningar från cacheminnet som inte matchar något annat fall.
+* **Fröken** - Data begärs från cacheminnet, men kan inte hittas.
+* **Steg** - Data begärs från cacheminnet och är inställda på att inte cachelagra dessa data i något fall.
+* **Annat** - Alla dataförfrågningar från cachen som inte matchar något annat fall.
 
 Cachelagringsstatistik uppdateras var 24:e timme.
 
 >[!TIP]
 >
->Mer information om hur Cloud Manager och CDN interagerar med Dispatcher finns i dokumentet [Cachelagring i AEM as a Cloud Service.](/help/implementing/dispatcher/caching.md)
+>Mer information om hur Cloud Manager och CDN interagerar med Dispatcher finns i dokumentet [Caching in AEM as a Cloud Service.](/help/implementing/dispatcher/caching.md)

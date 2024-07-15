@@ -32,13 +32,13 @@ Digitala resurser kan kopplas till en eller flera produkt-SKU:er. När den är k
 
 >[!VIDEO](https://video.tv.adobe.com/v/333205/?quality=12&learn=on)
 
-Experience Fragments är en funktion i Adobe Experience Manager som gör att en marknadsförare kan skapa **ostrukturerad** återanvändbart innehåll. Experience Fragments kan associeras med en produkt-SKU eller ett katalog-ID. När de är kopplade kan marknadsförarna enkelt identifiera relaterade fragment baserat på produkter som visas på en sida. Upplevelsefragment kan också inkluderas dynamiskt på en produktkatalogsida med hjälp av en platshållare och association.
+Experience Fragments är en funktion i Adobe Experience Manager som gör att en marknadsförare kan skapa **ostrukturerat** återanvändbart innehåll. Experience Fragments kan associeras med en produkt-SKU eller ett katalog-ID. När de är kopplade kan marknadsförarna enkelt identifiera relaterade fragment baserat på produkter som visas på en sida. Upplevelsefragment kan också inkluderas dynamiskt på en produktkatalogsida med hjälp av en platshållare och association.
 
 ## Innehållsfragment {#content-fragments}
 
 >[!VIDEO](https://video.tv.adobe.com/v/339182/?quality=12&learn=on)
 
-Innehållsfragment är en funktion i Adobe Experience Manager som gör att en marknadsförare kan skapa **strukturerad** återanvändbart innehåll. Innehållsfragment kan kopplas till en produkt-SKU eller ett katalog-id. När de är kopplade kan marknadsförarna enkelt identifiera relaterade fragment baserat på produkter som visas på en sida. Innehållsfragment kan också inkluderas dynamiskt på en produktkatalogsida med hjälp av en platshållare och association.
+Innehållsfragment är en funktion i Adobe Experience Manager som gör att en marknadsförare kan skapa **strukturerat** återanvändbart innehåll. Innehållsfragment kan kopplas till en produkt-SKU eller ett katalog-id. När de är kopplade kan marknadsförarna enkelt identifiera relaterade fragment baserat på produkter som visas på en sida. Innehållsfragment kan också inkluderas dynamiskt på en produktkatalogsida med hjälp av en platshållare och association.
 
 ## Innehållssidor {#content-pages}
 
@@ -47,4 +47,4 @@ Innehållssidor kan kopplas till en eller flera produkt-SKU:er. När sidan har a
 
 ## Relaterade resurser {#related}
 
-Du kan också anpassa en hel mall för en viss uppsättning produkter eller kategorier. Lär dig hur [skapa flera kategorier och produktsidor](./multi-template-usage.md).
+Du kan också anpassa en hel mall för en viss uppsättning produkter eller kategorier. Lär dig hur du gör genom att [skapa flera kategorier och produktsidor](./multi-template-usage.md).

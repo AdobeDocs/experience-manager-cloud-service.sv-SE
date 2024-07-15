@@ -14,7 +14,7 @@ ht-degree: 52%
 ---
 
 
-# Implementera ansökningar för AEM as a Cloud Service {#aem-implementation-guide}
+# Implementera program för AEM as a Cloud Service {#aem-implementation-guide}
 
 Hitta självhjälpsresurser om implementering för Experience Manager as a Cloud Service. Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service.
 

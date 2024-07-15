@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Förbättra prestanda för stora formulär med lat inläsningsverktyg{#improve-performance-of-large-forms-with-lazy-loading}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -40,9 +40,9 @@ Du kan bara konfigurera adaptiva formulärfragment för lazy loading. Ett fragme
 * **Identifiera och markera globala värden**
 Forms-baserade transaktioner innefattar dynamiska element för att hämta in relevanta data från användarna och bearbeta dem för att förenkla ifyllandet av formulär. Formuläret har till exempel fält A i fragment X vars värde bestämmer giltigheten för fält B i ett annat fragment. Om fragment X i det här fallet har markerats för lazy loading måste värdet i fält A vara tillgängligt för att validera fält B även när fragment X inte har lästs in. För att uppnå detta kan du markera fält A som globalt, vilket garanterar att dess värde är tillgängligt för validering av fält B när fragment X inte har lästs in.
 
-  Mer information om hur du gör ett fältvärde globalt finns i [Konfigurerar lazy loading](lazy-loading-adaptive-forms.md#p-configuring-lazy-loading-p).
+  Mer information om hur du gör ett fältvärde globalt finns i [Konfigurera lazy loading](lazy-loading-adaptive-forms.md#p-configuring-lazy-loading-p).
 
-* **Skriv regler för att kontrollera synligheten för fält**
+* **Skriv regler för att kontrollera synlighet för fält**
 Forms innehåller fält och avsnitt som inte är tillämpliga för alla användare och under alla förhållanden. Forms författare och utvecklare använder synlighets- eller visningsregler för att styra synligheten baserat på användarindata. Fältet Kontorsadress visas t.ex. inte för användare som väljer Arbetslösa i fältet Anställningsstatus i ett formulär. Mer information om hur du skriver regler finns i [Använda regelredigeraren](rule-editor.md).
 
   Du kan använda synlighetsregler i de lagerinlästa fragmenten så att villkorsfält bara visas när de är obligatoriska. Markera dessutom det villkorliga fältet globalt så att det refererar till det i synlighetsuttrycket för det lagerinlästa fragmentet.
@@ -53,7 +53,7 @@ Utför följande steg för att aktivera lazy loading på ett adaptivt formulärf
 
 1. Öppna det adaptiva formuläret i det redigeringsläge som innehåller det fragment som du vill aktivera för lazy loading.
 1. Markera det adaptiva formulärfragmentet och välj ![konfigurera](assets/configure-icon.svg).
-1. Aktivera **[!UICONTROL Load fragment lazily]** och markera **Klar**.
+1. Aktivera **[!UICONTROL Load fragment lazily]** i sidofältet och välj **Klar**.
 
    ![Aktivera lazy loading för det anpassade formulärfragmentet](assets/lazy-loading-fragment.png)
 
@@ -62,8 +62,8 @@ Utför följande steg för att aktivera lazy loading på ett adaptivt formulärf
 Du kan markera objektvärden i det lagerinlästa fragmentet som globala så att de är tillgängliga för användning i skript när det innehållande fragmentet inte läses in. Gör följande:
 
 1. Öppna det adaptiva formulärfragmentet i redigeringsläge.
-1. Markera det fält vars värde du vill markera som globalt och välj sedan ![konfigurera](assets/configure-icon.svg).
-1. Aktivera **[!UICONTROL Use value during lazy loading]**.
+1. Markera fältet vars värde du vill markera som globalt och välj sedan ![configure](assets/configure-icon.svg).
+1. Aktivera **[!UICONTROL Use value during lazy loading]** i sidofältet.
 
    ![Lazy loading field in sidebar](assets/enable-lazy-loading.png)
 
@@ -74,7 +74,7 @@ Du kan markera objektvärden i det lagerinlästa fragmentet som globala så att 
 Vissa begränsningar, rekommendationer och viktiga punkter som du bör tänka på när du arbetar med lazy loading är följande:
 
 * Adobe rekommenderar att man använder XSD-schemabaserad Adaptiv Forms över XFA-baserad Adaptiv Forms för att konfigurera lat inläsningsarbete i stora formulär. Prestandavinster på grund av lazy loading-implementering i XFA-baserad Adaptive Forms är relativt mindre än förstärkning i XSD-baserad Adaptive Forms.
-* Konfigurera inte lazy loading på fragment i ett adaptivt formulär som använder **[!UICONTROL Responsive -everything on one page without navigation]** rotpanelens layout. Som ett resultat av layoutkonfigurationen Responsiv läses alla fragment in samtidigt i en adaptiv form. Det kan också leda till försämrade prestanda.
+* Konfigurera inte lazy loading på fragment i ett adaptivt formulär som använder layouten **[!UICONTROL Responsive -everything on one page without navigation]** för rotpanelen. Som ett resultat av layoutkonfigurationen Responsiv läses alla fragment in samtidigt i en adaptiv form. Det kan också leda till försämrade prestanda.
 * Vi rekommenderar att du inte konfigurerar lazy loading på fragment på den första panelen som återges när det adaptiva formuläret läses in.
 * Lazy loading stöds upp till två nivåer i fragmenthierarkin.
 * Se till att fält som markerats som globala är unika i ett adaptivt formulär.

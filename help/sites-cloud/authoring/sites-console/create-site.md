@@ -23,4 +23,4 @@ Lär dig hur administratörer använder AEM skapa en webbplats med hjälp av web
 
 Innan innehållsförfattare kan skapa sidor med nytt innehåll måste webbplatsen först skapas. Hur framgångsrik en webbplats är beror i hög grad på den planering och de överväganden som ursprungligen gjordes för webbplatsens struktur, format och innehåll. Av den anledningen skapas den första webbplatsen vanligtvis av en AEM.
 
-Mer information om hur du använder webbplatsmallar för att skapa webbplatser snabbt och flexibelt finns i [Skapa dokumentation för en ny platsadministratör](/help/sites-cloud/administering/site-creation/create-site.md).
+Mer information om hur du använder webbplatsmallar för att skapa webbplatser snabbt och flexibelt finns i [Skapa en ny dokumentation för webbplatsadministratörer](/help/sites-cloud/administering/site-creation/create-site.md).

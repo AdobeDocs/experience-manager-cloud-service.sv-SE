@@ -1,6 +1,6 @@
 ---
-title: '''[!DNL Live Search] CIF'
-description: Aktivera CIF [!DNL Live Search] Leverera komponent på en AEM plats
+title: '[!DNL Live Search] CIF-komponent'
+description: Använda CIF komponenter för att aktivera  [!DNL Live Search] komponenten Popover på en AEM plats
 exl-id: 9dac6693-fe87-4a47-a920-2cf788933499
 feature: Commerce Integration Framework
 role: Admin
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 ---
 
-# [!DNL Live Search] CIF {#live-search-popover}
+# [!DNL Live Search] CIF-komponent {#live-search-popover}
 
-The [!DNL Live Search] Popover är det element som innehåller [!DNL Live Search] när du skriver i sökfältet.
+[!DNL Live Search]-porten är det element som innehåller [!DNL Live Search]-resultaten när du skriver i sökfältet.
 I det här avsnittet beskrivs hur du integrerar den här komponenten i din AEM.
 
 ## Filstruktur {#file-strucure}
@@ -22,7 +22,7 @@ Om du vill aktivera CIF måste filerna redigeras och skapas.
 
 * ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/searchbar/clientlibs/.content.xml
 
-  Skapa `.content.xml` fil:
+  Skapa filen `.content.xml`:
 
   ```xml
   <?xml version="1.0" encoding="UTF-8"?>
@@ -35,7 +35,7 @@ Om du vill aktivera CIF måste filerna redigeras och skapas.
 
 * ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/searchbar/clientlibs/css.txt
 
-  Skapa `css.txt` fil:
+  Skapa filen `css.txt`:
 
   ```text
   #base=css
@@ -45,7 +45,7 @@ Om du vill aktivera CIF måste filerna redigeras och skapas.
 
 * ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/searchbar/clientlibs/css/searchbar.css
 
-  Skapa `searchbar.css` fil:
+  Skapa filen `searchbar.css`:
 
 
   ```css
@@ -140,7 +140,7 @@ Om du vill aktivera CIF måste filerna redigeras och skapas.
 
 * ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/searchbar/clientlibs/js.txt
 
-  Skapa `js.txt` fil:
+  Skapa filen `js.txt`:
 
   ```text
   js/searchbar.js
@@ -148,7 +148,7 @@ Om du vill aktivera CIF måste filerna redigeras och skapas.
 
 * ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/searchbar/clientlibs/js/searchbar.js
 
-  Skapa `searchbar.js` fil:
+  Skapa filen `searchbar.js`:
 
   ```javascript
   /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -494,7 +494,7 @@ Om du vill aktivera CIF måste filerna redigeras och skapas.
 
 * ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/searchbar/searchbar.html
 
-  Skapa `searchbar.html` fil:
+  Skapa filen `searchbar.html`:
 
   ```html
   <!-- Livesearch popover -->
@@ -556,7 +556,7 @@ Om du vill aktivera CIF måste filerna redigeras och skapas.
 
 * ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.core.components.internal.servlets.ProductPageRedirectServlet.cfg.json
 
-  Skapa `com.adobe.cq.commerce.core.components.internal.servlets.ProductPageRedirectServlet.cfg.json` fil:
+  Skapa filen `com.adobe.cq.commerce.core.components.internal.servlets.ProductPageRedirectServlet.cfg.json`:
 
   ```json
   {
@@ -570,7 +570,7 @@ Om du vill aktivera CIF måste filerna redigeras och skapas.
 
    * ui.tests/test-module/specs/venia/searchbar.js
 
-     Redigera `searchbar.js` fil, rad 19-20, ändra `describe` till `describe.skip`:
+     Redigera filen `searchbar.js`, rad 19-20, ändra `describe` till `describe.skip`:
 
      ```javascript
      describe.skip('Venia Searchbar Component', () => {

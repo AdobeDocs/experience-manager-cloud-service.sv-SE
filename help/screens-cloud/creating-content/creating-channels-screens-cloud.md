@@ -1,6 +1,6 @@
 ---
-title: Skapa och hantera kanaler på skärmar as a Cloud Service
-description: På den här sidan beskrivs hur du skapar och hanterar kanaler på skärmar as a Cloud Service.
+title: Skapa och hantera kanaler i Screens as a Cloud Service
+description: På den här sidan beskrivs hur du skapar och hanterar kanaler i Screens as a Cloud Service.
 exl-id: 3b0bae7a-4a45-485a-ab04-604510ff6578
 feature: Authoring Screens
 role: Admin, Developer, User
@@ -11,49 +11,49 @@ ht-degree: 1%
 
 ---
 
-# Skapa och hantera en kanal på skärmar as a Cloud Service {#creating-channels-screens-cloud}
+# Skapa och hantera en kanal i Screens as a Cloud Service {#creating-channels-screens-cloud}
 
 När du har skapat ett AEM Screens-projekt måste du skapa kanaler.
-***Kanaler***, visar en sekvens med innehåll (bilder och videoklipp), en webbplats eller ett ensidigt program.
+***Kanaler***, visa en innehållssekvens (bilder och videoklipp), en webbplats eller ett ensidigt program.
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur du skapar och hanterar kanaler för ditt AEM Screens-projekt i Screens Content Provider. Efter läsning bör du:
+Det här dokumentet hjälper dig att skapa och hantera kanaler för ditt AEM Screens-projekt i Screens Content Provider. Efter läsning bör du:
 
-* förstå hur du skapar kanaler för leverantörer av skärminnehåll
+* förstå hur man skapar kanaler till Screens Content Provider
 * hantera och redigera innehåll i era kanaler
-* hantera tilldelnings- och aktiveringsschemat för era kanaler i [Tjänsteleverantör för skärmar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html?lang=en)
+* hantera tilldelning och aktiveringsschema för dina kanaler i [Screens tjänsteleverantör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html?lang=en)
 
-## Steg för att skapa en ny sekvenskanal på skärmar-as a Cloud Service {#create-new-channel}
+## Steg för att skapa en ny sekvenskanal i Screens as a Cloud Service {#create-new-channel}
 
 >[!NOTE]
 >**Förutsättningar**
->Innan du startar det här avsnittet av handboken bör du granska [Skapa och hantera projekt på skärmar as a Cloud Service](/help/screens-cloud/creating-content/creating-projects-screens-cloud.md).
+>Granska [Skapa och hantera projekt i Screens as a Cloud Service](/help/screens-cloud/creating-content/creating-projects-screens-cloud.md) innan du startar det här avsnittet av handboken.
 
-Följ stegen nedan för att skapa en sekvenskanal på as a Cloud Service Skärmar:
+Följ stegen nedan för att skapa en sekvenskanal i Screens as a Cloud Service:
 
-1. Navigera till Screens Content Provider.
+1. Gå till Screens Content Provider.
 
 1. Navigera till ditt AEM Screens-projekt, till exempel *FirstDigitalExperience*.
 
-1. Välj **Kanaler** mapp från ditt projekt, till exempel **FirstDigitalExperience** —> **Kanaler** och klicka **Skapa** i åtgärdsfältet.
+1. Välj mappen **Kanaler** i ditt projekt, till exempel **FirstDigitalExperience** —> **Kanaler**, och klicka på **Skapa** i åtgärdsfältet.
 
    ![channel-create1](/help/screens-cloud/assets/create-content/channel-create1.png)
 
-1. Välj en mall, till exempel **Sekvenskanal** från **Skapa** guide och klicka **Nästa**.
+1. Välj mallen, till exempel **Sekvenskanal**, i guiden **Skapa** och klicka på **Nästa**.
 
    ![channel-create2](/help/screens-cloud/assets/create-content/channel-create2.png)
 
    >[!NOTE]
-   > The **Skapa** Guiden innehåller olika typer av mallar när du skapar en kanal. Se [Tillgängliga mallar](#available-templates) i Skapa guide för mer information.
+   > Guiden **Skapa** innehåller olika typer av mallar när du skapar en kanal. Mer information finns i [Tillgängliga mallar](#available-templates) i guiden Skapa.
 
-1. Ange namnet på sekvenskanalen, till exempel **LoopingChannelOne** och klicka **Skapa**.
+1. Ange namnet på sekvenskanalen, till exempel **LoopingChannelOne**, och klicka på **Skapa**.
 
    ![channel-create3](/help/screens-cloud/assets/create-content/channel-create3.png)
 
-   Nu kommer du att se **LoopingChannelOne** i din kanalmapp i ditt AEM Screens-projekt.
+   Nu visas en **LoopingChannelOne** i din kanalmapp i ditt AEM Screens-projekt.
 
-   När du har skapat kanalen kan du nu lägga till innehåll i kanalen. Se [Lägga till innehåll i en kanal](#add-content) om du vill lära dig hur du lägger till resurser (bilder/videor) i din kanal.
+   När du har skapat kanalen kan du nu lägga till innehåll i kanalen. Se [Lägga till innehåll i en kanal](#add-content) för att lära dig hur du lägger till resurser (bilder/videor) i din kanal.
 
 ## Hantera en kanal {#managing-channels}
 
@@ -61,13 +61,13 @@ Du kan redigera, visa egenskaper och kontrollpanel, kopiera, förhandsgranska oc
 
 Navigera till kanalen från ditt projekt och markera kanalen enligt bilden nedan. Nu kan du välja alternativ som att redigera kanalen, visa egenskaper, förhandsgranska innehåll, hantera publicering eller ta bort kanalen från åtgärdsfältet.
 
-![kanelprop1](/help/screens-cloud/assets/create-content/channelprop1.png)
+![channelProp1](/help/screens-cloud/assets/create-content/channelprop1.png)
 
 ### Lägga till innehåll i en kanal {#add-content}
 
 Följ stegen nedan om du vill lägga till eller redigera innehåll i en kanal:
 
-1. Markera kanalen som du vill redigera, enligt bilden nedan. Klicka **Redigera** i åtgärdsfältets övre vänstra hörn för att öppna redigeraren.
+1. Markera kanalen som du vill redigera, enligt bilden nedan. Klicka på **Redigera** i åtgärdsfältets övre vänstra hörn för att öppna redigeraren.
 
    ![edit-channel1](/help/screens-cloud/assets/create-content/edit-channel1.png)
 
@@ -78,12 +78,12 @@ Följ stegen nedan om du vill lägga till eller redigera innehåll i en kanal:
    ![edit-channel2](/help/screens-cloud/assets/create-content/edit-channel2.png)
 
    >[!NOTE]
-   >Klicka **Förhandsgranska** för att förhandsgranska innehållet i kanalen.
-   >![edit-channel-preview](/help/screens-cloud/assets/create-content/edit-channelpreview.png)
+   >Klicka på **Förhandsgranska** om du vill förhandsgranska innehållet i kanalen.
+   >![edit-channelPreview](/help/screens-cloud/assets/create-content/edit-channelpreview.png)
 
 ## Tillgängliga mallar i guiden Skapa {#available-templates}
 
-Följande mallar är tillgängliga när du använder **Skapa** kanalguide:
+Följande mallar är tillgängliga när du använder kanalguiden **Skapa**:
 
 | Tillgängliga mallar | Beskrivning |
 |--- |--- |
@@ -100,16 +100,16 @@ Med den här funktionen kan du definiera ett standardaktiveringsschema för en k
 ### Skapa standardtilldelningsinformation för en kanal {#create-default}
 
 1. Navigera till informationssidan för kanalen som du vill konfigurera.
-1. Leta reda på **Standardinformation om tilldelning** på sidan.
+1. Leta reda på rutan **Standardtilldelningsinformation** på sidan.
 
    ![bild](/help/screens-cloud/assets/display/Assignment1.png)
 
-1. Klicka **Ange standardinformation**.
-1. Konfigurera standardinformation om tilldelning, inklusive prioritet, start- och slutdatum samt återkommande mönster för kanalen, och klicka sedan på **Tilldela**.
+1. Klicka på **Ange standardinformation**.
+1. Konfigurera kanalens standardtilldelningsinformation, inklusive prioritet, start- och slutdatum samt upprepningsmönster, och klicka sedan på **Tilldela**.
 
    ![bild](/help/screens-cloud/assets/display/Assignments2.png)
 
-1. Observera att information om uppdraget visas i **Standardinformation om tilldelning** platta:
+1. Observera att information om tilldelningen visas i rutan **Standardtilldelningsinformation**:
 
    ![bild](/help/screens-cloud/assets/display/Assignments3.png)
 
@@ -123,7 +123,7 @@ Den här rutan visar följande information:
 Kanaler som har standardtilldelningsinformation kan tilldelas till visar på samma sätt som vanliga kanaler, med alternativet att lägga till som standardtilldelningsinformation i stället för att manuellt definiera anpassade kanaler varje gång.
 
 1. Navigera till sidan med visningsinformation som du vill tilldela kanalen till och klicka på **Tilldela kanal**.
-Du kan också välja önskad visning i [lager](https://experience.adobe.com/screens/displays) visa och klicka på **Tilldela kanal**.
+Du kan också markera önskad visning i vyn [lager](https://experience.adobe.com/screens/displays) och klicka på **Tilldela kanal**.
 1. Dialogrutan för kanaltilldelning öppnas.
 
    ![bild](/help/screens-cloud/assets/display/Assignments4.png)
@@ -133,11 +133,11 @@ Du kan också välja önskad visning i [lager](https://experience.adobe.com/scre
 
    ![bild](/help/screens-cloud/assets/display/Assignments5.png)
 
-1. Klicka **Tilldela** för att slutföra uppdraget eller klicka på **Ange information om anpassad tilldelning** om du föredrar att åsidosätta standardvärdena med vissa andra värden i det aktuella visningssammanhanget.
+1. Klicka på **Tilldela** om du vill slutföra tilldelningen eller klicka på **Ange anpassad tilldelningsinformation** om du föredrar att åsidosätta standardvärdena med vissa andra värden i den specifika visningen.
 
    ![bild](/help/screens-cloud/assets/display/Assignments6.png)
 
-1. Lägg märke till **Tilldelade kanaler** plattan uppdateras med det nya uppdraget:
+1. Observera att rutan **Tilldelade kanaler** uppdateras med den nya tilldelningen:
 
    ![bild](/help/screens-cloud/assets/display/Assignments7.png)
 
@@ -148,13 +148,13 @@ Du kan också välja önskad visning i [lager](https://experience.adobe.com/scre
 
 **Obs!** En kanaltilldelning som använder standardtilldelningsinformationen kan inte redigeras i visningssammanhanget.
 
-* Om du måste ändra det till ett anpassat uppdrag tar du först bort det och lägger sedan till det igen med **Ange information om anpassad tilldelning** alternativ.
+* Om du måste ändra det till ett anpassat uppdrag tar du först bort det och lägger sedan till det igen med alternativet **Ange anpassad uppdragsinformation** .
 * Om du måste ändra egenskaperna för standarduppdragsinformationen gör du det direkt från sidan med kanalinformation.
 
 ### Ta bort information om standardtilldelning från en kanal {#remove-display}
 
 1. Navigera till informationssidan för kanalen som du vill ta bort standardtilldelningsinformationen för.
-1. Leta reda på **Standardinformation om tilldelning** sida vid sida
+1. Leta reda på rutan **Standardtilldelningsinformation** på sidan
 1. Klicka på **Ta bort standard**.
 
    ![bild](/help/screens-cloud/assets/display/Assignments9.png)
@@ -179,4 +179,4 @@ Detta kan leda till tomma skärmar om det inte finns något alternativt innehål
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har konfigurerat en AEM Screens-kanal i ditt projekt måste du publicera din kanal. Se [Publicera kanaler på skärmar as a Cloud Service](manage-publish.md) innan du hanterar dina spelare från Screens Services Provider.
+Nu när du har konfigurerat en AEM Screens-kanal i ditt projekt måste du publicera din kanal. Se [Publicera kanaler i Screens as a Cloud Service](manage-publish.md) innan du hanterar dina spelare från Screens Services Provider.

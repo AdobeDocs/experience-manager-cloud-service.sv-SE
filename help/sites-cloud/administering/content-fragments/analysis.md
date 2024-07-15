@@ -29,8 +29,8 @@ Strukturen med flera lager byggs upp med hjälp av referenser:
 
 ## Strukturträd {#structure-tree}
 
-Öppna **Strukturträd** i redigeringsverktygsfältet för att visa den hierarkiska strukturen för innehållsfragmentet och dess referenser. Använd länkikonen för att öppna referenser.
+Öppna fliken **Strukturträd** i redigeringsverktygsfältet för att visa den hierarkiska strukturen för innehållsfragmentet och dess referenser. Använd länkikonen för att öppna referenser.
 
 Till exempel:
 
-![Content Fragment Editor - strukturträd](assets/cf-authoring-structure-tree.png)
+![Redigera innehållsfragment - strukturträdet](assets/cf-authoring-structure-tree.png)

@@ -24,9 +24,9 @@ Under den här delen av resan får du lära dig att planera och utföra migrerin
 
 I de föregående faserna av resan:
 
-* Du lärde dig att komma igång med övergången till AEM as a Cloud Service i [Komma igång](/help/journey-migration/getting-started.md) sida.
-* Fastställd om distributionen är klar att flyttas till molnet genom att läsa [Beredskapsfas](/help/journey-migration/readiness.md)
-* Bekanta dig med verktygen och processen som gör koden och innehållet molnklart med [Implementeringsfas](/help/journey-migration/implementation.md).
+* Du lärde dig att komma igång med övergången till AEM as a Cloud Service på sidan [Komma igång](/help/journey-migration/getting-started.md).
+* Kontrollerade om distributionen är klar att flyttas till molnet genom att läsa [beredskapsfasen](/help/journey-migration/readiness.md)
+* Bekanta dig med verktygen och processen som gör din kod och ditt innehåll molnklart med [implementeringsfasen](/help/journey-migration/implementation.md).
 
 ## Syfte {#objective}
 
@@ -34,7 +34,7 @@ Det här dokumentet hjälper dig att förstå hur du utför migreringen till AEM
 
 ## Inledande produktionsmigrering {#initial-migration}
 
-Innan du kan utföra produktionsmigreringen följer du stegen för implementering och korrektur av migrering i [Strategi för innehållsmigrering och tidslinje](/help/journey-migration/implementation.md##strategy-timeline) i [Implementeringsfas](/help/journey-migration/implementation.md).
+Innan du kan utföra produktionsmigreringen följer du stegen för implementering och korrektur av migrering som beskrivs i avsnittet [Strategi för innehållsmigrering och tidslinje](/help/journey-migration/implementation.md##strategy-timeline) i [implementeringsfasen](/help/journey-migration/implementation.md).
 
 * Starta migreringen från produktionen baserat på den erfarenhet du fick under AEM as a Cloud Service-scenmigreringen som gjordes på kloner:
    * Författare/Författare
@@ -43,8 +43,8 @@ Innan du kan utföra produktionsmigreringen följer du stegen för implementerin
 * Validera det innehåll som har infogats i både AEM as a Cloud Service författare- och publiceringsskikt.
 * Instruera innehållsredigeringsteamet att undvika att flytta innehåll på både källa och mål tills det är fullständigt
 * Nytt innehåll kan läggas till, redigeras eller tas bort, men du kan inte flytta det. Detta gäller både källa och mål.
-* Spela in [tid](/help/journey-migration/implementation.md#gathering-data) för fullständig extrahering och förtäring för att få en uppskattning av framtida tidslinjer för migrering uppifrån och ned.
-* Skapa en [migreringsplanering](/help/journey-migration/implementation.md#migration-plan) för både författare och publicering.
+* Registrera den [tid som tagits](/help/journey-migration/implementation.md#gathering-data) för fullständig extrahering och förtäring för att få en uppskattning av framtida tidslinjer för migrering uppifrån.
+* Skapa en [migreringsplanerare](/help/journey-migration/implementation.md#migration-plan) för både författare och publicering.
 
 ## Inkrementella överkanter {#top-up}
 
@@ -79,20 +79,20 @@ När du planerar eller utför migreringen bör du tänka på följande riktlinje
 
 **Metodtips för verktyget Innehållsöverföring**
 
-Se till att du kör innehållsmigreringen i produktion i stället för en klon när du publicerar. Ett bra sätt är att använda [AZCopy](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md) för den initiala migreringen och kör sedan extraheringar uppifrån ofta (t.o.m. dagligen) för att extrahera mindre bitar och undvika långvarig belastning på AEM.
+Se till att du kör innehållsmigreringen i produktion i stället för en klon när du publicerar. Ett bra sätt är att använda [AZCopy](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md) för den inledande migreringen och sedan köra extraheringar uppifrån ofta (t.o.m. dagligen) för att extrahera mindre segment och undvika långvarig belastning på AEM.
 
 När du utför produktionsmigreringen bör du undvika att köra verktyget Innehållsöverföring från en klon eftersom:
 
 * Om en kund kräver att innehållsversioner migreras under en översta migrering migreras inte versionerna när innehållsöverföringsverktyget körs från en klon. Även om klonen ofta återskapas från en live-författare återställs de kontrollpunkter som används av verktyget Innehållsöverföring för att beräkna deltarna varje gång en klon skapas.
 * Eftersom en klon inte kan uppdateras som helhet måste ACL-frågepaketet användas för att paketera och installera det innehåll som läggs till eller redigeras från produktion till kloning. Problemet med den här metoden är att allt borttaget innehåll i källinstansen aldrig kommer till klonen om det inte tas bort manuellt från både källan och klonen. Detta introducerar möjligheten att det borttagna innehållet i produktionen inte tas bort på klonen och AEM as a Cloud Service.
 
-**Optimera inläsningen på AEM när innehållsmigreringen utförs**
+**Optimerar inläsningen på AEM när innehållsmigreringen utförs**
 
 Kom ihåg att belastningen på AEM är större under extraheringsfasen. Tänk på följande:
 
 * Innehållsöverföringsverktyget är en extern Java-process som använder en JVM-heap på 4 GB
 * Icke-AzCopy-versionen hämtar binärfiler, lagrar dem på ett temporärt utrymme på AEM, förbrukar disk-I/O och överför dem sedan till Azure-behållaren som förbrukar nätverksbandbredd
-* [AzCopy](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md) överför blobbar direkt från blobbarkivet till Azure-behållaren som sparar disk-I/O och nätverksbandbredd. AzCopy-versionen använder fortfarande disk- och nätverksbandbredd för att extrahera och överföra data från segmentlagret till Azure-behållaren
+* [AzCopy](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md) överför blober direkt från blobbarkivet till Azure-behållaren som sparar disk-I/O och nätverksbandbredd. AzCopy-versionen använder fortfarande disk- och nätverksbandbredd för att extrahera och överföra data från segmentlagret till Azure-behållaren
 * Processen med verktyget Innehållsöverföring är ljusare på systemresurserna under överföringsfasen, eftersom det bara strömmar matningsloggar och det inte finns mycket belastning på källinstansen vad gäller disk-I/O eller nätverksbandbredd.
 
 ## Kända begränsningar {#known-limitations}
@@ -101,22 +101,22 @@ Ta hänsyn till att hela intaget misslyckas om någon av följande begränsninga
 
 * En JCR-nod med ett namn som är längre än 150 tecken
 * En JCR-nod som är större än 16 MB
-* Alla användare/grupper med `rep:AuthorizableID` som redan finns på AEM as a Cloud Service
+* Alla användare/grupper med `rep:AuthorizableID` som hämtas och som redan finns i AEM as a Cloud Service
 * Om en resurs som extraheras och hämtas flyttas till en annan sökväg, antingen på källan eller på målet, före nästa iteration av migreringen.
 
 ## Resurshälsa {#asset-health}
 
-Jämfört med avsnittet ovanför intaget **inte** misslyckas på grund av följande problem med tillgångar. Vi rekommenderar dock att du vidtar lämpliga åtgärder i följande situationer:
+Jämfört med avsnittet ovan misslyckas **inte** på grund av följande problem med tillgången. Vi rekommenderar dock att du vidtar lämpliga åtgärder i följande situationer:
 
 * Alla resurser som har den ursprungliga återgivningen saknas
-* Alla mappar som saknas `jcr:content` nod.
+* Alla mappar som saknar en `jcr:content`-nod.
 
-Båda ovanstående poster identifieras och rapporteras i [Best Practice Analyzer](/help/journey-migration/best-practices-analyzer/overview-best-practices-analyzer.md) rapport.
+Båda ovanstående objekt identifieras och rapporteras i rapporten [Best Practice Analyzer](/help/journey-migration/best-practices-analyzer/overview-best-practices-analyzer.md) .
 
 ## GoLive Checklist {#Go-Live-Checklist}
 
-Mer information finns i [GoLive Checklist](/help/journey-onboarding/go-live-checklist.md) dokumentation.
+Mer information finns i dokumentationen för [Go-Live Checklist](/help/journey-onboarding/go-live-checklist.md).
 
 ## What&#39;s Next {#what-is-next}
 
-När du vet hur du migrerar till AEM as a Cloud Service kan du kontrollera [Post-Go-Live](/help/journey-migration/post-go-live.md) sida för att få instansen att löpa smidigt.
+När du har förstått hur du utför migreringen till AEM as a Cloud Service kan du kontrollera sidan [Post-Go-Live](/help/journey-migration/post-go-live.md) för att se till att instansen körs utan problem.

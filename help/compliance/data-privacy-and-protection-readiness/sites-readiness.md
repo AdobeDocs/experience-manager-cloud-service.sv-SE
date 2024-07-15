@@ -21,23 +21,23 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Mer information om Adobe svar på sekretessfrågor och vad detta innebär för dig som Adobe-kund finns i [Adobe Sekretesscenter](https://www.adobe.com/privacy.html).
+>Mer information om Adobe svar på sekretessfrågor och vad detta innebär för dig som Adobe-kund finns i [Adobe Privacy Center](https://www.adobe.com/privacy.html).
 
 Adobe Experience Manager as a Cloud Service Sites är redo att hjälpa kunderna med deras skyldigheter vad gäller datasekretess och skydd. På den här sidan får kunderna hjälp med hur de hanterar sådana förfrågningar i AEM Sites. Den beskriver platsen för privata data som lagras och hur du tar bort dem manuellt eller med kod.
 
-Mer information finns i [Adobe Privacy Center](https://www.adobe.com/privacy.html).
+Mer information finns i [Adobe Sekretesscenter](https://www.adobe.com/privacy.html).
 
 >[!NOTE]
 >
->Se [Adobe Experience Manager as a Cloud Service beredskap för dataskydd och dataintegritet](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md) för mer information.
+>Mer information finns i [Adobe Experience Manager as a Cloud Service beredskap för dataskydd och sekretesspolicyer](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md).
 
 ## AEM-redigeringsnivå {#aem-author-tier}
 
-Användarkonton och UGC-innehåll på författarservern beskrivs i [AEM Foundation-dokumentation](/help/compliance/data-privacy-and-protection-readiness/foundation-readiness.md).
+Användarkonton och UGC-innehåll på författarservern beskrivs i [AEM Foundation-dokumentationen](/help/compliance/data-privacy-and-protection-readiness/foundation-readiness.md).
 
 ## AEM-publiceringsnivå {#aem-publish-tier}
 
-Användarkonton som används för att autentisera besökare på webbplatsen, och UGC-innehåll på publiceringsservern omfattas av [AEM Foundation-dokumentation](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md).
+Användarkonton som används för att autentisera besökare på webbplatsen och UGC-innehåll på publiceringsservern beskrivs i [AEM Foundation-dokumentationen](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md).
 
 Som standard lagrar inte AEM Sites-komponenter formulärdata som anges av besökare på publiceringsservern. Vi rekommenderar att du vidarebefordrar data till ett tredjepartssystem eller Adobe Campaign för vidare bearbetning.
 
@@ -54,7 +54,7 @@ Så här avanmäler du:
 1. Navigera till:
    [Sekretesscenter för Adobe - avanmäl dig](https://www.adobe.com/privacy/opt-out.html)
 
-1. Bläddra nedåt till **Tjänster** - **Data om användning av tjänsten Experience Cloud**.
+1. Bläddra ned till **Tjänster** - **Experience Cloud tjänstanvändningsdata**.
 
 1. Markera den refererade länken, som för närvarande heter **här**.
 
@@ -64,21 +64,21 @@ Så här avanmäler du:
 
      Om du tar bort cookien för anmälan eller om du byter dator eller webbläsare måste du avanmäla dig igen.
 
-     Opt-out - Uteslut mig från sessionsaggregering och analys för besökare (installera `amcglobal.sc.omtrdc.net` opt-out cookie) - Klicka här.
+     Avanmäl dig - Uteslut mig från sessionsaggregering och analys för besökare (installera cookie för `amcglobal.sc.omtrdc.net` avanmälan) - Klicka här.
 
-     Opt-in - Inkludera mig i sessionsaggregering och analys för besökare (installera inte `amcglobal.sc.omtrdc.net` opt-out cookie) - Klicka här.
+     Opt-in - Inkludera mig i sessionsaggregering och analys för besökare (installera inte cookie för `amcglobal.sc.omtrdc.net` opt-out) - klicka här.
 
    Följ stegen ovan för att komma åt de faktiska länkarna.
 
    >[!NOTE]
    >
-   > Det finns ytterligare en beskrivning i **2. Integritet.** i [Adobe allmänna användningsvillkor](https://www.adobe.com/legal/terms.html).
+   > Det finns ytterligare en beskrivning i **2. Integritet.** i [Adobe General Terms of Use](https://www.adobe.com/legal/terms.html).
 
 ## Analytics Foundation {#analytics-foundation}
 
 AEM Sites innehåller en valfri integrering med Analytics Foundation som använder funktioner i Adobe Analytics On-Demand Service.
 
-Mer information om hur du hanterar förfrågningar från registrerade personer gällande Adobe Analytics finns i [Adobe Analytics och dataintegritet](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-view-settings.html).
+Mer information om hur du hanterar förfrågningar från registrerade personer relaterade till Adobe Analytics finns i [Adobe Analytics och Dataintegritet](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-view-settings.html).
 
 ## Personalization Foundation by Target {#personalization-foundation-by-target}
 
@@ -134,7 +134,7 @@ Om du vill förhandsgranska den beständiga ContextHub som används kan använda
 
 * Använd webbläsarens konsol, till exempel:
 
-   * Krom:
+   * Chrome:
 
       * Öppna Utvecklarverktyg > Program > Lagring:
 
@@ -153,7 +153,7 @@ Om du vill förhandsgranska den beständiga ContextHub som används kan använda
    * Safari:
 
       * Öppna Inställningar > Avancerat > Visa menyn Framkalla i menyraden
-      * Öppna Utveckla > Visa JavaScript-konsol
+      * Öppna Framkalla > Visa JavaScript Console
 
          * Konsol > Lagring > Lokal lagring > (webbplats) > ContextHubPersistence
          * Konsol > Lagring > Sessionslagring > (webbplats) > ContextHubPersistence
@@ -184,7 +184,7 @@ Om du vill förhandsgranska den beständiga ContextHub som används kan använda
 
 * Använd webbläsarens konsol:
 
-   * Chrome - open Developer Tools > Application > Storage:
+   * Chrome - öppna Developer Tools > Application > Storage:
 
       * Lokal lagring > (webbplats) > ContextHubPersistence
       * Sessionslagring > (webbplats) > ContextHubPersistence

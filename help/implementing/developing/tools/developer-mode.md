@@ -15,16 +15,16 @@ ht-degree: 0%
 
 # Utvecklarläge {#developer-mode}
 
-När du redigerar sidor i AEM [lägen](/help/sites-cloud/authoring/sites-console/introduction.md#page-modes) är tillgängliga, inklusive läget Utvecklare. I utvecklarläget öppnas en sidopanel med flera flikar som ger utvecklaren teknisk information om den aktuella sidan.
+När du redigerar sidor i AEM finns flera [lägen](/help/sites-cloud/authoring/sites-console/introduction.md#page-modes) tillgängliga, bland annat i utvecklarläget. I utvecklarläget öppnas en sidopanel med flera flikar som ger utvecklaren teknisk information om den aktuella sidan.
 
 Det finns två flikar:
 
 * **[Komponenter](#components)** för att visa struktur- och prestandainformation.
-* **[Fel](#errors)** för att se om det uppstår några problem.
+* **[Fel](#errors)** om du vill se eventuella problem.
 
 Detta hjälper en utvecklare att:
 
-* **Upptäck** hur sidorna disponeras.
+* **Upptäck** hur sidorna är sammansatta.
 * **Felsök:** vad som händer var och när, vilket i sin tur hjälper till att lösa problem.
 
 >[!NOTE]
@@ -33,17 +33,17 @@ Detta hjälper en utvecklare att:
 >
 >* Är inte tillgängligt på mobila enheter eller små fönster på skrivbordet (på grund av utrymmesbegränsningar).
 >  * Detta inträffar när bredden är mindre än 1024px.
->* Är endast tillgänglig för användare som är medlemmar i `administrators` grupp.
+>* Är bara tillgänglig för användare som är medlemmar i gruppen `administrators`.
 
 ## Öppnar utvecklarläge {#opening-developer-mode}
 
-Utvecklarläget implementeras som en sidopanel i sidredigeraren. Om du vill öppna panelen väljer du **Utvecklare** från lägesväljaren i verktygsfältet i sidredigeraren:
+Utvecklarläget implementeras som en sidopanel i sidredigeraren. Om du vill öppna panelen väljer du **Utvecklare** i lägesväljaren i verktygsfältet i sidredigeraren:
 
 ![Öppnar utvecklarläge](assets/developer-mode.png)
 
 Panelen är uppdelad i två flikar:
 
-* **[Komponenter](#components)** - Detta visar ett komponentträd, som liknar [innehållsträd](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#content-tree) för författare
+* **[Komponenter](#components)** - Detta visar ett komponentträd, som liknar [innehållsträdet](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#content-tree) för författare
 * **[Fel](#errors)** - När problem uppstår visas information för varje komponent.
 
 ### Fliken Komponenter {#components}
@@ -57,7 +57,7 @@ Detta visar ett komponentträd som:
 * Gör att du kan expandera trädet och välja specifika komponenter i trädet. Markeringen ger åtkomst till komponentinformation, till exempel:
    * Databassökväg
    * Länkar till skript (används i CRXDE Lite)
-   * Komponentdetaljer enligt [Komponentkonsol](/help/sites-cloud/authoring/components-console.md)
+   * Komponentdetaljer som de visas i [komponentkonsolen](/help/sites-cloud/authoring/components-console.md)
 * Komponenter som är markerade i trädet markeras med en blå kant i redigeraren.
 
 På fliken Komponenter kan du
@@ -78,20 +78,20 @@ Varje komponentpost kan ha följande alternativ:
 
 * **Redigera skript:** En länk som öppnar komponentskriptet i CRXDE Lite.
 
-* **Visa komponentinformation:** Öppnar informationen om komponenten i [Komponentkonsol](/help/sites-cloud/authoring/components-console.md).
+* **Visa komponentinformation:** Öppnar information om komponenten i [komponentkonsolen](/help/sites-cloud/authoring/components-console.md).
 
 Om du expanderar en komponentpost genom att trycka eller klicka på gruppen kan du även visa:
 
     * Hierarkin i den markerade komponenten.
-    * Återgivningstider för den markerade komponenten separat, alla enskilda kapslade komponenter i den och den kombinerade summan.
+    * Återgivningstider för den markerade komponenten separat, alla enskilda inkapslade komponenter och den kombinerade summan.
 
 ### Fliken Fel {#errors}
 
 ![Fliken Fel](assets/developer-mode-errors-tab.png)
 
-Förhoppningsvis **Fel** tabben kommer alltid att vara tom (som ovan), men när problem uppstår kan följande information visas för varje komponent:
+Förhoppningsvis kommer fliken **Fel** alltid att vara tom (som ovan), men när problem uppstår kan följande information visas för varje komponent:
 
 * En varning om komponenten skriver en post i felloggen, tillsammans med information om felet och direktlänkar till rätt kod i CRXDE Lite.
 * En varning om komponenten öppnar en administratörssession.
 
-Om till exempel en odefinierad metod anropas visas det resulterande felet i **Fel** och komponentposten i trädet i **Komponenter** -fliken markeras också med en indikator när ett fel inträffar.
+Om till exempel en odefinierad metod anropas visas det resulterande felet på fliken **Fel** och komponentposten i trädet på fliken **Komponenter** markeras också med en indikator när ett fel inträffar.

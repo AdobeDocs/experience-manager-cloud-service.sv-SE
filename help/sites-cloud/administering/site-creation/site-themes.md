@@ -24,18 +24,18 @@ Webbplatser som skapats med AEM webbplatsmallar gör det enkelt att hämta, anpa
 
 >[!NOTE]
 >
->AEM teman ska inte blandas ihop med [AEM](site-templates.md). AEM webbplatsteman innehåller bara formatinformation för en AEM. AEM webbplatsmallar definierar webbplatsens struktur och innehåll samt innehåller ett AEM webbplatstema för [skapa webbplatser snabbt](create-site.md).
+>AEM webbplatsteman ska inte blandas ihop med [AEM webbplatsmallar](site-templates.md). AEM webbplatsteman innehåller bara formatinformation för en AEM. AEM webbplatsmallar definierar webbplatsens struktur och ursprungliga innehåll och innehåller ett AEM webbplatstema som tillåter [snabb webbplatsgenerering](create-site.md).
 
 ## Använda webbplatsteman {#using-themes}
 
 Webbplatsteman används på två olika sätt:
 
-* De används som en del av en webbplatsmall för att definiera format när [skapa en plats.](create-site.md)
+* De används som en del av en webbplatsmall för att definiera format när [en webbplats skapas.](create-site.md)
 * De laddas ned när du har skapat en webbplats baserad på en webbplatsmall så att en gränssnittsutvecklare kan anpassa formatet ytterligare.
 
 >[!TIP]
 >
->En fullständig beskrivning av processen att skapa en webbplats från en mall och anpassa dess tema finns i [Skapa snabbt webbplatser](/help/journey-sites/quick-site/overview.md).
+>En fullständig beskrivning av processen att skapa en webbplats från en mall och anpassa dess tema finns på [snabbwebbplatsresan](/help/journey-sites/quick-site/overview.md).
 
 ## Platstemastruktur {#structure}
 
@@ -43,7 +43,7 @@ Webbplatsteman är helt enkelt paket med en logisk struktur som tydligt återspe
 
 * `src/main.ts`: Huvudstartpunkten för JS- och CSS-temat
 * `src/site`: JS- och CSS-filer som gäller för hela platsen
-* `src/components`: JS- och CSS-filer som är specifika för AEM komponenter
+* `src/components`: JS- och CSS-filer som är specifika för AEM
 * `src/resources`: Statiska filer som ikoner, logotyper och teckensnitt
 
 ## Standardtema för webbplats {#standard-site-theme}

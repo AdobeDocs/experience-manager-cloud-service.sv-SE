@@ -1,6 +1,6 @@
 ---
-title: Tilldela kanal till en skärm på skärmar as a Cloud Service
-description: På den här sidan beskrivs hur du tilldelar en kanal till en skärm på as a Cloud Service Skärmar.
+title: Tilldela kanal till en skärm i Screens as a Cloud Service
+description: På den här sidan beskrivs hur du tilldelar en kanal till en visning i Screens as a Cloud Service.
 exl-id: ba001c18-7b05-4ae2-aa7f-9ebb320fedd0
 feature: Authoring Screens
 role: Admin, Developer, User
@@ -11,13 +11,13 @@ ht-degree: 0%
 
 ---
 
-# Tilldela kanal till en skärm på skärmar as a Cloud Service {#assign-channel-displays-screens-cloud}
+# Tilldela kanal till en skärm i Screens as a Cloud Service {#assign-channel-displays-screens-cloud}
 
 När projektkonfigurationen är klar måste du tilldela kanalen till en skärm för att kunna visa innehållet.
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur du tilldelar en kanal till en bildskärm när bildskärmen är klar och du har lagt till innehåll i kanalen och publicerat den. När du har läst bör du kunna förstå hur du tilldelar en kanal till en skärm från leverantören av skärmtjänster.
+Det här dokumentet hjälper dig att förstå hur du tilldelar en kanal till en bildskärm när bildskärmen är klar och du har lagt till innehåll i kanalen och publicerat den. Efter läsningen bör du förstå hur du tilldelar en kanal till en skärm från Screens Services Provider.
 
 ## Förutsättningar {#prerequisites}
 
@@ -30,13 +30,13 @@ Innan du utför stegen nedan för att tilldela en kanal till en skärm måste du
 
 Följ stegen nedan för att tilldela en kanal till en skärm:
 
-1. Navigera till Screens Services Provider och välj **Visar** från den vänstra navigeringspanelen.
+1. Navigera till Screens Services Provider och välj **Visar** i den vänstra navigeringspanelen.
 
-1. Klicka **Tilldela kanal** på skärmen.
+1. Klicka på **Tilldela kanal** för att visa.
 
    ![bild](/help/screens-cloud/assets/display/assignchannel-1.png)
 
-1. Fyll i följande fält från **Tilldela en kanal** -dialogrutan.
+1. Fyll i följande fält från dialogrutan **Tilldela en kanal**.
 
    ![bild](/help/screens-cloud/assets/display/assignchannel-2.png)
 
@@ -48,7 +48,7 @@ Följ stegen nedan för att tilldela en kanal till en skärm:
 
    1. Välj startdatum och slutdatum från **Aktivering**.
 
-1. Klicka **+ Lägg till upprepning** om du vill lägga till ett upprepningsschema för kanalen.
+1. Klicka på **+ Lägg till upprepning** för att lägga till ett upprepningsschema för kanalen.
 
    ![bild](/help/screens-cloud/assets/create-content/recurrence-1.png)
 
@@ -57,18 +57,18 @@ Följ stegen nedan för att tilldela en kanal till en skärm:
 
    Du kan ange följande alternativ:
 
-   * **Namn**: Namn på upprepningsschema.
+   * **Namn**: Rubrik för upprepningsschemat.
    * **Upprepa**: Välj om schemat ska köras varje dag, varje vecka, varje månad eller varje år.
-   * **Starta**: Starttiden för schemat.
-   * **End**: Sluttiden för ditt schema. Du kan ange den efter tid eller varaktighet.
+   * **Start**: Starttiden för schemat.
+   * **Slut**: Sluttiden för schemat. Du kan ange den efter tid eller varaktighet.
    * **Tid**: Schemat avslutas vid en angiven tidpunkt.
-   * **Varaktighet**: Schemat körs under en viss tid i timmar eller minuter.
+   * **Varaktighet**: Schemat körs för en viss tid i timmar eller minuter.
 
-1. Klicka **Skapa**. Du ser att en kanal har tilldelats för den visningen, vilket visas i bilden nedan.
+1. Klicka på **Skapa**. Du ser att en kanal har tilldelats för den visningen, vilket visas i bilden nedan.
 
    ![bild](/help/screens-cloud/assets/display/assignchannel-3.png)
 
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har tilldelat kanalen till en skärm bör du fortsätta att arbeta as a Cloud Service med skärmar genom att nästa gång du granskar dokumentet [Installera och konfigurera skärmuppspelning för AEM as a Cloud Service](/help/screens-cloud/managing-players-registration/installing-screens-cloud-player.md).
+Nu när du har tilldelat kanalen till en skärm bör du fortsätta din as a Cloud Service Screens-resa genom att gå igenom dokumentet [Installera och konfigurera Screens Player för AEM as a Cloud Service](/help/screens-cloud/managing-players-registration/installing-screens-cloud-player.md) nästa gång.

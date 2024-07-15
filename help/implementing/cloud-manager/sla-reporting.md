@@ -19,13 +19,13 @@ Lär dig hur du kan se hur din AEM fungerar i förhållande till det avtalade se
 
 ## Introduktion {#introduction}
 
-SLA-rapporteringsdata är tillgängliga för alla produktionsprogram via **Rapporter** -fliken. Följ de här stegen för att komma åt.
+SLA-rapportdata är tillgängliga för alla produktionsprogram via fliken **Rapporter**. Följ de här stegen för att komma åt.
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
-1. På **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** väljer du programmet.
+1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
 
-1. Navigera till navigeringspanelen på sidan **Rapporter** -fliken från **Ökning** sida.
+1. Navigera till fliken **Rapporter** på sidan **Översikt** med hjälp av sidnavigeringspanelen.
 
 1. Klicka på året du vill se.
 
@@ -33,23 +33,23 @@ SLA-rapporteringsdata är tillgängliga för alla produktionsprogram via **Rappo
 
 Rulla markören över en datapunkt för att visa specifika värden för den punkten.
 
-![Visa detaljerade data](assets/sla-reporting-b.png)
+![Visar detaljerade data](assets/sla-reporting-b.png)
 
 ## SLA-mått {#sla-metrics}
 
 Diagrammet för det valda året innehåller flera datauppsättningar.
 
-* **Publicera nivåkontrakt** - Det här är SLA-avtalet som definieras i ditt avtal med Adobe för publiceringsnivån.
+* **Publish-nivåkontrakt** - Detta är det SLA som definieras i ditt kontrakt med Adobe för publiceringsnivån.
 
-* **Faktisk publiceringsnivå** - Detta är den uppmätta drifttiden för produktionsnivåfaktoriseringsincidenter som orsakas av Adobe eller Adobe.
+* **Faktisk Publish-nivå** - Detta är den uppmätta drifttiden för faktoriseringsincidenter på produktionsnivå som orsakas av Adobe eller Adobe.
 
-* **Författaravtal** - Det här är SLA-avtalet som definieras i ditt kontrakt med Adobe för författarnivån.
+* **Författarnivåkontrakt** - Detta är det SLA som definieras i ditt kontrakt med Adobe för författarnivån.
 
-* **Författarnivå faktisk** - Detta är den uppmätta drifttiden för produktionsförfattarens nivåfactoringincidenter som orsakas av Adobe eller Adobe produktleverantörer.
+* **Författarnivå faktisk** - Detta är den uppmätta drifttiden för produktionsförfattarens nivåfactoringincidenter som orsakas av Adobe eller Adobe.
 
 ## Händelseanalys {#event-analysis}
 
-The **Händelseanalys** i diagrammet visar vilka incidenter som har inträffat för programmet under det valda året.
+Avsnittet **Händelseanalys** under diagrammet visar den uppsättning incidenter som har inträffat för programmet under det valda året.
 
 Var och en av incidenterna har ett tidsintervall, en orsak och en uppsättning kommentarer.
 
