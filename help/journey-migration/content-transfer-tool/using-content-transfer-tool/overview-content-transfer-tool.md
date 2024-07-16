@@ -4,7 +4,7 @@ description: Lär dig använda verktyget Innehållsöverföring för att överf�
 exl-id: cfc0366a-2139-4d9d-b5bc-0b65bef4013c
 feature: Migration
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 67bc538fe174034c05808d4a62c51c404dfaf38c
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 28%
@@ -68,7 +68,7 @@ För att delta-innehållet ska kunna tillämpas ovanpå det aktuella innehållet
 >title="Förfallodatum för en migreringsuppsättning"
 >abstract="Lär dig mer om när en migreringsuppsättning upphör att gälla."
 
-Alla migreringsuppsättningar upphör så småningom efter en längre inaktivitetsperiod på ungefär 90 dagar. När indikatorerna visas på projektkortet och migreringsjobbtabellraderna under en tidsperiod, kommer migreringsuppsättningen att upphöra att gälla och dess data kommer inte längre att vara tillgängliga. Utgångsdatumet kan enkelt förlängas genom att du agerar på migreringsuppsättningen genom att:
+Alla migreringsuppsättningar upphör så småningom efter en förlängd inaktivitetsperiod på cirka 45 dagar. När indikatorerna visas på projektkortet och migreringsjobbtabellraderna under en tidsperiod, kommer migreringsuppsättningen att upphöra att gälla och dess data kommer inte längre att vara tillgängliga. Utgångsdatumet kan enkelt förlängas genom att du agerar på migreringsuppsättningen genom att:
 
 * redigera sin beskrivning
 * hämta extraheringsnyckeln

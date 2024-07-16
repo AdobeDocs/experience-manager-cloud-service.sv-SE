@@ -4,7 +4,7 @@ description: Lär dig hur du kommer igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
 feature: Migration
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 67bc538fe174034c05808d4a62c51c404dfaf38c
 workflow-type: tm+mt
 source-wordcount: '1362'
 ht-degree: 2%
@@ -88,7 +88,7 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 
    >[!NOTE]
    >
-   >Högst 20 migreringsuppsättningar, inklusive uppsättningar som gått ut, kan skapas per projekt i Cloud Acceleration Manager.
+   >Högst 10 migreringsuppsättningar, inklusive uppsättningar som gått ut, kan skapas per projekt i Cloud Acceleration Manager.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam2.png)
 
