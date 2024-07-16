@@ -2,9 +2,9 @@
 title: Dynamic Media med OpenAPI-funktioner
 description: Lär dig viktiga begrepp som varför du använder Dynamic Media med OpenAPI-funktioner och hur du aktiverar det.
 role: User
-source-git-commit: 540aa876ba7ea54b7ef4324634f6c5e220ad19d3
+source-git-commit: 8cd8eb834b548a52d6a9e094cb2c4447f228ab0d
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '1061'
 ht-degree: 0%
 
 ---
@@ -117,6 +117,10 @@ När du har skickat in supportanmälan aktiverar Adobe Dynamic Media med OpenAPI
 </td>
 </table>
 <table>
+
+
+
+<table>
 <td>
    <a href="/help/assets/search-assets-api.md">
    <img alt="Sök i Experience Manager Assets-resurskatalog" src="./assets/search-assets-api-overview.png" />
@@ -156,5 +160,48 @@ När du har skickat in supportanmälan aktiverar Adobe Dynamic Media med OpenAPI
       <em> DAM-administratör eller varumärkesansvariga begränsar åtkomsten genom att konfigurera roller för godkända resurser på AEM as a Cloud Service-författarinstansen.</em>
    </p>
 </td>
+
+</table>
+<table>
+<td>
+   <a href="/help/assets/integrate-remote-approved-assets-with-sites.md">
+   <img alt="Integrera fjärr-AEM Assets med AEM Sites" src="./assets/connected-assets-rdam.png" />
+   </a>
+   <div>
+      <a href="/help/assets/integrate-remote-approved-assets-with-sites.md">
+      <strong> Integrera AEM Assets på fjärrbasis med AEM Sites </strong>
+      </a>
+   </div>
+   <p>
+      <em>Lär dig hur du integrerar AEM Assets på fjärrbasis med AEM Sites. </em>
+   </p>
+</td>
+<td>
+   <a href="/help/assets/dynamic-media-open-apis-faqs.md">
+   <img alt="Vanliga frågor om Dynamic Media med OpenAPI-funktioner" src="./assets/dynamic-media-faqs.jpeg" />
+   </a>
+   <div>
+      <a href="/help/assets/dynamic-media-open-apis-faqs.md">
+      <strong> Dynamic Media med OpenAPI-funktioner, vanliga frågor och svar </strong>
+      </a>
+   </div>
+   <p>
+      <em>Få svar på de vanligaste frågorna om Dynamic Media med OpenAPI-funktioner, vanliga frågor och svar.</em>
+   </p>
+</td>
+<td>
+   <a href="/help/assets/configure-custom-domain.md">
+   <img alt="Konfigurera anpassad domän" src="./assets/configure-custom-domain.jpeg" />
+   </a>
+   <div>
+      <a href="/help/assets/configure-custom-domain.md">
+      <strong>Konfigurera anpassad domän </strong>
+      </a>
+   </div>
+   <p>
+      <em>När AEM as a Cloud Service har en standarddomän kan du anpassa den efter dina behov.</em>
+   </p>
+</td>
+
 </table>
 
