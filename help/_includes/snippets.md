@@ -1,7 +1,7 @@
 ---
-source-git-commit: 494e90bd5822495f0619e8ebf55f373a26a3ffe6
+source-git-commit: 2acaafab86c0552e63e7b38b2a774c3c6afd6f9c
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '564'
 ht-degree: 0%
 
 ---
@@ -87,8 +87,8 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
      </tr>
    <tr>
     <td>Utför matematiska operationer på det repeterbara panelfältet </td>
-    <td>OTB-matematiska funktioner kan användas på repeterbara panelfält för att utföra funktioner som summa, medel. </td>
-    <td>Matematiska åtgärder i det repeterbara panelfältet kan utföras med de anpassade funktionerna.
+    <td>OTB-matematiska funktioner kan tillämpas på repeterbara panelfält för att utföra funktioner som summa, medel med regelredigeraren. Två argument måste anges: den första anger den repeterbara panelen som innehåller fältet, medan den andra anger fältet i motsvarande repeterbara panel. </td>
+    <td>Matematiska åtgärder i det repeterbara panelfältet kan utföras med de anpassade funktionerna. Du kan också använda de matematiska funktionerna direkt i fälten på den repeterbara panelen med regelredigeraren.
    </td>
    </tr>
       <tr>

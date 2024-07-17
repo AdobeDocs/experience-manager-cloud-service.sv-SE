@@ -5,9 +5,9 @@ feature: Adaptive Forms, Core Components
 role: User
 level: Beginner, Intermediate
 exl-id: 1292f729-c6eb-4e1b-b84c-c66c89dc53ae
-source-git-commit: 46cd7d689c6cbc453720b5798ffb552da58f66e7
+source-git-commit: cf69db380097992ba8adfe1ac07b3ffa26217a07
 workflow-type: tm+mt
-source-wordcount: '5426'
+source-wordcount: '5534'
 ht-degree: 0%
 
 ---
@@ -483,7 +483,7 @@ I avsnittet Krav för lån i exempelformuläret för låneansökan måste de sö
 * Fältet för makens lön visas endast när äktenskapsstatus är gift.
 * Låneberättigandebeloppet är 50 % av den totala lönen.
 
-Så här skriver du regler:
+Utför följande steg för att skriva regler:
 
 1. Skriv först regeln för att styra synligheten för fältet Makes/makas lön baserat på det alternativ som användaren väljer för alternativknappen Civilstånd.
 
@@ -594,7 +594,7 @@ Så här skriver du regler:
 
    * Välj **[!UICONTROL is equal to]** från fältet **[!UICONTROL Select Operator]** .
 
-   * Välj Sträng i det andra **[!UICONTROL Drop object or select here]** fältet och ange **[!UICONTROL Married]** i fältet **[!UICONTROL Enter a String]** .
+   * Välj String i det andra **[!UICONTROL Drop object or select here]**-fältet och ange **[!UICONTROL Married]** i **[!UICONTROL Enter a String]**-fältet.
 
    Regeln visas slutligen så här i regelredigeraren.  ![write-rules-visual-editor-16](assets/write-rules-visual-editor-16-cc.png)
 
@@ -602,7 +602,7 @@ Så här skriver du regler:
 
 1. Upprepa steg 7 till 14 för att definiera en annan regel som beräknar låneberättigandet om civilstånd är enkel. Regeln visas så här i regelredigeraren.
 
-   ![write-rules-visual-editor-17](assets/write-rules-visual-editor-17-cc.png)
+   ![skriva- regler- visuell-redigerare-17](assets/write-rules-visual-editor-17-cc.png)
 
 Alternativt kan du använda regeln Ange värde för för att beräkna låneberättigandet i När-regeln som du skapade för att visa/dölja fältet Makes/makas lön. Den resulterande kombinerade regeln när Marital status är enkel visas så här i regelredigeraren.
 
@@ -900,6 +900,15 @@ In [!DNL Experience Manager Forms] versions prior to [!DNL Experience Manager 6.
 Any scripts or expressions that you must have written in the Scripts tab are available in the rule editor. While you cannot view or edit them in visual editor, if you are a part of the forms-power-users group you can edit scripts in code editor. -->
 
 ## Exempelregler {#example}
+
+### Effektivisera komplexa beräkningar i repeterbara paneler med inbyggda funktioner
+
+Med regelredigeraren kan du använda färdiga funktioner som Summa, Min, Max och Förena direkt i fält i upprepningsbara paneler. Detta frigör kraftfull automatisering så att ni kan implementera komplex affärslogik utan anpassad kod.
+Föreställ dig ett formulär med en repeterbar panel. Varje panelinstans kan samla in data som produktkvantiteter. Du kan använda funktionen Sum för att automatiskt beräkna den totala kvantiteten för alla paneler, vilket eliminerar manuella beräkningar och potentiella fel.
+
+![Stöd för repeterbara panelfält i OTB-funktioner](/help/forms/assets/ootb-function-support-repeatable-panel.png)
+
+Detta är bara ett exempel! Utforska de tillgängliga [funktionerna](#b-form-objects-and-functions-br) för att förenkla arbetsflöden och förbättra datakvaliteten i formulären.
 
 ### Anropa tjänsten Formulärdatamodell {#invoke}
 
