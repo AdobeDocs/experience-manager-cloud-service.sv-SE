@@ -4,7 +4,7 @@ description: Konfigurerar trafikfilterregler inklusive Brandväggsregler för we
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
 feature: Security
 role: Admin
-source-git-commit: 23d532f70e031608855bb9fc768aae5398c81e0f
+source-git-commit: b8fc132e7871a488cad99440d320e72cd8c31972
 workflow-type: tm+mt
 source-wordcount: '3938'
 ht-degree: 0%
@@ -531,7 +531,7 @@ Ett e-postmeddelande från [Åtgärdscenter](/help/operations/actions-center.md)
 
 Om detta undantag uppfylls blockerar Adobe trafiken från den IP-adressen, men vi rekommenderar att du vidtar ytterligare åtgärder för att skydda ditt ursprung, inklusive att konfigurera trafikfilterregler för hastighetsbegränsning så att trafiktoppar vid lägre tröskelvärden blockeras. Se självstudiekursen [Blockera DoS- och DDoS-attacker med trafikregler](#tutorial-blocking-DDoS-with-rules) för en guidad genomgång.
 
-Den här varningen är aktiverad som standard, men kan inaktiveras med egenskapen *enable_dos_warnings* som är inställd på false. När varningen har utlösts kommer den inte att utlösas igen förrän nästa dag (UTC).
+Den här varningen är aktiverad som standard, men kan inaktiveras med egenskapen *defaultTrafficAlerts* inställd på false. När varningen har utlösts kommer den inte att utlösas igen förrän nästa dag (UTC).
 
 ```
 kind: "CDN"
@@ -540,7 +540,7 @@ metadata:
   envTypes: ["dev"]
 data:
   trafficFilters:
-    enable_ddos_alerts: false
+   defaultTrafficAlerts: false
 ```
 
 ## CDN-loggar {#cdn-logs}
