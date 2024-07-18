@@ -5,9 +5,9 @@ feature: Adaptive Forms, Core Components
 role: User
 level: Beginner, Intermediate
 exl-id: 1292f729-c6eb-4e1b-b84c-c66c89dc53ae
-source-git-commit: 46a6f413be2ba41df8ca72bd7751ec453ae438ec
+source-git-commit: a9596774326d5756477c0a44c2715fc5c3561e2a
 workflow-type: tm+mt
-source-wordcount: '5534'
+source-wordcount: '5586'
 ht-degree: 0%
 
 ---
@@ -483,7 +483,7 @@ I avsnittet Krav för lån i exempelformuläret för låneansökan måste de sö
 * Fältet för makens lön visas endast när äktenskapsstatus är gift.
 * Låneberättigandebeloppet är 50 % av den totala lönen.
 
-Utför följande steg för att skriva regler:
+Så här skriver du regler:
 
 1. Skriv först regeln för att styra synligheten för fältet Makes/makas lön baserat på det alternativ som användaren väljer för alternativknappen Civilstånd.
 
@@ -594,7 +594,7 @@ Utför följande steg för att skriva regler:
 
    * Välj **[!UICONTROL is equal to]** från fältet **[!UICONTROL Select Operator]** .
 
-   * Välj String i det andra **[!UICONTROL Drop object or select here]**-fältet och ange **[!UICONTROL Married]** i **[!UICONTROL Enter a String]**-fältet.
+   * Välj Sträng i det andra **[!UICONTROL Drop object or select here]** fältet och ange **[!UICONTROL Married]** i fältet **[!UICONTROL Enter a String]** .
 
    Regeln visas slutligen så här i regelredigeraren.  ![write-rules-visual-editor-16](assets/write-rules-visual-editor-16-cc.png)
 
@@ -602,7 +602,7 @@ Utför följande steg för att skriva regler:
 
 1. Upprepa steg 7 till 14 för att definiera en annan regel som beräknar låneberättigandet om civilstånd är enkel. Regeln visas så här i regelredigeraren.
 
-   ![skriva- regler- visuell-redigerare-17](assets/write-rules-visual-editor-17-cc.png)
+   ![write-rules-visual-editor-17](assets/write-rules-visual-editor-17-cc.png)
 
 Alternativt kan du använda regeln Ange värde för för att beräkna låneberättigandet i När-regeln som du skapade för att visa/dölja fältet Makes/makas lön. Den resulterande kombinerade regeln när Marital status är enkel visas så här i regelredigeraren.
 
@@ -904,9 +904,17 @@ Any scripts or expressions that you must have written in the Scripts tab are ava
 ### Effektivisera komplexa beräkningar i repeterbara paneler med inbyggda funktioner
 
 Med regelredigeraren kan du använda färdiga funktioner som Summa, Min, Max och Förena direkt i fält i upprepningsbara paneler. Detta frigör kraftfull automatisering så att ni kan implementera komplex affärslogik utan anpassad kod.
-Föreställ dig ett formulär med en repeterbar panel. Varje panelinstans kan samla in data som produktkvantiteter. Du kan använda funktionen Sum för att automatiskt beräkna den totala kvantiteten för alla paneler, vilket eliminerar manuella beräkningar och potentiella fel.
+Tänk dig ett formulär med en upprepningsbar panel där varje panelinstans samlar in information om det deklarerade värdet för resurser.
+
+![Upprepningsbart formulär](/help/forms/assets/ootb-function-support-repeatable-panel-form.png)
+
+Du kan använda funktionen `Sum` för att automatiskt beräkna det totala tillgångsvärdet för alla paneler, vilket eliminerar behovet av manuella beräkningar och minskar risken för fel.
 
 ![Stöd för repeterbara panelfält i OTB-funktioner](/help/forms/assets/ootb-function-support-repeatable-panel.png)
+
+När du fyller i ett formulär och lägger till instanser för att deklarera resursvärdena, beräknar knappen `Calculate Asset Value` den totala summan av alla deklarerade resursvärden och visar resultatet i textrutan `assetvalue`.
+
+![Stöd för repeterbara panelfält i OTB-funktioner](/help/forms/assets/ootb-function-support-repeatable-panel-form-preview.png)
 
 Detta är bara ett exempel! Utforska de tillgängliga [funktionerna](#b-form-objects-and-functions-br) för att förenkla arbetsflöden och förbättra datakvaliteten i formulären.
 
