@@ -4,12 +4,13 @@ description: Läs om hur AEM as a Cloud Service stöder ytterligare publicerings
 exl-id: b9ac3c6a-eb8b-461d-8f1d-a0356046a3f9
 feature: Operations
 role: Admin
-source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
+source-git-commit: c7362a77fd929d812db3cd40bf01763ed3bef02c
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
+
 
 # Ytterligare Publish-regioner {#additional-publish-regions}
 
@@ -22,7 +23,9 @@ Organisationer kan licensiera upp till tre ytterligare publiceringsregioner.
 
 >[!NOTE]
 >
->Den här funktionen är för närvarande endast tillgänglig för AEM Sites. Den kan inte heller tillämpas på sandlådeprogram. Dessutom kräver funktionen för ytterligare publiceringsregioner att ditt program uppdateras till AEM version 12142 eller senare.
+>* Den här funktionen är tillgänglig för Sites och Forms.
+>* Den här funktionen kan inte tillämpas på [sandlådeprogram.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md)
+>* Den här funktionen kräver att ditt program uppdateras till AEM version 12142 eller senare.
 
 ## Användningsexempel {#use-cases}
 
@@ -57,7 +60,9 @@ Om ytterligare publiceringsregioner är aktiverade kommer separata loggar för v
 
 Tänk på följande begränsningar när du funderar på att använda ytterligare publiceringsregioner.
 
-* Ytterligare publiceringsregioner kan bara läggas till i AEM Sites. Ytterligare publiceringsregioner omfattar inte andra AEM lösningar eller relaterade funktioner som körs i samma program (till exempel AEM Forms eller Adobe Learning Manager).
+* Ytterligare publiceringsregioner kan bara läggas till i AEM Sites eller AEM Forms.
+   * Ytterligare publiceringsregioner omfattar inte andra AEM lösningar eller relaterade funktioner som körs i samma program (till exempel AEM Assets eller Adobe Learning Manager).
+   * Dessa lösningar kan dock läggas till i ett program så länge som det finns minst en Sites eller Forms-lösning.
 * Ytterligare regioner kan bara läggas till om associerade berättiganden är tillgängliga och inte används i klientorganisationen.
 * Högst tre ytterligare publiceringsregioner kan läggas till i en enskild miljö.
 * Ytterligare regioner är endast tillgängliga i produktionsprogram. Funktionen är inte tillgänglig i sandlådeprogram.

@@ -5,9 +5,9 @@ exl-id: 6d33c3c5-258c-4c9c-90c2-d566eaeb14c0
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: c7362a77fd929d812db3cd40bf01763ed3bef02c
 workflow-type: tm+mt
-source-wordcount: '1958'
+source-wordcount: '1995'
 ht-degree: 0%
 
 ---
@@ -112,7 +112,7 @@ Förutom sammanfattningen som visas i informationen för en pipeline-körning ka
 
 Om du trycker eller klickar på **Visa långsammaste sidor** öppnas dialogrutan **Långsamt 5 sidor** som visar de fem sidor som har lägst prestanda och som du [har konfigurerat för granskning.](#configuration)
 
-![Långsammast fem](assets/experience-audit-slowest-five.jpg)
+![Långsammast fem](assets/experience-audit-slowest-five.png)
 
 Poängen delas upp efter **Prestanda**, **Tillgänglighet**, **God praxis** och **SEO** tillsammans med avvikelsen för varje mätvärde från den senaste granskningen.
 
@@ -166,7 +166,7 @@ Avsnittet **Recommendations** visar en sammanställd uppsättning insikter. Reko
 
 Tryck eller klicka på avtryckaren om du vill visa information om den.
 
-![Rekommendationsinformation](assets/experience-audit-recommendation-details.png)
+![Rekommendationsinformation](assets/experience-audit-recommendations-details.png)
 
 När det är tillgängligt innehåller den utökade rekommendationsinformationen också procentandelen av rekommendationseffekten, vilket hjälper dig att fokusera på de mest effektiva ändringarna.
 
@@ -184,7 +184,7 @@ Om du trycker eller klickar på länken för en viss sida uppdateras filtret **V
 
 ![Sidresultat](assets/experience-audit-page-results.png)
 
-Fliken **Raw-rapporter** ger dig poäng för varje granskning av sidan. Tryck eller klicka på ikonen **Hämta** för att hämta en JSON-fil med rådata.
+Fliken **Raw-rapporter** ger dig poäng för varje granskning av sidan. Tryck eller klicka på rapportdatumet i kolumnen **Lightroom Report** för att hämta en JSON-fil med rådata.
 
 ![Raw-rapport](assets/experience-audit-raw-reports.png)
 
@@ -200,6 +200,10 @@ Om du vill köra en genomsökning på begäran går du till fliken **Rapporter**
 
 ![On demand-skanning](assets/experience-audit-on-demand.png)
 
+Knappen **Kör skanning** blir inte tillgänglig och har en klockikon när en skanning på begäran redan körs.
+
+![On demand-skanning körs](assets/experience-audit-on-demand-running.png)
+
 On-demand-skanningar utlöser en Experience Audit för de senaste 25 [konfigurerade sidorna](#configuration) och avslutas normalt på några minuter.
 
 När poängen är klara uppdateras poängdiagrammet automatiskt och du kan kontrollera resultaten exakt som vid en genomsökning av pipeline-körningar.
@@ -214,15 +218,15 @@ Du kan filtrera poängdiagrammet baserat på utlösartypen med hjälp av väljar
 
 ## Problem med Experience Audit Encounters {#issues}
 
-Om [sidorna som du konfigurerade](#configuration) att granskas inte var tillgängliga visas detta i Experience Audit.
+Om [sidorna som du konfigurerade](#configuration) att granskas inte var tillgängliga eller om det uppstod andra fel i granskningen, visas detta i Experience Audit.
 
 Pipelinen visar ett utökningsbart felavsnitt som visar de relativa URL-sökvägar som den inte har åtkomst till.
 
 ![Problem som påträffades av Experience Audit](assets/experience-audit-issues.jpg)
 
-Om du visar den fullständiga rapporten visas information i avsnittet **[Resultat av granskningssökning](#results)**.
+Om du visar den fullständiga rapporten visas information i avsnittet **[Resultat av granskningssökning](#results)** som också kan utökas.
 
-![Fullständiga rapportproblem](assets/experience-audit-issues-reports.jpeg)
+![Fullständiga rapportproblem](assets/experience-audit-issues-report.png)
 
 En del orsaker till att sidorna kanske inte är tillgängliga är:
 
@@ -253,8 +257,7 @@ Dessa kan förbättras genom att
 
 Följande information innehåller ytterligare information om hur Experience Audit utvärderar er webbplats. De är inte nödvändiga för allmän användning av funktionen och anges här för fullständighetens skull.
 
-* Även om [konfigurerade sökvägar för sidan Experience Audit](#configuration) visar utgivarens `.com`-domän, söker granskningen igenom den ursprungliga domänen (`.net`) för att säkerställa att problem som uppstod under utvecklingen identifieras.
-   * Domänen `.com` använder ett CDN och kan ge bättre resultat eller innehålla cachelagrade resultat.
+* Granskningen skannar den ursprungliga domänen (`.com`) enligt definitionen i utgivarens [konfigurerade sökvägar för Experience Audit ](#configuration) för att simulera verkliga användarupplevelser mer korrekt och hjälper dig att fatta mer välgrundade beslut om hur du hanterar och optimerar dina webbplatser.
 * Mellanlagringsmiljön skannas in i rörledningar med full stapel i produktionen.
    * För att säkerställa att granskningen innehåller relevanta detaljer under granskningen bör mellanlagringsmiljöns innehåll vara så nära produktionsmiljön som möjligt.
 * Sidorna som visas i listrutan **Välj** i [**Sidpoäng - trend** avsnitt](#trend) är alla kända sidor som tidigare har skannats in av Experience Audit.

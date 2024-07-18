@@ -5,9 +5,9 @@ exl-id: 4606590c-6826-4794-9d2e-5548a00aa2fa
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 88b0479c44f6431a9f254551e51b1ce86af91d0f
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,15 @@ Miljöer som skapas i ett sandlådeprogram är inte konfigurerade för automatis
 
 ### Inga anpassade domäner eller IP-Tillåtelselista {#ip-allow}
 
-Anpassade domäner och IP-tillåtelselista är inte tillgängliga i sandlådeprogram.
+[Anpassade domäner](/help/implementing/cloud-manager/custom-domain-names/introduction.md) och [IP tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md) är inte tillgängliga i sandlådeprogram.
+
+### Inga ytterligare Publish-regioner {#additional-publish-regions}
+
+[Ytterligare publiceringsregioner](/help/operations/additional-publish-regions.md) är inte tillgängliga i sandlådeprogram.
+
+### No 99.99% SLA {#999-sla}
+
+[99.99% SLA](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md#sla) gäller inte för sandlådeprogram.
 
 ### Inget avancerat nätverk {#advanced-networking}
 

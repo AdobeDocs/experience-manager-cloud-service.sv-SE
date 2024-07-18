@@ -5,9 +5,9 @@ exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: ceaa3b075953e9bdbcc0ae8c47106150be9a52d7
+source-git-commit: 51fa6e0fe56b1d5f0d8ada6bd2335175d603bc8c
 workflow-type: tm+mt
-source-wordcount: '4482'
+source-wordcount: '4513'
 ht-degree: 0%
 
 ---
@@ -1267,3 +1267,12 @@ AEM Cloud Service tillåter inte att tokeniserare med felaktiga namn skapas i an
 >[!WARNING]
 >
 >Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att pipelines misslyckas med början i [Cloud Manager August 2024.](/help/implementing/cloud-manager/release-notes/current.md)
+
+### Konfiguration av indexeringsdefinitioner får inte innehålla blanksteg {#oakpal-indexing-definitions-spaces}
+
+* **Nyckel**: PathSpacesCheck
+* **Typ**: Förbättring
+* **Allvarlighetsgrad**: Mindre
+* **Sedan**: Version 2024.7.0
+
+AEM Cloud Service tillåter inte att indexdefinitioner som innehåller egenskaper med blanksteg skapas.

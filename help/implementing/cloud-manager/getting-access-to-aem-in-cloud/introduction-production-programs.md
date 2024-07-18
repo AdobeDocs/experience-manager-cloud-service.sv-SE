@@ -5,9 +5,9 @@ exl-id: bb8d4a5a-b26a-4718-9327-149fedb87e6a
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 88b0479c44f6431a9f254551e51b1ce86af91d0f
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
@@ -36,4 +36,4 @@ I följande tabell beskrivs vanliga scenarier för tillgängliga lösningar och 
 
 >[!NOTE]
 >
->Det går inte att redigera produktionsprogram [.](editing-programs.md)
+>Produktionsprogram [kan redigeras men inte tas bort.](editing-programs.md)

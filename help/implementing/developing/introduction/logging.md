@@ -4,7 +4,7 @@ description: Lär dig hur du använder loggning för AEM as a Cloud Service för
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
 feature: Log Files, Developing
 role: Admin, Architect, Developer
-source-git-commit: bc92ed7acefbbd906b0986ea0b6b96fa6d8422de
+source-git-commit: 88b0479c44f6431a9f254551e51b1ce86af91d0f
 workflow-type: tm+mt
 source-wordcount: '2797'
 ht-degree: 0%
@@ -561,9 +561,9 @@ Du kan komma åt AEM as a Cloud Service-loggar för molntjänster antingen genom
 
 ### Loggar för ytterligare Publish-regioner {#logs-for-additional-publish-regions}
 
-Om ytterligare Publish-regioner är aktiverade för en viss miljö, kommer loggar för varje region att vara tillgängliga för hämtning från Cloud Manager, vilket nämns ovan.
+Om ytterligare publiceringsregioner är aktiverade för en viss miljö, kommer loggar för varje region att vara tillgängliga för hämtning från Cloud Manager, vilket nämns ovan.
 
-AEM loggar och dispatcherloggar för de ytterligare Publish-regionerna anger regionen i de tre första bokstäverna efter miljö-id:t, vilket visas av **nld2** i exemplet nedan, som refererar till en ytterligare AEM publiceringsinstans som finns i Nederländerna:
+AEM loggar och dispatcherloggar för de ytterligare publiceringsregionerna anger regionen i de tre första bokstäverna efter miljö-ID, enligt exemplet **nld2** nedan, som refererar till en ytterligare AEM publiceringsinstans som finns i Nederländerna:
 
 ```
 cm-p7613-e12700-nld2-aem-publish-bcbb77549-5qmmt 127.0.0.1 - 07/Nov/2023:23:57:11 +0000 "HEAD /libs/granite/security/currentuser.json HTTP/1.1" 200 - "-" "Java/11.0.19"
