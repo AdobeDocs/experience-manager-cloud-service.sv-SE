@@ -2,7 +2,7 @@
 title: Leverans-API:er
 description: Lär dig hur du använder leverans-API:erna.
 role: User
-source-git-commit: 6fdc44b93e11a20b6859419813fd7eadbefd95c1
+source-git-commit: deae260ce34a0801ee534ddadfb14823ef461a87
 workflow-type: tm+mt
 source-wordcount: '537'
 ht-degree: 0%
@@ -23,7 +23,7 @@ I följande tabell visas hur de olika tillgängliga leverans-API:erna används:
 
 | Leverans-API | Beskrivning |
 |---|---|
-| [Webboptimerad binär representation av resursen i begärt utdataformat](https://adobe-aem-assets-delivery.redoc.ly/#operation/getAssetSeoFormat) | Returnerar den webboptimerade binära återgivningen av resursen i det begärda utdataformatet baserat på det resurs-ID som skickades i begäran. Dessutom kan du definiera olika bildmodifierare som bredd, höjd, rotering, vändning, kvalitet, beskärning, format och [smart beskärning](/help/assets/dynamic-media/image-profiles.md). Se [API-informationen](https://adobe-aem-assets-delivery-experimental.redoc.ly/#operation/getAssetSeoFormat) för de format och bildmodifierare som stöds.<br>Adobe rekommenderar att du använder detta API för alla bildformattyper. |
+| [Webboptimerad binär representation av resursen i begärt utdataformat](https://adobe-aem-assets-delivery.redoc.ly/#operation/getAssetSeoFormat) | Returnerar den webboptimerade binära återgivningen av resursen i det begärda utdataformatet baserat på det resurs-ID som skickades i begäran. Dessutom kan du definiera olika bildmodifierare som bredd, höjd, rotering, vändning, kvalitet, beskärning, format och [smart beskärning](/help/assets/dynamic-media/image-profiles.md). Se [API-informationen](https://adobe-aem-assets-delivery.redoc.ly/#operation/getAssetSeoFormat) för de format och bildmodifierare som stöds.<br>Adobe rekommenderar att du använder detta API för alla bildformattyper. |
 | [Webboptimerad binär representation av resursen](https://adobe-aem-assets-delivery.redoc.ly/#operation/getAsset) | Bekvämt API som tillämpar standardvärden för webboptimerad binär representation av resursen som returneras i svaret. Standardvärdena är JPEG/WEBP, quality => 65 och width => 1024. |
 | [Ursprungligt överfört binärt värde för resursen](https://adobe-aem-assets-delivery.redoc.ly/#operation/getAssetOriginal) | Returnerar resursens ursprungligen överförda binärfiler. Adobe rekommenderar att du använder detta API för dokumentformat och SVG-bilder. |
 | [Förgenererad återgivning av resursen som är tillgänglig i AEM Assets-redigeringsmiljö](https://adobe-aem-assets-delivery.redoc.ly/#operation/getAssetRendition) | Returnerar resursåtergivningens bitström som är tillgänglig i AEM Assets redigeringsmiljö baserat på det resurs-ID och återgivningsnamn som skickats i begäran. |
