@@ -5,9 +5,9 @@ contentOwner: KK
 role: Admin,User
 feature: Selectors
 exl-id: b968f63d-99df-4ec6-a9c9-ddb77610e258
-source-git-commit: d12aba19a8f166afcaa071478c1cb6d995010cd8
+source-git-commit: 61647c0f190c7c71462f034a131f5a7c13fd7162
 workflow-type: tm+mt
-source-wordcount: '4713'
+source-wordcount: '4859'
 ht-degree: 0%
 
 ---
@@ -812,6 +812,60 @@ I följande tabell beskrivs några av de viktiga egenskaperna för det valda res
 | *_links.<http://ns.adobe.com/adobecloud/rel/rendition[].height>* | tal | Återgivningens höjd. |
 
 En fullständig lista över egenskaper och detaljerade exempel finns på [Exempel på resursväljarkod](https://github.com/adobe/aem-assets-selectors-mfe-examples).
+
+### Sammanhangsberoende anropsfilter{#contextual-invocation-filter}
+
+Med resursväljaren kan du lägga till ett taggväljarfilter. Den har stöd för en tagggrupp som kombinerar alla relevanta taggar till en viss tagggrupp. Dessutom kan du välja ytterligare taggar som motsvarar den resurs du söker efter. Dessutom kan du ange standardtagggrupper under det kontextuella anropsfiltret som du använder mest så att de är tillgängliga oavsett var du är.
+
+> 
+>
+> * Du måste lägga till sammanhangsberoende kodfragment för att kunna aktivera taggningsfilter i sökningen.
+> * Det är obligatoriskt att använda namnegenskapen som motsvarar tagggruppstypen `(property=xcm:keywords.id=)`.
+
+Syntax:
+
+```
+const filterSchema=useMemo(() => {
+    return: [
+        {
+            element: 'taggroup',
+            name: 'property=xcm:keywords.id='
+        },
+    ];
+}, []);
+```
+
+Om du vill lägga till tagggrupper på filterpanelen måste du lägga till minst en tagggrupp som standard. Använd dessutom kodfragmentet nedan för att lägga till de standardtaggar som är förmarkerade från tagggruppen.
+
+```
+export const WithAssetTags = (props) = {
+const [selectedTags, setSelectedTags] = useState (
+new Set(['orientation', 'color', 'facebook', 'experience-fragments:', 'dam', 'monochrome'])
+const handleSelectTags = (selected) => {
+setSelectedTags (new Set (selected)) ;
+};
+const filterSchema = useMemo ((); => {
+    return {
+        schema: [
+            ｛
+                fields: [
+                    {
+                    element: 'checkbox', 
+                    name: 'property=xcm:keywords=', 
+                    defaultValue: Array. from(selectedTags), 
+                    options: assetTags, 
+                    orientation: 'vertical',
+                    },
+                ],
+    header: 'Asset Tags', 
+    groupkey: 'AssetTagsGroup',
+        ],
+    },
+｝；
+}, [selectedTags]);
+```
+
+![tagggruppsfilter](assets/tag-group.gif)
 
 ## Hantera urval av Assets med objektschema {#handling-selection}
 
