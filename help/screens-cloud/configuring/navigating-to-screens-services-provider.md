@@ -4,10 +4,10 @@ description: På den här sidan beskrivs hur du navigerar till Screens Services 
 exl-id: 9eff6fe8-41d4-4cf3-b412-847850c4e09c
 feature: Administering Screens
 role: Admin, Developer, User
-source-git-commit: f91166ca0349636386aa8721ded5b3bbda1cdb51
+source-git-commit: ea374f6e521d3b94d1d38af5c8f6780275ae2cb4
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '430'
+ht-degree: 1%
 
 ---
 
@@ -52,37 +52,35 @@ Följ stegen nedan för att konfigurera Screens Services Provider:
 De IP-adresser som behöver vitlistas måste också flyttas till konfigurationsfilen och måste vara [otillämpade](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list) från Cloud Manager-inställningarna.
 
    ![bild](/help/screens-cloud/assets/configure/configure-screens20.png)
-
 Samma nyckel måste konfigureras AEM CDN-konfigurationen.  Du bör inte placera rubrikvärdet direkt i GITHub och använda en [hemlig referens](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication#rotating-secrets).
 Nedan visas ett exempel på [CDN-konfiguration](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf):
-
-    typ: &quot;CDN&quot;
-    version: &quot;1&quot;
-    metadata:
-    envTypes: [&quot;dev&quot;, &quot;stage&quot;, &quot;prod&quot;]
-    data:
-    trafikFilters:
-    rules:
-    - name: &quot;block-request-from-not-allowed-ips&quot;
-    när:
-    allOf:
-    }- reqProperty: clientIp
-    notIn: [&quot;101.41.112.0/24&quot;]
-    - reqProperty: tier
-    equals: publish
-    action: block
-    - name: &quot;allow-requests-with-header&quot;
-    when:
-    allOf:
-    - rerererec qProperty: tier
-    equals: publish
-    - reqProperty: path
-    equals: /screens/channels.json
-    - reqHeader: x-screens-tillåtelselista-key
-    equals: ${\
-    {CDN_HEADER_KEY}
-    action:
-    type: allow
+sort: &quot;CDN&quot;
+version: &quot;1&quot;
+metadata:
+envTypes: [&quot;dev&quot;, &quot;stage&quot;, &quot;prod&quot; ]
+data:
+trafikFilters:
+regler:
+- namn: &quot;block-request-from-not-allowed-ips&quot;
+när:
+allOf:
+- reqProperty: clientIp
+notIn: [&quot;101.41.112.0/24&quot;]
+- reqProperty: tier
+lika med: publicera
+åtgärd: block
+- namn: &quot;allow-requests-with-header&quot;
+när:
+allOf:
+- reqProperty: tier
+lika med: publicera
+- reqProperty: path
+är lika med: /screens/channels.json
+- reqHeader: x-screens-tillåtelselista-key
+är lika med: ${\
+   {CDN_HEADER_KEY}
+åtgärd:
+typ: tillåt
 
 1. Välj **Kanaler** i det vänstra navigeringsfältet och klicka på **öppna i innehållsleverantören**.
 
@@ -91,6 +89,10 @@ Nedan visas ett exempel på [CDN-konfiguration](https://experienceleague.adobe.c
 1. Screens Content Provider öppnas på en annan flik där du kan skapa ditt innehåll.
 
    ![bild](/help/screens-cloud/assets/configure/configure-screens2.png)
+
+
+
+
 
 ## What&#39;s Next {#whats-next}
 
