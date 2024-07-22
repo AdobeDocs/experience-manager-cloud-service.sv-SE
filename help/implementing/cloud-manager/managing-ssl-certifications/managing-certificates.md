@@ -5,9 +5,9 @@ exl-id: ad6170f4-93bd-4bac-9c54-63c35a0d4f06
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 35ac4cfb18e348281d2b126bdc3b292c84590f3a
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '649'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,9 @@ När ett certifikat upphör att gälla fungerar inte längre domäner som använ
 1. Navigera till skärmen **SSL-certifikat** från skärmen **Miljö**.
 1. Du kan se en tabell med en rad för varje SSL-certifikat som har installerats i programmet. Klicka på ellipsknappen längst till höger i raden för det certifikat som du vill uppdatera och välj **Visa och uppdatera**.
 1. Certifikatinformationen visas och kan uppdateras.
-1. Kör pipeline för att distribuera det uppdaterade certifikatet.
+1. Spara ändringarna.
+
+När du har sparat ändringarna tillämpas de automatiskt.
 
 >[!NOTE]
 >
