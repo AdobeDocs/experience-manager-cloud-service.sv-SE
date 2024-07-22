@@ -4,9 +4,9 @@ description: Lär dig mer om underhållsåtgärder i AEM as a Cloud Service och 
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
 feature: Operations
 role: Admin
-source-git-commit: f8ef7e36ad602af96c3a6055db31ac328da808e6
+source-git-commit: b8bed4acf895f1cf04ea92ae27b87c7bfb38863d
 workflow-type: tm+mt
-source-wordcount: '2106'
+source-wordcount: '2110'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ Följande tabell visar vilka underhållsuppgifter som är tillgängliga.
     <td>Kund</td>
     <td>
     <p>Måste göras i git. Åsidosätt den körklara konfigurationsnoden för underhållsfönstret under <code>/libs</code> genom att skapa egenskaper under mappen <code>/apps/settings/granite/operations/maintenance/granite_weekly</code>, <code>granite_daily</code> eller <code>granite_monthly</code>. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation.</p>
-    <p>Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den <code>granite_ProjectPurgeTask</code>) med lämpliga egenskaper. Se listan över OSGI-egenskaper under"Adobe Projects Purge Configuration".</p>
+    <p>Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den <code>granite_ProjectPurgeTask</code>) med lämpliga egenskaper. Se listan över [OSGI-egenskaper](/help/implementing/deploying/configuring-osgi.md) under **Adobe Projects Purge Configuration**.</p>
   </td>
   </tr>
   </tbody>
