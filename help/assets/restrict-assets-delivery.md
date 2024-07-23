@@ -2,7 +2,8 @@
 title: Begränsa leverans av resurser i Experience Manager
 description: Lär dig hur du begränsar resursleveransen i  [!DNL Experience Manager].
 role: User
-source-git-commit: 540aa876ba7ea54b7ef4324634f6c5e220ad19d3
+exl-id: 3fa0b75d-c8f5-4913-8be3-816b7fb73353
+source-git-commit: 16b313a4fb79f915613044d12d29e618209113ec
 workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 0%
@@ -19,7 +20,7 @@ Användare [som söker](search-assets-api.md) eller använder [leverans-URL:er](
 
 ## Begränsad leverans med en IMS-token {#restrict-delivery-ims-token}
 
-I Experience Manager omfattar begränsad leverans via IMS två huvudsteg:
+I Experience Manager Assets innebär begränsad leverans via IMS två huvudsteg:
 
 * Redigering
 * Leverans
@@ -43,7 +44,7 @@ Om fältet inte är tillgängligt lägger du till fältet med följande steg:
       1. Uppdatera **[!UICONTROL Map to property]** till _./jcr:content/metadata/dam:roles_.
 
 1. Hämta de IMS-grupper som ska läggas till i resursens rollmetadata. Så här hämtar du IMS-grupperna:
-   1. Logga in på https://adminconsole.adobe.com/.
+   1. Logga in `https://adminconsole.adobe.com/.`
    1. Gå till din respektive organisation och navigera till **[!UICONTROL User Groups]**.
    1. Markera **[!UICONTROL User Group]** som du vill lägga till och extrahera **[!UICONTROL orgID]** och **[!UICONTROL userGroupID]** från URL:en eller använd ditt Org ID, till exempel `{orgID}@AdobeOrg:{usergroupID}`.
 
