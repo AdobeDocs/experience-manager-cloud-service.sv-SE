@@ -4,9 +4,9 @@ description: På den här sidan beskrivs hur du navigerar till Screens Services 
 exl-id: 9eff6fe8-41d4-4cf3-b412-847850c4e09c
 feature: Administering Screens
 role: Admin, Developer, User
-source-git-commit: 093cd62f282bd9842ad74124bb9bd4d5a33ef1c5
+source-git-commit: 5452a02ed20d70c09728b3e34f248c7d37fc4668
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '383'
 ht-degree: 1%
 
 ---
@@ -51,36 +51,38 @@ Följ stegen nedan för att konfigurera Screens Services Provider:
 1. Om du har konfigurerat den AEM publiceringsinstansen så att den bara tillåter åtkomst till betrodda IP-adresser via funktionen Cloud Manager IP Tillåtelselista, måste du konfigurera en rubrik med ett nyckelvärde i dialogrutan med inställningar som visas nedan.
 De IP-adresser som behöver vitlistas måste också flyttas till konfigurationsfilen och måste vara [otillämpade](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list) från Cloud Manager-inställningarna.
 
-   ![bild](/help/screens-cloud/assets/configure/configure-screens20.png)
+   ![bild](/help/screens-cloud/assets/configure/configure-screens20b.png)
 Samma nyckel måste konfigureras AEM CDN-konfigurationen.  Du bör inte placera rubrikvärdet direkt i GITHub och använda en [hemlig referens](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication#rotating-secrets).
 Nedan visas ett exempel på [CDN-konfiguration](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf):
-sort: &quot;CDN&quot;
-version: &quot;1&quot;
-metadata:
-envTypes: [&quot;dev&quot;, &quot;stage&quot;, &quot;prod&quot; ]
-data:
-trafikFilters:
-regler:
-- namn: &quot;block-request-from-not-allowed-ips&quot;
-när:
-allOf:
-- reqProperty: clientIp
-notIn: [&quot;101.41.112.0/24&quot;]
-reqProperty: tier
-lika med: publicera
-åtgärd: block
-- namn: &quot;allow-requests-with-header&quot;
-när:
-allOf:
-- reqProperty: tier
-lika med: publicera
-- reqProperty: path
-är lika med: /screens/channels.json
-- reqHeader: x-screens-tillåtelselista-key
-är lika med: $\
-   {CDN_HEADER_KEY}
-åtgärd:
-typ: tillåt
+
+   ```kind: "CDN"
+       version: "1"
+       metadata:
+         envTypes: ["dev", "stage", "prod"]
+       data:
+         trafficFilters:
+           rules:
+             - name: "block-request-from-not-allowed-ips"
+               when:
+                 allOf:
+                   - reqProperty: clientIp
+                     notIn: ["101.41.112.0/24"]
+                    reqProperty: tier
+                     equals: publish
+               action: block
+             - name: "allow-requests-with-header"
+               when:
+                 allOf:
+                   - reqProperty: tier
+                     equals: publish
+                   - reqProperty: path
+                     equals: /screens/channels.json
+                   - reqHeader: x-screens-allowlist-key
+                     equals: $\
+       {CDN_HEADER_KEY}
+               action:
+                 type: allow
+   ```
 
 1. Välj **Kanaler** i det vänstra navigeringsfältet och klicka på **öppna i innehållsleverantören**.
 
