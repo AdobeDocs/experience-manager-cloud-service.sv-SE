@@ -5,9 +5,9 @@ exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 07696086644d52199bada102e9aee163d868c9c0
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '665'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,6 @@ Följ de här stegen för att lägga till ett certifikat med Cloud Manager.
    * Ange ett namn för ditt certifikat i **Certifikatnamn**.
       * Detta är endast avsett som information och kan vara vilket namn som helst som gör det enkelt att referera till ditt certifikat.
    * Klistra in värdena för **Certifikat**, **Privat nyckel** och **Certifikatkedja** i respektive fält. Alla tre fälten är obligatoriska.
-   * I vissa fall kan slutanvändarcertifikatet inkluderas i kedjan och måste tas bort innan kedjan klistras in i fältet.
 
    ![Dialogrutan Lägg till SSL-certifikat](/help/implementing/cloud-manager/assets/ssl/ssl-cert-02.png)
 
@@ -61,13 +60,27 @@ När certifikatet har sparats visas det som en ny rad i tabellen.
 >
 >En användare måste vara medlem i rollen **Business Owner** eller **Deployment Manager** för att kunna installera ett SSL-certifikat i Cloud Manager.
 
->[!NOTE]
->
->Om du får ett fel som liknar `The Subject of an intermediate certificate must match the issuer in the previous certificate. The SKI of an intermediate certificate must match the AKI of the previous certificate.`, har du antagligen inkluderat klientcertifikatet i certifikatkedjan. Kontrollera att kedjan inte innehåller klientcertifikatet och försök igen.
-
 ## Certifikatfel {#certificate-errors}
 
 Vissa fel kan uppstå om ett certifikat inte har installerats korrekt eller uppfyller kraven i Cloud Manager.
+
+### Kontrollera korrekt linjeformatering {#line-formatting}
+
+När värden för **Certificate**, **Private key** och **Certificate chain** klistras in, får nya rader bara vara efter BEGIN CERTIFICATE och före END CERTIFICATE. De inklistrade värdena ska vara uppbyggda på följande sätt:
+
+* `-----BEGIN CERTIFICATE-----` måste finnas på sin egen rad.
+* `-----END CERTIFICATE-----` måste finnas på sin egen rad.
+* Certifikatinnehållet måste visas på sin egen rad som en lång sträng **utan nya rader** mellan `-----BEGIN CERTIFICATE-----` och `-----END CERTIFICATE-----`.
+
+### Ta bort klientcertifikat {#client-certificates}
+
+Om du får ett fel som liknar det här när du lägger till ett certifikat:
+
+```text
+The Subject of an intermediate certificate must match the issuer in the previous certificate. The SKI of an intermediate certificate must match the AKI of the previous certificate.
+```
+
+Du har antagligen inkluderat klientcertifikatet i certifikatkedjan. Kontrollera att kedjan inte innehåller klientcertifikatet och försök igen.
 
 ### Certifikatprofil {#certificate-policy}
 
