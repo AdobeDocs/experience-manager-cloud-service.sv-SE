@@ -4,7 +4,7 @@ description: Använd resursväljaren för att söka efter, hitta och hämta resu
 contentOwner: KK
 role: Admin,User
 exl-id: 5f962162-ad6f-4888-8b39-bf5632f4f298
-source-git-commit: e357dd0b9b2e67d4989a34054737a91743d0933a
+source-git-commit: a2646fa72788cb887066751efb171e92b597f4f5
 workflow-type: tm+mt
 source-wordcount: '4529'
 ht-degree: 0%
@@ -745,7 +745,7 @@ Använd följande kodutdrag för att visa popup-meddelanden om hur en resurs som
 
 Med resursväljaren kan du lägga till ett taggväljarfilter. Den har stöd för en tagggrupp som kombinerar alla relevanta taggar till en viss tagggrupp. Dessutom kan du välja ytterligare taggar som motsvarar den resurs du söker efter. Dessutom kan du ange standardtagggrupper under det kontextuella anropsfiltret som du använder mest så att de är tillgängliga oavsett var du är.
 
-> 
+>
 >
 > * Du måste lägga till sammanhangsberoende kodfragment för att kunna aktivera taggningsfilter i sökningen.
 > * Det är obligatoriskt att använda namnegenskapen som motsvarar tagggruppstypen `(property=xcm:keywords.id=)`.
