@@ -4,9 +4,9 @@ description: Det här är versionsinformationen för Cloud Manager 2024.7.0 i AE
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
 role: Admin
-source-git-commit: a5cd55bcdc6044dd8db26f009b955216cda5daee
+source-git-commit: 12e19fe771c0b70ec471949944141f4d6858cbfd
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '633'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,7 @@ Lanseringsdatumet för Cloud Manager version 2024.7.0 i AEM as a Cloud Service �
       * Länken till rapporten i Raw-format i Lightroom visas nu på ett mer intuitivt sätt, direkt i panelen med information om ögonblicksbilder i skannern.
       * Avsnittet Lightrooms rekommendationer har förbättrats.
    * Måttet för PWA togs bort i enlighet med Lightroom version 12.0.0, som eliminerade det här måttet.
+* [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) har uppdaterats till [version 49.](https://github.com/adobe/aem-project-archetype/tree/aem-project-archetype-49)
 
 ## Tidig användning {#early-adoption}
 
