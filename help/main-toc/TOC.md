@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 2814a61976d1815e0f0deff2e35ccad4731cfb09
+source-git-commit: 11624bc35020247494e3ae66c9601c1da505c8bf
 workflow-type: tm+mt
-source-wordcount: '5160'
+source-wordcount: '5265'
 ht-degree: 3%
 
 ---
@@ -692,13 +692,21 @@ ht-degree: 3%
             + [Använd Turnstile i anpassad form](/help/forms/integrate-adaptive-forms-turnstile-core-components.md)
             + [Lägga till en anpassad felhanterare i ett adaptivt formulär](/help/forms/add-custom-error-handler-adaptive-forms-core-components.md)
             + [Lägg till en språkinställning för adaptiv Forms baserat på kärnkomponenter](/help/forms/supporting-new-language-localization-core-components.md)
-            + [Skapa och använda anpassade funktioner](/help/forms/create-and-use-custom-functions.md)
-            + [Lägga till regler i ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components.md)
             + [Utforma JSON-schema för en adaptiv form (kärnkomponenter)](/help/forms/adaptive-form-core-components-json-schema-form-model.md)
             + [Lägga till versioner, kommentarer och anteckningar i ett adaptivt formulär](/help/forms/add-comments-annotations-versioning-adaptive-form-core-components.md)
             + [Jämför adaptiv Forms](/help/forms/compare-forms.md)
             + [Konvertera adaptiva Forms-baserade på baskomponenter till Core Component-baserade formulär med verktyget för migrering](/help/forms/migration-utility-tool-for-af-core-components.md)
             + [Spara ett adaptivt formulär som ett utkast](/help/forms/save-core-component-based-form-as-draft.md)
+            + Introduktion till regelredigeraren för adaptiv Forms baserat på kärnkomponenter {#rule-editor-core-components}
+               + [Introduktion till regelredigeraren för adaptiv Forms baserat på kärnkomponenter](/help/forms/rule-editor-core-components.md)
+               + [Regelredigerarens användargränssnitt för adaptiv Forms baserat på kärnkomponenter](/help/forms/rule-editor-core-components-user-interface.md)
+               + [Skillnad mellan redigerare för grundregel och redigerare för grundkomponentregel](/help/forms/rule-editor-core-components-difference-tables.md)
+               + [Operatorer och händelsetyper som är tillgängliga i regelredigeraren för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-events-operators.md)
+               + [Exempel på en regelredigerare för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-usecases.md)
+            + Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter {#create-and-use-custom-function-core-component}
+               + [Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter](/help/forms/create-and-use-custom-functions.md)
+               + [Skapa och använda en anpassad funktion för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/custom-function-core-component-create-function.md)
+               + [Exempel på anpassade funktioner för ett adaptivt formulär baserade på kärnkomponenter](/help/forms/custom-function-core-components-use-cases.md)
       + Foundation Components {#authoring-adaptive-forms-foundation-components}
          + Konvertera PDF forms till adaptiv Forms {#afcs}
             + [Introduktion till den automatiserade konverteringstjänsten för formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html)

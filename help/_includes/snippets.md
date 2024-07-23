@@ -1,7 +1,7 @@
 ---
-source-git-commit: 2acaafab86c0552e63e7b38b2a774c3c6afd6f9c
+source-git-commit: a35556164ace2245577c3e22da1bc276fc3d98d0
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
@@ -117,3 +117,13 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
   <table>
   </tbody>
 
+## Regelredigeraren Se även {#see-also-rule-editor}
+
+* [Introduktion till regelredigeraren för adaptiv Forms baserat på kärnkomponenter](/help/forms/rule-editor-core-components.md)
+* [Operatortyper och händelser i regelredigeraren för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-events-operators.md)
+* [Regelredigerarens användargränssnitt för adaptiv Forms baserat på kärnkomponenter](/help/forms/rule-editor-core-components-user-interface.md)
+* [Olika användningsområden för regelredigeraren för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-user-interface.md)
+* [Skillnader i olika utgåvor av regelredigeraren](/help/forms/rule-editor-core-components-difference-tables.md)
+* [Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter](/help/forms/create-and-use-custom-functions.md)
+* [Skapa en anpassad funktion för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/custom-function-core-component-create-function.md)
+* [Exempel på utveckling och användning av anpassade funktioner](/help/forms/custom-function-core-components-use-cases.md)
