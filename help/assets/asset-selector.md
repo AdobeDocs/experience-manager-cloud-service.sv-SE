@@ -3,15 +3,13 @@ title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud 
 description: Använd resursväljaren för att söka efter, hitta och hämta resursers metadata och återgivningar i programmet.
 contentOwner: KK
 role: Admin,User
-feature: Selectors
-exl-id: b968f63d-99df-4ec6-a9c9-ddb77610e258
-source-git-commit: 61647c0f190c7c71462f034a131f5a7c13fd7162
+exl-id: 5f962162-ad6f-4888-8b39-bf5632f4f298
+source-git-commit: e357dd0b9b2e67d4989a34054737a91743d0933a
 workflow-type: tm+mt
-source-wordcount: '4859'
+source-wordcount: '4529'
 ht-degree: 0%
 
 ---
-
 
 # Mikrofrontsväljare för mediefiler {#Overview}
 
@@ -48,7 +46,7 @@ Resursväljaren har många fördelar, till exempel:
 Du måste se till att följande kommunikationsmetoder används:
 
 * Programmet körs på HTTPS.
-* URL:en för programmet i IMS-klientens tillåtelselista för omdirigerings-URL:er.
+* Programmets URL finns i IMS-klientens tillåtelselista i omdirigerings-URL:er.
 * Inloggningsflödet för IMS konfigureras och återges med hjälp av en popup-meny i webbläsaren. Därför bör popup-fönster vara aktiverade eller tillåtna i målwebbläsaren.
 
 Använd ovanstående krav om du behöver arbetsflöde för IMS-autentisering för resursväljaren. Om du redan är autentiserad med IMS-arbetsflödet kan du lägga till IMS-informationen i stället.
@@ -58,7 +56,7 @@ Använd ovanstående krav om du behöver arbetsflöde för IMS-autentisering fö
 > Denna databas är avsedd att fungera som kompletterande dokumentation som beskriver tillgängliga API:er och användningsexempel för integrering av resursväljare. Innan du försöker installera eller använda resursväljaren måste du se till att din organisation har fått tillgång till resursväljaren som en del av Experience Manager Assets as a Cloud Service profil. Om du inte har etablerats kan du inte integrera eller använda dessa komponenter. Om du vill begära etablering bör din programadministratör skaffa en supportbiljett som är markerad som P2 från Admin Console och innehålla följande information:
 >
 >* Domännamn där det integrerande programmet finns.
->* Efter etableringen kommer din organisation att få `imsClientId`, `imsScope` och en `redirectUrl` som motsvarar den miljö som du begär och som är nödvändig för konfigurationen av resursväljaren. Utan dessa giltiga egenskaper kan du inte köra installationsstegen.
+>* Efter etableringen kommer din organisation att få `imsClientId`, `imsScope` och en `redirectUrl` som motsvarar de miljöer som efterfrågas och som är nödvändiga för konfigurationen av resursväljaren. Utan dessa giltiga egenskaper kan du inte köra installationsstegen.
 
 ## Installation {#installation}
 
@@ -109,7 +107,6 @@ Du kan integrera resursväljaren med olika program som:
 
 * [Integrera resursväljare med ett  [!DNL Adobe] program](#adobe-app-integration-vanilla)
 * [Integrera resursväljare med andra program än Adobe](#adobe-non-app-integration)
-* [Integrering av Dynamic Media med OpenAPI-funktioner](#adobe-app-integration-polaris)
 
 >[!BEGINTABS]
 
@@ -194,7 +191,7 @@ Egenskaperna `ImsAuthProps` definierar autentiseringsinformationen och det flöd
 
 +++
 
-+++**IMS-tokenvalidering**
++++**Verifiering med tillhandahållen IMS-token**
 
 ```
 <script>
@@ -228,28 +225,28 @@ Egenskaperna `ImsAuthProps` definierar autentiseringsinformationen och det flöd
 ```
 // object `imsProps` to be defined as below 
 let imsProps = {
-imsClientId: <IMS Client Id>,
-imsScope: "openid",
-redirectUrl: window.location.href,
-modalMode: true,
-adobeImsOptions: {
-modalSettings: {
-allowOrigin: window.location.origin,
+    imsClientId: <IMS Client Id>,
+        imsScope: "openid",
+        redirectUrl: window.location.href,
+        modalMode: true,
+        adobeImsOptions: {
+            modalSettings: {
+            allowOrigin: window.location.origin,
 },
-useLocalStorage: true,
+        useLocalStorage: true,
 },
 onImsServiceInitialized: (service) => {
-console.log("onImsServiceInitialized", service);
+            console.log("onImsServiceInitialized", service);
 },
 onAccessTokenReceived: (token) => {
-console.log("onAccessTokenReceived", token);
+            console.log("onAccessTokenReceived", token);
 },
 onAccessTokenExpired: () => {
-console.log("onAccessTokenError");
+            console.log("onAccessTokenError");
 // re-trigger sign-in flow
 },
 onErrorReceived: (type, msg) => {
-console.log("onErrorReceived", type, msg);
+            console.log("onErrorReceived", type, msg);
 },
 }
 ```
@@ -274,10 +271,6 @@ Använd följande förutsättningar om du integrerar resursväljare med ett prog
 * apikey
 
 Resursväljaren stöder autentisering till databasen [!DNL Experience Manager Assets] med hjälp av Identity Management System-egenskaper (IMS) som `imsScope` eller `imsClientID` när du integrerar den med ett program som inte är Adobe.
-
-### Integrera resursväljare med andra program än Adobe {#adobe-non-app-integration}
-
-Om du vill integrera resursväljaren med ett program som inte är Adobe måste du utföra olika valideringar, till exempel logga en supportanmälan och integrering.
 
 +++**Konfigurera resursväljare för ett program som inte är Adobe**
 Om du vill konfigurera resursväljaren för ett program som inte är Adobe måste du först logga en supportanmälan för etablering följt av integrationsstegen.
@@ -393,171 +386,6 @@ Resursväljaren återges på behållarelementet `<div>`, vilket anges på *rad 7
 >
 >Om du har integrerat resursväljare med hjälp av arbetsflödet Registrera dig för inloggning men fortfarande inte kan komma åt leveransdatabasen, kontrollerar du att cookies i webbläsaren har rensats bort. Annars får du ett `invalid_credentials All session cookies are empty`-fel i konsolen.
 
-+++
-
-<!--Integration with Polaris application content starts here-->
-
->[!TAB Integrering för Dynamic Media med OpenAPI-funktioner]
-
-### Förutsättningar {#prereqs-polaris}
-
-Använd följande förutsättningar om du integrerar resursväljare med Dynamic Media med OpenAPI-funktioner:
-
-* [Kommunikationsmetoder](#prereqs)
-* För att få tillgång till Dynamic Media med OpenAPI-funktioner måste du ha licenser för:
-   * Assets-arkiv (till exempel Experience Manager Assets as a Cloud Service).
-   * AEM Dynamic Media.
-* Endast [godkända resurser](#approved-assets.md) är tillgängliga för användning för att säkerställa varumärkets enhetlighet.
-
-### Integrering av Dynamic Media med OpenAPI-funktioner{#adobe-app-integration-polaris}
-
-Integreringen av resursväljaren med Dynamic Media OpenAPI-processen omfattar olika steg som skapar en anpassad URL för dynamiska media eller är klar att välja URL för dynamiska media osv.
-
-+++**Integrera resursväljare för Dynamic Media med OpenAPI-funktioner**
-
-Egenskaperna `rootPath` och `path` ska inte ingå i Dynamic Media med OpenAPI-funktioner. I stället kan du konfigurera egenskapen `aemTierType`. Här följer syntaxen för konfiguration:
-
-```
-aemTierType:[1: "delivery"]
-```
-
-Med den här konfigurationen kan du visa alla godkända resurser utan mappar eller som en platt struktur. Mer information finns i `aemTierType`-egenskapen under [Resursväljaregenskaper](#asset-selector-properties)
-
-+++
-
-+++**Skapa en dynamisk leverans-URL från godkända resurser**
-När du har konfigurerat resursväljaren används ett objektschema för att skapa en dynamisk leverans-URL från de valda resurserna.
-Ett schema med ett objekt från en array med objekt som tas emot när en resurs väljs:
-
-```
-{
-"dc:format": "image/jpeg",
-"repo:assetId": "urn:aaid:aem:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-"repo:name": "image-7.jpg",
-"repo:repositoryId": "delivery-pxxxx-exxxxxx.adobe.com",
-...
-}
-```
-
-Alla markerade resurser bärs av funktionen `handleSelection` som fungerar som ett JSON-objekt. Exempel: `JsonObj`. Den dynamiska leverans-URL:en skapas genom att följande bärare kombineras:
-
-| Objekt | JSON |
-|---|---|
-| Värd | `assetJsonObj["repo:repositoryId"]` |
-| API-rot | `/adobe/dynamicmedia/deliver` |
-| asset-id | `assetJsonObj["repo:assetId"]` |
-| seo-name | `assetJsonObj["repo:name"].split(".").slice(0,-1).join(".")` |
-| format | `.jpg` |
-
-**Godkänd API-specifikation för resursleverans**
-
-URL:
-`https://<delivery-api-host>/adobe/dynamicmedia/deliver/<asset-id>/<seo-name>.<format>?<image-modification-query-parameters>`
-
-Var,
-
-* Värddatorn är `https://delivery-pxxxxx-exxxxxx.adobe.com`
-* API-roten är `"/adobe/dynamicmedia/deliver"`
-* `<asset-id>` är tillgångsidentifierare
-* `<seo-name>` är namnet på en resurs
-* `<format>` är utdataformatet
-* `<image modification query parameters>` som stöd av den godkända resursens leverans-API-specifikation
-
-**Godkänt leverans-API för resurser**
-
-Den dynamiska leverans-URL:en har följande syntax:
-`https://<delivery-api-host>/adobe/assets/deliver/<asset-id>/<seo-name>`, där,
-
-* Värddatorn är `https://delivery-pxxxxx-exxxxxx.adobe.com`
-* API-roten för ursprunglig återgivningsleverans är `"/adobe/assets/deliver"`
-* `<asset-id>` är tillgångsidentifierare
-* `<seo-name>` är namnet på resursen som kan ha ett tillägg eller inte
-
-+++
-
-+++**Klar att välja dynamisk leverans-URL**
-Alla markerade resurser bärs av funktionen `handleSelection` som fungerar som ett JSON-objekt. Exempel: `JsonObj`. Den dynamiska leverans-URL:en skapas genom att följande bärare kombineras:
-
-| Objekt | JSON |
-|---|---|
-| Värd | `assetJsonObj["repo:repositoryId"]` |
-| API-rot | `/adobe/assets/deliver` |
-| asset-id | `assetJsonObj["repo:assetId"]` |
-| seo-name | `assetJsonObj["repo:name"]` |
-
-Nedan visas två sätt att gå igenom JSON-objektet:
-
-![Dynamisk leverans-URL](assets/dynamic-delivery-url.png)
-
-* **Miniatyrbild:** Miniatyrbilder kan vara bilder och resurser kan vara PDF, video, bilder och så vidare. Även om du kan använda attributen height och width för en resurs miniatyrbild som dynamisk leveransåtergivning.
-Följande uppsättning återgivningar kan användas för resurser av typen PDF:
-När du har valt en PDF-fil i en sidospark visas nedanstående information i urvalssammanhanget. Här nedan beskrivs hur du går igenom JSON-objektet:
-
-  <!--![Thumbnail dynamic delivery url](image-1.png)-->
-
-  Du kan referera till `selection[0].....selection[4]` för arrayen med återgivningslänk från skärmbilden ovan. Nyckelegenskaperna för en av miniatyrbildsrenderingarna är till exempel:
-
-  ```
-  { 
-      "height": 319, 
-      "width": 319, 
-      "href": "https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8560f3a1-d9cf-429d-a8b8-d81084a42d41/as/algorithm design.jpg?accept-experimental=1&width=319&height=319&preferwebp=true", 
-      "type": "image/webp" 
-  } 
-  ```
-
-På skärmbilden ovan måste leveransadressen för den ursprungliga återgivningen i PDF införlivas i målupplevelsen om PDF krävs och inte i miniatyrbilden. Exempel: `https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8560f3a1-d9cf-429d-a8b8-d81084a42d41/original/as/algorithm design.pdf?accept-experimental=1`
-
-* **Video:** Du kan använda videospelarens URL för videomaterialet som använder en inbäddad iFrame. Du kan använda följande arrayåtergivningar i målupplevelsen:
-  <!--![Video dynamic delivery url](image.png)-->
-
-  ```
-  { 
-      "height": 319, 
-      "width": 319, 
-      "href": "https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:2fdef732-a452-45a8-b58b-09df1a5173cd/as/asDragDrop.2.jpg?accept-experimental=1&width=319&height=319&preferwebp=true", 
-      "type": "image/webp" 
-  } 
-  ```
-
-  Du kan referera till `selection[0].....selection[4]` för arrayen med återgivningslänk från skärmbilden ovan. Nyckelegenskaperna för en av miniatyrbildsrenderingarna är till exempel:
-
-  Kodfragmentet i skärmbilden ovan är ett exempel på en videoresurs. Den innehåller en array med återgivningslänkar. `selection[5]` i utdraget är ett exempel på en miniatyrbild som kan användas som platshållare för videominiatyrbilden i målupplevelsen. `selection[5]` i återgivningens array är för videospelaren. Detta fungerar som HTML och kan anges som `src` för iframe. Den stöder strömning med adaptiv bithastighet, som är webboptimerad leverans av videon.
-
-  I exemplet ovan är videospelarens URL `https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:2fdef732-a452-45a8-b58b-09df1a5173cd/play?accept-experimental=1`
-
-+++**Användargränssnittet Resursväljare för Dynamic Media med OpenAPI-funktioner**
-
-Efter integrering med Adobe Micro-Frontend Asset Selector kan du bara se resursstrukturen för alla godkända resurser som är tillgängliga i resurskatalogen för Experience Manager.
-
-![Dynamic Media med OpenAPI-funktioner, användargränssnitt](assets/polaris-ui.png)
-
-* **A**: [Visa/Göm panel](#hide-show-panel)
-* **B**: [Assets](#repository)
-* **C**: [Sortering](#sorting)
-* **D**: [Filter](#filters)
-* **E**: [Sökfältet](#search-bar)
-* **F**: [Sortera i stigande eller fallande ordning](#sorting)
-* **G**: Avbryt markering
-* **H**: Markera en eller flera resurser
-
-+++
-
-+++**Konfigurera anpassade filter**
-Med resursväljaren för Dynamic Media med OpenAPI-funktioner kan du konfigurera anpassade egenskaper och de filter som baseras på dem. Egenskapen `filterSchema` används för att konfigurera sådana egenskaper. Anpassningen kan visas som `metadata.<metadata bucket>.<property name>.` som filtren kan konfigureras mot, där,
-
-* `metadata` är information om en resurs
-* `embedded` är den statiska parametern som används för konfiguration, och
-* `<propertyname>` är det filternamn som du konfigurerar
-
-Egenskaper som definieras på `jcr:content/metadata/`-nivå visas som `metadata.<metadata bucket>.<property name>.` för de filter som du vill konfigurera för konfigurationen.
-
-I Resursväljaren för Dynamic Media med OpenAPI-funktioner konverteras till exempel en egenskap på `asset jcr:content/metadata/client_name:market` till `metadata.embedded.client_name:market` för filterkonfiguration.
-
-En engångsaktivitet måste göras för att hämta namnet. Gör ett sök-API-anrop för resursen och hämta egenskapsnamnet (i huvudsak haken).
-
-+++
-
 >[!ENDTABS]
 
 ## Egenskaper för resursväljare {#asset-selector-properties}
@@ -566,37 +394,43 @@ Du kan använda egenskaperna för resursväljaren för att anpassa hur resursvä
 
 | Egenskap | Typ | Obligatoriskt | Standard | Beskrivning |
 |---|---|---|---|---|
-| *järnväg* | boolesk | Nej | false | Om den är markerad som `true` återges resursväljaren i en vänsterrälsvy. Om den är markerad som `false` återges resursväljaren i modal vy. |
-| *imsOrg* | string | Ja | | IMS-ID (Adobe Identity Management System) som tilldelas när [!DNL Adobe Experience Manager] etableras som [!DNL Cloud Service] för din organisation. Nyckeln `imsOrg` krävs för att autentisera om organisationen du försöker få åtkomst till är under Adobe IMS eller inte. |
-| *imsToken* | string | Nej | | IMS-innehavartoken används för autentisering. `imsToken` krävs om du använder ett [!DNL Adobe]-program för integreringen. |
-| *apiKey* | string | Nej | | API-nyckel som används för åtkomst till AEM. `apiKey` krävs om du använder en [!DNL Adobe]-programintegrering. |
-| *filterSchema* | array | Nej | | Modell som används för att konfigurera filteregenskaper. Detta är användbart när du vill begränsa vissa filteralternativ i Resursväljaren. |
-| *filterFormProps* | Objekt | Nej | | Ange de filteregenskaper som du behöver använda för att förfina sökningen. Exempel: MIME-typ JPG, PNG, GIF. |
+| *järnväg* | Boolean | Nej | Falskt | Om den är markerad som `true` återges resursväljaren i en vänsterrälsvy. Om den är markerad som `false` återges resursväljaren i modal vy. |
+| *imsOrg* | Sträng | Ja | | IMS-ID (Adobe Identity Management System) som tilldelas när [!DNL Adobe Experience Manager] etableras som [!DNL Cloud Service] för din organisation. Nyckeln `imsOrg` krävs för att autentisera om organisationen du försöker få åtkomst till är under Adobe IMS eller inte. |
+| *imsToken* | Sträng | Nej | | IMS-innehavartoken används för autentisering. `imsToken` krävs om du använder ett [!DNL Adobe]-program för integreringen. |
+| *apiKey* | Sträng | Nej | | API-nyckel som används för åtkomst till AEM. `apiKey` krävs om du använder en [!DNL Adobe]-programintegrering. |
+| *rootPath* | Sträng | Nej | /content/dam/ | Mappsökväg där resursväljaren visar dina resurser. `rootPath` kan också användas som inkapsling. Med följande sökväg, `/content/dam/marketing/subfolder/`, tillåter resursväljaren inte att du går igenom någon överordnad mapp, utan bara de underordnade mapparna. |
+| *sökväg* | Sträng | Nej | | Sökväg som används för att navigera till en viss katalog med resurser när resursväljaren återges. |
+| *filterSchema* | Array | Nej | | Modell som används för att konfigurera filteregenskaper. Detta är användbart när du vill begränsa vissa filteralternativ i Resursväljaren. |
+| *filterFormProps* | Objekt | Nej | | Ange de filteregenskaper som du behöver använda för att förfina sökningen. För! Exempel: MIME-typ JPG, PNG, GIF. |
 | *selectedAssets* | Matris `<Object>` | Nej |                 | Ange valt Assets när resursväljaren återges. Det krävs en array med objekt som innehåller en id-egenskap för resurserna. `[{id: 'urn:234}, {id: 'urn:555'}]` En resurs måste till exempel vara tillgänglig i den aktuella katalogen. Om du behöver använda en annan katalog anger du även ett värde för egenskapen `path`. |
 | *acvConfig* | Objekt | Nej | | Resurssamlingens visningsegenskap som innehåller objekt med anpassad konfiguration som åsidosätter standardvärden. Den här egenskapen används också med egenskapen `rail` för att aktivera spårningsvisning av resursvyn. |
 | *i18nSymboler* | `Object<{ id?: string, defaultMessage?: string, description?: string}>` | Nej |                 | Om OTB-översättningarna inte är tillräckliga för ditt programs behov kan du visa ett gränssnitt genom vilket du kan skicka dina egna anpassade, lokaliserade värden via `i18nSymbols`-proppen. Om du skickar ett värde genom det här gränssnittet åsidosätts standardöversättningarna och i stället används dina egna. Om du vill utföra åsidosättningen måste du skicka ett giltigt [Message Descriptor](https://formatjs.io/docs/react-intl/api/#message-descriptor)-objekt till nyckeln för `i18nSymbols` som du vill åsidosätta. |
 | *intl* | Objekt | Nej | | Resursväljaren innehåller OOTB-standardöversättningar. Du kan välja översättningsspråk genom att ange en giltig språksträng via `intl.locale`-utkastet. Till exempel: `intl={{ locale: "es-es" }}` </br></br> De språksträngar som stöds följer [ ISO 639 - Koder ](https://www.iso.org/iso-639-language-codes.html) för att representera namn på språkstandarder. </br></br> Lista över språk som stöds: engelska - en-us (standard) spanska - es-es&#39; German - de-de&#39; French - fr-fr&#39; Italian - it-it&#39; Japanese - ja-jp&#39; Korean - ko-kr&#39; Portuguese - pt-br&#39; Chinese (Traditional) - zh-cn&#39; Chinese (Taiwan) - zh-tw |
-| *databaseId* | string | Nej | &#39; | Databas från vilken resursväljaren läser in innehållet. |
+| *databaseId* | Sträng | Nej | &#39; | Databas från vilken resursväljaren läser in innehållet. |
 | *additionalAemSolutions* | `Array<string>` | Nej | [ ] | Här kan du lägga till en lista med ytterligare AEM. Om ingen information anges i den här egenskapen beaktas endast mediebibliotek eller AEM Assets-databaser. |
-| *hideTreeNav* | boolesk | Nej |  | Anger om navigeringssidofältet för resursträd ska visas eller döljas. Den används endast i modal vy och därför har den här egenskapen ingen effekt i järnvägsvy. |
+| *hideTreeNav* | Boolean | Nej |  | Anger om navigeringssidofältet för resursträd ska visas eller döljas. Den används endast i modal vy och därför har den här egenskapen ingen effekt i järnvägsvy. |
 | *onDrop* | Funktion | Nej | | Egenskapen gör att en resurs kan släppas. |
 | *dropOptions* | `{allowList?: Object}` | Nej | | Konfigurerar släppningsalternativ med tillåtelselista. |
-| *colorScheme* | string | Nej | | Konfigurera temat (`light` eller `dark`) för resursväljaren. |
+| *colorScheme* | Sträng | Nej | | Konfigurera temat (`light` eller `dark`) för resursväljaren. |
 | *handleSelection* | Funktion | Nej | | Anropas med en array med tillgångsobjekt när resurser har valts och knappen `Select` på spärren klickas. Den här funktionen anropas bara i modal vy. Använd funktionerna `handleAssetSelection` eller `onDrop` för spårvyn. Exempel: <pre>handleSelection=(assets: Asset[])=> {...}</pre> Mer information finns i [Markerad resurstyp](#selected-asset-type). |
 | *handleAssetSelection* | Funktion | Nej | | Anropas med en array med objekt när resurserna markeras eller avmarkeras. Detta är användbart när du vill lyssna efter resurser när användaren väljer dem. Exempel: <pre>handleSelection=(assets: Asset[])=> {...}</pre> Mer information finns i [Markerad resurstyp](#selected-asset-type). |
 | *onClose* | Funktion | Nej | | Anropas när knappen `Close` i modal vy trycks ned. Detta anropas bara i vyn `modal` och ignoreras i vyn `rail`. |
 | *onFilterSubmit* | Funktion | Nej | | Anropas med filterobjekt när användaren ändrar olika filtervillkor. |
-| *selectionType* | string | Nej | enkel | Konfiguration för `single` eller `multiple` urval av resurser åt gången. |
+| *selectionType* | Sträng | Nej | Enkelt | Konfiguration för `single` eller `multiple` urval av resurser åt gången. |
 | *dragOptions.tillåtelselista* | boolesk | Nej | | Egenskapen används för att tillåta eller neka att resurser som inte kan markeras dras. |
-| *aemTierType* | string | Nej | | Du kan välja om du vill visa resurser från leveransnivå, författarnivå eller både och. <br><br> Syntax: `aemTierType:[0: "author" 1: "delivery"` <br><br> Om till exempel båda `["author","delivery"]` används visas alternativ för både författare och leverans i databasväljaren. <br> Använd dessutom `["delivery"]` för leveransrelaterade resurser i Dynamic Media med OpenAPI-funktioner. |
+| *aemTierType* | Sträng | Nej |  | Du kan välja om du vill visa resurser från leveransnivå, författarnivå eller både och. <br><br> Syntax: `aemTierType:[0]: "author" 1: "delivery"` <br><br> Om till exempel båda `["author","delivery"]` används visas alternativ för både författare och leverans i databasväljaren. |
 | *handleNavigateToAsset* | Funktion | Nej | | Det är en återanropsfunktion som hanterar markering av en resurs. |
-| *noWrap* | boolesk | Nej | | Egenskapen *noWrap* hjälper till att återge resursväljaren på sidopanelen. Om den här egenskapen inte nämns återges *dialogvyn* som standard. |
+| *noWrap* | Boolean | Nej | | Egenskapen *noWrap* hjälper till att återge resursväljaren på sidopanelen. Om den här egenskapen inte nämns återges *dialogvyn* som standard. |
 | *dialogSize* | liten, medelstor, stor, helskärmsbild eller helskärmsövergång | Sträng | Valfritt | Du kan styra layouten genom att ange dess storlek med de angivna alternativen. |
-| *colorScheme* | ljus eller mörk | Nej | | Den här egenskapen används för att ange temat för ett resursväljarprogram. Du kan välja mellan ljust eller mörkt tema. |
+| *colorScheme* | Ljus eller mörk | Nej | | Den här egenskapen används för att ange temat för ett resursväljarprogram. Du kan välja mellan ljust eller mörkt tema. |
 | *filterRepoList* | Funktion | Nej |  | Du kan använda callback-funktionen `filterRepoList` som anropar Experience Manager-databasen och returnerar en filtrerad lista med databaser. |
-
-<!--| *rootPath* | string | No | /content/dam/ | Folder path from which Asset Selector displays your assets. `rootPath` can also be used in the form of encapsulation. For example, given the following path, `/content/dam/marketing/subfolder/`, Asset Selector does not allow you to traverse through any parent folder, but only displays the children folders. |
-| *path* | string | No | | Path that is used to navigate to a specific directory of assets when the Asset Selector is rendered. |-->
+| *getExpiryStatus* | Funktion | Nej | | Den ger status för en utgången tillgång. Funktionen returnerar `EXPIRED`, `EXPIRING_SOON` eller `NOT_EXPIRED` baserat på förfallodatumet för en resurs som du anger. Se [anpassa utgångna resurser](#customize-expired-assets). |
+| *allowSelectionAndDrag* | Boolean | Nej | Falskt | Funktionens värde kan vara `true` eller `false`. När värdet är `false` kan resursen som har gått ut inte markeras eller dras på arbetsytan. |
+| *showToast* | | Nej | | Det gör det möjligt för resursväljaren att visa ett anpassat popup-meddelande för den utgångna resursen. |
+<!--
+| *expirationDate* | Function | No | | This function is used to set the usability period of an asset. |
+| *disableDefaultBehaviour* | Boolean | No | False | It is a function that is used to enable or disable the selection of an expired asset. You can customize the default behavior of an asset that is set to expire. See [customize expired assets](#customize-expired-assets). |
+-->
 
 ## Exempel på hur du använder egenskaper för resursväljare {#usage-examples}
 
@@ -606,7 +440,7 @@ Du kan definiera [egenskaperna](#asset-selector-properties) för resursväljaren
 
 ![rail-view-example](assets/rail-view-example-vanilla.png)
 
-Om värdet för AssetSelector `rail` är inställt på `false` eller inte nämns i egenskaperna visas resursväljaren som standard i modulvyn. Egenskapen `acvConfig` används för att aktivera spårningsvyn för resursvyn. Gå till [aktivera eller inaktivera dra och släpp](#enable-disable-drag-and-drop) om du vill veta mer om hur egenskapen `acvConfig` används.
+Om värdet för AssetSelector `rail` är inställt på `false` eller inte nämns i egenskaperna visas resursväljaren som standard i modulvyn. Egenskapen `acvConfig` tillåter vissa ingående konfigurationer, som Dra och släpp. Gå till [aktivera eller inaktivera dra och släpp](#enable-disable-drag-and-drop) om du vill veta mer om hur egenskapen `acvConfig` används.
 
 <!--
 ### Example 2: Use selectedAssets property in addition to the path property
@@ -684,7 +518,7 @@ filterSchema: [
     ],
     header: 'Mime Types',
     groupKey: 'MimeTypeGroup',
-    },
+    }},
     {
     fields: [
     {
@@ -771,7 +605,7 @@ interface SelectedAsset {
     'repo:state': string;
     computedMetadata: Record<string, any>;
     _links: {
-        'http://ns.adobe.com/adobecloud/rel/rendition': Array<{
+        'https://ns.adobe.com/adobecloud/rel/rendition': Array<{
             href: string;
             type: string;
             'repo:size': number;
@@ -804,14 +638,108 @@ I följande tabell beskrivs några av de viktiga egenskaperna för det valda res
 | *tiff:imageLength* | tal | En tillgångs höjd. |
 | *computedMetadata* | `Record<string, any>` | Ett objekt som representerar en bucket för alla resursens metadata av alla slag (databas, program eller inbäddade metadata). |
 | *_links* | `Record<string, any>` | Hypermedialänkar för den associerade resursen. Innehåller länkar för resurser som metadata och återgivningar. |
-| *_links.<http://ns.adobe.com/adobecloud/rel/rendition>* | `Array<Object>` | En array med objekt som innehåller information om återgivningar av resursen. |
-| *_links.<http://ns.adobe.com/adobecloud/rel/rendition[].href>* | string | URI:n till återgivningen. |
-| *_links.<http://ns.adobe.com/adobecloud/rel/rendition[].type>* | string | Återgivningens MIME-typ. |
-| *_links.<http://ns.adobe.com/adobecloud/rel/rendition[].'repo:size>&#39;* | tal | Återgivningens storlek i byte. |
-| *_links.<http://ns.adobe.com/adobecloud/rel/rendition[].width>* | tal | Återgivningens bredd. |
-| *_links.<http://ns.adobe.com/adobecloud/rel/rendition[].height>* | tal | Återgivningens höjd. |
+| *_links.<https://ns.adobe.com/adobecloud/rel/rendition>* | `Array<Object>` | En array med objekt som innehåller information om återgivningar av resursen. |
+| *_links.<https://ns.adobe.com/adobecloud/rel/rendition[].href>* | string | URI:n till återgivningen. |
+| *_links.<https://ns.adobe.com/adobecloud/rel/rendition[].type>* | string | Återgivningens MIME-typ. |
+| *_links.<https://ns.adobe.com/adobecloud/rel/rendition[].repo:size>&#39;* | tal | Återgivningens storlek i byte. |
+| *_links.<https://ns.adobe.com/adobecloud/rel/rendition[].width>* | tal | Återgivningens bredd. |
+| *_links.<https://ns.adobe.com/adobecloud/rel/rendition[].height>* | tal | Återgivningens höjd. |
 
-En fullständig lista över egenskaper och detaljerade exempel finns på [Exempel på resursväljarkod](https://github.com/adobe/aem-assets-selectors-mfe-examples).
+<!--For a complete list of properties and detailed example, visit [Asset Selector Code Example](https://github.com/adobe/aem-assets-selectors-mfe-examples).-->
+
+### Anpassa utgångna resurser {#customize-expired-assets}
+
+Med Resursväljaren kan du styra hur en resurs som har gått ut används. Du kan anpassa den utgångna resursen med märket **Förfaller snart** som kan hjälpa dig att i förväg få reda på vilka resurser som kommer att förfalla inom 30 dagar från dagens datum. Dessutom kan detta anpassas efter behov. Du kan också välja en resurs som har gått ut på arbetsytan eller vice versa. Du kan anpassa en resurs som har gått ut med hjälp av vissa kodfragment på olika sätt:
+
+<!--{
+    getExpiryStatus: function, // to control Expired/Expiring soon badges of the asset
+    allowSelectionAndDrag: boolean, // set true to allow the selection of expired assets on canvas, set false, otherwise.
+}-->
+
+```
+expiryOptions: {
+    getExpiryStatus: getExpiryStatus;
+}
+```
+
+#### Val av utgången tillgång {#selection-of-expired-asset}
+
+Du kan anpassa användningen av en resurs som har gått ut så att den antingen kan markeras eller inte kan markeras. Du kan anpassa om du vill tillåta att en resurs dras och släpps på arbetsytan Resursväljaren eller inte. Om du vill göra det använder du följande parametrar för att göra en resurs omarkerbar på arbetsytan:
+
+```
+expiryOptions:{
+    allowSelectionAndDrop: false;
+}
+```
+<!--
+Additionally, To do this, navigate to **[!UICONTROL Disable default expiry behavior]** under the [!UICONTROL Controls] tab and set the boolean value to `true` or `false` as per the requirement. If `true` is selected, you can see the select box over the expired asset, otherwise it remains unselected. You can hover to the info icon of an asset to know the details of an expired asset. 
+
+![Disable default expiry behavior](assets/disable-default-expiry-behavior.png)-->
+
+#### Ange varaktigheten för en utgången tillgång {#set-duration-of-expired-asset}
+
+Följande kodfragment hjälper dig att ange märket **Förfaller snart** för de resurser som förfaller inom fem dagar: <!--The `expirationDate` property is used to set the expiration duration of an asset. Refer to the code snippet below:-->
+
+```
+/**
+  const getExpiryStatus = async (asset) => {
+  if (!asset.expirationDate) {
+    return null;
+  }
+  const currentDate = new Date();
+  const millisecondsInDay = 1000 * 60 * 60 * 24;
+  const fiveDaysFromNow = new Date(value: currentDate.getTime() + 5 * millisecondsInDay);
+  const expirationDate = new Date(asset.expirationDate);
+  if (expirationDate.getTime() < currentDate.getTime()) {
+    return 'EXPIRED';
+  } else if (expirationDate.getTime() < fiveDaysFromNow.getTime()) {
+    return 'EXPIRING_SOON';
+  } else {
+    return 'NOT_EXPIRED';
+  }
+};
+```
+
+<!--In the above code snippet, the `getExpiryStatus` function is used to show the **Expiring soon** badge that have expiration date stored in `customExpirationDate`. Additionally, it sets the expiration date of an asset to five days from the current date. The `millisecondsInDay` helps you set expiry of an asset by specifying the time range in milliseconds. You can replace milliseconds with hours directly or customize function as per the requirement. Whereas, the `getTime()` function returns the number of milliseconds for the mentioned date. See [properties](#asset-selector-properties) to know about `expirationDate` property.-->
+
+Se följande exempel för att förstå hur egenskapen fungerar för att hämta aktuellt datum och tid:
+
+```
+const currentData = new Date();
+currentData.getTime(),
+```
+
+returnerar `1718779013959` enligt datumformatet 2024-06-19T06:36:53.959Z.
+
+#### Anpassa popup-meddelande för en utgången resurs {#customize-toast-message}
+
+Egenskapen `showToast` används för att anpassa popup-meddelandet som du vill visa för en resurs som har gått ut.
+
+Syntax:
+
+```
+{
+    type: 'ERROR', 'NEUTRAL', 'INFO', 'SUCCESS',
+    message: '<message to be shown>',
+    timeout: optional,
+}
+```
+
+Standardtidsgränsen är 500 millisekunder. Du kan ändra den efter behov. Om du dessutom skickar värdet `timeout: 0` förblir popup öppen tills du klickar på kryssknappen.
+
+Nedan visas ett exempel som visar ett popup-meddelande när det krävs för att inte tillåta val för en mapp och visa ett motsvarande meddelande:
+
+```
+const showToast = {
+    type: 'ERROR',
+    message: 'Folder cannot be selected',
+    timeout: 5000,
+}
+```
+
+Använd följande kodutdrag för att visa popup-meddelanden om hur en resurs som har gått ut används:
+
+![popup-meddelande](assets/toast-message.png)
 
 ### Sammanhangsberoende anropsfilter{#contextual-invocation-filter}
 
@@ -924,9 +852,6 @@ Om du vill dölja mappar i den vänstra navigeringen klickar du på ikonen **[!U
 ### Databasväxlare {#repository-switcher}
 
 Med Resursväljaren kan du också växla databaser för val av resurser. Du kan välja vilken databas du vill använda i listrutan som finns i den vänstra panelen. De databasalternativ som är tillgängliga i listrutan baseras på egenskapen `repositoryId` som är definierad i filen `index.html`. Den baseras på miljön från den valda IMS-organisationen som den inloggade användaren har åtkomst till. Konsumenterna kan skicka en föredragen `repositoryID` och i så fall slutar resursväljaren att återge repomkopplaren och återge resurser endast från den angivna databasen.
-<!--
-It is based on the `imsOrg` that is provided in the application. If you want to see the list of repositories, then `repositoryId` is required to view those specific repositories in your application.
--->
 
 ### Assets-databas
 
@@ -936,9 +861,16 @@ Det är en samling resursmappar som du kan använda för att utföra åtgärder.
 
 Resursväljaren innehåller även färdiga filteralternativ som kan förfina sökresultaten. Följande filter är tillgängliga:
 
-* `File type`: innehåller mapp, fil, bilder, dokument eller video
-* `MIME type`: innehåller JPG, GIF, PPTX, PNG, MP4, DOCX, TIFF, PDF, XLSX
-* `Image Size`: innehåller minsta/högsta bredd, minsta/högsta höjd för bilden
+* **[!UICONTROL Status]:** innehåller det aktuella tillståndet för resursen bland `all`, `approved`, `rejected` eller `no status`.
+* **[!UICONTROL File type]:** innehåller `folder`, `file`, `images`, `documents` eller `video`.
+* **[!UICONTROL Expiration status]:** omnämns resurserna baserat på dess förfallotid. Du kan antingen markera kryssrutan `[!UICONTROL Expired]` om du vill filtrera resurser som har gått ut eller ställa in `[!UICONTROL Expiration Duration]` för en resurs så att resurser visas baserat på deras förfallotid. När en resurs redan har gått ut eller snart går ut visas ett märke som anger det. Dessutom kan du styra om du vill tillåta användning (eller dra och släpp) av en utgången resurs. Se mer om [anpassa utgångna resurser](#customize-expired-assets). Som standard visas märket **Förfaller snart** för resurser som förfaller inom 30 dagar. Du kan dock konfigurera förfallotiden med egenskapen `expirationDate`.
+
+  >[!TIP]
+  >
+  > Om du vill visa eller filtrera resurser baserat på deras framtida förfallodatum anger du det framtida datumintervallet i fältet `[!UICONTROL Expiration Duration]`. Resurserna visas med märket **upphör snart** för dem.
+
+* **[!UICONTROL MIME type]:** innehåller `JPG`, `GIF`, `PPTX`, `PNG`, `MP4`, `DOCX`, `TIFF`, `PDF`, `XLSX`.
+* **[!UICONTROL Image Size]:** innehåller minsta/högsta bredd, lägsta/högsta höjd för bilden.
 
   ![rail-view-example](assets/filters-asset-selector.png)
 
@@ -962,17 +894,23 @@ Du kan sortera resurser i Resursväljaren efter namn, dimensioner eller storlek 
 
 Med Resursväljaren kan du visa resursen i fyra olika vyer:
 
-* **![listvy](assets/do-not-localize/list-view.png)[!UICONTROL List View]**: I listvyn visas rullningsbara filer och mappar i en enda kolumn.
-* **![stödrastervy](assets/do-not-localize/grid-view.png)[!UICONTROL Grid View]**: I stödrastervyn visas rullningsbara filer och mappar i ett rutnät med rader och kolumner.
-* **![gallerivy](assets/do-not-localize/gallery-view.png)[!UICONTROL Gallery View]**: I gallerivyn visas filer eller mappar i en centrerad vågrät lista.
-* **![vattenfallsvy](assets/do-not-localize/waterfall-view.png)[!UICONTROL Waterfall View]**: I vattenfallsvyn visas filer eller mappar i form av en Bridge.
+* **![listvy](assets/do-not-localize/list-view.png)[!UICONTROL List View]** I listvyn visas rullningsbara filer och mappar i en enda kolumn.
+* **![stödrastervyn](assets/do-not-localize/grid-view.png)[!UICONTROL Grid View]** I stödrastervyn visas rullningsbara filer och mappar i ett rutnät med rader och kolumner.
+* **![gallerivy](assets/do-not-localize/gallery-view.png)[!UICONTROL Gallery View]** Gallerivyn visar filer eller mappar i en centrerad vågrät lista.
+* **![vattenfallsvy](assets/do-not-localize/waterfall-view.png)[!UICONTROL Waterfall View]** I vattenfallsvyn visas filer eller mappar i form av en Bridge.
 
 <!--
-### Support for multiple instances
+### Modes to view Asset Selector
 
-The micro front-end design supports the display of multiple instances of Asset Selector on a single screen.
+Asset Selector supports two types of out of the box views:
 
-![multiple-instance](assets/multiple-instance.png)
+**  Modal view or Inline view:** The modal view or inline view is the default view of Asset Selector that represents Assets folders in the front area. The modal view allows users to view assets in a full screen to ease the selection of multiple assets for import. Use `<AssetSelector rail={false}>` to enable modal view.
+
+    ![modal-view](assets/modal-view.png)
+
+**  Rail view:** The rail view represents Assets folders in a left panel. The drag and drop of assets can be performed in this view. Use `<AssetSelector rail={true}>` to enable rail view.
+
+    ![rail-view](assets/rail-view.png)
 -->
 <!--
 
@@ -983,6 +921,14 @@ Asset Selector is flexible and can be integrated within your existing [!DNL Adob
 *   **Perfect fit** Asset selector easily fits in your existing [!DNL Adobe Experience Manager] as a [!DNL Cloud Service] application and choose the way you want to view. The mode of view can be inline, rail, or modal view.
 *   **Accessible** With Asset Selector, you can reach the desired asset in an easy manner.
 *   **Localize** Assets can be availed for the various locales available as per Adobe's localization standards.
+-->
+<!--
+
+### Support for multiple instances
+
+The micro front-end design supports the display of multiple instances of Asset Selector on a single screen.
+
+![multiple-instance](assets/multiple-instance.png)
 -->
 
 <!--
