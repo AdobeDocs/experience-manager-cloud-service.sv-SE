@@ -5,9 +5,9 @@ exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 07696086644d52199bada102e9aee163d868c9c0
+source-git-commit: 83c9c6a974b427317aa2f83a3092d0775aac1d53
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '598'
 ht-degree: 0%
 
 ---
@@ -63,14 +63,6 @@ När certifikatet har sparats visas det som en ny rad i tabellen.
 ## Certifikatfel {#certificate-errors}
 
 Vissa fel kan uppstå om ett certifikat inte har installerats korrekt eller uppfyller kraven i Cloud Manager.
-
-### Kontrollera korrekt linjeformatering {#line-formatting}
-
-När värden för **Certificate**, **Private key** och **Certificate chain** klistras in, får nya rader bara vara efter BEGIN CERTIFICATE och före END CERTIFICATE. De inklistrade värdena ska vara uppbyggda på följande sätt:
-
-* `-----BEGIN CERTIFICATE-----` måste finnas på sin egen rad.
-* `-----END CERTIFICATE-----` måste finnas på sin egen rad.
-* Certifikatinnehållet måste visas på sin egen rad som en lång sträng **utan nya rader** mellan `-----BEGIN CERTIFICATE-----` och `-----END CERTIFICATE-----`.
 
 ### Ta bort klientcertifikat {#client-certificates}
 
