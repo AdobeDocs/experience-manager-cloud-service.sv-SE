@@ -4,9 +4,9 @@ description: Läs mer om vidarebefordran av loggar till Splunk och andra loggnin
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 4116f63c4a19b90849e4b55f0c10409530be7d3e
+source-git-commit: cb4299be4681b24852a7e991c123814d31f83cad
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1349'
 ht-degree: 0%
 
 ---
@@ -109,7 +109,7 @@ Den här artikeln är organiserad på följande sätt:
             enabled: false
    ```
 
-1. För andra miljötyper än RDE (som för närvarande inte stöds) skapar du en riktad distributionskonfigurationspipeline i Cloud Manager.
+1. För andra miljötyper än RDE (som för närvarande inte stöds) skapar du en riktad distributionskonfigurationspipeline i Cloud Manager. Observera att fullständiga stackpipelines och webbskiktspipelines inte distribuerar konfigurationsfilen.
 
    * [Se konfigurera produktionspipelinor](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md).
    * [Se konfigurera icke-produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md).
@@ -254,10 +254,15 @@ data:
   https:
     default:
       enabled: true
-      url: "https://example.com/aem_logs/aem"
+      url: "https://example.com:8443/aem_logs/aem"
       authHeaderName: "X-AEMaaCS-Log-Forwarding-Token"
       authHeaderValue: "${{HTTPS_LOG_FORWARDING_TOKEN}}"
 ```
+
+Att tänka på:
+
+* URL-strängen måste innehålla **https://**, annars misslyckas valideringen. Om ingen port ingår i URL-strängen antas port 443 (standard-HTTPS-port).
+* Om du vill använda en annan port än 443 anger du den som en del av URL:en.
 
 #### HTTPS CDN-loggar {#https-cdn}
 
@@ -267,8 +272,7 @@ Det finns också en egenskap med namnet `sourcetype` som är inställd på värd
 
 >[!NOTE]
 >
-> Innan den första CDN-loggposten skickas måste HTTP-servern slutföra en engångskontroll: en begäran som skickas till sökvägen ``wellknownpath`` måste svara med ``*``.
-
+> Innan den första CDN-loggposten skickas måste HTTP-servern slutföra en engångskontroll: en begäran som skickas till sökvägen ``/.well-known/fastly/logging/challenge`` måste svara med en asterisk ``*`` i brödtexten och 200-statuskoden.
 
 #### HTTPS-AEM {#https-aem}
 
