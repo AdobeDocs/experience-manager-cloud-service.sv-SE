@@ -4,7 +4,7 @@ description: Lär dig använda verktyget Innehållsöverföring för att överf�
 exl-id: cfc0366a-2139-4d9d-b5bc-0b65bef4013c
 feature: Migration
 role: Admin
-source-git-commit: 67bc538fe174034c05808d4a62c51c404dfaf38c
+source-git-commit: d9565e86c4b7e513cb1a95ecbe7a30c9586d9fb1
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 28%
@@ -49,7 +49,7 @@ Det finns två faser som är associerade med innehållsöverföring:
 
 En migreringsuppsättning har följande attribut:
 
-* Med den nya versionen kan du skapa maximalt 20 migreringsuppsättningar i ett projekt som skapats i Cloud Acceleration Manager.
+* Med den nya versionen kan du skapa högst tio migreringsuppsättningar i ett projekt som skapats i Cloud Acceleration Manager.
 * Varje migreringsuppsättning ska ha ett unikt namn.
 
 Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen.
