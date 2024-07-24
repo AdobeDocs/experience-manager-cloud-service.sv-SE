@@ -5,16 +5,29 @@ exl-id: 76ca1584-e21d-4e3a-a08a-82b2779167cf
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 06e961febd7cb2ea1d8fca00cb3dee7f7ca893c9
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '373'
 ht-degree: 0%
 
 ---
 
+
 # Kontrollerar DNS-poststatus {#check-dns-record-status}
 
-I Cloud Manager kan du avgöra om ditt domännamn matchar din AEM as a Cloud Service webbplats.
+Lär dig hur du avgör om dina DNS-inställningar kan matchas med Cloud Manager.
+
+## Status för DNS-poster {#status}
+
+Ett anpassat domännamn kan inte hantera livatrafik förrän DNS-matchningen är korrekt. I Cloud Manager kan du avgöra om ditt domännamn matchar din AEM as a Cloud Service webbplats.
+
+## Krav {#requirements}
+
+Du måste uppfylla dessa krav innan du kontrollerar DNS-poststatus med Cloud Manager.
+
+* Du måste redan ha konfigurerat DNS-inställningarna för ditt anpassade domännamn enligt beskrivningen i dokumentet [Konfigurera DNS-inställningar.](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md)
+
+## Kontrollera DNS-poststatus {#how-to}
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
@@ -24,11 +37,17 @@ I Cloud Manager kan du avgöra om ditt domännamn matchar din AEM as a Cloud Ser
 
 1. Klicka på ikonen **Status** för domännamnet.
 
-Cloud Manager utför en DNS-sökning efter ditt domännamn och visar ett av följande statusmeddelanden.
+Cloud Manager utför en DNS-sökning efter ditt domännamn och visar den [aktuella statusen.](#statuses)
+
+Cloud Manager utlöser automatiskt en DNS-sökning när ditt anpassade domännamn verifieras och distribueras. För efterföljande försök måste du aktivt välja ikonen **Lös igen** bredvid statusen.
+
+## DNS-status i Cloud Manager {#statuses}
+
+En anpassad domän kan ha någon av följande statusar i Cloud Manager.
 
 * **DNS-status hittades inte** - DNS-status kommer inte att identifieras förrän det anpassade domännamnet har verifierats och distribuerats.
 
-   * Den här statusen visas även när ditt anpassade domännamn håller på att tas bort.
+   * Den här statusen observeras även när ditt anpassade domännamn håller på att tas bort.
 
 * **DNS-matchningen är felaktig** - Detta indikerar att DNS-postkonfigurationen inte har matchats eller är felaktig.
 
@@ -43,4 +62,6 @@ Cloud Manager utför en DNS-sökning efter ditt domännamn och visar ett av föl
 
    * Din webbplats betjänar besökare.
 
-Cloud Manager utlöser automatiskt en DNS-sökning när ditt anpassade domännamn verifieras och distribueras. För efterföljande försök måste du aktivt välja ikonen **Lös igen** bredvid statusen.
+## Nästa steg {#next-steps}
+
+Grattis! Du har konfigurerat din anpassade domän för användning med Cloud Manager. Mer information om hur du hanterar anpassade domännamn med Cloud Manager finns i dokumentet [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md).

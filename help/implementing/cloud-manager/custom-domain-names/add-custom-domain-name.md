@@ -5,9 +5,9 @@ exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 06e961febd7cb2ea1d8fca00cb3dee7f7ca893c9
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '725'
 ht-degree: 0%
 
 ---
@@ -15,20 +15,30 @@ ht-degree: 0%
 
 # Lägga till ett anpassat domännamn {#adding-cdn}
 
+Lär dig hur du lägger till ett anpassat domännamn med Cloud Manager.
+
+## Krav {#requirements}
+
+Du måste uppfylla dessa krav innan du lägger till ett anpassat domännamn i Cloud Manager.
+
+* Du måste ha lagt till ett domän-SSL-certifikat för domänen som du vill lägga till innan du lägger till ett anpassat domännamn enligt beskrivningen i dokumentet [Lägger till ett SSL-certifikat.](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md)
+* Du måste ha rollen **Affärsägare** eller **Distributionshanterare** för att lägga till ett anpassat domännamn i Cloud Manager.
+* Du måste använda snabbnätverket för CDN.
+
+## Var ska anpassade domännamn läggas till? {#where}
+
 Du kan lägga till ett eget domännamn från två platser i Cloud Manager:
 
 * [Från sidan Domäninställningar](#adding-cdn-settings)
 * [Från sidan Miljöer](#adding-cdn-environments)
 
->[!NOTE]
->
->En användare måste ha rollen **Affärsägare** eller **Distributionshanterare** för att kunna lägga till ett anpassat domännamn i Cloud Manager, och du måste använda Snabbt CDN.
+När du lägger till ett anpassat domännamn hanteras domänen med det mest specifika, giltiga certifikatet. Om flera certifikat har samma domän väljs den senast uppdaterade versionen. Adobe rekommenderar att du hanterar certifikat så att det inte finns några överlappande domäner.
+
+Stegen som beskrivs i det här dokumentet är baserade på Fast. Om du använder ett annat CDN måste du konfigurera din domän med det CDN som du har valt att använda.
 
 ## Lägga till ett anpassat domännamn från sidan Domäninställningar {#adding-cdn-settings}
 
-När du lägger till ett anpassat domännamn hanteras domänen med det mest specifika, giltiga certifikatet. Om flera certifikat har samma domän väljs den senast uppdaterade versionen. Adobe rekommenderar att du hanterar certifikat så att det inte finns några överlappande domäner.
-
-Följ de här stegen för att lägga till ett anpassat domännamn från sidan **Domäninställningar**. De här stegen baseras på Snabb. Om du använder ett annat CDN måste du konfigurera din domän med det CDN som du har valt att använda.
+Följ de här stegen för att lägga till ett anpassat domännamn från sidan **Domäninställningar**.
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
@@ -42,7 +52,7 @@ Följ de här stegen för att lägga till ett anpassat domännamn från sidan **
 
    ![Dialogrutan Lägg till domän](/help/implementing/cloud-manager/assets/cdn/add-cdn1.png)
 
-1. Ange det anpassade domännamnet i fältet **Domännamn**.
+1. På fliken **Domännamn** anger du det anpassade domännamnet i fältet **Domännamn**.
 
    >[!NOTE]
    >
@@ -54,31 +64,30 @@ Följ de här stegen för att lägga till ett anpassat domännamn från sidan **
 
 1. Välj **Domän-SSL-certifikatet** som är associerat med domännamnet i listrutan och välj **Fortsätt**.
 
-1. Dialogrutan **Lägg till domännamn** visas och kommer att ta dig till verifieringsprocessen för domännamn. Följ instruktionerna som följer för att bevisa att du är domänägare i din miljö. Klicka på **Skapa**.
+1. Fliken **Verifiering** visas.
 
    ![Verifiering av domännamn](/help/implementing/cloud-manager/assets/cdn/cdn-create6.png)
 
-CDN-distributionen kräver ett giltigt SSL-certifikat och lyckad TXT-verifiering. Detta indikeras av statusen **Verifierad och distribuerad**.
+   * Fliken **Verifiering** beskriver nästa steg för att konfigurera ditt anpassade domännamn, som skapar en nödvändig TXT-post.
+   * Du kan göra detta omedelbart (innan du trycker eller klickar på **Skapa** i dialogrutan) eller efter att du tryckt eller klickat på **Skapa** i dialogrutan.
+   * Alternativen och nästa steg beskrivs nedan.
 
-Mer information om olika statusar och hur du åtgärdar potentiella problem finns i [Kontrollera status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).
+1. Tryck eller klicka på **Skapa** för att spara det anpassade domännamnet i Cloud Manager.
 
->[!TIP]
->
->Granska följande artikel om behovet av att [lägga till en CNAME eller en post nästa](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md) för att undvika dubbelarbete när du lägger till DNS-poster i din anpassade domän. TXT-posten och CNAME- eller A-posten kan anges samtidigt på den styrande DNS-servern.
+Cloud Manager utlöser automatiskt en TXT-verifiering när du väljer **Skapa** i verifieringssteget i guiden **Lägg till anpassad domän** så du bör skapa TXT-posten när det anpassade domännamnet skapas i Cloud Manager. Detta är dock inte nödvändigt. För efterföljande verifieringar måste du aktivt markera ikonen för att verifiera igen bredvid statusen.
 
->[!TIP]
->
->Mer information om TXT-poster finns i [Lägga till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md).
+Namnet aktiveras inte förrän TXT-posten har lagts till och verifierats av Cloud Manager. TXT-verifieringen har slutförts och indikeras av statusen **Verifierad och distribuerad**.
 
->[!NOTE]
->
->DNS-verifiering kan ta några timmar att behandla på grund av fördröjd DNS-spridning.
->
->Cloud Manager kontrollerar ägarskap och uppdaterar statusen som visas i tabellen Domäninställningar. Mer information finns i [Kontrollera status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).
+* Mer information om TXT-poster finns i [Lägga till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md).
+* Mer information om hur Cloud Manager verifierar det anpassade domännamnet och dess TXT-post finns i [Kontrollera domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).
+
+## Nästa steg {#next-steps}
+
+När du har skapat ditt anpassade domännamn i Cloud Manager måste du lägga till en TXT-post för att verifiera domänens ägarskap. Fortsätt till dokumentet [Lägger till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md) om du vill fortsätta konfigurera ditt anpassade domännamn.
 
 ## Lägga till ett anpassat domännamn från miljösidan {#adding-cdn-environments}
 
-Följ de här stegen för att lägga till ett anpassat domännamn från sidan **Miljö**.
+Stegen för att lägga till ett anpassat domännamn från sidan **Miljö** är desamma som när du [lägger till ett anpassat domännamn från sidan Domäninställningar,](#adding-cdn-settings), men startpunkten skiljer sig. Följ de här stegen för att lägga till ett anpassat domännamn från sidan **Miljö**.
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
@@ -94,28 +103,4 @@ Följ de här stegen för att lägga till ett anpassat domännamn från sidan **
 
    ![Lägg till anpassat domännamn](/help/implementing/cloud-manager/assets/cdn/cdn-create3.png)
 
-1. Kontrollera de värden som har valts i dialogrutan **Lägg till domännamn** och klicka på **Fortsätt**.
-
-   ![Fönstret Domännamn](/help/implementing/cloud-manager/assets/cdn/cdn-create5.png)
-
-   >[!NOTE]
-   >
-   >Inkludera inte `http://`, `https://` eller mellanslag när du anger i domännamnet.
-
-1. Dialogrutan **Lägg till domännamn** visas och kommer att ta dig till verifieringsprocessen för domännamn. Följ instruktionerna som följer för att bevisa att du är domänägare i din miljö. Klicka på **Skapa**.
-
-   ![Verifiering av domännamn](/help/implementing/cloud-manager/assets/cdn/cdn-create6.png)
-
-CDN-distributionen kräver ett giltigt SSL-certifikat och lyckad TXT-verifiering. Detta indikeras av statusen **Verifierad och distribuerad**.
-
-Mer information om olika statusar och hur du åtgärdar potentiella problem finns i [Kontrollera status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).
-
->[!NOTE]
->
->DNS-verifiering kan ta några timmar att behandla på grund av fördröjd DNS-spridning.
->
->Cloud Manager kontrollerar ägarskap och uppdaterar statusen som visas i tabellen Domäninställningar. Mer information finns i [Kontrollera status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).
-
->[!TIP]
->
->Mer information om TXT-poster finns i [Lägga till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md).
+1. Dialogrutan **Lägg till domännamn** öppnas på fliken **Domännamn**. Fortsätt på samma sätt som du gör för [att lägga till ett anpassat domännamn från sidan Domäninställningar.](#adding-cdn-settings)

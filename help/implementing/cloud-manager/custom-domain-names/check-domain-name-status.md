@@ -5,15 +5,25 @@ exl-id: 8fdc8dda-7dbf-46b6-9fc6-d304ed377197
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 0c9328dc5be8f0a5e0924d0fc2ec59c9fce4141b
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '826'
 ht-degree: 0%
 
 ---
 
 
 # Kontrollerar domännamnsstatus {#check-status}
+
+Lär dig hur du avgör om ditt anpassade domännamn har verifierats av Cloud Manager.
+
+## Krav {#requirements}
+
+Du måste uppfylla dessa krav innan du kontrollerar din domännamnsstatus i Cloud Manager.
+
+* Du måste först lägga till en TXT-post för din anpassade domän enligt beskrivningen i dokumentet [Lägga till en TXT-post.](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md)
+
+## Kontrollera status för ditt anpassade domännamn {#how-to}
 
 Du kan fastställa status för ditt anpassade domännamn i Cloud Manager.
 
@@ -27,16 +37,25 @@ Du kan fastställa status för ditt anpassade domännamn i Cloud Manager.
 
 1. Klicka på ikonen **Status** för domännamnet.
 
-Cloud Manager verifierar domänägarskap via TXT-värdet och visar ett av följande statusmeddelanden.
+Statusinformationen visas. Din anpassade domän är klar att användas när statusen **Domänverifierad och distribuerad** visas. I [nästa avsnitt](#statuses) finns mer information om de olika statusvärdena och vad de innebär.
+
+>[!NOTE]
+>
+>Cloud Manager utlöser automatiskt verifiering när du väljer **Skapa** i verifieringssteget i guiden **Lägg till anpassad domän** när du [lägger till ett nytt anpassat domännamn i Cloud Manager.](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) För efterföljande verifieringar måste du aktivt markera ikonen för verifiering igen bredvid statusen.
+
+## Verifieringsstatus {#statuses}
+
+Cloud Manager verifierar domänägarskap via [TXT-värdet](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md) och visar ett av följande statusmeddelanden.
 
 * **Domänverifieringen misslyckades** - TXT-värdet saknas eller har identifierats med fel.
 
-   * Följ instruktionerna för att lösa problemet.
+   * Följ instruktionerna i statusmeddelandet för att lösa problemet.
    * När du är klar måste du markera ikonen **Verifiera igen** bredvid statusen.
 
 * **Domänverifiering pågår** - Verifiering pågår.
 
    * Den här statusen visas vanligtvis när du har valt ikonen **Verifiera igen** bredvid statusen.
+   * DNS-verifiering kan ta några timmar att behandla på grund av fördröjd DNS-spridning.
 
 * **Verifierad, distributionen misslyckades** - TXT-verifieringen lyckades, men CDN-distributionen misslyckades.
 
@@ -53,11 +72,9 @@ Cloud Manager verifierar domänägarskap via TXT-värdet och visar ett av följa
 
    * Mer information finns i [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md).
 
-Cloud Manager utlöser automatiskt en TXT-verifiering när du väljer **Spara** i verifieringssteget i guiden **Lägg till anpassad domän**. För efterföljande verifieringar måste du aktivt markera ikonen för att verifiera igen bredvid statusen.
-
 ## Domännamnsfel {#domain-error}
 
-Nedan följer några vanliga domännamnsfel och deras vanliga upplösning.
+Nedan följer några vanliga verifieringsfel för domännamn och deras vanliga upplösning.
 
 ### Domänen är inte installerad {#domain-not-installed}
 
@@ -92,3 +109,7 @@ Om du har en befintlig CDN-konfiguration för dina anpassade domännamn finns de
 Meddelandet försvinner när alla befintliga miljökonfigurationer migreras med användargränssnittet. Det kan ta 1-2 arbetsdagar innan meddelandet försvinner.
 
 Mer information finns i [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).
+
+## Nästa steg {#next-steps}
+
+När du har verifierat din domänstatus i Cloud Manager måste du konfigurera DNS-inställningar genom att lägga till DNS CNAME- eller APEX-poster som pekar på AEM as a Cloud Service. Fortsätt till dokumentet [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md) om du vill fortsätta konfigurera ditt anpassade domännamn.

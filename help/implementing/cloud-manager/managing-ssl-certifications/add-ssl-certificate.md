@@ -5,12 +5,13 @@ exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 83c9c6a974b427317aa2f83a3092d0775aac1d53
+source-git-commit: 06e961febd7cb2ea1d8fca00cb3dee7f7ca893c9
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '664'
 ht-degree: 0%
 
 ---
+
 
 # Lägga till ett SSL-certifikat {#adding-an-ssl-certificate}
 
@@ -18,7 +19,7 @@ Lär dig hur du lägger till ett eget SSL-certifikat med Cloud Manager självbet
 
 >[!TIP]
 >
->Det kan ta några dagar innan ett certifikat etableras. Adobe rekommenderar därför att certifikatet tillhandahålls i god tid i förväg.
+>Det kan ta några dagar innan ett certifikat etableras. Adobe rekommenderar därför att certifikatet tillhandahålls i god tid före en deadline eller ett öppningsdatum.
 
 ## Certifikatkrav {#certificate-requirements}
 
@@ -42,7 +43,8 @@ Följ de här stegen för att lägga till ett certifikat med Cloud Manager.
 
    * Ange ett namn för ditt certifikat i **Certifikatnamn**.
       * Detta är endast avsett som information och kan vara vilket namn som helst som gör det enkelt att referera till ditt certifikat.
-   * Klistra in värdena för **Certifikat**, **Privat nyckel** och **Certifikatkedja** i respektive fält. Alla tre fälten är obligatoriska.
+   * Klistra in värdena för **Certifikat**, **Privat nyckel** och **Certifikatkedja** i respektive fält.
+      * Alla tre fälten är obligatoriska.
 
    ![Dialogrutan Lägg till SSL-certifikat](/help/implementing/cloud-manager/assets/ssl/ssl-cert-02.png)
 
@@ -63,6 +65,32 @@ När certifikatet har sparats visas det som en ny rad i tabellen.
 ## Certifikatfel {#certificate-errors}
 
 Vissa fel kan uppstå om ett certifikat inte har installerats korrekt eller uppfyller kraven i Cloud Manager.
+
+### Korrigera certifikatordning {#correct-certificate-order}
+
+Den vanligaste orsaken till att en certifikatdistribution misslyckas är att de mellanliggande certifikaten eller kedjecertifikaten inte är i rätt ordning.
+
+Mellanliggande certifikatfiler måste avslutas med rotcertifikatet eller det certifikat som ligger närmast roten. De måste vara i fallande ordning från certifikatet `main/server` till roten.
+
+Du kan ange ordningen för de mellanliggande filerna med följande kommando.
+
+```shell
+openssl crl2pkcs7 -nocrl -certfile $CERT_FILE | openssl pkcs7 -print_certs -noout
+```
+
+Du kan verifiera att den privata nyckeln och `main/server`-certifikatet matchar med följande kommandon.
+
+```shell
+openssl x509 -noout -modulus -in certificate.pem | openssl md5
+```
+
+```shell
+openssl rsa -noout -modulus -in ssl.key | openssl md5
+```
+
+>[!NOTE]
+>
+>Utdata för dessa två kommandon måste vara exakt likadana. Om du inte kan hitta en matchande privat nyckel för ditt `main/server`-certifikat måste du ange en ny nyckel för certifikatet genom att generera en ny CSR och/eller begära ett uppdaterat certifikat från din SSL-leverantör.
 
 ### Ta bort klientcertifikat {#client-certificates}
 
@@ -124,32 +152,13 @@ openssl x509 -in certificate.pem -text grep "Policy: 2.23.140.1.2.2" -B5
 openssl x509 -in certificate.pem -text grep "Policy: 2.23.140.1.2.1" -B5
 ```
 
-### Korrigera certifikatordning {#correct-certificate-order}
-
-Den vanligaste orsaken till att en certifikatdistribution misslyckas är att de mellanliggande certifikaten eller kedjecertifikaten inte är i rätt ordning.
-
-Mellanliggande certifikatfiler måste avslutas med rotcertifikatet eller det certifikat som ligger närmast roten. De måste vara i fallande ordning från certifikatet `main/server` till roten.
-
-Du kan ange ordningen för de mellanliggande filerna med följande kommando.
-
-```shell
-openssl crl2pkcs7 -nocrl -certfile $CERT_FILE | openssl pkcs7 -print_certs -noout
-```
-
-Du kan verifiera att den privata nyckeln och `main/server`-certifikatet matchar med följande kommandon.
-
-```shell
-openssl x509 -noout -modulus -in certificate.pem | openssl md5
-```
-
-```shell
-openssl rsa -noout -modulus -in ssl.key | openssl md5
-```
-
->[!NOTE]
->
->Utdata för dessa två kommandon måste vara exakt likadana. Om du inte kan hitta en matchande privat nyckel för ditt `main/server`-certifikat måste du ange en ny nyckel för certifikatet genom att generera en ny CSR och/eller begära ett uppdaterat certifikat från din SSL-leverantör.
-
 ### Giltighetsdatum för certifikat {#certificate-validity-dates}
 
 Cloud Manager förväntar att SSL-certifikatet ska vara giltigt i minst 90 dagar från dagens datum. Du bör kontrollera certifikatkedjans giltighet.
+
+## Nästa steg {#next-steps}
+
+Grattis! Du har nu ett fungerande SSL-certifikat för ditt projekt. Detta är ofta ett första steg på vägen mot att skapa ett eget domännamn.
+
+* Se dokumentet [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) om du vill fortsätta konfigurera ett anpassat domännamn.
+* Läs dokumentet [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md) om du vill veta mer om hur du uppdaterar och hanterar dina SSL-certifikat i Cloud Manager.
