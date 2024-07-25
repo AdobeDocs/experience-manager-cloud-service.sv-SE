@@ -1,12 +1,12 @@
 ---
 title: Trafikfilterregler inklusive WAF-regler
-description: Konfigurerar trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF).
+description: Konfigurerar trafikfilterregler inklusive WAF-regler (Web Application Firewall).
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
 feature: Security
 role: Admin
-source-git-commit: b8fc132e7871a488cad99440d320e72cd8c31972
+source-git-commit: 3a10a0b8c89581d97af1a3c69f1236382aa85db0
 workflow-type: tm+mt
-source-wordcount: '3938'
+source-wordcount: '3939'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ Trafikfilterregler kan användas för att blockera eller tillåta förfrågninga
 
 De flesta av dessa trafikfilterregler är tillgängliga för alla AEM as a Cloud Service Sites- och Forms-kunder. De arbetar huvudsakligen med egenskaper för begäran och begäranrubriker, inklusive IP, värdnamn, sökväg och användaragent.
 
-En underkategori av trafikfilterregler kräver antingen en förbättrad säkerhetslicens eller en licens för WAF-DDoS-skydd. Dessa kraftfulla regler kallas för trafikfilterregler för WAF (Web Application Firewall) (eller WAF-regler för kort) och har tillgång till [WAF-flaggorna](#waf-flags-list) som beskrivs senare i den här artikeln.
+En underkategori av trafikfilterregler kräver antingen en förbättrad säkerhetslicens eller en WAF-DDoS-skyddslicens. Dessa kraftfulla regler kallas trafikfilterregler för WAF (Web Application Firewall) (eller WAF-regler för kort) och har tillgång till de [WAF-flaggor](#waf-flags-list) som beskrivs senare i den här artikeln.
 
-Trafikfilterregler kan distribueras via Cloud Manager konfigurationspipelines för att utveckla, scenera och producera miljötyper i produktionsprogram (icke-sandlådeprogram). Stöd för de regionala utvecklingsföretagen kommer i framtiden.
+Trafikfilterregler kan distribueras via Cloud Manager konfigurationspipelines för att utveckla, fasa och producera miljötyper i produktionsprogram (icke-sandlådeprogram). Stöd för de regionala utvecklingsföretagen kommer i framtiden.
 
 [Följ igenom en självstudiekurs](#tutorial) för att snabbt bygga upp konkreta expertkunskaper om den här funktionen.
 
@@ -38,8 +38,8 @@ Den här artikeln är indelad i följande avsnitt:
 
 * **Trafikskydd - översikt:** Lär dig hur du skyddas från skadlig trafik.
 * **Föreslagen process för konfigurering av regler:** Läs om en högnivåmetod för skydd av din webbplats.
-* **Installation:** Upptäck hur du konfigurerar, konfigurerar och distribuerar trafikfilterregler, inklusive avancerade WAF-regler.
-* **Regelsyntax:** Läs om hur du deklarerar trafikfilterregler i konfigurationsfilen `cdn.yaml`. Detta omfattar både trafikfilterreglerna som är tillgängliga för alla Sites- och Forms-kunder och underkategorin med WAF-regler för dem som licensierar den funktionen.
+* **Installation:** Upptäck hur du konfigurerar, konfigurerar och distribuerar trafikfilterregler, inklusive de avancerade WAF-reglerna.
+* **Regelsyntax:** Läs om hur du deklarerar trafikfilterregler i konfigurationsfilen `cdn.yaml`. Detta omfattar både trafikfilterreglerna som är tillgängliga för alla Sites- och Forms-kunder och underkategorin WAF-regler för dem som licensierar den funktionen.
 * **Regelexempel:** Se exempel på deklarerade regler för att du ska komma igång.
 * **Regler för hastighetsbegränsning:** Lär dig hur du använder regler för hastighetsbegränsning för att skydda din webbplats från attacker med stora volymer.
 * **Varningar om trafikfilterregler** Konfigurera varningar som ska meddelas när reglerna aktiveras.
@@ -64,13 +64,13 @@ Kunderna kan vidta förebyggande åtgärder för att mildra attacker i programla
 
 På exempelvis Apache-lagret kan kunderna konfigurera antingen [Dispatcher-modulen](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration#configuring-access-to-content-filter) eller [ModSecurity](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection) för att begränsa åtkomsten till visst innehåll.
 
-Som beskrivs i den här artikeln kan trafikfilterregler distribueras till det hanterade CDN-nätverket i Adobe med hjälp av Cloud Manager konfigurationsflöde. Utöver trafikfilterregler som baseras på egenskaper som IP-adress, sökväg och rubriker, eller regler som baseras på att hastighetsgränser anges, kan kunder även licensiera en kraftfull underkategori av trafikfilterregler som kallas WAF-regler.
+Som beskrivs i den här artikeln kan trafikfilterregler distribueras till det hanterade CDN-nätverket i Adobe med Cloud Manager [config pipelines.](/help/operations/config-pipeline.md) Utöver trafikfilterregler som baseras på egenskaper som IP-adress, sökväg och rubriker, eller regler som baseras på att hastighetsgränser anges, kan kunder även licensiera en kraftfull underkategori av trafikfilterregler som kallas WAF-regler.
 
 ## Föreslagen process {#suggested-process}
 
 Nedan följer en högnivårekommenderad process från början till slut för att komma fram till rätt trafikfilterregler:
 
-1. Konfigurera icke-produktions- och produktionskonfigurationspipelines enligt beskrivningen i avsnittet [Inställningar](#setup).
+1. Konfigurera pipelines för icke-produktion och produktionskonfiguration enligt beskrivningen i avsnittet [Inställningar](#setup).
 1. Kunder som har licensierat underkategorin för WAF-trafikfilterregler bör aktivera dem i Cloud Manager.
 1. Läs igenom och prova självstudiekursen för att få en större förståelse för hur du använder trafikfilterregler, inklusive WAF-regler om de har licensierats. I självstudiekursen får du hjälp med att distribuera regler till en utvecklingsmiljö, simulera skadlig trafik, hämta [CDN-loggarna](#cdn-logs) och analysera dem i [instrumentpanelsverktyget](#dashboard-tooling).
 1. Kopiera de rekommenderade startreglerna till `cdn.yaml` och distribuera konfigurationen till produktionsmiljön i loggläge.
@@ -80,14 +80,7 @@ Nedan följer en högnivårekommenderad process från början till slut för att
 
 ## Inställningar {#setup}
 
-1. Skapa först följande mapp- och filstruktur för mappen på den översta nivån i projektet i Git:
-
-   ```
-   config/
-        cdn.yaml
-   ```
-
-1. `cdn.yaml` ska innehålla metadata och en lista med trafikfilterregler och WAF-regler.
+1. Skapa en fil `cdn.yaml` med en uppsättning trafikfilterregler, inklusive WAF-regler.
 
    ```
    kind: "CDN"
@@ -108,33 +101,22 @@ Nedan följer en högnivårekommenderad process från början till slut för att
          action: block
    ```
 
-Parametern `kind` ska anges till `CDN` och versionen ska anges till schemaversionen, som är `1`. Se följande exempel.
+   En beskrivning av egenskaperna ovanför noden `data` finns i artikeln [config pipeline](/help/operations/config-pipeline.md#common-syntax) . Egenskapsvärdet `kind` ska anges till *CDN* och versionen ska anges till `1`.
 
 
-<!-- Two properties -- `envType` and `envId` -- may be included to limit the scope of the rules. The envType property may have values "dev", "stage", or "prod", while the envId property is the environment (for example, "53245"). This approach is useful if it is desired to have a single configuration pipeline, even if some environments have different rules. However, a different approach could be to have multiple configuration pipelines, each pointing to different repositories or git branches. -->
-
-1. Om WAF-reglerna är licensierade bör du aktivera funktionen i Cloud Manager, enligt beskrivningen nedan för både nya och befintliga programscenarier.
+1. Om WAF-regler är licensierade bör du aktivera funktionen i Cloud Manager enligt beskrivningen nedan för både nya och befintliga programscenarier.
 
    1. Om du vill konfigurera WAF för ett nytt program markerar du kryssrutan **WAF-DDOS Protection** på fliken **Säkerhet** när du [lägger till ett produktionsprogram.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md)
 
-   1. Om du vill konfigurera WAF för ett befintligt program kan du [redigera programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md) och sedan avmarkera eller markera alternativet **WAF-DDOS** på fliken **Säkerhet** när som helst.
+   1. Om du vill konfigurera WAF för ett befintligt program [redigerar du programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md) och avmarkerar eller markerar alternativet **WAF-DDOS** när som helst på fliken **Säkerhet** .
 
-1. För andra miljötyper än RDE skapar du en riktad distributionskonfigurationspipeline i Cloud Manager.
-
-   * [Se konfigurera produktionspipelinor](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md).
-   * [Se konfigurera icke-produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md).
-
-För RDE används kommandoraden, men RDE stöds inte för närvarande.
-
-**Anteckningar**
-
-* Du kan använda `yq` för att lokalt validera YAML-formateringen av konfigurationsfilen (till exempel `yq cdn.yaml`).
+1. Skapa en config pipeline i Cloud Manager, enligt beskrivningen i [Konfigurera pipelineartikeln.](/help/operations/config-pipeline.md#managing-in-cloud-manager) Pipelinen refererar till en `config`-mapp på den översta nivån med filen `cdn.yaml` placerad någonstans nedanför, enligt [beskrivningen här](/help/operations/config-pipeline.md#folder-structure).
 
 ## Syntax för trafikfilterregler {#rules-syntax}
 
-Du kan konfigurera `traffic filter rules` så att den matchar mönster som IP-adresser, användaragent, begäranrubriker, värdnamn, geo och url.
+Du kan konfigurera *trafikfilterregler* så att de matchar på mönster som IP, användaragent, begäranrubriker, värdnamn, geo och url.
 
-Kunder som har licens för erbjudandet Förbättrat skydd eller Skydd mot WAF-DDoS kan också konfigurera en särskild kategori med trafikfilterregler som kallas `WAF traffic filter rules` (eller WAF-regler för kort) som refererar till en eller flera [WAF-flaggor](#waf-flags-list).
+Kunder som licensierar erbjudandet Förbättrat skydd eller WAF-DDoS-skydd kan även konfigurera en särskild kategori av trafikfilterregler som kallas *WAF trafikfilterregler* (eller WAF-regler för kort) som refererar till en eller flera [WAF-flaggor](#waf-flags-list).
 
 Här är ett exempel på en uppsättning trafikfilterregler, som även innehåller en WAF-regel.
 
@@ -163,7 +145,7 @@ data:
 Formatet på trafikfilterreglerna i filen `cdn.yaml` beskrivs nedan. Se några [andra exempel](#examples) i ett senare avsnitt och ett separat avsnitt om [Regler för hastighetsbegränsning](#rate-limit-rules).
 
 
-| **Egenskap** | **De flesta trafikfilterreglerna** | **WAF-trafikfilterregler** | **Typ** | **Standardvärde** | **Beskrivning** |
+| **Egenskap** | **De flesta trafikfilterreglerna** | **WAF trafikfilterregler** | **Typ** | **Standardvärde** | **Beskrivning** |
 |---|---|---|---|---|---|
 | name | X | X | `string` | - | Regelnamn (64 tecken långt, får bara innehålla alfanumeriska tecken och - ) |
 | när | X | X | `Condition` | - | Den grundläggande strukturen är:<br><br>`{ <getter>: <value>, <predicate>: <value> }`<br><br>[Se syntaxen för villkorsstruktur](#condition-structure) nedan, som beskriver get-metoder, predikatmetoder och hur du kombinerar flera villkor. |
@@ -246,13 +228,13 @@ En `action` kan antingen vara en sträng som anger åtgärden (allow, block elle
 
 | **Namn** | **Tillåtna egenskaper** | **Betydelse** |
 |---|---|---|
-| **tillåt** | `wafFlags` (valfritt), `alert` (valfritt) | om wafFlags inte finns avbryter ytterligare regelbearbetning och fortsätter att ge svar. Om det finns wafFlags inaktiverar den angivna WAF-skyddet och fortsätter till ytterligare regelbearbetning. <br>Om en varning anges skickas ett meddelande från Åtgärdscenter om regeln aktiveras 10 gånger i ett 5 minuter långt fönster. När en varning aktiveras för en viss regel utlöses den inte igen förrän nästa dag (UTC). |
-| **block** | `status, wafFlags` (valfritt och exklusivt), `alert` (valfritt) | Om wafFlags inte finns returnerar HTTP-fel utan att alla andra egenskaper skickas, definieras felkoden av statusegenskapen eller så är standardvärdet 406. Om det finns wafFlags aktiverar det angivna WAF-skyddet och fortsätter till ytterligare regelbearbetning. <br>Om en varning anges skickas ett meddelande från Åtgärdscenter om regeln aktiveras 10 gånger i ett 5 minuter långt fönster. När en varning aktiveras för en viss regel utlöses den inte igen förrän nästa dag (UTC). |
+| **tillåt** | `wafFlags` (valfritt), `alert` (valfritt) | om wafFlags inte finns avbryter ytterligare regelbearbetning och fortsätter att ge svar. Om det finns wafFlags inaktiveras angivna WAF-skydd och ytterligare regelbearbetning fortsätter. <br>Om en varning anges skickas ett meddelande från Åtgärdscenter om regeln aktiveras 10 gånger i ett 5 minuter långt fönster. När en varning aktiveras för en viss regel utlöses den inte igen förrän nästa dag (UTC). |
+| **block** | `status, wafFlags` (valfritt och exklusivt), `alert` (valfritt) | Om wafFlags inte finns returnerar HTTP-fel utan att alla andra egenskaper skickas, definieras felkoden av statusegenskapen eller så är standardvärdet 406. Om det finns wafFlags aktiverar det angivna WAF-skydd och fortsätter till ytterligare regelbearbetning. <br>Om en varning anges skickas ett meddelande från Åtgärdscenter om regeln aktiveras 10 gånger i ett 5 minuter långt fönster. När en varning aktiveras för en viss regel utlöses den inte igen förrän nästa dag (UTC). |
 | **log** | `wafFlags` (valfritt), `alert` (valfritt) | loggar det faktum att regeln utlöstes, annars påverkas inte bearbetningen. wafFlags har ingen effekt. <br>Om en varning anges skickas ett meddelande från Åtgärdscenter om regeln aktiveras 10 gånger i ett 5 minuter långt fönster. När en varning aktiveras för en viss regel utlöses den inte igen förrän nästa dag (UTC). |
 
-### WAF-flagglista {#waf-flags-list}
+### WAF Flags List {#waf-flags-list}
 
-Egenskapen `wafFlags`, som kan användas i de licensbara reglerna för WAF-trafikfilter, kan referera till följande:
+Egenskapen `wafFlags`, som kan användas i de licensbara WAF-trafikfilterreglerna, kan referera till följande:
 
 | **Flagga-ID** | **Flaggnamn** | **Beskrivning** |
 |---|---|---|
@@ -280,6 +262,8 @@ Egenskapen `wafFlags`, som kan användas i de licensbara reglerna för WAF-trafi
 | SKANNER | Skanner | Identifierar vanliga skanningstjänster och verktyg |
 | RESPONSESPLIST | HTTP-svarsdelning | Identifierar när CRLF-tecken skickas som indata till programmet för att mata in rubriker i HTTP-svaret |
 | XML-FEL | XML-kodningsfel | En begärandetext för POST, PUT eller PATCH som har angetts som innehållande XML i begärandehuvudet för Content-Type men som innehåller XML-tolkningsfel. Detta beror ofta på ett programmeringsfel eller en automatiserad eller skadlig begäran. |
+| DATACENTER | Datacenter | Identifierar att begäran kommer från en känd värdtjänstleverantör. Den här typen av trafik är vanligtvis inte kopplad till en riktig slutanvändare. |
+
 
 ## Överväganden {#considerations}
 
@@ -291,7 +275,7 @@ Egenskapen `wafFlags`, som kan användas i de licensbara reglerna för WAF-trafi
 
 * IP-tillåtelselista som definieras i Cloud Manager har högre prioritet än trafikfilterregler.
 
-* WAF-regelmatchningar visas bara i CDN-loggar för CDN-missar och -pass, inte träffar.
+* WAF-regelmatchningar visas endast i CDN-loggar för CDN-missar och -pass, inte träffar.
 
 ## Exempel på regler {#examples}
 
@@ -364,7 +348,7 @@ data:
 
 **Exempel 4**
 
-Den här regeln blockerar begäranden till sökvägen `/block-me` vid publicering och blockerar alla begäranden som matchar ett `SQLI` - eller `XSS` -mönster. Det här exemplet innehåller en regel för WAF-trafikfilter, som refererar till `SQLI` och `XSS` [WAF-flaggor](#waf-flags-list), och därför krävs en separat licens.
+Den här regeln blockerar begäranden till sökvägen `/block-me` vid publicering och blockerar alla begäranden som matchar ett `SQLI` - eller `XSS` -mönster. Det här exemplet innehåller en WAF-trafikfilterregel som refererar till `SQLI` och `XSS` [WAF Flags](#waf-flags-list) och därför kräver en separat licens.
 
 ```
 kind: "CDN"
@@ -565,7 +549,7 @@ Reglerna fungerar på följande sätt:
 
 * Alla matchande regelnamn som har deklarerats av kunden listas i attributet `match`.
 * Attributet `action` avgör om regelblocket, tillåt eller loggen ska användas.
-* Om WAF har licensierats och aktiverats visar attributet `waf` alla WAF-flaggor (till exempel SQLI) som har identifierats. Detta gäller oavsett om WAF-flaggorna har listats i några regler eller inte. Detta är för att ge insikter i eventuella nya regler att deklarera.
+* Om WAF är licensierat och aktiverat visar attributet `waf` alla WAF-flaggor (till exempel SQLI) som har identifierats. Detta gäller oavsett om WAF-flaggorna har listats i några regler eller inte. Detta är för att ge insikter i eventuella nya regler att deklarera.
 * Egenskapen `rules` är tom om inga kunddeklarerade regler matchar och inga SWF-regler matchar.
 
 Som tidigare nämnts visas matchningar av WAF-regler endast i CDN-loggar för CDN-missar och -pass, inte träffar.
@@ -746,9 +730,9 @@ data:
 
 Det finns två självstudiekurser.
 
-### Skydda webbplatser med trafikfilterregler (inklusive WAF-regler) {#tutorial-protecting-websites}
+### Skydda webbplatser med trafikfilterregler (inklusive WAF regler) {#tutorial-protecting-websites}
 
-[Arbeta igenom en självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview) för att få allmän, praktisk kunskap och erfarenhet om trafikfilterregler, inklusive WAF-regler.
+[Arbeta igenom en självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview) för att få allmän, praktisk kunskap och erfarenhet om trafikfilterregler, inklusive WAF regler.
 
 Självstudiekursen leder dig igenom:
 

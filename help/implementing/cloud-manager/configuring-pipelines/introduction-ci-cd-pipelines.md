@@ -6,9 +6,9 @@ exl-id: 40d6778f-65e0-4612-bbe3-ece02905709b
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 585c934465215c48b9441a95c03e4c116859103e
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1500'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,8 @@ En icke-produktionspipeline används främst för att köra kodkvalitetssökning
 Förutom produktion och icke-produktion kan rörledningar differentieras efter vilken typ av kod de använder.
 
 * **[Kompletta stackförgreningar](#full-stack-pipeline)** - Distribuera kodsbyggen bakåt- och framifrån som innehåller en eller flera AEM serverprogram tillsammans med HTTPD/Dispatcher-konfigurationer samtidigt
-* **[Konfigurera pipelines](#config-deployment-pipeline)** - Konfigurera och distribuera trafikfilterregler, inklusive WAF-regler, inom några minuter
+* **[Konfigurera pipelines](#config-deployment-pipeline)** - Distribuera snabbt konfigurationer för funktioner som loggvidarebefordran, rensningsrelaterade underhållsåtgärder och olika CDN-konfigurationer som trafikfilterregler (inklusive WAF-regler), begäran- och svarsomvandlingar, ursprungsväljare, klientomdirigeringar, felsidor, kundhanterade CDN-nycklar, rensnings-API-nycklar och grundläggande autentisering.
+   * Mer information finns i dokumentet [Använda konfigurationsförlopp](/help/operations/config-pipeline.md).
 * **[Front-End Pipelines](#front-end)** - Distribuera front-end-kodsbyggen som innehåller ett eller flera gränssnittsprogram på klientsidan
 * **[Konfigurationsrör för webbnivå](#web-tier-config-pipelines)** - Distribuerar HTTPD/Dispatcher-konfigurationer
 
@@ -71,11 +72,10 @@ I följande tabell sammanfattas de rörledningar som är tillgängliga i Cloud M
 | Produktion eller icke-produktion | Distribution | Fullhög | Distribuerar samtidigt kodbyggen för baksidan och framsidan tillsammans med HTTPD/Dispatcher-konfigurationer | När slutkoden måste distribueras samtidigt med AEM serverkod.<br>När pipelines för frontendpipelines eller webbnivåkonfigurationer ännu inte har använts. |
 | Produktion eller icke-produktion | Distribution | Front-End | Distribuerar frontkodbygge som innehåller ett eller flera gränssnittsprogram på klientsidan | Stöder flera samtidiga pipelines<br>mycket snabbare än fullstacksdistributioner |
 | Produktion eller icke-produktion | Distribution | Webbnivåkonfiguration | Distribuerar HTTPD/Dispatcher-konfigurationer | Distribuerar på några minuter |
-| Produktion eller icke-produktion | Distribution | Konfig | Distribuerar trafikfiltreringsregler | Distribuerar på några minuter |
+| Produktion eller icke-produktion | Distribution | Konfig | Distribuerar [konfiguration för ett antal funktioner ](/help/operations/config-pipeline.md) som är relaterade till CDN, vidarebefordring av loggar och tömningsunderhåll | Distribuerar på några minuter |
 | Icke-produktion | Kodkvalitet | Fullhög | Kör kodkvalitetsgenomsökningar på kod i full stack utan distribution | Stöd för flera rörledningar |
 | Icke-produktion | Kodkvalitet | Front-End | Kör kodkvalitetsgenomsökningar på slutkod utan distribution | Stöd för flera rörledningar |
 | Icke-produktion | Kodkvalitet | Webbnivåkonfiguration | Kör kodkvalitetsgenomsökningar på dispatcherkonfigurationer utan distribution | Stöd för flera rörledningar |
-| Icke-produktion | Kodkvalitet | Konfig | Distribuerar trafikfiltreringsregler |  |
 
 I följande diagram visas Cloud Manager pipeline-konfigurationer med traditionella, enskilda front-end-databaser eller oberoende front-end-databaskonfigurationer.
 
@@ -116,9 +116,9 @@ Om du vill veta mer om hur du konfigurerar rörledningar i full hög läser du i
 
 ## Konfigurera rörledningar {#config-deployment-pipeline}
 
-Med ett konfigurationsflöde kan du konfigurera och distribuera trafikfilterregler, inklusive WAF-regler, inom några minuter.
+Med ett konfigurationsflöde kan du snabbt distribuera konfigurationer för vidarebefordran av loggar, rensningsrelaterade underhållsåtgärder och olika CDN-konfigurationer, till exempel trafikfilterregler (inklusive WAF-regler), begäran- och svarsomvandlingar, ursprungsväljare, klientomdirigeringar, felsidor, kundhanterade CDN-nycklar, rensnings-API-nycklar och grundläggande autentisering.
 
-Se [Trafikfilterregler inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md) om du vill veta mer om hur du hanterar konfigurationerna i din databas så att de distribueras på rätt sätt.
+I dokumentet [Using Config Pipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) finns en omfattande lista över funktioner som stöds och information om hur du hanterar konfigurationerna i din databas så att de distribueras korrekt.
 
 ### Konfigurera konfigurationsförlopp {#configure-config-deployment}
 

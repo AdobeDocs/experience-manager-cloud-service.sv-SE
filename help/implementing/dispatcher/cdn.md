@@ -4,12 +4,13 @@ description: Lär dig hur du använder det AEM-hanterade CDN och hur du pekar di
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
 role: Admin
-source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
+source-git-commit: 3a10a0b8c89581d97af1a3c69f1236382aa85db0
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1128'
 ht-degree: 5%
 
 ---
+
 
 # CDN i AEM AS A CLOUD SERVICE {#cdn}
 
@@ -43,7 +44,7 @@ Mer information finns i [Hantera IP-Tillåtelselista](/help/implementing/cloud-m
 
 ### Konfigurera trafik vid leveransnätverket {#cdn-configuring-cloud}
 
-Regler för att konfigurera CDN-trafik och -filter kan deklareras i en konfigurationsfil och distribueras till CDN med hjälp av [Cloud Manager Configuration Pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline). Mer information finns i [Konfigurera trafik på CDN](/help/implementing/dispatcher/cdn-configuring-traffic.md) och [Trafikfilterregler, inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md).
+Regler för konfigurering av CDN-trafik och -filter kan deklareras i en konfigurationsfil och distribueras till CDN med hjälp av [Cloud Manager konfigurationspipelines.](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline) Mer information finns i [Konfigurera trafik på CDN](/help/implementing/dispatcher/cdn-configuring-traffic.md) och [Trafikfilterregler, inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md).
 
 ### Konfigurera CDN-felsidor {#cdn-error-pages}
 
@@ -70,7 +71,7 @@ Konfigurationsanvisningar:
 1. Ställ in SNI på Adobe CDN:s ingress.
 1. Ange värdhuvudet som den ursprungliga domänen. Till exempel: `Host:publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com`.
 1. Ange `X-Forwarded-Host`-huvudet med domännamnet så att AEM kan avgöra värdhuvudet. Till exempel: `X-Forwarded-Host:example.com`.
-1. Ange `X-AEM-Edge-Key`. Värdet ska komma från Adobe.
+1. Ange `X-AEM-Edge-Key`. Värdet bör konfigureras med en Cloud Manager-konfigurationspipeline, vilket beskrivs i [den här artikeln.](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token#CDN-HTTP-value)
 
    * Behövs så att Adobe CDN kan validera källan för förfrågningarna och skicka `X-Forwarded-*`-huvudena till AEM. `X-Forwarded-For` används till exempel för att fastställa klient-IP. Det blir alltså den betrodda anroparen (det vill säga kundhanterade CDN) som ansvarar för att `X-Forwarded-*`-huvudena är korrekta (se anteckningen nedan).
    * Åtkomst till Adobe CDN-ingången kan även blockeras om det inte finns någon `X-AEM-Edge-Key`. Informera Adobe om du behöver direktåtkomst till Adobe CDN:s ingress (som ska blockeras).
@@ -79,7 +80,7 @@ I avsnittet [Exempel på CDN-leverantörskonfigurationer](#sample-configurations
 
 Innan du godkänner direkttrafik bör du validera med Adobe kundsupport att hela trafikflödet fungerar korrekt.
 
-När du har fått fram `X-AEM-Edge-Key` kan du testa att begäran är korrekt dirigerad enligt följande.
+När du har angett `X-AEM-Edge-Key` kan du testa att begäran dirigeras korrekt enligt följande.
 
 I Linux®:
 

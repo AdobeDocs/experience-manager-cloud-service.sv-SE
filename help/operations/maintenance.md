@@ -4,12 +4,13 @@ description: Lär dig mer om underhållsåtgärder i AEM as a Cloud Service och 
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
 feature: Operations
 role: Admin
-source-git-commit: b0e72f0eee0f20b19b0d9c4317a061855ffd4f62
+source-git-commit: 3a10a0b8c89581d97af1a3c69f1236382aa85db0
 workflow-type: tm+mt
-source-wordcount: '2107'
+source-wordcount: '2055'
 ht-degree: 0%
 
 ---
+
 
 # Underhållsaktiviteter i AEM as a Cloud Service {#maintenance-tasks-in-aem-as-a-cloud-service}
 
@@ -219,23 +220,19 @@ Deklarera en konfigurationsfil och distribuera den enligt anvisningarna i följa
 > 
 >På samma sätt måste du behålla granskningsloggens deklarerade nod och inte ta bort den när du distribuerar granskningsloggens tömningsnod i konfigurationsfilen.
 
-**1** - skapa följande mapp- och filstruktur i mappen på den översta nivån i ditt projekt i Git:
+**1** Skapa en fil med namnet `mt.yaml` eller liknande.
 
-```
-config/
-     mt.yaml
-```
+**2** Placera filen någonstans under en mapp på den översta nivån med namnet `config` eller liknande, enligt beskrivningen i [config pipeline-artikeln.](/help/operations/config-pipeline.md#folder-structure)
 
-**2** - Deklarera egenskaper i konfigurationsfilen, som innehåller:
+**3** - Deklarera egenskaper i konfigurationsfilen, som innehåller:
 
-* en&quot;kind&quot;-egenskap med värdet&quot;MaintenanceTasks&quot;.
-* en &quot;version&quot;-egenskap (för närvarande är vi i version 1).
-* ett valfritt metadataobjekt med egenskapen `envTypes` med en kommaavgränsad lista över den miljötyp (dev, stage, prod) som den här konfigurationen är giltig för. Om inget metadataobjekt har deklarerats är konfigurationen giltig för alla miljötyper.
+* några egenskaper ovanför datanoden - en beskrivning finns i artikeln [om konfigurationspipeline](/help/operations/config-pipeline.md#common-syntax). Egenskapsvärdet `kind` ska vara *MaintenanceTasks* och versionen ska vara *1*.
+
 * ett dataobjekt med både `versionPurge` och `auditLogPurge` objekt.
 
 Se definitioner och syntax för objekten `versionPurge` och `auditLogPurge` nedan.
 
-Du bör strukturera konfigurationen på liknande sätt som i följande exempel:
+Strukturera konfigurationen på liknande sätt som i följande exempel:
 
 ```
 kind: "MaintenanceTasks"
@@ -270,14 +267,7 @@ Kom ihåg att för att konfigurationen ska vara giltig:
 * alla egenskaper måste definieras. Det finns inga ärvda standardvärden.
 * Typerna (heltal, strängar, booleska värden etc.) i egenskapstabellen nedan måste respekteras.
 
->[!NOTE]
->Du kan använda `yq` för att lokalt validera YAML-formateringen i konfigurationsfilen (till exempel `yq mt.yaml`).
-
-**3** - Konfigurera pipelines för icke-produktion och produktionskonfiguration.
-
-Snabba utvecklingsmiljöer (RDE) har inte stöd för tömning. För andra miljötyper i produktionsprogram (icke-sandlådeprogram) skapar du en riktad distributionskonfigurationspipeline i Cloud Manager.
-
-Mer information finns i [konfigurera produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) och [konfigurera icke-produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md).
+**4** - Skapa en konfigurationspipeline i Cloud Manager, enligt beskrivningen i artikeln för konfigurationsförloppet i [.](/help/operations/config-pipeline.md#managing-in-cloud-manager) Sandlådor och miljöer för snabb utveckling (RDE) stöder inte rensning.
 
 ### Rensa version {#version-purge}
 

@@ -1,41 +1,34 @@
 ---
 title: Konfigurera CDN-felsidor
-description: Lär dig hur du åsidosätter standardfelsidan genom att lagra statiska filer i värdbaserade lagringsenheter som Amazon S3 eller Azure Blob Storage, och referera till dem i en konfigurationsfil som distribueras med Cloud Manager Configuration Pipeline.
+description: Lär dig hur du åsidosätter standardfelsidan genom att lagra statiska filer i värdbaserat lagringsutrymme som Amazon S3 eller Azure Blob Storage, och referera till dem i en konfigurationsfil som distribueras med Cloud Manager konfigurationsflöde.
 feature: Dispatcher
 exl-id: 1ecc374c-b8ee-41f5-a565-5b36445d3c7c
 role: Admin
-source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
+source-git-commit: 3a10a0b8c89581d97af1a3c69f1236382aa85db0
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
 
+
 # Konfigurera CDN-felsidor {#cdn-error-pages}
 
-Om det osannolika skulle inträffa att det [Adobe-hanterade CDN](/help/implementing/dispatcher/cdn.md#aem-managed-cdn) inte kan nå AEM ursprung, visas som standard en allmän felsida utan varumärke som anger att servern inte kan nås. Du kan åsidosätta standardfelsidan genom att lagra statiska filer i ett självvärdbaserat lagringsutrymme som Amazon S3 eller Azure Blob Storage och referera till dem i en konfigurationsfil som distribueras med [Cloud Manager Configuration Pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline).
+Om det osannolika skulle inträffa att det [Adobe-hanterade CDN](/help/implementing/dispatcher/cdn.md#aem-managed-cdn) inte kan nå AEM ursprung, visas som standard en allmän felsida utan varumärke som anger att servern inte kan nås. Du kan åsidosätta standardfelsidan genom att lagra statiska filer i värdbaserat lagringsutrymme som Amazon S3 eller Azure Blob Storage och referera till dem i en konfigurationsfil som distribueras med Cloud Manager [config pipeline.](/help/operations/config-pipeline.md#managing-in-cloud-manager)
 
 ## Inställningar {#setup}
 
 Innan du kan åsidosätta standardfelsidan måste du göra följande:
 
-* Skapa den här mappen och filstrukturen i den översta mappen i Git-projektet:
+1. Skapa en fil med namnet `cdn.yaml` eller liknande, och referera till syntaxavsnittet nedan.
 
-```
-config/
-     cdn.yaml
-```
+1. Placera filen någonstans under en mapp på den översta nivån med namnet *config* eller liknande, enligt beskrivningen i [config pipeline-artikeln](/help/operations/config-pipeline.md#folder-structure).
 
-* Konfigurationsfilen `cdn.yaml` ska innehålla både metadata och reglerna som beskrivs i exemplen nedan. Parametern `kind` ska anges till `CDN` och versionen ska anges till schemaversionen, som för närvarande är `1`.
+1. Skapa en konfigurationspipeline i Cloud Manager, enligt beskrivningen i [konfigurationspipeline-artikeln](/help/operations/config-pipeline.md#managing-in-cloud-manager).
 
-* Skapa en riktad distributionskonfigurationspipeline i Cloud Manager. Se [konfigurera produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) och [konfigurera icke-produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md).
+1. Distribuera konfigurationen.
 
-**Anteckningar**
-
-* De lokala lagringsplatserna stöder för närvarande inte konfigurationsflödet.
-* Du kan använda `yq` för att lokalt validera YAML-formateringen av konfigurationsfilen (till exempel `yq cdn.yaml`).
-
-### Konfiguration {#configuration}
+### Syntax {#syntax}
 
 Felsidan implementeras som ett program med en sida (SPA) och refererar till en handfull egenskaper, vilket visas i exemplet nedan.  De statiska filer som URL-adresserna refererar till bör lagras hos dig på en Internettillgänglig tjänst som Amazon S3 eller Azure Blob Storage.
 
@@ -54,6 +47,8 @@ data:
       cssUrl: https://www.example.com/error.css
       jsUrl: https://www.example.com/error.js
 ```
+En beskrivning av egenskaperna ovanför datanoden finns i artikeln [config pipeline](/help/operations/config-pipeline.md#common-syntax). Egenskapsvärdet för sort ska vara *CDN* och egenskapen `version` ska vara *1*.
+
 
 | Namn | Tillåtna egenskaper | Betydelse |
 |-----------|--------------------------|-------------|

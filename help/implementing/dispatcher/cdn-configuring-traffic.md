@@ -1,15 +1,16 @@
 ---
 title: Konfigurera trafik vid leveransnätverket
-description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler och filter i en konfigurationsfil och distribuera dem till CDN med hjälp av Cloud Manager Configuration Pipeline.
+description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler och filter i en konfigurationsfil och distribuera dem till CDN med hjälp av en Cloud Manager-konfigurationspipeline.
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: c34aa4ad34d3d22e1e09e9026e471244ca36e260
+source-git-commit: 3a10a0b8c89581d97af1a3c69f1236382aa85db0
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1319'
 ht-degree: 0%
 
 ---
+
 
 # Konfigurera trafik vid leveransnätverket {#cdn-configuring-cloud}
 
@@ -24,7 +25,7 @@ CDN kan även konfigurera trafikfilterregler (inklusive WAF), som styr vilken tr
 
 Om CDN inte kan kontakta sitt ursprung kan du dessutom skriva en regel som refererar till en egen felsida (som sedan återges). Läs mer om detta i artikeln [Konfigurera CDN-felsidor](/help/implementing/dispatcher/cdn-error-pages.md).
 
-Alla dessa regler, som deklareras i en konfigurationsfil i källkontrollen, distribueras med [Cloud Manager Configuration Pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline). Tänk på att den kumulativa storleken på konfigurationsfilen, inklusive trafikfilterregler, inte får överstiga 100 kB.
+Alla dessa regler, som deklareras i en konfigurationsfil i källkontrollen, distribueras med hjälp av konfigurationsflödet för Cloud Manager [.](/help/operations/config-pipeline.md) Observera att den kumulativa storleken på konfigurationsfilen, inklusive trafikfilterregler, inte får överstiga 100 kB.
 
 ## Utvärderingsordning {#order-of-evaluation}
 
@@ -36,23 +37,24 @@ De olika funktioner som nämns ovan utvärderas i följande sekvens:
 
 Innan du kan konfigurera trafik på leveransnätverket måste du göra följande:
 
-* Skapa den här mappen och filstrukturen i den översta mappen i Git-projektet:
+1. Skapa en fil med namnet `cdn.yaml` eller liknande, och referera till de olika konfigurationsfragmenten i avsnitten nedan.
 
-```
-config/
-     cdn.yaml
-```
+   Alla fragment har dessa gemensamma egenskaper, som beskrivs i artikeln [Konfigurera pipeline](/help/operations/config-pipeline.md#common-syntax). Egenskapsvärdet `kind` ska vara *CDN* och egenskapen `version` ska vara *1*.
 
-* Konfigurationsfilen `cdn.yaml` ska innehålla både metadata och reglerna som beskrivs i exemplen nedan. Parametern `kind` ska anges till `CDN` och versionen ska anges till schemaversionen, som för närvarande är `1`.
+   ```
+   kind: "CDN"
+   version: "1"
+   metadata:
+     envTypes: ["dev"]
+   ```
 
-* Skapa en riktad distributionskonfigurationspipeline i Cloud Manager. Se [konfigurera produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) och [konfigurera icke-produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md).
+1. Placera filen någonstans under en mapp på den översta nivån med namnet *config* eller liknande, vilket beskrivs i artikeln [Konfigurera pipeline](/help/operations/config-pipeline.md#folder-structure).
 
-**Anteckningar**
+1. Skapa en konfigurationspipeline i Cloud Manager, enligt beskrivningen i artikeln [Konfigurera pipeline](/help/operations/config-pipeline.md#managing-in-cloud-manager).
 
-* De lokala lagringsplatserna stöder för närvarande inte konfigurationsflödet.
-* Du kan använda `yq` för att lokalt validera YAML-formateringen av konfigurationsfilen (till exempel `yq cdn.yaml`).
+1. Distribuera konfigurationen.
 
-## Syntax {#configuration-syntax}
+## Regelsyntax {#configuration-syntax}
 
 Regeltyperna i avsnitten nedan har en gemensam syntax.
 
@@ -313,7 +315,7 @@ Anslutningar till originalen är endast SSL och använder port 443.
 Det finns scenarier där ursprungsväljare ska användas för att dirigera trafik genom AEM Publish till AEM Edge Delivery Services:
 
 * Visst innehåll levereras av en domän som hanteras av AEM Publish, medan annat innehåll från samma domän levereras av Edge Delivery Services
-* Innehåll som levereras av Edge Delivery Services kan utnyttja regler som distribueras via Configuration Pipeline, inklusive trafikfilterregler eller begäran-/svarsomvandlingar
+* Innehåll som levereras av Edge Delivery Services skulle kunna utnyttja regler som distribueras via konfigurationsflödet, inklusive trafikfilterregler eller begäran-/svarsomvandlingar
 
 Här är ett exempel på en väljarregel för origo som kan åstadkomma detta:
 

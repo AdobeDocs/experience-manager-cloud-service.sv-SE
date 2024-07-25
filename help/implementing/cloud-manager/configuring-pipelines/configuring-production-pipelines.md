@@ -6,9 +6,9 @@ exl-id: 67edca16-159e-469f-815e-d55cf9063aa4
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: a5179851af8ec88e23d79a74265b10cbce2d50f1
+source-git-commit: 3a10a0b8c89581d97af1a3c69f1236382aa85db0
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1372'
 ht-degree: 0%
 
 ---
@@ -114,9 +114,9 @@ Pipelinen sparas och du kan nu [hantera dina pipelines](managing-pipelines.md) p
 
 En riktad distribution distribuerar bara kod för utvalda delar av AEM. I en sådan distribution kan du välja att **Inkludera** ska vara en av följande typer av kod:
 
-* **Konfig** - Konfigurera inställningar för trafikfilterregler i AEM.
-   * Se dokumentet [Trafikfilterregler, inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md), för att lära dig hur du hanterar konfigurationerna i din databas så att de distribueras på rätt sätt.
-   * När du kör en riktad distributionsprocess distribueras [WAF-konfigurationer](/help/security/traffic-filter-rules-including-waf.md), förutsatt att de sparas i miljön, databasen och grenen som du definierade i pipeline.
+* **Konfig** - Konfigurera inställningar för olika funktioner i AEM.
+   * Se artikeln [Använda konfigurationsförlopp](/help/operations/config-pipeline.md) för en lista över konfigurationer som stöds, som omfattar vidarebefordran av loggar, rensningsrelaterade underhållsåtgärder och olika CDN-konfigurationer, och för att hantera dem i din databas så att de distribueras korrekt.
+   * När du kör en riktad distributionsprocess distribueras konfigurationerna, förutsatt att de sparas i den miljö, databas och gren som du har definierat i pipeline.
    * Det kan bara finnas en konfigurationspipeline per miljö.
 * **Front End Code** - Konfigurera JavaScript och CSS för frontdelen av AEM.
    * Med rörledningar kan utvecklarna bli mer självständiga och utvecklingsprocessen kan accelereras.

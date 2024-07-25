@@ -4,9 +4,9 @@ description: Utnyttja åtgärdscentret för att enkelt hantera incidenter och an
 exl-id: d5a95ac4-aa88-44d5-ba02-7c9702050208
 feature: Operations
 role: Admin
-source-git-commit: 7630481aab89b31057509f23aab334e17c537257
+source-git-commit: 22d5975a0c4ee180bbcda906b035d306a352b752
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '1045'
 ht-degree: 0%
 
 ---
@@ -76,6 +76,7 @@ I följande tabell visas de meddelandetyper som för närvarande stöds i Åtgä
 | Blockerad replikeringskö | Incident | Avblockera kön genom att följa instruktionerna i [replikeringsdokumentationen](/help/operations/replication.md#troubleshooting) |
 | Ogiltig beständig GraphQL-fråga | Incident | Åtgärda den ogiltiga GraphQL-frågan genom att referera till [Persisted GraphQL queries felsökningsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries-troubleshoot.html) |
 | Trafikrydda vid ursprung | Incident | Protect ditt ursprung genom att konfigurera regler för hastighetsbegränsning för trafikfilter som utlöser vid lägre tröskelvärden än standardtrafikspiken vid ursprungsvarningen.  Se avsnittet [Blockera DoS- och DDoS-attacker med trafikregler](/help/security/traffic-filter-rules-including-waf.md#blocking-dos-and-ddos-attacks-using-traffic-filter-rules) i dokumentationen för trafikfilterregler, som refererar till en självstudiekurs. |
+| Regler för CDN-trafikfilter har utlösts | Incident | Om den matchande trafikfilterregeln reflekterar en attack, och din plats inte blockerar trafiken, skyddar du din plats genom att konfigurera en trafikfilterregel i blockeringsläge. Se avsnittet [Skydda webbplatser med trafikfilterregler (inklusive WAF-regler)](/help/security/traffic-filter-rules-including-waf.md#tutorial-protecting-websites) i dokumentationen om trafikfilterregler, som refererar till en självstudiekurs. |
 | Sidorna innehåller ett stort antal noder | Proaktiv | Minska det totala antalet noder på en sida. Läs [Dokumentation om sidkomplexitet](https://experienceleague.adobe.com/en/docs/experience-manager-pattern-detection/table-of-contents/pcx) | |
 | Stort antal arbetsflödesinstanser som körs | Proaktiv | Avsluta pågående arbetsflöden som inte längre behövs. Lär dig hur du [konfigurerar ett rensningsjobb](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance) |               |
 | S2S-certifikatet förfaller | Proaktiv | Lär dig hur du uppdaterar en autentiseringsuppgift i [Genererar åtkomsttoken för API:er på serversidan](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md#refresh-credentials) | Högt antal anslutningar | Proaktiv | Lär dig mer om anslutningspoolning i [Anslutningspoolning tillsammans med dokumentationen för avancerat nätverk](/help/security/configuring-advanced-networking.md#connection-pooling-advanced-networking) |
