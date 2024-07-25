@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 3a10a0b8c89581d97af1a3c69f1236382aa85db0
+source-git-commit: 83cf953853c88c1f4b7149bc63c7f07b1e73faf3
 workflow-type: tm+mt
-source-wordcount: '5273'
+source-wordcount: '5283'
 ht-degree: 3%
 
 ---
@@ -330,8 +330,10 @@ ht-degree: 3%
          + [Formatsystem](/help/sites-cloud/authoring/page-editor/style-system.md)
          + [Ångra Gör om begränsningar](/help/sites-cloud/authoring/page-editor/undo-redo.md)
       + Universell redigerare {#universal-editor}
+         + [Navigera i den universella redigeraren](/help/sites-cloud/authoring/universal-editor/navigation.md)
          + [Skapa innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md)
          + [Publicera innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/publishing.md)
+         + [Innehållsarv i den universella redigeraren](/help/sites-cloud/authoring/universal-editor/inheritance.md)
       + Fragment {#fragments}
          + [Innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md)
          + [Upplevelsefragment](/help/sites-cloud/authoring/fragments/experience-fragments.md)
