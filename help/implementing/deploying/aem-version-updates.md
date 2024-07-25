@@ -4,9 +4,9 @@ description: Läs om hur Adobe Experience Manager (AEM) as a Cloud Service anvä
 feature: Deploying
 exl-id: 36989913-69db-4f4d-8302-57c60f387d3d
 role: Admin
-source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
+source-git-commit: 73fac04561f43a4053e1694da9e096a2ecbc1484
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '997'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Med NIMU kan kunden använda pipeline när som helst, även om en AEM version ä
 #### Uppdatera aktiviteter
 
 Den aktuella AEM-versionen kan fortfarande kontrolleras för varje miljö, som tidigare, med hjälp av Cloud Manager UI-miljöpanel. Samma kvalitetsgater som används i pipeline används av icke-intrångsrelaterade underhållsuppdateringar, inklusive kundens skriftliga tester.
-Ett Cloud Manager UI-meddelande skickas varje gång en icke-påträngande underhållsuppdatering används i programmets miljöer. Du kan konfigurera det så att det även skickas till ditt e-postmeddelande.
+Ett [Cloud Manager UI-meddelande](/help/implementing/cloud-manager/notifications.md) skickas varje gång en icke-påträngande underhållsuppdatering används i programmets miljöer. Du kan konfigurera det så att det även skickas till ditt e-postmeddelande.
 
 >[!NOTE]
 >
@@ -102,3 +102,11 @@ Vanligtvis har uppdateringarna inga driftavbrott, inklusive för redigeringsinst
 Med den här funktionen kan AEM referera till flera databaser samtidigt. I en [rullande distribution](/help/implementing/deploying/overview.md#how-rolling-deployments-work) innehåller den nya AEM en egen `/libs` (den TjärMK-baserade oföränderliga databasen). Den skiljer sig från den äldre AEM versionen, även om båda refererar till en delad DocumentMK-baserad ändringsbar databas som innehåller områden som `/content`, `/conf` och `/etc` med flera.
 
 Eftersom både den gamla och den nya versionen har egna versioner av `/libs` kan båda vara aktiva under den rullande uppdateringen. Och båda kan ta trafik tills den gamla är helt ersatt av den nya.
+
+## Ytterligare information {#further-information}
+
+Mer information om relaterade teman:
+
+* [Cloud Manager CI/CD Pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md)
+* [Cloud Manager UI-meddelande](/help/implementing/cloud-manager/notifications.md)
+* [Adobe Experience Manager as a Cloud Service arkitektur](/help/overview/architecture.md)
