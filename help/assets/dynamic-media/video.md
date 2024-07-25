@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Video Profiles,Best Practices
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: e8aac0bef0383604f54c09e2902c23bb89efe8f1
+source-git-commit: 9a3678e8e28806c3c7574d2cfd047c30537d7f41
 workflow-type: tm+mt
-source-wordcount: '9237'
+source-wordcount: '10321'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ I det här avsnittet beskrivs hur du arbetar med video i Dynamic Media.
 
 ## Snabbstart: Videor {#quick-start-videos}
 
-Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma igång snabbt med anpassningsbara videouppsättningar i Dynamic Media. Efter varje steg finns det korsreferenser till ämnesrubriker där du kan hitta mer information.
+Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma igång snabbt med adaptiva videouppsättningar i Dynamic Media. Efter varje steg finns det korsreferenser till ämnesrubriker där du kan hitta mer information.
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
       * [Använd en videoprofil för mappar](/help/assets/dynamic-media/video-profiles.md#applying-a-video-profile-to-folders).
       * Läs mer om [Ordna digitala resurser](/help/assets/organize-assets.md).
 
-   * Överför dina primära källvideor till mapparna. När du lägger till videofilmer i mappen kodas de enligt den videobearbetningsprofil som du tilldelade mappen.
+   * Överför dina primära källvideor till de angivna mapparna. När du har lagt till videofilmerna kodas de enligt den videobearbetningsprofil som tilldelats mappen.
 
       * Dynamic Media har främst stöd för videoklipp i kort form med en maxlängd på 30 minuter och en minimiupplösning på mer än 25 x 25.
       * Du kan överföra videofiler som är upp till 15 GB vardera.
@@ -88,17 +88,17 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
       * [Lägg till videofilmer på dina webbsidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
 
-   * Om du använder ett webbinnehållshanteringssystem från en annan leverantör kan du länka eller bädda in videor på dina webbsidor.
+   * Om du använder ett WCM-system från en annan leverantör kan du länka eller bädda in videor på dina webbsidor.
 
       * Integrera video med URL:
         [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md).
 
-      * Integrera video med inbäddad kod på webbsidan:
+      * Integrera video med inbäddad kod på en webbsida:
         [Bädda in videovisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
 
    * [Generera videorapporter](#viewing-video-reports).
 
-   * [Lägg till bildtexter i videon](#adding-captions-to-video).
+   * [Lägg till flera bildtexter och ljudspår i en video](#about-msma).
 
 ## Arbeta med video i Dynamic Media {#working-with-video-in-dynamic-media}
 
@@ -106,11 +106,11 @@ Video i Dynamic Media är en totallösning som gör det enkelt att publicera hö
 
 På en mobilenhet från iOS identifieras t.ex. en bandbredd som 3G, 4G eller Wi-Fi. Sedan väljs automatiskt rätt kodad video bland de olika videobithastigheterna i den adaptiva videouppsättningen. Videon strömmas till datorer, mobila enheter eller surfplattor.
 
-Dessutom ändras videokvaliteten dynamiskt automatiskt om nätverksförhållandena ändras på datorn eller den mobila enheten. Om en kund går över till helskärmsläge på en stationär dator svarar den adaptiva videouppsättningen med en bättre upplösning, vilket förbättrar kundens tittarupplevelse. Med adaptiva videouppsättningar får du bästa möjliga uppspelning för kunder som spelar upp Dynamic Media-video på flera skärmar och enheter.
+Dessutom ändras videokvaliteten dynamiskt automatiskt om nätverksförhållandena ändras på datorn eller den mobila enheten. Om en kund går över till helskärmsläge på en stationär dator svarar den adaptiva videouppsättningen med en bättre upplösning, vilket förbättrar kundens tittarupplevelse. Med adaptiva videouppsättningar får du bästa möjliga tittarupplevelse för kunder som spelar upp Dynamic Media-video på flera skärmar och enheter.
 
 Den logik som en videospelare använder för att avgöra vilken kodad video som ska spelas upp eller väljas under uppspelningen baseras på följande algoritm:
 
-1. Videospelaren läser in det inledande videofragmentet baserat på den bithastighet som ligger närmast värdet som är inställt för&quot;inledande bithastighet&quot; i spelaren.
+1. Videospelaren läser in det inledande videofragmentet baserat på den bithastighet som ligger närmast värdet som är inställt för&quot;inledande bithastighet&quot; i själva spelaren.
 1. Videospelaren växlar baserat på ändringar av bandbreddshastigheten med följande kriterier:
 
    1. Spelaren väljer den högsta bandbreddsströmmen under eller lika med den beräknade bandbredden.
@@ -118,9 +118,9 @@ Den logik som en videospelare använder för att avgöra vilken kodad video som 
 
 Detaljerad teknisk information om algoritmen finns på [https://android.googlesource.com/platform/frameworks/av/+/master/media/libstagefright/httplive/LiveSession.cpp](https://android.googlesource.com/platform/frameworks/av/+/master/media/libstagefright/httplive/LiveSession.cpp)
 
-Följande stöds för hantering av enstaka video och adaptiva videouppsättningar:
+Följande stöds när du hanterar enstaka video och adaptiva videouppsättningar:
 
-* Ladda upp video från ett antal videoformat och ljudformat som stöds och koda video till MP4 H.264-format för uppspelning på flera skärmar. Du kan använda fördefinierade adaptiva videoförinställningar, enskilda videokodningsförinställningar eller anpassa din egen kodning för att styra videons kvalitet och storlek.
+* Överföra video från ett antal videoformat och ljudformat som stöds. Kodning av video till MP4 H.264-format för uppspelning på flera skärmar. Du kan använda fördefinierade adaptiva videoförinställningar, enskilda videokodningsförinställningar eller anpassa din egen kodning för att styra videons kvalitet och storlek.
 
    * När en adaptiv videouppsättning genereras innehåller den MP4-videor.
    * **Obs!**: Primära videoklipp/källvideoklipp läggs inte till i en adaptiv videouppsättning.
@@ -129,7 +129,7 @@ Följande stöds för hantering av enstaka video och adaptiva videouppsättninga
 * Ordna, bläddra bland och sök videoklipp med fullt stöd för metadata för effektiv hantering av videomaterial.
 * Leverera adaptiva videouppsättningar till webben, datorer, surfplattor och mobila enheter.
 
-Adaptiv videoströmning stöds på olika iOS-plattformar. Se [Referenshandbok för Dynamic Media-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html).
+Adaptiv videoströmning stöds på olika iOS-plattformar. Se [Referenshandbok för Dynamic Media-visningsprogram](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference).
 
 <!-- OUTDATED 2/28/22 BASED ON CQDOC-18692 Dynamic Media supports mobile video playback for MP4 H.264 video. You can find BlackBerry&reg; devices that support this video format at the following: [Supported video formats on BlackBerry&reg;](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482).
 
@@ -145,7 +145,7 @@ OUTDATED 2/28/22 BASED ON CQDOC-18692 You can find Windows&reg; devices that sup
 
 Se [Exempel på dynamisk videouppspelning](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&amp;config=GeoRetail/Universal_Video1&amp;stageSize=640,480).
 
-Se även [Visningsprogram för Experience Manager Assets och Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html#viewers-aem-assets-dmc) och [Endast för Experience Manager Assets](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only) i [referenshandboken för Dynamic Media-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html).
+Se även [Visningsprogram för Experience Manager Assets och Dynamic Media Classic](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers#viewers-aem-assets-dmc) och [Endast för Experience Manager Assets](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers#viewers-for-aem-assets-only) i [referenshandboken för Dynamic Media-visningsprogram](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources).
 
 ## Bästa praxis: Använda videovisningsprogrammet för HTML5 {#best-practice-using-the-html-video-viewer}
 
@@ -157,11 +157,11 @@ På visningsprogrammets uppspelningssida identifieras webbläsarens videokapacit
 
 >[!NOTE]
 >
->Om du vill använda DASH för dina videor måste det först aktiveras av Adobe tekniska support på ditt konto. Se [Aktivera DASH för ditt konto](#enable-dash).
+>Om du vill använda DASH för dina videofilmer måste Adobe tekniska support först aktivera det på ditt konto. Se [Aktivera DASH för ditt konto](#enable-dash).
 
-Du kan kombinera möjligheten att utforma uppspelningskomponenterna med HTML 5 och CSS till en enda spelare. Den kan ha inbäddad uppspelning och använda adaptiv och progressiv strömning beroende på webbläsarens kapacitet. Alla dessa funktioner innebär att du kan utöka räckvidden för ditt multimedieinnehåll till både dator- och mobilanvändare och få en smidig videoupplevelse.
+Du kan kombinera möjligheten att utforma uppspelningskomponenterna med HTML 5 och CSS till en enda spelare. Den kan ha inbäddad uppspelning och använda adaptiv och progressiv strömning beroende på webbläsarens kapacitet. Alla dessa funktioner innebär att du kan utöka räckvidden för ditt multimediematerial till både dator- och mobilanvändare och få en smidig videoupplevelse.
 
-Se även [Endast visningsprogram för Experience Manager Assets](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers.html#viewers-for-aem-assets-only) i [referenshandboken för Dynamic Media-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html).
+Se även [Endast visningsprogram för Experience Manager Assets](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers#viewers-for-aem-assets-only) i [referenshandboken för Dynamic Media-visningsprogram](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources).
 
 
 ### Uppspelning av video på stationära datorer och mobila enheter med videovisningsprogrammet HTML5 {#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}
@@ -170,7 +170,7 @@ För strömning av anpassningsbara video för datorer och mobilenheter baseras d
 
 Videouppspelning sker med HLS eller DASH, eller progressiv videouppspelning. I tidigare versioner av Experience Manager, som 6.0, 6.1 och 6.2, strömmades videofilmer via HTTP.
 
-I Experience Manager 6.3 och senare direktuppspelas videor nu via HTTPS (dvs. HLS eller DASH) eftersom DM-gatewaytjänstens URL alltid använder HTTPS. Det här standardbeteendet påverkar inte kunderna. Det innebär att direktuppspelning av video alltid sker via HTTPS, såvida det inte stöds av webbläsaren. Se följande tabell.
+I Experience Manager 6.3 och senare direktuppspelas videor nu via HTTPS (dvs. HLS eller DASH) eftersom DM-gatewaytjänstens URL alltid använder HTTPS. Det här standardbeteendet påverkar inte kunderna. Videoströmning sker alltid över HTTPS om webbläsaren stöder det. Se följande tabell.
 
 Därför bör
 
@@ -181,7 +181,7 @@ DASH är den internationella standarden och HLS är en Apple-standard. Båda anv
 
 Progressiv video levereras genom att videon hämtas och lagras lokalt på en användares dator eller mobila enhet.
 
-I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för videofilmer på stationära datorer och mobila enheter med [Dynamic Media HTML5 Video Viewer](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video.html#interactive-video).
+I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för videofilmer på stationära datorer och mobila enheter med [Dynamic Media HTML5 Video Viewer](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video#interactive-video).
 
 <table>
  <tbody>
@@ -198,7 +198,7 @@ I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för v
   <tr>
    <td>Skrivbord</td>
    <td>Internet Explorer 11+</td>
-   <td>I Windows® 8 och Windows® 10 - Tvinga användning av HTTPS när DASH eller HLS begärs. Känd begränsning: HTTP på DASH eller HLS fungerar inte i den här kombinationen av webbläsare/operativsystem <br /> <br /> i Windows® 7 - progressiv nedladdning. Använder standardlogik för att välja HTTP- eller HTTPS-protokoll.</td>
+   <td>I Windows® 8 och Windows® 10 - Tvinga användning av HTTPS när DASH eller HLS begärs. Känd begränsning: HTTP på DASH eller HLS fungerar inte i den här kombinationen av webbläsare/operativsystem <br /> <br /> i Windows® 7 - progressiv nedladdning. Använder standardlogik för HTTP- och HTTPS-protokoll.</td>
   </tr>
   <tr>
    <td>Skrivbord</td>
@@ -250,7 +250,7 @@ I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för v
 
 >[!IMPORTANT]
 >
->*Om du vill använda DASH för dina videor måste det först aktiveras av Adobe tekniska support på ditt konto. Se [Aktivera DASH för ditt konto](#enable-dash).)
+>Om du vill använda DASH för dina videofilmer måste Adobe tekniska support först aktivera det på ditt konto. Se [Aktivera DASH för ditt konto](#enable-dash).
 
 <!--  THIS LINE WAS REMOVED FROM THE TABLE ABOVE ON FEB 28, 2022 BASED ON CQDOC 18692 -RSB <tr>
    <td>Mobile</td>
@@ -261,7 +261,7 @@ I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för v
 
 ## Arkitektur för Dynamic Media videolösning {#architecture-of-dynamic-media-video-solution}
 
-Följande bild visar det övergripande arbetsflödet för redigering av videoklipp som har överförts och kodats med hjälp av DMGGateway (i Dynamic Media Hybrid-läge) och som har gjorts tillgängliga för offentlig användning.
+I följande bild visas det övergripande arbetsflödet för redigering av videoklipp som överförs och kodas via DMG-gatewayen (i Dynamic Media Hybrid-läge) och görs tillgängliga för offentlig användning.
 
 ![chlimage_1-427](assets/chlimage_1-427.png)
 
@@ -271,7 +271,7 @@ Följande bild visar det övergripande arbetsflödet för redigering av videokli
 
 ## Bästa tillvägagångssätt för att koda videofilmer {#best-practices-for-encoding-videos}
 
-Arbetsflödet för **Dynamic Media Encode Video** kodar video om du har aktiverat Dynamic Media och konfigurerat Cloud Service. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Om du har aktiverat Dynamic Media och konfigurerat Cloud Service för videofilmer börjar arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** automatiskt att gälla när du överför en videofilm. (Om du inte använder Dynamic Media börjar arbetsflödet **[!UICONTROL DAM Update Asset]** gälla.)
+Arbetsflödet för **Dynamic Media Encode Video** kodar video om du har aktiverat Dynamic Media och konfigurerat Cloud Service för video. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Om du har aktiverat Dynamic Media och konfigurerat Cloud Service för video börjar arbetsflödet **[!UICONTROL Dynamic Media Encode Video]** automatiskt att gälla när du överför en video. (Om du inte använder Dynamic Media börjar arbetsflödet **[!UICONTROL DAM Update Asset]** gälla.)
 
 Nedan följer några tips om hur du kodar källvideofiler.
 
@@ -305,9 +305,9 @@ Du kan hämta metadata för en fil genom att visa dess metadata med ett redigeri
 
 ### Proportioner {#aspect-ratio}
 
-När du väljer eller skapar en förinställning för videokodning för den primära källvideofilen måste du se till att förinställningen har samma proportioner som den primära källvideofilen. Proportionerna är proportionerna mellan videons bredd och höjd.
+När du väljer eller skapar en förinställning för videokodning för den primära källvideofilen måste du se till att förinställningen har samma proportioner. Det här arbetssättet säkerställer konsekvens med den primära källvideofilen. Proportionerna är proportionerna mellan videons bredd och höjd.
 
-Om du vill ta reda på videofilens proportioner hämtar du filens metadata och noterar filens bredd och höjd (se Hämta filens metadata ovan). Använd sedan den här formeln för att bestämma proportionerna:
+Om du vill ta reda på videofilens proportioner hämtar du filens metadata. Observera filens bredd och höjd (se Hämta metadata för en fil ovan). Använd sedan den här formeln för att bestämma proportionerna:
 
 width/height = aspect ratio
 
@@ -324,7 +324,7 @@ En video som till exempel är 1440 bredd x 1080 höjd har proportionerna 1440/10
 
 ### Bithastighet {#bitrate}
 
-Bithastighet är den mängd data som kodas för att skapa en enda sekund av videouppspelningen. Bithastigheten mäts i kilobit per sekund (kbit/s).
+Bithastigheten är den mängd data som kodas för att skapa en enda sekund av videouppspelningen. Bithastigheten mäts i kilobit per sekund (kbit/s).
 
 >[!NOTE]
 >
@@ -332,10 +332,10 @@ Bithastighet är den mängd data som kodas för att skapa en enda sekund av vide
 
 När du väljer en bithastighetskodning kan du välja mellan två typer:
 
-* **[!UICONTROL Constant Bitrate Encoding]** (CBR) - Under CBR-kodning är bithastigheten eller antalet bitar per sekund densamma under hela kodningsprocessen. CBR-kodning bevarar den angivna datahastigheten enligt inställningen för hela videon. CBR-kodning optimerar inte heller mediefiler för kvalitet utan sparar på lagringsutrymmet.
+* **[!UICONTROL Constant Bitrate Encoding]** (CBR) - Under CBR-kodning är bithastigheten, eller antalet bitar per sekund, densamma under hela kodningsprocessen. CBR-kodning bevarar den angivna datahastigheten enligt inställningen för hela videon. CBR-kodning optimerar inte heller mediefiler för kvalitet utan sparar på lagringsutrymmet.
 Använd CBR om videon innehåller en liknande rörelsenivå i hela videon. CBR används oftast för direktuppspelat videoinnehåll. Se även [Använda egna videokodningsparametrar](/help/assets/dynamic-media/video-profiles.md#using-custom-added-video-encoding-parameters).
 
-* **[!UICONTROL Variable Bitrate Encoding]** (VBR) - VBR-kodning justerar datahastigheten nedåt och till den övre gräns som du anger, baserat på de data som krävs av kompressorn. Den här funktionen innebär att under en VBR-kodningsprocess ökar eller minskar bithastigheten för mediefilen dynamiskt beroende på mediafilens behov av bithastighet.
+* **[!UICONTROL Variable Bitrate Encoding]** (VBR) - VBR-kodning justerar datahastigheten nedåt och till den övre gräns som du anger, baserat på de data som krävs av kompressorn. Den här funktionen innebär att under en VBR-kodningsprocess ökar eller minskar bithastigheten för mediefilen dynamiskt beroende på mediefilens behov av bithastighet.
 Det tar längre tid att koda VBR men ger det bästa resultatet. Kvaliteten på mediefilen är bättre. VBR används oftast för http-progressiv leverans av videoinnehåll.
 
 När använder du VBR jämfört med CRB?
@@ -385,9 +385,9 @@ När du väljer (eller skapar) en förinställning för videokodning för den pr
 
 ### Fps (bildrutor per sekund) {#fps-frames-per-second}
 
-I USA och Japan spelas de flesta videoklipp in med 29,97 bildrutor per sekund (fps). I Europa spelas de flesta videoklipp in med 25 fps. Film filmas med 24 fps.
+I USA och Japan spelas de flesta videoklipp in med 29,97 bildrutor per sekund. I Europa spelas de flesta videoklipp in med 25 bildrutor per sekund. En film filmas med 24 fps.
 
-Välj en förinställning för videokodning som matchar fps-hastigheten för den primära källvideofilen. Om den primära källvideon till exempel är 25 fps väljer du en kodningsförinställning med 25 fps. Som standard används den primära källvideofilens fps för all anpassad kodning. Därför behöver du inte uttryckligen ange fps-inställningen när du skapar en förinställning för videokodning.
+Välj en förinställning för videokodning som matchar fps-hastigheten för den primära källvideofilen. Om den primära källvideon till exempel är 25 fps väljer du en kodningsförinställning med 25 fps. Som standard används den primära källvideofilens fps för all anpassad kodning. Därför behöver du inte ange fps-inställningen explicit när du skapar en förinställning för videokodning.
 
 ### Videokodningsdimensioner {#video-encoding-dimensions}
 
@@ -432,19 +432,19 @@ Om videon kodades utanför Adobe Experience Manager Dynamic Media är inte data 
 
 >[!NOTE]
 >
->Spårnings- och rapportdata baseras uteslutande på Dynamic Media egen videospelare och tillhörande videospelarförinställning. Därför kan du inte spåra och rapportera om videofilmer som spelas upp med andra videospelare.
+>Spårnings- och rapportdata baseras uteslutande på Dynamic Media egen videospelare och tillhörande videospelarförinställning. Därför kan du inte spåra och rapportera videoklipp som spelas upp av andra videospelare.
 
-Första gången du anger Videorapporter visas som standard videodata från och med den första i den aktuella månaden och till och med den aktuella månadens datum. Du kan dock åsidosätta standarddatumintervallet genom att ange ett eget datumintervall. Nästa gång du anger Videorapporter används det datumintervall du har angett.
+Första gången du anger Videorapporter visas som standard videodata från och med den första i den aktuella månaden och till och med den aktuella månadens datum. Du kan dock åsidosätta standarddatumintervallet genom att ange ett eget datumintervall. Nästa gång i Videorapporter används det angivna datumintervallet.
 
 För att videorapporter ska fungera korrekt skapas ett Report Suite-ID automatiskt när Dynamic Media-Cloud Service konfigureras. Samtidigt skickas Report Suite-ID:t till Publish-servern så att det är tillgängligt för funktionen Kopiera URL när du förhandsgranskar resurser. Den här funktionen kräver dock att Publish-servern redan har konfigurerats. Om Publish-servern inte är konfigurerad kan du fortfarande publicera för att se videorapporten. Du måste dock gå tillbaka till Dynamic Media Cloud-konfigurationen och välja **[!UICONTROL OK]**.
 
 **Så här visar du videorapporter:**
 
-1. I det övre vänstra hörnet av Experience Manager väljer du logotypen för Experience Manager och navigerar sedan till **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Video Reports]** i den vänstra listen.
+1. I det övre vänstra hörnet av Experience Manager väljer du logotypen Experience Manager. Gå till **[!UICONTROL Tools]** (hammikon) > **[!UICONTROL Assets]** > **[!UICONTROL Video Reports]** i den vänstra listen.
 1. Gör något av följande på sidan Videorapporter:
 
    * I närheten av det övre högra hörnet väljer du ikonen **[!UICONTROL Refresh Video Report]**.
-Använd bara Uppdatera om rapportens slutdatum är den aktuella dagen. Med den här funktionen ser du till att du ser videospårningen som har utförts sedan du senast körde rapporten.
+Du kan bara använda Uppdatera om rapportens slutdatum är den aktuella dagen. Med den här funktionen ser du till att du kan se videospårningen som har utförts sedan du senast körde rapporten.
 
    * I närheten av det övre högra hörnet väljer du ikonen **[!UICONTROL Date Picker]**.
 Ange start- och slutdatumintervallet som du vill ha videodata för och välj sedan **[!UICONTROL Run Report]**.
@@ -518,34 +518,29 @@ See [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8
  -->
 
 
+## Aktivera stöd för DASH, multibildtexter och flerljudspår samt AI-genererade bildtexter på ditt Dynamic Media-konto {#enable-dash}
 
+Du kan aktivera stöd i Dynamic Media för:
 
+* DASH
+* Flera bildtexter och ljudspår
+* AI-genererade bildtexter
 
-## Aktivera stöd för DASH, multi-caption och multi-audio-spår på ditt Dynamic Media-konto {#enable-dash}
+via ett Adobe kundsupportärende som du skapar och skickar in.
 
-**Om att aktivera DASH-stöd för ditt konto**
-DASH (Digital Adaptive Streaming over HTTP) är den internationella standarden för direktuppspelad video och används i stor utsträckning av olika videovisningsprogram. När DASH är aktiverat för ditt konto kan du välja mellan DASH eller HLS för adaptiv videoströmning. Du kan också välja båda med automatisk växling mellan spelare när **[!UICONTROL auto]** väljs som uppspelningstyp i visningsförinställningen.
+Om du aktiverar någon av de tre funktionerna ovan aktiveras samtliga. Så om du bara vill aktivera DASH aktiverar du i själva verket alla tre funktionerna som listas ovan.
 
-Några viktiga fördelar med att aktivera DASH på ditt konto är följande:
-
-* Paketera DASH-strömvideo för strömning med adaptiv bithastighet. Den här metoden leder till ökad effektivitet vid leverans. Adaptiv strömning ger bästa möjliga tittarupplevelse för dina kunder.
-* Webbläsaroptimerad direktuppspelning med Dynamic Media-spelare växlar mellan HLS- och DASH-strömning för att säkerställa bästa möjliga servicekvalitet. Videospelaren växlar automatiskt till HLS när en Safari-webbläsare används.
-* Du kan konfigurera den direktuppspelningsmetod (HLS eller DASH) som du föredrar genom att redigera förinställningen för visningsprogrammet för video.
-* Optimerad videokodning säkerställer att ingen ytterligare lagring används samtidigt som DASH-funktionen aktiveras. En enda uppsättning videokodningar skapas för både HLS och DASH för att optimera lagringskostnaderna för video.
-* Gör videomaterialet mer tillgängligt för kunderna.
-* Hämta strömnings-URL:en via API:er också.
-
-Du aktiverar DASH-support för ditt konto via ett Adobe-kundsupportärende som du skapar och skickar in.
-
-**Om att aktivera stöd för flera bildtexter och ljudspår för ditt konto**
-
-Samtidigt som du skapar ett supportärende för Adobe där DASH är aktiverat på ditt konto kan du också dra nytta av att ha stöd för flera bildtexter och ljudspår automatiskt aktiverat. När du har aktiverat bearbetas alla efterföljande videor som du överför med en ny backend-arkitektur som har stöd för att lägga till flera bildtexter och ljudspår i videoklipp.
+| Funktion | Beskrivning |
+| --- | --- |
+| DASH | DASH (Digital Adaptive Streaming over HTTP) är den internationella standarden för direktuppspelad video och används i stor utsträckning av olika videovisningsprogram. När DASH är aktiverat för ditt konto kan du välja mellan DASH eller HLS för adaptiv videoströmning. Du kan också välja båda med automatisk växling mellan spelare när **[!UICONTROL auto]** väljs som uppspelningstyp i visningsförinställningen.<br>Några viktiga fördelar med att aktivera DASH för ditt konto är bland annat följande:<br> ・ Packa DASH-strömvideo för strömning med adaptiv bithastighet. Den här metoden leder till ökad effektivitet vid leverans. Adaptiv strömning ger bästa möjliga tittarupplevelse för dina kunder.<br> ・ webbläsaroptimerad direktuppspelning med Dynamic Media-spelare växlar mellan HLS- och DASH-direktuppspelning för att säkerställa bästa möjliga tjänstekvalitet. Videospelaren växlar automatiskt till HLS när en Safari-webbläsare används.<br> ・ Du kan konfigurera den önskade direktuppspelningsmetoden (HLS eller DASH) genom att redigera visningsförinställningen för videon.<br> ・ Optimerad videokodning säkerställer att inget ytterligare lagringsutrymme används när DASH-funktionen aktiveras. En enda uppsättning videokodningar skapas för både HLS och DASH för att optimera lagringskostnaderna för video.<br> ・ Gör videomaterial mer tillgängligt för dina kunder.<br> ・ även hämta direktuppspelnings-URL:en via API:er. |
+| Flera bildtexter och ljudspår | Det kan vara bra att ha stöd för flera bildtexter och ljudspår automatiskt aktiverat. När du har aktiverat bearbetas alla efterföljande videor som du överför med en ny backend-arkitektur som har stöd för att lägga till flera bildtexter och ljudspår i videoklipp. |
+| AI-genererade bildtexter | Skapa bildtexter för videoklipp med AI. Med hjälp av AI skapas videons transkript och konverteras till bildtexter. Även tidslinjen definieras. |
 
 >[!IMPORTANT]
 >
 >Alla videofilmer som du överförde *före* och som aktiverar stöd för flera bildtexter och ljudspår på ditt Dynamic Media-konto, [måste bearbetas på nytt](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets). Det här steget för videoombearbetning är nödvändigt för att de ska kunna använda flera bildtexter och ljudspår. Video-URL:erna fortsätter att fungera och spelas upp som vanligt efter ombearbetningen.
 
-**Så här aktiverar du stöd för DASH-, multi-caption- och multi-audio-spår på ditt Dynamic Media-konto:**
+**Så här aktiverar du stöd för DASH, multibildtexter och flerljudspår samt AI-genererade bildtexter på ditt Dynamic Media-konto:**
 
 1. [Använd Admin Console för att börja skapa ett nytt supportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 1. Om du vill skapa ett supportärende följer du instruktionerna och ser till att du anger följande information:
@@ -554,22 +549,30 @@ Samtidigt som du skapar ett supportärende för Adobe där DASH är aktiverat p�
    * Din Cloud Service-miljö (program-ID och miljö-ID).
    * Dynamic Media företagskontonamn.
    * Din Dynamic Media-region: Nordamerika (NA), Asien-Stillahavsområdet (APAC) eller Europa-Mellanöstern-Asien (EMEA).
-   * Ange att stöd för DASH, multibildtext och flerljudspår ska aktiveras på ditt Dynamic Media-konto på Experience Manager 6.5.
+   * Ange att stöd för DASH, multibildtexter och flerljudspår samt AI-genererade bildtexter ska aktiveras på ditt Dynamic Media-konto på AEM as a Cloud Service.
 
-1. Adobe kundsupport lägger till dig i kundens väntelista baserat på i vilken ordning förfrågningarna skickas.
+1. Adobe kundsupport lägger till dig i kundväntelistan baserat på i vilken ordning förfrågningarna skickas.
 1. När Adobe är redo att hantera din begäran kontaktar kundsupporten dig för att koordinera och ange ett måldatum för aktiveringen.
-1. Du meddelas när du är klar av kundsupporten.
-1. Nu kan du göra något av följande:
+1. Adobe kundsupport meddelar dig när allt är klart.
+1. Gör något av följande:
 
    * Skapa din [videovisningsförinställning](/help/assets/dynamic-media/managing-viewer-presets.md#creating-a-new-viewer-preset) som vanligt.
+   * Skapa din [videoprofil](/help/assets/dynamic-media/video-profiles.md) som vanligt.
    * [Lägg till flera bildtexter och ljudspår](#add-msma) i videon.
 
 
 ## Stöd för flera bildtexter och ljudspår för videofilmer i Dynamic Media{#about-msma}
 
-Med funktioner för flera bildtexter och ljudspår i Dynamic Media kan du enkelt lägga till flera bildtexter och ljudspår i en primär video. Detta innebär att videoklippen är tillgängliga för alla mottagare världen över. Du kan anpassa en enda publicerad primär video till en global publik på flera språk och följa riktlinjer för tillgänglighet för olika geografiska regioner. Författare kan också hantera beskrivningar och ljudspår från en enda flik i användargränssnittet.
+Med funktioner för flera bildtexter och ljudspår i Dynamic Media kan du enkelt lägga till flera ljudspår. Du kan också lägga till flera bildtextfiler med antingen dina egna `.vtt`-filer (Video Text Track) eller AI-genererade bildtextfiler. AI-genererade bildtexter i Dynamic Media är utformade för att förbättra videons tillgänglighet och engagemang genom att automatiskt generera korrekta och synkroniserade undertexter. Den här tekniken använder avancerade AI-algoritmer för att transkribera talat innehåll till text, som sedan visas som bildtexter på videon. Några viktiga funktioner i den här tekniken är:
 
-![Fliken Bildtexter och ljudspår i Dynamic Media tillsammans med en tabell som visar överförda VTT-bildtextfiler och överförda MP3-ljudspårsfiler för en video.](/help/assets/dynamic-media/assets/msma-subtitle-audiotracks-tab2.png)
+* **Automatisk transkription:** AI-systemet transkriberar talade ord till text i realtid, vilket säkerställer att bildtexter genereras snabbt och korrekt.
+* **Flerspråksstöd:** Bildtexter kan levereras automatiskt på mer än 60 språk, vilket gör det enklare att nå en global publik.
+* **Förbättrad tillgänglighet:** Genom att tillhandahålla beskrivningar blir videoklipp mer tillgängliga för tittare som är döva eller hörselskadade, eller personer som föredrar att titta på videoklipp med ljudet avaktiverat.
+* **Förbättrat engagemang:** Bildtexter kan hjälpa till att bevara läsarens uppmärksamhet och förbättra förståelsen, särskilt i högljudda miljöer eller när tittarens modersmål skiljer sig från videons språk.
+
+Dessa funktioner gör AI-baserade bildtexter till ett värdefullt verktyg för innehållsskapare som vill förbättra sitt videomaterial och göra det mer tillgängligt och engagerande.
+
+![Fliken Bildtexter och ljudspår i Dynamic Media tillsammans med en tabell som visar överförda VTT-bildtextfiler och överförda MP3-ljudspårsfiler för en video.](/help/assets/dynamic-media/assets/msma-caption-audiotracks-tab2.png)
 
 Några av användningsområdena för att lägga till flera bildtexter och ljudspår i den primära videon är bland annat följande:
 
@@ -581,7 +584,7 @@ Några av användningsområdena för att lägga till flera bildtexter och ljudsp
 |  | Kommentarspår |
 |  | Beskrivande ljud |
 
-Alla [videoformat som stöds i Dynamic Media](/help/assets/file-format-support.md) och alla Dynamic Media-videovisningsprogram - utom Dynamic Media *Video_360* -visningsprogram - kan användas med flera bildtexter och ljudspår.
+Alla [videoformat som stöds i Dynamic Media](/help/assets/file-format-support.md) och alla Dynamic Media-videovisningsprogram - utom Dynamic Media *Video_360* -visningsprogram - stöds för flera bildtexter och ljudspår.
 
 Funktioner för flera bildtexter och ljudspår är tillgängliga för ditt Dynamic Media-konto via en funktion som måste aktiveras (aktiveras) av Adobe kundsupport.
 
@@ -591,20 +594,20 @@ Innan du lägger till flera bildtexter och ljudspår i videon måste du kontroll
 
 * Dynamic Media är konfigurerat i en AEM miljö.
 * En [Dynamic Media-videoprofil tillämpas på den mapp där videoklippen har importerats](/help/assets/dynamic-media/video-profiles.md#applying-a-video-profile-to-folders).
-* [Spår för flera beskrivningar och ljud i flera ljudspår är aktiverat på ditt Dynamic Media-konto](#enable-dash).
+* [Flera bildtexter/ljudspår och AI-genererade bildtexter är aktiverade på ditt Dynamic Media-konto](#enable-dash).
 
-Nya bildtexter och bildtexter stöds med formaten WebVTT och Adobe VTT. Dessutom stöds tillagda ljudspårsfiler med MP3-format.
+Nya bildtexter stöds med formaten WebVTT och Adobe VTT. Dessutom stöds tillagda ljudspårsfiler med MP3-format.
 
 >[!IMPORTANT]
 >
->Alla videofilmer som du överförde *före* och som aktiverar stöd för flera bildtexter och ljudspår på ditt Dynamic Media-konto, [måste bearbetas på nytt](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets). Det här steget för videoombearbetning är nödvändigt för att de ska kunna använda flera bildtexter och ljudspår. Video-URL:erna fortsätter att fungera och spelas upp som vanligt efter ombearbetningen.
+>För videofilmer som har laddats upp *före* och som aktiverar stöd för flera bildtexter/ljudspår eller AI-genererade bildtexter på ditt Dynamic Media-konto [måste du bearbeta om dem](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets). Detta steg säkerställer att dessa videor kan använda flera funktioner för beskrivning/ljudspår och AI-genererad bildtext. Efter ombearbetningen fortsätter URL-adresserna för video att fungera och spelas upp som vanligt.
 
 **Så här lägger du till flera bildtexter och ljudspår i videon:**
 
 1. [Överför din primära video till en mapp](/help/assets/manage-video-assets.md#upload-and-preview-video-assets) som redan har tilldelats en videoprofil.
 1. Navigera till den överförda videoresursen som du vill lägga till flera bildtexter och ljudspår.
 1. Välj videoresurs i resursurvalsläget, antingen från listvyn eller kortvyn.
-1. I verktygsfältet väljer du ikonen Egenskaper (en cirkel med &quot;i&quot;).
+1. Klicka på egenskapsikonen (en cirkel med&quot;i&quot;) i verktygsfältet.
    ![Markerad videoresurs med bockmarkering över videominiatyrbild och Visa egenskaper markerade i verktygsfältet.](/help/assets/dynamic-media/assets/msma-selectedasset-propertiesbutton.png)*Markerad videoresurs i kortvyn.*
 1. Välj fliken **[!UICONTROL Captions & Audio Tracks]** på videons egenskapssida.
 
@@ -612,53 +615,144 @@ Nya bildtexter och bildtexter stöds med formaten WebVTT och Adobe VTT. Dessutom
    >Om du inte ser fliken **[!UICONTROL Captions & Audio Tracks]** betyder det något av två:
    >
    >* Mappen där den valda videon finns har ingen tilldelad videoprofil. I så fall, se [Använda en videoprofil i mappen](/help/assets/dynamic-media/video-profiles.md#applying-video-profiles-to-specific-folders)
-   >* Eller så måste videon bearbetas på nytt av Dynamic Media. I så fall ska du läsa [Bearbeta Dynamic Media-resurser igen i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
+   >* Eller så måste Dynamic Media bearbeta om videon. I så fall ska du läsa [Bearbeta Dynamic Media-resurser igen i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
    >
    >När du har slutfört någon av ovanstående åtgärder går du tillbaka till dessa steg.
 
-   ![Fliken Bildtexter och ljudspår på sidan Egenskaper.](/help/assets/dynamic-media/assets/msma-audiotracks2.png)*Fliken Bildtexter och Ljudspår på videons egenskapssida.*
+   ![Fliken Bildtexter och ljudspår på sidan Egenskaper.](/help/assets/dynamic-media/assets/msma-audiotracks.png)
+   *Fliken Bildtexter och ljudspår på videons egenskapssida.*
 
-1. (Valfritt) Gör så här om du vill lägga till en eller flera bildtextfiler i en video:
-   * Välj **[!UICONTROL Upload Captions]**.
-   * Navigera till och markera en eller flera VTT-filer (Video Text Tracks) och öppna dem.
-   * För att bildtexter ska kunna visas i mediespelaren *måste* lägga till nödvändig information (metadata) om *varje* bildtextfil som du har överfört. Välj pennikonen till höger om namnet på en bildtextfil. Ange följande obligatoriska information om filen i dialogrutan **Redigera beskrivning** och välj sedan **[!UICONTROL Save]**. Upprepa den här processen för varje bildtextfil som du överförde:
+1. Så här lägger du till ett eller flera ljudspår i en video:
+   1. Välj **[!UICONTROL Upload Audio Tracks]**.
+   1. Navigera till och markera en eller flera .mp3-filer och öppna dem.
+   1. För att ljudspår ska kunna visas i popup-listan **[!UICONTROL Select audio or caption]** i mediespelaren måste du lägga till nödvändig information om varje ljudspårsfil. Om du gör det ser du till att alla ljudspår visas på rätt sätt och är tillgängliga. Välj pennikonen till höger om namnet på en ljudspårsfil. Ange följande obligatoriska information i dialogrutan **Redigera ljudspår**:
 
-     | Bildtextmetadata | Beskrivning |
-     |--- |--- |
-     | Filnamn | Standardfilnamnet härleds från det ursprungliga filnamnet. Filnamnet kan bara ändras under överföring och kan inte ändras senare. Teckenkraven för filnamn är desamma som för AEM Assets.<br>Samma filnamn kan inte användas för ytterligare bildtextfiler och ljudspårsfiler. |
-     | Språk | Välj språk för bildtexten. |
-     | Typ | Välj den typ av bildtext som du använder.<br>**Underrubrik** - Bildtexten som visas med videon som översätter eller transkriberar dialogrutan.<br>**Bildtext** - Bildtexten innehåller även bakgrundsljud, talardifferentiering och annan relevant information, tillsammans med översättningen eller transkriberingen av dialogrutan, som gör innehållet mer tillgängligt för personer som är döva eller hörselskadade. |
-     | Etikett | Den text som visas för bildtextens namn i popup-listan **[!UICONTROL Select audio or caption]** i mediespelaren. Etiketten är det som kunden ser och som motsvarar ett underrubrik- eller bildtextspår. Exempel: `English (CC)`. |
+      | Metadata för ljudspår | Beskrivning |
+      |--- |--- |
+      | Filnamn | Standardfilnamnet härleds från det ursprungliga filnamnet. Filnamnet kan bara ändras under överföring och kan inte ändras senare. Teckenkraven för filnamn är desamma som för AEM Assets.<br>Samma filnamn kan inte användas för ytterligare ljudspårfiler eller bildtextfiler. |
+      | Språk | Välj rätt språk för ljudspåret. |
+      | Typ | Välj vilken typ av ljudspår du använder.<br>**Original** - Ljudspåret som ursprungligen var kopplat till videon och representerades som `[Original]` i etiketten med språket `English` markerat som standard. **[!UICONTROL Label]** och **[!UICONTROL Language]** kan ändras i dialogrutan **[!UICONTROL Edit Audio Track]**, men standardvärdet är de ursprungliga värdena om den primära videon bearbetas om.<br>**Standard** - Ett tilläggsljudspår för ett annat språk än det ursprungliga språket.<br>**Ljudbeskrivning** - Ett ljudspår som även innehåller en beskrivande berättarröst för icke-verbala åtgärder och gester i videon, vilket gör innehållet mer tillgängligt för personer med nedsatt syn. |
+      | Etikett | Den text som visas som ljudspårets namn i popup-listan **[!UICONTROL Select audio or caption]** i mediespelaren. Etiketten är det kunden ser och motsvarar ett ljudspår. Exempel: `English [Original]`. Etiketten för ljud som är kopplat till en video är som standard `[Original]`. |
 
-     Om det behövs kan du ändra eller redigera bildtextens metadata senare. När videon publiceras återspeglas dessa uppgifter på offentliga URL:er i publicerade videor.
+      Om det behövs kan du ändra eller redigera metadata för ljudspåret senare. När videon publiceras återspeglas dessa uppgifter på offentliga URL:er i publicerade videor.
 
-1. (Valfritt) Gör följande om du vill lägga till ett eller flera ljudspår i en video:
-   * Välj **[!UICONTROL Upload Audio Tracks]**.
-   * Navigera till och markera en eller flera .mp3-filer och öppna dem.
-   * För att ljudspår ska kunna visas i popup-listan **[!UICONTROL Select audio or caption]** i mediespelaren *måste* lägga till nödvändig information om *varje* ljudspårsfil som du har lagt till. Välj pennikonen till höger om namnet på en ljudspårsfil. Ange följande obligatoriska uppgifter i dialogrutan **Redigera ljudspår** och välj sedan **[!UICONTROL Save]**. Upprepa den här processen för varje ljudspårsfil som du överförde.
+   1. Klicka på **[!UICONTROL Save]** i den övre högra hörnet av sidan i listrutan **[!UICONTROL Save & Close]**.
+   1. Gör något av följande:
+      * Upprepa den här processen för varje ljudspårsfil som du överför.
+      * Fortsätt till nästa steg om du vill lägga till bildtexter i en video.
 
-     | Metadata för ljudspår | Beskrivning |
-     |--- |--- |
-     | Filnamn | Standardfilnamnet härleds från det ursprungliga filnamnet. Filnamnet kan bara ändras under överföring och kan inte ändras senare. Teckenkraven för filnamn är desamma som för AEM Assets.<br>Samma filnamn kan inte användas för ytterligare ljudspårfiler eller bildtextfiler. |
-     | Språk | Välj språk för ljudspåret. |
-     | Typ | Välj vilken typ av ljudspår du använder.<br>**Original** - Ljudspåret som ursprungligen var kopplat till videon och representerades som `[Original]` i etiketten med språket `English` markerat som standard. **[!UICONTROL Label]** och **[!UICONTROL Language]** kan ändras i dialogrutan **[!UICONTROL Edit Audio Track]**, men standardvärdet är de ursprungliga värdena om den primära videon bearbetas om.<br>**Standard** - Ett tilläggsljudspår för ett annat språk än det ursprungliga språket.<br>**Ljudbeskrivning** - Ett ljudspår som även innehåller en beskrivande berättarröst för icke-verbala åtgärder och gester i videon, vilket gör innehållet mer tillgängligt för personer med nedsatt syn. |
-     | Etikett | Den text som visas som ljudspårets namn i popup-listan **[!UICONTROL Select audio or caption]** i mediespelaren. Etiketten är det kunden ser och motsvarar ett ljudspår. Exempel: `English [Original]`. Etiketten för ljud som är kopplat till en video är som standard `[Original]`. |
+1. Om du vill lägga till en eller flera beskrivningsfiler till en video väljer du vilket av följande användningsfall som passar ditt scenario bäst:
 
-     Om det behövs kan du ändra eller redigera metadata för ljudspåret senare. När videon publiceras återspeglas dessa uppgifter på offentliga URL:er i publicerade videor.
+   |  | Använd skiftläge | Alternativet Skapa beskrivning som ska användas |
+   | --- | --- | --- |
+   | **Alternativ 1** | Jag har mina egna bildtextfiler som finns på de språk jag vill använda.<br>Se **Alternativ 1** nedan. | **[!UICONTROL Upload Files]** |
+   | **Alternativ 2** | Jag vill att AI ska generera bildtextfiler på flera språk.<br>Se **Alternativ 2** nedan. | **[!UICONTROL Convert audio tracks]** |
+   | **Alternativ 3** | Texten i en bildtextfil (`.vtt`) måste korrigeras, överföras igen för att ersätta den gamla `.vtt`-filen och sedan få AI att översätta den korrigerade filen.<br>Se **Alternativ 3** nedan. | **[!UICONTROL Translate caption]** |
 
-1. Välj **[!UICONTROL Save]** i den nedrullningsbara listan **[!UICONTROL Save & Close]** i det övre högra hörnet på sidan. Filerna överförs och metadatabearbetningen börjar, vilket visas i kolumnen **Status** i gränssnittet.
+   ![Alternativ för att skapa bildtexter.](/help/assets/dynamic-media/assets/msma-createcaption.png)
+   *Listrutan Skapa beskrivningar innehåller tre alternativ: Överför filer, Konvertera ljudspår och Översätt bildtext.*
 
-   >[!NOTE]
-   >
-   >Beroende på inställningarna för cachning för instansen kan metadatabearbetningen ta flera minuter innan den visas i förhandsgranskningen och i publicerade URL:er.
++++**Alternativ 1:** *Jag har egna bildtextfiler som finns på de språk som jag vill använda* (**[!UICONTROL Upload Files]** alternativ)
 
-1. (Valfritt) Om du valde **[!UICONTROL Save & Close]** i föregående steg kan du fortfarande visa bearbetningsstatusen för de överförda filerna i stället för att välja **[!UICONTROL Save]**. Se [Visa livscykelstatus för överförda beskrivnings- och ljudspårsfiler](#lifecycle-status-video).
-1. (Valfritt) Förhandsgranska videon innan du publicerar för att kontrollera att beskrivningarna och ljudet fungerar som förväntat. Se [Förhandsgranska en video som har flera bildtexter och ljudspår](#preview-video-audio-subtitle)
+   1. Klicka på **[!UICONTROL Create Caption]** > **[!UICONTROL Upload files]** uppe till höger på sidan.
+   1. Navigera till och markera en eller flera av dina befintliga `.vtt`-filer och öppna dem.
+   1. För att bildtexter ska kunna visas i mediespelaren måste du *lägga till den nödvändiga informationen om* varje *bildtextfil som du överför.* Välj pennikonen till höger om namnet på en bildtextfil. Ange följande obligatoriska information om filen i dialogrutan **Redigera beskrivning**:
+
+      | Bildtextmetadata | Beskrivning |
+      |--- |--- |
+      | Filnamn | Standardfilnamnet härleds från det ursprungliga filnamnet. Filnamnet kan bara ändras under överföring och kan inte ändras senare. Teckenkraven för filnamn är desamma som för AEM Assets.<br>Samma filnamn kan inte användas för ytterligare bildtextfiler och ljudspårsfiler. |
+      | Språk | Välj språk för bildtexten. När en bildtextfil har bearbetats går det inte att redigera det här språkfältet (nedtonat) |
+      | Typ | Välj den typ av bildtext som du använder.<br>**Underrubrik** - Bildtexten som visas med videon som översätter eller transkriberar dialogrutan.<br>**Bildtext** - Bildtexten innehåller bakgrundsljud, talardifferentiering och andra relevanta detaljer, tillsammans med dialog eller transkription, vilket förbättrar tillgängligheten för personer som är döva eller hörselskadade. |
+      | Etikett | Den text som visas för bildtextens namn i popup-listan **[!UICONTROL Select audio or caption]** i mediespelaren. Etiketten är det som kunden ser och som motsvarar ett underrubrik- eller bildtextspår. Exempel: `English (CC)`. |
+
+      Om det behövs kan du ändra eller redigera bildtextens metadata senare. När videon publiceras återspeglas dessa uppgifter på offentliga URL:er i publicerade videor.
+
+   1. Klicka på **[!UICONTROL Save]** i den övre högra hörnet av sidan i listrutan **[!UICONTROL Save & Close]**. Filerna överförs och metadatabearbetningen börjar, vilket visas i kolumnen **Status** i gränssnittet.
+
+      >[!NOTE]
+      >
+      >Beroende på inställningarna för cachning för instansen kan metadatabearbetningen ta flera minuter innan den visas i förhandsgranskningen och i publicerade URL:er.
+
+   1. Om du valde **[!UICONTROL Save & Close]** i föregående steg kan du fortfarande visa bearbetningsstatusen för de överförda filerna i stället för att välja **[!UICONTROL Save]**. Se [Visa livscykelstatus för överförda beskrivnings- och ljudspårsfiler](#lifecycle-status-video).
+   1. Fortsätt till steg 8.
+
++++
+
++++**Alternativ 2:** *Jag vill att AI ska generera mina bildtextfiler på flera språk* (**[!UICONTROL Convert audio tracks]** alternativ)
+
+   1. Klicka **[!UICONTROL Create Caption]** > **[!UICONTROL Convert audio tracks]** i sidans övre högra hörn.
+
+      ![Dialogrutan Konvertera ljudspår.](/help/assets/dynamic-media/assets/msma-convertaudiotracks.png)
+      *I dialogrutan Konvertera ljudspår används AI för att generera bildtextfiler på flera språk.*
+
+   1. Ange följande alternativ i dialogrutan **Konvertera ljudspår**:
+
+      | Alternativ | Beskrivning |
+      |--- |--- |
+      | Ljudspår som ska konverteras | I listrutan väljer du den överförda ljudspårsfilen från vilken du vill att bildtexter ska skapas med hjälp av AI. |
+      | Utdataspråk | I listrutan väljer du ett eller flera språk som du vill att bildtextfilen ska visas på.<br>Klicka på **X** om du vill ta bort ett valt språk.<br>Under videouppspelning visas en lista med språk i mediespelaren i den ordning som du väljer dem här. |
+
+   1. Klicka på **[!UICONTROL Done]**.
+   1. Klicka på **[!UICONTROL Save]** i den övre högra hörnet av sidan i listrutan **[!UICONTROL Save & Close]**.
+   1. Klicka på fliken **[!UICONTROL Captions & Audio tracks]** igen. En eller flera bildtextfiler skapas och bearbetningen börjar, vilket visas i kolumnen **Status** i gränssnittet. Se även [Visa livscykelstatus för överförda beskrivnings- och ljudspårsfiler](#lifecycle-status-video).
+
+      >[!NOTE]
+      >
+      >Beroende på inställningarna för cachning för instansen kan metadatabearbetningen ta flera minuter innan den visas i förhandsgranskningen och i publicerade URL:er.
+
+   1. (Valfritt) Välj pennikonen till höger om namnet på en bildtextfil. I dialogrutan **Redigera beskrivning** kan du redigera följande information om filen:
+
+      | Bildtextmetadata | Beskrivning |
+      | --- | --- |
+      | Typ | Välj den typ av bildtext som du använder.<br>**Underrubrik** - Bildtexten som visas med videon som översätter eller transkriberar dialogrutan.<br>**Bildtext** - Bildtexten innehåller bakgrundsljud och talardifferentiering. Det innehåller även annan relevant information tillsammans med översättningen eller transkriberingen av dialogrutan. Detta gör innehållet mer tillgängligt för personer som är döva eller hörda. |
+      | Etikett | Den text som visas för bildtextens namn i popup-listan **[!UICONTROL Select audio or caption]** i mediespelaren. Etiketten är det som kunden ser och som motsvarar ett underrubrik- eller bildtextspår. Exempel: `English (CC)`. |
+
+      Du kan ändra eller redigera vissa bildtextmetadata senare om det behövs. När videon publiceras återspeglas dessa metadatadetaljer i offentliga URL:er i publicerade videor.
+   1. Fortsätt till steg 8.
+
++++
+
++++**Alternativ 3:** *Text i en bildtextfil (`.vtt`) måste korrigeras, överföras igen för att ersätta den gamla `.vtt`-filen och sedan låta AI översätta den korrigerade filen* (**[!UICONTROL Translate captions]** alternativ)
+
+   1. Klicka på **[!UICONTROL Create Caption]** > **[!UICONTROL Translate captions]**. Det här alternativet är tillgängligt om en eller flera bildtextfiler redan har lagts till och bearbetats.
+
+      ![Dialogrutan Översätt beskrivningar.](/help/assets/dynamic-media/assets/msma-translate-captions.png)
+      *I dialogrutan Översätt bildtexter kan du använda en befintlig bildtextfil för att generera nya bildtextfiler på flera språk.*
+
+   1. Ange följande alternativ i dialogrutan **Översätt bildtext**:
+
+      | Alternativ | Beskrivning |
+      |--- |--- |
+      | Bildtext som ska översättas | I listrutan väljer du en bildtextfil som du vill att bildtexterna ska skapas med hjälp av AI. |
+      | Utdataspråk | I listrutan väljer du ett eller flera språk som du vill att bildtextfilen ska visas på.<br>Klicka på **X** om du vill ta bort ett valt språk.<br>Under videouppspelning visas en lista med språk i mediespelaren i den ordning som du väljer dem här. |
+
+   1. Klicka på **[!UICONTROL Done]**.
+   1. Klicka på **[!UICONTROL Save]** i den övre högra hörnet av sidan i listrutan **[!UICONTROL Save & Close]**.
+   1. Klicka på fliken **[!UICONTROL Captions & Audio tracks]** igen. En eller flera bildtextfiler skapas och bearbetningen börjar, vilket visas i kolumnen **Status** i gränssnittet. Se även [Visa livscykelstatus för överförda beskrivnings- och ljudspårsfiler](#lifecycle-status-video).
+
+      >[!NOTE]
+      >
+      >Beroende på inställningarna för cachning för instansen kan metadatabearbetningen ta flera minuter innan den visas i förhandsgranskningen och i publicerade URL:er.
+
+   1. (Valfritt) Välj pennikonen till höger om namnet på en bildtextfil. I dialogrutan **Redigera beskrivning** kan du redigera följande information om filen:
+
+      | Bildtextmetadata | Beskrivning |
+      | --- | --- |
+      | Typ | Välj den typ av bildtext som du använder.<br>**Underrubrik** - Bildtexten som visas med videon som översätter eller transkriberar dialogrutan.<br>**Bildtext** - Bildtexten innehåller även bakgrundsljud, talardifferentiering. Det innehåller även annan relevant information tillsammans med översättningen eller transkriberingen av dialogrutan. Detta gör innehållet mer tillgängligt för personer som är döva eller hörda. |
+      | Etikett | Den text som visas för bildtextens namn i popup-listan **[!UICONTROL Select audio or caption]** i mediespelaren. Etiketten är det som kunden ser och som motsvarar ett underrubrik- eller bildtextspår. Exempel: `English (CC)`. |
+
+      Du kan ändra eller redigera vissa bildtextmetadata senare om det behövs. När videon publiceras återspeglas dessa metadatadetaljer i offentliga URL:er i publicerade videor.
+
+   1. Fortsätt till steg 8.
+
++++
+
+1. (Valfritt) Förhandsgranska videon innan du publicerar för att kontrollera att beskrivningarna och ljudet fungerar som förväntat. Se [Förhandsgranska en video som har flera bildtexter och ljudspår](#preview-video-audio-subtitle).
 1. Publish videon. Se [Publish-resurser](publishing-dynamicmedia-assets.md).
 
 #### Lägga till beskrivnings- och ljudspårsfiler i en video som redan är publicerad
 
-När du överför ytterligare bildtextfiler eller ljudspårsfiler till en video som redan är publicerad innebär det att dessa filer får statusen `Processed` efter att de har förberetts, efter överföringen. Då kan du förhandsgranska videon i Dynamic Media för att se eller höra de nyligen överförda filerna.
+När du har överfört ytterligare beskrivnings- eller ljudspårsfiler till en publicerad video får de här filerna statusen `Processed` när de har förberetts. Du kan sedan förhandsgranska videon i Dynamic Media för att se eller höra de nya filerna.
 
 Efter förhandsgranskningen måste du *publicera* videon igen för att de nya bildtextfilerna eller ljudspårsfilerna ska kunna publiceras. Efter publiceringen blir bildtexterna eller ljudet tillgängliga med den offentliga Dynamic Media-URL:en.
 
@@ -687,7 +781,7 @@ Den befintliga URL:en med bildtextmodifieraren kan nu läsa in flera bildtexter.
 
 ### Visa livscykelstatus för överförda beskrivnings- och ljudspårsfiler{#lifecycle-status-video}
 
-Du kan följa livscykelstatusen för alla beskrivnings- eller ljudspårsfiler som överförts till den primära videon från fliken **Bildtexter och ljudspår** i **Egenskaper**.
+Du kan följa livscykelstatusen för alla beskrivnings- eller ljudspårsfiler som överförts till den primära videon. Det kan du göra på fliken **Bildtexter och ljudspår** i **Egenskaper**.
 
 **Så här visar du livscykelstatusen för en video:**
 
@@ -704,7 +798,7 @@ Du kan följa livscykelstatusen för alla beskrivnings- eller ljudspårsfiler so
 | Misslyckades | Ett &quot;Misslyckat&quot;-läge betyder att bearbetningen av en beskrivnings- eller ljudspårsfil inte slutfördes. Ta bort beskrivnings- eller ljudspårsfilen och överför igen. |
 | Opublicerad | När en publicerad primär video avpubliceras explicit avpubliceras även eventuella beskrivnings- eller ljudspårsfiler som du har lagt till i videon. |
 
-![Statuskolumnen är markerad för fälten Bildtexter och Ljudspår.](/help/assets/dynamic-media/assets/msma-lifecycle-status2.png)*Livscykelstatus för varje överförd beskrivnings- och ljudspårfil.*
+![Statuskolumnen är markerad för fälten Bildtexter och Ljudspår.](/help/assets/dynamic-media/assets/msma-lifecycle-status.png)*Livscykelstatus för varje överförd beskrivnings- och ljudspårfil.*
 
 ### Ange standardljud för en video som har flera ljudspår
 
@@ -729,7 +823,7 @@ Alla överförda ljudspårsfiler kan dock anges som standardljud som spelas upp 
 1. Välj **[!UICONTROL Set as default]**.
 Välj **[!UICONTROL Replace]** i dialogrutan **Ange som standard**.
 
-   ![Rubriken Ljudspår med namnet på den valda ljudspårsfilen och markerad&quot;Ange som standard&quot;-knapp.](/help/assets/dynamic-media/assets/msma-defaultaudiotrack2.png)*Anger standardljudspåret för en video.*
+   ![Rubriken Ljudspår med namnet på den valda ljudspårsfilen och markerad&quot;Ange som standard&quot;-knapp.](/help/assets/dynamic-media/assets/msma-defaultaudiotrack.png)*Anger standardljudspåret för en video.*
 
 1. Välj **[!UICONTROL Save & Close]** i det övre högra hörnet.
 1. Publish videon. Se [Publish-resurser](publishing-dynamicmedia-assets.md).
@@ -746,7 +840,7 @@ Se [Lägg till Dynamic Media Assets på sidor](/help/assets/dynamic-media/adding
 
 >[!NOTE]
 >
->På standardfliken för förhandsgranskning i Experience Manager visas inte flera bildtexter och ljudspår. Orsaken är att dessa spår är kopplade till Dynamic Media och bara kan visas med förhandsvisningen i Dynamic Media Viewer.
+>På standardfliken Förhandsvisning i Experience Manager visas inte flera beskrivnings- och ljudspår. Orsaken är att dessa spår är kopplade till Dynamic Media och bara kan visas med förhandsvisningen i Dynamic Media Viewer.
 
 **Så här förhandsgranskar du en video som har flera bildtexter och ljudspår:**
 
@@ -760,7 +854,7 @@ Se [Lägg till Dynamic Media Assets på sidor](/help/assets/dynamic-media/adding
 
    ![Val av videovisningsprogram i listrutan Visare.](/help/assets/dynamic-media/assets/msma-dmviewerselected.png)
 
-1. I närheten av det nedre högra hörnet, till vänster om volymikonen, väljer du ikonen för talbubblan och sedan det ljud eller den bildtext som du vill höra eller se eller båda. Om du vill kan du under Bildtexter välja **[!UICONTROL Off]** så att inga bildtexter eller bildtexter visas.
+1. I närheten av det nedre högra hörnet, till vänster om volymikonen, väljer du ikonen för talbubblan och sedan det ljud eller den bildtext som du vill höra eller se eller båda. Om du vill kan du under Bildtexter inaktivera visningen av bildtexter genom att klicka på **[!UICONTROL Off]**.
 
    ![Popup-listan Ljud och beskrivningar i videoredigeraren.](/help/assets/dynamic-media/assets/msma-selectaudiosubtitle.png)*Simulering av en användare som väljer ljud och bildtext för videouppspelning.*
 
@@ -782,17 +876,19 @@ Det går inte att ta bort det ursprungliga ljudspåret som har extraherats från
 1. Välj fliken **[!UICONTROL Captions & Audio Tracks]** på sidan Egenskaper.
 1. Gör något av följande:
 
-   * Bildtexter - Under rubriken **Bildtexter** markerar du en eller flera bildtextfiler som du vill ta bort från videon och väljer sedan **[!UICONTROL Delete]**.
-   * Ljudspår - Under rubriken **Ljudspår** markerar du en eller flera ljudspårsfiler som du vill ta bort från videon och väljer sedan **[!UICONTROL Delete]**.
+   * Bildtexter - Under rubriken **Bildtexter** markerar du en eller flera bildtextfiler som du vill ta bort från videon och klickar sedan på **[!UICONTROL Delete]**.
+   * Ljudspår - Under rubriken **Ljudspår** markerar du en eller flera ljudspårsfiler som du vill ta bort från videon och klickar sedan på **[!UICONTROL Delete]**.
 
-1. Välj **[!UICONTROL OK]** i dialogrutan Ta bort.
+1. Klicka på **[!UICONTROL OK]** i dialogrutan Ta bort.
 1. Publish videon.
 
 ### Hämta beskrivnings- eller ljudspårsfiler som har överförts till en video
 
-Du kan hämta en eller flera beskrivnings- eller ljudspårsfiler som du har överfört för användning med en video. Du kan antingen hämta alla markerade filer som en ZIP-fil eller skapa en separat hämtningsmapp för varje fil.
+Du kan hämta alla beskrivnings- och ljudspårsfiler som du har överfört för en video. Du kan antingen hämta alla markerade filer som `.zip` eller skapa en separat hämtningsmapp för varje fil.
 
-Det går inte att hämta det ursprungliga ljudspåret som har extraherats från en primär fil.
+Det går inte att hämta det ursprungliga ljudspåret som har extraherats från en primär videofil.
+
+**Användningsfall:** Det kan vara nödvändigt att hämta en bildtextfil om du upptäcker ett fel i en `.vtt`-fil. Hämta bara den felaktiga `.vtt`-filen, öppna den i en vanlig textredigerare och gör dina korrigeringar. När du har sparat filen `.vtt` överför du den igen. Använd sedan alternativet **[!UICONTROL Translate Captions]** för att översätta den korrigerade `.vtt`-filen igen.
 
 **Så här hämtar du beskrivnings- eller ljudspårsfiler från en video:**
 
@@ -816,8 +912,16 @@ Det går inte att hämta det ursprungliga ljudspåret som har extraherats från 
 1. Välj **[!UICONTROL Download]**.
 1. Publish videon. Se [Publish-resurser](publishing-dynamicmedia-assets.md).
 
+<!-- ## About AI-generated captions for videos in Dynamic Media
 
+AI-powered captions in Dynamic Media are designed to enhance video accessibility and engagement by automatically generating accurate and synchronized subtitles. This technology uses advanced AI algorithms to transcribe spoken content into text, which is then displayed as captions on the video. Here are some key features.
 
+* **Automatic Transcription:** The AI system transcribes spoken words from an existing audio file into text in real-time, ensuring that captions are generated quickly and accurately.
+* **Multilingual Support:** It supports more than 60 languages, making it easier to reach a global audience. You can even translate your existing captions to different languages.
+* **Enhanced Accessibility:** By providing captions, videos become more accessible to viewers who are deaf or hard of hearing, as well as those who prefer to watch videos with the sound off.
+* **Improved Engagement:** Captions can help retain viewer attention and improve comprehension, especially in noisy environments or when the viewer's native language is different from the video's language.
+
+These features in Dynamic Media make AI-powered video aptions a valuable tool for content creators looking to enhance their video content's accessibility and engagement. -->
 
 ## Lägga till undertexter till video {#adding-captions-to-video}
 
@@ -837,13 +941,13 @@ Se även [Hjälpmedel i Dynamic Media](/help/assets/dynamic-media/accessibility-
 
 Dynamic Media kan konvertera bildtextfiler till JSON-format (JavaScript Object Notation). Den här konverteringen innebär att du kan bädda in JSON-texten på en webbsida som en dold men fullständig utskrift av videon. Sökmotorer kan sedan crawla/indexera innehållet för att göra videoklippen lättare att hitta och ge kunderna mer information om videoinnehållet.
 
-Mer information om hur du använder JSON-funktionen i en URL finns i [Serverar statiskt (icke-bildinnehåll)](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents.html#image-serving-api).
+Mer information om hur du använder JSON-funktionen i en URL finns i [Serverar statiskt (icke-bildinnehåll)](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents#image-serving-api).
 
-**Så här lägger du till bildtexter i videon:**
+**Så här lägger du till bildtexter i en video:**
 
 1. Använd ett program eller en tjänst från tredje part för att skapa videobeskrivningsfilen.
 
-   Kontrollera att filen du skapar följer standarden WebVTT (Web Video Text Tracks). Bildtextens filnamnstillägg är .VTT. Du kan läsa mer om bildtextstandarden WebVTT.
+   Kontrollera att filen du skapar följer standarden WebVTT (Web Video Text Track). Bildtextens filnamnstillägg är `.vtt`. Du kan läsa mer om bildtextstandarden WebVTT.
 
    Se [WebVTT: Textspår för webbvideo ](https://w3c.github.io/webvtt/).
 
@@ -859,12 +963,12 @@ Följ instruktionerna på skärmen för att skapa och spara WebVTT-filen. När d
 
 >[!NOTE]
 >
->För globalt stöd för videobeskrivningar på flera språk kräver WebVTT-standarden att du skapar separata VTT-filer och anropar varje språk som du vill ha stöd för.
+>Om du vill ha globalt stöd för videobeskrivningar på flera språk kräver WebVTT-standarden att du skapar separata `.vtt`-filer och anropar varje språk som du vill ha stöd för.
 
-Vanligtvis vill du ge bildtexten VTT ett namn som är detsamma som videofilen och bifoga den med språkinställningen -EN, -FR eller -DE. Genom att göra det kan det hjälpa dig att automatisera genereringen av video-URL:er med ditt befintliga system för hantering av webbinnehåll.
+Vanligtvis vill du ge bildtexten `.vtt` samma namn som videofilen och bifoga den med språkinställningen -EN, -FR eller -DE. På så sätt kan det hjälpa dig att automatisera genereringen av video-URL:er med ditt befintliga WCM-system.
 
 1. I Experience Manager överför du WebVTT-bildtextfilen till DAM.
-1. Navigera till den *publicerade*-videoresurs som du vill associera med bildtextfilen som du överförde.
+1. Navigera till den *publicerade* videoresursen för att associera den med bildtextfilen som du överförde.
 
    Kom ihåg att URL:er endast går att kopiera *efter* att du har *publicerat* resurserna.
 
@@ -872,7 +976,7 @@ Vanligtvis vill du ge bildtexten VTT ett namn som är detsamma som videofilen oc
 
 1. Gör något av följande:
 
-   * Välj **[!UICONTROL URL]** om du vill visa videoklipp i popup-fönster. I dialogrutan URL-adress markerar och kopierar du URL-adressen till Urklipp och sedan förbi URL-adressen till en enkel textredigerare. Lägg till den kopierade URL:en för videon med följande syntax:
+   * Klicka på knappen **[!UICONTROL URL]** om du vill visa en videoklipp. I dialogrutan URL-adress markerar och kopierar du URL-adressen till Urklipp och sedan förbi URL-adressen till en enkel textredigerare. Lägg till den kopierade URL:en för videon med följande syntax:
 
      `&caption=<server_path>/is/content/<path_to_caption.vtt_file,1>`
 
@@ -918,15 +1022,15 @@ Cost-efficient access to rapidly evolving technology.
 
 I exemplet ovan är `Chapter 1` referensidentifieraren och valfri. Referenstiden på `00:00:000 --> 01:04:364` anger kapitlets start- och sluttid i `00:00:000`-format. De sista tre siffrorna är millisekunder och kan lämnas som `000` om det behövs. Kapiteltiteln för `The bicycle store behind it all` är den faktiska beskrivningen av kapitlets innehåll. Referensidentifieraren, startreferenstiden och kapiteltiteln visas alla i ett popup-fönster i videospelaren när en användare håller muspekaren över en visuell referenspunkt i tidslinjen.
 
-Eftersom du använder ett HTML5-videovisningsprogram bör du kontrollera att den kapitelfil du skapar följer standarden WebVTT (Web Video Text Tracks). Kapitelfilnamnstillägget är .VTT. Du kan läsa mer om bildtextstandarden WebVTT.
+Eftersom du använder ett HTML5-videovisningsprogram bör du kontrollera att den kapitelfil du skapar följer standarden WebVTT (Web Video Text Tracks). Kapitelfiltillägget är `.vtt`. Du kan läsa mer om bildtextstandarden WebVTT.
 
 Se [WebVTT: Textspår för webbvideo ](https://w3c.github.io/webvtt/).
 
-**Så här lägger du till kapitelmarkörer i video:**
+**Så här lägger du till kapitelmarkörer i en video:**
 
-1. Spara VTT-filen i UTF8-kodning så att du slipper problem med teckenåtergivning i kapiteltiteltexten.
+1. Spara filen `.vtt` i UTF8-kodning så att du slipper problem med teckenåtergivning i kapiteltiteltexten.
 
-   Vanligtvis vill du ge den kapitelbaserade VTT-filen samma namn som videofilen och bifoga den med kapitel. Genom att göra det kan det hjälpa dig att automatisera genereringen av video-URL:er med ditt befintliga system för hantering av webbinnehåll.
+   Vanligtvis vill du ge den kapitelbaserade VTT-filen samma namn som videofilen och bifoga den med kapitel. På så sätt kan det hjälpa dig att automatisera genereringen av video-URL:er med ditt befintliga WCM-system.
 1. Ladda upp din WebVTT-kapitelfil i Experience Manager.
 
    Se [Överför resurser](/help/assets/manage-digital-assets.md#uploading-assets).
@@ -936,22 +1040,22 @@ Se [WebVTT: Textspår för webbvideo ](https://w3c.github.io/webvtt/).
    <table>
      <tbody>
       <tr>
-       <td>För en popup-video</td>
+       <td>För en popup-video som visar</td>
        <td>
        <ol>
-       <li>Navigera till den <i>publicerade </i>videoresurs som du vill associera med den överförda kapitelfilen. Kom ihåg att URL:er endast går att kopiera <i>efter</i> att du har <i>publicerat</i> resurserna. Se <a href="/help/assets/dynamic-media/publishing-dynamicmedia-assets.md">Publicera Assets.</a></li>
+       <li>Navigera till den <i>publicerade </i>videoresursen om du vill associera den med den överförda kapitelfilen. Kom ihåg att URL:er endast går att kopiera <i>efter</i> att du har <i>publicerat</i> resurserna. Se <a href="/help/assets/dynamic-media/publishing-dynamicmedia-assets.md">Publicera Assets.</a></li>
        <li>Välj sedan <strong>Visare</strong> i listrutan.</li>
        <li>Markera namnet på visningsförinställningen för videon i den vänstra listen. En förhandsgranskning av videon öppnas på en separat sida.</li>
-       <li>Välj <strong>URL</strong> längst ned i den vänstra listen.</li>
+       <li>Klicka på knappen <strong>URL</strong> längst ned i den vänstra listen.</li>
        <li>I dialogrutan URL-adress markerar och kopierar du URL-adressen till Urklipp och sedan förbi URL-adressen till en enkel textredigerare.</li>
        <li>Lägg till den kopierade URL:en för videon med följande syntax så att du kan associera den med den kopierade URL:en till din kapitelfil:<br /> <br /> <code>&navigation=<<i>full_copied_URL_path_to_chapter_file</i>.vtt></code><br /> </li>
        </ol> </td>
       </tr>
       <tr>
-       <td>För en inbäddad videoupplevelse <br /> </td>
+       <td>Om du vill visa en inbäddad video kan du <br /> </td>
        <td>
        <ol>
-       <li>Navigera till den <i>publicerade </i>videoresurs som du vill associera med den överförda kapitelfilen. Kom ihåg att URL:er endast går att kopiera <i>efter</i> att du har <i>publicerat</i> resurserna. Se <a href="/help/assets/dynamic-media/publishing-dynamicmedia-assets.md">Publicera Assets.</a></li>
+       <li>Navigera till den <i>publicerade </i>videoresursen om du vill associera den med den överförda kapitelfilen. Kom ihåg att URL:er endast går att kopiera <i>efter</i> att du har <i>publicerat</i> resurserna. Se <a href="/help/assets/dynamic-media/publishing-dynamicmedia-assets.md">Publicera Assets.</a></li>
        <li>Välj sedan <strong>Visare</strong> i listrutan.</li>
        <li>Markera namnet på visningsförinställningen för videon i den vänstra listen. En förhandsgranskning av videon öppnas på en separat sida.</li>
        <li>Välj <strong>Bädda in</strong> längst ned i den vänstra listen.</li>
@@ -968,7 +1072,7 @@ Se [WebVTT: Textspår för webbvideo ](https://w3c.github.io/webvtt/).
 
 En videominiatyr är en version med reducerad storlek av en videobildruta eller en bildresurs som representerar videon för kunden. Miniatyrbilden bör uppmuntra kunden att välja videon.
 
-Alla videofilmer i Experience Manager måste ha en associerad miniatyrbild. Du kan inte ta bort en miniatyrbild utan att ersätta den. Som standard används den första bildrutan som miniatyrbild när du överför en video till Experience Manager. Du kan dock anpassa miniatyrbilden för exempelvis varumärke eller visuell sökning. När du anpassar en videominiatyr kan du antingen spela upp videon och pausa den bildruta som du vill använda. Du kan också välja en bildresurs som du redan har överfört och *publicerat* i din Digital Asset Manager.
+Alla videofilmer i Experience Manager måste ha en associerad miniatyrbild. Som standard används den första bildrutan som miniatyrbild när du överför en video till Experience Manager. Du kan dock anpassa miniatyrbilden för varumärke eller visuell sökning. När du anpassar en videominiatyr kan du spela upp videon och pausa den bildruta som du vill använda. Du kan också välja en bildresurs som du redan har överfört och *publicerat* i din Digital Asset Manager.
 
 När miniatyrbilden ändras för en video hoppas miniatyrbildsgenerering över med hjälp av Asset compute-tjänsten när videon bearbetas om.
 
@@ -991,7 +1095,7 @@ Möjligheten att anpassa en videominiatyr är endast tillgänglig efter att du h
 
    * Så här använder du en bildruta från videon som ny miniatyrbild:
 
-      * Välj **[!UICONTROL Select Frame from video]** i verktygsfältet.
+      * Klicka på alternativet **[!UICONTROL Select Frame from video]** i verktygsfältet.
       * Välj uppspelningsknappen och sedan pausknappen för bildrutan som du vill spela in som videons nya miniatyrbild.
 
    * Så här använder du en bildresurs som ny miniatyrbild:
@@ -1097,7 +1201,7 @@ T**o add a custom video thumbnail**,
 
 ## Ändra Dynamic Media URL för Dynamic Media-resurser
 
-Videor som bearbetas i Dynamic Media kan användas i färdiga visningsprogram och även genom direktåtkomst till manifest-URL:er och uppspelning av dem via egna visningsprogram. Nedan följer API:t för hämtning av manifest-URL:er för en video.
+Färdiga visningsprogram kan spela upp videor som har bearbetats i Dynamic Media. Du kan även spela upp dem genom att gå direkt till manifest-URL:erna och använda dina egna anpassade visningsprogram. Nedan följer API:t för hämtning av manifest-URL:er för en video.
 
 ### Om API:t getVideoManifestURI
 
