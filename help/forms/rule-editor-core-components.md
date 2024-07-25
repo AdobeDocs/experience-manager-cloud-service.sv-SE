@@ -5,9 +5,9 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 1292f729-c6eb-4e1b-b84c-c66c89dc53ae
-source-git-commit: 780c68f0c21ef94ff6a73ce991370100b1a88db9
+source-git-commit: 8585ec309b04e04b9a8dcaa43063369d1c9d5d24
 workflow-type: tm+mt
-source-wordcount: '1176'
+source-wordcount: '1174'
 ht-degree: 0%
 
 ---
@@ -91,8 +91,6 @@ Mer information om tillgängliga regeltyper i regelredigeraren finns i [Tillgän
 * Om en regel söker efter ett villkor och utför en åtgärd omedelbart när ett värde anges i ett fält eller när ett fält avslutas, rekommenderar vi att du skriver en regel med en villkorsstyrd konstruktion eller med regeltypen När i fältet som villkoret utvärderas i.
 * Villkoret i regeln När utvärderas när en användare ändrar värdet på objektet som regeln När används på. Men om du vill att åtgärden ska utlösas när värdet ändras på serversidan, till exempel för förifyllning av värdet, rekommenderar vi att du skriver en When-regel som utlöser åtgärden när fältet initieras.
 * När du skriver regler för nedrullningsbara listor, alternativknappar eller kryssruteobjekt fylls alternativen eller värdena för dessa formulärobjekt i förväg i regelredigeraren.
-
-## Nästa steg
 
 Mer information om hur du använder användargränssnittet för att skriva och hantera regler i en regelredigerare finns i artikeln [Användargränssnitt för regelredigeraren för Adaptiv Forms baserat på kärnkomponenter](/help/forms/rule-editor-core-components-user-interface.md).
 

@@ -4,13 +4,13 @@ description: Artikeln beskriver olika användningsfall för en regelredigerare i
 feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
-source-git-commit: c600af3f2e866483cda2426e188dbc104b07688e
+exl-id: 8191e113-f768-4b1e-a191-e3c722f19054
+source-git-commit: 34be2ca89433e36a68e7d8eae42c6bd9ad6e623f
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1114'
 ht-degree: 0%
 
 ---
-
 
 # Olika användningsområden för regelredigeraren
 
@@ -18,9 +18,10 @@ Artikeln innehåller detaljerade exempel på en regelredigerare för ett adaptiv
 Låt oss nu diskutera olika implementeringar för en regelredigerare.
 
 
-## Effektivisera komplexa beräkningar i repeterbara paneler med inbyggda funktioner
+## Effektivisera komplexa beräkningar i repeterbara paneler med funktioner
 
-Med regelredigeraren kan du använda färdiga funktioner som Summa, Min, Max och Förena direkt i fält i upprepningsbara paneler. Detta frigör kraftfull automatisering så att ni kan implementera komplex affärslogik utan anpassad kod.
+Med regelredigeraren kan du använda färdiga funktioner som Summa, Min, Max och Förena direkt i fält i upprepningsbara paneler. Du kan också skicka ett upprepningsbart panelfältvärde till funktionen som accepterar talmatris, strängmatris, boolesk matris osv. Detta frigör kraftfull automatisering så att ni kan implementera komplex affärslogik utan anpassad kod.
+
 Tänk dig ett formulär med en upprepningsbar panel där varje panelinstans samlar in information om det deklarerade värdet för resurser.
 
 ![Upprepningsbart formulär](/help/forms/assets/ootb-function-support-repeatable-panel-form.png)
@@ -32,6 +33,10 @@ Du kan använda funktionen `Sum` för att automatiskt beräkna det totala tillg�
 När du fyller i ett formulär och lägger till instanser för att deklarera resursvärdena, beräknar knappen `Calculate Asset Value` den totala summan av alla deklarerade resursvärden och visar resultatet i textrutan `assetvalue`.
 
 ![Stöd för repeterbara panelfält i OTB-funktioner](/help/forms/assets/ootb-function-support-repeatable-panel-form-preview.png)
+
+>[!NOTE]
+>
+> Om värdet för det repeterbara panelfältet skickas till en funktion som inte accepterar en array, skickas fältvärdet från den sista instansen av den repeterbara panelen till funktionen.
 
 Detta är bara ett exempel! Utforska de tillgängliga [funktionerna](#b-form-objects-and-functions-br) för att förenkla arbetsflöden och förbättra datakvaliteten i formulären.
 

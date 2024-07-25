@@ -5,7 +5,7 @@ feature: Adaptive Forms, Foundation Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 6fd38e9e-435e-415f-83f6-3be177738c00
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: 4cfdabaae23f0dcd1737c73e5edd644bbec6014e
 workflow-type: tm+mt
 source-wordcount: '6292'
 ht-degree: 0%
@@ -561,7 +561,7 @@ Ytterligare `jsdoc` krävs:
 * Om du vill ha anpassad konfiguration och beskrivning
 * Eftersom det finns flera sätt att deklarera en funktion i `JavaScript,` och kommentarer kan du hålla reda på funktionerna.
 
-Regelredigeraren stöder JavaScript ES2015-syntax för skript och anpassade funktioner.
+Regelredigeraren stöder JavaScript ES5-syntax för skript och anpassade funktioner.
 Mer information finns i [jsdoc.app](https://jsdoc.app/).
 
 `jsdoc` taggar som stöds:

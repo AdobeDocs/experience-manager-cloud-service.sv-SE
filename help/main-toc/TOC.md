@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 83cf953853c88c1f4b7149bc63c7f07b1e73faf3
+source-git-commit: f6b4ca55d69de3bb20e2232dbc29d1aadae2cd10
 workflow-type: tm+mt
-source-wordcount: '5283'
+source-wordcount: '5297'
 ht-degree: 3%
 
 ---
@@ -32,6 +32,7 @@ ht-degree: 3%
    + Versionsinformation om AEMaaCS-funktioner {#release-notes}
       + [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md)
       + 2024 {#2024}
+         + [Versionsinformation för 2024.6.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-6-0.md)
          + [Versionsinformation för 2024.5.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-5-0.md)
          + [Versionsinformation för 2024.4.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-4-0.md)
          + [Versionsinformation för 2024.3.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-3-0.md)
@@ -686,6 +687,7 @@ ht-degree: 3%
             + [Skicka ett anpassat formulär till Azure Blob Storage](/help/forms/configure-submit-action-azure-blob-storage.md)
             + [Skicka ett anpassat formulär till Microsoft](/help/forms/configure-submit-action-onedrive.md)
             + [Ansluta ett adaptivt formulär till Microsoft](/help/forms/configure-submit-action-sharepoint.md)
+            + [Konfigurera SharePoint Site med begränsad åtkomst med hjälp av behörighetsomfattning](/help/forms/configure-sharepoint-site-limited-access.md)
             + [Integrera AEM anpassat formulär med AEM arbetsflöde](/help/forms/configure-submit-action-workflow.md)
             + [Konfigurera Skicka till REST-slutpunktsåtgärd för adaptiv Forms](/help/forms/configure-submit-action-restpoint.md)
             + [Konfigurera åtgärden Skicka e-post för ett anpassat formulär](/help/forms/configure-submit-action-send-email.md)

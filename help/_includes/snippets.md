@@ -1,7 +1,7 @@
 ---
-source-git-commit: a35556164ace2245577c3e22da1bc276fc3d98d0
+source-git-commit: 4cfdabaae23f0dcd1737c73e5edd644bbec6014e
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '662'
 ht-degree: 0%
 
 ---
@@ -100,7 +100,7 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
    </tr>
    <tr>
     <td>ES10-support </td>
-    <td>ES10 stöds inte ännu. </td>
+    <td>ES10 stöds inte ännu. Det har bara stöd för JavaScript-funktioner i ES5. </td>
     <td>Stöd för moderna JavaScript-funktioner, t.ex. låt- och pilfunktioner (ES10-stöd), i anpassade funktioner. 
    </td>
    </tr>

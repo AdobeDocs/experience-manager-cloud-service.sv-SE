@@ -6,9 +6,9 @@ feature: Adaptive Forms, Core Components
 exl-id: e925a750-5fb5-4950-afd3-78551eec985d
 title: "Hur konfigurerar jag en Skicka-åtgärd för ett anpassat formulär?"
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: 5e1d08e82cafc3a8a715653727f42ce0048f2b1f
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '1048'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,12 @@ Så här ansluter du AEM Forms till din Microsoft® Sharepoint Document Library-
 1. Ange **[!UICONTROL Title]**, **[!UICONTROL Client ID]**, **[!UICONTROL Client Secret]** och **[!UICONTROL OAuth URL]**. Mer information om hur du hämtar klient-ID, klienthemlighet, klient-ID för OAuth URL finns i [Microsoft®-dokumentation](https://learn.microsoft.com/en-us/graph/auth-register-app-v2).
    * Du kan hämta `Client ID` och `Client Secret` för din app från Microsoft® Azure-portalen.
    * Lägg till omdirigerings-URI som `https://[author-instance]/libs/cq/sharepoint/content/configurations/wizard.html` i Microsoft® Azure-portalen. Ersätt `[author-instance]` med URL:en för din Author-instans.
-   * Lägg till API-behörigheterna `offline_access` och `Sites.Manage.All` för att ge läs-/skrivbehörigheter.
+   * Lägg till API-behörigheterna `offline_access` och `Sites.Manage.All` för att ge läs-/skrivbehörigheter. `Sites.Manage.All` är ett behörighetsområde i Microsoft Graph API som ger ett program möjlighet att hantera alla aspekter av SharePoint Sites, till exempel att ta bort eller ändra platser.
+
+     >[!NOTE]
+     >
+     > Du kan också [konfigurera SharePoint-webbplatser med begränsad åtkomst](/help/forms/configure-sharepoint-site-limited-access.md) genom att använda behörighetsomfånget `Sites.Selected` i Microsoft Graph API. `Sites.Selected` är ett behörighetsområde i Microsoft Graph API som ger mer detaljerad och begränsad åtkomst till SharePoint webbplatser.
+
    * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` för din app från Microsoft® Azure-portalen.
 
    >[!NOTE]
