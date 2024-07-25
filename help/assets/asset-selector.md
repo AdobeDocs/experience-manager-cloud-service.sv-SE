@@ -4,9 +4,9 @@ description: Använd resursväljaren för att söka efter, hitta och hämta resu
 contentOwner: KK
 role: Admin,User
 exl-id: 5f962162-ad6f-4888-8b39-bf5632f4f298
-source-git-commit: 04560cd5b15ceb79b6a480c60e78e061276a39eb
+source-git-commit: cdb35a56c1337012fa099135470b91e162e8e902
 workflow-type: tm+mt
-source-wordcount: '4540'
+source-wordcount: '5318'
 ht-degree: 0%
 
 ---
@@ -107,6 +107,7 @@ Du kan integrera resursväljaren med olika program som:
 
 * [Integrera resursväljare med ett  [!DNL Adobe] program](#adobe-app-integration-vanilla)
 * [Integrera resursväljare med andra program än Adobe](#adobe-non-app-integration)
+* [Integrering av Dynamic Media med OpenAPI-funktioner](#adobe-app-integration-polaris)
 
 >[!BEGINTABS]
 
@@ -386,6 +387,171 @@ Resursväljaren återges på behållarelementet `<div>`, vilket anges på *rad 7
 >
 >Om du har integrerat resursväljare med hjälp av arbetsflödet Registrera dig för inloggning men fortfarande inte kan komma åt leveransdatabasen, kontrollerar du att cookies i webbläsaren har rensats bort. Annars får du ett `invalid_credentials All session cookies are empty`-fel i konsolen.
 
++++
+
+<!--Integration with Polaris application content starts here-->
+
+>[!TAB Integrering för Dynamic Media med OpenAPI-funktioner]
+
+### Förutsättningar {#prereqs-polaris}
+
+Använd följande förutsättningar om du integrerar resursväljare med Dynamic Media med OpenAPI-funktioner:
+
+* [Kommunikationsmetoder](#prereqs)
+* För att få tillgång till Dynamic Media med OpenAPI-funktioner måste du ha licenser för:
+   * Assets-arkiv (till exempel Experience Manager Assets as a Cloud Service).
+   * AEM Dynamic Media.
+* Endast [godkända resurser](#approved-assets.md) är tillgängliga för användning för att säkerställa varumärkets enhetlighet.
+
+### Integrering av Dynamic Media med OpenAPI-funktioner{#adobe-app-integration-polaris}
+
+Integreringen av resursväljaren med Dynamic Media OpenAPI-processen omfattar olika steg som skapar en anpassad URL för dynamiska media eller är klar att välja URL för dynamiska media osv.
+
++++**Integrera resursväljare för Dynamic Media med OpenAPI-funktioner**
+
+Egenskaperna `rootPath` och `path` ska inte ingå i Dynamic Media med OpenAPI-funktioner. I stället kan du konfigurera egenskapen `aemTierType`. Här följer syntaxen för konfiguration:
+
+```
+aemTierType:[1: "delivery"]
+```
+
+Med den här konfigurationen kan du visa alla godkända resurser utan mappar eller som en platt struktur. Mer information finns i `aemTierType`-egenskapen under [Resursväljaregenskaper](#asset-selector-properties)
+
++++
+
++++**Skapa en dynamisk leverans-URL från godkända resurser**
+När du har konfigurerat resursväljaren används ett objektschema för att skapa en dynamisk leverans-URL från de valda resurserna.
+Ett schema med ett objekt från en array med objekt som tas emot när en resurs väljs:
+
+```
+{
+"dc:format": "image/jpeg",
+"repo:assetId": "urn:aaid:aem:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+"repo:name": "image-7.jpg",
+"repo:repositoryId": "delivery-pxxxx-exxxxxx.adobe.com",
+...
+}
+```
+
+Alla markerade resurser bärs av funktionen `handleSelection` som fungerar som ett JSON-objekt. Exempel: `JsonObj`. Den dynamiska leverans-URL:en skapas genom att följande bärare kombineras:
+
+| Objekt | JSON |
+|---|---|
+| Värd | `assetJsonObj["repo:repositoryId"]` |
+| API-rot | `/adobe/dynamicmedia/deliver` |
+| asset-id | `assetJsonObj["repo:assetId"]` |
+| seo-name | `assetJsonObj["repo:name"].split(".").slice(0,-1).join(".")` |
+| format | `.jpg` |
+
+**Godkänd API-specifikation för resursleverans**
+
+URL:
+`https://<delivery-api-host>/adobe/dynamicmedia/deliver/<asset-id>/<seo-name>.<format>?<image-modification-query-parameters>`
+
+Var,
+
+* Värddatorn är `https://delivery-pxxxxx-exxxxxx.adobe.com`
+* API-roten är `"/adobe/dynamicmedia/deliver"`
+* `<asset-id>` är tillgångsidentifierare
+* `<seo-name>` är namnet på en resurs
+* `<format>` är utdataformatet
+* `<image modification query parameters>` som stöd av den godkända resursens leverans-API-specifikation
+
+**Godkänt leverans-API för resurser**
+
+Den dynamiska leverans-URL:en har följande syntax:
+`https://<delivery-api-host>/adobe/assets/deliver/<asset-id>/<seo-name>`, där,
+
+* Värddatorn är `https://delivery-pxxxxx-exxxxxx.adobe.com`
+* API-roten för ursprunglig återgivningsleverans är `"/adobe/assets/deliver"`
+* `<asset-id>` är tillgångsidentifierare
+* `<seo-name>` är namnet på resursen som kan ha ett tillägg eller inte
+
++++
+
++++**Klar att välja dynamisk leverans-URL**
+Alla markerade resurser bärs av funktionen `handleSelection` som fungerar som ett JSON-objekt. Exempel: `JsonObj`. Den dynamiska leverans-URL:en skapas genom att följande bärare kombineras:
+
+| Objekt | JSON |
+|---|---|
+| Värd | `assetJsonObj["repo:repositoryId"]` |
+| API-rot | `/adobe/assets/deliver` |
+| asset-id | `assetJsonObj["repo:assetId"]` |
+| seo-name | `assetJsonObj["repo:name"]` |
+
+Nedan visas två sätt att gå igenom JSON-objektet:
+
+![Dynamisk leverans-URL](assets/dynamic-delivery-url.png)
+
+* **Miniatyrbild:** Miniatyrbilder kan vara bilder och resurser kan vara PDF, video, bilder och så vidare. Även om du kan använda attributen height och width för en resurs miniatyrbild som dynamisk leveransåtergivning.
+Följande uppsättning återgivningar kan användas för resurser av typen PDF:
+När du har valt en PDF-fil i en sidospark visas nedanstående information i urvalssammanhanget. Här nedan beskrivs hur du går igenom JSON-objektet:
+
+  <!--![Thumbnail dynamic delivery url](image-1.png)-->
+
+  Du kan referera till `selection[0].....selection[4]` för arrayen med återgivningslänk från skärmbilden ovan. Nyckelegenskaperna för en av miniatyrbildsrenderingarna är till exempel:
+
+  ```
+  { 
+      "height": 319, 
+      "width": 319, 
+      "href": "https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8560f3a1-d9cf-429d-a8b8-d81084a42d41/as/algorithm design.jpg?accept-experimental=1&width=319&height=319&preferwebp=true", 
+      "type": "image/webp" 
+  } 
+  ```
+
+På skärmbilden ovan måste leveransadressen för den ursprungliga återgivningen i PDF införlivas i målupplevelsen om PDF krävs och inte i miniatyrbilden. Exempel: `https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8560f3a1-d9cf-429d-a8b8-d81084a42d41/original/as/algorithm design.pdf?accept-experimental=1`
+
+* **Video:** Du kan använda videospelarens URL för videomaterialet som använder en inbäddad iFrame. Du kan använda följande arrayåtergivningar i målupplevelsen:
+  <!--![Video dynamic delivery url](image.png)-->
+
+  ```
+  { 
+      "height": 319, 
+      "width": 319, 
+      "href": "https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:2fdef732-a452-45a8-b58b-09df1a5173cd/as/asDragDrop.2.jpg?accept-experimental=1&width=319&height=319&preferwebp=true", 
+      "type": "image/webp" 
+  } 
+  ```
+
+  Du kan referera till `selection[0].....selection[4]` för arrayen med återgivningslänk från skärmbilden ovan. Nyckelegenskaperna för en av miniatyrbildsrenderingarna är till exempel:
+
+  Kodfragmentet i skärmbilden ovan är ett exempel på en videoresurs. Den innehåller en array med återgivningslänkar. `selection[5]` i utdraget är ett exempel på en miniatyrbild som kan användas som platshållare för videominiatyrbilden i målupplevelsen. `selection[5]` i återgivningens array är för videospelaren. Detta fungerar som HTML och kan anges som `src` för iframe. Den stöder strömning med adaptiv bithastighet, som är webboptimerad leverans av videon.
+
+  I exemplet ovan är videospelarens URL `https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:2fdef732-a452-45a8-b58b-09df1a5173cd/play?accept-experimental=1`
+
++++**Användargränssnittet Resursväljare för Dynamic Media med OpenAPI-funktioner**
+
+Efter integrering med Adobe Micro-Frontend Asset Selector kan du bara se resursstrukturen för alla godkända resurser som är tillgängliga i resurskatalogen för Experience Manager.
+
+![Dynamic Media med OpenAPI-funktioner, användargränssnitt](assets/polaris-ui.png)
+
+* **A**: [Visa/Göm panel](#hide-show-panel)
+* **B**: [Assets](#repository)
+* **C**: [Sortering](#sorting)
+* **D**: [Filter](#filters)
+* **E**: [Sökfältet](#search-bar)
+* **F**: [Sortera i stigande eller fallande ordning](#sorting)
+* **G**: Avbryt markering
+* **H**: Markera en eller flera resurser
+
++++
+
++++**Konfigurera anpassade filter**
+Med resursväljaren för Dynamic Media med OpenAPI-funktioner kan du konfigurera anpassade egenskaper och de filter som baseras på dem. Egenskapen `filterSchema` används för att konfigurera sådana egenskaper. Anpassningen kan visas som `metadata.<metadata bucket>.<property name>.` som filtren kan konfigureras mot, där,
+
+* `metadata` är information om en resurs
+* `embedded` är den statiska parametern som används för konfiguration, och
+* `<propertyname>` är det filternamn som du konfigurerar
+
+Egenskaper som definieras på `jcr:content/metadata/`-nivå visas som `metadata.<metadata bucket>.<property name>.` för de filter som du vill konfigurera för konfigurationen.
+
+I Resursväljaren för Dynamic Media med OpenAPI-funktioner konverteras till exempel en egenskap på `asset jcr:content/metadata/client_name:market` till `metadata.embedded.client_name:market` för filterkonfiguration.
+
+En engångsaktivitet måste göras för att hämta namnet. Gör ett sök-API-anrop för resursen och hämta egenskapsnamnet (i huvudsak haken).
+
++++
+
 >[!ENDTABS]
 
 ## Egenskaper för resursväljare {#asset-selector-properties}
@@ -398,8 +564,6 @@ Du kan använda egenskaperna för resursväljaren för att anpassa hur resursvä
 | *imsOrg* | Sträng | Ja | | IMS-ID (Adobe Identity Management System) som tilldelas när [!DNL Adobe Experience Manager] etableras som [!DNL Cloud Service] för din organisation. Nyckeln `imsOrg` krävs för att autentisera om organisationen du försöker få åtkomst till är under Adobe IMS eller inte. |
 | *imsToken* | Sträng | Nej | | IMS-innehavartoken används för autentisering. `imsToken` krävs om du använder ett [!DNL Adobe]-program för integreringen. |
 | *apiKey* | Sträng | Nej | | API-nyckel som används för åtkomst till AEM. `apiKey` krävs om du använder en [!DNL Adobe]-programintegrering. |
-| *rootPath* | Sträng | Nej | /content/dam/ | Mappsökväg där resursväljaren visar dina resurser. `rootPath` kan också användas som inkapsling. Med följande sökväg, `/content/dam/marketing/subfolder/`, tillåter resursväljaren inte att du går igenom någon överordnad mapp, utan bara de underordnade mapparna. |
-| *sökväg* | Sträng | Nej | | Sökväg som används för att navigera till en viss katalog med resurser när resursväljaren återges. |
 | *filterSchema* | Array | Nej | | Modell som används för att konfigurera filteregenskaper. Detta är användbart när du vill begränsa vissa filteralternativ i Resursväljaren. |
 | *filterFormProps* | Objekt | Nej | | Ange de filteregenskaper som du behöver använda för att förfina sökningen. För! Exempel: MIME-typ JPG, PNG, GIF. |
 | *selectedAssets* | Matris `<Object>` | Nej |                 | Ange valt Assets när resursväljaren återges. Det krävs en array med objekt som innehåller en id-egenskap för resurserna. `[{id: 'urn:234}, {id: 'urn:555'}]` En resurs måste till exempel vara tillgänglig i den aktuella katalogen. Om du behöver använda en annan katalog anger du även ett värde för egenskapen `path`. |
@@ -427,6 +591,8 @@ Du kan använda egenskaperna för resursväljaren för att anpassa hur resursvä
 | *expirationOptions* | Funktion | | | Du kan använda mellan följande två egenskaper: **getExpiryStatus** som anger status för en utgången resurs. Funktionen returnerar `EXPIRED`, `EXPIRING_SOON` eller `NOT_EXPIRED` baserat på förfallodatumet för en resurs som du anger. Se [anpassa utgångna resurser](#customize-expired-assets). Dessutom kan du använda **allowSelectionAndDrag** där värdet för funktionen antingen kan vara `true` eller `false`. När värdet är `false` kan resursen som har gått ut inte markeras eller dras på arbetsytan. |
 | *showToast* | | Nej | | Det gör det möjligt för resursväljaren att visa ett anpassat popup-meddelande för den utgångna resursen. |
 <!--
+| *rootPath* | String | No | /content/dam/ | Folder path from which Asset Selector displays your assets. `rootPath` can also be used in the form of encapsulation. For example, given the following path, `/content/dam/marketing/subfolder/`, Asset Selector does not allow you to traverse through any parent folder, but only displays the children folders. |
+| *path* | String | No | | Path that is used to navigate to a specific directory of assets when the Asset Selector is rendered. |
 | *expirationDate* | Function | No | | This function is used to set the usability period of an asset. |
 | *disableDefaultBehaviour* | Boolean | No | False | It is a function that is used to enable or disable the selection of an expired asset. You can customize the default behavior of an asset that is set to expire. See [customize expired assets](#customize-expired-assets). |
 -->
