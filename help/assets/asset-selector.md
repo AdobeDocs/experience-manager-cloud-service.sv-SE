@@ -4,9 +4,9 @@ description: Använd resursväljaren för att söka efter, hitta och hämta resu
 contentOwner: KK
 role: Admin,User
 exl-id: 5f962162-ad6f-4888-8b39-bf5632f4f298
-source-git-commit: a2646fa72788cb887066751efb171e92b597f4f5
+source-git-commit: 04560cd5b15ceb79b6a480c60e78e061276a39eb
 workflow-type: tm+mt
-source-wordcount: '4529'
+source-wordcount: '4540'
 ht-degree: 0%
 
 ---
@@ -424,8 +424,7 @@ Du kan använda egenskaperna för resursväljaren för att anpassa hur resursvä
 | *dialogSize* | liten, medelstor, stor, helskärmsbild eller helskärmsövergång | Sträng | Valfritt | Du kan styra layouten genom att ange dess storlek med de angivna alternativen. |
 | *colorScheme* | Ljus eller mörk | Nej | | Den här egenskapen används för att ange temat för ett resursväljarprogram. Du kan välja mellan ljust eller mörkt tema. |
 | *filterRepoList* | Funktion | Nej |  | Du kan använda callback-funktionen `filterRepoList` som anropar Experience Manager-databasen och returnerar en filtrerad lista med databaser. |
-| *getExpiryStatus* | Funktion | Nej | | Den ger status för en utgången tillgång. Funktionen returnerar `EXPIRED`, `EXPIRING_SOON` eller `NOT_EXPIRED` baserat på förfallodatumet för en resurs som du anger. Se [anpassa utgångna resurser](#customize-expired-assets). |
-| *allowSelectionAndDrag* | Boolean | Nej | Falskt | Funktionens värde kan vara `true` eller `false`. När värdet är `false` kan resursen som har gått ut inte markeras eller dras på arbetsytan. |
+| *expirationOptions* | Funktion | | | Du kan använda mellan följande två egenskaper: **getExpiryStatus** som anger status för en utgången resurs. Funktionen returnerar `EXPIRED`, `EXPIRING_SOON` eller `NOT_EXPIRED` baserat på förfallodatumet för en resurs som du anger. Se [anpassa utgångna resurser](#customize-expired-assets). Dessutom kan du använda **allowSelectionAndDrag** där värdet för funktionen antingen kan vara `true` eller `false`. När värdet är `false` kan resursen som har gått ut inte markeras eller dras på arbetsytan. |
 | *showToast* | | Nej | | Det gör det möjligt för resursväljaren att visa ett anpassat popup-meddelande för den utgångna resursen. |
 <!--
 | *expirationDate* | Function | No | | This function is used to set the usability period of an asset. |
