@@ -4,9 +4,9 @@ description: Lär dig hur du använder innehållsfragment i Adobe Experience Man
 feature: Headless, Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
 role: Admin, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 4492536120989423b639bbb75105568a9c328507
 workflow-type: tm+mt
-source-wordcount: '5400'
+source-wordcount: '5469'
 ht-degree: 0%
 
 ---
@@ -1155,6 +1155,14 @@ Om du vill komma åt GraphQL-slutpunkten från en extern webbplats måste du kon
 
 Se [Autentisering för AEM GraphQL-frågor om innehållsfragment](/help/headless/security/authentication.md).
 
+## Automatiserad testning {#automated-testing}
+
+När du kör en distributionsprocess i AEM Cloud Manager körs automatiska tester under körningen.
+
+För att få korrekta resultat bör din AEM as a Cloud Service **Stage** -miljö spegla din **Production** -miljö så nära som möjligt. Detta är särskilt viktigt för innehåll.
+
+Du kan göra detta genom att använda AEM as a Cloud Service [innehållskopieringsverktyg](/help/implementing/developing/tools/content-copy.md) för att kopiera ditt produktionsinnehåll till scenmiljön.
+
 ## Begränsningar {#limitations}
 
 För att skydda dig mot potentiella problem finns det standardbegränsningar för dina frågor:
@@ -1200,4 +1208,4 @@ AEM planerar att investera i det AEM GraphQL-API:t.*&quot;
 
 ## Självstudiekurs - Komma igång med AEM Headless och GraphQL {#tutorial}
 
-Söker du en praktisk självstudiekurs? Ta en titt på [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - en komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll med hjälp av AEM GraphQL API:er och som används av en extern app i ett headless CMS-scenario.
+Söker du en praktisk självstudiekurs? Ta en titt på [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - en komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll med hjälp av AEM GraphQL API:er och som används av en extern app, i ett headless CMS-scenario.
