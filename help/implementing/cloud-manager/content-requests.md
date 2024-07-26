@@ -5,9 +5,9 @@ exl-id: 3666328a-79a7-4dd7-b952-38bb60f0967d
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: a1b0d37b2f2f4e58b491651cb8e6504a6909393e
+source-git-commit: af2985f29cb867162061bbac465b19637aa0ecad
 workflow-type: tm+mt
-source-wordcount: '1381'
+source-wordcount: '1405'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Det finns regler för att utesluta välkända botar, inklusive välkända tjäns
 | --- | --- | --- |
 | HTTP-kod 100-299 | Ingår | Det här är vanliga förfrågningar som levererar allt eller delar av innehåll. |
 | HTTP-bibliotek för automatisering | Ingår | Exempel:<br> ・ Amazon CloudFront<br> ・ Apache Http Client<br> ・ asynkron Http-klient<br> ・ Axios<br> ・ Azureus<br> ・ Curl<br> ・ GitHub Node Fetch<br> ‡ Guzzle<br> avslutad Go-http-client<br> avslutning minus Chrome<br> avslutad Java™ Klient <br> avslutning Jersey <br> bådadera Node Oembed <br> avslutad http <br> bågförfrågan <br> bågförfrågningar <br> avslutad Wget <br> avslutad WinHTTP |
-| Verktyg för övervakning och hälsokontroll | Ingår | Dessa konfigureras av kunden för att övervaka en viss aspekt av webbplatsen. Exempel: tillgänglighet eller verkliga användarprestanda. Använd slutpunkten `/system/probes/health` och inte de faktiska HTML-sidorna från webbplatsen.<br>Exempel:<br> ・ Amazon-Route53-Health-Check-Service<br> ・ EyeMonIT_bot_version_0.1_[(https://www.eyemon.it/)](https://www.eyemon.it/)<br> ・ Investis-Site24x7<br> ・ Mozilla/5.0+(compatible; UptimeRobot/2.0; [https://uptimerobot.com/](https://uptimerobot.com/)) <br> ・ ThousandEyes-Dragonfly-x1<br> ・ OmtrBot/1.0<br> ・ WebMon/2.0.0 |
+| Verktyg för övervakning och hälsokontroll | Ingår | Dessa konfigureras av kunden för att övervaka en viss aspekt av webbplatsen. Exempel: tillgänglighet eller verkliga användarprestanda.Om dessa är avsedda för specifika slutpunkter som /system/probes/health för hälsokontroller rekommenderar vi att du använder `/system/probes/health`-slutpunkten och inte de faktiska HTML-sidorna från webbplatsen.[Se nedan](#excluded-content-request)<br>Exempel:<br> ・ Amazon-Route53-Health-Check-Service<br> ・ EyeMonIT_bot_version_0.1_[(https://www.eyemon.it/)](https://www.eyemon.it/)<br> ・ Investis-Site24x7<br> ・ Mozilla/5.0+(compatible; UptimeRobot/2.0; [8} https://uptimerobot.com/](https://uptimerobot.com/))<br> ・ ThousandEyes-Dragonfly-x1<br> ・ OmtrBot/1.0<br> ・ WebMon/2.0.0 |
 | `<link rel="prefetch">` förfrågningar | Ingår | För att öka hastigheten vid inläsning av nästa sida kan kunderna låta webbläsaren läsa in en uppsättning sidor innan användaren klickar på länken, så att de redan finns i cachen. *Obs! Detta ökar trafiken avsevärt*, beroende på hur många av dessa sidor som har förhämtats. |
 | Trafik som blockerar rapportering från Adobe Analytics eller Google Analytics | Ingår | Det är vanligare att besökare på webbplatser har installerat sekretessprogram (annonsblockerare osv.) som påverkar Google Analytics eller Adobe Analytics precision. AEM as a Cloud Service räknar förfrågningar på den första ingångspunkten till den infrastruktur som drivs av Adobe och inte på klientsidan. |
 
@@ -73,7 +73,7 @@ Se även [License Dashboard](/help/implementing/cloud-manager/license-dashboard.
 | Begäranden som går att /libs/* | Exkluderad | AEM interna JSON-begäranden, till exempel CSRF-token som inte är fakturerbar. |
 | Trafik från DDOS-attacker | Exkluderad | DDOS-skydd. AEM identifierar automatiskt vissa av DDOS-attackerna och blockerar dem. DDOS-attacker om de upptäcks är inte fakturerbara. |
 | AEM as a Cloud Service New Relic Monitoring | Exkluderad | AEM as a Cloud Service global övervakning. |
-| URL för att kunderna ska kunna övervaka sina Cloud Service | Exkluderad | Rekommenderad URL för extern övervakning av tillgängligheten.<br><br>`/system/probes/health` |
+| URL för att kunderna ska kunna övervaka sina Cloud Service | Exkluderad | Vi rekommenderar att du använder URL för att externt övervaka tillgänglighets- eller hälsokontrollen.<br><br>`/system/probes/health` |
 | AEM as a Cloud Service Pod Warm-up Service | Exkluderad |
 | Agent: skyline-service-warmup/1.* |
 | Välkända sökmotorer, sociala nätverk och HTTP-bibliotek (taggade med Fastly) | Exkluderad | Välkända tjänster som regelbundet besöker webbplatsen för att uppdatera deras sökindex eller tjänst:<br><br>Exempel:<br> ・ AddSearchBot<br> ・ AhrefsBot<br> ・ Applebot<br> ・ Ask Jeeves Corporate Spider<br> ・ Bingbot<br> ・ BingPreview<br> ・ BLEXBot<br> ‡ BuiltWith<br> pider<br> ;CrawlerKengo<br> avslutning Facebookexternalhit<br> avslutning Google AdsBot<br> avslutning Google AdsBot Mobile<br> avslutad Googlebot<br> kommande Googlebot Mobile<br> avslutad lspider<br> senare LucidWorks<br> avslutad MJ 12bot<br> avslutning <br> avslutning Pinterest<br> avslutningsprisBot <br> avslutad SiteImprove<br> avslutad StashBot <br> avslutad StatusCake <br> avslutad YandexBot |
