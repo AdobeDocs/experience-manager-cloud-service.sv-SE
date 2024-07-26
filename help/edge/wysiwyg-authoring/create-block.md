@@ -4,7 +4,7 @@ description: Lär dig hur du skapar block som är instrumenterade för användni
 exl-id: 65a5600a-8d16-4943-b3cd-fe2eee1b4abf
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 364acc6a76261a725a46fe3e1ef173bc03b5a289
+source-git-commit: 772fcc2688edb57eca3b84689de1d1c47f87dcd0
 workflow-type: tm+mt
 source-wordcount: '1401'
 ht-degree: 0%
@@ -96,14 +96,14 @@ Följande exempel på offertblock följer den här metoden.
   "id": "quote",
   "fields": [
      {
-       "component": "text-area",
+       "component": "richtext",
        "name": "quote",
        "value": "",
        "label": "Quote",
        "valueType": "string"
      },
      {
-       "component": "text-input",
+       "component": "text",
        "valueType": "string",
        "name": "author",
        "label": "Author",
