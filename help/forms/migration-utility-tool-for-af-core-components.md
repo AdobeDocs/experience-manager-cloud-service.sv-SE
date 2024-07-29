@@ -8,14 +8,16 @@ hide: true
 hidefromtoc: true
 exl-id: ee71a576-96a7-4c81-b3a3-1d678f010cba
 feature: Adaptive Forms, Core Components
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: 5d8f4d5d628b090b8bf54de0f2d9d62c02544522
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '959'
 ht-degree: 0%
 
 ---
 
 # Introduktion
+
+<span class="preview"> Funktionen är tillgänglig i ett program för tidig användning. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
 Forms Conversion Utility, som ingår i sviten [AEM Modernize Tool](https://opensource.adobe.com/aem-modernize-Tools/), hjälper dig att enkelt konvertera adaptiv Forms som skapats med äldre Foundation Components till formulär som utnyttjar de moderna, stödda funktionerna i Core Components.
 
