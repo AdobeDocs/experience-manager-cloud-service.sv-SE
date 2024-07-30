@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Video Profiles,Best Practices
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 9a3678e8e28806c3c7574d2cfd047c30537d7f41
+source-git-commit: af7793ca7ad3d11bfff980a4d00f537fd0871755
 workflow-type: tm+mt
 source-wordcount: '10321'
 ht-degree: 0%
@@ -909,6 +909,7 @@ Det går inte att hämta det ursprungliga ljudspåret som har extraherats från 
    | Skapa en separat mapp för varje resurs | Skapa en mapp för varje bildtextfil eller ljudspårsfil som du valde för hämtning. |
    | E-post | Använd ditt standardprogram för e-post för att skicka ZIP-filen till en angiven e-postadress. |
    | Assets | Anger antalet filer som du hämtar och den sammanlagda storleken för alla markerade filer. Om du avmarkerar det här alternativet tonas knappen **[!UICONTROL Download]** ned (inaktiveras), vilket förhindrar att du hämtar någon fil. |
+
 1. Välj **[!UICONTROL Download]**.
 1. Publish videon. Se [Publish-resurser](publishing-dynamicmedia-assets.md).
 

@@ -4,7 +4,7 @@ description: På den här sidan beskrivs hur du installerar och konfigurerar spe
 exl-id: a022738a-c543-4629-a244-f70fa294fe7f
 feature: Developing Screens
 role: Admin, Developer, User
-source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
+source-git-commit: af7793ca7ad3d11bfff980a4d00f537fd0871755
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
@@ -71,10 +71,12 @@ Följande egenskaper ingår i varje `ping`:
 | lastContentChange {string} | tidsstämpel för den senaste innehållsändringen |
 
 >[!NOTE]
+>
 >Du kan även aktivera en mer avancerad egenskap i spelarens inställningar (Aktivera övervakning av uppspelning):
->|Egenskap|Beskrivning|
->|—|—|
->|isContentRendering {boolean}|true om grafikprocessorn kan bekräfta att det spelar upp faktiskt innehåll (baserat på pixelanalys)|
+>
+>| Egenskap | Beskrivning |
+>|---|---|
+>| isContentRendering {boolean} | true om grafikprocessorn kan bekräfta att det spelar upp faktiskt innehåll (baserat på pixelanalys) |
 
 ### Begränsningar {#limitations}
 

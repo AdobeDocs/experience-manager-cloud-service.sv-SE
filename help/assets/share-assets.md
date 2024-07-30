@@ -4,7 +4,7 @@ description: Distribuera dina digitala resurser med metoder som att dela som en 
 feature: Asset Management, Collaboration, Asset Distribution
 role: Admin, User
 exl-id: 14e897cc-75c2-42bd-8563-1f5dd23642a0
-source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
+source-git-commit: af7793ca7ad3d11bfff980a4d00f537fd0871755
 workflow-type: tm+mt
 source-wordcount: '1771'
 ht-degree: 0%
@@ -121,6 +121,7 @@ E-postmallen kan anpassas med oformaterad text eller HTML. Den redigerbara malll
 | `${emailMessage}` | E-postbrödtext |
 | `${pagePath}` | URL för den delade länken |
 | `${linkExpiry}` | Utgångsdatum för delad länk |
+
 <!--| `${host.prefix}` | Origin of the [!DNL Experience Manager] instance, for example `http://www.adobe.com"` |-->
 
 #### Exempel på anpassad e-postmall {#custom-email-template-example}
