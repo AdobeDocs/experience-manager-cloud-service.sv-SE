@@ -4,9 +4,9 @@ description: Lär dig hur du använder det AEM-hanterade CDN och hur du pekar di
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
 role: Admin
-source-git-commit: 3a10a0b8c89581d97af1a3c69f1236382aa85db0
+source-git-commit: 4c145559d1ad18d31947c0437d6d1d31fb3af1bb
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1250'
 ht-degree: 5%
 
 ---
@@ -44,13 +44,29 @@ Mer information finns i [Hantera IP-Tillåtelselista](/help/implementing/cloud-m
 
 ### Konfigurera trafik vid leveransnätverket {#cdn-configuring-cloud}
 
-Regler för konfigurering av CDN-trafik och -filter kan deklareras i en konfigurationsfil och distribueras till CDN med hjälp av [Cloud Manager konfigurationspipelines.](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline) Mer information finns i [Konfigurera trafik på CDN](/help/implementing/dispatcher/cdn-configuring-traffic.md) och [Trafikfilterregler, inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md).
+Konfigurera trafiken vid CDN på olika sätt, bland annat:
+* blockera skadlig trafik med [trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md) (inklusive avancerade WAF-regler som kan licensieras)
+* ändrar typen av [begäran och svar](/help/implementing/dispatcher/cdn-configuring-traffic.md#request-transformations)
+* använder 301/302 [omdirigeringar på klientsidan](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors)
+* deklarerar [ursprungliga väljare](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors) för att återföra en proxybegäran till icke-AEM backends
+
+Lär dig hur du konfigurerar de här funktionerna genom att använda YAML-filer i Git och distribuera dem med Cloud Manager [Config Pipeline](/help/implementing/dispatcher/cdn-configuring-traffic.md).
 
 ### Konfigurera CDN-felsidor {#cdn-error-pages}
 
 En CDN-felsida kan konfigureras så att den åsidosätter den standardsida utan varumärke som skickas till webbläsaren i den sällsynta händelse som AEM inte kan nås. Mer information finns i [Konfigurera CDN-felsidor](/help/implementing/dispatcher/cdn-error-pages.md).
 
-## Customer CDN pekar på AEM CDN {#point-to-point-CDN}
+### Rensa cachelagrat innehåll vid CDN {#purge-cdn}
+
+Att ställa in TTL med HTTP-huvudet Cache-Control är ett effektivt sätt att balansera innehållets leveransprestanda och innehållets aktualitet. I scenarier där det är viktigt att omedelbart hantera uppdaterat innehåll kan det dock vara bra att rensa CDN-cachen direkt.
+
+Läs om hur [konfigurerar en rensnings-API-token](/help/implementing/dispatcher/cdn-credentials-authentication.md/#purge-API-token) och [rensar cachelagrat CDN-innehåll](/help/implementing/dispatcher/cdn-cache-purge.md).
+
+### Grundläggande autentisering vid CDN {#basic-auth}
+
+För användarvänliga autentiseringssituationer, inklusive affärsintressenter som granskar innehåll, kan du skydda innehållet genom att öppna en grundläggande autentiseringsdialog som kräver användarnamn och lösenord. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md) och gå med i det tidiga adopterprogrammet.
+
+## Customer CDN Points to AEM-managed CDN {#point-to-point-CDN}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_byocdn"
@@ -71,7 +87,7 @@ Konfigurationsanvisningar:
 1. Ställ in SNI på Adobe CDN:s ingress.
 1. Ange värdhuvudet som den ursprungliga domänen. Till exempel: `Host:publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com`.
 1. Ange `X-Forwarded-Host`-huvudet med domännamnet så att AEM kan avgöra värdhuvudet. Till exempel: `X-Forwarded-Host:example.com`.
-1. Ange `X-AEM-Edge-Key`. Värdet bör konfigureras med en Cloud Manager-konfigurationspipeline, vilket beskrivs i [den här artikeln.](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token#CDN-HTTP-value)
+1. Ange `X-AEM-Edge-Key`. Värdet bör konfigureras med en Cloud Manager-konfigurationspipeline, vilket beskrivs i [den här artikeln.](/help/implementing/dispatcher/cdn-credentials-authentication.md#CDN-HTTP-value)
 
    * Behövs så att Adobe CDN kan validera källan för förfrågningarna och skicka `X-Forwarded-*`-huvudena till AEM. `X-Forwarded-For` används till exempel för att fastställa klient-IP. Det blir alltså den betrodda anroparen (det vill säga kundhanterade CDN) som ansvarar för att `X-Forwarded-*`-huvudena är korrekta (se anteckningen nedan).
    * Åtkomst till Adobe CDN-ingången kan även blockeras om det inte finns någon `X-AEM-Edge-Key`. Informera Adobe om du behöver direktåtkomst till Adobe CDN:s ingress (som ska blockeras).
