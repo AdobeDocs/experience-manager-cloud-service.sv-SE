@@ -4,10 +4,10 @@ description: Lär dig hur du använder det AEM-hanterade CDN och hur du pekar di
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
 role: Admin
-source-git-commit: 4c145559d1ad18d31947c0437d6d1d31fb3af1bb
+source-git-commit: 655b92f0fd3c6fb69bdd9343719537d6328fa7be
 workflow-type: tm+mt
-source-wordcount: '1250'
-ht-degree: 5%
+source-wordcount: '1552'
+ht-degree: 4%
 
 ---
 
@@ -44,7 +44,8 @@ Mer information finns i [Hantera IP-Tillåtelselista](/help/implementing/cloud-m
 
 ### Konfigurera trafik vid leveransnätverket {#cdn-configuring-cloud}
 
-Konfigurera trafiken vid CDN på olika sätt, bland annat:
+Du kan konfigurera trafiken vid CDN på olika sätt, bland annat:
+
 * blockera skadlig trafik med [trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md) (inklusive avancerade WAF-regler som kan licensieras)
 * ändrar typen av [begäran och svar](/help/implementing/dispatcher/cdn-configuring-traffic.md#request-transformations)
 * använder 301/302 [omdirigeringar på klientsidan](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors)
@@ -64,7 +65,7 @@ Läs om hur [konfigurerar en rensnings-API-token](/help/implementing/dispatcher/
 
 ### Grundläggande autentisering vid CDN {#basic-auth}
 
-För användarvänliga autentiseringssituationer, inklusive affärsintressenter som granskar innehåll, kan du skydda innehållet genom att öppna en grundläggande autentiseringsdialog som kräver användarnamn och lösenord. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md) och gå med i det tidiga adopterprogrammet.
+För användarvänliga autentiseringssituationer, inklusive affärsintressenter som granskar innehåll, skyddar du innehållet genom att visa en grundläggande autentiseringsdialog som kräver ett användarnamn och lösenord. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md) och gå med i det tidiga adopterprogrammet.
 
 ## Customer CDN Points to AEM-managed CDN {#point-to-point-CDN}
 
@@ -145,6 +146,26 @@ Nedan visas flera konfigurationsexempel från flera ledande CDN-leverantörer.
 
 ![Cloudflare1](assets/cloudflare1.png "Cloudflare")
 ![Cloudflare2](assets/cloudflare2.png "Cloudflare")
+
+### Vanliga fel {#common-errors}
+
+De exempelkonfigurationer som tillhandahålls visar de basinställningar som behövs, men en kundkonfiguration kan ha andra effektregler som tar bort, ändrar eller ordnar om de rubriker som behövs för att AEM as a Cloud Service ska kunna betjäna trafiken. Nedan visas vanliga fel som inträffar när en kundhanterad CDN konfigureras för att peka mot AEM as a Cloud Service.
+
+**Omdirigering till Publish tjänstslutpunkt**
+
+När en begäran tar emot ett 403 ej tillåtet svar betyder det att begäran saknar vissa obligatoriska rubriker. En vanlig orsak till detta är att CDN hanterar både API- och `www`-domäntrafik, men inte lägger till rätt rubrik för domänen `www`. Du kan lösa det här problemet genom att kontrollera AEM as a Cloud Service CDN-loggarna och verifiera begäranderubrikerna.
+
+**För många omdirigeringsslinga**
+
+När en sida får en &quot;för många omdirigeringar&quot;-slinga läggs en del begärandehuvud till i CDN som matchar en omdirigering som tvingar den tillbaka till sig själv. Exempel:
+
+* En CDN-regel skapas för att matcha antingen apex-domänen eller www-domänen och lägger endast till X-Forwarded-Host-huvudet i apex-domänen.
+* En begäran om en apex-domän matchar den här CDN-regeln, som lägger till apex-domänen som X-Forwarded-Host-huvud.
+* En begäran skickas till ursprungsläget där en omdirigering matchar värdhuvudet explicit för huvuddomänen (till exempel ^example.com).
+* En omskrivningsregel utlöses, som skriver om begäran för den överordnade domänen till https med underdomänen www.
+* Omdirigeringen skickas sedan till kundens kant, där CDN-regeln aktiveras på nytt och X-Forwarded-Host-huvudet för den överordnade domänen läggs till på nytt, inte www-underdomänen. Processen startar sedan om tills begäran misslyckas.
+
+Du löser det här problemet genom att utvärdera din SSL-omdirigeringsstrategi, CDN-regler, omdirigerings- och omskrivningsregelkombinationer.
 
 ## Geolocation-rubriker {#geo-headers}
 
