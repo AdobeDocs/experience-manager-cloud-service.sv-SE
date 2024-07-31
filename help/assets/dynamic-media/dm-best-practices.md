@@ -9,7 +9,7 @@ feature: Adaptive Streaming, Best Practices, Smart Imaging, Image Profiles, Rule
 role: User, Admin
 mini-toc-levels: 4
 exl-id: 39e491bb-367d-4c72-b4ca-aab38d513ac5
-source-git-commit: fca8b4b34718bd7d22186740fac383b87e968cdb
+source-git-commit: 57c5b886b5964e13219b2525c7ed0073292277a0
 workflow-type: tm+mt
 source-wordcount: '4105'
 ht-degree: 0%
@@ -76,15 +76,23 @@ De effektivaste strategierna med Dynamic Media Viewer är viktiga riktlinjer som
 
 Genom att följa dessa standarder kan ni uppnå smidig integrering, effektiv resurshantering och förbättrat tittarinteraktion. Det är viktigt att du synkroniserar resurser, använder smart beskärning och följer riktlinjerna för inkludering av filer i JavaScript. Dessa rekommendationer bidrar till att upprätthålla integriteten och tillförlitligheten för medieleveransen på olika plattformar och enheter.
 
-* **Synkronisera visningsprogram-Assets:** Kontrollera att alla visningsprogramresurser är synkroniserade med Dynamic Media innan du använder spelaren. Om du vill felsöka visningsprogrammet går du till artikeln [Felsök Dynamic Media-visningsprogram](/help/assets/dynamic-media/troubleshoot-dm.md#viewers) .
-* **Exempelhanterarsida:** Öppna exempelhanterarsidan på `/libs/dam/gui/content/s7dam/samplemanager/samplemanager`.
-* **Publish Assets:** Kontrollera att resurserna är publicerade innan du visar dem i leveransvisningsprogram.
-* **Automatiskt uppspelade videoklipp har stängts av:** Om du vill använda automatisk uppspelning i videoklipp använder du inställningarna för avstängd video eftersom webbläsare begränsar uppspelningen av videoklipp med volymen.
-* **Smart beskärning:** Använd komponenten Image v3 för smart beskärning för att förbättra bildresurspresentationen.
-* **Filinkludering för JavaScript:** Ta endast med den primära JavaScript-filen för visningsprogrammet på din sida. Undvik att referera till andra JavaScript-filer som kan hämtas av visningsprogrammets körningslogik. Länka inte direkt till HTML5 SDK `Utils.js`-biblioteket från kontextsökvägen `/s7viewers` (kallas konsoliderad SDK inklusive). Visningsprogrammets logik hanterar platsen för `Utils.js` eller liknande visningsprogrambibliotek vid körning, som kan ändras mellan olika versioner. Adobe behåller inte äldre versioner av sekundära visningsprograminkluderingar på servern, så om de refereras direkt kan visningsfunktionen brytas i framtida uppdateringar.
-* **Riktlinjer för inbäddning:** Använd dokumentationen för att bädda in riktlinjer som är specifika för varje visningsprogram.
+* **Synkronisera visningsprogram-Assets:**
+Kontrollera att alla visningsprogramresurser är synkroniserade med Dynamic Media innan du använder spelaren. Om du vill felsöka visningsprogrammet går du till artikeln [Felsök Dynamic Media-visningsprogram](/help/assets/dynamic-media/troubleshoot-dm.md#viewers) .
+* **Exempelhanterarsida:**
+Gå till exempelhanterarsidan på `/libs/dam/gui/content/s7dam/samplemanager/samplemanager`.
+* **Publish Assets:**
+Se till att resurserna publiceras innan du visar dem i leveransvisningsprogram.
+* **Automatiskt uppspelade videoklipp har stängts av:**
+Om du vill använda automatisk uppspelning i videoklipp använder du inställningarna för avstängd video eftersom webbläsarna begränsar uppspelning av videoklipp med volym.
+* **Smart beskärning:**
+Använd komponenten Image v3 för smart beskärning för att förbättra bildresurspresentationen.
+* **Inkludering av JavaScript-filer:**
+Ta endast med den primära JavaScript-filen för visningsprogrammet på sidan. Undvik att referera till andra JavaScript-filer som kan hämtas av visningsprogrammets körningslogik. Länka inte direkt till HTML5 SDK `Utils.js`-biblioteket från kontextsökvägen `/s7viewers` (kallas konsoliderad SDK inklusive). Visningsprogrammets logik hanterar platsen för `Utils.js` eller liknande visningsprogrambibliotek vid körning, som kan ändras mellan olika versioner. Adobe behåller inte äldre versioner av sekundära visningsprograminkluderingar på servern, så om de refereras direkt kan visningsfunktionen brytas i framtida uppdateringar.
+* **Riktlinjer för inbäddning:**
+Använd dokumentationen för att bädda in riktlinjer som är specifika för varje visningsprogram.
 Vill du veta mer? Gå till [Visare för AEM Assets](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers).
-* **SDK-självstudiekurs och exempel:** Se [SDK-självstudiekursen](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/c-tutorial) och [programexemplen för HTML5 SDK](https://s7d9.scene7.com/s7sdk/2024.5/docs/jsdoc/index.html) för en mer detaljerad förståelse för SDK-komponent-API:er.
+* **SDK-självstudiekurs och exempel:**
+Granska [ SDK-självstudiekursen för visningsprogram ](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/c-tutorial) och [ programexemplen för HTML5 SDK ](https://s7d9.scene7.com/s7sdk/2024.5/docs/jsdoc/index.html) för en grundlig förståelse av API:er för SDK-komponenter.
 
 
 ## Förbered material för leverans
