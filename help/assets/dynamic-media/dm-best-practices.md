@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media bästa praxis
-description: Läs om de bästa sätten att arbeta med bilder och video i Dynamic Media.
+description: Läs om de bästa sätten att arbeta med bilder och video i Dynamic Media och de bästa sätten för Dynamic Media Viewer.
 contentOwner: Rick Brough
 products: Experience Manager as a Cloud Service
 topic-tags: introduction,administering
@@ -9,9 +9,9 @@ feature: Adaptive Streaming, Best Practices, Smart Imaging, Image Profiles, Rule
 role: User, Admin
 mini-toc-levels: 4
 exl-id: 39e491bb-367d-4c72-b4ca-aab38d513ac5
-source-git-commit: de1116ee39024d30e14838f8b36f9ab087a45f85
+source-git-commit: fca8b4b34718bd7d22186740fac383b87e968cdb
 workflow-type: tm+mt
-source-wordcount: '3571'
+source-wordcount: '4105'
 ht-degree: 0%
 
 ---
@@ -68,6 +68,23 @@ När du har synkroniserat dina mediefiler får du med Selective Publish kontroll
 Dessa två bästa metoder hjälper er att få bättre kontroll, styrning och produktivitet över ert multimediematerial.
 
 Vill du veta mer? Gå till [Konfigurera selektiv Publish på mappnivå i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md).
+
+
+## Dynamic Media Viewers
+
+De effektivaste strategierna med Dynamic Media Viewer är viktiga riktlinjer som utformats för att optimera prestanda, funktionalitet och användarupplevelse för Dynamic Media-resurser AEM. Dessa rutiner säkerställer att resurserna synkroniseras, publiceras och konfigureras på rätt sätt så att de kan utnyttja Dynamic Media alla funktioner.
+
+Genom att följa dessa standarder kan ni uppnå smidig integrering, effektiv resurshantering och förbättrat tittarinteraktion. Det är viktigt att du synkroniserar resurser, använder smart beskärning och följer riktlinjerna för inkludering av filer i JavaScript. Dessa rekommendationer bidrar till att upprätthålla integriteten och tillförlitligheten för medieleveransen på olika plattformar och enheter.
+
+* **Synkronisera visningsprogram-Assets:** Kontrollera att alla visningsprogramresurser är synkroniserade med Dynamic Media innan du använder spelaren. Om du vill felsöka visningsprogrammet går du till artikeln [Felsök Dynamic Media-visningsprogram](/help/assets/dynamic-media/troubleshoot-dm.md#viewers) .
+* **Exempelhanterarsida:** Öppna exempelhanterarsidan på `/libs/dam/gui/content/s7dam/samplemanager/samplemanager`.
+* **Publish Assets:** Kontrollera att resurserna är publicerade innan du visar dem i leveransvisningsprogram.
+* **Automatiskt uppspelade videoklipp har stängts av:** Om du vill använda automatisk uppspelning i videoklipp använder du inställningarna för avstängd video eftersom webbläsare begränsar uppspelningen av videoklipp med volymen.
+* **Smart beskärning:** Använd komponenten Image v3 för smart beskärning för att förbättra bildresurspresentationen.
+* **Filinkludering för JavaScript:** Ta endast med den primära JavaScript-filen för visningsprogrammet på din sida. Undvik att referera till andra JavaScript-filer som kan hämtas av visningsprogrammets körningslogik. Länka inte direkt till HTML5 SDK `Utils.js`-biblioteket från kontextsökvägen `/s7viewers` (kallas konsoliderad SDK inklusive). Visningsprogrammets logik hanterar platsen för `Utils.js` eller liknande visningsprogrambibliotek vid körning, som kan ändras mellan olika versioner. Adobe behåller inte äldre versioner av sekundära visningsprograminkluderingar på servern, så om de refereras direkt kan visningsfunktionen brytas i framtida uppdateringar.
+* **Riktlinjer för inbäddning:** Använd dokumentationen för att bädda in riktlinjer som är specifika för varje visningsprogram.
+Vill du veta mer? Gå till [Visare för AEM Assets](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers).
+* **SDK-självstudiekurs och exempel:** Se [SDK-självstudiekursen](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/c-tutorial) och [programexemplen för HTML5 SDK](https://s7d9.scene7.com/s7sdk/2024.5/docs/jsdoc/index.html) för en mer detaljerad förståelse för SDK-komponent-API:er.
 
 
 ## Förbered material för leverans
@@ -156,7 +173,6 @@ Kom ihåg att de här bästa sätten är anpassade efter Google metoder för SEO
 
 Vill du veta mer? Gå till [Bästa praxis för URL-struktur för Google](https://developers.google.com/search/docs/crawling-indexing/url-structure) och [Bästa praxis för Google-bilder](https://developers.google.com/search/docs/appearance/google-images)
 
-
 ### Förbättra bilder dynamiskt och skapa visuella effekter med kommandon
 
 **Affärsfall:** *Använd visuella effekter på bilder.*
@@ -191,7 +207,7 @@ Om du vill lägga en logotyp eller ikon ovanpå en befintlig bild är Dynamic Me
 | --- | --- |
 | **Överför och publicera basbilden** | Ladda först upp och publicera den basbild som du vill lägga logotypen eller ikonen ovanpå. Du kan använda vilken bild som helst som bas.<br>Här är till exempel en basbild:<br>[https://s7g2.scene7.com/is/image/genaibeta/decorative-room-sofa](https://s7g2.scene7.com/is/image/genaibeta/decorative-room-sofa). |
 | **Överför och publicera logotypen eller ikonbilden** | Ladda sedan upp och publicera bilden som du vill lägga ovanpå basbilden. Den här bilden ska vara en genomskinlig PNG-bild med den logotyp eller ikon som du vill täcka över.<br>Här är den genomskinliga PNG-bilden för ett stjärnobjekt med genomskinlighetseffekter som kommer att läggas ovanpå:<br>[https://s7g2.scene7.com/is/image/genaibeta/decorate-star](https://s7g2.scene7.com/is/image/genaibeta/decorate-star) |
-| **Använd Dynamic Media URL** | Skapa nu en Dynamic Media-URL som kombinerar basbilden med logotypen eller ikonbilden. Du kan använda URL-kommandon för att uppnå den här effekten.<br>URL-strukturen ser ut ungefär så här:<br>[https://s7g2.scene7.com/is/image/genaibeta/decorative-room-sofa?layer=1&amp;src=decorate-star&amp;scale=1.25&amp;posN=0.33,-.25&amp;fmt=png](https://s7g2.scene7.com/is/image/genaibeta/decorative-room-sofa?layer=1&amp;src=decorate-star&amp;scale=1.25&amp;posN=0.33,-.25&amp;fmt=png)<br>där <br> ・ `hotspotRetailBaseImage` är basbilden.<br> ・ `starxp` är logotypen/ikonbilden.<br> ・ `layer=1` anger att logotypen eller ikonen ska placeras i lager över basbilden.<br> ・ `scale=1.25` justerar storleken på logotypen/ikonen.<br> ・ `posN=0.33,-.25` avgör logotypens/ikonens position i förhållande till basbilden.<br> ・ `fmt=png` ser till att utdata är i PNG-format. |
+| **Använd Dynamic Media URL** | Skapa nu en Dynamic Media-URL som kombinerar basbilden med logotypen eller ikonbilden. Du kan använda URL-kommandon för att uppnå den här effekten.<br>URL-strukturen ser ut ungefär så här:<br>[https://s7g2.scene7.com/is/image/genaibeta/decorative-room-sofa?layer=1&amp;src=decorate-star&amp;scale=1.25&amp;posN=0.33,-.25&amp;fmt=png](https://s7g2.scene7.com/is/image/genaibeta/decorative-room-sofa?layer=1&amp;src=decorate-star&amp;scale=1.25&amp;posN=0.33,-.25&amp;fmt=png)<br>där resursen <br> ・ `hotspotRetailBaseImage` är basbilden.<br> ・ `starxp` är logotypen/ikonbilden.<br> ・ `layer=1` anger att logotypen eller ikonen ska placeras i lager över basbilden.<br> ・ `scale=1.25` justerar storleken på logotypen/ikonen.<br> ・ `posN=0.33,-.25` avgör logotypens/ikonens position i förhållande till basbilden.<br> ・ `fmt=png` ser till att utdata är i PNG-format. |
 
 Vad ska jag lära dig mer? Gå till [src](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-src) om du vill ha mer information om kommandot `src` och andra Dynamic Media URL-kommandon.
 
@@ -246,6 +262,28 @@ Härledd från originalbilden, vilket betonar rummet.
 
 Experimentera med olika varianter efter just dina behov.
 Vill du veta mer om de kommandon som finns i en URL? Gå till [Kommandoreferens](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference).
+
+### Leverera GIF-bilder
+
+**Affärsfall:** *Strömma GIF med Dynamic Media*
+
+Ni kan ladda upp och leverera GIF via Dynamic Media. Ersätt `is/image` med `is/content` i URL:en om du vill återge ett animerat GIF. Om du till exempel har överfört `abc.gif` använder du följande:
+
+* Den här URL-sökvägen återger en statisk vy av GIF:
+
+  ```
+  https://your.domain.com/is/image/yourfolder/abc
+  ```
+
+* Den här URL-sökvägen återger animeringsvyn för GIF:
+
+  ```
+  https://your.domain.com/is/content/yourfolder/abc
+  ```
+
+>[!NOTE]
+>
+>När du använder `is/content` i URL-sökvägen används inte bildtransformeringskommandon på resursen.
 
 ### Publish - en video för min webbplats
 
@@ -349,3 +387,11 @@ För att garantera det bästa webboptimerade formatet kan du lita på Smart Imag
 Genom att förlita dig på Smart Imaging kan du se till att dina bilder levereras på ett så effektivt sätt som möjligt, skräddarsytt efter varje användares webbläsarmiljö. Den här metoden förenklar processen och kan leda till bättre prestanda i fråga om bildinläsningstider och övergripande användarupplevelse.
 
 Vill du veta mer? Gå till [Smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md).
+
+### Efterleverans av tillgångar till kunder
+
+**Affärsfall:** *När du har publicerat nytt innehåll eller skrivit över befintligt innehåll, hur kan du se till att ändringarna visas omedelbart på CDN:n?*
+
+CDN (Content Delivery Network) cachelagrar Dynamic Media-resurser för snabb leverans till kunder. När dessa resurser uppdateras är det viktigt att ändringarna börjar gälla omedelbart på webbplatsen. Genom att rensa eller göra CDN-cachen ogiltig kan resurser som levereras av Dynamic Media uppdateras snabbt. På så sätt slipper du vänta på att cachen ska förfalla baserat på TTL-värdet (Time To Live), som vanligtvis är inställt på tio timmar. I stället kan en begäran skickas inifrån Dynamic Media-användargränssnittet om att cachen ska förfalla inom några minuter.
+
+Vill du veta mer? Gå till [Invalidera CDN-cachen med Dynamic Media](/help/assets/dynamic-media/invalidate-cdn-cache-dynamic-media.md).
