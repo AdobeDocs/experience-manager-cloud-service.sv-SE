@@ -9,9 +9,9 @@ feature: Adaptive Streaming, Best Practices, Smart Imaging, Image Profiles, Rule
 role: User, Admin
 mini-toc-levels: 4
 exl-id: 39e491bb-367d-4c72-b4ca-aab38d513ac5
-source-git-commit: 57c5b886b5964e13219b2525c7ed0073292277a0
+source-git-commit: ce5f9fc101c86ffdfb685ff493e8f5e508f45e37
 workflow-type: tm+mt
-source-wordcount: '4105'
+source-wordcount: '4118'
 ht-degree: 0%
 
 ---
@@ -77,9 +77,11 @@ De effektivaste strategierna med Dynamic Media Viewer är viktiga riktlinjer som
 Genom att följa dessa standarder kan ni uppnå smidig integrering, effektiv resurshantering och förbättrat tittarinteraktion. Det är viktigt att du synkroniserar resurser, använder smart beskärning och följer riktlinjerna för inkludering av filer i JavaScript. Dessa rekommendationer bidrar till att upprätthålla integriteten och tillförlitligheten för medieleveransen på olika plattformar och enheter.
 
 * **Synkronisera visningsprogram-Assets:**
-Kontrollera att alla visningsprogramresurser är synkroniserade med Dynamic Media innan du använder spelaren. Om du vill felsöka visningsprogrammet går du till artikeln [Felsök Dynamic Media-visningsprogram](/help/assets/dynamic-media/troubleshoot-dm.md#viewers) .
-* **Exempelhanterarsida:**
-Gå till exempelhanterarsidan på `/libs/dam/gui/content/s7dam/samplemanager/samplemanager`.
+Kontrollera att alla visningsprogramresurser är synkroniserade med Dynamic Media innan du använder spelaren.
+
+   * Gå till exempelhanterarsidan på `/libs/dam/gui/content/s7dam/samplemanager/samplemanager`. På den här sidan kan du synkronisera om användarens resurser, inklusive färdiga ikoner, CSS-filer och förinställningar.
+   * Om du stöter på visningsprogramproblem går du till artikeln [Felsök Dynamic Media-visningsprogram](/help/assets/dynamic-media/troubleshoot-dm.md#viewers) .
+
 * **Publish Assets:**
 Se till att resurserna publiceras innan du visar dem i leveransvisningsprogram.
 * **Automatiskt uppspelade videoklipp har stängts av:**
@@ -400,6 +402,7 @@ Vill du veta mer? Gå till [Smart bildbehandling](/help/assets/dynamic-media/ima
 
 **Affärsfall:** *När du har publicerat nytt innehåll eller skrivit över befintligt innehåll, hur kan du se till att ändringarna visas omedelbart på CDN:n?*
 
-CDN (Content Delivery Network) cachelagrar Dynamic Media-resurser för snabb leverans till kunder. När dessa resurser uppdateras är det viktigt att ändringarna börjar gälla omedelbart på webbplatsen. Genom att rensa eller göra CDN-cachen ogiltig kan resurser som levereras av Dynamic Media uppdateras snabbt. På så sätt slipper du vänta på att cachen ska förfalla baserat på TTL-värdet (Time To Live), som vanligtvis är inställt på tio timmar. I stället kan en begäran skickas inifrån Dynamic Media-användargränssnittet om att cachen ska förfalla inom några minuter.
+CDN (Content Delivery Network) cachelagrar Dynamic Media-resurser för snabb leverans till kunder. När dessa resurser uppdateras är det viktigt att ändringarna börjar gälla omedelbart på webbplatsen. Genom att rensa eller göra CDN-cachen ogiltig kan resurser som levereras av Dynamic Media uppdateras snabbt. På så sätt slipper du vänta på att cachen ska förfalla baserat på TTL-värdet (Time To Live), som vanligtvis är inställt på tio timmar.
+Beroende på ditt specifika användningssätt kan du uppdatera CDN TTL-inställningarna (Time to Live) i enlighet med detta.
 
 Vill du veta mer? Gå till [Invalidera CDN-cachen med Dynamic Media](/help/assets/dynamic-media/invalidate-cdn-cache-dynamic-media.md).
