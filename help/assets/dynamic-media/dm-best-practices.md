@@ -9,7 +9,7 @@ feature: Adaptive Streaming, Best Practices, Smart Imaging, Image Profiles, Rule
 role: User, Admin
 mini-toc-levels: 4
 exl-id: 39e491bb-367d-4c72-b4ca-aab38d513ac5
-source-git-commit: ce5f9fc101c86ffdfb685ff493e8f5e508f45e37
+source-git-commit: 5e028e99b472dc10ecd739ee5e5c70ea4daa2078
 workflow-type: tm+mt
 source-wordcount: '4118'
 ht-degree: 0%
@@ -162,14 +162,17 @@ Använd följande rekommendationer regelbundet för att säkerställa att dina b
 
 * **Betydelsefulla bildfilnamn:**
 Använd beskrivande filnamn som återspeglar bildinnehållet. Exempel:
+
    * använd `myCompany-Silver-Wrist-Watch`
    * *undvik* `myCompany_Silver_Wrist_Watch` eller `myCompanySilverWristWatch`
 
   Om du gör det blir det lättare för sökmotorer att förstå bildkontexten och det blir enklare att välja sökmotoroptimering. Google föredrar bindestreck framför understreck och blanksteg i ett filnamn. Undvik också att sammanfoga ord i ett filnamn.
 * **Anpassad domän:**
 Implementera en anpassad domän som innehåller ert företags- eller varumärkesnamn för att förstärka varumärkesigenkänningen och förtroendet. Exempel:
+
    * använd `http://images.mycompany.com/is/image/companyname/`
    * *undvik* `https://s7d1.scene7.com/is/image/folder/AdobeStock_28563982`
+
 * **SEO-vänlig mappstruktur:**
 Organisera bilderna i en mappstruktur som innehåller företagets namn eller varumärke för bättre indexering, som `http://images.mycompany.com/is/image/companyname/` .
 * **Dynamic Media-regeluppsättningar:**
@@ -309,6 +312,7 @@ Tilldela den valda videoprofilen till de mappar där videon ska överföras. Det
 Förhandsgranska videon så att du kan vara säker på att allt ser ut som förväntat. När du är nöjd publicerar du den. Det här steget gör videon tillgänglig för din publik.
 * **Länka eller bädda in:**
 Efter publiceringen har du två alternativ.
+
    * **Länka direkt:**
 Använd den angivna URL:en för att länka direkt till videon. Hyperlänka det på rätt sätt på er marknadsföringswebbplats.
    * **Bädda in videon:**
