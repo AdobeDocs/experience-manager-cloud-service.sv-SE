@@ -9,7 +9,7 @@ feature: Adaptive Streaming, Best Practices, Smart Imaging, Image Profiles, Rule
 role: User, Admin
 mini-toc-levels: 4
 exl-id: 39e491bb-367d-4c72-b4ca-aab38d513ac5
-source-git-commit: 5e028e99b472dc10ecd739ee5e5c70ea4daa2078
+source-git-commit: 220a8d8aecde76c7d77ebab16fda2158316c08dd
 workflow-type: tm+mt
 source-wordcount: '4118'
 ht-degree: 0%
@@ -406,7 +406,6 @@ Vill du veta mer? Gå till [Smart bildbehandling](/help/assets/dynamic-media/ima
 
 **Affärsfall:** *När du har publicerat nytt innehåll eller skrivit över befintligt innehåll, hur kan du se till att ändringarna visas omedelbart på CDN:n?*
 
-CDN (Content Delivery Network) cachelagrar Dynamic Media-resurser för snabb leverans till kunder. När dessa resurser uppdateras är det viktigt att ändringarna börjar gälla omedelbart på webbplatsen. Genom att rensa eller göra CDN-cachen ogiltig kan resurser som levereras av Dynamic Media uppdateras snabbt. På så sätt slipper du vänta på att cachen ska förfalla baserat på TTL-värdet (Time To Live), som vanligtvis är inställt på tio timmar.
-Beroende på ditt specifika användningssätt kan du uppdatera CDN TTL-inställningarna (Time to Live) i enlighet med detta.
+CDN (Content Delivery Network) cachelagrar Dynamic Media-resurser för snabb leverans till kunder. När dessa resurser uppdateras är det viktigt att ändringarna börjar gälla omedelbart på webbplatsen. Genom att rensa eller göra CDN-cachen ogiltig kan resurser som levereras av Dynamic Media uppdateras snabbt. På så sätt slipper du vänta på att cachen ska förfalla baserat på TTL-värdet (Time To Live), som vanligtvis är inställt på tio timmar. Beroende på ditt specifika användningssätt kan du uppdatera CDN TTL-inställningarna (Time to Live) i enlighet med detta.
 
 Vill du veta mer? Gå till [Invalidera CDN-cachen med Dynamic Media](/help/assets/dynamic-media/invalidate-cdn-cache-dynamic-media.md).
