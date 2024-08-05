@@ -1,34 +1,40 @@
 ---
-title: Versionsinformation om migreringsverktyg i AEM as a Cloud Service version 2024.05.0
-description: Versionsinformation om migreringsverktyg i AEM as a Cloud Service version 2024.05.0
+title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2024.07
+description: Versionsinformation om migreringsverktyg i AEM as a Cloud Service version 2024.07.0
 feature: Release Information
 exl-id: 52709511-eab2-47a7-8bea-1b707cd568a1
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 4f01ca0076248442fe93161bbc8b98bffb64551b
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '171'
 ht-degree: 2%
 
 ---
 
-# Versionsinformation om migreringsverktyg i AEM as a Cloud Service version 2024.05.0 {#release-notes}
+# Versionsinformation om migreringsverktyg i AEM as a Cloud Service version 2024.07.0 {#release-notes}
 
-På den här sidan finns versionsinformation för migreringsverktyg i AEM as a Cloud Service 2024.05.0.
+Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2024.07.0.
+
+## Verktyget Innehållsöverföring {#ctt-release}
+
+### Releasedatum {#release-date-ctt}
+
+Releasedatum för innehållsöverföringsverktyget v3.0.16 är juli 2024.
+
+### Nyheter {#what-is-new-ctt}
+
+* Automatisk överföring av extraheringsloggar för CTT vid fel.
+* Användarna kan nu lägga till när extraheringsnyckeln förnyas.
+* Stöd har lagts till för att utföra CTT-extraheringar med en Azure-åtkomstnyckel och en hemlig nyckel med AzureDataStore.
+* Användarna får nu rätt felmeddelande när en ogiltig nyckel används för att skapa en migreringsuppsättning.
 
 ## Best Practices Analyzer {#bpa-release}
 
 ### Releasedatum {#release-date-bpa}
 
-Releasedatum för Best Practices Analyzer v2.1.48 är 9 maj 2024.
+Releasedatum för Best Practices Analyzer v2.1.50 är maj 2024.
 
-### Nyheter {#what-is-new-bpa}
+### Felkorrigeringar {#bug-fixes-bpa}
 
-* Best Practices Analyzer (BPA) stöder nu automatisk överföring av BPA-genererade rapporter direkt till Cloud Acceleration Manager (CAM). Användarna behöver inte längre hämta rapporten manuellt och överföra den till CAM. Läs mer [här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/using-best-practices-analyzer)
-
-## Cloud Acceleration Manager {#cam-release}
-
-### Nyheter {#what-is-new-cam}
-
-* Cloud Acceleration Manager (CAM) har nu stöd för automatisk överföring av BPA-genererade rapporter direkt till CAM. Läs mer [här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase#best-practices-analysis)
-
-* Cloud Acceleration Manager ger nu en uppskattning av hur lång tid ett intag kan ta, med hänsyn till faktorer som nodantal, datalagringsstorlek osv. Läs mer [här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content)
+* Best Practices Analyzer identifierar nu alla noder som är större än 16 MB
+* Race-tillstånd som orsakar sporadiska förekomster av NCC-fynd har åtgärdats.

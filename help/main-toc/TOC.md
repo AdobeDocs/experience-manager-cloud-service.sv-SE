@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: ae2805097007d3d056e30b9c8420b47027a3af0e
+source-git-commit: 4f01ca0076248442fe93161bbc8b98bffb64551b
 workflow-type: tm+mt
-source-wordcount: '5304'
+source-wordcount: '5315'
 ht-degree: 3%
 
 ---
@@ -54,10 +54,10 @@ ht-degree: 3%
          + [Versionsinformation för 2022.7.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-7-0.md)
          + [Versionsinformation för 2022.6.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-6-0.md)
          + [Versionsinformation för 2022.5.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-5-0.md)
-         + [Versionsinformation för 2022.4.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-4-0.md)
-         + [Versionsinformation för 2022.3.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-3-0.md)
-         + [Versionsinformation för 2022.1.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-1-0.md)
-      + 2021 {#2021}
+         + [Release Notes for 2022.4.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-4-0.md)
+         + [Release Notes for 2022.3.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-3-0.md)
+         + [Release Notes for 2022.1.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-1-0.md)
+      + {#2021}
          + [Versionsinformation för 2021.11.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-11-0.md)
          + [Versionsinformation för 2021.10.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-10-0.md)
          + [Versionsinformation för 2021.9.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-9-0.md)
@@ -162,6 +162,9 @@ ht-degree: 3%
          + [Versionsinformation för 2020.2.0](/help/implementing/cloud-manager/release-notes/2020/2020-2-0.md)
    + Versionsinformation för migreringsverktyg {#migration-tools}
       + [Aktuell versionsinformation](/help/journey-migration/release-notes/release-notes-migration-tools-current.md)
+      + 2024 {#2024}
+         + [Versionsinformation för 2024.01.0](/help/journey-migration/release-notes/release-notes-migration-tools-2024-01-0.md)
+         + [Versionsinformation för 2024.05.0](/help/journey-migration/release-notes/release-notes-migration-tools-2024-05-0.md)
       + 2023 {#2023}
          + [Versionsinformation för 2023.10.0](/help/journey-migration/release-notes/release-notes-migration-tools-2023-10-0.md)
          + [Versionsinformation för 2023.9.0](/help/journey-migration/release-notes/release-notes-migration-tools-2023-09-0.md)
@@ -171,8 +174,8 @@ ht-degree: 3%
          + [Versionsinformation för 2023.3.0](/help/journey-migration/release-notes/release-notes-migration-tools-2023-03-0.md)
       + 2022 {#2022}
          + [Versionsinformation för 2022.12.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-12-0.md)
-         + [Versionsinformation för 2022.9.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-09-0.md)
-         + [Versionsinformation för 2022.7.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-07-0.md)
+         + [Release Notes for 2022.9.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-09-0.md)
+         + [Release Notes for 2022.7.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-07-0.md)
          + [Versionsinformation för 2022.5.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-05-0.md)
          + [Versionsinformation för 2022.4.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-04-0.md)
          + [Versionsinformation för 2022.3.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-03-0.md)
@@ -475,9 +478,9 @@ ht-degree: 3%
       + [Digital Rights Management för tillgångar](/help/assets/drm.md)
       + [Vattenstämpelresurser](/help/assets/watermark-assets.md)
       + [Bearbeta resurser med  [!DNL Creative Cloud] API:er](/help/assets/cc-api-integration.md)
-      + [Färgtaggar för bilder](/help/assets/color-tag-images.md)
-      + [Hantera PDF-dokument](/help/assets/manage-pdf-documents.md)
-   + Konfigurera, administrera och utöka [!DNL Assets] {#admin}
+      + [Color tags for images](/help/assets/color-tag-images.md)
+      + [Manage PDF documents](/help/assets/manage-pdf-documents.md)
+   + [!DNL Assets]{#admin}
       + [Identifiera duplicerade resurser](/help/assets/detect-duplicate-assets.md)
       + [Dokumentreferenser för utvecklare och API:er](/help/assets/developer-reference-material-apis.md)
       + [Mappmetadatamatchschema](/help/assets/folder-metadata-schema.md)
@@ -596,9 +599,9 @@ ht-degree: 3%
       + [Hantera samlingar](/help/assets/manage-collections-assets-view.md)
       + [Bevaka resurser, mappar och samlingar](/help/assets/manage-notifications-assets-view.md)
       + [Hantera rapporter](/help/assets/manage-reports-assets-view.md)
-      + [Hantera taggar](/help/assets/tagging-management-assets-view.md)
-      + [Innehållsuppgifter](/help/assets/content-credentials.md)
-      + [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+      + [Manage tags](/help/assets/tagging-management-assets-view.md)
+      + [Content Credentials](/help/assets/content-credentials.md)
+      + [Publish Assets to AEM and Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 
    + Content Hub {#content-hub}
@@ -722,8 +725,8 @@ ht-degree: 3%
          + Skapa ett anpassat formulär {#create-an-adaptive-form-on-forms-cs}
             + [Introduktion till framtagning av en adaptiv Forms](/help/forms/introduction-forms-authoring.md)
             + [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form.md)
-            + [Referera till teman, mallar och datamodeller](/help/forms/reference-themes-templates-data-models.md)
-            + [Skapa en mall](/help/forms/template-editor.md)
+            + [Reference themes, templates, and data models](/help/forms/reference-themes-templates-data-models.md)
+            + [Create a template](/help/forms/template-editor.md)
             + [Skapa ett tema](/help/forms/themes.md)
             + [Utforma JSON-schema för ett adaptivt formulär](/help/forms/adaptive-form-json-schema-form-model.md)
             + [Förbättra prestanda för stora formulär med lat inläsningsverktyg](/help/forms/lazy-loading-adaptive-forms.md)
@@ -1144,10 +1147,10 @@ ht-degree: 3%
          + [Modelldefinitioner, fält och komponenttyper](/help/implementing/universal-editor/field-types.md)
          + [SecurBank-exempelapp](/help/implementing/universal-editor/securbank.md)
          + [Händelser](/help/implementing/universal-editor/events.md)
-         + [Anpassa](/help/implementing/universal-editor/customizing.md)
+         + [](/help/implementing/universal-editor/customizing.md)
          + [Arkitektur](/help/implementing/universal-editor/architecture.md)
-         + [Autentisering](/help/implementing/universal-editor/authentication.md)
-         + [Komma igång](/help/implementing/universal-editor/getting-started.md)
+         + [Authentication](/help/implementing/universal-editor/authentication.md)
+         + [Getting Started](/help/implementing/universal-editor/getting-started.md)
          + [Utvecklaröversikt](/help/implementing/universal-editor/developer-overview.md)
          + [Lokal AEM](/help/implementing/universal-editor/local-dev.md)
          + [Samtal](/help/implementing/universal-editor/calls.md)
@@ -1265,8 +1268,8 @@ ht-degree: 3%
    + [Efterlevnad av AEM as a Cloud Service](/help/compliance/home.md)
    + Kompatibilitet med dataintegritet och dataskydd {#data-privacy}
       + [AEM beredskap för dataskydd och dataintegritet](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md)
-      + [AEM Foundation Ready for Data Protection and Data Privacy Regulations](/help/compliance/data-privacy-and-protection-readiness/foundation-readiness.md)
+      + [AEM Foundation Readiness for Data Protection and Data Privacy Regulations](/help/compliance/data-privacy-and-protection-readiness/foundation-readiness.md)
       + [AEM Sites beredskap för dataskydd och dataintegritet](/help/compliance/data-privacy-and-protection-readiness/sites-readiness.md)
    + Tillgänglighet {#accessibility}
-      + [AEM as a Cloud Service och riktlinjerna för webbtillgänglighet](/help/compliance/accessibility/web-accessibility.md)
+      + [AEM as a Cloud Service and the Web Accessibility Guidelines](/help/compliance/accessibility/web-accessibility.md)
       + [En snabbguide till WCAG 2.1](/help/compliance/accessibility/quick-guide-wcag.md)
