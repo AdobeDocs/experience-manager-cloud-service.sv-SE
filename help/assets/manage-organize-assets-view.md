@@ -5,9 +5,9 @@ role: User, Leader
 contentOwner: AG
 exl-id: 2459d482-828b-4410-810c-ac55ef0a2119
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
+source-git-commit: 7ec5d5e3ca487ff84bc0b1f7f040aec9475059e0
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1174'
 ht-degree: 0%
 
 ---
@@ -131,6 +131,7 @@ Så här anger du resursstatus:
 1. Markera resursen och klicka på **[!UICONTROL Details]** i verktygsfältet.
 
 1. Välj resursstatus i listrutan **[!UICONTROL Status]** på fliken **[!UICONTROL Basic]**. Möjliga värden är Godkänd, Avvisat och Ingen status (standard).
+Om du har Dynamic Media med OpenAPI-funktioner tilldelade för din miljö, genererar Experience Manager Assets en offentlig URL så fort du markerar resursen som `Approved`.
 
    >[!VIDEO](https://video.tv.adobe.com/v/342495)
 
