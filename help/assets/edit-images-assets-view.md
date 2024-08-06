@@ -4,16 +4,18 @@ description: Redigera bilder med  [!DNL Adobe Express] aktiverade alternativ och
 role: User
 exl-id: cfc4c7b7-da8c-4902-9935-0e3d4388b975
 feature: Best Practices, Interactive Images, Smart Crop, Smart Imaging
-source-git-commit: 23b43f22b62451c9d0a5460999fcd43479438d7e
+source-git-commit: 610da7c1e8f20156b165d819a4bb91ec5ffcad80
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1104'
 ht-degree: 0%
 
 ---
 
 # Redigera bilder i [!DNL Assets view] {#edit-images-in-assets-view}
 
-Assets View (Visa) möjliggör grundläggande bildredigering, inklusive storleksändring, borttagning av bakgrund, beskärning och konvertering mellan JPEG och PNG-format. Dessutom möjliggör det avancerad redigering genom integrering med Adobe Express. När du har redigerat en bild kan du spara den nya bilden som en ny version. Versionshantering hjälper dig att återgå till den ursprungliga resursen senare om det behövs. Om du vill redigera en bild [öppnar du förhandsvisningen](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/navigate-view#preview-assets) och klickar på **Redigera bild**.
+Assets vygränssnitt möjliggör grundläggande bildredigering som bygger på Adobe Express och är integrerad i användargränssnittet. Den här redigeringen inkluderar storleksändring, borttagning av bakgrund, beskärning och konvertering mellan JPEG och PNG-format. Dessutom går det att redigera Adobe Expressen avancerat via användargränssnittet i Assets-vyn.
+
+När du har redigerat en bild kan du spara den nya bilden som en ny version. Versionshantering hjälper dig att återgå till den ursprungliga resursen senare om det behövs. Om du vill redigera en bild [öppnar du förhandsvisningen](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/navigate-view#preview-assets) och klickar på **Redigera bild**.
 
 >[!NOTE]
 >
@@ -23,7 +25,7 @@ Assets View (Visa) möjliggör grundläggande bildredigering, inklusive storleks
 
 ## Redigera bild {#edit-image}
 
-Dela på Assets View med länken [Assets View](https://experience.adobe.com/#/assets) och välj rätt databas. Kontakta organisationens administratör för att få åtkomst.
+Gå till användargränssnittet för Assets-vyn med hjälp av länken [Assets-vy](https://experience.adobe.com/#/assets) och välja rätt databas. Kontakta organisationens administratör för att få åtkomst.
 Ytterligare referensinformation finns i - [Kom igång med Adobe Experience Manager Assets View](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/get-started-assets-view), [Förstå användargränssnittet i Assets-vyn](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/navigate-assets-view#understand-interface-navigation) och [Assets View-användningsexempel](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/get-started-assets-view#use-cases).
 <!--
 >[!CONTEXTUALHELP]
@@ -33,13 +35,13 @@ Ytterligare referensinformation finns i - [Kom igång med Adobe Experience Manag
 
 ### Redigera bild i Assets View med Adobe Express {#edit-image-on-assets-view-using-adobe-express}
 
-När du har landat i Assets View klickar du på **Assets**, markerar en bild och klickar sedan på **Edit** i den övre listen. På den nya skärmen visas de tillgängliga redigeringsalternativen inklusive storleksändring, borttagning av bakgrund, beskärning och konvertering mellan JPEG och PNG-format.
+Klicka på **Assets**, markera en bild och sedan på **Redigera** i den övre listen när du har navigerat till Assets-vyn. På den nya skärmen visas de tillgängliga redigeringsalternativen som bygger på Adobe Express, bland annat storleksändring, borttagning av bakgrund, beskärning och konvertering mellan JPEG och PNG-format.
 
 #### Ändra bildstorlek {#resize-image-using-express}
 
 Att ändra storlek på en bild till en viss storlek är ett vanligt användningsexempel. I Assets View kan du snabbt ändra storlek på bilder så att de passar de vanliga fotostorlekarna genom att tillhandahålla förberäknade nya upplösningar för specifika fotostorlekar. Följ stegen nedan om du vill ändra storlek på bilden med Assets View:
 
-1. Klicka på **Ändra storlek på bild** i den vänstra rutan.
+1. Klicka på **Ändra storlek på bild** i den vänstra rutan. I en dialogruta visas hur du ändrar storlek på bilder baserat på Adobe Express.
 1. Välj lämplig plattform för sociala medier i listrutan Ändra storlek och välj bildstorlek bland de alternativ som visas.
 1. Skala bilden, om det behövs, med fältet **Bildskala**.
 1. Klicka på **[!UICONTROL Apply]** för att tillämpa ändringarna.
@@ -68,7 +70,7 @@ Det är enkelt att omvandla en bild till en perfekt storlek med inbäddade [!DNL
    ![Spara bild med Adobe Express](assets/adobe-express-crop-image.png)
 Den beskurna bilden kan hämtas. Du kan antingen spara den redigerade resursen som en ny version av samma resurs eller spara den som en ny resurs.
 
-#### Konvertera mellan bildfiltyper {#convert-image-types-using-express}
+#### Konvertera JPEG till PNG {#convert-image-types-using-express}
 
 Du kan snabbt konvertera mellan bildformaten JPEG och PNG med Adobe Express. Utför följande steg:
 
@@ -79,33 +81,27 @@ Du kan snabbt konvertera mellan bildformaten JPEG och PNG med Adobe Express. Utf
 #### Begränsningar {#limitations-adobe-express}
 
 * Bildupplösning som stöds: Minimal - 50 pixlar, Maximal - 6 000 pixlar per dimension.
-
 * Största filstorlek som stöds: 17 MB.
 
 ### Redigera bilder i Adobe Expressens inbäddade redigerare {#edit-images-in-adobe-express-embedded-editor}
 
-Användare med Express-berättigande kan använda den inbäddade Express-redigeraren inifrån Assets View för att enkelt redigera innehåll och skapa nytt innehåll med GenAI från Adobe Firefly. Detta förbättrar återanvändningen av innehåll och snabbar upp innehållets hastighet. Du kan också använda fördefinierade element för att få dina resurser att se fantastiska ut eller utföra snabba åtgärder för att redigera bilden med bara några klick.
+Användare med Express-berättigande kan använda den inbäddade Express-redigeraren inifrån Assets View för att enkelt redigera innehåll och skapa nytt innehåll med GenAI från Adobe Firefly. Den här funktionen förbättrar återanvändning av innehåll och snabbar upp innehållets hastighet. Du kan också använda fördefinierade element för att få dina resurser att se fantastiska ut eller utföra snabba åtgärder för att redigera bilden med bara några klick.
 ![express i grundläggande gränssnitt](/help/assets/assets/express-in-essentials-ui.jpg)
 Följ stegen nedan om du vill redigera bilder med den inbäddade [!DNL Adobe Express] redigeraren:
 
-1. Gå vidare till AEM Assets View med länken - [AEM Assets View](https://experience.adobe.com/#/assets) och välj rätt databas.
+1. Gå till AEM Assets View med länken - [AEM Assets View](https://experience.adobe.com/#/assets) och välj rätt databas.
 1. Klicka på **Assets**, ange en mapp och markera en bild.
 1. Klicka på **Öppna i Adobe Express**. Bilden öppnas på en snabbarbetsyta.
 1. Gör de ändringar du vill i bilden.
 1. Om ditt projekt kräver att du lägger till fler sidor klickar du på **Lägg till**, väljer resurser, anger en mapp, väljer en bild som ska läggas till på arbetsytesidan och utför sedan de redigeringar som krävs på bilden.
-1. Spara bilderna genom att klicka på **Spara**. Dialogrutan Spara visas.
+1. Om du vill spara en eller flera resurser klickar du på **Spara**. I dialogrutan Spara visas alternativen för att spara. Om du vill välja mellan alternativen för att spara följer du någon av instruktionerna nedan som passar dina krav:
+   1. Om du vill spara en sida klickar du på **Spara som version** för att exportera bilden som en ny version (med originalformatet) och spara den i samma mapp.
 
-   >[!NOTE]
-   >
-   > **1. För en sida**
-   >
-   > **Spara som version:** Den här funktionen har endast stöd för att spara en resurs. Välj det här alternativet om du vill exportera bilden som en ny version (med det ursprungliga formatet) och spara den i samma mapp.
-   > **Spara som ny resurs:** Välj det här alternativet om du vill exportera resursen i ett annat format än det ursprungliga och spara den i en mapp som en ny resurs.
-   >  
-   > **2. För flera sidor**
-   >
-   > **Spara som version:** Den här funktionen har endast stöd för att spara en resurs. Om du vill spara en enstaka sida från flera sidor markerar du det här alternativet för att spara resursen i dess ursprungliga format och plats.\
-   > **Spara som ny resurs:** Med det här alternativet exporterar du antingen flera resurser eller en enskild resurs till en mapp och sparar dem som nya resurser med deras filformat som ursprungliga eller annorlunda.
+   1. Om du vill spara en enstaka sida klickar du på **Spara som ny resurs** för att exportera resursen till ett annat format och spara den i en mapp som en ny resurs.
+
+   1. Om du vill spara en sida från flera sidor klickar du på **Spara som version** för att spara resursen i dess ursprungliga format och på dess ursprungliga plats.
+
+   1. Om du vill spara flera sidor eller en sida mellan flera sidor klickar du på **Spara som ny resurs**. Den här åtgärden exporterar en eller flera resurser till valfri mapp och sparar dem som nya resurser i det ursprungliga eller ett annat format.
 
 1. I dialogrutan Spara:
    1. Ange ett namn för filen i fältet **Spara som**.
