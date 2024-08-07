@@ -5,12 +5,13 @@ exl-id: 3f3d7631-2bc9-440b-9888-50f6529bcd42
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: a5179851af8ec88e23d79a74265b10cbce2d50f1
+source-git-commit: b2950c62c55942614e23d08b3bb96864d4112e8c
 workflow-type: tm+mt
-source-wordcount: '1381'
+source-wordcount: '1500'
 ht-degree: 0%
 
 ---
+
 
 # Navigera i gränssnittet för molnhanteraren {#navigation}
 
@@ -18,14 +19,14 @@ Läs om hur Cloud Manager användargränssnitt är organiserat och hur du navige
 
 Användargränssnittet för molnhantering består huvudsakligen av två grafiska gränssnitt:
 
-* [Konsolen Mina program](#my-programs) där du kan visa och hantera alla program.
+* [Konsolen Mina program](#my-programs-console) där du kan visa och hantera alla program.
 * [Fönstret Programöversikt](#program-overview) där du kan se information om och hantera ett enskilt program.
 
 >[!TIP]
 >
 >Se även [introduktionsdokumentationsresan](/help/journey-onboarding/overview.md) för en fullständig översikt över hur du kommer igång med AEM as a Cloud Service med Cloud Manager.
 
-## My Programs Console {#my-programs}
+## My Programs Console {#my-programs-console}
 
 När du loggar in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och väljer lämplig organisation, kommer du till konsolen **Mina program**.
 
@@ -34,9 +35,13 @@ När du loggar in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.c
 Konsolen Mina program ger en översikt över alla program som du har tillgång till i den valda organisationen. Den består av flera delar.
 
 1. [Verktygsfält](#toolbars-my-programs-toolbars) för organisationsval, aviseringar och kontoinställningar
+1. Flikar som gör att du kan växla den aktuella vyn av dina program.
+   * Vyn **Hem** (standard) som väljer vyn **Mina program** med en översikt över alla program
+   * **Licens** som har åtkomst till [License Dashboard.](/help/implementing/cloud-manager/license-dashboard.md)
+   * Observera att flikarna som standard är stängda och kan visas med hjälp av hamburgermenyn i [Cloud Manager-huvudet.](#cloud-manager-header)
 1. [Statistik och uppmaning](#statistics) för en översikt över din senaste aktivitet
-1. [Program och licens](#programs-license) för att förstå din aktuella licensstatus och hantera dina program
-1. [Snabblänkar](#quick-links) för enkel åtkomst till relaterade resurser
+1. [**Mina program** avsnitt](#my-programs-section) med en översikt över alla dina program
+1. [Snabblänkar](#quick-links-section) för enkel åtkomst till relaterade resurser
 
 >[!TIP]
 >
@@ -52,6 +57,7 @@ Det första är Cloud Manager-rubriken som är beständig när du navigerar i Cl
 
 ![Experience Cloud-huvudet](assets/experience-cloud-header.png)
 
+1. Hamburger-menyn som ger åtkomst till flikar som kan ta dig till specifika delar av ett enskilt program eller växla mellan [License Dashboard](/help/implementing/cloud-manager/license-dashboard.md) och **[My Programs](#my-programs-console)** -konsolen beroende på sammanhanget.
 1. Med Cloud Manager-knappen kommer du tillbaka till My Programs-konsolen i Cloud Manager oavsett var du befinner dig i Cloud Manager.
 1. Tryck eller klicka på knappen Feedback för att ge Adobe feedback om Cloud Manager.
 1. Organisationsväljaren visar den organisation du är inloggad på (i det här exemplet Foundation Internal). Tryck eller klicka för att växla till en annan organisation om din Adobe ID är kopplad till flera.
@@ -70,9 +76,9 @@ Verktygsfältet Program innehåller länkar för att växla mellan Cloud Manager
 1. Länken Komma igång ger dig tillgång till [dokumentationsresan för introduktion](/help/journey-onboarding/overview.md) så att du kan komma igång med Cloud Manager.
 1. Åtgärdsknappen innehåller sammanhangsberoende åtgärder som att skapa ett nytt program.
 
-### Statistik {#statistics}
+### Statistik och uppmaning att vidta åtgärder {#statistics}
 
-Statistikavsnittet innehåller sammanställda data för din organisation, t.ex. om du har konfigurerat dina program kan statistik över dina aktiviteter under de senaste 90 dagarna visa, inklusive:
+Statistik och avsnittet med uppmaning att vidta åtgärder innehåller aggregerade data för din organisation, t.ex. om du har konfigurerat dina program, kan statistik över dina aktiviteter under de senaste 90 dagarna visa, inklusive:
 
 * Antal [distributioner](/help/implementing/cloud-manager/deploy-code.md)
 * Antal [kodkvalitetsproblem](/help/implementing/cloud-manager/code-quality-testing.md) som identifierats
@@ -80,13 +86,15 @@ Statistikavsnittet innehåller sammanställda data för din organisation, t.ex. 
 
 Eller om du just har börjat konfigurera organisationen kan det finnas tips om nästa steg eller dokumentationsresurser.
 
-### Program och licenser {#programs-license}
+### Avsnittet Mina program {#my-programs-section}
 
-Huvudinnehållet i My Programs-konsolen är listan över program och licensens status.
+Huvudinnehållet i konsolen **Mina program** är listan med program i avsnittet **Mina program**.
 
-#### Fliken Program {#programs}
+I avsnittet **Mina program** visas kort för varje program. Tryck eller klicka på ett kort för att komma åt sidan **Programöversikt** i programmet för mer information om programmet.
 
-På fliken **Program** visas kort som representerar de program du har åtkomst till. Tryck eller klicka på ett kort för att komma åt sidan **Programöversikt** i programmet för mer information om programmet.
+>[!NOTE]
+>
+>Beroende på vilka behörigheter du har kanske du inte kan välja vissa program.
 
 Använd sorteringsalternativen för att bättre hitta det program du behöver.
 
@@ -100,14 +108,20 @@ Använd sorteringsalternativen för att bättre hitta det program du behöver.
 * Stödrastervisning (standard)
 * Listvy
 
+#### Programkort {#program-cards}
+
 Varje program representeras av ett kort (eller en rad i en tabell) som ger en översikt över programmet och snabblänkar för att vidta åtgärder.
 
 ![Programkort](assets/program-card.png)
 
 * Programavbildning (om den är konfigurerad)
 * Programnamn
-* Tjänsttyp: **Experience Manager Cloud** för AEM som ett *-Cloud Service-program eller [**Experience Manager** för AMS-program](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/introduction)
-* [Programtyp](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md): Sandbox eller produktion
+* Tjänsttyp:
+   * **Experience Manager Cloud** för AEM as a Cloud Service-program
+   * **Experience Manager** för [AMS-program](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/introduction)
+* [Programtyp](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md):
+   * Sandbox
+   * Produktion
 * Status
 * Konfigurerade lösningar
 * Skapad den
@@ -118,7 +132,7 @@ Beroende på vilka alternativ du väljer när du skapar programmet kan ett produ
 
   ![HIPAA-märke](assets/hipaa.png)
 
-* [Skydd mot WAF-DDOS](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md#security)
+* [WAF-DDOS-skydd](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md#security)
 
   ![WAF-DDOS, märke](assets/waf-ddos-protection.png)
 
@@ -147,21 +161,17 @@ Ellipsikonen ger dig tillgång till ytterligare åtgärder som du kan vidta i pr
 >* [Skapar sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-sandbox-programs.md)
 >* [Skapar produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md)
 
-#### Fliken Licens {#license-tab}
-
-Fliken **Licens** ger dig snabb åtkomst till [License Dashboard.](/help/implementing/cloud-manager/license-dashboard.md)
-
-### Snabblänkar {#quick-links}
+### Snabblänksavsnitt {#quick-links-section}
 
 I avsnittet med snabblänkar får du tillgång till resurser som du använder ofta.
 
 ## Programöversiktsfönster {#program-overview}
 
-När du har valt ett program i konsolen Mina program visas programöversikten.
+När du har valt ett program i konsolen **[Mina program](#my-programs-console)** visas fönstret **Programöversikt**.
 
 ![Programöversikt](assets/program-overview.png)
 
-Programöversikten ger dig tillgång till alla detaljer i ett Cloud Manager-program. Precis som My Programs-konsolen består den av flera delar.
+Programöversikten ger dig tillgång till alla detaljer i ett Cloud Manager-program. Precis som konsolen **Mina program** består den av flera delar.
 
 1. [Verktygsfält](#program-overview-toolbar) om du snabbt vill gå tillbaka till Mina program-konsolen och navigera i programmet
 1. [Tabbar](#program-tabs) för att växla mellan olika aspekter av programmet
@@ -201,8 +211,12 @@ Varje program har många alternativ och data kopplade till sig. Dessa data samla
 * [Databaser](/help/implementing/cloud-manager/managing-code/managing-repositories.md) - Alla databaser har konfigurerats för programmet
 * [Rapporter](/help/implementing/cloud-manager/sla-reporting.md) - Mätvärden som SLA-data
 * [Miljö](/help/implementing/cloud-manager/manage-environments.md) - Alla miljöer konfigurerade för programmet
+* [Domäninställningar](/help/implementing/cloud-manager/custom-domain-names/introduction.md) - Hantera anpassade domännamn för programmet
+* [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md) - Hantera SSL-certifikat för programmet
+* [IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md) - Definiera tillåtelselista för vissa IP-adresser
 * [Innehållsuppsättningar](/help/implementing/developing/tools/content-copy.md) - Innehållsuppsättningar som skapats för kopieringsändamål
 * [Kopiera innehållsaktivitet](/help/implementing/developing/tools/content-copy.md) - aktiviteter för innehållskopiering
+* [Nätverksinfrastrukturer](/help/security/configuring-advanced-networking.md) - Hantera avancerade nätverksalternativ för programmet
 * Utbildningsvägar - ytterligare utbildningsresurser om Cloud Manager
 
 Som standard visas fliken **Översikt** när du öppnar ett program. Den aktuella fliken markeras. Välj en annan flik om du vill visa information om den.
