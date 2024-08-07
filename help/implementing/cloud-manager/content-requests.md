@@ -5,9 +5,9 @@ exl-id: 3666328a-79a7-4dd7-b952-38bb60f0967d
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 96bf1d56d24da851ad4713e3cb0728fd7a18da18
+source-git-commit: f8b058549162b7ae3d57b1a7dd3461f738b75320
 workflow-type: tm+mt
-source-wordcount: '1288'
+source-wordcount: '1269'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ For customers that bring their own CDN on top of AEM as a Cloud Service, server-
 
 ### Varianter på begäranden om Cloud Service {#content-requests-variances}
 
-Innehållsförfrågningar kan ha avvikelser inom en organisations analysrapporteringsverktyg som sammanfattas i följande tabell. I allmänhet använder *inte* analysverktyg som samlar in data via instrumentering på klientsidan för att rapportera antalet innehållsförfrågningar för en viss plats, helt enkelt eftersom de ofta är beroende av att användarens samtycke aktiveras, vilket innebär att en stor del av trafiken saknas. Analysverktyg som samlar in data på serversidan i loggfiler, eller CDN-rapporter för kunder som lägger till egna CDN ovanpå AEM as a Cloud Service, ger bättre antal. [Adobe RUM-datatjänsten](/help/sites-cloud/administering/real-use-monitoring-for-aem-as-a-cloud-service.md) rekommenderas för rapportering av sidvisningar och deras associerade prestanda.
+Innehållsförfrågningar kan ha avvikelser inom en organisations analysrapporteringsverktyg som sammanfattas i följande tabell. I allmänhet använder *inte* analysverktyg som samlar in data via instrumentering på klientsidan för att rapportera antalet innehållsförfrågningar för en viss plats, helt enkelt eftersom de ofta är beroende av att användarens samtycke aktiveras, vilket innebär att en stor del av trafiken saknas. Analysverktyg som samlar in data på serversidan i loggfiler, eller CDN-rapporter för kunder som lägger till egna CDN ovanpå AEM as a Cloud Service, ger bättre antal.
 
 | Orsak till avvikelse | Förklaring |
 |---|---|
