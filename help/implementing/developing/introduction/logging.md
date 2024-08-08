@@ -4,9 +4,9 @@ description: Lär dig hur du använder loggning för AEM as a Cloud Service för
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
 feature: Log Files, Developing
 role: Admin, Architect, Developer
-source-git-commit: 88b0479c44f6431a9f254551e51b1ce86af91d0f
+source-git-commit: 6cb2665f2a2e61216608dfe9c3444adeb472395f
 workflow-type: tm+mt
-source-wordcount: '2797'
+source-wordcount: '2829'
 ht-degree: 0%
 
 ---
@@ -550,7 +550,7 @@ CDN-loggarna skiljer sig från de andra loggarna på så sätt att de följer et
 | *status* | HTTP-statuskoden som ett heltalsvärde. |
 | *res_age* | Den tid (i sekunder) som ett svar har cachelagrats (i alla noder). |
 | *pop* | Datacenter för CDN-cacheservern. |
-| *regler* | Namnen på matchande [trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md) och WAF-flaggor, vilket även anger om matchningen resulterade i ett block. Tom om inga regler matchade. |
+| *regler* | Namnen på matchande [trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md) och WAF-flaggor, som även anger om matchningen resulterade i ett block. Tom om inga regler matchade. |
 
 
 ## Åtkomst till loggar {#how-to-access-logs}
@@ -614,6 +614,12 @@ Kunder som har Splunk-konton kan via kundsupportbiljetten begära att deras AEM 
 Nätverksbandbredden som är kopplad till loggar som skickas till Splunk räknas som en del av kundens I/O-användning i nätverket.
 
 CDN-loggar vidarebefordras till Splunk för nya supportförfrågningar. Kunder som redan har aktiverat Splunk forward kan lägga till CDN-loggar i framtiden.
+
+>[!NOTE]
+>
+>Specifika loggar och specifika användarloggar kan inte vidarebefordras till Splunk.
+>
+>Alla loggar vidarebefordras till Splunk, där kunden kan filtrera efter behov.
 
 ### Aktivera vidarebefordran av segment {#enabling-splunk-forwarding}
 
