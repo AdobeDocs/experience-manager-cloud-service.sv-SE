@@ -4,7 +4,7 @@ description: Lär dig hur du använder loggning för AEM as a Cloud Service för
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
 feature: Log Files, Developing
 role: Admin, Architect, Developer
-source-git-commit: 6cb2665f2a2e61216608dfe9c3444adeb472395f
+source-git-commit: 6f658c5e991c89ff4129352444ba9960d83c8884
 workflow-type: tm+mt
 source-wordcount: '2829'
 ht-degree: 0%
@@ -617,9 +617,9 @@ CDN-loggar vidarebefordras till Splunk för nya supportförfrågningar. Kunder s
 
 >[!NOTE]
 >
->Specifika loggar och specifika användarloggar kan inte vidarebefordras till Splunk.
+>*Det går inte att vidarebefordra*-loggar och *specifika* användarloggar till Splunk.
 >
->Alla loggar vidarebefordras till Splunk, där kunden kan filtrera efter behov.
+>**Alla**-loggar vidarebefordras till Splunk, där kunden kan filtrera efter behov.
 
 ### Aktivera vidarebefordran av segment {#enabling-splunk-forwarding}
 
