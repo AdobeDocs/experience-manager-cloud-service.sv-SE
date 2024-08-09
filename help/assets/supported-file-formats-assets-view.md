@@ -5,9 +5,9 @@ role: User, Leader, Admin, Architect, Developer
 contentOwner: AG
 exl-id: 5936ace2-318e-4888-9ad4-23e6f6bfb857
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
+source-git-commit: 7c8f54d7c1139485717cc42dafbc87be74fd5883
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '520'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 [!DNL Assets view] har stöd för ett stort antal filformat och alla funktioner har olika stöd för olika filtyper.
 
 * ![ikon för bildfiltyp](assets/image-icon.svg) Bilder: JPG, PNG, GIF, TIFF och andra
-* ![creative cloudType, ikon](assets/creative-cloud-files.svg) Creative Cloud filer: PSD, AI och INDD
+* ![creative cloudType-ikon](assets/creative-cloud-files.svg) Creative Cloud filer: PSD, PSB, AI och INDD
 * ![kameratypsikon](assets/camera-icon.svg) Camera Raw filer: CR2/CR3, NEF, SRW/SRF med flera
 * ![ikon för dokumentfiltyp](assets/document-icon.svg) Dokument: DOCX, PDF, PPTX och XLSX
 * ![ikon för videofiltyp](assets/video-icon.svg) Videoklipp: MP4
@@ -46,7 +46,7 @@ De olika filtyperna har olika typer av stöd för användningsfall och funktione
 | Mappar | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | - | - |
 | MP4-videor | ✓ | ✓ | ✓ | - | ✓ | ✓ ‡ | - | ✓ |
 | PDF | ✓ | ✓ | ✓ | - | ✓ | ✓ | - | ✓ |
-| PSD, AI och INDD | ✓ | ✓ | ✓ | - | ✓ | ✓ ‡ | - | ✓ |
+| PSD, PSB, AI och INDD | ✓ | ✓ | ✓ | - | ✓ | ✓ ‡ | - | ✓ |
 | Andra binära filer | ✓ | ✓ | ✓ | - | ✓ | ✓ | - | ✓ |
 
 <!-- Hiding CC Libraries (considered beta) as per PM feedback.
@@ -63,7 +63,7 @@ De olika filtyperna har olika typer av stöd för användningsfall och funktione
 | Videor | ✓ | ✓ | - | ✓ | ✓ | ✓ | ✓ |
 | CC Libraries | - | - | - | - | - | ✓ | ✓ |
 | PDF | ✓ | ✓ | - | ✓ | ✓ | ✓ | ✓ |
-| PSD | ✓ | ✓ | - | ✓ | ✓ | ✓ | ✓ |
+| PSD och PSB | ✓ | ✓ | - | ✓ | ✓ | ✓ | ✓ |
 | AI och INDD | ✓ | ✓ | - | ✓ | - | ✓ | ✓ |
 | Andra binära filer | ✓ | ✓ | - | ✓ | - | ✓ | ✓ |
 
@@ -78,7 +78,7 @@ De olika filtyperna har olika typer av stöd för användningsfall och funktione
 | Videor | - | ✓ | ✓ |
 | CC Libraries | - | - | - |
 | PDF | - | ✓ | ✓ |
-| PSD, AI och INDD | - | ✓ | ✓ |
+| PSD, PSB, AI och INDD | - | ✓ | ✓ |
 | Andra binära filer | - | ✓ | ✓ |
 | DOC | - | ✓ | ✓ |
 | DOCX | - | ✓ | ✓ |
@@ -99,7 +99,8 @@ De olika filtyperna har olika typer av stöd för användningsfall och funktione
 | Videor | ✓ | - | ✓ | ✓ | ✓ |
 | CC Libraries | ✓ | - | - | - | - |
 | PDF | ✓ | - | ✓ | ✓ | ✓ |
-| PSD, AI och INDD | ✓ | - | ✓ | ✓ | ✓ |
+| AI och INDD | ✓ | - | ✓ | ✓ | ✓ |
+| PSD och PSB | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Andra binära filer | ✓ | - | ✓ | ✓ | ✓ |
 
 Användare av [!DNL Adobe Asset Link] kan överföra och checka in (överföra en ny version) filer till databasen [!DNL Assets view] från de [!DNL Adobe Creative Cloud] skrivbordsprogram som stöds.
@@ -112,7 +113,7 @@ Användare av [!DNL Adobe Asset Link] kan överföra och checka in (överföra e
 | Videos        |          |
 | CC Libraries  |          |
 | PDF files     |          |
-| PSD           |          |
+| PSD, PSB           |          |
 | AI            |          |
 | INDD          |          |
 
