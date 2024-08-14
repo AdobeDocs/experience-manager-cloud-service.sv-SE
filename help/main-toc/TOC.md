@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: a1baa7f29c6e15af11347debdd341f9972c06e83
+source-git-commit: 1c18e38a463bdd57089881c098cb81641e55a5e4
 workflow-type: tm+mt
-source-wordcount: '5315'
+source-wordcount: '5335'
 ht-degree: 3%
 
 ---
@@ -55,12 +55,12 @@ ht-degree: 3%
          + [Versionsinformation för 2022.6.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-6-0.md)
          + [Versionsinformation för 2022.5.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-5-0.md)
          + [Versionsinformation för 2022.4.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-4-0.md)
-         + [Release Notes for 2022.3.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-3-0.md)
-         + [Release Notes for 2022.1.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-1-0.md)
-      + {#2021}
+         + [Versionsinformation för 2022.3.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-3-0.md)
+         + [Versionsinformation för 2022.1.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-1-0.md)
+      + 2021 {#2021}
          + [Versionsinformation för 2021.11.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-11-0.md)
-         + [Versionsinformation för 2021.10.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-10-0.md)
-         + [Versionsinformation för 2021.9.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-9-0.md)
+         + [Release Notes for 2021.10.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-10-0.md)
+         + [Release Notes for 2021.9.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-9-0.md)
          + [Versionsinformation för 2021.8.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-8-0.md)
          + [Versionsinformation för 2021.7.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-7-0.md)
          + [Versionsinformation för 2021.6.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-6-0.md)
@@ -69,7 +69,7 @@ ht-degree: 3%
          + [Versionsinformation för 2021.3.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-3-0.md)
          + [Versionsinformation för 2021.2.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-2-0.md)
          + [Versionsinformation för 2021.1.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-1-0.md)
-      + 2020 {#2020}
+      + {#2020}
          + [Versionsinformation för 2020.12.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-12-0.md)
          + [Versionsinformation för 2020.11.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-11-0.md)
          + [Versionsinformation för 2020.10.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-10-0.md)
@@ -84,6 +84,7 @@ ht-degree: 3%
    + Versionsinformation om underhåll av AEMaaCS {#maintenance}
       + [Versionsinformation om aktuellt underhåll](/help/release-notes/maintenance/latest.md)
       + 2024 {#2024}
+         + [Underhållsinformation för 2024.8.0](/help/release-notes/maintenance/2024/2024-8-0.md)
          + [Underhållsinformation för 2024.7.0](/help/release-notes/maintenance/2024/2024-7-0.md)
          + [Underhållsinformation för 2024.6.0](/help/release-notes/maintenance/2024/2024-6-0.md)
          + [Underhållsinformation för 2024.5.0](/help/release-notes/maintenance/2024/2024-5-0.md)
@@ -191,6 +192,9 @@ ht-degree: 3%
       + [Aktuell versionsinformation för Generera variationer](/help/generative-ai/release-notes-generate-variations.md)
    + Versionsinformation för Universal Editor {#univeral-editor}
       + [Aktuell versionsinformation för Universal Editor](/help/release-notes/universal-editor/current.md)
+      + 2024 {#2024}
+         + [Versionsinformation 2024.07.28](/help/release-notes/universal-editor/2024/2024-07-28.md)
+         + [Versionsinformation 2024.06.28](/help/release-notes/universal-editor/2024/2024-06-28.md)
    + [Vad är Nytt?](/help/release-notes/what-is-new.md)
    + [Betydande förändringar i AEM Cloud Service](/help/release-notes/aem-cloud-changes.md)
    + [Föråldrade och borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md)
@@ -478,17 +482,17 @@ ht-degree: 3%
       + [Digital Rights Management för tillgångar](/help/assets/drm.md)
       + [Vattenstämpelresurser](/help/assets/watermark-assets.md)
       + [Bearbeta resurser med  [!DNL Creative Cloud] API:er](/help/assets/cc-api-integration.md)
-      + [Färgtaggar för bilder](/help/assets/color-tag-images.md)
+      + [Color tags for images](/help/assets/color-tag-images.md)
       + [Manage PDF documents](/help/assets/manage-pdf-documents.md)
    + [!DNL Assets]{#admin}
-      + [Identifiera duplicerade resurser](/help/assets/detect-duplicate-assets.md)
+      + [Detect duplicate assets](/help/assets/detect-duplicate-assets.md)
       + [Dokumentreferenser för utvecklare och API:er](/help/assets/developer-reference-material-apis.md)
       + [Mappmetadatamatchschema](/help/assets/folder-metadata-schema.md)
       + [Arbeta med bild- och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md)
       + [Konfigurera transkription för ljud- och videomaterial](/help/assets/configure-transcription.md)
       + [Översätta resurser](/help/assets/translate-assets.md)
       + [Sök efter ansikten](/help/assets/search-facets.md)
-      + [ASSETS HTTP API](/help/assets/mac-api-assets.md)
+      + [Assets HTTP API](/help/assets/mac-api-assets.md)
       + [Stöd för innehållsfragment i Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md)
       + [Uppkopplad Assets](/help/assets/use-assets-across-connected-assets-instances.md)
       + [Generera renderingar endast för placering](/help/assets/configure-fpo-renditions.md)
@@ -599,7 +603,7 @@ ht-degree: 3%
       + [Hantera samlingar](/help/assets/manage-collections-assets-view.md)
       + [Bevaka resurser, mappar och samlingar](/help/assets/manage-notifications-assets-view.md)
       + [Hantera rapporter](/help/assets/manage-reports-assets-view.md)
-      + [Hantera taggar](/help/assets/tagging-management-assets-view.md)
+      + [Manage tags](/help/assets/tagging-management-assets-view.md)
       + [Content Credentials](/help/assets/content-credentials.md)
       + [Publish Assets to AEM and Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
@@ -611,7 +615,7 @@ ht-degree: 3%
       + [Överföra eller importera varumärkesgodkända mediefiler till Content Hub](/help/assets/upload-brand-approved-assets.md)
       + [Söka efter resurser i Content Hub](/help/assets/search-assets-content-hub.md)
       + [Resursegenskaper](/help/assets/asset-properties-content-hub.md)
-      + [Dela resurser i Content Hub](/help/assets/share-assets-content-hub.md)
+      + [Share assets in Content Hub](/help/assets/share-assets-content-hub.md)
       + [Hämta resurser med Content Hub](/help/assets/download-assets-content-hub.md)
       + [Hantera samlingar i Content Hub](/help/assets/collections-content-hub.md)
       + [Redigera bilder med Adobe Express i Content Hub](/help/assets/edit-images-content-hub.md)
@@ -725,7 +729,7 @@ ht-degree: 3%
          + Skapa ett anpassat formulär {#create-an-adaptive-form-on-forms-cs}
             + [Introduktion till framtagning av en adaptiv Forms](/help/forms/introduction-forms-authoring.md)
             + [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form.md)
-            + [Referera till teman, mallar och datamodeller](/help/forms/reference-themes-templates-data-models.md)
+            + [Reference themes, templates, and data models](/help/forms/reference-themes-templates-data-models.md)
             + [Create a template](/help/forms/template-editor.md)
             + [Skapa ett tema](/help/forms/themes.md)
             + [Utforma JSON-schema för ett adaptivt formulär](/help/forms/adaptive-form-json-schema-form-model.md)
@@ -859,6 +863,7 @@ ht-degree: 3%
          + [Konfigurera URL:er för SEO](/help/commerce-cloud/configuring/advanced-url-configuration.md)
          + [Cachealternativ](/help/commerce-cloud/configuring/caching.md)
          + [Anpassade HTTP-huvuden](/help/commerce-cloud/configuring/custom-http-headers.md)
+         + [Kundvagn och installationsprogram för Dispatcher](/help/commerce-cloud/configuring/shopping-cart-dispatcher.md)
       + Utveckling {#developing}
          + [Utveckla med AEM Cloud Service SDK](/help/commerce-cloud/develop.md)
          + [CIF](/help/commerce-cloud/customizing/style-cif-component.md)
@@ -1027,17 +1032,17 @@ ht-degree: 3%
          + [Skapa sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-sandbox-programs.md)
          + [Redigeringsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md)
          + [Vilolägen](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/hibernating-environments.md)
-         + [Support för Edge Delivery Services](/help/implementing/cloud-manager/edge-delivery-services.md)
-      + Skapar ett AEM programprojekt {#create-application-project}
-         + [Guiden Skapa projekt](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md)
-         + [Projektinställningar](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md)
+         + [Edge Delivery Services Support](/help/implementing/cloud-manager/edge-delivery-services.md)
+      + {#create-application-project}
+         + [Project Creation Wizard](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md)
+         + [Project Setup](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md)
          + [Bygg miljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md)
       + [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md)
       + Hantera kod {#managing-code}
          + [Versionshantering för Maven Project](/help/implementing/cloud-manager/managing-code/project-version-handling.md)
          + [Hantera databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/managing-repositories.md)
-         + [Lägga till Adobe-databaser](/help/implementing/cloud-manager/managing-code/adobe-repositories.md)
-         + [Lägga till privata databaser](/help/implementing/cloud-manager/managing-code/private-repositories.md)
+         + [Adding Adobe Repositories](/help/implementing/cloud-manager/managing-code/adobe-repositories.md)
+         + [Adding Private Repositories](/help/implementing/cloud-manager/managing-code/private-repositories.md)
          + [Åtkomst till databaser](/help/implementing/cloud-manager/managing-code/accessing-repos.md)
          + [Stöd för Git-undermodul](/help/implementing/cloud-manager/managing-code/git-submodules.md)
          + [Använda Git med Cloud Manager](/help/implementing/cloud-manager/managing-code/integrating-with-git.md)
@@ -1148,17 +1153,17 @@ ht-degree: 3%
          + [SecurBank-exempelapp](/help/implementing/universal-editor/securbank.md)
          + [Händelser](/help/implementing/universal-editor/events.md)
          + [Anpassa](/help/implementing/universal-editor/customizing.md)
-         + [Arkitektur](/help/implementing/universal-editor/architecture.md)
+         + [Architecture](/help/implementing/universal-editor/architecture.md)
          + [Authentication](/help/implementing/universal-editor/authentication.md)
-         + [Getting Started](/help/implementing/universal-editor/getting-started.md)
+         + [Komma igång](/help/implementing/universal-editor/getting-started.md)
          + [Utvecklaröversikt](/help/implementing/universal-editor/developer-overview.md)
          + [Lokal AEM](/help/implementing/universal-editor/local-dev.md)
          + [Samtal](/help/implementing/universal-editor/calls.md)
       + [Headless Experience Management](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/introduction.html)
       + Hybrid- och SPA-utveckling {#hybrid}
          + [Hybrid och SPA med AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
-         + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/enabling-json-exporter.html)
-         + [SPA introduktion och genomgång](/help/implementing/developing/hybrid/introduction.md)
+         + [](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/enabling-json-exporter.html)
+         + [SPA Introduction and Walkthrough](/help/implementing/developing/hybrid/introduction.md)
          + [SPA WKND - självstudiekurs](/help/implementing/developing/hybrid/wknd-tutorial.md)
          + [Komma igång med React](/help/implementing/developing/hybrid/getting-started-react.md)
          + [Komma igång med Angular](/help/implementing/developing/hybrid/getting-started-angular.md)
@@ -1269,7 +1274,7 @@ ht-degree: 3%
    + Kompatibilitet med dataintegritet och dataskydd {#data-privacy}
       + [AEM beredskap för dataskydd och dataintegritet](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md)
       + [AEM Foundation Ready for Data Protection and Data Privacy Regulations](/help/compliance/data-privacy-and-protection-readiness/foundation-readiness.md)
-      + [AEM Sites beredskap för dataskydd och dataintegritet](/help/compliance/data-privacy-and-protection-readiness/sites-readiness.md)
+      + [AEM Sites Readiness for Data Protection and Data Privacy Regulations](/help/compliance/data-privacy-and-protection-readiness/sites-readiness.md)
    + Tillgänglighet {#accessibility}
-      + [AEM as a Cloud Service and the Web Accessibility Guidelines](/help/compliance/accessibility/web-accessibility.md)
+      + [AEM as a Cloud Service och riktlinjerna för webbtillgänglighet](/help/compliance/accessibility/web-accessibility.md)
       + [En snabbguide till WCAG 2.1](/help/compliance/accessibility/quick-guide-wcag.md)
