@@ -1,19 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2024.06.28
-description: Detta är versionsinformationen för version 2024.06.28 av Universal Editor.
+title: Versionsinformation om Universal Editor 2024.08.13
+description: Detta är versionsinformationen för version 2024.08.13 av Universal Editor.
 feature: Release Information
 role: Admin
-source-git-commit: cc94ad2ba42707bb7541217f0225b995f64ad84f
+exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
+source-git-commit: d71d3481004f2429c018c536b3e12784cf597f85
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '369'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2024.06.28 {#release-notes}
+# Versionsinformation om Universal Editor 2024.08.13 {#release-notes}
 
-Detta är versionsinformationen för den 28 juni 2024-versionen av Universal Editor.
+Detta är versionsinformationen för den 13 augusti 2024-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -21,18 +22,19 @@ Detta är versionsinformationen för den 28 juni 2024-versionen av Universal Edi
 
 ## Nyheter {#what-is-new}
 
-* **Hem**: De senaste sidorna visas som en lista, utan förhandsvisningsbilder.
-* **Platsfält**: Förbättrad URL-validering har lagts till, HTTPS-URL:er och stöd för hash-adresser i URL:er har lagts till för att ta hänsyn till hash-dirigerade program.
-* **Tangentbordsnavigering**: Markeringen av sidövertäckning kopplades från egenskapsfältets fokus för att förbättra tangentbordsnavigeringen på sidan utan att förlora fokus.
-* **Objektetiketter**: I grundvärdet för etiketter används nu `data-aue-prop` i stället för `data-aue-type` för tydligare identifiering i övertäckningar och innehållsträdet.
-* **RTE Modal**: En **Avbryt**-knapp lades till i den modala textredigeraren när den öppnades från egenskapspanelen.
-* **UE-tjänsten på nod**: HTTP-stödet för Universal Editor-tjänsten återinfördes eftersom alla HTTPS-anslutningar avbryts på Dispatcher-nivå.
-* **Intern kopierings-API**: Ett API till Universal Editor-tjänsten för kopiering av komponenter har lagts till, vilket möjliggör framtida introduktion av verktygsfältsalternativ för kopiering och kopiering av innehåll.
+* **Anpassade datatyper**: Anpassa redigeraren efter dina unika databehov med möjligheten att skapa anpassade fält i egenskapspanelen.
+   * Vare sig du utvecklar en anpassad produktväljare för e-handelsbruk eller fyller i en nedrullningsbar lista med värden från era bakgrunder ger den här funktionen dig den kontroll du behöver över de data som författarna använder för att skapa innehåll.
+* **Dra och släpp för flera behållare**: Dra och släpp för att få större flexibilitet i layoutkompositionen genom möjligheten att flytta komponenter mellan olika behållare via dra och släpp i panelen [Innehållsträd.](/help/sites-cloud/authoring/universal-editor/navigation.md#content-tree-mode)
+* **Optimerad GitHub-integrering**: Cachelagring för GitHub-svar har introducerats, vilket avsevärt snabbar upp hämtningen av taggar och `universal-editor-cors-library`, vilket ger en snabbare och smidigare användarupplevelse.
+* **Managed Services RPM-paket**: Adobe erbjuder nu ett RPM-paket för att effektivisera distributionen och hanteringen av Universal Editor-tjänsten, vilket förenklar underhåll och minskar driftskostnader för hanterade tjänster.
+* **Konfigurerbar IMS-tokenvalidering**: IMS-tokenvalidering är nu valfritt för att öka flexibiliteten i tokenhanteringen.
+   * Med det här konfigurationsalternativet kan du inaktivera validering efter behov, vilket förenklar inställningarna för din molngateway.
+* **Splunk Integration**: Splunk-loggning har integrerats i Universal Editor Service Express, vilket förbättrar övervakning och diagnostik.
+   * Integreringen säkerställer effektiv loggspårning, smidigare åtgärder och snabbare felsökning.
 
 ## Felkorrigeringar {#bug-fixes}
 
-* **Panelens radfall**: Den synliga menyraden i egenskapspanelen för djupt kapslade objekt som inte var öppna har korrigerats.
-* **Väljare för innehållsfragment**: Väljaren för innehållsfragment har förbättrats så att den respekterar reglerna som definierats i modellen för innehållsfragment eller i `data-aue-filter` .
-* **Komponentinfogning**: Listan för infogning av nya komponenter som inte uppdaterades korrekt efter navigering till en annan sida har korrigerats.
-* **Publiceringsstatus**: Hanteringen av publikationsstatus har förbättrats så att den fungerar mer konsekvent.
-* **Diverse korrigeringar**: Den här versionen innehåller även olika mindre korrigeringar, rensning av teknisk skuld, säkerhetsförbättringar och konsoliderade tester för övergripande stabilitet och prestanda.
+* **Förbättrad publiceringsfeedback**: Om publiceringen misslyckas på grund av otillräcklig behörighet har återkoppling till användaren under publiceringen förbättrats så att en tydlig varning visas i stället för att ett fel indikeras.
+* **Förbättrad URL-hantering**: Problem med felaktig URL-kodning/avkodning som orsakade publiceringsfel har åtgärdats.
+* **Exakt datahantering**: Ett problem där flyttal sparades felaktigt som heltal har åtgärdats, vilket ger en mer exakt datahantering i hela innehållet.
+* **Säkerhet och stabilitet**: Säkerhetsluckor i Docker-bilder har åtgärdats och testtäckning för viktiga komponenter som komponentväljaren och Breadcrumbs har implementerats, vilket ger en säkrare, stabilare och mer tillförlitlig redigeringsupplevelse.
