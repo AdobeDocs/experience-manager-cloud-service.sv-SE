@@ -4,7 +4,7 @@ description: Aktuell underhållsversionsinformation för  [!DNL Adobe Experience
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: dc7150c6ce971aa6f89fa24f7ca387cbb28db1f2
+source-git-commit: a1baa7f29c6e15af11347debdd341f9972c06e83
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 1%
