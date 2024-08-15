@@ -4,9 +4,9 @@ description: Konfigurerar trafikfilterregler inklusive WAF-regler (Web Applicati
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
 feature: Security
 role: Admin
-source-git-commit: 7ce397b2564373a006d7f413409d29265c74d768
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '3932'
+source-wordcount: '3937'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Den här artikeln är indelad i följande avsnitt:
 * **Regler för hastighetsbegränsning:** Lär dig hur du använder regler för hastighetsbegränsning för att skydda din webbplats från attacker med stora volymer.
 * **Varningar om trafikfilterregler** Konfigurera varningar som ska meddelas när reglerna aktiveras.
 * **Standardtrafikspik vid ursprungsvarning** Få meddelande när det finns en trafiktoppning vid det ursprung som tyder på en DDoS-attack.
-* **CDN-loggar:** Se vad som deklarerats och WAF-flaggor matchar trafiken.
+* **CDN-loggar:** Se vad som deklarerats och WAF Flags matchar trafiken.
 * **Kontrollpanelsverktyg:** Analysera CDN-loggarna för att hitta nya trafikfilterregler.
 * **Rekommenderade startregler:** En uppsättning regler att komma igång med.
 * **Självstudiekurs:** Praktiska kunskaper om funktionen, inklusive hur du använder instrumentpanelsverktyg för att deklarera rätt regler.
@@ -71,8 +71,8 @@ Som beskrivs i den här artikeln kan trafikfilterregler distribueras till det ha
 Nedan följer en högnivårekommenderad process från början till slut för att komma fram till rätt trafikfilterregler:
 
 1. Konfigurera pipelines för icke-produktion och produktionskonfiguration enligt beskrivningen i avsnittet [Inställningar](#setup).
-1. Kunder som har licensierat underkategorin för WAF-trafikfilterregler bör aktivera dem i Cloud Manager.
-1. Läs igenom och prova självstudiekursen för att få en större förståelse för hur du använder trafikfilterregler, inklusive WAF-regler om de har licensierats. I självstudiekursen får du hjälp med att distribuera regler till en utvecklingsmiljö, simulera skadlig trafik, hämta [CDN-loggarna](#cdn-logs) och analysera dem i [instrumentpanelsverktyget](#dashboard-tooling).
+1. Kunder som har licensierat underkategorin till WAF trafikfilterregler bör aktivera dem i Cloud Manager.
+1. Läs igenom och prova självstudiekursen för att få en större förståelse för hur man använder trafikfilterregler, inklusive WAF-regler om de har licensierats. I självstudiekursen får du hjälp med att distribuera regler till en utvecklingsmiljö, simulera skadlig trafik, hämta [CDN-loggarna](#cdn-logs) och analysera dem i [instrumentpanelsverktyget](#dashboard-tooling).
 1. Kopiera de rekommenderade startreglerna till `cdn.yaml` och distribuera konfigurationen till produktionsmiljön i loggläge.
 1. När du har samlat in trafik analyserar du resultatet med [instrumentpanelsverktyget](#dashboard-tooling) för att se om det finns några matchningar. Leta upp felaktiga positiva inställningar och gör eventuella nödvändiga justeringar för att aktivera startreglerna i blockläge.
 1. Lägg till anpassade regler baserat på analys av CDN-loggarna, först testning med simulerad trafik i utvecklingsmiljöer innan driftsättning i scen- och produktionsmiljöer i loggläge, sedan blockläge.
@@ -101,7 +101,7 @@ Nedan följer en högnivårekommenderad process från början till slut för att
          action: block
    ```
 
-   En beskrivning av egenskaperna ovanför noden `data` finns i artikeln [config pipeline](/help/operations/config-pipeline.md#common-syntax) . Egenskapsvärdet `kind` ska anges till *CDN* och versionen ska anges till `1`.
+   Se [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#common-syntax) för en beskrivning av egenskaperna ovanför noden `data`. Egenskapsvärdet `kind` ska anges till *CDN* och versionen ska anges till `1`.
 
 
 1. Om WAF-regler är licensierade bör du aktivera funktionen i Cloud Manager enligt beskrivningen nedan för både nya och befintliga programscenarier.
@@ -110,7 +110,7 @@ Nedan följer en högnivårekommenderad process från början till slut för att
 
    1. Om du vill konfigurera WAF för ett befintligt program [redigerar du programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md) och avmarkerar eller markerar alternativet **WAF-DDOS** när som helst på fliken **Säkerhet** .
 
-1. Skapa en config pipeline i Cloud Manager, enligt beskrivningen i [Konfigurera pipelineartikeln.](/help/operations/config-pipeline.md#managing-in-cloud-manager) Pipelinen refererar till en `config`-mapp på den översta nivån med filen `cdn.yaml` placerad någonstans nedanför, enligt [beskrivningen här](/help/operations/config-pipeline.md#folder-structure).
+1. Skapa en config pipeline i Cloud Manager, enligt beskrivningen i [Konfigurera pipelineartikeln.](/help/operations/config-pipeline.md#managing-in-cloud-manager) Pipelinen kommer att referera till en `config`-mapp på den översta nivån där filen `cdn.yaml` placeras någonstans under, se [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#folder-structure).
 
 ## Syntax för trafikfilterregler {#rules-syntax}
 
@@ -215,7 +215,7 @@ when:
   in: [ "192.168.0.0/24" ]
 ```
 
-* Adobe rekommenderar att du använder [regex101](https://regex101.com/) och [Snabbt sidindelning](https://fiddle.fastly.dev/) när du arbetar med regex. Du kan också lära dig mer om hur Snabbt hanterar regex i den här [artikeln](https://www.fastly.com/documentation/reference/vcl/regex/#best-practices-and-common-mistakes).
+* Adobe rekommenderar att du använder [regex101](https://regex101.com/) och [Snabbt sidindelning](https://fiddle.fastly.dev/) när du arbetar med regex. Du kan också lära dig mer om hur Snabbt hanterar regex från [snabb dokumentation - Reguljära uttryck i Fastly VCL](https://www.fastly.com/documentation/reference/vcl/regex/#best-practices-and-common-mistakes).
 
 
 ### Åtgärdsstruktur {#action-structure}

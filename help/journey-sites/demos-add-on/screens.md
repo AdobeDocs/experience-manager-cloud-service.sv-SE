@@ -4,9 +4,9 @@ description: Lär dig hur du aktiverar AEM Screens as a Cloud Service upplevelse
 exl-id: 369eea9f-2e81-4b87-841c-188b67657bab
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '2654'
+source-wordcount: '2666'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Lär dig de steg som möjliggör AEM Screens fullständiga as a Cloud Service up
 
 >[!NOTE]
 >
->AEM Screens Demo kräver att Screens Add-on läggs till i Cloud Manager Program. Lär dig [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/onboarding-screens-cloud/adding-screens-addon/add-on-new-program-screens-cloud.html) hur du lägger till det.
+>AEM Screens Demo kräver att Screens Add-on läggs till i Cloud Manager Program. Lär dig hur du lägger till Screens som ett tillägg till ett nytt program i Cloud Manager](/help/screens-cloud/onboarding-screens-cloud/add-on-new-program-screens-cloud.md) med [Lägga till det.
 
 ## Story hittills {#story-so-far}
 

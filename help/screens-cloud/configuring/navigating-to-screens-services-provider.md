@@ -4,9 +4,9 @@ description: På den här sidan beskrivs hur du navigerar till Screens Services 
 exl-id: 9eff6fe8-41d4-4cf3-b412-847850c4e09c
 feature: Administering Screens
 role: Admin, Developer, User
-source-git-commit: 5452a02ed20d70c09728b3e34f248c7d37fc4668
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '382'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Följande avsnitt visar hur du konfigurerar och konfigurerar Screens Services Pr
 
 Följ stegen nedan för att konfigurera Screens Services Provider:
 
-1. Navigera till Screens Services Provider från [här](https://experience.adobe.com/screens).
+1. Gå till [Screens Services Provider](https://experience.adobe.com/screens).
 
    >[!CAUTION]
    >Om du har tillgång till flera organisationer måste du se till att du har loggat in på rätt organisation. Om du vill ändra organisation klickar du på organisationsnamnet i det övre högra hörnet av skärmen och väljer den organisation som du behöver åtkomst till.

@@ -4,9 +4,9 @@ description: Lär dig hur du använder GraphQL API för headless-leverans av Con
 exl-id: 2b72f222-2ba5-4a21-86e4-40c763679c32
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '677'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Innan GraphQL API:er kan användas måste en GraphQL-slutpunkt skapas.
    /content/cq:graphql/<configuration-name>/endpoint
    ```
 
-Mer information om att aktivera [GraphQL-slutpunkter finns här](/help/headless/graphql-api/graphql-endpoint.md).
+Mer information om hur du aktiverar GraphQL-slutpunkter finns i [Hantera GraphQL-slutpunkter i AEM](/help/headless/graphql-api/graphql-endpoint.md).
 
 ## Fråga innehåll med GraphQL med GraphiQL
 

@@ -4,9 +4,9 @@ description: OAuth2-stöd för e-posttjänsten i Adobe Experience Manager som en
 exl-id: 93e7db8b-a8bf-4cc7-b7f0-cda481916ae9
 feature: Security
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ Innan du fortsätter att konfigurera OAuth på AEM-sidan måste du verifiera bå
 >
 > Du kan hämta Postman API-samlingen från [den här platsen](https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-auth-code-flow).
 >
-> Mer information finns i MSFT OAuth-dokumentationen [här](https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth).
+> Mer information finns i [MSFT OAuth-dokumentationen](https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth).
 
 ### Integrering med AEM as a Cloud Service {#integration-with-aem-as-a-cloud-service}
 
@@ -168,7 +168,7 @@ under `/apps/<my-project>/osgiconfig/config` med syntaxen nedan. Värdena `smtp.
    ```
 
 1. Konfigurationsvärdet `smtp.host` är `smtp.office365.com` för Outlook
-1. Vid körning skickar du hemligheterna `refreshToken values` och `clientSecret` med Cloud Manager-variablernas API enligt beskrivningen [här](/help/implementing/deploying/configuring-osgi.md#setting-values-via-api) eller genom att använda [Cloud Manager för att lägga till variabler.](/help/implementing/cloud-manager/environment-variables.md) Värdena för variablerna `SECRET_SMTP_OAUTH_REFRESH_TOKEN` och `SECRET_SMTP_OAUTH_CLIENT_SECRET` ska definieras.
+1. Vid körning skickar du hemligheterna `refreshToken values` och `clientSecret` med [Cloud Manager-variablernas API](/help/implementing/deploying/configuring-osgi.md#setting-values-via-api) eller med [Cloud Manager för att lägga till variabler](/help/implementing/cloud-manager/environment-variables.md). Värdena för variablerna `SECRET_SMTP_OAUTH_REFRESH_TOKEN` och `SECRET_SMTP_OAUTH_CLIENT_SECRET` ska definieras.
 
 ### Felsökning {#troubleshooting}
 

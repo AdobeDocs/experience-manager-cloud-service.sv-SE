@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler 
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: 3c546a05cf91dd8dcba39e42cd0f19857713f130
+source-git-commit: 85cef99dc7a8d762d12fd6e1c9bc2aeb3f8c1312
 workflow-type: tm+mt
-source-wordcount: '1319'
+source-wordcount: '1314'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Innan du kan konfigurera trafik på leveransnätverket måste du göra följande
 
 1. Skapa en fil med namnet `cdn.yaml` eller liknande, och referera till de olika konfigurationsfragmenten i avsnitten nedan.
 
-   Alla fragment har dessa gemensamma egenskaper, som beskrivs i artikeln [Konfigurera pipeline](/help/operations/config-pipeline.md#common-syntax). Egenskapsvärdet `kind` ska vara *CDN* och egenskapen `version` ska vara *1*.
+   Alla fragment har dessa gemensamma egenskaper, som beskrivs under [Konfigurera pipeline](/help/operations/config-pipeline.md#common-syntax). Egenskapsvärdet `kind` ska vara *CDN* och egenskapen `version` ska vara *1*.
 
    ```
    kind: "CDN"
@@ -48,9 +48,9 @@ Innan du kan konfigurera trafik på leveransnätverket måste du göra följande
      envTypes: ["dev"]
    ```
 
-1. Placera filen någonstans under en mapp på den översta nivån med namnet *config* eller liknande, vilket beskrivs i artikeln [Konfigurera pipeline](/help/operations/config-pipeline.md#folder-structure).
+1. Placera filen någonstans under en mapp på den översta nivån med namnet *config* eller liknande, enligt beskrivningen under [Konfigurera pipeline](/help/operations/config-pipeline.md#folder-structure).
 
-1. Skapa en konfigurationspipeline i Cloud Manager, enligt beskrivningen i artikeln [Konfigurera pipeline](/help/operations/config-pipeline.md#managing-in-cloud-manager).
+1. Skapa en konfigurationspipeline i Cloud Manager, enligt beskrivningen under [Konfigurera pipeline](/help/operations/config-pipeline.md#managing-in-cloud-manager).
 
 1. Distribuera konfigurationen.
 

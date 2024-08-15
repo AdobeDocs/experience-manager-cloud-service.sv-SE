@@ -5,9 +5,9 @@ exl-id: 892577db-05dc-49ff-bb2c-203efdb89c8c
 recommendations: noDisplay
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 1289da67452be7fc0fa7f3126d2a3dbf051aa9b5
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1292'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Grattis till att du har valt AEM as a Cloud Service! Det här dokumentet är utg
 
 ## Introduktion {#introduction}
 
-Adobe Experience Manager är en kraftfull uppsättning sammanställningsbara innehållstjänster som snabbt levererar mycket slagkraftiga, personaliserade upplevelser över alla kanaler och frigör innehåll från alla kanaler. **Edge Delivery Services** är den senaste innovationen i Adobe Experience Manager som möjliggör extrem innehållshastighet och levererar enastående upplevelser. Läs om hur du kommer igång med Edge Delivery Services genom att gå till [den här sidan](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html). Mer information om hur du använder Edge Delivery Services finns på sidan [Utvecklarsjälvstudiekurs](https://www.hlx.live/developer/tutorial).
+Adobe Experience Manager är en kraftfull uppsättning sammanställningsbara innehållstjänster som snabbt levererar mycket slagkraftiga, personaliserade upplevelser över alla kanaler och frigör innehåll från alla kanaler. **Edge Delivery Services** är den senaste innovationen i Adobe Experience Manager som möjliggör extrem innehållshastighet och levererar enastående upplevelser. Lär dig hur du kommer igång med Edge Delivery Services genom att läsa [Översikt över Edge Delivery Services](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html). Mer information om hur du använder Edge Delivery Services finns på sidan [Utvecklarsjälvstudiekurs](https://www.hlx.live/developer/tutorial).
 
 Onboarding är den process under vilken en systemadministratör konfigurerar AEM as a Cloud Service för din organisation. I den här processen ingår inledande etablering av molnresurser och tilldelning av användare till roller baserat på deras jobbansvar. Därför kan varje medlem logga in och komma åt sin resurs på AEM as a Cloud Service.
 

@@ -5,9 +5,9 @@ exl-id: eed148a3-4a40-4dce-bc72-c7210e8fd550
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '974'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Det här dokumentet innehåller svar på de vanligaste frågorna om Cloud Manage
 
 Ja. Lägg till `maven-toolchains-plugin` med rätt inställningar för Java™ 11.
 
-Processen dokumenteras [här](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md#getting-started).
+Processen är dokumenterad - se [Guiden Skapa projekt](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md#getting-started).
 
 Se till exempel koden för [wk-projektexempel](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
 
@@ -33,7 +33,7 @@ Ditt AEM Cloud Manager-bygge kan misslyckas när du försöker byta från Java�
 [main] [ERROR] Failed to execute goal org.apache.felix:maven-scr-plugin:1.26.4:scr (generate-scr-scrdescriptor) on project helloworld.core: /build_root/build/testsite/src/main/java/com/adobe/HelloWorldServiceImpl.java : Unable to load compiled class: com.adobe.HelloWorldServiceImpl: com/adobe/HelloWorldServiceImpl has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0 > [Help 1]
 ```
 
-Instruktioner om hur du tar bort det här plugin-programmet finns [här](https://cqdump.joerghoh.de/2019/01/03/from-scr-annotations-to-osgi-annotations/).
+Instruktioner om hur du tar bort det här plugin-programmet finns i [Från SCR-anteckningar till OSGI-anteckningar](https://cqdump.joerghoh.de/2019/01/03/from-scr-annotations-to-osgi-annotations/).
 
 ## Mitt bygge misslyckas med ett fel om RequireJavaVersion efter byte från Java™ 8 till Java™ 11. Vad kan jag göra? {#build-fails-requirejavaversion}
 
@@ -61,11 +61,11 @@ Med det här värdet kan efterföljande distribution fortfarande installeras nä
 
 Du kan också ange versionen till `-SNAPSHOT` för fas- och produktionsbyggen eller distributioner. Cloud Manager anger automatiskt rätt versionsnummer och skapar en tagg i Git. Denna tagg kan vid behov hänvisas till senare.
 
-Mer information om versionshantering [finns här](/help/implementing/cloud-manager/managing-code/project-version-handling.md).
+Mer information om versionshantering finns i [Hantering av maven-projektversioner](/help/implementing/cloud-manager/managing-code/project-version-handling.md).
 
 ## Hur fungerar paketering och paketversionshantering för driftsättning av faser och produktioner? {#snapshot-version}
 
-I fas- och produktionsdistributioner genereras en automatisk version som [dokumenterad här](/help/implementing/cloud-manager/managing-code/project-version-handling.md).
+I scen- och produktionsdistributioner genereras en automatisk version - se [Hantering av projektversioner i Maven](/help/implementing/cloud-manager/managing-code/project-version-handling.md).
 
 För anpassad versionshantering i scen- och produktionsdistributioner anger du en korrekt 3-delsversion som `1.0.0`. Öka versionen varje gång du distribuerar till produktionen.
 

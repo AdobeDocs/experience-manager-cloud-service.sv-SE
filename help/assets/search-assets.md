@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Selectors, Adobe Stock, Asset Distribution, Asset Management, Asset Processing
 role: User, Admin
 exl-id: 68bdaf25-cbd4-47b3-8e19-547c32555730
-source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
+source-git-commit: 85cef99dc7a8d762d12fd6e1c9bc2aeb3f8c1312
 workflow-type: tm+mt
-source-wordcount: '5434'
+source-wordcount: '5437'
 ht-degree: 3%
 
 ---
@@ -87,7 +87,7 @@ Från och med augusti 2023 innehåller Experience Manager Assets en ny version a
 
 Om du behöver växla till föregående beteende (`statistical`-läge) kan du läsa [Innehållssökning och indexering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html) för att skapa en anpassad version av `damAssetLucene-9`-indexet. Adobe rekommenderar inte att du växlar till läget `secure` på grund av påverkan på svarstiderna för sökningar med stora resultatuppsättningar.
 
-Mer information om Oak ansiktsfunktioner, inklusive en detaljerad beskrivning av dessa lägen, finns i [den här artikeln](https://jackrabbit.apache.org/oak/docs/query/lucene.html#facets).
+Mer information om Oak ansiktsfunktioner, inklusive en detaljerad beskrivning av dessa lägen, finns i [Faktablad - Oak-dokumentation - Lucene-index](https://jackrabbit.apache.org/oak/docs/query/lucene.html#facets).
 
 ## Sök efter förslag medan du skriver {#searchsuggestions}
 

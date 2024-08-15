@@ -4,9 +4,9 @@ description: Lär dig hur du använder det AEM-hanterade CDN och hur du pekar di
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
 role: Admin
-source-git-commit: 655b92f0fd3c6fb69bdd9343719537d6328fa7be
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1555'
 ht-degree: 4%
 
 ---
@@ -178,7 +178,7 @@ Det AEM CDN lägger till rubriker i varje begäran med:
 >
 >Om det finns ett kundhanterat CDN återspeglar dessa rubriker kundens CDN-proxyserver snarare än den faktiska klienten. För kundhanterad CDN bör därför rubriker i geopositionering hanteras av kundens CDN.
 
-Värdena för landskoderna är Alpha-2-koder som beskrivs [här](https://en.wikipedia.org/wiki/ISO_3166-1).
+Värdena för landskoderna är Alpha-2-koder som beskrivs i [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1).
 
 Värdena för kontinentkoderna är:
 

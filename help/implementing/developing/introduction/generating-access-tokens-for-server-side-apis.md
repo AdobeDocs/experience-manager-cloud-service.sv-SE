@@ -4,7 +4,7 @@ description: Lär dig att underlätta kommunikationen mellan en tredjepartsserve
 exl-id: 20deaf8f-328e-4cbf-ac68-0a6dd4ebf0c9
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
 source-wordcount: '2089'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Flödet server-till-server beskrivs nedan tillsammans med ett förenklat utveckl
 
 ## Server-till-server-flödet {#the-server-to-server-flow}
 
-Användare med en IMS-organisationsadministratörsroll och som är medlem av produktprofilen AEM användare eller AEM administratörer AEM författare kan generera en uppsättning inloggningsuppgifter från AEM as a Cloud Service. Varje autentiseringsuppgift är en JSON-nyttolast som innehåller ett certifikat (den offentliga nyckeln), en privat nyckel och ett tekniskt konto som består av `clientId` och `clientSecret`. Dessa autentiseringsuppgifter kan senare hämtas av en användare med administratörsrollen AEM as a Cloud Service Environment och ska installeras på en icke-AEM server och behandlas noggrant som en hemlig nyckel. Den här JSON-formatfilen innehåller alla data som krävs för att integrera med ett AEM as a Cloud Service API. Data används för att skapa en signerad JWT-token, som byts med Adobe Identity Management Services (IMS) för en IMS-åtkomsttoken. Denna åtkomsttoken kan sedan användas som en Bearer-autentiseringstoken för att göra förfrågningar till AEM as a Cloud Service. Certifikatet i autentiseringsuppgifterna upphör att gälla efter ett år som standard, men de kan uppdateras vid behov, vilket beskrivs [här](#refresh-credentials).
+Användare med en IMS-organisationsadministratörsroll och som är medlem av produktprofilen AEM användare eller AEM administratörer AEM författare kan generera en uppsättning inloggningsuppgifter från AEM as a Cloud Service. Varje autentiseringsuppgift är en JSON-nyttolast som innehåller ett certifikat (den offentliga nyckeln), en privat nyckel och ett tekniskt konto som består av `clientId` och `clientSecret`. Dessa autentiseringsuppgifter kan senare hämtas av en användare med administratörsrollen AEM as a Cloud Service Environment och ska installeras på en icke-AEM server och behandlas noggrant som en hemlig nyckel. Den här JSON-formatfilen innehåller alla data som krävs för att integrera med ett AEM as a Cloud Service API. Data används för att skapa en signerad JWT-token, som byts med Adobe Identity Management Services (IMS) för en IMS-åtkomsttoken. Denna åtkomsttoken kan sedan användas som en Bearer-autentiseringstoken för att göra förfrågningar till AEM as a Cloud Service. Certifikatet i inloggningsuppgifterna upphör att gälla efter ett år som standard, men de kan uppdateras vid behov, se [Uppdatera inloggningsuppgifter](#refresh-credentials).
 
 I flödet från server till server ingår följande steg:
 

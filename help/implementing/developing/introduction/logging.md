@@ -4,9 +4,9 @@ description: Lär dig hur du använder loggning för AEM as a Cloud Service för
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
 feature: Log Files, Developing
 role: Admin, Architect, Developer
-source-git-commit: 6f658c5e991c89ff4129352444ba9960d83c8884
+source-git-commit: 1289da67452be7fc0fa7f3126d2a3dbf051aa9b5
 workflow-type: tm+mt
-source-wordcount: '2829'
+source-wordcount: '2831'
 ht-degree: 0%
 
 ---
@@ -628,7 +628,7 @@ I supportärendet ska man ange
 * Splunk HEC-slutpunktsadress. Slutpunkten måste ha ett giltigt SSL-certifikat och vara allmänt tillgänglig.
 * Splunk-index
 * Splunk-porten
-* Splunk HEC-token. Mer information finns på [den här sidan](https://docs.splunk.com/Documentation/Splunk/8.0.4/Data/HECExamples).
+* Splunk HEC-token. Mer information finns i [Exempel på HTTP-händelseinsamlare](https://docs.splunk.com/Documentation/Splunk/8.0.4/Data/HECExamples).
 
 Egenskaperna ovan bör anges för varje relevant kombination av program- och miljötyp. Om en kund till exempel vill ha utvecklings-, staging- och produktionsmiljöer bör de tillhandahålla tre uppsättningar information enligt nedan.
 

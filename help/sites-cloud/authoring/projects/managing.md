@@ -5,9 +5,9 @@ exl-id: be4616e7-18bc-4b2d-89f6-d04178ac7f3a
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '876'
 ht-degree: 9%
 
 ---
@@ -92,7 +92,7 @@ Så här lägger du till objekt i en platta:
 
    ![Lägg till objekt i en ruta](/help/sites-cloud/authoring/assets/project-workflows.png)
 
-1. Lägg till ett objekt i rutan på samma sätt som när du skapar en platta. Projektpaneler beskrivs [här](/help/sites-cloud/authoring/projects/overview.md#project-tiles). I det här exemplet har ett annat arbetsflöde lagts till.
+1. Lägg till ett objekt i rutan på samma sätt som när du skapar en platta. Mer information finns i [Projekttitlar](/help/sites-cloud/authoring/projects/overview.md#project-tiles). I det här exemplet har ett annat arbetsflöde lagts till.
 
 ### Öppna en platta {#opening-a-tile}
 

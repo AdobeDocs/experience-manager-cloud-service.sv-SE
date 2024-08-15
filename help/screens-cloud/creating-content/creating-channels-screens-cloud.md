@@ -4,9 +4,9 @@ description: På den här sidan beskrivs hur du skapar och hanterar kanaler i Sc
 exl-id: 3b0bae7a-4a45-485a-ab04-604510ff6578
 feature: Authoring Screens
 role: Admin, Developer, User
-source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1102'
 ht-degree: 1%
 
 ---
@@ -95,7 +95,7 @@ Följande mallar är tillgängliga när du använder kanalguiden **Skapa**:
 
 Med den här funktionen kan du definiera ett standardaktiveringsschema för en kanal och använda det som standard för varje tilldelning för en visning. Detta innehåller en metod så att den krångliga schemadefinitionen inte behöver upprepas.
 
-1. Navigera till Screens Services Provider från [här](https://experience.adobe.com/screens).
+1. Gå till [Screens Services Provider](https://experience.adobe.com/screens).
 
 ### Skapa standardtilldelningsinformation för en kanal {#create-default}
 

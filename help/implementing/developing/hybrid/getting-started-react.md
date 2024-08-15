@@ -4,9 +4,9 @@ description: I den här artikeln visas ett exempel SPA programmet, hur det sätt
 exl-id: 13998526-65e7-4d1b-bd47-452bad3780a2
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1127'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Eftersom det här exemplet baseras på React-ramverket finns det två React-spec
 
 `"aem-clientlib-generator": "^1.4.1",`
 
-Mer information om den finns [på GitHub här](https://github.com/wcm-io-frontend/aem-clientlib-generator).
+Mer information finns i [aem-clientlib-generator på GitHub](https://github.com/wcm-io-frontend/aem-clientlib-generator).
 
 `aem-clientlib-generator` har konfigurerats i filen `clientlib.config.js` enligt följande.
 

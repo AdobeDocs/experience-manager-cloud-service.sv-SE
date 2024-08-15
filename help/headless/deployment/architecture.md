@@ -4,9 +4,9 @@ description: Läs mer om Adobe Experience Manager högnivåarkitektur när det g
 feature: Headless, Content Fragments,GraphQL API
 exl-id: 5ba6921f-b06e-463d-b956-d1fb434090c9
 role: Admin, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ En typisk AEM består av en författartjänst, en Publish-tjänst och en förhan
 
 * **Dispatcher** är en statisk webbserver som utökas med AEM. Den har cachningsfunktioner och ett annat säkerhetsskikt. **Dispatcher** placeras framför **Publish**- och **förhandsgranskningstjänsterna**.
 
-I ett AEM as a Cloud Service-program kan du ha flera miljöer: Dev, Stage och Prod. Varje miljö skulle ha sina egna unika tjänster för **Författare**, **Publish** och **Förhandsgranskning**. Du kan läsa mer om hur du hanterar [miljöer här](/help/implementing/cloud-manager/manage-environments.md)
+I ett AEM as a Cloud Service-program kan du ha flera miljöer: Dev, Stage och Prod. Varje miljö skulle ha sina egna unika tjänster för **Författare**, **Publish** och **Förhandsgranskning**. Mer information finns i [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md).
 
 ## Skapa Publish-modell
 

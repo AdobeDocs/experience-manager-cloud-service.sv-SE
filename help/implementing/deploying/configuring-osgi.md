@@ -4,9 +4,9 @@ description: OSGi-konfiguration med hemliga värden och miljöspecifika värden
 feature: Deploying
 exl-id: f31bff80-2565-4cd8-8978-d0fd75446e15
 role: Admin
-source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
+source-git-commit: 1289da67452be7fc0fa7f3126d2a3dbf051aa9b5
 workflow-type: tm+mt
-source-wordcount: '3302'
+source-wordcount: '3321'
 ht-degree: 0%
 
 ---
@@ -322,7 +322,7 @@ Om en OSGi-egenskap kräver olika värden för författare jämfört med publice
 * Separata `config.author`- och `config.publish` OSGi-mappar måste användas, vilket beskrivs i avsnittet [Lösning för körningsläge](#runmode-resolution).
 * Det finns två alternativ för att skapa de oberoende variabelnamnen som ska användas:
    * det första alternativet, som rekommenderas: Använd samma variabelnamn i alla OSGi-mappar (som `config.author` och `config.publish`) som deklarerats för att definiera olika värden. Till exempel
-     `$[env:ENV_VAR_NAME;default=<value>]`, där standardvärdet motsvarar standardvärdet för den nivån (författare eller publicering). När du ställer in miljövariabeln via [Cloud Manager API](#cloud-manager-api-format-for-setting-properties) eller via en klient, skiljer du mellan skikten med hjälp av parametern service som beskrivs i denna [API-referensdokumentation](https://developer.adobe.com/experience-cloud/cloud-manager/api-reference/). Parametern service binder variabelns värde till rätt OSGi-nivå. Det kan vara&quot;författare&quot;,&quot;publicera&quot; eller&quot;förhandsgranska&quot;.
+     `$[env:ENV_VAR_NAME;default=<value>]`, där standardvärdet motsvarar standardvärdet för den nivån (författare eller publicering). När du ställer in miljövariabeln via [Cloud Manager API](#cloud-manager-api-format-for-setting-properties) eller via en klient, skiljer du mellan skikten med parametern&quot;service&quot; som beskrivs i [Cloud Manager API-referensdokumentationen](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/). Parametern service binder variabelns värde till rätt OSGi-nivå. Det kan vara&quot;författare&quot;,&quot;publicera&quot; eller&quot;förhandsgranska&quot;.
    * det andra alternativet, som är att deklarera distinkta variabler med ett prefix som `author_<samevariablename>` och `publish_<samevariablename>`
 
 ### Konfigurationsexempel {#configuration-examples}
@@ -515,14 +515,15 @@ config.dev
 
 ## Cloud Manager API-format för att ange egenskaper {#cloud-manager-api-format-for-setting-properties}
 
-Se [den här sidan](https://developer.adobe.com/experience-cloud/cloud-manager/docs/) om hur API måste konfigureras.
+Gå till [Adobe Cloud Manager på Adobe Developer webbplats](https://developer.adobe.com/experience-cloud/cloud-manager/docs/) om du vill ha information om Cloud Manager API och hur det ska konfigureras.
+
 >[!NOTE]
 >
 >Kontrollera att det använda Cloud Manager-API:t har tilldelats rollen &quot;Deployment Manager - Cloud Service&quot;. Andra roller kan inte köra alla kommandon nedan.
 
 >[!TIP]
 >
->Du kan också använda Cloud Manager för att konfigurera miljövariabler. Mer information finns i dokumentationen [här.](/help/implementing/cloud-manager/environment-variables.md)
+>Du kan också använda Cloud Manager för att konfigurera miljövariabler. Mer information finns i [Cloud Manager miljövariabler](/help/implementing/cloud-manager/environment-variables.md).
 
 ### Ange värden via API {#setting-values-via-api}
 
@@ -550,7 +551,7 @@ PATCH /program/{programId}/environment/{environmentId}/variables
 >[!NOTE]
 >Standardvariabler anges inte via API, utan i själva OSGi-egenskapen.
 >
->Mer information finns på [den här sidan](https://developer.adobe.com/experience-cloud/cloud-manager/api-reference/).
+>Mer information finns i [Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
 ### Hämta värden via API {#getting-values-via-api}
 
@@ -558,7 +559,7 @@ PATCH /program/{programId}/environment/{environmentId}/variables
 GET /program/{programId}/environment/{environmentId}/variables
 ```
 
-Mer information finns på [den här sidan](https://developer.adobe.com/experience-cloud/cloud-manager/api-reference/).
+Mer information finns i [Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
 ### Ta bort värden via API {#deleting-values-via-api}
 
@@ -568,7 +569,7 @@ PATCH /program/{programId}/environment/{environmentId}/variables
 
 Om du vill ta bort en variabel inkluderar du den med ett tomt värde.
 
-Mer information finns på [den här sidan](https://developer.adobe.com/experience-cloud/cloud-manager/api-reference/).
+Mer information finns i [Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
 ### Hämta värden via kommandoraden {#getting-values-via-cli}
 
@@ -594,7 +595,7 @@ $ aio cloudmanager:set-environment-variables ENVIRONMENT_ID --delete MY_VAR1 MY_
 
 >[!NOTE]
 >
->På [den här sidan](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid) finns mer information om hur du konfigurerar värden med Cloud Manager-pluginprogrammet för Adobe I/O CLI.
+>Mer information om hur du konfigurerar värden med Cloud Manager-plugin-programmet för Adobe I/O CLI finns i [the aio-cli-plugin-cloudmanager på GitHub](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid).
 
 ### Antal variabler {#number-of-variables}
 

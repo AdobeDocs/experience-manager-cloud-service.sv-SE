@@ -4,9 +4,9 @@ description: Lär dig hur du tar bort cachelagrade objekt från CDN-cachen i Ado
 feature: CDN Cache
 exl-id: 4d091677-b817-4aeb-b131-7a5407ace3e0
 role: Admin
-source-git-commit: 3b55f3094b7154b7723ef7ae2230d7ae01eb4abc
+source-git-commit: 85cef99dc7a8d762d12fd6e1c9bc2aeb3f8c1312
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '433'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 # Rensa CDN-cachen {#cdn-purge-cache}
 
 När du rensar bort ett objekt från CDN-cachen i Adobe tas det bort, vilket resulterar i framtida förfrågningar som fortsätter till ursprungsläget som en cache-fil som inte kan hanteras från cachen.
-Med AEM as a Cloud Service kan du konfigurera en rensnings-API-token, som sedan kan användas i rensnings-API-anrop. Läs artikeln [Konfigurera CDN-autentiseringsuppgifter och autentisering](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token) om du vill veta mer om hur du konfigurerar denna token med Cloud Manager Config Pipeline Authentication-direktiv.
+Med AEM as a Cloud Service kan du konfigurera en rensnings-API-token, som sedan kan användas i rensnings-API-anrop. Läs [Konfigurera CDN-autentiseringsuppgifter och autentisering](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token) om du vill veta mer om hur du konfigurerar den här token med Cloud Manager Config Pipeline Authentication-direktiv.
 
 Det finns tre rensningsvariationer som stöds:
 
@@ -75,4 +75,4 @@ Observera att rubriken `X-AEM-Purge` måste innehålla värdet all.
 
 ## Interaktion med Apache/Dispatcher-lager {#apache-layer}
 
-Som beskrivs i artikeln [Innehållsleveransflöde](/help/implementing/dispatcher/overview.md) hämtar CDN innehåll från lagret Apache/Dispatcher, om cachen har gått ut. Detta innebär att du måste se till att det även finns en ny version av innehållet på Dispatcher innan du rensar bort en resurs på CDN. Mer information finns också i [Invalidering av Dispatcher-cache](/help/implementing/dispatcher/caching.md#disp).
+Som beskrivs under [Leveransflöde för innehåll](/help/implementing/dispatcher/overview.md) hämtar CDN innehåll från lagret Apache/Dispatcher, om cachen har gått ut. Detta innebär att du måste se till att det även finns en ny version av innehållet på Dispatcher innan du rensar bort en resurs på CDN. Mer information finns också i [Invalidering av Dispatcher-cache](/help/implementing/dispatcher/caching.md#disp).

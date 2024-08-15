@@ -4,9 +4,9 @@ description: Läs om grunderna och de bästa sätten att distribuera till AEM as
 feature: Deploying
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
 role: Admin
-source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '3429'
+source-wordcount: '3441'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Precis som för befintliga AEM som inte är molnbaserade stöds en lokal offline
 >[!NOTE]
 >Det finns små skillnader i hur programmet fungerar på en lokal dator jämfört med Adobe Cloud. Dessa arkitektoniska skillnader måste respekteras under lokal utveckling och kan leda till ett annat beteende vid driftsättning i molninfrastrukturen. På grund av dessa skillnader är det viktigt att utföra de fullständiga testerna på dev- och stage-miljöer innan ny anpassad kod distribueras i produktionen.
 
-Om du vill utveckla anpassad kod för en intern release bör den relevanta versionen av [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md) hämtas och installeras. Mer information om hur du använder verktygen i AEM as a Cloud Service Dispatcher finns på [den här sidan](/help/implementing/dispatcher/disp-overview.md).
+Om du vill utveckla anpassad kod för en intern release bör den relevanta versionen av [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md) hämtas och installeras. Mer information om hur du använder verktygen i AEM as a Cloud Service Dispatcher finns i [Dispatcher i molnet](/help/implementing/dispatcher/disp-overview.md).
 
 I följande video visas en översikt över hur du distribuerar kod till AEM as a Cloud Service:
 
@@ -56,7 +56,8 @@ I följande video visas en översikt över hur du distribuerar kod till AEM as a
 
 ![image](https://git.corp.adobe.com/storage/user/9001/files/e91b880e-226c-4d5a-93e0-ae5c3d6685c8) -->
 
-Kunder driftsätter anpassad kod i molnmiljöer via Cloud Manager. Cloud Manager omvandlar lokalt sammansatta innehållspaket till en artefakt som överensstämmer med Sling Feature Model, som är hur ett program på AEM as a Cloud Service beskrivs när det körs i en molnmiljö. När du tittar på paketen i [Package Manager](/help/implementing/developing/tools/package-manager.md) i molnmiljöer innehåller namnet alltså &quot;cp2fm&quot; och alla omformade paket har tagits bort. De kan inte interagera med dem, vilket innebär att de inte kan hämtas, replikeras eller öppnas. Detaljerad dokumentation om konverteraren finns [här](https://github.com/apache/sling-org-apache-sling-feature-cpconverter).
+Kunder driftsätter anpassad kod i molnmiljöer via Cloud Manager. Cloud Manager omvandlar lokalt sammansatta innehållspaket till en artefakt som överensstämmer med Sling Feature Model, som är hur ett program på AEM as a Cloud Service beskrivs när det körs i en molnmiljö. När du tittar på paketen i [Package Manager](/help/implementing/developing/tools/package-manager.md) i molnmiljöer innehåller namnet alltså &quot;cp2fm&quot; och alla omformade paket har tagits bort. De kan inte interagera med dem, vilket innebär att de inte kan hämtas, replikeras eller öppnas. Mer detaljerad dokumentation om konverteraren finns i [
+sling-org-apache-sling-feature-cpconverter på GitHub ](https://github.com/apache/sling-org-apache-sling-feature-cpconverter) .
 
 Innehållspaket som skrivits för program på AEM as a Cloud Service måste ha en ren separation mellan oföränderligt och muterbart innehåll, och Cloud Manager installerar bara det muterbara innehållet, vilket även utlöser ett meddelande som följande:
 
@@ -252,7 +253,7 @@ Precis som AEM uppdateringar distribueras kundreleaser med hjälp av en strategi
 
 ## Index {#indexes}
 
-Nya eller ändrade index orsakar ett extra indexerings- eller omindexeringssteg innan den nya versionen kan ta över trafik. Information om indexhantering i AEM as a Cloud Service finns i [den här artikeln](/help/operations/indexing.md). Du kan kontrollera indexeringsstatus för byggsidor på Cloud Manager och få ett meddelande när den nya versionen är klar att börja trafikera.
+Nya eller ändrade index orsakar ett extra indexerings- eller omindexeringssteg innan den nya versionen kan ta över trafik. Information om indexhantering i AEM as a Cloud Service finns under [Innehållssökning och indexering](/help/operations/indexing.md). Du kan kontrollera indexeringsstatus för byggsidor på Cloud Manager och få ett meddelande när den nya versionen är klar att börja trafikera.
 
 >[!NOTE]
 >
@@ -278,7 +279,7 @@ Om du ändrar tjänstanvändare, eller åtkomstkontrollistor som har åtkomst ti
 
 ### Indexändringar {#index-changes}
 
-Om ändringar görs i index är det viktigt att den nya versionen fortsätter att använda sina index tills den avslutas, medan den gamla versionen använder sin egen ändrade indexuppsättning. Utvecklaren bör följa de indexhanteringstekniker som beskrivs [i den här artikeln](/help/operations/indexing.md).
+Om ändringar görs i index är det viktigt att den nya versionen fortsätter att använda sina index tills den avslutas, medan den gamla versionen använder sin egen ändrade indexuppsättning. Utvecklaren bör följa de tekniker för indexhantering som beskrivs under [Innehållssökning och indexering](/help/operations/indexing.md).
 
 ### Konservativ kodning för återställningar {#conservative-coding-for-rollbacks}
 
@@ -333,4 +334,4 @@ Developers want to ensure that their custom code is performing well. For Cloud e
 
 ## Konfiguration av underhållsaktiviteter i Source Control {#maintenance-tasks-configuration-in-source-control}
 
-Underhållsaktivitetskonfigurationer måste sparas i källkontrollen eftersom skärmen **Verktyg > Åtgärder** inte är tillgänglig i molnmiljöer. Denna förmån säkerställer att ändringarna sparas avsiktligt i stället för att tillämpas och glöms bort. Mer information finns i [Underhållsaktivitetsartikeln](/help/operations/maintenance.md).
+Underhållsaktivitetskonfigurationer måste sparas i källkontrollen eftersom skärmen **Verktyg > Åtgärder** inte är tillgänglig i molnmiljöer. Denna förmån säkerställer att ändringarna sparas avsiktligt i stället för att tillämpas och glöms bort. Mer information finns i [Underhållsaktiviteter i AEM as a Cloud Service](/help/operations/maintenance.md).

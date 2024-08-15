@@ -4,9 +4,9 @@ description: Tillåt inte serialisering av ResourceResolvers via Sling Model Exp
 exl-id: 63972c1e-04bd-4eae-bb65-73361b676687
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 85cef99dc7a8d762d12fd6e1c9bc2aeb3f8c1312
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Med exportfunktionen för segmenteringsmodeller kan du serialisera objekt för delningsmodeller till ett JSON-format. Den här funktionen används ofta eftersom den gör det möjligt för SPA (program med en sida) att enkelt komma åt data från AEM. På implementeringssidan används Jacson-databasbiblioteket för att serialisera dessa objekt.
 
-Serialiseringen är en rekursiv åtgärd. Med början från ett&quot;rotobjekt&quot; itererar programmet rekursivt igenom alla giltiga objekt och serialiserar dem och deras underordnade objekt. Du kan hitta en beskrivning av vilka fält som är serialiserade i [den här artikeln](https://www.baeldung.com/jackson-field-serializable-deserializable-or-not).
+Serialiseringen är en rekursiv åtgärd. Med början från ett&quot;rotobjekt&quot; itererar programmet rekursivt igenom alla giltiga objekt och serialiserar dem och deras underordnade objekt. Du kan hitta en beskrivning av vilka fält som är serialiserade i artikeln [Jackson - Bestäm vilka fält som ska bli serialiserade/deserialiserade](https://www.baeldung.com/jackson-field-serializable-deserializable-or-not).
 
 Med den här metoden serialiseras alla typer av objekt till JSON, och naturligtvis kan den även serialisera ett Sling `ResourceResolver`-objekt, om det omfattas av serialiseringsreglerna. Detta är problematiskt eftersom tjänsten `ResourceResolver` (och därför även det serviceobjekt som representerar den) innehåller potentiellt känslig information, som inte bör avslöjas. Till exempel:
 

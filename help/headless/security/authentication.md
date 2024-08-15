@@ -4,9 +4,9 @@ description: Förstå den autentisering som krävs för fjärrfrågor till Adobe
 feature: Headless, Content Fragments,GraphQL API
 exl-id: dfeae661-06a1-4001-af24-b52ae12d625f
 role: Admin, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---
@@ -41,4 +41,4 @@ Alla begäranden som görs med åtkomsttoken görs *av användarkontot som gener
 
 Det här användarkontot innebär att du måste kontrollera att kontot har de behörigheter som krävs för att köra GraphQL-frågor.
 
-Du kan kontrollera dessa behörigheter med GraphiQL på den lokala instansen. Mer information om [behörigheter finns här](/help/headless/security/permissions.md).
+Du kan kontrollera dessa behörigheter med GraphiQL på den lokala instansen. Mer information finns i [Behörighetsaspekter för headless-innehåll](/help/headless/security/permissions.md).

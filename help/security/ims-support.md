@@ -4,10 +4,10 @@ description: Image Management System-stöd för Adobe Experience Manager as a Cl
 exl-id: fb563dbd-a761-4d83-9da1-58f8e462b383
 feature: Security
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '1922'
-ht-degree: 29%
+source-wordcount: '1941'
+ht-degree: 25%
 
 ---
 
@@ -60,9 +60,9 @@ När en kund finns som IMS-organisation måste han/hon konfigurera sitt system e
 1. Systemadministratören gör IDP-konfiguration i Admin Console för att konfigurera enkel inloggning.
 1. AEM-administratören hanterar lokala grupper samt behörigheter och privilegier som vanligt.
 
-Grunderna om Adobe Identity Management, inklusive IDP-konfiguration, beskrivs [här](https://helpx.adobe.com/enterprise/using/set-up-identity.html).
+Grundläggande om Adobe Identity Management, inklusive IDP-konfiguration, beskrivs under [Konfigurera identitet och enkel inloggning](https://helpx.adobe.com/enterprise/using/set-up-identity.html).
 
-Företagsadministration och användning i Admin Console beskrivs [här](https://helpx.adobe.com/enterprise/admin-guide.html).
+Företagsadministration och Admin Console-användning beskrivs i [Välkommen till administratörshandboken för företag och team](https://helpx.adobe.com/enterprise/admin-guide.html).
 
 ### Onboarding-användare i Admin Console {#onboarding-users-in-admin-console}
 
@@ -96,27 +96,29 @@ Verktyget för användarsynkronisering distribueras via Adobe GitHub-databasen [
 
 >[!NOTE]
 >
->En förhandsversion, **2.4RC1**, med stöd för att skapa dynamiska grupper finns [här](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1).
+>En prerelease-version **2.4RC1** är tillgänglig med stöd för att skapa dynamiska grupper under [Användarsynkroniseringsverktyget v2.4rc1 på GitHub](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.4rc1).
 
 De viktigaste funktionerna i den här versionen är möjligheten att dynamiskt mappa nya LDAP-grupper för användarmedlemskap i Admin Console och att skapa dynamiska användargrupper.
 
-Mer information om de nya gruppfunktionerna finns på [den här webbplatsen](https://adobe-apiplatform.github.io/user-sync.py/en/user-manual/advanced_configuration.html#additional-group-options).
+Mer information om de nya gruppfunktionerna finns i [Adobe användarsynkroniseringsverktyg - Ytterligare gruppalternativ](https://adobe-apiplatform.github.io/user-sync.py/en/user-manual/advanced_configuration.html#additional-group-options).
 
 **Dokumentation om användarsynkronisering**
 
-Mer information finns i [UST-dokumentation](https://adobe-apiplatform.github.io/user-sync.py/en/).
+Se:
 
-Verktyget för användarsynkronisering måste registrera sig som Adobe Developer klient-UMAPI med proceduren [här](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html).
+* [MÅSTE-dokumentation](https://adobe-apiplatform.github.io/user-sync.py/en/)
 
-Adobe Developer Console-dokumentation finns [här](https://developer.adobe.com/developer-console/).
+* användarsynkroniseringsverktyget måste registrera sig som Adobe Developer klient-UMAPI med proceduren från [Autentisering för API-åtkomst](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html)
 
-API:t för User Management som används av verktyget för användarsynkronisering beskrivs [här](https://adobe-apiplatform.github.io/user-sync.py/en/).
+* [Adobe Developer Console-dokumentation](https://developer.adobe.com/developer-console/)
+
+* det [API för användarhantering som används av användarsynkroniseringsverktyget](https://adobe-apiplatform.github.io/user-sync.py/en/)
 
 ## as a Cloud Service konfiguration för Adobe Experience {#aem-configuration}
 
 >[!NOTE]
 >
->Den AEM IMS-konfiguration som krävs konfigureras automatiskt när AEM miljöer och instanser etableras. Administratören kan dock ändra den efter behov med metoden som beskrivs [här](/help/implementing/deploying/overview.md).
+>Den AEM IMS-konfiguration som krävs konfigureras automatiskt när AEM miljöer och instanser etableras. Administratören kan dock ändra det efter sina behov, se [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md).
 
 Den AEM IMS-konfiguration som krävs konfigureras automatiskt när AEM miljöer och instanser etableras. Kundadministratörer kan ändra en del av konfigurationen efter behov.
 

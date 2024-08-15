@@ -4,9 +4,9 @@ Description: Learn how to configure SharePoint Site with limited access using th
 keywords: Hur man konfigurerar SharePoint Site med begränsad åtkomst?, Konfigurera SharePoint med begränsad åtkomst, Använda behörighetsområde för att begränsa åtkomst till SharePoint Site.
 feature: Adaptive Forms, Core Components
 role: User, Developer
-source-git-commit: 4962c058e2cc2135dd3626655ba7b21dbdcbd455
+source-git-commit: 85cef99dc7a8d762d12fd6e1c9bc2aeb3f8c1312
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Mer information om hur du hämtar `Client ID`, `Client Secret` och `Tenant ID` f
 
 Om du vill använda API-behörigheten `Sites.Selected` måste du ha ett program som är registrerat i Azure-portalen med rätt behörigheter för SharePoint Online Sites. Installationen säkerställer att programmet har den behörighet som krävs för att interagera med SharePoint Site inom det definierade området, vilket ger den begränsade åtkomst som krävs.
 
-Mer information om hur du utvecklar program som använder `Sites.Selected`-behörigheter för SharePoint Online-platser finns i [artikeln](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/develop-applications-that-use-sites-selected-permissions-for-spo/ba-p/3790476).
+Mer information om hur du utvecklar program som använder `Sites.Selected`-behörigheter för SharePoint Online-platser finns i [bloggartikeln - Utveckla program som använder platser.Markerade behörigheter för SPO-webbplatser](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/develop-applications-that-use-sites-selected-permissions-for-spo/ba-p/3790476).
 
 ### Ange auktoriseringsomfånget AEM instansen
 

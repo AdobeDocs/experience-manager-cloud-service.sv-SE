@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar anpassade HTTP-rubriker som ska skicka
 exl-id: 2cef5d4b-45f6-4d72-a24b-67ca53d9057d
 feature: Commerce Integration Framework
 role: Admin
-source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Komponenterna som använder molntjänstkonfigurationen ovan skickar dessa HTTP-h
 
 ## Begränsningar {#restrictions}
 
-Även om tjänsten tillåter att rubriknamn definieras, inklusive standardnamn, är de inte tillgängliga för konfigurering. Du kan alltså inte åsidosätta de vanliga HTTP-rubrikerna med den här funktionen. En lista med begränsade rubriknamn finns [här](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers). Det finns ytterligare två rubriker som inte kan användas:
+Även om tjänsten tillåter att rubriknamn definieras, inklusive standardnamn, är de inte tillgängliga för konfigurering. Du kan alltså inte åsidosätta de vanliga HTTP-rubrikerna med den här funktionen. En lista med begränsade rubriknamn finns under [mdn-webbdokument - HTTP-rubriker](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers). Det finns ytterligare två rubriker som inte kan användas:
 
 * &quot;Store&quot; - används av CIF för att identifiera Adobe Commerce Store
 * &quot;Preview-Version&quot; - används av CIF för att hämta mellanprodukter

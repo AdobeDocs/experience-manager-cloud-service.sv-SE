@@ -5,9 +5,9 @@ exl-id: 81616e31-764b-44b0-94a6-3ae24ce56bf6
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1071'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ När du har testat allt och fungerar som det ska kan du skicka koduppdateringarn
 
 När uppdateringarna har överförts till Cloud Manager kan de distribueras till AEM as a Cloud Service med [Cloud Manager CI/CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html).
 
-Du kan börja distribuera koden med Cloud Manager CI/CD-pipeline, som beskrivs utförligt [här](/help/implementing/deploying/overview.md).
+Du kan börja distribuera koden med Cloud Manager CI/CD-pipeline, som beskrivs utförligt under [Distribuera innehållspaket med Cloud Manager och Package Manager](/help/implementing/deploying/overview.md).
 
 ## Prestandaövervakning {#performance-monitoring}
 
@@ -133,7 +133,7 @@ Om den här typen av flexibilitet är något du behöver för ditt projekt kan d
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Introduktion till AEM som headless CMS](/help/headless/introduction.md)
+* [Introduktion till AEM som Headless CMS](/help/headless/introduction.md)
 * [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
 * [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
 * [Översikt över distribution till AEM as a Cloud Service](/help/implementing/deploying/overview.md)

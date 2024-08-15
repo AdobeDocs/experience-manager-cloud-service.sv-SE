@@ -4,9 +4,9 @@ description: Lär dig hur du använder miljöer för snabb utveckling för snabb
 exl-id: 1e9824f2-d28a-46de-b7b3-9fe2789d9c68
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 85dc92e1adc11a2ee513b7a43e0945b18b2f4790
+source-git-commit: 1289da67452be7fc0fa7f3126d2a3dbf051aa9b5
 workflow-type: tm+mt
-source-wordcount: '4215'
+source-wordcount: '4241'
 ht-degree: 0%
 
 ---
@@ -153,7 +153,7 @@ I miljöer där ingen användare interaktivt kan köra installationskommandot en
 
    `aio config:set cloudmanager_orgid 4E03EQC05D34GL1A0B49421C@AdobeOrg`
 
-   * Ditt eget organisations-ID kan slås upp med metoden [som beskrivs här.](https://experienceleague.adobe.com/docs/core-services/interface/administration/organizations.html#concept_EA8AEE5B02CF46ACBDAD6A8508646255)
+   * Ditt eget organisations-ID kan slås upp med den metod som beskrivs under [Visa ditt företags-ID](https://experienceleague.adobe.com/docs/core-services/interface/administration/organizations.html#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
 
 1. Konfigurera sedan ditt program-ID:
 
@@ -167,7 +167,7 @@ I miljöer där ingen användare interaktivt kan köra installationskommandot en
 
    `aio login`
 
-   Dessa steg kräver att du är medlem i produktprofilen Cloud Manager **Developer - Cloud Service**. Mer information finns på [den här sidan](/help/journey-onboarding/assign-profiles-cloud-manager.md#assign-developer).
+   Dessa steg kräver att du är medlem i produktprofilen Cloud Manager **Developer - Cloud Service**. Mer information finns i [Tilldela teammedlemmar till Cloud Manager produktprofiler - Tilldela produktprofilen för utvecklare](/help/journey-onboarding/assign-profiles-cloud-manager.md#assign-developer).
 
 Titta på videosjälvstudiekursen [om hur du konfigurerar en RDE (06:24)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-setup.html) om du vill ha mer information och demonstration.
 </details>
@@ -1005,7 +1005,7 @@ När de skapas ställs de lokala utvecklingsmiljöerna in på den senast tillgä
 
 ### Fel som rör otillräcklig behörighet {#insufficient-permissions}
 
-Om du vill använda RDE-plugin-programmet måste du vara medlem i produktprofilen Cloud Manager **Developer - Cloud Service**. Mer information finns på [den här sidan](/help/journey-onboarding/assign-profiles-cloud-manager.md#assign-developer).
+Om du vill använda RDE-plugin-programmet måste du vara medlem i produktprofilen Cloud Manager **Developer - Cloud Service**. Mer information finns i [Tilldela teammedlemmar till Cloud Manager produktprofiler - Tilldela produktprofilen för utvecklare](/help/journey-onboarding/assign-profiles-cloud-manager.md#assign-developer).
 
 Du kan också bekräfta att du har den här utvecklarrollen om du kan logga in på utvecklarkonsolen med det här kommandot:
 

@@ -4,9 +4,9 @@ description: Lär dig hur du åsidosätter standardfelsidan genom att lagra stat
 feature: Dispatcher
 exl-id: 1ecc374c-b8ee-41f5-a565-5b36445d3c7c
 role: Admin
-source-git-commit: 3a10a0b8c89581d97af1a3c69f1236382aa85db0
+source-git-commit: 85cef99dc7a8d762d12fd6e1c9bc2aeb3f8c1312
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ Innan du kan åsidosätta standardfelsidan måste du göra följande:
 
 1. Skapa en fil med namnet `cdn.yaml` eller liknande, och referera till syntaxavsnittet nedan.
 
-1. Placera filen någonstans under en mapp på den översta nivån med namnet *config* eller liknande, enligt beskrivningen i [config pipeline-artikeln](/help/operations/config-pipeline.md#folder-structure).
+1. Placera filen någonstans under en mapp på den översta nivån med namnet *config* eller liknande, enligt beskrivningen i [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#folder-structure).
 
-1. Skapa en konfigurationspipeline i Cloud Manager, enligt beskrivningen i [konfigurationspipeline-artikeln](/help/operations/config-pipeline.md#managing-in-cloud-manager).
+1. Skapa en konfigurationspipeline i Cloud Manager enligt beskrivningen i [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#managing-in-cloud-manager).
 
 1. Distribuera konfigurationen.
 
@@ -47,7 +47,7 @@ data:
       cssUrl: https://www.example.com/error.css
       jsUrl: https://www.example.com/error.js
 ```
-En beskrivning av egenskaperna ovanför datanoden finns i artikeln [config pipeline](/help/operations/config-pipeline.md#common-syntax). Egenskapsvärdet för sort ska vara *CDN* och egenskapen `version` ska vara *1*.
+Se [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#common-syntax) för en beskrivning av egenskaperna ovanför datanoden. Egenskapsvärdet för sort ska vara *CDN* och egenskapen `version` ska vara *1*.
 
 
 | Namn | Tillåtna egenskaper | Betydelse |

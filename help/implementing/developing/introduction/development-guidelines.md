@@ -4,7 +4,7 @@ description: Lär dig riktlinjer för utveckling på AEM as a Cloud Service och 
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
 source-wordcount: '2745'
 ht-degree: 0%
@@ -184,7 +184,7 @@ På lokal utveckling (med SDK) kan `/apps` och `/libs` skrivas direkt, vilket sk
 
 Kunderna har tillgång till CRXDE-klassen i utvecklingsmiljön, men inte i fas eller produktion. Det går inte att skriva till den oföränderliga databasen (`/libs`, `/apps`) vid körning, så om du försöker göra det kommer det att uppstå fel.
 
-I stället kan databasläsaren startas från AEM as a Cloud Service Developer Console, vilket ger en skrivskyddad vy i databasen för alla miljöer på författarnivå, publicerings- och förhandsgranskningsnivå. Läs mer om databasläsaren [här](/help/implementing/developing/tools/repository-browser.md).
+I stället kan databasläsaren startas från AEM as a Cloud Service Developer Console, vilket ger en skrivskyddad vy i databasen för alla miljöer på författarnivå, publicerings- och förhandsgranskningsnivå. Mer information finns i [Databasläsaren](/help/implementing/developing/tools/repository-browser.md).
 
 En uppsättning verktyg för felsökning av AEM as a Cloud Service utvecklingsmiljöer finns i AEM as a Cloud Service Developer Console för RDE-, dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller Publish tjänste-URL:er enligt följande:
 
@@ -194,7 +194,7 @@ Följande Cloud Manager CLI-kommando kan användas för att starta AEM as a Clou
 
 `aio cloudmanager:open-developer-console <ENVIRONMENTID> --programId <PROGRAMID>`
 
-Mer information finns på [den här sidan](/help/release-notes/home.md).
+Mer information finns i [Versionsinformation](/help/release-notes/home.md).
 
 Utvecklare kan generera statusinformation och lösa olika resurser.
 

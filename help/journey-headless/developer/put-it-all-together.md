@@ -5,9 +5,9 @@ exl-id: bece84ad-4c8c-410c-847e-9ef3f79970cb
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '1061'
+source-wordcount: '1056'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ AEM SDK används för att skapa och distribuera anpassad kod. Det är huvudverkt
 
 Förutom AEM SDK är AEM **Headless SDK** en uppsättning bibliotek som kan användas av klienter för att snabbt och enkelt interagera med AEM Headless API:er via HTTP.
 
-Mer information om AEM Headless SDK finns i [dokumentationen här](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/aem-headless-sdk.html).
+Mer information finns i [AEM Headless SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/aem-headless-sdk.html).
 
 ## Ytterligare utvecklingsverktyg {#additional-development-tools}
 
@@ -117,6 +117,6 @@ Fortsätt din AEM resa utan trassel genom att nästa gång granska dokumentet [S
 * [AEM Headless SDK för webbläsare på klientsidan (JavaScript)](https://github.com/adobe/aem-headless-client-js)
 * [AEM Headless SDK för server-side/Node.js (JavaScript)](https://github.com/adobe/aem-headless-client-nodejs)
 * [AEM Headless SDK för Java™](https://github.com/adobe/aem-headless-client-java)
-* [Introduktion till AEM som headless CMS](/help/headless/introduction.md)
+* [Introduktion till AEM som Headless CMS](/help/headless/introduction.md)
 * [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
 * [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

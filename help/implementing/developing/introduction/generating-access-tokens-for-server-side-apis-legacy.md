@@ -5,7 +5,7 @@ hidefromtoc: true
 exl-id: 6561870c-cbfe-40ef-9efc-ea75c88c4ed7
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
 source-wordcount: '1359'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Flödet server-till-server beskrivs nedan tillsammans med ett förenklat utveckl
 
 ## Server-till-server-flödet {#the-server-to-server-flow}
 
-En användare med en IMS-organisationsadministratörsroll, och som även är medlem av produktprofilen AEM användare eller AEM administratörer AEM författare, kan generera en AEM as a Cloud Service-autentiseringsuppgift. Autentiseringsuppgifterna kan senare hämtas av en användare med administratörsrollen för AEM as a Cloud Service-miljön och ska installeras på servern och behandlas noggrant som en hemlig nyckel. Den här JSON-formatfilen innehåller alla data som krävs för att integrera med ett AEM as a Cloud Service API. Data används för att skapa en signerad JWT-token, som byts ut mot IMS för en IMS-åtkomsttoken. Denna åtkomsttoken kan sedan användas som en Bearer-autentiseringstoken för att göra förfrågningar till AEM as a Cloud Service. Autentiseringsuppgifterna går ut om ett år som standard, men de kan uppdateras vid behov, enligt beskrivningen [här](#refresh-credentials).
+En användare med en IMS-organisationsadministratörsroll, och som även är medlem av produktprofilen AEM användare eller AEM administratörer AEM författare, kan generera en AEM as a Cloud Service-autentiseringsuppgift. Autentiseringsuppgifterna kan senare hämtas av en användare med administratörsrollen för AEM as a Cloud Service-miljön och ska installeras på servern och behandlas noggrant som en hemlig nyckel. Den här JSON-formatfilen innehåller alla data som krävs för att integrera med ett AEM as a Cloud Service API. Data används för att skapa en signerad JWT-token, som byts ut mot IMS för en IMS-åtkomsttoken. Denna åtkomsttoken kan sedan användas som en Bearer-autentiseringstoken för att göra förfrågningar till AEM as a Cloud Service. Autentiseringsuppgifterna upphör som standard att gälla efter ett år, men de kan uppdateras vid behov, se [Uppdatera autentiseringsuppgifter](#refresh-credentials).
 
 I flödet från server till server ingår följande steg:
 

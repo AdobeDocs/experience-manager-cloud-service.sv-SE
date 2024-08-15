@@ -4,9 +4,9 @@ description: Lär dig mer om underhållsåtgärder i AEM as a Cloud Service och 
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
 feature: Operations
 role: Admin
-source-git-commit: 3a10a0b8c89581d97af1a3c69f1236382aa85db0
+source-git-commit: 85cef99dc7a8d762d12fd6e1c9bc2aeb3f8c1312
 workflow-type: tm+mt
-source-wordcount: '2055'
+source-wordcount: '2053'
 ht-degree: 0%
 
 ---
@@ -222,11 +222,11 @@ Deklarera en konfigurationsfil och distribuera den enligt anvisningarna i följa
 
 **1** Skapa en fil med namnet `mt.yaml` eller liknande.
 
-**2** Placera filen någonstans under en mapp på den översta nivån med namnet `config` eller liknande, enligt beskrivningen i [config pipeline-artikeln.](/help/operations/config-pipeline.md#folder-structure)
+**2** Placera filen någonstans under en mapp på den översta nivån med namnet `config` eller liknande, enligt beskrivningen i [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#folder-structure).
 
 **3** - Deklarera egenskaper i konfigurationsfilen, som innehåller:
 
-* några egenskaper ovanför datanoden - en beskrivning finns i artikeln [om konfigurationspipeline](/help/operations/config-pipeline.md#common-syntax). Egenskapsvärdet `kind` ska vara *MaintenanceTasks* och versionen ska vara *1*.
+* några egenskaper ovanför datanoden - mer information finns i [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#common-syntax) . Egenskapsvärdet `kind` ska vara *MaintenanceTasks* och versionen ska vara *1*.
 
 * ett dataobjekt med både `versionPurge` och `auditLogPurge` objekt.
 

@@ -4,9 +4,9 @@ description: Läs om olika behörigheter och ACL-överväganden för en headless
 feature: Headless, Content Fragments,GraphQL API
 exl-id: 3fbee755-2fa4-471b-83fc-3f4bf056267a
 role: Admin, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '817'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ På en hög nivå är processen:
 
 >[!TIP]
 >
-> En detaljerad videogenomgång av hantering av IMS och AEM användare och grupper finns [här](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html).
+>En detaljerad videogenomgång av hur du hanterar IMS och AEM användare och grupper finns i [Konfigurera åtkomst till AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html).
 
 Om du vill hantera **grupper** i AEM går du till **Verktyg** > **Dokumentskydd** > **Grupper**.
 

@@ -4,7 +4,7 @@ description: I det här dokumentet beskrivs de rekommenderade stegen för att ö
 exl-id: 7978208d-4a6e-4b3a-9f51-56d159ead385
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
 source-wordcount: '2374'
 ht-degree: 0%
@@ -362,7 +362,7 @@ Följande steg krävs för att aktivera redigering i AEM för det här SPA.
 
 ## Rambegränsningar {#framework-limitations}
 
-RemotePage-komponenten förväntar sig att implementeringen tillhandahåller ett resursmanifest som den [som finns här](https://github.com/shellscape/webpack-manifest-plugin). RemotePage-komponenten har bara testats för att fungera med React Framework (och Next.js via komponenten remote-page-next) och stöder därför inte fjärrinläsning av program från andra ramverk, till exempel Angular.
+RemotePage-komponenten förväntar sig att implementeringen tillhandahåller ett tillgångsmanifest som [webpack-manifest-plugin i GitHub](https://github.com/shellscape/webpack-manifest-plugin). RemotePage-komponenten har bara testats för att fungera med React Framework (och Next.js via komponenten remote-page-next) och stöder därför inte fjärrinläsning av program från andra ramverk, till exempel Angular.
 
 ## Ytterligare resurser {#additional-resources}
 

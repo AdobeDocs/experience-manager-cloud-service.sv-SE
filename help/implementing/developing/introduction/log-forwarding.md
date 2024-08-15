@@ -4,9 +4,9 @@ description: Läs mer om vidarebefordran av loggar till Splunk och andra loggnin
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: cb4299be4681b24852a7e991c123814d31f83cad
+source-git-commit: 85cef99dc7a8d762d12fd6e1c9bc2aeb3f8c1312
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1375'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Den här funktionen har inte släppts ännu och vissa loggningsmål är kanske inte tillgängliga vid tidpunkten för lanseringen. Under tiden kan du öppna en supportbiljett för att vidarebefordra loggar till **Splunk**, vilket beskrivs i [loggningsartikeln](/help/implementing/developing/introduction/logging.md).
+>Den här funktionen har inte släppts ännu och vissa loggningsmål är kanske inte tillgängliga vid tidpunkten för lanseringen. Under tiden kan du öppna en supportbiljett för att vidarebefordra loggar till **Splunk**, vilket beskrivs under [Loggning för AEM as a Cloud Service](/help/implementing/developing/introduction/logging.md).
 
 Kunder som har en licens för en loggningsleverantör eller värd för en loggningsprodukt kan ha AEM loggar (inklusive Apache/Dispatcher) och CDN-loggar vidarebefordrade till associerade loggningsmål. AEM as a Cloud Service stöder följande loggningsmål:
 
@@ -169,7 +169,7 @@ aemcdn/
    2024-03-04T10:00:30.000-mno.log
 ```
 
-Varje fil innehåller flera json-loggposter, var och en på en separat rad. Loggpostformaten beskrivs i [loggningsartikeln](/help/implementing/developing/introduction/logging.md) och varje loggpost innehåller även de ytterligare egenskaper som nämns i avsnittet [Loggpostformat](#log-format) nedan.
+Varje fil innehåller flera json-loggposter, var och en på en separat rad. Loggpostformaten beskrivs under [Loggning för AEM as a Cloud Service](/help/implementing/developing/introduction/logging.md) och varje loggpost innehåller även de ytterligare egenskaper som anges i avsnittet [Loggpostformat](#log-format) nedan.
 
 #### Loggar för Azure Blob Storage-AEM {#azureblob-aem}
 
@@ -183,7 +183,7 @@ AEM (inklusive Apache/Dispatcher) visas under en mapp med följande namnkonventi
 
 Under varje mapp skapas en enda fil och läggs till i den. Kunderna ansvarar för att bearbeta och hantera den här filen så att den inte växer för stor.
 
-Se loggpostformaten i [loggningsartikeln](/help/implementing/developing/introduction/logging.md). Loggposterna innehåller även de ytterligare egenskaper som nämns i avsnittet [Loggpostformat](#log-formats) nedan.
+Se loggpostformaten under [Loggning för AEM as a Cloud Service](/help/implementing/developing/introduction/logging.md). Loggposterna innehåller även de ytterligare egenskaper som nämns i avsnittet [Loggpostformat](#log-formats) nedan.
 
 
 ### Datadog {#datadog}
@@ -266,7 +266,7 @@ Att tänka på:
 
 #### HTTPS CDN-loggar {#https-cdn}
 
-Webbförfrågningar (POST) skickas kontinuerligt, med en JSON-nyttolast som är en matris med loggposter, med loggpostformatet som beskrivs i [loggningsartikeln](/help/implementing/developing/introduction/logging.md#cdn-log). Ytterligare egenskaper anges i avsnittet [Loggpostformat](#log-formats) nedan.
+Webbförfrågningar (POST) skickas kontinuerligt, med en JSON-nyttolast som är en matris med loggposter, med loggpostformatet som beskrivs under [Loggning för AEM as a Cloud Service](/help/implementing/developing/introduction/logging.md#cdn-log). Ytterligare egenskaper anges i avsnittet [Loggpostformat](#log-formats) nedan.
 
 Det finns också en egenskap med namnet `sourcetype` som är inställd på värdet `aemcdn`.
 
@@ -276,7 +276,7 @@ Det finns också en egenskap med namnet `sourcetype` som är inställd på värd
 
 #### HTTPS-AEM {#https-aem}
 
-För AEM (inklusive apache/disacher) skickas webbförfrågningar (POST) kontinuerligt, med en JSON-nyttolast som är en matris med loggposter, med de olika loggpostformaten som beskrivs i [loggningsartikeln](/help/implementing/developing/introduction/logging.md). Ytterligare egenskaper anges i avsnittet [Loggpostformat](#log-format) nedan.
+För AEM (inklusive apache/disacher) skickas webbförfrågningar (POST) kontinuerligt, med en JSON-nyttolast som är en matris med loggposter, med de olika loggpostformaten som beskrivs under [Loggning för AEM as a Cloud Service](/help/implementing/developing/introduction/logging.md). Ytterligare egenskaper anges i avsnittet [Loggpostformat](#log-format) nedan.
 
 Det finns också en egenskap med namnet `sourcetype` som är inställd på något av följande värden:
 
@@ -323,7 +323,7 @@ data:
 
 ## Loggpostformat {#log-formats}
 
-I den allmänna [loggningsartikeln](/help/implementing/developing/introduction/logging.md) finns information om formatet för respektive loggtyp (CDN-loggar och AEM loggar inklusive Apache/Dispatcher).
+Se [Loggning för AEM as a Cloud Service](/help/implementing/developing/introduction/logging.md) för formatet för respektive loggtyp (CDN-loggar och AEM loggar inklusive Apache/Dispatcher).
 
 Eftersom loggar från flera program och miljöer kan vidarebefordras till samma loggningsmål, förutom de utdata som beskrivs i loggningsartikeln, kommer följande egenskaper att finnas i varje loggpost:
 
@@ -350,7 +350,7 @@ aem_tier: author
 
 Vissa organisationer väljer att begränsa vilken trafik som kan tas emot av loggningsdestinationerna.
 
-För CDN-loggen kan du tillåta att IP-adresserna listas enligt beskrivningen i [den här artikeln](https://www.fastly.com/documentation/reference/api/utils/public-ip-list/). Om listan med delade IP-adresser är för stor kan du skicka trafik till ett (ej Adobe) Azure Blob Store där logik kan skrivas för att skicka ut loggarna från en dedikerad IP-adress till deras slutliga mål.
+För CDN-loggen kan du tillåta att IP-adresserna listas enligt beskrivningen i [Snabbt dokumentation - offentlig IP-lista](https://www.fastly.com/documentation/reference/api/utils/public-ip-list/). Om listan med delade IP-adresser är för stor kan du skicka trafik till ett (ej Adobe) Azure Blob Store där logik kan skrivas för att skicka ut loggarna från en dedikerad IP-adress till deras slutliga mål.
 
 För AEM loggar (inklusive Apache/Dispatcher) kan du konfigurera vidarebefordran av loggar så att de går igenom [avancerat nätverk](/help/security/configuring-advanced-networking.md). Se mönstren för de tre avancerade nätverkstyperna nedan, som använder en valfri `port`-parameter, tillsammans med parametern `host`.
 

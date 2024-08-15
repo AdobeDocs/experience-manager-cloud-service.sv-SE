@@ -4,9 +4,9 @@ description: Dispatcher är ett cachnings- och säkerhetslager framför Adobe Ex
 feature: Headless, Dispatcher, GraphQL API
 exl-id: 78a20021-910f-4cf0-87bf-6e2223994f76
 role: Admin, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '222'
 ht-degree: 0%
 
 ---
@@ -40,4 +40,4 @@ Begäran om beständiga frågor görs mot en annan slutpunkt. Som en del av stan
 /0061 { /type "allow" /method '(GET|POST|OPTIONS)' /url "/graphql/execute.json*" }
 ```
 
-Beständiga frågor kan begäras med `GET` genom att svaret cachelagras på Dispatcher- och CDN-nivå. Mer information om cachelagring och cacheogiltigförklaring finns [här](/help/implementing/dispatcher/caching.md).
+Beständiga frågor kan begäras med `GET` genom att svaret cachelagras på Dispatcher- och CDN-nivå. Mer information om cachelagring och cacheogiltigförklaring finns under [Introduktion till cachelagring i AEM as a Cloud Service](/help/implementing/dispatcher/caching.md).

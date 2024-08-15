@@ -6,9 +6,9 @@ index: false
 exl-id: ace9b9f3-8bc6-4a36-a51c-ff60cdd339ce
 feature: Headless
 role: Admin, User, Developer
-source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Du har redan ett fält för titeln på äventyret. Nu måste du lägga till fäl
 
 >[!TIP]
 >
->Modellen **Adventure** baseras på WKND-exempelwebbplatsen för AEM. Du kan [besöka webbplatsen här](https://wknd.site/us/en/adventures/yosemite-backpacking.html) för att se innehåll som använder **Adventure**-modellen.
+>Modellen **Adventure** baseras på WKND-exempelwebbplatsen för AEM. Du kan [besöka WKND-webbplatsen här](https://wknd.site/us/en/adventures/yosemite-backpacking.html) om du vill se innehåll som använder **Adventure**-modellen.
 
 Följ samma steg som ovan för att lägga till dessa ytterligare fält. Den enda skillnaden är de egenskaper som du måste ange.
 

@@ -4,9 +4,9 @@ description: Lär dig mer om kopplingar, vad de kan göra och hur du implementer
 exl-id: 70024424-8c52-493e-bbc9-03d238b8a5f5
 feature: Operations
 role: Admin
-source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
+source-git-commit: 85cef99dc7a8d762d12fd6e1c9bc2aeb3f8c1312
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '936'
 ht-degree: 7%
 
 ---
@@ -26,7 +26,7 @@ AEM är en banbrytande lösning för hantering av webbupplevelser och erbjuder m
 
 * Hämta data från ett externt system till AEM. Du kan till exempel exportera kontaktinformation från ett CRM-system så att den blir tillgänglig för en större publik på en AEM webbplats.  Implementeringar ska använda Sling:s [schemalagda jobb](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html#scheduled-jobs), vilket garanterar att jobbet körs även om behållarna går ner. Koden bör utformas så att den antar att jobbet kan utlösas mer än en gång.
 * Exportera data från AEM till ett externt system. Exempel: prenumerationsinställningar för nyhetsbrev som skickas till en CRM på en webbplats som drivs AEM.
-* Hämtar resurser från AEM. Ett externt CMS-system (Content Management System) som refererar till en resurs som lagras i AEM Assets. Eller som ett annat exempel, ett PIM-system som länkar till en bild i AEM Assets.
+* Hämtar resurser från AEM. Ett externt innehållshanteringssystem (CMS) som refererar till en resurs som lagras i AEM Assets. Eller som ett annat exempel, ett PIM-system som länkar till en bild i AEM Assets.
 * Lagra resurser i den AEM infrastrukturen. Ett system för hantering av marknadsföringsresurser (MRM) som lagrar en godkänd resurs i AEM Assets.
 * Konfigurera och återge en anpassad UI-komponent. Tillåt till exempel en författare att dra och släppa en videokomponent och konfigurera en viss video som ska spelas upp på den publicerade webbplatsen.
 * Arbeta med en resurs med en partnertjänst. Du kan till exempel skicka en resurs till en videoplattform när en sida publiceras.
@@ -60,7 +60,7 @@ För att stödja rullande distributioner har AEM as a Cloud Service-paket, som �
 * `/apps`
 * `/content` och `/conf`
 
-Kopplingar bör följa de här riktlinjerna för paketering, som beskrivs i [den här artikeln](/help/implementing/developing/introduction/aem-project-content-package-structure.md). Befintliga kopplingar bör även omfaktoriseras för att anpassas.
+Kopplingar bör följa de här riktlinjerna för paketering, som beskrivs under [AEM Projektstruktur](/help/implementing/developing/introduction/aem-project-content-package-structure.md). Befintliga kopplingar bör även omfaktoriseras för att anpassas.
 
 Dessutom bör bara Adobe skriva kod till `/libs`, där kunder och partners skriver till `/apps`.
 

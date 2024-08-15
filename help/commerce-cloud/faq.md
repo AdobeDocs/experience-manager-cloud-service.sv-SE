@@ -4,9 +4,9 @@ description: AEM - Commerce-integrering med Commerce integration framework - fr�
 exl-id: 0a946d98-22c7-445d-984a-9e09c306ce45
 feature: Commerce Integration Framework
 role: Admin, Architect, User
-source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '965'
 ht-degree: 0%
 
 ---
@@ -77,4 +77,4 @@ Ja, självutvärderingsformulär D och försäkran om överensstämmelse finns t
 
 ## 16. Hur begär jag en I/O Runtime-licens?
 
-Du kan begära en utvärderingslicens för att använda I/O-miljön [här](https://developer.adobe.com/app-builder/trial/).
+Mer information om hur du begär en utvärderingslicens för att använda I/O-miljön finns i [Få åtkomst](https://developer.adobe.com/runtime/docs/guides/overview/getting_access/).

@@ -4,9 +4,9 @@ description: Lär dig mer om de steg du måste ta så att du kan vara säker på
 exl-id: 3bc8c037-d82a-4455-bce6-3c80c359a4ae
 feature: Migration
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '1900'
+source-wordcount: '1907'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ AEM as a Cloud Service har många nya funktioner och möjligheter för att hante
 
 Förutom dessa förbättringar har det införts flera skillnader mellan anläggningsinstallationer i AEM och Adobe Managed Services jämfört med AEM as a Cloud Service.
 
-Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest relevanta för en migrering till AEM as a Cloud Service. Du kan läsa den fullständiga listan över anteckningsbara ändringar [här](/help/release-notes/aem-cloud-changes.md).
+Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest relevanta för en migrering till AEM as a Cloud Service. Du kan läsa den fullständiga listan med [Observerbara ändringar i Adobe Experience Manager as a Cloud Service](/help/release-notes/aem-cloud-changes.md).
 
 <table>
 <thead>
@@ -117,7 +117,7 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
   <tr>
     <td>Arbetsflödeskörare</td>
     <td></td>
-    <td>Ta bort alla arbetsflödeskörare som utlöser ett körklart eller anpassat arbetsflöde för DAM Update Asset från koden. <br>Alla resurser som överförs till AEM as a Cloud Service kommer att bearbetas av resurshanteringstjänsten. Anpassade steg finns i <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use.html#post-processing-workflows"> Bearbetningsarbetsflöden för Post </a> om hur du konfigurerar och konfigurerar efterbearbetningsarbetsflöden.</td>
+    <td>Ta bort alla arbetsflödeskörare som utlöser ett körklart eller anpassat arbetsflöde för DAM Update Asset från koden. <br>Alla resurser som överförs till AEM as a Cloud Service kommer att bearbetas av resurshanteringstjänsten. Anpassade steg finns i <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use.html#post-processing-workflows"> Efterbearbetningsarbetsflöden </a> om hur du konfigurerar och konfigurerar efterbearbetningsarbetsflöden.</td>
   </tr>
   <tr>
     <td>Anpassade återgivningssteg</td>

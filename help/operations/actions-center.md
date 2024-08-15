@@ -4,7 +4,7 @@ description: Utnyttja åtgärdscentret för att enkelt hantera incidenter och an
 exl-id: d5a95ac4-aa88-44d5-ba02-7c9702050208
 feature: Operations
 role: Admin
-source-git-commit: 22d5975a0c4ee180bbcda906b035d306a352b752
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
 source-wordcount: '1045'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Från Åtgärdscenter kan du välja ett specifikt program och en viss miljö, vi
 
 ## Konfiguration {#configuration}
 
-Om du vill konfigurera mottagning av e-postmeddelanden från Åtgärdscenter skapar du de produktprofiler som beskrivs [i den här artikeln](/help/journey-onboarding/notification-profiles.md), nämligen Incident Notification - Cloud Service och Proactive Notification - Cloud Service. Tilldela även rätt Adobe-ID från din organisation till dessa profiler. Detta gör att en administratör kan avgöra vilka användare som är kvalificerade att ta emot dessa e-postmeddelanden.
+Om du vill konfigurera mottagning av e-postmeddelanden från Åtgärdscenter skapar du produktprofilerna enligt beskrivningen i [Meddelandeprofiler](/help/journey-onboarding/notification-profiles.md), nämligen Incidentmeddelande - Cloud Service och Proaktiv avisering - Cloud Service. Tilldela även rätt Adobe-ID från din organisation till dessa profiler. Detta gör att en administratör kan avgöra vilka användare som är kvalificerade att ta emot dessa e-postmeddelanden.
 
 >[!NOTE]
 >Actions Center-funktionen för e-postmeddelanden fungerar på organisationsnivå så att prenumeranterna får meddelanden om alla program och miljöer i dessa program.
@@ -65,7 +65,7 @@ AEM as a Cloud Service har flera typer av meddelanden, men bara en delmängd vis
 |---------------------------------|-----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
 | Driftincidenter | Kritiska incidenter som kräver omedelbara åtgärder | Användare tilldelad produktprofilen&quot;Incident Notification - Cloud Service&quot; | X |
 | Förebyggande rekommendationer | Optimeringar som ska planeras | Användare tilldelad produktprofilen &quot;Proaktivt meddelande - Cloud Service&quot; | X |
-| Cloud Manager pipeline-status | Information om tillståndet för dina rörledningar | Användare med Business Owner, Program Manager eller Deployment Manager-roller, kryssrutan &quot;Others&quot; (Övriga) markerad i [Experience Cloud Preferences](https://experience.adobe.com/preferences), enligt [beskrivningen här](/help/implementing/cloud-manager/notifications.md). |                           |
+| Cloud Manager pipeline-status | Information om tillståndet för dina rörledningar | Användare med Business Owner, Program Manager eller Deployment Manager-roller, kryssrutan &quot;Others&quot; (Övriga) markerad i [Experience Cloud Preferences](https://experience.adobe.com/preferences), se [Notifications](/help/implementing/cloud-manager/notifications.md). |                           |
 
 ## Meddelandetyper som stöds {#supported-notification-types}
 

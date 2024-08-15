@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-autentiseringsuppgifter och autent
 feature: Dispatcher
 exl-id: a5a18c41-17bf-4683-9a10-f0387762889b
 role: Admin
-source-git-commit: 3a10a0b8c89581d97af1a3c69f1236382aa85db0
+source-git-commit: 85cef99dc7a8d762d12fd6e1c9bc2aeb3f8c1312
 workflow-type: tm+mt
-source-wordcount: '1271'
+source-wordcount: '1266'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Så som beskrivs på [CDN-sidan i AEM as a Cloud Service](/help/implementing/dis
 
 Som en del av konfigurationen måste Adobe CDN och kundens CDN komma överens om ett värde för HTTP-huvudet `X-AEM-Edge-Key`. Värdet anges för varje begäran, på kundens CDN, innan det dirigeras till Adobe CDN, som sedan validerar att värdet är som förväntat, så att det kan lita på andra HTTP-huvuden, inklusive de som hjälper till att dirigera begäran till rätt AEM.
 
-Värdet *X-AEM-Edge-Key* refereras av egenskaperna `edgeKey1` och `edgeKey2` i en fil med namnet `cdn.yaml` eller liknande, någonstans under en `config`-mapp på översta nivån. Läs artikeln [Config Pipeline](/help/operations/config-pipeline.md#folder-structure) om du vill ha mer information om mappstrukturen och hur du distribuerar konfigurationen.
+Värdet *X-AEM-Edge-Key* refereras av egenskaperna `edgeKey1` och `edgeKey2` i en fil med namnet `cdn.yaml` eller liknande, någonstans under en `config`-mapp på översta nivån. Läs [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#folder-structure) om du vill ha mer information om mappstrukturen och hur du distribuerar konfigurationen.
 
 Syntaxen beskrivs nedan:
 
@@ -54,7 +54,7 @@ data:
           authenticator: edge-auth
 ```
 
-I artikeln [Konfigurera pipeline](/help/operations/config-pipeline.md#common-syntax) finns en beskrivning av egenskaperna ovanför noden `data`. Egenskapsvärdet `kind` ska vara *CDN* och egenskapen `version` ska vara `1`.
+Se [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#common-syntax) för en beskrivning av egenskaperna ovanför noden `data`. Egenskapsvärdet `kind` ska vara *CDN* och egenskapen `version` ska vara `1`.
 
 Ytterligare egenskaper är:
 
@@ -76,7 +76,7 @@ Ytterligare egenskaper är:
 
 ## Rensa API-token {#purge-API-token}
 
-Kunder kan [rensa CDN-cachen](/help/implementing/dispatcher/cdn-cache-purge.md) genom att använda en deklarerad rensnings-API-token. Token har deklarerats i en fil med namnet `cdn.yaml` eller liknande, någonstans under en `config`-mapp på översta nivån. Läs artikeln [om konfigurationspipeline](/help/operations/config-pipeline.md#folder-structure) om du vill ha mer information om mappstrukturen och hur du distribuerar konfigurationen.
+Kunder kan [rensa CDN-cachen](/help/implementing/dispatcher/cdn-cache-purge.md) genom att använda en deklarerad rensnings-API-token. Token har deklarerats i en fil med namnet `cdn.yaml` eller liknande, någonstans under en `config`-mapp på översta nivån. Läs [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#folder-structure) om du vill ha mer information om mappstrukturen och hur du distribuerar konfigurationen.
 
 Syntaxen beskrivs nedan:
 
@@ -100,7 +100,7 @@ data:
            authenticator: purge-auth
 ```
 
-En beskrivning av egenskaperna ovanför noden `data` finns i artikeln [config pipeline](/help/operations/config-pipeline.md#common-syntax) . Egenskapsvärdet `kind` ska vara *CDN* och egenskapen `version` ska vara `1`.
+Se [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#common-syntax) för en beskrivning av egenskaperna ovanför noden `data`. Egenskapsvärdet `kind` ska vara *CDN* och egenskapen `version` ska vara `1`.
 
 Ytterligare egenskaper är:
 
@@ -156,7 +156,7 @@ data:
            authenticator: my-basic-authenticator
 ```
 
-En beskrivning av egenskaperna ovanför noden `data` finns i artikeln [config pipeline](/help/operations/config-pipeline.md#common-syntax) . Egenskapsvärdet `kind` ska vara *CDN* och egenskapen `version` ska vara `1`.
+Se [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#common-syntax) för en beskrivning av egenskaperna ovanför noden `data`. Egenskapsvärdet `kind` ska vara *CDN* och egenskapen `version` ska vara `1`.
 
 Dessutom innehåller syntaxen:
 

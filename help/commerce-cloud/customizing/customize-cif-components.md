@@ -4,9 +4,9 @@ description: Lär dig hur du anpassar AEM kärnkomponenter. Självstudiekursen h
 feature: Commerce Integration Framework
 role: Admin
 exl-id: 4933fc37-5890-47f5-aa09-425c999f0c91
-source-git-commit: ef58cf5b216ef308cc65436f2eed2e500fb2bd96
+source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
 workflow-type: tm+mt
-source-wordcount: '2298'
+source-wordcount: '2300'
 ht-degree: 0%
 
 ---
@@ -175,7 +175,7 @@ Använd sedan en GraphQL IDE för att verifiera att attributet `eco_friendly` ha
 
    >[!TIP]
    >
-   > Läs mer om [Adobe Commerce GraphQL här](https://devdocs.magento.com/guides/v2.4/graphql/index.html).
+   > Mer information finns i [Adobe Commerce GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/index.html).
 
 ## Uppdatera produktundervisningsmodellen {#updating-sling-model-product-teaser}
 
@@ -385,7 +385,7 @@ I det här fallet vill du återge en banderoll ovanpå teaser för att ange att 
 
    När du anropar en Sling Model-metod i HTML tas delen `get` och `is` av metoden bort och den första bokstaven sänks. `isShowBadge()` blir alltså `.showBadge` och `isEcoFriendly` blir `.ecoFriendly`. Baserat på det booleska värdet som returneras från `.isEcoFriendly()` avgör om `<span>Eco Friendly</span>` visas.
 
-   Mer information om `data-sly-test` och andra [HTML-blocksatser finns här](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html).
+   Mer information om `data-sly-test` och andra HTML-blocksatser finns i [HTML-specifikationen](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html).
 
 1. Spara ändringarna och distribuera uppdateringarna till AEM med dina Maven-kunskaper från en kommandoradsterminal:
 
@@ -479,7 +479,7 @@ I det här läget fungerar logiken för när märket **Eko-Friendly** ska visas,
 
 ## Grattis {#congratulations}
 
-Du anpassade den första AEM CIF komponenten! Hämta de [färdiga lösningsfilerna här](../assets/customize-cif-components/customize-cif-component-SOLUTION_FILES.zip).
+Du anpassade den första AEM CIF komponenten! Du kan [hämta lösningsfilerna här](../assets/customize-cif-components/customize-cif-component-SOLUTION_FILES.zip).
 
 ## Bonus Challenge {#bonus-challenge}
 
