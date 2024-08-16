@@ -1,20 +1,19 @@
 ---
-title: Versionsinformation för Cloud Manager 2024.7.0 i Adobe Experience Manager as a Cloud Service
-description: Det här är versionsinformationen för Cloud Manager 2024.7.0 i AEM as a Cloud Service.
+title: Versionsinformation för Cloud Manager 2024.8.0 i Adobe Experience Manager as a Cloud Service
+description: Läs mer om versionsinformationen för Cloud Manager 2024.8.0 i AEM as a Cloud Service.
 feature: Release Information
-exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
 role: Admin
-source-git-commit: 8d9f5296a2e79ee5560d1ede967b3eb2155cd151
+source-git-commit: a823bcd1461b847983d0243cd9abd59efd8d7b6f
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation för Cloud Manager 2024.7.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
+# Versionsinformation om Cloud Manager 2024.8.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
-På den här sidan visas versionsinformation för Cloud Manager version 2024.7.0 i AEM as a Cloud Service.
+På den här sidan visas versionsinformation för Cloud Manager version 2024.8.0 i AEM as a Cloud Service.
 
 >[!NOTE]
 >
@@ -22,47 +21,40 @@ På den här sidan visas versionsinformation för Cloud Manager version 2024.7.0
 
 ## Releasedatum {#release-date}
 
-Lanseringsdatumet för Cloud Manager version 2024.7.0 i AEM as a Cloud Service är 18 juli 2024. Nästa version är planerad till den 12 augusti 2024.
+Lanseringsdatumet för Cloud Manager version 2024.8.0 i AEM as a Cloud Service är 14 augusti 2024. Nästa version är planerad till den 14 september 2024.
 
 ## Nyheter {#what-is-new}
 
-* Produktionspipeline ](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#adding-production-pipeline) och [icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#adding-non-production-pipeline) utlöser **Vid Git-ändringar** för att starta pipelinen vid en implementering är nu tillgängliga för [privata databaser.](/help/implementing/cloud-manager/managing-code/private-repositories.md)[
-   * Detta kommer att introduceras stegvis och vara färdigt i mitten av augusti.
-* När du lägger till ett [Adobe-hanterat DV-certifikat kan du nu ](/help/implementing/cloud-manager/managing-ssl-certifications/domain-validated-certificates.md) lägga till ett certifikat som omfattar flera domäner i stället för att skapa ett certifikat för varje domän.
-* Lösningar som inte har [ytterligare publiceringsregioner](/help/operations/additional-publish-regions.md) kan nu läggas till i ett program så länge som programmet har minst en Sites- eller Forms-lösning gäller för det.
-* Lösningar som inte har [99,99 % SLA](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md#sla) kan nu läggas till i ett program så länge som programmet har minst en Sites- eller Forms-lösning gäller för det.
-* [Experience Audit Dashboard](/help/implementing/cloud-manager/experience-audit-dashboard.md) har förbättrats på flera sätt.
-   * Granskningar körs nu mot `.com` slutpunkter via CDN, vilket ersätter den tidigare `.net`-metoden.
-      * Den här förändringen simulerar verkliga användarupplevelser mer korrekt och hjälper er att fatta mer välgrundade beslut om att hantera och optimera er webbplats.
-   * Flera förbättringar har gjorts i gränssnittet för Experience Audit, bl.a.:
-      * En trendvy över prestanda, bästa praxis, SEO och tillgänglighet har lagts till.
-      * Länken till rapporten i Raw-format i Lightroom visas nu på ett mer intuitivt sätt, direkt i panelen med information om ögonblicksbilder i skannern.
-      * Avsnittet Lightrooms rekommendationer har förbättrats.
-   * Måttet för PWA togs bort i enlighet med Lightroom version 12.0.0, som eliminerade det här måttet.
-* [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) har uppdaterats till [version 49.](https://github.com/adobe/aem-project-archetype/tree/aem-project-archetype-49)
+* [Ytterligare publiceringsregioner](/help/operations/additional-publish-regions.md) och [ 99,99 % SLA](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md#sla) (servicenivåavtal) är nu tillgängliga för AEM Forms as a Cloud Service.
+   * Den här förbättringen gör att ni kan uppnå högre servicenivåavtal med ökad drifttid och lägre latens, vilket ger förstklassiga upplevelser för era globalt spridda användare.
 
-## Tidig användning {#early-adoption}
+## Program för tidigt antagande {#early-adoption}
 
 Om du vill testa några av de kommande funktionerna kan du vara en del av programmet Adobe tidiga införande.
 
 ### Stöd för Edge Delivery Services i Cloud Manager {#edge-delivery-services}
 
-Om du har licensierat Edge Delivery Services som en del av Adobe Experience Manager Sites kan [du nu publicera din webbplats med Edge Delivery Services direkt i Cloud Manager](/help/implementing/cloud-manager/edge-delivery-services.md) och använda en guidad självbetjäning.
+Om du har licensierat Edge Delivery Services som en del av AEM Sites kan [du nu publicera din webbplats med Edge Delivery Services direkt i Cloud Manager](/help/implementing/cloud-manager/edge-delivery-services.md) och använda en guidad självbetjäning.
 
-Detta ger en enhetlig upplevelse av alla dina AEM egenskaper och säkerställer konsekvens med alla kritiska arbetsflöden, inklusive domännamnshantering, SSL-certifikathantering och CDN-mappningar.
+Den här funktionen ger en enhetlig upplevelse för alla dina AEM. Det garanterar konsekvens i kritiska arbetsflöden, som domännamnshantering, SSL-certifikathantering och CDN-mappningar.
 
 Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `aemcs-cmedgedelsvs-program-adopter@adobe.com` från den e-postadress som är kopplad till din Adobe ID.
 
 ### DV-certifikat (Domain Validated)
 
-Nu kan du [skapa och hantera domänvaliderade (DV) SSL-certifikat med hjälp av Cloud Manager.](/help/implementing/cloud-manager/managing-ssl-certifications/domain-validated-certificates.md) Detta ger dig den snabbaste, enklaste och mest kostnadseffektiva lösningen för att skapa en säker webbplats för din onlineverksamhet.
+Med Cloud Manager kan du nu [skapa och hantera domänvaliderade (DV) SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/domain-validated-certificates.md) automatiskt. Denna funktion ger er den snabbaste, enklaste och mest kostnadseffektiva lösningen för att skapa en säker webbplats för ert onlineföretag.
 
-Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `Grp-aemcs-dv-dert-adopter@adobe.com` från den e-postadress som är kopplad till din Adobe ID.
+Om du vill testa den här nya funktionen och lämna feedback skickar du ett e-postmeddelande till `Grp-aemcs-dv-dert-adopter@adobe.com` med den e-postadress som är länkad till din Adobe ID.
 
 ### Kontrollpanelen för Experience Audit {#experience-audit-dashboard}
 
 [Kontrollpanelen för Cloud Manager Experience Audit](/help/implementing/cloud-manager/experience-audit-dashboard.md) innehåller en trendvy över dina sidresultatspoäng tillsammans med insikter och rekommendationer som hjälper dig att förbättra dem. Experience Audit ingår som ett steg i Cloud Manager produktionsflöde.
 
-Kontrollpanelen använder Google Lightroom, ett automatiserat verktyg med öppen källkod som förbättrar kvaliteten på dina webbprogram. Du kan köra det mot alla webbsidor, offentliga webbplatser eller autentiseringar. Den har granskningar av prestanda, tillgänglighet, progressiva webbprogram, SEO med mera.
+Kontrollpanelen använder Google Lightroom, ett automatiserat verktyg med öppen källkod som förbättrar kvaliteten på dina webbprogram. Du kan använda den för att granska alla webbsidor, oavsett om de är offentliga eller kräver autentisering. Den innehåller bedömningar av prestanda, tillgänglighet, progressiva webbappar, SEO med mera.
 
-Är du intresserad av att testa den nya instrumentpanelen? Om du vill komma igång skickar du ett e-postmeddelande till `aem-lighthouse-pilot@adobe.com` från ditt e-postmeddelande som är kopplat till din Adobe ID.
+Vill du testa den nya instrumentpanelen? Börja med att skicka ett e-postmeddelande till `aem-lighthouse-pilot@adobe.com` med det e-postmeddelande som är länkat till din Adobe ID.
+
+## Felkorrigering
+
+* Ett sällsynt problem har korrigerats där rörledningssteg påträffades köras efter att rörledningen tagits bort.
+* Ett problem med konfigurationspipelines som felaktigt visar statusen `FAILED` har i sällsynta fall korrigerats.
