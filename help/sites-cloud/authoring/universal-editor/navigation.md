@@ -4,9 +4,9 @@ description: Lär dig grunderna i hur du kommer åt och navigerar i den universe
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 58c58243dc98a21161afe0976da4dcdc235da0d3
+source-git-commit: eecbc48a77e92b064be9fcdbe547fb330f8d40e0
 workflow-type: tm+mt
-source-wordcount: '1512'
+source-wordcount: '1576'
 ht-degree: 0%
 
 ---
@@ -137,7 +137,7 @@ Platsfältet visar adressen till sidan som du redigerar. Välj det här alternat
 
 >[!TIP]
 >
->Använd snabbtangenten `L` för att öppna adressfältet.
+>Använd snabbtangenten `l` (bokstaven l) för att öppna adressfältet.
 
 >[!NOTE]
 >
@@ -175,7 +175,7 @@ I förhandsgranskningsläget återges sidan i redigeraren som den skulle se ut i
 
 >[!TIP]
 >
->Använd snabbtangenten `P` för att växla till och från förhandsvisningsläget.
+>Använd snabbtangenten `p` för att växla till och från förhandsvisningsläget.
 
 #### Öppna programförhandsgranskning {#open-app-preview}
 
@@ -185,7 +185,11 @@ Välj ikonen för förhandsgranskning av öppna program om du vill öppna sidan 
 
 >[!TIP]
 >
->Använd snabbtangenten `O` (bokstaven O) för att öppna appförhandsvisningen.
+>Använd snabbtangenten `o` (bokstaven o) för att öppna appförhandsvisningen.
+
+>[!TIP]
+>
+>URL:en för förhandsgranskning för din app [kan anpassas.](/help/implementing/universal-editor/customizing.md#custom-preview-urls)
 
 #### Publish {#publish}
 
@@ -196,6 +200,14 @@ Välj publiceringsknappen så att du kan publicera ändringarna i innehållet li
 >[!TIP]
 >
 >Mer information om hur du publicerar med den universella redigeraren finns i dokumentet [Publicera innehåll med den universella redigeraren](publishing.md).
+
+#### Ellips {#ellipsis}
+
+Dessutom kan du komma åt standardalternativen med ellipsknappen.
+
+![Ellipsknapp](assets/ellipsis.png)
+
+Du kan till exempel avpublicera en sida (d.v.s. invertera åtgärden för knappen [**Publish**](#publish)) via ellipsknappen.
 
 #### Ytterligare knappar {#additional-toolbar-buttons}
 
@@ -216,7 +228,7 @@ Om redigeraren är i [förhandsgranskningsläge](#preview-mode) kan innehållet 
 
 Egenskapsfältet visas alltid längs den högra sidan av redigeraren. Beroende på dess läge kan det visa information för en komponent som är markerad i innehållet eller hierarkin för sidinnehållet.
 
-![Egenskapsfältet](assets/component-rail.png)
+![Egenskapsfältet](assets/properties-rail.png)
 
 #### Egenskapsläge {#properties-mode}
 
@@ -232,7 +244,7 @@ Alla komponenter har inte information som kan visas och/eller redigeras.
 
 >[!TIP]
 >
->Använd snabbtangenten `D` för att växla till egenskapsläge.
+>Använd snabbtangenten `d` för att växla till egenskapsläge.
 
 #### Läge för innehållsträd {#content-tree-mode}
 
@@ -246,21 +258,21 @@ När du väljer ett objekt i innehållsträdet rullar redigeraren till det inneh
 
 >[!TIP]
 >
->Använd snabbtangenten `F` för att växla till innehållsträdsläge.
+>Använd snabbtangenten `f` för att växla till innehållsträdsläge.
 
-##### Redigera {#edit}
+##### Öppna i CF Editor {#edit}
 
-När du redigerar visas alternativen för den markerade komponenten i egenskapsfältet, där du kan redigera den markerade komponenten. Om den markerade komponenten är ett innehållsfragment kan du även välja redigeringsknappen.
+När du redigerar visas alternativen för den markerade komponenten i egenskapsfältet, där du kan redigera den markerade komponenten. Om den markerade komponenten är ett innehållsfragment kan du även välja knappen **Öppna i CF-redigeraren** .
 
-![Ikonen Redigera](assets/edit.png)
+![Öppna i CF Editor-ikon](assets/open-in-cf-editor.png)
 
-Om du trycker eller klickar på redigeringsknappen öppnas [redigeraren för innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor) på en ny flik. Detta ger dig tillgång till den fulla kraften i Content Fragment Editor för att redigera det tillhörande innehållsfragmentet.
+Om du trycker eller klickar på knappen **Öppna i CF-redigeraren** öppnas [redigeraren för innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor) på en ny flik. Detta ger dig tillgång till den fulla kraften i Content Fragment-redigeraren för att redigera det tillhörande innehållsfragmentet.
 
 Beroende på arbetsflödets behov kan du behöva redigera innehållsfragmentet i den universella redigeraren eller direkt i redigeraren för innehållsfragment.
 
 >[!TIP]
 >
->Använd snabbtangenten `E` för att redigera en markerad komponent.
+>Använd snabbtangenten `e` för att öppna ett valt innehållsfragment i redigeraren för innehållsfragment.
 
 ##### Lägg till {#add}
 
@@ -274,7 +286,7 @@ Om du trycker eller klickar på knappen Lägg till öppnas en listruta med kompo
 
 >[!TIP]
 >
->Använd snabbtangenten `A` för att lägga till en komponent i en markerad behållarkomponent.
+>Använd snabbtangenten `a` för att lägga till en komponent i en markerad behållarkomponent.
 
 ##### Ta bort {#delete}
 

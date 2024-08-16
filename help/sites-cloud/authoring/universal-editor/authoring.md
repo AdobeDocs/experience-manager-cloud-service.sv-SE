@@ -5,9 +5,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 3922375b52ae64d08cdc64d475a95e8bd240a587
+source-git-commit: eecbc48a77e92b064be9fcdbe547fb330f8d40e0
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1297'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ För att göra detta har den universella redigeraren ett intuitivt användargrä
 
 ## Redigera innehåll {#editing-content}
 
-Det är enkelt och intuitivt att redigera innehåll. När du för musen över innehåll i redigeraren markeras redigerbart innehåll med en blå ruta.
+Det är enkelt och intuitivt att redigera innehåll. När du för musen över innehåll i redigeraren markeras redigerbart innehåll med en tunn blå kontur.
 
 ![Redigerbart innehåll är markerat med en blå ruta](assets/editable-content.png)
 
@@ -49,7 +49,7 @@ Du kan redigera texten på plats genom att dubbelklicka eller dubbeltrycka på k
 
 ![Redigerar innehåll](assets/editing-content.png)
 
-Tryck på Enter eller välj utanför textrutan för att spara ändringarna.
+Den tunna blå konturen ändras till en blå kontur som anger att den är markerad och en markör visas. Gör ändringarna och tryck sedan på Enter eller markera utanför textrutan för att spara ändringarna.
 
 När du väljer att markera textkomponenten visas information om den i [egenskapsfältet.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail) Du kan även redigera texten i skenan.
 
@@ -65,10 +65,21 @@ Du kan redigera texten på plats genom att dubbelklicka eller dubbeltrycka på k
 
 Formateringsalternativen och informationen på texten finns på två ställen.
 
-* **snabbmenyn** öppnas ovanför RTF-blocket och innehåller grundläggande formateringsalternativ i sitt sammanhang. På grund av utrymmesbegränsningar kan vissa alternativ vara dolda bakom ellipsknappen.
-* På **[egenskapsfältet](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail)** visas alla tillgängliga formateringsalternativ tillsammans med texten.
+#### Snabbmenyn {#context-menu}
+
+Snabbmenyn öppnas ovanför det formaterade textblocket och innehåller grundläggande formateringsalternativ. På grund av utrymmesbegränsningar kan vissa alternativ vara dolda bakom ellipsknappen.
+
+![RTF-snabbmeny](assets/rich-text-context-menu.png)
 
 Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet.
+
+#### The Properties Rail {#properties-rail}
+
+[egenskapsfältet](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail) visar ett objekt för den markerade texten. Tryck på posten för att öppna en dialogruta med en större arbetsyta för att redigera texten.
+
+![Dialogrutan för textredigering](assets/rich-text-canvas.png)
+
+Tryck eller klicka på **Avbryt** eller **Klar** för att ignorera eller spara ändringarna.
 
 ### Redigera media {#edit-media}
 
@@ -95,9 +106,19 @@ Om du markerar ett fält som är relaterat till ett innehållsfragment läses in
 
 Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet i egenskapsfältet.
 
-Om du vill redigera ditt innehållsfragment i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) i stället klickar du på [redigeringsknappen](/help/sites-cloud/authoring/universal-editor/navigation.md#edit) i egenskapsfältet.
+Om du vill redigera ditt innehållsfragment i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) i stället trycker eller klickar du på knappen [**Öppna i CF-redigeraren** ](/help/sites-cloud/authoring/universal-editor/navigation.md#edit) i egenskapsfältet.
+
+>[!TIP]
+>
+>Använd snabbtangenten `e` för att redigera det markerade innehållsfragmentet i redigeraren för innehållsfragment.
 
 Beroende på arbetsflödets behov kan du behöva redigera innehållsfragmentet i den universella redigeraren eller direkt i redigeraren för innehållsfragment.
+
+>[!NOTE]
+>
+>Den universella redigeraren [validerar fält för innehållsfragment baserat på deras modeller](/help/assets/content-fragments/content-fragments-models.md#validation), vilket gör att du kan tillämpa dataintegritetsregler som regex-mönster och unikhetsbegränsningar.
+>
+>Detta säkerställer att innehållet uppfyller specifika affärskrav innan det publiceras.
 
 ### Lägga till komponenter i behållare {#adding-components}
 
@@ -110,7 +131,7 @@ Komponenten infogas i behållaren och kan redigeras i redigeraren.
 
 >[!TIP]
 >
->Använd snabbtangenten `A` för att lägga till en komponent i den valda behållaren.
+>Använd snabbtangenten `a` för att lägga till en komponent i den valda behållaren.
 
 ### Ta bort komponenter från behållare {#deleting-components}
 
