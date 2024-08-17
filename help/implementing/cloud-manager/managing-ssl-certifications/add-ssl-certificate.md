@@ -1,19 +1,19 @@
 ---
-title: Lägga till ett SSL-certifikat
+title: Lägg till ett SSL-certifikat
 description: Lär dig hur du lägger till ett eget SSL-certifikat med Cloud Manager självbetjäningsverktyg.
 exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 06e961febd7cb2ea1d8fca00cb3dee7f7ca893c9
+source-git-commit: 64aa010c3d840adad9e1ab6040a6d80c07cd8455
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
 
 
-# Lägga till ett SSL-certifikat {#adding-an-ssl-certificate}
+# Lägg till ett SSL-certifikat {#adding-an-ssl-certificate}
 
 Lär dig hur du lägger till ett eget SSL-certifikat med Cloud Manager självbetjäningsverktyg.
 
@@ -23,11 +23,9 @@ Lär dig hur du lägger till ett eget SSL-certifikat med Cloud Manager självbet
 
 ## Certifikatkrav {#certificate-requirements}
 
-Granska avsnittet **Certifikatkrav** i dokumentet [Introduktion till hantering av SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md#requirements) för att kontrollera att det certifikat som du vill lägga till stöds av AEM as a Cloud Service.
+Granska **certifikatkraven** i [Introduktion till hantering av SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md#requirements) för att se till att AEM as a Cloud Service har stöd för det certifikat som du vill lägga till.
 
-## Lägga till ett certifikat {#adding-a-cert}
-
-Följ de här stegen för att lägga till ett certifikat med Cloud Manager.
+## Lägg till ett certifikat {#adding-a-cert}
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation
 
@@ -35,28 +33,23 @@ Följ de här stegen för att lägga till ett certifikat med Cloud Manager.
 
 1. Gå till skärmen **Miljö** från sidan **Översikt**.
 
-1. Klicka på **SSL-certifikat** i den vänstra navigeringspanelen. En tabell med information om eventuella befintliga SSL-certifikat visas på huvudskärmen.
+1. Klicka på **SSL-certifikat** under **Tjänster** på den vänstra navigeringspanelen. (Om det behövs kan du behöva klicka på hamburgikonen i det övre vänstra hörnet för att behöva navigeringspanelen. En tabell med information om eventuella befintliga SSL-certifikat visas.
 
    ![Lägger till ett SSL-certifikat](/help/implementing/cloud-manager/assets/ssl/ssl-cert-1.png)
 
-1. Klicka på **Lägg till SSL-certifikat** för att öppna dialogrutan **Lägg till SSL-certifikat**.
+1. Klicka på **Lägg till SSL-certifikat** för att öppna dialogrutan **Lägg till SSL-certifikat** .
 
-   * Ange ett namn för ditt certifikat i **Certifikatnamn**.
-      * Detta är endast avsett som information och kan vara vilket namn som helst som gör det enkelt att referera till ditt certifikat.
-   * Klistra in värdena för **Certifikat**, **Privat nyckel** och **Certifikatkedja** i respektive fält.
-      * Alla tre fälten är obligatoriska.
+   * Ange ett namn för ditt certifikat i **Certifikatnamn**. Det här fältet är avsett endast som information och kan vara vilket namn som helst som gör det enkelt att referera till ditt certifikat.
+   * Klistra in värdena för **Certifikat**, **Privat nyckel** och **Certifikatkedja** i respektive fält. Alla tre fälten är obligatoriska.
 
    ![Dialogrutan Lägg till SSL-certifikat](/help/implementing/cloud-manager/assets/ssl/ssl-cert-02.png)
 
-   * Alla fel som upptäcks visas.
-      * Du måste åtgärda alla fel innan certifikatet kan sparas.
-      * Mer information om hur du åtgärdar vanliga fel finns i avsnittet [Certifikatfel](#certificate-errors).
+   * Alla identifierade fel i värden visas. Innan du kan spara certifikatet måste du åtgärda alla fel.
+Mer information om hur du åtgärdar vanliga fel finns i [Certifikatfel](#certificate-errors).
 
-1. Klicka på **Spara** för att spara certifikatet.
+1. Klicka på **Spara**.
 
-När certifikatet har sparats visas det som en ny rad i tabellen.
-
-![Sparat SSL-certifikat](/help/implementing/cloud-manager/assets/ssl/ssl-cert-3.png)
+![Sparat SSL-certifikat](/help/implementing/cloud-manager/assets/ssl/ssl-cert-3.png)Certifikatet visas nu som en ny rad i tabellen, ungefär som bilden ovan.
 
 >[!NOTE]
 >
@@ -102,7 +95,7 @@ The Subject of an intermediate certificate must match the issuer in the previous
 
 Du har antagligen inkluderat klientcertifikatet i certifikatkedjan. Kontrollera att kedjan inte innehåller klientcertifikatet och försök igen.
 
-### Certifikatprofil {#certificate-policy}
+### Certifikatprincip {#certificate-policy}
 
 Om följande fel visas kontrollerar du certifikatets policy.
 
@@ -110,7 +103,7 @@ Om följande fel visas kontrollerar du certifikatets policy.
 Certificate policy must conform with EV or OV, and not DV policy.
 ```
 
-Certifikatprofiler identifieras normalt av inbäddade OID-värden. Om du skriver ut ett certifikat till text och söker efter OID:t visas certifikatets profil.
+Inbäddade OID-värden identifierar vanligtvis certifikatprinciper. Om du skriver ut ett certifikat till text och söker efter OID visas certifikatets profil.
 
 Du kan skriva ut din certifikatinformation som text med följande exempel som hjälp.
 
@@ -154,11 +147,11 @@ openssl x509 -in certificate.pem -text grep "Policy: 2.23.140.1.2.1" -B5
 
 ### Giltighetsdatum för certifikat {#certificate-validity-dates}
 
-Cloud Manager förväntar att SSL-certifikatet ska vara giltigt i minst 90 dagar från dagens datum. Du bör kontrollera certifikatkedjans giltighet.
+Cloud Manager förväntar att SSL-certifikatet ska vara giltigt i minst 90 dagar från dagens datum. Kontrollera certifikatkedjans giltighet.
 
 ## Nästa steg {#next-steps}
 
-Grattis! Du har nu ett fungerande SSL-certifikat för ditt projekt. Detta är ofta ett första steg på vägen mot att skapa ett eget domännamn.
+Grattis! Du har nu ett fungerande SSL-certifikat för ditt projekt. Det här steget är ofta det första som ställer in ett anpassat domännamn.
 
-* Se dokumentet [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) om du vill fortsätta konfigurera ett anpassat domännamn.
-* Läs dokumentet [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md) om du vill veta mer om hur du uppdaterar och hanterar dina SSL-certifikat i Cloud Manager.
+* Mer information om hur du konfigurerar ett anpassat domännamn finns i [Lägg till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).
+* Mer information om hur du uppdaterar och hanterar dina SSL-certifikat i Cloud Manager finns i [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md).
