@@ -6,9 +6,9 @@ feature: Asset Management,Renditions,Best Practices
 role: User
 mini-toc-levels: 2
 exl-id: 863784d9-0c91-4deb-8edd-1354a21581c3
-source-git-commit: 22de8ac77af27114099de2f6b4349232524cb94f
+source-git-commit: 1b985a83fd58522ee485c02b96bfb6a697da6ce0
 workflow-type: tm+mt
-source-wordcount: '3401'
+source-wordcount: '3402'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ In terms of images, the goal is to serve the best quality images as efficiently 
 
 **Fördelar med Smart bildbehandling**
 
-Smart Imaging ger bättre prestanda vid bildleverans genom att automatiskt optimera bildfilens storlek baserat på vilken webbläsare som används, enhetens visning och nätverksförhållanden. Eftersom bilder utgör det mesta av en sidas laddningstid kan alla prestandaförbättringar ha en genomgripande effekt på nyckeltal som högre konverteringsgrader, tidsåtgång på en webbplats och lägre avhoppsfrekvens.
+Smart Imaging ger bättre prestanda vid bildleverans genom att automatiskt optimera bildfilens storlek beroende på vilken webbläsare som används, vilken enhet som visas och vilka nätverksförhållanden som gäller. Eftersom bilder utgör det mesta av en sidas laddningstid kan alla prestandaförbättringar ha en genomgripande effekt på nyckeltal som högre konverteringsgrader, tidsåtgång på en webbplats och lägre avhoppsfrekvens.
 
 De nyaste fördelarna med den senaste Smart Imaging är följande:
 
@@ -81,7 +81,7 @@ Smart Imaging kan också inaktiveras genom att `bfc=off` läggs till i bildens U
 
 Se även [bfc](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-bfc.html?lang=en) i Dynamic Media Image Serving and Rendering API.
 
-### Om optimering av enhetspixelproportioner {#dpr}
+### Om optimering av enhetens pixelproportioner {#dpr}
 
 Enhetens pixelproportioner (DPR) - även kallat CSS-pixelproportioner - är relationen mellan en enhets fysiska pixlar och logiska pixlar. I synnerhet med nya retinaskärmar växer pixelupplösningen i moderna mobilenheter i snabb takt.
 
@@ -162,7 +162,7 @@ För bildfilsformat som stöder genomskinlighet som PNG kan du konfigurera Smart
 
 Kommandona Bildserver `fmt` och `qlt` stöds inte. Alla återstående kommandon stöds.
 
-## Frågor och svar om Smart Imaging{#smart-imaging-faq}
+## Vanliga frågor och svar om Smart Imaging{#smart-imaging-faq}
 
 +++**Är licensieringskostnaderna kopplade till Smart Imaging?**
 
