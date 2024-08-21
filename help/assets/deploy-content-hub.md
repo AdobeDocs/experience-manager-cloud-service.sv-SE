@@ -2,13 +2,13 @@
 title: Distribuera  [!DNL Content Hub]
 description: Lär dig hur du distribuerar och aktiverar Content Hub och ger åtkomst till användare med olika typer av behörigheter (överföra resurser, Adobe Express-användare) och hur du ger administratörsbehörighet till användare.
 role: Admin
-source-git-commit: 7224cca950e61bea298f246245bdb221fd8fa22e
+exl-id: 58194858-6e1c-460b-bab3-3496176b2851
+source-git-commit: 1cc17d10a687ede6b3b091578ed20a39414bb235
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1298'
 ht-degree: 0%
 
 ---
-
 
 # Distribuera Content Hub {#deploy-content-hub}
 
@@ -64,15 +64,23 @@ Om du inte har använt Experience Manager Assets tidigare klickar du på **[!UIC
 
 ### Content Hub instans och produktprofil på Admin Console{#content-hub-instance-product-profile}
 
-När du har [aktiverat Content Hub för Assets as a Cloud Service med Cloud Manager](#enable-content-hub) skapas en ny instans i AEM Assets as a Cloud Service Admin Console med suffixet `contenthub`:
+När du har [aktiverat Content Hub för Assets as a Cloud Service med Cloud Manager](#enable-content-hub) skapas en ny instans i AEM Assets as a Cloud Service Admin Console med suffixet `delivery`:
 
 ![Ny instans för Content Hub](assets/new-instance-content-hub.png)
+
+>[!NOTE]
+>
+>Om du har etablerat Content Hub före 14 augusti 2024 skapas den nya instansen med `contenthub` som suffix.
 
 Observera att det inte finns någon `author` eller `publish` i instansnamnet för Content Hub.
 
 Klicka på instansnamnet för att visa Content Hub produktprofil.
 
 ![Content Hub produktprofil](assets/content-hub-product-profile.png)
+
+>[!NOTE]
+>
+>Om du har etablerat Content Hub före den 14 augusti 2024 har Content Hub produktprofil `contenthub` omnämns efter `Limited Users` i stället för `delivery`.
 
 ## Steg 2: Integrera Content Hub-administratören {#onboard-content-hub-administrator}
 
@@ -192,6 +200,3 @@ Så här konfigurerar du Experience Manager Assets-användare:
    >[!NOTE]
    >
    > Du behöver inte läggas till i [Content Hub-produktprofilen](#onboard-content-hub-users) för Experience Manager Assets-användare.
-
-
-
