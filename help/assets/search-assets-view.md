@@ -4,7 +4,7 @@ description: Läs om hur du söker efter och identifierar resurser i AEM Assets-
 role: User
 exl-id: abfe6a91-1699-436f-8bf4-0d0bf2369f46
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
+source-git-commit: 940e62432b8234f90c84d6c7a09dd60e643a3ae5
 workflow-type: tm+mt
 source-wordcount: '1827'
 ht-degree: 0%
@@ -239,7 +239,7 @@ Du kan förhandsgranska om du vill kontrollera layout och formatering för den f
 1. Navigera till **[!UICONTROL Customize search first homepage]** och klicka på **[!UICONTROL Preview]**. Växla genom knappen **[!UICONTROL Dark theme]** om du vill förhandsgranska hemsidan i mörkt eller ljust tema.
 1. Klicka på **[!UICONTROL Close]** för att stänga förhandsgranskningsskärmen.
 
-   ![Sök i förhandsvisning av första hemsidan](assets/search-first-preview.gif)
+   ![Sök i förhandsvisning av första hemsidan](/help/assets/assets/search-first-preview.gif)
 
 ## Sammanhangsbaserad sökning {#contextual-search}
 
@@ -255,7 +255,7 @@ Så här kommer du åt sammanhangsbaserad sökning i Experience Manager Assets:
 
 1. Definiera textprompten i söktextrutan och klicka på **[!UICONTROL Contextual Search]**.
 
-   ![Sammanhangsberoende textfråga för sökning](assets/contextual-search-text-prompt.png)
+   ![Sammanhangsberoende textfråga för sökning](/help/assets/assets/wknd-contextual-search.png)
 
    [!DNL Experience Manager Assets] visar sökresultaten.
 
