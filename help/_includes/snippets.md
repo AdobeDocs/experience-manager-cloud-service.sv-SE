@@ -1,7 +1,7 @@
 ---
-source-git-commit: 964d4a04c6c645a5cdab29218f93431649d41588
+source-git-commit: 4eee52c28a57b466cfba52a99b832108b936a5d3
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
@@ -9,7 +9,7 @@ ht-degree: 0%
 
 ## Erbjudande om Headless-testversioner {#headless-trials-promotion}
 
-[![Lär känna vårt headless CMS med 30-dagars testversion](./assets/aem-headless-trial-promo.png){align="left"}](https://commerce.adobe.com/business-trial/sign-up?items%5B0%5D%5Bid%5D=649A1AF5CBC5467A25E84F2561274821&amp;cli=headless_exl_banner_campaign&amp;co=US&amp;lang=en)
+[![Lär känna vår headless CMS med 30-dagars testversion](./assets/aem-headless-trial-promo.png){align="left"}](https://commerce.adobe.com/business-trial/sign-up?items%5B0%5D%5Bid%5D=649A1AF5CBC5467A25E84F2561274821&amp;cli=headless_exl_banner_campaign&amp;co=US&amp;lang=en)
 
 ## Redigering av Edge Delivery Services {#edge-delivery-authoring}
 
@@ -80,7 +80,7 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
   </tr>
   <tr>
     <td>Ange alternativ för listrutor </td>
-    <td>Alternativen i listrutan ställs in med regelredigerarens <b>Set Options of</b> -egenskap.</td>
+    <td>Alternativen i listrutan ställs in med regelredigerarens <b>inställningsalternativ för </b> -egenskap.</td>
     <td>Alternativen i listrutan ställs in med de anpassade funktionerna. 
    </td>
    </tr>
@@ -92,7 +92,7 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
    </td>
    </tr>
       <tr>
-    <td>Validera/återställ fält/panel/formulärregel i"Sedan" </td>
+    <td>Validera/återställ fält/panel/formulärregel i 'Då' </td>
     <td>Funktionerna Validera och Återställ har bara stöd för formulärobjekt i regelredigeraren. 
    </td>
     <td>Funktionerna Validera och Återställ stöder formulär-/panel-/fältobjekt i regelredigeraren. 
@@ -127,3 +127,10 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 * [Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter](/help/forms/create-and-use-custom-functions.md)
 * [Skapa en anpassad funktion för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/custom-function-core-component-create-function.md)
 * [Exempel på utveckling och användning av anpassade funktioner](/help/forms/custom-function-core-components-use-cases.md)
+
+
+## IP-Tillåtelselista och rörledningar för frontservrar {#allowlist-frontend-pipeline}
+
+>[!IMPORTANT]
+>
+>Lägg till den viktiga anteckningen här.
