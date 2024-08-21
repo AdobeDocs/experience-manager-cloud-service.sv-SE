@@ -1,7 +1,7 @@
 ---
-source-git-commit: 4eee52c28a57b466cfba52a99b832108b936a5d3
+source-git-commit: 90bc7320899053b6b1d6cf0d1b06b193ad1c68f3
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '818'
 ht-degree: 0%
 
 ---
@@ -129,8 +129,14 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 * [Exempel på utveckling och användning av anpassade funktioner](/help/forms/custom-function-core-components-use-cases.md)
 
 
-## IP-Tillåtelselista och rörledningar för frontservrar {#allowlist-frontend-pipeline}
+## Cloud Manager IP Tillåtelselista och rörledningar för frontendjur {#allowlist-frontend-pipeline}
 
 >[!IMPORTANT]
 >
->Lägg till den viktiga anteckningen här.
+>För frontendpipelinen måste följande IP-Tillåtelselista läggas till i Cloud Manager i förväg.
+>Om det behövs kan du [lägga till IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md) genom att kopiera adressblocket nedan. Varje adress avgränsas med kommatecken. Klistra in blocket i fältet **IP-adress/CIDR** i dialogrutan **Lägg till IP-Tillåtelselista** . Placera markören precis efter det första kommatecknet i adresslistan och tryck på **Retur**. Spara listan.
+>Om du vill undvika avbrott i körningen av frontlinjens slutpipline måste du se till att det här IP-Tillåtelselista läggs till i Cloud Manager *innan* du aktiverar piplinjen.
+>
+>**Cloud Manager IP Tillåtelselista**
+>52.254.106.192/28,20.186.185.181,52.254.106.240/28,52.254.107.128/28,52.254.105.192/28,52.254.106.176/28,20.186.185.227,52.254.106.144/28,52.254.107.64/28,20.186.185.239,20.22.83.112,52.254.107.80/28,52.254.107.144/28,52.254.106.224/28,20.14.241.153,52.254.107.0/28,52.254.107.32/28,52.254.106.208/28,40.70.154.136/29,52.254.106.160/28,52.254.107.16/28,52.254.106.0/28,4.152.211.251
+>   
