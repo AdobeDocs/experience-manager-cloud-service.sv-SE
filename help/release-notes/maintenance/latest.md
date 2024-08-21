@@ -4,7 +4,7 @@ description: Aktuell underhållsversionsinformation för  [!DNL Adobe Experience
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 80edd0255b38beee93b3f9c779ae0f364500b4a5
+source-git-commit: 1eeb15c16581c945beb90495801c525697a46710
 workflow-type: tm+mt
 source-wordcount: '1176'
 ht-degree: 0%
@@ -96,8 +96,7 @@ Funktionsaktiveringen i 2024.8.0 kommer att innehålla alla funktioner som finns
 * ASSETS-40875 - Klassen AssetDeleteHandler lyssnar efter tillgångsborttagningshändelser och utför specifika åtgärder baserat på typen av delete-händelse (PRE_DELETE eller POST_DELETE). I vissa scenarier orsakar händelsetypen POST_DELETE ett NullPointerException.
 * FORMS-14340 - Fel vid instansiering av FormsAndDocumentOmniSearchHandler och CloudStorageSubmitActionInserter. Det här är ofarliga loggsatser.
 * FORMS-15818 - Komponentbeskrivningspost &#39;OSGI-INF/com.adobe.aemfd.docmanager.impl.*.xml kunde inte hitta satser i serverloggar. Det här är ofarliga loggsatser.
-* 
-   * SITES-23662 - Användare som utlöser en publicering kan inte extraheras från JCR-loggsatser i serverloggar. Det här är en funktion under utveckling som kan orsaka fel av typen&quot;Det går inte att hitta ett giltigt användar-ID i gruppen med OSGI-händelser&quot; i loggen.
+* SITES-23662 - Användare som utlöser en publicering kan inte extraheras från JCR-loggsatser i serverloggar. Det här är en funktion under utveckling som kan orsaka fel av typen&quot;Det går inte att hitta ett giltigt användar-ID i gruppen med OSGI-händelser&quot; i loggen.
 
 ### Ändringsmeddelande {#change-notice-17465}
 
