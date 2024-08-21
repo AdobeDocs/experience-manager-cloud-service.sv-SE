@@ -4,9 +4,9 @@ description: Detta är versionsinformationen för version 2024.08.13 av Universa
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: aad4d0353fb5e2eacb518b72e935def931d0798a
+source-git-commit: c66621eb336b8e6eb5ceb1056c089c190fcd1c34
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '343'
 ht-degree: 0%
 
 ---
@@ -22,14 +22,13 @@ Detta är versionsinformationen för den 13 augusti 2024-versionen av Universal 
 
 ## Nyheter {#what-is-new}
 
-* **Anpassade datatyper**: Anpassa redigeraren efter dina unika databehov med möjligheten att skapa anpassade fält i egenskapspanelen.
+* **Anpassade datatyper**: Anpassa redigeraren efter dina unika databehov med möjligheten att [skapa anpassade fält i egenskapspanelen.](https://developer.adobe.com/uix/docs/services/aem-universal-editor/api/item-types-renderers/)
    * Vare sig du utvecklar en anpassad produktväljare för e-handelsbruk eller fyller i en nedrullningsbar lista med värden från era bakgrunder ger den här funktionen dig den kontroll du behöver över de data som författarna använder för att skapa innehåll.
 * **Dra och släpp för flera behållare**: Dra och släpp för att få större flexibilitet i layoutkompositionen genom möjligheten att [flytta komponenter mellan olika behållare via dra och släpp](/help/sites-cloud/authoring/universal-editor/authoring.md#reordering-components) i panelen [Innehållsträd.](/help/sites-cloud/authoring/universal-editor/navigation.md#content-tree-mode)
 * **Optimerad GitHub-integrering**: Cachelagring för GitHub-svar har introducerats, vilket avsevärt snabbar upp hämtningen av taggar och `universal-editor-cors-library`, vilket ger en snabbare och smidigare användarupplevelse.
-* **Managed Services RPM-paket**: Adobe erbjuder nu ett RPM-paket för att effektivisera distributionen och hanteringen av Universal Editor-tjänsten, vilket förenklar underhåll och minskar driftskostnader för hanterade tjänster.
-* **Konfigurerbar IMS-tokenvalidering**: IMS-tokenvalidering är nu valfritt för att öka flexibiliteten i tokenhanteringen.
+* **Konfigurerbar IMS-tokenvalidering**: [IMS-tokenvalidering är nu valfri för att öka flexibiliteten i tokenhanteringen.](/help/implementing/universal-editor/local-dev.md#setting-up-service)
    * Med det här konfigurationsalternativet kan du inaktivera validering efter behov, vilket förenklar inställningarna för din molngateway.
-* **Splunk Integration**: Splunk-loggning har integrerats i [Universal Editor-tjänsten för lokal utveckling,](/help/implementing/universal-editor/local-dev.md) förbättrar övervakning och diagnostik.
+* **Splunk Integration**: Splunk-loggning har integrerats i [Universal Editor-tjänsten för lokal utveckling,](/help/implementing/universal-editor/local-dev.md#setting-up-service) förbättrar övervakning och diagnostik.
    * Integreringen säkerställer effektiv loggspårning, smidigare åtgärder och snabbare felsökning.
 
 ## Felkorrigeringar {#bug-fixes}
