@@ -6,9 +6,9 @@ role: User
 feature: Adaptive Forms
 index: false
 exl-id: 0b14b680-7da5-4e0b-bd6a-c379d148f9d7
-source-git-commit: 0b693cb51a96011235fa87a5899426c6b0c2509a
+source-git-commit: 5ee37f59bb959e0549c0541c6568aa8c135c330e
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
@@ -76,8 +76,8 @@ Nej, Verifiera-steget är inte tillgängligt för [!DNL Forms] as a Cloud Servic
 * **Kan jag lägga till diagram i ett anpassat formulär?**
 Ja, du kan lägga till diagram i Adaptiv Forms. Adaptiv Forms tillhandahåller en diagramkomponent. Du kan använda den för att lägga till diagram i ett adaptivt formulär.
 
-* **Kan jag ansluta en formulärdatamodell (FDM) till en relationsdatabasmodell?**
-Du kan ansluta en formulärdatamodell (FDM) till [!DNL RESTful web services], [!DNL SOAP-based web services], [!DNL OData services] och användarprofilen Experience Manager som datakällor. Det finns inte stöd för att ansluta en FDM (Form Data Model) till en relationsdatabas.
+* **Kan jag ansluta en formulärdatamodell till en relationsdatabasmodell?**
+Du kan ansluta en formulärdatamodell till [!DNL RESTful web services], [!DNL SOAP-based web services], [!DNL OData services] och Experience Manager som datakällor. <!--Support to connect a Form Data Model with a relational database is not available.-->
 
 * **Kan jag använda anpassade certifikat med FDM (Form Data Model) för autentisering?**
 Formulärdatamodellen (FDM) har ingen metod för att använda anpassade certifikat för autentisering. Därför stöds inte anpassade certifikat som x509 och tvåvägsSSL.
