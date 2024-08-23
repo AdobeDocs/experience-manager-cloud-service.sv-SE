@@ -4,7 +4,7 @@ description: AEM Forms Edge Delivery Services som tagits fram för bästa presta
 feature: Edge Delivery Services
 exl-id: ecea1e05-d36b-4d63-af9d-c69dafd2f94f
 role: Admin, Architect, Developer
-source-git-commit: 2766a351938062127babb01d5ed35bd37b705c21
+source-git-commit: 5670e0ab7e6cb47bcc2dd7608aa3f01dc4ec0704
 workflow-type: tm+mt
 source-wordcount: '1043'
 ht-degree: 0%
@@ -104,7 +104,7 @@ I följande diagram illustreras hur man skapar, publicerar och skickar in blanke
 * [Lägga till repeterbara avsnitt i ett &#x200B;](/help/edge/docs/forms/repeatable-forms.md)
 * [Visa ett anpassat tackmeddelande efter att formuläret har skickats &#x200B;](/help/edge/docs/forms/thank-you-page-form.md)
 * [Komponenter för adaptiva formulärblock och deras egenskaper](/help/edge/docs/forms/form-components.md)
-* [Realtime-användarövervakning](https://www.aem.live/developer/rum#authentication)
+* [Övervakning av faktisk användning](https://www.aem.live/developer/rum#authentication)
 
 <!-- 
 
