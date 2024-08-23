@@ -4,9 +4,9 @@ description: Läs om hur du söker efter och identifierar resurser i AEM Assets-
 role: User
 exl-id: abfe6a91-1699-436f-8bf4-0d0bf2369f46
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: 940e62432b8234f90c84d6c7a09dd60e643a3ae5
+source-git-commit: f30d9d43de926e3d0d62dba351c75a0c9641c53e
 workflow-type: tm+mt
-source-wordcount: '1827'
+source-wordcount: '1918'
 ht-degree: 0%
 
 ---
@@ -19,15 +19,15 @@ ht-degree: 0%
 >abstract="Sök efter resurser genom att ange ett nyckelord i sökfältet eller genom att filtrera resurser baserat på status, filtyp, MIME-typ, storlek, skapande, ändring och förfallodatum. Du kan också använda egna filter förutom standardfiltren. Du kan spara de filtrerade resultaten som en sparad sökning eller som en smart samling."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/manage-collections.html?lang=en#manage-smart-collection" text="Skapa smarta samlingar"
 
-[!DNL Assets view] innehåller effektiva sökfunktioner som bara fungerar som standard. Sökningen är omfattande eftersom den består av fulltextsökning. Med de kraftfulla sökfunktionerna kan du snabbt hitta rätt resurs och hjälpa dig att förbättra innehållets hastighet. [!DNL Assets view] innehåller fulltextsökning och även sökningar via metadata som smarta taggar, titel, skapad den och copyright.
+[!DNL Assets view] innehåller en effektiv sökning som bara fungerar som standard. Sökningen är omfattande eftersom den är en fulltextsökning. Med de kraftfulla sökfunktionerna kan du snabbt hitta rätt resurs och hjälpa dig att förbättra innehållets hastighet. [!DNL Assets view] innehåller fulltextsökning och även sökningar via metadata som smarta taggar, titel, skapad den och copyright.
 
-Så här söker du efter resurser:
+Om du vill söka efter resurser
 
 * Klicka i sökrutan högst upp på sidan. Som standard söker programmet i den mapp som du just nu bläddrar i. Gör något av följande:
 
   ![sökruta](assets/search-box.png)
 
-   * Sök med nyckelord och ändra mapp om det behövs. Tryck på Retur.
+   * Sök med ett nyckelord och ändra mappen om du vill. Tryck på Retur.
 
    * Börja arbeta med en nyligen visad resurs genom att söka direkt efter den. Klicka i sökrutan och välj en nyligen visade resurs bland förslagen.
 
@@ -42,16 +42,16 @@ Du kan filtrera sökresultaten baserat på följande parametrar.
 * Resursstatus: Filtrera sökresultaten med en `Approved`-, `Rejected`- eller `No Status`-resursstatus.
 
 * Filtyp: Filtrera sökresultaten efter de filtyper som stöds, `Images`, `Documents` och `Videos`.
-* MIME-typ: Filtrera efter ett eller flera av de filformat som stöds. <!-- TBD:  [supported file formats](/help/assets/supported-file-formats-assets-view.md). -->
+* MIME-typ: Filtrera efter ett eller flera av de filformat som stöds. <!-- TBD:  [supported file formats](/help/using/supported-file-formats.md). -->
 * Bildstorlek: Ange en av flera av de minsta och högsta måtten för att filtrera bilder. Storleken anges i pixeldimensioner och är inte bildens filstorlek.
 * Skapad: Datum när resursen skapades enligt metadatan. Standarddatumformatet som används är `yyyy-mm-dd`.
 * Ändrad: Senaste ändringsdatum för resurserna. Standarddatumformatet som används är `yyyy-mm-dd`.
 
 * Förfallodatum: Filtrera sökresultaten baserat på en `Expired`-resursstatus. Du kan dessutom ange ett förfallodatumintervall för resurser för att ytterligare filtrera sökresultaten.
 
-* Egna filter: [Lägg till anpassade filter](#custom-filters) i användargränssnittet i Assets-vyn. Använd de anpassade filtren utöver standardfiltren för att förfina sökresultaten.
+* Egna filter: [Lägg till anpassade filter](#custom-filters) i användargränssnittet i vyn Assets. Använd de anpassade filtren utöver standardfiltren för att förfina sökresultaten.
 
-Du kan sortera de sökda resurserna i stigande eller fallande ordning `Name`, `Relevancy`, `Size`, `Modified` och `Created`.
+Du kan sortera de sökda resurserna i stigande eller fallande ordning `Name`, `Relevance`, `Size`, `Modified` och `Created`. De sökda resurserna sorteras som standard baserat på `Relevance`.
 
 ## Hantera anpassade filter {#custom-filters}
 
@@ -125,41 +125,51 @@ Så här tar du bort anpassade filter:
 
 Du kan söka efter en resurs som inte är tillgänglig i någon av resursmapparna genom att använda sökfunktionen [!DNL Adobe Firefly] i [!DNL Experience Manager Assets]. På så sätt kan du effektivt generera resurser i realtid som inte lagras i resursmapparna.
 
-### Innan du börjar
+### Innan du börjar {#search-assets-firefly-prereqs}
 
 Du måste ha en aktiv [!DNL Adobe Express]-prenumeration.
 
-### Generera resurser
+### Generera resurser {#generate-assets-firefly}
 
 Så här skapar du nya resurser med [!DNL Adobe Firefly]:
 
 1. Navigera till arbetsytan [!DNL AEM Assets].
-1. Ange resursnamnet i sökfältet högst upp på sidan.<br>
-Du kan till exempel söka efter en resurs med nyckelordet `Bugatti Type 57` . När du söker efter resursen hittas inga resultat eftersom resursen inte finns i någon av resursmapparna.
-1. Skriv resursnamnet i sökfältet mitt på sidan och klicka på **[!UICONTROL Generate]**.
-   ![Integrering med Firefly](assets/firefly-integration.jpg)
-   *Bild: Inga resultat hittades för Bugatti Type 57 i resursmappen.* <br>
-De nya resurserna har genererats.
-   ![Integrering med Firefly](assets/bugatti-type-57.jpg)
-   *Figur: Referensresurser som har genomsökts med [!DNL Adobe Firefly]-objektsökningsfunktionen.* <br>
-Du kan överföra dessa resurser till den mapp du föredrar för enkel åtkomst.
 
-### Överför resurser
+1. Skriv resursnamnet i sökfältet. Du kan till exempel söka efter en resurs med nyckelordet `Bugatti Type 57`. När du söker efter resursen hittas inga resultat eftersom resursen inte finns i någon av resursmapparna. Klicka på **[!UICONTROL Generate with Firefly]** om du vill generera resurser med hjälp av AI. Skärmen [!DNL Adobe Firefly] visas.
+
+   ![Integrering med Firefly](assets/firefly-integration.png)
+
+   De nya resurserna har genererats. Du kan dessutom ändra bildbeskrivningen genom att skriva den nya textrutan i beskrivningsrutan. [Lär dig hur du skriver en bra AI-prompt för att generera extraordinärt och relevant innehåll.](https://helpx.adobe.com/in/firefly/using/tips-and-tricks.html) Du kan även [redigera bilder med olika funktioner, som att ändra format, bilddimensioner och mycket annat.](https://helpx.adobe.com/in/firefly/using/text-to-image.html)
+
+   ![Integrering med Firefly](assets/bugatti-type-57.png)
+
+1. Markera en bild som du vill spara. Klicka på **[!UICONTROL Save]** om du vill spara resurserna i den mapp du föredrar så att du enkelt kommer åt dem.
+
+1. Formuläret Spara resurs visas. Ange följande fält:
+
+   * Ange ett namn för filen i fältet **Spara som**.
+   * Välj en målmapp.
+   * Ange detaljer som projektnamn eller kampanjnamn, nyckelord, kanaler, tidsram och region.
+
+   ![Integrering med Firefly](assets/save-generated-asset.png)
+
+1. Klicka på **Spara som ny resurs** för att spara resursen/resurserna.
+
+### Överför resurser {#upload-assets-firefly}
 
 Så här överför du den genererade resursen till resurskatalogen:
 
 1. Klicka på **[!UICONTROL Upload]**.
 1. Markera resursmappen som du vill överföra resursen till och klicka på **[!UICONTROL Select Folder]**.
    ![Överför resurs](assets/upload-asset-firefly.jpg)
-   *Figur: Välj den mapp som resursen ska överföras till.*
 
 ## Sparade sökningar {#saved-search}
 
-Sökfunktionen är ganska enkel att använda i [!DNL Assets view]. I sökrutan kan du bara skriva ett nyckelord och trycka på Retur för att se resultatet. Du kan också snabbt söka efter dina nyligen sökta nyckelord igen med ett enda klick.
+Sökfunktionen är ganska enkel att använda i [!DNL Assets view]. I sökrutan kan du inte bara skriva ett nyckelord och trycka på Retur för att se resultatet. Du kan också snabbt söka igen efter dina nyligen sökta nyckelord med ett enda klick.
 
 Du kan också filtrera sökresultaten baserat på specifika villkor runt metadata och resurstyp. För filter som används ofta kan du spara sökparametrarna i [!DNL Assets view] för att förbättra sökupplevelsen. Du kan sedan markera den sparade sökningen och använda filtret med bara ett klick.
 
-Om du vill skapa en sparad sökning söker du efter en resurs, använder ett eller flera filter och klickar på **[!UICONTROL Save as]** > **[!UICONTROL Saved Search]** på panelen [!UICONTROL Filters]. Du kan också klicka på **[!UICONTROL Save as]** och välja **[!UICONTROL Smart Collection]** för att spara resultatet som en smart samling. Mer information finns i [Skapa en smart samling](manage-collections-assets-view.md#create-a-smart-collection).
+Om du vill skapa en sparad sökning söker du efter en resurs, använder ett eller flera filter och klickar på **[!UICONTROL Save as]** > **[!UICONTROL Saved Search]** på panelen [!UICONTROL Filters]. Du kan också klicka på **[!UICONTROL Save as]** och välja **[!UICONTROL Smart Collection]** för att spara resultatet som en smart samling. Mer information finns i [Skapa en smart samling](manage-collections.md#create-a-smart-collection).
 
 ![Skapa smart samling](assets/create-smart-collection.png)
 
@@ -178,7 +188,7 @@ When userA is searching and userB add an asset that matches search results, will
 
 Du kan markera de resurser som visas i sökresultaten och göra följande:
 
-* **Sök efter liknande bild**: Hitta en liknande bildresurs i Assets-gränssnittet baserat på metadata och smarta taggar.
+* **Hitta liknande bild**: Hitta en liknande bildresurs i Assets-gränssnittet baserat på metadata och smarta taggar.
 
 * **Information**: Visa och redigera resursegenskaper.
 
@@ -206,16 +216,16 @@ Du kan markera de resurser som visas i sökresultaten och göra följande:
 
 * **Tilldela uppgifter**: Tilldela uppgifter till användare för en resurs.
 
-* **Titta**: [Övervaka de åtgärder](manage-notifications-assets-view.md) som utförs på en resurs.
+* **Titta**: [Övervaka de åtgärder](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/search-assets) som utförs på en resurs.
 
-## Konfigurera första sökhemsida {#configuring-search-first-homepage}
+## Konfigurera den första startsidan för sökning {#configuring-search-first-homepage}
 
-Med Experience Manager Assets kan du välja standardlandningssida för din organisation. När du använder Sök först som startsida har du också möjlighet att anpassa sidans varumärke genom att konfigurera bakgrunds- och logotypbilderna så att de passar ert varumärke.
+I Assets-vyn kan du välja standardlandningssida för din organisation. När du använder Sök först som startsida har du också möjlighet att anpassa sidans varumärke genom att konfigurera bakgrunds- och logotypbilderna så att de passar ert varumärke.
 
 Så här konfigurerar du den första startsidan för sökningen:
 
 1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL General Settings]**.
-1. Välj **[!UICONTROL Search first]**. Sökningen öppnas sedan i den första relaterade konfigurationen. Du kan ange [justering](#setting-alignment-search-bar) eller [ange bakgrunds- och logotypbild](#setting-background-image-and-logo) för din hemsida.
+1. Välj **[!UICONTROL Search first]**. Sökningskonfigurationen öppnas sedan. Du kan ange [justering](#setting-alignment-search-bar) eller [ange bakgrunds- och logotypbilden](#setting-background-image-and-logo) för din hemsida.
 
 ### Ange justering för sökfältet {#setting-alignment-search-bar}
 
@@ -225,7 +235,7 @@ Med [!DNL Assets view] kan du ändra justeringen av sökfältet. Du kan ange att
 
 ### Ställa in bakgrunds- och logotypbild för hemsidan {#setting-background-image-and-logo}
 
-Du kan lägga till logotyp och bakgrundsbild på din första söksida. Utför följande steg:
+Du kan lägga till en logotyp och en bakgrundsbild på din första söksida. Utför följande steg:
 
 1. Navigera till avsnittet **[!UICONTROL Background and Logo image]** under **[!UICONTROL Homepage]**.
 1. Klicka på **[!UICONTROL Replace]** om du vill bläddra bland bilder från den befintliga resurskatalogen.
@@ -258,7 +268,6 @@ Så här kommer du åt sammanhangsbaserad sökning i Experience Manager Assets:
    ![Sammanhangsberoende textfråga för sökning](/help/assets/assets/wknd-contextual-search.png)
 
    [!DNL Experience Manager Assets] visar sökresultaten.
-
 
 ### Filter som stöds {#supported-filters}
 
@@ -335,3 +344,5 @@ Om du behöver ge feedback på funktionen för sammanhangsbaserad sökning klick
 * Ge feedback genom att [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som är tillgängligt på den högra sidopanelen.
 
 * Kontakta [kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)
+
+
