@@ -5,7 +5,7 @@ exl-id: c57096ca-34fe-4b19-98e0-8f3cd43cf24e
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
 workflow-type: tm+mt
 source-wordcount: '799'
 ht-degree: 2%
@@ -118,7 +118,7 @@ När du anger en sida **Namn** när du skapar en sida, validerar AEM [namnet enl
 
 ## Mallar {#templates}
 
-I AEM är en [mall](/help/sites-cloud/authoring/sites-console/templates.md) en speciell typ av sida som används som grund för alla nya sidor som skapas.
+I AEM är en [mall](/help/sites-cloud/authoring/page-editor/templates.md) en speciell typ av sida som används som grund för alla nya sidor som skapas.
 
 Mallen definierar strukturen för en sida, inklusive en miniatyrbild och andra egenskaper. Du kan till exempel ha separata mallar för produktsidor, platskartor och kontaktinformation. Mallar består av [komponenter](#components).
 

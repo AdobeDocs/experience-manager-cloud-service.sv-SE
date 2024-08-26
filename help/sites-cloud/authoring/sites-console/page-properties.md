@@ -5,7 +5,7 @@ exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
 workflow-type: tm+mt
 source-wordcount: '2268'
 ht-degree: 2%
@@ -118,7 +118,7 @@ Egenskaperna fördelas på flera flikar.
 
 * **Mallinställningar**
 
-   * **Tillåtna mallar** - [Definierar listan med mallar som är tillgängliga](/help/sites-cloud/authoring/sites-console/templates.md#enabling-and-allowing-a-template-template-author) i den här undergrenen
+   * **Tillåtna mallar** - [Definierar listan med mallar som är tillgängliga](/help/sites-cloud/authoring/page-editor/templates.md#enabling-and-allowing-a-template-template-author) i den här undergrenen
 
 * **Autentiseringskrav**
 

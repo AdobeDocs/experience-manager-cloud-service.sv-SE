@@ -4,7 +4,7 @@ description: Lär dig hur du skapar egna sammansatta komponenter, komponenter so
 exl-id: fa1ab1dd-9e8e-4e2c-aa9a-5b46ed8a02cb
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 0%
@@ -158,7 +158,7 @@ Sedan kan du lägga till den i SPA och hämta dess innehåll.
     itemPath='root/responsivegrid' />
    ```
 
-1. Lägg till den skapade `wknd-spa/components/imagecard`-komponenten i de tillåtna komponenterna för behållarkomponenten [ i sidmallen ](/help/sites-cloud/authoring/sites-console/templates.md).
+1. Lägg till den skapade `wknd-spa/components/imagecard`-komponenten i de tillåtna komponenterna för behållarkomponenten [ i sidmallen ](/help/sites-cloud/authoring/page-editor/templates.md).
 
 Nu kan komponenten `imagecard` läggas till direkt i behållaren i AEM.
 

@@ -5,7 +5,7 @@ exl-id: 469e8151-8231-4ccc-b7f6-855545f87440
 solution: Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
 workflow-type: tm+mt
 source-wordcount: '1250'
 ht-degree: 0%
@@ -223,9 +223,9 @@ För effektiv responsiv layout måste innehållsförfattaren kunna dra instanser
 
 Om du vill att författare ska kunna lägga till fler responsiva rutnät på innehållssidorna måste du aktivera layoutbehållarkomponenten för sidan. Du kan göra detta med:
 
-* **Via redigeringsmiljön** - [Redigera sidmallar](/help/sites-cloud/authoring/sites-console/templates.md) för att aktivera layoutbehållaren för en sida.
+* **Via redigeringsmiljön** - [Redigera sidmallar](/help/sites-cloud/authoring/page-editor/templates.md) för att aktivera layoutbehållaren för en sida.
 * **Komponentdefinition** - Använd `allowedComponent` eller en statisk inkludering när du definierar komponenten.
 
 ### Konfigurera stödrastret för layoutbehållaren {#configure-the-grid-of-the-layout-container}
 
-Du kan konfigurera antalet kolumner som är tillgängliga för varje specifik instans av layoutbehållaren [genom att redigera sidmallarna.](/help/sites-cloud/authoring/sites-console/templates.md)
+Du kan konfigurera antalet kolumner som är tillgängliga för varje specifik instans av layoutbehållaren [genom att redigera sidmallarna.](/help/sites-cloud/authoring/page-editor/templates.md)

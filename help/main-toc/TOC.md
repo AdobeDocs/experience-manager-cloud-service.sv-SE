@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: a9b7e2fbafcfc4b5592cc95e6bbd1e8e0f631757
+source-git-commit: 773ce75975f4dcc2c5310422bcc377b487ebec25
 workflow-type: tm+mt
-source-wordcount: '5340'
+source-wordcount: '5348'
 ht-degree: 3%
 
 ---
@@ -61,7 +61,7 @@ ht-degree: 3%
          + [Versionsinformation för 2021.11.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-11-0.md)
          + [Versionsinformation för 2021.10.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-10-0.md)
          + [Versionsinformation för 2021.9.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-9-0.md)
-         + [Versionsinformation för 2021.8.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-8-0.md)
+         + [Release Notes for 2021.8.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-8-0.md)
          + [Versionsinformation för 2021.7.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-7-0.md)
          + [Versionsinformation för 2021.6.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-6-0.md)
          + [Versionsinformation för 2021.5.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-5-0.md)
@@ -319,7 +319,6 @@ ht-degree: 3%
          + [Sidegenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md)
          + [Förhandsgranska sidor](/help/sites-cloud/authoring/sites-console/previewing-content.md)
          + [Publicera sidor](/help/sites-cloud/authoring/sites-console/publishing-pages.md)
-         + [Sidmallar](/help/sites-cloud/authoring/sites-console/templates.md)
          + [Sidversioner](/help/sites-cloud/authoring/sites-console/page-versions.md)
          + [Sidskillnader](/help/sites-cloud/authoring/sites-console/page-diff.md)
          + [Använda taggar](/help/sites-cloud/authoring/sites-console/tags.md)
@@ -330,6 +329,7 @@ ht-degree: 3%
          + [Sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md)
          + [Panelen Redigeraren](/help/sites-cloud/authoring/page-editor/editor-side-panel.md)
          + [Redigera sidor](/help/sites-cloud/authoring/page-editor/edit-content.md)
+         + [Sidmallar](/help/sites-cloud/authoring/page-editor/templates.md)
          + [Lägga till sidanteckningar](/help/sites-cloud/authoring/page-editor/annotations.md)
          + [RTF-redigeraren](/help/sites-cloud/authoring/page-editor/rich-text-editor.md)
          + [Responsiv layout](/help/sites-cloud/authoring/page-editor/responsive-layout.md)
@@ -344,6 +344,7 @@ ht-degree: 3%
          + [Skapa innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md)
          + [Publicera innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/publishing.md)
          + [Innehållsarv i den universella redigeraren](/help/sites-cloud/authoring/universal-editor/inheritance.md)
+         + [Sidmallar](/help/edge/wysiwyg-authoring/templates.md)
       + Fragment {#fragments}
          + [Innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md)
          + [Upplevelsefragment](/help/sites-cloud/authoring/fragments/experience-fragments.md)
@@ -604,9 +605,9 @@ ht-degree: 3%
       + [Hantera samlingar](/help/assets/manage-collections-assets-view.md)
       + [Bevaka resurser, mappar och samlingar](/help/assets/manage-notifications-assets-view.md)
       + [Hantera rapporter](/help/assets/manage-reports-assets-view.md)
-      + [Manage tags](/help/assets/tagging-management-assets-view.md)
+      + [Hantera taggar](/help/assets/tagging-management-assets-view.md)
       + [Content Credentials](/help/assets/content-credentials.md)
-      + [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+      + [Publish Assets to AEM and Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 
    + Content Hub {#content-hub}
@@ -730,7 +731,7 @@ ht-degree: 3%
          + Skapa ett anpassat formulär {#create-an-adaptive-form-on-forms-cs}
             + [Introduktion till framtagning av en adaptiv Forms](/help/forms/introduction-forms-authoring.md)
             + [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form.md)
-            + [Reference themes, templates, and data models](/help/forms/reference-themes-templates-data-models.md)
+            + [Referera till teman, mallar och datamodeller](/help/forms/reference-themes-templates-data-models.md)
             + [Skapa en mall](/help/forms/template-editor.md)
             + [Skapa ett tema](/help/forms/themes.md)
             + [Utforma JSON-schema för ett adaptivt formulär](/help/forms/adaptive-form-json-schema-form-model.md)
@@ -886,6 +887,8 @@ ht-degree: 3%
       + [Innehållsmodellering](/help/edge/wysiwyg-authoring/content-modeling.md)
       + [Tabelldata och kalkylblad](/help/edge/wysiwyg-authoring/tabular-data.md)
       + [Befintliga projekt och Edge Delivery](/help/edge/wysiwyg-authoring/existing-projects.md)
+      + [Hantera taxonomidata](/help/edge/wysiwyg-authoring/taxonomy.md)
+      + [Funktioner för WIP-platser](/help/edge/wysiwyg-authoring/wip-features.md)
    + Dokumentbaserad redigering {#document-authoring}
       + [Redigering](/help/edge/docs/authoring.md)
       + [Massmetadata](/help/edge/docs/bulk-metadata.md)
@@ -947,7 +950,7 @@ ht-degree: 3%
          + [Github Bot](https://github.com/apps/aem-code-sync)
          + [Granskningslogg](/help/edge/docs/auditlog.md)
 + Headless {#headless}
-   + [Vad är ett headless CMS?](/help/headless/what-is-headless.md)
+   + [Vad är en Headless CMS?](/help/headless/what-is-headless.md)
    + [Introduktion till AEM Headless](/help/headless/introduction.md)
    + [Developer Portal (Additional Resources)](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
    + [God praxis - konfigurera och använda](/help/headless/best-practices-setup-use.md)
@@ -1031,11 +1034,11 @@ ht-degree: 3%
          + [Skapa produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md)
          + [Sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md)
          + [Skapa sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-sandbox-programs.md)
-         + [Redigeringsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md)
-         + [Hibernating Environments](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/hibernating-environments.md)
-         + [Support för Edge Delivery Services](/help/implementing/cloud-manager/edge-delivery-services.md)
+         + [Editing Programs](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md)
+         + [Vilolägen](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/hibernating-environments.md)
+         + [Edge Delivery Services Support](/help/implementing/cloud-manager/edge-delivery-services.md)
       + Skapar ett AEM programprojekt {#create-application-project}
-         + [Project Creation Wizard](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md)
+         + [Guiden Skapa projekt](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md)
          + [Projektinställningar](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md)
          + [Bygg miljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md)
       + [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md)
@@ -1071,7 +1074,7 @@ ht-degree: 3%
          + [Kontrollpanelen för Experience Audit](/help/implementing/cloud-manager/experience-audit-dashboard.md)
       + [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md)
       + [Anpassade behörigheter](/help/implementing/cloud-manager/custom-permissions.md)
-      + [SLA-rapportering](/help/implementing/cloud-manager/sla-reporting.md)
+      + [SLA Reporting](/help/implementing/cloud-manager/sla-reporting.md)
       + [New Relic One](/help/implementing/cloud-manager/user-access-new-relic.md)
       + [Dynatrace](/help/implementing/cloud-manager/dynatrace.md)
       + [Meddelanden](/help/implementing/cloud-manager/notifications.md)
@@ -1152,8 +1155,8 @@ ht-degree: 3%
          + [Attribut och objekttyper](/help/implementing/universal-editor/attributes-types.md)
          + [Modelldefinitioner, fält och komponenttyper](/help/implementing/universal-editor/field-types.md)
          + [SecurBank-exempelapp](/help/implementing/universal-editor/securbank.md)
-         + [Händelser](/help/implementing/universal-editor/events.md)
-         + [](/help/implementing/universal-editor/customizing.md)
+         + [Events](/help/implementing/universal-editor/events.md)
+         + [Anpassa](/help/implementing/universal-editor/customizing.md)
          + [Arkitektur](/help/implementing/universal-editor/architecture.md)
          + [Autentisering](/help/implementing/universal-editor/authentication.md)
          + [Komma igång](/help/implementing/universal-editor/getting-started.md)
@@ -1273,8 +1276,8 @@ ht-degree: 3%
 + Kompatibilitet {#compliance}
    + [Efterlevnad av AEM as a Cloud Service](/help/compliance/home.md)
    + Kompatibilitet med dataintegritet och dataskydd {#data-privacy}
-      + [AEM beredskap för dataskydd och dataintegritet](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md)
-      + [AEM Foundation Readiness for Data Protection and Data Privacy Regulations](/help/compliance/data-privacy-and-protection-readiness/foundation-readiness.md)
+      + [AEM Readiness for Data Protection and Data Privacy Regulations](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md)
+      + [AEM Foundation Ready for Data Protection and Data Privacy Regulations](/help/compliance/data-privacy-and-protection-readiness/foundation-readiness.md)
       + [AEM Sites beredskap för dataskydd och dataintegritet](/help/compliance/data-privacy-and-protection-readiness/sites-readiness.md)
    + Tillgänglighet {#accessibility}
       + [AEM as a Cloud Service och riktlinjerna för webbtillgänglighet](/help/compliance/accessibility/web-accessibility.md)

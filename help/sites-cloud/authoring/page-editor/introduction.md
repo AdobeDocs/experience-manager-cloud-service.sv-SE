@@ -5,7 +5,7 @@ exl-id: da7d5933-f6c9-4937-a483-ec4352fba86b
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
 workflow-type: tm+mt
 source-wordcount: '1431'
 ht-degree: 0%
@@ -18,7 +18,7 @@ När sidan har skapats i konsolen [**Platser** kan du](/help/sites-cloud/authori
 
 >[!NOTE]
 >
->När du redigerar en sida i konsolen [**Platser** ](/help/sites-cloud/authoring/sites-console/introduction.md) öppnar konsolen den redigerare som är lämplig för sidans [mall:](/help/sites-cloud/authoring/sites-console/templates.md) antingen den sidredigerare som beskrivs i det här dokumentet eller [den universella redigeraren.](/help/sites-cloud/authoring/universal-editor/authoring.md)
+>När du redigerar en sida i konsolen [**Platser** ](/help/sites-cloud/authoring/sites-console/introduction.md) öppnar konsolen den redigerare som är lämplig för sidans [mall:](/help/sites-cloud/authoring/page-editor/templates.md) antingen den sidredigerare som beskrivs i det här dokumentet eller [den universella redigeraren.](/help/sites-cloud/authoring/universal-editor/authoring.md)
 
 >[!NOTE]
 >
@@ -62,7 +62,7 @@ Detta ger tillgång till detaljerad sidinformation, inklusive sidinformation och
 * [Lås sida](/help/sites-cloud/authoring/page-editor/introduction.md#locking-unlocking)
 * [Publish Page](/help/sites-cloud/authoring/sites-console/publishing-pages.md#publishing-pages-1)
 * [Avpublicera sida](/help/sites-cloud/authoring/sites-console/publishing-pages.md#unpublishing-pages)
-* [Redigera mall](/help/sites-cloud/authoring/sites-console/templates.md)
+* [Redigera mall](/help/sites-cloud/authoring/page-editor/templates.md)
 * [Visa som publicerad](/help/sites-cloud/authoring/page-editor/introduction.md#view-as-published)
 * [Visa i Admin](/help/sites-cloud/authoring/basic-handling.md#viewing-and-selecting-resources)
 * [Hjälp](/help/sites-cloud/authoring/basic-handling.md#accessing-help)

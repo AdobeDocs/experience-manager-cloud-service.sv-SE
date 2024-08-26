@@ -4,7 +4,7 @@ description: Förstå Adobe Experience Manager (AEM)-konfigurationer och hur de 
 exl-id: 0ade04df-03a9-4976-a4b7-c01b4748474d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
 workflow-type: tm+mt
 source-wordcount: '1482'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Du kan skapa konfigurationer för många olika funktioner i AEM.
 
 * [Kontextnavsegment](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
 * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
-* [Redigerbara mallar](/help/sites-cloud/authoring/sites-console/templates.md)
+* [Redigerbara mallar](/help/sites-cloud/authoring/page-editor/templates.md)
 * olika molnkonfigurationer
 
 ### Exempel {#administrator-example}
@@ -83,7 +83,7 @@ Det är enkelt att skapa en konfiguration i AEM med hjälp av Configuration Brow
 1. Kontrollera vilken typ av konfigurationer du vill tillåta.
    * [Kontextnavsegment](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
    * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
-   * [Redigerbara mallar](/help/sites-cloud/authoring/sites-console/templates.md)
+   * [Redigerbara mallar](/help/sites-cloud/authoring/page-editor/templates.md)
    * olika molnkonfigurationer
 1. Välj **Skapa**.
 

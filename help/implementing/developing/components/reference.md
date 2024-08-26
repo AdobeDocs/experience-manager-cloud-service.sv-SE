@@ -4,7 +4,7 @@ description: En referenshandbok för utvecklare som beskriver komponenterna och 
 exl-id: 45e5265b-39d6-4a5c-be1a-e66bb7ea387d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
 workflow-type: tm+mt
 source-wordcount: '3481'
 ht-degree: 0%
@@ -223,9 +223,9 @@ I dialogrutan definieras enskilda fält:
 
 ### Designdialogrutor {#design-dialogs}
 
-Designdialogrutor liknar dialogrutorna som används för att redigera och konfigurera innehåll, men de ger mallskaparna ett gränssnitt där de kan konfigurera och tillhandahålla designinformation för den komponenten på en sidmall. Sidmallar används sedan av innehållsförfattarna för att skapa innehållssidor. Mer information om hur mallar skapas finns i [malldokumentationen](/help/sites-cloud/authoring/sites-console/templates.md).
+Designdialogrutor liknar dialogrutorna som används för att redigera och konfigurera innehåll, men de ger mallskaparna ett gränssnitt där de kan konfigurera och tillhandahålla designinformation för den komponenten på en sidmall. Sidmallar används sedan av innehållsförfattarna för att skapa innehållssidor. Mer information om hur mallar skapas finns i [malldokumentationen](/help/sites-cloud/authoring/page-editor/templates.md).
 
-[Designdialogrutor används när du redigerar en sidmall](/help/sites-cloud/authoring/sites-console/templates.md), men de behövs inte för alla komponenter. Till exempel har både **Rubrik** och **Bildkomponenter** designdialogrutor, men inte **Delningskomponenten för sociala medier**.
+[Designdialogrutor används när du redigerar en sidmall](/help/sites-cloud/authoring/page-editor/templates.md), men de behövs inte för alla komponenter. Till exempel har både **Rubrik** och **Bildkomponenter** designdialogrutor, men inte **Delningskomponenten för sociala medier**.
 
 ### Gränssnittet för korall och GRENITE {#coral-and-granite}
 
@@ -280,7 +280,7 @@ När du har skapat en komponent måste du aktivera den för att kunna använda d
 
 När en komponent har definierats måste den göras tillgänglig för användning. Om du vill göra en komponent tillgänglig för användning i en mall måste du aktivera komponenten i principen för mallens layoutbehållare.
 
-Mer information om hur mallar skapas finns i [malldokumentationen](/help/sites-cloud/authoring/sites-console/templates.md).
+Mer information om hur mallar skapas finns i [malldokumentationen](/help/sites-cloud/authoring/page-editor/templates.md).
 
 ### Komponenter och det innehåll de skapar {#components-and-the-content-they-create}
 

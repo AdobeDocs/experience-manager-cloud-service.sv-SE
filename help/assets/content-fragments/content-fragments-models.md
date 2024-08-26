@@ -5,7 +5,7 @@ exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
 feature: Content Fragments, GraphQL API
 role: User, Admin, Architect
 solution: Experience Manager Sites
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
 workflow-type: tm+mt
 source-wordcount: '3011'
 ht-degree: 2%
@@ -386,7 +386,7 @@ Om du vill implementera innehållsstyrning kan du konfigurera **profiler** i Ass
 
 >[!NOTE]
 >
-Mekanismen liknar [tillåter sidmallar](/help/sites-cloud/authoring/sites-console/templates.md#allowing-a-template-author) för en sida och dess underordnade sidor i avancerade egenskaper för en sida.
+Mekanismen liknar [tillåter sidmallar](/help/sites-cloud/authoring/page-editor/templates.md#allowing-a-template-author) för en sida och dess underordnade sidor i avancerade egenskaper för en sida.
 
 Så här konfigurerar du **principer** för **Tillåtna modeller för innehållsfragment**:
 

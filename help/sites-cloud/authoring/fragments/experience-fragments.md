@@ -5,7 +5,7 @@ exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
 solution: Experience Manager Sites
 feature: Authoring, Experience Fragments
 role: User
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
 workflow-type: tm+mt
 source-wordcount: '2099'
 ht-degree: 2%
@@ -39,7 +39,7 @@ Du kan använda Experience Fragments:
 * Om en författare vill återanvända delar (ett fragment av en upplevelse) av en sida.
 Utan Experience Fragments måste författaren kopiera och klistra in det fragmentet. Att skapa och underhålla dessa klipp-och-klistra-upplevelser är tidskrävande och leder ofta till användarfel.
 Upplevelsefragment eliminerar behovet av att kopiera/klistra in.
-* För att stödja headless CMS-fall.
+* För att stödja CMS headless-fallstudier.
 Författare vill bara använda AEM för att skapa, men inte för att leverera till kunden. Ett system/kontaktyta från tredje part skulle förbruka upplevelsen och sedan leverera till användaren.
 * Med [Multi Site Management (MSM)](/help/sites-cloud/administering/msm/overview.md); som en Experience Fragment är en del av en sida. Detta gäller både de enskilda fragmenten och de mappar de finns i.
 
@@ -95,7 +95,7 @@ Genom att skapa mappar kan du:
 
   >[!NOTE]
   >
-  >Du kan använda [mallredigeraren](/help/sites-cloud/authoring/sites-console/templates.md) för att skapa en egen mall.
+  >Du kan använda [mallredigeraren](/help/sites-cloud/authoring/page-editor/templates.md) för att skapa en egen mall.
 
 WKND-projektet strukturerar vissa Experience Fragments enligt `Contributors`. Den struktur som används visar också hur andra funktioner, som Multi Site Management (inklusive språkkopior), kan användas.
 

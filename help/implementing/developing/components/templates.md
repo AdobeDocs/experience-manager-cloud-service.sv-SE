@@ -4,7 +4,7 @@ description: Sidmallar används när du skapar en sida som används som bas för
 exl-id: ea42fce9-9af2-4349-a4e4-547e6e8da05c
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
 workflow-type: tm+mt
 source-wordcount: '3268'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 När du skapar en sida måste du välja en mall. Sidmallen används som bas för den nya sidan. Mallen definierar strukturen för den resulterande sidan, allt ursprungligt innehåll och de komponenter som kan användas (designegenskaper). Detta har flera fördelar:
 
-* Med sidmallar kan specialiserade författare [skapa och redigera mallar](/help/sites-cloud/authoring/sites-console/templates.md).
+* Med sidmallar kan specialiserade författare [skapa och redigera mallar](/help/sites-cloud/authoring/page-editor/templates.md).
    * Sådana specialiserade författare kallas **mallskapare**
    * Mallförfattare måste vara medlemmar i gruppen `template-authors`.
 * Sidmallar behåller en dynamisk anslutning till alla sidor som skapas från dem. Detta säkerställer att alla ändringar i mallen återspeglas på själva sidorna.
@@ -32,7 +32,7 @@ Det här dokumentet:
 
 >[!NOTE]
 >
->Det här dokumentet förutsätter att du redan är bekant med att skapa och redigera mallar. Se redigeringsdokumentet [Skapa sidmallar](/help/sites-cloud/authoring/sites-console/templates.md), som beskriver funktionerna i redigerbara mallar så som de visas för mallskaparen.
+>Det här dokumentet förutsätter att du redan är bekant med att skapa och redigera mallar. Se redigeringsdokumentet [Skapa sidmallar](/help/sites-cloud/authoring/page-editor/templates.md), som beskriver funktionerna i redigerbara mallar så som de visas för mallskaparen.
 
 >[!TIP]
 >
@@ -40,7 +40,7 @@ Det här dokumentet:
 
 ## Skapa en ny mall {#creating-a-new-template}
 
-Skapandet av sidmallar görs huvudsakligen med [mallkonsolen och mallredigeraren](/help/sites-cloud/authoring/sites-console/templates.md) av en mallskapare. I det här avsnittet ges en översikt över processen och en beskrivning av vad som händer på teknisk nivå.
+Skapandet av sidmallar görs huvudsakligen med [mallkonsolen och mallredigeraren](/help/sites-cloud/authoring/page-editor/templates.md) av en mallskapare. I det här avsnittet ges en översikt över processen och en beskrivning av vad som händer på teknisk nivå.
 
 När du skapar en redigerbar mall:
 
@@ -60,7 +60,7 @@ När du skapar en redigerbar mall:
    * Om du vill att sidförfattare ska kunna lägga till och ta bort komponenter lägger du till ett styckesystem i mallen.
    * Komponenter kan låsas upp och låsas igen så att du kan definiera ursprungligt innehåll.
 
-   Mer information om hur en mallskapare definierar strukturen finns i [Skapa sidmallar](/help/sites-cloud/authoring/sites-console/templates.md#editing-a-template-structure-template-author).
+   Mer information om hur en mallskapare definierar strukturen finns i [Skapa sidmallar](/help/sites-cloud/authoring/page-editor/templates.md#editing-a-template-structure-template-author).
 
    Mer teknisk information om strukturen finns i [Struktur](#structure) i det här dokumentet.
 
@@ -72,7 +72,7 @@ När du skapar en redigerbar mall:
 
    * Dessa gäller för mallen (och sidor som skapas med mallen).
 
-   Mer information om hur en mallskapare definierar principer finns i [Skapa sidmallar](/help/sites-cloud/authoring/sites-console/templates.md#editing-a-template-structure-template-author).
+   Mer information om hur en mallskapare definierar principer finns i [Skapa sidmallar](/help/sites-cloud/authoring/page-editor/templates.md#editing-a-template-structure-template-author).
 
    Teknisk information om profiler finns i [Innehållsprinciper](#content-policies) i det här dokumentet.
 
@@ -81,7 +81,7 @@ När du skapar en redigerbar mall:
    * Ursprungligt innehåll definierar innehåll som visas när en sida skapas baserat på mallen.
    * Det initiala innehållet kan sedan redigeras av sidförfattare.
 
-   Mer information om hur en mallskapare definierar strukturen finns i [Skapa sidmallar](/help/sites-cloud/authoring/sites-console/templates.md#editing-a-template-initial-content-author).
+   Mer information om hur en mallskapare definierar strukturen finns i [Skapa sidmallar](/help/sites-cloud/authoring/page-editor/templates.md#editing-a-template-initial-content-author).
 
    Teknisk information om ursprungligt innehåll finns i [Inledande innehåll](#initial-content) i det här dokumentet.
 
@@ -90,7 +90,7 @@ När du skapar en redigerbar mall:
    * Du kan definiera mallayouten för ett antal olika enheter.
    * Responsiv layout för mallar fungerar på samma sätt som för sidredigering.
 
-   Mer information om hur en mallskapare definierar mallayouten finns i [Skapa sidmallar](/help/sites-cloud/authoring/sites-console/templates.md#editing-a-template-layout-template-author).
+   Mer information om hur en mallskapare definierar mallayouten finns i [Skapa sidmallar](/help/sites-cloud/authoring/page-editor/templates.md#editing-a-template-layout-template-author).
 
    Mer teknisk information om mallayout finns i [Layout](#layout) i det här dokumentet.
 
@@ -99,7 +99,7 @@ När du skapar en redigerbar mall:
    * En mall kan aktiveras eller inaktiveras för att göra den tillgänglig eller inte tillgänglig för sidförfattare.
    * En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
 
-   Mer information om hur mallskaparen aktiverar en mall finns i [Skapa sidmallar](/help/sites-cloud/authoring/sites-console/templates.md#enabling-and-allowing-a-template-template-author).
+   Mer information om hur mallskaparen aktiverar en mall finns i [Skapa sidmallar](/help/sites-cloud/authoring/page-editor/templates.md#enabling-and-allowing-a-template-template-author).
 
    Mer teknisk information om hur du aktiverar en mall finns i [Aktivera och tillåta en mall för användare](#enabling-and-allowing-a-template-for-use)e i det här dokumentet
 
@@ -357,7 +357,7 @@ When creating an editable template, the value is copied from the template type t
 
 Om du har skapat en mall som kan användas som bas för andra mallar kan du kopiera den här mallen som en malltyp.
 
-1. Skapa en mall precis som vilken sidmall som helst. Se [Skapa sidmallar](/help/sites-cloud/authoring/sites-console/templates.md#creating-a-new-template-template-author). Detta fungerar som bas för malltypen.
+1. Skapa en mall precis som vilken sidmall som helst. Se [Skapa sidmallar](/help/sites-cloud/authoring/page-editor/templates.md#creating-a-new-template-template-author). Detta fungerar som bas för malltypen.
 1. Kopiera med CRXDE Lite den skapade mallen från noden `templates` till noden `template-types` under [mallmappen](#template-folders).
 1. Ta bort mallen från noden `templates` under [mallmappen](#template-folders).
 1. I kopian av mallen som finns under noden `template-types` tar du bort alla `cq:template` - och `cq:templateType` -egenskaper från alla `jcr:content` -noder.
@@ -455,7 +455,7 @@ Definierar det ursprungliga innehåll som en ny sida kommer att ha när den skap
 
 ### Layout {#layout}
 
-När du [redigerar en mall kan du definiera layouten](/help/sites-cloud/authoring/sites-console/templates.md), använder detta [responsiv standardlayout](/help/sites-cloud/authoring/page-editor/responsive-layout.md).
+När du [redigerar en mall kan du definiera layouten](/help/sites-cloud/authoring/page-editor/templates.md), använder detta [responsiv standardlayout](/help/sites-cloud/authoring/page-editor/responsive-layout.md).
 
 <!-- that can also be [configured](/help/sites-administering/configuring-responsive-layout.md). -->
 
@@ -486,7 +486,7 @@ Med sidprofiler kan du definiera sidans [innehållsprincip](#content-policies) (
 
    Innan en mall kan användas måste den aktiveras av något av följande:
 
-   * [Aktivera mallen](/help/sites-cloud/authoring/sites-console/templates.md) från konsolen **Mallar**.
+   * [Aktivera mallen](/help/sites-cloud/authoring/page-editor/templates.md) från konsolen **Mallar**.
 
    * Anger egenskapen status för noden `jcr:content`.
 
@@ -501,7 +501,7 @@ Med sidprofiler kan du definiera sidans [innehållsprincip](#content-policies) (
 
 1. **Tillåtna mallar**
 
-   * [Definiera tillåtna mallsökvägar på **Sidegenskaper**](/help/sites-cloud/authoring/sites-console/templates.md#allowing-a-template-author) för rätt sida eller rotsida i en underavdelning.
+   * [Definiera tillåtna mallsökvägar på **Sidegenskaper**](/help/sites-cloud/authoring/page-editor/templates.md#allowing-a-template-author) för rätt sida eller rotsida i en underavdelning.
    * Ange egenskapen:
      `cq:allowedTemplates`
 På noden `jcr:content` för den begärda grenen.

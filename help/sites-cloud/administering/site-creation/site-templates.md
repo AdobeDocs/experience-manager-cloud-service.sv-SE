@@ -5,7 +5,7 @@ feature: Administering
 role: Admin
 exl-id: 42eec922-b02e-4f2c-8107-7336192919c7
 solution: Experience Manager Sites
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
 workflow-type: tm+mt
 source-wordcount: '556'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Mallarna är kraftfulla eftersom de kan återanvändas och anpassas. Och efterso
 
 >[!NOTE]
 >
->AEM webbplatsmallar ska inte blandas ihop med [sidmallar](/help/sites-cloud/authoring/sites-console/templates.md). Platsmallar definierar den övergripande strukturen för en plats. En sidmall definierar strukturen och det ursprungliga innehållet för en enskild sida.
+>AEM webbplatsmallar ska inte blandas ihop med [sidmallar](/help/sites-cloud/authoring/page-editor/templates.md). Platsmallar definierar den övergripande strukturen för en plats. En sidmall definierar strukturen och det ursprungliga innehållet för en enskild sida.
 >
 >AEM webbplatsmallar ska inte blandas ihop med [AEM webbplatsteman](site-themes.md). AEM webbplatsteman innehåller bara formatinformation för en AEM. AEM webbplatsmallar definierar webbplatsens struktur och ursprungliga innehåll och innehåller ett AEM webbplatstema som tillåter [snabb webbplatsgenerering](create-site.md).
 

@@ -4,9 +4,9 @@ description: Lär dig hur du använder kalkylblad för att hantera tabelldata f�
 feature: Edge Delivery Services
 exl-id: 26d4db90-3e4b-4957-bf21-343c76322cdc
 role: Admin, Architect, Developer
-source-git-commit: 7ad9a959592f1e8cebbcad9a67d280d5b2119866
+source-git-commit: f8e305f636c7a7247d2a41f6ed25b1715bd8837c
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
@@ -130,6 +130,7 @@ Nu när du vet hur man skapar omdirigerade kalkylblad kan du skapa vilken annan 
 * Metadata
 * Sidhuvuden
 * Konfiguration
+* [Taxonomi](/help/edge/wysiwyg-authoring/taxonomy.md)
 
 Följ bara samma steg i avsnitten [Skapa kalkylblad](#spreadsheet) och [Uppdatera sökvägar.json](#paths-json), välj lämplig mall och uppdatera `paths.json`-filen på lämpligt sätt.
 
@@ -138,6 +139,7 @@ För [Configuration](https://www.aem.live/docs/configuration), [Headers](https:/
 * Konfiguration: `/.helix/config.json`
 * Rubriker: `/.helix/headers.json`
 * Metadata: `/metadata.json`
+* Taxonomi: Mer information finns i dokumentet [Hantera taxonomidata](/help/edge/wysiwyg-authoring/taxonomy.md).
 
 Dessutom kan du [skapa ett eget kalkylblad](#own-spreadsheet) med godtyckliga kolumner för egen användning.
 

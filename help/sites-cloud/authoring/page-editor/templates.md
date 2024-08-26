@@ -2,9 +2,12 @@
 title: Skapa sidmallar
 description: Mallen definierar strukturen för den resulterande sidan och med mallredigeraren är det inte längre en uppgift som bara är avsedd för utvecklare att skapa och underhålla mallar
 exl-id: 4c9dbf26-5852-45ab-b521-9f051c153b2e
-source-git-commit: c79aeaab9d33f1c2a15f93d58847798c6caff31c
+solution: Experience Manager Sites
+feature: Authoring
+role: User
+source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
 workflow-type: tm+mt
-source-wordcount: '4522'
+source-wordcount: '4524'
 ht-degree: 7%
 
 ---
@@ -13,7 +16,7 @@ ht-degree: 7%
 
 När du skapar en sida måste du välja en mall som används som bas för att skapa den nya sidan. Mallen definierar strukturen för den resulterande sidan, allt ursprungligt innehåll och de komponenter som kan användas.
 
-Med **mallredigeraren** är det inte bara en utvecklaruppgift att skapa och underhålla mallar. En typ av superanvändare, som kallas **mallskapare**, kan också arbeta med detta. Utvecklare måste fortfarande installera miljön, skapa klientbibliotek och skapa de komponenter som ska användas, men när dessa grunder väl är på plats kan **mallskaparen** skapa och konfigurera mallar utan något utvecklingsprojekt.
+Tack vare **mallredigeraren** är det inte längre bara utvecklare som kan skapa och underhålla mallar. En typ av superanvändare, som kallas **mallskapare**, kan också arbeta med detta. Utvecklare måste fortfarande installera miljön, skapa klientbibliotek och skapa de komponenter som ska användas, men när dessa grunder väl är på plats kan **mallskaparen** skapa och konfigurera mallar utan något utvecklingsprojekt.
 
 Med **mallkonsolen** kan mallförfattare:
 
@@ -78,7 +81,7 @@ När du skapar en redigerbar mall:
    * [Struktur](#editing-a-template-structure-template-author) - Fördefinierat innehåll som inte kan ändras på sidor som skapas med mallen.
    * [Inledande innehåll](#editing-a-template-initial-content-author) - Fördefinierat innehåll som kan ändras på sidor som skapas med mallen.
    * [Layout](#editing-a-template-layout-template-author) - För en rad olika enheter.
-   * [Format](/help/sites-cloud/authoring/features/style-system.md) - Definiera de format som ska användas med mallen och dess komponenter.
+   * [Format](/help/sites-cloud/authoring/page-editor/style-system.md) - Definiera de format som ska användas med mallen och dess komponenter.
 * [Aktivera mallen](#enabling-a-template-template-author) för användning när du skapar en sida
 * [Tillåt mallen](#allowing-a-template-author) för den begärda sidan eller grenen på din webbplats
 * [Publish mallen](#publishing-a-template-template-author) för att göra den tillgänglig i publiceringsmiljön
@@ -184,7 +187,7 @@ En mall kan aktiveras eller inaktiveras för att bli tillgänglig eller inte til
 
 1. Välj mallen i **Mallkonsolen**.
 1. Välj **Aktivera** eller **Inaktivera** i verktygsfältet och sedan igen i bekräftelsedialogrutan.
-1. Du kan nu använda mallen när du [skapar en sida](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#creating-a-new-page), men du vill antagligen [redigera mallen](#editing-templates-template-authors) enligt dina önskemål.
+1. Du kan nu använda mallen när du [skapar en sida](/help/sites-cloud/authoring/sites-console/creating-pages.md#creating-a-new-page), men du vill antagligen [redigera mallen](#editing-templates-template-authors) enligt dina önskemål.
 
 >[!NOTE]
 >
@@ -194,7 +197,7 @@ En mall kan aktiveras eller inaktiveras för att bli tillgänglig eller inte til
 
 En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
 
-1. Öppna [Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md) för rotsidan i grenen där du vill att mallen ska vara tillgänglig.
+1. Öppna [Sidegenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md) för rotsidan i grenen där du vill att mallen ska vara tillgänglig.
 1. Öppna fliken **Avancerat**.
 1. Under **Mallinställningar** använder du **Lägg till fält** för att ange sökvägen/sökvägarna till mallarna.
 
@@ -270,7 +273,7 @@ När en komponent har låsts upp kan du definiera det [ursprungliga innehållet]
 
 #### Layout {#template-layout}
 
-Med hjälp av [layouten](#editing-a-template-layout-template-author) kan du fördefiniera mallayouten för de önskade enhetsformaten. **Layoutläget** för mallutveckling har samma funktioner som [**layoutläget** för sidredigering](/help/sites-cloud/authoring/features/responsive-layout.md#defining-layouts-layout-mode).
+Med hjälp av [layouten](#editing-a-template-layout-template-author) kan du fördefiniera mallayouten för de önskade enhetsformaten. **Layoutläget** för mallutveckling har samma funktioner som [**layoutläget** för sidredigering](/help/sites-cloud/authoring/page-editor/responsive-layout.md#defining-layouts-layout-mode).
 
 #### Sidprofiler {#template-page-policies}
 
@@ -278,9 +281,9 @@ Med hjälp av [layouten](#editing-a-template-layout-template-author) kan du för
 
 #### Stilar {#template-styles}
 
-Med [Style System](/help/sites-cloud/authoring/features/style-system.md) kan en mallskapare definiera formatklasser i en komponents innehållsprincip så att en innehållsförfattare kan markera dem när komponenten på en sida redigeras. Dessa format kan vara alternativa visuella varianter av en komponent, vilket gör den mer flexibel.
+Med Style System kan mallskapare definiera formatklasser i en komponents innehållsprincip så att en innehållsförfattare kan markera dem när komponenten på en sida redigeras. Dessa format kan vara alternativa visuella varianter av en komponent, vilket gör den mer flexibel.
 
-Mer information finns i [dokumentationen för formatsystemet](/help/sites-cloud/authoring/features/style-system.md).
+Mer information finns i [dokumentationen för formatsystemet](/help/sites-cloud/authoring/page-editor/style-system.md).
 
 ### Redigera en mall - Struktur - Mallförfattare {#editing-a-template-structure-template-author}
 
@@ -319,7 +322,7 @@ När de lagts till markeras varje komponent med:
 
 >[!NOTE]
 >
->Även om det inte är identiskt har tillägg av komponenter och resurser i en mall många likheter med liknande åtgärder när [du redigerar sidan](/help/sites-cloud/authoring/fundamentals/editing-content.md).
+>Även om det inte är identiskt har tillägg av komponenter och resurser i en mall många likheter med liknande åtgärder vid redigering av [sidor.](/help/sites-cloud/authoring/page-editor/edit-content.md)
 
 #### Komponentåtgärder {#component-actions}
 
@@ -536,7 +539,7 @@ Om strukturen uppdateras efter att sidor som är baserade på mallen har skapats
 
 ### Redigera en mall - Layout - mallskapare {#editing-a-template-layout-template-author}
 
-Du kan definiera mallayouten för ett antal olika enheter. [Responsiv layout](/help/sites-cloud/authoring/features/responsive-layout.md) för mallar fungerar på samma sätt för sidredigering.
+Du kan definiera mallayouten för ett antal olika enheter. [Responsiv layout](/help/sites-cloud/authoring/page-editor/responsive-layout.md) för mallar fungerar på samma sätt för sidredigering.
 
 >[!NOTE]
 >
@@ -611,7 +614,7 @@ Med hjälp av sidegenskaper kan du definiera nödvändiga klientbibliotek genom 
 
 ### Redigera en mall - Inledande sidegenskaper - Författare {#editing-a-template-initial-page-properties-author}
 
-Med alternativet **Inledande sidegenskaper** kan du definiera de inledande [sidegenskaperna](/help/sites-cloud/authoring/fundamentals/page-properties.md) som ska användas när du skapar resulterande sidor.
+Med alternativet **Inledande sidegenskaper** kan du definiera de inledande [sidegenskaperna](/help/sites-cloud/authoring/sites-console/page-properties.md) som ska användas när du skapar resulterande sidor.
 
 1. I mallredigeraren väljer du **Sidinformation** i verktygsfältet och sedan **Inledande sidegenskaper** för att öppna dialogrutan.
 
