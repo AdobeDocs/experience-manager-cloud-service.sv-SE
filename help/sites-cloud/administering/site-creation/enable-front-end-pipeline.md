@@ -5,9 +5,9 @@ feature: Administering
 role: Admin
 exl-id: 55d54d72-f87b-47c9-955f-67ec5244dd6e
 solution: Experience Manager Sites
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 1415d07235641262814e81362c806572bcf582ba
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
@@ -20,23 +20,23 @@ Lär dig hur du kan aktivera frontend-flödet för befintliga webbplatser så at
 
 Framsidespipelinen är en mekanism som snabbt kan distribuera endast startkoden för dina webbplatser baserat på [webbplatsteman](site-themes.md) och [webbplatsmallar.](site-templates.md)
 
-I stället för att använda den fullständiga stacken hanteras bara den färdiga koden av den här pipeline som gör processen snabbare och gör det även möjligt för gränssnittsutvecklare att enkelt och snabbt anpassa din webbplats utan att känna till AEM.
+Detta tillvägagångssätt hanterar endast klientkod, vilket gör distributionsprocessen snabbare än distributioner i fullstackar. Det gör att gränssnittsutvecklare enkelt kan anpassa din webbplats utan att behöva känna till AEM.
 
 Platser som är baserade på platsmallar kan som standard använda frontendspipelinen. I det här dokumentet beskrivs hur du kan anpassa dina befintliga webbplatser för att dra nytta av frontendriet.
 
 >[!TIP]
 >
->Om du inte är bekant med frontend-flödet och hur du snabbt distribuerar webbplatser med hjälp av det och webbplatsmallar kan du få en introduktion i [Snabbskapande webbplatsskaparresa](/help/journey-sites/quick-site/overview.md) .
+>Om du inte känner till frontend-flödet och hur du snabbt distribuerar webbplatser med hjälp av det och webbplatsmallar kan du få en introduktion i [Skapa snabbwebbplats](/help/journey-sites/quick-site/overview.md).
 
-Om du inte har skapat din befintliga webbplats baserat på webbplatsmallar och teman, kan AEM konfigurera din webbplats så att den läser in de teman som distribueras med Front End Pipeline ovanpå befintliga klientbibliotek.
+AEM kan konfigurera din webbplats så att den läser in teman som har distribuerats med Front End Pipeline, även om din webbplats inte har skapats med webbplatsmallar och teman, genom att lägga dem ovanpå befintliga klientbibliotek.
 
 ## Teknisk information {#technical-details}
 
 När du aktiverar frontend-flödet för en webbplats gör AEM följande ändringar i platsstrukturen.
 
-* Alla sidor på webbplatsen kommer att innehålla ytterligare en CSS- och JS-fil, som kan ändras genom att distribuera uppdateringar via en dedikerad frontpipeline från Cloud Manager.
-* De tillagda CSS- och JS-filerna kommer från början att vara tomma, men en temakällsmapp kan laddas ned för att starta mappstrukturen som gör det möjligt att distribuera CSS- och JS-koduppdateringar via den pipeline som läggs till.
-* Den här ändringen kan bara ångras av en utvecklare genom att `SiteConfig`- och `HtmlPageItemsConfig`-noderna som skapas under `/conf/<site-name>/sling:configs` tas bort.
+* Alla sidor på webbplatsen innehåller ytterligare en CSS- och JS-fil, som kan ändras genom att distribuera uppdateringar via en dedikerad frontpipeline från Cloud Manager.
+* De tillagda CSS- och JS-filerna är tomma från början. Du kan dock hämta en&quot;temakällmapp&quot; för att konfigurera den mappstruktur som behövs för att distribuera CSS- och JS-koduppdateringar via pipeline.
+* Det är bara en utvecklare som kan ångra ändringen genom att ta bort noderna `SiteConfig` och `HtmlPageItemsConfig` som skapas under `/conf/<site-name>/sling:configs` med den här åtgärden.
 
 >[!NOTE]
 >
@@ -44,9 +44,11 @@ När du aktiverar frontend-flödet för en webbplats gör AEM följande ändring
 
 ## Krav {#requirements}
 
-AEM kan automatiskt anpassa din befintliga webbplats så att den använder frontendriet. Om du vill kunna göra detta måste webbplatsen använda [v2 eller senare av Page Component i Core Components.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/page.html)
+AEM kan automatiskt anpassa din befintliga webbplats så att den använder frontendriet. Om du vill kunna utföra det här arbetsflödet måste webbplatsen använda [v2 eller senare av Page Component i Core Components.](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/wcm-components/page)
 
 ## Aktivera frontendspipeline {#enabling}
+
+{{add-cm-allowlist-frontend-pipeline}}
 
 Du aktiverar din plats från webbplatskonsolen med hjälp av [platslisten.](site-rail.md)
 
@@ -57,7 +59,7 @@ Du aktiverar din plats från webbplatskonsolen med hjälp av [platslisten.](site
 
    ![Aktivera frontendpipeline](/help/sites-cloud/administering/assets/enable-front-end-pipeline.png)
 
-1. AEM ber dig bekräfta med en översikt över de ändringar som kommer att göras. Bekräfta att webbplatsen har anpassats.
+1. AEM ber dig bekräfta med en översikt över ändringarna. Bekräfta att webbplatsen har anpassats.
 
 Nu är webbplatsen redo att använda frontendriet. Om du vill veta mer om frontend-flödet och hur du hanterar ditt webbplatstema kan du läsa:
 

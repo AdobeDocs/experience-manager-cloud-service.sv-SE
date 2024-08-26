@@ -5,7 +5,7 @@ exl-id: 5d264078-e552-48ca-8d82-294a646e6b1f
 solution: Experience Manager Sites
 feature: Developing
 role: Admin, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 1415d07235641262814e81362c806572bcf582ba
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 0%
@@ -112,6 +112,8 @@ Det övergripande flödet är enkelt och intuitivt även om du ännu inte har n�
 ![Skapa webbplats snabbt](assets/qsc-flow.png)
 
 Den största fördelen med att använda verktyget Skapa snabbwebbplats är att den renodlade utvecklaren bara ansvarar för själva anpassningen. Utvecklaren har ingen interaktion med AEM eller behöver någon kunskap om AEM.
+
+{{add-cm-allowlist-frontend-pipeline}}
 
 ## What&#39;s Next {#what-is-next}
 

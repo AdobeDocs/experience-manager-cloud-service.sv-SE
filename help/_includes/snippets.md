@@ -1,7 +1,7 @@
 ---
-source-git-commit: 90bc7320899053b6b1d6cf0d1b06b193ad1c68f3
+source-git-commit: 8728af7d9baee0c9324c1e9be1ae66d105396c40
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '711'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 0%
 * [Skapa ett AEM anpassat formulär](/help/forms/creating-adaptive-form-core-components.md)
 * [Lägg till ett AEM anpassat formulär på AEM Sites-sidan](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
 * [Använda teman i ett AEM anpassat formulär](/help/forms/using-themes-in-core-components.md)
-* [Lägg till komponenter i ett AEM anpassat formulär](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html#components)
+* [Lägg till komponenter i ett AEM anpassat formulär](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction#components)
 * [Använd CAPTCHA i en AEM anpassad form](/help/forms/captcha-adaptive-forms-core-components.md)
-* [Generera PDF-version (DoR) av ett AEM adaptivt formulär](/help/forms/generate-document-of-record-core-components.md)
+* [Generera en PDF-version (DoR) av ett AEM adaptivt formulär](/help/forms/generate-document-of-record-core-components.md)
 * [Översätt en AEM adaptiv form](/help/forms/using-aem-translation-workflow-to-localize-adaptive-forms-core-components.md)
 * [Aktivera Adobe Analytics för ett adaptivt formulär för att spåra formuläranvändning](/help/forms/enable-adobe-analytics-adaptive-form-using-experience-cloud-setup-automation.md)
 * [Ansluta anpassat formulär till Microsoft SharePoint](/help/forms/configure-submit-actions-core-components.md#submit-to-sharedrive)
@@ -32,7 +32,7 @@ ht-degree: 0%
 * [Ansluta anpassat formulär till Salesforce](/help/forms/aem-forms-salesforce-integration.md)
 * [Använda Adobe Sign i en AEM anpassad form](/help/forms/working-with-adobe-sign.md)
 * [Lägga till en ny språkinställning för ett adaptivt formulär](/help/forms/supporting-new-language-localization-core-components.md)
-* [Skicka adaptiva formulärdata till en databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/data-integration.html)
+* [Skicka adaptiva formulärdata till en databas](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/data-integration)
 * [Skicka data för anpassat formulär till en REST-slutpunkt](/help/forms/configure-submit-actions-core-components.md#submit-to-rest-endpoint)
 * [Skicka anpassade formulärdata till AEM arbetsflöde](/help/forms/configure-submit-actions-core-components.md#invoke-an-aem-workflow)
 * [Använd Forms Portal för att lista AEM Adaptive Forms på en AEM webbplats](/help/forms/configure-forms-portal.md)
@@ -66,7 +66,7 @@ ht-degree: 0%
 * [Komponenter för adaptiva formulärblock och deras egenskaper](/help/edge/docs/forms/form-components.md)
 
 
-## Skillnad mellan regelredigerare i kärnkomponenter och Regelredigerare i Foundation Components  {#rule-editor-diff}
+## Skillnad mellan regelredigerare i kärnkomponenter och Regelredigerare i Foundation-komponenter {#rule-editor-diff}
 
 I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i regelredigerarens kärnkomponenter och grundkomponenterna i regelredigeraren:
 
@@ -74,13 +74,13 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
   <tbody>
   <tr>
     <td><strong>Funktioner</strong></td>
-    <td><strong>Komponenter i Form Foundation</strong></td>
-    <td><strong>Komponenter i adaptiva Form Core</strong></td>   
+    <td><strong>Komponenter i adaptiv Form Foundation</strong></td>
+    <td><strong>Kärnkomponenter i adaptiv form</strong></td>   
     </tr>
   </tr>
   <tr>
-    <td>Ange alternativ för listrutor </td>
-    <td>Alternativen i listrutan ställs in med regelredigerarens <b>inställningsalternativ för </b> -egenskap.</td>
+    <td>Ange listrutan med alternativ </td>
+    <td>Listrutan med alternativ ställs in med regelredigerarens <b>inställningsalternativ för </b> -egenskap.</td>
     <td>Alternativen i listrutan ställs in med de anpassade funktionerna. 
    </td>
    </tr>
@@ -88,14 +88,14 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
    <tr>
     <td>Utför matematiska operationer på det repeterbara panelfältet </td>
     <td>OTB-matematiska funktioner kan tillämpas på repeterbara panelfält för att utföra funktioner som summa, medel med regelredigeraren. Två argument måste anges: den första anger den repeterbara panelen som innehåller fältet, medan den andra anger fältet i motsvarande repeterbara panel. </td>
-    <td>Matematiska åtgärder i det repeterbara panelfältet kan utföras med de anpassade funktionerna. Du kan också använda de matematiska funktionerna direkt i fälten på den repeterbara panelen med regelredigeraren.
+    <td>Matematiska åtgärder i det repeterbara panelfältet kan utföras med de anpassade funktionerna. Du kan också använda de matematiska funktionerna direkt i fälten på den repeterbara panelen i regelredigeraren.
    </td>
    </tr>
       <tr>
     <td>Validera/återställ fält/panel/formulärregel i 'Då' </td>
-    <td>Funktionerna Validera och Återställ har bara stöd för formulärobjekt i regelredigeraren. 
+    <td>Validerings- och återställningsfunktioner stöder endast formulärobjekt i regelredigeraren. 
    </td>
-    <td>Funktionerna Validera och Återställ stöder formulär-/panel-/fältobjekt i regelredigeraren. 
+    <td>Validerings- och återställningsfunktioner stöder formulär-/panel-/fältobjekt i regelredigeraren. 
    </td>
    </tr>
    <tr>
@@ -126,17 +126,12 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 * [Skillnader i olika utgåvor av regelredigeraren](/help/forms/rule-editor-core-components-difference-tables.md)
 * [Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter](/help/forms/create-and-use-custom-functions.md)
 * [Skapa en anpassad funktion för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/custom-function-core-component-create-function.md)
-* [Exempel på utveckling och användning av anpassade funktioner](/help/forms/custom-function-core-components-use-cases.md)
+* [Exempel på utveckling och användning av en anpassad funktion](/help/forms/custom-function-core-components-use-cases.md)
 
 
-## Cloud Manager IP Tillåtelselista och rörledningar för frontendjur {#allowlist-frontend-pipeline}
+## Lägg till en Cloud Manager IP Tillåtelselista och rörledning för frontendsupport {#add-cm-allowlist-frontend-pipeline}
 
 >[!IMPORTANT]
 >
->För frontendpipelinen måste följande IP-Tillåtelselista läggas till i Cloud Manager i förväg.
->Om det behövs kan du [lägga till IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md) genom att kopiera adressblocket nedan. Varje adress avgränsas med kommatecken. Klistra in blocket i fältet **IP-adress/CIDR** i dialogrutan **Lägg till IP-Tillåtelselista** . Placera markören precis efter det första kommatecknet i adresslistan och tryck på **Retur**. Spara listan.
->Om du vill undvika avbrott i körningen av frontlinjens slutpipline måste du se till att det här IP-Tillåtelselista läggs till i Cloud Manager *innan* du aktiverar piplinjen.
->
->**Cloud Manager IP Tillåtelselista**
->52.254.106.192/28,20.186.185.181,52.254.106.240/28,52.254.107.128/28,52.254.105.192/28,52.254.106.176/28,20.186.185.227,52.254.106.144/28,52.254.107.64/28,20.186.185.239,20.22.83.112,52.254.107.80/28,52.254.107.144/28,52.254.106.224/28,20.14.241.153,52.254.107.0/28,52.254.107.32/28,52.254.106.208/28,40.70.154.136/29,52.254.106.160/28,52.254.107.16/28,52.254.106.0/28,4.152.211.251
->   
+>Om du använder, eller tänker använda, frontendriet för att utveckla webbplatser måste Cloud Manager IP Tillåtelselista läggas till i förväg.
+>Se [Användning av Cloud Manager IP Tillåtelselista med frontendspipeline](/help/implementing/cloud-manager/ip-allow-lists/introduction.md#allowlists-frontend-pipeline).
