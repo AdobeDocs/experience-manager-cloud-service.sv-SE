@@ -1,13 +1,13 @@
 ---
 title: Integrera fjärr-AEM Assets med AEM Sites
-description: Lär dig hur du konfigurerar och ansluter AEM webbplatser med Godkänd AEM Assets i Creative Cloud.
-source-git-commit: f6c0e8e5c1d7391011ccad5aa2bad4a6ab7d10c3
+description: Lär dig hur du konfigurerar och ansluter AEM webbplatser med Godkänd AEM Assets.
+exl-id: 382e6166-3ad9-4d8f-be5c-55a7694508fa
+source-git-commit: e2c0c848c886dc770846d064e45dcc52523ed8e3
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '953'
 ht-degree: 0%
 
 ---
-
 
 # Integrera fjärr-AEM Assets med AEM Sites  {#integrate-approved-assets}
 
@@ -23,7 +23,13 @@ Efter den första konfigurationen kan användare skapa sidor i AEM Sites-instans
 
 Dynamic Media med OpenAPI-funktioner har flera andra fördelar, som att komma åt och använda fjärrresurser i Content Fragment, hämta metadata för fjärrresurserna och mycket annat. Lär dig mer om de andra [fördelarna med Dynamic Media med OpenAPI-funktioner jämfört med Connected Assets](/help/assets/dynamic-media-open-apis-faqs.md).
 
-## Innan du börjar {#pre-requisits-sites-integration}
+## Innan du börjar {#pre-requisites-sites-integration}
+
+Stöd för fjärrresurser med Dynamic Media med OpenAPI-funktioner kräver:
+
+* AEM 6.5 SP 18+ eller AEM as a Cloud Service
+
+* Core Components version 2.23.2 eller senare
 
 * Ställ in följande [miljövariabler](/help/implementing/cloud-manager/environment-variables.md#add-variables) för AEM as a Cloud Service:
 
@@ -31,21 +37,47 @@ Dynamic Media med OpenAPI-funktioner har flera andra fördelar, som att komma å
      `pXXXX` refererar till program-ID <br>
      `eYYYY` refererar till miljö-ID
 
-   * ASSET_DELIVERY_IMS_CLIENT= [IMSClientId]
+  Variablerna ställs in med Cloud Manager användargränssnitt i AEM as a Cloud Service-miljön som fungerar som din lokala Sites-instans.
 
-  eller konfigurera [OSGi-inställningarna](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/configuring/configuring-osgi.html) för AEM 6.5 i AEM Sites-instansen genom att följa dessa steg:
+   * ASSET_DELIVERY_IMS_CLIENT= [IMSClientId]: Du måste skicka en Adobe-supportbiljett för att hämta IMS-klient-ID:t.
+
+     eller konfigurera [OSGi-inställningarna](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/configuring/configuring-osgi.html) för AEM 6.5 i AEM Sites-instansen genom att följa dessa steg:
 
    1. Logga in på konsolen och klicka på **[!UICONTROL OSGi]>** eller
-använd den direkta URL:en, till exempel: `http://localhost:4502/system/console/configMgr`
+använd den direkta URL:en, till exempel: `https://localhost:4502/system/console/configMgr`
 
-   1. Lägg till **[!UICONTROL repositoryID]**= &quot;delivery-pxxx-eyyyyy.adobeaemcloud.com&quot; och **[!UICONTROL imsClient]**= [IMSClientId]
-Läs mer om [IMS-autentisering](https://experienceleague.adobe.com/docs/experience-manager-65/content/security/ims-config-and-admin-console.html).
+   1. Konfigurera OSGi-konfigurationen **Nästa generation av Dynamic Media Config** (`NextGenDynamicMediaConfigImpl`) enligt följande och ersätt värdena med värdena i din fjärrmiljö för resurser.
 
-* IMS-åtkomst för att logga in på en DAM AEM as a Cloud Service-fjärrinstans.
+      ```text
+        imsClient="<ims-client-ID>"
+        enabled=B"true"
+        imsOrg="<ims-org>@AdobeOrg"
+        repositoryId="<repo-id>.adobeaemcloud.com"
+      ```
 
-* Aktivera växlingen Dynamic Media med OpenAPI-funktioner i fjärr-DAM.
+      `imsOrg` är inte en obligatorisk inmatning.
+      `repositoryId` = &quot;delivery-pxxx-eyyyyy.adobeaemcloud.com&quot;
+där `pXXXX` refererar till program-ID
+      `eYYYY` refererar till miljö-ID
+
+      ![Nästa generations konfigurationsfönster för Dynamic Media Config OSGi](/help/assets/assets/remote-assets-osgi.png)
+
+  Läs mer om [IMS-autentisering](https://experienceleague.adobe.com/docs/experience-manager-65/content/security/ims-config-and-admin-console.html).
+
+  Mer information om hur du konfigurerar OSGi finns i följande dokument:
+
+   * [Konfigurera OSGi för Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html) för AEM as a Cloud Service
+   * [Konfigurerar OSGi](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html) för AEM 6.5
+
+* IMS-åtkomst för att logga in på en DAM AEM as a Cloud Service-fjärrinstans. Det avser den webbplatsförfattare som har IMS-åtkomst till den fjärranslutna DAM-miljön.
 
 * Konfigurera Image v3-komponenten i AEM Sites-instansen. Om komponenten inte finns hämtar och installerar du [innehållspaketet](https://github.com/adobe/aem-core-wcm-components/releases/tag/core.wcm.components.reactor-2.23.0).
+
+## Konfigurera HTTPS {#https}
+
+Det rekommenderas i allmänhet att du kör alla dina produktions- AEM instanser med HTTP. Dina lokala utvecklingsmiljöer kanske inte konfigureras som sådana. Fjärrresurser som använder Dynamic Media med OpenAPI kräver dock HTTPS för att fungera.
+
+[Använd den här guiden](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html) för att konfigurera HTTPS var du vill använda fjärrresurser, inklusive utvecklingsmiljöer.
 
 ## Få åtkomst till resurser från fjärr-DAM {#fetch-assets}
 
@@ -58,7 +90,6 @@ Med Dynamic Media med OpenAPI-funktioner kan du komma åt resurser som är tillg
 Följ stegen nedan för att använda fjärrresurser i AEM Page Editor på din AEM Sites-instans. Du kan göra detta genom att integrera AEM as a Cloud Service och AEM 6.5.
 
 1. Gå till **[!UICONTROL Sites]** > _din webbplats_ där AEM **[!UICONTROL Page]** finns där du måste lägga till fjärrresursen.
-1. Navigera till den specifika AEM **[!UICONTROL Page]** på webbplatsen under avsnittet **[!UICONTROL Sites]** där du vill lägga till fjärrresursen.
 1. Markera sidan och klicka på **[!UICONTROL Edit (_e _)]**. AEM **[!UICONTROL Page Editor]**öppnas.
 1. Klicka på layoutbehållaren och lägg till en **[!UICONTROL Image]**-komponent.
 1. Klicka på komponenten **[!UICONTROL Image]** och klicka på ikonen ![settings](/help/assets/assets/do-not-localize/settings-icon.svg) .
