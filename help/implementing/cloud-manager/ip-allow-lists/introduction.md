@@ -5,7 +5,7 @@ exl-id: 352fae8e-d116-40b0-ba54-d7f001f076e8
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 1415d07235641262814e81362c806572bcf582ba
+source-git-commit: 96179c5f88e8546c12674e34afd0269c1f196d65
 workflow-type: tm+mt
 source-wordcount: '421'
 ht-degree: 0%
@@ -34,7 +34,7 @@ När du har lagt till [IP-Tillåtelselista kan det användas eller tas bort ](/h
 
 ## Användning av Cloud Manager IP-Tillåtelselista med frontdelsrörledningen {#allowlists-frontend-pipeline}
 
-Om du använder, eller är avsedd att använda, [front-end-pipelinen för att utveckla webbplatser](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) måste följande Cloud Manager IP Tillåtelselista läggas till i förväg.
+Om du använder, eller tänker använda, [front-end-pipeline för att utveckla webbplatser](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) måste följande Cloud Manager IP Tillåtelselista läggas till i förväg.
 
 När du [lägger till IP-adressen Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md#add-cm-allowlist), ger den namnet *`Cloud Manager`*, kopierar listan nedan och klistrar in dem i dialogrutan IP-Tillåtelselista.
 
