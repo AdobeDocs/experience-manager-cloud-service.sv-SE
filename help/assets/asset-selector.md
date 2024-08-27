@@ -2,9 +2,10 @@
 title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud Service]
 description: Använd resursväljaren för att söka efter, hitta och hämta resursers metadata och återgivningar i programmet.
 contentOwner: KK
+feature: Selectors
 role: Admin,User
 exl-id: 5f962162-ad6f-4888-8b39-bf5632f4f298
-source-git-commit: c9cdbf85b5ebdda0ccd1a7858943f65f9175bde9
+source-git-commit: 81aacb0c616490eed4589cb8927ea1316ca1670e
 workflow-type: tm+mt
 source-wordcount: '5318'
 ht-degree: 0%

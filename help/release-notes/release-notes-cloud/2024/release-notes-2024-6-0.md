@@ -1,7 +1,9 @@
 ---
 title: Versionsinformation för version 2024.6.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för version 2024.6.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
-source-git-commit: effb2f01dc26a7ab80b18c9e80ecc7286cb67284
+feature: Release Information
+role: Admin
+source-git-commit: 81aacb0c616490eed4589cb8927ea1316ca1670e
 workflow-type: tm+mt
 source-wordcount: '1972'
 ht-degree: 0%
@@ -214,7 +216,7 @@ Konfigurera 301/302 klientomdirigeringar i källkontroll och distribuera till CD
 
 #### Varningar om trafikfilterregler (tidig Adobe-program) {#traffic-filter-rules-alerts-early-adopter}
 
-Med de nyligen släppta [trafikfilterreglerna](/help/security/traffic-filter-rules-including-waf.md), som innehåller de valfria reglerna för brandväggen för webbprogram (WAF), kan du konfigurera vilken trafik som ska tillåtas eller nekas.
+Med de nyligen släppta [trafikfilterreglerna](/help/security/traffic-filter-rules-including-waf.md), som innehåller de valfria brandväggsreglerna för webbprogram (WAF), kan du konfigurera vilken trafik som ska tillåtas eller nekas.
 
 Gå med i det tidiga adopterprogrammet så att du kan få varningar när trafikfilterreglerna aktiveras. E-postmeddelanden från Åtgärdscenter håller dig informerad om när vissa trafikförhållanden inträffar så att du kan vidta lämpliga åtgärder.
 

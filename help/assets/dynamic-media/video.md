@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Video Profiles,Best Practices
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: f41e2f6ce39fff9615e35928d3f569e9254325d0
+source-git-commit: e3667a6172447072d7c528213826fd0171e9acc2
 workflow-type: tm+mt
 source-wordcount: '9284'
 ht-degree: 1%
@@ -143,7 +143,7 @@ OUTDATED 2/28/22 BASED ON CQDOC-18692 You can find Windows&reg; devices that sup
 * Konfigurera videospelare för att tillgodose era varumärkesbehov.
 * Integrera video på webbplatsen, mobilsajten eller mobilapplikationen med en enkel URL eller inbäddningskod.
 
-Se [Exempel på dynamisk videouppspelning](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&amp;config=GeoRetail/Universal_Video1&amp;stageSize=640,480).
+<!-- GIVES a 404 See [Dynamic video playback](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&config=GeoRetail/Universal_Video1&stageSize=640,480) sample. -->
 
 Se även [Visningsprogram för Experience Manager Assets och Dynamic Media Classic](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers#viewers-aem-assets-dmc) och [Endast för Experience Manager Assets](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers#viewers-for-aem-assets-only) i [referenshandboken för Dynamic Media-visningsprogram](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources).
 
@@ -562,7 +562,7 @@ Om du aktiverar någon av de tre funktionerna ovan aktiveras samtliga. Så om du
 
 ## Stöd för flera bildtexter och ljudspår för videofilmer i Dynamic Media{#about-msma}
 
-Med funktioner för flera bildtexter och ljudspår i Dynamic Media kan du enkelt lägga till flera bildtexter och ljudspår i en primär video. Detta innebär att videoklippen är tillgängliga för alla mottagare världen över. Du kan anpassa en enda publicerad primär video till en global publik på flera språk och följa riktlinjer för tillgänglighet för olika geografiska regioner. Författare kan också hantera beskrivningar och ljudspår från en enda flik i användargränssnittet.
+Med funktioner för flera bildtexter och ljudspår i Dynamic Media kan du enkelt lägga till flera bildtexter och ljudspår i en primär video. Detta innebär att videoklippen är tillgängliga för en global publik. Du kan anpassa en enda publicerad primär video till en global publik på flera språk och följa riktlinjer för tillgänglighet för olika geografiska regioner. Författare kan också hantera beskrivningar och ljudspår från en enda flik i användargränssnittet.
 
 ![Fliken Bildtexter och ljudspår i Dynamic Media tillsammans med en tabell som visar överförda VTT-bildtextfiler och överförda MP3-ljudspårsfiler för en video.](/help/assets/dynamic-media/assets/msma-caption-audiotracks-tab2.png)
 
@@ -609,7 +609,7 @@ Nya bildtexter och bildtexter stöds med formaten WebVTT och Adobe VTT. Dessutom
    >[!TIP]
    >Om du inte ser fliken [!UICONTROL Captions & Audio Tracks] betyder det något av två:
    >* Mappen där den valda videon finns har ingen tilldelad videoprofil. I så fall, se [Använda en videoprofil i mappen](/help/assets/dynamic-media/video-profiles.md#applying-video-profiles-to-specific-folders)
-   >* Eller så måste videon bearbetas på nytt av Dynamic Media. I så fall ska du läsa [Bearbeta Dynamic Media-resurser igen i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
+   >* Eller så måste Dynamic Media bearbeta om videon. I så fall ska du läsa [Bearbeta Dynamic Media-resurser igen i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
 
    När du har slutfört någon av ovanstående åtgärder går du tillbaka till dessa steg.
 
@@ -618,7 +618,7 @@ Nya bildtexter och bildtexter stöds med formaten WebVTT och Adobe VTT. Dessutom
 1. (Valfritt) Gör så här om du vill lägga till en eller flera bildtextfiler i en video:
 
    * Välj **[!UICONTROL Upload Captions]**.
-   * Navigera till och markera en eller flera VTT-filer (Video Text Tracks) och öppna dem.
+   * Navigera till och markera en eller flera `.vtt`-filer (videotextspår) och öppna dem.
    * För att bildtexter ska kunna visas i mediespelaren måste du lägga till nödvändig information (metadata) om varje bildtextfil som du har överfört. Välj pennikonen till höger om namnet på en bildtextfil. Ange följande obligatoriska information om filen i dialogrutan Redigera beskrivning och välj sedan **[!UICONTROL Save]**. Upprepa den här processen för varje bildtextfil som du överförde:
 
 
@@ -626,7 +626,7 @@ Nya bildtexter och bildtexter stöds med formaten WebVTT och Adobe VTT. Dessutom
    | --- | --- | 
    | Filnamn | Standardfilnamnet härleds från det ursprungliga filnamnet. Filnamnet kan bara ändras under överföring och kan inte ändras senare. Teckenkraven för filnamn är desamma som för AEM Assets.<br>Samma filnamn kan inte användas för ytterligare bildtextfiler och ljudspårsfiler. |
    | Språk | Välj språk för bildtexten. |
-   | Typ | Välj den typ av bildtext som du använder.<br>**Underrubrik** - Bildtexten som visas med videon som översätter eller transkriberar dialogrutan.<br>**Bildtext** - Bildtexten innehåller även bakgrundsljud, talardifferentiering och annan relevant information, tillsammans med översättningen eller transkriberingen av dialogrutan, som gör innehållet mer tillgängligt för personer som är döva eller hörselskadade. |
+   | Typ | Välj den typ av bildtext som du använder.<br>**Underrubrik** - Bildtexten som visas med videon som översätter eller transkriberar dialogrutan.<br>**Bildtext** - Bildtexten innehåller bakgrundsljud och talaridentifiering. Det innehåller även andra relevanta detaljer tillsammans med översättning eller transkription av dialog. Den här funktionen gör innehållet mer tillgängligt för personer som är döva eller hörda. |
    | Etikett | Den text som visas för bildtextens namn i popup-listan **[!UICONTROL Select audio or caption]** i mediespelaren. Etiketten är det som kunden ser och som motsvarar ett underrubrik- eller bildtextspår. Till exempel engelska (CC). |
 
    Om det behövs kan du ändra eller redigera bildtextens metadata senare. När videon publiceras återspeglas dessa uppgifter på offentliga URL:er i publicerade videor.
@@ -635,7 +635,7 @@ Nya bildtexter och bildtexter stöds med formaten WebVTT och Adobe VTT. Dessutom
 
    * Välj **[!UICONTROL Upload Audio Tracks]**.
    * Navigera till och markera en eller flera .mp3-filer och öppna dem.
-   * För att ljudspår ska kunna visas i popup-listan **[!UICONTROL Select audio or caption]** i mediespelaren måste du lägga till nödvändig information om varje ljudspårsfil som du har lagt till. Välj pennikonen till höger om namnet på en ljudspårsfil. Ange följande obligatoriska uppgifter i dialogrutan Redigera ljudspår och välj sedan **[!UICONTROL Save]**. Upprepa den här processen för varje ljudspårsfil som du överförde.
+   * Om du vill göra ljudspår synliga i popup-listan **[!UICONTROL Select audio or caption]** i mediespelaren lägger du till nödvändig information för varje ljudspårsfil. Se till att du inkluderar all nödvändig information för korrekt visning. Välj pennikonen till höger om namnet på en ljudspårsfil. Ange följande obligatoriska uppgifter i dialogrutan Redigera ljudspår och välj sedan **[!UICONTROL Save]**. Upprepa den här processen för varje ljudspårsfil som du överförde.
 
    | Metadata för ljudspår | Beskrivning |
    | --- | --- |
@@ -931,7 +931,7 @@ Välj **[!UICONTROL Replace]** i dialogrutan **Ange som standard**.
 1. Välj **[!UICONTROL Save & Close]** i det övre högra hörnet.
 1. Publish videon. Se [Publish-resurser](publishing-dynamicmedia-assets.md).
 
-### Förhandsgranska en video med flera bildtexter och ljudspår{#preview-video-audio-subtitle}
+### Förhandsgranska en video med flera bildtexter och ljudspår {#preview-video-audio-subtitle}
 
 När bildtextfiler och ljudspårsfiler har överförts till en video och bearbetats kan du använda Dynamic Media videovisningsprogram för att förhandsgranska alla olika spår. Om du gör det blir det lättare att se hur videon ser ut och låter som den är för kunderna, och du kan vara säker på att den beter sig som förväntat.
 
@@ -993,7 +993,7 @@ Det går inte att hämta det ursprungliga ljudspåret som har extraherats från 
 
 **Användningsfall:** Det kan vara nödvändigt att hämta en bildtextfil om du upptäcker ett fel i en `.vtt`-fil. Hämta bara den felaktiga `.vtt`-filen, öppna den i en vanlig textredigerare och gör dina korrigeringar. När du har sparat filen `.vtt` överför du den igen. Använd sedan alternativet **[!UICONTROL Translate Captions]** för att översätta den korrigerade `.vtt`-filen igen.
 
-**Så här hämtar du beskrivnings- eller ljudspårsfiler från en video:**
+**Så här hämtar du beskrivnings- eller ljudspårsfiler som har överförts till en video:**
 
 1. Navigera till den videoresurs vars standardljudspår du vill ställa in.
 1. Välj videoresurs i resursurvalsläget, antingen från listvyn eller kortvyn.
