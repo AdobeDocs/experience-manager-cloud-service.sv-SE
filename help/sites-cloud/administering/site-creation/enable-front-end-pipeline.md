@@ -5,7 +5,7 @@ feature: Administering
 role: Admin
 exl-id: 55d54d72-f87b-47c9-955f-67ec5244dd6e
 solution: Experience Manager Sites
-source-git-commit: 1415d07235641262814e81362c806572bcf582ba
+source-git-commit: d6ecdae8dd78c3c93a410ca2c8b80322340f439e
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 0%
@@ -50,7 +50,7 @@ AEM kan automatiskt anpassa din befintliga webbplats så att den använder front
 
 {{add-cm-allowlist-frontend-pipeline}}
 
-Du aktiverar din plats från webbplatskonsolen med hjälp av [platslisten.](site-rail.md)
+Du aktiverar din plats från webbplatskonsolen med hjälp av [webbplatsspåret](site-rail.md).
 
 1. Logga in AEM och navigera till din webbplats via **Global navigering** > **Webbplatser**.
 1. Välj din plats i konsolen. Markera platsens rot och inte underordnade sidor.
