@@ -4,9 +4,9 @@ description: Lär dig hur du använder Real Use Monitoring (RUM) för att hämta
 exl-id: 91fe9454-3dde-476a-843e-0e64f6f73aaf
 feature: Administering
 role: Admin
-source-git-commit: ae9951fa89edeab5f34ae3506cf8a4864201c93e
+source-git-commit: 2515bc51fd54b014ffb701a8aef38cd08d6725b3
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1274'
 ht-degree: 0%
 
 ---
@@ -31,28 +31,28 @@ Med RUM spåras nyckeltal från det att URL:en startas tills begäran skickas ti
 >
 >&quot;Real User Monitoring&quot; har ändrats till &quot;Real Use Monitoring&quot; eftersom det bättre återspeglar tjänstens verkliga kärna.
 
-## Vem kan utnyttja en tjänst för övervakning av faktisk användning? {#who-can-benefit-from-rum-service}
+## Vem kan utnyttja en tjänst för övervakning av verkligt bruk? {#who-can-benefit-from-rum-service}
 
 AEM har utvecklat RUM för att hjälpa kunder och Adobe att förstå hur besökarna interagerar med AEM webbplatser. RUM kan användas för att diagnostisera prestandaproblem och mäta hur effektiva experimenten är. RUM bevarar besökarnas integritet genom stickprov - endast en liten del av alla sidvisningar övervakas - och ingen personligt identifierbar information samlas in.
 
 
-## Förstå hur övervakningstjänsten för faktisk användning fungerar {#understand-how-the-rum-service-works}
+## Förstå hur tjänsten för övervakning av faktisk användning fungerar {#understand-how-the-rum-service-works}
 
-Adobe Experience Manager (AEM) använder Real Use Monitoring (RUM) för att hjälpa kunder och Adobe att förstå hur besökare interagerar med AEM webbplatser. Det hjälper dem att diagnostisera prestandaproblem och mäta hur effektiva experimenten är. RUM bevarar besökarnas integritet genom stickprov - endast en liten del av alla sidvisningar övervakas - och ingen personligt identifierbar information samlas in.
+AEM använder RUM för att hjälpa kunder och Adobe att förstå hur besökarna interagerar med AEM webbplatser. Det hjälper dem att diagnostisera prestandaproblem och mäta hur effektiva experimenten är. RUM bevarar besökarnas integritet genom stickprov - endast en liten del av alla sidvisningar övervakas - och ingen personligt identifierbar information samlas in.
 
-## Övervakningstjänst och integritet för användning i realtid {#rum-service-and-privacy}
+## Övervakningstjänst och sekretess för användning i realtid {#rum-service-and-privacy}
 
 Tjänsten för övervakning av verkligt bruk i AEM är utformad för att bevara besökarnas sekretess och minimera datainsamlingen. Som besökare innebär det att den webbplats som du besöker eller som är tillgänglig för Adobe inte samlar in några personuppgifter.
 
 Som webbplatsoperatör krävs inget ytterligare deltagande för att aktivera övervakning via den här funktionen. Det finns inga ytterligare popup-formulär eller medgivandeformulär som slutanvändarna kan godkänna för aktivering av RUM.
 
-## Datainsamling för övervakning av faktisk användning {#rum-service-data-sampling}
+## Datainsamling för övervakning av realanvändning {#rum-service-data-sampling}
 
 Traditionella webbanalyslösningar försöker samla in data om varje enskild besökare. AEM RUM-tjänst hämtar bara information från en liten del av sidvyerna. Tjänsten är avsedd att samplas och anonymiseras i stället för att ersättas för analyser. Som standard har sidorna 1:100 samplingsförhållande. Webbplatsoperatorer kan för närvarande inte öka eller minska samplingsfrekvensen. För att beräkna den totala trafiken korrekt samlas data in från 1 för varje 100 sidvy, vilket ger en tillförlitlig uppskattning av den totala trafiken.
 
 När man beslutar om uppgifterna ska samlas in, görs det i sidvy per sida och det blir praktiskt taget omöjligt att spåra interaktioner mellan flera sidor. RUM har som standard inget koncept för besökare eller sessioner, utan bara för sidvisningar.
 
-## Vilka data samlas in {#what-data-is-being-collected}
+## Vilka data samlas in? {#what-data-is-being-collected}
 
 Tjänsten för övervakning av faktisk användning är utformad för att förhindra insamling av personligt identifierbar information. Den fullständiga uppsättningen information som samlas in av RUM anges nedan:
 
@@ -76,7 +76,7 @@ Tjänsten för övervakning av faktisk användning är utformad för att förhin
 
 If you wish to leverage more insights with this new feature to optimize your digital experiences effortlessly, please see here (link to Row 99). -->
 
-## Hur data från övervakningstjänsten för faktisk användning används {#how-rum-service-data-is-being-used}
+## Hur data från övervakningstjänsten för verkligt bruk används {#how-rum-service-data-is-being-used}
 
 RUM-data är fördelaktiga för följande syften:
 
@@ -84,7 +84,7 @@ RUM-data är fördelaktiga för följande syften:
 * För att effektivisera automatisk trafiksökning med sidvyer.
 * För att förstå hur AEM interagerar med andra skript (till exempel analyser, målinriktning eller externa bibliotek) på samma sida, ökar kompatibiliteten.
 
-## Begränsningar och Förstå variansen i sidvyer och prestandamått {#limitations-and-understanding-variance-in-page-views-and-performance-metrics}
+## Begränsningar och förståelse av variationer i sidvisningar och prestandamått {#limitations-and-understanding-variance-in-page-views-and-performance-metrics}
 
 När du analyserar RUM-data kan det finnas skillnader i sidvisningar och andra prestandamått. Dessa avvikelser kan tillskrivas flera faktorer som är förenade med realtidsövervakning på klientsidan. Här är några viktiga saker som kunderna bör tänka på när de tolkar sina RUM-data:
 
