@@ -4,9 +4,9 @@ description: Aktuell underhållsversionsinformation för  [!DNL Adobe Experience
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 82be9b2b328343e827b90bd8266d93127757f477
+source-git-commit: eb01b6982578ad1300163c2fd536e844afc815fa
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
@@ -27,22 +27,16 @@ Funktionsaktiveringen i 2024.9.0 kommer att innehålla alla funktioner som finns
 * CQ-4353778: Översättningsprocesshändelser.
 * CQ-4354583: Skicka översättningsprocesshändelser via Adobe Pipeline.
 * CQ-4356479: Tillåt endast Adobe-kod att använda /adobe-serverkontexten.
-* CQ-4358133: Optimera användningen av Jenkins-arbetare.
 * CQ-4358226: Funktionen för att spara översättningsnyckelord fungerar inte för ett visst strängformat.
 * CQ-4358270: AEM Translation Kit: 8 augusti.
 * CQ-4358310: Lägg till oak-compat-query-spi-1.2 för snabbstart.
-* GRANITE-36205: Automatisk uppdatering för intern ekrelease i QS.
 * GRANITE-49833: Grupperingsstöd för händelseländare och proxy.
 * GRANITE-52053: Ta bort användning av Commons Collections 3: Platform others.
 * GRANITE-52492: Elastisk async-hämtning vid PIT-återställning.
-* GRANITE-53086: Uppdatera jacoco plugin-version till 0.8.12 i AEMaaCS.
 * GRANITE-53099: Uppdatering till Apache Felix HTTP Jetty 5.1.24.
 * GRANITE-53125: Lägg till klassificering i CloudEvent.
 * GRANITE-53328: Uppdatera Fireault till 3.8.0-T2024072611512-3cc11d50 som innehåller förbättringar av hash-loggning.
-* GRANITE-53340: AEM660: Proper Versioning and branching for 660 CQ/Platform.
-* GRANITE-53341: Varna inte om ACS Commons 6 används.
 * GRANITE-53453: update commons-lang to 3.15.0.
-* GRANITE-53473: Oföråldrade Sling-inställningar.
 * GRANITE-53478: Uppdatera Fireworks till version 3.8.0.
 * GRANITE-53505: Uppdatera QS till Commons-collections-3.2.2-adobe-2.
 * GRANITE-53528: Uppdateringsversion av plattformsartefakter .
@@ -71,7 +65,10 @@ Funktionsaktiveringen i 2024.9.0 kommer att innehålla alla funktioner som finns
 
 ### Kända fel {#known-issues-17569}
 
-Ingen.
+* ASSETS-40875 - Klassen AssetDeleteHandler lyssnar efter tillgångsborttagningshändelser och utför specifika åtgärder baserat på typen av delete-händelse (PRE_DELETE eller POST_DELETE). I vissa scenarier orsakar händelsetypen POST_DELETE ett NullPointerException.
+* FORMS-14340 - Fel vid instansiering av FormsAndDocumentOmniSearchHandler och CloudStorageSubmitActionInserter. Det här är ofarliga loggsatser.
+* FORMS-15818 - Komponentbeskrivningspost &#39;OSGI-INF/com.adobe.aemfd.docmanager.impl.*.xml kunde inte hitta satser i serverloggar. Det här är ofarliga loggsatser.
+* SITES-23662 - Användare som utlöser en publicering kan inte extraheras från JCR-loggsatser i serverloggar. Det här är en funktion under utveckling som kan orsaka fel av typen&quot;Det går inte att hitta ett giltigt användar-ID i gruppen med OSGI-händelser&quot; i loggen.
 
 ### Ändringsmeddelande {#change-notice-17569}
 
