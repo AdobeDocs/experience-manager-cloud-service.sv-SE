@@ -1,27 +1,28 @@
 ---
 title: Översikt över Content Transfer Tool
-description: Lär dig använda verktyget Innehållsöverföring för att överföra innehåll från en lokal AEM till AEM as a Cloud Service
+description: Lär dig hur du använder verktyget Innehållsöverföring för att överföra innehåll från en lokal AEM till AEM as a Cloud Service
 exl-id: cfc0366a-2139-4d9d-b5bc-0b65bef4013c
 feature: Migration
 role: Admin
-source-git-commit: d9565e86c4b7e513cb1a95ecbe7a30c9586d9fb1
+source-git-commit: e73933acc3ff23d1456f03b288f2f842a6289ace
 workflow-type: tm+mt
-source-wordcount: '655'
-ht-degree: 28%
+source-wordcount: '612'
+ht-degree: 29%
 
 ---
+
 
 # Ökning {#overview-content-transfer-tool}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_overview"
 >title="Ökning"
->abstract="Verktyget Innehållsöverföring är ett verktyg som utvecklats av Adobe och som kan användas för att initiera migreringen av befintligt innehåll från en AEM (lokalt eller AMS) till AEM Cloud Service-målinstansen. Med det här verktyget överförs även huvudkonton (användare eller grupper) automatiskt."
+>abstract="Verktyget Innehållsöverföring är ett verktyg som utvecklats av Adobe och som kan användas för att initiera migreringen av befintligt innehåll från en AEM (lokalt eller AMS) till AEM Cloud Service-målinstansen. Detta verktyg överför också grupper automatiskt."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html" text="Riktlinjer och bästa praxis"
 
 Verktyget Innehållsöverföring är ett verktyg som utvecklats av Adobe och som kan användas för att initiera migreringen av befintligt innehåll från en AEM (lokalt eller AMS) till AEM Cloud Service-målinstansen.
 
-Med det här verktyget överförs även huvudkonton (användare eller grupper) automatiskt.  Mer information finns i [Användarmappning och huvudmigrering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/user-mapping-and-migration.md).
+Detta verktyg överför också grupper automatiskt.  Mer information finns i [Gruppmigrering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/group-migration.md).
 
 Innehållsöverföringsverktyget integrerar innehållsöverföringsprocessen med Cloud Acceleration Manager. Detta ger användaren alla fördelar den ger:
 
@@ -37,9 +38,6 @@ Det finns två faser som är associerade med innehållsöverföring:
 1. **Extrahering**: Extrahering avser att extrahera innehåll från AEM-källinstansen till ett temporärt område som kallas *migreringsuppsättning*. En *migreringsuppsättning* är ett molnlagringsutrymme som finns hos Adobe för att tillfälligt lagra det överförda innehållet mellan AEM-källinstansen och Cloud Service AEM-instansen.
 
    Mer information finns i [Extraheringsprocess i innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md).
-
-   >[!NOTE]
-   >Användarmappning körs nu automatiskt som en del av extraheringsfasen på författaren (men kan även inaktiveras på författaren eller aktiveras vid publicering). Mer information finns i [Användarmappning och huvudmigrering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/user-mapping-and-migration.md).
 
 1. **Inmatning**: Inmatning avser att hämta innehåll från *migreringsuppsättningen* till Cloud Service-instansen.
 
@@ -78,7 +76,6 @@ Alla migreringsuppsättningar upphör så småningom efter en förlängd inaktiv
 En migreringsuppsättnings förfallodatum kan övervakas på raden Migreringsuppsättning. En användbar visuell indikator på att en migreringsuppsättning närmar sig förfallodatumet har även lagt till projektets kort.
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam29.png)
-
 
 ## What&#39;s Next {#whats-next}
 
