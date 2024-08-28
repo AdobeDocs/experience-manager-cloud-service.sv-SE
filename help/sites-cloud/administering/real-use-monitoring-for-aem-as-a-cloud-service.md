@@ -4,9 +4,9 @@ description: Lär dig hur du använder Real Use Monitoring (RUM) för att hämta
 exl-id: 91fe9454-3dde-476a-843e-0e64f6f73aaf
 feature: Administering
 role: Admin
-source-git-commit: 8ccef0103ae7fb75171431eeb36f7352f6467d56
+source-git-commit: ae9951fa89edeab5f34ae3506cf8a4864201c93e
 workflow-type: tm+mt
-source-wordcount: '1302'
+source-wordcount: '1282'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 >[!INFO]
 >
->Övervakning på klientsidan fungerar bara för kunder med AEM Cloud Service version **2024.5.16461** och senare.
+>Övervakning på klientsidan fungerar bara för kunder med Cloud Servicen AEM (Adobe Experience Manager) version **2024.5.16461** och senare.
 
 ## Ökning {#overview}
 
-Tjänsten Real Use Monitoring (RUM) är en teknik för prestandaövervakning som samlar in och analyserar de digitala användarupplevelserna för en webbplats eller tillämpning i realtid. Den ger synlighet i ett webbprograms realtidsprestanda och ger djupare insikter i slutanvändarens upplevelse. Tjänsten fokuserar på att optimera prestanda genom att övervaka webbplatsens engagemang, snarare än användarna själva.
+Tjänsten RUM (Real Use Monitoring) är en teknik för prestandaövervakning som samlar in och analyserar de digitala användarupplevelserna för en webbplats eller tillämpning i realtid. Den ger synlighet i ett webbprograms realtidsprestanda och ger djupare insikter i slutanvändarens upplevelse. Tjänsten fokuserar på att optimera prestanda genom att övervaka webbplatsens engagemang, snarare än användarna själva.
 
 Med RUM spåras nyckeltal från det att URL:en startas tills begäran skickas tillbaka till webbläsaren. Det hjälper utvecklare att förbättra programmet så att det blir enkelt att använda för slutanvändarna.
 
@@ -33,9 +33,8 @@ Med RUM spåras nyckeltal från det att URL:en startas tills begäran skickas ti
 
 ## Vem kan utnyttja en tjänst för övervakning av faktisk användning? {#who-can-benefit-from-rum-service}
 
-Tjänsten för övervakning av faktisk användning är fördelaktig för alla kunder. Den ger en representativ bild av användarinteraktionen och säkerställer ett tillförlitligt mått på webbplatsengagemanget genom att samla in antalet sidvisningar på klientsidan.
+AEM har utvecklat RUM för att hjälpa kunder och Adobe att förstå hur besökarna interagerar med AEM webbplatser. RUM kan användas för att diagnostisera prestandaproblem och mäta hur effektiva experimenten är. RUM bevarar besökarnas integritet genom stickprov - endast en liten del av alla sidvisningar övervakas - och ingen personligt identifierbar information samlas in.
 
-För alla Adobe-kunder ger den här tjänsten värdefulla insikter om användarinteraktioner. Kunder som använder sitt eget CDN kan dra nytta av förenklad trafikrapportering, eftersom Adobe nu direkt integrerar datainsamlingen och eliminerar behovet av separata rapporter under förnyelsecyklerna.
 
 ## Förstå hur övervakningstjänsten för faktisk användning fungerar {#understand-how-the-rum-service-works}
 
@@ -110,7 +109,7 @@ När du analyserar RUM-data kan det finnas skillnader i sidvisningar och andra p
 
 1. **Sökvägen `/.rum` blockeras på min webbplats, hur ska jag åtgärda den?**
 
-   Sökvägen `/.rum` krävs för att RUM-samlingen ska fungera. Om du har ett CDN framför det som Adobe tillhandahåller som en del av AEM as a Cloud Service måste du se till att sökvägen `/.rum` går till samma AEM som resten av AEM. Och se till att den inte justeras på något sätt.
+   Sökvägen `/.rum` krävs för att RUM-samlingen ska fungera. Om du använder ett CDN framför Adobe AEM as a Cloud Service måste du se till att sökvägen `/.rum` går till samma AEM som ditt andra AEM. Och se till att den inte justeras på något sätt.
 
 1. **Räknas RUM-samlingen med innehållsförfrågningar för kontraktssyften?**
 
