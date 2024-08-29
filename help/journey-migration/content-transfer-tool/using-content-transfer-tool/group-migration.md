@@ -28,7 +28,7 @@ ht-degree: 0%
 >abstract="Verktyget Innehållsöverföring migrerar inte längre användare. Användare bör hanteras i Admin Console."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/journey/admin-console" text="AEM Admin Console-dokumentation"
 >additional-url="https://adminconsole.adobe.com/" text="AEM Admin Console"
->
+
 Som en del av övergångsresan till Adobe Experience Manager (AEM) as a Cloud Service måste grupper migreras från befintliga AEM till AEM as a Cloud Service. Den här åtgärden utförs av verktyget Innehållsöverföring.
 
 En stor förändring i AEM as a Cloud Service är den helintegrerade användningen av Adobe ID:n för att komma åt författarnivån. Den här processen kräver att [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html) används för att hantera användare och användargrupper. Användarprofilinformationen är centraliserad i Adobe Identity Management System (IMS) som gör att du kan logga in på alla molnprogram i Adobe. Mer information finns i [Identity Management](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/what-is-new-and-different.html#identity-management). På grund av den här ändringen skapas användare automatiskt AEM när de loggar in på den via IMS.  CTT migrerar alltså inte användarna till molnsystemet.  IMS-användare måste placeras i IMS-grupper, som kan migreras eller nya grupper placeras i de AEM grupper som har behörighet att komma åt det AEM innehållet som migreras.  På så sätt får användare i molnsystemet samma åtkomst som de hade i sina AEM.
