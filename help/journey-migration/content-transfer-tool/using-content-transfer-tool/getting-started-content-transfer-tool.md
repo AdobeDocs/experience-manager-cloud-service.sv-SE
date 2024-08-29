@@ -4,12 +4,13 @@ description: Lär dig hur du kommer igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
 feature: Migration
 role: Admin
-source-git-commit: 67bc538fe174034c05808d4a62c51c404dfaf38c
+source-git-commit: d8730109f5cd7dab44f535b1de008ae09811f221
 workflow-type: tm+mt
 source-wordcount: '1362'
 ht-degree: 2%
 
 ---
+
 
 # Komma igång med verktyget Innehållsöverföring {#getting-started-content-transfer-tool}
 

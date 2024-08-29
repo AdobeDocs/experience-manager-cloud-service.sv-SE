@@ -6,12 +6,13 @@ hidefromtoc: true
 exl-id: f62ed751-d5e2-4a01-8910-c844afab5733
 feature: Migration
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 5b0dfb847a1769665899d6dd693a7946832fe7d1
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
+
 
 # Migrerar stängda användargrupper {#migrating-closed-user-groups}
 
@@ -23,24 +24,15 @@ ht-degree: 0%
 
 För närvarande behöver stängda användargrupper (CUG) några ytterligare steg för att fungera i målmiljön för en migrering. I det här dokumentet förklaras scenariot och de steg som krävs för att skydda noderna på det avsedda sättet.
 
-## Migrering av grupper
+## Migrering av stängda användargrupper
 
-Objekt (inklusive grupper) inkluderas automatiskt i en migrering till Adobe Experience Manager as a Cloud Service om de är kopplade till det migrerade innehållet via det innehållets åtkomstkontrollista, och de inkluderas också om de refereras till i en CUG-princip för det innehållet.
+Grupper inkluderas automatiskt i en CTT/CAM-migrering till Adobe Experience Manager as a Cloud Service om de är kopplade till det migrerade innehållet via det innehållets ACL-lista eller dess CUG-principnod. Verifiering av att gruppen och dess medlemmar finns bör göras innan publicering görs. Grupper som refereras till i en CUG-policy kallas här för&quot;CUG-grupper&quot;.
 
-## Stängda användargrupper under migrering
+Om du vill använda CUG-filer i AEM as a Cloud Service måste användarna finnas på Author-instansen och vara medlemmar i de relevanta CUG-grupperna.  Detta kan göras med paket, eller om CUG-användarna är IMS-användare kanske de redan är närvarande.  CUG-användare måste sedan göras medlemmar i AEM CUG-grupper.
 
-Verifiering av gruppen och dess medlemmar ska göras innan publicering inleds. Huvudrapporten, som hämtas via förslagsjobbsvyn, kan användas för att se om gruppen i fråga ingick eller inte eftersom den inte fanns i en ACL- eller CUG-princip.
+Om du vill aktivera CUG-beteenden på Publish-instansen
+1. CUG-grupperna måste aktiveras (vilket replikerar dem och deras medlemmar till Publish-instansen), och
+1. De sidor som skyddas med CUG-profiler måste publiceras (vilket möjliggör Publish-instansen och spårning av profilerna).
+1. När alla sidor har publicerats kontrollerar du funktionerna för varje CUG-skyddad sida.
 
-Därefter måste processerna aktiveras och egenskaperna anges för att aktivera CUG-grupper. Det gör du genom att publicera om alla sidor som är kopplade till en CUG-princip. Detta kalibrerar Publish-instansen för att spåra profilerna.
-
-Detta aktiverar CUG-profiler på Publish, och innehållet är bara tillgängligt för autentiserade användare som är medlemmar i den grupp som är kopplad till profilerna.
-
-## Sammanfattning
-
-Sammanfattningsvis är det här stegen för att aktivera CUG efter en migrering:
-
-1. Kontrollera att varje grupp som används i CUG-principer finns på Publish efter migreringen.
-   - Det kan finnas en grupp om den ingår i ett migrerat innehålls CUG-princip eller i innehållets ACL.
-   - Om den inte gör det kan du använda Paket för att installera den på målinstansen (eller skapa den manuellt där) och aktivera den och dess medlemmar. Verifiera sedan att det finns i Publish.
-1. Publicera om alla sidor som är kopplade till en CUG-princip och kontrollera att den publiceras, till exempel genom att redigera sidan först. Det är viktigt att publicera om alla.
-   - När alla sidor har publicerats om kontrollerar du att de fungerar för varje CUG-skyddad sida.
+Mer information finns i [Stängda användargrupper](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/closed-user-groups.html).

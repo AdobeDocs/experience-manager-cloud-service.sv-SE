@@ -4,12 +4,13 @@ description: Använd verktyget Innehållsöverföring för att validera innehål
 exl-id: a12059c3-c15a-4b6d-b2f4-df128ed0eea5
 feature: Migration
 role: Admin
-source-git-commit: 1289da67452be7fc0fa7f3126d2a3dbf051aa9b5
+source-git-commit: b7e485e3b7ce6f2d2fa7fe9b2953d2296186871d
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1189'
 ht-degree: 0%
 
 ---
+
 
 # Verifierar innehållsöverföringar {#validating-content-transfers}
 
@@ -134,23 +135,28 @@ Förutom att den ingår i inmatningsloggen kan du även få åtkomst till verifi
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/CTTvalidationreportnew.png)
 
-## Validera huvudmigreringen {#how-to-validate-principal-migration}
+## Validera huvudmigreringen {#how-to-validate-group-migration}
 
-Läs [Användarmappning och huvudmigrering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/user-mapping-and-migration.md) om du vill läsa information om huvudmigreringar och varför det är nödvändigt.
+Läs mer i [Gruppmigrering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/group-migration.md) om du vill läsa information om huvudmigreringen och varför det är nödvändigt.
 
-När extraheringen och intaget har slutförts finns en sammanfattning och rapport om den huvudsakliga migreringen. Den här informationen kan användas för att validera vilka användare och grupper som migrerats och, kanske, för att avgöra varför vissa inte gjorde det.
+När extraheringen och intaget har slutförts finns en sammanfattning och rapport om den huvudsakliga migreringen. Den här informationen kan användas för att validera vilka grupper som migrerats och kanske för att avgöra varför vissa inte gjorde det.
 
 Om du vill se den här informationen går du till Cloud Acceleration Manager. Klicka på projektkortet och klicka på kortet för innehållsöverföring. Navigera till **Inmatningsjobb** och leta reda på det intag som du vill verifiera. Klicka på de tre punkterna (**..**) för det intagandet och klicka sedan på **Visa huvudsammanfattning** i listrutan.
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ingestion-principal-action.png)
 
-En dialogruta med den sammanfattande informationen visas. Använd hjälpikonerna för att läsa en mer fullständig beskrivning. Klicka på knappen **Hämta rapport** om du vill hämta den fullständiga kommaavgränsade (CSV) rapporten.
+En dialogruta med den sammanfattande informationen visas. Använd hjälpikonerna för att läsa en mer fullständig beskrivning. Klicka på knappen **Hämta rapport** om du vill hämta den fullständiga kommaavgränsade (CSV) rapporten.  Observera också att i slutet av den här rapporten finns användarrapporten som kan användas för användarhantering efter migrering.
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ingestion-principal-dialog.png)
 
->[!NOTE]
->
->Om användarmappning är inaktiverad visas en annan variant av den här dialogrutan. Det indikerar att användarmappningen har inaktiverats och inte visar de tre fälten som ger värden för användarmappning.
+Övergångsrapporten ska innehålla följande:
+
+* Varje grupp har migrerats och den första innehållssökvägen som utlöste den gruppen för migrering. Gruppen kan också finnas på andra sökvägar, men endast den första som hittas för en viss grupp rapporteras. Den rapporterar också om den hittades i en ACL- eller CUG-policy.
+* Varje grupp migrerades inte och orsaken till varför den inte migrerades.  Vanligtvis är det en av följande orsaker:
+   * Det är en inbyggd grupp
+   * Det finns redan i målsystemet
+   * Den finns inte i en ACL- eller CUG-princip för det innehåll som migreras
+   * Den har ett duplicerat unikt fält (en av rep:palName, rep:authorizedId, jcr:uid eller rep:externalId finns redan på målet, men alla måste vara unika)
 
 ## Felsökning {#troubleshooting}
 
@@ -166,6 +172,6 @@ Vissa vägar från extraherings- och intagssammanfattningarna exkluderas för at
 
 De sökvägar som för närvarande utesluts från sammanfattningarna är: `cqdam.text.txt` återgivningar, noder i `/home` och noder i `/jcr:system`.
 
-### Stängda användargrupper fungerar inte {#validating-cugs}
+### Stängda användargrupper {#validating-cugs}
 
 Mer information om hur du använder en CUG-princip (Closed User Group) finns i [Migrera stängda användargrupper](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/closed-user-groups-migration.md).

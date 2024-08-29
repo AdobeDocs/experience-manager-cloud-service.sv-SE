@@ -4,9 +4,9 @@ description: Lär dig hur du utför migreringen när koden och innehållet är m
 exl-id: 10ec0b04-6836-4e26-9d4c-306cf743224e
 feature: Migration
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 5b0dfb847a1769665899d6dd693a7946832fe7d1
 workflow-type: tm+mt
-source-wordcount: '1239'
+source-wordcount: '1223'
 ht-degree: 0%
 
 ---
@@ -101,7 +101,6 @@ Ta hänsyn till att hela intaget misslyckas om någon av följande begränsninga
 
 * En JCR-nod med ett namn som är längre än 150 tecken
 * En JCR-nod som är större än 16 MB
-* Alla användare/grupper med `rep:AuthorizableID` som hämtas och som redan finns i AEM as a Cloud Service
 * Om en resurs som extraheras och hämtas flyttas till en annan sökväg, antingen på källan eller på målet, före nästa iteration av migreringen.
 
 ## Resurshälsa {#asset-health}
@@ -119,4 +118,4 @@ Mer information finns i dokumentationen för [Go-Live Checklist](/help/journey-o
 
 ## What&#39;s Next {#what-is-next}
 
-När du har förstått hur du utför migreringen till AEM as a Cloud Service kan du kontrollera sidan [Post-Go-Live](/help/journey-migration/post-go-live.md) för att se till att instansen körs utan problem.
+När du har förstått hur du utför migreringen till AEM as a Cloud Service kan du kontrollera sidan [Efter-Go-Live](/help/journey-migration/post-go-live.md) för att se till att instansen körs utan problem.
