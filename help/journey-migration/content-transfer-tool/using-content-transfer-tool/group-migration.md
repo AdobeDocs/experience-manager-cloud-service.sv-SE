@@ -2,7 +2,7 @@
 title: Gruppmigrering
 description: Översikt över gruppmigrering i AEM as a Cloud Service.
 exl-id: 4a35fc46-f641-46a4-b3ff-080d090c593b
-source-git-commit: e5fd1b351047213adbb83ef1d1722352958ce823
+source-git-commit: 1f9526f8e8aa6a070e95827fab16431b0ee7566b
 workflow-type: tm+mt
 source-wordcount: '1315'
 ht-degree: 0%
