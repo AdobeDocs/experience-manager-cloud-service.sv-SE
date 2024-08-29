@@ -5,9 +5,9 @@ feature: Administering
 role: Admin
 exl-id: 53d4afb3-d091-47a1-ba12-5bcec99f46b9
 solution: Experience Manager Sites
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 92c0e556eb1f92dadd396a479a8bf933715935a7
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
@@ -39,12 +39,14 @@ Webbplatsteman används på två olika sätt:
 
 ## Platstemastruktur {#structure}
 
-Webbplatsteman är helt enkelt paket med en logisk struktur som tydligt återspeglar syftet med paketinnehållet. Ett webbplatstema har följande struktur som är typisk för ett frontendprojekt.
+Webbplatsteman är helt enkelt paket med en logisk struktur som tydligt återspeglar syftet med paketinnehållet. För ett typiskt frontprojekt rekommenderar Adobe följande struktur för ett webbplatstema:
 
-* `src/main.ts`: Huvudstartpunkten för JS- och CSS-temat
+* `src/theme.ts`: Huvudstartpunkten för JS- och CSS-temat
 * `src/site`: JS- och CSS-filer som gäller för hela platsen
 * `src/components`: JS- och CSS-filer som är specifika för AEM
 * `src/resources`: Statiska filer som ikoner, logotyper och teckensnitt
+
+Beroende på specifika projektbehov kan temastrukturen variera så länge huvudstartpunkten, `src/theme.ts`, bevaras.
 
 ## Standardtema för webbplats {#standard-site-theme}
 
