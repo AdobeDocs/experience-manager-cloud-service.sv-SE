@@ -5,7 +5,7 @@ feature: Adaptive Forms, Core Components
 Role: Developer, Author
 exl-id: bc06542b-84c8-4c6a-a305-effbd16d5630
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: d9f4e14edb1d7a84f130dea0c82734574404601c
 workflow-type: tm+mt
 source-wordcount: '2068'
 ht-degree: 0%
@@ -22,6 +22,8 @@ ht-degree: 0%
 <span class="preview"> Språkstöd för höger-till-vänster-språk är tillgängligt i det tidiga adopterprogrammet. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
 AEM Forms har stöd för engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska-brasilianska (pt-BR), kinesiska (zh-CN), kinesiska-taiwanesiska (zh-TW) och koreanska (ko-KR). Du kan även lägga till stöd för fler språkområden, som Hindi(hi_IN). Du kan också presentera Adaptiv Forms på höger-till-vänster-språk (RTL) som arabiska, persiska och urdu genom att lägga till dessa språkområden.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3433132/adaptive-forms-rtl--arabic-hebrew-farsi)
 
 ## Hur avgör AEM Forms språkområdet för ett adaptivt formulär?
 
