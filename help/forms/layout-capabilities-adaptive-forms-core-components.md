@@ -4,7 +4,7 @@ description: Layout och utseende för Adaptive Forms på olika enheter styrs av 
 feature: Adaptive Forms, Core Components
 keywords: Layout för adaptiv form baserad på kärnkomponenter, olika layouter för formulär, AEM för dynamiska formulärlayouter, AEM Cloud Service formulärlayouter, formulärlayouttyper i AEM kärnkomponenter, adaptiva formulärlayouter
 role: User, Developer, Admin
-source-git-commit: 31f18027d856cbd161457c4a01d6c7c17d1c2b89
+source-git-commit: 0397e5ec20b48a45df74d7d1c03eaae3739000dd
 workflow-type: tm+mt
 source-wordcount: '2094'
 ht-degree: 0%
@@ -138,10 +138,10 @@ Låt oss utforska den stegvisa processen för att infoga en layout och lägga ti
 
 1. Leta reda på det avsnitt i formulärredigeraren där du kan lägga till en layout.
 
-   ![Formulärredigeraren](/help/forms/assets/form-editor.png){width="200" align="center"}
+   ![Formulärredigeraren](/help/forms/assets/form-editor.png)
 1. Klicka på ikonen **Lägg till** . Ikonen är ett plustecken (+) som anger att du kan lägga till nya komponenter.
 
-   ![Infoga layout](/help/forms/assets/insert-layout-add-icon.png){width="200" align="center"}
+   ![Infoga layout](/help/forms/assets/insert-layout-add-icon.png)
 
    Om du klickar på ikonen **Lägg till** visas dialogrutan **Infoga ny komponent** som visar olika komponenter som ska infogas.
 
@@ -151,20 +151,20 @@ Låt oss utforska den stegvisa processen för att infoga en layout och lägga ti
 
 1. Bläddra bland de tillgängliga komponenterna i dialogrutan och välj önskad layout i listan. I det här fallet väljer vi komponenten Vågräta flikar för att infoga den vågräta tabblayouten.
 
-   ![Markera vågräta flikar](/help/forms/assets/select-horizontal-tab.png){width="200" align="center"}
+   ![Markera vågräta flikar](/help/forms/assets/select-horizontal-tab.png)
 
    När du lägger till den vågräta flikkomponenten i formuläret består den till att börja med av två tomma paneler, som heter Item1 och Item2. Du måste lägga till formulärkomponenter manuellt till dessa paneler.
 
-   ![Vågräta flikar](/help/forms/assets/insert-tabs-on-top.png){width="200" align="center"}
+   ![Vågräta flikar](/help/forms/assets/insert-tabs-on-top.png)
 
 1. Öppna egenskaperna för den vågräta flikkomponenten och ange komponentens namn.
 I det här fallet lägger vi till namnet på den horisontella flikkomponenten som IT-frågeformulär.
 
-   ![Lägg till namn för vågräta flikar](/help/forms/assets/change-name-of-horizontal-tabs.png){width="200" align="center"}
+   ![Lägg till namn för vågräta flikar](/help/forms/assets/change-name-of-horizontal-tabs.png)
 
 1. Klicka på **Klar**.
 
-   ![Vågräta flikar](/help/forms/assets/tabs-on-top-rename-component.png){width="200" align="center"}
+   ![Vågräta flikar](/help/forms/assets/tabs-on-top-rename-component.png)
 
 När layoutkomponenten har lagts till i formuläret ändrar du antalet paneler enligt kraven.
 
@@ -174,43 +174,43 @@ Lägg till ny panel i komponenten för vågräta flikar:
 
 1. Öppna de vågräta flikkomponentegenskaperna och klicka på fliken **Objekt** .
 
-   ![Fliken Objekt för vågräta flikar](/help/forms/assets/tabs-on-top-items-tab.png){width="200" align="center"}
+   ![Fliken Objekt för vågräta flikar](/help/forms/assets/tabs-on-top-items-tab.png)
 
 1. Klicka på ikonen **Lägg till** för att lägga till en ny panel.
 
-   ![Lägg till ny panel](/help/forms/assets/tabs-on-top-add-panel.png){width="200" align="center"}
+   ![Lägg till ny panel](/help/forms/assets/tabs-on-top-add-panel.png)
 
    När du klickar på ikonen **Lägg till** visas dialogrutan **Infoga ny komponent** .
 
 1. Markera panelkomponenten.
 
-   ![Lägg till ny panel](/help/forms/assets/tabs-on-top-new-panel.png){width="200" align="center"}
+   ![Lägg till ny panel](/help/forms/assets/tabs-on-top-new-panel.png)
 
    När du markerar panelkomponenten läggs den nya panelen till i den vågräta layouten.
 
-   ![Lägg till ny panel](/help/forms/assets/tabs-on-top-add-new-panel.png){width="200" align="center"}
+   ![Lägg till ny panel](/help/forms/assets/tabs-on-top-add-new-panel.png)
 
    Ange ett namn för den nya panelen, annars kan du inte spara egenskaperna för den vågräta flikkomponenten.
 
 1. Ange namnen på panelerna enligt figuren nedan:
 
-   ![Panelnamn](/help/forms/assets/tabs-on-tops-panel-name.png){width="200" align="center"}
+   ![Panelnamn](/help/forms/assets/tabs-on-tops-panel-name.png)
 
 1. Klicka på **Klar**.
 
    När du klickar på **Klar** visas de tre panelerna sida vid sida i en rad. Panelnamnen visas som rubriker för varje panel, och du kan lägga till formulärkomponenter för varje panel.
 
-   ![Panelnamn](/help/forms/assets/tabs-on-top-initial-view.png){width="200" align="center"}
+   ![Panelnamn](/help/forms/assets/tabs-on-top-initial-view.png)
 
    Du kan konfigurera panelkomponentens egenskaper. IT-frågeformuläret innehåller till exempel inga paneltitlar. Här är stegen för att konfigurera egenskaper för panelkomponenten.
 
 1. Öppna egenskaperna för den första panelen.
 
-   ![Egenskaper för panel 1](/help/forms/assets/tabs-on-tops-panel1-properties.png){width="200" align="center"}
+   ![Egenskaper för panel 1](/help/forms/assets/tabs-on-tops-panel1-properties.png)
 
 1. Markera kryssrutan **Dölj titel** på fliken **Grundläggande**.
 
-   ![Dölj titel](/help/forms/assets/tabs-on-top-hide-panel.png){width="200" align="center"}
+   ![Dölj titel](/help/forms/assets/tabs-on-top-hide-panel.png)
 
 1. Klicka på **Klar**.
 
@@ -224,41 +224,41 @@ På samma sätt kan du dölja titlar för de andra två panelerna. När du är k
 
 1. Leta reda på det avsnitt på panelen där du kan lägga till komponenter.
 1. Klicka på ikonen **Lägg till** . Ikonen är ett plustecken (+) som anger att du kan lägga till nya komponenter.
-   ![Infoga layout](/help/forms/assets/tabs-on-top-add-component.png){width="200" align="center"}
+   ![Infoga layout](/help/forms/assets/tabs-on-top-add-component.png)
 
    Om du klickar på ikonen **Lägg till** visas dialogrutan **Infoga ny komponent** som visar olika komponenter som ska infogas.
 
-   ![Dialogrutan Infoga ny komponent](/help/forms/assets/insert-new-component.png){width="200" align="center"}
+   ![Dialogrutan Infoga ny komponent](/help/forms/assets/insert-new-component.png)
 
 1. Bläddra bland de tillgängliga komponenterna i dialogrutan som visas och markera önskad komponent. I vårt fall väljer du komponenten Textruta.
 1. Öppna egenskaperna för den tillagda komponenten och ange dess namn. Här kan du redigera egenskaperna för den tillagda textrutekomponenten och ange dess namn.
-   ![Infoga layout](/help/forms/assets/tabs-on-top-textbox-component.png){width="200" align="center"}
+   ![Infoga layout](/help/forms/assets/tabs-on-top-textbox-component.png)
 1. Lägg på samma sätt till ytterligare två textrutekomponenter och ange ett namn för komponenterna som e-post-ID och avdelningsnamn.\
-   ![Första panelen](/help/forms/assets/tabs-on-tops-first-panel.png){width="200" align="center"}
+   ![Första panelen](/help/forms/assets/tabs-on-tops-first-panel.png)
 
    Nu när komponenterna på den första panelen har lagts till kan du fortsätta med att lägga till komponenterna på den andra panelen.
 
 1. Klicka på **Välj panel** i verktygsfältet för att växla panelen.
 
-   ![Växla panel](/help/forms/assets/tabs-on-top-select-panel.png){width="200" align="center"}
+   ![Växla panel](/help/forms/assets/tabs-on-top-select-panel.png)
 
    När du klickar på **Välj panel** visas listan med paneler som lagts till i komponenten Vågräta flikar.
 
-   ![Växla panel](/help/forms/assets/tabs-on-tops-panel2.png){width="200" align="center"}
+   ![Växla panel](/help/forms/assets/tabs-on-tops-panel2.png)
 
 1. Välj **2 Panel** i panellistan och vyn ändras från den första panelen till den andra panelen.
 
-   ![Andra panelen](/help/forms/assets/tabs-on-top-panel2-component.png){width="200" align="center"}
+   ![Andra panelen](/help/forms/assets/tabs-on-top-panel2-component.png)
 
 1. Upprepa stegen som beskrivs från steg 2 till steg 4 för att lägga till de önskade komponenterna i panel 2 enligt bilden nedan:
 
-   ![Andra panelkomponenter](/help/forms/assets/panel-2-components.png){width="200" align="center"}
+   ![Andra panelkomponenter](/help/forms/assets/panel-2-components.png)
 
 1. Växla till **3-panelen** genom att följa stegen som beskrivs i steg 6 och steg 7.
 
 1. Upprepa stegen som beskrivs från steg 2 till steg 4 för att lägga till den önskade komponenten i panel 3:
 
-   ![Komponenter i den tredje panelen](/help/forms/assets/panel-3-component.png){width="200" align="center"}
+   ![Komponenter i den tredje panelen](/help/forms/assets/panel-3-component.png)
 
 1. Klicka på **[!UICONTROL Preview]** i det övre högra hörnet av redigeringsmiljön.
 
@@ -319,7 +319,7 @@ Du kan också [dra och släppa komponenter](#extra-bytes) för att lägga till f
 
 Du kan också ta bort en formulärkomponent från panelen med ikonen ![Ta bort](/help/forms/assets/Smock_Delete_18_N.svg) .
 
-![Tar bort en komponent](/help/forms/assets/delete-component.png){width="200" align="center"}
+![Tar bort en komponent](/help/forms/assets/delete-component.png)
 
 Du kan också lägga till de valideringar som krävs för komponenterna efter behov.
 
@@ -333,11 +333,11 @@ Utför följande steg för att ersätta den befintliga layouten för ett formul�
 
 1. Klicka på ikonen Ersätt i verktygsfältet för layoutkomponenten så visas dialogrutan **[!UICONTROL Replace Component]**.
 
-   ![Ersätt layout](/help/forms/assets/replace-layout.png){width="200" align="center"}
+   ![Ersätt layout](/help/forms/assets/replace-layout.png)
 
 1. Välj önskad layout i dialogrutan **[!UICONTROL Replace Component]**.
 
-   ![Dialogrutan Ersätt komponent](/help/forms/assets/replace-component.png){width="200" align="center"}
+   ![Dialogrutan Ersätt komponent](/help/forms/assets/replace-component.png)
 
    När du har valt layouten ändras komponenternas placering i layouten därefter. Välj till exempel komponenten för lodräta tabbar i dialogrutan **[!UICONTROL Replace Component]**. Placeringen av panelen ändras till tabbar till vänster:
 
@@ -350,11 +350,11 @@ Så här drar och släpper du komponenter i formulärredigeraren:
 1. Leta reda på det avsnitt där du kan lägga till komponenter.
 1. Navigera till den vänstra panelen i redigeringsmiljön och klicka på **Komponenter**.
 
-   ![Komponentpanelen](/help/forms/assets/add-new-component.png){width="200" align="center"}
+   ![Komponentpanelen](/help/forms/assets/add-new-component.png)
 
    När du klickar på alternativet **Komponenter** visas listan med tillgängliga komponenter.
 
-   ![Komponentpanelen](/help/forms/assets/add-new-component2.png){width="200" align="center"}
+   ![Komponentpanelen](/help/forms/assets/add-new-component2.png)
 
 1. Bläddra bland de tillgängliga komponenterna och markera önskad komponent.
 
