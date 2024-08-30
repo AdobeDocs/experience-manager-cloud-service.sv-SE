@@ -4,9 +4,9 @@ description: Läs om grunderna och de bästa sätten att distribuera till AEM as
 feature: Deploying
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
 role: Admin
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: 1ad144fb630eca51f2004300c71d75f627cf9977
 workflow-type: tm+mt
-source-wordcount: '3441'
+source-wordcount: '3440'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 De grundläggande funktionerna för kodutveckling liknar i AEM as a Cloud Service jämfört med lösningarna AEM On Premise och Managed Services. Utvecklare skriver kod och testar den lokalt, som sedan skickas till fjärrmiljöer i AEM as a Cloud Service. Cloud Manager, som var ett valfritt innehållsleveransverktyg för Managed Services, krävs. Det här leveransverktyget är nu den enda mekanismen för att distribuera kod till AEM as a Cloud Service dev-, stage- och produktionsmiljöer. För snabb funktionsvalidering och felsökning innan du distribuerar de tidigare miljöerna kan koden synkroniseras från en lokal miljö till en [snabb utvecklingsmiljö](/help/implementing/developing/introduction/rapid-development-environments.md).
 
-Uppdateringen av [AEM version](/help/implementing/deploying/aem-version-updates.md) är alltid en separat distributionshändelse från att överföra [anpassad kod](#customer-releases). Om du tittar på en annan metod bör anpassade kodreleaser testas mot den AEM versionen som är i produktion eftersom det är det som distribueras högst upp. AEM versionsuppdateringar som görs därefter, som är vanliga och som tillämpas automatiskt. De är avsedda att vara bakåtkompatibla med den kundkod som redan har distribuerats.
+Uppdateringen av [AEM version](/help/implementing/deploying/aem-version-updates.md) är alltid en separat distributionshändelse från att överföra [anpassad kod](#customer-releases). Om du tittar på en annan metod bör anpassade kodreleaser testas mot den AEM versionen som är i produktion eftersom det är det som distribueras högst upp. AEM versionsuppdateringar som sker efter detta (som är vanligt och automatiskt tillämpas) är avsedda att vara bakåtkompatibla med den kundkod som redan har distribuerats.
 
 I resten av det här dokumentet beskrivs hur utvecklare bör anpassa sina rutiner så att de kan arbeta med både AEM as a Cloud Service versionsuppdateringar och kunduppdateringar.
 
