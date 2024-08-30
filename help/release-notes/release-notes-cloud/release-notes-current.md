@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: e11c869c2f8cc8847869ad67a2c752e7239bd44c
+source-git-commit: 9cc49bf83d278d4064faa1d0157201226a067cb1
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1142'
 ht-degree: 0%
 
 ---
@@ -28,21 +28,35 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för den aktu
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2024.7.0) är 25 juli 2024. Nästa version (2024.8.0) är planerad till 29 augusti 2024.
+Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2024.8.0) är 29 augusti 2024. Nästa funktionsrelease (2024.9.0) planeras att släppas den 26 september 2024.
 
 ## Versionsinformation om underhåll {#maintenance}
 
 Du hittar den senaste underhållsversionsinformationen [här](/help/release-notes/maintenance/latest.md).
 
-## Släpp video {#release-video}
+<!-- ## Release Video {#release-video}
 
-Titta på videon med versionsöversikten för juli 2024 om du vill se en sammanfattning av funktioner som lagts till i version 2024.7.0:
+Have a look at the August 2024 Release Overview video for a summary of the features added in the 2024.8.0 release:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3431707?quality=12)
+
+-->
 
 ## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 
 ### Ny funktion i Experience Manager Sites {#new-feature-sites}
+
+**AEM Redigering för Edge Delivery Services**
+
+Befintliga [arv](/help/sites-cloud/authoring/universal-editor/inheritance.md)-funktioner för platser stöds nu:
+
+* [AEM](/help/sites-cloud/authoring/launches/overview.md)
+* [MSM](/help/sites-cloud/administering/msm/overview.md) på sidnivå
+
+Dessutom stöds nu följande sidhanteringsfunktioner:
+
+* [AEM ](/help/sites-cloud/authoring/sites-console/tags.md) kan exporteras som en [taxonomi](/help/edge/wysiwyg-authoring/taxonomy.md) till Edge Delivery Services.
+* [Mallar](/help/edge/wysiwyg-authoring/templates.md) för Edge Delivery Services kommer snart!
 
 ### Tidiga Adobe-program {#sites-early-adopter}
 
@@ -50,87 +64,70 @@ Titta på videon med versionsöversikten för juli 2024 om du vill se en sammanf
 
 Utnyttja GenAI genom att AEM nya funktioner, [generera varianter](/help/generative-ai/generate-variations.md), som nu är tillgängliga i Cloud Service. Generera variationer hjälper er att generera och skala innehåll med hjälp av generativ AI. Kontakta ert Adobe-kontoteam för att ta del av detta i programmet.
 
-**Resurssökning i Content Fragment Console**
-
-Innehållsförfattare kan nu bläddra bland, visa och vidta åtgärder för bilder och andra resurser utan att behöva lämna konsolen Innehållsfragment.
-
-![Resurssökning](/help/sites-cloud/administering/content-fragments/assets/cf-console-assets-browse.png)
-
-Är du intresserad av att testa funktionen och ge feedback? Skicka ett e-postmeddelande till aemcs-headless-adopter@adobe.com från ditt officiella e-post-ID om du vill veta mer om det tidiga adopterprogrammet.
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
-**Överför resurser med resursväljaren**
-
-Resursväljaren ger nu innehållsförfattare möjlighet att överföra det slutliga materialet direkt från väljaren, antingen genom att dra eller genom att bläddra i det lokala filsystemet. På så sätt kan det slutliga materialet överföras till DAM från valfritt program.
-
 ### Nya funktioner i vyn Assets {#assets-view-new-features}
 
-**Integrering av**
+**Uppdaterad generering av Adobe Firefly-bilder**
 
-Experience Manager Assets har nu stöd för  för bildformat som stöds. Detta ger information om resursens innehåll och hur den skapades, inklusive om den ändrades med hjälp av GenAI.
+Assets as a Cloud Service använder nu den senaste widgeten från Firefly som gör att du kan generera bilder i olika format med Adobe Firefly. Genom att definiera format, komposition, dimensioner och annat med den inbyggda Firefly-redigeraren kan du snabbt skapa och spara de resurser du behöver direkt i AEM Assets-databasen för omedelbar användning.
 
-![](/help/assets/assets/content-credentials.png)
+![Skapa bilder i Adobe Firefly](/help/assets/assets/bugatti-type-57.png)
 
-**Visuella förhandsvisningar av mappinnehåll**
+**Stöd för PSB-filer**
 
-Experience Manager Assets visar nu förhandsvisningar av mappinnehåll i mappminiatyrbilden när du bläddrar eller söker efter innehåll, vilket gör det enklare att hitta resurser som finns i AEM Assets-databasen.
+Assets as a Cloud Service har nu stöd för Photoshop stora dokument (PSB-filer) utöver det befintliga stödet för PSD-filer.
 
-<!--
+### Nya förbättringar i Content Hub {#content-hub-new-enhancements}
 
+* Bättre hantering av långa filnamn, enkel utökning av hela namnet med verktygstips.
+* Förbättrade miniatyrbilder som bättre passar innehållets proportioner och täcker större innehållsområden.
+* En anpassad miniatyrbildsupplevelse från AEM stöds med innehållsnavet.
+* Förbättrad färgsökning.
+* Förbättrade konfigurationer sparar upplevelser.
+* Förbättrad informationssida för samlingar som återspeglar skaparens namn.
 
-**Content Credentials**
-
-Content Credentials feature in Assets view now provides detailed asset provenance data adhered to an asset. This helps to trace the enroute edits along the asset's lifecycle to prevent users from deception through deliberately tempered assets. This ensures content authenticity among users and fosters trust through transparency.
-
-When looking at the asset details, any image with content credentials added, such as those created with GenAI, displays the manifest details in a dedicated panel. If the asset is downloaded, published, or shared, the credentials remain intact with the asset.
-
-![check publish status1](/help/release-notes/assets/content-credentials.png)
-
--->
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
-### Nya funktioner i AEM Forms {#forms-new-prerelease-features}
+### Nya funktioner i förhandsversionen av AEM Forms {#forms-new-prerelease-features}
 
-#### Förbättrad Visual Rule Editor för Core Component Based Adaptive Forms
+#### Autospara ett utkast för Core Components based Adaptive Forms
 
-Med hjälp av anpassade formulärförfattare kan man använda repeterbara formulärfält i de funktioner som finns i den visuella regelredigeraren för att skapa komplex affärslogik i formulären, utan att behöva anpassa sig eller få hjälp av utvecklingsteamet.
+Användarna kan nu dra nytta av en autosparfunktion som automatiskt sparar ett delvis ifyllt formulär som ett utkast. De kan gå tillbaka senare för att slutföra ifyllningen på samma eller annan enhet. Den här funktionen förbättrar konverteringsgraden för organisationer genom att minska antalet blanketter som tas bort, eftersom man inte behöver börja om från början.
+
 
 ### Tidig åtkomst-funktioner i AEM Forms {#forms-new-early-access-features}
 
-Programmet AEM Forms Early Access Program ger dig en unik möjlighet att få exklusiv tillgång till de senaste innovationerna åt alla andra och hjälper dig att utveckla dem. Programmet ger tillgång till flera innovationer.
+Programmet AEM Forms Early Access Program ger dig en unik möjlighet att få exklusiv tillgång till de senaste innovationerna och hjälper dig att utveckla dem.
 
 Den här versionsinformationen innehåller en lista över de innovationer som levererats i den aktuella versionen. En fullständig lista över de innovationer som är tillgängliga under Tidig åtkomst-programmet finns i [AEM Forms Tidig åtkomst-programdokumentation](/help/forms/early-access-ea-features.md).
 
-#### Skapa adaptiva formulär med Universal Editor
+#### AEM Forms AI Assistant
 
-Använd Adobe Experience Manager [Universal Editor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction) för att skapa anpassningsbara formulär med WYSIWYG-redigering med dra-och-släpp för både headless och headful enrollment via Edge Delivery Service. Med anpassningsbara formulärförfattare kan man enkelt skapa och starta experiment med varianter av formulären på webbsidorna och avgöra vilka upplevelser som fungerar bäst för slutanvändarna.
+Generativ AI för Adaptive Forms ger en helt ny nivå av kraft och enkelhet i era formulärutvecklingsprocesser. Det gör att ni kan skapa bättre formulär snabbare än någonsin.
+
+![Generativ AI-assistent, adaptiv Forms](/help/forms/assets/generative-ai-assistant.png)
+
+De genererande AI-funktionerna är:
+
+* **AI-assistenten för produktfrågor**: Få svar på dina AEM formulärrelaterade frågor direkt. AI-assistenten fungerar som din egen personliga kunskapsbas och ger insiktsfull vägledning och rekommendationer direkt inom plattformen.
+
+* **Skapa anpassade formulär**: Skapa enkelt fullfjädrade formulär med generativa AI-frågor. Vår generativa AI genererar automatiskt användarvänliga formulär som minskar bortfall och personaliserar upplevelsen.
+
+* **Panelgenerering för Forms**: Generera formuläravsnitt som är anpassade efter specifika datainsamlingsbehov. Generera t.ex. avsnitt för insamling av betalningsinformation, kundpreferenser eller reseinformation.
+
+* **Ändra formulärlayouter**: Experimentera med olika layouter och designer med hjälp av allmänna AI-prompter. Testa olika layouter som guiden eller flikvyer för att hitta den som passar ditt formulär bäst. Använd Generative AI-prompter för att optimera formulären för mobilrespons och skapa visuellt engagerande formulär som användarna gillar.
+
+* **Konfigurera Skicka-åtgärd**: Använd generativa AI-uppmaningar för att enkelt konfigurera en skicka-åtgärd för formuläret. Välj från ett bibliotek med färdiga skicka-åtgärder eller från en lista med anpassade skicka-åtgärder som skapats och driftsatts av ditt eget utvecklingsteam.
 
 >[!IMPORTANT]
 >
-> Om du är intresserad av att gå med i Adobe Tidig Access Program för tidig åtkomst skickar du ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) för att begära åtkomst. Du kan begära åtkomst till alla eller alla specifika innovationer.
+> Om du är intresserad av att delta i programmet för tidig åtkomst av någon anledning skickar du ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) med en lista över funktioner du är intresserad av.
+
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
-
-### Rensa innehåll vid CDN med en självserverbaserad API-nyckel {#purge-cdn}
-
-Att ställa in TTL med HTTP-huvudet Cache-Control är ett effektivt sätt att balansera innehållets leveransprestanda och innehållets aktualitet. I scenarier där det är viktigt att omedelbart hantera uppdaterat innehåll kan det dock vara bra att rensa CDN-cachen direkt.
-
-[Lär dig hur](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token) du kan konfigurera en rensnings-API-token med hjälp av Cloud Manager konfigurationsflöde, så att du kan [anropa rensnings-API:er](/help/implementing/dispatcher/cdn-cache-purge.md), med någon av dessa varianter:
-* En URL
-* Flera URL-adresser som använder en tagg
-* Rensa fullständigt CDN-cache
-
-### Självserverkonfiguration av X-AEM-Edge-nyckel för kundhanterad CDN {#customermanaged-keys}
-
-Tidigare krävdes en supportanmälan för att generera den X-AEM-Edge-Key som krävs för att konfigurera ett kundhanterat CDN. Detta är nu självbetjäning genom att deklarera nyckelvärdet i en konfigurationsfil som distribueras med Configuration Pipeline, vilket tar bort eventuella förseningar när det gäller att komma igång med en ny miljö. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md#CDN-HTTP-value).
-
-### Varningar om trafikfilterregler {#traffic-filter-rules-alerts}
-
-Trafikfilterregler, som innehåller de valfria brandväggsreglerna för webbprogram (WAF), låter dig konfigurera vilken trafik som ska blockeras.
-
-Nu kan du [prenumerera på aviseringar](/help/security/traffic-filter-rules-including-waf.md#traffic-filter-rules-alerts) när trafikfilterreglerna aktiveras. E-postmeddelanden från Åtgärdscenter håller dig informerad om när vissa trafikförhållanden inträffar så att du kan vidta lämpliga åtgärder.
 
 ### Content Delivery related Tire Adobe Programs {#foundation-early-adopter}
 
@@ -152,33 +149,6 @@ Ungefär som AEM 6.5, skriver Apache/dispatcher ingest om kartor som placerats p
 
 Hanterad CDN i Adobe har nu stöd för [Edge Side Includes (ESI)](/help/implementing/dispatcher/edge-side-includes.md), ett markeringsspråk för dynamisk sammanställning av webbinnehåll på kantnivå. Genom att ta med ESI-fragment kan du cachelagra hela HTML-sidan vid CDN med högre TTL-värden, medan du oftare hämtar mindre avsnitt från ursprungsläget som kräver högre uppdateringsintervall (nedre TTL-värden). <!--Please reach out to **<aemcs-cdn-config-adopter@adobe.com>** for more information.-->
 
-### Meddelanden från Content Health Related Actions Center om tidiga Adobe-program {#actions-center-notifications}
-
-[Åtgärdscenter](/help/operations/actions-center.md) skickar e-postmeddelanden när viktiga incidenter inträffar, eller om något om koden eller konfigurationen visas, där du bör vidta förebyggande åtgärder. Adobe har nu introducerat flera nya typer av meddelanden som är kopplade till din innehållshälsa. Den här funktionen är tillgänglig via ett program som tagits i bruk tidigt. Kontakta Adobe kundtjänst om du vill delta.
-
-#### Sidorna innehåller ett stort antal noder {#page-nodes}
-
-Ett stort antal noder kan försämra återgivningsprestanda och minska sidinläsningstiden. Ta emot ett proaktivt meddelande via Åtgärdscenter när ett stort antal noder identifieras på en sida, vilket gör att du kan vidta nödvändiga åtgärder för att minska det totala antalet noder på en sida.
-
-#### Stort antal arbetsflödesinstanser som körs {#running-workflows}
-
-Arbetsflödesmotorns prestanda påverkas om det finns ett stort antal arbetsflöden som körs i redigeringsmiljön. Du får ett proaktivt meddelande via Åtgärdscenter när ett stort antal arbetsflödesinstanser som körs identifieras. Med den här processen kan du konfigurera ett rensningsjobb så att onödiga arbetsflöden avbryts.
-
-#### Användare som lagts till direkt i anpassade grupper {#users-customgroups}
-
-Du får ett proaktivt meddelande via Åtgärdscenter när användare läggs till direkt i anpassade grupper. Med den här processen kan du följa de bästa IMS-metoderna genom att lägga till användare i relevanta IMS-grupper och sedan inkludera dessa IMS-grupper som medlemmar i AEM.
-
-#### JCR-innehåll saknas {#jcr-content}
-
-Åtgärdscenter meddelar dig aktivt när JCR-innehåll saknas. På så sätt kan du lägga till innehåll som saknas och förhindra att vissa AEM Assets-funktioner misslyckas.
-
-#### Slutförda arbetsflöden har inte rensats {#workflows}
-
-Åtgärdscenter meddelar dig aktivt när slutförda arbetsflöden som är över 90 dagar gamla inte har rensats. Den här metoden hjälper till att förbättra prestanda för arbetsflödesmotorn genom att minska antalet arbetsflödesinstanser.
-
-#### Sling-resurs saknas {#sling-resource}
-
-Actions Center meddelar dig aktivt när en saknad Sling-resurs upptäcks. På så sätt kan du lägga till den saknade resursen och förhindra fel i vissa AEM Assets-funktioner.
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
