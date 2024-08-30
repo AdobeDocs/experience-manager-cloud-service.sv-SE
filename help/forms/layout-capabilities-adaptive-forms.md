@@ -4,9 +4,9 @@ description: Layout och utseende för Adaptive Forms på olika enheter styrs av 
 feature: Adaptive Forms, Foundation Components
 exl-id: e30c6ff9-692b-4415-8f14-b4ef616b2d12
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: ba98b4e17a1245a5a5d208b4bf8698b4da4e9f6b
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '784'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,8 @@ ht-degree: 0%
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/layout-capabilities-adaptive-forms.html) |
-| AEM as a Cloud Service | Den här artikeln |
+| AEM as a Cloud Service (kärnkomponenter) | [Klicka här](/help/forms/layout-capabilities-adaptive-forms-core-components.md) |
+| AEM as a Cloud Service (Foundation Components) | Den här artikeln |
 
 Med [!DNL Adobe Experience Manager] kan du skapa lättanvända adaptiva Forms som ger användarna dynamiska upplevelser. Formulärlayouten styr hur objekt och komponenter visas i ett adaptivt formulär.
 

@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7a1181a372928602b8fd0eb4699789217473a94c
+source-git-commit: c7b78b5c4e4851d57314a437b3b7fa06c1f167d5
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '892'
 ht-degree: 0%
 
 ---
@@ -128,6 +128,26 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 * [Skapa en anpassad funktion för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/custom-function-core-component-create-function.md)
 * [Exempel på utveckling och användning av en anpassad funktion](/help/forms/custom-function-core-components-use-cases.md)
 
+
+## Forms Portal{#forms-portal-see-also}
+
+* [Introduktion till Forms Portal-komponenter](/help/forms/configure-forms-portal.md)
+* [Visa dina formulär på webbplatssidan](/help/forms/list-forms-on-sites-page.md)
+* [Spara formulären som utkast](/help/forms/save-core-component-based-form-as-draft.md)
+* [Lägga till formulärlänkar till en webbplatssida](/help/forms/add-form-link-to-aem-sites-page.md)
+
+
+## Cloud Manager IP Tillåtelselista och rörledningar för frontendjur {#allowlist-frontend-pipeline}
+
+>[!IMPORTANT]
+>
+>För frontendpipelinen måste följande IP-Tillåtelselista läggas till i Cloud Manager i förväg.
+>Om det behövs kan du [lägga till IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md) genom att kopiera adressblocket nedan. Varje adress avgränsas med kommatecken. Klistra in blocket i fältet **IP-adress/CIDR** i dialogrutan **Lägg till IP-Tillåtelselista** . Placera markören precis efter det första kommatecknet i adresslistan och tryck på **Retur**. Spara listan.
+>Om du vill undvika avbrott i körningen av frontlinjens slutpipline måste du se till att det här IP-Tillåtelselista läggs till i Cloud Manager *innan* du aktiverar piplinjen.
+>
+>**Cloud Manager IP Tillåtelselista**
+>52.254.106.192/28,20.186.185.181,52.254.106.240/28,52.254.107.128/28,52.254.105.192/28,52.254.106.176/28,20.186.185.227,52.254.106.144/28,52.254.107.64/28,20.186.185.239,20.22.83.112,52.254.107.80/28,52.254.107.144/28,52.254.106.224/28,20.14.241.153,52.254.107.0/28,52.254.107.32/28,52.254.106.208/28,40.70.154.136/29,52.254.106.160/28,52.254.107.16/28,52.254.106.0/28,4.152.211.251
+>   
 
 ## Lägg till en Cloud Manager IP Tillåtelselista och rörledning för frontendsupport {#add-cm-allowlist-frontend-pipeline}
 
