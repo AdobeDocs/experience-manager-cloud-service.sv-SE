@@ -4,9 +4,9 @@ description: Lär dig hur du tar bort cachelagrade objekt från CDN-cachen i Ado
 feature: CDN Cache
 exl-id: 4d091677-b817-4aeb-b131-7a5407ace3e0
 role: Admin
-source-git-commit: 85cef99dc7a8d762d12fd6e1c9bc2aeb3f8c1312
+source-git-commit: 5b777171cb9246c2a0174985e060d7d1b6ed8591
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '450'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,8 @@ Alla rensningsvariationer har följande gemensamt:
 
 >[!CAUTION]
 >Tömning av CDN-cachen, särskilt med den hårda flaggan, ökar trafiken vid källan och kan leda till ett driftstopp om det inte körs som det ska.
+
+Du kan referera till [en självstudie](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache) som fokuserar på att konfigurera rensningsnycklar och utföra rensning av CDN-cache.
 
 ## Rensa en URL {#single-purge}
 
