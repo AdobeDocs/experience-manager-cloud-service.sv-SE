@@ -4,9 +4,9 @@ description: Lär dig hur du använder Cloud Acceleration Manager för att impor
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
 feature: Migration
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 4d34dc8464a51bcc11ee435de4d19183b2f3e3b2
 workflow-type: tm+mt
-source-wordcount: '2905'
+source-wordcount: '2982'
 ht-degree: 1%
 
 ---
@@ -214,11 +214,20 @@ Bästa tillvägagångssätt visar att om ett **icke-rensat**-inlägg måste kör
 >abstract="En vanlig orsak till att ett fel uppstår i en förtäring är att den maximala storleken för egenskapsvärden för noden har överskridits. Följ dokumentationen, inklusive de som rör BPA-rapporten, för att åtgärda detta."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html" text="Krav för migrering"
 
-Nodegenskapsvärden som lagras i MongoDB får inte överskrida 16 MB. Om ett nodvärde överskrider den storlek som stöds misslyckas importen och loggen innehåller ett `BSONObjectTooLarge`-fel och anger vilken nod som överskrider maxvärdet. Detta är en MongoDB-begränsning.
+Nodegenskapsvärden som lagras i MongoDB får inte överskrida 16 MB. Om ett nodvärde överskrider den storlek som stöds misslyckas importen och loggen innehåller antingen:
+
+* ett `BSONObjectTooLarge`-fel och ange vilken nod som överskrider maxvärdet, eller
+* ett `BsonMaximumSizeExceededException`-fel, som anger att det finns en nod som sannolikt innehåller unicode-tecken som överskrider den maximala storleken **
+
+Detta är en MongoDB-begränsning.
 
 Mer information finns i `Node property value in MongoDB`-anteckningen i [Krav för verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/prerequisites-content-transfer-tool.md). Där finns också en länk till ett Oak-verktyg som kan hjälpa dig att hitta alla stora noder. När alla noder med stora storlekar har åtgärdats kör du extraheringen och intaget igen.
 
 Du kan undvika den här begränsningen genom att köra [Best Practices Analyzer](/help/journey-migration/best-practices-analyzer/using-best-practices-analyzer.md) på AEM källinstans och granska resultatet som visas, särskilt [&quot;Repository Structure som inte stöds&quot; (URS)](https://experienceleague.adobe.com/en/docs/experience-manager-pattern-detection/table-of-contents/urs) -mönstret.
+
+>[!NOTE]
+>
+>[Best Practices Analyzer](/help/journey-migration/best-practices-analyzer/using-best-practices-analyzer.md) version 2.1.50+ rapporterar stora noder som innehåller unicode-tecken som överskrider den maximala storleken. Kontrollera att du kör den senaste versionen. BPA-versioner före 2.1.50 identifierar inte och rapporterar om dessa stora noder och de måste identifieras separat med det nödvändiga Oak-verktyget som nämns ovan.
 
 ### Inmatningen har avbrutits {#ingestion-rescinded}
 
