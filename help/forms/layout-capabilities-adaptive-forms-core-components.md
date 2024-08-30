@@ -4,7 +4,7 @@ description: Layout och utseende för Adaptive Forms på olika enheter styrs av 
 feature: Adaptive Forms, Core Components
 keywords: Layout för adaptiv form baserad på kärnkomponenter, olika layouter för formulär, AEM för dynamiska formulärlayouter, AEM Cloud Service formulärlayouter, formulärlayouttyper i AEM kärnkomponenter, adaptiva formulärlayouter
 role: User, Developer, Admin
-source-git-commit: 0397e5ec20b48a45df74d7d1c03eaae3739000dd
+source-git-commit: 9f14950170cc92d1ab433fdaa1a5d68b4dc53484
 workflow-type: tm+mt
 source-wordcount: '2094'
 ht-degree: 0%
@@ -326,8 +326,6 @@ Du kan också lägga till de valideringar som krävs för komponenterna efter be
 ## Hur ersätter man en befintlig layout med en ny layout?
 
 Du kan ersätta en layout för ett formulär med en ny layout, som bland annat innebär att ändra hur komponenterna ordnas och visas i ett formulär.
-
-
 
 Utför följande steg för att ersätta den befintliga layouten för ett formulär:
 
