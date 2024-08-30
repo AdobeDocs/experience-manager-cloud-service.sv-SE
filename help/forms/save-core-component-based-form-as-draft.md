@@ -4,9 +4,9 @@ description: Lär dig spara grundkomponentbaserade adaptiva formulär som utkast
 feature: Adaptive Forms, Core Components
 exl-id: c0653bef-afeb-40c1-b131-7d87ca5542bc
 role: User, Developer
-source-git-commit: 2561145c37fe2ba6a38482fb2d1be614a971b418
+source-git-commit: 2933b3be569724800a77b4ea93e91441046746f6
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1318'
 ht-degree: 0%
 
 ---
@@ -44,6 +44,8 @@ Komponenten **Utkast och överföringar** behöver en lagringskonfiguration för
 1. Ange namnet på lagringskontot [!DNL Azure] i fälten **[!UICONTROL Azure Storage Account]** och **[!UICONTROL Azure Access Key]**.
 
    ![Azure-lagringskonfiguration](/help/forms/assets/save-form-as-draft-azure-storage.png)
+
+   Ange `Connection String` i textrutan `Azure Storage Account` och `Azure Key` i textrutan `Azure Access key`.
 
 1. Klicka på **Spara**.
 
