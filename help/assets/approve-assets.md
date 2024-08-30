@@ -2,9 +2,10 @@
 title: Godkänn resurser i Experience Manager
 description: Lär dig godkänna resurser i  [!DNL Experience Manager].
 role: User
-source-git-commit: 540aa876ba7ea54b7ef4324634f6c5e220ad19d3
+exl-id: fe61a0f1-94d3-409a-acb9-195979668c25
+source-git-commit: 9b3b93100c45c7053549c3f9899a344ca7db104d
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -36,7 +37,7 @@ Om du behöver visa egenskapen som fältet **[!UICONTROL Review Status]** är ma
 
 ## Godkänn resurser {#approve-assets}
 
-Du kan godkänna resurser i både [!DNL Experience Manager] och [!DNL Experience Manager Assets]. Så här godkänner du resurser i [!DNL Experience Manager]:
+Så här godkänner du resurser i [!DNL Experience Manager Admin view]:
 
 1. Markera resursen/resurserna och klicka på **[!UICONTROL Properties]** i den övre rutan.
 1. Bläddra nedåt till **[!UICONTROL Review Status]** på fliken **[!UICONTROL Basic]**.
@@ -51,7 +52,7 @@ Du kan godkänna resurser i både [!DNL Experience Manager] och [!DNL Experience
 ## Godkänn resurser gruppvis {#bulk-approve-assets}
 
 Effektivisera arbetsflödet genom att snabbt godkänna flera resurser samtidigt. Du kan massgodkänna resurser för att snabba upp godkännandeprocessen, spara tid och öka produktiviteten.
-<br>Följ de här stegen för att godkänna gruppresurser i [!DNL Experience Manager]:
+<br>Följ de här stegen för att godkänna gruppresurser i [!DNL Experience Manager Admin view]:
 
 1. Skapa en mapp i författarmiljön (https://author-pXXX-eYYY.adobeaemcloud.com). Ersätt _XXX_ med ditt program-ID och _YY_ med miljö-ID från Experience Manager.
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]**.
@@ -102,4 +103,3 @@ Så här kopierar du en leverans-URL för en godkänd resurs i databasen:
    >[!NOTE]
    >
    >Alternativet att kopiera leverans-URL för godkända mediefiler är bara tillgängligt i Assets-vyn.
-

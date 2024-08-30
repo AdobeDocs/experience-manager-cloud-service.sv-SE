@@ -4,9 +4,9 @@ description: Så här kommer du åt, inloggningsupplevelsen av, användningsfall
 role: User, Leader
 exl-id: 51ae6657-f6b5-44b0-a47f-451735ab0d01
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
+source-git-commit: d71107be2831bf00bff3856d7cd0e10818ec6be5
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '347'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,10 @@ Om du är en del av olika organisationer kan du även ändra organisationen och 
 Om du vill ändra [!UICONTROL Experience Cloud preferences] klickar du på [!UICONTROL Preferences].
 
 ![Inställning för att växla mörkt och ljust tema](assets/theme-change.png)
+
+>[!NOTE]
+>
+>Om du navigerar till Assets-vyn och ser ett `Network Error`-meddelande kontrollerar du att du har utfört instruktionerna som nämns i artikeln [Cross-Origin Resource Sharing (CORS) ](/help/headless/deployment/cross-origin-resource-sharing.md) .
 
 ## [!DNL Assets View] användningsfall {#use-cases}
 
