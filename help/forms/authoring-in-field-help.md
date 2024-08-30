@@ -3,10 +3,13 @@ title: Hur lägger jag till hjälptext AEM adaptiva Forms-fält?
 description: Med AEM Forms kan du lägga till sammanhangsberoende hjälp i anpassade formulärfält och paneler, som text eller multimedia, inklusive videor.
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-docset: aem65
-source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
+feature: Adaptive Forms, Foundation Components
+role: User
+hide: true
+hidefromtoc: true
+source-git-commit: d661f869f1264e4a2317692ab6fd22263c89e072
 workflow-type: tm+mt
-source-wordcount: '384'
+source-wordcount: '369'
 ht-degree: 0%
 
 ---
@@ -64,8 +67,3 @@ Utöver sammanhangsberoende hjälp för formulärfält kan du ange hjälp på pa
 Om du lägger till hjälp för panelen visas en **?Ikonen** bredvid panelbeskrivningen. När du klickar på ikonen visas det innehåll som lagts till i hjälpdelen i dialogrutan Redigera i panelen.
 
 ![Exempel på sammanhangsberoende hjälp på formulärpanelsnivå](assets/photoshop-1.png)
-
->[!MORELIKETHIS]
->
->* [Lägg till platshållartext i formulärfält](/help/forms/placeholder-text-in-aem-forms.md)
->* [Lägg till fotnot i ett anpassat formulär för formaterad text](/help/forms/footnotes-richtextsupport.md)

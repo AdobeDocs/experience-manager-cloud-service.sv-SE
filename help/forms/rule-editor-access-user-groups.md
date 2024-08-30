@@ -4,7 +4,9 @@ description: Det finns olika typer av användare med olika kunskaper som fungera
 feature: Adaptive Forms
 role: User
 level: Beginner, Intermediate
-source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
+hide: true
+hidefromtoc: true
+source-git-commit: 937bd4653e454beea3111cfc7ef7b4bbc1ace193
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%

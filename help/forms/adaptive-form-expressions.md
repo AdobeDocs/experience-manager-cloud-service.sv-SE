@@ -1,7 +1,11 @@
 ---
 title: Vad är adaptiva formuläruttryck?
 description: Använd adaptiva Forms-uttryck för att lägga till automatisk validering, beräkning och aktivera eller inaktivera synlighet för ett avsnitt.
-source-git-commit: bae9a5178c025b3bafa8ac2da75a1203206c16e1
+feature: Adaptive Forms, Foundation Components
+role: User
+hide: true
+hidefromtoc: true
+source-git-commit: 937bd4653e454beea3111cfc7ef7b4bbc1ace193
 workflow-type: tm+mt
 source-wordcount: '2686'
 ht-degree: 0%

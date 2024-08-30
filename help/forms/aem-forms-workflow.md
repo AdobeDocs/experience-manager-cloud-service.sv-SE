@@ -4,9 +4,13 @@ seo-title: Rapidly build Adaptive Forms-based processes, automate document servi
 description: 'Använd AEM Forms Workflow för att automatisera och snabbt skapa affärsprocessarbetsflöden. Exempel: granska och godkänna, PDF Generation, Adobe Sign arbetsflöden.'
 uuid: 797ba0f7-a378-45ac-9f82-fa9a952027be
 topic-tags: publish, document_services
-source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
+feature: Adaptive Forms
+role: User, Developer
+hide: true
+hidefromtoc: true
+source-git-commit: d661f869f1264e4a2317692ab6fd22263c89e072
 workflow-type: tm+mt
-source-wordcount: '2348'
+source-wordcount: '2310'
 ht-degree: 0%
 
 ---
@@ -197,7 +201,7 @@ Du kan starta eller utlösa ett Forms-centrerat arbetsflöde genom att:
 
 ### Skicka ett program från AEM Inbox {#inbox}
 
-Arbetsflödesprogrammet som du skapade är tillgängligt som ett program i Inbox. Användare som är medlemmar i gruppen [!DNL workflow-users] kan fylla i och skicka programmet som utlöser det associerade arbetsflödet. Mer information om hur du använder AEM Inbox för att skicka program och hantera uppgifter finns i [Hantera Forms-program och -uppgifter i AEM Inkorg](manage-applications-/help/sites-cloud/authoring/inbox.md).
+Arbetsflödesprogrammet som du skapade är tillgängligt som ett program i Inbox. Användare som är medlemmar i gruppen [!DNL workflow-users] kan fylla i och skicka programmet som utlöser det associerade arbetsflödet.
 
 <!-- ### Submitting an application from [!DNL AEM Forms] App {#afa}
 
@@ -270,9 +274,3 @@ You can use the Assign Task and Send Email steps of AEM Workflows to send an ema
 ### Rensa arbetsflödesinstanser {#purge-workflow-instances}
 
 Om du minimerar antalet arbetsflödesinstanser ökas arbetsflödesmotorns prestanda, så att du regelbundet kan rensa avslutade eller pågående arbetsflödesinstanser från databasen. Mer information finns i [Regelbunden rensning av arbetsflödesinstanser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/maintenance.html) tömning av arbetsflödesinstanser
-
-
->[!MORELIKETHIS]
->
->* [Använd AEM översättningsarbetsflöde för att lokalisera adaptiv Forms och postdokument](/help/forms/using-aem-translation-workflow-to-localize-adaptive-forms.md)
->* [Variabler i Forms-centrerade AEM ](/help/forms/variable-in-aem-workflows.md)

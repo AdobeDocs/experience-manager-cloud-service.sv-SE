@@ -6,10 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 feature: Adaptive Forms, Foundation Components
 discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
-docset: aem65
 exl-id: e4d8bcb9-ce1f-425e-b35c-d0a79fa771f3
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: bcd3a2a813833d7c1705e45829bcf769645cd154
 workflow-type: tm+mt
 source-wordcount: '2135'
 ht-degree: 0%
@@ -25,7 +24,7 @@ ht-degree: 0%
 | AEM as a Cloud Service (kärnkomponenter) | [Klicka här](/help/forms/adaptive-form-fragments-core-components.md) |
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html?lang=en) |
 
-Även om varje formulär är utformat för ett specifikt syfte, finns det några gemensamma segment i de flesta formulär, till exempel att tillhandahålla personlig information som namn och adress, familjeuppgifter, inkomstuppgifter och så vidare. Formulärutvecklare måste skapa dessa gemensamma segment varje gång ett nytt formulär skapas. Adaptiv Forms är en praktisk mekanism för att skapa formulärsegment som en panel eller en grupp fält bara en gång och återanvända dem i Adaptive Forms. Dessa återanvändbara och fristående segment kallas adaptiva formulärfragment.
+Även om varje formulär är utformat för ett specifikt syfte, finns det några vanliga segment i de flesta formulär, till exempel att tillhandahålla personlig information som namn och adress, familjeuppgifter, inkomstuppgifter och så vidare. Formulärutvecklare måste skapa dessa gemensamma segment varje gång ett nytt formulär skapas. Adaptiv Forms är en praktisk mekanism för att skapa formulärsegment som en panel eller en grupp fält bara en gång och återanvända dem i Adaptive Forms. Dessa återanvändbara och fristående segment kallas adaptiva formulärfragment.
 
 
 ## Skapa ett fragment {#create-a-fragment}
@@ -241,7 +240,7 @@ Du kan utföra flera åtgärder på adaptiva formulärfragment med användargrä
  </tbody>
 </table>
 
-## Lokalisera adaptiva formulär som innehåller fragment {#localizing-adaptive-form-containing-fragments}
+## Lokalisera adaptivt formulär som innehåller fragment {#localizing-adaptive-form-containing-fragments}
 
 Om du vill lokalisera ett adaptivt formulär som innehåller adaptiva formulärfragment måste du lokalisera fragmentet och formuläret separat. Tanken är att lokalisera ett fragment en gång och återanvända det i flera adaptiva Forms.
 

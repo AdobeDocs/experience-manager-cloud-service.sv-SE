@@ -3,7 +3,11 @@ title: Hur väljer man användare i AEM?
 description: Lär dig hur du väljer en användare eller grupp för ett  [!DNL AEM Forms] arbetsflöde vid körningen.
 content-type: troubleshooting
 topic-tags: publish
-source-git-commit: bae9a5178c025b3bafa8ac2da75a1203206c16e1
+feature: Adaptive Forms
+role: User
+hide: true
+hidefromtoc: true
+source-git-commit: 937bd4653e454beea3111cfc7ef7b4bbc1ace193
 workflow-type: tm+mt
 source-wordcount: '833'
 ht-degree: 0%
