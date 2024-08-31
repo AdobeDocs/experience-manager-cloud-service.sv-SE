@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-autentiseringsuppgifter och autent
 feature: Dispatcher
 exl-id: a5a18c41-17bf-4683-9a10-f0387762889b
 role: Admin
-source-git-commit: e8c40d6205bfa2de18374e5161fe0fea42c8ce32
+source-git-commit: c8059260ab0ff13ed85f55eda2e09ca5cb678fa9
 workflow-type: tm+mt
-source-wordcount: '1283'
+source-wordcount: '1379'
 ht-degree: 0%
 
 ---
@@ -73,6 +73,29 @@ Ytterligare egenskaper är:
 
 >[!NOTE]
 >Edge-nyckeln måste konfigureras som en [hemlig Cloud Manager-miljövariabel](/help/operations/config-pipeline.md#secret-env-vars) innan konfigurationen som refererar till den distribueras.
+
+### Migrera säkert för att minska risken för blockerad trafik {#migrating-safely}
+
+Om webbplatsen redan är aktiv bör du vara försiktig när du migrerar till kundhanterad CDN eftersom en felkonfiguration kan blockera allmän trafik. Detta beror på att endast begäranden med det förväntade X-AEM-Edge-Key-huvudvärdet accepteras av Adobe CDN. Ett tillvägagångssätt rekommenderas när ett ytterligare villkor tillfälligt inkluderas i autentiseringsregeln, vilket gör att den bara utvärderar begäran om en testrubrik ingår:
+
+```
+    - name: edge-auth-rule
+        when:
+          allOf:  
+            - { reqProperty: tier, equals: "publish" }
+            - { reqHeader: x-edge-test, equals: "test" }
+        action:
+          type: authenticate
+          authenticator: edge-auth
+```
+
+Följande `curl`-begärandemönster kan användas:
+
+```
+curl https://publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com -H "X-Forwarded-Host: example.com" -H "X-AEM-Edge-Key: <CONFIGURED_EDGE_KEY>" -H "x-edge-test: test"
+```
+
+När testningen är klar kan det ytterligare villkoret tas bort och konfigurationen distribueras på nytt.
 
 ## Rensa API-token {#purge-API-token}
 
