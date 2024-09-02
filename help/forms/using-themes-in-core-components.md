@@ -3,11 +3,10 @@ title: Hur skapar och använder vi teman i Adaptive Forms?
 description: Du kan använda teman för att utforma och ge en visuell identitet till ett adaptivt formulär med hjälp av kärnkomponenter. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
 keywords: grundläggande komponenter i adaptiv formulärformatering. använda tema i Core Components, utforma adaptiv form, anpassa teman
 feature: Adaptive Forms, Core Components
-exl-id: 11c52b66-dbb1-4c47-a94d-322950cbdac1
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: 076ee3616ad56b4d463d93e407a9e7e67e54b4ac
 workflow-type: tm+mt
-source-wordcount: '2833'
+source-wordcount: '2770'
 ht-degree: 0%
 
 ---
@@ -172,7 +171,7 @@ Så här klonar du ett tema:
 
 #### 3. Anpassa ett tema {#customize-the-theme}
 
-Du kan anpassa enskilda komponenter eller göra ändringar på temanivå med hjälp av globala variabler i ett tema. Ändringar som görs i globala variabler påverkar alla enskilda komponenter. Du kan till exempel använda globala variabler för att ändra kantfärgen för alla komponenter i ett adaptivt formulär och en ljus fyllningsfärg för att ange CTA (Call to action) med hjälp av knappkomponenten:
+Du kan anpassa enskilda komponenter eller göra ändringar på temanivå med hjälp av globala variabler i ett tema. Ändringar som görs i globala variabler påverkar alla enskilda komponenter. Du kan till exempel använda globala variabler för att ändra kantfärgen för alla komponenter i ett adaptivt formulär och en ljus fyllningsfärg för att ställa in CTA (Call to action) med hjälp av knappkomponenten:
 
 * [Ange format för temanivåer](#theme-customization-global-level)
 
@@ -428,11 +427,6 @@ Adaptiva formulärteman används som en del av en adaptiv formulärmall för att
 * **Ändrar behållarpanelens layoutbredd**
 
   Du bör inte ändra bredden på behållarpanelens layout. När du anger bredden på en behållarpanel blir den statisk och anpassas inte till olika skärmar.
-
-* **Använda en formulärredigerare eller temaredigerare för att arbeta med sidhuvud och sidfot**
-
-  Använd en temaredigerare om du vill formatera sidhuvudet och sidfoten med formatalternativ som teckensnittsstil, bakgrund och genomskinlighet.
-Om du vill ange information som logotypbild, företagsnamn i sidhuvudet och copyrightinformation i sidfoten använder du alternativen för formulärredigeraren.
 
 ## Frågor och svar {#faq}
 
