@@ -4,9 +4,9 @@ description: Lär dig hur du använder Real Use Monitoring (RUM) för att hämta
 exl-id: 91fe9454-3dde-476a-843e-0e64f6f73aaf
 feature: Administering
 role: Admin
-source-git-commit: 2515bc51fd54b014ffb701a8aef38cd08d6725b3
+source-git-commit: 1bb463fe59e89e6360dceefdaaec395084fc80c5
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1213'
 ht-degree: 0%
 
 ---
@@ -34,11 +34,6 @@ Med RUM spåras nyckeltal från det att URL:en startas tills begäran skickas ti
 ## Vem kan utnyttja en tjänst för övervakning av verkligt bruk? {#who-can-benefit-from-rum-service}
 
 AEM har utvecklat RUM för att hjälpa kunder och Adobe att förstå hur besökarna interagerar med AEM webbplatser. RUM kan användas för att diagnostisera prestandaproblem och mäta hur effektiva experimenten är. RUM bevarar besökarnas integritet genom stickprov - endast en liten del av alla sidvisningar övervakas - och ingen personligt identifierbar information samlas in.
-
-
-## Förstå hur tjänsten för övervakning av faktisk användning fungerar {#understand-how-the-rum-service-works}
-
-AEM använder RUM för att hjälpa kunder och Adobe att förstå hur besökarna interagerar med AEM webbplatser. Det hjälper dem att diagnostisera prestandaproblem och mäta hur effektiva experimenten är. RUM bevarar besökarnas integritet genom stickprov - endast en liten del av alla sidvisningar övervakas - och ingen personligt identifierbar information samlas in.
 
 ## Övervakningstjänst och sekretess för användning i realtid {#rum-service-and-privacy}
 
