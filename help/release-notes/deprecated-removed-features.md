@@ -4,7 +4,7 @@ description: Versionsinformation som är specifik för borttagna och borttagna f
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
 feature: Release Information
 role: Admin
-source-git-commit: d80872b1df4d31d784745dabeb0e1680fc921cb8
+source-git-commit: c5057120d68e1119211c7733a8eb0424590096bd
 workflow-type: tm+mt
 source-wordcount: '2172'
 ht-degree: 0%
@@ -18,8 +18,7 @@ ht-degree: 0%
 >title="Borttagna funktioner i AEM as a Cloud Service"
 >abstract="AEM as a Cloud Service har en distributionsmodell som bygger på molnet. Vissa funktioner har ersatts av molnbaserade motsvarigheter och på den här fliken visas dessa funktioner."
 
-
-Adobe utvärderar ständigt produktfunktioner och kan med tiden förnya eller ersätta äldre funktioner med modernare alternativ för att förbättra det totala kundvärdet, alltid under noggrant övervägande av bakåtkompatibilitet. Eftersom [!DNL Adobe Experience Manager] som [!DNL Cloud Service] tillhandahåller en molnbaserad distributionsmodell har vissa funktioner ersatts av molnbaserade motsvarigheter.
+Adobe utvärderar ständigt produktfunktioner för att med tiden kunna förnya eller ersätta äldre funktioner med modernare alternativ för att förbättra det totala kundvärdet, alltid under noggrant övervägande av bakåtkompatibilitet. Eftersom [!DNL Adobe Experience Manager] som [!DNL Cloud Service] tillhandahåller en molnbaserad distributionsmodell har vissa funktioner ersatts av molnbaserade motsvarigheter.
 
 Följande regler gäller för att kommunicera den förestående borttagningen/ersättningen av [!DNL Experience Manager]-funktioner:
 
