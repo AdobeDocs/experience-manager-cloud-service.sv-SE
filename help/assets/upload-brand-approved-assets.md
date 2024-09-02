@@ -2,17 +2,19 @@
 title: Överför varumärkesgodkända resurser till  [!DNL Content Hub]
 description: Lär dig hur du överför varumärkesgodkända mediefiler till Content Hub
 role: User
-source-git-commit: c85b4e1c828ed1fb7f4063f965fe116215ca0244
+exl-id: f1be7cfc-1803-4c17-bb58-947104aa883c
+source-git-commit: 85fbbcf77bd5b2ef1a68454e2cf1d2202c8f90c4
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '856'
 ht-degree: 0%
 
 ---
 
-
 # Överför varumärkesgodkända mediefiler till Content Hub {#upload-brand-approved-assets-content-hub}
 
 [Content Hub-användare med behörighet att lägga till resurser](/help/assets/deploy-content-hub.md#onboard-content-hub-users-add-assets) kan lägga till resurser i Content Hub antingen från det lokala filsystemet eller importera resurser från datakällor i OneDrive eller Dropbox. Alla resurser visas på den översta nivån i Content Hub, oavsett vilken mappstruktur som finns i det lokala filsystemet eller datakällorna OneDrive och Dropbox för att förbättra sökfunktionerna.
+
+Resurserna som markerats som `Approved` i Assets as a Cloud Service är automatiskt tillgängliga i Content Hub. Mer information finns i [Godkänn resurser för Content Hub](/help/assets/approve-assets-content-hub.md).
 
 Om du vill förbättra resurssökningen ytterligare kan du göra följande med Content Hub:
 
@@ -72,3 +74,14 @@ Så här lägger du till resurser i Content Hub från datakällor i OneDrive ell
 
 Administratörer kan också konfigurera obligatoriska och valfria fält som visas när resurser överförs, som kampanjnamn, nyckelord, kanaler och så vidare. Mer information finns i [Konfigurera Content Hub användargränssnitt](configure-content-hub-ui-options.md#configure-upload-options-content-hub).
 
+## Hantera resurser som överförts med Content Hub {#manage-assets-uploaded-using-content-hub}
+
+[Content Hub-användare med behörighet att lägga till resurser](/help/assets/deploy-content-hub.md#onboard-content-hub-users-add-assets) kan [lägga till resurser i Content Hub](/help/assets/upload-brand-approved-assets.md) antingen från det lokala filsystemet eller importera resurser från datakällor i OneDrive eller Dropbox. Alla resurser visas på den översta nivån i Content Hub, oavsett vilken mappstruktur som finns i det lokala filsystemet eller datakällorna OneDrive och Dropbox för att förbättra sökfunktionerna.
+
+Visningen av resurser som överförts med Content Hub beror på om du har [aktiverat alternativet för automatiskt godkännande](/help/assets/configure-content-hub-ui-options.md#configure-import-options-content-hub):
+
+* Om växlingsknappen **[!UICONTROL Auto-approval]** är aktiverad blir de resurser som du överför med Content Hub automatiskt tillgängliga.
+
+* Om **[!UICONTROL Auto-approval]**-växeln är inaktiverad visas inte de resurser som du överför med Content Hub automatiskt. Resurserna är tillgängliga i mappen `hydrated-assets` i din Assets as a Cloud Service-miljö. Navigera till mappen och [massredigera](#bulk-approve-assets-content-hub) statusen för dessa resurser till `Approved` för de resurser som ska visas i Content Hub.
+
+![Content Hub godkännandeprocess](/help/assets/assets/content-hub-approval.png)
