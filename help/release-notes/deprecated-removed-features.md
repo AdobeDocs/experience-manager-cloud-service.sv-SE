@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för borttagna och borttagna f
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: d80872b1df4d31d784745dabeb0e1680fc921cb8
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '2172'
 ht-degree: 0%
 
 ---
@@ -95,12 +95,6 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
     <td>Använd Sling Discovery API som ett alternativ</td>
     <td>2015</td>
     <td>borttagen</td>
-  </tr>
-  <tr>
-    <td>org.apache.sling.settings</td>
-    <td>AEM as a Cloud Service stöder inte körningslägen eller filsystemsåtkomst vid körning. </td>
-    <td>10/5/20</td>
-    <td>I slutet av 2021</td>
   </tr>
   <tr>
     <td>org.apache.fop.apps</td>
