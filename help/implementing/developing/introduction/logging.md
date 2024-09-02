@@ -4,9 +4,9 @@ description: Lär dig hur du använder loggning för AEM as a Cloud Service för
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
 feature: Log Files, Developing
 role: Admin, Architect, Developer
-source-git-commit: 1289da67452be7fc0fa7f3126d2a3dbf051aa9b5
+source-git-commit: bc103cfe43f2c492b20ee692c742189d6e454856
 workflow-type: tm+mt
-source-wordcount: '2831'
+source-wordcount: '2834'
 ht-degree: 0%
 
 ---
@@ -144,12 +144,13 @@ AEM loggnivåer ställs in per miljötyp via OSGi-konfiguration, som i sin tur �
 
 AEM Java-loggar definieras som OSGi-konfiguration och är därmed avsedda för specifika AEM as a Cloud Service-miljöer med hjälp av körlägesmappar.
 
-Konfigurera java-loggning för anpassade Java-paket via OSGi-konfigurationer för Sling LogManager-fabriken. Det finns två konfigurationsegenskaper som stöds:
+Konfigurera java-loggning för anpassade Java-paket via OSGi-konfigurationer för Sling LogManager-fabriken. Det finns tre konfigurationsegenskaper som stöds:
 
 | OSGi Configuration-egenskap | Beskrivning |
 |---|---|
-| org.apache.sling.commons.log.names | Java-paketen som loggsatser ska samlas in för. |
-| org.apache.sling.commons.log.level | Loggnivån som Java-paketen ska loggas på, som anges av org.apache.sling.Commons.log.names |
+| `org.apache.sling.commons.log.names` | Java-paketen som loggsatser ska samlas in för. |
+| `org.apache.sling.commons.log.level` | Loggnivån som Java-paketen ska loggas på, som anges av `org.apache.sling.commons.log.names` |
+| `org.apache.sling.commons.log.file` | Ange målet för utdata: `logs/error.log` |
 
 Om du ändrar andra konfigurationsegenskaper för LogManager OSGi kan det uppstå tillgänglighetsproblem i AEM as a Cloud Service.
 
@@ -163,6 +164,7 @@ Följande är exempel på de rekommenderade loggningskonfigurationerna (med plat
 {
     "org.apache.sling.commons.log.names": ["com.example"],
     "org.apache.sling.commons.log.level": "debug"
+    "org.apache.sling.commons.log.file": "logs/error.log"
 }
 ```
 
@@ -174,6 +176,7 @@ Följande är exempel på de rekommenderade loggningskonfigurationerna (med plat
 {
     "org.apache.sling.commons.log.names": ["com.example"],
     "org.apache.sling.commons.log.level": "warn"
+    "org.apache.sling.commons.log.file": "logs/error.log"
 }
 ```
 
@@ -185,6 +188,7 @@ Följande är exempel på de rekommenderade loggningskonfigurationerna (med plat
 {
     "org.apache.sling.commons.log.names": ["com.example"],
     "org.apache.sling.commons.log.level": "error"
+    "org.apache.sling.commons.log.file": "logs/error.log"
 }
 ```
 
