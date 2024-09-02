@@ -4,9 +4,9 @@ description: Konfigurerar trafikfilterregler inklusive WAF-regler (Web Applicati
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
 feature: Security
 role: Admin
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: dee1a768c1cec6cf0e7c321d4d76a486db661d13
 workflow-type: tm+mt
-source-wordcount: '3937'
+source-wordcount: '3928'
 ht-degree: 0%
 
 ---
@@ -255,7 +255,7 @@ Egenskapen `wafFlags`, som kan användas i de licensbara WAF-trafikfilterreglern
 | MALFORMED-DATA | Felformaterade data i begärandetexten | En begärandetext för POST, PUT eller PATCH som har fel format enligt begärandehuvudet Content-Type. Om en begäranderubrik av typen&quot;Content-Type: application/x-www-form-urlencoded&quot; anges och innehåller en POST som är json. Detta är ofta ett programmeringsfel, en automatiserad eller skadlig begäran. Kräver agent 3.2 eller högre. |
 | SANS | Skadlig IP-trafik | [SANS Internet Storm Center](https://isc.sans.edu/) - lista över rapporterade IP-adresser som har varit inblandade i skadlig aktivitet. |
 | INNEHÅLLSTYP | Begäranhuvudet Content-Type saknas | En POST-, PUT- eller PATCH-begäran som inte har någon Content-Type-begäranderubrik. Som standard ska programservrar anta&quot;Content-Type: text/plain; charset=us-ascii&quot; i det här fallet. Många automatiska och skadliga förfrågningar kanske saknar&quot;Innehållstyp&quot;. |
-| NOUA | Ingen användaragent | Många automatiserade och skadliga förfrågningar använder falska eller saknade användaragenter för att göra det svårt att identifiera vilken typ av enhet som framställningarna görs på. |
+| NOUA | Ingen användaragent | Anger att en begäran inte innehöll någon &quot;User-Agent&quot;-rubrik eller att rubrikvärdet inte har angetts. |
 | TORNODE | Tor Traffic | Tor är programvara som döljer en användares identitet. En spik i Tor-trafiken kan indikera en angripare som försöker maskera sin plats. |
 | NULLBYTE | Null byte | Null-byte visas normalt inte i en begäran och anger att begäran är felformaterad och potentiellt skadlig. |
 | PRIVATEFILE | Privata filer | Privata filer är konfidentiella, till exempel en Apache `.htaccess`-fil eller en konfigurationsfil som kan läcka känslig information |
