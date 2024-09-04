@@ -3,9 +3,9 @@ title: Distribuera  [!DNL Content Hub]
 description: Lär dig hur du distribuerar och aktiverar Content Hub och ger åtkomst till användare med olika typer av behörigheter (överföra resurser, Adobe Express-användare) och hur du ger administratörsbehörighet till användare.
 role: Admin
 exl-id: 58194858-6e1c-460b-bab3-3496176b2851
-source-git-commit: ea5ce2f443f1502a690b34cbf1b951ecf6aae9b2
+source-git-commit: 9ac22ebcca619d91a38111bd706986b8d4a4d189
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1514'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,10 @@ I följande tabell sammanfattas tillgängliga Content Hub-användartyper, vilka 
 | AEM > Production Author instance > AEM Administrators | - | - | - | ✓ |
 | Adobe Express | - | - | ✓ | - |
 | **Mer information** | Se [Content Hub-användare](#onboard-content-hub-users) | Se [Content Hub-användare med behörighet att lägga till resurser](#onboard-content-hub-users-add-assets) | Se [Content Hub-användare med behörighet att mixa om resurser till nya varianter](#onboard-content-hub-users-remix-assets) | Se [Content Hub-administratörer](#onboard-content-hub-administrator) |
+
+>[!NOTE]
+>
+>[Experience Manager Assets-användare](#experience-manager-assets-users) kan godkänna resurser på Experience Manager Assets as a Cloud Service och göra dessa resurser tillgängliga på Content Hub. Dessa användare måste läggas till i AEM > Production Author instance > AEM Users produktprofil med Admin Console.
 
 ## Steg 1: Aktivera Content Hub för Experience Manager Assets med Cloud Manager {#enable-content-hub}
 
