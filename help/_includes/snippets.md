@@ -1,7 +1,7 @@
 ---
-source-git-commit: c7b78b5c4e4851d57314a437b3b7fa06c1f167d5
+source-git-commit: 57fb7a011cb2da853cdca4f3233cd56775f4a459
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '914'
 ht-degree: 0%
 
 ---
@@ -155,3 +155,9 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 >
 >Om du använder, eller tänker använda, frontendriet för att utveckla webbplatser måste Cloud Manager IP Tillåtelselista läggas till i förväg.
 >Se [Användning av Cloud Manager IP Tillåtelselista med frontendspipeline](/help/implementing/cloud-manager/ip-allow-lists/introduction.md#allowlists-frontend-pipeline).
+
+## Arbeta med Dynamic Media {#work-with-dynamic-media}
+
+>[!TIP]
+>
+>Är du ny i Dynamic Media? En snabb översikt av Dynamic Media på hög nivå finns i [Arbeta med Dynamic Media](/help/assets/dynamic-media/dynamic-media.md).

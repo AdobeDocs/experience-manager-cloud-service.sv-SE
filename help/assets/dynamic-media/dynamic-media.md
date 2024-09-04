@@ -1,14 +1,14 @@
 ---
 title: Arbeta med Dynamic Media
-description: Lär dig hur du använder Dynamic Media för att leverera mediefiler för webben, mobiler och sociala medier.
+description: Läs mer om vad Dynamic Media är och du kan använda Dynamic Media för att leverera material för webben, mobiler och sociala medier.
 contentOwner: Rick Brough
 feature: Dynamic Media,Asset Management
 role: Admin,User
 exl-id: 3ec3cb85-88ce-4277-a45c-30e52c75ed42
-source-git-commit: 26afff3a39a2a80c1f730287b99f3fb33bff0673
+source-git-commit: 57fb7a011cb2da853cdca4f3233cd56775f4a459
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 2%
+source-wordcount: '654'
+ht-degree: 1%
 
 ---
 
@@ -22,6 +22,14 @@ Dynamic Media visar interaktivt material som zoomning, 360-gradersrotation och v
 >
 >A Community article is available on [Working with Adobe Experience Manager and Dynamic Media](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html). -->
 
+## Vad är Dynamic Media?
+
+Dynamic Media i Adobe Experience Manager (AEM) as a Cloud Service är en kraftfull lösning som hjälper dig att hantera, leverera och optimera mediematerial som bilder och videor för olika digitala plattformar. Det omvandlar statiska medier till dynamiska, engagerande upplevelser genom att tillåta realtidsändringar, som storleksändring, beskärning och kvalitetsjustering baserat på användarens enhet eller skärmstorlek. Med Dynamic Media anpassar ni era resurser automatiskt så att ni får den bästa visuella upplevelsen, oavsett om användarna arbetar på en dator, mobil eller surfplatta.
+
+En stor fördel med Dynamic Media är att det kan effektivisera mediehanteringen. Du behöver inte skapa flera versioner av bilder eller videor - Dynamic Media hanterar allt genom att leverera det format som passar bäst för varje situation. E-handelsföretag kan till exempel dra nytta av 360-graders produktvisningar eller zoombara bilder för att skapa interaktiva upplevelser, medan innehållsintensiva webbplatser kan säkerställa snabb, högkvalitativ videoströmning. Detta ger snabbare laddningstider och mer engagerande användarupplevelser, vilket i slutänden leder till bättre kundnöjdhet och bättre konverteringsgrader.
+
+Dynamic Media integreras smidigt med ert digitala resurshanteringssystem i AEM, vilket ger er en gemensam plattform för att lagra, ordna och driftsätta era medier. Detta centraliserade tillvägagångssätt förenklar samarbetet mellan team och ger realtidsinsikter om resursprestanda. Oavsett om ni fokuserar på att leverera engagerande bilder eller förbättra mediadriven användarinteraktion hjälper Dynamic Media er att optimera ert innehåll för alla kanaler, vilket gör det till ett oumbärligt verktyg för företag som vill höja sin digitala närvaro.
+
 ## Vad du kan göra med Dynamic Media {#what-you-can-do-with-dynamic-media}
 
 Med Dynamic Media kan du hantera dina resurser innan du publicerar dem. Hur du arbetar med resurser i allmänhet beskrivs i detalj i [Arbeta med Digital Assets](/help/assets/manage-digital-assets.md). Allmänna ämnen är bland annat att ladda upp, ladda ned, redigera och publicera resurser, visa och redigera egenskaper och söka efter resurser.
@@ -34,7 +42,6 @@ Dynamic Media har följande funktioner:
 * [Interaktiva videoklipp](interactive-videos.md)
 * [Blandade medieuppsättningar](mixed-media-sets.md)
 * [Panorambilder](panoramic-images.md)
-
 * [Snurra uppsättningar](spin-sets.md)
 * [Video](video.md)
 * [Leverera Dynamic Media Assets](delivering-dynamic-media-assets.md)
@@ -68,19 +75,19 @@ Dynamiska återgivningar som bild- och visningsförinställningar (under **[!UIC
 
 ![chlimage_1-358](assets/chlimage_1-358.png)
 
-### Bilduppsättningar, snurruppsättningar, blandade medieuppsättningar {#image-sets-spins-sets-mixed-media-sets}
+### Dynamic Media-bilduppsättningar, snurruppsättningar, blandade medieuppsättningar {#image-sets-spins-sets-mixed-media-sets}
 
 Uppsättningar med bilder, snurra och blandade medieuppsättningar är tillgängliga om Dynamic Media är aktiverat.
 
 ![chlimage_1-359](assets/chlimage_1-359.png)
 
-### PTIFF-återgivningar {#ptiff-renditions}
+### Dynamic Media-aktiverade PTIFF-renderingar {#ptiff-renditions}
 
 Dynamic Media-aktiverade resurser innehåller `pyramid.tiffs`.
 
 ![chlimage_1-360](assets/chlimage_1-360.png)
 
-### Ändra resursvyer {#asset-views-change}
+### Ändringar i resursvyn för Dynamic Media {#asset-views-change}
 
 När Dynamic Media är aktiverat kan du zooma in och ut genom att klicka på knapparna `+` och `-`. Du kan också välja att zooma in i ett visst område. Med Återställ återgår du till den ursprungliga versionen och du kan göra bilden i helskärmsläge genom att klicka på de diagonala pilarna. Dynamic Media-aktiverade ser ut så här:
 

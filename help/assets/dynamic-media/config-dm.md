@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Configuration,Dynamic Media
 role: Admin,User
 exl-id: 8e07bc85-ef26-4df4-8e64-3c69eae91e11
-source-git-commit: 26afff3a39a2a80c1f730287b99f3fb33bff0673
+source-git-commit: 6ad46350906c3b8a36a8e361714fa5fffdbf8e82
 workflow-type: tm+mt
 source-wordcount: '3575'
 ht-degree: 1%
@@ -13,6 +13,8 @@ ht-degree: 1%
 ---
 
 # Konfigurera Dynamic Media Cloud Service {#configuring-dynamic-media}
+
+{{work-with-dynamic-media}}
 
 Om du använder Adobe Experience Manager för olika miljöer, som utveckling, staging och liveproduktion, konfigurerar du Dynamic Media-Cloud Service för varje sådan miljö.
 

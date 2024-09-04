@@ -5,9 +5,9 @@ exl-id: bf0f54a9-fe86-4bfb-9fa6-03cf0fd5f404
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: eae5c75e1bf4f7201fe2c01d08737d36489ca3e4
+source-git-commit: 57fb7a011cb2da853cdca4f3233cd56775f4a459
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '925'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,10 @@ I varje avsnitt sammanfattas vad som är tillgängligt och hur det används, om 
 
 ## Visa användningsinformation {#view-usage-details}
 
-Knappen **Visa användningsinformation** ger åtkomst till den valda lösningens **användningsinformationsfönster**. I det här fönstret finns en detaljerad beskrivning med diagram som visar hur lösningen används. Hur detta mäts beror på den valda lösningen.
+<!--
+The **View usage details** button gives access to the chosen solution's **Usage Details** window. This window gives a detailed breakdown including charts to show your solution's usage. How that usage is measured depends on the chosen solution. -->
+
+Knappen **Visa användningsinformation** i licensområdet för Cloud Manager innehåller en detaljerad beskrivning av din aktuella resursanvändning. När du klickar på den öppnas en rapport eller kontrollpanel med viktig information om din licens. <!-- ADD THIS SENTENCE IF ASSETS USAGE DETAILS GETS REINSTATED ", such as the number of users, storage consumption, or bandwidth usage, depending on the type of services you're using." --> Den här funktionen hjälper dig att övervaka och se till att du ligger inom avtalsgränserna samtidigt som du erbjuder insikter för bättre resursplanering och optimering.
 
 ### Information om webbplatsanvändning {#sites-usage-details}
 
@@ -77,27 +80,28 @@ Den vänstra sidan av fönstret innehåller ett cirkeldiagram som visar kontrakt
 
 På den högra sidan av fönstret visas ett ytdiagram som visar användningen uppdelad efter program över tid för det valda kontraktsåret. En hovring visar ett popup-fönster med information per program för den valda tidpunkten.
 
-### Information om användning av Assets {#assets-usage-details}
+<!-- REMOVED AS PER CQDOC-21983
+### Assets usage details {#assets-usage-details}
 
-Fönstret **Assets-användningsinformation** innehåller diagram med en översikt över användningen av dina Assets-licenser baserat på [lagring](#storage) och [standardanvändare.](#standard-users) Välj lämplig flik för att växla mellan vyerna.
+The **Assets usage details** window, presents graphs giving an overview of the usage of your Assets licenses based on [storage](#storage) and [standard users.](#standard-users) Select the appropriate tab to toggle between the views.
 
-För både lagrings- och standardanvändarvyer kan du använda listrutan **Miljötyp** för att växla mellan produktions-, scen- och utvecklingsmiljöer.
+For both storage and standard users views, you can use the **Environment Type** dropdown to toggle the view between production, stage, and development environments.
 
-#### Lagring {#storage}
+#### Storage {#storage}
 
-![Fönstret med användningsinformation för Assets för lagring](assets/assets-usage-details-storage.png)
+![Assets usage details window for storage](assets/assets-usage-details-storage.png)
 
-Den vänstra sidan av fönstret innehåller ett cirkeldiagram som visar kontraktsuppdelningen för det kontraktsår som valts i listrutan **Visa kontraktår**.
+The left side of the window presents a pie chart showing the contract breakdown for the contract year selected in the **View contract year** dropdown.
 
-På den högra sidan av fönstret visas ett ytdiagram som visar användningen uppdelad efter program över tid för det valda kontraktsåret. En hovring visar ett popup-fönster med information per program för den valda tidpunkten.
+The right side of the window presents an area chart showing the usage broken down by program over time for the selected contract year. A hover reveals a popup with details per program for the selected point in time.
 
-#### Standardanvändare {#standard-users}
+#### Standard Users {#standard-users}
 
-![Fönstret med användningsinformation för Assets för standardanvändare](assets/assets-usage-details-standard-users.png)
+![Assets usage details window for standard-users](assets/assets-usage-details-standard-users.png)
 
-Den vänstra sidan av fönstret innehåller ett cirkeldiagram som visar kontraktsuppdelningen för det kontraktsår som valts i listrutan **Visa kontraktår**.
+The left side of the window presents a pie chart showing the contract breakdown for the contract year selected in the **View contract year** dropdown.
 
-På den högra sidan av fönstret visas ett ytdiagram som visar användningen uppdelad efter program över tid för det valda kontraktsåret. En hovring visar ett popup-fönster med information per program för den valda tidpunkten.
+The right side of the window presents an area chart showing the usage broken down by program over time for the selected contract year. A hover reveals a popup with details per program for the selected point in time. -->
 
 ## Vanliga frågor {#faq}
 

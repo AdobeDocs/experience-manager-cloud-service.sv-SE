@@ -9,7 +9,7 @@ feature: Image Profiles
 role: User, Admin
 mini-toc-levels: 4
 exl-id: a4d28786-cffa-42ab-98d3-90a15313e401
-source-git-commit: ccd52d147b1739330c3cb5a7d1952a7e9eec71ad
+source-git-commit: 6ad46350906c3b8a36a8e361714fa5fffdbf8e82
 workflow-type: tm+mt
 source-wordcount: '2334'
 ht-degree: 0%
@@ -20,6 +20,8 @@ ht-degree: 0%
 
 <!-- hide: yes
 hidefromtoc: yes -->
+
+{{work-with-dynamic-media}}
 
 Konfigurationen av **[!UICONTROL Dynamic Media General Settings]** är bara tillgänglig om:
 
@@ -70,7 +72,7 @@ När du skapar ett konto tillhandahåller Adobe Dynamic Media automatiskt de til
 
 * **[!UICONTROL Overwrite Images]**
 
-  Adobe Dynamic Media tillåter inte att två filer har samma namn. Varje objekts Adobe Dynamic Media-ID (bildnamn minus filnamnstillägg) måste vara unikt. På grund av den här regeln har **[!UICONTROL Upload to Application]** en överskrivning. Den exakta effekten av det här alternativet beror på det angivna alternativet Skriv över bilder som du har valt. Dessa alternativ anger hur ersättningsbilder överförs: om de ersätter originalbilderna eller blir dubblettbilder. Duplicerade bilder har bytt namn med ett `-1`. `chair.tif` har till exempel bytt namn till `chair-1.tif`. De här alternativen påverkar bilder som har överförts till en annan mapp än den ursprungliga eller bilder med ett annat filnamnstillägg än den ursprungliga, till exempel JPG, TIF eller PNG.
+  Adobe Dynamic Media tillåter inte att två filer har samma namn. Varje objekts Adobe Dynamic Media-ID (bildnamnet minus filnamnstillägget) måste vara unikt. På grund av den här regeln har **[!UICONTROL Upload to Application]** en överskrivning. Den exakta effekten av det här alternativet beror på det angivna alternativet Skriv över bilder som du har valt. Dessa alternativ anger hur ersättningsbilder överförs: om de ersätter originalbilderna eller blir dubblettbilder. Duplicerade bilder har bytt namn med ett `-1`. `chair.tif` har till exempel bytt namn till `chair-1.tif`. De här alternativen påverkar bilder som har överförts till en annan mapp än den ursprungliga eller bilder med ett annat filnamnstillägg än den ursprungliga, till exempel JPG, TIF eller PNG.
 
   >[!NOTE]
   >

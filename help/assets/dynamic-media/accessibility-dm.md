@@ -7,7 +7,7 @@ content-type: reference
 feature: Accessibility
 role: Admin,User
 exl-id: f8d2dcbf-f61a-4b27-a3fc-406e3662adcb
-source-git-commit: 02ad83eb9fa9ed3bf06cf7fe0ef10fd9577f66a9
+source-git-commit: 6ad46350906c3b8a36a8e361714fa5fffdbf8e82
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 0%
@@ -15,6 +15,8 @@ ht-degree: 0%
 ---
 
 # Tillgänglighet i Dynamic Media {#accessibility-in-dm}
+
+{{work-with-dynamic-media}}
 
 Dynamic Media har stöd för tangentbordskontroll och hjälpmedelstekniker, som JAWS och NVDA-skärmläsare, i hela användargränssnittet.
 

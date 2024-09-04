@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Asset Management, Best Practices
 role: User
 exl-id: 2efc4a27-01d7-427f-9701-393497314402
-source-git-commit: 62af768370ee0affa4003a7ae0c520ad1a065e8c
+source-git-commit: 6ad46350906c3b8a36a8e361714fa5fffdbf8e82
 workflow-type: tm+mt
 source-wordcount: '1629'
 ht-degree: 0%
@@ -13,6 +13,8 @@ ht-degree: 0%
 ---
 
 # Bästa tillvägagångssätt för att optimera bildkvaliteten {#best-practices-for-optimizing-the-quality-of-your-images}
+
+{{work-with-dynamic-media}}
 
 Att optimera bildkvaliteten kan vara en tidskrävande process eftersom många faktorer bidrar till att återge godtagbara resultat. Resultatet är delvis subjektivt eftersom individer upplever olika bildkvalitet. Strukturerade experiment är avgörande.
 
