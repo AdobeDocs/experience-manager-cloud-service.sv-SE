@@ -4,9 +4,9 @@ description: Lär dig hur du använder Real Use Monitoring (RUM) för att hämta
 exl-id: 91fe9454-3dde-476a-843e-0e64f6f73aaf
 feature: Administering
 role: Admin
-source-git-commit: 1bb463fe59e89e6360dceefdaaec395084fc80c5
+source-git-commit: 917e9496dcbb8c6fe72b7a718211ee5bbecb3323
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1200'
 ht-degree: 0%
 
 ---
@@ -93,10 +93,11 @@ När du analyserar RUM-data kan det finnas skillnader i sidvisningar och andra p
 
 ## Vanliga frågor {#faq}
 
+<!-- REMOVED THIS FAQ AS PER EMAIL REQUEST FROM SHWETA DUA, SEPTEMBER 4, 2024 TO THE DL-AEM-DOCS GROUP 
+1. **Can customers integrate the RUM service scripts with third-party systems like Dynatrace?**
 
-1. **Kan kunder integrera skript för RUM-tjänster med tredjepartssystem som Dynatrace?**
-
-   Ja.
+   Yes.
+-->
 
 1. **Samlas interaktion med nästa färg, tid till första byte och första innehållsanpassade målning in i webbinarierna?**
 
