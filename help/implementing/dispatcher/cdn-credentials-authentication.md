@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-autentiseringsuppgifter och autent
 feature: Dispatcher
 exl-id: a5a18c41-17bf-4683-9a10-f0387762889b
 role: Admin
-source-git-commit: c8059260ab0ff13ed85f55eda2e09ca5cb678fa9
+source-git-commit: 5d51ff056d4e4f0fdbb3004cbac55803ac91f8ca
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1443'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Ytterligare egenskaper är:
    * action - måste ange &quot;authenticate&quot; med referens till den avsedda autentiseraren.
 
 >[!NOTE]
->Edge-nyckeln måste konfigureras som en [hemlig Cloud Manager-miljövariabel](/help/operations/config-pipeline.md#secret-env-vars) innan konfigurationen som refererar till den distribueras.
+>Edge-nyckeln måste konfigureras som en [hemlig Cloud Manager-miljövariabel](/help/operations/config-pipeline.md#secret-env-vars) innan konfigurationen som refererar till den distribueras. Vi rekommenderar att du använder en unik slumpmässig nyckel på minst 32 byte. Det kryptografiska biblioteket Open SSL kan till exempel generera en slumpmässig nyckel genom att köra kommandot `openssl rand -hex 32`.
 
 ### Migrera säkert för att minska risken för blockerad trafik {#migrating-safely}
 
@@ -140,7 +140,7 @@ Ytterligare egenskaper är:
    * action - måste ange &quot;authenticate&quot; med referens till den avsedda autentiseraren.
 
 >[!NOTE]
->Töm nyckel måste konfigureras som en [hemlig typ av Cloud Manager-miljövariabel](/help/operations/config-pipeline.md#secret-env-vars) innan konfigurationen som refererar till den distribueras.
+>Töm nyckel måste konfigureras som en [hemlig typ av Cloud Manager-miljövariabel](/help/operations/config-pipeline.md#secret-env-vars) innan konfigurationen som refererar till den distribueras. Vi rekommenderar att du använder en unik slumpmässig nyckel med en längd på minst 32 byte. Open SSL-kryptografibiblioteket kan till exempel generera en slumpmässig nyckel genom att köra kommandot openssl rand -hex 32
 
 Du kan referera till [en självstudie](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache) som fokuserar på att konfigurera rensningsnycklar och utföra rensning av CDN-cache.
 
