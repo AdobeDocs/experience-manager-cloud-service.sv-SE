@@ -4,10 +4,10 @@ description: Lär dig hur du använder det AEM-hanterade CDN och hur du pekar di
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
 role: Admin
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: 4a369104ea8394989149541ee1a7b956383c8f12
 workflow-type: tm+mt
-source-wordcount: '1555'
-ht-degree: 4%
+source-wordcount: '1603'
+ht-degree: 2%
 
 ---
 
@@ -19,18 +19,24 @@ ht-degree: 4%
 >title="CDN i AEM AS A CLOUD SERVICE"
 >abstract="AEM när Cloud Servicen levereras med ett inbyggt CDN. Dess huvudsakliga syfte är att minska latensen genom att leverera tillgängligt innehåll från CDN-noder nära webbläsaren. Det är helt managerat och konfigurerat för optimal prestanda i AEM-program."
 
-AEM när Cloud Servicen levereras med ett inbyggt CDN. Dess huvudsakliga syfte är att minska latensen genom att leverera tillgängligt innehåll från CDN-noder nära webbläsaren. Det är helt managerat och konfigurerat för optimal prestanda i AEM-program.
+AEM as a Cloud Service har ett integrerat CDN, som utformats för att minska latensen genom att leverera tillgängligt innehåll från kantnoder nära användarens webbläsare. Detta fullständigt hanterade CDN är optimerat för AEM programprestanda.
 
-Det AEM CDN uppfyller de flesta kunders krav på prestanda och säkerhet. För publiceringsnivån kan kunderna även peka på det från sitt eget CDN, som de måste hantera. Detta scenario tillåts från fall till fall, baserat på att vissa krav uppfylls, inklusive, men inte begränsat till, den kund som har en äldre integrering med sin CDN-leverantör som är svår att överge.
+Det AEM CDN-nätverket uppfyller de flesta kunders behov av prestanda och säkerhet. För publiceringsnivån kan kunderna välja att dirigera trafik via sitt eget CDN, som de måste hantera. Det här alternativet är tillgängligt från fall till fall, särskilt när kunderna har befintliga integreringar med en CDN-leverantör som är svår att ersätta.
+
+Kunder som vill publicera på Edge Delivery Services-nivå kan dra nytta av Adobe hanterade CDN. Se [CDN som hanteras av Adobe](#aem-managed-cdn). <!-- CQDOC-21758, 5b -->
+
 
 <!-- ERROR: NEITHER URL IS FOUND (HTTP ERROR 404) Also, see the following videos [Cloud 5 AEM CDN Part 1](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-cdn-part1.html) and [Cloud 5 AEM CDN Part 2](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-cdn-part2.html) for additional information about CDN in AEM as a Cloud Service. -->
 
-## AEM CDN  {#aem-managed-cdn}
+## CDN hanterad i Adobe {#aem-managed-cdn}
 
-Följ nedanstående avsnitt för att använda Cloud Manager självbetjäningsgränssnitt för att förbereda innehållsleverans genom att använda det medföljande CDN-AEM:
+<!-- CQDOC-21758, 5a -->
 
-1. [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
-1. [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
+För att förbereda dig för innehållsleverans med AEM inbyggt CDN via Cloud Manager självbetjäningsgränssnitt kan du dra nytta av Adobe CDN-funktioner. Med den här funktionen kan du hantera CDN-hantering för självbetjäning, inklusive konfigurera och installera SSL-certifikat som DV-certifikat (Domain Validation) eller EV-/OV-certifikat (Extended/Organization Validation). Mer information om de här metoderna finns i:
+
+* [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
+* [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
+* [Stöd för Edge Delivery Services i Cloud Manager](/help/implementing/cloud-manager/edge-delivery-services.md)
 
 **Begränsa trafik**
 
@@ -40,9 +46,9 @@ Mer information finns i [Hantera IP-Tillåtelselista](/help/implementing/cloud-m
 
 >[!CAUTION]
 >
->Endast begäranden från tillåtna IP-adresser hanteras av AEM hanterade CDN. Om du pekar ditt eget CDN mot det AEM CDN-nätverket kontrollerar du att IP-adresserna för ditt CDN är med i tillåtelselista.
+>AEM hanterat CDN endast hanterar förfrågningar från tillåtna IP-adresser. Om du pekar ditt eget CDN mot det AEM CDN-nätverket kontrollerar du att IP-adresserna för ditt CDN är inkluderade i IP Tillåtelselista.
 
-### Konfigurera trafik vid leveransnätverket {#cdn-configuring-cloud}
+### Konfigurera trafik på CDN {#cdn-configuring-cloud}
 
 Du kan konfigurera trafiken vid CDN på olika sätt, bland annat:
 
@@ -51,15 +57,15 @@ Du kan konfigurera trafiken vid CDN på olika sätt, bland annat:
 * använder 301/302 [omdirigeringar på klientsidan](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors)
 * deklarerar [ursprungliga väljare](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors) för att återföra en proxybegäran till icke-AEM backends
 
-Lär dig hur du konfigurerar de här funktionerna genom att använda YAML-filer i Git och distribuera dem med Cloud Manager [Config Pipeline](/help/implementing/dispatcher/cdn-configuring-traffic.md).
+Använd YAML-filer i Git för att konfigurera dessa funktioner. Använd dessutom Cloud Manager [Config Pipeline](/help/implementing/dispatcher/cdn-configuring-traffic.md) för att distribuera dem.
 
 ### Konfigurera CDN-felsidor {#cdn-error-pages}
 
-En CDN-felsida kan konfigureras så att den åsidosätter den standardsida utan varumärke som skickas till webbläsaren i den sällsynta händelse som AEM inte kan nås. Mer information finns i [Konfigurera CDN-felsidor](/help/implementing/dispatcher/cdn-error-pages.md).
+Du kan konfigurera en CDN-felsida så att den ersätter standardsidan utan varumärke. Den här anpassade sidan visas om AEM inte är tillgänglig. Mer information finns i [Konfigurera CDN-felsidor](/help/implementing/dispatcher/cdn-error-pages.md).
 
 ### Rensa cachelagrat innehåll vid CDN {#purge-cdn}
 
-Att ställa in TTL med HTTP-huvudet Cache-Control är ett effektivt sätt att balansera innehållets leveransprestanda och innehållets aktualitet. I scenarier där det är viktigt att omedelbart hantera uppdaterat innehåll kan det dock vara bra att rensa CDN-cachen direkt.
+Att ställa in TTL med HTTP-huvudet Cache-Control är ett effektivt sätt att balansera innehållets leveransprestanda och innehållets aktualitet. I scenarier där det är viktigt att leverera uppdaterat innehåll omedelbart kan det dock vara bra att rensa CDN-cachen direkt.
 
 Läs om hur [konfigurerar en rensnings-API-token](/help/implementing/dispatcher/cdn-credentials-authentication.md/#purge-API-token) och [rensar cachelagrat CDN-innehåll](/help/implementing/dispatcher/cdn-cache-purge.md).
 
@@ -67,7 +73,7 @@ Läs om hur [konfigurerar en rensnings-API-token](/help/implementing/dispatcher/
 
 För användarvänliga autentiseringssituationer, inklusive affärsintressenter som granskar innehåll, skyddar du innehållet genom att visa en grundläggande autentiseringsdialog som kräver ett användarnamn och lösenord. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md) och gå med i det tidiga adopterprogrammet.
 
-## Customer CDN Points to AEM-managed CDN {#point-to-point-CDN}
+## Kundhanterade CDN-poäng till AEM hanterade CDN {#point-to-point-CDN}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_byocdn"
@@ -88,9 +94,9 @@ Konfigurationsanvisningar:
 1. Ställ in SNI på Adobe CDN:s ingress.
 1. Ange värdhuvudet som den ursprungliga domänen. Till exempel: `Host:publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com`.
 1. Ange `X-Forwarded-Host`-huvudet med domännamnet så att AEM kan avgöra värdhuvudet. Till exempel: `X-Forwarded-Host:example.com`.
-1. Ange `X-AEM-Edge-Key`. Värdet bör konfigureras med en Cloud Manager-konfigurationspipeline, vilket beskrivs i [den här artikeln.](/help/implementing/dispatcher/cdn-credentials-authentication.md#CDN-HTTP-value)
+1. Ange `X-AEM-Edge-Key`. Värdet bör konfigureras med en Cloud Manager-konfigurationspipeline, vilket beskrivs i [den här artikeln](/help/implementing/dispatcher/cdn-credentials-authentication.md#CDN-HTTP-value).
 
-   * Behövs så att Adobe CDN kan validera källan för förfrågningarna och skicka `X-Forwarded-*`-huvudena till AEM. `X-Forwarded-For` används till exempel för att fastställa klient-IP. Det blir alltså den betrodda anroparen (det vill säga kundhanterade CDN) som ansvarar för att `X-Forwarded-*`-huvudena är korrekta (se anteckningen nedan).
+   * Behövs så att Adobe CDN kan validera källan för förfrågningarna och skicka `X-Forwarded-*`-huvudena till AEM. `X-Forwarded-For` används till exempel för att fastställa klient-IP. Det blir alltså den betrodda anroparen (det vill säga kundens hanterade CDN) som ansvarar för att `X-Forwarded-*`-huvudena är korrekta (se anteckningen nedan).
    * Åtkomst till Adobe CDN-ingången kan även blockeras om det inte finns någon `X-AEM-Edge-Key`. Informera Adobe om du behöver direktåtkomst till Adobe CDN:s ingress (som ska blockeras).
 
 I avsnittet [Exempel på CDN-leverantörskonfigurationer](#sample-configurations) finns konfigurationsexempel från ledande CDN-leverantörer.
@@ -113,8 +119,7 @@ curl https://publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com --header "X-Forwa
 
 >[!NOTE]
 >
->När du använder ditt eget CDN behöver du inte installera domäner och certifikat i Cloud Manager. Routningen i CDN i Adobe görs med standarddomänen `publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com` som ska skickas i begäranhuvudet `Host`. Om begärandehuvudet `Host` skrivs över med ett anpassat domännamn kan begäran slussas in felaktigt av Adobe CDN.
-
+>När du använder ditt eget CDN behöver du inte installera domäner och certifikat i Cloud Manager. Routningen i CDN i Adobe görs med standarddomänen `publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com`, som ska skickas i begärandehuvudet `Host`. Om du skriver över begärandehuvudet `Host` med ett anpassat domännamn kan begäran skickas felaktigt via Adobe CDN.
 
 >[!NOTE]
 >
@@ -149,9 +154,9 @@ Nedan visas flera konfigurationsexempel från flera ledande CDN-leverantörer.
 
 ### Vanliga fel {#common-errors}
 
-De exempelkonfigurationer som tillhandahålls visar de basinställningar som behövs, men en kundkonfiguration kan ha andra effektregler som tar bort, ändrar eller ordnar om de rubriker som behövs för att AEM as a Cloud Service ska kunna betjäna trafiken. Nedan visas vanliga fel som inträffar när en kundhanterad CDN konfigureras för att peka mot AEM as a Cloud Service.
+De angivna exempelkonfigurationerna visar de basinställningar som behövs. En kundkonfiguration kan dock ha andra regler som påverkar hur du tar bort, redigerar eller ordnar om de rubriker som behövs för att AEM as a Cloud Service ska kunna betjäna trafiken. Nedan visas vanliga fel som inträffar när en kundhanterad CDN konfigureras för att peka mot AEM as a Cloud Service.
 
-**Omdirigering till Publish tjänstslutpunkt**
+**Omdirigering till slutpunkten för publiceringstjänsten**
 
 När en begäran tar emot ett 403 ej tillåtet svar betyder det att begäran saknar vissa obligatoriska rubriker. En vanlig orsak till detta är att CDN hanterar både API- och `www`-domäntrafik, men inte lägger till rätt rubrik för domänen `www`. Du kan lösa det här problemet genom att kontrollera AEM as a Cloud Service CDN-loggarna och verifiera begäranderubrikerna.
 
@@ -169,14 +174,14 @@ Du löser det här problemet genom att utvärdera din SSL-omdirigeringsstrategi,
 
 ## Geolocation-rubriker {#geo-headers}
 
-Det AEM CDN lägger till rubriker i varje begäran med:
+Den AEM hanterade CDN lägger till rubriker i varje begäran med:
 
 * landskod: `x-aem-client-country`
 * Kontinentalkod: `x-aem-client-continent`
 
 >[!NOTE]
 >
->Om det finns ett kundhanterat CDN återspeglar dessa rubriker kundens CDN-proxyserver snarare än den faktiska klienten. För kundhanterad CDN bör därför rubriker i geopositionering hanteras av kundens CDN.
+>Om det finns ett kundhanterat CDN återspeglar dessa rubriker platsen för kundens CDN-proxyserver snarare än den faktiska klienten. Kunderna bör hantera rubriker för geopositionering via sina egna CDN när de använder ett kundhanterat CDN.
 
 Värdena för landskoderna är Alpha-2-koder som beskrivs i [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1).
 
@@ -190,4 +195,4 @@ Värdena för kontinentkoderna är:
 * OC Oceanien
 * Sydamerika
 
-Denna information kan vara användbar vid användning, t.ex. omdirigering till en annan URL som baseras på begärans ursprung (land). Använd rubriken Variera för att cachelagra svar som är beroende av geoinformation. Omdirigeringar till en viss landningssida ska till exempel alltid innehålla `Vary: x-aem-client-country`. Om det behövs kan du använda `Cache-Control: private` för att förhindra cachelagring. Se även [Cachning](/help/implementing/dispatcher/caching.md#html-text).
+Den här informationen är användbar för omdirigering till en annan URL utifrån den begärandes ursprungsland. Använd rubriken Variera för att cachelagra svar som är beroende av geoinformation. Omdirigeringar till en viss landningssida ska till exempel alltid innehålla `Vary: x-aem-client-country`. Om det behövs kan du använda `Cache-Control: private` för att förhindra cachelagring. Se även [Cachning](/help/implementing/dispatcher/caching.md#html-text).
