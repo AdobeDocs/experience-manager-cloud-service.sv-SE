@@ -5,9 +5,9 @@ exl-id: 6d33c3c5-258c-4c9c-90c2-d566eaeb14c0
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 72868ab808ebbd99c5e81805e7669083c5c754fb
+source-git-commit: 505e0887124472693216fee2f0a3e960591b5ae5
 workflow-type: tm+mt
-source-wordcount: '1927'
+source-wordcount: '1950'
 ht-degree: 0%
 
 ---
@@ -17,17 +17,11 @@ ht-degree: 0%
 
 Upptäck hur Experience Audit validerar er driftsättningsprocess och ser till att ändringarna uppfyller grundläggande standarder för prestanda, tillgänglighet, bästa praxis och SEO. Den ger ett tydligt och informativt gränssnitt för att spåra mätvärdena.
 
->[!NOTE]
->
->Den här funktionen är bara tillgänglig för [det tidiga adopterprogrammet](/help/implementing/cloud-manager/release-notes/current.md#early-adoption).
->
->Mer information om den befintliga funktionen Experience Audit för AEM as a Cloud Service finns i [Experience Audit Testing](/help/implementing/cloud-manager/experience-audit-testing.md).
-
 ## Ökning {#overview}
 
 Experience Audit validerar distributionsprocessen och säkerställer att ändringarna distribueras:
 
-1. Uppfyll grundläggande standarder för prestanda, tillgänglighet, bästa praxis, SEO (Search Engine Optimization) och PWA (Progressive Web App).
+1. Uppfyll grundläggande standarder för prestanda, tillgänglighet, bästa praxis och SEO (sökmotoroptimering).
 
 1. Inför inte regressioner.
 
@@ -88,7 +82,7 @@ Experience Audit är tillgängligt som standard för produktionspipelines. Den k
 
 Resultaten av Experience Audit presenteras i **fasen av testningen** i produktionsflödet via [sidan för körning av produktionspipeline](/help/implementing/cloud-manager/deploy-code.md).
 
-![Kontrollpanel i pipeline](assets/experience-audit-dashboard.jpg)
+![Kontrollpanel i pipeline](assets/experience-audit-dashboard.png)
 
 Experience Audit tillhandahåller medianpoängen för Google Lighthuse för de [konfigurerade sidorna](#configuration) och skillnaden i poäng med den tidigare sökningen.
 
@@ -139,9 +133,17 @@ Rapporten är uppdelad i två områden:
 
 #### Sidpoäng - trend {#trend}
 
-Som standard är den valda vyn för **Sidpoäng — trend** **medianpoäng** för de **senaste sex månaderna**.
+Som standard är den valda vyn för **Sidpoäng — trend** **medianpoäng** för **förra året**.
 
-Använd listrutorna **Markera** och **Visa** längst upp och längst ned på diagramknappen för att välja sidspecifik information respektive olika tidsramar. Klicka på **uppdatera trenden** längst upp i diagrammet för att tillämpa markeringarna och uppdatera diagrammet.
+Du kan välja att visa trender för specifika Lightroom-kategorier genom att klicka på kategorinamnet i teckenförklaringen.
+
+![Trend Selectable](assets/experience-audit-trend-selectable.png)
+
+Använd listrutan **Markera** längst upp i diagrammet för att markera sidspecifik information, och listrutorna **Visa** och **Utlösare** längst ned för att välja olika tidsramar och utlösartyp.
+
+I listrutan **Visa** kan du välja en förinställd tidsram eller ett anpassat intervall för en mer specifik vy.
+
+![Trend View](assets/experience-audit-trend-view.png)
 
 När du flyttar musen över diagrammet visas ett verktygstips värdena för kategorierna Google Lightroom vid specifika tidpunkter.
 
@@ -164,13 +166,13 @@ Avsnittet **Recommendations** visar en sammanställd uppsättning insikter. Reko
 
 ![Recommendations](assets/experience-audit-recommendations.png)
 
-Klicka på avfasningen om du vill visa information om den.
+Klicka på en rekommendation för att visa information om den.
 
 ![Rekommendationsinformation](assets/experience-audit-recommendations-details.png)
 
-När det är tillgängligt innehåller den utökade rekommendationsinformationen också procentandelen av rekommendationseffekten, vilket hjälper dig att fokusera på de mest effektiva ändringarna.
+När det är tillgängligt innehåller den utökade rekommendationsinformationen också procentandelen av rekommendationseffekten, vilket hjälper dig att fokusera på de mest effektiva ändringarna. Förutom detta kan utökade rekommendationer innehålla relevanta AEM dokumentationslänkar och tips som kan vägleda dig genom implementering av de föreslagna korrigeringarna.
 
-Klicka på länken **visa sidor** i informationsvyn för att visa de sidor som rekommendationen gäller för.
+Klicka på länken **se sidor** i informationsvyn för att visa de sidor som rekommendationen gäller för.
 
 ![Sidor för rekommendationsinformationen](assets/experience-audit-details-pages.png)
 
@@ -222,7 +224,7 @@ Om [sidorna som du konfigurerade](#configuration) att granskas inte var tillgän
 
 Pipelinen visar ett utökningsbart felavsnitt som visar de relativa URL-sökvägar som den inte har åtkomst till.
 
-![Problem som påträffades av Experience Audit](assets/experience-audit-issues.jpg)
+![Problem som påträffades av Experience Audit](assets/experience-audit-issues.png)
 
 Om du visar den fullständiga rapporten visas information i avsnittet **[Experience Audit results](#results)** som också kan utökas.
 
