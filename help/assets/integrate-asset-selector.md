@@ -3,7 +3,7 @@ title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud 
 description: Integrera resursväljare med olika program från Adobe, andra än Adobe och andra tillverkare.
 role: Admin, User
 exl-id: 1c0051a3-549c-4783-9fc1-594f424a70c3
-source-git-commit: f9f5b2a25933e059cceacf2ba69e23d528858d4b
+source-git-commit: b85363b0a284929a2308ebee24888937f7c32841
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%
@@ -29,9 +29,9 @@ Du kan utföra autentisering utan att definiera några IMS-egenskaper om:
 
 Du kan integrera resursväljaren med olika program som:
 
-* [Integrera resursväljare med ett  [!DNL Adobe] program](#integrate-asset-selector.md)
-* [Integrera resursväljare med andra program än Adobe](#integrate-asset-selector-non-adobe.md)
-* [Integrering av Dynamic Media med OpenAPI-funktioner](#integrate-asset-selector-dynamic-media-open-api.md)
+* [Integrera resursväljare med ett  [!DNL Adobe] program](/help/assets/integrate-asset-selector-adobe-app.md)
+* [Integrera resursväljare med andra program än Adobe](/help/assets/integrate-asset-selector-non-adobe-app.md)
+* [Integrering av Dynamic Media med OpenAPI-funktioner](/help/assets/integrate-asset-selector-dynamic-media-open-api.md)
 
 
 >[!MORELIKETHIS]
