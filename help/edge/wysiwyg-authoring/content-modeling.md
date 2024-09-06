@@ -1,24 +1,24 @@
 ---
-title: Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services Projects
-description: Lär dig hur innehållsmodellering fungerar för WYSIWYG-redigering med Edge Delivery Services och hur du skapar eget innehåll.
+title: Innehållsmodellering för WYSIWYG Authoring with Edge Delivery Services Projects
+description: Lär dig hur innehållsmodellering fungerar för WYSIWYG Authoring med Edge Delivery Services och hur du skapar eget innehåll.
 exl-id: e68b09c5-4778-4932-8c40-84693db892fd
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 8d9ae4c7512198bd3e01a881665621d3ecbcd98d
+source-git-commit: b34a15138e1b8fbe2bebc22f2cc7e8a0ae22316a
 workflow-type: tm+mt
-source-wordcount: '2253'
+source-wordcount: '2242'
 ht-degree: 0%
 
 ---
 
 
-# Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services Projects {#content-modeling}
+# Innehållsmodellering för WYSIWYG Authoring with Edge Delivery Services Projects {#content-modeling}
 
-Lär dig hur innehållsmodellering fungerar för WYSIWYG-redigering med Edge Delivery Services och hur du skapar eget innehåll.
+Lär dig hur innehållsmodellering fungerar för WYSIWYG Authoring med Edge Delivery Services och hur du skapar eget innehåll.
 
 ## Förutsättningar {#prerequisites}
 
-Projekt som använder WYSIWYG-redigering med Edge Delivery Services ärver merparten av mekanismerna i andra Edge Delivery Services-projekt, oberoende av innehållskällan eller [redigeringsmetoden.](/help/edge/wysiwyg-authoring/authoring.md)
+Projekt som använder WYSIWYG Authoring med Edge Delivery Services ärver merparten av mekanismerna i andra Edge Delivery Services-projekt, oberoende av innehållskällan eller [redigeringsmetoden.](/help/edge/wysiwyg-authoring/authoring.md)
 
 Innan du börjar modellera innehåll för projektet bör du först läsa följande dokumentation.
 
@@ -43,7 +43,7 @@ Modellen för de här komponenterna ingår i [mallsidan för WYSIWYG-redigering 
 
 ## Block {#blocks}
 
-Block används för att skapa mer avancerat innehåll med specifika format och funktioner. I motsats till standardinnehåll kräver block ytterligare semantik. Blocken kan liknas vid [komponenter i AEM.](/help/implementing/developing/components/overview.md)
+Block används för att skapa mer avancerat innehåll med specifika format och funktioner. I motsats till standardinnehåll kräver block ytterligare semantik.
 
 Block är huvudsakligen innehållsdelar som dekorerats av JavaScript och formaterats med en formatmall.
 
@@ -326,7 +326,7 @@ Med [mekanismerna i blockstrukturen förklarad ](#block-structure) går det att 
 
 Tidigt i varje projekt måste man tänka på en innehållsmodell för varje block. Den måste vara agnostisk mot innehållskällan och redigeringsmiljön för att författare ska kunna växla eller kombinera dem när blockimplementeringar och format återanvänds. Mer information och allmänna riktlinjer finns i [David&#39;s Model (ta 2).](https://www.aem.live/docs/davidsmodel) Mer specifikt innehåller [blocksamlingen](/help/edge/developer/block-collection.md) en omfattande uppsättning innehållsmodeller för specifika användningsområden för vanliga användargränssnittsmönster.
 
-För WYSIWYG-redigering med Edge Delivery Services ställer det här en fråga om hur en övertygande semantisk innehållsmodell ska användas när informationen skrivs med formulär som består av flera fält i stället för att semantisk kod redigeras i sitt sammanhang som RTF.
+För WYSIWYG-redigering med Edge Delivery Services ställer det här en fråga om hur en övertygande semantisk innehållsmodell ska användas när informationen skapas med formulär som består av flera fält istället för att man redigerar semantiska markeringar i sitt sammanhang som RTF.
 
 För att lösa det här problemet finns det tre metoder som gör det enklare att skapa en övertygande innehållsmodell:
 
@@ -650,13 +650,13 @@ Om du vill göra det skapar du en komponentmodell med ID:t `page-metadata`.
 
 ## Nästa steg {#next-steps}
 
-Nu när du vet hur man modellerar innehåll kan du skapa block för egna Edge Delivery Services med WYSIWYG-redigeringsprojekt.
+Nu när du vet hur man modellerar innehåll kan du skapa block för egna Edge Delivery Services med WYSIWYG redigeringsprojekt.
 
-Läs dokumentet [Skapa block som är instrumenterade för användning med den universella redigeraren](/help/edge/wysiwyg-authoring/create-block.md) om du vill veta hur du skapar block som är instrumenterade för användning med den universella redigeraren vid WYSIWYG-redigering med Edge Delivery Services-projekt.
+Läs dokumentet [Skapa block som är instrumenterade för användning med den universella redigeraren](/help/edge/wysiwyg-authoring/create-block.md) om du vill veta hur du skapar block som är instrumenterade för användning med den universella redigeraren i WYSIWYG-redigering med Edge Delivery Services-projekt.
 
-Om du redan är bekant med att skapa block kan du läsa dokumentet [Utvecklarhandbok för att komma igång med WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) så att du kommer igång med en ny Adobe Experience Manager-webbplats med hjälp av Edge Delivery Services och den universella redigeraren för innehållsredigering.
+Om du redan är bekant med att skapa block kan du läsa dokumentet [Utvecklarhandbok för att komma igång med WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) för att komma igång med en ny Adobe Experience Manager-webbplats med Edge Delivery Services och Universal Editor för innehållsredigering.
 
 >[!TIP]
 >
->En genomgång av hur du skapar ett nytt projekt för Edge Delivery Services som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här webbinariet för AEM.](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/wysiwyg-authoring-and-edge-delivery)
+>En genomgång av hur du skapar ett projekt för nya Edge Delivery Services som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här webbinariet för AEM.](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/wysiwyg-authoring-and-edge-delivery)
 

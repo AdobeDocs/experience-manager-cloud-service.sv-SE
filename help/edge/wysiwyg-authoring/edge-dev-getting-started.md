@@ -4,9 +4,9 @@ description: Den här guiden hjälper dig att komma igång med en ny Adobe Exper
 feature: Edge Delivery Services
 exl-id: a71184a7-c954-442e-b276-99edc6d2acd8
 role: Admin, Architect, Developer
-source-git-commit: 7ad9a959592f1e8cebbcad9a67d280d5b2119866
+source-git-commit: b34a15138e1b8fbe2bebc22f2cc7e8a0ae22316a
 workflow-type: tm+mt
-source-wordcount: '1298'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -23,15 +23,6 @@ Innan du börjar den här guiden bör du känna till grunderna i och ha tillgån
 * Du har slutfört självstudiekursen [Edge Delivery Service.](/help/edge/developer/tutorial.md)
 * Du har åtkomst till en [AEM Cloud Service-sandlåda.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md)
 * Du har [aktiverat den universella redigeraren i samma sandlådemiljö.](/help/implementing/universal-editor/getting-started.md)
-
-## Välj rätt redigerare {#editor-choice}
-
-AEM erbjuder två olika innehållsredigerare och vilka alternativ du kan välja mellan beror på din situation.
-
-* **Universell redigerare** - Det här bör vara standardalternativet för nya webbplatser.
-* **AEM sidredigeraren** - Detta bör väljas för en befintlig AEM Sites-migrering till Edge Delivery Services.
-
-Den här guiden fokuserar AEM projekt på Edge Delivery Services med hjälp av den universella redigeraren. Se dokumentet [Använda Edge Delivery Services med AEM](/help/edge/using.md) för mer information om hur du väljer rätt redigerare och migreringen av befintliga AEM till Edge Delivery Services.
 
 ## Grundbegrepp vid utveckling för Edge Delivery Services {#core-concepts}
 
@@ -59,7 +50,7 @@ Webbplatser skapas automatiskt för var och en av dina grenar, från förhandsgr
 >
 >Mer information om hur du blockerar och utvecklar för Edge Delivery-Edge Delivery Services finns i avsnittet [Build](/help/edge/developer/block-collection.md) i dokumentationen för .
 
-## Komma igång med WYSIWYG-redigering och Edge Delivery Services {#getting-started}
+## Komma igång med WYSIWYG Authoring och Edge Delivery Services {#getting-started}
 
 När du har uppfyllt [villkoren](#prerequisites) och gjort [till ett val att använda Universell redigerare](#editor-choice) kan du komma igång med ditt eget projekt.
 
@@ -141,7 +132,7 @@ Nu när du har ett GitHub-projekt måste du skapa en ny AEM som projektet kan an
 
    ![Importerar mallar](assets/edge-dev-getting-started/site-templates.png)
 
-1. Ladda upp WYSIWYG-redigeringen med webbplatsmallen för Edge Delivery Services som du hämtade från GitHub.
+1. Överför WYSIWYG-redigeringen med webbplatsmallen för Edge Delivery Services som du hämtade från GitHub.
 
    * Mallen får bara överföras en gång. När den har överförts kan den återanvändas för att skapa ytterligare webbplatser.
 
@@ -193,10 +184,10 @@ När du är klar med redigeringen av den nya webbplatsen med Universal Editor ka
 
 ## Nästa steg {#next-steps}
 
-Nu när du har en fungerande WYSIWYG-redigering med Edge Delivery Services kan du börja skapa och formatera egna block.
+Nu när du har en fungerande WYSIWYG-redigering med projekt för Edge Delivery Services kan du börja skapa och formatera dina egna block.
 
 Mer information finns i guiden [Skapa block som är instrumenterade för användning med den universella redigeraren](/help/edge/wysiwyg-authoring/create-block.md).
 
 >[!TIP]
 >
->En genomgång av hur du skapar ett nytt projekt för Edge Delivery Services som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här webbinariet för AEM.](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery)
+>En genomgång av hur du skapar ett projekt för nya Edge Delivery Services som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här webbinariet för AEM.](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery)

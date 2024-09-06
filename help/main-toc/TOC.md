@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: f7508f2113d81aae205c63a25097ed920b124011
+source-git-commit: b34a15138e1b8fbe2bebc22f2cc7e8a0ae22316a
 workflow-type: tm+mt
-source-wordcount: '5538'
+source-wordcount: '5533'
 ht-degree: 3%
 
 ---
@@ -68,7 +68,7 @@ ht-degree: 3%
          + [Release Notes for 2021.5.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-5-0.md)
          + [Release Notes for 2021.4.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-4-0.md)
          + [Release Notes for 2021.3.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-3-0.md)
-         + [Versionsinformation för 2021.2.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-2-0.md)
+         + [Release Notes for 2021.2.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-2-0.md)
          + [Versionsinformation för 2021.1.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-1-0.md)
       + 2020 {#2020}
          + [Versionsinformation för 2020.12.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-12-0.md)
@@ -130,7 +130,7 @@ ht-degree: 3%
          + [Versionsinformation för 2022.11.0](/help/implementing/cloud-manager/release-notes/2022/2022-11-0.md)
          + [Versionsinformation för 2022.10.0](/help/implementing/cloud-manager/release-notes/2022/2022-10-0.md)
          + [Versionsinformation för 2022.9.0](/help/implementing/cloud-manager/release-notes/2022/2022-9-0.md)
-         + [Versionsinformation för 2022.8.0](/help/implementing/cloud-manager/release-notes/2022/2022-8-0.md)
+         + [Release Notes for 2022.8.0](/help/implementing/cloud-manager/release-notes/2022/2022-8-0.md)
          + [Versionsinformation för 2022.7.0](/help/implementing/cloud-manager/release-notes/2022/2022-7-0.md)
          + [Versionsinformation för 2022.6.0](/help/implementing/cloud-manager/release-notes/2022/2022-6-0.md)
          + [Versionsinformation för 2022.5.0](/help/implementing/cloud-manager/release-notes/2022/2022-5-0.md)
@@ -371,7 +371,7 @@ ht-degree: 3%
       + Personanpassning {#personalization}
          + [Personalization - översikt](/help/sites-cloud/authoring/personalization/overview.md)
          + [Förhandsgranska sidor med ContextHub-data](/help/sites-cloud/authoring/personalization/contexthub.md)
-         + [Skapa riktat innehåll med målläge](/help/sites-cloud/authoring/personalization/targeted-content.md)
+         + [Authoring Targeted Content Using Targeting Mode](/help/sites-cloud/authoring/personalization/targeted-content.md)
          + [Arbeta med riktat innehåll på flera webbplatser](/help/sites-cloud/authoring/personalization/multisite-targeted-content.md)
          + [Hur hantering av flera webbplatser för riktat innehåll är strukturerad](/help/sites-cloud/authoring/personalization/multisite-structure.md)
          + [Hantera aktiviteter](/help/sites-cloud/authoring/personalization/activities.md)
@@ -613,7 +613,7 @@ ht-degree: 3%
       + [Publish Assets to AEM and Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 
-   + Content Hub {#content-hub}
+   + {#content-hub}
       + [Ökning](/help/assets/product-overview.md)
       + [Distribuera Content Hub](/help/assets/deploy-content-hub.md)
       + [Konfigurera Content Hub användargränssnitt](/help/assets/configure-content-hub-ui-options.md)
@@ -799,8 +799,8 @@ ht-degree: 3%
       + [Använda Forms-centrerade steg i ett arbetsflöde + stegreferens](/help/forms/aem-forms-workflow-step-reference.md)
       + [Använda variabler i ett Forms-centrerat arbetsflöde](/help/forms/variable-in-aem-workflows.md)
       + [Dynamiskt användar- eller gruppval i AEM](/help/forms/dynamically-select-a-user-or-group-for-aem-workflow.md)
-      + [Hantera Forms-program och -uppgifter i AEM Inkorg](/help/forms/manage-applications-inbox.md)
-      + [Använda alternativet Frånvarande](/help/forms/configure-out-of-office-settings.md)
+      + [Manage Forms applications and tasks in AEM Inbox](/help/forms/manage-applications-inbox.md)
+      + [Use the Out of Office option](/help/forms/configure-out-of-office-settings.md)
    + Kommunikations-API:er {#using-communications}
       + [Introduktion till kommunikations-API:er](/help/forms/aem-forms-cloud-service-communications-introduction.md)
       + [Kommunikations-API:er - synkron bearbetning](/help/forms/aem-forms-cloud-service-communications.md)
@@ -913,7 +913,6 @@ ht-degree: 3%
       + [Skapar block](/help/edge/wysiwyg-authoring/create-block.md)
       + [Innehållsmodellering](/help/edge/wysiwyg-authoring/content-modeling.md)
       + [Tabelldata och kalkylblad](/help/edge/wysiwyg-authoring/tabular-data.md)
-      + [Befintliga projekt och Edge Delivery](/help/edge/wysiwyg-authoring/existing-projects.md)
       + [Hantera taxonomidata](/help/edge/wysiwyg-authoring/taxonomy.md)
       + [Funktioner för WIP-platser](/help/edge/wysiwyg-authoring/wip-features.md)
    + Dokumentbaserad redigering {#document-authoring}
@@ -1037,11 +1036,11 @@ ht-degree: 3%
          + [Lär dig grunderna i innehållsmodellering för Headless med AEM](/help/journey-headless/architect/basics.md)
          + [Läs om hur du skapar modeller för innehållsfragment i AEM](/help/journey-headless/architect/model-structure.md)
       + Headless Translation Journey {#translation}
-         + [Understand headless translation in AEM](/help/journey-headless/translation/overview.md)
+         + [Förstå headlessöversättning i AEM](/help/journey-headless/translation/overview.md)
          + [Get started with AEM headless translation](/help/journey-headless/translation/getting-started.md)
          + [Learn about headless content and how to translate in AEM](/help/journey-headless/translation/learn-about.md)
          + [Configure translation connector](/help/journey-headless/translation/configure-connector.md)
-         + [Konfigurera översättningsregler](/help/journey-headless/translation/translation-rules.md)
+         + [Configure translation rules](/help/journey-headless/translation/translation-rules.md)
          + [Översätta innehåll](/help/journey-headless/translation/translate-content.md)
          + [Publish översatt innehåll](/help/journey-headless/translation/publish-content.md)
       + Headless Content Author Journey {#author}
@@ -1158,7 +1157,7 @@ ht-degree: 3%
          + [Begränsningar för redigerare](/help/implementing/developing/introduction/editor-limitations.md)
          + [Namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md)
          + [Responsiv design](/help/implementing/developing/introduction/responsive-design.md)
-         + {#components-templates}
+         + Komponenter och mallar {#components-templates}
             + [Components Overview](/help/implementing/developing/components/overview.md)
             + [Mallar](/help/implementing/developing/components/templates.md)
             + [](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
@@ -1281,7 +1280,7 @@ ht-degree: 3%
       + [Konfigurera trafik vid leveransnätverket](/help/implementing/dispatcher/cdn-configuring-traffic.md)
       + [Edge Side Includes](/help/implementing/dispatcher/edge-side-includes.md)
       + [Configuring CDN Credentials and Authentication](/help/implementing/dispatcher/cdn-credentials-authentication.md)
-      + [Konfigurera CDN-felsidor](/help/implementing/dispatcher/cdn-error-pages.md)
+      + [Configuring CDN error pages](/help/implementing/dispatcher/cdn-error-pages.md)
       + [Rensa CDN-cachen](/help/implementing/dispatcher/cdn-cache-purge.md)
       + [Cachelagring i AEM as a Cloud Service](/help/implementing/dispatcher/caching.md)
 + Anslutningar {#connectors}
