@@ -4,9 +4,9 @@ description: Lär dig skapa och bygga e-handelsrelaterade upplevelser effektivt 
 exl-id: 45d697b7-ec96-4c26-be2a-3395b731d52d
 feature: Commerce Integration Framework
 role: Admin
-source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
+source-git-commit: dbf5c47f6d66b1ce35536b0762556511386a7e38
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '720'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Den här väljaren gör att du kan bläddra i katalogstrukturen för att hitta k
 
 ![Carousel-komponent utan markering](../assets/authoring/carousel_component_without_selection.png)
 
-Konfigurationsdialogrutan för den här komponenten kräver 1: n kategorier. CIF använder UID/ID som kategoriidentifierare. Författare kan antingen ange UID manuellt eller klicka på mappikonen för att öppna kategoriväljaren. När du har valt och stängt väljaren visas namnet på den valda kategorin i komponentdialogrutan.
+Konfigurationsdialogrutan för den här komponenten kräver 1: n kategorier. CIF använder UID / ID som kategoriidentifierare. Författare kan antingen ange UID manuellt eller klicka på mappikonen för att öppna kategoriväljaren. När du har valt och stängt väljaren visas namnet på den valda kategorin i komponentdialogrutan.
 
 ![Carousel-komponent med markering](../assets/authoring/carousel_component_with_selection.png)
 
@@ -71,9 +71,9 @@ CIF produktkatalogsidor är virtuella sidor som återges direkt. Därför går d
 
 ![RTE](../assets/authoring/RTE.png)
 
-    >[!OBS!]
-    >
-    > Om både kategori och produkt väljs hämtas produkten.
+>[!NOTE]
+>
+> Om du väljer både kategori och produkt används produkten.
 
 Då skapas en platshållarlänk som ersätts med en riktig länk när sidan återges.
 
@@ -103,4 +103,4 @@ Resultatet grupperas efter typ.
 
 >[!NOTE]
 >
-> Fulltextsökning i Omnissearch stöder inte associerade innehållsfragment. Använd SKU eller UID för att hitta associerade innehållsfragment.
+> Fulltextsökning i Omnissearch stöder inte associerade innehållsfragment. Använd SKU eller UID för att hitta tillhörande innehållsfragment.

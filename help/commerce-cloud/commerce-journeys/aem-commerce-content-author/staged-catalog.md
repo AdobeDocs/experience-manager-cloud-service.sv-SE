@@ -4,9 +4,9 @@ description: Lär dig hur du hanterar upplevelser i mellanlagrade produktkatalog
 exl-id: 1db18818-b8e0-4127-8a65-dc3dea1f2927
 feature: Commerce Integration Framework
 role: Admin
-source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
+source-git-commit: f172f514eaa8f1337359f00fad964f5781fba769
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
@@ -25,9 +25,9 @@ Den här artikeln bygger på dessa grunder.
 
 Det här dokumentet hjälper dig att förstå hur du hanterar produktkatalogsupplevelser baserat på mellanlagrade produktdata och AEM. Många gånger måste man förbereda parallella och kommande program (till exempel en ny klädsamling). Detta kräver åtkomst till testade produktdata (inte live än) och möjlighet att förbereda innehållet. Det nya innehållet kommer att publiceras när produkten lanseras.
 
-    >[!OBS!]
-    >
-    >Den här funktionen är bara tillgänglig med Adobe Commerce- eller Cloud Edition-anslutningar och tredjepartsanslutningar som stöder tokenbaserad autentisering. Mer information finns i [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/storefront/getting-started.html).
+>[!NOTE]
+>
+>Den här funktionen är endast tillgänglig med Adobe Commerce eller Cloud Edition och tredjepartsanslutningar som stöder tokenbaserad autentisering. Mer information finns i [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/storefront/getting-started.html).
 
 Först ska vi se hur författare kan få åtkomst till testade produktdata med CIF.
 
@@ -45,9 +45,9 @@ Nu kan du bläddra i katalogen med mellanlagrade data. Om du öppnar en mellanla
 
 ![stage plp](assets/staged-plp.png)
 
-    >[!NOTE]
-    >
-    >Omnissearch har ingen kontext och returnerar därför endast liveproduktkatalogdata
+>[!NOTE]
+>
+>Omnisearch har inget sammanhang och returnerar därför bara liveproduktkatalogdata
 
 ## AEM {#launches}
 
