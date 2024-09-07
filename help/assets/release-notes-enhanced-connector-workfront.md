@@ -4,9 +4,9 @@ description: Versionsinformation för  [!DNL Workfront for Experience Manager en
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 346f36a476a11dc7fe022df8b7b8df7aff06a2ba
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '1621'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Workfront for Experience Manager enhanced connector].
 
-Releasedatum för den senaste versionen, 1.9.19 av [!DNL Workfront for Experience Manager enhanced connector], är 12 april 2024.
+Releasedatum för den senaste versionen, 1.9.20 av [!DNL Workfront for Experience Manager enhanced connector], är 6 september 2024.
 
 ## Frigör högdagrar {#release-highlights}
 
 Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connector] innehåller följande felkorrigering:
 
-* Om HTTP-klienterna inte stängs uppstår minnesfel.
+* MIME-typen förloras när en ny version av en befintlig resurs överförs och skapas.
 
 >[!NOTE]
 >
@@ -29,7 +29,7 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 >[!IMPORTANT]
 >
->Adobe rekommenderar att du [uppgraderar till den senaste 1.9.19-versionen](/help/assets/workfront-connector-install.md) av [!DNL Workfront for Experience Manager enhanced connector].
+>Adobe rekommenderar att du [uppgraderar till den senaste 1.9.20-versionen](/help/assets/workfront-connector-install.md) av [!DNL Workfront for Experience Manager enhanced connector].
 
 ## Kända fel {#known-issues}
 
@@ -38,6 +38,11 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 * När du använder den klassiska Workfront-upplevelsen tillåter inte alternativet **[!UICONTROL Send to]** i listrutan **[!UICONTROL More]** att du väljer måldestinationen i Experience Manager. Alternativet **[!UICONTROL Send to]** fungerar korrekt med listrutan **[!UICONTROL Document Actions]**. Alternativet **[!UICONTROL Send to]** fungerar korrekt för listrutan **[!UICONTROL More]** och listrutan **[!UICONTROL Document Actions]** som är tillgänglig i den nya Workfront-upplevelsen.
 
 ## Tidigare versioner {#previous-releases}
+
+### April 2024-utgåvan {#april-2024-release}
+
+* Om HTTP-klienterna inte stängs uppstår minnesfel.
+
 
 ### Mars 2024-utgåvan {#march-2024-release}
 
@@ -68,7 +73,7 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 * Ingen begärandetidsbearbetning för kritiska flöden i länkad mapp, dokumentuppdatering och anteckningsuppdatering.
 
-### November 2023-utgåvan {#november-2023-release}
+### November 2023-utgåvan {#nov-2023-release}
 
 * När du visar listan med AEM mappar tar det mer än en minut att läsa in dialogrutan.
 * Autentiserade [!DNL Workfront]-användare får upprepade gånger felloggar för autentiseringsfel.
