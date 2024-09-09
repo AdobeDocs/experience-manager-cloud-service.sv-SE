@@ -11,9 +11,9 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: f3472006-d5ae-4f70-af3e-44e73aee85cc
-source-git-commit: 6ad46350906c3b8a36a8e361714fa5fffdbf8e82
+source-git-commit: 879af9e3168a1ab993eff930355c4bd200879c71
 workflow-type: tm+mt
-source-wordcount: '3671'
+source-wordcount: '3612'
 ht-degree: 0%
 
 ---
@@ -268,18 +268,20 @@ _Förhandsgranska en resurs baserat på den valda visningsförinställningen fö
 
 Del I av denna resa gällde grunderna i olika Dynamic Media-frågor. Om du vill veta mer om vad du läser kan du använda materialet nedan för att utforska koncept i detalj. Annars kan du fortsätta med del II av resan. Se [Framtiden i den här Dynamic Media-resan](#whats-next).
 
-_Hjälpavsnitt för Dynamic Media_
+{{see-also-dm}}
+<!--
+_Dynamic Media Help topics_
 
-* [Arbeta med Dynamic Media i Experience Manager](/help/assets/dynamic-media/dynamic-media.md)
-* [Om Smart Imaging](/help/assets/dynamic-media/imaging-faq.md)
-* [Skapa adaptiva videouppsättningar](/help/assets/dynamic-media/video.md)
-* [Bästa tillvägagångssätt för att optimera bildkvaliteten](/help/assets/dynamic-media/best-practices-for-optimizing-the-quality-of-your-images.md)
-* [Så här överför du resurser](/help/assets/add-assets.md#upload-assets)
-* [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md)
-* [Förhandsgranska 3D-resurser](/help/assets/dynamic-media/previewing-3d-assets.md)
-* [Så här levererar du Dynamic Media Assets](/help/assets/dynamic-media/delivering-dynamic-media-assets.md)
-* [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md)
-* [Arbeta med Selektiv Publish i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md)
+* [Work with Dynamic Media in Experience Manager](/help/assets/dynamic-media/dynamic-media.md)
+* [About Smart Imaging](/help/assets/dynamic-media/imaging-faq.md)
+* [How to create Adaptive Video Sets](/help/assets/dynamic-media/video.md)
+* [Best practices for optimizing the quality of your images](/help/assets/dynamic-media/best-practices-for-optimizing-the-quality-of-your-images.md)
+* [How to upload assets](/help/assets/add-assets.md#upload-assets)
+* [How to preview assets](/help/assets/dynamic-media/previewing-assets.md)
+* [How to preview 3D assets](/help/assets/dynamic-media/previewing-3d-assets.md)
+* [How to deliver Dynamic Media Assets](/help/assets/dynamic-media/delivering-dynamic-media-assets.md)
+* [How to publish assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md)
+* [Work with Selective Publish in Dynamic Media](/help/assets/dynamic-media/selective-publishing.md) -->
 
 _Dynamic Media självstudiekurser_
 

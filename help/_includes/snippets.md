@@ -1,7 +1,7 @@
 ---
-source-git-commit: 4a8153ffbdbc4da401089ca0a6ef608dc2c53b22
+source-git-commit: 879af9e3168a1ab993eff930355c4bd200879c71
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '993'
 ht-degree: 0%
 
 ---
@@ -161,3 +161,22 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 >[!TIP]
 >
 >Är du ny i Dynamic Media? En snabb översikt av Dynamic Media på hög nivå finns i [Arbeta med Dynamic Media](/help/assets/dynamic-media/dynamic-media.md).
+
+## Se även för Dynamic Media {#see-also-dm}
+
+>[!NOTE]
+>
+>* Är du ny i Dynamic Media? En snabb översikt av Dynamic Media på hög nivå finns i [Arbeta med Dynamic Media](/help/assets/dynamic-media/dynamic-media.md).
+>
+>* Följ [Dynamic Media bästa praxis](/help/assets/dynamic-media/dm-best-practices.md) för att få ut det mesta av ditt arbete.
+>
+>* Prova Dynamic Media bildfunktioner med [verktyget för ögonblicksbild](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot).
+>
+>* Se till att videouppspelningen blir jämn med [adaptiv video](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-dash).
+>
+>* Automatisera beskärning av [bilder med Smart beskärning](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use).
+>
+>* Automatisera beskärning av [videor med Smart beskärning](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-smart-crop-video).
+>
+>* Leverera [interaktiv 3D-baserad upplevelse](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/3d/dynamic-media-3d-feature-video).
+>* Annan [Dynamic Media-resursbank](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use).

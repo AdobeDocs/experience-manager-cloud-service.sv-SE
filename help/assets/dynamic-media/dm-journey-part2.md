@@ -11,9 +11,9 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: cdca41ad-a2cd-4f68-aaa4-5eec33c30f0b
-source-git-commit: 6ad46350906c3b8a36a8e361714fa5fffdbf8e82
+source-git-commit: 879af9e3168a1ab993eff930355c4bd200879c71
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2591'
 ht-degree: 0%
 
 ---
@@ -212,15 +212,18 @@ Du läser bara om bilduppsättningar och visningsprogram. Låt oss titta på ett
 
 Om du vill veta mer om vad du just läste kan du använda materialet nedan för att utforska koncept i detalj. Annars är din Dynamic Media Journey klar!
 
-_Hjälpavsnitt för Dynamic Media_
+{{see-also-dm}}
 
-* [Så här skapar du bildförinställningar](/help/assets/dynamic-media/image-presets.md)
-* En lista med [bildbehandlingsparametrar](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html) som du kan använda i fältet Bildmodifierare när du skapar en bildförinställning
-* [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md)
-* [Förhandsgranska 3D-resurser](/help/assets/dynamic-media/previewing-3d-assets.md)
-* [Så här skapar du bilduppsättningar](/help/assets/dynamic-media/image-sets.md)
-* [Så här skapar du snurra uppsättningar](/help/assets/dynamic-media/spin-sets.md)
-* [Så här skapar du blandade medieuppsättningar](/help/assets/dynamic-media/mixed-media-sets.md)
+<!--
+_Dynamic Media Help topics_
+
+* [How to create image presets](/help/assets/dynamic-media/image-presets.md)
+* A list of [image processing parameters](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html) that you can use in the Image Modifier field when you create an image preset
+* [How to preview assets](/help/assets/dynamic-media/previewing-assets.md)
+* [How to preview 3D assets](/help/assets/dynamic-media/previewing-3d-assets.md)
+* [How to create Image sets](/help/assets/dynamic-media/image-sets.md)
+* [How to create Spin sets](/help/assets/dynamic-media/spin-sets.md)
+* [How to create Mixed Media sets](/help/assets/dynamic-media/mixed-media-sets.md) -->
 
 _Dynamic Media självstudiekurser_
 
