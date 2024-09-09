@@ -2,9 +2,10 @@
 title: Vanliga frågor om Dynamic Media med OpenAPI-funktioner
 description: Vanliga frågor om Dynamic Media med OpenAPI-funktioner
 role: User
-source-git-commit: 540aa876ba7ea54b7ef4324634f6c5e220ad19d3
+exl-id: 3450e050-4b0b-4184-8e71-5e667d9ca721
+source-git-commit: dcc233be4d1bb84534aaef64316406bb960ce51d
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1478'
 ht-degree: 0%
 
 ---
@@ -108,14 +109,14 @@ Nedan följer några av de viktigaste skillnaderna mellan Dynamic Media med Open
 | [Endast tillgängligt med Assets as a Cloud Service](/help/assets/dynamic-media-open-apis-overview.md#prerequisites-dynaminc-media-open-apis) | Finns även för Managed Services på plats eller Adobe med ytterligare konfigurations- och provisioneringsåtgärder. |
 | [Begränsad uppsättning bildmodifierare som stöds, till exempel bredd, höjd, rotering, vänd, kvalitet och format](/help/assets/deliver-assets-apis.md) | En mängd tillgängliga bildmodifierare |
 | [Begränsad leverans av resurser baserat på användare, roller, datum och tid](/help/assets/restrict-assets-delivery.md) | Assets som publiceras på Dynamic Media är tillgängliga för alla användare |
-| De flesta utvecklare är bekanta med OpenAPI-specifikationer. AEM Assets utbyggbarhet blir mycket enkelt genom att använda [väljaren för mikrofonresurs](/help/assets/asset-selector.md). | SOAP-baserade API:er, som blir ett hinder när man utvecklar integrationsanpassningar. |
+| De flesta utvecklare är bekanta med OpenAPI-specifikationer. AEM Assets utbyggbarhet blir mycket enkelt genom att använda [Micro-Front Asset Selector](/help/assets/overview-asset-selector.md). | SOAP-baserade API:er, som blir ett hinder när man utvecklar integrationsanpassningar. |
 | Ändringar som görs i godkända resurser i DAM, inklusive versionsuppdateringar och metadataändringar, återspeglas automatiskt i leverans-URL:erna. Med ett kort TTL-värde (Time-to-Live) på 10 minuter konfigurerat för Dynamic Media med OpenAPI-funktioner via CDN blir uppdateringarna synliga i alla redigerings- och publiceringsgränssnitt på mindre än 10 minuter. | Rekommenderad CDN TTL på 10 timmar. Du kan åsidosätta TTL-värdet med åtgärden för cacheogiltigförklaring. |
 | Endast godkända mediefiler finns tillgängliga för leverans av mediefiler till applikationer längre fram i kedjan, vilket möjliggör för varumärken som godkänner mediefiler i digitala upplevelser. | Alla uppdateringar av en Dynamic Media-publicerad mediefil publiceras automatiskt utan något arbetsflöde för godkännande, vilket inte säkerställer att det inte finns något varumärkesgodkänt material i digitala upplevelser. |
 | Användningsrapporter baserade på antalet levererade resurser. Den här funktionen kommer snart att vara tillgänglig. | Användningsrapporter är inte tillgängliga. Den här funktionen kommer snart att vara tillgänglig. |
 | Assets som har markerats som Utgånget i Assets as a Cloud Service-databasen är inte längre tillgängliga för program längre fram i kedjan. | Inga interna tillgångar förfaller. En resurs förblir offentlig tills den tas bort från AEM as a Cloud Service-databasen. |
 | Stöder inte förinställningar för bilder och videomaterial för smart beskärning. | Stöder bildförinställningar och videofunktioner för smart beskärning. |
 | Dynamiska videokodar som säkerställer att bästa kodning hanteras baserat på indatavideon. Ingen inställning krävs för inbyggd videoleverans. | Standard 3 kodar oberoende av videoingång (kan påverka videoleveransprestanda). Du måste ställa in olika kodningar manuellt för olika videobithastigheter. |
-| Det är svårt att gissa vilka URL:er som är baserade på objektets UID (gör det möjligt att dölja URL), men SEO-optimerat. | URL-döljning är bara tillgänglig för URL-frågeparametrar. Assets-id:n (resursnamn) i URL:er är identifierbara. |
+| Det är svårt att gissa vilken resurs-UID-baserade URL:er är (gör att URL-adresser kan döljas), men SEO-optimering används. | URL-döljning är bara tillgänglig för URL-frågeparametrar. Assets-id:n (resursnamn) i URL:er är identifierbara. |
 
 +++
 
@@ -135,6 +136,3 @@ Tabellen nedan visar de viktigaste skillnaderna mellan de två lösningarna:
 | Resursmetadata på fjärr-DAM är även tillgängliga på AEM Sites-instanser. | Resursmetadata på fjärr-DAM är inte tillgängliga på AEM Sites-instansen. |
 
 +++
-
-
-
