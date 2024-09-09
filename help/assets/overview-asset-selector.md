@@ -3,7 +3,7 @@ title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud 
 description: Använd resursväljaren för att söka efter, hitta och hämta resursers metadata och återgivningar i programmet.
 role: Admin, User
 exl-id: 62b0b857-068f-45b7-9018-9c59fde01dc3
-source-git-commit: 575980320c1dbd32f799bf9c2fddf3d6773c838a
+source-git-commit: 0b8c345efa4c8f59b423644944ca2a6f8d54cbb4
 workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 0%
@@ -221,7 +221,7 @@ Med Resursväljaren kan du visa resursen i fyra olika vyer:
     </td>
     <td>
         <img src="assets/asset-selector-upload.gif" width="70px" height="70px" alt="Överför grafik för resursväljare"><br/>
-        <a href="asset-selector-upload.md"> Anpassningar av resursväljare </a>
+        <a href="asset-selector-upload.md"> Överföring av resursväljare </a>
         <p>
         <em>Lär dig hur du kan överföra filer eller mappar till resursväljaren från det lokala filsystemet eller tredjepartssystemet. </em>
         </p>
