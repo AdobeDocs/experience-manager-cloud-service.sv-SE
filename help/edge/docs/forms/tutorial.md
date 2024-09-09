@@ -1,19 +1,19 @@
 ---
-title: Komma igång med AEM Forms-Edge Delivery Services - självstudiekurs för utvecklare
+title: Komma igång med Edge Delivery Services för AEM Forms - självstudiekurs för utvecklare
 description: Den här självstudiekursen hjälper dig att komma igång med ett nytt Adobe Experience Manager Forms-projekt (AEM). Om tio till tjugo minuter har du skapat egna formulär.
 feature: Edge Delivery Services
 exl-id: bb7e93ee-0575-44e1-9c5e-023284c19490
 role: Admin, Architect, Developer
-source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
+source-git-commit: 4a8153ffbdbc4da401089ca0a6ef608dc2c53b22
 workflow-type: tm+mt
-source-wordcount: '1848'
+source-wordcount: '1850'
 ht-degree: 0%
 
 ---
 
 # Komma igång - självstudiekurs för utvecklare
 
-I dagens digitala samhälle är det viktigt för alla företag att skapa användarvänliga formulär. Med AEM Forms Edge Delivery Services (EDS) kan du skapa formulär med välbekanta verktyg som Google Docs och Microsoft Office.
+I dagens digitala samhälle är det viktigt för alla företag att skapa användarvänliga formulär. Med Edge Delivery Services för AEM Forms (EDS) kan du skapa formulär med välbekanta verktyg som Google Docs och Microsoft Office.
 
 Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft SharePoint för att enkelt bearbeta inlämnade data eller starta ett befintligt arbetsflöde.
 

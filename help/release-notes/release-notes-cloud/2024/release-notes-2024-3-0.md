@@ -4,9 +4,9 @@ description: Versionsinformation för version 2024.3.0 av  [!DNL Adobe Experienc
 exl-id: b3816929-2c0a-4d6a-b583-c928d2182ecd
 feature: Release Information
 role: Admin
-source-git-commit: 8d5d8910a906e2adf17fa9c75f17634602c2e0b9
+source-git-commit: 4a8153ffbdbc4da401089ca0a6ef608dc2c53b22
 workflow-type: tm+mt
-source-wordcount: '2292'
+source-wordcount: '2293'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Mer information finns i [dokumentationen](/help/edge/overview.md) och i [AEM Gem
 
 **Universell redigerare för Headless-implementeringar**
 
-Med Universell redigerare kan även fristående webbprogram använda samma intuitiva WYSIWYG-redigering som tidigare bara fanns på traditionella webbplatser. Innehållsskapare kan nu visuellt komponera layouter med Content Fragments på samma sätt som komponenter på sidor.
+Med Universell redigerare kan även fristående webbprogram använda samma intuitiva kontextbaserade WYSIWYG-redigering som tidigare bara fanns på traditionella webbplatser. Innehållsskapare kan nu visuellt komponera layouter med Content Fragments på samma sätt som komponenter på sidor.
 
 Det som skiljer den universella redigeraren åt är dess förmåga att anpassa sig till olika webbarkitekturer, anpassa sig till både server- och klientåtergivning, bibehålla ramverksagnostiken och eliminera behovet av AEM. Det är enkelt att integrera befintliga webbprogram med den universella redigeringsfunktionen för redigering av innehåll, vilket i första hand kräver att utvecklarna lägger in specifika dataattribut i sina markeringar.
 
@@ -116,7 +116,7 @@ Med Assets Essentials kan administratörer hantera åtkomstnivåer för privata 
 
 ### Nya funktioner för AEM Forms {#forms-new-features}
 
-* **[Adobe Experience Manager Forms-Edge Delivery Services](/help/edge/docs/forms/overview.md)**: AEM Forms-Edge Delivery Services är en sammansatt uppsättning tjänster som möjliggör en snabb utvecklingsmiljö där författare snabbt kan uppdatera, publicera och öppna nya formulär. Dessa tjänster ger enastående och slagkraftiga formulärupplevelser som skapar engagemang och konverteringar. Dessa blankettupplevelser är enkla att skapa och utveckla.
+* **[Adobe Experience Manager Forms-Edge Delivery Services](/help/edge/docs/forms/overview.md)**: Edge Delivery Services för AEM Forms är en sammansatt uppsättning tjänster som möjliggör en snabb utvecklingsmiljö där författare snabbt kan uppdatera, publicera och öppna nya formulär. Dessa tjänster ger enastående och slagkraftiga formulärupplevelser som skapar engagemang och konverteringar. Dessa blankettupplevelser är enkla att skapa och utveckla.
 
   ![EDS Forms Features](/help/edge/assets/eds-forms-features.png)
 
@@ -197,13 +197,13 @@ Real Use Monitoring (RUM) Data Service ger en mer exakt återgivning av använda
 
 #### Varningar om trafikfilterregler (tidig Adobe-program) {#traffic-filter-rules-alerts-early-adopter}
 
-Med de nyligen släppta [trafikfilterreglerna](/help/security/traffic-filter-rules-including-waf.md), som innehåller de valfria reglerna för brandväggen för webbprogram (WAF), kan du konfigurera vilken trafik som ska tillåtas eller nekas.
+Med de nyligen släppta [trafikfilterreglerna](/help/security/traffic-filter-rules-including-waf.md), som innehåller de valfria brandväggsreglerna för webbprogram (WAF), kan du konfigurera vilken trafik som ska tillåtas eller nekas.
 
 Nu kan du skicka ett e-postmeddelande till **<aemcs-cdn-config-adopter@adobe.com>** om du vill gå med i det tidiga adopterprogrammet så att du kan få meddelanden när trafikfilterreglerna aktiveras. E-postmeddelanden från Åtgärdscenter håller dig informerad när vissa trafikförhållanden inträffar så att du kan vidta lämpliga åtgärder.
 
 #### CDN-konfiguration (Tidigt Adobe-program) {#cdn-config-early-adopter}
 
-Förutom de nyligen släppta [reglerna för trafikfilter](/help/security/traffic-filter-rules-including-waf.md), som innehåller de valfria reglerna för brandväggen för webbprogram (WAF), finns det en möjlighet att använda Configuration Pipeline för att deklarera och distribuera andra typer av CDN-konfigurationer. [Läs mer](/help/implementing/dispatcher/cdn-configuring-traffic.md) och gå med i det tidiga adopterprogrammet genom att skicka ett e-postmeddelande till **<aemcs-cdn-config-adopter@adobe.com>** för att få tillgång till:
+Förutom de nyligen släppta [trafikfilterreglerna](/help/security/traffic-filter-rules-including-waf.md), som innehåller de valfria brandväggsreglerna för webbprogram (WAF), finns det en möjlighet att använda konfigurationsflödet för att deklarera och distribuera andra typer av CDN-konfigurationer. [Läs mer](/help/implementing/dispatcher/cdn-configuring-traffic.md) och gå med i det tidiga adopterprogrammet genom att skicka ett e-postmeddelande till **<aemcs-cdn-config-adopter@adobe.com>** för att få tillgång till:
 
 * 301/302 klientomdirigeringar
 * skicka förfrågningar till godtyckliga ursprung (t.ex. program som inte är AEM)

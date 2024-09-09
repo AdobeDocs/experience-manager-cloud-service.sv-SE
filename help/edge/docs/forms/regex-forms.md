@@ -1,17 +1,17 @@
 ---
-title: AEM Forms Edge Delivery Services, ofta använda regex-uttryck för validering av formulärfält
-description: AEM Forms Edge Delivery Services, ofta använda regex-uttryck för validering av formulärfält
+title: Edge Delivery Services för ofta använda regex-uttryck i AEM Forms för validering av formulärfält
+description: Edge Delivery Services för ofta använda regex-uttryck i AEM Forms för validering av formulärfält
 feature: Edge Delivery Services
 role: User
 hide: true
 hidefromtoc: true
-source-git-commit: 937bd4653e454beea3111cfc7ef7b4bbc1ace193
+exl-id: 5cfe23bb-155f-4639-b7b7-5edc172ba92a
+source-git-commit: 4a8153ffbdbc4da401089ca0a6ef608dc2c53b22
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
-
 
 # Vanliga regex-uttryck för validering
 

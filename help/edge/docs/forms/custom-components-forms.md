@@ -6,16 +6,16 @@ hide: true
 hidefromtoc: true
 exl-id: 77e90657-38db-4a49-9aac-3f3774b62624
 role: Admin, Architect, Developer
-source-git-commit: 4356fcc73a9c33a11365b1eb3f2ebee5c9de24f0
+source-git-commit: 4a8153ffbdbc4da401089ca0a6ef608dc2c53b22
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '665'
 ht-degree: 1%
 
 ---
 
 # Skapa anpassade komponenter
 
-Med AEM Forms Edge Delivery Services kan du anpassa de [inbyggda HTML-formulärkomponenterna](/help/edge/docs/forms/form-components.md) och skapa användarvänliga och interaktiva formulär. Det gör att du kan ändra formulärkomponenterna med fördefinierad kod, vilket förklaras i [Formateringen av formulärfält](/help/edge/docs/forms/style-theme-forms.md) med anpassad CSS (Cascading Style Sheets) och anpassad kod för att dekorera komponenten, vilket förbättrar utseendet på formulärfält i ett adaptivt Forms-block.
+Med Edge Delivery Services för AEM Forms kan du anpassa [systemspecifika HTML-formulärkomponenter](/help/edge/docs/forms/form-components.md) och skapa användarvänliga och interaktiva formulär. Det gör att du kan ändra formulärkomponenterna med fördefinierad kod, vilket förklaras i [Formateringen av formulärfält](/help/edge/docs/forms/style-theme-forms.md) med anpassad CSS (Cascading Style Sheets) och anpassad kod för att dekorera komponenten, vilket förbättrar utseendet på formulärfält i ett adaptivt Forms-block.
 
 ![Egen komponent](/help/edge/assets/custom-component-image.png)
 

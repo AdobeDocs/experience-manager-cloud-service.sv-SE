@@ -1,19 +1,20 @@
 ---
-title: Översikt över AEM Forms-Edge Delivery Services
-description: AEM Forms Edge Delivery Services som tagits fram för bästa prestanda och som gör det möjligt att förutse framtiden för smidig datainsamling och användarengagemang.
+title: Edge Delivery Services för AEM Forms - översikt
+description: Edge Delivery Services för AEM Forms
 feature: Edge Delivery Services
 exl-id: ecea1e05-d36b-4d63-af9d-c69dafd2f94f
 role: Admin, Architect, Developer
-source-git-commit: 5670e0ab7e6cb47bcc2dd7608aa3f01dc4ec0704
+source-git-commit: 4a8153ffbdbc4da401089ca0a6ef608dc2c53b22
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1037'
 ht-degree: 0%
 
 ---
 
-# AEM Forms-Edge Delivery Services
+# Edge Delivery Services för AEM Forms
 
-AEM Forms Edge Delivery Services är en sammanslagen uppsättning tjänster som möjliggör en snabb utvecklingsmiljö där författare snabbt kan uppdatera, publicera och öppna nya formulär. Dessa tjänster ger enastående och slagkraftiga formulärupplevelser som skapar engagemang och konverteringar. Dessa blankettupplevelser är enkla att skapa och utveckla.
+
+Edge Delivery Services för AEM Forms är en sammansatt uppsättning tjänster som möjliggör en snabb utvecklingsmiljö där författare snabbt kan uppdatera, publicera och öppna nya formulär. Dessa tjänster ger enastående och slagkraftiga formulärupplevelser som skapar engagemang och konverteringar. Dessa blankettupplevelser är enkla att skapa och utveckla.
 
 Med de här tjänsterna kan du:
 
@@ -21,11 +22,13 @@ Med de här tjänsterna kan du:
 
 * **Leverera enastående digitala registreringsupplevelser:** Leverera digitala registreringsupplevelser som läses in och återges snabbt och kontinuerligt med övervakning av formulärens prestanda via realtidsövervakning (RUM). Snabbare inläsningstider och optimerad användarupplevelse bidrar till att fler formulär fylls i och konverteras.
 
-* **Använd utvecklarvänliga verktyg:** AEM Forms-Edge Delivery Services använder normal HTML, modern CSS och vanilj JavaScript för att skapa exceptionella upplevelser och undviker den branta inlärningskurvan i ett specifikt ramverk. En utvecklare med grundläggande webbutvecklingskunskaper kan anpassa och enkelt bygga formulärkomponenter och upplevelser. Du behöver inte vänta på att en pipeline ska köras, du behöver bara checka in koden i GitHub så att ändringarna blir aktuella.
+* **Använd utvecklarvänliga verktyg:** Edge Delivery Services för AEM Forms
+använder oformaterad HTML, modern CSS och vanilj JavaScript för att skapa exceptionella upplevelser och undvika den branta inlärningskurvan i ett visst ramverk. En utvecklare med grundläggande webbutvecklingskunskaper kan anpassa och enkelt bygga formulärkomponenter och upplevelser. Du behöver inte vänta på att en pipeline ska köras, du behöver bara checka in koden i GitHub så att ändringarna blir aktuella.
 
-## Översikt över AEM Forms-Edge Delivery Services {#edge-overview}
+## Edge Delivery Services för AEM Forms - översikt {#edge-overview}
 
-AEM Forms Edge Delivery-tjänster ger stor flexibilitet när det gäller hur du skapar formulär på din webbplats. Du kan skapa innehåll och formulär med [WYSIWYG-redigering](/help/forms/creating-adaptive-form-core-components.md) samt [dokumentbaserad redigering](/help/edge/docs/forms/create-forms.md). AEM Forms-Edge Delivery Services har ett formulärblock som kallas [Adaptivt Forms-block](/help/edge/docs/forms/create-forms.md) för att lägga till ett formulär på din Edge Delivery Services webbplats.
+Edge Delivery Services för AEM Forms ger stor flexibilitet när det gäller hur du skapar formulär på din webbplats. Du kan skapa innehåll och formulär med [WYSIWYG-redigering](/help/forms/creating-adaptive-form-core-components.md) samt [dokumentbaserad redigering](/help/edge/docs/forms/create-forms.md). Edge Delivery Services för AEM Forms
+tillhandahåller ett formulärblock som kallas [Adaptivt Forms-block](/help/edge/docs/forms/create-forms.md) för att lägga till ett formulär på webbplatsen för Edge Delivery Services.
 
 Du kan till exempel skapa formulär direkt i Microsoft Excel eller Google Sheets och dessa kalkylblad omvandlas till formulär för webbplatsen. Alla nya formulär- och formulärinnehåll, till exempel ett nytt formulärfält, är omedelbart tillgängliga på webbplatsen utan att något nytt behöver göras.
 
@@ -33,7 +36,7 @@ Följande diagram visar hur du kan redigera formulär i Microsoft Excel eller Go
 
 ![Publish till Edge Delivery Services och AEM](/help/edge/docs/forms/assets/AEM-forms-with-EDS-publishing.png)
 
-AEM Forms-Edge Delivery Services använder GitHub så att kunder kan hantera och driftsätta kod direkt från sina GitHub-databaser. Du kan till exempel skriva formulär i antingen [Google Sheets](/help/edge/docs/forms/create-forms.md) eller [Microsoft Excel](/help/edge/docs/forms/create-forms.md) och komponenterna i formulären kan utvecklas med CSS och JavaScript i en GitHub-databas.
+Edge Delivery Services för AEM Forms använder GitHub så att kunder kan hantera och driftsätta kod direkt från sina GitHub-databaser. Du kan till exempel skriva formulär i antingen [Google Sheets](/help/edge/docs/forms/create-forms.md) eller [Microsoft Excel](/help/edge/docs/forms/create-forms.md) och komponenterna i formulären kan utvecklas med CSS och JavaScript i en GitHub-databas.
 
 När formulären är klara kan du använda [AEM Sidekick](/help/edge/docs/forms/tutorial.md#preview-and-publish-your-content), ett Chrome-tillägg, för att förhandsgranska och publicera innehållsuppdateringar.
 
@@ -86,17 +89,19 @@ WYSIWYG-redigering (Universal Editor och [Adaptive Forms Editor](/help/forms/cre
 >
 > WYSIWYG-redigeringsfunktionen är tillgänglig i ett program som tagits i bruk tidigt. Om du är intresserad kan du skicka ett snabbt e-postmeddelande från din arbetsadress till aem-forms-ea@adobe.com och begära åtkomst till funktionen.
 
-### AEM Forms-Edge Delivery Services: Skapa, publicera och skicka in Forms
+### Edge Delivery Services för AEM Forms
+
+: Skapa, publicera och skicka in Forms
 
 I följande diagram illustreras hur man skapar, publicerar och skickar in blanketter med hjälp av dokumentbaserad redigering och WYSIWYG-redigering.
 
-![Dokumentbaserad redigering ](/help/edge/assets/document-based-authoring-workflow.png)
+![Dokumentbaserad redigering](/help/edge/assets/document-based-authoring-workflow.png)
 
 ![WYSIWYG-redigering](/help/edge/assets/wysiwyg-authoring-workflow.png)
 
 ## Börja skapa formulär
 
-* [Kom igång med AEM Forms Edge Delivery Services](/help/edge/docs/forms/tutorial.md)
+* [Kom igång med Edge Delivery Services för AEM Forms](/help/edge/docs/forms/tutorial.md)
 * [Skapa ett formulär med Google eller Microsoft Excel](/help/edge/docs/forms/create-forms.md)
 * [Konfigurera dina Google-blad eller Microsoft Excel-filer så att du kan börja ta emot &#x200B;](/help/edge/docs/forms/submit-forms.md)
 * [Publish formulär och börja samla in data](/help/edge/docs/forms/publish-forms.md)

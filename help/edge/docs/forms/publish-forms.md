@@ -1,10 +1,10 @@
 ---
-title: Publish och AEM Forms Edge Delivery Services Form
-description: Publish och AEM Forms Edge Delivery Services Form
+title: Publish och Edge Delivery Services för AEM Forms
+description: Publish och Edge Delivery Services för AEM Forms
 feature: Edge Delivery Services
 exl-id: dcb16da1-dcc2-4529-8859-0716e727b54d
 role: Admin, Architect, Developer
-source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
+source-git-commit: 4a8153ffbdbc4da401089ca0a6ef608dc2c53b22
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 0%

@@ -1,20 +1,20 @@
 ---
-title: Översätta och lokalisera ett AEM Forms Edge Delivery ServicesForm
-description: Översätta och lokalisera ett AEM Forms Edge Delivery ServicesForm
+title: Översätta och lokalisera en Edge Delivery Services för AEM Forms
+description: Översätta och lokalisera en Edge Delivery Services för AEM Forms
 feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 exl-id: 8a0c826f-8acc-4a00-bd84-7b0df9a82457
 role: Admin, Architect, Developer
-source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
+source-git-commit: 4a8153ffbdbc4da401089ca0a6ef608dc2c53b22
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '546'
 ht-degree: 0%
 
 ---
 
 
-# Översätta och lokalisera ett AEM Forms Edge Delivery ServicesForm
+# Översätta och lokalisera en Edge Delivery Services för AEM Forms
 
 I Edge Delivery Services innebär formuläröversättning att man konverterar formulärinnehåll från ett språk till ett annat med fokus på precision, tydlighet och enhetlighet. Översatta eller lokaliserade formulär ger en bredare publik över olika geografiska platser, vilket förbättrar användarupplevelsen och underlättar bättre kommunikation mellan olika språk.
 
