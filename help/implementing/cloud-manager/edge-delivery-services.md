@@ -4,9 +4,9 @@ description: Lär dig hur du kan leverera dina Cloud Manager-projekt med hjälp 
 exl-id: f33bd6f0-62fc-4ecc-b8d2-65d1f1c44d82
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 4e887b753eaf09e104c68484792f00dcb08ee304
+source-git-commit: bc6ea60abed904ef514a4b010a9848511c28128e
 workflow-type: tm+mt
-source-wordcount: '1510'
+source-wordcount: '1503'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ Om du har avtal med licenser för AEM as a Cloud Service Sites Edge Delivery Ser
 
 När du har lagt till Edge Delivery Services i ett produktionsprogram tillämpas din Edge Delivery Services på det.
 
-En ny klickbar flik med namnet **Edge Delivery** visas på sidan Översikt. När du klickar på fliken visas en tabell med en lista över alla Edge Delivery-webbplatser som du har lagt till. I den vänstra navigeringspanelen, under grupperingen **Tjänster**, ser du ett menyalternativ med namnet **Edge Delivery Sites**.
+En klickbar flik med namnet **Edge Delivery** visas på sidan Översikt. När du klickar på fliken visas en tabell med en lista över alla Edge Delivery-webbplatser som du har lagt till. Lägg märke till menyalternativet **Edge Delivery Sites** i den vänstra navigeringspanelen under grupperingen **Tjänster**.
 
 ![Översiktssida med Edge Delivery Sites i den vänstra navigeringspanelen och fliken Edge Delivery till höger om fliken Publish Delivery ](/help/implementing/cloud-manager/assets/cm-overview-eds.png)
 
@@ -127,7 +127,7 @@ En ny klickbar flik med namnet **Edge Delivery** visas på sidan Översikt. När
 | 5 | Lägg till SSL-certifikat | Se [Lägg till SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md). |
 | 6 | Konfigurera CDN för din Edge Delivery-webbplats | Se [Lägg till en CDN-konfiguration](#add-cdn). |
 
->[!VIDEO](https://video.tv.adobe.com/v/3428020?learn=on) (2 minuter, 13 sekunder)
+>[!VIDEO](https://video.tv.adobe.com/v/3428020?learn=on)
 
 ## Lägga till en CDN-konfiguration på din Edge Delivery-webbplats {#add-cdn}
 

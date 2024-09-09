@@ -5,9 +5,9 @@ exl-id: 0d41723c-c096-4882-a3fd-050b7c9996d8
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: fcde1f323392362d826f9b4a775e468de9550716
+source-git-commit: a9bcbae1317d95e3710a19a79115f1437b418e41
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -27,12 +27,14 @@ Cloud Manager erbjuder självbetjäningsverktyg för att installera och hantera 
 
 <!-- CQDOC-21758, #1 -->
 
-* **Använd fall 1:** Cloud Manager använder en TLS-tjänst (Transport Layer Security) för att hantera kundägda SSL-certifikat och privata nycklar från tredjepartscertifikatutfärdare, som *Låt oss kryptera*.
-* **Använd fall 2:** Med Cloud Manager kan användare konfigurera ett DV-certifikat (Domain Validation) som kommer från Adobe för snabb domänkonfiguration. DV-certifikat är den mest grundläggande nivån för SSL-certifiering och används ofta för testning eller för att skydda webbplatser med grundläggande kryptering. DV-certifikat är tillgängliga i både [produktion och sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md).
+| | Använd skiftläge | Beskrivning |
+| --- | --- | --- |
+| 1 | **Hanterat DV-certifikat (Adobe)** | Med Cloud Manager kan användare konfigurera ett DV-certifikat (Domain Validation) som kommer från Adobe för snabb domänkonfiguration. DV-certifikat är den mest grundläggande nivån för SSL-certifiering och används ofta för testning eller för att skydda webbplatser med grundläggande kryptering. DV-certifikat är tillgängliga i både [produktion och sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md). |
+| 2 | **Kundhanterat certifikat (OV/EV)** | Cloud Manager använder en TLS-tjänst (Transport Layer Security) för att hantera kundägda SSL-certifikat och privata nycklar från tredjepartscertifikatutfärdare, som *Låt oss kryptera*. |
 
-  >
-  >
-  >Kunder får inte överföra DV-certifikat (Domain Validation).
+>[!NOTE]
+>
+>Kunder får inte överföra DV-certifikat (Domain Validation).
 
 
 ## Introduktion till certifikat {#certificates}

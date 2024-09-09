@@ -1,24 +1,24 @@
 ---
-title: Använda Git med Cloud Manager
+title: Använd Git med Cloud Manager
 description: Lär dig hur du använder Cloud Manager Git-databaser och hur du integrerar din egen kundhanterade Git-databas med Cloud Manager.
 exl-id: 57e71b8a-4546-4d7f-825c-a1637d08e608
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 80206fc1396896fe45e2c959c78a0bf30eba71c5
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 0%
 
 ---
 
-# Använda Git med Cloud Manager {#git-integration}
+# Använd Git med Cloud Manager {#git-integration}
 
 Adobe Cloud Manager levereras med en enda Git-databas som används för att distribuera kod med Cloud Manager CI/CD-pipelines.
 
 Du kan använda Cloud Manager Git-databas direkt, men du har också möjlighet att integrera en kundhanterad Git-databas med Cloud Manager.
 
-## Git-integrering - översikt {#git-integration-overview}
+## Översikt över Git-integrering {#git-integration-overview}
 
 I den här videoserien utforskas flera användningsfall när en kundhanterad Git-databas integreras med Cloud Manager, bland annat:
 
@@ -46,7 +46,7 @@ I den här videon lär du dig grundläggande förgrenade strategier.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28712/?quality=12)
 
-## Funktionsutveckling {#feature-development}
+## Utveckling av funktionsgrenar {#feature-development}
 
 Använd en funktionsgren för att isolera kodändringar i en kundhanterad Git-databas och synkronisera med Cloud Manager Git-databas för att använda en icke-produktionsprocess för kodkvalitets- och valideringstestning.
 
@@ -58,7 +58,7 @@ Förbered kod för en produktionsrelease i en kundhanterad Git-databas och synkr
 
 >[!VIDEO](https://video.tv.adobe.com/v/28724/?quality=12)
 
-## Synkroniserar versionstaggar {#sync-tags}
+## Synkronisera versionstaggar {#sync-tags}
 
 Synkronisera versionstaggar från en Cloud Manager Git-databas i en kundhanterad Git-databas för att se vilken kod som har distribuerats till testnings- och produktionsmiljöer.
 
@@ -66,6 +66,6 @@ Synkronisera versionstaggar från en Cloud Manager Git-databas i en kundhanterad
 
 ## Ytterligare resurser {#additional-resources}
 
-* [GitHub-resurser](https://try.github.io)
+* [GitHub-resurser](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git)
 * [Atlassisk Git Tutorials](https://www.atlassian.com/git/tutorials/what-is-version-control)
 * [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
