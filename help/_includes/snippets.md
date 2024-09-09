@@ -1,5 +1,5 @@
 ---
-source-git-commit: 879af9e3168a1ab993eff930355c4bd200879c71
+source-git-commit: 11368914a78c1f47c2f341a112bf981545cf6203
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 0%
@@ -180,3 +180,4 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 >
 >* Leverera [interaktiv 3D-baserad upplevelse](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/3d/dynamic-media-3d-feature-video).
 >* Annan [Dynamic Media-resursbank](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use).
+
