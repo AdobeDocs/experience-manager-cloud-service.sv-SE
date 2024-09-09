@@ -5,9 +5,9 @@ exl-id: 892577db-05dc-49ff-bb2c-203efdb89c8c
 recommendations: noDisplay
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 1289da67452be7fc0fa7f3126d2a3dbf051aa9b5
+source-git-commit: 4a369104ea8394989149541ee1a7b956383c8f12
 workflow-type: tm+mt
-source-wordcount: '1292'
+source-wordcount: '1295'
 ht-degree: 2%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 2%
 
 # Onboardresa {#onboarding-journey}
 
-Grattis till att du har valt AEM as a Cloud Service! Det här dokumentet är utgångspunkten för en guidad resa genom introduktionsprocessen. Oavsett om du ska driftsätta en ny applikation eller migrera en befintlig, säkerställer den här introduktionsresan att era team har konfigurerats och tillgång till AEM as a Cloud Service.
+Grattis till att du har valt AEM as a Cloud Service! Det här dokumentet är utgångspunkten för en guidad resa genom introduktionsprocessen. Oavsett om du distribuerar ett nytt program eller migrerar ett befintligt, kommer den här introduktionsresan att skapa era team. Det garanterar att de har tillgång till AEM as a Cloud Service.
 
 ## Introduktion {#introduction}
 
-Adobe Experience Manager är en kraftfull uppsättning sammanställningsbara innehållstjänster som snabbt levererar mycket slagkraftiga, personaliserade upplevelser över alla kanaler och frigör innehåll från alla kanaler. **Edge Delivery Services** är den senaste innovationen i Adobe Experience Manager som möjliggör extrem innehållshastighet och levererar enastående upplevelser. Lär dig hur du kommer igång med Edge Delivery Services genom att läsa [Översikt över Edge Delivery Services](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html). Mer information om hur du använder Edge Delivery Services finns på sidan [Utvecklarsjälvstudiekurs](https://www.hlx.live/developer/tutorial).
+Adobe Experience Manager är en kraftfull uppsättning sammanställningsbara innehållstjänster som snabbt levererar mycket slagkraftiga, personaliserade upplevelser över alla kanaler och frigör innehåll från alla kanaler. **Edge Delivery Services** är den senaste innovationen i Adobe Experience Manager som möjliggör extrem innehållshastighet och levererar enastående upplevelser. Lär dig hur du kommer igång med Edge Delivery Services genom att läsa [Översikt över Edge Delivery Services](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview). Mer information om hur du använder Edge Delivery Services finns på sidan [Utvecklarsjälvstudiekurs](https://www.aem.live/developer/tutorial).
 
 Onboarding är den process under vilken en systemadministratör konfigurerar AEM as a Cloud Service för din organisation. I den här processen ingår inledande etablering av molnresurser och tilldelning av användare till roller baserat på deras jobbansvar. Därför kan varje medlem logga in och komma åt sin resurs på AEM as a Cloud Service.
 
-![Startresan](/help/journey-onboarding/assets/onboarding-journey.png)
+![Startresan](/help/journey-onboarding/assets/onboarding-journey.png).
 
 Den här guiden leder dig igenom de viktigaste startämnena så att du har följande när du är klar:
 
@@ -44,38 +44,38 @@ Resultatet blir:
 * **Admin Console** - Där användare hanteras och roller tilldelas.
 * **Cloud Manager** - Det verktyg som du använder för att konfigurera resurser som program och miljöer. Det är också där du får åtkomst till Git och skapar rörledningar för att hantera och distribuera din anpassade kod.
 
-Dessa begrepp beskrivs i detalj i den här introduktionsresan. Målet är att du när resan är över:
+Dessa begrepp beskrivs i detalj i den här introduktionsresan. Målet är att du kan göra följande i slutet av resan:
 
-* Har beviljat den nödvändiga användaren åtkomst till AEM as a Cloud Service.
-* Har konfigurerat de första molnresurserna för ditt projekt.
+* Ge den användare som behövs åtkomst till AEM as a Cloud Service.
+* Konfigurera de första molnresurserna för ditt projekt.
 * Lär dig hur du distribuerar din första kod och skapar ditt första innehåll.
 
 I stort sett är det bara att köra ditt nya AEM as a Cloud Service-projekt!
 
 ## Målgrupp {#audience}
 
-Startresan är specifikt skriven för **systemadministratören** för kundens nya AEM as a Cloud Service-användare och för AEM i allmänhet. Systemadministratören är den person som först kontaktas av Adobe efter att ditt AEM as a Cloud Service-kontrakt har undertecknats. De är oftast den första personen som får tillgång till och ställer in dina resurser på AEM as a Cloud Service. Om du läser det här avsnittet är det troligtvis du som är systemadministratör.
+Startresan är specifikt skriven för **systemadministratören** för kunder som inte är tidigare än AEM as a Cloud Service och för AEM i allmänhet. Systemadministratören är den person som Adobe först kontaktar efter att ditt AEM as a Cloud Service-kontrakt har undertecknats. De är oftast den första personen som får tillgång till och ställer in dina resurser på AEM as a Cloud Service. Om du läser det här avsnittet är det troligtvis du som är systemadministratör.
 
 Systemadministratören hanterar alla aspekter av organisationens AEMaaCS-användare, från åtkomst till behörigheter. Systemadministratören måste dock interagera med andra profiler på vägen.
 
 | Persona | Beskrivning | Roll på resan |
 |---|---|---|
-| Systemadministratör | Målet för den här resan är att tillhandahålla molnresurser initialt och att tilldela användare lämpliga roller baserat på deras arbetsuppgifter | Hanterar alla aspekter av användare från behörighet |
-| Innehållsförfattare | Skapar och granskar innehåll i AEM | När de har fått tillstånd av systemadministratören kan författarna påbörja sin egen resa och skapa innehåll |
-| Developer | Utvecklar AEM program som använder innehåll från olika källor | När systemadministratören har gett tillstånd kan utvecklarna påbörja sin egen resa med att utveckla lösningar |
+| Systemadministratör | Målet för den här resan är att tillhandahålla molnresurser initialt och tilldela användare till lämpliga roller baserat på deras jobbansvar | Hanterar alla aspekter av användare från behörighet |
+| Innehållsförfattare | Skapar och granskar innehåll i AEM | När de har fått tillstånd av systemadministratören kan författarna själva börja skapa innehåll |
+| Developer | Utvecklar AEM program som använder innehåll från olika källor | När systemadministratören har gett tillstånd kan utvecklarna själva börja utveckla lösningar |
 | Distributionshanterare | Lägger till eller uppdaterar en miljö, kör pipelines och distribuerar kod AEM miljö eller kodkvalitet. | När systemadministratören har gett behörighet kan distributionscheferna påbörja sin egen resa med att hantera distributioner |
 
 Den här introduktionsguiden visar den fullständiga processen för att komma igång som systemadministratör. Rollerna för AEM användare, utvecklare och driftsättningsansvariga utforskas kortfattat som ytterligare, valfria delar av kundresan.
 
 >[!TIP]
 >
->Om du inte har använt AEM as a Cloud Service tidigare och är bekant med AEM och migrerar från Managed Services på plats eller Adobe ska du ta en titt på [AEM as a Cloud Service migreringsresa](/help/journey-migration/getting-started.md).
+>Om du inte har använt AEM as a Cloud Service tidigare och är bekant med AEM och migrerar från Managed Services på plats eller Adobe, ska du titta på [AEM as a Cloud Service migreringsresa](/help/journey-migration/getting-started.md).
 
 ## Översikt över introduktionsresan {#overview}
 
 I följande artiklar beskrivs grundbegreppen för introduktion och ger dig grundläggande kunskaper i AEM as a Cloud Service. Även om du kan gå direkt till en viss del av resan bygger många koncept på en del i tidigare artiklar. Om du inte är van vid att komma igång rekommenderar Adobe att du startar i början och fortsätter sekventiellt.
 
-| # | Artikel | Beskrivning | Målgrupp |
+| | Artikel | Beskrivning | Målgrupp |
 |---|---|---|---|
 | 0 | Onboardresa | Det här dokumentet | Systemadministratör |
 | 1 | [Förberedelse för introduktion](preparation.md) | Innan introduktionsprocessen börjar finns det ett antal eller förberedande steg som systemadministratören måste förstå innan han eller hon loggar in på systemet. | Systemadministratör |
@@ -89,7 +89,7 @@ I följande artiklar beskrivs grundbegreppen för introduktion och ger dig grund
 | 9 | [Aktiviteter för utvecklare och distributionsansvarig](developers.md) | Som utvecklare kan du läsa om hur du kan få åtkomst till och hantera Cloud Manager Git och hur du som distributionshanterare kan konfigurera pipelines och distribuera kod i Cloud Manager. | Utvecklare och driftsättningschefer |
 | 10 | [AEM användaruppgifter](aem-users.md) | Valfritt - Som AEM kan du lära dig hur du kan komma åt AEM as a Cloud Service-instansen och lära dig hur du redigerar innehåll för AEM as a Cloud Service. | AEM |
 
-## What&#39;s Next {#what-is-next}
+## Vad kommer härnäst? {#what-is-next}
 
 Nu är du redo att påbörja din AEM as a Cloud Service introduktionsresa. Du uppmuntras att fortsätta till nästa del av resan och läsa artikeln [Förberedelser för introduktion](preparation.md)
 
@@ -97,12 +97,12 @@ Nu är du redo att påbörja din AEM as a Cloud Service introduktionsresa. Du up
 
 [En dokumentationsresa](/help/journey-documentation/documentation-journeys.md) knyter ihop många olika, komplicerade ämnen och funktioner. Den innehåller en berättarröst som hjälper en läsare som är nybörjare att AEM förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
 
-Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
+Dokumentationsresor är utformade utifrån principer för bästa praxis. De får information med hjälp av Adobe senaste forskning, beprövad implementeringserfarenhet från Adobe-konsulter och feedback från kundprojekt.
 
-Om du vill veta vad Adobe rekommenderar om hur du får ditt team att komma in i ditt nya AEM as a Cloud Service-program kan du börja här!
+Börja här om du vill veta vad Adobe rekommenderar om hur du får ditt team att komma in i ditt nya AEM as a Cloud Service-program.
 
 ## Ytterligare resurser {#additional-resources}
 
 Här följer ytterligare, valfria resurser om du vill gå längre än vad som ingår i introduktionsresan.
 
-* [Introduktion till AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/onboarding.html) - I den här korta videon visas en översikt över processen för att komma igång med Cloud Service för AEM.
+* [Introduktion till AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/onboarding) - I den här korta videon visas en översikt över processen för att komma igång med Cloud Service för AEM.

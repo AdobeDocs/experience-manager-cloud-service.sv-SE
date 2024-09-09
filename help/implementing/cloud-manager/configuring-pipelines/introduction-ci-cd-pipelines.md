@@ -6,7 +6,7 @@ exl-id: 40d6778f-65e0-4612-bbe3-ece02905709b
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: f4c6331491bb08e81964476ad58065c1ee022967
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
 source-wordcount: '1482'
 ht-degree: 0%
@@ -99,7 +99,7 @@ Följande begränsningar gäller.
 * En användare måste vara inloggad med rollen **Distributionshanterare** för att kunna konfigurera eller köra pipelines.
 * Det kan bara finnas en pipeline i full hög per miljö.
 
-Observera dessutom hur pipelinen för hela stacken fungerar om du väljer att introducera en [konfigurationspipeline för webbskikt.](#web-tier-config-pipelines)
+Tänk dessutom på hur pipelinen i en hel hög fungerar om du väljer att introducera en [konfigurationspipeline för webbskikt](#web-tier-config-pipelines).
 
 * I helstacksflödet för en miljö ignoreras Dispatcher-konfigurationen om motsvarande konfigurationsflöde för webbnivån finns.
 * Om motsvarande konfigurationsflöde för webbskiktet för miljön inte finns kan användaren konfigurera pipelinen för helhög som innehåller eller ignorerar Dispatcher-konfigurationen.

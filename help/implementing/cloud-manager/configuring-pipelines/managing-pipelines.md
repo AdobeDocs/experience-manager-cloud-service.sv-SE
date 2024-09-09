@@ -6,9 +6,9 @@ exl-id: 4aff5a84-134a-43fa-8de8-8d564f4edd16
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 0b39fc4dcaf86d436547d3941b1f12bca8c5bc9b
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
-source-wordcount: '1119'
+source-wordcount: '1110'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Längst ned i listan med rörledningar finns allmänna alternativ.
 
 ## Fönstret Pipelines {#pipelines}
 
-I fönstret **Pipelines** visas en fullständig lista över alla pipelines för det valda programmet. Detta är användbart eftersom det ger mer omfattande information än vad som finns tillgängligt i [pipeline-kortet.](#pipeline-card)
+I fönstret **Pipelines** visas en fullständig lista över alla pipelines för det valda programmet. Detta är användbart eftersom det ger mer omfattande information än vad som finns tillgängligt i [pipeline-kortet](#pipeline-card).
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
@@ -50,13 +50,13 @@ I fönstret **Pipelines** visas en fullständig lista över alla pipelines för 
 
 1. Här visas en lista med alla pipelines för programmet och du kan starta och stoppa pipelinekörning på samma sätt som i **pipelines-kortet**.
 
-Om en pipeline körs och användaren trycker på informationsikonen i kolumnen **Status** visas information om körningen.
+Om en pipeline körs visas information om körningen om du klickar på informationsikonen i kolumnen **Status** .
 
 ![Information om pipeline-körning](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-status.png)
 
-Om du trycker eller klickar på **Visa information** visas [information om pipelinekörningen.](#view-details)
+Om du klickar på **Visa information** visas [information om pipelinekörningen](#view-details).
 
-Du kan också trycka på eller klicka på ellipsknappen för pipelinen för att vidta ytterligare åtgärder som är lämpliga för pipelineläget, till exempel [redigera](#editing-pipelines) det eller [avbryta körningen.](#cancel)
+Du kan också klicka på ellipsknappen för pipelinen om du vill vidta ytterligare åtgärder som är lämpliga för pipelineläget, till exempel [redigera](#editing-pipelines) det eller [avbryta körningen](#cancel).
 
 ![Pipeline-åtgärder](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-actions.png)
 
@@ -70,13 +70,13 @@ Fönstret **Aktivitet** visar en fullständig lista över alla pipelines-körnin
 
 1. Här visas en lista över alla pipeline-körningar för programmet, inklusive aktuella och historiska körningar.
 
-Om en pipeline körs och användaren trycker på informationsikonen i kolumnen **Status** visas information om körningen.
+Om en pipeline körs visas information om körningen om du klickar på informationsikonen i kolumnen **Status** .
 
 ![Information om pipeline-körning](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-activity.png)
 
-Om du trycker eller klickar på raden som representerar pipelinekörningen kommer du till [detaljerna för pipelinekörningen.](#view-details)
+Om du trycker eller klickar på raden som representerar pipelinekörningen kommer du till [informationen för pipelinekörningen](#view-details).
 
-Du kan också trycka eller klicka på ellipsknappen om du vill vidta ytterligare åtgärder för pipelinekörningen, till exempel visa information om den eller hämta loggen, som tar dig till [informationssidan för pipeline.](#view-details)
+Du kan också klicka på ellipsknappen om du vill vidta ytterligare åtgärder för pipelinekörningen, till exempel visa information om den eller hämta loggen, som tar dig till [informationssidan för pipeline](#view-details).
 
 ![Körningsåtgärder för pipeline](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-execution-actions.png)
 
@@ -88,7 +88,7 @@ Du kan också trycka eller klicka på ellipsknappen om du vill vidta ytterligare
 
 1. Pipeline-körningen börjar och anges av kolumnen **Status**.
 
-Du kan visa information om körningen genom att klicka på ellipsknappen igen och välja **[Visa information.](#view-details)**
+Du kan se information om körningen genom att klicka på ellipsknappen igen och välja **[Visa information](#view-details)**.
 
 Beroende på typen av pipeline kan du eventuellt avbryta körningen genom att klicka på ellipsknappen igen och välja **Avbryt**.
 

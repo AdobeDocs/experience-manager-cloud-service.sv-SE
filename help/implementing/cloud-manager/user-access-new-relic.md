@@ -5,7 +5,7 @@ exl-id: 9fa0c5eb-415d-4e56-8136-203d59be927e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
 source-wordcount: '1850'
 ht-degree: 0%
@@ -109,7 +109,7 @@ Följ de här stegen för att aktivera ditt konto som New Relic-användare.
 
 1. New Relic skickar ett e-postmeddelande med en länk för att bekräfta kontot.
 
-Om du inte får något bekräftelsemeddelande från New Relic kan du läsa [felsökningsavsnittet.](#troubshooting)
+Om du inte får något bekräftelsemeddelande från New Relic kan du läsa [felsökningsavsnittet](#troubshooting).
 
 ## Åtkomst till New Relic One {#accessing-new-relic}
 
@@ -159,7 +159,7 @@ Om du har lagts till som en New Relic One-användare enligt beskrivningen i avsn
 
 1. New Relic skickar ett e-postmeddelande med en länk för att bekräfta kontot.
 
-Om du har slutfört registreringsprocessen och inte kan logga in på ditt konto på grund av felmeddelanden i e-post eller lösenord loggar du en supportanmälan på [Admin Console.](https://adminconsole.adobe.com/)
+Om du har slutfört registreringsprocessen och inte kan logga in på ditt konto på grund av felmeddelanden i e-post eller lösenord loggar du en supportanmälan på [Admin Console](https://adminconsole.adobe.com/).
 
 Om du inte får något mejl från New Relic:
 
@@ -172,7 +172,7 @@ Om du inte får något mejl från New Relic:
 Följande begränsningar gäller när du lägger till användare i New Relic One:
 
 * Högst 30 användare kan läggas till. Om det maximala antalet användare har uppnåtts tar du bort användare för att kunna lägga till nya användare.
-* Användare som läggs till i New Relic har typen **Begränsat**. Mer information finns i [New Relic-dokumentationen.](https://docs.newrelic.com/docs/accounts/original-accounts-billing/original-users-roles/users-roles-original-user-model/#:~:text=In%20general%2C%20Admins%20take%20responsibility,Restricted%20Users%20can%20use%20them.&amp;text=One%20or%20more%20individuals%20vem,change)
+* Användare som läggs till i New Relic har typen **Begränsat**. Mer information finns i [New Relic-dokumentationen](https://docs.newrelic.com/docs/accounts/original-accounts-billing/original-users-roles/users-roles-original-user-model/#:~:text=In%20general%2C%20Admins%20take%20responsibility,Restricted%20Users%20can%20use%20them.&amp;text=One%20or%20more%20individuals%20vem,change).
 * AEM as a Cloud Service har bara New Relic One APM-lösning och har inte stöd för varningar, loggning eller API-integreringar.
 
 >[!NOTE]
@@ -181,7 +181,7 @@ Följande begränsningar gäller när du lägger till användare i New Relic One
 >
 >Följ samma steg i avsnittet [Aktivera ditt New Relic One-underkonto](#activate-sub-account) i det här dokumentet om du vill återaktivera ditt New Relic One-underkonto.
 
-Om du vill ha mer hjälp eller mer information om New Relic One-erbjudanden för ditt AEM as a Cloud Service-program kan du öppna ett supportärende via [AEM supportportalen.](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html)
+Om du vill ha mer hjälp eller mer information om New Relic One-erbjudanden för ditt AEM as a Cloud Service-program kan du öppna ett supportärende via [AEM supportportalen](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 
 ## Frågor och svar om New Relic One {#faqs}
 
@@ -203,7 +203,7 @@ Obs!
 
 ### Skickar Adobe varningsmeddelanden från New Relic One? {#alerting-new-relic}
 
-Adobe ger åtkomst till New Relic One endast i observationssyfte och använder det inte för kundvarningar eller interna varningar. Meddelanden om eventuella incidenter skickas med [användarmeddelandeprofiler.](/help/journey-onboarding/notification-profiles.md)
+Adobe ger åtkomst till New Relic One endast i observationssyfte och använder det inte för kundvarningar eller interna varningar. Meddelanden om eventuella incidenter skickas med [användarmeddelandeprofiler](/help/journey-onboarding/notification-profiles.md).
 
 ### Vem har åtkomst till New Relic One molntjänstdata? {#access-new-relic-cloud}
 

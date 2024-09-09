@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: b34a15138e1b8fbe2bebc22f2cc7e8a0ae22316a
+source-git-commit: 2bf129d763fcad024eb3799cdf2a97bdbc2472c5
 workflow-type: tm+mt
-source-wordcount: '5533'
+source-wordcount: '5586'
 ht-degree: 3%
 
 ---
@@ -63,12 +63,12 @@ ht-degree: 3%
          + [Versionsinformation för 2021.10.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-10-0.md)
          + [Versionsinformation för 2021.9.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-9-0.md)
          + [Versionsinformation för 2021.8.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-8-0.md)
-         + [Versionsinformation för 2021.7.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-7-0.md)
-         + [Release Notes for 2021.6.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-6-0.md)
-         + [Release Notes for 2021.5.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-5-0.md)
-         + [Release Notes for 2021.4.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-4-0.md)
-         + [Release Notes for 2021.3.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-3-0.md)
-         + [Release Notes for 2021.2.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-2-0.md)
+         + [Release Notes for 2021.7.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-7-0.md)
+         + [Versionsinformation för 2021.6.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-6-0.md)
+         + [Versionsinformation för 2021.5.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-5-0.md)
+         + [Versionsinformation för 2021.4.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-4-0.md)
+         + [Versionsinformation för 2021.3.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-3-0.md)
+         + [Versionsinformation för 2021.2.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-2-0.md)
          + [Versionsinformation för 2021.1.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-1-0.md)
       + 2020 {#2020}
          + [Versionsinformation för 2020.12.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-12-0.md)
@@ -105,6 +105,7 @@ ht-degree: 3%
    + Versionsinformation för Cloud Manager {#cloud-manager}
       + [Aktuell versionsinformation](/help/implementing/cloud-manager/release-notes/current.md)
       + 2024 {#2024}
+         + [Versionsinformation för 2024.8.0](/help/implementing/cloud-manager/release-notes/2024/2024-8-0.md)
          + [Versionsinformation för 2024.7.0](/help/implementing/cloud-manager/release-notes/2024/2024-7-0.md)
          + [Versionsinformation för 2024.6.0](/help/implementing/cloud-manager/release-notes/2024/2024-6-0.md)
          + [Versionsinformation för 2024.5.0](/help/implementing/cloud-manager/release-notes/2024/2024-5-0.md)
@@ -130,7 +131,7 @@ ht-degree: 3%
          + [Versionsinformation för 2022.11.0](/help/implementing/cloud-manager/release-notes/2022/2022-11-0.md)
          + [Versionsinformation för 2022.10.0](/help/implementing/cloud-manager/release-notes/2022/2022-10-0.md)
          + [Versionsinformation för 2022.9.0](/help/implementing/cloud-manager/release-notes/2022/2022-9-0.md)
-         + [Release Notes for 2022.8.0](/help/implementing/cloud-manager/release-notes/2022/2022-8-0.md)
+         + [Versionsinformation för 2022.8.0](/help/implementing/cloud-manager/release-notes/2022/2022-8-0.md)
          + [Versionsinformation för 2022.7.0](/help/implementing/cloud-manager/release-notes/2022/2022-7-0.md)
          + [Versionsinformation för 2022.6.0](/help/implementing/cloud-manager/release-notes/2022/2022-6-0.md)
          + [Versionsinformation för 2022.5.0](/help/implementing/cloud-manager/release-notes/2022/2022-5-0.md)
@@ -371,7 +372,7 @@ ht-degree: 3%
       + Personanpassning {#personalization}
          + [Personalization - översikt](/help/sites-cloud/authoring/personalization/overview.md)
          + [Förhandsgranska sidor med ContextHub-data](/help/sites-cloud/authoring/personalization/contexthub.md)
-         + [Authoring Targeted Content Using Targeting Mode](/help/sites-cloud/authoring/personalization/targeted-content.md)
+         + [Skapa riktat innehåll med målläge](/help/sites-cloud/authoring/personalization/targeted-content.md)
          + [Arbeta med riktat innehåll på flera webbplatser](/help/sites-cloud/authoring/personalization/multisite-targeted-content.md)
          + [Hur hantering av flera webbplatser för riktat innehåll är strukturerad](/help/sites-cloud/authoring/personalization/multisite-structure.md)
          + [Hantera aktiviteter](/help/sites-cloud/authoring/personalization/activities.md)
@@ -456,7 +457,17 @@ ht-degree: 3%
    + [Översikt över tillgångsmikrotjänster](/help/assets/asset-microservices-overview.md)
    + [Tillgänglighet i  [!DNL Assets]](/help/assets/accessibility.md)
    + Hantera digitala resurser {#manage}
-      + [Mikrofrontsväljare för mediefiler](/help/assets/asset-selector.md)
+      + Mikrofrontsväljare för resurs {#asset-selector}
+         + [Översikt över resursväljaren](/help/assets/overview-asset-selector.md)
+         + Integrering av resursväljare {#asset-selector-integration}
+            + [Översikt över integrering av resursväljare](/help/assets/integrate-asset-selector.md)
+            + [Integrera resursväljaren med ett Adobe-program](/help/assets/integrate-asset-selector-adobe-app.md)
+            + [Integrera resursväljare med andra program än Adobe](/help/assets/integrate-asset-selector-non-adobe-app.md)
+            + [Integrera resursväljare för Dynamic Media med OpenAPI-funktioner](/help/assets/integrate-asset-selector-dynamic-media-open-api.md)
+         + [Egenskaper för resursväljare](/help/assets/asset-selector-properties.md)
+         + [Exempel på resursväljare](/help/assets/asset-selector-examples.md)
+         + [Anpassningar av resursväljare](/help/assets/asset-selector-customization.md)
+         + [Överföring av resursväljare](/help/assets/asset-selector-upload.md)
       + [Micro-FrontEnd-målväljare](/help/assets/destination-selector.md)
       + [Dela resurser](/help/assets/share-assets.md)
       + [Resurser som återanvänds](/help/assets/reprocessing.md)
@@ -489,8 +500,8 @@ ht-degree: 3%
       + [Bearbeta resurser med  [!DNL Creative Cloud] API:er](/help/assets/cc-api-integration.md)
       + [Färgtaggar för bilder](/help/assets/color-tag-images.md)
       + [Manage PDF documents](/help/assets/manage-pdf-documents.md)
-   + [!DNL Assets]{#admin}
-      + [Detect duplicate assets](/help/assets/detect-duplicate-assets.md)
+   + Konfigurera, administrera och utöka [!DNL Assets] {#admin}
+      + [Identifiera duplicerade resurser](/help/assets/detect-duplicate-assets.md)
       + [Dokumentreferenser för utvecklare och API:er](/help/assets/developer-reference-material-apis.md)
       + [Mappmetadatamatchschema](/help/assets/folder-metadata-schema.md)
       + [Arbeta med bild- och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md)
@@ -610,10 +621,10 @@ ht-degree: 3%
       + [Hantera rapporter](/help/assets/manage-reports-assets-view.md)
       + [Hantera taggar](/help/assets/tagging-management-assets-view.md)
       + [Content Credentials](/help/assets/content-credentials.md)
-      + [Publish Assets to AEM and Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+      + [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 
-   + {#content-hub}
+   + Content Hub {#content-hub}
       + [Ökning](/help/assets/product-overview.md)
       + [Distribuera Content Hub](/help/assets/deploy-content-hub.md)
       + [Konfigurera Content Hub användargränssnitt](/help/assets/configure-content-hub-ui-options.md)
@@ -799,8 +810,8 @@ ht-degree: 3%
       + [Använda Forms-centrerade steg i ett arbetsflöde + stegreferens](/help/forms/aem-forms-workflow-step-reference.md)
       + [Använda variabler i ett Forms-centrerat arbetsflöde](/help/forms/variable-in-aem-workflows.md)
       + [Dynamiskt användar- eller gruppval i AEM](/help/forms/dynamically-select-a-user-or-group-for-aem-workflow.md)
-      + [Manage Forms applications and tasks in AEM Inbox](/help/forms/manage-applications-inbox.md)
-      + [Use the Out of Office option](/help/forms/configure-out-of-office-settings.md)
+      + [Hantera Forms-program och -uppgifter i AEM Inkorg](/help/forms/manage-applications-inbox.md)
+      + [Använda alternativet Frånvarande](/help/forms/configure-out-of-office-settings.md)
    + Kommunikations-API:er {#using-communications}
       + [Introduktion till kommunikations-API:er](/help/forms/aem-forms-cloud-service-communications-introduction.md)
       + [Kommunikations-API:er - synkron bearbetning](/help/forms/aem-forms-cloud-service-communications.md)
@@ -1037,10 +1048,10 @@ ht-degree: 3%
          + [Läs om hur du skapar modeller för innehållsfragment i AEM](/help/journey-headless/architect/model-structure.md)
       + Headless Translation Journey {#translation}
          + [Förstå headlessöversättning i AEM](/help/journey-headless/translation/overview.md)
-         + [Get started with AEM headless translation](/help/journey-headless/translation/getting-started.md)
+         + [Kom igång med AEM headless translation](/help/journey-headless/translation/getting-started.md)
          + [Learn about headless content and how to translate in AEM](/help/journey-headless/translation/learn-about.md)
-         + [Configure translation connector](/help/journey-headless/translation/configure-connector.md)
-         + [Configure translation rules](/help/journey-headless/translation/translation-rules.md)
+         + [Konfigurera översättningskoppling](/help/journey-headless/translation/configure-connector.md)
+         + [Konfigurera översättningsregler](/help/journey-headless/translation/translation-rules.md)
          + [Översätta innehåll](/help/journey-headless/translation/translate-content.md)
          + [Publish översatt innehåll](/help/journey-headless/translation/publish-content.md)
       + Headless Content Author Journey {#author}
@@ -1063,7 +1074,6 @@ ht-degree: 3%
          + [Skapa sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-sandbox-programs.md)
          + [Redigeringsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md)
          + [Vilolägen](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/hibernating-environments.md)
-         + [Support för Edge Delivery Services](/help/implementing/cloud-manager/edge-delivery-services.md)
       + Skapar ett AEM programprojekt {#create-application-project}
          + [Guiden Skapa projekt](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md)
          + [Projektinställningar](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md)
@@ -1097,7 +1107,6 @@ ht-degree: 3%
             + [Översikt över funktionstestning](/help/implementing/cloud-manager/functional-testing.md)
             + [Java Functional Testing](/help/implementing/cloud-manager/java-functional-testing.md)
             + [UI-testning](/help/implementing/cloud-manager/ui-testing.md)
-         + [Testning av Experience Audit](/help/implementing/cloud-manager/experience-audit-testing.md)
          + [Kontrollpanelen för Experience Audit](/help/implementing/cloud-manager/experience-audit-dashboard.md)
       + [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md)
       + [Anpassade behörigheter](/help/implementing/cloud-manager/custom-permissions.md)
@@ -1106,11 +1115,9 @@ ht-degree: 3%
       + [Dynatrace](/help/implementing/cloud-manager/dynatrace.md)
       + [Meddelanden](/help/implementing/cloud-manager/notifications.md)
       + [Avancerade nätverk](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html)
-      + SSL-certifikat {#manage-ssl-certificates}
-         + [Introduktion](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
-         + [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md)
-         + [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md)
-      + Anpassade domännamn {#custom-domain-names}
+      + Edge Delivery Sites {#edge-delivery-sites}
+         + [Edge Delivery Support i Cloud Manager](/help/implementing/cloud-manager/edge-delivery-services.md)
+      + Domäninställningar {#custom-domain-names}
          + [Introduktion](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
          + [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
          + [Lägga till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md)
@@ -1118,7 +1125,12 @@ ht-degree: 3%
          + [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md)
          + [Kontrollerar DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md)
          + [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md)
-         + [DV-certifikat (Domain Validated)](/help/implementing/cloud-manager/managing-ssl-certifications/domain-validated-certificates.md)
+      + SSL-certifikat {#manage-ssl-certificates}
+         + [Introduktion](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
+         + [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md)
+         + [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md)
+      + CDN-konfigurationer {#cdn-configurations}
+         + [Lägga till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md)
       + IP-Tillåtelselista {#ip-allow-lists}
          + [Introduktion](/help/implementing/cloud-manager/ip-allow-lists/introduction.md)
          + [Lägga till en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md)
@@ -1144,7 +1156,7 @@ ht-degree: 3%
       + [Skapa snabbt webbplatser och anpassa gränssnittet](/help/implementing/developing/introduction/quick-site-creation.md)
       + [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md)
       + [Anpassa webbplatsmallar och teman](/help/implementing/developing/introduction/customizing-site-templates-themes.md)
-      + [Headless and Headless in AEM](/help/implementing/developing/headful-headless.md)
+      + [Headful and Headless in AEM](/help/implementing/developing/headful-headless.md)
       + Fullständig AEM {#full-stack}
          + [Getting Started Developing AEM Sites - WKND Tutorial](/help/implementing/developing/introduction/develop-wknd-tutorial.md)
          + [Struktur för AEM](/help/implementing/developing/introduction/ui-structure.md)
@@ -1158,9 +1170,9 @@ ht-degree: 3%
          + [Namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md)
          + [Responsiv design](/help/implementing/developing/introduction/responsive-design.md)
          + Komponenter och mallar {#components-templates}
-            + [Components Overview](/help/implementing/developing/components/overview.md)
+            + [Komponenter - översikt](/help/implementing/developing/components/overview.md)
             + [Mallar](/help/implementing/developing/components/templates.md)
-            + [](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+            + [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
             + [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html)
             + [JSON-exporterare för innehållstjänster](/help/implementing/developing/components/json-exporter.md)
             + [Aktivera JSON-export för en komponent](/help/implementing/developing/components/enabling-json-exporter.md)
@@ -1265,7 +1277,7 @@ ht-degree: 3%
    + Distribuera till AEM as a Cloud Service {#deploying}
       + [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md)
       + [Uppdateringar av AEM](/help/implementing/deploying/aem-version-updates.md)
-      + [Konfigurera OSGi för AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md)
+      + [Configuring OSGi for AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md)
       + [Resursmappning](/help/implementing/deploying/resource-mapping.md)
    + Författarnivå {#author-tier}
       + [Åtkomst till författarnivån](/help/implementing/author-tier/accessing-the-author-tier.md)
@@ -1279,8 +1291,8 @@ ht-degree: 3%
       + [CDN i AEM AS A CLOUD SERVICE](/help/implementing/dispatcher/cdn.md)
       + [Konfigurera trafik vid leveransnätverket](/help/implementing/dispatcher/cdn-configuring-traffic.md)
       + [Edge Side Includes](/help/implementing/dispatcher/edge-side-includes.md)
-      + [Configuring CDN Credentials and Authentication](/help/implementing/dispatcher/cdn-credentials-authentication.md)
-      + [Configuring CDN error pages](/help/implementing/dispatcher/cdn-error-pages.md)
+      + [Konfigurera CDN-autentiseringsuppgifter och autentisering](/help/implementing/dispatcher/cdn-credentials-authentication.md)
+      + [Konfigurera CDN-felsidor](/help/implementing/dispatcher/cdn-error-pages.md)
       + [Rensa CDN-cachen](/help/implementing/dispatcher/cdn-cache-purge.md)
       + [Cachelagring i AEM as a Cloud Service](/help/implementing/dispatcher/caching.md)
 + Anslutningar {#connectors}

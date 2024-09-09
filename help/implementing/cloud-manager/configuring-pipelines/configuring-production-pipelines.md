@@ -6,7 +6,7 @@ exl-id: 67edca16-159e-469f-815e-d55cf9063aa4
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 85cef99dc7a8d762d12fd6e1c9bc2aeb3f8c1312
+source-git-commit: cfaa3be31195929b80310610120a779a20537c61
 workflow-type: tm+mt
 source-wordcount: '1370'
 ht-degree: 0%
@@ -102,11 +102,11 @@ Följ de här stegen för att slutföra konfigurationen av produktionsflödet f�
 
 1. Ange sökvägar som ska inkluderas i Experience Audit.
 
-   * Mer information finns i dokumentet [Experience Audit Testing](/help/implementing/cloud-manager/experience-audit-testing.md#configuration).
+   * Mer information finns i dokumentet [Experience Audit Testing](/help/implementing/cloud-manager/experience-audit-dashboard.md#configuration).
 
 1. Klicka på **Spara** för att spara din pipeline.
 
-Sökvägar som har konfigurerats för Experience Audit skickas till tjänsten och utvärderas utifrån prestanda-, hjälpmedels-, SEO-test (sökmotoroptimering), bästa praxis och PWA-tester (Progressive Web App) när pipeline körs. Mer information finns i [Om Experience Audit Results](/help/implementing/cloud-manager/experience-audit-testing.md).
+Sökvägar som har konfigurerats för Experience Audit skickas till tjänsten och utvärderas utifrån prestanda-, hjälpmedels-, SEO-test (sökmotoroptimering), bästa praxis och PWA-tester (Progressive Web App) när pipeline körs. Mer information finns i [Om Experience Audit Results](/help/implementing/cloud-manager/experience-audit-dashboard.md).
 
 Pipelinen sparas och du kan nu [hantera dina pipelines](managing-pipelines.md) på kortet **Pipelines** på sidan **Programöversikt**.
 

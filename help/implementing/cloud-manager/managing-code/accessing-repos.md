@@ -5,9 +5,9 @@ exl-id: 0c0671a3-e400-46f3-ad86-166a6cfdd44b
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 0b39fc4dcaf86d436547d3941b1f12bca8c5bc9b
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
@@ -59,10 +59,10 @@ Med hjälp av dessa uppgifter kan du klona en lokal kopia av databasen, göra ä
 
 ## Åtkomst till databasinformation från fönstret Databaser {#repositories-window}
 
-En **Access Repo Info**-knapp är också tillgänglig i verktygsfältet i fönstret [**Databaser**.](managing-repositories.md) visar samma information om åtkomst till databaser som hanteras av Adobe.
+En **Access Repo Info**-knapp är också tillgänglig i verktygsfältet i fönstret [**Databaser**](managing-repositories.md). Samma information om åtkomst till databaser som hanteras av Adobe visas.
 
 ## Återkalla ett åtkomstlösenord {#revoke-password}
 
-Du kan återkalla ett lösenord när som helst. Om du vill göra det [skapar du en supportanmälan för den här förfrågan.](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;support-tab=home#support)
+Du kan återkalla ett lösenord när som helst. Om du vill göra det [skapar du en supportbiljett för den här begäran](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;support-tab=home#support).
 
 Biljetten kommer att behandlas med hög prioritet och bör återkallas inom en dag.

@@ -5,9 +5,9 @@ exl-id: 3f3d7631-2bc9-440b-9888-50f6529bcd42
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: b2950c62c55942614e23d08b3bb96864d4112e8c
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1499'
 ht-degree: 0%
 
 ---
@@ -37,8 +37,8 @@ Konsolen Mina program ger en översikt över alla program som du har tillgång t
 1. [Verktygsfält](#toolbars-my-programs-toolbars) för organisationsval, aviseringar och kontoinställningar
 1. Flikar som gör att du kan växla den aktuella vyn av dina program.
    * Vyn **Hem** (standard) som väljer vyn **Mina program** med en översikt över alla program
-   * **Licens** som har åtkomst till [License Dashboard.](/help/implementing/cloud-manager/license-dashboard.md)
-   * Observera att flikarna som standard är stängda och kan visas med hjälp av hamburgermenyn i [Cloud Manager-huvudet.](#cloud-manager-header)
+   * **Licens** som har åtkomst till [licensinstrumentpanelen](/help/implementing/cloud-manager/license-dashboard.md).
+   * Observera att flikarna som standard är stängda och att de kan visas med hjälp av hamburgermenyn i [Cloud Manager-huvudet](#cloud-manager-header).
 1. [Statistik och uppmaning](#statistics) för en översikt över din senaste aktivitet
 1. [**Mina program** avsnitt](#my-programs-section) med en översikt över alla dina program
 1. [Snabblänkar](#quick-links-section) för enkel åtkomst till relaterade resurser
@@ -63,7 +63,7 @@ Det första är Cloud Manager-rubriken som är beständig när du navigerar i Cl
 1. Organisationsväljaren visar den organisation du är inloggad på (i det här exemplet Foundation Internal). Tryck eller klicka för att växla till en annan organisation om din Adobe ID är kopplad till flera.
 1. Om du trycker eller klickar på lösningens väljare kan du snabbt gå över till andra Experience Cloud-lösningar.
 1. Hjälpikonen ger snabb åtkomst till utbildningsresurser och supportresurser.
-1. Aviseringsikonen är märkt med antalet för närvarande tilldelade ofullständiga [meddelanden.](/help/implementing/cloud-manager/notifications.md)
+1. Aviseringsikonen är märkt med antalet för närvarande tilldelade ofullständiga [meddelanden](/help/implementing/cloud-manager/notifications.md).
 1. Välj den ikon som representerar användaren för att få åtkomst till dina användarinställningar. Om du inte har konfigurerat någon användarbild tilldelas ikonen slumpmässigt.
 
 #### Verktygsfältet Program {#program-toolbar}
@@ -183,7 +183,7 @@ Programöversikten ger dig tillgång till alla detaljer i ett Cloud Manager-prog
 
 ### Verktygsfält {#program-overview-toolbar}
 
-Verktygsfälten för programöversikten liknar de i [Min programkonsol.](#my-programs-toolbars) Endast skillnaderna illustreras här.
+Verktygsfälten för programöversikten liknar dem i [Min programkonsol](#my-programs-toolbars). Här illustreras bara skillnaderna.
 
 #### Cloud Manager Header {#cloud-manager-header-2}
 
@@ -225,7 +225,7 @@ Använd hamburger-menyn i [Cloud Manager-huvudet](#cloud-manager-header-2) för 
 
 ### Call-to-Action {#cta}
 
-I avsnittet om uppmaning att ringa in får du användbar information beroende på programmets status. För ett nytt program kan du se nästa steg som erbjuds och en påminnelse om ett publiceringsdatum, [som anges när programmet skapas.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md)
+I avsnittet om uppmaning att ringa in får du användbar information beroende på programmets status. För ett nytt program kan du se nästa steg som erbjuds och en påminnelse om ett publiceringsdatum, [som anges när programmet skapas](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md).
 
 ![Call-to-action för ett nytt program](/help/implementing/cloud-manager/assets/info-banner-new-program.png)
 
@@ -251,7 +251,7 @@ Se dokumentet [Hantera pipelines](/help/implementing/cloud-manager/configuring-p
 
 ### Prestandakort {#performance}
 
-Kortet **Performance** ger en översikt över **[CDN-instrumentpanelen.](/help/implementing/cloud-manager/cdn-performance.md)**
+Kortet **Performance** ger en översikt över **[CDN-instrumentpanelen](/help/implementing/cloud-manager/cdn-performance.md)**.
 
 ![Prestandakort](/help/implementing/cloud-manager/assets/cdn-performance-dashboard.png)
 

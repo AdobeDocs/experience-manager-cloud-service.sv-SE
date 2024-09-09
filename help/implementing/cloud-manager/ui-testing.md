@@ -5,7 +5,7 @@ exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
 source-wordcount: '2610'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa o
 
 AEM tillhandahåller en integrerad svit med [Cloud Manager-kvalitetsportar](/help/implementing/cloud-manager/custom-code-quality-rules.md) för att säkerställa smidiga uppdateringar av anpassade program. I synnerhet har IT-testportar redan stöd för att skapa och automatisera anpassade tester med AEM API:er.
 
-Användargränssnittstester är paketerade i en Docker-bild för att ge ett brett urval på språk och i miljöer (t.ex. Cypress, Selenium, Java och Maven och JavaScript). Ett UI-testprojekt kan också enkelt genereras med [den AEM projekttypen.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+Användargränssnittstester är paketerade i en Docker-bild för att ge ett brett urval på språk och i miljöer (t.ex. Cypress, Selenium, Java och Maven och JavaScript). Ett UI-testprojekt kan också enkelt genereras med [den AEM projekttypen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
 
 Adobe uppmuntrar användningen av Cypress eftersom det ger realtidsladdning och automatisk väntetid, vilket sparar tid och förbättrar produktiviteten under testningen. Cypress har också en enkel och intuitiv syntax som gör det enkelt att lära sig och använda, även för dem som inte har testat tidigare.
 
@@ -66,9 +66,9 @@ I det här avsnittet beskrivs de steg som krävs för att konfigurera gränssnit
 
 ## Bygga UI-tester {#building-ui-tests}
 
-Ett Maven-projekt genererar en Docker-byggkontext. Den här Docker-byggkontexten beskriver hur du skapar en Docker-bild som innehåller gränssnittstesterna, som Cloud Manager använder för att generera en Docker-bild som innehåller de faktiska gränssnittstesterna.
+Ett Maven-projekt genererar en Docker-byggkontext. Den här Docker-byggkontexten beskriver hur du skapar en Docker-avbildning som innehåller gränssnittstesterna, som Cloud Manager använder för att generera en Docker-bild som innehåller de faktiska gränssnittstesterna.
 
-I det här avsnittet beskrivs de steg som krävs för att lägga till ett UI-testprojekt i din databas.
+I det här avsnittet beskrivs de steg som krävs för att lägga till ett UI-testprojekt på lagringsplatsen.
 
 >[!TIP]
 >
@@ -223,7 +223,7 @@ Följande miljövariabler skickas till din Docker-bild vid körning, beroende p�
 | `AEM_PUBLISH_USERNAME` | `admin` | Användarnamnet som ska loggas in på AEM publiceringsinstans | Alla |
 | `AEM_PUBLISH_PASSWORD` | `admin` | Lösenordet för att logga in på AEM publiceringsinstans | Alla |
 | `REPORTS_PATH` | `/usr/src/app/reports` | Sökvägen där XML-rapporten för testresultaten måste sparas | Alla |
-| `UPLOAD_URL` | `http://upload-host:9090/upload` | URL:en till vilken filen måste laddas upp för att göra dem tillgängliga för testramverket | Alla |
+| `UPLOAD_URL` | `http://upload-host:9090/upload` | URL:en som filen måste laddas upp till för att göra dem tillgängliga för testramverket | Alla |
 | `PROXY_HOST` | `proxy-host` | Värdnamnet för den interna HTTP-proxy som ska användas av testramverket | Alla utom selen |
 | `PROXY_HTTPS_PORT` | `8071` | Proxyserverns lyssnarport för HTTPS-anslutningar (kan vara tom) | Alla utom selen |
 | `PROXY_HTTP_PORT` | `8070` | Proxyserverns lyssnarport för HTTP-anslutningar (kan vara tom) | Alla utom selen |
@@ -294,7 +294,7 @@ Adobe UI-testexemplen hanterar detta med skriptet `wait-for-grid.sh`, som körs 
 
 Docker-avbildningen kan generera ytterligare testutdata (till exempel skärmbilder eller videor) och spara dem i den sökväg som anges av miljövariabeln `REPORTS_PATH`. Alla filer som `REPORTS_PATH` finns nedan ingår i arkivet för testresultat.
 
-De testprover som tillhandahålls av Adobe skapar som standard skärmbilder för alla misslyckade tester.
+De testexempel som tillhandahålls av Adobe skapar som standard skärmbilder för alla misslyckade tester.
 
 Du kan använda hjälpfunktionerna för att skapa skärmdumpar genom dina tester.
 
@@ -339,10 +339,10 @@ Om det inte är tomt måste entrypoint-skriptet:
 2. Ange det certifikatutfärdarcertifikat som ska användas vid anslutning till HTTP-proxyn. Dess plats anges av variabeln `PROXY_CA_PATH`.
    * Detta kan uppnås genom att exportera miljövariabeln `NODE_EXTRA_CA_CERTS`.
 3. Vänta tills HTTP-proxyn är klar.
-   * För att kontrollera beredskapen, miljövariablerna `PROXY_HOST`, `PROXY_OBSERVABILITY_PORT`, `PROXY_RETRY_ATTEMPTS` och `PROXY_RETRY_DELAY` kan användas.
+   * För att kontrollera beredskapen används miljövariablerna `PROXY_HOST`, `PROXY_OBSERVABILITY_PORT`, `PROXY_RETRY_ATTEMPTS` och `PROXY_RETRY_DELAY` kan användas.
    * Du kan kontrollera med hjälp av en cURL-begäran och se till att installera cURL i din `Dockerfile`.
 
-Ett exempel på implementering finns i Cypress Sample Test Module&#39;s Entrypoint på [GitHub.](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-cypress/test-module/run.sh)
+Ett exempel på implementering finns i Cypress Sample Test Module&#39;s Entrypoint på [GitHub](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-cypress/test-module/run.sh).
 
 ## Uppspelningsspecifik information
 
@@ -464,7 +464,7 @@ Innan gränssnittstester aktiveras i en Cloud Manager-pipeline bör gränssnitts
 >
 >Loggfilerna lagras i mappen i databasen `target/` .
 >
->Mer information finns i [Lagringsplats för](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-cypress/test-module/README.md) AEM testprover.
+>Mer information finns i [Databas för](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-cypress/test-module/README.md) AEM testprover.
 
 ### Exempel på JavaScript WebdriverIO-test {#javascript-sample}
 

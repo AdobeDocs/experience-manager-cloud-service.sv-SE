@@ -5,7 +5,7 @@ exl-id: 167da985-7f19-45b3-90a3-884817907da2
 solution: Experience Manager
 feature: Security, Developing
 role: Admin, Architect, Developer
-source-git-commit: bc92ed7acefbbd906b0986ea0b6b96fa6d8422de
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
 source-wordcount: '1515'
 ht-degree: 1%
@@ -36,9 +36,9 @@ Med anpassade behörigheter kan användare skapa anpassade behörighetsprofiler 
 
 Om du vill skapa och använda egna behörigheter krävs det tre steg:
 
-1. [Skapa en produktprofil.](#create)
-1. [Tilldela anpassade behörigheter till produktprofilen.](#assign-permissions)
-1. [Tilldela användare till produktprofilen.](#assign-users)
+1. [Skapa en produktprofil](#create).
+1. [Tilldela anpassade behörigheter till produktprofilen](#assign-permissions).
+1. [Tilldela användare till produktprofilen](#assign-users).
 
 I det här avsnittet beskrivs dessa steg. Det kan vara praktiskt att se avsnitten [Villkor](#terms) och [Konfigurerbara behörigheter](#configurable-permissions) när du skapar egna anpassade behörigheter.
 
@@ -104,7 +104,7 @@ Din nya produktprofil sparas nu med anpassade behörigheter.
 
 Nu kan du tilldela användare till den nya produktprofilen som du skapade med anpassade behörigheter.
 
-1. I Admin Console väljer du namnet på den [nya produktprofil som du har tilldelat anpassade behörigheter till.](#assign-permissions)
+1. I Admin Console väljer du namnet på den [nya produktprofil som du har tilldelat anpassade behörigheter till](#assign-permissions).
 
 1. I det fönster som öppnas väljer du fliken **Användare**.
 
@@ -164,7 +164,7 @@ Följande termer används för att skapa och hantera anpassade behörigheter och
 
 | Term | Beskrivning |
 |---|---|
-| Fördefinierade behörigheter | Fördefinierade roller som **Business Owner** och **Deployment Manager** som styr olika funktioner i Cloud Manager. Mer information om fördefinierade roller finns i [AEM as a Cloud Service Team och produktprofiler.](/help/onboarding/aem-cs-team-product-profiles.md) |
+| Fördefinierade behörigheter | Fördefinierade roller som **Business Owner** och **Deployment Manager** som styr olika funktioner i Cloud Manager. Mer information om fördefinierade roller finns i [AEM as a Cloud Service Team och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md). |
 | Anpassade behörigheter | Med funktionerna i Cloud Manager kan användare skapa behörighetsprofiler för att definiera roller som styr funktioner som stöds i Cloud Manager |
 | Produktprofil | Skapat i Admin Console för att hantera konfigurerbara behörigheter som är tillämpliga för användare som är en del av behörighetsprofilen |
 | Konfigurerbar behörighet | Cloud Manager-behörigheter som kan konfigureras i behörighetsprofilen |
@@ -196,7 +196,7 @@ Tänk på följande begränsningar när du använder anpassade behörigheter.
 * Deployment Manager
 * Developer
 
-Mer information om fördefinierade roller finns i [AEM as a Cloud Service Team och produktprofiler.](/help/onboarding/aem-cs-team-product-profiles.md)
+Mer information om fördefinierade roller finns i [AEM as a Cloud Service Team och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md).
 
 ### Vad händer med fördefinierade behörighetsprofiler med introduktion till anpassade profiler?
 

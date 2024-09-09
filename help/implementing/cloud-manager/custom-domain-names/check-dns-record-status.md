@@ -5,7 +5,7 @@ exl-id: 76ca1584-e21d-4e3a-a08a-82b2779167cf
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 06e961febd7cb2ea1d8fca00cb3dee7f7ca893c9
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
 source-wordcount: '373'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Ett anpassat domännamn kan inte hantera livatrafik förrän DNS-matchningen är
 
 Du måste uppfylla dessa krav innan du kontrollerar DNS-poststatus med Cloud Manager.
 
-* Du måste redan ha konfigurerat DNS-inställningarna för ditt anpassade domännamn enligt beskrivningen i dokumentet [Konfigurera DNS-inställningar.](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md)
+* Du måste redan ha konfigurerat DNS-inställningarna för ditt anpassade domännamn enligt beskrivningen i dokumentet [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md).
 
 ## Kontrollera DNS-poststatus {#how-to}
 
@@ -37,7 +37,7 @@ Du måste uppfylla dessa krav innan du kontrollerar DNS-poststatus med Cloud Man
 
 1. Klicka på ikonen **Status** för domännamnet.
 
-Cloud Manager utför en DNS-sökning efter ditt domännamn och visar den [aktuella statusen.](#statuses)
+Cloud Manager utför en DNS-sökning efter ditt domännamn och visar den [aktuella statusen](#statuses).
 
 Cloud Manager utlöser automatiskt en DNS-sökning när ditt anpassade domännamn verifieras och distribueras. För efterföljande försök måste du aktivt välja ikonen **Lös igen** bredvid statusen.
 

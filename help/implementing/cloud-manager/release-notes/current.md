@@ -1,60 +1,52 @@
 ---
-title: Versionsinformation för Cloud Manager 2024.8.0 i Adobe Experience Manager as a Cloud Service
-description: Läs mer om versionsinformationen för Cloud Manager 2024.8.0 i AEM as a Cloud Service.
+title: Versionsinformation för Cloud Manager 2024.9.0 i Adobe Experience Manager as a Cloud Service
+description: Läs mer om versionsinformationen för Cloud Manager 2024.9.0 i AEM as a Cloud Service.
 feature: Release Information
 role: Admin
-source-git-commit: a823bcd1461b847983d0243cd9abd59efd8d7b6f
+source-git-commit: cfaa3be31195929b80310610120a779a20537c61
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
 
+# Versionsinformation om Cloud Manager 2024.9.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
-# Versionsinformation om Cloud Manager 2024.8.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
-
-På den här sidan visas versionsinformation för Cloud Manager version 2024.8.0 i AEM as a Cloud Service.
+På den här sidan visas versionsinformation för Cloud Manager version 2024.9.0 i AEM as a Cloud Service.
 
 >[!NOTE]
 >
->Den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service finns på [den här sidan](/help/release-notes/release-notes-cloud/release-notes-current.md).
+>Se [aktuell versionsinformation för Adobe Experience Manager as a Cloud Service](/help/release-notes/release-notes-cloud/release-notes-current.md).
 
 ## Releasedatum {#release-date}
 
-Lanseringsdatumet för Cloud Manager version 2024.8.0 i AEM as a Cloud Service är 14 augusti 2024. Nästa version är planerad till den 14 september 2024.
+Lanseringsdatumet för Cloud Manager version 2024.9.0 i AEM as a Cloud Service är 5 september 2024. Nästa version är planerad till 3 oktober 2024.
 
 ## Nyheter {#what-is-new}
 
-* [Ytterligare publiceringsregioner](/help/operations/additional-publish-regions.md) och [ 99,99 % SLA](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md#sla) (servicenivåavtal) är nu tillgängliga för AEM Forms as a Cloud Service.
-   * Den här förbättringen gör att ni kan uppnå högre servicenivåavtal med ökad drifttid och lägre latens, vilket ger förstklassiga upplevelser för era globalt spridda användare.
+* **Kontrollpanelen för Experience Audit:**
 
-## Program för tidigt antagande {#early-adoption}
+  Adobe Cloud Manager [förbättrade Experience Audit Dashboard](/help/implementing/cloud-manager/experience-audit-dashboard.md), som drivs av Google Lighthuse, ger insikter om AEM Sites kvalitet och prestanda genom att utvärdera viktiga webbinarier, SEO och tillgänglighetsmått. Det hjälper användarna att identifiera områden som kan förbättras genom att erbjuda åtgärdbara rekommendationer, vilket gör det möjligt för teamen att förbättra användarupplevelsen, sidladdningstider och webbplatsens efterlevnad. Den här kontrollpanelen förenklar övervakningen av viktiga webbplatsmått och ser till att AEM program uppfyller höga prestanda- och tillgänglighetsstandarder.
 
-Om du vill testa några av de kommande funktionerna kan du vara en del av programmet Adobe tidiga införande.
+* **Domänvalideringscertifikat som skapats och hanterats av Adobe:**
 
-### Stöd för Edge Delivery Services i Cloud Manager {#edge-delivery-services}
+  Med Cloud Manager kan du nu [självbetjäningscertifikat för Adobe som genererats och hanterats av DV (domänvalidering) ](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md). Denna funktion ger er den snabbaste, enklaste och mest kostnadseffektiva lösningen för att skapa en säker webbplats för ert företag eller er onlineorganisation. <!-- CMGR-52403 -->
 
-Om du har licensierat Edge Delivery Services som en del av AEM Sites kan [du nu publicera din webbplats med Edge Delivery Services direkt i Cloud Manager](/help/implementing/cloud-manager/edge-delivery-services.md) och använda en guidad självbetjäning.
+* **Stöd för Edge Delivery Services i Cloud Manager:**
 
-Den här funktionen ger en enhetlig upplevelse för alla dina AEM. Det garanterar konsekvens i kritiska arbetsflöden, som domännamnshantering, SSL-certifikathantering och CDN-mappningar.
+  Om du har Edge Delivery Services som licensierats som en del av AEM Sites kan [du nu lägga upp din webbplats med Edge Delivery Services direkt via Cloud Manager](/help/implementing/cloud-manager/edge-delivery-services.md). Den här funktionen möjliggör en guidad självbetjäning för Go Live. Det förenar också viktiga arbetsflöden som domännamnshantering, SSL-certifikat och CDN-mappningar i alla dina AEM, vilket ger enhetlighet och effektivitet. <!-- CMGR-49859 -->
 
-Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `aemcs-cmedgedelsvs-program-adopter@adobe.com` från den e-postadress som är kopplad till din Adobe ID.
+* Kunder som använder GitHub-databaser har nu möjlighet att skapa och använda pipelines för webbnivåkonfiguration. <!--( KEEP IN? SP: YES CMGR-59046 and Slack https://cq-dev.slack.com/archives/C07LFP5BZ2L/p1725407057847379 ) -->
 
-### DV-certifikat (Domain Validated)
+<!--
+## Early adoption program {#early-adoption}
 
-Med Cloud Manager kan du nu [skapa och hantera domänvaliderade (DV) SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/domain-validated-certificates.md) automatiskt. Denna funktion ger er den snabbaste, enklaste och mest kostnadseffektiva lösningen för att skapa en säker webbplats för ert onlineföretag.
+For a chance to test some upcoming features, be a part of Adobe's early adoption program. -->
 
-Om du vill testa den här nya funktionen och lämna feedback skickar du ett e-postmeddelande till `Grp-aemcs-dv-dert-adopter@adobe.com` med den e-postadress som är länkad till din Adobe ID.
 
-### Kontrollpanelen för Experience Audit {#experience-audit-dashboard}
+## Felkorrigeringar
 
-[Kontrollpanelen för Cloud Manager Experience Audit](/help/implementing/cloud-manager/experience-audit-dashboard.md) innehåller en trendvy över dina sidresultatspoäng tillsammans med insikter och rekommendationer som hjälper dig att förbättra dem. Experience Audit ingår som ett steg i Cloud Manager produktionsflöde.
+* Sidindelning för SSL-certifikattabellvy fungerar nu som förväntat. <!-- (CMGR-60804 - [UI] Pagination doesn't work for ssl certificates) -->
+* Fel artefaktversion befordrades när knappen **Befordra bygge** användes från en körning. <!-- ( KEEP IN? SP: YES CMGR-59519 and Slack https://cq-dev.slack.com/archives/C07LFPN2R08/p1725408253474129 ) -->
 
-Kontrollpanelen använder Google Lightroom, ett automatiserat verktyg med öppen källkod som förbättrar kvaliteten på dina webbprogram. Du kan använda den för att granska alla webbsidor, oavsett om de är offentliga eller kräver autentisering. Den innehåller bedömningar av prestanda, tillgänglighet, progressiva webbappar, SEO med mera.
-
-Vill du testa den nya instrumentpanelen? Börja med att skicka ett e-postmeddelande till `aem-lighthouse-pilot@adobe.com` med det e-postmeddelande som är länkat till din Adobe ID.
-
-## Felkorrigering
-
-* Ett sällsynt problem har korrigerats där rörledningssteg påträffades köras efter att rörledningen tagits bort.
-* Ett problem med konfigurationspipelines som felaktigt visar statusen `FAILED` har i sällsynta fall korrigerats.
+<!-- * Slack message says next release? SP: REMOVE (Leave in for now) SSL Certificates table in Cloud Manager now enables pagination in the user experience. ( https://jira.corp.adobe.com/browse/CMGR-61041 and Slack https://cq-dev.slack.com/archives/C07LFRE9QJU/p1725408553760009 ) --<>

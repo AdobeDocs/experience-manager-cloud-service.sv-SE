@@ -5,7 +5,7 @@ exl-id: d441de29-af41-4d3e-9155-531af9702841
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 06e961febd7cb2ea1d8fca00cb3dee7f7ca893c9
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 0%
@@ -29,13 +29,13 @@ Du måste uppfylla dessa krav innan du lägger till en TXT-post.
 
 * Du måste identifiera din domänvärd eller registrator om du inte redan känner till den.
 * Du måste kunna redigera DNS-posterna för din organisations domän eller kontakta rätt person som kan göra det.
-* Du måste först lägga till ett anpassat domännamn enligt beskrivningen i dokumentet [Lägga till ett anpassat domännamn.](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
+* Du måste först lägga till ett anpassat domännamn enligt beskrivningen i dokumentet [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).
 
 ## Lägga till en TXT-post för verifiering {#verification}
 
 En TXT-post läggs till som en del av verifieringen av ett anpassat domännamn som ska användas med Cloud Manager.
 
-1. Du måste först lägga till ett anpassat domännamn enligt beskrivningen i dokumentet [Lägga till ett anpassat domännamn.](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
+1. Du måste först lägga till ett anpassat domännamn enligt beskrivningen i dokumentet [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).
 
 1. På fliken **Verifiering** i dialogrutan **Lägg till domännamn** visar Cloud Manager det namn och TXT-värde som ska användas för verifiering. Kopiera det här värdet.
 
@@ -45,7 +45,7 @@ En TXT-post läggs till som en del av verifieringen av ett anpassat domännamn s
 
 1. Lägg till `_aemverification.[yourdomainname]` som **namn** för värdet och lägg till TXT-värdet exakt som det visas i dialogrutan **Lägg till domännamn**.
 
-   * Se [exemplen i följande avsnitt.](#examples)
+   * Se [exemplen i följande avsnitt](#examples).
 
 1. Spara TXT-posten till domänvärden.
 

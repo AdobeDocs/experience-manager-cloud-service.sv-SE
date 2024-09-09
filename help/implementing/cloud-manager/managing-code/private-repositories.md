@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar Cloud Manager så att det fungerar med
 exl-id: 5232bbf5-17a5-4567-add7-cffde531abda
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
@@ -110,7 +110,7 @@ När pull-begäran stängs eller sammanfogas, tas hela stackkodens kvalitetsflö
 
 ## Associera privata databaser med pipelines {#pipelines}
 
-Validerade privata databaser kan associeras med [rörledningar i full stack och i klientstruktur.](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md)
+Validerade privata databaser kan associeras med [rörledningar i full hög och i framtend](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md).
 
 >[!NOTE]
 >

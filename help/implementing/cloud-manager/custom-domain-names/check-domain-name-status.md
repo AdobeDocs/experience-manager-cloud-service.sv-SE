@@ -5,7 +5,7 @@ exl-id: 8fdc8dda-7dbf-46b6-9fc6-d304ed377197
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 0c9328dc5be8f0a5e0924d0fc2ec59c9fce4141b
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Lär dig hur du avgör om ditt anpassade domännamn har verifierats av Cloud Man
 
 Du måste uppfylla dessa krav innan du kontrollerar din domännamnsstatus i Cloud Manager.
 
-* Du måste först lägga till en TXT-post för din anpassade domän enligt beskrivningen i dokumentet [Lägga till en TXT-post.](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md)
+* Du måste först lägga till en TXT-post för din anpassade domän enligt beskrivningen i dokumentet [Lägga till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md).
 
 ## Kontrollera status för ditt anpassade domännamn {#how-to}
 
@@ -41,7 +41,7 @@ Statusinformationen visas. Din anpassade domän är klar att användas när stat
 
 >[!NOTE]
 >
->Cloud Manager utlöser automatiskt verifiering när du väljer **Skapa** i verifieringssteget i guiden **Lägg till anpassad domän** när du [lägger till ett nytt anpassat domännamn i Cloud Manager.](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) För efterföljande verifieringar måste du aktivt markera ikonen för verifiering igen bredvid statusen.
+>Cloud Manager utlöser automatiskt verifiering när du väljer **Skapa** i verifieringssteget i guiden **Lägg till anpassad domän** när du [lägger till ett nytt anpassat domännamn i Cloud Manager](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md). För efterföljande verifieringar måste du aktivt markera ikonen för att verifiera igen bredvid statusen.
 
 ## Verifieringsstatus {#statuses}
 

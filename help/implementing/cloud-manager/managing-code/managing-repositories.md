@@ -4,9 +4,9 @@ description: Lär dig hur du skapar, visar och tar bort Git-databaser i Cloud Ma
 exl-id: 6e1cf636-78f5-4270-9a21-38b4d5e5a0b0
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '621'
 ht-degree: 0%
 
 ---
@@ -71,17 +71,17 @@ Cloud Manager har stöd för båda databaser som hanteras av Adobe (**Adobe-data
 
 ## Åtkomst till svarsinformation {#repo-info}
 
-När du visar dina databaser i fönstret **Databaser** kan du visa information om hur du kommer åt databaser som hanteras med Adobe genom att trycka eller klicka på knappen **Åtkomstrepo-information** i verktygsfältet.
+När du visar dina databaser i fönstret **Databaser** kan du visa information om hur du kommer åt databaser som hanteras med Adobe genom att klicka på knappen **Åtkomstrepo-information** i verktygsfältet.
 
 ![Databasinformation](assets/repo-info.png)
 
-Fönstret **Databasinformation** öppnas med information. Mer information om åtkomst till databasinformation finns i dokumentet [Åtkomst till databasinformation.](accessing-repos.md)
+Fönstret **Databasinformation** öppnas med information. Mer information om hur du får åtkomst till databasinformation finns i dokumentet [Åtkomst till databasinformation](accessing-repos.md).
 
 ## Kontrollera grenar/skapa projekt {#check-branches}
 
 Åtgärden **Kontrollera grenar/Skapa projekt** utför två funktioner beroende på databasens tillstånd.
 
-* Om databasen är nyskapad skapar åtgärden ett exempelprojekt baserat på [den AEM projektarkitypen.](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/overview)
+* Om databasen är nyskapad skapar åtgärden ett exempelprojekt baserat på [den AEM projektarkitypen](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/overview).
 * Om exempelprojektet redan har skapats i databasen kontrolleras statusen för databasen och dess grenar, och sedan rapporteras om exempelprojektet redan finns.
 
 ![Åtgärden Kontrollera grenar](assets/check-branches.png)

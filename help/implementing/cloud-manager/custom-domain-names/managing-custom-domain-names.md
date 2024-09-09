@@ -5,9 +5,9 @@ exl-id: 6cab8cf2-22c0-4f4b-9c54-a1425e74ddd0
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 06e961febd7cb2ea1d8fca00cb3dee7f7ca893c9
+source-git-commit: 4e887b753eaf09e104c68484792f00dcb08ee304
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '342'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,11 @@ ht-degree: 0%
 
 Med Cloud Manager kan du visa, uppdatera, ersätta och ta bort anpassade domännamn.
 
-## Visa och uppdatera {#view-and-update}
+## Visa och uppdatera ett anpassat domännamn {#view-and-update}
 
 Använd menyn **Visa och uppdatera** om du vill visa information om dina anpassade domännamn.
+
+**Så här visar och uppdaterar du ett anpassat domännamn:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
@@ -27,19 +29,19 @@ Använd menyn **Visa och uppdatera** om du vill visa information om dina anpassa
 
 1. Gå till skärmen **Miljö** från sidan **Översikt**.
 
-1. Identifiera raden för det anpassade domännamn som du vill visa eller uppdatera.
+1. Identifiera raden i det anpassade domännamnet som du vill visa eller uppdatera.
 
 1. Klicka på ellipsknappen längst till höger på raden.
 
 1. Välj alternativet **Visa och uppdatera**.
 
-## Uppdaterar det anpassade domännamnets SSL-certifikat {#update-cert}
+## Uppdatera ett anpassat domännamns SSL-certifikat {#update-cert}
 
 Du kan följa [samma steg för att visa och uppdatera ett anpassat domännamn](#view-and-update) för att uppdatera ett anpassat domännamns SSL-certifikat.
 
 >[!NOTE]
 >
->SSL-certifikatet måste vara giltigt, [redan konfigurerat,](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md) och innehålla det anpassade domännamnet som du uppdaterar.
+>SSL-certifikatet måste vara giltigt, [redan konfigurerat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md), och innehålla det anpassade domännamn som du uppdaterar.
 
 ## Ta bort ett anpassat domännamn {#deleting}
 
@@ -51,7 +53,7 @@ En användare med rollen **Business Owner** eller **Deployment Manager** kan anv
 
 1. Gå till sidan **Domäninställningar** från skärmen **Översikt**.
 
-1. Identifiera raden för det anpassade domännamn som du vill ta bort.
+1. Identifiera raden med det anpassade domännamn som du vill ta bort.
 
 1. Klicka på ellipsknappen längst till höger på raden.
 
@@ -63,7 +65,7 @@ En användare med rollen **Business Owner** eller **Deployment Manager** kan anv
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 1. Gå till skärmen **Miljö** från sidan **Översikt**.
-1. Gå till informationsskärmen för den miljö som är av intresse på sidan **Miljö**.
+1. Navigera från sidan **Miljö** till en informationsskärm om den miljö som är av intresse.
 1. Identifiera raden med det anpassade domännamnet som du vill ta bort i tabellen över domännamn.
 1. Klicka på ellipsknappen längst till höger på raden.
 1. Välj **Ta bort**.

@@ -4,7 +4,7 @@ description: Lär dig hur du skapar databaser som hanteras med Adobe i Cloud Man
 exl-id: 6c32c4ae-f48d-4440-bfc2-cdc1a3d59599
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%
@@ -31,8 +31,8 @@ Fönstret **Databaser** gör det enkelt att lägga till fler Adobe-hanterade dat
 
    ![Dialogrutan Lägg till databas](assets/add-adobe-repository.png)
 
-När guiden stängs visas din nya databas i tabellen i fönstret **Databaser**. Nu kan du associera en [CI/CD-pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) med den eller hantera den i fönstret [**Databaser**.](managing-repositories.md)
+När guiden stängs visas din nya databas i tabellen i fönstret **Databaser**. Du kan nu associera en [CI/CD-pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) med den eller hantera den i fönstret [**Databaser**](managing-repositories.md).
 
 >[!TIP]
 >
->Du kan också lägga till GitHub-databaser som du hanterar själv som [privata databaser.](private-repositories.md)
+>Du kan också lägga till GitHub-databaser som du hanterar själv som [privata databaser](private-repositories.md).

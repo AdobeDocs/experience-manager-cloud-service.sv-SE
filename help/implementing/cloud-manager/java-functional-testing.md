@@ -5,7 +5,7 @@ exl-id: e014b8ad-ac9f-446c-bee8-adf05a6b4d70
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 0%
@@ -22,12 +22,12 @@ När en ny koddatabas skapas i Cloud Manager skapas en `it.tests`-mapp automatis
 
 >[!NOTE]
 >
->Om din databas skapades innan Cloud Manager automatiskt skapade `it.tests`-mappar kan du även generera den senaste versionen med [AEM Project Archetype.](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/it.tests)
+>Om din databas skapades innan Cloud Manager automatiskt skapade `it.tests`-mappar kan du även generera den senaste versionen med [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/it.tests).
 
 När du har innehållet i mappen `it.tests` kan du använda den som grund för dina egna tester och sedan:
 
-1. [Utveckla testfall.](#writing-functional-tests)
-1. [Kör testerna lokalt.](#local-test-execution)
+1. [Utveckla dina testfall](#writing-functional-tests).
+1. [Kör testerna lokalt](#local-test-execution).
 1. Implementera koden i Cloud Manager-databasen och kör en Cloud Manager-pipeline.
 
 ## Skriva anpassade funktionstester {#writing-functional-tests}

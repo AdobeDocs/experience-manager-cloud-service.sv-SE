@@ -4,7 +4,7 @@ description: Lär dig hur GitHub kontrollerar annonser för dina privata databas
 exl-id: 15178de8-8a8a-4300-8510-88875ad0fc8c
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 0%
@@ -42,4 +42,4 @@ Resultat av [kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.
 
 ![Exempel på anteckningar](assets/github-check-annotations-code-quality-2.png)
 
-Du kan även visualisera problemen i form av en CSV-fil. Detta kan hämtas av [visa information om pipelinekörningen i Cloud Manager.](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#view-details)
+Du kan även visualisera problemen i form av en CSV-fil. Detta kan hämtas genom att [visa information om pipelinekörningen i Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#view-details).

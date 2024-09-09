@@ -5,7 +5,7 @@ exl-id: 2c698d38-6ddc-4203-b499-22027fe8e7c4
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 3a5451020b8f76f95bcd8bff7b6eabd06be00f31
+source-git-commit: cfaa3be31195929b80310610120a779a20537c61
 workflow-type: tm+mt
 source-wordcount: '1197'
 ht-degree: 0%
@@ -64,7 +64,7 @@ Fas för **scendistribution**. omfattar de här stegen.
 * **Kodsökning** - Det här steget utvärderar kvaliteten på programkoden.
    * Mer information om testprocessen finns i [Testa kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md).
 * **Build Images** - Den här processen ansvarar för att omvandla innehåll och dispatcherpaket som skapas i byggsteget till Docker-bilder och Kubernetes-konfigurationer.
-* **Distribuera till scenen** - Bilden distribueras till mellanlagringsmiljön som förberedelse för [scentestningsfasen.](#stage-testing)
+* **Distribuera till scenen** - Bilden distribueras till mellanlagringsmiljön som förberedelse för [scentestningsfasen](#stage-testing).
 
 ![Scendistribution](assets/stage-deployment.png)
 
@@ -86,7 +86,7 @@ Fas **Scentestning** omfattar dessa steg.
    * De konfigurerade sidorna skickas till tjänsten och utvärderas.
    * Resultaten är informativa och visar poängen och förändringen mellan aktuella och tidigare poäng.
    * Den här insikten är värdefull för att avgöra om det finns en regression som introduceras i den aktuella distributionen.
-   * Mer information finns i [Om Experience Audit-resultat](/help/implementing/cloud-manager/experience-audit-testing.md).
+   * Mer information finns i [Om Experience Audit-resultat](/help/implementing/cloud-manager/experience-audit-dashboard.md).
 
 ![Scentestning](assets/stage-testing.png)
 

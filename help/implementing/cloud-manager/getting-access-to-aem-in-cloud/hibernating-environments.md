@@ -5,9 +5,9 @@ exl-id: c0771078-ea68-4d0d-8d41-2d9be86408a4
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
@@ -117,7 +117,7 @@ I miljöer med viloläge går det fortfarande att driftsätta och uppgradera man
 
 * Miljöer i ett sandlådeprogram försätts automatiskt i viloläge efter åtta timmars inaktivitet.
    * Inaktivitet definieras som varken författartjänsten, förhandsgransknings- eller publiceringstjänstens mottagningsbegäranden.
-   * När de har tagits i viloläge kan de [tas bort från viloläget manuellt.](#de-hibernation-introduction)
+   * När de har sparats i viloläge kan de [tas bort från viloläget manuellt].(#de-hibernation-introduction)
 * Sandlådeprogram tas bort efter sex månader när de är i viloläge, och därefter kan de återskapas.
 
 >[!NOTE]

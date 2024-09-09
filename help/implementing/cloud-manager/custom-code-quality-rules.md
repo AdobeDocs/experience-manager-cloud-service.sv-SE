@@ -5,7 +5,7 @@ exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 51fa6e0fe56b1d5f0d8ada6bd2335175d603bc8c
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
 source-wordcount: '4513'
 ht-degree: 0%
@@ -645,7 +645,7 @@ Mer information om hur du anpassar indexdefinitioner finns i [indexeringsdokumen
 * **Allvarlighetsgrad**: Blockerare
 * **Sedan**: 2021.8.0
 
-Oak-index av typen `lucene` måste alltid indexeras asynkront. Om du inte gör detta kan det leda till att systemet blir instabilt. Mer information om strukturen för Lucene-index finns i [Oak-dokumentationen.](https://jackrabbit.apache.org/oak/docs/query/lucene.html#index-definition)
+Oak-index av typen `lucene` måste alltid indexeras asynkront. Om du inte gör detta kan det leda till att systemet blir instabilt. Mer information om strukturen för Lucene-index finns i [Oak-dokumentationen](https://jackrabbit.apache.org/oak/docs/query/lucene.html#index-definition).
 
 #### Kod som inte uppfyller kraven {#non-compliant-code-indexasync}
 
@@ -897,7 +897,7 @@ Migreringsverktyget i [Experience Manager as a Cloud Service Assets GitHub-datab
 
 Även om det historiskt sett är vanligt att använda statiska mallar i Experience Manager-projekt rekommenderar Adobe redigerbara mallar eftersom de ger den flexibilitet och stöder ytterligare funktioner som inte finns i statiska mallar. Mer information finns i dokumentet [Sidmallar](/help/implementing/developing/components/templates.md).
 
-Migrering från statiska till redigerbara mallar kan till stor del automatiseras med [Experience Manager Moderniseringsverktyg.](https://opensource.adobe.com/aem-modernize-tools/)
+Migrering från statiska till redigerbara mallar kan till stor del automatiseras med [Experience Manager Moderniseringsverktyg](https://opensource.adobe.com/aem-modernize-tools/).
 
 ### Användning av äldre baskomponenter rekommenderas inte {#oakpal-usage-legacy}
 
@@ -908,7 +908,7 @@ Migrering från statiska till redigerbara mallar kan till stor del automatiseras
 
 De äldre Foundation-komponenterna (d.v.s. komponenterna under `/libs/foundation`) har tagits bort för flera Experience Manager-versioner till förmån för Core-komponenterna. Användning av Foundation Components som grund för anpassade komponenter (oavsett om de är övertäckningar eller arv) rekommenderas inte och bör konverteras till motsvarande Core Components.
 
-Den här konverteringen kan underlättas med [Experience Manager-moderniseringsverktygen.](https://opensource.adobe.com/aem-modernize-tools/)
+Den här konverteringen kan underlättas med [Experience Manager Modernization Tools](https://opensource.adobe.com/aem-modernize-tools/).
 
 ### Använd endast namn och ordning för körningsläge som stöds {#oakpal-supported-runmodes}
 
@@ -953,7 +953,7 @@ Det är svårt att felsöka problem när en anpassad sökindexdefinitionsnod har
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
-En korrekt definierad definitionsnod för anpassat sökindex måste innehålla en underordnad nod med namnet `indexRules` som i sin tur måste ha minst en underordnad nod. Mer information finns i [Oak-dokumentationen.](https://jackrabbit.apache.org/oak/docs/query/lucene.html)
+En korrekt definierad definitionsnod för anpassat sökindex måste innehålla en underordnad nod med namnet `indexRules` som i sin tur måste ha minst en underordnad nod. Mer information finns i [Oak-dokumentationen](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
 
 ### Definitionsnoder för anpassade sökindex måste följa namnkonventioner {#oakpal-custom-search-definitions}
 
@@ -1207,7 +1207,7 @@ AEM Cloud Service tillåter inte att anpassade sökindexdefinitioner (noder av t
 
 >[!WARNING]
 >
->Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att pipelines misslyckas med början i [Cloud Manager August 2024.](/help/implementing/cloud-manager/release-notes/current.md)
+>Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att pipelines misslyckas med början i [Cloud Manager August 2024-utgåvan](/help/implementing/cloud-manager/release-notes/current.md).
 
 ### Anpassad heltextindexdefinition av typen damAssetLucene måste ha rätt prefix med damAssetLucene {#oakpal-dam-asset-lucene}
 
@@ -1220,7 +1220,7 @@ AEM Cloud Service tillåter inte att anpassade fulltextindexdefinitioner av type
 
 >[!WARNING]
 >
->Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att pipelines misslyckas med början i [Cloud Manager August 2024.](/help/implementing/cloud-manager/release-notes/current.md)
+>Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att pipelines misslyckas med början i [Cloud Manager August 2024-utgåvan](/help/implementing/cloud-manager/release-notes/current.md).
 
 ### Indexdefinitionsnoder får inte innehålla egenskaper med samma namn {#oakpal-index-property-name}
 
@@ -1233,7 +1233,7 @@ AEM Cloud Service tillåter inte att anpassade sökindexdefinitioner (d.v.s. nod
 
 >[!WARNING]
 >
->Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att pipelines misslyckas med början i [Cloud Manager August 2024.](/help/implementing/cloud-manager/release-notes/current.md)
+>Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att pipelines misslyckas med början i [Cloud Manager August 2024-utgåvan](/help/implementing/cloud-manager/release-notes/current.md).
 
 ### Det är förbjudet att anpassa vissa OOTB-indexdefinitioner {#oakpal-customizing-ootb-index}
 
@@ -1253,7 +1253,7 @@ AEM Cloud Service tillåter inte obehöriga ändringar av följande OOTB-index:
 
 >[!WARNING]
 >
->Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att pipelines misslyckas med början i [Cloud Manager August 2024.](/help/implementing/cloud-manager/release-notes/current.md)
+>Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att pipelines misslyckas med början i [Cloud Manager August 2024-utgåvan](/help/implementing/cloud-manager/release-notes/current.md).
 
 ### Konfigurationen av tokenisererna i analysatorerna ska skapas med namnet tokenizer {#oakpal-tokenizer}
 
@@ -1266,7 +1266,7 @@ AEM Cloud Service tillåter inte att tokeniserare med felaktiga namn skapas i an
 
 >[!WARNING]
 >
->Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att pipelines misslyckas med början i [Cloud Manager August 2024.](/help/implementing/cloud-manager/release-notes/current.md)
+>Du uppmanas att åtgärda detta så snart som möjligt eftersom det kommer att leda till att pipelines misslyckas med början i [Cloud Manager August 2024-utgåvan](/help/implementing/cloud-manager/release-notes/current.md).
 
 ### Konfiguration av indexeringsdefinitioner får inte innehålla blanksteg {#oakpal-indexing-definitions-spaces}
 

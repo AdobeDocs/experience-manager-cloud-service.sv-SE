@@ -5,15 +5,15 @@ exl-id: bf0f54a9-fe86-4bfb-9fa6-03cf0fd5f404
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: ec95438d704568076af045d8933be2125885f482
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '923'
 ht-degree: 0%
 
 ---
 
 
-# Licensieringspanel {#license-dashboard}
+# Kontrollpanel för licenser {#license-dashboard}
 
 Cloud Manager har en kontrollpanel där du enkelt kan se vilka AEMaaCS-produkträttigheter som är tillgängliga för din organisation eller hyresgäst.
 
@@ -21,7 +21,7 @@ Cloud Manager har en kontrollpanel där du enkelt kan se vilka AEMaaCS-produktr�
 >
 >Kontrollpanelen för licenser gäller endast AEM as a Cloud Service-programmen. [AMS-program](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/introduction) ingår inte i kontrollpanelen för licenser.
 >
->Information om vilken typ av tjänst ditt program har (AMS eller AEMaaCS) finns i dokumentet [Navigera i Cloud Manager-gränssnittet.](/help/implementing/cloud-manager/navigation.md#program-cards)
+>Information om vilken typ av tjänst ditt program har (AMS eller AEMaaCS) finns i dokumentet [Navigera i Cloud Manager-gränssnittet](/help/implementing/cloud-manager/navigation.md#program-cards).
 
 ## Ökning {#overview}
 
@@ -30,7 +30,7 @@ Cloud Manager License Dashboard ger enkel åtkomst till följande information:
 1. Du har tillgång till lösningsrättigheter i alla program, inklusive vad som används och vad som är tillgängligt
 1. Förbrukningsstatistik för innehållsbegäran trendade per månad för webbplatslösningen
 
-## Använda License Dashboard {#using-dashboard}
+## Använda kontrollpanelen för licenser {#using-dashboard}
 
 Följ de här stegen för att få åtkomst till din kontrollpanel för licenser.
 
@@ -39,7 +39,7 @@ Följ de här stegen för att få åtkomst till din kontrollpanel för licenser.
 >En användare i rollen **Affärsägare** måste vara inloggad för att kunna visa kontrollpanelen för licenser.
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
-1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** trycker eller klickar du på menyknappen för hamburgaren i [Cloud Manager Header.](/help/implementing/cloud-manager/navigation.md#cloud-manager-header) Flikarna visas.
+1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** klickar du på menyknappen för hamburgaren på [Cloud Manager Header](/help/implementing/cloud-manager/navigation.md#cloud-manager-header) . Då visas flikarna.
 1. Tryck eller klicka på alternativet **Licens** på fliken.
 
 ![Licensinstrumentpanel](assets/license-dashboard.png)
@@ -72,7 +72,7 @@ Knappen **Visa användningsinformation** i licensområdet för Cloud Manager inn
 
 ### Information om webbplatsanvändning {#sites-usage-details}
 
-Fönstret **Webbplatsanvändningsinformation** innehåller diagram som ger en översikt över användningen av dina platslicenser baserat på [innehållsbegäranden.](#what-is-a-content-request)
+Fönstret **Webbplatsanvändningsinformation** innehåller diagram som ger en översikt över användningen av dina platslicenser baserat på [innehållsbegäranden](#what-is-a-content-request).
 
 ![Fönstret med användningsinformation för webbplatser](assets/sites-usage-details.png)
 
@@ -83,7 +83,7 @@ På den högra sidan av fönstret visas ett ytdiagram som visar användningen up
 <!-- REMOVED AS PER CQDOC-21983
 ### Assets usage details {#assets-usage-details}
 
-The **Assets usage details** window, presents graphs giving an overview of the usage of your Assets licenses based on [storage](#storage) and [standard users.](#standard-users) Select the appropriate tab to toggle between the views.
+The **Assets usage details** window, presents graphs giving an overview of the usage of your Assets licenses based on [storage](#storage) and [standard users](#standard-users). Select the appropriate tab to toggle between the views.
 
 For both storage and standard users views, you can use the **Environment Type** dropdown to toggle the view between production, stage, and development environments.
 
@@ -113,7 +113,7 @@ En innehållsbegäran räknas för varje sidvy eller för var femte API-anrop, m
 
 Innehållsförfrågningar exkluderar förfrågningar eller aktiviteter som initierats av eller på uppdrag av Adobe enbart i syfte att tillhandahålla produkter och tjänster. Användaragenttrafik som identifieras av Adobe från botar, crawler och spindlar som hör till vanliga sökmotorer och tjänster inom sociala medier är också utesluten.
 
-Se även [Förstå förfrågningar om Cloud Service innehåll](/help/implementing/cloud-manager/content-requests.md).
+Se även [Förstå innehållsförfrågningar från Cloud Service](/help/implementing/cloud-manager/content-requests.md).
 
 ### Hur mäter Adobe Experience Manager förfrågningar om innehåll? {#how-are-content-requests-measured}
 

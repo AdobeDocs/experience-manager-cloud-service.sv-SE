@@ -5,9 +5,9 @@ exl-id: ed03bff9-dfcc-4dfe-a501-a7facd24aa7d
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 1c9924b4477d53d86bb72eda8597a02304450195
+source-git-commit: 4e887b753eaf09e104c68484792f00dcb08ee304
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '714'
 ht-degree: 1%
 
 ---
@@ -36,33 +36,33 @@ Du kan köpa ett domännamn från en domännamnsregistrator, ett företag eller 
 >
 >Cloud Manager är inte en domännamnsregistrator och tillhandahåller inga DNS-tjänster.
 
-## Anpassade domännamn och CDN för BYO {#byo-cdn}
+## Anpassade domännamn och ta med egna CDN:er {#byo-cdn}
 
-AEM as a Cloud Service har ett inbyggt nätverk för innehållsleverans (CDN), men du kan även hämta ditt eget CDN (BYO) för AEM. Anpassade domäner kan installeras antingen i det AEM CDN eller i ett CDN som du hanterar.
+AEM as a Cloud Service har ett inbyggt nätverk för innehållsleverans (CDN), men du kan även använda ditt eget CDN för att använda det med AEM. Anpassade domäner kan installeras antingen i det AEM CDN eller i ett CDN som du hanterar.
 
-* Anpassade domännamn (och certifikat) som är installerade i det AEM CDN hanteras via Cloud Manager.
-* Anpassade domännamn (och certifikat) som är installerade i ditt eget CDN hanteras i det specifika CDN.
+* Cloud Manager hanterar anpassade domännamn och certifikat som installeras i det AEM hanterade CDN.
+* Anpassade domännamn och certifikat som installeras i ett BYO CDN hanteras direkt i det CDN:et.
 
-**Domäner som hanteras i ditt eget CDN behöver inte installeras med Cloud Manager.** De är tillgängliga för AEM via X-Forwarded-Host och matchar värdarna som definierats i Dispatcher. Se [CDN-dokumentationen.](/help/implementing/dispatcher/cdn.md)
+**Domäner som hanteras i ditt eget CDN kräver inte installation via Cloud Manager**. De blir tillgängliga för AEM via X-Forwarded-Host och matchar de värdar som definierats i Dispatcher. Se [CDN-dokumentationen](/help/implementing/dispatcher/cdn.md).
 
-I en och samma miljö kan du ha båda domänerna installerade i det AEM CDN:et och installerade i ditt eget CDN.
+I en miljö kan du ha båda domänerna installerade i det AEM hanterade CDN och installerade i ett BYO CDN.
 
 ## Arbetsflöde {#workflow}
 
-Om du vill lägga till ett anpassat domännamn måste DNS-tjänsten och Cloud Manager interagera. På grund av detta krävs flera steg för att installera, konfigurera och verifiera anpassade domännamn. I följande tabell visas en översikt över de steg som krävs, inklusive länkar till dokumentationsresurser för att slutföra de stegen.
+Om du vill lägga till ett anpassat domännamn måste DNS-tjänsten och Cloud Manager interagera. På grund av det här arbetsflödet krävs flera steg för att installera, konfigurera och verifiera anpassade domännamn. I följande tabell visas en översikt över de steg som krävs, inklusive länkar till dokumentationsresurser för att slutföra de stegen.
 
 | Steg | Beskrivning | Dokumentation |
 |---|---|---|
-| 1 | Lägg till SSL-certifikat i Cloud Manager | [Lägger till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md) |
-| 2 | Lägg till anpassad domän i Cloud Manager | [Lägger till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) |
-| 3 | Lägg till TXT-post för att verifiera domän | [Lägger till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md) |
-| 4 | Granska domänverifieringsstatus | [Kontrollerar domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) |
-| 5 | Konfigurera DNS-inställningar genom att lägga till DNS CNAME- eller APEX-poster som pekar på AEM as a Cloud Service | [Konfigurerar DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md) |
-| 6 | Kontrollera DNS-poststatus | [Kontrollerar DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md) |
+| 1 | Lägg till SSL-certifikat i Cloud Manager | [Lägg till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md) |
+| 2 | Lägg till anpassad domän i Cloud Manager | [Lägg till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) |
+| 3 | Lägg till TXT-post för att verifiera domän | [Lägg till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md) |
+| 4 | Granska domänverifieringsstatus | [Kontrollera domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) |
+| 5 | Konfigurera DNS-inställningar genom att lägga till DNS CNAME- eller APEX-poster som pekar på AEM as a Cloud Service | [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md) |
+| 6 | Kontrollera DNS-poststatus | [Kontrollera DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md) |
 
 >[!TIP]
 >
->Att konfigurera anpassade domännamn med AEM som en molntjänst är vanligtvis en enkel process. Det kan dock ibland uppstå domändelegeringsproblem som kan ta 1-2 arbetsdagar att lösa. Därför rekommenderar vi att du installerar domänerna långt innan de publiceras. Mer information finns i dokumentet [Kontrollerar domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).
+>Att konfigurera anpassade domännamn med AEM som en molntjänst är vanligtvis en enkel process. Ibland kan dock problem med domändelegering uppstå som kan ta 1-2 arbetsdagar att lösa. Därför rekommenderar vi att du installerar domänerna långt innan de publiceras. Mer information finns i dokumentet [Kontrollera domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).
 
 ## Begränsningar {#limitations}
 
@@ -77,7 +77,7 @@ Det finns flera begränsningar för hur du använder anpassade domännamn med AE
 * AEM as a Cloud Service stöder inte jokerdomäner som `*.example.com`.
 * Innan du lägger till ett anpassat domännamn måste ett giltigt SSL-certifikat som innehåller det anpassade domännamnet (jokerteckenscertifikat är giltiga) installeras för programmet.
 
-## Kom igång! {#get-started}
+## Kom igång {#get-started}
 
-* Kom igång med att konfigurera ett nytt anpassat domännamn för ditt projekt genom att [lägga till ett SSL-certifikat.](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md)
-* Hantera dina befintliga domännamn genom att granska dokumentet [Hantera anpassade domännamn.](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md)
+* Kom igång med att konfigurera ett nytt anpassat domännamn för ditt projekt genom att [lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md).
+* Hantera dina befintliga domännamn genom att granska dokumentet [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md).

@@ -6,9 +6,9 @@ exl-id: eba608eb-a19e-4bff-82ff-05860ceabe6e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 85cef99dc7a8d762d12fd6e1c9bc2aeb3f8c1312
+source-git-commit: cfaa3be31195929b80310610120a779a20537c61
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1402'
 ht-degree: 0%
 
 ---
@@ -103,7 +103,7 @@ Följ de här stegen för att slutföra konfigurationen av icke-produktionsflöd
       * **Funktionstestning av produkt** - Kör [produktfunktionstester](/help/implementing/cloud-manager/functional-testing.md#product-functional-testing) mot utvecklingsmiljön.
       * **Anpassad funktionstestning** - Kör [anpassade funktionstester](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing) mot utvecklingsmiljön.
       * **Anpassad gränssnittstestning** - Kör [anpassade gränssnittstester](/help/implementing/cloud-manager/ui-testing.md) för anpassade program.
-      * **Experience Audit** - Kör [Experience Audit](/help/implementing/cloud-manager/experience-audit-testing.md)
+      * **Experience Audit** - Kör [Experience Audit](/help/implementing/cloud-manager/experience-audit-dashboard.md)
 
    ![Pipeline i full hög](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-full-stack.png)
 
@@ -152,13 +152,13 @@ Stegen för att slutföra skapandet av din icke-produktion, målinriktade distri
    * **Git-grenen** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
       * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet. Här hittas de matchande grenar som du kan välja.
    * **Kodplats** - Det här alternativet definierar sökvägen i grenen för den valda rapporten från vilken pipelinen ska hämta koden.
-   * **Rörledning** - För rörledningar som inte är avsedda för produktion i början har du möjlighet att aktivera **[Experience Audit.](/help/implementing/cloud-manager/experience-audit-testing.md)**
+   * **Rörledning** - För rörledningar som inte är avsedda för produktion i början har du möjlighet att aktivera **[Experience Audit](/help/implementing/cloud-manager/experience-audit-dashboard.md)**.
 
    ![Konfigurera pipeline](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-config-deployment-experience-audit.png)
 
 1. Om du har aktiverat Experience Audit (Experience Audit) trycker eller klickar du på **Continue** (Fortsätt) för att gå vidare till fliken **Experience Audit** där du kan definiera sökvägarna som alltid ska ingå i Experience Audit (Experience Audit).
 
-   * Om du har aktiverat **Experience Audit** kan du läsa dokumentet [Experience Audit](/help/implementing/cloud-manager/experience-audit-testing.md#configuration) för mer information om hur du konfigurerar.
+   * Om du har aktiverat **Experience Audit** finns mer information om hur du konfigurerar i dokumentet [Experience Audit](/help/implementing/cloud-manager/experience-audit-dashboard.md).
    * Om du inte gjorde det hoppar du över det här steget.
 
 1. Tryck eller klicka på **Spara** för att spara pipeline.

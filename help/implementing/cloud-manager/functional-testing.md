@@ -5,7 +5,7 @@ exl-id: 7eb50225-e638-4c05-a755-4647a00d8357
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: cfaa3be31195929b80310610120a779a20537c61
 workflow-type: tm+mt
 source-wordcount: '1373'
 ht-degree: 0%
@@ -97,7 +97,7 @@ Testerna är förpackade i en Docker-bild som är utformad för att vara så bes
 >
 >Anpassade användargränssnittstester utförs i pipelines för produktion och icke-produktion (opt-in) som används av AEM program ändrar driftsättningar och AEM push-uppdateringar av produkter och är därför ett viktigt bidrag för att säkerställa att programmet fungerar korrekt och öka säkerheten för releaser. Kundens användargränssnittstester utförs också i interna verifieringsövningar före lanseringen för varje kund, vilket bidrar till att ge tidig feedback.
 >
->Icke-selenbehållare bör köra tester med en HTTP-proxy som baseras på miljövariablerna i [UI-testavsnittet.](/help/implementing/cloud-manager/ui-testing.md#custom-ui-testing)
+>Icke-selenbehållare bör köra tester med en HTTP-proxy som baseras på miljövariablerna i [UI-testavsnittet](/help/implementing/cloud-manager/ui-testing.md#custom-ui-testing).
 
 Vi rekommenderar att du fokuserar på viktiga funktioner och de viktigaste interaktionsflödena för att få en effektiv hantering av pipeline. Fullständiga testsviter för användargränssnitt som inte får plats i den här kundporten rekommenderas att utföras som en del av allmänna kundvalideringsflöden under kundens utvecklingsflöde.
 
@@ -111,7 +111,7 @@ Gaten för upplevelsegranskningskvalitet utför [Google Lightroom](https://devel
 
 Den här kvalitetsporten tillhandahålls av AEM som är färdig, men blockerar inte distributionsledningarna. Som standard utförs en granskning mot rotsidan (`/`) för publiceringsinstansen. Du kan bidra genom att konfigurera upp till 25 anpassade sökvägar som ska användas för granskningar.
 
-Mer information finns i [Experience Audit Testing](/help/implementing/cloud-manager/experience-audit-testing.md).
+Mer information finns i [Experience Audit Testing](/help/implementing/cloud-manager/experience-audit-dashboard.md).
 
 ### Kundvalideringar
 

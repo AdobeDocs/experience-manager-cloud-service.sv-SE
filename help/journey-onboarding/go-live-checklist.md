@@ -1,12 +1,12 @@
 ---
 title: GoLive Checklist
-description: Läs om alla element som behövs för att du ska lyckas med Adobe GoLive med AEM as a Cloud Service
+description: Lär dig mer om alla element som behöver vara på plats för att lyckas med Go-Live med AEM as a Cloud Service.
 exl-id: b424a9db-0f3b-4a8d-be84-365d68df46ca
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 4a369104ea8394989149541ee1a7b956383c8f12
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '568'
 ht-degree: 0%
 
 ---
@@ -24,12 +24,11 @@ Granska den här listan över aktiviteter för att säkerställa att du kan geno
 * Schemalägg en frysperiod för kod och innehåll.
    * Se även avsnittet [Tidslinjer för Kod- och Innehållsfrysning för migreringen](#code-content-freeze)
 * Utför den slutliga innehållsuppsättningen.
-* Validera dispatcherkonfigurationer.
-   * Använd en lokal dispatchervaliderare som gör det lättare att konfigurera, validera och simulera avsändaren lokalt
-      * [Konfigurera lokala dispatcherverktyg.](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html#prerequisites)
+* Validera Dispatcher-konfigurationer.
+   * Använd en lokal Dispatcher-validerare som gör det lättare att konfigurera, validera och simulera Dispatcher lokalt
+      * [Konfigurera lokala Dispatcher-verktyg](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools#prerequisites).
    * Granska konfigurationen av det virtuella värdsystemet noggrant.
-      * Den enklaste (och standardlösningen) är att inkludera `ServerAlias *` i din virtuella värdfil i `/dispatcher/src/conf.d/available_vhostsfolder`.
-         * Detta gör att värdaliasen som används av produktfunktionstester, invalidering av dispatchercache och kloner kan fungera.
+      * Den enklaste (och standardlösningen) är att inkludera `ServerAlias *` i din virtuella värdfil i `/dispatcher/src/conf.d/available_vhostsfolder`. På så sätt kan värdalias som används i produktfunktionstester, ogiltigförklaring av Dispatcher cache och kloner fungera.
       * Om `ServerAlias *` inte är godtagbart måste minst följande `ServerAlias`-poster vara tillåtna utöver dina anpassade domäner:
          * `localhost`
          * `*.local`
@@ -44,20 +43,20 @@ Granska den här listan över aktiviteter för att säkerställa att du kan geno
          * [Introduktion till hantering av SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
          * [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md)
       * Hantera anpassade domännamn (DNS)
-         * För att vara säker på att DNS-rensningen inte kommer att orsaka oväntade problem är det bäst att skapa en testunderdomän för att ansluta din produktionsinstans till innan du publicerar och göra en omgång av UAT-testning. Om din domän är example.com kan du skapa en underdomän test.example.com och använda den i produktionen. Under UAT-testningen av domänen ska du söka efter saker som rätt länkomdirigering, cachelagring och dispatcherkonfigurationer.
+         * Kontrollera att DNS-rensningen inte orsakar några oväntade problem. Skapa en testunderdomän för att ansluta produktionsinstansen till innan du publicerar och göra en runda UAT-tester. Om din domän är example.com kan du skapa en underdomän test.example.com och använda den i produktionen. Vid UAT-testning av domänen ska du leta efter saker som korrekt länkomdirigering, cachelagring och Dispatcher-konfigurationer.
          * [Introduktion till anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
-         * [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
-         * [Hantera eget domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md)
+         * [Lägg till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
+         * [Hantera ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md)
    * Kom ihåg att validera TTL-inställningen för din DNS-post.
       * TTL är den tid som en DNS-post finns kvar i ett cacheminne innan servern tillfrågas om en uppdatering.
       * Om du har en mycket hög TTL tar det längre tid att sprida uppdateringar till DNS-posten.
 * Kör prestanda- och säkerhetstester som uppfyller dina affärskrav och mål.
-   * Utför tester på scenmiljön.  Den har samma storlek som produktionen.
+   * Utför tester i en scenmiljö.  Den har samma storlek som produktionen.
    * Utvecklingsmiljöer har inte samma storlek som fas och produktion.
 * Klipp ut och se till att den faktiska publiceringen utförs utan någon ny driftsättning eller uppdatering av innehållet.
-* Skapa meddelandeprofiler för Admin Console. Se [Meddelandeprofiler](/help/journey-onboarding/notification-profiles.md)
+* Skapa meddelandeprofiler för Admin Console-användare. Se [Meddelandeprofiler](/help/journey-onboarding/notification-profiles.md)
 * Överväg att konfigurera trafikfilterregler för att styra vilken trafik som inte ska tillåtas på webbplatsen.
-   * Trafikfilterregler för hastighetsbegränsning kan vara ett effektivt verktyg mot DDoS-attacker. En särskild kategori av trafikfilterregler, som kallas WAF-regler, kräver en separat licens.
+   * Trafikfilterregler för hastighetsbegränsning kan vara ett effektivt verktyg mot DDoS-attacker. En särskild kategori med trafikfilterregler, som kallas WAF-regler (Brandvägg för webbaserade program), kräver en separat licens.
    * Se dokumentationen för några [föreslagna startregler](/help/security/traffic-filter-rules-including-waf.md#recommended-starter-rules).
 
 Du kan alltid referera till listan om du behöver kalibrera om dina uppgifter under Go-Live.

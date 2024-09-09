@@ -1,9 +1,9 @@
 ---
 title: Pipeline med endast scener och endast prod
 description: Lär dig hur du kan dela upp driftsättningar för staging och produktion med dedikerade pipelines.
-source-git-commit: 94e5ecb67212bcced45141cba3af8c830791473b
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '942'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Lär dig hur du kan dela upp driftsättningar för staging och produktion med de
 
 >[!NOTE]
 >
->Den här funktionen är bara tillgänglig för [det tidiga adopterprogrammet.](/help/implementing/cloud-manager/release-notes/current.md#early-adoption)
+>Den här funktionen är bara tillgänglig för [det tidiga adopterprogrammet](/help/implementing/cloud-manager/release-notes/current.md#early-adoption).
 
 ## Ökning {#overview}
 
@@ -54,9 +54,9 @@ Observera även följande kända fel innan du börjar testa den här funktionen.
 
 ## Skapa pipeline {#pipeline-creation}
 
-Rörledningar som endast är avsedda för produktion och endast för scenen skapas på ungefär samma sätt som standardanslutna [produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) och [icke-produktionsledningar.](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) Se dessa dokument för mer information.
+Rörledningar som endast är avsedda för produktion och endast för scenen skapas på ungefär samma sätt som standardanslutna [produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) och [icke-produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md). Mer information finns i de dokumenten.
 
-1. Tryck eller klicka på **Lägg till pipeline** i fönstret **Pipelines**.
+1. Klicka på **Lägg till pipeline** i fönstret **Pipelines**.
 
    * Välj **Lägg till icke-produktionsförlopp** om du vill skapa en pipeline som bara är avsedd för scenen.
    * Välj **Lägg till endast produktion i pipeline** om du vill skapa en pipeline som endast är avsedd för produktion.
@@ -74,7 +74,7 @@ Rörledningar som endast är avsedda för produktion och endast för scenen skap
 ### Enbart Stage-förlopp {#stage-only}
 
 1. När du har valt alternativet **Lägg till icke-produktionsförlopp** öppnas dialogrutan **Lägg till icke-produktionsförlopp** .
-1. Om du vill skapa en pipeline som bara är för ett stadium väljer du scenmiljön i fältet **Godtagbara distributionsmiljöer** för din pipeline. Fyll i återstående fält och tryck eller klicka på **Fortsätt**.
+1. Om du vill skapa en pipeline som bara är för ett stadium väljer du scenmiljön i fältet **Godtagbara distributionsmiljöer** för din pipeline. Fyll i återstående fält och klicka på **Fortsätt**.
 
    ![Skapar en pipeline enbart för scenen](assets/stage-only.png)
 
@@ -82,12 +82,12 @@ Rörledningar som endast är avsedda för produktion och endast för scenen skap
 
 ### Prod-Only Pipelines {#prod-only}
 
-1. När du har valt alternativet **Lägg till endast produktion i pipeline** öppnas dialogrutan **Lägg till endast produktion i pipeline**.
-1. Ange ett **pipelinenamn**. De återstående alternativen och funktionerna i dialogrutan fungerar på samma sätt som i den vanliga dialogrutan för att skapa kopplad pipeline. Tryck eller klicka på **Spara** för att spara pipeline.
+1. När du väljer alternativet **Lägg till endast produktionspipeline** öppnas dialogrutan **Lägg till endast produktionspipeline** .
+1. Ange ett **pipelinenamn**. De återstående alternativen och funktionerna i dialogrutan fungerar på samma sätt som i den vanliga dialogrutan för att skapa kopplad pipeline. Klicka på **Spara** för att spara pipeline.
 
 ## Köra endast prod- och Stage-pipelines {#running}
 
-Rörledningar med endast prod och scenen körs på samma sätt som [alla andra pipelines körs.](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#running-pipelines) Mer information finns i den dokumentationen.
+Rörledningar med endast prod och scenen körs på samma sätt som [alla andra pipelines körs](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#running-pipelines). Mer information finns i den dokumentationen.
 
 Dessutom kan en pipelinekörning som bara är avsedd för produktion aktiveras direkt från körningsinformationen för en pipeline som bara är avsedd för en viss fas.
 
@@ -97,7 +97,7 @@ En rörledning som bara fungerar på en scen fungerar på nästan samma sätt so
 
 ![En pipeline som endast är för scenen körs](assets/stage-only-pipeline-run.png)
 
-Knappen **Befordra bygge** visas bara om du är på den senaste pipelinekörningen som bara fungerar på scenen. När du har tryckt eller klickat uppmanas du att bekräfta körningen av den produktspecifika pipelinen eller att skapa en produktbaserad pipeline om det inte redan finns en.
+Knappen **Befordra bygge** visas bara om du är på den senaste pipelinekörningen som bara fungerar på scenen. När du klickar på den uppmanas du att bekräfta körningen av den produktspecifika pipelinen eller att skapa en produktbaserad pipeline om det inte redan finns en.
 
 ### Prod-Only Pipelines {#prod-only-run}
 

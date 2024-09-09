@@ -5,7 +5,7 @@ exl-id: 6e294f0b-52cb-40dd-bc42-ddbcffdf5600
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 06e961febd7cb2ea1d8fca00cb3dee7f7ca893c9
+source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Du måste uppfylla dessa krav innan du konfigurerar dina DNS-poster.
 
 * Du måste identifiera din domänvärd eller registrator om du inte redan känner till den.
 * Du måste kunna redigera DNS-posterna för din organisations domän eller kontakta rätt person som kan göra det.
-* Du måste redan ha verifierat ditt konfigurerade anpassade domännamn enligt beskrivningen i dokumentet [Kontrollerar domännamnsstatus.](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md)
+* Du måste redan ha verifierat ditt konfigurerade anpassade domännamn enligt beskrivningen i dokumentet [Kontrollera domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).
 
 ## CNAME-post {#cname-record}
 
