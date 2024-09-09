@@ -3,9 +3,9 @@ title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud 
 description: Integrera resursväljare med olika program från Adobe, andra än Adobe och andra tillverkare.
 role: Admin, User
 exl-id: 55848de0-aff2-42a0-b959-c771235d9425
-source-git-commit: f9f5b2a25933e059cceacf2ba69e23d528858d4b
+source-git-commit: 575980320c1dbd32f799bf9c2fddf3d6773c838a
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '424'
 ht-degree: 0%
 
 ---
@@ -141,3 +141,9 @@ Resursväljaren återges på behållarelementet `<div>`, vilket anges på *rad 7
 >
 >Om du har integrerat resursväljare med hjälp av arbetsflödet Registrera dig för inloggning men fortfarande inte kan komma åt leveransdatabasen, kontrollerar du att cookies i webbläsaren har rensats bort. Annars får du ett `invalid_credentials All session cookies are empty`-fel i konsolen.
 
+>[!MORELIKETHIS]
+>
+>* [Integrera resursväljare med olika program](/help/assets/integrate-asset-selector.md)
+>* [Egenskaper för resursväljare](/help/assets/asset-selector-properties.md)
+>* [Integrera resursväljare med Dynamic Media med OpenAPI-funktioner](/help/assets/integrate-asset-selector-dynamic-media-open-api.md)
+>* [Anpassningar av resursväljare](/help/assets/asset-selector-customization.md)

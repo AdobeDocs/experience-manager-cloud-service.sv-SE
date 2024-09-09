@@ -3,7 +3,7 @@ title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud 
 description: Integrera resursväljare med olika program från Adobe, andra än Adobe och andra tillverkare.
 role: Admin, User
 exl-id: b01097f3-982f-4b2d-85e5-92efabe7094d
-source-git-commit: f9f5b2a25933e059cceacf2ba69e23d528858d4b
+source-git-commit: 575980320c1dbd32f799bf9c2fddf3d6773c838a
 workflow-type: tm+mt
 source-wordcount: '884'
 ht-degree: 0%
@@ -174,4 +174,4 @@ Efter integrering med Adobe Micro-Frontend Asset Selector kan du bara se resurss
 >
 >* [Integrera resursväljare med olika program](/help/assets/integrate-asset-selector.md)
 >* [Egenskaper för resursväljare](/help/assets/asset-selector-properties.md)
->* [Anpassning av resursväljare](/help/assets/asset-selector-customization.md)
+>* [Anpassningar av resursväljare](/help/assets/asset-selector-customization.md)

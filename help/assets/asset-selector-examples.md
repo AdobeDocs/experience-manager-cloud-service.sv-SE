@@ -3,9 +3,9 @@ title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud 
 description: Exempel på hur du använder resursväljaren för att anpassa efter behov.
 role: Admin, User
 exl-id: 7a393a96-f2a2-4a25-922c-577271cafc57
-source-git-commit: f9f5b2a25933e059cceacf2ba69e23d528858d4b
+source-git-commit: 575980320c1dbd32f799bf9c2fddf3d6773c838a
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
@@ -52,6 +52,7 @@ Assets display panel shows the out of the box metadata that can be displayed in 
 
 >[!MORELIKETHIS]
 >
->* [Anpassning av resursväljare](/help/assets/asset-selector-customization.md)
+>* [Anpassningar av resursväljare](/help/assets/asset-selector-customization.md)
+>* [Överföring av resursväljare](/help/assets/asset-selector-upload.md)
 >* [Egenskaper för resursväljare](/help/assets/asset-selector-properties.md)
->* [Integrera API:er för att öppna dynamiska media i resursväljaren](/help/assets/integrate-asset-selector-dynamic-media-open-api.md)
+>* [Integrera resursväljare med Dynamic Media med OpenAPI-funktioner](/help/assets/integrate-asset-selector-dynamic-media-open-api.md)

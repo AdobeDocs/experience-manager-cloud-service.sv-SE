@@ -3,9 +3,9 @@ title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud 
 description: Använd resursväljaren för att söka efter, hitta och hämta resursers metadata och återgivningar i programmet.
 role: Admin,User
 exl-id: d6ff601c-3111-421a-9a94-cc524ce7e432
-source-git-commit: f9f5b2a25933e059cceacf2ba69e23d528858d4b
+source-git-commit: 575980320c1dbd32f799bf9c2fddf3d6773c838a
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
@@ -54,3 +54,9 @@ Se [Överför med metadata](/help/assets/asset-selector-customization.md#upload-
 Med resursväljaren kan du lägga till ett anpassat överföringsformulär. Det finns flera anpassningar tillgängliga. Egenskapen [hideUploadButton](/help/assets/asset-selector-properties.md) gör till exempel att du kan dölja den överföringsknapp som visas som standard i programmet. I stället kan du anpassa den så att den återges utanför MFE-programmet enligt kraven. Se [anpassad överföring](/help/assets/asset-selector-customization.md#customized-upload) för konfigurationen.
 
 ![Anpassad överföring](assets/customized-upload.png)
+
+>[!MORELIKETHIS]
+>
+>* [Exempel på resursväljare](/help/assets/asset-selector-examples.md)
+>* [Integrera resursväljare med olika program](/help/assets/integrate-asset-selector.md)
+>* [Egenskaper för resursväljare](/help/assets/asset-selector-properties.md)

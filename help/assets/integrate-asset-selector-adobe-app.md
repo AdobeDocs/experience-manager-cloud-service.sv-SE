@@ -3,9 +3,9 @@ title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud 
 description: Integrera resursväljare med olika program från Adobe, andra än Adobe och andra tillverkare.
 role: Admin, User
 exl-id: a0c030e2-2213-406b-ad92-4761f1e2ee9f
-source-git-commit: f9f5b2a25933e059cceacf2ba69e23d528858d4b
+source-git-commit: 575980320c1dbd32f799bf9c2fddf3d6773c838a
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
@@ -151,5 +151,5 @@ onErrorReceived: (type, msg) => {
 >
 >* [Integrera resursväljare med olika program](/help/assets/integrate-asset-selector.md)
 >* [Egenskaper för resursväljare](/help/assets/asset-selector-properties.md)
->* [Integrera API:er för att öppna dynamiska media i resursväljaren](/help/assets/integrate-asset-selector-dynamic-media-open-api.md)
->* [Anpassning av resursväljare](/help/assets/asset-selector-customization.md)
+>* [Integrera resursväljare med Dynamic Media med OpenAPI-funktioner](/help/assets/integrate-asset-selector-dynamic-media-open-api.md)
+>* [Anpassningar av resursväljare](/help/assets/asset-selector-customization.md)
