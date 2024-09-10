@@ -4,9 +4,9 @@ description: Lär dig hur du kan leverera dina Cloud Manager-projekt med hjälp 
 exl-id: f33bd6f0-62fc-4ecc-b8d2-65d1f1c44d82
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: bc6ea60abed904ef514a4b010a9848511c28128e
+source-git-commit: dda5444ccfced079125c358f65f0dae43293ae55
 workflow-type: tm+mt
-source-wordcount: '1503'
+source-wordcount: '1502'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Om du har avtal med licenser för AEM as a Cloud Service Sites Edge Delivery Ser
 * Åtkomst till SLA-rapportering (*kommer snart*) <!-- ADD LINK TO IT WHEN FINALLY ADDED -->
 * Få stöd från Adobe. Se till att era Edge Delivery Services är registrerade genom ett produktionsprogram i Cloud Manager för korrekt igenkänning och support från Adobe.
 
-## Lägga till en Edge Delivery Services-webbplats {#eds-add-site}
+## Lägg till en Edge Delivery-webbplats {#eds-add-site}
 
 När du har lagt till Edge Delivery Services i ett produktionsprogram tillämpas din Edge Delivery Services på det.
 
