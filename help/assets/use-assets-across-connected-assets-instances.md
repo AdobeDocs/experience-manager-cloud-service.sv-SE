@@ -6,9 +6,9 @@ mini-toc-levels: 2
 feature: Asset Management, Connected Assets, Asset Distribution
 role: Admin, User, Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
+source-git-commit: 638b18beb5202ec34c1957a74d5b293236c2cf4e
 workflow-type: tm+mt
-source-wordcount: '3729'
+source-wordcount: '3756'
 ht-degree: 12%
 
 ---
@@ -22,6 +22,10 @@ ht-degree: 12%
 | AEM as a Cloud Service | Den här artikeln |
 
 I stora företag kan den infrastruktur som krävs för att skapa webbplatser vara distribuerad. Ibland kan funktionerna för att skapa webbplatser och de digitala resurser som används för att skapa webbplatserna finnas i olika distributioner. En orsak kan vara att befintliga distributioner som krävs för att fungera tillsammans distribueras geografiskt. En annan orsak kan vara förvärv som leder till heterogen infrastruktur, inklusive olika [!DNL Experience Manager]-versioner, som huvudföretaget vill använda tillsammans.
+
+>[!NOTE]
+>
+>Adobe rekommenderar att du utnyttjar Dynamic Media med OpenAPI-funktioner för att ansluta AEM Assets as a Cloud Service och AEM Sites. Se [Integrera fjärr-AEM Assets med AEM Sites](/help/assets/integrate-remote-approved-assets-with-sites.md).
 
 Ansluten Assets-funktionalitet stöder ovanstående användningsfall genom integrering av [!DNL Experience Manager Sites] och [!DNL Experience Manager Assets]. Användare kan skapa webbsidor i [!DNL Sites] som använder digitala resurser från separata [!DNL Assets]-distributioner.
 
