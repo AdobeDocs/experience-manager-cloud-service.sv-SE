@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 2bf129d763fcad024eb3799cdf2a97bdbc2472c5
+source-git-commit: 983928c46ed5c4999dcae12c75930a9973d51f75
 workflow-type: tm+mt
-source-wordcount: '5586'
+source-wordcount: '5600'
 ht-degree: 3%
 
 ---
@@ -75,7 +75,7 @@ ht-degree: 3%
          + [Versionsinformation för 2020.11.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-11-0.md)
          + [Versionsinformation för 2020.10.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-10-0.md)
          + [Versionsinformation för 2020.9.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-9-0.md)
-         + [Versionsinformation för 2020.8.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-8-0.md)
+         + [Release Notes for 2020.8.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-8-0.md)
          + [Versionsinformation för 2020.7.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-7-0.md)
          + [Versionsinformation för 2020.6.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-6-0.md)
          + [Versionsinformation för 2020.5.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-5-0.md)
@@ -85,6 +85,7 @@ ht-degree: 3%
    + Versionsinformation om underhåll av AEMaaCS {#maintenance}
       + [Versionsinformation om aktuellt underhåll](/help/release-notes/maintenance/latest.md)
       + 2024 {#2024}
+         + [Underhållsinformation för 2024.9.0](/help/release-notes/maintenance/2024/2024-9-0.md)
          + [Underhållsinformation för 2024.8.0](/help/release-notes/maintenance/2024/2024-8-0.md)
          + [Underhållsinformation för 2024.7.0](/help/release-notes/maintenance/2024/2024-7-0.md)
          + [Underhållsinformation för 2024.6.0](/help/release-notes/maintenance/2024/2024-6-0.md)
@@ -498,11 +499,11 @@ ht-degree: 3%
       + [Digital Rights Management för tillgångar](/help/assets/drm.md)
       + [Vattenstämpelresurser](/help/assets/watermark-assets.md)
       + [Bearbeta resurser med  [!DNL Creative Cloud] API:er](/help/assets/cc-api-integration.md)
-      + [Färgtaggar för bilder](/help/assets/color-tag-images.md)
+      + [Color tags for images](/help/assets/color-tag-images.md)
       + [Manage PDF documents](/help/assets/manage-pdf-documents.md)
-   + Konfigurera, administrera och utöka [!DNL Assets] {#admin}
-      + [Identifiera duplicerade resurser](/help/assets/detect-duplicate-assets.md)
-      + [Dokumentreferenser för utvecklare och API:er](/help/assets/developer-reference-material-apis.md)
+   + [!DNL Assets]{#admin}
+      + [Detect duplicate assets](/help/assets/detect-duplicate-assets.md)
+      + [Developer docs and APIs references](/help/assets/developer-reference-material-apis.md)
       + [Mappmetadatamatchschema](/help/assets/folder-metadata-schema.md)
       + [Arbeta med bild- och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md)
       + [Konfigurera transkription för ljud- och videomaterial](/help/assets/configure-transcription.md)
@@ -607,7 +608,7 @@ ht-degree: 3%
       + [Mina Workspace](/help/assets/my-workspace-assets-view.md)
       + [Filtyper och användningsområden som stöds](/help/assets/supported-file-formats-assets-view.md)
       + [Visa resurser](/help/assets/navigate-assets-view.md)
-      + [Överför och lägg till resurser](/help/assets/add-delete-assets-view.md)
+      + [Upload and add assets](/help/assets/add-delete-assets-view.md)
       + [Massimportera resurser](/help/assets/bulk-import-assets-view.md)
       + [Söka efter och identifiera resurser](/help/assets/search-assets-view.md)
       + [Resurshanteringsaktiviteter](/help/assets/manage-organize-assets-view.md)
@@ -619,13 +620,13 @@ ht-degree: 3%
       + [Hantera samlingar](/help/assets/manage-collections-assets-view.md)
       + [Bevaka resurser, mappar och samlingar](/help/assets/manage-notifications-assets-view.md)
       + [Hantera rapporter](/help/assets/manage-reports-assets-view.md)
-      + [Hantera taggar](/help/assets/tagging-management-assets-view.md)
+      + [Manage tags](/help/assets/tagging-management-assets-view.md)
       + [Content Credentials](/help/assets/content-credentials.md)
-      + [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+      + [Publish Assets to AEM and Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 
-   + Content Hub {#content-hub}
-      + [Ökning](/help/assets/product-overview.md)
+   + {#content-hub}
+      + [Overview](/help/assets/product-overview.md)
       + [Distribuera Content Hub](/help/assets/deploy-content-hub.md)
       + [Konfigurera Content Hub användargränssnitt](/help/assets/configure-content-hub-ui-options.md)
       + [Överföra eller importera varumärkesgodkända mediefiler till Content Hub](/help/assets/upload-brand-approved-assets.md)
@@ -1047,12 +1048,12 @@ ht-degree: 3%
          + [Lär dig grunderna i innehållsmodellering för Headless med AEM](/help/journey-headless/architect/basics.md)
          + [Läs om hur du skapar modeller för innehållsfragment i AEM](/help/journey-headless/architect/model-structure.md)
       + Headless Translation Journey {#translation}
-         + [Förstå headlessöversättning i AEM](/help/journey-headless/translation/overview.md)
-         + [Kom igång med AEM headless translation](/help/journey-headless/translation/getting-started.md)
+         + [Understand headless translation in AEM](/help/journey-headless/translation/overview.md)
+         + [Get started with AEM headless translation](/help/journey-headless/translation/getting-started.md)
          + [Learn about headless content and how to translate in AEM](/help/journey-headless/translation/learn-about.md)
-         + [Konfigurera översättningskoppling](/help/journey-headless/translation/configure-connector.md)
+         + [Configure translation connector](/help/journey-headless/translation/configure-connector.md)
          + [Konfigurera översättningsregler](/help/journey-headless/translation/translation-rules.md)
-         + [Översätta innehåll](/help/journey-headless/translation/translate-content.md)
+         + [Translate content](/help/journey-headless/translation/translate-content.md)
          + [Publish översatt innehåll](/help/journey-headless/translation/publish-content.md)
       + Headless Content Author Journey {#author}
          + [AEM Headless Content Author Journey - översikt](/help/journey-headless/author/overview.md)
@@ -1146,6 +1147,7 @@ ht-degree: 3%
       + [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md)
       + [AEM miljöer för snabb utveckling](/help/implementing/developing/introduction/rapid-development-environments.md)
       + [AEM as a Cloud Service riktlinjer för utveckling](/help/implementing/developing/introduction/development-guidelines.md)
+      + [AEM as a Cloud Service Developer Console (Beta)](/help/implementing/developing/introduction/developer-console.md)
       + [Loggning](/help/implementing/developing/introduction/logging.md)
       + [Loggvidarebefordran](/help/implementing/developing/introduction/log-forwarding.md)
       + [Konfigurationer och Configuration Browser](/help/implementing/developing/introduction/configurations.md)
@@ -1156,7 +1158,7 @@ ht-degree: 3%
       + [Skapa snabbt webbplatser och anpassa gränssnittet](/help/implementing/developing/introduction/quick-site-creation.md)
       + [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md)
       + [Anpassa webbplatsmallar och teman](/help/implementing/developing/introduction/customizing-site-templates-themes.md)
-      + [Headful and Headless in AEM](/help/implementing/developing/headful-headless.md)
+      + [Headless and Headless in AEM](/help/implementing/developing/headful-headless.md)
       + Fullständig AEM {#full-stack}
          + [Getting Started Developing AEM Sites - WKND Tutorial](/help/implementing/developing/introduction/develop-wknd-tutorial.md)
          + [Struktur för AEM](/help/implementing/developing/introduction/ui-structure.md)
@@ -1167,12 +1169,12 @@ ht-degree: 3%
          + [Använda bibliotek på klientsidan](/help/implementing/developing/introduction/clientlibs.md)
          + [Sidskillnader](/help/implementing/developing/introduction/page-diff.md)
          + [Begränsningar för redigerare](/help/implementing/developing/introduction/editor-limitations.md)
-         + [Namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md)
-         + [Responsiv design](/help/implementing/developing/introduction/responsive-design.md)
-         + Komponenter och mallar {#components-templates}
-            + [Komponenter - översikt](/help/implementing/developing/components/overview.md)
+         + [Naming Conventions](/help/implementing/developing/introduction/naming-conventions.md)
+         + [Responsive Design](/help/implementing/developing/introduction/responsive-design.md)
+         + {#components-templates}
+            + [Components Overview](/help/implementing/developing/components/overview.md)
             + [Mallar](/help/implementing/developing/components/templates.md)
-            + [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+            + [](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
             + [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html)
             + [JSON-exporterare för innehållstjänster](/help/implementing/developing/components/json-exporter.md)
             + [Aktivera JSON-export för en komponent](/help/implementing/developing/components/enabling-json-exporter.md)
@@ -1275,9 +1277,9 @@ ht-degree: 3%
       + [Utöka gruppredigeraren](/help/implementing/developing/extending/bulk-editor.md)
       + [Utöka MSM](/help/implementing/developing/extending/msm.md)
    + Distribuera till AEM as a Cloud Service {#deploying}
-      + [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md)
+      + [Deploying to AEM as a Cloud Service](/help/implementing/deploying/overview.md)
       + [Uppdateringar av AEM](/help/implementing/deploying/aem-version-updates.md)
-      + [Configuring OSGi for AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md)
+      + [Konfigurera OSGi för AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md)
       + [Resursmappning](/help/implementing/deploying/resource-mapping.md)
    + Författarnivå {#author-tier}
       + [Åtkomst till författarnivån](/help/implementing/author-tier/accessing-the-author-tier.md)
