@@ -3,9 +3,10 @@ title: Versionsinformation för Cloud Manager 2024.9.0 i Adobe Experience Manage
 description: Läs mer om versionsinformationen för Cloud Manager 2024.9.0 i AEM as a Cloud Service.
 feature: Release Information
 role: Admin
-source-git-commit: cfaa3be31195929b80310610120a779a20537c61
+exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
+source-git-commit: 610ae004b6da2f7fc0dae2baa613cb363fe9fb00
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
@@ -32,9 +33,17 @@ Lanseringsdatumet för Cloud Manager version 2024.9.0 i AEM as a Cloud Service �
 
   Med Cloud Manager kan du nu [självbetjäningscertifikat för Adobe som genererats och hanterats av DV (domänvalidering) ](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md). Denna funktion ger er den snabbaste, enklaste och mest kostnadseffektiva lösningen för att skapa en säker webbplats för ert företag eller er onlineorganisation. <!-- CMGR-52403 -->
 
+  >[!NOTE]
+  >
+  >[Content Hub](/help/assets/product-overview.md)-kunder planerar att få den här funktionen i faser som en del av en successiv utrullning.
+
 * **Stöd för Edge Delivery Services i Cloud Manager:**
 
-  Om du har Edge Delivery Services som licensierats som en del av AEM Sites kan [du nu lägga upp din webbplats med Edge Delivery Services direkt via Cloud Manager](/help/implementing/cloud-manager/edge-delivery-services.md). Den här funktionen möjliggör en guidad självbetjäning för Go Live. Det förenar också viktiga arbetsflöden som domännamnshantering, SSL-certifikat och CDN-mappningar i alla dina AEM, vilket ger enhetlighet och effektivitet. <!-- CMGR-49859 -->
+  Om du har en Edge Delivery Services-licens som en del av AEM Sites kan [du nu lägga upp din webbplats med Edge Delivery Services direkt via Cloud Manager](/help/implementing/cloud-manager/edge-delivery-services.md). Den här funktionen möjliggör en guidad självbetjäning för Go Live. Det förenar också viktiga arbetsflöden som domännamnshantering, SSL-certifikat och CDN-mappningar i alla dina AEM, vilket ger enhetlighet och effektivitet. <!-- CMGR-49859 -->
+
+  >[!NOTE]
+  >
+  >[Content Hub](/help/assets/product-overview.md)-kunder planerar att få den här funktionen i faser som en del av en successiv utrullning.
 
 * Kunder som använder GitHub-databaser har nu möjlighet att skapa och använda pipelines för webbnivåkonfiguration. <!--( KEEP IN? SP: YES CMGR-59046 and Slack https://cq-dev.slack.com/archives/C07LFP5BZ2L/p1725407057847379 ) -->
 
