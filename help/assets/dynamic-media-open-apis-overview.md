@@ -3,9 +3,9 @@ title: Dynamic Media med OpenAPI-funktioner
 description: Lär dig viktiga begrepp som varför du använder Dynamic Media med OpenAPI-funktioner och hur du aktiverar det.
 role: User
 exl-id: 658b6eff-9f5a-4166-9ff6-5dc8eb92ada3
-source-git-commit: 1041769d4c1efa4465745a85df65c803939b472b
+source-git-commit: 6199a8ae0033feee0c1bee4e4c50e19cd55c805c
 workflow-type: tm+mt
-source-wordcount: '1061'
+source-wordcount: '1062'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Om du vill aktivera Dynamic Media med OpenAPI-funktioner i AEM as a Cloud Servic
 
   >[!NOTE]
   >
-  > Om du vill integrera med andra program än Adobe anger du domännamn i vitlistan där programmet finns.
+  > Om du vill integrera med andra program än Adobe anger du domännamn till tillåtelselista där programmet finns.
 
 * Information om viktiga kundkontakter i integrationsprojektet.
 
