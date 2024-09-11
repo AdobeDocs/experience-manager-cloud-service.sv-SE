@@ -11,7 +11,7 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: cdca41ad-a2cd-4f68-aaa4-5eec33c30f0b
-source-git-commit: 879af9e3168a1ab993eff930355c4bd200879c71
+source-git-commit: d16a2dbe5cf2ab6d42af661b6ab2b9845612304f
 workflow-type: tm+mt
 source-wordcount: '2591'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Dynamic Media Journey: The Basics, del II  {#dm-journey-part2}
 
-{{work-with-dynamic-media}}
+{{see-also-dm}}
 
 Välkommen till Dynamic Media Journey: The Basics, Part II, där du kan förvänta dig följande:
 
@@ -211,8 +211,6 @@ Du läser bara om bilduppsättningar och visningsprogram. Låt oss titta på ett
 ## Valfritt - Läs mer
 
 Om du vill veta mer om vad du just läste kan du använda materialet nedan för att utforska koncept i detalj. Annars är din Dynamic Media Journey klar!
-
-{{see-also-dm}}
 
 <!--
 _Dynamic Media Help topics_

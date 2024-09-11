@@ -11,7 +11,7 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: f3472006-d5ae-4f70-af3e-44e73aee85cc
-source-git-commit: 879af9e3168a1ab993eff930355c4bd200879c71
+source-git-commit: d16a2dbe5cf2ab6d42af661b6ab2b9845612304f
 workflow-type: tm+mt
 source-wordcount: '3612'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Dynamic Media Journey: The Basics, Part I {#dm-journey-part1}
 
-{{work-with-dynamic-media}}
+{{see-also-dm}}
 
 Välkommen till Dynamic Media Journey.
 
@@ -268,7 +268,6 @@ _Förhandsgranska en resurs baserat på den valda visningsförinställningen fö
 
 Del I av denna resa gällde grunderna i olika Dynamic Media-frågor. Om du vill veta mer om vad du läser kan du använda materialet nedan för att utforska koncept i detalj. Annars kan du fortsätta med del II av resan. Se [Framtiden i den här Dynamic Media-resan](#whats-next).
 
-{{see-also-dm}}
 <!--
 _Dynamic Media Help topics_
 
