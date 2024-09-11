@@ -4,10 +4,10 @@ description: Aktuell underhållsversionsinformation för  [!DNL Adobe Experience
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: eb01b6982578ad1300163c2fd536e844afc815fa
+source-git-commit: 9323464610b804ff407f5eedf404ab2cca93a8da
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 0%
+source-wordcount: '572'
+ht-degree: 1%
 
 ---
 
@@ -16,75 +16,60 @@ ht-degree: 0%
 
 I följande avsnitt beskrivs de tekniska versionsinformationen för den aktuella underhållsutgåvan av Experience Manager as a Cloud Service.
 
-## Utgåva 17569 {#release-17569}
+## Utgåva 17689 {#release-17689}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 17569, som offentliggjordes den 27 augusti 2024. Den tidigare underhållsversionen var version 17465.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 17689, som offentliggjordes den 10 september 2024. Den tidigare underhållsversionen var version 17569.
 
 Funktionsaktiveringen i 2024.9.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
-### Förbättringar {#enhancements-17569}
+### Förbättringar {#enhancements-17689}
 
-* CQ-4353778: Översättningsprocesshändelser.
-* CQ-4354583: Skicka översättningsprocesshändelser via Adobe Pipeline.
-* CQ-4356479: Tillåt endast Adobe-kod att använda /adobe-serverkontexten.
-* CQ-4358226: Funktionen för att spara översättningsnyckelord fungerar inte för ett visst strängformat.
-* CQ-4358270: AEM Translation Kit: 8 augusti.
-* CQ-4358310: Lägg till oak-compat-query-spi-1.2 för snabbstart.
-* GRANITE-49833: Grupperingsstöd för händelseländare och proxy.
-* GRANITE-52053: Ta bort användning av Commons Collections 3: Platform others.
-* GRANITE-52492: Elastisk async-hämtning vid PIT-återställning.
-* GRANITE-53099: Uppdatering till Apache Felix HTTP Jetty 5.1.24.
-* GRANITE-53125: Lägg till klassificering i CloudEvent.
-* GRANITE-53328: Uppdatera Fireault till 3.8.0-T2024072611512-3cc11d50 som innehåller förbättringar av hash-loggning.
-* GRANITE-53453: update commons-lang to 3.15.0.
-* GRANITE-53478: Uppdatera Fireworks till version 3.8.0.
-* GRANITE-53505: Uppdatera QS till Commons-collections-3.2.2-adobe-2.
-* GRANITE-53528: Uppdateringsversion av plattformsartefakter .
-* GRANITE-53547: Ange ett alternativt API som undviker att använda Apache Commons Lang 2.
-* GRANITE-53575: Använd BSAFE 6.2.5 i CS.
-* GRANITE-53608: Uppdatera Oak till den senaste offentliga versionen (1.68.0).
-* SITES-23583: Sites Evergreen-tester misslyckas i Java 17.
-* SKYOPS-79535: Uppdatera till rum-skript v2.
-* SKYOPS-79816: Aktivera aktiviteten Sling Feature Analyzer Task för Service User Mappings in FACT Tool.
-* SKYOPS-81179: AEM bygger testning för paket som ska växlas.
-* SKYOPS-81866: Rapportera varningar för paket som inte är kompatibla med Java 21.
-* SKYOPS-82660: Uppdatera Sling API till 2.27.6.
-* SKYOPS-82961: Uppdatera till Sling ResourceResolver 1.12.0-T20240723153354-a0270a0.
-* SKYOPS-83356: Skapa en global kontrollpanel för spårning av JVM-versioner som används i AEM.
-* SKYOPS-83436: Java Runtime 21-utrullning avbryter skapandet av adaptiva formulär AEM Forms.
-* SKYOPS-84272: Logga den java-version som används vid start av aem.
+* ASSETS-41404: Ändringar som har stöd för DRM-förbättringar.
+* ASSETS-41621: Uppdaterat asynkront kopieringsjobb.
+* ASSETS-32166: Uppdaterat asynkront resursflyttningsjobb.
+* ASSETS-41429: Stöd för bildförinställningar i DM OpenAPI.
+* ASSETS-38968: Förbättra återgivningen av Content Fragments-referenser.
+* ASSETS-41787, ASSETS-41183: Förbättringar för ramverket Assets Bulk Operations.
+* GRANITE-52917: Optimeringar som förbättrar installationstiden för innehållskopia.
+* SCRNS-3980: Identifiera gråskärm på spelare som har sekvenser utan schemalagda resurser.
 
-### Åtgärdade problem {#fixed-issues-17569}
+### Åtgärdade problem {#fixed-issues-17689}
 
-* CMGR-60225: Pipeline-körningsfel identifierades på AEM Sites CS-kund vid validering av AEM version 17486.
-* GRANITE-45919: Embargoed countries in Country/Region list in Edit User Settings.
-* GRANITE-51715: Det händer att väljaren inte anger markeringen i textfältet.
-* GRANITE-53290: Kontrollera protokollet korrekt när du tolkar URL:en i XSS-kontrollen.
-* GRANITE-53576: Felaktig definition av servicerankning i OSGi-konfigurationer.
-* SKYOPS-82129: Memoryleak i Sling Models.
+* ASSETS-40875: Icke-förstörande NPE loggad av AssetDeleteHandler.
+* ASSETS-42422: Undvik att utlösa asynkrona jobb för flyttning av enstaka resurser.
+* ASSETS-41234: Enhetligt gränssnitt - Global navigering kanske inte fungerar om den öppnas när sökfältet är öppet.
+* ASSETS-42256: Enhetligt gränssnitt - Tagg/Badge-indikeringsmiljön fungerar bara då och då.
+* ASSETS-41271: Förhindra att Assets publiceras på nytt i onödan under flyttningsåtgärder.
+* ASSETS-38894: Begränsa återförsök genom att bearbeta övervakningsenheten.
+* ASSETS-40815: Använd PDF-renderingen för förhandsgranskning för att visa PPT-filen i användargränssnittet för länkdelning.
+* ASSETS-37123: Det går inte att läsa in förhandsgranskning av resurs i dialogrutan Länkdelning.
+* CQ-4358156: Uppdaterar bakgrunder till taggen som tas bort.
+* SCRNS-4495: Knappen Klistra in som åtgärdats fungerar inte korrekt för olika användargrupper.
+* SCRNS-4512: Ta bort komponenter som är relaterade till enheten från AEMaaCS-skärmar.
+* SCRNS-4466: Dölj - Visa manifest, generera offlineinnehåll, uppdatera manifestcache, visningspanel på panelen i Channel Dashboard.
+* SCRNS-4513: Lägg till kolumnrubriker för sökresultatsidan i listvyn.
 
-### Kända fel {#known-issues-17569}
+### Kända fel {#known-issues-17689}
 
-* ASSETS-40875 - Klassen AssetDeleteHandler lyssnar efter tillgångsborttagningshändelser och utför specifika åtgärder baserat på typen av delete-händelse (PRE_DELETE eller POST_DELETE). I vissa scenarier orsakar händelsetypen POST_DELETE ett NullPointerException.
-* FORMS-14340 - Fel vid instansiering av FormsAndDocumentOmniSearchHandler och CloudStorageSubmitActionInserter. Det här är ofarliga loggsatser.
-* FORMS-15818 - Komponentbeskrivningspost &#39;OSGI-INF/com.adobe.aemfd.docmanager.impl.*.xml kunde inte hitta satser i serverloggar. Det här är ofarliga loggsatser.
-* SITES-23662 - Användare som utlöser en publicering kan inte extraheras från JCR-loggsatser i serverloggar. Det här är en funktion under utveckling som kan orsaka fel av typen&quot;Det går inte att hitta ett giltigt användar-ID i gruppen med OSGI-händelser&quot; i loggen.
+* FORMS-14340: Fel vid instansiering av FormsAndDocumentOmniSearchHandler och CloudStorageSubmitActionInserter. Det här är ofarliga loggsatser.
+* FORMS-15818: Komponentbeskrivningspost&quot;OSGI-INF/com.adobe.aemfd.docmanager.impl.*.xml kan inte hitta satser i serverloggar. Det här är ofarliga loggsatser.
+* SITES-23662: Användare som utlöser en publicering kan inte extraheras från JCR-loggsatser i serverloggar. Det här är en funktion under utveckling som kan orsaka fel av typen&quot;Det går inte att hitta ett giltigt användar-ID i gruppen med OSGI-händelser&quot; i loggen.
 
-### Ändringsmeddelande {#change-notice-17569}
+### Ändringsmeddelande {#change-notice-17689}
 
 * Från och med september 2024 kommer AEM as a Cloud Service att inaktivera serialiseringen av resurslösare via Sling Model Exporter-ramverket. Mer information finns i [dokumentationen](/help/implementing/developing/hybrid/disallow-the-serialization-of-resourceresolvers-via-sling-model-exporter.md).
 
-### Föråldrade funktioner och API:er {#deprecated-17569}
+### Föråldrade funktioner och API:er {#deprecated-17689}
 
 Observera att vi håller på att uppdatera `com.day.cq.wcm.api` och med den aktuella versionen har vi markerat `@Deprecated` som några av dess metoder och klasser. Dessa kommer att tas bort i framtida versioner, så överväg att byta till de föreslagna alternativen om du använder något av dem.
 
 Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs i dokumentet [Inaktuella och Borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
 
-### Säkerhetskorrigeringar {#security-17569}
+### Säkerhetskorrigeringar {#security-17689}
 
 AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan för din plattform. Denna underhållsrelease åtgärdar fyra identifierade sårbarheter, vilket stärker vårt engagemang för robust systemskydd.
 
-### Inbäddade tekniker {#embedded-tech-17569}
+### Inbäddade tekniker {#embedded-tech-17689}
 
 | Teknik | Version | Länk |
 |---|---|---|

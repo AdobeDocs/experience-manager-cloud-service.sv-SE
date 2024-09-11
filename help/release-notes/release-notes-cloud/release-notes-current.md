@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 9cc49bf83d278d4064faa1d0157201226a067cb1
+source-git-commit: 99a36bab3ca8d5e6a64e1fdb9c179cf8a3190a14
 workflow-type: tm+mt
-source-wordcount: '1142'
+source-wordcount: '1166'
 ht-degree: 0%
 
 ---
@@ -34,13 +34,11 @@ Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktue
 
 Du hittar den senaste underhållsversionsinformationen [här](/help/release-notes/maintenance/latest.md).
 
-<!-- ## Release Video {#release-video}
+## Släpp video {#release-video}
 
-Have a look at the August 2024 Release Overview video for a summary of the features added in the 2024.8.0 release:
+Titta på videon Augustiversionen 2024 med en sammanfattning av funktioner som lagts till i version 2024.8.0:
 
->[!VIDEO](https://video.tv.adobe.com/v/3431707?quality=12)
-
--->
+>[!VIDEO](https://video.tv.adobe.com/v/3433381?quality=12)
 
 ## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 
