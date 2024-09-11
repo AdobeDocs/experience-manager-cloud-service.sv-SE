@@ -5,9 +5,9 @@ exl-id: ed03bff9-dfcc-4dfe-a501-a7facd24aa7d
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 4e887b753eaf09e104c68484792f00dcb08ee304
+source-git-commit: 8a10634e413ea5c66845dfffa7396a4554a5b3ca
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '705'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ Du kan köpa ett domännamn från en domännamnsregistrator, ett företag eller 
 
 ## Anpassade domännamn och ta med egna CDN:er {#byo-cdn}
 
-AEM as a Cloud Service har ett inbyggt nätverk för innehållsleverans (CDN), men du kan även använda ditt eget CDN för att använda det med AEM. Anpassade domäner kan installeras antingen i det AEM CDN eller i ett CDN som du hanterar.
+AEM as a Cloud Service har en inbyggd CDN-tjänst (Content Delivery Network) som även gör att du kan använda ditt eget CDN tillsammans med AEM. Anpassade domäner kan installeras antingen i det AEM CDN eller i ett CDN som du hanterar.
 
 * Cloud Manager hanterar anpassade domännamn och certifikat som installeras i det AEM hanterade CDN.
 * Anpassade domännamn och certifikat som installeras i ett BYO CDN hanteras direkt i det CDN:et.
@@ -52,13 +52,12 @@ I en miljö kan du ha båda domänerna installerade i det AEM hanterade CDN och 
 Om du vill lägga till ett anpassat domännamn måste DNS-tjänsten och Cloud Manager interagera. På grund av det här arbetsflödet krävs flera steg för att installera, konfigurera och verifiera anpassade domännamn. I följande tabell visas en översikt över de steg som krävs, inklusive länkar till dokumentationsresurser för att slutföra de stegen.
 
 | Steg | Beskrivning | Dokumentation |
-|---|---|---|
+| --- | --- | --- |
 | 1 | Lägg till SSL-certifikat i Cloud Manager | [Lägg till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md) |
 | 2 | Lägg till anpassad domän i Cloud Manager | [Lägg till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) |
-| 3 | Lägg till TXT-post för att verifiera domän | [Lägg till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md) |
+| 3 | Konfigurera DNS-inställningar genom att lägga till DNS CNAME- eller APEX-poster som pekar på AEM as a Cloud Service | [Lägg till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) |
 | 4 | Granska domänverifieringsstatus | [Kontrollera domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) |
-| 5 | Konfigurera DNS-inställningar genom att lägga till DNS CNAME- eller APEX-poster som pekar på AEM as a Cloud Service | [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md) |
-| 6 | Kontrollera DNS-poststatus | [Kontrollera DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md) |
+| 5 | Kontrollera DNS-poststatus | [Kontrollera DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md) |
 
 >[!TIP]
 >

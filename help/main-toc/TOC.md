@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 983928c46ed5c4999dcae12c75930a9973d51f75
+source-git-commit: 1b8640e4ac60e242abc0462bed3335a90e8c49f7
 workflow-type: tm+mt
-source-wordcount: '5600'
+source-wordcount: '5593'
 ht-degree: 3%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 3%
          + [Versionsinformation för 2021.10.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-10-0.md)
          + [Versionsinformation för 2021.9.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-9-0.md)
          + [Versionsinformation för 2021.8.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-8-0.md)
-         + [Release Notes for 2021.7.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-7-0.md)
+         + [Versionsinformation för 2021.7.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-7-0.md)
          + [Versionsinformation för 2021.6.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-6-0.md)
          + [Versionsinformation för 2021.5.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-5-0.md)
          + [Versionsinformation för 2021.4.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-4-0.md)
@@ -499,11 +499,11 @@ ht-degree: 3%
       + [Digital Rights Management för tillgångar](/help/assets/drm.md)
       + [Vattenstämpelresurser](/help/assets/watermark-assets.md)
       + [Bearbeta resurser med  [!DNL Creative Cloud] API:er](/help/assets/cc-api-integration.md)
-      + [Color tags for images](/help/assets/color-tag-images.md)
+      + [Färgtaggar för bilder](/help/assets/color-tag-images.md)
       + [Manage PDF documents](/help/assets/manage-pdf-documents.md)
    + [!DNL Assets]{#admin}
       + [Detect duplicate assets](/help/assets/detect-duplicate-assets.md)
-      + [Developer docs and APIs references](/help/assets/developer-reference-material-apis.md)
+      + [Dokumentreferenser för utvecklare och API:er](/help/assets/developer-reference-material-apis.md)
       + [Mappmetadatamatchschema](/help/assets/folder-metadata-schema.md)
       + [Arbeta med bild- och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md)
       + [Konfigurera transkription för ljud- och videomaterial](/help/assets/configure-transcription.md)
@@ -608,7 +608,7 @@ ht-degree: 3%
       + [Mina Workspace](/help/assets/my-workspace-assets-view.md)
       + [Filtyper och användningsområden som stöds](/help/assets/supported-file-formats-assets-view.md)
       + [Visa resurser](/help/assets/navigate-assets-view.md)
-      + [Upload and add assets](/help/assets/add-delete-assets-view.md)
+      + [Överför och lägg till resurser](/help/assets/add-delete-assets-view.md)
       + [Massimportera resurser](/help/assets/bulk-import-assets-view.md)
       + [Söka efter och identifiera resurser](/help/assets/search-assets-view.md)
       + [Resurshanteringsaktiviteter](/help/assets/manage-organize-assets-view.md)
@@ -620,13 +620,13 @@ ht-degree: 3%
       + [Hantera samlingar](/help/assets/manage-collections-assets-view.md)
       + [Bevaka resurser, mappar och samlingar](/help/assets/manage-notifications-assets-view.md)
       + [Hantera rapporter](/help/assets/manage-reports-assets-view.md)
-      + [Manage tags](/help/assets/tagging-management-assets-view.md)
+      + [Hantera taggar](/help/assets/tagging-management-assets-view.md)
       + [Content Credentials](/help/assets/content-credentials.md)
       + [Publish Assets to AEM and Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 
    + {#content-hub}
-      + [Overview](/help/assets/product-overview.md)
+      + [Ökning](/help/assets/product-overview.md)
       + [Distribuera Content Hub](/help/assets/deploy-content-hub.md)
       + [Konfigurera Content Hub användargränssnitt](/help/assets/configure-content-hub-ui-options.md)
       + [Överföra eller importera varumärkesgodkända mediefiler till Content Hub](/help/assets/upload-brand-approved-assets.md)
@@ -1121,9 +1121,7 @@ ht-degree: 3%
       + Domäninställningar {#custom-domain-names}
          + [Introduktion](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
          + [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
-         + [Lägga till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md)
          + [Kontrollerar status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md)
-         + [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md)
          + [Kontrollerar DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md)
          + [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md)
       + SSL-certifikat {#manage-ssl-certificates}
@@ -1169,14 +1167,14 @@ ht-degree: 3%
          + [Använda bibliotek på klientsidan](/help/implementing/developing/introduction/clientlibs.md)
          + [Sidskillnader](/help/implementing/developing/introduction/page-diff.md)
          + [Begränsningar för redigerare](/help/implementing/developing/introduction/editor-limitations.md)
-         + [Naming Conventions](/help/implementing/developing/introduction/naming-conventions.md)
-         + [Responsive Design](/help/implementing/developing/introduction/responsive-design.md)
+         + [Namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md)
+         + [Responsiv design](/help/implementing/developing/introduction/responsive-design.md)
          + {#components-templates}
             + [Components Overview](/help/implementing/developing/components/overview.md)
             + [Mallar](/help/implementing/developing/components/templates.md)
             + [](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
             + [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html)
-            + [JSON-exporterare för innehållstjänster](/help/implementing/developing/components/json-exporter.md)
+            + [JSON Exporter for Content Services](/help/implementing/developing/components/json-exporter.md)
             + [Aktivera JSON-export för en komponent](/help/implementing/developing/components/enabling-json-exporter.md)
             + [Bildredigeraren](/help/implementing/developing/components/image-editor.md)
             + [Dekoration-taggar](/help/implementing/developing/components/decoration-tag.md)
@@ -1277,7 +1275,7 @@ ht-degree: 3%
       + [Utöka gruppredigeraren](/help/implementing/developing/extending/bulk-editor.md)
       + [Utöka MSM](/help/implementing/developing/extending/msm.md)
    + Distribuera till AEM as a Cloud Service {#deploying}
-      + [Deploying to AEM as a Cloud Service](/help/implementing/deploying/overview.md)
+      + [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md)
       + [Uppdateringar av AEM](/help/implementing/deploying/aem-version-updates.md)
       + [Konfigurera OSGi för AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md)
       + [Resursmappning](/help/implementing/deploying/resource-mapping.md)

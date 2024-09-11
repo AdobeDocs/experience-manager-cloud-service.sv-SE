@@ -5,9 +5,9 @@ exl-id: ecd8c1ca-873f-4e73-ad73-b5f7561eb109
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
+source-git-commit: dd696580758e7ab9a5427d47fda4275f9ad7997f
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
@@ -68,11 +68,11 @@ Cache Hit Ratio = Cache Hits / (Hits + Misses + Passes + Other)
 
 * **Träff** - Data begärs från cacheminnet och hittas.
 * **Fröken** - Data begärs från cacheminnet, men kan inte hittas.
-* **Steg** - Data begärs från cacheminnet och är inställda på att inte cachelagra dessa data i något fall.
+* **Steg** - Data begärs från cacheminnet och är inställt på att inte cachelagra dessa data i något fall.
 * **Annat** - Alla dataförfrågningar från cachen som inte matchar något annat fall.
 
 Cachelagringsstatistik uppdateras var 24:e timme.
 
 >[!TIP]
 >
->Mer information om hur Cloud Manager och CDN interagerar med Dispatcher finns i dokumentet [Caching in AEM as a Cloud Service](/help/implementing/dispatcher/caching.md).
+>Mer information om hur Cloud Manager och CDN interagerar med Dispatcher finns i [Cachelagring i AEM as a Cloud Service](/help/implementing/dispatcher/caching.md).

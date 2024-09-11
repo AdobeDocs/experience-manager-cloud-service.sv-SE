@@ -1,31 +1,31 @@
 ---
 title: Kontrollerar domännamnsstatus
-description: Lär dig hur du avgör om ditt anpassade domännamn har verifierats av Cloud Manager.
+description: Lär dig hur du verifierar att Cloud Manager har bekräftat ditt anpassade domännamn.
 exl-id: 8fdc8dda-7dbf-46b6-9fc6-d304ed377197
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
+source-git-commit: 3ff7b76f7892269f6ca001ff2c079bc693c06d93
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '822'
 ht-degree: 0%
 
 ---
 
 
-# Kontrollerar domännamnsstatus {#check-status}
+# Kontrollera domännamnsstatus {#check-status}
 
-Lär dig hur du avgör om ditt anpassade domännamn har verifierats av Cloud Manager.
+Lär dig hur du verifierar att Cloud Manager har bekräftat ditt anpassade domännamn.
 
 ## Krav {#requirements}
 
-Du måste uppfylla dessa krav innan du kontrollerar din domännamnsstatus i Cloud Manager.
+Uppfyll dessa krav innan du kontrollerar domännamnsstatusen i Cloud Manager.
 
-* Du måste först lägga till en TXT-post för din anpassade domän enligt beskrivningen i dokumentet [Lägga till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md).
+* Lägg först till en TXT-post för din anpassade domän enligt beskrivningen i dokumentet [Lägg till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).
 
-## Kontrollera status för ditt anpassade domännamn {#how-to}
+## Kontrollera statusen för ditt anpassade domännamn {#how-to}
 
-Du kan fastställa status för ditt anpassade domännamn i Cloud Manager.
+Du kan avgöra statusen för ditt anpassade domännamn i Cloud Manager.
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
@@ -45,32 +45,17 @@ Statusinformationen visas. Din anpassade domän är klar att användas när stat
 
 ## Verifieringsstatus {#statuses}
 
-Cloud Manager verifierar domänägarskap via [TXT-värdet](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md) och visar ett av följande statusmeddelanden.
+Cloud Manager verifierar domänägarskap via [TXT-värdet](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) och visar ett av följande statusmeddelanden.
 
-* **Domänverifieringen misslyckades** - TXT-värdet saknas eller har identifierats med fel.
+| Status | Beskrivning |
+| --- | --- |
+| Domänverifieringen misslyckades | TXT-värdet saknas eller har identifierats med fel.<br> Följ instruktionerna i statusmeddelandet för att lösa problemet. När du är klar måste du markera ikonen **Verifiera igen** bredvid statusen. |
+| Domänverifiering pågår | Verifiering pågår.<br>Den här statusen visas vanligtvis när du har valt ikonen **Verifiera igen** bredvid statusen. DNS-verifiering kan ta några timmar att behandla på grund av fördröjd DNS-spridning. |
+| Verifierad - distributionen misslyckades | TXT-verifieringen lyckades, men CDN-distributionen misslyckades.<br>Kontakta din Adobe-representant i sådana fall. |
+| Domänen har verifierats och distribuerats | Den här statusen anger att ditt anpassade domännamn är klart att användas.<br>Nu är ditt anpassade domännamn klart för testning och ska peka på Cloud Manager domännamn. Mer information finns i [Lägg till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md). |
+| Tar bort | Borttagningen av ett anpassat domännamn pågår. |
+| Borttagningen misslyckades | Borttagningen av ett anpassat domännamn misslyckades och måste göras om.<br>Mer information finns i [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md). |
 
-   * Följ instruktionerna i statusmeddelandet för att lösa problemet.
-   * När du är klar måste du markera ikonen **Verifiera igen** bredvid statusen.
-
-* **Domänverifiering pågår** - Verifiering pågår.
-
-   * Den här statusen visas vanligtvis när du har valt ikonen **Verifiera igen** bredvid statusen.
-   * DNS-verifiering kan ta några timmar att behandla på grund av fördröjd DNS-spridning.
-
-* **Verifierad, distributionen misslyckades** - TXT-verifieringen lyckades, men CDN-distributionen misslyckades.
-
-   * Kontakta i så fall din Adobe-representant.
-
-* **Domänen har verifierats och distribuerats** - Den här statusen anger att ditt anpassade domännamn är klart att användas.
-
-   * Nu är ditt anpassade domännamn klart för testning och ska peka på Cloud Manager domännamn.
-   * Mer information finns i [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md).
-
-* **Tar bort** - Ett anpassat domännamn tas bort.
-
-* **Borttagningen misslyckades** - Det gick inte att ta bort det anpassade domännamnet. Ett nytt försök måste göras.
-
-   * Mer information finns i [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md).
 
 ## Domännamnsfel {#domain-error}
 
@@ -82,9 +67,9 @@ Det här felet kan inträffa under domänvalidering av TXT-posten även efter at
 
 #### Felorsak {#cause}
 
-Låser snabbt en domän till det ursprungliga konto som registrerade den och inget annat konto kan registrera en underdomän utan att fråga om tillstånd. Med Fastly kan du dessutom bara tilldela en apex-domän och associerade underdomäner till en fast tjänst och ett konto. Om du har ett befintligt Fast-konto som länkar samma index och underdomäner som används för dina AEM Cloud Service-domäner visas det här felet.
+Låser snabbt en domän till det konto som först registrerar den, och andra konton måste begära behörighet att registrera en underdomän. Med Fastly kan du dessutom bara tilldela en apex-domän och associerade underdomäner till en fast tjänst och ett konto. Om du har ett befintligt Fast-konto som länkar samma index och underdomäner som används för dina AEM Cloud Service-domäner visas det här felet.
 
-#### Felmatchning {#resolution}
+#### Fellösning {#resolution}
 
 Felet är åtgärdat på följande sätt:
 
@@ -92,7 +77,7 @@ Felet är åtgärdat på följande sätt:
 
 * Använd det här alternativet om du vill länka apex-domänen och alla underdomäner till AEM as a Cloud Service Fast-kontot. Mer information finns i [Arbeta med domäner i Snabbt-dokumentationen](https://docs.fastly.com/en/guides/working-with-domains).
 
-* Om din huvuddomän har flera underdomäner för webbplatser från AEM as a Cloud Service och andra företag som du vill länka till olika Snabbt-konton kan du försöka installera domänen i Cloud Manager. Om domäninstallationen misslyckas skapar du en kundsupportbiljett med Fast så att Adobe kan följa med Fastly å dina vägnar.
+* Om din API-domän har flera underdomäner för AEM as a Cloud Service och andra webbplatser än AEM som behöver länka till olika Snabbt-konton försöker du installera domänen i Cloud Manager. Den här processen hjälper till att hantera underdomänsanslutningar mellan olika snabbkonton. Om domäninstallationen misslyckas skapar du en kundsupportbiljett med Fastly så att Adobe kan följa upp med Fastly å dina vägnar.
 
 >[!TIP]
 >
@@ -104,12 +89,12 @@ Felet är åtgärdat på följande sätt:
 
 ## Befintliga CDN-konfigurationer för anpassade domännamn {#pre-existing-cdn}
 
-Om du har en befintlig CDN-konfiguration för dina anpassade domännamn finns det ett informativt meddelande på sidorna **Anpassade domännamn** och **Miljö** som uppmanar dig att lägga till dessa konfigurationer via användargränssnittet så att de är synliga och konfigurerbara i Cloud Manager.
+Om du redan har en CDN-konfiguration för dina anpassade domännamn visas ett informativt meddelande på sidorna **Anpassade domännamn** och **Miljö**. Det uppmuntrar dig att lägga till dessa konfigurationer via användargränssnittet så att de kan hanteras och visas inom Cloud Manager.
 
-Meddelandet försvinner när alla befintliga miljökonfigurationer migreras med användargränssnittet. Det kan ta 1-2 arbetsdagar innan meddelandet försvinner.
+Meddelandet försvinner när alla befintliga miljökonfigurationer har migrerats med användargränssnittet. Det kan ta 1-2 arbetsdagar innan meddelandet försvinner.
 
-Mer information finns i [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).
+Mer information finns i [Lägg till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).
 
 ## Nästa steg {#next-steps}
 
-När du har verifierat din domänstatus i Cloud Manager måste du konfigurera DNS-inställningar genom att lägga till DNS CNAME- eller APEX-poster som pekar på AEM as a Cloud Service. Fortsätt till dokumentet [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md) om du vill fortsätta konfigurera ditt anpassade domännamn.
+När du har verifierat din domänstatus i Cloud Manager konfigurerar du DNS-inställningar genom att lägga till DNS-, CNAME- eller APEX-poster som pekar på AEM as a Cloud Service. Fortsätt till dokumentet [Lägg till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) om du vill fortsätta konfigurera ditt anpassade domännamn.
