@@ -4,7 +4,7 @@ description: Lär dig hur du använder Best Practices Analyzer för att förstå
 exl-id: e8498e17-f55a-4600-87d7-60584d947897
 feature: Migration
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 9998fb4bc4f9f4c0f4adf67fd1b378ae662c8f70
 workflow-type: tm+mt
 source-wordcount: '2686'
 ht-degree: 31%
@@ -35,7 +35,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter av att köra Best 
 * BPA kan köras i alla miljöer, men bör köras i en *Stage* -miljö.
 
   >[!NOTE]
-  >För att undvika att affärskritiska instanser påverkas rekommenderar vi att du kör BPA i en *författarmiljö* som är så nära *Production* -miljön som möjligt när det gäller anpassningar, konfigurationer, innehåll och användarprogram. Alternativt kan det köras på en klon av *författarmiljön* i produktion.
+  >För att undvika att affärskritiska instanser påverkas rekommenderar vi att du kör BPA i en *Stage* -miljö som är så nära *Production* -miljön som möjligt när det gäller anpassningar, konfigurationer, innehåll och användarprogram. Alternativt kan det köras på en klon av *författarmiljön* i produktion.
 
 * Det kan ta lång tid att generera BPA-rapportinnehåll, från flera minuter till några timmar. Hur lång tid som krävs beror i hög grad på storlek och typ av AEM-databasinnehåll, AEM-version och andra faktorer.
 
