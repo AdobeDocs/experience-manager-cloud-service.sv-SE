@@ -11,7 +11,7 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: cdca41ad-a2cd-4f68-aaa4-5eec33c30f0b
-source-git-commit: d16a2dbe5cf2ab6d42af661b6ab2b9845612304f
+source-git-commit: 74172fe7fcf9a22837645a154f2e85fd6fa6b40e
 workflow-type: tm+mt
 source-wordcount: '2591'
 ht-degree: 0%
@@ -24,9 +24,9 @@ ht-degree: 0%
 
 Välkommen till Dynamic Media Journey: The Basics, Part II, där du kan förvänta dig följande:
 
-* Anatomi av en Dynamic Media-URL och hur Dynamic Media levererar innehåll
-* Grundläggande om att skapa bildförinställningar för att återge resurser
-* Bilduppsättningar, snurpuppsättningar och blandade medieuppsättningar
+* Analys av en Dynamic Media-URL och hur Dynamic Media levererar innehåll.
+* Grundläggande om att skapa bildförinställningar för att återge resurser.
+* Bilduppsättningar, snurruppsättningar och blandade medieuppsättningar.
 
 Se även [Dynamic Media Journey; The Basics, Part I](/help/assets/dynamic-media/dm-journey-part1.md).
 
