@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 16379d9cb7cdf876502205c12a233a95b410a67a
+source-git-commit: 9ffec422ec4b5a45962f07142c49a466e8892754
 workflow-type: tm+mt
-source-wordcount: '5593'
+source-wordcount: '5602'
 ht-degree: 3%
 
 ---
@@ -70,7 +70,7 @@ ht-degree: 3%
          + [Versionsinformation för 2021.3.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-3-0.md)
          + [Versionsinformation för 2021.2.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-2-0.md)
          + [Versionsinformation för 2021.1.0](/help/release-notes/release-notes-cloud/2021/release-notes-2021-1-0.md)
-      + {#2020}
+      + 2020 {#2020}
          + [Versionsinformation för 2020.12.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-12-0.md)
          + [Versionsinformation för 2020.11.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-11-0.md)
          + [Versionsinformation för 2020.10.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-10-0.md)
@@ -170,6 +170,7 @@ ht-degree: 3%
       + 2024 {#2024}
          + [Versionsinformation för 2024.01.0](/help/journey-migration/release-notes/release-notes-migration-tools-2024-01-0.md)
          + [Versionsinformation för 2024.05.0](/help/journey-migration/release-notes/release-notes-migration-tools-2024-05-0.md)
+         + [Versionsinformation för 2024.07.0](/help/journey-migration/release-notes/release-notes-migration-tools-2024-07-0.md)
       + 2023 {#2023}
          + [Versionsinformation för 2023.10.0](/help/journey-migration/release-notes/release-notes-migration-tools-2023-10-0.md)
          + [Versionsinformation för 2023.9.0](/help/journey-migration/release-notes/release-notes-migration-tools-2023-09-0.md)
@@ -493,17 +494,17 @@ ht-degree: 3%
       + [Metadata-schema](/help/assets/metadata-schemas.md)
       + [Hantera videomaterial](/help/assets/manage-video-assets.md)
       + [Återanvända resurser med MSM](/help/assets/reuse-assets-using-msm.md)
-      + [Download assets](/help/assets/download-assets-from-aem.md)
+      + [Hämta resurser](/help/assets/download-assets-from-aem.md)
       + [Checka in och checka ut resurser att redigera](/help/assets/check-out-and-submit-assets.md)
       + [Skapa och dela privata mappar](/help/assets/private-folder.md)
       + [Digital Rights Management för tillgångar](/help/assets/drm.md)
       + [Vattenstämpelresurser](/help/assets/watermark-assets.md)
-      + [Bearbeta resurser med  [!DNL Creative Cloud] API:er](/help/assets/cc-api-integration.md)
+      + [ [!DNL Creative Cloud] ](/help/assets/cc-api-integration.md)
       + [Color tags for images](/help/assets/color-tag-images.md)
       + [Manage PDF documents](/help/assets/manage-pdf-documents.md)
    + [!DNL Assets]{#admin}
       + [Detect duplicate assets](/help/assets/detect-duplicate-assets.md)
-      + [Developer docs and APIs references](/help/assets/developer-reference-material-apis.md)
+      + [Dokumentreferenser för utvecklare och API:er](/help/assets/developer-reference-material-apis.md)
       + [Mappmetadatamatchschema](/help/assets/folder-metadata-schema.md)
       + [Arbeta med bild- och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md)
       + [Konfigurera transkription för ljud- och videomaterial](/help/assets/configure-transcription.md)
@@ -619,14 +620,14 @@ ht-degree: 3%
       + [Dela resurser](/help/assets/share-links-for-assets-view.md)
       + [Hantera samlingar](/help/assets/manage-collections-assets-view.md)
       + [Bevaka resurser, mappar och samlingar](/help/assets/manage-notifications-assets-view.md)
-      + [Hantera rapporter](/help/assets/manage-reports-assets-view.md)
+      + [Manage reports](/help/assets/manage-reports-assets-view.md)
       + [Manage tags](/help/assets/tagging-management-assets-view.md)
       + [Content Credentials](/help/assets/content-credentials.md)
       + [Publish Assets to AEM and Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 
    + {#content-hub}
-      + [Overview](/help/assets/product-overview.md)
+      + [Ökning](/help/assets/product-overview.md)
       + [Distribuera Content Hub](/help/assets/deploy-content-hub.md)
       + [Konfigurera Content Hub användargränssnitt](/help/assets/configure-content-hub-ui-options.md)
       + [Överföra eller importera varumärkesgodkända mediefiler till Content Hub](/help/assets/upload-brand-approved-assets.md)
@@ -1047,13 +1048,13 @@ ht-degree: 3%
          + [Innehållsmodellering för Headless med AEM - en introduktion](/help/journey-headless/architect/introduction.md)
          + [Lär dig grunderna i innehållsmodellering för Headless med AEM](/help/journey-headless/architect/basics.md)
          + [Läs om hur du skapar modeller för innehållsfragment i AEM](/help/journey-headless/architect/model-structure.md)
-      + Headless Translation Journey {#translation}
+      + {#translation}
          + [Understand headless translation in AEM](/help/journey-headless/translation/overview.md)
          + [Get started with AEM headless translation](/help/journey-headless/translation/getting-started.md)
          + [Learn about headless content and how to translate in AEM](/help/journey-headless/translation/learn-about.md)
          + [Configure translation connector](/help/journey-headless/translation/configure-connector.md)
          + [Configure translation rules](/help/journey-headless/translation/translation-rules.md)
-         + [Translate content](/help/journey-headless/translation/translate-content.md)
+         + [Översätta innehåll](/help/journey-headless/translation/translate-content.md)
          + [Publish översatt innehåll](/help/journey-headless/translation/publish-content.md)
       + Headless Content Author Journey {#author}
          + [AEM Headless Content Author Journey - översikt](/help/journey-headless/author/overview.md)
@@ -1065,6 +1066,8 @@ ht-degree: 3%
    + [Generera variationer](/help/generative-ai/generate-variations.md)
 + Implementera {#implementing}
    + [Implementera program för AEM as a Cloud Service](/help/implementing/home.md)
+
+
    + Använda Cloud Manager {#using-cloud-manager}
       + [Navigering](/help/implementing/cloud-manager/navigation.md)
       + Program {#programs}
@@ -1073,7 +1076,7 @@ ht-degree: 3%
          + [Skapa produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md)
          + [Sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md)
          + [Skapa sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-sandbox-programs.md)
-         + [Redigeringsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md)
+         + [Redigera program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md)
          + [Vilolägen](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/hibernating-environments.md)
       + Skapar ett AEM programprojekt {#create-application-project}
          + [Guiden Skapa projekt](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md)
@@ -1083,12 +1086,12 @@ ht-degree: 3%
       + Hantera kod {#managing-code}
          + [Versionshantering för Maven Project](/help/implementing/cloud-manager/managing-code/project-version-handling.md)
          + [Hantera databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/managing-repositories.md)
-         + [Lägga till Adobe-databaser](/help/implementing/cloud-manager/managing-code/adobe-repositories.md)
-         + [Lägga till privata databaser](/help/implementing/cloud-manager/managing-code/private-repositories.md)
-         + [Åtkomst till databaser](/help/implementing/cloud-manager/managing-code/accessing-repos.md)
+         + [Lägg till Adobe-databaser](/help/implementing/cloud-manager/managing-code/adobe-repositories.md)
+         + [Lägg till privata databaser](/help/implementing/cloud-manager/managing-code/private-repositories.md)
+         + [Åtkomstdatabaser](/help/implementing/cloud-manager/managing-code/accessing-repos.md)
          + [Stöd för Git-undermodul](/help/implementing/cloud-manager/managing-code/git-submodules.md)
-         + [Använda Git med Cloud Manager](/help/implementing/cloud-manager/managing-code/integrating-with-git.md)
-         + [Använda flera databaser](/help/implementing/cloud-manager/managing-code/working-with-multiple-source-git-repositories.md)
+         + [Använd Git med Cloud Manager](/help/implementing/cloud-manager/managing-code/integrating-with-git.md)
+         + [Använd flera databaser](/help/implementing/cloud-manager/managing-code/working-with-multiple-source-git-repositories.md)
          + [Installation av Enterprise Development Team](/help/implementing/cloud-manager/managing-code/enterprise-team-dev-setup.md)
          + [GitHub Check Configuration](/help/implementing/cloud-manager/managing-code/github-check-config.md)
          + [GitHub-kontrollanteckningar](/help/implementing/cloud-manager/managing-code/github-annotations.md)
@@ -1109,7 +1112,7 @@ ht-degree: 3%
             + [Java Functional Testing](/help/implementing/cloud-manager/java-functional-testing.md)
             + [UI-testning](/help/implementing/cloud-manager/ui-testing.md)
          + [Kontrollpanelen för Experience Audit](/help/implementing/cloud-manager/experience-audit-dashboard.md)
-      + [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md)
+      + [Åtkomst och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md)
       + [Anpassade behörigheter](/help/implementing/cloud-manager/custom-permissions.md)
       + [SLA Reporting](/help/implementing/cloud-manager/sla-reporting.md)
       + [New Relic One](/help/implementing/cloud-manager/user-access-new-relic.md)
@@ -1120,25 +1123,28 @@ ht-degree: 3%
          + [Edge Delivery Support i Cloud Manager](/help/implementing/cloud-manager/edge-delivery-services.md)
       + Domäninställningar {#custom-domain-names}
          + [Introduktion](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
-         + [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
-         + [Kontrollerar status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md)
-         + [Kontrollerar DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md)
+         + [Lägg till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
+         + [Kontrollera status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md)
+         + [Kontrollera DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md)
          + [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md)
       + SSL-certifikat {#manage-ssl-certificates}
          + [Introduktion](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
-         + [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md)
+         + [Lägg till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md)
+         + [Felsöka SSL-certifikatfel](/help/implementing/cloud-manager/managing-ssl-certifications/troubleshoot-ssl-cert.md)
          + [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md)
       + CDN-konfigurationer {#cdn-configurations}
          + [Lägga till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md)
       + IP-Tillåtelselista {#ip-allow-lists}
          + [Introduktion](/help/implementing/cloud-manager/ip-allow-lists/introduction.md)
-         + [Lägga till en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md)
-         + [Använda och inte använda IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md)
+         + [Lägg till en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md)
+         + [Använd och ta bort tillämpning av IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md)
          + [Hantera IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/managing-ip-allow-lists.md)
       + [Licensieringspanel](/help/implementing/cloud-manager/license-dashboard.md)
-      + [Förstå begäranden om Cloud Service innehåll](/help/implementing/cloud-manager/content-requests.md)
+      + [Förstå förfrågningar om Cloud Service](/help/implementing/cloud-manager/content-requests.md)
       + [Kontrollpanel för CDN-prestanda](/help/implementing/cloud-manager/cdn-performance.md)
       + [Vanliga frågor om Cloud Manager](/help/implementing/cloud-manager/faqs.md)
+
+
    + Utveckla för AEM as a Cloud Service {#developing}
       + [AEM projektstruktur](/help/implementing/developing/introduction/aem-project-content-package-structure.md)
       + [AEM projektdatabasstrukturpaket](/help/implementing/developing/introduction/repository-structure-package.md)
@@ -1167,14 +1173,14 @@ ht-degree: 3%
          + [Använda bibliotek på klientsidan](/help/implementing/developing/introduction/clientlibs.md)
          + [Sidskillnader](/help/implementing/developing/introduction/page-diff.md)
          + [Begränsningar för redigerare](/help/implementing/developing/introduction/editor-limitations.md)
-         + [Namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md)
-         + [Responsiv design](/help/implementing/developing/introduction/responsive-design.md)
+         + [Naming Conventions](/help/implementing/developing/introduction/naming-conventions.md)
+         + [Responsive Design](/help/implementing/developing/introduction/responsive-design.md)
          + {#components-templates}
             + [Components Overview](/help/implementing/developing/components/overview.md)
             + [Mallar](/help/implementing/developing/components/templates.md)
             + [](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
             + [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html)
-            + [JSON Exporter for Content Services](/help/implementing/developing/components/json-exporter.md)
+            + [JSON-exporterare för innehållstjänster](/help/implementing/developing/components/json-exporter.md)
             + [Aktivera JSON-export för en komponent](/help/implementing/developing/components/enabling-json-exporter.md)
             + [Bildredigeraren](/help/implementing/developing/components/image-editor.md)
             + [Dekoration-taggar](/help/implementing/developing/components/decoration-tag.md)
@@ -1275,9 +1281,9 @@ ht-degree: 3%
       + [Utöka gruppredigeraren](/help/implementing/developing/extending/bulk-editor.md)
       + [Utöka MSM](/help/implementing/developing/extending/msm.md)
    + Distribuera till AEM as a Cloud Service {#deploying}
-      + [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md)
+      + [Deploying to AEM as a Cloud Service](/help/implementing/deploying/overview.md)
       + [Uppdateringar av AEM](/help/implementing/deploying/aem-version-updates.md)
-      + [Configuring OSGi for AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md)
+      + [Konfigurera OSGi för AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md)
       + [Resursmappning](/help/implementing/deploying/resource-mapping.md)
    + Författarnivå {#author-tier}
       + [Åtkomst till författarnivån](/help/implementing/author-tier/accessing-the-author-tier.md)
