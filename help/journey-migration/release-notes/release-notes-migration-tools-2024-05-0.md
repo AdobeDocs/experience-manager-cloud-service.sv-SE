@@ -3,9 +3,10 @@ title: Versionsinformation om migreringsverktyg i AEM as a Cloud Service version
 description: Versionsinformation om migreringsverktyg i AEM as a Cloud Service version 2024.05.0
 feature: Release Information
 role: Admin
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+exl-id: f50a74fa-ad7d-4837-b0a1-9945c32af02f
+source-git-commit: 3b2ed44b438fe8587a9b9603ddfacc41111fb903
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '208'
 ht-degree: 2%
 
 ---
@@ -18,11 +19,16 @@ På den här sidan finns versionsinformation för migreringsverktyg i AEM as a C
 
 ### Releasedatum {#release-date-bpa}
 
-Releasedatum för Best Practices Analyzer v2.1.48 är 9 maj 2024.
+Releasedatum för Best Practices Analyzer v2.1.50 är maj 2024.
 
 ### Nyheter {#what-is-new-bpa}
 
 * Best Practices Analyzer (BPA) stöder nu automatisk överföring av BPA-genererade rapporter direkt till Cloud Acceleration Manager (CAM). Användarna behöver inte längre hämta rapporten manuellt och överföra den till CAM. Mer information finns i [Använda analysverktyg för bästa praxis](/help/journey-migration/best-practices-analyzer/using-best-practices-analyzer.md)
+
+### Felkorrigeringar {#bug-fixes-bpa}
+
+* Best Practices Analyzer identifierar nu alla noder som är större än 16 MB
+* Race-tillstånd som orsakar sporadiska förekomster av NCC-fynd har åtgärdats.
 
 ## Cloud Acceleration Manager {#cam-release}
 
