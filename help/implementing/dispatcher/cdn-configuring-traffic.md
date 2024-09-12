@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler 
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: 85cef99dc7a8d762d12fd6e1c9bc2aeb3f8c1312
+source-git-commit: 35d3dcca6b08e42c0d2a97116d0628ac9bbb6a7c
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1350'
 ht-degree: 0%
 
 ---
@@ -153,6 +153,21 @@ I tabellen nedan beskrivs de tillgängliga åtgärderna.
 |         | queryParamMatch | Tar bort alla frågeparametrar som matchar ett angivet reguljärt uttryck. |
 | **omforma** | op:replace, (reqProperty eller reqHeader eller queryParam eller reqCookie), match, replace | Ersätter en del av parametern request (endast egenskapen path stöds), eller request header, query parameter eller cookie med ett nytt värde. |
 |              | op:tolower, (reqProperty eller reqHeader eller queryParam eller reqCookie) | Ställer in parametern request (endast egenskapen path stöds), huvudet request, parametern query eller cookie till dess gemener. |
+
+Ersätt funktionsmakron har stöd för hämtningsgrupper, vilket visas nedan:
+
+```
+      - name: replace-jpg-with-jpeg
+        when:
+          reqProperty: path
+          like: /mypath          
+        actions:
+          - type: transform
+            reqProperty: path
+            op: replace
+            match: (.*)(\.jpg)$
+            replacement: "\1\.jpeg"          
+```
 
 Åtgärder kan knytas ihop. Till exempel:
 
@@ -384,3 +399,31 @@ data:
 |-----------|--------------------------|-------------|
 | **omdirigering** | plats | Värde för rubriken Plats. |
 |     | status (valfritt, standardvärdet är 301) | HTTP-status som ska användas i omdirigeringsmeddelandet, 301 som standard, är de tillåtna värdena: 301, 302, 303, 307, 308. |
+
+Platserna för en omdirigering kan antingen vara stränglitteraler (t.ex. https://www.example.com/page) eller resultatet av en egenskap (t.ex. path) som kan omformas, med följande syntax:
+
+```
+experimental_redirects:
+  rules:
+    - name: country-code-redirect
+      when: { reqProperty: path, like: "/" }
+      action:
+        type: redirect
+        location:
+          reqProperty: clientCountry
+          transform:
+            - op: replace
+              match: '^(/.*)$'
+              replacement: 'https://www.example.com/\1/home'
+            - op: tolower
+    - name: www-redirect
+      when: { reqProperty: domain, equals: "example.com" }
+      action:
+        type: redirect
+        location:
+          reqProperty: path
+          transform:
+            - op: replace
+              match: '^(/.*)$'
+              replacement: 'https://www.example.com/\1'
+```
