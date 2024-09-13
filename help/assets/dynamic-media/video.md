@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Video Profiles,Best Practices
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: e3667a6172447072d7c528213826fd0171e9acc2
+source-git-commit: 7c195e5640f828d2c59dbabd8f29127692788576
 workflow-type: tm+mt
-source-wordcount: '9284'
+source-wordcount: '9280'
 ht-degree: 1%
 
 ---
@@ -526,7 +526,7 @@ Du kan aktivera stöd i Dynamic Media för:
 * Flera bildtexter och ljudspår
 * AI-genererade bildtexter (tidig åtkomst)
 
-via ett Adobe kundsupportärende som du skapar och skickar in.
+Genom att skapa och skicka in ett Adobe kundsupportärende.
 
 Om du aktiverar någon av de tre funktionerna ovan aktiveras samtliga. Så om du bara vill aktivera DASH aktiverar du i själva verket alla tre funktionerna som listas ovan.
 
