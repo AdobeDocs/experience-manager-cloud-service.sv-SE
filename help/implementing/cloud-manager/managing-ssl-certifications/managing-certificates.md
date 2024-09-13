@@ -5,7 +5,7 @@ exl-id: ad6170f4-93bd-4bac-9c54-63c35a0d4f06
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 4a369104ea8394989149541ee1a7b956383c8f12
+source-git-commit: d2f05915c0bf0af073db7f070b83f13aeae55252
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 0%
@@ -25,15 +25,15 @@ Statusen för dina SSL-certifikat kan förstås direkt på sidan **SSL-certifika
 | --- | --- |
 | Grön | Certifikatet är giltigt i minst 14 dagar från dagens datum. |
 | Orange | Certifikatet upphör att gälla om mindre än 14 dagar.<br> ・ Kontrollera att du har en plan för att förnya certifikatet och ersätta det med Cloud Manager användargränssnitt för att undvika eventuell webbplatsåtkomst och eventuella avbrott.<br> ・ Cloud Manager skickar regelbundna meddelanden i användargränssnittet för att informera dig om att certifikatet snart upphör att gälla. |
-| Röd | SSL-certifikatet har gått ut.<br>Se [Uppdatera ett förfallet, kundhanterat SSL-certifikat](#update-ssl-certificate) eller [Ta bort ett SSL-certifikat](#deleting-an-ssl-certificate). |
+| Röd | SSL-certifikatet har gått ut.<br>Se [Uppdatera ett SSL-certifikat som har gått ut och som har hanterats av en kund](#update-ssl-certificate) eller [Ta bort ett SSL-certifikat](#deleting-an-ssl-certificate). |
 
-## Uppdatera ett förfallet, kundhanterat SSL-certifikat {#update-ssl-certificate}
+## Uppdatera ett kundhanterat SSL-certifikat som gått ut {#update-ssl-certificate}
 
 När ett kundhanterat certifikat upphör att gälla fungerar inte längre domäner som används med det utgångna certifikatet. Genom att uppdatera dina certifikat kan du vara säker på att din domän fortsätter att fungera som du vill.
 
 En användare måste vara medlem i rollen **Affärsägare** eller **Distributionshanterare** för att den här aktiviteten ska kunna slutföras.
 
-**Om du vill uppdatera ett SSL-certifikat som har upphört att gälla hanteras av kund:**
+**Så här uppdaterar du ett kundhanterat SSL-certifikat som upphört att gälla:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation
 1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
@@ -41,7 +41,7 @@ En användare måste vara medlem i rollen **Affärsägare** eller **Distribution
 1. Gå till skärmen **SSL-certifikat** från skärmen **Miljö**.
 1. Klicka på ellipsknappen längst till höger på raden för det kundhanterade certifikat som du vill uppdatera och välj sedan **Visa och uppdatera**.
 
-   ![Uppdatera en utgången, kundhanterad SSL-certifiering](/help/implementing/cloud-manager/assets/ssl/ssl-cert-update.png)
+   ![Uppdatera en kundhanterad SSL-certifiering som upphört att gälla](/help/implementing/cloud-manager/assets/ssl/ssl-cert-update.png)
 
 1. Gör följande i dialogrutan **Visa och uppdatera SSL-certifikat**:
 
@@ -52,9 +52,9 @@ En användare måste vara medlem i rollen **Affärsägare** eller **Distribution
 
 1. Klicka på **Uppdatera** om du vill spara ändringarna och använda dem automatiskt.
 
-## Ersätta ett inaktuellt, kundhanterat SSL-certifikat {#replace-ssl-certificate}
+## Ersätta ett kundhanterat SSL-certifikat som gått ut {#replace-ssl-certificate}
 
-Följ de steg som beskrivs i [Uppdatera ett SSL-certifikat som har upphört att gälla](#update-ssl-certificate) om du vill ersätta ett SSL-certifikat som har upphört att gälla och som har hanterats av kund.
+Följ de steg som beskrivs i [Uppdatera ett SSL-certifikat som har upphört att gälla](#update-ssl-certificate) och ersätt ett kundhanterat SSL-certifikat som har upphört att gälla.
 
 ## Ta bort ett SSL-certifikat {#deleting-an-ssl-certificate}
 
@@ -87,4 +87,4 @@ Meddelandet försvinner när alla befintliga miljökonfigurationer har migrerats
 
 Mer information finns i [Lägg till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md).
 
-Ett liknande meddelande visas även på sidorna **IP Tillåtelselista** och **Environment** för miljöer som har befintliga CDN-konfigurationer för IP tillåtelselista eller anpassade domännamn.
+Ett liknande meddelande visas även på sidorna **IP Tillåtelselista** och **Environment** för miljöer som har befintliga CDN-konfigurationer för IP Tillåtelselista eller anpassade domännamn.
