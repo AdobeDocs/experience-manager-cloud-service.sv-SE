@@ -3,9 +3,10 @@ title: Versionsinformation för version 2024.7.0 av  [!DNL Adobe Experience Mana
 description: Versionsinformation för version 2024.7.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
 feature: Release Information
 role: Admin
-source-git-commit: 2edaca5637c735645e2b761377b9681d9b48daa1
+exl-id: 6194df9d-8c3c-4c7f-be59-099b970a565a
+source-git-commit: fc578f35214327567aaa6f5d88a637df9428f87f
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1605'
 ht-degree: 0%
 
 ---
@@ -60,13 +61,19 @@ Innehållsförfattare kan nu bläddra bland, visa och vidta åtgärder för bild
 
 **Överför resurser med resursväljaren**
 
-Resursväljaren ger nu innehållsförfattare möjlighet att överföra det slutliga materialet direkt från väljaren, antingen genom att dra eller genom att bläddra i det lokala filsystemet. På så sätt kan det slutliga materialet överföras till DAM från valfritt program.
+Resursväljaren ger nu innehållsförfattare möjlighet att överföra det slutliga materialet direkt från väljaren, antingen genom att dra eller genom att bläddra i det lokala filsystemet. Den här funktionen gör att det går att överföra det slutliga materialet till DAM från valfritt program.
+
+### Tidig åtkomst i Dynamic Media {#dm-early-access}
+
+**AI-baserade videobeskrivningar**
+
+AI-baserade bildtexter i Adobe Dynamic Media använder artificiell intelligens för att automatiskt generera bildtexter för videoinnehåll. Den här funktionen är utformad för att förbättra tillgängligheten och användarupplevelsen genom att ge korrekta bildtexter i realtid. AI analyserar videons ljudspår för att transkribera tal och skapa bildtexter som kan redigeras för precision eller anpassning. Dessa bildtexter uppfyller tillgänglighetskraven och förbättrar engagemanget för videoklipp som förlitar sig på eller föredrar textbaserat videostöd.
 
 ### Nya funktioner i vyn Assets {#assets-view-new-features}
 
 **Integrering av**
 
-Experience Manager Assets har nu stöd för  för bildformat som stöds. Detta ger information om resursens innehåll och hur den skapades, inklusive om den ändrades med hjälp av GenAI.
+Experience Manager Assets har nu stöd för  för bildformat som stöds. Denna möjlighet ger information om resursens innehåll och hur den skapades, inklusive om den ändrades med hjälp av GenAI.
 
 ![](/help/assets/assets/content-credentials.png)
 
@@ -93,7 +100,7 @@ When looking at the asset details, any image with content credentials added, suc
 
 #### Förbättrad Visual Rule Editor för Core Component Based Adaptive Forms
 
-Med hjälp av anpassade formulärförfattare kan man använda repeterbara formulärfält i de funktioner som finns i den visuella regelredigeraren för att skapa komplex affärslogik i formulären, utan att behöva anpassa sig eller få hjälp av utvecklingsteamet.
+Med hjälp av anpassade formulärförfattare kan man skapa komplex affärslogik i blanketter utan att behöva anpassa eller ge support från utvecklarna.
 
 ### Tidig åtkomst-funktioner i AEM Forms {#forms-new-early-access-features}
 
@@ -103,7 +110,7 @@ Den här versionsinformationen innehåller en lista över de innovationer som le
 
 #### Skapa adaptiva formulär med Universal Editor
 
-Använd Adobe Experience Manager [Universal Editor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction) för att skapa anpassningsbara formulär med WYSIWYG-redigering med dra-och-släpp för både headless och headful enrollment via Edge Delivery Service. Med anpassningsbara formulärförfattare kan man enkelt skapa och starta experiment med varianter av formulären på webbsidorna och avgöra vilka upplevelser som fungerar bäst för slutanvändarna.
+Använd Adobe Experience Manager [Universal Editor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction) för att skapa anpassningsbara formulär med WYSIWYG-redigering med dra-och-släpp för både headless och headful enrollment via Edge Delivery Service. Med anpassningsbara formulärförfattare kan man enkelt skapa och starta experiment med varianter av formulären på webbsidorna. Detta gör att de kan avgöra vilka upplevelser som fungerar bäst för slutanvändarna.
 
 >[!IMPORTANT]
 >
@@ -113,20 +120,21 @@ Använd Adobe Experience Manager [Universal Editor](https://experienceleague.ado
 
 ### Rensa innehåll vid CDN med en självserverbaserad API-nyckel {#purge-cdn}
 
-Att ställa in TTL med HTTP-huvudet Cache-Control är ett effektivt sätt att balansera innehållets leveransprestanda och innehållets aktualitet. I scenarier där det är viktigt att omedelbart hantera uppdaterat innehåll kan det dock vara bra att rensa CDN-cachen direkt.
+Att ställa in TTL med HTTP-huvudet Cache-Control är ett effektivt sätt att balansera innehållets leveransprestanda och innehållets aktualitet. I scenarier där det är viktigt att leverera uppdaterat innehåll omedelbart kan det dock vara bra att rensa CDN-cachen direkt.
 
-[Lär dig hur](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token) du kan konfigurera en rensnings-API-token med hjälp av Cloud Manager konfigurationsflöde, så att du kan [anropa rensnings-API:er](/help/implementing/dispatcher/cdn-cache-purge.md), med någon av dessa varianter:
+[Lär dig hur](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token) kan självbetjäna konfigurationen av en rensnings-API-token med hjälp av Cloud Manager konfigurationsflöde, så att du kan [anropa rensnings-API:er](/help/implementing/dispatcher/cdn-cache-purge.md), med någon av dessa varianter:
+
 * En URL
 * Flera URL-adresser som använder en tagg
 * Rensa fullständigt CDN-cache
 
 ### Självserverkonfiguration av X-AEM-Edge-nyckel för kundhanterad CDN {#customermanaged-keys}
 
-Tidigare krävdes en supportanmälan för att generera den X-AEM-Edge-Key som krävs för att konfigurera ett kundhanterat CDN. Detta är nu självbetjäning genom att deklarera nyckelvärdet i en konfigurationsfil som distribueras med Configuration Pipeline, vilket tar bort eventuella förseningar när det gäller att komma igång med en ny miljö. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md#CDN-HTTP-value).
+Tidigare krävdes en supportanmälan för att generera den X-AEM-Edge-Key som krävs för att konfigurera ett kundhanterat CDN. Det här arbetsflödet är nu självbetjäning genom att deklarera nyckelvärdet i en konfigurationsfil som distribueras med Configuration Pipeline, vilket tar bort eventuella förseningar när det gäller att starta en ny miljö. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md#CDN-HTTP-value).
 
 ### Varningar om trafikfilterregler {#traffic-filter-rules-alerts}
 
-Trafikfilterregler, som innehåller de valfria brandväggsreglerna för webbprogram (WAF), låter dig konfigurera vilken trafik som ska blockeras.
+Trafikfilterregler, som innehåller de valfria brandväggsreglerna för webbprogram (WAF), gör att du kan konfigurera vilken trafik som ska blockeras.
 
 Nu kan du [prenumerera på aviseringar](/help/security/traffic-filter-rules-including-waf.md#traffic-filter-rules-alerts) när trafikfilterreglerna aktiveras. E-postmeddelanden från Åtgärdscenter håller dig informerad om när vissa trafikförhållanden inträffar så att du kan vidta lämpliga åtgärder.
 

@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 99a36bab3ca8d5e6a64e1fdb9c179cf8a3190a14
+source-git-commit: fc578f35214327567aaa6f5d88a637df9428f87f
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1245'
 ht-degree: 0%
 
 ---
@@ -65,6 +65,12 @@ Utnyttja GenAI genom att AEM nya funktioner, [generera varianter](/help/generati
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
+### Tidig åtkomst i Dynamic Media {#dm-early-access}
+
+**AI-baserade videobeskrivningar**
+
+AI-baserade bildtexter i Adobe Dynamic Media använder artificiell intelligens för att automatiskt generera bildtexter för videoinnehåll. Den här funktionen är utformad för att förbättra tillgängligheten och användarupplevelsen genom att ge korrekta bildtexter i realtid. AI analyserar videons ljudspår för att transkribera tal och skapa bildtexter som kan redigeras för precision eller anpassning. Dessa bildtexter uppfyller tillgänglighetskraven och förbättrar engagemanget för videoklipp som förlitar sig på eller föredrar textbaserat videostöd.
+
 ### Nya funktioner i vyn Assets {#assets-view-new-features}
 
 **Uppdaterad generering av Adobe Firefly-bilder**
@@ -80,7 +86,7 @@ Assets as a Cloud Service har nu stöd för Photoshop stora dokument (PSB-filer)
 ### Nya förbättringar i Content Hub {#content-hub-new-enhancements}
 
 * Bättre hantering av långa filnamn, enkel utökning av hela namnet med verktygstips.
-* Förbättrade miniatyrbilder som bättre passar innehållets proportioner och täcker större innehållsområden.
+* Förbättrade miniatyrbilder som bättre passar innehållets proportioner och täcker ett större innehållsområde.
 * En anpassad miniatyrbildsupplevelse från AEM stöds med innehållsnavet.
 * Förbättrad färgsökning.
 * Förbättrade konfigurationer sparar upplevelser.
@@ -93,7 +99,7 @@ Assets as a Cloud Service har nu stöd för Photoshop stora dokument (PSB-filer)
 
 #### Autospara ett utkast för Core Components based Adaptive Forms
 
-Användarna kan nu dra nytta av en autosparfunktion som automatiskt sparar ett delvis ifyllt formulär som ett utkast. De kan gå tillbaka senare för att slutföra ifyllningen på samma eller annan enhet. Den här funktionen förbättrar konverteringsgraden för organisationer genom att minska antalet blanketter som tas bort, eftersom man inte behöver börja om från början.
+Användarna kan nu dra nytta av en autosparfunktion som automatiskt sparar ett delvis ifyllt formulär som ett utkast. De kan gå tillbaka senare för att slutföra ifyllningen på samma eller annan enhet. Den här funktionen förbättrar konverteringsgraden för organisationer genom att minska antalet ifyllda formulär, eftersom användarna inte behöver börja om från början.
 
 
 ### Tidig åtkomst-funktioner i AEM Forms {#forms-new-early-access-features}
@@ -112,17 +118,17 @@ De genererande AI-funktionerna är:
 
 * **AI-assistenten för produktfrågor**: Få svar på dina AEM formulärrelaterade frågor direkt. AI-assistenten fungerar som din egen personliga kunskapsbas och ger insiktsfull vägledning och rekommendationer direkt inom plattformen.
 
-* **Skapa anpassade formulär**: Skapa enkelt fullfjädrade formulär med generativa AI-frågor. Vår generativa AI genererar automatiskt användarvänliga formulär som minskar bortfall och personaliserar upplevelsen.
+* **Skapa anpassade formulär**: Skapa enkelt fullfjädrade formulär med generativa AI-uppmaningar. Adobe generative AI genererar automatiskt användarvänliga formulär som minskar bortfall och personaliserar upplevelsen.
 
 * **Panelgenerering för Forms**: Generera formuläravsnitt som är anpassade efter specifika datainsamlingsbehov. Generera t.ex. avsnitt för insamling av betalningsinformation, kundpreferenser eller reseinformation.
 
-* **Ändra formulärlayouter**: Experimentera med olika layouter och designer med hjälp av allmänna AI-prompter. Testa olika layouter som guiden eller flikvyer för att hitta den som passar ditt formulär bäst. Använd Generative AI-prompter för att optimera formulären för mobilrespons och skapa visuellt engagerande formulär som användarna gillar.
+* **Ändra formulärlayouter**: Experimentera med olika layouter och designer med hjälp av generativa AI-uppmaningar. Testa olika layouter som guiden eller flikvyer för att hitta den som passar ditt formulär bäst. Använd generativa AI-uppmaningar för att optimera formulären för mobilrespons och skapa visuellt engagerande formulär som användarna gillar.
 
-* **Konfigurera Skicka-åtgärd**: Använd generativa AI-uppmaningar för att enkelt konfigurera en skicka-åtgärd för formuläret. Välj från ett bibliotek med färdiga skicka-åtgärder eller från en lista med anpassade skicka-åtgärder som skapats och driftsatts av ditt eget utvecklingsteam.
+* **Konfigurera Skicka-åtgärd**: Använd generativa AI-uppmaningar för att konfigurera en skicka-åtgärd utan problem för formuläret. Välj från ett bibliotek med färdiga skicka-åtgärder eller anpassade skicka-åtgärder som skapats och driftsatts av ditt utvecklingsteam.
 
 >[!IMPORTANT]
 >
-> Om du är intresserad av att delta i programmet för tidig åtkomst av någon anledning skickar du ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) med en lista över funktioner du är intresserad av.
+> Är du intresserad av att delta i programmet för tidig åtkomst för något av Forms innovationer? Skicka ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) med en lista över funktioner som du är intresserad av.
 
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
