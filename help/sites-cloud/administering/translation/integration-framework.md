@@ -5,9 +5,9 @@ feature: Language Copy
 role: Admin
 exl-id: 6e74cdee-7965-4087-a733-e9d81c4aa7c2
 solution: Experience Manager Sites
-source-git-commit: 4f5346200499f125ea986bc094446359ed10bd81
+source-git-commit: c4cb466bf6a9b6f8f4a28943d28bdb524610f5ad
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1447'
 ht-degree: 0%
 
 ---
@@ -28,26 +28,9 @@ En översikt över funktionerna för översättning av innehåll i AEM finns i [
 
 ## Ansluta till en översättningstjänstleverantör {#connecting-to-a-translation-service-provider}
 
-Skapa en molnkonfiguration som ansluter AEM till översättningstjänstleverantören. AEM innehåller möjligheten att [ansluta till Microsoft® Translator](connect-ms-translator.md) som standard.
+Skapa en molnkonfiguration som ansluter AEM till översättningstjänstleverantören.
 
-Följande översättningsleverantörer tillhandahåller en implementering av AEM API för översättningsprojekt.
-
-* [Microsoft](connect-ms-translator.md)
-* [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html)
-* [Lionbridge](https://exchange.adobe.com/experiencecloud.details.100064.lionbridge-connector-for-experience-manager-63.html)
-* [Memsource](https://exchange.adobe.com/apps/ec/103166/memsource-connector-for-adobe-experience-manager)
-* [XTM Cloud](https://exchange.adobe.com/apps/ec/105037/xtm-connect-for-adobe-experience-manager)
-* [Lingotek](https://exchange.adobe.com/apps/ec/90088/lingotek-collaborative-translation-platform)
-* [RWS](https://exchange.adobe.com/apps/ec/108277/rws-language-cloud)
-* [Smartling](https://www.smartling.com/software/integrations/adobe-experience-manager/)
-
->[!NOTE]
->
->Här hittar du en lista över de senaste leverantörerna av personal- och maskinöversättning:
->
->* [AEM mänsklig översättning](https://exchange.adobe.com/apps/browse/ec?page=1&amp;partnerLevel=All&amp;product=AEM&amp;q=aem+human+translation&amp;sort=RELEVANCE)
->* [AEM maskinöversättning](https://exchange.adobe.com/apps/browse/ec?q=AEM+machine+translation&amp;product=All&amp;partnerLevel=All&amp;sort=RELEVANCE)
->
+AEM innehåller möjligheten att [ansluta till Microsoft® Translator](connect-ms-translator.md) som standard. Andra översättningsteknikleverantörer med AEM anslutningar som är medlemmar i partnerprogrammet för Adobe Exchange finns [här](https://exchange.adobe.com/apps/browse/ec?page=1&amp;partnerLevel=All&amp;product=AEM&amp;q=experience+manager+translation&amp;sort=RELEVANCE).
 
 När du har installerat ett kopplingspaket kan du skapa en molnkonfiguration för anslutningen. Vanligtvis måste du ange dina autentiseringsuppgifter för autentisering med översättningstjänsten. Mer information om hur du lägger till en molnkonfiguration för Microsoft® Translator-anslutningen finns i [Integrera med Microsoft® Translator](connect-ms-translator.md).
 
