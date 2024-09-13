@@ -1,19 +1,19 @@
 ---
-title: Introduktion till hantering av SSL-certifikat
+title: Introduktion till SSL-certifikat
 description: Lär dig hur Cloud Manager förser dig med självbetjäningsverktyg för att installera SSL-certifikat.
 exl-id: 0d41723c-c096-4882-a3fd-050b7c9996d8
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: bc9aa376a402a55191e153f662262ff65df32f5e
+source-git-commit: d2f05915c0bf0af073db7f070b83f13aeae55252
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '765'
 ht-degree: 0%
 
 ---
 
 
-# Introduktion till hantering av SSL-certifikat{#introduction}
+# Introduktion till SSL-certifikat{#introduction}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_sslcert"
@@ -37,7 +37,7 @@ Cloud Manager erbjuder självbetjäningsverktyg för att installera och hantera 
 >Kunder får inte överföra DV-certifikat (Domain Validation).
 
 
-## Introduktion till certifikat {#certificates}
+## Introduktion till SSL-certifikat {#certificates}
 
 Företag och organisationer använder SSL-certifikat för att skydda sina webbplatser och låta sina kunder lita på dem. Om du vill använda SSL-protokollet måste ett SSL-certifikat användas på en webbserver.
 
@@ -46,8 +46,6 @@ När en entitet, till exempel en organisation eller ett företag, begär ett cer
 >[!IMPORTANT]
 >
 >Cloud Manager tillhandahåller inte SSL-certifikat eller privata nycklar. Dessa saker måste hämtas från en certifikatutfärdare, en betrodd tredjepartsorganisation. Vissa välkända certifikatutfärdare inkluderar *DigiCert*, *Låt oss kryptera*, *GlobalSign*, *Entrust* och *Verisign*.
-
-## Cloud Manager SSL-hanteringsfunktioner {#features}
 
 Cloud Manager stöder följande alternativ för användning av SSL-certifikat.
 
@@ -58,14 +56,9 @@ Cloud Manager stöder följande alternativ för användning av SSL-certifikat.
 * Plattformens TLS-tjänst skickar förfrågningar till kundens CDN-tjänst baserat på det SSL-certifikat som används för att avsluta och den CDN-tjänst som är värd för den domänen.
 * AEM as a Cloud Service godkänner SSL-jokertecken för en domän.
 
-## Recommendations {#recommendations}
+AEM as a Cloud Service stöder bara säkra `https`-platser. Kunder med flera anpassade domäner vill inte överföra ett certifikat varje gång de lägger till en domän. Sådana kunder tjänar på att skaffa ett certifikat med flera domäner.
 
-AEM as a Cloud Service stöder bara säkra `https`-platser.
-
-* Kunder med flera anpassade domäner vill inte överföra ett certifikat varje gång de lägger till en domän.
-* Sådana kunder tjänar på att skaffa ett certifikat med flera domäner.
-
-## Certifikatkrav {#requirements}
+## SSL-certifikatkrav {#requirements}
 
 * AEM as a Cloud Service godkänner certifikat som överensstämmer med OV- (Organization Validation), EV- (Extended Validation) eller DV-principen (Domain Validation). <!-- CQDOC-21758, #2 -->
 * Alla certifikat måste vara ett X.509 TLS-certifikat från en betrodd certifikatutfärdare med en matchande 2 048-bitars RSA privat nyckel.
@@ -73,7 +66,7 @@ AEM as a Cloud Service stöder bara säkra `https`-platser.
 
 OV- och EV-certifikat innehåller CA-validerad information. Sådan information hjälper användarna att bedöma om webbplatsägaren, e-postavsändaren eller den digitala signeraren av kod eller PDF kan betraktas som tillförlitliga. DV-certifikat tillåter inte sådan ägarskapsverifiering.
 
-### Certifikatformat som hanteras av kund {#certificate-format}
+### Kundhanterat SSL-certifikatformat {#certificate-format}
 
 <!-- CQDOC-21758, #3 -->
 
@@ -99,14 +92,11 @@ Följande `openssl`-kommandon kan användas för att konvertera certifikat som i
   openssl x509 -inform der -in certificate.cer -out certificate.pem
   ```
 
-## Begränsningar {#limitations}
+## Begränsning av antalet installerade SSL-certifikat {#limitations}
 
 Vid en given tidpunkt tillåter Cloud Manager högst 50 installerade SSL-certifikat. Dessa certifikat kan kopplas till en eller flera miljöer i hela programmet och kan även innehålla certifikat som gått ut.
 
-Om du har nått gränsen kan du granska dina certifikat och överväga:
-
-* Tar bort certifikat som gått ut.
-* Gruppera flera domäner i samma certifikat eftersom ett certifikat kan omfatta flera domäner (upp till 100 SAN).
+Om du har nått gränsen kan du granska dina certifikat och ta bort certifikat som har gått ut. Eller gruppera flera domäner i samma certifikat eftersom ett certifikat kan omfatta flera domäner (upp till 100 SAN-nätverk).
 
 ## Läs mer {#learn-more}
 
