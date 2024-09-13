@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: 672513d7-ee0a-4f6e-9ef0-7a41fabbaf9a
-source-git-commit: 9ffec422ec4b5a45962f07142c49a466e8892754
+source-git-commit: bc9aa376a402a55191e153f662262ff65df32f5e
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
@@ -40,12 +40,11 @@ För CDN som hanteras av Adobe tillåts endast webbplatser med ACME-validering n
    | Sites | Välj en Edge Delivery-webbplats. |
    | Miljö | Markera en specifik målgruppsmiljö i AEM.<br>I listrutan **Nivå** väljer du något av följande:<br> ・ Välj **Publish** om du vill ha en aktiv produktionsmiljö där innehållet levereras till slutanvändarna.<br> ・ Välj **Förhandsgranska** för miljöer där du testar ändringar innan de publiceras. |
 
-1. Välj CDN-typ genom att välja något av följande:
+1. Välj CDN-typ och associerad konfiguration genom att välja något av följande:
 
-   | CDN-typ | Beskrivning |
+   | CDN-typ | Konfigurationsinformation |
    | --- | --- |
-   | CDN hanterad i Adobe | a. Välj det domännamn du vill använda i listrutan **Domän**.<br>Inga verifierade domäner är tillgängliga i listrutan? Se [Lägg till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).<br>b. Välj ett certifikat som du vill använda i listrutan SSL-certifikat.<br>Inga SSL-certifikat är tillgängliga i listrutan? Se [Lägg till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md). |
-   | Annan CDN-leverantör. | Välj det här alternativet om du använder en egen CDN-leverantör och inte det CDN-nätverk som hanteras av Adobe som är tillgängligt för dig.<br>Välj det domännamn du vill använda i listrutan **Domän**.<br>Inga tillgängliga SSL-certifikat i listrutan? Se [Lägg till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md). |
-
+   | CDN hanterad i Adobe | Gör följande under **Konfigurationsinformation**:<br>a. Välj det domännamn du vill använda i listrutan **Domän** .<br>Inga verifierade domäner är tillgängliga i listrutan? Se [Lägg till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).<br>b. Välj ett certifikat som du vill använda i listrutan **SSL-certifikat** .<br>Inga SSL-certifikat är tillgängliga i listrutan? Se [Lägg till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md). |
+   | Annan CDN-leverantör | Välj det här alternativet om du använder en egen CDN-leverantör och inte det CDN-nätverk som hanteras av Adobe som är tillgängligt för dig.<br>Under **Konfigurationsinformation** väljer du det domännamn du vill använda i listrutan **Domän**.<br>Inga verifierade domäner är tillgängliga i listrutan? Se [Lägg till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md). |
 
 1. Klicka på **Spara**.

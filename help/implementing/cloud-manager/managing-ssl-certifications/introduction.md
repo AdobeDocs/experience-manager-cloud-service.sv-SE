@@ -5,9 +5,9 @@ exl-id: 0d41723c-c096-4882-a3fd-050b7c9996d8
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: a9bcbae1317d95e3710a19a79115f1437b418e41
+source-git-commit: bc9aa376a402a55191e153f662262ff65df32f5e
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Cloud Manager erbjuder självbetjäningsverktyg för att installera och hantera 
 
 | | Använd skiftläge | Beskrivning |
 | --- | --- | --- |
-| 1 | **Hanterat DV-certifikat (Adobe)** | Med Cloud Manager kan användare konfigurera ett DV-certifikat (Domain Validation) som kommer från Adobe för snabb domänkonfiguration. DV-certifikat är den mest grundläggande nivån för SSL-certifiering och används ofta för testning eller för att skydda webbplatser med grundläggande kryptering. DV-certifikat är tillgängliga i både [produktion och sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md). |
+| 1 | **Hanterat DV-certifikat (Adobe)** | Med Cloud Manager kan användare konfigurera ett DV-certifikat (Domain Validation) som kommer från Adobe för snabb domänkonfiguration. DV-certifikat är den mest grundläggande nivån för SSL-certifiering och används ofta för testning eller för att skydda webbplatser med grundläggande kryptering. DV-certifikat är tillgängliga i både [produktionsprogram och sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md). När DV-certifikatet har skapats förnyas det automatiskt i Adobe var tredje månad, såvida det inte tas bort. |
 | 2 | **Kundhanterat certifikat (OV/EV)** | Cloud Manager använder en TLS-tjänst (Transport Layer Security) för att hantera kundägda SSL-certifikat och privata nycklar från tredjepartscertifikatutfärdare, som *Låt oss kryptera*. |
 
 >[!NOTE]
@@ -41,7 +41,7 @@ Cloud Manager erbjuder självbetjäningsverktyg för att installera och hantera 
 
 Företag och organisationer använder SSL-certifikat för att skydda sina webbplatser och låta sina kunder lita på dem. Om du vill använda SSL-protokollet måste ett SSL-certifikat användas på en webbserver.
 
-När en enhet, till exempel en organisation eller ett företag, begär ett certifikat från en certifikatutfärdare (certifikatutfärdare), slutför certifikatutfärdaren en verifieringsprocess. Den här processen kan omfatta allt från verifiering av domännamnskontroll till insamling av registreringsdokument och prenumerationsavtal. När informationen för en entitet har verifierats signerar certifikatutfärdaren sin offentliga nyckel med hjälp av certifikatutfärdarens privata nyckel. Eftersom alla viktiga certifikatutfärdare har rotcertifikat i webbläsare länkas entitetens certifikat via en *förtroendekedja* och webbläsaren tolkar det som ett pålitligt certifikat.
+När en entitet, till exempel en organisation eller ett företag, begär ett certifikat från en certifikatutfärdare (CA) slutför certifikatutfärdaren en verifieringsprocess. Den här processen kan omfatta allt från verifiering av domännamnskontroll till insamling av registreringsdokument och prenumerationsavtal. När informationen för en entitet har verifierats signerar certifikatutfärdaren sin offentliga nyckel med hjälp av certifikatutfärdarens privata nyckel. Eftersom alla viktiga certifikatutfärdare har rotcertifikat i webbläsare länkas entitetens certifikat via en *förtroendekedja* och webbläsaren tolkar det som ett pålitligt certifikat.
 
 >[!IMPORTANT]
 >

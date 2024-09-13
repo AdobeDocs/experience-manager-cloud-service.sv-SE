@@ -4,9 +4,9 @@ description: Lär dig hur du kan leverera dina Cloud Manager-projekt med hjälp 
 exl-id: f33bd6f0-62fc-4ecc-b8d2-65d1f1c44d82
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: dda5444ccfced079125c358f65f0dae43293ae55
+source-git-commit: bc9aa376a402a55191e153f662262ff65df32f5e
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1516'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Gör något av följande beroende på hur du använder dem:
 
 ## Adobe rekommenderade väg för avtalade kunder {#recommended-path-eds}
 
-Som avtalskund kan du se till att du får ut mesta möjliga av Adobe genom att få tillgång till och använda din Edge Delivery Services-licens via Cloud Manager. Med den här metoden kan du använda [hanterat CDN](/help/implementing/dispatcher/cdn.md#aem-managed-cdn) i Adobe och dra nytta av viktiga fördelar som CDN-hantering för självbetjäning, inklusive konfiguration och installation av DV- eller EV/OV-certifikat. Om ni inte har någon Edge Delivery Services licens hos Adobe och bestämmer er för att kringgå dessa förmåner, kan ni bara använda ett kundhanterat CDN. Den här konfigurationen måste finnas på plattformen aem.live.
+Som avtalskund kan du se till att du får ut mesta möjliga av Adobe genom att få tillgång till och använda din Edge Delivery Services-licens via Cloud Manager. Med den här metoden kan du använda [hanterat CDN](/help/implementing/dispatcher/cdn.md#aem-managed-cdn) i Adobe och dra nytta av viktiga fördelar som CDN-hantering för självbetjäning, inklusive konfiguration och tillägg av DV-certifikat. När ett DV-certifikat har skapats förnyas det dessutom automatiskt var tredje månad i Adobe, om det inte tas bort. Om ni inte har någon Edge Delivery Services licens hos Adobe och bestämmer er för att kringgå dessa förmåner, kan ni bara använda ett kundhanterat CDN. Den här konfigurationen måste finnas på plattformen `aem.live`.
 
 Om du har avtal med licenser för AEM as a Cloud Service Sites Edge Delivery Services loggar du in på Cloud Manager för att kontrollera att du kan göra följande:
 
