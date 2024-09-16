@@ -4,9 +4,9 @@ description: Lär dig mer om alla element som behöver vara på plats för att l
 exl-id: b424a9db-0f3b-4a8d-be84-365d68df46ca
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 4a369104ea8394989149541ee1a7b956383c8f12
+source-git-commit: 64344b9b2cce8d7c7f05d3e5ba94049346308a9d
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Granska den här listan över aktiviteter för att säkerställa att du kan geno
       * Konfigurera SSL och DNS enligt dokumentationen från CDN-leverantören.
    * Om du inte använder ytterligare ett CDN hanterar du SSL och DNS enligt följande dokumentation:
       * Hantera SSL-certifikat
-         * [Introduktion till hantering av SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
+         * [Introduktion till SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction-to-ssl-certificates.md)
          * [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md)
       * Hantera anpassade domännamn (DNS)
          * Kontrollera att DNS-rensningen inte orsakar några oväntade problem. Skapa en testunderdomän för att ansluta produktionsinstansen till innan du publicerar och göra en runda UAT-tester. Om din domän är example.com kan du skapa en underdomän test.example.com och använda den i produktionen. Vid UAT-testning av domänen ska du leta efter saker som korrekt länkomdirigering, cachelagring och Dispatcher-konfigurationer.

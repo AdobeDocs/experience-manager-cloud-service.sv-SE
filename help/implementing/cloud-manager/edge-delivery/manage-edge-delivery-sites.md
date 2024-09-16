@@ -1,0 +1,39 @@
+---
+title: Hantera Edge Delivery-webbplatser i Cloud Manager
+description: Lär dig hur du lägger till en CDN-konfiguration på en Edge Delivery-webbplats eller tar bort en Edge Delivery-webbplats.
+feature: Cloud Manager, Developing
+role: Admin, Architect, Developer
+source-git-commit: b222b4384b1c2a21ecbb244d149ce7e51cc7990f
+workflow-type: tm+mt
+source-wordcount: '274'
+ht-degree: 0%
+
+---
+
+# Hantera Edge Delivery webbplats i Cloud Manager {#manage-edge-delivery-sites}
+
+Lär dig hur du hanterar Edge Delivery-webbplatser i Cloud Manager genom att lägga till en CDN-konfiguration till en befintlig webbplats. Du kan också ta bort en Edge Delivery-webbplats.
+
+## Lägga till en CDN-konfiguration på en befintlig Edge Delivery-webbplats {#add-cdn-to-edge-delivery-site}
+
+Se [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md).
+
+## Ta bort en Edge Delivery-webbplats {#delete-edge-delivery-site}
+
+Om du tar bort en webbplats för Edge Delivery Services tas även alla associerade CDN-konfigurationer bort. Den här åtgärden bryter anslutningen mellan anpassade domäner och platsen. Mer information finns i CDN-konfigurationer. <!-- https://wiki.corp.adobe.com/display/DMSArchitecture/%5BKT%5D+Cloud+Manager+2024.9.0+Release -->
+
+**Så här tar du bort en Edge Delivery-webbplats:**
+
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämpligt program.
+1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** väljer du programmet med konfigurerade Edge Delivery Services där du vill lägga till en Edge Delivery-webbplats.
+1. Gör något av följande:
+   * Klicka på fliken **Edge Delivery** på sidan **Programöversikt**. Klicka på ellipsen i slutet av en rad vars webbplats du vill ta bort i tabellen för Edge Delivery-webbplatsen.
+Klicka på **Ta bort** och sedan på **Ta bort** igen för att bekräfta att webbplatsen har tagits bort.
+
+     ![Lägg till Edge Delivery-webbplats från fliken Edge Delivery](/help/implementing/cloud-manager/assets/cm-eds-delete1.png)
+
+   * I det övre vänstra hörnet av sidan klickar du på hamburgikonen för att visa den vänstra navigeringsmenyn. Klicka på **Edge Delivery Sites** under rubriken **Tjänster**.
+Klicka på ellipsen i slutet av en rad vars webbplats du vill ta bort i tabellen för Edge Delivery-webbplatsen. Klicka på **Ta bort** och sedan på **Ta bort** igen för att bekräfta att webbplatsen har tagits bort.
+
+
+     ![Lägg till Edge Delivery-webbplats från knappen Edge Delivery-platser](/help/implementing/cloud-manager/assets/cm-eds-delete2.png)

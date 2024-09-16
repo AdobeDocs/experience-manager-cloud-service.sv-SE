@@ -4,9 +4,9 @@ description: Versionsinformation för version 2020.12.0 av  [!DNL Adobe Experien
 exl-id: 16875180-1f23-477d-9d4d-e220998c4983
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 64344b9b2cce8d7c7f05d3e5ba94049346308a9d
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Följande version (2021.1.0) är 28 januari 2021.
 
 * [!DNL Dynamic Media]-funktioner är nu tillgängliga via AEM [!DNL Sites] bildbaserade kärnkomponenter. Man kan snabbt konfigurera komponenter så att de använder bildförinställningar, smart beskärning och bildmodifierare när man skapar webbsidor. Se [Core Components 2.13.0 release](https://github.com/adobe/aem-core-wcm-components/releases/tag/core.wcm.components.reactor-2.13.0).
 
-* Med skrivbordsappen [!DNL Experience Manager] kan användare överföra filer och mappar genom att dra filerna från Utforskaren i Windows eller Mac Finder i skrivbordsappens gränssnitt. Se [lägga till resurser med datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#upload-and-add-new-assets-to-aem).
+* Med skrivbordsappen [!DNL Experience Manager] kan användare överföra filer och mappar genom att dra filerna från Utforskaren i Windows eller Mac Finder i skrivbordsappens gränssnitt. Se [lägga till resurser med datorprogrammet](https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/using#upload-and-add-new-assets-to-aem).
 
 ## Adobe Experience Manager Commerce as a Cloud Service {#cloud-services-commerce}
 
@@ -50,7 +50,7 @@ Releasedatum för Cloud Manager i Adobe Experience Manager (AEM) as a Cloud Serv
 
 ### Nyheter i [!DNL Cloud Manager] {#what-is-new-cm}
 
-* Självbetjäningshantering för [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md) och [anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md).
+* Självbetjäningshantering för [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction-to-ssl-certificates.md) och [Introduktion till anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md).
 
 * Självbetjäningshantering för [IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md).
 
@@ -66,7 +66,7 @@ Releasedatum för Cloud Manager i Adobe Experience Manager (AEM) as a Cloud Serv
 
 ### Nyheter i [!DNL Code Refactoring Tools] {#what-is-new-crt}
 
-* Ny version av AIO-CLI-plugin släppt. Den senaste versionen av denna plugin innehåller felkorrigeringar för AEM Dispatcher Converter och Repository Modernizer och har även stöd för ett nytt verktyg - Index Converter. Se [Enhetlig upplevelse](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/unified-experience.html#benefits) där du kan lära dig mer om det här plugin-programmet.
+* Ny version av AIO-CLI-plugin släppt. Den senaste versionen av denna plugin innehåller felkorrigeringar för AEM Dispatcher Converter och Repository Modernizer och har även stöd för ett nytt verktyg - Index Converter. Se [Enhetlig upplevelse](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/unified-experience#benefits) där du kan lära dig mer om det här plugin-programmet.
 
 * Indexkonverteraren är ett verktyg som kan användas för att omvandla en kunds anpassade Oak-indexdefinitioner till AEM as a Cloud Service-kompatibla Oak-indexdefinitioner. Mer information finns i [Indexkonverteraren](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/index-converter).
 
@@ -86,6 +86,6 @@ Releasedatum för innehållsöverföringsverktyget v1.1.20 är 8 januari 2021.
 
 ### Felkorrigeringar {#ctt-bug-fixes}
 
-* Status för användargränssnittet i CTT (Content Transfer Tool) för en migreringsuppsättning kvarstod inte och ändrades efter en tids inaktivitet. Den här har åtgärdats.
-* Alternativet att visa loggar inaktiverades om loggarna inte var tillgängliga. Detta har åtgärdats och meddelanden har lagts till för att meddela användarna varför loggar saknas.
-* Statusen för användargränssnittet i verktyget Innehållsöverföring visade *MISSLYCKADES* när användaren stoppade ett intag. Detta har korrigerats så att *STOPPED* visas i stället.
+* Status för användargränssnittet i CTT (Content Transfer Tool) för en migreringsuppsättning kvarstod inte och ändrades efter en tids inaktivitet. Problemet är nu åtgärdat.
+* Alternativet att visa loggar inaktiverades om loggarna inte var tillgängliga. Problemet har nu åtgärdats och meddelanden har lagts till för att meddela användarna varför loggar saknas.
+* Statusen för användargränssnittet i verktyget Innehållsöverföring visade *MISSLYCKADES* när användaren stoppade ett intag. Problemet har nu åtgärdats så att *STOPPED* visas i stället.

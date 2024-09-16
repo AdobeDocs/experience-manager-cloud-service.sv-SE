@@ -5,7 +5,7 @@ exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: d2f05915c0bf0af073db7f070b83f13aeae55252
+source-git-commit: b222b4384b1c2a21ecbb244d149ce7e51cc7990f
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Se även [Felsöka SSL-certifikatfel](/help/implementing/cloud-manager/managing-
 
 Det kan ta några dagar innan ett certifikat etableras. Adobe rekommenderar därför att certifikatet etableras långt före ett datum för sista ansökningsdatum eller ett publiceringsdatum.
 
-Kontrollera att du har granskat **certifikatkraven** i [Introduktion till hantering av SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md#requirements) för att se till att AEM as a Cloud Service har stöd för det certifikat som du vill lägga till.
+Kontrollera att du har granskat **certifikatkraven** i [Introduktion till hantering av SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction-to-ssl-certificates.md#requirements) för att se till att AEM as a Cloud Service har stöd för det certifikat som du vill lägga till.
 
 En användare måste vara medlem i rollen **Affärsägare** eller **Distributionshanterare** för att den här aktiviteten ska kunna slutföras.
 
@@ -45,7 +45,7 @@ En användare måste vara medlem i rollen **Affärsägare** eller **Distribution
 
 1. Klicka på **Lägg till SSL-certifikat** i sidans övre högra hörn.
 
-1. Gör något av följande i dialogrutan **Lägg till SSL-certifikat**, baserat på [ditt användningsfall](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md):
+1. Gör något av följande i dialogrutan **Lägg till SSL-certifikat**, baserat på [ditt användningsfall](/help/implementing/cloud-manager/managing-ssl-certifications/introduction-to-ssl-certificates.md):
 
    | | Använd skiftläge | Steg |
    | --- | --- | --- |

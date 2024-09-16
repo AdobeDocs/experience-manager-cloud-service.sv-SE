@@ -4,9 +4,9 @@ description: Lär dig hur du använder det AEM-hanterade CDN och hur du pekar di
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
 role: Admin
-source-git-commit: dd696580758e7ab9a5427d47fda4275f9ad7997f
+source-git-commit: 64344b9b2cce8d7c7f05d3e5ba94049346308a9d
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1608'
 ht-degree: 2%
 
 ---
@@ -34,11 +34,10 @@ Kunder som vill publicera på Edge Delivery Services-nivå kan dra nytta av Adob
 
 För att förbereda dig för innehållsleverans med AEM inbyggt CDN via Cloud Manager självbetjäningsgränssnitt kan du dra nytta av Adobe CDN-funktioner. Med den här funktionen kan du hantera CDN-hantering för självbetjäning, inklusive konfigurera och installera SSL-certifikat som DV-certifikat (Domain Validation) eller EV-/OV-certifikat (Extended/Organization Validation). Mer information om de här metoderna finns i:
 
-* [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
+* [EDGE DELIVERY SERVICES i CLOUD MANAGER](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md)
+* [Introduktion till anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
+* [Introduktion till SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction-to-ssl-certificates.md)
 * [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md)
-* [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
-* [Stöd för Edge Delivery Services i Cloud Manager](/help/implementing/cloud-manager/edge-delivery-services.md)
-
 
 **Begränsa trafik**
 

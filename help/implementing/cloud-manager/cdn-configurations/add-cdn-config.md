@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: 672513d7-ee0a-4f6e-9ef0-7a41fabbaf9a
-source-git-commit: bc9aa376a402a55191e153f662262ff65df32f5e
+source-git-commit: b222b4384b1c2a21ecbb244d149ce7e51cc7990f
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,16 @@ För CDN som hanteras av Adobe tillåts endast webbplatser med ACME-validering n
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
-1. Klicka på **CDN-konfigurationer** under **Tjänster** i den vänstra navigeringspanelen.
+1. Gör något av följande beroende på hur du använder dem:
 
-1. Klicka på **Lägg till** i det övre högra hörnet på sidan CDN-konfigurationer.
-
-   ![Konfigurera CDN-dialogruta](/help/implementing/cloud-manager/assets/configure-cdn-dialog.png)
+   | Använd skiftläge | Steg |
+   | --- | --- |
+   | Jag vill lägga till en CDN-konfiguration på en *befintlig* Edge Delivery-webbplats i Cloud Manager | a. Klicka på **Edge Delivery Sites** under **Tjänster** i den vänstra navigeringspanelen.<br>b. I Edge Delivery-tabellen klickar du på ellipsen i slutet av en rad som inte har någon associerad domän.<br>c. Klicka på **Konfigurera CDN** .  ![Klicka på Konfigurera CDN för en Edge Delivery-webbplats](/help/implementing/cloud-manager/assets/cm-eds-config-cdn.png) |
+   | Jag vill lägga till en CDN-konfiguration i Cloud Manager | a. Klicka på **CDN-konfigurationer** under **Tjänster** i den vänstra navigeringspanelen.<br>b. Klicka på **Lägg till** i det övre högra hörnet på sidan CDN-konfigurationer. |
 
 1. Välj något av följande i listrutan **Ursprung** i dialogrutan **Konfigurera CDN**:
+
+   ![Konfigurera CDN-dialogruta](/help/implementing/cloud-manager/assets/configure-cdn-dialog.png)
 
    | Ursprung | Beskrivning |
    | --- | --- |
