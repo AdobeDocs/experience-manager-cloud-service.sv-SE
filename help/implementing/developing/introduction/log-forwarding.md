@@ -4,9 +4,9 @@ description: Läs mer om vidarebefordran av loggar till Splunk och andra loggnin
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 85cef99dc7a8d762d12fd6e1c9bc2aeb3f8c1312
+source-git-commit: bf0b577de6174c13f5d3e9e4a193214c735fb04d
 workflow-type: tm+mt
-source-wordcount: '1375'
+source-wordcount: '1359'
 ht-degree: 0%
 
 ---
@@ -177,9 +177,10 @@ AEM (inklusive Apache/Dispatcher) visas under en mapp med följande namnkonventi
 
 * aemaccess
 * aemerror
+* aemrequest
 * aemdispatcher
-* httpdaccess
-* httpderror
+* aemhttpdaccess
+* aemhttpderror
 
 Under varje mapp skapas en enda fil och läggs till i den. Kunderna ansvarar för att bearbeta och hantera den här filen så att den inte växer för stor.
 
@@ -209,6 +210,9 @@ Att tänka på:
 
 * Skapa en API-nyckel, utan någon integrering med en viss molnleverantör.
 * taggegenskapen är valfri
+* För AEM loggar är datakälltaggen för DataDig inställd på något av `aemaccess`, `aemerror`, `aemrequest`, `aemdispatcher`, `aemhttpdaccess` eller `aemhttpderror`
+* För CDN-loggar är datakällkoden `aemcdn` angiven för Datadog
+* datadoggens Service Tag är inställd på `adobeaemcloud`, men du kan skriva över den i taggavsnittet
 
 
 ### Elasticsearch och OpenSearch {#elastic}
@@ -230,10 +234,12 @@ data:
 
 Att tänka på:
 
+* Som standard är porten 443. Den kan åsidosättas med en egenskap med namnet `port`
 * För autentiseringsuppgifter måste du använda distributionsuppgifter i stället för kontoautentiseringsuppgifter. Detta är de autentiseringsuppgifter som genereras på en skärm som kan likna den här bilden:
 
 ![Elastic deployment credentials](/help/implementing/developing/introduction/assets/ec-creds.png)
 
+* För AEM loggar är `index` inställt på något av `aemaccess`, `aemerror`, `aemrequest`, `aemdispatcher`, `aemhttpdaccess` eller `aemhttpderror`
 * Den valfria pipeline-egenskapen ska anges till namnet på importflödet för Elasticsearch eller OpenSearch, som kan konfigureras för att dirigera loggposten till rätt index. Pipelinens processortyp måste anges till *script* och skriptspråket ska anges till *smärtfritt*. Här följer ett exempel på ett skriptfragment som dirigerar loggposter till ett index som aemaccess_dev_26_06_2024:
 
 ```
@@ -254,15 +260,15 @@ data:
   https:
     default:
       enabled: true
-      url: "https://example.com:8443/aem_logs/aem"
+      url: "https://example.com/aem_logs/aem"
       authHeaderName: "X-AEMaaCS-Log-Forwarding-Token"
       authHeaderValue: "${{HTTPS_LOG_FORWARDING_TOKEN}}"
 ```
 
 Att tänka på:
 
-* URL-strängen måste innehålla **https://**, annars misslyckas valideringen. Om ingen port ingår i URL-strängen antas port 443 (standard-HTTPS-port).
-* Om du vill använda en annan port än 443 anger du den som en del av URL:en.
+* URL-strängen måste innehålla **https://**, annars misslyckas valideringen.
+* URL:en kan innehålla en port. Exempel: `https://example.com:8443/aem_logs/aem`. Om ingen port ingår i URL-strängen antas port 443 (standard-HTTPS-port).
 
 #### HTTPS CDN-loggar {#https-cdn}
 
@@ -278,13 +284,14 @@ Det finns också en egenskap med namnet `sourcetype` som är inställd på värd
 
 För AEM (inklusive apache/disacher) skickas webbförfrågningar (POST) kontinuerligt, med en JSON-nyttolast som är en matris med loggposter, med de olika loggpostformaten som beskrivs under [Loggning för AEM as a Cloud Service](/help/implementing/developing/introduction/logging.md). Ytterligare egenskaper anges i avsnittet [Loggpostformat](#log-format) nedan.
 
-Det finns också en egenskap med namnet `sourcetype` som är inställd på något av följande värden:
+Det finns också en egenskap med namnet `Source-Type` som är inställd på något av följande värden:
 
 * aemaccess
 * aemerror
+* aemrequest
 * aemdispatcher
-* httpdaccess
-* httpderror
+* aemhttpdaccess
+* aemhttpderror
 
 ### Splunk {#splunk}
 
@@ -299,8 +306,13 @@ data:
       enabled: true
       host: "splunk-host.example.com"
       token: "${{SPLUNK_TOKEN}}"
-      index: "AEMaaCS"
+      index: "aemaacs"
 ```
+
+Att tänka på:
+
+* Som standard är porten 443. Den kan åsidosättas med en egenskap med namnet `port`.
+
 
 <!--
 ### Sumo Logic {#sumologic}
@@ -343,119 +355,26 @@ aem_tier: author
 
 ## Avancerat nätverksbyggande {#advanced-networking}
 
->[!NOTE]
->
->Den här funktionen är ännu inte klar för tidiga användare.
-
-
 Vissa organisationer väljer att begränsa vilken trafik som kan tas emot av loggningsdestinationerna.
 
-För CDN-loggen kan du tillåta att IP-adresserna listas enligt beskrivningen i [Snabbt dokumentation - offentlig IP-lista](https://www.fastly.com/documentation/reference/api/utils/public-ip-list/). Om listan med delade IP-adresser är för stor kan du skicka trafik till ett (ej Adobe) Azure Blob Store där logik kan skrivas för att skicka ut loggarna från en dedikerad IP-adress till deras slutliga mål.
+För CDN-loggen kan du tillåta att IP-adresserna listas enligt beskrivningen i [Snabbt dokumentation - offentlig IP-lista](https://www.fastly.com/documentation/reference/api/utils/public-ip-list/). Om listan med delade IP-adresser är för stor kan du skicka trafik till en https-server eller (ej Adobe) Azure Blob Store där logik kan skrivas för att skicka ut loggarna från en känd IP-server till den slutliga målplatsen.
 
-För AEM loggar (inklusive Apache/Dispatcher) kan du konfigurera vidarebefordran av loggar så att de går igenom [avancerat nätverk](/help/security/configuring-advanced-networking.md). Se mönstren för de tre avancerade nätverkstyperna nedan, som använder en valfri `port`-parameter, tillsammans med parametern `host`.
-
-### Flexibla portägg {#flex-port}
-
-Om loggtrafiken går till en annan port än 443 (t.ex. 8443 nedan) ska du konfigurera avancerade nätverk så här:
-
-```
-{
-    "portForwards": [
-        {
-            "name": "splunk-host.example.com",
-            "portDest": 8443, # something other than 443
-            "portOrig": 30443
-        }    
-    ]
-}
-```
-
-och konfigurera bildspelsfilen så här:
+Om du har konfigurerat [avancerat nätverk](/help/security/configuring-advanced-networking.md) för AEM (inklusive Apache/Dispatcher) kan du använda egenskapen advancedNetworking för att vidarebefordra dem från en dedikerad IP-adress eller via ett VPN.
 
 ```
 kind: "LogForwarding"
 version: "1"
+metadata:
+  envTypes: ["dev"]
 data:
   splunk:
     default:
-      host: "${{AEM_PROXY_HOST}}"
-      token: "${{SomeToken}}"
-      port: 30443
-      index: "index_name"
+      enabled: true
+      host: "splunk-host.example.com"
+      port: 443
+      token: "${{SPLUNK_TOKEN}}"
+      index: "aemaacs"
+    aem:
+      advancedNetworking: true
 ```
 
-### Dedikerad egress-IP {#dedicated-egress}
-
-
-Om loggtrafiken behöver komma ut från en dedikerad IP-adress kan du konfigurera avancerade nätverk så här:
-
-```
-{
-    "portForwards": [
-        {
-            "name": "splunk-host.example.com",
-            "portDest": 443, 
-            "portOrig": 30443
-        }    
-    ]
-}
-```
-
-och konfigurera bildspelsfilen så här:
-
-```
-      
-kind: "LogForwarding"
-version: "1"
-   metadata:
-     envTypes: ["dev"]
-data:
-  splunk:
-     default:
-       enabled: true
-       index: "index_name" 
-       token: "${{SPLUNK_TOKEN}}"  
-     aem:
-       enabled: true
-       host: "${{AEM_PROXY_HOST}}"
-       port: 30443       
-     cdn:
-       enabled: true
-       host: "splunk-host.example.com"
-       port: 443    
-```
-
-### VPN {#vpn}
-
-Om loggtrafiken behöver gå via ett VPN-nätverk kan du konfigurera avancerade nätverk så här:
-
-```
-{
-    "portForwards": [
-        {
-            "name": "splunk-host.example.com",
-            "portDest": 443,
-            "portOrig": 30443
-        }    
-    ]
-}
-
-kind: "LogForwarding"
-version: "1"
-   metadata:
-     envTypes: ["dev"]
-data:
-  splunk:
-     default:
-       enabled: true
-       index: "index_name" 
-       token: "${{SPLUNK_TOKEN}}"  
-     aem:
-       enabled: true
-       host: "${{AEM_PROXY_HOST}}"
-       port: 30443       
-     cdn:
-       enabled: true
-       host: "splunk-host.example.com"
-       port: 443     
-```
