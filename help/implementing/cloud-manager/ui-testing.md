@@ -5,9 +5,9 @@ exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
+source-git-commit: bb75e70fb83b63e12968f7cb01e6976e367ff70e
 workflow-type: tm+mt
-source-wordcount: '2610'
+source-wordcount: '2630'
 ht-degree: 0%
 
 ---
@@ -62,26 +62,26 @@ I det här avsnittet beskrivs de steg som krävs för att konfigurera gränssnit
 
 1. Utveckla dina testfall och [kör testerna lokalt](#run-ui-tests-locally).
 
-1. Arkivera koden i Cloud Manager-databasen och kör en Cloud Manager-pipeline.
+1. Implementera koden i Cloud Manager-databasen och kör en Cloud Manager-pipeline.
 
-## Bygga UI-tester {#building-ui-tests}
+## Skapar gränssnittstester {#building-ui-tests}
 
-Ett Maven-projekt genererar en Docker-byggkontext. Den här Docker-byggkontexten beskriver hur du skapar en Docker-avbildning som innehåller gränssnittstesterna, som Cloud Manager använder för att generera en Docker-bild som innehåller de faktiska gränssnittstesterna.
+Ett Maven-projekt genererar ett Docker-byggsammanhang. I denna Docker build-kontext beskrivs hur du skapar en Docker-bild som innehåller UI-testerna, som Cloud Manager använder för att generera en Docker-bild som innehåller de faktiska UI-testerna.
 
-I det här avsnittet beskrivs de steg som krävs för att lägga till ett UI-testprojekt på lagringsplatsen.
+I det här avsnittet beskrivs stegen som krävs för att lägga till ett UI-testprojekt i din databas.
 
 >[!TIP]
 >
->[AEM Project Archetype](https://github.com/adobe/aem-project-archetype) kan generera ett UI-testprojekt åt dig, vilket är kompatibelt med följande beskrivning, om du inte har några särskilda krav för programmeringsspråket.
+>Den [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) kan generera ett UI Tests-projekt åt dig, som överensstämmer med följande beskrivning, om du inte har särskilda krav på programmeringsspråket.
 
-### Skapa en kontext för Docker Build {#generate-docker-build-context}
+### Generera en Docker-byggkontext {#generate-docker-build-context}
 
-För att skapa en Docker-byggkontext behöver du en Maven-modul som:
+Om du vill generera en Docker-byggkontext behöver du en Maven-modul som:
 
-* Skapar ett arkiv som innehåller en `Dockerfile` och alla andra filer som behövs för att skapa Docker-bilden med dina tester.
-* Taggar arkivet med klassificeraren `ui-test-docker-context`.
+* Skapar ett arkiv som innehåller en `Dockerfile` och alla andra filer som behövs för att skapa Docker-avbildningen med dina tester.
+* Taggar arkivet med `ui-test-docker-context` klassificeraren.
 
-Det enklaste sättet att göra detta är att konfigurera plugin-programmet [Maven Assembly](https://maven.apache.org/plugins/maven-assembly-plugin/) för att skapa kontextarkivet för Docker-bygget och tilldela rätt klassificerare till det.
+Det enklaste sättet att göra detta är att konfigurera [plugin-programmet Maven Assembly för](https://maven.apache.org/plugins/maven-assembly-plugin/) att skapa Docker-byggkontextarkivet och tilldela rätt klassificerare till det.
 
 Du kan skapa gränssnittstester med olika tekniker och ramverk, men i det här avsnittet förutsätts att ditt projekt är utformat på ett sätt som liknar följande.
 
@@ -212,25 +212,31 @@ I det här avsnittet beskrivs de konventioner som Docker-bilden som innehåller 
 
 Följande miljövariabler skickas till din Docker-bild vid körning, beroende på ditt ramverk.
 
+>[!NOTE]
+>
+> Dessa värden ställs in automatiskt under pipeline-körning - du behöver inte ställa in dem manuellt som pipeline-variabler.
+
 | Variabel | Exempel | Beskrivning | Testramverk |
-|----------------------------|----------------------------------|---------------------------------------------------------------------------------------------------|---------------------|
+|----------------------------|----------------------------------|----------------------------------------------------------------------------------------------------|---------------------|
 | `SELENIUM_BASE_URL` | `http://my-ip:4444` | URL för Selenium-servern | Endast selen |
 | `SELENIUM_BROWSER` | `chrome` | Webbläsarimplementeringen som används av Selenium Server | Endast selen |
 | `AEM_AUTHOR_URL` | `http://my-ip:4502/context-path` | URL:en för AEM författarinstans | Alla |
-| `AEM_AUTHOR_USERNAME` | `admin` | Användarnamnet som ska loggas in i AEM författarinstans | Alla |
+| `AEM_AUTHOR_USERNAME` | `admin` | Användarnamnet för att logga in på AEM författarinstans | Alla |
 | `AEM_AUTHOR_PASSWORD` | `admin` | Lösenordet för att logga in på AEM författarinstans | Alla |
-| `AEM_PUBLISH_URL` | `http://my-ip:4503/context-path` | URL:en för AEM publiceringsinstans | Alla |
-| `AEM_PUBLISH_USERNAME` | `admin` | Användarnamnet som ska loggas in på AEM publiceringsinstans | Alla |
-| `AEM_PUBLISH_PASSWORD` | `admin` | Lösenordet för att logga in på AEM publiceringsinstans | Alla |
+| `AEM_PUBLISH_URL` | `http://my-ip:4503/context-path` | URL:en för AEM publiceringsinstans | Alla * |
+| `AEM_PUBLISH_USERNAME` | `admin` | Användarnamnet som ska loggas in på AEM publiceringsinstans | Alla * |
+| `AEM_PUBLISH_PASSWORD` | `admin` | Lösenordet för att logga in på AEM publiceringsinstans | Alla * |
 | `REPORTS_PATH` | `/usr/src/app/reports` | Sökvägen där XML-rapporten för testresultaten måste sparas | Alla |
 | `UPLOAD_URL` | `http://upload-host:9090/upload` | URL:en som filen måste laddas upp till för att göra dem tillgängliga för testramverket | Alla |
 | `PROXY_HOST` | `proxy-host` | Värdnamnet för den interna HTTP-proxy som ska användas av testramverket | Alla utom selen |
-| `PROXY_HTTPS_PORT` | `8071` | Proxyserverns lyssnarport för HTTPS-anslutningar (kan vara tom) | Alla utom selen |
+| `PROXY_HTTPS_PORT` | `8071` | Proxyserverns lyssningsport för HTTPS-anslutningar (kan vara tom) | Alla utom selen |
 | `PROXY_HTTP_PORT` | `8070` | Proxyserverns lyssnarport för HTTP-anslutningar (kan vara tom) | Alla utom selen |
 | `PROXY_CA_PATH` | `/path/to/root_ca.pem` | Sökvägen till certifikatutfärdarcertifikatet som ska användas av testramverket | Alla utom selen |
 | `PROXY_OBSERVABILITY_PORT` | `8081` | HTTP-hälsokontrollporten för proxyservern | Alla utom selen |
 | `PROXY_RETRY_ATTEMPTS` | `12` | Föreslaget antal nya försök i väntan på att proxyservern ska vara klar | Alla utom selen |
 | `PROXY_RETRY_DELAY` | `5` | Föreslagen fördröjning mellan nya försök i väntan på proxyserverberedskap | Alla utom selen |
+
+`* these values will be empty if there is no publish instance`
 
 Provexemplen från Adobe ger hjälpfunktioner för att komma åt konfigurationsparametrarna:
 
@@ -277,7 +283,7 @@ Om Docker-bilden implementeras med andra programmeringsspråk eller testkörare 
 
 >[!NOTE]
 >
->Detta avsnitt gäller endast när Selenium är den valda testinfrastrukturen.
+>Det här avsnittet gäller endast när Selen är den valda testinfrastrukturen.
 
 ### Väntar på att Selenium ska vara klart {#waiting-for-selenium}
 
@@ -292,20 +298,20 @@ Adobe UI-testexemplen hanterar detta med skriptet `wait-for-grid.sh`, som körs 
 
 ### Hämta skärmbilder och video {#capture-screenshots}
 
-Docker-avbildningen kan generera ytterligare testutdata (till exempel skärmbilder eller videor) och spara dem i den sökväg som anges av miljövariabeln `REPORTS_PATH`. Alla filer som `REPORTS_PATH` finns nedan ingår i arkivet för testresultat.
+Docker-bilden kan generera ytterligare testutdata (till exempel skärmbilder eller videoklipp) och spara dem i den sökväg som anges av miljövariabeln `REPORTS_PATH`. Alla filer som hittas under `REPORTS_PATH` inkluderas i testresultatarkivet.
 
-De testexempel som tillhandahålls av Adobe skapar som standard skärmbilder för alla misslyckade tester.
+Testexemplen från Adobe skapar som standard skärmbilder för misslyckade tester.
 
-Du kan använda hjälpfunktionerna för att skapa skärmdumpar genom dina tester.
+Du kan använda hjälpfunktionerna för att skapa skärmbilder genom testerna.
 
 * JavaScript: [kommandot takeScreenshot](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/ui.tests/test-module/lib/commons.js)
 * Java: [Kommandon](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-selenium-webdriver/test-module/src/main/java/com/adobe/cq/cloud/testing/ui/java/ui/tests/lib/Commands.java)
 
-Om ett testresultatarkiv skapas under en testkörning av ett användargränssnitt kan du hämta det från Cloud Manager med knappen `Download Details` under steget [**Anpassad användargränssnittstestning**](/help/implementing/cloud-manager/deploy-code.md).
+Om ett testresultatarkiv skapas under en körning av ett gränssnittstest kan du hämta det från Cloud Manager med hjälp av knappen `Download Details` under [**steget](/help/implementing/cloud-manager/deploy-code.md) för anpassad gränssnittstestning**.
 
-### Överför filer {#upload-files}
+### Ladda upp filer {#upload-files}
 
-Testerna ibland måste överföra filer till det program som testas. För att driftsättningen av Selenium ska vara flexibel i förhållande till dina tester går det inte att överföra en resurs direkt till Selenium. Om du vill överföra en fil måste du i stället utföra följande steg.
+Tester måste ibland ladda upp filer till det program som testas. För att hålla distributionen av Selenium flexibel i förhållande till dina tester går det inte att ladda upp en tillgång direkt till Selenium. Om du vill överföra en fil måste du i stället utföra följande steg.
 
 1. Överför filen på den URL som anges av miljövariabeln `UPLOAD_URL`.
    * Överföringen måste utföras i en POST med ett multipart-formulär.
@@ -339,10 +345,10 @@ Om det inte är tomt måste entrypoint-skriptet:
 2. Ange det certifikatutfärdarcertifikat som ska användas vid anslutning till HTTP-proxyn. Dess plats anges av variabeln `PROXY_CA_PATH`.
    * Detta kan uppnås genom att exportera miljövariabeln `NODE_EXTRA_CA_CERTS`.
 3. Vänta tills HTTP-proxyn är klar.
-   * För att kontrollera beredskapen används miljövariablerna `PROXY_HOST`, `PROXY_OBSERVABILITY_PORT`, `PROXY_RETRY_ATTEMPTS` och `PROXY_RETRY_DELAY` kan användas.
-   * Du kan kontrollera med hjälp av en cURL-begäran och se till att installera cURL i din `Dockerfile`.
+   * Miljövariablerna `PROXY_HOST`, `PROXY_OBSERVABILITY_PORT`, `PROXY_RETRY_ATTEMPTS` och `PROXY_RETRY_DELAY` kan användas för att kontrollera beredskapen.
+   * Du kan kontrollera med en cURL-begäran och se till att installera cURL i `Dockerfile`.
 
-Ett exempel på implementering finns i Cypress Sample Test Module&#39;s Entrypoint på [GitHub](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-cypress/test-module/run.sh).
+Ett exempel på implementering finns i Insättningspunkten för provmodulen Cypress på [GitHub](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-cypress/test-module/run.sh).
 
 ## Uppspelningsspecifik information
 
@@ -462,15 +468,15 @@ Innan gränssnittstester aktiveras i en Cloud Manager-pipeline bör gränssnitts
 
 >[!NOTE]
 >
->Loggfilerna lagras i mappen i databasen `target/` .
+>Loggfilerna lagras i mappen `target/` i databasen.
 >
->Mer information finns i [Databas för](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-cypress/test-module/README.md) AEM testprover.
+>Mer information finns i [AEM Test Samples-databasen](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-cypress/test-module/README.md).
 
-### Exempel på JavaScript WebdriverIO-test {#javascript-sample}
+### JavaScript WebdriverIO-testexempel {#javascript-sample}
 
 1. Öppna ett skal och navigera till `ui.tests` mappen i ditt repository
 
-1. Kör nedanstående kommando för att starta testerna med Maven
+1. Kör kommandot nedan för att starta testerna med Maven
 
    ```shell
    mvn verify -Pui-tests-local-execution \
@@ -485,8 +491,8 @@ Innan gränssnittstester aktiveras i en Cloud Manager-pipeline bör gränssnitts
 >[!NOTE]
 >
 >* Detta startar en fristående seleninstans och kör testerna mot den.
->* Loggfilerna lagras i mappen `target/reports` i databasen
->* Du måste se till att datorn kör den senaste Chrome-versionen när testet automatiskt hämtar den senaste versionen av ChromeDriver för testning.
+>* Loggfilerna lagras i mappen i `target/reports` din databas
+>* Du måste se till att din maskin kör den senaste Chrome-versionen eftersom testet laddar ner den senaste versionen av ChromeDriver automatiskt för testning.
 >
 >Mer information finns i [AEM Project Archetype-databas](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/ui.tests/README.md).
 
