@@ -1,12 +1,12 @@
 ---
 title: Real Use Monitoring for AEM as a Cloud Service
-description: Lär dig hur du använder Real Use Monitoring (RUM) för att hämta in och analysera den digitala användarupplevelsen för en webbplats eller tillämpning i realtid.
+description: Läs om Real Use Monitoring (RUM), en automatiserad tjänst som gör det möjligt att övervaka datainsamlingen på klientsidan.
 exl-id: 91fe9454-3dde-476a-843e-0e64f6f73aaf
 feature: Administering
 role: Admin
-source-git-commit: c0b86950e36b936d7d471b5bf7b671df7db5d317
+source-git-commit: ed52bac52618e23b9bcbe7c6767501c6711aff00
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1012'
 ht-degree: 0%
 
 ---
@@ -23,27 +23,21 @@ ht-degree: 0%
 
 ## Ökning {#overview}
 
-Tjänsten RUM (Real Use Monitoring) är en teknik för prestandaövervakning som samlar in och analyserar de digitala användarupplevelserna för en webbplats eller tillämpning i realtid. Den ger synlighet i ett webbprograms realtidsprestanda och ger djupare insikter i slutanvändarens upplevelse. Tjänsten fokuserar på att optimera prestanda genom att övervaka webbplatsens engagemang, snarare än användarna själva.
-
-Med RUM spåras nyckeltal från det att URL:en startas tills begäran skickas tillbaka till webbläsaren. Det hjälper utvecklare att förbättra programmet så att det blir enkelt att använda för slutanvändarna.
-
->[!INFO]
->
->&quot;Real User Monitoring&quot; har ändrats till &quot;Real Use Monitoring&quot; eftersom det bättre återspeglar tjänstens verkliga kärna.
+Tjänsten RUM (Real Use Monitoring) är en teknik för prestandaövervakning som övervakar klienttrafiken på en webbplats eller ett program i realtid. Den här tjänsten fokuserar på att samla in statistik och data som är viktiga för att optimera prestandan genom att övervaka webbplatsengagemang, snarare än användarna själva. Med RUM spåras nyckeltal från det att URL:en startas tills begäran skickas tillbaka till webbläsaren.
 
 ## Vem kan utnyttja en tjänst för övervakning av verkligt bruk? {#who-can-benefit-from-rum-service}
 
-AEM har utvecklat RUM för att hjälpa kunder och Adobe att förstå hur besökarna interagerar med AEM webbplatser. RUM kan användas för att diagnostisera prestandaproblem och mäta hur effektiva experimenten är. RUM bevarar besökarnas integritet genom stickprov - endast en liten del av alla sidvisningar övervakas - och ingen personligt identifierbar information samlas in.
+AEM har utvecklat Real Use Monitoring (Reell användarövervakning) som hjälper Adobe att förstå hur slutanvändarna interagerar med AEM webbplatser. Real Use Monitoring (Övervakning av verklig användning) diagnostiserar prestandaproblem och mäter effekten av experiment. Övervakning av faktisk användning bevarar besökarnas integritet genom stickprov - endast en liten del av alla sidvisningar övervakas - och ingen personligt identifierbar information samlas in.
 
 ## Övervakningstjänst och sekretess för användning i realtid {#rum-service-and-privacy}
 
-Tjänsten för övervakning av verkligt bruk i AEM är utformad för att bevara besökarnas sekretess och minimera datainsamlingen. Som besökare innebär det att den webbplats som du besöker eller som är tillgänglig för Adobe inte samlar in några personuppgifter.
+Tjänsten för övervakning av verkligt bruk i AEM bevarar besökarnas integritet och minimerar datainsamlingen. Som besökare innebär det att den webbplats som du besöker eller som är tillgänglig för Adobe inte samlar in några personuppgifter.
 
 Som webbplatsoperatör krävs inget ytterligare deltagande för att aktivera övervakning via den här funktionen. Det finns inga ytterligare popup-formulär eller medgivandeformulär som slutanvändarna kan godkänna för aktivering av RUM.
 
 ## Datainsamling för övervakning av realanvändning {#rum-service-data-sampling}
 
-Traditionella webbanalyslösningar försöker samla in data om varje enskild besökare. AEM RUM-tjänst hämtar bara information från en liten del av sidvyerna. Tjänsten är avsedd att samplas och anonymiseras i stället för att ersättas för analyser. Som standard har sidorna 1:100 samplingsförhållande. Webbplatsoperatorer kan för närvarande inte öka eller minska samplingsfrekvensen. För att beräkna den totala trafiken korrekt samlas data in från 1 för varje 100 sidvy, vilket ger en tillförlitlig uppskattning av den totala trafiken.
+Traditionella webbanalyslösningar försöker samla in data om varje enskild besökare. AEM Real Use Monitoring (RUM) hämtar endast information från en liten del av sidvyerna. Tjänsten är avsedd att samplas och anonymiseras i stället för att ersättas för analyser. Som standard har sidorna 1:100 samplingsförhållande. Webbplatsoperatorer kan för närvarande inte öka eller minska samplingsfrekvensen. För att beräkna den totala trafiken korrekt samlas data in från 1 för varje 100 sidvy, vilket ger en tillförlitlig uppskattning av den totala trafiken.
 
 När man beslutar om uppgifterna ska samlas in, görs det i sidvy per sida och det blir praktiskt taget omöjligt att spåra interaktioner mellan flera sidor. RUM har som standard inget koncept för besökare eller sessioner, utan bara för sidvisningar.
 
@@ -65,31 +59,31 @@ Tjänsten för övervakning av faktisk användning är utformad för att förhin
 
 ## Så fungerar övervakning av riktig användning för en kund {#how-rum-works-for-a-customer}
 
-Övervakning av faktisk användning övervakar automatiskt klienttrafiken för att ge dig värdefulla insikter. Som Adobe-kund behöver du inte vidta några ytterligare åtgärder eftersom den här tjänsten är sömlöst integrerad i din befintliga konfiguration. Med lanseringen av General Availability (GA) drar du automatiskt nytta av den här nya funktionen.
+Real Use Monitoring övervakar automatiskt trafiken på klientsidan. Som Adobe-kund behöver du inte vidta några ytterligare åtgärder eftersom den här tjänsten är sömlöst integrerad i din befintliga konfiguration. Med RUM (Real Use Monitoring) som General Availability (GA) drar du automatiskt nytta av den här nya funktionen. Med tjänsten för övervakning av faktisk användning visas inga mätvärden idag via ett visualiseringsverktyg. Vi arbetar på att leverera den här funktionen till dig så snart som möjligt.
 
 <!-- Alexandru: hiding temporarily, until we figure out where this needs to be linked to 
 
 If you wish to leverage more insights with this new feature to optimize your digital experiences effortlessly, please see here (link to Row 99). -->
 
-## Hur data från övervakningstjänsten för verkligt bruk används {#how-rum-service-data-is-being-used}
+## Hur Adobe använder övervakning av faktisk användning {#how-rum-data-is-being-used}
 
-RUM-data är fördelaktiga för följande syften:
+Data från övervakning av faktisk användning används för följande syften:
 
 * Identifiera och åtgärda prestandamässiga flaskhalsar för kundsajter
-* För att effektivisera automatisk trafiksökning med sidvyer.
 * För att förstå hur AEM interagerar med andra skript (till exempel analyser, målinriktning eller externa bibliotek) på samma sida, ökar kompatibiliteten.
+<!--
+## Limitations and understanding variance in page views and performance metrics {#limitations-and-understanding-variance-in-page-views-and-performance-metrics}
 
-## Begränsningar och förståelse av variationer i sidvisningar och prestandamått {#limitations-and-understanding-variance-in-page-views-and-performance-metrics}
+Here are key considerations for customers to keep in mind when interpreting their RUM data:
 
-När du analyserar RUM-data kan det finnas skillnader i sidvisningar och andra prestandamått. Dessa avvikelser kan tillskrivas flera faktorer som är förenade med realtidsövervakning på klientsidan. Här är några viktiga saker som kunderna bör tänka på när de tolkar sina RUM-data:
+1. **Tracker blockers**
 
-1. **Spårarblockerare**
+   * End-users employing tracker blockers or privacy extensions can impede RUM data collection, as these tools restrict the tracking scripts' execution. This restriction may lead to underreported page views and user interactions, creating a discrepancy between actual site activity and the data captured by RUM.
 
-   * Slutanvändare som använder blockerare för spårning eller tillägg för sekretess kan förhindra insamling av RUM-data, eftersom dessa verktyg begränsar körningen av spårningsskript. Begränsningen kan leda till underrapporterade sidvisningar och användarinteraktioner, vilket skapar en diskrepans mellan faktisk webbplatsaktivitet och data som samlats in av RUM.
+1. **Limitations in capturing headless API/JSON calls**
 
-1. **Begränsningar i hämtning av headless API/JSON-anrop**
-
-   * RUM-datatjänsten fokuserar på klientupplevelsen och fångar inte upp backend-API:t eller JSON-anrop som gjorts från en AEM headless-app för tillfället. Om dessa anrop utesluts från RUM-tjänstdata skapas avvikelser från innehållsförfrågningar som mäts med CDN Analytics.
+   * RUM data service focuses on the client-side experience and doesn't capture the backend API or JSON calls made from a non-AEM headless app at this time. The exclusion of these calls from RUM service data creates variances from the content requests measured by CDN Analytics.
+-->
 
 ## Vanliga frågor {#faq}
 
@@ -99,7 +93,7 @@ När du analyserar RUM-data kan det finnas skillnader i sidvisningar och andra p
    Yes.
 -->
 
-1. **Samlas interaktion med nästa färg, tid till första byte och första innehållsanpassade målning in i webbinarierna?**
+1. **Samlas värdena&quot;Interaktion med nästa färg&quot;,&quot;Tid till första byte&quot; och&quot;Första innehållsanpassade målning&quot;?**
 
    Interaktion med nästa färg (INP) och TTFB (Time To First Byte) samlas in.  Den första innehållsmässiga målningen samlas inte in just nu.
 
@@ -113,6 +107,6 @@ När du analyserar RUM-data kan det finnas skillnader i sidvisningar och andra p
 
 1. **Hur avanmäler jag mig?**
 
-   Adobe rekommenderar att man använder Real Use Monitoring (RUM) på grund av dess stora fördelar och att man kan optimera de digitala upplevelserna. Det kan ge värdefulla insikter som kan förbättra webbplatsens prestanda. Tjänsten är utformad för att vara sömlös och påverkar inte webbplatsens prestanda.
+   Adobe rekommenderar att man använder Real Use Monitoring (RUM) på grund av dess stora fördelar och att det kommer att göra det möjligt för Adobe att optimera de digitala upplevelserna genom att förbättra webbplatsens prestanda. Tjänsten är utformad för att vara sömlös och påverkar inte webbplatsens prestanda.
 
-   Om du väljer bort något missar du dessa insikter. Om du råkar ut för några problem kontaktar du Adobe Support.
+   Om du väljer bort detta kan det innebära att du missar en chans att förbättra trafikengagemanget på din webbplats. Om du råkar ut för några problem kontaktar du Adobe Support.
