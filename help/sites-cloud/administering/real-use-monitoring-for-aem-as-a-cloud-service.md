@@ -4,9 +4,9 @@ description: Läs om Real Use Monitoring (RUM), en automatiserad tjänst som gö
 exl-id: 91fe9454-3dde-476a-843e-0e64f6f73aaf
 feature: Administering
 role: Admin
-source-git-commit: ed52bac52618e23b9bcbe7c6767501c6711aff00
+source-git-commit: fbc3358f1be3ae7ce3142cdc84815d304a2d6c38
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1009'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Tjänsten RUM (Real Use Monitoring) är en teknik för prestandaövervakning som
 
 ## Vem kan utnyttja en tjänst för övervakning av verkligt bruk? {#who-can-benefit-from-rum-service}
 
-AEM har utvecklat Real Use Monitoring (Reell användarövervakning) som hjälper Adobe att förstå hur slutanvändarna interagerar med AEM webbplatser. Real Use Monitoring (Övervakning av verklig användning) diagnostiserar prestandaproblem och mäter effekten av experiment. Övervakning av faktisk användning bevarar besökarnas integritet genom stickprov - endast en liten del av alla sidvisningar övervakas - och ingen personligt identifierbar information samlas in.
+Övervakning av faktisk användning hjälper kunder och Adobe att förstå hur slutanvändarna interagerar med AEM webbplatser. Real Use Monitoring (Övervakning av verklig användning) diagnostiserar prestandaproblem och mäter effekten av experiment. Övervakning av faktisk användning bevarar besökarnas integritet genom stickprov - endast en liten del av alla sidvisningar övervakas - och ingen personligt identifierbar information samlas in.
 
 ## Övervakningstjänst och sekretess för användning i realtid {#rum-service-and-privacy}
 
@@ -59,7 +59,7 @@ Tjänsten för övervakning av faktisk användning är utformad för att förhin
 
 ## Så fungerar övervakning av riktig användning för en kund {#how-rum-works-for-a-customer}
 
-Real Use Monitoring övervakar automatiskt trafiken på klientsidan. Som Adobe-kund behöver du inte vidta några ytterligare åtgärder eftersom den här tjänsten är sömlöst integrerad i din befintliga konfiguration. Med RUM (Real Use Monitoring) som General Availability (GA) drar du automatiskt nytta av den här nya funktionen. Med tjänsten för övervakning av faktisk användning visas inga mätvärden idag via ett visualiseringsverktyg. Vi arbetar på att leverera den här funktionen till dig så snart som möjligt.
+Real Use Monitoring övervakar automatiskt trafiken på klientsidan. Som Adobe-kund behöver du inte vidta några ytterligare åtgärder eftersom den här tjänsten är sömlöst integrerad i din befintliga konfiguration. Med tjänsten för övervakning av faktisk användning (RUM) allmänt tillgänglig drar du automatiskt nytta av den här nya funktionen. Tjänsten för övervakning av faktisk användning visar inte några kundrelaterade mätvärden idag för övervakning. Vi arbetar på att leverera den här funktionen till dig så snart som möjligt.
 
 <!-- Alexandru: hiding temporarily, until we figure out where this needs to be linked to 
 
