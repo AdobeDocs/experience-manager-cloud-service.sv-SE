@@ -5,9 +5,9 @@ exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: dd696580758e7ab9a5427d47fda4275f9ad7997f
+source-git-commit: f45de13049f78f97b256235d9395695cb531c40d
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1490'
 ht-degree: 0%
 
 ---
@@ -21,15 +21,15 @@ Lär dig hur du lägger till ett anpassat domännamn med Cloud Manager.
 
 Uppfyll dessa krav innan du lägger till ett anpassat domännamn i Cloud Manager.
 
-* Du måste ha lagt till ett domän-SSL-certifikat för domänen som du vill lägga till innan du lägger till ett anpassat domännamn enligt beskrivningen i dokumentet [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md).
+* Du måste ha lagt till ett domän-SSL-certifikat för domänen som du vill lägga till innan du lägger till ett anpassat domännamn enligt beskrivningen i dokumentet [Lägg till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md).
 * Du måste ha rollen **Affärsägare** eller **Distributionshanterare** för att lägga till ett anpassat domännamn i Cloud Manager.
-* Använd det snabba nätverket för CDN.
+* Använd snabbast eller något annat CDN.
 
 >[!IMPORTANT]
 >
 >Även om du använder ett CDN som inte är Adobe måste du lägga till domänen i Cloud Manager.
 
-## Var ska jag lägga till anpassade domännamn {#}?
+## Var ska jag lägga till egna domännamn? {#where-to-add-cdn}
 
 Du kan lägga till ett eget domännamn från två platser i Cloud Manager:
 
@@ -68,7 +68,7 @@ Inkludera inte `http://`, `https://` eller mellanslag när du anger i din domän
 
    | Om du valde certifikattypen | Beskrivning |
    | --- | ---  |
-   | Adobe-hanterat certifikat | Slutför de [Adobe hanterade certifikatstegen](#abobe-managed-cert-steps) innan du fortsätter till nästa steg. |
+   | Adobe-hanterat certifikat | Slutför de [Adobe hanterade certifikatstegen](#adobe-managed-cert-steps) innan du fortsätter till nästa steg. |
    | Kundhanterat certifikat | Slutför de [kundhanterade certifikatstegen](#customer-managed-cert-steps) innan du fortsätter till nästa steg. |
 
 1. Klicka på **Verifiera**.
@@ -78,7 +78,6 @@ Inkludera inte `http://`, `https://` eller mellanslag när du anger i din domän
    >[!NOTE]
    >
    >Om du använder ett självhanterat SSL-certifikat och en självhanterad CDN-provider kan du hoppa över det här steget och gå direkt till [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md) när det är klart.
-
 
 
 ### Certifikatsteg som hanteras av Adobe {#adobe-managed-cert-steps}
@@ -97,7 +96,7 @@ Om du vill konfigurera de här inställningarna måste du kontrollera om en `CNA
 >
 >För CDN:er som hanteras av Adobe tillåts bara webbplatser med ACME-validering när DV-certifikat (Domain Validation) används.
 
-#### Krav {#dv-requirements}
+#### Krav {#adobe-managed-cert-dv-requirements}
 
 Uppfyll dessa krav innan du konfigurerar DNS-posterna.
 
@@ -105,7 +104,7 @@ Uppfyll dessa krav innan du konfigurerar DNS-posterna.
 * Kan redigera DNS-posterna för organisationens domän eller kontakta lämplig person som kan göra det.
 * Du måste redan ha verifierat ditt konfigurerade anpassade domännamn enligt beskrivningen i dokumentet [Kontrollera domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).
 
-#### CNAME-post {#cname-record}
+#### CNAME-post {#adobe-managed-cert-cname-record}
 
 Ett kanoniskt namn eller en CNAME-post är en typ av DNS-post som mappar ett aliasnamn till ett sant eller kanoniskt domännamn. CNAME-poster används vanligtvis för att mappa en underdomän som `www.example.com` till den domän som är värd för den underdomänens innehåll.
 
@@ -115,7 +114,7 @@ Logga in på din DNS-tjänstleverantör och skapa en `CNAME`-post för att peka 
 | --- | --- |
 | `www.customdomain.com` | `cdn.adobeaemcloud.com` |
 
-#### APEX-post {#apex-record}
+#### APEX-post {#adobe-managed-cert-apex-record}
 
 En domän är en anpassad domän som inte innehåller någon underdomän, till exempel `example.com`. En huvuddomän har konfigurerats med en `A`-, `ALIAS`- eller `ANAME`-post via din DNS-leverantör. Apex-domäner måste peka på specifika IP-adresser.
 
@@ -132,7 +131,6 @@ Lägg till följande `A`-poster i domänens DNS-inställningar via din domänlev
 * `A record for domain @ pointing to IP 151.101.195.10`
 
 
-
 ### Certifikatsteg som hanteras av kund {#customer-managed-cert-steps}
 
 Om du valde certifikattypen *Kundhanterat certifikat* utför du följande steg i dialogrutan **Verifiera domän**.
@@ -145,7 +143,7 @@ En textpost (kallas även TXT-post) är en typ av resurspost i DNS (Domain Name 
 
 Cloud Manager använder en specifik TXT-post för att godkänna att en domän är värd för en CDN-tjänst. Skapa en DNS TXT-post i zonen som tillåter Cloud Manager att distribuera CDN-tjänsten med den anpassade domänen och associera den med serverdelstjänsten. Den här associationen står helt under din kontroll och godkänner att Cloud Manager skickar innehåll från tjänsten till en domän. Detta tillstånd får beviljas och återkallas. TXT-posten är specifik för domänen och Cloud Manager-miljön.
 
-## Krav {#requirements-customer-cert}
+#### Krav {#customer-managed-cert-requirements}
 
 Uppfyll dessa krav innan du lägger till en TXT-post.
 
@@ -153,7 +151,7 @@ Uppfyll dessa krav innan du lägger till en TXT-post.
 * Kan redigera DNS-posterna för organisationens domän eller kontakta lämplig person som kan göra det.
 * Lägg först till ett anpassat domännamn enligt beskrivningen ovan i den här artikeln.
 
-## Lägg till en TXT-post för verifiering {#verification}
+#### Lägg till en TXT-post för verifiering {#customer-managed-cert-verification}
 
 1. I dialogrutan **Verifiera domän** visar Cloud Manager namnet och TXT-värdet som ska användas för verifiering. Kopiera det här värdet.
 
@@ -170,7 +168,7 @@ Uppfyll dessa krav innan du lägger till en TXT-post.
 
 1. Spara TXT-posten till domänvärden.
 
-## Verifiera TXT-post {#verify}
+#### Verifiera TXT-post {#customer-managed-cert-verify}
 
 När du är klar kan du verifiera resultatet genom att köra följande kommando.
 

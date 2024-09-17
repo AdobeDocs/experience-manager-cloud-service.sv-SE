@@ -5,7 +5,7 @@ exl-id: 6d33c3c5-258c-4c9c-90c2-d566eaeb14c0
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 505e0887124472693216fee2f0a3e960591b5ae5
+source-git-commit: 5dc3d571c553f2972295172c7a6d0249be3285b8
 workflow-type: tm+mt
 source-wordcount: '1950'
 ht-degree: 0%
@@ -47,7 +47,7 @@ Granskningar körs som en del av pipeline. Granskningar kan också [köras på b
 
 Experience Audit är tillgängligt som standard för produktionspipelines. Den kan även aktiveras för utveckling av rörledningar i full hög och frontendspikar. I samtliga fall måste du definiera vilka innehållssökvägar som utvärderas under pipeline-körningen.
 
-1. Beroende på vilken typ av pipeline du vill konfigurera kan du följa anvisningarna för att:
+1. Beroende på vilken typ av pipeline du vill konfigurera gör du något av följande:
 
    * Lägg till en ny [produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) för att definiera sökvägarna som du vill att granskningen ska utvärdera.
    * Lägg till en ny [icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) om du vill aktivera granskningen för en frontendpipeline eller en fullständig utvecklingspipeline.
@@ -176,7 +176,7 @@ Klicka på länken **se sidor** i informationsvyn för att visa de sidor som rek
 
 ![Sidor för rekommendationsinformationen](assets/experience-audit-details-pages.png)
 
-##### Inlästa sidor {#scanned-pages}
+##### Skannade sidor {#scanned-pages}
 
 Avsnittet **Skannade sidor** innehåller information om bakgrundsmusik för alla skannade sidor. Använd knapparna **Föregående** och **Nästa** för att bläddra igenom resultaten och välj hur många som ska visas som sidnumrering.
 
@@ -218,7 +218,7 @@ Du kan filtrera poängdiagrammet baserat på utlösartypen med hjälp av väljar
 >
 >En genomsökning på begäran kan bara startas om miljön inte tas bort och det inte finns några andra väntande genomsökningar i samma miljö.
 
-## Problem med Experience Audit Encounters {#issues}
+## Problem med Experience Audit {#issues}
 
 Om [sidorna som du konfigurerade](#configuration) att granskas inte var tillgängliga eller om det fanns andra fel i granskningen, speglar Experience Audit detta faktum.
 
@@ -236,13 +236,12 @@ En del orsaker till att sidorna kanske inte är tillgängliga är:
 * Sidan finns inte.
 * Sidan omdirigeras som kräver annan autentisering än grundläggande.
 * Ett internt fel har inträffat.
-* osv.
 
 >[!TIP]
 >
 >[Om du får åtkomst till rå-rapporter](#scanned-pages) för en sida kan du få information om varför det inte gick att granska sidan.
 
-## Allmänna tips för prestanda {#performance-tips}
+## Allmänna tips {#performance-tips}
 
 Två av de vanligaste effektproblemen som är enkla att åtgärda är CLS (Cumulative Layout Shifts) och LCP (Largest Contentful Paint).
 

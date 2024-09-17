@@ -1,51 +1,56 @@
 ---
-title: SLA-rapportering
-description: Lär dig hur du kan se hur din AEM fungerar i förhållande till det avtalade serviceavtalet (SLA).
+title: SLA Reports
+description: Lär dig hur du kan se hur din AEM fungerar i förhållande till det avtalade servicenivåavtalet.
 exl-id: 03932415-a029-4703-b44a-f86a87edb328
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: c46b6df488722fe750e524ad2bb383f25bf00b0f
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
 
 
-# SLA-rapportering {#sla-reporting}
+# SLA Reports {#sla-reporting}
 
-Lär dig hur du kan se hur din AEM fungerar i förhållande till det avtalade serviceavtalet (SLA).
+Lär dig hur du kan se hur din AEM presterar i förhållande till den avtalade SLA (servicenivåavtal).
 
-## Introduktion {#introduction}
+## Visa en SLA-rapport {#introduction}
 
-SLA-rapportdata är tillgängliga för alla produktionsprogram via fliken **Rapporter**. Följ de här stegen för att komma åt.
+SLA rapportdata spårar resultatvärden för två produktionsnivåer: Författarnivå och Publish Tier.
+
+Raddiagrammet för ett valt år innehåller datapunkter för varje månad från januari till december. Följande mätvärden spåras.
+
+| Spårat mått | Linjefärg | Beskrivning |
+| --- | --- | --- |
+| Författarnivå faktisk | Ljusgrön | Den uppmätta drifttiden för tillverkningsutvecklarens fasfactoringincidenter som orsakas av Adobe eller Adobe. |
+| Författaravtal | Mörk blå | SLA som definieras i ditt avtal med Adobe för Author Tier. |
+| Publish Tier Actual | Orange | Den uppmätta drifttiden för produktionen av Publish Tier, factoringincidenter som orsakas av Adobe eller Adobe. |
+| Publish Tier Contract | Röd | SLA som definieras i ditt avtal med Adobe för Publish Tier. |
+
+**Så här visar du en SLA-rapport:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
 1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
 
-1. Navigera till fliken **Rapporter** på sidan **Översikt** med hjälp av sidnavigeringspanelen.
+1. Klicka på **Rapporter** på sidan **Programöversikt** i den vänstra navigeringspanelen.
 
-1. Klicka på året du vill se.
+1. Klicka på **SLA Reports**.
 
-![Exempel på SLA-diagram](assets/sla-reporting-1.png)
+   ![SLA rapportlinjediagram](/help/implementing/cloud-manager/assets/cm-sla-report.png)
 
-Rulla markören över en datapunkt för att visa specifika värden för den punkten.
+1. Klicka på året när du vill se ett linjediagram över SLA-data.
 
-![Visar detaljerade data](assets/sla-reporting-b.png)
+1. (Valfritt) Gör något av följande:
 
-## SLA-mått {#sla-metrics}
+   * Rulla markören över en datapunkt i linjediagrammet för att visa specifika värden för den punkten.
+   * Under linjediagrammets årtal klickar du på ikonen Hämta för att spara en PNG-bildfil av linjediagrammet.
+   * Klicka på ett måttnamn om du bara vill se måttets data. Du kan också trycka på `Shift` på tangentbordet när du markerar eller avmarkerar ett eller flera mätnamn.
 
-Diagrammet för det valda året innehåller flera datauppsättningar.
-
-* **Publish-nivåkontrakt** - Detta är det SLA som definieras i ditt kontrakt med Adobe för publiceringsnivån.
-
-* **Faktisk Publish-nivå** - Detta är den uppmätta drifttiden för faktoriseringsincidenter på produktionsnivå som orsakas av Adobe eller Adobe.
-
-* **Författarnivåkontrakt** - Detta är det SLA som definieras i ditt kontrakt med Adobe för författarnivån.
-
-* **Författarnivå faktisk** - Detta är den uppmätta drifttiden för produktionsförfattarens nivåfactoringincidenter som orsakas av Adobe eller Adobe.
+   ![Visar detaljerade data](/help/implementing/cloud-manager/assets/cm-sla-download.png)
 
 ## Händelseanalys {#event-analysis}
 
@@ -55,13 +60,13 @@ Var och en av incidenterna har ett tidsintervall, en orsak och en uppsättning k
 
 ![Exempel på händelseanalys](assets/sla-reporting-c.png)
 
-## Uppdateringsintervall {#refresh}
+## Uppdateringsintervall för SLA-rapporter {#refresh}
 
-SLA-rapporter ger er insikt i hur väl er AEM produktionsmiljö fungerar och är aktuell, men inte direkt. Generering av SLA-rapporter sker månadsvis och genereras för nya program som markerats som Produktion förra månaden. Det är inte omedelbart. På grund av den här fördröjningen bör du tänka på följande när du granskar din SLA-rapport:
+SLA rapportering ger er insikt i hur väl er AEM produktionsmiljö fungerar och är aktuell, men inte direkt. SLA rapportgenerering sker månadsvis och genereras för nya program som markerats som `Production previous month`. Det är inte omedelbart. På grund av den här fördröjningen bör du tänka på följande när du granskar din SLA-rapport:
 
-* Det rapporterade SLA-avtalet är det som fanns i början av månaden, även om SLA ändrades under den månaden.
-* Om det inte fanns något SLA i början av månaden på grund av att programmet inte existerade då gäller det SLA som existerade den dag programmet skapades.
+* Den rapporterade SLA-versionen är den som fanns i början av månaden, även om SLA ändrades under den månaden.
+* Om det inte fanns någon SLA i början av månaden på grund av att programmet inte existerade gäller den SLA som existerade den dag då programmet skapades.
 
-## Förhandsgranska miljöer {#preview}
+## Förhandsvisningsmiljöer {#preview}
 
-Förhandsvisningsmiljön är avsedd som ett verktyg som författare av innehåll kan använda för att verifiera innehållets slutliga upplevelse innan det publiceras. Därför är förhandsvisningsmiljöer inte utformade med hög tillgänglighet och har inget associerat SLA.
+Förhandsvisningsmiljön är avsedd som ett verktyg som författare av innehåll kan använda för att verifiera innehållets slutliga upplevelse innan det publiceras. På grund av den här funktionaliteten är förhandsvisningsmiljöer inte utformade med hög tillgänglighet och har inte någon tillhörande SLA.
