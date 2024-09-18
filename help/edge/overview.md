@@ -4,9 +4,9 @@ description: Lär dig hur AEM as a Cloud Service kan dra nytta av de prestanda o
 feature: Edge Delivery Services
 exl-id: 03a1aa93-d2e6-4175-9cf3-c7ae25c0d24e
 role: Admin, Architect, Developer
-source-git-commit: 6c7e704dff97e8549664618f879863c3ca0f8f86
+source-git-commit: fa50e661d05a5083be3605a8c6e26450357f4aec
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1425'
 ht-degree: 1%
 
 ---
@@ -46,9 +46,9 @@ Genom att fokusera på värdet för era författare kan era Edge Delivery Servic
 
 ## Flexibla redigeringsverktyg för kreatörer {#overview}
 
-Edge Delivery Services är en sammanslagen uppsättning tjänster som ger stor flexibilitet när det gäller hur du skapar innehåll på din webbplats. Du kan använda både [AEM innehållshantering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/concepts.html) och WYSIWYG-redigering med den [universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md) samt [dokumentbaserad redigering.](https://www.aem.live/docs/authoring)
+Edge Delivery Services är en sammanslagen uppsättning tjänster som ger stor flexibilitet när det gäller hur du skapar innehåll på din webbplats. Du kan använda både [AEM innehållshantering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/concepts.html) och WYSIWYG-redigering med [den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md) samt [dokumentbaserad redigering.](https://www.aem.live/docs/authoring)
 
-Följande diagram visar hur du kan redigera innehåll i Microsoft Word (dokumentbaserad redigering) och publicera till Edge Delivery Services. Här visas även WYSIWYG-redigering med den universella redigeraren.
+Följande diagram visar hur du kan redigera innehåll i Microsoft Word (dokumentbaserad redigering) och publicera till Edge Delivery Services. Här visas även WYSIWYG redigering med Universal Editor.
 
 ![Edge Delivery-arkitektur](assets/AEM-with-EDS-publishing-simple2.png)
 
@@ -71,18 +71,18 @@ Läs mer i den dokumentbaserade redigeringsdokumentationen:
 * Mer information om hur du redigerar och publicerar innehåll med Edge Delivery finns i avsnittet [Publish.](https://www.aem.live/docs/authoring)
 * Mer information om hur du startar webbprojekt finns i avsnittet [Starta.](https://www.aem.live/docs/#launch)
 
-### WYSIWYG-redigering {#wysiwyg-authoring}
+### WYSIWYG Authoring {#wysiwyg-authoring}
 
-WYSIWYG-redigering (What-you-see-is-what-you-get) använder den universella redigeraren, en anpassningsbar, enkel plats för att redigera innehåll live och i sitt sammanhang med en visuell förhandsgranskning.
+Framtagning av material för just dig (WYSIWYG) använder den universella redigeraren, en anpassningsbar och lättanvänd plats där du kan redigera innehåll live och i sitt sammanhang med en visuell förhandsgranskning.
 
-* Med WYSIWYG-redigering ökar du effektiviteten oavsett om du är headless eller headful.
+* Med WYSIWYG kan du effektivisera redaktionen, oavsett om du är headless eller headful.
 * Ni kan dra nytta av AEM omfattande innehållshanteringsfunktioner som arbetsflöde och styrning.
 * Utnyttja ett stort antal tilläggspunkter för att stödja era egna processer och integreringar.
 * Du kan utveckla webbplatsens funktionalitet med hjälp av CSS och JavaScript i GitHub.
 
 ![WYSIWYG-redigering](assets/wysiwyg-authoring.png)
 
-Läs mer i WYSIWYG-dokumentationen:
+Läs mer i WYSIWYG dokumentation:
 
 * En översikt över Universal Editor och WYSIWYG-redigering finns i dokumentet [WYSIWYG Content Authoring for Edge Delivery Services.](/help/edge/wysiwyg-authoring/authoring.md)
 * En utvecklaröversikt finns i dokumentet [Utvecklarhandbok för att komma igång med WYSIWYG-redigering med Edge Delivery Services.](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md)
@@ -102,7 +102,7 @@ Mer information finns i dokumentet [Välja en redigeringsmetod](authoring-method
 
 Edge Delivery Services är en del av Adobe Experience Manager och som sådana Edge Delivery Services och AEM kan de finnas samtidigt på samma domän, vilket är ett vanligt användningsfall för större webbplatser. Dessutom kan innehåll från Edge Delivery Services enkelt användas på AEM Sites-sidor och vice versa.
 
-Läs [Utvecklarhandboken Komma igång för WYSIWYG med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) om du vill veta hur du startar ett eget projekt som du kan skapa med AEM och Edge Delivery Services.
+Se [Utvecklarhandboken Komma igång för WYSIWYG med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) för att lära dig hur du startar ett eget projekt som du kan skapa med AEM och Edge Delivery Services.
 
 Du kan också använda Edge Delivery Services med [Adobe Target,](https://www.aem.live/developer/target-integration) [Real Use Monitoring (RUM)](https://www.aem.live/developer/rum) för att diagnostisera användning och prestanda för dina webbplatser och [Launch.](https://experienceleague.adobe.com/en/docs/experience-platform/tags/home)
 
@@ -135,7 +135,11 @@ Ni kan kontakta Adobe produktteam via er tilldelade produktsamarbetskanal för a
 
 ### Logga en supportanmälan {#support-ticket}
 
-Om ett produktproblem kräver ytterligare utredning och felsökning och måste uppfylla svars-SLT:er, kan du skicka en supportanmälan som följer den här processen med Admin Console:
+Om ett produktproblem kräver ytterligare utredning och felsökning och måste uppfylla SLT-svarsalternativ kan du skicka in en supportanmälan.
+
+För att kunna logga in på en supportanmälan måste du först registrera din Edge Delivery-webbplats i Cloud Manager. Du rekommenderas att registrera din webbplats hos Cloud Manager för alla AEM as a Cloud Service-användare och [ger ett antal fördelar.](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md) Se [Cloud Manager-dokumentationen](/help/implementing/cloud-manager/edge-delivery/add-edge-delivery-site.md) för mer information om du inte redan har registrerat din webbplats.
+
+När webbplatsen har registrerats hos Cloud Manager följer du den här processen med Admin Console för att skicka in en supportanmälan:
 
 1. [Efter standardsupportprocessen ](https://experienceleague.adobe.com/?support-tab=home#support) och skapar en biljett.
 1. Lägg till **Edge Delivery** i biljettens titel.
