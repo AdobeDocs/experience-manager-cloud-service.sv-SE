@@ -4,9 +4,9 @@ description: Konfigurerar trafikfilterregler inklusive WAF-regler (Web Applicati
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
 feature: Security
 role: Admin
-source-git-commit: dee1a768c1cec6cf0e7c321d4d76a486db661d13
+source-git-commit: cf9e1b3c290d142095912c794de58547913faece
 workflow-type: tm+mt
-source-wordcount: '3928'
+source-wordcount: '4012'
 ht-degree: 0%
 
 ---
@@ -55,8 +55,7 @@ Adobe bjuder in dig att ge feedback eller ställa frågor om trafikfilterregler 
 
 I det digitala landskapet är skadlig trafik ett hot som aldrig tidigare förekommit. Adobe inser hur allvarlig risken är och erbjuder flera strategier för att skydda kundtillämpningar och mildra attacker när de inträffar.
 
-I utkanten absorberar den hanterade CDN-instansen DoS-attacker i nätverket
-lager (lager 3 och 4), inklusive översvämnings- och speglings-/amplifieringsattacker.
+Vid kanten absorberar det hanterade CDN-nätverket DoS-attacker i nätverkslagret (lager 3 och 4), inklusive översvämnings- och reflektions-/amplifieringsattacker.
 
 Som standard vidtar Adobe åtgärder för att förhindra prestandaförsämringar på grund av oväntat höga trafikökningar över ett visst tröskelvärde. Om det inträffar en DoS-attack som påverkar webbplatsens tillgänglighet larmas Adobe ledningsgrupper och vidtar åtgärder för att minska risken.
 
@@ -475,6 +474,14 @@ data:
           type: block
         rateLimit: { limit: 100, window: 10, penalty: 60, count: fetches }
 ```
+
+## CVE-regler {#cve-rules}
+
+Om WAF har licens tillämpar Adobe automatiskt blockeringsregler för att skydda mot många kända CVE-nummer (Common Vulnerabilities and Exposure), och nya CVE-nummer kan läggas till snart de har upptäckts. Kunder bör inte och behöver inte konfigurera själva CVE-reglerna.
+
+Om en trafikbegäran matchar en CVE-fil visas den i motsvarande CDN-loggpost.
+
+Kontakta Adobe support om det finns frågor om en viss CVE eller om det finns en viss CVE-regel som din organisation vill inaktivera.
 
 ## Varningar om trafikfilterregler {#traffic-filter-rules-alerts}
 
