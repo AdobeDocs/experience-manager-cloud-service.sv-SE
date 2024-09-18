@@ -1,14 +1,20 @@
 ---
 title: Konfigurera Content Hub användargränssnitt
 description: Konfigurera Content Hub användargränssnitt
-source-git-commit: 7224cca950e61bea298f246245bdb221fd8fa22e
+exl-id: e9e22862-9bcd-459a-bcf4-7f376a0b329a
+source-git-commit: 96c50aad9368adc83f8698dc35266146b1883672
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1126'
 ht-degree: 0%
 
 ---
 
 # Konfigurera Content Hub användargränssnitt {#configure-content-hub-user-interface}
+
+>[!CONTEXTUALHELP]
+>id="configure_content_hub"
+>title="Konfigurera Content Hub användargränssnitt"
+>abstract="Med Experience Manager Assets kan administratörer konfigurera de alternativ som finns i Content Hub användargränssnitt. Baserat på de konfigurationsalternativ som valts av administratörer kan Content Hub-användare visa fält på Content Hub. Konfigurationsalternativen inkluderar metadata vid import av resurser, filter, resursegenskaper, metadata vid sökning av resurser, anpassad varumärkning och eventuella anpassade länkar."
 
 <!-- ![Download assets](assets/download-asset.jpg) -->
 ![Konfigurera resurser på Content Hub](assets/configure-assets.png)
@@ -43,7 +49,7 @@ Så här öppnar du konfigurationsalternativ på Content Hub:
 
 ## Hantera konfigurationsalternativ på Content Hub {#manage-configuration-options}
 
-Hantera följande konfigurationsalternativ för dina användare:
+Som administratör hanterar du följande konfigurationsalternativ för dina användare:
 
 * [Importera](#configure-import-options-content-hub)
 
@@ -184,5 +190,3 @@ På samma sätt kan du klicka på ikonen ![Redigera](assets/do-not-localize/edit
 Den anpassade länken visas som en ny flik bredvid fliken Insikter på Content Hub hemsida.
 
 ![Anpassade länkar i konfigurationsgränssnittet på Content Hub](assets/configuration-ui-custom-link-tab.png)
-
-
