@@ -5,9 +5,9 @@ exl-id: ad6170f4-93bd-4bac-9c54-63c35a0d4f06
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: d2f05915c0bf0af073db7f070b83f13aeae55252
+source-git-commit: 8e2fc0d4ee82e79d1a822a528b1a46acce3c192a
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '904'
 ht-degree: 0%
 
 ---
@@ -50,11 +50,30 @@ En användare måste vara medlem i rollen **Affärsägare** eller **Distribution
    * Uppdatera endast det här fältet i fältet **Privat nyckel** om du har gjort ändringar i certifikatet.
    * Klistra in certifikatkedjan i fältet **Certifikatkedja** (eller förtroendekedjan).
 
-1. Klicka på **Uppdatera** om du vill spara ändringarna och använda dem automatiskt.
+1. Klicka på **Uppdatera** om du vill spara ändringarna och använda dem automatiskt. —>
 
 ## Ersätta ett kundhanterat SSL-certifikat som gått ut {#replace-ssl-certificate}
 
 Följ de steg som beskrivs i [Uppdatera ett SSL-certifikat som har upphört att gälla](#update-ssl-certificate) och ersätt ett kundhanterat SSL-certifikat som har upphört att gälla.
+
+## Byta namn på ett SSL-certifikat som hanteras av Adobe (#rename-an-ssl-certificate)
+
+Nedan följer några skäl till att du kanske vill byta namn på ett SSL-certifikat:
+
+* **Förbättrad organisation**: Om du byter namn på certifikatet kan du klargöra dess syfte, till exempel identifiera vilken miljö (till exempel mellanlagring, produktion) eller domän det är avsett för.
+* **Undvik förvirring**: Om du hanterar flera certifikat kan ett tydligt och beskrivande namn hjälpa till att förhindra misstag, som att tillämpa fel certifikat på fel domän.
+* **Efterlevnad och granskning**: Det kan vara enklare att spåra certifikat med rätt namn av säkerhets- och granskningsskäl.
+
+**Så här byter du namn på ett SSL-certifikat som hanteras av Adobe:**
+
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämpligt program.
+1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
+1. I det övre vänstra hörnet av sidan klickar du på hamburgikonen för att visa den vänstra navigeringsmenyn.
+1. Klicka på **SSL-certifikat** under rubriken **Tjänster**.
+1. På sidan **SSL-certifikat** klickar du på ellipsen i slutet av en rad vars certifikat du vill byta namn på.
+1. Klicka på **Byt namn**.
+1. Ange certifikatets nya namn i dialogrutan **Byt namn på DV-certifikat** i textfältet **Certifikatnamn**.
+1. Klicka på **Byt namn**.
 
 ## Ta bort ett SSL-certifikat {#deleting-an-ssl-certificate}
 
