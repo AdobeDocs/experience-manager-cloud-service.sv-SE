@@ -4,7 +4,7 @@ description: Lär dig hur du kan leverera dina Cloud Manager-projekt med hjälp 
 exl-id: f33bd6f0-62fc-4ecc-b8d2-65d1f1c44d82
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: c952e69aa637b30abec4deba0e643b4287d84330
+source-git-commit: ad6a0e13f27839b9900e440d60948158ddf75d99
 workflow-type: tm+mt
 source-wordcount: '737'
 ht-degree: 1%
@@ -68,7 +68,7 @@ Med Cloud Manager kan du dessutom använda [Adobe-hanterat CDN](/help/implementi
 
 ![Edge Delivery-lista med att göra-uppgifter för webbplats](/help/implementing/cloud-manager/assets/cm-eds-todo-list.png)
 
-|  | Uppgift | Beskrivning |
+|   | Uppgift | Beskrivning |
 | --- | --- | --- |
 | 1 | Gå med i produktsamarbetskanalen | Om du klickar på **Skicka begäran nu** skickas en begäran till Adobe om att skapa en kanal för ditt företag. Om kanalen redan finns vidarebefordras du till företagets kanal. |
 | 2 | Kompletta krav | Om du klickar på **Visa självstudiekursen Komma igång** dirigeras du till självstudiekursen [Komma igång - Utvecklare](https://www.aem.live/developer/tutorial). |
@@ -76,5 +76,7 @@ Med Cloud Manager kan du dessutom använda [Adobe-hanterat CDN](/help/implementi
 | 4 | Lägg till domän | Se [Lägg till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md). |
 | 5 | Lägg till SSL-certifikat | Se [Lägg till SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md). |
 | 6 | Konfigurera CDN för din Edge Delivery-webbplats | Se [Lägg till en CDN-konfiguration](#add-cdn). |
+
+<!-- &#x2460; for "1" inside circle -->
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428020?learn=on)
