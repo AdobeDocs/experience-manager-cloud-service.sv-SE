@@ -1,41 +1,36 @@
 ---
 title: Lägg till en Edge Delivery-webbplats i Cloud Manager
-description: Lär dig hur du lägger till en Edge Delivery-webbplats i ditt produktionsprogram eller sandlådeprogram och vilka fördelar det ger.
+description: Lär dig hur du lägger till en Edge Delivery-webbplats i ditt produktionsprogram eller sandlådeprogram.
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 68f05c49ebc3d46aa44b3998e6142ab8547e5455
+source-git-commit: c952e69aa637b30abec4deba0e643b4287d84330
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
 
 
-# Lägg till en Edge Delivery-webbplats i Cloud Manager {#eds-add-site}
+# Lägg till en Edge Delivery-webbplats i Cloud Manager {#adding}
 
-Lär dig hur du lägger till en Edge Delivery-webbplats i ditt produktionsprogram eller sandlådeprogram och vilka fördelar det ger.
+Du kan lägga till en Edge Delivery-plats i produktionsprogrammet eller sandlådeprogrammet.
 
-## Introduktion {#introduction}
+Du måste lägga till en Edge Delivery-webbplats till Cloud Manager för att [registrera en supportanmälan för ditt Edge Delivery-projekt](/help/edge/overview.md##support-ticket).
 
-Som en del av ditt projekt för Edge Delivery Services med AEM as a Cloud Service bör du lägga till din Edge Delivery-webbplats i Cloud Manager. Om du lägger till en Edge Delivery-webbplats till Cloud Manager får du följande fördelar.
+Se även [Introduktion till Edge Delivery Services i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md).
 
-* [Tillgång till CDN som hanteras av Adobe](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md)
-* [Åtkomst till SLA-rapporter](/help/implementing/cloud-manager/sla-reporting.md)
-* [Tillgång till användningsrapporter för licenser](/help/implementing/cloud-manager/license-dashboard.md)
-
-Observera att du måste lägga till din Edge Delivery-webbplats i Cloud Manager för att [registrera en supportanmälan för ditt Edge Delivery-projekt.](/help/edge/overview.md##support-ticket)
-
-## Lägga till och Edge Delivery webbplats i Cloud Manager {#adding}
+**Så här lägger du till en Edge Delivery-webbplats i Cloud Manager:**
 
 1. Logga in på Cloud Manager på [`https://my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com/) och välj lämpligt program.
 1. Gör något av följande:
+
    * Klicka på fliken **Edge Delivery** på sidan **Programöversikt**. Klicka sedan på **Lägg till Edge Delivery-webbplats** nära sidans nedre högra hörn.
 
      ![Lägg till Edge Delivery-webbplats från fliken Edge Delivery](/help/implementing/cloud-manager/assets/cm-eds-add1.png)
 
    * I det övre vänstra hörnet av sidan klickar du på hamburgikonen för att visa den vänstra navigeringsmenyn. Klicka på **Edge Delivery Sites** under rubriken **Tjänster**. Klicka på **Lägg till plats** i sidans övre högra hörn.
 
-     ![Lägg till Edge Delivery-webbplats från knappen Edge Delivery-platser](/help/implementing/cloud-manager/assets/cm-eds-add2.png)
+     ![Lägg till Edge Delivery-webbplats från knappen Edge Delivery Sites](/help/implementing/cloud-manager/assets/cm-eds-add2.png)
 
 1. Ange följande information i de obligatoriska fälten i dialogrutan **Lägg till Edge Delivery-plats**:
 
@@ -59,11 +54,3 @@ Observera att du måste lägga till din Edge Delivery-webbplats i Cloud Manager 
 1. Klicka på **Verifiera**.
 
 När databasen har verifierats ändras dess status i tabellen Edge Deliver Sites till en grön cirkel med en vit bock inuti.
-
-När du har lagt till Edge Delivery Services i ett produktionsprogram läggs din Edge Delivery Services till i det.
-
-Varje Edge Delivery-webbplats har en **Edge Delivery att göra-lista** som hjälper dig att skapa din Edge Delivery-webbplats.
-
-![Edge Delivery att göra-app](/help/implementing/cloud-manager/assets/edge-delivery-to-do-ist.png)
-
-I dokumentet [Introduktion till Edge Delivery Services i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md#ed-todo-list) finns mer information om de här stegen.
