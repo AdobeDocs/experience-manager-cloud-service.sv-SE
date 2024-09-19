@@ -3,9 +3,9 @@ title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud 
 description: Använd resursväljaren för att söka efter, hitta och hämta resursers metadata och återgivningar i programmet.
 role: Admin, User
 exl-id: 62b0b857-068f-45b7-9018-9c59fde01dc3
-source-git-commit: 0b8c345efa4c8f59b423644944ca2a6f8d54cbb4
+source-git-commit: 027922c304be9c36b600b04b264d571ea8ed60d4
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1293'
 ht-degree: 0%
 
 ---
@@ -196,15 +196,15 @@ Med Resursväljaren kan du visa resursen i fyra olika vyer:
         <em>Förstå hur du integrerar resursväljare med Dynamic Media Open API:er.</em>
         </p>
      </td>
-</tr>
-<tr>
-    <td>
+     <td>
         <img src="assets/asset-selector-examples.gif" width="70px" height="70px" alt="Bild av egenskaper för resursväljare"><br/>
         <a href="asset-selector-customization.md"> Egenskaper för resursväljare </a>
         <p>
         <em>Lär dig grunderna i att anpassa olika komponenter i resursväljaren, som filter, urval av resurser, utgångna resurser och mycket annat. </em>
         </p>
     </td>
+</tr>
+<tr>
     <td>
         <img src="assets/asset-selector-properties.gif" width="70px" height="70px" alt="Exempelgrafik för resursväljare"><br/>
         <a href="asset-selector-customization.md"> Exempel på resursväljare </a>
@@ -225,6 +225,15 @@ Med Resursväljaren kan du visa resursen i fyra olika vyer:
         <p>
         <em>Lär dig hur du kan överföra filer eller mappar till resursväljaren från det lokala filsystemet eller tredjepartssystemet. </em>
         </p>
+    </td>
+     <td>
+        <img src="assets/asset-selector-collections.gif" width="70px" height="70px" alt="Grafik för resursväljarsamlingar"><br/>
+        <a href="asset-selector-collections.md"> Resursväljarsamlingar </a>
+        <p>
+        <em>Lär dig hur du använder samlingar i resursväljaren med hjälp av Experience Manager-databasen. </em>
+        </p>
+    </td>
+    <td>
     </td>
 </tr>
 </table>
