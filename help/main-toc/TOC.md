@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: b222b4384b1c2a21ecbb244d149ce7e51cc7990f
+source-git-commit: 8349f6d4d4f04d8609d5a5241b973201b54b2cd2
 workflow-type: tm+mt
-source-wordcount: '5638'
+source-wordcount: '5651'
 ht-degree: 3%
 
 ---
@@ -470,6 +470,7 @@ ht-degree: 3%
          + [Exempel på resursväljare](/help/assets/asset-selector-examples.md)
          + [Anpassningar av resursväljare](/help/assets/asset-selector-customization.md)
          + [Överföring av resursväljare](/help/assets/asset-selector-upload.md)
+         + [Resursväljarsamlingar](/help/assets/asset-selector-collections.md)
       + [Micro-FrontEnd-målväljare](/help/assets/destination-selector.md)
       + [Dela resurser](/help/assets/share-assets.md)
       + [Resurser som återanvänds](/help/assets/reprocessing.md)
@@ -500,7 +501,7 @@ ht-degree: 3%
       + [Digital Rights Management för tillgångar](/help/assets/drm.md)
       + [Vattenstämpelresurser](/help/assets/watermark-assets.md)
       + [Bearbeta resurser med  [!DNL Creative Cloud] API:er](/help/assets/cc-api-integration.md)
-      + [Färgtaggar för bilder](/help/assets/color-tag-images.md)
+      + [Color tags for images](/help/assets/color-tag-images.md)
       + [Manage PDF documents](/help/assets/manage-pdf-documents.md)
    + [!DNL Assets]{#admin}
       + [Identifiera duplicerade resurser](/help/assets/detect-duplicate-assets.md)
@@ -623,9 +624,7 @@ ht-degree: 3%
       + [Hantera rapporter](/help/assets/manage-reports-assets-view.md)
       + [Manage tags](/help/assets/tagging-management-assets-view.md)
       + [Content Credentials](/help/assets/content-credentials.md)
-      + [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
-
-
+      + [Publish Assets to AEM and Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
    + Content Hub {#content-hub}
       + [Ökning](/help/assets/product-overview.md)
       + [Distribuera Content Hub](/help/assets/deploy-content-hub.md)
@@ -1050,9 +1049,9 @@ ht-degree: 3%
          + [Lär dig grunderna i innehållsmodellering för Headless med AEM](/help/journey-headless/architect/basics.md)
          + [Läs om hur du skapar modeller för innehållsfragment i AEM](/help/journey-headless/architect/model-structure.md)
       + Headless Translation Journey {#translation}
-         + [Förstå headlessöversättning i AEM](/help/journey-headless/translation/overview.md)
+         + [Understand headless translation in AEM](/help/journey-headless/translation/overview.md)
          + [Get started with AEM headless translation](/help/journey-headless/translation/getting-started.md)
-         + [Lär dig mer om headless-innehåll och hur du översätter i AEM](/help/journey-headless/translation/learn-about.md)
+         + [Learn about headless content and how to translate in AEM](/help/journey-headless/translation/learn-about.md)
          + [Konfigurera översättningskoppling](/help/journey-headless/translation/configure-connector.md)
          + [Konfigurera översättningsregler](/help/journey-headless/translation/translation-rules.md)
          + [Översätta innehåll](/help/journey-headless/translation/translate-content.md)
@@ -1067,9 +1066,6 @@ ht-degree: 3%
    + [Generera variationer](/help/generative-ai/generate-variations.md)
 + Implementera {#implementing}
    + [Implementera program för AEM as a Cloud Service](/help/implementing/home.md)
-
-
-
    + Använda Cloud Manager {#using-cloud-manager}
       + [Navigering](/help/implementing/cloud-manager/navigation.md)
       + Program {#programs}
@@ -1148,9 +1144,6 @@ ht-degree: 3%
       + [Förstå förfrågningar om Cloud Service](/help/implementing/cloud-manager/content-requests.md)
       + [Kontrollpanel för CDN-prestanda](/help/implementing/cloud-manager/cdn-performance.md)
       + [Vanliga frågor om Cloud Manager](/help/implementing/cloud-manager/faqs.md)
-
-
-
    + Utveckla för AEM as a Cloud Service {#developing}
       + [AEM projektstruktur](/help/implementing/developing/introduction/aem-project-content-package-structure.md)
       + [AEM projektdatabasstrukturpaket](/help/implementing/developing/introduction/repository-structure-package.md)
@@ -1176,10 +1169,10 @@ ht-degree: 3%
          + [Använda delningsadaptrar](/help/implementing/developing/introduction/sling-adapters.md)
          + [Använda Sling Resource Merger i AEM as a Cloud Service](/help/implementing/developing/introduction/sling-resource-merger.md)
          + [Övertäckningar i AEM as a Cloud Service](/help/implementing/developing/introduction/overlays.md)
-         + [Använda bibliotek på klientsidan](/help/implementing/developing/introduction/clientlibs.md)
+         + [Using Client-Side Libraries](/help/implementing/developing/introduction/clientlibs.md)
          + [Page Diff](/help/implementing/developing/introduction/page-diff.md)
-         + [Editor Limitations](/help/implementing/developing/introduction/editor-limitations.md)
-         + [Namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md)
+         + [Begränsningar för redigerare](/help/implementing/developing/introduction/editor-limitations.md)
+         + [Naming Conventions](/help/implementing/developing/introduction/naming-conventions.md)
          + [Responsiv design](/help/implementing/developing/introduction/responsive-design.md)
          + Komponenter och mallar {#components-templates}
             + [Komponenter - översikt](/help/implementing/developing/components/overview.md)
@@ -1258,7 +1251,7 @@ ht-degree: 3%
       + [ContextHub API](/help/implementing/developing/personalization/contexthub-api.md)
       + [Konfigurerar segmentering med ContextHub](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/personalization/contexthub-segmentation.html)
    + Konfigurera och utöka AEM as a Cloud Service {#configuring-and-extending}
-      + Utöka AEM med App Builder{#app-builder}
+      + Utöka AEM med App Builder {#app-builder}
          + [Utöka AEM med Adobe Developer App Builder](/help/implementing/developing/extending/app-builder/extending-aem-with-app-builder.md)
          + [Introduktion till App Builder](/help/implementing/developing/extending/app-builder/videos/introduction.md)
          + [Adobe Developer Console](/help/implementing/developing/extending/app-builder/videos/adobe-developer-console.md)
@@ -1286,6 +1279,10 @@ ht-degree: 3%
       + [Utöka sidegenskaper](/help/implementing/developing/extending/page-properties.md)
       + [Utöka gruppredigeraren](/help/implementing/developing/extending/bulk-editor.md)
       + [Utöka MSM](/help/implementing/developing/extending/msm.md)
+      + Internationalisering{#internationalization}
+         + [Internationalisering av komponenter](/help/implementing/developing/extending/i18n/components.md)
+         + [Internationaliserar gränssnittssträngar](/help/implementing/developing/extending/i18n/dev.md)
+         + [Extraherar strängar för översättning](/help/implementing/developing/extending/i18n/extract.md)
    + Distribuera till AEM as a Cloud Service {#deploying}
       + [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md)
       + [Uppdateringar av AEM](/help/implementing/deploying/aem-version-updates.md)
