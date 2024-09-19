@@ -1,7 +1,7 @@
 ---
-source-git-commit: 11368914a78c1f47c2f341a112bf981545cf6203
+source-git-commit: 991db00a833e964d4837bdde9a04ee72b3ad782d
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1139'
 ht-degree: 0%
 
 ---
@@ -134,7 +134,7 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 * [Introduktion till Forms Portal-komponenter](/help/forms/configure-forms-portal.md)
 * [Visa dina formulär på webbplatssidan](/help/forms/list-forms-on-sites-page.md)
 * [Spara formulären som utkast](/help/forms/save-core-component-based-form-as-draft.md)
-* [Lägga till formulärlänkar till en webbplatssida](/help/forms/add-form-link-to-aem-sites-page.md)
+* [Lägga till formulärlänkar på en webbplatssida](/help/forms/add-form-link-to-aem-sites-page.md)
 
 
 ## Cloud Manager IP Tillåtelselista och rörledningar för frontendjur {#allowlist-frontend-pipeline}
@@ -143,7 +143,7 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 >
 >För frontendpipelinen måste följande IP-Tillåtelselista läggas till i Cloud Manager i förväg.
 >Om det behövs kan du [lägga till IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md) genom att kopiera adressblocket nedan. Varje adress avgränsas med kommatecken. Klistra in blocket i fältet **IP-adress/CIDR** i dialogrutan **Lägg till IP-Tillåtelselista** . Placera markören precis efter det första kommatecknet i adresslistan och tryck på **Retur**. Spara listan.
->Om du vill undvika avbrott i körningen av frontlinjens slutpipline måste du se till att det här IP-Tillåtelselista läggs till i Cloud Manager *innan* du aktiverar piplinjen.
+>Om du vill undvika avbrott i körningen av frontendpipelinen kontrollerar du att det här IP-Tillåtelselista har lagts till i Cloud Manager *innan* du aktiverar pipelinen.
 >
 >**Cloud Manager IP Tillåtelselista**
 >52.254.106.192/28,20.186.185.181,52.254.106.240/28,52.254.107.128/28,52.254.105.192/28,52.254.106.176/28,20.186.185.227,52.254.106.144/28,52.254.107.64/28,20.186.185.239,20.22.83.112,52.254.107.80/28,52.254.107.144/28,52.254.106.224/28,20.14.241.153,52.254.107.0/28,52.254.107.32/28,52.254.106.208/28,40.70.154.136/29,52.254.106.160/28,52.254.107.16/28,52.254.106.0/28,4.152.211.251
@@ -160,17 +160,17 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 
 >[!TIP]
 >
->Är du ny i Dynamic Media? En snabb översikt av Dynamic Media på hög nivå finns i [Arbeta med Dynamic Media](/help/assets/dynamic-media/dynamic-media.md).
+>Är du ny i Dynamic Media? En snabb översikt på hög nivå av Dynamic Media finns i [Arbeta med Dynamic Media](/help/assets/dynamic-media/dynamic-media.md).
 
 ## Se även för Dynamic Media {#see-also-dm}
 
 >[!NOTE]
 >
->* Är du ny i Dynamic Media? En snabb översikt av Dynamic Media på hög nivå finns i [Arbeta med Dynamic Media](/help/assets/dynamic-media/dynamic-media.md).
+>* Är du ny i Dynamic Media? En snabb översikt på hög nivå av Dynamic Media finns i [Arbeta med Dynamic Media](/help/assets/dynamic-media/dynamic-media.md).
 >
 >* Följ [Dynamic Media bästa praxis](/help/assets/dynamic-media/dm-best-practices.md) för att få ut det mesta av ditt arbete.
 >
->* Prova Dynamic Media bildfunktioner med [verktyget för ögonblicksbild](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot).
+>* Prova Dynamic Media bildfunktioner med verktyget [Ögonblicksbild](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot).
 >
 >* Se till att videouppspelningen blir jämn med [adaptiv video](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-dash).
 >
@@ -178,6 +178,21 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 >
 >* Automatisera beskärning av [videor med Smart beskärning](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-smart-crop-video).
 >
->* Leverera [interaktiv 3D-baserad upplevelse](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/3d/dynamic-media-3d-feature-video).
+>* Leverera en [interaktiv 3D-baserad upplevelse](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/3d/dynamic-media-3d-feature-video).
 >* Annan [Dynamic Media-resursbank](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use).
+
+## Logga en supportanmälan {#support-ticket}
+
+Om ett produktproblem kräver ytterligare utredning och felsökning och måste uppfylla SLT-svarsalternativ kan du skicka in en supportanmälan.
+
+Om du vill logga en supportanmälan måste du först registrera din Edge Delivery-webbplats i Cloud Manager. Du bör registrera din webbplats hos Cloud Manager för alla AEM as a Cloud Service-användare och [ger ett antal fördelar](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md). Mer information finns i [Cloud Manager-dokumentationen](/help/implementing/cloud-manager/edge-delivery/add-edge-delivery-site.md) om du inte redan har registrerat din webbplats.
+
+När webbplatsen har registrerats hos Cloud Manager följer du den här processen med Admin Console för att skicka in en supportanmälan:
+
+1. [Följ standardsupportprocessen](https://experienceleague.adobe.com/?support-tab=home#support) och skapa en biljett.
+1. Lägg till **Edge Delivery** i biljettens titel.
+1. I beskrivningen anger du följande information förutom problembeskrivningen:
+
+   * Den publicerade webbplatsens URL. Till exempel: `www.mydomain.com`.
+   * URL för den ursprungliga webbplatsen (`.hlx` URL).
 

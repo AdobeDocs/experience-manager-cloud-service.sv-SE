@@ -3,9 +3,9 @@ title: Hantera Edge Delivery-webbplatser i Cloud Manager
 description: Lär dig hur du lägger till en CDN-konfiguration på en Edge Delivery-webbplats eller tar bort en Edge Delivery-webbplats.
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 8e2fc0d4ee82e79d1a822a528b1a46acce3c192a
+source-git-commit: 991db00a833e964d4837bdde9a04ee72b3ad782d
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '512'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Se [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-config
 
 I Adobe Cloud Manager kan det finnas flera skäl till att byta namn på en Edge Delivery-webbplats:
 
-* **Klarhet och organisation**: För att bättre beskriva syftet med platsen eller dess associerade miljö (till exempel produktion, staging).
+* **Klarhet och organisation**: För att beskriva webbplatsens syfte bättre eller dess associerade miljö (till exempel produktion, staging).
 * **Undvik förvirring**: Om flera webbplatser används kan det vara lättare att skilja dem åt genom att byta namn, vilket minskar risken för att konfigurationer eller uppdateringar används på fel plats.
 * **Standardisering**: Om du vill följa en konsekvent namnkonvention som överensstämmer med organisationens riktlinjer för enklare hantering och granskning.
 
@@ -61,3 +61,7 @@ Klicka på ellipsen i slutet av en rad vars webbplats du vill ta bort i tabellen
 
 
      ![Lägg till Edge Delivery-webbplats från knappen Edge Delivery-platser](/help/implementing/cloud-manager/assets/cm-eds-delete2.png)
+
+### Logga en supportanmälan {#eds-support-ticket}
+
+{{support-ticket}}

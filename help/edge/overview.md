@@ -4,10 +4,10 @@ description: Lär dig hur AEM as a Cloud Service kan dra nytta av de prestanda o
 feature: Edge Delivery Services
 exl-id: 03a1aa93-d2e6-4175-9cf3-c7ae25c0d24e
 role: Admin, Architect, Developer
-source-git-commit: fa50e661d05a5083be3605a8c6e26450357f4aec
+source-git-commit: 991db00a833e964d4837bdde9a04ee72b3ad782d
 workflow-type: tm+mt
-source-wordcount: '1425'
-ht-degree: 1%
+source-wordcount: '1281'
+ht-degree: 2%
 
 ---
 
@@ -24,7 +24,7 @@ Med Edge Delivery Services kan du
 
 ## Flexibel reaktion på affärsbehov {#agile-reaction}
 
-Som sedan länge känd branschledare vet Adobe hur viktigt det är att snabbt kunna skapa och publicera nytt, meningsfullt innehåll för era kunder. Marknaden har klargjort vanliga utmaningar när det gäller att skapa innehåll:
+Som sedan länge känd branschledare vet Adobe hur viktigt det är att kunna skapa och publicera nytt, meningsfullt innehåll snabbt för era kunder. Marknaden har klargjort vanliga utmaningar när det gäller att skapa innehåll:
 
 1. **Efterfrågan på innehåll fortsätter att öka.**
    * Man måste låsa upp nya skribenter för att uppfylla detta krav.
@@ -36,7 +36,7 @@ Som sedan länge känd branschledare vet Adobe hur viktigt det är att snabbt ku
 1. **Trycket ökar för att öka avkastningen på innehållet.**
    * Man måste kunna optimera innehållet.
 
-Dessa trender har visat sig vara enhetliga i hela branschen. Oftast varierar dock de individuella kraven från projekt till projekt. Målet med alla Edge Delivery Services är att hitta den lösning som fungerar för era användare.
+Dessa trender har visat sig vara enhetliga i hela branschen. De individuella kraven varierar dock oundvikligen mellan olika projekt. Målet med alla Edge Delivery Services är att fokusera på att hitta den lösning som fungerar för era användare.
 
 1. **Fokusera på värde i stället för på funktioner.** - Bestäm det optimerade arbetsflödet för dina författare i stället för att gå vilse i AEM omfattande funktionsuppsättning.
 1. **Dra nytta av AEM flexibilitet.** - AEM funktioner behöver inte användas i ett vakuum. Använd de funktioner du behöver per användningstillfälle.
@@ -46,7 +46,7 @@ Genom att fokusera på värdet för era författare kan era Edge Delivery Servic
 
 ## Flexibla redigeringsverktyg för kreatörer {#overview}
 
-Edge Delivery Services är en sammanslagen uppsättning tjänster som ger stor flexibilitet när det gäller hur du skapar innehåll på din webbplats. Du kan använda både [AEM innehållshantering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/concepts.html) och WYSIWYG-redigering med [den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md) samt [dokumentbaserad redigering.](https://www.aem.live/docs/authoring)
+Edge Delivery Services är en sammanslagen uppsättning tjänster som ger stor flexibilitet när det gäller hur du skapar innehåll på din webbplats. Du kan använda både [AEM innehållshantering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/author-publish) och WYSIWYG-redigering med [den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md) samt [dokumentbaserad redigering](https://www.aem.live/docs/authoring).
 
 Följande diagram visar hur du kan redigera innehåll i Microsoft Word (dokumentbaserad redigering) och publicera till Edge Delivery Services. Här visas även WYSIWYG redigering med Universal Editor.
 
@@ -67,9 +67,9 @@ Med dokumentbaserad redigering kan du använda innehåll direkt från Microsoft 
 
 Läs mer i den dokumentbaserade redigeringsdokumentationen:
 
-* Mer information om hur du kommer igång med Edge Delivery finns i avsnittet [Skapa.](https://www.aem.live/docs/#build)
-* Mer information om hur du redigerar och publicerar innehåll med Edge Delivery finns i avsnittet [Publish.](https://www.aem.live/docs/authoring)
-* Mer information om hur du startar webbprojekt finns i avsnittet [Starta.](https://www.aem.live/docs/#launch)
+* Mer information om hur du kommer igång med Edge Delivery finns i avsnittet [Skapa](https://www.aem.live/docs/#build).
+* Mer information om hur du redigerar och publicerar innehåll med Edge Delivery finns i avsnittet [Publish](https://www.aem.live/docs/authoring).
+* Mer information om hur du startar webbplatsprojektet på rätt sätt finns i avsnittet [Starta](https://www.aem.live/docs/#launch).
 
 ### WYSIWYG Authoring {#wysiwyg-authoring}
 
@@ -84,8 +84,8 @@ Framtagning av material för just dig (WYSIWYG) använder den universella redige
 
 Läs mer i WYSIWYG dokumentation:
 
-* En översikt över Universal Editor och WYSIWYG-redigering finns i dokumentet [WYSIWYG Content Authoring for Edge Delivery Services.](/help/edge/wysiwyg-authoring/authoring.md)
-* En utvecklaröversikt finns i dokumentet [Utvecklarhandbok för att komma igång med WYSIWYG-redigering med Edge Delivery Services.](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md)
+* En översikt över Universal Editor och WYSIWYG finns i [WYSIWYG Content Authoring for Edge Delivery Services](/help/edge/wysiwyg-authoring/authoring.md).
+* En utvecklaröversikt finns i [Utvecklarhandboken Komma igång för WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md).
 
 ### Bestäm din redigeringsmetod {#authoring-method}
 
@@ -94,21 +94,21 @@ AEM flexibilitet säkerställer att alla redigeringsbehov täcks. Adobe kan hjä
 * Involvera alltid innehållsförfattarna i beslutet.
 * Flera redigeringsmetoder kan implementeras.
 * Du kan alltid ändra redigeringsmetod efter hand.
-* Du får inte bestämma dig före implementeringen, utan som en del av implementeringen.
+* Ni behöver inte fatta beslut före implementeringen, utan snarare som en del av implementeringen.
 
-Mer information finns i dokumentet [Välja en redigeringsmetod](authoring-methods.md).
+Mer information finns i [Välja en redigeringsmetod](authoring-methods.md).
 
 ## Edge Delivery Services och andra Adobe Experience Cloud-produkter {#edge-other-products}
 
-Edge Delivery Services är en del av Adobe Experience Manager och som sådana Edge Delivery Services och AEM kan de finnas samtidigt på samma domän, vilket är ett vanligt användningsfall för större webbplatser. Dessutom kan innehåll från Edge Delivery Services enkelt användas på AEM Sites-sidor och vice versa.
+Edge Delivery Services ingår i Adobe Experience Manager. Därför kan Edge Delivery Services och AEM Sites finnas samtidigt på samma domän, vilket är ett vanligt användningsexempel för större webbplatser. Dessutom kan dina AEM Sites-sidor enkelt förbruka innehåll från Edge Delivery Services, och det motsatta är också sant.
 
-Se [Utvecklarhandboken Komma igång för WYSIWYG med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) för att lära dig hur du startar ett eget projekt som du kan skapa med AEM och Edge Delivery Services.
+Läs [Utvecklarhandboken Komma igång för WYSIWYG med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) om du vill veta hur du startar ett eget projekt som du kan skapa med AEM och Edge Delivery Services.
 
-Du kan också använda Edge Delivery Services med [Adobe Target,](https://www.aem.live/developer/target-integration) [Real Use Monitoring (RUM)](https://www.aem.live/developer/rum) för att diagnostisera användning och prestanda för dina webbplatser och [Launch.](https://experienceleague.adobe.com/en/docs/experience-platform/tags/home)
+Du kan också använda Edge Delivery Services med [Adobe Target](https://www.aem.live/developer/target-integration), [Real Use Monitoring (RUM)](https://www.aem.live/developer/rum) för att diagnostisera användning och prestanda för dina webbplatser och [Launch](https://experienceleague.adobe.com/en/docs/experience-platform/tags/home).
 
 ## Kom igång med Edge Delivery Services {#getting-started}
 
-Det är enkelt att komma igång med Edge Delivery Services genom att följa självstudiekursen [Komma igång - Utvecklare.](https://www.aem.live/developer/tutorial)
+Det är enkelt att komma igång med Edge Delivery Services genom att följa självstudiekursen [Komma igång - Utvecklare](https://www.aem.live/developer/tutorial).
 
 ## Få hjälp från Adobe {#getting-help}
 
@@ -122,12 +122,12 @@ Adobe har tre kanaler som kan hjälpa dig med Edge Delivery Services:
 
 Adobe vill ge er bästa möjliga engagemang och stöd för Edge Delivery Services, WYSIWYG och dokumentbaserad framtagning.
 
-* Delta i [Experience League Community](https://adobe.ly/3Q6kTKl) om du vill ställa frågor, dela med dig av feedback, starta diskussioner, söka hjälp av experter från Adobe och AEM rådgivare/grupper samt få kontakt med likasinnade individer i realtid.
-* Gå med i vår [Discord-kanal,](https://discord.gg/aem-live) är en mer tillfällig plattform för realtidsinteraktioner och snabb idéutbyte.
+* Delta i [Experience League-communityn](https://adobe.ly/3Q6kTKl) för att ställa frågor, dela med dig av feedback, starta diskussioner, söka hjälp av Adobe-experter och AEM-rådgivare/grupper samt få kontakt med likasinnade individer i realtid.
+* Gå med i [Discord-kanalen](https://discord.gg/aem-live), en mer tillfällig plattform för realtidsinteraktioner och snabbt idéutbyte.
 
 ### Så här kommer du åt din Collaboration-kanal {#collaboration-channel}
 
-Med tanke på värdet av direktkommunikationskanalen med användare kommer alla AEM vid lanseringen att skapa en Slack-kanal för hastighet, viktiga uppdateringar och skalad rapportering om upplevelsekvalitet. Du får en inbjudan från Adobe om att gå med i en Slack-kanal som är specifik för din organisation.
+Med tanke på värdet av direktkommunikationskanalen med användare skapar alla AEM projekt vid lanseringen en Slack-kanal för hastighet, viktiga uppdateringar och skalad rapportering om upplevelsekvalitet. Du får en inbjudan från Adobe om att gå med i en Slack-kanal som är specifik för din organisation.
 
 Mer information finns i dokumentet [Använda Slack-roboten](https://www.aem.live/docs/slack) för mer information.
 
@@ -135,19 +135,8 @@ Ni kan kontakta Adobe produktteam via er tilldelade produktsamarbetskanal för a
 
 ### Logga en supportanmälan {#support-ticket}
 
-Om ett produktproblem kräver ytterligare utredning och felsökning och måste uppfylla SLT-svarsalternativ kan du skicka in en supportanmälan.
-
-För att kunna logga in på en supportanmälan måste du först registrera din Edge Delivery-webbplats i Cloud Manager. Du rekommenderas att registrera din webbplats hos Cloud Manager för alla AEM as a Cloud Service-användare och [ger ett antal fördelar.](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md) Se [Cloud Manager-dokumentationen](/help/implementing/cloud-manager/edge-delivery/add-edge-delivery-site.md) för mer information om du inte redan har registrerat din webbplats.
-
-När webbplatsen har registrerats hos Cloud Manager följer du den här processen med Admin Console för att skicka in en supportanmälan:
-
-1. [Efter standardsupportprocessen ](https://experienceleague.adobe.com/?support-tab=home#support) och skapar en biljett.
-1. Lägg till **Edge Delivery** i biljettens titel.
-1. I beskrivningen anger du följande information förutom problembeskrivningen:
-
-   * Den publicerade webbplatsens URL. Till exempel: `www.mydomain.com`.
-   * URL för den ursprungliga webbplatsen (`.hlx` URL).
+{{support-ticket}}
 
 ## What&#39;s Next {#whats-next}
 
-Kom igång genom att granska [Använda Edge Delivery Services.](/help/edge/using.md)
+Kom igång genom att granska [Använda Edge Delivery Services](/help/edge/using.md).
