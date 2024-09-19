@@ -4,7 +4,7 @@ description: Lär dig hur du kan leverera dina Cloud Manager-projekt med hjälp 
 exl-id: f33bd6f0-62fc-4ecc-b8d2-65d1f1c44d82
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 3db0b72a267a001b3fda5341a6c2c642babfb9eb
+source-git-commit: e28e4bf06c28f97d665e5fd86ab87d484116504f
 workflow-type: tm+mt
 source-wordcount: '746'
 ht-degree: 1%
@@ -62,7 +62,10 @@ En Edge Delivery Services kan läggas till på flera olika sätt beroende på hu
 >* Organisationen måste ha en licens för oanvända Edge Delivery Services innan den kan tillämpas på ett produktionsprogram.
 >* När licensavtalet för Edge Delivery Services har tillämpats på eller tagits bort från ett program börjar ändringen gälla omedelbart utan att någon pipeline behöver köras.
 
+
 ## Om att göra-listan för Edge Delivery {#ed-todo-list}
+
+<!-- &#x2460; for "1" inside circle -->
 
 **Edge Delivery-uppgiftslistan** är en checklista för introduktionsaktiviteter som är avsedd att vägleda dig genom introduktionen och hantera din Edge Delivery-webbplats hela vägen till [go-live](/help/journey-onboarding/go-live-checklist.md).
 
@@ -77,7 +80,6 @@ En Edge Delivery Services kan läggas till på flera olika sätt beroende på hu
 | 5 | Lägg till SSL-certifikat | Se [Lägg till SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md). |
 | 6 | Konfigurera CDN för din Edge Delivery-webbplats | Se [Lägg till en CDN-konfiguration](#add-cdn). |
 
-<!-- &#x2460; for "1" inside circle -->
 
 ## Logga en supportanmälan {#eds-support-ticket}
 

@@ -3,7 +3,7 @@ title: Hantera Edge Delivery-webbplatser i Cloud Manager
 description: Lär dig hur du lägger till en CDN-konfiguration på en Edge Delivery-webbplats eller tar bort en Edge Delivery-webbplats.
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 991db00a833e964d4837bdde9a04ee72b3ad782d
+source-git-commit: e28e4bf06c28f97d665e5fd86ab87d484116504f
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
@@ -62,6 +62,8 @@ Klicka på ellipsen i slutet av en rad vars webbplats du vill ta bort i tabellen
 
      ![Lägg till Edge Delivery-webbplats från knappen Edge Delivery-platser](/help/implementing/cloud-manager/assets/cm-eds-delete2.png)
 
-### Logga en supportanmälan {#eds-support-ticket}
+## Logga en supportanmälan {#eds-support-ticket}
 
 {{support-ticket}}
+
+
