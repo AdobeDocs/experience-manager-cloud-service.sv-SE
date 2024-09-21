@@ -3,7 +3,7 @@ title: Hantera Edge Delivery-webbplatser i Cloud Manager
 description: Lär dig hur du lägger till en CDN-konfiguration på en Edge Delivery-webbplats eller tar bort en Edge Delivery-webbplats.
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 2b384a4233672d69de09b922fcdef6d0f84ff7df
+source-git-commit: f684a52ca3b51d1aa4412122f7ad28dde3e2672f
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 0%
@@ -52,12 +52,12 @@ Om du tar bort en webbplats för Edge Delivery Services tas även alla associera
 1. Gör något av följande:
 
    * Klicka på fliken **Edge Delivery** på sidan **Programöversikt**. Klicka på ellipsen i slutet av en rad vars webbplats du vill ta bort i tabellen för Edge Delivery-webbplatsen.
-Klicka på ![Ta bort Edge Delivery-webbplats](https://spectrum.corp.adobe.com/static/icons/workflow_18/Smock_Delete_18_N.svg) **Ta bort** och klicka sedan på **Ta bort** igen för att bekräfta att webbplatsen har tagits bort.
+Klicka på ![Ta bort Edge Delivery-webbplats](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Delete_18_N.svg) **Ta bort** och klicka sedan på **Ta bort** igen för att bekräfta att webbplatsen har tagits bort.
 
      ![Lägg till Edge Delivery-webbplats från fliken Edge Delivery](/help/implementing/cloud-manager/assets/cm-eds-delete1.png)
 
-   * Klicka på ![Visa eller dölj sidnavigering](https://spectrum.corp.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i sidans övre vänstra hörn för att visa sidnavigeringsmenyn. Under rubriken **Tjänster** klickar du på ![Webbsida för Edge Delivery-webbplatser](https://spectrum.corp.adobe.com/static/icons/workflow_18/Smock_WebPages_18_N.svg) **Edge Delivery Sites**.
-Klicka på ellipsen i slutet av en rad vars webbplats du vill ta bort i tabellen för Edge Delivery-webbplatsen. Klicka på ![Ta bort Edge Delivery-webbplats](https://spectrum.corp.adobe.com/static/icons/workflow_18/Smock_Delete_18_N.svg) **Ta bort** och klicka sedan på **Ta bort** igen för att bekräfta att webbplatsen har tagits bort.
+   * Klicka på ![Visa eller dölj sidnavigering](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i sidans övre vänstra hörn för att visa sidnavigeringsmenyn. Under rubriken **Tjänster** klickar du på ![Webbsida för Edge Delivery-webbplatser](https://spectrum.adobe.com/static/icons/workflow_18/Smock_WebPages_18_N.svg) **Edge Delivery Sites**.
+Klicka på ellipsen i slutet av en rad vars webbplats du vill ta bort i tabellen för Edge Delivery-webbplatsen. Klicka på ![Ta bort Edge Delivery-webbplats](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Delete_18_N.svg) **Ta bort** och klicka sedan på **Ta bort** igen för att bekräfta att webbplatsen har tagits bort.
 
      ![Lägg till Edge Delivery-webbplats från knappen Edge Delivery-platser](/help/implementing/cloud-manager/assets/cm-eds-delete2.png)
 

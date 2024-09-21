@@ -3,9 +3,9 @@ title: Lägg till en Edge Delivery-webbplats i Cloud Manager
 description: Lär dig hur du lägger till en Edge Delivery-webbplats i ditt produktionsprogram eller sandlådeprogram.
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 2b384a4233672d69de09b922fcdef6d0f84ff7df
+source-git-commit: f684a52ca3b51d1aa4412122f7ad28dde3e2672f
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
@@ -28,8 +28,8 @@ Se även [Introduktion till Edge Delivery Services i Cloud Manager](/help/implem
 
      ![Lägg till Edge Delivery-webbplats från fliken Edge Delivery](/help/implementing/cloud-manager/assets/cm-eds-add1.png)
 
-   * Klicka på ![Visa eller dölj sidnavigering](https://spectrum.corp.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i sidans övre vänstra hörn för att visa sidnavigeringsmenyn.
-Under rubriken **Tjänster** klickar du på ![Webbsida för Edge Delivery-webbplatser](https://spectrum.corp.adobe.com/static/icons/workflow_18/Smock_WebPages_18_N.svg) **Edge Delivery Sites**.
+   * Klicka på ![Visa menyikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i sidans övre vänstra hörn för att visa sidnavigeringsmenyn.
+Klicka på ikonen ![Webbsida](https://spectrum.adobe.com/static/icons/workflow_18/Smock_WebPages_18_N.svg) **Edge Delivery Sites** under rubriken **Tjänster**.
 Klicka på **Lägg till plats** i sidans övre högra hörn.
 
      ![Lägg till Edge Delivery-webbplats från knappen Edge Delivery Sites](/help/implementing/cloud-manager/assets/cm-eds-add2.png)
@@ -48,14 +48,14 @@ Klicka på **Lägg till plats** i sidans övre högra hörn.
 
    | Stegnummer | Beskrivning |
    | - | - |
-   | **1** | Lägg till en fil med sökvägen och namnet `well-known/adobe/cloudmanager-challenge.txt` i Git-databasens `main`-gren som visas i fältet **Databas-URL**. Lägg *inte* till en punkt i början av platssökvägen.<br>Om det behövs klickar du på ![Kopiera](https://spectrum.corp.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) för att kopiera sökvägen till Urklipp. |
-   | **2** | Lägg till koden som visas i textfältet i steg 2 i filen som du just skapade i steg 1.<br>Klicka vid behov på ![Kopiera](https://spectrum.corp.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) för att kopiera koden till Urklipp. |
+   | **1** | Lägg till en fil med sökvägen och namnet `well-known/adobe/cloudmanager-challenge.txt` i Git-databasens `main`-gren som visas i fältet **Databas-URL**. Lägg *inte* till en punkt i början av platssökvägen.<br>Om det behövs klickar du på ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) för att kopiera sökvägen till Urklipp. |
+   | **2** | Lägg till koden som visas i textfältet i steg 2 i filen som du just skapade i steg 1.<br>Klicka vid behov på ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) för att kopiera koden till Urklipp. |
    | **3** | Skapa en pull-begäran i Git-databasen för de ändringar som du nyss skapade och sammanfoga den sedan till `main` för att bekräfta koden. |
 
 1. Klicka på **Verifiera**.
 
 När databasen har verifierats ändras dess status i tabellen Edge Delivery-webbplatser till en grön cirkel med en vit bock inuti.
 
-I samma tabell kan du klicka på ![Information om Edge Delivery webbplats.](https://spectrum.corp.adobe.com/static/icons/workflow_18/Smock_InfoOutline_18_N.svg) om du vill visa information om din plats, t.ex. den verifierade URL:en för databasen och URL:en för webbplatsen Förhandsvisa och produktion.
+I samma tabell kan du klicka på ![Information om Edge Delivery webbplats.](https://spectrum.adobe.com/static/icons/workflow_18/Smock_InfoOutline_18_N.svg) om du vill visa information om din plats, t.ex. den verifierade URL:en för databasen och URL:en för webbplatsen Förhandsvisa och produktion.
 
 
