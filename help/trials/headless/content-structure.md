@@ -6,9 +6,9 @@ index: false
 exl-id: ace9b9f3-8bc6-4a36-a51c-ff60cdd339ce
 feature: Headless
 role: Admin, User, Developer
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: c9cddf9f0e344a2a24ee1a608b3ea920e258f34a
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
@@ -90,6 +90,7 @@ Följ samma steg som ovan för att lägga till dessa ytterligare fält. Den enda
 
    * **Återge som:** **Textområde** - När du skapar ett äventyr lagrar det här fältet en kort beskrivning av resan.
    * **Fältetikett:** `Description` - Den etikett som visas för det här fältet när ett äventyr skapas.
+   * **Standardtyp**: **Oformaterad text** - Det format som krävs för det här exemplet.
 
 1. Lägg till ett fält så att du kan lagra priset på äventyret genom att dra och släppa ett **enkelradigt textfält** och ange följande egenskaper:
 
