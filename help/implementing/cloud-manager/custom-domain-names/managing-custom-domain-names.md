@@ -5,9 +5,9 @@ exl-id: 6cab8cf2-22c0-4f4b-9c54-a1425e74ddd0
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 8e2fc0d4ee82e79d1a822a528b1a46acce3c192a
+source-git-commit: 2d1382c84d872719332986baa5829d1623d9d9a6
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '447'
 ht-degree: 0%
 
 ---
@@ -33,11 +33,11 @@ I Adobe Cloud Manager kanske du vill redigera en anpassad domännamnskonfigurati
 
 1. I det övre vänstra hörnet av sidan klickar du på hamburgikonen för att visa den vänstra navigeringsmenyn.
 1. Klicka på **CDN-konfigurationer** under rubriken **Tjänster**.
-1. På sidan **CDN-konfigurationer** klickar du på ellipsen i slutet av en rad vars CDN du vill redigera.
+1. På sidan **CDN-konfigurationer** klickar du på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i slutet av en rad vars CDN du vill redigera.
 1. Klicka på **Redigera**.
 1. Gör följande i dialogrutan **Redigera CDN-konfiguration**:
-   * I listrutan **Nivå** väljer du den nivå (Författare eller Publish) som du vill använda.
-   * Välj det SSL-certifikat som du vill använda i listrutan **SSL-certifikat**.
+   * I listrutan **Nivå** väljer du den nivå (Publish eller Preview) som du vill använda.
+   * I listrutan **SSL-certifikat** väljer du det SSL-certifikat som du vill använda.
 1. Klicka på **Uppdatera**.
 
 

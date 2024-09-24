@@ -5,9 +5,9 @@ exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: f45de13049f78f97b256235d9395695cb531c40d
+source-git-commit: 2d1382c84d872719332986baa5829d1623d9d9a6
 workflow-type: tm+mt
-source-wordcount: '1490'
+source-wordcount: '1489'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Uppfyll dessa krav innan du lägger till ett anpassat domännamn i Cloud Manager
 
 * Du måste ha lagt till ett domän-SSL-certifikat för domänen som du vill lägga till innan du lägger till ett anpassat domännamn enligt beskrivningen i dokumentet [Lägg till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md).
 * Du måste ha rollen **Affärsägare** eller **Distributionshanterare** för att lägga till ett anpassat domännamn i Cloud Manager.
-* Använd snabbast eller något annat CDN.
+* Använd det snabba nätverket eller något annat CDN (Content Delivery Network).
 
 >[!IMPORTANT]
 >
@@ -31,22 +31,22 @@ Uppfyll dessa krav innan du lägger till ett anpassat domännamn i Cloud Manager
 
 ## Var ska jag lägga till egna domännamn? {#where-to-add-cdn}
 
-Du kan lägga till ett eget domännamn från två platser i Cloud Manager:
+Du kan lägga till ett anpassat domännamn från följande två platser i Cloud Manager:
 
-* [Från sidan Domäninställningar](#adding-cdn-settings)
-* [Från sidan Miljöer](#adding-cdn-environments)
+* [Sidan Domäninställningar](#adding-cdn-settings)
+* [Miljösida](#adding-cdn-environments)
 
 När du lägger till ett anpassat domännamn hanteras domänen med det mest specifika, giltiga certifikatet. Om flera certifikat har samma domän väljs den senast uppdaterade versionen. Adobe rekommenderar att du hanterar certifikat så att det inte finns några överlappande domäner.
 
-Stegen för de metoder som beskrivs i det här dokumentet baseras på Fast. Om du har använt ett annat CDN konfigurerar du din domän med det CDN som du har valt att använda.
+Stegen för de metoder som beskrivs i det här dokumentet baseras på Fast. Om du har använt ett annat CDN (Content Delivery Network) konfigurerar du din domän med det CDN som du har valt att använda.
 
-## Lägg till ett anpassat domännamn från sidan Domäninställningar {#adding-cdn-settings}
+## Lägg till ett anpassat domännamn {#adding-cdn-settings}
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
 1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
 
-1. Välj fliken **Domäninställningar** i den vänstra navigeringspanelen
+1. Välj **Domäninställningar** på sidomenyn under **Tjänster**.
 
    ![Fönstret Domäninställningar](/help/implementing/cloud-manager/assets/cdn/cdn-create.png)
 
@@ -59,7 +59,7 @@ Inkludera inte `http://`, `https://` eller mellanslag när du anger i din domän
 
 1. I dialogrutan **Verifiera domän**, i **Vilken certifikattyp tänker du använda med den här domänen?**-listrutan och välj något av följande alternativ:
 
-   | Certifikattyp | Beskrivning |
+   | Certifikattyp, alternativ | Beskrivning |
    | --- | --- |
    | Adobe-hanterat certifikat | Välj om du vill använda ett DV-certifikat (Domain Validation). Det här alternativet är idealiskt för de flesta fall och ger grundläggande domänvalidering. Adobe hanterar och förnyar certifikatet automatiskt. |
    | Kundhanterat certifikat | Välj om du vill använda ett EV/OV-certifikat. Det här alternativet ger bättre säkerhet med EV (Extended Validation) eller OV (Organization Validation). Använd om striktare verifiering, högre tillförlitlighetsnivåer eller anpassad kontroll över certifikaten krävs. |
@@ -207,6 +207,8 @@ Now that you created your TXT entry, you can verify your domain name status. Pro
 
 
 ## Lägg till ett anpassat domännamn från miljösidan {#adding-cdn-environments}
+
+<!-- I DON'T SEE THIS ABILITY ANYMORE IN THE UI -->
 
 Stegen för att lägga till ett anpassat domännamn från sidan **Miljö** är desamma som när du [lägger till ett anpassat domännamn från sidan Domäninställningar](#adding-cdn-settings), men startpunkten skiljer sig åt. Följ de här stegen för att lägga till ett anpassat domännamn från sidan **Miljö**.
 

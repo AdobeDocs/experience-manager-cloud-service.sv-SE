@@ -5,9 +5,9 @@ exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 8e2fc0d4ee82e79d1a822a528b1a46acce3c192a
+source-git-commit: 2d1382c84d872719332986baa5829d1623d9d9a6
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
@@ -33,24 +33,21 @@ En användare måste vara medlem i rollen **Affärsägare** eller **Distribution
 
 **Så här lägger du till ett SSL-certifikat:**
 
-1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
-
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämpligt program.
 1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
-
-1. Navigera från sidan **Översikt** till skärmen **Miljö**.
-
-1. Klicka på **SSL-certifikat** under **Tjänster** på den vänstra navigeringspanelen. Om du inte ser den vänstra navigeringspanelen som i följande bild, kan du behöva klicka på ikonen för hamburgaren i det övre vänstra hörnet.
+1. Klicka på ![Visa menyikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i sidans övre vänstra hörn för att visa sidomenyn.
+1. Under rubriken **Tjänster** klickar du på ![Lås stängda ikoner](https://spectrum.adobe.com/static/icons/workflow_18/Smock_LockClosed_18_N.svg) **SSL-certifikat**.
 
    ![Lägger till ett SSL-certifikat](/help/implementing/cloud-manager/assets/ssl/ssl-cert-add.png)
 
-1. Klicka på **Lägg till SSL-certifikat** i sidans övre högra hörn.
+1. Klicka på **Lägg till SSL-certifikat** i det övre högra hörnet på sidan SSL-certifikat.
 
 1. Gör något av följande i dialogrutan **Lägg till SSL-certifikat**, baserat på [ditt användningsfall](/help/implementing/cloud-manager/managing-ssl-certifications/introduction-to-ssl-certificates.md):
 
    | | Använd skiftläge | Steg |
    | --- | --- | --- |
-   | 1 | **Lägg till ett Adobe-hanterat certifikat (DV)** | **Så här lägger du till ett Adobe-hanterat certifikat (DV):**<br> a. Markera certifikattypen **Adobe hanterad (DV)**.<br>![Lägg till ett DV-certifikat](/help/implementing/cloud-manager/assets/ssl/add-dv-certificate.png)<br>b. I fältet **Certifikatnamn** anger du ett namn som du vill associera med certifikatet.<br>c. I listrutan **Välj domäner** väljer du en eller flera domäner som du vill associera med DV-certifikatet.<br>Inga domäner att välja? I så fall måste du lägga till en anpassad domän. Se [Lägg till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md). När du är klar med att lägga till ett anpassat domännamn går du tillbaka till det här avsnittet och börjar på steg 1 igen.<br>d. Fortsätt till steg 7. |
-   | 2 | **Lägg till ett kundhanterat certifikat (OV/EV)** | **Så här lägger du till ett kundhanterat certifikat (OV/EV):**<br> a. Välj certifikattypen **Kundhanterad (OV/EV)**.<br>b. Ange ett namn för ditt certifikat i fältet **Certifikatnamn** . Det här fältet är avsett endast som information och kan vara vilket namn som helst som gör det enkelt att referera till ditt certifikat.<br>c. I fälten **Certifikat**, **Privat nyckel** och **Certifikatkedja** klistrar du in de värden som krävs i respektive fält.<br>![Dialogrutan Lägg till SSL-certifikat](/help/implementing/cloud-manager/assets/ssl/ssl-cert-02.png)<br>Alla identifierade fel i värden visas. Innan du kan spara certifikatet måste du åtgärda alla fel. Mer information om hur du felsöker vanliga fel finns i [Certifikatfel](#certificate-errors).<br>d. Fortsätt till steg 7. |
+   | 1 | **Lägg till ett DV-certifikat (Adobe managed)** | **Så här lägger du till ett DV-certifikat (Adobe managed):**<br> a. I dialogrutan **Lägg till SSL-certifikat** väljer du certifikattypen **Adobe hanterad (DV)** .<br>![Lägg till ett DV-certifikat](/help/implementing/cloud-manager/assets/ssl/add-dv-certificate.png)<br>b. I fältet **Certifikatnamn** anger du ett namn som du vill associera med certifikatet.<br>c. I listrutan **Välj domäner** väljer du en eller flera domäner som du vill associera med DV-certifikatet.<br>Inga domäner att välja? I så fall måste du lägga till en anpassad domän. Se [Lägg till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md). När du är klar med att lägga till ett anpassat domännamn går du tillbaka till det här avsnittet och börjar på steg 1 igen.<br>d. Fortsätt till steg 7. |
+   | 2 | **Lägg till ett kundhanterat (OV/EV) certifikat** | **Så här lägger du till ett kundhanterat (OV/EV) certifikat:**<br> a. I dialogrutan **Lägg till SSL-certifikat** väljer du certifikattypen **Kundhanterad (OV/EV)**.<br>b. Ange ett namn för ditt certifikat i fältet **Certifikatnamn** . Det här fältet är avsett endast som information och kan vara vilket namn som helst som gör det enkelt att referera till ditt certifikat.<br>c. I fälten **Certifikat**, **Privat nyckel** och **Certifikatkedja** klistrar du in de värden som krävs i respektive fält.<br>![Dialogrutan Lägg till SSL-certifikat](/help/implementing/cloud-manager/assets/ssl/ssl-cert-02.png)<br>Alla identifierade fel i värden visas. Innan du kan spara certifikatet måste du åtgärda alla fel. Mer information om hur du felsöker vanliga fel finns i [Certifikatfel](#certificate-errors).<br>d. Fortsätt till steg 7. |
 
 <!--
     **Add an SSL certificate:**
@@ -73,7 +70,7 @@ En användare måste vara medlem i rollen **Affärsägare** eller **Distribution
 
 1. Klicka på **Spara** i dialogrutans nedre högra hörn.
 
-   När certifikatet har utfärdats visas en grön bockmarkering i tabellen **SSL-certifikat**.
+   När certifikatet har utfärdats visas en grön bockmarkering (giltig) i tabellen **SSL-certifikat**.
 
 Du har nu lagt till ett fungerande SSL-certifikat för ditt projekt. Det här steget är ofta det första som ställer in ett anpassat domännamn.
 

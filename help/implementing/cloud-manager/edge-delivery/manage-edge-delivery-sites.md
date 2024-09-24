@@ -3,9 +3,9 @@ title: Hantera Edge Delivery-webbplatser i Cloud Manager
 description: Lär dig hur du lägger till en CDN-konfiguration på en Edge Delivery-webbplats eller tar bort en Edge Delivery-webbplats.
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: f684a52ca3b51d1aa4412122f7ad28dde3e2672f
+source-git-commit: 2d1382c84d872719332986baa5829d1623d9d9a6
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -34,8 +34,8 @@ I Adobe Cloud Manager kan det finnas flera skäl till att byta namn på en Edge 
 
    * Klicka på fliken **Edge Delivery** på sidan **Programöversikt**. Klicka på ellipsen i slutet av en rad vars webbplats du vill byta namn på i tabellen för Edge Delivery-webbplatser.
 Klicka på **Byt namn**.
-   * I det övre vänstra hörnet av sidan klickar du på hamburgikonen för att visa den vänstra navigeringsmenyn. Klicka på **Edge Delivery Sites** under rubriken **Tjänster**.
-Klicka på ellipsen i slutet av en rad vars webbplats du vill byta namn på i tabellen för Edge Delivery-webbplatser. Klicka på **Byt namn**.
+   * Klicka på ![Visa menyikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i det övre vänstra hörnet på sidan för att visa den vänstra navigeringsmenyn. Klicka på ikonen ![Webbsidor](https://spectrum.adobe.com/static/icons/workflow_18/Smock_WebPages_18_N.svg) **Edge Delivery Sites** under rubriken **Tjänster**.
+Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i slutet av en rad vars webbplats du vill byta namn på i Edge Delivery-webbplatstabellen. Klicka på **Byt namn**.
 
 1. I dialogrutan **Redigera Edge Delivery-webbplats** anger du platsens nya namn i textfältet **Platsnamn**.
 
@@ -51,13 +51,13 @@ Om du tar bort en webbplats för Edge Delivery Services tas även alla associera
 1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** väljer du programmet med konfigurerade Edge Delivery Services där du vill lägga till en Edge Delivery-webbplats.
 1. Gör något av följande:
 
-   * Klicka på fliken **Edge Delivery** på sidan **Programöversikt**. Klicka på ellipsen i slutet av en rad vars webbplats du vill ta bort i tabellen för Edge Delivery-webbplatsen.
+   * Klicka på fliken **Edge Delivery** på sidan **Programöversikt**. Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i slutet av en rad vars webbplats du vill ta bort i tabellen för Edge Delivery-webbplatsen.
 Klicka på ![Ta bort Edge Delivery-webbplats](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Delete_18_N.svg) **Ta bort** och klicka sedan på **Ta bort** igen för att bekräfta att webbplatsen har tagits bort.
 
      ![Lägg till Edge Delivery-webbplats från fliken Edge Delivery](/help/implementing/cloud-manager/assets/cm-eds-delete1.png)
 
    * Klicka på ![Visa eller dölj sidnavigering](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i sidans övre vänstra hörn för att visa sidnavigeringsmenyn. Under rubriken **Tjänster** klickar du på ![Webbsida för Edge Delivery-webbplatser](https://spectrum.adobe.com/static/icons/workflow_18/Smock_WebPages_18_N.svg) **Edge Delivery Sites**.
-Klicka på ellipsen i slutet av en rad vars webbplats du vill ta bort i tabellen för Edge Delivery-webbplatsen. Klicka på ![Ta bort Edge Delivery-webbplats](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Delete_18_N.svg) **Ta bort** och klicka sedan på **Ta bort** igen för att bekräfta att webbplatsen har tagits bort.
+Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i slutet av en rad vars webbplats du vill ta bort i tabellen för Edge Delivery-webbplatsen. Klicka på ![Ta bort Edge Delivery-webbplats](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Delete_18_N.svg) **Ta bort** och klicka sedan på **Ta bort** igen för att bekräfta att webbplatsen har tagits bort.
 
      ![Lägg till Edge Delivery-webbplats från knappen Edge Delivery-platser](/help/implementing/cloud-manager/assets/cm-eds-delete2.png)
 

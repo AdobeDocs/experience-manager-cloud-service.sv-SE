@@ -5,9 +5,9 @@ exl-id: 10011392-3059-4bb0-88db-0af1d390742e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 17306cf0877513d1412ffba311bd5d601edec062
+source-git-commit: 2d1382c84d872719332986baa5829d1623d9d9a6
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
@@ -26,17 +26,17 @@ Läs mer om programtyper i dokumentet [Om program- och programtyper](program-typ
 
    ![Cloud Manager landningssida](assets/log-in.png)
 
-1. I *programguiden* skriver du det namn du vill använda för programmet i textfältet **Programnamn**.
+1. I *Programguiden* skriver du det namn du vill använda för programmet i textfältet **Programnamn**.
 
-1. Välj **`Set up a sandbox`** under **Programmål**.
+1. Under **Programmål** väljer du ![Trollstaven ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MagicWand_18_N.svg) **Konfigurera en sandlåda**.
 
    ![Skapa programtyp](assets/create-sandbox.png)
 
 1. (Valfritt) Gör något av följande i det nedre högra hörnet i dialogrutan för guiden:
 
-   * Dra och släpp en bildfil till målet **Lägg till en programbild**.
-   * Klicka på **Lägg till en programbild** och välj sedan en bild i en filläsare.
-   * Klicka på papperskorgsikonen för att ta bort en bild som du har lagt till.
+   * Dra och släpp en bildfil till ![bildikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Image_18_N.svg) **Lägg till ett programbildsmål** .
+   * Klicka på ![Bildikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Image_18_N.svg) **Lägg till en programbild** och välj sedan en bild i en filläsare.
+   * Klicka på ikonen ![Ta bort](https://spectrum.adobe.com/static/icons/workflow_18/Smock_DeleteOutline_18_N.svg) för att ta bort en bild som du har lagt till.
 
 1. Klicka på **Fortsätt**.
 
@@ -55,7 +55,7 @@ Läs mer om programtyper i dokumentet [Om program- och programtyper](program-typ
 
 När ett nytt sandlådeprogram har skapats kan du visa detaljerna för sandlådekonfigurationen och få åtkomst till miljön genom att visa programöversiktssidan.
 
-1. På Cloud Manager landningssida klickar du på ellipsknappen i ditt skapade sandlådeprogram.
+1. På Cloud Manager landningssida i sandlådeprogrammet klickar du på ![Mer liten listikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i det sandlådeprogram du har skapat.
 
    ![Åtkomst till programöversikt](assets/program-overview-sandbox.png)
 
