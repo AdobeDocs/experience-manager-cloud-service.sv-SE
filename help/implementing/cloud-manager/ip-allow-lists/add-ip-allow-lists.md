@@ -5,9 +5,9 @@ exl-id: 769be71f-5c11-4f98-8906-7a5667a25aee
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: d6ecdae8dd78c3c93a410ca2c8b80322340f439e
+source-git-commit: b9fb178760b74cb0e101506b6a9ff5ae30c18490
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,13 @@ En användare i rollen **Affärsägare** eller **Distributionshanterare** kan f�
 
 {{add-cm-allowlist-frontend-pipeline}}
 
+**Så här lägger du till en IP-Tillåtelselista:**
+
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
 1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
 
-1. På sidan **Programöversikt** klickar du på **IP-Tillåtelselista** med sidopanelen till vänster (du kan behöva klicka på hamburgikonen i det övre vänstra hörnet för att se panelen).
+1. På sidan **Programöversikt** klickar du med sidopanelen (du kan behöva klicka på ![Visa menyikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i det övre vänstra hörnet för att visa panelen) på ![ikonen för uppgiftslistan](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TaskList_18_N.svg) **IP-Tillåtelselista**.
 
    ![Alternativet IP-Tillåtelselista på sidpanelen](/help/implementing/cloud-manager/assets/ip-allow-list/ip-allow-list-create.png)
 

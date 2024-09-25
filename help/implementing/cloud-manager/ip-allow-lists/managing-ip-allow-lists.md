@@ -5,9 +5,9 @@ exl-id: 6efabe53-3f45-47d4-ac1f-979cae0ab33e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: f4c6331491bb08e81964476ad58065c1ee022967
+source-git-commit: b9fb178760b74cb0e101506b6a9ff5ae30c18490
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '841'
 ht-degree: 0%
 
 ---
@@ -20,74 +20,53 @@ Lär dig hur du visar, redigerar, tar bort och kontrollerar status för IP-Till�
 
 En användare i rollen **Affärsägare** eller **Distributionshanterare** kan följa de här stegen för att visa och uppdatera ett IP-Tillåtelselista.
 
-1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
-1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
-1. Gå till skärmen **Miljö** från sidan **Översikt**.
-1. Navigera till sidan **IP Tillåtelselista** från skärmen **Environment**.
+**Så här visar och uppdaterar du IP-Tillåtelselista:**
+
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
+1. På sidan **Översikt** klickar du på ikonen ![Åtgärdslista](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TaskList_18_N.svg) **IP-Tillåtelselista** på sidopanelen under **Tjänster**.
 1. Identifiera raden för IP-Tillåtelselista som du vill visa eller uppdatera.
-1. Klicka på ellipsknappen till höger om raden.
-1. Välj alternativet **Visa och uppdatera**.
-1. Guiden **Visa och uppdatera** visar namn, IP-adresser (eller intervall) som definierar regeln samt de miljöer och tjänster som regeln tillämpas på.
-1. Ändra namn eller IP-adresser efter behov och bekräfta ditt bidrag.
+1. Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) till höger om raden.
+1. Klicka på **Visa och uppdatera** i listrutan.
+I dialogrutan **Visa och uppdatera IP Tillåtelselista** visas namnet, IP-adresserna (eller intervallen) som definierar regeln samt de miljöer och tjänster som regeln används i.
+1. Ändra namn eller IP-adresser efter behov.
 
-Om du lägger till eller tar bort ett nytt IP-intervall i ett IP-Tillåtelselista används/tas det automatiskt bort från alla motsvarande miljöer/tjänster som det tidigare tillämpades på.
+   Om du lägger till eller tar bort ett nytt IP-intervall i ett IP-Tillåtelselista används/tas det automatiskt bort från alla motsvarande miljöer/tjänster som det tidigare tillämpades på.
 
-Det går inte att göra uppdateringar till IP-Tillåtelselista när en tidigare uppdatering pågår och inte har slutförts.
+   Det går inte att göra uppdateringar till IP-Tillåtelselista när en tidigare uppdatering pågår och inte har slutförts.
+
+1. Klicka på **Uppdatera**.
 
 ## Kontrollera IP-Tillåtelselista status {#check-allow-list-status}
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
-1. Gå till skärmen **Miljö** från sidan **Översikt**.
+1. På sidan **Översikt** klickar du på ikonen ![Åtgärdslista](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TaskList_18_N.svg) **IP-Tillåtelselista** på sidopanelen under **Tjänster**.
 
-1. Klicka på ikonen **Status** för IP-Tillåtelselista i tabellen på skärmen **Miljö** och välj sidan **IP-Tillåtelselista**.
+1. I kolumnen **Status** i IP Tillåtelselista-tabellen håller du muspekaren över ett IP-Tillåtelselista som är grönt (används) för att se en eller flera tjänster som används.
 
-1. Cloud Manager visar status för Tillåtelselista enligt beskrivningen [i följande avsnitt](#status).
+   Statusvärdena i tabellen har följande betydelse:
 
-### Status för IP-Tillåtelselista {#status}
-
-[När du kontrollerar statusen för IP-Tillåtelselista](#check-allow-list-status) kan de ha något av följande värden.
-
-* **Används** - IP-Tillåtelselista används i en eller flera miljöer.
-
-* **Uppdaterar** - En uppdatering av IP Tillåtelselista pågår, vilket kan innehålla ett eller flera program eller att listan inte används.
-
-   * Varje program/program som inte körs visas tillsammans med dess egen status **Inte startat**, **Pågår**, **Fullständigt** eller **Misslyckades**.
-
-* **Misslyckades** - En eller flera program- eller avprogramprocesser för en uppdatering misslyckades.
-   * Alla program och avaktiverade program visas tillsammans med programmets status.
-      * Statusen är **Misslyckad** om ett program/ett program i uppdateringen misslyckas.
-      * Statusen förblir **Misslyckad** tills alla fel har rensats.
-         * Välj ikonen **Försök igen** bredvid statusen så att du kan åtgärda felet.
-      * Du kan inte uppdatera eller ta bort en IP-Tillåtelselista med statusen **Misslyckades**.
-
-* **Tar bort** - en borttagning av IP-Tillåtelselista pågår.
-   * Borttagning innebär att listan inte används för alla tjänster.
-   * Varje icke-program visas tillsammans med sin egen status **Inte startad**, **Pågår**, **Fullständigt** eller **Misslyckad**.
-   * När borttagningen är klar:
-      * IP-Tillåtelselista finns inte i IP Tillåtelselista-tabellen.
-      * IP Tillåtelselista används inte för någon tjänst i Cloud Manager.
-
-* **Borttagningen misslyckades** - Ett eller flera program som inte kunde tas bort misslyckades under en borttagningsåtgärd.
-
-   * Varje icke-program visas tillsammans med statusen **Fullständigt** eller **Misslyckat**.
-   * Statusen blir **Ta bort misslyckades** om ett av programmen misslyckas.
-   * Statusen förblir **Ta bort misslyckades** tills alla fel har rensats. Klicka på ellipsmenyn längst till höger om tabellraden och klicka sedan på **Ta bort** så att du kan ta bort eventuella fel.
-   * Du kan inte uppdatera ett IP-Tillåtelselista när statusen är **Misslyckad**.
+   | Status för IP Tillåtelselista | Beskrivning |
+   | --- | --- |
+   | Används | IP-Tillåtelselista används i en eller flera miljöer. |
+   | Uppdaterar | En uppdatering av IP Tillåtelselista pågår, vilket kan inkludera ett eller flera program eller att listan inte används. Varje program/program som inte körs visas tillsammans med dess egen status **Inte startat**, **Pågår**, **Fullständigt** eller **Misslyckades**. |
+   | Misslyckades | En eller flera program- eller avprogramprocesser för en uppdatering misslyckades.<br> ・ Alla program och avprogram visas tillsammans med programmets status.<br> ・ Statusen är **Misslyckad** om ett program/ett program som inte används i uppdateringen misslyckas. Statusen förblir **Misslyckad** tills alla fel har rensats.<br> ・ Klicka på ikonen **Försök igen** bredvid statusen så att du kan ta bort felet.<br> ・ Du kan inte uppdatera eller ta bort en IP-Tillåtelselista med statusen **Misslyckades**. |
+   | Tar bort | En borttagning av IP-Tillåtelselista pågår.<br> ・ Att ta bort innebär att listan tas bort från alla tjänster.<br> ・ Varje program som inte används visas tillsammans med dess egen status **Inte startat**, **Pågår**, **Fullständigt** eller **Misslyckades**.<br> ・ När borttagningsåtgärden har slutförts visas IP-Tillåtelselista inte i IP Tillåtelselista-tabellen. IP Tillåtelselista används inte heller för någon tjänst i Cloud Manager. |
+   | Borttagningen misslyckades | Ett eller flera icke-program misslyckades under en borttagningsåtgärd.<br> ・ Varje program som inte används visas tillsammans med statusen **Fullständigt** eller **Misslyckat**.<br> ・ Statusen blir **Ta bort misslyckades** om ett av programmen misslyckas. Statusen förblir **Ta bort misslyckades** tills alla fel har rensats. Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) längst till höger i tabellraden och klicka sedan på **Ta bort** i listrutan för att ta bort eventuella fel.<br> ・ Du kan inte uppdatera ett IP-Tillåtelselista när statusen är **Misslyckad**. |
 
 ## Ta bort en IP-Tillåtelselista {#delete-allow-list}
 
+När du tar bort ett IP-Tillåtelselista tas listan automatiskt bort från alla tjänster och tas bort från IP Tillåtelselista-tabellen.
+
 En användare i rollen **Affärsägare** eller **Distributionshanterare** kan följa de här stegen för att visa och uppdatera ett IP-Tillåtelselista.
 
-1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
-1. Gå till skärmen **Miljö** från sidan **Översikt**.
-1. Navigera till sidan **IP Tillåtelselista** från skärmen **Environment**.
-1. Identifiera den rad i IP-Tillåtelselista som du vill ta bort.
-1. Välj ellipsmenyn längst till höger på raden.
-1. Klicka på **Ta bort**.
-1. Bekräfta ditt bidrag.
+**Så här tar du bort en IP-Tillåtelselista:**
 
-Om du tar bort ett IP-Tillåtelselista tas det automatiskt bort från alla tjänster och tas bort från tabellen.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
+1. På sidan **Översikt** klickar du på ikonen ![Åtgärdslista](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TaskList_18_N.svg) **IP-Tillåtelselista** på sidopanelen under **Tjänster**.
+1. Identifiera raden för IP-Tillåtelselista som du vill ta bort och klicka sedan på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) till höger om raden.
+1. Klicka på **Ta bort** i listrutan.
+1. Klicka på **Ta bort** i dialogrutan Ta bort IP Tillåtelselista.
 
 ## Redan befintliga CDN-konfigurationer {#pre-existing-cdn}
 

@@ -1,13 +1,13 @@
 ---
 title: Lägg till ett anpassat domännamn
-description: Lär dig hur du lägger till ett anpassat domännamn med Cloud Manager.
+description: Lär dig hur du lägger till ett anpassat domännamn med Domäninställningar i Cloud Manager.
 exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 2d1382c84d872719332986baa5829d1623d9d9a6
+source-git-commit: b9fb178760b74cb0e101506b6a9ff5ae30c18490
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1509'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Lägg till ett anpassat domännamn {#adding-cdn}
 
-Lär dig hur du lägger till ett anpassat domännamn med Cloud Manager.
+Lär dig hur du lägger till ett anpassat domännamn med **Domäninställningar** i Cloud Manager.
 
 ## Krav {#requirements}
 
@@ -46,7 +46,7 @@ Stegen för de metoder som beskrivs i det här dokumentet baseras på Fast. Om d
 
 1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
 
-1. Välj **Domäninställningar** på sidomenyn under **Tjänster**.
+1. Välj ![Inställningsikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Settings_18_N.svg) **Domäninställningar** på sidomenyn under **Tjänster**.
 
    ![Fönstret Domäninställningar](/help/implementing/cloud-manager/assets/cdn/cdn-create.png)
 
@@ -61,8 +61,8 @@ Inkludera inte `http://`, `https://` eller mellanslag när du anger i din domän
 
    | Certifikattyp, alternativ | Beskrivning |
    | --- | --- |
-   | Adobe-hanterat certifikat | Välj om du vill använda ett DV-certifikat (Domain Validation). Det här alternativet är idealiskt för de flesta fall och ger grundläggande domänvalidering. Adobe hanterar och förnyar certifikatet automatiskt. |
-   | Kundhanterat certifikat | Välj om du vill använda ett EV/OV-certifikat. Det här alternativet ger bättre säkerhet med EV (Extended Validation) eller OV (Organization Validation). Använd om striktare verifiering, högre tillförlitlighetsnivåer eller anpassad kontroll över certifikaten krävs. |
+   | Adobe-hanterat certifikat | Välj den här certifikattypen om du vill använda ett DV-certifikat (Domain Validation). Det här alternativet är idealiskt för de flesta fall och ger grundläggande domänvalidering. Adobe hanterar och förnyar certifikatet automatiskt. |
+   | Kundhanterat certifikat | Välj den här certifikattypen om du vill använda ett EV/OV-certifikat. Det här alternativet ger bättre säkerhet med EV (Extended Validation) eller OV (Organization Validation). Använd om striktare verifiering, högre tillförlitlighetsnivåer eller anpassad kontroll över certifikaten krävs. |
 
 1. Gör något av följande i dialogrutan **Verifiera domän**, baserat på den certifikattyp du valde:
 
@@ -77,7 +77,7 @@ Inkludera inte `http://`, `https://` eller mellanslag när du anger i din domän
 
    >[!NOTE]
    >
-   >Om du använder ett självhanterat SSL-certifikat och en självhanterad CDN-provider kan du hoppa över det här steget och gå direkt till [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md) när det är klart.
+   >Om du använder ett kundhanterat SSL-certifikat och en kundhanterad CDN-leverantör kan du hoppa över att lägga till ett SSL-certifikat och gå direkt till [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md) när det är klart.
 
 
 ### Certifikatsteg som hanteras av Adobe {#adobe-managed-cert-steps}
@@ -222,8 +222,8 @@ Stegen för att lägga till ett anpassat domännamn från sidan **Miljö** är d
 
    1. Ange det anpassade domännamnet.
    1. Välj SSL-certifikatet som är associerat med det här namnet i listrutan.
-   1. Klicka på **+Lägg till**.
+   1. Klicka på ![Lägg till ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) **Lägg till**.
 
    ![Lägg till ett anpassat domännamn](/help/implementing/cloud-manager/assets/cdn/cdn-create3.png)
 
-1. Dialogrutan **Lägg till domännamn** öppnas på fliken **Domännamn**. Fortsätt på samma sätt som du gör för [att lägga till ett anpassat domännamn från sidan Domäninställningar](#adding-cdn-settings). —>
+1. Dialogrutan **Lägg till domännamn** öppnas på fliken **Domännamn**. Fortsätt på samma sätt som du gör för [att lägga till ett anpassat domännamn från sidan Domäninställningar](#adding-cdn-settings).
