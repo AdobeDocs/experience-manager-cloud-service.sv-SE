@@ -1,12 +1,12 @@
 ---
 title: Skapa block som är instrumenterade för användning med den universella redigeraren
-description: Lär dig hur du skapar block som är instrumenterade för användning med den universella redigeraren i WYSIWYG-redigering med Edge Delivery Services.
+description: Lär dig hur du skapar block som är instrumenterade för användning med Universal Editor i WYSIWYG-redigering med Edge Delivery Services-projekt.
 exl-id: 65a5600a-8d16-4943-b3cd-fe2eee1b4abf
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 772fcc2688edb57eca3b84689de1d1c47f87dcd0
+source-git-commit: 3419fa943eb865d87467443527ea97fcd64909c2
 workflow-type: tm+mt
-source-wordcount: '1401'
+source-wordcount: '1445'
 ht-degree: 0%
 
 ---
@@ -14,20 +14,20 @@ ht-degree: 0%
 
 # Skapa block som är instrumenterade för användning med den universella redigeraren {#create-block}
 
-Lär dig hur du skapar block som är instrumenterade för användning med den universella redigeraren i WYSIWYG-redigering med Edge Delivery Services.
+Lär dig hur du skapar block som är instrumenterade för användning med Universal Editor i WYSIWYG-redigering med Edge Delivery Services-projekt.
 
 ## Förutsättningar {#prerequisites}
 
-Den här guiden innehåller stegvisa instruktioner för hur du skapar block som är instrumenterade för den universella redigeraren i WYSIWYG-redigering med Edge Delivery Services-projekt. Det handlar om att lägga till komponenter, läsa in komponentdefinitioner i den universella redigeraren, publicera sidor, implementera blockdekoration och format, göra ändringar i produktionen och verifiera dem. När du är klar med den här guiden kan du skapa och distribuera ett nytt block för ditt eget projekt.
+Den här guiden innehåller stegvisa instruktioner för hur du skapar block som är avsedda för den universella redigeraren i WYSIWYG-redigering med Edge Delivery Services-projekt. Det handlar om att lägga till komponenter, läsa in komponentdefinitioner i den universella redigeraren, publicera sidor, implementera blockdekoration och format, göra ändringar i produktionen och verifiera dem. När du är klar med den här guiden kan du skapa och distribuera ett nytt block för ditt eget projekt.
 
-Den här guiden kräver kunskaper om WYSIWYG-redigering med Edge Delivery Services och den universella redigeraren. Innan du börjar den här guiden bör du ha tillgång till Edge Delivery Services och känna till grunderna i den:
+Den här guiden kräver kunskaper om WYSIWYG framtagning av Edge Delivery Services och den universella redigeraren. Innan du börjar den här guiden bör du ha tillgång till Edge Delivery Services och känna till grunderna i den:
 
 * Du har slutfört självstudiekursen [Edge Delivery Service.](/help/edge/developer/tutorial.md)
 * Du har åtkomst till en [AEM Cloud Service-sandlåda.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md)
 * Du har [aktiverat den universella redigeraren i samma sandlådemiljö.](/help/implementing/universal-editor/getting-started.md)
-* Du har slutfört guiden [Komma igång för utvecklare för WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md).
+* Du har slutfört guiden [Komma igång för utvecklare för WYSIWYG med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md).
 
-Den här guiden bygger vidare på det arbete som gjorts i [Utvecklarhandboken Komma igång för WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) .
+Den här guiden bygger vidare på det arbete som gjorts i guiden [Komma igång för utvecklare för WYSIWYG med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) .
 
 ## Lägga till ett nytt block i projektet {#add-block}
 
@@ -331,13 +331,19 @@ När du inte utvecklar i grenen `main` kan du lägga till `?ref=<branch>` i fäl
 
 Publicering av innehåll med en ny modell stöds bara när modellen sammanfogas med grenen `main`.
 
+## Återanvända era block för dokumentbaserad redigering {#reusing-blocks}
+
+Du kan använda de block du skapar för WYSIWYG-redigering med den universella redigeraren för dokumentbaserad redigering om du följer samma innehållsmodell.
+
+Mer information finns i dokumentet [Block för WYSIWYG och dokumentbaserad redigering](/help/edge/wysiwyg-authoring/wysiwyg-doc-blocks.md).
+
 ## Nästa steg {#next-steps}
 
 Nu när du vet hur man skapar block är det viktigt att förstå hur man modellerar innehåll på ett semantiskt sätt för att uppnå en smidig utvecklarupplevelse.
 
-Läs dokumentet [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services i projekt](/help/edge/wysiwyg-authoring/content-modeling.md) om du vill veta hur innehållsmodellering fungerar för WYSIWYG-redigering med Edge Delivery Services i projekt.
+Läs dokumentet [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services ](/help/edge/wysiwyg-authoring/content-modeling.md) om du vill veta hur innehållsmodellering fungerar för WYSIWYG-redigering med Edge Delivery Services.
 
 >[!TIP]
 >
->En genomgång av hur du skapar ett nytt projekt för Edge Delivery Services som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här webbinariet för AEM.](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery)
+>En genomgång av hur du skapar ett projekt för nya Edge Delivery Services som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här webbinariet för AEM.](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery)
 

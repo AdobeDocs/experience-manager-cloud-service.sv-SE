@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 8349f6d4d4f04d8609d5a5241b973201b54b2cd2
+source-git-commit: 9cece857f49cfe99c074115091288ca20f3124c5
 workflow-type: tm+mt
-source-wordcount: '5651'
+source-wordcount: '5655'
 ht-degree: 3%
 
 ---
@@ -927,6 +927,7 @@ ht-degree: 3%
       + [Innehållsmodellering](/help/edge/wysiwyg-authoring/content-modeling.md)
       + [Tabelldata och kalkylblad](/help/edge/wysiwyg-authoring/tabular-data.md)
       + [Hantera taxonomidata](/help/edge/wysiwyg-authoring/taxonomy.md)
+      + [WYSIWYG och dokumentbaserade block](/help/edge/wysiwyg-authoring/wysiwyg-doc-blocks.md)
       + [Funktioner för WIP-platser](/help/edge/wysiwyg-authoring/wip-features.md)
    + Dokumentbaserad redigering {#document-authoring}
       + [Redigering](/help/edge/docs/authoring.md)
@@ -1048,10 +1049,10 @@ ht-degree: 3%
          + [Innehållsmodellering för Headless med AEM - en introduktion](/help/journey-headless/architect/introduction.md)
          + [Lär dig grunderna i innehållsmodellering för Headless med AEM](/help/journey-headless/architect/basics.md)
          + [Läs om hur du skapar modeller för innehållsfragment i AEM](/help/journey-headless/architect/model-structure.md)
-      + Headless Translation Journey {#translation}
+      + {#translation}
          + [Understand headless translation in AEM](/help/journey-headless/translation/overview.md)
          + [Get started with AEM headless translation](/help/journey-headless/translation/getting-started.md)
-         + [Learn about headless content and how to translate in AEM](/help/journey-headless/translation/learn-about.md)
+         + [Lär dig mer om headless-innehåll och hur du översätter i AEM](/help/journey-headless/translation/learn-about.md)
          + [Konfigurera översättningskoppling](/help/journey-headless/translation/configure-connector.md)
          + [Konfigurera översättningsregler](/help/journey-headless/translation/translation-rules.md)
          + [Översätta innehåll](/help/journey-headless/translation/translate-content.md)
@@ -1168,11 +1169,11 @@ ht-degree: 3%
          + [Sling Cheatsheet](/help/implementing/developing/introduction/sling-cheatsheet.md)
          + [Använda delningsadaptrar](/help/implementing/developing/introduction/sling-adapters.md)
          + [Använda Sling Resource Merger i AEM as a Cloud Service](/help/implementing/developing/introduction/sling-resource-merger.md)
-         + [Övertäckningar i AEM as a Cloud Service](/help/implementing/developing/introduction/overlays.md)
+         + [Overlays in AEM as a Cloud Service](/help/implementing/developing/introduction/overlays.md)
          + [Using Client-Side Libraries](/help/implementing/developing/introduction/clientlibs.md)
          + [Page Diff](/help/implementing/developing/introduction/page-diff.md)
-         + [Begränsningar för redigerare](/help/implementing/developing/introduction/editor-limitations.md)
-         + [Naming Conventions](/help/implementing/developing/introduction/naming-conventions.md)
+         + [Editor Limitations](/help/implementing/developing/introduction/editor-limitations.md)
+         + [Namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md)
          + [Responsiv design](/help/implementing/developing/introduction/responsive-design.md)
          + Komponenter och mallar {#components-templates}
             + [Komponenter - översikt](/help/implementing/developing/components/overview.md)
