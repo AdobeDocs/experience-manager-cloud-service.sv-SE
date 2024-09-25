@@ -5,9 +5,9 @@ exl-id: 3f3d7631-2bc9-440b-9888-50f6529bcd42
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: b9fb178760b74cb0e101506b6a9ff5ae30c18490
+source-git-commit: b5ae995623c41803f8704fa9699d3514c37e4550
 workflow-type: tm+mt
-source-wordcount: '1574'
+source-wordcount: '1677'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Det första är Cloud Manager-rubriken som är beständig när du navigerar i Cl
 
 ![Experience Cloud-huvudet](assets/experience-cloud-header.png)
 
-1. Klicka på ![Visa menyikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) (visa/dölj sidomenyn) för att ge dig tillgång till en mängd olika flikar som kan ta dig till specifika delar av ett enskilt program. Eller så kan du växla mellan [licensöversikten](/help/implementing/cloud-manager/license-dashboard.md) och konsolen **[Mina program](#my-programs-console)** beroende på sammanhanget.
+1. Klicka på ![Visa menyikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) (visa eller dölj sidomenyn) för att ge dig tillgång till en mängd olika flikar som kan ta dig till specifika delar av ett enskilt program. Eller så kan du växla mellan [licensöversikten](/help/implementing/cloud-manager/license-dashboard.md) och konsolen **[Mina program](#my-programs-console)** beroende på sammanhanget.
 1. Klicka på Adobe Cloud Manager för att gå tillbaka till My Programs-konsolen i Cloud Manager oavsett var du befinner dig i Cloud Manager.
 1. Klicka på **Feedback** om du vill ge Adobe feedback om Cloud Manager.
 1. Klicka på organisationsväljaren för att visa organisationen som du är inloggad på (i det här exemplet Foundation Internal). Klicka för att växla till en annan organisation om din Adobe ID är kopplad till flera.
@@ -90,7 +90,7 @@ Eller om du just har börjat konfigurera organisationen kan det finnas tips om n
 
 Huvudinnehållet i konsolen **Mina program** är listan med program i avsnittet **Mina program**.
 
-I avsnittet **Mina program** visas kort för varje program. Tryck eller klicka på ett kort för att komma åt sidan **Programöversikt** i programmet för mer information om programmet.
+I avsnittet **Mina program** visas kort för varje program. Klicka på ett kort för att komma åt sidan **Programöversikt** för mer information om programmet.
 
 >[!NOTE]
 >
@@ -101,13 +101,13 @@ Använd sorteringsalternativen för att enklare hitta det program du behöver.
 
 ![Sorteringsalternativ](/help/implementing/cloud-manager/assets/my-programs-sorting.png)
 
-* Sortera efter
-   * Skapad den (standard)
-   * Programnamn
-   * Status
-* Stigande (standard) / Fallande
-* Stödrastervisning (standard)
-* Listvy
+* Sortera efter:
+   * **Skapad** (standard)
+   * **Programnamn**
+   * **Status**
+* ![Ikon för sorteringsordning nedåt](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderDown_18_N.svg) Stigande (standard) / ![Ikon för sorteringsordning uppåt ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderUp_18_N.svg) Fallande
+* ![Ikon för klassisk stödrastervy](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ClassicGridView_18_N.svg) Stödrastervisning (standard)
+* ![Ikon för visningslista](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewList_18_N.svg)
 
 #### Programkort {#program-cards}
 
@@ -115,48 +115,42 @@ Ett kort (eller en rad i en tabell) representerar alla program och ger en övers
 
 ![Programkort](assets/program-card.png)
 
-* Programavbildning (om den är konfigurerad)
-* Programnamn
+* Bild som är associerad med programmet, om den är konfigurerad. Bilden ovan är&quot;WKND&quot;.
+* Namn som tilldelats programmet. I bilden ovan visas&quot;SecurBank Sample&quot; som programnamn.
 * Tjänsttyp:
-   * **Experience Manager Cloud** för AEM as a Cloud Service-program
-   * **Experience Manager** för [AMS-program](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/introduction)
+   * **Experience Manager Cloud** - för AEM as a Cloud Service-program
+   * **Experience Manager** - för [AMS-program (Adobe Managed Services)](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/introduction)
 * [Programtyp](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md):
    * Sandbox
    * Produktion
-* Status
-* Konfigurerade lösningar
-* Skapad den
+* Status. I bilden ovan är statusen Klar med en bock.
+* Konfigurerade lösningar. I bilden ovan är Sites och Assets konfigurerade lösningar.
+* Skapad den.
 
-Beroende på vilka alternativ du väljer när du skapar programmet kan ett produktionsprogram märkas för att visa ytterligare funktioner.
+Ett produktionsprogram kan märkas om du vill visa ytterligare funktioner som du valde när du lade till det, till exempel följande:
 
-* [HIPAA](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md#security)
+* ![HIPAA-märke](assets/hipaa.png) [HIPAA](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md#security)
 
-  ![HIPAA-märke](assets/hipaa.png)
+* ![WAF-DDOS-märke](assets/waf-ddos-protection.png) [WAF-DDOS-skydd](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md#security)
 
-* [WAF-DDOS-skydd](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md#security)
-
-  ![WAF-DDOS, märke](assets/waf-ddos-protection.png)
-
-* [99,99 % SLA](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md#sla)
-
-  ![99.99% SLA-märke](assets/9999-sla.png)
+* [99,99 % SLA (servicenivåavtal)](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md#sla)
 
 Informationsikonen ger dig även snabb åtkomst till ytterligare information om programmet (användbart i listvyn).
 
 ![Information](assets/information-list-view.png)
 
-Med ellipsikonen får du tillgång till ytterligare åtgärder som du kan vidta i programmet.
+Ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_22/Smock_More_22_N.svg) ger dig tillgång till ytterligare åtgärder som du kan vidta i programmet.
 
 ![Ellipsknappen för program](assets/program-ellipsis.png)
 
-* Navigera till en viss [miljö](/help/implementing/cloud-manager/manage-environments.md) i programmet
-* Öppna [programöversikt](#program-overview)
-* [Redigera programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#editing)
-* [Ta bort ett sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#delete-sandbox-program)
+* Navigera till en viss ![dataikon](https://spectrum.adobe.com/static/icons/workflow_22/Smock_Data_22_N.svg) [Miljö](/help/implementing/cloud-manager/manage-environments.md) i programmet
+* Öppna ikonen ![Programöversikt](/help/implementing/cloud-manager/assets/program-overview.svg) [Programöversikt](#program-overview)
+* ![Ikonen Redigera](https://spectrum.corp.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) [Redigera programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#editing)
+* ![Ta bort ikon](https://spectrum.corp.adobe.com/static/icons/workflow_18/Smock_Delete_18_N.svg)[Ta bort ett sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#delete-sandbox-program)
 
 >[!TIP]
 >
->Mer information om program samt hur du skapar och hanterar program finns i följande dokument.
+>Mer information om program samt hur du lägger till och hanterar program finns i:
 >
 >* [Program och programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md)
 >* [Skapa produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md)
@@ -167,9 +161,9 @@ Med ellipsikonen får du tillgång till ytterligare åtgärder som du kan vidta 
 
 I avsnittet med snabblänkar får du tillgång till resurser som du använder ofta och som är relaterade till dem.
 
-## Programöversiktsfönster {#program-overview}
+## Översikt över programmet {#program-overview}
 
-När ett program har valts i konsolen **[Mina program](#my-programs-console)** öppnas fönstret **Programöversikt**.
+När ett program har valts i konsolen **[Mina program](#my-programs-console)** dirigeras du till sidan **Programöversikt** .
 
 ![Programöversikt](assets/program-overview.png)
 
@@ -189,11 +183,11 @@ Verktygsfälten för programöversikten liknar verktygsfälten i [Min programkon
 
 #### Cloud Manager header {#cloud-manager-header-2}
 
-Cloud Manager header har en hamburger-meny som automatiskt öppnas och visar de navigerbara flikarna i programöversikten.
+I sidans övre vänstra hörn finns rubriken Adobe Cloud Manager. Du kan klicka på ![Side menu icon](https://spectrum.corp.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) om du vill visa eller dölja sidomenyn med flikar till andra områden i programmet.
 
 ![Cloud Manager hamburger-meny](assets/cloud-manager-hamburger.png)
 
-Tryck eller klicka på menyikonen för hamburgaren för att dölja flikarna.
+Klicka på Adobe Cloud Manager för att återgå till hemmet.
 
 #### Verktygsfältet Program {#program-toolbar-2}
 
@@ -229,11 +223,11 @@ Varje program har flera alternativ och data kopplade till sig. Dessa alternativ 
 
 **Resurser**
 
-* Utbildningsvägar - ytterligare utbildningsresurser om Cloud Manager
+* ![Book icon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Book_18_N.svg) Learning Paths - Additional learning resources about Cloud Manager
 
 Som standard visas fliken **Översikt** när du öppnar ett program. Den aktuella fliken markeras. Välj en annan flik om du vill visa information om den.
 
-Använd hamburger-menyn i [Cloud Manager-huvudet](#cloud-manager-header-2) för att dölja flikarna.
+Klicka på ![Visa menyikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i det övre vänstra hörnet av [Cloud Manager-sidhuvudet](#cloud-manager-header-2) om du vill visa eller dölja sidomenyn med flikar.
 
 ### Uppringning {#cta}
 
