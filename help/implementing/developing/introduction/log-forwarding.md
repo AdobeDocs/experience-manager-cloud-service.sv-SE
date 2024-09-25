@@ -4,9 +4,9 @@ description: Läs mer om vidarebefordran av loggar till Splunk och andra loggnin
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: bf0b577de6174c13f5d3e9e4a193214c735fb04d
+source-git-commit: 17d195f18055ebd3a1c4a8dfe1f9f6bc35ebaf37
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1362'
 ht-degree: 0%
 
 ---
@@ -44,14 +44,7 @@ Den här artikeln är organiserad på följande sätt:
 
 ## Inställningar {#setup}
 
-1. Skapa följande mapp- och filstruktur i den översta mappen i ditt projekt i Git:
-
-   ```
-   config/
-        logForwarding.yaml
-   ```
-
-1. `logForwarding.yaml` ska innehålla metadata och en konfiguration som liknar följande format (Splunk används som exempel).
+1. Skapa en fil med namnet `logForwarding.yaml`. Den ska innehålla metadata, enligt beskrivningen i [config pipeline-artikeln](/help/operations/config-pipeline.md#common-syntax) (**kind** ska anges till `LogForwarding` och versionen ska anges till &quot;1&quot;), med en konfiguration som liknar den nedan (vi använder Splunk som exempel).
 
    ```
    kind: "LogForwarding"
@@ -67,52 +60,51 @@ Den här artikeln är organiserad på följande sätt:
          index: "AEMaaCS"
    ```
 
-   Parametern **kind** ska anges till `LogForwarding`. Versionen ska anges till schemaversionen, som är 1.
+1. Placera filen någonstans under en mapp på den översta nivån med namnet *config* eller liknande, enligt beskrivningen i [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#folder-structure).
 
-   Tokens i konfigurationen (till exempel `${{SPLUNK_TOKEN}}`) representerar hemligheter som inte ska lagras i Git. Deklarera dem i stället som Cloud Manager [miljövariabler](/help/implementing/cloud-manager/environment-variables.md) av typen **secrets**. Välj **Alla** som listvärde för fältet Tjänst används, så att loggarna kan vidarebefordras till författare, publicering och förhandsgranskningsnivåer.
+1. För andra miljötyper än RDE (som för närvarande inte stöds) skapar du en riktad distributionskonfigurationspipeline i Cloud Manager, enligt referens i [det här avsnittet](/help/operations/config-pipeline.md#creating-and-managing). Observera att fullständiga stackpipelines och webbskiktspipelines inte distribuerar konfigurationsfilen.
 
-   Det går att ange olika värden mellan CDN-loggar och AEM (inklusive Apache/Dispatcher) genom att inkludera ytterligare ett **cdn**- och/eller **aem** -block efter **default** -blocket, där egenskaper kan åsidosätta de som definieras i **default** -blocket. Det krävs bara den aktiverade egenskapen. Ett möjligt användningsexempel kan vara att använda ett annat Splunk-index för CDN-loggar, vilket visas i exemplet nedan.
+1. Distribuera konfigurationen.
 
-   ```
-      kind: "LogForwarding"
-      version: "1"
-      metadata:
-        envTypes: ["dev"]
-      data:
-        splunk:
-          default:
-            enabled: true
-            host: "splunk-host.example.com"
-            token: "${{SPLUNK_TOKEN}}"
-            index: "AEMaaCS"
-          cdn:
-            enabled: true
-            token: "${{SPLUNK_TOKEN_CDN}}"
-            index: "AEMaaCS_CDN"   
-   ```
+Tokens i konfigurationen (till exempel `${{SPLUNK_TOKEN}}`) representerar hemligheter som inte ska lagras i Git. Deklarera dem i stället som Cloud Manager [Hemliga miljövariabler](/help/operations/config-pipeline.md#secret-env-vars). Välj **Alla** som listvärde för fältet Tjänst används, så att loggarna kan vidarebefordras till författare, publicering och förhandsgranskningsnivåer.
 
-   Ett annat scenario är att inaktivera vidarebefordran av CDN-loggar eller AEM (inklusive Apache/Dispatcher). Om du till exempel bara vill vidarebefordra CDN-loggarna kan du konfigurera följande:
+Det går att ange olika värden mellan CDN-loggar och AEM (inklusive Apache/Dispatcher) genom att inkludera ytterligare ett **cdn**- och/eller **aem** -block efter **default** -blocket, där egenskaper kan åsidosätta de som definieras i **default** -blocket. Det krävs bara den aktiverade egenskapen. Ett möjligt användningsexempel kan vara att använda ett annat Splunk-index för CDN-loggar, vilket visas i exemplet nedan.
 
-   ```
-      kind: "LogForwarding"
-      version: "1"
-      metadata:
-        envTypes: ["dev"]
-      data:
-        splunk:
-          default:
-            enabled: true
-            host: "splunk-host.example.com"
-            token: "${{SPLUNK_TOKEN}}"
-            index: "AEMaaCS"
-          aem:
-            enabled: false
-   ```
+```
+   kind: "LogForwarding"
+   version: "1"
+   metadata:
+     envTypes: ["dev"]
+   data:
+     splunk:
+       default:
+         enabled: true
+         host: "splunk-host.example.com"
+         token: "${{SPLUNK_TOKEN}}"
+         index: "AEMaaCS"
+       cdn:
+         enabled: true
+         token: "${{SPLUNK_TOKEN_CDN}}"
+         index: "AEMaaCS_CDN"   
+```
 
-1. För andra miljötyper än RDE (som för närvarande inte stöds) skapar du en riktad distributionskonfigurationspipeline i Cloud Manager. Observera att fullständiga stackpipelines och webbskiktspipelines inte distribuerar konfigurationsfilen.
+Ett annat scenario är att inaktivera vidarebefordran av CDN-loggar eller AEM (inklusive Apache/Dispatcher). Om du till exempel bara vill vidarebefordra CDN-loggarna kan du konfigurera följande:
 
-   * [Se konfigurera produktionspipelinor](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md).
-   * [Se konfigurera icke-produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md).
+```
+   kind: "LogForwarding"
+   version: "1"
+   metadata:
+     envTypes: ["dev"]
+   data:
+     splunk:
+       default:
+         enabled: true
+         host: "splunk-host.example.com"
+         token: "${{SPLUNK_TOKEN}}"
+         index: "AEMaaCS"
+       aem:
+         enabled: false
+```
 
 ## Konfiguration för loggningsmål {#logging-destinations}
 

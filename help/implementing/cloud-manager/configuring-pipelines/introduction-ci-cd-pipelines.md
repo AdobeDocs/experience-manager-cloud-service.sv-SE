@@ -6,7 +6,7 @@ exl-id: 40d6778f-65e0-4612-bbe3-ece02905709b
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
+source-git-commit: 7f6e8f91716b679f9715f9df33ae59aa5bf70751
 workflow-type: tm+mt
 source-wordcount: '1482'
 ht-degree: 0%
@@ -115,7 +115,7 @@ Se [Lägg till en icke-produktionspipeline](/help/implementing/cloud-manager/con
 
 Med hjälp av ett konfigurationsflöde kan du snabbt distribuera inställningar för vidarebefordran av loggfiler, rensningsrelaterade underhållsåtgärder och olika CDN-konfigurationer, inklusive trafikfilterregler (som WAF-regler (Web Application Firewall)). Dessutom kan du hantera begäran- och svarsomvandlingar, ursprungsväljare, klientomdirigeringar, felsidor, kundhanterade CDN-nycklar, rensnings-API-nycklar och grundläggande autentisering.
 
-Se [Använd konfigurationspipelines](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) för en utförlig lista över funktioner som stöds och för att lära dig hur du hanterar konfigurationerna i din databas så att de distribueras på rätt sätt.
+Se [Använd konfigurationspipelines](/help/operations/config-pipeline.md) för en utförlig lista över funktioner som stöds och för att lära dig hur du hanterar konfigurationerna i din databas så att de distribueras på rätt sätt.
 
 ### Konfigurera konfigurationsförlopp {#configure-config-deployment}
 
