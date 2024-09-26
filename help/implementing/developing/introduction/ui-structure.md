@@ -4,9 +4,9 @@ description: Det AEM användargränssnittet har flera bakomliggande principer oc
 exl-id: ac211716-d699-4fdb-a286-a0a1122c86c5
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 55cf6a10c2cb4c62aa8f89fac7f9d1fb4c012d26
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '935'
 ht-degree: 0%
 
 ---
@@ -171,3 +171,15 @@ Beroende på vilket utrymme som är tillgängligt placeras komponentens verktygs
 <!--For more details about the concepts around the touch-enabled UI, continue to the article [Concepts of the AEM Touch-Enabled UI](/help/sites-developing/touch-ui-concepts.md).-->
 
 Mer teknisk information finns i [JS-dokumentationsuppsättningen](https://developer.adobe.com/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html) för sidredigeraren.
+
+### Enhetligt gränssnitt {#unified-shell}
+
+Se [AEM as a Cloud Service i enhetligt gränssnitt](/help/overview/aem-cloud-service-on-unified-shell.md) om du använder det enhetliga gränssnittet som AEM.
+
+Om du behöver göra (eller redan har gjort) anpassningar kan detta inaktiveras:
+
+* [från användargränssnittet](/help/overview/aem-cloud-service-on-unified-shell.md#disabling-unified-shell)
+
+* från din projektkod genom att ange egenskapen `Boolean`:
+
+  `/conf/global/setting/unifiedshell` - `false`

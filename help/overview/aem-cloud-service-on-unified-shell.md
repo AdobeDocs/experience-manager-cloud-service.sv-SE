@@ -4,9 +4,9 @@ description: Läs om fördelarna med AEM as a Cloud Service i Unified Shell
 exl-id: ea739307-dc99-4621-a239-dbe60ab6b52e
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 55cf6a10c2cb4c62aa8f89fac7f9d1fb4c012d26
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '408'
 ht-degree: 1%
 
 ---
@@ -44,6 +44,10 @@ AEM as a Cloud Service har ett enhetligt skal aktiverat. Om den övre rubriken h
 
    ![bild](/help/overview/assets/unifiedshell3.png)
 
+>[!NOTE]
+>
+>Enhetligt gränssnitt kan också inaktiveras från din projektkod. Se [Struktur för AEM gränssnitt - enhetligt gränssnitt](/help/implementing/developing/introduction/ui-structure.md#unified-shell).
+
 ## Ändra till mörkt tema {#changing-to-dark-theme}
 
 Om du vill ändra till det mörka temat klickar du på din profilikon. Den här åtgärden visar en portfölj enligt nedan. Du kan använda växlingsknappen för att växla till ett mörkt tema för det enhetliga skalet.
@@ -73,3 +77,4 @@ Du kommer åt AEM genom att klicka på klockikonen i det enhetliga skalet.
 Klicka på Inkorgen i portfölj så att du kan gå till AEM Inkorg:
 
 ![bild](/help/overview/assets/unifiedshell6.png)
+
