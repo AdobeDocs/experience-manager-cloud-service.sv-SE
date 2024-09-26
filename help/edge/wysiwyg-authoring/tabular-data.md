@@ -4,9 +4,9 @@ description: Lär dig hur du använder kalkylblad för att hantera tabelldata f�
 feature: Edge Delivery Services
 exl-id: 26d4db90-3e4b-4957-bf21-343c76322cdc
 role: Admin, Architect, Developer
-source-git-commit: f8e305f636c7a7247d2a41f6ed25b1715bd8837c
+source-git-commit: 13bde08db33ff4b81a6e76cad91bb5ea257ab195
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '986'
 ht-degree: 0%
 
 ---
@@ -121,6 +121,10 @@ För att AEM ska kunna publicera data i ditt kalkylblad måste du dessutom uppda
    ![Banderollbekräftelse av publikationen](assets/tabular-data/tabular-data-publish-banner.png)
 
 Kalkylbladet för omdirigering är nu publicerat och tillgängligt för alla.
+
+>[!TIP]
+>
+>Mer information om sökvägsmappningar finns i dokumentet [Sökvägsmappning för Edge Delivery Services.](/help/edge/wysiwyg-authoring/path-mapping.md)
 
 ## Andra kalkylbladstyper {#other}
 

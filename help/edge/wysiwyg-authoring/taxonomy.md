@@ -3,13 +3,13 @@ title: Hantera taxonomidata
 description: Lär dig hur du hanterar taxonomidata för att använda taggar med dina AEM med Edge Delivery Services.
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 81aacb0c616490eed4589cb8927ea1316ca1670e
+exl-id: 017982e4-a4c8-4097-8751-9619cc4639d0
+source-git-commit: 13bde08db33ff4b81a6e76cad91bb5ea257ab195
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '845'
 ht-degree: 0%
 
 ---
-
 
 # Hantera taxonomidata {#managing-taxonomy-data}
 
@@ -108,6 +108,10 @@ Som när [hanterar och publicerar tabelldata för din Edge Delivery Services-web
    * Bekräfta `main` eller skapa en pull-begäran enligt din process.
 
 Den här processen behöver bara göras en gång per taxonomisida. När du är klar kan du publicera taxonomin.
+
+>[!TIP]
+>
+>Mer information om sökvägsmappningar finns i dokumentet [Sökvägsmappning för Edge Delivery Services.](/help/edge/wysiwyg-authoring/path-mapping.md)
 
 ## Publicera en taxonomi {#publishing}
 

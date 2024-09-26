@@ -4,9 +4,9 @@ description: Den här guiden hjälper dig att komma igång med en ny Adobe Exper
 feature: Edge Delivery Services
 exl-id: a71184a7-c954-442e-b276-99edc6d2acd8
 role: Admin, Architect, Developer
-source-git-commit: b34a15138e1b8fbe2bebc22f2cc7e8a0ae22316a
+source-git-commit: 13bde08db33ff4b81a6e76cad91bb5ea257ab195
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1223'
 ht-degree: 0%
 
 ---
@@ -113,6 +113,10 @@ Först måste du skapa ett nytt projekt på GitHub, baserat på mallen Adobe.
 1. Lägg till ett implementeringsmeddelande efter behov och klicka sedan på **Verkställ ändringar** och implementera dem direkt i `main` -grenen.
 
    ![Utför ändringar](assets/edge-dev-getting-started/commit-paths-changes.png)
+
+>[!TIP]
+>
+>Mer information om sökvägsmappningar finns i dokumentet [Sökvägsmappning för Edge Delivery Services.](/help/edge/wysiwyg-authoring/path-mapping.md)
 
 ### Skapa och redigera en ny AEM {#create-aem-site}
 
