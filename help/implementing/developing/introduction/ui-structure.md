@@ -4,9 +4,9 @@ description: Det AEM användargränssnittet har flera bakomliggande principer oc
 exl-id: ac211716-d699-4fdb-a286-a0a1122c86c5
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: bd5601661cd59c158802f900677855be76d5893b
+source-git-commit: 7d09e0c990c716d7bbb305210960621ba8735de4
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
@@ -176,7 +176,7 @@ Mer teknisk information finns i [JS-dokumentationsuppsättningen](https://develo
 
 Se [AEM as a Cloud Service i enhetligt gränssnitt](/help/overview/aem-cloud-service-on-unified-shell.md) om du använder det enhetliga gränssnittet som AEM.
 
-Om du behöver göra (eller redan har gjort) anpassningar kan detta inaktiveras:
+Om du behöver göra, eller redan har gjort, anpassningar, kan den enhetliga versionen inaktiveras:
 
 * [från användargränssnittet](/help/overview/aem-cloud-service-on-unified-shell.md#disabling-unified-shell)
 
