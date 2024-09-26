@@ -4,9 +4,9 @@ description: Aktuell underhållsversionsinformation för  [!DNL Adobe Experience
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 22f8ffc3e3acec9846a2f868be48195ca62df88b
+source-git-commit: fa2da21ef6424bce0830d503eba650e1c1bf3dc2
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1353'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ I följande avsnitt beskrivs de tekniska versionsinformationen för den aktuella
 
 ## Utgåva 17964 {#release-17964}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 17964, som offentliggjordes den 25 september 2024. Den tidigare underhållsversionen var version 17689.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 17964, som offentliggjordes den 25 september 2024. Den tidigare underhållsversionen var version 17689. Utgåva 17882 har gjorts privat på grund av ett problem.
 
 Funktionsaktiveringen i 2024.10.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
