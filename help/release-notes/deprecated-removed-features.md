@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för borttagna och borttagna f
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
 feature: Release Information
 role: Admin
-source-git-commit: c5057120d68e1119211c7733a8eb0424590096bd
+source-git-commit: 708bf370c2843dd8e2937de8fbf77843e661cf02
 workflow-type: tm+mt
-source-wordcount: '2172'
+source-wordcount: '2220'
 ht-degree: 0%
 
 ---
@@ -271,11 +271,36 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
     <td>4/11/2022</td>
     <td>8/30/2024</td>
   </tr>
+  <tr>
     <td>org.apache.sling.repoinit.jcr<br>org.apache.sling.repoinit.parser.operations</td>
     <td>Användning av detta API stöds inte i AEM as a Cloud Service.</td>
     <td>5/17/2024</td>
     <td>6/30/2024</td>
+  </tr>
+  <tr>
+    <td>com.day.cq.xss<br>com.day.cq.xss.taglib<br>com.day.cq.xss.impl</td>
+    <td>Använd org.apache.sling.xss i stället.</td>
+    <td>12/12/2023</td>
+    <td>6/30/2024</td>
+  </tr>
+  <tr>
+    <td>com.adobe.granite.xss<br>com.adobe.granite.xss.impl</td>
+    <td>Observera att servleten i com.adobe.granite.xss.impl.servlets inte är inaktuell</td>
+    <td>12/12/2023</td>
+    <td>6/30/2024</td>
   </tr>  
+  <tr>
+    <td>com.drew.*</td>
+    <td>Du bör extrahera metadata från bilder och videoklipp via Asset compute i Cloud Servicen eller via Apache POI eller Apache Tika.</td>
+    <td>9/17/2024</td>
+    <td>12/17/2024</td>
+  </tr>
+  <tr>
+    <td>org.apache.jackrabbit.oak.plugins.blob.*</td>
+    <td></td>
+    <td>9/23/2024</td>
+    <td>12/23/2024</td>
+  </tr>       
 </tbody>
 </table>
 </details>
