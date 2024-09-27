@@ -5,7 +5,7 @@ exl-id: 3f3d7631-2bc9-440b-9888-50f6529bcd42
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: b5ae995623c41803f8704fa9699d3514c37e4550
+source-git-commit: eb2e1555f684a68807b0b3764cd1be03c2d439ab
 workflow-type: tm+mt
 source-wordcount: '1677'
 ht-degree: 0%
@@ -145,8 +145,8 @@ Ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_22/Smock_More_22_
 
 * Navigera till en viss ![dataikon](https://spectrum.adobe.com/static/icons/workflow_22/Smock_Data_22_N.svg) [Miljö](/help/implementing/cloud-manager/manage-environments.md) i programmet
 * Öppna ikonen ![Programöversikt](/help/implementing/cloud-manager/assets/program-overview.svg) [Programöversikt](#program-overview)
-* ![Ikonen Redigera](https://spectrum.corp.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) [Redigera programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#editing)
-* ![Ta bort ikon](https://spectrum.corp.adobe.com/static/icons/workflow_18/Smock_Delete_18_N.svg)[Ta bort ett sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#delete-sandbox-program)
+* ![Ikonen Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) [Redigera programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#editing)
+* ![Ta bort ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Delete_18_N.svg)[Ta bort ett sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#delete-sandbox-program)
 
 >[!TIP]
 >
@@ -183,9 +183,9 @@ Verktygsfälten för programöversikten liknar verktygsfälten i [Min programkon
 
 #### Cloud Manager header {#cloud-manager-header-2}
 
-I sidans övre vänstra hörn finns rubriken Adobe Cloud Manager. Du kan klicka på ![Side menu icon](https://spectrum.corp.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) om du vill visa eller dölja sidomenyn med flikar till andra områden i programmet.
+I sidans övre vänstra hörn finns rubriken Adobe Cloud Manager. Du kan klicka på ![Side menu icon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) om du vill visa eller dölja sidomenyn med flikar till andra områden i programmet.
 
-![Cloud Manager hamburger-meny](assets/cloud-manager-hamburger.png)
+![Cloud Manager sidmeny](assets/cloud-manager-hamburger.png)
 
 Klicka på Adobe Cloud Manager för att återgå till hemmet.
 

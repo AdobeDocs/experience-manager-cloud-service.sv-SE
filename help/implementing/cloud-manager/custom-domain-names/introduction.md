@@ -5,7 +5,7 @@ exl-id: ed03bff9-dfcc-4dfe-a501-a7facd24aa7d
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 8a10634e413ea5c66845dfffa7396a4554a5b3ca
+source-git-commit: 815bd75844ed164973c6acc07a6bf37a39d616b8
 workflow-type: tm+mt
 source-wordcount: '705'
 ht-degree: 1%
@@ -36,7 +36,7 @@ Du kan köpa ett domännamn från en domännamnsregistrator, ett företag eller 
 >
 >Cloud Manager är inte en domännamnsregistrator och tillhandahåller inga DNS-tjänster.
 
-## Anpassade domännamn och ta med egna CDN:er {#byo-cdn}
+## Anpassade domännamn och ta med dina egna CDN:er {#byo-cdn}
 
 AEM as a Cloud Service har en inbyggd CDN-tjänst (Content Delivery Network) som även gör att du kan använda ditt eget CDN tillsammans med AEM. Anpassade domäner kan installeras antingen i det AEM CDN eller i ett CDN som du hanterar.
 
