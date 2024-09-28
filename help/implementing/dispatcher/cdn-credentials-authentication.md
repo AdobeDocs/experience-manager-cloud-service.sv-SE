@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-autentiseringsuppgifter och autent
 feature: Dispatcher
 exl-id: a5a18c41-17bf-4683-9a10-f0387762889b
 role: Admin
-source-git-commit: 5d51ff056d4e4f0fdbb3004cbac55803ac91f8ca
+source-git-commit: c31441baa6952d92be4446f9035591b784091324
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ CDN som tillhandahålls av Adobe har flera funktioner och tjänster, varav vissa
 
 * HTTP-huvudvärdet X-AEM-Edge-Key som används av Adobe CDN för att validera begäranden som kommer från ett kundhanterat CDN.
 * Den API-token som används för att rensa resurser i CDN-cachen.
-* En lista över kombinationer av användarnamn och lösenord som kan få åtkomst till begränsat innehåll genom att skicka ett grundläggande autentiseringsformulär. [Den här funktionen är tillgänglig för tidig användning.](/help/release-notes/release-notes-cloud/release-notes-current.md#foundation-early-adopter)
+* En lista över kombinationer av användarnamn och lösenord som kan få åtkomst till begränsat innehåll genom att skicka ett grundläggande autentiseringsformulär.
 
 Var och en av dessa, inklusive konfigurationssyntaxen, beskrivs i sitt eget avsnitt nedan.
 
@@ -146,9 +146,6 @@ Du kan referera till [en självstudie](https://experienceleague.adobe.com/en/doc
 
 ## Grundläggande autentisering {#basic-auth}
 
->[!NOTE]
->Den här funktionen är ännu inte allmänt tillgänglig. Om du vill gå med i det tidiga adopterprogrammet skickar du e-post `aemcs-cdn-config-adopter@adobe.com`.
-
 Protect vissa innehållsresurser genom att öppna en enkel autentiseringsdialogruta som kräver användarnamn och lösenord. Den här funktionen är främst avsedd för enkla autentiseringssituationer, som granskning av innehåll av intressenter i företag, i stället för som en fullständig lösning för slutanvändares åtkomsträttigheter.
 
 Slutanvändaren får en grundläggande autentiseringsdialogruta som ser ut så här:
@@ -164,7 +161,7 @@ version: "1"
 metadata:
   envTypes: ["dev"]
 data:
-  experimental_authentication:
+  authentication:
     authenticators:
        - name: my-basic-authenticator
          type: basic
@@ -185,12 +182,12 @@ Se [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#common-
 
 Dessutom innehåller syntaxen:
 
-* en `data`-nod som innehåller en `experimental_authentication`-nod (det experimentella prefixet tas bort när funktionen släpps).
-* Under `experimental_authentication`, en `authenticators`-nod och en `rules`-nod, som båda är arrayer.
+* en `data`-nod som innehåller en `authentication`-nod.
+* Under `authentication`, en `authenticators`-nod och en `rules`-nod, som båda är arrayer.
 * Autentiserare: i det här scenariot deklarerar du en grundläggande autentiserare med följande struktur:
    * name - en beskrivande sträng
    * type - måste vara `basic`
-   * en array med autentiseringsuppgifter, som vart och ett innehåller följande namn/värde-par, som slutanvändarna kan ange i den grundläggande autentiseringsdialogrutan:
+   * en array med upp till 10 autentiseringsuppgifter, som vart och ett innehåller följande namn/värde-par, som slutanvändarna kan ange i den grundläggande autentiseringsdialogrutan:
       * användare - namnet på användaren
       * password - dess värde måste referera till en [Cloud Manager-miljövariabel av hemlig typ](/help/operations/config-pipeline.md#secret-env-vars), med **Alla** markerat som tjänstfält.
 * Regler: Här kan du deklarera vilka autentiserare som ska användas och vilka resurser som ska skyddas. Varje regel innehåller:
@@ -208,7 +205,7 @@ Dessutom innehåller syntaxen:
 1. Till att börja med har bara `edgeKey1` definierats, i det här fallet refererat till `${{CDN_EDGEKEY_052824}}`, vilket som en rekommenderad konvention, visar datumet då det skapades.
 
    ```
-   experimental_authentication:
+   authentication:
      authenticators:
        - name: edge-auth
          type: edge
@@ -218,7 +215,7 @@ Dessutom innehåller syntaxen:
 1. I konfigurationen refererar du till den från `edgeKey2` och distribuerar den.
 
    ```
-   experimental_authentication:
+   authentication:
      authenticators:
        - name: edge-auth
          type: edge
@@ -229,7 +226,7 @@ Dessutom innehåller syntaxen:
 1. När du är säker på att den gamla kantnyckeln inte längre används tar du bort den genom att ta bort `edgeKey1` från konfigurationen.
 
    ```
-   experimental_authentication:
+   authentication:
      authenticators:
        - name: edge-auth
          type: edge
@@ -240,7 +237,7 @@ Dessutom innehåller syntaxen:
 1. När du är redo för nästa rotation följer du samma procedur, men den här gången lägger du till `edgeKey1` i konfigurationen och refererar till en ny Cloud Manager-miljöhemlighet med namnet, till exempel, `${{CDN_EDGEKEY_031426}}`.
 
    ```
-   experimental_authentication:
+   authentication:
      authenticators:
        - name: edge-auth
          type: edge

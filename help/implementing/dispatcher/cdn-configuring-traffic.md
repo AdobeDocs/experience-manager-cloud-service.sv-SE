@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler 
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: 35d3dcca6b08e42c0d2a97116d0628ac9bbb6a7c
+source-git-commit: c31441baa6952d92be4446f9035591b784091324
 workflow-type: tm+mt
-source-wordcount: '1350'
+source-wordcount: '1321'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ AEM as a Cloud Service erbjuder en samling funktioner som kan konfigureras i det
 
 * [Begär omformningar](#request-transformations) - ändra aspekter av inkommande begäranden, inklusive huvuden, sökvägar och parametrar.
 * [Svarsomvandlingar](#response-transformations) - ändra huvuden som är på väg tillbaka till klienten (till exempel en webbläsare).
-* [Omdirigering på klientsidan](#client-side-redirectors) - utlöser en omdirigering av webbläsaren. Den här funktionen är ännu inte tillgänglig för GA, men för tidiga användare.
+* [Omdirigering på klientsidan](#client-side-redirectors) - utlöser en omdirigering av webbläsaren.
 * [Ursprungsväljare](#origin-selectors) - proxy till en annan ursprunglig serverdel.
 
 CDN kan även konfigurera trafikfilterregler (inklusive WAF), som styr vilken trafik som tillåts eller nekas av CDN. Den här funktionen har redan släppts och du kan läsa mer om den på sidan [Trafikfilterregler, inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md).
@@ -363,9 +363,6 @@ data:
 
 ## Omdirigeringar på klientsidan {#client-side-redirectors}
 
->[!NOTE]
->Den här funktionen är ännu inte allmänt tillgänglig. Om du vill gå med i det tidiga adopterprogrammet skickar du ett e-postmeddelande till `aemcs-cdn-config-adopter@adobe.com` och beskriver ditt användningsexempel.
-
 Du kan använda omdirigeringsregler på klientsidan för 301, 302 och liknande omdirigeringar på klientsidan. Om en regel matchar svarar CDN med en statusrad som innehåller statuskoden och meddelandet (till exempel HTTP/1.1 301 Flyttad permanent), samt platshuvuduppsättningen.
 
 Både absoluta och relativa platser med fasta värden tillåts.
@@ -380,7 +377,7 @@ version: "1"
 metadata:
   envTypes: ["dev"]
 data:
-  experimental_redirects:
+  redirects:
     rules:
       - name: redirect-absolute
         when: { reqProperty: path, equals: "/page.html" }

@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 79bf9d669c1b8757f456b83aad87550df306c78b
+source-git-commit: 2d5fa0b15456ad9838fa236a2b5c79d41a9af7fe
 workflow-type: tm+mt
-source-wordcount: '1266'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -28,33 +28,27 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för den aktu
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2024.8.0) är 29 augusti 2024. Nästa funktionsrelease (2024.9.0) planeras att släppas den 26 september 2024.
+Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2024.9.0) är 26 september 2024. Nästa funktionsrelease (2024.10.0) planeras till 31 oktober 2024.
 
 ## Versionsinformation om underhåll {#maintenance}
 
 Du hittar den senaste underhållsversionsinformationen [här](/help/release-notes/maintenance/latest.md).
 
-## Släpp video {#release-video}
+<!--  ## Release Video {#release-video}
 
-Titta på videon Augustiversionen 2024 med en sammanfattning av funktioner som lagts till i version 2024.8.0:
+Have a look at the September 2024 Release Overview video for a summary of the features added in the 2024.9.0 release:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3433381?quality=12)
+
+-->
 
 ## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 
 ### Ny funktion i Experience Manager Sites {#new-feature-sites}
 
-**AEM Redigering för Edge Delivery Services**
+#### Översättningshantering {#translation-management}
 
-Befintliga [arv](/help/sites-cloud/authoring/universal-editor/inheritance.md)-funktioner för platser stöds nu:
-
-* [AEM](/help/sites-cloud/authoring/launches/overview.md)
-* [MSM](/help/sites-cloud/administering/msm/overview.md) på sidnivå
-
-Dessutom stöds nu följande sidhanteringsfunktioner:
-
-* [AEM ](/help/sites-cloud/authoring/sites-console/tags.md) kan exporteras som en [taxonomi](/help/edge/wysiwyg-authoring/taxonomy.md) till Edge Delivery Services.
-* [Mallar](/help/edge/wysiwyg-authoring/templates.md) för Edge Delivery Services kommer snart!
+AEM översättningsarbetsflöden och API-åtgärder utlöser nu händelser som ger insikter om förändringar i översättningsjobbens tillstånd. Användare kan prenumerera på dessa evenemang via Adobe Developer Console. Mer information om API:t för AEM översättningshantering finns i [här](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/translation/).
 
 ### Tidiga Adobe-program {#sites-early-adopter}
 
@@ -73,27 +67,10 @@ AI-genererade videobildtexter i Adobe Dynamic Media använder artificiell intell
 
 [Skapa och skicka ett kundsupportärende](/help/assets/dynamic-media/video.md##enable-dash) om du vill få snabb tillgång till stöd för AI-genererade bildtexter på ditt Dynamic Media-konto.
 
-### Nya funktioner i vyn Assets {#assets-view-new-features}
+### Nya funktioner i Resursväljaren {#asset-selector-new-features}
 
-**Uppdaterad generering av Adobe Firefly-bilder**
-
-Assets as a Cloud Service använder nu den senaste widgeten från Firefly som gör att du kan generera bilder i olika format med Adobe Firefly. Genom att definiera format, komposition, dimensioner och annat med den inbyggda Firefly-redigeraren kan du snabbt skapa och spara de resurser du behöver direkt i AEM Assets-databasen för omedelbar användning.
-
-![Skapa bilder i Adobe Firefly](/help/assets/assets/bugatti-type-57.png)
-
-**Stöd för PSB-filer**
-
-Assets as a Cloud Service har nu stöd för Photoshop stora dokument (PSB-filer) utöver det befintliga stödet för PSD-filer.
-
-### Nya förbättringar i Content Hub {#content-hub-new-enhancements}
-
-* Bättre hantering av långa filnamn, enkel utökning av hela namnet med verktygstips.
-* Förbättrade miniatyrbilder som bättre passar innehållets proportioner och täcker ett större innehållsområde.
-* En anpassad miniatyrbildsupplevelse från AEM stöds med innehållsnavet.
-* Förbättrad färgsökning.
-* Förbättrade konfigurationer sparar upplevelser.
-* Förbättrad informationssida för samlingar som återspeglar skaparens namn.
-
+Resursväljaren har nu stöd för att bläddra bland samlingar för att hitta den önskade resursen.
+![Resursväljarsamlingar](/help/assets/assets/collections-rail-modal-view.png)
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
@@ -132,29 +109,49 @@ De genererande AI-funktionerna är:
 >
 > Är du intresserad av att delta i programmet för tidig åtkomst för något av Forms innovationer? Skicka ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) med en lista över funktioner som du är intresserad av.
 
+## CIF {#cloud-services-cif}
+
+### Förbättringar {#improvements-fixes-cif}
+
+* Gör kategorigränsen anpassningsbar.
+
+### Felkorrigeringar {#bug-fixes-cif}
+
+* Commerce-fälten är inte korrekt integrerade med Assets metadataschredigerare.
+* Problem med Carousel Products Multifield för dra och släpp.
+* Problem med Carousel Category Multifield för dra och släpp.
+* Det går inte att klicka på menyerna på sidan Sidinformation på kategoritexten och produktredigeringssidan.
+* Ordernummer visas inte på orderbekräftelsesidan.
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
 
-### Content Delivery related Tire Adobe Programs {#foundation-early-adopter}
+### Edge Side Includes (ESI) för inläsning av dynamiskt innehåll {#esi}
 
-Mejla **<aemcs-cdn-config-adopter@adobe.com>** som anger vilket av de tidiga adopterprogrammen nedan du är intresserad av.
+Hanterad CDN i Adobe har nu stöd för [Edge Side Includes (ESI)](/help/implementing/dispatcher/edge-side-includes.md), ett markeringsspråk för dynamisk sammanställning av webbinnehåll på kantnivå. Genom att ta med ESI-fragment kan du cachelagra hela HTML-sidan vid CDN med högre TTL-värden, medan du oftare hämtar mindre avsnitt från ursprungsläget som kräver högre uppdateringsintervall (nedre TTL-värden). Den här funktionen kommer att lanseras gradvis.
 
-#### Grundläggande autentisering vid CDN (Early Adobe Program) {#basicauth-cdn}
+### Grundläggande autentisering vid CDN {#basicauth-cdn}
 
-Protect vissa innehållsresurser genom att öppna en enkel autentiseringsdialogruta som kräver användarnamn och lösenord. Den här funktionen riktar sig främst till användarvänliga fall av autentisering, som affärsintressenter som granskar innehåll, i stället för att fungera som en heltäckande lösning för slutanvändarnas åtkomsträttigheter. Listan över användarnamn och lösenord som hanteras via en konfigurationsfil i Git som distribueras via Configuration Pipeline, med en referens till Cloud Manager-miljövariabler av hemlig typ. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md#basic-auth).
+Protect vissa innehållsresurser genom att öppna en enkel autentiseringsdialogruta som kräver användarnamn och lösenord. Den här funktionen riktar sig främst till användarvänliga fall av autentisering, som affärsintressenter som granskar innehåll, i stället för att fungera som en heltäckande lösning för slutanvändarnas åtkomsträttigheter. Listan över användarnamn och lösenord hanteras via en konfigurationsfil i Git som distribueras via Config Pipeline, med en referens till Cloud Manager-miljövariabler av hemlig typ. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md#basic-auth).
 
-#### Omdirigeringar på klientsidan (tidigt Adobe-program) {#client-side-redirects-early-adopter}
+### Omdirigeringar på klientsidan {#client-side-redirects}
 
-Konfigurera 301/302 klientomdirigeringar i källkontroll och distribuera till CDN. [Läs mer](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors).<!-- and join the early adopter program by emailing **<aemcs-cdn-config-adopter@adobe.com>**. --> Observera att det redan finns flera andra funktioner som är tillgängliga för [CDN-konfigurationen](/help/implementing/dispatcher/cdn-configuring-traffic.md), bland annat omvandlingar av begäranden och svar samt routning av trafik till platser utanför AEM.
+Deklarera [omdirigering av webbläsare](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors) i en konfigurationsfil som distribueras till och utvärderas vid CDN. Detta kan vara användbart för scenarier som att ta bort sidor, ändra platsstruktur och SEO-optimering.
 
-#### Affärsanvändare kan deklarera omdirigeringar utanför Git (tidig Adobe-program) {#apache-rewritemaps-early-adopter}
+### New AEM Developer Console (Public Beta) {#aem-developer-console-beta}
 
-Ungefär som AEM 6.5, skriver Apache/dispatcher ingest om kartor som placerats på en viss plats i publiceringsdatabasen och läser in dem, utan att någon pipeline-körning behövs på webbnivån. På så sätt kan företagsanvändare deklarera omdirigeringar med hjälp av ett kalkylblad eller ett gränssnitt, som ACS Commons Redirect Map Manager eller ett anpassat program. <!-- Please reach out to **<aemcs-cdn-config-adopter@adobe.com>** for more information. -->
+Prova en omgjord [AEM Developer Console](/help/implementing/developing/introduction/aem-developer-console.md) som erbjuder en mer interaktiv upplevelse för felsökning av kod i molnmiljöer.
 
-#### Edge Side Includes (ESI) for Loading Dynamic Content (Early Adobe Program) {#esi-early-adopter}
+Vem som helst kan komma åt den offentliga betaversionen genom att klicka på knappen *Ny konsol tillgänglig* i den aktuella AEM Developer Console. Adobe välkomnar feedback, som du kan skicka via e-post till **<aemcs-new-devconsole-ui-beta@adobe.com>**.
 
-Hanterad CDN i Adobe har nu stöd för [Edge Side Includes (ESI)](/help/implementing/dispatcher/edge-side-includes.md), ett markeringsspråk för dynamisk sammanställning av webbinnehåll på kantnivå. Genom att ta med ESI-fragment kan du cachelagra hela HTML-sidan vid CDN med högre TTL-värden, medan du oftare hämtar mindre avsnitt från ursprungsläget som kräver högre uppdateringsintervall (nedre TTL-värden). <!--Please reach out to **<aemcs-cdn-config-adopter@adobe.com>** for more information.-->
+![OSGi Bundles-skärm i AEM Developer Console](/help/implementing/developing/introduction/assets/osgi-bundles.png)
 
+### Affärsanvändare kan deklarera omdirigeringar utanför Git (tidig Adobe-program) {#apache-rewritemaps-early-adopter}
+
+Ungefär som i AEM 6.5 skriver Apache/dispatcher ingests om kartor som placerats på en viss plats i publiceringsdatabasen och läser in dem utan att någon pipeline-körning behövs på webbnivån. På så sätt kan företagsanvändare deklarera omdirigeringar med hjälp av ett kalkylblad eller ett gränssnitt, som ACS Commons Redirect Map Manager eller ett anpassat program. Gå med i det tidiga adopterprogrammet genom att skicka **<aemcs-cdn-config-adopter@adobe.com>** med e-post.
+
+### Config Pipeline for RDEs (Early Adobe Program) {#config-pipeline-rdes-early-adopter}
+
+[Konfigurationspipeline](/help/operations/config-pipeline.md) används för att distribuera dynamiska filkonfigurationer, inklusive CDN-alternativ (trafikfilterregler, begäran-/svarsomvandlingar etc.). Delta i det tidiga adopterprogrammet genom att skicka **<aemcs-cdn-config-adopter@adobe.com>** med e-post för att distribuera samma konfigurationer till RDE (Rapid Development Environment), som använder ett CLI.
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
