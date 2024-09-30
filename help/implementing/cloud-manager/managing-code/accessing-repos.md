@@ -1,13 +1,13 @@
 ---
 title: Information om databasåtkomst
-description: Lär dig hur du får åtkomst till och hanterar dina Adobe-hanterade Git-databaser med hjälp av Git-kontohantering från Cloud Manager.
+description: Lär dig hur du får åtkomst till och hanterar dina Adobe-hanterade Git-databaser med hjälp av Git-kontohantering via självbetjäning från Cloud Manager.
 exl-id: 0c0671a3-e400-46f3-ad86-166a6cfdd44b
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
+source-git-commit: 533fa72b7610f671a24461073112b7fb798ce166
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
@@ -15,54 +15,55 @@ ht-degree: 0%
 
 # Information om databasåtkomst {#accessing-repos}
 
-Lär dig hur du får åtkomst till och hanterar dina Adobe-hanterade Git-databaser med hjälp av Git-kontohantering från Cloud Manager.
+Lär dig hur du får åtkomst till och hanterar dina Adobe-hanterade Git-databaser med hjälp av Git-kontohantering via självbetjäning från Cloud Manager.
 
-## Åtkomst till databasinformation från översiktssidan {#overview-page}
+## Få åtkomst till databasinformation från sidan Översikt {#overview-page}
 
-Med Cloud Manager är det enkelt att hämta databasåtkomstinformation för databaser som hanteras med Adobe genom att använda knappen **Åtkomst till repo** som finns på pipeline-kortet.
+Med Cloud Manager är det enkelt att hämta databasåtkomstinformation för databaser som hanteras med Adobe med hjälp av **Åtkomst till repo** från **pipelines**-kortet.
+
+I dialogrutan **Databasinformation** kan du visa följande åtkomstinformation för databaser som hanteras med Adobe:
+
+* Git-användarnamn.
+* Git-lösenordet.
+* URL:en till Cloud Manager Git-databasen.
+* Färdiga Git-kommandon för att snabbt lägga till en fjärranslutning i Git-repo och push-kod.
+
+![Fönstret Databasinformation](assets/repository-info.png)
+
+Åtkomstinformation om [privata databaser](private-repositories.md) är inte tillgänglig i Cloud Manager.
+
+Funktionen **Åtkomst till replikinformation** är synlig för användare med rollerna **Utvecklare** eller **Distributionshanteraren**.
+
+**Så här kommer du åt databasinformation från översiktssidan:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
-1. Navigera till **Pipelines**-kortet från sidan **Programöversikt**.
+1. På sidan **Programöversikt** klickar du på **Åtkomst till replikinformation** under kortet **Pipelines**.
 
-   ![Knappen Åtkomst till information om upprepning på miljökortet](assets/pipelines-card.png)
+   ![Åtkomst till replikinformation på Pipelilinnes-kort](assets/pipelines-card.png)
 
-1. Tryck eller klicka på knappen **Åtkomst till replikinformation** för att öppna dialogrutan **Databasinformation** och visa:
+1. Ett nytt lösenord måste skapas för att du ska kunna få åtkomst till lösenordet. Klicka på **`Generate password`** i dialogrutan Databasinformation.
 
-   * Git-användarnamn.
-   * Git-lösenordet.
-   * URL:en till Cloud Manager Git-databasen.
-   * Fördefinierade Git-kommandon för att snabbt lägga till en fjärranslutning i Git-repo och push-kod.
+1. Klicka på **`Generate password`** i bekräftelsedialogrutan.
 
-   ![Fönstret Databasinformation](assets/repository-info.png)
+   ![Bekräfta generering av lösenord](assets/confirm-generated-password.png)
 
-1. Ett nytt lösenord måste skapas för att du ska kunna få åtkomst till lösenordet. Det gör du genom att trycka eller klicka på knappen **Generera lösenord** .
+1. Klicka på ikonen ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) till höger om fältet **Lösenord** för att kopiera lösenordet till Urklipp.
 
-1. Bekräfta generering av lösenord i dialogrutan **Är du säker..** genom att trycka eller klicka på **Skapa lösenord**.
+   * När du genererar ett lösenord blir det tidigare lösenordet ogiltigt.
+   * Cloud Manager sparar inte lösenordet. Det är ditt ansvar att spara lösenordet på ett säkert sätt.
+   * Eftersom Cloud Manager inte sparar lösenordet måste du återskapa ett nytt om du förlorar det.
 
-   ![Bekräfta generering av lösenord](assets/confirm-password-generation.png)
-
-1. Lösenordet genereras och visas för kopiering i fältet **Lösenord**.
-
-   * Om du genererar ett lösenord blir det tidigare lösenordet ogiltigt.
-   * Cloud Manager kommer inte att spara lösenordet. Det är ditt ansvar att spara lösenordet på ett säkert sätt.
-   * Eftersom Cloud Manager inte sparar lösenordet måste du återskapa ett nytt om du tappar bort det.
-
-   ![Exempel på ett genererat lösenord](assets/generated-password.png)
+   ![Kopiera lösenord i dialogrutan Databasinformation](/help/implementing/cloud-manager/managing-code/assets/repository-copy-password.png)
 
 Med hjälp av dessa uppgifter kan du klona en lokal kopia av databasen, göra ändringar i den lokala databasen och när du är klar spara kodändringar i fjärrkoddatabasen i Cloud Manager.
 
->[!NOTE]
->
->* Alternativet **Åtkomst till replikinformation** är synligt för användare med rollerna **Utvecklare** eller **Distributionshanteraren**.
->* Knappen **Åtkomst till replikinformation** visar bara databasåtkomstinformation för databaser som hanteras med Adobe. Åtkomstinformation om [privata databaser](private-repositories.md) är inte tillgänglig i Cloud Manager.
+## Få åtkomst till databasinformation från sidan Databaser {#repositories-window}
 
-## Åtkomst till databasinformation från fönstret Databaser {#repositories-window}
+Funktionen **Åtkomstrepo** är också tillgänglig från sidan [**Databaser**](managing-repositories.md). Samma information om åtkomst till databaser som hanteras av Adobe visas.
 
-En **Access Repo Info**-knapp är också tillgänglig i verktygsfältet i fönstret [**Databaser**](managing-repositories.md). Samma information om åtkomst till databaser som hanteras av Adobe visas.
+## Återkalla ett lösenord {#revoke-password}
 
-## Återkalla ett åtkomstlösenord {#revoke-password}
+Du kan återkalla ett lösenord när som helst.
 
-Du kan återkalla ett lösenord när som helst. Om du vill göra det [skapar du en supportbiljett för den här begäran](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;support-tab=home#support).
-
-Biljetten kommer att behandlas med hög prioritet och bör återkallas inom en dag.
+Om du vill göra det [skapar du en supportbiljett för den här begäran](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;support-tab=home#support). Biljetten behandlas med hög prioritet och återkallas vanligen inom en dag.

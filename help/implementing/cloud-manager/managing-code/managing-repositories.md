@@ -1,12 +1,12 @@
 ---
 title: Hantera databaser i Cloud Manager
-description: Lär dig hur du skapar, visar och tar bort Git-databaser i Cloud Manager.
+description: Lär dig hur du skapar, visar och tar bort dina GIT-databaser i Cloud Manager.
 exl-id: 6e1cf636-78f5-4270-9a21-38b4d5e5a0b0
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
+source-git-commit: 533fa72b7610f671a24461073112b7fb798ce166
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '645'
 ht-degree: 0%
 
 ---
@@ -14,52 +14,48 @@ ht-degree: 0%
 
 # Hantera databaser i Cloud Manager {#managing-repos}
 
-Lär dig hur du skapar, visar och tar bort Git-databaser i Cloud Manager.
+Lär dig hur du visar, lägger till och tar bort Git-databaser i Cloud Manager.
 
-## Ökning {#overview}
+## Om databaser i Cloud Manager {#overview}
 
-Databaser används för att lagra och hantera projektkoden med Git. Alla program du skapar i Cloud Manager har en databas som hanteras av Adobe.
+Databaser i Cloud Manager används för att lagra och hantera projektkoden med Git. För varje *program* som du lägger till skapas en databas som hanteras av Adobe automatiskt.
 
-Du kan välja att skapa ytterligare databaser som hanterar Adobe och även lägga till egna privata databaser. Alla databaser som är associerade med ditt program kan visas i fönstret **Databaser**.
+Dessutom kan du skapa fler Adobe-hanterade databaser eller lägga till egna privata databaser. Alla databaser som är länkade till ditt program kan visas på sidan **Databaser**.
 
-Databaser som skapas i Cloud Manager är också tillgängliga när du lägger till eller redigerar pipelines. Mer information finns i [CI-CD Pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md).
+Databaser som skapas i Cloud Manager kan också väljas när du lägger till eller redigerar pipelines. Mer information om hur du konfigurerar pipelines finns i [CI-CD-pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md).
 
-Det finns en enda primär databas eller en gren för en given pipeline. Med stöd för [Git-undermodul kan ](git-submodules.md) många sekundära grenar inkluderas vid byggtiden.
+Varje pipeline är länkad till en primär databas eller gren. Med stöd för [Git-undermodul](git-submodules.md) kan flera sekundära grenar inkluderas under byggprocessen.
 
-## Fönstret Databaser {#repositories-window}
+## Visa sidan Databaser {#repositories-window}
+
+På sidan **Databaser** kan du visa information om den valda databasen. Denna information omfattar vilken typ av databas som används. Om databasen är markerad som **Adobe** anger den att den är en Adobe-hanterad databas. Om den är märkt som **GitHub** refererar den till en privat GitHub-databas som du hanterar. Dessutom innehåller sidan information om t.ex. när databasen skapades och om de rörledningar som är kopplade till den.
+
+Om du vill vidta åtgärder för en vald databas kan du klicka på databasen och använda ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) för att öppna en nedrullningsbar meny. För databaser som hanteras med Adobe kan du **[kontrollera grenar/skapa projekt](#check-branches)**.
+
+![Databasåtgärder](assets/repository-actions.png)
+*Nedrullningsbar meny på sidan Databaser.*
+
+Andra tillgängliga åtgärder på den nedrullningsbara menyn är bland annat **[Kopiera databas-URL](#copy-url)**, **[Visa och uppdatera](#view-update)** och **[Ta bort](#delete)** databasen.
+
+**Så här visar du sidan Databaser:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
-1. På sidan **Programöversikt** väljer du fliken **Databaser** för att växla till sidan **Databaser**.
+1. På sidan **Programöversikt** klickar du på ![Mappikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) **Databaser** på sidomenyn.
 
-1. Fönstret **Databaser** visar alla databaser som är associerade med ditt program.
+1. På sidan **Databaser** visas alla databaser som är associerade med det valda programmet.
 
-   ![Databasfönstret](assets/repositories.png)
+   ![Databassida](assets/repositories.png)
+   *Sidan Databaser i Cloud Manager.*
 
-Fönstret **Databaser** innehåller information om databaserna:
+## Lägg till databaser {#adding-repositories}
 
-* Typ av databas
-   * **Adobe** anger databaser som hanteras av Adobe
-   * **GitHub** anger privata GitHub-databaser som du hanterar
-* När den skapades
-* Pipelines som är associerade med databasen
+Klicka på **Lägg till databas** på sidan **Databaser** i det övre högra hörnet.
 
-Du kan markera databasen i fönstret och klicka på ellipsknappen för att vidta åtgärder för den valda databasen.
+![Dialogrutan Lägg till databas.](assets/repository-add.png)
+*Dialogrutan Lägg till databas.*
 
-* **[Kontrollera grenar/Skapa projekt](#check-branches)** (endast tillgängligt för Adobe-databaser)
-* **[Kopiera databas-URL](#copy-url)**
-* **[Visa och uppdatera](#view-update)**
-* **[Ta bort](#delete)**
-
-![Databasåtgärder](assets/repository-actions.png)
-
-## Lägga till databaser {#adding-repositories}
-
-Tryck eller klicka på knappen **Lägg till databas** i fönstret **Databaser** för att starta guiden **Lägg till databas**.
-
-![Guiden Lägg till databas](assets/add-repository-wizard.png)
-
-Cloud Manager har stöd för båda databaser som hanteras av Adobe (**Adobe-databas**) och dina egna självhanterade databaser (**Privat databas**). De obligatoriska fälten varierar beroende på vilken typ av databas du väljer att lägga till. Mer information finns i följande dokument.
+Cloud Manager har stöd för två typer av databaser: databaser som hanteras med Adobe (**Adobe-databas**) och självhanterade databaser (**Privat databas**). De obligatoriska fälten för konfiguration varierar beroende på vilken typ av databas du väljer att lägga till. Mer information finns i följande:
 
 * [Lägga till Adobe-databaser i Cloud Manager](adobe-repositories.md)
 * [Lägga till privata databaser i Cloud Manager](private-repositories.md)
@@ -69,41 +65,35 @@ Cloud Manager har stöd för båda databaser som hanteras av Adobe (**Adobe-data
 >* En användare måste ha rollen **Distributionshanteraren** eller **Affärsägare** för att kunna lägga till en databas.
 >* Det finns en gräns på 300 databaser i alla program i ett visst företag eller i en IMS-organisation.
 
-## Åtkomst till svarsinformation {#repo-info}
-
-När du visar dina databaser i fönstret **Databaser** kan du visa information om hur du kommer åt databaser som hanteras med Adobe genom att klicka på knappen **Åtkomstrepo-information** i verktygsfältet.
-
-![Databasinformation](assets/repo-info.png)
-
-Fönstret **Databasinformation** öppnas med information. Mer information om hur du får åtkomst till databasinformation finns i dokumentet [Åtkomst till databasinformation](accessing-repos.md).
 
 ## Kontrollera grenar/skapa projekt {#check-branches}
 
-Åtgärden **Kontrollera grenar/Skapa projekt** utför två funktioner beroende på databasens tillstånd.
+I **AEM Cloud Manager** har åtgärden **Kontrollera grenar/Skapa projekt** två syften, beroende på databasens aktuella tillstånd.
 
-* Om databasen är nyskapad skapar åtgärden ett exempelprojekt baserat på [den AEM projektarkitypen](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/overview).
-* Om exempelprojektet redan har skapats i databasen kontrolleras statusen för databasen och dess grenar, och sedan rapporteras om exempelprojektet redan finns.
+* Om databasen är nyskapad genererar den här åtgärden ett exempelprojekt med hjälp av [den AEM projekttypen](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/overview).
+* Om exempelprojektet redan har skapats i databasen kontrollerar åtgärden databasens och dess grenars status och ger information om huruvida exempelprojektet redan finns.
 
-![Åtgärden Kontrollera grenar](assets/check-branches.png)
+  ![Åtgärden Kontrollera grenar](assets/check-branches.png)
 
 ## Kopiera databas-URL {#copy-url}
 
-Åtgärden **Kopiera databas-URL** kopierar URL:en för den databas som är markerad i fönstret **Databaser** till Urklipp så att den kan användas någon annanstans.
+Åtgärden **Kopiera databas-URL** kopierar URL:en för den databas som är markerad på sidan **Databaser** till Urklipp så att den kan användas någon annanstans.
 
-## Visa och uppdatera {#view-update}
+## Visa och uppdatera en databas {#view-update}
 
-Åtgärden **Visa och uppdatera** öppnar dialogrutan **Uppdatera databas**. Med den kan du visa **Namn** och **databas-URL-förhandsgranskning** samt uppdatera **Beskrivning** för databasen.
+Åtgärden **Visa och uppdatera** öppnar dialogrutan **Uppdatera databas**, där du kan visa databasens **namn** och **databas-URL-förhandsgranskning**. Dessutom kan du uppdatera **Beskrivning** för databasen.
 
-![Visa och uppdatera databasinformation](assets/view-update.png)
+![Visa och uppdatera databasinformation](assets/repository-view-update.png)
 
-## Ta bort {#delete}
+## Ta bort en databas {#delete}
 
-Åtgärden **Ta bort** tar bort databasen från ditt projekt. En databas kan inte tas bort om den är associerad med en pipeline.
+Åtgärden **Ta bort** tar bort databasen från ditt projekt. Det går inte att ta bort en databas om den är associerad med en pipeline.
 
-![Ta bort](assets/delete.png)
+![Ta bort](assets/repository-delete.png)
 
-Om du tar bort en databas:
+Om du tar bort en databas går det inte att använda dess namn för nya databaser som skapas i framtiden. Om du försöker använda samma namn visas följande felmeddelande:
 
-* Gör det borttagna databasnamnet oanvändbart för nya databaser som kan skapas i framtiden.
-   * Felmeddelandet `Repository name should be unique within organization.` visas i sådana fall.
-* Gör den borttagna databasen otillgänglig i Cloud Manager och inte tillgänglig för länkning till en pipeline.
+`Repository name should be unique within organization.`
+
+Dessutom är den borttagna databasen inte längre tillgänglig i Cloud Manager och kan inte länkas till någon pipeline.
+
