@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för borttagna och borttagna f
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
 feature: Release Information
 role: Admin
-source-git-commit: 708bf370c2843dd8e2937de8fbf77843e661cf02
+source-git-commit: 0bcb769f0d8beb4b501646d82fa91bd9233a2173
 workflow-type: tm+mt
-source-wordcount: '2220'
+source-wordcount: '2496'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
 <tbody>
   <tr>
     <td>org.apache.sling.commons.auth<br>org.apache.sling.commons.auth.spi</td>
-    <td>Använd Sling:s gränssnitt Auth Core/Auth Core SPI som ett alternativ</td>
+    <td>Använd Slings gränssnitt Auth Core/Auth Core SPI som ett alternativ. <a href="#org.apache.sling.commons.auth">Se borttagningsanteckningar nedan.</a></td>
     <td>2015</td>
     <td>7/30/21</td>
   </tr>
@@ -143,15 +143,19 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
     <td>4/30/21</td>
     <td>7/30/21</td>
   </tr>
-  <tr>
-    <td>org.apache.felix.http.jetty<br>org.eclipse.jetty.http<br>org.eclipse.jetty.http.pathmap<br>org.eclipse.jetty.io<br>org.eclipse.jetty.io.ssl<br>org.eclipse.jetty.jmx<br>org.eclipse.jetty.security<br>org.eclipse.jetty.server<br>org.eclipse.jetty.server.handler<br>org.eclipse.jetty.server.handler.gzip<br>org.eclipse.jetty.server.handler.jmx<br>org.eclipse.jetty.server.jmx<br>org.eclipse.jetty.server.nio<br>org.eclipse.jetty.server.session<br>org.eclipse.jetty.servlet<br>org.eclipse.jetty.servlet.jmx<br>org.eclipse.jetty.servlet.listener<br>org.eclipse.jetty.util<br>org.eclipse.jetty.util.annotation<br>org.eclipse.jetty.util.component<br>org.eclipse.jetty.util.log<br>org.eclipse.jetty.util.preventers<br>org.eclipse.jetty.util.resource<br>org.eclipse.jetty.util.security<br>org.eclipse.jetty.util.ssl<br>org.eclipse.jetty.util.statistic<br>org.eclipse.jetty.util.thread<br>org.eclipse.jetty.util.thread.strategy<br>org.eclipse.jetty.webapp<br>org.eclipse.jetty.websocket.api<br>org.eclipse.jetty.websocket.api.annotations<br>org.eclipse.jetty.websocket.api.extensions<br>org.eclipse.jetty.websocket.api.util<br>org.eclipse.jetty.websocket.client<br>org.eclipse.jetty.websocket.client.io<br>org.eclipse.jetty.websocket.client.masks<br>org.eclipse.jetty.websocket.common<br>org.eclipse.jetty.websocket.common.events<br>org.eclipse.jetty.websocket.common.events.annotated<br>org.eclipse.jetty.websocket.common.extensions<br>org.eclipse.jetty.websocket.common.extensions.compress<br>org.eclipse.jetty.websocket.common.extensions.fragment<br>org.eclipse.jetty.websocket.common.extensions.identity<br>org.eclipse.jetty.websocket.common.frames<br>org.eclipse.jetty.websocket.common.io<br>org.eclipse.jetty.websocket.common.io.http<br>org.eclipse.jetty.websocket.common.io.payload<br>org.eclipse.jetty.websocket.common.message<br>org.eclipse.jetty.websocket.common.scopes<br>org.eclipse.jetty.websocket.common.util<br>org.eclipse.jetty.websocket.server<br>org.eclipse.jetty.websocket.server.pathmap<br>org.eclipse.jetty.websocket.servlet<br>org.eclipse.jetty.xml<br>org.eclipse.jetty.client<br>org.eclipse.jetty.client.api<br>org.eclipse.jetty.client.http<br>org.eclipse.jetty.client.jmx<br>org.eclipse.jetty.client.util</td>
-    <td>Paketen Eclipse Jetty och Felix Http Jetty stöds inte längre.</td>
+  <tr> <td>org.apache.felix.http.jetty<br>org.eclipse.jetty.client.jmx<br>org.eclipse.jetty.jmx<br>org.eclipse.jetty.server.handler.jmx<br>org.eclipse.jetty.server.nio<br>org.eclipse.jetty.server.jmx<br>org.eclipse.jetty.servlet.jmx<br>org.eclipse.jetty.util.preventers<br>org.eclipse.jetty.util.thread.strategy<br>org.eclipse.jetty.webapp<br>org.eclipse.jetty.websocket.api<br>org.eclipse.jetty.websocket.api.annotations<br>org.eclipse.jetty.websocket.api.extensions<br>org.eclipse.jetty.websocket.api.util<br>org.eclipse.jetty.websocket.client<br>org.eclipse.jetty.websocket.client.io<br>org.eclipse.jetty.websocket.client.masks<br>org.eclipse.jetty.websocket.common<br>org.eclipse.jetty.websocket.common.events<br>org.eclipse.jetty.websocket.common.events.annotated<br>org.eclipse.jetty.websocket.common.extensions<br>org.eclipse.jetty.websocket.common.extensions.compress<br>org.eclipse.jetty.websocket.common.extensions.fragment<br>org.eclipse.jetty.websocket.common.extensions.identity<br>org.eclipse.jetty.websocket.common.frames<br>org.eclipse.jetty.websocket.common.io<br>org.eclipse.jetty.websocket.common.io.http<br>org.eclipse.jetty.websocket.common.io.payload<br>org.eclipse.jetty.websocket.common.message<br>org.eclipse.jetty.websocket.common.scopes<br>org.eclipse.jetty.websocket.common.util<br>org.eclipse.jetty.websocket.server<br>org.eclipse.jetty.websocket.server.pathmap<br>org.eclipse.jetty.websocket.servlet<br>org.eclipse.jetty.xml</td>
+    <td>Paketen Eclipse Jetty och Felix Http Jetty stöds inte längre. <a href="#org.eclipse.jetty">Se borttagningsanteckningar nedan.</a></td>
     <td>5/27/21</td>
     <td>8/26/21</td>
   </tr>
-  <tr>
-    <td>com.mongodb<br>com.mongodb.annotations<br>com.mongodb.assertions<br>com.mongodb.async<br>com.mongodb.binding<br>com.mongodb.bulk<br>com.mongodb.client<br>com.mongodb.client.gridfs<br>com.mongodb.client.gridfs.codecs<br>com.mongodb.client.gridfs.model<br>com.mongodb.client.jndi<br>com.mongodb.client.model<br>com.mongodb.client.model.changestream<br>com.mongodb.client.model.geojson<br>com.mongodb.client.model.geojson.codecs<br>com.mongodb.client.result<br>com.mongodb.connection<br>com.mongodb.connection.netty<br>com.mongodb.diagnostics.logging<br>com.mongodb.event<br>com.mongodb.gridfs<br>com.mongodb.internal<br>com.mongodb.internal.async<br>com.mongodb.internal.authentication<br>com.mongodb.internal.connection<br>com.mongodb.internal.dns<br>com.mongodb.internal.event<br>com.mongodb.internal.management.jmx<br>com.mongodb.internal.session<br>com.mongodb.internal.thread<br>com.mongodb.internal.validator<br>com.mongodb.management<br>com.mongodb.operation<br>com.mongodb.selector<br>com.mongodb.session<br>com.mongodb.util</td>
-    <td>Användning av detta API stöds inte i AEM as a Cloud Service.</td>
+  <tr> <td>org.eclipse.jetty.client<br>org.eclipse.jetty.client.api<br>org.eclipse.jetty.client.http<br>org.eclipse.jetty.client.util<br>org.eclipse.jetty.http<br>org.eclipse.jetty.http.pathmap<br>org.eclipse.jetty.io<br>org.eclipse.jetty.io.ssl<br>org.eclipse.jetty.security<br>org.eclipse.jetty.server<br>org.eclipse.jetty.server.handler<br>org.eclipse.jetty.server.handler.gzip<br>org.eclipse.jetty.server.session<br>org.eclipse.jetty.servlet<br>org.eclipse.jetty.servlet.listener<br>org.eclipse.jetty.util<br>org.eclipse.jetty.util.annotation<br>org.eclipse.jetty.util.component<br>org.eclipse.jetty.util.log<br>org.eclipse.jetty.util.resource<br>org.eclipse.jetty.util.security<br>org.eclipse.jetty.util.ssl<br>org.eclipse.jetty.util.statistic<br>org.eclipse.jetty.util.thread
+</td>
+    <td>Paketen Eclipse Jetty och Felix Http Jetty stöds inte längre.</td>
+    <td>5/27/21</td>
+    <td>8/26/21</td>
+  </tr>  
+  <tr>     <td>com.mongodb<br>com.mongodb.annotations<br>com.mongodb.assertions<br>com.mongodb.async<br>com.mongodb.binding<br>com.mongodb.bulk<br>com.mongodb.client<br>com.mongodb.client.gridfs<br>com.mongodb.client.gridfs.codecs<br>com.mongodb.client.gridfs.model<br>com.mongodb.client.jndi<br>com.mongodb.client.model<br>com.mongodb.client.model.changestream<br>com.mongodb.client.model.geojson<br>com.mongodb.client.model.geojson.codecs<br>com.mongodb.client.result<br>com.mongodb.connection<br>com.mongodb.connection.netty<br>com.mongodb.diagnostics.logging<br>com.mongodb.event<br>com.mongodb.gridfs<br>com.mongodb.internal<br>com.mongodb.internal.async<br>com.mongodb.internal.authentication<br>com.mongodb.internal.connection<br>com.mongodb.internal.dns<br>com.mongodb.internal.event<br>com.mongodb.internal.management.jmx<br>com.mongodb.internal.session<br>com.mongodb.internal.thread<br>com.mongodb.internal.validator<br>com.mongodb.management<br>com.mongodb.operation<br>com.mongodb.selector<br>com.mongodb.session<br>com.mongodb.util</td>
+    <td>Användning av detta API stöds inte i AEM as a Cloud Service. <a href="#com.mongodb">Se borttagningsanteckningar nedan.</a></td>
     <td>5/27/21</td>
     <td>7/30/21</td>
   </tr>
@@ -169,7 +173,7 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
   </tr>
   <tr>
     <td>org.apache.abdera<br>org.apache.abdera.model<br>org.apache.abdera.factory<br>org.apache.abdera.ext.media<br>org.apache.abdera.util<br>org.apache.abdera.i18n.iri<br>org.apache.abdera.writer<br>org.apache.abdera.i18n.rfc4646<br>org.apache.abdera.i18n.rfc4646.enums<br>org.apache.abdera.i18n.text<br>org.apache.abdera.filter<br>org.apache.abdera.xpath<br>org.apache.abdera.i18n.text.io<br>org.apache.abdera.i18n.text.data<br>org.apache.abdera.parser</td>
-    <td>API:t används inte eftersom Apache Abdera är ett projekt som har gått tillbaka sedan 2017.</td>
+    <td>API:t används inte eftersom Apache Abdera är ett projekt som har gått tillbaka sedan 2017. <a href="#org.apache.abdera_or_org.apache.sling.atom.taglib">Se borttagningsanteckningar nedan.</a></td>
     <td>7/29/21</td>
     <td>09/29/21</td>
   </tr>
@@ -198,13 +202,13 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
     <td>borttagen</td>
   <tr>
     <td>org.apache.sling.atom.taglib<br>org.apache.sling.atom.taglib.media</td>
-    <td>Äldre AEM 6.x API.</td>
+    <td>Äldre AEM 6.x API. <a href="#org.apache.abdera_or_org.apache.sling.atom.taglib">Se borttagningsanteckningar nedan.</a></td>
     <td>4/8/19</td>
     <td>09/29/21</td>
   </tr>
   <tr>
     <td>org.apache.felix.http.whiteboard</td>
-    <td>Apache Felix Http Whiteboard stöds inte längre. Migrera koden till OSGi Http Whiteboard.</td>
+    <td>Apache Felix Http Whiteboard stöds inte längre. Migrera koden till OSGi Http Whiteboard. <a href="#org.apache.felix.http.whiteboard">Se borttagningsanteckningar nedan.</a></td>
     <td>2022-1-27</td>
     <td>03/24/2022</td>
   </tr>
@@ -266,7 +270,7 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
     <td>15/6/2023</td>
   </tr>
   <tr>
-    <td>org.slf4j.event	</td>
+    <td>org.slf4j.event    </td>
     <td>Detta interna slf4j-API stöds inte av AEM as a Cloud Service</td>
     <td>4/11/2022</td>
     <td>8/30/2024</td>
@@ -285,7 +289,7 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
   </tr>
   <tr>
     <td>com.adobe.granite.xss<br>com.adobe.granite.xss.impl</td>
-    <td>Observera att servleten i com.adobe.granite.xss.impl.servlets inte är inaktuell</td>
+    <td>Använd org.apache.sling.xss i stället.</td>
     <td>12/12/2023</td>
     <td>6/30/2024</td>
   </tr>  
@@ -304,6 +308,52 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
 </tbody>
 </table>
 </details>
+
+### Borttagning av `org.apache.sling.commons.auth*` {#org.apache.sling.commons.auth}
+
+Om du använder `org.apache.sling.commons.auth` och/eller `org.apache.sling.commons.auth.spi` kan användningen ersättas genom att du migrerar koden till `org.apache.sling.auth`-svar. `org.apache.sling.auth.spi`. Om du använder en gammal version av [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) måste du uppdatera till den senaste versionen.
+
+Åtgärdslista:
+* Uppdatera ACS AEM Commons till den senaste versionen
+* Migrera från `org.apache.sling.commons.auth` och/eller `org.apache.sling.commons.auth.spi` till `org.apache.sling.auth`. `org.apache.sling.auth.spi`.
+
+### Borttagning av `org.eclipse.jetty*` {#org.eclipse.jetty}
+
+Om du använder något från paketet `org.eclipse.jetty` eller något av dess underpaket kanske du vill migrera till andra tredjepartsbibliotek med liknande funktioner. Om migrering inte är möjlig lägger du till de paket som krävs från listan nedan i ditt projekt.
+
+Åtgärdslista:
+* Ersätt användning av `org.eclipse.jetty`-paket med andra bibliotek från tredje part/egen kod eller
+* Välj de paket som behövs från den här listan och lägg till dem i ditt projekt:
+   * org.eclipse.jetty:jetty-client:9.4.54.v20240208
+   * org.eclipse.jetty:jetty-http:9.4.54.v20240208
+   * org.eclipse.jetty:jetty-io:9.4.54.v20240208
+   * org.eclipse.jetty:jetty-security:9.4.54.v20240208
+   * org.eclipse.jetty:jetty-servlet:9.4.54.v20240208
+   * org.eclipse.jetty:jetty-server:9.4.54.v20240208
+   * org.eclipse.jetty:jetty-util:9.4.54.v20240208
+   * org.eclipse.jetty:jetty-util-ajax:9.4.54.v20240208
+
+### Borttagning av `com.mongodb` {#com.mongodb}
+
+Lägg till Mongo-klient-API i ditt projekt.
+
+Åtgärdslista:
+* Lägg till det här paketet i ditt projekt
+   * org.mongodb:mongo-java-driver:3.12.7
+
+### Användning av `org.apache.abdera*` och `org.apache.sling.atom.taglib` {#org.apache.abdera_or_org.apache.sling.atom.taglib}
+
+Ersätt användningen av ett paket från `org.apache.abdera` och `org.apache.sling.atom.taglib` med ett tredjepartsbibliotek med liknande funktionalitet eller egen kod.
+
+Åtgärdslista:
+* Ersätt användning av paket från `org.apache.abdera` och `org.apache.sling.atom.taglib` med andra bibliotek från tredje part/egen kod.
+
+### Användning av `org.apache.felix.http.whiteboard` {#org.apache.felix.http.whiteboard}
+
+Ersätt användningen av `org.apache.felix.http.whiteboard` med [OSGi Http Whiteboard](https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.http.whiteboard.html). Det officiella OSGi-API:t har liknande funktioner och oftast behöver du bara ändra tjänstregistreringsegenskaperna för att ersätta dem.
+
+Åtgärdslista:
+* Ersätt användningen av `org.apache.felix.http.whiteboard` med [OSGi Http Whiteboard](https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.http.whiteboard.html)
 
 ## OSGI-konfiguration {#osgi-configuration}
 
