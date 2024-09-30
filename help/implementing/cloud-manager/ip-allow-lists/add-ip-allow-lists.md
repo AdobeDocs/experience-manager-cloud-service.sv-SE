@@ -5,7 +5,7 @@ exl-id: 769be71f-5c11-4f98-8906-7a5667a25aee
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: b9fb178760b74cb0e101506b6a9ff5ae30c18490
+source-git-commit: 1902e9b237adbdaff172535d0904d0faa615e9d1
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%
@@ -20,6 +20,8 @@ Lär dig hur du lägger till egna IP-Tillåtelselista med Cloud Manager.
 En användare i rollen **Affärsägare** eller **Distributionshanterare** kan följa de här stegen för att lägga till en IP-Tillåtelselista.
 
 {{add-cm-allowlist-frontend-pipeline}}
+
+{{ip-allow-lists-ue}}
 
 **Så här lägger du till en IP-Tillåtelselista:**
 

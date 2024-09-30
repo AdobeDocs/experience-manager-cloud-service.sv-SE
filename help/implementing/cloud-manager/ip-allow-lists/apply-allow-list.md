@@ -5,7 +5,7 @@ exl-id: 7158496c-b0c4-4228-a306-71dc51003c57
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: b9fb178760b74cb0e101506b6a9ff5ae30c18490
+source-git-commit: 1902e9b237adbdaff172535d0904d0faa615e9d1
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 0%
@@ -18,6 +18,8 @@ ht-degree: 0%
 När du använder IP Tillåtelselista kopplas alla IP-intervall som ingår i listdefinitionen till en författare eller publiceringstjänst i en miljö. Att ta bort en lista är omvänt.
 
 {{add-cm-allowlist-frontend-pipeline}}
+
+{{ip-allow-lists-ue}}
 
 ## Använd IP-Tillåtelselista {#applying}
 

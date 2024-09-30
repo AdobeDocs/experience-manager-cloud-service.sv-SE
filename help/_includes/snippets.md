@@ -1,7 +1,7 @@
 ---
-source-git-commit: 991db00a833e964d4837bdde9a04ee72b3ad782d
+source-git-commit: a77bff14b34f1e433ba185b19f0f0d61728b7c7a
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -155,6 +155,22 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 >
 >Om du använder, eller tänker använda, frontendriet för att utveckla webbplatser måste Cloud Manager IP Tillåtelselista läggas till i förväg.
 >Se [Användning av Cloud Manager IP Tillåtelselista med frontendspipeline](/help/implementing/cloud-manager/ip-allow-lists/introduction.md#allowlists-frontend-pipeline).
+
+## IP Tillåtelselista och Universal Editor {#ip-allow-lists-ue}
+
+>[!IMPORTANT]
+>
+>[Den universella redigeraren](/help/implementing/universal-editor/introduction.md) är inte kompatibel med IP tillåtelselista.
+>
+>Om du vill använda Universal Editor får IP tillåtelselista inte vara aktiverat.
+
+## Universal Editor och IP Tillåtelselista {#ue-ip-allow-lists}
+
+>[!IMPORTANT]
+>
+>Den universella redigeraren är inte kompatibel med [IP tillåtelselista.](/help/implementing/cloud-manager/ip-allow-lists/introduction.md)
+>
+>Om du vill använda Universal Editor får IP tillåtelselista inte vara aktiverat.
 
 ## Arbeta med Dynamic Media {#work-with-dynamic-media}
 

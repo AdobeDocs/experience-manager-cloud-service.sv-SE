@@ -1,10 +1,10 @@
 ---
 title: Introduktion till Universal Editor
-description: Se hur den universella redigeraren möjliggör WYSIWYG-redigering av headless och headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
+description: Läs om hur du i Universell redigerare kan redigera vad du vill - se - vad du får (WYSIWYG) oavsett vilken headlessupplevelse du har. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
 exl-id: d4fc2384-a0f5-4a6f-9572-62749786be4c
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: a77bff14b34f1e433ba185b19f0f0d61728b7c7a
 workflow-type: tm+mt
 source-wordcount: '973'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Introduktion till Universal Editor {#introduction}
 
-Universal Editor är en mångsidig visuell editor som ingår i Adobe Experience Manager Sites. Det gör det möjligt för skribenter att göra WYSIWYG-redigering (what-you-see-is-what-you-get) av headless eller headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser och hur det erbjuder oöverträffad frihet för utvecklare.
+Universal Editor är en mångsidig visuell editor som ingår i Adobe Experience Manager Sites. Man kan redigera det man redan gjort - se-is-what-you-get (WYSIWYG) - oavsett om det handlar om headless eller headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser och hur det erbjuder oöverträffad frihet för utvecklare.
 
 ## Bakgrund {#background}
 
@@ -91,6 +91,8 @@ När du utforskar den universella redigeraren och fortsätter implementera den i
 * AEM as a Cloud Service version `2023.8.13099` eller senare krävs.
 * Innehållsförfattare måste ha sina egna Experience Cloud-konton.
 * Chrome och Edge stöds
+
+{{ue-ip-allow-lists}}
 
 ## Nästa steg {#next-steps}
 
