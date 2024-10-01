@@ -4,9 +4,9 @@ description: Läs mer om vidarebefordran av loggar till Splunk och andra loggnin
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 17d195f18055ebd3a1c4a8dfe1f9f6bc35ebaf37
+source-git-commit: 3aafe41554fd86637e34687660fc48ea817b01d7
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1603'
 ht-degree: 0%
 
 ---
@@ -40,6 +40,7 @@ Den här artikeln är organiserad på följande sätt:
 * Målkonfigurationer för loggning - varje mål har ett något annorlunda format
 * Loggpostformat - information om loggpostformat
 * Avancerade nätverk - skicka AEM- och Apache/Dispatcher-loggar via en dedikerad utgång eller via ett VPN
+* Migrera från äldre vidarebefordran av loggar - gå från vidarebefordran av loggfiler som tidigare konfigurerats av Adobe till självbetjäningsmetoden
 
 
 ## Inställningar {#setup}
@@ -369,4 +370,23 @@ data:
     aem:
       advancedNetworking: true
 ```
+
+## Migrerar från äldre loggvidarebefordran {#legacy-migration}
+
+Innan konfigurationen av loggvidarebefordran gjordes via en självbetjäningsmodell ombads kunderna att öppna supportärenden, där Adobe initierade integreringen.
+
+Kunder som har konfigurerats på det sättet av Adobe får gärna anpassa sig till självbetjäningsmodellen när det passar. Det finns flera skäl till att göra den här övergången:
+
+* En ny miljö (t.ex. en ny dev-miljö eller RDE) har etablerats.
+* Ändrar din befintliga Splunk-slutpunkt eller autentiseringsuppgifter.
+* Adobe hade konfigurerat vidarebefordran av loggar innan CDN-loggarna var tillgängliga och du vill få CDN-loggar.
+* Ett medvetet beslut att aktivt anpassa sig till den självbetjäningsmodellen så att organisationen har kunskapen redan innan en tidskänslig förändring är nödvändig.
+
+När du är redo att migrera konfigurerar du bara YAML-filen enligt beskrivningen i de föregående avsnitten. Använd Cloud Manager konfigurationsflöde för att distribuera till var och en av de miljöer där konfigurationen ska användas.
+
+Vi rekommenderar, men behöver inte göra det, att en konfiguration distribueras till alla miljöer så att de alla styrs av självbetjäning. Annars kanske du glömmer vilka miljöer som har konfigurerats av Adobe jämfört med de som konfigurerats på ett självbetjäningssätt.
+
+>[!NOTE]
+>
+>När loggvidarebefordran distribueras till en miljö som tidigare konfigurerats av Adobe support kan du få dubblettloggar i upp till några timmar. Detta kommer till slut att matchas automatiskt.
 
