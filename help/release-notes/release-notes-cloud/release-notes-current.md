@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 2d5fa0b15456ad9838fa236a2b5c79d41a9af7fe
+source-git-commit: 894c5df2cdc6637bae9b4b8f2cbdd1f1162b3942
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1289'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,12 @@ AI-genererade videobildtexter i Adobe Dynamic Media använder artificiell intell
 Resursväljaren har nu stöd för att bläddra bland samlingar för att hitta den önskade resursen.
 ![Resursväljarsamlingar](/help/assets/assets/collections-rail-modal-view.png)
 
+### Nya funktioner i Content Hub {#content-hub-new-features}
+
+Administratörer kan nu kontrollera om utgångna resurser behöver vara synliga på Content Hub. Om de utgångna resurserna blir synliga kan de även definiera om användare kan hämta dem.
+
+![Utgångna resurser på Content Hub](/help/assets/assets/view-download-expired-assets.png)
+
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
 ### Nya funktioner i förhandsversionen av AEM Forms {#forms-new-prerelease-features}
@@ -120,7 +126,7 @@ De genererande AI-funktionerna är:
 * Commerce-fälten är inte korrekt integrerade med Assets metadataschredigerare.
 * Problem med Carousel Products Multifield för dra och släpp.
 * Problem med Carousel Category Multifield för dra och släpp.
-* Det går inte att klicka på menyerna på sidan Sidinformation på kategoritexten och produktredigeringssidan.
+* Det går inte att klicka på menyerna på sidan Sidinformation på kategoritextredigerarsidan.
 * Ordernummer visas inte på orderbekräftelsesidan.
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
