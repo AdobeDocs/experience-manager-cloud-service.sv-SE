@@ -2,9 +2,9 @@
 title: Konfigurera Content Hub användargränssnitt
 description: Konfigurera Content Hub användargränssnitt
 exl-id: e9e22862-9bcd-459a-bcf4-7f376a0b329a
-source-git-commit: 96c50aad9368adc83f8698dc35266146b1883672
+source-git-commit: 0c31f83d3e115a676c7daa37f634e25d08f4d06c
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1299'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,8 @@ Som administratör hanterar du följande konfigurationsalternativ för dina anv�
 * [Sök](#configure-metadata-search-content-hub)
 
 * [Varumärke](#configure-branding-content-hub)
+
+* [Assets har gått ut](#expired-assets-content-hub)
 
 * [Anpassade länkar](#configure-custom-links-content-hub)
 
@@ -168,6 +170,33 @@ Administratörer kan också anpassa rubrik och brödtext på banderollen på Con
 De varumärkningsuppdateringar som är aktiverade på skärmen för användargränssnittet för konfiguration på bannern för Content Hub-portalen:
 
 ![Gränssnittsmärkning för konfiguration på Content Hub](assets/configuration-ui-branding-updates.png)
+
+### Utgångna resurser {#expired-assets-content-hub}
+
+Administratörer kan kontrollera om utgångna resurser behöver vara synliga på Content Hub. Om de utgångna resurserna blir synliga kan de även definiera om användare kan hämta dem.
+
+Utgångna mediefiler visas inte i Content Hub som standard.
+
+Gör så här:
+
+1. Klicka på **[!UICONTROL Expired Assets]** i användargränssnittet för [konfigurationer](#access-configuration-options-content-hub).
+
+1. Aktivera alternativet **[!UICONTROL Allow users to view expired assets]** i avsnittet **[!UICONTROL Visible]** för att göra alla förfallna resurser synliga på Content Hub.
+
+1. När du har aktiverat synlighet för resurser kan du aktivera eller inaktivera möjligheten att hämta utgångna resurser med hjälp av växlingsknappen **[!UICONTROL Allow users to download expired assets]**.
+
+1. Klicka på **[!UICONTROL Save]** för att tillämpa ändringarna.
+
+   ![Utgångna resurser på Content Hub](assets/expired-assets-content-hub.png)
+
+När du har aktiverat synlighet för resurser kan du visa de förfallna resurserna på Content Hub, enligt bilden nedan:
+
+![Utgångna resurser på Content Hub](assets/view-download-expired-assets.png)
+
+Om administratören har aktiverat nedladdning kan Content Hub-användarna även hämta dem, vilket är markerat i bilden.
+
+Om synligheten för utgångna mediefiler är aktiverad markeras även mediefiler som slutar gälla inom 15 dagar med meddelandet `Expiring in n days` på tillgångskortet.
+
 
 ### Anpassade länkar {#configure-custom-links-content-hub}
 
