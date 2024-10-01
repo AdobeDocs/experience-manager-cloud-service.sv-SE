@@ -5,9 +5,9 @@ exl-id: 0c0671a3-e400-46f3-ad86-166a6cfdd44b
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 533fa72b7610f671a24461073112b7fb798ce166
+source-git-commit: f2364de6237ca9f0285815b581bcf3881488188d
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
@@ -42,9 +42,9 @@ Funktionen **Åtkomst till replikinformation** är synlig för användare med ro
 
    ![Åtkomst till replikinformation på Pipelilinnes-kort](assets/pipelines-card.png)
 
-1. Ett nytt lösenord måste skapas för att du ska kunna få åtkomst till lösenordet. Klicka på **`Generate password`** i dialogrutan Databasinformation.
+1. Ett nytt lösenord måste skapas för att du ska kunna få åtkomst till lösenordet. Välj **Generera lösenord** i dialogrutan **Databasinformation**.
 
-1. Klicka på **`Generate password`** i bekräftelsedialogrutan.
+1. Välj **Generera lösenord** i bekräftelsedialogrutan.
 
    ![Bekräfta generering av lösenord](assets/confirm-generated-password.png)
 
