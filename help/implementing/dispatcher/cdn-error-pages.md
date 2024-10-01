@@ -4,9 +4,9 @@ description: Lär dig hur du åsidosätter standardfelsidan genom att lagra stat
 feature: Dispatcher
 exl-id: 1ecc374c-b8ee-41f5-a565-5b36445d3c7c
 role: Admin
-source-git-commit: 85cef99dc7a8d762d12fd6e1c9bc2aeb3f8c1312
+source-git-commit: 137ea509de353f9f800f0b64bb8f2f6375e7d83d
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
@@ -89,3 +89,9 @@ curl "https://publish-pXXXXX-eXXXXXX.adobeaemcloud.com/cdnstatus?code=403"
 Följande koder stöds: 403, 404, 406, 500 och 503.
 
 På så sätt utlöser du CDN:ens felhanterare direkt för att testa det syntetiska svaret för en viss felkod.
+
+### Självstudiekurs
+
+Se självstudiekursen [CDN-felsidor](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages) för steg-instruktioner om hur du skapar, distribuerar och testar de CDN-hanterade felsidorna.
+
+
