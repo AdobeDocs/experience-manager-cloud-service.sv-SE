@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
 feature: Security
 role: Admin
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: 09a1d6065c42406f1004eb1bdd7dbf902edb279f
 workflow-type: tm+mt
-source-wordcount: '5743'
+source-wordcount: '5685'
 ht-degree: 0%
 
 ---
@@ -585,11 +585,6 @@ Bilden nedan visar en visuell representation av en uppsättning domäner och ass
     <td><code>p{PROGRAM_ID}.{REGION}-gateway.external.adobeaemcloud.com</code></td>
     <td>Ej tillämpligt</td>
     <td>VPN-gatewayens IP på AEM. Nätverksteknikteamet kan använda detta för att endast tillåta VPN-anslutningar till din VPN-gateway från en viss IP-adress. </td>
-  </tr>
-  <tr>
-    <td><code>p{PROGRAM_ID}.{REGION}.inner.adobeaemcloud.net</code></td>
-    <td>IP-adressen för trafiken från den AEM sidan av VPN till din sida. Detta kan tillåtslista i konfigurationen för att säkerställa att anslutningarna bara görs från AEM.</td>
-    <td>Om du vill tillåta VPN-åtkomst till AEM bör du konfigurera CNAME DNS-poster så att de mappar din anpassade domän och/eller <code>author-p{PROGRAM_ID}-e{ENVIRONMENT_ID}.adobeaemcloud.com</code> och/eller <code>publish-p{PROGRAM_ID}-e{ENVIRONMENT_ID}.adobeaemcloud.com</code> till detta.</td>
   </tr>
 </tbody>
 </table>
