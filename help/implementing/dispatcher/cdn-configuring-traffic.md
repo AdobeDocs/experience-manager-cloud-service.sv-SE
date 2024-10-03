@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler 
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: c31441baa6952d92be4446f9035591b784091324
+source-git-commit: 7f7ecfcca77cc3a38f3a4517bf41c48565b9faea
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1339'
 ht-degree: 0%
 
 ---
@@ -91,7 +91,14 @@ data:
           - type: set
             reqHeader: x-some-header
             value: some value
-            
+      - name: set-header-with-reqproperty-rule
+        when:
+          reqProperty: path
+          like: /set-header
+        actions:
+          - type: set
+            reqHeader: x-some-header
+            value: {reqProperty: path}           
       - name: unset-header-rule
         when:
           reqProperty: path
@@ -146,9 +153,9 @@ I tabellen nedan beskrivs de tillgängliga åtgärderna.
 
 | Namn | Egenskaper | Betydelse |
 |-----------|--------------------------|-------------|
-| **uppsättning** | (reqProperty eller reqHeader eller queryParam eller reqCookie), värde | Anger en angiven begärandeparameter (endast egenskapen path stöds), eller begäranhuvud, frågeparameter eller cookie, till ett givet värde. |
+| **uppsättning** | (reqProperty eller reqHeader eller queryParam eller reqCookie), värde | Anger en angiven begärandeparameter (endast egenskapen path stöds), eller begäranhuvud, frågeparameter eller cookie, till ett givet värde, som kan vara en stränglitteral eller begärandeparameter. |
 |     | var, värde | Ställer in en angiven request-egenskap på ett givet värde. |
-| **unset** | reqProperty | Tar bort en angiven begärandeparameter (endast egenskapen path stöds), eller begäranhuvud, frågeparameter eller cookie, till ett givet värde. |
+| **unset** | reqProperty | Tar bort en angiven begärandeparameter (endast egenskapen path stöds), eller begäranhuvud, frågeparameter eller cookie, till ett givet värde, som kan vara en stränglitteral eller begäranparameter. |
 |         | var | Tar bort en angiven variabel. |
 |         | queryParamMatch | Tar bort alla frågeparametrar som matchar ett angivet reguljärt uttryck. |
 | **omforma** | op:replace, (reqProperty eller reqHeader eller queryParam eller reqCookie), match, replace | Ersätter en del av parametern request (endast egenskapen path stöds), eller request header, query parameter eller cookie med ett nytt värde. |
