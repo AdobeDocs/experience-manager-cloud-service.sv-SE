@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
 feature: Security
 role: Admin
-source-git-commit: 09a1d6065c42406f1004eb1bdd7dbf902edb279f
+source-git-commit: fd6fb14bf3acdd30efb984e1666ed91a2327d810
 workflow-type: tm+mt
-source-wordcount: '5685'
+source-wordcount: '5675'
 ht-degree: 0%
 
 ---
@@ -216,7 +216,7 @@ ProxyPassReverse "/somepath" "https://example.com:8443"
 
 En dedikerad IP-adress kan förbättra säkerheten vid integrering med SaaS-leverantörer (som en CRM-leverantör) eller andra integreringar utanför AEM as a Cloud Service som erbjuder en tillåtelselista av IP-adresser. Genom att lägga till den dedikerade IP-adressen till tillåtelselista säkerställer det att endast trafik från AEM Cloud Service tillåts att flöda in i den externa tjänsten. Detta är utöver trafik från andra IP-adresser som tillåts.
 
-Samma dedikerade IP-adress används för alla program i organisationen Adobe och för alla miljöer i alla program. Det gäller både för Author och Publish.
+Samma dedikerade IP-adress används för alla miljöer i ett program och gäller både för författartjänster och Publish-tjänster.
 
 Utan den dedikerade IP-adressfunktionen aktiverad flödar trafik från AEM as a Cloud Service via en uppsättning IP-adresser som delas med andra kunder i AEM as a Cloud Service.
 
