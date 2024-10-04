@@ -4,9 +4,9 @@ description: Lär dig hur du importerar resurser satsvis med det nya användargr
 exl-id: 10f9d679-7579-4650-9379-bc8287cb2ff1
 feature: Asset Management, Publishing, Collaboration, Asset Processing
 role: User
-source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
+source-git-commit: 816bf0f93dd67f193f4e8a7c9bc4a7df29cb6cf5
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1701'
 ht-degree: 0%
 
 ---
@@ -125,11 +125,23 @@ Utför följande steg för att skapa en bulkimportkonfiguration i [!DNL Experien
    >* Om du väljer **Fullt Dropbox** när du skapar programmet Dropbox och den mapp som innehåller resurserna finns på `https://www.dropbox.com/home/bulkimport-assets` anger du `bulkimport-assets` i fältet **[!UICONTROL Source Folder]**.
    >* Om du väljer **App-mapp** när du skapar programmet Dropbox och den mapp som innehåller resurserna finns på `https://www.dropbox.com/home/Apps/BulkImportAppFolderScope/bulkimport-assets` anger du `bulkimport-assets` i fältet **[!UICONTROL Source Folder]** där `BulkImportAppFolderScope` refererar till programmets namn. `Apps` läggs automatiskt till efter `home` i det här fallet.
 
+   >[!NOTE]
+   >
+   >Om du använder OneDrive som datakälla anger du sökvägen till källmappen baserat på följande regler:
+   >* Ange endast namnet på rotmappen, utan domänen. Om den fullständiga URL-sökvägen för mappen är `https://my.sharepoint.com/my?id=/personal/user/Documents/Importfolder/` anger du `/Importfolder/` i fältet **[!UICONTROL Source Folder]**.
+   >* Om mappnamnet innehåller flera ord avgränsade med mellanslag anger du namnet med mellanslag i konfigurationen för massimport.
+   >* Källmappen måste finnas i katalogens rot. Mappsökvägar stöds inte.
+
 1. (Valfritt) Välj alternativet **[!UICONTROL Delete source file after import]** om du vill ta bort originalfilerna från källdatalagret när filerna har importerats till Experience Manager Assets.
 1. Välj **[!UICONTROL Import Mode]**. Välj **[!UICONTROL Skip]**, **[!UICONTROL Replace]** eller **[!UICONTROL Create Version]**. Hoppa över är standardläget och i det här läget hoppar användaren över att importera en resurs om den redan finns.
    ![Importera källinformation](/help/assets/assets/bulk-import-source-details.png)
 
 1. (Valfritt) Ange den metadatafil som ska importeras i CSV-format i fältet **[!UICONTROL Metadata File]**. Källfilen för metadata måste finnas i källmappen. Klicka på **[!UICONTROL Next]** för att navigera till **[!UICONTROL Location & Filters]**.
+
+   >[!NOTE]
+   >
+   >Beroende på din organisations säkerhetsregler kan du behöva administratörsgodkännande för att det här programmet ska kunna ansluta till verktyget för massimport. Om detta krävs måste administratören ge sitt samtycke innan bulkimportkonfigurationen kan sparas.
+
 1. Om du vill definiera en plats i DAM där resurser ska importeras med fältet **[!UICONTROL Assets Target Folder]** anger du en sökväg. Exempel: `/content/dam/imported_assets`.
 1. (Valfritt) I avsnittet **[!UICONTROL Choose Filters]** anger du den minsta filstorleken för resurser i MB som ska inkluderas i inmatningsprocessen i fältet **[!UICONTROL Filter by Min Size]**.
 1. (Valfritt) Ange den maximala filstorleken för resurser i MB som ska inkluderas i inmatningsprocessen i fältet **[!UICONTROL Filter by Max Size]**.
