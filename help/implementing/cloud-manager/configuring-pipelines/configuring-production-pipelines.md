@@ -1,20 +1,20 @@
 ---
-title: Konfigurera produktionsförlopp
-description: Lär dig hur du konfigurerar produktionspipelines för att skapa och distribuera kod till produktionsmiljöer.
+title: Lägg till en produktionspipeline
+description: Lär dig hur du lägger till en produktionsprocess för att skapa och distribuera kod till produktionsmiljöer.
 index: true
 exl-id: 67edca16-159e-469f-815e-d55cf9063aa4
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: cfaa3be31195929b80310610120a779a20537c61
+source-git-commit: a5e9b29a8108d5c012d402fda8ff7544e02ca911
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1372'
 ht-degree: 0%
 
 ---
 
 
-# Konfigurera en produktionspipeline {#configure-production-pipeline}
+# Lägg till en produktionspipeline {#configure-production-pipeline}
 
 Lär dig hur du konfigurerar produktionspipelines för att skapa och distribuera kod till produktionsmiljöer. En produktionspipeline distribuerar kod först till scenmiljön och när den godkänns distribueras samma kod till produktionsmiljön.
 
@@ -30,7 +30,7 @@ Innan du börjar distribuera koden måste du konfigurera dina pipeline-inställn
 >
 >Du kan [redigera pipeline-inställningar](managing-pipelines.md) efter den första konfigurationen.
 
-## Lägga till en ny produktionspipeline {#adding-production-pipeline}
+## Lägg till en ny produktionspipeline {#adding-production-pipeline}
 
 När du har konfigurerat programmet och har minst en miljö med användargränssnittet för [!UICONTROL Cloud Manager] kan du lägga till en produktionspipeline genom att följa de här stegen.
 

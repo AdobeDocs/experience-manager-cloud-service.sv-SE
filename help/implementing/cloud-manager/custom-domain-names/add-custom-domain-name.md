@@ -5,9 +5,9 @@ exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: b9fb178760b74cb0e101506b6a9ff5ae30c18490
+source-git-commit: ff8c7fb21b4d8bcf395d28c194a7351281eef45b
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1000'
 ht-degree: 0%
 
 ---
@@ -68,8 +68,8 @@ Inkludera inte `http://`, `https://` eller mellanslag när du anger i din domän
 
    | Om du valde certifikattypen | Beskrivning |
    | --- | ---  |
-   | Adobe-hanterat certifikat | Slutför de [Adobe hanterade certifikatstegen](#adobe-managed-cert-steps) innan du fortsätter till nästa steg. |
-   | Kundhanterat certifikat | Slutför de [kundhanterade certifikatstegen](#customer-managed-cert-steps) innan du fortsätter till nästa steg. |
+   | Adobe-hanterat certifikat | Slutför de [Adobe hanterade certifikatstegen](#adobe-managed-cert-steps) innan du fortsätter till steg 9. |
+   | Kundhanterat certifikat | Slutför de [kundhanterade certifikatstegen](#customer-managed-cert-steps) innan du fortsätter till steg 9. |
 
 1. Klicka på **Verifiera**.
 
@@ -130,100 +130,95 @@ Lägg till följande `A`-poster i domänens DNS-inställningar via din domänlev
 
 * `A record for domain @ pointing to IP 151.101.195.10`
 
+>[!TIP]
+>
+>*CNAME* eller *En post* kan anges på den styrande DNS-servern för att spara tid.
+
 
 ### Certifikatsteg som hanteras av kund {#customer-managed-cert-steps}
 
-Om du valde certifikattypen *Kundhanterat certifikat* utför du följande steg i dialogrutan **Verifiera domän**.
+Om du valde certifikattypen *Kundhanterat certifikat* utför du följande steg.
 
-![Kundhanterade certifikatsteg](/help/implementing/cloud-manager/assets/cdn/cdn-create-customer-cert.png)
+1. I dialogrutan **Verifiera domän** överför du ett nytt EV/OV-certifikat som omfattar den valda domänen.
 
-Du måste lägga till och verifiera en TXT-post för att kunna verifiera den domän som används.
+   ![Verifiera domän för ett kundhanterat EV/OV-certifikat](/help/implementing/cloud-manager/assets/verify-domain-customer-managed-step.png)
 
-En textpost (kallas även TXT-post) är en typ av resurspost i DNS (Domain Name System). Du kan associera godtycklig text med ett värdnamn. Den här texten kan innehålla läsbara detaljer som server- eller nätverksinformation.
+1. Klicka på **OK**.
 
-Cloud Manager använder en specifik TXT-post för att godkänna att en domän är värd för en CDN-tjänst. Skapa en DNS TXT-post i zonen som tillåter Cloud Manager att distribuera CDN-tjänsten med den anpassade domänen och associera den med serverdelstjänsten. Den här associationen står helt under din kontroll och godkänner att Cloud Manager skickar innehåll från tjänsten till en domän. Detta tillstånd får beviljas och återkallas. TXT-posten är specifik för domänen och Cloud Manager-miljön.
+   När du har överfört ett giltigt EV/OV-certifikat markeras domänens status som **Verifierad** i tabellen **Domäninställningar**.
 
-#### Krav {#customer-managed-cert-requirements}
+   ![Domäninställningstabellen visar verifierad status.](/help/implementing/cloud-manager/assets/domain-settings-verified.png)
 
-Uppfyll dessa krav innan du lägger till en TXT-post.
+<!--
+![Customer managed certificate steps](/help/implementing/cloud-manager/assets/cdn/cdn-create-customer-cert.png)
 
-* Identifiera din domänvärd eller registrator om du inte redan känner till den.
-* Kan redigera DNS-posterna för organisationens domän eller kontakta lämplig person som kan göra det.
-* Lägg först till ett anpassat domännamn enligt beskrivningen ovan i den här artikeln.
+To verify the domain in use, you are required to add and verify a TXT record.
 
-#### Lägg till en TXT-post för verifiering {#customer-managed-cert-verification}
+A text record (also known as a TXT record) is a type of resource record in the Domain Name System (DNS). It lets you associate arbitrary text with a hostname. This text could include human-readable details like server or network information.
 
-1. I dialogrutan **Verifiera domän** visar Cloud Manager namnet och TXT-värdet som ska användas för verifiering. Kopiera det här värdet.
+Cloud Manager uses a specific TXT record to authorize a domain to be hosted in a CDN service. Create a DNS TXT record in the zone that authorizes Cloud Manager to deploy the CDN service with the custom domain and associate it with the backend service. This association is entirely under your control and authorizes Cloud Manager to serve content from the service to a domain. This authorization may be granted and withdrawn. The TXT record is specific to the domain and the Cloud Manager environment.
 
-1. Logga in på din DNS-tjänstleverantör och hitta avsnittet med DNS-poster.
+#### Requirements {#customer-managed-cert-requirements}
 
-1. Lägg till `aemverification.[yourdomainname]` som **namn** för värdet och lägg till TXT-värdet exakt som det visas i fältet **Domännamn**.
+Fulfill these requirements before adding a TXT record.
 
-   **Exempel på TXT-post**
+* Identify your domain host or registrar if you do not know it already.
+* Be able to edit the DNS records for your organization's domain, or contact the appropriate person who can.
+* First, add a custom domain name as described earlier in this article.
 
-   | Domän | Namn | TXT Value |
+#### Add a TXT record for verification {#customer-managed-cert-verification}
+
+1. In the **Verify domain** dialog box, Cloud Manager displays the name and TXT value to use for verification. Copy this value.
+
+1. Log in to your DNS service provider and find the DNS records section. 
+
+1. Add `aemverification.[yourdomainname]` as the **Name** of the value and add the TXT value exactly as it appears in the **Domain Name** field.
+
+   **TXT record examples**
+
+   | Domain | Name | TXT Value |
    | --- | --- | --- |
-   | `example.com` | `_aemverification.example.com` | Kopiera hela värdet som visas i användargränssnittet i Cloud Manager. Det här värdet är specifikt för domänen och miljön. Till exempel:<br>`adobe-aem-verification=example.com/[program]/[env]/..*` |
-   | `www.example.com` | `_aemverification.www.example.com` | Kopiera hela värdet som visas i användargränssnittet i Cloud Manager. Det här värdet är specifikt för domänen och miljön. Till exempel:<br>`adobe-aem-verification=www.example.com/[program]/[env]/..*` |
+   | `example.com` | `_aemverification.example.com` | Copy the entire value displayed in the Cloud Manager UI. This value is specific to the domain and the environment. For example:<br>`adobe-aem-verification=example.com/[program]/[env]/..*` |
+   | `www.example.com` | `_aemverification.www.example.com` | Copy the entire value displayed in the Cloud Manager UI. This value is specific to the domain and the environment. For example:<br>`adobe-aem-verification=www.example.com/[program]/[env]/..*` |
 
-1. Spara TXT-posten till domänvärden.
+1. Save the TXT record to your domain host.
 
-#### Verifiera TXT-post {#customer-managed-cert-verify}
+#### Verify TXT record {#customer-managed-cert-verify}
 
-När du är klar kan du verifiera resultatet genom att köra följande kommando.
+When you are done, you can verify the result by running the following command.
 
 ```shell
 dig _aemverification.[yourdomainname] -t txt
 ```
 
-Det förväntade resultatet ska visa det TXT-värde som anges på fliken **Verifiering** i dialogrutan **Lägg till domännamn** i Cloud Manager-gränssnittet.
+The expected result should display the TXT value provided on the **Verification** tab of the **Add Domain Name** dialog of the Cloud Manager UI.
 
-Om din domän till exempel är `example.com` kör du:
+For example, if your domain is `example.com`, then run:
 
 ```shell
 dig TXT _aemverification.example.com -t txt
 ```
 
+
 >[!TIP]
 >
->Det finns flera [tillgängliga DNS-sökverktyg](https://www.ultratools.com/tools/dnsLookup). Google DoH kan användas för att leta upp TXT-postposter och identifiera om TXT-posten saknas eller är felaktig.
+>There are several [DNS lookup tools](https://www.ultratools.com/tools/dnsLookup) available. Google DoH can be used to look up TXT record entries and identify if the TXT record is missing or erroneous.
+
+-->
 
 >[!NOTE]
 >
 >DNS-verifiering kan ta några timmar att behandla på grund av fördröjd DNS-spridning.
 >
->Cloud Manager verifierar ägarskap och uppdaterar statusen som visas i tabellen Domäninställningar. Mer information finns i [Kontrollera det anpassade domännamnets status](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).
+>Cloud Manager verifierar ägarskap och uppdaterar statusen, som visas i tabellen **Domäninställningar**. Mer information finns i [Kontrollera det anpassade domännamnets status](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).
 
 <!--
 ## Next Steps {#next-steps}
 
 Now that you created your TXT entry, you can verify your domain name status. Proceed to the document [Checking Domain Name Status](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) to continue setting up your custom domain name. -->
 
->[!TIP]
->
->TXT-posten och CNAME- eller A-posten kan anges samtidigt på den styrande DNS-servern, vilket sparar tid.
+
+><!-- The TXT entry and the CNAME or A Record can be set simultaneously on the governing DNS server, thus saving time. -->
 >
 ><!-- To do this, review the entire process of setting up a custom domain name as detailed in the document [Introduction to custom domain names](/help/implementing/cloud-manager/custom-domain-names/introduction.md) taking special note of the document [help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md) and update your DNS settings appropriately. -->
 
-
-## Lägg till ett anpassat domännamn från miljösidan {#adding-cdn-environments}
-
-<!-- I DON'T SEE THIS ABILITY ANYMORE IN THE UI -->
-
-Stegen för att lägga till ett anpassat domännamn från sidan **Miljö** är desamma som när du [lägger till ett anpassat domännamn från sidan Domäninställningar](#adding-cdn-settings), men startpunkten skiljer sig åt. Följ de här stegen för att lägga till ett anpassat domännamn från sidan **Miljö**.
-
-1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
-
-1. Navigera till informationssidan **Miljöinformation** för den miljö som är av intresse.
-
-   ![Ange domännamn på sidan Miljöinformation](/help/implementing/cloud-manager/assets/cdn/cdn-create4.png)
-
-1. Använd tabellen **Domännamn** för att skicka det anpassade domännamnet.
-
-   1. Ange det anpassade domännamnet.
-   1. Välj SSL-certifikatet som är associerat med det här namnet i listrutan.
-   1. Klicka på ![Lägg till ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) **Lägg till**.
-
-   ![Lägg till ett anpassat domännamn](/help/implementing/cloud-manager/assets/cdn/cdn-create3.png)
-
-1. Dialogrutan **Lägg till domännamn** öppnas på fliken **Domännamn**. Fortsätt på samma sätt som du gör för [att lägga till ett anpassat domännamn från sidan Domäninställningar](#adding-cdn-settings).

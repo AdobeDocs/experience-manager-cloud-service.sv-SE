@@ -4,14 +4,14 @@ description: Lär dig hur du konfigurerar Cloud Manager så att det fungerar med
 exl-id: 5232bbf5-17a5-4567-add7-cffde531abda
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: eb2e1555f684a68807b0b3764cd1be03c2d439ab
+source-git-commit: a5e9b29a8108d5c012d402fda8ff7544e02ca911
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '928'
 ht-degree: 0%
 
 ---
 
-# Lägga till privata databaser i Cloud Manager {#private-repositories}
+# Lägg till privata GitHub-databaser i Cloud Manager {#private-repositories}
 
 Genom att konfigurera Cloud Manager för integrering med dina privata GitHub-databaser kan du validera koden direkt i GitHub med Cloud Manager. Den här konfigurationen eliminerar behovet av att regelbundet synkronisera din kod med Adobe-databasen.
 
@@ -33,12 +33,12 @@ In essence, a "Build your own GitHub" in Adobe Cloud Manager empowers teams to m
 
 ## Konfiguration {#configuration}
 
-Konfigurationen av en privat databas i Cloud Manager består av två steg:
+Konfigurationen av en privat GitHub-databas i Cloud Manager består av två steg:
 
-1. [Lägg till en privat databas](#add-repo) i ett valt program.
-1. [validera sedan ägarskapet för den privata databasen](#validate-ownership).
+1. [Lägg till en privat GitHub-databas](#add-repo) i ett valt program.
+1. [validera sedan ägarskapet för den privata GitHub-databasen](#validate-ownership).
 
-### Lägga till en privat databas i ett program {#add-repo}
+### Lägga till en privat GitHub-databas i ett program {#add-repo}
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
@@ -69,11 +69,13 @@ Nu kan du [verifiera ägarskapet för den privata databasen](#validate-ownership
 >
 >Mer information om hur du hanterar databaser i Cloud Manager finns i [Cloud Manager-databaser](/help/implementing/cloud-manager/managing-code/managing-repositories.md).
 
-### Validera ägarskap för den privata databasen {#validate-ownership}
+
+
+### Validera ägarskap för en privat GitHub-databas {#validate-ownership}
 
 Cloud Manager känner nu till din GitHub-databas, men den behöver fortfarande åtkomst till den. Om du vill bevilja åtkomst måste du installera appen Adobe GitHub och verifiera att du äger den angivna databasen.
 
-**Så här verifierar du ägarskap för den privata databasen:**
+**Så här verifierar du ägarskap för en privat GitHub-databas:**
 
 1. När du har lagt till en egen databas följer du de återstående stegen i dialogrutan **Validering av privat databasägande**.
 
@@ -104,11 +106,13 @@ Kolumnen **Type** i tabellen på sidan **Databaser** identifierar databaser som 
 
 Om du behöver gå tillbaka till databasen senare för att slutföra valideringen klickar du på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) på sidan **Databaser** på raden som representerar GitHub-databasen som du just lade till. Välj **Verifiering av ägarskap** i listrutan.
 
-## Använda privata databaser med Cloud Manager {#using}
+
+
+## Använd privata GitHub-databaser med Cloud Manager {#using}
 
 När GitHub-databasen har validerats i Cloud Manager är integreringen klar. Du kan använda databasen med Cloud Manager.
 
-**Så här använder du en privat databas med Cloud Manager:**
+**Så här använder du privata databaser med Cloud Manager:**
 
 1. När du skapar en pull-begäran startas en GitHub-kontroll automatiskt.
 
@@ -130,22 +134,22 @@ När pull-begäran sammanfogas eller stängs, tas den fullständiga stackkodens 
 >
 >Du kan styra de rörledningar som skapas automatiskt för att validera varje pull-begäran till en privat databas. Mer information finns i [GitHub-kontrollkonfigurationen för privata databaser](github-check-config.md).
 
+
+
 ## Associera privata databaser med rörledningar {#pipelines}
 
 Validerade privata databaser kan associeras med [rörledningar i full hög och i framtend](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md).
 
->[!NOTE]
->
->Rörledningar för webbnivå och konfiguration stöds inte i privata databaser.
+
 
 ## Begränsningar {#limitations}
 
 Vissa begränsningar gäller när du använder privata databaser med Cloud Manager.
 
-* Du kan inte pausa pull-begärandevalideringen med GitHub-kontrollen från Cloud Manager.
-Om GitHub-databasen valideras i Cloud Manager försöker Cloud Manager alltid validera pull-begäranden som skapas för den databasen.
-* Om appen Adobe GitHub tas bort från din GitHub-organisation tas funktionen för pull-begärandevalidering bort för alla databaser.
 * Rörledningar för webbnivå och konfiguration stöds inte i privata databaser.
 * Ingen Git-tagg skapas och skickas när privata databaser används i produktion av rörledningar i en hel hög.
+* Om appen Adobe GitHub tas bort från din GitHub-organisation tas funktionen för pull-begärandevalidering bort för alla databaser.
 * Pipeliner som använder privata databaser och utlösaren för bygge vid implementering startas inte automatiskt när en ny implementering överförs till den valda grenen.
 * [Återanvändning av felaktigheter](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md#build-artifact-reuse) gäller inte för privata databaser.
+* Du kan inte pausa pull-begärandevalideringen med GitHub-kontrollen från Cloud Manager.
+Om GitHub-databasen valideras i Cloud Manager försöker Cloud Manager alltid validera pull-begäranden som skapas för den databasen.

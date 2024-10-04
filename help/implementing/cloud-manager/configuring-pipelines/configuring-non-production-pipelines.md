@@ -1,26 +1,26 @@
 ---
-title: Konfigurera icke-produktionsförlopp
-description: Lär dig hur du konfigurerar icke-produktionsrörledningar för att testa kodens kvalitet innan du distribuerar den till produktionsmiljöer.
+title: Lägg till en icke-produktionspipeline
+description: Lär dig hur du lägger till en icke-produktionsprocess för att testa kvaliteten på koden innan du distribuerar den till produktionsmiljöer.
 index: true
 exl-id: eba608eb-a19e-4bff-82ff-05860ceabe6e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: cfaa3be31195929b80310610120a779a20537c61
+source-git-commit: a5e9b29a8108d5c012d402fda8ff7544e02ca911
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1405'
 ht-degree: 0%
 
 ---
 
 
-# Konfigurera icke-produktionsförlopp {#configuring-non-production-pipelines}
+# Lägg till en icke-produktionspipeline {#configuring-non-production-pipelines}
 
 Lär dig hur du konfigurerar icke-produktionsrörledningar för att testa kodens kvalitet innan du distribuerar den till produktionsmiljöer.
 
 En användare måste ha rollen **[Distributionshanteraren](/help/onboarding/cloud-manager-introduction.md#role-based-permissions)** för att kunna konfigurera icke-produktionspipelines.
 
-## Icke-produktionsförlopp {#non-production-pipelines}
+## Icke-produktionsrörledningar {#non-production-pipelines}
 
 Utöver [produktionspipelines](#configuring-production-pipelines.md) som distribueras till stagings- och produktionsmiljöer kan du även konfigurera icke-produktionspipelines för att validera koden.
 
@@ -33,7 +33,7 @@ Det finns två typer av icke-produktionsrörledningar:
 >
 >Du kan [redigera pipeline-inställningar](managing-pipelines.md) efter den första konfigurationen.
 
-## Lägga till en ny icke-produktionspipeline {#adding-non-production-pipeline}
+## Lägg till en ny icke-produktionspipeline {#adding-non-production-pipeline}
 
 När du har konfigurerat programmet och har minst en miljö med Cloud Manager UI är du redo att lägga till en icke-produktionsprocess genom att följa de här stegen.
 

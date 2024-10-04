@@ -5,9 +5,9 @@ exl-id: 0d41723c-c096-4882-a3fd-050b7c9996d8
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 484f7b0fd8917902d028434451964dd9df3e3445
+source-git-commit: 075094f018ccf213cd8d1d69defdc390f0a90713
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '891'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Introduktion till SSL-certifikat{#introduction}
 
-Läs mer om de självbetjäningsverktyg som Cloud Manager tillhandahåller för att installera och hantera SSL-certifikat.
+Lär dig mer om de självbetjäningsverktyg som Cloud Manager tillhandahåller för att installera och hantera SSL-certifikat (Secure Socket Layer).
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_sslcert"
@@ -32,7 +32,7 @@ När en entitet, till exempel en organisation eller ett företag, begär ett cer
 
 >[!IMPORTANT]
 >
->Cloud Manager tillhandahåller inte SSL-certifikat eller privata nycklar. Dessa måste hämtas från en certifikatutfärdare, en betrodd tredjepartsorganisation. Vissa välkända certifikatutfärdare inkluderar *DigiCert*, *Låt oss kryptera*, *GlobalSign*, *Entrust* och *Verisign*.
+>Cloud Manager tillhandahåller inte SSL-certifikat eller privata nycklar. Dessa delar måste hämtas från en certifikatutfärdare, en betrodd tredjepartsorganisation. Vissa välkända certifikatutfärdare inkluderar *DigiCert*, *Låt oss kryptera*, *GlobalSign*, *Entrust* och *Verisign*.
 
 ## Hantera certifikat med Cloud Manager {#cloud-manager}
 
@@ -40,10 +40,10 @@ Cloud Manager erbjuder självbetjäningsverktyg för att installera och hantera 
 
 | | Modell | Beskrivning |
 | --- | --- | --- |
-| 1 | **[Hanterat DV-certifikat (Adobe)](#adobe-managed)** | Med Cloud Manager kan användare konfigurera DV-certifikat (Domain Validation) som tillhandahålls av Adobe för snabb domänkonfiguration. |
-| 2 | **[Kundhanterat certifikat (OV/EV)](#customer-managed)** | Cloud Manager erbjuder en plattforms-TLS-tjänst (Transport Layer Security) som gör att du kan hantera OV- och EV SSL-certifikat som du äger samt privata nycklar från tredjepartscertifikatutfärdare, som *Låt oss kryptera*. |
+| A | **[Hanterat DV-certifikat (Adobe)](#adobe-managed)** | Med Cloud Manager kan användare konfigurera DV-certifikat (Domain Validation) som tillhandahålls av Adobe för snabb domänkonfiguration. |
+| B | **[Kundhanterat certifikat (OV/EV)](#customer-managed)** | Cloud Manager erbjuder en TLS-tjänst (Transport Layer Security) för att du ska kunna hantera OV- och EV SSL-certifikat som du äger och privata nycklar från tredjepartscertifikatutfärdare, som *Låt oss kryptera*. |
 
-Båda modellerna har följande allmänna funktioner.
+Båda modellerna har följande allmänna funktioner för att hantera dina certifikat:
 
 * Varje Cloud Manager-miljö kan använda flera certifikat.
 * En privat nyckel kan utfärda flera SSL-certifikat.
@@ -51,9 +51,9 @@ Båda modellerna har följande allmänna funktioner.
 
 >[!IMPORTANT]
 >
->[Om du vill lägga till och associera en anpassad domän till en miljö måste ](/help/implementing/cloud-manager/custom-domain-names/introduction.md) du ha ett giltigt SSL-certifikat som omfattar domänen.
+>[Om du vill lägga till och associera en anpassad domän med miljön ](/help/implementing/cloud-manager/custom-domain-names/introduction.md) måste du ha ett giltigt SSL-certifikat som omfattar domänen.
 
-### Hanterade certifikat från Adobe {#adobe-managed}
+### Adobe-hanterade certifikat {#adobe-managed}
 
 DV-certifikat är den mest grundläggande nivån för SSL-certifiering och används ofta för testning eller för att skydda webbplatser med grundläggande kryptering. DV-certifikat är tillgängliga i både [produktionsprogram och sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md).
 
@@ -72,17 +72,17 @@ OV och EV erbjuder dessutom dessa funktioner jämfört med DV-certifikat i Cloud
 
 >[!TIP]
 >
->Om du har flera anpassade domäner och inte vill överföra ett certifikat varje gång du lägger till en domän kan det vara bra att skaffa ett certifikat med flera domäner.
+>Om du har flera anpassade domäner kanske du inte vill överföra ett certifikat varje gång du lägger till en ny domän. I så fall kan du ha nytta av att skaffa ett enda certifikat som omfattar flera domäner.
 
 >[!NOTE]
 >
->Om två certifikat omfattar samma domän installeras, tillämpas det som är mer exakt.
+>Om två certifikat omfattar samma domän installeras, tillämpas det mer exakta certifikatet.
 >
->Om din domän till exempel är `dev.adobe.com` och du har ett certifikat som omfattar `*.adobe.com` och ett certifikat som omfattar `dev.adobe.com`, kommer det senare att tillämpas eftersom det är mer exakt.
+>Om din domän till exempel är `dev.adobe.com` och du har ett certifikat för `*.adobe.com` och ett annat för `dev.adobe.com`, används det mer specifika (`dev.adobe.com`).
 
 #### Krav för kundhanterade certifikat {#requirements}
 
-Om du väljer att överföra ditt eget EV/OV-certifikat måste det uppfylla följande krav.
+Om du väljer att överföra ditt eget EV/OV-certifikat måste det uppfylla följande krav:
 
 * AEM as a Cloud Service godkänner certifikat som överensstämmer med OV- (Organization Validation) eller EV-principen (Extended Validation).
    * Cloud Manager stöder inte överföring av dina egna DV-certifikat (Domain Validation).

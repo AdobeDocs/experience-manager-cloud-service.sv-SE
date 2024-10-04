@@ -1,19 +1,18 @@
 ---
-title: Versionsinformation för Cloud Manager 2024.9.0 i Adobe Experience Manager as a Cloud Service
-description: Läs mer om versionsinformationen för Cloud Manager 2024.9.0 i AEM as a Cloud Service.
+title: Versionsinformation för Cloud Manager 2024.10.0 i Adobe Experience Manager as a Cloud Service
+description: Läs mer om versionsinformationen för Cloud Manager 2024.10.0 i AEM as a Cloud Service.
 feature: Release Information
 role: Admin
-exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: b222b4384b1c2a21ecbb244d149ce7e51cc7990f
+source-git-commit: b90ace2250277005d8ac250c841104c93298a605
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '472'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation om Cloud Manager 2024.9.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
+# Versionsinformation om Cloud Manager 2024.10.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
-På den här sidan visas versionsinformation för Cloud Manager version 2024.9.0 i AEM as a Cloud Service.
+På den här sidan visas versionsinformation för Cloud Manager version 2024.10.0 i AEM as a Cloud Service.
 
 >[!NOTE]
 >
@@ -21,41 +20,64 @@ På den här sidan visas versionsinformation för Cloud Manager version 2024.9.0
 
 ## Releasedatum {#release-date}
 
-Lanseringsdatumet för Cloud Manager version 2024.9.0 i AEM as a Cloud Service är 5 september 2024. Nästa version är planerad till 3 oktober 2024.
+Lanseringsdatumet för Cloud Manager version 2024.10.0 i AEM as a Cloud Service är 3 oktober 2024.
+
+Nästa version är planerad till 14 november 2024.
 
 ## Nyheter {#what-is-new}
 
-* **Kontrollpanelen för Experience Audit:**
+* <!-- BOTH CS & AMS --> Den AEM Archetype-versionen som används i Cloud Manager har nu uppdaterats till version 26. Se [https://github.com/adobe/aem-project-archetype/releases](https://github.com/adobe/aem-project-archetype/releases)
 
-  Adobe Cloud Manager [förbättrade Experience Audit Dashboard](/help/implementing/cloud-manager/experience-audit-dashboard.md), som drivs av Google Lighthuse, ger insikter om AEM Sites kvalitet och prestanda genom att utvärdera viktiga webbinarier, SEO och tillgänglighetsmått. Det hjälper användarna att identifiera områden som kan förbättras genom att erbjuda åtgärdbara rekommendationer, vilket gör det möjligt för teamen att förbättra användarupplevelsen, sidladdningstider och webbplatsens efterlevnad. Den här kontrollpanelen förenklar övervakningen av viktiga webbplatsmått och ser till att AEM program uppfyller höga prestanda- och tillgänglighetsstandarder.
+<!-- (CMGR-59817) -->
 
-* **Domänvalideringscertifikat som skapats och hanterats av Adobe:**
+* <!-- CS ONLY --> När du lägger till eller redigerar nätverksinfrastruktur valideras värdena i fälten för IP-adress och nätverksmask enligt följande regler:
 
-  Med Cloud Manager kan du nu [självbetjäningscertifikat för Adobe som genererats och hanterats av DV (domänvalidering) ](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md). Denna funktion ger er den snabbaste, enklaste och mest kostnadseffektiva lösningen för att skapa en säker webbplats för ert företag eller er onlineorganisation. <!-- CMGR-52403 -->
+   * Adressutrymmet får inte överlappa adresserna som är definierade i anslutningsadressutrymmet.
+   * DNS-adresser måste antingen tillhöra den nätverksmask som definieras i anslutningsadressutrymmet eller vara offentliga.
 
-  >[!NOTE]
-  >
-  >[Content Hub](/help/assets/product-overview.md)-kunder planerar att få den här funktionen i faser som en del av en successiv utrullning.
+  ![Dialogrutan Lägg till nätverksinfrastruktur](/help/implementing/cloud-manager/release-notes/assets/network-infrastructure-add.png)
 
-* **Stöd för Edge Delivery Services i Cloud Manager:**
-
-  Om du har en Edge Delivery Services-licens som en del av AEM Sites kan [du nu lägga upp din webbplats med Edge Delivery Services direkt via Cloud Manager](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md). Den här funktionen möjliggör en guidad självbetjäning för Go Live. Det förenar också viktiga arbetsflöden som domännamnshantering, SSL-certifikat och CDN-mappningar i alla dina AEM, vilket ger enhetlighet och effektivitet. <!-- CMGR-49859 -->
+* <!-- CS ONLY --> Ändringar görs i formatet för miljödistributionsloggar för indexering, installation av ändringsbart innehåll och transformeringsjobb.
 
   >[!NOTE]
   >
-  >[Content Hub](/help/assets/product-overview.md)-kunder planerar att få den här funktionen i faser som en del av en successiv utrullning.
+  >Den här ändringen planeras att genomföras stegvis med ett förväntat slutdatum i december 2024.
 
-* Kunder som använder GitHub-databaser har nu möjlighet att skapa och använda pipelines för webbnivåkonfiguration. <!--( KEEP IN? SP: YES CMGR-59046 and Slack https://cq-dev.slack.com/archives/C07LFP5BZ2L/p1725407057847379 ) -->
+  ![Distribuera till produktionskort](/help/implementing/cloud-manager/release-notes/assets/deploy-to-production-card.png)
 
-<!--
-## Early adoption program {#early-adoption}
+  Loggens format kommer att ändras från en enkel post som visas i följande:
 
-For a chance to test some upcoming features, be a part of Adobe's early adoption program. -->
+  ![Loggfil med enkla poster](/help/implementing/cloud-manager/release-notes/assets/log-file-simple-entry.png)
+
+  Till en JSON-post som visas i följande:
+
+  ![Loggfil som visar json-poster](/help/implementing/cloud-manager/release-notes/assets/log-file-json-entry.png)
 
 
-## Felkorrigeringar
+## Program för tidigt antagande {#early-adoption}
 
-* Sidindelning för SSL-certifikattabellvy fungerar nu som förväntat. <!-- (CMGR-60804 - [UI] Pagination doesn't work for ssl certificates) -->
-* Fel artefaktversion befordrades när knappen **Befordra bygge** användes från en körning. <!-- ( KEEP IN? SP: YES CMGR-59519 and Slack https://cq-dev.slack.com/archives/C07LFPN2R08/p1725408253474129 ) -->
+Bli en del av Cloud Manager program för tidig användning och få möjlighet att testa kommande funktioner.
 
-<!-- * Slack message says next release? SP: REMOVE (Leave in for now) SSL Certificates table in Cloud Manager now enables pagination in the user experience. ( https://jira.corp.adobe.com/browse/CMGR-61041 and Slack https://cq-dev.slack.com/archives/C07LFRE9QJU/p1725408553760009 ) --<>
+### Använd din egen Git - nu med stöd för GitLab och Bitbucket {#gitlab-bitbucket}
+
+<!-- BOTH CS & AMS -->
+
+Funktionen **Hämta egen Git** har utökats med stöd för externa databaser som GitLab och Bitbucket. Det nya stödet är utöver det stöd som redan finns för privata och företags GitHub-databaser. När du lägger till dessa nya rapporter kan du även länka dem direkt till dina rörledningar. Du kan lagra dessa databaser på publika molnplattformar eller i ditt privata moln eller din privata infrastruktur. Den här integreringen eliminerar också behovet av konstant kodsynkronisering med databasen Adobe och ger möjlighet att validera pull-begäranden innan de slås samman till en huvudgren.
+
+Se [Lägg till externa databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/external-repositories.md).
+
+![Dialogrutan Lägg till databas](/help/implementing/cloud-manager/release-notes/assets/repositories-add-release-notes.png)
+
+>[!NOTE]
+>
+>För närvarande gäller kvalitetskontrollerna av koden för pull-begäran som är klar endast för GitHub-värdbaserade databaser, men en uppdatering som utökar den här funktionen till andra Git-leverantörer finns i arbetsflödet.
+
+Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com) från den e-postadress som är kopplad till din Adobe ID. Ta med vilken Git-plattform du vill använda och om du har en privat/offentlig eller företagsdatabasstruktur.
+
+
+<!-- ## Bug fixes
+
+
+
+
+## Known Issues {#known-issues} -->

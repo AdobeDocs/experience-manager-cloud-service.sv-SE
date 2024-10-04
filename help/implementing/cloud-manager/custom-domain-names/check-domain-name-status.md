@@ -1,13 +1,13 @@
 ---
-title: Kontrollerar domännamnsstatus
+title: Kontrollera domännamnsstatus
 description: Lär dig hur du verifierar att Cloud Manager har bekräftat ditt anpassade domännamn.
 exl-id: 8fdc8dda-7dbf-46b6-9fc6-d304ed377197
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 3ff7b76f7892269f6ca001ff2c079bc693c06d93
+source-git-commit: ff8c7fb21b4d8bcf395d28c194a7351281eef45b
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '832'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Lär dig hur du verifierar att Cloud Manager har bekräftat ditt anpassade domä
 
 Uppfyll dessa krav innan du kontrollerar domännamnsstatusen i Cloud Manager.
 
-* Lägg först till en TXT-post för din anpassade domän enligt beskrivningen i dokumentet [Lägg till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).
+* Lägg först till ett EV/OV-certifikat för din anpassade domän enligt beskrivningen i dokumentet [Lägg till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).
 
 ## Kontrollera statusen för ditt anpassade domännamn {#how-to}
 
@@ -45,13 +45,13 @@ Statusinformationen visas. Din anpassade domän är klar att användas när stat
 
 ## Verifieringsstatus {#statuses}
 
-Cloud Manager verifierar domänägarskap via [TXT-värdet](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) och visar ett av följande statusmeddelanden.
+Cloud Manager verifierar domänägarskap via det kundhanterade certifikatet. När du är klar visas ett av följande statusmeddelanden:
 
 | Status | Beskrivning |
 | --- | --- |
-| Domänverifieringen misslyckades | TXT-värdet saknas eller har identifierats med fel.<br> Följ instruktionerna i statusmeddelandet för att lösa problemet. När du är klar måste du markera ikonen **Verifiera igen** bredvid statusen. |
+| Domänverifieringen misslyckades | EV/OV-certifikatet som hanteras av kunden saknas eller identifieras med fel.<br> Följ instruktionerna i statusmeddelandet för att lösa problemet. När du är klar måste du markera ikonen **Verifiera igen** bredvid statusen. |
 | Domänverifiering pågår | Verifiering pågår.<br>Den här statusen visas vanligtvis när du har valt ikonen **Verifiera igen** bredvid statusen. DNS-verifiering kan ta några timmar att behandla på grund av fördröjd DNS-spridning. |
-| Verifierad - distributionen misslyckades | TXT-verifieringen lyckades, men CDN-distributionen misslyckades.<br>Kontakta din Adobe-representant i sådana fall. |
+| Verifierad - distributionen misslyckades | Verifieringen av EV/OV-certifikatet lyckades, men CDN-distributionen misslyckades.<br>Kontakta din Adobe-representant i sådana fall. |
 | Domänen har verifierats och distribuerats | Den här statusen anger att ditt anpassade domännamn är klart att användas.<br>Nu är ditt anpassade domännamn klart för testning och ska peka på Cloud Manager domännamn. Mer information finns i [Lägg till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md). |
 | Tar bort | Borttagningen av ett anpassat domännamn pågår. |
 | Borttagningen misslyckades | Borttagningen av ett anpassat domännamn misslyckades och måste göras om.<br>Mer information finns i [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md). |
@@ -63,7 +63,7 @@ Nedan följer några vanliga verifieringsfel för domännamn och deras vanliga u
 
 ### Domänen är inte installerad {#domain-not-installed}
 
-Det här felet kan inträffa under domänvalidering av TXT-posten även efter att du har kontrollerat att posten har uppdaterats korrekt.
+Detta fel kan uppstå under domänvalidering av EV/OV-certifikatet även efter att du har kontrollerat att certifikatet har uppdaterats korrekt.
 
 #### Felorsak {#cause}
 
