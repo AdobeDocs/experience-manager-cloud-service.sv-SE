@@ -3,9 +3,9 @@ title: Versionsinformation för Cloud Manager 2024.10.0 i Adobe Experience Manag
 description: Läs mer om versionsinformationen för Cloud Manager 2024.10.0 i AEM as a Cloud Service.
 feature: Release Information
 role: Admin
-source-git-commit: b90ace2250277005d8ac250c841104c93298a605
+source-git-commit: aa8d4c8c69a96054492b886893414c3e82b2f4ad
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '569'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,16 @@ Nästa version är planerad till 14 november 2024.
 * <!-- BOTH CS & AMS --> Den AEM Archetype-versionen som används i Cloud Manager har nu uppdaterats till version 26. Se [https://github.com/adobe/aem-project-archetype/releases](https://github.com/adobe/aem-project-archetype/releases)
 
 <!-- (CMGR-59817) -->
+
+* <!-- CS ONLY --> När du lade till en ny anpassad domän medförde den tidigare verifieringsmetoden en lång DNS-verifieringsprocess. Adobe har förenklat denna process för sina kunder. Nu behöver du bara tillhandahålla ett giltigt SSL-certifikat (EV eller OV) som fungerar som bevis på ägarskap. Du behöver inte längre uppdatera TXT-poster i DNS.
+
+  >[!NOTE]
+  >
+  >Den här funktionen gäller endast för EV- och OV-certifikat som hanteras av kunden. DV-certifikat som hanteras av Adobe kräver fortfarande en CNAME-post.
+
+  Se [Lägg till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).
+
+  ![Verifiera domän för ett kundhanterat EV/OV-certifikat](/help/implementing/cloud-manager/assets/verify-domain-customer-managed-step.png)
 
 * <!-- CS ONLY --> När du lägger till eller redigerar nätverksinfrastruktur valideras värdena i fälten för IP-adress och nätverksmask enligt följande regler:
 

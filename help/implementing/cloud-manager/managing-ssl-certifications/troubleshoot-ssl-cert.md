@@ -4,7 +4,7 @@ description: Lär dig hur du felsöker SSL-certifikatfel genom att identifiera v
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: ff8c7fb21b4d8bcf395d28c194a7351281eef45b
+source-git-commit: b387fee62500094d712f5e1f6025233c9397f8ec
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 0%
@@ -18,13 +18,13 @@ Vissa fel kan uppstå om ett certifikat inte har installerats korrekt eller inte
 
 +++**Ogiltigt certifikat**
 
-Det här felet inträffar eftersom kunden har lagt till en krypterad privat nyckel och använt en DER-formaterad privat nyckel.
+Det här felet inträffar eftersom kunden använde en krypterad privat nyckel och angav nyckeln i DER-format.
 
 +++
 
 +++**Den privata nyckeln måste vara PKCS 8-format**
 
-Det här felet inträffar eftersom kunden har lagt till en krypterad privat nyckel och använt en DER-formaterad privat nyckel.
+Det här felet inträffar eftersom kunden använde en krypterad privat nyckel och angav nyckeln i DER-format.
 
 +++
 
