@@ -5,9 +5,9 @@ exl-id: 6d33c3c5-258c-4c9c-90c2-d566eaeb14c0
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 5dc3d571c553f2972295172c7a6d0249be3285b8
+source-git-commit: d4b579e817831945f46b06d9c271c8e671958bed
 workflow-type: tm+mt
-source-wordcount: '1950'
+source-wordcount: '1534'
 ht-degree: 0%
 
 ---
@@ -100,7 +100,6 @@ Du får tillgång till det fullständiga granskningsresultatet genom att klicka 
 >* Mer information om hur granskningen fungerar finns i [Information om Experience Audit Evaluation](#details).
 >* Mer information om hur du kör en Experience Audit on demand finns i [On-Demand Audit Reports](#on-demand).
 >* Om du får problem med granskningen kan du läsa [Experience Audit Encounters Issues](#issues) (Problem med granskningsupptäckter).
->* Allmänna tips om prestanda finns i [Allmänna tips för prestanda](#performance-tips).
 
 ### Visa de långsammaste sidorna {#view-slowest-pages}
 
@@ -155,38 +154,11 @@ Om du klickar på diagrammet vid en tidpunkt öppnas en port med detaljer om den
 
 #### Resultat av granskning av Experience Audit {#scan-results}
 
-Avsnittet **Experience Audit results** ger rekommendationer om hur du kan förbättra poängen och detaljerna för alla inlästa sidor. Den är uppdelad i två delar:
-
-* **[Recommendations](#recommendations)**
-* **[Skannade sidor](#scanned-pages)**
-
-##### Recommendations {#recommendations}
-
-Avsnittet **Recommendations** visar en sammanställd uppsättning insikter. Rekommendationer för **prestanda** visas som standard. Använd listrutan bredvid rubriken **Recommendations** om du vill byta till en annan kategori.
-
-![Recommendations](assets/experience-audit-recommendations.png)
-
-Klicka på en rekommendation för att visa information om den.
-
-![Rekommendationsinformation](assets/experience-audit-recommendations-details.png)
-
-När det är tillgängligt innehåller den utökade rekommendationsinformationen också procentandelen av rekommendationseffekten, vilket hjälper dig att fokusera på de mest effektiva ändringarna. Förutom detta kan utökade rekommendationer innehålla relevanta AEM dokumentationslänkar och tips som kan vägleda dig genom implementering av de föreslagna korrigeringarna.
-
-Klicka på länken **se sidor** i informationsvyn för att visa de sidor som rekommendationen gäller för.
-
-![Sidor för rekommendationsinformationen](assets/experience-audit-details-pages.png)
-
-##### Skannade sidor {#scanned-pages}
-
-Avsnittet **Skannade sidor** innehåller information om bakgrundsmusik för alla skannade sidor. Använd knapparna **Föregående** och **Nästa** för att bläddra igenom resultaten och välj hur många som ska visas som sidnumrering.
+Avsnittet **Experience Audit results** innehåller information om resultat för alla inlästa sidor. Använd knapparna **Föregående** och **Nästa** för att bläddra igenom resultaten och välj hur många som ska visas som sidnumrering.
 
 ![Skannade sidor](assets/experience-audit-scanned-pages.png)
 
-Klicka på länken för en viss sida för att uppdatera filtret **Välj** för [**Sidresultat - trend** avsnitt](#trend) och visa fliken **Resultat och rekommendationer** för den valda sidan.
-
-![Sidresultat](assets/experience-audit-page-results.png)
-
-Fliken **Raw-rapporter** ger dig poäng för varje granskning av sidan. Klicka på rapportdatumet i kolumnen **Lightroom Report** för att hämta en JSON-fil med rådata.
+Klicka på länken för en viss sida för att uppdatera filtret **Välj** för [**Sidpoäng - trend** avsnitt](#trend) och visa fliken **Raw-rapporter** som ger dig poäng för varje granskning av sidan. Klicka på rapportdatumet i kolumnen **Lightroom Report** för att hämta en JSON-fil med rådata.
 
 ![Raw-rapport](assets/experience-audit-raw-reports.png)
 
@@ -239,20 +211,7 @@ En del orsaker till att sidorna kanske inte är tillgängliga är:
 
 >[!TIP]
 >
->[Om du får åtkomst till rå-rapporter](#scanned-pages) för en sida kan du få information om varför det inte gick att granska sidan.
-
-## Allmänna tips {#performance-tips}
-
-Två av de vanligaste effektproblemen som är enkla att åtgärda är CLS (Cumulative Layout Shifts) och LCP (Largest Contentful Paint).
-
-Du kan förbättra dessa områden genom att göra följande:
-
-* Inte lat läsa in bilderna ovanför förvrängningen - det innehåll som syns i webbläsaren utan att behöva rulla nedåt.
-* Prioritera hur resurserna läses in korrekt (t.ex. genom att läsa in bilderna asynkront under det veckade intervallet efter att dokumentet har lästs in).
-* Förhämtning av JavaScript- och CSS-filer som används för att återge innehåll ovanför förgrunden (om de behövs).
-* Reservera det lodräta utrymmet genom att tilldela en proportion till behållare som antingen läses in långsamt eller återges senare.
-* Konverterar bilder till WebP-format för att minska deras storlek.
-* Använder `<picture>` och bild `srcset` med olika bildstorlekar för olika visningsrutor (och ser till att storleksändringen fungerar).
+>[Om du får åtkomst till rå-rapporter](#scan-results) för en sida kan du få information om varför det inte gick att granska sidan.
 
 ## Utvärderingsinformation för Experience Audit {#details}
 
@@ -261,7 +220,3 @@ Följande information innehåller ytterligare information om hur Experience Audi
 * Granskningen skannar ursprungsdomänen (`.com`) från de [konfigurerade sökvägarna på sidan Experience Audit](#configuration) för utgivaren för att simulera verkliga användarupplevelser, vilket hjälper dig att fatta bättre beslut om att hantera och optimera dina webbplatser.
 * Mellanlagringsmiljön skannas in i rörledningar med full stapel i produktionen. För att säkerställa att granskningen innehåller relevanta detaljer under granskningen bör mellanlagringsmiljöns innehåll vara så nära produktionsmiljön som möjligt.
 * Sidorna som visas i listrutan **Välj** i [**Sidpoäng - trend** avsnitt](#trend) är alla kända sidor som Experience Audit har skannat in tidigare.
-* [En rekommendation](#recommendations) kan ha en potentiell ökning och en skillnad från den tidigare sökningen.
-* Experience Audit uppskattar möjliga förbättringar genom att bearbeta raw-rapporten för varje sida. Den korrelerar slösade byte eller millisekunder med insikter, vilket ger en viktad effekt på prestandan. Granskningen innehåller denna information och de berörda sidorna som kan hjälpa till att avgöra vilken rekommendation som ska följas.
-Mer information finns i avsnittet [Allmänna prestandatester](#performance-tips).
-* En frontendpipeline kan distribueras till en befintlig miljö, och flera frontendpipelines kan ha samma miljö som mål. Eftersom inläsningsresultaten samlas på miljönivå är poängen, trenderna och rekommendationerna konsekventa. Dessa resultat visas i den valda miljön, oavsett vilken pipeline som utlöste sökningen.
