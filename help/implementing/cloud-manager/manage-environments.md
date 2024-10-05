@@ -5,9 +5,9 @@ exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
+source-git-commit: 500e1b78fb9688601848fc17f312fc23be83bcb0
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2371'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Funktionerna i enskilda miljöer beror på vilka lösningar som är aktiverade i
 >
 >Produktions- och mellanlagringsmiljöer skapas endast som par. Du kan inte skapa enbart en staging eller bara en produktionsmiljö.
 
-## Lägg till en miljö {#adding-environments}
+## Lägga till en miljö {#adding-environments}
 
 Om du vill lägga till eller redigera en miljö måste användaren vara medlem i rollen **Affärsägare**.
 
@@ -50,13 +50,13 @@ Om du vill lägga till eller redigera en miljö måste användaren vara medlem i
 
    ![Miljökort](assets/no-environments.png)
 
-   * Alternativet **Lägg till miljö** är också tillgängligt på fliken **Miljö**.
+   * Alternativet **Lägg till miljö** finns också på fliken ![Dataikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg) **Miljö** .
 
      ![Fliken Miljö](assets/environments-tab.png)
 
    * Alternativet **Lägg till miljö** kan vara inaktiverat på grund av bristande behörighet eller beroende på de licensierade resurserna.
 
-1. I dialogrutan **Lägg till miljö** som visas:
+1. I dialogrutan **Lägg till miljö**:
 
    * Välj en [**miljötyp**](#environment-types).
       * Antalet tillgängliga/använda miljöer visas inom parentes bakom miljötypsnamnet.
@@ -219,7 +219,7 @@ Uppdateringar av miljöer i sandlådeprogram hanteras dock i programmen. När en
 
 ![Status för miljöuppdatering](assets/environ-update.png)
 
-### Uppdateringar och pipeline {#updates-pipelines}
+### Uppdateringar och rörledningar {#updates-pipelines}
 
 Pipelines är det enda sättet att [distribuera kod till AEM as a Cloud Service](deploy-code.md)-miljöer. Därför är varje pipeline kopplad till en viss AEM.
 
@@ -255,7 +255,7 @@ Beteendet för alternativet **Uppdatera** varierar beroende på programmets konf
 * Om pipeline redan uppdateras informerar alternativet **Uppdatera** användaren om att en uppdatering redan körs.
 * Om det inte finns någon lämplig pipeline uppmanas användaren att skapa en i alternativet **Uppdatera** .
 
-## Tar bort utvecklingsmiljöer {#deleting-environment}
+## Ta bort utvecklingsmiljöer {#deleting-environment}
 
 En användare med rollen **Distributionshanteraren** eller **Affärsägare** kan ta bort en utvecklingsmiljö.
 
@@ -310,7 +310,7 @@ Anpassade domännamn stöds i Cloud Manager for Sites-program för både publice
 
 >[!TIP]
 >
->Mer information finns i dokumentet [Introduktion till anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md).
+>Mer information finns i [Introduktion till anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md).
 
 ## Hantera IP-Tillåtelselista {#manage-ip-allow-lists}
 
@@ -324,4 +324,4 @@ När du använder en IP-tillåtelselista kopplas alla IP-intervall som ingår i 
 
 >[!TIP]
 >
->Mer information finns i dokumentet [Introduktion till IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md).
+>Mer information finns i [Introduktion till IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md).

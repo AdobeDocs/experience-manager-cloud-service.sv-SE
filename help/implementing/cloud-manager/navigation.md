@@ -5,9 +5,9 @@ exl-id: 3f3d7631-2bc9-440b-9888-50f6529bcd42
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: eb2e1555f684a68807b0b3764cd1be03c2d439ab
+source-git-commit: 500e1b78fb9688601848fc17f312fc23be83bcb0
 workflow-type: tm+mt
-source-wordcount: '1677'
+source-wordcount: '1660'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Konsolen Mina program ger en översikt över alla program som du har tillgång t
 
 >[!TIP]
 >
->Mer information om program finns i dokumentet [Program och programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md).
+>Mer information om program finns i [Program och programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md).
 
 ### Verktygsfält {#my-programs-toolbars}
 
@@ -229,7 +229,7 @@ Som standard visas fliken **Översikt** när du öppnar ett program. Den aktuell
 
 Klicka på ![Visa menyikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i det övre vänstra hörnet av [Cloud Manager-sidhuvudet](#cloud-manager-header-2) om du vill visa eller dölja sidomenyn med flikar.
 
-### Uppringning {#cta}
+### Call-to-action {#cta}
 
 Avsnittet&quot;call-to-action&quot; ger användbar information beroende på programmets status. För ett nytt program kan du se nästa steg och en påminnelse om ett publiceringsdatum, [angivet när programmet skapades](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md).
 
@@ -241,11 +241,11 @@ För ett live-program, status för den senaste distributionen med länkar för i
 
 ### Miljökort {#environments}
 
-Kortet **Environment** ger dig en översikt över dina miljöer samt länkar till snabba åtgärder.
+Kortet **Environment** ger dig en översikt över dina miljöer och länkar för snabba åtgärder.
 
 Kortet **Environment** innehåller endast tre miljöer. Klicka på **Visa alla** om du vill visa alla miljöer i programmet.
 
-Mer information om hur du hanterar dina miljöer finns i dokumentet [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md).
+Se även [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md).
 
 ### Förloppskort {#pipelines}
 
@@ -253,7 +253,7 @@ Kortet **Pipelines** ger dig en översikt över dina pipelines samt länkar för
 
 Kortet **Pipelines** innehåller endast tre pipelines. Klicka på **Visa alla** om du vill visa alla rörledningar för programmet.
 
-Se dokumentet [Hantera pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md) för mer information om hur du hanterar dina pipelines.
+Se även [Hantera pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md) för mer information om hur du hanterar dina pipelines.
 
 ### Prestandakort {#performance}
 

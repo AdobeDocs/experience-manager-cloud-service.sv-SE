@@ -5,9 +5,9 @@ exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
+source-git-commit: 500e1b78fb9688601848fc17f312fc23be83bcb0
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '786'
 ht-degree: 0%
 
 ---
@@ -87,7 +87,7 @@ Som stöd för detta lägger Cloud Manager till dessa standardmiljövariabler i 
 
 Din byggprocess kan vara beroende av specifika konfigurationsvariabler som skulle vara olämpliga att placera i Git-databasen, eller så måste du variera dem mellan pipeline-körningar som använder samma gren.
 
-Mer information finns i dokumentet [Konfigurera pipeline-variabler](/help/implementing/cloud-manager/configuring-pipelines/pipeline-variables.md)
+Se även [Konfigurera pipeline-variabler](/help/implementing/cloud-manager/configuring-pipelines/pipeline-variables.md) för mer information
 
 ## Installera ytterligare systempaket {#installing-additional-system-packages}
 

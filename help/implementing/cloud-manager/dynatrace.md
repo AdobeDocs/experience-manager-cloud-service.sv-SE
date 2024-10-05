@@ -5,9 +5,9 @@ exl-id: b58c8b82-a098-4d81-bc36-664e890c8f66
 solution: Experience Manager
 feature: Log Files, Developing
 role: Admin, Architect, Developer
-source-git-commit: 8d5d8910a906e2adf17fa9c75f17634602c2e0b9
+source-git-commit: 500e1b78fb9688601848fc17f312fc23be83bcb0
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Nedan beskrivs mer ingående information om anslutningsbegäranden:
 | [!DNL Dynatrace Environment URL] | URL till din Dynatrace-miljö.<br><br>För Dynatrace SaaS-kunder är formatet `https://<your-environment-id>.live.dynatrace.com`.<br><br>För Dynatrace Managed-kunder är formatet `https://<your-managed-url>/e/<environmentId>` |
 | [!DNL Dynatrace Environment ID] | Ditt Dynatrace-miljö-ID. Se [Hur får jag information om min Dynatrace-anslutning?](#how-do-i-get-my-dynatrace-connection-details) om du vill ha den här. |
 | [!DNL Dynatrace Environment Token] | Din Dynatrace-miljötoken. Se [Hur får jag information om min Dynatrace-anslutning?](#how-do-i-get-my-dynatrace-connection-details) om du vill ha den här.<br><br>Det här bör betraktas som en hemlighet, så använd lämplig säkerhetspraxis. Lösenordsskydda det till exempel på en webbplats som **zerobin.net**, som kundsupportbiljetten kan referera till, tillsammans med lösenordet. |
-| [!DNL Dynatrace API access token] | API-åtkomsttoken för din Dynatrace-miljö.  Se [Skapa en åtkomsttoken för Dynatrace API](#create-dynatrace-access-token) för hur du skapar detta.<br><br>Det här bör betraktas som en hemlighet så använd lämpliga säkerhetsrutiner. Lösenordsskydda det till exempel på en webbplats som **zerobin.net**, som kundsupportbiljetten kan referera till, tillsammans med lösenordet.<br><br>Obs! Detta krävs bara för Dynatrace Managed. |
+| [!DNL Dynatrace API access token] | API-åtkomsttoken för din Dynatrace-miljö. Se [Skapa en åtkomsttoken för Dynatrace API](#create-dynatrace-access-token) om du vill veta hur du skapar den här.<br><br>Det här bör betraktas som en hemlighet så använd lämpliga säkerhetsrutiner. Lösenordsskydda det till exempel på en webbplats som **zerobin.net**, som kundsupportbiljetten kan referera till, tillsammans med lösenordet.<br><br>Obs! Detta krävs bara för Dynatrace Managed. |
 | [!DNL Dynatrace ActiveGate Port] | Den Dynatrace ActiveGate-port som AEM ska ansluta till.<br><br>Obs! Detta krävs bara för Dynatrace Managed. |
 | [!DNL Dynatrace ActiveGate Network Zone] | Din [Dynatrace ActiveGate-nätverkszon](https://docs.dynatrace.com/docs/manage/network-zones) som AEM övervaka data effektivt över datacenter och nätverksregioner.<br><br>Obs! En Dynatrace ActiveGate-nätverkszon är valfri. |
 | [!DNL AEM Environment ID(s)] | AEM för Dynatrace att övervaka. |

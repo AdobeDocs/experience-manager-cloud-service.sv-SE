@@ -5,9 +5,9 @@ exl-id: bf0f54a9-fe86-4bfb-9fa6-03cf0fd5f404
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
+source-git-commit: 500e1b78fb9688601848fc17f312fc23be83bcb0
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '911'
 ht-degree: 0%
 
 ---
@@ -21,18 +21,13 @@ Cloud Manager har en kontrollpanel där du enkelt kan se vilka AEMaaCS-produktr�
 >
 >Kontrollpanelen för licenser gäller endast AEM as a Cloud Service-programmen. [AMS-program](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/introduction) ingår inte i kontrollpanelen för licenser.
 >
->Information om vilken typ av tjänst ditt program har (AMS eller AEMaaCS) finns i dokumentet [Navigera i Cloud Manager-gränssnittet](/help/implementing/cloud-manager/navigation.md#program-cards).
+>Information om vilken typ av tjänst ditt program har (AMS eller AEMaaCS) finns i [Navigera i användargränssnittet för Cloud Manager](/help/implementing/cloud-manager/navigation.md#program-cards).
 
 ## Ökning {#overview}
 
-Cloud Manager License Dashboard ger enkel åtkomst till följande information:
+Cloud Manager License Dashboard ger enkel åtkomst till tillgängliga lösningsrättigheter i alla program, inklusive vad som används och vad som är tillgängligt. Och användningsstatistik för innehållsförfrågningar trendade per månad för webbplatslösningen.
 
-1. Du har tillgång till lösningsrättigheter i alla program, inklusive vad som används och vad som är tillgängligt
-1. Förbrukningsstatistik för innehållsbegäran trendade per månad för webbplatslösningen
-
-## Använda kontrollpanelen för licenser {#using-dashboard}
-
-Följ de här stegen för att få åtkomst till din kontrollpanel för licenser.
+## Åtkomst till kontrollpanelen för licenser {#using-dashboard}
 
 >[!NOTE]
 >
@@ -40,7 +35,7 @@ Följ de här stegen för att få åtkomst till din kontrollpanel för licenser.
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** klickar du på menyknappen för hamburgaren på [Cloud Manager Header](/help/implementing/cloud-manager/navigation.md#cloud-manager-header) . Då visas flikarna.
-1. Tryck eller klicka på alternativet **Licens** på fliken.
+1. Klicka på alternativet **Licens** på fliken.
 
 ![Licensinstrumentpanel](assets/license-dashboard.png)
 
@@ -103,7 +98,9 @@ The left side of the window presents a pie chart showing the contract breakdown 
 
 The right side of the window presents an area chart showing the usage broken down by program over time for the selected contract year. A hover reveals a popup with details per program for the selected point in time. -->
 
-## Vanliga frågor {#faq}
+## Frågor och svar {#faq}
+
++++
 
 ### Vad är en innehållsförfrågan? {#what-is-a-content-request}
 
@@ -114,6 +111,9 @@ En innehållsbegäran räknas för varje sidvy eller för var femte API-anrop, m
 Innehållsförfrågningar exkluderar förfrågningar eller aktiviteter som initierats av eller på uppdrag av Adobe enbart i syfte att tillhandahålla produkter och tjänster. Användaragenttrafik som identifieras av Adobe från botar, crawler och spindlar som hör till vanliga sökmotorer och tjänster inom sociala medier är också utesluten.
 
 Se även [Förstå innehållsförfrågningar från Cloud Service](/help/implementing/cloud-manager/content-requests.md).
++++
+
++++
 
 ### Hur mäter Adobe Experience Manager förfrågningar om innehåll? {#how-are-content-requests-measured}
 
@@ -122,15 +122,26 @@ Innehållsbegäranden spåras på AEM as a Cloud Service edge-servrar. Ursprungs
 AEM har också regler för att utesluta välkända organ, inklusive välkända tjänster som regelbundet besöker webbplatsen för att uppdatera deras sökindex eller tjänst.
 
 Se även [Förstå förfrågningar om Cloud Service innehåll](/help/implementing/cloud-manager/content-requests.md).
++++
+
++++
 
 ### Varför visar min analysrapport andra resultat än AEM innehållsförfrågningar? {#why-are-reports-different}
 
 Innehållsförfrågningar kan innehålla avvikelser med en organisations analysrapporteringsverktyg. Mer information finns i [Förstå förfrågningar om Cloud Service innehåll](/help/implementing/cloud-manager/content-requests.md).
++++
+
++++
 
 ### Vad gör jag om jag vill veta mer om min innehållsförfrågningsvolym? {#current-request-volumes}
 
 Om du vill ha ytterligare insikter om hur många innehållsförfrågningar som visas på License Dashboard kan ditt Adobe-team tillhandahålla en rapport som visar de viktigaste volymdrivrutinerna för innehållsförfrågningar. Kontakta ert Adobe-team eller Adobe kundsupport för att få en rapport över de viktigaste användningsområdena.
++++
+
++++
 
 ### Vad händer om jag använder mitt eget CDN? {#using-own-cdn}
 
 På kontrollpanelen för licenser visas endast data som spåras av Cloud Servicens CDN. Om du väljer att ta med ditt eget CDN (BYOCDN) rapporterar du antalet innehållsförfrågningar till Adobe på årsbasis, vilket framgår av ditt avtal.
++++
+

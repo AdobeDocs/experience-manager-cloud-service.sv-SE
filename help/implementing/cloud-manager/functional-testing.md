@@ -5,7 +5,7 @@ exl-id: 7eb50225-e638-4c05-a755-4647a00d8357
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: cfaa3be31195929b80310610120a779a20537c61
+source-git-commit: b8b1748f9c50178fbcb167370c53285b55d809b1
 workflow-type: tm+mt
 source-wordcount: '1373'
 ht-degree: 0%
@@ -73,7 +73,7 @@ Funktionstester för produkter är en uppsättning stabila HTTP-integrationstest
 De implementeras med Junit, körs med Maven och använder de officiella [AEM Testing Clients](https://github.com/adobe/aem-testing-clients). Produkttestsviten underhålls som
 ett [öppen källkodsprojekt](https://github.com/adobe/aem-test-samples/tree/aem-cloud/smoke) följer bästa praxis och kan anses vara en bra startpunkt för implementeringen av dina tester.
 
-### Egna funktionstester
+### Anpassade funktionstester
 
 I likhet med produkttesterna är kundfunktionstester HTTP-integreringstester (IT) och implementeras väl med Junit, körs med Maven och byggs ovanpå de officiella [AEM Testing Clients](https://github.com/adobe/aem-testing-clients).
 
@@ -105,7 +105,7 @@ Exempel finns i [exempel på öppen källkod-tester](https://github.com/adobe/ae
 
 Mer information finns i [Testning av anpassat användargränssnitt](/help/implementing/cloud-manager/ui-testing.md#custom-ui-testing).
 
-### Experience Audit
+### Upplevelsegranskning
 
 Gaten för upplevelsegranskningskvalitet utför [Google Lightroom](https://developer.chrome.com/docs/lighthouse/overview/)-granskningar mot kundens webbsida.
 

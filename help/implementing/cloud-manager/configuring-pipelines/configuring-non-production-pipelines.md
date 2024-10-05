@@ -6,9 +6,9 @@ exl-id: eba608eb-a19e-4bff-82ff-05860ceabe6e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: a5e9b29a8108d5c012d402fda8ff7544e02ca911
+source-git-commit: 500e1b78fb9688601848fc17f312fc23be83bcb0
 workflow-type: tm+mt
-source-wordcount: '1405'
+source-wordcount: '1402'
 ht-degree: 0%
 
 ---
@@ -129,7 +129,7 @@ En riktad distribution distribuerar bara kod för utvalda delar av AEM. I en så
 
 >[!NOTE]
 >
->Rörledningar för webbnivå och konfiguration stöds inte i privata databaser. Mer information och en fullständig lista över begränsningar finns i dokumentet [Lägga till privata databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/private-repositories.md).
+>Rörledningar för webbnivå och konfiguration stöds inte i privata databaser. Mer information och en fullständig lista över begränsningar finns i [Lägga till privata databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/private-repositories.md).
 
 Stegen för att slutföra skapandet av din icke-produktion, målinriktade distributionsprocess är desamma när du väljer en distributionstyp.
 
