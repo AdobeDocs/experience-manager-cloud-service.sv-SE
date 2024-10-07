@@ -4,9 +4,9 @@ description: Aktuell underhållsversionsinformation för  [!DNL Adobe Experience
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: fa2da21ef6424bce0830d503eba650e1c1bf3dc2
+source-git-commit: ee3e1bedddddff0aa41665359a91a0de48fd19c8
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1411'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Funktionsaktiveringen i 2024.10.0 kommer att innehålla alla funktioner som finn
 * SITES - 24166: Remote assets reduction for Touch-UI editor.
 * SITES - 24409: Registrera alla begärande processorer på endast en HTTP-metod.
 * SITES - 25008: Improved handling of PersistenceExceptions and permissions problems.
-* SITES - 24821: [Xwalk] Använd aem.page / aem.live som standard.
+* SITES - 24821: Gör aem.page / aem.live till standard.
 
 ### Åtgärdade problem {#fixed-issues-17964}
 
@@ -123,7 +123,7 @@ Funktionsaktiveringen i 2024.10.0 kommer att innehålla alla funktioner som finn
 * SITES - 24025: 302 dirigerar om AEM returnerar platshuvud med intern DNS i stället för offentlig DNS
 * SITES - 24036: Investigation needed for AEM RTE Persisting Characters in ASCII Format
 * SITES - 24317: Proxykonfigurationen fungerar inte med grundläggande autentisering
-* SITES - 24918: [Xwalk] korrigerar 504 fel som returneras då och då när en dedikerad IP-utgång används.
+* PLATSER - 24918: Åtgärda 504 fel som returneras då och då när en dedikerad IP-utgång används.
 
 ### Kända fel {#known-issues-17964}
 
@@ -131,9 +131,19 @@ Funktionsaktiveringen i 2024.10.0 kommer att innehålla alla funktioner som finn
 
 ### Föråldrade funktioner och API:er {#deprecated-17964}
 
-Observera att vi håller på att uppdatera `com.day.cq.wcm.api` och med den aktuella versionen har vi markerat `@Deprecated` som några av dess metoder och klasser. Dessa kommer att tas bort i framtida versioner, så överväg att byta till de föreslagna alternativen om du använder något av dem.
-
 Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs i dokumentet [Inaktuella och Borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
+
+Här följer en sammanfattning av nyligen borttagna funktioner eller funktioner som håller på att tas bort.
+
+#### JavaScript Use API {#javascript-use-api}
+
+[API:t för JavaScript-användning](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#42-javascript-use-api) är officiellt föråldrat på grund av problem som användare har med att felsöka och underhålla kod som utnyttjar API:t samt prestandabegränsningar jämfört med Java-alternativet.
+
+Du bör gå över till [Java Use API,](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/java-use-api), som ger bättre prestanda, enklare felsökning och mer långsiktigt stöd.
+
+#### com.day.cq.wcm.api {#com-day-cq-wcm-api}
+
+Observera att Adobe håller på att uppdatera `com.day.cq.wcm.api`. Vissa av dess metoder och klasser har markerats som `@Deprecated` i den aktuella versionen. Dessa kommer att tas bort i framtida versioner. Överväg att byta till de föreslagna alternativen.
 
 ### Säkerhetskorrigeringar {#security-17964}
 
