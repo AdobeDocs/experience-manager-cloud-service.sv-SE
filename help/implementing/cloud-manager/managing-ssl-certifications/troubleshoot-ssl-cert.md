@@ -1,22 +1,24 @@
 ---
-title: Felsöka SSL-certifikatfel
-description: Lär dig hur du felsöker SSL-certifikatfel genom att identifiera vanliga orsaker så att du kan upprätthålla säkra anslutningar.
+title: Felsöka SSL-certifikatproblem
+description: Lär dig hur du felsöker SSL-certifikatproblem genom att identifiera vanliga orsaker så att du kan upprätthålla säkra anslutningar.
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: b387fee62500094d712f5e1f6025233c9397f8ec
+source-git-commit: 1017f84564cedcef502b017915d370119cd5a241
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
 
 
-# Felsöka SSL-certifikatfel {#certificate-errors}
+# Felsöka SSL-certifikatproblem {#certificate-problems}
 
-Vissa fel kan uppstå om ett certifikat inte har installerats korrekt eller inte uppfyller kraven i Cloud Manager.
+Lär dig hur du felsöker SSL-certifikatproblem genom att identifiera vanliga orsaker så att du kan upprätthålla säkra anslutningar.
 
 +++**Ogiltigt certifikat**
+
+## Ogiltigt certifikat {#invalid-certificate}
 
 Det här felet inträffar eftersom kunden använde en krypterad privat nyckel och angav nyckeln i DER-format.
 
@@ -24,11 +26,15 @@ Det här felet inträffar eftersom kunden använde en krypterad privat nyckel oc
 
 +++**Den privata nyckeln måste vara PKCS 8-format**
 
+## Den privata nyckeln måste vara PKCS 8-format {#pkcs-8}
+
 Det här felet inträffar eftersom kunden använde en krypterad privat nyckel och angav nyckeln i DER-format.
 
 +++
 
 +++**Korrigera certifikatordning**
+
+## Korrigera certifikatordning {#certificate-order}
 
 Den vanligaste orsaken till att en certifikatdistribution misslyckas är att de mellanliggande certifikaten eller kedjecertifikaten inte är i rätt ordning.
 
@@ -58,6 +64,8 @@ openssl rsa -noout -modulus -in ssl.key | openssl md5
 
 +++**Ta bort klientcertifikat**
 
+## Ta bort klientcertifikat {#client-certificates}
+
 Om du får ett fel som liknar det här när du lägger till ett certifikat:
 
 ```text
@@ -69,6 +77,8 @@ Du har antagligen inkluderat klientcertifikatet i certifikatkedjan. Kontrollera 
 +++
 
 +++**Certifikatprincip**
+
+## Certifikatprincip {#policy}
 
 Om följande fel visas kontrollerar du certifikatets policy.
 
@@ -117,11 +127,26 @@ openssl x509 -in certificate.pem -text grep "Policy: 2.23.140.1.2.2" -B5
 # "DV Policy - Not Accepted"
 openssl x509 -in certificate.pem -text grep "Policy: 2.23.140.1.2.1" -B5
 ```
++++
+
+++**Certifikatets giltighet
+
+## Certifikatets giltighet {#validity}
+
+Cloud Manager förväntar att SSL-certifikatet ska vara giltigt i minst 90 dagar från dagens datum. Kontrollera certifikatkedjans giltighet.
 
 +++
 
-+++**Certifikatets giltighetsdatum**
+++**Fel SAN-certifikat används på min domän
 
-Cloud Manager förväntar att SSL-certifikatet ska vara giltigt i minst 90 dagar från dagens datum. Kontrollera certifikatkedjans giltighet.
+## Fel SAN-certifikat används på min domän {#wrong-san-cert}
+
+Säg att du vill länka `dev.yoursite.com` och `stage.yoursite.com` till din icke-produktionsmiljö och `prod.yoursite.com` till din produktionsmiljö.
+
+Om du vill konfigurera CDN för dessa domäner måste du ha ett certifikat installerat för varje, så du måste installera ett certifikat som omfattar `*.yoursite.com` för dina icke-produktionsdomäner och ett annat som även omfattar `*.yoursite.com` för dina produktionsdomäner.
+
+Den här konfigurationen är giltig. När du uppdaterar ett av certifikaten, eftersom båda certifikaten omfattar samma SAN-post, kommer CDN att installera det senaste certifikatet på alla tillämpliga domäner, vilket kan verka oväntat.
+
+Även om detta kan vara oväntat är detta inte ett fel och är standardbeteendet för det underliggande CDN. Om du har två eller flera SAN-certifikat som täcker samma SAN-domänpost, och om den domänen täcks av ett certifikat och det andra uppdateras, kommer den senare nu att installeras för domänen.
 
 +++

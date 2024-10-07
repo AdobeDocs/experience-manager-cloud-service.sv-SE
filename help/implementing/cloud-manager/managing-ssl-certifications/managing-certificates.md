@@ -5,9 +5,9 @@ exl-id: ad6170f4-93bd-4bac-9c54-63c35a0d4f06
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 2d1382c84d872719332986baa5829d1623d9d9a6
+source-git-commit: b735c724bd8d68273b3c09a2dc53a13f5f6095ae
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '1038'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,18 @@ ht-degree: 0%
 
 # Hantera SSL-certifikat {#managing-ssl-certificates}
 
-Lär dig hur du använder Cloud Manager för att kontrollera statusen för dina Adobe-hanterade och kundhanterade SSL-certifikat och hur du tar bort dem. För kundhanterade certifikat kan du även redigera och uppdatera (ersätta) dem.
+Lär dig hur du använder Cloud Manager för att kontrollera status för dina SSL-certifikat och hur du redigerar, ersätter, uppdaterar och tar bort dem.
 
 ## Kontrollera SSL-certifikatens status {#checking-status-an-ssl-certificate}
 
-Statusen för dina SSL-certifikat kan förstås direkt på sidan **SSL-certifikat**.
+Cloud Manager ger en översikt över statusen för alla certifikat för ditt program.
+
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämpligt program.
+1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
+1. Klicka på ![Visa menyikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i sidans övre vänstra hörn för att visa sidomenyn.
+1. Under rubriken **Tjänster** klickar du på ![Lås stängda ikoner](https://spectrum.adobe.com/static/icons/workflow_18/Smock_LockClosed_18_N.svg) **SSL-certifikat**.
+
+Sidan **SSL-certifikat** ger status för dina SSL-certifikat.
 
 | Status för SSL-certifikat | Beskrivning |
 | --- | --- |
@@ -51,6 +58,12 @@ En användare måste vara medlem i rollen **Affärsägare** eller **Distribution
    * Klistra in certifikatkedjan i fältet **Certifikatkedja** (eller förtroendekedjan).
 
 1. Klicka på **Uppdatera** om du vill spara ändringarna och använda dem automatiskt.
+
+>[!NOTE]
+>
+>Om du har två eller flera SAN-certifikat som täcker samma SAN-domänpost, och om den domänen täcks av ett certifikat och det andra uppdateras, kommer den senare nu att installeras för domänen.
+>
+>Mer information finns i [Felsöka SSL-certifikatproblem](/help/implementing/cloud-manager/managing-ssl-certifications/troubleshoot-ssl-cert.md#wrong-san-cert).
 
 ## Ersätta ett kundhanterat SSL-certifikat som gått ut {#replace-ssl-certificate}
 
@@ -109,4 +122,3 @@ Meddelandet försvinner när alla befintliga miljökonfigurationer har migrerats
 Mer information finns i [Lägg till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md).
 
 Ett liknande meddelande visas även på sidorna **IP Tillåtelselista** och **Environment** för miljöer som har befintliga CDN-konfigurationer för IP Tillåtelselista eller anpassade domännamn.
-
