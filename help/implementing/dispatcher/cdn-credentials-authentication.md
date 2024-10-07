@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-autentiseringsuppgifter och autent
 feature: Dispatcher
 exl-id: a5a18c41-17bf-4683-9a10-f0387762889b
 role: Admin
-source-git-commit: 83efc7298bc8d211d1014e8d8be412c6826520b8
+source-git-commit: 37d399c63ae49ac201a01027069b25720b7550b9
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1486'
 ht-degree: 0%
 
 ---
@@ -30,9 +30,10 @@ Så som beskrivs på [CDN-sidan i AEM as a Cloud Service](/help/implementing/dis
 
 Som en del av konfigurationen måste Adobe CDN och kundens CDN komma överens om ett värde för HTTP-huvudet `X-AEM-Edge-Key`. Värdet anges för varje begäran, på kundens CDN, innan det dirigeras till Adobe CDN, som sedan validerar att värdet är som förväntat, så att det kan lita på andra HTTP-huvuden, inklusive de som hjälper till att dirigera begäran till rätt AEM.
 
-Värdet *X-AEM-Edge-Key* refereras av egenskaperna `edgeKey1` och `edgeKey2` i en fil med namnet `cdn.yaml` eller liknande, någonstans under en `config`-mapp på översta nivån. Läs [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#folder-structure) om du vill ha mer information om mappstrukturen och hur du distribuerar konfigurationen.
+Värdet *X-AEM-Edge-Key* refereras av egenskaperna `edgeKey1` och `edgeKey2` i en fil med namnet `cdn.yaml` eller liknande, någonstans under en `config`-mapp på översta nivån. Läs [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#folder-structure) om du vill ha mer information om mappstrukturen och hur du distribuerar konfigurationen.  Syntaxen beskrivs i exemplet nedan.
 
-Syntaxen beskrivs nedan:
+>[!WARNING]
+>Direktåtkomst utan korrekt X-AEM-Edge-Key nekas för alla begäranden som matchar villkoret (i exemplet nedan betyder det alla begäranden till publiceringsnivån). Om du behöver införa autentisering gradvis läser du avsnittet [Migrera säkert för att minska risken för blockerad trafik](#migrating-safely).
 
 ```
 kind: "CDN"
@@ -78,7 +79,7 @@ Ytterligare egenskaper är:
 
 ### Migrera säkert för att minska risken för blockerad trafik {#migrating-safely}
 
-Om webbplatsen redan är aktiv bör du vara försiktig när du migrerar till kundhanterad CDN eftersom en felkonfiguration kan blockera allmän trafik. Detta beror på att endast begäranden med det förväntade X-AEM-Edge-Key-huvudvärdet accepteras av Adobe CDN. Ett tillvägagångssätt rekommenderas när ett ytterligare villkor tillfälligt inkluderas i autentiseringsregeln, vilket gör att den bara utvärderar begäran om en testrubrik ingår:
+Om webbplatsen redan är aktiv bör du vara försiktig när du migrerar till kundhanterad CDN eftersom en felkonfiguration kan blockera allmän trafik. Detta beror på att endast begäranden med det förväntade X-AEM-Edge-Key-huvudvärdet accepteras av Adobe CDN. Ett tillvägagångssätt rekommenderas när ytterligare ett villkor tillfälligt inkluderas i autentiseringsregeln, vilket gör att den blockerar begäran endast om en testrubrik ingår eller om en sökväg matchar:
 
 ```
     - name: edge-auth-rule
@@ -86,6 +87,17 @@ Om webbplatsen redan är aktiv bör du vara försiktig när du migrerar till kun
           allOf:  
             - { reqProperty: tier, equals: "publish" }
             - { reqHeader: x-edge-test, equals: "test" }
+        action:
+          type: authenticate
+          authenticator: edge-auth
+```
+
+```
+    - name: edge-auth-rule
+        when:
+          allOf:
+            - { reqProperty: tier, equals: "publish" }
+            - { reqProperty: path, like: "/test*" }
         action:
           type: authenticate
           authenticator: edge-auth
