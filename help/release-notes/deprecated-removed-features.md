@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för borttagna och borttagna f
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
 feature: Release Information
 role: Admin
-source-git-commit: b64c8f16976988d04840f1006afe4f7c9b28c705
+source-git-commit: 04ec933125da9ee3c84ffd948b144581d31763d6
 workflow-type: tm+mt
-source-wordcount: '2488'
+source-wordcount: '2485'
 ht-degree: 0%
 
 ---
@@ -340,7 +340,7 @@ Lägg till Mongo-klient-API i ditt projekt.
 
 Åtgärdslista:
 * Lägg till det här paketet i ditt projekt
-   * org.mongodb:mongo-java-driver:3.12.7
+   * `org.mongodb:mongo-java-driver:3.12.7`
 
 ### Användning av `org.apache.abdera*` och `org.apache.sling.atom.taglib` {#org.apache.abdera_or_org.apache.sling.atom.taglib}
 
