@@ -1,13 +1,13 @@
 ---
 title: Funktionstestning
-description: Läs mer om de tre olika typerna av funktionstestning som är inbyggda i AEM as a Cloud Service-distributionsprocessen för att säkerställa att koden är tillförlitlig och av hög kvalitet.
+description: Läs om de tre olika typerna av funktionstestning som är inbyggda i AEM as a Cloud Service-distributionsprocessen för att säkerställa kvaliteten och tillförlitligheten i koden.
 exl-id: 7eb50225-e638-4c05-a755-4647a00d8357
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: b8b1748f9c50178fbcb167370c53285b55d809b1
+source-git-commit: 7a370ee0ab77046d128ae260af2575d50e655254
 workflow-type: tm+mt
-source-wordcount: '1373'
+source-wordcount: '1314'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_nonbpa_functionaltesting"
 >title="Funktionstestning"
->abstract="Läs mer om de tre olika typerna av funktionstestning som är inbyggda i AEM as a Cloud Service-distributionsprocessen för att säkerställa att koden är tillförlitlig och av hög kvalitet."
+>abstract="Läs om de tre olika typerna av funktionstestning som är inbyggda i AEM as a Cloud Service-distributionsprocessen för att säkerställa kvaliteten och tillförlitligheten i koden."
 
-Lär dig mer om vilka kvalitetsportar som är tillgängliga i [AEM as a Cloud Service-distributionsprocessen](/help/implementing/cloud-manager/deploy-code.md), de olika typerna av funktionstestning som är inbyggda, hur du kan bidra och hur du kan utnyttja dem på bästa sätt i en övergripande teststrategi.
+Upptäck vilka kvalitetsportar som är tillgängliga i [AEM as a Cloud Service-distributionsprocessen](/help/implementing/cloud-manager/deploy-code.md) och de olika typerna av inbyggd funktionstestning. Lär dig hur du kan bidra till och optimera användningen av dem inom ramen för en omfattande teststrategi.
 
 ## Ökning
 
@@ -32,7 +32,7 @@ I följande diagram visas en översikt på hög nivå över tillgängliga rörle
 
 Syftet med AEM Cloud Service pipelines för driftsättning är att underlätta stabil och säker driftsättning i olika faser av livscykeln för utveckling och AEM. Dessa rörledningar innehåller flera kvalitetsportar på olika nivåer för att säkerställa integriteten och säkerheten för distributioner för både AEM programändringar och AEM produktuppdateringar.
 
-Adobe har flera inbyggda portar för kvalitet, medan andra kräver att du gör något för att implementera och konfigurera. Dessa kvalitetsportar är mångsidiga, och vissa kan användas i olika faser av livscykeln och till och med integreras i din egen utvecklingsmiljö och CI/CD-processer.
+Adobe har flera inbyggda portar för kvalitet, medan andra kräver att du gör något för att implementera och konfigurera. Dessa portar är mångsidiga och kan användas i olika faser av livscykeln och integreras direkt i utvecklingsmiljön och CI/CD-processerna.
 
 De inbyggda kvalitetsportarna validerar i första hand funktionaliteten hos AEM produkt i ditt AEM program. De anpassade kvalitetsportar du ställer in är däremot utformade för att verifiera att programmets kritiska funktioner och användarinteraktioner fungerar som de ska. Tillsammans fungerar dessa två kvalitetsportar tillsammans för att säkerställa robust och säker automatiserad driftsättning för både kodändringar och AEM produktuppdateringar.
 
@@ -58,7 +58,7 @@ I följande diagram visas en detaljerad översikt över tillgängliga kvalitetsg
 
 Du uppmanas att tillhandahålla enhetstesterna för ditt AEM, som utgör grunden för varje teststrategi. De är avsedda att köras snabbt och ofta och ge snabb och snabb feedback. De är nära integrerade i utvecklararbetsflödena, din egen CI/CD och de AEM molntjänsternas distributionssystem.
 
-De implementeras med JUnit och avrättas med Maven. I [kärnmodulen för AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/core.html#unit-tests) finns ett exempel på enhetstest för att AEM och komma igång.
+De implementeras med JUnit och avrättas med Maven. Se kärnmodulen [i AEM Project Archetype](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/using#unit-tests) för ett exempel på enhetstest för att AEM och komma igång.
 
 ### Kodkvalitet
 
@@ -68,40 +68,40 @@ Mer information finns i [Testa kodkvalitet](/help/implementing/cloud-manager/cod
 
 ### Produkttester
 
-Funktionstester för produkter är en uppsättning stabila HTTP-integrationstester (IT) av kärnfunktionalitet i AEM som redigerings- och replikeringsuppgifter. Adobe tillhandahåller och underhåller dem färdiga. De är avsedda att förhindra att ändringar i anpassad programkod distribueras om de bryter grundfunktionerna i AEM.
+Funktionstester för produkter är stabila HTTP-integrationstester (IT) för AEM, inklusive redigerings- och replikeringsuppgifter. Adobe tillhandahåller och underhåller dem färdiga. De är avsedda att förhindra att ändringar i anpassad programkod distribueras om de bryter grundfunktionerna i AEM.
 
-De implementeras med Junit, körs med Maven och använder de officiella [AEM Testing Clients](https://github.com/adobe/aem-testing-clients). Produkttestsviten underhålls som
+De använder JUnit för implementering, körs med Maven och förlitar sig på officiella [AEM testklienter](https://github.com/adobe/aem-testing-clients). Produkttestsviten underhålls som
 ett [öppen källkodsprojekt](https://github.com/adobe/aem-test-samples/tree/aem-cloud/smoke) följer bästa praxis och kan anses vara en bra startpunkt för implementeringen av dina tester.
 
 ### Anpassade funktionstester
 
-I likhet med produkttesterna är kundfunktionstester HTTP-integreringstester (IT) och implementeras väl med Junit, körs med Maven och byggs ovanpå de officiella [AEM Testing Clients](https://github.com/adobe/aem-testing-clients).
+På samma sätt som produkttesterna är kundfunktionstester HTTP-integreringstester (IT) som implementeras med JUnit, körs med Maven och byggs ovanpå de officiella [AEM testklienterna](https://github.com/adobe/aem-testing-clients).
 
 >[!NOTE]
 >
->Anpassade funktionstester körs i pipelines för produktion och icke-produktion (opt-in), som används av AEM programändringar, driftsättningar och AEM produktpush-uppdateringar, och är därför ett viktigt bidrag för att säkerställa att programmet fungerar korrekt och öka säkerheten för releaser. Kundens funktionstester utförs också i interna verifieringssystem för förhandsversioner för varje kund, vilket gör det lättare att ge tidig feedback.
+>Anpassade funktionstester körs i både produktionssystem och icke-produktionssystem (opt-in) som används för AEM driftsättning av programändringar och AEM produktpush-uppdateringar. De spelar en viktig roll för att säkerställa att applikationen fungerar som den ska och för att förbättra säkerheten för releaser. Kundens funktionstester utförs också i interna verifieringssystem för förhandsversioner för varje kund, vilket gör det lättare att ge tidig feedback.
 
-Vi rekommenderar att du fokuserar på viktiga funktioner och de viktigaste interaktionsflödena för användare för att få ett effektivt flöde i pipeline. En körningstid på cirka 15 minuter eller mindre rekommenderas för funktionstester. Fullständiga funktionstestsviter som inte får plats i denna kundport rekommenderas att köras som en del av kundens allmänna valideringsflöde under kundens utvecklingsflöde.
+För att hålla effektiv pipeline-körning rekommenderar Adobe att man fokuserar på nyckelfunktioner och primära användarinteraktionsflöden, med målet att ha en funktionstestmiljö på ca 15 minuter eller mindre. Kompletta funktionstestsviter som överskrider denna tid bör utföras som en del av de allmänna kundvalideringsstegen under utvecklingsprocessen.
 
-Se [öppen källkod-produkttester](https://github.com/adobe/aem-test-samples/tree/aem-cloud/smoke) eller [it.tests-modulen i AEM Projects Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/ittests.html) för exempel.
+Se [öppen källkod-produkttester](https://github.com/adobe/aem-test-samples/tree/aem-cloud/smoke) eller [it.tests-modulen i AEM Projects Archetype](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/it.tests) för exempel.
 
 Mer information finns i [Java Functional Tests](/help/implementing/cloud-manager/java-functional-testing.md).
 
 ### Anpassade gränssnittstester
 
-För att maximera riskkontrollen för er kundspecifika utveckling rekommenderar Adobe starkt att ni samlar in kritiska gränssnittstester i AEMCS. De är avsedda att vara relativt begränsade i antal, men med störst påverkan på kundupplevelsen.
+För att maximera riskkontrollen för er kundspecifika utveckling rekommenderar Adobe dig att hämta in viktiga gränssnittstester till AEM as a Cloud Service. Behåll dem begränsade men fokusera på att maximera deras påverkan på kundupplevelsen.
 
-Testerna är förpackade i en Docker-bild som är utformad för att vara så beständig som möjligt (med stöd för Cypress, Selenium, Java och Javascript). De följer samma egenskaper och syften som de anpassade funktionstesterna.
+Testerna är förpackade i en Docker-bild som är utformad för att vara så flyktig som möjligt (med stöd för Cypress, Selenium, Java och JavaScript). De följer samma egenskaper och syften som de anpassade funktionstesterna.
 
 >[!NOTE]
 >
->Anpassade användargränssnittstester utförs i pipelines för produktion och icke-produktion (opt-in) som används av AEM program ändrar driftsättningar och AEM push-uppdateringar av produkter och är därför ett viktigt bidrag för att säkerställa att programmet fungerar korrekt och öka säkerheten för releaser. Kundens användargränssnittstester utförs också i interna verifieringsövningar före lanseringen för varje kund, vilket bidrar till att ge tidig feedback.
+>Anpassade användargränssnittstester utförs både i produktionssystem och i icke-produktionssystem (opt-in) som används för AEM programändringsdistributioner och AEM produktpush-uppdateringar. De är nödvändiga för att ditt program ska fungera väl och för att öka säkerheten för releaser. Kundens användargränssnittstester utförs också i interna verifieringsövningar före lanseringen för varje kund, vilket bidrar till att ge tidig feedback.
 >
 >Icke-selenbehållare bör köra tester med en HTTP-proxy som baseras på miljövariablerna i [UI-testavsnittet](/help/implementing/cloud-manager/ui-testing.md#custom-ui-testing).
 
-Vi rekommenderar att du fokuserar på viktiga funktioner och de viktigaste interaktionsflödena för att få en effektiv hantering av pipeline. Fullständiga testsviter för användargränssnitt som inte får plats i den här kundporten rekommenderas att utföras som en del av allmänna kundvalideringsflöden under kundens utvecklingsflöde.
+Adobe rekommenderar att man fokuserar på viktiga funktioner och de viktigaste interaktionsflödena för att få en effektiv hantering av pipeline. Fullständiga testsviter för användargränssnitt som överskrider denna kvalitetsport ska köras som en del av de allmänna kundvalideringskanalerna. Lägg in dem i kundens utvecklingsprocess.
 
-Exempel finns i [exempel på öppen källkod-tester](https://github.com/adobe/aem-test-samples/tree/aem-cloud/) eller i modulen [ ui.tests i AEM Projects Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uitests.html) .
+Exempel finns i [exempel på öppen källkod-tester](https://github.com/adobe/aem-test-samples/tree/aem-cloud/) eller i modulen [ ui.tests i AEM Projects Archetype](/help/implementing/cloud-manager/ui-testing.md) .
 
 Mer information finns i [Testning av anpassat användargränssnitt](/help/implementing/cloud-manager/ui-testing.md#custom-ui-testing).
 
@@ -117,12 +117,12 @@ Mer information finns i [Experience Audit Testing](/help/implementing/cloud-mana
 
 Kundens kvalitetsportal för validering är en platshållare för kundens egen testningsstrategi och -insats, som utförs innan kundens programändringar når AEM i molnet.
 
-Här kan du välja de verktyg och ramverk du vill ha. Till skillnad från kundfunktionstester och anpassade användargränssnittstester finns det inga AEM as a Cloud Service-relaterade begränsningar, och vi rekommenderar därför att du utför långvariga funktions- och användargränssnittstester här.
+Här kan du välja de verktyg och ramverk du vill ha. Till skillnad från kundfunktionstester och anpassade användargränssnittstester finns det inga AEM as a Cloud Service-relaterade begränsningar. Därför rekommenderar Adobe att du utför långvariga funktions- och gränssnittstestningar här.
 
-Du kan välja vilket verktyg och ramverk du vill, men vi rekommenderar att du anpassar HTTP-baserade integreringstester och gränssnittstester med de verktyg och ramverk som finns tillgängliga i anpassade funktionstester och anpassade kvalitetsportar för gränssnittstestning. Vi rekommenderar att du integrerar [Rapid Development Environment (RDE)](/help/implementing/developing/introduction/rapid-development-environments.md) i din lokala testningsstrategi för att testa så nära som möjligt AEM molnmiljöer.
+Du kan välja vilket verktyg och ramverk som helst, men Adobe föreslår att HTTP-baserad integrering och gränssnittstester justeras mot de verktyg och ramverk som används i de anpassade funktions- och gränssnittstestkvalitetsportarna. Dessutom rekommenderar Adobe att du införlivar [RDE (Rapid Development Environment)](/help/implementing/developing/introduction/rapid-development-environments.md) i din lokala testningsstrategi för att spegla AEM molnmiljöer.
 
 ### Manuell provning
 
-Den manuella kvalitetsporten är en platshållare för kunder som utför manuell testning. AEM i molnet stöder inte manuell testning och därför måste detta ske som en del av er egen lokala teststrategi.
+Den manuella kvalitetsporten är en platshållare för kunder som utför manuell testning. Eftersom AEM molnrörledningar inte har stöd för manuell testning måste det ingå i din lokala testningsstrategi.
 
 För manuell testning kan det vara användbart att integrera med en extra utvecklingsmiljö från AEM Cloud Service.
