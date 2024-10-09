@@ -5,9 +5,9 @@ exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 493c5729c3107f151685a243006b17196b74c1bd
+source-git-commit: 9cde6e63ec452161dbeb1e1bfb10c75f89e2692c
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '535'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Lär dig hur du lägger till ett eget SSL-certifikat eller ett Adobe-hanterat DV
 ## Förutsättningar {#prerequisites}
 
 * En användare måste vara medlem i rollen **Business Owner** eller **Deployment Manager** för att kunna lägga till ett certifikat.
-* Om du installerar ditt eget certifikat ska du kontrollera **certifikatkraven** i [Introduktion till hantering av SSL-certifikat.](/help/implementing/cloud-manager/managing-ssl-certifications/introduction-to-ssl-certificates.md#requirements)
+* Om du installerar ditt eget certifikat kan du läsa **Certifikatkrav** i [Introduktion till hantering av SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction-to-ssl-certificates.md#requirements).
 
 ## Lägga till ett SSL-certifikat {#add-certificate}
 
@@ -55,4 +55,4 @@ Du har nu lagt till ett fungerande SSL-certifikat för ditt projekt. Det här st
 
 >[!TIP]
 >
->Om du har problem med att lägga till eller hantera certifikat läser du dokumentet [Felsöka SSL-certifikatfel.](/help/implementing/cloud-manager/managing-ssl-certifications/troubleshoot-ssl-cert.md)
+>Om du har problem med att lägga till eller hantera certifikat kan du läsa [Felsöka SSL-certifikatfel](/help/implementing/cloud-manager/managing-ssl-certifications/troubleshoot-ssl-cert.md).

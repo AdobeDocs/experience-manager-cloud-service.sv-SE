@@ -1,13 +1,13 @@
 ---
 title: Java&handel; funktionstester
-description: Lär dig skriva Java&handel; funktionstester för AEM as a Cloud Service
+description: Lär dig skriva Java &trade; funktionstester för AEM as a Cloud Service
 exl-id: e014b8ad-ac9f-446c-bee8-adf05a6b4d70
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
+source-git-commit: f60dc00fc031fa7ef73a18daec9c6c0e5570b018
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '856'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ När du har innehållet i mappen `it.tests` kan du använda den som grund för d
 
 Samma verktyg som Adobe använder för att skriva produktfunktionstester kan användas för att skriva dina anpassade funktionstester. Använd [produktfunktionstesterna](https://github.com/adobe/aem-test-samples/tree/aem-cloud/smoke) i GitHub som exempel på hur du skriver dina tester.
 
-Koden för det anpassade funktionstestet är Java™-kod i mappen `it.tests` i ditt projekt. Den ska producera en enda JAR med alla funktionstester. Om bygget skapar mer än en test-JAR är den JAR som är vald icke-deterministisk. Om inga JAR-testversioner skapas godkänns teststeget som standard. [Se AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/it.tests) för exempel på tester.
+Koden för det anpassade funktionstestet är Java™-kod i mappen `it.tests` i ditt projekt. Den ska producera en enda JAR med alla funktionstester. Om bygget skapar mer än en test-JAR är den JAR som är vald icke-deterministisk. Om inga JAR-testversioner skapas godkänns teststeget som standard. Se [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/it.tests) för exempel på tester.
 
 Testerna körs på testinfrastruktur som underhålls av Adobe, inklusive minst två författarinstanser, två publiceringsinstanser och en Dispatcher-konfiguration. Detta innebär att dina anpassade funktionstester körs mot hela AEM.
 
@@ -107,7 +107,7 @@ Mer information finns i [`aem-testing-clients` GitHub-repo](https://github.com/a
 |----------------------|-------|--------------------------------------------------------------------|
 | CPU | 0,5 | Den processortid som reserverats per testkörning |
 | Minne | 0,5 Gi | Mängd minne som tilldelats testet, värde i gibibyte |
-| Timeout | 30 m | Den varaktighet efter vilken testet avslutas. |
+| Timeout | 30 m | Tidsgräns efter vilken testet stoppas. |
 | Rekommenderad varaktighet | 15 m | Adobe rekommenderar att testet inte tar längre tid än så här. |
 
 >[!NOTE]
@@ -118,8 +118,7 @@ Mer information finns i [`aem-testing-clients` GitHub-repo](https://github.com/a
 
 * aem-cloud-testing-clients:
 
-Kommande ändringar i den inneslutna infrastruktur som används för att utföra funktionstester kräver att biblioteket [aem-cloud-testing-clients](https://github.com/adobe/aem-testing-clients) som används i ditt anpassade funktionstest uppdateras till minst version **1.2.1**
-Kontrollera att beroendet i `it.tests/pom.xml` har uppdaterats.
+Kommande ändringar av den inneslutna infrastrukturen för att köra funktionstester kräver att biblioteket [aem-cloud-testing-clients](https://github.com/adobe/aem-testing-clients) i dina anpassade funktionstester uppdateras till version **1.2.1** eller senare. Se till att beroendet i din `it.tests/pom.xml`-fil uppdateras i enlighet med detta.
 
 ```
 <dependency>
@@ -132,7 +131,7 @@ Kontrollera att beroendet i `it.tests/pom.xml` har uppdaterats.
 >[!NOTE]
 >
 >Denna ändring måste utföras före 6 april 2024.
->Om du inte uppdaterar beroendebiblioteket kommer det att uppstå ett pipeline-fel i steget&quot;Custom Functional Testing&quot;.
+>Om du inte uppdaterar beroendebiblioteket kan det leda till att pipeline misslyckas i steget&quot;Custom Functional Testing&quot;.
 
 ### Lokal testkörning {#local-test-execution}
 
@@ -140,7 +139,7 @@ Innan du aktiverar funktionstester i en Cloud Manager-pipeline bör du köra fun
 
 #### Köra i en IDE {#running-in-an-ide}
 
-Eftersom testklasser är JUnit-tester kan de köras från vanliga Java™-utvecklingsmiljöer som Eclipse, IntelliJ och NetBeans. Eftersom både produktfunktionstester och anpassade funktionstester baseras på samma teknik, kan båda köras lokalt genom att produkttesterna kopieras till dina anpassade tester.
+Eftersom testklasser är JUnit-tester kan de köras från vanliga Java ™ -IDE:er som Eclipse, IntelliJ och NetBeans. Eftersom både produktfunktionstester och anpassade funktionstester baseras på samma teknik, kan båda köras lokalt genom att produkttesterna kopieras till dina anpassade tester.
 
 När du kör dessa tester måste du dock ange olika systemegenskaper som förväntas av biblioteket `aem-testing-clients` (och det underliggande Sling Testing Clients).
 
@@ -148,15 +147,15 @@ Systemegenskaperna är följande.
 
 | Egenskap | Beskrivning | Exempel |
 |-------------------------------------|------------------------------------------------------------------|-------------------------|
-| `sling.it.instances` | antal instanser, för att matcha molntjänsten ska anges till `2` | `2` |
-| `sling.it.instance.url.1` | ska anges till författarens URL | `http://localhost:4502` |
-| `sling.it.instance.runmode.1` | den första instansens körningsläge ska anges till `author` | `author` |
-| `sling.it.instance.adminUser.1` | ska anges till författaradministratörsanvändaren. | `admin` |
-| `sling.it.instance.adminPassword.1` | ska anges som författarens administratörslösenord. |                         |
-| `sling.it.instance.url.2` | ska anges till publicerings-URL:en | `http://localhost:4503` |
-| `sling.it.instance.runmode.2` | körningsläge för den andra instansen, ska anges till `publish` | `publish` |
-| `sling.it.instance.adminUser.2` | ska ställas in för publiceringsadministratörsanvändaren. | `admin` |
-| `sling.it.instance.adminPassword.2` | ska anges till administratörslösenordet för publicering. |                         |
+| `sling.it.instances` | Antalet instanser som ska matcha molntjänsten ska anges till `2`. | `2` |
+| `sling.it.instance.url.1` | Ange författar-URL. | `http://localhost:4502` |
+| `sling.it.instance.runmode.1` | Körningsläge för den första instansen. Ange till `author`. | `author` |
+| `sling.it.instance.adminUser.1` | Ange som författaradministratörsanvändare. | `admin` |
+| `sling.it.instance.adminPassword.1` | Ange administratörslösenord för författare. |                         |
+| `sling.it.instance.url.2` | anges till publicerings-URL. | `http://localhost:4503` |
+| `sling.it.instance.runmode.2` | Körningsläge för den andra instansen. Ange till `publish`. | `publish` |
+| `sling.it.instance.adminUser.2` | Ange att administratörsanvändare ska publiceras. | `admin` |
+| `sling.it.instance.adminPassword.2` | Ange att administratörslösenord ska publiceras. |                         |
 
 
 

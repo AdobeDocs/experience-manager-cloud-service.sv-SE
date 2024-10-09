@@ -5,7 +5,7 @@ exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: ff8c7fb21b4d8bcf395d28c194a7351281eef45b
+source-git-commit: 9cde6e63ec452161dbeb1e1bfb10c75f89e2692c
 workflow-type: tm+mt
 source-wordcount: '1000'
 ht-degree: 0%
@@ -147,7 +147,7 @@ Om du valde certifikattypen *Kundhanterat certifikat* utför du följande steg.
 
    När du har överfört ett giltigt EV/OV-certifikat markeras domänens status som **Verifierad** i tabellen **Domäninställningar**.
 
-   ![Domäninställningstabellen visar verifierad status.](/help/implementing/cloud-manager/assets/domain-settings-verified.png)
+   ![Domäninställningstabellen visar verifierad status](/help/implementing/cloud-manager/assets/domain-settings-verified.png).
 
 <!--
 ![Customer managed certificate steps](/help/implementing/cloud-manager/assets/cdn/cdn-create-customer-cert.png)

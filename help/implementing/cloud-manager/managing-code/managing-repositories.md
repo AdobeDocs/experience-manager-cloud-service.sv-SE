@@ -4,7 +4,7 @@ description: Lär dig hur du lägger till, visar och tar bort Git-databaser i Cl
 exl-id: 6e1cf636-78f5-4270-9a21-38b4d5e5a0b0
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: b35b25bcd62c28f7894171b7b2269fa46d612686
+source-git-commit: 9cde6e63ec452161dbeb1e1bfb10c75f89e2692c
 workflow-type: tm+mt
 source-wordcount: '708'
 ht-degree: 0%
@@ -54,7 +54,7 @@ En användare måste ha rollen **Distributionshanteraren** eller **Affärsägare
 
 Klicka på **Lägg till databas** på sidan **Databaser** i det övre högra hörnet.
 
-![Dialogrutan Lägg till databas.](assets/repository-add.png)
+![Dialogrutan Lägg till databas](assets/repository-add.png)
 *Dialogrutan Lägg till databas.*
 
 Cloud Manager har stöd för två typer av databaser: databaser som hanteras med Adobe (**Adobe-databas**) och självhanterade databaser (**Privat databas**). De obligatoriska fälten för konfiguration varierar beroende på vilken typ av databas du väljer att lägga till. Mer information finns i följande:

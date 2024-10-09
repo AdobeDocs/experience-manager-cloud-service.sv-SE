@@ -3,7 +3,7 @@ title: Lägg till externa databaser i Cloud Manager (tidig Adobe)
 description: Lär dig hur du lägger till en extern databas i Cloud Manager. Cloud Manager stöder integrering med GitHub-, GitLab- och Bitbucket-databaser.
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: b90ace2250277005d8ac250c841104c93298a605
+source-git-commit: 9cde6e63ec452161dbeb1e1bfb10c75f89e2692c
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Lär dig hur du lägger till en extern databas i Cloud Manager. Cloud Manager st
 
 >[!NOTE]
 >
->Den här funktionen är bara tillgänglig för [det tidiga adopterprogrammet](/help/implementing/cloud-manager/release-notes/current.md#early-adoption).
+>Den här funktionen är bara tillgänglig för [det tidiga adoptionsprogrammet](/help/implementing/cloud-manager/release-notes/current.md#early-adoption).
 
 ## Konfigurera en extern databas
 

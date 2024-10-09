@@ -3,9 +3,9 @@ title: Lägg till en Edge Delivery-webbplats i Cloud Manager
 description: Lär dig hur du lägger till en Edge Delivery-webbplats i ditt produktionsprogram eller sandlådeprogram.
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: f684a52ca3b51d1aa4412122f7ad28dde3e2672f
+source-git-commit: 9cde6e63ec452161dbeb1e1bfb10c75f89e2692c
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,6 @@ Klicka på **Lägg till plats** i sidans övre högra hörn.
 
 När databasen har verifierats ändras dess status i tabellen Edge Delivery-webbplatser till en grön cirkel med en vit bock inuti.
 
-I samma tabell kan du klicka på ![Information om Edge Delivery webbplats.](https://spectrum.adobe.com/static/icons/workflow_18/Smock_InfoOutline_18_N.svg) om du vill visa information om din plats, t.ex. den verifierade URL:en för databasen och URL:en för webbplatsen Förhandsvisa och produktion.
+I samma tabell klickar du på ![Information om Edge Delivery-webbplatsen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_InfoOutline_18_N.svg) för att visa information om din plats, t.ex. den verifierade URL:en för databasen och URL:en för webbplatsen för förhandsgranskning och produktion.
 
 

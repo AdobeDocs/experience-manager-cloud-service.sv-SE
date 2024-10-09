@@ -5,9 +5,9 @@ exl-id: 9fa0c5eb-415d-4e56-8136-203d59be927e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
+source-git-commit: 9cde6e63ec452161dbeb1e1bfb10c75f89e2692c
 workflow-type: tm+mt
-source-wordcount: '1850'
+source-wordcount: '1836'
 ht-degree: 0%
 
 ---
@@ -107,15 +107,15 @@ Följ de här stegen för att aktivera ditt konto som New Relic-användare.
 
    ![Ange e-postadress](/help/implementing/cloud-manager/assets/new-relic/newrelic-2.png)
 
-1. New Relic skickar ett e-postmeddelande med en länk för att bekräfta kontot.
+1. New Relic skickar ett e-postmeddelande till dig med en länk för att bekräfta kontot.
 
 Om du inte får något bekräftelsemeddelande från New Relic kan du läsa [felsökningsavsnittet](#troubshooting).
 
-## Åtkomst till New Relic One {#accessing-new-relic}
+## Använd New Relic One {#accessing-new-relic}
 
 När du har [aktiverat ditt New Relic-konto](#activate-account) kan du komma åt New Relic One via Cloud Manager eller direkt.
 
-Så här kommer du åt New Relic One via Cloud Manager:
+**Så här kommer du åt New Relic One från Cloud Manager:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
@@ -129,7 +129,7 @@ Så här kommer du åt New Relic One via Cloud Manager:
 
 1. Logga in på New Relic One på den nya webbläsarfliken som öppnas.
 
-Få direktåtkomst till New Relic One:
+**Så här kommer du åt New Relic One direkt:**
 
 1. Gå till New Relic inloggningssida på [`https://login.newrelic.com/login`](https://login.newrelic.com/login)
 
@@ -137,7 +137,7 @@ Få direktåtkomst till New Relic One:
 
 ### Verifiera din e-postadress {#verify-email}
 
-Om du uppmanas att verifiera din e-postadress under inloggningen på New Relic One innebär det att din e-postadress är kopplad till flera konton. På så sätt kan du välja vilket konto du vill få åtkomst till.
+Om du uppmanas att verifiera din e-postadress under inloggningen på New Relic One innebär det att din e-postadress är kopplad till flera konton. Du kan välja vilket konto du vill få åtkomst till.
 
 Om du inte verifierar din e-postadress försöker New Relic logga in dig med den senast skapade användarposten som är kopplad till din e-postadress. Du kan undvika att verifiera din e-post under varje inloggning genom att klicka i kryssrutan **Kom ihåg mig** på inloggningsskärmen.
 
@@ -157,15 +157,15 @@ Om du har lagts till som en New Relic One-användare enligt beskrivningen i avsn
 
    ![Ange e-postadress](/help/implementing/cloud-manager/assets/new-relic/newrelic-2.png)
 
-1. New Relic skickar ett e-postmeddelande med en länk för att bekräfta kontot.
+1. New Relic skickar ett e-postmeddelande till dig med en länk för att bekräfta kontot.
 
 Om du har slutfört registreringsprocessen och inte kan logga in på ditt konto på grund av felmeddelanden i e-post eller lösenord loggar du en supportanmälan på [Admin Console](https://adminconsole.adobe.com/).
 
-Om du inte får något mejl från New Relic:
+Om du inte får något e-postmeddelande från New Relic gör du följande:
 
 * Kontrollera [skräppostfiltren](https://docs.newrelic.com/docs/accounts/accounts-billing/account-setup/create-your-new-relic-account/).
 * Om tillämpligt, [lägg till New Relic i e-postmeddelandet tillåtelselista](https://docs.newrelic.com/docs/accounts/accounts/account-maintenance/account-email-settings/#email-whitelist).
-* Om inget av förslagen hjälper dig kan du ge feedback på supportanmälan och Adobe Support-teamet kan hjälpa dig.
+* Om inget av förslagen hjälper, ge feedback på supportanmälan.
 
 ## Begränsningar {#limitations}
 
@@ -183,7 +183,9 @@ Följande begränsningar gäller när du lägger till användare i New Relic One
 
 Om du vill ha mer hjälp eller mer information om New Relic One-erbjudanden för ditt AEM as a Cloud Service-program kan du öppna ett supportärende via [AEM supportportalen](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 
-## Frågor och svar om New Relic One {#faqs}
+## Frågor och svar {#faqs}
+
++++
 
 ### Vad övervakar Adobe med New Relic One? {#adobe-monitor}
 
@@ -200,18 +202,30 @@ Obs!
 * Varje program använder en licensnyckel.
 * AEM as a Cloud Service-miljöer rapporterar till endast ett New Relic One-konto.
 * Full övervakning av mätvärden och händelser för båda New Relic One bevaras i sju dagar.
++++
+
++++
 
 ### Skickar Adobe varningsmeddelanden från New Relic One? {#alerting-new-relic}
 
 Adobe ger åtkomst till New Relic One endast i observationssyfte och använder det inte för kundvarningar eller interna varningar. Meddelanden om eventuella incidenter skickas med [användarmeddelandeprofiler](/help/journey-onboarding/notification-profiles.md).
++++
+
++++
 
 ### Vem har åtkomst till New Relic One molntjänstdata? {#access-new-relic-cloud}
 
-Upp till 30 medlemmar i ditt team har full läsbehörighet. Läsåtkomst inkluderar alla APM-värden som samlas in av New Relic One-agenten.
+Upp till 30 medlemmar i ditt team har full läsbehörighet. Läsåtkomst innefattar alla APM-värden som samlats in av New Relic One Agent.
++++
+
++++
 
 ### Stöds anpassad SSO-konfiguration? {#custom-sso}
 
 Anpassad SSO-konfiguration stöds inte för New Relic One-kontot som tillhandahålls av Adobe.
++++
+
++++
 
 ### Vad händer om jag redan har en lokal New Relic-prenumeration? {#new-relic-subscription}
 
@@ -225,6 +239,11 @@ Adobe support övervakar AEM as a Cloud Service-programmet med New Relic One och
 >
 >Om du vill visa båda datauppsättningarna inom New Relic One måste användaren ha rätt behörigheter och använda samma inloggningsmetod för båda kontona (Adobe New Relic One och kundhanterade New Relic-konton).
 
++++
+
++++
+
 ### APM-agenten för mitt New Relic One-konto har stoppats. Vad hände? {#deactivated}
 
 [APM-agenter stoppas](#limitations) om ingen aktivitet identifieras på 90 dagar eller mer. Följ samma steg i avsnittet [Aktivera ditt New Relic One-underkonto](#activate-sub-account) i det här dokumentet om du vill återaktivera ditt New Relic One-underkonto.
++++

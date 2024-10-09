@@ -6,9 +6,9 @@ exl-id: 67edca16-159e-469f-815e-d55cf9063aa4
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 500e1b78fb9688601848fc17f312fc23be83bcb0
+source-git-commit: 9cde6e63ec452161dbeb1e1bfb10c75f89e2692c
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1310'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,17 @@ ht-degree: 0%
 
 # Lägg till en produktionspipeline {#configure-production-pipeline}
 
-Lär dig hur du konfigurerar produktionspipelines för att skapa och distribuera kod till produktionsmiljöer. En produktionspipeline distribuerar kod först till scenmiljön och när den godkänns distribueras samma kod till produktionsmiljön.
+Lär dig hur du konfigurerar produktionspipelines för att skapa och distribuera kod till produktionsmiljöer. En produktionspipeline distribuerar kod först till scenmiljön. Vid godkännande distribueras samma kod till produktionsmiljön.
 
 En användare måste ha rollen **[Distributionshanteraren](/help/onboarding/cloud-manager-introduction.md#role-based-permissions)** för att kunna konfigurera produktionspipelines.
 
 >[!NOTE]
 >
->Det går inte att konfigurera en produktionspipeline förrän programskapandet är klart, en Git-databas har minst en gren och en uppsättning för produktions- och stagningsmiljö skapas.
+>Det går inte att konfigurera en produktionspipeline förrän följande har inträffat:
+>
+>* Programmet skapas.
+>* Git-databasen har minst en gren.
+>* Produktions- och mellanlagringsmiljöerna skapas.
 
 Innan du börjar distribuera koden måste du konfigurera dina pipeline-inställningar från [!UICONTROL Cloud Manager].
 
@@ -36,7 +40,7 @@ När du har konfigurerat programmet och har minst en miljö med användargränss
 
 >[!TIP]
 >
->Innan du konfigurerar en pipeline för användargränssnitt bör du läsa [AEM snabbplatsskapande resa](/help/journey-sites/quick-site/overview.md) för att få en komplett guide med hjälp av det lättanvända AEM snabbplatsverktyget. Den här resan hjälper dig att effektivisera utvecklingen av AEM sajt, så att du snabbt kan anpassa din sajt utan någon AEM bakomliggande kunskap.
+>Innan du konfigurerar en pipeline för framtagning bör du läsa [AEM Quick Site Creation Journey](/help/journey-sites/quick-site/overview.md) för att få en heltäckande guide med hjälp av det lättanvända AEM Quick Site Creation-verktyget. Den här resan kan hjälpa er att effektivisera utvecklingen av AEM sajt, så att ni snabbt kan anpassa sajten utan någon AEM kunskap om bakomliggande behov.
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation
 
@@ -50,27 +54,27 @@ När du har konfigurerat programmet och har minst en miljö med användargränss
 
    **Utlösare för distribution** - Du har följande alternativ när du definierar distributionsutlösare för att starta pipeline.
 
-   * **Manuell** - Använd det här alternativet om du vill starta pipelinen manuellt.
-   * **Vid Git-ändringar** - Detta alternativ startar CI/CD-flödet när implementeringar läggs till i den konfigurerade Git-grenen. Med det här alternativet kan du fortfarande starta pipelinen manuellt efter behov.
+   * **Manuell** - Starta pipelinen manuellt.
+   * **Vid Git-ändringar** - Startar CI/CD-flödet när implementeringar läggs till i den konfigurerade Git-grenen. Med det här alternativet kan du fortfarande starta pipelinen manuellt efter behov.
 
    **Beteende vid viktiga måttfel** - Under pipeline-konfiguration eller redigering kan **Distributionshanteraren** definiera pipelinens beteende när ett viktigt fel påträffas i någon av kvalitetsportarna. De tillgängliga alternativen är:
 
-   * **Fråga varje gång** - Det här är standardinställningen och kräver manuell åtgärd vid viktiga fel.
-   * **Misslyckades omedelbart** - Om du väljer det här alternativet avbryts pipelinen när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt avvisar varje fel.
-   * **Fortsätt omedelbart** - Om du väljer det här alternativet fortsätter pipeline automatiskt när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt godkänner varje fel.
+   * **Fråga varje gång** - Standardinställning. Det kräver manuell åtgärd vid varje viktigt fel.
+   * **Misslyckades omedelbart** - Om du väljer det här alternativet avbryts pipelinen när ett viktigt fel inträffar. Den här processen emulerar i princip en användare som manuellt avvisar varje fel.
+   * **Fortsätt omedelbart** - Om du väljer det här alternativet fortsätter pipelinen automatiskt när ett viktigt fel inträffar. Den här processen emulerar i princip en användare som manuellt godkänner varje fel.
 
    ![Konfiguration av produktionspipeline](/help/implementing/cloud-manager/assets/configure-pipeline/production-pipeline-configuration.png)
 
-1. På fliken **Source Code** måste du välja vilken typ av kod som pipeline ska bearbeta.
+1. På fliken **Source Code** väljer du vilken typ av kod som pipeline ska bearbeta.
 
-   * **[Fullständig stackkod](#full-stack-code)**
-   * **[Måldistribution](#targeted-deployment)**
+   * **[Konfigurera en fullständig stackkodspipeline](#full-stack-code)**
+   * **[Konfigurera en riktad distributionsprocess](#targeted-deployment)**
 
 Mer information om olika typer av pipelines finns i [CI/CD Pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md).
 
 Stegen för att slutföra skapandet av produktionsflödet varierar beroende på vilken typ av källkod du har valt. Följ länkarna ovan för att gå till nästa avsnitt i det här dokumentet så att du kan slutföra konfigurationen av din pipeline.
 
-### Fullständig stapelkod {#full-stack-code}
+### Konfigurera en fullständig stackkodspipeline {#full-stack-code}
 
 En fullständig kodrapport distribuerar samtidigt kodbyggen i bakände och i framände som innehåller en eller flera AEM serverprogram tillsammans med HTTPD/Dispatcher-konfiguration.
 
@@ -78,59 +82,59 @@ En fullständig kodrapport distribuerar samtidigt kodbyggen i bakände och i fra
 >
 >Om det redan finns en kodrapport med fullständig stapel för den valda miljön inaktiveras den här markeringen.
 
-Följ de här stegen för att slutföra konfigurationen av produktionsflödet för kod i helhög.
+**Så här konfigurerar du en fullständig stackkodspipeline:**
 
-1. På fliken **Source Code** måste du definiera följande alternativ.
+1. Ange följande alternativ på fliken **Source-kod**.
 
-   * **Databas** - Det här alternativet definierar från vilken Git-repo pipelinen ska hämta koden.
+   * **Databas** - Definierar från vilken Git-databas som pipeline ska hämta koden.
 
    >[!TIP]
    > 
-   >Läs dokumentet [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/managing-repositories.md) om du vill veta mer om hur du lägger till och hanterar databaser i Cloud Manager.
+   >Mer information om hur du lägger till och hanterar databaser i Cloud Manager finns i [Lägg till och hantera databaser](/help/implementing/cloud-manager/managing-code/managing-repositories.md).
 
-   * **Git Branch** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
-      * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet hittar de grenar som matchar dig.
+   * **Git-grenen** - Definierar från vilken gren den valda pipelinen ska hämta koden.
+Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet hittar de matchande förgreningarna som du kan använda för att välja.
    * **Ignorera webbnivåkonfiguration** - När det här alternativet är markerat distribueras inte webbnivåkonfigurationen.
-   * **Pausa innan du distribuerar till produktion** - Det här alternativet pausar pipelinen innan den distribueras till produktion.
-   * **Schemalagd** - Med det här alternativet kan användaren aktivera den schemalagda produktionsdistributionen.
+   * **Pausa innan du distribuerar till produktion** - Pausar pipeline innan du distribuerar till produktion.
+   * **Schemalagd** - Gör att användaren kan aktivera den schemalagda produktionsdistributionen.
 
    ![Fullständig stackkod](/help/implementing/cloud-manager/assets/configure-pipeline/production-pipeline-fullstack.png)
 
-1. Tryck eller klicka på **Fortsätt** för att gå vidare till fliken **Experience Audit** där du kan definiera sökvägarna som alltid ska inkluderas i Experience Audit.
+1. Klicka på **Fortsätt** om du vill gå vidare till fliken **Experience Audit** där du kan definiera sökvägarna som alltid ska inkluderas i Experience Audit.
 
    ![Lägg till Experience Audit](/help/implementing/cloud-manager/assets/configure-pipeline/add-prod-audit.png)
 
 1. Ange sökvägar som ska inkluderas i Experience Audit.
 
-   * Mer information finns i dokumentet [Experience Audit Testing](/help/implementing/cloud-manager/experience-audit-dashboard.md#configuration).
+   * Mer information finns i [Experience Audit Testing](/help/implementing/cloud-manager/experience-audit-dashboard.md#configuration).
 
 1. Klicka på **Spara** för att spara din pipeline.
 
-Sökvägar som har konfigurerats för Experience Audit skickas till tjänsten och utvärderas utifrån prestanda-, hjälpmedels-, SEO-test (sökmotoroptimering), bästa praxis och PWA-tester (Progressive Web App) när pipeline körs. Mer information finns i [Om Experience Audit Results](/help/implementing/cloud-manager/experience-audit-dashboard.md).
+När pipeline körs skickas och utvärderas sökvägar som konfigurerats för Experience Audit baserat på prestanda, tillgänglighet, SEO, bästa praxis och PWA-tester. Mer information finns i [Om Experience Audit Results](/help/implementing/cloud-manager/experience-audit-dashboard.md).
 
 Pipelinen sparas och du kan nu [hantera dina pipelines](managing-pipelines.md) på kortet **Pipelines** på sidan **Programöversikt**.
 
-### Målinriktad distribution {#targeted-deployment}
+### Konfigurera ett riktat distributionsflöde {#targeted-deployment}
 
 En riktad distribution distribuerar bara kod för utvalda delar av AEM. I en sådan distribution kan du välja att **Inkludera** ska vara en av följande typer av kod:
 
 * **Konfig** - Konfigurera inställningar för olika funktioner i AEM.
    * Se [Använda konfigurationsförlopp](/help/operations/config-pipeline.md) för en lista över konfigurationer som stöds, som omfattar vidarebefordran av loggar, rensningsrelaterade underhållsåtgärder och olika CDN-konfigurationer, och för att hantera dem i din databas så att de distribueras korrekt.
-   * När du kör en riktad distributionsprocess distribueras konfigurationerna, förutsatt att de sparas i den miljö, databas och gren som du har definierat i pipeline.
+   * När en riktad distributionsprocess körs distribueras konfigurationer, förutsatt att de sparats i den miljö, databas och gren som definierats i pipeline.
    * Det kan bara finnas en konfigurationspipeline per miljö.
 * **Front End Code** - Konfigurera JavaScript och CSS för frontdelen av AEM.
    * Med rörledningar kan utvecklarna bli mer självständiga och utvecklingsprocessen kan accelereras.
    * I dokumentet [Utveckla platser med frontdelspipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) finns information om hur den här processen fungerar tillsammans med vissa överväganden som du bör vara medveten om för att få ut mesta möjliga av processen.
-* **Webbnivåkonfiguration** - Konfigurera dispatcheregenskaper för att lagra, bearbeta och leverera webbsidor till klienten.
+* **Webbnivåkonfiguration** - Konfigurera Dispatcher-egenskaper för att lagra, bearbeta och leverera webbsidor till klienten.
    * Mer information finns i dokumentet [CI/CD Pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#web-tier-config-pipelines).
    * Om det finns en kodrapport på webbnivå för den valda miljön är det här valet inaktiverat.
-   * Om du har en befintlig pipeline som distribueras i en hel hög till en miljö, kommer den befintliga konfigurationen på hela stacken att ignoreras om du skapar en konfigurationspipeline för en webbskikt för samma miljö.
+   * Om du skapar en webbskiktskonfigurationspipeline för en miljö med en befintlig pipeline med en hel hög ignoreras webbskiktskonfigurationen i pipeline med en hel hög. Den här ändringen påverkar bara webbnivåkonfigurationen i den miljön.
 
 >[!NOTE]
 >
->Rörledningar för webbnivå och konfiguration stöds inte i privata databaser. Mer information och en fullständig lista över begränsningar finns i dokumentet [Lägga till privata databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/private-repositories.md).
+>Rörledningar för webbnivå och konfiguration stöds inte i privata databaser. Mer information och en fullständig lista över begränsningar finns i [Lägga till privata databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/private-repositories.md).
 
-Stegen för att slutföra skapandet av din produktion är riktade distributionsflöden desamma när du väljer en distributionstyp.
+**Så här konfigurerar du en riktad distributionspipeline:**
 
 1. Välj vilken distributionstyp du behöver.
 
@@ -152,7 +156,7 @@ Stegen för att slutföra skapandet av din produktion är riktade distributionsf
       * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet. Här hittas de matchande grenar som du kan välja.
    * **Kodplats** - Det här alternativet definierar sökvägen i grenen för den valda rapporten från vilken pipelinen ska hämta koden.
    * **Pausa innan du distribuerar till produktion** - Det här alternativet pausar pipelinen innan den distribueras till produktion.
-   * **Schemalagd** - Med det här alternativet kan användaren aktivera den schemalagda produktionsdistributionen. Endast tillgängligt för riktade distributioner på webbnivå.
+   * **Schemalagd** - Gör att användaren kan aktivera den schemalagda produktionsdistributionen. Endast tillgängligt för riktade distributioner på webbnivå.
 
    ![Konfigurera pipeline](/help/implementing/cloud-manager/assets/configure-pipeline/prod-pipeline-config-deployment.png)
 
@@ -162,9 +166,9 @@ Pipelinen sparas och du kan nu [hantera dina pipelines](managing-pipelines.md) p
 
 ## Hoppa över Dispatcher-paket {#skip-dispatcher-packages}
 
-Om du vill att dispatcherpaket ska byggas som en del av pipeline, men inte vill att de ska publiceras för att skapa lagring, kan du inaktivera publicering av dem, vilket kan minska körningstiden för pipeline.
+Om du vill skapa Dispatcher-paket i pipeline utan att publicera dem för att bygga lagring kan du inaktivera publiceringsalternativet. Om du gör det kan det hjälpa till att minska körtiden.
 
-Följande konfiguration för att inaktivera publiceringsdispatcherpaket måste läggas till via projektfilen `pom.xml`. Den baseras på en miljövariabel, som fungerar som en flagga som du kan ange i Cloud Manager byggbehållare för att definiera när dispatcherpaket ska ignoreras.
+Följande konfiguration för att inaktivera publicering av Dispatcher-paket måste läggas till via projektfilen `pom.xml`. En miljövariabel fungerar som en flagga som du anger i Cloud Manager byggbehållare för att avgöra när Dispatcher-paket ska ignoreras.
 
 ```xml
 <profile>

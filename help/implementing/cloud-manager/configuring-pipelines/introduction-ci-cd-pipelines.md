@@ -1,14 +1,14 @@
 ---
-title: CI/CD-rör
+title: Introduktion till CI-/CD-ledningar
 description: Lär dig mer om Cloud Manager pipelines för CI/CD och hur de kan användas för att distribuera koden effektivt.
 index: true
 exl-id: 40d6778f-65e0-4612-bbe3-ece02905709b
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 7f6e8f91716b679f9715f9df33ae59aa5bf70751
+source-git-commit: 7a370ee0ab77046d128ae260af2575d50e655254
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1488'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Lär dig mer om Cloud Manager pipelines för CI/CD (Continuous Integration/Continuous Delivery) och hur de kan användas för att distribuera koden effektivt.
 
-## Introduktion {#introduction}
+## Introduktion till CI-/CD-ledningar {#introduction}
 
 En CI/CD-pipeline i Cloud Manager är ett sätt att skapa kod från en källdatabas och distribuera den till en miljö. En händelse utlöser en pipeline, till exempel en pull-begäran från en källkodsdatabas som Git (d.v.s. en kodändring). Den kan också aktiveras enligt ett regelbundet schema för att matcha en release-cadence.
 

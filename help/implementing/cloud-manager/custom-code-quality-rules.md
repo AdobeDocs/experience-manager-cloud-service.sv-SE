@@ -5,7 +5,7 @@ exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
+source-git-commit: 9cde6e63ec452161dbeb1e1bfb10c75f89e2692c
 workflow-type: tm+mt
 source-wordcount: '4513'
 ht-degree: 0%
@@ -794,7 +794,7 @@ Ett vanligt problem är att använda noder med namnet `config` i komponentdialog
 * **Allvarlighetsgrad**: Större
 * **Sedan**: Version 2019.6.0
 
-På samma sätt som [Paket får inte innehålla en dubblett av OSGi-konfigurationsregeln ](#oakpal-package-osgi) är detta ett vanligt problem i komplexa projekt där samma nodsökväg skrivs till av flera separata innehållspaket. Även om beroenden för innehållspaket kan användas för att säkerställa ett konsekvent resultat är det bättre att undvika överlappningar helt och hållet.
+Ungefär som [Paket får inte innehålla regeln för duplicerade OSGi-konfigurationer](#oakpal-package-osgi) är detta ett vanligt problem i komplexa projekt där samma nodsökväg skrivs till av flera separata innehållspaket. Även om beroenden för innehållspaket kan användas för att säkerställa ett konsekvent resultat är det bättre att undvika överlappningar helt och hållet.
 
 ### Standardredigeringsläget får inte vara ett klassiskt användargränssnitt {#oakpal-default-authoring}
 
@@ -853,7 +853,7 @@ Kunder som använder omvänd replikering bör kontakta Adobe för att få altern
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
-Klientbibliotek i Experience Manager kan innehålla statiska resurser som bilder och teckensnitt. Så som beskrivs i dokumentet [Använda preprocessorer](/help/implementing/developing/introduction/clientlibs.md#using-preprocessors) måste dessa statiska resurser finnas i en underordnad mapp med namnet `resources` när proxierade klientbibliotek används för att effektivt referera till publiceringsinstanserna.
+Klientbibliotek i Experience Manager kan innehålla statiska resurser som bilder och teckensnitt. Så som beskrivs i dokumentet [Använda preprocessorer](/help/implementing/developing/introduction/clientlibs.md#using-preprocessors) måste dessa statiska resurser finnas i en underordnad mapp med namnet `resources` för att effektivt kunna refereras till på publiceringsinstanserna när du använder proxiderade klientbibliotek.
 
 #### Kod som inte uppfyller kraven {#non-compliant-proxy-enabled}
 

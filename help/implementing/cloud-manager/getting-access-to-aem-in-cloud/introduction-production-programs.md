@@ -5,7 +5,7 @@ exl-id: bb8d4a5a-b26a-4718-9327-149fedb87e6a
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
+source-git-commit: 9cde6e63ec452161dbeb1e1bfb10c75f89e2692c
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Ett produktionsprogram är avsett för ett team som är redo att börja skriva, bygga och testa kod i syfte att distribuera den för att hantera livstrafik.
 
-När du har [skapat produktionsprogrammet ](creating-production-programs.md) följer en [programskapandeguide](using-the-wizard.md) med dig genom de val som är beroende av vad användaren vill göra för att skapa programmet.
+När du har [skapat produktionsprogrammet](creating-production-programs.md) guidar en [programskapandeguide](using-the-wizard.md) användaren genom de val som beror på vad användaren har för syfte med att skapa programmet.
 
 ## Alternativ för att skapa program {#program-creation-options}
 

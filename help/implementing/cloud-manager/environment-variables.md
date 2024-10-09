@@ -5,7 +5,7 @@ exl-id: 5cdd5532-11fe-47a3-beb2-21967b0e43c6
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
+source-git-commit: 9cde6e63ec452161dbeb1e1bfb10c75f89e2692c
 workflow-type: tm+mt
 source-wordcount: '988'
 ht-degree: 0%
@@ -90,7 +90,7 @@ När du har skapat miljövariabler kan du uppdatera dem med knappen **Lägg till
 
 1. När du har gjort de nödvändiga konfigurationsändringarna väljer du **Spara**.
 
-[Som när du lägger till variabler ](#add-variables) visas en indikator med statusen **Uppdatering** överst i tabellen och bredvid de nyligen uppdaterade variablerna för att ange att miljön uppdateras med konfigurationen. När du är klar visas de uppdaterade miljövariablerna i tabellen.
+[Som när du lägger till variabler](#add-variables) visas en indikator med statusen **Uppdatering** högst upp i tabellen och bredvid de nyligen uppdaterade variabelerna för att ange att miljön uppdateras med konfigurationen. När du är klar visas de uppdaterade miljövariablerna i tabellen.
 
 >[!TIP]
 >
