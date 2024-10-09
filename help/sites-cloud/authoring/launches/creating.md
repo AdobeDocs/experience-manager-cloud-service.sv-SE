@@ -5,9 +5,9 @@ exl-id: 216ccb7a-1409-4f55-8be2-2b088f91a430
 solution: Experience Manager Sites
 feature: Authoring, Launches
 role: User
-source-git-commit: b5ded40d1cb8b8fab28583467b68c4586eecf1a0
+source-git-commit: c30ec18858c977f0701fef9bb2a7d3320e67dcba
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1100'
 ht-degree: 11%
 
 ---
@@ -159,7 +159,8 @@ Du kan klona en start från [startkonsolen](/help/sites-cloud/authoring/launches
 
 * Välj start genom att trycka på/klicka på miniatyrbilden.
 * Verktygsfältet visas. Välj Klona.
-   * Klonen visas i konsolen.
+   * Klonen skapas och visas i konsolen.
+   * **Starttitel** anger att det är en klon. Du kan uppdatera titeln genom att redigera [Starta konfigurationen](/help/sites-cloud/authoring/launches/editing.md#editing-a-launch-configuration) (**Egenskaper**).
 
 ## Ta bort en start {#deleting-a-launch}
 
