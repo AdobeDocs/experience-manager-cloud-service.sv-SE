@@ -5,9 +5,9 @@ exl-id: 3e410120-d08f-4d05-932f-07bc4440af2b
 solution: Experience Manager Sites
 feature: Authoring, Launches
 role: User
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: cc007536d14bd0464879b30d6303c24ccf15d2d0
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '897'
 ht-degree: 4%
 
 ---
@@ -105,9 +105,13 @@ Med Launes kan du:
 
 ## Startkonsolen {#the-launches-console}
 
-På startkonsolen får du en översikt över dina starter och kan agera på dem som visas. Konsolen kan nås av:
+På startkonsolen får du en översikt över dina starter och kan agera på dem som visas.
 
-* **Verktyg**-konsolen: **Verktyg**, **Webbplatser**, **Startar**.
+![Starta konsolen - Hantera innehåll](/help/sites-cloud/authoring/assets/launches-navigate-launches-console.png)
+
+Konsolen kan nås av:
+
+* **Verktyg**-konsolen: **Verktyg**, **Allmänt**, **Startar**.
 
 * **Startar konsolen** längst ned i avsnittet **Startar** i fältet **Referenser** när du navigerar i källinnehåll i webbplatskonsolen.
 
@@ -116,6 +120,3 @@ På startkonsolen får du en översikt över dina starter och kan agera på dem 
 * Knappen **Startar** längst upp till höger när du navigerar till startinnehåll i webbplatskonsolen:
 
   ![Startar alternativ i webbplatskonsolen](/help/sites-cloud/authoring/assets/launches-console-navigate-launch-content.png)
-
-* Eller direkt, till exempel med:
-  `https://<host>:<port>/libs/launches/content/launches.html`

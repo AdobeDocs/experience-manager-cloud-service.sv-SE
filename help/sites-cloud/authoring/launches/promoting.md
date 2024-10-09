@@ -5,7 +5,7 @@ exl-id: 5f5ed17c-43db-4ef6-ab79-c491326fa01c
 solution: Experience Manager Sites
 feature: Authoring, Launches
 role: User
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: b5ded40d1cb8b8fab28583467b68c4586eecf1a0
 workflow-type: tm+mt
 source-wordcount: '812'
 ht-degree: 0%
@@ -74,7 +74,9 @@ Du kan befordra starter från konsolen **Platser** eller konsolen **Startar**:
      >[!NOTE]
      >
      >Detta omfattar en enstaka start, om du har kapslade starter, se [Befordra en kapslad start](#promoting-a-nested-launch).
+
 1. Välj **Nästa** för att fortsätta.
+
 1. Du kan granska de sidor som ska befordras. De beror på vilket sidintervall du har valt:
 
    ![Granska kampanjen](/help/sites-cloud/authoring/assets/launches-promote-review.png)
