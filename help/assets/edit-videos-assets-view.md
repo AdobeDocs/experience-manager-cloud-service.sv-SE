@@ -4,14 +4,17 @@ description: Redigera videoklipp med  [!DNL Adobe Express] aktiverade alternativ
 role: User
 exl-id: 42b25935-e2ff-444f-97c8-b4ed56f3ef9e
 feature: Best Practices, Video, Interactive Videos
-source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
+source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
 
 # Redigera videofilmer i [!DNL Assets view] {#edit-videos}
+
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| ------------- | --------------------------- |---------|----|-----|
 
 Det är enkelt för Assets-användare att skapa varianter av videoinnehåll med de inbäddade [!DNL Adobe Express] snabbåtgärderna för video. Snabbåtgärder i [!DNL Assets view] som drivs av [!DNL Adobe Express] innehåller användarvänliga videoredigeringsalternativ som beskärningsvideo, storleksändra video, trimma video och konvertera video till GIF.
 

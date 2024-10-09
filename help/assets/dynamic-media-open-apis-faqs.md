@@ -3,14 +3,17 @@ title: Vanliga frågor om Dynamic Media med OpenAPI-funktioner
 description: Vanliga frågor om Dynamic Media med OpenAPI-funktioner
 role: User
 exl-id: 3450e050-4b0b-4184-8e71-5e667d9ca721
-source-git-commit: dcc233be4d1bb84534aaef64316406bb960ce51d
+source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1496'
 ht-degree: 0%
 
 ---
 
 # Vanliga frågor om Dynamic Media med OpenAPI-funktioner {#new-dynaminc-media-apis-frequently-asked-questions}
+
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| ------------- | --------------------------- |---------|----|-----|
 
 +++**Är alla resurser i Experience Manager Assets as a Cloud Service-databasen tillgängliga för sökning och leverans med Dynamic Media med OpenAPI-funktioner?**
 

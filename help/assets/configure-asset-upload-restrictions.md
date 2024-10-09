@@ -4,14 +4,17 @@ description: Konfigurera Adobe Experience Manager Assets för att begränsa vilk
 exl-id: 094c31f3-f2e9-4b44-9995-c76fb78ca458
 feature: Upload, Asset Ingestion
 role: User, Admin, Developer
-source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
+source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
 
 # Konfigurera överföringsbegränsningar för resurser {#configure-asset-upload-restrictions}
+
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| ------------- | --------------------------- |---------|----|-----|
 
 Du kan konfigurera Adobe Experience Manager Assets att begränsa vilken typ av resurser som användare kan överföra baserat på MIME-typen.
 

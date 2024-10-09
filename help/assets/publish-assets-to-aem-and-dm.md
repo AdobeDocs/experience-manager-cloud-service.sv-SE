@@ -4,14 +4,17 @@ description: Med Publish i Assets kan du publicera material till AEM och dynamis
 exl-id: 147c1c35-0d81-4458-b4ed-7541d2b0dd54
 feature: Publishing, Dynamic Media
 role: User
-source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
+source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1203'
 ht-degree: 0%
 
 ---
 
 # Publish Assets till AEM och Dynamic Media{#Publish-Assets-to-AEM-and-Dynamic-Media}
+
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| ------------- | --------------------------- |---------|----|-----|
 
 Med Experience Manager Assets kan du snabbt publicera material till Experience Manager och Dynamic Media i Assets-vyn. Detta garanterar att du hanterar dina resurser och sedan publicerar dem med [Assets-vyn utan att växla till administrationsvyn](/help/assets/overview.md##persona-based-experiences).
 

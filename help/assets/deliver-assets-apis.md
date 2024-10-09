@@ -2,14 +2,18 @@
 title: Leverans-API:er
 description: Lär dig hur du använder leverans-API:erna.
 role: User
-source-git-commit: deae260ce34a0801ee534ddadfb14823ef461a87
+exl-id: 806ca38f-2323-4335-bfd8-a6c79f6f15fb
+source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '555'
 ht-degree: 0%
 
 ---
 
 # Leverans-API:er {#delivery-apis}
+
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| ------------- | --------------------------- |---------|----|-----|
 
 Alla [godkända resurser](approve-assets.md) som är tillgängliga i resurskatalogen för Experience Manager kan [genomsökas](search-assets-api.md) och sedan levereras till integrerade program längre fram i kedjan med en leverans-URL.
 

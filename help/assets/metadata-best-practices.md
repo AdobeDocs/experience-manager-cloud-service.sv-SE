@@ -4,9 +4,9 @@ description: Lär dig mer om metadata och de effektivaste strategierna för att 
 role: User, Admin
 exl-id: d90519df-55a6-4e23-81ad-ff2365d71c0d
 feature: Metadata, Best Practices
-source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
+source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
 workflow-type: tm+mt
-source-wordcount: '1368'
+source-wordcount: '1383'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,9 @@ aem metadata
 experience manager metadata-->
 
 # Metadatahantering och bästa praxis {#metadata-best-practices}
+
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| ------------- |---------|----|-----|
 
 För att få ert företag att sticka ut och engagera fler kunder är det avgörande att ni använder högkvalitativa bilder, videor och andra digitala resurser. För att uppnå detta behöver ni en process där ni kan lägga till metadata i alla digitala resurser, så att de blir enkelt sökbara. Metadata är de data som innehåller viktig information om digitala resurser, inklusive resursens namn, typ, plats i en databas, ändringsdatum och associerade taggar. Metadata effektiviserar resurshanteringen, förbättrar sökbarheten och tillgängligheten samt säkerställer effektiv versionskontroll.
 

@@ -1,14 +1,18 @@
 ---
 title: Redigera bilder i Content Hub med Adobe Express
 description: Redigera bilder i Content Hub med Adobe Express
-source-git-commit: 5a968440c8841abe7af2c81c4af12258b7e4547f
+exl-id: c9777862-226c-4d39-87da-9c4a30437dc5
+source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
 
 # Redigera bilder i Content Hub {#edit-images-content-hub}
+
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| ------------- | --------------------------- |---------|----|-----|
 
 ![Redigera bilder i Content Hub med Adobe Express](assets/edit-images-content-hub.png)
 
@@ -49,5 +53,3 @@ Så här redigerar du bilder med Content Hub:
 1. Klicka på **[!UICONTROL Save as new asset]** för att spara resursen.
 
 Administratörer kan också konfigurera obligatoriska och valfria fält som visas när resurser läggs till i Content Hub, till exempel kampanjnamn, nyckelord, kanaler osv. Mer information finns i [Konfigurera Content Hub användargränssnitt](configure-content-hub-ui-options.md#configure-upload-options-content-hub).
-
-

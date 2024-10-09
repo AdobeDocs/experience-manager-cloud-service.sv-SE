@@ -3,14 +3,17 @@ title: Integrera AEM Assets med program längre fram i kedjan
 description: Integrera AEM Assets med program längre fram i kedjan
 role: User
 exl-id: abd48b5d-2b43-453c-8eb6-31ff509245ca
-source-git-commit: 3022551a38ab287d4d6ea131dcee88fb1b40e5b7
+source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '173'
 ht-degree: 0%
 
 ---
 
 # Integrera AEM Assets med program längre fram i kedjan {#integrate-dynamic-media-open-apis}
+
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| ------------- | --------------------------- |---------|----|-----|
 
 Alla [godkända resurser](/help/assets/approve-assets.md) som är tillgängliga i resurskatalogen för Experience Manager är tillgängliga för leverans till program längre fram i kedjan.
 

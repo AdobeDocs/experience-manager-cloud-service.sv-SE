@@ -4,14 +4,17 @@ description: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager]
 feature: Asset Ingestion, Asset Management, Asset Processing, Upload
 role: User, Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
+source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
 workflow-type: tm+mt
-source-wordcount: '3071'
+source-wordcount: '3089'
 ht-degree: 0%
 
 ---
 
 # Lägg till digitala resurser i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service] [!DNL Assets] {#add-assets-to-experience-manager}
+
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| ------------- | --------------------------- |---------|----|-----|
 
 [!DNL Adobe Experience Manager Assets] accepterar många typer av digitala resurser från många källor. Den lagrar binärfiler och skapade renderingar, kan hantera resurser med olika arbetsflöden och [!DNL Adobe Sensei]-tjänster, vilket möjliggör distribution via många kanaler över många ytor.
 

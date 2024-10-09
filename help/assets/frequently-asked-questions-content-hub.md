@@ -1,14 +1,17 @@
 ---
 title: Vanliga frågor och svar från Content Hub
 description: Få svar på några av de vanligaste frågorna och svaren om Content Hub.
-source-git-commit: 1d51a1e0858e975bc354ffd9c4b32c26aa1604af
+source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1093'
 ht-degree: 0%
 
 ---
 
 # Vanliga frågor om Content Hub {#content-hub-frequently-asked-questions}
+
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| ------------- | --------------------------- |---------|----|-----|
 
 ![Vanlig fråga från Content Hub](assets/content-hub-faqs.png)
 

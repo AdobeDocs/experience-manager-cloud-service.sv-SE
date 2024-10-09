@@ -9,14 +9,17 @@ topic-tags: Configuration
 feature: Asset Management, Configuration
 role: Admin
 exl-id: e96c8d68-74a6-4d61-82dc-20e619338d4b
-source-git-commit: 02ad83eb9fa9ed3bf06cf7fe0ef10fd9577f66a9
+source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1624'
 ht-degree: 0%
 
 ---
 
 # Konfigurera transkription i [!DNL Experience Manager Assets] {#configure-transcription-service}
+
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| ------------- | --------------------------- |---------|----|-----|
 
 Transkription är processen att översätta ljudet från en ljud- eller videofil till text (tal till text) med hjälp av taligenkänningstekniken.
 [!DNL Adobe Experience Manager Assets] har konfigurerats med [!DNL Azure Media Services] som automatiskt genererar textutskrift av det talade språket i en ljud- eller videofil som stöds i WebVTT-format (.vtt). När en ljud- eller videoresurs bearbetas i [!DNL Experience Manager Assets] genererar transkriberingstjänsten automatiskt texttranskriberingen av ljud- eller videoresursen och lagrar den på samma plats i Assets-databasen där den ursprungliga resursen finns. Med transkriberingstjänsten [!DNL Experience Manager Assets] kan marknadsförarna effektivt hantera sitt ljud- och videoinnehåll med ökad identifiering av textinnehållet och öka avkastningen på dessa resurser genom stöd för hjälpmedel och lokalisering.

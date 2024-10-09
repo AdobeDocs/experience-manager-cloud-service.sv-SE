@@ -4,14 +4,17 @@ description: Redigera bilder med  [!DNL Adobe Express] aktiverade alternativ och
 role: User
 exl-id: cfc4c7b7-da8c-4902-9935-0e3d4388b975
 feature: Best Practices, Interactive Images, Smart Crop, Smart Imaging
-source-git-commit: af5ca9c436dce1929f310d40369abf05e60836f8
+source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1122'
 ht-degree: 0%
 
 ---
 
 # Redigera bilder i [!DNL Assets view] {#edit-images-in-assets-view}
+
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| ------------- | --------------------------- |---------|----|-----|
 
 Assets vygränssnitt möjliggör grundläggande bildredigering som bygger på Adobe Express och är integrerad i användargränssnittet. Den här redigeringen inkluderar storleksändring, borttagning av bakgrund, beskärning och konvertering mellan JPEG och PNG-format. Dessutom går det att redigera Adobe Expressen avancerat via användargränssnittet i Assets-vyn.
 

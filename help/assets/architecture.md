@@ -5,14 +5,17 @@ contentOwner: AG
 feature: Asset Management, Asset Compute Microservices
 role: Architect
 exl-id: 0440c6a0-97c7-440e-a96e-629825d34a73
-source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
+source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
 workflow-type: tm+mt
-source-wordcount: '125'
-ht-degree: 6%
+source-wordcount: '143'
+ht-degree: 5%
 
 ---
 
 # Arkitektur för Assets som en [!DNL Cloud Service]-lösning {#assets-architecture}
+
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| ------------- | --------------------------- |---------|----|-----|
 
 [!DNL Experience Manager Assets] som [!DNL Cloud Service] baseras på [!DNL Adobe Experience Manager] och är en bra jämförelse med det senaste erbjudandet [!DNL Experience Manager] 6.5. Erbjudandet om [!DNL Cloud Service] har en anpassad arkitektur och funktionalitet som är en molnbaserad tjänst. Ändringar i den underliggande arkitekturen tillåter inte att alla Experience Manager 6.5-funktioner ingår i [!DNL Cloud Service].
 

@@ -2,14 +2,17 @@
 title: Integrera fjärr-AEM Assets med AEM Sites
 description: Lär dig hur du konfigurerar och ansluter AEM webbplatser med Godkänd AEM Assets.
 exl-id: 382e6166-3ad9-4d8f-be5c-55a7694508fa
-source-git-commit: e2c0c848c886dc770846d064e45dcc52523ed8e3
+source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
 
 # Integrera fjärr-AEM Assets med AEM Sites  {#integrate-approved-assets}
+
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| ------------- | --------------------------- |---------|----|-----|
 
 Effektiv hantering av digitala resurser är avgörande för att ni ska kunna leverera engagerande och enhetliga varumärkesupplevelser på olika onlineplattformar. Dynamic Media med OpenAPI-funktioner förbättrar den digitala resurshanteringen genom smidig integrering mellan AEM Sites och AEM Assets as a Cloud Service. Med den här innovativa funktionen kan ni enkelt dela och hantera olika typer av godkända digitala resurser i flera AEM miljöer, vilket effektiviserar arbetsflödena för webbplatsförfattare och redaktörer.
 

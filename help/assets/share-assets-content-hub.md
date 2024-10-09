@@ -2,15 +2,18 @@
 title: Dela Assets i [!DNL the Content Hub]
 description: Dela Assets i [!DNL the Content Hub]
 role: User
-source-git-commit: 5a968440c8841abe7af2c81c4af12258b7e4547f
+exl-id: 5284d229-1596-40bf-aa5f-af4b6500ebdf
+source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
 
-
 # Dela resurser i Content Hub {#search-assets-as-a-link}
+
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| ------------- | --------------------------- |---------|----|-----|
 
 ![Dela banderollbild för resurser](assets/share-assets-banner.png)
 
@@ -61,7 +64,3 @@ När länken för resurserna har delats kan de behöriga mottagarna klicka på l
 Klicka på den delade länken och klicka på nedladdningsikonen som finns på resurskortet för att hämta en resurs.  Du kan också markera flera resurser och klicka på **[!UICONTROL Download]**. <!--You can either download original assets or Original+Renditions of an asset.--> [!DNL The Content Hub] hämtar varje resurs en i taget till det lokala filsystemet.
 
 ![Använd delade länkar](assets/content-hub-access-shared-links.png)
-
-
-
-

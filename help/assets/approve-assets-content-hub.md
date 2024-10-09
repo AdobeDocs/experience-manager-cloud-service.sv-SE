@@ -1,14 +1,18 @@
 ---
 title: Godkänn resurser för Content Hub
 description: Lär dig hur du godkänner resurser i Assets as a Cloud Service och gör dem tillgängliga i Content Hub.
-source-git-commit: f540f5934c4acbed4d7eff51a5a4ac1484fcb765
+exl-id: fc849028-ab56-4388-b8d6-e36cac8f868f
+source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '699'
 ht-degree: 0%
 
 ---
 
 # Godkänn resurser för Content Hub {#approve-assets-content-hub}
+
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| ------------- | --------------------------- |---------|----|-----|
 
 ![Godkänn resurser för Content Hub](assets/content-hub-approve-assets.png)
 
@@ -98,6 +102,3 @@ Visningen av resurser som överförts med Content Hub beror på om du har [aktiv
 * Om **[!UICONTROL Auto-approval]**-växeln är inaktiverad visas inte de resurser som du överför med Content Hub automatiskt. Resurserna är tillgängliga i mappen `hydrated-assets` i din Assets as a Cloud Service-miljö. Navigera till mappen och [massredigera](#bulk-approve-assets-content-hub) statusen för dessa resurser till `Approved` för de resurser som ska visas i Content Hub.
 
 ![Content Hub godkännandeprocess](/help/assets/assets/content-hub-approval.png)
-
-
-

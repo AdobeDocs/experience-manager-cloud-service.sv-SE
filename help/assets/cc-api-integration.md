@@ -5,14 +5,17 @@ contentOwner: AG
 feature: Upload, Asset Processing, Publishing, Asset Compute Microservices
 role: User, Admin
 exl-id: 4cff355e-d12c-44c7-b519-4cc37f49e396
-source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
+source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
 
 # Generera variationer av resurser med hjälp av [!DNL Adobe Creative Cloud]-integrering {#content-automation}
+
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| ------------- | --------------------------- |---------|----|-----|
 
 Tillägget för innehållsautomatisering integrerar [!DNL Adobe Experience Manager Assets] som en [!DNL Cloud Service] - och [!DNL Adobe Creative Cloud]-API för att bearbeta dina resurser i stor skala. [!DNL Experience Manager] använder molnbaserade [tillgångsmikrotjänster](/help/assets/asset-microservices-overview.md) för att använda [!DNL Adobe Creative Cloud]-funktionerna och automatisera skapandet av resurser och mediehanteringen.
 
