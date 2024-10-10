@@ -4,7 +4,7 @@ description: Aktuell underhållsversionsinformation för  [!DNL Adobe Experience
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 7bc6d9a947a5ce7c56481eaec8a2f186caf36c64
+source-git-commit: 6fa6fc9015624bec9113a198285531a3bdd7e29c
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 0%
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 I följande avsnitt beskrivs de tekniska versionsinformationen för den aktuella underhållsutgåvan av Experience Manager as a Cloud Service.
 
-## Utgåva 18099 {#release-18099}
+## Utgåva 18175 {#release-18175}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 18099, som offentliggjordes den 9 oktober 2024. Den tidigare underhållsversionen var version 17964.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 18175, som offentliggjordes den 10 oktober 2024. Den tidigare underhållsversionen var version 17964. Utgåva 18099 har gjorts privat på grund av ett problem.
 
 Funktionsaktiveringen i 2024.10.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
-### Förbättringar {#enhancements-18099}
+### Förbättringar {#enhancements-18175}
 
 * ASSETS-38322: Aktivera händelsen http-begäran för AEM.
 * ASSETS-41448: Uppdatera paketet auth.ims som stöd för FI till gruppmappningar.
@@ -56,12 +56,11 @@ Funktionsaktiveringen i 2024.10.0 kommer att innehålla alla funktioner som finn
 * SKYOPS-85336: Uppdatera Sling Commons Threads till 3.3.0.
 * SKYOPS-86329: Uppdatera versioner av plattformstest för stöd för java 21 sdk.
 
-### Åtgärdade problem {#fixed-issues-18099}
+### Åtgärdade problem {#fixed-issues-18175}
 
 * CNTBF-298: Ta bort jcr:uid från CC-exporterade paket.
 * SKYOPS-83910: Åtgärda problem med samtidighet i SKYOPS-82371.
 * GRANITE-52876: Uppdatering till com.adobe.granite.ui.content 0.8.1448.
-* GRANITE-53088: Regression som infördes genom korrigeringen av SITES-11992.
 * GUIDES-14445: Generering av ursprungliga PDF misslyckas med ett fel som relaterar till hämtning av beroenden för Node.js.
 * GUIDES-16961: Titeln med `<conref>` kan inte matchas på panelerna Baslinje och Översättning i webbredigeraren.
 * GUIDES-17283: När du väljer alternativet **Använd metadata som lagts till i topicmeta** sprids inte metadataegenskaperna i dokumentägarna för utdata från Native PDF.
@@ -69,11 +68,11 @@ Funktionsaktiveringen i 2024.10.0 kommer att innehålla alla funktioner som finn
 
 Mer information om de nya och förbättrade guiderefunktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
-### Kända fel {#known-issues-18099}
+### Kända fel {#known-issues-18175}
 
 * FORMS-15818: Komponentbeskrivningsposten `OSGI-INF/com.adobe.aemfd.docmanager.impl.*.xml` hittade inte programsatser i serverloggar. Det här är ofarliga loggsatser.
 
-### Föråldrade funktioner och API:er {#deprecated-18099}
+### Föråldrade funktioner och API:er {#deprecated-18175}
 
 Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs i dokumentet [Inaktuella och Borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
 
@@ -93,11 +92,11 @@ Observera att Adobe håller på att uppdatera `com.day.cq.wcm.api`. Vissa av des
 
 * GRANITE-54165: Borttagen org.apache.jackrabbit.oak.plugins.blob i publikt API.
 
-### Säkerhetskorrigeringar {#security-18099}
+### Säkerhetskorrigeringar {#security-18175}
 
 AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan för din plattform. Denna underhållsrelease åtgärdar två identifierade sårbarheter, vilket stärker vårt engagemang för robust systemskydd.
 
-### Inbäddade tekniker {#embedded-tech-18099}
+### Inbäddade tekniker {#embedded-tech-18175}
 
 | Teknik | Version | Länk |
 |---|---|---|
