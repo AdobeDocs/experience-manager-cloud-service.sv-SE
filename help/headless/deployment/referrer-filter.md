@@ -5,9 +5,9 @@ feature: Headless, GraphQL API
 exl-id: e2e3d2dc-b839-4811-b5d1-38ed8ec2cc87
 solution: Experience Manager
 role: Admin, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 3096436f8057833419249d51cb6c15e6c28e9e13
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '322'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,13 @@ Detta gör du genom att lägga till en lämplig OSGi-konfiguration för referens
 
 Namnet på filen måste vara `org.apache.sling.security.impl.ReferrerFilter.cfg.json`.
 
+## Exempelkonfiguration {#example-configuration}
+
 Om du till exempel vill bevilja åtkomst för begäranden med referenten `my.domain` kan du:
+
+>[!CAUTION]
+>
+>Detta är ett grundläggande exempel som kan skriva över standardkonfigurationen. Du måste se till att produktuppdateringar alltid tillämpas på alla anpassningar.
 
 ```xml
 {
@@ -52,16 +58,28 @@ Om du till exempel vill bevilja åtkomst för begäranden med referenten `my.dom
 }
 ```
 
->[!CAUTION]
->
->Det är kundens ansvar att
->
->* endast ge åtkomst till betrodda domäner
->* se till att ingen känslig information exponeras
->* använder inte syntax för jokertecken [*]. Detta inaktiverar både autentiserad åtkomst till GraphQL-slutpunkten och exponerar den även för hela världen.
+## Datasäkerhet {#data-security}
 
 >[!CAUTION]
 >
->Alla GraphQL [scheman](#schema-generation) (härledda från modeller för innehållsfragment som har **aktiverats**) kan läsas via GraphQL slutpunkt.
->
->Det innebär att du måste se till att inga känsliga data är tillgängliga, eftersom de kan läcka på det här sättet. Detta inkluderar till exempel information som kan finnas som fältnamn i modelldefinitionen.
+>Det är fortfarande ditt ansvar att till fullo ta itu med följande punkter.
+
+För att dina data ska förbli säkra måste du se till att:
+
+* åtkomst är **endast** beviljad till betrodda domäner
+
+* jokertecknets [`*`]-syntax i **används inte**. Detta inaktiverar både autentiserad åtkomst till GraphQL-slutpunkten och utsätter den även för hela världen
+
+* känslig information **aldrig** exponeras; varken direkt eller indirekt:
+
+   * Alla [GraphQL-scheman](/help/headless/graphql-api/content-fragments.md#schema-generation) är till exempel:
+
+      * härledd från modeller för innehållsfragment som har **aktiverats**
+
+     **och**
+
+      * går att läsa via GraphQL-slutpunkten
+
+     Det innebär att information som finns som fältnamn i modelldefinitionen kan bli tillgänglig.
+
+Du måste se till att inga känsliga data finns tillgängliga på något sätt, så sådana detaljer måste noggrant övervägas.
