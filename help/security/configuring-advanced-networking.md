@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
 feature: Security
 role: Admin
-source-git-commit: fd6fb14bf3acdd30efb984e1666ed91a2327d810
+source-git-commit: 09cc9c65aff42c3a169791d32dfdbdbfb044aecb
 workflow-type: tm+mt
-source-wordcount: '5675'
+source-wordcount: '5676'
 ht-degree: 0%
 
 ---
@@ -299,7 +299,7 @@ DriverManager.getConnection("jdbc:mysql://" + System.getenv("AEM_PROXY_HOST") + 
 <tbody>
   <tr>
     <td><b>HTTP- eller https-protokoll</b></td>
-    <td>Trafik till Azure eller Adobe-tjänster</td>
+    <td>Trafik till Azure (*.windows.net) eller Adobes tjänster</td>
     <td>Alla</td>
     <td>Genom de delade IP-klusteradresserna (inte den dedikerade IP-adressen)</td>
     <td>adobe.io<br>api.windows.net</td>
