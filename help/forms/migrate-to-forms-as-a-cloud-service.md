@@ -9,9 +9,9 @@ role: User, Developer
 level: Intermediate
 topic: Migration
 exl-id: 090e77ff-62ec-40cb-8263-58720f3b7558
-source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
+source-git-commit: 1c6ab84a7fadb543cc8e28424efe634627923e70
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1307'
 ht-degree: 0%
 
 ---
@@ -64,8 +64,7 @@ För att övergången från AEM Forms 6.5 till AEM as a Cloud Service ska bli s�
 
   ![Resultat för torr körning](assets/enable-add-on.png)
 
-* I en Cloud Service-miljö fungerar migreringsverktyget tillsammans med verktyget för användarmappning och verktyget för innehållsöverföring. Migreringsverktyget gör [!DNL AEM Forms]-resurser kompatibla med Cloud Service och innehållsöverföringsverktyget migrerar innehållet från din [!DNL AEM Forms]-miljö till en [!DNL AEM] as a Cloud Service miljö. Läs om processen för att [flytta till AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/home.html) innan du använder migreringsverktyget. Processen har två verktyg:
-   * [Användarmappningsverktyg](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#cloud-migration): Med verktyget för användarmappning kan du mappa dina användare med motsvarande Adobe IMS-användarkonton.
+* I en Cloud Service-miljö fungerar migreringsverktyget tillsammans med verktyget Innehållsöverföring. Migreringsverktyget gör [!DNL AEM Forms]-resurser kompatibla med Cloud Service och innehållsöverföringsverktyget migrerar innehållet från din [!DNL AEM Forms]-miljö till en [!DNL AEM] as a Cloud Service miljö. Läs om processen för att [flytta till AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/home.html) innan du använder migreringsverktyget. Processen använder följande verktyg:
    * [Verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?#cloud-migration): Med verktyget Innehållsöverföring kan du förbereda och överföra innehåll från en befintlig miljö till en Cloud Service. Det hjälper användarna att enkelt uppgradera från AEM Forms till molnmiljön.
 * Konton med administratörsbehörighet för [!DNL AEM Forms] as a Cloud Service och din lokala [!DNL AEM Forms]-miljö.
 * Hämta och installera Best Practice Analyzer, Content Transfer Tool och [!DNL AEM Forms] Migration Utility från [Software Distribution Portal.](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
@@ -86,11 +85,9 @@ Utför följande steg för att göra dina [!DNL AEM Forms]-resurser kompatibla m
 
    >[!NOTE]
    >
-   > När du migrerar från 6.5 till molntjänsten rekommenderar vi att du använder den klonade miljön för att köra innehållsöverföringsverktyget och migreringsverktyget. Verktyget för innehållsöverföring och migreringsverktyget gör några ändringar i innehåll och resurser. Kör alltså inte Content Transfer Tool och Migration Utility i en produktionsmiljö.
+   > När du migrerar från 6.5 till molntjänsten rekommenderar vi att du använder en klonad miljö för att köra innehållsöverföringsverktyget och migreringsverktyget. Verktyget för innehållsöverföring och migreringsverktyget gör några ändringar i innehåll och resurser. Kör alltså inte Content Transfer Tool eller Migration Utility i en produktionsmiljö.
 
 1. Logga in i din klonade miljö med administratörsbehörighet.
-
-1. Kör [användarmappningsverktyget](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#cloud-migration) för att mappa dina användare med motsvarande Adobe IMS-användarkonton. Du måste ha Adobe IMS-användarkonton för att kunna logga in på en [!DNL AEM Forms] as a Cloud Service instans.
 
 1. Hämta och installera [verktyget för innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?#cloud-migration) och [!DNL AEM Forms] verktyget för as a Cloud Service migrering från [portalen för programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) i den klonade miljön. Du kan använda AEM Package Manager för att installera verktyget och verktyget.
 
