@@ -3,13 +3,13 @@ title: Använda konfigurationsförlopp
 description: Lär dig hur du kan använda konfigurationspipelines för att distribuera olika konfigurationer av AEM as a Cloud Service, t.ex. inställningar för vidarebefordran av loggar, rensningsrelaterade underhållsåtgärder och olika CDN-konfigurationer.
 feature: Operations
 role: Admin
-source-git-commit: 3a10a0b8c89581d97af1a3c69f1236382aa85db0
+exl-id: bd121d31-811f-400b-b3b8-04cdee5fe8fa
+source-git-commit: 3d0abce117cf94d7bf521e78be2ec019f216aa08
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '973'
 ht-degree: 0%
 
 ---
-
 
 # Använda konfigurationsförlopp {#config-pipelines}
 
@@ -38,7 +38,7 @@ I följande tabell finns en omfattande lista över sådana konfigurationer med l
 | [Trafikfilterregler, inklusive WAF](/help/security/traffic-filter-rules-including-waf.md) | `CDN` | Deklarera regler för att blockera skadlig trafik |
 | [Begär omformningar](/help/implementing/dispatcher/cdn-configuring-traffic.md#request-transformations) | `CDN` | Deklarera regler för att omforma formen på trafikförfrågan |
 | [Svarsomvandlingar](/help/implementing/dispatcher/cdn-configuring-traffic.md#response-transformations) | `CDN` | Deklarera regler för att omforma formen på svaret för en given begäran |
-| [Omdirigeringar på klientsidan](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors) | `CDN` | Deklarera 301/302-liknande omdirigeringar på klientsidan [ (endast tillgängligt för tidiga användare)](/help/release-notes/release-notes-cloud/release-notes-current.md#foundation-early-adopter) |
+| [Omdirigeringar på klientsidan](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors) | `CDN` | Deklarera 301/302-liknande omdirigeringar på klientsidan |
 | [Väljare för ursprung](/help/implementing/dispatcher/cdn-configuring-traffic.md#origin-selectors) | `CDN` | Deklarera regler för att dirigera trafik till olika backend-system, inklusive program utanför Adobe |
 | [CDN-felsidor](/help/implementing/dispatcher/cdn-error-pages.md) | `CDN` | Åsidosätt standardfelsidan om AEM inte kan nås och refererar till platsen för statiskt innehåll som lagras automatiskt i konfigurationsfilen |
 | [CDN-rensning](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token) | `CDN` | Deklarera de rensnings-API-nycklar som används för att rensa CDN |
