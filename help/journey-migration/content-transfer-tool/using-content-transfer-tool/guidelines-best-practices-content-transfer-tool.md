@@ -4,7 +4,7 @@ description: Lär dig riktlinjerna och de bästa sätten att använda verktyget 
 exl-id: d1975c34-85d4-42e0-bb1a-968bdb3bf85d
 feature: Migration
 role: Admin
-source-git-commit: e5fd1b351047213adbb83ef1d1722352958ce823
+source-git-commit: 208a4de5aab5326490908fade8f12f17b8f3c0d7
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 11%
@@ -52,7 +52,7 @@ Den allmänna formeln för beräkning av ledigt diskutrymme är följande:
 * *noddatabasens storlek*: storlek på segmentdatabaskatalogen eller storlek på MongoDB-databasen.
 För en segmentdatabasstorlek på 20 GB krävs därför 94 GB ledigt diskutrymme.
 
-* En migreringsuppsättning måste finnas under hela innehållsöverföringsaktiviteten för att det ska gå att göra innehållsöverläggningar. Högst 20 migreringsuppsättningar per projekt i Cloud Acceleration Manager kan skapas och underhållas samtidigt under innehållsöverföringsaktiviteten. Om det behövs fler än 20 migreringsuppsättningar skapar du ett andra projekt i Cloud Acceleration Manager. Detta kräver dock ytterligare projekthantering och styrning utanför produkten för att undvika att flera användare skriver över innehåll på målet.
+* En migreringsuppsättning måste finnas under hela innehållsöverföringsaktiviteten för att det ska gå att göra innehållsöverläggningar. Högst 10 migreringsuppsättningar per projekt i Cloud Acceleration Manager kan skapas och underhållas samtidigt under innehållsöverföringsaktiviteten. Om det behövs fler än 10 migreringsuppsättningar skapar du ett andra projekt i Cloud Acceleration Manager. Detta kräver dock ytterligare projekthantering och styrning utanför produkten för att undvika att flera användare skriver över innehåll på målet.
 
 * Ändra inte installationskatalogen för CTT-verktyget. Installationen görs som standard i sökvägen crx-quickstart/cloud-migration. Den här platsen används internt av andra bibliotek. Om du ändrar den här sökvägen kan det uppstå extraheringsproblem.
 
