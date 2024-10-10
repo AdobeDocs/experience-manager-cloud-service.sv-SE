@@ -1,19 +1,19 @@
 ---
-title: Lägg till privata GitHub-databaser i Cloud Manager
+title: Lägg till en privat GitHub-databas i Cloud Manager
 description: Lär dig hur du konfigurerar Cloud Manager så att det fungerar med dina egna privata GitHub-databaser.
 exl-id: 5232bbf5-17a5-4567-add7-cffde531abda
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: a5e9b29a8108d5c012d402fda8ff7544e02ca911
+source-git-commit: 2fa4abca9823bbc62900023d637429f3fbfd894d
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '930'
 ht-degree: 0%
 
 ---
 
-# Lägg till privata GitHub-databaser i Cloud Manager {#private-repositories}
+# Lägga till en privat GitHub-databas i Cloud Manager {#private-repositories}
 
-Genom att konfigurera Cloud Manager för integrering med dina privata GitHub-databaser kan du validera koden direkt i GitHub med Cloud Manager. Den här konfigurationen eliminerar behovet av att regelbundet synkronisera din kod med Adobe-databasen.
+Genom att konfigurera Cloud Manager för integrering med dina privata GitHub-databaser kan du validera koden direkt i GitHub med Cloud Manager. Den här konfigurationen eliminerar behovet av att synkronisera din kod regelbundet med Adobe-databasen.
 
 <!-- CONSIDER ADDING MORE DETAIL... THE WHY. Some key points about this capability include the following:
 

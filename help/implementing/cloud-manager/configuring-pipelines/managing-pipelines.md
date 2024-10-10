@@ -6,180 +6,189 @@ exl-id: 4aff5a84-134a-43fa-8de8-8d564f4edd16
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 9cde6e63ec452161dbeb1e1bfb10c75f89e2692c
+source-git-commit: f7a8e823f058115f11241f0864517432a7dea5ab
 workflow-type: tm+mt
-source-wordcount: '1108'
+source-wordcount: '1164'
 ht-degree: 0%
 
 ---
 
 
-# Hantera pipelines {#managing-pipelines}
+# Hantera rörledningar {#managing-pipelines}
 
 Lär dig hur du hanterar dina befintliga rörledningar, inklusive redigering, körning och borttagning av dem.
 
-## Pipeline-kort {#pipeline-card}
+## Förloppskort {#pipeline-card}
 
 Kortet **Pipelines** på sidan **Programöversikt** i Cloud Manager ger dig en översikt över alla dina pipelines och deras aktuella status.
 
 ![Förloppskort i Cloud Manager](/help/implementing/cloud-manager/assets/configure-pipeline/pipelines-card.png)
 
-Genom att klicka på ellipsknappen bredvid varje pipeline kan du utföra följande åtgärder.
+Genom att klicka på ![Ellips - Mer ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) bredvid varje pipeline kan du utföra följande åtgärder:
 
-* [Kör pipeline](#running-pipelines)
-* [Redigera pipeline](#editing-pipelines)
-* [Ta bort pipeline](#deleting-pipelines)
-* [Visa detaljer](#view-details)
+* [Köra en pipeline](#running-pipelines)
+* [Avbryt en pipeline](#cancel)
+* [Redigera en pipeline](#editing-pipelines)
+* [Ta bort en pipeline](#deleting-pipelines)
+* [Visa information om den senaste körningen av en pipeline](#view-details)
 
-Längst ned i listan med rörledningar finns allmänna alternativ.
+Längst ned i listan med rörledningar finns följande allmänna alternativ:
 
-* **Lägg till** - Om du vill [lägga till en ny produktionspipeline](configuring-production-pipelines.md) eller [lägga till ny icke-produktionspipeline](configuring-non-production-pipelines.md)
+* **Lägg till** - Om du vill [lägga till en ny produktionspipeline](configuring-production-pipelines.md) eller [lägga till en ny icke-produktionspipeline](configuring-non-production-pipelines.md)
 * **Visa alla** - Tar användaren till skärmen Pipelines för att visa alla pipelines i en mer detaljerad tabell.
 * **Åtkomst till repo-information** - Visar den information som krävs för åtkomst till Cloud Manager Git-databasen
 * **Läs mer** - Navigerar till resurser för pipeline-dokumentation för CI/CD.
 
-## Fönstret Pipelines {#pipelines}
+## Sidan Pipelines {#pipelines}
 
-I fönstret **Pipelines** visas en fullständig lista över alla pipelines för det valda programmet. Detta är användbart eftersom det ger mer omfattande information än vad som finns tillgängligt i [pipeline-kortet](#pipeline-card).
+Sidan **Pipelines** visar en fullständig lista över alla pipelines för det valda programmet. Den här informationen är användbar eftersom den ger mer omfattande information än vad som är tillgängligt på [pipeline-kortet](#pipeline-card).
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
 1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
 
-1. Gå till sidan **Programöversikt** och välj fliken **Pipelines** för att växla till fönstret **Pipelines**.
+1. På sidan **Programöversikt** klickar du på fliken ![Pipeline - ikonen Arbetsflöde](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) **Pipelines** .
 
-1. Här visas en lista med alla pipelines för programmet och du kan starta och stoppa pipelinekörning på samma sätt som i **pipelines-kortet**.
+1. På sidan **Pipelines** kan du se en lista över alla pipelines för programmet och starta och stoppa pipelinekörningen på samma sätt som i **pipelines-kortet**.
 
-Om en pipeline körs visas information om körningen om du klickar på informationsikonen i kolumnen **Status** .
+Om en pipeline körs klickar du på ![Info - medieikon](https://spectrum.adobe.com/static/icons/ui_18/InfoMedium.svg) i kolumnen **Status** för att visa ett popup-fönster med information om körningen. Klicka på **Visa information** i popup-fönstret för att visa [information om pipelinekörningen](#view-details).
 
 ![Information om pipeline-körning](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-status.png)
 
-Om du klickar på **Visa information** visas [information om pipelinekörningen](#view-details).
 
-Du kan också klicka på ellipsknappen för pipelinen om du vill vidta ytterligare åtgärder som är lämpliga för pipelineläget, till exempel [redigera](#editing-pipelines) det eller [avbryta körningen](#cancel).
+Du kan också klicka på ![Ellips - Mer ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) bredvid pipelinen om du vill vidta ytterligare åtgärder som är lämpliga för pipelineläget, till exempel [redigera](#editing-pipelines) eller [avbryta körningen](#cancel).
 
 ![Pipeline-åtgärder](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-actions.png)
 
-## Aktivitetsfönster {#activity}
+## Aktivitetssida {#activity}
 
-Fönstret **Aktivitet** visar en fullständig lista över alla pipelines-körningar för det valda programmet samt andra viktiga programhändelser.
+På sidan **Aktivitet** visas en fullständig lista över alla pipelines-körningar för det valda programmet samt andra viktiga programhändelser.
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
-1. På sidan **Programöversikt** väljer du fliken **Aktivitet** för att växla till fönstret **Aktivitet** .
+1. På sidan **Programöversikt** klickar du på ikonen ![Bell](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Bell_18_N.svg) **Aktivitet** på sidmenyn.
 
-1. Här visas en lista över alla pipeline-körningar för programmet, inklusive aktuella och historiska körningar.
+1. På sidan **Aktivitet** kan du se en lista över alla pipeline-körningar för programmet, inklusive aktuella och historiska körningar.
 
-Om en pipeline körs visas information om körningen om du klickar på informationsikonen i kolumnen **Status** .
+Om en pipeline körs kan du klicka på ![Info - medieikon](https://spectrum.adobe.com/static/icons/ui_18/InfoMedium.svg) i kolumnen **Status** för att visa ett popup-fönster med information om körningen.
 
 ![Information om pipeline-körning](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-activity.png)
 
-Om du trycker eller klickar på raden som representerar pipelinekörningen kommer du till [informationen för pipelinekörningen](#view-details).
+Klicka på raden som representerar pipelinekörningen för att visa [information om pipelinekörningen](#view-details).
 
-Du kan också klicka på ellipsknappen om du vill vidta ytterligare åtgärder för pipelinekörningen, till exempel visa information om den eller hämta loggen, som tar dig till [informationssidan för pipeline](#view-details).
+Du kan också klicka på ![Ellips - Mer ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) om du vill utföra ytterligare åtgärder för pipelinekörningen, till exempel visa information eller hämta loggen, som tar dig till [sidan med information om pipeline](#view-details).
 
 ![Körningsåtgärder för pipeline](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-execution-actions.png)
 
-## Löpande rörledningar {#running-pipelines}
+## Köra en pipeline {#running-pipelines}
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
-1. Navigera till kortet **Pipelines** på sidan **Programöversikt** och klicka på ellipsknappen bredvid den pipeline du kör. Välj **Kör** på menyn.
+1. Navigera till kortet **Pipelines** från sidan **Programöversikt**.
 
-1. Pipeline-körningen börjar och anges av kolumnen **Status**.
+1. Klicka på ![Ellipsis - Mer ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) bredvid den pipeline som du kör.
 
-Du kan se information om körningen genom att klicka på ellipsknappen igen och välja **[Visa information](#view-details)**.
+1. Klicka på ikonen ![Kör - Spela upp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_PlayCircle_18_N.svg) **Kör** i listrutan.
 
-Beroende på typen av pipeline kan du eventuellt avbryta körningen genom att klicka på ellipsknappen igen och välja **Avbryt**.
+   Pipeline-körningen startar och kolumnen **Status** visar förloppet.
+
+Du kan visa information om körningen genom att klicka på ikonen ![Ellips - Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) igen och klicka på **[Visa information](#view-details)**.
+
+Beroende på vilken typ av pipeline det gäller kan du eventuellt avbryta körningen genom att klicka på ikonen ![Ellips - Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) igen och klicka på **Avbryt**.
 
 ## Redigera en pipeline {#editing-pipelines}
 
-1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
-
-1. Navigera till kortet **Pipelines** på sidan **Programöversikt** och klicka på ellipsknappen bredvid den pipeline du vill redigera och välj sedan **Redigera** på menyn.
-
-1. Dialogrutan **Redigera produktionspipeline** eller **Redigera icke-produktionspipeline** visas. Du kan redigera samma information som du angav när du skapade pipelinen.
-
-   * På följande sidor finns mer information om fälten och konfigurationsalternativen för pipelines.
-      * [Konfigurera produktionsförlopp](configuring-production-pipelines.md)
-      * [Konfigurera icke-produktionsförlopp](configuring-non-production-pipelines.md)
-
-1. Klicka på **Uppdatera** när du är klar med redigeringen av pipeline.
-
->[!NOTE]
->
->Du kan inte redigera en pågående pipeline.
-
->[!NOTE]
->
->Rörledningar för webbnivå och konfiguration stöds inte i privata databaser. Mer information och en fullständig lista över begränsningar finns i [Lägg till en privat databas i Cloud Manager](/help/implementing/cloud-manager/managing-code/private-repositories.md).
-
-## Tar bort pipelines {#deleting-pipelines}
+Du kan redigera en pipeline om den inte körs.
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
-1. Navigera till kortet **Pipelines** på sidan **Programöversikt** och klicka på ellipsknappen bredvid den pipeline du kör. Välj **Ta bort** på menyn.
+1. Navigera till kortet **Pipelines** från sidan **Programöversikt**.
+
+1. Klicka på ![Ellips - Mer ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) bredvid den pipeline som du vill redigera.
+
+1. Klicka på **Redigera** i listrutan.
+
+1. Redigera samma information som du angav när du skapade pipelinen i dialogrutan **Redigera produktionspipeline** eller **Redigera icke-produktionspipeline**.
+
+   På följande sidor finns mer information om fälten och konfigurationsalternativen för pipelines.
+   * [Konfigurera en produktionspipeline](configuring-production-pipelines.md)
+   * [Konfigurera en icke-produktionspipeline](configuring-non-production-pipelines.md)
+
+1. Klicka på **Uppdatera** när du är klar.
 
 >[!NOTE]
 >
->Du kan inte ta bort en pågående pipeline.
+>Rörledningar för webbnivå och konfiguration stöds inte i privata databaser. Mer information och en fullständig lista över begränsningar finns i [Lägg till en privat GitHub-databas i Cloud Manager](/help/implementing/cloud-manager/managing-code/private-repositories.md).
 
-## Visa information om pipeline {#view-details}
+## Ta bort en pipeline {#deleting-pipelines}
 
-Du kan visa information om en pipeline för att se status och loggar för den senaste körningen.
-
-1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
-
-1. Navigera till kortet **Pipelines** på sidan **Programöversikt** och klicka på ellipsknappen bredvid pipelinen som du kör. Välj **Visa information** på menyn.
-
-1. Du dirigeras till informationssidan för den aktuella pipelinen.
-
-![Information om pipeline](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-running-details.png)
-
-Här kan du se status för de olika stegen i pipeline och hämta byggloggar för diagnostik. Mer information om koddistribution och testkörning finns i dokumentet [Distribuera koden](/help/implementing/cloud-manager/deploy-code.md).
-
-Alla steg i en pipeline-körning visas med de som ännu inte har startats nedtonade. De färdiga stegen visar varaktigheten.
-
-När ett pipeline-steg är klart visas en sammanfattning.
-
-![Stegsammanfattning](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-step.png)
-
-Markera länken **Visa information** om du vill visa avsnittet **Varaktighet**. Detta inbegriper den genomsnittliga rörledningens varaktighet på grundval av den historiska trenden för det programmet.
-
-![Varaktighet](/help/implementing/cloud-manager/assets/configure-pipeline/duration.png)
-
-Om din pipeline innehöll ett **kodskanningssteg**, vilket orsakade problem, kan du trycka eller klicka på knappen **Hämta information** för att visa en lista med [kodkvalitetstester](/help/implementing/cloud-manager/code-quality-testing.md) som inte godkänts.
-
-![Kodkvalitetsproblem](assets/managing-pipelines-code-quality-issues.png)
-
-Det finns en **projektfilsplats**-kolumn i CSV-filen som anger platsen för den felaktiga koden. Den här kolumnen är den projektrelativa sökvägen, medan kolumnen **Filplats** är Maven-genererad.
-
-![Information om problem med genomsökning av projektkod](assets/managing-pipelines-code-quality-details.png)
-
->[!NOTE]
->
->Du kan bara visa information om en pipeline som körs eller har körts minst en gång.
-
-## Avbryt pipelines {#cancel}
-
-Om en pipeline befinner sig i validerings- eller byggarfasen kan du avbryta pipelinekörningen.
+Du kan ta bort en pipeline om den inte körs.
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
-1. Klicka på ellipsknappen för den pipeline som du vill avbryta på kortet **Pipelines** på sidan med programöversikt.
+1. Navigera till kortet **Pipelines** från sidan **Programöversikt**.
+
+1. Klicka på ![Ellipsis - Mer ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) bredvid den pipeline som du kör.
+
+1. Klicka på **Ta bort** i listrutan.
+
+
+## Visa information om den senaste körningen av en pipeline {#view-details}
+
+Du kan kontrollera detaljerna för en pipeline för att visa status och loggar från den senaste körningen. Du kan dock bara komma åt informationen om pipelinen körs eller har körts minst en gång.
+
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
+
+1. Navigera till kortet **Pipelines** från sidan **Programöversikt**.
+
+1. I listrutan klickar du på ikonen ![Ellips - Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) bredvid den pipeline som du kör.
+
+1. Klicka på **Visa senaste körning** i listrutan.
+
+   Du dirigeras till informationssidan för den aktuella pipelinen.
+
+   ![Information om pipeline](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-running-details.png)
+
+   Här kan du se status för de olika stegen i pipeline och hämta byggloggar för diagnostik. Mer information om koddistribution och testkörning finns i [Distribuera koden](/help/implementing/cloud-manager/deploy-code.md).
+
+   Alla steg i en pipeline-körning visas med de som ännu inte har startats nedtonade. De färdiga stegen visar varaktigheten.
+
+   När ett pipeline-steg är klart visas en sammanfattning.
+
+   ![Stegsammanfattning](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-step.png)
+
+1. Klicka på **Visa information** om du vill expandera avsnittet **Varaktighet**, där du kan se den genomsnittliga tiden för pipelinen baserat på programmets historiska trender.
+
+   ![Varaktighet](/help/implementing/cloud-manager/assets/configure-pipeline/duration.png)
+
+1. Om din pipeline innehöll ett **kodskanningssteg** som flaggade problem klickar du på **Hämta detaljer** för att få en lista över [kodkvalitetstester](/help/implementing/cloud-manager/code-quality-testing.md) som misslyckades.
+
+   ![Kodkvalitetsproblem](assets/managing-pipelines-code-quality-issues.png)
+
+   CSV-filen innehåller en **projektfilsplats**-kolumn som visar sökvägen till den problematiska koden i förhållande till projektet. Kolumnen **Filplats** återspeglar däremot den Maven-genererade sökvägen.
+
+   ![Information om problem med genomsökning av projektkod](assets/managing-pipelines-code-quality-details.png)
+
+## Avbryt en pipeline {#cancel}
+
+Du kan avbryta pipeline-körningen om den är i validerings- eller byggarfasen.
+
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
+
+1. Klicka på ikonen ![Ellips - Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) för pipeline som du vill avbryta på **pipelines**-kortet på programöversiktssidan.
 
    ![Avbryter en pipeline](/help/implementing/cloud-manager/assets/cancel-pipeline.png)
 
-1. Välj **Avbryt**.
+1. Klicka på **Avbryt**.
 
-Du kan även avbryta en pipeline från informationssidan för pipeline.
+Du kan också avbryta en pipeline från informationssidan för pipeline.
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
-1. Navigera till fliken **Pipelines** på sidan **Programöversikt** och markera den pipeline som du vill avbryta.
+1. Navigera till fliken ![Förloppsindikatorer - ikonen för arbetsflöde](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) **Förberedelser** på sidan **Programöversikt** och markera den pipeline som du vill avbryta.
 
-1. Du dirigeras till informationssidan för den aktuella pipelinen.
+   Du dirigeras till informationssidan för den aktuella pipelinen.
 
    ![Avbryt pipeline-information](/help/implementing/cloud-manager/assets/cancel-pipeline-details.png)
 
-1. Välj **Avbryt**.
+1. Klicka på **Avbryt**.

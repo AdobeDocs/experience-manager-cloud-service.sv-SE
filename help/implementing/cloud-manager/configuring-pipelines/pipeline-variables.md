@@ -5,87 +5,101 @@ exl-id: cfcef2e2-0590-457d-a0f9-6092a6d9e0e8
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 9cde6e63ec452161dbeb1e1bfb10c75f89e2692c
+source-git-commit: f7a8e823f058115f11241f0864517432a7dea5ab
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '611'
 ht-degree: 0%
 
 ---
 
 # Konfigurera pipeline-variabler {#configuring-pipeline-variables}
 
-Din byggprocess kan vara beroende av specifika konfigurationsvariabler som skulle vara olämpliga att placera i Git-databasen, eller så måste du variera dem mellan pipeline-körningar som använder samma gren. Med Cloud Manager kan du hantera dessa data som pipeline-variabler.
+Din byggprocess kan vara beroende av specifika konfigurationsvariabler som inte ska lagras i Git-databasen. Du kan också behöva justera dem mellan olika pipeline-körningar på samma gren. Med Cloud Manager kan du hantera de här inställningarna som pipeline-variabler.
 
 ## Pipeline-variabler {#pipeline-variables}
 
 Med Cloud Manager kan du konfigurera pipeline-variabler på flera olika sätt.
 
-* [Via användargränssnittet i Cloud Manager](#ui)
+* [Använda Cloud Manager användargränssnitt](#ui)
 * [Använda Cloud Manager CLI](#cli)
 * [Använda Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Variables/operation/getPipelineVariables)
 
-Variabler kan lagras som antingen oformaterad text eller krypteras i vila. I båda fallen görs variabler tillgängliga i byggmiljön som en miljövariabel som sedan kan refereras inifrån filen `pom.xml` eller andra byggskript.
+Variabler kan lagras som antingen oformaterad text eller krypteras i vila. I båda fallen görs variabler tillgängliga i byggmiljön som en miljövariabel, som sedan kan refereras inifrån filen `pom.xml` eller andra byggskript.
 
-### Variabelnamnkonventioner för pipeline {#naming-conventions}
+## Lägga till pipeline-variabler via Cloud Manager {#ui}
 
-Variabelnamn måste följa följande konventioner:
+Pipeline-variabler kan konfigureras och hanteras via Cloud Manager användargränssnitt. De hjälper till att effektivisera hanteringen av pipeline, särskilt när olika konfigurationer krävs i olika steg.
 
-* Variabler får bara innehålla alfanumeriska tecken och understreck (`_`).
-* Namnen ska vara versaler.
-* Det finns en gräns på 200 variabler per pipeline.
-* Varje namn får innehålla högst 100 tecken.
-* Varje `string`-variabelvärde måste vara kortare än 2 048 tecken.
-* Varje `secretString`-typvariabelvärde måste vara högst 500 tecken.
-
-## Via Cloud Manager användargränssnitt {#ui}
-
-Pipeline-variabler kan konfigureras och hanteras via Cloud Manager användargränssnitt. Du måste ha behörighet att redigera pipelinen för att lägga till, redigera och ta bort pipelinevariabler.
+Du måste ha behörighet att redigera pipelinen för att lägga till, redigera och ta bort pipelinevariabler.
 
 Om en pipeline körs blockeras variabelhanteringen.
 
-### Lägg till pipeline-variabler {#add-ui}
+### Lägg till en pipeline-variabel {#add-ui}
 
-1. När du [hanterar dina pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md) klickar du på ellipsknappen för den pipeline som du vill skapa pipeline-variabler för och väljer **Visa/redigera variabler** på snabbmenyn.
+1. När du [hanterar dina pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md) klickar du på ikonen ![Ellipsis - Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) för den pipeline som du vill skapa pipelinevariabler för.
+
+1. Klicka på **Visa/redigera variabler** i listrutan.
 
    ![Visa/redigera pipeline-variabler](/help/implementing/cloud-manager/assets/pipeline-variables-view-edit.png)
 
-1. Fönstret **Variabelkonfiguration** öppnas. Ange variabelinformationen i den första raden i tabellen och klicka på **Lägg till**.
+1. Ange informationen på tabellens första rad i dialogrutan **Variablkonfiguration**.
 
-   * **Konfigurationsnamn** är en unik identifierare för variabeln, som måste ha huvudnamnet [för regler för namn på pipelinevariabler](#naming-conventions).
-   * **Värde** är det värde som variabeln innehåller.
-   * **Steg som används** är det steg i pipeline som variabeln gäller för. Det krävs.
-      * **Bygg**
-      * **Funktionstestning**
-      * **UI-testning**
-   * **Type** definierar om variabeln är oformaterad text eller krypterad som en hemlighet.
+   | Fält | Beskrivning |
+   | --- | --- |
+   | Namn | Ett unikt namn på konfigurationsvariabeln. Den identifierar den specifika variabeln som används i pipeline. Den måste följa följande namngivningskonventioner:<ul><li>Variabler får bara innehålla alfanumeriska tecken och understreck (`_`).</li><li>Namnen ska vara versaler.</li><li>Det finns en gräns på 200 variabler per pipeline.</li><li>Varje namn får innehålla högst 100 tecken.</li><li>Varje `string`-variabelvärde måste vara kortare än 2 048 tecken.</li><li>Varje `secretString`-typvariabelvärde måste vara högst 500 tecken.</li></ul> |
+   | Värde | Värdet som variabeln innehåller. |
+   | Steget används | Obligatoriskt. Det steg i pipeline som variabeln gäller för:<ul><li>**Build** - Variabeln används under byggprocessen.</li><li>**Funktionstestning** - Variabeln används under funktionstestningssteget.</li><li>**UI-testning** - Variabeln används under gränssnittstestningsfasen.</li></ul> |
+   | Typ | Välj om variabeln är oformaterad text eller krypterad som en hemlighet. |
 
    ![Lägg till variabel](/help/implementing/cloud-manager/assets/pipeline-variables-add-variable.png)
 
-1. Tabellen läggs till i tabellen. Lägg till ytterligare variabler efter behov och tryck eller klicka sedan på **Spara** för att spara de variabler du lade till i pipeline.
+1. Klicka på **Lägg till**.
 
-### Redigera rörledningsvariabler {#edit-ui}
-
-1. När du [hanterar dina pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md) klickar du på ellipsknappen för den pipeline som du vill skapa pipeline-variabler för och väljer **Visa/redigera variabler** på snabbmenyn.
-
-   ![Visa/redigera pipeline-variabler](/help/implementing/cloud-manager/assets/pipeline-variables-view-edit.png)
-
-1. Fönstret **Variabelkonfiguration** öppnas. Klicka på ellipsknappen för variabeln som du vill redigera och välj **Redigera**.
-
-   ![Redigera variabel](/help/implementing/cloud-manager/assets/pipeline-variables-edit.png)
-
-1. Uppdatera värdet för variabeln efter behov och klicka på **Använd** (bockmarkeringen i slutet av raden) för att tillämpa ändringen eller **Ignorera** (bakåtpilen) för att återställa ändringen.
-
-   * Endast variabelns värde kan redigeras.
-
-   ![Redigera en variabel](/help/implementing/cloud-manager/assets/pipeline-variables-edit-save.png)
+   Lägg till ytterligare variabler efter behov.
 
 1. Klicka på **Spara**.
 
-Om du vill ta bort en variabel väljer du **Ta bort** i stället för **Redigera** på ellipsmenyn för pipelinevariabeln i fönstret **Variabelkonfiguration**.
+### Redigera en pipeline-variabel {#edit-ui}
 
-## Använda Cloud Manager CLI {#cli}
+1. När du [hanterar dina pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md) klickar du på ikonen ![Ellipsis - Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) för den pipeline som du vill redigera pipelinevariabler för.
 
-Det här CLI-kommandot ställer in en variabel.
+1. Klicka på **Visa/redigera variabler** i listrutan.
+
+   ![Visa/redigera pipeline-variabler](/help/implementing/cloud-manager/assets/pipeline-variables-view-edit.png)
+
+1. I dialogrutan **Variabelkonfiguration** klickar du på ikonen ![Ellips - Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) för variabeln som du vill ändra.
+
+1. Klicka på **Redigera** i listrutan.
+
+   ![Redigera variabel](/help/implementing/cloud-manager/assets/pipeline-variables-edit.png)
+
+1. Uppdatera värdet för variabeln efter behov.
+
+   Endast variabelns värde kan ändras.
+
+1. Gör något av följande:
+
+   * Klicka på ![Använd - bockmarkeringsikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Checkmark_18_N.svg) för att tillämpa ändringen.
+   * Klicka på ![Ångra-ikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Undo_18_N.svg) om du vill ångra ändringen.
+
+1. Klicka på **Spara**.
+
+### Ta bort en pipeline-variabel {#delete-ui}
+
+1. När du [hanterar dina pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md) klickar du på ikonen ![Ellips - Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) för den pipeline som du vill ta bort pipelinevariabler för.
+
+1. Klicka på **Visa/redigera variabler** i listrutan.
+
+   ![Visa/redigera pipeline-variabler](/help/implementing/cloud-manager/assets/pipeline-variables-view-edit.png)
+
+1. I dialogrutan **Variabelkonfiguration** klickar du på ikonen ![Ellips - Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) för variabeln som du vill ta bort.
+
+1. Klicka på **Ta bort** i listrutan.
+
+
+## Ange pipeline-variabler med Cloud Manager CLI {#cli}
+
+Det här kommandot i CLI (Command Line Interface) anger en variabel.
 
 ```shell
 $ aio cloudmanager:set-pipeline-variables PIPELINEID --variable MY_CUSTOM_VARIABLE test
@@ -97,7 +111,7 @@ Det här kommandot listar variabler.
 $ aio cloudmanager:list-pipeline-variables PIPELINEID
 ```
 
-När de används i en Maven `pom.xml`-fil är det oftast bra att mappa dessa variabler till Maven-egenskaper med en syntax som liknar den här.
+När den används i en Maven `pom.xml`-fil är det ofta användbart att länka dessa variabler till Maven-egenskaper med en syntax som liknar den i följande exempel:
 
 ```xml
         <profile>
