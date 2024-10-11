@@ -4,9 +4,9 @@ description: Lär dig hur du använder Cloud Acceleration Manager för att impor
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
 feature: Migration
 role: Admin
-source-git-commit: 4d34dc8464a51bcc11ee435de4d19183b2f3e3b2
+source-git-commit: 766573bfeb5190d212e87b18331e41820ddd3e32
 workflow-type: tm+mt
-source-wordcount: '2982'
+source-wordcount: '3137'
 ht-degree: 1%
 
 ---
@@ -228,6 +228,20 @@ Du kan undvika den här begränsningen genom att köra [Best Practices Analyzer]
 >[!NOTE]
 >
 >[Best Practices Analyzer](/help/journey-migration/best-practices-analyzer/using-best-practices-analyzer.md) version 2.1.50+ rapporterar stora noder som innehåller unicode-tecken som överskrider den maximala storleken. Kontrollera att du kör den senaste versionen. BPA-versioner före 2.1.50 identifierar inte och rapporterar om dessa stora noder och de måste identifieras separat med det nödvändiga Oak-verktyget som nämns ovan.
+
+### Inmatningsfel på grund av oväntade återkommande fel {#ingestion-failure-due-to-unexpected-intermittent-errors}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_cam_ingestion_troubleshooting_intermittent_errors"
+>title="Oväntade återkommande fel"
+>abstract="Ibland kan det uppstå oväntade fel i tjänsten längre fram i kedjan och tyvärr är det enda sättet att försöka på nytt."
+
+Ibland kan oväntade problem ge upphov till misslyckade frågor där det enda sättet att göra detta är att försöka få igen. Undersök matningsloggen för att ta reda på orsaken till felet och se om den är i linje med något av de fel som anges nedan, där ett nytt försök bör göras.
+
+## MongoDB-problem {#mongo-db-issues}
+
+* `Atlas prescale timeout error` - Inmatningsfasen försöker förskala målmolndatabasen till en lämplig storlek som passar storleken på det migreringsuppsättningsinnehåll som importeras. Oftast slutförs inte den här åtgärden inom den förväntade tidsramen.
+* `Exhausted mongo restore retries` - Ett försök att återställa en lokal dump av innehållet i den inkapslade migreringsuppsättningen till molndatabasen har gjorts. Detta tyder på ett övergripande hälso-/nätverksproblem med MongoDB, som ofta läker av sig själv efter några minuter.
 
 ### Inmatningen har avbrutits {#ingestion-rescinded}
 
