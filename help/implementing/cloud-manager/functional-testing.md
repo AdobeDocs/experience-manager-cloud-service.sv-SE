@@ -5,9 +5,9 @@ exl-id: 7eb50225-e638-4c05-a755-4647a00d8357
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 7a370ee0ab77046d128ae260af2575d50e655254
+source-git-commit: 2573eb5f8a8ff21a8e30b94287b554885cd1cd89
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1321'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,13 @@ ht-degree: 0%
 
 Upptäck vilka kvalitetsportar som är tillgängliga i [AEM as a Cloud Service-distributionsprocessen](/help/implementing/cloud-manager/deploy-code.md) och de olika typerna av inbyggd funktionstestning. Lär dig hur du kan bidra till och optimera användningen av dem inom ramen för en omfattande teststrategi.
 
-## Ökning
+## Om funktionstestning
 
 I följande diagram visas en översikt på hög nivå över tillgängliga rörledningar i samband med en övergripande teststrategi och [AEM as a Cloud Service-distributionsprocessen](/help/implementing/cloud-manager/deploy-code.md).
 
 ![Kvalitetsportar för AEM Cloud Service-distribution](assets/functional-testing/quality-gates-compact.svg)
 
-## Syfte
+## Syfte med funktionstestning
 
 Syftet med AEM Cloud Service pipelines för driftsättning är att underlätta stabil och säker driftsättning i olika faser av livscykeln för utveckling och AEM. Dessa rörledningar innehåller flera kvalitetsportar på olika nivåer för att säkerställa integriteten och säkerheten för distributioner för både AEM programändringar och AEM produktuppdateringar.
 
@@ -38,7 +38,7 @@ De inbyggda kvalitetsportarna validerar i första hand funktionaliteten hos AEM 
 
 Det är viktigt att notera att dessa kvalitetsportar inte är avsedda att vara ett omfattande testramverk för hela er teststrategi. Den AEM produkten genomgår omfattande testning innan den AEM driftsättningsprocessen för molntjänster inleds. På samma sätt bör ditt program redan vara av hög kvalitet innan det når distributionsfasen. Detta tillvägagångssätt garanterar att kvaliteten fokuserar på det primära målet att skydda driftsättningsprocessen, i stället för att ersätta en fullständig testregim.
 
-## Kvalitetsportar
+## Kvalitetsgaller vid testning
 
 I följande diagram visas en detaljerad översikt över tillgängliga kvalitetsgates och deras användning i den övergripande testningsstrategin och i [AEM as a Cloud Service-distributionsprocessen](/help/implementing/cloud-manager/deploy-code.md).
 

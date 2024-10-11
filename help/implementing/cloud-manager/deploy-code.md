@@ -5,9 +5,9 @@ exl-id: 2c698d38-6ddc-4203-b499-22027fe8e7c4
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 9cde6e63ec452161dbeb1e1bfb10c75f89e2692c
+source-git-commit: 2573eb5f8a8ff21a8e30b94287b554885cd1cd89
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1184'
 ht-degree: 0%
 
 ---
@@ -19,98 +19,95 @@ Lär dig hur du distribuerar koden till Production med Cloud Manager-pipelines i
 
 ![Produktionspipeline-diagram](./assets/configure-pipeline/production-pipeline-diagram.png)
 
-Distribuera kod sömlöst till scenen och sedan till produktionen via en produktionsprocess. Körningen av produktionspipeline är uppdelad i två logiska faser.
+Distribuera kod sömlöst till scenen och sedan till produktionen via en produktionsprocess. Körningen av produktionsflödet delas upp i två logiska faser:
 
-1. Distribution till scenmiljö
-   * Koden byggs och distribueras till scenmiljön för automatisk funktionstestning, UI-testning, upplevelsegranskning och UAT (User accept testing).
-1. Distribution till produktionsmiljö
-   * När bygget har validerats på scenen och godkänts för att befordras till produktion distribueras samma bygge-artefakt till produktionsmiljön.
+1. **Distribution till scenmiljö** - Koden byggs och distribueras till scenmiljön för automatisk funktionstestning, gränssnittstestning, upplevelsegranskning och UAT (User Acceptance Testing).
+1. **Distribution till produktionsmiljö** - När bygget har validerats på scenen och godkänts för befordran till produktion distribueras samma byggartefakt till produktionsmiljön.
 
 _Det är bara pipeline-typen Full Stack Code som har stöd för kodskanning, funktionstestning, gränssnittstestning och granskning av upplevelser._
 
-## Distribuera din kod med Cloud Manager i AEM as a Cloud Service {#deploying-code-with-cloud-manager}
+## Distributionsprocess {#deployment-process}
+
+Alla driftsättningar av Cloud Service följer en rullande process för att säkerställa noll driftavbrott. Mer information finns i [Hur rullande distributioner fungerar](/help/implementing/deploying/overview.md#how-rolling-deployments-work).
+
+>[!NOTE]
+>
+>Dispatcher-cachen rensas bort vid varje distribution. Därefter&quot;värms&quot; det upp&quot; innan de nya publiceringsnoderna tar emot trafik.
+
+## Distribuera koden med Cloud Manager i AEM as a Cloud Service {#deploying-code-with-cloud-manager}
 
 När du har [konfigurerat produktionsflödet](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md), inklusive databas-, miljö- och testmiljön, är du redo att distribuera koden.
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
-1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** trycker eller klickar du på det program som du vill distribuera kod för.
+1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** klickar du på det program som du vill distribuera kod för.
 
-1. Klicka på **Distribuera** i anropet på skärmen **Översikt** för att starta distributionsprocessen.
+1. Klicka på **Distribuera** på sidan **Översikt** i åtgärdsområdet.
 
    ![CTA](assets/deploy-code1.png)
 
-1. Skärmen **Pipeline Execution** visas. Klicka på **Skapa** för att starta processen.
+1. Klicka på **Skapa** på sidan **Distribuera till produktion**.
 
    ![Körningsskärm för pipeline](assets/deploy-code2.png)
 
-Byggprocessen distribuerar koden i tre faser.
+Byggprocessen distribuerar koden genom följande tre ordnade faser:
 
-1. [Scendistribution](#stage-deployment)
-1. [Scentestning](#stage-testing)
-1. [Produktionsdistribution](#production-deployment)
+1. [Scendistributionsfas](#stage-deployment)
+1. [Scentestningsfas](#stage-testing)
+1. [Produktionsdistributionsfas](#production-deployment)
 
 >[!TIP]
 >
->Du kan granska stegen från olika distributionsprocesser genom att visa loggar eller granska resultaten för att se testvillkoren.
+>Du kan granska stegen från olika distributionsprocesser genom att visa loggar eller granska resultaten för testvillkoren.
 
-## Scendistributionsfas {#stage-deployment}
+### Scendistributionsfas {#stage-deployment}
 
-Fas för **scendistribution**. omfattar de här stegen.
+Fas **Scendistribution** omfattar följande steg:
 
-* **Validering** - Detta steg säkerställer att pipeline är konfigurerad att använda de tillgängliga resurserna. Du kan till exempel testa att den konfigurerade grenen finns och att miljöerna är tillgängliga.
-* **Build &amp; Unit Testing** - Det här steget kör en innehållsstyrd byggprocess.
-   * Mer information om byggmiljön finns i [Information om byggmiljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md).
-* **Kodsökning** - Det här steget utvärderar kvaliteten på programkoden.
-   * Mer information om testprocessen finns i [Testa kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md).
-* **Build Images** - Den här processen ansvarar för att omvandla innehåll och dispatcherpaket som skapas i byggsteget till Docker-bilder och Kubernetes-konfigurationer.
-* **Distribuera till scenen** - Bilden distribueras till mellanlagringsmiljön som förberedelse för [scentestningsfasen](#stage-testing).
+| Steg för driftsättning | Beskrivning |
+| --- | --- |
+| Validering | Ser till att pipeline är konfigurerad att använda de tillgängliga resurserna. Du kan till exempel testa att den konfigurerade grenen finns och att miljöerna är tillgängliga. |
+| Build &amp; Unit Testing | Kör en innesluten byggprocess.<br>Mer information om byggmiljön finns i [Information om byggmiljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md). |
+| Kodskanning | Utvärderar kvaliteten på programkoden.<br>Mer information om testprocessen finns i [Testa kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md). |
+| Skapa bilder | Den här processen konverterar innehåll och Dispatcher-paket från Build-steget till Docker-bilder. Det genererar även Kubernetes-konfigurationer baserade på dessa paket. |
+| Distribuera till scenen | Bilden distribueras till mellanlagringsmiljön som förberedelse för [scentestningsfasen](#stage-testing). |
 
 ![Scendistribution](assets/stage-deployment.png)
 
-## Scentestfas {#stage-testing}
+### Scentestningsfas {#stage-testing}
 
-Fas **Scentestning** omfattar dessa steg.
+Fas **Scentestning** omfattar följande steg:
 
-* **Funktionstestning av produkt** - Cloud Manager-pipeline kör tester som körs mot scenmiljön.
-   * Mer information finns i [Funktionstestning av produkter](/help/implementing/cloud-manager/functional-testing.md#product-functional-testing).
-
-* **Anpassad funktionstestning** - Det här steget i pipeline körs alltid och kan inte hoppas över. Om inget test-JAR produceras av bygget godkänns testet som standard.
-   * Mer information finns i [Anpassad funktionstestning](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing).
-
-* **Testning av anpassat användargränssnitt** - Det här steget är en valfri funktion som automatiskt kör gränssnittstester som skapats för anpassade program.
-   * Användargränssnittstester är självstudiebaserade tester som paketeras i en Docker-bild för att möjliggöra ett brett val av språk och ramverk (t.ex. Java och Maven, Node och WebDriver.io eller andra ramverk och tekniker som bygger på Selenium).
-   * Mer information finns i [Testning av anpassat användargränssnitt](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing).
-
-* **Experience Audit** - Det här steget i pipeline körs alltid och kan inte hoppas över. När en produktionsprocess körs inkluderas ett steg för upplevelsegranskning efter anpassad funktionstestning som kör kontrollerna.
-   * De konfigurerade sidorna skickas till tjänsten och utvärderas.
-   * Resultaten är informativa och visar poängen och förändringen mellan aktuella och tidigare poäng.
-   * Den här insikten är värdefull för att avgöra om det finns en regression som introduceras i den aktuella distributionen.
-   * Mer information finns i [Om Experience Audit-resultat](/help/implementing/cloud-manager/experience-audit-dashboard.md).
+| Steg för testning | Beskrivning |
+| --- | --- |
+| Funktionstestning av produkten | Cloud Manager pipeline kör tester som körs mot scenmiljön.<br>Se även [Funktionstestning av produkter](/help/implementing/cloud-manager/functional-testing.md#product-functional-testing). |
+| Anpassad funktionstestning | Det här steget i pipeline körs alltid och kan inte hoppas över. Om bygget inte skapar en JAR-test godkänns testet automatiskt.<br>Se även [Anpassad funktionstestning](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing). |
+| Anpassade gränssnittstestningar | En valfri funktion som automatiskt kör gränssnittstester som skapats för anpassade program.<br>Gränssnittstester är självstudiebaserade och paketerade i en Docker-bild för att ge flexibilitet vad gäller språk och ramverk. Med den här metoden kan du använda Java och Maven, Node och WebDriver.io eller valfritt Selenium-baserat ramverk eller teknik.<br>Se även [Anpassad gränssnittstestning](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing). |
+| Experience Audit | Det här steget i pipeline körs alltid och kan inte hoppas över. När en produktionsprocess körs inkluderas ett steg för upplevelsegranskning efter anpassad funktionstestning som kör kontrollerna.<ul><li>De konfigurerade sidorna skickas till tjänsten och utvärderas.</li><li>Resultaten är informativa och visar poängen och förändringen mellan aktuella och tidigare poäng.</li><li>Den här insikten är värdefull för att avgöra om det finns en regression som introduceras i den aktuella distributionen.</li></ul>Se [Om Experience Audit-resultat](/help/implementing/cloud-manager/experience-audit-dashboard.md).</li></ul> |
 
 ![Scentestning](assets/stage-testing.png)
 
-## Produktionsdistributionsfas {#production-deployment}
+### Produktionsdistributionsfas {#production-deployment}
 
-Processen för att distribuera till produktionstopologier skiljer sig något för att minimera påverkan för besökare på en AEM.
+Processen för att distribuera till produktionstopologier skiljer sig något för att minimera påverkan på besökare på en AEM.
 
-Produktionsinstallationer följer i allmänhet samma steg som tidigare, men på ett rullande sätt.
+Produktionsinstallationer följer i allmänhet samma steg som tidigare, men på ett rullande sätt. Följande steg ingår:
 
 1. Distribuera AEM som ska författas.
-1. Koppla loss dispatcher1 från belastningsutjämnaren.
-1. Distribuera AEM paket till publish1 och dispatcherpaketet till dispatcher1, flush dispatcher cache.
-1. Placera dispatcher1 i belastningsutjämnaren igen.
-1. När dispatcher1 är tillbaka i tjänst frigör du dispatcher2 från belastningsutjämnaren.
-1. Distribuera AEM paket till publish2 och dispatcherpaketet till dispatcher2, flush dispatcher cache.
-1. Placera dispatcher2 i belastningsutjämnaren igen.
+1. Koppla loss `dispatcher1` från belastningsutjämnaren.
+1. Distribuera AEM till `publish1` och Dispatcher-paketet till `dispatcher1`, rensa Dispatcher-cachen.
+1. Placera `dispatcher1` i belastningsutjämnaren igen.
+1. Koppla loss `dispatcher2` från belastningsutjämnaren när `dispatcher1` är tillbaka i tjänsten.
+1. Distribuera AEM till `publish2` och Dispatcher-paketet till `dispatcher2`, rensa Dispatcher-cachen.
+1. Placera `dispatcher2` i belastningsutjämnaren igen.
 
 Den här processen fortsätter tills distributionen har nått alla utgivare och utgivare i topologin.
 
 ![Produktionsdistributionsfas](assets/production-deployment.png)
 
-## Timeout {#timeouts}
+## Timeout under distribution {#timeouts}
 
-Följande steg gör timeout om du väntar på användarfeedback:
+Följande steg gör en timeout om de lämnas kvar och väntar på användarfeedback under en distribution:
 
 | Steg | Timeout |
 |--- |--- |
@@ -121,21 +118,13 @@ Följande steg gör timeout om du väntar på användarfeedback:
 | Schemalägg produktionsdistribution | 14 dagar |
 | Stöd för CSE | 14 dagar |
 
-## Distributionsprocess {#deployment-process}
+## Kör en produktionsdistribution igen {#reexecute-deployment}
 
-Alla driftsättningar av Cloud Service följer en rullande process för att säkerställa noll driftavbrott. Mer information finns i [Hur rullande distributioner fungerar](/help/implementing/deploying/overview.md#how-rolling-deployments-work).
+I sällsynta fall kan produktionsdistributionsstegen misslyckas av tillfälliga orsaker. I sådana fall stöds omkörning av produktionsdistributionssteget så länge produktionsdistributionssteget har slutförts, oavsett typ av slutförande (till exempel annullerat eller misslyckat). Omkörning skapar en ny körning med samma pipeline som består av följande tre steg:
 
->[!NOTE]
->
->Dispatcher-cachen rensas bort vid varje distribution. Den värms upp senare innan de nya publiceringsnoderna accepterar trafik.
-
-## Köra om en produktionsdistribution {#reexecute-deployment}
-
-I sällsynta fall kan produktionsdistributionsstegen misslyckas av tillfälliga orsaker. I sådana fall stöds omkörning av produktionsdistributionssteget så länge produktionsdistributionssteget har slutförts, oavsett typ av slutförande (t.ex. avbruten eller misslyckad). Omkörning skapar en ny körning med samma pipeline som består av tre steg.
-
-1. Valideringssteget - Detta är i stort sett samma validering som sker under en normal pipeline-körning.
-1. Byggsteget - I samband med en omkörning kopieras artefakter och ingen ny byggprocess utförs.
-1. Produktionsdistributionssteget - Detta använder samma konfiguration och alternativ som produktionsdistributionssteget i en normal pipeline-körning.
+1. **Validering** - Samma validering som sker under en normal pipeline-körning.
+1. **Build** - I samband med en omkörning kopierar byggsteget artefakter och kör inte någon ny byggprocess.
+1. **Produktionsdistribution** - Använder samma konfiguration och alternativ som produktionsdistributionssteget i en normal pipeline-körning.
 
 I sådana fall där en omkörning är möjlig visas statussidan för produktionsflödet med alternativet **Kör om** bredvid det vanliga alternativet **Hämta bygglogg**.
 
@@ -148,11 +137,10 @@ I sådana fall där en omkörning är möjlig visas statussidan för produktions
 ### Begränsningar {#limitations}
 
 * Det går bara att köra produktionsdistributionssteget på nytt för den senaste körningen.
-* Omkörning är inte tillgängligt för push-uppdateringskörningar.
-   * Om den senaste körningen är en push-uppdateringskörning går det inte att utföra om.
+* Omkörning är inte tillgängligt för push-uppdateringskörningar. Om den senaste körningen är en push-uppdateringskörning går det inte att utföra om.
 * Om den senaste körningen misslyckades någon gång före produktionsdistributionssteget går det inte att utföra om.
 
-### Kör API igen {#reexecute-API}
+### Kör om API {#reexecute-API}
 
 Förutom att vara tillgänglig i användargränssnittet kan du använda [Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) för att utlösa omkörningar och identifiera körningar som utlösts som omkörningar.
 
@@ -202,8 +190,8 @@ Den här länken är bara tillgänglig för produktionsdistributionssteget.
 
 Syntaxen för HAL-länkens href-värde är bara ett exempel. Det faktiska värdet ska alltid läsas från HAL-länken och inte genereras.
 
-Om du skickar en PUT-begäran till den här slutpunkten får du ett svar från 2010 om det lyckas, och svarstexten är representationen av den nya körningen. Det liknar att starta en vanlig körning via API:t.
+Om du skickar en PUT-begäran till den här slutpunkten får du ett svar från 2010 om det lyckas, och svarstexten är representationen av den nya körningen. Det här arbetsflödet liknar att starta en vanlig körning via API:t.
 
-#### Identifiera en körning som utförts på nytt {#identify-reexecution}
+#### Identifiera en körning på nytt {#identify-reexecution}
 
-Körda körningar kan identifieras av värdet `RE_EXECUTE` i fältet `trigger`.
+Systemet identifierar omkörningar genom att ställa in fältet `trigger` på värdet `RE_EXECUTE`.
