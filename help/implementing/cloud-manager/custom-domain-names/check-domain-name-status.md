@@ -5,9 +5,9 @@ exl-id: 8fdc8dda-7dbf-46b6-9fc6-d304ed377197
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: ff8c7fb21b4d8bcf395d28c194a7351281eef45b
+source-git-commit: fa99656e0dd02bb97965e8629d5fa657fbae9424
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '847'
 ht-degree: 0%
 
 ---
@@ -17,15 +17,11 @@ ht-degree: 0%
 
 Lär dig hur du verifierar att Cloud Manager har bekräftat ditt anpassade domännamn.
 
-## Krav {#requirements}
+## Kontrollera status för ett anpassat domännamn {#how-to}
 
-Uppfyll dessa krav innan du kontrollerar domännamnsstatusen i Cloud Manager.
+Innan du kontrollerar domännamnsstatusen i Cloud Manager ska du kontrollera att du redan har lagt till ett kundhanterat (OV/EV) SSL-certifikat för din anpassade domän enligt beskrivningen i [Lägg till ett kundhanterat SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md##add-customer-managed-ssl-cert).
 
-* Lägg först till ett EV/OV-certifikat för din anpassade domän enligt beskrivningen i dokumentet [Lägg till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).
-
-## Kontrollera statusen för ditt anpassade domännamn {#how-to}
-
-Du kan avgöra statusen för ditt anpassade domännamn i Cloud Manager.
+**Så här kontrollerar du statusen för ett anpassat domännamn:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
@@ -33,7 +29,7 @@ Du kan avgöra statusen för ditt anpassade domännamn i Cloud Manager.
 
 1. Gå till skärmen **Miljö** från sidan **Översikt**.
 
-1. Klicka på **Domäninställningar** i den vänstra navigeringspanelen.
+1. Klicka på **Domäninställningar** på den vänstra menyn.
 
 1. Klicka på ikonen **Status** för domännamnet.
 
@@ -41,11 +37,14 @@ Statusinformationen visas. Din anpassade domän är klar att användas när stat
 
 >[!NOTE]
 >
->Cloud Manager utlöser automatiskt verifiering när du väljer **Skapa** i verifieringssteget i guiden **Lägg till anpassad domän** när du [lägger till ett nytt anpassat domännamn i Cloud Manager](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md). För efterföljande verifieringar måste du aktivt markera ikonen för att verifiera igen bredvid statusen.
+>Om du använder ett *Adobe-hanterat (DV) SSL-certifikat* med domänen utlöser Cloud Manager automatiskt verifiering när du klickar på **Verifiera** i dialogrutan Verifiera domän när [du lägger till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).
+>
+>Om du planerar att använda ett **kundhanterat (OV/EV) SSL-certifikat** verifieras din domän *efter* att du [lagt till OV/EV SSL-certifikatet](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md).
+
 
 ## Verifieringsstatus {#statuses}
 
-Cloud Manager verifierar domänägarskap via det kundhanterade certifikatet. När du är klar visas ett av följande statusmeddelanden:
+Cloud Manager verifierar domänägarskap via det kundhanterade (OV/EV) SSL-certifikatet. När du är klar visas ett av följande statusmeddelanden:
 
 | Status | Beskrivning |
 | --- | --- |
