@@ -5,9 +5,9 @@ exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: f12392075b71b219bf449f585f63561167ddada9
+source-git-commit: 9645ee21bc8c44020d5bb7cdd513d67429353c7d
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '996'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ När du har lagt till DV i Cloud Manager väntar du tills Adobe har utfärdat oc
 * **För ett SSL-certifikat som hanteras av en kund (OV/EV):**
 
    * Hämta ditt OV/EV SSL-certifikat från en certifikatutfärdare. Mer information finns i [kraven för kundhanterade OV/EV SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction-to-ssl-certificates.md#requirements).
-   * [Lägg till information om ditt kundhanterade (OV/EV) SSL-certifikat ](#add-customer-manage-ssl-cert) i Cloud Manager när certifikatet har förvärvats.
+   * [Lägg till information om ditt kundhanterade (OV/EV) SSL-certifikat ](#add-customer-managed-ssl-cert) i Cloud Manager när certifikatet har förvärvats.
    * När du har lagt till det anpassade domännamnet markeras det som verifierat och SSL-certifikatet används.
 
 I båda fallen är den anpassade domänen tillgänglig för säker användning i din miljö när certifikatet har verifierats och installerats. [Kontrollera domänens status](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) i Cloud Manager-gränssnittet regelbundet för att kontrollera att allt fungerar som det ska.
@@ -76,8 +76,7 @@ Behöver du hjälp med att välja om du vill använda ett Adobe-hanterat SSL-cer
 1. I fältet **Certifikatnamn** anger du ett namn som du vill associera med DV SSL-certifikatet.
 
 1. I listrutan **Välj domäner** väljer du en eller flera verifierade domäner som du vill associera med DV SSL-certifikatet.
-   * Inga domäner att välja? I så fall måste du först lägga till ett anpassat domännamn och se till att det är verifierat innan du kan lägga till ett SSL-certifikat.
-   * Se [Lägg till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).
+   * Inga domäner att välja? I så fall måste du först [lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) och kontrollera att det är verifierat innan du kan lägga till ett Adobe-hanterat SSL-certifikat.
    * När du är klar med att lägga till ett anpassat domännamn går du tillbaka till det här avsnittet och börjar på steg 1 igen.
 
 1. Klicka på **Spara** i dialogrutans nedre högra hörn.
