@@ -5,9 +5,9 @@ exl-id: 769be71f-5c11-4f98-8906-7a5667a25aee
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 1902e9b237adbdaff172535d0904d0faa615e9d1
+source-git-commit: 40a76e39750d6dbeb03c43c8b68cddaf515a2614
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
@@ -29,9 +29,9 @@ En användare i rollen **Affärsägare** eller **Distributionshanterare** kan f�
 
 1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
 
-1. På sidan **Programöversikt** klickar du med sidopanelen (du kan behöva klicka på ![Visa menyikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i det övre vänstra hörnet för att visa panelen) på ![ikonen för uppgiftslistan](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TaskList_18_N.svg) **IP-Tillåtelselista**.
+1. På sidan **Programöversikt** klickar du med den vänstra menyn (du kan behöva klicka på ![Visa menyikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i det övre vänstra hörnet för att se menyn) på ![ikonen för uppgiftslistan](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TaskList_18_N.svg) **IP-Tillåtelselista**.
 
-   ![Alternativet IP-Tillåtelselista på sidpanelen](/help/implementing/cloud-manager/assets/ip-allow-list/ip-allow-list-create.png)
+   ![Alternativet IP-Tillåtelselista på den vänstra menyn](/help/implementing/cloud-manager/assets/ip-allow-list/ip-allow-list-create.png)
 
 1. Klicka på **Lägg till IP Tillåtelselista** i det övre högra hörnet på IP Tillåtelselista-sidan.
 

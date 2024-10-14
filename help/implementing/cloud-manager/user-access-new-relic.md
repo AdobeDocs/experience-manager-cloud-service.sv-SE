@@ -5,9 +5,9 @@ exl-id: 9fa0c5eb-415d-4e56-8136-203d59be927e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 9cde6e63ec452161dbeb1e1bfb10c75f89e2692c
+source-git-commit: 40a76e39750d6dbeb03c43c8b68cddaf515a2614
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1825'
 ht-degree: 0%
 
 ---
@@ -47,13 +47,13 @@ För ett nyskapat program skapas ett New Relic One-underkonto åt dig. Du måste
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
-1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** trycker eller klickar du på det program som du vill hantera dina New Relic One-användare för.
+1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** klickar du på det program som du vill hantera dina New Relic One-användare för.
 
-1. Klicka på ellipsknappen längst ned på **Environmental** -kortet på programöversiktssidan och välj **Aktivera New Relic**.
+1. Klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg längst ned på **Environmental**-kortet på programöversiktssidan och välj **Aktivera New Relic**.
 
    ![Hantera användare](assets/newrelic-activate-sub-account.png)
 
-   * Du kan även komma åt alternativet **Hantera användare** via ellipsknappen högst upp på skärmen **Miljö** i ditt program.
+   * Du kan även komma åt alternativet **Hantera användare** genom att klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg högst upp på skärmen **Miljö** i ditt program.
 
 1. [Kör en pipeline](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#running-pipelines) för samma miljö för att slutföra aktiveringen av underkontot.
 
@@ -71,11 +71,11 @@ Följ de här stegen för att definiera användare för ditt New Relic One-under
 
 1. Klicka på det program som du vill hantera dina New Relic One-användare för.
 
-1. Klicka på ellipsknappen längst ned på kortet **Miljöer** på programöversiktssidan och välj **Hantera användare**.
+1. Klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg längst ned på **miljökortet** på programöversiktssidan och välj **Hantera användare**.
 
    ![Hantera användare](assets/newrelic-manage-users.png)
 
-   * Du kan även komma åt alternativet **Hantera användare** via ellipsknappen högst upp på skärmen **Miljö** i ditt program.
+   * Du kan även komma åt alternativet **Hantera användare** genom att klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg högst upp på skärmen **Miljö** i ditt program.
 
 1. I dialogrutan **Hantera New Relic-användare** anger du för- och efternamnet för den användare som du vill lägga till och klickar på knappen **Lägg till** . Upprepa det här steget för alla användare som du vill lägga till.
 
@@ -121,11 +121,11 @@ När du har [aktiverat ditt New Relic-konto](#activate-account) kan du komma åt
 
 1. Klicka på det program som du vill använda New Relic One för.
 
-1. Klicka på ellipsknappen längst ned på **Miljökortet** på programöversiktssidan och välj **Öppna New Relic**.
+1. Klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg längst ned på **miljökortet** på programöversiktssidan och välj **Öppna New Relic**.
 
    ![Hantera användare](assets/newrelic-access.png)
 
-   * Du kan även komma åt New Relic via ellipsknappen högst upp på skärmen **Environment** i ditt program.
+   * Du kan även få åtkomst till New Relic genom att klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg högst upp på skärmen **Environment** i ditt program.
 
 1. Logga in på New Relic One på den nya webbläsarfliken som öppnas.
 

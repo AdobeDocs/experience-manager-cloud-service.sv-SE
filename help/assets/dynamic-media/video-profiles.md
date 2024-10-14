@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Asset Management,Video Profiles,Renditions,Best Practices
 role: User
 exl-id: 07bfd353-c105-4677-a094-b70c1098fb7f
-source-git-commit: 35f31c95e92148ff5f3472f26ea9c40fa5a17947
+source-git-commit: 88b4864da30fbf201dbd5bde1ac17d3be977648f
 workflow-type: tm+mt
-source-wordcount: '3567'
+source-wordcount: '3565'
 ht-degree: 4%
 
 ---
@@ -151,7 +151,7 @@ Se även [Bästa tillvägagångssätt för videokodning](/help/assets/dynamic-me
 
 Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera bearbetning av resurser](/help/assets/dynamic-media/config-dm.md#configuring-asset-processing).
 
-**Om du vill skapa en videoprofil för strömning med adaptiv bithastighet**
+**Så här skapar du en videoprofil för strömning med adaptiv bithastighet:**
 
 1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
 1. Välj **[!UICONTROL Create]**.
@@ -192,7 +192,7 @@ Nu kan du använda profilen för mappar som innehåller videoklipp. Se [Tillämp
 
 Om du väljer att inte använda alternativet **[!UICONTROL Encode for adaptive streaming]** behandlas alla kodningsförinställningar som du lägger till i profilen som enskilda videoåtergivningar för direktuppspelning med en bithastighet eller progressiv videoleverans. Dessutom går det inte att kontrollera att alla videoåtergivningar har samma proportioner.
 
-Videoformatets kodekar som stöds är H.264 (.mp4) och WebM.
+Videoformatets kodek som stöds är H.264 (.mp4). <!-- use to also include WebM but was requested for removal by Riya Midha in email dated October 14, 2024 -->
 
 Se även [Skapa en videokodningsprofil för strömning med adaptiv bithastighet](#creating-a-video-encoding-profile-for-adaptive-streaming).
 

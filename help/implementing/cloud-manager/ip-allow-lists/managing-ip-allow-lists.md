@@ -5,7 +5,7 @@ exl-id: 6efabe53-3f45-47d4-ac1f-979cae0ab33e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: b9fb178760b74cb0e101506b6a9ff5ae30c18490
+source-git-commit: 40a76e39750d6dbeb03c43c8b68cddaf515a2614
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 0%
@@ -23,7 +23,7 @@ En användare i rollen **Affärsägare** eller **Distributionshanterare** kan f�
 **Så här visar och uppdaterar du IP-Tillåtelselista:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
-1. På sidan **Översikt** klickar du på ikonen ![Åtgärdslista](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TaskList_18_N.svg) **IP-Tillåtelselista** på sidopanelen under **Tjänster**.
+1. På sidan **Översikt**, på den vänstra menyn, under **Tjänster**, klickar du på ikonen ![Åtgärdslista](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TaskList_18_N.svg) **IP-Tillåtelselista**.
 1. Identifiera raden för IP-Tillåtelselista som du vill visa eller uppdatera.
 1. Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) till höger om raden.
 1. Klicka på **Visa och uppdatera** i listrutan.
@@ -40,7 +40,7 @@ I dialogrutan **Visa och uppdatera IP Tillåtelselista** visas namnet, IP-adress
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
-1. På sidan **Översikt** klickar du på ikonen ![Åtgärdslista](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TaskList_18_N.svg) **IP-Tillåtelselista** på sidopanelen under **Tjänster**.
+1. På sidan **Översikt**, på den vänstra menyn, under **Tjänster**, klickar du på ikonen ![Åtgärdslista](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TaskList_18_N.svg) **IP-Tillåtelselista**.
 
 1. I kolumnen **Status** i IP Tillåtelselista-tabellen håller du muspekaren över ett IP-Tillåtelselista som är grönt (används) för att se en eller flera tjänster som används.
 
@@ -63,10 +63,9 @@ En användare i rollen **Affärsägare** eller **Distributionshanterare** kan f�
 **Så här tar du bort en IP-Tillåtelselista:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
-1. På sidan **Översikt** klickar du på ikonen ![Åtgärdslista](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TaskList_18_N.svg) **IP-Tillåtelselista** på sidopanelen under **Tjänster**.
-1. Identifiera raden för IP-Tillåtelselista som du vill ta bort och klicka sedan på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) till höger om raden.
-1. Klicka på **Ta bort** i listrutan.
-1. Klicka på **Ta bort** i dialogrutan Ta bort IP Tillåtelselista.
+1. På sidan **Översikt**, på den vänstra menyn, under **Tjänster**, klickar du på ikonen ![Åtgärdslista](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TaskList_18_N.svg) **IP-Tillåtelselista**.
+1. Identifiera raden för IP-Tillåtelselista som du vill ta bort, klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) till höger om raden och klicka sedan på **Ta bort**.
+1. Klicka på **Ta bort** i dialogrutan **Ta bort IP Tillåtelselista**.
 
 ## Redan befintliga CDN-konfigurationer {#pre-existing-cdn}
 

@@ -5,9 +5,9 @@ exl-id: 3f3d7631-2bc9-440b-9888-50f6529bcd42
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 500e1b78fb9688601848fc17f312fc23be83bcb0
+source-git-commit: 40a76e39750d6dbeb03c43c8b68cddaf515a2614
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1656'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Konsolen Mina program ger en översikt över alla program som du har tillgång t
 1. Flikar som gör att du kan växla den aktuella vyn av dina program.
    * Vyn **Hem** (standard) som väljer vyn **Mina program** med en översikt över alla program
    * **Licens** som har åtkomst till [licensinstrumentpanelen](/help/implementing/cloud-manager/license-dashboard.md).
-   * Observera att flikarna som standard är stängda och att de kan visas med hjälp av hamburgermenyn i [Cloud Manager-huvudet](#cloud-manager-header).
+   * Observera att flikarna som standard är stängda och att de kan visas med https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg i [Cloud Manager-rubriken](#cloud-manager-header).
 1. [Statistik och uppmaning](#statistics) för en översikt över din senaste aktivitet
 1. [**Mina program** avsnitt](#my-programs-section) med en översikt över alla dina program
 1. [Snabblänkar](#quick-links-section) gör det enkelt att komma åt relaterade resurser.
@@ -195,7 +195,7 @@ Verktygsfältet för program ger dig fortfarande möjlighet att snabbt växla ti
 
 ![Verktygsfältet Program](assets/cloud-manager-program-toolbar.png)
 
-Verktygsfältet visar alltid den flik som du för tillfället är på, även om du har dolt flikarna med hjälp av hamburgermenyn.
+Verktygsfältet visar alltid den flik som du för tillfället är på, även om du har dolt flikarna med https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg.
 
 ### Programflikar {#program-tabs}
 

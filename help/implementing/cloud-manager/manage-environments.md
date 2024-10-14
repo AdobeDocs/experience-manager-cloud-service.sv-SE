@@ -5,9 +5,9 @@ exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 500e1b78fb9688601848fc17f312fc23be83bcb0
+source-git-commit: 40a76e39750d6dbeb03c43c8b68cddaf515a2614
 workflow-type: tm+mt
-source-wordcount: '2371'
+source-wordcount: '2357'
 ht-degree: 0%
 
 ---
@@ -109,7 +109,7 @@ Om du inte angav några ytterligare regioner från början kan du göra det efte
 
 Du kan även ta bort ytterligare publiceringsregioner. Du kan dock bara lägga till eller ta bort regioner i en transaktion. Om du måste lägga till en region och ta bort en region, ska du först lägga till, spara ändringen och sedan ta bort (eller omvänt).
 
-1. Klicka på ellipsknappen för produktionsmiljön i programöversiktskonsolen och välj **Redigera** på menyn.
+1. Klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg för din produktionsmiljö i programöversiktskonsolen och välj **Redigera** på menyn.
 
    ![Redigeringsmiljö](assets/select-edit-environment.png)
 
@@ -129,7 +129,7 @@ Om du vill etablera [avancerat nätverk](/help/security/configuring-advanced-net
 
 På sidan **Översikt** kan du komma åt en miljös detaljer på två sätt.
 
-1. På sidan **Översikt** klickar du på fliken **Miljö** på sidnavigeringspanelen.
+1. På sidan **Översikt** klickar du på fliken **Miljö** på den vänstra menyn.
 
    ![Fliken Miljö](assets/environments-tab2.png)
 
@@ -141,11 +141,11 @@ På sidan **Översikt** kan du komma åt en miljös detaljer på två sätt.
 
    ![Miljöfliken](assets/environments-tab2.png)
 
-1. Tryck eller klicka på en miljö i listan så att du kan visa informationen om den.
+1. Klicka på en miljö i listan så att du kan visa informationen om den.
 
    ![Miljöinformation](assets/environ-preview1.png)
 
-Du kan också klicka på ellipsknappen i den miljö du vill använda och sedan välja **Visa detaljer**.
+Du kan också klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg och sedan välja **Visa detaljer**.
 
 ![Visa miljöinformation](assets/view-environment-details.png)
 
@@ -193,7 +193,7 @@ Du kan även få tillgång till samma information från fliken **Miljö**.
 
 1. Välj fliken **Miljö** på sidan **Översikt**.
 
-1. På fliken **Miljö** väljer du den miljö som du vill fråga i den vänstra navigeringspanelen.
+1. På fliken **Miljö** väljer du den miljö som du vill fråga på den vänstra menyn.
 
 1. När en miljö har valts:
 
@@ -235,11 +235,11 @@ Uppdateringsprocessen är därför en tvåstegsprocess:
 >[!NOTE]
 > 2024 uppdateras redan utvecklingsinstanser och vissa sandlådeprogram automatiskt, så det finns inget behov av att hantera uppdateringar manuellt. Som ett resultat av den här övergången kanske alternativet att uppdatera miljön manuellt för utvecklingsinstanser inte är tillgängligt för _vissa_ av dina program.
 
-Alternativet **Uppdatera** är tillgängligt från kortet **Miljöer** för vissa utvecklingsmiljöer och miljöer i sandlådeprogram genom att klicka på miljöns ellipsknapp.
+Alternativet **Update** är tillgängligt från kortet **Environmental** för vissa utvecklingsmiljöer och miljöer i sandlådeprogram genom att klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg.
 
 ![Uppdateringsalternativ från miljökort](assets/environ-update2.png)
 
-Det här alternativet är också tillgängligt genom att klicka på fliken **Miljö** i programmet och sedan välja miljöns ellipsknapp.
+Det här alternativet är också tillgängligt genom att klicka på fliken **Miljö** i programmet och sedan på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg.
 
 ![Uppdateringsalternativ på fliken Miljö](assets/environ-update3.png)
 
@@ -259,11 +259,11 @@ Beteendet för alternativet **Uppdatera** varierar beroende på programmets konf
 
 En användare med rollen **Distributionshanteraren** eller **Affärsägare** kan ta bort en utvecklingsmiljö.
 
-På skärmen **Översikt** i programmet på kortet **Miljöer** klickar du på ellipsknappen i den utvecklingsmiljö du vill ta bort.
+På skärmen **Översikt** i programmet på **miljökortet** klickar du på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg för den utvecklingsmiljö du vill ta bort.
 
 ![Alternativet Ta bort](assets/environ-delete.png)
 
-Alternativet Ta bort är också tillgängligt på fliken **Miljö** i programfönstret **Översikt** . Klicka på ellipsknappen i miljön och välj **Ta bort**.
+Alternativet Ta bort är också tillgängligt på fliken **Miljö** i programfönstret **Översikt** . Klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg och välj **Ta bort**.
 
 ![Alternativet Ta bort på fliken Miljö](assets/environ-delete2.png)
 

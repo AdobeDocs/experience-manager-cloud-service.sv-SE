@@ -5,7 +5,7 @@ exl-id: 76ca1584-e21d-4e3a-a08a-82b2779167cf
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 8a10634e413ea5c66845dfffa7396a4554a5b3ca
+source-git-commit: 40a76e39750d6dbeb03c43c8b68cddaf515a2614
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Du måste redan ha konfigurerat DNS-inställningarna för ditt anpassade domänn
 
 1. Gå till skärmen **Miljö** från sidan **Översikt**.
 
-1. Klicka på **Domäninställningar** i den vänstra navigeringspanelen.
+1. Klicka på **Domäninställningar** på den vänstra menyn.
 
 1. Klicka på ikonen **Status** för domännamnet.
 

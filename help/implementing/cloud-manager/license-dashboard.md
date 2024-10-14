@@ -5,9 +5,9 @@ exl-id: bf0f54a9-fe86-4bfb-9fa6-03cf0fd5f404
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 500e1b78fb9688601848fc17f312fc23be83bcb0
+source-git-commit: 40a76e39750d6dbeb03c43c8b68cddaf515a2614
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '909'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Cloud Manager License Dashboard ger enkel åtkomst till tillgängliga lösningsr
 >En användare i rollen **Affärsägare** måste vara inloggad för att kunna visa kontrollpanelen för licenser.
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
-1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** klickar du på menyknappen för hamburgaren på [Cloud Manager Header](/help/implementing/cloud-manager/navigation.md#cloud-manager-header) . Då visas flikarna.
+1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** klickar du på https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg på [Cloud Manager Header](/help/implementing/cloud-manager/navigation.md#cloud-manager-header). Den här åtgärden visar flikarna.
 1. Klicka på alternativet **Licens** på fliken.
 
 ![Licensinstrumentpanel](assets/license-dashboard.png)

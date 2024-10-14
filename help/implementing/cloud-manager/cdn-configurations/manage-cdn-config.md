@@ -4,9 +4,9 @@ description: Lär dig hur du använder Cloud Manager för att redigera och uppda
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 02f9b035320bb4b6219d5ed4273554259fc09e59
+source-git-commit: 40a76e39750d6dbeb03c43c8b68cddaf515a2614
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '797'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ En användare måste vara medlem i rollen **Affärsägare** eller **Distribution
 **Så här redigerar du en CDN-konfiguration från sidan CDN-konfigurationer:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
-1. Klicka på ikonen ![Sociala nätverk](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SocialNetwork_18_N.svg) **CDN-konfigurationer** i sidopanelen under **Tjänster**.
+1. Klicka på ikonen ![Sociala nätverk](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SocialNetwork_18_N.svg) **CDN-konfigurationer** på den vänstra menyn under **Tjänster**.
 1. I tabellen **CDN-konfigurationer** klickar du på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i slutet av en rad vars CDN-konfiguration du vill uppdatera.
 
    ![Redigera en CDN-konfiguration](/help/implementing/cloud-manager/assets/cdn-config-edit.png)
@@ -87,13 +87,11 @@ En användare måste vara medlem i rollen **Affärsägare** eller **Distribution
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
-1. Klicka på **CDN-konfigurationer** under **Tjänster** på den vänstra panelen.
+1. Klicka på **CDN-konfigurationer** under **Tjänster** på den vänstra menyn.
 
-1. I tabellen CDN-konfigurationer klickar du på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i slutet av en rad som motsvarar det CDN som du vill ta bort.
+1. I tabellen CDN-konfigurationer klickar du på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i slutet av en rad som motsvarar det CDN-nummer som du vill ta bort och sedan på **Ta bort**.
 
    ![Tar bort en CDN-konfiguration](/help/implementing/cloud-manager/assets/cdn-config-delete.png)
-
-1. Klicka på **Ta bort** i listrutan.
 
 1. Klicka på **Ta bort** i dialogrutan **Ta bort CDN-konfiguration**.
 
@@ -112,11 +110,9 @@ Stegen för att ta bort en CDN-konfiguration från sidan **Miljö** är nästan 
 
 1. Välj en miljö av intresse på sidan **Miljö**.
 
-1. På sidan med miljöinformation i gruppen **CDN-konfigurationer** klickar du på ![Mer ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) som motsvarar den CDN-konfiguration som du vill ta bort.
+1. På sidan med miljöinformation i gruppen **CDN-konfigurationer** klickar du på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) som motsvarar den CDN-konfiguration som du vill ta bort och sedan på **Ta bort**.
 
    ![CDN-konfigurationsgrupp på en miljöinformationssida](/help/implementing/cloud-manager/assets/cdn/environments-cdn-config.png)
-
-1. Klicka på **Ta bort** i listrutan.
 
 1. Klicka på **Ta bort** i dialogrutan **Ta bort CDN-konfiguration**.
 

@@ -5,7 +5,7 @@ exl-id: 03932415-a029-4703-b44a-f86a87edb328
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: c46b6df488722fe750e524ad2bb383f25bf00b0f
+source-git-commit: 40a76e39750d6dbeb03c43c8b68cddaf515a2614
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Raddiagrammet för ett valt år innehåller datapunkter för varje månad från 
 
 1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
 
-1. Klicka på **Rapporter** på sidan **Programöversikt** i den vänstra navigeringspanelen.
+1. Klicka på **Rapporter** på sidan **Programöversikt** på den vänstra menyn.
 
 1. Klicka på **SLA Reports**.
 

@@ -5,9 +5,9 @@ exl-id: cfcef2e2-0590-457d-a0f9-6092a6d9e0e8
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 2573eb5f8a8ff21a8e30b94287b554885cd1cd89
+source-git-commit: 40a76e39750d6dbeb03c43c8b68cddaf515a2614
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
@@ -84,6 +84,7 @@ Om en pipeline körs blockeras variabelhanteringen.
 
 1. Klicka på **Spara**.
 
+
 ## Ta bort en pipeline-variabel {#delete-ui}
 
 1. När du [hanterar dina pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md) klickar du på ikonen ![Ellips - Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) för den pipeline som du vill ta bort pipelinevariabler för.
@@ -92,10 +93,7 @@ Om en pipeline körs blockeras variabelhanteringen.
 
    ![Visa/redigera pipeline-variabler](/help/implementing/cloud-manager/assets/pipeline-variables-view-edit.png)
 
-1. I dialogrutan **Variabelkonfiguration** klickar du på ikonen ![Ellips - Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) för variabeln som du vill ta bort.
-
-1. Klicka på **Ta bort** i listrutan.
-
+1. I dialogrutan **Variabelkonfiguration** klickar du på ikonen ![Ellips - Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) för variabeln som du vill ta bort och sedan på **Ta bort**.
 
 ## Ange pipeline-variabler med Cloud Manager CLI {#cli}
 

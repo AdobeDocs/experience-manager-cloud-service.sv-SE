@@ -6,9 +6,9 @@ exl-id: eba608eb-a19e-4bff-82ff-05860ceabe6e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 500e1b78fb9688601848fc17f312fc23be83bcb0
+source-git-commit: 40a76e39750d6dbeb03c43c8b68cddaf515a2614
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1398'
 ht-degree: 0%
 
 ---
@@ -156,12 +156,12 @@ Stegen för att slutföra skapandet av din icke-produktion, målinriktade distri
 
    ![Konfigurera pipeline](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-config-deployment-experience-audit.png)
 
-1. Om du har aktiverat Experience Audit (Experience Audit) trycker eller klickar du på **Continue** (Fortsätt) för att gå vidare till fliken **Experience Audit** där du kan definiera sökvägarna som alltid ska ingå i Experience Audit (Experience Audit).
+1. Om du har aktiverat Experience Audit klickar du på **Continue** för att gå vidare till fliken **Experience Audit** där du kan definiera sökvägarna som alltid ska inkluderas i Experience Audit.
 
    * Om du har aktiverat **Experience Audit** finns mer information om hur du konfigurerar i dokumentet [Experience Audit](/help/implementing/cloud-manager/experience-audit-dashboard.md).
    * Om du inte gjorde det hoppar du över det här steget.
 
-1. Tryck eller klicka på **Spara** för att spara pipeline.
+1. Klicka på **Spara** för att spara pipeline.
 
 Pipelinen sparas och du kan nu [hantera dina pipelines](managing-pipelines.md) på kortet **Pipelines** på sidan **Programöversikt**.
 

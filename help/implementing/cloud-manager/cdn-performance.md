@@ -5,9 +5,9 @@ exl-id: ecd8c1ca-873f-4e73-ad73-b5f7561eb109
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 500e1b78fb9688601848fc17f312fc23be83bcb0
+source-git-commit: 40a76e39750d6dbeb03c43c8b68cddaf515a2614
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -42,17 +42,17 @@ Kontrollpanelen ger en övergripande poäng för CDN-prestanda tillsammans med t
 
 ![Kontrollpanel för CDN-prestanda](assets/cdn-performance-dashboard.png)
 
-Om du vill ha mer information om CDN-prestanda och förslag på hur du kan förbättra den trycker eller klickar du på **Visa trend**.
+Klicka på **Visa trend** om du vill ha mer information om CDN-prestanda och förslag på hur du kan förbättra den.
 
 ![Resultattrend](assets/cdn-performance-trend.png)
 
-Tryck eller klicka på **Visa** nedanför diagrammet om du vill ändra tidsrymden för diagrammet.
+Klicka på **Visa** nedanför diagrammet om du vill ändra tidsintervallet.
 
 Om du vill ha förslag på hur du kan förbättra CDN-prestanda väljer du fliken **Recommendations**.
 
 ![CDN-rekommendationer](assets/cdn-performance-recommendations.png)
 
-Tryck eller klicka på markören bredvid en rekommendation i listan för att visa information om vilka åtgärder som ska vidtas för att förbättra och orsaken till problemet.
+Klicka på markören bredvid eventuella rekommendationer i listan för att visa information om vilka åtgärder som ska vidtas för att förbättra och orsaken till problemet.
 
 ## Träffdefinition i cache {#cache-hit}
 
