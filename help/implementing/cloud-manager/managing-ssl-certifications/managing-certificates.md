@@ -5,9 +5,9 @@ exl-id: ad6170f4-93bd-4bac-9c54-63c35a0d4f06
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: b735c724bd8d68273b3c09a2dc53a13f5f6095ae
+source-git-commit: f12392075b71b219bf449f585f63561167ddada9
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1034'
 ht-degree: 0%
 
 ---
@@ -59,9 +59,10 @@ En användare måste vara medlem i rollen **Affärsägare** eller **Distribution
 
 1. Klicka på **Uppdatera** om du vill spara ändringarna och använda dem automatiskt.
 
+
 >[!NOTE]
 >
->Om du har två eller flera SAN-certifikat som täcker samma SAN-domänpost, och om den domänen täcks av ett certifikat och det andra uppdateras, kommer den senare nu att installeras för domänen.
+>Om du har två eller flera SAN-certifikat som täcker samma SAN-domänpost, och om domänen täcks av ett certifikat och det andra uppdateras, installeras det senare för domänen.
 >
 >Mer information finns i [Felsöka SSL-certifikatproblem](/help/implementing/cloud-manager/managing-ssl-certifications/troubleshoot-ssl-cert.md#wrong-san-cert).
 
@@ -80,13 +81,21 @@ Nedan följer några skäl till att du kanske vill byta namn på ett SSL-certifi
 **Så här byter du namn på ett SSL-certifikat som hanteras av Adobe:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämpligt program.
+
 1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
+
 1. Klicka på ![Visa menyikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i sidans övre vänstra hörn för att visa sidomenyn.
+
 1. Under rubriken **Tjänster** klickar du på ![Lås stängda ikoner](https://spectrum.adobe.com/static/icons/workflow_18/Smock_LockClosed_18_N.svg) **SSL-certifikat**.
-1. På sidan **SSL-certifikat** klickar du på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i slutet av en rad vars *Adobe-hanterade*-certifikat du vill byta namn på.
+
+1. På sidan **SSL-certifikat** klickar du på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i slutet av en rad vars **Adobe-hanterade** SSL-certifikat du vill byta namn på.
+
 1. Klicka på **Byt namn** i listrutan.
+
 1. Ange certifikatets nya namn i dialogrutan **Byt namn på DV-certifikat** i textfältet **Certifikatnamn**.
+
 1. Klicka på **Byt namn**.
+
 
 ## Ta bort ett SSL-certifikat {#deleting-an-ssl-certificate}
 
@@ -101,17 +110,25 @@ En användare måste vara medlem i rollen **Affärsägare** eller **Distribution
 **Så här tar du bort ett SSL-certifikat:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämpligt program.
+
 1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
+
 1. Klicka på ![Visa menyikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i sidans övre vänstra hörn för att visa sidomenyn.
+
 1. Under rubriken **Tjänster** klickar du på ![Lås stängda ikoner](https://spectrum.adobe.com/static/icons/workflow_18/Smock_LockClosed_18_N.svg) **SSL-certifikat**.
-1. På sidan SSL-certifikat klickar du på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)längst till höger i tabellraden för det certifikat du vill ta bort.
+
+1. På sidan SSL-certifikat klickar du på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) längst till höger i tabellraden för det certifikat du vill ta bort.
+
 1. Klicka på **Ta bort** i listrutan.
-Om knappen Ta bort har en informationsikon som i bilden nedan kan du läsa anteckningen ovan.
+
+   Om **Delete** har en informationsikon som i bilden nedan kan du läsa anteckningen ovan.
 
    ![Ta bort knapp med informationsikon](/help/implementing/cloud-manager/assets/ssl/ssl-cert-delete-infoicon.png)
 
 1. Klicka på **Ta bort** i dialogrutan **Ta bort SSL-certifikat** för att bekräfta borttagningen.
+
 1. Kör pipeline för att ta bort distributionen av det borttagna certifikatet.
+
 
 ## Redan befintliga CDN-konfigurationer {#pre-existing-cdn}
 

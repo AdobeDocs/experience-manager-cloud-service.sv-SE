@@ -5,7 +5,7 @@ exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: fa99656e0dd02bb97965e8629d5fa657fbae9424
+source-git-commit: f12392075b71b219bf449f585f63561167ddada9
 workflow-type: tm+mt
 source-wordcount: '1000'
 ht-degree: 0%
@@ -69,7 +69,7 @@ Behöver du hjälp med att välja om du vill använda ett Adobe-hanterat SSL-cer
 
 1. Klicka på **Lägg till SSL-certifikat** i det övre högra hörnet på sidan SSL-certifikat.
 
-1. I dialogrutan **Lägg till SSL-certifikat**, baserat på [ditt användningsfall](#which-ssl-to-add), väljer du **hanterad (DV)** i Adobe.
+1. I dialogrutan **Lägg till SSL-certifikat**, baserat på [ditt användningsfall](#which-ssl-to-add), väljer du **Hanterad Adobe (DV)**.
 
    ![Lägg till ett DV-certifikat](/help/implementing/cloud-manager/assets/ssl/add-dv-certificate.png)
 
@@ -90,13 +90,18 @@ Du kan nu lägga till en [CDN-konfiguration](/help/implementing/cloud-manager/cd
 
 ## Lägg till ett OV/ED-SSL-certifikat (Customer managed) {#add-customer-managed-ssl-cert}
 
+<!-- IF THIS TOPIC GET UPDATED, REMEMBER TO UPDATE THE STEPS ALSO IN THE "MANAGE SSL CERTIFICATES TOPIC TOO -->
+
 Behöver du hjälp med att välja om du vill använda ett Adobe-hanterat SSL-certifikat (rekommenderas) eller ett kundhanterat SSL-certifikat med din domän? Se [Välja vilket SSL-certifikat som ska läggas till](#which-ssl-to-add)
 
 **Så här lägger du till ett kundhanterat (OV/EV) SSL-certifikat:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämpligt program.
+
 1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
+
 1. Klicka på ![Visa menyikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i sidans övre vänstra hörn för att visa sidomenyn.
+
 1. Under rubriken **Tjänster** klickar du på ![Lås stängda ikoner](https://spectrum.adobe.com/static/icons/workflow_18/Smock_LockClosed_18_N.svg) **SSL-certifikat**.
 
    ![Lägger till ett SSL-certifikat](/help/implementing/cloud-manager/assets/ssl/ssl-cert-add.png)
@@ -109,7 +114,8 @@ Behöver du hjälp med att välja om du vill använda ett Adobe-hanterat SSL-cer
 Det här fältet är avsett endast som information och kan vara vilket namn som helst som gör det enkelt att referera till ditt SSL-certifikat.
 
 1. Kopiera de obligatoriska värdena från OV- eller EV SSL-certifikatet i fälten **Certifikat**, **Privat nyckel** och **Certifikatkedja** och klistra in dem i respektive fält i dialogrutan.
-Alla identifierade fel i värden visas. Innan du kan spara certifikatet måste du åtgärda alla fel. Mer information om hur du felsöker vanliga fel finns i [Certifikatfel](#certificate-errors).
+
+   Alla identifierade fel i värden visas. Innan du kan spara certifikatet måste du åtgärda alla fel. Mer information om hur du felsöker vanliga fel finns i [Certifikatfel](#certificate-errors).
 
    ![Dialogrutan Lägg till SSL-certifikat](/help/implementing/cloud-manager/assets/ssl/ssl-cert-02.png)|
 
