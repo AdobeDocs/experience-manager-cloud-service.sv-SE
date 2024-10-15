@@ -3,9 +3,9 @@ title: Begränsa leverans av resurser med Dynamic Media med OpenAPI-funktioner
 description: Lär dig hur du begränsar materialdistributionen med OpenAPI-funktioner.
 role: User
 exl-id: 3fa0b75d-c8f5-4913-8be3-816b7fb73353
-source-git-commit: 6e9fa8301fba9cab1a185bf2d81917e45acfe3a3
+source-git-commit: 03e13d29629c5e0305401179502cd1fc24f9ad75
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
@@ -96,12 +96,4 @@ På AEM Cloud Service författartjänster och resursväljare genereras och anvä
 
 ### Leverans för skräddarsydda identitetsleverantörer på Publish {#delivery-custom-identity-provider}
 
-AEM Sites, AEM Assets och Dynamic Media med OpenAPI-licenser kan användas tillsammans, och begränsad leverans av resurser kan konfigureras på webbplatser som levereras via AEM Publish- eller Preview-tjänster.
-Om AEM Sites Publish- och Preview-tjänster är konfigurerade att använda en [anpassad identitetsleverantör (IdP)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/authentication/saml-2-0) kan gruppen som måste ha åtkomst till skyddade resurser i inkluderas i attributet `groupMembership` under konfigurationsprocessen.\
-När en webbplatsanvändare loggar in på en anpassad identitetsleverantör och kommer åt webbplatsen som finns på Publish/Preview-tjänsten, läses attributet `groupMembership` och en säker cookie skapas och levereras på webbplatsen efter autentiseringen. Denna säkra cookie ingår i alla efterföljande förfrågningar om att leverera webbplatsinnehållet till användaragenten.
-
-När en skyddad tillgång begärs på en sida extraherar AEM Publish- och förhandsgranskningsnivåer auktoriseringsmaterialet från den säkra cookien och validerar åtkomsten. Om det finns en matchning visas resursen.
-
->[!NOTE]
->
-> I [supportanmälan för att aktivera Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md#how-to-enable-the-dynamic-media-with-openapi-capabilities) anger du begränsad leverans i användningsexemplet. Adobe Engineering kommer att hjälpa till med nödvändiga klargöranden och/eller upprätta processer för begränsad leverans.
+AEM Sites, AEM Assets och Dynamic Media med OpenAPI-licenser kan användas tillsammans, vilket gör det möjligt att konfigurera begränsad leverans av resurser på webbplatser som AEM Publish eller förhandsgranskningstjänsten. Det säkra leveransflödet utnyttjar cookies i webbläsaren för att fastställa användarens åtkomst och att ha en anpassad domän för leveransnivå som är underdomän till publiceringsdomänen är en förutsättning för att det här användningsexemplet ska kunna implementeras. Om AEM Sites Publish- och Preview-tjänster är konfigurerade att använda en [anpassad identitetsleverantör (IdP)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/authentication/saml-2-0), måste en ny cookie med namnet `delivery-token` som kapslar in användarens gruppmedlemskap ställas in för publiceringsdomänens autentisering efter användarens autentisering. Leveransnivån extraherar auktoriseringsmaterialet från säker-cookie och validerar åtkomsten. Logga en [företagssupportbiljett](/help/assets/dynamic-media-open-apis-overview.md#how-to-enable-the-dynamic-media-with-openapi-capabilities) om du vill ha mer information.
