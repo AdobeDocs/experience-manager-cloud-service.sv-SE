@@ -4,9 +4,9 @@ description: Lär dig hur du använder miljöer för snabb utveckling för snabb
 exl-id: 1e9824f2-d28a-46de-b7b3-9fe2789d9c68
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 1289da67452be7fc0fa7f3126d2a3dbf051aa9b5
+source-git-commit: fd57437b16a87de2b279b0f8bc10c12a7d3f721a
 workflow-type: tm+mt
-source-wordcount: '4241'
+source-wordcount: '4537'
 ht-degree: 0%
 
 ---
@@ -94,10 +94,38 @@ När du har lagt till en RDE för programmet med Cloud Manager kan du interagera
    aio plugins:update
    ```
 
-1. Konfigurera RDE-pluginen så att den använder din organisation, ditt program och din miljö. Med konfigurationskommandot nedan får användaren en lista över program i sin organisation och visar RDE-miljöer i det programmet att välja mellan.
+1. Logga in med AIR-klienten.
 
    ```
    aio login
+   ```
+   Inloggningsinformationen (token) lagras i den globala AIR-konfigurationen och stöder därför endast en inloggning och organisation. Om du vill använda flera olika referensmiljöer som behöver olika inloggningar eller organisationer följer du exemplet nedan för att presentera kontexter.
+
+   <details><summary>Följ det här exemplet för att konfigurera en lokal kontext för en av dina RDE-inloggningar</summary>
+   Följ de här stegen om du vill lagra inloggningsinformationen lokalt i en aio-fil i den aktuella katalogen i en viss kontext. Ett sammanhang är också ett smart sätt att konfigurera en CI/CD-miljö eller skript.  Om du vill använda den här funktionen måste du använda minst aio-cli-version 10.3.1. Uppdatera den med "npm install -g @adobe/aio-cli"
+
+   Låt oss skapa ett sammanhang som kallas &quot;mycontext&quot; som vi sedan anger som standardkontext med plugin-programmet för autentisering innan vi anropar inloggningskommandot.
+
+   ```
+   aio config set --json -l "ims.contexts.mycontext" "{ cli.bare-output: false }"
+   aio auth ctx -s mycontext
+   aio login --no-open
+   ```
+
+
+   >[!NOTE]
+   > Inloggningskommandot med alternativet `--no-open` ger en URL i terminalen i stället för att öppna din standardwebbläsare. Du kan kopiera och öppna den med ett **incognito**-fönster i webbläsaren. På så sätt ändras inte den inloggade sessionen i det normala webbläsarfönstret, och du kan se till att du använder den inloggning och organisation som krävs för ditt sammanhang.
+
+   Det första kommandot skapar en ny konfiguration för inloggningskontext, med namnet `mycontext`, i den lokala `.aio`-konfigurationsfilen (filen skapas vid behov). Det andra kommandot anger att kontexten `mycontext` ska vara &quot;aktuell&quot; kontext, dvs. som standard.
+
+   När den här konfigurationen är på plats lagrar inloggningskommandot automatiskt inloggningstoken i kontexten `mycontext` och behåller därmed den lokalt.
+
+   Flera kontexter kan hanteras antingen genom att lokala konfigurationer sparas i flera mappar. Du kan också konfigurera flera kontexter i en enda konfigurationsfil och växla mellan dem genom att ändra den&quot;aktuella&quot; kontexten.
+   </details>
+
+1. Konfigurera RDE-pluginen så att den använder din organisation, ditt program och din miljö. Med konfigurationskommandot nedan får användaren en lista över program i sin organisation och visar RDE-miljöer i det programmet att välja mellan.
+
+   ```
    aio aem:rde:setup
    ```
 
