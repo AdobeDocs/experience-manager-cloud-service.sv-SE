@@ -4,9 +4,9 @@ description: Läs mer om vidarebefordran av loggar till Splunk och andra loggnin
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 3aafe41554fd86637e34687660fc48ea817b01d7
+source-git-commit: e450a58587ca4d7dff2ab229f522c7e7d4f3f20c
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '1663'
 ht-degree: 0%
 
 ---
@@ -305,6 +305,12 @@ data:
 Att tänka på:
 
 * Som standard är porten 443. Den kan åsidosättas med en egenskap med namnet `port`.
+* Källtypsfältet kommer att ha ett av följande värden, beroende på den specifika loggen: *aemaccess*, *aemerror*,
+  *aemrequest*, *aemdispatcher*, *aemhttpdaccess*, *aemhttpderror*, *aemcdn*
+
+>[!NOTE]
+>
+> [Om du migrerar](#legacy-migration) från äldre loggvidarebefordran till den här självbetjäningsmodellen kan värdena i fältet `sourcetype` som skickas till ditt Splunk-index ha ändrats, så justera därefter.
 
 
 <!--
@@ -385,6 +391,10 @@ Kunder som har konfigurerats på det sättet av Adobe får gärna anpassa sig ti
 När du är redo att migrera konfigurerar du bara YAML-filen enligt beskrivningen i de föregående avsnitten. Använd Cloud Manager konfigurationsflöde för att distribuera till var och en av de miljöer där konfigurationen ska användas.
 
 Vi rekommenderar, men behöver inte göra det, att en konfiguration distribueras till alla miljöer så att de alla styrs av självbetjäning. Annars kanske du glömmer vilka miljöer som har konfigurerats av Adobe jämfört med de som konfigurerats på ett självbetjäningssätt.
+
+>[!NOTE]
+>
+>Värdena för fältet `sourcetype` som skickades till ditt Splunk-index kan ha ändrats, så justera därefter.
 
 >[!NOTE]
 >
