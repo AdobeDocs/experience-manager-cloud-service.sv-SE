@@ -6,9 +6,9 @@ feature: Asset Management,Renditions,Best Practices
 role: User
 mini-toc-levels: 2
 exl-id: 863784d9-0c91-4deb-8edd-1354a21581c3
-source-git-commit: 0dbc3ae264f83672a212151d14011820aa5e3e78
+source-git-commit: 8d38ee90ed5b4e9a5d39d0580e35101187f2c457
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '3206'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Och nu får du en bättre Google Core Web Vital-poäng för LCP (Störst Content
 >
 >Prova och upptäck fördelarna med Dynamic Media bildmodifierare och Smart Imaging med Dynamic Media [_Snapshot_](https://snapshot.scene7.com/).
 >
-> Ögonblicksbild är ett visuellt demonstrationsverktyg som är utformat för att illustrera styrkan hos Dynamic Media för optimerad och dynamisk bildleverans. Experimentera med testbilder eller Dynamic Media-URL:er för att se utdata från olika bildmodifierare i Dynamic Media visuellt samt optimering av smarta bilder för följande:
+>Ögonblicksbild är ett visuellt demonstrationsverktyg som är utformat för att illustrera styrkan hos Dynamic Media för optimerad och dynamisk bildleverans. Experimentera med testbilder eller Dynamic Media-URL:er för att se utdata från olika bildmodifierare i Dynamic Media visuellt samt optimering av smarta bilder för följande:
 >
 >* Filstorlek (med WebP- och AVIF-leverans)
 >* Nätverksbandbredd
@@ -254,74 +254,73 @@ Om du vill aktivera Smart Imaging måste ditt företags Dynamic Media Classic- e
 +++
 
 
-<!-- QUESTIONS BELOW WERE REMOVED AS PER CQDOC-22085
++++
 
-+++**Can I enable Smart Imaging for my account?**
+**Hur aktiverar jag Smart Imaging för ett konto?**
 
-No. You initiate a request to use Smart Imaging; it is not automatically enabled.
+Om du vill börja använda Smart Imaging lägger du till `bfc=on`, `dpr=on,dprValue`, `network=on` eller alla tre parameterinställningarna till dina befintliga URL:er eller förinställningar. Om du inte vill göra dessa ändringar manuellt kan du aktivera Smart Imaging som standard genom att skapa ett supportärende.
 
-Create a support case as described below. In your support case, be sure you mention which of the following Smart Imaging capabilities (one or more) you want enabled on your account:
+När du skapar ett supportärende anger du vilka smarta bildredigeringsfunktioner du vill aktivera på ditt konto:
 
-* WebP
-* AVIF
-* DPR and Network Bandwidth optimization
-* PNG to lossy AVIF or lossy WebP
-
-If you already have Smart Imaging enabled with WebP, but desire other new capabilities as listed above, you must create a support case.
-
-**To create a support case to enable Smart Imaging on your account:**
-
-1. [Use the Admin Console to start the creation of a new support case](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
-1. Provide the following information in your support case:
-
-    * Primary contact name, email, phone.
-
-    * List which of the following Smart Imaging capabilities (one or more) you want enabled on your account:
-      * WebP
-      * AVIF
-      * DPR and Network Bandwidth optimization
-      * PNG to lossy AVIF or lossy WebP
-    
-    * All domains to be enabled for Smart Imaging (that is, `images.company.com` or `mycompany.scene7.com`).
-
-       To find your domains, open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started), then sign in to your company account or accounts. 
-
-       Go to **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**.  
-
-       Look for the field labeled **[!UICONTROL Published Server Name]**.
-    
-    * Verify that you are using the CDN through Adobe and not managed with a direct relationship.
-
-    * Verify you are using a dedicated domain such as `images.company.com` or `mycompany.scene7.com`, and not a generic domain, such as `s7d1.scene7.com`, `s7d2.scene7.com`, `s7d13.scene7.com`.  
-
-       To find your domains, open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started), then sign in to your company account or accounts.
-
-       Go to **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**.  
-
-       Look for the field labeled **[!UICONTROL Published Server Name]**. If you are currently using a generic Dynamic Media Classic domain, you can request moving over to your own custom domain as part of this transition.
-
-    * Indicate if you want it to work over HTTP/2.
-
-1. Adobe Customer Support adds you to the Smart Imaging customer Wait List based on the order in which requests are submitted.
-1. When Adobe is ready to handle your request, Customer Support contacts you to coordinate and set a target date.
-1. **Optional**: You can optionally test Smart Imaging in Staging before Adobe pushes the new feature to production.
-1. You are notified after completion by Customer Support.
-1. To maximize the performance improvements of Smart Imaging, Adobe recommends setting the Time To Live (TTL) to 24 hours or longer. The TTL defines how long assets are cached by the CDN. To change this setting:
-
-    1. If you use Dynamic Media Classic, go to **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**. Set the **[!UICONTROL Default Client Cache Time To Live]** value to 24 or longer.
-    1. If you use Dynamic Media, follow [these instructions](config-dm.md). Set the **[!UICONTROL Expiration]** value 24 hours or longer.
-
-
-
-**When is my account enabled with Smart Imaging?**
-
-Requests are processed in the order in which they are received by Customer Support, according to the Wait List.
+* Konvertering av webbläsarformat (WebP eller AVIF)
+* Optimering av nätverksbandbredd
 
 >[!NOTE]
 >
->There can be a long lead time because enabling Smart Imaging involves Adobe clearing the cache. Therefore, only a few customer transitions can be handled at any given time.
+>DPR kräver klientjusteringar för att fastställa rätt `dprValue`. Adobe rekommenderar därför att DPR aktiveras via URL:er genom att lägga till `dpr=on,dprValue`.
 
--->
+**Så här skapar du ett supportärende för att aktivera Smart Imaging för ditt konto:**
+
+1. [Använd Admin Console för att börja skapa ett nytt supportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
+1. Ange följande information i ditt supportärende:
+
+   * **Information om primär kontakt:**
+
+      * Ange namn, e-postadress och telefonnummer.
+
+   * **Smarta bildredigeringsfunktioner som ska aktiveras:**
+
+      * Visa en lista över de funktioner du vill använda för ditt konto:
+
+         * Konvertering av webbläsarformat: WebP eller AVIF
+         * Optimering av nätverksbandbredd
+         * DPR: DPR kräver klientjusteringar för att fastställa rätt `dprValue`. Adobe rekommenderar därför att DPR aktiveras via URL:er genom att lägga till `dpr=on,dprValue`.
+
+   * **Domän för smart bildbehandling:**
+
+      * Visa alla relevanta domäner, till exempel *`company.com`* eller *`mycompany.scene7.com`*
+      * Smart Imaging stöder både generiska och anpassade domäner.
+      * Identifiera dina domäner genom att öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started) och logga in på ditt företagskonto.
+
+         1. Navigera till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**.
+         1. Kontrollera domänen genom att leta efter fältet **[!UICONTROL Published Server Name]**.
+         1. Kontrollera att du använder Adobe CDN i stället för en som hanteras av en annan leverantör.
+
+   * **Ange HTTP/2-stöd:**
+
+      * Ange om du behöver Smart Imaging för att kunna arbeta över HTTP/2.
+
+1. Adobe kundsupport aktiverar de begärda funktionerna för smart bildbehandling som standard, vilket eliminerar behovet av att lägga till parametrar manuellt till URL-adresser.
+1. Adobe rekommenderar att TTL (Time To Live) ställs in på minst 24 timmar för att maximera prestanda genom cachning.
+Justera TTL:
+
+   1. **För Dynamic Media Classic:**
+      1. Navigera till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**.
+      1. Ange värdet **[!UICONTROL Default Client Cache Time To Live]** till 24 timmar eller mer.
+   1. **För Dynamic Media på Adobe Experience Manager:**
+      1. Följ [dessa instruktioner](/help/assets/dynamic-media/config-dm.md).
+      1. Ange värdet **[!UICONTROL Expiration]** för 24 timmar eller mer.
+
+
++++
+
+**När är ett konto aktiverat med Smart bildbehandling?**
+
+Kundsupport bearbetar förfrågningar i den ordning de får dem, efter väntelistan.
+
+>[!NOTE]
+>
+>Det kan ta lång tid att skapa eftersom du måste rensa cacheminnet genom att aktivera Smart Imaging. Därför kan bara ett fåtal kundövergångar hanteras vid en viss tidpunkt.
 
 +++
 
@@ -469,27 +468,6 @@ Om du vill göra hela cacheminnet ogiltigt måste du skapa ett supportärende oc
 
 Ja. Smart Imaging har nu stöd för förlustkonvertering baserat på kvalitetsnivån. Du kan fortsätta använda förlustfri konvertering genom att ange kvaliteten till 100, antingen genom ditt företags inställningar eller genom att lägga till `qlt=100` i bildens URL-sökväg.
 +++
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
