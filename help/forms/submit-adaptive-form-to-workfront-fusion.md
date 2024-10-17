@@ -6,9 +6,9 @@ topic-tags: author, developer
 feature: Adaptive Forms
 role: Admin, User
 exl-id: d3efb450-a879-40ae-8958-0040f99bdafc
-source-git-commit: 559b4afa975dcd2204cd06c95f19ed38da00033e
+source-git-commit: d0d7a10b2c1dadb0f8bfaa654db7993d3e5e6635
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1191'
 ht-degree: 0%
 
 ---
@@ -81,6 +81,10 @@ Så här lägger du till en webkrok:
    > Vi rekommenderar att du noga väljer ditt webkrok-namn eftersom det angivna webkroknamnet visas i AEM.
 
 1. Klicka på **[!UICONTROL Add]** om du vill lägga till en ny anslutning. Dialogrutan **[!UICONTROL Create a Connection]** visas.
+
+>[!NOTE]
+>
+> Kontrollera att det tekniska kontot är medlem i gruppen **forms-users**. Annars misslyckas det att lägga till en webkrok.
 
 #### Lägga till en anslutning till en webkrok {#add-connection}
 
