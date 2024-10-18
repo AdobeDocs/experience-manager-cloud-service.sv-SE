@@ -4,7 +4,7 @@ description: Lär dig hur du använder miljöer för snabb utveckling för snabb
 exl-id: 1e9824f2-d28a-46de-b7b3-9fe2789d9c68
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 3c1cbf0930799c2919696465931bf7c1f76bf8bb
+source-git-commit: e508ba2fcb709b1925b490bdb3e1a8774068927c
 workflow-type: tm+mt
 source-wordcount: '4794'
 ht-degree: 0%
@@ -99,6 +99,7 @@ När du har lagt till en RDE för programmet med Cloud Manager kan du interagera
    ```
    aio login
    ```
+
    Inloggningsinformationen (token) lagras i den globala AIR-konfigurationen och stöder därför endast en inloggning och organisation. Om du vill använda flera olika referensmiljöer som behöver olika inloggningar eller organisationer följer du exemplet nedan för att presentera kontexter.
 
    <details><summary>Följ det här exemplet för att konfigurera en lokal kontext för en av dina RDE-inloggningar</summary>
@@ -111,7 +112,6 @@ När du har lagt till en RDE för programmet med Cloud Manager kan du interagera
    aio auth ctx -s mycontext
    aio login --no-open
    ```
-
 
    >[!NOTE]
    > Inloggningskommandot med alternativet `--no-open` ger en URL i terminalen i stället för att öppna din standardwebbläsare. Du kan kopiera och öppna den med ett **incognito**-fönster i webbläsaren. På så sätt ändras inte den inloggade sessionen i det normala webbläsarfönstret, och du kan se till att du använder den inloggning och organisation som krävs för ditt sammanhang.
@@ -153,8 +153,8 @@ Välj `yes` att
 När en lokal eller global konfiguration har valts försöker kommandot setup att läsa ditt organisations-ID från din aktuella inloggning och sedan läsa organisationens program. Om det inte går att hitta organisationen kan du ange den manuellt tillsammans med lite vägledning.
 
 ```
- Selected only organization: XYXYXYXYXYXYXYXXYY
- retrieving programs of your organization ...
+Selected only organization: XYXYXYXYXYXYXYXXYY
+retrieving programs of your organization ...
 ```
 
 När programmen har hämtats kan användaren välja i listan och även ange vilken typ som ska filtreras.
@@ -248,7 +248,6 @@ Med noggrann samordning kan dock fler än en utvecklare validera en viss funktio
 * Om du vill ha mer information om ett kommando skriver du:
 
   `aio aem rde <command> --help`
-
 
 ### Globala flaggor {#global-flags}
 
@@ -507,7 +506,7 @@ I följande exempel visas hur du finjusterar författarnivån, med ett paket ins
 >
 >Om felet `RDECLI:UNEXPECTED_API_ERROR` visas när du spelar upp med loggkommandona för författartjänsten, återställer du miljön och försöker igen. Det här felet genereras om den senaste återställningsåtgärden utfördes före slutet av maj 2024.
 >
-```
+>```
 >aio aem:rde:reset
 >```
 
@@ -683,6 +682,7 @@ De flesta kommandon har stöd för den globala flaggan ```--json``` som undertry
   }
 }
 ```
+
 </details>
 
 ### Installera {#install}
@@ -723,6 +723,7 @@ De flesta kommandon har stöd för den globala flaggan ```--json``` som undertry
   ]
 }
 ```
+
 </details>
 
 ### Ta bort {#delete}
@@ -901,6 +902,7 @@ De flesta kommandon har stöd för den globala flaggan ```--json``` som undertry
   ]
 }
 ```
+
 </details>
 
 ### Återställ {#reset}
@@ -931,6 +933,7 @@ De flesta kommandon har stöd för den globala flaggan ```--json``` som undertry
   "status": "reset"
 }
 ```
+
 </details>
 
 ### Starta om {#restart}
