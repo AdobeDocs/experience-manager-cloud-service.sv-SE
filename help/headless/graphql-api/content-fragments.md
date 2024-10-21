@@ -4,9 +4,9 @@ description: Lär dig hur du använder innehållsfragment i Adobe Experience Man
 feature: Headless, Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
 role: Admin, Developer
-source-git-commit: 4492536120989423b639bbb75105568a9c328507
+source-git-commit: 32803bc4304e55ccf0a618236e482cb42aa88e27
 workflow-type: tm+mt
-source-wordcount: '5469'
+source-wordcount: '5557'
 ht-degree: 0%
 
 ---
@@ -929,6 +929,15 @@ Med GraphQL for AEM Content Fragments kan du begära en URL till en AEM Dynamic 
 Lösningen i GraphQL innebär att man kan
 
 * använd `_dmS7Url` på referensen `ImageRef`
+   * se [Exempelfråga för leverans av Dynamic Media-mediefiler via URL - Bildreferens](#sample-query-dynamic-media-asset-delivery-by-url-imageref)
+* använd `_dmS7Url` på flera referenser; `ImageRef`, `MultimediaRef` och `DocumentRef`
+   * se [Exempelfråga för leverans av Dynamic Media-mediefiler via URL - Flera referenser](#sample-query-dynamic-media-asset-delivery-by-url-multiple-refs)
+
+* använd `_dmS7Url` med funktionen SmartCrop
+
+   * Egenskapen `_smartCrops` visar de Smart Crop-konfigurationer som är tillgängliga för en viss resurs
+
+   * se [Exempelfråga för leverans av Dynamic Media-resurser via URL - med smart beskärning](#sample-query-dynamic-media-asset-delivery-by-url-smart-crop)
 
 >[!NOTE]
 >
@@ -1011,6 +1020,36 @@ query allTeams {
     }
   }
 }
+```
+
+### Exempelfråga för leverans av Dynamic Media-resurser via URL - med Smart Crop {#sample-query-dynamic-media-asset-delivery-by-url-smart-crop}
+
+Här följer ett exempel på en fråga:
+
+* för att visa de Smart Crop-konfigurationer som är tillgängliga för de begärda resurserna
+
+```graphql
+query allTeams {
+  teamList {
+    items {
+      title
+      teamMembers {
+        profilePicture {
+          ... on ImageRef {
+            height
+            width
+            _dmS7Url
+            _smartCrops {
+              width
+              height
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+} 
 ```
 
 ## GraphQL for AEM - i korthet {#graphql-extensions}
