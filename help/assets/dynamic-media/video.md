@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Video Profiles,Best Practices
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 7a370ee0ab77046d128ae260af2575d50e655254
+source-git-commit: c142ac7ad12179dd842ce6c81cc4d97ece36a197
 workflow-type: tm+mt
-source-wordcount: '10320'
+source-wordcount: '10380'
 ht-degree: 0%
 
 ---
@@ -440,7 +440,7 @@ För att videorapporter ska fungera korrekt skapas ett Report Suite-ID automatis
 
 **Så här visar du videorapporter:**
 
-1. I det övre vänstra hörnet av Experience Manager väljer du logotypen Experience Manager. Gå till **[!UICONTROL Tools]** (hammikon) > **[!UICONTROL Assets]** > **[!UICONTROL Video Reports]** i den vänstra listen.
+1. I det övre vänstra hörnet av Experience Manager väljer du logotypen Experience Manager. Klicka på ikonen ![Hammer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Hammer_18_N.svg) > **[!UICONTROL Assets]** > **[!UICONTROL Video Reports]** i den vänstra listen.
 1. Gör något av följande på sidan Videorapporter:
 
    * I närheten av det övre högra hörnet väljer du ikonen **[!UICONTROL Refresh Video Report]**.
@@ -532,7 +532,7 @@ Om du aktiverar någon av de tre funktionerna ovan aktiveras samtliga. Så om du
 
 | Funktion | Beskrivning |
 | --- | --- |
-| DASH | DASH (Digital Adaptive Streaming over HTTP) är den internationella standarden för direktuppspelad video och används i stor utsträckning av olika videovisningsprogram. När DASH är aktiverat för ditt konto kan du välja mellan DASH eller HLS för adaptiv videoströmning. Du kan också välja båda med automatisk växling mellan spelare när **[!UICONTROL auto]** väljs som uppspelningstyp i visningsförinställningen.<br>Några viktiga fördelar med att aktivera DASH för ditt konto är bland annat följande:<br> ・ Packa DASH-strömvideo för strömning med adaptiv bithastighet. Den här metoden leder till ökad effektivitet vid leverans. Adaptiv strömning ger bästa möjliga tittarupplevelse för dina kunder.<br> ・ webbläsaroptimerad direktuppspelning med Dynamic Media-spelare växlar mellan HLS- och DASH-direktuppspelning för att säkerställa bästa möjliga tjänstekvalitet. Videospelaren växlar automatiskt till HLS när en Safari-webbläsare används.<br> ・ Du kan konfigurera den önskade direktuppspelningsmetoden (HLS eller DASH) genom att redigera visningsförinställningen för videon.<br> ・ Optimerad videokodning säkerställer att inget ytterligare lagringsutrymme används när DASH-funktionen aktiveras. En enda uppsättning videokodningar skapas för både HLS och DASH för att optimera lagringskostnaderna för video.<br> ・ Gör videomaterial mer tillgängligt för dina kunder.<br> ・ även hämta direktuppspelnings-URL:en via API:er. |
+| DASH | DASH (Digital Adaptive Streaming over HTTP) är den internationella standarden för direktuppspelad video och används i stor utsträckning av olika videovisningsprogram. När DASH är aktiverat för ditt konto kan du välja mellan DASH eller HLS för adaptiv videoströmning. Du kan också välja båda med automatisk växling mellan spelare när **[!UICONTROL auto]** väljs som uppspelningstyp i visningsförinställningen.<br>Några viktiga fördelar med att aktivera DASH för ditt konto är följande:<ul><li>Paketera DASH-strömvideo för strömning med adaptiv bithastighet. Den här metoden leder till ökad effektivitet vid leverans. Adaptiv strömning ger bästa möjliga tittarupplevelse för dina kunder.</li><li>Webbläsaroptimerad direktuppspelning med Dynamic Media-spelare växlar mellan HLS- och DASH-strömning för att säkerställa bästa möjliga servicekvalitet. Videospelaren växlar automatiskt till HLS när en Safari-webbläsare används.</li><li>Du kan konfigurera den direktuppspelningsmetod (HLS eller DASH) som du föredrar genom att redigera förinställningen för visningsprogrammet för video.</li><li>Optimerad videokodning säkerställer att ingen ytterligare lagring används samtidigt som DASH-funktionen aktiveras. En enda uppsättning videokodningar skapas för både HLS och DASH för att optimera lagringskostnaderna för video.</li><li>Gör videomaterialet mer tillgängligt för kunderna.</li><li>Hämta strömnings-URL:en via API:er också.</li></ul> |
 | Flera bildtexter och ljudspår | Det kan vara bra att ha stöd för flera bildtexter och ljudspår automatiskt aktiverat. När du har aktiverat bearbetas alla efterföljande videor som du överför med en ny backend-arkitektur som har stöd för att lägga till flera bildtexter och ljudspår i videoklipp. |
 | AI-genererade bildtexter (begränsad tillgänglighet) | Skapa bildtexter för videoklipp med AI. Med hjälp av AI skapas videons transkript och konverteras till bildtexter. Även tidslinjen definieras. |
 
@@ -708,8 +708,8 @@ Nya bildtexter stöds med formaten WebVTT och Adobe VTT. Dessutom stöds tillagd
 
 1. [Överför din primära video till en mapp](/help/assets/manage-video-assets.md#upload-and-preview-video-assets) som redan har tilldelats en videoprofil.
 1. Navigera till den överförda videoresursen som du vill lägga till flera bildtexter och ljudspår.
-1. Välj videoresurs i resursurvalsläget, antingen från listvyn eller kortvyn.
-1. Klicka på egenskapsikonen (en cirkel med&quot;i&quot;) i verktygsfältet.
+1. Välj videoresursen i resursurvalsläget, antingen från ![Visa kortikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewCard_18_N.svg) (kortvy) eller ![Visa listikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewList_18_N.svg) (listvy).
+1. Klicka på ![Info-ikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Info_18_N.svg) Egenskaper i verktygsfältet.
    ![Markerad videoresurs med bockmarkering över videominiatyrbild och Visa egenskaper markerade i verktygsfältet.](/help/assets/dynamic-media/assets/msma-selectedasset-propertiesbutton.png)*Markerad videoresurs i kortvyn.*
 1. Välj fliken **[!UICONTROL Captions & Audio Tracks]** på videons egenskapssida.
 
@@ -727,7 +727,7 @@ Nya bildtexter stöds med formaten WebVTT och Adobe VTT. Dessutom stöds tillagd
 1. Så här lägger du till ett eller flera ljudspår i en video:
    1. Välj **[!UICONTROL Upload Audio Tracks]**.
    1. Navigera till och markera en eller flera .mp3-filer och öppna dem.
-   1. För att ljudspår ska kunna visas i popup-listan **[!UICONTROL Select audio or caption]** i mediespelaren måste du lägga till nödvändig information om varje ljudspårsfil. Om du gör det ser du till att alla ljudspår visas på rätt sätt och är tillgängliga. Välj pennikonen till höger om namnet på en ljudspårsfil. Ange följande obligatoriska information i dialogrutan **Redigera ljudspår**:
+   1. För att ljudspår ska kunna visas i popup-listan **[!UICONTROL Select audio or caption]** i mediespelaren måste du lägga till nödvändig information om varje ljudspårsfil. Om du gör det ser du till att alla ljudspår visas på rätt sätt och är tillgängliga. Klicka på ikonen ![Rita](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Draw_18_N.svg) till höger om namnet på en ljudspårsfil. Ange följande obligatoriska information i dialogrutan **Redigera ljudspår**:
 
       | Metadata för ljudspår | Beskrivning |
       |--- |--- |
@@ -752,13 +752,13 @@ Nya bildtexter stöds med formaten WebVTT och Adobe VTT. Dessutom stöds tillagd
    | **Alternativ 3** | Texten i en bildtextfil (`.vtt`) måste korrigeras, överföras igen för att ersätta den gamla `.vtt`-filen och sedan få AI att översätta den korrigerade filen.<br>Se **Alternativ 3** nedan. | **[!UICONTROL Translate caption]** |
 
    ![Alternativ för att skapa bildtexter.](/help/assets/dynamic-media/assets/msma-createcaption.png)
-   *Listrutan Skapa beskrivningar innehåller tre alternativ: Överför filer, Konvertera ljudspår och Översätt bildtext.*
+   *Listrutan Skapa beskrivning innehåller tre alternativ: Överför filer, Konvertera ljudspår och Översätt bildtext.*
 
 +++**Alternativ 1:** *Jag har egna bildtextfiler som finns på de språk som jag vill använda* (**[!UICONTROL Upload Files]** alternativ)
 
    1. Klicka på **[!UICONTROL Create Caption]** > **[!UICONTROL Upload files]** uppe till höger på sidan.
    1. Navigera till och markera en eller flera av dina befintliga `.vtt`-filer och öppna dem.
-   1. För att bildtexter ska kunna visas i mediespelaren måste du *lägga till den nödvändiga informationen om* varje *bildtextfil som du överför.* Välj pennikonen till höger om namnet på en bildtextfil. Ange följande obligatoriska information om filen i dialogrutan **Redigera beskrivning**:
+   1. För att bildtexter ska kunna visas i mediespelaren måste du *lägga till den nödvändiga informationen om* varje *bildtextfil som du överför.* Klicka på ikonen ![Rita](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Draw_18_N.svg) till höger om namnet på en bildtextfil. Ange följande obligatoriska information om filen i dialogrutan **Redigera beskrivning**:
 
       | Bildtextmetadata | Beskrivning |
       |--- |--- |
@@ -791,8 +791,8 @@ Nya bildtexter stöds med formaten WebVTT och Adobe VTT. Dessutom stöds tillagd
 
       | Alternativ | Beskrivning |
       |--- |--- |
-      | Ljudspår som ska konverteras | I listrutan väljer du den överförda ljudspårsfilen från vilken du vill att bildtexter ska skapas med hjälp av AI. |
-      | Utdataspråk | I listrutan väljer du ett eller flera språk som du vill att bildtextfilen ska visas på.<br>Klicka på **X** om du vill ta bort ett valt språk.<br>Under videouppspelning visas en lista med språk i mediespelaren i den ordning som du väljer dem här. |
+      | Ljudspår som ska konverteras | Klicka på ikonen ![Knivrängning nedåt](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ChevronDown_18_N.svg) och välj sedan den överförda ljudspårsfilen som du vill att bildtexter ska skapas från med AI. |
+      | Utdataspråk | Klicka på ikonen ![Knivrängning nedåt](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ChevronDown_18_N.svg) och välj sedan ett eller flera språk som du vill att bildtextfilen ska visas på.<br>Klicka på ikonen ![Stäng](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Close_18_N.svg) om du vill ta bort ett valt språk.<br>Under videouppspelning visas en lista med språk i mediespelaren i den ordning som du väljer dem här. |
 
    1. Klicka på **[!UICONTROL Done]**.
    1. Klicka på **[!UICONTROL Save]** i den övre högra hörnet av sidan i listrutan **[!UICONTROL Save & Close]**.
@@ -802,7 +802,7 @@ Nya bildtexter stöds med formaten WebVTT och Adobe VTT. Dessutom stöds tillagd
       >
       >Beroende på inställningarna för cachning för instansen kan metadatabearbetningen ta flera minuter innan den visas i förhandsgranskningen och i publicerade URL:er.
 
-   1. (Valfritt) Välj pennikonen till höger om namnet på en bildtextfil. I dialogrutan **Redigera beskrivning** kan du redigera följande information om filen:
+   1. (Valfritt) Klicka på ikonen ![Rita](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Draw_18_N.svg) till höger om namnet på en bildtextfil. I dialogrutan **Redigera beskrivning** kan du redigera följande information om filen:
 
       | Bildtextmetadata | Beskrivning |
       | --- | --- |
@@ -821,12 +821,12 @@ Nya bildtexter stöds med formaten WebVTT och Adobe VTT. Dessutom stöds tillagd
       ![Dialogrutan Översätt beskrivningar.](/help/assets/dynamic-media/assets/msma-translate-captions.png)
       *I dialogrutan Översätt bildtexter kan du använda en befintlig bildtextfil för att generera nya bildtextfiler på flera språk.*
 
-   1. Ange följande alternativ i dialogrutan **Översätt bildtext**:
+   1. Ange följande alternativ i dialogrutan **Översätt beskrivningar**:
 
       | Alternativ | Beskrivning |
       |--- |--- |
-      | Bildtext som ska översättas | I listrutan väljer du en bildtextfil som du vill att bildtexterna ska skapas med hjälp av AI. |
-      | Utdataspråk | I listrutan väljer du ett eller flera språk som du vill att bildtextfilen ska visas på.<br>Klicka på **X** om du vill ta bort ett valt språk.<br>Under videouppspelning visas en lista med språk i mediespelaren i den ordning som du väljer dem här. |
+      | Bildtext som ska översättas | Klicka på ikonen ![Knivrängning nedåt](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ChevronDown_18_N.svg) och välj sedan en bildtextfil som du vill att bildtexterna ska genereras med hjälp av AI. |
+      | Utdataspråk | Klicka på ikonen ![Knivrängning nedåt](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ChevronDown_18_N.svg) och välj sedan ett eller flera språk som du vill att bildtextfilen ska visas på.<br>Klicka på ikonen ![Stäng](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Close_18_N.svg) om du vill ta bort ett valt språk.<br>Under videouppspelning visas en lista med språk i mediespelaren i den ordning som du väljer dem här. |
 
    1. Klicka på **[!UICONTROL Done]**.
    1. Klicka på **[!UICONTROL Save]** i den övre högra hörnet av sidan i listrutan **[!UICONTROL Save & Close]**.
@@ -836,7 +836,7 @@ Nya bildtexter stöds med formaten WebVTT och Adobe VTT. Dessutom stöds tillagd
       >
       >Beroende på inställningarna för cachning för instansen kan metadatabearbetningen ta flera minuter innan den visas i förhandsgranskningen och i publicerade URL:er.
 
-   1. (Valfritt) Välj pennikonen till höger om namnet på en bildtextfil. I dialogrutan **Redigera beskrivning** kan du redigera följande information om filen:
+   1. (Valfritt) Klicka på ikonen ![Rita](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Draw_18_N.svg) till höger om namnet på en bildtextfil. I dialogrutan **Redigera beskrivning** kan du redigera följande information om filen:
 
       | Bildtextmetadata | Beskrivning |
       | --- | --- |
@@ -888,11 +888,12 @@ Du kan följa livscykelstatusen för alla beskrivnings- eller ljudspårsfiler so
 **Så här visar du livscykelstatusen för en video:**
 
 1. Navigera till den videoresurs vars livscykelstatus du vill visa.
-1. Välj videoresurs i resursurvalsläget, antingen från listvyn eller kortvyn.
-1. I verktygsfältet väljer du ikonen Egenskaper (en cirkel med &quot;i&quot;).
-1. Välj fliken **[!UICONTROL Captions & Audio Tracks]** på sidan Egenskaper. Observera status för varje bildtext eller ljudfil i kolumnen Status.
+1. Välj videoresursen i resursurvalsläget, antingen från ![Visa kortikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewCard_18_N.svg) (kortvy) eller ![Visa listikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewList_18_N.svg) (listvy).
+1. Klicka på ![Info-ikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Info_18_N.svg) Egenskaper i verktygsfältet.
+1. Välj fliken **[!UICONTROL Captions & Audio Tracks]** på sidan **Egenskaper**.
+1. Observera status för varje bildtext eller ljudfil i kolumnen **[!UICONTROL Status]**.
 
-| Status för beskrivning eller ljudspår | Beskrivning |
+| Status för beskrivningar och ljudspår | Beskrivning |
 | --- | --- |
 | Bearbetar | När en ny beskrivnings- eller ljudspårsfil läggs till och sparas, försätts den i tillståndet&quot;Bearbetar&quot;. Dynamic Media bearbetar filen genom att bifoga det direktuppspelade manifestet till den primära videon. |
 | Behandlad | När bearbetningen är klar visas beskrivnings- eller ljudspårsfilen, eller det ursprungliga ljudspåret som är associerat med den primära videon, i läget Behandlad. Du kan förhandsgranska beskrivnings- och ljudspårsfiler som visas som &quot;Behandlad&quot; *innan* du publicerar videon live. |
@@ -900,7 +901,6 @@ Du kan följa livscykelstatusen för alla beskrivnings- eller ljudspårsfiler so
 | Misslyckades | Ett &quot;Misslyckat&quot;-läge betyder att bearbetningen av en beskrivnings- eller ljudspårsfil inte slutfördes. Ta bort beskrivnings- eller ljudspårsfilen och överför igen. |
 | Opublicerad | När en publicerad primär video avpubliceras explicit avpubliceras även eventuella beskrivnings- eller ljudspårsfiler som du har lagt till i videon. |
 
-![Statuskolumnen är markerad för fälten Bildtexter och Ljudspår.](/help/assets/dynamic-media/assets/msma-lifecycle-status.png)*Livscykelstatus för varje överförd beskrivnings- och ljudspårfil.*
 
 ### Ange standardljud för en video som har flera ljudspår
 
@@ -918,16 +918,16 @@ Alla överförda ljudspårsfiler kan dock anges som standardljud som spelas upp 
 **Så här anger du standardljud för en video som har flera ljudspår:**
 
 1. Navigera till den videoresurs vars standardljudspår du vill ställa in.
-1. Välj videoresurs i resursurvalsläget, antingen från listvyn eller kortvyn.
-1. I verktygsfältet väljer du ikonen Egenskaper (en cirkel med &quot;i&quot;).
+1. Välj videoresursen i resursurvalsläget, antingen från ![Visa kortikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewCard_18_N.svg) (kortvy) eller ![Visa listikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewList_18_N.svg) (listvy).
+1. Klicka på ![Info-ikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Info_18_N.svg) Egenskaper i verktygsfältet.
 1. Välj fliken **[!UICONTROL Captions & Audio Tracks]** på sidan Egenskaper.
 1. Under rubriken **Ljudspår** väljer du den ljudspårsfil som du vill ange som videons standard.
-1. Välj **[!UICONTROL Set as default]**.
-Välj **[!UICONTROL Replace]** i dialogrutan **Ange som standard**.
+1. Klicka på ![Ljudikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Audio_18_N.svg) **[!UICONTROL Set as default]**.
+1. Klicka på **[!UICONTROL Replace]** i dialogrutan **Ange som standard**.
 
    ![Rubriken Ljudspår med namnet på den valda ljudspårsfilen och markerad&quot;Ange som standard&quot;-knapp.](/help/assets/dynamic-media/assets/msma-defaultaudiotrack.png)*Anger standardljudspåret för en video.*
 
-1. Välj **[!UICONTROL Save & Close]** i det övre högra hörnet.
+1. Klicka på **[!UICONTROL Save & Close]** i det övre högra hörnet.
 1. Publish videon. Se [Publish-resurser](publishing-dynamicmedia-assets.md).
 
 ### Förhandsgranska en video med flera bildtexter och ljudspår {#preview-video-audio-subtitle}
@@ -947,22 +947,21 @@ Se [Lägg till Dynamic Media Assets på sidor](/help/assets/dynamic-media/adding
 **Så här förhandsgranskar du en video som har flera bildtexter och ljudspår:**
 
 1. I **[!UICONTROL Assets]** navigerar du till en befintlig video som du har lagt till flera bildtexter och ljudspår.
-1. Klicka på videoresursen så att du kan öppna den i förhandsgranskningsläge.
-1. Markera listrutan på förhandsgranskningssidan, nära det övre vänstra hörnet på sidan, och välj sedan **[!UICONTROL Viewers]**.
+1. Klicka på videoresursen för att öppna den i förhandsgranskningsläge.
+1. Klicka på ikonen ![Till vänster (höger)](https://spectrum.adobe.com/static/icons/workflow_18/Smock_RailLeft_18_N.svg) ![ikon ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ChevronDown_18_N.svg) och välj sedan **[!UICONTROL Viewers]** på förhandsvisningssidan, nära det övre vänstra hörnet på sidan.
 
    ![Listruta med alternativet Visare.](/help/assets/dynamic-media/assets/msma-selectviewers.png)
 
-1. Välj ett visningsprogram som du vill använda för videoförhandsvisningen i listan Visare. I följande skärmbild visas det **[!UICONTROL Video]**-visningsprogram som väljs.
+1. I närheten av det övre vänstra hörnet av sidan klickar du på ikonen ![Till vänster om skenet](https://spectrum.adobe.com/static/icons/workflow_18/Smock_RailLeft_18_N.svg) Visare ![Knivrängen nedåt](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ChevronDown_18_N.svg) och väljer sedan ett visningsprogram som du vill använda för videoförhandsvisningen.
 
-   ![Val av videovisningsprogram i listrutan Visare.](/help/assets/dynamic-media/assets/msma-dmviewerselected.png)
-
-1. I närheten av det nedre högra hörnet, till vänster om volymikonen, väljer du ikonen för talbubblan och sedan det ljud eller den bildtext som du vill höra eller se eller båda. Om du vill kan du under Bildtexter inaktivera visningen av bildtexter genom att klicka på **[!UICONTROL Off]**.
+1. Klicka på ikonen för pratbubblan i det nedre högra hörnet av sidan och välj sedan ljudet eller underrubriken/bildtexten som du vill höra eller se, eller båda.
 
    ![Popup-listan Ljud och beskrivningar i videoredigeraren.](/help/assets/dynamic-media/assets/msma-selectaudiosubtitle.png)*Simulering av en användare som väljer ljud och bildtext för videouppspelning.*
 
-1. Välj videoklippets **[!UICONTROL Play]**-knapp för att påbörja uppspelningen.
-Observera knapparna **[!UICONTROL URL]** och **[!UICONTROL Embed]** i det nedre vänstra hörnet. Använd de här knapparna för att [länka videons URL till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md) eller för att [bädda in videon på en webbsida](/help/assets/dynamic-media/embed-code.md).
-1. Välj **[!UICONTROL Close]** i det övre högra hörnet på förhandsgranskningssidan.
+1. Klicka på ![PLay-ikonen](https://spectrum.adobe.com/static/icons/workflow_22/Smock_PlayCircle_22_N.svg) för att påbörja uppspelningen.
+Om du vill kan du klicka på ikonen ![Maximera](https://spectrum.adobe.com/static/icons/workflow_22/Smock_Maximize_22_N.svg) för att maximera visningsfönstret.
+Lägg märke till knapparna **[!UICONTROL URL]** och **[!UICONTROL Embed]** i sidans nedre vänstra hörn. Använd de här knapparna för att [länka videons URL till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md) eller för att [bädda in videon på en webbsida](/help/assets/dynamic-media/embed-code.md).
+1. Klicka på **[!UICONTROL Close]** i det övre högra hörnet på förhandsgranskningssidan.
 
 ### Ta bort beskrivnings- eller ljudspårsfiler från en video
 
@@ -973,13 +972,13 @@ Det går inte att ta bort det ursprungliga ljudspåret som har extraherats från
 **Så här tar du bort beskrivnings- eller ljudspårsfiler från en video:**
 
 1. Navigera till den videoresurs vars standardljudspår du vill ställa in.
-1. Välj videoresurs i resursurvalsläget, antingen från listvyn eller kortvyn.
-1. I verktygsfältet väljer du ikonen Egenskaper (en cirkel med &quot;i&quot;).
+1. Välj videoresursen i resursurvalsläget, antingen från ![Visa kortikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewCard_18_N.svg) (kortvy) eller ![Visa listikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewList_18_N.svg) (listvy).
+1. Klicka på ![Info-ikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Info_18_N.svg) Egenskaper i verktygsfältet.
 1. Välj fliken **[!UICONTROL Captions & Audio Tracks]** på sidan Egenskaper.
 1. Gör något av följande:
 
-   * Bildtexter - Under rubriken **Bildtexter** markerar du en eller flera bildtextfiler som du vill ta bort från videon och klickar sedan på **[!UICONTROL Delete]**.
-   * Ljudspår - Under rubriken **Ljudspår** markerar du en eller flera ljudspårsfiler som du vill ta bort från videon och klickar sedan på **[!UICONTROL Delete]**.
+   * Bildtexter - Under rubriken **Bildtexter** markerar du en eller flera bildtextfiler som du vill ta bort från videon och klickar sedan på ikonen ![Ta bort](https://spectrum.adobe.com/static/icons/workflow_22/Smock_Delete_22_N.svg) **[!UICONTROL Delete]** .
+   * Ljudspår - Under rubriken **Ljudspår** markerar du en eller flera ljudspårsfiler som du vill ta bort från videon och klickar sedan på ikonen ![Ta bort](https://spectrum.adobe.com/static/icons/workflow_22/Smock_Delete_22_N.svg) **[!UICONTROL Delete]** .
 
 1. Klicka på **[!UICONTROL OK]** i dialogrutan Ta bort.
 1. Publish videon.
@@ -995,22 +994,23 @@ Det går inte att hämta det ursprungliga ljudspåret som har extraherats från 
 **Så här hämtar du beskrivnings- eller ljudspårsfiler som har överförts till en video:**
 
 1. Navigera till den videoresurs vars standardljudspår du vill ställa in.
-1. Välj videoresurs i resursurvalsläget, antingen från listvyn eller kortvyn.
-1. I verktygsfältet väljer du ikonen Egenskaper (en cirkel med &quot;i&quot;).
-1. Välj fliken **[!UICONTROL Captions & Audio Tracks]** på sidan Egenskaper.
+1. Välj videoresursen i resursurvalsläget, antingen från ![Visa kortikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewCard_18_N.svg) (kortvy) eller ![Visa listikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewList_18_N.svg) (listvy).
+1. Klicka på ![Info-ikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Info_18_N.svg) Egenskaper i verktygsfältet.
+1. Välj fliken **[!UICONTROL Captions & Audio Tracks]** på sidan **Egenskaper**.
 1. Gör något av följande:
 
-   * Bildtexter - Under rubriken **Bildtexter** väljer du en eller flera bildtextfiler som du vill hämta från videon och sedan **[!UICONTROL Download]**.
-   * Ljudspår - Under rubriken **Ljudspår** markerar du en eller flera ljudspårsfiler som du vill hämta från videon och väljer sedan **[!UICONTROL Download]**.
+   * Bildtexter - Under rubriken **Bildtexter** väljer du en eller flera bildtextfiler som du vill hämta från videon och klickar sedan på ![Ikonen Hämta](https://spectrum.adobe.com/static/icons/workflow_22/Smock_Download_22_N.svg) **[!UICONTROL Download]** .
+   * Ljudspår - Under rubriken **Ljudspår** markerar du en eller flera ljudspårsfiler som du vill hämta från videon och klickar sedan på ![Ikonen Hämta](https://spectrum.adobe.com/static/icons/workflow_22/Smock_Download_22_N.svg) **[!UICONTROL Download]** .
 
 1. Ange följande alternativ i dialogrutan Hämta:
 
-   | Alternativ | Beskrivning |
+   | Hämtningsalternativ | Beskrivning |
    |--- |--- |
    | Spara som | Använd standardfilnamnet som anges i textfältet Spara som eller ange ett eget namn. |
    | Skapa en separat mapp för varje resurs | Skapa en mapp för varje bildtextfil eller ljudspårsfil som du valde för hämtning. |
    | E-post | Använd ditt standardprogram för e-post för att skicka ZIP-filen till en angiven e-postadress. |
    | Assets | Anger antalet filer som du hämtar och den sammanlagda storleken för alla markerade filer. Om du avmarkerar det här alternativet tonas knappen **[!UICONTROL Download]** ned (inaktiveras), vilket förhindrar att du hämtar någon fil. |
+   | Återgivningar | En återgivning är en alternativ version eller en förhandsvisning av originalfilen, vanligtvis en mindre eller lågupplöst version. Om den visas som 0 B betyder det troligtvis att det inte finns någon alternativ version tillgänglig eller att den är för liten för att registrera en storlek. |
 
 1. Välj **[!UICONTROL Download]**.
 1. Publish videon. Se [Publish-resurser](publishing-dynamicmedia-assets.md).
@@ -1060,7 +1060,7 @@ Mer information om hur du använder JSON-funktionen i en URL finns i [Serverar s
 
    For best results, use the tool in Internet Explorer 9 or above, Google Chrome, or Safari.
 
-   In the tool, in the **[!UICONTROL Enter URL of video file]** field, paste the copied URL of your video file and then select **[!UICONTROL Load]**. See [Obtain a URL for an Asset](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) to get the URL to the video file itself which you can then paste into the **[!UICONTROL Enter URL of video file field]**. Internet Explorer, Chrome, or Safari can then natively play back the video.-->
+   In the tool, in the **[!UICONTROL Enter URL of video file]** field, paste the copied URL of your video file and then select **[!UICONTROL Load]**. See [Obtain a URL for an Asset](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) to get the URL to the video file itself which you can then paste into the **[!UICONTROL Enter URL of video file field]**. Internet Explorer, Chrome, or Safari can then natively play back the video. -->
 
 Följ instruktionerna på skärmen för att skapa och spara WebVTT-filen. När du är klar kopierar du bildtextfilens innehåll och klistrar in det i en vanlig textredigerare och sparar det med filnamnstillägget VTT.
 
@@ -1085,7 +1085,7 @@ Vanligtvis vill du ge bildtexten `.vtt` samma namn som videofilen och bifoga den
 
      Observera `,1` i slutet av bildtextssökvägen. Omedelbart efter VTT-filnamnstillägget i sökvägen kan du aktivera (aktivera) eller inaktivera (inaktivera) den stängda bildtextsknappen i videospelarfältet genom att ställa in på `,1` respektive `,0`.
 
-   * Välj **[!UICONTROL Embed Code]** om du vill ha en inbäddad videovisningsfunktion. I dialogrutan Bädda in kod markerar och kopierar du den inbäddade koden till Urklipp och klistrar sedan in koden i en enkel textredigerare. Lägg till den kopierade inbäddningskoden med följande syntax:
+   * Klicka på **[!UICONTROL Embed Code]** om du vill visa en inbäddad videoupplevelse. I dialogrutan Bädda in kod markerar och kopierar du den inbäddade koden till Urklipp och klistrar sedan in koden i en enkel textredigerare. Lägg till den kopierade inbäddningskoden med följande syntax:
 
      `videoViewer.setParam("caption","<path_to_caption.vtt_file,1>");`
 
@@ -1170,7 +1170,6 @@ Se [WebVTT: Textspår för webbvideo ](https://w3c.github.io/webvtt/).
    </table>
 
 
-
 ## Om videominiatyrer {#about-video-thumbnails}
 
 En videominiatyr är en version med reducerad storlek av en videobildruta eller en bildresurs som representerar videon för kunden. Miniatyrbilden bör uppmuntra kunden att välja videon.
@@ -1190,26 +1189,28 @@ Möjligheten att anpassa en videominiatyr är endast tillgänglig efter att du h
 
    * [Dina videofilmer har överförts till mappen](/help/assets/manage-video-assets.md#upload-and-preview-video-assets).
 
+
 1. Navigera till en överförd videoresurs vars miniatyrbild du vill ändra.
-1. I resursurvalsläget, antingen från **[!UICONTROL List View]** eller **[!UICONTROL Card View]**, väljer du videoresursen.
-1. I verktygsfältet väljer du ikonen **[!UICONTROL Properties]** (en cirkel med&quot;i&quot;).
-1. Välj **[!UICONTROL Change Thumbnail]** på videons egenskapssida.
-1. Gör något av följande på sidan Ändra miniatyrbild:
+1. Välj videoresursen i resursurvalsläget, antingen från ![Visa kortikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewCard_18_N.svg) (kortvy) eller ![Visa listikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewList_18_N.svg) (listvy).
+1. Klicka på ![Info-ikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Info_18_N.svg) Egenskaper i verktygsfältet.
+1. Klicka på **[!UICONTROL Change Thumbnail]** på videons egenskapssida.
+1. Gör något av följande i dialogrutan Ändra miniatyrbild:
 
    * Så här använder du en bildruta från videon som ny miniatyrbild:
 
-      * Klicka på alternativet **[!UICONTROL Select Frame from video]** i verktygsfältet.
-      * Välj uppspelningsknappen och sedan pausknappen för bildrutan som du vill spela in som videons nya miniatyrbild.
+      * Klicka på fliken **[!UICONTROL Select Frame from video]** i verktygsfältet.
+      * Klicka på ikonen ![Spela upp](https://spectrum.adobe.com/static/icons/workflow_22/Smock_PlayCircle_22_N.svg).
+      * Klicka på ikonen ![Paus](https://spectrum.adobe.com/static/icons/workflow_22/Smock_PauseCircle_22_N.svg) i bildrutan som du vill hämta som videons nya miniatyrbild.
 
    * Så här använder du en bildresurs som ny miniatyrbild:
 
-      * Välj **[!UICONTROL Select Thumbnail from Assets]** i verktygsfältet.
-      * Välj **[!UICONTROL Select Thumbnail]**.
+      * Klicka på fliken **[!UICONTROL Select Thumbnail from Assets]** i verktygsfältet.
+      * Klicka på knappen **[!UICONTROL Select thumbnail]**.
       * Navigera till en tidigare överförd och publicerad bildresurs som du vill använda. Storleken på resursen ändras automatiskt så att den fungerar som en miniatyrbild för videon.
-      * Markera bildresursen och välj sedan **[!UICONTROL Select]**.
+      * Markera bildresursen och klicka sedan på **[!UICONTROL Select]**.
 
-1. Välj **[!UICONTROL Save Change]** på sidan Ändra miniatyrbild.
-1. Välj **[!UICONTROL Save & Close]** i det övre högra hörnet på videons egenskapssida.
+1. Klicka på **[!UICONTROL Save Change]** i dialogrutan Ändra miniatyrbild.
+1. Klicka på **[!UICONTROL Save & Close]** eller **[!UICONTROL Save]** i det övre högra hörnet på videons egenskapssida.
 
 
 
