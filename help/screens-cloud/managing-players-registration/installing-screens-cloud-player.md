@@ -4,9 +4,9 @@ description: På den här sidan beskrivs hur du installerar och konfigurerar spe
 exl-id: a022738a-c543-4629-a244-f70fa294fe7f
 feature: Developing Screens
 role: Admin, Developer, User
-source-git-commit: af7793ca7ad3d11bfff980a4d00f537fd0871755
+source-git-commit: 53086e2ec6d9d962a8f1cb1cc40f0601da74ac63
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
@@ -35,13 +35,13 @@ Uppdatera spelaren genom att följa stegen nedan:
 
 1. Klicka på fliken **Konfiguration** och klicka på knappen **Till fabrik** under alternativet **Återställ**.
 
-   ![bild](/help/screens-cloud/assets/player/installplayer-2.png)
+   ![Till fabrik, knapp under alternativet Återställ](/help/screens-cloud/assets/player/installplayer-2.png)
 
 1. Klicka på **Bekräfta** för att återställa spelaren.
 
 1. Återigen från fliken **Konfiguration** och klicka på knappen **Ändra till molnläge** under alternativet **Växla körläge**.
 
-   ![bild](/help/screens-cloud/assets/player/installplayer-1.png)
+   ![Ändra till molnläge under alternativet Växla körläge ](/help/screens-cloud/assets/player/installplayer-1.png)
 
 1. Klicka på **Bekräfta** som visas när du växlar till molnläge för att avregistrera spelaren.
 

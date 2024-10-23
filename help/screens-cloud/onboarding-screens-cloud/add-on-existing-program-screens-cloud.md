@@ -4,9 +4,9 @@ description: Lär dig hur du lägger till ett Screens-tillägg i ett befintligt 
 exl-id: 0f9a2c21-2d45-470e-a096-443741f9f2ab
 feature: Screens Deployments
 role: Admin, Developer, User
-source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
+source-git-commit: 53086e2ec6d9d962a8f1cb1cc40f0601da74ac63
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
@@ -33,14 +33,14 @@ Följ stegen nedan för att lägga till Screens som tillägg till ett befintligt
 
 1. Navigera till ditt projekt och klicka på alternativet **Redigera program** på sidan **Översikt** i Cloud Manager.
 
-   ![bild](/help/screens-cloud/assets/onboarding/add-onexisting1.png)
+   ![Redigera program](/help/screens-cloud/assets/onboarding/add-onexisting1.png)
 
    >[!NOTE]
    >På sidan **Redigera program** visas två flikar: **Allmänt** och **Lösningar och tillägg**.
 
 1. Fliken **Lösningar och tillägg** visar alternativ, till exempel platser, Assets och Screens. Välj tilläggsalternativet **Screens** enligt bilden nedan.
 
-   ![bild](/help/screens-cloud/assets/onboarding/add-onexisting2.png)
+   ![Screens-tilläggsalternativ](/help/screens-cloud/assets/onboarding/add-onexisting2.png)
 
 1. Klicka på **Uppdatera** när du har valt dina alternativ.
 

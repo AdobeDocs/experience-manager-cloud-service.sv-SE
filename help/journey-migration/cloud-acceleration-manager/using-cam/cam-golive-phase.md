@@ -4,10 +4,10 @@ description: Den här sidan innehåller en översikt över Go-live-fasen i Cloud
 exl-id: 2ec31445-899d-40b8-b3eb-073cb07aff12
 feature: Migration
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 53086e2ec6d9d962a8f1cb1cc40f0601da74ac63
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 2%
+source-wordcount: '144'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ Go Live-kortet innehåller allt relevant material som är viktigt för förbered
 
 Klicka på ditt projektkort för att öppna projektstartsidan och navigera till avsnittet **Go Live** som visas i bilden nedan.
 
-![bild](/help/journey-migration/cloud-acceleration-manager/assets/golive-1.png)
+![Go Live](/help/journey-migration/cloud-acceleration-manager/assets/golive-1.png)
 
 >[!NOTE]
 >Mer information finns i [Skapa och hantera ett projekt i Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html#create-project).
@@ -29,8 +29,8 @@ Följ det här avsnittet för att utforska Go Live-aktivitetskortet:
 
 1. Klicka på knappen **Visa** på **Go Live**-kortet.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/golive-1.png)
+   ![Go Live - Visa](/help/journey-migration/cloud-acceleration-manager/assets/golive-1.png)
 
 1. En innehållskarusell visar relevant information för den här fasen av migreringsresan.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/golive-2.png)
+   ![Innehållskarusellen visar relevant information](/help/journey-migration/cloud-acceleration-manager/assets/golive-2.png)
