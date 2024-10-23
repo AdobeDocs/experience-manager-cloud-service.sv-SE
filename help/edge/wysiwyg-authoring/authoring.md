@@ -4,9 +4,9 @@ description: Lär dig hur innehållsredigering fungerar med Edge Delivery Servic
 feature: Edge Delivery Services
 exl-id: 963ff71a-8176-4d9d-8240-dc429405d139
 role: User
-source-git-commit: f0cb108c620a31c4f8a48f1d2530860ca01b06c3
+source-git-commit: 7e8446bec18eaeb4eb017dd63436a066d3a90fed
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '452'
 ht-degree: 0%
 
 ---
@@ -16,14 +16,14 @@ ht-degree: 0%
 
 Med Edge Delivery Services är det enkelt, snabbt och flexibelt att skapa. Du kan skapa innehåll för Edge Delivery Services på två sätt:
 
-* [Universell redigerare](#universal-editor) - Ett modernt WYSIWYG-gränssnitt för att skapa innehåll i AEM
+* [Universell redigerare](#universal-editor) - Ett modernt användargränssnitt för det du-se-is-what-you-get (WYSIWYG) för att skapa innehåll i AEM
 * [Dokumentbaserad redigering](#document-based) - t.ex. Microsoft Word eller Google Docs
 
 ## Redigering i Universal Editor {#universal-editor}
 
 När du använder Edge Delivery Services med AEM as a Cloud Service är det viktigaste att förstå att det innehåll du skapar bevaras i AEM as a Cloud Service.
 
-![Så här fungerar WYSIWYG-redigering med Edge Delivery Services](assets/how-aem-edge-works.png)
+![Så här fungerar WYSIWYG Authoring med Edge Delivery Services](assets/how-aem-edge-works.png)
 
 1. [AEM Sites-miljön](/help/sites-cloud/authoring/quick-start.md) används för innehållshantering som att skapa nya sidor, upplevelsefragment, innehållsfragment osv.
    * Alla funktioner i AEM är tillgängliga, t.ex. arbetsflöden, MSM, översättning, startprogram.
@@ -40,9 +40,9 @@ När du använder Edge Delivery Services med AEM as a Cloud Service är det vikt
 
 Block är grundläggande komponenter i en sida som levereras av Edge Delivery Services. Författare kan välja bland standardblock som tillhandahålls som standard av Adobe eller block som anpassas för ditt projekt av utvecklarna.
 
-Universal Editor är ett modernt och intuitivt GUI som du kan använda för att skapa innehåll genom att dra och släppa block.
+Universal Editor är ett modernt och intuitivt GUI som du kan använda för att skapa innehåll genom att lägga till och ordna block.
 
-![Dra och släppa block i den universella redigeraren](assets/blocks.png)
+![Lägga till och ordna block i den universella redigeraren](assets/blocks.png)
 
 Information om blocken kan sedan konfigureras i egenskapsfältet.
 
@@ -54,6 +54,6 @@ Läs [Utvecklarhandboken Komma igång för WYSIWYG-redigering med Edge Delivery 
 
 ## Ytterligare redigeringsmetoder  {#authoring-methods}
 
-WYSIWYG-redigering är ett kraftfullt och intuitivt verktyg för skribenter. Det finns dock många olika användningsområden, och det är därför AEM erbjuder ytterligare redigeringslösningar.
+WYSIWYG är ett kraftfullt och intuitivt verktyg för skribenter. Det finns dock många olika användningsområden, och det är därför AEM erbjuder ytterligare redigeringslösningar.
 
 Läs dokumentet [Välja en redigeringsmetod](/help/edge/authoring-methods.md) om du vill veta mer om de redigeringslösningar AEM erbjuder, inklusive dokumentbaserad redigering och headless.
