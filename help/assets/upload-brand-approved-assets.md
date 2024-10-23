@@ -3,14 +3,19 @@ title: Överför varumärkesgodkända resurser till  [!DNL Content Hub]
 description: Lär dig hur du överför varumärkesgodkända mediefiler till Content Hub
 role: User
 exl-id: f1be7cfc-1803-4c17-bb58-947104aa883c
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 54300b9f27f1092a491820ab5279ee1633c6d53d
 workflow-type: tm+mt
-source-wordcount: '874'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
 
 # Överför varumärkesgodkända mediefiler till Content Hub {#upload-brand-approved-assets-content-hub}
+
+>[!CONTEXTUALHELP]
+>id="upload_assets_content_hub"
+>title="Överför varumärkesgodkända mediefiler till Content Hub"
+>abstract="Lägg till godkända resurser i Content Hub antingen från det lokala filsystemet eller importera resurser från datakällorna OneDrive eller Dropbox. Alla resurser visas på den översta nivån i Content Hub, oavsett mappstrukturen, för att förbättra sökfunktionerna."
 
 | [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
 | ------------- | --------------------------- |---------|----|-----|
