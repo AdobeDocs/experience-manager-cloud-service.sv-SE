@@ -5,9 +5,9 @@ exl-id: 7eb50225-e638-4c05-a755-4647a00d8357
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 2573eb5f8a8ff21a8e30b94287b554885cd1cd89
+source-git-commit: 05531a5c1eca996bd3652d6ce6233b7a960d0bc9
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1322'
 ht-degree: 0%
 
 ---
@@ -91,7 +91,7 @@ Mer information finns i [Java Functional Tests](/help/implementing/cloud-manager
 
 För att maximera riskkontrollen för er kundspecifika utveckling rekommenderar Adobe dig att hämta in viktiga gränssnittstester till AEM as a Cloud Service. Behåll dem begränsade men fokusera på att maximera deras påverkan på kundupplevelsen.
 
-Testerna är förpackade i en Docker-bild som är utformad för att vara så flyktig som möjligt (med stöd för Cypress, Selenium, Java och JavaScript). De följer samma egenskaper och syften som de anpassade funktionstesterna.
+Testerna är förpackade i en Docker-bild som är utformad för att vara så beständig som möjligt (med stöd för Cypress, Playwright, Selenium, Java och JavaScript). De följer samma egenskaper och syften som de anpassade funktionstesterna.
 
 >[!NOTE]
 >
