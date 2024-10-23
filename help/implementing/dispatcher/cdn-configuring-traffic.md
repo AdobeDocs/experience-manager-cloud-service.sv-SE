@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler 
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: 6ea53e6b2b009895dccf99ac0265dc42b68db509
+source-git-commit: 913b1beceb974243f0aa7486ddd195998d5e9439
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1341'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Alla dessa regler, som deklareras i en konfigurationsfil i källkontrollen, dist
 
 De olika funktioner som nämns ovan utvärderas i följande sekvens:
 
-![bild](/help/implementing/dispatcher/assets/order.png)
+![Utvärderingsordning](/help/implementing/dispatcher/assets/order.png)
 
 ## Inställningar {#initial-setup}
 

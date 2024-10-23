@@ -4,9 +4,9 @@ description: Börja din migreringsresa genom att bekanta dig med grunderna i att
 exl-id: e1a79630-56c1-4648-aa11-3348c3b37541
 feature: Migration
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 913b1beceb974243f0aa7486ddd195998d5e9439
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '579'
 ht-degree: 6%
 
 ---
@@ -35,15 +35,15 @@ Migreringsresan till Cloud Service omfattar följande faser:
 * Börja med att kontrollera om distributionen är klar att flyttas till AEM as a Cloud Service med [beredskapsfasen](/help/journey-migration/readiness.md). I den här fasen bör du också bekanta dig med de förändringar som AEM as a Cloud Service har infört.
 * Gör sedan koden och innehållet i molnet redo med [implementeringsfasen](/help/journey-migration/implementation.md). I den här fasen utforskar du de verktyg Adobe tillhandahåller för att underlätta övergången till molnet.
 * När allt är på plats kan du utföra migreringen med [Go-Live-fasen](/help/journey-migration/go-live.md).
-* Slutligen bör du kontrollera om det finns problem och förbättra prestanda när migreringen är klar, i [Post Go-live-fasen](/help/journey-migration/post-go-live.md).
+* Slutligen bör du kontrollera om det finns problem och förbättra prestanda när migreringen är klar, i [fasen efter publicering](/help/journey-migration/post-go-live.md).
 
 I bilden nedan visas en högnivårepresentation av den rekommenderade övergångsresan till AEM as a Cloud Service.
 
-![bild](/help/journey-migration/assets/move-aemcloud-process.png)
+![Högnivårepresentation av den rekommenderade övergångsresan till AEM as a Cloud Service](/help/journey-migration/assets/move-aemcloud-process.png)
 
 Du kan även se bilden nedan för en mer detaljerad bild av migreringsresan.
 
-![bild](/help/journey-migration/assets/migration-process.png)
+![Detaljerad vy över migreringsresan](/help/journey-migration/assets/migration-process.png)
 
 ## Cloud Acceleration Manager {#cloud-acceleration-manager}
 

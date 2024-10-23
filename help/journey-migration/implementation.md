@@ -4,9 +4,9 @@ description: Kontrollera att koden och innehållet är klara för migrering till
 exl-id: d124f9a5-a754-4ed0-a839-f2968c7c8faa
 feature: Migration
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 913b1beceb974243f0aa7486ddd195998d5e9439
 workflow-type: tm+mt
-source-wordcount: '2282'
+source-wordcount: '2288'
 ht-degree: 8%
 
 ---
@@ -49,7 +49,7 @@ Hur övergången till Cloud Service ser ut beror på vilka system du har köpt o
 
 I följande bild visas de viktigaste stegen som ingår i fasen som innebär att konvertera kod och innehåll för användning med AEM as a Cloud Service:
 
-![bild](/help/journey-migration/assets/exec-image1.png)
+![Konverteringssteg](/help/journey-migration/assets/exec-image1.png)
 
 Vi börjar med att gå igenom de verktyg du måste använda så att du kan göra det i kapitlen nedan.
 
@@ -217,7 +217,7 @@ I följande tabell visas en funktionell flyttningsspårare:
 
 I följande avsnitt visas viktiga steg och tillhörande uppgifter som kan användas för att utforma en strategi för innehållsmigrering och tidslinje.
 
-![bild](/help/journey-migration/assets/content-migration2.png)
+![Steg för att formulera en migreringsstrategi](/help/journey-migration/assets/content-migration2.png)
 
 ### Engagemang {#fitment}
 

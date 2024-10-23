@@ -4,9 +4,9 @@ description: Lär dig hur du använder Best Practices Analyzer för att förstå
 exl-id: e8498e17-f55a-4600-87d7-60584d947897
 feature: Migration
 role: Admin
-source-git-commit: 9998fb4bc4f9f4c0f4adf67fd1b378ae662c8f70
+source-git-commit: 9f5d7ee97da1c92d3a3d4573fa3ec737356f54a9
 workflow-type: tm+mt
-source-wordcount: '2686'
+source-wordcount: '2701'
 ht-degree: 31%
 
 ---
@@ -73,45 +73,43 @@ Följ det här avsnittet för att lära dig hur du visar rapporten Best Practice
 
 1. Välj Adobe Experience Manager och navigera till verktyg > **Åtgärder** > **Best Practices Analyzer**.
 
-   ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_pic1.png)
+   ![Best Practices Analyzer](/help/journey-migration/best-practices-analyzer/assets/BPA_pic1.png)
 
 1. Klicka på **Generera rapport** för att köra Best Practices Analyzer.
 
-   ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_pic2.png)
+   ![Generera rapport](/help/journey-migration/best-practices-analyzer/assets/BPA_pic2.png)
 
 1. Ange BPA-överföringsnyckeln för att automatiskt överföra den genererade BPA-rapporten till [Cloud Acceleration Manager (CAM)](/help/journey-migration/cloud-acceleration-manager/introduction/benefits-cam.md). Navigera till [Best Practices Analysis i CAM](/help/journey-migration/cloud-acceleration-manager/using-cam/cam-readiness-phase.md#best-practices-analysis) om du vill hämta överföringsnyckeln.
 
-   ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_upload_key.png)
+   ![Ange BPA-överföringsnyckel](/help/journey-migration/best-practices-analyzer/assets/BPA_upload_key.png)
 
 >[!NOTE]
 >Du kan välja att hoppa över den automatiska överföringen till CAM genom att välja **Hoppa över automatisk rapportöverföring till CAM**. Om du väljer att hoppa över måste du hämta BPA-rapporten manuellt som en kommaseparerad värdefil och sedan överföra filen i CAM. Du bör använda alternativet för överföringsnyckel eftersom det effektiviserar åtgärden.
 
 1. Knappen **Generera** aktiveras när en giltig nyckel anges. Klicka på **Generera** för att initiera rapportgenerering.
 
-   ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_upload_key1.png)
-
+   ![Generera rapport](/help/journey-migration/best-practices-analyzer/assets/BPA_upload_key1.png)
 
 1. Medan BPA genererar rapporten kan du se hur verktyget utvecklas på skärmen. Den visar förloppet i procent slutfört. Här visas också antalet analyserade objekt och även antalet upptäckter.
 
-   ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_generate_upload.png)
+   ![Skapar rapport](/help/journey-migration/best-practices-analyzer/assets/BPA_generate_upload.png)
 
 >[!NOTE]
 >Tidsstämpeln för förfallotid för BPA-överföringsnyckeln visas i det övre högra hörnet. Du bör förnya BPA-överföringsnyckeln när den snart upphör att gälla. Om du vill förnya nyckeln kan du klicka på **Förnya** och navigera till CAM för att förnya nyckeln.
 
 1. När BPA-rapporten har genererats visas en sammanfattning och antalet resultat i ett tabellformat, ordnade efter typ av fynd och prioritetsnivå. Om du vill ha mer information om en viss sökning kan du klicka på talet som motsvarar sökningstypen i tabellen.
 
-   ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_report_upload.png)
+   ![Rapportöversikt](/help/journey-migration/best-practices-analyzer/assets/BPA_report_upload.png)
 
 1. Du kan hämta rapporten i ett kommaavgränsat värdeformat (CSV) genom att klicka på **Exportera till CSV**. Du kan också visa rapporten i CAM genom att klicka på **Gå till CAM**. Du kommer nu till sidan [Best Practices Analysis](/help/journey-migration/cloud-acceleration-manager/using-cam/cam-readiness-phase.md#best-practices-analysis) i CAM.
 
 Du kan tvinga BPA att rensa sin cache och återskapa rapporten genom att klicka på **Uppdatera rapport**.
 
-![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_report_upload.png)
-
+![Uppdatera rapport](/help/journey-migration/best-practices-analyzer/assets/BPA_report_upload.png)
 
 1. Om cachen förfaller kan du välja att visa den senast genererade rapporten i CAM genom att klicka på **Visa den senast genererade rapporten i CAM** eller starta en ny rapportgenerering genom att klicka på **Skapa ny rapport**.
 
-![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_regeneratereport.png)
+![Ingen rapport](/help/journey-migration/best-practices-analyzer/assets/BPA_regeneratereport.png)
 
 
 #### Använda filter i rapporten Best Practices Analyzer {#bpa-filters}
@@ -120,14 +118,14 @@ Följ stegen nedan för att filtrera bort resultat relaterade till [ACS-kommando
 
 1. Klicka på ikonen för den vänstra listen till vänster på sidan. Då visas **ACS-kommandofiltret**. Klicka på **ACS-kommandofiltret** för att visa den interaktiva kryssrutan som visas i bilden nedan.
 
-   ![bild](/help/journey-migration/best-practices-analyzer/assets/report_filter_1.png)
+   ![ACS-kommandofilter](/help/journey-migration/best-practices-analyzer/assets/report_filter_1.png)
 
    >[!NOTE]
    >Ikonen för vänster spår visas bara om BPA upptäcker att ACS Commons används.
 
 1. Avmarkera rutan om du vill filtrera bort alla upptäckter som rör ACS-kommandon. Rapporten **Antal filtrerade sökningar** visas i bilden nedan. Filtret används också i rapporten när den exporteras i ett CSV-format (kommaavgränsat värde).
 
-   ![bild](/help/journey-migration/best-practices-analyzer/assets/report_filter_2.png)
+   ![Antal filtrerade sökningar](/help/journey-migration/best-practices-analyzer/assets/report_filter_2.png)
 
    >[!NOTE]
    >ACS Commons-resultaten ska inte ignoreras. Mer information om kompatibilitet med AEM as a Cloud Service finns i [dokumentation](https://adobe-consulting-services.github.io/acs-aem-commons/pages/compatibility.html#aem-as-a-cloud-service-feature-incompatibility).

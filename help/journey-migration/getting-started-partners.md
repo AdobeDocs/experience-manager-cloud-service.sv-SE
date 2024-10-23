@@ -4,9 +4,9 @@ description: Migreringshandbok till Experience Manager as a Cloud Service for Pa
 exl-id: 9d5a72b8-06af-4b82-ab20-e65aea7903b3
 feature: Migration
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 7c704aa09ae4a6a3368b1eccb12982360a3350b3
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1472'
 ht-degree: 4%
 
 ---
@@ -20,11 +20,11 @@ ht-degree: 4%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/what-is-new-and-different.html" text="Vad är nytt och annorlunda?"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/introduction.html" text="Introduktion till AEM as a Cloud Service."
 
-Adobe Experience Manager (AEM) as a Cloud Service erbjuder en omgjord grund för Experience Manager, som bygger på en behållarbaserad infrastruktur, API-driven utveckling och en guidad DevOps-process, vilket gör att marknadsförare och utvecklare alltid kan ligga steget före när det gäller innovationer inom kundupplevelsehantering.
+Adobe Experience Manager (AEM) as a Cloud Service har en uppdaterad arkitektur för Experience Manager. Denna grund bygger på en behållarbaserad infrastruktur, API-driven utveckling och guidad DevOps-process. Detta gör att marknadsförare och utvecklare kan ligga steget före när det gäller innovationer inom kundupplevelsehantering.
 
-Cloud Service innehåller mängder av användningsklara funktioner och utbyggbarhet i Adobe Experience Manager tack vare den moderna molnbaserade arkitekturen som gör att varumärkena kan möta konsumenternas ständigt växande krav.
+Cloud Service innehåller mängder av användningsklara funktioner och utbyggbarhet i Adobe Experience Manager tack vare flexibiliteten i den moderna molnbaserade arkitekturen, som gör att varumärkena kan möta konsumenternas ständigt växande krav.
 
-Den här enpersonsmodellen visar det rekommenderade stegvisa tillvägagångssättet för att övergå från olika Experience Manager-driftsättningar till Experience Manager as a Cloud Service och hjälper befintliga kunder att leverera sammankopplade, kontinuerliga upplevelser på den här moderna, specialbyggda plattformen för upplevelsehantering.
+På den här sidan beskrivs den stegvisa metod som rekommenderas för att övergå från tidigare Experience Manager-driftsättningar till Experience Manager as a Cloud Service. Den nya, specialbyggda plattformen hjälper er att leverera sammankopplade, kontinuerliga upplevelser.
 
 <!-- It primarily focuses on:
 * Getting Started with Adobe Experience Manager as a Cloud Service
@@ -33,7 +33,7 @@ Den här enpersonsmodellen visar det rekommenderade stegvisa tillvägagångssät
 
 Se diagrammet nedan för en allmän representation av migreringsresan.
 
-![bild](/help/journey-migration/assets/migration-process.png)
+![Allmän representation av migreringsresan](/help/journey-migration/assets/migration-process.png)
 
 ## Komma igång med Adobe Experience Manager as a Cloud Service {#getting-started}
 
@@ -49,9 +49,9 @@ Se diagrammet nedan för en allmän representation av migreringsresan.
 
 ### Utvecklar
 
-De grundläggande funktionerna för kodutveckling liknar dem i Adobe Experience Manager as a Cloud Service jämfört med Adobe Experience Manager On Premise och Managed Services.
+De grundläggande funktionerna för kodutveckling i Adobe Experience Manager as a Cloud Service liknar dem i Adobe Experience Manager On Premise och Managed Services.
 
-Utvecklarna skriver kod och testar den lokalt, som sedan skickas till Adobe Experience Manager as a Cloud Service fjärrmiljöer.
+Utvecklare skriver kod och testar den lokalt och skickar den sedan till Adobe Experience Manager as a Cloud Service fjärrmiljöer.
 
 Se självhjälpsresurser om implementering för Experience Manager as a Cloud Service om du vill veta hur du kan anpassa Experience Manager as a Cloud Service driftsättning.
 
@@ -64,9 +64,9 @@ Se självhjälpsresurser om implementering för Experience Manager as a Cloud Se
 
 ### Distribuerar
 
-Utvecklarna skriver kod och testar den lokalt, som sedan skickas till AEM as a Cloud Service fjärrmiljöer.
+Utvecklare skriver kod och testar den lokalt och skickar den sedan till AEM as a Cloud Service fjärrmiljöer.
 
-Cloud Manager, som var ett valfritt innehållsleveransverktyg för Managed Services, krävs. Detta är nu den enda mekanismen för att distribuera kod till AEM as a Cloud Service-miljöer.
+Cloud Manager, som var ett valfritt innehållsleveransverktyg för Managed Services, behövs nu. Det är den enda mekanismen för att distribuera kod till AEM as a Cloud Service-miljöer.
 
 Se självhjälpsresurser om hur du konfigurerar och distribuerar till AEM as a Cloud Service-miljöer.
 
@@ -113,18 +113,22 @@ Se självhjälpsresurser om hur du konfigurerar och distribuerar till AEM as a C
 
 Med Experience Manager as a Cloud Service kan era team fokusera på innovationer istället för att planera för produktuppgraderingar. De nya funktionerna testas grundligt och levereras till era team utan avbrott så att de alltid har tillgång till den senaste programvaran.
 
-Övergången till Cloud Service omfattar tre faser - Planering, Körning och Post GoLive.
+Övergången till Cloud Service omfattar tre faser - Planering, Körning och Post Go-live.
 För en lyckad och smidig övergång bör du säkerställa korrekt planering och följa bästa praxis som beskrivs i den här handboken.
 
 I bilden nedan visas en högnivårepresentation av den rekommenderade övergången till Cloud Service.
 
-![bild](/help/journey-migration/assets/home-img1.png)
+![Högnivårepresentation av den rekommenderade övergångsresan till Cloud Servicen](/help/journey-migration/assets/home-img1.png)
 
 <br>
 
 ### Planering
 
-Innan du påbörjar en övergångsresa till Cloud Service bör du bekanta dig med Experience Manager as a Cloud Service och granska de betydande ändringar som gjorts i den samt även se vilka funktioner som har ersatts eller ersatts.
+Innan du börjar en övergång till Cloud Service bör du:
+
+* bekanta dig med Experience Manager as a Cloud Service
+* Granska de ändringar som har gjorts i den
+* Granska de funktioner som har ersatts eller tagits bort
 
 <table>
 <tr>

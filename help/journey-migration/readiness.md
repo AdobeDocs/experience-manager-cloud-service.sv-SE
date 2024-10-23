@@ -4,9 +4,9 @@ description: Lär dig mer om de steg du måste ta så att du kan vara säker på
 exl-id: 3bc8c037-d82a-4455-bce6-3c80c359a4ae
 feature: Migration
 role: Admin
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: 913b1beceb974243f0aa7486ddd195998d5e9439
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1913'
 ht-degree: 1%
 
 ---
@@ -169,7 +169,7 @@ När du har vant dig vid de ändringar som gjorts i AEM as a Cloud Service är d
 
 I följande bild visas de viktigaste stegen under granskningsfasen:
 
-![bild](/help/journey-migration/assets/planning-phaseimg1.png)
+![Viktiga steg under granskningsfasen](/help/journey-migration/assets/planning-phaseimg1.png)
 
 Därefter tittar vi närmare på vad varje steg innebär.
 

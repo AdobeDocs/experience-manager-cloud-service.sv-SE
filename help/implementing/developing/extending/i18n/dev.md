@@ -4,9 +4,9 @@ description: Java&handel; och JavaScript API:er gör att du kan internationalise
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: a0afa0d733b8493883770d03fc1a55db247aaf71
+source-git-commit: 913b1beceb974243f0aa7486ddd195998d5e9439
 workflow-type: tm+mt
-source-wordcount: '1089'
+source-wordcount: '1095'
 ht-degree: 0%
 
 ---
@@ -174,7 +174,7 @@ Testa om du har internationaliserat alla strängar i användargränssnittet. Om 
 
 I följande bild visas stub-förflyttningen för AEM hemsida:
 
-![chlimage_1](/help/implementing/developing/extending/assets/i18n-dev1.jpeg)
+![Stub-översättning för AEM startsida](/help/implementing/developing/extending/assets/i18n-dev1.jpeg)
 
 Konfigurera språkegenskapen för inställningsnoden för användarkontot för att ställa in språket för användaren.
 
