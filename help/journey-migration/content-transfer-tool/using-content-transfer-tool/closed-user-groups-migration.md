@@ -6,9 +6,9 @@ hidefromtoc: true
 exl-id: f62ed751-d5e2-4a01-8910-c844afab5733
 feature: Migration
 role: Admin
-source-git-commit: 5b0dfb847a1769665899d6dd693a7946832fe7d1
+source-git-commit: c721a8db801602389822222b08ca4ea1fd2293e4
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -31,8 +31,9 @@ Grupper inkluderas automatiskt i en CTT/CAM-migrering till Adobe Experience Mana
 Om du vill använda CUG-filer i AEM as a Cloud Service måste användarna finnas på Author-instansen och vara medlemmar i de relevanta CUG-grupperna.  Detta kan göras med paket, eller om CUG-användarna är IMS-användare kanske de redan är närvarande.  CUG-användare måste sedan göras medlemmar i AEM CUG-grupper.
 
 Om du vill aktivera CUG-beteenden på Publish-instansen
-1. CUG-grupperna måste aktiveras (vilket replikerar dem och deras medlemmar till Publish-instansen), och
-1. De sidor som skyddas med CUG-profiler måste publiceras (vilket möjliggör Publish-instansen och spårning av profilerna).
+1. CUG-grupperna måste aktiveras (vilket replikerar dem och deras medlemmar till Publish-instansen),
+1. *Alla* sidor som skyddas med CUG-principer måste avpubliceras (för att ta bort det globala CUG-antalet) och
+1. Sidorna som skyddas med CUG-profiler måste sedan publiceras (vilket gör att Publish-instansen kan användas och profilerna kan spåras).
 1. När alla sidor har publicerats kontrollerar du funktionerna för varje CUG-skyddad sida.
 
 Mer information finns i [Stängda användargrupper](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/closed-user-groups.html).
