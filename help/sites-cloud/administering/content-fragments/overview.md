@@ -1,20 +1,20 @@
 ---
 title: En översikt över hur du arbetar med innehållsfragment
-description: Lär dig hur du kan skapa och använda innehåll med Content Fragments i AEM as a Cloud Service, idealiskt för headless-leverans och sidredigering.
+description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service gör att du kan skapa och använda strukturerat innehåll, idealiskt för rubrikfri leverans och sidredigering.
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: ce9cb811-57d2-4a57-a360-f56e07df1b1a
 solution: Experience Manager Sites
-source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
+source-git-commit: 7afa76f62791cf7f34c39a09c5b80c6459028e5b
 workflow-type: tm+mt
-source-wordcount: '1803'
+source-wordcount: '1807'
 ht-degree: 1%
 
 ---
 
 # En översikt över hur du arbetar med innehållsfragment {#overview-working-with-content-fragments}
 
-Med Adobe Experience Manager (AEM) as a Cloud Service kan du med Content Fragments utforma, skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-cloud/authoring/fragments/content-fragments.md). Med dem kan du förbereda innehåll som är klart för användning på flera platser, och över flera kanaler, idealiskt för headless leverans, och skapa sidor.
+Med Adobe Experience Manager (AEM) as a Cloud Service kan du med Content Fragments utforma, skapa, strukturera och publicera sidoberoende innehåll. De gör att du kan förbereda innehåll som är klart för användning på flera platser och i flera kanaler, vilket är idealiskt för [headless delivery](/help/headless/what-is-headless.md) och [page authoring](/help/sites-cloud/authoring/fragments/content-fragments.md).
 
 >[!IMPORTANT]
 >
