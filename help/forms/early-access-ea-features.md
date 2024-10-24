@@ -6,7 +6,7 @@ Role: developer, user, author
 exl-id: 6b3f853c-2a6d-4544-9cad-8a3fc1e1f3b9
 feature: Adaptive Forms
 role: Admin, Developer, User
-source-git-commit: 681121c98f61f045702a7d9c2ffad1473d7f5b2a
+source-git-commit: 2c70f7aec042c384cd37985877954b627d95879e
 workflow-type: tm+mt
 source-wordcount: '1735'
 ht-degree: 0%
@@ -27,13 +27,13 @@ Om du är intresserad av att delta i vårt Tidig åtkomst-program för tidig åt
 
 ## Innovationer för tidig åtkomst
 
-### AEM Forms Generative AI (Gen AI)
+### AEM Forms AI Assistant (Gen AI)
 
 Generativ AI för Adaptive Forms ger en helt ny nivå av kraft och enkelhet i era formulärutvecklingsprocesser. Med hjälp av intelligenta AI-funktioner kan du skapa bättre formulär snabbare än någonsin.
 
-![Generativ AI-assistent, adaptiv Forms](/help/forms/assets/generative-ai-assistant.png)
+>[!VIDEO](https://video.tv.adobe.com/v/3435527)
 
-De genererande AI-funktionerna är:
+De genererande AI-funktionerna som erbjuds via AEM Forms AI Assistant är:
 
 * **AI-assistenten för produktfrågor**: Få svar på dina AEM formulärrelaterade frågor direkt. Vår AI-assistent fungerar som din egen personliga kunskapsbas och ger insiktsfull vägledning och rekommendationer direkt inom plattformen.
 
@@ -74,9 +74,9 @@ Det här är mer konversationskritiska Forms ger:
 Forms är mer än bara ett nytt utseende - de förändrar användarupplevelsen.  Öka engagemanget, minska antalet blanketter som läggs ned och gör interaktionen med er webbplats roligare för alla.
 
 
-### WYSIWYG-redigering för Edge Delivery Services
+### WYSIWYG Authoring for Edge Delivery Services
 
-WYSIWYG Authoring innehåller WYSIWYG-gränssnitt (Universal Editor och Adaptive Forms Editor) för att skapa och publicera anpassningsbara formulär till Edge Delivery Services. WYSIWYG Authoring innehåller alla funktioner i [Dokumentbaserad redigering](/help/edge/docs/forms/overview.md#document-based-authoring-features), plus en mängd andra funktioner:
+WYSIWYG Authoring har gränssnitt från WYSIWYG (Universal Editor och Adaptive Forms Editor) för att skapa och publicera anpassningsbara formulär till Edge Delivery Services. WYSIWYG Authoring har alla funktioner som finns i [Dokumentbaserad redigering](/help/edge/docs/forms/overview.md#document-based-authoring-features), plus en mängd andra funktioner:
 
 * Avancerad regelredigerare för avancerad logik.
 * Utbyggbarhet på serversidan för anpassade funktioner.
@@ -135,10 +135,10 @@ Genom att erbjuda flera CAPTCHA-alternativ har AEM Forms gett dig möjlighet att
 
 Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I vår dokumentation finns detaljerade anvisningar för varje: [Cloudflare Turnstile](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components) och [Google reCAPTCHA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
 
-### Doc Assurance-API:er
+### Doc Assurance API:er
 
 
-AEM Forms Doc Assurance API:er är en uppsättning verktyg i AEM Forms Cloud Service Communication API:er som gör att du kan hantera säkerhet och användarinteraktion i dina PDF-dokument.
+AEM Forms Doc Assurance API:er är en uppsättning verktyg i AEM Forms Cloud Service Communication API:er som gör att du kan hantera säkerheten och användarinteraktionen i dina PDF-dokument.
 
 Här följer en beskrivning av vad Doc Assurance API:er kan göra:
 
@@ -152,7 +152,7 @@ Här följer en beskrivning av vad Doc Assurance API:er kan göra:
 
   När PDF-dokument har rätt användarbehörighet kan mottagarna göra aktiverade aktiviteter inifrån Adobe Reader.
 
-[Doc Assurance-API:er](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/references/docassurance/) hjälper dig att förbättra dokumentsäkerheten och kompatibiliteten genom att lägga till ett extra kontrolllager.
+[Doc Assurance API:er](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/references/docassurance/) hjälper dig att förbättra dokumentsäkerheten och kompatibiliteten genom att lägga till ett extra kontrolllager.
 
 
 ### Forms Service API:er
