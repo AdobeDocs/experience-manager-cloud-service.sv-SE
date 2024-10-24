@@ -4,9 +4,9 @@ description: Lär dig hur innehållsmodellering fungerar för WYSIWYG Authoring 
 exl-id: e68b09c5-4778-4932-8c40-84693db892fd
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: b34a15138e1b8fbe2bebc22f2cc7e8a0ae22316a
+source-git-commit: 058f3c24ac883315dfaa9206a8c2caa4bb005d07
 workflow-type: tm+mt
-source-wordcount: '2242'
+source-wordcount: '2196'
 ht-degree: 0%
 
 ---
@@ -608,20 +608,7 @@ Det går också att definiera ytterligare sidmetadata på två sätt.
 
 Det går att definiera metadata per bana eller per bana på ett tabellliknande sätt i AEM as a Cloud Service. Det finns ett redigeringsgränssnitt för tabellliknande data som liknar Excel- och Google-ark.
 
-Om du vill skapa en sådan tabell skapar du en sida och använder metadatamallen i webbplatskonsolen.
-
-I kalkylbladets sidegenskaper definierar du de metadatafält som du behöver tillsammans med URL:en. Lägg sedan till metadata per sidbana eller sidsökvägsmönster.
-
-Kontrollera att kalkylbladet läggs till i sökvägsmappningen innan du publicerar det.
-
-```json
-{
-  "mappings": [
-    "/content/site/:/",
-    "/content/site/metadata:/metadata.json"
-  ]
-}
-```
+Mer information finns i dokumentet [Använda kalkylblad för att hantera tabelldata](/help/edge/wysiwyg-authoring/tabular-data.md).
 
 ### Sidegenskaper {#page-properties}
 
@@ -631,7 +618,7 @@ Många av de standardsidegenskaper som är tillgängliga i AEM mappas till respe
 * Den tid dokumentet senast publicerades som `published-time` i ISO8601-format
 * `cq:tags` som `cq-tags` som en kommaavgränsad lista med tagg-ID:n.
 
-Det går också att definiera en komponentmodell för anpassade sidmetadata, som kommer att göras tillgänglig för författaren som en flik i dialogrutan AEM Sites sidegenskaper.
+Det går också att definiera en komponentmodell för anpassade sidmetadata, som kommer att göras tillgänglig för författaren i Universella redigeraren.
 
 Om du vill göra det skapar du en komponentmodell med ID:t `page-metadata`.
 

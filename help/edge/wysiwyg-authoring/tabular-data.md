@@ -4,9 +4,9 @@ description: Lär dig hur du använder kalkylblad för att hantera tabelldata f�
 feature: Edge Delivery Services
 exl-id: 26d4db90-3e4b-4957-bf21-343c76322cdc
 role: Admin, Architect, Developer
-source-git-commit: 13bde08db33ff4b81a6e76cad91bb5ea257ab195
+source-git-commit: 69c8e54bde6c6047fdefbbbb1f166af690584f88
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '1014'
 ht-degree: 0%
 
 ---
@@ -101,6 +101,10 @@ För att AEM ska kunna publicera data i ditt kalkylblad måste du dessutom uppda
      ]
    }
    ```
+
+   >[!NOTE]
+   >
+   >Den här `paths.json`-posten baseras på exemplet med att skapa omdirigeringar med tabelldata. Uppdatera sökvägen som passar den [typ av kalkylblad som du skapar.](#other)
 
 1. Klicka på **Verkställ ändringar..** om du vill spara ändringarna i `main`.
 
