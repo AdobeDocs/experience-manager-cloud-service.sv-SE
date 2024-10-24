@@ -1,24 +1,24 @@
 ---
 title: Innehållsfragment
-description: Med Adobe Experience Manager as a Cloud Service Content Fragments kan du utforma, skapa, strukturera och använda sidoberoende innehåll
+description: Med Adobe Experience Manager as a Cloud Service Content Fragments kan du utforma, skapa, strukturera och använda kanaloberoende innehåll som också kan användas när du skapar sidor.
 exl-id: 7a44fc4e-3793-4aa3-8c21-db0567c93244
 solution: Experience Manager Sites
 feature: Authoring, Content Fragments
 role: User
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: b2b38a3163925fdc2bd4c5f78aaddb44ae716601
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1267'
 ht-degree: 0%
 
 ---
 
 # Innehållsfragment {#content-fragments}
 
-Innehållsfragment i Adobe Experience Manager (AEM)-as a Cloud Service [skapas och hanteras som sidoberoende resurser](/help/sites-cloud/administering/content-fragments/overview.md).
+Innehållsfragment i Adobe Experience Manager (AEM)-as a Cloud Service [skapas och hanteras som sidoberoende resurser](/help/sites-cloud/administering/content-fragments/overview.md), vilket gör att du kan skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) varianter. Du kan använda dessa fragment och deras variationer när du redigerar innehållssidorna.
 
-Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna.
-
-Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfragment även användas för att leverera AEM innehåll via Content Services till andra kanaler än AEM.
+>[!CAUTION]
+>
+>Den här sidan måste läsas tillsammans med [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) (och relaterade sidor) eftersom den innehåller grundläggande terminologi och begrepp, tillsammans med information om hur du skapar och hanterar fragment och levererar strukturerade innehållsfragment till andra kanaler än AEM sidor.
 
 >[!NOTE]
 >
@@ -40,10 +40,6 @@ Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfr
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
 >Mer information finns i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
-
->[!CAUTION]
->
->Den här sidan måste läsas tillsammans med [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) (och relaterade sidor) eftersom den innehåller grundläggande terminologi och koncept samt skapar och hanterar fragment.
 
 Innehållsfragmenten aktiverar:
 
