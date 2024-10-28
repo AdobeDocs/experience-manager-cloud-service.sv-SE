@@ -2,9 +2,9 @@
 title: Gruppmigrering
 description: Översikt över gruppmigrering i AEM as a Cloud Service.
 exl-id: 4a35fc46-f641-46a4-b3ff-080d090c593b
-source-git-commit: 1f9526f8e8aa6a070e95827fab16431b0ee7566b
+source-git-commit: 7e7b311d425ae6cdee9eb9311c0a12af84f81096
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1447'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,8 @@ Observera att sökvägen som loggas/rapporteras för en grupp bara är den förs
 
 De flesta migrerade grupper är konfigurerade att hanteras av IMS.  Detta innebär att en grupp i IMS med samma namn länkas till gruppen i AEM, och alla IMS-användare i IMS-gruppen blir AEM användare och medlemmar i gruppen i AEM.  Detta gör att dessa användare har tillgång till innehållet enligt ACL- eller CUG-profiler för gruppen.
 
+Observera att migrerade grupper inte längre betraktas som&quot;lokala grupper&quot;. De är IMS-grupper och måste återskapas i IMS så att de kan synkroniseras mellan AEM och IMS.  Grupper kan skapas i IMS via Admin Console, bland annat på egen hand eller gruppvis.  Se [Hantera användargrupper](https://helpx.adobe.com/ca/enterprise/using/user-groups.html) för mer information om hur du skapar grupper individuellt eller gruppvis på Admin Console.
+
 Undantaget för den här IMS-konfigurationen gäller grupper som skapats av Assets Collections. När en samling skapas på AEM skapas grupper för åtkomst till den samlingen. Sådana grupper migreras till molnsystemet, men de är inte konfigurerade att hanteras av IMS.  Om du vill lägga till IMS-användare i dessa grupper måste de läggas till på sidan Gruppegenskaper i Assets-gränssnittet, antingen individuellt eller tillsammans som en del av en annan IMS-grupp.
 
 
@@ -53,7 +55,7 @@ Undantaget för den här IMS-konfigurationen gäller grupper som skapats av Asse
 
 CTT version 3.0.20 och senare innehåller ett alternativ för att inaktivera migrering av grupper.  Detta konfigureras i OSGI-konsolen enligt följande:
 
-* Öppna OSGI-konfigurationen `(http://<server> /system/console/configMgr)`
+* Öppna OSGI-konfigurationen `(http://<server>/system/console/configMgr)`
 * Klicka på konfigurationen **Konfiguration av extraheringstjänst för innehållsöverföringsverktyg**
 * Avmarkera **Inkludera grupper i migrering** om du vill inaktivera gruppmigreringar
 * Klicka på **Spara** för att se till att konfigurationen sparas och är aktiv på servern
@@ -73,7 +75,9 @@ Förutom grupperna för varje användare finns det ett fält i rapporten där an
 
 Dessa fall kan inträffa samtidigt och samtidigt som de tidigare fallen.
 
-Användarrapporten läggs till i slutet av (och ingår därför i) huvudmigreringsrapporten (se [Slutlig sammanfattning och rapport](#final-summary-and-report) nedan).
+Användarrapporten läggs till i slutet av (och ingår därför i) huvudmigreringsrapporten (se [Slutlig sammanfattning och rapport](#final-summary-and-report) nedan).  Informationen i den här rapporten, inklusive de grupper som rapporteras för varje användare, kan användas för att skapa en massanvändaröverföringsfil som kan användas i Admin Console för att skapa många användare i IMS-program samtidigt.  Befintliga IMS-användare kan också redigeras gruppvis.
+
+Se [Hantera flera användare | Massöverföring av CSV ](https://helpx.adobe.com/ca/enterprise/using/bulk-upload-users.html) innehåller information om hur du skapar eller redigerar flera användare via Admin Console.
 
 ## Ytterligare överväganden {#additional-considerations}
 
