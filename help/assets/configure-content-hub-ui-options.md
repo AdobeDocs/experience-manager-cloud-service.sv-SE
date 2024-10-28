@@ -2,9 +2,9 @@
 title: Konfigurera Content Hub användargränssnitt
 description: Konfigurera Content Hub användargränssnitt
 exl-id: e9e22862-9bcd-459a-bcf4-7f376a0b329a
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: b74067002a676a4d206dac170022ce0ec6d223de
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1747'
 ht-degree: 0%
 
 ---
@@ -59,6 +59,7 @@ Som administratör hanterar du följande konfigurationsalternativ för dina anv�
 * [Filter](#configure-filters-content-hub)
 
 * [Resursinformation](#configure-asset-details-content-hub)
+* [Tillgångskort](#asset-card)
 
 * [Sök](#configure-metadata-search-content-hub)
 
@@ -143,6 +144,25 @@ De egenskaper som är aktiverade i konfigurationsanvändargränssnittet visas p�
 
 ![Resursegenskaper i Content Hub](assets/config-ui-asset-properties.png)
 
+### Tillgångskort {#asset-card}
+
+I Content Hub-användargränssnittet visas **tillgångskortet** för godkända resurser i resursvyn. På tillgångskortet visas viktig tillgångsinformation för användarna. Resurskortet har miniatyrbilder, metadata för resurser och andra användbara alternativ. Content Hub-administratörerna lägger till metadatafälten på databasnivå för att visa metadatanamnet och dess metadatavärde i resursens resurskort samtidigt. Resurskortet godkänner sex metadatafält. Metadatafältet innehåller metadatanamn och metadataegenskap. Resurskortet visar metadata och dess metadatavärde. Administratören anger metadatanamnet och mappar det till rätt metadataegenskap. Egenskapen metadata återger ett metadatavärde i resurskortet. Egenskapen metadata är länkad till egenskaperna för resursen, och därför varierar det återgivna metadatavärdet mellan alla tillgångskort. Administratörer kan till exempel lägga till metadata, **Licensierad**, i resurskortet och mappa dessa **licensierade**-metadata till rätt metadataegenskap. Resurskortet på Content Hub-gränssnittet visar dessa **licensierade**-metadata och dess metadatavärde (**Yes** eller **No**). I det här exemplet visas **Yes** i resurskortet när resurser utan licens visas **NO**.
+
+![Resursegenskaper i Content Hub](/help/assets/assets/metadata-on-asset-card.png)
+
+#### Lägg till, redigera eller ta bort metadata under resurskort {#add-edit-delete-metadata}
+
+Om du vill lägga till metadata för en resurs läser du instruktionerna nedan:
+
+1. Klicka på **Resurskort** i användargränssnittet för [konfigurationer](#access-configuration-options-content-hub).
+2. Klicka på **Lägg till metadata**. Dialogrutan **Lägg till metadata för resurskort** visas.
+3. Ange metadatanamnet i fältet **Etikett** och välj en metadataegenskap i fältet **Metadata**. Ge till exempel metadata namnet **Licensierad** och välj **dc:license** som metadataegenskap. Den valda metadataegenskapen mappas till ett värde som visas med metadata i Content Hub-gränssnittet. I det här exemplet mappas egenskapen **dc:license** till licens-ID:t. Den här egenskapen följer den angivna resurssökvägen (PDF-licens) för att hitta motsvarande resurs och återger därför ett booleskt värde (**Yes** eller **No**) i användargränssnittet baserat på resursens närvaro. Om PDF för licensen hittas visas **Ja**. Annars visas **Nej**. I Content Hub-gränssnittet visas därför **Yes** för resurser med licens-ID, medan resurser utan licens-ID visas **No**.
+4. Klicka på **Bekräfta** och sedan på **Spara** för att tillämpa ändringarna så att den nya egenskapen visas på sidan med resursinformation.
+   ![resurskort](/help/assets/assets/asset-card.png)
+
+Klicka på ![redigera](/help/assets/assets/edit-content-hub.svg) som är tillgänglig bredvid varje tillgänglig egenskap om du vill göra nödvändiga ändringar eller klicka på ![ta bort](/help/assets/assets/delete-content-hub.svg) om du vill ta bort en befintlig metadataegenskap. Klicka på **Spara** när du har gjort alla ändringar för att tillämpa ändringarna.
+
+
 ### Sök {#configure-metadata-search-content-hub}
 
 Administratörer kan definiera metadatafält som söks igenom när en användare anger ett sökvillkor i Content Hub. Utför följande steg:
@@ -174,7 +194,7 @@ De varumärkningsuppdateringar som är aktiverade på skärmen för användargr�
 
 ![Gränssnittsmärkning för konfiguration på Content Hub](assets/configuration-ui-branding-updates.png)
 
-### Utgångna resurser {#expired-assets-content-hub}
+### Utgångna resurser{#expired-assets-content-hub}
 
 Administratörer kan kontrollera om utgångna resurser behöver vara synliga på Content Hub. Om de utgångna resurserna blir synliga kan de även definiera om användare kan hämta dem.
 
@@ -198,7 +218,7 @@ När du har aktiverat synlighet för resurser kan du visa de förfallna resurser
 
 Om administratören har aktiverat nedladdning kan Content Hub-användarna även hämta dem, vilket är markerat i bilden.
 
-Om synligheten för utgångna mediefiler är aktiverad markeras även mediefiler som slutar gälla inom 15 dagar med meddelandet `Expiring in n days` på tillgångskortet.
+Om synligheten för utgångna resurser är aktiverad markeras även resurser som förfaller inom 15 dagar med meddelandet `Expiring in n days` på tillgångskortet.
 
 
 ### Anpassade länkar {#configure-custom-links-content-hub}

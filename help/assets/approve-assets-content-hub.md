@@ -2,7 +2,7 @@
 title: Godkänn resurser för Content Hub
 description: Lär dig hur du godkänner resurser i Assets as a Cloud Service och gör dem tillgängliga i Content Hub.
 exl-id: fc849028-ab56-4388-b8d6-e36cac8f868f
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 189fc257fed1115f66559d0f9063885ae527a0fa
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Innan du börjar bör du ha:
 
 * Skriv behörigheter för att redigera metadata för resurser så att du kan redigera fältet **[!UICONTROL Status]** som är tillgängligt i [resursegenskaperna](/help/assets/manage-organize-assets-view.md##manage-asset-status) för en resurs.
 
-## Godkänn resurser för Content Hub {#approve-assets-for-content-hub}
+## Godkänn resurser för Content Hub{#approve-assets-for-content-hub}
 
 Resurserna som markerats som `approved` i Assets as a Cloud Service är automatiskt tillgängliga i Content Hub.
 
