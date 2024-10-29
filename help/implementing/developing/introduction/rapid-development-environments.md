@@ -4,9 +4,9 @@ description: Lär dig hur du använder miljöer för snabb utveckling för snabb
 exl-id: 1e9824f2-d28a-46de-b7b3-9fe2789d9c68
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: e508ba2fcb709b1925b490bdb3e1a8774068927c
+source-git-commit: 33a30ea29023f90cc6ce1c8b64ed4f9cfdd4f4a7
 workflow-type: tm+mt
-source-wordcount: '4794'
+source-wordcount: '4863'
 ht-degree: 0%
 
 ---
@@ -277,7 +277,7 @@ Det allmänna användningsmönstret är `aio aem:rde:install <artifact>`.
 
 Här följer några exempel:
 
-<u>Distribuera ett innehållspaket</u>
+#### Distribuera ett innehållspaket {#deploy-content-package}
 
 `aio aem:rde:install sample.demo.ui.apps.all-1.0.0-SNAPSHOT.zip`
 
@@ -300,7 +300,7 @@ Alla AEM kan distribueras, till exempel paket med kod, innehåll eller ett [beh�
 >
 >Dispatcher-konfigurationen för WKND-projektet distribueras inte via innehållspaketinstallationen ovan. Distribuera den separat enligt stegen&quot;Distribuera en Apache/Dispatcher-konfiguration&quot;.
 
-<u>Distribuerar en OSGI-konfiguration</u>
+#### Distribuera en OSGI-konfiguration {#deploy-OSGI-config}
 
 `aio aem:rde:install com.adobe.granite.demo.MyServlet.cfg.json`
 
@@ -311,7 +311,7 @@ Där svaret för en lyckad distribution liknar följande:
 #2: deploy completed for osgi-config com.adobe.granite.demo.MyServlet.cfg.json on author,publish - done by 9E0725C05D54FE1A0B49431C@AdobeID at 2022-09-13T11:54:36.390Z
 ```
 
-<u>Distribuera ett paket</u>
+#### Distribuera ett paket {#deploy-bundle}
 
 Använd följande för att distribuera ett paket:
 
@@ -324,7 +324,7 @@ Där svaret för en lyckad distribution liknar följande:
 #3: deploy staged for osgi-bundle org.apache.felix.gogo.jline-1.1.8.jar on author,publish - done by 9E0725C05D53BE1A0B49431C@AdobeID at 2022-09-14T07:54:28.882Z
 ```
 
-<u>Distribuerar en innehållsfil</u>
+#### Distribuera en innehållsfil {#deploy-content-file}
 
 Använd följande för att distribuera en innehållsfil:
 
@@ -337,7 +337,7 @@ Där svaret för en lyckad distribution liknar följande:
 #4: deploy completed for content-file world.txt on author,publish - done by 9E0729C05C54FE1A0B49431C@AdobeID at 2022-09-14T07:49:30.644Z
 ```
 
-<u>Distribuera en Apache/Dispatcher-konfiguration</u>
+#### Distribuera en Apache/Dispatcher-konfiguration {#deploy-apache-config}
 
 Hela mappstrukturen måste vara i form av en ZIP-fil för den här typen av konfiguration.
 
@@ -388,6 +388,26 @@ The analyser found the following errors for publish :
 ```
 
 Kodexemplet ovan visar beteendet om ett paket inte löses. I så fall&quot;mellanlagras&quot; den och installeras endast om dess krav (i detta fall&quot;import som saknas&quot;) uppfylls genom installation av annan kod.
+
+#### Distribuera konfiguration relaterad till konfigurationsförlopp (yaml configs) {#deploy-config-pipeline}
+
+De miljöspecifika konfigurationer (en eller flera dynamiska filer) som beskrivs i artikeln [Använda konfigurationsförlopp](/help/operations/config-pipeline.md) kan distribueras enligt följande:
+
+`aio aem:rde:install -t env-config ./my-config-folder`
+där my-config-folder är den överordnade mappen som innehåller dina dynamiska konfigurationer.
+
+Du kan också installera en ZIP-fil som innehåller config-mappträdet:
+
+`aio aem:rde:install -t env-config config.zip`
+
+Observera att yaml-filens envTypes-matris ska innehålla värdet *rde*, som i exemplet nedan:
+
+```
+kind: "CDN"
+version: "1"
+metadata:
+  envTypes: ["rde"]
+```
 
 ### Distribuera startkod baserat på webbplatsteman och webbplatsmallar {#deploying-themes-to-rde}
 

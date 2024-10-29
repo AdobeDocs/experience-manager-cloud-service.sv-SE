@@ -4,9 +4,9 @@ description: Lär dig hur du kan använda konfigurationspipelines för att distr
 feature: Operations
 role: Admin
 exl-id: bd121d31-811f-400b-b3b8-04cdee5fe8fa
-source-git-commit: 3d0abce117cf94d7bf521e78be2ec019f216aa08
+source-git-commit: 2247fdd919057703f1c35145ba2bc9c6ec47250b
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '1000'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Lär dig hur du kan använda konfigurationspipelines för att distribuera olika 
 
 En Cloud Manager-konfigurationspipeline distribuerar konfigurationsfiler (skapade i YAML-format) till en målmiljö. Ett antal funktioner i AEM as a Cloud Service kan konfigureras på det här sättet, inklusive loggvidarebefordran, rensningsrelaterade underhållsåtgärder och flera CDN-funktioner.
 
-Konfigurationspipelines kan distribueras via Cloud Manager till olika typer av dev-, stage- och produktionsmiljöer i produktionsprogram (icke-sandlådeprogram). RDE:er stöds inte.
+Konfigurationspipelines kan distribueras via Cloud Manager till olika typer av dev-, stage- och produktionsmiljöer i produktionsprogram (icke-sandlådeprogram). Konfigurationsfilerna kan distribueras till Rapid Development Environment (RDE) med [kommandoradsverktyg](/help/implementing/developing/introduction/rapid-development-environments.md#deploy-config-pipeline).
 
 I följande avsnitt i det här dokumentet finns en översikt över viktig information om hur du kan använda Config-pipelines och hur konfigurationer för dem ska struktureras. Här beskrivs allmänna koncept som delas av alla eller en delmängd av de funktioner som stöds av konfigurationspipelines.
 
@@ -53,6 +53,9 @@ I följande tabell finns en omfattande lista över sådana konfigurationer med l
 Mer information om hur du skapar och konfigurerar rörledningar finns i dokumentet [CI/CD Pipelines.](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline)
 
 När du skapar en konfigurationspipeline i Cloud Manager måste du välja en **riktad distribution** i stället för **fullständig stackkod** när du konfigurerar pipeline.
+
+Som tidigare nämnts distribueras konfigurationen för RDE med [kommandoradsverktyg](/help/implementing/developing/introduction/rapid-development-environments.md#deploy-config-pipeline) i stället för en pipeline.
+
 
 ## Vanlig syntax {#common-syntax}
 

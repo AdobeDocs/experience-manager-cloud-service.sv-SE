@@ -4,7 +4,7 @@ description: Läs mer om vidarebefordran av loggar till Splunk och andra loggnin
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: e450a58587ca4d7dff2ab229f522c7e7d4f3f20c
+source-git-commit: af7e94a5727608cd480b2b32cd097d347abb23d3
 workflow-type: tm+mt
 source-wordcount: '1663'
 ht-degree: 0%
@@ -63,7 +63,7 @@ Den här artikeln är organiserad på följande sätt:
 
 1. Placera filen någonstans under en mapp på den översta nivån med namnet *config* eller liknande, enligt beskrivningen i [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#folder-structure).
 
-1. För andra miljötyper än RDE (som för närvarande inte stöds) skapar du en riktad distributionskonfigurationspipeline i Cloud Manager, enligt referens i [det här avsnittet](/help/operations/config-pipeline.md#creating-and-managing). Observera att fullständiga stackpipelines och webbskiktspipelines inte distribuerar konfigurationsfilen.
+1. För andra miljötyper än RDE (som använder kommandoradsverktyg) kan du skapa en riktad distributionskonfigurationspipeline i Cloud Manager, vilket [det här avsnittet](/help/operations/config-pipeline.md#creating-and-managing) refererar till. Observera att fullständiga stackpipelines och webbskiktspipelines inte distribuerar konfigurationsfilen.
 
 1. Distribuera konfigurationen.
 

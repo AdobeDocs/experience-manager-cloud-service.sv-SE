@@ -4,9 +4,9 @@ description: Konfigurerar trafikfilterregler inklusive WAF-regler (Web Applicati
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
 feature: Security
 role: Admin
-source-git-commit: cf9e1b3c290d142095912c794de58547913faece
+source-git-commit: 51c54d29f998d4c5fcd6ff2e5139638c495955b3
 workflow-type: tm+mt
-source-wordcount: '4012'
+source-wordcount: '4019'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ De flesta av dessa trafikfilterregler är tillgängliga för alla AEM as a Cloud
 
 En underkategori av trafikfilterregler kräver antingen en förbättrad säkerhetslicens eller en WAF-DDoS-skyddslicens. Dessa kraftfulla regler kallas trafikfilterregler för WAF (Web Application Firewall) (eller WAF-regler för kort) och har tillgång till de [WAF-flaggor](#waf-flags-list) som beskrivs senare i den här artikeln.
 
-Trafikfilterregler kan distribueras via Cloud Manager konfigurationspipelines för att utveckla, fasa och producera miljötyper i produktionsprogram (icke-sandlådeprogram). Stöd för de regionala utvecklingsföretagen kommer i framtiden.
+Trafikfilterregler kan distribueras via Cloud Manager konfigurationspipelines för att utveckla, fasa och producera miljötyper i produktionsprogram (icke-sandlådeprogram). Konfigurationsfilen kan distribueras till Rapid Development Environment (RDE) med kommandoradsverktyg.
 
 [Följ igenom en självstudiekurs](#tutorial) för att snabbt bygga upp konkreta expertkunskaper om den här funktionen.
 
