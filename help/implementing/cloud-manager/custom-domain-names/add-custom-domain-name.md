@@ -5,9 +5,9 @@ exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 02f9b035320bb4b6219d5ed4273554259fc09e59
+source-git-commit: d2fb23918b04f63aab3ae859485be673034e7aec
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '999'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,8 @@ Ta inte med `http://`, `https://` eller blanksteg när du anger domännamnet.
 
    >[!NOTE]
    >
-   >Om du använder ett kundhanterat (OV/EV) SSL-certifikat och en kundhanterad CDN-leverantör kan du hoppa över att lägga till ett SSL-certifikat och gå direkt till [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md) när det är klart.
+   >Om du använder ditt eget kundhanterade (OV/EV eller DV) SSL-certifikat och tänker använda en kundhanterad CDN ***provider***, kan du hoppa över att lägga till ett SSL-certifikat och gå direkt till [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md) när det är klart.
+
 
 ### Certifikatsteg som hanteras av Adobe {#adobe-managed-cert-steps}
 
