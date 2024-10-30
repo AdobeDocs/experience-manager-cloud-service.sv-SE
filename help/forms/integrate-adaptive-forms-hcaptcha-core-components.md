@@ -8,9 +8,9 @@ hide: true
 hidefromtoc: true
 exl-id: 6c559df2-7b6a-42fe-b44c-29a782570a0c
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: bba5e5d283da616baa57b788181af73d59d86ee3
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '908'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,6 @@ CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Ap
 AEM Forms as a Cloud Service stöder följande CAPTCHA-lösningar:
 
 * [Google reCAPTCHA](/help/forms/captcha-adaptive-forms-core-components.md)
-* [Molnformad vändning](/help/forms/integrate-adaptive-forms-turnstile-core-components.md)
 * [hCaptcha](/help/forms/integrate-adaptive-forms-hcaptcha-core-components.md)
 
 ## Integrera AEM Forms-miljön med Captcha Captcha
