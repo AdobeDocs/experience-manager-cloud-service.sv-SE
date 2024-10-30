@@ -2,9 +2,9 @@
 title: Konfigurera Content Hub användargränssnitt
 description: Konfigurera Content Hub användargränssnitt
 exl-id: e9e22862-9bcd-459a-bcf4-7f376a0b329a
-source-git-commit: b74067002a676a4d206dac170022ce0ec6d223de
+source-git-commit: 76337282b7d3008864763541a957c44327e1a5be
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1451'
 ht-degree: 0%
 
 ---
@@ -146,17 +146,13 @@ De egenskaper som är aktiverade i konfigurationsanvändargränssnittet visas p�
 
 ### Tillgångskort {#asset-card}
 
-I Content Hub-användargränssnittet visas **tillgångskortet** för godkända resurser i resursvyn. På tillgångskortet visas viktig tillgångsinformation för användarna. Resurskortet har miniatyrbilder, metadata för resurser och andra användbara alternativ. Content Hub-administratörerna lägger till metadatafälten på databasnivå för att visa metadatanamnet och dess metadatavärde i resursens resurskort samtidigt. Resurskortet godkänner sex metadatafält. Metadatafältet innehåller metadatanamn och metadataegenskap. Resurskortet visar metadata och dess metadatavärde. Administratören anger metadatanamnet och mappar det till rätt metadataegenskap. Egenskapen metadata återger ett metadatavärde i resurskortet. Egenskapen metadata är länkad till egenskaperna för resursen, och därför varierar det återgivna metadatavärdet mellan alla tillgångskort. Administratörer kan till exempel lägga till metadata, **Licensierad**, i resurskortet och mappa dessa **licensierade**-metadata till rätt metadataegenskap. Resurskortet på Content Hub-gränssnittet visar dessa **licensierade**-metadata och dess metadatavärde (**Yes** eller **No**). I det här exemplet visas **Yes** i resurskortet när resurser utan licens visas **NO**.
+Du kan också konfigurera de viktiga metadatafält som du behöver visa på **resurskortet** upp till högst 6 fält. Gör så här:
 
-![Resursegenskaper i Content Hub](/help/assets/assets/metadata-on-asset-card.png)
-
-#### Lägg till, redigera eller ta bort metadata under resurskort {#add-edit-delete-metadata}
-
-Om du vill lägga till metadata för en resurs läser du instruktionerna nedan:
+![nyckelmetadata på resurskortet](/help/assets/assets/asset-card-key-metadata.png)
 
 1. Klicka på **Resurskort** i användargränssnittet för [konfigurationer](#access-configuration-options-content-hub).
 2. Klicka på **Lägg till metadata**. Dialogrutan **Lägg till metadata för resurskort** visas.
-3. Ange metadatanamnet i fältet **Etikett** och välj en metadataegenskap i fältet **Metadata**. Ge till exempel metadata namnet **Licensierad** och välj **dc:license** som metadataegenskap. Den valda metadataegenskapen mappas till ett värde som visas med metadata i Content Hub-gränssnittet. I det här exemplet mappas egenskapen **dc:license** till licens-ID:t. Den här egenskapen följer den angivna resurssökvägen (PDF-licens) för att hitta motsvarande resurs och återger därför ett booleskt värde (**Yes** eller **No**) i användargränssnittet baserat på resursens närvaro. Om PDF för licensen hittas visas **Ja**. Annars visas **Nej**. I Content Hub-gränssnittet visas därför **Yes** för resurser med licens-ID, medan resurser utan licens-ID visas **No**.
+3. Ange metadatanamnet i fältet **Etikett** och välj en metadataegenskap i fältet **Metadata**.
 4. Klicka på **Bekräfta** och sedan på **Spara** för att tillämpa ändringarna så att den nya egenskapen visas på sidan med resursinformation.
    ![resurskort](/help/assets/assets/asset-card.png)
 

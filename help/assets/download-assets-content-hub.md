@@ -3,9 +3,9 @@ title: Hämta resurser från Content Hub
 description: Lär dig hur du hämtar resurser från Content Hub-portalen
 role: User
 exl-id: 96d4ffba-4e3e-4496-9da2-6eb36be8331f
-source-git-commit: 96b7b7fe32aefc81a9fde15d79e9089f71cb5d31
+source-git-commit: 76337282b7d3008864763541a957c44327e1a5be
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
@@ -22,20 +22,12 @@ Med Content Hub kan du hämta och dela dina resurser. Dessa resurser kan vara bi
 
 Du kan hämta en eller flera resurser med Content Hub. De ursprungliga versionerna av resursen hämtas.
 
-## Förutsättningar {#prerequisites}
-
-[Content Hub-användare](deploy-content-hub.md#onboard-content-hub-users) kan utföra de åtgärder som nämns i den här artikeln.
-
-## Hämta resurs {#download-single-asset}
-
-[Godkänn resursens licens](/help/assets/approve-assets-content-hub.md) innan du hämtar dem.
-
-### Enkel nedladdning {#single-download-asset}
+## Ladda ned en licensierad resurs {#single-download-asset}
 
 Välj en resurs och klicka på ![hämta](/help/assets/assets/download-icon.svg) i den övre listen. I dialogrutan Hämta resurs visas resursens licens. Godkänn licensvillkoren och klicka på **Hämta**.
 Du kan också klicka på ![hämta](/help/assets/assets/download-icon.svg) på resurskortet om du vill hämta resursen.
 
-#### Hämta en resurs från dialogrutan Resurs {#single-download-from-asset-dialog-box}
+### Hämta en licensierad resurs från dialogrutan Resurs {#single-download-from-asset-dialog-box}
 
 1. Klicka på miniatyrbilden för resursen. Dialogrutan Resurser visas.
 1. Klicka på ![hämta](/help/assets/assets/download-icon.svg) i verktygsfältet längst till höger. I hämtningsfönstret visas kryssrutan för resursåtergivningar och godkännande av licensvillkor.
@@ -49,7 +41,7 @@ Du kan också klicka på ![hämta](/help/assets/assets/download-icon.svg) på re
    * Klicka på den **ursprungliga återgivningsrutan** för att återgå till den ursprungliga återgivningen i den vänstra rutan.
 1. Acceptera licensvillkoren (för licensierad mediefil) och klicka på **Hämta** för att hämta mediefilen.
 
-### Flersidig hämtning {#multi-download}
+## Ladda ned flera licensierade Assets{#multi-download}
 
 1. Markera resurserna och klicka på ![hämta](/help/assets/assets/download-icon.svg) i den övre listen. Vilken dialogruta som visas beror på om hämtningslistan innehåller resurser som har gått ut eller bara resurser som inte har gått ut. <br/>
    **Dialogrutan Hämta utgångna resurser:** Den här dialogrutan visar förhandsvisningen av de utgångna resurserna tillsammans med deras förfallodatum i den vänstra rutan. Antalet utgångna resurser som är av det totala antalet markerade visas i den högra rutan. Klicka på **Fortsätt med alla resurser** om du vill hämta utgångna resurser med andra resurser (om sådana finns). Dialogrutan Hämta resurser visas. Gå till dialogrutan [Hämta resurser](#Download-asset-dialog-box) om du vill fortsätta.
@@ -69,7 +61,7 @@ Du kan också klicka på ![hämta](/help/assets/assets/download-icon.svg) på re
 1. Acceptera villkoren och klicka sedan på **Hämta** för att hämta resurser som är associerade med tillgängliga licenser i den vänstra rutan.
    ![download-multiple-license](/help/assets/assets/download-multiple-license.png)
 
-### Hämta icke-licensierade resurser {#download-non-licensed-assets}
+### Ladda ned Assets utan licens {#download-non-licensed-assets}
 
 Om du vill hämta icke-licensierade resurser markerar du resurserna och klickar på ![Hämta](/help/assets/assets/download-icon.svg) i den övre listen.
 
