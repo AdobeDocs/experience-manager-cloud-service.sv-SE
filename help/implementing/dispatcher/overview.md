@@ -4,7 +4,7 @@ description: Läs mer om dataflödet för innehållsleverans och hur du publicer
 exl-id: fe42fb9e-cdf4-43e1-b688-7cecf4124fa5
 feature: Dispatcher
 role: Admin
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: d58055cd0ed2451b5e8063fbb4e7269885d0787c
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 0%
@@ -34,6 +34,5 @@ Som standard förfaller innehållstypen HTML/text efter 300 sekunder (5 minuter)
 I följande avsnitt finns mer information om innehållsleverans:
 * [CDN-konfiguration](/help/implementing/dispatcher/cdn.md)
 * [Cachning](/help/implementing/dispatcher/caching.md)
-
 
 Mer information om replikering från författartjänsten till publiceringstjänsten finns i [Replikering](/help/operations/replication.md).
