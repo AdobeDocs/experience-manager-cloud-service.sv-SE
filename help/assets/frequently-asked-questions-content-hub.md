@@ -1,7 +1,7 @@
 ---
 title: Vanliga frågor och svar från Content Hub
-description: Få svar på några av de vanligaste frågorna och svaren om Content Hub.
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+description: Få svar på några av de vanligaste frågorna och svaren för Content Hub.
+source-git-commit: 3b8a80e346fe63450f9b57733c67de2e4b52b2b8
 workflow-type: tm+mt
 source-wordcount: '1093'
 ht-degree: 0%
