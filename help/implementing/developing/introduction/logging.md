@@ -4,9 +4,9 @@ description: Lär dig hur du använder loggning för AEM as a Cloud Service för
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
 feature: Log Files, Developing
 role: Admin, Architect, Developer
-source-git-commit: bc103cfe43f2c492b20ee692c742189d6e454856
+source-git-commit: e1ac26b56623994dfbb5636993712844db9dae64
 workflow-type: tm+mt
-source-wordcount: '2834'
+source-wordcount: '2376'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 AEM as a Cloud Service är en plattform där kunderna kan inkludera anpassad kod för att skapa unika upplevelser för sina kunder. Med detta i åtanke är loggningstjänsten en viktig funktion för att felsöka och förstå hur kod körs på lokal utveckling och i molnmiljöer, särskilt i AEM as a Cloud Service Dev-miljöer.
 
-AEM as a Cloud Service loggningsinställningar och loggnivåer hanteras i konfigurationsfiler som lagras som en del av det AEM projektet i Git och distribueras som en del av det AEM projektet via Cloud Manager. Inloggning i AEM as a Cloud Service kan delas upp i två logiska uppsättningar:
+AEM as a Cloud Service loggningsinställningar och loggnivåer hanteras i konfigurationsfiler som lagras som en del av det AEM projektet i Git och distribueras som en del av det AEM projektet via Cloud Manager. Inloggning i AEM as a Cloud Service kan delas in i tre logiska uppsättningar:
 
 * AEM loggning, som utför loggning på AEM programnivå
 * Apache HTTPD Web Server/Dispatcher-loggning, som utför loggning av webbservern och Dispatcher på Publish-nivå.
@@ -510,8 +510,6 @@ Define DISP_LOG_LEVEL debug
 
 AEM as a Cloud Service ger åtkomst till CDN-loggar, som är användbara för fall som till exempel optimering av träffkvoten. Det går inte att anpassa CDN-loggformatet och det finns inget koncept för att ställa in det på olika lägen, till exempel info, warn eller error.
 
-CDN-loggar vidarebefordras till Splunk för nya supportförfrågningar för vidarebefordran. Kunder som redan har aktiverat Splunk-vidarebefordran kan lägga till CDN-loggar i framtiden.
-
 **Exempel**
 
 ```
@@ -611,82 +609,18 @@ Beroende på trafiken och mängden loggsatser som skrivits av Debug kan detta re
 * Klar med omdöme och endast när det är absolut nödvändigt
 * Återställs till rätt nivå och återdriftsätts så snart som möjligt
 
-## Splunk-loggar {#splunk-logs}
+## Loggvidarebefordran {#log-forwarding}
 
-Kunder som har Splunk-konton kan via kundsupportbiljetten begära att deras AEM Cloud Service-loggar vidarebefordras till lämpligt index. Loggningsinformationen motsvarar den som är tillgänglig genom Cloud Manager logghämtningar, men det kan vara praktiskt att använda de frågefunktioner som finns i Splunk-produkten.
+Medan loggar kan hämtas från Cloud Manager tycker vissa organisationer att det är bra att vidarebefordra dessa loggar till ett önskat loggningsmål. AEM stöder direktuppspelningsloggar till följande mål:
 
-Nätverksbandbredden som är kopplad till loggar som skickas till Splunk räknas som en del av kundens I/O-användning i nätverket.
+* Azure Blob Storage
+* Datadog
+* HTTPD
+* Elasticsearch (och OpenSearch)
+* Splunk
 
-CDN-loggar vidarebefordras till Splunk för nya supportförfrågningar. Kunder som redan har aktiverat Splunk forward kan lägga till CDN-loggar i framtiden.
-
->[!NOTE]
->
->*Det går inte att vidarebefordra*-loggar och *specifika* användarloggar till Splunk.
->
->**Alla**-loggar vidarebefordras till Splunk, där kunden kan filtrera efter behov.
-
-### Aktivera vidarebefordran av segment {#enabling-splunk-forwarding}
-
-I supportärendet ska man ange
-
-* Splunk HEC-slutpunktsadress. Slutpunkten måste ha ett giltigt SSL-certifikat och vara allmänt tillgänglig.
-* Splunk-index
-* Splunk-porten
-* Splunk HEC-token. Mer information finns i [Exempel på HTTP-händelseinsamlare](https://docs.splunk.com/Documentation/Splunk/8.0.4/Data/HECExamples).
-
-Egenskaperna ovan bör anges för varje relevant kombination av program- och miljötyp. Om en kund till exempel vill ha utvecklings-, staging- och produktionsmiljöer bör de tillhandahålla tre uppsättningar information enligt nedan.
+Mer information om hur du konfigurerar funktionen finns i artikeln [Loggvidarebefordran](/help/implementing/developing/introduction/log-forwarding.md).
 
 >[!NOTE]
 >
->Skräppostvidarebefordran för sandlådeprogrammiljöer stöds inte.
-
->[!NOTE]
->
->Splunk-vidarebefordringsfunktionen är inte möjlig från en dedikerad IP-adress.
-
-Du bör se till att den ursprungliga begäran innehåller all utvecklingsmiljö som ska aktiveras, utöver stage/prod-miljöerna. Splunk måste ha ett SSL-certifikat och vara offentlig.
-
-Om nya utvecklingsmiljöer som skapas efter den ursprungliga begäran ska ha Splunk-vidarebefordran, men inte har det aktiverat, bör ytterligare en begäran göras.
-
-Observera också att om utvecklingsmiljöer har begärts är det möjligt att Splunk-vidarebefordran är aktiverat i andra dev-miljöer som inte finns i begäran eller till och med i sandlådemiljöer, och att Splunk-vidarebefordran delas med ett Splunk-index. Kunder kan använda fältet `aem_env_id` för att skilja mellan dessa miljöer.
-
-Här nedan hittar du ett exempel på en kundsupportförfrågan:
-
-Program 123, Production Env
-
-* Splunk HEC-slutpunktsadress: `splunk-hec-ext.acme.com`
-* Segmentindex: acme_123prod (kunden kan välja vilken namnkonvention man vill ha)
-* Segmentport: 443
-* Splunk HEC-token: ABC123
-
-Program 123, Stage Env
-
-* Splunk HEC-slutpunktsadress: `splunk-hec-ext.acme.com`
-* Segmentindex: acme_123stage
-* Segmentport: 443
-* Splunk HEC-token: ABC123
-
-Program 123, Dev Envs
-
-* Splunk HEC-slutpunktsadress: `splunk-hec-ext.acme.com`
-* Segmentindex: acme_123dev
-* Segmentport: 443
-* Splunk HEC-token: ABC123
-
-Det kan räcka för att samma Splunk-index ska användas för varje miljö. I så fall kan antingen fältet `aem_env_type` användas för att differentiera baserat på värdena dev, stage och prod. Om det finns flera utvecklingsmiljöer kan fältet `aem_env_id` också användas. Vissa organisationer kan välja ett separat index för produktionsmiljöns loggar om det associerade indexet begränsar åtkomsten till en reducerad uppsättning Splunk-användare.
-
-Här är ett exempel på loggpost:
-
-```
-aem_env_id: 1242
-aem_env_type: dev
-aem_program_id: 12314
-aem_tier: author
-file_path: /var/log/aem/error.log
-host: 172.34.200.12 
-level: INFO
-msg: [FelixLogListener] com.adobe.granite.repository Service [5091, [org.apache.jackrabbit.oak.api.jmx.SessionMBean]] ServiceEvent REGISTERED
-orig_time: 16.07.2020 08:35:32.346
-pod_name: aemloggingall-aem-author-77797d55d4-74zvt
-splunk_customer: true
-```
+>Loggvidarebefordran för sandlådeprogrammiljöer stöds inte.

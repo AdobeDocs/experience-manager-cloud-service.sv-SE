@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
 feature: Security
 role: Admin
-source-git-commit: 47d38589071bb7b51d43a2dbc65bbd169810f9ee
+source-git-commit: e1ac26b56623994dfbb5636993712844db9dae64
 workflow-type: tm+mt
-source-wordcount: '5657'
+source-wordcount: '5618'
 ht-degree: 0%
 
 ---
@@ -236,10 +236,6 @@ Konfigurationen av den dedikerade IP-adressen för utgångar liknar den för [fl
 >
 >När du har skapat en dedikerad IP-adressinfrastruktur kan du inte redigera den. Det enda sättet att ändra konfigurationsvärden är att ta bort och återskapa dem.
 
->[!INFO]
->
->Om en dedikerad IP-adress för utgångar konfigureras kommer Splunk-vidarebefordran att fortsätta använda de dynamiska gruppreseriangenterna. Skräppostvidarebefordran kan inte konfigureras att använda en dedikerad IP-adress.
-
 ### UI-konfiguration {#configuring-dedicated-egress-provision-ui}
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
@@ -411,7 +407,6 @@ De flesta VPN-enheter med IPSec-teknik stöds. Läs informationen i kolumnen **R
 >Följande begränsningar gäller för en VPN-infrastruktur:
 >
 >* Stödet är begränsat till en VPN-anslutning
->* Splunk-vidarebefordran är inte möjlig via en VPN-anslutning.
 >* DNS-lösare måste listas i gateway-adressutrymmet för att matcha privata värdnamn.
 
 ### UI-konfiguration {#configuring-vpn-ui}

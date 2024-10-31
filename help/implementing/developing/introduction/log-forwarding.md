@@ -1,12 +1,12 @@
 ---
 title: Loggvidarebefordran för AEM as a Cloud Service
-description: Läs mer om vidarebefordran av loggar till Splunk och andra loggningsleverantörer i AEM as a Cloud Service
+description: Läs om hur du vidarebefordrar loggar till loggningsleverantörer i AEM as a Cloud Service
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: af7e94a5727608cd480b2b32cd097d347abb23d3
+source-git-commit: f6de6b6636d171b6ab08fdf432249b52c2318c45
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1781'
 ht-degree: 0%
 
 ---
@@ -15,17 +15,17 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Den här funktionen har inte släppts ännu och vissa loggningsmål är kanske inte tillgängliga vid tidpunkten för lanseringen. Under tiden kan du öppna en supportbiljett för att vidarebefordra loggar till **Splunk**, vilket beskrivs under [Loggning för AEM as a Cloud Service](/help/implementing/developing/introduction/logging.md).
+>Loggvidarebefordran är nu konfigurerat på självbetjäningssätt, vilket skiljer sig från den gamla metoden, som kräver att du skickar en Adobe Support-biljett. Se avsnittet [Migrerar](#legacy-migration) om din vidarebefordran av loggen har konfigurerats av Adobe.
 
-Kunder som har en licens för en loggningsleverantör eller värd för en loggningsprodukt kan ha AEM loggar (inklusive Apache/Dispatcher) och CDN-loggar vidarebefordrade till associerade loggningsmål. AEM as a Cloud Service stöder följande loggningsmål:
+Kunder som har en licens hos en loggningsleverantör eller som är värd för en loggningsprodukt kan få AEM loggar (inklusive Apache/Dispatcher) och CDN-loggar vidarebefordrade till den associerade loggningsdestinationen. AEM as a Cloud Service stöder följande loggningsmål:
 
 * Azure Blob Storage
-* DataDog
+* Datadog
 * Elasticsearch eller OpenSearch
 * HTTPS
 * Splunk
 
-Loggvidarebefordran konfigureras på ett självbetjäningssätt genom att en konfiguration deklareras i Git och distribueras via Cloud Manager Configuration Pipeline till dev-, stage- och produktionsmiljötyper i produktionsprogram (ej sandlådeprogram).
+Loggvidarebefordran konfigureras på ett självbetjäningssätt genom att en konfiguration deklareras i Git och distribueras via Cloud Manager Config Pipeline till typerna RDE, dev, stage och production i produktionsprogram (ej sandbox).
 
 Det finns ett alternativ för att dirigera loggarna AEM och Apache/Dispatcher via AEM avancerad nätverksinfrastruktur, som dedikerad IP-adress för utgångar.
 
@@ -139,6 +139,8 @@ Här följer en skärmbild av en exempelkonfiguration för SAS-token:
 
 ![Azure Blob SAS-tokenkonfiguration](/help/implementing/developing/introduction/assets/azureblob-sas-token-config.png)
 
+Om loggarna inte har levererats efter att de tidigare fungerat korrekt kontrollerar du om den SAS-token som du konfigurerade fortfarande är giltig eftersom den kan ha gått ut.
+
 #### Azure Blob Storage CDN-loggar {#azureblob-cdn}
 
 Var och en av de globalt distribuerade loggningsservrarna skapar en ny fil var sjätte sekund, under mappen `aemcdn`. När filen har skapats läggs den inte längre till. Filnamnsformatet är YYY-MM-DDThh:mm:ss.sss-uniqueid.log. Exempel: 2024-03-04T10:00:00.000-WnFWYN9BpOUs2aOVn4ee.log.
@@ -202,10 +204,12 @@ data:
 Att tänka på:
 
 * Skapa en API-nyckel, utan någon integrering med en viss molnleverantör.
-* taggegenskapen är valfri
+* Taggegenskapen är valfri
 * För AEM loggar är datakälltaggen för DataDig inställd på något av `aemaccess`, `aemerror`, `aemrequest`, `aemdispatcher`, `aemhttpdaccess` eller `aemhttpderror`
 * För CDN-loggar är datakällkoden `aemcdn` angiven för Datadog
-* datadoggens Service Tag är inställd på `adobeaemcloud`, men du kan skriva över den i taggavsnittet
+* Datadoggens servicemärke är inställd på `adobeaemcloud`, men du kan skriva över den i taggavsnittet
+* Om din pipeline för dataöverföring använder datadaggar för att fastställa lämpligt index för vidarebefordringsloggar kontrollerar du att dessa taggar är korrekt konfigurerade i YAML-filen för loggvidarebefordran. Taggar som saknas kan förhindra att loggen kan tas in om pipeline är beroende av dem.
+
 
 
 ### Elasticsearch och OpenSearch {#elastic}
@@ -307,6 +311,8 @@ Att tänka på:
 * Som standard är porten 443. Den kan åsidosättas med en egenskap med namnet `port`.
 * Källtypsfältet kommer att ha ett av följande värden, beroende på den specifika loggen: *aemaccess*, *aemerror*,
   *aemrequest*, *aemdispatcher*, *aemhttpdaccess*, *aemhttpderror*, *aemcdn*
+* Om de nödvändiga IP-adresserna har tillåtslista och loggarna fortfarande inte levereras kontrollerar du att det inte finns några brandväggsregler som tvingar verifiering av skräpposttoken. Utför snabbt ett inledande valideringssteg där en ogiltig Splunk-token skickas avsiktligt. Om brandväggen är inställd på att avsluta anslutningar med ogiltiga Splunk-tokens, kommer valideringsprocessen att misslyckas, vilket förhindrar att loggar levereras till Splunk-instansen.
+
 
 >[!NOTE]
 >
