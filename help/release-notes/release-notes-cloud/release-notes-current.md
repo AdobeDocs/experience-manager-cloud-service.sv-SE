@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 270e6623c764466f05b25c18faf724a7250309dd
+source-git-commit: a5159f2ff49b8e216087df4206c14a9ccd89f336
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1395'
 ht-degree: 0%
 
 ---
@@ -28,25 +28,28 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för den aktu
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2024.9.0) är 26 september 2024. Nästa funktionsrelease (2024.10.0) planeras till 31 oktober 2024.
+Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2024.10.0) är 31 oktober 2024. Nästa funktionsrelease (2024.11.0) planeras att släppas den 21 november 2024.
 
 ## Versionsinformation om underhåll {#maintenance}
 
 Du hittar den senaste underhållsversionsinformationen [här](/help/release-notes/maintenance/latest.md).
 
-## Släpp video {#release-video}
+<!-- ## Release Video {#release-video}
 
-Titta på videon med versionsöversikten för september 2024 om du vill se en sammanfattning av funktioner som lagts till i version 2024.9.0:
+Have a look at the October 2024 Release Overview video for a summary of the features added in the 2024.10.0 release:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3434847?quality=12)
 
+-->
+
 ## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 
-### Ny funktion i Experience Manager Sites {#new-feature-sites}
+**Moderniserade sidhändelser**
 
-#### Översättningshantering {#translation-management}
-
-AEM översättningsarbetsflöden och API-åtgärder utlöser nu händelser som ger insikter om förändringar i översättningsjobbens tillstånd. Användare kan prenumerera på dessa evenemang via Adobe Developer Console. Mer information om API:t för AEM översättningshantering finns i [här](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/translation/).
+Följande AEM Sites-sidhändelser är nu tillgängliga som externt konsumerbara händelser som är baserade på AEM as a Cloud Service Eventing Platform. Händelserna kan behandlas via Adobe I/O för att interagera med externa processer.
+* Sidan publicerad
+* Sidan har inte publicerats
+* Sidan har tagits bort
 
 ### Tidiga Adobe-program {#sites-early-adopter}
 
@@ -54,6 +57,9 @@ AEM översättningsarbetsflöden och API-åtgärder utlöser nu händelser som g
 
 Utnyttja GenAI genom att AEM nya funktioner, [generera varianter](/help/generative-ai/generate-variations.md), som nu är tillgängliga i Cloud Service. Generera variationer hjälper er att generera och skala innehåll med hjälp av generativ AI. Kontakta ert Adobe-kontoteam för att ta del av detta i programmet.
 
+**AEM REST OpenAPI för leverans av innehållsfragment**
+
+[AEM REST OpenAPI för Content Fragment Delivery](/help/headless/aem-rest-openapi-content-fragment-delivery.md) är nu tillgängligt för AEM as a Cloud Service.
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
@@ -65,16 +71,33 @@ AI-genererade videobildtexter i Adobe Dynamic Media använder artificiell intell
 
 [Skapa och skicka ett kundsupportärende](/help/assets/dynamic-media/video.md##enable-dash) om du vill få snabb tillgång till stöd för AI-genererade bildtexter på ditt Dynamic Media-konto.
 
-### Nya funktioner i Resursväljaren {#asset-selector-new-features}
+### Nya funktioner i vyn Assets {#assets-view-new-features}
 
-Resursväljaren har nu stöd för att bläddra bland samlingar för att hitta den önskade resursen.
-![Resursväljarsamlingar](/help/assets/assets/collections-rail-modal-view.png)
+**Schemalagda rapporter**
+
+Rapporterna kan nu genereras automatiskt i Assets View enligt ett återkommande schema eller vid ett framtida datum, vilket minskar behovet av att identifiera datadrivna insikter.
+
+![Schemalagda rapporter-](/help/assets/assets/scheduled-reports-tab.png)
 
 ### Nya funktioner i Content Hub {#content-hub-new-features}
 
+**Hantering av digitala rättigheter för licensierade resurser**
+
+Organisationer kan nu öka licensefterlevnaden och minimera risken för att dela mediefiler med licensieringsvillkor genom att utnyttja DRM för licensierade mediefiler för användare av Content Hub, vilket kräver att användare granskar och godkänner licensvillkoren innan de kan börja hämta licensierade mediefiler.
+
+![download-multiple-license](/help/assets/assets/download-multiple-license.png)
+
+**Resurskortets metadatakonfiguration**
+
+Content Hub tillåter nu att du konfigurerar de viktigaste metadatafälten som du behöver visa på resurskortet till högst 6 fält.
+
+![nyckelmetadata på resurskortet](/help/assets/assets/asset-card-key-metadata.png)
+
+**Konfigurera synlighet och hämtning av utgångna resurser**
+
 Administratörer kan nu kontrollera om utgångna resurser behöver vara synliga på Content Hub. Om de utgångna resurserna blir synliga kan de även definiera om användare kan hämta dem.
 
-![Utgångna resurser på Content Hub](/help/assets/assets/view-download-expired-assets.png)
+![Utgångna resurser på Content Hub](/help/assets/assets/expired-assets-content-hub.png)
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
@@ -83,7 +106,6 @@ Administratörer kan nu kontrollera om utgångna resurser behöver vara synliga 
 #### Autospara ett utkast för Core Components based Adaptive Forms
 
 Användarna kan nu dra nytta av en autosparfunktion som automatiskt sparar ett delvis ifyllt formulär som ett utkast. De kan gå tillbaka senare för att slutföra ifyllningen på samma eller annan enhet. Den här funktionen förbättrar konverteringsgraden för organisationer genom att minska antalet ifyllda formulär, eftersom användarna inte behöver börja om från början.
-
 
 ### Tidig åtkomst-funktioner i AEM Forms {#forms-new-early-access-features}
 
@@ -115,31 +137,34 @@ De genererande AI-funktionerna är:
 
 ## CIF {#cloud-services-cif}
 
-### Förbättringar {#improvements-fixes-cif}
-
-* Gör kategorigränsen anpassningsbar.
-
 ### Felkorrigeringar {#bug-fixes-cif}
 
-* Commerce-fälten är inte korrekt integrerade med Assets metadataschredigerare.
-* Problem med Carousel Products Multifield för dra och släpp.
-* Problem med Carousel Category Multifield för dra och släpp.
-* Det går inte att klicka på menyerna på sidan Sidinformation på kategoritextredigerarsidan.
-* Ordernummer visas inte på orderbekräftelsesidan.
+* Korrigerade gränssnittstester för att fungera korrekt med CIF kärnkomponenter.
+* Ett problem med kategorins URL-format som inte fungerar som väntat i molninstansen har åtgärdats.
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
 
-### Edge Side Includes (ESI) för inläsning av dynamiskt innehåll {#esi}
+### Självbetjänad loggvidarebefordran med alternativet Avancerat nätverk {#log-forwarding}
 
-Hanterad CDN i Adobe har nu stöd för [Edge Side Includes (ESI)](/help/implementing/dispatcher/edge-side-includes.md), ett markeringsspråk för dynamisk sammanställning av webbinnehåll på kantnivå. Genom att ta med ESI-fragment kan du cachelagra hela HTML-sidan vid CDN med högre TTL-värden, medan du oftare hämtar mindre avsnitt från ursprungsläget som kräver högre uppdateringsintervall (nedre TTL-värden). Den här funktionen kommer att lanseras gradvis.
+Medan AEM (inklusive Apache/Dispatcher) och CDN-loggar kan hämtas från Cloud Manager tycker många att det är bra att strömma dessa loggar till ett önskat loggningsmål. AEM har nu stöd för [vidarebefordran av ](/help/implementing/developing/introduction/log-forwarding.md) till Azure Blob Storage, Datadog, HTTPS, Elasticsearch (och OpenSearch) och Splunk. AEM loggar kan vidarebefordras över avancerade nätverkskonfigurationer, till exempel via en dedikerad IP-adress.
 
-### Grundläggande autentisering vid CDN {#basicauth-cdn}
+Den här funktionen konfigureras av användare på ett självbetjäningssätt och distribueras med [konfigurationspipeline](/help/operations/config-pipeline.md).
 
-Protect vissa innehållsresurser genom att öppna en enkel autentiseringsdialogruta som kräver användarnamn och lösenord. Den här funktionen riktar sig främst till användarvänliga fall av autentisering, som affärsintressenter som granskar innehåll, i stället för att fungera som en heltäckande lösning för slutanvändarnas åtkomsträttigheter. Listan över användarnamn och lösenord hanteras via en konfigurationsfil i Git som distribueras via Config Pipeline, med en referens till Cloud Manager-miljövariabler av hemlig typ. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md#basic-auth).
+### Pipeline-fria URL-omdirigeringar för företagsanvändare {#pipeline-free-redirects}
 
-### Omdirigeringar på klientsidan {#client-side-redirects}
+Omdirigeringar på webbläsarsidan är användbara när en webbsida har tagits ned eller flyttats, eller i andra scenarier. Med [Pipeline-fria URL-omdirigeringar](/help/implementing/dispatcher/pipeline-free-url-redirects.md) kan du placera en Apache-omskrivningsfil på en AEM publiceringsplats, där den läses in automatiskt - du behöver inte implementera filen i källkontrollen eller initiera en Cloud Manager-pipeline.
 
-Deklarera [omdirigering av webbläsare](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors) i en konfigurationsfil som distribueras till och utvärderas vid CDN. Detta kan vara användbart för scenarier som att ta bort sidor, ändra platsstruktur och SEO-optimering.
+Du kan publicera filen som ska skrivas om genom att överföra den som en resurs, använda ACS Commons Rewrite Map Manager eller genom att interagera med ett anpassat användargränssnitt.
+
+### Konfigurera pipeline för RDE:er {#config-pipeline-rdes}
+
+Snabba utvecklingsmiljöer är ett kraftfullt verktyg för att snabbt distribuera och testa kod och konfiguration i en molnmiljö. De virtuella skrivborden har nu stöd för [synkronisering av konfiguration-YAML-filer](/help/implementing/developing/introduction/rapid-development-environments.md#deploy-config-pipeline), inklusive CDN-inställningar som trafikfilterregler och begäran-/svarsomvandlingar samt loggvidarebefordran och andra konfigurationsalternativ. [Se den fullständiga listan](/help/operations/config-pipeline.md) med konfigurationsalternativ som stöds för mer information.
+
+### Nya produktprofiler {#new-product-profiles}
+
+När en ny AEM skapas visas produktprofiler automatiskt i Adobe Admin Console, vilket gör att administratörer kan tilldela åtkomst till licensierade lösningar och funktioner.
+
+Nya miljöer innehåller nu en uppdaterad uppsättning produktprofiler, vilket gör dem kompatibla med framtida funktioner, inklusive generering av API-autentiseringsuppgifter i Adobe Developer Console. Befintliga miljöer kommer att kunna uppdatera sina produktprofiler i en kommande version. [Läs mer](/help/onboarding/aem-cs-team-product-profiles.md).
 
 ### New AEM Developer Console (Public Beta) {#aem-developer-console-beta}
 
@@ -149,17 +174,9 @@ Vem som helst kan komma åt den offentliga betaversionen genom att klicka på kn
 
 ![OSGi Bundles-skärm i AEM Developer Console](/help/implementing/developing/introduction/assets/osgi-bundles.png)
 
-### Affärsanvändare kan deklarera omdirigeringar utanför Git (tidig Adobe-program) {#apache-rewritemaps-early-adopter}
-
-Ungefär som i AEM 6.5 skriver Apache/dispatcher ingests om kartor som placerats på en viss plats i publiceringsdatabasen och läser in dem utan att någon pipeline-körning behövs på webbnivån. På så sätt kan företagsanvändare deklarera omdirigeringar med hjälp av ett kalkylblad eller ett gränssnitt, som ACS Commons Redirect Map Manager eller ett anpassat program. Gå med i det tidiga adopterprogrammet genom att skicka **<aemcs-cdn-config-adopter@adobe.com>** med e-post.
-
-### Config Pipeline for RDEs (Early Adobe Program) {#config-pipeline-rdes-early-adopter}
-
-[Konfigurationspipeline](/help/operations/config-pipeline.md) används för att distribuera dynamiska filkonfigurationer, inklusive CDN-alternativ (trafikfilterregler, begäran-/svarsomvandlingar etc.). Delta i det tidiga adopterprogrammet genom att skicka **<aemcs-cdn-config-adopter@adobe.com>** med e-post för att distribuera samma konfigurationer till RDE (Rapid Development Environment), som använder ett CLI.
-
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/release-notes/cloud-release-notes/2024-releases/2406-release/whats-new-2024-06-0).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/release-notes/cloud-release-notes/2024-releases/2410-release/2410-0-release/whats-new-2024-10-0).
 
 ## Cloud Manager {#cloud-manager}
 
