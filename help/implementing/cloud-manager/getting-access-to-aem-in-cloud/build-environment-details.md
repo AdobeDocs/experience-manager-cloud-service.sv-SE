@@ -1,19 +1,19 @@
 ---
-title: Bygg miljö
+title: Build Environment of Cloud Manager
 description: Läs om Cloud Manager byggmiljö och hur den bygger och testar din kod.
 exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 41a67b0747ed665291631de4faa7fb7bb50aa9b9
+source-git-commit: f5f7830ac6d7f5b65203b12bb1775e64379c7d14
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
 
 
-# Bygg miljö {#build-environment}
+# Byggmiljö {#build-environment}
 
 Läs om Cloud Manager byggmiljö och hur den bygger och testar din kod.
 
@@ -33,7 +33,7 @@ Cloud Manager bygger och testar koden i en specialiserad byggmiljö.
    * `imagemagick`
    * `graphicsmagick`
 * Andra paket kan installeras vid byggtillfället enligt beskrivningen i avsnittet [Installera ytterligare systempaket](#installing-additional-system-packages).
-* Varje bygge görs i en absolut miljö. Byggbehållaren behåller inte något läge mellan körningarna.
+* Varje bygge körs i en ren miljö där byggbehållaren inte har något läge mellan körningarna.
 * Maven körs alltid med följande tre kommandon.
    * `mvn --batch-mode org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins`
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
@@ -46,29 +46,27 @@ Cloud Manager bygger och testar koden i en specialiserad byggmiljö.
 
 ## HTTPS Maven-databaser {#https-maven}
 
-Cloud Manager [release 2023.10.0](/help/implementing/cloud-manager/release-notes/2023/2023-10-0.md) påbörjade en rullande uppdatering av byggmiljön (som i version 2023.12.0) som innehöll en uppdatering till Maven 3.8.8. En betydande förändring som introducerades i Maven 3.8.1 var en säkerhetsförbättring som syftar till att minska potentiella sårbarheter. Maven inaktiverar nu alla osäkra `http://*`-speglar som standard, vilket beskrivs i [versionsinformationen för Maven](http://maven.apache.org/docs/3.8.1/release-notes.html#cve-2021-26291).
+Cloud Manager [release 2023.10.0](/help/implementing/cloud-manager/release-notes/2023/2023-10-0.md) påbörjade en rullande uppdatering av byggmiljön (som i version 2023.12.0) som innehöll en uppdatering till Maven 3.8.8. En betydande förändring som introducerades i Maven 3.8.1 var en säkerhetsförbättring som syftar till att minska potentiella sårbarheter. Maven inaktiverar nu alla osäkra `http://*`-speglar som standard, vilket beskrivs i [versionsinformationen för Maven](https://maven.apache.org/docs/3.8.1/release-notes.html#cve-2021-26291).
 
 Som ett resultat av den här säkerhetsförbättringen kan vissa användare råka ut för problem under byggfasen, särskilt när artefakter hämtas från Maven-databaser som använder osäkra HTTP-anslutningar.
 
 För att få en smidig upplevelse med den uppdaterade versionen rekommenderar Adobe att användare uppdaterar sina Maven-databaser till att använda HTTPS i stället för HTTP. Denna justering är anpassad efter branschens växande övergång till säkra kommunikationsprotokoll och hjälper till att upprätthålla en säker och tillförlitlig byggprocess.
 
-### Använda en specifik Java-version {#using-java-support}
+### Använd en specifik Java-version {#using-java-support}
 
-Som standard byggs projekt av Cloud Manager-byggprocessen med Oracle 8 JDK, men AEM Cloud Service-kunder rekommenderas att ange JDK-versionen som användes för att köra Maven till `11`.
+Cloud Manager byggprocess använder Oracle 8 JDK för att skapa projekt som standard, men AEM Cloud Service-kunder bör ställa in JDK-versionen för Maven-exekvering på `11`.
 
-#### Setting the Maven JDK Version {#alternate-maven-jdk-version}
+#### Ange version av Maven JDK {#alternate-maven-jdk-version}
 
-Vi rekommenderar att du ställer in JDK-versionen för hela Maven-körningen till `11` i en `.cloudmanager/java-version`-fil.
+Adobe rekommenderar att du ställer in JDK-versionen för hela Maven-körningen på `11` i en `.cloudmanager/java-version`-fil.
 
 Det gör du genom att skapa en fil med namnet `.cloudmanager/java-version` i Git-databasgrenen som används av pipeline. Redigera filen så att den bara innehåller texten, `11`. Även om Cloud Manager accepterar värdet `8` stöds inte den här versionen längre för AEM Cloud Service-projekt. Alla andra värden ignoreras. När `11` anges används Oracle 11 och miljövariabeln `JAVA_HOME` ställs in på `/usr/lib/jvm/jdk-11.0.22`.
 
-## Miljövariabler {#environment-variables}
-
-### Standardmiljövariabler {#standard-environ-variables}
+## Miljövariabler - standard {#environment-variables}
 
 Du kan behöva ändra byggprocessen baserat på information om programmet eller pipeline.
 
-Om t.ex. JavaScript-miniatyrbilder under byggfasen utförs med ett verktyg som Glup, kan det finnas en önskan om att använda en annan miniminivå när du skapar för en utvecklingsmiljö i stället för att bygga för staging och produktion.
+Om JavaScript-miniatyrbilder till exempel inträffar vid byggtillfället med ett verktyg som Glup, kan olika miniatyrnivåer föredras för olika miljöer. En utvecklingsbygge kan använda en mindre miniminivå jämfört med staging och produktion.
 
 Som stöd för detta lägger Cloud Manager till dessa standardmiljövariabler i byggbehållaren för varje körning.
 
@@ -83,15 +81,15 @@ Som stöd för detta lägger Cloud Manager till dessa standardmiljövariabler i 
 | `ARTIFACTS_VERSION` | För ett stadium eller en produktionsprocess, den syntetiska version som genererats av Cloud Manager |
 | `CM_AEM_PRODUCT_VERSION` | Versionsversionen |
 
-### Rörledningsvariabler {#pipeline-variables}
+## Miljövariabler - pipeline {#pipeline-variables}
 
-Din byggprocess kan vara beroende av specifika konfigurationsvariabler som skulle vara olämpliga att placera i Git-databasen, eller så måste du variera dem mellan pipeline-körningar som använder samma gren.
+Din byggprocess kan kräva specifika konfigurationsvariabler som inte ska lagras i Git-databasen. Dessutom kan du behöva justera de här variablerna mellan pipeline-körningar som använder samma gren.
 
-Se även [Konfigurera pipeline-variabler](/help/implementing/cloud-manager/configuring-pipelines/pipeline-variables.md) för mer information
+Mer information finns även i [Konfigurera pipeline-variabler](/help/implementing/cloud-manager/configuring-pipelines/pipeline-variables.md).
 
 ## Installera ytterligare systempaket {#installing-additional-system-packages}
 
-Vissa byggen kräver att ytterligare systempaket installeras för att fungera helt. Ett bygge kan till exempel anropa ett Python- eller Ruby-skript och måste ha en lämplig språktolk installerad. Detta kan du göra genom att anropa [`exec-maven-plugin`](https://www.mojohaus.org/exec-maven-plugin/) i `pom.xml` för att anropa APT. Den här exekveringen bör normalt omslutas av en Cloud Manager-specifik Maven-profil. Det här exemplet installerar Python.
+Vissa byggen kräver ytterligare systempaket för att fungera helt. Ett bygge kan till exempel anropa ett Python- eller Ruby-skript och måste ha en lämplig språktolk installerad. Installationsprocessen kan hanteras genom att anropa [`exec-maven-plugin`](https://www.mojohaus.org/exec-maven-plugin/) i `pom.xml` för att anropa APT. Den här exekveringen bör normalt omslutas av en Cloud Manager-specifik Maven-profil. Det här exemplet installerar Python.
 
 ```xml
         <profile>
