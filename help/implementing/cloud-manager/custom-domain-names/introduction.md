@@ -5,9 +5,9 @@ exl-id: ed03bff9-dfcc-4dfe-a501-a7facd24aa7d
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 815bd75844ed164973c6acc07a6bf37a39d616b8
+source-git-commit: 41a67b0747ed665291631de4faa7fb7bb50aa9b9
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '704'
 ht-degree: 1%
 
 ---
@@ -61,7 +61,7 @@ Om du vill lägga till ett anpassat domännamn måste DNS-tjänsten och Cloud Ma
 
 >[!TIP]
 >
->Att konfigurera anpassade domännamn med AEM som en molntjänst är vanligtvis en enkel process. Ibland kan dock problem med domändelegering uppstå som kan ta 1-2 arbetsdagar att lösa. Därför rekommenderar vi att du installerar domänerna långt innan de publiceras. Mer information finns i dokumentet [Kontrollera domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).
+>Att konfigurera anpassade domännamn med AEM som en molntjänst är vanligtvis en enkel process. Ibland kan dock problem med domändelegering uppstå som kan ta 1-2 arbetsdagar att lösa. Därför rekommenderar vi att du installerar domänerna långt innan de blir aktiva. Mer information finns i dokumentet [Kontrollera domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).
 
 ## Begränsningar {#limitations}
 
