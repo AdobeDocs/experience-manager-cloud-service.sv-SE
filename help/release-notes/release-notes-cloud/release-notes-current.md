@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: a5159f2ff49b8e216087df4206c14a9ccd89f336
+source-git-commit: 08b23f093e4362a9885919a3e3d87bdcaada8876
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1480'
 ht-degree: 0%
 
 ---
@@ -143,6 +143,19 @@ De genererande AI-funktionerna är:
 * Ett problem med kategorins URL-format som inte fungerar som väntat i molninstansen har åtgärdats.
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
+
+### Konfiguration för att styra formuläröverföringar {#configuration-submissions}
+
+För att styra formulärinskickade formulär för Coral- eller Foundation-formulär på specifika platser har AEM introducerat en ny konfiguration: `com.adobe.granite.ui.components.FormRestrict`. Den här konfigurationen består av två fält:
+
+1. **Lägg till tillåtna sökvägar**: Anger sökvägarna där formuläråtgärder tillåts.
+1. **Begränsa beteende**: Anger beteendet för begränsade sökvägar (sökvägar som inte ingår i tillåtelselista). Du kan välja mellan två alternativ:
+   * **Popup** (standard): Visar ett popup-meddelande.
+   * **Förhindra**:Blockerar formulärskickning.
+
+>[!NOTE]
+>
+>Den här konfigurationen stöds inte för alla Coral- eller Foundation-formulär som finns under `/apps`, `/libs`, `/mnt/overlay` och `/mnt/override`.
 
 ### Självbetjänad loggvidarebefordran med alternativet Avancerat nätverk {#log-forwarding}
 
