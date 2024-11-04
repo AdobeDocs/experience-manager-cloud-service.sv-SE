@@ -4,9 +4,9 @@ description: Läs om hur du i Universell redigerare kan redigera vad du vill - s
 exl-id: d4fc2384-a0f5-4a6f-9572-62749786be4c
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: a77bff14b34f1e433ba185b19f0f0d61728b7c7a
+source-git-commit: 54d1cdec9b30c08f28d4c9b2fbd97446f3ff05b3
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '1001'
 ht-degree: 0%
 
 ---
@@ -86,11 +86,13 @@ En marknadsförare vill skapa innehåll som är skräddarsytt efter layouten i e
 
 När du utforskar den universella redigeraren och fortsätter implementera den i dina egna projekt bör du tänka på följande begränsningar.
 
-* Högst 25 AEM (innehållsfragment, sidor, Experience Fragments, Assets osv.) ska vara referenser som instrumentering på en enda sida.
+* Högst 25 AEM (innehållsfragment, sidor, Experience Fragments, Assets osv.) får vara referenser som instrument på en enda sida.
 * AEM as a Cloud Service är den enda AEM som stöds.
+   * [Stöd för AEM 6.5 ingår i ett program för tidig anpassning.](/help/release-notes/universal-editor/current.md#early-adoption)
 * AEM as a Cloud Service version `2023.8.13099` eller senare krävs.
 * Innehållsförfattare måste ha sina egna Experience Cloud-konton.
-* Chrome och Edge stöds
+* Som en del av AEM har Universal Editor stöd för samma webbläsare som AEM.
+   * Mobilversioner av dessa webbläsare stöds inte.
 
 {{ue-ip-allow-lists}}
 

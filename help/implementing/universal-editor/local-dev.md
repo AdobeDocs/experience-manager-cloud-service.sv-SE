@@ -1,20 +1,20 @@
 ---
-title: Local AEM Development with the Universal Editor
-description: Läs om hur den universella redigeraren stöder redigering i lokala AEM för utvecklingsändamål.
+title: Kör din egen universella redigeringstjänst
+description: Lär dig hur du kan köra din egen Universal Editor-tjänst för lokal utveckling eller som en del av din egen infrastruktur.
 exl-id: ba1bf015-7768-4129-8372-adfb86e5a120
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 5a6795056090908652a72730939024e974a9a697
+source-git-commit: 54d1cdec9b30c08f28d4c9b2fbd97446f3ff05b3
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '894'
 ht-degree: 0%
 
 ---
 
 
-# Local AEM Development with the Universal Editor {#local-dev-ue}
+# Kör din egen universella redigeringstjänst {#local-ue-service}
 
-Läs om hur den universella redigeraren stöder redigering i lokala AEM för utvecklingsändamål.
+Lär dig hur du kan köra din egen Universal Editor-tjänst för lokal utveckling eller som en del av din egen infrastruktur.
 
 ## Ökning {#overview}
 
@@ -24,7 +24,16 @@ Universal Editor-tjänsten är den som binder Universal Editor och serverdelssys
 * När du utvecklar med en lokal AEM SDK går det inte att komma åt Adobe universella redigeringstjänst från Internet.
 * Om din AEM har IP-begränsningar och Adobe Universal Editor-tjänsten inte har ett definierat IP-intervall kan du själv vara värd för den.
 
-I det här dokumentet förklaras hur du kör AEM i HTTPS tillsammans med en lokal kopia av Universal Editor-tjänsten så att du kan utveckla lokalt på AEM för användning med Universal Editor.
+## Användningsexempel {#use-cases}
+
+Din egen kopia av Universal Editor-tjänsten är användbar om du vill:
+
+* Utveckla lokalt på AEM för användning med den universella redigeraren.
+* Kör din egen universella redigeringstjänst som en del av din egen infrastruktur, oberoende av Adobe universella redigeringstjänst.
+
+Båda användningsfallen stöds. I det här dokumentet förklaras hur du kör AEM i HTTPS tillsammans med en lokal kopia av den universella redigeringstjänsten.
+
+Om du vill köra din egen Universal Editor-tjänst som en del av din egen infrastruktur följer du samma steg som det lokala utvecklingsexemplet.
 
 ## Konfigurera AEM som ska köras på HTTPS {#aem-https}
 

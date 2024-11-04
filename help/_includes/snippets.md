@@ -1,7 +1,7 @@
 ---
-source-git-commit: 500e1b78fb9688601848fc17f312fc23be83bcb0
+source-git-commit: 54d1cdec9b30c08f28d4c9b2fbd97446f3ff05b3
 workflow-type: tm+mt
-source-wordcount: '1202'
+source-wordcount: '1274'
 ht-degree: 0%
 
 ---
@@ -51,8 +51,9 @@ ht-degree: 0%
 * [Anropa ett AEM](/help/forms/configure-submit-action-workflow.md)
 * [Skicka till Power Automate](/help/forms/forms-microsoft-power-automate-integration.md)
 * [Skicka till Workfront Fusion](/help/forms/submit-adaptive-form-to-workfront-fusion.md)
-* [Ansluta anpassat formulär till Salesforce-program](/help/forms/aem-forms-salesforce-integration.md)
+* [Ansluta anpassat formulär till Salesforce](/help/forms/aem-forms-salesforce-integration.md)
 * [Ansluta ett adaptivt formulär till Microsoft](/help/forms/ms-dynamics-odata-configuration.md)
+* [Skapa anpassad skickaåtgärd](/help/forms/custom-submit-action-for-adaptive-forms-based-on-core-components.md)
 
 ## Se även {#see-more-forms-eds}
 
@@ -111,6 +112,12 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
    <td>Alternativet <b>Set Value of </b> stöder inte egenskapen <b>Service output</b> för anrop av API:er i regelredigeraren.
    </td>
    </tr>
+   <tr>
+   <td>Navigera mellan panelerna</td>
+   <td> Komponenterna <b>Nästa</b> och <b>Föregående knapp</b> finns för att navigera mellan panelerna. En navigeringsknapp som placeras i behållaren fungerar på dess underordnade element</td>
+   <td> Regeln <b>Navigering i panelen</b> är tillgänglig i regelredigeraren, vilket gör att användare kan skapa regler för navigering mellan panelernas underordnade objekt.
+   </td>
+   </tr>
    </tr>
    </tr>
   </tbody>
@@ -126,6 +133,7 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 * [Skillnader i olika utgåvor av regelredigeraren](/help/forms/rule-editor-core-components-difference-tables.md)
 * [Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter](/help/forms/create-and-use-custom-functions.md)
 * [Skapa en anpassad funktion för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/custom-function-core-component-create-function.md)
+* [Omfångsobjekt i anpassade funktioner](/help/forms/custom-function-core-component-scope-function.md)
 * [Exempel på utveckling och användning av en anpassad funktion](/help/forms/custom-function-core-components-use-cases.md)
 
 
@@ -170,7 +178,10 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 >
 >Den universella redigeraren är inte kompatibel med [IP tillåtelselista.](/help/implementing/cloud-manager/ip-allow-lists/introduction.md)
 >
->Om du vill använda Universal Editor får IP Tillåtelselista inte vara aktiverat.
+>Om du vill använda den universella redigeraren måste du antingen:
+>
+>* IP-Tillåtelselista är inte aktiverat.
+>* [Kör din egen instans av Universal Editor-tjänsten.](/help/implementing/universal-editor/local-dev.md)
 
 ## Arbeta med Dynamic Media {#work-with-dynamic-media}
 
