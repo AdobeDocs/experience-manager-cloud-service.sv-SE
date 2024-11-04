@@ -3,17 +3,14 @@ title: Pipeline-fria URL-omdirigeringar
 description: Lär dig hur du deklarerar 301- eller 302-omdirigeringar utan åtkomst till Git- eller Cloud Manager-pipelines.
 feature: Dispatcher
 role: Admin
-source-git-commit: 567c75f456f609dbc254753b439151d0f4100bc0
+source-git-commit: 36b7d72f24bd60ad94762c9c9937105bea6e31b6
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '644'
 ht-degree: 0%
 
 ---
 
 # Pipeline-fria URL-omdirigeringar {#pipeline-free-redirects}
-
->[!NOTE]
->Den här funktionen har inte släppts ännu.
 
 Av olika anledningar skriver organisationer om URL:er på ett sätt som orsakar en 301-omdirigering (eller 302), vilket innebär att webbläsaren omdirigeras till en annan sida.
 
@@ -60,7 +57,7 @@ maps:
   path: /content/dam/redirectmaps/mysite-redirectmap.txt
 ```
 
-I en cachekonfigurationsfil som `rewrites/rewrite.rules` eller `<yourfile>.vhost` måste du sedan konfigurera den mappningsfil som namnegenskapen refererar till ( `my.map` i exemplet ovan).
+I en Apache-konfigurationsfil som `rewrites/rewrite.rules` eller `<yourfile>.vhost` måste du sedan konfigurera den mappningsfil som namnegenskapen refererar till (`my.map` i exemplet ovan).
 
 Direktivet `RewriteMap` ska ange att data lagras i ett DBM-filformat (Database Manager) med formatet `sdbm` (simple DBM).
 
@@ -78,6 +75,6 @@ RewriteRule ^(.*)$ ${map.foo:$1|/} [L,R=301]
 
 Tänk på följande:
 
-* När du läser in en omskrivningskarta startar Apache som standard utan att vänta på att de fullständiga mappningsfilerna ska läsas in, vilket kan leda till tillfälliga inkonsekvenser tills de fullständiga mappningarna läses in. Den här inställningen kan ändras så att Apache väntar på att det fullständiga kartinnehållet ska läsas in, men det tar längre tid innan Apache startar. Om du vill ändra det här beteendet så att Apache väntar lägger du till `wait:true` i filen `managed-rewrite-maps.yaml`.
-* Om du vill ändra frekvensen mellan inläsningar lägger du till `ttl: <integer>` i filen `managed-rewrite-maps.yaml`. Till exempel `ttl: 120`.
+* När du läser in en omskrivningskarta startar Apache som standard utan att vänta på att de fullständiga mappningsfilerna ska läsas in, vilket kan leda till tillfälliga inkonsekvenser tills de fullständiga mappningarna läses in. Den här inställningen kan ändras så att Apache väntar på att det fullständiga kartinnehållet ska läsas in, men det tar längre tid för Apache att starta. Om du vill ändra detta så att Apache väntar lägger du till `wait:true` i filen `managed-rewrite-maps.yaml`.
+* Om du vill ändra frekvensen mellan inläsningar lägger du till `ttl: <integer>` i filen `managed-rewrite-maps.yaml`. Till exempel: `ttl: 120`.
 * Apache har en längdgräns på 1 024 för RewriteMap-enstaka poster.
