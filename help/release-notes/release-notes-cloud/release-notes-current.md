@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 08b23f093e4362a9885919a3e3d87bdcaada8876
+source-git-commit: 9bb2d38feea2690bc112611d429dad22e7bcd278
 workflow-type: tm+mt
-source-wordcount: '1480'
+source-wordcount: '1514'
 ht-degree: 0%
 
 ---
@@ -83,19 +83,19 @@ Rapporterna kan nu genereras automatiskt i Assets View enligt ett återkommande 
 
 **Hantering av digitala rättigheter för licensierade resurser**
 
-Organisationer kan nu öka licensefterlevnaden och minimera risken för att dela mediefiler med licensieringsvillkor genom att utnyttja DRM för licensierade mediefiler för användare av Content Hub, vilket kräver att användare granskar och godkänner licensvillkoren innan de kan börja hämta licensierade mediefiler.
+Organisationer kan nu öka licensefterlevnaden och minimera risken för att dela mediefiler med licensieringsvillkor genom att utnyttja DRM för licensierade mediefiler för användare av Content Hub, vilket kräver att användare granskar och godkänner licensvillkoren innan de kan börja hämta licensierade mediefiler. Mer information finns i [Hantera licensierade mediefiler på Content Hub](/help/assets/manage-licensed-assets-on-content-hub.md).
 
 ![download-multiple-license](/help/assets/assets/download-multiple-license.png)
 
 **Resurskortets metadatakonfiguration**
 
-Content Hub tillåter nu att du konfigurerar de viktigaste metadatafälten som du behöver visa på resurskortet till högst 6 fält.
+Content Hub tillåter nu att du konfigurerar de viktigaste metadatafälten som du behöver visa på resurskortet till högst 6 fält. Mer information finns i avsnittet Resurskort i [Konfigurera Content Hub](/help/assets/configure-content-hub-ui-options.md#asset-card).
 
 ![nyckelmetadata på resurskortet](/help/assets/assets/asset-card-key-metadata.png)
 
 **Konfigurera synlighet och hämtning av utgångna resurser**
 
-Administratörer kan nu kontrollera om utgångna resurser behöver vara synliga på Content Hub. Om de utgångna resurserna blir synliga kan de även definiera om användare kan hämta dem.
+Administratörer kan nu kontrollera om utgångna resurser behöver vara synliga på Content Hub. Om de utgångna resurserna blir synliga kan de även definiera om användare kan hämta dem. Mer information finns i avsnittet Utgånget Assets i [Konfigurera Content Hub](/help/assets/configure-content-hub-ui-options.md#expired-assets-content-hub).
 
 ![Utgångna resurser på Content Hub](/help/assets/assets/expired-assets-content-hub.png)
 
