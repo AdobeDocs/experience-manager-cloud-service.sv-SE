@@ -4,11 +4,10 @@ description: Förbättra säkerheten med Google reCAPTCHA-tjänsten utan problem
 topic-tags: Adaptive Forms, author
 keywords: Google reCAPTCHA-tjänst, Adaptiv Forms, CAPTCHA-utmaning, startalternativ, kärnkomponenter, säkerhet för inskickande av formulär, skydd mot skräppost
 feature: Adaptive Forms, Core Components
-exl-id: d116f979-efb6-4fac-8202-89afd1037b2c
 role: User, Developer
-source-git-commit: bba5e5d283da616baa57b788181af73d59d86ee3
+source-git-commit: ec2f2a2951689ef20434ea6f531089502299bcb5
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '1348'
 ht-degree: 0%
 
 ---
@@ -28,9 +27,48 @@ AEM Forms as a Cloud Service stöder följande CAPTCHA-lösningar:
 * [hCaptcha](/help/forms/integrate-adaptive-forms-hcaptcha-core-components.md)
 
 
-## Koppla samman er AEM Forms-miljö med reCAPTCHA-tjänsten från Google {#connect-your-forms-environment-with-recaptcha-service-by-google}
+## Koppla samman dina AEM Forms Core-komponenter med reCAPTCHA-tjänsten från Google {#connect-your-forms-environment-with-recaptcha-service-by-google}
 
-Formulärförfattare kan använda tjänsten reCAPTCHA från Google för att implementera reCAPTCHA i Adaptiv Forms. Den erbjuder avancerade CAPTCHA-funktioner för att skydda er webbplats. Mer information om hur reCAPTCHA fungerar finns i [Google reCAPTCHA](https://developers.google.com/recaptcha/). [!DNL AEM Forms] som [!DNL Cloud Service] stöder Google reCAPTCHA v2 i Adaptiv Forms. Du kan använda den för att presentera en CAPTCHA-utmaning när formulär skickas. Koppla samman AEM Forms-miljön med reCAPTCHA-tjänsten från Google
+Formulärförfattare kan använda tjänsten reCAPTCHA från Google för att implementera reCAPTCHA i Adaptiv Forms. Den erbjuder avancerade CAPTCHA-funktioner för att skydda er webbplats. Mer information om hur reCAPTCHA fungerar finns i [Google reCAPTCHA](https://developers.google.com/recaptcha/). Du använder den för att presentera en CAPTCHA-utmaning när formulär skickas in.[!DNL AEM Forms] som [!DNL Cloud Service] har stöd för Google reCAPTCHA v2 och reCAPTCHA Enterprise. Andra versioner stöds inte. Observera också att reCAPTCHA i Adaptive Forms inte stöds i offlineläge i AEM Forms-appen.
+
+Beroende på dina behov kan du konfigurera tjänsten reCAPTCHA för att aktivera:
+
+* [reCAPTCHA Enterprise](#steps-to-implement-reCAPTCHA-enterprise-in-forms-core-components)
+* [reCAPTCHA v2](#steps-to-implement-reCAPTCHA-v2-in-forms)
+
+### Konfigurera reCAPTCHA Enterprise  {#steps-to-implement-reCAPTCHA-enterprise-in-forms-core-components}
+
+1. Skapa eller välj ett [Google Cloud-projekt](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin) och aktivera [reCAPTCHA Enterprise API](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#enable-the-recaptcha-enterprise-api).
+1. Hämta [projekt-ID](https://support.google.com/googleapi/answer/7014113?hl=en#:~:text=To%20locate%20your%20project%20ID,a%20member%20of%20are%20displayed) och skapa en [API-nyckel](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#create_an_api_key) och en [webbplatsnyckel för webbplatser](https://cloud.google.com/recaptcha-enterprise/docs/create-key#create-key).
+1. Skapa konfigurationsbehållare för molntjänster.
+
+   1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**.
+   1. Välj en mapp eller skapa en mapp och aktivera mappen för molnkonfigurationer med följande steg:
+      1. Markera mappen i Configuration Browser och välj **[!UICONTROL Properties]**.
+      1. Aktivera **[!UICONTROL Cloud Configurations]** i dialogrutan Konfiguration.
+      1. Välj **[!UICONTROL Save & Close]** om du vill spara konfigurationen och stänga dialogrutan.
+
+1. Konfigurera molntjänsten för [!DNL reCAPTCHA Enterprise].
+
+   1. Gå till ![tools-1](assets/tools-1.png) > **[!UICONTROL Cloud Services]** på författarinstansen av Experience Manager.
+   1. Välj **[!UICONTROL reCAPTCHA]**. Sidan Konfigurationer öppnas. Välj den konfigurationsbehållare som du skapade och välj **[!UICONTROL Create]**.
+   1. Välj version som [!DNL reCAPTCHA Enterprise] och ange namn, projekt-ID, platsnyckel och API-nyckel (hämtas i steg 2) för reCAPTCHA Enterprise-tjänsten.
+   1. Välj nyckeltyp. Nyckeltypen ska vara densamma som den webbplatsnyckel som du konfigurerade i [Google Cloud-projektet](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin), till exempel **Checkbox-webbplatsnyckel** eller **Score-baserad webbplatsnyckel**.
+   1. Ange ett [tröskelvärde i intervallet 0 till 1](https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment#interpret_scores). Poängvärden som är större än eller lika med tröskelvärdena identifierar mänsklig interaktion, vilket i annat fall omfattar båda interaktioner.
+   1. Välj **[!UICONTROL Create]** om du vill skapa molntjänstkonfigurationen.
+
+<!--
+    1. In the Edit Component dialog, specify the name, project ID, site key, API key (obtained in steps 2 and 3), select the key type, and enter the threshold score. Select **[!UICONTROL Save Settings]** and then select **[!UICONTROL OK]** to complete the configuration.
+-->
+
+När du har aktiverat tjänsten reCAPTCHA Enterprise kan den användas i anpassningsbara formulär. Se [använda CAPTCHA i adaptiva formulär](#using-reCAPTCHA).
+
+<!--
+![reCAPTCHA Enterprise](/help/forms/assets/recaptcha1-enterprise.png)
+-->
+
+
+### Konfigurera Google reCAPTCHA v2 {#steps-to-implement-reCAPTCHA-v2-in-forms}
 
 1. Hämta [reCAPTCHA API-nyckelpar](https://www.google.com/recaptcha/admin) från Google. Den innehåller en **webbplatsnyckel** och en **hemlig nyckel**.
 
@@ -58,6 +96,9 @@ Formulärförfattare kan använda tjänsten reCAPTCHA från Google för att impl
 
    När reCAPTCHA-tjänsten har konfigurerats kan den användas i ett adaptivt format. Mer information finns i [Använda Google reCAPTCHA i ett adaptivt formulär](#using-reCAPTCHA).
 
+
+Använd Google reCAPTCHA i anpassningsbara formulär
+
 ## Använd Google reCAPTCHA i anpassad form {#using-reCAPTCHA}
 
 Så här använder du reCAPTCHA i Adaptive Forms:
@@ -73,19 +114,37 @@ Så här använder du reCAPTCHA i Adaptive Forms:
 1. Välj en anpassad Forms och välj **[!UICONTROL Edit]**. Det adaptiva formuläret öppnas i Adaptiv Forms Editor.
 1. Dra komponenten **[!UICONTROL Adaptive Form reCAPTCHA]** från komponentwebbläsaren till det adaptiva formuläret.
 
-   Google reCAPTCHA-validering är tidskänslig och upphör att gälla om cirka ett par minuter. Därför rekommenderar Adobe att du placerar komponenten **[!UICONTROL Adaptive Form reCAPTCHA]** precis före knappen **[!UICONTROL Submit]**.
+   >[!NOTE]
+   > * Google reCAPTCHA-validering är tidskänslig och upphör att gälla om cirka ett par minuter. Därför rekommenderar Adobe att du placerar komponenten **[!UICONTROL Adaptive Form reCAPTCHA]** precis före knappen **[!UICONTROL Submit]**.
 
 1. Markera **[!UICONTROL Adaptive Form reCAPTCHA]**-komponenten och välj egenskapsikonen ![Egenskaper](assets/configure-icon.svg) . Dialogrutan Egenskaper öppnas. Ange följande obligatoriska egenskaper:
    * **[!UICONTROL Name]:** Du kan enkelt identifiera en formulärkomponent med dess unika namn både i formuläret och i regelredigeraren, men namnet får inte innehålla blanksteg eller specialtecken.
-   * **[!UICONTROL CAPTCHA Configuration]:** Välj en molnkonfiguration som konfigurerats för att presentera Google reCAPTCHA-dialogrutan för formuläret. Du kan ha flera molnkonfigurationer i din miljö för liknande ändamål. Välj tjänsten noggrant. Om ingen tjänst visas läser du [Anslut AEM Forms-miljön med reCAPTCHA-tjänsten från Google](#connect-your-forms-environment-with-recaptcha-service-by-google) för att lära dig hur du skapar en Cloud Service som ansluter AEM Forms-miljön till reCAPTCHA-tjänsten från Google.
+   * **[!UICONTROL Title]:** Ange en titel för CAPTCHA-widgeten. Standardvärdet är **Captcha**. Välj **Dölj titel** om du inte vill att titeln ska visas. Välj **Tillåt RTF för titel** om du vill redigera titeln i RTF-format. Du kan också markera titeln som **Obundet formulärelement**.
+   * **[!UICONTROL CAPTCHA Configuration]:** Välj en konfiguration i listrutan Inställningar för **reCAPTCHA Enterprise** eller **reCAPTCHA v2** för att visa Google reCAPTCHA-dialogrutan för formuläret:
+      1. Om du väljer versionen **reCAPTCHA Enterprise** kan nyckeltypen vara **kryssruta** eller **poäng baserad**, den baseras på ditt val när du konfigurerar [webbplatsnyckel för webbplatser](https://cloud.google.com/recaptcha-enterprise/docs/create-key#create-key):
+         >[!NOTE]
+         >
+         >* I molnkonfigurationen med **nyckeltyp** som **kryssruta** visas det anpassade felmeddelandet som ett infogat meddelande om captcha-valideringen misslyckas.
+         >* I molnkonfigurationen med **nyckeltyp** som **poäng baserad** visas det anpassade felmeddelandet som ett popup-meddelande om captcha-valideringen misslyckas.
+      1. Du kan välja storlek som **[!UICONTROL Normal]** och **[!UICONTROL Compact]**.
+
+     >[!NOTE]
+     >* Du kan ha flera molnkonfigurationer i din miljö för liknande ändamål. Välj tjänsten noggrant. Om ingen tjänst visas läser du [Anslut AEM Forms-miljön med reCAPTCHA-tjänsten från Google](#connect-your-forms-environment-with-recaptcha-service-by-google) för att lära dig hur du skapar en Cloud Service som ansluter AEM Forms-miljön till reCAPTCHA-tjänsten från Google.
+
    * **Captcha-storlek:** Du kan välja visningsstorlek för Google reCAPTCHA-utmaningsdialogrutan. Använd alternativet **[!UICONTROL Compact]** om du vill visa en liten storlek och alternativet **[!UICONTROL Normal]** om du vill visa en relativt stor Google reCAPTCHA-utmaningsdialogruta.
+Om du väljer version **reCAPTCHA v2**:
+      1. Du kan välja storleken som **[!UICONTROL Normal]** eller **[!UICONTROL Compact]** för widgeten reCAPTCHA.
+      1. Du kan välja alternativet **[!UICONTROL Invisible]** om du bara vill visa CAPTCHA-utmaningen om en misstänkt aktivitet inträffar.
+
+   Tjänsten reCAPTCHA är aktiverad i det adaptiva formuläret. Du kan förhandsgranska formuläret och se hur CAPTCHA fungerar. Märket **protected by reCAPTCHA**, som visas nedan, visas i skyddade formulär.
+
+   ![Google skyddat av reCAPTCHA-märke](/help/forms/assets/google-recaptcha-v2.png)
 
 1. Välj **[!UICONTROL Done]**.
 
    Nu visas **protected by reCAPTCHA** i ditt adaptiva formulär. Den visas på alla Adaptive Forms som är konfigurerade att använda tjänsten Google reCAPTCHA.
 
    Nu är det bara berättigade formulär, i vilka den som fyller i formuläret kan ta bort den utmaning som Google reCAPTCHA-tjänsten utgör, som kan skickas in.
-   ![Google skyddat av reCAPTCHA-märke](/help/forms/assets/google-recaptcha-v2.png)
 
 <!--
 ### Show or hide CAPTCHA component based on rules {#show-hide-captcha}
