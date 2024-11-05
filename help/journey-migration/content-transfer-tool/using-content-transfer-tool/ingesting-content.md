@@ -4,9 +4,9 @@ description: Lär dig hur du använder Cloud Acceleration Manager för att impor
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
 feature: Migration
 role: Admin
-source-git-commit: ec80660d45c69363690b653dd54634c74c3c9907
+source-git-commit: 1add389e1bba181757229ca73252f1fcaa9d049a
 workflow-type: tm+mt
-source-wordcount: '3137'
+source-wordcount: '3187'
 ht-degree: 1%
 
 ---
@@ -52,6 +52,7 @@ Följ stegen nedan för att importera din migreringsuppsättning med Cloud Accel
    * **Rensa:** Välj värdet `Wipe`
       * Alternativet **Rensa** anger målets startpunkt för importen. Om **Rensa** är aktiverat återställs målet inklusive allt innehåll till den version av AEM som är angiven i Cloud Manager. Om det inte är aktiverat behåller målet sitt aktuella innehåll som startpunkt.
       * Det här alternativet påverkar **INTE** hur innehållsintaget kommer att utföras. Inmatningen använder alltid en strategi för innehållsersättning och _inte_ en strategi för innehållssammanfogning, så i både **Rensa** och **Ej rensad** kommer inmatningen av en migreringsuppsättning att skriva över innehåll i samma sökväg på målet. Om migreringsuppsättningen till exempel innehåller `/content/page1` och målet redan innehåller `/content/page1/product1`, tar det bort hela `page1`-sökvägen och dess underordnade sidor, inklusive `product1`, och ersätter den med innehållet i migreringsuppsättningen. Detta innebär att noggrann planering måste utföras när du utför ett **icke-rensat**-inlägg till ett mål som innehåller innehåll som ska behållas.
+      * Icke-rensningsfrågor är särskilt utformade för att användas i det övre intaget. Dessa förslag är avsedda att innehålla en stegvis mängd nytt innehåll som har ändrats sedan det senaste intaget i en befintlig migreringsuppsättning. Genomgående av icke-rensningsfrågor utanför detta användningsfall kan leda till mycket lång intag.
 
    >[!IMPORTANT]
    > Om inställningen **Rensa** är aktiverad för den aktuella inmatningen återställs hela den befintliga databasen, inklusive användarbehörigheterna för målinstansen av Cloud Servicen. Den här återställningen gäller även för en admin-användare som har lagts till i gruppen **administratörer** och den användaren måste läggas till i gruppen Administratörer igen för att kunna starta ett inlägg.
