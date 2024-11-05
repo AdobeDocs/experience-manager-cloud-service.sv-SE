@@ -4,9 +4,9 @@ description: Aktuell underhållsversionsinformation för  [!DNL Adobe Experience
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 9278ec9bb5bccd7b40cd65a120f296faba454b9c
+source-git-commit: c638039ea957f5f7ae0dc64f49c3ace4381cb040
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '583'
 ht-degree: 1%
 
 ---
@@ -16,61 +16,58 @@ ht-degree: 1%
 
 I följande avsnitt beskrivs de tekniska versionsinformationen för den aktuella underhållsutgåvan av Experience Manager as a Cloud Service.
 
-## Utgåva 18311 {#18311}
+## Utgåva 18459 {#18459}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 18311, som offentliggjordes den 22 oktober 2024. Den tidigare underhållsversionen var version 18175.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 18459, som offentliggjordes den 5 november 2024. Den tidigare underhållsversionen var version 18311.
 
-Funktionsaktiveringen i 2024.10.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2024.11.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
-### Förbättringar {#enhancements-18311}
+### Förbättringar {#enhancements-18459}
 
-* ASSETS-41820: Indexeringsförbättringar för bearbetning av watchdog.
-* ASSETS-43720: Funktionsförbättringar för bearbetning av övervakningsenhet.
-* ASSETS-42554: Prestandaförbättringar för stora mappar.
-* SKYOPS-77603: Hantering av omdirigeringar av företagsanvändare.
+* CQ-4357471: Lägg till stöd för i18n-ordlisteöversättning i AEMaaCS.
+* SITES-23591: Content Fragments: Content fragment upgrade for UUID support.
+* SITES-25440: Content Fragments: CFM Search API för att visa replikeringsstatus.
+* SITES-24369: Content Fragments: Förbättringar av OpenAPI-dokumentation.
+* SITES-25478: Content Fragments: Add back-end support for external asset references.
+* SITES-26119: Content Fragments: Add support of external asset references in reference type.
+* SITES-21199: Edge Delivery med Universal Editor: Lägg till stöd för mallar som skapats från sidor.
+* SITES-20311: Edge Delivery med Universal Editor: Lägg till stöd för import av CSV-filer till kalkylblad.
+* SITES-24821: Edge Delivery med Universal Editor: Gör aem.page / aem.live till standard för integrering med Edge Delivery.
 
-### Åtgärdade problem {#fixed-issues-18311}
+### Åtgärdade problem {#fixed-issues-18459}
 
-* ASSETS-37534: Ändringar i sökningen visar inte den egenskap som används för godkännandemålet.
-* ASSETS-38322: Ta bort publiceringsvillkorsproviderkonfiguration Ta bort publiceringshändelsefunktion.
-* ASSETS-40482: Problem med tillgänglighet vid uppspelning/paus och knappen Stäng av/slå på i Scene7 videospelare.
-* ASSETS-40593: Felsidan visas när du klickar på knappen &quot;Egenskaper&quot; i Assets > Filer.
-* ASSETS-40598: Synkronisera smarta beskärningar när osynkroniserad resurs flyttas till en mapp som är aktiverad för synkronisering.
-* ASSETS-40743: Problem med att utlösa dialogrutan Ersätt resurs när vissa tecken finns i filnamnet.
-* ASSETS-40825: Assets Search Facets försvinner när sökformuläret har redigerats.
-* ASSETS-41007: Borttagning av AEM lämnar ibland Assets vid leveransen som föräldralöst.
-* ASSETS-41172: Specialtecken för Dynamic Media-mallar tillåts inte i namn.
-* ASSETS-41896: Assets som omnämns i cq:discarded property on the folder ska INTE publiceras till Brand Portal.
-* ASSETS-42067: Dynamic Media-mallar - Nedladdning ger fel.
-* ASSETS-42070: Dynamic Media-mallar - användare som inte är administratörer bör ha behörighet att skapa/redigera mallar.
-* ASSETS-42344: Ansluten Assets-synkronisering är frånkopplad - Koppla upp och få kundråd.
-* ASSETS-42620: Problem med förhandsvisningsalternativet för resursversioner - visar en tom förhandsvisning när vi öppnar resursen.
-* ASSETS-42701: Web Optimized Image Delivery and Cropping Issue.
-* ASSETS-42966: Async Barcade kan tas bort om flera jobb delar samma sökväg.
-* ASSETS-43072: Dynamic Media-mallar - Sökningar efter mallreferenser i en ogiltig referens.
-* ASSETS-43212: Internationaliseringsproblem i schemaredigeraren för metadata.
-* ASSETS-43202: Korrigeringar för att välja anteckningar att skriva ut från tidslinjen.
-* ASSETS-43502: Namnet på AEM befintliga bildförinställningen visas inte på redigeringssidan.
-* ASSETS-43538: Jobbet Async copy assets använder en felaktig egenskap för källsökvägen.
-* ASSETS-43798: Kontrollera målsökvägen innan du kopierar resurser.
-* ASSETS-43945: Öka fördröjningen för nya försök till 20 min för jobbkön för asynkrona resurser.
-* ASSETS-44025: Jobbet för asynkron borttagning av resurser misslyckas när enskilda resurser väljs.
-* SITES-26128: Undantag för klassskiftning i CreateLiveCopyStep.
-* SCRNS-4551: [SG Pools] Screens-kanal som innehåller videokomponenten visar &quot;General Page Error&quot; i webbläsarförhandsvisning och spelare
+* CQ-4358730: CQPagePreviewGenerator misslyckas när det finns fler än 10 nycklar att översätta.
+* FORMS-14978: Aktivera sidinläsning för ett Core Component-baserat formulär för temaredigeraren.
+* FORMS-16596: Hjälpmedelsproblem: Inaktiverade knappar som inte känns igen av Reader på skärmen.
+* SITES-10575: MSM: Blueprint Bloomfilter Loader försöker läsa in >100 000 rader.
+* SITES-20755: Innehållsfragment: Resursreferens med UUID-uppdatering visar inte miniatyrbilden.
+* SITES-26253: Content Fragments: UUID migration: Change sling job topic to be generic.
+* SITES-21338: Content Fragments: referencedBy endpoint does not return the correct page reference.
+* SITES-24421: Innehållsfragment: Redigera CF-slutpunkt fungerar inte för CF som hämtats via GET CF.
+* SITES-25461: Innehållsfragment: Filtrera efter modell i sökning efter CF:er ska vara skiftlägeskänsliga.
+* SITES-25471: Content Fragments: Fix validation of global models in the ModelValidatorServlet.
+* SITES-25795: Content Fragments: CF Model API misslyckas när det inte finns någon cq-datumuppsättning.
+* SITES-25817: Content Fragments: Enhance PromoteLaunch: update last campaign for CF Launches.
+* SITES-26030: Content Fragments: Endpoint /referencesTree returnerar inte det huvud som behövs.
+* SITES-26031: Innehållsfragment: Replikeringsstatusen returnerades inte för CFM-sökslutpunkten.
+* SITES-26213: Content Fragments: Unpublish content fragments should only validate published references.
+* SITES-26226: Content Fragments: Start workflow issue when none of the given paths are usable.
+* SITES-26238: Innehållsfragment: Resursreferenserna som returneras av API:t har en annan ordning än ordningen från JCR.
+* SITES-25456: Händelser: När du flyttar en sida genereras en sidborttagen händelse förutom händelsen för sidflyttning.
+* SITES-25658: Events: The tier and sourceUrl are not populated in the page content state events.
+* SITES-6497: Startar: Det går inte att skapa sidan vid start.
+* SITES-25393: Edge Delivery med Universal Editor: Textnoder förloras vid återgivning av formaterad RTF med ett enda stycke.
+* SITES-24643: Edge Delivery med Universal Editor: Metadataattribut för OpenGraph och twitter fungerar inte i sidmetadatamodell.
 
-### Kända fel {#known-issues-18311}
+### Kända fel {#known-issues-18459}
 
-* FORMS-15818: Komponentbeskrivningsposten `OSGI-INF/com.adobe.aemfd.docmanager.impl.*.xml` hittade inte programsatser i serverloggar. Det här är ofarliga loggsatser.
+Ingen.
 
-### Föråldrade funktioner och API:er {#deprecated-18311}
+### Föråldrade funktioner och API:er {#deprecated-18459}
 
 Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs i dokumentet [Inaktuella och Borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
 
-### Säkerhetskorrigeringar {#security-18311}
-
-AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan för din plattform. Denna underhållsrelease åtgärdar tre identifierade sårbarheter, vilket stärker vårt engagemang för robust systemskydd.
-
-### Inbäddade tekniker {#embedded-tech-18311}
+### Inbäddade tekniker {#embedded-tech-18459}
 
 | Teknik | Version | Länk |
 |---|---|---|
