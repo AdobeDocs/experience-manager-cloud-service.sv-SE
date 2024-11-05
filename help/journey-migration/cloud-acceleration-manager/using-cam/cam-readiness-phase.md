@@ -4,10 +4,10 @@ description: På den här sidan finns en översikt över beredskapsfasen i Cloud
 exl-id: 2583985b-0358-433c-9d31-38e2c60dc3dc
 feature: Migration
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: f86d681c8f8cb6d602058ef30b648c53ff7bad69
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 2%
+source-wordcount: '1084'
+ht-degree: 0%
 
 ---
 
@@ -24,11 +24,11 @@ Följ stegen nedan för att navigera till beredskapsfasen:
 
 1. Klicka på ditt projektkort.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-landing1.png)
+   ![Projektkort](/help/journey-migration/cloud-acceleration-manager/assets/cam-landing1.png)
 
 1. Navigera till avsnittet **Beredskap** på projektstartsidan, vilket visas i figuren nedan.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/readiness-1.png)
+   ![Beredskap](/help/journey-migration/cloud-acceleration-manager/assets/readiness-1.png)
 
    >[!NOTE]
    >Mer information finns i Skapa och hantera ett projekt i Cloud Acceleration Manager.
@@ -43,7 +43,7 @@ Följ stegen nedan för att navigera till beredskapsfasen:
 
 1. Klicka på **Granska** på kortet **Best Practices Analysis**.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/readiness-2.png)
+   ![Best Practices Analysis - granskning](/help/journey-migration/cloud-acceleration-manager/assets/readiness-2.png)
 
 1. Hämta BPA (Best Practices Analyzer).
 
@@ -57,14 +57,14 @@ Följ stegen nedan för att navigera till beredskapsfasen:
 
 1. I CAM klickar du på **Hämta överföringsnyckel** så att du kan hämta nyckeln som används för att konfigurera systemet så att BPA-rapporter automatiskt överförs till CAM.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/readiness-3b.png)
+   ![Hämta överföringsnyckel](/help/journey-migration/cloud-acceleration-manager/assets/readiness-3b.png)
 
    >[!IMPORTANT]
    >Rapporten kan fortfarande överföras manuellt, men med Överföringsnyckel effektiviseras åtgärden. Observera att rapporten inte kan överföras manuellt om du är i webbläsarens Incognito-läge.
 
 1. När en ny rapport har överförts kan du se rapporten Best Practices Analysis i CAM.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-bpareport.png)
+   ![Best Practices Analysis-rapport](/help/journey-migration/cloud-acceleration-manager/assets/cam-bpareport.png)
 
    >[!NOTE]
    >Om flera olika rapporter överförs är rapporten som visas i detalj alltid den som har det senaste skapandedatumet (inte överföringsdatumet).
@@ -82,7 +82,7 @@ Följ stegen nedan:
 
 1. Klicka på åtgärden **Förhandsgranska**.
 
-   ![bild](/help/journey-migration/best-practices-analyzer/assets/bpa-printpreview1b.png)
+   ![Förhandsgranska utskrift](/help/journey-migration/best-practices-analyzer/assets/bpa-printpreview1b.png)
 
 1. Klicka på **Skriv ut** för att skriva ut rapporten i PDF-format på den nya fliken där rapporten visas i en förhandsgranskning som går att skriva ut.
 
@@ -91,7 +91,7 @@ Följ stegen nedan:
    >* Alternativet **Spara som PDF** rekommenderas och stöds för ovanstående funktioner.
    >* Om webbläsarens utskriftsknapp används skrivs bara en sida ut.
 
-   ![bild](/help/journey-migration/best-practices-analyzer/assets/bpa-printpreview2.png)
+   ![Skriv ut](/help/journey-migration/best-practices-analyzer/assets/bpa-printpreview2.png)
 
 ### Använda Visa trendlinje {#trendline-view-cam}
 
@@ -104,15 +104,15 @@ Följ stegen nedan för att visa rapporter från trendlinjealternativet:
 
 1. Navigera till ditt projekt och klicka på **Granska** på kortet **Best Practices Analysis** i fasen **Beredskap**.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view1a.png)
+   ![Best Practices Analysis - granskning](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view1a.png)
 
 1. Klicka på **Trendlinjerapport** i listrutan **Visa**, vilket visas i figuren nedan.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view1b.png)
+   ![Trendlinjerapport](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view1b.png)
 
 1. Om du klickar på **Trendlinjerapport** öppnas trendlinjevyn för rapporten.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view3a.png)
+   ![Trendlinjevy](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view3a.png)
 
 
    >[!NOTE]
@@ -124,14 +124,14 @@ Följ stegen nedan för att visa rapporter från trendlinjealternativet:
    >1. **Anpassade komponenter och malltrend**
    >
    >Du kan lägga till eller ändra den grafiska vyn med hjälp av listrutan, vilket visas i bilden nedan:
-   >![bild](/help/journey-migration/cloud-acceleration-manager/assets/reports-bpa1.png)
+   >![Välj grafisk vy](/help/journey-migration/cloud-acceleration-manager/assets/reports-bpa1.png)
 
 
 ### Analysrapport om metodtips för granskning {#analysis-report}
 
 Utforska följande kort som finns på sidan Best Practices Analysis Report:
 
-![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-bpareport.png)
+![Analysrapport om bästa praxis](/help/journey-migration/cloud-acceleration-manager/assets/cam-bpareport.png)
 
 >[!NOTE]
 > Med varje kort kan man
@@ -144,21 +144,21 @@ Utforska följande kort som finns på sidan Best Practices Analysis Report:
 
 Kortet **Rapportegenskaper** innehåller information om rapportegenskaper som rapportdatum, varaktighet, filter, överföringsdatum och Adobe Experience Manager-information (AEM).
 
-![bild](/help/journey-migration/cloud-acceleration-manager/assets/report-properties.png)
+![Rapportegenskaper](/help/journey-migration/cloud-acceleration-manager/assets/report-properties.png)
 
 #### Rapportöversikt {#report-overview}
 
 Kortet **Rapportöversikt** innehåller rapportresultat och allvarlighetsnivåer som gäller vid bedömning av om du är redo att flytta till AEM as a Cloud Service, vilket visas i bilden nedan.
 
-![bild](/help/journey-migration/cloud-acceleration-manager/assets/report-overview.png)
+![Rapportöversikt](/help/journey-migration/cloud-acceleration-manager/assets/report-overview.png)
 
 Om du klickar på den här rapporten öppnas fliken **Rapport**.
 
-![bild](/help/journey-migration/cloud-acceleration-manager/assets/report-overview2.png)
+![Fliken Rapport](/help/journey-migration/cloud-acceleration-manager/assets/report-overview2.png)
 
 Du kan filtrera rapporten baserat på prioritet, undertyp eller antal.
 
-![bild](/help/journey-migration/cloud-acceleration-manager/assets/report-overview3.png)
+![Rapportfilter](/help/journey-migration/cloud-acceleration-manager/assets/report-overview3.png)
 
 >[!NOTE]
 >Läs [Tolka rapporten om Best Practices Analyzer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/using-best-practices-analyzer.html) om du vill veta mer om kategorier och prioritetsnivåer.
@@ -183,17 +183,17 @@ Du kan granska följande information på den här fliken:
 * Utvärdering
 * Överväganden vid innehållsmigrering
 
-  ![bild](/help/journey-migration/cloud-acceleration-manager/assets/migration-complexity-1.png)
+  ![Utvärdering av migreringskomplexitet](/help/journey-migration/cloud-acceleration-manager/assets/migration-complexity-1.png)
 
 ## Använda Planera och konfigurera kort {#planning-setup}
 
 1. Klicka på **Visa** på kortet **Planering och installation**. Det här kortet innehåller allt relevant innehåll som hjälper dig att planera och konfigurera AEM migrering.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/readiness-view.png)
+   ![Planering och inställning - Visa](/help/journey-migration/cloud-acceleration-manager/assets/readiness-view.png)
 
 1. En innehållskarusell visar all relevant information för den här fasen av migreringsresan.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/readiness-5-planning.png)
+   ![Planerings- och inställningsCarousel](/help/journey-migration/cloud-acceleration-manager/assets/readiness-5-planning.png)
 
 ### Ta bort en analysrapport om bästa praxis från trendlinjevyn {#delete-trendline}
 
@@ -202,23 +202,23 @@ Du kan granska följande information på den här fliken:
 
 1. Navigera till ditt projekt och klicka på **Granska** på kortet **Best Practices Analysis** i fasen **Beredskap**.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view1a.png)
+   ![Best Practices Analysis - granskning](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view1a.png)
 
 1. Klicka på **..**.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view1.png)
+   ![Ellips](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view1.png)
 
 1. Klicka på **Visa trendlinje** i listrutan, vilket visas i figuren nedan.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view1b.png)
+   ![Visa trendlinje](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view1b.png)
 
 1. Klicka på ikonen Ta bort på skärmen **Trendlinjerapport**.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view5a.png)
+   ![Trendlinjerapport - ta bort](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view5a.png)
 
 1. Klicka på **Ta bort** för att bekräfta borttagningen.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view6a.png)
+   ![Ta bort](/help/journey-migration/cloud-acceleration-manager/assets/trendline-view6a.png)
 
 ## What&#39;s Next {#whats-next}
 

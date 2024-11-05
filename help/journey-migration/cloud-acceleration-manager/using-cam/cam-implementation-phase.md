@@ -4,10 +4,10 @@ description: På den här sidan finns en översikt över implementeringsfasen i 
 exl-id: e6ac88f0-4b3f-43a1-98bc-8c6608713784
 feature: Migration
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: f86d681c8f8cb6d602058ef30b648c53ff7bad69
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 1%
+source-wordcount: '648'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ Implementeringsfasen omfattar:
 
 Klicka på ditt projektkort så att du kan öppna projektstartsidan och navigera till avsnittet **Implementering**, vilket visas i följande bild.
 
-![bild](/help/journey-migration/cloud-acceleration-manager/assets/implementation-1.png)
+![Projektstartsida - implementering](/help/journey-migration/cloud-acceleration-manager/assets/implementation-1.png)
 
 >[!NOTE]
 >Mer information finns i [Skapa och hantera ett projekt i Cloud Acceleration Manager](getting-started-cam.md#create-project).
@@ -37,11 +37,11 @@ Följ det här avsnittet för att utforska aktivitetskortet för lokal utvecklin
 
 1. Klicka på **Visa** på kortet **Lokal utveckling**.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/implementation-2.png)
+   ![Lokalt utvecklingskort](/help/journey-migration/cloud-acceleration-manager/assets/implementation-2.png)
 
 1. En innehållskarusell visar relevant information för den här fasen av migreringsresan.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/implementation-3.png)
+   ![Lokal utvecklingsCarousel](/help/journey-migration/cloud-acceleration-manager/assets/implementation-3.png)
 
 
 ## Använda omfaktoriseringskort {#code-refactoring}
@@ -52,7 +52,7 @@ Följ det här avsnittet för att utforska aktivitetskortet för kodkorrigering:
 
 1. Klicka på **Granska** på aktivitetskortet **Kodkorrigering**.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/implementation-4.png)
+   ![Kodomfaktoriseringskort](/help/journey-migration/cloud-acceleration-manager/assets/implementation-4.png)
 
 1. På sidan visas en lista med kodomfaktoriseringsaktiviteter ordnade efter allvarlighetsgrad. Du kan lära dig mer genom att klicka på de två markerade ikonerna.
 
@@ -67,11 +67,11 @@ Följ det här avsnittet för att utforska aktivitetskortet för kodkorrigering:
 
 Fliken **Dispatcher** innehåller information om hur du strukturerar AEM as a Cloud Service Apache- och Dispatcher-konfigurationer och hur du validerar och kör den lokalt innan du distribuerar den till molnmiljöer. Det beskriver även felsökning i molnmiljöer.
 
-![bild](/help/journey-migration/cloud-acceleration-manager/assets/coderefactoring-2.png)
+![Fliken Dispatcher](/help/journey-migration/cloud-acceleration-manager/assets/coderefactoring-2.png)
 
 Fliken **Testing** innehåller information om funktioner, Experience Audit och UI-testning.
 
-![bild](/help/journey-migration/cloud-acceleration-manager/assets/coderefactoring-3.png)
+![Testfliken](/help/journey-migration/cloud-acceleration-manager/assets/coderefactoring-3.png)
 
 
 ## Använda AEM as a Cloud Service distributionskort {#aem-as-a-cloud-service-deployment}
@@ -82,11 +82,11 @@ Följ det här avsnittet för att utforska aktivitetskortet för AEM as a Cloud 
 
 1. Klicka på **Visa** på aktivitetskortet för **AEM as a Cloud Service-distribution**.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/implementation-6.png)
+   ![AEM as a Cloud Service-distribution - kort](/help/journey-migration/cloud-acceleration-manager/assets/implementation-6.png)
 
 1. En innehållskarusell visar relevant information för den här fasen av migreringsresan.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/aem-deployment-card.png)
+   ![AEM as a Cloud Service Deployment - carousel](/help/journey-migration/cloud-acceleration-manager/assets/aem-deployment-card.png)
 
 
 ## Använda innehållsöverföringskort {#content-transfer}
@@ -97,11 +97,11 @@ Följ det här avsnittet för att utforska aktivitetskortet för innehållsöver
 
 1. Klicka på **Granska** på aktivitetskortet **Innehållsöverföring**.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/contenttransfer-1.png)
+   ![Innehållsöverföring - granskning](/help/journey-migration/cloud-acceleration-manager/assets/contenttransfer-1.png)
 
 1. Om du vill starta en innehållsöverföring måste du skapa en migreringsuppsättning. Klicka på **Skapa migreringsuppsättning**. Med en migreringsuppsättning kan innehåll överföras till AEM as a Cloud Service.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/contenttransfer-2.png)
+   ![Skapa migreringsuppsättning](/help/journey-migration/cloud-acceleration-manager/assets/contenttransfer-2.png)
 
    >[!NOTE]
    >Ett migreringsset upphör att gälla efter en längre inaktivitetsperiod. Mer information finns i [Förfallotid för migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md#migration-set-expiry).
@@ -113,13 +113,13 @@ Följ det här avsnittet för att utforska aktivitetskortet för innehållsöver
 
 1. Om du vill importera innehåll från migreringsuppsättningen till en miljö på AEM as a Cloud Service måste du påbörja ett intag. Navigera till **Inmatningsjobb** och klicka på **Nytt intag**. Granska [Inkluderande innehåll i mål](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md) så att du kan lära dig hur du slutför innehållsöverföringsfasen.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/contenttransfer-3.png)
+   ![Inmatningsjobb](/help/journey-migration/cloud-acceleration-manager/assets/contenttransfer-3.png)
 
 <!--### Estimating Content Transfer Time {#calculating}
 
 A Content Transfer Tool calculator has been provided to estimate how long it could take to complete the content transfer activity. You can use the content repository size slider to select the size that applies to your project. The transfer times vary for the extraction and ingestion phases. 
 
-   ![image](/help/journey-migration/cloud-acceleration-manager/assets/contenttransfer-4.png)
+   ![Content Transfer Tool calculator](/help/journey-migration/cloud-acceleration-manager/assets/contenttransfer-4.png)
 
    >[!NOTE]
    >These times are estimates only. Factor such as network speeds and time to scale up instances have not been accounted for in these estimates.
