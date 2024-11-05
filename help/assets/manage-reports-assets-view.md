@@ -4,10 +4,10 @@ description: Använd uppgifterna i rapportavsnittet i Assets-vyn för att utvär
 exl-id: 26d0289e-445a-4b8e-a5a1-b02beedbc3f1
 feature: Asset Insights, Asset Reports
 role: User, Admin, Developer
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 5ff36490c4d9a6f61255ad06ffab984f18c1823b
 workflow-type: tm+mt
-source-wordcount: '800'
-ht-degree: 1%
+source-wordcount: '1197'
+ht-degree: 0%
 
 ---
 
@@ -25,6 +25,7 @@ Alla användare som har tilldelats produktprofilen för Assets-vyadministratöre
 Navigera till **[!UICONTROL Reports]** under **[!UICONTROL Settings]** för att få åtkomst till rapporter.
 
 ![Rapporter](assets/reports.png)
+
 <!--
 In the **[!UICONTROL Reports]** screen, various components are shown in the tabular format which includes the following:
 
@@ -36,11 +37,148 @@ In the **[!UICONTROL Reports]** screen, various components are shown in the tabu
 * **Created**: Gives information of the date when the report was generated.
 -->
 
+## Skapa en rapport {#create-report}
+
+I AEM Assets visningsmiljö finns omfattande rapporteringsfunktioner via rapportpanelen. Med den här funktionen kan användarna generera och ladda ned CSV-rapporter med information om överföringar och hämtningar av resurser inom angivna tidsramar, från en gång till en gång per dag, varje vecka, varje månad eller varje år.
+
+**Så här skapar du en rapport:**
+
+1. Navigera till **Rapporter** och klicka på **Skapa rapport** (längst upp till höger). I dialogrutan **Skapa rapport** visas följande fält:
+   ![create-report](/help/assets/assets/executed-reports1.svg)
+
+   **På fliken Konfiguration:**
+
+   1. **Typ av rapportering:** Välj mellan överförings- och hämtningstyp.
+   1. **Titel:** Lägg till en titel i rapporten.
+   1. **Beskrivning:** Lägg till en valfri beskrivning i rapporten.
+   1. **Välj mappsökväg:** Välj en mappsökväg för att generera rapporten med överförda och hämtade resurser i den specifika mappen. Om du till exempel behöver rapporten med resurser som överförts till en mapp anger du sökvägen till den mappen.
+   1. **Välj datumintervall:** Välj datumintervall för att visa överförings- eller hämtningsaktiviteten i mappen.
+   <br>
+
+   >[!NOTE]
+   >
+   > I Assets-vyn konverteras alla lokala tidszoner till UTC (Coordinated Universal Time).
+
+   **På fliken Kolumner:** Markera kolumnnamnen som ska visas i rapporten. I följande tabell förklaras hur du använder alla kolumner:
+
+   <table>
+    <tbody>
+     <tr>
+      <th><strong>Kolumnnamn</strong></th>
+      <th><strong>Beskrivning</strong></th>
+      <th><strong>Typ av rapportering</strong></th>
+     </tr>
+     <tr>
+      <td>Titel</td>
+      <td>Namnet på resursen.</td>
+      <td>Överför och hämta</td>
+     </tr>
+     <tr>
+      <td>Bana</td>
+      <td>Mappsökvägen där resursen är tillgänglig i Assets-vyn.</td>
+      <td>Överför och hämta</td>
+     </tr>
+     <tr>
+      <td>MIME-typ</td>
+      <td>MIME-typen för resursen.</td>
+      <td>Överför och hämta</td>
+     </tr>
+     <tr>
+      <td>Storlek</td>
+      <td>Resursens storlek i byte.</td>
+      <td>Överför och hämta</td>
+     </tr>
+     <tr>
+      <td>Hämtat av</td>
+      <td>E-post-ID för den användare som hämtade resursen.</td>
+      <td>Ladda ned</td>
+     </tr>
+     <tr>
+      <td>Hämtningsdatum</td>
+      <td>Datumet då hämtningsåtgärden för resursen utförs.</td>
+      <td>Ladda ned</td>
+     </tr>
+     <tr>
+      <td>Författare</td>
+      <td>Resursens författare.</td>
+      <td>Överför och hämta</td>
+     </tr>
+     <tr>
+      <td>Skapad den</td>
+      <td>Det datum då resursen överförs till Assets-vyn.</td>
+      <td>Överför och hämta</td>
+     </tr>
+     <tr>
+      <td>Ändringsdatum</td>
+      <td>Datumet då tillgången senast ändrades.</td>
+      <td>Överför och hämta</td>
+     </tr>
+     <tr>
+      <td>Utgånget</td>
+      <td>Tillgångens förfallostatus.</td>
+      <td>Överför och hämta</td>
+     </tr>
+     <tr>
+      <td>Hämtat efter användarnamn</td>
+      <td>Namnet på den användare som hämtade resursen.</td>
+      <td>Ladda ned</td>
+     </tr>           
+    </tbody>
+   </table>
+
+## Visa och hämta befintlig rapport {#View-and-download-existing-report}
+
+Befintliga rapporter visas på fliken **Utförda rapporter**. Klicka på **Rapporter** och välj **Utförda rapporter** om du vill visa alla skapade rapporter med statusen **Slutförd**, vilket anger att de är klara för hämtning. Om du vill hämta rapporten i CSV-format eller ta bort rapporten markerar du rapportraden. Välj sedan **Hämta CSV** eller **Ta bort**.
+![visa och hämta befintliga rapporter](/help/assets/assets/view-download-existing-report.png)
+
+## Schemalägg en rapport {#schedule-report}
+
+I användargränssnittet i AEM Assets-vyn skapar **Schemalägg rapport** en automatisk generering av rapporter med angivna framtida intervall, till exempel varje dag, vecka, månad eller år. Den här funktionen hjälper till att effektivisera återkommande rapporteringsbehov och säkerställer att det finns aktuella datauppdateringar. När **Skapa rapport** genererar rapporter för tidigare datum. Slutförda rapporter listas under **Utförda rapporter** och kommande rapporter finns under **Schemalagda rapporter**.
+
+Följ stegen nedan för att schemalägga en rapport:
+
+1. Klicka på Rapporter i den vänstra rutan och sedan på Skapa rapport (uppifrån till höger).
+1. I rapportdialogrutan visas följande information:
+   1. **Typ av rapportering:** Välj mellan överförings- och hämtningstyp.
+   1. **Titel:** Lägg till en titel i rapporten.
+   1. **Beskrivning**: Lägg till en valfri beskrivning till rapporten.
+   1. **Välj mappsökväg:** Välj en mappsökväg för att generera en rapport för resurser som ska överföras till eller hämtas från den aktuella mappen i framtiden.
+   1. Växla **Schemarapport:** Växla för att schemalägga rapporten senare eller för dess upprepade förekomst.
+      ![schemarapport](/help/assets/assets/schedule-reports1.svg)
+
+   1. **Välj frekvens:** Ange intervallet för att generera rapporten (till exempel dagligen, veckovis, månadsvis, årsvis eller en gång) och ange datum och tid för att köra rapporten tillsammans med slutdatumet för upprepning. För en engångsrapport väljer du datumintervallet för rapporten om den valda aktivitetstypen i AEM. Om du till exempel behöver en rapport om hämtade resurser från den 10 till den 29 (framtida datum) för en viss månad, väljer du dessa datum i fältet **Välj datumintervall**.
+
+   >[!NOTE]
+   >
+   > I Assets-vyn konverteras alla lokala tidszoner till UTC (Coordinated Universal Time).
+
+## Visa schemalagda rapporter {#view-scheduled-reports}
+
+Schemalagda rapporter visas på fliken **Schemalagda rapporter** på ett systematiskt organiserat sätt. Alla slutförda rapporter för varje schemalagd rapport lagras i en enda rapportmapp. Klicka på ![expandera komprimering](/help/assets/assets/expand-icon1.svg)för att visa de slutförda rapporterna. Om du till exempel har schemalagt en daglig rapport grupperas alla slutförda rapporter tillsammans i en mapp. Den här organisationen förenklar både navigering och identifiering av rapporter. Om du vill visa schemalagda rapporter klickar du på **Rapporter** och sedan på **Schemalagda rapporter**. Alla schemalagda rapporter visas med status pågående eller slutförd. Slutförda rapporter kan hämtas.\
+![schemalagd rapport](/help/assets/assets/scheduled-reports-tab.png)
+
+## Redigera och avbryta schemalagda rapporter {#edit-cancel-scheduled-reports}
+
+1. Gå till fliken **Schemalagda rapporter**.
+1. Markera rapportraden.
+1. Klicka på **Redigera**.
+1. Klicka på **Avbryt schema** och sedan på **Bekräfta** för att avbryta den schemalagda rapporten. För avbrutna rapporter blir nästa körningstid tom och statusen avbryts.
+   ![redigera och avbryt schemalagd rapport](/help/assets/assets/cancel-edit-scheduled-reports.png)
+
+### Återuppta schema {#resume-schedule}
+
+Om du vill återuppta det avbrutna schemat markerar du rapportraden och klickar på **Återuppta schema**. När det återupptas visas nästa körningspost igen och statusen visas löpande.
+![Återuppta schema](/help/assets/assets/resume-schedule.png)
+
+>[!NOTE]
+>
+> Om du återupptar en avbruten rapport före det schemalagda slutdatumet genereras automatiskt rapporter från avbrottsdatumet till återköpsdatumet.
+
 ## Visa insikter {#view-live-statistics}
 
 I Assets-vyn kan du visa realtidsdata för din Assets-visningsmiljö med Insikter-kontrollpanelen. Du kan visa händelsemått i realtid under de senaste 30 dagarna eller under de senaste 12 månaderna.
 
-<!--![Toolbar options when you select an asset](assets/assets-essentials-live-statistics.png)-->
+<!--![Toolbar options when you select an asset](assets/assets-view-live-statistics.png)-->
 
 Klicka på **[!UICONTROL Insights]** i den vänstra navigeringsrutan för att visa följande automatiskt genererade diagram:
 
@@ -63,178 +201,7 @@ Klicka på **[!UICONTROL Insights]** i den vänstra navigeringsrutan för att vi
    ![Insights](assets/insights1.png)
    ![Insights](assets/insights2.png)
    -->
-
-## Skapa en nedladdningsrapport {#create-download-report}
-
-Så här skapar du en hämtningsrapport:
-
-1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL Reports]** och klicka på **[!UICONTROL Create Report]**.
-
-1. Ange rapporttypen **[!UICONTROL Download]** på fliken [!UICONTROL Configuration].
-
-1. Ange en rubrik och en valfri beskrivning för rapporten.
-
-1. Välj mappsökvägen, som omfattar de resurser som rapporten ska köras på, med hjälp av fältet **[!UICONTROL Select Folder Path]**.
-
-1. Välj datumintervall för rapporten.
-
-   >[!NOTE]
-   >
-   > I Assets-vyn konverteras alla lokala tidszoner till UTC (Coordinated Universal Time).
-
-1. På fliken [!UICONTROL Columns] markerar du de kolumnnamn som du vill visa i rapporten.
-
-1. Klicka på **[!UICONTROL Create]**.
-
-   ![Hämta rapport](assets/download-reports-config.png)
-
-I följande tabell förklaras användningen av alla kolumner som du kan lägga till i rapporten:
-
-<table>
-    <tbody>
-     <tr>
-      <th><strong>Kolumnnamn</strong></th>
-      <th><strong>Beskrivning</strong></th>
-     </tr>
-     <tr>
-      <td>Titel</td>
-      <td>Namnet på resursen.</td>
-     </tr>
-     <tr>
-      <td>Bana</td>
-      <td>Mappsökvägen där resursen är tillgänglig i Assets-vyn.</td>
-     </tr>
-     <tr>
-      <td>MIME-typ</td>
-      <td>MIME-typen för resursen.</td>
-     </tr>
-     <tr>
-      <td>Storlek</td>
-      <td>Resursens storlek i byte.</td>
-     </tr>
-     <tr>
-      <td>Hämtat av</td>
-      <td>E-post-ID för den användare som hämtade resursen.</td>
-     </tr>
-     <tr>
-      <td>Hämtningsdatum</td>
-      <td>Datumet då hämtningsåtgärden för resursen utförs.</td>
-     </tr>
-     <tr>
-      <td>Författare</td>
-      <td>Resursens författare.</td>
-     </tr>
-     <tr>
-      <td>Skapad den</td>
-      <td>Det datum då resursen överförs till Assets-vyn.</td>
-     </tr>
-     <tr>
-      <td>Ändringsdatum</td>
-      <td>Datumet då tillgången senast ändrades.</td>
-     </tr>
-     <tr>
-      <td>Utgånget</td>
-      <td>Tillgångens förfallostatus.</td>
-     </tr>
-     <tr>
-      <td>Hämtat efter användarnamn</td>
-      <td>Namnet på den användare som hämtade resursen.</td>
-     </tr>           
-    </tbody>
-   </table>
-
-## Skapa en överföringsrapport {#create-upload-report}
-
-Så här skapar du en överföringsrapport:
-
-1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL Reports]** och klicka på **[!UICONTROL Create Report]**.
-
-1. Ange rapporttypen **[!UICONTROL Upload]** på fliken [!UICONTROL Configuration].
-
-1. Ange en rubrik och en valfri beskrivning för rapporten.
-
-1. Välj mappsökvägen, som omfattar de resurser som rapporten ska köras på, med hjälp av fältet **[!UICONTROL Select Folder Path]**.
-
-1. Välj datumintervall för rapporten.
-
-1. På fliken [!UICONTROL Columns] markerar du de kolumnnamn som du vill visa i rapporten.
-
-1. Klicka på **[!UICONTROL Create]**.
-
-   ![Överför rapport](assets/upload-reports-config.png)
-
-I följande tabell förklaras användningen av alla kolumner som du kan lägga till i rapporten:
-
-<table>
-    <tbody>
-     <tr>
-      <th><strong>Kolumnnamn</strong></th>
-      <th><strong>Beskrivning</strong></th>
-     </tr>
-     <tr>
-      <td>Titel</td>
-      <td>Namnet på resursen.</td>
-     </tr>
-     <tr>
-      <td>Bana</td>
-      <td>Mappsökvägen där resursen är tillgänglig i Assets-vyn.</td>
-     </tr>
-     <tr>
-      <td>MIME-typ</td>
-      <td>MIME-typen för resursen.</td>
-     </tr>
-     <tr>
-      <td>Storlek</td>
-      <td>Resursens storlek.</td>
-     </tr>
-     <tr>
-      <td>Författare</td>
-      <td>Resursens författare.</td>
-     </tr>
-     <tr>
-      <td>Skapad den</td>
-      <td>Det datum då resursen överförs till Assets-vyn.</td>
-     </tr>
-     <tr>
-      <td>Ändringsdatum</td>
-      <td>Datumet då tillgången senast ändrades.</td>
-     </tr>
-     <tr>
-      <td>Utgånget</td>
-      <td>Tillgångens förfallostatus.</td>
-     </tr>              
-    </tbody>
-   </table>
-
-## Visa befintliga rapporter {#view-report-list}
-
-När du har [skapat rapporten](#create-download-report) kan du visa listan över befintliga rapporter och välja att hämta dem i ett CSV-format eller ta bort dem.
-
-Navigera till **[!UICONTROL Settings]** > **[!UICONTROL Reports]** om du vill visa listan med rapporter.
-
-För varje rapport kan du visa rapportrubrik, rapporttyp, beskrivning som anges när rapporten skapas, rapportens status, e-post-ID för den som skapade rapporten och rapportens skapandedatum.
-
-`Completed `-status för rapporten visar att rapporten är klar för hämtning.
-
-![Lista över rapporter](assets/list-of-reports.png)
-
-
-## Hämta en CSV-rapport {#download-csv-report}
-
-Så här hämtar du en rapport i CSV-format:
-
-1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL Reports]**.
-
-1. Välj en rapport och klicka på **[!UICONTROL Download CSV]**.
-
-Den valda rapporten hämtas i CSV-format. Kolumnerna som visas i CSV-rapporten beror på vilka kolumner du markerar när du [skapar rapporten](#create-download-report).
-
-## Ta bort en rapport {#delete-report}
-
-Ta bort en rapport:
-
-1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL Reports]**.
-
-1. Välj en rapport och klicka på **[!UICONTROL Delete]**.
-
-1. Bekräfta genom att klicka på **[!UICONTROL Delete]** igen.
+* **Antal tillgångar efter storlek:** Segmenterar det totala antalet resurser i din Assets View-miljö i olika storleksintervall, vilket markerar antalet och procentandelen resurser i varje storleksintervall, som representeras av ett bottendiagram.
+  ![insights-assets-count-by-size](/help/assets/assets/insights-assets-count-by-size.svg)
+* **Antal tillgångar per tillgångstyp:** Segmenterar det totala antalet resurser i din Assets View-miljö, vilket markerar antalet och procentandelen resurser baserat på deras filtyper, som representeras av ett bottendiagram.
+  ![insights-assets-count-by-size](/help/assets/assets/insights-assest-count-by-asset-type1.svg)
