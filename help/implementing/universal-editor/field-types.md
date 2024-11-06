@@ -4,9 +4,9 @@ description: Lär dig mer om fält och de komponenttyper som den universella red
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 8516cf6e9ec080824848a2b84fd669eddfaa3165
+source-git-commit: 5153d18b6bb8934479a02cbaa5236acef7c80cd1
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1281'
 ht-degree: 1%
 
 ---
@@ -139,7 +139,11 @@ En AEM taggkomponenttyp aktiverar en AEM taggväljare som kan användas för att
 
 #### AEM {#aem-content}
 
-En AEM innehållskomponenttyp aktiverar en AEM innehållsväljare som kan användas för att ange innehållsreferenser.
+En AEM innehållskomponenttyp aktiverar en AEM innehållsväljare som kan användas för att ange innehållsreferenser. Den erbjuder en extra valideringstyp.
+
+| Valideringstyp | Värdetyp | Beskrivning | Obligatoriskt |
+|---|---|---|---|
+| `rootPath` | `string` | Sökväg som innehållsväljaren öppnas så att användaren kan välja AEM innehåll och begränsa urvalet till den katalogen och underkatalogerna | Nej |
 
 >[!BEGINTABS]
 
@@ -298,11 +302,15 @@ En behållarkomponenttyp tillåter gruppering av komponenter. Den erbjuder en ex
 
 #### Innehållsfragment {#content-fragment}
 
-Du kan använda väljaren för innehållsfragment för att välja ett [innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md) och dess variationer (om det behövs). Den erbjuder en extra konfiguration.
+Du kan använda väljaren för innehållsfragment för att välja ett [innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md) och dess variationer (om det behövs). Den erbjuder ytterligare konfiguration och validering.
 
 | Konfiguration | Värdetyp | Beskrivning | Obligatoriskt |
 |---|---|---|---|
 | `variationName` | `string` | Variabelnamn för att lagra den valda varianten. Om värdet är odefinierat visas ingen variantväljare | Nej |
+
+| Valideringstyp | Värdetyp | Beskrivning | Obligatoriskt |
+|---|---|---|---|
+| `rootPath` | `string` | Sökväg som innehållsväljaren öppnas så att användaren kan välja innehållsfragmentet och begränsa urvalet till den katalogen och underkatalogerna | Nej |
 
 >[!NOTE]
 >
@@ -430,11 +438,15 @@ Den erbjuder även en ytterligare valideringstyp.
 
 #### Experience Fragment {#experience-fragment}
 
-Experience Fragment-väljaren kan användas för att välja ett [Experience Fragment](/help/sites-cloud/authoring/fragments/experience-fragments.md) och dess variationer (om det behövs). Den erbjuder en extra konfiguration.
+Experience Fragment-väljaren kan användas för att välja ett [Experience Fragment](/help/sites-cloud/authoring/fragments/experience-fragments.md) och dess variationer (om det behövs). Den erbjuder ytterligare konfiguration och validering.
 
 | Konfiguration | Värdetyp | Beskrivning | Obligatoriskt |
 |---|---|---|---|
 | `variationName` | `string` | Variabelnamn för att lagra den valda varianten. Om värdet är odefinierat visas ingen variantväljare | Nej |
+
+| Valideringstyp | Värdetyp | Beskrivning | Obligatoriskt |
+|---|---|---|---|
+| `rootPath` | `string` | Sökväg som innehållsväljaren öppnas så att användaren kan välja Experience Fragment och begränsa urvalet till den katalogen och underkatalogerna | Nej |
 
 >[!BEGINTABS]
 

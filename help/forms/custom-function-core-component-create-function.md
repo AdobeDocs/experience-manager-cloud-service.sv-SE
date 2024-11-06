@@ -4,13 +4,13 @@ description: AEM Forms har stöd för anpassade funktioner, som gör att använd
 keywords: Lägg till en anpassad funktion, använd en anpassad funktion, skapa en anpassad funktion, använd anpassad funktion i regelredigeraren.
 feature: Adaptive Forms, Core Components
 role: User, Developer
-source-git-commit: f5c17382052b4d116deaae564f1a2b9fdbb5ea0a
+exl-id: e7ab4233-2e91-45c6-9377-0c9204d03ee9
+source-git-commit: 747203ccd3c7e428e2afe27c56e47c3ec18699f6
 workflow-type: tm+mt
-source-wordcount: '1512'
+source-wordcount: '1329'
 ht-degree: 0%
 
 ---
-
 
 # Skapa en anpassad funktion för ett adaptivt formulär baserat på kärnkomponenter
 
@@ -238,49 +238,7 @@ Låt oss dyka upp i funktionerna för anpassade funktioner.
 
 ### Asynkront stöd i anpassade funktioner {#support-of-async-functions}
 
-Asynkrona anpassade funktioner visas inte i regelredigeringslistan. Det går dock att anropa asynkrona funktioner i anpassade funktioner som skapats med synkrona funktionsuttryck.
-
-![Synkronisera och asynkron anpassad funktion](/help/forms/assets/workflow-for-sync-async-custom-fumction.png)
-
->[!NOTE]
->
-> Fördelen med att anropa asynkrona funktioner i anpassade funktioner är att asynkrona funktioner tillåter samtidig körning av flera åtgärder, med resultatet av varje funktion som används i de anpassade funktionerna.
-
-Titta på koden nedan för att se hur vi kan anropa asynkrona funktioner med anpassade funktioner:
-
-```javascript
-    
-    async function asyncFunction() {
-    const response = await fetch('https://petstore.swagger.io/v2/store/inventory');
-    const data = await response.json();
-    return data;
-    }
-
-    /**
-    * callAsyncFunction
-    * @name callAsyncFunction callAsyncFunction
-    */
-    function callAsyncFunction() {
-    asyncFunction()
-        .then(responseData => {
-        console.log('Response data:', responseData);
-        })
-        .catch(error => {
-         console.error('Error:', error);
-    });
-}
-```
-
-I ovanstående exempel är funktionen asyncFunction en `asynchronous function`. Den utför en asynkron åtgärd genom att göra en `GET`-begäran till `https://petstore.swagger.io/v2/store/inventory`. Det väntar på svar med `await`, tolkar svarstexten som JSON med `response.json()` och returnerar sedan data. Funktionen `callAsyncFunction` är en synkron anpassad funktion som anropar funktionen `asyncFunction` och visar svarsdata i konsolen. Även om funktionen `callAsyncFunction` är synkron anropar den asynkrona funktionen asyncFunction och hanterar resultatet med programsatserna `then` och `catch`.
-
-För att se hur den fungerar kan vi lägga till en knapp och skapa en regel för knappen som anropar den asynkrona funktionen när en knapp klickas.
-
-![skapar regel för asynkron funktion](/help/forms/assets/rule-for-async-funct.png)
-
-Titta på bilden för konsolfönstret nedan för att visa att när användaren klickar på knappen `Fetch` anropas den anpassade funktionen `callAsyncFunction` som i sin tur anropar en asynkron funktion `asyncFunction`. Inspect i konsolfönstret för att visa svaret på knappen:
-
-![Konsolfönstret](/help/forms/assets/async-custom-funct-console.png)
-
+Du kan implementera asynkrona funktioner i regelredigeraren med anpassade funktioner. Mer information om hur du gör detta finns i artikeln [Använda asynkrona funktioner i ett adaptivt formulär](/help/forms/using-async-funct-in-rule-editor.md).
 
 ### Field- och Global scope-objekt har stöd för anpassade funktioner {#support-field-and-global-objects}
 
@@ -289,6 +247,8 @@ Fältobjekt refererar till de enskilda komponenterna eller elementen i ett formu
 >[!NOTE]
 >
 > `param {scope} globals` måste vara den sista parametern och visas inte i regelredigeraren för ett anpassat formulär.
+
+Mer information om omfångsobjekt finns i artikeln [Omfångsobjekt i anpassade funktioner](/help/forms/custom-function-core-component-scope-function.md).
 
 ### Cachelagring stöds i anpassad funktion
 

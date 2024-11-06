@@ -4,9 +4,9 @@ description: AEM har omfattande och kraftfulla API:er som du kan använda för d
 exl-id: d4ef3040-5a0a-4149-9e99-09eda9605038
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: b3405279393be51b805c1129c171bb2249fd5726
+source-git-commit: 7c2d2fc7b37d70bee4764921a138af6379401064
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '635'
 ht-degree: 1%
 
 ---
@@ -75,6 +75,7 @@ AEM erbjuder anpassningsbara komponenter och alternativ för innehållsleverans.
 | [GraphQL API för innehållsfragment](/help/headless/graphql-api/content-fragments.md) | Effektiv leverans av innehållsfragment till JavaScript-klienter i headless CMS-implementeringar |
 | [Innehållsfragment Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html) | Exakt format för HTTP-resursbegäranden som stöds |
 | [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) | OpenAPI:er för innehållsfragment och innehållsfragmentmodell |
+| [AEM REST OpenAPI för leverans av innehållsfragment](/help/headless/aem-rest-openapi-content-fragment-delivery.md) | Ett HTTP REST API på AEM Edge Delivery Services, utformat för att leverera strukturerat innehåll från innehållsfragment i JSON-format. |
 
 ## SPA-specifika API:er {#spa-apis}
 

@@ -4,9 +4,9 @@ description: Läs om stödet för innehållsfragment i Assets HTTP API, en vikti
 feature: Content Fragments, Assets HTTP API
 exl-id: d72cc0c0-0641-4fd6-9f87-745af5f2c232
 role: User, Admin
-source-git-commit: ab2cf8007546f538ce54ff3e0b92bb0ef399c758
+source-git-commit: 7386298ee83eef5693ce00077659bbc4a1a70d24
 workflow-type: tm+mt
-source-wordcount: '1804'
+source-wordcount: '1829'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,8 @@ ht-degree: 0%
 Läs om stödet för innehållsfragment i Assets HTTP API, en viktig del av Adobe Experience Manager headless-leveransfunktion (AEM).
 
 >[!NOTE]
+>
+>Se [AEM API:er för leverans och hantering av strukturerat innehåll](/help/headless/apis-headless-and-content-fragments.md) för en översikt över de olika tillgängliga API:erna och en jämförelse av några av de berörda begreppen.
 >
 >OpenAPI:erna [Content Fragment och Content Fragment Model](/help/headless/content-fragment-openapis.md) är också tillgängliga.
 
@@ -41,7 +43,7 @@ Läs om stödet för innehållsfragment i Assets HTTP API, en viktig del av Adob
 
 Med [Assets REST API](/help/assets/mac-api-assets.md) kan utvecklare av Adobe Experience Manager as a Cloud Service komma åt innehåll (som lagras i AEM) direkt via HTTP-API:t via CRUD-åtgärder (Create, Read, Update, Delete).
 
-Med API:t kan du använda Adobe Experience Manager as a Cloud Service som headless CMS (Content Management System) genom att tillhandahålla innehållstjänster till ett JavaScript front-end-program. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar.
+Med API:t kan du använda Adobe Experience Manager as a Cloud Service som ett headless CMS (Content Management System) genom att tillhandahålla innehållstjänster till ett JavaScript front-end-program. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar.
 
 [Single Page-program (SPA)](/help/implementing/developing/hybrid/introduction.md), ramverksbaserade eller anpassade, kräver till exempel innehåll som tillhandahålls via HTTP API, ofta i JSON-format.
 

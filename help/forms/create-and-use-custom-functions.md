@@ -7,7 +7,7 @@ content-type: reference
 feature: Adaptive Forms, Core Components
 exl-id: 24607dd1-2d65-480b-a831-9071e20c473d
 role: User, Developer
-source-git-commit: a35556164ace2245577c3e22da1bc276fc3d98d0
+source-git-commit: 747203ccd3c7e428e2afe27c56e47c3ec18699f6
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 0%
@@ -72,7 +72,7 @@ Parametern är en lista med argument som används av anpassade funktioner. En fu
    * date[]: Representerar en matris med datumvärden.
    * array: Representerar en generisk array som innehåller värden av olika typer.
    * object: Representerar formulärobjektet som skickas till en anpassad funktion i stället för att skicka dess värde direkt.
-   * omfång: Representerar det globala objektet, som innehåller skrivskyddade variabler som formulärinstanser, målfältsinstanser och metoder för att utföra formulärändringar i anpassade funktioner. Den deklareras som den sista parametern i JavaScript-anteckningar och visas inte i regelredigeraren för ett adaptivt formulär. Omfångsparametern har åtkomst till formulärets eller komponentens objekt för att utlösa den regel eller händelse som krävs för formulärbearbetning. Om du vill ha mer information om det globala objektet och hur du använder det [klickar du här](/help/forms/custom-function-core-component-create-function.md#field-and-global-scope-objects-support-in-custom-functions).
+   * omfång: Representerar det globala objektet, som innehåller skrivskyddade variabler som formulärinstanser, målfältsinstanser och metoder för att utföra formulärändringar i anpassade funktioner. Den deklareras som den sista parametern i JavaScript-anteckningar och visas inte i regelredigeraren för ett adaptivt formulär. Omfångsparametern har åtkomst till formulärets eller komponentens objekt för att utlösa den regel eller händelse som krävs för formulärbearbetning. Om du vill ha mer information om det globala objektet och hur du använder det [klickar du här](/help/forms/custom-function-core-component-scope-function.md).
 
 Parametertypen är inte skiftlägeskänslig och blanksteg tillåts inte i parameternamnet.
 

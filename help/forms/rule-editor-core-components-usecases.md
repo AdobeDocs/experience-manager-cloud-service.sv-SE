@@ -5,9 +5,9 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 8191e113-f768-4b1e-a191-e3c722f19054
-source-git-commit: 34be2ca89433e36a68e7d8eae42c6bd9ad6e623f
+source-git-commit: e5f22d925f9b9ec3a5f80f9506353e42e8879da3
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1373'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,26 @@ ht-degree: 0%
 Artikeln innehåller detaljerade exempel på en regelredigerare för ett adaptivt formulär baserat på kärnkomponenter och ger insikter i hur det implementeras för olika scenarier. Regelredigeraren låter utvecklare definiera och hantera logiken som styr formulärens beteende.
 Låt oss nu diskutera olika implementeringar för en regelredigerare.
 
+
+## Navigera mellan paneler med knappen
+
+Med regelredigeraren kan du lägga till navigeringsknappar i panellayouterna, till exempel Vågräta flikar, Lodräta flikar, Dragspel eller Guide. De här knapparna förbättrar användarupplevelsen genom att förenkla övergångar mellan olika paneler i ett formulär och växlar fokus till den valda panelen.
+
+Tänk dig att du interagerar med profilinställningsavsnittet i ett program, där navigeringen underlättas av knappar i stället för flikar. När du anger profilinställningarna från huvudinstrumentpanelen visas en serie paneler som är dedikerade till olika aspekter av deras profil: **Personlig information**, **Kontosäkerhet** och **Meddelandeinställningar**.
+
+Varje panel innehåller relevanta fält och alternativ för att uppdatera specifik information. Navigeringsknappar, som `Next` och `Back`, är väl placerade så att du kan flytta mellan de här panelerna. Klicka på `Next` om du vill flytta användaren till panelen **Kontosäkerhet** och klicka på `Back` om du vill gå tillbaka till panelen **Personlig information**. Den här navigeringsmetoden ger en smidig övergång mellan sektioner utan att tappa sammanhanget, vilket ger en smidig och intuitiv användarupplevelse. Med navigeringsknappar blir det enklare att hantera profilinställningar, vilket gör interaktionen mer organiserad och användarvänlig.
+
+Du kan använda regeln `Navigate among the panels` för att skapa navigeringsregler för knappar som tillåter växling mellan olika paneler.  Markera attributet `Shift focus to the next item` om du vill flytta fokus till nästa panel i layouten.
+
+![Regel för nästa panel](/help/forms/assets/rule-editor-navigate-in-panel-next.png){width=50%}
+
+När du klickar på knappen `Next` flyttas fokus till efterföljande panel i layouten.
+
+![Navigera i panelen med knappen Nästa](/help/forms/assets/navigate-in-panel.gif)
+
+På samma sätt kan du skapa en regel för knappen `Previous` så att fokus flyttas till föregående panel.
+
+![Föregående panelregel](/help/forms/assets/rule-editor-navigate-in-panel-previous.png){width=50%}
 
 ## Effektivisera komplexa beräkningar i repeterbara paneler med funktioner
 

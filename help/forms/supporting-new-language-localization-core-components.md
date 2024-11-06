@@ -5,9 +5,9 @@ feature: Adaptive Forms, Core Components
 Role: Developer, Author
 exl-id: bc06542b-84c8-4c6a-a305-effbd16d5630
 role: User, Developer
-source-git-commit: d9f4e14edb1d7a84f130dea0c82734574404601c
+source-git-commit: cc2a226898f5dbe9073ba9b5a859218da664b1d7
 workflow-type: tm+mt
-source-wordcount: '2068'
+source-wordcount: '2124'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ Klona den adaptiva Forms Core Components-databasen: Du behöver ett klientbiblio
    git clone https://github.com/adobe/aem-core-forms-components.git
    ```
 
-   Det här kommandot hämtar databasen och skapar en mapp med namnet `aem-core-forms-components` på datorn. I den här guiden ser vi den här mappen som `[Adaptive Forms Core Components repository]`
+   Det här kommandot hämtar databasen och skapar en mapp med namnet `aem-core-forms-components` på datorn. I hela den här guiden ser vi den här mappen som `[Adaptive Forms Core Components repository]`.
 
 
 ## Lägga till en språkinställning {#add-localization-support-for-non-supported-locales}
@@ -228,6 +228,28 @@ Nu ska vi lägga in biblioteket `clientlib-it-custom-locale` i din AEM as a Clou
 
       ![Klistrar in clientlib-it-custom-locale](/help/forms/assets/clientlib-it-custom-locale-paste.png)
 
+1. Uppdatera sökvägen `aemLangUrl` i `languageinit.js`
+
+   1. Navigera till följande katalog i din [AEMaaCS-projektkatalog]:
+
+      ```
+      /ui.apps/src/main/content/jcr_root/apps/<app-id>/clientlib/clientlib-it-custom-locale/js
+      ```
+
+   1. Öppna filen `languageinit.js` i redigeraren.
+   1. Leta reda på följande rad i filen `languageinit.js`:
+
+      `const aemLangUrl = /etc.clientlibs/forms-core-components-it/clientlibs/clientlib-it-custom-locale/resources/i18n/${lang}.json;`
+
+   1. Ersätt `forms-core-components-it` med ditt `<app-id>` (faktiskt ID för ditt program) på raden ovan.
+
+      `const aemLangUrl = '/etc.clientlibs/<app-id>/clientlibs/clientlib-it-custom-locale/resources/i18n/${lang}.json';`
+
+      ![language-init-file](/help/forms/assets/language-init-name-change.png)
+
+>[!NOTE]
+>  
+> Om du inte ersätter `forms-core-components-it` med ditt projektnamn eller `<app-id>` kan datumväljarkomponenten inte översättas.
 
 ### Skapa en fil för din nya språkinställning:
 

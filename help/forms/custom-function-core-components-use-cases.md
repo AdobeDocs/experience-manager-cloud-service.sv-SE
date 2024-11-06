@@ -4,13 +4,13 @@ description: Artikeln beskriver olika användningsfall för en anpassad funktion
 feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
-source-git-commit: 580e206427f2205fa8ca537ab4988a90c988171b
+exl-id: df92b91e-f3b0-4a08-bd40-e99edc9a50a5
+source-git-commit: 747203ccd3c7e428e2afe27c56e47c3ec18699f6
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 0%
 
 ---
-
 
 # Exempel på utveckling och användning av anpassade funktioner
 
@@ -264,7 +264,7 @@ Du kan även kontrollera konsolfönstret för att visa data som skickats till se
 
 Låt oss lära oss hur anpassade funktioner använder fält och globala objekt för att åsidosätta inskickningshanterare med hjälp av ett `Contact Us`-formulär.
 
-Lägg till följande kodrad enligt beskrivningen i avsnittet [create-custom-function](/help/forms/custom-function-core-component-create-function.md) för att anpassa överförings- eller felmeddelandet för formulärinskickning och visa formulärinskickningsmeddelandena i en modal ruta:
+Lägg till följande kodrad enligt anvisningarna i avsnittet [create-custom-functions](/help/forms/custom-function-core-component-create-function.md) för att anpassa överförings- eller felmeddelandet för formulärinskickning och visa formulärinskickningsmeddelandena i en modal ruta:
 
 ```javascript
 /**

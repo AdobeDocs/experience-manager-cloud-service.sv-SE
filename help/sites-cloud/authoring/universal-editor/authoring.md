@@ -5,9 +5,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: ffe90d3919c0f0c1a1c60efccc0191118dfaa84a
+source-git-commit: 31fc69523107719d6f33d7a0845407547b57f4a7
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1317'
 ht-degree: 0%
 
 ---
@@ -159,7 +159,11 @@ Den markerade komponenten har tagits bort.
 
 1. Den dragna komponenten blir grå i innehållsträdet medan insättningspunkten representeras av en blå linje. Släpp komponenten för att placera den på dess nya plats.
 
-Komponenterna ordnas om i både innehållsträdet och i redigeraren
+Komponenterna ordnas om både i innehållsträdet och i redigeraren.
+
+>[!NOTE]
+>
+>Komponenter kan inte flyttas mellan behållare om ett annat [komponentfilter](/help/implementing/universal-editor/customizing.md#filtering-components) har angetts mellan käll- och målbehållarna.
 
 ## Förhandsgranska innehåll {#previewing-content}
 

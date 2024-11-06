@@ -5,17 +5,17 @@ landing-page-description: Lär dig hur du använder och administrerar Headless i
 exl-id: 24300499-ae9c-49d0-aa25-f51e14d9cf79
 feature: Headless
 role: Admin, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 7386298ee83eef5693ce00077659bbc4a1a70d24
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '701'
 ht-degree: 8%
 
 ---
 
 
-# Introduktion till Adobe Experience Manager som headless CMS {#introduction-aem-headless}
+# Introduktion till Adobe Experience Manager som Headless CMS {#introduction-aem-headless}
 
-Lär dig hur du använder Adobe Experience Manager (AEM) som ett headless CMS (Content Management System) med funktioner som Content Fragment Models, Content Fragments och ett GraphQL-API som tillsammans ger en kraftfull, skalbar upplevelse.
+Lär dig hur du använder Adobe Experience Manager (AEM) som ett Headless CMS (Content Management System) med funktioner som Content Fragment Models, Content Fragments och ett GraphQL-API som tillsammans ger en kraftfull, skalbar upplevelse.
 
 Du kan läsa detaljerad dokumentation om de olika funktionerna och/eller följa urvalet av [Headless Journeys för att få en översikt över de första stegen](#first-steps).
 
@@ -46,8 +46,8 @@ AEM as a Cloud Service är ett flexibelt verktyg för en headless-implementering
    * Innehållsfragment skapas av innehållsförfattare med hjälp av AEM Content Fragment Editor.
    * Innehållsfragment lagras som AEM Assets, men kan hanteras via Assets Console eller [konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console).
 1. **Innehålls-API för leverans**
-   * AEM GraphQL API stöder leverans av innehållsfragment.
-   * AEM Assets REST API stöder CRUD-åtgärder för innehållsfragment.
+   * Se [AEM API:er för leverans och hantering av strukturerat innehåll](/help/headless/apis-headless-and-content-fragments.md) för en översikt över de olika tillgängliga API:erna och en jämförelse av några av de berörda begreppen.
+
    * Direktleverans av innehåll är också möjligt med [JSON-exporten av kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html).
 
 ## Dina första steg {#first-steps}

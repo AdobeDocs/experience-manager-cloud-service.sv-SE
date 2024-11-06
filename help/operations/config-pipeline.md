@@ -1,12 +1,12 @@
 ---
-title: Använda konfigurationsförlopp
+title: Använda \s
 description: Lär dig hur du kan använda konfigurationspipelines för att distribuera olika konfigurationer av AEM as a Cloud Service, t.ex. inställningar för vidarebefordran av loggar, rensningsrelaterade underhållsåtgärder och olika CDN-konfigurationer.
 feature: Operations
 role: Admin
 exl-id: bd121d31-811f-400b-b3b8-04cdee5fe8fa
-source-git-commit: 2247fdd919057703f1c35145ba2bc9c6ec47250b
+source-git-commit: 4d8f6f37541c0d712019f21a5684ec4bd5133de3
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '997'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ Lär dig hur du kan använda konfigurationspipelines för att distribuera olika 
 
 En Cloud Manager-konfigurationspipeline distribuerar konfigurationsfiler (skapade i YAML-format) till en målmiljö. Ett antal funktioner i AEM as a Cloud Service kan konfigureras på det här sättet, inklusive loggvidarebefordran, rensningsrelaterade underhållsåtgärder och flera CDN-funktioner.
 
-Konfigurationspipelines kan distribueras via Cloud Manager till olika typer av dev-, stage- och produktionsmiljöer i produktionsprogram (icke-sandlådeprogram). Konfigurationsfilerna kan distribueras till Rapid Development Environment (RDE) med [kommandoradsverktyg](/help/implementing/developing/introduction/rapid-development-environments.md#deploy-config-pipeline).
+Konfigurationspipelines kan distribueras via Cloud Manager till olika typer av dev-, stage- och produktionsmiljöer i produktionsprogram (icke-sandbox). Konfigurationsfilerna kan distribueras till Rapid Development Environment (RDE) med [kommandoradsverktyg](/help/implementing/developing/introduction/rapid-development-environments.md#deploy-config-pipeline).
 
-I följande avsnitt i det här dokumentet finns en översikt över viktig information om hur du kan använda Config-pipelines och hur konfigurationer för dem ska struktureras. Här beskrivs allmänna koncept som delas av alla eller en delmängd av de funktioner som stöds av konfigurationspipelines.
+I följande avsnitt i det här dokumentet ges en översikt över viktig information om hur du kan använda konfigureringspipelines och hur konfigurationer för dem ska struktureras. Här beskrivs allmänna koncept som delas av alla eller en delmängd av de funktioner som stöds av konfigurationspipelines.
 
 * [Konfigurationer som stöds](#configurations) - En lista över konfigurationer som kan distribueras med konfigurationspipelines
 * [Skapar och hanterar konfigurationsförgreningar](#creating-and-managing) - Så här skapar du en konfigurationsförlopp.
@@ -43,10 +43,10 @@ I följande tabell finns en omfattande lista över sådana konfigurationer med l
 | [CDN-felsidor](/help/implementing/dispatcher/cdn-error-pages.md) | `CDN` | Åsidosätt standardfelsidan om AEM inte kan nås och refererar till platsen för statiskt innehåll som lagras automatiskt i konfigurationsfilen |
 | [CDN-rensning](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token) | `CDN` | Deklarera de rensnings-API-nycklar som används för att rensa CDN |
 | [Kundhanterad CDN HTTP-token](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token#CDN-HTTP-value) | `CDN` | Deklarera värdet på den X-AEM-Edge-nyckel som behövs för att anropa Adobe CDN från en kundens CDN |
-| [Grundläggande autentisering](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token#basic-auth) | `CDN` | Deklarera användarnamn och lösenord för en grundläggande dialogruta för autentisering som skyddar vissa URL:er [ (endast tillgängligt för tidig användare)](/help/release-notes/release-notes-cloud/release-notes-current.md#foundation-early-adopter) |
+| [Grundläggande autentisering](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token#basic-auth) | `CDN` | Deklarera användarnamn och lösenord för en grundläggande autentiseringsdialogruta som skyddar vissa URL:er. |
 | [Underhållsaktivitet för versionsrensning](/help/operations/maintenance.md#purge-tasks) | `MaintenanceTasks` | Optimera AEM genom att deklarera regler runt när innehållsversioner ska rensas |
 | [Granskningslogg Rensa underhållsaktivitet](/help/operations/maintenance.md#purge-tasks) | `MaintenanceTasks` | Optimera AEM granskningslogg för bättre prestanda genom att deklarera regler runt när loggar ska rensas |
-| [Loggvidarebefordran](/help/implementing/developing/introduction/log-forwarding.md) | `LogForwarding` | Inte tillgängligt ännu - Konfigurera slutpunkterna och autentiseringsuppgifterna för vidarebefordran av loggar till olika mål (t.ex. Splunk, Datadog, HTTPS) |
+| [Loggvidarebefordran](/help/implementing/developing/introduction/log-forwarding.md) | `LogForwarding` | Konfigurera slutpunkterna och autentiseringsuppgifterna för vidarebefordran av loggar till olika mål, inklusive Azure Blob Storage, DataDig, HTTPS, Elasticsearch, Splunk) |
 
 ## Skapa och hantera konfigurationsförlopp {#creating-and-managing}
 
@@ -70,7 +70,7 @@ Varje konfigurationsfil börjar med egenskaper som liknar följande exempelkodfr
 
 | Egenskap | Beskrivning | Standard |
 |---|---|---|
-| `kind` | En sträng som bestämmer vilken typ av konfiguration, t.ex. vidarebefordran av loggar, trafikfilterregler eller begäranomformningar | Obligatoriskt, ingen standard |
+| `kind` | En sträng som avgör vilken typ av konfiguration, till exempel vidarebefordran av loggfiler, trafikfilterregler eller begäranomvandlingar | Obligatoriskt, ingen standard |
 | `version` | En sträng som representerar schemaversionen | Obligatoriskt, ingen standard |
 | `envTypes` | Den här strängmatrisen är en underordnad egenskap för noden `metadata`. Möjliga värden är dev, stage, prod eller valfri kombination och avgör för vilka miljötyper konfigurationen ska bearbetas. Om matrisen till exempel bara innehåller `dev` läses konfigurationen inte in i scen- eller produktmiljöer, även om konfigurationen distribueras där. | Alla miljötyper (dev, stage, prod) |
 
@@ -111,7 +111,7 @@ Filstrukturen ser ut ungefär så här:
   logForwarding.yaml
 ```
 
-Använd den här strukturen när samma konfiguration är tillräcklig för alla miljöer och för alla typer av konfigurationer (CDN, loggvidarebefordran osv.). I det här scenariot skulle matrisegenskapen `envTypes` innehålla alla miljötyper.
+Använd den här strukturen när samma konfiguration räcker för alla miljöer och för alla typer av konfigurationer (CDN, loggvidarebefordran osv.). I det här scenariot skulle matrisegenskapen `envTypes` innehålla alla miljötyper.
 
 ```yaml
    kind: "cdn"

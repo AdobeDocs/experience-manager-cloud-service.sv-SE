@@ -4,13 +4,13 @@ description: Layout och utseende för Adaptive Forms på olika enheter styrs av 
 feature: Adaptive Forms, Core Components
 keywords: Layout för adaptiv form baserad på kärnkomponenter, olika layouter för formulär, AEM för dynamiska formulärlayouter, AEM Cloud Service formulärlayouter, formulärlayouttyper i AEM kärnkomponenter, adaptiva formulärlayouter
 role: User, Developer, Admin
-source-git-commit: 9f14950170cc92d1ab433fdaa1a5d68b4dc53484
+exl-id: dcc01d84-0d39-4fa8-ac47-71a9aba91b1e
+source-git-commit: 7cb963794ca0d7a12d8007564c9fd6e49b53d5c4
 workflow-type: tm+mt
-source-wordcount: '2094'
+source-wordcount: '2091'
 ht-degree: 0%
 
 ---
-
 
 # Layoutfunktioner i Adaptive Forms baserat på kärnkomponenter
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Adaptiv Forms innehåller förstklassiga komponenter för effektiv layout och design av blanketterna. Layouten styr hur komponenter visas i ett formulär. Adaptiv Forms har stöd för olika layouter: panel, guide, dragspelspanel, flikar på översta/vågräta flikar samt tabbar på vänster/lodräta flikar.
 
-![Typer av layout](/help/forms/assets/generic-layout-hero-image.png){align="center"}
+<!-- ![Types of Layout](/help/forms/assets/generic-layout-hero-image.png){align="center"}-->
 
 ## Förutsättning
 
@@ -261,7 +261,6 @@ På samma sätt kan du dölja titlar för de andra två panelerna. När du är k
    ![Komponenter i den tredje panelen](/help/forms/assets/panel-3-component.png)
 
 1. Klicka på **[!UICONTROL Preview]** i det övre högra hörnet av redigeringsmiljön.
-
    ![Vågrät layout](/help/forms/assets/horizontal-layout.gif)
 
 Du kan också [dra och släppa komponenter](#extra-bytes) för att lägga till formulärkomponenterna på varje panel.
