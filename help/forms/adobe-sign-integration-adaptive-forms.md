@@ -4,10 +4,9 @@ description: Lär dig hur du konfigurerar Adobe Acrobat Sign för [!DNL AEM Form
 feature: Adaptive Forms, Acrobat Sign
 role: Admin, User
 level: Intermediate
-exl-id: 609c3072-1c3d-43fa-898a-b4e62db8483b
-source-git-commit: 2128dac489c270d296f86b56ae811556fb5fe87e
+source-git-commit: 551123925e43c98f8870f4a5da028d211f5c8ffb
 workflow-type: tm+mt
-source-wordcount: '1946'
+source-wordcount: '2022'
 ht-degree: 0%
 
 ---
@@ -57,7 +56,8 @@ När förutsättningarna är uppfyllda utför du följande steg för att konfigu
 
 1. Nu kan du **[!UICONTROL Select solution]** välja [!DNL Adobe Acrobat Sign].
 
-   ![Adobe Acrobat Sign Solutions](assets/adobe-sign-solution.png)
+   <!--![Adobe Acrobat Sign Solutions](assets/adobe-sign-solution.png)-->
+   ![Adobe Acrobat Sign Solutions-konfiguration](assets/adobe-sign-solution-config.png)
 
 <!--
 
@@ -104,11 +104,17 @@ När förutsättningarna är uppfyllda utför du följande steg för att konfigu
    * [!DNL widget_write]
    * [!DNL workflow_read]
 
+   
+   > Du kan ändra omfattningsmodifieraren från `self` till `account` direkt från AEM som anges i steg 12.
+
    Stegvis information om hur du konfigurerar OAuth-inställningar för ett [!DNL Adobe Acrobat Sign]-program och hämtar nycklarna finns i [Konfigurera autentiseringsinställningar för programmets ](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md) utvecklardokumentation.
 
    ![OAuth-konfiguration](/help/forms/assets/oauthconfig-new.png)
 
 1. Gå tillbaka till sidan **[!UICONTROL Create Adobe Acrobat Sign Configuration]**. På fliken **[!UICONTROL Settings]** anger du [**[!UICONTROL Client ID]** (kallas även program-ID) och **[!UICONTROL Client Secret]**]. Använd [Klient-ID och Klienthemlighet för det Adobe Acrobat Sign-program](https://opensource.adobe.com/acrobat-sign/developer_guide/helloworld.html#get-the-app-id-and-secret) som du skapade i föregående steg.
+
+1. I avsnittet [!UICONTROL Authorization Scope] kan du ändra scopen till antingen &quot;account&quot; eller &quot;self&quot; genom att lägga till prefixet &quot;self&quot; eller &quot;account&quot; i scopen efter behov.
+   ![Auktoriseringsomfång](/help/forms/assets/authorization-scope.png)
 
 1. Välj alternativet **[!UICONTROL Enable Adobe Acrobat Sign for attachments]** om du vill lägga till filer som är kopplade till ett adaptivt formulär i motsvarande [!DNL Adobe Acrobat Sign] -dokument som skickats för signering.
 
@@ -263,6 +269,10 @@ Om du till exempel vill köra konfigurationstjänsten varje dag kl. 00:00 anger 
 
 [Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service om du vill ange värden för en konfiguration.
 
+## Vanliga frågor
+
+* **F: Kan jag återge Adobe Sign GovCloud-signatursidan i en iframe?**
+* **S:** Ja, du kan återge Adobe Sign GovCloud-signatursidan i en iframe.
 
 >[!MORELIKETHIS]
 >
