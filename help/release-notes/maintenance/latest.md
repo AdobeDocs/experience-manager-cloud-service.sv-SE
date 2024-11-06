@@ -4,10 +4,10 @@ description: Aktuell underhållsversionsinformation för  [!DNL Adobe Experience
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: c638039ea957f5f7ae0dc64f49c3ace4381cb040
+source-git-commit: dc7f95ac98fd300a803e307ce11a51937d604a07
 workflow-type: tm+mt
-source-wordcount: '583'
-ht-degree: 1%
+source-wordcount: '613'
+ht-degree: 0%
 
 ---
 
@@ -66,6 +66,10 @@ Ingen.
 ### Föråldrade funktioner och API:er {#deprecated-18459}
 
 Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs i dokumentet [Inaktuella och Borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
+
+### Säkerhetskorrigeringar {#security-18459}
+
+AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan för din plattform. Denna underhållsrelease åtgärdar 21 identifierade sårbarheter, vilket stärker vårt engagemang för robust systemskydd.
 
 ### Inbäddade tekniker {#embedded-tech-18459}
 
