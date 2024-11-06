@@ -4,9 +4,9 @@ description: Aktuell underhållsversionsinformation för  [!DNL Adobe Experience
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: dc7f95ac98fd300a803e307ce11a51937d604a07
+source-git-commit: 90e1ca38bd517215a631573987462a716bfed160
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '629'
 ht-degree: 0%
 
 ---
@@ -56,8 +56,11 @@ Funktionsaktiveringen i 2024.11.0 kommer att innehålla alla funktioner som finn
 * SITES-25456: Händelser: När du flyttar en sida genereras en sidborttagen händelse förutom händelsen för sidflyttning.
 * SITES-25658: Events: The tier and sourceUrl are not populated in the page content state events.
 * SITES-6497: Startar: Det går inte att skapa sidan vid start.
+* SITES-25938: Startar: Oväntat borttagningspostöversättningsprojekt.
 * SITES-25393: Edge Delivery med Universal Editor: Textnoder förloras vid återgivning av formaterad RTF med ett enda stycke.
 * SITES-24643: Edge Delivery med Universal Editor: Metadataattribut för OpenGraph och twitter fungerar inte i sidmetadatamodell.
+* SITES-25401: Experience Fragments: Långsam uppdatering av XF-referens
+
 
 ### Kända fel {#known-issues-18459}
 
