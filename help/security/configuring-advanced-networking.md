@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
 feature: Security
 role: Admin
-source-git-commit: e1ac26b56623994dfbb5636993712844db9dae64
+source-git-commit: 2a7d46e91bbd6ca96bd8b7fd5d4d84cf69bdee36
 workflow-type: tm+mt
-source-wordcount: '5618'
+source-wordcount: '5524'
 ht-degree: 0%
 
 ---
@@ -398,7 +398,7 @@ Kontrollera loggarna i måltjänsten om de är tillgängliga för att verifiera 
 
 ## VPN (Virtual Private Network) {#vpn}
 
-Med ett VPN kan du ansluta till en lokal infrastruktur eller ett datacenter från författaren, publiceringen eller förhandsgranskningsinstanserna. Detta kan till exempel vara användbart för att skydda åtkomsten till en databas. Det gör det även möjligt att ansluta till SaaS-leverantörer, t.ex. en CRM-leverantör som stöder VPN eller ansluter från ett företagsnätverk till AEM as a Cloud Service-författare, förhandsgranskning eller publiceringsinstans.
+Med ett VPN kan du ansluta till en lokal infrastruktur eller ett datacenter från författaren, publiceringen eller förhandsgranskningsinstanserna. Detta kan till exempel vara användbart för att skydda åtkomsten till en databas. Det gör det även möjligt att ansluta till SaaS-leverantörer, t.ex. en CRM-leverantör som stöder VPN.
 
 De flesta VPN-enheter med IPSec-teknik stöds. Läs informationen i kolumnen **RouteBased configuration instructions** i [den här listan över enheter.](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices#devicetable) Konfigurera enheten enligt beskrivningen i tabellen.
 
@@ -558,7 +558,9 @@ Tabellen nedan beskriver trafikdirigering.
 
 ### Användbara domäner för konfiguration {#vpn-useful-domains-for-configuration}
 
-Tabellen nedan beskriver en uppsättning domäner och IP-adresser som är användbara för konfiguration och utveckling.
+Bilden nedan visar en visuell representation av en uppsättning domäner och associerade IP-adresser som är användbara för konfiguration och utveckling. Tabellen längre ned i diagrammet beskriver dessa domäner och IP-adresser.
+
+![VPN-domänkonfiguration](/help/security/assets/AdvancedNetworking.jpg)
 
 <table>
 <thead>
@@ -581,21 +583,6 @@ Tabellen nedan beskriver en uppsättning domäner och IP-adresser som är använ
   </tr>
 </tbody>
 </table>
-
-### Begränsa VPN till ingångsanslutningar {#restrict-vpn-to-ingress-connections}
-
-Om du bara vill tillåta VPN-åtkomst till AEM, kan tillåtelselista i miljön konfigureras i Cloud Manager så att endast den IP som definieras av `p{PROGRAM_ID}.external.adobeaemcloud.com` tillåts prata med miljön. Detta kan göras på samma sätt som andra IP-baserade tillåtelselista i Cloud Manager.
-
-Om reglerna måste vara sökvägsbaserade kan du använda http-standarddirektiv på Dispatcher-nivå för att neka eller tillåta vissa IP-adresser. De bör se till att de önskade sökvägarna inte heller är tillgängliga vid CDN så att begäran alltid kommer till ursprungsläget.
-
-#### Exempel på Httpd-konfiguration {#httpd-example}
-
-```
-Order deny,allow
-Deny from all
-Allow from 192.168.0.1
-Header always set Cache-Control private
-```
 
 ## Aktivera avancerade nätverkskonfigurationer i miljöer {#enabling}
 
