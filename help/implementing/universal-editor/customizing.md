@@ -4,9 +4,9 @@ description: Lär dig mer om de olika tilläggspunkterna och andra funktioner so
 exl-id: 8d6523c8-b266-4341-b301-316d5ec224d7
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 34ae1d57e77e209e179aca5c556954dbfb170498
+source-git-commit: 6612abbd95599791ff9571b59154aa8ab34fb5f8
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '646'
 ht-degree: 0%
 
 ---
@@ -120,7 +120,7 @@ Villkoren kan definieras med hjälp av [JsonLogic-schema.](https://jsonlogic.com
 
 Du kan ange en anpassad URL för förhandsgranskning via en `urn:adobe:aue:config:preview`-metakonfiguration, som öppnas när du klickar på knappen **Öppna sida** i [redigerarens övre högra verktygsfält.](/help/sites-cloud/authoring/universal-editor/navigation.md#universal-editor-toolbar)
 
-Detta är särskilt användbart för program med särskilda förhandsgranskningskrav, t.ex. de [som använder Edge Delivery Services med WYSIWYG-redigering.](/help/edge/wysiwyg-authoring/authoring.md)
+Detta är särskilt användbart för program med särskilda förhandsgranskningskrav, till exempel de [som använder Edge Delivery Services med WYSIWYG-redigering.](/help/edge/wysiwyg-authoring/authoring.md)
 
 Det gör du genom att helt enkelt ta med önskad URL för förhandsgranskning i en meta-tagg för det instrumenterade programmet, som i följande exempel.
 
