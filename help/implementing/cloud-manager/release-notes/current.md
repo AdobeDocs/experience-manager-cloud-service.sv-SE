@@ -1,18 +1,19 @@
 ---
-title: Versionsinformation för Cloud Manager 2024.10.0 i Adobe Experience Manager as a Cloud Service
-description: Läs mer om versionsinformationen för Cloud Manager 2024.10.0 i AEM as a Cloud Service.
+title: Versionsinformation för Cloud Manager 2024.11.0 i Adobe Experience Manager as a Cloud Service
+description: Läs om Cloud Manager 2024.11.0 i AEM as a Cloud Service.
 feature: Release Information
 role: Admin
-source-git-commit: 9cde6e63ec452161dbeb1e1bfb10c75f89e2692c
+exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
+source-git-commit: 87293526ca9c10a142bc1d1d3a35562b171da385
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '779'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation om Cloud Manager 2024.10.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
+# Versionsinformation om Cloud Manager 2024.11.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
-På den här sidan visas versionsinformation för Cloud Manager version 2024.10.0 i AEM as a Cloud Service.
+Läs om Cloud Manager 2024.11.0 i AEM (Adobe Experience Manager) as a Cloud Service.
 
 >[!NOTE]
 >
@@ -20,53 +21,31 @@ På den här sidan visas versionsinformation för Cloud Manager version 2024.10.
 
 ## Releasedatum {#release-date}
 
-Lanseringsdatumet för Cloud Manager version 2024.10.0 i AEM as a Cloud Service är 3 oktober 2024.
+Lanseringsdatumet för Cloud Manager 2024.11.0 i AEM as a Cloud Service är 7 november 2024.
 
-Nästa version är planerad till 14 november 2024.
+Nästa planerade version är 5 december 2024.
 
 ## Nyheter {#what-is-new}
 
-* <!-- BOTH CS & AMS --> Den AEM Archetype-versionen som används i Cloud Manager har nu uppdaterats till version 26. Se [https://github.com/adobe/aem-project-archetype/releases](https://github.com/adobe/aem-project-archetype/releases)
+* Upplev det senaste inom Edge Delivery Services-innovation med AEM Cloud Service - nu tillgängligt att utforska i ditt Sandbox-program. [Läs mer](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md#auto-creation) <!-- (CMGR-62319) -->
+* På sidan Domäninställningar i AEM Cloud Manager finns nu en sökfunktion som gör att du snabbt kan hitta domäner efter namn. Du kan ange nyckelord i sökfältet för att filtrera och visa matchande domäner, vilket gör det enklare att hantera flera domäner effektivt. Dessutom innehåller sidan statusfilter, till exempel **Verifierad** och **Inte verifierad**, för att förfina sökresultaten ytterligare. <!-- (CMGR-62615) -->
 
-<!-- (CMGR-59817) -->
-
-* <!-- CS ONLY --> När du lade till en ny anpassad domän medförde den tidigare verifieringsmetoden en lång DNS-verifieringsprocess. Adobe har förenklat denna process för sina kunder. Nu behöver du bara tillhandahålla ett giltigt SSL-certifikat (EV eller OV) som fungerar som bevis på ägarskap. Du behöver inte längre uppdatera TXT-poster i DNS.
-
-  >[!NOTE]
-  >
-  >Den här funktionen gäller endast för EV- och OV-certifikat som hanteras av kunden. DV-certifikat som hanteras av Adobe kräver fortfarande en CNAME-post.
-
-  Se [Lägg till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).
-
-  ![Verifiera domän för ett kundhanterat EV/OV-certifikat](/help/implementing/cloud-manager/assets/verify-domain-customer-managed-step.png)
-
-* <!-- CS ONLY --> När du lägger till eller redigerar nätverksinfrastruktur valideras värdena i fälten för IP-adress och nätverksmask enligt följande regler:
-
-   * Adressutrymmet får inte överlappa adresserna som är definierade i anslutningsadressutrymmet.
-   * DNS-adresser måste antingen tillhöra den nätverksmask som definieras i anslutningsadressutrymmet eller vara offentliga.
-
-  ![Dialogrutan Lägg till nätverksinfrastruktur](/help/implementing/cloud-manager/release-notes/assets/network-infrastructure-add.png)
-
-* <!-- CS ONLY --> Ändringar görs i formatet för miljödistributionsloggar för indexering, installation av ändringsbart innehåll och transformeringsjobb.
-
-  >[!NOTE]
-  >
-  >Den här ändringen planeras att genomföras stegvis med ett förväntat slutdatum i december 2024.
-
-  ![Distribuera till produktionskort](/help/implementing/cloud-manager/release-notes/assets/deploy-to-production-card.png)
-
-  Loggens format kommer att ändras från en enkel post som visas i följande:
-
-  ![Loggfil med enkla poster](/help/implementing/cloud-manager/release-notes/assets/log-file-simple-entry.png)
-
-  Till en JSON-post som visas i följande:
-
-  ![Loggfil som visar json-poster](/help/implementing/cloud-manager/release-notes/assets/log-file-json-entry.png)
-
+![Sökfält i domäninställningar](/help/implementing/cloud-manager/assets/domain-settings-search.png)
 
 ## Program för tidigt antagande {#early-adoption}
 
 Bli en del av Cloud Manager program för tidig användning och få möjlighet att testa kommande funktioner.
+
+### AEM {#aem-home}
+
+AEM Home introducerar en central startpunkt för hantering av innehåll, resurser och webbplatser i Adobe Experience Manager. AEM Home är utformat för att leverera en personaliserad upplevelse och du kan navigera i det AEM ekosystemet sömlöst efter dina roller och mål. Det är en guide som ger viktiga insikter och rekommenderade åtgärder som hjälper er att uppnå era mål på ett effektivt sätt. Med en tydlig, personstyrd layout ger AEM Home snabb åtkomst till viktiga verktyg, vilket ger en smidig och effektiv upplevelse i alla AEM funktioner.
+
+AEM Home erbjuder en optimerad upplevelse som fokuserar på att förbättra arbetsflöden, prioritera mål och leverera resultat. Genom att välja in kan du påverka AEM Hem:s utveckling genom att ge feedback som hjälper till att forma dess framtid och ökar värdet för hela AEM.
+
+Om du är intresserad av att testa den nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till [Grp-AemHome@adobe.com](mailto:Grp-AemHome@adobe.com) från den e-postadress som är kopplad till din Adobe ID. Var noga med att inkludera följande information:
+
+* Den roll som bäst passar din profil: Innehållsförfattare, Utvecklare, Affärsägare, Administratör eller Annan (ange en beskrivning).
+* Din primära AEM: AEM Sites, AEM Assets, AEM Forms, Cloud Manager eller annan (ange en beskrivning).
 
 ### Använd din egen Git - nu med stöd för GitLab och Bitbucket {#gitlab-bitbucket}
 
@@ -82,12 +61,17 @@ Se [Lägg till externa databaser i Cloud Manager](/help/implementing/cloud-manag
 >
 >För närvarande gäller kvalitetskontrollerna av koden för pull-begäran som är klar endast för GitHub-värdbaserade databaser, men en uppdatering som utökar den här funktionen till andra Git-leverantörer finns i arbetsflödet.
 
-Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com) från den e-postadress som är kopplad till din Adobe ID. Ta med vilken Git-plattform du vill använda och om du har en privat/offentlig eller företagsdatabasstruktur.
+Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com) från den e-postadress som är kopplad till din Adobe ID. Ta med vilken Git-plattform du vill använda och om du har en privat/offentlig eller företagsdatabasstruktur. —>
 
 
-<!-- ## Bug fixes
+## Felkorrigeringar
+
+* En uppdatering åtgärdade ett problem i SonarQube där hårdkodade lösenord inte upptäcktes i vissa fall. Korrigeringen innehåller nu en utökad mönsterkontroll och anpassar sig till standardstandarder för identifiering i SonarQube. <!-- CMGR-62682 -->
+* När du försöker uppdatera ett SSL-certifikat i Cloud Manager visas ett okänt fel efter att du klickat på **[!UICONTROL Update]** i dialogrutan **[!UICONTROL View & Update SSL Certificate]**. <!-- CMGR-62848 -->
+* I Cloud Manager misslyckas uppdateringen av SSL-certifikat med felet&quot;Det nya certifikatet matchar inte befintliga domäner&quot;, även när domänerna är identiska men har skillnader i versaler (gemener och versaler). Uppdateringen identifierar nu domäner som skiftlägeskänsliga, i enlighet med RFC-standarder. <!-- CMGR-62844 -->
+* I Cloud Manager fastnade IP-bindningar för Tillåtelselista i ett körningsläge eftersom länkar för främmande nycklar till domänkonfigurationer saknades. Korrigeringen säkerställer nu att bindningar för IP-Tillåtelselista länkar korrekt till associerade domänkonfigurationer. <!-- CMGR-62838 -->
+* Cloud Manager validerar OCSP-statusen (Online Certificate Status Protocol) för ett SSL-certifikat. Adobe rekommenderar att du även validerar integriteten för ditt certifikat lokalt med ett verktyg som `openssl verify -untrusted intermediate.pem certificate.pem` innan du installerar det via Cloud Manager. Mer information finns i [dokumentationen om SSL-certifikatkrav](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/introduction-to-ssl-certificates#requirements). <!-- CMGR-62341  -->
 
 
 
-
-## Known issues {#known-issues} -->
+<!-- ## Known issues {#known-issues} -->
