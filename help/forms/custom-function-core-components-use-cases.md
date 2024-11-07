@@ -5,9 +5,9 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: df92b91e-f3b0-4a08-bd40-e99edc9a50a5
-source-git-commit: 747203ccd3c7e428e2afe27c56e47c3ec18699f6
+source-git-commit: 88b9686a1ceec6729d9657d4bb6f458d9c411065
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2134'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,12 @@ ht-degree: 0%
 Artikeln innehåller detaljerade exempel på anpassade funktioner för ett adaptivt formulär baserat på kärnkomponenter, och ger värdefulla insikter om hur de kan implementeras i olika scenarier. Anpassade funktioner används i regelredigeraren för en AEM Forms, vilket gör att utvecklare kan definiera och styra logiken som styr formulärbeteendet.
 I den här artikeln beskrivs olika implementeringar av anpassade funktioner, och den visar hur de kan användas för att skräddarsy formulär för att uppfylla specifika krav och förbättra den övergripande funktionaliteten.
 
-## Ange alternativ för listrutor med anpassade funktioner
+## Fylla i alternativen i listrutan med anpassade funktioner
 
-Regelredigeraren i Core Components stöder inte egenskapen **Set Options of** för att ange alternativ för listrutelistan vid körning. Du kan dock ange alternativ för listrutor med anpassade funktioner.
+Regelredigeraren i kärnkomponenterna stöder inte egenskapen **Set Options** för att fylla i listrutealternativ dynamiskt vid körning. Du kan dock fylla i alternativ för listrutor med anpassade funktioner, som gör att du kan hämta alternativ baserat på en viss logik. Anpassade funktioner ger större flexibilitet och kontroll över hur och när listrutorna fylls i, vilket förbättrar användarupplevelsen.
 
-Lägg till följande kod i den anpassade funktionen enligt beskrivningen i avsnittet [create-custom-function](/help/forms/custom-function-core-component-create-function.md) för att ange alternativ för listrutor med anpassade funktioner:
+Om du vill fylla i alternativen i listrutan med en anpassad funktion lägger du till följande kod enligt beskrivningen i avsnittet [create-custom-function](/help/forms/custom-function-core-component-create-function.md) :
+
 
 ```javascript
     /**
