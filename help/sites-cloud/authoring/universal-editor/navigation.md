@@ -5,7 +5,7 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 213ef604-1a09-41f1-b051-3d8254b8164f
-source-git-commit: 90ca80925351157e766f8400c2b1d80db6161bf0
+source-git-commit: a7b48559e5bf60c86fecd73a8bcef6c9aaa03b80
 workflow-type: tm+mt
 source-wordcount: '1615'
 ht-degree: 0%
@@ -63,7 +63,7 @@ Gränssnittet är indelat i dessa huvudområden.
 * [Rubriken Experience Cloud](#experience-cloud-header)
 * [Verktygsfältet för den universella redigeraren](#universal-editor-toolbar)
 * [Redigeraren](#editor)
-* [Egenskapsfältet](#properties-rail)
+* [Egenskapspanelen](#properties-rail)
 
 ![Gränssnittet i den universella redigeraren](assets/ui.png)
 
@@ -224,19 +224,19 @@ Redigeraren tar upp större delen av fönstret och är där sidan som anges i [p
 
 Om redigeraren är i [förhandsgranskningsläge](#preview-mode) kan innehållet navigeras och du kan följa länkar, men du kan inte redigera innehållet.
 
-### Properties Rail {#properties-rail}
+### Egenskapspanelen {#properties-rail}
 
-Egenskapsfältet visas alltid längs den högra sidan av redigeraren. Beroende på dess läge kan det visa information för en komponent som är markerad i innehållet eller hierarkin för sidinnehållet.
+Egenskapspanelen finns alltid till höger om redigeraren. Beroende på dess läge kan det visa information för en komponent som är markerad i innehållet eller hierarkin för sidinnehållet.
 
-![Egenskapsfältet](assets/properties-rail.png)
+![Egenskapspanelen](assets/properties-rail.png)
 
 #### Egenskapsläge {#properties-mode}
 
-I egenskapsläget visar rälen egenskaperna för den komponent som är markerad i redigeraren. Det här är standardläget för egenskapsfältet när en sida läses in.
+I egenskapsläget visar panelen egenskaperna för den komponent som är markerad i redigeraren. Det här är standardläget för egenskapspanelen när en sida läses in.
 
 ![Egenskapsläge](assets/properties-mode.png)
 
-Beroende på vilken typ av komponent du väljer kan information visas och ändras i egenskapsfältet.
+Beroende på vilken typ av komponent du väljer kan information visas och ändras på egenskapspanelen.
 
 ![Komponentinformation](assets/component-details.png)
 
@@ -248,7 +248,7 @@ Alla komponenter har inte information som kan visas och/eller redigeras.
 
 #### Läge för innehållsträd {#content-tree-mode}
 
-I innehållsträdsläge visar rälen sidinnehållets hierarki.
+I innehållsträdesläget visas sidinnehållets hierarki på panelen.
 
 ![Läge för innehållsträd](assets/content-tree-mode.png)
 
@@ -262,7 +262,7 @@ När du väljer ett objekt i innehållsträdet rullar redigeraren till det inneh
 
 ##### Öppna i CF Editor {#edit}
 
-När du redigerar visas alternativen för den markerade komponenten i egenskapsfältet, där du kan redigera den markerade komponenten. Om den markerade komponenten är ett innehållsfragment kan du även välja knappen **Öppna i CF-redigeraren** .
+När du redigerar visas alternativen för den markerade komponenten på egenskapspanelen, där du kan redigera den markerade komponenten. Om den markerade komponenten är ett innehållsfragment kan du även välja knappen **Öppna i CF-redigeraren** .
 
 ![Öppna i CF Editor-ikon](assets/open-in-cf-editor.png)
 
@@ -276,7 +276,7 @@ Beroende på arbetsflödets behov kan du behöva redigera innehållsfragmentet i
 
 ##### Lägg till {#add}
 
-Om du väljer en behållarkomponent i innehållsträdet eller i redigeraren visas alternativet Lägg till i egenskapsfältet.
+Om du väljer en behållarkomponent i innehållsträdet eller i redigeraren visas alternativet Lägg till på egenskapspanelen.
 
 ![Lägg till ikon](assets/ue-add-component-icon.png)
 
@@ -290,7 +290,7 @@ Om du trycker eller klickar på knappen Lägg till öppnas en listruta med kompo
 
 ##### Duplicera {#duplicate}
 
-Om du markerar en komponent i en behållarkomponent antingen i innehållsträdet eller i redigeraren visas alternativet Duplicera i egenskapsfältet.
+Om du markerar en komponent i en behållarkomponent antingen i innehållsträdet eller i redigeraren visas alternativet Duplicera på egenskapspanelen.
 
 ![Duplicera ikon](assets/duplicate.png)
 
@@ -298,7 +298,7 @@ Om du trycker eller klickar på den duplicerade knappen [dupliceras den markerad
 
 ##### Ta bort {#delete}
 
-Om du markerar en komponent i en behållarkomponent antingen i innehållsträdet eller i redigeraren visas borttagningsalternativet på egenskapslisten.
+Om du markerar en komponent i en behållarkomponent antingen i innehållsträdet eller i redigeraren visas borttagningsalternativet på egenskapspanelen.
 
 ![Ta bort ikon](assets/ue-delete-component-icon.png)
 
@@ -310,7 +310,7 @@ Om du trycker på eller klickar på borttagningsknappen [tas komponenten bort.](
 
 #### Ytterligare knappar {#additional-properties-rail-buttons}
 
-Universal Editor ger en anpassningsbar och utbyggbar redigeringsfunktion. Om du ser ytterligare knappar i egenskapsfältet har den universella redigeraren utökats.
+Universal Editor ger en anpassningsbar och utbyggbar redigeringsfunktion. Om du ser ytterligare knappar på egenskapspanelen har den universella redigeraren utökats.
 
 * Mer information om tilläggsmöjligheter finns i [Anpassa och utöka den universella redigeraren.](/help/implementing/universal-editor/customizing.md)
 * Mer information om hur ett enskilt tillägg fungerar finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/)

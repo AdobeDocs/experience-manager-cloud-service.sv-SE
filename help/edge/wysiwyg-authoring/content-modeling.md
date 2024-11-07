@@ -4,7 +4,7 @@ description: Lär dig hur innehållsmodellering fungerar för WYSIWYG Authoring 
 exl-id: e68b09c5-4778-4932-8c40-84693db892fd
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 058f3c24ac883315dfaa9206a8c2caa4bb005d07
+source-git-commit: a7b48559e5bf60c86fecd73a8bcef6c9aaa03b80
 workflow-type: tm+mt
 source-wordcount: '2196'
 ht-degree: 0%
@@ -112,7 +112,7 @@ För varje block gäller följande:
 * Blocknamnet måste definieras, som ska återges i blockets tabellrubrik.
    * Blocknamnet används för att hämta rätt format och skript för att dekorera blocket.
 * Kan definiera ett [modell-ID.](/help/implementing/universal-editor/field-types.md#model-structure)
-   * Modell-ID är en referens till komponentens modell, som definierar de fält som är tillgängliga för författaren i egenskapsfältet.
+   * Modell-ID är en referens till komponentens modell, som definierar de fält som är tillgängliga för författaren på egenskapspanelen.
 * Kan definiera ett [filter-ID.](/help/implementing/universal-editor/customizing.md#filtering-components)
    * Filter-ID är en referens till komponentens filter, som gör att du kan ändra redigeringsbeteendet, till exempel genom att begränsa vilka underordnade som kan läggas till i blocket eller avsnittet eller vilka RTE-funktioner som är aktiverade.
 

@@ -5,7 +5,7 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90ca80925351157e766f8400c2b1d80db6161bf0
+source-git-commit: a7b48559e5bf60c86fecd73a8bcef6c9aaa03b80
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Det är enkelt och intuitivt att redigera innehåll. När du för musen över in
 >
 >Som standard markeras det för redigering när du trycker eller klickar på ett innehåll. Om du vill navigera i ditt innehåll genom att följa länkar växlar du till [förhandsgranskningsläget.](/help/sites-cloud/authoring/universal-editor/navigation.md#preview-mode)
 
-Beroende på vilket innehåll du väljer kan du ha olika redigeringsalternativ på plats och du kan få ytterligare information och alternativ för innehållet i [egenskapsfältet.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail)
+Beroende på vilket innehåll du väljer kan du ha olika redigeringsalternativ på plats och du kan få ytterligare information och alternativ för innehållet på egenskapspanelen för [.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail)
 
 ### Redigera oformaterad text {#edit-plain-text}
 
@@ -51,11 +51,11 @@ Du kan redigera texten på plats genom att dubbelklicka eller dubbeltrycka på k
 
 Den tunna blå konturen ändras till en blå kontur som anger att den är markerad och en markör visas. Gör ändringarna och tryck sedan på Enter eller markera utanför textrutan för att spara ändringarna.
 
-När du väljer att markera textkomponenten visas information om den i [egenskapsfältet.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail) Du kan även redigera texten i skenan.
+När du väljer att markera textkomponenten visas information om den på egenskapspanelen för [.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail) Du kan också redigera texten på panelen.
 
-![Redigera text i egenskapsfältet](assets/ue-editing-text-component-rail.png)
+![Redigera text på egenskapspanelen](assets/ue-editing-text-component-rail.png)
 
-Dessutom finns information om texten i egenskapsfältet. Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet i egenskapsfältet.
+Information om texten finns också på egenskapspanelen. Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet på egenskapspanelen.
 
 ### Redigera RTF {#edit-rich-text}
 
@@ -73,9 +73,9 @@ Snabbmenyn öppnas ovanför det formaterade textblocket och innehåller grundlä
 
 Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet.
 
-#### The Properties Rail {#properties-rail}
+#### Egenskapspanelen {#properties-rail}
 
-[egenskapsfältet](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail) visar ett objekt för den markerade texten. Tryck på posten för att öppna en dialogruta med en större arbetsyta för att redigera texten.
+[egenskapspanelen](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail) visar ett objekt för den markerade texten. Tryck på posten för att öppna en dialogruta med en större arbetsyta för att redigera texten.
 
 ![Dialogrutan för textredigering](assets/rich-text-canvas.png)
 
@@ -83,30 +83,30 @@ Tryck eller klicka på **Avbryt** eller **Klar** för att ignorera eller spara �
 
 ### Redigera media {#edit-media}
 
-Du kan visa information om den i [egenskapsfältet.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail)
+Du kan visa information om den i panelen [Egenskaper.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail)
 
 ![Redigerar media](assets/ue-edit-media.png)
 
-1. Tryck eller klicka på förhandsvisningen av den markerade bilden i egenskapsfältet.
+1. Tryck eller klicka på förhandsvisningen av den markerade bilden på egenskapspanelen.
 1. Fönstret [Resursväljaren](/help/assets/overview-asset-selector.md#using-asset-selector) öppnas så att du kan välja en resurs.
 1. Välj för att välja en ny resurs.
-1. Välj **Välj** om du vill gå tillbaka till egenskapsfältet där resursen ersattes.
+1. Välj **Välj** om du vill gå tillbaka till egenskapspanelen där resursen ersattes.
 
 Ändringarna sparas automatiskt i innehållet.
 
 ### Redigera innehållsfragment {#edit-content-fragment}
 
-Om du väljer ett [innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) kan du redigera informationen i fältet [egenskaper.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail)
+Om du väljer ett [innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) kan du redigera informationen i [egenskapspanelen.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail)
 
 ![Redigera ett innehållsfragment](assets/ue-edit-cf.png)
 
-De fält som definieras i innehållsmodellen för det valda innehållsfragmentet visas och kan redigeras i egenskapsfältet.
+De fält som definieras i innehållsmodellen för det valda innehållsfragmentet visas och kan redigeras på egenskapspanelen.
 
-Om du markerar ett fält som är relaterat till ett innehållsfragment läses innehållsfragmentet in i komponentspåret och fältet rullas automatiskt till.
+Om du markerar ett fält som är relaterat till ett innehållsfragment läses innehållsfragmentet in på komponentpanelen och fältet rullas automatiskt till.
 
-Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet i egenskapsfältet.
+Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet på egenskapspanelen.
 
-Om du vill redigera ditt innehållsfragment i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) i stället trycker eller klickar du på knappen [**Öppna i CF-redigeraren** ](/help/sites-cloud/authoring/universal-editor/navigation.md#edit) i egenskapsfältet.
+Om du vill redigera ditt innehållsfragment i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) i stället trycker eller klickar du på knappen [**Öppna i CF-redigeraren** ](/help/sites-cloud/authoring/universal-editor/navigation.md#edit) på egenskapspanelen.
 
 >[!TIP]
 >
@@ -123,7 +123,7 @@ Beroende på arbetsflödets behov kan du behöva redigera innehållsfragmentet i
 ### Lägga till komponenter i behållare {#adding-components}
 
 1. Markera en behållarkomponent i [innehållsträdet](/help/sites-cloud/authoring/universal-editor/navigation.md#content-tree-mode) eller i redigeraren.
-1. Välj sedan ikonen Lägg till i egenskapsfältet.
+1. Välj sedan ikonen Lägg till på egenskapspanelen.
 
    ![Markera en komponent som ska läggas till i en behållare](assets/ue-add-component.png)
 
@@ -136,7 +136,7 @@ Komponenten infogas i behållaren och kan redigeras i redigeraren.
 ### Duplicera komponenter i behållare {#duplicating-components}
 
 1. Markera en komponent i en behållare med [innehållsträdet](/help/sites-cloud/authoring/universal-editor/navigation.md#content-tree-mode) eller redigeraren.
-1. Välj sedan ikonen **Duplicera** i egenskapsfältet.
+1. Välj sedan ikonen **Duplicera** på egenskapspanelen.
 
    ![Markera en komponent som ska läggas till i en behållare](assets/ue-duplicate-component.png)
 1. Komponenten dupliceras och infogas under den markerade komponenten.
@@ -148,7 +148,7 @@ Komponenten infogas i behållaren och kan redigeras i redigeraren.
 1. Markera en behållarkomponent i [innehållsträdet](/help/sites-cloud/authoring/universal-editor/navigation.md#content-tree-mode) eller i redigeraren.
 1. Markera ikonen för avfasning för behållaren för att expandera dess innehåll i innehållsträdet.
 1. Markera sedan en komponent i behållaren i innehållsträdet.
-1. Markera borttagningsikonen i egenskapsfältet.
+1. Välj ikonen Ta bort på egenskapspanelen.
 
    ![Tar bort en komponent](assets/ue-delete-component.png)
 

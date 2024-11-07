@@ -1,10 +1,10 @@
 ---
 title: Modelldefinitioner, fält och komponenttyper
-description: Lär dig mer om fält och de komponenttyper som den universella redigeraren kan redigera i egenskapsfältet med exempel. Lär dig hur du kan mäta din egen app genom att skapa en modelldefinition och länka till komponenten.
+description: Lär dig mer om fält och de komponenttyper som den universella redigeraren kan redigera på egenskapspanelen med exempel. Lär dig hur du kan mäta din egen app genom att skapa en modelldefinition och länka till komponenten.
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 5153d18b6bb8934479a02cbaa5236acef7c80cd1
+source-git-commit: a7b48559e5bf60c86fecd73a8bcef6c9aaa03b80
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 1%
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Modelldefinitioner, fält och komponenttyper {#field-types}
 
-Lär dig mer om fält och de komponenttyper som den universella redigeraren kan redigera i egenskapsfältet med exempel. Lär dig hur du kan mäta din egen app genom att skapa en modelldefinition och länka till komponenten.
+Lär dig mer om fält och de komponenttyper som den universella redigeraren kan redigera på egenskapspanelen med exempel. Lär dig hur du kan mäta din egen app genom att skapa en modelldefinition och länka till komponenten.
 
 ## Ökning {#overview}
 
-När du anpassar dina egna program för användning med den universella redigeraren måste du mäta komponenterna och definiera vilka fält och komponenttyper de kan ändra i egenskapsfältet i redigeraren. Det gör du genom att skapa en modell och länka till den från komponenten.
+När du anpassar dina egna program för användning med den universella redigeraren måste du mäta komponenterna och definiera vilka fält och komponenttyper som de kan ändra på egenskapspanelen i redigeraren. Det gör du genom att skapa en modell och länka till den från komponenten.
 
 Det här dokumentet innehåller en översikt över en modelldefinition och över fält och de komponenttyper som är tillgängliga för dig tillsammans med exempelkonfigurationer.
 
@@ -28,7 +28,7 @@ Det här dokumentet innehåller en översikt över en modelldefinition och över
 
 ## Modelldefinitionsstruktur {#model-structure}
 
-Om du vill konfigurera en komponent via egenskapsspåret i Universell redigerare måste det finnas en modelldefinition som är länkad till komponenten.
+Om du vill konfigurera en komponent via egenskapspanelen i den universella redigeraren måste det finnas en modelldefinition som är länkad till komponenten.
 
 Modelldefinitionen är en JSON-struktur som börjar med en array med modeller.
 
@@ -36,7 +36,7 @@ Modelldefinitionen är en JSON-struktur som börjar med en array med modeller.
 [
   {
     "id": "model-id",        // must be unique
-    "fields": []             // array of fields which shall be rendered in the properties rail
+    "fields": []             // array of fields which shall be rendered in the properties panel
   }
 ]
 ```

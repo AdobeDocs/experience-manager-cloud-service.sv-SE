@@ -4,7 +4,7 @@ description: Lär dig hur du skapar block som är instrumenterade för användni
 exl-id: 65a5600a-8d16-4943-b3cd-fe2eee1b4abf
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 3419fa943eb865d87467443527ea97fcd64909c2
+source-git-commit: a7b48559e5bf60c86fecd73a8bcef6c9aaa03b80
 workflow-type: tm+mt
 source-wordcount: '1445'
 ht-degree: 0%
@@ -165,7 +165,7 @@ Nu när det grundläggande offertblocket är definierat och implementerat i exem
 
    * Om du vill läsa in sidan kan du behöva trycka på eller klicka på **Logga in med Adobe** för att autentisera AEM i Universella redigeraren.
 
-1. Markera ett avsnitt i Universella redigeringsprogram. I egenskapsfältet trycker eller klickar du på ikonen **Lägg till** och väljer sedan det nya **offert**-blocket på menyn.
+1. Markera ett avsnitt i Universella redigeringsprogram. I egenskapspanelen trycker eller klickar du på ikonen **Lägg till** och väljer sedan det nya **offert**-blocket på menyn.
 
    * Ikonen **Lägg till** är en plustecken.
    * Du vet att du har markerat ett avsnitt om det markerade objektets blå kontur har en flik med namnet **Avsnitt**.
@@ -175,7 +175,7 @@ Nu när det grundläggande offertblocket är definierat och implementerat i exem
 
 1. Sidan läses in igen och offertblocket läggs till längst ned i det markerade avsnittet med det standardinnehåll som anges i filen `component-definitions.json`.
 
-   * Citatteckenblocket kan markeras och redigeras som vilket annat block som helst, antingen på plats eller i egenskapsfältet.
+   * Citatteckenblocket kan markeras och redigeras som vilket annat block som helst, antingen på plats eller på egenskapspanelen.
    * Formateringen görs i ett steg till.
 
    ![Sidan med det nya offertblocket i det markerade avsnittet](assets/create-block/quote-added.png)

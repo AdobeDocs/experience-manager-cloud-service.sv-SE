@@ -4,7 +4,7 @@ description: Lär dig mer om de olika tilläggspunkterna och andra funktioner so
 exl-id: 8d6523c8-b266-4341-b301-316d5ec224d7
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 6612abbd95599791ff9571b59154aa8ab34fb5f8
+source-git-commit: 732b0648e7114594cb8d35df03f83b842d62736e
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 0%
@@ -75,9 +75,9 @@ Om attributet `components` i en filterdefinition anges till `null` tillåts alla
 ]
 ```
 
-### Visa och dölj komponenter i egenskapsfältet {#conditionally-hide}
+### Visa och dölj komponenter villkorligt på egenskapspanelen {#conditionally-hide}
 
-Även om en eller flera komponenter i allmänhet är tillgängliga för författarna, kan det finnas situationer där det inte passar. I så fall kan du dölja komponenter i egenskapsfältet genom att lägga till ett `condition`-attribut i [fälten i komponentmodellen.](/help/implementing/universal-editor/field-types.md#fields)
+Även om en eller flera komponenter i allmänhet är tillgängliga för författarna, kan det finnas situationer där det inte passar. I så fall kan du dölja komponenter på egenskapspanelen genom att lägga till ett `condition`-attribut i [fälten i komponentmodellen.](/help/implementing/universal-editor/field-types.md#fields)
 
 Villkoren kan definieras med hjälp av [JsonLogic-schema.](https://jsonlogic.com/) Om villkoret är sant visas fältet. Om villkoret är falskt döljs fältet.
 
@@ -132,7 +132,7 @@ Det gör du genom att helt enkelt ta med önskad URL för förhandsgranskning i 
 
 Som Adobe Experience Cloud-tjänst kan du utöka UI för den universella redigeraren med App Builder och Experience Manager.
 
-Gränssnittstillägg är JavaScript-program som skapats med Adobe App Builder och som kan bäddas in i UI-program som körs med Adobe Experience Cloud enhetliga gränssnitt, till exempel Universal Editor. Du kan lägga till egna knappar och åtgärder i rubrikraden och egenskapsfältet samt skapa egna händelser för den universella redigeraren.
+Gränssnittstillägg är JavaScript-program som skapats med Adobe App Builder och som kan bäddas in i UI-program som körs med Adobe Experience Cloud enhetliga gränssnitt, till exempel Universal Editor. Du kan lägga till egna knappar och åtgärder på rubrikmenyn och egenskapspanelen samt skapa egna händelser för den universella redigeraren.
 
 Om du vill utforska de här möjligheterna kan du läsa följande resurser:
 

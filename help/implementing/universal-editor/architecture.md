@@ -4,7 +4,7 @@ description: Läs mer om arkitekturen i den universella redigeraren och hur data
 exl-id: e6f40743-0f21-4fb6-bf23-76426ee174be
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: a7b48559e5bf60c86fecd73a8bcef6c9aaa03b80
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 0%
@@ -36,7 +36,7 @@ I det här dokumentet beskrivs dessa byggstenar och hur de utbyter data.
 ### Redigerare {#editors}
 
 * **Universell redigerare** - Universell redigerare använder en instrumenterad DOM för att tillåta redigering av innehåll på plats. Mer information om nödvändiga metadata finns i [Attribut och typer](attributes-types.md). I dokumentet [Komma igång med den universella redigeraren i AEM](getting-started.md) finns ett exempel på instrumenteringen i AEM.
-* **Egenskapsspår** - Vissa egenskaper i komponenter kan inte redigeras i sitt sammanhang, till exempel kan en karusells rotationstid eller vilken dragspelsflik alltid ska öppnas eller stängas. För att sådan komponentinformation ska kunna redigeras finns en formulärbaserad redigerare i sidlisten i redigeraren.
+* **Egenskapspanelen** - Vissa egenskaper för komponenter kan inte redigeras i sitt sammanhang, till exempel kan en karusells rotationstid eller vilken dragspelsflik alltid ska öppnas eller stängas. För att tillåta redigering av sådan komponentinformation finns en formulärbaserad redigerare på sidpanelen i redigeraren.
 
 ### Remote App {#remote-app}
 
@@ -51,7 +51,7 @@ Den universella redigeraren strävar efter ett minimum av SDK, och därför är 
 
 ### Beständigt lager {#persistence-layer}
 
-* **Modell för innehållsfragment** - För att stöda fältet för redigering av egenskaper för innehållsfragment, redigeraren för innehållsfragment och formulärbaserade redigerare krävs modeller per komponent och innehållsfragment.
+* **Modell för innehållsfragment** - Om du vill ha stöd för panelen för redigering av egenskaper för innehållsfragment, redigeraren för innehållsfragment och formulärbaserade redigerare, krävs modeller per komponent och innehållsfragment.
 * **Innehåll** - Innehåll kan lagras var som helst, t.ex. i AEM, Magento.
 
 ![Persistence-lager](assets/persistence-layer.png)

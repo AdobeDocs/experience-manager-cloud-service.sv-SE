@@ -4,7 +4,7 @@ description: Om du är en AEM utvecklare som är intresserad av hur den universe
 exl-id: d6f9ed78-f63f-445a-b354-f10ea37b0e9b
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: a7b48559e5bf60c86fecd73a8bcef6c9aaa03b80
 workflow-type: tm+mt
 source-wordcount: '3139'
 ht-degree: 0%
@@ -240,7 +240,7 @@ Komponenterna måste också vara instrumenterade för att kunna redigeras med de
 
 1. Klicka på teaserkomponenten överst på sidan i Universalläsaren och se att du nu kan markera den.
 
-1. Om du klickar på ikonen **Innehållsträd** i egenskapsfältet i Universal Editor kan du se att redigeraren känner igen alla scener på sidan nu när du har instrumenterat den. Det lager du valde är det som är markerat.
+1. Om du klickar på ikonen **Innehållsträd** på egenskapspanelen i den universella redigeraren ser du att redigeraren känner igen alla scener på sidan nu när du har instrumenterat den. Det lager du valde är det som är markerat.
 
    ![Markera den instrumenterade teaserkomponenten](assets/dev-select-teaser.png)
 
@@ -355,13 +355,13 @@ Du kan se ändringen som finns kvar i JCR.
 >
 >Det grundläggande exemplet `Basic YWRtaW46YWRtaW4=` för autentiseringshuvudet är för kombinationen av användare/lösenord för `admin:admin`, vilket är vanligt vid lokal AEM.
 
-## Instrumentera appen för Properties Rail {#properties-rail}
+## Instrumentera appen för egenskapspanelen {#properties-rail}
 
 Du har nu ett program som är instrumenterat för att kunna redigeras med Universal Editor!
 
-Redigeringen är för närvarande begränsad till redigering av teaserns titel. Det finns dock tillfällen när redigering på plats inte räcker. Text som t.ex. teaserns titel kan redigeras där den finns med tangentbordsinmatning. Men mer komplicerade objekt måste kunna visas och tillåta redigering av strukturerade data som skiljer sig från hur de återges i webbläsaren. Det här är egenskaperna som är avsedda för.
+Redigeringen är för närvarande begränsad till redigering av teaserns titel. Det finns dock tillfällen när redigering på plats inte räcker. Text som t.ex. teaserns titel kan redigeras där den finns med tangentbordsinmatning. Men mer komplicerade objekt måste kunna visas och tillåta redigering av strukturerade data som skiljer sig från hur de återges i webbläsaren. Det här är vad egenskapspanelen är till för.
 
-Om du vill uppdatera appen så att den använder egenskapsfältet för redigering går du tillbaka till sidhuvudsfilen för sidkomponenten i appen. Här har du redan upprättat anslutningarna till den lokala AEM-utvecklingsinstansen och den lokala universella redigeringstjänsten. Här måste du definiera de komponenter som är redigerbara i programmet och deras datamodeller.
+Om du vill uppdatera appen så att den använder egenskapspanelen för redigering går du tillbaka till sidhuvudfilen för sidkomponenten i appen. Här har du redan upprättat anslutningarna till den lokala AEM-utvecklingsinstansen och den lokala universella redigeringstjänsten. Här måste du definiera de komponenter som är redigerbara i programmet och deras datamodeller.
 
 1. Öppna CRXDE Lite.
 
@@ -462,7 +462,7 @@ Om du vill uppdatera appen så att den använder egenskapsfältet för redigerin
 
 ## Vad betyder allt det? {#what-does-it-mean-2}
 
-För att kunna redigeras med egenskapsfältet måste komponenterna tilldelas till `groups`, så varje definition börjar som en lista med grupper som innehåller komponenterna.
+Om du vill kunna redigera med egenskapspanelen måste komponenterna tilldelas `groups`, så varje definition börjar som en lista med grupper som innehåller komponenterna.
 
 * `title` är namnet på gruppen.
 * `id` är gruppens unika identifierare, i det här fallet allmänna komponenter som utgör sidinnehållet i motsats till avancerade komponenter för sidlayout, till exempel.
@@ -487,7 +487,7 @@ Varje komponent måste sedan mappas till en `model` för att definiera de enskil
 * `label` är beskrivningen av fältet som visas i redigerarens användargränssnitt.
 * `valueType` är datatypen.
 
-## Instrumentera komponenten för egenskapsjärnvägen {#properties-rail-component}
+## Instrumentera komponenten för egenskapspanelen {#properties-rail-component}
 
 Du måste också definiera på komponentnivå vilken modell komponenten ska använda.
 
@@ -509,17 +509,17 @@ Du måste också definiera på komponentnivå vilken modell komponenten ska anv�
 
 1. Klicka på **Spara alla** i verktygsfältet och läs in den universella redigeraren igen.
 
-Nu är du redo att testa egenskaperna för den räl som är instrumenterad för komponenten.
+Nu kan du testa egenskapspanelen som är instrumenterad för komponenten.
 
 1. Klicka en gång till på teaser i Universal Editor för att redigera den.
 
-1. Klicka på egenskapsfältet för att visa egenskapsfliken och visa fälten som du just instrumenterat.
+1. Klicka på egenskapspanelen för att visa egenskapsfliken och visa fälten som du just instrumenterat.
 
-   ![Rälen för instrumenterade egenskaper](assets/dev-properties-rail-instrumented.png)
+   ![Panelen med instrumenterade egenskaper](assets/dev-properties-rail-instrumented.png)
 
-Nu kan du redigera lagrets titel antingen direkt som du gjorde tidigare eller i egenskapsfältet. I båda fallen sparas ändringarna i den lokala AEM.
+Nu kan du redigera teaser-objektets titel antingen direkt som du gjorde tidigare eller i egenskapspanelen. I båda fallen sparas ändringarna i den lokala AEM.
 
-## Lägg till ytterligare fält i egenskapsfältet {#add-fields}
+## Lägg till ytterligare fält i egenskapspanelen {#add-fields}
 
 Med hjälp av den grundläggande strukturen i datamodellen för komponenten som du redan har implementerat kan du lägga till ytterligare fält enligt samma modell.
 
@@ -555,9 +555,9 @@ Du kan till exempel lägga till ett fält för att justera komponentens format.
 
 1. Klicka en gång till på teaserns titel för att redigera den.
 
-1. Klicka på egenskapsfältet och se att det finns ett nytt fält för att justera komponentens format.
+1. Klicka på egenskapspanelen och se att det finns ett nytt fält för att justera komponentens stil.
 
-   ![De instrumenterade egenskaperna flödar med formatfältet](assets/dev-style-instrumented.png)
+   ![Den instrumenterade egenskapspanelen med formatfältet](assets/dev-style-instrumented.png)
 
 Alla fält i JCR för komponenten kan visas på det här sättet i Universal Editor.
 
@@ -580,8 +580,8 @@ När du börjar instrumentera ditt eget program bör du tänka på de grundlägg
 1. [Du instrumenterade teaserkomponenten.](#instrumenting-components)
 1. [Du instrumenterade underkomponenterna i teaser.](#subcomponents)
 1. [Du har definierat ett anpassat autentiseringshuvud så att du kan spara ändringar med den lokala tjänsten Universal Editor.](#auth-header)
-1. [Du instrumenterade programmet för att använda egenskapsspåret.](#properties-rail)
-1. [Du instrumenterade teaser-komponenten för att använda egenskapsspåret.](#properties-rail-component)
+1. [Du instrumenterade programmet för att använda egenskapspanelen.](#properties-rail)
+1. [Du instrumenterade teaserkomponenten för att använda egenskapspanelen.](#properties-rail-component)
 
 Du kan följa dessa steg för att mäta hur din egen app kan användas med den universella redigeraren. Alla egenskaper i JCR kan visas för den universella redigeraren.
 

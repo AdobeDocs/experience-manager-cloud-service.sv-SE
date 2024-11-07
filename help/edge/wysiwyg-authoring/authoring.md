@@ -4,7 +4,7 @@ description: Lär dig hur innehållsredigering fungerar med Edge Delivery Servic
 feature: Edge Delivery Services
 exl-id: 963ff71a-8176-4d9d-8240-dc429405d139
 role: User
-source-git-commit: 7e8446bec18eaeb4eb017dd63436a066d3a90fed
+source-git-commit: a7b48559e5bf60c86fecd73a8bcef6c9aaa03b80
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Universal Editor är ett modernt och intuitivt GUI som du kan använda för att 
 
 ![Lägga till och ordna block i den universella redigeraren](assets/blocks.png)
 
-Information om blocken kan sedan konfigureras i egenskapsfältet.
+Information om blocken kan sedan konfigureras på egenskapspanelen.
 
 ![Konfigurerar blockegenskaper](assets/block-properties.png)
 

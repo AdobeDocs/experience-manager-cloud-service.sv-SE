@@ -4,7 +4,7 @@ description: Lär dig mer om de olika händelser som den universella redigeraren
 exl-id: c9f7c284-f378-4725-a4e6-e4799f0f8175
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: a7b48559e5bf60c86fecd73a8bcef6c9aaa03b80
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 0%
@@ -55,7 +55,7 @@ Nyttolasten är innehåll från Universal Editor, med reservinnehåll från komp
 
 ### aue:content-details {#content-details}
 
-Händelsen `aue:content-details` utlöses när en komponent läses in i egenskapsfältet.
+Händelsen `aue:content-details` aktiveras när en komponent läses in på egenskapspanelen.
 
 Nyttolasten är komponentens innehåll och eventuellt dess schema.
 
@@ -91,7 +91,7 @@ Nyttolasten är komponenten, källbehållaren och målbehållaren.
 
 ### aue:content-patch {#content-patch}
 
-Händelsen `aue:content-patch` utlöses när en komponents data uppdateras i egenskapsfältet.
+Händelsen `aue:content-patch` aktiveras när en komponents data uppdateras på egenskapspanelen.
 
 Nyttolasten är en JSON-korrigering av de uppdaterade egenskaperna.
 
