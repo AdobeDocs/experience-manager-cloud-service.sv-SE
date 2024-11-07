@@ -5,9 +5,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 31fc69523107719d6f33d7a0845407547b57f4a7
+source-git-commit: 90ca80925351157e766f8400c2b1d80db6161bf0
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1375'
 ht-degree: 0%
 
 ---
@@ -132,6 +132,16 @@ Komponenten infogas i behållaren och kan redigeras i redigeraren.
 >[!TIP]
 >
 >Använd snabbtangenten `a` för att lägga till en komponent i den valda behållaren.
+
+### Duplicera komponenter i behållare {#duplicating-components}
+
+1. Markera en komponent i en behållare med [innehållsträdet](/help/sites-cloud/authoring/universal-editor/navigation.md#content-tree-mode) eller redigeraren.
+1. Välj sedan ikonen **Duplicera** i egenskapsfältet.
+
+   ![Markera en komponent som ska läggas till i en behållare](assets/ue-duplicate-component.png)
+1. Komponenten dupliceras och infogas under den markerade komponenten.
+
+Komponenten infogas i behållaren och kan redigeras i redigeraren.
 
 ### Ta bort komponenter från behållare {#deleting-components}
 

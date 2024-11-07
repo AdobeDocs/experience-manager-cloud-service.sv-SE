@@ -4,13 +4,13 @@ description: Lär dig grunderna i hur du kommer åt och navigerar i den universe
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
+exl-id: 213ef604-1a09-41f1-b051-3d8254b8164f
+source-git-commit: 90ca80925351157e766f8400c2b1d80db6161bf0
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
-
 
 # Öppna och navigera i den universella redigeraren {#navigating}
 
@@ -54,7 +54,7 @@ När appen har instrumenterats för att fungera med den universella redigeraren 
 
 1. Logga in i den universella redigeraren. Du behöver en Adobe ID för att logga in och [har tillgång till den universella redigeraren.](/help/implementing/universal-editor/getting-started.md#request-access)
 
-1. När du har loggat in anger du URL-adressen till sidan som du vill redigera i [platsfältet.](#location-bar) så att du kan börja redigera innehåll som [textinnehåll](#text-mode) eller [mediainnehåll.](#media-mode)
+1. När du har loggat in anger du URL-adressen till sidan som du vill redigera i [platsfältet.](#location-bar) så att du kan börja redigera innehåll som textinnehåll eller mediainnehåll.
 
 ## Förstå användargränssnittet {#ui}
 
@@ -280,7 +280,7 @@ Om du väljer en behållarkomponent i innehållsträdet eller i redigeraren visa
 
 ![Lägg till ikon](assets/ue-add-component-icon.png)
 
-Om du trycker eller klickar på knappen Lägg till öppnas en listruta med komponenter som är tillgängliga för att [lägga till i den valda behållaren.](#adding-components)
+Om du trycker eller klickar på knappen Lägg till öppnas en listruta med komponenter som är tillgängliga för att [lägga till i den valda behållaren.](/help/sites-cloud/authoring/universal-editor/authoring.md#adding-components)
 
 ![Lägg till snabbmeny](assets/add-context-menu.png)
 
@@ -288,13 +288,21 @@ Om du trycker eller klickar på knappen Lägg till öppnas en listruta med kompo
 >
 >Använd snabbtangenten `a` för att lägga till en komponent i en markerad behållarkomponent.
 
+##### Duplicera {#duplicate}
+
+Om du markerar en komponent i en behållarkomponent antingen i innehållsträdet eller i redigeraren visas alternativet Duplicera i egenskapsfältet.
+
+![Duplicera ikon](assets/duplicate.png)
+
+Om du trycker eller klickar på den duplicerade knappen [dupliceras den markerade komponenten.](/help/sites-cloud/authoring/universal-editor/authoring.md#duplicating-components)
+
 ##### Ta bort {#delete}
 
 Om du markerar en komponent i en behållarkomponent antingen i innehållsträdet eller i redigeraren visas borttagningsalternativet på egenskapslisten.
 
 ![Ta bort ikon](assets/ue-delete-component-icon.png)
 
-Om du trycker på eller klickar på borttagningsknappen [tas komponenten bort.](#deleting-components)
+Om du trycker på eller klickar på borttagningsknappen [tas komponenten bort.](/help/sites-cloud/authoring/universal-editor/authoring.md#deleting-components)
 
 >[!TIP]
 >
