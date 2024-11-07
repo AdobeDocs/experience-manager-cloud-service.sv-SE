@@ -752,9 +752,11 @@ ht-degree: 2%
                + [Skillnad mellan redigerare för grundregel och redigerare för grundkomponentregel](/help/forms/rule-editor-core-components-difference-tables.md)
                + [Operatorer och händelsetyper som är tillgängliga i regelredigeraren för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-events-operators.md)
                + [Exempel på en regelredigerare för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-usecases.md)
+               +  [Using asynchronous functions in an Adaptive Form](/help/forms/using-async-funct-in-rule-editor.md)
             + Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter {#create-and-use-custom-function-core-component}
                + [Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter](/help/forms/create-and-use-custom-functions.md)
                + [Skapa och använda en anpassad funktion för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/custom-function-core-component-create-function.md)
+               +  [Scope object in custom functions](/help/forms/custom-function-core-component-scope-function.md)
                + [Exempel på anpassade funktioner för ett adaptivt formulär baserade på kärnkomponenter](/help/forms/custom-function-core-components-use-cases.md)
             + Introduktion till Forms Portal och dess komponenter{#introduction-to-forms-portal}
                + [Introduktion till komponenten Forms Portal](/help/forms/configure-forms-portal.md)
