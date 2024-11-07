@@ -4,9 +4,9 @@ description: Förstå användargränssnittet för och navigering i  [!DNL Assets
 role: User
 exl-id: 1e71ea7d-fee7-4ed0-bb80-d537b57fc823
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: d542df9ae943d03a56b5d85b1bd189f81c35fe28
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '981'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ När du loggar in på [!DNL Assets view] visas följande gränssnitt.
 
 ## Bläddra bland och visa resurser och mappar {#browse-repository}
 
-Du kan bläddra bland mapparna från huvudanvändargränssnittet eller från vänster sidofält. Experience Manager Assets visar nu förhandsvisningar av mappinnehåll i mappminiatyrbilden när du bläddrar eller söker efter innehåll, vilket gör det enklare att hitta resurser som finns i AEM Assets-databasen. Med den här mappminiatyrbilden sparar du tid på att söka efter specifika resurser i en mapp i AEM Assets-databasen.
+Du kan bläddra bland mapparna från huvudanvändargränssnittet eller från vänster sidofält. I Experience Manager Assets visas förhandsvisningar av mappinnehåll i mappminiatyren när du bläddrar efter innehåll eller söker efter innehåll. Detta gör det lättare att hitta resurser som är tillgängliga i AEM Assets-databasen. Med den här mappminiatyrbilden sparar du tid på att söka efter specifika resurser i en mapp i AEM Assets-databasen.
 När du bläddrar bland resurser i en mapp kan du använda gränssnittet för att visa miniatyrbilder av resurser för att visuellt bläddra i databasen eller visa resursinformation för att snabbt hitta den resurs du vill ha. De alternativ som är tillgängliga i den vänstra sidlisten är:
 
 * [Min Workspace](/help/assets/my-workspace-assets-view.md): Assets innehåller nu en anpassningsbar arbetsyta med widgetar för smidig åtkomst till viktiga delar av Assets användargränssnitt och den information som är mest relevant för dig. Den här sidan är en helhetslösning som ger en översikt över dina arbetsobjekt och ger snabb åtkomst till viktiga arbetsflöden. Mer lättåtkomlig åtkomst till dessa alternativ ökar effektiviteten och ökar innehållets hastighet.
@@ -77,9 +77,9 @@ Innan du använder, delar eller hämtar en resurs kan du visa den närmare. Med 
 
 Om du vill förhandsgranska en resurs markerar du den och klickar på [!UICONTROL Details] ![informationsikonen](assets/do-not-localize/edit-in-icon.png) i verktygsfältet högst upp. Du kan inte bara visa resursen utan även visa detaljerade metadata och vidta andra åtgärder.
 
-![Förhandsgranska en resurs](assets/preview-asset-2.png)
+![Förhandsgranska en resurs](/help/assets/assets/navigate-file-folder-dm.png)
 
-**A**: Återgå till den aktuella mappen eller det aktuella sökresultatet i databasen **B**: Namn och format för filen som du förhandsgranskar **C**: Tilldela uppgifter **D**: Avancerade metadata **E**: Nyckelord och smarta taggar **F**: Kommentera och kommentera **G** : Visa uppgifter om den valda resursen **H**: Visa och hantera versioner **I**: Visa återgivningar av bilden **J**: Redigera bild **K**: Grundläggande metadata **L**: Avancerade metadata **M**: Nyckelord och smarta taggar **N**: Förhandsgranska mer ingående. Zooma, helskärmsläge och andra alternativ **O**: Gå till föregående eller nästa resurs i den aktuella mappen utan att gå tillbaka till mappen
+**A**: Återgå till den aktuella mappen eller det aktuella sökresultatet i databasen **B**: Namn och format för filen som du förhandsgranskar **C**: Tilldela uppgifter **D**: Avancerade metadata **E**: Nyckelord och smarta taggar **F**: Kommentera och kommentera **G** : Visa uppgifter om den valda resursen **H**: Visa och hantera versioner **I**: Visa återgivningar av bilden **J**: Redigera bild **K**: Visa Dynamic Media-återgivningar som Smart Crop och Dynamic Media med OpenAPI-funktionsåtergivningar. **L**: Grundläggande metadata **M**: Avancerade metadata **N**: Nyckelord och smarta taggar **O**: Gå till föregående eller nästa resurs i den aktuella mappen utan att gå tillbaka till mappen **P**: Förhandsgranska närmare. Zooma, helskärmsläge och andra alternativ.
 
 Du kan också förhandsgranska videoklipp.
 

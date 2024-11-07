@@ -3,9 +3,9 @@ title: Godkänn resurser i Experience Manager
 description: Lär dig godkänna resurser i  [!DNL Experience Manager].
 role: User
 exl-id: fe61a0f1-94d3-409a-acb9-195979668c25
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: d542df9ae943d03a56b5d85b1bd189f81c35fe28
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
@@ -96,13 +96,15 @@ Så här kopierar du en leverans-URL för en godkänd resurs i databasen:
 
 1. Markera resursen och klicka på **[!UICONTROL Details]**.
 
-1. Klicka på ikonen Återgivningar i den högra rutan.
+1. Klicka på ikonen Dynamic Media som finns i den högra rutan.
 
-1. Välj **[!UICONTROL Dynamic Media with OpenAPI]** i avsnittet **[!UICONTROL Dynamic]**.
+1. Välj **[!UICONTROL Dynamic Media with OpenAPI]** som finns på panelen **[!UICONTROL Dynamic Media]**.
 
 1. Klicka på **[!UICONTROL Copy URL]** för att kopiera resursens leverans-URL.
-   ![URL för kopieringsleverans](/help/assets/assets/copy-delivery-url.png)
+   ![dynamiska återgivningar](/help/assets/assets/dm-with-openapi-non-image-assets.png)
 
    >[!NOTE]
    >
    >Alternativet att kopiera leverans-URL för godkända mediefiler är bara tillgängligt i Assets-vyn.
+
+Mer information om andra återgivningar som visas på panelen Dynamic Media finns i [Visa och hämta Dynamic Media-återgivningar](/help/assets/renditions.md#view-download-dm-renditions).
