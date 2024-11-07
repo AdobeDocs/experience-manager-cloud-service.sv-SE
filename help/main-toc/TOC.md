@@ -32,6 +32,7 @@ ht-degree: 2%
    + Versionsinformation om AEMaaCS-funktioner {#release-notes}
       + [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md)
       + 2024 {#2024}
+         + [Release Notes for 2024.9.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-9-0.md)
          + [Versionsinformation för 2024.8.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-8-0.md)
          + [Versionsinformation för 2024.7.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-7-0.md)
          + [Versionsinformation för 2024.6.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-6-0.md)
@@ -202,6 +203,11 @@ ht-degree: 2%
    + Versionsinformation för Universal Editor {#univeral-editor}
       + [Aktuell versionsinformation för Universal Editor](/help/release-notes/universal-editor/current.md)
       + 2024 {#2024}
+         + [2024.09.27 Release Notes](/help/release-notes/universal-editor/2024/2024-09-27.md)
+         + [2024.09.26 Release Notes](/help/release-notes/universal-editor/2024/2024-09-26.md)
+         + [2024.09.18 Release Notes](/help/release-notes/universal-editor/2024/2024-09-18.md)
+         + [2024.09.03 Release Notes](/help/release-notes/universal-editor/2024/2024-09-03.md)
+         + [2024.08.13 Release Notes](/help/release-notes/universal-editor/2024/2024-08-13.md)
          + [Versionsinformation 2024.07.28](/help/release-notes/universal-editor/2024/2024-07-28.md)
          + [Versionsinformation 2024.06.28](/help/release-notes/universal-editor/2024/2024-06-28.md)
    + [Vad är Nytt?](/help/release-notes/what-is-new.md)
@@ -738,6 +744,7 @@ ht-degree: 2%
             + [Utforma JSON-schema för en adaptiv form (kärnkomponenter)](/help/forms/adaptive-form-core-components-json-schema-form-model.md)
             + [Lägga till versioner, kommentarer och anteckningar i ett adaptivt formulär](/help/forms/add-comments-annotations-versioning-adaptive-form-core-components.md)
             + [Jämför adaptiv Forms](/help/forms/compare-forms.md)
+            +  [Create custom submit action](/help/forms/custom-submit-action-for-adaptive-forms-based-on-core-components.md)
             + [Konvertera adaptiva Forms-baserade på baskomponenter till Core Component-baserade formulär med verktyget för migrering](/help/forms/migration-utility-tool-for-af-core-components.md)
             + Introduktion till regelredigeraren för adaptiv Forms baserat på kärnkomponenter {#rule-editor-core-components}
                + [Introduktion till regelredigeraren för adaptiv Forms baserat på kärnkomponenter](/help/forms/rule-editor-core-components.md)
@@ -1020,6 +1027,7 @@ ht-degree: 2%
          + [Markeringsredigerare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/markdown.html)
       + [Strukturträd](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/analysis.html)
       + [JSON-förhandsvisning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html)
+   + [AEM APIs for Structured Content Delivery and Management](/help/headless/apis-headless-and-content-fragments.md)
    + GraphQL API {#graphql-api}
       + [GraphQL API för innehållsfragment](/help/headless/graphql-api/content-fragments.md)
       + [Hantera GraphQL-slutpunkter](/help/headless/graphql-api/graphql-endpoint.md)
@@ -1029,6 +1037,7 @@ ht-degree: 2%
       + [Uppdatera dina innehållsfragment för optimerad GraphQL-filtrering](/help/headless/graphql-api/graphql-optimized-filtering-content-update.md)
       + [Exempel på GraphQL-frågor](/help/headless/graphql-api/sample-queries.md)
       + [Felsöka GraphQL-frågor](/help/headless/graphql-api/persisted-queries-troubleshoot.md)
+   + [AEM REST OpenAPI for Content Fragment Delivery](/help/headless/aem-rest-openapi-content-fragment-delivery.md)
    + [Content Fragments and Models OpenAPIs](/help/headless/content-fragment-openapis.md)
    + [Stöd för innehållsfragment i Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/assets-api-content-fragments.html)
    + Dokumentskydd {#security}
