@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2024.10.29
-description: Detta är versionsinformationen för version 2024.10.29 av Universal Editor.
+title: Versionsinformation om Universal Editor 2024.11.05
+description: Detta är versionsinformationen för version 2024.11.05 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 550a68ddaae9dee6ed56e238136595cb51d34b6c
+source-git-commit: e7839425012a101321b19d728f0ea3f0272dc394
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '151'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2024.10.29 {#release-notes}
+# Versionsinformation om Universal Editor 2024.11.05 {#release-notes}
 
-Det här är versionsinformationen för den 29 oktober 2024-versionen av Universal Editor.
+Det här är versionsinformationen för den 5 november 2024-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -22,16 +22,6 @@ Det här är versionsinformationen för den 29 oktober 2024-versionen av Univers
 
 ## Nyheter {#what-is-new}
 
-* Den ursprungliga leveransen av biblioteket `universal-editor-cors` av den universella redigeringstjänsten är nu tillgänglig.
-* Alternativet Publish to preview har åtgärdats.
-
-## Tidig Adobe-support för 6.5 {#early-adoption}
-
-Universal Editor är nu tillgängligt för headless-användning när AEM 6.5 används som en del av ett program för tidig användning.
-
-Om du är intresserad av att testa den nya funktionen och dela med dig av dina synpunkter kan du skicka ett e-postmeddelande till Adobe Customer Success Manager från den e-postadress som är kopplad till din Adobe ID.
-
-## Felkorrigeringar {#bug-fixes}
-
-* Fjärrplug-in-mekanismen har tagits bort.
-* Bygg inkluderar nu CORS-paketet.
+* **Återställningsförlopp för Universal Editor-tjänst:** Med en återställningsförlopp kan Adobe-call-team snabbt återställa den universella redigeringstjänsten till en viss gren vid behov, vilket garanterar hög tillgänglighet genom snabb återställning vid problem.
+* **Optimerade API-anrop för innehållsåtgärder:** I den universella redigeringstjänsten används nu JSON-API:er i stället för HTML-API:er för att skapa, kopiera och flytta åtgärder via SlingPostServlet, vilket effektiviserar tolkningen av svaren.
+* **Stöd för Universal Editor på AEM 6.5:** Universell redigerare finns nu för headless-användning [när AEM 6.5 används.](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction.html)
