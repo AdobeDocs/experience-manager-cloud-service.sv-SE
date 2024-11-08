@@ -4,7 +4,7 @@ description: Detta är versionsinformationen för version 2024.11.05 av Universa
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: e7839425012a101321b19d728f0ea3f0272dc394
+source-git-commit: 7ace83e0df1d917c359f07a806da638739b4a4a6
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 0%
@@ -24,4 +24,4 @@ Det här är versionsinformationen för den 5 november 2024-versionen av Univers
 
 * **Återställningsförlopp för Universal Editor-tjänst:** Med en återställningsförlopp kan Adobe-call-team snabbt återställa den universella redigeringstjänsten till en viss gren vid behov, vilket garanterar hög tillgänglighet genom snabb återställning vid problem.
 * **Optimerade API-anrop för innehållsåtgärder:** I den universella redigeringstjänsten används nu JSON-API:er i stället för HTML-API:er för att skapa, kopiera och flytta åtgärder via SlingPostServlet, vilket effektiviserar tolkningen av svaren.
-* **Stöd för Universal Editor på AEM 6.5:** Universell redigerare finns nu för headless-användning [när AEM 6.5 används.](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction.html)
+* **Stöd för Universal Editor på AEM 6.5:** Universell redigerare finns nu för headless-användning [när AEM 6.5 används.](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction)
