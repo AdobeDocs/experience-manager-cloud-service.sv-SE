@@ -4,9 +4,9 @@ description: Lär dig hur du kan leverera dina Cloud Manager-projekt med hjälp 
 exl-id: f33bd6f0-62fc-4ecc-b8d2-65d1f1c44d82
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 2b384a4233672d69de09b922fcdef6d0f84ff7df
+source-git-commit: 3941b7f97d434946a3cb796633f306b89e68c0a4
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '756'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Edge Delivery Services är en sammanslagen uppsättning tjänster som ger stor f
 * Kontinuerlig övervakning av prestanda via RUM (Real Use Monitoring).
 * Öka redigeringseffektiviteten genom att frikoppla innehållskällor.
 
-Du kan använda både AEM och WYSIWYG-redigering med Universal Editor och dokumentbaserad redigering.
+Du kan använda både AEM och WYSIWYG-redigering med den universella redigeraren och dokumentbaserad redigering.
 
 Med Cloud Manager i AEM as a Cloud Service kan du aktivera Edge Delivery Service för ditt projekt.
 
@@ -78,7 +78,8 @@ En Edge Delivery Services kan läggas till på flera olika sätt beroende på hu
 | 3 | Lägg till Edge Delivery-webbplats | Se [Lägg till en Edge Delivery-webbplats](#eds-add-site). |
 | 4 | Lägg till domän | Se [Lägg till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md). |
 | 5 | Lägg till SSL-certifikat | Se [Lägg till SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md). |
-| 6 | Konfigurera CDN för din Edge Delivery-webbplats | Se [Lägg till en CDN-konfiguration](#add-cdn). |
+| 6 | Konfigurera CDN för din Edge Delivery-webbplats | Se [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md). |
+| 7 | Go Live | Slutför det sista steget i Go Live. |
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428020?learn=on)
 
