@@ -4,9 +4,9 @@ description: Läs om hur AEM as a Cloud Service team och produktprofiler kan ge 
 exl-id: 7b1474c9-aca0-4354-8798-1abdcda2f6dd
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 0ff50aa77711d70d372a1f43ad7336c39ab1167c
+source-git-commit: c8534ddf84998377ee63575403417165ccec2dbd
 workflow-type: tm+mt
-source-wordcount: '1821'
+source-wordcount: '2059'
 ht-degree: 0%
 
 ---
@@ -275,6 +275,27 @@ Följande bild representerar de AEM grupperna som återspeglar AEM Sites Content
 >
 >* Mer information om AEM produktprofiler finns i [Tilldela AEM produktprofiler](/help/journey-onboarding/assign-profiles-aem.md).
 >* Mer information om introduktionsprocessen finns i [Startresa](/help/journey-onboarding/overview.md).
+
+### Lägga till produktprofiler för befintliga miljöer {#adding-product-profiles-for-existing-environments}
+
+Miljöer som skapats före början av november 2024 kanske saknar den produktinstans på organisationsnivå som beskrivs i avsnitten ovan samt vissa produktprofiler. Befintliga produktprofiler kommer också att sakna tjänstväxlarna. Vi rekommenderar att du uppdaterar dessa produktprofiler, vilket är en förutsättning för att få tillgång till vissa framtida API:er.
+
+Om en eller flera miljöer i ett program behöver sina produktprofiler uppdaterade kommer Cloud Manager att visa meddelandet nedan. Observera att en miljö måste ha den senaste AEM versionen innan produktprofilerna kan uppdateras.
+
+![Modernisera produktprofiler](/help/onboarding/assets/modernize-product-profiles.png)
+
+Om du klickar på knappen **Lägg till produktprofiler** öppnas en meny med alternativ för att lägga till nya produktprofiler i alla miljöer som är tillgängliga i programmet eller i enskilda miljöer.
+
+![Ersätt miljöer](/help/onboarding/assets/choose-env-r.png)
+
+Klicka på **Alla miljöer** för att lägga till de nya produktprofilerna i alla miljöer i programmet. Du kan också klicka på **Enskilda miljöer** om du vill lägga till de nya produktprofilerna i de valda miljöerna. Detta leder till en miljölistsida där en **Lägg till produktprofiler** -åtgärd kan väljas från ikonen **Fler alternativ** .
+
+![Enskilda miljöer](/help/onboarding/assets/individual-environments.png)
+
+Du kan också lägga till produktprofiler i utvalda miljöer genom att gå till avsnittet Programöversikt, klicka på ikonen Fler alternativ för en miljö och välja Lägg till produktprofiler.
+
+Miljöns status visar Lägga till produktprofiler medan de nya produktprofilerna läggs till och sedan visas Körning när processen är klar.
+
 
 ## Cloud Manager produktprofiler {#cloud-manager-product-profiles}
 
