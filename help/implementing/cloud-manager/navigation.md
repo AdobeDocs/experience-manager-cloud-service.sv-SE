@@ -5,7 +5,7 @@ exl-id: 3f3d7631-2bc9-440b-9888-50f6529bcd42
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: f64a551bc18b53d0026736ece2a44e48cd0cfb4c
+source-git-commit: 767f6609b3f585630d45aee0d61483dbe66f66cf
 workflow-type: tm+mt
 source-wordcount: '1661'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Navigera i gränssnittet för molnhanteraren {#navigation}
+# Navigera i användargränssnittet i Cloud Manager {#navigation}
 
 Läs om hur Cloud Manager användargränssnitt är organiserat och hur du navigerar för att hantera program och miljöer.
 
