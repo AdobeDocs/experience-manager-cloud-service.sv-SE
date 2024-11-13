@@ -4,9 +4,9 @@ description: Aktuell underhållsversionsinformation för  [!DNL Adobe Experience
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 90e1ca38bd517215a631573987462a716bfed160
+source-git-commit: eadb29c44dd57bda51f77a92a62016eae51dcc65
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '820'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,10 @@ Funktionsaktiveringen i 2024.11.0 kommer att innehålla alla funktioner som finn
 * SITES-21199: Edge Delivery med Universal Editor: Lägg till stöd för mallar som skapats från sidor.
 * SITES-20311: Edge Delivery med Universal Editor: Lägg till stöd för import av CSV-filer till kalkylblad.
 * SITES-24821: Edge Delivery med Universal Editor: Gör aem.page / aem.live till standard för integrering med Edge Delivery.
+* FORMS-11646: Ställa in globalContext Variables för AEM Forms relevanta sidor
+* FORMS-14833: AEM Forms har nu möjlighet att inkludera adaptiva formulärfragment i det slutliga DoR-dokumentet (Document of Record).
+* FORMS-14255: Användarna kan nu dra nytta av en autosparfunktion som sparar ett delvis ifyllt formulär som ett utkast automatiskt. De kan gå tillbaka senare för att slutföra ifyllningen på samma eller annan enhet.
+
 
 ### Åtgärdade problem {#fixed-issues-18459}
 
@@ -60,6 +64,11 @@ Funktionsaktiveringen i 2024.11.0 kommer att innehålla alla funktioner som finn
 * SITES-25393: Edge Delivery med Universal Editor: Textnoder förloras vid återgivning av formaterad RTF med ett enda stycke.
 * SITES-24643: Edge Delivery med Universal Editor: Metadataattribut för OpenGraph och twitter fungerar inte i sidmetadatamodell.
 * SITES-25401: Experience Fragments: Långsam uppdatering av XF-referens
+* GRANITE-53907: Det går inte att identifiera tjänstanvändaren som en superanvändare i arbetsflödet
+* CQ-4358028: Det går inte att skapa AEM när en användare som bara har en projektadministratörsgrupp laddar upp en ny miniatyrbild på sidan där projektet skapas.
+* FORMS-15682: Problemet gäller integrering av AEM Forms och Dynamics FDM. När en användare skickar ett formulär skickas inte DOR (Document of Record) som en bifogad fil i PDF till det angivna entitetsfältet.
+* FORMS-15799: Adobe Sign GovCloud Signature page does note render in iframe
+* FORMS-16113: När en användare som är administratör för Adobe Sign-kontot försöker få åtkomst till ett dokument som har skickats av en annan användare (även en administratör), kan API:t för get-avtal returnera ett annat avtals-ID än det som ursprungligen skapades när avtalet skapades.
 
 
 ### Kända fel {#known-issues-18459}
