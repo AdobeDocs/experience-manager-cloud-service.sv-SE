@@ -4,9 +4,9 @@ description: Lär dig hur du kan leverera dina Cloud Manager-projekt med hjälp 
 exl-id: f33bd6f0-62fc-4ecc-b8d2-65d1f1c44d82
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 3941b7f97d434946a3cb796633f306b89e68c0a4
+source-git-commit: bb225fcb931c6e9014ab18e6efbb0620262bcd76
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '752'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ Med Cloud Manager i AEM as a Cloud Service kan du aktivera Edge Delivery Service
 
 Om du har licensierat Edge Delivery Services som en del av Adobe Experience Manager Sites kan du publicera din webbplats med Edge Delivery Services direkt i Cloud Manager och gå live [med hjälp av en guidad självbetjäningsupplevelse](/help/implementing/cloud-manager/managing-code/private-repositories.md).
 
-Dessutom får ni tillgång till en enhetlig upplevelse för att hantera alla era AEM samtidigt som ni säkerställer enhetlighet i alla viktiga arbetsflöden. Dessa omfattar domännamnshantering, SSL-certifikathantering och CDN-mappningar.
+Dessutom får ni tillgång till en enhetlig upplevelse för att hantera alla era AEM samtidigt som ni säkerställer enhetlighet i alla viktiga arbetsflöden. Dessa arbetsflöden omfattar domännamnshantering, SSL-certifikathantering och CDN-mappningar.
 
 ## Fördelar med att använda den rekommenderade Adobe-sökvägen för Edge Delivery Services {#recommended-path-eds}
 
@@ -67,19 +67,20 @@ En Edge Delivery Services kan läggas till på flera olika sätt beroende på hu
 
 <!-- &#x2460; for "1" inside circle -->
 
-**Edge Delivery-uppgiftslistan** är en checklista för introduktionsaktiviteter som är avsedd att vägleda dig genom introduktionen och hantera din Edge Delivery-webbplats hela vägen till [go-live](/help/journey-onboarding/go-live-checklist.md).
+**Edge Delivery att göra-listan** är en kontrollista för introduktionsaktiviteter som är avsedd att vägleda dig genom introduktionen och hantera din Edge Delivery webbplats hela vägen till [Go-Live](/help/journey-onboarding/go-live-checklist.md).
 
 ![Edge Delivery-lista med att göra-uppgifter för webbplats](/help/implementing/cloud-manager/assets/cm-eds-todo-list.png)
 
 |   | Uppgift | Beskrivning |
 | --- | --- | --- |
 | 1 | Gå med i produktsamarbetskanalen | Om du klickar på **Skicka begäran nu** skickas en begäran till Adobe om att skapa en kanal för ditt företag. Om kanalen redan finns vidarebefordras du till företagets kanal. |
-| 2 | Kompletta krav | Om du klickar på **Visa självstudiekursen Komma igång** dirigeras du till självstudiekursen [Komma igång - Utvecklare](https://www.aem.live/developer/tutorial). |
+| 2 | Kompletta krav | Se [Visa självstudien Komma igång](https://www.aem.live/developer/tutorial). |
 | 3 | Lägg till Edge Delivery-webbplats | Se [Lägg till en Edge Delivery-webbplats](#eds-add-site). |
 | 4 | Lägg till domän | Se [Lägg till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md). |
 | 5 | Lägg till SSL-certifikat | Se [Lägg till SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md). |
 | 6 | Konfigurera CDN för din Edge Delivery-webbplats | Se [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md). |
-| 7 | Go Live | Slutför det sista steget i Go Live. |
+| 7 | Konfigurera push-validering | Se [Konfigurera push-validering](/help/implementing/cloud-manager/cdn-configurations/cdn-setup-push-invalidation.md). |
+| 8 | GoLive | Se [Go-Live-checklista](/help/edge/docs/go-live-checklist.md). |
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428020?learn=on)
 

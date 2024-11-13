@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: 672513d7-ee0a-4f6e-9ef0-7a41fabbaf9a
-source-git-commit: 42b30c12f17106610cfb7f7b4c04c5ab703bab45
+source-git-commit: cd15fd36b8baf8e693ae449031a51fa1febefaee
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '440'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ För CDN som hanteras av Adobe tillåts bara platser med ACME-validering när et
 
    | Använd skiftläge | Steg |
    | --- | --- |
-   | Jag vill lägga till en CDN-konfiguration på en *befintlig* Edge Delivery-webbplats i Cloud Manager | a. Klicka på **Edge Delivery Sites** under **Tjänster** på den vänstra menyn.<br>b. Klicka på ikonen ![Mer ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i Edge Delivery-tabellen i slutet av en rad som inte har någon associerad domän.<br>c. Klicka på **Konfigurera CDN** .  ![Klicka på Konfigurera CDN för en Edge Delivery-webbplats](/help/implementing/cloud-manager/assets/cm-eds-config-cdn.png) |
+   | Jag vill lägga till en CDN-konfiguration på en *befintlig* Edge Delivery-webbplats i Cloud Manager | a. Klicka på **Edge Delivery Sites** under **Tjänster** på den vänstra menyn.<br>b. Klicka på ikonen ![Mer ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i Edge Delivery-tabellen i slutet av en rad som inte har någon associerad domän.<br>c. Klicka på **Konfigurera CDN** . |
    | Jag vill lägga till en CDN-konfiguration i Cloud Manager | a. Klicka på **CDN-konfigurationer** under **Tjänster** på den vänstra menyn.<br>b. Klicka på **Lägg till** i det övre högra hörnet på sidan CDN-konfigurationer. |
 
 1. Välj något av följande i listrutan **Ursprung** i dialogrutan **Konfigurera CDN**:
